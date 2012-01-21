@@ -1,0 +1,58 @@
+- multiple +skills on items
+- fix removing ED MO (check limit of 350% in order not to subtract more than needed)
+- stack ED from RW (Superior Naginata on page 90)
+- median_barb's RW Kriegsmessers, median_druid's RW Viper Bow (RW names for weapons don't work)
+- gemword/jewelword (same as RW for weapons - allowed item types must be taken from some other column)
+- based on blessed life skill level
+- try unMO UMOs (get UMO props from txt)
+- corpse & merc items (or maybe not)
+- shrines
+- automod x% damage to undead (e.g. hand of god on shared stash page 90)
+- pearl of wisdom color
+- insertred unique jewel names (check)
+- item images
+- search and fix all TODOs in code
+- remove QDebug
+- remove absolute paths to data files
+- file association
+- copy files to destdir
+
+write in changelog:
+- correct text color on the class charm :P
+
+1.
+linux-g++{
+    #...
+    EXTRA_BINFILES += \
+        $${THIRDPARTY_PATH}/gstreamer-0.10/linux/plugins/libgstrtp.so \
+        $${THIRDPARTY_PATH}/gstreamer-0.10/linux/plugins/libgstvideo4linux2.so
+    for(FILE,EXTRA_BINFILES){
+        QMAKE_POST_LINK += $$quote(cp $${FILE} $${DESTDIR}$$escape_expand(\n\t))
+    }
+}
+
+win32 {
+    #...
+    EXTRA_BINFILES += \
+        $${THIRDPARTY_PATH}/glib-2.0/win32/bin/libglib-2.0.dll \
+        $${THIRDPARTY_PATH}/glib-2.0/win32/bin/libgmodule-2.0.dll
+    EXTRA_BINFILES_WIN = $${EXTRA_BINFILES}
+    EXTRA_BINFILES_WIN ~= s,/,\\,g
+    DESTDIR_WIN = $${DESTDIR}
+    DESTDIR_WIN ~= s,/,\\,g
+    for(FILE,EXTRA_BINFILES_WIN){
+                QMAKE_POST_LINK +=$$quote(cmd /c copy /y $${FILE} $${DESTDIR_WIN}$$escape_expand(\n\t))
+    }
+}
+
+2. INSTALLS
+images.path    = $${DESTDIR}/images
+images.files   += images/splashscreen.png
+images.files   += images/logo.png
+INSTALLS       += images
+
+v0.3:
+- affix rlvl support
+- drag & drop
+- create plugy stashes
+- nice display of property 'Adds x-y ... damage'

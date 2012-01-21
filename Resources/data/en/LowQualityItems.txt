@@ -1,0 +1,11 @@
+#name
+Crude
+Cracked
+Damaged
+Low Quality
+Rusted
+Bent
+Used
+Discarded
+Broken
+Superior

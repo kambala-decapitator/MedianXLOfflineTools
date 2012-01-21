@@ -1,0 +1,2406 @@
+#code	name	width	height	gentype	stackable	rlvl	image	type	sockettype	class
+@50	Falcon Mask (Sacred)	2	2	0	0	30	invdr4	pelt		5
+w42	Heraldic Shield (2)	2	4	0	0	7	invpa3	ashd	0	3
+3@G	Gambeson (3)	2	3	0	0	10	invxtuu	stor		1
+737	Bone Helm (3)	2	2	0	0	13	invbhm	bhlm		-1
+w22	Heraldic Shield (1)	2	4	0	0	2	invpa3	ashd	0	3
+767	Belt (4)	2	1	0	0	15	invmbl	belt		-1
+798	Ancient Armor (5)	2	3	0	0	23	invaar	tors		-1
+805	Buckler (5)	2	2	0	0	17	invbuc	shie	0	-1
+w70	Wolf Head (4)	2	2	0	0	14	invdr1	pelt		5
+w34	Spirit Mask (2)	2	2	0	0	9	invdr5	pelt		5
+27!	Bull Shield (6)	2	4	0	0	23	invgtsu	basd	0	4
+846	Skull Cap (6)	2	2	0	0	23	invskp	helm		-1
+722	Heavy Belt (3)	2	1	0	0	12	invtbl	belt		-1
+634	Chain Gloves (1)	2	2	0	0	2	invmgl	glov		-1
+2@L	Cervelliere (5)	2	2	0	0	20	invfhlu	azhm		0
+5@H	Lamellar Armor (Sacred)	2	3	0	0	30	invxrss	stor		1
+6@L	Einherjar Helm (2)	2	2	0	0	7	invuhms	azhm		0
+e20	Wolf Head (6)	2	2	0	0	23	invdr1	pelt		5
+695	Studded Leather (3)	2	3	0	0	10	invstu	tors		-1
+e26	Fanged Helm (6)	2	2	0	0	24	invba2	phlm		4
+w14	Spirit Mask (1)	2	2	0	0	5	invdr5	pelt		5
+728	Gauntlets (3)	2	2	0	0	13	invhgl	glov		-1
+@42	Greaves (Sacred)	2	2	0	0	30	invhbt	boot		-1
+w99	Avenger Guard (5)	2	2	0	0	23	invba5	phlm		4
+742	Ring Mail (4)	2	3	0	0	15	invrng	tors		-1
+8@N	Aspis (1)	2	3	0	0	3	invxrgu	ishd	0	6
+w64	Crown Shield (3)	2	2	0	0	14	invpa5	ashd	0	3
+675	Belt (2)	2	1	0	0	7	invmbl	belt		-1
+7@O	Totem Shield (2)	2	3	0	0	7	invxshu	ishd	0	6
+e34	Crown Shield (6)	2	2	0	0	27	invpa5	ashd	0	3
+684	Heavy Boots (2)	2	2	0	0	5	invvbt	boot		-1
+@35	Chain Gloves (Sacred)	2	2	0	0	30	invmgl	glov		-1
+@07	Chain Mail (Sacred)	2	3	0	0	30	invchn	tors		-1
+k20	Diadem (5)	2	2	0	0	23	invci3	circ		-1
+861	Plated Belt (6)	2	1	0	0	26	invhbl	belt		-1
+833	Studded Leather (6)	2	3	0	0	23	invstu	tors		-1
+825	Greaves (5)	2	2	0	0	22	invhbt	boot		-1
+@20	Great Helm (Sacred)	2	2	0	0	30	invghm	helm		-1
+k11	Tiara (3)	2	2	0	0	12	invci2	circ		-1
+9@K	Cervelliere (3)	2	2	0	0	11	invfhlu	azhm		0
+859	Belt (6)	2	1	0	0	24	invmbl	belt		-1
+739	Leather Armor (4)	2	3	0	0	13	invlea	tors		-1
+@32	Plated Belt (Sacred)	2	1	0	0	30	invhbl	belt		-1
+k18	Coronet (5)	2	2	0	0	20	invci1	circ		-1
+662	Skull Cap (2)	2	2	0	0	5	invskp	helm		-1
+758	Crown (4)	2	2	0	0	18	invcrn	crow		-1
+783	Bone Helm (4)	2	2	0	0	18	invbhm	bhlm		-1
+706	Ancient Armor (3)	2	3	0	0	15	invaar	tors		-1
+3@N	Parma (3)	2	2	0	0	11	invsmlu	ishd	0	6
+7@G	Gambeson (Sacred)	2	3	0	0	30	invxtuu	stor		1
+3@P	Totem Shield (Sacred)	2	3	0	0	30	invxshu	ishd	0	6
+4@I	Banded Plate (1)	2	3	0	0	6	invfulu	stor		1
+789	Scale Mail (5)	2	3	0	0	19	invscl	tors		-1
+16!	Setzschild (2)	2	4	0	0	10	invutss	azsd	0	0
+834	Ring Mail (6)	2	3	0	0	23	invrng	tors		-1
+@60	Aerin Shield (Sacred)	2	4	0	0	30	invpa4	ashd	0	3
+11!	Phoenix Shield (4)	2	3	0	0	17	invkitu	azsd	0	0
+772	Chain Gloves (4)	2	2	0	0	15	invmgl	glov		-1
+w54	Spirit Mask (3)	2	2	0	0	14	invdr5	pelt		5
+627	Sash (1)	2	1	0	0	0	invlbl	belt		-1
+e16	Zombie Head (5)	2	2	0	0	19	invne2	head	0	2
+30!	Bronze Shield (2)	2	2	0	0	8	invbucu	basd	0	4
+1@K	Morion (2)	2	2	0	0	5	invxkpu	azhm		0
+715	Large Shield (3)	2	3	0	0	10	invlrg	shie	0	-1
+e15	Preserved Head (5)	2	2	0	0	18	invne1	head	0	2
+653	Breast Plate (2)	2	3	0	0	7	invbrs	tors		-1
+e11	Rondache (5)	2	2	0	0	19	invpa2	ashd	0	3
+@18	Helm (Sacred)	2	2	0	0	30	invhlm	helm		-1
+04!	Athulua's Hand (4)	2	2	0	0	14	invxmlu	azsd	0	0
+716	Kite Shield (3)	2	3	0	0	11	invkit	shie	0	-1
+686	Light Plated Boots (2)	2	2	0	0	7	invtbt	boot		-1
+743	Scale Mail (4)	2	3	0	0	15	invscl	tors		-1
+778	Light Plated Boots (4)	2	2	0	0	16	invtbt	boot		-1
+@11	Field Plate (Sacred)	2	3	0	0	30	invfld	tors		-1
+685	Chain Boots (2)	2	2	0	0	6	invmbt	boot		-1
+e37	Unraveller Head (6)	2	2	0	0	24	invne3	head	0	2
+720	Light Belt (3)	2	1	0	0	10	invvbl	belt		-1
+8@L	Einherjar Helm (4)	2	2	0	0	16	invuhms	azhm		0
+723	Plated Belt (3)	2	1	0	0	13	invhbl	belt		-1
+k05	Circlet (2)	2	2	0	0	6	invci0	circ		-1
+w43	Aerin Shield (2)	2	4	0	0	8	invpa4	ashd	0	3
+637	Boots (1)	2	2	0	0	0	invlbt	boot		-1
+w33	Falcon Mask (2)	2	2	0	0	8	invdr4	pelt		5
+34!	Bronze Shield (6)	2	2	0	0	25	invbucu	basd	0	4
+@29	Light Belt (Sacred)	2	1	0	0	30	invvbl	belt		-1
+690	Mask (2)	2	2	0	0	8	invmsk	bhlm		-1
+w82	Heraldic Shield (4)	2	4	0	0	16	invpa3	ashd	0	3
+w32	Antlers (2)	2	2	0	0	7	invdr3	pelt		5
+w65	Preserved Head (3)	2	2	0	0	10	invne1	head	0	2
+752	Ancient Armor (4)	2	3	0	0	19	invaar	tors		-1
+13!	Phoenix Shield (6)	2	3	0	0	26	invkitu	azsd	0	0
+@26	Tower Shield (Sacred)	2	3	0	0	30	invtow	shie	0	-1
+835	Scale Mail (6)	2	3	0	0	23	invscl	tors		-1
+4@P	Bladed Shield (1)	2	3	0	0	4	invxpku	ishd	0	6
+28!	Bull Shield (Sacred)	2	4	0	0	30	invgtsu	basd	0	4
+w21	Rondache (1)	2	2	0	0	2	invpa2	ashd	0	3
+3@O	Aspis (5)	2	3	0	0	20	invxrgu	ishd	0	6
+862	Leather Gloves (6)	2	2	0	0	21	invlgl	glov		-1
+6@K	Morion (Sacred)	2	2	0	0	30	invxkpu	azhm		0
+54!	Blackguard Helm (5)	2	2	0	0	20	invbhmu	pzhm		3
+23!	Bull Shield (2)	2	4	0	0	6	invgtsu	basd	0	4
+2@K	Morion (3)	2	2	0	0	9	invxkpu	azhm		0
+683	Boots (2)	2	2	0	0	4	invlbt	boot		-1
+@43	Bone Shield (Sacred)	2	3	0	0	30	invbsh	shie	0	-1
+5@I	Banded Plate (2)	2	3	0	0	10	invfulu	stor		1
+w45	Preserved Head (2)	2	2	0	0	5	invne1	head	0	2
+@34	Heavy Gloves (Sacred)	2	2	0	0	30	invvgl	glov		-1
+765	Sash (4)	2	1	0	0	13	invlbl	belt		-1
+w98	Assault Helmet (5)	2	2	0	0	21	invba4	phlm		4
+784	Quilted Armor (5)	2	3	0	0	17	invqlt	tors		-1
+1@M	Einherjar Helm (6)	2	2	0	0	25	invuhms	azhm		0
+e25	Jawbone Cap (6)	2	2	0	0	23	invba1	phlm		4
+w44	Crown Shield (2)	2	2	0	0	9	invpa5	ashd	0	3
+762	Kite Shield (4)	2	3	0	0	16	invkit	shie	0	-1
+638	Heavy Boots (1)	2	2	0	0	1	invvbt	boot		-1
+734	Bone Shield (3)	2	3	0	0	11	invbsh	bshi	0	-1
+@51	Spirit Mask (Sacred)	2	2	0	0	30	invdr5	pelt		5
+875	Bone Helm (6)	2	2	0	0	27	invbhm	bhlm		-1
+@21	Crown (Sacred)	2	2	0	0	30	invcrn	helm		-1
+8@M	Spangenhelm (6)	2	2	0	0	27	invxrnu	azhm		0
+w29	Demon Head (1)	2	2	0	0	5	invne5	head	0	2
+@08	Breast Plate (Sacred)	2	3	0	0	30	invbrs	tors		-1
+k19	Tiara (5)	2	2	0	0	21	invci2	circ		-1
+3@M	Spangenhelm (1)	2	2	0	0	5	invxrnu	azhm		0
+9@J	Morion (1)	2	2	0	0	1	invxkpu	azhm		0
+824	Light Plated Boots (5)	2	2	0	0	20	invtbt	boot		-1
+661	Cap (2)	2	2	0	0	4	invcap	helm		-1
+800	Skull Cap (5)	2	2	0	0	18	invskp	helm		-1
+k04	Diadem (1)	2	2	0	0	5	invci3	circ		-1
+w93	Falcon Mask (5)	2	2	0	0	21	invdr4	pelt		5
+4@J	Ceremonial Armor (3)	2	3	0	0	15	invaaru	stor		1
+@69	Tiara (Sacred)	2	2	0	0	30	invci2	circ		-1
+@06	Scale Mail (Sacred)	2	3	0	0	30	invscl	tors		-1
+678	Leather Gloves (2)	2	2	0	0	4	invlgl	glov		-1
+7@N	Parma (Sacred)	2	2	0	0	30	invsmlu	ishd	0	6
+605	Scale Mail (1)	2	3	0	0	2	invscl	tors		-1
+4@O	Aspis (6)	2	3	0	0	25	invxrgu	ishd	0	6
+k17	Circlet (5)	2	2	0	0	19	invci0	circ		-1
+607	Breast Plate (1)	2	3	0	0	2	invbrs	tors		-1
+773	Light Gauntlets (4)	2	2	0	0	16	invtgl	glov		-1
+813	Belt (5)	2	1	0	0	20	invmbl	belt		-1
+644	Mask (1)	2	2	0	0	3	invmsk	bhlm		-1
+e14	Crown Shield (5)	2	2	0	0	22	invpa5	ashd	0	3
+759	Buckler (4)	2	2	0	0	13	invbuc	shie	0	-1
+1@J	Banded Plate (Sacred)	2	3	0	0	30	invfulu	stor		1
+851	Buckler (6)	2	2	0	0	21	invbuc	shie	0	-1
+w79	Avenger Guard (4)	2	2	0	0	18	invba5	phlm		4
+9@P	Bladed Shield (6)	2	3	0	0	26	invxpku	ishd	0	6
+01!	Athulua's Hand (1)	2	2	0	0	0	invxmlu	azsd	0	0
+694	Hard Leather Armor (3)	2	3	0	0	9	invhla	tors		-1
+@44	Spiked Shield (Sacred)	2	3	0	0	30	invspk	shie	0	-1
+@17	Skull Cap (Sacred)	2	2	0	0	30	invskp	helm		-1
+w85	Preserved Head (4)	2	2	0	0	14	invne1	head	0	2
+816	Leather Gloves (5)	2	2	0	0	17	invlgl	glov		-1
+12!	Phoenix Shield (5)	2	3	0	0	21	invkitu	azsd	0	0
+874	Mask (6)	2	2	0	0	25	invmsk	bhlm		-1
+w55	Jawbone Cap (3)	2	2	0	0	10	invba1	phlm		4
+652	Chain Mail (2)	2	3	0	0	6	invchn	tors		-1
+791	Breast Plate (5)	2	3	0	0	20	invbrs	tors		-1
+19!	Setzschild (5)	2	4	0	0	23	invutss	azsd	0	0
+796	Gothic Plate (5)	2	3	0	0	22	invgth	tors		-1
+14!	Phoenix Shield (Sacred)	2	3	0	0	30	invkitu	azsd	0	0
+844	Ancient Armor (6)	2	3	0	0	27	invaar	tors		-1
+787	Studded Leather (5)	2	3	0	0	19	invstu	tors		-1
+w40	Targe (2)	2	2	0	0	5	invpa1	ashd	0	3
+775	Boots (4)	2	2	0	0	12	invlbt	boot		-1
+746	Splint Mail (4)	2	3	0	0	16	invspl	tors		-1
+e36	Zombie Head (6)	2	2	0	0	24	invne2	head	0	2
+744	Chain Mail (4)	2	3	0	0	15	invchn	tors		-1
+w10	Wolf Head (1)	2	2	0	0	1	invdr1	pelt		5
+633	Heavy Gloves (1)	2	2	0	0	1	invvgl	glov		-1
+5@K	Morion (6)	2	2	0	0	22	invxkpu	azhm		0
+w15	Jawbone Cap (1)	2	2	0	0	1	invba1	phlm		4
+5@M	Spangenhelm (3)	2	2	0	0	14	invxrnu	azhm		0
+718	Gothic Shield (3)	2	4	0	0	14	invgts	shie	0	-1
+700	Splint Mail (3)	2	3	0	0	11	invspl	tors		-1
+868	Heavy Boots (6)	2	2	0	0	23	invvbt	boot		-1
+764	Gothic Shield (4)	2	4	0	0	18	invgts	shie	0	-1
+672	Gothic Shield (2)	2	4	0	0	9	invgts	shie	0	-1
+769	Plated Belt (4)	2	1	0	0	18	invhbl	belt		-1
+@12	Light Plate (Sacred)	2	3	0	0	30	invltp	tors		-1
+e12	Heraldic Shield (5)	2	4	0	0	20	invpa3	ashd	0	3
+803	Great Helm (5)	2	2	0	0	21	invghm	helm		-1
+@54	Horned Helm (Sacred)	2	2	0	0	30	invba3	phlm		4
+7@I	Banded Plate (4)	2	3	0	0	19	invfulu	stor		1
+853	Large Shield (6)	2	3	0	0	24	invlrg	shie	0	-1
+@14	Full Plate Mail (Sacred)	2	3	0	0	30	invful	tors		-1
+751	Full Plate Mail (4)	2	3	0	0	18	invful	tors		-1
+8@K	Cervelliere (2)	2	2	0	0	7	invfhlu	azhm		0
+606	Chain Mail (1)	2	3	0	0	2	invchn	tors		-1
+@22	Buckler (Sacred)	2	2	0	0	30	invbuc	shie	0	-1
+w52	Antlers (3)	2	2	0	0	11	invdr3	pelt		5
+724	Leather Gloves (3)	2	2	0	0	8	invlgl	glov		-1
+w73	Falcon Mask (4)	2	2	0	0	17	invdr4	pelt		5
+w60	Targe (3)	2	2	0	0	10	invpa1	ashd	0	3
+691	Bone Helm (2)	2	2	0	0	9	invbhm	bhlm		-1
+666	Crown (2)	2	2	0	0	9	invcrn	crow		-1
+1@L	Cervelliere (4)	2	2	0	0	15	invfhlu	azhm		0
+860	Heavy Belt (6)	2	1	0	0	25	invtbl	belt		-1
+@05	Ring Mail (Sacred)	2	3	0	0	30	invrng	tors		-1
+4@K	Morion (5)	2	2	0	0	18	invxkpu	azhm		0
+677	Plated Belt (2)	2	1	0	0	9	invhbl	belt		-1
+e21	Hawk Helm (6)	2	2	0	0	24	invdr2	pelt		5
+708	Skull Cap (3)	2	2	0	0	10	invskp	helm		-1
+650	Ring Mail (2)	2	3	0	0	6	invrng	tors		-1
+710	Full Helm (3)	2	2	0	0	11	invfhl	helm		-1
+856	Gothic Shield (6)	2	4	0	0	27	invgts	shie	0	-1
+15!	Setzschild (1)	2	4	0	0	6	invutss	azsd	0	0
+664	Full Helm (2)	2	2	0	0	7	invfhl	helm		-1
+6@J	Ceremonial Armor (5)	2	3	0	0	24	invaaru	stor		1
+43!	Hundsgugel (1)	2	2	0	0	1	invhlmu	pzhm		3
+5@J	Ceremonial Armor (4)	2	3	0	0	19	invaaru	stor		1
+w28	Gargoyle Head (1)	2	2	0	0	3	invne4	head	0	2
+@40	Chain Boots (Sacred)	2	2	0	0	30	invmbt	boot		-1
+646	Quilted Armor (2)	2	3	0	0	4	invqlt	tors		-1
+39!	Gilded Shield (4)	2	3	0	0	19	invlrgu	basd	0	4
+756	Full Helm (4)	2	2	0	0	16	invfhl	helm		-1
+w97	Horned Helm (5)	2	2	0	0	20	invba3	phlm		4
+@65	Gargoyle Head (Sacred)	2	2	0	0	30	invne4	head	0	2
+6@P	Bladed Shield (3)	2	3	0	0	12	invxpku	ishd	0	6
+26!	Bull Shield (5)	2	4	0	0	19	invgtsu	basd	0	4
+46!	Hundsgugel (4)	2	2	0	0	14	invhlmu	pzhm		3
+617	Helm (1)	2	2	0	0	2	invhlm	helm		-1
+w36	Fanged Helm (2)	2	2	0	0	6	invba2	phlm		4
+07!	Athulua's Hand (Sacred)	2	2	0	0	30	invxmlu	azsd	0	0
+w12	Antlers (1)	2	2	0	0	3	invdr3	pelt		5
+e28	Assault Helmet (6)	2	2	0	0	25	invba4	phlm		4
+@68	Coronet (Sacred)	2	2	0	0	30	invci1	circ		-1
+w20	Targe (1)	2	2	0	0	1	invpa1	ashd	0	3
+k13	Circlet (4)	2	2	0	0	15	invci0	circ		-1
+25!	Bull Shield (4)	2	4	0	0	15	invgtsu	basd	0	4
+651	Scale Mail (2)	2	3	0	0	6	invscl	tors		-1
+45!	Hundsgugel (3)	2	2	0	0	9	invhlmu	pzhm		3
+629	Belt (1)	2	1	0	0	2	invmbl	belt		-1
+@16	Cap (Sacred)	2	2	0	0	30	invcap	helm		-1
+49!	Hundsgugel (Sacred)	2	2	0	0	30	invhlmu	pzhm		3
+810	Gothic Shield (5)	2	4	0	0	22	invgts	shie	0	-1
+w71	Hawk Helm (4)	2	2	0	0	15	invdr2	pelt		5
+03!	Athulua's Hand (3)	2	2	0	0	9	invxmlu	azsd	0	0
+660	Ancient Armor (2)	2	3	0	0	10	invaar	tors		-1
+1@O	Aspis (3)	2	3	0	0	12	invxrgu	ishd	0	6
+w53	Falcon Mask (3)	2	2	0	0	12	invdr4	pelt		5
+w11	Hawk Helm (1)	2	2	0	0	2	invdr2	pelt		5
+@70	Diadem (Sacred)	2	2	0	0	30	invci3	circ		-1
+806	Small Shield (5)	2	2	0	0	18	invsml	shie	0	-1
+869	Chain Boots (6)	2	2	0	0	24	invmbt	boot		-1
+41!	Gilded Shield (6)	2	3	0	0	28	invlrgu	basd	0	4
+790	Chain Mail (5)	2	3	0	0	19	invchn	tors		-1
+9@M	Spangenhelm (Sacred)	2	2	0	0	30	invxrnu	azhm		0
+09!	Phoenix Shield (2)	2	3	0	0	8	invkitu	azsd	0	0
+w17	Horned Helm (1)	2	2	0	0	3	invba3	phlm		4
+604	Ring Mail (1)	2	3	0	0	2	invrng	tors		-1
+@13	Gothic Plate (Sacred)	2	3	0	0	30	invgth	tors		-1
+717	Tower Shield (3)	2	3	0	0	12	invtow	shie	0	-1
+815	Plated Belt (5)	2	1	0	0	22	invhbl	belt		-1
+843	Full Plate Mail (6)	2	3	0	0	27	invful	tors		-1
+671	Tower Shield (2)	2	3	0	0	8	invtow	shie	0	-1
+51!	Blackguard Helm (2)	2	2	0	0	7	invbhmu	pzhm		3
+55!	Blackguard Helm (6)	2	2	0	0	25	invbhmu	pzhm		3
+632	Leather Gloves (1)	2	2	0	0	0	invlgl	glov		-1
+3@L	Cervelliere (6)	2	2	0	0	24	invfhlu	azhm		0
+692	Quilted Armor (3)	2	3	0	0	9	invqlt	tors		-1
+610	Field Plate (1)	2	3	0	0	3	invfld	tors		-1
+2@H	Lamellar Armor (4)	2	3	0	0	15	invxrss	stor		1
+7@H	Kazarghand (2)	2	3	0	0	7	invxaru	stor		1
+w41	Rondache (2)	2	2	0	0	6	invpa2	ashd	0	3
+663	Helm (2)	2	2	0	0	6	invhlm	helm		-1
+725	Heavy Gloves (3)	2	2	0	0	10	invvgl	glov		-1
+615	Cap (1)	2	2	0	0	0	invcap	helm		-1
+w72	Antlers (4)	2	2	0	0	16	invdr3	pelt		5
+854	Kite Shield (6)	2	3	0	0	24	invkit	shie	0	-1
+@23	Small Shield (Sacred)	2	2	0	0	30	invsml	shie	0	-1
+766	Light Belt (4)	2	1	0	0	14	invvbl	belt		-1
+7@P	Bladed Shield (4)	2	3	0	0	17	invxpku	ishd	0	6
+797	Full Plate Mail (5)	2	3	0	0	23	invful	tors		-1
+658	Gothic Plate (2)	2	3	0	0	9	invgth	tors		-1
+@59	Heraldic Shield (Sacred)	2	4	0	0	30	invpa3	ashd	0	3
+w96	Fanged Helm (5)	2	2	0	0	19	invba2	phlm		4
+659	Full Plate Mail (2)	2	3	0	0	9	invful	tors		-1
+645	Bone Helm (1)	2	2	0	0	5	invbhm	bhlm		-1
+682	Gauntlets (2)	2	2	0	0	9	invhgl	glov		-1
+e39	Demon Head (6)	2	2	0	0	27	invne5	head	0	2
+635	Light Gauntlets (1)	2	2	0	0	3	invtgl	glov		-1
+10!	Phoenix Shield (3)	2	3	0	0	12	invkitu	azsd	0	0
+788	Ring Mail (5)	2	3	0	0	19	invrng	tors		-1
+w27	Unraveller Head (1)	2	2	0	0	2	invne3	head	0	2
+709	Helm (3)	2	2	0	0	11	invhlm	helm		-1
+e27	Horned Helm (6)	2	2	0	0	24	invba3	phlm		4
+614	Ancient Armor (1)	2	3	0	0	5	invaar	tors		-1
+3@K	Morion (4)	2	2	0	0	13	invxkpu	azhm		0
+699	Breast Plate (3)	2	3	0	0	11	invbrs	tors		-1
+18!	Setzschild (4)	2	4	0	0	19	invutss	azsd	0	0
+687	Greaves (2)	2	2	0	0	9	invhbt	boot		-1
+818	Chain Gloves (5)	2	2	0	0	20	invmgl	glov		-1
+40!	Gilded Shield (5)	2	3	0	0	24	invlrgu	basd	0	4
+06!	Athulua's Hand (6)	2	2	0	0	22	invxmlu	azsd	0	0
+626	Gothic Shield (1)	2	4	0	0	5	invgts	shie	0	-1
+e13	Aerin Shield (5)	2	4	0	0	21	invpa4	ashd	0	3
+826	Bone Shield (5)	2	3	0	0	20	invbsh	bshi	0	-1
+w35	Jawbone Cap (2)	2	2	0	0	5	invba1	phlm		4
+k06	Coronet (2)	2	2	0	0	7	invci1	circ		-1
+56!	Blackguard Helm (Sacred)	2	2	0	0	30	invbhmu	pzhm		3
+6@I	Banded Plate (3)	2	3	0	0	14	invfulu	stor		1
+782	Mask (4)	2	2	0	0	16	invmsk	bhlm		-1
+757	Great Helm (4)	2	2	0	0	17	invghm	helm		-1
+4@L	Cervelliere (Sacred)	2	2	0	0	30	invfhlu	azhm		0
+809	Tower Shield (5)	2	3	0	0	21	invtow	shie	0	-1
+2@M	Einherjar Helm (Sacred)	2	2	0	0	30	invuhms	azhm		0
+6@O	Totem Shield (1)	2	3	0	0	3	invxshu	ishd	0	6
+@41	Light Plated Boots (Sacred)	2	2	0	0	30	invtbt	boot		-1
+@04	Studded Leather (Sacred)	2	3	0	0	30	invstu	tors		-1
+@67	Circlet (Sacred)	2	2	0	0	30	invci0	circ		-1
+@55	Assault Helmet (Sacred)	2	2	0	0	30	invba4	phlm		4
+w66	Zombie Head (3)	2	2	0	0	10	invne2	head	0	2
+745	Breast Plate (4)	2	3	0	0	15	invbrs	tors		-1
+832	Hard Leather Armor (6)	2	3	0	0	22	invhla	tors		-1
+w13	Falcon Mask (1)	2	2	0	0	4	invdr4	pelt		5
+736	Mask (3)	2	2	0	0	12	invmsk	bhlm		-1
+2@O	Aspis (4)	2	3	0	0	16	invxrgu	ishd	0	6
+k12	Diadem (3)	2	2	0	0	14	invci3	circ		-1
+603	Studded Leather (1)	2	3	0	0	1	invstu	tors		-1
+781	Spiked Shield (4)	2	3	0	0	16	invspk	bshi	0	-1
+828	Mask (5)	2	2	0	0	21	invmsk	bhlm		-1
+620	Crown (1)	2	2	0	0	5	invcrn	crow		-1
+w62	Heraldic Shield (3)	2	4	0	0	11	invpa3	ashd	0	3
+9@L	Einherjar Helm (5)	2	2	0	0	21	invuhms	azhm		0
+850	Crown (6)	2	2	0	0	27	invcrn	crow		-1
+730	Heavy Boots (3)	2	2	0	0	10	invvbt	boot		-1
+@15	Ancient Armor (Sacred)	2	3	0	0	30	invaar	tors		-1
+9@G	Lamellar Armor (2)	2	3	0	0	6	invxrss	stor		1
+k08	Diadem (2)	2	2	0	0	9	invci3	circ		-1
+36!	Gilded Shield (1)	2	3	0	0	7	invlrgu	basd	0	4
+872	Bone Shield (6)	2	3	0	0	24	invbsh	bshi	0	-1
+5@L	Einherjar Helm (1)	2	2	0	0	3	invuhms	azhm		0
+1@N	Parma (1)	2	2	0	0	2	invsmlu	ishd	0	6
+52!	Blackguard Helm (3)	2	2	0	0	12	invbhmu	pzhm		3
+k14	Coronet (4)	2	2	0	0	16	invci1	circ		-1
+7@L	Einherjar Helm (3)	2	2	0	0	12	invuhms	azhm		0
+w68	Gargoyle Head (3)	2	2	0	0	12	invne4	head	0	2
+611	Light Plate (1)	2	3	0	0	4	invltp	tors		-1
+6@M	Spangenhelm (4)	2	2	0	0	19	invxrnu	azhm		0
+849	Great Helm (6)	2	2	0	0	25	invghm	helm		-1
+2@G	Gambeson (2)	2	3	0	0	6	invxtuu	stor		1
+842	Gothic Plate (6)	2	3	0	0	26	invgth	tors		-1
+17!	Setzschild (3)	2	4	0	0	15	invutss	azsd	0	0
+665	Great Helm (2)	2	2	0	0	8	invghm	helm		-1
+@31	Heavy Belt (Sacred)	2	1	0	0	30	invtbl	belt		-1
+865	Light Gauntlets (6)	2	2	0	0	25	invtgl	glov		-1
+w26	Zombie Head (1)	2	2	0	0	2	invne2	head	0	2
+@24	Large Shield (Sacred)	2	3	0	0	30	invlrg	shie	0	-1
+5@G	Gambeson (5)	2	3	0	0	19	invxtuu	stor		1
+5@O	Aspis (Sacred)	2	3	0	0	30	invxrgu	ishd	0	6
+@53	Fanged Helm (Sacred)	2	2	0	0	30	invba2	phlm		4
+@47	Wolf Head (Sacred)	2	2	0	0	30	invdr1	pelt		5
+649	Studded Leather (2)	2	3	0	0	6	invstu	tors		-1
+w58	Assault Helmet (3)	2	2	0	0	12	invba4	phlm		4
+w74	Spirit Mask (4)	2	2	0	0	18	invdr5	pelt		5
+689	Spiked Shield (2)	2	3	0	0	8	invspk	bshi	0	-1
+e22	Antlers (6)	2	2	0	0	24	invdr3	pelt		5
+642	Bone Shield (1)	2	3	0	0	2	invbsh	bshi	0	-1
+648	Hard Leather Armor (2)	2	3	0	0	5	invhla	tors		-1
+w86	Zombie Head (4)	2	2	0	0	15	invne2	head	0	2
+@03	Hard Leather Armor (Sacred)	2	3	0	0	30	invhla	tors		-1
+@39	Heavy Boots (Sacred)	2	2	0	0	30	invvbt	boot		-1
+812	Light Belt (5)	2	1	0	0	19	invvbl	belt		-1
+795	Light Plate (5)	2	3	0	0	21	invltp	tors		-1
+w76	Fanged Helm (4)	2	2	0	0	15	invba2	phlm		4
+794	Field Plate (5)	2	3	0	0	21	invfld	tors		-1
+727	Light Gauntlets (3)	2	2	0	0	12	invtgl	glov		-1
+@56	Avenger Guard (Sacred)	2	2	0	0	30	invba5	phlm		4
+w67	Unraveller Head (3)	2	2	0	0	11	invne3	head	0	2
+e38	Gargoyle Head (6)	2	2	0	0	25	invne4	head	0	2
+4@M	Spangenhelm (2)	2	2	0	0	10	invxrnu	azhm		0
+674	Light Belt (2)	2	1	0	0	6	invvbl	belt		-1
+732	Light Plated Boots (3)	2	2	0	0	12	invtbt	boot		-1
+811	Sash (5)	2	1	0	0	17	invlbl	belt		-1
+e33	Aerin Shield (6)	2	4	0	0	25	invpa4	ashd	0	3
+w16	Fanged Helm (1)	2	2	0	0	2	invba2	phlm		4
+k01	Circlet (1)	2	2	0	0	2	invci0	circ		-1
+622	Small Shield (1)	2	2	0	0	1	invsml	shie	0	-1
+w48	Gargoyle Head (2)	2	2	0	0	8	invne4	head	0	2
+w89	Demon Head (4)	2	2	0	0	18	invne5	head	0	2
+8@J	Ceremonial Armor (Sacred)	2	3	0	0	30	invaaru	stor		1
+819	Light Gauntlets (5)	2	2	0	0	20	invtgl	glov		-1
+776	Heavy Boots (4)	2	2	0	0	14	invvbt	boot		-1
+38!	Gilded Shield (3)	2	3	0	0	15	invlrgu	basd	0	4
+858	Light Belt (6)	2	1	0	0	23	invvbl	belt		-1
+@63	Zombie Head (Sacred)	2	2	0	0	30	invne2	head	0	2
+02!	Athulua's Hand (2)	2	2	0	0	5	invxmlu	azsd	0	0
+801	Helm (5)	2	2	0	0	19	invhlm	helm		-1
+42!	Gilded Shield (Sacred)	2	3	0	0	30	invlrgu	basd	0	4
+@36	Light Gauntlets (Sacred)	2	2	0	0	30	invtgl	glov		-1
+830	Quilted Armor (6)	2	3	0	0	22	invqlt	tors		-1
+754	Skull Cap (4)	2	2	0	0	14	invskp	helm		-1
+6@N	Parma (6)	2	2	0	0	24	invsmlu	ishd	0	6
+k07	Tiara (2)	2	2	0	0	8	invci2	circ		-1
+847	Helm (6)	2	2	0	0	24	invhlm	helm		-1
+747	Plate Mail (4)	2	3	0	0	16	invplt	tors		-1
+1@Q	Bladed Shield (Sacred)	2	3	0	0	30	invxpku	ishd	0	6
+704	Gothic Plate (3)	2	3	0	0	13	invgth	tors		-1
+681	Light Gauntlets (2)	2	2	0	0	7	invtgl	glov		-1
+619	Great Helm (1)	2	2	0	0	4	invghm	helm		-1
+855	Tower Shield (6)	2	3	0	0	25	invtow	shie	0	-1
+698	Chain Mail (3)	2	3	0	0	11	invchn	tors		-1
+621	Buckler (1)	2	2	0	0	0	invbuc	shie	0	-1
+3@J	Ceremonial Armor (2)	2	3	0	0	10	invaaru	stor		1
+680	Chain Gloves (2)	2	2	0	0	6	invmgl	glov		-1
+679	Heavy Gloves (2)	2	2	0	0	6	invvgl	glov		-1
+831	Leather Armor (6)	2	3	0	0	22	invlea	tors		-1
+2@P	Totem Shield (6)	2	3	0	0	25	invxshu	ishd	0	6
+k24	Diadem (6)	2	2	0	0	27	invci3	circ		-1
+1@P	Totem Shield (5)	2	3	0	0	20	invxshu	ishd	0	6
+780	Bone Shield (4)	2	3	0	0	15	invbsh	bshi	0	-1
+647	Leather Armor (2)	2	3	0	0	4	invlea	tors		-1
+2@N	Parma (2)	2	2	0	0	7	invsmlu	ishd	0	6
+786	Hard Leather Armor (5)	2	3	0	0	18	invhla	tors		-1
+740	Hard Leather Armor (4)	2	3	0	0	14	invhla	tors		-1
+w69	Demon Head (3)	2	2	0	0	14	invne5	head	0	2
+7@J	Ceremonial Armor (6)	2	3	0	0	27	invaaru	stor		1
+e19	Demon Head (5)	2	2	0	0	22	invne5	head	0	2
+602	Hard Leather Armor (1)	2	3	0	0	1	invhla	tors		-1
+871	Greaves (6)	2	2	0	0	26	invhbt	boot		-1
+841	Light Plate (6)	2	3	0	0	25	invltp	tors		-1
+719	Sash (3)	2	1	0	0	8	invlbl	belt		-1
+k09	Circlet (3)	2	2	0	0	11	invci0	circ		-1
+612	Gothic Plate (1)	2	3	0	0	4	invgth	tors		-1
+827	Spiked Shield (5)	2	3	0	0	21	invspk	bshi	0	-1
+e29	Avenger Guard (6)	2	2	0	0	27	invba5	phlm		4
+701	Plate Mail (3)	2	3	0	0	11	invplt	tors		-1
+20!	Setzschild (6)	2	4	0	0	28	invutss	azsd	0	0
+w61	Rondache (3)	2	2	0	0	10	invpa2	ashd	0	3
+820	Gauntlets (5)	2	2	0	0	22	invhgl	glov		-1
+867	Boots (6)	2	2	0	0	21	invlbt	boot		-1
+w90	Wolf Head (5)	2	2	0	0	18	invdr1	pelt		5
+7@K	Cervelliere (1)	2	2	0	0	2	invfhlu	azhm		0
+817	Heavy Gloves (5)	2	2	0	0	19	invvgl	glov		-1
+w30	Wolf Head (2)	2	2	0	0	5	invdr1	pelt		5
+731	Chain Boots (3)	2	2	0	0	11	invmbt	boot		-1
+668	Small Shield (2)	2	2	0	0	5	invsml	shie	0	-1
+688	Bone Shield (2)	2	3	0	0	7	invbsh	bshi	0	-1
+750	Gothic Plate (4)	2	3	0	0	17	invgth	tors		-1
+w88	Gargoyle Head (4)	2	2	0	0	17	invne4	head	0	2
+657	Light Plate (2)	2	3	0	0	8	invltp	tors		-1
+w25	Preserved Head (1)	2	2	0	0	1	invne1	head	0	2
+774	Gauntlets (4)	2	2	0	0	18	invhgl	glov		-1
+@25	Kite Shield (Sacred)	2	3	0	0	30	invkit	shie	0	-1
+866	Gauntlets (6)	2	2	0	0	26	invhgl	glov		-1
+w75	Jawbone Cap (4)	2	2	0	0	14	invba1	phlm		4
+768	Heavy Belt (4)	2	1	0	0	16	invtbl	belt		-1
+@58	Rondache (Sacred)	2	2	0	0	30	invpa2	ashd	0	3
+693	Leather Armor (3)	2	3	0	0	9	invlea	tors		-1
+673	Sash (2)	2	1	0	0	4	invlbl	belt		-1
+w49	Demon Head (2)	2	2	0	0	9	invne5	head	0	2
+35!	Bronze Shield (Sacred)	2	2	0	0	30	invbucu	basd	0	4
+770	Leather Gloves (4)	2	2	0	0	13	invlgl	glov		-1
+@38	Boots (Sacred)	2	2	0	0	30	invlbt	boot		-1
+641	Greaves (1)	2	2	0	0	4	invhbt	boot		-1
+838	Splint Mail (6)	2	3	0	0	24	invspl	tors		-1
+761	Large Shield (4)	2	3	0	0	15	invlrg	shie	0	-1
+616	Skull Cap (1)	2	2	0	0	1	invskp	helm		-1
+640	Light Plated Boots (1)	2	2	0	0	3	invtbt	boot		-1
+738	Quilted Armor (4)	2	3	0	0	13	invqlt	tors		-1
+33!	Bronze Shield (5)	2	2	0	0	21	invbucu	basd	0	4
+804	Crown (5)	2	2	0	0	23	invcrn	crow		-1
+870	Light Plated Boots (6)	2	2	0	0	25	invtbt	boot		-1
+w94	Spirit Mask (5)	2	2	0	0	23	invdr5	pelt		5
+w91	Hawk Helm (5)	2	2	0	0	19	invdr2	pelt		5
+k23	Tiara (6)	2	2	0	0	25	invci2	circ		-1
+623	Large Shield (1)	2	3	0	0	2	invlrg	shie	0	-1
+8@I	Banded Plate (5)	2	3	0	0	23	invfulu	stor		1
+@57	Targe (Sacred)	2	2	0	0	30	invpa1	ashd	0	3
+e32	Heraldic Shield (6)	2	4	0	0	24	invpa3	ashd	0	3
+e30	Targe (6)	2	2	0	0	23	invpa1	ashd	0	3
+08!	Phoenix Shield (1)	2	3	0	0	4	invkitu	azsd	0	0
+755	Helm (4)	2	2	0	0	15	invhlm	helm		-1
+777	Chain Boots (4)	2	2	0	0	15	invmbt	boot		-1
+31!	Bronze Shield (3)	2	2	0	0	12	invbucu	basd	0	4
+628	Light Belt (1)	2	1	0	0	1	invvbl	belt		-1
+22!	Bull Shield (1)	2	4	0	0	1	invgtsu	basd	0	4
+w19	Avenger Guard (1)	2	2	0	0	5	invba5	phlm		4
+@02	Leather Armor (Sacred)	2	3	0	0	30	invlea	tors		-1
+733	Greaves (3)	2	2	0	0	13	invhbt	boot		-1
+630	Heavy Belt (1)	2	1	0	0	3	invtbl	belt		-1
+6@H	Kazarghand (1)	2	3	0	0	3	invxaru	stor		1
+748	Field Plate (4)	2	3	0	0	16	invfld	tors		-1
+w37	Horned Helm (2)	2	2	0	0	7	invba3	phlm		4
+608	Splint Mail (1)	2	3	0	0	3	invspl	tors		-1
+711	Great Helm (3)	2	2	0	0	12	invghm	helm		-1
+9@O	Totem Shield (4)	2	3	0	0	16	invxshu	ishd	0	6
+705	Full Plate Mail (3)	2	3	0	0	14	invful	tors		-1
+@66	Demon Head (Sacred)	2	2	0	0	30	invne5	head	0	2
+836	Chain Mail (6)	2	3	0	0	24	invchn	tors		-1
+2@J	Ceremonial Armor (1)	2	3	0	0	6	invaaru	stor		1
+@49	Antlers (Sacred)	2	2	0	0	30	invdr3	pelt		5
+w51	Hawk Helm (3)	2	2	0	0	11	invdr2	pelt		5
+9@H	Kazarghand (4)	2	3	0	0	16	invxaru	stor		1
+@27	Gothic Shield (Sacred)	2	4	0	0	30	invgts	shie	0	-1
+785	Leather Armor (5)	2	3	0	0	17	invlea	tors		-1
+@33	Leather Gloves (Sacred)	2	2	0	0	30	invlgl	glov		-1
+609	Plate Mail (1)	2	3	0	0	3	invplt	tors		-1
+667	Buckler (2)	2	2	0	0	4	invbuc	shie	0	-1
+741	Studded Leather (4)	2	3	0	0	14	invstu	tors		-1
+3@I	Kazarghand (Sacred)	2	3	0	0	30	invxaru	stor		1
+714	Small Shield (3)	2	2	0	0	10	invsml	shie	0	-1
+53!	Blackguard Helm (4)	2	2	0	0	16	invbhmu	pzhm		3
+822	Heavy Boots (5)	2	2	0	0	19	invvbt	boot		-1
+601	Leather Armor (1)	2	3	0	0	1	invlea	tors		-1
+8@G	Lamellar Armor (1)	2	3	0	0	2	invxrss	stor		1
+779	Greaves (4)	2	2	0	0	18	invhbt	boot		-1
+e18	Gargoyle Head (5)	2	2	0	0	21	invne4	head	0	2
+w31	Hawk Helm (2)	2	2	0	0	6	invdr2	pelt		5
+753	Cap (4)	2	2	0	0	13	invcap	helm		-1
+697	Scale Mail (3)	2	3	0	0	10	invscl	tors		-1
+w39	Avenger Guard (2)	2	2	0	0	9	invba5	phlm		4
+726	Chain Gloves (3)	2	2	0	0	11	invmgl	glov		-1
+21!	Setzschild (Sacred)	2	4	0	0	30	invutss	azsd	0	0
+w24	Crown Shield (1)	2	2	0	0	5	invpa5	ashd	0	3
+857	Sash (6)	2	1	0	0	21	invlbl	belt		-1
+707	Cap (3)	2	2	0	0	8	invcap	helm		-1
+@28	Sash (Sacred)	2	1	0	0	30	invlbl	belt		-1
+w81	Rondache (4)	2	2	0	0	15	invpa2	ashd	0	3
+5@P	Bladed Shield (2)	2	3	0	0	8	invxpku	ishd	0	6
+4@G	Gambeson (4)	2	3	0	0	14	invxtuu	stor		1
+@37	Gauntlets (Sacred)	2	2	0	0	30	invhgl	glov		-1
+w47	Unraveller Head (2)	2	2	0	0	7	invne3	head	0	2
+792	Splint Mail (5)	2	3	0	0	20	invspl	tors		-1
+624	Kite Shield (1)	2	3	0	0	2	invkit	shie	0	-1
+823	Chain Boots (5)	2	2	0	0	19	invmbt	boot		-1
+656	Field Plate (2)	2	3	0	0	7	invfld	tors		-1
+729	Boots (3)	2	2	0	0	8	invlbt	boot		-1
+4@N	Parma (4)	2	2	0	0	15	invsmlu	ishd	0	6
+771	Heavy Gloves (4)	2	2	0	0	14	invvgl	glov		-1
+814	Heavy Belt (5)	2	1	0	0	20	invtbl	belt		-1
+808	Kite Shield (5)	2	3	0	0	20	invkit	shie	0	-1
+845	Cap (6)	2	2	0	0	22	invcap	helm		-1
+@01	Quilted Armor (Sacred)	2	3	0	0	30	invqlt	tors		-1
+48!	Hundsgugel (6)	2	2	0	0	22	invhlmu	pzhm		3
+760	Small Shield (4)	2	2	0	0	14	invsml	shie	0	-1
+w78	Assault Helmet (4)	2	2	0	0	17	invba4	phlm		4
+k22	Coronet (6)	2	2	0	0	24	invci1	circ		-1
+863	Heavy Gloves (6)	2	2	0	0	23	invvgl	glov		-1
+749	Light Plate (4)	2	3	0	0	17	invltp	tors		-1
+829	Bone Helm (5)	2	2	0	0	22	invbhm	bhlm		-1
+735	Spiked Shield (3)	2	3	0	0	12	invspk	bshi	0	-1
+613	Full Plate Mail (1)	2	3	0	0	5	invful	tors		-1
+721	Belt (3)	2	1	0	0	11	invmbl	belt		-1
+k03	Tiara (1)	2	2	0	0	4	invci2	circ		-1
+669	Large Shield (2)	2	3	0	0	6	invlrg	shie	0	-1
+7@M	Spangenhelm (5)	2	2	0	0	23	invxrnu	azhm		0
+32!	Bronze Shield (4)	2	2	0	0	16	invbucu	basd	0	4
+e24	Spirit Mask (6)	2	2	0	0	27	invdr5	pelt		5
+w84	Crown Shield (4)	2	2	0	0	18	invpa5	ashd	0	3
+702	Field Plate (3)	2	3	0	0	12	invfld	tors		-1
+@62	Preserved Head (Sacred)	2	2	0	0	30	invne1	head	0	2
+639	Chain Boots (1)	2	2	0	0	2	invmbt	boot		-1
+50!	Blackguard Helm (1)	2	2	0	0	3	invbhmu	pzhm		3
+@45	Mask (Sacred)	2	2	0	0	30	invmsk	helm		-1
+873	Spiked Shield (6)	2	3	0	0	25	invspk	bshi	0	-1
+636	Gauntlets (1)	2	2	0	0	5	invhgl	glov		-1
+1@I	Kazarghand (5)	2	3	0	0	20	invxaru	stor		1
+k16	Diadem (4)	2	2	0	0	18	invci3	circ		-1
+8@P	Bladed Shield (5)	2	3	0	0	21	invxpku	ishd	0	6
+w18	Assault Helmet (1)	2	2	0	0	4	invba4	phlm		4
+w95	Jawbone Cap (5)	2	2	0	0	18	invba1	phlm		4
+852	Small Shield (6)	2	2	0	0	23	invsml	shie	0	-1
+9@N	Aspis (2)	2	3	0	0	7	invxrgu	ishd	0	6
+643	Spiked Shield (1)	2	3	0	0	3	invspk	bshi	0	-1
+e23	Falcon Mask (6)	2	2	0	0	25	invdr4	pelt		5
+8@O	Totem Shield (3)	2	3	0	0	12	invxshu	ishd	0	6
+w63	Aerin Shield (3)	2	4	0	0	12	invpa4	ashd	0	3
+w59	Avenger Guard (3)	2	2	0	0	14	invba5	phlm		4
+37!	Gilded Shield (2)	2	3	0	0	11	invlrgu	basd	0	4
+600	Quilted Armor (1)	2	3	0	0	0	invqlt	tors		-1
+@64	Unraveller Head (Sacred)	2	2	0	0	30	invne3	head	0	2
+w38	Assault Helmet (2)	2	2	0	0	8	invba4	phlm		4
+2@I	Kazarghand (6)	2	3	0	0	25	invxaru	stor		1
+3@H	Lamellar Armor (5)	2	3	0	0	19	invxrss	stor		1
+@46	Bone Helm (Sacred)	2	2	0	0	30	invbhm	helm		-1
+@61	Crown Shield (Sacred)	2	2	0	0	30	invpa5	ashd	0	3
+821	Boots (5)	2	2	0	0	17	invlbt	boot		-1
+696	Ring Mail (3)	2	3	0	0	10	invrng	tors		-1
+9@I	Banded Plate (6)	2	3	0	0	27	invfulu	stor		1
+8@H	Kazarghand (3)	2	3	0	0	12	invxaru	stor		1
+713	Buckler (3)	2	2	0	0	8	invbuc	shie	0	-1
+w50	Wolf Head (3)	2	2	0	0	10	invdr1	pelt		5
+@48	Hawk Helm (Sacred)	2	2	0	0	30	invdr2	pelt		5
+w57	Horned Helm (3)	2	2	0	0	11	invba3	phlm		4
+676	Heavy Belt (2)	2	1	0	0	7	invtbl	belt		-1
+@30	Belt (Sacred)	2	1	0	0	30	invmbl	belt		-1
+k15	Tiara (4)	2	2	0	0	17	invci2	circ		-1
+24!	Bull Shield (3)	2	4	0	0	10	invgtsu	basd	0	4
+5@N	Parma (5)	2	2	0	0	20	invsmlu	ishd	0	6
+w23	Aerin Shield (1)	2	4	0	0	3	invpa4	ashd	0	3
+670	Kite Shield (2)	2	3	0	0	7	invkit	shie	0	-1
+837	Breast Plate (6)	2	3	0	0	25	invbrs	tors		-1
+625	Tower Shield (1)	2	3	0	0	3	invtow	shie	0	-1
+712	Crown (3)	2	2	0	0	14	invcrn	crow		-1
+631	Plated Belt (1)	2	1	0	0	5	invhbl	belt		-1
+6@G	Gambeson (6)	2	3	0	0	23	invxtuu	stor		1
+w46	Zombie Head (2)	2	2	0	0	6	invne2	head	0	2
+@52	Jawbone Cap (Sacred)	2	2	0	0	30	invba1	phlm		4
+e31	Rondache (6)	2	2	0	0	24	invpa2	ashd	0	3
+4@H	Lamellar Armor (6)	2	3	0	0	24	invxrss	stor		1
+e35	Preserved Head (6)	2	2	0	0	23	invne1	head	0	2
+w80	Targe (4)	2	2	0	0	14	invpa1	ashd	0	3
+@19	Full Helm (Sacred)	2	2	0	0	30	invfhl	helm		-1
+1@G	Gambeson (1)	2	3	0	0	1	invxtuu	stor		1
+763	Tower Shield (4)	2	3	0	0	17	invtow	shie	0	-1
+@10	Plate Mail (Sacred)	2	3	0	0	30	invplt	tors		-1
+839	Plate Mail (6)	2	3	0	0	25	invplt	tors		-1
+w77	Horned Helm (4)	2	2	0	0	16	invba3	phlm		4
+793	Plate Mail (5)	2	3	0	0	21	invplt	tors		-1
+654	Splint Mail (2)	2	3	0	0	7	invspl	tors		-1
+w92	Antlers (5)	2	2	0	0	20	invdr3	pelt		5
+@09	Splint Mail (Sacred)	2	3	0	0	30	invspl	tors		-1
+k10	Coronet (3)	2	2	0	0	11	invci1	circ		-1
+618	Full Helm (1)	2	2	0	0	3	invfhl	helm		-1
+848	Full Helm (6)	2	2	0	0	24	invfhl	helm		-1
+655	Plate Mail (2)	2	3	0	0	7	invplt	tors		-1
+47!	Hundsgugel (5)	2	2	0	0	18	invhlmu	pzhm		3
+44!	Hundsgugel (2)	2	2	0	0	5	invhlmu	pzhm		3
+k02	Coronet (1)	2	2	0	0	3	invci1	circ		-1
+1@H	Lamellar Armor (3)	2	3	0	0	11	invxrss	stor		1
+703	Light Plate (3)	2	3	0	0	12	invltp	tors		-1
+e10	Targe (5)	2	2	0	0	18	invpa1	ashd	0	3
+864	Chain Gloves (6)	2	2	0	0	24	invmgl	glov		-1
+w87	Unraveller Head (4)	2	2	0	0	16	invne3	head	0	2
+w56	Fanged Helm (3)	2	2	0	0	11	invba2	phlm		4
+799	Cap (5)	2	2	0	0	17	invcap	helm		-1
+w83	Aerin Shield (4)	2	4	0	0	17	invpa4	ashd	0	3
+840	Field Plate (6)	2	3	0	0	25	invfld	tors		-1
+k21	Circlet (6)	2	2	0	0	24	invci0	circ		-1
+29!	Bronze Shield (1)	2	2	0	0	3	invbucu	basd	0	4
+05!	Athulua's Hand (5)	2	2	0	0	18	invxmlu	azsd	0	0
+e17	Unraveller Head (5)	2	2	0	0	20	invne3	head	0	2
+802	Full Helm (5)	2	2	0	0	20	invfhl	helm		-1
+807	Large Shield (5)	2	3	0	0	19	invlrg	shie	0	-1
+l37	War Hammer (2)	2	3	1	0	7	invwhm	hamm	1	-1
+!59	Flamen Staff (4)	1	4	1	0	17	invcstu	dstf	1	5
+127	Morning Star (1)	1	3	1	0	3	invmst	mace	1	-1
+46@	Blade (Sacred)	1	3	1	0	30	invbld	knif	1	-1
+118	War Axe (1)	2	3	1	0	5	invwax	axe	1	-1
+206	Trident (2)	2	4	1	0	6	invtri	spea	1	-1
+443	Falchion (6)	1	3	1	0	26	invflc	swor	1	-1
+!71	Hexblade (2)	1	3	1	0	7	invkrsu	nknf	1	2
+8@E	Stinger Crossbow (6)	2	3	1	0	27	invmxbu	nxbw	1	2
+!65	Marrow Staff (3)	2	4	1	0	15	inv8wsu	nstf	1	2
+54@	Gnarled Staff (Sacred)	1	4	1	0	30	invcst	staf	1	-1
+83@	Clasped Orb (Sacred)	1	2	1	0	30	invob4	orb	1	1
+6@4	Recurve Bow (5)	2	3	1	0	24	invswbu	dbow	1	5
+331	Morning Star (4)	1	3	1	0	17	invmst	mace	1	-1
+358	Battle Staff (4)	1	4	1	0	17	invbst	staf	1	-1
+19@	Hammerhead Axe (1)	2	3	1	0	6	invaxeu	baxe	1	4
+!57	Flamen Staff (2)	1	4	1	0	7	invcstu	dstf	1	5
+l43	War Hammer (4)	2	3	1	0	16	invwhm	hamm	1	-1
+!95	Tepoztopilli (5)	2	4	1	0	25	inv9bru	pspe	1	3
+!84	Holy Lance (1)	2	4	1	0	1	invtriu	pspe	1	3
+l15	Yew Wand (2)	1	2	1	0	6	invywn	wand	1	2
+437	Long Battle Bow (5)	2	4	1	0	21	invlbb	bow	1	-1
+194	Mace (2)	1	3	1	0	7	invmac	mace	1	-1
+463	Giant Axe (6)	2	3	1	0	27	invgix	2hax	1	-1
+458	War Axe (6)	2	3	1	0	27	invwax	axe	1	-1
+j92	Claws (5)	1	3	1	0	22	invclw	h2h	1	6
+!50	Labrys (2)	2	4	1	0	11	invgaxu	2hbx	1	4
+220	Long Staff (2)	1	4	1	0	6	invlst	staf	1	-1
+451	Flamberge (6)	2	4	1	0	27	invflb	2hsd	1	-1
+j10	Eagle Orb (1)	1	2	1	0	0	invob1	orb	1	1
+454	Hand Axe (6)	1	3	1	0	23	invhax	axe	1	-1
+!62	Flamen Staff (Sacred)	1	4	1	0	30	invcstu	dstf	1	5
+o14	Maiden Javelin (6)	1	3	1	1	27	invam5	ajav	1	0
+82@	Smoked Sphere (Sacred)	1	2	1	0	30	invob3	orb	1	1
+3@C	Hand of God (4)	2	3	1	0	19	inv9gmu	pham	1	3
+1@6	Backsword (4)	1	3	1	0	17	inv9sbu	bswd	1	4
+6@6	Ida (2)	2	3	1	0	8	invbsdu	bswd	1	4
+28@	Morning Star (Sacred)	1	3	1	0	30	invmst	mace	1	-1
+j18	Maiden Pike (1)	2	4	1	0	5	invam4	aspe	1	0
+j80	Smoked Sphere (5)	1	2	1	0	21	invob3	orb	1	1
+!05	Naginata (5)	2	4	1	0	23	invwsc	nagi	1	6
+l31	Yew Wand (6)	1	2	1	0	24	invywn	wand	1	2
+58@	Voulge (Sacred)	2	4	1	0	30	invvou	pole	1	-1
+j63	Smoked Sphere (4)	1	2	1	0	16	invob3	orb	1	1
+l62	Heavy Crossbow (3)	2	4	1	0	14	invhxb	xbow	1	-1
+378	War Sword (5)	1	3	1	0	24	invwsd	swor	1	-1
+325	Battle Axe (4)	2	3	1	0	16	invbtx	2hax	1	-1
+350	Throwing Knife (4)	1	2	1	1	13	invtkn	tkni	1	-1
+l28	Bone Wand (5)	1	2	1	0	21	invbwn	wand	1	2
+7@F	Trebuchet (Sacred)	2	3	1	0	30	inv8mxu	nxbw	1	2
+l20	Bone Wand (3)	1	2	1	0	11	invbwn	wand	1	2
+226	Scythe (2)	2	4	1	0	7	invscy	scyh	1	-1
+2@F	Trebuchet (2)	2	3	1	0	10	inv8mxu	nxbw	1	2
+153	Gnarled Staff (1)	1	4	1	0	2	invcst	staf	1	-1
+211	Dirk (2)	1	2	1	0	6	invdir	knif	1	-1
+l12	Bone Wand (1)	1	2	1	0	2	invbwn	wand	1	2
+17@	Double Axe (Sacred)	2	3	1	0	30	inv2ax	axe	1	-1
+431	Halberd (5)	2	4	1	0	23	invhal	pole	1	-1
+337	Pilum (4)	1	3	1	1	15	invpil	jave	1	-1
+382	Bastard Sword (5)	1	4	1	0	21	invbsw	2hsd	1	-1
+101	Scimitar (1)	1	3	1	0	1	invscm	swor	1	-1
+l55	Repeating Crossbow (1)	2	3	1	0	5	invrxb	xbow	1	-1
+340	Throwing Spear (4)	1	4	1	1	19	invtsp	jave	1	-1
+311	Two-Handed Sword (4)	1	4	1	0	14	inv2hs	2hsd	1	-1
+!29	Hammerhead Axe (2)	2	3	1	0	11	invaxeu	baxe	1	4
+l42	Great Maul (3)	2	3	1	0	14	invgma	hamm	1	-1
+139	Brandistock (1)	2	4	1	0	2	invbrn	spea	1	-1
+129	Scepter (1)	1	3	1	0	0	invscp	scep	1	-1
+389	Military Pick (5)	2	3	1	0	22	invmpi	axe	1	-1
+!30	Hammerhead Axe (3)	2	3	1	0	15	invaxeu	baxe	1	4
+j46	Smoked Sphere (3)	1	2	1	0	11	invob3	orb	1	1
+!16	Bonesplitter (2)	2	4	1	0	8	invscyu	nscy	1	2
+495	War Staff (6)	2	4	1	0	27	invwst	staf	1	-1
+1@2	Serpent Bow (3)	2	4	1	0	12	inv8lbu	dbow	1	5
+84@	Jared's Stone (Sacred)	1	3	1	0	30	invob5	orb	1	1
+!51	Labrys (3)	2	4	1	0	15	invgaxu	2hbx	1	4
+4@8	Kriegsmesser (4)	2	3	1	0	20	inv9lsu	bswd	1	4
+9@D	Dart Thrower (5)	2	3	1	0	21	inv8lxu	nxbw	1	2
+43@	Dagger (Sacred)	1	2	1	0	30	invdgr	knif	1	-1
+!78	Spirit Edge (2)	1	3	1	0	10	inv9blu	nknf	1	2
+418	Throwing Knife (5)	1	2	1	1	18	invtkn	tkni	1	-1
+236	Short Sword (3)	1	3	1	0	9	invssd	swor	1	-1
+168	Short Sword (2)	1	3	1	0	5	invssd	swor	1	-1
+81@	Sacred Globe (Sacred)	1	2	1	0	30	invob2	orb	1	1
+218	Balanced Axe (2)	2	3	1	1	7	invbal	taxe	1	-1
+135	Glaive (1)	1	4	1	1	3	invglv	jave	1	-1
+348	Kriss (4)	1	3	1	0	16	invkrs	knif	1	-1
+5@4	Recurve Bow (4)	2	3	1	0	20	invswbu	dbow	1	5
+145	Blade (1)	1	3	1	0	5	invbld	knif	1	-1
+178	Bastard Sword (2)	1	4	1	0	7	invbsw	2hsd	1	-1
+285	Throwing Axe (3)	1	2	1	1	8	invtax	taxe	1	-1
+74@	Maul (Sacred)	2	4	1	0	30	invmau	hamm	1	-1
+5@3	Viper Bow (2)	2	3	1	0	9	invsbbu	dbow	1	5
+124	Club (1)	1	3	1	0	0	invclb	mace	1	-1
+234	Short War Bow (2)	2	3	1	0	8	invswb	bow	1	-1
+364	Short Bow (4)	2	3	1	0	13	invsbw	bow	1	-1
+388	Double Axe (5)	2	3	1	0	21	inv2ax	axe	1	-1
+l73	Crossbow (6)	2	3	1	0	26	invmxb	xbow	1	-1
+23@	Great Axe (Sacred)	2	4	1	0	30	invgax	2hax	1	-1
+486	Throwing Knife (6)	1	2	1	1	22	invtkn	tkni	1	-1
+160	Short Bow (1)	2	3	1	0	0	invsbw	bow	1	-1
+j53	Maiden Javelin (3)	1	3	1	1	14	invam5	ajav	1	0
+8@7	Bronze Sword (6)	2	3	1	0	27	invlsdu	bswd	1	4
+367	Composite Bow (4)	2	3	1	0	16	invcbw	bow	1	-1
+j96	Sacred Globe (6)	1	2	1	0	24	invob2	orb	1	1
+485	Blade (6)	1	3	1	0	27	invbld	knif	1	-1
+391	Large Axe (5)	2	3	1	0	18	invlax	2hax	1	-1
+l44	Maul (4)	2	4	1	0	17	invmau	hamm	1	-1
+193	Spiked Club (2)	1	3	1	0	6	invspc	mace	1	-1
+288	Long Staff (3)	1	4	1	0	10	invlst	staf	1	-1
+l36	Great Maul (1)	2	3	1	0	5	invgma	hamm	1	-1
+460	Broad Axe (6)	2	3	1	0	24	invbrx	2hax	1	-1
+119	Large Axe (1)	2	3	1	0	0	invlax	2hax	1	-1
+180	Great Sword (2)	2	4	1	0	10	invgsd	2hsd	1	-1
+453	Crystal Sword (6)	2	3	1	0	28	invcrs	crsd	1	-1
+324	Broad Axe (4)	2	3	1	0	15	invbrx	2hax	1	-1
+244	Claymore (3)	1	4	1	0	10	invclm	2hsd	1	-1
+351	Flying Knife (4)	1	2	1	1	16	invtkn	tkni	1	-1
+410	Trident (5)	2	4	1	0	20	invtri	spea	1	-1
+5@5	Spatha (6)	1	3	1	0	25	invscmu	bswd	1	4
+246	Bastard Sword (3)	1	4	1	0	12	invbsw	2hsd	1	-1
+488	Balanced Knife (6)	1	2	1	1	27	invbkf	tkni	1	-1
+96@	Scissors Katar (Sacred)	1	3	1	0	30	invskr	h2h	1	6
+430	Scythe (5)	2	4	1	0	21	invscy	scyh	1	-1
+!61	Flamen Staff (6)	1	4	1	0	27	invcstu	dstf	1	5
+447	Two-Handed Sword (6)	1	4	1	0	23	inv2hs	2hsd	1	-1
+379	Two-Handed Sword (5)	1	4	1	0	18	inv2hs	2hsd	1	-1
+1@5	Spatha (2)	1	3	1	0	7	invscmu	bswd	1	4
+9@C	Needle Crossbow (3)	2	3	1	0	11	invlxbu	nxbw	1	2
+415	Dirk (5)	1	2	1	0	20	invdir	knif	1	-1
+l34	War Hammer (1)	2	3	1	0	2	invwhm	hamm	1	-1
+113	Crystal Sword (1)	2	3	1	0	5	invcrs	crsd	1	-1
+7@5	Backsword (1)	1	3	1	0	3	inv9sbu	bswd	1	4
+152	Long Staff (1)	1	4	1	0	1	invlst	staf	1	-1
+l21	Grim Wand (3)	1	2	1	0	14	invgwn	wand	1	2
+189	Battle Axe (2)	2	3	1	0	7	invbtx	2hax	1	-1
+!85	Holy Lance (2)	2	4	1	0	6	invtriu	pspe	1	3
+342	Trident (4)	2	4	1	0	15	invtri	spea	1	-1
+452	Great Sword (6)	2	4	1	0	28	invgsd	2hsd	1	-1
+41@	Spetum (Sacred)	2	4	1	0	30	invspt	spea	1	-1
+295	Halberd (3)	2	4	1	0	14	invhal	pole	1	-1
+480	Spetum (6)	2	4	1	0	26	invspt	spea	1	-1
+341	Spear (4)	2	4	1	0	13	invspr	spea	1	-1
+107	Two-Handed Sword (1)	1	4	1	0	0	inv2hs	2hsd	1	-1
+438	Short War Bow (5)	2	3	1	0	23	invswb	bow	1	-1
+j11	Sacred Globe (1)	1	2	1	0	1	invob2	orb	1	1
+j95	Eagle Orb (6)	1	2	1	0	22	invob1	orb	1	1
+!76	Hexblade (Sacred)	1	3	1	0	30	invkrsu	nknf	1	2
+444	Broad Sword (6)	2	3	1	0	26	invbsd	swor	1	-1
+!10	Raptor Scythe (3)	2	4	1	0	9	inv9s8u	nscy	1	2
+3@4	Recurve Bow (2)	2	3	1	0	10	invswbu	dbow	1	5
+7@C	Needle Crossbow (1)	2	3	1	0	2	invlxbu	nxbw	1	2
+j88	Katar (5)	1	3	1	0	18	invktr	h2h	1	6
+221	Gnarled Staff (2)	1	4	1	0	7	invcst	staf	1	-1
+j89	Wrist Blade (5)	1	3	1	0	19	invktr	h2h	1	6
+417	Blade (5)	1	3	1	0	23	invbld	knif	1	-1
+6@7	Bronze Sword (4)	2	3	1	0	18	invlsdu	bswd	1	4
+!49	Labrys (1)	2	4	1	0	6	invgaxu	2hbx	1	4
+j69	Maiden Pike (4)	2	4	1	0	19	invam4	aspe	1	0
+4@C	Hand of God (5)	2	3	1	0	24	inv9gmu	pham	1	3
+!04	Naginata (4)	2	4	1	0	18	invwsc	nagi	1	6
+78@	Heavy Crossbow (Sacred)	2	4	1	0	30	invhxb	xbow	1	-1
+312	Claymore (4)	1	4	1	0	15	invclm	2hsd	1	-1
+405	Pilum (5)	1	3	1	1	20	invpil	jave	1	-1
+507	Long War Bow (6)	2	4	1	0	28	invlwb	bow	1	-1
+260	Club (3)	1	3	1	0	9	invclb	mace	1	-1
+4@6	Backsword (Sacred)	1	3	1	0	30	inv9sbu	bswd	1	4
+237	Scimitar (3)	1	3	1	0	10	invscm	swor	1	-1
+j97	Smoked Sphere (6)	1	2	1	0	25	invob3	orb	1	1
+370	Short War Bow (4)	2	3	1	0	18	invswb	bow	1	-1
+309	Long Sword (4)	2	3	1	0	17	invlsd	swor	1	-1
+4@D	Needle Crossbow (Sacred)	2	3	1	0	30	invlxbu	nxbw	1	2
+4@7	Bronze Sword (2)	2	3	1	0	9	invlsdu	bswd	1	4
+l49	War Hammer (6)	2	3	1	0	25	invwhm	hamm	1	-1
+136	Throwing Spear (1)	1	4	1	1	5	invtsp	jave	1	-1
+506	Short War Bow (6)	2	3	1	0	27	invswb	bow	1	-1
+o21	Scissors Katar (6)	1	3	1	0	28	invskr	h2h	1	6
+116	Double Axe (1)	2	3	1	0	2	inv2ax	axe	1	-1
+!27	Mammen Axe (6)	1	3	1	0	25	invhaxu	baxe	1	4
+416	Kriss (5)	1	3	1	0	21	invkrs	knif	1	-1
+1@E	Dart Thrower (6)	2	3	1	0	26	inv8lxu	nxbw	1	2
+144	Kriss (1)	1	3	1	0	3	invkrs	knif	1	-1
+l29	Grim Wand (5)	1	2	1	0	23	invgwn	wand	1	2
+71@	Bone Wand (Sacred)	1	2	1	0	30	invbwn	wand	1	2
+j40	Cestus (2)	1	3	1	0	7	invaxf	h2h	1	6
+100	Short Sword (1)	1	3	1	0	0	invssd	swor	1	-1
+380	Claymore (5)	1	4	1	0	19	invclm	2hsd	1	-1
+300	Short Battle Bow (3)	2	3	1	0	12	invsbb	bow	1	-1
+l18	Wand (3)	1	2	1	0	9	invwnd	wand	1	2
+!54	Labrys (6)	2	4	1	0	30	invgaxu	2hbx	1	4
+29@	Flail (Sacred)	2	3	1	0	30	invfla	mace	1	-1
+286	Balanced Axe (3)	2	3	1	1	12	invbal	taxe	1	-1
+120	Broad Axe (1)	2	3	1	0	1	invbrx	2hax	1	-1
+4@5	Spatha (5)	1	3	1	0	21	invscmu	bswd	1	4
+381	Giant Sword (5)	1	4	1	0	20	invgis	2hsd	1	-1
+j75	Claws (4)	1	3	1	0	17	invclw	h2h	1	6
+06@	Long Sword (Sacred)	2	3	1	0	30	invlsd	swor	1	-1
+308	Broad Sword (4)	2	3	1	0	17	invbsd	swor	1	-1
+254	War Axe (3)	2	3	1	0	14	invwax	axe	1	-1
+392	Broad Axe (5)	2	3	1	0	20	invbrx	2hax	1	-1
+j35	Maiden Pike (2)	2	4	1	0	10	invam4	aspe	1	0
+8@8	Bonebreaker (1)	1	3	1	0	2	invspcu	pclb	1	3
+177	Giant Sword (2)	1	4	1	0	7	invgis	2hsd	1	-1
+!60	Flamen Staff (5)	1	4	1	0	23	invcstu	dstf	1	5
+496	Bardiche (6)	2	4	1	0	22	invbar	pole	1	-1
+j47	Clasped Orb (3)	1	2	1	0	12	invob4	orb	1	1
+!79	Spirit Edge (3)	1	3	1	0	15	inv9blu	nknf	1	2
+!96	Tepoztopilli (6)	2	4	1	0	30	inv9bru	pspe	1	3
+373	Scimitar (5)	1	3	1	0	19	invscm	swor	1	-1
+5@2	Serpent Bow (Sacred)	2	4	1	0	30	inv8lbu	dbow	1	5
+205	Spear (2)	2	4	1	0	4	invspr	spea	1	-1
+399	Morning Star (5)	1	3	1	0	22	invmst	mace	1	-1
+j29	Smoked Sphere (2)	1	2	1	0	7	invob3	orb	1	1
+89@	Maiden Javelin (Sacred)	1	3	1	1	30	invam5	ajav	1	0
+!24	Mammen Axe (3)	1	3	1	0	10	invhaxu	baxe	1	4
+235	Long War Bow (2)	2	4	1	0	10	invlwb	bow	1	-1
+301	Long Battle Bow (3)	2	4	1	0	12	invlbb	bow	1	-1
+9@6	Ida (5)	2	3	1	0	22	invbsdu	bswd	1	4
+436	Short Battle Bow (5)	2	3	1	0	21	invsbb	bow	1	-1
+50@	Throwing Axe (Sacred)	1	2	1	1	30	invtax	taxe	1	-1
+213	Blade (2)	1	3	1	0	9	invbld	knif	1	-1
+456	Double Axe (6)	2	3	1	0	25	inv2ax	axe	1	-1
+!19	Bonesplitter (5)	2	4	1	0	23	invscyu	nscy	1	2
+296	Short Bow (3)	2	3	1	0	8	invsbw	bow	1	-1
+265	Scepter (3)	1	3	1	0	9	invscp	scep	1	-1
+j30	Clasped Orb (2)	1	2	1	0	8	invob4	orb	1	1
+493	Gnarled Staff (6)	1	4	1	0	25	invcst	staf	1	-1
+171	Falchion (2)	1	3	1	0	7	invflc	swor	1	-1
+3@E	Stinger Crossbow (1)	2	3	1	0	4	invmxbu	nxbw	1	2
+j87	Maiden Javelin (5)	1	3	1	1	23	invam5	ajav	1	0
+30@	Scepter (Sacred)	1	3	1	0	30	invscp	scep	1	-1
+5@6	Ida (1)	2	3	1	0	3	invbsdu	bswd	1	4
+386	Hand Axe (5)	1	3	1	0	18	invhax	axe	1	-1
+o13	Maiden Pike (6)	2	4	1	0	27	invam4	aspe	1	0
+445	Long Sword (6)	2	3	1	0	27	invlsd	swor	1	-1
+!93	Tepoztopilli (3)	2	4	1	0	15	inv9bru	pspe	1	3
+j68	Maiden Spear (4)	2	4	1	0	17	invam3	aspe	1	0
+200	Javelin (2)	1	3	1	1	4	invjav	jave	1	-1
+1@9	Bonebreaker (3)	1	3	1	0	11	invspcu	pclb	1	3
+76@	Light Crossbow (Sacred)	2	3	1	0	30	invlxb	xbow	1	-1
+366	Long Bow (4)	2	4	1	0	15	invlbw	bow	1	-1
+329	Spiked Club (4)	1	3	1	0	15	invspc	mace	1	-1
+j73	Hatchet Hands (4)	1	3	1	0	16	invaxf	h2h	1	6
+l22	Wand (4)	1	2	1	0	13	invwnd	wand	1	2
+272	Throwing Spear (3)	1	4	1	1	14	invtsp	jave	1	-1
+161	Hunter's Bow (1)	2	3	1	0	0	invhbw	bow	1	-1
+400	Flail (5)	2	3	1	0	23	invfla	mace	1	-1
+!5!	Warp Blade (Sacred)	2	3	1	0	30	inv9cru	scrd	1	1
+l40	War Hammer (3)	2	3	1	0	12	invwhm	hamm	1	-1
+j70	Maiden Javelin (4)	1	3	1	1	19	invam5	ajav	1	0
+7@8	Kriegsmesser (Sacred)	2	3	1	0	30	inv9lsu	bswd	1	4
+109	Giant Sword (1)	1	4	1	0	2	invgis	2hsd	1	-1
+91@	Wrist Blade (Sacred)	1	3	1	0	30	invktr	h2h	1	6
+l39	Great Maul (2)	2	3	1	0	10	invgma	hamm	1	-1
+j84	Reflex Bow (5)	2	4	1	0	24	invam2	abow	1	0
+5@1	Compound Bow (5)	2	3	1	0	21	invcbwu	dbow	1	5
+j31	Jared's Stone (2)	1	3	1	0	9	invob5	orb	1	1
+151	Short Staff (1)	1	3	1	0	0	invsst	staf	1	-1
+j58	Claws (3)	1	3	1	0	12	invclw	h2h	1	6
+468	Flail (6)	2	3	1	0	27	invfla	mace	1	-1
+287	Short Staff (3)	1	3	1	0	8	invsst	staf	1	-1
+441	Scimitar (6)	1	3	1	0	24	invscm	swor	1	-1
+475	Glaive (6)	1	4	1	1	26	invglv	jave	1	-1
+j78	Eagle Orb (5)	1	2	1	0	18	invob1	orb	1	1
+294	Scythe (3)	2	4	1	0	12	invscy	scyh	1	-1
+413	Pike (5)	2	4	1	0	23	invpik	spea	1	-1
+349	Blade (4)	1	3	1	0	19	invbld	knif	1	-1
+275	Brandistock (3)	2	4	1	0	11	invbrn	spea	1	-1
+8@C	Needle Crossbow (2)	2	3	1	0	7	invlxbu	nxbw	1	2
+1@4	Viper Bow (Sacred)	2	3	1	0	30	invsbbu	dbow	1	5
+197	Scepter (2)	1	3	1	0	4	invscp	scep	1	-1
+73@	War Hammer (Sacred)	2	3	1	0	30	invwhm	hamm	1	-1
+138	Trident (1)	2	4	1	0	1	invtri	spea	1	-1
+137	Spear (1)	2	4	1	0	0	invspr	spea	1	-1
+18@	Military Pick (Sacred)	2	3	1	0	30	invmpi	axe	1	-1
+l56	Light Crossbow (2)	2	3	1	0	6	invlxb	xbow	1	-1
+l60	Light Crossbow (3)	2	3	1	0	11	invlxb	xbow	1	-1
+1@B	Angel Star (Sacred)	1	3	1	0	30	invmstu	pmac	1	3
+!48	Valaska (Sacred)	2	3	1	0	30	invbtxu	2hbx	1	4
+!43	Valaska (2)	2	3	1	0	8	invbtxu	2hbx	1	4
+432	Short Bow (5)	2	3	1	0	18	invsbw	bow	1	-1
+1@3	Maple Bow (5)	2	3	1	0	22	inv8s8u	dbow	1	5
+!32	Hammerhead Axe (5)	2	3	1	0	26	invaxeu	baxe	1	4
+62@	Hunter's Bow (Sacred)	2	3	1	0	30	invhbw	bow	1	-1
+11@	Bastard Sword (Sacred)	1	4	1	0	30	invbsw	2hsd	1	-1
+j23	Cestus (1)	1	3	1	0	2	invaxf	h2h	1	6
+!33	Hammerhead Axe (6)	2	3	1	0	30	invaxeu	baxe	1	4
+l11	Yew Wand (1)	1	2	1	0	1	invywn	wand	1	2
+68@	Long War Bow (Sacred)	2	4	1	0	30	invlwb	bow	1	-1
+9@8	Bonebreaker (2)	1	3	1	0	6	invspcu	pclb	1	3
+j54	Katar (3)	1	3	1	0	9	invktr	h2h	1	6
+2@C	Hand of God (3)	2	3	1	0	15	inv9gmu	pham	1	3
+346	Dagger (4)	1	2	1	0	13	invdgr	knif	1	-1
+427	War Staff (5)	2	4	1	0	23	invwst	staf	1	-1
+j41	Claws (2)	1	3	1	0	7	invclw	h2h	1	6
+110	Bastard Sword (1)	1	4	1	0	3	invbsw	2hsd	1	-1
+333	Scepter (4)	1	3	1	0	13	invscp	scep	1	-1
+87@	Maiden Spear (Sacred)	2	4	1	0	30	invam3	aspe	1	0
+8@9	Goedendag (3)	1	3	1	0	12	inv7mas	pmac	1	3
+j25	Blade Talons (1)	1	3	1	0	5	invclw	h2h	1	6
+323	Large Axe (4)	2	3	1	0	14	invlax	2hax	1	-1
+!21	Bonesplitter (Sacred)	2	4	1	0	30	invscyu	nscy	1	2
+112	Great Sword (1)	2	4	1	0	5	invgsd	2hsd	1	-1
+191	Giant Axe (2)	2	3	1	0	10	invgix	2hax	1	-1
+6@C	Hand of God (Sacred)	2	3	1	0	30	inv9gmu	pham	1	3
+2@5	Spatha (3)	1	3	1	0	11	invscmu	bswd	1	4
+85@	Stag Bow (Sacred)	2	4	1	0	30	invam1	abow	1	0
+224	Bardiche (2)	2	4	1	0	4	invbar	pole	1	-1
+8@5	Backsword (2)	1	3	1	0	8	inv9sbu	bswd	1	4
+187	Large Axe (2)	2	3	1	0	4	invlax	2hax	1	-1
+1@C	Hand of God (2)	2	3	1	0	10	inv9gmu	pham	1	3
+!82	Spirit Edge (6)	1	3	1	0	29	inv9blu	nknf	1	2
+!18	Bonesplitter (4)	2	4	1	0	18	invscyu	nscy	1	2
+86@	Reflex Bow (Sacred)	2	4	1	0	30	invam2	abow	1	0
+446	War Sword (6)	1	3	1	0	28	invwsd	swor	1	-1
+34@	Pilum (Sacred)	1	3	1	1	30	invpil	jave	1	-1
+88@	Maiden Pike (Sacred)	2	4	1	0	30	invam4	aspe	1	0
+262	Mace (3)	1	3	1	0	11	invmac	mace	1	-1
+13@	Great Sword (Sacred)	2	4	1	0	30	invgsd	2hsd	1	-1
+24@	Giant Axe (Sacred)	2	3	1	0	30	invgix	2hax	1	-1
+j99	Jared's Stone (6)	1	3	1	0	27	invob5	orb	1	1
+j93	Blade Talons (5)	1	3	1	0	24	invclw	h2h	1	6
+!02	Naginata (2)	2	4	1	0	8	invwsc	nagi	1	6
+212	Kriss (2)	1	3	1	0	7	invkrs	knif	1	-1
+21@	Broad Axe (Sacred)	2	3	1	0	30	invbrx	2hax	1	-1
+7@6	Ida (3)	2	3	1	0	13	invbsdu	bswd	1	4
+352	Balanced Knife (4)	1	2	1	1	17	invbkf	tkni	1	-1
+l17	Grim Wand (2)	1	2	1	0	10	invgwn	wand	1	2
+126	Mace (1)	1	3	1	0	2	invmac	mace	1	-1
+j90	Hatchet Hands (5)	1	3	1	0	20	invaxf	h2h	1	6
+426	Battle Staff (5)	1	4	1	0	21	invbst	staf	1	-1
+251	Axe (3)	2	3	1	0	11	invaxe	axe	1	-1
+!44	Valaska (3)	2	3	1	0	13	invbtxu	2hbx	1	4
+l51	Great Maul (6)	2	3	1	0	27	invgma	hamm	1	-1
+369	Long Battle Bow (4)	2	4	1	0	17	invlbb	bow	1	-1
+279	Dirk (3)	1	2	1	0	11	invdir	knif	1	-1
+176	Claymore (2)	1	4	1	0	6	invclm	2hsd	1	-1
+498	Scythe (6)	2	4	1	0	26	invscy	scyh	1	-1
+483	Dirk (6)	1	2	1	0	25	invdir	knif	1	-1
+!77	Spirit Edge (1)	1	3	1	0	5	inv9blu	nknf	1	2
+256	Broad Axe (3)	2	3	1	0	11	invbrx	2hax	1	-1
+372	Short Sword (5)	1	3	1	0	18	invssd	swor	1	-1
+!63	Marrow Staff (1)	2	4	1	0	5	inv8wsu	nstf	1	2
+57@	Bardiche (Sacred)	2	4	1	0	30	invbar	pole	1	-1
+170	Saber (2)	1	3	1	0	6	invsbr	swor	1	-1
+428	Bardiche (5)	2	4	1	0	18	invbar	pole	1	-1
+227	Halberd (2)	2	4	1	0	9	invhal	pole	1	-1
+j32	Stag Bow (2)	2	4	1	0	8	invam1	abow	1	0
+5@D	Dart Thrower (1)	2	3	1	0	3	inv8lxu	nxbw	1	2
+6@3	Viper Bow (3)	2	3	1	0	14	invsbbu	dbow	1	5
+500	Short Bow (6)	2	3	1	0	22	invsbw	bow	1	-1
+255	Large Axe (3)	2	3	1	0	9	invlax	2hax	1	-1
+264	Flail (3)	2	3	1	0	14	invfla	mace	1	-1
+359	War Staff (4)	2	4	1	0	19	invwst	staf	1	-1
+3@2	Serpent Bow (5)	2	4	1	0	21	inv8lbu	dbow	1	5
+182	Hand Axe (2)	1	3	1	0	4	invhax	axe	1	-1
+6@5	Spatha (Sacred)	1	3	1	0	30	invscmu	bswd	1	4
+3@D	Needle Crossbow (6)	2	3	1	0	25	invlxbu	nxbw	1	2
+108	Claymore (1)	1	4	1	0	1	invclm	2hsd	1	-1
+8@D	Dart Thrower (4)	2	3	1	0	17	inv8lxu	nxbw	1	2
+j27	Eagle Orb (2)	1	2	1	0	4	invob1	orb	1	1
+232	Short Battle Bow (2)	2	3	1	0	7	invsbb	bow	1	-1
+462	Great Axe (6)	2	4	1	0	26	invgax	2hax	1	-1
+414	Dagger (5)	1	2	1	0	18	invdgr	knif	1	-1
+477	Spear (6)	2	4	1	0	23	invspr	spea	1	-1
+3@9	Bonebreaker (5)	1	3	1	0	20	invspcu	pclb	1	3
+l50	Maul (6)	2	4	1	0	26	invmau	hamm	1	-1
+l58	Heavy Crossbow (2)	2	4	1	0	8	invhxb	xbow	1	-1
+!68	Marrow Staff (6)	2	4	1	0	29	inv8wsu	nstf	1	2
+9@9	Goedendag (4)	1	3	1	0	17	inv7mas	pmac	1	3
+j59	Blade Talons (3)	1	3	1	0	14	invclw	h2h	1	6
+!74	Hexblade (5)	1	3	1	0	22	invkrsu	nknf	1	2
+225	Voulge (2)	2	4	1	0	6	invvou	pole	1	-1
+l38	Maul (2)	2	4	1	0	8	invmau	hamm	1	-1
+330	Mace (4)	1	3	1	0	16	invmac	mace	1	-1
+207	Brandistock (2)	2	4	1	0	7	invbrn	spea	1	-1
+142	Dagger (1)	1	2	1	0	0	invdgr	knif	1	-1
+8@3	Viper Bow (5)	2	3	1	0	24	invsbbu	dbow	1	5
+j86	Maiden Pike (5)	2	4	1	0	23	invam4	aspe	1	0
+l63	Repeating Crossbow (3)	2	3	1	0	15	invrxb	xbow	1	-1
+263	Morning Star (3)	1	3	1	0	12	invmst	mace	1	-1
+167	Long War Bow (1)	2	4	1	0	5	invlwb	bow	1	-1
+394	Great Axe (5)	2	4	1	0	22	invgax	2hax	1	-1
+360	Bardiche (4)	2	4	1	0	13	invbar	pole	1	-1
+2@8	Kriegsmesser (2)	2	3	1	0	11	inv9lsu	bswd	1	4
+44@	Dirk (Sacred)	1	2	1	0	30	invdir	knif	1	-1
+12@	Flamberge (Sacred)	2	4	1	0	30	invflb	2hsd	1	-1
+!56	Flamen Staff (1)	1	4	1	0	2	invcstu	dstf	1	5
+j17	Maiden Spear (1)	2	4	1	0	3	invam3	aspe	1	0
+8@6	Ida (4)	2	3	1	0	17	invbsdu	bswd	1	4
+5@C	Hand of God (6)	2	3	1	0	28	inv9gmu	pham	1	3
+476	Throwing Spear (6)	1	4	1	1	27	invtsp	jave	1	-1
+16@	Axe (Sacred)	2	3	1	0	30	invaxe	axe	1	-1
+!2!	Warp Blade (4)	2	3	1	0	21	inv9cru	scrd	1	1
+l41	Maul (3)	2	4	1	0	12	invmau	hamm	1	-1
+l32	Bone Wand (6)	1	2	1	0	25	invbwn	wand	1	2
+56@	War Staff (Sacred)	2	4	1	0	30	invwst	staf	1	-1
+!37	Ono (3)	2	3	1	0	9	inv9btu	2hbx	1	4
+j72	Wrist Blade (4)	1	3	1	0	15	invktr	h2h	1	6
+393	Battle Axe (5)	2	3	1	0	21	invbtx	2hax	1	-1
+449	Giant Sword (6)	1	4	1	0	25	invgis	2hsd	1	-1
+293	Voulge (3)	2	4	1	0	11	invvou	pole	1	-1
+274	Trident (3)	2	4	1	0	10	invtri	spea	1	-1
+j45	Sacred Globe (3)	1	2	1	0	10	invob2	orb	1	1
+322	War Axe (4)	2	3	1	0	19	invwax	axe	1	-1
+469	Scepter (6)	1	3	1	0	23	invscp	scep	1	-1
+j42	Blade Talons (2)	1	3	1	0	10	invclw	h2h	1	6
+2@D	Needle Crossbow (5)	2	3	1	0	20	invlxbu	nxbw	1	2
+353	Throwing Axe (4)	1	2	1	1	13	invtax	taxe	1	-1
+375	Falchion (5)	1	3	1	0	21	invflc	swor	1	-1
+!83	Spirit Edge (Sacred)	1	3	1	0	30	inv9blu	nknf	1	2
+70@	Yew Wand (Sacred)	1	2	1	0	30	invywn	wand	1	2
+7@E	Stinger Crossbow (5)	2	3	1	0	24	invmxbu	nxbw	1	2
+128	Flail (1)	2	3	1	0	5	invfla	mace	1	-1
+310	War Sword (4)	1	3	1	0	20	invwsd	swor	1	-1
+303	Long War Bow (3)	2	4	1	0	15	invlwb	bow	1	-1
+250	Hand Axe (3)	1	3	1	0	9	invhax	axe	1	-1
+192	Club (2)	1	3	1	0	4	invclb	mace	1	-1
+!03	Naginata (3)	2	4	1	0	13	invwsc	nagi	1	6
+!94	Tepoztopilli (4)	2	4	1	0	20	inv9bru	pspe	1	3
+!89	Holy Lance (6)	2	4	1	0	26	invtriu	pspe	1	3
+501	Hunter's Bow (6)	2	3	1	0	24	invhbw	bow	1	-1
+215	Flying Knife (2)	1	2	1	1	6	invtkn	tkni	1	-1
+278	Dagger (3)	1	2	1	0	9	invdgr	knif	1	-1
+j67	Reflex Bow (4)	2	4	1	0	19	invam2	abow	1	0
+j28	Sacred Globe (2)	1	2	1	0	6	invob2	orb	1	1
+36@	Glaive (Sacred)	1	4	1	1	30	invglv	jave	1	-1
+9@4	Spatha (1)	1	3	1	0	2	invscmu	bswd	1	4
+05@	Broad Sword (Sacred)	2	3	1	0	30	invbsd	swor	1	-1
+490	Balanced Axe (6)	2	3	1	1	26	invbal	taxe	1	-1
+150	Balanced Axe (1)	2	3	1	1	3	invbal	taxe	1	-1
+155	War Staff (1)	2	4	1	0	5	invwst	staf	1	-1
+130	Grand Scepter (1)	1	3	1	0	2	invgsc	scep	1	-1
+j52	Maiden Pike (3)	2	4	1	0	14	invam4	aspe	1	0
+387	Axe (5)	2	3	1	0	20	invaxe	axe	1	-1
+245	Giant Sword (3)	1	4	1	0	11	invgis	2hsd	1	-1
+267	War Scepter (3)	2	3	1	0	13	invwsp	scep	1	-1
+354	Balanced Axe (4)	2	3	1	1	17	invbal	taxe	1	-1
+5@E	Stinger Crossbow (3)	2	3	1	0	14	invmxbu	nxbw	1	2
+461	Battle Axe (6)	2	3	1	0	25	invbtx	2hax	1	-1
+j98	Clasped Orb (6)	1	2	1	0	26	invob4	orb	1	1
+4@3	Viper Bow (1)	2	3	1	0	4	invsbbu	dbow	1	5
+257	Battle Axe (3)	2	3	1	0	12	invbtx	2hax	1	-1
+!11	Raptor Scythe (4)	2	4	1	0	14	inv9s8u	nscy	1	2
+l14	Wand (2)	1	2	1	0	4	invwnd	wand	1	2
+6@F	Trebuchet (6)	2	3	1	0	29	inv8mxu	nxbw	1	2
+7@3	Viper Bow (4)	2	3	1	0	19	invsbbu	dbow	1	5
+332	Flail (4)	2	3	1	0	19	invfla	mace	1	-1
+425	Gnarled Staff (5)	1	4	1	0	21	invcst	staf	1	-1
+9@E	Stinger Crossbow (Sacred)	2	3	1	0	30	invmxbu	nxbw	1	2
+276	Spetum (3)	2	4	1	0	12	invspt	spea	1	-1
+j26	Scissors Katar (1)	1	3	1	0	6	invskr	h2h	1	6
+102	Saber (1)	1	3	1	0	2	invsbr	swor	1	-1
+!15	Bonesplitter (1)	2	4	1	0	3	invscyu	nscy	1	2
+233	Long Battle Bow (2)	2	4	1	0	8	invlbb	bow	1	-1
+259	Giant Axe (3)	2	3	1	0	14	invgix	2hax	1	-1
+368	Short Battle Bow (4)	2	3	1	0	16	invsbb	bow	1	-1
+424	Long Staff (5)	1	4	1	0	20	invlst	staf	1	-1
+60@	Halberd (Sacred)	2	4	1	0	30	invhal	pole	1	-1
+j60	Scissors Katar (3)	1	3	1	0	15	invskr	h2h	1	6
+316	Great Sword (4)	2	4	1	0	19	invgsd	2hsd	1	-1
+163	Composite Bow (1)	2	3	1	0	2	invcbw	bow	1	-1
+2@7	Ida (Sacred)	2	3	1	0	30	invbsdu	bswd	1	4
+!80	Spirit Edge (4)	1	3	1	0	20	inv9blu	nknf	1	2
+395	Giant Axe (5)	2	3	1	0	24	invgix	2hax	1	-1
+j56	Hatchet Hands (3)	1	3	1	0	11	invaxf	h2h	1	6
+l23	Yew Wand (4)	1	2	1	0	15	invywn	wand	1	2
+175	Two-Handed Sword (2)	1	4	1	0	4	inv2hs	2hsd	1	-1
+!01	Naginata (1)	2	4	1	0	3	invwsc	nagi	1	6
+47@	Throwing Knife (Sacred)	1	2	1	1	30	invtkn	tkni	1	-1
+!36	Ono (2)	2	3	1	0	4	inv9btu	2hbx	1	4
+492	Long Staff (6)	1	4	1	0	24	invlst	staf	1	-1
+208	Spetum (2)	2	4	1	0	8	invspt	spea	1	-1
+347	Dirk (4)	1	2	1	0	15	invdir	knif	1	-1
+42@	Pike (Sacred)	2	4	1	0	30	invpik	spea	1	-1
+3@1	Compound Bow (3)	2	3	1	0	12	invcbwu	dbow	1	5
+434	Long Bow (5)	2	4	1	0	20	invlbw	bow	1	-1
+292	Bardiche (3)	2	4	1	0	8	invbar	pole	1	-1
+l53	Crossbow (1)	2	3	1	0	2	invmxb	xbow	1	-1
+j15	Stag Bow (1)	2	4	1	0	3	invam1	abow	1	0
+2@6	Backsword (5)	1	3	1	0	21	inv9sbu	bswd	1	4
+6@A	Angel Star (3)	1	3	1	0	13	invmstu	pmac	1	3
+35@	Short Spear (Sacred)	1	3	1	1	30	invssp	jave	1	-1
+o12	Maiden Spear (6)	2	4	1	0	26	invam3	aspe	1	0
+291	War Staff (3)	2	4	1	0	14	invwst	staf	1	-1
+374	Saber (5)	1	3	1	0	20	invsbr	swor	1	-1
+199	War Scepter (2)	2	3	1	0	8	invwsp	scep	1	-1
+442	Saber (6)	1	3	1	0	25	invsbr	swor	1	-1
+114	Hand Axe (1)	1	3	1	0	0	invhax	axe	1	-1
+429	Voulge (5)	2	4	1	0	20	invvou	pole	1	-1
+8@A	Angel Star (5)	1	3	1	0	22	invmstu	pmac	1	3
+o19	Claws (6)	1	3	1	0	26	invclw	h2h	1	6
+6@D	Dart Thrower (2)	2	3	1	0	8	inv8lxu	nxbw	1	2
+409	Spear (5)	2	4	1	0	18	invspr	spea	1	-1
+77@	Crossbow (Sacred)	2	3	1	0	30	invmxb	xbow	1	-1
+!41	Ono (Sacred)	2	3	1	0	30	inv9btu	2hbx	1	4
+1@@	War Axe (Sacred)	2	3	1	0	30	invwax	axe	1	-1
+241	Long Sword (3)	2	3	1	0	13	invlsd	swor	1	-1
+198	Grand Scepter (2)	1	3	1	0	6	invgsc	scep	1	-1
+489	Throwing Axe (6)	1	2	1	1	22	invtax	taxe	1	-1
+j66	Stag Bow (4)	2	4	1	0	17	invam1	abow	1	0
+l24	Bone Wand (4)	1	2	1	0	16	invbwn	wand	1	2
+04@	Falchion (Sacred)	1	3	1	0	30	invflc	swor	1	-1
+327	Giant Axe (4)	2	3	1	0	19	invgix	2hax	1	-1
+33@	Javelin (Sacred)	1	3	1	1	30	invjav	jave	1	-1
+69@	Wand (Sacred)	1	2	1	0	30	invwnd	wand	1	2
+3@5	Spatha (4)	1	3	1	0	16	invscmu	bswd	1	4
+320	Double Axe (4)	2	3	1	0	16	inv2ax	axe	1	-1
+5@F	Trebuchet (5)	2	3	1	0	24	inv8mxu	nxbw	1	2
+02@	Scimitar (Sacred)	1	3	1	0	30	invscm	swor	1	-1
+6@E	Stinger Crossbow (4)	2	3	1	0	19	invmxbu	nxbw	1	2
+j71	Katar (4)	1	3	1	0	14	invktr	h2h	1	6
+280	Kriss (3)	1	3	1	0	12	invkrs	knif	1	-1
+!91	Tepoztopilli (1)	2	4	1	0	5	inv9bru	pspe	1	3
+1@F	Trebuchet (1)	2	3	1	0	6	inv8mxu	nxbw	1	2
+273	Spear (3)	2	4	1	0	9	invspr	spea	1	-1
+471	War Scepter (6)	2	3	1	0	27	invwsp	scep	1	-1
+361	Voulge (4)	2	4	1	0	15	invvou	pole	1	-1
+465	Spiked Club (6)	1	3	1	0	24	invspc	mace	1	-1
+202	Short Spear (2)	1	3	1	1	7	invssp	jave	1	-1
+249	Crystal Sword (3)	2	3	1	0	15	invcrs	crsd	1	-1
+j21	Wrist Blade (1)	1	3	1	0	1	invktr	h2h	1	6
+184	Double Axe (2)	2	3	1	0	7	inv2ax	axe	1	-1
+08@	Two-Handed Sword (Sacred)	1	4	1	0	30	inv2hs	2hsd	1	-1
+140	Spetum (1)	2	4	1	0	3	invspt	spea	1	-1
+!87	Holy Lance (4)	2	4	1	0	16	invtriu	pspe	1	3
+l19	Yew Wand (3)	1	2	1	0	10	invywn	wand	1	2
+67@	Short War Bow (Sacred)	2	3	1	0	30	invswb	bow	1	-1
+104	Broad Sword (1)	2	3	1	0	3	invbsd	swor	1	-1
+131	War Scepter (1)	2	3	1	0	3	invwsp	scep	1	-1
+412	Spetum (5)	2	4	1	0	22	invspt	spea	1	-1
+181	Crystal Sword (2)	2	3	1	0	10	invcrs	crsd	1	-1
+385	Crystal Sword (5)	2	3	1	0	24	invcrs	crsd	1	-1
+502	Long Bow (6)	2	4	1	0	25	invlbw	bow	1	-1
+314	Bastard Sword (4)	1	4	1	0	17	invbsw	2hsd	1	-1
+307	Falchion (4)	1	3	1	0	16	invflc	swor	1	-1
+1@8	Kriegsmesser (1)	2	3	1	0	6	inv9lsu	bswd	1	4
+154	Battle Staff (1)	1	4	1	0	3	invbst	staf	1	-1
+2@A	Goedendag (6)	1	3	1	0	26	inv7mas	pmac	1	3
+31@	Grand Scepter (Sacred)	1	3	1	0	30	invgsc	scep	1	-1
+j76	Blade Talons (4)	1	3	1	0	19	invclw	h2h	1	6
+355	Short Staff (4)	1	3	1	0	13	invsst	staf	1	-1
+479	Brandistock (6)	2	4	1	0	25	invbrn	spea	1	-1
+3@7	Bronze Sword (1)	2	3	1	0	4	invlsdu	bswd	1	4
+159	Halberd (1)	2	4	1	0	5	invhal	pole	1	-1
+!12	Raptor Scythe (5)	2	4	1	0	19	inv9s8u	nscy	1	2
+2@3	Maple Bow (6)	2	3	1	0	26	inv8s8u	dbow	1	5
+j49	Stag Bow (3)	2	4	1	0	12	invam1	abow	1	0
+7@4	Recurve Bow (6)	2	3	1	0	29	invswbu	dbow	1	5
+l69	Crossbow (5)	2	3	1	0	21	invmxb	xbow	1	-1
+j82	Jared's Stone (5)	1	3	1	0	23	invob5	orb	1	1
+l67	Repeating Crossbow (4)	2	3	1	0	19	invrxb	xbow	1	-1
+326	Great Axe (4)	2	4	1	0	17	invgax	2hax	1	-1
+4@A	Angel Star (1)	1	3	1	0	4	invmstu	pmac	1	3
+!99	Warp Blade (2)	2	3	1	0	11	inv9cru	scrd	1	1
+j57	Cestus (3)	1	3	1	0	12	invaxf	h2h	1	6
+9@5	Backsword (3)	1	3	1	0	12	inv9sbu	bswd	1	4
+l57	Crossbow (2)	2	3	1	0	7	invmxb	xbow	1	-1
+5@7	Bronze Sword (3)	2	3	1	0	13	invlsdu	bswd	1	4
+335	War Scepter (4)	2	3	1	0	17	invwsp	scep	1	-1
+270	Short Spear (3)	1	3	1	1	11	invssp	jave	1	-1
+!14	Raptor Scythe (Sacred)	2	4	1	0	30	inv9s8u	nscy	1	2
+195	Morning Star (2)	1	3	1	0	8	invmst	mace	1	-1
+10@	Giant Sword (Sacred)	1	4	1	0	30	invgis	2hsd	1	-1
+l13	Grim Wand (1)	1	2	1	0	5	invgwn	wand	1	2
+!4!	Warp Blade (6)	2	3	1	0	31	inv9cru	scrd	1	1
+j85	Maiden Spear (5)	2	4	1	0	22	invam3	aspe	1	0
+3@F	Trebuchet (3)	2	3	1	0	15	inv8mxu	nxbw	1	2
+162	Long Bow (1)	2	4	1	0	1	invlbw	bow	1	-1
+433	Hunter's Bow (5)	2	3	1	0	19	invhbw	bow	1	-1
+32@	War Scepter (Sacred)	2	3	1	0	30	invwsp	scep	1	-1
+l30	Wand (6)	1	2	1	0	23	invwnd	wand	1	2
+!92	Tepoztopilli (2)	2	4	1	0	11	inv9bru	pspe	1	3
+240	Broad Sword (3)	2	3	1	0	12	invbsd	swor	1	-1
+!53	Labrys (5)	2	4	1	0	26	invgaxu	2hbx	1	4
+334	Grand Scepter (4)	1	3	1	0	16	invgsc	scep	1	-1
+440	Short Sword (6)	1	3	1	0	23	invssd	swor	1	-1
+230	Long Bow (2)	2	4	1	0	6	invlbw	bow	1	-1
+115	Axe (1)	2	3	1	0	1	invaxe	axe	1	-1
+299	Composite Bow (3)	2	3	1	0	11	invcbw	bow	1	-1
+377	Long Sword (5)	2	3	1	0	22	invlsd	swor	1	-1
+4@4	Recurve Bow (3)	2	3	1	0	15	invswbu	dbow	1	5
+103	Falchion (1)	1	3	1	0	2	invflc	swor	1	-1
+201	Pilum (2)	1	3	1	1	6	invpil	jave	1	-1
+!72	Hexblade (3)	1	3	1	0	12	invkrsu	nknf	1	2
+66@	Long Battle Bow (Sacred)	2	4	1	0	30	invlbb	bow	1	-1
+423	Short Staff (5)	1	3	1	0	18	invsst	staf	1	-1
+j39	Hatchet Hands (2)	1	3	1	0	6	invaxf	h2h	1	6
+j79	Sacred Globe (5)	1	2	1	0	20	invob2	orb	1	1
+j16	Reflex Bow (1)	2	4	1	0	5	invam2	abow	1	0
+266	Grand Scepter (3)	1	3	1	0	11	invgsc	scep	1	-1
+l70	Heavy Crossbow (5)	2	4	1	0	23	invhxb	xbow	1	-1
+27@	Mace (Sacred)	1	3	1	0	30	invmac	mace	1	-1
+j61	Eagle Orb (4)	1	2	1	0	13	invob1	orb	1	1
+467	Morning Star (6)	1	3	1	0	26	invmst	mace	1	-1
+174	War Sword (2)	1	3	1	0	10	invwsd	swor	1	-1
+474	Short Spear (6)	1	3	1	1	25	invssp	jave	1	-1
+481	Pike (6)	2	4	1	0	27	invpik	spea	1	-1
+214	Throwing Knife (2)	1	2	1	1	4	invtkn	tkni	1	-1
+o18	Cestus (6)	1	3	1	0	26	invaxf	h2h	1	6
+!88	Holy Lance (5)	2	4	1	0	22	invtriu	pspe	1	3
+07@	War Sword (Sacred)	1	3	1	0	30	invwsd	swor	1	-1
+9@3	Viper Bow (6)	2	3	1	0	27	invsbbu	dbow	1	5
+422	Balanced Axe (5)	2	3	1	1	21	invbal	taxe	1	-1
+j55	Wrist Blade (3)	1	3	1	0	10	invktr	h2h	1	6
+l61	Crossbow (3)	2	3	1	0	12	invmxb	xbow	1	-1
+1@A	Goedendag (5)	1	3	1	0	21	inv7mas	pmac	1	3
+o20	Blade Talons (6)	1	3	1	0	28	invclw	h2h	1	6
+302	Short War Bow (3)	2	3	1	0	14	invswb	bow	1	-1
+229	Hunter's Bow (2)	2	3	1	0	5	invhbw	bow	1	-1
+l59	Repeating Crossbow (2)	2	3	1	0	10	invrxb	xbow	1	-1
+8@4	Recurve Bow (Sacred)	2	3	1	0	30	invswbu	dbow	1	5
+503	Composite Bow (6)	2	3	1	0	25	invcbw	bow	1	-1
+4@1	Compound Bow (4)	2	3	1	0	16	invcbwu	dbow	1	5
+!35	Ono (1)	2	3	1	0	0	inv9btu	2hbx	1	4
+188	Broad Axe (2)	2	3	1	0	6	invbrx	2hax	1	-1
+j24	Claws (1)	1	3	1	0	3	invclw	h2h	1	6
+!45	Valaska (4)	2	3	1	0	19	invbtxu	2hbx	1	4
+l52	Light Crossbow (1)	2	3	1	0	0	invlxb	xbow	1	-1
+315	Flamberge (4)	2	4	1	0	17	invflb	2hsd	1	-1
+402	Grand Scepter (5)	1	3	1	0	20	invgsc	scep	1	-1
+338	Short Spear (4)	1	3	1	1	16	invssp	jave	1	-1
+j43	Scissors Katar (2)	1	3	1	0	10	invskr	h2h	1	6
+6@9	Goedendag (1)	1	3	1	0	3	inv7mas	pmac	1	3
+!42	Valaska (1)	2	3	1	0	3	invbtxu	2hbx	1	4
+222	Battle Staff (2)	1	4	1	0	8	invbst	staf	1	-1
+!75	Hexblade (6)	1	3	1	0	27	invkrsu	nknf	1	2
+j19	Maiden Javelin (1)	1	3	1	1	5	invam5	ajav	1	0
+7@7	Bronze Sword (5)	2	3	1	0	23	invlsdu	bswd	1	4
+484	Kriss (6)	1	3	1	0	26	invkrs	knif	1	-1
+305	Scimitar (4)	1	3	1	0	15	invscm	swor	1	-1
+o11	Reflex Bow (6)	2	4	1	0	28	invam2	abow	1	0
+79@	Repeating Crossbow (Sacred)	2	3	1	0	30	invrxb	xbow	1	-1
+40@	Brandistock (Sacred)	2	4	1	0	30	invbrn	spea	1	-1
+217	Throwing Axe (2)	1	2	1	1	4	invtax	taxe	1	-1
+328	Club (4)	1	3	1	0	13	invclb	mace	1	-1
+j65	Jared's Stone (4)	1	3	1	0	19	invob5	orb	1	1
+!20	Bonesplitter (6)	2	4	1	0	28	invscyu	nscy	1	2
+239	Falchion (3)	1	3	1	0	12	invflc	swor	1	-1
+122	Great Axe (1)	2	4	1	0	3	invgax	2hax	1	-1
+!13	Raptor Scythe (6)	2	4	1	0	25	inv9s8u	nscy	1	2
+53@	Long Staff (Sacred)	1	4	1	0	30	invlst	staf	1	-1
+143	Dirk (1)	1	2	1	0	2	invdir	knif	1	-1
+158	Scythe (1)	2	4	1	0	3	invscy	scyh	1	-1
+269	Pilum (3)	1	3	1	1	10	invpil	jave	1	-1
+281	Blade (3)	1	3	1	0	14	invbld	knif	1	-1
+464	Club (6)	1	3	1	0	23	invclb	mace	1	-1
+363	Halberd (4)	2	4	1	0	18	invhal	pole	1	-1
+!3!	Warp Blade (5)	2	3	1	0	26	inv9cru	scrd	1	1
+!66	Marrow Staff (4)	2	4	1	0	20	inv8wsu	nstf	1	2
+!52	Labrys (4)	2	4	1	0	20	invgaxu	2hbx	1	4
+j91	Cestus (5)	1	3	1	0	21	invaxf	h2h	1	6
+!69	Marrow Staff (Sacred)	2	4	1	0	30	inv8wsu	nstf	1	2
+!38	Ono (4)	2	3	1	0	15	inv9btu	2hbx	1	4
+51@	Balanced Axe (Sacred)	2	3	1	1	30	invbal	taxe	1	-1
+!81	Spirit Edge (5)	1	3	1	0	25	inv9blu	nknf	1	2
+497	Voulge (6)	2	4	1	0	25	invvou	pole	1	-1
+183	Axe (2)	2	3	1	0	6	invaxe	axe	1	-1
+472	Javelin (6)	1	3	1	1	23	invjav	jave	1	-1
+362	Scythe (4)	2	4	1	0	16	invscy	scyh	1	-1
+439	Long War Bow (5)	2	4	1	0	24	invlwb	bow	1	-1
+317	Crystal Sword (4)	2	3	1	0	19	invcrs	crsd	1	-1
+l25	Grim Wand (4)	1	2	1	0	19	invgwn	wand	1	2
+169	Scimitar (2)	1	3	1	0	5	invscm	swor	1	-1
+411	Brandistock (5)	2	4	1	0	21	invbrn	spea	1	-1
+132	Javelin (1)	1	3	1	1	0	invjav	jave	1	-1
+l66	Heavy Crossbow (4)	2	4	1	0	18	invhxb	xbow	1	-1
+478	Trident (6)	2	4	1	0	24	invtri	spea	1	-1
+59@	Scythe (Sacred)	2	4	1	0	30	invscy	scyh	1	-1
+384	Great Sword (5)	2	4	1	0	24	invgsd	2hsd	1	-1
+9@B	Hand of God (1)	2	3	1	0	6	inv9gmu	pham	1	3
+398	Mace (5)	1	3	1	0	21	invmac	mace	1	-1
+!58	Flamen Staff (3)	1	4	1	0	12	invcstu	dstf	1	5
+l45	Great Maul (4)	2	3	1	0	19	invgma	hamm	1	-1
+14@	Crystal Sword (Sacred)	2	3	1	0	30	invcrs	crsd	1	-1
+407	Glaive (5)	1	4	1	1	22	invglv	jave	1	-1
+6@8	Kriegsmesser (6)	2	3	1	0	29	inv9lsu	bswd	1	4
+!1!	Warp Blade (3)	2	3	1	0	16	inv9cru	scrd	1	1
+2@1	Compound Bow (2)	2	3	1	0	7	invcbwu	dbow	1	5
+376	Broad Sword (5)	2	3	1	0	22	invbsd	swor	1	-1
+125	Spiked Club (1)	1	3	1	0	1	invspc	mace	1	-1
+!08	Raptor Scythe (1)	2	4	1	0	0	inv9s8u	nscy	1	2
+22@	Battle Axe (Sacred)	2	3	1	0	30	invbtx	2hax	1	-1
+6@2	Maple Bow (1)	2	3	1	0	3	inv8s8u	dbow	1	5
+190	Great Axe (2)	2	4	1	0	8	invgax	2hax	1	-1
+298	Long Bow (3)	2	4	1	0	11	invlbw	bow	1	-1
+313	Giant Sword (4)	1	4	1	0	16	invgis	2hsd	1	-1
+243	Two-Handed Sword (3)	1	4	1	0	9	inv2hs	2hsd	1	-1
+231	Composite Bow (2)	2	3	1	0	6	invcbw	bow	1	-1
+7@D	Dart Thrower (3)	2	3	1	0	12	inv8lxu	nxbw	1	2
+!22	Mammen Axe (1)	1	3	1	0	0	invhaxu	baxe	1	4
+!47	Valaska (6)	2	3	1	0	29	invbtxu	2hbx	1	4
+148	Balanced Knife (1)	1	2	1	1	3	invbkf	tkni	1	-1
+95@	Blade Talons (Sacred)	1	3	1	0	30	invclw	h2h	1	6
+o16	Wrist Blade (6)	1	3	1	0	24	invktr	h2h	1	6
+504	Short Battle Bow (6)	2	3	1	0	26	invsbb	bow	1	-1
+2@4	Recurve Bow (1)	2	3	1	0	6	invswbu	dbow	1	5
+j81	Clasped Orb (5)	1	2	1	0	21	invob4	orb	1	1
+343	Brandistock (4)	2	4	1	0	16	invbrn	spea	1	-1
+l71	Repeating Crossbow (5)	2	3	1	0	24	invrxb	xbow	1	-1
+l65	Crossbow (4)	2	3	1	0	16	invmxb	xbow	1	-1
+397	Spiked Club (5)	1	3	1	0	20	invspc	mace	1	-1
+2@9	Bonebreaker (4)	1	3	1	0	16	invspcu	pclb	1	3
+!25	Mammen Axe (4)	1	3	1	0	15	invhaxu	baxe	1	4
+63@	Long Bow (Sacred)	2	4	1	0	30	invlbw	bow	1	-1
+!86	Holy Lance (3)	2	4	1	0	11	invtriu	pspe	1	3
+106	War Sword (1)	1	3	1	0	6	invwsd	swor	1	-1
+80@	Eagle Orb (Sacred)	1	2	1	0	30	invob1	orb	1	1
+7@1	Compound Bow (Sacred)	2	3	1	0	30	invcbwu	dbow	1	5
+157	Voulge (1)	2	4	1	0	1	invvou	pole	1	-1
+3@A	Goedendag (Sacred)	1	3	1	0	30	inv7mas	pmac	1	3
+j12	Smoked Sphere (1)	1	2	1	0	2	invob3	orb	1	1
+203	Glaive (2)	1	4	1	1	8	invglv	jave	1	-1
+261	Spiked Club (3)	1	3	1	0	10	invspc	mace	1	-1
+l48	Great Maul (5)	2	3	1	0	24	invgma	hamm	1	-1
+o17	Hatchet Hands (6)	1	3	1	0	25	invaxf	h2h	1	6
+!17	Bonesplitter (3)	2	4	1	0	13	invscyu	nscy	1	2
+j38	Wrist Blade (2)	1	3	1	0	5	invktr	h2h	1	6
+!34	Hammerhead Axe (Sacred)	2	3	1	0	30	invaxeu	baxe	1	4
+9@A	Angel Star (6)	1	3	1	0	27	invmstu	pmac	1	3
+j94	Scissors Katar (5)	1	3	1	0	24	invskr	h2h	1	6
+459	Large Axe (6)	2	3	1	0	23	invlax	2hax	1	-1
+321	Military Pick (4)	2	3	1	0	17	invmpi	axe	1	-1
+284	Balanced Knife (3)	1	2	1	1	13	invbkf	tkni	1	-1
+j50	Reflex Bow (3)	2	4	1	0	15	invam2	abow	1	0
+247	Flamberge (3)	2	4	1	0	13	invflb	2hsd	1	-1
+52@	Short Staff (Sacred)	1	3	1	0	30	invsst	staf	1	-1
+371	Long War Bow (4)	2	4	1	0	19	invlwb	bow	1	-1
+55@	Battle Staff (Sacred)	1	4	1	0	30	invbst	staf	1	-1
+9@2	Maple Bow (4)	2	3	1	0	17	inv8s8u	dbow	1	5
+3@3	Maple Bow (Sacred)	2	3	1	0	30	inv8s8u	dbow	1	5
+!07	Naginata (Sacred)	2	4	1	0	30	invwsc	nagi	1	6
+204	Throwing Spear (2)	1	4	1	1	10	invtsp	jave	1	-1
+!55	Labrys (Sacred)	2	4	1	0	30	invgaxu	2hbx	1	4
+289	Gnarled Staff (3)	1	4	1	0	11	invcst	staf	1	-1
+165	Long Battle Bow (1)	2	4	1	0	3	invlbb	bow	1	-1
+20@	Large Axe (Sacred)	2	3	1	0	30	invlax	2hax	1	-1
+435	Composite Bow (5)	2	3	1	0	20	invcbw	bow	1	-1
+401	Scepter (5)	1	3	1	0	18	invscp	scep	1	-1
+!67	Marrow Staff (5)	2	4	1	0	25	inv8wsu	nstf	1	2
+!26	Mammen Axe (5)	1	3	1	0	20	invhaxu	baxe	1	4
+1@D	Needle Crossbow (4)	2	3	1	0	16	invlxbu	nxbw	1	2
+186	War Axe (2)	2	3	1	0	10	invwax	axe	1	-1
+j62	Sacred Globe (4)	1	2	1	0	15	invob2	orb	1	1
+l74	Heavy Crossbow (6)	2	4	1	0	27	invhxb	xbow	1	-1
+147	Flying Knife (1)	1	2	1	1	2	invtkn	tkni	1	-1
+j74	Cestus (4)	1	3	1	0	16	invaxf	h2h	1	6
+j13	Clasped Orb (1)	1	2	1	0	3	invob4	orb	1	1
+339	Glaive (4)	1	4	1	1	17	invglv	jave	1	-1
+!39	Ono (5)	2	3	1	0	20	inv9btu	2hbx	1	4
+228	Short Bow (2)	2	3	1	0	4	invsbw	bow	1	-1
+92@	Hatchet Hands (Sacred)	1	3	1	0	30	invaxf	h2h	1	6
+5@A	Angel Star (2)	1	3	1	0	8	invmstu	pmac	1	3
+268	Javelin (3)	1	3	1	1	9	invjav	jave	1	-1
+!97	Tepoztopilli (Sacred)	2	4	1	0	30	inv9bru	pspe	1	3
+01@	Short Sword (Sacred)	1	3	1	0	30	invssd	swor	1	-1
+345	Pike (4)	2	4	1	0	19	invpik	spea	1	-1
+172	Broad Sword (2)	2	3	1	0	7	invbsd	swor	1	-1
+319	Axe (4)	2	3	1	0	15	invaxe	axe	1	-1
+5@8	Kriegsmesser (5)	2	3	1	0	25	inv9lsu	bswd	1	4
+25@	Club (Sacred)	1	3	1	0	30	invclb	mace	1	-1
+39@	Trident (Sacred)	2	4	1	0	30	invtri	spea	1	-1
+223	War Staff (2)	2	4	1	0	9	invwst	staf	1	-1
+404	Javelin (5)	1	3	1	1	18	invjav	jave	1	-1
+l33	Grim Wand (6)	1	2	1	0	27	invgwn	wand	1	2
+282	Throwing Knife (3)	1	2	1	1	9	invtkn	tkni	1	-1
+09@	Claymore (Sacred)	1	4	1	0	30	invclm	2hsd	1	-1
+420	Balanced Knife (5)	1	2	1	1	22	invbkf	tkni	1	-1
+121	Battle Axe (1)	2	3	1	0	2	invbtx	2hax	1	-1
+9@1	Serpent Bow (2)	2	4	1	0	8	inv8lbu	dbow	1	5
+o10	Stag Bow (6)	2	4	1	0	26	invam1	abow	1	0
+344	Spetum (4)	2	4	1	0	17	invspt	spea	1	-1
+l35	Maul (1)	2	4	1	0	3	invmau	hamm	1	-1
+487	Flying Knife (6)	1	2	1	1	25	invtkn	tkni	1	-1
+494	Battle Staff (6)	1	4	1	0	26	invbst	staf	1	-1
+j36	Maiden Javelin (2)	1	3	1	1	10	invam5	ajav	1	0
+90@	Katar (Sacred)	1	3	1	0	30	invktr	h2h	1	6
+8@1	Serpent Bow (1)	2	4	1	0	3	inv8lbu	dbow	1	5
+238	Saber (3)	1	3	1	0	11	invsbr	swor	1	-1
+49@	Balanced Knife (Sacred)	1	2	1	1	30	invbkf	tkni	1	-1
+26@	Spiked Club (Sacred)	1	3	1	0	30	invspc	mace	1	-1
+253	Military Pick (3)	2	3	1	0	13	invmpi	axe	1	-1
+j44	Eagle Orb (3)	1	2	1	0	8	invob1	orb	1	1
+!73	Hexblade (4)	1	3	1	0	17	invkrsu	nknf	1	2
+448	Claymore (6)	1	4	1	0	25	invclm	2hsd	1	-1
+j20	Katar (1)	1	3	1	0	0	invktr	h2h	1	6
+209	Pike (2)	2	4	1	0	10	invpik	spea	1	-1
+15@	Hand Axe (Sacred)	1	3	1	0	30	invhax	axe	1	-1
+216	Balanced Knife (2)	1	2	1	1	8	invbkf	tkni	1	-1
+357	Gnarled Staff (4)	1	4	1	0	16	invcst	staf	1	-1
+72@	Grim Wand (Sacred)	1	2	1	0	30	invgwn	wand	1	2
+117	Military Pick (1)	2	3	1	0	3	invmpi	axe	1	-1
+!90	Holy Lance (Sacred)	2	4	1	0	30	invtriu	pspe	1	3
+64@	Composite Bow (Sacred)	2	3	1	0	30	invcbw	bow	1	-1
+l27	Yew Wand (5)	1	2	1	0	20	invywn	wand	1	2
+455	Axe (6)	2	3	1	0	24	invaxe	axe	1	-1
+!23	Mammen Axe (2)	1	3	1	0	4	invhaxu	baxe	1	4
+j48	Jared's Stone (3)	1	3	1	0	14	invob5	orb	1	1
+336	Javelin (4)	1	3	1	1	13	invjav	jave	1	-1
+l46	War Hammer (5)	2	3	1	0	21	invwhm	hamm	1	-1
+6@1	Compound Bow (6)	2	3	1	0	25	invcbwu	dbow	1	5
+l54	Heavy Crossbow (1)	2	4	1	0	4	invhxb	xbow	1	-1
+457	Military Pick (6)	2	3	1	0	26	invmpi	axe	1	-1
+65@	Short Battle Bow (Sacred)	2	3	1	0	30	invsbb	bow	1	-1
+179	Flamberge (2)	2	4	1	0	8	invflb	2hsd	1	-1
+383	Flamberge (5)	2	4	1	0	22	invflb	2hsd	1	-1
+l47	Maul (5)	2	4	1	0	22	invmau	hamm	1	-1
+l16	Bone Wand (2)	1	2	1	0	7	invbwn	wand	1	2
+297	Hunter's Bow (3)	2	3	1	0	10	invhbw	bow	1	-1
+277	Pike (3)	2	4	1	0	14	invpik	spea	1	-1
+!46	Valaska (5)	2	3	1	0	24	invbtxu	2hbx	1	4
+l26	Wand (5)	1	2	1	0	18	invwnd	wand	1	2
+48@	Flying Knife (Sacred)	1	2	1	1	30	invtkn	tkni	1	-1
+j64	Clasped Orb (4)	1	2	1	0	17	invob4	orb	1	1
+j22	Hatchet Hands (1)	1	3	1	0	2	invaxf	h2h	1	6
+4@E	Stinger Crossbow (2)	2	3	1	0	9	invmxbu	nxbw	1	2
+4@2	Serpent Bow (6)	2	4	1	0	26	inv8lbu	dbow	1	5
+7@2	Maple Bow (2)	2	3	1	0	8	inv8s8u	dbow	1	5
+9@7	Bronze Sword (Sacred)	2	3	1	0	30	invlsdu	bswd	1	4
+l64	Light Crossbow (4)	2	3	1	0	15	invlxb	xbow	1	-1
+2@2	Serpent Bow (4)	2	4	1	0	17	inv8lbu	dbow	1	5
+505	Long Battle Bow (6)	2	4	1	0	26	invlbb	bow	1	-1
+o15	Katar (6)	1	3	1	0	23	invktr	h2h	1	6
+!09	Raptor Scythe (2)	2	4	1	0	4	inv9s8u	nscy	1	2
+419	Flying Knife (5)	1	2	1	1	20	invtkn	tkni	1	-1
+133	Pilum (1)	1	3	1	1	1	invpil	jave	1	-1
+290	Battle Staff (3)	1	4	1	0	12	invbst	staf	1	-1
+!70	Hexblade (1)	1	3	1	0	2	invkrsu	nknf	1	2
+149	Throwing Axe (1)	1	2	1	1	0	invtax	taxe	1	-1
+123	Giant Axe (1)	2	3	1	0	5	invgix	2hax	1	-1
+304	Short Sword (4)	1	3	1	0	14	invssd	swor	1	-1
+45@	Kriss (Sacred)	1	3	1	0	30	invkrs	knif	1	-1
+j51	Maiden Spear (3)	2	4	1	0	12	invam3	aspe	1	0
+!64	Marrow Staff (2)	2	4	1	0	10	inv8wsu	nstf	1	2
+!28	Mammen Axe (Sacred)	1	3	1	0	30	invhaxu	baxe	1	4
+210	Dagger (2)	1	2	1	0	4	invdgr	knif	1	-1
+406	Short Spear (5)	1	3	1	1	21	invssp	jave	1	-1
+396	Club (5)	1	3	1	0	18	invclb	mace	1	-1
+258	Great Axe (3)	2	4	1	0	12	invgax	2hax	1	-1
+38@	Spear (Sacred)	2	4	1	0	30	invspr	spea	1	-1
+482	Dagger (6)	1	2	1	0	22	invdgr	knif	1	-1
+j37	Katar (2)	1	3	1	0	5	invktr	h2h	1	6
+173	Long Sword (2)	2	3	1	0	8	invlsd	swor	1	-1
+2@E	Dart Thrower (Sacred)	2	3	1	0	30	inv8lxu	nxbw	1	2
+499	Halberd (6)	2	4	1	0	27	invhal	pole	1	-1
+!06	Naginata (6)	2	4	1	0	28	invwsc	nagi	1	6
+365	Hunter's Bow (4)	2	3	1	0	15	invhbw	bow	1	-1
+306	Saber (4)	1	3	1	0	16	invsbr	swor	1	-1
+470	Grand Scepter (6)	1	3	1	0	25	invgsc	scep	1	-1
+!40	Ono (6)	2	3	1	0	25	inv9btu	2hbx	1	4
+1@1	Compound Bow (1)	2	3	1	0	2	invcbwu	dbow	1	5
+7@A	Angel Star (4)	1	3	1	0	18	invmstu	pmac	1	3
+l75	Repeating Crossbow (6)	2	3	1	0	28	invrxb	xbow	1	-1
+166	Short War Bow (1)	2	3	1	0	4	invswb	bow	1	-1
+75@	Great Maul (Sacred)	2	3	1	0	30	invgma	hamm	1	-1
+141	Pike (1)	2	4	1	0	5	invpik	spea	1	-1
+403	War Scepter (5)	2	3	1	0	22	invwsp	scep	1	-1
+61@	Short Bow (Sacred)	2	3	1	0	30	invsbw	bow	1	-1
+252	Double Axe (3)	2	3	1	0	12	inv2ax	axe	1	-1
+466	Mace (6)	1	3	1	0	25	invmac	mace	1	-1
+134	Short Spear (1)	1	3	1	1	2	invssp	jave	1	-1
+283	Flying Knife (3)	1	2	1	1	11	invtkn	tkni	1	-1
+156	Bardiche (1)	2	4	1	0	0	invbar	pole	1	-1
+03@	Saber (Sacred)	1	3	1	0	30	invsbr	swor	1	-1
+3@8	Kriegsmesser (3)	2	3	1	0	15	inv9lsu	bswd	1	4
+x34	Maiden Spear (2)	2	4	1	0	8	invam3	aspe	1	0
+421	Throwing Axe (5)	1	2	1	1	18	invtax	taxe	1	-1
+37@	Throwing Spear (Sacred)	1	4	1	1	30	invtsp	jave	1	-1
+450	Bastard Sword (6)	1	4	1	0	26	invbsw	2hsd	1	-1
+!98	Warp Blade (1)	2	3	1	0	6	inv9cru	scrd	1	1
+j14	Jared's Stone (1)	1	3	1	0	5	invob5	orb	1	1
+l10	Wand (1)	1	2	1	0	0	invwnd	wand	1	2
+4@9	Bonebreaker (6)	1	3	1	0	25	invspcu	pclb	1	3
+94@	Claws (Sacred)	1	3	1	0	30	invclw	h2h	1	6
+3@6	Backsword (6)	1	3	1	0	26	inv9sbu	bswd	1	4
+271	Glaive (3)	1	4	1	1	12	invglv	jave	1	-1
+l72	Light Crossbow (6)	2	3	1	0	25	invlxb	xbow	1	-1
+491	Short Staff (6)	1	3	1	0	22	invsst	staf	1	-1
+l68	Light Crossbow (5)	2	3	1	0	20	invlxb	xbow	1	-1
+!31	Hammerhead Axe (4)	2	3	1	0	21	invaxeu	baxe	1	4
+4@F	Trebuchet (4)	2	3	1	0	20	inv8mxu	nxbw	1	2
+7@9	Goedendag (2)	1	3	1	0	7	inv7mas	pmac	1	3
+219	Short Staff (2)	1	3	1	0	4	invsst	staf	1	-1
+318	Hand Axe (4)	1	3	1	0	14	invhax	axe	1	-1
+105	Long Sword (1)	2	3	1	0	4	invlsd	swor	1	-1
+473	Pilum (6)	1	3	1	1	24	invpil	jave	1	-1
+j33	Reflex Bow (2)	2	4	1	0	10	invam2	abow	1	0
+185	Military Pick (2)	2	3	1	0	8	invmpi	axe	1	-1
+390	War Axe (5)	2	3	1	0	24	invwax	axe	1	-1
+j83	Stag Bow (5)	2	4	1	0	21	invam1	abow	1	0
+248	Great Sword (3)	2	4	1	0	14	invgsd	2hsd	1	-1
+146	Throwing Knife (1)	1	2	1	1	0	invtkn	tkni	1	-1
+111	Flamberge (1)	2	4	1	0	3	invflb	2hsd	1	-1
+93@	Cestus (Sacred)	1	3	1	0	30	invaxf	h2h	1	6
+408	Throwing Spear (5)	1	4	1	1	23	invtsp	jave	1	-1
+j77	Scissors Katar (4)	1	3	1	0	20	invskr	h2h	1	6
+356	Long Staff (4)	1	4	1	0	15	invlst	staf	1	-1
+5@9	Bonebreaker (Sacred)	1	3	1	0	30	invspcu	pclb	1	3
+1@7	Ida (6)	2	3	1	0	27	invbsdu	bswd	1	4
+8@2	Maple Bow (3)	2	3	1	0	13	inv8s8u	dbow	1	5
+164	Short Battle Bow (1)	2	3	1	0	2	invsbb	bow	1	-1
+196	Flail (2)	2	3	1	0	10	invfla	mace	1	-1
+242	War Sword (3)	1	3	1	0	15	invwsd	swor	1	-1
+0g1	\red;Elixir of Greater Greed	1	1	2	0	0	invxyz	hpot		-1
+K0+	\orange;at the cost of wisdom \nPersistence comes \nShimmering Shrine (10 Charges)	1	2	2	0	0	jbscross	thng		-1
+aqv	Arrow Quiver	1	3	2	1	0	invqvr	bowq	2	-1
+quy	Cube Reagent (4/4)\n\orange;Dazzling Arcane Crystal	1	1	2	0	0	pearl2	thng		-1
+P4+	\orange;refreshed \nDrink and be \nDivine Shrine (6 Charges)	1	2	2	0	0	jbscross	thng		-1
+35+	25% Bonus to Attack Rating	1	1	2	0	0	pearl2	asaa		-1
+&87	\orange;Mystic Orb\nWarbringer	1	1	2	0	0	pearl2	asaa		-1
+29-	\dgrey;Level: 60 (H) - 90 (T) - 115 (D)\nLocation: Act 5 Arreat Summit\nTricky (3/8)\nSummoning Uberquest\n\n-- Assault on Mount Arreat --\n\red;Pearl of Wisdom	1	1	2	0	0	shiniePurple	thng		-1
+&22	\orange;Mystic Orb	1	1	2	0	0	pearl1	asaa		-1
+et1	\red;Elixir of Concentration	1	1	2	0	0	invxyz	hpot		-1
+hp2	Light Healing Potion	1	1	2	0	0	invhp2	hpot		-1
+&23	\orange;Mystic Orb	1	1	2	0	0	pearl1	asaa		-1
+9xf	Fascia\nAmulet	1	1	2	0	0	invamu	amul		-1
+bpl	Large Blue Potion	1	1	2	1	0	invbpl	mpot		-1
+4oµ	Cube Reagent\n\orange;Oil of Enhancement	1	1	2	0	0	zelixir4	thng		-1
+b@b	\red;Goodberry	1	1	2	0	0	cherries	hpot		-1
+J8+	\orange;at the cost of wisdom \nSalvation comes \nSacred Shrine (2 Charges)	1	2	2	0	0	jbscross	thng		-1
+9$a	\purple;Chipped Bloodstone	1	1	2	0	1	invgsca	gemp		-1
+C2+	\orange;flows from within \nThe essence of life \nQuiet Shrine (8 Charges)	1	2	2	0	0	jbscross	thng		-1
+&34	\orange;Mystic Orb	1	1	2	0	0	pearl2	asaa		-1
+cm3	WARNING: HACKED ITEM\nGrand Charm	0	0	2	0	0	invsst	hpot		-1
+27+	Total Character Defense Plus 1%	1	1	2	0	0	pearl1	asaa		-1
+&a4	\orange;Mystic Orb	1	1	2	0	0	pearl3	asaa		-1
+C3+	\orange;flows from within \nThe essence of life \nQuiet Shrine (7 Charges)	1	2	2	0	0	jbscross	thng		-1
+E9+	\orange;is swift and sharp \nThe sword of justice \nWeird Shrine (1 Charge)	1	2	2	0	0	jbscross	thng		-1
+!@B	\dgreen;Signet of Skill	1	1	2	0	0	sigil4B	poti		-1
+r19	\purple;Fal Rune	1	1	2	0	41	invrFal	rune		-1
+31+	+1% Experience Gained	1	1	2	0	0	pearl2	asaa		-1
+B5+	\orange;be guided by fate \nThe hands of men may \nAbandoned Shrine (5 Charges)	1	2	2	0	0	jbscross	thng		-1
+zog	\red;Life Pack	1	1	2	0	0	stonemars	poti		-1
+gcy	\purple;Chipped Topaz	1	1	2	0	1	invgsya	gemt		-1
+ne9	Cantor Trophy\nAmulet	1	1	2	0	0	invamu	amul		-1
+45+	+5 Crafting Points	1	1	2	0	0	pearl3	asaa		-1
+M8+	\orange;least expected \nRiches abound when \nSpiritual Shrine (2 Charges)	1	2	2	0	0	jbscross	thng		-1
+ned	Overseer Skull\nAmulet	1	1	2	0	0	invamu	amul		-1
+L6+	\orange;as one grows strong \nSome are weakened \nMysterious Shrine (4 Charges)	1	2	2	0	0	jbscross	thng		-1
+r25	\purple;Gul Rune	1	1	2	0	53	invrGul	rune		-1
+06-	\dgrey;are worth it, especially on Destruction.\nultimate challenge, but the rewards\nanother time. The enemies there pose the\nare sprawling fields and cities from\nHidden in the deepest caves, uberlevels\n\n-- Uberlevels --\n\red;Pearl of Wisdom	1	1	2	0	0	ShinieWhite	thng		-1
+µ13	\orange;MCS Trophy	1	1	2	0	0	apple	thng		-1
+ey4	\red;Elixir of Wealth	1	1	2	0	0	invxyz	hpot		-1
+r13	\purple;Shael Rune	1	1	2	0	29	invrShae	rune		-1
+vps	Stamina Potion	1	1	2	0	0	invwps	spot		-1
+r43	\purple;No Rune	1	1	2	0	100	r-a-14	rune		-1
+a61	Sacred Worldstone Key	1	2	2	0	0	invmph	grtz		-1
+cm2	WARNING: HACKED ITEM\nLarge Charm	0	0	2	0	0	invwnd	hpot		-1
+ob6	Glowing Orb\nAmulet	1	1	2	0	0	invamu	amul		-1
+r32	\purple;Cham Rune	1	1	2	0	67	invrCham	rune		-1
+38+	Adds Stun Attack: 0.2 seconds	1	1	2	0	0	pearl2	asaa		-1
+0g6	\red;Elixir of Greater Vitality	1	1	2	0	0	invxyz	hpot		-1
+drf	Dream Spirit\nAmulet	1	1	2	0	0	invamu	amul		-1
+27-	\dgrey;Level: 55 (H) - 85 (T) - 110 (D)\nLocation: Act 1 The Hole 2\nEasy (1/8)\nSummoning Uberquest\n\n-- The Butcher --\n\red;Pearl of Wisdom	1	1	2	0	0	shiniePurple	thng		-1
+F6+	\orange;seldom attack \nThose who defend \nGloomy Shrine (4 Charges)	1	2	2	0	0	jbscross	thng		-1
+pab	Sacred Targe\nAmulet	1	1	2	0	0	invamu	amul		-1
+mp5	Super Mana Potion	1	1	2	0	0	invmp5	mpot		-1
+26+	+15% Enhanced Defense	1	1	2	0	0	pearl1	asaa		-1
+T2+	\orange;brings destruction\nArcane power\nCryptic Shrine (8 Charges)	1	2	2	0	0	jbscross	thng		-1
+flg	Flag	1	2	2	0	0	invflag	body		-1
+amb	Matriarchal Bow\nAmulet	1	1	2	0	0	invamu	amul		-1
+S4+	\orange;the power of steel\nTime cannot diminish\nReligious Shrine (6 Charges)	1	2	2	0	0	jbscross	thng		-1
+bks	Scroll of Inifuss	2	2	2	0	0	invscb	ques		-1
+rvs	Rejuvenation Potion	1	1	2	0	0	invvps	rpot		-1
+a67	Congratulations. You got it\nSpirit of Damnation	1	1	2	0	0	invsple	grtz		-1
+qus	Cube Reagent (1/4)\n\orange;Regular Arcane Crystal	1	1	2	0	0	pearl4	thng		-1
+zkw	\dgreen;Signet of Gold	1	1	2	0	0	sigil3B	poti		-1
+5$d	\purple;Flawless Amber	1	1	2	0	15	invgsad	geml		-1
+61+	+5 Mana on Striking in Melee	1	1	2	0	0	pearl2	asaa		-1
+&16	\orange;Mystic Orb	1	1	2	0	0	pearl4	asaa		-1
+drb	Blood Spirit\nAmulet	1	1	2	0	0	invamu	amul		-1
+&65	\orange;Mystic Orb	1	1	2	0	0	pearl2	asaa		-1
+54+	1% Reanimate As: Fallen One	1	1	2	0	0	pearl1	asaa		-1
+&13	\orange;Mystic Orb	1	1	2	0	0	pearl4	asaa		-1
+&44	\orange;Mystic Orb	1	1	2	0	0	pearl4	asaa		-1
+H3+	\orange;at the cost of wisdom \nIntensity comes \nFascinating Shrine (7 Charges)	1	2	2	0	0	jbscross	thng		-1
+a58	Scroll of Kings	1	1	2	0	0	invscb2	grtz		-1
+K9+	\orange;at the cost of wisdom \nPersistence comes \nShimmering Shrine (1 Charge)	1	2	2	0	0	jbscross	thng		-1
+A0+	\orange;by heavenly faith \nStrength is bolstered \nCreepy Shrine (10 Charges)	1	2	2	0	0	jbscross	thng		-1
+64+	2% Faster Cast Rate	1	1	2	0	0	pearl2	asaa		-1
+98-	\dgrey;Level: 75 (H) - 100 (T) - 121 (D)\nLocation: Act 1 Cave Level 2\nExtreme (6/8)\nUberlevel\n\n-- Duncraig (bonus uberquest) --\n\red;Pearl of Wisdom	1	1	2	0	0	shinieGreen	thng		-1
+&79	\orange;Mystic Orb\nAuriel's Focus	1	1	2	0	0	pearl1	asaa		-1
+G7+	\orange;may yet be first \nThose who are last \nTainted Shrine (3 Charges)	1	2	2	0	0	jbscross	thng		-1
+c@c	\red;Moon Symbol	1	1	2	0	0	moon1	poti		-1
+µ01	\orange;Lord Aldric Jitan Trophy	1	1	2	0	0	apple	thng		-1
+&53	\orange;Mystic Orb	1	1	2	0	0	pearl1	asaa		-1
+gpv	\purple;Perfect Amethyst	1	1	2	0	18	invgsve	gema		-1
+x@x	The Glorious Book of Median	1	1	2	0	0	invsbk2	grtz		-1
+ba5	Avenger Guard\nAmulet	1	1	2	0	0	invamu	amul		-1
+am7	Ceremonial Bow\nAmulet	1	1	2	0	0	invamu	amul		-1
+0oµ	Cube Reagent\n\orange;Catalyst of Learning	1	1	2	0	0	catal1	thng		-1
+17+	3% Bonus to Poison Skill Duration	1	1	2	0	0	pearl3	asaa		-1
+hpo	Healing Potion	1	1	2	0	0	invrps	hpot		-1
+scz	Scalp	1	1	2	0	0	invscp	body		-1
+I4+	\orange;at the cost of wisdom \nEnergy comes \nOrnate Shrine (6 Charges)	1	2	2	0	0	jbscross	thng		-1
+A5+	\orange;by heavenly faith \nStrength is bolstered \nCreepy Shrine (5 Charges)	1	2	2	0	0	jbscross	thng		-1
+E4+	\orange;is swift and sharp \nThe sword of justice \nWeird Shrine (6 Charges)	1	2	2	0	0	jbscross	thng		-1
+skz	\purple;Perfect Skull	1	1	2	0	18	invskz	gemz		-1
+qum	\grey;Cube Reagent\n\orange;Arcane Crystal	1	1	2	0	0	gemcontainer	thng		-1
+57+	1% Chance to cast level 3 Miasma on Attack	1	1	2	0	0	pearl2	asaa		-1
+H7+	\orange;at the cost of wisdom \nIntensity comes \nFascinating Shrine (3 Charges)	1	2	2	0	0	jbscross	thng		-1
+m@m	\dgreen;Spinecracker's Sigil	1	1	2	0	0	ring03	thng		-1
+08-	\dgrey;smarter than your common foe. Beware!\nmonsters are far more dangerous and\nthroughout Sanctuary, Elite\nWalking among their lesser brethren\n\n-- Elite Monsters --\n\red;Pearl of Wisdom	1	1	2	0	0	ShinieWhite	thng		-1
+pa4	Aerin Shield\nAmulet	1	1	2	0	0	invamu	amul		-1
+!@3	\dgreen;Evil Eye of the Glowing Blob	1	1	2	0	0	evileye	thng		-1
+obb	Heavenly Stone\nAmulet	1	1	2	0	0	invamu	amul		-1
+&92	\orange;Mystic Orb\nPeriapt of Life	1	1	2	0	0	pearl1	asaa		-1
+0u1	Hammer of the Taan Judges	1	2	2	0	0	invhmr	grtz		-1
+x04	Caoi Dulra Fruit	1	1	2	0	0	invgmy	arad		5
+O8+	\orange;what it seems to be \nMagic is not always \nEnchanted Shrine (2 Charges)	1	2	2	0	0	jbscross	thng		-1
+bps	Small Blue Potion	1	1	2	1	0	invbps	mpot		-1
+spe	Spleen	1	1	2	0	0	invsple	body		-1
+gfg	\purple;Flawed Emerald	1	1	2	0	5	invgsgb	geme		-1
+µ04	\orange;Akarat Trophy	1	1	2	0	0	apple	thng		-1
+L7+	\orange;as one grows strong \nSome are weakened \nMysterious Shrine (3 Charges)	1	2	2	0	0	jbscross	thng		-1
+&21	\orange;Mystic Orb	1	1	2	0	0	pearl1	asaa		-1
+&73	\orange;Mystic Orb\nZayl's Soul Orb	1	1	2	0	0	pearl4	asaa		-1
+&88	\orange;Mystic Orb\nTen Pin Striker	1	1	2	0	0	pearl2	asaa		-1
+gly	\purple;Flawless Topaz	1	1	2	0	15	invgsyd	gemt		-1
+14+	+1% Bonus to Summoned Minion Resistances	1	1	2	0	0	pearl4	asaa		-1
+brz	Brain	1	1	2	0	0	invbrnz	body		-1
+pac	Sacred Rondache\nAmulet	1	1	2	0	0	invamu	amul		-1
+&41	\orange;Mystic Orb	1	1	2	0	0	pearl4	asaa		-1
+N2+	\orange;the body thrives \nWhile the spirit is vigilant \nMagical Shrine (8 Charges)	1	2	2	0	0	jbscross	thng		-1
+N1+	\orange;the body thrives \nWhile the spirit is vigilant \nMagical Shrine (9 Charges)	1	2	2	0	0	jbscross	thng		-1
+O2+	\orange;what it seems to be \nMagic is not always \nEnchanted Shrine (8 Charges)	1	2	2	0	0	jbscross	thng		-1
+x03	Worldstone Orb	1	1	2	0	0	invgmy	arac		4
+&a3	\orange;Mystic Orb	1	1	2	0	0	pearl3	asaa		-1
+25+	2% Curse Length Reduction	1	1	2	0	0	pearl1	asaa		-1
+J7+	\orange;at the cost of wisdom \nSalvation comes \nSacred Shrine (3 Charges)	1	2	2	0	0	jbscross	thng		-1
+F4+	\orange;seldom attack \nThose who defend \nGloomy Shrine (6 Charges)	1	2	2	0	0	jbscross	thng		-1
+hrt	Heart	1	1	2	0	0	invhrt	body		-1
+&07	\orange;Mystic Orb	1	1	2	0	0	pearl4	asaa		-1
+a57	Visions of Akarat	1	1	2	0	0	invsbk2	grtz		-1
+qut	Cube Reagent (2/4)\n\orange;Glowing Arcane Crystal	1	1	2	0	0	pearl1	thng		-1
+o@o	\dgreen;Eyegouger's Sigil	1	1	2	0	0	ring06	thng		-1
+E8+	\orange;is swift and sharp \nThe sword of justice \nWeird Shrine (2 Charges)	1	2	2	0	0	jbscross	thng		-1
+ob4	Clasped Orb\nAmulet	1	1	2	0	0	invamu	amul		-1
+02-	\dgrey;and you may survive combat more easily!\nmode. The loss of speed is minimal\nTo avoid this penalty, hit R to enter walk\nchance to block are reduced when you run.\nAs in the regular game, your defense and\n\n-- Defense Penalty --\n\red;Pearl of Wisdom	1	1	2	0	0	ShinieWhite	thng		-1
+a66	Idol of Vanity	1	2	2	0	0	invgbi	grtz		-1
+am8	Ceremonial Spear\nAmulet	1	1	2	0	0	invamu	amul		-1
+E1+	\orange;is swift and sharp \nThe sword of justice \nWeird Shrine (9 Charges)	1	2	2	0	0	jbscross	thng		-1
+skc	\purple;Chipped Skull	1	1	2	0	1	invskc	gemz		-1
+qqc	Bolt Quiver (Sacred)	1	3	2	1	75	invcqv	qmsl	2	-1
+rin	Ring	1	1	2	0	0	invrin	ring		-1
+r56	\grey;Great Rune\n\purple;Sha'ad Rune	1	1	2	0	100	r-d-12	rune		-1
+52+	2% Faster Hit Recovery	1	1	2	0	0	pearl1	asaa		-1
+r54	\grey;Great Rune\n\purple;Krys Rune	1	1	2	0	100	r-d-07	rune		-1
+qux	Cube Reagent (3/4)\n\orange;Brilliant Arcane Crystal	1	1	2	0	0	pearl3	thng		-1
+µ14	\orange;Brother Laz Trophy	1	1	2	0	0	apple	thng		-1
+ob2	Sacred Globe\nAmulet	1	1	2	0	0	invamu	amul		-1
+34+	1% Chance to cast level 3 Celerity on Attack	1	1	2	0	0	pearl2	asaa		-1
+paa	Royal Shield\nAmulet	1	1	2	0	0	invamu	amul		-1
+65+	2% Increased Attack Speed	1	1	2	0	0	pearl2	asaa		-1
+ba6	Jawbone Visor\nAmulet	1	1	2	0	0	invamu	amul		-1
+ear	Ear	1	1	2	0	0	invear	play		-1
+10+	Damage Reduced by 1	1	1	2	0	0	pearl4	asaa		-1
+J6+	\orange;at the cost of wisdom \nSalvation comes \nSacred Shrine (4 Charges)	1	2	2	0	0	jbscross	thng		-1
+l@l	\dgreen;Skinrender's Sigil	1	1	2	0	0	ring01	thng		-1
+F8+	\orange;seldom attack \nThose who defend \nGloomy Shrine (2 Charges)	1	2	2	0	0	jbscross	thng		-1
+44+	-1% to Enemy Poison Resistance	1	1	2	0	0	pearl4	asaa		-1
+obd	Demon Heart\nAmulet	1	1	2	0	0	invamu	amul		-1
+&90	\orange;Mystic Orb\nCrystal of Tears	1	1	2	0	0	pearl1	asaa		-1
+B7+	\orange;be guided by fate \nThe hands of men may \nAbandoned Shrine (3 Charges)	1	2	2	0	0	jbscross	thng		-1
+9tw	Greater Talons\nAmulet	1	1	2	0	0	invamu	amul		-1
+C5+	\orange;flows from within \nThe essence of life \nQuiet Shrine (5 Charges)	1	2	2	0	0	jbscross	thng		-1
+ob1	Eagle Orb\nAmulet	1	1	2	0	0	invamu	amul		-1
+N0+	\orange;the body thrives \nWhile the spirit is vigilant \nMagical Shrine (10 Charges)	1	2	2	0	0	jbscross	thng		-1
+R0+	\orange;refocused renews\nThe powers of mana\nStone Shrine (10 Charges)	1	2	2	0	0	jbscross	thng		-1
+gcr	\purple;Chipped Ruby	1	1	2	0	1	invgsra	gemr		-1
+tal	Tail	1	1	2	0	0	invtail	body		-1
+zky	\dgreen;Greater Signet of Learning	1	1	2	0	0	sigilXL	poti		-1
+skr	Scissors Katar\nAmulet	1	1	2	0	0	invamu	amul		-1
+7xf	War Fist\nAmulet	1	1	2	0	0	invamu	amul		-1
+04-	\dgrey;treasures on Destruction difficulty.\nseek them out, for they hide legendary\nworld. Powerful heroes may want to\nspecial areas scattered throughout the\nDungeon uberquests are small but difficult\n\n-- Dungeon Uberquests --\n\red;Pearl of Wisdom	1	1	2	0	0	ShinieWhite	thng		-1
+9qr	Scissors Quhab\nAmulet	1	1	2	0	0	invamu	amul		-1
+g$c	\purple;Onyx	1	1	2	0	12	invgsoc	gemq		-1
+40-	\dgrey;Level: 100 (H) - 120 (T) - 121 (D)\nLocation: Act 1 Crypt\nImpossible (7/8)\nUberlevel\n\n-- Kingdom of Shadow --\n\red;Pearl of Wisdom	1	1	2	0	0	shinieGreen	thng		-1
+39+	1% Chance of Crushing Blow	1	1	2	0	0	pearl2	asaa		-1
+O5+	\orange;what it seems to be \nMagic is not always \nEnchanted Shrine (5 Charges)	1	2	2	0	0	jbscross	thng		-1
+G0+	\orange;may yet be first \nThose who are last \nTainted Shrine (10 Charges)	1	2	2	0	0	jbscross	thng		-1
+vic	Cube Reagent\n\orange;Sacrifical Heart	1	1	2	0	0	invhrt	thng		-1
+&64	\orange;Mystic Orb	1	1	2	0	0	pearl2	asaa		-1
+L3+	\orange;as one grows strong \nSome are weakened \nMysterious Shrine (7 Charges)	1	2	2	0	0	jbscross	thng		-1
+F3+	\orange;seldom attack \nThose who defend \nGloomy Shrine (7 Charges)	1	2	2	0	0	jbscross	thng		-1
+7$a	\purple;Chipped Turquoise	1	1	2	0	1	invgsta	gemo		-1
+eo7	\red;Elixir of Fire	1	1	2	0	0	invxyz	hpot		-1
+r02	\purple;Eld Rune	1	1	2	0	11	invrEld	rune		-1
+37+	+10 to Maximum Damage	1	1	2	0	0	pearl2	asaa		-1
+E2+	\orange;is swift and sharp \nThe sword of justice \nWeird Shrine (8 Charges)	1	2	2	0	0	jbscross	thng		-1
+R4+	\orange;refocused renews\nThe powers of mana\nStone Shrine (6 Charges)	1	2	2	0	0	jbscross	thng		-1
+a56	Azmodan's Heart	1	1	2	0	0	invhrt	grtz		-1
+5$e	\purple;Perfect Amber	1	1	2	0	18	invgsae	geml		-1
+obc	Eldritch Orb\nAmulet	1	1	2	0	0	invamu	amul		-1
+x3x	Sunstone of Thunder	1	1	2	0	0	invgmw	grtz		-1
+K7+	\orange;at the cost of wisdom \nPersistence comes \nShimmering Shrine (3 Charges)	1	2	2	0	0	jbscross	thng		-1
+adi	By Richard Knaak\nLegacy of Blood	1	1	2	0	0	invhscr2	grtz		-1
+r05	\purple;Eth Rune	1	1	2	0	15	invrEth	rune		-1
+&91	\orange;Mystic Orb\nEssence of Itherael	1	1	2	0	0	pearl1	asaa		-1
+K3+	\orange;at the cost of wisdom \nPersistence comes \nShimmering Shrine (7 Charges)	1	2	2	0	0	jbscross	thng		-1
+C8+	\orange;flows from within \nThe essence of life \nQuiet Shrine (2 Charges)	1	2	2	0	0	jbscross	thng		-1
+dr1	Wolf Head\nAmulet	1	1	2	0	0	invamu	amul		-1
+&06	\orange;Mystic Orb	1	1	2	0	0	pearl4	asaa		-1
+M4+	\orange;least expected \nRiches abound when \nSpiritual Shrine (6 Charges)	1	2	2	0	0	jbscross	thng		-1
+hrb	Herb	1	1	2	0	0	invhrb	herb		-1
+skf	\purple;Flawed Skull	1	1	2	0	5	invskf	gemz		-1
+D4+	\orange;at the cost of self \nKnowledge and wisdom \nEerie Shrine (6 Charges)	1	2	2	0	0	jbscross	thng		-1
+I5+	\orange;at the cost of wisdom \nEnergy comes \nOrnate Shrine (5 Charges)	1	2	2	0	0	jbscross	thng		-1
+C0+	\orange;flows from within \nThe essence of life \nQuiet Shrine (10 Charges)	1	2	2	0	0	jbscross	thng		-1
+2x5	\dgreen;Alpha Brain	1	1	2	0	0	invbrnz	thng		-1
+gpb	\purple;Perfect Sapphire	1	1	2	0	18	invgsbe	gems		-1
+&56	\orange;Mystic Orb	1	1	2	0	0	pearl2	asaa		-1
+32-	\dgrey;Level: 75 (H) - 100 (T) - 121 (D)\nLocation: Act 1 Tower Cellar\nExtreme (6/8)\nSummoning Uberquest\n\n-- Legacy of Blood --\n\red;Pearl of Wisdom	1	1	2	0	0	shiniePurple	thng		-1
+glb	\purple;Flawless Sapphire	1	1	2	0	15	invgsbd	gems		-1
+02+	+1 to Dexterity	1	1	2	0	0	pearl4	asaa		-1
+H2+	\orange;at the cost of wisdom \nIntensity comes \nFascinating Shrine (8 Charges)	1	2	2	0	0	jbscross	thng		-1
+gpg	\purple;Perfect Emerald	1	1	2	0	18	invgsge	geme		-1
+18-	\dgrey;Feel free to experiment!\ncreate a powerful but random crafted item.\nitem with a Portable Shrine to\nCube a sacred rare, set, unique or crafted\n\n-- Shrines and Crafting --\n\red;Pearl of Wisdom	1	1	2	0	0	shinieYellow	thng		-1
+0sc	Scroll of Knowledge	1	1	2	0	0	invrsc	scro		-1
+19+	+10 Defense	1	1	2	0	0	pearl3	asaa		-1
+mp2	Light Mana Potion	1	1	2	0	0	invmp2	mpot		-1
+M2+	\orange;least expected \nRiches abound when \nSpiritual Shrine (8 Charges)	1	2	2	0	0	jbscross	thng		-1
+R6+	\orange;refocused renews\nThe powers of mana\nStone Shrine (4 Charges)	1	2	2	0	0	jbscross	thng		-1
+r10	\purple;Thul Rune	1	1	2	0	23	invrThul	rune		-1
+!@4	\dgreen;Evil Eye of the Fairy Witch	1	1	2	0	0	evileye	thng		-1
+51+	2% Faster Run/Walk	1	1	2	0	0	pearl1	asaa		-1
+I3+	\orange;at the cost of wisdom \nEnergy comes \nOrnate Shrine (7 Charges)	1	2	2	0	0	jbscross	thng		-1
+µ03	\orange;Judgement Day Trophy	1	1	2	0	0	apple	thng		-1
+&61	\orange;Mystic Orb	1	1	2	0	0	pearl2	asaa		-1
+&50	\orange;Mystic Orb	1	1	2	0	0	pearl1	asaa		-1
+A6+	\orange;by heavenly faith \nStrength is bolstered \nCreepy Shrine (4 Charges)	1	2	2	0	0	jbscross	thng		-1
+21+	Fire Resist +5%	1	1	2	0	0	pearl1	asaa		-1
+eyz	Eye	1	1	2	0	0	inveye	body		-1
+cm1	WARNING: HACKED ITEM\nSmall Charm	0	0	2	0	0	invchm	hpot		-1
+41-	\dgrey;Level: 80 (H) - 115 (T) - 121 (D)\nLocation: Act 5 Pit of Acheron\nExtreme (6/8)\nUberlevel\n\n-- Ghosts of Old Bremmtown --\n\red;Pearl of Wisdom	1	1	2	0	0	shinieGreen	thng		-1
+yq7	Hard Mode Charm	2	2	2	0	0	hardmode	grtz		-1
+mec	Cube Reagent\n\orange;Meditation Candle	1	1	2	0	0	invcndl	thng		-1
+r31	\purple;Jah Rune	1	1	2	0	65	invrJo	rune		-1
+C9+	\orange;flows from within \nThe essence of life \nQuiet Shrine (1 Charge)	1	2	2	0	0	jbscross	thng		-1
+obf	Dimensional Shard\nAmulet	1	1	2	0	0	invamu	amul		-1
+qmu	Amulet (Sacred)	1	1	2	0	75	invamu	amul		-1
+K8+	\orange;at the cost of wisdom \nPersistence comes \nShimmering Shrine (2 Charges)	1	2	2	0	0	jbscross	thng		-1
+D7+	\orange;at the cost of self \nKnowledge and wisdom \nEerie Shrine (3 Charges)	1	2	2	0	0	jbscross	thng		-1
+&78	\orange;Mystic Orb\nThe Moon Crystal	1	1	2	0	0	pearl1	asaa		-1
+49+	5% Damage Reflected	1	1	2	0	0	pearl1	asaa		-1
+09+	+1% to Physical/Magic Spell Damage	1	1	2	0	0	pearl4	asaa		-1
+pa2	Rondache\nAmulet	1	1	2	0	0	invamu	amul		-1
+29+	+2 to Mana when Struck	1	1	2	0	0	pearl1	asaa		-1
+&25	\orange;Mystic Orb	1	1	2	0	0	pearl1	asaa		-1
+37-	\dgrey;Level: 75 (H) - 100 (T) - 121 (D)\nLocation: Act 5 Infernal Pit\nTricky (3/8)\nUberlevel\n\n-- Khalimgrad --\n\red;Pearl of Wisdom	1	1	2	0	0	shinieGreen	thng		-1
+bkd	Key to the Cairn Stones	2	2	2	0	0	invscb	ques		-1
+eo8	\red;Elixir of Cold	1	1	2	0	0	invxyz	hpot		-1
+dr9	Sacred Feathers\nAmulet	1	1	2	0	0	invamu	amul		-1
+H1+	\orange;at the cost of wisdom \nIntensity comes \nFascinating Shrine (9 Charges)	1	2	2	0	0	jbscross	thng		-1
+zkb	\dgreen;Signet of Experience	1	1	2	0	0	sigil5B	poti		-1
+05-	\dgrey;difficulty may yield wondrous rewards!\nages past. Doing so on Destruction\nareas to summon legendary evils from\nHoradric Cube and use it in designated\nCraft a Book of Summoning in the\n\n-- Summoning Uberquests --\n\red;Pearl of Wisdom	1	1	2	0	0	ShinieWhite	thng		-1
+L1+	\orange;as one grows strong \nSome are weakened \nMysterious Shrine (9 Charges)	1	2	2	0	0	jbscross	thng		-1
+x02	Shadow Vortex	1	1	2	0	0	invgmy	arab		6
+33+	2% Mana Stolen per Hit	1	1	2	0	0	pearl2	asaa		-1
+bbb	Lam Esen's Tome	2	2	2	0	0	invbbb	ques		-1
+&71	\orange;Mystic Orb\nMarksman's Eye	1	1	2	0	0	pearl4	asaa		-1
+yq8	Zakarum's Ear	1	1	2	0	0	invear	grtz		-1
+glw	\purple;Flawless Diamond	1	1	2	0	15	invgswd	gemd		-1
+45-	\dgrey;gems and/or runes...\nuniques, sacred items, gold,\nspecific item type: rares, sets,\nareas may drop more of a\nSome of the harder uberquest\n\n-- Drop Bias --\n\red;Pearl of Wisdom	1	1	2	0	0	ShinieWhite	thng		-1
+0g8	\red;Elixir of Love	1	1	2	0	0	invxyz	hpot		-1
+r38	\purple;Thur Rune	1	1	2	0	84	r-a-09	rune		-1
+ne4	Gargoyle Head\nAmulet	1	1	2	0	0	invamu	amul		-1
+I0+	\orange;at the cost of wisdom \nEnergy comes \nOrnate Shrine (10 Charges)	1	2	2	0	0	jbscross	thng		-1
+zoh	\red;Energy Pack	1	1	2	0	0	stoneearth	poti		-1
+vip	Top of the Horadric Staff	1	1	2	0	0	invvip	amul		-1
+&40	\orange;Mystic Orb	1	1	2	0	0	pearl2	asaa		-1
+&15	\orange;Mystic Orb	1	1	2	0	0	pearl4	asaa		-1
+J1+	\orange;at the cost of wisdom \nSalvation comes \nSacred Shrine (9 Charges)	1	2	2	0	0	jbscross	thng		-1
+&89	\orange;Mystic Orb\nWrathspirit	1	1	2	0	0	pearl2	asaa		-1
+&a1	\orange;Mystic Orb	1	1	2	0	0	pearl3	asaa		-1
+I8+	\orange;at the cost of wisdom \nEnergy comes \nOrnate Shrine (2 Charges)	1	2	2	0	0	jbscross	thng		-1
+a60	The Butcher's Tooth	1	1	2	0	0	invfang	grtz		-1
+&66	\orange;Mystic Orb\nKara's Trinket	1	1	2	0	0	pearl3	asaa		-1
+C6+	\orange;flows from within \nThe essence of life \nQuiet Shrine (4 Charges)	1	2	2	0	0	jbscross	thng		-1
+N9+	\orange;the body thrives \nWhile the spirit is vigilant \nMagical Shrine (1 Charge)	1	2	2	0	0	jbscross	thng		-1
+B6+	\orange;be guided by fate \nThe hands of men may \nAbandoned Shrine (4 Charges)	1	2	2	0	0	jbscross	thng		-1
+yq2	Six Angel Bag	1	2	2	0	0	s1	grtz		-1
+F1+	\orange;seldom attack \nThose who defend \nGloomy Shrine (9 Charges)	1	2	2	0	0	jbscross	thng		-1
+r55	\grey;Great Rune\n\purple;Auhe Rune	1	1	2	0	100	r-d-04	rune		-1
+B3+	\orange;be guided by fate \nThe hands of men may \nAbandoned Shrine (7 Charges)	1	2	2	0	0	jbscross	thng		-1
+ey2	\red;Elixir of Experience	1	1	2	0	0	invxyz	hpot		-1
+14-	\dgrey;(See documentation for details)\nReward: class charm upgrade, new learnable skill\n- Completion of five Trials\nRequires:\n\n-- Black Road Challenge --\n\red;Pearl of Wisdom	1	1	2	0	0	ShinieBlue	thng		-1
+&11	\orange;Mystic Orb	1	1	2	0	0	pearl3	asaa		-1
+x01	Sacred Sunstone	1	1	2	0	0	invgmy	araa		0
+qey	Khalim's Eye	1	1	2	0	0	inveye	ques		-1
+gsv	\purple;Amethyst	1	1	2	0	12	invgsvc	gema		-1
+38-	\dgrey;Level: 60 (H) - 105 (T) - 121 (D)\nLocation: Act 2 Halls of the Dead 3\nHard (4/8)\nUberlevel\n\n-- Tran Athulua --\n\red;Pearl of Wisdom	1	1	2	0	0	shinieGreen	thng		-1
+26-	\dgrey;Level: 100 (H) - 120 (T) - 121 (D)\nLocation: Act 5 Abaddon\nImpossible (7/8)\nDungeon Uberquest\n\n-- Toraja --\n\red;Pearl of Wisdom	1	1	2	0	0	shinieRed	thng		-1
+mpo	Mana Potion	1	1	2	0	0	invbps	mpot		-1
+pad	Kurast Shield\nAmulet	1	1	2	0	0	invamu	amul		-1
+ba3	Horned Helm\nAmulet	1	1	2	0	0	invamu	amul		-1
+yq1	Sunless Crystal Bird	1	2	2	0	0	bird4	grtz		-1
+am5	Maiden Javelin\nAmulet	1	1	2	0	0	invamu	amul		-1
+pa6	Akaran Targe\nAmulet	1	1	2	0	0	invamu	amul		-1
+mp3	Mana Potion	1	1	2	0	0	invmp3	mpot		-1
+r20	\purple;Lem Rune	1	1	2	0	43	invrLem	rune		-1
+ces	Cestus\nAmulet	1	1	2	0	0	invamu	amul		-1
+r29	\purple;Sur Rune	1	1	2	0	61	invrSur	rune		-1
+bae	Conqueror Crown\nAmulet	1	1	2	0	0	invamu	amul		-1
+am4	Maiden Pike\nAmulet	1	1	2	0	0	invamu	amul		-1
+r42	\purple;Vith Rune	1	1	2	0	98	r-a-13	rune		-1
+gzv	\purple;Flawless Amethyst	1	1	2	0	15	invgsvd	gema		-1
+wms	Thawing Potion	1	1	2	0	0	invyps	wpot		-1
+zkq	\dgreen;Signet of Learning	1	1	2	0	0	sigil1B	poti		-1
+2x6	\dgreen;Beta Brain	1	1	2	0	0	invbrnz	thng		-1
+q@q	\dgreen;Bonehexer's Sigil	1	1	2	0	0	ring09	thng		-1
+B1+	\orange;be guided by fate \nThe hands of men may \nAbandoned Shrine (9 Charges)	1	2	2	0	0	jbscross	thng		-1
+g34	The Golden Bird	1	2	2	0	0	invgbi	ques		-1
+!@5	\dgreen;Evil Eye of the Bane Hunter	1	1	2	0	0	evileye	thng		-1
+r08	\purple;Ral Rune	1	1	2	0	19	invrRal	rune		-1
+T0+	\orange;brings destruction\nArcane power\nCryptic Shrine (10 Charges)	1	2	2	0	0	jbscross	thng		-1
+r@r	Ring of the Five	1	1	2	0	0	ring08	kill		-1
+&46	\orange;Mystic Orb	1	1	2	0	0	pearl1	asaa		-1
+r17	\purple;Lum Rune	1	1	2	0	37	invrLum	rune		-1
+16+	2% Better Chance of Getting Magic Items	1	1	2	0	0	pearl4	asaa		-1
+nef	Bloodlord Skull\nAmulet	1	1	2	0	0	invamu	amul		-1
+yo5	\purple;Perfect Rainbow Stone	1	1	2	0	18	og5	gemx		-1
+mss	Mephisto's Soulstone	1	1	2	0	0	invmss	ques		-1
+T5+	\orange;brings destruction\nArcane power\nCryptic Shrine (5 Charges)	1	2	2	0	0	jbscross	thng		-1
+r11	\purple;Amn Rune	1	1	2	0	25	invrAmn	rune		-1
+N6+	\orange;the body thrives \nWhile the spirit is vigilant \nMagical Shrine (4 Charges)	1	2	2	0	0	jbscross	thng		-1
+nea	Hierophant Trophy\nAmulet	1	1	2	0	0	invamu	amul		-1
+r45	\purple;Thai Rune	1	1	2	0	100	r-a-16	rune		-1
+x4x	Sunstone of the Gods	1	1	2	0	0	invgmv	grtz		-1
+g$b	\purple;Flawed Onyx	1	1	2	0	5	invgsob	gemq		-1
+H4+	\orange;at the cost of wisdom \nIntensity comes \nFascinating Shrine (6 Charges)	1	2	2	0	0	jbscross	thng		-1
+pa9	Gilded Shield\nAmulet	1	1	2	0	0	invamu	amul		-1
+L4+	\orange;as one grows strong \nSome are weakened \nMysterious Shrine (6 Charges)	1	2	2	0	0	jbscross	thng		-1
+&60	\orange;Mystic Orb	1	1	2	0	0	pearl2	asaa		-1
+&33	\orange;Mystic Orb	1	1	2	0	0	pearl2	asaa		-1
+a59	Laser Focus Crystal	1	1	2	0	0	invdss	grtz		-1
+ba7	Lion Helm\nAmulet	1	1	2	0	0	invamu	amul		-1
+P2+	\orange;refreshed \nDrink and be \nDivine Shrine (8 Charges)	1	2	2	0	0	jbscross	thng		-1
+µ09	\orange;Tran Athulua Trophy	1	1	2	0	0	apple	thng		-1
+r37	\purple;Ix Rune	1	1	2	0	81	r-a-08	rune		-1
+9$e	\purple;Perfect Bloodstone	1	1	2	0	18	invgsce	gemp		-1
+rpl	Large Red Potion	1	1	2	1	0	invrpl	hpot		-1
+tsc	Scroll of Town Portal	1	1	2	0	0	invbsc	scro		-1
+z1+	+1% to Buff/Debuff/Cold Skill Duration	1	1	2	0	0	pearl3	asaa		-1
+a68	Horazon's Focus	1	2	2	0	0	invbla	grtz		-1
+13+	+1% Bonus to Summoned Minion Life	1	1	2	0	0	pearl4	asaa		-1
+O7+	\orange;what it seems to be \nMagic is not always \nEnchanted Shrine (3 Charges)	1	2	2	0	0	jbscross	thng		-1
+neg	Hellspawn Skull\nAmulet	1	1	2	0	0	invamu	amul		-1
+07-	\dgrey;attack. Keep your distance!\nhoming bolts or an instant death pounce\nThese stationary monsters guard an area with\n\n-- Witches and Warlocks --\n\red;Pearl of Wisdom	1	1	2	0	0	ShinieWhite	thng		-1
+zka	\dgreen;Signet of Gold	1	1	2	0	0	sigil3B	poti		-1
+&18	\orange;Mystic Orb	1	1	2	0	0	pearl3	asaa		-1
+9wb	Wrist Spike\nAmulet	1	1	2	0	0	invamu	amul		-1
+ob3	Smoked Sphere\nAmulet	1	1	2	0	0	invamu	amul		-1
+&24	\orange;Mystic Orb	1	1	2	0	0	pearl1	asaa		-1
+am6	Ashwood Bow\nAmulet	1	1	2	0	0	invamu	amul		-1
+fng	Fang	1	1	2	0	0	invfang	body		-1
+yq9	Aerial's Skull	1	1	2	0	0	skullstar	grtz		-1
+u@+	\gold;I Am Rich	1	1	2	0	0	redgem	grtz		-1
+B8+	\orange;be guided by fate \nThe hands of men may \nAbandoned Shrine (2 Charges)	1	2	2	0	0	jbscross	thng		-1
+R9+	\orange;refocused renews\nThe powers of mana\nStone Shrine (1 Charge)	1	2	2	0	0	jbscross	thng		-1
+O4+	\orange;what it seems to be \nMagic is not always \nEnchanted Shrine (6 Charges)	1	2	2	0	0	jbscross	thng		-1
+gfv	\purple;Flawed Amethyst	1	1	2	0	5	invgsvb	gema		-1
+cqv	Bolt Quiver	1	3	2	1	0	invcqv	xboq	2	-1
+&54	\orange;Mystic Orb	1	1	2	0	0	pearl1	asaa		-1
+Q7+	\orange;through destruction\nNew strength is forged\nHidden Shrine (3 Charges)	1	2	2	0	0	jbscross	thng		-1
+glr	\purple;Flawless Ruby	1	1	2	0	15	invgsrd	gemr		-1
+D0+	\orange;at the cost of self \nKnowledge and wisdom \nEerie Shrine (10 Charges)	1	2	2	0	0	jbscross	thng		-1
+&a2	\orange;Mystic Orb	1	1	2	0	0	pearl3	asaa		-1
+S2+	\orange;the power of steel\nTime cannot diminish\nReligious Shrine (8 Charges)	1	2	2	0	0	jbscross	thng		-1
+abu	Do Not Use Ethereal Items Idiot	1	1	2	0	0	invvip	thng		-1
+6oµ	Cube Reagent\n\orange;Oil of Luck	1	1	2	0	0	zelixir6	thng		-1
+D8+	\orange;at the cost of self \nKnowledge and wisdom \nEerie Shrine (2 Charges)	1	2	2	0	0	jbscross	thng		-1
+B9+	\orange;be guided by fate \nThe hands of men may \nAbandoned Shrine (1 Charge)	1	2	2	0	0	jbscross	thng		-1
+ba4	Assault Helmet\nAmulet	1	1	2	0	0	invamu	amul		-1
+obe	Vortex Orb\nAmulet	1	1	2	0	0	invamu	amul		-1
+r39	\purple;Nas Rune	1	1	2	0	87	r-a-10	rune		-1
+O6+	\orange;what it seems to be \nMagic is not always \nEnchanted Shrine (4 Charges)	1	2	2	0	0	jbscross	thng		-1
+r52	\grey;Great Rune\n\purple;Ghal Rune	1	1	2	0	100	r-d-05	rune		-1
+t@t	Demonsbane	1	1	2	0	0	invhscr2	grtz		-1
+ey5	\red;Elixir of Strength	1	1	2	0	0	invxyz	hpot		-1
+ass	Right Click to learn skill of your choice\nBook of Skill	2	2	2	0	0	invsbk	ques		-1
+µ06	\orange;Duncraig Trophy	1	1	2	0	0	apple	thng		-1
+yqx	Spirit Trance Herb	1	1	2	0	0	invhrb	grtz		-1
+dr8	Hunter's Guise\nAmulet	1	1	2	0	0	invamu	amul		-1
+R1+	\orange;refocused renews\nThe powers of mana\nStone Shrine (9 Charges)	1	2	2	0	0	jbscross	thng		-1
+ba8	Rage Mask\nAmulet	1	1	2	0	0	invamu	amul		-1
+&70	\orange;Mystic Orb\nThe Endless Light	1	1	2	0	0	pearl3	asaa		-1
+I9+	\orange;at the cost of wisdom \nEnergy comes \nOrnate Shrine (1 Charge)	1	2	2	0	0	jbscross	thng		-1
+hp5	Super Healing Potion	1	1	2	0	0	invhp5	hpot		-1
+47-	\dgrey;certain places to summon ancient evils...\nMeditation Candles. Use the Book in\nthree Victim's Hearts and three\nTo create a Book of Summoning, cube\n\n-- Book of Summoning --\n\red;Pearl of Wisdom	1	1	2	0	0	shinieYellow	thng		-1
+03-	\dgrey;you will gain for investing into these attributes.\ndexterity. Each weapon displays the bonus\ndamage if you have higher strength and/or\nAs in the regular game, you do more weapon\n\n-- Damage Bonuses --\n\red;Pearl of Wisdom	1	1	2	0	0	ShinieWhite	thng		-1
+P8+	\orange;refreshed \nDrink and be \nDivine Shrine (2 Charges)	1	2	2	0	0	jbscross	thng		-1
+baf	Guardian Crown\nAmulet	1	1	2	0	0	invamu	amul		-1
+55+	1% Chance to cast level 1 Teleport when Struck	1	1	2	0	0	pearl1	asaa		-1
+pae	Zakarum Shield\nAmulet	1	1	2	0	0	invamu	amul		-1
+ab!	Astrogha's Venom Stinger	1	1	2	0	0	invtail	grtz		-1
+&59	\orange;Mystic Orb	1	1	2	0	0	pearl2	asaa		-1
+dra	Totemic Mask\nAmulet	1	1	2	0	0	invamu	amul		-1
+r21	\purple;Pul Rune	1	1	2	0	45	invrPul	rune		-1
+P3+	\orange;refreshed \nDrink and be \nDivine Shrine (7 Charges)	1	2	2	0	0	jbscross	thng		-1
+D5+	\orange;at the cost of self \nKnowledge and wisdom \nEerie Shrine (5 Charges)	1	2	2	0	0	jbscross	thng		-1
+glg	\purple;Flawless Emerald	1	1	2	0	15	invgsgd	geme		-1
+M5+	\orange;least expected \nRiches abound when \nSpiritual Shrine (5 Charges)	1	2	2	0	0	jbscross	thng		-1
+&42	\orange;Mystic Orb	1	1	2	0	0	pearl4	asaa		-1
+G4+	\orange;may yet be first \nThose who are last \nTainted Shrine (6 Charges)	1	2	2	0	0	jbscross	thng		-1
+gcw	\purple;Chipped Diamond	1	1	2	0	1	invgswa	gemd		-1
+G1+	\orange;may yet be first \nThose who are last \nTainted Shrine (9 Charges)	1	2	2	0	0	jbscross	thng		-1
+L9+	\orange;as one grows strong \nSome are weakened \nMysterious Shrine (1 Charge)	1	2	2	0	0	jbscross	thng		-1
+!@6	\dgreen;Dogma of Suffering	1	1	2	0	0	scroll11	thng		-1
+&43	\orange;Mystic Orb	1	1	2	0	0	pearl4	asaa		-1
+ne3	Unraveller Head\nAmulet	1	1	2	0	0	invamu	amul		-1
+T9+	\orange;brings destruction\nArcane power\nCryptic Shrine (1 Charge)	1	2	2	0	0	jbscross	thng		-1
+49-	\dgrey;Destruction difficulty.\nbe found in specific uberquest areas on\nSacred sets and uniques can only\nhardest to find.\nThese powerful items are among the\n\n-- Sacred Uniques and Sets --\n\red;Pearl of Wisdom	1	1	2	0	0	ShinieWhite	thng		-1
+1oµ	Cube Reagent\n\orange;Oil of Duplication	1	1	2	0	0	zelixir1	thng		-1
+nee	Succubus Skull\nAmulet	1	1	2	0	0	invamu	amul		-1
+7oµ	Cube Reagent\n\orange;Oil of Jewelcraft	1	1	2	0	0	zelixir7	thng		-1
+az!	Fool's Gold	1	1	2	0	0	invgldm	grtz		-1
+r18	\purple;Ko Rune	1	1	2	0	39	invrKo	rune		-1
+7wb	Wrist Sword\nAmulet	1	1	2	0	0	invamu	amul		-1
+H6+	\orange;at the cost of wisdom \nIntensity comes \nFascinating Shrine (4 Charges)	1	2	2	0	0	jbscross	thng		-1
+7lw	Feral Claws\nAmulet	1	1	2	0	0	invamu	amul		-1
+&80	\orange;Mystic Orb\nSolitude	1	1	2	0	0	pearl1	asaa		-1
+&01	\orange;Mystic Orb	1	1	2	0	0	pearl4	asaa		-1
+eo9	\red;Elixir of Lightning	1	1	2	0	0	invxyz	hpot		-1
+42-	\dgrey;modsbylaz.hugelaser.com\nconsult the information on the website\nchallenges, items and more,\nIf you want to learn about uberlevels,\n\n-- Documentation --\n\red;Pearl of Wisdom	1	1	2	0	0	ShinieWhite	thng		-1
+D1+	\orange;at the cost of self \nKnowledge and wisdom \nEerie Shrine (9 Charges)	1	2	2	0	0	jbscross	thng		-1
+pa7	Akaran Rondache\nAmulet	1	1	2	0	0	invamu	amul		-1
+r22	\purple;Um Rune	1	1	2	0	47	invrUm	rune		-1
+&95	\orange;Mystic Orb\nThe Perfect Sphere	1	1	2	0	0	pearl3	asaa		-1
+&08	\orange;Mystic Orb	1	1	2	0	0	pearl4	asaa		-1
+5oµ	Cube Reagent\n\orange;Oil of Renewal	1	1	2	0	0	zelixir5	thng		-1
+gpw	\purple;Perfect Diamond	1	1	2	0	18	invgswe	gemd		-1
+0g4	\red;Elixir of Greater Dexterity	1	1	2	0	0	invxyz	hpot		-1
+06+	+1% to Cold Spell Damage	1	1	2	0	0	pearl4	asaa		-1
+yps	Antidote Potion	1	1	2	0	0	invnps	apot		-1
+O1+	\orange;what it seems to be \nMagic is not always \nEnchanted Shrine (9 Charges)	1	2	2	0	0	jbscross	thng		-1
+01+	+1 to Strength	1	1	2	0	0	pearl4	asaa		-1
+P5+	\orange;refreshed \nDrink and be \nDivine Shrine (5 Charges)	1	2	2	0	0	jbscross	thng		-1
+24+	Poison Resist +5%	1	1	2	0	0	pearl1	asaa		-1
+N8+	\orange;the body thrives \nWhile the spirit is vigilant \nMagical Shrine (2 Charges)	1	2	2	0	0	jbscross	thng		-1
+ktr	Katar\nAmulet	1	1	2	0	0	invamu	amul		-1
+yo4	\purple;Flawless Rainbow Stone	1	1	2	0	15	og4	gemx		-1
+53+	Regenerate Life +5	1	1	2	0	0	pearl1	asaa		-1
+r03	\purple;Tir Rune	1	1	2	0	13	invrTir	rune		-1
+luv	The Black Tower Key	1	2	2	0	0	invmph	key		-1
+34-	\dgrey;Level: 75 (H) - 100 (T) - 121 (D)\nLocation: ???\nUnknown Difficulty (?/8)\nSummoning Uberquest\n\n-- Inarius' Revenge (hidden) --\n\red;Pearl of Wisdom	1	1	2	0	0	shiniePurple	thng		-1
+elx	Elixir	1	1	2	0	0	invpot	elix		-1
+23-	\dgrey;Level: 65 (H) - 95 (T) - 120 (D)\nLocation: Act 3 Forgotten Reliquary\nHard (4/8)\nDungeon Uberquest\n\n-- Azmodan --\n\red;Pearl of Wisdom	1	1	2	0	0	shinieRed	thng		-1
+yo3	\purple;Rainbow Stone	1	1	2	0	12	og3	gemx		-1
+x2x	Sunstone of Ice	1	1	2	0	0	invgmb	grtz		-1
+&28	\orange;Mystic Orb	1	1	2	0	0	pearl1	asaa		-1
+S5+	\orange;the power of steel\nTime cannot diminish\nReligious Shrine (5 Charges)	1	2	2	0	0	jbscross	thng		-1
+12+	+1% Bonus to Summoned Minion Damage	1	1	2	0	0	pearl4	asaa		-1
+axf	Hatchet Hands\nAmulet	1	1	2	0	0	invamu	amul		-1
+M3+	\orange;least expected \nRiches abound when \nSpiritual Shrine (7 Charges)	1	2	2	0	0	jbscross	thng		-1
+paf	Vortex Shield\nAmulet	1	1	2	0	0	invamu	amul		-1
+r36	\purple;Kur Rune	1	1	2	0	78	r-a-07	rune		-1
+62+	+2 Energy Factor to Spell Damage	1	1	2	0	0	pearl2	asaa		-1
+J9+	\orange;at the cost of wisdom \nSalvation comes \nSacred Shrine (1 Charge)	1	2	2	0	0	jbscross	thng		-1
+&76	\orange;Mystic Orb\nIdol of Stars	1	1	2	0	0	pearl1	asaa		-1
+7$e	\purple;Perfect Turquoise	1	1	2	0	18	invgste	gemo		-1
+baa	Slayer Guard\nAmulet	1	1	2	0	0	invamu	amul		-1
+32+	2% Life Stolen per Hit	1	1	2	0	0	pearl2	asaa		-1
+&94	\orange;Mystic Orb\nExplorer's Globe	1	1	2	0	0	pearl3	asaa		-1
+99-	\dgrey;Would you like help?\nIt looks like you are playing Median.\nHi!\n\n-- Cluey the Paperclip --\n\red;Pearl of Wisdom	1	1	2	0	0	ShinieWhite	thng		-1
+33-	\dgrey;Level: 100 (H) - 120 (T) - 121 (D)\nLocation: Act 1 Inner Cloister\nImpossible (7/8)\nSummoning Uberquest\n\n-- Judgement Day --\n\red;Pearl of Wisdom	1	1	2	0	0	shiniePurple	thng		-1
+S3+	\orange;the power of steel\nTime cannot diminish\nReligious Shrine (7 Charges)	1	2	2	0	0	jbscross	thng		-1
+R8+	\orange;refocused renews\nThe powers of mana\nStone Shrine (2 Charges)	1	2	2	0	0	jbscross	thng		-1
+T3+	\orange;brings destruction\nArcane power\nCryptic Shrine (7 Charges)	1	2	2	0	0	jbscross	thng		-1
+A9+	\orange;by heavenly faith \nStrength is bolstered \nCreepy Shrine (1 Charge)	1	2	2	0	0	jbscross	thng		-1
+gpr	\purple;Perfect Ruby	1	1	2	0	18	invgsre	gemr		-1
+B2+	\orange;be guided by fate \nThe hands of men may \nAbandoned Shrine (8 Charges)	1	2	2	0	0	jbscross	thng		-1
+03+	+1 to Energy	1	1	2	0	0	pearl4	asaa		-1
+rps	Small Red Potion	1	1	2	1	0	invrps	hpot		-1
+g$d	\purple;Flawless Onyx	1	1	2	0	15	invgsod	gemq		-1
+&47	\orange;Mystic Orb	1	1	2	0	0	pearl1	asaa		-1
+Q3+	\orange;through destruction\nNew strength is forged\nHidden Shrine (7 Charges)	1	2	2	0	0	jbscross	thng		-1
+48-	\dgrey;they cannot be bought or gambled.\nitems. However,\neven more powerful than the best tier 6\nThe Sacred tier of weapons and armor is\n\n-- Sacred Items --\n\red;Pearl of Wisdom	1	1	2	0	0	ShinieWhite	thng		-1
+8oµ	Cube Reagent\n\orange;Oil of Absolution	1	1	2	0	0	zelixir8	thng		-1
+mp1	Minor Mana Potion	1	1	2	0	0	invmp1	mpot		-1
+µ05	\orange;Kingdom of Shadow Trophy	1	1	2	0	0	apple	thng		-1
+x06	Eye of Divinity	1	1	2	0	0	invgmy	araf		3
+9$d	\purple;Flawless Bloodstone	1	1	2	0	15	invgscd	gemp		-1
+A8+	\orange;by heavenly faith \nStrength is bolstered \nCreepy Shrine (2 Charges)	1	2	2	0	0	jbscross	thng		-1
+30+	1% Uninterruptable Attack	1	1	2	0	0	pearl1	asaa		-1
+46-	\dgrey;bonus recipes are doubled in power.\nHonorific items are blank, but affix\nHonorific item.\nCandle and a Victim's Heart to create an\nCube any magic weapon/armor with a Meditation\n\n-- Honorific Items --\n\red;Pearl of Wisdom	1	1	2	0	0	shinieYellow	thng		-1
+s@s	Assur's Bane	1	1	2	0	0	ring08	kill		-1
+35-	\dgrey;Level: 60 (H) - 90 (T) - 121 (D)\nLocation: Act 3 Arachnid Lair\nEasy (1/8)\nUberlevel\n\n-- Kurast 3000 BA --\n\red;Pearl of Wisdom	1	1	2	0	0	shinieGreen	thng		-1
+E0+	\orange;is swift and sharp \nThe sword of justice \nWeird Shrine (10 Charges)	1	2	2	0	0	jbscross	thng		-1
+2x7	\dgreen;Gamma Brain	1	1	2	0	0	invbrnz	thng		-1
+r53	\grey;Great Rune\n\purple;Qor Rune	1	1	2	0	100	r-d-11	rune		-1
+am3	Maiden Spear\nAmulet	1	1	2	0	0	invamu	amul		-1
+K6+	\orange;at the cost of wisdom \nPersistence comes \nShimmering Shrine (4 Charges)	1	2	2	0	0	jbscross	thng		-1
+r28	\purple;Lo Rune	1	1	2	0	59	invrLo	rune		-1
+ey9	\red;Elixir of Adrenaline	1	1	2	0	0	invxyz	hpot		-1
+amf	Matriarchal Javelin\nAmulet	1	1	2	0	0	invamu	amul		-1
+39-	\dgrey;Level: 75 (H) - 80 (T) - 121 (D)\nLocation: Act 2 Stony Tomb 2\nVery Hard (5/8)\nUberlevel\n\n-- Fauztinville --\n\red;Pearl of Wisdom	1	1	2	0	0	shinieGreen	thng		-1
+hpf	Full Healing Potion	1	1	2	0	0	invrpl	hpot		-1
+btl	Blade Talons\nAmulet	1	1	2	0	0	invamu	amul		-1
+qbr	Khalim's Brain	1	1	2	0	0	invbrnz	ques		-1
+z3+	+1 to Summon Daystar	1	1	2	0	0	pearl3	asaa		-1
+7cs	Battle Cestus\nAmulet	1	1	2	0	0	invamu	amul		-1
+!@7	\dgreen;Dogma of Pain	1	1	2	0	0	scroll11	thng		-1
+P1+	\orange;refreshed \nDrink and be \nDivine Shrine (9 Charges)	1	2	2	0	0	jbscross	thng		-1
+D3+	\orange;at the cost of self \nKnowledge and wisdom \nEerie Shrine (7 Charges)	1	2	2	0	0	jbscross	thng		-1
+2x8	\dgreen;Delta Brain	1	1	2	0	0	invbrnz	thng		-1
+F9+	\orange;seldom attack \nThose who defend \nGloomy Shrine (1 Charge)	1	2	2	0	0	jbscross	thng		-1
+43+	-1% to Enemy Lightning Resistance	1	1	2	0	0	pearl4	asaa		-1
+T6+	\orange;brings destruction\nArcane power\nCryptic Shrine (4 Charges)	1	2	2	0	0	jbscross	thng		-1
+&68	\orange;Mystic Orb\nHeart of Frost	1	1	2	0	0	pearl3	asaa		-1
+21-	\dgrey;Level: 55 (H) - 85 (T) - 110 (D)\nLocation: Act 1 The Pit 2\nMedium (2/8)\nDungeon Uberquest\n\n-- Infernal Machine --\n\red;Pearl of Wisdom	1	1	2	0	0	shinieRed	thng		-1
+gpy	\purple;Perfect Topaz	1	1	2	0	18	invgsye	gemt		-1
+qll	Quill	1	1	2	0	0	invquil	body		-1
+ob9	Sparkling Ball\nAmulet	1	1	2	0	0	invamu	amul		-1
+qqv	Arrow Quiver (Sacred)	1	3	2	1	75	invqvr	qmsl	2	-1
+yqe	By Richard Knaak\nMoon of the Spider	1	1	2	0	0	invhscr2	grtz		-1
+r23	\purple;Mal Rune	1	1	2	0	49	invrMal	rune		-1
+0g5	\red;Elixir of Greater Energy	1	1	2	0	0	invxyz	hpot		-1
+&81	\orange;Mystic Orb\nLarzuk's Round Shot	1	1	2	0	0	pearl2	asaa		-1
+O0+	\orange;what it seems to be \nMagic is not always \nEnchanted Shrine (10 Charges)	1	2	2	0	0	jbscross	thng		-1
+08+	+1% to Poison Spell Damage	1	1	2	0	0	pearl4	asaa		-1
+&09	\orange;Mystic Orb	1	1	2	0	0	pearl4	asaa		-1
+P9+	\orange;refreshed \nDrink and be \nDivine Shrine (1 Charge)	1	2	2	0	0	jbscross	thng		-1
+&62	\orange;Mystic Orb	1	1	2	0	0	pearl2	asaa		-1
+zen	Thanks for playing\nmodsbylaz.hugelaser.com\n(release 002)\nMedian XL 'Version Omega'	1	2	2	0	0	invjbi	woot		-1
+sku	\purple;Skull	1	1	2	0	12	invsku	gemz		-1
+&32	\orange;Mystic Orb	1	1	2	0	0	pearl2	asaa		-1
+ne6	Mummified Trophy\nAmulet	1	1	2	0	0	invamu	amul		-1
+&39	\orange;Mystic Orb	1	1	2	0	0	pearl2	asaa		-1
+gfb	\purple;Flawed Sapphire	1	1	2	0	5	invgsbb	gems		-1
+F0+	\orange;seldom attack \nThose who defend \nGloomy Shrine (10 Charges)	1	2	2	0	0	jbscross	thng		-1
+H8+	\orange;at the cost of wisdom \nIntensity comes \nFascinating Shrine (2 Charges)	1	2	2	0	0	jbscross	thng		-1
+2oµ	Cube Reagent\n\orange;Oil of Disjunction	1	1	2	0	0	zelixir2	thng		-1
+&83	\orange;Mystic Orb\nNor Tiraj's Flaming Sphere	1	1	2	0	0	pearl2	asaa		-1
+amu	Amulet	1	1	2	0	0	invamu	amul		-1
+F2+	\orange;seldom attack \nThose who defend \nGloomy Shrine (8 Charges)	1	2	2	0	0	jbscross	thng		-1
+r48	\purple;Nih Rune	1	1	2	0	100	r-a-01	rune		-1
+gcv	\purple;Chipped Amethyst	1	1	2	0	1	invgsva	gema		-1
+j34	A Jade Figurine	1	2	2	0	0	invjbi	ques		-1
+L2+	\orange;as one grows strong \nSome are weakened \nMysterious Shrine (8 Charges)	1	2	2	0	0	jbscross	thng		-1
+O3+	\orange;what it seems to be \nMagic is not always \nEnchanted Shrine (7 Charges)	1	2	2	0	0	jbscross	thng		-1
+K4+	\orange;at the cost of wisdom \nPersistence comes \nShimmering Shrine (6 Charges)	1	2	2	0	0	jbscross	thng		-1
+20-	\dgrey;Level: 55 (H) - 85 (T) - 110 (D)\nLocation: Act 2 Ancient Tunnels\nEasy (1/8)\nDungeon Uberquest\n\n-- Creature of Flame --\n\red;Pearl of Wisdom	1	1	2	0	0	shinieRed	thng		-1
+dr7	Griffon Headdress\nAmulet	1	1	2	0	0	invamu	amul		-1
+ne1	Preserved Head\nAmulet	1	1	2	0	0	invamu	amul		-1
+&27	\orange;Mystic Orb	1	1	2	0	0	pearl1	asaa		-1
+J2+	\orange;at the cost of wisdom \nSalvation comes \nSacred Shrine (8 Charges)	1	2	2	0	0	jbscross	thng		-1
+C7+	\orange;flows from within \nThe essence of life \nQuiet Shrine (3 Charges)	1	2	2	0	0	jbscross	thng		-1
+ey8	\red;Elixir of Vitality	1	1	2	0	0	invxyz	hpot		-1
+N4+	\orange;the body thrives \nWhile the spirit is vigilant \nMagical Shrine (6 Charges)	1	2	2	0	0	jbscross	thng		-1
+jaw	Jawbone	1	1	2	0	0	invjaw	body		-1
+hrn	Horn	1	1	2	0	0	invhorn	body		-1
+yo2	\purple;Flawed Rainbow Stone	1	1	2	0	5	og2	gemx		-1
+ba2	Fanged Helm\nAmulet	1	1	2	0	0	invamu	amul		-1
+63+	Enhanced Weapon Damage Plus 5%	1	1	2	0	0	pearl2	asaa		-1
+B0+	\orange;be guided by fate \nThe hands of men may \nAbandoned Shrine (10 Charges)	1	2	2	0	0	jbscross	thng		-1
+&26	\orange;Mystic Orb	1	1	2	0	0	pearl1	asaa		-1
+S8+	\orange;the power of steel\nTime cannot diminish\nReligious Shrine (2 Charges)	1	2	2	0	0	jbscross	thng		-1
+04+	+1 to Vitality	1	1	2	0	0	pearl4	asaa		-1
+&31	\orange;Mystic Orb	1	1	2	0	0	pearl2	asaa		-1
+&02	\orange;Mystic Orb	1	1	2	0	0	pearl4	asaa		-1
+&77	\orange;Mystic Orb\nNagapearl	1	1	2	0	0	pearl1	asaa		-1
+dr6	Alpha Helm\nAmulet	1	1	2	0	0	invamu	amul		-1
+A4+	\orange;by heavenly faith \nStrength is bolstered \nCreepy Shrine (6 Charges)	1	2	2	0	0	jbscross	thng		-1
+9oµ	Cube Reagent\n\orange;Catalyst of Destruction	1	1	2	0	0	catal3	thng		-1
+I6+	\orange;at the cost of wisdom \nEnergy comes \nOrnate Shrine (4 Charges)	1	2	2	0	0	jbscross	thng		-1
+S9+	\orange;the power of steel\nTime cannot diminish\nReligious Shrine (1 Charge)	1	2	2	0	0	jbscross	thng		-1
+r30	\purple;Ber Rune	1	1	2	0	63	invrBer	rune		-1
+r50	\purple;On Rune	1	1	2	0	100	r-a-03	rune		-1
+ibk	Tome of Identify	1	2	2	1	0	invrbk	book		-1
+&67	\orange;Mystic Orb\nMonsterball	1	1	2	0	0	pearl3	asaa		-1
+gsg	\purple;Emerald	1	1	2	0	12	invgsgc	geme		-1
+17-	\dgrey;What you may get is quite unpredictable!\nnew item of the same type.\njewel to create a completely random\nCube any item with an Oil of Luck and a\n\n-- Chaos Reroll Recipe --\n\red;Pearl of Wisdom	1	1	2	0	0	shinieYellow	thng		-1
+r27	\purple;Ohm Rune	1	1	2	0	57	invrOhm	rune		-1
+&93	\orange;Mystic Orb\nLodestone	1	1	2	0	0	pearl1	asaa		-1
+bad	Destroyer Helm\nAmulet	1	1	2	0	0	invamu	amul		-1
+0g2	\red;Elixir of Greater Wealth	1	1	2	0	0	invxyz	hpot		-1
+&72	\orange;Mystic Orb\nFarnham's Lost Marble	1	1	2	0	0	pearl4	asaa		-1
+&51	\orange;Mystic Orb	1	1	2	0	0	pearl1	asaa		-1
+50-	\dgrey;but are harder to find and wear.\nHigher tier items have better statistics,\nthe item name.\nThe tier number is displayed next to\nWeapons and armor have 6 tiers.\n\n-- Item Tiers --\n\red;Pearl of Wisdom	1	1	2	0	0	ShinieWhite	thng		-1
+9lw	Greater Claws\nAmulet	1	1	2	0	0	invamu	amul		-1
+F7+	\orange;seldom attack \nThose who defend \nGloomy Shrine (3 Charges)	1	2	2	0	0	jbscross	thng		-1
+I7+	\orange;at the cost of wisdom \nEnergy comes \nOrnate Shrine (3 Charges)	1	2	2	0	0	jbscross	thng		-1
+ame	Matriarchal Pike\nAmulet	1	1	2	0	0	invamu	amul		-1
+46+	+2% Damage when Using an Apple	1	1	2	0	0	pearl1	asaa		-1
+ey3	\red;Elixir of Greed	1	1	2	0	0	invxyz	hpot		-1
+J0+	\orange;at the cost of wisdom \nSalvation comes \nSacred Shrine (10 Charges)	1	2	2	0	0	jbscross	thng		-1
+N5+	\orange;the body thrives \nWhile the spirit is vigilant \nMagical Shrine (5 Charges)	1	2	2	0	0	jbscross	thng		-1
+O9+	\orange;what it seems to be \nMagic is not always \nEnchanted Shrine (1 Charge)	1	2	2	0	0	jbscross	thng		-1
+J4+	\orange;at the cost of wisdom \nSalvation comes \nSacred Shrine (6 Charges)	1	2	2	0	0	jbscross	thng		-1
+D6+	\orange;at the cost of self \nKnowledge and wisdom \nEerie Shrine (4 Charges)	1	2	2	0	0	jbscross	thng		-1
+22-	\dgrey;Level: 60 (H) - 90 (T) - 115 (D)\nLocation: Act 3 Swampy Pit 3\nTricky (3/8)\nDungeon Uberquest\n\n-- Death Projector --\n\red;Pearl of Wisdom	1	1	2	0	0	shinieRed	thng		-1
+P7+	\orange;refreshed \nDrink and be \nDivine Shrine (3 Charges)	1	2	2	0	0	jbscross	thng		-1
+Q9+	\orange;through destruction\nNew strength is forged\nHidden Shrine (1 Charge)	1	2	2	0	0	jbscross	thng		-1
+&45	\orange;Mystic Orb	1	1	2	0	0	pearl3	asaa		-1
+C4+	\orange;flows from within \nThe essence of life \nQuiet Shrine (6 Charges)	1	2	2	0	0	jbscross	thng		-1
+µ10	\orange;Quov Tsin Trophy	1	1	2	0	0	apple	thng		-1
+x07	Nexus Crystal	1	1	2	0	0	invgmy	arag		1
+!@9	\dgreen;Dogma of Terror	1	1	2	0	0	scroll11	thng		-1
+r24	\purple;Ist Rune	1	1	2	0	51	invrIst	rune		-1
+tr2	Right Click to Cast\nScroll of Resistance	2	2	2	0	0	invscb	ques		-1
+pa8	Protector Shield\nAmulet	1	1	2	0	0	invamu	amul		-1
+D9+	\orange;at the cost of self \nKnowledge and wisdom \nEerie Shrine (1 Charge)	1	2	2	0	0	jbscross	thng		-1
+R2+	\orange;refocused renews\nThe powers of mana\nStone Shrine (8 Charges)	1	2	2	0	0	jbscross	thng		-1
+ob7	Crystalline Globe\nAmulet	1	1	2	0	0	invamu	amul		-1
+K1+	\orange;at the cost of wisdom \nPersistence comes \nShimmering Shrine (9 Charges)	1	2	2	0	0	jbscross	thng		-1
+&82	\orange;Mystic Orb\nVizjun's Ball Bearing	1	1	2	0	0	pearl2	asaa		-1
+12-	\dgrey;(See documentation for details)\nrewards on Destruction difficulty!\nKill the four bosses in heroic levels for powerful\n\n-- Heroic Bosses --\n\red;Pearl of Wisdom	1	1	2	0	0	ShinieBlue	thng		-1
+r01	\purple;El Rune	1	1	2	0	11	invrEl	rune		-1
+gsb	\purple;Sapphire	1	1	2	0	12	invgsbc	gems		-1
+60+	+5 Life on Striking in Melee	1	1	2	0	0	pearl2	asaa		-1
+P6+	\orange;refreshed \nDrink and be \nDivine Shrine (4 Charges)	1	2	2	0	0	jbscross	thng		-1
+zkd	\dgreen;Greater Signet of Gold	1	1	2	0	0	sigil2B	poti		-1
+Q6+	\orange;through destruction\nNew strength is forged\nHidden Shrine (4 Charges)	1	2	2	0	0	jbscross	thng		-1
+&52	\orange;Mystic Orb	1	1	2	0	0	pearl1	asaa		-1
+r44	\purple;Yul Rune	1	1	2	0	100	r-a-15	rune		-1
+5$a	\purple;Chipped Amber	1	1	2	0	1	invgsaa	geml		-1
+&a5	\orange;Mystic Orb	1	1	2	0	0	pearl3	asaa		-1
+µ11	\orange;Astrogha Trophy	1	1	2	0	0	apple	thng		-1
+r49	\purple;Lai Rune	1	1	2	0	100	r-a-02	rune		-1
+J5+	\orange;at the cost of wisdom \nSalvation comes \nSacred Shrine (5 Charges)	1	2	2	0	0	jbscross	thng		-1
+p@p	\dgreen;Fleshcutter's Sigil	1	1	2	0	0	ring07	thng		-1
+s0m	Book of Summoning	1	1	2	0	0	summbook	summ		-1
+ne2	Zombie Head\nAmulet	1	1	2	0	0	invamu	amul		-1
+toa	\dgrey;(Only works in Diablo II 1.13 and up)\n\red;Right-click to reset Stat/Skill Points\nBelladonna Extract	1	1	2	0	0	pot04	ques		-1
+zkc	\dgreen;Signet of Learning	1	1	2	0	0	sigil1B	poti		-1
+&38	\orange;Mystic Orb	1	1	2	0	0	pearl2	asaa		-1
+G3+	\orange;may yet be first \nThose who are last \nTainted Shrine (7 Charges)	1	2	2	0	0	jbscross	thng		-1
+&17	\orange;Mystic Orb	1	1	2	0	0	pearl3	asaa		-1
+I2+	\orange;at the cost of wisdom \nEnergy comes \nOrnate Shrine (8 Charges)	1	2	2	0	0	jbscross	thng		-1
+H9+	\orange;at the cost of wisdom \nIntensity comes \nFascinating Shrine (1 Charge)	1	2	2	0	0	jbscross	thng		-1
+isc	Scroll of Identify	1	1	2	0	0	invrsc	scro		-1
+42+	-1% to Enemy Cold Resistance	1	1	2	0	0	pearl4	asaa		-1
+09-	\dgrey;with a certain amount of Crafting Points.\nMany recipes require you to wear armor\nto unlock the secrets of the Horadric Cube.\nIt takes the right signs and incantations\n\n-- Crafting Points --\n\red;Pearl of Wisdom	1	1	2	0	0	ShinieWhite	thng		-1
+&03	\orange;Mystic Orb	1	1	2	0	0	pearl4	asaa		-1
+qhr	Khalim's Heart	1	1	2	0	0	invhrt	ques		-1
+clw	Claws\nAmulet	1	1	2	0	0	invamu	amul		-1
+r09	\purple;Ort Rune	1	1	2	0	21	invrOrt	rune		-1
+R5+	\orange;refocused renews\nThe powers of mana\nStone Shrine (5 Charges)	1	2	2	0	0	jbscross	thng		-1
+7qr	Scissors Suwayyah\nAmulet	1	1	2	0	0	invamu	amul		-1
+G2+	\orange;may yet be first \nThose who are last \nTainted Shrine (8 Charges)	1	2	2	0	0	jbscross	thng		-1
+r14	\purple;Dol Rune	1	1	2	0	31	invrDol	rune		-1
+r35	\purple;Lah Rune	1	1	2	0	75	r-a-06	rune		-1
+N3+	\orange;the body thrives \nWhile the spirit is vigilant \nMagical Shrine (7 Charges)	1	2	2	0	0	jbscross	thng		-1
+ne5	Demon Head\nAmulet	1	1	2	0	0	invamu	amul		-1
+!@A	\dgreen;Dogma of Destruction	1	1	2	0	0	scroll11	thng		-1
+A3+	\orange;by heavenly faith \nStrength is bolstered \nCreepy Shrine (7 Charges)	1	2	2	0	0	jbscross	thng		-1
+H0+	\orange;at the cost of wisdom \nIntensity comes \nFascinating Shrine (10 Charges)	1	2	2	0	0	jbscross	thng		-1
+Q4+	\orange;through destruction\nNew strength is forged\nHidden Shrine (6 Charges)	1	2	2	0	0	jbscross	thng		-1
+r16	\purple;Io Rune	1	1	2	0	35	invrIo	rune		-1
+H5+	\orange;at the cost of wisdom \nIntensity comes \nFascinating Shrine (5 Charges)	1	2	2	0	0	jbscross	thng		-1
+47+	Requirements -1%	1	1	2	0	0	pearl1	asaa		-1
+&12	\orange;Mystic Orb	1	1	2	0	0	pearl4	asaa		-1
+7$d	\purple;Flawless Turquoise	1	1	2	0	15	invgstd	gemo		-1
+&84	\orange;Mystic Orb\nThe Demon Core	1	1	2	0	0	pearl2	asaa		-1
+gfw	\purple;Flawed Diamond	1	1	2	0	5	invgswb	gemd		-1
+neb	Minion Skull\nAmulet	1	1	2	0	0	invamu	amul		-1
+Q5+	\orange;through destruction\nNew strength is forged\nHidden Shrine (5 Charges)	1	2	2	0	0	jbscross	thng		-1
+24-	\dgrey;Level: 70 (H) - 95 (T) - 120 (D)\nLocation: Act 3 Ruined Fane\nVery Hard (5/8)\nDungeon Uberquest\n\n-- Rathma Square --\n\red;Pearl of Wisdom	1	1	2	0	0	shinieRed	thng		-1
+am9	Ceremonial Pike\nAmulet	1	1	2	0	0	invamu	amul		-1
+C1+	\orange;flows from within \nThe essence of life \nQuiet Shrine (9 Charges)	1	2	2	0	0	jbscross	thng		-1
+36+	+15% Enhanced Damage	1	1	2	0	0	pearl2	asaa		-1
+7ar	Suwayyah\nAmulet	1	1	2	0	0	invamu	amul		-1
+hp3	Healing Potion	1	1	2	0	0	invhp3	hpot		-1
+M0+	\orange;least expected \nRiches abound when \nSpiritual Shrine (10 Charges)	1	2	2	0	0	jbscross	thng		-1
+N7+	\orange;the body thrives \nWhile the spirit is vigilant \nMagical Shrine (3 Charges)	1	2	2	0	0	jbscross	thng		-1
+key	Key	1	1	2	1	0	invkey	key		-1
+T1+	\orange;brings destruction\nArcane power\nCryptic Shrine (9 Charges)	1	2	2	0	0	jbscross	thng		-1
+gcb	\purple;Chipped Sapphire	1	1	2	0	1	invgsba	gems		-1
+zkf	\dgreen;Greater Signet of Experience	1	1	2	0	0	sigil6B	poti		-1
+gsw	\purple;Diamond	1	1	2	0	12	invgswc	gemd		-1
+r04	\purple;Nef Rune	1	1	2	0	13	invrNef	rune		-1
+gcg	\purple;Chipped Emerald	1	1	2	0	1	invgsga	geme		-1
+g$a	\purple;Chipped Onyx	1	1	2	0	1	invgsoa	gemq		-1
+3oµ	Cube Reagent\n\orange;Catalyst of Disenchantment	1	1	2	0	0	catal2	thng		-1
+&85	\orange;Mystic Orb\nUldyssian's Spirit	1	1	2	0	0	pearl2	asaa		-1
+&30	\orange;Mystic Orb	1	1	2	0	0	pearl1	asaa		-1
+&36	\orange;Mystic Orb	1	1	2	0	0	pearl2	asaa		-1
+K5+	\orange;at the cost of wisdom \nPersistence comes \nShimmering Shrine (5 Charges)	1	2	2	0	0	jbscross	thng		-1
+ey1	\red;Elixir of Poison	1	1	2	0	0	invxyz	hpot		-1
+E3+	\orange;is swift and sharp \nThe sword of justice \nWeird Shrine (7 Charges)	1	2	2	0	0	jbscross	thng		-1
+rvl	Full Rejuvenation Potion	1	1	2	0	0	invvpl	rpot		-1
+43-	\dgrey;See if you can survive!\nmonsters, revealed by their green name.\nThese hidden dungeons house dangerous\n\n-- Heroic Levels --\n\red;Pearl of Wisdom	1	1	2	0	0	ShinieWhite	thng		-1
+&74	\orange;Mystic Orb\nEye of Malic	1	1	2	0	0	pearl4	asaa		-1
+oba	Swirling Crystal\nAmulet	1	1	2	0	0	invamu	amul		-1
+ne8	Sexton Trophy\nAmulet	1	1	2	0	0	invamu	amul		-1
+M7+	\orange;least expected \nRiches abound when \nSpiritual Shrine (3 Charges)	1	2	2	0	0	jbscross	thng		-1
+box	Horadric Cube	2	2	2	0	0	invbox	ques		-1
+pa5	Crown Shield\nAmulet	1	1	2	0	0	invamu	amul		-1
+I1+	\orange;at the cost of wisdom \nEnergy comes \nOrnate Shrine (9 Charges)	1	2	2	0	0	jbscross	thng		-1
+G9+	\orange;may yet be first \nThose who are last \nTainted Shrine (1 Charge)	1	2	2	0	0	jbscross	thng		-1
+G8+	\orange;may yet be first \nThose who are last \nTainted Shrine (2 Charges)	1	2	2	0	0	jbscross	thng		-1
+7$c	\purple;Turquoise	1	1	2	0	12	invgstc	gemo		-1
+A7+	\orange;by heavenly faith \nStrength is bolstered \nCreepy Shrine (3 Charges)	1	2	2	0	0	jbscross	thng		-1
+&20	\orange;Mystic Orb	1	1	2	0	0	pearl3	asaa		-1
+A1+	\orange;by heavenly faith \nStrength is bolstered \nCreepy Shrine (9 Charges)	1	2	2	0	0	jbscross	thng		-1
+!@8	\dgreen;Dogma of Hatred	1	1	2	0	0	scroll11	thng		-1
+&37	\orange;Mystic Orb	1	1	2	0	0	pearl2	asaa		-1
+jew	Jewel	1	1	2	0	0	invgswe	jewl		-1
+7tw	Runic Talons\nAmulet	1	1	2	0	0	invamu	amul		-1
+A2+	\orange;by heavenly faith \nStrength is bolstered \nCreepy Shrine (8 Charges)	1	2	2	0	0	jbscross	thng		-1
+Q0+	\orange;through destruction\nNew strength is forged\nHidden Shrine (10 Charges)	1	2	2	0	0	jbscross	thng		-1
+58+	1% Chance to cast level 6 Crucify on Attack	1	1	2	0	0	pearl2	asaa		-1
+07+	+1% to Lightning Spell Damage	1	1	2	0	0	pearl4	asaa		-1
+&49	\orange;Mystic Orb	1	1	2	0	0	pearl1	asaa		-1
+T8+	\orange;brings destruction\nArcane power\nCryptic Shrine (2 Charges)	1	2	2	0	0	jbscross	thng		-1
+0g3	\red;Elixir of Greater Strength	1	1	2	0	0	invxyz	hpot		-1
+dog	Apple	1	1	2	0	0	realapple	poti		-1
+&48	\orange;Mystic Orb	1	1	2	0	0	pearl1	asaa		-1
+ba1	Jawbone Cap\nAmulet	1	1	2	0	0	invamu	amul		-1
+2x9	\dgreen;Epsilon Brain	1	1	2	0	0	invbrnz	thng		-1
+u@v	for an upgrade!\nSee the documentation\nYou're not cool enough!\n\gold;Poser!	1	1	2	0	0	redgem	thng		-1
+S7+	\orange;the power of steel\nTime cannot diminish\nReligious Shrine (3 Charges)	1	2	2	0	0	jbscross	thng		-1
+gsr	\purple;Ruby	1	1	2	0	12	invgsrc	gemr		-1
+lok	Crystalline Flame Medallion	1	1	2	0	0	invvip	grtz		-1
+&55	\orange;Mystic Orb	1	1	2	0	0	pearl1	asaa		-1
+F5+	\orange;seldom attack \nThose who defend \nGloomy Shrine (5 Charges)	1	2	2	0	0	jbscross	thng		-1
+9$c	\purple;Bloodstone	1	1	2	0	12	invgscc	gemp		-1
+50+	2% Faster Block Rate	1	1	2	0	0	pearl1	asaa		-1
+10-	\dgrey;(See documentation for details)\nReward: class charm upgrade, new learnable skill\n- Level 80 or below\nRequires:\n\n-- Ennead Challenge --\n\red;Pearl of Wisdom	1	1	2	0	0	ShinieBlue	thng		-1
+15-	\dgrey;runes can likewise be downgraded.\nto the next higher gem or rune. Single\nTwo gems or runes upgrade in the cube\n\n-- Upgrading Runes and Gems --\n\red;Pearl of Wisdom	1	1	2	0	0	shinieYellow	thng		-1
+&04	\orange;Mystic Orb	1	1	2	0	0	pearl4	asaa		-1
+amd	Matriarchal Spear\nAmulet	1	1	2	0	0	invamu	amul		-1
+28-	\dgrey;Level: 55 (H) - 85 (T) - 110 (D)\nLocation: Act 2 Valley of Snakes\nMedium (2/8)\nSummoning Uberquest\n\n-- The Binding of Baal --\n\red;Pearl of Wisdom	1	1	2	0	0	shiniePurple	thng		-1
+&57	\orange;Mystic Orb	1	1	2	0	0	pearl2	asaa		-1
+pa1	Targe\nAmulet	1	1	2	0	0	invamu	amul		-1
+30-	\dgrey;Level: 65 (H) - 95 (T) - 120 (D)\nLocation: Act 3 Kurast Causeway\nHard (4/8)\nSummoning Uberquest\n\n-- Akarat --\n\red;Pearl of Wisdom	1	1	2	0	0	shiniePurple	thng		-1
+T7+	\orange;brings destruction\nArcane power\nCryptic Shrine (3 Charges)	1	2	2	0	0	jbscross	thng		-1
+wrb	Wrist Blade\nAmulet	1	1	2	0	0	invamu	amul		-1
+D2+	\orange;at the cost of self \nKnowledge and wisdom \nEerie Shrine (8 Charges)	1	2	2	0	0	jbscross	thng		-1
+!@1	\dgreen;Evil Eye of the Clawstorm	1	1	2	0	0	evileye	thng		-1
+!@c	\dgrey;by any attack!\ncost. It causes you to shatter when struck\nshardspawn should be avoided at all\nThe energy rune left behind by a destroyed\n\n-- Baal --\n\red;Pearl of Wisdom	1	1	2	0	0	ShinieBlue	thng		-1
+tch	Torch	1	2	2	0	0	invtrch	torc		-1
+ama	Ceremonial Javelin\nAmulet	1	1	2	0	0	invamu	amul		-1
+a55	Optical Detector	1	1	2	0	0	inveye	grtz		-1
+K2+	\orange;at the cost of wisdom \nPersistence comes \nShimmering Shrine (8 Charges)	1	2	2	0	0	jbscross	thng		-1
+5$b	\purple;Flawed Amber	1	1	2	0	5	invgsab	geml		-1
+ob8	Cloudy Sphere\nAmulet	1	1	2	0	0	invamu	amul		-1
+dre	Sky Spirit\nAmulet	1	1	2	0	0	invamu	amul		-1
+r15	\purple;Hel Rune	1	1	2	0	33	invrHel	rune		-1
+tr1	Horadric Scroll	2	2	2	0	0	invhscr	ques		-1
+ice	Keep it to thaw Anya\nMalah's Potion	1	1	2	0	0	invxyz	ques		-1
+E5+	\orange;is swift and sharp \nThe sword of justice \nWeird Shrine (5 Charges)	1	2	2	0	0	jbscross	thng		-1
+L0+	\orange;as one grows strong \nSome are weakened \nMysterious Shrine (10 Charges)	1	2	2	0	0	jbscross	thng		-1
+48+	1% Increased Healing Rate from Apples	1	1	2	0	0	pearl1	asaa		-1
+dr5	Spirit Mask\nAmulet	1	1	2	0	0	invamu	amul		-1
+ey7	\red;Elixir of Energy	1	1	2	0	0	invxyz	hpot		-1
+gfr	\purple;Flawed Ruby	1	1	2	0	5	invgsrb	gemr		-1
+r46	\purple;Rha Rune	1	1	2	0	100	r-a-17	rune		-1
+zku	\dgreen;Signet of Experience	1	1	2	0	0	sigil5B	poti		-1
+E7+	\orange;is swift and sharp \nThe sword of justice \nWeird Shrine (3 Charges)	1	2	2	0	0	jbscross	thng		-1
+&63	\orange;Mystic Orb	1	1	2	0	0	pearl2	asaa		-1
+31-	\dgrey;Level: 70 (H) - 95 (T) - 121 (D)\nLocation: Act 5 Nihlathak's Temple\nVery Hard (5/8)\nSummoning Uberquest\n\n-- Lord Aldric Jitan --\n\red;Pearl of Wisdom	1	1	2	0	0	shiniePurple	thng		-1
+r34	\purple;Sha Rune	1	1	2	0	72	r-a-05	rune		-1
+M1+	\orange;least expected \nRiches abound when \nSpiritual Shrine (9 Charges)	1	2	2	0	0	jbscross	thng		-1
+13-	\dgrey;(See documentation for details)\nReward: sunstone upgrade\n- Successful Priestess kill\n- Level 50-70 or below\nRequires:\n\n-- Level Challenge --\n\red;Pearl of Wisdom	1	1	2	0	0	ShinieBlue	thng		-1
+µ08	\orange;Cathedral of Vanity Trophy	1	1	2	0	0	apple	thng		-1
+23+	Lightning Resist +5%	1	1	2	0	0	pearl1	asaa		-1
+r26	\purple;Vex Rune	1	1	2	0	55	invrVex	rune		-1
+0g0	\red;Elixir of Greater Experience	1	1	2	0	0	invxyz	hpot		-1
+yo1	\purple;Chipped Rainbow Stone	1	1	2	0	1	og1	gemx		-1
+r06	\purple;Ith Rune	1	1	2	0	15	invrIth	rune		-1
+&86	\orange;Mystic Orb\nOrb of Annihilation	1	1	2	0	0	pearl2	asaa		-1
+11+	Regenerate Mana 2%	1	1	2	0	0	pearl3	asaa		-1
+drc	Sun Spirit\nAmulet	1	1	2	0	0	invamu	amul		-1
+7$b	\purple;Flawed Turquoise	1	1	2	0	5	invgstb	gemo		-1
+r33	\purple;Zod Rune	1	1	2	0	69	invrZod	rune		-1
+k@k	The Book of Lies	1	1	2	0	0	invsbk2	grtz		-1
+01-	\dgrey;game difficulty, experience gain and drops\nThis emulates a multiplayer game, boosting\nWhere X is a number between 1 and 8\n/players X\nPress Enter and type in the following:\n\n-- Players X --\n\red;Pearl of Wisdom	1	1	2	0	0	ShinieWhite	thng		-1
+G5+	\orange;may yet be first \nThose who are last \nTainted Shrine (5 Charges)	1	2	2	0	0	jbscross	thng		-1
+dr4	Falcon Mask\nAmulet	1	1	2	0	0	invamu	amul		-1
+tbk	Tome of Town Portal	1	2	2	1	0	invbbk	book		-1
+zke	\dgreen;Greater Signet of Learning	1	1	2	0	0	sigilXL	poti		-1
+S6+	\orange;the power of steel\nTime cannot diminish\nReligious Shrine (4 Charges)	1	2	2	0	0	jbscross	thng		-1
+z4+	+1 to Summon Shredder	1	1	2	0	0	pearl3	asaa		-1
+dr3	Antlers\nAmulet	1	1	2	0	0	invamu	amul		-1
+18+	+1 to Wyrd	1	1	2	0	0	pearl3	asaa		-1
+G6+	\orange;may yet be first \nThose who are last \nTainted Shrine (4 Charges)	1	2	2	0	0	jbscross	thng		-1
+J3+	\orange;at the cost of wisdom \nSalvation comes \nSacred Shrine (7 Charges)	1	2	2	0	0	jbscross	thng		-1
+x1x	Sunstone of Fire	1	1	2	0	0	invgmr	grtz		-1
+56+	1% Chance to cast level 4 Spike Nova on Attack	1	1	2	0	0	pearl2	asaa		-1
+0g7	\red;Elixir of Power	1	1	2	0	0	invxyz	hpot		-1
+11-	\dgrey;(See documentation for details)\nReward: time-restricted unlimited cubing\n- Cracking Dragon Eggs and killing contents\nRequires:\n\n-- Dragon Challenge --\n\red;Pearl of Wisdom	1	1	2	0	0	ShinieBlue	thng		-1
+19-	\dgrey;(Max 15 orbs of any one type)\nadd the modifier and a +2 level penalty.\nSimply cube the orb with the item to\nitems with additional modifiers.\nMystic Orbs have the power to imbue\n\n-- Affix Bonus Recipes --\n\red;Pearl of Wisdom	1	1	2	0	0	shinieYellow	thng		-1
+9cs	Hand Scythe\nAmulet	1	1	2	0	0	invamu	amul		-1
+z2+	Poison Length Reduced by 2%	1	1	2	0	0	pearl3	asaa		-1
+gsy	\purple;Topaz	1	1	2	0	12	invgsyc	gemt		-1
+xyz	Right Click to permanently add 20 to Life\nPotion of Life	1	1	2	0	0	invxyz	ques		-1
+hp4	Greater Healing Potion	1	1	2	0	0	invhp4	hpot		-1
+16-	\dgrey;also need 3 perfect gems.\nNonmagical items and runewords\nfrom the item.\nto separate the socket fillers\nCube any item with an Oil of Disjunction\n\n-- Unsocketing --\n\red;Pearl of Wisdom	1	1	2	0	0	shinieYellow	thng		-1
+mpf	Full Mana Potion	1	1	2	0	0	invbpl	mpot		-1
+ne7	Fetish Trophy\nAmulet	1	1	2	0	0	invamu	amul		-1
+g$e	\purple;Perfect Onyx	1	1	2	0	18	invgsoe	gemq		-1
+15+	3% Extra Gold from Monsters	1	1	2	0	0	pearl4	asaa		-1
+sol	Soul	1	1	2	0	0	invsple	body		-1
+x0x	Eternal Bone Pile	1	1	2	0	0	invbonr3	grtz		-1
+&35	\orange;Mystic Orb	1	1	2	0	0	pearl2	asaa		-1
+r40	\purple;Ath Rune	1	1	2	0	90	r-a-11	rune		-1
+quz	Boom!	1	1	2	0	0	invfary3	poti		-1
+B4+	\orange;be guided by fate \nThe hands of men may \nAbandoned Shrine (6 Charges)	1	2	2	0	0	jbscross	thng		-1
+am2	Reflex Bow\nAmulet	1	1	2	0	0	invamu	amul		-1
+mp4	Greater Mana Potion	1	1	2	0	0	invmp4	mpot		-1
+µ12	\orange;Azmodan Trophy	1	1	2	0	0	apple	thng		-1
+hp1	Minor Healing Potion	1	1	2	0	0	invhp1	hpot		-1
+41+	-1% to Enemy Fire Resistance	1	1	2	0	0	pearl4	asaa		-1
+&75	\orange;Mystic Orb\nApple of Discord	1	1	2	0	0	pearl4	asaa		-1
+bac	Fury Visor\nAmulet	1	1	2	0	0	invamu	amul		-1
+E6+	\orange;is swift and sharp \nThe sword of justice \nWeird Shrine (4 Charges)	1	2	2	0	0	jbscross	thng		-1
+&05	\orange;Mystic Orb	1	1	2	0	0	pearl4	asaa		-1
+dr2	Hawk Helm\nAmulet	1	1	2	0	0	invamu	amul		-1
+amc	Grand Matron Bow\nAmulet	1	1	2	0	0	invamu	amul		-1
+zkr	\dgreen;Greater Signet of Experience	1	1	2	0	0	sigil6B	poti		-1
+pa3	Heraldic Shield\nAmulet	1	1	2	0	0	invamu	amul		-1
+ba9	Savage Helmet\nAmulet	1	1	2	0	0	invamu	amul		-1
+Q8+	\orange;through destruction\nNew strength is forged\nHidden Shrine (2 Charges)	1	2	2	0	0	jbscross	thng		-1
+5$c	\purple;Amber	1	1	2	0	12	invgsac	geml		-1
+aq!	Silver Seal of Ureh	1	1	2	0	0	invrin	grtz		-1
+Q2+	\orange;through destruction\nNew strength is forged\nHidden Shrine (8 Charges)	1	2	2	0	0	jbscross	thng		-1
+drd	Earth Spirit\nAmulet	1	1	2	0	0	invamu	amul		-1
+qul	\grey;Cube Reagent\n\orange;Arcane Shards	1	1	2	0	0	invfary4	thng		-1
+z5+	+1 to Summon Bane Monster	1	1	2	0	0	pearl3	asaa		-1
+qin	Ring (Sacred)	1	1	2	0	75	invrin	ring		-1
+M6+	\orange;least expected \nRiches abound when \nSpiritual Shrine (4 Charges)	1	2	2	0	0	jbscross	thng		-1
+20+	1% Chance to cast level 3 Thunder Hammer when you Kill an Enemy	1	1	2	0	0	pearl3	asaa		-1
+P0+	\orange;refreshed \nDrink and be \nDivine Shrine (10 Charges)	1	2	2	0	0	jbscross	thng		-1
+r12	\purple;Sol Rune	1	1	2	0	27	invrSol	rune		-1
+bab	Carnage Helm\nAmulet	1	1	2	0	0	invamu	amul		-1
+T4+	\orange;brings destruction\nArcane power\nCryptic Shrine (6 Charges)	1	2	2	0	0	jbscross	thng		-1
+44-	\dgrey;use skills that penetrate resistances.\nthe aura, kill their underlings or\nprotected by a shield aura. To remove\nSome powerful demon leaders may be\n\n-- Shield Auras --\n\red;Pearl of Wisdom	1	1	2	0	0	ShinieWhite	thng		-1
+gfy	\purple;Flawed Topaz	1	1	2	0	5	invgsyb	gemt		-1
+x05	Soulstone Shard	1	1	2	0	0	invgmy	arae		2
+r47	\purple;Xar Rune	1	1	2	0	100	r-a-18	rune		-1
+w@w	Cold Fusion Schematics	1	1	2	0	0	invhscr2	grtz		-1
+25-	\dgrey;Level: 75 (H) - 100 (T) - 121 (D)\nLocation: Act 1 Underground Passage 2\nExtreme (6/8)\nDungeon Uberquest\n\n-- Cathedral of Vanity --\n\red;Pearl of Wisdom	1	1	2	0	0	shinieRed	thng		-1
+&19	\orange;Mystic Orb	1	1	2	0	0	pearl3	asaa		-1
+ob5	Jared's Stone\nAmulet	1	1	2	0	0	invamu	amul		-1
+gld	Gold	1	1	2	1	0	invgld	gold		-1
+r41	\purple;Kra Rune	1	1	2	0	94	r-a-12	rune		-1
+r51	\grey;Great Rune\n\purple;Taha Rune	1	1	2	0	100	r-d-02	rune		-1
+M9+	\orange;least expected \nRiches abound when \nSpiritual Shrine (1 Charge)	1	2	2	0	0	jbscross	thng		-1
+59+	1% Chance to cast level 8 Doom on Attack	1	1	2	0	0	pearl2	asaa		-1
+05+	+1% to Fire Spell Damage	1	1	2	0	0	pearl4	asaa		-1
+&14	\orange;Mystic Orb	1	1	2	0	0	pearl4	asaa		-1
+am1	Stag Bow\nAmulet	1	1	2	0	0	invamu	amul		-1
+9$b	\purple;Flawed Bloodstone	1	1	2	0	5	invgscb	gemp		-1
+!@2	\dgreen;Evil Eye of the Landmass	1	1	2	0	0	evileye	thng		-1
+Q1+	\orange;through destruction\nNew strength is forged\nHidden Shrine (9 Charges)	1	2	2	0	0	jbscross	thng		-1
+µ02	\orange;Legacy of Blood Trophy	1	1	2	0	0	apple	thng		-1
+r07	\purple;Tal Rune	1	1	2	0	17	invrTal	rune		-1
+R7+	\orange;refocused renews\nThe powers of mana\nStone Shrine (3 Charges)	1	2	2	0	0	jbscross	thng		-1
+&69	\orange;Mystic Orb\nRelic of Yaerius	1	1	2	0	0	pearl3	asaa		-1
+36-	\dgrey;Level: 70 (H) - 95 (T) - 121 (D)\nLocation: Act 5 Drifter Cavern\nMedium (2/8)\nUberlevel\n\n-- Island of the Sunless Sea --\n\red;Pearl of Wisdom	1	1	2	0	0	shinieGreen	thng		-1
+ey6	\red;Elixir of Dexterity	1	1	2	0	0	invxyz	hpot		-1
+L8+	\orange;as one grows strong \nSome are weakened \nMysterious Shrine (2 Charges)	1	2	2	0	0	jbscross	thng		-1
+S0+	\orange;the power of steel\nTime cannot diminish\nReligious Shrine (10 Charges)	1	2	2	0	0	jbscross	thng		-1
+L5+	\orange;as one grows strong \nSome are weakened \nMysterious Shrine (5 Charges)	1	2	2	0	0	jbscross	thng		-1
+&58	\orange;Mystic Orb	1	1	2	0	0	pearl2	asaa		-1
+40+	+4 Life after each Kill	1	1	2	0	0	pearl2	asaa		-1
+R3+	\orange;refocused renews\nThe powers of mana\nStone Shrine (7 Charges)	1	2	2	0	0	jbscross	thng		-1
+skl	\purple;Flawless Skull	1	1	2	0	15	invskl	gemz		-1
+µ07	\orange;Rathma Square Trophy	1	1	2	0	0	apple	thng		-1
+28+	+2 to Life when Struck	1	1	2	0	0	pearl1	asaa		-1
+22+	Cold Resist +5%	1	1	2	0	0	pearl1	asaa		-1
+zkx	\dgreen;Greater Signet of Gold	1	1	2	0	0	sigil2B	poti		-1
+&29	\orange;Mystic Orb	1	1	2	0	0	pearl1	asaa		-1
+&10	\orange;Mystic Orb	1	1	2	0	0	pearl4	asaa		-1
+9ar	Quhab\nAmulet	1	1	2	0	0	invamu	amul		-1
+S1+	\orange;the power of steel\nTime cannot diminish\nReligious Shrine (9 Charges)	1	2	2	0	0	jbscross	thng		-1

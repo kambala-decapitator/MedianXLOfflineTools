@@ -1,0 +1,117 @@
+#code	name	letter	armor1code	armor1param	armor1value	armor2code	armor2param	armor2value	armor3code	armor3param	armor3value	shield1code	shield1param	shield1value	shield2code	shield2param	shield2value	shield3code	shield3param	shield3value	weapon1code	weapon1param	weapon1value	weapon2code	weapon2param	weapon2value	weapon3code	weapon3param	weapon3value
+yo1	\purple;Chipped Rainbow Stone		183		4							109		2							136		1						
+r06	\purple;Ith Rune	Ith	16		15							16		15							17		15						
+yo3	\purple;Rainbow Stone		183		12							109		6							136		3						
+r37	\purple;Ix Rune	Ix	105		15							105		15							105		15						
+9$e	\purple;Perfect Bloodstone		39		20	40		2				487		5							444		10						
+7$b	\purple;Flawed Turquoise		45		8							80		10							27		4						
+gcb	\purple;Chipped Sapphire		409		1							43		6							138		2						
+r33	\purple;Zod Rune	Zod	363		5							363		5							150		5						
+r31	\purple;Jah Rune	Jah	16		25							16		25							17		25						
+gsw	\purple;Diamond		359		3							39,41,43,45		3							329,330,331,332,377		3						
+yo2	\purple;Flawed Rainbow Stone		183		8							109		4							136		2						
+r04	\purple;Nef Rune	Nef	431		10							431		10							431		15						
+gly	\purple;Flawless Topaz		361		4							41		24							485		9						
+gcg	\purple;Chipped Emerald		74		4							45		6							22		2						
+g$a	\purple;Chipped Onyx		43		4							164		1							470		2						
+r36	\purple;Kur Rune	Kur	96		15							96		15							96		15						
+7$e	\purple;Perfect Turquoise		45		20	46		2				80		25							27		10						
+9$a	\purple;Chipped Bloodstone		39		4							487		1							444		2						
+r30	\purple;Ber Rune	Ber	164		5							164		5							164		10						
+r50	\purple;On Rune	On	171		5							171		5							171		5						
+gsy	\purple;Topaz		361		3							41		18							485		8						
+gpr	\purple;Perfect Ruby		362		5							39		30							86		10						
+r19	\purple;Fal Rune	Fal	2		10							2		10							2		10						
+g$e	\purple;Perfect Onyx		43		20	44		2				164		5							470		10						
+gcy	\purple;Chipped Topaz		361		1							41		6							485		6						
+gsg	\purple;Emerald		74		12							45		18							22		6						
+g$d	\purple;Flawless Onyx		43		16	44		1				164		4							470		8						
+glw	\purple;Flawless Diamond		359		4							39,41,43,45		4							329,330,331,332,377		4						
+r40	\purple;Ath Rune	Ath	99		15							99		15							99		15						
+gfv	\purple;Flawed Amethyst		360		2							440		4							119		20						
+skc	\purple;Chipped Skull		16		7							110		1							17		7						
+r56	\grey;Great Rune\n\purple;Sha'ad Rune	Shaad	16		30							16		30							17		30						
+r27	\purple;Ohm Rune	Ohm	362		5							362		5							362		5						
+glr	\purple;Flawless Ruby		362		4							39		24							86		8						
+7$c	\purple;Turquoise		45		12							80		15							27		6						
+r38	\purple;Thur Rune	Thur	500		50							500		50							500		50						
+r54	\grey;Great Rune\n\purple;Krys Rune	Krys	489		25							489		25							489		100						
+r25	\purple;Gul Rune	Gul	43		30							43		30							43		40						
+9$d	\purple;Flawless Bloodstone		39		16	40		1				487		4							444		8						
+r13	\purple;Shael Rune	Shael	0		10							0		10							0		10						
+r53	\grey;Great Rune\n\purple;Qor Rune	Qor	91		-12							91		-12							91		-12						
+r43	\purple;No Rune	No	102		15							102		15							102		15						
+r28	\purple;Lo Rune	Lo	41		30							41		30							41		40						
+r39	\purple;Nas Rune	Nas	444		10							444		10							444		10						
+r52	\grey;Great Rune\n\purple;Ghal Rune	Ghal	485		5							485		5							485		15						
+r32	\purple;Cham Rune	Cham	3		10							3		10							3		10						
+r55	\grey;Great Rune\n\purple;Auhe Rune	Auhe	27		5							27		5							27		15						
+5$c	\purple;Amber		41		12							363		3							155	800	3						
+gsv	\purple;Amethyst		360		3							440		6							119		30						
+gcr	\purple;Chipped Ruby		362		1							39		6							86		2						
+gsr	\purple;Ruby		362		3							39		18							86		6						
+r24	\purple;Ist Rune	Ist	1		10							1		10							1		10						
+9$c	\purple;Bloodstone		39		12							487		3							444		6						
+r21	\purple;Pul Rune	Pul	39		30							39		30							39		40						
+5$d	\purple;Flawless Amber		41		16	42		1				363		4							155	800	4						
+glg	\purple;Flawless Emerald		74		16							45		24							22		8						
+gpy	\purple;Perfect Topaz		361		5							41		30							485		10						
+r12	\purple;Sol Rune	Sol	332		5							332		5							332		5						
+r20	\purple;Lem Rune	Lem	85		2							85		2							85		2						
+g$c	\purple;Onyx		43		12							164		3							470		6						
+r29	\purple;Sur Rune	Sur	183		25							183		25							183		25						
+gsb	\purple;Sapphire		409		3							43		18							138		6						
+gcw	\purple;Chipped Diamond		359		1							39,41,43,45		1							329,330,331,332,377		1						
+r01	\purple;El Rune	El	89		1							89		1							89		1						
+r23	\purple;Mal Rune	Mal	45		30							45		30							45		40						
+5$b	\purple;Flawed Amber		41		8							363		2							155	800	2						
+r42	\purple;Vith Rune	Vith	492		5							492		5							492		5						
+gzv	\purple;Flawless Amethyst		360		4							440		8							119		40						
+r47	\purple;Xar Rune	Xar	76,77		2							76,77		2							76,77		2						
+gfy	\purple;Flawed Topaz		361		2							41		12							485		7						
+r44	\purple;Yul Rune	Yul	470		10							470		10							470		10						
+r15	\purple;Hel Rune	Hel	377		5							377		5							377		5						
+5$a	\purple;Chipped Amber		41		4							363		1							155	800	1						
+7$a	\purple;Chipped Turquoise		45		4							80		5							27		2						
+r49	\purple;Lai Rune	Lai	25		5							25		5							25		5						
+r02	\purple;Eld Rune	Eld	119		25							119		25							119		25						
+r08	\purple;Ral Rune	Ral	329		5							329		5							329		5						
+gpv	\purple;Perfect Amethyst		360		5							440		10							119		50						
+5$e	\purple;Perfect Amber		41		20	42		2				363		5							155	800	5						
+r51	\grey;Great Rune\n\purple;Taha Rune	Taha	22		20							22		20							22		40						
+r41	\purple;Kra Rune	Kra	487		5							487		5							487		5						
+sku	\purple;Skull		16		11							110		3							17		11						
+r18	\purple;Ko Rune	Ko	359		5							359		5							359		5						
+r46	\purple;Rha Rune	Rha	31		200							31		200							31		200						
+gfr	\purple;Flawed Ruby		362		2							39		12							86		4						
+r05	\purple;Eth Rune	Eth	22		5							22		5							22		10						
+r17	\purple;Lum Rune	Lum	80		20							80		20							80		20						
+9$b	\purple;Flawed Bloodstone		39		8							487		2							444		4						
+skf	\purple;Flawed Skull		16		9							110		2							17		9						
+yo5	\purple;Perfect Rainbow Stone		183		20							109		10							136		5						
+r07	\purple;Tal Rune	Tal	0,1,2,3		5							0,1,2,3		5							0,1,2,3		5						
+gfb	\purple;Flawed Sapphire		409		2							43		12							138		4						
+r11	\purple;Amn Rune	Amn	131		25							131		25							131		25						
+gpb	\purple;Perfect Sapphire		409		5							43		30							138		10						
+skz	\purple;Perfect Skull		16		15							110		5							17		15						
+r45	\purple;Thai Rune	Thai	39,41,43,45		15							39,41,43,45		15							39,41,43,45		15						
+r22	\purple;Um Rune	Um	361		5							361		5							361		5						
+r34	\purple;Sha Rune	Sha	93		15							93		15							93		15						
+glb	\purple;Flawless Sapphire		409		4							43		24							138		8						
+r09	\purple;Ort Rune	Ort	330		5							330		5							330		5						
+r48	\purple;Nih Rune	Nih	409		10							409		10							409		10						
+gpw	\purple;Perfect Diamond		359		5							39,41,43,45		5							329,330,331,332,377		5						
+gpg	\purple;Perfect Emerald		74		20							45		30							22		10						
+gcv	\purple;Chipped Amethyst		360		1							440		2							119		10						
+g$b	\purple;Flawed Onyx		43		8							164		2							470		4						
+r35	\purple;Lah Rune	Lah	359,360,361,362		3							359,360,361,362		3							359,360,361,362		3						
+skl	\purple;Flawless Skull		16		13							110		4							17		13						
+r14	\purple;Dol Rune	Dol	21		5							21		5							21		10						
+r16	\purple;Io Rune	Io	360		5							360		5							360		5						
+7$d	\purple;Flawless Turquoise		45		16	46		1				80		20							27		8						
+yo4	\purple;Flawless Rainbow Stone		183		16							109		8							136		4						
+gfw	\purple;Flawed Diamond		359		2							39,41,43,45		2							329,330,331,332,377		2						
+r10	\purple;Thul Rune	Thul	331		5							331		5							331		5						
+r26	\purple;Vex Rune	Vex	118		1							118		1							118		1						
+gfg	\purple;Flawed Emerald		74		8							45		12							22		4						
+r03	\purple;Tir Rune	Tir	79		50							79		50							79		75						
