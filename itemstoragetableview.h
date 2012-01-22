@@ -11,9 +11,6 @@ class ItemStorageTableView : public QTableView
 public:
     explicit ItemStorageTableView(QWidget *parent = 0) : QTableView(parent) {}
 
-signals:
-    //void currentItemChanged(const QModelIndex &newIndex);
-
 protected slots:
     virtual void keyPressEvent(QKeyEvent *event);
 };

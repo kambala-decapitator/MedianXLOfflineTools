@@ -38,11 +38,11 @@ ItemsViewerDialog::ItemsViewerDialog(QWidget *parent) : QDialog(parent), _tabWid
         QTableView *tableView = static_cast<QTableView *>(splitter->itemsView());
         for (int j = 0; j < splitter->itemsModel()->rowCount(); ++j)
         {
-            tableView->setRowHeight(j, 50); // TODO: use cellSize
+            tableView->setRowHeight(j, cellSize);
         }
         for (int j = 0; j < splitter->itemsModel()->columnCount(); ++j)
         {
-            tableView->setColumnWidth(j, 100); // TODO: use cellSize
+            tableView->setColumnWidth(j, cellSize);
         }
     }
 

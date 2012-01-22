@@ -42,6 +42,7 @@ private slots:
 	void showContextMenu(const QPoint &pos);
 	void disenchantItem();
 	void unsocketItem();
+	void makeNonEthereal();
 	void deleteItem();
 
 private:
@@ -59,6 +60,11 @@ private:
     void updateItems(const ItemsList &newItems);
 	ItemInfo *itemFromCoordinate(const QPoint &pos);
 	void performDeleteItem(ItemInfo *item);
+	QAction *actionFromSender(QObject *sender, const QLatin1String &errorActionText);
+	ItemInfo *itemFromAction(QAction *action);
+
+	void addItemToList(ItemInfo *item, int pos = -1);
+	void removeItemFromList(ItemInfo *item);
 };
 
 #endif // ITEMSPROPERTIESSPLITTER_H

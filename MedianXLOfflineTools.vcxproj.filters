@@ -54,9 +54,6 @@
     <ClCompile Include="itemdatabase.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="itemmanager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="itemspropertiessplitter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -171,9 +168,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="itemdatabase.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="itemmanager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Resources\win\resource.h">

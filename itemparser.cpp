@@ -127,7 +127,8 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
 			//outStream << "ilvl " << bitReader.readNumber(7) << '\n';
 			item->quality = bitReader.readNumber(4);
 			//outStream << "quality " << quality << '\n';
-			item->variableGraphicIndex = bitReader.readBool() ? bitReader.readNumber(3) + 1 : 0;
+			if (bitReader.readBool())
+				item->variableGraphicIndex = bitReader.readNumber(3) + 1;
 			if (bitReader.readBool()) // class info
 				bitReader.skip(11);
 			switch (item->quality)
@@ -416,6 +417,8 @@ ItemInfo *ItemParser::loadItemFromFile(const QString &filePath)
 		item->hasChanged = true;
 		item->row = item->column = -1;
 	}
+	else
+		ERROR_BOX_NO_PARENT(tr("Error opening file '%1'\nReason: %2").arg(filePath).arg(itemFile.errorString()));
 	return item;
 }
 

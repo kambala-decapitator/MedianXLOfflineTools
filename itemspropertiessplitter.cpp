@@ -19,6 +19,8 @@
 #endif
 
 
+static const QString iconPathFormat(":/PlugyArrows/Resources/icons/plugy/%1.png");
+
 ItemsPropertiesSplitter::ItemsPropertiesSplitter(ItemStorageTableView *itemsView, ItemStorageTableModel *itemsModel, bool shouldCreateNavigation, QWidget *parent)
     : QSplitter(Qt::Horizontal, parent), _itemsView(itemsView), _itemsModel(itemsModel)
 {
@@ -93,18 +95,18 @@ ItemsPropertiesSplitter::ItemsPropertiesSplitter(ItemStorageTableView *itemsView
 
 void ItemsPropertiesSplitter::itemSelected(const QModelIndex &index)
 {
-    _propertiesWidget->displayItemProperties(dynamic_cast<ItemManager *>(_itemsModel)->itemAt(index));
+    _propertiesWidget->displayItemProperties(_itemsModel->itemAt(index));
 }
 
 void ItemsPropertiesSplitter::keyPressEvent(QKeyEvent *keyEvent)
 {
     if (_left10Button && keyEvent->key() == Qt::Key_Shift)
     {
-        _left10Button->setText("left 100");
-        _leftButton->setText("first");
-        _rightButton->setText("last not empty");
+        _left10Button->setIcon(QIcon(iconPathFormat.arg("left100")));
+        _leftButton->setIcon(QIcon(iconPathFormat.arg("first")));
+        _rightButton->setIcon(QIcon(iconPathFormat.arg("last")));
         _rightButton->setToolTip(QString::number(_lastNotEmptyPage));
-        _right10Button->setText("right 100");
+        _right10Button->setIcon(QIcon(iconPathFormat.arg("right100")));
 
         _isShiftPressed = true;
     }
@@ -116,11 +118,11 @@ void ItemsPropertiesSplitter::keyReleaseEvent(QKeyEvent *keyEvent)
 {
     if (_left10Button && keyEvent->key() == Qt::Key_Shift)
     {
-        _left10Button->setText("left 10");
-        _leftButton->setText("left");
-        _rightButton->setText("right");
+        _left10Button->setIcon(QIcon(iconPathFormat.arg("left10")));
+        _leftButton->setIcon(QIcon(iconPathFormat.arg("left")));
+        _rightButton->setIcon(QIcon(iconPathFormat.arg("right")));
         _rightButton->setToolTip(QString());
-        _right10Button->setText("right 10");
+        _right10Button->setIcon(QIcon(iconPathFormat.arg("right10")));
 
         _isShiftPressed = false;
     }
@@ -150,7 +152,7 @@ void ItemsPropertiesSplitter::showItem(ItemInfo *item)
 void ItemsPropertiesSplitter::updateItems(const ItemsList &newItems)
 {
     _propertiesWidget->clear();
-    dynamic_cast<ItemManager *>(_itemsModel)->setItems(newItems);
+    _itemsModel->setItems(newItems);
 
     _itemsView->clearSpans();
     foreach (ItemInfo *item, newItems)
@@ -228,6 +230,13 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
 			connect(actionUnsocket, SIGNAL(triggered()), SLOT(unsocketItem()));
 			actions << actionUnsocket;
 		}
+		if (item->isEthereal)
+		{
+			QAction *actionMakeNonEthereal = new QAction(tr("Make Non-Ethereal"), _itemsView);
+			connect(actionMakeNonEthereal, SIGNAL(triggered()), SLOT(makeNonEthereal()));
+			actions << actionMakeNonEthereal;
+		}
+
 		// TODO: add "Remove Mystic Orbs"
 		QAction *actionDelete = new QAction(tr("Delete"), _itemsView);
 		connect(actionDelete, SIGNAL(triggered()), SLOT(deleteItem()));
@@ -251,48 +260,31 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
 
 void ItemsPropertiesSplitter::disenchantItem()
 {
-	QAction *action = qobject_cast<QAction *>(sender());
+	QAction *action = actionFromSender(sender(), QLatin1String("disenchant"));
 	if (!action)
-	{
-		ERROR_BOX("TROLOLOL I can't disenchant the item");
 		return;
-	}
 	
-	ItemInfo *item = itemFromCoordinate(action->data().toPoint());
-	qDebug() << "pos" << action->data().toPoint() << "item type" << item->itemType;
-	if (action->objectName() == "signet")
-	{
-		QString signetPath = DATA_PATH("items/signet_of_learning.d2i");
-		ItemInfo *signet = ItemParser::loadItemFromFile(signetPath);
-		if (!signet)
-		{
-			ERROR_BOX(tr("Error loading '%1'").arg(signetPath));
-			return;
-		}
+	ItemInfo *item = itemFromAction(action);
+	QString path = DATA_PATH(QString("items/%1.d2i").arg(action->objectName() == "signet" ? "signet_of_learning" : "arcane_shard"));
+	ItemInfo *newItem = ItemParser::loadItemFromFile(path);
 
-		//if (!ItemParser::storeItemIn(Enums::ItemStorage::Inventory, 6, 10, signet) && !ItemParser::storeItemIn(Enums::ItemStorage::Stash, 10, 10, signet))
-		//{
-		//	ERROR_BOX(tr("You have no free space in inventory and stash to store the Signet of Learning"));
-		//	delete signet;
-		//	return;
-		//}
+	//if (!ItemParser::storeItemIn(Enums::ItemStorage::Inventory, 6, 10, signet) && !ItemParser::storeItemIn(Enums::ItemStorage::Stash, 10, 10, signet))
+	//{
+	//	ERROR_BOX(tr("You have no free space in inventory and stash to store the Signet of Learning"));
+	//	delete signet;
+	//	return;
+	//}
 
-		// TODO: fix if item is on the character
-		signet->row = item->row;
-		signet->column = item->column;
-		signet->storage = item->storage;
-		signet->whereEquipped = item->whereEquipped;
-		signet->plugyPage = item->plugyPage;
-		signet->location = Enums::ItemLocation::Stored;
-		
-		ItemDataBase::currentCharacterItems->append(signet);
-		_allItems.append(signet);
-		performDeleteItem(item);
-	}
-	else // shards
-	{
+	// TODO: fix if item is on the character
+	newItem->row = item->row;
+	newItem->column = item->column;
+	newItem->storage = item->storage;
+	newItem->whereEquipped = item->whereEquipped;
+	newItem->plugyPage = item->plugyPage;
+	newItem->location = Enums::ItemLocation::Stored;
 
-	}
+	addItemToList(newItem, _allItems.indexOf(item));
+	performDeleteItem(item);
 }
 
 void ItemsPropertiesSplitter::unsocketItem()
@@ -300,16 +292,21 @@ void ItemsPropertiesSplitter::unsocketItem()
 
 }
 
+void ItemsPropertiesSplitter::makeNonEthereal()
+{
+	ItemInfo *item = itemFromAction(actionFromSender(sender(), QLatin1String("non-etherealize")));
+	if (item)
+	{
+		item->isEthereal = false;
+		_propertiesWidget->displayItemProperties(item);
+	}
+}
+
 void ItemsPropertiesSplitter::deleteItem()
 {
-	QAction *action = qobject_cast<QAction *>(sender());
-	if (!action)
-	{
-		ERROR_BOX("TROLOLOL I can't delete the item");
-		return;
-	}
-
-	performDeleteItem(itemFromCoordinate(action->data().toPoint()));
+	ItemInfo *item = itemFromAction(actionFromSender(sender(), QLatin1String("delete")));
+	if (item)
+		performDeleteItem(item);
 }
 
 ItemInfo *ItemsPropertiesSplitter::itemFromCoordinate(const QPoint &pos)
@@ -320,10 +317,40 @@ ItemInfo *ItemsPropertiesSplitter::itemFromCoordinate(const QPoint &pos)
 void ItemsPropertiesSplitter::performDeleteItem(ItemInfo *item)
 {
 	// TODO: add option to unsocket at first
-	ItemDataBase::currentCharacterItems->removeOne(item);
-	_allItems.removeOne(item);
+	removeItemFromList(item);
 	qDeleteAll(item->socketablesInfo);
 	delete item;
 
 	setItems(_allItems); // maybe not needed?
+}
+
+QAction *ItemsPropertiesSplitter::actionFromSender(QObject *sender, const QLatin1String &errorActionText)
+{
+	QAction *action = qobject_cast<QAction *>(sender);
+	if (!action)
+		ERROR_BOX("TROLOLOL I can't " + errorActionText + " the item");
+	return action;
+}
+
+ItemInfo *ItemsPropertiesSplitter::itemFromAction(QAction *action)
+{
+	ItemInfo *item = 0;
+	if (action)
+		item = itemFromCoordinate(action->data().toPoint());
+	return item;
+}
+
+void ItemsPropertiesSplitter::addItemToList(ItemInfo *item, int pos /*= -1*/)
+{
+	ItemDataBase::currentCharacterItems->append(item);
+	if (pos > -1)
+		_allItems.insert(pos, item);
+	else
+		_allItems.append(item);
+}
+
+void ItemsPropertiesSplitter::removeItemFromList(ItemInfo *item)
+{
+	ItemDataBase::currentCharacterItems->removeOne(item);
+	_allItems.removeOne(item);
 }

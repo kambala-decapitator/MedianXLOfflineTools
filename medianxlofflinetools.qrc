@@ -13,4 +13,14 @@
         <file>Resources/icons/arrow_down.png</file>
         <file>Resources/icons/arrow_right.png</file>
     </qresource>
+    <qresource prefix="/PlugyArrows">
+        <file>Resources/icons/plugy/first.png</file>
+        <file>Resources/icons/plugy/last.png</file>
+        <file>Resources/icons/plugy/left.png</file>
+        <file>Resources/icons/plugy/left10.png</file>
+        <file>Resources/icons/plugy/left100.png</file>
+        <file>Resources/icons/plugy/right.png</file>
+        <file>Resources/icons/plugy/right10.png</file>
+        <file>Resources/icons/plugy/right100.png</file>
+    </qresource>
 </RCC>

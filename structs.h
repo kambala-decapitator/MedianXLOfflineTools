@@ -48,7 +48,7 @@ struct ItemInfo
     ItemInfo(const QString &bits/*, int start, int size_*/) : bitString(bits)/*, startOffset(start), size(size_)*/ { init(); }
 
 private:
-	void init() { plugyPage = 0; hasChanged = false; ilvl = 1; }
+	void init() { plugyPage = 0; hasChanged = false; ilvl = 1; variableGraphicIndex = 0; }
 };
 Q_DECLARE_TYPEINFO(ItemInfo, Q_MOVABLE_TYPE);
 
