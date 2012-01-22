@@ -9,7 +9,7 @@
 QMultiHash<QString, QString> ItemDataBase::_sets;
 
 ItemsList *ItemDataBase::currentCharacterItems = 0;
-quint8 *ItemDataBase::charLevel = 0;
+quint8 *ItemDataBase::clvl = 0;
 Enums::ClassName::ClassNameEnum *ItemDataBase::charClass = 0;
 
 QHash<QByteArray, ItemBase> *ItemDataBase::Items()

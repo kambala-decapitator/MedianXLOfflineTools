@@ -16,7 +16,7 @@ class ItemParser
 
 public:
 	static ItemInfo *parseItem(QDataStream &inputDataStream, const QByteArray &bytes);
-	static QMap<int, ItemProperty> parseItemProperties(ReverseBitReader &bitReader, bool *ok);
+	static QMultiMap<int, ItemProperty> parseItemProperties(ReverseBitReader &bitReader, bool *ok);
 	static void writeItems(const ItemsList &items, QDataStream &ds);
 
 	static ItemInfo *loadItemFromFile(const QString &filePath);

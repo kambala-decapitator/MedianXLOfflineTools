@@ -587,7 +587,7 @@ void MedianXLOfflineTools::showFoundItem(ItemInfo *item)
 
 void MedianXLOfflineTools::showItems(bool activate /*= true*/)
 {
-	ItemDataBase::charLevel = &_editableCharInfo.basicInfo.level;
+	ItemDataBase::clvl = &_editableCharInfo.basicInfo.level;
 	ItemDataBase::charClass = &_editableCharInfo.basicInfo.classCode;
 
     if (_itemsDialog)

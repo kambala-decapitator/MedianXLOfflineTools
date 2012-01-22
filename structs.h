@@ -11,8 +11,9 @@ struct ItemProperty
 	int value, param; // param == 0 if it doesn't exist
     QString displayString; // not empty only for 'custom' descriptions
 
-    ItemProperty() {}
-    ItemProperty(int v, int p) : value(v), param(p) {}
+    ItemProperty() : value(0) {}
+	ItemProperty(int v, int p = 0) : value(v), param(p) {}
+	ItemProperty(const QString &text) : displayString(text) {}
 };
 Q_DECLARE_TYPEINFO(ItemProperty, Q_MOVABLE_TYPE);
 
@@ -40,7 +41,7 @@ struct ItemInfo
 	int currentDurability, maxDurability; // itemBase.type != Enums::ItemType::Misc
 	int quantity; // itemBase.isStackable == true
 	qint8 socketsNumber; // isSocketed == true
-    QMap<int, ItemProperty> props, rwProps;
+    QMultiMap<int, ItemProperty> props, rwProps;
     ItemsList socketablesInfo; // 0 ≤ size ≤ 6
 	QString rwName; // isRW == true
 

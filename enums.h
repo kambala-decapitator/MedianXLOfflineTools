@@ -220,7 +220,8 @@ public:
         Durability = 72,
         DurabilityMax = 73,
         RequiredLevel = 92,
-        DefenceBoCL = 214,
+		DefenceBoCL = 214,
+		EnhancedDefenceBoCL = 215,
         End = 511
     };
 };

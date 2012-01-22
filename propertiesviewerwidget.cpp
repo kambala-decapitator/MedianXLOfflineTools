@@ -136,17 +136,21 @@ void PropertiesViewerWidget::displayItemProperties(ItemInfo *item)
     if (itemBase.type == Enums::ItemType::Armor)
     {
         int baseDef = item->defense, totalDef = baseDef;
-        if (allProps.contains(Enums::ItemProperties::EnhancedDefence))
-            totalDef = totalDef * (100 + allProps[Enums::ItemProperties::EnhancedDefence].value) / 100;
-        if (allProps.contains(Enums::ItemProperties::Defence))
-            totalDef += allProps[Enums::ItemProperties::Defence].value;
-        if (allProps.contains(Enums::ItemProperties::DefenceBoCL))
-            totalDef += allProps[Enums::ItemProperties::DefenceBoCL].value;
+		ItemProperty foo;
+		int ed = allProps.value(Enums::ItemProperties::EnhancedDefence, foo).value + (allProps.value(Enums::ItemProperties::EnhancedDefenceBoCL, foo).value * *ItemDataBase::clvl) / 32;
+		if (ed)
+			totalDef = (totalDef * (100 + ed)) / 100;
+		totalDef += allProps.value(Enums::ItemProperties::Defence, foo).value + (allProps.value(Enums::ItemProperties::DefenceBoCL, foo).value * *ItemDataBase::clvl) / 32;
+        //if (allProps.contains(Enums::ItemProperties::EnhancedDefence))
+        //    totalDef = totalDef * (100 + allProps[Enums::ItemProperties::EnhancedDefence].value) / 100;
+        //if (allProps.contains(Enums::ItemProperties::Defence))
+        //    totalDef += allProps[Enums::ItemProperties::Defence].value;
+        //if (allProps.contains(Enums::ItemProperties::DefenceBoCL))
+        //    totalDef += allProps[Enums::ItemProperties::DefenceBoCL].value;
 
         QString defString = "<br>" + tr("Defense: %1");
         if (baseDef != totalDef)
-            itemDescription += defString.arg(htmlStringFromDiabloColorString(QString::number(totalDef), Blue)) +
-                               colorReplacementString(White) + QString(" (%1)").arg(baseDef);
+            itemDescription += defString.arg(htmlStringFromDiabloColorString(QString::number(totalDef), Blue)) + colorReplacementString(White) + QString(" (%1)").arg(baseDef);
         else
             itemDescription += defString.arg(baseDef);
     }
@@ -236,7 +240,7 @@ void PropertiesViewerWidget::setProperties(QTextEdit *textEdit, const QMap<int, 
     {
         const ItemProperty &prop = iter.value();
         int propId = iter.key();
-        if (propId == 23 && properties.contains(21) || propId == 24 && properties.contains(22)) // don't include secondary_(min/max)damage
+        if (propId == 23 && properties.contains(21) || propId == 24 && properties.contains(22)) // don't include secondary_(min/max)damage and 
             continue;
 
         QString displayString = prop.displayString.isEmpty() ? propertyDisplay(prop, propId) : prop.displayString;
@@ -313,7 +317,7 @@ void PropertiesViewerWidget::removeAllMysticOrbs()
         if (valueIndex > -1)
 			_item->bitString.remove(valueIndex, property.bits + property.saveParamBits + Enums::CharacterStats::StatCodeLength);
 		
-		moNumber += _item->props[moCode].value;
+		moNumber += _item->props.value(moCode).value;
         _item->props.remove(moCode);
     }
 
@@ -339,7 +343,7 @@ int PropertiesViewerWidget::indexOfPropertyValue(int id)
 {
     bool isMaxEnhDamageProp = id == 17;
     const ItemPropertyTxt &property = ItemDataBase::Properties()->value(id);
-    qulonglong value = _item->props[id].value + property.add;
+    qulonglong value = _item->props.value(id).value + property.add;
     qDebug() << "searching for property" << id << property.descPositive << "with value" << value << "actual value" << value - property.add;
     if (isMaxEnhDamageProp)
     {
@@ -368,32 +372,38 @@ void PropertiesViewerWidget::modifyMysticOrbProperty(int id, int decrement)
     if (valueIndex <= -1)
         return;
 
-    const ItemPropertyTxt &property = ItemDataBase::Properties()->value(id);
-    int &value = _item->props[id].value;
-    value -= decrement;
-    if (value)
-        _item->bitString.replace(valueIndex, property.bits, binaryStringFromNumber(value + property.add, false, property.bits)); // place modified value
+    const ItemPropertyTxt &propertyTxt = ItemDataBase::Properties()->value(id);
+	ItemProperty prop = _item->props.value(id);
+    prop.value -= decrement;
+    if (prop.value)
+	{
+        _item->bitString.replace(valueIndex, propertyTxt.bits, binaryStringFromNumber(prop.value + propertyTxt.add, false, propertyTxt.bits)); // place modified value
+		_item->props.replace(id, prop);
+	}
     else
     {
         _item->props.remove(id);
-        _item->bitString.remove(valueIndex, property.bits + property.saveParamBits + Enums::CharacterStats::StatCodeLength);
+        _item->bitString.remove(valueIndex, propertyTxt.bits + propertyTxt.saveParamBits + Enums::CharacterStats::StatCodeLength);
     }
 }
 
 int PropertiesViewerWidget::totalMysticOrbValue(int moCode) const
 {
 	quint8 multiplier = 1 + (_item->quality == Enums::ItemQuality::Crafted || _item->quality == Enums::ItemQuality::Honorific);
-	return _item->props[moCode].value * ItemDataBase::MysticOrbs()->value(moCode).value * multiplier;
+	return _item->props.value(moCode).value * ItemDataBase::MysticOrbs()->value(moCode).value * multiplier;
 }
 
 QString PropertiesViewerWidget::propertyDisplay(const ItemProperty &propDisplay, int propId)
 {
     // TODO: maybe add indication of trophy/bless if propId == 219
     int value = propDisplay.value;
+	if (!value)
+		return QString();
+
     const ItemPropertyTxt &prop = ItemDataBase::Properties()->value(propId);
     QString description = value < 0 ? prop.descNegative : prop.descPositive, result;
     if (prop.descStringAdd.contains(tr("Based on Character Level")))
-        value = value * *ItemDataBase::charLevel / 32;
+        value = (value * *ItemDataBase::clvl) / 32;
 
     char valueStringSigned[10];
     ::sprintf(valueStringSigned, "%+d", value);
@@ -424,9 +434,6 @@ QString PropertiesViewerWidget::propertyDisplay(const ItemProperty &propDisplay,
         result = QString(QString(prop.descVal == 1 ? "%1% %2" : "%2 %1%") + " %3").arg(prop.descFunc == 7 ? QString::number(value) : valueStringSigned)
                  .arg(description).arg(prop.descStringAdd); // 1 or 2
         break;
-//    case 8:
-//        result = QString(QString(prop.descVal == 1 ? "%1% %2" : "%2 %1%") + " %3").arg(valueStringSigned).arg(description).arg(prop.descStringAdd); // 1 or 2
-//        break;
     case 11:
         result = tr("Repairs 1 Durability in %1 Seconds").arg(100 / value);
         break;

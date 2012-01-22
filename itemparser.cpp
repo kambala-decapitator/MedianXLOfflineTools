@@ -211,7 +211,7 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
 			if (!ok)
 			{
 				inputDataStream.device()->seek(itemStartOffset - 2); // set to JM - beginning of the item
-				item->props[1].displayString = tr("Error parsing item properties, please report!");
+				item->props.insert(1, ItemProperty(tr("Error parsing item properties, please report!")));
 				searchEndOffset = nextItemOffset + 1;
 				continue;
 			}
@@ -228,7 +228,7 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
 				if (!ok)
 				{
 					inputDataStream.device()->seek(itemStartOffset - 2); // set to JM - beginning of the item
-					item->rwProps[1].displayString = tr("Error parsing RW properties, please report!");
+					item->rwProps.insert(1, ItemProperty(tr("Error parsing RW properties, please report!")));
 					searchEndOffset = nextItemOffset + 1;
 					continue;
 				}
@@ -281,9 +281,9 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
 	return item;
 }
 
-QMap<int, ItemProperty> ItemParser::parseItemProperties(ReverseBitReader &bitReader, bool *ok)
+QMultiMap<int, ItemProperty> ItemParser::parseItemProperties(ReverseBitReader &bitReader, bool *ok)
 {
-	QMap<int, ItemProperty> props;
+	QMultiMap<int, ItemProperty> props;
 	while (bitReader.pos() != -1)
 	{
 		int id = bitReader.readNumber(Enums::CharacterStats::StatCodeLength);
@@ -318,7 +318,7 @@ QMap<int, ItemProperty> ItemParser::parseItemProperties(ReverseBitReader &bitRea
 				QString desc = prop.descPositive;
 				propToAdd.displayString = desc.replace("%d", "%1").arg(propToAdd.value);
 			}
-			props[id++] = propToAdd;
+			props.insert(id++, propToAdd);
 			hasMinElementalDamage = true;
 		}
 		if (hasMinElementalDamage)
@@ -332,7 +332,7 @@ QMap<int, ItemProperty> ItemParser::parseItemProperties(ReverseBitReader &bitRea
 				QString desc = maxElementalDamageProp.descPositive;
 				propToAdd.displayString = desc.replace("%d", "%1").arg(propToAdd.value);
 			}
-			props[id] = propToAdd;
+			props.insert(id, propToAdd);
 
 			if (hasLength) // cold or poison length
 			{
@@ -344,7 +344,12 @@ QMap<int, ItemProperty> ItemParser::parseItemProperties(ReverseBitReader &bitRea
 				//				props[id] = propToAdd;
 
 				if (id == 59) // poison length
-					props[id - 1].value = props[id - 2].value = qRound(props[id - 2].value * length / 256.0); // set correct min/max poison damage
+				{
+					// set correct min/max poison damage
+					ItemProperty newProp(qRound(props.value(id - 2).value * length / 256.0));
+					props.replace(id - 1, newProp);
+					props.replace(id - 2, newProp);
+				}
 			}
 
 			continue;
@@ -379,11 +384,11 @@ QMap<int, ItemProperty> ItemParser::parseItemProperties(ReverseBitReader &bitRea
 			propToAdd.displayString = QString("%1 x '%2'").arg(propToAdd.value).arg(ItemDataBase::Items()->value(ItemDataBase::MysticOrbs()->value(id).itemCode).name);
 		}
 
-		props[id] = propToAdd;
+		props.insert(id, propToAdd);
 	}
 
 	*ok = false;
-	return QMap<int, ItemProperty>();
+	return QMultiMap<int, ItemProperty>();
 }
 
 void ItemParser::writeItems(const ItemsList &items, QDataStream &ds)

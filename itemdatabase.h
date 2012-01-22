@@ -29,7 +29,7 @@ public:
     static ItemsList *currentCharacterItems;
 
 	// bad design, but I'm lazy to create a new class
-	static quint8 *charLevel;
+	static quint8 *clvl;
 	static Enums::ClassName::ClassNameEnum *charClass;
 
 private:
