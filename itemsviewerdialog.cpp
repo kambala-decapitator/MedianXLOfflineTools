@@ -37,13 +37,9 @@ ItemsViewerDialog::ItemsViewerDialog(QWidget *parent) : QDialog(parent), _tabWid
         ItemsPropertiesSplitter *splitter = static_cast<ItemsPropertiesSplitter *>(_tabWidget->widget(i));
         QTableView *tableView = static_cast<QTableView *>(splitter->itemsView());
         for (int j = 0; j < splitter->itemsModel()->rowCount(); ++j)
-        {
             tableView->setRowHeight(j, cellSize);
-        }
         for (int j = 0; j < splitter->itemsModel()->columnCount(); ++j)
-        {
             tableView->setColumnWidth(j, cellSize);
-        }
     }
 
     restoreGeometry(QSettings().value("itemsViewerGeometry").toByteArray());

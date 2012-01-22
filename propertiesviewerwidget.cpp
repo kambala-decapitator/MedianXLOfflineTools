@@ -17,13 +17,13 @@ PropertiesViewerWidget::PropertiesViewerWidget(QWidget *parent) : QWidget(parent
     ui.setupUi(this);
 
     connect(ui.removeAllMysticOrbsPushButton, SIGNAL(clicked()), SLOT(removeAllMysticOrbs()));
-	connect(ui.toolBox, SIGNAL(currentChanged(int)), SLOT(currentItemTabChanged(int)));
+	connect(ui.tabWidget, SIGNAL(currentChanged(int)), SLOT(currentItemTabChanged(int)));
 }
 
 void PropertiesViewerWidget::displayItemProperties(ItemInfo *item)
 {
-    for (int i = 1; i < ui.toolBox->count(); ++i)
-        ui.toolBox->setItemEnabled(i, false);
+    for (int i = 1; i < ui.tabWidget->count(); ++i)
+        ui.tabWidget->setTabEnabled(i, false);
 
     ui.allTextEdit->clear();
     if (!(_item = item))
@@ -32,7 +32,7 @@ void PropertiesViewerWidget::displayItemProperties(ItemInfo *item)
     QMap<int, ItemProperty> allProps = item->props;
     if (item->isRW)
     {
-        ui.toolBox->setItemEnabled(2, true);
+        ui.tabWidget->setTabEnabled(2, true);
         setProperties(ui.runewordTextEdit, item->rwProps);
         renderItemDescription(ui.runewordTextEdit);
         addProperties(&allProps, item->rwProps);
@@ -49,8 +49,8 @@ void PropertiesViewerWidget::displayItemProperties(ItemInfo *item)
         {
             if (!isClassCharm)
             {
-                ui.toolBox->setItemEnabled(1, true);
-                ui.mysticOrbsTextEdit->append(iter.value().displayString);
+                ui.tabWidget->setTabEnabled(1, true);
+                ui.mysticOrbsTextEdit->append(QString("%1 = %2").arg(iter.value().displayString).arg(totalMysticOrbValue(iter.key())));
                 _mysticOrbs += iter.key();
                 iter = allProps.erase(iter);
             }
@@ -91,7 +91,7 @@ void PropertiesViewerWidget::displayItemProperties(ItemInfo *item)
     ui.socketablesTextEdit->clear();
     if (item->socketablesInfo.size())
     {
-        ui.toolBox->setItemEnabled(3, true);
+        ui.tabWidget->setTabEnabled(3, true);
         foreach (ItemInfo *socketableItem, item->socketablesInfo)
         {
             ui.socketablesTextEdit->append(ItemDataBase::completeItemName(socketableItem, true));
@@ -302,21 +302,19 @@ void PropertiesViewerWidget::renderItemDescription(QTextEdit *textEdit, QString 
 
 void PropertiesViewerWidget::removeAllMysticOrbs()
 {
-    int moNumber = 0, multiplier = 1 + (_item->quality == Enums::ItemQuality::Crafted || _item->quality == Enums::ItemQuality::Honorific);
+    int moNumber = 0;
     foreach (int moCode, _mysticOrbs)
     {
-        const MysticOrb &mo = ItemDataBase::MysticOrbs()->value(moCode);
-        int moStatCount = _item->props[moCode].value;
-        modifyMysticOrbProperty(mo.statId, moStatCount * mo.value * multiplier);
+        modifyMysticOrbProperty(ItemDataBase::MysticOrbs()->value(moCode).statId, totalMysticOrbValue(moCode));
 
         // remove MO data
         const ItemPropertyTxt &property = ItemDataBase::Properties()->value(moCode);
         int valueIndex = indexOfPropertyValue(moCode);
         if (valueIndex > -1)
-            _item->bitString.remove(valueIndex, property.bits + property.saveParamBits + Enums::CharacterStats::StatCodeLength);
+			_item->bitString.remove(valueIndex, property.bits + property.saveParamBits + Enums::CharacterStats::StatCodeLength);
+		
+		moNumber += _item->props[moCode].value;
         _item->props.remove(moCode);
-
-        moNumber += moStatCount;
     }
 
     modifyMysticOrbProperty(Enums::ItemProperties::RequiredLevel, moNumber * 2); // decrease rlvl
@@ -380,6 +378,12 @@ void PropertiesViewerWidget::modifyMysticOrbProperty(int id, int decrement)
         _item->props.remove(id);
         _item->bitString.remove(valueIndex, property.bits + property.saveParamBits + Enums::CharacterStats::StatCodeLength);
     }
+}
+
+int PropertiesViewerWidget::totalMysticOrbValue(int moCode) const
+{
+	quint8 multiplier = 1 + (_item->quality == Enums::ItemQuality::Crafted || _item->quality == Enums::ItemQuality::Honorific);
+	return _item->props[moCode].value * ItemDataBase::MysticOrbs()->value(moCode).value * multiplier;
 }
 
 QString PropertiesViewerWidget::propertyDisplay(const ItemProperty &propDisplay, int propId)
@@ -456,6 +460,6 @@ void PropertiesViewerWidget::addProperties(QMap<int, ItemProperty> *mutableProps
 
 void PropertiesViewerWidget::currentItemTabChanged(int index)
 {
-	for (int i = 0; i < ui.toolBox->count(); ++i)
-		ui.toolBox->setItemIcon(i, QIcon(QString(":/PropertiesViewerWidget/Resources/icons/arrow_%1").arg(i == index ? "down" : "right")));
+	for (int i = 0; i < ui.tabWidget->count(); ++i)
+		ui.tabWidget->setTabIcon(i, QIcon(QString(":/PropertiesViewerWidget/Resources/icons/arrow_%1").arg(i == index ? "down" : "right")));
 }

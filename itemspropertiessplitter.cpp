@@ -207,16 +207,19 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
 	ItemInfo *item = itemFromCoordinate(pos);
 	if (item)
 	{
-		qDebug() << "pos" << pos << "item type" << item->itemType;
 		// TODO: add slots
 		QList<QAction *> actions;
-		if (item->quality == Enums::ItemQuality::Set || item->quality == Enums::ItemQuality::Unique && ItemDataBase::Items()->value(item->itemType).typeString != "grtz") // not a charm
+		QByteArray typeString = ItemDataBase::Items()->value(item->itemType).typeString;
+		bool isCharm = typeString != "grtz", isSummonBook = typeString != "summ";
+		if (item->quality == Enums::ItemQuality::Set || item->quality == Enums::ItemQuality::Unique && !isCharm && !isSummonBook)
 		{
-			QAction *actionShards = new QAction(tr("Arcane Shards"), _itemsView);
+			static const QString imagePath("resources/data/images/%1.png");
+
+			QAction *actionShards = new QAction(QIcon(imagePath.arg("invfary4")), tr("Arcane Shards"), _itemsView);
 			actionShards->setObjectName("shards");
 			connect(actionShards, SIGNAL(triggered()), SLOT(disenchantItem()));
 
-			QAction *actionSol = new QAction(tr("Signet of Learning"), _itemsView);
+			QAction *actionSol = new QAction(QIcon(imagePath.arg("sigil1b")), tr("Signet of Learning"), _itemsView);
 			actionSol->setObjectName("signet");
 			connect(actionSol, SIGNAL(triggered()), SLOT(disenchantItem()));
 
@@ -224,12 +227,13 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
 			menuDisenchant->addActions(QList<QAction *>() << actionShards << actionSol);
 			actions << menuDisenchant->menuAction();
 		}
-		if (item->isSocketed && item->socketablesNumber)
-		{
-			QAction *actionUnsocket = new QAction(tr("Unsocket"), _itemsView);
-			connect(actionUnsocket, SIGNAL(triggered()), SLOT(unsocketItem()));
-			actions << actionUnsocket;
-		}
+		// TODO: 0.3
+		//if (item->isSocketed && item->socketablesNumber)
+		//{
+		//	QAction *actionUnsocket = new QAction(tr("Unsocket"), _itemsView);
+		//	connect(actionUnsocket, SIGNAL(triggered()), SLOT(unsocketItem()));
+		//	actions << actionUnsocket;
+		//}
 		if (item->isEthereal)
 		{
 			QAction *actionMakeNonEthereal = new QAction(tr("Make Non-Ethereal"), _itemsView);
@@ -248,10 +252,8 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
 
 			QMenu *actionMenu = action->menu();
 			if (actionMenu)
-			{
 				foreach (QAction *childAction, actionMenu->actions())
 					childAction->setData(pos);
-			}
 		}
 
 		QMenu::exec(actions, _itemsView->mapToGlobal(pos));

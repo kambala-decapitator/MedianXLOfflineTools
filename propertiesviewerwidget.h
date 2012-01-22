@@ -42,6 +42,7 @@ private:
     void renderItemDescription(QTextEdit *textEdit, QString *description = 0);
     int indexOfPropertyValue(int id);
     void modifyMysticOrbProperty(int id, int decrement);
+	int totalMysticOrbValue(int moCode) const;
     QString propertyDisplay(const ItemProperty &propDisplay, int propId);
     void addProperties(QMap<int, ItemProperty> *mutableProps, const QMap<int, ItemProperty> &propsToAdd);
 };
