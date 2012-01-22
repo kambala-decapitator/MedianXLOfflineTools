@@ -57,6 +57,8 @@ private:
     bool _isShiftPressed;
 
     void updateItems(const ItemsList &newItems);
+	ItemInfo *itemFromCoordinate(const QPoint &pos);
+	void performDeleteItem(ItemInfo *item);
 };
 
 #endif // ITEMSPROPERTIESSPLITTER_H

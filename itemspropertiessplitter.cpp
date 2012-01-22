@@ -3,17 +3,20 @@
 #include "itemdatabase.h"
 #include "itemstoragetableview.h"
 #include "itemstoragetablemodel.h"
+#include "itemparser.h"
 
 #include <QPushButton>
 #include <QDoubleSpinBox>
 #include <QKeyEvent>
 #include <QMenu>
 
-#include <QFile>
-
 #include <qmath.h>
 
 #include <limits>
+
+#ifndef QT_NO_DEBUG
+#include <QDebug>
+#endif
 
 
 ItemsPropertiesSplitter::ItemsPropertiesSplitter(ItemStorageTableView *itemsView, ItemStorageTableModel *itemsModel, bool shouldCreateNavigation, QWidget *parent)
@@ -199,20 +202,21 @@ void ItemsPropertiesSplitter::right10Clicked()
 
 void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
 {
-	ItemInfo *item = _itemsModel->itemAt(_itemsView->indexAt(pos));
+	ItemInfo *item = itemFromCoordinate(pos);
 	if (item)
 	{
+		qDebug() << "pos" << pos << "item type" << item->itemType;
 		// TODO: add slots
 		QList<QAction *> actions;
 		if (item->quality == Enums::ItemQuality::Set || item->quality == Enums::ItemQuality::Unique && ItemDataBase::Items()->value(item->itemType).typeString != "grtz") // not a charm
 		{
 			QAction *actionShards = new QAction(tr("Arcane Shards"), _itemsView);
 			actionShards->setObjectName("shards");
-			connect(actionShards, SIGNAL(clicked()), SLOT(disenchantItem()));
+			connect(actionShards, SIGNAL(triggered()), SLOT(disenchantItem()));
 
 			QAction *actionSol = new QAction(tr("Signet of Learning"), _itemsView);
 			actionSol->setObjectName("signet");
-			connect(actionSol, SIGNAL(clicked()), SLOT(disenchantItem()));
+			connect(actionSol, SIGNAL(triggered()), SLOT(disenchantItem()));
 
 			QMenu *menuDisenchant = new QMenu(tr("Disenchant into"), _itemsView);
 			menuDisenchant->addActions(QList<QAction *>() << actionShards << actionSol);
@@ -221,16 +225,25 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
 		if (item->isSocketed && item->socketablesNumber)
 		{
 			QAction *actionUnsocket = new QAction(tr("Unsocket"), _itemsView);
-			connect(actionUnsocket, SIGNAL(clicked()), SLOT(unsocketItem()));
+			connect(actionUnsocket, SIGNAL(triggered()), SLOT(unsocketItem()));
 			actions << actionUnsocket;
 		}
 		// TODO: add "Remove Mystic Orbs"
 		QAction *actionDelete = new QAction(tr("Delete"), _itemsView);
-		connect(actionDelete, SIGNAL(clicked()), SLOT(deleteItem()));
+		connect(actionDelete, SIGNAL(triggered()), SLOT(deleteItem()));
 		actions << actionDelete;
 
 		foreach (QAction *action, actions)
+		{
 			action->setData(pos);
+
+			QMenu *actionMenu = action->menu();
+			if (actionMenu)
+			{
+				foreach (QAction *childAction, actionMenu->actions())
+					childAction->setData(pos);
+			}
+		}
 
 		QMenu::exec(actions, _itemsView->mapToGlobal(pos));
 	}
@@ -245,9 +258,36 @@ void ItemsPropertiesSplitter::disenchantItem()
 		return;
 	}
 	
+	ItemInfo *item = itemFromCoordinate(action->data().toPoint());
+	qDebug() << "pos" << action->data().toPoint() << "item type" << item->itemType;
 	if (action->objectName() == "signet")
 	{
-		QFile f(resourcesPath + "/data/signet_of_learning.d2i");
+		QString signetPath = DATA_PATH("items/signet_of_learning.d2i");
+		ItemInfo *signet = ItemParser::loadItemFromFile(signetPath);
+		if (!signet)
+		{
+			ERROR_BOX(tr("Error loading '%1'").arg(signetPath));
+			return;
+		}
+
+		//if (!ItemParser::storeItemIn(Enums::ItemStorage::Inventory, 6, 10, signet) && !ItemParser::storeItemIn(Enums::ItemStorage::Stash, 10, 10, signet))
+		//{
+		//	ERROR_BOX(tr("You have no free space in inventory and stash to store the Signet of Learning"));
+		//	delete signet;
+		//	return;
+		//}
+
+		// TODO: fix if item is on the character
+		signet->row = item->row;
+		signet->column = item->column;
+		signet->storage = item->storage;
+		signet->whereEquipped = item->whereEquipped;
+		signet->plugyPage = item->plugyPage;
+		signet->location = Enums::ItemLocation::Stored;
+		
+		ItemDataBase::currentCharacterItems->append(signet);
+		_allItems.append(signet);
+		performDeleteItem(item);
 	}
 	else // shards
 	{
@@ -262,5 +302,28 @@ void ItemsPropertiesSplitter::unsocketItem()
 
 void ItemsPropertiesSplitter::deleteItem()
 {
+	QAction *action = qobject_cast<QAction *>(sender());
+	if (!action)
+	{
+		ERROR_BOX("TROLOLOL I can't delete the item");
+		return;
+	}
 
+	performDeleteItem(itemFromCoordinate(action->data().toPoint()));
+}
+
+ItemInfo *ItemsPropertiesSplitter::itemFromCoordinate(const QPoint &pos)
+{
+	return _itemsModel->itemAt(_itemsView->indexAt(pos));
+}
+
+void ItemsPropertiesSplitter::performDeleteItem(ItemInfo *item)
+{
+	// TODO: add option to unsocket at first
+	ItemDataBase::currentCharacterItems->removeOne(item);
+	_allItems.removeOne(item);
+	qDeleteAll(item->socketablesInfo);
+	delete item;
+
+	setItems(_allItems); // maybe not needed?
 }

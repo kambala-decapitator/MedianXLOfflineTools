@@ -12,7 +12,7 @@ class ItemDataBase
     Q_DECLARE_TR_FUNCTIONS(ItemDataBase)
 
 public:
-    static QHash<QLatin1String, ItemBase> *Items();
+    static QHash<QByteArray, ItemBase> *Items();
     static QHash<uint, ItemPropertyTxt> *Properties();
     static QHash<uint, SetItemInfo> *Sets();
     static QList<SkillInfo> *Skills();
@@ -20,7 +20,7 @@ public:
     static QHash<uint, MysticOrb> *MysticOrbs();
     static QHash<uint, QString> *Monsters();
     static QMultiHash<RunewordKeyPair, RunewordInfo> *RW();
-    static QHash<QLatin1String, SocketableItemInfo> *Socketables();
+    static QHash<QByteArray, SocketableItemInfo> *Socketables();
     static QStringList *NonMagicItemQualities();
 
     static QStringList completeSetForName(const QString &setName) { return _sets.values(setName); }

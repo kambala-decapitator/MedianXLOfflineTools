@@ -138,13 +138,13 @@ private:
 	inline void addStatisticBits(QString &bitsString, quint64 number, int fieldWidth);
 
     bool processPlugyStash(QHash<Enums::ItemStorage::ItemStorageEnum, PlugyStashInfo>::iterator &iter, ItemsList *items);
-    ItemInfo *parseItem(QDataStream &inputDataStream, const QByteArray &bytes);
-    QMap<int, ItemProperty> parseItemProperties(ReverseBitReader &bitReader, bool *ok);
-	void writeItems(const ItemsList &items, QDataStream &ds);
+ //   ItemInfo *parseItem(QDataStream &inputDataStream, const QByteArray &bytes);
+ //   QMap<int, ItemProperty> parseItemProperties(ReverseBitReader &bitReader, bool *ok);
+	//void writeItems(const ItemsList &items, QDataStream &ds);
     void clearItems(bool sharedStashPathChanged = true, bool hcStashPathChanged = true);
 
-	bool storeItemIn(Enums::ItemStorage::ItemStorageEnum storage, quint8 rows, quint8 cols, ItemInfo *item);
-	bool canStoreItemAt(quint8 row, quint8 col, const QByteArray &itemType, const ItemsList &items) const;
+	//bool storeItemIn(Enums::ItemStorage::ItemStorageEnum storage, quint8 rows, quint8 cols, ItemInfo *item);
+	//bool canStoreItemAt(quint8 row, quint8 col, const QByteArray &itemType, const ItemsList &items) const;
 };
 
 #endif // MEDIANXLOFFLINETOOLS_H

@@ -33,7 +33,7 @@ public:
     static const QStringList tabNames;
 	static const QList<int> rows;
 
-	static ItemsList itemsLocatedAt(int storage, bool location = Enums::ItemLocation::Stored);
+	//static ItemsList itemsLocatedAt(int storage, bool location = Enums::ItemLocation::Stored);
 	static int indexFromItemStorage(int storage);
 
     explicit ItemsViewerDialog(QWidget *parent);

@@ -24,7 +24,7 @@ struct ItemInfo
 {
     QString bitString;
     quint32 plugyPage;
-    int startOffset, size;
+    //int startOffset, size;
     bool hasChanged;
 
 	bool isQuest, isIdentified, isSocketed, isEar, isStarter, isExtended, isEthereal, isPersonalized, isRW;
@@ -45,7 +45,7 @@ struct ItemInfo
 	QString rwName; // isRW == true
 
     ItemInfo() { init(); }
-    ItemInfo(const QString &bits, int start, int size_) : bitString(bits), startOffset(start), size(size_) { init(); }
+    ItemInfo(const QString &bits/*, int start, int size_*/) : bitString(bits)/*, startOffset(start), size(size_)*/ { init(); }
 
 private:
 	void init() { plugyPage = 0; hasChanged = false; ilvl = 1; }

@@ -18,7 +18,7 @@ QVariant ItemManager::modelData(const QModelIndex &index, int role) const
     if (item)
     {
         const ItemBase &itemBase = ItemDataBase::Items()->value(item->itemType);
-        QString imageName = itemBase.imageName, imagePath = resourcesPath + "/data/images/" + imageName;
+        QString imageName = itemBase.imageName, imagePath = DATA_PATH("images/" + imageName);
         if (item->variableGraphicIndex)
             imagePath += QString::number(item->variableGraphicIndex);
 

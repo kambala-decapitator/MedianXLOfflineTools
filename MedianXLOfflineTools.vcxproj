@@ -99,6 +99,7 @@
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="itemparser.cpp" />
     <ClCompile Include="reversebitreader.cpp" />
     <ClCompile Include="enums.cpp" />
     <ClCompile Include="finditemsdialog.cpp" />
@@ -205,6 +206,7 @@
     <ClCompile Include="reversebitwriter.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="itemparser.h" />
     <ClInclude Include="reversebitreader.h" />
     <ClInclude Include="colors.hpp" />
     <CustomBuild Include="enums.h">

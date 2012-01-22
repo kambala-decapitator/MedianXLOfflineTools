@@ -4,6 +4,7 @@
 #include "itemstoragetablemodel.h"
 #include "itemdatabase.h"
 #include "propertiesviewerwidget.h"
+#include "itemparser.h"
 
 #include <QTabWidget>
 #include <QHeaderView>
@@ -60,7 +61,7 @@ void ItemsViewerDialog::updateItems()
     for (int i = GearIndex; i <= LastIndex; ++i)
     {
         bool isGear = i == GearIndex;
-        ItemsList items = itemsLocatedAt(Enums::ItemStorage::metaEnum().value(i), isGear);
+        ItemsList items = ItemParser::itemsLocatedAt(Enums::ItemStorage::metaEnum().value(i), isGear);
         if (isGear)
         {
             foreach (ItemInfo *item, items)
@@ -122,18 +123,18 @@ void ItemsViewerDialog::updateItems()
         _tabWidget->setTabEnabled(i, items.size() > 0);
     }
 }
-
-ItemsList ItemsViewerDialog::itemsLocatedAt(int storage, bool location /*= Enums::ItemLocation::Stored*/)
-{
-    ItemsList items, *characterItems = ItemDataBase::currentCharacterItems;
-    for (int i = 0; i < characterItems->size(); ++i)
-    {
-        ItemInfo *item = characterItems->at(i);
-        if (item->location == location && item->storage == storage)
-            items += item;
-    }
-    return items;
-}
+//
+//ItemsList ItemsViewerDialog::itemsLocatedAt(int storage, bool location /*= Enums::ItemLocation::Stored*/)
+//{
+//    ItemsList items, *characterItems = ItemDataBase::currentCharacterItems;
+//    for (int i = 0; i < characterItems->size(); ++i)
+//    {
+//        ItemInfo *item = characterItems->at(i);
+//        if (item->location == location && item->storage == storage)
+//            items += item;
+//    }
+//    return items;
+//}
 
 int ItemsViewerDialog::indexFromItemStorage(int storage)
 {
