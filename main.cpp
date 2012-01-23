@@ -17,15 +17,21 @@ int main(int argc, char *argv[])
 
 
 	QSettings settings;
-	LanguageManager::instance().currentLocale = settings.value(LanguageManager::instance().languageKey, QLocale::system().name().left(2)).toString().toLatin1();
+    LanguageManager &langManager = LanguageManager::instance();
+    langManager.currentLocale = settings.value(langManager.languageKey, QLocale::system().name().left(2)).toString();
+    langManager.setResourcesPath(
+#ifdef Q_WS_MACX
+    app.applicationDirPath() + "/../"
+#endif
+    "Resources");
 
 	QTranslator myappTranslator;
-	if (!myappTranslator.load(app.applicationName().remove(' ').toLower() + "_" + LanguageManager::instance().currentLocale, LanguageManager::instance().translationsPath))
-		LanguageManager::instance().currentLocale = LanguageManager::instance().defaultLocale;
+    if (!myappTranslator.load(app.applicationName().remove(' ').toLower() + "_" + langManager.currentLocale, langManager.translationsPath))
+        langManager.currentLocale = langManager.defaultLocale;
 	app.installTranslator(&myappTranslator);
 
 	QTranslator qtTranslator;
-	qtTranslator.load("qt_" + LanguageManager::instance().currentLocale, LanguageManager::instance().translationsPath);
+    qtTranslator.load("qt_" + langManager.currentLocale, langManager.translationsPath);
 	app.installTranslator(&qtTranslator);
 
 

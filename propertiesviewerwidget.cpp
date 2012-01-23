@@ -10,8 +10,6 @@
 static const QString baseFormat("<html><body bgcolor = \"black\"><table><tr><td align = \"center\" width = \"100%\"><font color = \"#ffffff\">%1</font></td></tr></table></body></html>");
 
 
-//const QString PropertiesViewerWidget::clvlKey = "clvl";
-
 PropertiesViewerWidget::PropertiesViewerWidget(QWidget *parent) : QWidget(parent), _item(0)
 {
     ui.setupUi(this);

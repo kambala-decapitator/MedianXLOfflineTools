@@ -14,34 +14,36 @@ SOURCES += main.cpp\
     resurrectpenaltydialog.cpp \
     qd2charrenamer.cpp \
     enums.cpp \
-    bitreader.cpp \
     itemdatabase.cpp \
     propertiesviewerwidget.cpp \
     itemsviewerdialog.cpp \
     itemstoragetablemodel.cpp \
     itemstoragetableview.cpp \
-    itemmanager.cpp \
     itemspropertiessplitter.cpp \
     helpers.cpp \
-	finditemsdialog.cpp
+	finditemsdialog.cpp \
+    reversebitwriter.cpp \
+    reversebitreader.cpp \
+    itemparser.cpp
 
 HEADERS  += medianxlofflinetools.h \
     resurrectpenaltydialog.h \
     qd2charrenamer.h \
     enums.h \
     colors.hpp \
-    bitreader.h \
     itemdatabase.h \
     structs.h \
     propertiesviewerwidget.h \
     itemsviewerdialog.h \
     itemstoragetablemodel.h \
     itemstoragetableview.h \
-    itemmanager.h \
     itemspropertiessplitter.h \
     helpers.h \
 	finditemsdialog.h \
-    languagemanager.h
+    languagemanager.h \
+    reversebitwriter.h \
+    reversebitreader.h \
+    itemparser.h
 
 FORMS    += medianxlofflinetools.ui \
     resurrectpenaltydialog.ui \

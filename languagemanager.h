@@ -1,7 +1,7 @@
 #ifndef LANGUAGEMANAGER_H
 #define LANGUAGEMANAGER_H
 
-#include "helpers.h"
+//#include "helpers.h"
 
 #include <QString>
 
@@ -16,12 +16,13 @@ public:
 	}
 
 	QString locale() const { return currentLocale == "ru" ? "ru" : defaultLocale; }
+    void setResourcesPath(const QString &path) { resourcesPath = path; translationsPath = resourcesPath + "/translations"; }
 
-	const QString languageKey, defaultLocale, translationsPath;
-	QString currentLocale;
+    const QString languageKey, defaultLocale;
+    QString currentLocale, resourcesPath, translationsPath;
 
 private:
-	LanguageManager() : languageKey("language"), defaultLocale("en"), translationsPath(resourcesPath + "/translations") {}
+    LanguageManager() : languageKey("language"), defaultLocale("en") {}
 };
 
 #endif // LANGUAGEMANAGER_H

@@ -253,7 +253,7 @@ QMultiHash<RunewordKeyPair, RunewordInfo> *ItemDataBase::RW()
             for (int i = 0; i < 6; ++i)
                 item.allowedItemTypes << data.at(i);
             item.name = QString::fromUtf8(data.at(6));
-            allRunewords.insert(qMakePair(data.at(7), data.size() == 9 ? data.at(8) : 0), item);
+            allRunewords.insert(qMakePair(data.at(7), data.size() == 9 ? data.at(8) : QByteArray()), item);
         }
     }
     return &allRunewords;

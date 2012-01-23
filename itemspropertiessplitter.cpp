@@ -50,6 +50,7 @@ ItemsPropertiesSplitter::ItemsPropertiesSplitter(ItemStorageTableView *itemsView
         _pageSpinBox->setPrefix(tr("Page #"));
         _pageSpinBox->setRange(1, (std::numeric_limits<quint32>::max)());
         _pageSpinBox->setValue(1);
+//        _pageSpinBox->setSizePolicy(QSizePolicy(QSizePolicy::Minimum, QSizePolicy::Minimum, QSizePolicy::SpinBox));
 
         QHBoxLayout *hlayout = new QHBoxLayout;
         hlayout->addWidget(_left10Button);
@@ -210,10 +211,10 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
 		// TODO: add slots
 		QList<QAction *> actions;
 		QByteArray typeString = ItemDataBase::Items()->value(item->itemType).typeString;
-		bool isCharm = typeString != "grtz", isSummonBook = typeString != "summ";
+        bool isCharm = typeString == "grtz", isSummonBook = typeString == "summ";
 		if (item->quality == Enums::ItemQuality::Set || item->quality == Enums::ItemQuality::Unique && !isCharm && !isSummonBook)
 		{
-			static const QString imagePath("resources/data/images/%1.png");
+            static const QString imagePath(DATA_PATH("images/%1.png"));
 
 			QAction *actionShards = new QAction(QIcon(imagePath.arg("invfary4")), tr("Arcane Shards"), _itemsView);
 			actionShards->setObjectName("shards");

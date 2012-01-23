@@ -45,9 +45,9 @@ const int MedianXLOfflineTools::maxRecentFiles = 5;
 
 // ctor
 
-MedianXLOfflineTools::MedianXLOfflineTools(QWidget *parent, Qt::WFlags flags) : QMainWindow(parent, flags), _findItemsDialog(0), _isLoaded(false),
-	//difficulties(QStringList() << tr("Hatred") << tr("Nightmare") << tr("Destruction")), hackerDetected(tr("1337 hacker detected! Please, play legit.")),
-    hackerDetected(tr("1337 hacker detected! Please, play legit.")), maxValueFormat(tr("Max: %1")), minValueFormat(tr("Min: %1")), investedValueFormat(tr("Invested: %1"))
+MedianXLOfflineTools::MedianXLOfflineTools(QWidget *parent, Qt::WFlags flags) : QMainWindow(parent, flags), _findItemsDialog(0), hackerDetected(tr("1337 hacker detected! Please, play legit.")),
+    //difficulties(QStringList() << tr("Hatred") << tr("Nightmare") << tr("Destruction")),
+    maxValueFormat(tr("Max: %1")), minValueFormat(tr("Min: %1")), investedValueFormat(tr("Invested: %1")), _isLoaded(false)
 {
     ui.setupUi(this);
 
@@ -278,7 +278,7 @@ void MedianXLOfflineTools::saveCharacter()
             plugyFileDataStream << info.gold;
         plugyFileDataStream << info.lastPage;
 
-        for (int page = 1; page <= info.lastPage; ++page)
+        for (quint32 page = 1; page <= info.lastPage; ++page)
         {
             ItemsList pageItems;
             foreach (ItemInfo *anItem, items)
@@ -1157,7 +1157,7 @@ bool MedianXLOfflineTools::processSaveFile(const QString &charPath)
         quint32 mercExp;
         inputDataStream >> mercExp;
         editableCharInfo.mercenary.experience = mercExp;
-        for (int i = 1; i <= Enums::CharacterStats::MaxLevel; ++i)
+        for (quint8 i = 1; i <= Enums::CharacterStats::MaxLevel; ++i)
             if (mercExp < i * i * (i + 1))
             {
                 editableCharInfo.mercenary.level = i - 1;
