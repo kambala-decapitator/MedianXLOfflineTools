@@ -191,9 +191,6 @@
     <ClInclude Include="GeneratedFiles\ui_finditemsdialog.h">
       <Filter>Generated Files</Filter>
     </ClInclude>
-    <ClInclude Include="languagemanager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="reversebitreader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -201,6 +198,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="itemparser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resourcepathmanager.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="languagemanager.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

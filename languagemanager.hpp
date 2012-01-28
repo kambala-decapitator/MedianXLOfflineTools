@@ -1,7 +1,5 @@
-#ifndef LANGUAGEMANAGER_H
-#define LANGUAGEMANAGER_H
-
-//#include "helpers.h"
+#ifndef LANGUAGEMANAGER_HPP
+#define LANGUAGEMANAGER_HPP
 
 #include <QString>
 
@@ -25,4 +23,4 @@ private:
     LanguageManager() : languageKey("language"), defaultLocale("en") {}
 };
 
-#endif // LANGUAGEMANAGER_H
+#endif // LANGUAGEMANAGER_HPP

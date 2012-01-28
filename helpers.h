@@ -9,10 +9,6 @@
 #define WARNING_BOX(message) CUSTOM_BOX(warning, message)
 #define ERROR_BOX_NO_PARENT(message) QMessageBox::critical(0, qApp->applicationName(), message)
 
-// paths to resources
-#define DATA_PATH(fileName) QString("%1/data/%2").arg(LanguageManager::instance().resourcesPath).arg(fileName)
-#define LOCALIZED_PATH(fileName) DATA_PATH(QString("%1/%2.txt").arg(LanguageManager::instance().locale()).arg(fileName))
-
 // string building
 class QString;
 static const QChar zeroChar('0');

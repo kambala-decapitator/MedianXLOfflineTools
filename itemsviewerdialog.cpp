@@ -43,6 +43,7 @@ ItemsViewerDialog::ItemsViewerDialog(QWidget *parent) : QDialog(parent), _tabWid
     }
 
     restoreGeometry(QSettings().value("itemsViewerGeometry").toByteArray());
+	_tabWidget->widget(0)->setFocus();
 }
 
 void ItemsViewerDialog::closeEvent(QCloseEvent *event)

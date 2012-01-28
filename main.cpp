@@ -1,5 +1,5 @@
 #include "medianxlofflinetools.h"
-#include "languagemanager.h"
+#include "languagemanager.hpp"
 
 #include <QApplication>
 
@@ -16,9 +16,8 @@ int main(int argc, char *argv[])
 	app.setApplicationVersion("0.2");
 
 
-	QSettings settings;
     LanguageManager &langManager = LanguageManager::instance();
-    langManager.currentLocale = settings.value(langManager.languageKey, QLocale::system().name().left(2)).toString();
+    langManager.currentLocale = QSettings().value(langManager.languageKey, QLocale::system().name().left(2)).toString();
     langManager.setResourcesPath(
 #ifdef Q_WS_MACX
     app.applicationDirPath() + "/../"

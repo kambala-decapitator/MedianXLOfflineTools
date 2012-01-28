@@ -41,7 +41,7 @@ bool isCube(ItemInfo *item)
 	return (item->storage == Enums::ItemStorage::Inventory || item->storage == Enums::ItemStorage::Stash) && item->itemType == "box";
 }
 
-bool hasChanged( ItemInfo *item )
+bool hasChanged(ItemInfo *item)
 {
 	return item->hasChanged;
 }

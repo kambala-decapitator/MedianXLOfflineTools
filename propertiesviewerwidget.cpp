@@ -459,7 +459,7 @@ void PropertiesViewerWidget::addProperties(QMap<int, ItemProperty> *mutableProps
         if (mutableProps->contains(iter.key()))
             (*mutableProps)[iter.key()].value += iter.value().value;
         else
-            (*mutableProps)[iter.key()] = iter.value();
+            mutableProps->insert(iter.key(), iter.value());
     }
 }
 

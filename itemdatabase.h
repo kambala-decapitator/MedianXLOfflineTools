@@ -2,7 +2,7 @@
 #define ITEMDATABASE_H
 
 #include "structs.h"
-#include "languagemanager.h"
+#include "languagemanager.hpp"
 
 
 class QFile;

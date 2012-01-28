@@ -1,5 +1,6 @@
 #include "itemstoragetablemodel.h"
 #include "itemdatabase.h"
+#include "resourcepathmanager.hpp"
 
 #include <QFile>
 
@@ -28,30 +29,19 @@ QVariant ItemStorageTableModel::data(const QModelIndex &index, int role) const
 	{
 		const ItemBase &itemBase = ItemDataBase::Items()->value(item->itemType);
 		// quick hack for jewel
-		QString imageName = item->itemType != "jew" ? itemBase.imageName : "invjw", imagePath = DATA_PATH("images/" + imageName);
+		QString imageName = item->itemType != "jew" ? itemBase.imageName : "invjw";
 		if (item->variableGraphicIndex)
-			imagePath += QString::number(item->variableGraphicIndex);
+			imageName += QString::number(item->variableGraphicIndex);
+		QString imagePath = ResourcePathManager::pathForImageName(imageName);
 
 		switch(role)
 		{
 		case Qt::DisplayRole:
-			if (!QFile::exists(imagePath + ".png"))
+			if (!QFile::exists(imagePath))
 				return imageName + ".dc6";
 			break;
 		case Qt::DecorationRole:
-			if (QFile::exists(imagePath + ".png"))
-				imagePath += ".png";
-			//            else if (QFile::exists(imagePath + ".dc6"))
-			//            {
-			//                int w, h;
-			//                unsigned char *imageData;
-			//                dc6ImageData(qPrintable(imagePath + ".dc6"), imageData, &w, &h);
-			//                QImage dc6Image(imageData, w, h, QImage::Format_Invalid);
-			//                QPixmap pixmap = QPixmap::fromImage(dc6Image);
-			//                free(imageData);
-			//                return pixmap;
-			//            }
-			if (imagePath.contains('.'))
+			if (QFile::exists(imagePath))
 			{
 				QPixmap pixmap(imagePath);
 				if (item->isEthereal)

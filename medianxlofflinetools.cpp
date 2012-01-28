@@ -6,7 +6,7 @@
 #include "itemdatabase.h"
 #include "propertiesviewerwidget.h"
 #include "finditemsdialog.h"
-#include "languagemanager.h"
+#include "resourcepathmanager.hpp"
 #include "reversebitwriter.h"
 #include "itemparser.h"
 
@@ -604,7 +604,7 @@ void MedianXLOfflineTools::showItems(bool activate /*= true*/)
 
 void MedianXLOfflineTools::giveCube()
 {
-	QString cubePath = DATA_PATH("items/cube.d2i");
+	QString cubePath = ResourcePathManager::dataPathForFileName("items/cube.d2i");
 	ItemInfo *cube = ItemParser::loadItemFromFile(cubePath);
 	if (!cube)
 	{
@@ -720,7 +720,7 @@ void MedianXLOfflineTools::loadData()
 
 void MedianXLOfflineTools::loadExpTable()
 {
-    QFile f(DATA_PATH("exptable.txt"));
+    QFile f(ResourcePathManager::dataPathForFileName("exptable.txt"));
     if (!f.open(QIODevice::ReadOnly | QIODevice::Text))
     {
         ERROR_BOX(tr("Experience table not loaded.\nReason: %1").arg(f.errorString()));
@@ -736,7 +736,7 @@ void MedianXLOfflineTools::loadExpTable()
 
 void MedianXLOfflineTools::loadMercNames()
 {
-    QFile f(LOCALIZED_PATH("mercs"));
+    QFile f(ResourcePathManager::localizedPathForFileName("mercs"));
     if (!f.open(QIODevice::ReadOnly | QIODevice::Text))
     {
         ERROR_BOX(tr("Mercenary names not loaded.\nReason: %1").arg(f.errorString()));

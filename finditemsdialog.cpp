@@ -188,8 +188,8 @@ void FindItemsDialog::loadSettings()
 
 void FindItemsDialog::saveSettings()
 {
-	QStringList history;
-	for (int i = 0; i < ui.searchComboBox->count(); ++i)
+	QStringList history; // 10 strings max
+	for (int i = 0; i < ui.searchComboBox->count() && i < 10; ++i)
 		history += ui.searchComboBox->itemText(i);
 
 	QSettings settings;

@@ -4,6 +4,7 @@
 #include "itemstoragetableview.h"
 #include "itemstoragetablemodel.h"
 #include "itemparser.h"
+#include "resourcepathmanager.hpp"
 
 #include <QPushButton>
 #include <QDoubleSpinBox>
@@ -39,23 +40,32 @@ ItemsPropertiesSplitter::ItemsPropertiesSplitter(ItemStorageTableView *itemsView
 
     if (shouldCreateNavigation)
     {
-        _left10Button = new QPushButton(this);
-        _leftButton = new QPushButton(this);
-        _rightButton = new QPushButton(this);
-        _right10Button = new QPushButton(this);
-        keyReleaseEvent(&QKeyEvent(QEvent::KeyRelease, Qt::Key_Shift, 0)); // hacky way to set text on buttons
+		_left10Button = new QPushButton(this);
+		_leftButton = new QPushButton(this);
+		_rightButton = new QPushButton(this);
+		_right10Button = new QPushButton(this);
+
+		QList<QPushButton *> buttons = QList<QPushButton *>() << _left10Button << _leftButton << _rightButton << _right10Button;
+		foreach (QPushButton *button, buttons)
+		{
+			button->setIconSize(QSize(32, 20));
+			button->resize(button->minimumSizeHint());
+		}
+        keyReleaseEvent(&QKeyEvent(QEvent::KeyRelease, Qt::Key_Shift, 0)); // hacky way to set button icons
 
         _pageSpinBox = new QDoubleSpinBox(this);
         _pageSpinBox->setDecimals(0);
         _pageSpinBox->setPrefix(tr("Page #"));
         _pageSpinBox->setRange(1, (std::numeric_limits<quint32>::max)());
         _pageSpinBox->setValue(1);
-//        _pageSpinBox->setSizePolicy(QSizePolicy(QSizePolicy::Minimum, QSizePolicy::Minimum, QSizePolicy::SpinBox));
+		_pageSpinBox->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
 
         QHBoxLayout *hlayout = new QHBoxLayout;
         hlayout->addWidget(_left10Button);
         hlayout->addWidget(_leftButton);
-        hlayout->addWidget(_pageSpinBox);
+		//hlayout->addStretch();
+		hlayout->addWidget(_pageSpinBox);
+		//hlayout->addStretch();
         hlayout->addWidget(_rightButton);
         hlayout->addWidget(_right10Button);
 
@@ -137,6 +147,8 @@ void ItemsPropertiesSplitter::setItems(const ItemsList &newItems)
     if (_left10Button)
     {
         _lastNotEmptyPage = _allItems.size() ? _allItems.last()->plugyPage : 0;
+		_pageSpinBox->setSuffix(QString(" / %1").arg(_lastNotEmptyPage));
+		_pageSpinBox->setMaximum(_lastNotEmptyPage);
         updateItemsForCurrentPage();
     }
     else
@@ -208,19 +220,26 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
 	ItemInfo *item = itemFromCoordinate(pos);
 	if (item)
 	{
-		// TODO: add slots
 		QList<QAction *> actions;
+
+		QAction *actionHtml = new QAction(tr("HTML..."), _itemsView), *actionBbCode = new QAction(tr("BBCode..."), _itemsView);
+		QMenu *menuExport = new QMenu(tr("Export as"), _itemsView);
+		menuExport->addActions(QList<QAction *>() << actionHtml << actionBbCode);
+		actions << menuExport->menuAction();
+
+		QAction *separator = new QAction(_itemsView);
+		separator->setSeparator(true);
+		actions << separator;
+
 		QByteArray typeString = ItemDataBase::Items()->value(item->itemType).typeString;
-        bool isCharm = typeString == "grtz", isSummonBook = typeString == "summ";
+        bool isCharm = typeString == "grtz" || typeString.startsWith("ara"), isSummonBook = typeString == "summ";
 		if (item->quality == Enums::ItemQuality::Set || item->quality == Enums::ItemQuality::Unique && !isCharm && !isSummonBook)
 		{
-            static const QString imagePath(DATA_PATH("images/%1.png"));
-
-			QAction *actionShards = new QAction(QIcon(imagePath.arg("invfary4")), tr("Arcane Shards"), _itemsView);
+			QAction *actionShards = new QAction(QIcon(ResourcePathManager::pathForImageName("invfary4")), tr("Arcane Shards"), _itemsView);
 			actionShards->setObjectName("shards");
 			connect(actionShards, SIGNAL(triggered()), SLOT(disenchantItem()));
 
-			QAction *actionSol = new QAction(QIcon(imagePath.arg("sigil1b")), tr("Signet of Learning"), _itemsView);
+			QAction *actionSol = new QAction(QIcon(ResourcePathManager::pathForImageName("sigil1b")), tr("Signet of Learning"), _itemsView);
 			actionSol->setObjectName("signet");
 			connect(actionSol, SIGNAL(triggered()), SLOT(disenchantItem()));
 
@@ -268,7 +287,7 @@ void ItemsPropertiesSplitter::disenchantItem()
 		return;
 	
 	ItemInfo *item = itemFromAction(action);
-	QString path = DATA_PATH(QString("items/%1.d2i").arg(action->objectName() == "signet" ? "signet_of_learning" : "arcane_shard"));
+	QString path = ResourcePathManager::dataPathForFileName(QString("items/%1.d2i").arg(action->objectName() == "signet" ? "signet_of_learning" : "arcane_shard"));
 	ItemInfo *newItem = ItemParser::loadItemFromFile(path);
 
 	//if (!ItemParser::storeItemIn(Enums::ItemStorage::Inventory, 6, 10, signet) && !ItemParser::storeItemIn(Enums::ItemStorage::Stash, 10, 10, signet))

@@ -1,6 +1,7 @@
 #include "itemdatabase.h"
 #include "helpers.h"
 #include "colors.hpp"
+#include "resourcepathmanager.hpp"
 
 #include <QFile>
 #include <QDebug>
@@ -17,7 +18,7 @@ QHash<QByteArray, ItemBase> *ItemDataBase::Items()
     static QHash<QByteArray, ItemBase> allItems;
     if (!allItems.size())
     {
-        QFile f(LOCALIZED_PATH("items"));
+        QFile f(ResourcePathManager::localizedPathForFileName("items"));
         if (!f.open(QIODevice::ReadOnly | QIODevice::Text))
         {
             ERROR_BOX_NO_PARENT(tr("Items data not loaded.\nReason: %1").arg(f.errorString()));
@@ -54,7 +55,7 @@ QHash<uint, ItemPropertyTxt> *ItemDataBase::Properties()
     static QHash<uint, ItemPropertyTxt> allProperties;
     if (!allProperties.size())
     {
-        QFile f(LOCALIZED_PATH("props"));
+        QFile f(ResourcePathManager::localizedPathForFileName("props"));
         if (!f.open(QIODevice::ReadOnly | QIODevice::Text))
         {
             ERROR_BOX_NO_PARENT(tr("Properties data not loaded.\nReason: %1").arg(f.errorString()));
@@ -98,7 +99,7 @@ QHash<uint, SetItemInfo> *ItemDataBase::Sets()
     static QHash<uint, SetItemInfo> allSets;
     if (!allSets.size())
     {
-        QFile f(LOCALIZED_PATH("sets"));
+        QFile f(ResourcePathManager::localizedPathForFileName("sets"));
         if (!f.open(QIODevice::ReadOnly | QIODevice::Text))
         {
             ERROR_BOX_NO_PARENT(tr("Sets data not loaded.\nReason: %1").arg(f.errorString()));
@@ -129,7 +130,7 @@ QList<SkillInfo> *ItemDataBase::Skills()
     static QList<SkillInfo> allSkills;
     if (!allSkills.size())
     {
-        QFile f(LOCALIZED_PATH("skills"));
+        QFile f(ResourcePathManager::localizedPathForFileName("skills"));
         if (!f.open(QIODevice::ReadOnly | QIODevice::Text))
         {
             ERROR_BOX_NO_PARENT(tr("Skills data not loaded.\nReason: %1").arg(f.errorString()));
@@ -156,7 +157,7 @@ QHash<uint, UniqueItemInfo> *ItemDataBase::Uniques()
     static QHash<uint, UniqueItemInfo> allUniques;
     if (!allUniques.size())
     {
-        QFile f(LOCALIZED_PATH("uniques"));
+        QFile f(ResourcePathManager::localizedPathForFileName("uniques"));
         if (!f.open(QIODevice::ReadOnly | QIODevice::Text))
         {
             ERROR_BOX_NO_PARENT(tr("Skills data not loaded.\nReason: %1").arg(f.errorString()));
@@ -183,7 +184,7 @@ QHash<uint, MysticOrb> *ItemDataBase::MysticOrbs()
     static QHash<uint, MysticOrb> allMysticOrbs;
     if (!allMysticOrbs.size())
     {
-        QFile f(DATA_PATH("mo.txt"));
+        QFile f(ResourcePathManager::dataPathForFileName("mo.txt"));
         if (!f.open(QIODevice::ReadOnly | QIODevice::Text))
         {
             ERROR_BOX_NO_PARENT(tr("Mystic Orbs data not loaded.\nReason: %1").arg(f.errorString()));
@@ -211,7 +212,7 @@ QHash<uint, QString> *ItemDataBase::Monsters()
     static QHash<uint, QString> allMonsters;
     if (!allMonsters.size())
     {
-        QFile f(LOCALIZED_PATH("monsters"));
+        QFile f(ResourcePathManager::localizedPathForFileName("monsters"));
         if (!f.open(QIODevice::ReadOnly | QIODevice::Text))
         {
             ERROR_BOX_NO_PARENT(tr("Monster names not loaded.\nReason: %1").arg(f.errorString()));
@@ -235,7 +236,7 @@ QMultiHash<RunewordKeyPair, RunewordInfo> *ItemDataBase::RW()
     static QMultiHash<RunewordKeyPair, RunewordInfo> allRunewords;
     if (!allRunewords.size())
     {
-        QFile f(LOCALIZED_PATH("rw"));
+        QFile f(ResourcePathManager::localizedPathForFileName("rw"));
         if (!f.open(QIODevice::ReadOnly | QIODevice::Text))
         {
             ERROR_BOX_NO_PARENT(tr("Runewords data not loaded.\nReason: %1").arg(f.errorString()));
@@ -264,7 +265,7 @@ QHash<QByteArray, SocketableItemInfo> *ItemDataBase::Socketables()
     static QHash<QByteArray, SocketableItemInfo> allSocketables;
     if (!allSocketables.size())
     {
-        QFile f(LOCALIZED_PATH("socketables"));
+        QFile f(ResourcePathManager::localizedPathForFileName("socketables"));
         if (!f.open(QIODevice::ReadOnly | QIODevice::Text))
         {
             ERROR_BOX_NO_PARENT(tr("Socketables data not loaded.\nReason: %1").arg(f.errorString()));
@@ -310,7 +311,7 @@ QStringList *ItemDataBase::NonMagicItemQualities()
     static QStringList allQualities;
     if (!allQualities.size())
     {
-        QFile f(LOCALIZED_PATH("LowQualityItems"));
+        QFile f(ResourcePathManager::localizedPathForFileName("LowQualityItems"));
         if (!f.open(QIODevice::ReadOnly | QIODevice::Text))
         {
             ERROR_BOX_NO_PARENT(tr("Non-magic qualities data not loaded.\nReason: %1").arg(f.errorString()));

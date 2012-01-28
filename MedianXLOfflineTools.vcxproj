@@ -208,6 +208,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="itemparser.h" />
+    <ClInclude Include="resourcepathmanager.hpp" />
     <ClInclude Include="reversebitreader.h" />
     <ClInclude Include="colors.hpp" />
     <CustomBuild Include="enums.h">
@@ -307,7 +308,7 @@
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(Configuration)\moc_%(Filename).cpp;%(Outputs)</Outputs>
     </CustomBuild>
-    <ClInclude Include="languagemanager.h" />
+    <ClInclude Include="languagemanager.hpp" />
     <ClInclude Include="Resources\win\resource.h" />
     <CustomBuild Include="resurrectpenaltydialog.h">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing %(Filename)%(Extension)...</Message>
