@@ -510,7 +510,7 @@ weap						Gemword!	7$a
 weap						Gemword!	sku		
 shie	shld					Gemword!	yo3		
 staf						Erilaz	r51		
-tors						Thanks everyone!\nMedian 2005-2011\nEternal	r51	r52	
+tors						Thanks everyone!\nMedian 2005-2012\nEternal	r51	r52	
 glov						Icarus	r49		
 weap						Archangel	r53	r53	
 armo						Gemword!	5$a		

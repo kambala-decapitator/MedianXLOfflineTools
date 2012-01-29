@@ -400,7 +400,7 @@ void ItemParser::writeItems(const ItemsList &items, QDataStream &ds)
 		QByteArray itemBytes;
 		for (int i = 0; i < item->bitString.length(); i += 8)
 			itemBytes.prepend(item->bitString.mid(i, 8).toShort(0, 2));
-		ds.writeRawData(itemBytes.constData(), itemBytes.size());
+		ds.writeRawData(itemBytes.constData(), itemBytes.size()); // do not write '\0'
 
 		writeItems(item->socketablesInfo, ds);
 	}
@@ -444,26 +444,34 @@ bool ItemParser::storeItemIn(Enums::ItemStorage::ItemStorageEnum storage, quint8
 	ItemsList items = itemsLocatedAt(storage);
 	for (quint8 i = 0; i < rows; ++i)
 		for (quint8 j = 0; j < cols; ++j)
-			if (canStoreItemAt(i, j, item->itemType, items))
+			if (canStoreItemAt(i, j, item->itemType, items, rows, cols))
 			{
 				item->storage = storage;
 				item->row = i;
 				item->column = j;
 				return true;
 			}
-			return false;
+
+	return false;
 }
 
-bool ItemParser::canStoreItemAt(quint8 row, quint8 col, const QByteArray &itemType, const ItemsList &items)
+bool ItemParser::canStoreItemAt(quint8 row, quint8 col, const QByteArray &storeItemType, const ItemsList &items, int rowsTotal, int colsTotal)
 {
-	const ItemBase &storeItemBase = ItemDataBase::Items()->value(itemType);
-	QRect storeItemRect(row, col, storeItemBase.width - 1, storeItemBase.height - 1);
+    // col is horizontal (x), row is vertical (y)
+	const ItemBase &storeItemBase = ItemDataBase::Items()->value(storeItemType);
+	QRect storeItemRect(col, row, storeItemBase.width, storeItemBase.height);
+    if (storeItemRect.right() >= colsTotal || storeItemRect.bottom() >= rowsTotal) // beyond grid
+        return false;
 
+	bool ok = true;
 	foreach (ItemInfo *item, items)
 	{
 		const ItemBase &itemBase = ItemDataBase::Items()->value(item->itemType);
-		if (!storeItemRect.intersects(QRect(item->row, item->column, itemBase.width - 1, itemBase.height - 1)))
-			return true;
+		if (storeItemRect.intersects(QRect(item->column, item->row, itemBase.width, itemBase.height)))
+		{
+			ok = false;
+			break;
+		}
 	}
-	return false;
+	return ok;
 }

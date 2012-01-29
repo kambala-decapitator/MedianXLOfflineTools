@@ -3,7 +3,6 @@
 
 #include "helpers.h"
 
-//#include <QMetaEnum>
 #include <QStringList>
 #include <QCoreApplication>
 

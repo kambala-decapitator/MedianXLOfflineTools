@@ -120,18 +120,6 @@ void ItemsViewerDialog::updateItems()
         _tabWidget->setTabEnabled(i, items.size() > 0);
     }
 }
-//
-//ItemsList ItemsViewerDialog::itemsLocatedAt(int storage, bool location /*= Enums::ItemLocation::Stored*/)
-//{
-//    ItemsList items, *characterItems = ItemDataBase::currentCharacterItems;
-//    for (int i = 0; i < characterItems->size(); ++i)
-//    {
-//        ItemInfo *item = characterItems->at(i);
-//        if (item->location == location && item->storage == storage)
-//            items += item;
-//    }
-//    return items;
-//}
 
 int ItemsViewerDialog::indexFromItemStorage(int storage)
 {
@@ -142,4 +130,9 @@ void ItemsViewerDialog::showItem(ItemInfo *item)
 {
 	_tabWidget->setCurrentIndex(indexFromItemStorage(item->storage));
 	static_cast<ItemsPropertiesSplitter *>(_tabWidget->currentWidget())->showItem(item);
+}
+
+void ItemsViewerDialog::enableCubeTab()
+{
+    _tabWidget->setTabEnabled(CubeIndex, true);
 }

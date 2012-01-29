@@ -245,7 +245,7 @@
 289	0	2					Hunting Banshee/Elemental Missiles	Hunting Banshee/Elemental Missiles		1	125	1					skill_druid_enhanced
 290	0	8					Lamia Reanimate Targets as: Rathma Priest	Lamia Reanimate Targets as: Rathma Priest		2	120	1					skill_lamia_rean
 291	0	8					Retribute Fire Resist Penalty Increased by	Retribute Fire Resist Penalty Increased by		2	101	2					skill_justkilledsomeone
-292	0	8					Starfire Lightning Resist Penalty Increased by	Starfire Lightning Resist Penalty Increased by		2	101	2					skill_starfire_synergy
+292	0	7					%d%% Chance to cast level %d %s when your Enemy is Slain	%d%% Chance to cast level %d %s when your Enemy is Slain		15	159					17	item_skillonanykill
 293	0	1					Doubled Terror Strike Duration	Doubled Terror Strike Duration		3	26	0					skill_arcanestrike_synergy
 294	0	5															x_signet41
 295	0	9					Mana on Striking in Melee	Mana on Striking in Melee		1	20	1					item_manaonstrikingmelee
@@ -312,7 +312,7 @@
 373	0	1					Worship the Crack Monkeys!	Worship the Crack Monkeys!		3	2	0					item_desc_deathmarch
 374	0	1					+300% Enhanced Damage vs. the Zakarum	+300% Enhanced Damage vs. the Zakarum		3	2	0					item_desc_judas
 375	0	2					Cannot Be Cubed	Cannot Be Cubed		3	180	0					item_lc_tgt_max
-376	0	2					Doubled Death Coil Effect	Doubled Death Coil Effect		3	150	0					item_deathcoil_synergy
+376	50	8					Slows Melee Target by	Slows Melee Target by		2	77	2					item_slow_offweapon
 377	50	9	329,330,331,332		to Spell Damage		to Physical/Magic Spell Damage	to Physical/Magic Spell Damage		4	88	1	5	4	1		passive_pm_mastery
 378	0	8					Bonus Elemental Damage to Vanquish	Bonus Elemental Damage to Vanquish		4	150	1					passive_vanquish_addelem
 379	0	5					!! THIS ITEM IS BROKEN IN THE NEW PATCH !!	!! THIS ITEM IS BROKEN IN THE NEW PATCH !!		3	150	0					deathlord_penalty
@@ -345,7 +345,7 @@
 408	0	5															x_signet61
 409	50	8					Bonus to Buff/Debuff/Cold Skill Duration	Bonus to Buff/Debuff/Cold Skill Duration		2	125	1					profession_duration_mod
 410	0	8															skill_hex_effect
-412	0	10															experimental_experience
+412	0	10															resonance_buff
 413	0	8					Bonus to Vitality when using an Apple	Bonus to Vitality when using an Apple		2	50	1					skill_bloodymary_bonus
 414	0	8					Bonus to Energy when using an Apple	Bonus to Energy when using an Apple		2	49	1					skill_paganheart_bonus
 418	0	2					Can Be Upgraded with Black Road Challenge	Can Be Upgraded with Black Road Challenge		3	146	0					item_needschallenged

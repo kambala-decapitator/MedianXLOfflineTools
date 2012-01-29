@@ -21,7 +21,8 @@ QString htmlStringFromDiabloColorString(const QString &name, ColorIndex defaultC
 
 // QMetaEnum getter
 #include <QMetaEnum>
-template<class T> QMetaEnum metaEnumFromName(const char *enumName)
+template<class T>
+QMetaEnum metaEnumFromName(const char *enumName)
 {
     const QMetaObject &metaObject = T::staticMetaObject;
     return metaObject.enumerator(metaObject.indexOfEnumerator(enumName));

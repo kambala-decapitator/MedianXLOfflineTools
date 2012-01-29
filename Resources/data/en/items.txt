@@ -1546,7 +1546,7 @@ quy	Cube Reagent (4/4)\n\orange;Dazzling Arcane Crystal	1	1	2	0	0	pearl2	thng		-
 P4+	\orange;refreshed \nDrink and be \nDivine Shrine (6 Charges)	1	2	2	0	0	jbscross	thng		-1
 35+	25% Bonus to Attack Rating	1	1	2	0	0	pearl2	asaa		-1
 &87	\orange;Mystic Orb\nWarbringer	1	1	2	0	0	pearl2	asaa		-1
-29-	\dgrey;Level: 60 (H) - 90 (T) - 115 (D)\nLocation: Act 5 Arreat Summit\nTricky (3/8)\nSummoning Uberquest\n\n-- Assault on Mount Arreat --\n\red;Pearl of Wisdom	1	1	2	0	0	shiniePurple	thng		-1
+29-	\dgrey;Location: Act 5 Arreat Summit\nTricky (3/8)\nSummoning Uberquest\n\n-- Assault on Mount Arreat --\n\red;Pearl of Wisdom	1	1	2	0	0	shiniePurple	thng		-1
 &22	\orange;Mystic Orb	1	1	2	0	0	pearl1	asaa		-1
 et1	\red;Elixir of Concentration	1	1	2	0	0	invxyz	hpot		-1
 hp2	Light Healing Potion	1	1	2	0	0	invhp2	hpot		-1
@@ -1589,7 +1589,7 @@ r32	\purple;Cham Rune	1	1	2	0	67	invrCham	rune		-1
 38+	Adds Stun Attack: 0.2 seconds	1	1	2	0	0	pearl2	asaa		-1
 0g6	\red;Elixir of Greater Vitality	1	1	2	0	0	invxyz	hpot		-1
 drf	Dream Spirit\nAmulet	1	1	2	0	0	invamu	amul		-1
-27-	\dgrey;Level: 55 (H) - 85 (T) - 110 (D)\nLocation: Act 1 The Hole 2\nEasy (1/8)\nSummoning Uberquest\n\n-- The Butcher --\n\red;Pearl of Wisdom	1	1	2	0	0	shiniePurple	thng		-1
+27-	\dgrey;Location: Act 1 The Hole 2\nEasy (1/8)\nSummoning Uberquest\n\n-- The Butcher --\n\red;Pearl of Wisdom	1	1	2	0	0	shiniePurple	thng		-1
 F6+	\orange;seldom attack \nThose who defend \nGloomy Shrine (4 Charges)	1	2	2	0	0	jbscross	thng		-1
 pab	Sacred Targe\nAmulet	1	1	2	0	0	invamu	amul		-1
 mp5	Super Mana Potion	1	1	2	0	0	invmp5	mpot		-1
@@ -1616,7 +1616,7 @@ a58	Scroll of Kings	1	1	2	0	0	invscb2	grtz		-1
 K9+	\orange;at the cost of wisdom \nPersistence comes \nShimmering Shrine (1 Charge)	1	2	2	0	0	jbscross	thng		-1
 A0+	\orange;by heavenly faith \nStrength is bolstered \nCreepy Shrine (10 Charges)	1	2	2	0	0	jbscross	thng		-1
 64+	2% Faster Cast Rate	1	1	2	0	0	pearl2	asaa		-1
-98-	\dgrey;Level: 75 (H) - 100 (T) - 121 (D)\nLocation: Act 1 Cave Level 2\nExtreme (6/8)\nUberlevel\n\n-- Duncraig (bonus uberquest) --\n\red;Pearl of Wisdom	1	1	2	0	0	shinieGreen	thng		-1
+98-	\dgrey;Location: Act 1 Cave Level 2\nExtreme (6/8)\nUberlevel\n\n-- Duncraig (bonus uberquest) --\n\red;Pearl of Wisdom	1	1	2	0	0	shinieGreen	thng		-1
 &79	\orange;Mystic Orb\nAuriel's Focus	1	1	2	0	0	pearl1	asaa		-1
 G7+	\orange;may yet be first \nThose who are last \nTainted Shrine (3 Charges)	1	2	2	0	0	jbscross	thng		-1
 c@c	\red;Moon Symbol	1	1	2	0	0	moon1	poti		-1
@@ -1713,7 +1713,7 @@ skr	Scissors Katar\nAmulet	1	1	2	0	0	invamu	amul		-1
 04-	\dgrey;treasures on Destruction difficulty.\nseek them out, for they hide legendary\nworld. Powerful heroes may want to\nspecial areas scattered throughout the\nDungeon uberquests are small but difficult\n\n-- Dungeon Uberquests --\n\red;Pearl of Wisdom	1	1	2	0	0	ShinieWhite	thng		-1
 9qr	Scissors Quhab\nAmulet	1	1	2	0	0	invamu	amul		-1
 g$c	\purple;Onyx	1	1	2	0	12	invgsoc	gemq		-1
-40-	\dgrey;Level: 100 (H) - 120 (T) - 121 (D)\nLocation: Act 1 Crypt\nImpossible (7/8)\nUberlevel\n\n-- Kingdom of Shadow --\n\red;Pearl of Wisdom	1	1	2	0	0	shinieGreen	thng		-1
+40-	\dgrey;Location: Act 1 Crypt\nImpossible (7/8)\nUberlevel\n\n-- Kingdom of Shadow --\n\red;Pearl of Wisdom	1	1	2	0	0	shinieGreen	thng		-1
 39+	1% Chance of Crushing Blow	1	1	2	0	0	pearl2	asaa		-1
 O5+	\orange;what it seems to be \nMagic is not always \nEnchanted Shrine (5 Charges)	1	2	2	0	0	jbscross	thng		-1
 G0+	\orange;may yet be first \nThose who are last \nTainted Shrine (10 Charges)	1	2	2	0	0	jbscross	thng		-1
@@ -1748,7 +1748,7 @@ C0+	\orange;flows from within \nThe essence of life \nQuiet Shrine (10 Charges)	
 2x5	\dgreen;Alpha Brain	1	1	2	0	0	invbrnz	thng		-1
 gpb	\purple;Perfect Sapphire	1	1	2	0	18	invgsbe	gems		-1
 &56	\orange;Mystic Orb	1	1	2	0	0	pearl2	asaa		-1
-32-	\dgrey;Level: 75 (H) - 100 (T) - 121 (D)\nLocation: Act 1 Tower Cellar\nExtreme (6/8)\nSummoning Uberquest\n\n-- Legacy of Blood --\n\red;Pearl of Wisdom	1	1	2	0	0	shiniePurple	thng		-1
+32-	\dgrey;Location: Act 1 Tower Cellar\nExtreme (6/8)\nSummoning Uberquest\n\n-- Legacy of Blood --\n\red;Pearl of Wisdom	1	1	2	0	0	shiniePurple	thng		-1
 glb	\purple;Flawless Sapphire	1	1	2	0	15	invgsbd	gems		-1
 02+	+1 to Dexterity	1	1	2	0	0	pearl4	asaa		-1
 H2+	\orange;at the cost of wisdom \nIntensity comes \nFascinating Shrine (8 Charges)	1	2	2	0	0	jbscross	thng		-1
@@ -1770,7 +1770,7 @@ A6+	\orange;by heavenly faith \nStrength is bolstered \nCreepy Shrine (4 Charges
 21+	Fire Resist +5%	1	1	2	0	0	pearl1	asaa		-1
 eyz	Eye	1	1	2	0	0	inveye	body		-1
 cm1	WARNING: HACKED ITEM\nSmall Charm	0	0	2	0	0	invchm	hpot		-1
-41-	\dgrey;Level: 80 (H) - 115 (T) - 121 (D)\nLocation: Act 5 Pit of Acheron\nExtreme (6/8)\nUberlevel\n\n-- Ghosts of Old Bremmtown --\n\red;Pearl of Wisdom	1	1	2	0	0	shinieGreen	thng		-1
+41-	\dgrey;Location: Act 5 Pit of Acheron\nExtreme (6/8)\nUberlevel\n\n-- Ghosts of Old Bremmtown --\n\red;Pearl of Wisdom	1	1	2	0	0	shinieGreen	thng		-1
 yq7	Hard Mode Charm	2	2	2	0	0	hardmode	grtz		-1
 mec	Cube Reagent\n\orange;Meditation Candle	1	1	2	0	0	invcndl	thng		-1
 r31	\purple;Jah Rune	1	1	2	0	65	invrJo	rune		-1
@@ -1785,7 +1785,7 @@ D7+	\orange;at the cost of self \nKnowledge and wisdom \nEerie Shrine (3 Charges
 pa2	Rondache\nAmulet	1	1	2	0	0	invamu	amul		-1
 29+	+2 to Mana when Struck	1	1	2	0	0	pearl1	asaa		-1
 &25	\orange;Mystic Orb	1	1	2	0	0	pearl1	asaa		-1
-37-	\dgrey;Level: 75 (H) - 100 (T) - 121 (D)\nLocation: Act 5 Infernal Pit\nTricky (3/8)\nUberlevel\n\n-- Khalimgrad --\n\red;Pearl of Wisdom	1	1	2	0	0	shinieGreen	thng		-1
+37-	\dgrey;Location: Act 5 Infernal Pit\nTricky (3/8)\nUberlevel\n\n-- Khalimgrad --\n\red;Pearl of Wisdom	1	1	2	0	0	shinieGreen	thng		-1
 bkd	Key to the Cairn Stones	2	2	2	0	0	invscb	ques		-1
 eo8	\red;Elixir of Cold	1	1	2	0	0	invxyz	hpot		-1
 dr9	Sacred Feathers\nAmulet	1	1	2	0	0	invamu	amul		-1
@@ -1799,7 +1799,7 @@ bbb	Lam Esen's Tome	2	2	2	0	0	invbbb	ques		-1
 &71	\orange;Mystic Orb\nMarksman's Eye	1	1	2	0	0	pearl4	asaa		-1
 yq8	Zakarum's Ear	1	1	2	0	0	invear	grtz		-1
 glw	\purple;Flawless Diamond	1	1	2	0	15	invgswd	gemd		-1
-45-	\dgrey;gems and/or runes...\nuniques, sacred items, gold,\nspecific item type: rares, sets,\nareas may drop more of a\nSome of the harder uberquest\n\n-- Drop Bias --\n\red;Pearl of Wisdom	1	1	2	0	0	ShinieWhite	thng		-1
+45-	\dgrey;gems and/or runes...\nsets, uniques, sacred items, gold,\nmore of a specific item type: rares,\nIn uberquest areas you may find\n\n-- Drop Bias --\n\red;Pearl of Wisdom	1	1	2	0	0	ShinieWhite	thng		-1
 0g8	\red;Elixir of Love	1	1	2	0	0	invxyz	hpot		-1
 r38	\purple;Thur Rune	1	1	2	0	84	r-a-09	rune		-1
 ne4	Gargoyle Head\nAmulet	1	1	2	0	0	invamu	amul		-1
@@ -1827,8 +1827,8 @@ ey2	\red;Elixir of Experience	1	1	2	0	0	invxyz	hpot		-1
 x01	Sacred Sunstone	1	1	2	0	0	invgmy	araa		0
 qey	Khalim's Eye	1	1	2	0	0	inveye	ques		-1
 gsv	\purple;Amethyst	1	1	2	0	12	invgsvc	gema		-1
-38-	\dgrey;Level: 60 (H) - 105 (T) - 121 (D)\nLocation: Act 2 Halls of the Dead 3\nHard (4/8)\nUberlevel\n\n-- Tran Athulua --\n\red;Pearl of Wisdom	1	1	2	0	0	shinieGreen	thng		-1
-26-	\dgrey;Level: 100 (H) - 120 (T) - 121 (D)\nLocation: Act 5 Abaddon\nImpossible (7/8)\nDungeon Uberquest\n\n-- Toraja --\n\red;Pearl of Wisdom	1	1	2	0	0	shinieRed	thng		-1
+38-	\dgrey;Location: Act 2 Halls of the Dead 3\nHard (4/8)\nUberlevel\n\n-- Tran Athulua --\n\red;Pearl of Wisdom	1	1	2	0	0	shinieGreen	thng		-1
+26-	\dgrey;Location: Act 5 Abaddon\nImpossible (7/8)\nDungeon Uberquest\n\n-- Toraja --\n\red;Pearl of Wisdom	1	1	2	0	0	shinieRed	thng		-1
 mpo	Mana Potion	1	1	2	0	0	invbps	mpot		-1
 pad	Kurast Shield\nAmulet	1	1	2	0	0	invamu	amul		-1
 ba3	Horned Helm\nAmulet	1	1	2	0	0	invamu	amul		-1
@@ -1884,7 +1884,7 @@ a68	Horazon's Focus	1	2	2	0	0	invbla	grtz		-1
 13+	+1% Bonus to Summoned Minion Life	1	1	2	0	0	pearl4	asaa		-1
 O7+	\orange;what it seems to be \nMagic is not always \nEnchanted Shrine (3 Charges)	1	2	2	0	0	jbscross	thng		-1
 neg	Hellspawn Skull\nAmulet	1	1	2	0	0	invamu	amul		-1
-07-	\dgrey;attack. Keep your distance!\nhoming bolts or an instant death pounce\nThese stationary monsters guard an area with\n\n-- Witches and Warlocks --\n\red;Pearl of Wisdom	1	1	2	0	0	ShinieWhite	thng		-1
+07-	\dgrey;attack. Keep your distance!\nan instant death teleport\nThese stationary monsters guard an area with\n\n-- Witches --\n\red;Pearl of Wisdom	1	1	2	0	0	ShinieWhite	thng		-1
 zka	\dgreen;Signet of Gold	1	1	2	0	0	sigil3B	poti		-1
 &18	\orange;Mystic Orb	1	1	2	0	0	pearl3	asaa		-1
 9wb	Wrist Spike\nAmulet	1	1	2	0	0	invamu	amul		-1
@@ -1948,7 +1948,7 @@ L9+	\orange;as one grows strong \nSome are weakened \nMysterious Shrine (1 Charg
 &43	\orange;Mystic Orb	1	1	2	0	0	pearl4	asaa		-1
 ne3	Unraveller Head\nAmulet	1	1	2	0	0	invamu	amul		-1
 T9+	\orange;brings destruction\nArcane power\nCryptic Shrine (1 Charge)	1	2	2	0	0	jbscross	thng		-1
-49-	\dgrey;Destruction difficulty.\nbe found in specific uberquest areas on\nSacred sets and uniques can only\nhardest to find.\nThese powerful items are among the\n\n-- Sacred Uniques and Sets --\n\red;Pearl of Wisdom	1	1	2	0	0	ShinieWhite	thng		-1
+49-	\dgrey;Destruction difficulty.\nuniques can only be found in\nhardest to find. Sacred sets and\nThese powerful items are among the\n\n-- Sacred Uniques and Sets --\n\red;Pearl of Wisdom	1	1	2	0	0	ShinieWhite	thng		-1
 1oµ	Cube Reagent\n\orange;Oil of Duplication	1	1	2	0	0	zelixir1	thng		-1
 nee	Succubus Skull\nAmulet	1	1	2	0	0	invamu	amul		-1
 7oµ	Cube Reagent\n\orange;Oil of Jewelcraft	1	1	2	0	0	zelixir7	thng		-1
@@ -1981,9 +1981,9 @@ yo4	\purple;Flawless Rainbow Stone	1	1	2	0	15	og4	gemx		-1
 53+	Regenerate Life +5	1	1	2	0	0	pearl1	asaa		-1
 r03	\purple;Tir Rune	1	1	2	0	13	invrTir	rune		-1
 luv	The Black Tower Key	1	2	2	0	0	invmph	key		-1
-34-	\dgrey;Level: 75 (H) - 100 (T) - 121 (D)\nLocation: ???\nUnknown Difficulty (?/8)\nSummoning Uberquest\n\n-- Inarius' Revenge (hidden) --\n\red;Pearl of Wisdom	1	1	2	0	0	shiniePurple	thng		-1
+34-	\dgrey;Location: ???\nUnknown Difficulty (?/8)\nSummoning Uberquest\n\n-- Inarius' Revenge (hidden) --\n\red;Pearl of Wisdom	1	1	2	0	0	shiniePurple	thng		-1
 elx	Elixir	1	1	2	0	0	invpot	elix		-1
-23-	\dgrey;Level: 65 (H) - 95 (T) - 120 (D)\nLocation: Act 3 Forgotten Reliquary\nHard (4/8)\nDungeon Uberquest\n\n-- Azmodan --\n\red;Pearl of Wisdom	1	1	2	0	0	shinieRed	thng		-1
+23-	\dgrey;Location: Act 3 Forgotten Reliquary\nHard (4/8)\nDungeon Uberquest\n\n-- Azmodan --\n\red;Pearl of Wisdom	1	1	2	0	0	shinieRed	thng		-1
 yo3	\purple;Rainbow Stone	1	1	2	0	12	og3	gemx		-1
 x2x	Sunstone of Ice	1	1	2	0	0	invgmb	grtz		-1
 &28	\orange;Mystic Orb	1	1	2	0	0	pearl1	asaa		-1
@@ -2001,7 +2001,7 @@ baa	Slayer Guard\nAmulet	1	1	2	0	0	invamu	amul		-1
 32+	2% Life Stolen per Hit	1	1	2	0	0	pearl2	asaa		-1
 &94	\orange;Mystic Orb\nExplorer's Globe	1	1	2	0	0	pearl3	asaa		-1
 99-	\dgrey;Would you like help?\nIt looks like you are playing Median.\nHi!\n\n-- Cluey the Paperclip --\n\red;Pearl of Wisdom	1	1	2	0	0	ShinieWhite	thng		-1
-33-	\dgrey;Level: 100 (H) - 120 (T) - 121 (D)\nLocation: Act 1 Inner Cloister\nImpossible (7/8)\nSummoning Uberquest\n\n-- Judgement Day --\n\red;Pearl of Wisdom	1	1	2	0	0	shiniePurple	thng		-1
+33-	\dgrey;Location: Act 1 Inner Cloister\nImpossible (7/8)\nSummoning Uberquest\n\n-- Judgement Day --\n\red;Pearl of Wisdom	1	1	2	0	0	shiniePurple	thng		-1
 S3+	\orange;the power of steel\nTime cannot diminish\nReligious Shrine (7 Charges)	1	2	2	0	0	jbscross	thng		-1
 R8+	\orange;refocused renews\nThe powers of mana\nStone Shrine (2 Charges)	1	2	2	0	0	jbscross	thng		-1
 T3+	\orange;brings destruction\nArcane power\nCryptic Shrine (7 Charges)	1	2	2	0	0	jbscross	thng		-1
@@ -2023,7 +2023,7 @@ A8+	\orange;by heavenly faith \nStrength is bolstered \nCreepy Shrine (2 Charges
 30+	1% Uninterruptable Attack	1	1	2	0	0	pearl1	asaa		-1
 46-	\dgrey;bonus recipes are doubled in power.\nHonorific items are blank, but affix\nHonorific item.\nCandle and a Victim's Heart to create an\nCube any magic weapon/armor with a Meditation\n\n-- Honorific Items --\n\red;Pearl of Wisdom	1	1	2	0	0	shinieYellow	thng		-1
 s@s	Assur's Bane	1	1	2	0	0	ring08	kill		-1
-35-	\dgrey;Level: 60 (H) - 90 (T) - 121 (D)\nLocation: Act 3 Arachnid Lair\nEasy (1/8)\nUberlevel\n\n-- Kurast 3000 BA --\n\red;Pearl of Wisdom	1	1	2	0	0	shinieGreen	thng		-1
+35-	\dgrey;Location: Act 3 Arachnid Lair\nEasy (1/8)\nUberlevel\n\n-- Kurast 3000 BA --\n\red;Pearl of Wisdom	1	1	2	0	0	shinieGreen	thng		-1
 E0+	\orange;is swift and sharp \nThe sword of justice \nWeird Shrine (10 Charges)	1	2	2	0	0	jbscross	thng		-1
 2x7	\dgreen;Gamma Brain	1	1	2	0	0	invbrnz	thng		-1
 r53	\grey;Great Rune\n\purple;Qor Rune	1	1	2	0	100	r-d-11	rune		-1
@@ -2032,7 +2032,7 @@ K6+	\orange;at the cost of wisdom \nPersistence comes \nShimmering Shrine (4 Cha
 r28	\purple;Lo Rune	1	1	2	0	59	invrLo	rune		-1
 ey9	\red;Elixir of Adrenaline	1	1	2	0	0	invxyz	hpot		-1
 amf	Matriarchal Javelin\nAmulet	1	1	2	0	0	invamu	amul		-1
-39-	\dgrey;Level: 75 (H) - 80 (T) - 121 (D)\nLocation: Act 2 Stony Tomb 2\nVery Hard (5/8)\nUberlevel\n\n-- Fauztinville --\n\red;Pearl of Wisdom	1	1	2	0	0	shinieGreen	thng		-1
+39-	\dgrey;Location: Act 2 Stony Tomb 2\nVery Hard (5/8)\nUberlevel\n\n-- Fauztinville --\n\red;Pearl of Wisdom	1	1	2	0	0	shinieGreen	thng		-1
 hpf	Full Healing Potion	1	1	2	0	0	invrpl	hpot		-1
 btl	Blade Talons\nAmulet	1	1	2	0	0	invamu	amul		-1
 qbr	Khalim's Brain	1	1	2	0	0	invbrnz	ques		-1
@@ -2046,7 +2046,7 @@ F9+	\orange;seldom attack \nThose who defend \nGloomy Shrine (1 Charge)	1	2	2	0	
 43+	-1% to Enemy Lightning Resistance	1	1	2	0	0	pearl4	asaa		-1
 T6+	\orange;brings destruction\nArcane power\nCryptic Shrine (4 Charges)	1	2	2	0	0	jbscross	thng		-1
 &68	\orange;Mystic Orb\nHeart of Frost	1	1	2	0	0	pearl3	asaa		-1
-21-	\dgrey;Level: 55 (H) - 85 (T) - 110 (D)\nLocation: Act 1 The Pit 2\nMedium (2/8)\nDungeon Uberquest\n\n-- Infernal Machine --\n\red;Pearl of Wisdom	1	1	2	0	0	shinieRed	thng		-1
+21-	\dgrey;Location: Act 1 The Pit 2\nMedium (2/8)\nDungeon Uberquest\n\n-- Infernal Machine --\n\red;Pearl of Wisdom	1	1	2	0	0	shinieRed	thng		-1
 gpy	\purple;Perfect Topaz	1	1	2	0	18	invgsye	gemt		-1
 qll	Quill	1	1	2	0	0	invquil	body		-1
 ob9	Sparkling Ball\nAmulet	1	1	2	0	0	invamu	amul		-1
@@ -2060,7 +2060,7 @@ O0+	\orange;what it seems to be \nMagic is not always \nEnchanted Shrine (10 Cha
 &09	\orange;Mystic Orb	1	1	2	0	0	pearl4	asaa		-1
 P9+	\orange;refreshed \nDrink and be \nDivine Shrine (1 Charge)	1	2	2	0	0	jbscross	thng		-1
 &62	\orange;Mystic Orb	1	1	2	0	0	pearl2	asaa		-1
-zen	Thanks for playing\nmodsbylaz.hugelaser.com\n(release 002)\nMedian XL 'Version Omega'	1	2	2	0	0	invjbi	woot		-1
+zen	Thanks for playing\nmodsbylaz.hugelaser.com\nMedian XL 2012 Edition	1	2	2	0	0	invjbi	woot		-1
 sku	\purple;Skull	1	1	2	0	12	invsku	gemz		-1
 &32	\orange;Mystic Orb	1	1	2	0	0	pearl2	asaa		-1
 ne6	Mummified Trophy\nAmulet	1	1	2	0	0	invamu	amul		-1
@@ -2078,7 +2078,7 @@ j34	A Jade Figurine	1	2	2	0	0	invjbi	ques		-1
 L2+	\orange;as one grows strong \nSome are weakened \nMysterious Shrine (8 Charges)	1	2	2	0	0	jbscross	thng		-1
 O3+	\orange;what it seems to be \nMagic is not always \nEnchanted Shrine (7 Charges)	1	2	2	0	0	jbscross	thng		-1
 K4+	\orange;at the cost of wisdom \nPersistence comes \nShimmering Shrine (6 Charges)	1	2	2	0	0	jbscross	thng		-1
-20-	\dgrey;Level: 55 (H) - 85 (T) - 110 (D)\nLocation: Act 2 Ancient Tunnels\nEasy (1/8)\nDungeon Uberquest\n\n-- Creature of Flame --\n\red;Pearl of Wisdom	1	1	2	0	0	shinieRed	thng		-1
+20-	\dgrey;Location: Act 2 Ancient Tunnels\nEasy (1/8)\nDungeon Uberquest\n\n-- Creature of Flame --\n\red;Pearl of Wisdom	1	1	2	0	0	shinieRed	thng		-1
 dr7	Griffon Headdress\nAmulet	1	1	2	0	0	invamu	amul		-1
 ne1	Preserved Head\nAmulet	1	1	2	0	0	invamu	amul		-1
 &27	\orange;Mystic Orb	1	1	2	0	0	pearl1	asaa		-1
@@ -2127,7 +2127,7 @@ N5+	\orange;the body thrives \nWhile the spirit is vigilant \nMagical Shrine (5 
 O9+	\orange;what it seems to be \nMagic is not always \nEnchanted Shrine (1 Charge)	1	2	2	0	0	jbscross	thng		-1
 J4+	\orange;at the cost of wisdom \nSalvation comes \nSacred Shrine (6 Charges)	1	2	2	0	0	jbscross	thng		-1
 D6+	\orange;at the cost of self \nKnowledge and wisdom \nEerie Shrine (4 Charges)	1	2	2	0	0	jbscross	thng		-1
-22-	\dgrey;Level: 60 (H) - 90 (T) - 115 (D)\nLocation: Act 3 Swampy Pit 3\nTricky (3/8)\nDungeon Uberquest\n\n-- Death Projector --\n\red;Pearl of Wisdom	1	1	2	0	0	shinieRed	thng		-1
+22-	\dgrey;Location: Act 3 Swampy Pit 3\nTricky (3/8)\nDungeon Uberquest\n\n-- Death Projector --\n\red;Pearl of Wisdom	1	1	2	0	0	shinieRed	thng		-1
 P7+	\orange;refreshed \nDrink and be \nDivine Shrine (3 Charges)	1	2	2	0	0	jbscross	thng		-1
 Q9+	\orange;through destruction\nNew strength is forged\nHidden Shrine (1 Charge)	1	2	2	0	0	jbscross	thng		-1
 &45	\orange;Mystic Orb	1	1	2	0	0	pearl3	asaa		-1
@@ -2194,7 +2194,8 @@ H5+	\orange;at the cost of wisdom \nIntensity comes \nFascinating Shrine (5 Char
 gfw	\purple;Flawed Diamond	1	1	2	0	5	invgswb	gemd		-1
 neb	Minion Skull\nAmulet	1	1	2	0	0	invamu	amul		-1
 Q5+	\orange;through destruction\nNew strength is forged\nHidden Shrine (5 Charges)	1	2	2	0	0	jbscross	thng		-1
-24-	\dgrey;Level: 70 (H) - 95 (T) - 120 (D)\nLocation: Act 3 Ruined Fane\nVery Hard (5/8)\nDungeon Uberquest\n\n-- Rathma Square --\n\red;Pearl of Wisdom	1	1	2	0	0	shinieRed	thng		-1
+96-	\dgrey;are not prepared, level up some more!\n120 and can drop the best items. If you\nultimate challenge. All monsters are level\nTerror difficulty. Destruction awaits, the\nCongratulations! You defeated Baal on\n\n-- Eve of Destruction --\n\red;Pearl of Wisdom	1	1	2	0	0	ShinieWhite	thng		-1
+24-	\dgrey;Location: Act 3 Ruined Fane\nVery Hard (5/8)\nDungeon Uberquest\n\n-- Rathma Square --\n\red;Pearl of Wisdom	1	1	2	0	0	shinieRed	thng		-1
 am9	Ceremonial Pike\nAmulet	1	1	2	0	0	invamu	amul		-1
 C1+	\orange;flows from within \nThe essence of life \nQuiet Shrine (9 Charges)	1	2	2	0	0	jbscross	thng		-1
 36+	+15% Enhanced Damage	1	1	2	0	0	pearl2	asaa		-1
@@ -2259,10 +2260,10 @@ F5+	\orange;seldom attack \nThose who defend \nGloomy Shrine (5 Charges)	1	2	2	0
 15-	\dgrey;runes can likewise be downgraded.\nto the next higher gem or rune. Single\nTwo gems or runes upgrade in the cube\n\n-- Upgrading Runes and Gems --\n\red;Pearl of Wisdom	1	1	2	0	0	shinieYellow	thng		-1
 &04	\orange;Mystic Orb	1	1	2	0	0	pearl4	asaa		-1
 amd	Matriarchal Spear\nAmulet	1	1	2	0	0	invamu	amul		-1
-28-	\dgrey;Level: 55 (H) - 85 (T) - 110 (D)\nLocation: Act 2 Valley of Snakes\nMedium (2/8)\nSummoning Uberquest\n\n-- The Binding of Baal --\n\red;Pearl of Wisdom	1	1	2	0	0	shiniePurple	thng		-1
+28-	\dgrey;Location: Act 2 Valley of Snakes\nMedium (2/8)\nSummoning Uberquest\n\n-- The Binding of Baal --\n\red;Pearl of Wisdom	1	1	2	0	0	shiniePurple	thng		-1
 &57	\orange;Mystic Orb	1	1	2	0	0	pearl2	asaa		-1
 pa1	Targe\nAmulet	1	1	2	0	0	invamu	amul		-1
-30-	\dgrey;Level: 65 (H) - 95 (T) - 120 (D)\nLocation: Act 3 Kurast Causeway\nHard (4/8)\nSummoning Uberquest\n\n-- Akarat --\n\red;Pearl of Wisdom	1	1	2	0	0	shiniePurple	thng		-1
+30-	\dgrey;Location: Act 3 Kurast Causeway\nHard (4/8)\nSummoning Uberquest\n\n-- Akarat --\n\red;Pearl of Wisdom	1	1	2	0	0	shiniePurple	thng		-1
 T7+	\orange;brings destruction\nArcane power\nCryptic Shrine (3 Charges)	1	2	2	0	0	jbscross	thng		-1
 wrb	Wrist Blade\nAmulet	1	1	2	0	0	invamu	amul		-1
 D2+	\orange;at the cost of self \nKnowledge and wisdom \nEerie Shrine (8 Charges)	1	2	2	0	0	jbscross	thng		-1
@@ -2288,7 +2289,7 @@ r46	\purple;Rha Rune	1	1	2	0	100	r-a-17	rune		-1
 zku	\dgreen;Signet of Experience	1	1	2	0	0	sigil5B	poti		-1
 E7+	\orange;is swift and sharp \nThe sword of justice \nWeird Shrine (3 Charges)	1	2	2	0	0	jbscross	thng		-1
 &63	\orange;Mystic Orb	1	1	2	0	0	pearl2	asaa		-1
-31-	\dgrey;Level: 70 (H) - 95 (T) - 121 (D)\nLocation: Act 5 Nihlathak's Temple\nVery Hard (5/8)\nSummoning Uberquest\n\n-- Lord Aldric Jitan --\n\red;Pearl of Wisdom	1	1	2	0	0	shiniePurple	thng		-1
+31-	\dgrey;Location: Act 5 Nihlathak's Temple\nVery Hard (5/8)\nSummoning Uberquest\n\n-- Lord Aldric Jitan --\n\red;Pearl of Wisdom	1	1	2	0	0	shiniePurple	thng		-1
 r34	\purple;Sha Rune	1	1	2	0	72	r-a-05	rune		-1
 M1+	\orange;least expected \nRiches abound when \nSpiritual Shrine (9 Charges)	1	2	2	0	0	jbscross	thng		-1
 13-	\dgrey;(See documentation for details)\nReward: sunstone upgrade\n- Successful Priestess kill\n- Level 50-70 or below\nRequires:\n\n-- Level Challenge --\n\red;Pearl of Wisdom	1	1	2	0	0	ShinieBlue	thng		-1
@@ -2369,7 +2370,7 @@ gfy	\purple;Flawed Topaz	1	1	2	0	5	invgsyb	gemt		-1
 x05	Soulstone Shard	1	1	2	0	0	invgmy	arae		2
 r47	\purple;Xar Rune	1	1	2	0	100	r-a-18	rune		-1
 w@w	Cold Fusion Schematics	1	1	2	0	0	invhscr2	grtz		-1
-25-	\dgrey;Level: 75 (H) - 100 (T) - 121 (D)\nLocation: Act 1 Underground Passage 2\nExtreme (6/8)\nDungeon Uberquest\n\n-- Cathedral of Vanity --\n\red;Pearl of Wisdom	1	1	2	0	0	shinieRed	thng		-1
+25-	\dgrey;Location: Act 1 Underground Passage 2\nExtreme (6/8)\nDungeon Uberquest\n\n-- Cathedral of Vanity --\n\red;Pearl of Wisdom	1	1	2	0	0	shinieRed	thng		-1
 &19	\orange;Mystic Orb	1	1	2	0	0	pearl3	asaa		-1
 ob5	Jared's Stone\nAmulet	1	1	2	0	0	invamu	amul		-1
 gld	Gold	1	1	2	1	0	invgld	gold		-1
@@ -2387,7 +2388,7 @@ Q1+	\orange;through destruction\nNew strength is forged\nHidden Shrine (9 Charge
 r07	\purple;Tal Rune	1	1	2	0	17	invrTal	rune		-1
 R7+	\orange;refocused renews\nThe powers of mana\nStone Shrine (3 Charges)	1	2	2	0	0	jbscross	thng		-1
 &69	\orange;Mystic Orb\nRelic of Yaerius	1	1	2	0	0	pearl3	asaa		-1
-36-	\dgrey;Level: 70 (H) - 95 (T) - 121 (D)\nLocation: Act 5 Drifter Cavern\nMedium (2/8)\nUberlevel\n\n-- Island of the Sunless Sea --\n\red;Pearl of Wisdom	1	1	2	0	0	shinieGreen	thng		-1
+36-	\dgrey;Location: Act 5 Drifter Cavern\nMedium (2/8)\nUberlevel\n\n-- Island of the Sunless Sea --\n\red;Pearl of Wisdom	1	1	2	0	0	shinieGreen	thng		-1
 ey6	\red;Elixir of Dexterity	1	1	2	0	0	invxyz	hpot		-1
 L8+	\orange;as one grows strong \nSome are weakened \nMysterious Shrine (2 Charges)	1	2	2	0	0	jbscross	thng		-1
 S0+	\orange;the power of steel\nTime cannot diminish\nReligious Shrine (10 Charges)	1	2	2	0	0	jbscross	thng		-1

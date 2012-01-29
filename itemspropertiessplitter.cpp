@@ -5,6 +5,8 @@
 #include "itemstoragetablemodel.h"
 #include "itemparser.h"
 #include "resourcepathmanager.hpp"
+#include "itemsviewerdialog.h"
+#include "reversebitwriter.h"
 
 #include <QPushButton>
 #include <QDoubleSpinBox>
@@ -287,26 +289,47 @@ void ItemsPropertiesSplitter::disenchantItem()
 		return;
 	
 	ItemInfo *item = itemFromAction(action);
+    int insertIndex = _allItems.indexOf(item);
+
 	QString path = ResourcePathManager::dataPathForFileName(QString("items/%1.d2i").arg(action->objectName() == "signet" ? "signet_of_learning" : "arcane_shard"));
 	ItemInfo *newItem = ItemParser::loadItemFromFile(path);
 
-	//if (!ItemParser::storeItemIn(Enums::ItemStorage::Inventory, 6, 10, signet) && !ItemParser::storeItemIn(Enums::ItemStorage::Stash, 10, 10, signet))
-	//{
-	//	ERROR_BOX(tr("You have no free space in inventory and stash to store the Signet of Learning"));
-	//	delete signet;
-	//	return;
-	//}
+    // TODO: fix if item is on the character
+    ItemsList items = ItemParser::itemsLocatedAt(item->storage);
+    items.removeOne(item);
+	if (!ItemParser::canStoreItemAt(item->row, item->column, newItem->itemType, items, ItemsViewerDialog::rows.at(ItemsViewerDialog::indexFromItemStorage(item->storage)), 10))
+	{
+		ERROR_BOX("If you see this text (which you shouldn't), please tell me which item you've just tried to disenchant");
+		delete newItem;
+		return;
+	}
 
-	// TODO: fix if item is on the character
 	newItem->row = item->row;
 	newItem->column = item->column;
 	newItem->storage = item->storage;
-	newItem->whereEquipped = item->whereEquipped;
+    newItem->whereEquipped = item->whereEquipped;
+    newItem->location = Enums::ItemLocation::Stored;
 	newItem->plugyPage = item->plugyPage;
-	newItem->location = Enums::ItemLocation::Stored;
 
-	addItemToList(newItem, _allItems.indexOf(item));
-	performDeleteItem(item);
+    // update bits
+    bool isPlugyStorage = newItem->storage == Enums::ItemStorage::PersonalStash || newItem->storage == Enums::ItemStorage::SharedStash || newItem->storage == Enums::ItemStorage::HCStash;
+    ReverseBitWriter::replaceValueInBitString(newItem->bitString, Enums::ItemOffsets::Storage, 3, isPlugyStorage ? Enums::ItemStorage::Stash : newItem->storage);
+    ReverseBitWriter::replaceValueInBitString(newItem->bitString, Enums::ItemOffsets::Columns, 4, newItem->column);
+    ReverseBitWriter::replaceValueInBitString(newItem->bitString, Enums::ItemOffsets::Rows, 3, newItem->row);
+    ReverseBitWriter::replaceValueInBitString(newItem->bitString, Enums::ItemOffsets::EquipIndex, 4, newItem->whereEquipped);
+    ReverseBitWriter::replaceValueInBitString(newItem->bitString, Enums::ItemOffsets::Location, 3, newItem->location);
+
+    ItemsList personalStashItems = ItemParser::itemsLocatedAt(Enums::ItemStorage::PersonalStash);
+    if (newItem->storage == Enums::ItemStorage::Stash && personalStashItems.size() > 0 || newItem->storage == Enums::ItemStorage::PersonalStash)
+    {
+        ItemInfo *copy = new ItemInfo(*newItem);
+        copy->storage = newItem->storage == Enums::ItemStorage::Stash ? Enums::ItemStorage::PersonalStash : Enums::ItemStorage::Stash;
+        copy->plugyPage = newItem->storage == Enums::ItemStorage::Stash;
+        // TODO: finish
+    }
+
+    performDeleteItem(item);
+	addItemToList(newItem, insertIndex);
 }
 
 void ItemsPropertiesSplitter::unsocketItem()

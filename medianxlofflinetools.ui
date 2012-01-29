@@ -627,6 +627,7 @@ p, li { white-space: pre-wrap; }
     </widget>
     <addaction name="actionLoadLastUsedCharacter"/>
     <addaction name="actionAskBeforeReload"/>
+    <addaction name="actionBackup"/>
     <addaction name="separator"/>
     <addaction name="actionOpenItemsAutomatically"/>
     <addaction name="menuAuto_open_shared_stashes"/>
@@ -1017,6 +1018,17 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="toolTip">
     <string>Hardcore</string>
+   </property>
+  </action>
+  <action name="actionBackup">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Make backups before saving</string>
    </property>
   </action>
  </widget>

@@ -216,7 +216,6 @@
 379	Leoric's Legion	34
 380	Leoric's Legion	43
 381	Leoric's Legion	52
-382	The Gauntlet	100
 383	Stillwater	10
 384	Stillwater	19
 385	Stillwater	27
@@ -258,7 +257,6 @@
 421	Rabbit's Foot	25
 422	Rabbit's Foot	34
 423	Rabbit's Foot	43
-424	Everchase	100
 425	Shieldcracker	5
 426	Shieldcracker	14
 427	Shieldcracker	23
@@ -322,12 +320,6 @@
 485	The Jester	35
 486	The Jester	44
 487	The Wanderer's Hood	100
-488	Wedding Dress of the Zann	12
-489	Wedding Dress of the Zann	21
-490	Wedding Dress of the Zann	31
-491	Wedding Dress of the Zann	39
-492	Wedding Dress of the Zann	48
-493	Wedding Dress of the Zann	55
 494	Armor of the Old Religion	100
 495	Snakehair	5
 496	Snakehair	14
@@ -741,7 +733,6 @@
 904	Leather of Aut	28
 905	Leather of Aut	37
 906	Leather of Aut	45
-907	Wyand's Fervor	100
 908	Sawfish	4
 909	Sawfish	13
 910	Sawfish	22
@@ -1196,12 +1187,6 @@
 1360	Sharkbaiter	39
 1361	Sharkbaiter	47
 1362	Hratli's Craft	100
-1363	Oreichalcos	4
-1364	Oreichalcos	13
-1365	Oreichalcos	21
-1366	Oreichalcos	30
-1367	Oreichalcos	39
-1368	Oreichalcos	48
 1369	Hypnodisk	100
 1370	Wardance	4
 1371	Wardance	13
@@ -1385,12 +1370,6 @@
 1549	Compass of Souls	51
 1550	Compass of Souls	59
 1551	Mente Scura	100
-1552	Grimspirit	10
-1553	Grimspirit	19
-1554	Grimspirit	28
-1555	Grimspirit	37
-1556	Grimspirit	46
-1557	Grimspirit	54
 1558	Nature's Orphan	100
 1559	Jitan's Kamon	6
 1560	Jitan's Kamon	15
@@ -1398,7 +1377,6 @@
 1562	Jitan's Kamon	32
 1563	Jitan's Kamon	41
 1564	Jitan's Kamon	49
-1565	Candlewake	100
 1566	Flowerspring	6
 1567	Flowerspring	16
 1568	Flowerspring	25
@@ -1525,12 +1503,12 @@
 1689	Fleshmender	41
 1690	Fleshmender	50
 1691	Felsteel	100
-1692	The Square Peg	1
-1693	The Square Peg	9
-1694	The Square Peg	18
-1695	The Square Peg	27
-1696	The Square Peg	37
-1697	The Square Peg	46
+1692	The Compensator	1
+1693	The Compensator	9
+1694	The Compensator	18
+1695	The Compensator	27
+1696	The Compensator	37
+1697	The Compensator	46
 1698	Vizharan	100
 1699	Rainbowcleave	11
 1700	Rainbowcleave	20
@@ -1738,6 +1716,7 @@
 1938	Cornerstone of the World	100
 1939	Cornerstone of the World	100
 1940	Cornerstone of the World	100
+1941	Cornerstone of the World	100
 1942	Cornerstone of the World	100
 1943	Cornerstone of the World	100
 1944	Cornerstone of the World	100
@@ -1774,7 +1753,6 @@
 1983	Niradyahk	80
 1984	Self-Referential Unlisted Secret Item	80
 1985	The Only Item That Will Never Be Duped	80
-1986	Xepera Xeper Xeperu	120
 1987	Hanabigami	60
 1988	The Tranquilizer	60
 1989	Katamari	30
@@ -1783,7 +1761,6 @@
 1992	The Seal of Kharos	60
 1993	Scarab of Death	60
 2014	Tobio's Key	100
-2015	Grand Armor	100
 2016	Ramcharge	100
 2017	The Doom Gong of Xiansai	100
 2018	Wandelkoning	100
@@ -1795,12 +1772,12 @@
 2024	The Ion Maiden	100
 2025	The Veil of Magic	100
 2026	Boneyard Scourge	100
-2027	Chaos Disk of Change	100
+2027	Hooves of the Thunderhorse	100
 2028	Highwayman's Friend	100
 2029	Canis Venator	100
 2030	Ogden's Sign	100
 2031	Pawnstorm	100
-2032	83K Damage Cap	100
+2032	Beanie Sidhe	100
 2033	Hijab of the Skymother	100
 2034	Kharos' Bloodskull	100
 2035	Clawfeet	100
@@ -1808,7 +1785,7 @@
 2037	The Chained Mail	100
 2038	Eyes of Septumos	100
 2039	Breathstealer	100
-2040	Puzzlebox of Laments	100
+2040	Aiden's Lament	100
 2041	Angelhost	100
 2042	Satanskind	100
 2044	Ylfa Ban	100
@@ -1819,10 +1796,10 @@
 2049	Sankekur's Faulds	100
 2050	Rag Queen	100
 2051	The Sentinel's Sorrow	100
-2052	Gauntlets Khan	100
+2052	Lamha Na Draoithe	100
 2053	The Ancients' Legacy	100
 2054	Goetia Plate	100
-2055	Modder's Block	100
+2055	Shield of Hakan II	100
 2056	Metalhead	100
 2057	Rodeo's Tramplers	100
 2058	Maggotspawn Shell	100
@@ -1840,14 +1817,13 @@
 2070	Zharesh Robes	100
 2071	Dryadbark	100
 2072	Belly of the Beast	100
-2073	Mira Seductio	100
+2073	Blackjade's Legacy	100
 2074	Tldr	100
-2075	Safety Fist	100
+2075	Baron Sludge's Bonecrusher	100
 2076	Hellbourne Disciple	100
 2077	Earthbender	100
 2078	Idol of Rygnar	100
 2079	Lionblood Crest	100
-2080	Siggard's Revenge	100
 2081	Phoenix Down	100
 2082	Skin of Kabraxis	100
 2083	Lilith's Temptation	100
@@ -1858,7 +1834,7 @@
 2088	Cliffhanger	100
 2089	Scale of Justice	100
 2090	Panzerkeil	100
-2091	Rime Bomb	100
+2091	Lacuni Cowl	100
 2092	The Flying Saucer	100
 2093	Asgardsreia	100
 2094	Wheel of the Seasons	100
@@ -1869,7 +1845,7 @@
 2100	Fiddlesticks	100
 2101	Judge's Sin	100
 2102	Mudpool	100
-2103	Supermonstar	100
+2103	Linarian's Furs	100
 2104	Gregus Mazi's Nkisi	100
 2105	The Dragon's Star	100
 2106	Lavasurge	100
@@ -1877,7 +1853,7 @@
 2108	Hawking Axe	100
 2109	Buzzbomb	100
 2111	Tylwulf's Betrayal	100
-2112	The Battlecrusher	100
+2112	Abyssus	100
 2113	Issalfarstafr	100
 2114	Eko Azarak	100
 2115	Dreamweaver	100
@@ -1885,7 +1861,6 @@
 2117	Globus Cruciger	100
 2118	Greiz' Cheat	100
 2119	Roflchopper	100
-2120	Aeterna	100
 2121	Esubane	100
 2122	The Cactus	100
 2123	Weird Sister	100
@@ -1898,7 +1873,7 @@
 2130	Whispers of Mirakodus	100
 2131	Jalal's Soulstealer	100
 2132	Hwanin's Hwacha	100
-2133	Clock and Dagger	100
+2133	Helgrotha's Fang	100
 2134	Doublecross	100
 2135	Atanna's Key	100
 2136	Leah's Vision	100
@@ -1912,9 +1887,8 @@
 2144	Azgar's Nemeton	100
 2145	The Lyon's Claw	100
 2146	Dead Lake's Lady	100
-2147	Greatest Axe	100
+2147	Elder Law	100
 2148	Siegehammer of Morgen Keep	100
-2149	Sword of the White Void	100
 2150	Cruciatus	100
 2152	Flintstone Axe	100
 2153	Chober Chaber	100
@@ -1970,7 +1944,6 @@
 2203	The Whistling Death	100
 2204	Starmaiden	100
 2205	Heartseeker	100
-2206	Fury of Hellfire	100
 2207	Stormcaller	100
 2208	Two-Face Blade	100
 2209	The Caduceus	100
@@ -1983,7 +1956,6 @@
 2217	Banecat	100
 2218	Zakarwa's Betrayal	100
 2219	Zular Khan's Tempest	100
-2220	Soul Reaver	100
 2221	Timefather	100
 2222	Pitlord's Pendulum	100
 2223	Facemelter	100
@@ -1999,7 +1971,7 @@
 2233	Dryhten Ealdor	100
 2234	Kekeke	100
 2236	Lamen of the Archbishop	100
-2237	Nevermind	100
+2237	Arkenstone	100
 2238	Gallowlaugh	120
 2247	Der Nebelring	120
 2248	Ras Algethi	100
@@ -2019,3 +1991,33 @@
 2446	Pandemonium	50
 2447	Crown of the Rakkas	100
 2448	Borgin's Vigil	0
+2449	The Gauntlet	100
+2450	Everchase	100
+2451	Wedding Dress of the Zann	12
+2452	Wedding Dress of the Zann	21
+2453	Wedding Dress of the Zann	31
+2454	Wedding Dress of the Zann	39
+2455	Wedding Dress of the Zann	48
+2456	Wedding Dress of the Zann	55
+2457	Wyand's Fervor	100
+2458	Oreichalcos	4
+2459	Oreichalcos	13
+2460	Oreichalcos	21
+2461	Oreichalcos	30
+2462	Oreichalcos	39
+2463	Oreichalcos	48
+2464	Grimspirit	10
+2465	Grimspirit	19
+2466	Grimspirit	28
+2467	Grimspirit	37
+2468	Grimspirit	46
+2469	Grimspirit	54
+2470	Candlewake	100
+2471	Xepera Xeper Xeperu	120
+2472	Sarandeshi Hellcaller	100
+2473	Khazra Plate	100
+2474	Jere Harash's Ghostwing	100
+2475	Seven Heads of Tathamet	100
+2476	Washi Bai Ron	100
+2477	Crystalline Flame Medallion	120
+2478	Digitron Disk	100

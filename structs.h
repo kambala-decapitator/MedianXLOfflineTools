@@ -23,11 +23,6 @@ typedef QList<ItemInfo *> ItemsList;
 
 struct ItemInfo
 {
-    QString bitString;
-    quint32 plugyPage;
-    //int startOffset, size;
-    bool hasChanged;
-
 	bool isQuest, isIdentified, isSocketed, isEar, isStarter, isExtended, isEthereal, isPersonalized, isRW;
     int location, whereEquipped, row, column, storage;
 	QByteArray itemType; // key to get ItemBase
@@ -45,8 +40,12 @@ struct ItemInfo
     ItemsList socketablesInfo; // 0 ≤ size ≤ 6
 	QString rwName; // isRW == true
 
+    quint32 plugyPage;
+    bool hasChanged;
+    QString bitString;
+
     ItemInfo() { init(); }
-    ItemInfo(const QString &bits/*, int start, int size_*/) : bitString(bits)/*, startOffset(start), size(size_)*/ { init(); }
+    ItemInfo(const QString &bits) : bitString(bits) { init(); }
 
 private:
 	void init() { plugyPage = 0; hasChanged = false; ilvl = 1; variableGraphicIndex = 0; }
