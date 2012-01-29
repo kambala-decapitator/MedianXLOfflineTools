@@ -5,7 +5,6 @@
 
 #include "enums.h"
 #include "resurrectpenaltydialog.h"
-#include "reversebitreader.h"
 #include "structs.h"
 
 #include <QMainWindow>
@@ -15,6 +14,7 @@
 
 
 class QCloseEvent;
+class QFile;
 class ItemsViewerDialog;
 class FindItemsDialog;
 
@@ -23,9 +23,7 @@ class MedianXLOfflineTools : public QMainWindow
 	Q_OBJECT
 
 public:
-	//static QString translationsPath, currentLocale;
-
-	static const QString compoundFormat/*, languageKey, defaultLocale*/;
+	static const QString compoundFormat;
 	static const quint32 fileSignature;
 	static const int skillsNumber, difficultiesNumber, maxRecentFiles;
     static const int statPointsPerLevel, skillPointsPerLevel;
@@ -53,19 +51,18 @@ private slots:
 	void convertToSoftcore(bool isSoftcore);
 	//void currentDifficultyChanged(int newDifficulty);
 	void findItem();
-	//void findNext();
-	//void findPrevious();
 	void showFoundItem(ItemInfo *item);
 
     void showItems(bool activate = true);
 	void giveCube();
+
+    void backupSettingTriggered(bool checked);
 
     void aboutApp();
 
 private:
 	// UI
 	Ui::MedianXLOfflineToolsClass ui;
-	//QLabel *_pathLabel;
     QMap<Enums::CharacterStats::StatisticEnum, QSpinBox *> _spinBoxesStatsMap;
     QMap<Enums::CharacterStats::StatisticEnum, QLineEdit *> _lineEditsStatsMap;
     QStringList _recentFilesList;
@@ -79,7 +76,7 @@ private:
 	CharacterInfo _editableCharInfo;
 	QObject _statsDynamicData;
 	int _oldStatValues[4];
-	QMap<Enums::ClassName::ClassNameEnum, BaseStats> _baseStats;
+	QMap<Enums::ClassName::ClassNameEnum, BaseStats> _baseStatsMap;
 	int _oldClvl;
     quint32 _sharedGold;
     QHash<Enums::ItemStorage::ItemStorageEnum, PlugyStashInfo> _plugyStashesHash;
@@ -138,13 +135,9 @@ private:
 	inline void addStatisticBits(QString &bitsString, quint64 number, int fieldWidth);
 
     bool processPlugyStash(QHash<Enums::ItemStorage::ItemStorageEnum, PlugyStashInfo>::iterator &iter, ItemsList *items);
- //   ItemInfo *parseItem(QDataStream &inputDataStream, const QByteArray &bytes);
- //   QMap<int, ItemProperty> parseItemProperties(ReverseBitReader &bitReader, bool *ok);
-	//void writeItems(const ItemsList &items, QDataStream &ds);
     void clearItems(bool sharedStashPathChanged = true, bool hcStashPathChanged = true);
 
-	//bool storeItemIn(Enums::ItemStorage::ItemStorageEnum storage, quint8 rows, quint8 cols, ItemInfo *item);
-	//bool canStoreItemAt(quint8 row, quint8 col, const QByteArray &itemType, const ItemsList &items) const;
+    void backupFile(QFile &file);
 };
 
 #endif // MEDIANXLOFFLINETOOLS_H

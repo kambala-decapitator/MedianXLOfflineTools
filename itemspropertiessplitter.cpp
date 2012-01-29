@@ -249,7 +249,7 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
 			menuDisenchant->addActions(QList<QAction *>() << actionShards << actionSol);
 			actions << menuDisenchant->menuAction();
 		}
-		// TODO: 0.3
+		// TODO 0.3
 		//if (item->isSocketed && item->socketablesNumber)
 		//{
 		//	QAction *actionUnsocket = new QAction(tr("Unsocket"), _itemsView);
@@ -343,6 +343,8 @@ void ItemsPropertiesSplitter::makeNonEthereal()
 	if (item)
 	{
 		item->isEthereal = false;
+        item->hasChanged = true;
+        ReverseBitWriter::replaceValueInBitString(item->bitString, Enums::ItemOffsets::Ethereal, 1, 0);
 		_propertiesWidget->displayItemProperties(item);
 	}
 }
@@ -361,7 +363,7 @@ ItemInfo *ItemsPropertiesSplitter::itemFromCoordinate(const QPoint &pos)
 
 void ItemsPropertiesSplitter::performDeleteItem(ItemInfo *item)
 {
-	// TODO: add option to unsocket at first
+	// TODO 0.3: add option to unsocket at first
 	removeItemFromList(item);
 	qDeleteAll(item->socketablesInfo);
 	delete item;

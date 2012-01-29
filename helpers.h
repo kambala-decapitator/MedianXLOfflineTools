@@ -8,6 +8,8 @@
 #define INFO_BOX(message) CUSTOM_BOX(information, message)
 #define WARNING_BOX(message) CUSTOM_BOX(warning, message)
 #define ERROR_BOX_NO_PARENT(message) QMessageBox::critical(0, qApp->applicationName(), message)
+// file is QFile instance
+#define ERROR_BOX_FILE(message, file) CUSTOM_BOX(critical, message.arg(QDir::toNativeSeparators(file.fileName()), file.errorString()))
 
 // string building
 class QString;

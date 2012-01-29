@@ -9,6 +9,7 @@
 #include "resourcepathmanager.hpp"
 #include "reversebitwriter.h"
 #include "itemparser.h"
+#include "reversebitreader.h"
 
 #include <QCloseEvent>
 #include <QFormLayout>
@@ -131,7 +132,10 @@ void MedianXLOfflineTools::saveCharacter()
 
     QByteArray tempFileContents(_saveFileContents);
     tempFileContents.replace(Enums::Offsets::StatsData, _editableCharInfo.skillsOffset - Enums::Offsets::StatsData, statsBytes);
+    int diff = Enums::Offsets::StatsData + statsBytes.size() - _editableCharInfo.skillsOffset;
     _editableCharInfo.skillsOffset = Enums::Offsets::StatsData + statsBytes.size();
+    _editableCharInfo.itemsOffset += diff;
+    _editableCharInfo.itemsEndOffset += diff;
 
     if (ui.respecSkillsCheckBox->isChecked())
         tempFileContents.replace(_editableCharInfo.skillsOffset + 2, skillsNumber, QByteArray(skillsNumber, 0));
@@ -232,16 +236,12 @@ void MedianXLOfflineTools::saveCharacter()
     QHash<Enums::ItemStorage::ItemStorageEnum, ItemsList > plugyItemsHash;
     foreach (ItemInfo *item, _editableCharInfo.items.character)
     {
-        //ItemsList *itemsPtr;
-		//int item
         switch (item->storage)
         {
         case Enums::ItemStorage::PersonalStash: case Enums::ItemStorage::SharedStash: case Enums::ItemStorage::HCStash:
-			//itemsPtr = &plugyItemsHash[item->storage];
 			plugyItemsHash[static_cast<Enums::ItemStorage::ItemStorageEnum>(item->storage)] += item;
             break;
 		default:
-			//itemsPtr = &characterItems;
             characterItems += item;
             characterItemsSize += 2 + item->bitString.length() / 8; // JM + item bytes
             foreach (ItemInfo *socketableItem, item->socketablesInfo)
@@ -259,9 +259,15 @@ void MedianXLOfflineTools::saveCharacter()
 
         const PlugyStashInfo &info = iter.value();
         QFile inputFile(info.path);
-        if (!inputFile.exists() || !inputFile.open(QIODevice::WriteOnly))
+        if (!inputFile.exists())
             continue;
-        //if (ui.actionBackup->isChecked())
+
+        backupFile(inputFile);
+        if (!inputFile.open(QIODevice::WriteOnly))
+        {
+            ERROR_BOX_FILE(tr("Error creating file '%1'\nReason: %2"), inputFile);
+            continue;
+        }
 
 		QDataStream plugyFileDataStream(&inputFile);
         plugyFileDataStream.setByteOrder(QDataStream::LittleEndian);
@@ -297,9 +303,10 @@ void MedianXLOfflineTools::saveCharacter()
 
     QSettings settings;
     settings.beginGroup("recentItems");
-    QString savePath = settings.value(lastSavePathKey).toString(), fileName = savePath + "/" + newName,
-            saveFileName = fileName + ".d2s", nativeSaveFileName = QDir::toNativeSeparators(saveFileName);
+    QString savePath = settings.value(lastSavePathKey).toString(), fileName = savePath + "/" + newName, saveFileName = fileName + ".d2s";
+
     QFile outputFile(saveFileName);
+    backupFile(outputFile);
     if (outputFile.open(QIODevice::WriteOnly))
     {
         int bytesWritten = outputFile.write(tempFileContents);
@@ -327,20 +334,20 @@ void MedianXLOfflineTools::saveCharacter()
                     if (isStrangeName && fileInfo.baseName() != _editableCharInfo.basicInfo.originalName)
                         continue;
 
-                    QString path = QDir::toNativeSeparators(fileInfo.canonicalFilePath()), extension = fileInfo.suffix();
-                    QFile sourceFile(path);
+                    QString extension = fileInfo.suffix();
+                    QFile sourceFile(fileInfo.canonicalFilePath());
                     if (extension == "d2s") // delete
                     {
                         if (!sourceFile.remove())
                         {
-                            ERROR_BOX(tr("Error removing file '%1'\nReason: %2").arg(path, sourceFile.errorString()));
+                            ERROR_BOX_FILE(tr("Error removing file '%1'\nReason: %2"), sourceFile);
                         }
                     }
                     else // rename
                     {
                         if (!sourceFile.rename(fileName + "." + extension) && !isOldNameEmpty)
                         {
-                            ERROR_BOX(tr("Error renaming file '%1'\nReason: %2").arg(path, sourceFile.errorString()));
+                            ERROR_BOX_FILE(tr("Error renaming file '%1'\nReason: %2"), sourceFile);
                         }
                     }
                 }
@@ -355,16 +362,16 @@ void MedianXLOfflineTools::saveCharacter()
             _charPath = saveFileName;
             loadFile(_charPath); // update all UI at once by reloading the file
 
-            INFO_BOX(tr("File '%1' successfully saved!").arg(nativeSaveFileName));
+            INFO_BOX(tr("File '%1' successfully saved!").arg(QDir::toNativeSeparators(saveFileName)));
         }
         else
         {
-            ERROR_BOX(tr("Error writing file '%1'\nReason: %2").arg(nativeSaveFileName, outputFile.errorString()));
+            ERROR_BOX_FILE(tr("Error writing file '%1'\nReason: %2"), outputFile);
         }
     }
     else
     {
-        ERROR_BOX(tr("Error creating file '%1'\nReason: %2").arg(nativeSaveFileName, outputFile.errorString()));
+        ERROR_BOX_FILE(tr("Error creating file '%1'\nReason: %2"), outputFile);
     }
 }
 
@@ -391,7 +398,7 @@ void MedianXLOfflineTools::statChanged(int newValue)
         QStatusTipEvent event(senderSpinBox->statusTip());
         qApp->sendEvent(senderSpinBox, &event);
 
-        BaseStats::StatsPerPoint charStatsPerPoint = _baseStats[_editableCharInfo.basicInfo.classCode].statsPerPoint;
+        BaseStats::StatsPerPoint charStatsPerPoint = _baseStatsMap[_editableCharInfo.basicInfo.classCode].statsPerPoint;
         if (senderSpinBox == ui.vitalitySpinBox)
         {
             updateTableStats(ui.statsTableWidget->item(0, 0), diff, charStatsPerPoint.life); // current life
@@ -412,7 +419,7 @@ void MedianXLOfflineTools::respecStats()
     for (int i = Enums::CharacterStats::Strength; i <= Enums::CharacterStats::Vitality; ++i)
     {
         Enums::CharacterStats::StatisticEnum statCode = static_cast<Enums::CharacterStats::StatisticEnum>(i);
-        int baseStat = _baseStats[_editableCharInfo.basicInfo.classCode].statsAtStart.statFromCode(statCode);
+        int baseStat = _baseStatsMap[_editableCharInfo.basicInfo.classCode].statsAtStart.statFromCode(statCode);
         _spinBoxesStatsMap[statCode]->setValue(baseStat);
     }
     ui.statusBar->clearMessage();
@@ -605,7 +612,7 @@ void MedianXLOfflineTools::giveCube()
 		return;
 	}
 	
-	if (!ItemParser::storeItemIn(Enums::ItemStorage::Inventory, 6, 10, cube) && !ItemParser::storeItemIn(Enums::ItemStorage::Stash, 10, 10, cube))
+	if (!ItemParser::storeItemIn(cube, Enums::ItemStorage::Inventory, 6, 10) && !ItemParser::storeItemIn(cube, Enums::ItemStorage::Stash, 10, 10))
 	{
 		ERROR_BOX(tr("You have no free space in inventory and stash to store the Cube"));
 		delete cube;
@@ -633,6 +640,18 @@ void MedianXLOfflineTools::giveCube()
 
 	ui.actionGiveCube->setDisabled(true);
 	INFO_BOX(tr("Cube has been stored in %1 at (%2,%3)").arg(ItemsViewerDialog::tabNames.at(ItemsViewerDialog::indexFromItemStorage(cube->storage))).arg(cube->row + 1).arg(cube->column + 1));
+}
+
+void MedianXLOfflineTools::backupSettingTriggered(bool checked)
+{
+    if (!checked)
+    {
+        if (QMessageBox::question(this, qApp->applicationName(), tr("Are you sure you want to disable automatic backups? Then don't blame me if your character gets corrupted."),
+            QMessageBox::Yes | QMessageBox::No, QMessageBox::No) == QMessageBox::No)
+        {
+            ui.actionBackup->setChecked(true);
+        }
+    }
 }
 
 void MedianXLOfflineTools::aboutApp()
@@ -775,16 +794,8 @@ void MedianXLOfflineTools::createLayout()
     QHBoxLayout *mainLayout = new QHBoxLayout(centralWidget());
     mainLayout->addLayout(vbl);
     mainLayout->addWidget(ui.statsGroupBox);
-	//adjustSize();
 
     ui.statsTableWidget->verticalHeader()->setDefaultAlignment(Qt::AlignCenter);
-
-    /*ui.statusBar->setSizeGripEnabled(false);
-#if defined(Q_WS_WIN32)
- ui.statusBar->addWidget(new QLabel, 1);
-#endif
- _pathLabel = new QLabel(this);
- ui.statusBar->addPermanentWidget(_pathLabel);*/
 }
 
 void MedianXLOfflineTools::createCharacterGroupBoxLayout()
@@ -932,13 +943,13 @@ void MedianXLOfflineTools::fillMaps()
 	_lineEditsStatsMap[Enums::CharacterStats::SignetsOfLearningEaten] = ui.signetsOfLearningEatenLineEdit;
 	_lineEditsStatsMap[Enums::CharacterStats::SignetsOfSkillEaten] = ui.signetsOfSkillEatenLineEdit;
 
-	_baseStats[Enums::ClassName::Amazon] = BaseStats(BaseStats::StatsAtStart(25, 25, 20, 15, 84), BaseStats::StatsPerLevel(100, 40, 60), BaseStats::StatsPerPoint(8, 8, 18));
-	_baseStats[Enums::ClassName::Sorceress] = BaseStats(BaseStats::StatsAtStart(10, 25, 15, 35, 74), BaseStats::StatsPerLevel(100, 40, 60), BaseStats::StatsPerPoint(8, 8, 18));
-	_baseStats[Enums::ClassName::Necromancer] = BaseStats(BaseStats::StatsAtStart(15, 25, 20, 25, 79), BaseStats::StatsPerLevel(80, 20, 80), BaseStats::StatsPerPoint(4, 8, 24));
-	_baseStats[Enums::ClassName::Paladin] = BaseStats(BaseStats::StatsAtStart(25, 20, 25, 15, 89), BaseStats::StatsPerLevel(120, 60, 40), BaseStats::StatsPerPoint(12, 8, 12));
-	_baseStats[Enums::ClassName::Barbarian] = BaseStats(BaseStats::StatsAtStart(30, 20, 30, 5, 92), BaseStats::StatsPerLevel(120, 60, 40), BaseStats::StatsPerPoint(12, 8, 12));
-	_baseStats[Enums::ClassName::Druid] = BaseStats(BaseStats::StatsAtStart(25, 20, 15, 25, 84), BaseStats::StatsPerLevel(80, 20, 80), BaseStats::StatsPerPoint(4, 8, 24));
-	_baseStats[Enums::ClassName::Assassin] = BaseStats(BaseStats::StatsAtStart(20, 35, 15, 15, 95), BaseStats::StatsPerLevel(100, 40, 60), BaseStats::StatsPerPoint(8, 8, 18));
+	_baseStatsMap[Enums::ClassName::Amazon] = BaseStats(BaseStats::StatsAtStart(25, 25, 20, 15, 84), BaseStats::StatsPerLevel(100, 40, 60), BaseStats::StatsPerPoint(8, 8, 18));
+	_baseStatsMap[Enums::ClassName::Sorceress] = BaseStats(BaseStats::StatsAtStart(10, 25, 15, 35, 74), BaseStats::StatsPerLevel(100, 40, 60), BaseStats::StatsPerPoint(8, 8, 18));
+	_baseStatsMap[Enums::ClassName::Necromancer] = BaseStats(BaseStats::StatsAtStart(15, 25, 20, 25, 79), BaseStats::StatsPerLevel(80, 20, 80), BaseStats::StatsPerPoint(4, 8, 24));
+	_baseStatsMap[Enums::ClassName::Paladin] = BaseStats(BaseStats::StatsAtStart(25, 20, 25, 15, 89), BaseStats::StatsPerLevel(120, 60, 40), BaseStats::StatsPerPoint(12, 8, 12));
+	_baseStatsMap[Enums::ClassName::Barbarian] = BaseStats(BaseStats::StatsAtStart(30, 20, 30, 5, 92), BaseStats::StatsPerLevel(120, 60, 40), BaseStats::StatsPerPoint(12, 8, 12));
+	_baseStatsMap[Enums::ClassName::Druid] = BaseStats(BaseStats::StatsAtStart(25, 20, 15, 25, 84), BaseStats::StatsPerLevel(80, 20, 80), BaseStats::StatsPerPoint(4, 8, 24));
+	_baseStatsMap[Enums::ClassName::Assassin] = BaseStats(BaseStats::StatsAtStart(20, 35, 15, 15, 95), BaseStats::StatsPerLevel(100, 40, 60), BaseStats::StatsPerPoint(8, 8, 18));
 }
 
 void MedianXLOfflineTools::connectSignals()
@@ -955,6 +966,9 @@ void MedianXLOfflineTools::connectSignals()
 	// items
 	connect(ui.actionShowItems, SIGNAL(triggered()), SLOT(showItems()));
 	connect(ui.actionGiveCube, SIGNAL(triggered()), SLOT(giveCube()));
+
+    // options
+    connect(ui.actionBackup, SIGNAL(triggered(bool)), SLOT(backupSettingTriggered(bool)));
 
 	// about
 	connect(ui.actionAbout, SIGNAL(triggered()), SLOT(aboutApp()));
@@ -1051,7 +1065,7 @@ bool MedianXLOfflineTools::processSaveFile(const QString &charPath)
     QFile inputFile(charPath);
     if (!inputFile.open(QIODevice::ReadOnly))
     {
-        ERROR_BOX(tr("Error opening file '%1'\nReason: %2").arg(QDir::toNativeSeparators(charPath), inputFile.errorString()));
+        ERROR_BOX_FILE(tr("Error opening file '%1'\nReason: %2"), inputFile);
         return false;
     }
 
@@ -1287,7 +1301,7 @@ bool MedianXLOfflineTools::processSaveFile(const QString &charPath)
         }
         else if (statCode >= Enums::CharacterStats::Strength && statCode <= Enums::CharacterStats::Vitality)
         {
-            int baseStat = _baseStats[editableCharInfo.basicInfo.classCode].statsAtStart.statFromCode(static_cast<Enums::CharacterStats::StatisticEnum>(statCode));
+            int baseStat = _baseStatsMap[editableCharInfo.basicInfo.classCode].statsAtStart.statFromCode(static_cast<Enums::CharacterStats::StatisticEnum>(statCode));
             totalStats += statValue - baseStat;
         }
         else if (statCode == Enums::CharacterStats::FreeStatPoints)
@@ -1308,7 +1322,7 @@ bool MedianXLOfflineTools::processSaveFile(const QString &charPath)
         for (int i = Enums::CharacterStats::Strength; i <= Enums::CharacterStats::Vitality; ++i)
         {
             Enums::CharacterStats::StatisticEnum statCode = static_cast<Enums::CharacterStats::StatisticEnum>(i);
-            int baseStat = _baseStats[editableCharInfo.basicInfo.classCode].statsAtStart.statFromCode(statCode);
+            int baseStat = _baseStatsMap[editableCharInfo.basicInfo.classCode].statsAtStart.statFromCode(statCode);
             _statsDynamicData.setProperty(statisticMetaEnum.key(i), baseStat);
         }
         _statsDynamicData.setProperty("FreeStatPoints", totalPossibleStats);
@@ -1724,7 +1738,7 @@ void MedianXLOfflineTools::setStats()
         {
             _oldStatValues[statCode] = value;
 
-            quint8 baseValue = _baseStats[_editableCharInfo.basicInfo.classCode].statsAtStart.statFromCode(statCode);
+            quint8 baseValue = _baseStatsMap[_editableCharInfo.basicInfo.classCode].statsAtStart.statFromCode(statCode);
             QSpinBox *spinBox = _spinBoxesStatsMap[statCode];
             spinBox->setMinimum(baseValue);
             spinBox->setMaximum(value);
@@ -1760,7 +1774,7 @@ int MedianXLOfflineTools::investedStatPoints()
     for (quint8 i = Enums::CharacterStats::Strength; i <= Enums::CharacterStats::Vitality; ++i)
     {
         Enums::CharacterStats::StatisticEnum ienum = static_cast<Enums::CharacterStats::StatisticEnum>(i);
-        sum += _spinBoxesStatsMap[ienum]->value() - _baseStats[_editableCharInfo.basicInfo.classCode].statsAtStart.statFromCode(ienum);
+        sum += _spinBoxesStatsMap[ienum]->value() - _baseStatsMap[_editableCharInfo.basicInfo.classCode].statsAtStart.statFromCode(ienum);
     }
     return sum;
 }
@@ -1943,4 +1957,19 @@ void MedianXLOfflineTools::clearItems(bool sharedStashPathChanged /*= true*/, bo
 		delete item;
 		itemIterator.remove();
 	}
+}
+
+void MedianXLOfflineTools::backupFile(QFile &file)
+{
+    if (ui.actionBackup->isChecked())
+    {
+        QFile backupFile(file.fileName() + ".bak");
+        if (backupFile.exists() && !backupFile.remove())
+            ERROR_BOX_FILE(tr("Error removing old backup '%1'\nReason: %2"), backupFile);
+        else
+        {
+            if (!file.copy(backupFile.fileName()))
+                ERROR_BOX_FILE(tr("Error creating backup for file '%1'\nReason: %2"), file);
+        }
+    }
 }

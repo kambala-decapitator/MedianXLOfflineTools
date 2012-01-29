@@ -40,10 +40,11 @@ HEADERS  += medianxlofflinetools.h \
     itemspropertiessplitter.h \
     helpers.h \
 	finditemsdialog.h \
-    languagemanager.h \
+    languagemanager.hpp \
     reversebitwriter.h \
     reversebitreader.h \
-    itemparser.h
+    itemparser.h \
+	resourcepathmanager.hpp
 
 FORMS    += medianxlofflinetools.ui \
     resurrectpenaltydialog.ui \
@@ -55,11 +56,10 @@ TRANSLATIONS += medianxlofflinetools_ru.ts
 
 RESOURCES += medianxlofflinetools.qrc
 
-OTHER_FILES += \
-    Resources/mac/Info.plist
-
 
 macx {
+	OTHER_FILES += Resources/mac/Info.plist
+	
 	ICON = Resources/mac/icon.icns
 	QMAKE_INFO_PLIST = Resources/mac/Info.plist
 
@@ -71,7 +71,7 @@ macx {
     }
 }
 win32 {
-	LIBS += "c:/Program Files/Microsoft SDKs/Windows/v7.0A/Lib/shell32.lib"
+	# LIBS += "c:/Program Files/Microsoft SDKs/Windows/v7.0A/Lib/shell32.lib"
 }
 
-#QMAKE_CXXFLAGS += -std=c++0x
+# QMAKE_CXXFLAGS += -std=c++0x

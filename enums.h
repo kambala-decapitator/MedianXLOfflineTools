@@ -277,6 +277,7 @@ class ItemOffsets
 public:
 	enum
 	{
+        Ethereal = 0x26,
 		Location = 0x3A,
 		EquipIndex = 0x3D,
 		Columns = 0x41,

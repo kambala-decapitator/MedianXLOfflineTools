@@ -21,8 +21,8 @@ public:
 
 	static ItemInfo *loadItemFromFile(const QString &filePath);
 	static ItemsList itemsLocatedAt(int storage, bool location = Enums::ItemLocation::Stored);
-	static bool storeItemIn(Enums::ItemStorage::ItemStorageEnum storage, quint8 rows, quint8 cols, ItemInfo *item);
-    static bool canStoreItemAt(quint8 row, quint8 col, const QByteArray &storeItemType, const ItemsList &items, int rowsTotal, int colsTotal);
+	static bool storeItemIn(ItemInfo *item, Enums::ItemStorage::ItemStorageEnum storage, quint8 rows, quint8 cols, int plugyPage = 0);
+    static bool canStoreItemAt(quint8 row, quint8 col, const QByteArray &storeItemType, const ItemsList &items, int rowsTotal, int colsTotal, int plugyPage = 0);
 
 	static const QByteArray itemHeader, plugyPageHeader;
 };

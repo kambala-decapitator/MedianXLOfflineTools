@@ -100,6 +100,7 @@ struct CharacterInfo
         ItemsList character;
 	} items;
 
+    // itemsOffset points to the number of character items - just after the very first JM
     quint32 skillsOffset, itemsOffset, itemsEndOffset;
 };
 

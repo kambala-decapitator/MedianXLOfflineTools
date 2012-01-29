@@ -439,7 +439,7 @@ ItemsList ItemParser::itemsLocatedAt(int storage, bool location /*= Enums::ItemL
 	return items;
 }
 
-bool ItemParser::storeItemIn(Enums::ItemStorage::ItemStorageEnum storage, quint8 rows, quint8 cols, ItemInfo *item)
+bool ItemParser::storeItemIn(ItemInfo *item, Enums::ItemStorage::ItemStorageEnum storage, quint8 rows, quint8 cols, int plugyPage /*= 0*/)
 {
 	ItemsList items = itemsLocatedAt(storage);
 	for (quint8 i = 0; i < rows; ++i)
@@ -455,7 +455,7 @@ bool ItemParser::storeItemIn(Enums::ItemStorage::ItemStorageEnum storage, quint8
 	return false;
 }
 
-bool ItemParser::canStoreItemAt(quint8 row, quint8 col, const QByteArray &storeItemType, const ItemsList &items, int rowsTotal, int colsTotal)
+bool ItemParser::canStoreItemAt(quint8 row, quint8 col, const QByteArray &storeItemType, const ItemsList &items, int rowsTotal, int colsTotal, int plugyPage /*= 0*/)
 {
     // col is horizontal (x), row is vertical (y)
 	const ItemBase &storeItemBase = ItemDataBase::Items()->value(storeItemType);
