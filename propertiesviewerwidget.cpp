@@ -127,9 +127,9 @@ void PropertiesViewerWidget::displayItemProperties(ItemInfo *item)
         foreach (ItemInfo *socketable, item->socketablesInfo)
             if (ItemDataBase::Items()->value(socketable->itemType).typeString == "rune")
                 runes += ItemDataBase::Socketables()->value(socketable->itemType).letter;
-        itemDescription += "<br>" + htmlStringFromDiabloColorString(QString("'%1'").arg(runes), Gold) + colorReplacementString(White);
+        if (!runes.isEmpty()) // gem-/jewelwords don't have any letters
+            itemDescription += "<br>" + htmlStringFromDiabloColorString(QString("'%1'").arg(runes), Gold) + colorReplacementString(White);
     }
-    //itemDescription += colorReplacementString(White);
 
     if (itemBase.type == Enums::ItemType::Armor)
     {

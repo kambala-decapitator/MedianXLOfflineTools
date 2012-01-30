@@ -202,10 +202,13 @@ class ItemType
 public:
     enum ItemTypeEnum
     {
-        Armor = 0,
+        Unknown = -1,
+        Armor,
         Weapon,
         Misc
     };
+
+    static ItemTypeEnum typeFromString(const QByteArray &itemType);
 };
 
 

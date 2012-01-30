@@ -245,7 +245,7 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
 				//outStream << tr("Socket filler #%1:\n%2").arg(i + 1).arg(gemInfo);
 				if (item->isRW && i >= item->socketablesNumber - 2) // get the last socket filler to obtain RW name (and previous one to prevent disambiguation)
 				{
-					runeTypes.prepend(socketableInfo->itemType == "jew" && i != item->socketablesNumber - 1 ? QByteArray() : socketableInfo->itemType);
+					runeTypes.prepend(/*socketableInfo->itemType == "jew" &&*/ i != item->socketablesNumber - 1 ? QByteArray() : socketableInfo->itemType);
 				}
 			}
 
@@ -259,9 +259,19 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
 					QMultiHash<RunewordKeyPair, RunewordInfo>::const_iterator iter = ItemDataBase::RW()->find(rwKey);
 					for (; iter != ItemDataBase::RW()->end() && iter.key() == rwKey; ++iter)
 					{
-						const RunewordInfo &rwInfo = iter.value();
+                        const RunewordInfo &rwInfo = iter.value();
+#ifndef QT_NO_DEBUG
 						qDebug() << rwInfo.name << rwInfo.allowedItemTypes << itemBase.typeString;
-						if (rwInfo.allowedItemTypes.contains(itemBase.typeString))
+#endif
+                        // TODO: use columns 5-6 from itemtypes.txt
+                        bool isCorrectGenericType = false;
+                        foreach (const QByteArray &runeType, rwInfo.allowedItemTypes)
+                            if (Enums::ItemType::typeFromString(runeType) == itemBase.type)
+                            {
+                                isCorrectGenericType = true;
+                                break;
+                            }
+						if (rwInfo.allowedItemTypes.contains(itemBase.typeString) || isCorrectGenericType)
 						{
 							item->rwName = rwInfo.name;
 							break;

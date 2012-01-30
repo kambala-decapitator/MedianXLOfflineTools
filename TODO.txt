@@ -1,7 +1,5 @@
 - fix removing ED MO (check limit of 350% in order not to subtract more than needed)
 - stack ED from RW (Superior Naginata on page 90)
-- median_barb's RW Kriegsmessers, median_druid's RW Viper Bow (RW names for weapons don't work)
-- gemword/jewelword (same as RW for weapons - allowed item types must be taken from some other column)
 - based on blessed life skill level
 - try unMO UMOs (get UMO props from cubemain)
 - corpse & merc items (or maybe not)
