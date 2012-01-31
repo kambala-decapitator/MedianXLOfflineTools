@@ -13,6 +13,7 @@ class ItemDataBase
 
 public:
     static QHash<QByteArray, ItemBase> *Items();
+    static QHash<QByteArray, QList<QByteArray> > *ItemTypes();
     static QHash<uint, ItemPropertyTxt> *Properties();
     static QHash<uint, SetItemInfo> *Sets();
     static QList<SkillInfo> *Skills();

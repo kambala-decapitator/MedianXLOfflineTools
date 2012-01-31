@@ -130,15 +130,15 @@ namespace Enums
 		}
 	}
 
-    ItemType::ItemTypeEnum ItemType::typeFromString(const QByteArray &itemType)
+    ItemTypeGeneric::ItemTypeGenericEnum ItemTypeGeneric::typeFromString(const QByteArray &itemType)
     {
-        ItemType::ItemTypeEnum result = Unknown;
+        ItemTypeGeneric::ItemTypeGenericEnum result = Unknown;
         if (itemType == "armo")
-            result = ItemType::Armor;
+            result = ItemTypeGeneric::Armor;
         else if (itemType == "weap")
-            result = ItemType::Weapon;
+            result = ItemTypeGeneric::Weapon;
         else if (itemType == "misc")
-            result = ItemType::Misc;
+            result = ItemTypeGeneric::Misc;
         return result;
     }
 }

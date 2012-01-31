@@ -180,12 +180,12 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
 			{
 				bitReader.skip(5); // some tome bits
 			}
-			if (itemBase.type == Enums::ItemType::Armor)
+			if (itemBase.genericType == Enums::ItemTypeGeneric::Armor)
 			{
 				const ItemPropertyTxt &defenceProp = ItemDataBase::Properties()->value(Enums::ItemProperties::Defence);
 				item->defense = bitReader.readNumber(defenceProp.bits) - defenceProp.add;
 			}
-			if (itemBase.type != Enums::ItemType::Misc)
+			if (itemBase.genericType != Enums::ItemTypeGeneric::Misc)
 			{
 				const ItemPropertyTxt &maxDurabilityProp = ItemDataBase::Properties()->value(Enums::ItemProperties::DurabilityMax);
 				item->maxDurability = bitReader.readNumber(maxDurabilityProp.bits) - maxDurabilityProp.add;
@@ -263,15 +263,7 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
 #ifndef QT_NO_DEBUG
 						qDebug() << rwInfo.name << rwInfo.allowedItemTypes << itemBase.typeString;
 #endif
-                        // TODO: use columns 5-6 from itemtypes.txt
-                        bool isCorrectGenericType = false;
-                        foreach (const QByteArray &runeType, rwInfo.allowedItemTypes)
-                            if (Enums::ItemType::typeFromString(runeType) == itemBase.type)
-                            {
-                                isCorrectGenericType = true;
-                                break;
-                            }
-						if (rwInfo.allowedItemTypes.contains(itemBase.typeString) || isCorrectGenericType)
+						if (isCorrectItemTypeForRW(QList<QByteArray>() << itemBase.typeString, rwInfo.allowedItemTypes))
 						{
 							item->rwName = rwInfo.name;
 							break;
@@ -484,4 +476,11 @@ bool ItemParser::canStoreItemAt(quint8 row, quint8 col, const QByteArray &storeI
 		}
 	}
 	return ok;
+}
+
+bool ItemParser::isCorrectItemTypeForRW(const QList<QByteArray> &itemTypes, const QList<QByteArray> &allowedItemTypes)
+{
+    foreach (const QByteArray &itemType, itemTypes)
+        return allowedItemTypes.contains(itemType) ? true : isCorrectItemTypeForRW(ItemDataBase::ItemTypes()->value(itemType), allowedItemTypes);
+    return false;
 }

@@ -33,11 +33,9 @@ QHash<QByteArray, ItemBase> *ItemDataBase::Items()
 
             ItemBase item;
             item.name = QString::fromUtf8(data.at(1));
-//            if (item.name.startsWith("["))
-//                item.name.remove(0, 4);
             item.width = data.at(2).toUShort();
             item.height = data.at(3).toUShort();
-            item.type = static_cast<Enums::ItemType::ItemTypeEnum>(data.at(4).toUShort());
+            item.genericType = static_cast<Enums::ItemTypeGeneric::ItemTypeGenericEnum>(data.at(4).toUShort());
             item.isStackable = data.at(5).toUShort();
             item.rlvl = data.at(6).toUShort();
             item.imageName = data.at(7);
@@ -48,6 +46,30 @@ QHash<QByteArray, ItemBase> *ItemDataBase::Items()
         }
     }
     return &allItems;
+}
+
+QHash<QByteArray, QList<QByteArray> > *ItemDataBase::ItemTypes()
+{
+    static QHash<QByteArray, QList<QByteArray> > types;
+    if (!types.size())
+    {
+        QFile f(ResourcePathManager::dataPathForFileName("itemtypes.txt"));
+        if (!f.open(QIODevice::ReadOnly | QIODevice::Text))
+        {
+            ERROR_BOX_NO_PARENT(tr("Item types data not loaded.\nReason: %1").arg(f.errorString()));
+            return 0;
+        }
+
+        while (!f.atEnd())
+        {
+            QList<QByteArray> data = stringArrayOfCurrentLineInFile(f);
+            if (data.isEmpty())
+                continue;
+
+            types[data.at(0)] = data.at(1).split(',');
+        }
+    }
+    return &types;
 }
 
 QHash<uint, ItemPropertyTxt> *ItemDataBase::Properties()
@@ -446,6 +468,8 @@ QString ItemDataBase::completeItemName(ItemInfo *item, bool shouldUseColor)
         }
         if (!quality.isEmpty()) // skip non-magic types
             itemName.prepend(QString("[%1]<br>").arg(quality));
+        else if (item->isRW)
+            itemName.prepend(QString("[%1]<br>").arg(tr("runeword")));
 
 		if (item->isEthereal)
 			itemName += QString("<br>[%1]").arg(tr("ethereal"));

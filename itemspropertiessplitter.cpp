@@ -256,12 +256,13 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
 		//	connect(actionUnsocket, SIGNAL(triggered()), SLOT(unsocketItem()));
 		//	actions << actionUnsocket;
 		//}
-		if (item->isEthereal)
-		{
-			QAction *actionMakeNonEthereal = new QAction(tr("Make Non-Ethereal"), _itemsView);
-			connect(actionMakeNonEthereal, SIGNAL(triggered()), SLOT(makeNonEthereal()));
-			actions << actionMakeNonEthereal;
-		}
+        // no need
+		//if (item->isEthereal)
+		//{
+		//	QAction *actionMakeNonEthereal = new QAction(tr("Make Non-Ethereal"), _itemsView);
+		//	connect(actionMakeNonEthereal, SIGNAL(triggered()), SLOT(makeNonEthereal()));
+		//	actions << actionMakeNonEthereal;
+		//}
 
 		// TODO: add "Remove Mystic Orbs"
 		QAction *actionDelete = new QAction(tr("Delete"), _itemsView);
@@ -332,22 +333,32 @@ void ItemsPropertiesSplitter::disenchantItem()
 	addItemToList(newItem, insertIndex);
 }
 
-void ItemsPropertiesSplitter::unsocketItem()
-{
-
-}
-
-void ItemsPropertiesSplitter::makeNonEthereal()
-{
-	ItemInfo *item = itemFromAction(actionFromSender(sender(), QLatin1String("non-etherealize")));
-	if (item)
-	{
-		item->isEthereal = false;
-        item->hasChanged = true;
-        ReverseBitWriter::replaceValueInBitString(item->bitString, Enums::ItemOffsets::Ethereal, 1, 0);
-		_propertiesWidget->displayItemProperties(item);
-	}
-}
+//void ItemsPropertiesSplitter::unsocketItem()
+//{
+//
+//}
+//
+//void ItemsPropertiesSplitter::makeNonEthereal()
+//{
+//	ItemInfo *item = itemFromAction(actionFromSender(sender(), QLatin1String("non-etherealize")));
+//	if (item)
+//    {
+//        item->hasChanged = true;
+//
+//        item->isEthereal = false;
+//        ReverseBitWriter::replaceValueInBitString(item->bitString, Enums::ItemOffsets::Ethereal, 1, 0);
+//
+//        if (ItemDataBase::Items()->value(item->itemType).genericType == Enums::ItemTypeGeneric::Armor)
+//        {
+//            // TODO if will bring back: find the correct position for replacement (the defense offset isn't static)
+//            item->defense /= 1.5;
+//            const ItemPropertyTxt &defenceProp = ItemDataBase::Properties()->value(Enums::ItemProperties::Defence);
+//            ReverseBitWriter::replaceValueInBitString(item->bitString, Enums::ItemOffsets::Ethereal, defenceProp.bits, item->defense + defenceProp.add);
+//        }
+//
+//		_propertiesWidget->displayItemProperties(item);
+//	}
+//}
 
 void ItemsPropertiesSplitter::deleteItem()
 {

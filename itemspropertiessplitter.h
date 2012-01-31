@@ -41,8 +41,8 @@ private slots:
 
 	void showContextMenu(const QPoint &pos);
 	void disenchantItem();
-	void unsocketItem();
-	void makeNonEthereal();
+	//void unsocketItem();
+	//void makeNonEthereal();
 	void deleteItem();
 
 private:

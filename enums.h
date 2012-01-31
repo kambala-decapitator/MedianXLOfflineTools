@@ -197,10 +197,10 @@ public:
 
 // item related
 
-class ItemType
+class ItemTypeGeneric
 {
 public:
-    enum ItemTypeEnum
+    enum ItemTypeGenericEnum
     {
         Unknown = -1,
         Armor,
@@ -208,7 +208,7 @@ public:
         Misc
     };
 
-    static ItemTypeEnum typeFromString(const QByteArray &itemType);
+    static ItemTypeGenericEnum typeFromString(const QByteArray &itemType);
 };
 
 

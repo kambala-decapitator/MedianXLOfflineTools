@@ -1,5 +1,5 @@
 #code	name	width	height	gentype	stackable	rlvl	image	type	sockettype	class
-@50	Falcon Mask (Sacred)	2	2	0	0	30	invdr4	pelt		5
+@50	Falcon Mask (Sacred)	2	2	0	0	30	invdr4	qplt		5
 w42	Heraldic Shield (2)	2	4	0	0	7	invpa3	ashd	0	3
 3@G	Gambeson (3)	2	3	0	0	10	invxtuu	stor		1
 737	Bone Helm (3)	2	2	0	0	13	invbhm	bhlm		-1
@@ -14,14 +14,14 @@ w34	Spirit Mask (2)	2	2	0	0	9	invdr5	pelt		5
 722	Heavy Belt (3)	2	1	0	0	12	invtbl	belt		-1
 634	Chain Gloves (1)	2	2	0	0	2	invmgl	glov		-1
 2@L	Cervelliere (5)	2	2	0	0	20	invfhlu	azhm		0
-5@H	Lamellar Armor (Sacred)	2	3	0	0	30	invxrss	stor		1
+5@H	Lamellar Armor (Sacred)	2	3	0	0	30	invxrss	sstr		1
 6@L	Einherjar Helm (2)	2	2	0	0	7	invuhms	azhm		0
 e20	Wolf Head (6)	2	2	0	0	23	invdr1	pelt		5
 695	Studded Leather (3)	2	3	0	0	10	invstu	tors		-1
 e26	Fanged Helm (6)	2	2	0	0	24	invba2	phlm		4
 w14	Spirit Mask (1)	2	2	0	0	5	invdr5	pelt		5
 728	Gauntlets (3)	2	2	0	0	13	invhgl	glov		-1
-@42	Greaves (Sacred)	2	2	0	0	30	invhbt	boot		-1
+@42	Greaves (Sacred)	2	2	0	0	30	invhbt	qbot		-1
 w99	Avenger Guard (5)	2	2	0	0	23	invba5	phlm		4
 742	Ring Mail (4)	2	3	0	0	15	invrng	tors		-1
 8@N	Aspis (1)	2	3	0	0	3	invxrgu	ishd	0	6
@@ -30,13 +30,13 @@ w64	Crown Shield (3)	2	2	0	0	14	invpa5	ashd	0	3
 7@O	Totem Shield (2)	2	3	0	0	7	invxshu	ishd	0	6
 e34	Crown Shield (6)	2	2	0	0	27	invpa5	ashd	0	3
 684	Heavy Boots (2)	2	2	0	0	5	invvbt	boot		-1
-@35	Chain Gloves (Sacred)	2	2	0	0	30	invmgl	glov		-1
-@07	Chain Mail (Sacred)	2	3	0	0	30	invchn	tors		-1
+@35	Chain Gloves (Sacred)	2	2	0	0	30	invmgl	qglv		-1
+@07	Chain Mail (Sacred)	2	3	0	0	30	invchn	qtor		-1
 k20	Diadem (5)	2	2	0	0	23	invci3	circ		-1
 861	Plated Belt (6)	2	1	0	0	26	invhbl	belt		-1
 833	Studded Leather (6)	2	3	0	0	23	invstu	tors		-1
 825	Greaves (5)	2	2	0	0	22	invhbt	boot		-1
-@20	Great Helm (Sacred)	2	2	0	0	30	invghm	helm		-1
+@20	Great Helm (Sacred)	2	2	0	0	30	invghm	qhlm		-1
 k11	Tiara (3)	2	2	0	0	12	invci2	circ		-1
 9@K	Cervelliere (3)	2	2	0	0	11	invfhlu	azhm		0
 859	Belt (6)	2	1	0	0	24	invmbl	belt		-1
@@ -48,13 +48,13 @@ k18	Coronet (5)	2	2	0	0	20	invci1	circ		-1
 783	Bone Helm (4)	2	2	0	0	18	invbhm	bhlm		-1
 706	Ancient Armor (3)	2	3	0	0	15	invaar	tors		-1
 3@N	Parma (3)	2	2	0	0	11	invsmlu	ishd	0	6
-7@G	Gambeson (Sacred)	2	3	0	0	30	invxtuu	stor		1
-3@P	Totem Shield (Sacred)	2	3	0	0	30	invxshu	ishd	0	6
+7@G	Gambeson (Sacred)	2	3	0	0	30	invxtuu	sstr		1
+3@P	Totem Shield (Sacred)	2	3	0	0	30	invxshu	sisd	0	6
 4@I	Banded Plate (1)	2	3	0	0	6	invfulu	stor		1
 789	Scale Mail (5)	2	3	0	0	19	invscl	tors		-1
 16!	Setzschild (2)	2	4	0	0	10	invutss	azsd	0	0
 834	Ring Mail (6)	2	3	0	0	23	invrng	tors		-1
-@60	Aerin Shield (Sacred)	2	4	0	0	30	invpa4	ashd	0	3
+@60	Aerin Shield (Sacred)	2	4	0	0	30	invpa4	qaur	0	3
 11!	Phoenix Shield (4)	2	3	0	0	17	invkitu	azsd	0	0
 772	Chain Gloves (4)	2	2	0	0	15	invmgl	glov		-1
 w54	Spirit Mask (3)	2	2	0	0	14	invdr5	pelt		5
@@ -66,13 +66,13 @@ e16	Zombie Head (5)	2	2	0	0	19	invne2	head	0	2
 e15	Preserved Head (5)	2	2	0	0	18	invne1	head	0	2
 653	Breast Plate (2)	2	3	0	0	7	invbrs	tors		-1
 e11	Rondache (5)	2	2	0	0	19	invpa2	ashd	0	3
-@18	Helm (Sacred)	2	2	0	0	30	invhlm	helm		-1
+@18	Helm (Sacred)	2	2	0	0	30	invhlm	qhlm		-1
 04!	Athulua's Hand (4)	2	2	0	0	14	invxmlu	azsd	0	0
 716	Kite Shield (3)	2	3	0	0	11	invkit	shie	0	-1
 686	Light Plated Boots (2)	2	2	0	0	7	invtbt	boot		-1
 743	Scale Mail (4)	2	3	0	0	15	invscl	tors		-1
 778	Light Plated Boots (4)	2	2	0	0	16	invtbt	boot		-1
-@11	Field Plate (Sacred)	2	3	0	0	30	invfld	tors		-1
+@11	Field Plate (Sacred)	2	3	0	0	30	invfld	qtor		-1
 685	Chain Boots (2)	2	2	0	0	6	invmbt	boot		-1
 e37	Unraveller Head (6)	2	2	0	0	24	invne3	head	0	2
 720	Light Belt (3)	2	1	0	0	10	invvbl	belt		-1
@@ -90,22 +90,22 @@ w32	Antlers (2)	2	2	0	0	7	invdr3	pelt		5
 w65	Preserved Head (3)	2	2	0	0	10	invne1	head	0	2
 752	Ancient Armor (4)	2	3	0	0	19	invaar	tors		-1
 13!	Phoenix Shield (6)	2	3	0	0	26	invkitu	azsd	0	0
-@26	Tower Shield (Sacred)	2	3	0	0	30	invtow	shie	0	-1
+@26	Tower Shield (Sacred)	2	3	0	0	30	invtow	qshi	0	-1
 835	Scale Mail (6)	2	3	0	0	23	invscl	tors		-1
 4@P	Bladed Shield (1)	2	3	0	0	4	invxpku	ishd	0	6
-28!	Bull Shield (Sacred)	2	4	0	0	30	invgtsu	basd	0	4
+28!	Bull Shield (Sacred)	2	4	0	0	30	invgtsu	saba	0	4
 w21	Rondache (1)	2	2	0	0	2	invpa2	ashd	0	3
 3@O	Aspis (5)	2	3	0	0	20	invxrgu	ishd	0	6
 862	Leather Gloves (6)	2	2	0	0	21	invlgl	glov		-1
-6@K	Morion (Sacred)	2	2	0	0	30	invxkpu	azhm		0
+6@K	Morion (Sacred)	2	2	0	0	30	invxkpu	szhm		0
 54!	Blackguard Helm (5)	2	2	0	0	20	invbhmu	pzhm		3
 23!	Bull Shield (2)	2	4	0	0	6	invgtsu	basd	0	4
 2@K	Morion (3)	2	2	0	0	9	invxkpu	azhm		0
 683	Boots (2)	2	2	0	0	4	invlbt	boot		-1
-@43	Bone Shield (Sacred)	2	3	0	0	30	invbsh	shie	0	-1
+@43	Bone Shield (Sacred)	2	3	0	0	30	invbsh	qshi	0	-1
 5@I	Banded Plate (2)	2	3	0	0	10	invfulu	stor		1
 w45	Preserved Head (2)	2	2	0	0	5	invne1	head	0	2
-@34	Heavy Gloves (Sacred)	2	2	0	0	30	invvgl	glov		-1
+@34	Heavy Gloves (Sacred)	2	2	0	0	30	invvgl	qglv		-1
 765	Sash (4)	2	1	0	0	13	invlbl	belt		-1
 w98	Assault Helmet (5)	2	2	0	0	21	invba4	phlm		4
 784	Quilted Armor (5)	2	3	0	0	17	invqlt	tors		-1
@@ -115,12 +115,12 @@ w44	Crown Shield (2)	2	2	0	0	9	invpa5	ashd	0	3
 762	Kite Shield (4)	2	3	0	0	16	invkit	shie	0	-1
 638	Heavy Boots (1)	2	2	0	0	1	invvbt	boot		-1
 734	Bone Shield (3)	2	3	0	0	11	invbsh	bshi	0	-1
-@51	Spirit Mask (Sacred)	2	2	0	0	30	invdr5	pelt		5
+@51	Spirit Mask (Sacred)	2	2	0	0	30	invdr5	qplt		5
 875	Bone Helm (6)	2	2	0	0	27	invbhm	bhlm		-1
-@21	Crown (Sacred)	2	2	0	0	30	invcrn	helm		-1
+@21	Crown (Sacred)	2	2	0	0	30	invcrn	qhlm		-1
 8@M	Spangenhelm (6)	2	2	0	0	27	invxrnu	azhm		0
 w29	Demon Head (1)	2	2	0	0	5	invne5	head	0	2
-@08	Breast Plate (Sacred)	2	3	0	0	30	invbrs	tors		-1
+@08	Breast Plate (Sacred)	2	3	0	0	30	invbrs	qtor		-1
 k19	Tiara (5)	2	2	0	0	21	invci2	circ		-1
 3@M	Spangenhelm (1)	2	2	0	0	5	invxrnu	azhm		0
 9@J	Morion (1)	2	2	0	0	1	invxkpu	azhm		0
@@ -130,10 +130,10 @@ k19	Tiara (5)	2	2	0	0	21	invci2	circ		-1
 k04	Diadem (1)	2	2	0	0	5	invci3	circ		-1
 w93	Falcon Mask (5)	2	2	0	0	21	invdr4	pelt		5
 4@J	Ceremonial Armor (3)	2	3	0	0	15	invaaru	stor		1
-@69	Tiara (Sacred)	2	2	0	0	30	invci2	circ		-1
-@06	Scale Mail (Sacred)	2	3	0	0	30	invscl	tors		-1
+@69	Tiara (Sacred)	2	2	0	0	30	invci2	qcic		-1
+@06	Scale Mail (Sacred)	2	3	0	0	30	invscl	qtor		-1
 678	Leather Gloves (2)	2	2	0	0	4	invlgl	glov		-1
-7@N	Parma (Sacred)	2	2	0	0	30	invsmlu	ishd	0	6
+7@N	Parma (Sacred)	2	2	0	0	30	invsmlu	sisd	0	6
 605	Scale Mail (1)	2	3	0	0	2	invscl	tors		-1
 4@O	Aspis (6)	2	3	0	0	25	invxrgu	ishd	0	6
 k17	Circlet (5)	2	2	0	0	19	invci0	circ		-1
@@ -143,14 +143,14 @@ k17	Circlet (5)	2	2	0	0	19	invci0	circ		-1
 644	Mask (1)	2	2	0	0	3	invmsk	bhlm		-1
 e14	Crown Shield (5)	2	2	0	0	22	invpa5	ashd	0	3
 759	Buckler (4)	2	2	0	0	13	invbuc	shie	0	-1
-1@J	Banded Plate (Sacred)	2	3	0	0	30	invfulu	stor		1
+1@J	Banded Plate (Sacred)	2	3	0	0	30	invfulu	sstr		1
 851	Buckler (6)	2	2	0	0	21	invbuc	shie	0	-1
 w79	Avenger Guard (4)	2	2	0	0	18	invba5	phlm		4
 9@P	Bladed Shield (6)	2	3	0	0	26	invxpku	ishd	0	6
 01!	Athulua's Hand (1)	2	2	0	0	0	invxmlu	azsd	0	0
 694	Hard Leather Armor (3)	2	3	0	0	9	invhla	tors		-1
-@44	Spiked Shield (Sacred)	2	3	0	0	30	invspk	shie	0	-1
-@17	Skull Cap (Sacred)	2	2	0	0	30	invskp	helm		-1
+@44	Spiked Shield (Sacred)	2	3	0	0	30	invspk	qshi	0	-1
+@17	Skull Cap (Sacred)	2	2	0	0	30	invskp	qhlm		-1
 w85	Preserved Head (4)	2	2	0	0	14	invne1	head	0	2
 816	Leather Gloves (5)	2	2	0	0	17	invlgl	glov		-1
 12!	Phoenix Shield (5)	2	3	0	0	21	invkitu	azsd	0	0
@@ -160,7 +160,7 @@ w55	Jawbone Cap (3)	2	2	0	0	10	invba1	phlm		4
 791	Breast Plate (5)	2	3	0	0	20	invbrs	tors		-1
 19!	Setzschild (5)	2	4	0	0	23	invutss	azsd	0	0
 796	Gothic Plate (5)	2	3	0	0	22	invgth	tors		-1
-14!	Phoenix Shield (Sacred)	2	3	0	0	30	invkitu	azsd	0	0
+14!	Phoenix Shield (Sacred)	2	3	0	0	30	invkitu	sasz	0	0
 844	Ancient Armor (6)	2	3	0	0	27	invaar	tors		-1
 787	Studded Leather (5)	2	3	0	0	19	invstu	tors		-1
 w40	Targe (2)	2	2	0	0	5	invpa1	ashd	0	3
@@ -179,17 +179,17 @@ w15	Jawbone Cap (1)	2	2	0	0	1	invba1	phlm		4
 764	Gothic Shield (4)	2	4	0	0	18	invgts	shie	0	-1
 672	Gothic Shield (2)	2	4	0	0	9	invgts	shie	0	-1
 769	Plated Belt (4)	2	1	0	0	18	invhbl	belt		-1
-@12	Light Plate (Sacred)	2	3	0	0	30	invltp	tors		-1
+@12	Light Plate (Sacred)	2	3	0	0	30	invltp	qtor		-1
 e12	Heraldic Shield (5)	2	4	0	0	20	invpa3	ashd	0	3
 803	Great Helm (5)	2	2	0	0	21	invghm	helm		-1
-@54	Horned Helm (Sacred)	2	2	0	0	30	invba3	phlm		4
+@54	Horned Helm (Sacred)	2	2	0	0	30	invba3	qphm		4
 7@I	Banded Plate (4)	2	3	0	0	19	invfulu	stor		1
 853	Large Shield (6)	2	3	0	0	24	invlrg	shie	0	-1
-@14	Full Plate Mail (Sacred)	2	3	0	0	30	invful	tors		-1
+@14	Full Plate Mail (Sacred)	2	3	0	0	30	invful	qtor		-1
 751	Full Plate Mail (4)	2	3	0	0	18	invful	tors		-1
 8@K	Cervelliere (2)	2	2	0	0	7	invfhlu	azhm		0
 606	Chain Mail (1)	2	3	0	0	2	invchn	tors		-1
-@22	Buckler (Sacred)	2	2	0	0	30	invbuc	shie	0	-1
+@22	Buckler (Sacred)	2	2	0	0	30	invbuc	qshi	0	-1
 w52	Antlers (3)	2	2	0	0	11	invdr3	pelt		5
 724	Leather Gloves (3)	2	2	0	0	8	invlgl	glov		-1
 w73	Falcon Mask (4)	2	2	0	0	17	invdr4	pelt		5
@@ -198,7 +198,7 @@ w60	Targe (3)	2	2	0	0	10	invpa1	ashd	0	3
 666	Crown (2)	2	2	0	0	9	invcrn	crow		-1
 1@L	Cervelliere (4)	2	2	0	0	15	invfhlu	azhm		0
 860	Heavy Belt (6)	2	1	0	0	25	invtbl	belt		-1
-@05	Ring Mail (Sacred)	2	3	0	0	30	invrng	tors		-1
+@05	Ring Mail (Sacred)	2	3	0	0	30	invrng	qtor		-1
 4@K	Morion (5)	2	2	0	0	18	invxkpu	azhm		0
 677	Plated Belt (2)	2	1	0	0	9	invhbl	belt		-1
 e21	Hawk Helm (6)	2	2	0	0	24	invdr2	pelt		5
@@ -212,29 +212,29 @@ e21	Hawk Helm (6)	2	2	0	0	24	invdr2	pelt		5
 43!	Hundsgugel (1)	2	2	0	0	1	invhlmu	pzhm		3
 5@J	Ceremonial Armor (4)	2	3	0	0	19	invaaru	stor		1
 w28	Gargoyle Head (1)	2	2	0	0	3	invne4	head	0	2
-@40	Chain Boots (Sacred)	2	2	0	0	30	invmbt	boot		-1
+@40	Chain Boots (Sacred)	2	2	0	0	30	invmbt	qbot		-1
 646	Quilted Armor (2)	2	3	0	0	4	invqlt	tors		-1
 39!	Gilded Shield (4)	2	3	0	0	19	invlrgu	basd	0	4
 756	Full Helm (4)	2	2	0	0	16	invfhl	helm		-1
 w97	Horned Helm (5)	2	2	0	0	20	invba3	phlm		4
-@65	Gargoyle Head (Sacred)	2	2	0	0	30	invne4	head	0	2
+@65	Gargoyle Head (Sacred)	2	2	0	0	30	invne4	qhed	0	2
 6@P	Bladed Shield (3)	2	3	0	0	12	invxpku	ishd	0	6
 26!	Bull Shield (5)	2	4	0	0	19	invgtsu	basd	0	4
 46!	Hundsgugel (4)	2	2	0	0	14	invhlmu	pzhm		3
 617	Helm (1)	2	2	0	0	2	invhlm	helm		-1
 w36	Fanged Helm (2)	2	2	0	0	6	invba2	phlm		4
-07!	Athulua's Hand (Sacred)	2	2	0	0	30	invxmlu	azsd	0	0
+07!	Athulua's Hand (Sacred)	2	2	0	0	30	invxmlu	sasz	0	0
 w12	Antlers (1)	2	2	0	0	3	invdr3	pelt		5
 e28	Assault Helmet (6)	2	2	0	0	25	invba4	phlm		4
-@68	Coronet (Sacred)	2	2	0	0	30	invci1	circ		-1
+@68	Coronet (Sacred)	2	2	0	0	30	invci1	qcic		-1
 w20	Targe (1)	2	2	0	0	1	invpa1	ashd	0	3
 k13	Circlet (4)	2	2	0	0	15	invci0	circ		-1
 25!	Bull Shield (4)	2	4	0	0	15	invgtsu	basd	0	4
 651	Scale Mail (2)	2	3	0	0	6	invscl	tors		-1
 45!	Hundsgugel (3)	2	2	0	0	9	invhlmu	pzhm		3
 629	Belt (1)	2	1	0	0	2	invmbl	belt		-1
-@16	Cap (Sacred)	2	2	0	0	30	invcap	helm		-1
-49!	Hundsgugel (Sacred)	2	2	0	0	30	invhlmu	pzhm		3
+@16	Cap (Sacred)	2	2	0	0	30	invcap	qhlm		-1
+49!	Hundsgugel (Sacred)	2	2	0	0	30	invhlmu	sphz		3
 810	Gothic Shield (5)	2	4	0	0	22	invgts	shie	0	-1
 w71	Hawk Helm (4)	2	2	0	0	15	invdr2	pelt		5
 03!	Athulua's Hand (3)	2	2	0	0	9	invxmlu	azsd	0	0
@@ -242,16 +242,16 @@ w71	Hawk Helm (4)	2	2	0	0	15	invdr2	pelt		5
 1@O	Aspis (3)	2	3	0	0	12	invxrgu	ishd	0	6
 w53	Falcon Mask (3)	2	2	0	0	12	invdr4	pelt		5
 w11	Hawk Helm (1)	2	2	0	0	2	invdr2	pelt		5
-@70	Diadem (Sacred)	2	2	0	0	30	invci3	circ		-1
+@70	Diadem (Sacred)	2	2	0	0	30	invci3	qcic		-1
 806	Small Shield (5)	2	2	0	0	18	invsml	shie	0	-1
 869	Chain Boots (6)	2	2	0	0	24	invmbt	boot		-1
 41!	Gilded Shield (6)	2	3	0	0	28	invlrgu	basd	0	4
 790	Chain Mail (5)	2	3	0	0	19	invchn	tors		-1
-9@M	Spangenhelm (Sacred)	2	2	0	0	30	invxrnu	azhm		0
+9@M	Spangenhelm (Sacred)	2	2	0	0	30	invxrnu	szhm		0
 09!	Phoenix Shield (2)	2	3	0	0	8	invkitu	azsd	0	0
 w17	Horned Helm (1)	2	2	0	0	3	invba3	phlm		4
 604	Ring Mail (1)	2	3	0	0	2	invrng	tors		-1
-@13	Gothic Plate (Sacred)	2	3	0	0	30	invgth	tors		-1
+@13	Gothic Plate (Sacred)	2	3	0	0	30	invgth	qtor		-1
 717	Tower Shield (3)	2	3	0	0	12	invtow	shie	0	-1
 815	Plated Belt (5)	2	1	0	0	22	invhbl	belt		-1
 843	Full Plate Mail (6)	2	3	0	0	27	invful	tors		-1
@@ -270,12 +270,12 @@ w41	Rondache (2)	2	2	0	0	6	invpa2	ashd	0	3
 615	Cap (1)	2	2	0	0	0	invcap	helm		-1
 w72	Antlers (4)	2	2	0	0	16	invdr3	pelt		5
 854	Kite Shield (6)	2	3	0	0	24	invkit	shie	0	-1
-@23	Small Shield (Sacred)	2	2	0	0	30	invsml	shie	0	-1
+@23	Small Shield (Sacred)	2	2	0	0	30	invsml	qshi	0	-1
 766	Light Belt (4)	2	1	0	0	14	invvbl	belt		-1
 7@P	Bladed Shield (4)	2	3	0	0	17	invxpku	ishd	0	6
 797	Full Plate Mail (5)	2	3	0	0	23	invful	tors		-1
 658	Gothic Plate (2)	2	3	0	0	9	invgth	tors		-1
-@59	Heraldic Shield (Sacred)	2	4	0	0	30	invpa3	ashd	0	3
+@59	Heraldic Shield (Sacred)	2	4	0	0	30	invpa3	qaur	0	3
 w96	Fanged Helm (5)	2	2	0	0	19	invba2	phlm		4
 659	Full Plate Mail (2)	2	3	0	0	9	invful	tors		-1
 645	Bone Helm (1)	2	2	0	0	5	invbhm	bhlm		-1
@@ -300,18 +300,18 @@ e13	Aerin Shield (5)	2	4	0	0	21	invpa4	ashd	0	3
 826	Bone Shield (5)	2	3	0	0	20	invbsh	bshi	0	-1
 w35	Jawbone Cap (2)	2	2	0	0	5	invba1	phlm		4
 k06	Coronet (2)	2	2	0	0	7	invci1	circ		-1
-56!	Blackguard Helm (Sacred)	2	2	0	0	30	invbhmu	pzhm		3
+56!	Blackguard Helm (Sacred)	2	2	0	0	30	invbhmu	sphz		3
 6@I	Banded Plate (3)	2	3	0	0	14	invfulu	stor		1
 782	Mask (4)	2	2	0	0	16	invmsk	bhlm		-1
 757	Great Helm (4)	2	2	0	0	17	invghm	helm		-1
-4@L	Cervelliere (Sacred)	2	2	0	0	30	invfhlu	azhm		0
+4@L	Cervelliere (Sacred)	2	2	0	0	30	invfhlu	szhm		0
 809	Tower Shield (5)	2	3	0	0	21	invtow	shie	0	-1
-2@M	Einherjar Helm (Sacred)	2	2	0	0	30	invuhms	azhm		0
+2@M	Einherjar Helm (Sacred)	2	2	0	0	30	invuhms	szhm		0
 6@O	Totem Shield (1)	2	3	0	0	3	invxshu	ishd	0	6
-@41	Light Plated Boots (Sacred)	2	2	0	0	30	invtbt	boot		-1
-@04	Studded Leather (Sacred)	2	3	0	0	30	invstu	tors		-1
-@67	Circlet (Sacred)	2	2	0	0	30	invci0	circ		-1
-@55	Assault Helmet (Sacred)	2	2	0	0	30	invba4	phlm		4
+@41	Light Plated Boots (Sacred)	2	2	0	0	30	invtbt	qbot		-1
+@04	Studded Leather (Sacred)	2	3	0	0	30	invstu	qtor		-1
+@67	Circlet (Sacred)	2	2	0	0	30	invci0	qcic		-1
+@55	Assault Helmet (Sacred)	2	2	0	0	30	invba4	qphm		4
 w66	Zombie Head (3)	2	2	0	0	10	invne2	head	0	2
 745	Breast Plate (4)	2	3	0	0	15	invbrs	tors		-1
 832	Hard Leather Armor (6)	2	3	0	0	22	invhla	tors		-1
@@ -327,7 +327,7 @@ w62	Heraldic Shield (3)	2	4	0	0	11	invpa3	ashd	0	3
 9@L	Einherjar Helm (5)	2	2	0	0	21	invuhms	azhm		0
 850	Crown (6)	2	2	0	0	27	invcrn	crow		-1
 730	Heavy Boots (3)	2	2	0	0	10	invvbt	boot		-1
-@15	Ancient Armor (Sacred)	2	3	0	0	30	invaar	tors		-1
+@15	Ancient Armor (Sacred)	2	3	0	0	30	invaar	qtor		-1
 9@G	Lamellar Armor (2)	2	3	0	0	6	invxrss	stor		1
 k08	Diadem (2)	2	2	0	0	9	invci3	circ		-1
 36!	Gilded Shield (1)	2	3	0	0	7	invlrgu	basd	0	4
@@ -348,11 +348,11 @@ w68	Gargoyle Head (3)	2	2	0	0	12	invne4	head	0	2
 @31	Heavy Belt (Sacred)	2	1	0	0	30	invtbl	belt		-1
 865	Light Gauntlets (6)	2	2	0	0	25	invtgl	glov		-1
 w26	Zombie Head (1)	2	2	0	0	2	invne2	head	0	2
-@24	Large Shield (Sacred)	2	3	0	0	30	invlrg	shie	0	-1
+@24	Large Shield (Sacred)	2	3	0	0	30	invlrg	qshi	0	-1
 5@G	Gambeson (5)	2	3	0	0	19	invxtuu	stor		1
-5@O	Aspis (Sacred)	2	3	0	0	30	invxrgu	ishd	0	6
-@53	Fanged Helm (Sacred)	2	2	0	0	30	invba2	phlm		4
-@47	Wolf Head (Sacred)	2	2	0	0	30	invdr1	pelt		5
+5@O	Aspis (Sacred)	2	3	0	0	30	invxrgu	sisd	0	6
+@53	Fanged Helm (Sacred)	2	2	0	0	30	invba2	qphm		4
+@47	Wolf Head (Sacred)	2	2	0	0	30	invdr1	qplt		5
 649	Studded Leather (2)	2	3	0	0	6	invstu	tors		-1
 w58	Assault Helmet (3)	2	2	0	0	12	invba4	phlm		4
 w74	Spirit Mask (4)	2	2	0	0	18	invdr5	pelt		5
@@ -361,14 +361,14 @@ e22	Antlers (6)	2	2	0	0	24	invdr3	pelt		5
 642	Bone Shield (1)	2	3	0	0	2	invbsh	bshi	0	-1
 648	Hard Leather Armor (2)	2	3	0	0	5	invhla	tors		-1
 w86	Zombie Head (4)	2	2	0	0	15	invne2	head	0	2
-@03	Hard Leather Armor (Sacred)	2	3	0	0	30	invhla	tors		-1
-@39	Heavy Boots (Sacred)	2	2	0	0	30	invvbt	boot		-1
+@03	Hard Leather Armor (Sacred)	2	3	0	0	30	invhla	qtor		-1
+@39	Heavy Boots (Sacred)	2	2	0	0	30	invvbt	qbot		-1
 812	Light Belt (5)	2	1	0	0	19	invvbl	belt		-1
 795	Light Plate (5)	2	3	0	0	21	invltp	tors		-1
 w76	Fanged Helm (4)	2	2	0	0	15	invba2	phlm		4
 794	Field Plate (5)	2	3	0	0	21	invfld	tors		-1
 727	Light Gauntlets (3)	2	2	0	0	12	invtgl	glov		-1
-@56	Avenger Guard (Sacred)	2	2	0	0	30	invba5	phlm		4
+@56	Avenger Guard (Sacred)	2	2	0	0	30	invba5	qphm		4
 w67	Unraveller Head (3)	2	2	0	0	11	invne3	head	0	2
 e38	Gargoyle Head (6)	2	2	0	0	25	invne4	head	0	2
 4@M	Spangenhelm (2)	2	2	0	0	10	invxrnu	azhm		0
@@ -381,23 +381,23 @@ k01	Circlet (1)	2	2	0	0	2	invci0	circ		-1
 622	Small Shield (1)	2	2	0	0	1	invsml	shie	0	-1
 w48	Gargoyle Head (2)	2	2	0	0	8	invne4	head	0	2
 w89	Demon Head (4)	2	2	0	0	18	invne5	head	0	2
-8@J	Ceremonial Armor (Sacred)	2	3	0	0	30	invaaru	stor		1
+8@J	Ceremonial Armor (Sacred)	2	3	0	0	30	invaaru	sstr		1
 819	Light Gauntlets (5)	2	2	0	0	20	invtgl	glov		-1
 776	Heavy Boots (4)	2	2	0	0	14	invvbt	boot		-1
 38!	Gilded Shield (3)	2	3	0	0	15	invlrgu	basd	0	4
 858	Light Belt (6)	2	1	0	0	23	invvbl	belt		-1
-@63	Zombie Head (Sacred)	2	2	0	0	30	invne2	head	0	2
+@63	Zombie Head (Sacred)	2	2	0	0	30	invne2	qhed	0	2
 02!	Athulua's Hand (2)	2	2	0	0	5	invxmlu	azsd	0	0
 801	Helm (5)	2	2	0	0	19	invhlm	helm		-1
-42!	Gilded Shield (Sacred)	2	3	0	0	30	invlrgu	basd	0	4
-@36	Light Gauntlets (Sacred)	2	2	0	0	30	invtgl	glov		-1
+42!	Gilded Shield (Sacred)	2	3	0	0	30	invlrgu	saba	0	4
+@36	Light Gauntlets (Sacred)	2	2	0	0	30	invtgl	qglv		-1
 830	Quilted Armor (6)	2	3	0	0	22	invqlt	tors		-1
 754	Skull Cap (4)	2	2	0	0	14	invskp	helm		-1
 6@N	Parma (6)	2	2	0	0	24	invsmlu	ishd	0	6
 k07	Tiara (2)	2	2	0	0	8	invci2	circ		-1
 847	Helm (6)	2	2	0	0	24	invhlm	helm		-1
 747	Plate Mail (4)	2	3	0	0	16	invplt	tors		-1
-1@Q	Bladed Shield (Sacred)	2	3	0	0	30	invxpku	ishd	0	6
+1@Q	Bladed Shield (Sacred)	2	3	0	0	30	invxpku	sisd	0	6
 704	Gothic Plate (3)	2	3	0	0	13	invgth	tors		-1
 681	Light Gauntlets (2)	2	2	0	0	7	invtgl	glov		-1
 619	Great Helm (1)	2	2	0	0	4	invghm	helm		-1
@@ -444,17 +444,17 @@ w88	Gargoyle Head (4)	2	2	0	0	17	invne4	head	0	2
 657	Light Plate (2)	2	3	0	0	8	invltp	tors		-1
 w25	Preserved Head (1)	2	2	0	0	1	invne1	head	0	2
 774	Gauntlets (4)	2	2	0	0	18	invhgl	glov		-1
-@25	Kite Shield (Sacred)	2	3	0	0	30	invkit	shie	0	-1
+@25	Kite Shield (Sacred)	2	3	0	0	30	invkit	qshi	0	-1
 866	Gauntlets (6)	2	2	0	0	26	invhgl	glov		-1
 w75	Jawbone Cap (4)	2	2	0	0	14	invba1	phlm		4
 768	Heavy Belt (4)	2	1	0	0	16	invtbl	belt		-1
-@58	Rondache (Sacred)	2	2	0	0	30	invpa2	ashd	0	3
+@58	Rondache (Sacred)	2	2	0	0	30	invpa2	qaur	0	3
 693	Leather Armor (3)	2	3	0	0	9	invlea	tors		-1
 673	Sash (2)	2	1	0	0	4	invlbl	belt		-1
 w49	Demon Head (2)	2	2	0	0	9	invne5	head	0	2
-35!	Bronze Shield (Sacred)	2	2	0	0	30	invbucu	basd	0	4
+35!	Bronze Shield (Sacred)	2	2	0	0	30	invbucu	saba	0	4
 770	Leather Gloves (4)	2	2	0	0	13	invlgl	glov		-1
-@38	Boots (Sacred)	2	2	0	0	30	invlbt	boot		-1
+@38	Boots (Sacred)	2	2	0	0	30	invlbt	qbot		-1
 641	Greaves (1)	2	2	0	0	4	invhbt	boot		-1
 838	Splint Mail (6)	2	3	0	0	24	invspl	tors		-1
 761	Large Shield (4)	2	3	0	0	15	invlrg	shie	0	-1
@@ -469,7 +469,7 @@ w91	Hawk Helm (5)	2	2	0	0	19	invdr2	pelt		5
 k23	Tiara (6)	2	2	0	0	25	invci2	circ		-1
 623	Large Shield (1)	2	3	0	0	2	invlrg	shie	0	-1
 8@I	Banded Plate (5)	2	3	0	0	23	invfulu	stor		1
-@57	Targe (Sacred)	2	2	0	0	30	invpa1	ashd	0	3
+@57	Targe (Sacred)	2	2	0	0	30	invpa1	qaur	0	3
 e32	Heraldic Shield (6)	2	4	0	0	24	invpa3	ashd	0	3
 e30	Targe (6)	2	2	0	0	23	invpa1	ashd	0	3
 08!	Phoenix Shield (1)	2	3	0	0	4	invkitu	azsd	0	0
@@ -479,7 +479,7 @@ e30	Targe (6)	2	2	0	0	23	invpa1	ashd	0	3
 628	Light Belt (1)	2	1	0	0	1	invvbl	belt		-1
 22!	Bull Shield (1)	2	4	0	0	1	invgtsu	basd	0	4
 w19	Avenger Guard (1)	2	2	0	0	5	invba5	phlm		4
-@02	Leather Armor (Sacred)	2	3	0	0	30	invlea	tors		-1
+@02	Leather Armor (Sacred)	2	3	0	0	30	invlea	qtor		-1
 733	Greaves (3)	2	2	0	0	13	invhbt	boot		-1
 630	Heavy Belt (1)	2	1	0	0	3	invtbl	belt		-1
 6@H	Kazarghand (1)	2	3	0	0	3	invxaru	stor		1
@@ -489,19 +489,19 @@ w37	Horned Helm (2)	2	2	0	0	7	invba3	phlm		4
 711	Great Helm (3)	2	2	0	0	12	invghm	helm		-1
 9@O	Totem Shield (4)	2	3	0	0	16	invxshu	ishd	0	6
 705	Full Plate Mail (3)	2	3	0	0	14	invful	tors		-1
-@66	Demon Head (Sacred)	2	2	0	0	30	invne5	head	0	2
+@66	Demon Head (Sacred)	2	2	0	0	30	invne5	qhed	0	2
 836	Chain Mail (6)	2	3	0	0	24	invchn	tors		-1
 2@J	Ceremonial Armor (1)	2	3	0	0	6	invaaru	stor		1
-@49	Antlers (Sacred)	2	2	0	0	30	invdr3	pelt		5
+@49	Antlers (Sacred)	2	2	0	0	30	invdr3	qplt		5
 w51	Hawk Helm (3)	2	2	0	0	11	invdr2	pelt		5
 9@H	Kazarghand (4)	2	3	0	0	16	invxaru	stor		1
-@27	Gothic Shield (Sacred)	2	4	0	0	30	invgts	shie	0	-1
+@27	Gothic Shield (Sacred)	2	4	0	0	30	invgts	qshi	0	-1
 785	Leather Armor (5)	2	3	0	0	17	invlea	tors		-1
-@33	Leather Gloves (Sacred)	2	2	0	0	30	invlgl	glov		-1
+@33	Leather Gloves (Sacred)	2	2	0	0	30	invlgl	qglv		-1
 609	Plate Mail (1)	2	3	0	0	3	invplt	tors		-1
 667	Buckler (2)	2	2	0	0	4	invbuc	shie	0	-1
 741	Studded Leather (4)	2	3	0	0	14	invstu	tors		-1
-3@I	Kazarghand (Sacred)	2	3	0	0	30	invxaru	stor		1
+3@I	Kazarghand (Sacred)	2	3	0	0	30	invxaru	sstr		1
 714	Small Shield (3)	2	2	0	0	10	invsml	shie	0	-1
 53!	Blackguard Helm (4)	2	2	0	0	16	invbhmu	pzhm		3
 822	Heavy Boots (5)	2	2	0	0	19	invvbt	boot		-1
@@ -514,7 +514,7 @@ w31	Hawk Helm (2)	2	2	0	0	6	invdr2	pelt		5
 697	Scale Mail (3)	2	3	0	0	10	invscl	tors		-1
 w39	Avenger Guard (2)	2	2	0	0	9	invba5	phlm		4
 726	Chain Gloves (3)	2	2	0	0	11	invmgl	glov		-1
-21!	Setzschild (Sacred)	2	4	0	0	30	invutss	azsd	0	0
+21!	Setzschild (Sacred)	2	4	0	0	30	invutss	sasz	0	0
 w24	Crown Shield (1)	2	2	0	0	5	invpa5	ashd	0	3
 857	Sash (6)	2	1	0	0	21	invlbl	belt		-1
 707	Cap (3)	2	2	0	0	8	invcap	helm		-1
@@ -522,7 +522,7 @@ w24	Crown Shield (1)	2	2	0	0	5	invpa5	ashd	0	3
 w81	Rondache (4)	2	2	0	0	15	invpa2	ashd	0	3
 5@P	Bladed Shield (2)	2	3	0	0	8	invxpku	ishd	0	6
 4@G	Gambeson (4)	2	3	0	0	14	invxtuu	stor		1
-@37	Gauntlets (Sacred)	2	2	0	0	30	invhgl	glov		-1
+@37	Gauntlets (Sacred)	2	2	0	0	30	invhgl	qglv		-1
 w47	Unraveller Head (2)	2	2	0	0	7	invne3	head	0	2
 792	Splint Mail (5)	2	3	0	0	20	invspl	tors		-1
 624	Kite Shield (1)	2	3	0	0	2	invkit	shie	0	-1
@@ -534,7 +534,7 @@ w47	Unraveller Head (2)	2	2	0	0	7	invne3	head	0	2
 814	Heavy Belt (5)	2	1	0	0	20	invtbl	belt		-1
 808	Kite Shield (5)	2	3	0	0	20	invkit	shie	0	-1
 845	Cap (6)	2	2	0	0	22	invcap	helm		-1
-@01	Quilted Armor (Sacred)	2	3	0	0	30	invqlt	tors		-1
+@01	Quilted Armor (Sacred)	2	3	0	0	30	invqlt	qtor		-1
 48!	Hundsgugel (6)	2	2	0	0	22	invhlmu	pzhm		3
 760	Small Shield (4)	2	2	0	0	14	invsml	shie	0	-1
 w78	Assault Helmet (4)	2	2	0	0	17	invba4	phlm		4
@@ -552,10 +552,10 @@ k03	Tiara (1)	2	2	0	0	4	invci2	circ		-1
 e24	Spirit Mask (6)	2	2	0	0	27	invdr5	pelt		5
 w84	Crown Shield (4)	2	2	0	0	18	invpa5	ashd	0	3
 702	Field Plate (3)	2	3	0	0	12	invfld	tors		-1
-@62	Preserved Head (Sacred)	2	2	0	0	30	invne1	head	0	2
+@62	Preserved Head (Sacred)	2	2	0	0	30	invne1	qhed	0	2
 639	Chain Boots (1)	2	2	0	0	2	invmbt	boot		-1
 50!	Blackguard Helm (1)	2	2	0	0	3	invbhmu	pzhm		3
-@45	Mask (Sacred)	2	2	0	0	30	invmsk	helm		-1
+@45	Mask (Sacred)	2	2	0	0	30	invmsk	qhlm		-1
 873	Spiked Shield (6)	2	3	0	0	25	invspk	bshi	0	-1
 636	Gauntlets (1)	2	2	0	0	5	invhgl	glov		-1
 1@I	Kazarghand (5)	2	3	0	0	20	invxaru	stor		1
@@ -572,19 +572,19 @@ w63	Aerin Shield (3)	2	4	0	0	12	invpa4	ashd	0	3
 w59	Avenger Guard (3)	2	2	0	0	14	invba5	phlm		4
 37!	Gilded Shield (2)	2	3	0	0	11	invlrgu	basd	0	4
 600	Quilted Armor (1)	2	3	0	0	0	invqlt	tors		-1
-@64	Unraveller Head (Sacred)	2	2	0	0	30	invne3	head	0	2
+@64	Unraveller Head (Sacred)	2	2	0	0	30	invne3	qhed	0	2
 w38	Assault Helmet (2)	2	2	0	0	8	invba4	phlm		4
 2@I	Kazarghand (6)	2	3	0	0	25	invxaru	stor		1
 3@H	Lamellar Armor (5)	2	3	0	0	19	invxrss	stor		1
-@46	Bone Helm (Sacred)	2	2	0	0	30	invbhm	helm		-1
-@61	Crown Shield (Sacred)	2	2	0	0	30	invpa5	ashd	0	3
+@46	Bone Helm (Sacred)	2	2	0	0	30	invbhm	qhlm		-1
+@61	Crown Shield (Sacred)	2	2	0	0	30	invpa5	qaur	0	3
 821	Boots (5)	2	2	0	0	17	invlbt	boot		-1
 696	Ring Mail (3)	2	3	0	0	10	invrng	tors		-1
 9@I	Banded Plate (6)	2	3	0	0	27	invfulu	stor		1
 8@H	Kazarghand (3)	2	3	0	0	12	invxaru	stor		1
 713	Buckler (3)	2	2	0	0	8	invbuc	shie	0	-1
 w50	Wolf Head (3)	2	2	0	0	10	invdr1	pelt		5
-@48	Hawk Helm (Sacred)	2	2	0	0	30	invdr2	pelt		5
+@48	Hawk Helm (Sacred)	2	2	0	0	30	invdr2	qplt		5
 w57	Horned Helm (3)	2	2	0	0	11	invba3	phlm		4
 676	Heavy Belt (2)	2	1	0	0	7	invtbl	belt		-1
 @30	Belt (Sacred)	2	1	0	0	30	invmbl	belt		-1
@@ -599,21 +599,21 @@ w23	Aerin Shield (1)	2	4	0	0	3	invpa4	ashd	0	3
 631	Plated Belt (1)	2	1	0	0	5	invhbl	belt		-1
 6@G	Gambeson (6)	2	3	0	0	23	invxtuu	stor		1
 w46	Zombie Head (2)	2	2	0	0	6	invne2	head	0	2
-@52	Jawbone Cap (Sacred)	2	2	0	0	30	invba1	phlm		4
+@52	Jawbone Cap (Sacred)	2	2	0	0	30	invba1	qphm		4
 e31	Rondache (6)	2	2	0	0	24	invpa2	ashd	0	3
 4@H	Lamellar Armor (6)	2	3	0	0	24	invxrss	stor		1
 e35	Preserved Head (6)	2	2	0	0	23	invne1	head	0	2
 w80	Targe (4)	2	2	0	0	14	invpa1	ashd	0	3
-@19	Full Helm (Sacred)	2	2	0	0	30	invfhl	helm		-1
+@19	Full Helm (Sacred)	2	2	0	0	30	invfhl	qhlm		-1
 1@G	Gambeson (1)	2	3	0	0	1	invxtuu	stor		1
 763	Tower Shield (4)	2	3	0	0	17	invtow	shie	0	-1
-@10	Plate Mail (Sacred)	2	3	0	0	30	invplt	tors		-1
+@10	Plate Mail (Sacred)	2	3	0	0	30	invplt	qtor		-1
 839	Plate Mail (6)	2	3	0	0	25	invplt	tors		-1
 w77	Horned Helm (4)	2	2	0	0	16	invba3	phlm		4
 793	Plate Mail (5)	2	3	0	0	21	invplt	tors		-1
 654	Splint Mail (2)	2	3	0	0	7	invspl	tors		-1
 w92	Antlers (5)	2	2	0	0	20	invdr3	pelt		5
-@09	Splint Mail (Sacred)	2	3	0	0	30	invspl	tors		-1
+@09	Splint Mail (Sacred)	2	3	0	0	30	invspl	qtor		-1
 k10	Coronet (3)	2	2	0	0	11	invci1	circ		-1
 618	Full Helm (1)	2	2	0	0	3	invfhl	helm		-1
 848	Full Helm (6)	2	2	0	0	24	invfhl	helm		-1
@@ -639,15 +639,15 @@ e17	Unraveller Head (5)	2	2	0	0	20	invne3	head	0	2
 l37	War Hammer (2)	2	3	1	0	7	invwhm	hamm	1	-1
 !59	Flamen Staff (4)	1	4	1	0	17	invcstu	dstf	1	5
 127	Morning Star (1)	1	3	1	0	3	invmst	mace	1	-1
-46@	Blade (Sacred)	1	3	1	0	30	invbld	knif	1	-1
+46@	Blade (Sacred)	1	3	1	0	30	invbld	qknf	1	-1
 118	War Axe (1)	2	3	1	0	5	invwax	axe	1	-1
 206	Trident (2)	2	4	1	0	6	invtri	spea	1	-1
 443	Falchion (6)	1	3	1	0	26	invflc	swor	1	-1
 !71	Hexblade (2)	1	3	1	0	7	invkrsu	nknf	1	2
 8@E	Stinger Crossbow (6)	2	3	1	0	27	invmxbu	nxbw	1	2
 !65	Marrow Staff (3)	2	4	1	0	15	inv8wsu	nstf	1	2
-54@	Gnarled Staff (Sacred)	1	4	1	0	30	invcst	staf	1	-1
-83@	Clasped Orb (Sacred)	1	2	1	0	30	invob4	orb	1	1
+54@	Gnarled Staff (Sacred)	1	4	1	0	30	invcst	qstf	1	-1
+83@	Clasped Orb (Sacred)	1	2	1	0	30	invob4	qorb	1	1
 6@4	Recurve Bow (5)	2	3	1	0	24	invswbu	dbow	1	5
 331	Morning Star (4)	1	3	1	0	17	invmst	mace	1	-1
 358	Battle Staff (4)	1	4	1	0	17	invbst	staf	1	-1
@@ -667,32 +667,32 @@ j92	Claws (5)	1	3	1	0	22	invclw	h2h	1	6
 451	Flamberge (6)	2	4	1	0	27	invflb	2hsd	1	-1
 j10	Eagle Orb (1)	1	2	1	0	0	invob1	orb	1	1
 454	Hand Axe (6)	1	3	1	0	23	invhax	axe	1	-1
-!62	Flamen Staff (Sacred)	1	4	1	0	30	invcstu	dstf	1	5
+!62	Flamen Staff (Sacred)	1	4	1	0	30	invcstu	sdst	1	5
 o14	Maiden Javelin (6)	1	3	1	1	27	invam5	ajav	1	0
-82@	Smoked Sphere (Sacred)	1	2	1	0	30	invob3	orb	1	1
+82@	Smoked Sphere (Sacred)	1	2	1	0	30	invob3	qorb	1	1
 3@C	Hand of God (4)	2	3	1	0	19	inv9gmu	pham	1	3
 1@6	Backsword (4)	1	3	1	0	17	inv9sbu	bswd	1	4
 6@6	Ida (2)	2	3	1	0	8	invbsdu	bswd	1	4
-28@	Morning Star (Sacred)	1	3	1	0	30	invmst	mace	1	-1
+28@	Morning Star (Sacred)	1	3	1	0	30	invmst	qmac	1	-1
 j18	Maiden Pike (1)	2	4	1	0	5	invam4	aspe	1	0
 j80	Smoked Sphere (5)	1	2	1	0	21	invob3	orb	1	1
 !05	Naginata (5)	2	4	1	0	23	invwsc	nagi	1	6
 l31	Yew Wand (6)	1	2	1	0	24	invywn	wand	1	2
-58@	Voulge (Sacred)	2	4	1	0	30	invvou	pole	1	-1
+58@	Voulge (Sacred)	2	4	1	0	30	invvou	qpol	1	-1
 j63	Smoked Sphere (4)	1	2	1	0	16	invob3	orb	1	1
 l62	Heavy Crossbow (3)	2	4	1	0	14	invhxb	xbow	1	-1
 378	War Sword (5)	1	3	1	0	24	invwsd	swor	1	-1
 325	Battle Axe (4)	2	3	1	0	16	invbtx	2hax	1	-1
 350	Throwing Knife (4)	1	2	1	1	13	invtkn	tkni	1	-1
 l28	Bone Wand (5)	1	2	1	0	21	invbwn	wand	1	2
-7@F	Trebuchet (Sacred)	2	3	1	0	30	inv8mxu	nxbw	1	2
+7@F	Trebuchet (Sacred)	2	3	1	0	30	inv8mxu	snxb	1	2
 l20	Bone Wand (3)	1	2	1	0	11	invbwn	wand	1	2
 226	Scythe (2)	2	4	1	0	7	invscy	scyh	1	-1
 2@F	Trebuchet (2)	2	3	1	0	10	inv8mxu	nxbw	1	2
 153	Gnarled Staff (1)	1	4	1	0	2	invcst	staf	1	-1
 211	Dirk (2)	1	2	1	0	6	invdir	knif	1	-1
 l12	Bone Wand (1)	1	2	1	0	2	invbwn	wand	1	2
-17@	Double Axe (Sacred)	2	3	1	0	30	inv2ax	axe	1	-1
+17@	Double Axe (Sacred)	2	3	1	0	30	inv2ax	qaxe	1	-1
 431	Halberd (5)	2	4	1	0	23	invhal	pole	1	-1
 337	Pilum (4)	1	3	1	1	15	invpil	jave	1	-1
 382	Bastard Sword (5)	1	4	1	0	21	invbsw	2hsd	1	-1
@@ -710,16 +710,16 @@ j46	Smoked Sphere (3)	1	2	1	0	11	invob3	orb	1	1
 !16	Bonesplitter (2)	2	4	1	0	8	invscyu	nscy	1	2
 495	War Staff (6)	2	4	1	0	27	invwst	staf	1	-1
 1@2	Serpent Bow (3)	2	4	1	0	12	inv8lbu	dbow	1	5
-84@	Jared's Stone (Sacred)	1	3	1	0	30	invob5	orb	1	1
+84@	Jared's Stone (Sacred)	1	3	1	0	30	invob5	qorb	1	1
 !51	Labrys (3)	2	4	1	0	15	invgaxu	2hbx	1	4
 4@8	Kriegsmesser (4)	2	3	1	0	20	inv9lsu	bswd	1	4
 9@D	Dart Thrower (5)	2	3	1	0	21	inv8lxu	nxbw	1	2
-43@	Dagger (Sacred)	1	2	1	0	30	invdgr	knif	1	-1
+43@	Dagger (Sacred)	1	2	1	0	30	invdgr	qknf	1	-1
 !78	Spirit Edge (2)	1	3	1	0	10	inv9blu	nknf	1	2
 418	Throwing Knife (5)	1	2	1	1	18	invtkn	tkni	1	-1
 236	Short Sword (3)	1	3	1	0	9	invssd	swor	1	-1
 168	Short Sword (2)	1	3	1	0	5	invssd	swor	1	-1
-81@	Sacred Globe (Sacred)	1	2	1	0	30	invob2	orb	1	1
+81@	Sacred Globe (Sacred)	1	2	1	0	30	invob2	qorb	1	1
 218	Balanced Axe (2)	2	3	1	1	7	invbal	taxe	1	-1
 135	Glaive (1)	1	4	1	1	3	invglv	jave	1	-1
 348	Kriss (4)	1	3	1	0	16	invkrs	knif	1	-1
@@ -727,14 +727,14 @@ j46	Smoked Sphere (3)	1	2	1	0	11	invob3	orb	1	1
 145	Blade (1)	1	3	1	0	5	invbld	knif	1	-1
 178	Bastard Sword (2)	1	4	1	0	7	invbsw	2hsd	1	-1
 285	Throwing Axe (3)	1	2	1	1	8	invtax	taxe	1	-1
-74@	Maul (Sacred)	2	4	1	0	30	invmau	hamm	1	-1
+74@	Maul (Sacred)	2	4	1	0	30	invmau	qham	1	-1
 5@3	Viper Bow (2)	2	3	1	0	9	invsbbu	dbow	1	5
 124	Club (1)	1	3	1	0	0	invclb	mace	1	-1
 234	Short War Bow (2)	2	3	1	0	8	invswb	bow	1	-1
 364	Short Bow (4)	2	3	1	0	13	invsbw	bow	1	-1
 388	Double Axe (5)	2	3	1	0	21	inv2ax	axe	1	-1
 l73	Crossbow (6)	2	3	1	0	26	invmxb	xbow	1	-1
-23@	Great Axe (Sacred)	2	4	1	0	30	invgax	2hax	1	-1
+23@	Great Axe (Sacred)	2	4	1	0	30	invgax	s2ha	1	-1
 486	Throwing Knife (6)	1	2	1	1	22	invtkn	tkni	1	-1
 160	Short Bow (1)	2	3	1	0	0	invsbw	bow	1	-1
 j53	Maiden Javelin (3)	1	3	1	1	14	invam5	ajav	1	0
@@ -758,7 +758,7 @@ l36	Great Maul (1)	2	3	1	0	5	invgma	hamm	1	-1
 5@5	Spatha (6)	1	3	1	0	25	invscmu	bswd	1	4
 246	Bastard Sword (3)	1	4	1	0	12	invbsw	2hsd	1	-1
 488	Balanced Knife (6)	1	2	1	1	27	invbkf	tkni	1	-1
-96@	Scissors Katar (Sacred)	1	3	1	0	30	invskr	h2h	1	6
+96@	Scissors Katar (Sacred)	1	3	1	0	30	invskr	qh2h	1	6
 430	Scythe (5)	2	4	1	0	21	invscy	scyh	1	-1
 !61	Flamen Staff (6)	1	4	1	0	27	invcstu	dstf	1	5
 447	Two-Handed Sword (6)	1	4	1	0	23	inv2hs	2hsd	1	-1
@@ -775,7 +775,7 @@ l21	Grim Wand (3)	1	2	1	0	14	invgwn	wand	1	2
 !85	Holy Lance (2)	2	4	1	0	6	invtriu	pspe	1	3
 342	Trident (4)	2	4	1	0	15	invtri	spea	1	-1
 452	Great Sword (6)	2	4	1	0	28	invgsd	2hsd	1	-1
-41@	Spetum (Sacred)	2	4	1	0	30	invspt	spea	1	-1
+41@	Spetum (Sacred)	2	4	1	0	30	invspt	qspe	1	-1
 295	Halberd (3)	2	4	1	0	14	invhal	pole	1	-1
 480	Spetum (6)	2	4	1	0	26	invspt	spea	1	-1
 341	Spear (4)	2	4	1	0	13	invspr	spea	1	-1
@@ -783,7 +783,7 @@ l21	Grim Wand (3)	1	2	1	0	14	invgwn	wand	1	2
 438	Short War Bow (5)	2	3	1	0	23	invswb	bow	1	-1
 j11	Sacred Globe (1)	1	2	1	0	1	invob2	orb	1	1
 j95	Eagle Orb (6)	1	2	1	0	22	invob1	orb	1	1
-!76	Hexblade (Sacred)	1	3	1	0	30	invkrsu	nknf	1	2
+!76	Hexblade (Sacred)	1	3	1	0	30	invkrsu	snkf	1	2
 444	Broad Sword (6)	2	3	1	0	26	invbsd	swor	1	-1
 !10	Raptor Scythe (3)	2	4	1	0	9	inv9s8u	nscy	1	2
 3@4	Recurve Bow (2)	2	3	1	0	10	invswbu	dbow	1	5
@@ -797,17 +797,17 @@ j89	Wrist Blade (5)	1	3	1	0	19	invktr	h2h	1	6
 j69	Maiden Pike (4)	2	4	1	0	19	invam4	aspe	1	0
 4@C	Hand of God (5)	2	3	1	0	24	inv9gmu	pham	1	3
 !04	Naginata (4)	2	4	1	0	18	invwsc	nagi	1	6
-78@	Heavy Crossbow (Sacred)	2	4	1	0	30	invhxb	xbow	1	-1
+78@	Heavy Crossbow (Sacred)	2	4	1	0	30	invhxb	qxbw	1	-1
 312	Claymore (4)	1	4	1	0	15	invclm	2hsd	1	-1
 405	Pilum (5)	1	3	1	1	20	invpil	jave	1	-1
 507	Long War Bow (6)	2	4	1	0	28	invlwb	bow	1	-1
 260	Club (3)	1	3	1	0	9	invclb	mace	1	-1
-4@6	Backsword (Sacred)	1	3	1	0	30	inv9sbu	bswd	1	4
+4@6	Backsword (Sacred)	1	3	1	0	30	inv9sbu	sbsd	1	4
 237	Scimitar (3)	1	3	1	0	10	invscm	swor	1	-1
 j97	Smoked Sphere (6)	1	2	1	0	25	invob3	orb	1	1
 370	Short War Bow (4)	2	3	1	0	18	invswb	bow	1	-1
 309	Long Sword (4)	2	3	1	0	17	invlsd	swor	1	-1
-4@D	Needle Crossbow (Sacred)	2	3	1	0	30	invlxbu	nxbw	1	2
+4@D	Needle Crossbow (Sacred)	2	3	1	0	30	invlxbu	snxb	1	2
 4@7	Bronze Sword (2)	2	3	1	0	9	invlsdu	bswd	1	4
 l49	War Hammer (6)	2	3	1	0	25	invwhm	hamm	1	-1
 136	Throwing Spear (1)	1	4	1	1	5	invtsp	jave	1	-1
@@ -819,20 +819,20 @@ o21	Scissors Katar (6)	1	3	1	0	28	invskr	h2h	1	6
 1@E	Dart Thrower (6)	2	3	1	0	26	inv8lxu	nxbw	1	2
 144	Kriss (1)	1	3	1	0	3	invkrs	knif	1	-1
 l29	Grim Wand (5)	1	2	1	0	23	invgwn	wand	1	2
-71@	Bone Wand (Sacred)	1	2	1	0	30	invbwn	wand	1	2
+71@	Bone Wand (Sacred)	1	2	1	0	30	invbwn	qwnd	1	2
 j40	Cestus (2)	1	3	1	0	7	invaxf	h2h	1	6
 100	Short Sword (1)	1	3	1	0	0	invssd	swor	1	-1
 380	Claymore (5)	1	4	1	0	19	invclm	2hsd	1	-1
 300	Short Battle Bow (3)	2	3	1	0	12	invsbb	bow	1	-1
 l18	Wand (3)	1	2	1	0	9	invwnd	wand	1	2
 !54	Labrys (6)	2	4	1	0	30	invgaxu	2hbx	1	4
-29@	Flail (Sacred)	2	3	1	0	30	invfla	mace	1	-1
+29@	Flail (Sacred)	2	3	1	0	30	invfla	qmac	1	-1
 286	Balanced Axe (3)	2	3	1	1	12	invbal	taxe	1	-1
 120	Broad Axe (1)	2	3	1	0	1	invbrx	2hax	1	-1
 4@5	Spatha (5)	1	3	1	0	21	invscmu	bswd	1	4
 381	Giant Sword (5)	1	4	1	0	20	invgis	2hsd	1	-1
 j75	Claws (4)	1	3	1	0	17	invclw	h2h	1	6
-06@	Long Sword (Sacred)	2	3	1	0	30	invlsd	swor	1	-1
+06@	Long Sword (Sacred)	2	3	1	0	30	invlsd	qswd	1	-1
 308	Broad Sword (4)	2	3	1	0	17	invbsd	swor	1	-1
 254	War Axe (3)	2	3	1	0	14	invwax	axe	1	-1
 392	Broad Axe (5)	2	3	1	0	20	invbrx	2hax	1	-1
@@ -845,17 +845,17 @@ j47	Clasped Orb (3)	1	2	1	0	12	invob4	orb	1	1
 !79	Spirit Edge (3)	1	3	1	0	15	inv9blu	nknf	1	2
 !96	Tepoztopilli (6)	2	4	1	0	30	inv9bru	pspe	1	3
 373	Scimitar (5)	1	3	1	0	19	invscm	swor	1	-1
-5@2	Serpent Bow (Sacred)	2	4	1	0	30	inv8lbu	dbow	1	5
+5@2	Serpent Bow (Sacred)	2	4	1	0	30	inv8lbu	sdbw	1	5
 205	Spear (2)	2	4	1	0	4	invspr	spea	1	-1
 399	Morning Star (5)	1	3	1	0	22	invmst	mace	1	-1
 j29	Smoked Sphere (2)	1	2	1	0	7	invob3	orb	1	1
-89@	Maiden Javelin (Sacred)	1	3	1	1	30	invam5	ajav	1	0
+89@	Maiden Javelin (Sacred)	1	3	1	1	30	invam5	qajv	1	0
 !24	Mammen Axe (3)	1	3	1	0	10	invhaxu	baxe	1	4
 235	Long War Bow (2)	2	4	1	0	10	invlwb	bow	1	-1
 301	Long Battle Bow (3)	2	4	1	0	12	invlbb	bow	1	-1
 9@6	Ida (5)	2	3	1	0	22	invbsdu	bswd	1	4
 436	Short Battle Bow (5)	2	3	1	0	21	invsbb	bow	1	-1
-50@	Throwing Axe (Sacred)	1	2	1	1	30	invtax	taxe	1	-1
+50@	Throwing Axe (Sacred)	1	2	1	1	30	invtax	qtax	1	-1
 213	Blade (2)	1	3	1	0	9	invbld	knif	1	-1
 456	Double Axe (6)	2	3	1	0	25	inv2ax	axe	1	-1
 !19	Bonesplitter (5)	2	4	1	0	23	invscyu	nscy	1	2
@@ -866,7 +866,7 @@ j30	Clasped Orb (2)	1	2	1	0	8	invob4	orb	1	1
 171	Falchion (2)	1	3	1	0	7	invflc	swor	1	-1
 3@E	Stinger Crossbow (1)	2	3	1	0	4	invmxbu	nxbw	1	2
 j87	Maiden Javelin (5)	1	3	1	1	23	invam5	ajav	1	0
-30@	Scepter (Sacred)	1	3	1	0	30	invscp	scep	1	-1
+30@	Scepter (Sacred)	1	3	1	0	30	invscp	qscp	1	-1
 5@6	Ida (1)	2	3	1	0	3	invbsdu	bswd	1	4
 386	Hand Axe (5)	1	3	1	0	18	invhax	axe	1	-1
 o13	Maiden Pike (6)	2	4	1	0	27	invam4	aspe	1	0
@@ -875,7 +875,7 @@ o13	Maiden Pike (6)	2	4	1	0	27	invam4	aspe	1	0
 j68	Maiden Spear (4)	2	4	1	0	17	invam3	aspe	1	0
 200	Javelin (2)	1	3	1	1	4	invjav	jave	1	-1
 1@9	Bonebreaker (3)	1	3	1	0	11	invspcu	pclb	1	3
-76@	Light Crossbow (Sacred)	2	3	1	0	30	invlxb	xbow	1	-1
+76@	Light Crossbow (Sacred)	2	3	1	0	30	invlxb	qxbw	1	-1
 366	Long Bow (4)	2	4	1	0	15	invlbw	bow	1	-1
 329	Spiked Club (4)	1	3	1	0	15	invspc	mace	1	-1
 j73	Hatchet Hands (4)	1	3	1	0	16	invaxf	h2h	1	6
@@ -883,12 +883,12 @@ l22	Wand (4)	1	2	1	0	13	invwnd	wand	1	2
 272	Throwing Spear (3)	1	4	1	1	14	invtsp	jave	1	-1
 161	Hunter's Bow (1)	2	3	1	0	0	invhbw	bow	1	-1
 400	Flail (5)	2	3	1	0	23	invfla	mace	1	-1
-!5!	Warp Blade (Sacred)	2	3	1	0	30	inv9cru	scrd	1	1
+!5!	Warp Blade (Sacred)	2	3	1	0	30	inv9cru	sscd	1	1
 l40	War Hammer (3)	2	3	1	0	12	invwhm	hamm	1	-1
 j70	Maiden Javelin (4)	1	3	1	1	19	invam5	ajav	1	0
-7@8	Kriegsmesser (Sacred)	2	3	1	0	30	inv9lsu	bswd	1	4
+7@8	Kriegsmesser (Sacred)	2	3	1	0	30	inv9lsu	sbsd	1	4
 109	Giant Sword (1)	1	4	1	0	2	invgis	2hsd	1	-1
-91@	Wrist Blade (Sacred)	1	3	1	0	30	invktr	h2h	1	6
+91@	Wrist Blade (Sacred)	1	3	1	0	30	invktr	qh2h	1	6
 l39	Great Maul (2)	2	3	1	0	10	invgma	hamm	1	-1
 j84	Reflex Bow (5)	2	4	1	0	24	invam2	abow	1	0
 5@1	Compound Bow (5)	2	3	1	0	21	invcbwu	dbow	1	5
@@ -905,26 +905,26 @@ j78	Eagle Orb (5)	1	2	1	0	18	invob1	orb	1	1
 349	Blade (4)	1	3	1	0	19	invbld	knif	1	-1
 275	Brandistock (3)	2	4	1	0	11	invbrn	spea	1	-1
 8@C	Needle Crossbow (2)	2	3	1	0	7	invlxbu	nxbw	1	2
-1@4	Viper Bow (Sacred)	2	3	1	0	30	invsbbu	dbow	1	5
+1@4	Viper Bow (Sacred)	2	3	1	0	30	invsbbu	sdbw	1	5
 197	Scepter (2)	1	3	1	0	4	invscp	scep	1	-1
-73@	War Hammer (Sacred)	2	3	1	0	30	invwhm	hamm	1	-1
+73@	War Hammer (Sacred)	2	3	1	0	30	invwhm	qham	1	-1
 138	Trident (1)	2	4	1	0	1	invtri	spea	1	-1
 137	Spear (1)	2	4	1	0	0	invspr	spea	1	-1
-18@	Military Pick (Sacred)	2	3	1	0	30	invmpi	axe	1	-1
+18@	Military Pick (Sacred)	2	3	1	0	30	invmpi	qaxe	1	-1
 l56	Light Crossbow (2)	2	3	1	0	6	invlxb	xbow	1	-1
 l60	Light Crossbow (3)	2	3	1	0	11	invlxb	xbow	1	-1
-1@B	Angel Star (Sacred)	1	3	1	0	30	invmstu	pmac	1	3
-!48	Valaska (Sacred)	2	3	1	0	30	invbtxu	2hbx	1	4
+1@B	Angel Star (Sacred)	1	3	1	0	30	invmstu	spmc	1	3
+!48	Valaska (Sacred)	2	3	1	0	30	invbtxu	s2hx	1	4
 !43	Valaska (2)	2	3	1	0	8	invbtxu	2hbx	1	4
 432	Short Bow (5)	2	3	1	0	18	invsbw	bow	1	-1
 1@3	Maple Bow (5)	2	3	1	0	22	inv8s8u	dbow	1	5
 !32	Hammerhead Axe (5)	2	3	1	0	26	invaxeu	baxe	1	4
-62@	Hunter's Bow (Sacred)	2	3	1	0	30	invhbw	bow	1	-1
-11@	Bastard Sword (Sacred)	1	4	1	0	30	invbsw	2hsd	1	-1
+62@	Hunter's Bow (Sacred)	2	3	1	0	30	invhbw	qbow	1	-1
+11@	Bastard Sword (Sacred)	1	4	1	0	30	invbsw	s2hd	1	-1
 j23	Cestus (1)	1	3	1	0	2	invaxf	h2h	1	6
 !33	Hammerhead Axe (6)	2	3	1	0	30	invaxeu	baxe	1	4
 l11	Yew Wand (1)	1	2	1	0	1	invywn	wand	1	2
-68@	Long War Bow (Sacred)	2	4	1	0	30	invlwb	bow	1	-1
+68@	Long War Bow (Sacred)	2	4	1	0	30	invlwb	qbow	1	-1
 9@8	Bonebreaker (2)	1	3	1	0	6	invspcu	pclb	1	3
 j54	Katar (3)	1	3	1	0	9	invktr	h2h	1	6
 2@C	Hand of God (3)	2	3	1	0	15	inv9gmu	pham	1	3
@@ -933,34 +933,34 @@ j54	Katar (3)	1	3	1	0	9	invktr	h2h	1	6
 j41	Claws (2)	1	3	1	0	7	invclw	h2h	1	6
 110	Bastard Sword (1)	1	4	1	0	3	invbsw	2hsd	1	-1
 333	Scepter (4)	1	3	1	0	13	invscp	scep	1	-1
-87@	Maiden Spear (Sacred)	2	4	1	0	30	invam3	aspe	1	0
+87@	Maiden Spear (Sacred)	2	4	1	0	30	invam3	qasp	1	0
 8@9	Goedendag (3)	1	3	1	0	12	inv7mas	pmac	1	3
 j25	Blade Talons (1)	1	3	1	0	5	invclw	h2h	1	6
 323	Large Axe (4)	2	3	1	0	14	invlax	2hax	1	-1
-!21	Bonesplitter (Sacred)	2	4	1	0	30	invscyu	nscy	1	2
+!21	Bonesplitter (Sacred)	2	4	1	0	30	invscyu	snsy	1	2
 112	Great Sword (1)	2	4	1	0	5	invgsd	2hsd	1	-1
 191	Giant Axe (2)	2	3	1	0	10	invgix	2hax	1	-1
-6@C	Hand of God (Sacred)	2	3	1	0	30	inv9gmu	pham	1	3
+6@C	Hand of God (Sacred)	2	3	1	0	30	inv9gmu	sphm	1	3
 2@5	Spatha (3)	1	3	1	0	11	invscmu	bswd	1	4
-85@	Stag Bow (Sacred)	2	4	1	0	30	invam1	abow	1	0
+85@	Stag Bow (Sacred)	2	4	1	0	30	invam1	qabw	1	0
 224	Bardiche (2)	2	4	1	0	4	invbar	pole	1	-1
 8@5	Backsword (2)	1	3	1	0	8	inv9sbu	bswd	1	4
 187	Large Axe (2)	2	3	1	0	4	invlax	2hax	1	-1
 1@C	Hand of God (2)	2	3	1	0	10	inv9gmu	pham	1	3
 !82	Spirit Edge (6)	1	3	1	0	29	inv9blu	nknf	1	2
 !18	Bonesplitter (4)	2	4	1	0	18	invscyu	nscy	1	2
-86@	Reflex Bow (Sacred)	2	4	1	0	30	invam2	abow	1	0
+86@	Reflex Bow (Sacred)	2	4	1	0	30	invam2	qabw	1	0
 446	War Sword (6)	1	3	1	0	28	invwsd	swor	1	-1
-34@	Pilum (Sacred)	1	3	1	1	30	invpil	jave	1	-1
-88@	Maiden Pike (Sacred)	2	4	1	0	30	invam4	aspe	1	0
+34@	Pilum (Sacred)	1	3	1	1	30	invpil	qjvn	1	-1
+88@	Maiden Pike (Sacred)	2	4	1	0	30	invam4	qasp	1	0
 262	Mace (3)	1	3	1	0	11	invmac	mace	1	-1
-13@	Great Sword (Sacred)	2	4	1	0	30	invgsd	2hsd	1	-1
-24@	Giant Axe (Sacred)	2	3	1	0	30	invgix	2hax	1	-1
+13@	Great Sword (Sacred)	2	4	1	0	30	invgsd	s2hd	1	-1
+24@	Giant Axe (Sacred)	2	3	1	0	30	invgix	s2ha	1	-1
 j99	Jared's Stone (6)	1	3	1	0	27	invob5	orb	1	1
 j93	Blade Talons (5)	1	3	1	0	24	invclw	h2h	1	6
 !02	Naginata (2)	2	4	1	0	8	invwsc	nagi	1	6
 212	Kriss (2)	1	3	1	0	7	invkrs	knif	1	-1
-21@	Broad Axe (Sacred)	2	3	1	0	30	invbrx	2hax	1	-1
+21@	Broad Axe (Sacred)	2	3	1	0	30	invbrx	s2ha	1	-1
 7@6	Ida (3)	2	3	1	0	13	invbsdu	bswd	1	4
 352	Balanced Knife (4)	1	2	1	1	17	invbkf	tkni	1	-1
 l17	Grim Wand (2)	1	2	1	0	10	invgwn	wand	1	2
@@ -979,7 +979,7 @@ l51	Great Maul (6)	2	3	1	0	27	invgma	hamm	1	-1
 256	Broad Axe (3)	2	3	1	0	11	invbrx	2hax	1	-1
 372	Short Sword (5)	1	3	1	0	18	invssd	swor	1	-1
 !63	Marrow Staff (1)	2	4	1	0	5	inv8wsu	nstf	1	2
-57@	Bardiche (Sacred)	2	4	1	0	30	invbar	pole	1	-1
+57@	Bardiche (Sacred)	2	4	1	0	30	invbar	qpol	1	-1
 170	Saber (2)	1	3	1	0	6	invsbr	swor	1	-1
 428	Bardiche (5)	2	4	1	0	18	invbar	pole	1	-1
 227	Halberd (2)	2	4	1	0	9	invhal	pole	1	-1
@@ -992,7 +992,7 @@ j32	Stag Bow (2)	2	4	1	0	8	invam1	abow	1	0
 359	War Staff (4)	2	4	1	0	19	invwst	staf	1	-1
 3@2	Serpent Bow (5)	2	4	1	0	21	inv8lbu	dbow	1	5
 182	Hand Axe (2)	1	3	1	0	4	invhax	axe	1	-1
-6@5	Spatha (Sacred)	1	3	1	0	30	invscmu	bswd	1	4
+6@5	Spatha (Sacred)	1	3	1	0	30	invscmu	sbsd	1	4
 3@D	Needle Crossbow (6)	2	3	1	0	25	invlxbu	nxbw	1	2
 108	Claymore (1)	1	4	1	0	1	invclm	2hsd	1	-1
 8@D	Dart Thrower (4)	2	3	1	0	17	inv8lxu	nxbw	1	2
@@ -1021,18 +1021,18 @@ l63	Repeating Crossbow (3)	2	3	1	0	15	invrxb	xbow	1	-1
 394	Great Axe (5)	2	4	1	0	22	invgax	2hax	1	-1
 360	Bardiche (4)	2	4	1	0	13	invbar	pole	1	-1
 2@8	Kriegsmesser (2)	2	3	1	0	11	inv9lsu	bswd	1	4
-44@	Dirk (Sacred)	1	2	1	0	30	invdir	knif	1	-1
-12@	Flamberge (Sacred)	2	4	1	0	30	invflb	2hsd	1	-1
+44@	Dirk (Sacred)	1	2	1	0	30	invdir	qknf	1	-1
+12@	Flamberge (Sacred)	2	4	1	0	30	invflb	s2hd	1	-1
 !56	Flamen Staff (1)	1	4	1	0	2	invcstu	dstf	1	5
 j17	Maiden Spear (1)	2	4	1	0	3	invam3	aspe	1	0
 8@6	Ida (4)	2	3	1	0	17	invbsdu	bswd	1	4
 5@C	Hand of God (6)	2	3	1	0	28	inv9gmu	pham	1	3
 476	Throwing Spear (6)	1	4	1	1	27	invtsp	jave	1	-1
-16@	Axe (Sacred)	2	3	1	0	30	invaxe	axe	1	-1
+16@	Axe (Sacred)	2	3	1	0	30	invaxe	qaxe	1	-1
 !2!	Warp Blade (4)	2	3	1	0	21	inv9cru	scrd	1	1
 l41	Maul (3)	2	4	1	0	12	invmau	hamm	1	-1
 l32	Bone Wand (6)	1	2	1	0	25	invbwn	wand	1	2
-56@	War Staff (Sacred)	2	4	1	0	30	invwst	staf	1	-1
+56@	War Staff (Sacred)	2	4	1	0	30	invwst	qstf	1	-1
 !37	Ono (3)	2	3	1	0	9	inv9btu	2hbx	1	4
 j72	Wrist Blade (4)	1	3	1	0	15	invktr	h2h	1	6
 393	Battle Axe (5)	2	3	1	0	21	invbtx	2hax	1	-1
@@ -1046,8 +1046,8 @@ j42	Blade Talons (2)	1	3	1	0	10	invclw	h2h	1	6
 2@D	Needle Crossbow (5)	2	3	1	0	20	invlxbu	nxbw	1	2
 353	Throwing Axe (4)	1	2	1	1	13	invtax	taxe	1	-1
 375	Falchion (5)	1	3	1	0	21	invflc	swor	1	-1
-!83	Spirit Edge (Sacred)	1	3	1	0	30	inv9blu	nknf	1	2
-70@	Yew Wand (Sacred)	1	2	1	0	30	invywn	wand	1	2
+!83	Spirit Edge (Sacred)	1	3	1	0	30	inv9blu	snkf	1	2
+70@	Yew Wand (Sacred)	1	2	1	0	30	invywn	qwnd	1	2
 7@E	Stinger Crossbow (5)	2	3	1	0	24	invmxbu	nxbw	1	2
 128	Flail (1)	2	3	1	0	5	invfla	mace	1	-1
 310	War Sword (4)	1	3	1	0	20	invwsd	swor	1	-1
@@ -1062,9 +1062,9 @@ j42	Blade Talons (2)	1	3	1	0	10	invclw	h2h	1	6
 278	Dagger (3)	1	2	1	0	9	invdgr	knif	1	-1
 j67	Reflex Bow (4)	2	4	1	0	19	invam2	abow	1	0
 j28	Sacred Globe (2)	1	2	1	0	6	invob2	orb	1	1
-36@	Glaive (Sacred)	1	4	1	1	30	invglv	jave	1	-1
+36@	Glaive (Sacred)	1	4	1	1	30	invglv	qjvn	1	-1
 9@4	Spatha (1)	1	3	1	0	2	invscmu	bswd	1	4
-05@	Broad Sword (Sacred)	2	3	1	0	30	invbsd	swor	1	-1
+05@	Broad Sword (Sacred)	2	3	1	0	30	invbsd	qswd	1	-1
 490	Balanced Axe (6)	2	3	1	1	26	invbal	taxe	1	-1
 150	Balanced Axe (1)	2	3	1	1	3	invbal	taxe	1	-1
 155	War Staff (1)	2	4	1	0	5	invwst	staf	1	-1
@@ -1085,7 +1085,7 @@ l14	Wand (2)	1	2	1	0	4	invwnd	wand	1	2
 7@3	Viper Bow (4)	2	3	1	0	19	invsbbu	dbow	1	5
 332	Flail (4)	2	3	1	0	19	invfla	mace	1	-1
 425	Gnarled Staff (5)	1	4	1	0	21	invcst	staf	1	-1
-9@E	Stinger Crossbow (Sacred)	2	3	1	0	30	invmxbu	nxbw	1	2
+9@E	Stinger Crossbow (Sacred)	2	3	1	0	30	invmxbu	snxb	1	2
 276	Spetum (3)	2	4	1	0	12	invspt	spea	1	-1
 j26	Scissors Katar (1)	1	3	1	0	6	invskr	h2h	1	6
 102	Saber (1)	1	3	1	0	2	invsbr	swor	1	-1
@@ -1094,23 +1094,23 @@ j26	Scissors Katar (1)	1	3	1	0	6	invskr	h2h	1	6
 259	Giant Axe (3)	2	3	1	0	14	invgix	2hax	1	-1
 368	Short Battle Bow (4)	2	3	1	0	16	invsbb	bow	1	-1
 424	Long Staff (5)	1	4	1	0	20	invlst	staf	1	-1
-60@	Halberd (Sacred)	2	4	1	0	30	invhal	pole	1	-1
+60@	Halberd (Sacred)	2	4	1	0	30	invhal	qpol	1	-1
 j60	Scissors Katar (3)	1	3	1	0	15	invskr	h2h	1	6
 316	Great Sword (4)	2	4	1	0	19	invgsd	2hsd	1	-1
 163	Composite Bow (1)	2	3	1	0	2	invcbw	bow	1	-1
-2@7	Ida (Sacred)	2	3	1	0	30	invbsdu	bswd	1	4
+2@7	Ida (Sacred)	2	3	1	0	30	invbsdu	sbsd	1	4
 !80	Spirit Edge (4)	1	3	1	0	20	inv9blu	nknf	1	2
 395	Giant Axe (5)	2	3	1	0	24	invgix	2hax	1	-1
 j56	Hatchet Hands (3)	1	3	1	0	11	invaxf	h2h	1	6
 l23	Yew Wand (4)	1	2	1	0	15	invywn	wand	1	2
 175	Two-Handed Sword (2)	1	4	1	0	4	inv2hs	2hsd	1	-1
 !01	Naginata (1)	2	4	1	0	3	invwsc	nagi	1	6
-47@	Throwing Knife (Sacred)	1	2	1	1	30	invtkn	tkni	1	-1
+47@	Throwing Knife (Sacred)	1	2	1	1	30	invtkn	qtkn	1	-1
 !36	Ono (2)	2	3	1	0	4	inv9btu	2hbx	1	4
 492	Long Staff (6)	1	4	1	0	24	invlst	staf	1	-1
 208	Spetum (2)	2	4	1	0	8	invspt	spea	1	-1
 347	Dirk (4)	1	2	1	0	15	invdir	knif	1	-1
-42@	Pike (Sacred)	2	4	1	0	30	invpik	spea	1	-1
+42@	Pike (Sacred)	2	4	1	0	30	invpik	qspe	1	-1
 3@1	Compound Bow (3)	2	3	1	0	12	invcbwu	dbow	1	5
 434	Long Bow (5)	2	4	1	0	20	invlbw	bow	1	-1
 292	Bardiche (3)	2	4	1	0	8	invbar	pole	1	-1
@@ -1118,7 +1118,7 @@ l53	Crossbow (1)	2	3	1	0	2	invmxb	xbow	1	-1
 j15	Stag Bow (1)	2	4	1	0	3	invam1	abow	1	0
 2@6	Backsword (5)	1	3	1	0	21	inv9sbu	bswd	1	4
 6@A	Angel Star (3)	1	3	1	0	13	invmstu	pmac	1	3
-35@	Short Spear (Sacred)	1	3	1	1	30	invssp	jave	1	-1
+35@	Short Spear (Sacred)	1	3	1	1	30	invssp	qjvn	1	-1
 o12	Maiden Spear (6)	2	4	1	0	26	invam3	aspe	1	0
 291	War Staff (3)	2	4	1	0	14	invwst	staf	1	-1
 374	Saber (5)	1	3	1	0	20	invsbr	swor	1	-1
@@ -1130,22 +1130,22 @@ o12	Maiden Spear (6)	2	4	1	0	26	invam3	aspe	1	0
 o19	Claws (6)	1	3	1	0	26	invclw	h2h	1	6
 6@D	Dart Thrower (2)	2	3	1	0	8	inv8lxu	nxbw	1	2
 409	Spear (5)	2	4	1	0	18	invspr	spea	1	-1
-77@	Crossbow (Sacred)	2	3	1	0	30	invmxb	xbow	1	-1
-!41	Ono (Sacred)	2	3	1	0	30	inv9btu	2hbx	1	4
-1@@	War Axe (Sacred)	2	3	1	0	30	invwax	axe	1	-1
+77@	Crossbow (Sacred)	2	3	1	0	30	invmxb	qxbw	1	-1
+!41	Ono (Sacred)	2	3	1	0	30	inv9btu	s2hx	1	4
+1@@	War Axe (Sacred)	2	3	1	0	30	invwax	qaxe	1	-1
 241	Long Sword (3)	2	3	1	0	13	invlsd	swor	1	-1
 198	Grand Scepter (2)	1	3	1	0	6	invgsc	scep	1	-1
 489	Throwing Axe (6)	1	2	1	1	22	invtax	taxe	1	-1
 j66	Stag Bow (4)	2	4	1	0	17	invam1	abow	1	0
 l24	Bone Wand (4)	1	2	1	0	16	invbwn	wand	1	2
-04@	Falchion (Sacred)	1	3	1	0	30	invflc	swor	1	-1
+04@	Falchion (Sacred)	1	3	1	0	30	invflc	qswd	1	-1
 327	Giant Axe (4)	2	3	1	0	19	invgix	2hax	1	-1
-33@	Javelin (Sacred)	1	3	1	1	30	invjav	jave	1	-1
-69@	Wand (Sacred)	1	2	1	0	30	invwnd	wand	1	2
+33@	Javelin (Sacred)	1	3	1	1	30	invjav	qjvn	1	-1
+69@	Wand (Sacred)	1	2	1	0	30	invwnd	qwnd	1	2
 3@5	Spatha (4)	1	3	1	0	16	invscmu	bswd	1	4
 320	Double Axe (4)	2	3	1	0	16	inv2ax	axe	1	-1
 5@F	Trebuchet (5)	2	3	1	0	24	inv8mxu	nxbw	1	2
-02@	Scimitar (Sacred)	1	3	1	0	30	invscm	swor	1	-1
+02@	Scimitar (Sacred)	1	3	1	0	30	invscm	qswd	1	-1
 6@E	Stinger Crossbow (4)	2	3	1	0	19	invmxbu	nxbw	1	2
 j71	Katar (4)	1	3	1	0	14	invktr	h2h	1	6
 280	Kriss (3)	1	3	1	0	12	invkrs	knif	1	-1
@@ -1159,11 +1159,11 @@ j71	Katar (4)	1	3	1	0	14	invktr	h2h	1	6
 249	Crystal Sword (3)	2	3	1	0	15	invcrs	crsd	1	-1
 j21	Wrist Blade (1)	1	3	1	0	1	invktr	h2h	1	6
 184	Double Axe (2)	2	3	1	0	7	inv2ax	axe	1	-1
-08@	Two-Handed Sword (Sacred)	1	4	1	0	30	inv2hs	2hsd	1	-1
+08@	Two-Handed Sword (Sacred)	1	4	1	0	30	inv2hs	s2hd	1	-1
 140	Spetum (1)	2	4	1	0	3	invspt	spea	1	-1
 !87	Holy Lance (4)	2	4	1	0	16	invtriu	pspe	1	3
 l19	Yew Wand (3)	1	2	1	0	10	invywn	wand	1	2
-67@	Short War Bow (Sacred)	2	3	1	0	30	invswb	bow	1	-1
+67@	Short War Bow (Sacred)	2	3	1	0	30	invswb	qbow	1	-1
 104	Broad Sword (1)	2	3	1	0	3	invbsd	swor	1	-1
 131	War Scepter (1)	2	3	1	0	3	invwsp	scep	1	-1
 412	Spetum (5)	2	4	1	0	22	invspt	spea	1	-1
@@ -1175,7 +1175,7 @@ l19	Yew Wand (3)	1	2	1	0	10	invywn	wand	1	2
 1@8	Kriegsmesser (1)	2	3	1	0	6	inv9lsu	bswd	1	4
 154	Battle Staff (1)	1	4	1	0	3	invbst	staf	1	-1
 2@A	Goedendag (6)	1	3	1	0	26	inv7mas	pmac	1	3
-31@	Grand Scepter (Sacred)	1	3	1	0	30	invgsc	scep	1	-1
+31@	Grand Scepter (Sacred)	1	3	1	0	30	invgsc	qscp	1	-1
 j76	Blade Talons (4)	1	3	1	0	19	invclw	h2h	1	6
 355	Short Staff (4)	1	3	1	0	13	invsst	staf	1	-1
 479	Brandistock (6)	2	4	1	0	25	invbrn	spea	1	-1
@@ -1197,16 +1197,16 @@ l57	Crossbow (2)	2	3	1	0	7	invmxb	xbow	1	-1
 5@7	Bronze Sword (3)	2	3	1	0	13	invlsdu	bswd	1	4
 335	War Scepter (4)	2	3	1	0	17	invwsp	scep	1	-1
 270	Short Spear (3)	1	3	1	1	11	invssp	jave	1	-1
-!14	Raptor Scythe (Sacred)	2	4	1	0	30	inv9s8u	nscy	1	2
+!14	Raptor Scythe (Sacred)	2	4	1	0	30	inv9s8u	snsy	1	2
 195	Morning Star (2)	1	3	1	0	8	invmst	mace	1	-1
-10@	Giant Sword (Sacred)	1	4	1	0	30	invgis	2hsd	1	-1
+10@	Giant Sword (Sacred)	1	4	1	0	30	invgis	s2hd	1	-1
 l13	Grim Wand (1)	1	2	1	0	5	invgwn	wand	1	2
 !4!	Warp Blade (6)	2	3	1	0	31	inv9cru	scrd	1	1
 j85	Maiden Spear (5)	2	4	1	0	22	invam3	aspe	1	0
 3@F	Trebuchet (3)	2	3	1	0	15	inv8mxu	nxbw	1	2
 162	Long Bow (1)	2	4	1	0	1	invlbw	bow	1	-1
 433	Hunter's Bow (5)	2	3	1	0	19	invhbw	bow	1	-1
-32@	War Scepter (Sacred)	2	3	1	0	30	invwsp	scep	1	-1
+32@	War Scepter (Sacred)	2	3	1	0	30	invwsp	qscp	1	-1
 l30	Wand (6)	1	2	1	0	23	invwnd	wand	1	2
 !92	Tepoztopilli (2)	2	4	1	0	11	inv9bru	pspe	1	3
 240	Broad Sword (3)	2	3	1	0	12	invbsd	swor	1	-1
@@ -1221,14 +1221,14 @@ l30	Wand (6)	1	2	1	0	23	invwnd	wand	1	2
 103	Falchion (1)	1	3	1	0	2	invflc	swor	1	-1
 201	Pilum (2)	1	3	1	1	6	invpil	jave	1	-1
 !72	Hexblade (3)	1	3	1	0	12	invkrsu	nknf	1	2
-66@	Long Battle Bow (Sacred)	2	4	1	0	30	invlbb	bow	1	-1
+66@	Long Battle Bow (Sacred)	2	4	1	0	30	invlbb	qbow	1	-1
 423	Short Staff (5)	1	3	1	0	18	invsst	staf	1	-1
 j39	Hatchet Hands (2)	1	3	1	0	6	invaxf	h2h	1	6
 j79	Sacred Globe (5)	1	2	1	0	20	invob2	orb	1	1
 j16	Reflex Bow (1)	2	4	1	0	5	invam2	abow	1	0
 266	Grand Scepter (3)	1	3	1	0	11	invgsc	scep	1	-1
 l70	Heavy Crossbow (5)	2	4	1	0	23	invhxb	xbow	1	-1
-27@	Mace (Sacred)	1	3	1	0	30	invmac	mace	1	-1
+27@	Mace (Sacred)	1	3	1	0	30	invmac	qmac	1	-1
 j61	Eagle Orb (4)	1	2	1	0	13	invob1	orb	1	1
 467	Morning Star (6)	1	3	1	0	26	invmst	mace	1	-1
 174	War Sword (2)	1	3	1	0	10	invwsd	swor	1	-1
@@ -1237,7 +1237,7 @@ j61	Eagle Orb (4)	1	2	1	0	13	invob1	orb	1	1
 214	Throwing Knife (2)	1	2	1	1	4	invtkn	tkni	1	-1
 o18	Cestus (6)	1	3	1	0	26	invaxf	h2h	1	6
 !88	Holy Lance (5)	2	4	1	0	22	invtriu	pspe	1	3
-07@	War Sword (Sacred)	1	3	1	0	30	invwsd	swor	1	-1
+07@	War Sword (Sacred)	1	3	1	0	30	invwsd	qswd	1	-1
 9@3	Viper Bow (6)	2	3	1	0	27	invsbbu	dbow	1	5
 422	Balanced Axe (5)	2	3	1	1	21	invbal	taxe	1	-1
 j55	Wrist Blade (3)	1	3	1	0	10	invktr	h2h	1	6
@@ -1247,7 +1247,7 @@ o20	Blade Talons (6)	1	3	1	0	28	invclw	h2h	1	6
 302	Short War Bow (3)	2	3	1	0	14	invswb	bow	1	-1
 229	Hunter's Bow (2)	2	3	1	0	5	invhbw	bow	1	-1
 l59	Repeating Crossbow (2)	2	3	1	0	10	invrxb	xbow	1	-1
-8@4	Recurve Bow (Sacred)	2	3	1	0	30	invswbu	dbow	1	5
+8@4	Recurve Bow (Sacred)	2	3	1	0	30	invswbu	sdbw	1	5
 503	Composite Bow (6)	2	3	1	0	25	invcbw	bow	1	-1
 4@1	Compound Bow (4)	2	3	1	0	16	invcbwu	dbow	1	5
 !35	Ono (1)	2	3	1	0	0	inv9btu	2hbx	1	4
@@ -1268,8 +1268,8 @@ j19	Maiden Javelin (1)	1	3	1	1	5	invam5	ajav	1	0
 484	Kriss (6)	1	3	1	0	26	invkrs	knif	1	-1
 305	Scimitar (4)	1	3	1	0	15	invscm	swor	1	-1
 o11	Reflex Bow (6)	2	4	1	0	28	invam2	abow	1	0
-79@	Repeating Crossbow (Sacred)	2	3	1	0	30	invrxb	xbow	1	-1
-40@	Brandistock (Sacred)	2	4	1	0	30	invbrn	spea	1	-1
+79@	Repeating Crossbow (Sacred)	2	3	1	0	30	invrxb	qxbw	1	-1
+40@	Brandistock (Sacred)	2	4	1	0	30	invbrn	qspe	1	-1
 217	Throwing Axe (2)	1	2	1	1	4	invtax	taxe	1	-1
 328	Club (4)	1	3	1	0	13	invclb	mace	1	-1
 j65	Jared's Stone (4)	1	3	1	0	19	invob5	orb	1	1
@@ -1277,7 +1277,7 @@ j65	Jared's Stone (4)	1	3	1	0	19	invob5	orb	1	1
 239	Falchion (3)	1	3	1	0	12	invflc	swor	1	-1
 122	Great Axe (1)	2	4	1	0	3	invgax	2hax	1	-1
 !13	Raptor Scythe (6)	2	4	1	0	25	inv9s8u	nscy	1	2
-53@	Long Staff (Sacred)	1	4	1	0	30	invlst	staf	1	-1
+53@	Long Staff (Sacred)	1	4	1	0	30	invlst	qstf	1	-1
 143	Dirk (1)	1	2	1	0	2	invdir	knif	1	-1
 158	Scythe (1)	2	4	1	0	3	invscy	scyh	1	-1
 269	Pilum (3)	1	3	1	1	10	invpil	jave	1	-1
@@ -1288,9 +1288,9 @@ j65	Jared's Stone (4)	1	3	1	0	19	invob5	orb	1	1
 !66	Marrow Staff (4)	2	4	1	0	20	inv8wsu	nstf	1	2
 !52	Labrys (4)	2	4	1	0	20	invgaxu	2hbx	1	4
 j91	Cestus (5)	1	3	1	0	21	invaxf	h2h	1	6
-!69	Marrow Staff (Sacred)	2	4	1	0	30	inv8wsu	nstf	1	2
+!69	Marrow Staff (Sacred)	2	4	1	0	30	inv8wsu	snst	1	2
 !38	Ono (4)	2	3	1	0	15	inv9btu	2hbx	1	4
-51@	Balanced Axe (Sacred)	2	3	1	1	30	invbal	taxe	1	-1
+51@	Balanced Axe (Sacred)	2	3	1	1	30	invbal	qtax	1	-1
 !81	Spirit Edge (5)	1	3	1	0	25	inv9blu	nknf	1	2
 497	Voulge (6)	2	4	1	0	25	invvou	pole	1	-1
 183	Axe (2)	2	3	1	0	6	invaxe	axe	1	-1
@@ -1304,13 +1304,13 @@ l25	Grim Wand (4)	1	2	1	0	19	invgwn	wand	1	2
 132	Javelin (1)	1	3	1	1	0	invjav	jave	1	-1
 l66	Heavy Crossbow (4)	2	4	1	0	18	invhxb	xbow	1	-1
 478	Trident (6)	2	4	1	0	24	invtri	spea	1	-1
-59@	Scythe (Sacred)	2	4	1	0	30	invscy	scyh	1	-1
+59@	Scythe (Sacred)	2	4	1	0	30	invscy	qscy	1	-1
 384	Great Sword (5)	2	4	1	0	24	invgsd	2hsd	1	-1
 9@B	Hand of God (1)	2	3	1	0	6	inv9gmu	pham	1	3
 398	Mace (5)	1	3	1	0	21	invmac	mace	1	-1
 !58	Flamen Staff (3)	1	4	1	0	12	invcstu	dstf	1	5
 l45	Great Maul (4)	2	3	1	0	19	invgma	hamm	1	-1
-14@	Crystal Sword (Sacred)	2	3	1	0	30	invcrs	crsd	1	-1
+14@	Crystal Sword (Sacred)	2	3	1	0	30	invcrs	qcrs	1	-1
 407	Glaive (5)	1	4	1	1	22	invglv	jave	1	-1
 6@8	Kriegsmesser (6)	2	3	1	0	29	inv9lsu	bswd	1	4
 !1!	Warp Blade (3)	2	3	1	0	16	inv9cru	scrd	1	1
@@ -1318,7 +1318,7 @@ l45	Great Maul (4)	2	3	1	0	19	invgma	hamm	1	-1
 376	Broad Sword (5)	2	3	1	0	22	invbsd	swor	1	-1
 125	Spiked Club (1)	1	3	1	0	1	invspc	mace	1	-1
 !08	Raptor Scythe (1)	2	4	1	0	0	inv9s8u	nscy	1	2
-22@	Battle Axe (Sacred)	2	3	1	0	30	invbtx	2hax	1	-1
+22@	Battle Axe (Sacred)	2	3	1	0	30	invbtx	s2ha	1	-1
 6@2	Maple Bow (1)	2	3	1	0	3	inv8s8u	dbow	1	5
 190	Great Axe (2)	2	4	1	0	8	invgax	2hax	1	-1
 298	Long Bow (3)	2	4	1	0	11	invlbw	bow	1	-1
@@ -1329,7 +1329,7 @@ l45	Great Maul (4)	2	3	1	0	19	invgma	hamm	1	-1
 !22	Mammen Axe (1)	1	3	1	0	0	invhaxu	baxe	1	4
 !47	Valaska (6)	2	3	1	0	29	invbtxu	2hbx	1	4
 148	Balanced Knife (1)	1	2	1	1	3	invbkf	tkni	1	-1
-95@	Blade Talons (Sacred)	1	3	1	0	30	invclw	h2h	1	6
+95@	Blade Talons (Sacred)	1	3	1	0	30	invclw	qh2h	1	6
 o16	Wrist Blade (6)	1	3	1	0	24	invktr	h2h	1	6
 504	Short Battle Bow (6)	2	3	1	0	26	invsbb	bow	1	-1
 2@4	Recurve Bow (1)	2	3	1	0	6	invswbu	dbow	1	5
@@ -1340,13 +1340,13 @@ l65	Crossbow (4)	2	3	1	0	16	invmxb	xbow	1	-1
 397	Spiked Club (5)	1	3	1	0	20	invspc	mace	1	-1
 2@9	Bonebreaker (4)	1	3	1	0	16	invspcu	pclb	1	3
 !25	Mammen Axe (4)	1	3	1	0	15	invhaxu	baxe	1	4
-63@	Long Bow (Sacred)	2	4	1	0	30	invlbw	bow	1	-1
+63@	Long Bow (Sacred)	2	4	1	0	30	invlbw	qbow	1	-1
 !86	Holy Lance (3)	2	4	1	0	11	invtriu	pspe	1	3
 106	War Sword (1)	1	3	1	0	6	invwsd	swor	1	-1
-80@	Eagle Orb (Sacred)	1	2	1	0	30	invob1	orb	1	1
-7@1	Compound Bow (Sacred)	2	3	1	0	30	invcbwu	dbow	1	5
+80@	Eagle Orb (Sacred)	1	2	1	0	30	invob1	qorb	1	1
+7@1	Compound Bow (Sacred)	2	3	1	0	30	invcbwu	sdbw	1	5
 157	Voulge (1)	2	4	1	0	1	invvou	pole	1	-1
-3@A	Goedendag (Sacred)	1	3	1	0	30	inv7mas	pmac	1	3
+3@A	Goedendag (Sacred)	1	3	1	0	30	inv7mas	spmc	1	3
 j12	Smoked Sphere (1)	1	2	1	0	2	invob3	orb	1	1
 203	Glaive (2)	1	4	1	1	8	invglv	jave	1	-1
 261	Spiked Club (3)	1	3	1	0	10	invspc	mace	1	-1
@@ -1354,7 +1354,7 @@ l48	Great Maul (5)	2	3	1	0	24	invgma	hamm	1	-1
 o17	Hatchet Hands (6)	1	3	1	0	25	invaxf	h2h	1	6
 !17	Bonesplitter (3)	2	4	1	0	13	invscyu	nscy	1	2
 j38	Wrist Blade (2)	1	3	1	0	5	invktr	h2h	1	6
-!34	Hammerhead Axe (Sacred)	2	3	1	0	30	invaxeu	baxe	1	4
+!34	Hammerhead Axe (Sacred)	2	3	1	0	30	invaxeu	sbax	1	4
 9@A	Angel Star (6)	1	3	1	0	27	invmstu	pmac	1	3
 j94	Scissors Katar (5)	1	3	1	0	24	invskr	h2h	1	6
 459	Large Axe (6)	2	3	1	0	23	invlax	2hax	1	-1
@@ -1362,17 +1362,17 @@ j94	Scissors Katar (5)	1	3	1	0	24	invskr	h2h	1	6
 284	Balanced Knife (3)	1	2	1	1	13	invbkf	tkni	1	-1
 j50	Reflex Bow (3)	2	4	1	0	15	invam2	abow	1	0
 247	Flamberge (3)	2	4	1	0	13	invflb	2hsd	1	-1
-52@	Short Staff (Sacred)	1	3	1	0	30	invsst	staf	1	-1
+52@	Short Staff (Sacred)	1	3	1	0	30	invsst	qstf	1	-1
 371	Long War Bow (4)	2	4	1	0	19	invlwb	bow	1	-1
-55@	Battle Staff (Sacred)	1	4	1	0	30	invbst	staf	1	-1
+55@	Battle Staff (Sacred)	1	4	1	0	30	invbst	qstf	1	-1
 9@2	Maple Bow (4)	2	3	1	0	17	inv8s8u	dbow	1	5
-3@3	Maple Bow (Sacred)	2	3	1	0	30	inv8s8u	dbow	1	5
-!07	Naginata (Sacred)	2	4	1	0	30	invwsc	nagi	1	6
+3@3	Maple Bow (Sacred)	2	3	1	0	30	inv8s8u	sdbw	1	5
+!07	Naginata (Sacred)	2	4	1	0	30	invwsc	snag	1	6
 204	Throwing Spear (2)	1	4	1	1	10	invtsp	jave	1	-1
-!55	Labrys (Sacred)	2	4	1	0	30	invgaxu	2hbx	1	4
+!55	Labrys (Sacred)	2	4	1	0	30	invgaxu	s2hx	1	4
 289	Gnarled Staff (3)	1	4	1	0	11	invcst	staf	1	-1
 165	Long Battle Bow (1)	2	4	1	0	3	invlbb	bow	1	-1
-20@	Large Axe (Sacred)	2	3	1	0	30	invlax	2hax	1	-1
+20@	Large Axe (Sacred)	2	3	1	0	30	invlax	s2ha	1	-1
 435	Composite Bow (5)	2	3	1	0	20	invcbw	bow	1	-1
 401	Scepter (5)	1	3	1	0	18	invscp	scep	1	-1
 !67	Marrow Staff (5)	2	4	1	0	25	inv8wsu	nstf	1	2
@@ -1387,22 +1387,22 @@ j13	Clasped Orb (1)	1	2	1	0	3	invob4	orb	1	1
 339	Glaive (4)	1	4	1	1	17	invglv	jave	1	-1
 !39	Ono (5)	2	3	1	0	20	inv9btu	2hbx	1	4
 228	Short Bow (2)	2	3	1	0	4	invsbw	bow	1	-1
-92@	Hatchet Hands (Sacred)	1	3	1	0	30	invaxf	h2h	1	6
+92@	Hatchet Hands (Sacred)	1	3	1	0	30	invaxf	qh2h	1	6
 5@A	Angel Star (2)	1	3	1	0	8	invmstu	pmac	1	3
 268	Javelin (3)	1	3	1	1	9	invjav	jave	1	-1
-!97	Tepoztopilli (Sacred)	2	4	1	0	30	inv9bru	pspe	1	3
-01@	Short Sword (Sacred)	1	3	1	0	30	invssd	swor	1	-1
+!97	Tepoztopilli (Sacred)	2	4	1	0	30	inv9bru	spsp	1	3
+01@	Short Sword (Sacred)	1	3	1	0	30	invssd	qswd	1	-1
 345	Pike (4)	2	4	1	0	19	invpik	spea	1	-1
 172	Broad Sword (2)	2	3	1	0	7	invbsd	swor	1	-1
 319	Axe (4)	2	3	1	0	15	invaxe	axe	1	-1
 5@8	Kriegsmesser (5)	2	3	1	0	25	inv9lsu	bswd	1	4
-25@	Club (Sacred)	1	3	1	0	30	invclb	mace	1	-1
-39@	Trident (Sacred)	2	4	1	0	30	invtri	spea	1	-1
+25@	Club (Sacred)	1	3	1	0	30	invclb	qmac	1	-1
+39@	Trident (Sacred)	2	4	1	0	30	invtri	qspe	1	-1
 223	War Staff (2)	2	4	1	0	9	invwst	staf	1	-1
 404	Javelin (5)	1	3	1	1	18	invjav	jave	1	-1
 l33	Grim Wand (6)	1	2	1	0	27	invgwn	wand	1	2
 282	Throwing Knife (3)	1	2	1	1	9	invtkn	tkni	1	-1
-09@	Claymore (Sacred)	1	4	1	0	30	invclm	2hsd	1	-1
+09@	Claymore (Sacred)	1	4	1	0	30	invclm	s2hd	1	-1
 420	Balanced Knife (5)	1	2	1	1	22	invbkf	tkni	1	-1
 121	Battle Axe (1)	2	3	1	0	2	invbtx	2hax	1	-1
 9@1	Serpent Bow (2)	2	4	1	0	8	inv8lbu	dbow	1	5
@@ -1412,24 +1412,24 @@ l35	Maul (1)	2	4	1	0	3	invmau	hamm	1	-1
 487	Flying Knife (6)	1	2	1	1	25	invtkn	tkni	1	-1
 494	Battle Staff (6)	1	4	1	0	26	invbst	staf	1	-1
 j36	Maiden Javelin (2)	1	3	1	1	10	invam5	ajav	1	0
-90@	Katar (Sacred)	1	3	1	0	30	invktr	h2h	1	6
+90@	Katar (Sacred)	1	3	1	0	30	invktr	qh2h	1	6
 8@1	Serpent Bow (1)	2	4	1	0	3	inv8lbu	dbow	1	5
 238	Saber (3)	1	3	1	0	11	invsbr	swor	1	-1
-49@	Balanced Knife (Sacred)	1	2	1	1	30	invbkf	tkni	1	-1
-26@	Spiked Club (Sacred)	1	3	1	0	30	invspc	mace	1	-1
+49@	Balanced Knife (Sacred)	1	2	1	1	30	invbkf	qtkn	1	-1
+26@	Spiked Club (Sacred)	1	3	1	0	30	invspc	qmac	1	-1
 253	Military Pick (3)	2	3	1	0	13	invmpi	axe	1	-1
 j44	Eagle Orb (3)	1	2	1	0	8	invob1	orb	1	1
 !73	Hexblade (4)	1	3	1	0	17	invkrsu	nknf	1	2
 448	Claymore (6)	1	4	1	0	25	invclm	2hsd	1	-1
 j20	Katar (1)	1	3	1	0	0	invktr	h2h	1	6
 209	Pike (2)	2	4	1	0	10	invpik	spea	1	-1
-15@	Hand Axe (Sacred)	1	3	1	0	30	invhax	axe	1	-1
+15@	Hand Axe (Sacred)	1	3	1	0	30	invhax	qaxe	1	-1
 216	Balanced Knife (2)	1	2	1	1	8	invbkf	tkni	1	-1
 357	Gnarled Staff (4)	1	4	1	0	16	invcst	staf	1	-1
-72@	Grim Wand (Sacred)	1	2	1	0	30	invgwn	wand	1	2
+72@	Grim Wand (Sacred)	1	2	1	0	30	invgwn	qwnd	1	2
 117	Military Pick (1)	2	3	1	0	3	invmpi	axe	1	-1
-!90	Holy Lance (Sacred)	2	4	1	0	30	invtriu	pspe	1	3
-64@	Composite Bow (Sacred)	2	3	1	0	30	invcbw	bow	1	-1
+!90	Holy Lance (Sacred)	2	4	1	0	30	invtriu	spsp	1	3
+64@	Composite Bow (Sacred)	2	3	1	0	30	invcbw	qbow	1	-1
 l27	Yew Wand (5)	1	2	1	0	20	invywn	wand	1	2
 455	Axe (6)	2	3	1	0	24	invaxe	axe	1	-1
 !23	Mammen Axe (2)	1	3	1	0	4	invhaxu	baxe	1	4
@@ -1439,7 +1439,7 @@ l46	War Hammer (5)	2	3	1	0	21	invwhm	hamm	1	-1
 6@1	Compound Bow (6)	2	3	1	0	25	invcbwu	dbow	1	5
 l54	Heavy Crossbow (1)	2	4	1	0	4	invhxb	xbow	1	-1
 457	Military Pick (6)	2	3	1	0	26	invmpi	axe	1	-1
-65@	Short Battle Bow (Sacred)	2	3	1	0	30	invsbb	bow	1	-1
+65@	Short Battle Bow (Sacred)	2	3	1	0	30	invsbb	qbow	1	-1
 179	Flamberge (2)	2	4	1	0	8	invflb	2hsd	1	-1
 383	Flamberge (5)	2	4	1	0	22	invflb	2hsd	1	-1
 l47	Maul (5)	2	4	1	0	22	invmau	hamm	1	-1
@@ -1448,13 +1448,13 @@ l16	Bone Wand (2)	1	2	1	0	7	invbwn	wand	1	2
 277	Pike (3)	2	4	1	0	14	invpik	spea	1	-1
 !46	Valaska (5)	2	3	1	0	24	invbtxu	2hbx	1	4
 l26	Wand (5)	1	2	1	0	18	invwnd	wand	1	2
-48@	Flying Knife (Sacred)	1	2	1	1	30	invtkn	tkni	1	-1
+48@	Flying Knife (Sacred)	1	2	1	1	30	invtkn	qtkn	1	-1
 j64	Clasped Orb (4)	1	2	1	0	17	invob4	orb	1	1
 j22	Hatchet Hands (1)	1	3	1	0	2	invaxf	h2h	1	6
 4@E	Stinger Crossbow (2)	2	3	1	0	9	invmxbu	nxbw	1	2
 4@2	Serpent Bow (6)	2	4	1	0	26	inv8lbu	dbow	1	5
 7@2	Maple Bow (2)	2	3	1	0	8	inv8s8u	dbow	1	5
-9@7	Bronze Sword (Sacred)	2	3	1	0	30	invlsdu	bswd	1	4
+9@7	Bronze Sword (Sacred)	2	3	1	0	30	invlsdu	sbsd	1	4
 l64	Light Crossbow (4)	2	3	1	0	15	invlxb	xbow	1	-1
 2@2	Serpent Bow (4)	2	4	1	0	17	inv8lbu	dbow	1	5
 505	Long Battle Bow (6)	2	4	1	0	26	invlbb	bow	1	-1
@@ -1467,19 +1467,19 @@ o15	Katar (6)	1	3	1	0	23	invktr	h2h	1	6
 149	Throwing Axe (1)	1	2	1	1	0	invtax	taxe	1	-1
 123	Giant Axe (1)	2	3	1	0	5	invgix	2hax	1	-1
 304	Short Sword (4)	1	3	1	0	14	invssd	swor	1	-1
-45@	Kriss (Sacred)	1	3	1	0	30	invkrs	knif	1	-1
+45@	Kriss (Sacred)	1	3	1	0	30	invkrs	qknf	1	-1
 j51	Maiden Spear (3)	2	4	1	0	12	invam3	aspe	1	0
 !64	Marrow Staff (2)	2	4	1	0	10	inv8wsu	nstf	1	2
-!28	Mammen Axe (Sacred)	1	3	1	0	30	invhaxu	baxe	1	4
+!28	Mammen Axe (Sacred)	1	3	1	0	30	invhaxu	sbax	1	4
 210	Dagger (2)	1	2	1	0	4	invdgr	knif	1	-1
 406	Short Spear (5)	1	3	1	1	21	invssp	jave	1	-1
 396	Club (5)	1	3	1	0	18	invclb	mace	1	-1
 258	Great Axe (3)	2	4	1	0	12	invgax	2hax	1	-1
-38@	Spear (Sacred)	2	4	1	0	30	invspr	spea	1	-1
+38@	Spear (Sacred)	2	4	1	0	30	invspr	qspe	1	-1
 482	Dagger (6)	1	2	1	0	22	invdgr	knif	1	-1
 j37	Katar (2)	1	3	1	0	5	invktr	h2h	1	6
 173	Long Sword (2)	2	3	1	0	8	invlsd	swor	1	-1
-2@E	Dart Thrower (Sacred)	2	3	1	0	30	inv8lxu	nxbw	1	2
+2@E	Dart Thrower (Sacred)	2	3	1	0	30	inv8lxu	snxb	1	2
 499	Halberd (6)	2	4	1	0	27	invhal	pole	1	-1
 !06	Naginata (6)	2	4	1	0	28	invwsc	nagi	1	6
 365	Hunter's Bow (4)	2	3	1	0	15	invhbw	bow	1	-1
@@ -1490,26 +1490,26 @@ j37	Katar (2)	1	3	1	0	5	invktr	h2h	1	6
 7@A	Angel Star (4)	1	3	1	0	18	invmstu	pmac	1	3
 l75	Repeating Crossbow (6)	2	3	1	0	28	invrxb	xbow	1	-1
 166	Short War Bow (1)	2	3	1	0	4	invswb	bow	1	-1
-75@	Great Maul (Sacred)	2	3	1	0	30	invgma	hamm	1	-1
+75@	Great Maul (Sacred)	2	3	1	0	30	invgma	qham	1	-1
 141	Pike (1)	2	4	1	0	5	invpik	spea	1	-1
 403	War Scepter (5)	2	3	1	0	22	invwsp	scep	1	-1
-61@	Short Bow (Sacred)	2	3	1	0	30	invsbw	bow	1	-1
+61@	Short Bow (Sacred)	2	3	1	0	30	invsbw	qbow	1	-1
 252	Double Axe (3)	2	3	1	0	12	inv2ax	axe	1	-1
 466	Mace (6)	1	3	1	0	25	invmac	mace	1	-1
 134	Short Spear (1)	1	3	1	1	2	invssp	jave	1	-1
 283	Flying Knife (3)	1	2	1	1	11	invtkn	tkni	1	-1
 156	Bardiche (1)	2	4	1	0	0	invbar	pole	1	-1
-03@	Saber (Sacred)	1	3	1	0	30	invsbr	swor	1	-1
+03@	Saber (Sacred)	1	3	1	0	30	invsbr	qswd	1	-1
 3@8	Kriegsmesser (3)	2	3	1	0	15	inv9lsu	bswd	1	4
 x34	Maiden Spear (2)	2	4	1	0	8	invam3	aspe	1	0
 421	Throwing Axe (5)	1	2	1	1	18	invtax	taxe	1	-1
-37@	Throwing Spear (Sacred)	1	4	1	1	30	invtsp	jave	1	-1
+37@	Throwing Spear (Sacred)	1	4	1	1	30	invtsp	qjvn	1	-1
 450	Bastard Sword (6)	1	4	1	0	26	invbsw	2hsd	1	-1
 !98	Warp Blade (1)	2	3	1	0	6	inv9cru	scrd	1	1
 j14	Jared's Stone (1)	1	3	1	0	5	invob5	orb	1	1
 l10	Wand (1)	1	2	1	0	0	invwnd	wand	1	2
 4@9	Bonebreaker (6)	1	3	1	0	25	invspcu	pclb	1	3
-94@	Claws (Sacred)	1	3	1	0	30	invclw	h2h	1	6
+94@	Claws (Sacred)	1	3	1	0	30	invclw	qh2h	1	6
 3@6	Backsword (6)	1	3	1	0	26	inv9sbu	bswd	1	4
 271	Glaive (3)	1	4	1	1	12	invglv	jave	1	-1
 l72	Light Crossbow (6)	2	3	1	0	25	invlxb	xbow	1	-1
@@ -1529,11 +1529,11 @@ j83	Stag Bow (5)	2	4	1	0	21	invam1	abow	1	0
 248	Great Sword (3)	2	4	1	0	14	invgsd	2hsd	1	-1
 146	Throwing Knife (1)	1	2	1	1	0	invtkn	tkni	1	-1
 111	Flamberge (1)	2	4	1	0	3	invflb	2hsd	1	-1
-93@	Cestus (Sacred)	1	3	1	0	30	invaxf	h2h	1	6
+93@	Cestus (Sacred)	1	3	1	0	30	invaxf	qh2h	1	6
 408	Throwing Spear (5)	1	4	1	1	23	invtsp	jave	1	-1
 j77	Scissors Katar (4)	1	3	1	0	20	invskr	h2h	1	6
 356	Long Staff (4)	1	4	1	0	15	invlst	staf	1	-1
-5@9	Bonebreaker (Sacred)	1	3	1	0	30	invspcu	pclb	1	3
+5@9	Bonebreaker (Sacred)	1	3	1	0	30	invspcu	spcb	1	3
 1@7	Ida (6)	2	3	1	0	27	invbsdu	bswd	1	4
 8@2	Maple Bow (3)	2	3	1	0	13	inv8s8u	dbow	1	5
 164	Short Battle Bow (1)	2	3	1	0	2	invsbb	bow	1	-1
@@ -1679,7 +1679,7 @@ a66	Idol of Vanity	1	2	2	0	0	invgbi	grtz		-1
 am8	Ceremonial Spear\nAmulet	1	1	2	0	0	invamu	amul		-1
 E1+	\orange;is swift and sharp \nThe sword of justice \nWeird Shrine (9 Charges)	1	2	2	0	0	jbscross	thng		-1
 skc	\purple;Chipped Skull	1	1	2	0	1	invskc	gemz		-1
-qqc	Bolt Quiver (Sacred)	1	3	2	1	75	invcqv	qmsl	2	-1
+qqc	Bolt Quiver (Sacred)	1	3	2	1	75	invcqv	qcqv	2	-1
 rin	Ring	1	1	2	0	0	invrin	ring		-1
 r56	\grey;Great Rune\n\purple;Sha'ad Rune	1	1	2	0	100	r-d-12	rune		-1
 52+	2% Faster Hit Recovery	1	1	2	0	0	pearl1	asaa		-1
@@ -1776,7 +1776,7 @@ mec	Cube Reagent\n\orange;Meditation Candle	1	1	2	0	0	invcndl	thng		-1
 r31	\purple;Jah Rune	1	1	2	0	65	invrJo	rune		-1
 C9+	\orange;flows from within \nThe essence of life \nQuiet Shrine (1 Charge)	1	2	2	0	0	jbscross	thng		-1
 obf	Dimensional Shard\nAmulet	1	1	2	0	0	invamu	amul		-1
-qmu	Amulet (Sacred)	1	1	2	0	75	invamu	amul		-1
+qmu	Amulet (Sacred)	1	1	2	0	75	invamu	qamu		-1
 K8+	\orange;at the cost of wisdom \nPersistence comes \nShimmering Shrine (2 Charges)	1	2	2	0	0	jbscross	thng		-1
 D7+	\orange;at the cost of self \nKnowledge and wisdom \nEerie Shrine (3 Charges)	1	2	2	0	0	jbscross	thng		-1
 &78	\orange;Mystic Orb\nThe Moon Crystal	1	1	2	0	0	pearl1	asaa		-1
@@ -2050,7 +2050,7 @@ T6+	\orange;brings destruction\nArcane power\nCryptic Shrine (4 Charges)	1	2	2	0
 gpy	\purple;Perfect Topaz	1	1	2	0	18	invgsye	gemt		-1
 qll	Quill	1	1	2	0	0	invquil	body		-1
 ob9	Sparkling Ball\nAmulet	1	1	2	0	0	invamu	amul		-1
-qqv	Arrow Quiver (Sacred)	1	3	2	1	75	invqvr	qmsl	2	-1
+qqv	Arrow Quiver (Sacred)	1	3	2	1	75	invqvr	qaqv	2	-1
 yqe	By Richard Knaak\nMoon of the Spider	1	1	2	0	0	invhscr2	grtz		-1
 r23	\purple;Mal Rune	1	1	2	0	49	invrMal	rune		-1
 0g5	\red;Elixir of Greater Energy	1	1	2	0	0	invxyz	hpot		-1
@@ -2358,7 +2358,7 @@ Q2+	\orange;through destruction\nNew strength is forged\nHidden Shrine (8 Charge
 drd	Earth Spirit\nAmulet	1	1	2	0	0	invamu	amul		-1
 qul	\grey;Cube Reagent\n\orange;Arcane Shards	1	1	2	0	0	invfary4	thng		-1
 z5+	+1 to Summon Bane Monster	1	1	2	0	0	pearl3	asaa		-1
-qin	Ring (Sacred)	1	1	2	0	75	invrin	ring		-1
+qin	Ring (Sacred)	1	1	2	0	75	invrin	qrin		-1
 M6+	\orange;least expected \nRiches abound when \nSpiritual Shrine (4 Charges)	1	2	2	0	0	jbscross	thng		-1
 20+	1% Chance to cast level 3 Thunder Hammer when you Kill an Enemy	1	1	2	0	0	pearl3	asaa		-1
 P0+	\orange;refreshed \nDrink and be \nDivine Shrine (10 Charges)	1	2	2	0	0	jbscross	thng		-1

@@ -32,8 +32,8 @@ struct ItemInfo
 	int nonMagicType; // quality == 1 || quality == 3 (low quality or superior)
 	int setOrUniqueId; // key to get SetItemInfo or UniqueItemInfo
 	QString inscribedName; // isPersonalized == true
-	int defense; // itemBase.type == Enums::ItemType::Armor
-	int currentDurability, maxDurability; // itemBase.type != Enums::ItemType::Misc
+	int defense; // itemBase.genericType == Enums::ItemType::Armor
+	int currentDurability, maxDurability; // itemBase.genericType != Enums::ItemTypeGeneric::Misc
 	int quantity; // itemBase.isStackable == true
 	qint8 socketsNumber; // isSocketed == true
     QMultiMap<int, ItemProperty> props, rwProps;
@@ -161,7 +161,7 @@ struct ItemBase
 {
 	QString name;
 	quint8 width, height;
-	Enums::ItemType::ItemTypeEnum type;
+	Enums::ItemTypeGeneric::ItemTypeGenericEnum genericType;
 	bool isStackable;
 	quint16 rlvl;
     QByteArray imageName, typeString;

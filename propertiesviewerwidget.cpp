@@ -131,7 +131,7 @@ void PropertiesViewerWidget::displayItemProperties(ItemInfo *item)
             itemDescription += "<br>" + htmlStringFromDiabloColorString(QString("'%1'").arg(runes), Gold) + colorReplacementString(White);
     }
 
-    if (itemBase.type == Enums::ItemType::Armor)
+    if (itemBase.genericType == Enums::ItemTypeGeneric::Armor)
     {
         int baseDef = item->defense, totalDef = baseDef;
 		ItemProperty foo;
@@ -152,7 +152,7 @@ void PropertiesViewerWidget::displayItemProperties(ItemInfo *item)
         else
             itemDescription += defString.arg(baseDef);
     }
-    if (itemBase.type != Enums::ItemType::Misc && item->maxDurability)
+    if (itemBase.genericType != Enums::ItemTypeGeneric::Misc && item->maxDurability)
         itemDescription += "<br>" + tr("Durability: %1 of %2").arg(item->currentDurability).arg(item->maxDurability);
     if (itemBase.isStackable)
         itemDescription += "<br>" + tr("Quantity: %1").arg(item->quantity);

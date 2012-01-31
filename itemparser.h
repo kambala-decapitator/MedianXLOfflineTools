@@ -25,6 +25,9 @@ public:
     static bool canStoreItemAt(quint8 row, quint8 col, const QByteArray &storeItemType, const ItemsList &items, int rowsTotal, int colsTotal, int plugyPage = 0);
 
 	static const QByteArray itemHeader, plugyPageHeader;
+
+private:
+    static bool isCorrectItemTypeForRW(const QList<QByteArray> &itemTypes, const QList<QByteArray> &allowedItemTypes);
 };
 
 #endif // ITEMPARSER_H

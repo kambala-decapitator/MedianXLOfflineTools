@@ -1,22 +1,18 @@
 - fix removing ED MO (check limit of 350% in order not to subtract more than needed)
 - stack ED from RW (Superior Naginata on page 90)
-- based on blessed life skill level
 - try unMO UMOs (get UMO props from cubemain)
-- corpse & merc items (or maybe not)
-- shrines
-- automod x% damage to undead (e.g. hand of god on shared stash page 90)
+- merc items
+- automod x% damage to undead (e.g. hand of god on shared stash page 90) - see class info in itemparser.cpp:133
+- based on blessed life skill level
 - pearl of wisdom color
+- shrines color
 - insertred unique jewel names (check)
 - search and fix all TODOs in code
 - add a check for avoid >= 100%
 - remove QDebug
 - remove absolute paths to data files
 - file association
-- copy files to destdir
-
-write in changelog:
-- correct text color on the class charm :P
-
+- copy files to destdir:
 1.
 linux-g++{
     #...
@@ -47,6 +43,9 @@ images.path    = $${DESTDIR}/images
 images.files   += images/splashscreen.png
 images.files   += images/logo.png
 INSTALLS       += images
+
+write in changelog:
+- correct text color on the class charm :P
 
 v0.3:
 - affix rlvl support
