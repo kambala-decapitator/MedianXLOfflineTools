@@ -130,7 +130,8 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
 			if (bitReader.readBool())
 				item->variableGraphicIndex = bitReader.readNumber(3) + 1;
 			if (bitReader.readBool()) // class info
-				bitReader.skip(11);
+                qDebug() << "class info" << bitReader.readNumber(11);
+				//bitReader.skip(11);
 			switch (item->quality)
 			{
 			case Enums::ItemQuality::Normal:
@@ -244,9 +245,7 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
 				item->socketablesInfo += socketableInfo;
 				//outStream << tr("Socket filler #%1:\n%2").arg(i + 1).arg(gemInfo);
 				if (item->isRW && i >= item->socketablesNumber - 2) // get the last socket filler to obtain RW name (and previous one to prevent disambiguation)
-				{
-					runeTypes.prepend(/*socketableInfo->itemType == "jew" &&*/ i != item->socketablesNumber - 1 ? QByteArray() : socketableInfo->itemType);
-				}
+					runeTypes.prepend(i != item->socketablesNumber - 1 ? QByteArray() : socketableInfo->itemType);
 			}
 
 			if (runeTypes.size())
@@ -260,9 +259,6 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
 					for (; iter != ItemDataBase::RW()->end() && iter.key() == rwKey; ++iter)
 					{
                         const RunewordInfo &rwInfo = iter.value();
-#ifndef QT_NO_DEBUG
-						qDebug() << rwInfo.name << rwInfo.allowedItemTypes << itemBase.typeString;
-#endif
 						if (isCorrectItemTypeForRW(QList<QByteArray>() << itemBase.typeString, rwInfo.allowedItemTypes))
 						{
 							item->rwName = rwInfo.name;
@@ -301,12 +297,11 @@ QMultiMap<int, ItemProperty> ItemParser::parseItemProperties(ReverseBitReader &b
 		propToAdd.value = bitReader.readNumber(prop.bits) - prop.add;
 		if (id == 17) // max edamage%
 		{
-			//            qint16 minEnhDamage = bitReader.readNumber(prop.bits) - prop.add;
+			//qint16 minEnhDamage = bitReader.readNumber(prop.bits) - prop.add;
 			bitReader.skip(prop.bits);
 			propToAdd.displayString = tr("+%1% Enhanced Damage").arg(propToAdd.value);
-			// minEnhDamage != propToAdd.value only for superior items that have been MO'd with ED
-			//            if (minEnhDamage != propToAdd.value)
-			//                propToAdd.displayString += " " + tr("[min ed %1 != max ed %2!!! please report]").arg(minEnhDamage).arg(propToAdd.value);
+			//if (minEnhDamage != propToAdd.value)
+            //    propToAdd.displayString += " " + tr("[min ed %1 != max ed %2]").arg(minEnhDamage).arg(propToAdd.value);
 		}
 
 		// elemental damage

@@ -11,8 +11,11 @@ class ItemStorageTableView : public QTableView
 public:
     explicit ItemStorageTableView(QWidget *parent = 0) : QTableView(parent) {}
 
-protected slots:
+protected:
     virtual void keyPressEvent(QKeyEvent *event);
+
+signals:
+    void deleteSelectedItem();
 };
 
 #endif // ITEMSTORAGETABLEVIEW_H

@@ -5,7 +5,6 @@
 
 void ItemStorageTableView::keyPressEvent(QKeyEvent *event)
 {
-    //QModelIndex oldIndex = currentIndex();
     QTableView::keyPressEvent(event);
 
     int key = event->key();
@@ -14,4 +13,6 @@ void ItemStorageTableView::keyPressEvent(QKeyEvent *event)
         QModelIndex newIndex = indexAt(visualRect(currentIndex()).topLeft());
         selectionModel()->setCurrentIndex(newIndex, QItemSelectionModel::ClearAndSelect);
     }
+    else if (key == Qt::Key_Delete)
+        emit deleteSelectedItem();
 }

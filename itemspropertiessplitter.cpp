@@ -17,10 +17,6 @@
 
 #include <limits>
 
-#ifndef QT_NO_DEBUG
-#include <QDebug>
-#endif
-
 
 static const QString iconPathFormat(":/PlugyArrows/Resources/icons/plugy/%1.png");
 
@@ -32,8 +28,8 @@ ItemsPropertiesSplitter::ItemsPropertiesSplitter(ItemStorageTableView *itemsView
     _itemsView->setHorizontalScrollMode(QAbstractItemView::ScrollPerPixel);
     _itemsView->setVerticalScrollMode(QAbstractItemView::ScrollPerPixel);
     _itemsView->setSelectionMode(QAbstractItemView::SingleSelection);
-//    _itemsView->setStyleSheet("QAbstractItemView::item:selected:active { background:black } QAbstractItemView::item:hover { color:green; background-color: yellow }");
-    _itemsView->setStyleSheet("QAbstractItemView::item:selected:active { background:green }"); // TODO: change to black
+    //_itemsView->setStyleSheet("QAbstractItemView::item:selected:active { background:black } QAbstractItemView::item:hover { color:green; background-color: yellow }");
+    _itemsView->setStyleSheet("QAbstractItemView::item:selected:active { background:black }");
     _itemsView->setGridStyle(Qt::DashLine);
     _itemsView->setCornerButtonEnabled(false);
     _itemsView->horizontalHeader()->hide();
@@ -90,10 +86,9 @@ ItemsPropertiesSplitter::ItemsPropertiesSplitter(ItemStorageTableView *itemsView
     setChildrenCollapsible(false);
     setStretchFactor(0, 4);
 
-    //connect(_itemsView, SIGNAL(clicked(const QModelIndex &)), SLOT(itemSelected(const QModelIndex &)));
-    //connect(_itemsView, SIGNAL(currentItemChanged(const QModelIndex &)), SLOT(itemSelected(const QModelIndex &)));
 	connect(_itemsView->selectionModel(), SIGNAL(currentChanged(const QModelIndex &, const QModelIndex &)), SLOT(itemSelected(const QModelIndex &)));
 	connect(_itemsView, SIGNAL(customContextMenuRequested(const QPoint &)), SLOT(showContextMenu(const QPoint &)));
+    connect(_itemsView, SIGNAL(deleteSelectedItem()), SLOT(deleteItem()));
 
     if (shouldCreateNavigation)
     {
@@ -219,7 +214,7 @@ void ItemsPropertiesSplitter::right10Clicked()
 
 void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
 {
-	ItemInfo *item = itemFromCoordinate(pos);
+	ItemInfo *item = selectedItem(false);
 	if (item)
 	{
 		QList<QAction *> actions;
@@ -256,6 +251,7 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
 		//	connect(actionUnsocket, SIGNAL(triggered()), SLOT(unsocketItem()));
 		//	actions << actionUnsocket;
 		//}
+
         // no need
 		//if (item->isEthereal)
 		//{
@@ -266,18 +262,9 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
 
 		// TODO: add "Remove Mystic Orbs"
 		QAction *actionDelete = new QAction(tr("Delete"), _itemsView);
+        actionDelete->setShortcut(QKeySequence::Delete);
 		connect(actionDelete, SIGNAL(triggered()), SLOT(deleteItem()));
 		actions << actionDelete;
-
-		foreach (QAction *action, actions)
-		{
-			action->setData(pos);
-
-			QMenu *actionMenu = action->menu();
-			if (actionMenu)
-				foreach (QAction *childAction, actionMenu->actions())
-					childAction->setData(pos);
-		}
 
 		QMenu::exec(actions, _itemsView->mapToGlobal(pos));
 	}
@@ -285,13 +272,15 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
 
 void ItemsPropertiesSplitter::disenchantItem()
 {
-	QAction *action = actionFromSender(sender(), QLatin1String("disenchant"));
-	if (!action)
-		return;
-	
-	ItemInfo *item = itemFromAction(action);
-    int insertIndex = _allItems.indexOf(item);
+	QAction *action = qobject_cast<QAction *>(sender());
+    ItemInfo *item = selectedItem();
+    if (!action || !item)
+    {
+        ERROR_BOX("TROLOLOL I can't disenchant the item");
+        return;
+    }
 
+    int insertIndex = _allItems.indexOf(item);
 	QString path = ResourcePathManager::dataPathForFileName(QString("items/%1.d2i").arg(action->objectName() == "signet" ? "signet_of_learning" : "arcane_shard"));
 	ItemInfo *newItem = ItemParser::loadItemFromFile(path);
 
@@ -340,7 +329,7 @@ void ItemsPropertiesSplitter::disenchantItem()
 //
 //void ItemsPropertiesSplitter::makeNonEthereal()
 //{
-//	ItemInfo *item = itemFromAction(actionFromSender(sender(), QLatin1String("non-etherealize")));
+//	ItemInfo *item = selectedItem();
 //	if (item)
 //    {
 //        item->hasChanged = true;
@@ -362,14 +351,9 @@ void ItemsPropertiesSplitter::disenchantItem()
 
 void ItemsPropertiesSplitter::deleteItem()
 {
-	ItemInfo *item = itemFromAction(actionFromSender(sender(), QLatin1String("delete")));
-	if (item)
-		performDeleteItem(item);
-}
-
-ItemInfo *ItemsPropertiesSplitter::itemFromCoordinate(const QPoint &pos)
-{
-	return _itemsModel->itemAt(_itemsView->indexAt(pos));
+	ItemInfo *item = selectedItem();
+	if (item && QMessageBox::question(this, qApp->applicationName(), tr("Are you sure you want to delete this item?"), QMessageBox::Yes, QMessageBox::No) == QMessageBox::Yes)
+        performDeleteItem(item);
 }
 
 void ItemsPropertiesSplitter::performDeleteItem(ItemInfo *item)
@@ -382,20 +366,12 @@ void ItemsPropertiesSplitter::performDeleteItem(ItemInfo *item)
 	setItems(_allItems); // maybe not needed?
 }
 
-QAction *ItemsPropertiesSplitter::actionFromSender(QObject *sender, const QLatin1String &errorActionText)
+ItemInfo *ItemsPropertiesSplitter::selectedItem(bool showError /*= true*/)
 {
-	QAction *action = qobject_cast<QAction *>(sender);
-	if (!action)
-		ERROR_BOX("TROLOLOL I can't " + errorActionText + " the item");
-	return action;
-}
-
-ItemInfo *ItemsPropertiesSplitter::itemFromAction(QAction *action)
-{
-	ItemInfo *item = 0;
-	if (action)
-		item = itemFromCoordinate(action->data().toPoint());
-	return item;
+    ItemInfo *item = _itemsModel->itemAt(_itemsView->selectionModel()->currentIndex());
+    if (!item && showError)
+        ERROR_BOX("TROLOLOL no item selection found");
+    return item;
 }
 
 void ItemsPropertiesSplitter::addItemToList(ItemInfo *item, int pos /*= -1*/)

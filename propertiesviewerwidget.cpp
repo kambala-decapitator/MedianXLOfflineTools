@@ -139,12 +139,8 @@ void PropertiesViewerWidget::displayItemProperties(ItemInfo *item)
 		if (ed)
 			totalDef = (totalDef * (100 + ed)) / 100;
 		totalDef += allProps.value(Enums::ItemProperties::Defence, foo).value + (allProps.value(Enums::ItemProperties::DefenceBoCL, foo).value * *ItemDataBase::clvl) / 32;
-        //if (allProps.contains(Enums::ItemProperties::EnhancedDefence))
-        //    totalDef = totalDef * (100 + allProps[Enums::ItemProperties::EnhancedDefence].value) / 100;
-        //if (allProps.contains(Enums::ItemProperties::Defence))
-        //    totalDef += allProps[Enums::ItemProperties::Defence].value;
-        //if (allProps.contains(Enums::ItemProperties::DefenceBoCL))
-        //    totalDef += allProps[Enums::ItemProperties::DefenceBoCL].value;
+        if (totalDef < 0)
+            totalDef = 0;
 
         QString defString = "<br>" + tr("Defense: %1");
         if (baseDef != totalDef)
@@ -153,7 +149,15 @@ void PropertiesViewerWidget::displayItemProperties(ItemInfo *item)
             itemDescription += defString.arg(baseDef);
     }
     if (itemBase.genericType != Enums::ItemTypeGeneric::Misc && item->maxDurability)
-        itemDescription += "<br>" + tr("Durability: %1 of %2").arg(item->currentDurability).arg(item->maxDurability);
+    {
+        itemDescription += "<br>" + tr("Durability: ", "don't forget the trailing space!");
+        bool isIndestructible = allProps.value(Enums::ItemProperties::Indestructible).value == 1;
+        if (isIndestructible)
+            itemDescription += QString("%1 [").arg(QChar(0x221e)); // infinity
+        itemDescription += tr("%1 of %2", "durability").arg(item->currentDurability).arg(item->maxDurability);
+        if (isIndestructible)
+            itemDescription += "]";
+    }
     if (itemBase.isStackable)
         itemDescription += "<br>" + tr("Quantity: %1").arg(item->quantity);
     if (itemBase.classCode > -1)
@@ -176,7 +180,7 @@ void PropertiesViewerWidget::displayItemProperties(ItemInfo *item)
         rlvl = ItemDataBase::Uniques()->contains(item->setOrUniqueId) ? ItemDataBase::Uniques()->value(item->setOrUniqueId).rlvl : ItemDataBase::Items()->value(item->itemType).rlvl;
         break;
 //    case Enums::ItemQuality::Rare: case Enums::ItemQuality::Crafted: case Enums::ItemQuality::Magic:
-        // !!!: add support for affix rlvl in some next version
+        // TODO 0.3: add support for affix rlvl in some next version
 //        break;
     default:
         rlvl = itemBase.rlvl;
