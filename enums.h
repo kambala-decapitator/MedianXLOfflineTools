@@ -221,6 +221,7 @@ public:
         Defence = 31,
         Durability = 72,
         DurabilityMax = 73,
+        Requirements = 91,
         RequiredLevel = 92,
         DamageToUndead = 122,
         Indestructible = 152,

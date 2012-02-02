@@ -162,11 +162,12 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
 				for (int i = 0; i < 5; i++)
 					hasSetLists[i] = bitReader.readBool(); // should always be false for MXL
 
+            bool iskhalim = item->itemType == "qf2";
 			item->props = parseItemProperties(bitReader, &ok);
 			if (!ok)
 			{
 				inputDataStream.device()->seek(itemStartOffset - 2); // set to JM - beginning of the item
-				item->props.insert(1, ItemProperty(tr("Error parsing item properties, please report!")));
+				item->props.insert(1, ItemProperty(tr("Error parsing item properties (ok == 0), please report!")));
 				searchEndOffset = nextItemOffset + 1;
 				continue;
 			}
@@ -236,103 +237,113 @@ QMultiMap<int, ItemProperty> ItemParser::parseItemProperties(ReverseBitReader &b
 	QMultiMap<int, ItemProperty> props;
 	while (bitReader.pos() != -1)
 	{
-		int id = bitReader.readNumber(Enums::CharacterStats::StatCodeLength);
-		if (id == Enums::ItemProperties::End)
-		{
-			*ok = true;
-			return props;
-		}
+        try
+        {
+            int id = bitReader.readNumber(Enums::CharacterStats::StatCodeLength);
+            if (id == Enums::ItemProperties::End)
+            {
+                *ok = true;
+                return props;
+            }
 
-		const ItemPropertyTxt &prop = ItemDataBase::Properties()->value(id);
-		ItemProperty propToAdd;
-		propToAdd.param = prop.saveParamBits ? bitReader.readNumber(prop.saveParamBits) : 0;
-		propToAdd.value = bitReader.readNumber(prop.bits) - prop.add;
-		if (id == 17) // max edamage%
-		{
-			//qint16 minEnhDamage = bitReader.readNumber(prop.bits) - prop.add;
-			bitReader.skip(prop.bits);
-			propToAdd.displayString = tr("+%1% Enhanced Damage").arg(propToAdd.value);
-			//if (minEnhDamage != propToAdd.value)
-            //    propToAdd.displayString += " " + tr("[min ed %1 != max ed %2]").arg(minEnhDamage).arg(propToAdd.value);
-		}
+            const ItemPropertyTxt &prop = ItemDataBase::Properties()->value(id);
+            ItemProperty propToAdd;
+            propToAdd.param = prop.saveParamBits ? bitReader.readNumber(prop.saveParamBits) : 0;
+            propToAdd.value = bitReader.readNumber(prop.bits) - prop.add;
+            if (id == 17) // max edamage%
+            {
+                //qint16 minEnhDamage = bitReader.readNumber(prop.bits) - prop.add;
+                bitReader.skip(prop.bits);
+                propToAdd.displayString = tr("+%1% Enhanced Damage").arg(propToAdd.value);
+                //if (minEnhDamage != propToAdd.value)
+                //    propToAdd.displayString += " " + tr("[min ed %1 != max ed %2]").arg(minEnhDamage).arg(propToAdd.value);
+            }
 
-		// elemental damage
-		bool hasLength = false, hasMinElementalDamage = false;
-		if (id == 48 || id == 50 || id == 52 || id == 54 || id == 57) // min elemental damage
-		{
-			if (id == 54 || id == 57) // cold or poison
-				hasLength = true; // length is present only when min damage is specified
-			else if (id == 52) // +%d magic damage
-			{
-				QString desc = prop.descPositive;
-				propToAdd.displayString = desc.replace("%d", "%1").arg(propToAdd.value);
-			}
-			props.insert(id++, propToAdd);
-			hasMinElementalDamage = true;
-		}
-		if (hasMinElementalDamage)
-		{
-			// get max elemental damage
-			const ItemPropertyTxt &maxElementalDamageProp = ItemDataBase::Properties()->value(id);
-			propToAdd.value = bitReader.readNumber(maxElementalDamageProp.bits) - maxElementalDamageProp.add;
+            // elemental damage
+            bool hasLength = false, hasMinElementalDamage = false;
+            if (id == 48 || id == 50 || id == 52 || id == 54 || id == 57) // min elemental damage
+            {
+                if (id == 54 || id == 57) // cold or poison
+                    hasLength = true; // length is present only when min damage is specified
+                else if (id == 52) // +%d magic damage
+                {
+                    QString desc = prop.descPositive;
+                    propToAdd.displayString = desc.replace("%d", "%1").arg(propToAdd.value);
+                }
+                props.insert(id++, propToAdd);
+                hasMinElementalDamage = true;
+            }
+            if (hasMinElementalDamage)
+            {
+                // get max elemental damage
+                const ItemPropertyTxt &maxElementalDamageProp = ItemDataBase::Properties()->value(id);
+                propToAdd.value = bitReader.readNumber(maxElementalDamageProp.bits) - maxElementalDamageProp.add;
 
-			if (id == 53) // +%d magic damage
-			{
-				QString desc = maxElementalDamageProp.descPositive;
-				propToAdd.displayString = desc.replace("%d", "%1").arg(propToAdd.value);
-			}
-			props.insert(id, propToAdd);
+                if (id == 53) // +%d magic damage
+                {
+                    QString desc = maxElementalDamageProp.descPositive;
+                    propToAdd.displayString = desc.replace("%d", "%1").arg(propToAdd.value);
+                }
+                props.insert(id, propToAdd);
 
-			if (hasLength) // cold or poison length
-			{
-				const ItemPropertyTxt &lengthProp = ItemDataBase::Properties()->value(++id);
-				qint16 length = bitReader.readNumber(lengthProp.bits) - lengthProp.add;
-                //propToAdd.displayString = QString(" with length of %1 frames (%2 second(s))").arg(length).arg(static_cast<double>(length) / 25.0, 1);
-                //propToAdd.value = length;
-                //props[id] = propToAdd;
+                if (hasLength) // cold or poison length
+                {
+                    const ItemPropertyTxt &lengthProp = ItemDataBase::Properties()->value(++id);
+                    qint16 length = bitReader.readNumber(lengthProp.bits) - lengthProp.add;
+                    //propToAdd.displayString = QString(" with length of %1 frames (%2 second(s))").arg(length).arg(static_cast<double>(length) / 25.0, 1);
+                    //propToAdd.value = length;
+                    //props[id] = propToAdd;
 
-				if (id == 59) // poison length
-				{
-					// set correct min/max poison damage
-					ItemProperty newProp(qRound(props.value(id - 2).value * length / 256.0));
-					props.replace(id - 1, newProp);
-					props.replace(id - 2, newProp);
-				}
-			}
+                    if (id == 59) // poison length
+                    {
+                        // set correct min/max poison damage
+                        ItemProperty newProp(qRound(props.value(id - 2).value * length / 256.0));
+                        props.replace(id - 1, newProp);
+                        props.replace(id - 2, newProp);
+                    }
+                }
 
-			continue;
-		}
+                continue;
+            }
 
-		if (id == 83)
-			propToAdd.displayString = tr("+%1 to %2 Skill Levels").arg(propToAdd.value).arg(Enums::ClassName::classes().at(propToAdd.param));
-		else if (id == 97 || id == 107)
-		{
-			const SkillInfo &skill = ItemDataBase::Skills()->at(propToAdd.param);
-			propToAdd.displayString = tr("+%1 to %2").arg(propToAdd.value).arg(skill.name);
-			if (id == 107)
-				propToAdd.displayString = " " + tr("(%1 Only)", "class-specific skill").arg(skill.classCode > -1 ? Enums::ClassName::classes().at(skill.classCode) : "FAIL");
-		}
-		else if (id == 204)
-		{
-			propToAdd.displayString = tr("Level %1 %2 (%3/%4 Charges)").arg(propToAdd.param & 63).arg(ItemDataBase::Skills()->value(propToAdd.param >> 6).name)
-				.arg(propToAdd.value & 255).arg(propToAdd.value >> 8);
-		}
-        //else if (id == 219)
-        //    propToAdd.displayString = "trophy'd charm or blessed craft";
-		else if (QString(prop.descPositive).startsWith('%')) // ctc
-		{
-			QString desc = prop.descPositive;
-			for (int i = 0, k = 1; k <= 3 && i < desc.length(); ++i)
-				if (desc.at(i) == '%' && desc.at(i + 1).isLetter())
-					desc[++i] = QString::number(k++).at(0);
-			propToAdd.displayString = desc.replace("%%", "%").arg(propToAdd.value).arg(propToAdd.param & 63).arg(ItemDataBase::Skills()->value(propToAdd.param >> 6).name);
-		}
-		else if (ItemDataBase::MysticOrbs()->contains(id))
-		{
-			propToAdd.displayString = QString("%1 x '%2'").arg(propToAdd.value).arg(ItemDataBase::Items()->value(ItemDataBase::MysticOrbs()->value(id).itemCode).name);
-		}
+            if (id == 83)
+                propToAdd.displayString = tr("+%1 to %2 Skill Levels").arg(propToAdd.value).arg(Enums::ClassName::classes().at(propToAdd.param));
+            else if (id == 97 || id == 107)
+            {
+                const SkillInfo &skill = ItemDataBase::Skills()->at(propToAdd.param);
+                propToAdd.displayString = tr("+%1 to %2").arg(propToAdd.value).arg(skill.name);
+                if (id == 107)
+                    propToAdd.displayString = " " + tr("(%1 Only)", "class-specific skill").arg(skill.classCode > -1 ? Enums::ClassName::classes().at(skill.classCode) : "FAIL");
+            }
+            else if (id == 204)
+            {
+                propToAdd.displayString = tr("Level %1 %2 (%3/%4 Charges)").arg(propToAdd.param & 63).arg(ItemDataBase::Skills()->value(propToAdd.param >> 6).name)
+                    .arg(propToAdd.value & 255).arg(propToAdd.value >> 8);
+            }
+            //else if (id == 219)
+            //    propToAdd.displayString = "trophy'd charm or blessed craft";
+            else if (QString(prop.descPositive).startsWith('%')) // ctc
+            {
+                QString desc = prop.descPositive;
+                for (int i = 0, k = 1; k <= 3 && i < desc.length(); ++i)
+                    if (desc.at(i) == '%' && desc.at(i + 1).isLetter())
+                        desc[++i] = QString::number(k++).at(0);
+                propToAdd.displayString = desc.replace("%%", "%").arg(propToAdd.value).arg(propToAdd.param & 63).arg(ItemDataBase::Skills()->value(propToAdd.param >> 6).name);
+            }
+            else if (ItemDataBase::MysticOrbs()->contains(id))
+            {
+                propToAdd.displayString = QString("%1 x '%2'").arg(propToAdd.value).arg(ItemDataBase::Items()->value(ItemDataBase::MysticOrbs()->value(id).itemCode).name);
+            }
 
-		props.insert(id, propToAdd);
+            props.insert(id, propToAdd);
+        }
+        catch (int exceptionCode)
+        {
+            *ok = true;
+            // Requirements prop has the lowest descpriority, so it'll appear at the bottom
+            props.insert(Enums::ItemProperties::Requirements, ItemProperty(tr("Error parsing item properties (exception == %1), please report!").arg(exceptionCode)));
+            return props;
+        }
 	}
 
 	*ok = false;
