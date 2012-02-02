@@ -222,6 +222,7 @@ public:
         Durability = 72,
         DurabilityMax = 73,
         RequiredLevel = 92,
+        DamageToUndead = 122,
         Indestructible = 152,
 		DefenceBoCL = 214,
 		EnhancedDefenceBoCL = 215,

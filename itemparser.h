@@ -16,7 +16,9 @@ class ItemParser
 
 public:
 	static ItemInfo *parseItem(QDataStream &inputDataStream, const QByteArray &bytes);
-	static QMultiMap<int, ItemProperty> parseItemProperties(ReverseBitReader &bitReader, bool *ok);
+    static QMultiMap<int, ItemProperty> parseItemProperties(ReverseBitReader &bitReader, bool *ok);
+    static bool itemTypesInheritFromTypes(const QList<QByteArray> &itemTypes, const QList<QByteArray> &allowedItemTypes);
+
 	static void writeItems(const ItemsList &items, QDataStream &ds);
 
 	static ItemInfo *loadItemFromFile(const QString &filePath);
@@ -25,9 +27,6 @@ public:
     static bool canStoreItemAt(quint8 row, quint8 col, const QByteArray &storeItemType, const ItemsList &items, int rowsTotal, int colsTotal, int plugyPage = 0);
 
 	static const QByteArray itemHeader, plugyPageHeader;
-
-private:
-    static bool isCorrectItemTypeForRW(const QList<QByteArray> &itemTypes, const QList<QByteArray> &allowedItemTypes);
 };
 
 #endif // ITEMPARSER_H

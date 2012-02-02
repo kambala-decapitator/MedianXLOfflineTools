@@ -41,59 +41,34 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
 			inputDataStream >> aByte;
 			itemBitData.prepend(binaryStringFromNumber(aByte));
 		}
-		//    QString result;
-		//    QTextStream outStream(&result);
 		ReverseBitReader bitReader(itemBitData);
+
 		if (item)
 			delete item;
-		item = new ItemInfo(bitReader.notReadBits()/*, itemStartOffset, itemSize*/);
+		item = new ItemInfo(bitReader.notReadBits());
 		item->isQuest = bitReader.readBool();
-		//outStream << "is quest " << bitReader.readBool() << '\n';
 		bitReader.skip(3);
-		//outStream << "unk" << bitReader.readNumber(3) << '\n';
 		item->isIdentified = bitReader.readBool();
-		//outStream << "is identified " << isIdentified << '\n';
 		bitReader.skip(5);
-		//outStream << "unk" << bitReader.readNumber(5) << '\n';
-		bitReader.skip();
-		//outStream << "is duped " << bitReader.readBool() << '\n';
+		bitReader.skip(); // is duped
 		item->isSocketed = bitReader.readBool();
-		//outStream << "is socketed " << isSocketed << '\n';
 		bitReader.skip(2);
-		//outStream << "unk" << bitReader.readNumber(2) << '\n';
-		//outStream << "is illegal equip " << bitReader.readBool() << '\n';
-		bitReader.skip(2);
-		//outStream << "unk" << bitReader.readBool() << '\n';
+		bitReader.skip(2); // is illegal equip + unk
 		item->isEar = bitReader.readBool();
-		//outStream << "is ear " << isEar << '\n';
 		item->isStarter = bitReader.readBool();
-		//outStream << "is newbie " << bitReader.readBool() << '\n';
 		bitReader.skip(2);
-		//outStream << "unk" << bitReader.readNumber(2) << '\n';
 		bitReader.skip();
-		//outStream << "unk" << bitReader.readBool() << '\n';
 		item->isExtended = !bitReader.readBool();
-		//outStream << "is extended " << isExtended << '\n';
 		item->isEthereal = bitReader.readBool();
-		//outStream << "is ethereal " << isEthereal << '\n';
 		bitReader.skip();
 		item->isPersonalized = bitReader.readBool();
-		//outStream << "is personalized " << isPersonalized << '\n';
 		bitReader.skip();
-		//outStream << "unk" << bitReader.readBool() << '\n';
 		item->isRW = bitReader.readBool();
-		//outStream << "is RW " << isRW << '\n';
 		bitReader.skip(5);
-		//outStream << "unk" << bitReader.readNumber(5) << '\n';
-		bitReader.skip(8);
-		//outStream << "version" << bitReader.readNumber(8) << '\n'; // should be 101
+		bitReader.skip(8); // version - should be 101
 		bitReader.skip(2);
-		//outStream << "unk" << bitReader.readNumber(2) << '\n';
 		item->location = bitReader.readNumber(3);
-		//outStream << "location " << location << '\n';
 		item->whereEquipped = bitReader.readNumber(4);
-		//    if (itemInfo->location == 1) // gear
-		//        outStream << "where equipped " << whereEquipped << '\n';
 		item->column = bitReader.readNumber(4);
 		item->row = bitReader.readNumber(4);
 		if (item->location == 2) // belt
@@ -101,37 +76,24 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
 			item->row = item->column / 4;
 			item->column %= 4;
 		}
-		//    if (location != 1) // not gear
-		//        outStream << tr("item coordinates (%1, %2)\n").arg(row).arg(col);
 		item->storage = bitReader.readNumber(3);
-		//    if (!location)
-		//        outStream << "storage " << storage << '\n';
 
 		for (int i = 0; i < 3; ++i)
 			item->itemType += static_cast<quint8>(bitReader.readNumber(8));
 		bitReader.skip(8); // skip last space (byte 4 at 84-92)
 
-		const ItemBase &itemBase = ItemDataBase::Items()->value(item->itemType);
-		//    outStream << QString("item type '%1', name '%2', rlvl %3").arg(itemType, itemBase.name).arg(itemBase.rlvl);
-		//    if (itemBase.classCode > -1)
-		//        outStream << tr(" (%1 Only)").arg(Enums::ClassName::classes().at(itemBase.classCode));
-		//    outStream << "\n\n";
-
 		if (item->isExtended)
 		{
 			item->socketablesNumber = bitReader.readNumber(3);
-			//outStream << QString("-----Extended item info-----\n\n%1 gems inserted\n").arg(gems);
 			item->guid = bitReader.readNumber(32);
-			//outStream << "GUID" << bitReader.readNumber(32) << '\n';
 			item->ilvl = bitReader.readNumber(7);
-			//outStream << "ilvl " << bitReader.readNumber(7) << '\n';
 			item->quality = bitReader.readNumber(4);
-			//outStream << "quality " << quality << '\n';
 			if (bitReader.readBool())
 				item->variableGraphicIndex = bitReader.readNumber(3) + 1;
 			if (bitReader.readBool()) // class info
-                qDebug() << "class info" << bitReader.readNumber(11);
-				//bitReader.skip(11);
+                bitReader.skip(11);
+
+            const ItemBase &itemBase = ItemDataBase::Items()->value(item->itemType);
 			switch (item->quality)
 			{
 			case Enums::ItemQuality::Normal:
@@ -159,12 +121,8 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
 				break;
 			}
 
-			//outStream << endl;
 			if (item->isRW)
-			{
-				bitReader.skip(16);
-				//outStream << "runeword code" << bitReader.readNumber(16) << '\n';
-			}
+				bitReader.skip(16); // RW code - don't know how to use it
 			if (item->isPersonalized)
 			{
 				for (int i = 0; i < 16; ++i)
@@ -174,13 +132,10 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
 						break;
 					item->inscribedName += c;
 				}
-				//outStream << "inscribed name: " << inscribedName << '\n';
 			}
 			bitReader.skip(); // tome of ID bit
 			if (item->itemType == "ibk" || item->itemType == "tbk")
-			{
 				bitReader.skip(5); // some tome bits
-			}
 			if (itemBase.genericType == Enums::ItemTypeGeneric::Armor)
 			{
 				const ItemPropertyTxt &defenceProp = ItemDataBase::Properties()->value(Enums::ItemProperties::Defence);
@@ -196,7 +151,6 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
 					item->currentDurability = bitReader.readNumber(durabilityProp.bits) - durabilityProp.add;
 					if (item->maxDurability < item->currentDurability)
 						item->maxDurability = item->currentDurability;
-					//outStream << QString("durability: %1 of %2\n").arg(currentDurability).arg(maxDurability);
 				}
 			}
 			item->quantity = itemBase.isStackable ? bitReader.readNumber(9) : -1;
@@ -216,12 +170,12 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
 				searchEndOffset = nextItemOffset + 1;
 				continue;
 			}
-			else if (item->props.size())
-				;//outStream << "\n-----Item properties-----\n\n" << itemProps;
+			//else if (item->props.size())
+                //;
 
-			//        for (int i = 0; i < 5; ++i)
-			//            if (hasSetLists[i])
-			//                outStream << "set property list #" << i+1 << " should be here\n";
+            //for (int i = 0; i < 5; ++i)
+            //    if (hasSetLists[i])
+            //        outStream << "set property list #" << i+1 << " should be here\n";
 
 			if (item->isRW)
 			{
@@ -233,8 +187,8 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
 					searchEndOffset = nextItemOffset + 1;
 					continue;
 				}
-				else if (item->rwProps.size())
-					;//outStream << QString("-----RW properties-----\n\n%1").arg(parseItemProperties(bitReader));
+				//else if (item->rwProps.size())
+					//;
 			}
 
 			// parse all socketables
@@ -243,7 +197,6 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
 			{
 				ItemInfo *socketableInfo = parseItem(inputDataStream, bytes);
 				item->socketablesInfo += socketableInfo;
-				//outStream << tr("Socket filler #%1:\n%2").arg(i + 1).arg(gemInfo);
 				if (item->isRW && i >= item->socketablesNumber - 2) // get the last socket filler to obtain RW name (and previous one to prevent disambiguation)
 					runeTypes.prepend(i != item->socketablesNumber - 1 ? QByteArray() : socketableInfo->itemType);
 			}
@@ -259,7 +212,7 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
 					for (; iter != ItemDataBase::RW()->end() && iter.key() == rwKey; ++iter)
 					{
                         const RunewordInfo &rwInfo = iter.value();
-						if (isCorrectItemTypeForRW(QList<QByteArray>() << itemBase.typeString, rwInfo.allowedItemTypes))
+						if (itemTypesInheritFromTypes(QList<QByteArray>() << itemBase.typeString, rwInfo.allowedItemTypes))
 						{
 							item->rwName = rwInfo.name;
 							break;
@@ -271,7 +224,6 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
 			}
 			else if (item->isRW)
 				item->rwName = tr("Unknown RW (no socketables detected), please report!");
-			//outStream << "\n\n-----End-----\n\n";
 		}
 		else
 			item->quality = Enums::ItemQuality::Normal;
@@ -335,10 +287,9 @@ QMultiMap<int, ItemProperty> ItemParser::parseItemProperties(ReverseBitReader &b
 			{
 				const ItemPropertyTxt &lengthProp = ItemDataBase::Properties()->value(++id);
 				qint16 length = bitReader.readNumber(lengthProp.bits) - lengthProp.add;
-				//                propToAdd.displayString = QString(" with length of %1 frames (%2 second(s))").arg(length).arg(static_cast<double>(length) / 25.0, 1);
-
-				//				propToAdd.value = length;
-				//				props[id] = propToAdd;
+                //propToAdd.displayString = QString(" with length of %1 frames (%2 second(s))").arg(length).arg(static_cast<double>(length) / 25.0, 1);
+                //propToAdd.value = length;
+                //props[id] = propToAdd;
 
 				if (id == 59) // poison length
 				{
@@ -366,8 +317,8 @@ QMultiMap<int, ItemProperty> ItemParser::parseItemProperties(ReverseBitReader &b
 			propToAdd.displayString = tr("Level %1 %2 (%3/%4 Charges)").arg(propToAdd.param & 63).arg(ItemDataBase::Skills()->value(propToAdd.param >> 6).name)
 				.arg(propToAdd.value & 255).arg(propToAdd.value >> 8);
 		}
-		//        else if (id == 219)
-		//            propToAdd.displayString = "trophy'd charm or blessed craft";
+        //else if (id == 219)
+        //    propToAdd.displayString = "trophy'd charm or blessed craft";
 		else if (QString(prop.descPositive).startsWith('%')) // ctc
 		{
 			QString desc = prop.descPositive;
@@ -473,9 +424,9 @@ bool ItemParser::canStoreItemAt(quint8 row, quint8 col, const QByteArray &storeI
 	return ok;
 }
 
-bool ItemParser::isCorrectItemTypeForRW(const QList<QByteArray> &itemTypes, const QList<QByteArray> &allowedItemTypes)
+bool ItemParser::itemTypesInheritFromTypes(const QList<QByteArray> &itemTypes, const QList<QByteArray> &allowedItemTypes)
 {
     foreach (const QByteArray &itemType, itemTypes)
-        return allowedItemTypes.contains(itemType) ? true : isCorrectItemTypeForRW(ItemDataBase::ItemTypes()->value(itemType), allowedItemTypes);
+        return allowedItemTypes.contains(itemType) ? true : itemTypesInheritFromTypes(ItemDataBase::ItemTypes()->value(itemType), allowedItemTypes);
     return false;
 }

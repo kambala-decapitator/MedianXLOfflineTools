@@ -3,11 +3,13 @@
 #include "enums.h"
 #include "helpers.h"
 #include "colors.hpp"
+#include "itemparser.h"
 
 #include <QDebug>
 #include <QSettings>
 
 static const QString baseFormat("<html><body bgcolor = \"black\"><table><tr><td align = \"center\" width = \"100%\"><font color = \"#ffffff\">%1</font></td></tr></table></body></html>");
+static const QList<QByteArray> damageToUndeadTypes = QList<QByteArray>() << "mace" << "hamm" << "staf" << "scep" << "club" << "wand";
 
 
 PropertiesViewerWidget::PropertiesViewerWidget(QWidget *parent) : QWidget(parent), _item(0)
@@ -197,11 +199,23 @@ void PropertiesViewerWidget::displayItemProperties(ItemInfo *item)
     if (actualRlvl)
         itemDescription += "<br>" + tr("Required Level: %1").arg(actualRlvl > 555 ? 555 : actualRlvl);
 
+    // add '+50% damage to undead' if item type matches
+    bool shouldAddDamageToUndeadInTheBottom = false;
+    if (ItemParser::itemTypesInheritFromTypes(QList<QByteArray>() << itemBase.typeString, damageToUndeadTypes))
+    {
+        if (allProps.contains(Enums::ItemProperties::DamageToUndead))
+            allProps[Enums::ItemProperties::DamageToUndead].value += 50;
+        else
+            shouldAddDamageToUndeadInTheBottom = true;
+    }
+
     if (allProps.size())
     {
         setProperties(ui.allTextEdit, allProps, false);
         itemDescription += "<br>" + ui.allTextEdit->toPlainText();
     }
+    if (shouldAddDamageToUndeadInTheBottom)
+        itemDescription += "<br>" + tr("+50% Damage to Undead");
 
     if (item->isSocketed)
         itemDescription += "<br>" + htmlStringFromDiabloColorString(tr("Socketed: (%1), Inserted: (%2)").arg(item->socketsNumber).arg(item->socketablesNumber), Blue);
@@ -212,7 +226,7 @@ void PropertiesViewerWidget::displayItemProperties(ItemInfo *item)
     if (item->quality == Enums::ItemQuality::Set)
     {
         const QString &setName = ItemDataBase::Sets()->value(item->setOrUniqueId).setName;
-        itemDescription += QString("<br><br>%1").arg(htmlStringFromDiabloColorString(setName, Gold));
+        itemDescription += "<br><br>" + htmlStringFromDiabloColorString(setName, Gold);
 
         foreach (const QString &setItemName, ItemDataBase::completeSetForName(setName))
         {
@@ -242,17 +256,10 @@ void PropertiesViewerWidget::setProperties(QTextEdit *textEdit, const QMap<int, 
     {
         const ItemProperty &prop = iter.value();
         int propId = iter.key();
-        if (propId == 23 && properties.contains(21) || propId == 24 && properties.contains(22)) // don't include secondary_(min/max)damage and 
+        if (propId == 23 && properties.contains(21) || propId == 24 && properties.contains(22)) // don't include secondary_(min/max)damage
             continue;
 
         QString displayString = prop.displayString.isEmpty() ? propertyDisplay(prop, propId) : prop.displayString;
-//        QString displayString;
-//        if (propId == 219)
-//            displayString = ;
-//        else if (prop.displayString.isEmpty())
-//            displayString = propertyDisplay(prop, propId);
-//        else
-//            displayString = prop.displayString;
         if (!displayString.isEmpty())
             propsDisplayMap.insertMulti(ItemDataBase::Properties()->value(propId).descPriority,
                                         ItemPropertyDisplay(displayString, ItemDataBase::Properties()->value(propId).descPriority, propId));
@@ -449,7 +456,7 @@ QString PropertiesViewerWidget::propertyDisplay(const ItemProperty &propDisplay,
         result = QString("%1% %2 %3").arg(value).arg(description).arg(ItemDataBase::Monsters()->value(propDisplay.param));
         break;
     // 9, 10, 14, 16-19 - absent
-    // everything else is constructed in parseItem (has displayString)
+    // everything else is constructed in parseItemProperties() (has displayString)
     default:
         result = tr("[special case %4, please report] %1 '%2' (ID %3)").arg(value).arg(description).arg(propId).arg(prop.descFunc);
     }
@@ -458,7 +465,7 @@ QString PropertiesViewerWidget::propertyDisplay(const ItemProperty &propDisplay,
 
 void PropertiesViewerWidget::addProperties(QMap<int, ItemProperty> *mutableProps, const QMap<int, ItemProperty> &propsToAdd)
 {
-    for (QMap<int, ItemProperty>::const_iterator  iter = propsToAdd.constBegin(); iter != propsToAdd.constEnd(); ++iter)
+    for (QMap<int, ItemProperty>::const_iterator iter = propsToAdd.constBegin(); iter != propsToAdd.constEnd(); ++iter)
     {
         if (mutableProps->contains(iter.key()))
             (*mutableProps)[iter.key()].value += iter.value().value;
