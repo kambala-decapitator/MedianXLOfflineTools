@@ -20,6 +20,7 @@ Q_DECLARE_TYPEINFO(ItemProperty, Q_MOVABLE_TYPE);
 
 struct ItemInfo;
 typedef QList<ItemInfo *> ItemsList;
+typedef QMultiMap<int, ItemProperty> PropertiesMultiMap;
 
 struct ItemInfo
 {
@@ -36,7 +37,7 @@ struct ItemInfo
 	int currentDurability, maxDurability; // itemBase.genericType != Enums::ItemTypeGeneric::Misc
 	int quantity; // itemBase.isStackable == true
 	qint8 socketsNumber; // isSocketed == true
-    QMultiMap<int, ItemProperty> props, rwProps;
+    PropertiesMultiMap props, rwProps;
     ItemsList socketablesInfo; // 0 ≤ size ≤ 6
 	QString rwName; // isRW == true
 

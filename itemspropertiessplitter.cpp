@@ -19,6 +19,7 @@
 
 
 static const QString iconPathFormat(":/PlugyArrows/Resources/icons/plugy/%1.png");
+static const QList<QByteArray> charmType = QList<QByteArray>() << "char";
 
 ItemsPropertiesSplitter::ItemsPropertiesSplitter(ItemStorageTableView *itemsView, ItemStorageTableModel *itemsModel, bool shouldCreateNavigation, QWidget *parent)
     : QSplitter(Qt::Horizontal, parent), _itemsView(itemsView), _itemsModel(itemsModel)
@@ -219,7 +220,7 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
 	{
 		QList<QAction *> actions;
 
-		QAction *actionHtml = new QAction(tr("HTML..."), _itemsView), *actionBbCode = new QAction(tr("BBCode..."), _itemsView);
+		QAction *actionHtml = new QAction("HTML", _itemsView), *actionBbCode = new QAction("BBCode", _itemsView);
 		QMenu *menuExport = new QMenu(tr("Export as"), _itemsView);
 		menuExport->addActions(QList<QAction *>() << actionHtml << actionBbCode);
 		actions << menuExport->menuAction();
@@ -228,9 +229,9 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
 		separator->setSeparator(true);
 		actions << separator;
 
-		QByteArray typeString = ItemDataBase::Items()->value(item->itemType).typeString;
-        bool isCharm = typeString == "grtz" || typeString.startsWith("ara"), isSummonBook = typeString == "summ";
-		if (item->quality == Enums::ItemQuality::Set || item->quality == Enums::ItemQuality::Unique && !isCharm && !isSummonBook)
+		//QByteArray typeString = ItemDataBase::Items()->value(item->itemType).typeString;
+        //bool isCharm = typeString == "grtz" || typeString.startsWith("ara"), isSummonBook = typeString == "summ";
+		if (item->quality == Enums::ItemQuality::Set || item->quality == Enums::ItemQuality::Unique && !ItemParser::itemTypeInheritFromTypes(ItemDataBase::Items()->value(item->itemType).typeString, charmType))
 		{
 			QAction *actionShards = new QAction(QIcon(ResourcePathManager::pathForImageName("invfary4")), tr("Arcane Shards"), _itemsView);
 			actionShards->setObjectName("shards");

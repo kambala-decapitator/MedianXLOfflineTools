@@ -39,11 +39,14 @@ private:
     QSet<int> _mysticOrbs;
 
     void setProperties(QTextEdit *textEdit, const QMap<int, ItemProperty> &properties, bool shouldClearText = true);
+    QString propertyDisplay(const ItemProperty &propDisplay, int propId);
     void renderItemDescription(QTextEdit *textEdit, QString *description = 0);
+
     int indexOfPropertyValue(int id);
     void modifyMysticOrbProperty(int id, int decrement);
-	int totalMysticOrbValue(int moCode) const;
-    QString propertyDisplay(const ItemProperty &propDisplay, int propId);
+	int totalMysticOrbValue(int moCode);
+    PropertiesMultiMap *propertiesWithCode(int code);
+
     void addProperties(QMap<int, ItemProperty> *mutableProps, const QMap<int, ItemProperty> &propsToAdd);
 };
 

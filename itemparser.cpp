@@ -213,7 +213,7 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
 					for (; iter != ItemDataBase::RW()->end() && iter.key() == rwKey; ++iter)
 					{
                         const RunewordInfo &rwInfo = iter.value();
-						if (itemTypesInheritFromTypes(QList<QByteArray>() << itemBase.typeString, rwInfo.allowedItemTypes))
+						if (itemTypeInheritFromTypes(itemBase.typeString, rwInfo.allowedItemTypes))
 						{
 							item->rwName = rwInfo.name;
 							break;
@@ -232,9 +232,9 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
 	return item;
 }
 
-QMultiMap<int, ItemProperty> ItemParser::parseItemProperties(ReverseBitReader &bitReader, bool *ok)
+PropertiesMultiMap ItemParser::parseItemProperties(ReverseBitReader &bitReader, bool *ok)
 {
-	QMultiMap<int, ItemProperty> props;
+	PropertiesMultiMap props;
 	while (bitReader.pos() != -1)
 	{
         try
@@ -252,11 +252,11 @@ QMultiMap<int, ItemProperty> ItemParser::parseItemProperties(ReverseBitReader &b
             propToAdd.value = bitReader.readNumber(prop.bits) - prop.add;
             if (id == 17) // max edamage%
             {
-                //qint16 minEnhDamage = bitReader.readNumber(prop.bits) - prop.add;
-                bitReader.skip(prop.bits);
+                qint16 minEnhDamage = bitReader.readNumber(prop.bits) - prop.add;
+                //bitReader.skip(prop.bits);
                 propToAdd.displayString = tr("+%1% Enhanced Damage").arg(propToAdd.value);
-                //if (minEnhDamage != propToAdd.value)
-                //    propToAdd.displayString += " " + tr("[min ed %1 != max ed %2]").arg(minEnhDamage).arg(propToAdd.value);
+                if (minEnhDamage != propToAdd.value)
+                    propToAdd.displayString += " " + tr("[min ed %1 != max ed %2]").arg(minEnhDamage).arg(propToAdd.value);
             }
 
             // elemental damage
@@ -347,7 +347,7 @@ QMultiMap<int, ItemProperty> ItemParser::parseItemProperties(ReverseBitReader &b
 	}
 
 	*ok = false;
-	return QMultiMap<int, ItemProperty>();
+	return PropertiesMultiMap();
 }
 
 void ItemParser::writeItems(const ItemsList &items, QDataStream &ds)
@@ -386,7 +386,7 @@ ItemInfo *ItemParser::loadItemFromFile(const QString &filePath)
 	return item;
 }
 
-ItemsList ItemParser::itemsLocatedAt(int storage, bool location /*= Enums::ItemLocation::Stored*/)
+ItemsList ItemParser::itemsLocatedAt(int storage, int location /*= Enums::ItemLocation::Stored*/)
 {
 	ItemsList items, *characterItems = ItemDataBase::currentCharacterItems;
 	for (int i = 0; i < characterItems->size(); ++i)
@@ -433,6 +433,11 @@ bool ItemParser::canStoreItemAt(quint8 row, quint8 col, const QByteArray &storeI
 		}
 	}
 	return ok;
+}
+
+bool ItemParser::itemTypeInheritFromTypes(const QByteArray &itemType, const QList<QByteArray> &allowedItemTypes)
+{
+    return itemTypesInheritFromTypes(QList<QByteArray>() << itemType, allowedItemTypes);
 }
 
 bool ItemParser::itemTypesInheritFromTypes(const QList<QByteArray> &itemTypes, const QList<QByteArray> &allowedItemTypes)

@@ -1,21 +1,199 @@
 #index	name
+-1	Rathma Priest
+0	Exploitable
+1	Bone Warrior
+2	Burning Dead
+3	Horror
+4	Zombie
+5	Hungry Dead
+6	Ghoul
+7	Drowned Carcass
+8	Plague Bearer
+9	Afflicted
+10	Tainted
+11	Misshapen
+12	Disfigured
+13	Damned
+14	Foul Crow
+15	Blood Hawk
+16	Black Raptor
+17	Cloud Stalker
+18	Fallen One
+19	Invader
+20	Defiler
+21	Secret Jewelword!\nScourge
+22	Secret Jewelword!\nScourge
+23	Brute
+24	Yeti
+25	Crusher
+26	Wailing Beast
+27	Gargantuan Beast
+28	Sand Raider
+29	Marauder
+30	Invader
+31	Infidel
+32	Assailant
+33	FLYING POLAR BUFFALO ERROR
+34	FLYING POLAR BUFFALO ERROR
+35	FLYING POLAR BUFFALO ERROR
+36	FLYING POLAR BUFFALO ERROR
+37	Ghost
+38	Wraith
+39	Specter
+40	Apparition
+41	Dark Shape
+42	Dark Hunter
+43	Vile Hunter
+44	Dark Stalker
+45	Black Rogue
+46	Flesh Hunter
+47	Dune Beast
+48	Rock Dweller
+49	Jungle Hunter
+50	Doom Ape
+51	Temple Guard
+52	Moon Clan
+53	Night Clan
+54	Blood Clan
+55	Hell Clan
+56	Death Clan
+57	Fallen Shaman
+58	Invader Shaman
+59	Defiler Shaman
+60	Scourge Shaman
+61	Scourge Shaman
+62	Quill Rat
+63	Spike Fiend
+64	Thorn Beast
+65	Razor Spine
+66	Bush Barb
+67	Sand Maggot
+68	Rock Worm
+69	Devourer
+70	Giant Lamprey
+71	Blood Maggot
+72	Tomb Viper
+73	Claw Viper
+74	Salamander
+75	Pit Viper
+76	Serpent Magus
+77	Sand Leaper
+78	Cave Leaper
+79	Tomb Creeper
+80	Tree Lurker
+81	Cliff Lurker
+82	Huntress
+83	Saber Cat
+84	Night Tiger
+85	Hell Cat
+86	Itchies
+87	Black Locusts
+88	Plague Bugs
+89	Hell Swarm
+90	Dung Soldier
+91	Death Beetle
+92	Scarab
+93	Steel Scarab
+94	Bone Scarab
+95	Dried Corpse
+96	Decayed
+97	Embalmed
+98	Preserved Dead
+99	Cadaver
+100	Hollow One
+101	Guardian
+102	Unraveler
+103	Horadrim Ancient
+104	Unraveler
+105	FLYING POLAR BUFFALO ERROR
+106	FLYING POLAR BUFFALO ERROR
+107	FLYING POLAR BUFFALO ERROR
+108	FLYING POLAR BUFFALO ERROR
+109	Carrion Bird
+110	Undead Scavenger
+111	Hell Buzzard
+112	Winged Nightmare
+113	Sucker
+114	Feeder
+115	Blood Hook
+116	Blood Wing
+117	Gloam
+118	Swamp Ghost
+119	Burning Soul
+120	Black Soul
+121	Arach
+122	Sand Fisher
+123	Poison Spinner
+124	Flame Spider
+125	Spider Magus
+126	Thorned Hulk
+127	Bramble Hulk
+128	Thrasher
+129	Spikefist
+130	Ghoul Lord
+131	Night Lord
+132	Dark Lord
+133	Blood Lord
+134	The Banished
+135	Desert Wing
+136	Fiend
+137	Gloombat
+138	Blood Diver
+139	Dark Familiar
+140	Jungle Hunter
+141	Tree Hunter
+142	Jungle Devil
+143	Blood Hunter
+144	Slayer
 145	Deckard Cain
 146	Gheed
 147	Akara
+148	FLYING POLAR BUFFALO ERROR
 149	Kashya
 150	FLYING POLAR BUFFALO ERROR
 151	FLYING POLAR BUFFALO ERROR
+152	FLYING POLAR BUFFALO ERROR
 153	Charsi
 154	Warriv
+155	Andariel
 156	FLYING POLAR BUFFALO ERROR
 157	FLYING POLAR BUFFALO ERROR
 158	FLYING POLAR BUFFALO ERROR
+159	Dark Ranger
+160	Vile Archer
+161	Dark Archer
+162	Black Archer
+163	Flesh Archer
+164	Dark Spearwoman
+165	Vile Lancer
+166	Dark Lancer
+167	Black Lancer
+168	Flesh Lancer
+169	Skeleton Archer
+170	Returned Archer
+171	Bone Archer
+172	Burning Dead Archer
+173	Horror Archer
 174	Warriv
 175	Atma
 176	Drognan
 177	Fara
 178	FLYING POLAR BUFFALO ERROR
+179	Sand Maggot Young
+180	Rock Worm Young
+181	Devourer Young
+182	Giant Lamprey Young
+183	Blood Maggot Young
 184	FLYING POLAR BUFFALO ERROR
+185	Blunderbore
+186	Gorebelly
+187	Mauler
+188	Urdar
+189	Sand Maggot Egg
+190	Rock Worm Egg
+191	Devourer Egg
+192	Giant Lamprey Egg
+193	Blood Maggot Egg
 194	FLYING POLAR BUFFALO ERROR
 195	FLYING POLAR BUFFALO ERROR
 196	FLYING POLAR BUFFALO ERROR
@@ -27,53 +205,206 @@
 202	FLYING POLAR BUFFALO ERROR
 203	FLYING POLAR BUFFALO ERROR
 204	FLYING POLAR BUFFALO ERROR
+205	Foul Crow Nest
+206	Blood Hawk Nest
+207	Black Raptor Nest
+208	Cloud Stalker Nest
 209	Meshif
+210	Duriel
+211	Undead Rat Man
+212	Undead Fetish
+213	Undead Flayer
+214	Undead Soul Killer
+215	Undead Stygian Doll
+216	FLYING POLAR BUFFALO ERROR
+217	FLYING POLAR BUFFALO ERROR
+218	FLYING POLAR BUFFALO ERROR
+219	FLYING POLAR BUFFALO ERROR
+220	FLYING POLAR BUFFALO ERROR
+221	FLYING POLAR BUFFALO ERROR
+222	FLYING POLAR BUFFALO ERROR
+223	FLYING POLAR BUFFALO ERROR
+224	FLYING POLAR BUFFALO ERROR
+225	FLYING POLAR BUFFALO ERROR
 226	Maggot
+227	Mummy Sarcophagus
+228	Radament
+229	FLYING POLAR BUFFALO ERROR
+230	FLYING POLAR BUFFALO ERROR
+231	FLYING POLAR BUFFALO ERROR
+232	FLYING POLAR BUFFALO ERROR
+233	Flying Scimitar
+234	Zakarumite
+235	Faithful
+236	Zealot
+237	Sexton
+238	Cantor
+239	Heirophant
+240	Heirophant
+241	Mephisto
+242	Diablo
 243	Deckard Cain
 244	Deckard Cain
 245	Deckard Cain
+246	Swamp Dweller
+247	Bog Creature
+248	Slime Prince
+249	The Summoner
 250	Tyrael
 251	Asheara
 252	Hratli
 253	Alkor
 254	Ormus
+255	Izual
 256	Halbu
+257	Water Watcher
+258	River Stalker
+259	Stygian Watcher
+260	Water Watcher
+261	River Stalker
+262	Stygian Watcher
 263	Meshif
 264	Deckard Cain
 265	Flavie
+266	Blood Raven
 267	FLYING POLAR BUFFALO ERROR
 268	FLYING POLAR BUFFALO ERROR
 269	Rogue Scout
 270	FLYING POLAR BUFFALO ERROR
 271	FLYING POLAR BUFFALO ERROR
+272	Gargoyle Trap
+273	Returned Mage
+274	Bone Mage
+275	Burning Dead Mage
+276	Horror Mage
+277	Jungle Hunter Shaman
+278	Tree Hunter Shaman
+279	Jungle Devil Shaman
+280	Blood Hunter Shaman
+281	Slayer Shaman
+282	Larva
+283	Sand Maggot Queen
+284	Rock Worm Queen
+285	Devourer Queen
+286	Giant Lamprey Queen
+287	Blood Maggot Queen
 288	Clay Golem
 289	Blood Golem
 290	Iron Golem
 291	Fire Golem
+292	FLYING POLAR BUFFALO ERROR
 293	FLYING POLAR BUFFALO ERROR
+294	Night Marauder
 295	FLYING POLAR BUFFALO ERROR
 296	Natalya
+297	Flesh Spawner
+298	Stygian Hag
+299	Grotesque
+300	Flesh Beast
+301	Stygian Dog
+302	Grotesque Wyrm
+303	Doom Caster
+304	Strangler
+305	Storm Caster
+306	Corpulent
+307	Corpse Spitter
+308	Maw Fiend
+309	Doom Knight
+310	Abyss Knight
+311	Oblivion Knight
+312	Quill Bear
+313	Spike Giant
+314	Thorn Brute
+315	Razor Beast
+316	Barbed Giant
 317	FLYING POLAR BUFFALO ERROR
 318	Parrot (Critter)
 319	FLYING POLAR BUFFALO ERROR
+320	FLYING POLAR BUFFALO ERROR
+321	FLYING POLAR BUFFALO ERROR
+322	FLYING POLAR BUFFALO ERROR
+323	FLYING POLAR BUFFALO ERROR
+324	FLYING POLAR BUFFALO ERROR
+325	a Trap
+326	a Trap
+327	a Trap
+328	a Trap
+329	a Trap
 330	Kaelan
+331	FLYING POLAR BUFFALO ERROR
+332	Diablo
+333	Sucker Nest
+334	Feeder Nest
+335	Blood Hook Nest
+336	Blood Wing Nest
 337	Guard
+338	FLYING POLAR BUFFALO ERROR
 343	FLYING POLAR BUFFALO ERROR
+344	Council Member
+345	Council Member
+346	Council Member
+347	a Turret
+348	a Turret
+349	a Turret
 350	Hydra
 351	Hydra
 352	Hydra
+353	a Trap
+354	FLYING POLAR BUFFALO ERROR
 355	Decoy
 356	Valkyrie
 357	FLYING POLAR BUFFALO ERROR
 358	Iron Wolf
+359	Balrog
+360	Pit Lord
+361	Venom Lord
 362	Necroskeleton
 363	Necromage
+364	Griswold
+365	Compelling Orb
 366	Tyrael
+367	Dark Wanderer
+368	a Trap
+369	FLYING POLAR BUFFALO ERROR
+370	Lightning Spire
+371	Fire Tower
+372	Slinger
+373	Spear Cat
+374	Night Slinger
+375	Hell Slinger
 376	FLYING POLAR BUFFALO ERROR
 377	FLYING POLAR BUFFALO ERROR
+378	Bone Mage
+379	Bone Mage
+380	Bone Mage
+381	Bone Mage
+382	Burning Dead Mage
+383	Burning Dead Mage
+384	Burning Dead Mage
+385	Burning Dead Mage
+386	Horror Mage
+387	Horror Mage
+388	Horror Mage
+389	Horror Mage
+390	Hell Bovine
+391	Stained Glass Window
+392	Stained Glass Window
+393	Spear Cat
+394	Night Slinger
+395	Jungle Hunter
+396	Tree Hunter
+397	Jungle Devil
+398	Blood Hunter
+399	Slayer
+400	FLYING POLAR BUFFALO ERROR
+401	The Smith
+402	Trapped Soul
+403	Trapped Soul
 404	Jamella
 405	Izual
+406	Rat Man
 407	Hadriel
+408	Hephasto The Armorer
 410	Wake of Fire
 411	Charged Bolt Sentry
 412	Lightning Sentry
@@ -96,28 +427,549 @@
 429	Eagle
 430	Wolf
 431	Bear
+432	Barricaded Door
+433	Barricaded Door
+434	Prison Door
+435	Barricaded Tower
+436	Rot Walker
+437	Reanimated Horde
+438	Prowling Dead
+439	Unholy Corpse
+440	Defiled Warrior
+441	Siege Beast
+442	Crush Beast
+443	Blood Bringer
+444	Gore Bearer
+445	Demon Steed
+446	Snow Drifter
+447	Abominable
+448	Chilled Froth
+449	Frozen Abyss
+450	Fallen Wolfrider
+451	Carver Wolfrider
+452	Devilkin Wolfrider
+453	Rust Fury
+454	Rust Fury
+455	Rust Fury
+456	Rust Fury
+457	Rust Fury
+458	Rust Fury
+459	Rust Fury
+460	Rust Fury
+461	Fanatic Enslaved
+462	Berserker Slayer
+463	Consumed Ice Boar
+464	Consumed Fire Boar
+465	Frenzied Hell Spawn
+466	Frenzied Ice Spawn
+467	Insane Hell Spawn
+468	Insane Ice Spawn
+469	Succubus
+470	Vile Temptress
+471	Stygian Harlot
+472	Hell Temptress
+473	Blood Temptress
+474	Siren
+475	Vile Witch
+476	Stygian Fury
+477	Blood Witch
+478	Hell Witch
+479	Overseer
+480	Lasher
+481	Overlord
+482	Blood Boss
+483	Hell Whip
+484	Demon Portal
+485	Demon Portal
+486	Demon Portal
+487	Demon Portal
+488	Demon Portal
+489	Demon Portal
+490	Demon Portal
+491	Demon Portal
+492	Demon Imp
+493	Demon Rascal
+494	Demon Gremlin
+495	Demon Trickster
+496	Demon Sprite
+497	Catapult
+498	Catapult
+499	Catapult
+500	Catapult
+501	Frozen Creeper
+502	Frozen Terror
+503	Frozen Scourge
+504	Frozen Horror
+505	Frozen Scorch
+506	Moon Lord
+507	Night Lord
+508	Blood Lord
+509	Hell Lord
+510	Death Lord
 511	Larzuk
 512	Anya
 513	Malah
 514	Nihlathak
 515	Qual-Kehk
+516	Catapult
+517	Catapult
+518	Catapult
+519	Catapult
 520	Deckard Cain
 521	Tyrael
 522	Combatant
 523	Combatant
+524	Barricade
+525	Barricade
+526	Nihlathak
 527	Anya
+528	Evil Demon Hut
+529	Death Mauler
+530	Death Brawler
+531	Death Slasher
+532	Death Berserker
+533	Death Brigadier
 534	Barbarian Captive
 535	Guard
 536	Guard
 537	Talic the Defender
 538	Madawc the Guardian
 539	Korlic the Protector
+540	Talic
+541	Madawc
+542	Korlic
+543	Baal
+544	Baal
+545	Baal
+546	Putrid Defiler
+547	Wretched Defiler
+548	Fetid Defiler
+549	Rancid Defiler
+550	Rank Defiler
+551	Pain Worm
+552	Torment Worm
+553	Agony Worm
+554	Menace Worm
+555	Anguish Worm
+556	Bunny
+557	Council Member
+558	Venom Lord
+559	Baal
 560	Act 5 Hireling 1hs
 561	Act 5 Hireling 2hs
+562	Festering Appendages
+563	Festering Appendages
+564	Festering Appendages
+565	Festering Appendages
+566	Festering Appendages
+567	Injured Barbarian 1
+568	Injured Barbarian 2
+569	Injured Barbarian 3
+570	Baal
+571	Minion of Destruction
+572	Minion of Destruction
+573	Minion of Destruction
+574	Worldstone Effect
+575	Burning Dead Archer
+576	Bone Archer
+577	Burning Dead Archer
+578	Returned Archer
+579	Horror Archer
+580	Afflicted
+581	Tainted
+582	Misshapen
+583	Disfigured
+584	Damned
+585	Moon Clan
+586	Night Clan
+587	Hell Clan
+588	Blood Clan
+589	Death Clan
+590	Foul Crow
+591	Blood Hawk
+592	Black Raptor
+593	Cloud Stalker
+594	Claw Viper
+595	Pit Viper
+596	Salamander
+597	Tomb Viper
+598	Serpent Magus
+599	Marauder
+600	Infidel
+601	Sand Raider
+602	Invader
+603	Assailant
+604	Death Mauler
+605	Quill Rat
+606	Spike Fiend
+607	Razor Spine
+608	Carrion Bird
+609	Thorned Hulk
+610	Slinger
+611	Slinger
+612	Slinger
+613	Vile Archer
+614	Dark Archer
+615	Vile Lancer
+616	Dark Lancer
+617	Black Lancer
+618	Blunderbore
+619	Mauler
+620	Returned Mage
+621	Burning Dead Mage
+622	Returned Mage
+623	Horror Mage
+624	Bone Mage
+625	Horror Mage
+626	Horror Mage
+627	Huntress
+628	Saber Cat
+629	Cave Leaper
+630	Tomb Creeper
+631	Ghost
+632	Wraith
+633	Specter
+634	Succubus
+635	Hell Temptress
+636	Siren
+637	Hell Witch
+638	Vile Witch
+639	Gloam
+640	Black Soul
+641	Burning Soul
+642	Carver
+643	Devilkin
+644	Dark One
+645	Carver Shaman
+646	Devilkin Shaman
+647	Dark Shaman
+648	Bone Warrior
+649	Returned
+650	Gloombat
+651	Fiend
+652	Moon Lord
+653	Hell Lord
+654	Scarab
+655	Steel Scarab
+656	Flayer
+657	Stygian Doll
+658	Soul Killer
+659	Flayer
+660	Stygian Doll
+661	Soul Killer
+662	Flayer Shaman
+663	Stygian Doll Shaman
+664	Soul Killer Shaman
+665	Temple Guard
+666	Temple Guard
+667	Guardian
+668	Unraveler
+669	Horadrim Ancient
+670	Horadrim Ancient
+671	Zealot
+672	Zealot
+673	Heirophant
+674	Heirophant
+675	Grotesque
+676	Flesh Spawner
+677	Grotesque Wyrm
+678	Flesh Beast
+679	Blood Maggot
+680	Blood Maggot Young
+681	Blood Maggot Egg
+682	Slayer
+683	Hell Spawn
+684	Greater Hell Spawn
+685	Arach
+686	Balrog
+687	Pit Lord
+688	Demon Imp
+689	Demon Trickster
+690	Undead Stygian Doll
+691	Undead Soul Killer
+692	Strangler
+693	Storm Caster
+694	Maw Fiend
+695	Blood Lord
+696	Ghoul Lord
+697	Dark Lord
+698	Unholy Corpse
+699	Doom Knight
+700	Doom Knight
+701	Oblivion Knight
+702	Oblivion Knight
+703	Cadaver
+704	Mephisto
+705	Diablo
+706	Izual
+707	Pandora
+708	Duriel
+709	Baal
 710	Slayer
 711	Shadow
+712	Acid Beast
+713	Poison Spitter
+714	Pit Beast
+715	Chaos Beast
+716	Lava Maw
+717	Sand Raider
+718	Marauder
+719	Invader
+720	Assailant
+721	Intruder
+722	Skull Ape
+723	Black Baboon
+724	Dark Gibbon
+725	Gargoyle Ape
+726	Temple Guard
+727	Skeleton Archer
+728	Returned Archer
+729	Bone Archer
+730	Burning Dead Archer
+731	Horror Archer
+732	Balrog
+733	Guardian
+734	Infernal Lord
+735	Vortex Lord
+736	Thunder Beetle
+737	Unholy Scarab
+738	Tomb Guardian
+739	Emerald Scarab
+740	Diamond Beetle
+741	Prowler Priestess
+742	Desert Priestess
+743	Feline Priestess
+744	Lacuni Priestess
+745	Death Spitter
+746	Devourer
+747	Gravedigger
+748	Bullfrog
+749	Acid Prince
+750	Ice Prince
+751	Zombie
+752	Hungry Dead
+753	Genie
+754	Ghost Zombie
+755	Impaler
+756	Assamite
+757	Nosferatu
+758	Ventrue
+759	Blood Marquis
+760	Skeleton
+761	Returned
+762	Bone Warrior
+763	Burning Dead
+764	Horror
+765	Fallen One
+766	Invader
+767	Defiler
+768	Secret Jewelword!\nScourge
+769	Destroyer
+770	Fallen Shaman
+771	Invader Shaman
+772	Defiler Shaman
+773	Scourge Shaman
+774	Destroyer Shaman
+775	Fallen Warrior
+776	Fallen Hero
+777	Knight of War
+778	Knight of Pestilence
+779	Knight of Famine
+780	Jungle Hunter
+781	Tree Hunter
+782	Jungle Devil
+783	Blood Hunter
+784	Slayer
+785	Jungle Hunter
+786	Tree Hunter
+787	Jungle Devil
+788	Blood Hunter
+789	Slayer
+790	Gargoyle Warrior
+791	Mountain Defender
+792	Summit Guardian
+793	Stone Warrior
+794	Granite King
+795	Hidden One
+796	Fata Morgana
+797	Stalker
+798	Banshee
+799	Evil Spirit
+800	Death Gnat
+801	Blood Stinger
+802	Soul Sucker
+803	Razor Sting
+804	Stone Clan
+805	Night Clan
+806	Flesh Clan
+807	Fire Clan
+808	Death Clan
+809	Stone Clan
+810	Night Clan
+811	Flesh Clan
+812	Fire Clan
+813	Death Clan
+814	Prowler
+815	Desert Cat
+816	Feline Witch
+817	Lacuni Soldier
+818	Frozen Lord
+819	Crystal Lord
+820	Sapphire Lord
+821	Protector
+822	Sasquatch
+823	Bronze Titan
+824	Gold Titan
+825	Silver Titan
+826	Abomination
+827	Cursed Soul
+828	Tainted Soul
+829	Twisted Soul
+830	Damned Soul
+831	Prowler
+832	Desert Cat
+833	Feline Witch
+834	Lacuni Soldier
+835	Minotaur
+836	Doom Guard
+837	Steel Lord
+838	Blood Knight
+839	Obsidian Lord
+840	Red Storm
+841	Storm Rider
+842	Storm Lord
+843	Maelstrom Lord
+844	Sun Tiger
+845	Moon Panther
+846	Kill Rat
+847	Spike Fiend
+848	Jungle Rat
+849	Spiked Terror
+850	Dark Rogue
+851	Dark Huntress
+852	Assassin
+853	Blood Rogue
+854	Vampiress
+855	Dark Rogue
+856	Dark Huntress
+857	Flesh Huntress
+858	Blood Rogue
+859	Vampiress
+860	Dark Rogue
+861	Dark Huntress
+862	Flesh Huntress
+863	Blood Rogue
+864	Vampiress
+865	Bone Mage
+866	Bone Warlock
+867	Bone Sorcerer
+868	Burning Dead Mage
+869	Burning Dead Warlock
+870	Burning Dead Sorcerer
+871	Horror Mage
+872	Horror Warlock
+873	Horror Sorcerer
+874	Tarantula
+875	Sand Devil
+876	Flame Weaver
+877	Soul Spider
+878	Chaos Caster
+879	Soul Flayer
+880	Incarnation
+881	Succubus
+882	Siren
+883	Hellspawn
+884	Snow Witch
+885	Soul Burner
+886	Dominator
+887	Arcane Toad
+888	Mana Monster
+889	Dark Toad
+890	Demonic Toad
+891	Terror Toad
+892	Rust Monster
+893	Rust Claw
+894	Corrosive Beast
+895	Rust Creeper
+896	Corrosive Terror
+897	Undead Vulture
+898	Oasis Guard
+899	Bone Gasher
+900	Death Watcher
+901	Dark Knight
+902	Hell Knight
+903	Chaos Knight
+904	Soul Warrior
+905	Blood Warrior
+906	Dark Counselor
+907	Dark Magistrate
+908	Dark Cabalist
+909	Dark Ancient
+910	Tomb Snake
+911	Fire Drake
+912	Gold Viper
+913	Azure Drake
+914	Fiend
+915	Blink
+916	Gloom
+917	Familiar
+918	Dancing Light
+919	Ghost Flame
+920	Black Flame
+921	Tortured Soul
+922	Archon
+923	Crimson Archon
+924	Dark Archon
+925	Twilight Archon
+926	Templar
+927	Crimson Templar
+928	Dark Templar
+929	Twilight Templar
+930	\green;Fire Clan\blue;
+931	\green;Vampiress\blue;
+932	\green;Fata Morgana\blue;
+933	\green;Fallen One\blue;
+934	\green;Poison Spitter\blue;
+935	\green;Acid Prince\blue;
+936	Script Kiddie
 937	Slayer
+938	Skeleton Archer
+939	Zombie
+940	Skeleton
+941	Fallen One
+942	Fallen Shaman
+943	Steel Lord
 944	Acid Fiend
+945	Cabalist
+946	Incarnation
+947	\green;Red Storm\blue;
+948	\green;Poison Spitter\blue;
+949	\green;Twilight Archon\blue;
+950	\green;Rust Monster\blue;
+951	\green;Moon Panther\blue;
+952	Andariel
+953	Duriel
+954	Mephisto
+955	Diablo
+956	\green;Cow Soldier
+957	\green;Cow Honcho
+958	\green;Cow Ninja
+959	\green;Cow Shaman
+960	\green;Cow Summoner
+961	\gold;Death Projector\blue;
+962	Dominator
+963	Twilight Archon
+964	\gold;Akarat
+965	\orange;Follower of Akarat
+966	\gold;Tal Rasha
+967	\orange;Horadric Mage
+968	Horadric Guardian
+969	Death Projector
+970	\orange;Death's Mechanic
+971	\gold;The Butcher
+972	Chicken (Critter)
+973	\gold;King Koth
+974	\orange;Bear Shaman
 975	Death's Fury Totem
 976	Blood Tide Totem
 977	Liche Totem
@@ -135,45 +987,833 @@
 989	Defender Spirit
 990	Protector Spirit
 991	CrusaderSpirit
+992	Bone Mage
+993	Burning Dead Mage
+994	Horror Mage
+995	Inarius
+996	Priest Boss
+997	\gold;Inarius
+998	\orange;Nun of Vanity\blue;
+999	\orange;Nun of Vanity\blue;
+1000	\orange;Nun of Vanity\blue;
+1001	CrystalBall
+1002	GlassSkull
+1003	\orange;Overlord
+1004	\gold;Creature of Flame
+1005	\gold;Horazon's Familiar
+1006	\orange;Bone Archer
+1007	\orange;Burning Dead Archer
+1008	\orange;Horror Archer
+1009	\orange;Bone Warrior
+1010	\orange;Burning Dead
+1011	\orange;Horror
+1012	\orange;Bone Sorcerer
+1013	\orange;Burning Dead Sorcerer
+1014	\orange;Horror Sorcerer
+1015	\orange;Shadowgate Totem
+1016	\orange;Bone Archer
+1017	\orange;Burning Dead Archer
+1018	\orange;Horror Archer
+1019	\orange;Bone Warrior
+1020	\orange;Burning Dead
+1021	\orange;Horror
+1022	\orange;Bone Sorcerer
+1023	\orange;Burning Dead Sorcerer
+1024	\orange;Horror Sorcerer
+1025	\gold;Ennead Necromancer
+1026	Death Machine
 1027	Thunder Bear
+1028	\orange;Evil Force
+1029	\orange;Mage Flayer
+1030	Malic
+1031	Malic's Messenger
+1032	\gold;Lucion, Son of Mephisto
+1033	\orange;Dark Archon
+1034	\orange;Dark Templar
+1035	Primus
+1036	\orange;Ethereal
+1037	\orange;Lightwell\blue;
+1038	\gold;Zakarum's Avatar
+1039	Gargoyle Trap
 1040	Ice Elemental
 1041	Champion of the Sun
+1042	Necromantic Trance
+1043	\green;Flesh Mother
+1044	\green;Flesh Fiend
+1045	\green;Deathspawn
+1046	\green;Venom Fiend\blue;
+1047	\green;Doom Spitter
+1048	\green;Death Prince
+1049	\green;Blood Bengal
+1050	\green;Obsidian Knight
+1051	\green;Reaper
+1052	\green;Darksister\blue;
+1053	\green;Bane Monster
+1054	\green;Azure Drake
+1055	\green;Corrosive Death
+1056	\green;Wracked Soul\blue;
+1057	\green;Bloodbrother\blue;
+1058	\green;Stormscourge
+1059	\gold;Lord Primus
+1060	\orange;Gore Crawler
+1061	Crystalline King
+1062	Bone Archer
+1063	Burning Dead Archer
+1064	Horror Archer
+1065	Wind Spirit
+1066	Spirit of Death
+1067	Wolf
+1068	Undead Counselor
+1069	\gold;Lord Aldric Jitan
+1070	\orange;Rakkis Guardsman
+1071	\orange;Citizen
+1072	Blood Turret
+1073	Oblivion Turret
+1074	\orange;Roach
+1075	\orange;City Guard
+1076	\gold;Juris Khan, King of Ureh
+1077	\orange;Ice King\blue;
+1078	Pursuit Breaker
+1079	\orange;Punishment Turret
+1080	Fallen Warrior
+1081	Ghost Flame
 1082	Golden Calf
+1083	\gold;Skovos, Priestess of Karcheus\blue;
+1084	\gold;Philios, Priestess of Hefaetrus\blue;
+1085	\gold;Lycander, Priestess of Zerae\blue;
+1086	\orange;Amazon Warrior
+1087	\gold;Avatar of Karcheus
+1088	\orange;Volcanic Shrine
+1089	FLYING POLAR BUFFALO ERROR
+1090	FLYING POLAR BUFFALO ERROR
+1091	FLYING POLAR BUFFALO ERROR
+1092	\orange;Necrobot\blue;
+1093	\orange;Harpylisk
+1094	\orange;Neon Fiend
+1095	\gold;Alpha
+1096	\gold;Beta
+1097	\gold;Gamma
+1098	\gold;Delta
+1099	\gold;Epsilon
+1100	FLYING POLAR BUFFALO ERROR
 1101	Initiate/Acolyte
 1102	Shadow Master
 1103	Scourge
+1104	\orange;Ethereal
+1105	\gold;Zakarum's Avatar
+1106	\gold;Kabraxis
+1107	Treewarden
 1108	Blood Knight
+1109	\gold;Bartuc
+1110	\orange;Blood Golem
 1111	Fire Elemental
+1112	Betrayer
 1113	Void Archon
 1114	Exploding Totem
+1115	Kill Rat
 1116	Shadowfiend
 1117	Familiar
 1118	Bloodknight
+1119	\yellow;Que-Hegan\blue;
+1120	\yellow;Peace Warder\blue;
+1121	\dgrey;Peace Warder (Hallucination)
+1122	\yellow;Living Flame\blue;
+1123	\yellow;Shrieker\blue;
+1124	\yellow;Magma Drake\blue;
+1125	\yellow;Dark Vizjerei\blue;
+1126	\yellow;Mind Warrior
+1127	\yellow;Armageddon Knight\blue;
+1128	\yellow;Ghost Phoenix\blue;
+1129	\yellow;Steel Crusher\blue;
+1130	\yellow;Dark Horizon\blue;
+1131	\yellow;Dirge\blue;
+1132	\yellow;Void Archon\blue;
+1133	\yellow;Brood Mother\blue;
+1134	\yellow;Corruptor Warlock\blue;
+1135	\yellow;Broodling\blue;
+1136	\yellow;Dark Champion
+1137	\yellow;Dark Champion
+1138	\yellow;Cruciator\blue;
+1139	\yellow;Deathless\blue;
+1140	\yellow;Horadrim's Curse\blue;
+1141	\yellow;Darkwarden\blue;
+1142	\yellow;Hellcat Priestess\blue;
+1143	\yellow;Hellcat\blue;
+1144	\yellow;Hellcat\blue;
+1145	\yellow;Razor Fur Titan\blue;
+1146	\yellow;Broken Soul\blue;
+1147	\yellow;Black Ice Demon\blue;
+1148	\yellow;Phantasm\blue;
+1149	\yellow;Buzzsaw\blue;
+1150	\yellow;Edyrem\blue;
+1151	\yellow;Thunderling\blue;
+1152	\yellow;Storm Shaman\blue;
+1153	\yellow;Silver Tyrant
+1154	\yellow;Core Lord\blue;
+1155	\yellow;Son of Lucion\blue;
+1156	\yellow;Fireblood\blue;
+1157	\yellow;Skull Clan\blue;
+1158	\yellow;Skull Clan\blue;
+1159	\yellow;Blood Prince\blue;
+1160	\yellow;Black Death\blue;
+1161	\yellow;Knight of Death\blue;
+1162	\yellow;Plagued Dead Archer\blue;
+1163	\yellow;Plagued Dead\blue;
+1164	\yellow;Fetish Sniper\blue;
+1165	\yellow;Fetish Hunter\blue;
+1166	\yellow;Annihilator\blue;
+1167	\yellow;Ifrit\blue;
+1168	\yellow;Shock Monkey\blue;
+1169	Overseer
+1170	Vortex Lord
+1171	Soul Burner
+1172	Maelstrom Lord
+1173	Obsidian Lord
+1174	\yellow;Dark Librarian
+1175	Scavenger
+1176	\yellow;Nightmare\blue;
+1177	\yellow;Quill Bear\blue;
+1178	\yellow;Frost Raptor\blue;
+1179	\yellow;Bonegrinder\blue;
+1180	\yellow;Corruptor Archer\blue;
+1181	\yellow;Corruptor\blue;
+1182	\yellow;Lament\blue;
+1183	\yellow;Shock Sting\blue;
+1184	\yellow;Warforged Shaman\blue;
+1185	\yellow;Bloodfire Rogue\blue;
+1186	\yellow;Bloodfire Rogue\blue;
+1187	\yellow;Steelfur Titan\blue;
+1188	\yellow;Hivehost\blue;
+1189	\yellow;Corruptor Mage\blue;
+1190	\yellow;Daystar\blue;
+1191	\yellow;Tomb Curse\blue;
+1192	\yellow;Black Cat\blue;
+1193	\yellow;Shredder\blue;
+1194	\yellow;Ice Clan\blue;
+1195	\yellow;Marbled Frog\blue;
+1196	\yellow;Fallen Priest\blue;
+1197	\yellow;Plague Bringer\blue;
+1198	\yellow;Djinn\blue;
+1199	\yellow;Monkey King\blue;
+1200	\yellow;Adder\blue;
+1201	\yellow;Mangler\blue;
+1202	\yellow;Brood Swarm\blue;
+1203	\yellow;Cog\blue;
+1204	\yellow;Ice Clan\blue;
+1205	Infernal Contraption
+1206	\dgrey;Baal (Vision of Destruction)\blue;
+1207	\gold;Vasily
+1208	\gold;Esu
+1209	\gold;Fiacla-Gear
+1210	\purple;Amazon
+1211	\purple;Sorceress
+1212	\purple;Druid
 1213	Shock Beast
+1214	\green;Darksister\blue;
+1215	\green;Obsidian Knight
+1216	Sacrifical Lamb
+1217	\orange;Dark Nephalem\blue;
+1218	Uldyssian, Dark Edyrem King
+1219	\gold;Imperius
+1220	\gold;Malthael\blue;
 1221	Edyrem
+1222	\orange;Dark Nephalem\blue;
+1223	\orange;Punishment Turret
+1224	\orange;Punishment Turret
+1225	\orange;Celebrant of the Triune
+1226	\orange;Morlu
+1227	\gold;Lilith
 1228	Torajian
+1229	Ghost Wolf
+1230	\yellow;Skull Clan\blue;
 1231	Daystar
 1232	Shredder
 1233	Bane Monster
 1234	Dead Wall Totem
+1235	Dead Wall Zombie
+1236	\yellow;Cobra\blue;
+1237	\yellow;Lurker\blue;
+1238	\yellow;Thunderbolt\blue;
+1239	\yellow;Trap Rat\blue;
+1240	\yellow;Iced Soul\blue;
+1241	\yellow;Avalanche\blue;
+1242	\yellow;Horned Leviathan\blue;
+1243	\yellow;Son of Azmodan
+1244	\yellow;Cloud Lord
+1245	\yellow;Deathfire Bearer\blue;
+1246	\gold;Dark Star Dragon
+1247	\orange;Chimaera Trap
+1248	\orange;Howling Spirit\blue;
+1249	Dark Star Dragon
 1250	Fallen One
+1251	\gold;Imperius
+1252	\yellow;Daystar\gold;
+1253	\gold;Quov Tsin\blue;
 1254	Spirit of Vengeance
+1255	Vengeful Dead
+1256	\yellow;Peace Warder\blue;
+1257	\yellow;Living Flame\blue;
+1258	\yellow;Shrieker\blue;
+1259	\yellow;Dark Vizjerei\blue;
+1260	\yellow;Mind Warrior
+1261	\yellow;Ni Va
+1262	\yellow;Grizzly Giant\blue;
+1263	\yellow;Steel Crusher\blue;
+1264	\yellow;Dark Horizon\blue;
+1265	\yellow;Dirge\blue;
+1266	\yellow;Void Archon\blue;
+1267	\yellow;Corruptor Warlock\blue;
+1268	\yellow;High Priestess\blue;
+1269	\yellow;Unseelie Lady\blue;
+1270	\yellow;Cruciator\blue;
+1271	\yellow;Deathless\blue;
+1272	\yellow;Shroom\blue;
+1273	\yellow;Heretic\blue;
+1274	\yellow;Razor Fur Titan\blue;
+1275	\yellow;Onyx Knight\blue;
+1276	\yellow;Black Ice Demon\blue;
+1277	\yellow;Phantasm\blue;
+1278	\yellow;Buzzsaw\blue;
+1279	\yellow;Edyrem\blue;
+1280	\yellow;Thunderling\blue;
+1281	\yellow;Basilisk\blue;
+1282	\yellow;Tree of Life\blue;
+1283	\yellow;Core Lord\blue;
+1284	Crystal Witch
+1285	\yellow;Fireblood\blue;
+1286	\yellow;Blood Stone\blue;
+1287	\yellow;Gremlin\blue;
+1288	\yellow;Blood Prince\blue;
+1289	\yellow;Black Death\blue;
+1290	\yellow;Wraithlord\blue;
+1291	\yellow;Trouper\blue;
+1292	\yellow;Grubber
+1293	\yellow;Fetish Sniper\blue;
+1294	\yellow;Fetish Hunter\blue;
+1295	\yellow;Glooper
+1296	\yellow;Ifrit\blue;
+1297	\yellow;Shock Monkey\blue;
+1298	\yellow;Nightmare\blue;
+1299	\yellow;Quill Bear\blue;
+1300	\yellow;Frost Raptor\blue;
+1301	\yellow;Bonegrinder\blue;
+1302	\yellow;Ulfhedinn\blue;
+1303	\yellow;Plagued Dead Archer\blue;
+1304	\yellow;Lament\blue;
+1305	\yellow;Shock Sting\blue;
+1306	\yellow;Storm Shaman\blue;
+1307	\yellow;Ash Troll
+1308	\yellow;Bloodfire Rogue\blue;
+1309	\yellow;Alpha Centaur\blue;
+1310	\yellow;Plagued Dead\blue;
+1311	\yellow;Cenobite\blue;
+1312	\yellow;Daystar\blue;
+1313	\yellow;Tomb Curse\blue;
+1314	\yellow;Black Cat\blue;
+1315	\yellow;Shredder\blue;
+1316	\yellow;Wyrdhyena\blue;
+1317	\yellow;Marbled Frog\blue;
+1318	\yellow;Ghost Phoenix\blue;
+1319	\yellow;Plague Bringer\blue;
+1320	\yellow;Djinn\blue;
+1321	\yellow;Monkey King\blue;
+1322	\yellow;Adder\blue;
+1323	\yellow;Mangler\blue;
+1324	\yellow;Cog\blue;
+1325	\yellow;Ice Clan\blue;
+1326	\yellow;Cobra\blue;
+1327	\yellow;Lurker\blue;
+1328	\yellow;Thunderbolt\blue;
+1329	\yellow;Trap Rat\blue;
+1330	\yellow;Magma Drake\blue;
+1331	\yellow;Annihilator\blue;
+1332	\yellow;Warforged Shaman\blue;
+1333	\yellow;Stone Hammer Demon\blue;
+1334	\yellow;Cloud Lord
+1335	\yellow;Deathfire Bearer\blue;
+1336	Acid Beast
+1337	Poison Spitter
+1338	Pit Beast
+1339	Chaos Beast
+1340	Lava Maw
+1341	Sand Raider
+1342	Marauder
+1343	Invader
+1344	Assailant
+1345	Intruder
+1346	Skull Ape
+1347	Black Baboon
+1348	Dark Gibbon
+1349	Gargoyle Ape
+1350	Temple Guard
+1351	Skeleton Archer
+1352	Returned Archer
+1353	Bone Archer
+1354	Burning Dead Archer
+1355	Horror Archer
+1356	Balrog
+1357	Guardian
+1358	Infernal Lord
+1359	Vortex Lord
+1360	Thunder Beetle
+1361	Unholy Scarab
+1362	Tomb Guardian
+1363	Emerald Scarab
+1364	Diamond Beetle
+1365	Prowler Priestess
+1366	Desert Priestess
+1367	Feline Priestess
+1368	Lacuni Priestess
+1369	Harlequin
+1370	Pest
+1371	Tenebral
+1372	Bullfrog
+1373	Acid Prince
+1374	Ice Prince
+1375	Zombie
+1376	Hungry Dead
+1377	Genie
+1378	Ghost Zombie
+1379	Impaler
+1380	Assamite
+1381	Nosferatu
+1382	Ventrue
+1383	Blood Marquis
+1384	Skeleton
+1385	Returned
+1386	Bone Warrior
+1387	Burning Dead
+1388	Horror
+1389	Fallen One
+1390	Invader
+1391	Defiler
+1392	Secret Jewelword!\nScourge
+1393	Destroyer
+1394	Fallen Shaman
+1395	Invader Shaman
+1396	Defiler Shaman
+1397	Scourge Shaman
+1398	Destroyer Shaman
+1399	Fallen Warrior
+1400	Fallen Hero
+1401	Knight of War
+1402	Knight of Pestilence
+1403	Knight of Famine
+1404	Jungle Hunter
+1405	Tree Hunter
+1406	Jungle Devil
+1407	Blood Hunter
+1408	Slayer
+1409	Jungle Hunter
+1410	Tree Hunter
+1411	Jungle Devil
+1412	Blood Hunter
+1413	Slayer
+1414	Gargoyle Warrior
+1415	Mountain Defender
+1416	Summit Guardian
+1417	Stone Warrior
+1418	Granite King
+1419	Hidden One
+1420	Fata Morgana
+1421	Stalker
+1422	Banshee
+1423	Evil Spirit
+1424	Death Gnat
+1425	Blood Stinger
+1426	Soul Sucker
+1427	Razor Sting
+1428	Stone Clan
+1429	Night Clan
+1430	Flesh Clan
+1431	Fire Clan
+1432	Death Clan
+1433	Stone Clan
+1434	Night Clan
+1435	Flesh Clan
+1436	Fire Clan
+1437	Death Clan
+1438	Prowler
+1439	Desert Cat
+1440	Feline Witch
+1441	Lacuni Soldier
+1442	Frozen Lord
+1443	Crystal Lord
+1444	Sapphire Lord
+1445	Protector
+1446	Sasquatch
+1447	Bronze Titan
+1448	Gold Titan
+1449	Silver Titan
+1450	Abomination
+1451	Cursed Soul
+1452	Tainted Soul
+1453	Twisted Soul
+1454	Damned Soul
+1455	Prowler
+1456	Desert Cat
+1457	Feline Witch
+1458	Lacuni Soldier
+1459	Minotaur
+1460	Doom Guard
+1461	Steel Lord
+1462	Blood Knight
+1463	Obsidian Lord
+1464	Red Storm
+1465	Storm Rider
+1466	Storm Lord
+1467	Maelstrom Lord
+1468	Sun Tiger
+1469	Moon Panther
+1470	Kill Rat
+1471	Spike Fiend
+1472	Jungle Rat
+1473	Spiked Terror
+1474	Dark Rogue
+1475	Dark Huntress
+1476	Assassin
+1477	Blood Rogue
+1478	Vampiress
+1479	Centaur
+1480	Doom Hunter
+1481	Couatl
+1482	Landshark
+1483	Rainbow Hunter
+1484	Dark Rogue
+1485	Dark Huntress
+1486	Flesh Huntress
+1487	Blood Rogue
+1488	Vampiress
+1489	Bone Mage
+1490	Bone Warlock
+1491	Bone Sorcerer
+1492	Burning Dead Mage
+1493	Burning Dead Warlock
+1494	Burning Dead Sorcerer
+1495	Horror Mage
+1496	Horror Warlock
+1497	Horror Sorcerer
+1498	Tarantula
+1499	Sand Devil
+1500	Flame Weaver
+1501	Soul Spider
+1502	Corpse Worm
+1503	Black Knight
+1504	Cultist
+1505	Succubus
+1506	Siren
+1507	Hellspawn
+1508	Snow Witch
+1509	Soul Burner
+1510	Dominator
+1511	Arcane Toad
+1512	Mana Monster
+1513	Dark Toad
+1514	Demonic Toad
+1515	Terror Toad
+1516	Rust Monster
+1517	Rust Claw
+1518	Corrosive Beast
+1519	Rust Creeper
+1520	Corrosive Terror
+1521	Undead Vulture
+1522	Oasis Guard
+1523	Bone Gasher
+1524	Death Watcher
+1525	Magma Demon
+1526	Lava Lord
+1527	Hell Stone
+1528	Pit Knight
+1529	Moon Knight
+1530	Dark Counselor
+1531	Dark Magistrate
+1532	Dark Cabalist
+1533	Dark Ancient
+1534	Tomb Snake
+1535	Fire Drake
+1536	Gold Viper
+1537	Azure Drake
+1538	Fiend
+1539	Blink
+1540	Gloom
+1541	Familiar
+1542	Dancing Light
+1543	Ghost Flame
+1544	Black Flame
+1545	Tortured Soul
+1546	Archon
+1547	Crimson Archon
+1548	Dark Archon
+1549	Twilight Archon
+1550	Templar
+1551	Crimson Templar
+1552	Dark Templar
+1553	Twilight Templar
+1554	Black Knight
+1555	\yellow;Onyx Knight\blue;
+1556	Gargoyle
+1557	\yellow;Stone Hammer Demon\blue;
+1558	Fell Pit Fiend
+1559	\yellow;Mutilator\blue;
+1560	Pit Knight
+1561	Moon Knight
+1562	\yellow;Serafiend\blue;
+1563	Glowing Fungus
+1564	\yellow;Shroom\blue;
+1565	Cultist
+1566	\yellow;Heretic\blue;
+1567	\gold;Astrogha\blue;
+1568	Spider Statue
+1569	Darkling
+1570	\yellow;Edyrem\gold;
+1571	\yellow;Corruptor Archer\gold;
+1572	Shrine of Extinction
+1573	\gold;Bull Prince Rodeo\blue;
+1574	Living Rock
+1575	\yellow;Ancient Giant
+1576	Raider
+1577	\yellow;Ulfhedinn\blue;
+1578	Asatruar
+1579	\yellow;Gothi\blue;
+1580	Ent
+1581	\yellow;Tree of Life\blue;
+1582	Crystal Witch
+1583	\yellow;High Priestess\blue;
+1584	\yellow;High Priestess\blue;
+1585	Magma Demon
+1586	Lava Lord
+1587	Hell Stone
+1588	\yellow;Blood Stone\blue;
+1589	Fallen Wolf Rider
+1590	\yellow;Destroyer Wolf Rider\blue;
+1591	Condemned
+1592	Sinner
+1593	\yellow;Cenobite\blue;
+1594	Crusher
+1595	\yellow;Grizzly Giant\blue;
+1596	\gold;Belial, Lord of Lies
+1597	\green;Pit Stone\blue;
+1598	\green;Wicked Man\blue;
+1599	\green;Rock Maul Demon\blue;
+1600	\green;Asatruar\blue;
+1601	\green;Star Knight\blue;
 1602	Sinner
 1603	Avalanche
 1604	Glowing Fungus
+1605	Ratfink
+1606	\green;Henchman\blue;
+1607	\orange;Slain Soul\blue;
+1608	\orange;Slain Soul\blue;
+1609	\orange;Slain Soul\blue;
+1610	\orange;Slain Soul\blue;
+1611	\orange;Slain Soul\blue;
+1612	Assur
+1613	\yellow;Silver Construct\blue;
+1614	\green;Henchman\blue;
+1615	\orange;Blood Golem
+1616	\orange;Necrobot\blue;
+1617	\gold;Malthael\blue;
 1618	Siren
 1619	Edyrem
 1620	Blood Tide Totem
+1621	\orange;Black Hand Totem
+1622	\purple;Brother Laz (Secret Boss)
+1623	\orange;Groupie\blue;
+1624	\orange;Magineer\gold;
+1625	\orange;AC-2 Rivet Bot
+1626	\orange;AC-1 Hammer Bot
+1627	\orange;RC-2 Heavy Drone
+1628	\orange;RC-1 Light Drone
+1629	\gold;Master Control System
+1630	\orange;Sentinel (Chaingun)
+1631	\orange;Sentinel (Drones)
+1632	\orange;Sentinel (Drones)
+1633	\orange;Sentinel (Enforcers)
+1634	\orange;Sentinel (Enforcers)
+1635	\orange;Sentinel (Mines)
+1636	\orange;Sentinel (MIRV)
+1637	\orange;Sentinel (EMP)
+1638	\orange;Energy Shield Totem
+1639	\orange;Sentinel (Chaingun)
+1640	\orange;Sentinel (Chaingun)
+1641	\orange;Sentinel (Magineers)
+1642	Leprechaun
 1643	Elfin Spirit
+1644	\yellow;Ulfhedinn\gold;
+1645	\green;Asathorr\gold;
+1646	Tomb Snake\gold;
+1647	\orange;Ratfink\gold;
+1648	\yellow;Onyx Knight\gold;
 1649	Devil's Fang Totem
 1650	Wolf Companion
+1651	\gold;Akarat
+1652	\red;Dragon's Egg
+1653	\red;Dragon's Egg
+1654	\red;Baalspawn
+1655	\red;Baalspawn
+1656	\red;Dragon's Egg
+1657	\red;Dragon's Egg
+1658	\red;Baalspawn
+1659	\red;Baalspawn
 1660	Jinn
+1661	\yellow;Quill Bear\blue;
+1662	\yellow;Frost Raptor\blue;
+1663	Condemned
+1664	\yellow;Hivehost\blue;
+1665	\yellow;Corruptor Warlock\blue;
+1666	\yellow;Phantasm\blue;
+1667	\yellow;Ice Clan\blue;
+1668	\yellow;Plague Bringer\blue;
+1669	\yellow;Deathfire Bearer\blue;
+1670	\yellow;Shrieker\blue;
+1671	Sinner
+1672	\yellow;Gothi\blue;
+1673	Lava Lord
+1674	\yellow;Grizzly Giant\blue;
+1675	\yellow;Hellcat Priestess\blue;
+1676	\yellow;Heretic\blue;
+1677	\yellow;Onyx Knight\blue;
+1678	\yellow;Thunderbolt\blue;
+1679	\yellow;Ghost Phoenix\blue;
+1680	\yellow;Plagued Dead Archer\blue;
+1681	\yellow;Son of Lucion\blue;
+1682	Armored Titan
+1683	\yellow;Black Ice Demon\blue;
+1684	\yellow;Serafiend\blue;
+1685	Black Panther
+1686	\yellow;Trap Rat\blue;
+1687	Treewarden
 1688	Rampagor
 1689	Shadow
 1690	Totembound Guardian
 1691	Veil King
+1692	Veil Terror
+1693	Ghast
+1694	\red;Veil King
 1695	Oathbreaker Totem
 1696	Fear Bomb Totem
 1697	Horned God
 1698	\white;Midnight Fairy
+1699	\dgreen;Clawstorm Terror
+1700	\dgreen;Landmass
+1701	\dgreen;Glowing Blob
+1702	\dgreen;Fairy Witch
+1703	\dgreen;Bane Hunter
+1704	a startled Witch...
+1705	FLYING POLAR BUFFALO ERROR
+1706	\dgreen;Clawstorm Terror
+1707	\dgreen;Landmass
+1708	\dgreen;Glowing Blob
+1709	\dgreen;Fairy Witch
+1710	\dgreen;Bane Hunter
+1711	a startled Witch...
+1712	\yellow;Shardspawn
+1713	\yellow;Trap Rat\blue;
+1714	\yellow;Lurker\blue;
+1715	\yellow;Serafiend\blue;
+1716	\yellow;Dirge\blue;
+1717	\yellow;Horadrim's Curse\blue;
+1718	\yellow;Edyrem\blue;
+1719	\yellow;Tree of Life\blue;
+1720	\yellow;Ulfhedinn\blue;
+1721	\yellow;Mutilator\blue;
+1722	Warlock
+1723	Centaur
+1724	Doom Hunter
+1725	\yellow;Alpha Centaur\blue;
+1726	Dreadwing
+1727	Bonestorm
+1728	\yellow;Wraithlord\blue;
+1729	Harlequin
+1730	\yellow;Trouper\blue;
+1731	Pest
+1732	\yellow;Gremlin\blue;
+1733	Tenebral
+1734	\yellow;Wyrdhyena\blue;
+1735	Lizard King
+1736	\yellow;Basilisk\blue;
+1737	\green;Crowned Serpent\blue;
+1738	Svartalf
+1739	\yellow;Unseelie Lady\blue;
+1740	\green;Heresiarch\blue;
+1741	\yellow;Que-Hegan\blue;
+1742	\yellow;Unseelie Dame\blue;
+1743	Warlock
 1744	Black Cat Familiar
+1745	Diablo
+1746	\yellow;Thunderbolt\blue;
+1747	Pig!
+1748	\yellow;Detonator
+1749	\yellow;Hypnotoad
+1750	\orange;Astral Guardian
+1751	\orange;Necromorb
+1752	\orange;Hardliner
+1753	\orange;Trained Cougar
+1754	\orange;Jungle Snake
+1755	\orange;Lantern Archon
+1756	\orange;Feyr
+1757	\orange;Sunless Reveler
+1758	\orange;Sunless Mutant
+1759	\yellow;Porkchop
+1760	\yellow;Porkchop
+1761	\yellow;The Pack
+1762	\yellow;The Pack
+1763	\yellow;Hemoplague
+1764	\yellow;Hemoplague
+1765	\yellow;Hemoplague
+1766	\yellow;Hemoplague
+1767	\dgreen;Psychorb
+1768	\dgreen;Psychorb
+1769	\dgreen;Hephaestian
+1770	\dgreen;Hephaestian
+1771	\dgrey;Nightmare
+1772	Flit
+1773	Cave Snapper
+1774	\yellow;Grubber
+1775	CouatlInhibitor
+1776	LandsharkInhibitor
+1777	Rainbow Hunter Inhibitor
+1778	\yellow;Ni Va Inhibitor
+1779	Couatl
+1780	Landshark
+1781	Rainbow Hunter
+1782	\yellow;Ni Va
+1783	Guardian Construct
+1784	\yellow;Sacred Construct
+1785	\dgrey;Fire Beetle
+1786	\yellow;Mahasattva
+1787	Corpse Worm
+1788	Slimer
+1789	\yellow;Glooper
+1790	Sewer Troll
+1791	Dungeon Troll
+1792	\yellow;Ash Troll
+1793	Wandering Sarandesh
+1794	\yellow;Fallen Sarandesh
+1795	Flit
+1796	Flit
+1797	\yellow;Core Lord\blue;
+1798	\yellow;Fireblood\blue;
+1799	\yellow;Marbled Frog\blue;
+1800	\yellow;Trap Rat\blue;
+1801	\yellow;Onyx Knight\blue;
+1802	\yellow;Stone Hammer Demon\blue;
+1803	\yellow;Serafiend\blue;
+1804	\yellow;Heretic\blue;
+1805	\yellow;Ulfhedinn\blue;
+1806	\yellow;Cenobite\blue;
+1807	\yellow;Grizzly Giant\blue;
+1808	\yellow;Alpha Centaur\blue;
+1809	\yellow;Wyrdhyena\blue;
+1810	\yellow;Basilisk\blue;
+1811	\yellow;Unseelie Dame\blue;
+1812	\yellow;Detonator
+1813	\yellow;Ash Troll
+1814	\yellow;Sacred Construct
+1815	\yellow;Mahasattva
+1816	\yellow;Fallen Sarandesh
+1817	Sleeping Cave Snapper
+1818	\yellow;Fetish Rocketeer
+1819	\yellow;Silverbolt
+1820	Light Serpent
+1821	Blur

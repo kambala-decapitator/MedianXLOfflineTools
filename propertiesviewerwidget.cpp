@@ -33,15 +33,19 @@ void PropertiesViewerWidget::displayItemProperties(ItemInfo *item)
     if (item->isRW)
     {
         ui.tabWidget->setTabEnabled(2, true);
+
         setProperties(ui.runewordTextEdit, item->rwProps);
+        ui.runewordTextEdit->moveCursor(QTextCursor::Start);
+        ui.runewordTextEdit->insertHtml(htmlStringFromDiabloColorString(item->rwName, Gold) + "<br>");
         renderItemDescription(ui.runewordTextEdit);
+        
         addProperties(&allProps, item->rwProps);
     }
 
     ui.mysticOrbsTextEdit->clear();
     _mysticOrbs.clear();
 
-    bool isClassCharm = QString(ItemDataBase::Items()->value(_item->itemType).typeString).startsWith("ara");
+    bool isClassCharm = ItemDataBase::Items()->value(_item->itemType).typeString.startsWith("ara");
     QMap<int, ItemProperty>::iterator iter = allProps.begin();
     while (iter != allProps.end())
     {
@@ -201,7 +205,7 @@ void PropertiesViewerWidget::displayItemProperties(ItemInfo *item)
 
     // add '+50% damage to undead' if item type matches
     bool shouldAddDamageToUndeadInTheBottom = false;
-    if (ItemParser::itemTypesInheritFromTypes(QList<QByteArray>() << itemBase.typeString, damageToUndeadTypes))
+    if (ItemParser::itemTypeInheritFromTypes(itemBase.typeString, damageToUndeadTypes))
     {
         if (allProps.contains(Enums::ItemProperties::DamageToUndead))
             allProps[Enums::ItemProperties::DamageToUndead].value += 50;
@@ -308,106 +312,12 @@ void PropertiesViewerWidget::setProperties(QTextEdit *textEdit, const QMap<int, 
     }
 }
 
-void PropertiesViewerWidget::renderItemDescription(QTextEdit *textEdit, QString *description)
-{
-    textEdit->setText(baseFormat.arg((description ? *description : textEdit->toPlainText()).replace('\n', "<br>")));
-}
-
-void PropertiesViewerWidget::removeAllMysticOrbs()
-{
-    int moNumber = 0;
-    foreach (int moCode, _mysticOrbs)
-    {
-        modifyMysticOrbProperty(ItemDataBase::MysticOrbs()->value(moCode).statId, totalMysticOrbValue(moCode));
-
-        // remove MO data
-        const ItemPropertyTxt &property = ItemDataBase::Properties()->value(moCode);
-        int valueIndex = indexOfPropertyValue(moCode);
-        if (valueIndex > -1)
-			_item->bitString.remove(valueIndex, property.bits + property.saveParamBits + Enums::CharacterStats::StatCodeLength);
-		
-		moNumber += _item->props.value(moCode).value;
-        _item->props.remove(moCode);
-    }
-
-    modifyMysticOrbProperty(Enums::ItemProperties::RequiredLevel, moNumber * 2); // decrease rlvl
-    qDebug("---------");
-
-    // align
-    int extraBits = _item->bitString.length() % 8;
-    if (extraBits)
-    {
-        int zerosBeforeFirst1 = _item->bitString.indexOf('1'), zerosToAppend = 8 - extraBits;
-        if (zerosBeforeFirst1 + zerosToAppend < 8)
-            _item->bitString.prepend(QString(zerosToAppend, zeroChar));
-        else
-            _item->bitString.remove(0, extraBits);
-    }
-
-    _item->hasChanged = true;
-    displayItemProperties(_item);
-}
-
-int PropertiesViewerWidget::indexOfPropertyValue(int id)
-{
-    bool isMaxEnhDamageProp = id == 17;
-    const ItemPropertyTxt &property = ItemDataBase::Properties()->value(id);
-    qulonglong value = _item->props.value(id).value + property.add;
-    qDebug() << "searching for property" << id << property.descPositive << "with value" << value << "actual value" << value - property.add;
-    if (isMaxEnhDamageProp)
-    {
-        qulonglong oldValue = value;
-        value <<= property.bits;
-        qDebug() << "value after shift" << value;
-        value += oldValue;
-        qDebug() << "value after add" << value;
-    }
-    int idIndex = -1, valueIndex = -1, bits = property.bits * (1 + isMaxEnhDamageProp);
-    do
-    {
-        if ((idIndex = _item->bitString.indexOf(binaryStringFromNumber(id, false, Enums::CharacterStats::StatCodeLength), idIndex + 1)) == -1)
-            break;
-        valueIndex = idIndex - property.saveParamBits - bits;
-//    } while (_item->bitString.mid(idIndex - property.bits, property.bits) != binaryStringFromNumber(value + property.add, false, property.bits));
-    } while (_item->bitString.mid(valueIndex, bits).toULongLong(0, 2) != value);
-    if (idIndex == -1)
-        qDebug("not found");
-    return valueIndex;
-}
-
-void PropertiesViewerWidget::modifyMysticOrbProperty(int id, int decrement)
-{
-    int valueIndex = indexOfPropertyValue(id);
-    if (valueIndex <= -1)
-        return;
-
-    const ItemPropertyTxt &propertyTxt = ItemDataBase::Properties()->value(id);
-	ItemProperty prop = _item->props.value(id);
-    prop.value -= decrement;
-    if (prop.value)
-	{
-        _item->bitString.replace(valueIndex, propertyTxt.bits, binaryStringFromNumber(prop.value + propertyTxt.add, false, propertyTxt.bits)); // place modified value
-		_item->props.replace(id, prop);
-	}
-    else
-    {
-        _item->props.remove(id);
-        _item->bitString.remove(valueIndex, propertyTxt.bits + propertyTxt.saveParamBits + Enums::CharacterStats::StatCodeLength);
-    }
-}
-
-int PropertiesViewerWidget::totalMysticOrbValue(int moCode) const
-{
-	quint8 multiplier = 1 + (_item->quality == Enums::ItemQuality::Crafted || _item->quality == Enums::ItemQuality::Honorific);
-	return _item->props.value(moCode).value * ItemDataBase::MysticOrbs()->value(moCode).value * multiplier;
-}
-
 QString PropertiesViewerWidget::propertyDisplay(const ItemProperty &propDisplay, int propId)
 {
     // TODO: maybe add indication of trophy/bless if propId == 219
     int value = propDisplay.value;
-	if (!value)
-		return QString();
+    if (!value)
+        return QString();
 
     const ItemPropertyTxt &prop = ItemDataBase::Properties()->value(propId);
     QString description = value < 0 ? prop.descNegative : prop.descPositive, result;
@@ -441,7 +351,7 @@ QString PropertiesViewerWidget::propertyDisplay(const ItemProperty &propDisplay,
         break;
     case 7: case 8:
         result = QString(QString(prop.descVal == 1 ? "%1% %2" : "%2 %1%") + " %3").arg(prop.descFunc == 7 ? QString::number(value) : valueStringSigned)
-                 .arg(description).arg(prop.descStringAdd); // 1 or 2
+            .arg(description).arg(prop.descStringAdd); // 1 or 2
         break;
     case 11:
         result = tr("Repairs 1 Durability in %1 Seconds").arg(100 / value);
@@ -461,6 +371,106 @@ QString PropertiesViewerWidget::propertyDisplay(const ItemProperty &propDisplay,
         result = tr("[special case %4, please report] %1 '%2' (ID %3)").arg(value).arg(description).arg(propId).arg(prop.descFunc);
     }
     return result;
+}
+
+void PropertiesViewerWidget::renderItemDescription(QTextEdit *textEdit, QString *description)
+{
+    textEdit->setText(baseFormat.arg((description ? *description : textEdit->toPlainText()).replace('\n', "<br>")));
+}
+
+void PropertiesViewerWidget::removeAllMysticOrbs()
+{
+    int moNumber = 0;
+    foreach (int moCode, _mysticOrbs)
+    {
+        modifyMysticOrbProperty(ItemDataBase::MysticOrbs()->value(moCode).statId, totalMysticOrbValue(moCode));
+
+        // remove MO data
+        const ItemPropertyTxt &property = ItemDataBase::Properties()->value(moCode);
+        int valueIndex = indexOfPropertyValue(moCode);
+        if (valueIndex > -1)
+			_item->bitString.remove(valueIndex, property.bits + property.saveParamBits + Enums::CharacterStats::StatCodeLength);
+		
+        PropertiesMultiMap *props = propertiesWithCode(moCode);
+		moNumber += props->value(moCode).value;
+        props->remove(moCode);
+    }
+
+    modifyMysticOrbProperty(Enums::ItemProperties::RequiredLevel, moNumber * 2); // decrease rlvl
+    qDebug("---------");
+
+    // align
+    int extraBits = _item->bitString.length() % 8;
+    if (extraBits)
+    {
+        int zerosBeforeFirst1 = _item->bitString.indexOf('1'), zerosToAppend = 8 - extraBits;
+        if (zerosBeforeFirst1 + zerosToAppend < 8)
+            _item->bitString.prepend(QString(zerosToAppend, zeroChar));
+        else
+            _item->bitString.remove(0, extraBits);
+    }
+
+    _item->hasChanged = true;
+    displayItemProperties(_item);
+}
+
+int PropertiesViewerWidget::indexOfPropertyValue(int id)
+{
+    bool isMaxEnhDamageProp = id == 17;
+    const ItemPropertyTxt &property = ItemDataBase::Properties()->value(id);
+    qulonglong value = propertiesWithCode(id)->value(id).value + property.add;
+    qDebug() << "searching for property" << id << property.descPositive << "with value" << value << "actual value" << value - property.add;
+    if (isMaxEnhDamageProp)
+    {
+        qulonglong oldValue = value;
+        value <<= property.bits;
+        qDebug() << "value after shift" << value;
+        value += oldValue;
+        qDebug() << "value after add" << value;
+    }
+    int idIndex = -1, valueIndex = -1, bits = property.bits * (1 + isMaxEnhDamageProp);
+    do
+    {
+        if ((idIndex = _item->bitString.indexOf(binaryStringFromNumber(id, false, Enums::CharacterStats::StatCodeLength), idIndex + 1)) == -1)
+            break;
+        valueIndex = idIndex - property.saveParamBits - bits;
+    } while (_item->bitString.mid(valueIndex, bits).toULongLong(0, 2) != value);
+    if (idIndex == -1)
+        qDebug("not found");
+    return valueIndex;
+}
+
+void PropertiesViewerWidget::modifyMysticOrbProperty(int id, int decrement)
+{
+    int valueIndex = indexOfPropertyValue(id);
+    if (valueIndex <= -1)
+        return;
+
+    const ItemPropertyTxt &propertyTxt = ItemDataBase::Properties()->value(id);
+    PropertiesMultiMap *props = propertiesWithCode(id);
+	ItemProperty prop = props->value(id);
+    prop.value -= decrement;
+    if (prop.value)
+	{
+        _item->bitString.replace(valueIndex, propertyTxt.bits, binaryStringFromNumber(prop.value + propertyTxt.add, false, propertyTxt.bits)); // place modified value
+		props->replace(id, prop);
+	}
+    else
+    {
+        props->remove(id);
+        _item->bitString.remove(valueIndex, propertyTxt.bits + propertyTxt.saveParamBits + Enums::CharacterStats::StatCodeLength);
+    }
+}
+
+int PropertiesViewerWidget::totalMysticOrbValue(int moCode)
+{
+	quint8 multiplier = 1 + (_item->quality == Enums::ItemQuality::Crafted || _item->quality == Enums::ItemQuality::Honorific);
+	return propertiesWithCode(moCode)->value(moCode).value * ItemDataBase::MysticOrbs()->value(moCode).value * multiplier;
+}
+
+PropertiesMultiMap *PropertiesViewerWidget::propertiesWithCode(int code)
+{
+    return _item->props.contains(code) ? &_item->props : &_item->rwProps;
 }
 
 void PropertiesViewerWidget::addProperties(QMap<int, ItemProperty> *mutableProps, const QMap<int, ItemProperty> &propsToAdd)

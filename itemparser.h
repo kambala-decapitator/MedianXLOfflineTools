@@ -16,17 +16,20 @@ class ItemParser
 
 public:
 	static ItemInfo *parseItem(QDataStream &inputDataStream, const QByteArray &bytes);
-    static QMultiMap<int, ItemProperty> parseItemProperties(ReverseBitReader &bitReader, bool *ok);
-    static bool itemTypesInheritFromTypes(const QList<QByteArray> &itemTypes, const QList<QByteArray> &allowedItemTypes);
+    static PropertiesMultiMap parseItemProperties(ReverseBitReader &bitReader, bool *ok);
+    static bool itemTypeInheritFromTypes(const QByteArray &itemType, const QList<QByteArray> &allowedItemTypes);
 
 	static void writeItems(const ItemsList &items, QDataStream &ds);
 
 	static ItemInfo *loadItemFromFile(const QString &filePath);
-	static ItemsList itemsLocatedAt(int storage, bool location = Enums::ItemLocation::Stored);
+	static ItemsList itemsLocatedAt(int storage, int location = Enums::ItemLocation::Stored);
 	static bool storeItemIn(ItemInfo *item, Enums::ItemStorage::ItemStorageEnum storage, quint8 rows, quint8 cols, int plugyPage = 0);
     static bool canStoreItemAt(quint8 row, quint8 col, const QByteArray &storeItemType, const ItemsList &items, int rowsTotal, int colsTotal, int plugyPage = 0);
 
 	static const QByteArray itemHeader, plugyPageHeader;
+
+private:
+    static bool itemTypesInheritFromTypes(const QList<QByteArray> &itemTypes, const QList<QByteArray> &allowedItemTypes);
 };
 
 #endif // ITEMPARSER_H
