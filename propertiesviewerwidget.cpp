@@ -380,23 +380,25 @@ void PropertiesViewerWidget::renderItemDescription(QTextEdit *textEdit, QString 
 
 void PropertiesViewerWidget::removeAllMysticOrbs()
 {
-    int moNumber = 0;
+    int moNumberInItemProps = 0, moNumberInRwProps = 0;
     foreach (int moCode, _mysticOrbs)
     {
         modifyMysticOrbProperty(ItemDataBase::MysticOrbs()->value(moCode).statId, totalMysticOrbValue(moCode));
 
         // remove MO data
-        const ItemPropertyTxt &property = ItemDataBase::Properties()->value(moCode);
+        const ItemPropertyTxt &propertyTxt = ItemDataBase::Properties()->value(moCode);
         int valueIndex = indexOfPropertyValue(moCode);
         if (valueIndex > -1)
-			_item->bitString.remove(valueIndex, property.bits + property.saveParamBits + Enums::CharacterStats::StatCodeLength);
+			_item->bitString.remove(valueIndex, propertyTxt.bits + propertyTxt.saveParamBits + Enums::CharacterStats::StatCodeLength);
 		
         PropertiesMultiMap *props = propertiesWithCode(moCode);
-		moNumber += props->value(moCode).value;
+		(props == &_item->props ? moNumberInItemProps : moNumberInRwProps) += props->value(moCode).value;
         props->remove(moCode);
     }
 
-    modifyMysticOrbProperty(Enums::ItemProperties::RequiredLevel, moNumber * 2); // decrease rlvl
+    // decrease rlvl
+    modifyMysticOrbProperty(Enums::ItemProperties::RequiredLevel, moNumberInItemProps * 2);
+    modifyMysticOrbProperty(Enums::ItemProperties::RequiredLevel, moNumberInRwProps * 2);
     qDebug("---------");
 
     // align
