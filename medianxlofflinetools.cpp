@@ -191,7 +191,6 @@ void MedianXLOfflineTools::saveCharacter()
  quint8 v = 131; // 10000011
  outputDataStream << v;
  outputDataStream.device()->reset();*/
-    // end
 
     QString newName = _editableCharInfo.basicInfo.newName;
     bool hasNameChanged = !newName.isEmpty() && _editableCharInfo.basicInfo.originalName != newName;
@@ -339,16 +338,12 @@ void MedianXLOfflineTools::saveCharacter()
                     if (extension == "d2s") // delete
                     {
                         if (!sourceFile.remove())
-                        {
                             ERROR_BOX_FILE(tr("Error removing file '%1'\nReason: %2"), sourceFile);
-                        }
                     }
                     else // rename
                     {
                         if (!sourceFile.rename(fileName + "." + extension) && !isOldNameEmpty)
-                        {
                             ERROR_BOX_FILE(tr("Error renaming file '%1'\nReason: %2"), sourceFile);
-                        }
                     }
                 }
 
@@ -365,14 +360,10 @@ void MedianXLOfflineTools::saveCharacter()
             INFO_BOX(tr("File '%1' successfully saved!").arg(QDir::toNativeSeparators(saveFileName)));
         }
         else
-        {
             ERROR_BOX_FILE(tr("Error writing file '%1'\nReason: %2"), outputFile);
-        }
     }
     else
-    {
         ERROR_BOX_FILE(tr("Error creating file '%1'\nReason: %2"), outputFile);
-    }
 }
 
 void MedianXLOfflineTools::statChanged(int newValue)
@@ -543,23 +534,23 @@ void MedianXLOfflineTools::convertToSoftcore(bool isSoftcore)
     updateCharacterTitle(!isSoftcore);
 }
 
-/*void MedianXLOfflineTools::currentDifficultyChanged(int newDifficulty)
-{
- quint8 progression = _editableCharInfo.basicInfo.titleCode, maxDifficulty = ui.currentDifficultyComboBox->count() - 1, maxAct;
- if (progression == Enums::Progression::Completed - 1 || newDifficulty != maxDifficulty)
-  maxAct = 5;
- else
- {
-  maxAct = 1 + (progression - maxDifficulty) % 4;
-  if (maxAct == 4)
-  {
-   // check if A5 is enabled
-   if (_saveFileContents.at(Enums::Offsets::QuestsData + newDifficulty * Enums::Quests::Size + Enums::Quests::Act5Offset))
-    ++maxAct;
-  }
- }
- ui.currentActSpinBox->setMaximum(maxAct);
-}*/
+//void MedianXLOfflineTools::currentDifficultyChanged(int newDifficulty)
+//{
+//    quint8 progression = _editableCharInfo.basicInfo.titleCode, maxDifficulty = ui.currentDifficultyComboBox->count() - 1, maxAct;
+//    if (progression == Enums::Progression::Completed - 1 || newDifficulty != maxDifficulty)
+//        maxAct = 5;
+//    else
+//    {
+//        maxAct = 1 + (progression - maxDifficulty) % 4;
+//        if (maxAct == 4)
+//        {
+//            // check if A5 is enabled
+//            if (_saveFileContents.at(Enums::Offsets::QuestsData + newDifficulty * Enums::Quests::Size + Enums::Quests::Act5Offset))
+//                ++maxAct;
+//        }
+//    }
+//    ui.currentActSpinBox->setMaximum(maxAct);
+//}
 
 void MedianXLOfflineTools::findItem()
 {
@@ -662,7 +653,7 @@ void MedianXLOfflineTools::aboutApp()
     aboutBox.setTextFormat(Qt::RichText);
     QString appFullName = qApp->applicationName() + " " + qApp->applicationVersion();
     aboutBox.setText(QString("<b>%1</b><br>").arg(appFullName) + tr("Released: %1").arg(releaseDate));
-    QByteArray email("decapitator@ukr.net");
+    QString email("decapitator@ukr.net");
     aboutBox.setInformativeText(tr("<i>Author:</i> Filipenkov Andrey (<b>kambala</b>)") +
                                 QString("<br><i>ICQ:</i> 287764961<br><i>E-mail:</i> <a href=\"mailto:%1?subject=%2\">%1</a><br><br>")
                                 .arg(email, appFullName) + tr("<a href=\"http://modsbylaz.14.forumer.com/viewtopic.php?t=23147\">Official Median XL Forum thread</a>"
@@ -692,7 +683,6 @@ void MedianXLOfflineTools::createLanguageMenu()
     if (fileNames.size())
     {
         QMenu *languageMenu = new QMenu(tr("&Language", "Language menu"), this);
-        //ui.menuBar->insertMenu(ui.menuHelp->menuAction(), languageMenu);
 		ui.menuOptions->addSeparator();
 		ui.menuOptions->addMenu(languageMenu);
 
@@ -813,11 +803,11 @@ void MedianXLOfflineTools::createCharacterGroupBoxLayout()
     gridLayout->addWidget(ui.titleLineEdit, 2, 1);
     gridLayout->addWidget(ui.levelSpinBox, 2, 2);
 
-    /*QHBoxLayout *hbl1 = new QHBoxLayout;
- hbl1->addWidget(new QLabel(tr("Difficulty")), 0, Qt::AlignRight);
- hbl1->addWidget(ui.currentDifficultyComboBox);
- hbl1->addWidget(new QLabel(tr("Act")), 0, Qt::AlignRight);
- hbl1->addWidget(ui.currentActSpinBox);*/
+    //QHBoxLayout *hbl1 = new QHBoxLayout;
+    //hbl1->addWidget(new QLabel(tr("Difficulty")), 0, Qt::AlignRight);
+    //hbl1->addWidget(ui.currentDifficultyComboBox);
+    //hbl1->addWidget(new QLabel(tr("Act")), 0, Qt::AlignRight);
+    //hbl1->addWidget(ui.currentActSpinBox);
 
     QHBoxLayout *hbl2 = new QHBoxLayout(ui.hardcoreGroupBox);
     hbl2->addWidget(ui.convertToSoftcoreCheckBox);
@@ -1133,18 +1123,18 @@ bool MedianXLOfflineTools::processSaveFile(const QString &charPath)
     }
     editableCharInfo.basicInfo.level = clvl;
 
-    /*inputDataStream.device()->seek(Enums::Offsets::CurrentLocation);
- for (int i = 0; i < 3; ++i)
- {
-  quint8 difficulty;
-  inputDataStream >> difficulty;
-  if (difficulty & Enums::DifficultyBits::IsActive)
-  {
-   editableCharInfo.basicInfo.currentDifficulty = i;
-   editableCharInfo.basicInfo.currentAct = (difficulty & Enums::DifficultyBits::CurrentAct) + 1;
-   break;
-  }
- }*/
+    //inputDataStream.device()->seek(Enums::Offsets::CurrentLocation);
+    //for (int i = 0; i < 3; ++i)
+    //{
+    //    quint8 difficulty;
+    //    inputDataStream >> difficulty;
+    //    if (difficulty & Enums::DifficultyBits::IsActive)
+    //    {
+    //        editableCharInfo.basicInfo.currentDifficulty = i;
+    //        editableCharInfo.basicInfo.currentAct = (difficulty & Enums::DifficultyBits::CurrentAct) + 1;
+    //        break;
+    //    }
+    //}
 
     inputDataStream.device()->seek(Enums::Offsets::Mercenary);
     quint32 mercID;
@@ -1197,25 +1187,25 @@ bool MedianXLOfflineTools::processSaveFile(const QString &charPath)
         return false;
     }
 
-    /*inputDataStream.device->seek(Enums::Offsets::WaypointsData);
- for (int i = 0; i < 3; ++i)
- {
-  inputDataStream.skipRawData(2);
+    //inputDataStream.device->seek(Enums::Offsets::WaypointsData);
+    //for (int i = 0; i < 3; ++i)
+    //{
+    //    inputDataStream.skipRawData(2);
 
-  quint64 wpData;
-  inputDataStream >> wpData;
-  QString wpString = binaryStringFromNumber(wpData, true, 39);
-  qDebug() << "wp data difficulty" << i << ":";
-  int startPos = 0;
-  for (int j = 0; j < 5; ++j)
-  {
-   int endPos = j == 3 ? 3 : 9;
-   qDebug() << "act" << (j + 1) << ":" << wpString.mid(startPos, endPos);
-   startPos += endPos;
-  }
+    //    quint64 wpData;
+    //    inputDataStream >> wpData;
+    //    QString wpString = binaryStringFromNumber(wpData, true, 39);
+    //    qDebug() << "wp data difficulty" << i << ":";
+    //    int startPos = 0;
+    //    for (int j = 0; j < 5; ++j)
+    //    {
+    //        int endPos = j == 3 ? 3 : 9;
+    //        qDebug() << "act" << (j + 1) << ":" << wpString.mid(startPos, endPos);
+    //        startPos += endPos;
+    //    }
 
-  inputDataStream.skipRawData(14);
- }*/
+    //    inputDataStream.skipRawData(14);
+    //}
 
     // NPC
     if (_saveFileContents.mid(Enums::Offsets::NPCHeader, 2) != "w4")
@@ -1418,7 +1408,6 @@ bool MedianXLOfflineTools::processSaveFile(const QString &charPath)
     {
         inputDataStream.device()->seek(itemListTerminatorOffset);
         // process corpse items
-
     }
 
     if (editableCharInfo.mercenary.exists)
@@ -1428,7 +1417,6 @@ bool MedianXLOfflineTools::processSaveFile(const QString &charPath)
         quint16 mercItemsTotal;
         inputDataStream.device()->seek(mercItemsOffset);
         inputDataStream >> mercItemsTotal;
-        //qDebug() << "merc items total" << mercItemsTotal;
     }
 
     // parse plugy stashes
@@ -1659,11 +1647,10 @@ void MedianXLOfflineTools::updateUI()
     ui.classLineEdit->setText(Enums::ClassName::classes().at(_editableCharInfo.basicInfo.classCode));
     updateCharacterTitle(_editableCharInfo.basicInfo.isHardcore);
 
-    /*ui.currentDifficultyComboBox->setEnabled(true);
- ui.currentDifficultyComboBox->addItems(difficulties.mid(0, titleAndMaxDifficulty.second + 1));
- ui.currentDifficultyComboBox->setCurrentIndex(_editableCharInfo.basicInfo.currentDifficulty);
-
- ui.currentActSpinBox->setValue(_editableCharInfo.basicInfo.currentAct);*/
+    //ui.currentDifficultyComboBox->setEnabled(true);
+    //ui.currentDifficultyComboBox->addItems(difficulties.mid(0, titleAndMaxDifficulty.second + 1));
+    //ui.currentDifficultyComboBox->setCurrentIndex(_editableCharInfo.basicInfo.currentDifficulty);
+    //ui.currentActSpinBox->setValue(_editableCharInfo.basicInfo.currentAct);
 
     _oldClvl = _editableCharInfo.basicInfo.level;
     ui.levelSpinBox->setMaximum(_oldClvl);
@@ -1915,7 +1902,6 @@ QByteArray MedianXLOfflineTools::statisticBytes()
         quint8 aByte = result.mid(startPos, 8).toUShort(0, 2);
         resultBytes += aByte;
     }
-
     return resultBytes;
 }
 
@@ -1926,13 +1912,6 @@ void MedianXLOfflineTools::addStatisticBits(QString &bitsString, quint64 number,
 
 void MedianXLOfflineTools::clearItems(bool sharedStashPathChanged /*= true*/, bool hcStashPathChanged /*= true*/)
 {
-    //while (!_editableCharInfo.items.character.isEmpty())
-    //{
-    //    ItemInfo *item = _editableCharInfo.items.character.takeFirst();
-    //    while (!item->socketablesInfo.isEmpty())
-    //        delete item->socketablesInfo.takeFirst();
-    //    delete item;
-    //}
 	QMutableListIterator<ItemInfo *> itemIterator(_editableCharInfo.items.character);
 	while (itemIterator.hasNext())
 	{
@@ -1950,10 +1929,8 @@ void MedianXLOfflineTools::clearItems(bool sharedStashPathChanged /*= true*/, bo
 		default:
 			break;
 		}
-		//if (item->storage == Enums::ItemStorage::SharedStash && !sharedStashPathChanged || item->storage == Enums::ItemStorage::HCStash && !hcStashPathChanged)
-		//	continue;
+
 		qDeleteAll(item->socketablesInfo);
-		//item->socketablesInfo.clear(); // not really needed
 		delete item;
 		itemIterator.remove();
 	}

@@ -220,7 +220,9 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
 	{
 		QList<QAction *> actions;
 
-		QAction *actionHtml = new QAction("HTML", _itemsView), *actionBbCode = new QAction("BBCode", _itemsView);
+        QAction *actionHtml = new QAction("HTML", _itemsView), *actionBbCode = new QAction("BBCode", _itemsView);
+        connect(actionHtml, SIGNAL(triggered()), SLOT(exportHtml()));
+        connect(actionBbCode, SIGNAL(triggered()), SLOT(exportBbCode()));
 		QMenu *menuExport = new QMenu(tr("Export as"), _itemsView);
 		menuExport->addActions(QList<QAction *>() << actionHtml << actionBbCode);
 		actions << menuExport->menuAction();
@@ -259,7 +261,13 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
 		//	actions << actionMakeNonEthereal;
 		//}
 
-		// TODO: add "Remove Mystic Orbs"
+		if (_propertiesWidget->hasMysticOrbs())
+        {
+            QAction *actionRemoveMO = new QAction(tr("Remove Mystic Orbs"), _itemsView);
+            connect(actionRemoveMO, SIGNAL(triggered()), _propertiesWidget, SLOT(removeAllMysticOrbs()));
+            actions << actionRemoveMO;
+		}
+
 		QAction *actionDelete = new QAction(tr("Delete"), _itemsView);
         actionDelete->setShortcut(QKeySequence::Delete);
 		connect(actionDelete, SIGNAL(triggered()), SLOT(deleteItem()));
@@ -267,6 +275,16 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
 
 		QMenu::exec(actions, _itemsView->mapToGlobal(pos));
 	}
+}
+
+void ItemsPropertiesSplitter::exportHtml()
+{
+
+}
+
+void ItemsPropertiesSplitter::exportBbCode()
+{
+
 }
 
 void ItemsPropertiesSplitter::disenchantItem()

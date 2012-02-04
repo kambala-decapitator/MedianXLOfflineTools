@@ -24,30 +24,38 @@ class PropertiesViewerWidget : public QWidget
     Q_OBJECT
 
 public:
-    explicit PropertiesViewerWidget(/*ItemsList *allItems, */QWidget *parent = 0);
+    typedef QMap<int, ItemProperty> PropertiesMap;
+
+    explicit PropertiesViewerWidget(QWidget *parent = 0);
 
     void displayItemProperties(ItemInfo *item);
     void clear() { displayItemProperties(0); }
+    bool hasMysticOrbs() const { return _itemMysticOrbs.size() + _rwMysticOrbs.size() > 0; }
+
+public slots:
+    void removeAllMysticOrbs();
 
 private slots:
-    void removeAllMysticOrbs();
 	void currentItemTabChanged(int index);
 
 private:
     Ui::PropertiesViewerWidget ui;
     ItemInfo *_item;
-    QSet<int> _mysticOrbs;
+    QSet<int> _itemMysticOrbs, _rwMysticOrbs;
 
-    void setProperties(QTextEdit *textEdit, const QMap<int, ItemProperty> &properties, bool shouldClearText = true);
+    void displayProperties(QTextEdit *textEdit, const PropertiesMap &properties, bool shouldClearText = true);
     QString propertyDisplay(const ItemProperty &propDisplay, int propId);
     void renderItemDescription(QTextEdit *textEdit, QString *description = 0);
 
-    int indexOfPropertyValue(int id);
-    void modifyMysticOrbProperty(int id, int decrement);
-	int totalMysticOrbValue(int moCode);
+    void removeMysticOrbsFromProperties(const QSet<int> &mysticOrbs, PropertiesMultiMap *props);
+    int indexOfPropertyValue(int id, PropertiesMultiMap *props);
+    void modifyMysticOrbProperty(int id, int decrement, PropertiesMultiMap *props);
+	int totalMysticOrbValue(int moCode, PropertiesMap *props);
     PropertiesMultiMap *propertiesWithCode(int code);
 
-    void addProperties(QMap<int, ItemProperty> *mutableProps, const QMap<int, ItemProperty> &propsToAdd);
+    void addProperties(PropertiesMap *mutableProps, const PropertiesMap &propsToAdd);
+    void collectMysticOrbsDataFromProps(QSet<int> *moSet, const PropertiesMap &props, QTextEdit *textEdit, bool isClassCharm_);
+    bool isClassCharm();
 };
 
 #endif // PROPERTIESVIEWERWIDGET_H

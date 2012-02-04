@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>330</width>
+    <width>279</width>
     <height>406</height>
    </rect>
   </property>
@@ -23,7 +23,7 @@
       <enum>QTabWidget::Rounded</enum>
      </property>
      <property name="currentIndex">
-      <number>3</number>
+      <number>1</number>
      </property>
      <property name="usesScrollButtons">
       <bool>false</bool>
@@ -47,11 +47,11 @@
      </widget>
      <widget class="QWidget" name="tabWidgetPage2">
       <attribute name="title">
-       <string>Base / MO</string>
+       <string>Item / MO</string>
       </attribute>
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
-        <widget class="QTextEdit" name="baseAndMysticOrbsTextEdit">
+        <widget class="QTextEdit" name="itemAndMysticOrbsTextEdit">
          <property name="lineWrapMode">
           <enum>QTextEdit::NoWrap</enum>
          </property>
@@ -60,22 +60,15 @@
          </property>
         </widget>
        </item>
-       <item>
-        <widget class="QPushButton" name="removeAllMysticOrbsPushButton">
-         <property name="text">
-          <string>Remove all Mystic Orbs</string>
-         </property>
-        </widget>
-       </item>
       </layout>
      </widget>
      <widget class="QWidget" name="tabWidgetPage3">
       <attribute name="title">
-       <string>Runeword</string>
+       <string>RW / MO</string>
       </attribute>
       <layout class="QHBoxLayout" name="horizontalLayout_4">
        <item>
-        <widget class="QTextEdit" name="runewordTextEdit">
+        <widget class="QTextEdit" name="rwAndMysticOrbsTextEdit">
          <property name="lineWrapMode">
           <enum>QTextEdit::NoWrap</enum>
          </property>

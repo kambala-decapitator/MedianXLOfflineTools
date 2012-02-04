@@ -1,5 +1,3 @@
-- show UMO properties and color
-- try unMO UMOs (get UMO props from cubemain)
 - finish search dialog
 - merc items
 - based on blessed life skill level
@@ -52,3 +50,5 @@ v0.3:
 - drag & drop
 - create plugy stashes
 - nice display of property 'Adds x-y ... damage'
+- show UMO properties and color
+- try unMO UMOs

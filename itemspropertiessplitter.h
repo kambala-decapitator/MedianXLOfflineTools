@@ -40,6 +40,8 @@ private slots:
     void right10Clicked();
 
 	void showContextMenu(const QPoint &pos);
+    void exportHtml();
+    void exportBbCode();
 	void disenchantItem();
 	//void unsocketItem();
 	//void makeNonEthereal();

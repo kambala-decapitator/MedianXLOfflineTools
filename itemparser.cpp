@@ -13,6 +13,7 @@
 
 const QByteArray ItemParser::itemHeader("JM");
 const QByteArray ItemParser::plugyPageHeader("ST");
+const QString ItemParser::enhancedDamageFormat = tr("+%1% Enhanced Damage");
 
 ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &bytes)
 {
@@ -254,7 +255,7 @@ PropertiesMultiMap ItemParser::parseItemProperties(ReverseBitReader &bitReader, 
             {
                 qint16 minEnhDamage = bitReader.readNumber(prop.bits) - prop.add;
                 //bitReader.skip(prop.bits);
-                propToAdd.displayString = tr("+%1% Enhanced Damage").arg(propToAdd.value);
+                propToAdd.displayString = enhancedDamageFormat.arg(propToAdd.value);
                 if (minEnhDamage != propToAdd.value)
                     propToAdd.displayString += " " + tr("[min ed %1 != max ed %2]").arg(minEnhDamage).arg(propToAdd.value);
             }

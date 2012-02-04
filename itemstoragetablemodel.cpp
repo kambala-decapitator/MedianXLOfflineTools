@@ -5,7 +5,6 @@
 #include <QFile>
 
 #include <QPixmap>
-#include <QImage>
 #include <QPainter>
 
 
@@ -68,12 +67,11 @@ QVariant ItemStorageTableModel::data(const QModelIndex &index, int role) const
 					pixmap = transparent;
 				}
 				return pixmap;
-				break;
 			}
 		case Qt::ToolTipRole:
 			return ItemDataBase::completeItemName(item, false);
-		case Qt::StatusTipRole:
-			return ItemDataBase::completeItemName(item, false).replace("\n", " ");
+		//case Qt::StatusTipRole:
+		//	return ItemDataBase::completeItemName(item, false).replace("\n", " ");
 		case Qt::ForegroundRole:
 			return Qt::white;
 		}

@@ -218,16 +218,20 @@ public:
     enum
     {
         EnhancedDefence = 16,
-        EnhancedDamage = 17,
+        EnhancedDamage,
+        MinimumDamage = 21,
+        MaximumDamage,
+        MinimumDamageSecondary,
+        MaximumDamageSecondary,
         Defence = 31,
         Durability = 72,
-        DurabilityMax = 73,
+        DurabilityMax,
         Requirements = 91,
         RequiredLevel = 92,
         DamageToUndead = 122,
         Indestructible = 152,
 		DefenceBoCL = 214,
-		EnhancedDefenceBoCL = 215,
+		EnhancedDefenceBoCL,
         End = 511
     };
 };
