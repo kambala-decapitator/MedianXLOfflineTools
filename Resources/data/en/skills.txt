@@ -176,7 +176,7 @@
 174		-1
 175		-1
 176		-1
-177		-1
+177	Prowl	-1
 178		-1
 179		-1
 180		-1
@@ -316,7 +316,7 @@
 314	Magic Missiles	0
 315	Bacchanalia	0
 316	Takedown	0
-317	Prowl	0
+317	Hyena Strike	0
 318	Pounce	0
 319	Lioness	0
 320	Great Hunt	0
@@ -649,7 +649,7 @@
 647	Call Treewarden	-1
 648	Graveyard	2
 649	Blessed Life	3
-650	Arcane Fury	1
+650	Arcane Fury	-1
 651		-1
 652	Golden Calf	-1
 653		-1
@@ -659,7 +659,7 @@
 657		-1
 658		-1
 659		-1
-660	Suckers Aura	-1
+660	Force Blast	1
 661		-1
 662		-1
 663		-1

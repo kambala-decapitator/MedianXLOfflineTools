@@ -234,6 +234,7 @@
 277	0	7					\orange;Area Effect Damage\white;	\orange;Area Effect Damage\white;		3	204	0				17	item_warpskillonattack
 278	50	9					Strength Factor to Spell Damage	Strength Factor to Spell Damage		1	198	1					str_factor
 279	0	8					Lion Stance Damage Bonus	Lion Stance Damage Bonus		2	114	2					lion_stance_syn
+280	0	10															greathunt_buff
 281	0	8					Nova Charge Scatter Increased by	Nova Charge Scatter Increased by		2	104	2					item_supernova_synergy
 282	0	7					%d%% Chance to cast level %d %s when you Take Damage	%d%% Chance to cast level %d %s when you Take Damage		15	160					17	item_skillondamaged
 283	0	7					%d%% Chance to cast level %d %s when Attacked	%d%% Chance to cast level %d %s when Attacked		15	160					17	item_skillongetmeleed

@@ -34,9 +34,9 @@ void PropertiesViewerWidget::displayItemProperties(ItemInfo *item)
     {
         ui.tabWidget->setTabEnabled(2, true);
 
-        setProperties(ui.runewordTextEdit, item->rwProps);
-        ui.runewordTextEdit->moveCursor(QTextCursor::Start);
-        ui.runewordTextEdit->insertHtml(htmlStringFromDiabloColorString(item->rwName, Gold) + "<br>");
+        ui.runewordTextEdit->clear();
+        ui.runewordTextEdit->append(htmlStringFromDiabloColorString(item->rwName, Gold));
+        setProperties(ui.runewordTextEdit, item->rwProps, false);
         renderItemDescription(ui.runewordTextEdit);
         
         addProperties(&allProps, item->rwProps);
@@ -108,7 +108,7 @@ void PropertiesViewerWidget::displayItemProperties(ItemInfo *item)
                 const QList<SocketableItemInfo::Properties> &socketableProps = socketableItemInfo.properties[static_cast<SocketableItemInfo::PropertyType>(index)];
                 foreach (const SocketableItemInfo::Properties &prop, socketableProps)
                 {
-                    if (prop.code == 17) // ED
+                    if (prop.code == Enums::ItemProperties::EnhancedDamage)
                         props[prop.code].displayString = tr("+%1% Enhanced Damage").arg(prop.value);
                     if (prop.code != -1)
                         props[prop.code] = ItemProperty(prop.value, prop.param);
@@ -205,7 +205,7 @@ void PropertiesViewerWidget::displayItemProperties(ItemInfo *item)
 
     // add '+50% damage to undead' if item type matches
     bool shouldAddDamageToUndeadInTheBottom = false;
-    if (ItemParser::itemTypeInheritFromTypes(itemBase.typeString, damageToUndeadTypes))
+    if (ItemParser::itemTypeInheritsFromTypes(itemBase.typeString, damageToUndeadTypes))
     {
         if (allProps.contains(Enums::ItemProperties::DamageToUndead))
             allProps[Enums::ItemProperties::DamageToUndead].value += 50;
@@ -399,7 +399,6 @@ void PropertiesViewerWidget::removeAllMysticOrbs()
     // decrease rlvl
     modifyMysticOrbProperty(Enums::ItemProperties::RequiredLevel, moNumberInItemProps * 2);
     modifyMysticOrbProperty(Enums::ItemProperties::RequiredLevel, moNumberInRwProps * 2);
-    qDebug("---------");
 
     // align
     int extraBits = _item->bitString.length() % 8;
@@ -418,27 +417,23 @@ void PropertiesViewerWidget::removeAllMysticOrbs()
 
 int PropertiesViewerWidget::indexOfPropertyValue(int id)
 {
-    bool isMaxEnhDamageProp = id == 17;
+    bool isMaxEnhDamageProp = id == Enums::ItemProperties::EnhancedDamage;
     const ItemPropertyTxt &property = ItemDataBase::Properties()->value(id);
     qulonglong value = propertiesWithCode(id)->value(id).value + property.add;
-    qDebug() << "searching for property" << id << property.descPositive << "with value" << value << "actual value" << value - property.add;
     if (isMaxEnhDamageProp)
     {
         qulonglong oldValue = value;
         value <<= property.bits;
-        qDebug() << "value after shift" << value;
         value += oldValue;
-        qDebug() << "value after add" << value;
     }
+
     int idIndex = -1, valueIndex = -1, bits = property.bits * (1 + isMaxEnhDamageProp);
     do
     {
         if ((idIndex = _item->bitString.indexOf(binaryStringFromNumber(id, false, Enums::CharacterStats::StatCodeLength), idIndex + 1)) == -1)
-            break;
+            return -1;
         valueIndex = idIndex - property.saveParamBits - bits;
     } while (_item->bitString.mid(valueIndex, bits).toULongLong(0, 2) != value);
-    if (idIndex == -1)
-        qDebug("not found");
     return valueIndex;
 }
 
@@ -448,19 +443,26 @@ void PropertiesViewerWidget::modifyMysticOrbProperty(int id, int decrement)
     if (valueIndex <= -1)
         return;
 
+    // ED value is stored as a sequence of 2 same values
+    bool isMaxEnhDamageProp = id == Enums::ItemProperties::EnhancedDamage;
     const ItemPropertyTxt &propertyTxt = ItemDataBase::Properties()->value(id);
+    int bitsLength = (1 + isMaxEnhDamageProp) * propertyTxt.bits;
+
     PropertiesMultiMap *props = propertiesWithCode(id);
 	ItemProperty prop = props->value(id);
     prop.value -= decrement;
     if (prop.value)
 	{
-        _item->bitString.replace(valueIndex, propertyTxt.bits, binaryStringFromNumber(prop.value + propertyTxt.add, false, propertyTxt.bits)); // place modified value
+        QString newBits = binaryStringFromNumber(prop.value + propertyTxt.add, false, propertyTxt.bits); // it's not a mistake that I'm not using bitsLength here
+        if (isMaxEnhDamageProp)
+            newBits += newBits;
+        _item->bitString.replace(valueIndex, bitsLength, newBits); // place modified value
 		props->replace(id, prop);
 	}
     else
     {
+        _item->bitString.remove(valueIndex, bitsLength + propertyTxt.saveParamBits + Enums::CharacterStats::StatCodeLength);
         props->remove(id);
-        _item->bitString.remove(valueIndex, propertyTxt.bits + propertyTxt.saveParamBits + Enums::CharacterStats::StatCodeLength);
     }
 }
 
@@ -480,7 +482,12 @@ void PropertiesViewerWidget::addProperties(QMap<int, ItemProperty> *mutableProps
     for (QMap<int, ItemProperty>::const_iterator iter = propsToAdd.constBegin(); iter != propsToAdd.constEnd(); ++iter)
     {
         if (mutableProps->contains(iter.key()))
-            (*mutableProps)[iter.key()].value += iter.value().value;
+        {
+            ItemProperty &prop = (*mutableProps)[iter.key()];
+            prop.value += iter.value().value;
+            if (iter.key() == Enums::ItemProperties::EnhancedDamage)
+                prop.displayString = tr("+%1% Enhanced Damage").arg(prop.value);
+        }
         else
             mutableProps->insert(iter.key(), iter.value());
     }

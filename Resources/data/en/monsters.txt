@@ -1815,5 +1815,5 @@
 1817	Sleeping Cave Snapper
 1818	\yellow;Fetish Rocketeer
 1819	\yellow;Silverbolt
-1820	Light Serpent
+1820	Draconic Emissary
 1821	Blur

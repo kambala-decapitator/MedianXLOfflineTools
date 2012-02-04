@@ -1,14 +1,10 @@
-- fix removing ED MO (check limit of 350% in order not to subtract more than needed)
-- stack ED from RW (Superior Naginata on page 90)
 - show UMO properties and color
 - try unMO UMOs (get UMO props from cubemain)
 - finish search dialog
 - merc items
-- automod x% damage to undead (e.g. hand of god on shared stash page 38) - see class info in itemparser.cpp:133
 - based on blessed life skill level
-- pearl of wisdom color
-- shrines color
-- already upgraded - failed/succeeded
+- pearl of wisdom color, shrines color
+- already upgraded - failed/succeeded (if possible)
 - insertred unique jewel names (check)
 - move most functionality from splitter to tableview
 - search and fix all TODOs in code

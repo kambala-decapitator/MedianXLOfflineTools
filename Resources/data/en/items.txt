@@ -2083,7 +2083,7 @@ O0+	\orange;what it seems to be \nMagic is not always \nEnchanted Shrine (10 Cha
 &09	\orange;Mystic Orb	1	1	2	0	0	pearl4	asaa		-1
 P9+	\orange;refreshed \nDrink and be \nDivine Shrine (1 Charge)	1	2	2	0	0	jbscross	thng		-1
 &62	\orange;Mystic Orb	1	1	2	0	0	pearl2	asaa		-1
-zen	Thanks for playing\nmodsbylaz.hugelaser.com\nMedian XL 2012 Edition	1	2	2	0	0	invjbi	woot		-1
+zen	Thanks for playing\nmodsbylaz.hugelaser.com\nMedian XL 2012 v004	1	2	2	0	0	invjbi	woot		-1
 sku	\purple;Skull	1	1	2	0	12	invsku	gemz		-1
 &32	\orange;Mystic Orb	1	1	2	0	0	pearl2	asaa		-1
 ne6	Mummified Trophy\nAmulet	1	1	2	0	0	invamu	amul		-1

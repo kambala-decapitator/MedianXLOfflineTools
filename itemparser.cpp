@@ -213,7 +213,7 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
 					for (; iter != ItemDataBase::RW()->end() && iter.key() == rwKey; ++iter)
 					{
                         const RunewordInfo &rwInfo = iter.value();
-						if (itemTypeInheritFromTypes(itemBase.typeString, rwInfo.allowedItemTypes))
+						if (itemTypeInheritsFromTypes(itemBase.typeString, rwInfo.allowedItemTypes))
 						{
 							item->rwName = rwInfo.name;
 							break;
@@ -250,7 +250,7 @@ PropertiesMultiMap ItemParser::parseItemProperties(ReverseBitReader &bitReader, 
             ItemProperty propToAdd;
             propToAdd.param = prop.saveParamBits ? bitReader.readNumber(prop.saveParamBits) : 0;
             propToAdd.value = bitReader.readNumber(prop.bits) - prop.add;
-            if (id == 17) // max edamage%
+            if (id == Enums::ItemProperties::EnhancedDamage)
             {
                 qint16 minEnhDamage = bitReader.readNumber(prop.bits) - prop.add;
                 //bitReader.skip(prop.bits);
@@ -435,7 +435,7 @@ bool ItemParser::canStoreItemAt(quint8 row, quint8 col, const QByteArray &storeI
 	return ok;
 }
 
-bool ItemParser::itemTypeInheritFromTypes(const QByteArray &itemType, const QList<QByteArray> &allowedItemTypes)
+bool ItemParser::itemTypeInheritsFromTypes(const QByteArray &itemType, const QList<QByteArray> &allowedItemTypes)
 {
     return itemTypesInheritFromTypes(QList<QByteArray>() << itemType, allowedItemTypes);
 }

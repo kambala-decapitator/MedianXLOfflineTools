@@ -218,6 +218,7 @@ public:
     enum
     {
         EnhancedDefence = 16,
+        EnhancedDamage = 17,
         Defence = 31,
         Durability = 72,
         DurabilityMax = 73,

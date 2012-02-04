@@ -229,9 +229,7 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
 		separator->setSeparator(true);
 		actions << separator;
 
-		//QByteArray typeString = ItemDataBase::Items()->value(item->itemType).typeString;
-        //bool isCharm = typeString == "grtz" || typeString.startsWith("ara"), isSummonBook = typeString == "summ";
-		if (item->quality == Enums::ItemQuality::Set || item->quality == Enums::ItemQuality::Unique && !ItemParser::itemTypeInheritFromTypes(ItemDataBase::Items()->value(item->itemType).typeString, charmType))
+		if (item->quality == Enums::ItemQuality::Set || item->quality == Enums::ItemQuality::Unique && !ItemParser::itemTypeInheritsFromTypes(ItemDataBase::Items()->value(item->itemType).typeString, charmType))
 		{
 			QAction *actionShards = new QAction(QIcon(ResourcePathManager::pathForImageName("invfary4")), tr("Arcane Shards"), _itemsView);
 			actionShards->setObjectName("shards");
