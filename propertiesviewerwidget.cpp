@@ -9,6 +9,7 @@
 #include <QSettings>
 
 static const QString baseFormat("<html><body bgcolor = \"black\"><table><tr><td align = \"center\" width = \"100%\"><font color = \"#ffffff\">%1</font></td></tr></table></body></html>");
+static const QString htmlLine(htmlStringFromDiabloColorString("<hr>"));//(htmlStringFromDiabloColorString("----------"));
 static const QList<QByteArray> damageToUndeadTypes = QList<QByteArray>() << "mace" << "hamm" << "staf" << "scep" << "club" << "wand";
 
 
@@ -18,22 +19,42 @@ PropertiesViewerWidget::PropertiesViewerWidget(QWidget *parent) : QWidget(parent
 
     connect(ui.removeAllMysticOrbsPushButton, SIGNAL(clicked()), SLOT(removeAllMysticOrbs()));
 	connect(ui.tabWidget, SIGNAL(currentChanged(int)), SLOT(currentItemTabChanged(int)));
+
+    ui.tabWidget->setCurrentIndex(0);
 }
 
 void PropertiesViewerWidget::displayItemProperties(ItemInfo *item)
 {
-    for (int i = 1; i < ui.tabWidget->count(); ++i)
-        ui.tabWidget->setTabEnabled(i, false);
-
     ui.allTextEdit->clear();
+    ui.tabWidget->setEnabled(item != 0);
     if (!(_item = item))
+    {
+        ui.baseAndMysticOrbsTextEdit->clear();
+        ui.runewordTextEdit->clear();
+        ui.socketablesTextEdit->clear();
         return;
+    }
+
+    ui.tabWidget->setTabEnabled(0, true);
+    ui.tabWidget->setTabEnabled(1, true);
+    ui.tabWidget->setTabEnabled(2, item->isRW);
+    ui.tabWidget->setTabEnabled(3, item->socketablesInfo.size() > 0);
+
+    QMap<int, ItemProperty> itemPropsWithoutMO = item->props;
+    QMap<int, ItemProperty>::iterator iter = itemPropsWithoutMO.begin();
+    while (iter != itemPropsWithoutMO.end())
+    {
+        if (ItemDataBase::MysticOrbs()->contains(iter.key()))
+            iter = itemPropsWithoutMO.erase(iter);
+        else
+            ++iter;
+    }
+    setProperties(ui.baseAndMysticOrbsTextEdit, itemPropsWithoutMO);
+    ui.baseAndMysticOrbsTextEdit->append(htmlLine);
 
     QMap<int, ItemProperty> allProps = item->props;
     if (item->isRW)
     {
-        ui.tabWidget->setTabEnabled(2, true);
-
         ui.runewordTextEdit->clear();
         ui.runewordTextEdit->append(htmlStringFromDiabloColorString(item->rwName, Gold));
         setProperties(ui.runewordTextEdit, item->rwProps, false);
@@ -42,19 +63,17 @@ void PropertiesViewerWidget::displayItemProperties(ItemInfo *item)
         addProperties(&allProps, item->rwProps);
     }
 
-    ui.mysticOrbsTextEdit->clear();
     _mysticOrbs.clear();
 
     bool isClassCharm = ItemDataBase::Items()->value(_item->itemType).typeString.startsWith("ara");
-    QMap<int, ItemProperty>::iterator iter = allProps.begin();
+    iter = allProps.begin();
     while (iter != allProps.end())
     {
         if (ItemDataBase::MysticOrbs()->contains(iter.key()))
         {
             if (!isClassCharm)
             {
-                ui.tabWidget->setTabEnabled(1, true);
-                ui.mysticOrbsTextEdit->append(QString("%1 = %2").arg(iter.value().displayString).arg(totalMysticOrbValue(iter.key())));
+                ui.baseAndMysticOrbsTextEdit->append(QString("%1 = %2").arg(iter.value().displayString).arg(totalMysticOrbValue(iter.key())));
                 _mysticOrbs += iter.key();
                 iter = allProps.erase(iter);
             }
@@ -88,14 +107,13 @@ void PropertiesViewerWidget::displayItemProperties(ItemInfo *item)
         else
             ++iter;
     }
-    renderItemDescription(ui.mysticOrbsTextEdit);
+    renderItemDescription(ui.baseAndMysticOrbsTextEdit);
     ui.removeAllMysticOrbsPushButton->setEnabled(_mysticOrbs.size() > 0);
 
     const ItemBase &itemBase = ItemDataBase::Items()->value(item->itemType);
     ui.socketablesTextEdit->clear();
     if (item->socketablesInfo.size())
     {
-        ui.tabWidget->setTabEnabled(3, true);
         foreach (ItemInfo *socketableItem, item->socketablesInfo)
         {
             ui.socketablesTextEdit->append(ItemDataBase::completeItemName(socketableItem, true));
@@ -119,7 +137,7 @@ void PropertiesViewerWidget::displayItemProperties(ItemInfo *item)
             setProperties(ui.socketablesTextEdit, props, false);
             addProperties(&allProps, props);
 
-            ui.socketablesTextEdit->append(htmlStringFromDiabloColorString("----------"));
+            ui.socketablesTextEdit->append(htmlLine);
         }
         ui.socketablesTextEdit->undo(); // remove last separator
         renderItemDescription(ui.socketablesTextEdit);
@@ -248,6 +266,11 @@ void PropertiesViewerWidget::displayItemProperties(ItemInfo *item)
     }
 
     renderItemDescription(ui.allTextEdit, &itemDescription);
+
+    // awkward way to force center align
+    QSize originalSize = size();
+    resize(originalSize.width() + 1, originalSize.height());
+    resize(originalSize);
 }
 
 void PropertiesViewerWidget::setProperties(QTextEdit *textEdit, const QMap<int, ItemProperty> &properties, bool shouldClearText)
@@ -380,6 +403,7 @@ void PropertiesViewerWidget::renderItemDescription(QTextEdit *textEdit, QString 
 
 void PropertiesViewerWidget::removeAllMysticOrbs()
 {
+    // TODO: remove MO from rw props too
     int moNumberInItemProps = 0, moNumberInRwProps = 0;
     foreach (int moCode, _mysticOrbs)
     {

@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>293</width>
+    <width>330</width>
     <height>406</height>
    </rect>
   </property>
@@ -28,7 +28,7 @@
      <property name="usesScrollButtons">
       <bool>false</bool>
      </property>
-     <widget class="QWidget" name="tabWidgetPage1" native="true">
+     <widget class="QWidget" name="tabWidgetPage1">
       <attribute name="title">
        <string>All</string>
       </attribute>
@@ -45,13 +45,13 @@
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="tabWidgetPage2" native="true">
+     <widget class="QWidget" name="tabWidgetPage2">
       <attribute name="title">
-       <string>Mystic Orbs</string>
+       <string>Base / MO</string>
       </attribute>
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
-        <widget class="QTextEdit" name="mysticOrbsTextEdit">
+        <widget class="QTextEdit" name="baseAndMysticOrbsTextEdit">
          <property name="lineWrapMode">
           <enum>QTextEdit::NoWrap</enum>
          </property>
@@ -69,7 +69,7 @@
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="tabWidgetPage3" native="true">
+     <widget class="QWidget" name="tabWidgetPage3">
       <attribute name="title">
        <string>Runeword</string>
       </attribute>
@@ -86,7 +86,7 @@
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="tabWidgetPage4" native="true">
+     <widget class="QWidget" name="tabWidgetPage4">
       <attribute name="title">
        <string>Socketables</string>
       </attribute>
