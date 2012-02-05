@@ -163,7 +163,6 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
 				for (int i = 0; i < 5; i++)
 					hasSetLists[i] = bitReader.readBool(); // should always be false for MXL
 
-            bool iskhalim = item->itemType == "qf2";
 			item->props = parseItemProperties(bitReader, &ok);
 			if (!ok)
 			{
@@ -171,9 +170,7 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
 				item->props.insert(1, ItemProperty(tr("Error parsing item properties (ok == 0), please report!")));
 				searchEndOffset = nextItemOffset + 1;
 				continue;
-			}
-			//else if (item->props.size())
-                //;
+            }
 
             //for (int i = 0; i < 5; ++i)
             //    if (hasSetLists[i])
@@ -188,9 +185,7 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
 					item->rwProps.insert(1, ItemProperty(tr("Error parsing RW properties, please report!")));
 					searchEndOffset = nextItemOffset + 1;
 					continue;
-				}
-				//else if (item->rwProps.size())
-					//;
+                }
 			}
 
 			// parse all socketables

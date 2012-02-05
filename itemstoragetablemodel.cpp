@@ -48,7 +48,7 @@ QVariant ItemStorageTableModel::data(const QModelIndex &index, int role) const
 					// apply transparency: http://www.developer.nokia.com/Community/Wiki/CS001515_-_Transparent_QPixmap_picture
 
 					// Create new picture for transparent
-					QPixmap transparent(pixmap.size());
+                    QPixmap transparent(pixmap.size());
 
 					// Do transparency
 					transparent.fill(Qt::transparent);
@@ -56,11 +56,11 @@ QVariant ItemStorageTableModel::data(const QModelIndex &index, int role) const
 					p.setCompositionMode(QPainter::CompositionMode_Source);
 					p.drawPixmap(0, 0, pixmap);
 					p.setCompositionMode(QPainter::CompositionMode_DestinationIn);
-					// Set transparency level to 150 (possible values are 0-255)
+                    // Set transparency level to 127 (possible values are 0-255)
 					// The alpha channel of a color specifies the transparency effect, 
 					// 0 represents a fully transparent color, while 255 represents 
 					// a fully opaque color.
-					p.fillRect(transparent.rect(), QColor(0, 0, 0, 127));
+                    p.fillRect(transparent.rect(), QColor(0, 0, 0, 127));
 					p.end();
 
 					// Set original picture's reference to new transparent one

@@ -32,11 +32,15 @@ public:
     void clear() { displayItemProperties(0); }
     bool hasMysticOrbs() const { return _itemMysticOrbs.size() + _rwMysticOrbs.size() > 0; }
 
+    const QString htmlLine;
+
 public slots:
     void removeAllMysticOrbs();
 
 private slots:
+#ifndef Q_WS_MACX
 	void currentItemTabChanged(int index);
+#endif
 
 private:
     Ui::PropertiesViewerWidget ui;

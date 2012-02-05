@@ -24,6 +24,8 @@ static const QList<QByteArray> charmType = QList<QByteArray>() << "char";
 ItemsPropertiesSplitter::ItemsPropertiesSplitter(ItemStorageTableView *itemsView, ItemStorageTableModel *itemsModel, bool shouldCreateNavigation, QWidget *parent)
     : QSplitter(Qt::Horizontal, parent), _itemsView(itemsView), _itemsModel(itemsModel)
 {
+    setHandleWidth(1);
+
 	_itemsView->setContextMenuPolicy(Qt::CustomContextMenu);
     _itemsView->setEditTriggers(QAbstractItemView::NoEditTriggers);
     _itemsView->setHorizontalScrollMode(QAbstractItemView::ScrollPerPixel);
@@ -57,14 +59,14 @@ ItemsPropertiesSplitter::ItemsPropertiesSplitter(ItemStorageTableView *itemsView
         _pageSpinBox->setPrefix(tr("Page #"));
         _pageSpinBox->setRange(1, (std::numeric_limits<quint32>::max)());
         _pageSpinBox->setValue(1);
-		_pageSpinBox->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
+        _pageSpinBox->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
 
         QHBoxLayout *hlayout = new QHBoxLayout;
         hlayout->addWidget(_left10Button);
         hlayout->addWidget(_leftButton);
-		//hlayout->addStretch();
-		hlayout->addWidget(_pageSpinBox);
-		//hlayout->addStretch();
+        //hlayout->addStretch();
+        hlayout->addWidget(_pageSpinBox);
+        //hlayout->addStretch();
         hlayout->addWidget(_rightButton);
         hlayout->addWidget(_right10Button);
 
@@ -146,7 +148,7 @@ void ItemsPropertiesSplitter::setItems(const ItemsList &newItems)
     {
         _lastNotEmptyPage = _allItems.size() ? _allItems.last()->plugyPage : 0;
 		_pageSpinBox->setSuffix(QString(" / %1").arg(_lastNotEmptyPage));
-		_pageSpinBox->setMaximum(_lastNotEmptyPage);
+        _pageSpinBox->setMaximum(_lastNotEmptyPage);
         updateItemsForCurrentPage();
     }
     else

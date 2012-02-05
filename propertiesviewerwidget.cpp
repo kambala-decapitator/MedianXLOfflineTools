@@ -9,16 +9,19 @@
 #include <QSettings>
 
 static const QString baseFormat("<html><body bgcolor = \"black\"><div align = \"center\" style = \"color: #ffffff\">%1</div></body></html>");
-static const QString htmlLine(htmlStringFromDiabloColorString("<hr>"));//(htmlStringFromDiabloColorString("----------"));
 static const QList<QByteArray> damageToUndeadTypes = QList<QByteArray>() << "mace" << "hamm" << "staf" << "scep" << "club" << "wand";
 
 
-PropertiesViewerWidget::PropertiesViewerWidget(QWidget *parent) : QWidget(parent), _item(0)
+//const QString PropertiesViewerWidget::htmlLine(htmlStringFromDiabloColorString("<hr>"));//(htmlStringFromDiabloColorString("----------"));
+
+PropertiesViewerWidget::PropertiesViewerWidget(QWidget *parent) : QWidget(parent), _item(0), htmlLine(htmlStringFromDiabloColorString("<hr>"))//(htmlStringFromDiabloColorString("----------"))
 {
     ui.setupUi(this);
 
     //connect(ui.removeAllMysticOrbsPushButton, SIGNAL(clicked()), SLOT(removeAllMysticOrbs()));
+#ifndef Q_WS_MACX
 	connect(ui.tabWidget, SIGNAL(currentChanged(int)), SLOT(currentItemTabChanged(int)));
+#endif
 
     ui.tabWidget->setCurrentIndex(0); // set tab icons
 }
@@ -549,8 +552,10 @@ bool PropertiesViewerWidget::isClassCharm()
     return ItemDataBase::Items()->value(_item->itemType).typeString.startsWith("ara");
 }
 
+#ifndef Q_WS_MACX
 void PropertiesViewerWidget::currentItemTabChanged(int index)
 {
 	for (int i = 0; i < ui.tabWidget->count(); ++i)
 		ui.tabWidget->setTabIcon(i, QIcon(QString(":/PropertiesViewerWidget/Resources/icons/arrow_%1").arg(i == index ? "down" : "right")));
 }
+#endif
