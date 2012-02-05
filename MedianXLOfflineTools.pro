@@ -9,8 +9,8 @@ TEMPLATE = app
 VERSION = 0.2
 
 
-SOURCES += main.cpp\
-        medianxlofflinetools.cpp \
+SOURCES += main.cpp \
+	medianxlofflinetools.cpp \
     resurrectpenaltydialog.cpp \
     qd2charrenamer.cpp \
     enums.cpp \
@@ -71,6 +71,7 @@ macx {
     }
 }
 win32 {
+	# RC_FILE = Resources/win/icon.rc
 	# LIBS += "c:/Program Files/Microsoft SDKs/Windows/v7.0A/Lib/shell32.lib"
 }
 
