@@ -1,5 +1,6 @@
 #include "finditemsdialog.h"
 #include "itemdatabase.h"
+#include "findresultstreeview.h"
 
 #include <QGridLayout>
 #include <QVBoxLayout>
@@ -19,11 +20,13 @@ FindItemsDialog::FindItemsDialog(QWidget *parent) : QDialog(parent), _searchPerf
 	checkboxGrid->addWidget(ui.exactMatchCheckBox, 0, 1);
 	checkboxGrid->addWidget(ui.wrapAroundCheckBox, 1, 0);
 	checkboxGrid->addWidget(ui.regexCheckBox, 1, 1);
+    checkboxGrid->addWidget(ui.searchPropsCheckBox, 2, 0);
 
 	QVBoxLayout *vbox = new QVBoxLayout;
 	vbox->addWidget(ui.nextButton);
 	vbox->addWidget(ui.previousButton);
 	vbox->addWidget(ui.searchResultsButton);
+    vbox->addStretch();
 	vbox->addWidget(ui.closeButton);
 
 	QGridLayout *mainGrid = new QGridLayout(this);
@@ -116,7 +119,9 @@ void FindItemsDialog::findPrevious()
 
 void FindItemsDialog::showResults()
 {
-
+    // TODO: make it show (add as a child to QDialog)
+    FindResultsTreeView *treeView = new FindResultsTreeView(this);
+    treeView->show();
 }
 
 void FindItemsDialog::searchTextChanged()
@@ -179,10 +184,10 @@ void FindItemsDialog::loadSettings()
 	restoreGeometry(settings.value("geometry").toByteArray());
 	ui.searchComboBox->addItems(settings.value("searchHistory").toStringList());
 	ui.caseSensitiveCheckBox->setChecked(settings.value("caseSensitive").toBool());
-	ui.exactMatchCheckBox->setChecked(settings.value("exactMatch").toBool());
+    ui.exactMatchCheckBox->setChecked(settings.value("exactMatch").toBool());
+    ui.wrapAroundCheckBox->setChecked(settings.value("wrapAround", true).toBool());
 	ui.regexCheckBox->setChecked(settings.value("regex").toBool());
-	if (settings.contains("wrapAround"))
-		ui.wrapAroundCheckBox->setChecked(settings.value("wrapAround").toBool());
+    ui.searchPropsCheckBox->setChecked(settings.value("searchProps").toBool());
 	settings.endGroup();
 }
 
@@ -197,15 +202,17 @@ void FindItemsDialog::saveSettings()
 	settings.setValue("geometry", saveGeometry());
 	settings.setValue("searchHistory", history);
 	settings.setValue("caseSensitive", ui.caseSensitiveCheckBox->isChecked());
-	settings.setValue("exactMatch", ui.exactMatchCheckBox->isChecked());
-	settings.setValue("regex", ui.regexCheckBox->isChecked());
-	settings.setValue("wrapAround", ui.wrapAroundCheckBox->isChecked());
+    settings.setValue("exactMatch", ui.exactMatchCheckBox->isChecked());
+    settings.setValue("wrapAround", ui.wrapAroundCheckBox->isChecked());
+    settings.setValue("regex", ui.regexCheckBox->isChecked());
+    settings.setValue("searchProps", ui.searchPropsCheckBox->isChecked());
 	settings.endGroup();
 }
 
 void FindItemsDialog::show()
 {
 	QDialog::show();
+
 	if (ui.searchComboBox->currentIndex() == -1 || ui.searchComboBox->currentText().isEmpty())
 		ui.searchComboBox->setCurrentIndex(0);
 }

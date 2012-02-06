@@ -12,8 +12,6 @@ static const QString baseFormat("<html><body bgcolor = \"black\"><div align = \"
 static const QList<QByteArray> damageToUndeadTypes = QList<QByteArray>() << "mace" << "hamm" << "staf" << "scep" << "club" << "wand";
 
 
-//const QString PropertiesViewerWidget::htmlLine(htmlStringFromDiabloColorString("<hr>"));//(htmlStringFromDiabloColorString("----------"));
-
 PropertiesViewerWidget::PropertiesViewerWidget(QWidget *parent) : QWidget(parent), _item(0), htmlLine(htmlStringFromDiabloColorString("<hr>"))//(htmlStringFromDiabloColorString("----------"))
 {
     ui.setupUi(this);
@@ -339,7 +337,7 @@ QString PropertiesViewerWidget::propertyDisplay(const ItemProperty &propDisplay,
 
     const ItemPropertyTxt &prop = ItemDataBase::Properties()->value(propId);
     QString description = value < 0 ? prop.descNegative : prop.descPositive, result;
-    if (prop.descStringAdd.contains(tr("Based on Character Level")))
+    if (prop.descStringAdd.contains(tr("Based on Character Level", "translate only if Median XL is translated into your language!")))
         value = (value * *ItemDataBase::clvl) / 32;
 
     char valueStringSigned[10];

@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>381</width>
-    <height>130</height>
+    <height>138</height>
    </rect>
   </property>
   <widget class="QComboBox" name="searchComboBox">
@@ -134,8 +134,8 @@
   <widget class="QPushButton" name="closeButton">
    <property name="geometry">
     <rect>
-     <x>261</x>
-     <y>98</y>
+     <x>260</x>
+     <y>100</y>
      <width>75</width>
      <height>23</height>
     </rect>
@@ -175,6 +175,22 @@
     <bool>true</bool>
    </property>
    <property name="flat">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="searchPropsCheckBox">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>110</y>
+     <width>119</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Search in properties</string>
+   </property>
+   <property name="checked">
     <bool>false</bool>
    </property>
   </widget>

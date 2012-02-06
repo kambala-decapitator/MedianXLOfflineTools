@@ -22,7 +22,6 @@ public:
 
     virtual ItemInfo *itemAt(const QModelIndex &modelIndex) const { return _itemsHash[qMakePair(modelIndex.row(), modelIndex.column())]; }
     void setItems(const ItemsList &newItems);
-	//void itemChanged(ItemInfo *item) { emit dataChanged(index(item->row, item->column), index(item->row, item->column)); }
 
 private:
     int _rows;
