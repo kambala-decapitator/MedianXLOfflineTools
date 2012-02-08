@@ -10,7 +10,7 @@ VERSION = 0.2
 
 
 SOURCES += main.cpp \
-	medianxlofflinetools.cpp \
+    medianxlofflinetools.cpp \
     resurrectpenaltydialog.cpp \
     qd2charrenamer.cpp \
     enums.cpp \
@@ -21,7 +21,7 @@ SOURCES += main.cpp \
     itemstoragetableview.cpp \
     itemspropertiessplitter.cpp \
     helpers.cpp \
-	finditemsdialog.cpp \
+    finditemsdialog.cpp \
     reversebitwriter.cpp \
     reversebitreader.cpp \
     itemparser.cpp
@@ -39,18 +39,18 @@ HEADERS  += medianxlofflinetools.h \
     itemstoragetableview.h \
     itemspropertiessplitter.h \
     helpers.h \
-	finditemsdialog.h \
+    finditemsdialog.h \
     languagemanager.hpp \
     reversebitwriter.h \
     reversebitreader.h \
     itemparser.h \
-	resourcepathmanager.hpp
+    resourcepathmanager.hpp
 
 FORMS    += medianxlofflinetools.ui \
     resurrectpenaltydialog.ui \
     qd2charrenamer.ui \
     propertiesviewerwidget.ui \
-	finditemsdialog.ui
+    finditemsdialog.ui
 
 TRANSLATIONS += medianxlofflinetools_ru.ts
 
@@ -58,10 +58,10 @@ RESOURCES += medianxlofflinetools.qrc
 
 
 macx {
-	OTHER_FILES += Resources/mac/Info.plist
-	
-	ICON = Resources/mac/icon.icns
-	QMAKE_INFO_PLIST = Resources/mac/Info.plist
+    OTHER_FILES += Resources/mac/Info.plist
+    
+    ICON = Resources/mac/icon.icns
+    QMAKE_INFO_PLIST = Resources/mac/Info.plist
 
     CONFIG(release, debug|release) {
         message(release build)
@@ -71,8 +71,8 @@ macx {
     }
 }
 win32 {
-	# RC_FILE = Resources/win/icon.rc
-	# LIBS += "c:/Program Files/Microsoft SDKs/Windows/v7.0A/Lib/shell32.lib"
+    # RC_FILE = Resources/win/icon.rc
+    # LIBS += "c:/Program Files/Microsoft SDKs/Windows/v7.0A/Lib/shell32.lib"
 }
 
 # QMAKE_CXXFLAGS += -std=c++0x

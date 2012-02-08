@@ -58,20 +58,20 @@ MedianXLOfflineTools::MedianXLOfflineTools(QWidget *parent, Qt::WFlags flags) : 
     loadData();
     createLayout();
     loadSettings();
-	fillMaps();
-	connectSignals();
-	
-	ui.actionFindNext->setShortcut(QKeySequence::FindNext);
-	ui.actionFindPrevious->setShortcut(QKeySequence::FindPrevious);
+    fillMaps();
+    connectSignals();
+    
+    ui.actionFindNext->setShortcut(QKeySequence::FindNext);
+    ui.actionFindPrevious->setShortcut(QKeySequence::FindPrevious);
 
     //ui.signetsOfLearningEatenLineEdit->setReadOnly(false);
-	//ui.freeSkillPointsLineEdit->setReadOnly(false);
-	//ui.freeStatPointsLineEdit->setReadOnly(false);
+    //ui.freeSkillPointsLineEdit->setReadOnly(false);
+    //ui.freeStatPointsLineEdit->setReadOnly(false);
 
-	if (ui.actionLoadLastUsedCharacter->isChecked() && _recentFilesList.size())
-		loadFile(_recentFilesList.at(0));
-	else
-		setWindowTitle(qApp->applicationName());
+    if (ui.actionLoadLastUsedCharacter->isChecked() && _recentFilesList.size())
+        loadFile(_recentFilesList.at(0));
+    else
+        setWindowTitle(qApp->applicationName());
 }
 
 
@@ -113,13 +113,13 @@ void MedianXLOfflineTools::openRecentFile()
 
 void MedianXLOfflineTools::reloadCharacter()
 {
-	if (ui.actionAskBeforeReload->isChecked())
-	{
-		QMessageBox box(QMessageBox::Question, qApp->applicationName(), tr("Do you really want to reload character? All unsaved changes will be lost."), QMessageBox::Yes | QMessageBox::No, this);
-		if (box.exec() == QMessageBox::No)
-			return;
-	}
-	
+    if (ui.actionAskBeforeReload->isChecked())
+    {
+        QMessageBox box(QMessageBox::Question, qApp->applicationName(), tr("Do you really want to reload character? All unsaved changes will be lost."), QMessageBox::Yes | QMessageBox::No, this);
+        if (box.exec() == QMessageBox::No)
+            return;
+    }
+    
     if (loadFile(_charPath))
         ui.statusBar->showMessage(tr("Character reloaded"), 3000);
 }
@@ -238,9 +238,9 @@ void MedianXLOfflineTools::saveCharacter()
         switch (item->storage)
         {
         case Enums::ItemStorage::PersonalStash: case Enums::ItemStorage::SharedStash: case Enums::ItemStorage::HCStash:
-			plugyItemsHash[static_cast<Enums::ItemStorage::ItemStorageEnum>(item->storage)] += item;
+            plugyItemsHash[static_cast<Enums::ItemStorage::ItemStorageEnum>(item->storage)] += item;
             break;
-		default:
+        default:
             characterItems += item;
             characterItemsSize += 2 + item->bitString.length() / 8; // JM + item bytes
             foreach (ItemInfo *socketableItem, item->socketablesInfo)
@@ -249,12 +249,12 @@ void MedianXLOfflineTools::saveCharacter()
         }
     }
 
-	// TODO: place lower
+    // TODO: place lower
     for (QHash<Enums::ItemStorage::ItemStorageEnum, PlugyStashInfo>::const_iterator iter = _plugyStashesHash.constBegin(); iter != _plugyStashesHash.constEnd(); ++iter)
-	{
+    {
         const ItemsList &items = plugyItemsHash[iter.key()];
-		if (std::find_if(items.constBegin(), items.constEnd(), hasChanged) == items.constEnd())
-			continue;
+        if (std::find_if(items.constBegin(), items.constEnd(), hasChanged) == items.constEnd())
+            continue;
 
         const PlugyStashInfo &info = iter.value();
         QFile inputFile(info.path);
@@ -268,7 +268,7 @@ void MedianXLOfflineTools::saveCharacter()
             continue;
         }
 
-		QDataStream plugyFileDataStream(&inputFile);
+        QDataStream plugyFileDataStream(&inputFile);
         plugyFileDataStream.setByteOrder(QDataStream::LittleEndian);
         plugyFileDataStream.writeRawData(info.header.constData(), info.header.size());
         plugyFileDataStream << info.version;
@@ -288,12 +288,12 @@ void MedianXLOfflineTools::saveCharacter()
             plugyFileDataStream << static_cast<quint16>(pageItems.size());
             ItemParser::writeItems(pageItems, plugyFileDataStream);
         }
-	}
+    }
 
     tempFileContents.replace(_editableCharInfo.itemsOffset, _editableCharInfo.itemsEndOffset - _editableCharInfo.itemsOffset, QByteArray(characterItemsSize, 0));
     outputDataStream.device()->seek(_editableCharInfo.itemsOffset);
     outputDataStream << static_cast<quint16>(characterItems.size());
-	ItemParser::writeItems(characterItems, outputDataStream);
+    ItemParser::writeItems(characterItems, outputDataStream);
 
     quint32 fileSize = tempFileContents.size();
     outputDataStream.device()->seek(Enums::Offsets::FileSize);
@@ -554,38 +554,38 @@ void MedianXLOfflineTools::convertToSoftcore(bool isSoftcore)
 
 void MedianXLOfflineTools::findItem()
 {
-	if (!_findItemsDialog)
-	{
-		_findItemsDialog = new FindItemsDialog(this);
-		connect(ui.actionFindNext, SIGNAL(triggered()), _findItemsDialog, SLOT(findNext()));
-		connect(ui.actionFindPrevious, SIGNAL(triggered()), _findItemsDialog, SLOT(findPrevious()));
-		connect(_findItemsDialog, SIGNAL(itemFound(ItemInfo *)), SLOT(showFoundItem(ItemInfo *)));
-	}
-	_findItemsDialog->show();
-	_findItemsDialog->activateWindow();
+    if (!_findItemsDialog)
+    {
+        _findItemsDialog = new FindItemsDialog(this);
+        connect(ui.actionFindNext, SIGNAL(triggered()), _findItemsDialog, SLOT(findNext()));
+        connect(ui.actionFindPrevious, SIGNAL(triggered()), _findItemsDialog, SLOT(findPrevious()));
+        connect(_findItemsDialog, SIGNAL(itemFound(ItemInfo *)), SLOT(showFoundItem(ItemInfo *)));
+    }
+    _findItemsDialog->show();
+    _findItemsDialog->activateWindow();
 }
 
 void MedianXLOfflineTools::showFoundItem(ItemInfo *item)
 {
-	ui.actionFindNext->setDisabled(!item);
-	ui.actionFindPrevious->setDisabled(!item);
-	if (item)
-	{
-		showItems(false);
-		_itemsDialog->showItem(item);
-	}
+    ui.actionFindNext->setDisabled(!item);
+    ui.actionFindPrevious->setDisabled(!item);
+    if (item)
+    {
+        showItems(false);
+        _itemsDialog->showItem(item);
+    }
 }
 
 void MedianXLOfflineTools::showItems(bool activate /*= true*/)
 {
-	ItemDataBase::clvl = &_editableCharInfo.basicInfo.level;
-	ItemDataBase::charClass = &_editableCharInfo.basicInfo.classCode;
+    ItemDataBase::clvl = &_editableCharInfo.basicInfo.level;
+    ItemDataBase::charClass = &_editableCharInfo.basicInfo.classCode;
 
     if (_itemsDialog)
-	{
-		if (activate)
-			_itemsDialog->activateWindow();
-	}
+    {
+        if (activate)
+            _itemsDialog->activateWindow();
+    }
     else
     {
         _itemsDialog = new ItemsViewerDialog(this);
@@ -595,42 +595,42 @@ void MedianXLOfflineTools::showItems(bool activate /*= true*/)
 
 void MedianXLOfflineTools::giveCube()
 {
-	QString cubePath = ResourcePathManager::dataPathForFileName("items/cube.d2i");
-	ItemInfo *cube = ItemParser::loadItemFromFile(cubePath);
-	if (!cube)
-	{
-		ERROR_BOX(tr("Error loading '%1'").arg(cubePath));
-		return;
-	}
-	
-	if (!ItemParser::storeItemIn(cube, Enums::ItemStorage::Inventory, 6, 10) && !ItemParser::storeItemIn(cube, Enums::ItemStorage::Stash, 10, 10))
-	{
-		ERROR_BOX(tr("You have no free space in inventory and stash to store the Cube"));
-		delete cube;
-		return;
-	}
+    QString cubePath = ResourcePathManager::dataPathForFileName("items/cube.d2i");
+    ItemInfo *cube = ItemParser::loadItemFromFile(cubePath);
+    if (!cube)
+    {
+        ERROR_BOX(tr("Error loading '%1'").arg(cubePath));
+        return;
+    }
+    
+    if (!ItemParser::storeItemIn(cube, Enums::ItemStorage::Inventory, 6, 10) && !ItemParser::storeItemIn(cube, Enums::ItemStorage::Stash, 10, 10))
+    {
+        ERROR_BOX(tr("You have no free space in inventory and stash to store the Cube"));
+        delete cube;
+        return;
+    }
 
-	// predefined position is (0,0) in inventory
-	if (cube->column)
-		ReverseBitWriter::replaceValueInBitString(cube->bitString, Enums::ItemOffsets::Columns, 4, cube->column);
-	if (cube->row)
-		ReverseBitWriter::replaceValueInBitString(cube->bitString, Enums::ItemOffsets::Rows, 3, cube->row);
-	if (cube->storage != Enums::ItemStorage::Inventory)
-	{
-		ReverseBitWriter::replaceValueInBitString(cube->bitString, Enums::ItemOffsets::Storage, 3, cube->storage);
+    // predefined position is (0,0) in inventory
+    if (cube->column)
+        ReverseBitWriter::replaceValueInBitString(cube->bitString, Enums::ItemOffsets::Columns, 4, cube->column);
+    if (cube->row)
+        ReverseBitWriter::replaceValueInBitString(cube->bitString, Enums::ItemOffsets::Rows, 3, cube->row);
+    if (cube->storage != Enums::ItemStorage::Inventory)
+    {
+        ReverseBitWriter::replaceValueInBitString(cube->bitString, Enums::ItemOffsets::Storage, 3, cube->storage);
 
         ItemInfo *plugyCube = new ItemInfo(*cube);
         plugyCube->storage = Enums::ItemStorage::PersonalStash;
         plugyCube->plugyPage = 1;
         _editableCharInfo.items.character += plugyCube;
-	}
-	_editableCharInfo.items.character += cube;
+    }
+    _editableCharInfo.items.character += cube;
 
-	if (_itemsDialog)
-		_itemsDialog->updateItems();
+    if (_itemsDialog)
+        _itemsDialog->updateItems();
 
-	ui.actionGiveCube->setDisabled(true);
-	INFO_BOX(tr("Cube has been stored in %1 at (%2,%3)").arg(ItemsViewerDialog::tabNames.at(ItemsViewerDialog::indexFromItemStorage(cube->storage))).arg(cube->row + 1).arg(cube->column + 1));
+    ui.actionGiveCube->setDisabled(true);
+    INFO_BOX(tr("Cube has been stored in %1 at (%2,%3)").arg(ItemsViewerDialog::tabNames.at(ItemsViewerDialog::indexFromItemStorage(cube->storage))).arg(cube->row + 1).arg(cube->column + 1));
 }
 
 void MedianXLOfflineTools::backupSettingTriggered(bool checked)
@@ -659,8 +659,8 @@ void MedianXLOfflineTools::aboutApp()
                                 .arg(email, appFullName) + tr("<a href=\"http://modsbylaz.14.forumer.com/viewtopic.php?t=23147\">Official Median XL Forum thread</a>"
                                                               "<br><a href=\"http://forum.worldofplayers.ru/showthread.php?t=34489\">Official Russian Median XL Forum thread</a>") + "<br><br>" +
                                 tr("<b>Credits:</b><ul><li><a href=\"http://modsbylaz.hugelaser.com/\">BrotherLaz</a> for this awesome mod</li>"
-								   "<li><a href=\"http://modsbylaz.14.forumer.com/profile.php?mode=viewprofile&u=33805\">grig</a> for the Perl source of "
-								   "<a href=\"http://grig.vlexofree.com/\">Median XL Online Tools</a> and tips</li></ul>"));
+                                   "<li><a href=\"http://modsbylaz.14.forumer.com/profile.php?mode=viewprofile&u=33805\">grig</a> for the Perl source of "
+                                   "<a href=\"http://grig.vlexofree.com/\">Median XL Online Tools</a> and tips</li></ul>"));
     aboutBox.exec();
 }
 
@@ -683,8 +683,8 @@ void MedianXLOfflineTools::createLanguageMenu()
     if (fileNames.size())
     {
         QMenu *languageMenu = new QMenu(tr("&Language", "Language menu"), this);
-		ui.menuOptions->addSeparator();
-		ui.menuOptions->addMenu(languageMenu);
+        ui.menuOptions->addSeparator();
+        ui.menuOptions->addMenu(languageMenu);
 
         QActionGroup *languageActionGroup = new QActionGroup(this);
         connect(languageActionGroup, SIGNAL(triggered(QAction *)), SLOT(switchLanguage(QAction *)));
@@ -767,7 +767,7 @@ void MedianXLOfflineTools::createLayout()
     foreach (QWidget *w, widgetsToFixSize)
         w->setFixedSize(w->size());
 
-	createCharacterGroupBoxLayout();
+    createCharacterGroupBoxLayout();
     createMercGroupBoxLayout();
     createStatsGroupBoxLayout();
 
@@ -871,21 +871,21 @@ void MedianXLOfflineTools::loadSettings()
 
     settings.beginGroup("recentItems");
     _recentFilesList = settings.value("recentFiles").toStringList();
-	updateRecentFilesActions();
-	settings.endGroup();
+    updateRecentFilesActions();
+    settings.endGroup();
 
-	settings.beginGroup("options");
+    settings.beginGroup("options");
     ui.actionLoadLastUsedCharacter->setChecked(settings.value("loadLastCharacter", true).toBool());
     ui.actionAskBeforeReload->setChecked(settings.value("askBeforeReload", true).toBool());
     ui.actionBackup->setChecked(settings.value("makeBackups", true).toBool());
     ui.actionOpenItemsAutomatically->setChecked(settings.value("openItemsAutomatically").toBool());
-	ui.actionReloadSharedStashes->setChecked(settings.value("reloadSharedStashes").toBool());
+    ui.actionReloadSharedStashes->setChecked(settings.value("reloadSharedStashes").toBool());
 
-	settings.beginGroup("autoOpenSharedStashes");
-	ui.actionAutoOpenPersonalStash->setChecked(settings.value("personal", true).toBool());
-	ui.actionAutoOpenSharedStash->setChecked(settings.value("shared", true).toBool());
-	ui.actionAutoOpenHCShared->setChecked(settings.value("hcShared", true).toBool());
-	settings.endGroup();
+    settings.beginGroup("autoOpenSharedStashes");
+    ui.actionAutoOpenPersonalStash->setChecked(settings.value("personal", true).toBool());
+    ui.actionAutoOpenSharedStash->setChecked(settings.value("shared", true).toBool());
+    ui.actionAutoOpenHCShared->setChecked(settings.value("hcShared", true).toBool());
+    settings.endGroup();
 
     settings.endGroup();
 }
@@ -897,83 +897,83 @@ void MedianXLOfflineTools::saveSettings() const
     settings.setValue("origin", pos());
 
     settings.beginGroup("recentItems");
-	settings.setValue("recentFiles", _recentFilesList);
-	settings.endGroup();
-	
-	settings.beginGroup("options");
-	settings.setValue("loadLastCharacter", ui.actionLoadLastUsedCharacter->isChecked());
+    settings.setValue("recentFiles", _recentFilesList);
+    settings.endGroup();
+    
+    settings.beginGroup("options");
+    settings.setValue("loadLastCharacter", ui.actionLoadLastUsedCharacter->isChecked());
     settings.setValue("askBeforeReload", ui.actionAskBeforeReload->isChecked());
     settings.setValue("makeBackups", ui.actionBackup->isChecked());
     settings.setValue("openItemsAutomatically", ui.actionOpenItemsAutomatically->isChecked());
-	settings.setValue("reloadSharedStashes", ui.actionReloadSharedStashes->isChecked());
+    settings.setValue("reloadSharedStashes", ui.actionReloadSharedStashes->isChecked());
 
-	settings.beginGroup("autoOpenSharedStashes");
-	settings.setValue("personal", ui.actionAutoOpenPersonalStash->isChecked());
-	settings.setValue("shared", ui.actionAutoOpenSharedStash->isChecked());
-	settings.setValue("hcShared", ui.actionAutoOpenHCShared->isChecked());
-	settings.endGroup();
+    settings.beginGroup("autoOpenSharedStashes");
+    settings.setValue("personal", ui.actionAutoOpenPersonalStash->isChecked());
+    settings.setValue("shared", ui.actionAutoOpenSharedStash->isChecked());
+    settings.setValue("hcShared", ui.actionAutoOpenHCShared->isChecked());
+    settings.endGroup();
 
-	settings.endGroup();
+    settings.endGroup();
 
-	if (_findItemsDialog)
-		_findItemsDialog->saveSettings();
+    if (_findItemsDialog)
+        _findItemsDialog->saveSettings();
 }
 
 void MedianXLOfflineTools::fillMaps()
 {
-	_spinBoxesStatsMap[Enums::CharacterStats::Strength] = ui.strengthSpinBox;
-	_spinBoxesStatsMap[Enums::CharacterStats::Dexterity] = ui.dexteritySpinBox;
-	_spinBoxesStatsMap[Enums::CharacterStats::Vitality] = ui.vitalitySpinBox;
-	_spinBoxesStatsMap[Enums::CharacterStats::Energy] = ui.energySpinBox;
+    _spinBoxesStatsMap[Enums::CharacterStats::Strength] = ui.strengthSpinBox;
+    _spinBoxesStatsMap[Enums::CharacterStats::Dexterity] = ui.dexteritySpinBox;
+    _spinBoxesStatsMap[Enums::CharacterStats::Vitality] = ui.vitalitySpinBox;
+    _spinBoxesStatsMap[Enums::CharacterStats::Energy] = ui.energySpinBox;
 
-	_lineEditsStatsMap[Enums::CharacterStats::FreeStatPoints] = ui.freeStatPointsLineEdit;
-	_lineEditsStatsMap[Enums::CharacterStats::FreeSkillPoints] = ui.freeSkillPointsLineEdit;
-	_lineEditsStatsMap[Enums::CharacterStats::InventoryGold] = ui.inventoryGoldLineEdit;
-	_lineEditsStatsMap[Enums::CharacterStats::StashGold] = ui.stashGoldLineEdit;
-	_lineEditsStatsMap[Enums::CharacterStats::SignetsOfLearningEaten] = ui.signetsOfLearningEatenLineEdit;
-	_lineEditsStatsMap[Enums::CharacterStats::SignetsOfSkillEaten] = ui.signetsOfSkillEatenLineEdit;
+    _lineEditsStatsMap[Enums::CharacterStats::FreeStatPoints] = ui.freeStatPointsLineEdit;
+    _lineEditsStatsMap[Enums::CharacterStats::FreeSkillPoints] = ui.freeSkillPointsLineEdit;
+    _lineEditsStatsMap[Enums::CharacterStats::InventoryGold] = ui.inventoryGoldLineEdit;
+    _lineEditsStatsMap[Enums::CharacterStats::StashGold] = ui.stashGoldLineEdit;
+    _lineEditsStatsMap[Enums::CharacterStats::SignetsOfLearningEaten] = ui.signetsOfLearningEatenLineEdit;
+    _lineEditsStatsMap[Enums::CharacterStats::SignetsOfSkillEaten] = ui.signetsOfSkillEatenLineEdit;
 
-	_baseStatsMap[Enums::ClassName::Amazon] = BaseStats(BaseStats::StatsAtStart(25, 25, 20, 15, 84), BaseStats::StatsPerLevel(100, 40, 60), BaseStats::StatsPerPoint(8, 8, 18));
-	_baseStatsMap[Enums::ClassName::Sorceress] = BaseStats(BaseStats::StatsAtStart(10, 25, 15, 35, 74), BaseStats::StatsPerLevel(100, 40, 60), BaseStats::StatsPerPoint(8, 8, 18));
-	_baseStatsMap[Enums::ClassName::Necromancer] = BaseStats(BaseStats::StatsAtStart(15, 25, 20, 25, 79), BaseStats::StatsPerLevel(80, 20, 80), BaseStats::StatsPerPoint(4, 8, 24));
-	_baseStatsMap[Enums::ClassName::Paladin] = BaseStats(BaseStats::StatsAtStart(25, 20, 25, 15, 89), BaseStats::StatsPerLevel(120, 60, 40), BaseStats::StatsPerPoint(12, 8, 12));
-	_baseStatsMap[Enums::ClassName::Barbarian] = BaseStats(BaseStats::StatsAtStart(30, 20, 30, 5, 92), BaseStats::StatsPerLevel(120, 60, 40), BaseStats::StatsPerPoint(12, 8, 12));
-	_baseStatsMap[Enums::ClassName::Druid] = BaseStats(BaseStats::StatsAtStart(25, 20, 15, 25, 84), BaseStats::StatsPerLevel(80, 20, 80), BaseStats::StatsPerPoint(4, 8, 24));
-	_baseStatsMap[Enums::ClassName::Assassin] = BaseStats(BaseStats::StatsAtStart(20, 35, 15, 15, 95), BaseStats::StatsPerLevel(100, 40, 60), BaseStats::StatsPerPoint(8, 8, 18));
+    _baseStatsMap[Enums::ClassName::Amazon] = BaseStats(BaseStats::StatsAtStart(25, 25, 20, 15, 84), BaseStats::StatsPerLevel(100, 40, 60), BaseStats::StatsPerPoint(8, 8, 18));
+    _baseStatsMap[Enums::ClassName::Sorceress] = BaseStats(BaseStats::StatsAtStart(10, 25, 15, 35, 74), BaseStats::StatsPerLevel(100, 40, 60), BaseStats::StatsPerPoint(8, 8, 18));
+    _baseStatsMap[Enums::ClassName::Necromancer] = BaseStats(BaseStats::StatsAtStart(15, 25, 20, 25, 79), BaseStats::StatsPerLevel(80, 20, 80), BaseStats::StatsPerPoint(4, 8, 24));
+    _baseStatsMap[Enums::ClassName::Paladin] = BaseStats(BaseStats::StatsAtStart(25, 20, 25, 15, 89), BaseStats::StatsPerLevel(120, 60, 40), BaseStats::StatsPerPoint(12, 8, 12));
+    _baseStatsMap[Enums::ClassName::Barbarian] = BaseStats(BaseStats::StatsAtStart(30, 20, 30, 5, 92), BaseStats::StatsPerLevel(120, 60, 40), BaseStats::StatsPerPoint(12, 8, 12));
+    _baseStatsMap[Enums::ClassName::Druid] = BaseStats(BaseStats::StatsAtStart(25, 20, 15, 25, 84), BaseStats::StatsPerLevel(80, 20, 80), BaseStats::StatsPerPoint(4, 8, 24));
+    _baseStatsMap[Enums::ClassName::Assassin] = BaseStats(BaseStats::StatsAtStart(20, 35, 15, 15, 95), BaseStats::StatsPerLevel(100, 40, 60), BaseStats::StatsPerPoint(8, 8, 18));
 }
 
 void MedianXLOfflineTools::connectSignals()
 {
-	// files
-	connect(ui.actionLoadCharacter, SIGNAL(triggered()), SLOT(loadCharacter()));
-	connect(ui.actionReloadCharacter, SIGNAL(triggered()), SLOT(reloadCharacter()));
-	connect(ui.actionSaveCharacter, SIGNAL(triggered()), SLOT(saveCharacter()));
+    // files
+    connect(ui.actionLoadCharacter, SIGNAL(triggered()), SLOT(loadCharacter()));
+    connect(ui.actionReloadCharacter, SIGNAL(triggered()), SLOT(reloadCharacter()));
+    connect(ui.actionSaveCharacter, SIGNAL(triggered()), SLOT(saveCharacter()));
 
-	// edit
-	connect(ui.actionRename, SIGNAL(triggered()), SLOT(rename()));
-	connect(ui.actionFind, SIGNAL(triggered()), SLOT(findItem()));
+    // edit
+    connect(ui.actionRename, SIGNAL(triggered()), SLOT(rename()));
+    connect(ui.actionFind, SIGNAL(triggered()), SLOT(findItem()));
 
-	// items
-	connect(ui.actionShowItems, SIGNAL(triggered()), SLOT(showItems()));
-	connect(ui.actionGiveCube, SIGNAL(triggered()), SLOT(giveCube()));
+    // items
+    connect(ui.actionShowItems, SIGNAL(triggered()), SLOT(showItems()));
+    connect(ui.actionGiveCube, SIGNAL(triggered()), SLOT(giveCube()));
 
     // options
     connect(ui.actionBackup, SIGNAL(triggered(bool)), SLOT(backupSettingTriggered(bool)));
 
-	// about
-	connect(ui.actionAbout, SIGNAL(triggered()), SLOT(aboutApp()));
-	connect(ui.actionAboutQt, SIGNAL(triggered()), qApp, SLOT(aboutQt()));
+    // about
+    connect(ui.actionAbout, SIGNAL(triggered()), SLOT(aboutApp()));
+    connect(ui.actionAboutQt, SIGNAL(triggered()), qApp, SLOT(aboutQt()));
 
-	connect(ui.levelSpinBox, SIGNAL(valueChanged(int)), SLOT(levelChanged(int)));
-	foreach (QSpinBox *spinBox, _spinBoxesStatsMap)
-		connect(spinBox, SIGNAL(valueChanged(int)), SLOT(statChanged(int)));
+    connect(ui.levelSpinBox, SIGNAL(valueChanged(int)), SLOT(levelChanged(int)));
+    foreach (QSpinBox *spinBox, _spinBoxesStatsMap)
+        connect(spinBox, SIGNAL(valueChanged(int)), SLOT(statChanged(int)));
 
-	connect(ui.respecStatsButton, SIGNAL(clicked()), SLOT(respecStats()));
-	connect(ui.renameButton, SIGNAL(clicked()), SLOT(rename()));
-	connect(ui.resurrectButton, SIGNAL(clicked()), SLOT(resurrect()));
-	connect(ui.convertToSoftcoreCheckBox, SIGNAL(toggled(bool)), SLOT(convertToSoftcore(bool)));
-	connect(ui.respecSkillsCheckBox, SIGNAL(toggled(bool)), SLOT(respecSkills(bool)));
-	//connect(ui.currentDifficultyComboBox, SIGNAL(currentIndexChanged(int)), SLOT(currentDifficultyChanged(int)));
+    connect(ui.respecStatsButton, SIGNAL(clicked()), SLOT(respecStats()));
+    connect(ui.renameButton, SIGNAL(clicked()), SLOT(rename()));
+    connect(ui.resurrectButton, SIGNAL(clicked()), SLOT(resurrect()));
+    connect(ui.convertToSoftcoreCheckBox, SIGNAL(toggled(bool)), SLOT(convertToSoftcore(bool)));
+    connect(ui.respecSkillsCheckBox, SIGNAL(toggled(bool)), SLOT(respecSkills(bool)));
+    //connect(ui.currentDifficultyComboBox, SIGNAL(currentIndexChanged(int)), SLOT(currentDifficultyChanged(int)));
 }
 
 void MedianXLOfflineTools::updateRecentFilesActions()
@@ -1029,8 +1029,8 @@ bool MedianXLOfflineTools::loadFile(const QString &charPath)
         ItemDataBase::currentCharacterItems = &_editableCharInfo.items.character;
         if (_itemsDialog)
             _itemsDialog->updateItems();
-		if (_itemsDialog || ui.actionOpenItemsAutomatically->isChecked())
-			showItems();
+        if (_itemsDialog || ui.actionOpenItemsAutomatically->isChecked())
+            showItems();
 
         QSettings settings;
         settings.beginGroup("recentItems");
@@ -1420,58 +1420,58 @@ bool MedianXLOfflineTools::processSaveFile(const QString &charPath)
     }
 
     // parse plugy stashes
-	QString oldSharedStashPath = _plugyStashesHash[Enums::ItemStorage::SharedStash].path, oldHCStashPath = _plugyStashesHash[Enums::ItemStorage::HCStash].path;
+    QString oldSharedStashPath = _plugyStashesHash[Enums::ItemStorage::SharedStash].path, oldHCStashPath = _plugyStashesHash[Enums::ItemStorage::HCStash].path;
 
-	QFileInfo charPathFileInfo(charPath);
-	_plugyStashesHash[Enums::ItemStorage::PersonalStash].path = ui.actionAutoOpenPersonalStash->isChecked() ? QString("%1/%2.d2x").arg(charPathFileInfo.canonicalPath(), charPathFileInfo.baseName()) : QString();
-	_plugyStashesHash[Enums::ItemStorage::SharedStash].path = ui.actionAutoOpenSharedStash->isChecked() ? charPathFileInfo.canonicalPath() + "/_LOD_SharedStashSave.sss" : QString();
+    QFileInfo charPathFileInfo(charPath);
+    _plugyStashesHash[Enums::ItemStorage::PersonalStash].path = ui.actionAutoOpenPersonalStash->isChecked() ? QString("%1/%2.d2x").arg(charPathFileInfo.canonicalPath(), charPathFileInfo.baseName()) : QString();
+    _plugyStashesHash[Enums::ItemStorage::SharedStash].path = ui.actionAutoOpenSharedStash->isChecked() ? charPathFileInfo.canonicalPath() + "/_LOD_SharedStashSave.sss" : QString();
     _plugyStashesHash[Enums::ItemStorage::HCStash].path = ui.actionAutoOpenHCShared->isChecked() ? charPathFileInfo.canonicalPath() + "/_LOD_HC_SharedStashSave.sss" : QString();
 
     bool sharedStashPathChanged = oldSharedStashPath != _plugyStashesHash[Enums::ItemStorage::SharedStash].path, hcStashPathChanged = oldHCStashPath != _plugyStashesHash[Enums::ItemStorage::HCStash].path;
-	if (ui.actionReloadSharedStashes->isChecked())
-		sharedStashPathChanged = hcStashPathChanged = true;
-	_sharedGold = 0;
-	for (QHash<Enums::ItemStorage::ItemStorageEnum, PlugyStashInfo>::iterator iter = _plugyStashesHash.begin(); iter != _plugyStashesHash.end(); ++iter)
-	{
-		switch (iter.key())
-		{
-		case Enums::ItemStorage::PersonalStash:
-			if (!ui.actionAutoOpenPersonalStash->isChecked())
-				continue;
-			break;
-		case Enums::ItemStorage::SharedStash:
-			if (!sharedStashPathChanged || !ui.actionAutoOpenSharedStash->isChecked())
-				continue;
-			break;
-		case Enums::ItemStorage::HCStash:
-			if (!hcStashPathChanged || !ui.actionAutoOpenHCShared->isChecked())
-				continue;
-			break;
-		default:
-			break;
-		}
+    if (ui.actionReloadSharedStashes->isChecked())
+        sharedStashPathChanged = hcStashPathChanged = true;
+    _sharedGold = 0;
+    for (QHash<Enums::ItemStorage::ItemStorageEnum, PlugyStashInfo>::iterator iter = _plugyStashesHash.begin(); iter != _plugyStashesHash.end(); ++iter)
+    {
+        switch (iter.key())
+        {
+        case Enums::ItemStorage::PersonalStash:
+            if (!ui.actionAutoOpenPersonalStash->isChecked())
+                continue;
+            break;
+        case Enums::ItemStorage::SharedStash:
+            if (!sharedStashPathChanged || !ui.actionAutoOpenSharedStash->isChecked())
+                continue;
+            break;
+        case Enums::ItemStorage::HCStash:
+            if (!hcStashPathChanged || !ui.actionAutoOpenHCShared->isChecked())
+                continue;
+            break;
+        default:
+            break;
+        }
         processPlugyStash(iter, &editableCharInfo.items.character);
-	}
+    }
 
-	// check for duped items
-	// TODO: uncomment
-	/*QSet<quint32> itemIDs;
-	foreach (ItemInfo *item, editableCharInfo.items.character)
-		if (item->isExtended)
-		{
-			if (itemIDs.contains(item->guid))
-			{
-				WARNING_BOX(tr("Like duping items, eh?"));
-				break;
-			}
-			else
-				itemIDs.insert(item->guid);
-		}
-		*/
+    // check for duped items
+    // TODO: uncomment
+    /*QSet<quint32> itemIDs;
+    foreach (ItemInfo *item, editableCharInfo.items.character)
+        if (item->isExtended)
+        {
+            if (itemIDs.contains(item->guid))
+            {
+                WARNING_BOX(tr("Like duping items, eh?"));
+                break;
+            }
+            else
+                itemIDs.insert(item->guid);
+        }
+        */
     clearItems(sharedStashPathChanged, hcStashPathChanged);
-	ItemsList savedItems = _editableCharInfo.items.character;
+    ItemsList savedItems = _editableCharInfo.items.character;
     _editableCharInfo = editableCharInfo;
-	_editableCharInfo.items.character += savedItems;
+    _editableCharInfo.items.character += savedItems;
 
     return true;
 }
@@ -1528,8 +1528,8 @@ bool MedianXLOfflineTools::processPlugyStash(QHash<Enums::ItemStorage::ItemStora
     info.header = header;
 
     QDataStream inputDataStream(bytes);
-	inputDataStream.setByteOrder(QDataStream::LittleEndian);
-	inputDataStream.skipRawData(headerSize);
+    inputDataStream.setByteOrder(QDataStream::LittleEndian);
+    inputDataStream.skipRawData(headerSize);
 
     inputDataStream >> info.version;
     if (info.hasGold = (bytes.mid(headerSize + 1 + 4, 2) != ItemParser::plugyPageHeader))
@@ -1606,7 +1606,7 @@ void MedianXLOfflineTools::clearUI()
         groupBox->setDisabled(true);
 
     QList<QAction *> actions = QList<QAction *>() << ui.actionRespecStats << ui.actionRespecSkills << ui.actionActivateWaypoints << ui.actionSaveCharacter << ui.actionRename << ui.actionReloadCharacter
-		<< ui.actionFind << ui.actionFindNext << ui.actionFindPrevious << ui.actionShowItems;
+        << ui.actionFind << ui.actionFindNext << ui.actionFindPrevious << ui.actionShowItems;
     foreach (QAction *action, actions)
         action->setDisabled(true);
 
@@ -1682,11 +1682,11 @@ void MedianXLOfflineTools::updateUI()
         ui.mercGroupBox->setEnabled(true);
     }
 
-	ui.actionGiveCube->setDisabled(std::find_if(_editableCharInfo.items.character.constBegin(), _editableCharInfo.items.character.constEnd(), isCube) != _editableCharInfo.items.character.constEnd());
+    ui.actionGiveCube->setDisabled(std::find_if(_editableCharInfo.items.character.constBegin(), _editableCharInfo.items.character.constEnd(), isCube) != _editableCharInfo.items.character.constEnd());
 
-	bool hasItems = _editableCharInfo.items.character.size() > 0;
-	ui.actionShowItems->setEnabled(hasItems);
-	ui.actionFind->setEnabled(hasItems);
+    bool hasItems = _editableCharInfo.items.character.size() > 0;
+    ui.actionShowItems->setEnabled(hasItems);
+    ui.actionFind->setEnabled(hasItems);
     updateWindowTitle();
 
     _isLoaded = true;
@@ -1912,28 +1912,28 @@ void MedianXLOfflineTools::addStatisticBits(QString &bitsString, quint64 number,
 
 void MedianXLOfflineTools::clearItems(bool sharedStashPathChanged /*= true*/, bool hcStashPathChanged /*= true*/)
 {
-	QMutableListIterator<ItemInfo *> itemIterator(_editableCharInfo.items.character);
-	while (itemIterator.hasNext())
-	{
-		ItemInfo *item = itemIterator.next();
-		switch (item->storage)
-		{
-		case Enums::ItemStorage::SharedStash:
-			if ((sharedStashPathChanged || ui.actionAutoOpenSharedStash->isChecked()) && !sharedStashPathChanged)
-				continue;
-			break;
-		case Enums::ItemStorage::HCStash:
-			if ((hcStashPathChanged || ui.actionAutoOpenHCShared->isChecked()) && !hcStashPathChanged)
-				continue;
-			break;
-		default:
-			break;
-		}
+    QMutableListIterator<ItemInfo *> itemIterator(_editableCharInfo.items.character);
+    while (itemIterator.hasNext())
+    {
+        ItemInfo *item = itemIterator.next();
+        switch (item->storage)
+        {
+        case Enums::ItemStorage::SharedStash:
+            if ((sharedStashPathChanged || ui.actionAutoOpenSharedStash->isChecked()) && !sharedStashPathChanged)
+                continue;
+            break;
+        case Enums::ItemStorage::HCStash:
+            if ((hcStashPathChanged || ui.actionAutoOpenHCShared->isChecked()) && !hcStashPathChanged)
+                continue;
+            break;
+        default:
+            break;
+        }
 
-		qDeleteAll(item->socketablesInfo);
-		delete item;
-		itemIterator.remove();
-	}
+        qDeleteAll(item->socketablesInfo);
+        delete item;
+        itemIterator.remove();
+    }
 }
 
 void MedianXLOfflineTools::backupFile(QFile &file)

@@ -139,9 +139,9 @@ QHash<uint, SetItemInfo> *ItemDataBase::Sets()
             item.setName = QString::fromUtf8(data.at(2));
             allSets[data.at(0).toUInt()] = item;
 
-			// do not add duplicate names
+            // do not add duplicate names
             if (_sets.count(item.setName) < 5)
-				_sets.insert(item.setName, item.itemName);
+                _sets.insert(item.setName, item.itemName);
         }
     }
     return &allSets;
@@ -212,7 +212,7 @@ QHash<uint, MysticOrb> *ItemDataBase::MysticOrbs()
             ERROR_BOX_NO_PARENT(tr("Mystic Orbs data not loaded.\nReason: %1").arg(f.errorString()));
             return 0;
         }
-		
+        
         while (!f.atEnd())
         {
             QList<QByteArray> data = stringArrayOfCurrentLineInFile(f);
@@ -382,17 +382,17 @@ QString ItemDataBase::completeItemName(ItemInfo *item, bool shouldUseColor)
     if (itemName.startsWith('['))
         itemName.remove(0, 4);
     if (!nonMagicalQuality.isEmpty())
-		itemName.prepend(nonMagicalQuality + " ");
-	if (!item->inscribedName.isEmpty())
-		itemName.prepend(tr("%1's ", "personalized name").arg(item->inscribedName));
+        itemName.prepend(nonMagicalQuality + " ");
+    if (!item->inscribedName.isEmpty())
+        itemName.prepend(tr("%1's ", "personalized name").arg(item->inscribedName));
 
     QString specialName;
     if (item->quality == Enums::ItemQuality::Set)
     {
         const SetItemInfo &setItem = Sets()->value(item->setOrUniqueId);
         specialName = setItem.itemName;
-		if (!shouldUseColor)
-			specialName += QString(" [%1]").arg(setItem.setName);
+        if (!shouldUseColor)
+            specialName += QString(" [%1]").arg(setItem.setName);
     }
     else if (item->quality == Enums::ItemQuality::Unique)
         specialName = Uniques()->value(item->setOrUniqueId).name;
@@ -471,8 +471,8 @@ QString ItemDataBase::completeItemName(ItemInfo *item, bool shouldUseColor)
         else if (item->isRW)
             itemName.prepend(QString("[%1]<br>").arg(tr("runeword")));
 
-		if (item->isEthereal)
-			itemName += QString("<br>[%1]").arg(tr("ethereal"));
+        if (item->isEthereal)
+            itemName += QString("<br>[%1]").arg(tr("ethereal"));
     }
     return itemName;
 }

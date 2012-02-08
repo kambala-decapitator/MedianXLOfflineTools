@@ -31,14 +31,14 @@ public:
 
     static const int cellSize;
     static const QStringList tabNames;
-	static const QList<int> rows;
+    static const QList<int> rows;
 
-	static int indexFromItemStorage(int storage);
+    static int indexFromItemStorage(int storage);
 
     explicit ItemsViewerDialog(QWidget *parent);
 
-	void updateItems();
-	void showItem(ItemInfo *item);
+    void updateItems();
+    void showItem(ItemInfo *item);
 
     void enableCubeTab();
 

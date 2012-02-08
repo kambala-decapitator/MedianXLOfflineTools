@@ -26,7 +26,7 @@ ItemsPropertiesSplitter::ItemsPropertiesSplitter(ItemStorageTableView *itemsView
 {
     setHandleWidth(1);
 
-	_itemsView->setContextMenuPolicy(Qt::CustomContextMenu);
+    _itemsView->setContextMenuPolicy(Qt::CustomContextMenu);
     _itemsView->setEditTriggers(QAbstractItemView::NoEditTriggers);
     _itemsView->setHorizontalScrollMode(QAbstractItemView::ScrollPerPixel);
     _itemsView->setVerticalScrollMode(QAbstractItemView::ScrollPerPixel);
@@ -41,17 +41,17 @@ ItemsPropertiesSplitter::ItemsPropertiesSplitter(ItemStorageTableView *itemsView
 
     if (shouldCreateNavigation)
     {
-		_left10Button = new QPushButton(this);
-		_leftButton = new QPushButton(this);
-		_rightButton = new QPushButton(this);
-		_right10Button = new QPushButton(this);
+        _left10Button = new QPushButton(this);
+        _leftButton = new QPushButton(this);
+        _rightButton = new QPushButton(this);
+        _right10Button = new QPushButton(this);
 
-		QList<QPushButton *> buttons = QList<QPushButton *>() << _left10Button << _leftButton << _rightButton << _right10Button;
-		foreach (QPushButton *button, buttons)
-		{
-			button->setIconSize(QSize(32, 20));
-			button->resize(button->minimumSizeHint());
-		}
+        QList<QPushButton *> buttons = QList<QPushButton *>() << _left10Button << _leftButton << _rightButton << _right10Button;
+        foreach (QPushButton *button, buttons)
+        {
+            button->setIconSize(QSize(32, 20));
+            button->resize(button->minimumSizeHint());
+        }
         keyReleaseEvent(&QKeyEvent(QEvent::KeyRelease, Qt::Key_Shift, 0)); // hacky way to set button icons
 
         _pageSpinBox = new QDoubleSpinBox(this);
@@ -89,8 +89,8 @@ ItemsPropertiesSplitter::ItemsPropertiesSplitter(ItemStorageTableView *itemsView
     setChildrenCollapsible(false);
     setStretchFactor(0, 4);
 
-	connect(_itemsView->selectionModel(), SIGNAL(currentChanged(const QModelIndex &, const QModelIndex &)), SLOT(itemSelected(const QModelIndex &)));
-	connect(_itemsView, SIGNAL(customContextMenuRequested(const QPoint &)), SLOT(showContextMenu(const QPoint &)));
+    connect(_itemsView->selectionModel(), SIGNAL(currentChanged(const QModelIndex &, const QModelIndex &)), SLOT(itemSelected(const QModelIndex &)));
+    connect(_itemsView, SIGNAL(customContextMenuRequested(const QPoint &)), SLOT(showContextMenu(const QPoint &)));
     connect(_itemsView, SIGNAL(deleteSelectedItem()), SLOT(deleteItem()));
 
     if (shouldCreateNavigation)
@@ -147,7 +147,7 @@ void ItemsPropertiesSplitter::setItems(const ItemsList &newItems)
     if (_left10Button)
     {
         _lastNotEmptyPage = _allItems.size() ? _allItems.last()->plugyPage : 0;
-		_pageSpinBox->setSuffix(QString(" / %1").arg(_lastNotEmptyPage));
+        _pageSpinBox->setSuffix(QString(" / %1").arg(_lastNotEmptyPage));
         _pageSpinBox->setMaximum(_lastNotEmptyPage);
         updateItemsForCurrentPage();
     }
@@ -157,9 +157,9 @@ void ItemsPropertiesSplitter::setItems(const ItemsList &newItems)
 
 void ItemsPropertiesSplitter::showItem(ItemInfo *item)
 {
-	if (item->plugyPage)
-		_pageSpinBox->setValue(item->plugyPage);
-	_itemsView->setCurrentIndex(_itemsModel->index(item->row, item->column));
+    if (item->plugyPage)
+        _pageSpinBox->setValue(item->plugyPage);
+    _itemsView->setCurrentIndex(_itemsModel->index(item->row, item->column));
 }
 
 void ItemsPropertiesSplitter::updateItems(const ItemsList &newItems)
@@ -217,66 +217,66 @@ void ItemsPropertiesSplitter::right10Clicked()
 
 void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
 {
-	ItemInfo *item = selectedItem(false);
-	if (item)
-	{
-		QList<QAction *> actions;
+    ItemInfo *item = selectedItem(false);
+    if (item)
+    {
+        QList<QAction *> actions;
 
         QAction *actionHtml = new QAction("HTML", _itemsView), *actionBbCode = new QAction("BBCode", _itemsView);
         connect(actionHtml, SIGNAL(triggered()), SLOT(exportHtml()));
         connect(actionBbCode, SIGNAL(triggered()), SLOT(exportBbCode()));
-		QMenu *menuExport = new QMenu(tr("Export as"), _itemsView);
-		menuExport->addActions(QList<QAction *>() << actionHtml << actionBbCode);
-		actions << menuExport->menuAction();
+        QMenu *menuExport = new QMenu(tr("Export as"), _itemsView);
+        menuExport->addActions(QList<QAction *>() << actionHtml << actionBbCode);
+        actions << menuExport->menuAction();
 
-		QAction *separator = new QAction(_itemsView);
-		separator->setSeparator(true);
-		actions << separator;
+        QAction *separator = new QAction(_itemsView);
+        separator->setSeparator(true);
+        actions << separator;
 
-		if (item->quality == Enums::ItemQuality::Set || item->quality == Enums::ItemQuality::Unique && !ItemParser::itemTypeInheritsFromTypes(ItemDataBase::Items()->value(item->itemType).typeString, charmType))
-		{
-			QAction *actionShards = new QAction(QIcon(ResourcePathManager::pathForImageName("invfary4")), tr("Arcane Shards"), _itemsView);
-			actionShards->setObjectName("shards");
-			connect(actionShards, SIGNAL(triggered()), SLOT(disenchantItem()));
+        if (item->quality == Enums::ItemQuality::Set || item->quality == Enums::ItemQuality::Unique && !ItemParser::itemTypeInheritsFromTypes(ItemDataBase::Items()->value(item->itemType).typeString, charmType))
+        {
+            QAction *actionShards = new QAction(QIcon(ResourcePathManager::pathForImageName("invfary4")), tr("Arcane Shards"), _itemsView);
+            actionShards->setObjectName("shards");
+            connect(actionShards, SIGNAL(triggered()), SLOT(disenchantItem()));
 
-			QAction *actionSol = new QAction(QIcon(ResourcePathManager::pathForImageName("sigil1b")), tr("Signet of Learning"), _itemsView);
-			actionSol->setObjectName("signet");
-			connect(actionSol, SIGNAL(triggered()), SLOT(disenchantItem()));
+            QAction *actionSol = new QAction(QIcon(ResourcePathManager::pathForImageName("sigil1b")), tr("Signet of Learning"), _itemsView);
+            actionSol->setObjectName("signet");
+            connect(actionSol, SIGNAL(triggered()), SLOT(disenchantItem()));
 
-			QMenu *menuDisenchant = new QMenu(tr("Disenchant into"), _itemsView);
-			menuDisenchant->addActions(QList<QAction *>() << actionShards << actionSol);
-			actions << menuDisenchant->menuAction();
-		}
-		// TODO 0.3
-		//if (item->isSocketed && item->socketablesNumber)
-		//{
-		//	QAction *actionUnsocket = new QAction(tr("Unsocket"), _itemsView);
-		//	connect(actionUnsocket, SIGNAL(triggered()), SLOT(unsocketItem()));
-		//	actions << actionUnsocket;
-		//}
+            QMenu *menuDisenchant = new QMenu(tr("Disenchant into"), _itemsView);
+            menuDisenchant->addActions(QList<QAction *>() << actionShards << actionSol);
+            actions << menuDisenchant->menuAction();
+        }
+        // TODO 0.3
+        //if (item->isSocketed && item->socketablesNumber)
+        //{
+        //    QAction *actionUnsocket = new QAction(tr("Unsocket"), _itemsView);
+        //    connect(actionUnsocket, SIGNAL(triggered()), SLOT(unsocketItem()));
+        //    actions << actionUnsocket;
+        //}
 
         // no need
-		//if (item->isEthereal)
-		//{
-		//	QAction *actionMakeNonEthereal = new QAction(tr("Make Non-Ethereal"), _itemsView);
-		//	connect(actionMakeNonEthereal, SIGNAL(triggered()), SLOT(makeNonEthereal()));
-		//	actions << actionMakeNonEthereal;
-		//}
+        //if (item->isEthereal)
+        //{
+        //    QAction *actionMakeNonEthereal = new QAction(tr("Make Non-Ethereal"), _itemsView);
+        //    connect(actionMakeNonEthereal, SIGNAL(triggered()), SLOT(makeNonEthereal()));
+        //    actions << actionMakeNonEthereal;
+        //}
 
-		if (_propertiesWidget->hasMysticOrbs())
+        if (_propertiesWidget->hasMysticOrbs())
         {
             QAction *actionRemoveMO = new QAction(tr("Remove Mystic Orbs"), _itemsView);
             connect(actionRemoveMO, SIGNAL(triggered()), _propertiesWidget, SLOT(removeAllMysticOrbs()));
             actions << actionRemoveMO;
-		}
+        }
 
-		QAction *actionDelete = new QAction(tr("Delete"), _itemsView);
+        QAction *actionDelete = new QAction(tr("Delete"), _itemsView);
         actionDelete->setShortcut(QKeySequence::Delete);
-		connect(actionDelete, SIGNAL(triggered()), SLOT(deleteItem()));
-		actions << actionDelete;
+        connect(actionDelete, SIGNAL(triggered()), SLOT(deleteItem()));
+        actions << actionDelete;
 
-		QMenu::exec(actions, _itemsView->mapToGlobal(pos));
-	}
+        QMenu::exec(actions, _itemsView->mapToGlobal(pos));
+    }
 }
 
 void ItemsPropertiesSplitter::exportHtml()
@@ -291,7 +291,7 @@ void ItemsPropertiesSplitter::exportBbCode()
 
 void ItemsPropertiesSplitter::disenchantItem()
 {
-	QAction *action = qobject_cast<QAction *>(sender());
+    QAction *action = qobject_cast<QAction *>(sender());
     ItemInfo *item = selectedItem();
     if (!action || !item)
     {
@@ -300,25 +300,25 @@ void ItemsPropertiesSplitter::disenchantItem()
     }
 
     int insertIndex = _allItems.indexOf(item);
-	QString path = ResourcePathManager::dataPathForFileName(QString("items/%1.d2i").arg(action->objectName() == "signet" ? "signet_of_learning" : "arcane_shard"));
-	ItemInfo *newItem = ItemParser::loadItemFromFile(path);
+    QString path = ResourcePathManager::dataPathForFileName(QString("items/%1.d2i").arg(action->objectName() == "signet" ? "signet_of_learning" : "arcane_shard"));
+    ItemInfo *newItem = ItemParser::loadItemFromFile(path);
 
     // TODO: fix if item is on the character
     ItemsList items = ItemParser::itemsLocatedAt(item->storage);
     items.removeOne(item);
-	if (!ItemParser::canStoreItemAt(item->row, item->column, newItem->itemType, items, ItemsViewerDialog::rows.at(ItemsViewerDialog::indexFromItemStorage(item->storage)), 10))
-	{
-		ERROR_BOX("If you see this text (which you shouldn't), please tell me which item you've just tried to disenchant");
-		delete newItem;
-		return;
-	}
+    if (!ItemParser::canStoreItemAt(item->row, item->column, newItem->itemType, items, ItemsViewerDialog::rows.at(ItemsViewerDialog::indexFromItemStorage(item->storage)), 10))
+    {
+        ERROR_BOX("If you see this text (which you shouldn't), please tell me which item you've just tried to disenchant");
+        delete newItem;
+        return;
+    }
 
-	newItem->row = item->row;
-	newItem->column = item->column;
-	newItem->storage = item->storage;
+    newItem->row = item->row;
+    newItem->column = item->column;
+    newItem->storage = item->storage;
     newItem->whereEquipped = item->whereEquipped;
     newItem->location = Enums::ItemLocation::Stored;
-	newItem->plugyPage = item->plugyPage;
+    newItem->plugyPage = item->plugyPage;
 
     // update bits
     bool isPlugyStorage = newItem->storage == Enums::ItemStorage::PersonalStash || newItem->storage == Enums::ItemStorage::SharedStash || newItem->storage == Enums::ItemStorage::HCStash;
@@ -338,7 +338,7 @@ void ItemsPropertiesSplitter::disenchantItem()
     }
 
     performDeleteItem(item);
-	addItemToList(newItem, insertIndex);
+    addItemToList(newItem, insertIndex);
 }
 
 //void ItemsPropertiesSplitter::unsocketItem()
@@ -348,8 +348,8 @@ void ItemsPropertiesSplitter::disenchantItem()
 //
 //void ItemsPropertiesSplitter::makeNonEthereal()
 //{
-//	ItemInfo *item = selectedItem();
-//	if (item)
+//    ItemInfo *item = selectedItem();
+//    if (item)
 //    {
 //        item->hasChanged = true;
 //
@@ -364,25 +364,25 @@ void ItemsPropertiesSplitter::disenchantItem()
 //            ReverseBitWriter::replaceValueInBitString(item->bitString, Enums::ItemOffsets::Ethereal, defenceProp.bits, item->defense + defenceProp.add);
 //        }
 //
-//		_propertiesWidget->displayItemProperties(item);
-//	}
+//        _propertiesWidget->displayItemProperties(item);
+//    }
 //}
 
 void ItemsPropertiesSplitter::deleteItem()
 {
-	ItemInfo *item = selectedItem();
-	if (item && QMessageBox::question(this, qApp->applicationName(), tr("Are you sure you want to delete this item?"), QMessageBox::Yes, QMessageBox::No) == QMessageBox::Yes)
+    ItemInfo *item = selectedItem();
+    if (item && QMessageBox::question(this, qApp->applicationName(), tr("Are you sure you want to delete this item?"), QMessageBox::Yes, QMessageBox::No) == QMessageBox::Yes)
         performDeleteItem(item);
 }
 
 void ItemsPropertiesSplitter::performDeleteItem(ItemInfo *item)
 {
-	// TODO 0.3: add option to unsocket at first
-	removeItemFromList(item);
-	qDeleteAll(item->socketablesInfo);
-	delete item;
+    // TODO 0.3: add option to unsocket at first
+    removeItemFromList(item);
+    qDeleteAll(item->socketablesInfo);
+    delete item;
 
-	setItems(_allItems); // maybe not needed?
+    setItems(_allItems); // maybe not needed?
 }
 
 ItemInfo *ItemsPropertiesSplitter::selectedItem(bool showError /*= true*/)
@@ -395,15 +395,15 @@ ItemInfo *ItemsPropertiesSplitter::selectedItem(bool showError /*= true*/)
 
 void ItemsPropertiesSplitter::addItemToList(ItemInfo *item, int pos /*= -1*/)
 {
-	ItemDataBase::currentCharacterItems->append(item);
-	if (pos > -1)
-		_allItems.insert(pos, item);
-	else
-		_allItems.append(item);
+    ItemDataBase::currentCharacterItems->append(item);
+    if (pos > -1)
+        _allItems.insert(pos, item);
+    else
+        _allItems.append(item);
 }
 
 void ItemsPropertiesSplitter::removeItemFromList(ItemInfo *item)
 {
-	ItemDataBase::currentCharacterItems->removeOne(item);
-	_allItems.removeOne(item);
+    ItemDataBase::currentCharacterItems->removeOne(item);
+    _allItems.removeOne(item);
 }

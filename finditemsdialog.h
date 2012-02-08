@@ -10,41 +10,41 @@
 
 class FindItemsDialog : public QDialog
 {
-	Q_OBJECT
+    Q_OBJECT
 
 public:
-	Ui::FindItemsDialog ui;
+    Ui::FindItemsDialog ui;
 
-	FindItemsDialog(QWidget *parent = 0);
+    FindItemsDialog(QWidget *parent = 0);
 
-	void saveSettings();
+    void saveSettings();
 
 public slots:
-	void resetSearchStatus();
-	void show();
+    void resetSearchStatus();
+    void show();
 
 signals:
-	void itemFound(ItemInfo *item);
+    void itemFound(ItemInfo *item);
 
 private slots:
-	void findNext();
-	void findPrevious();
-	void showResults();
+    void findNext();
+    void findPrevious();
+    void showResults();
 
-	void searchTextChanged();
+    void searchTextChanged();
 
 private:
-	ItemsList _searchResult;
-	bool _searchPerformed;
-	int _currentIndex;
+    ItemsList _searchResult;
+    bool _searchPerformed;
+    int _currentIndex;
 
-	void performSearch();
-	void nothingFound();
+    void performSearch();
+    void nothingFound();
 
-	void loadSettings();
-	void updateWindowTitle();
-	void changeItem();
-	void setButtonsDisabled(bool disabled, bool updateResultButton = true);
+    void loadSettings();
+    void updateWindowTitle();
+    void changeItem();
+    void setButtonsDisabled(bool disabled, bool updateResultButton = true);
 };
 
 #endif // FINDITEMSWIDGET_H

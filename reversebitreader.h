@@ -10,7 +10,7 @@ public:
     ReverseBitReader(const QString &bitString) : _bitString(bitString), _pos(bitString.length()) {}
 
     inline bool readBool(bool *ok = 0) { return static_cast<bool>(readNumber(1, ok)); }
-	qint64 readNumber(int length, bool *ok = 0);
+    qint64 readNumber(int length, bool *ok = 0);
 
     int pos() const { return _bitString.length() - _pos; }
     int setPos(int newPos);

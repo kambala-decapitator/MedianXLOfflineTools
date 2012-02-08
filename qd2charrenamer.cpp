@@ -20,8 +20,8 @@ void QD2CharRenamer::updateNamePreview(QTextEdit *previewTextEdit, const QString
 
 QD2CharRenamer::QD2CharRenamer(QWidget *parent, const QString &originalName) : QDialog(parent), _originalCharName(originalName)
 {
-	ui.setupUi(this);
-	setWindowFlags(windowFlags() & ~Qt::WindowContextHelpButtonHint);
+    ui.setupUi(this);
+    setWindowFlags(windowFlags() & ~Qt::WindowContextHelpButtonHint);
     setWindowModality(Qt::WindowModal);
     setFixedSize(size());
 

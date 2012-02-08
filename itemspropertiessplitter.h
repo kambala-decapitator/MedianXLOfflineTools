@@ -24,14 +24,14 @@ public:
     ItemStorageTableModel *itemsModel() const { return _itemsModel; }
 
     void setItems(const ItemsList &newItems);
-	void showItem(ItemInfo *item);
+    void showItem(ItemInfo *item);
 
 protected:
     void keyPressEvent(QKeyEvent *keyEvent);
     void keyReleaseEvent(QKeyEvent *keyEvent);
 
 private slots:
-	void itemSelected(const QModelIndex &index);
+    void itemSelected(const QModelIndex &index);
 
     void updateItemsForCurrentPage();
     void left10Clicked();
@@ -39,13 +39,13 @@ private slots:
     void rightClicked();
     void right10Clicked();
 
-	void showContextMenu(const QPoint &pos);
+    void showContextMenu(const QPoint &pos);
     void exportHtml();
     void exportBbCode();
-	void disenchantItem();
-	//void unsocketItem();
-	//void makeNonEthereal();
-	void deleteItem();
+    void disenchantItem();
+    //void unsocketItem();
+    //void makeNonEthereal();
+    void deleteItem();
 
 private:
     PropertiesViewerWidget *_propertiesWidget;
@@ -63,11 +63,11 @@ private:
     void performDeleteItem(ItemInfo *item);
     ItemInfo *selectedItem(bool showError = true);
     //ItemInfo *itemFromCoordinate(const QPoint &pos);
-	//QAction *actionFromSender(QObject *sender, const QLatin1String &errorActionText);
-	//ItemInfo *itemFromAction(QAction *action);
+    //QAction *actionFromSender(QObject *sender, const QLatin1String &errorActionText);
+    //ItemInfo *itemFromAction(QAction *action);
 
-	void addItemToList(ItemInfo *item, int pos = -1);
-	void removeItemFromList(ItemInfo *item);
+    void addItemToList(ItemInfo *item, int pos = -1);
+    void removeItemFromList(ItemInfo *item);
 };
 
 #endif // ITEMSPROPERTIESSPLITTER_H

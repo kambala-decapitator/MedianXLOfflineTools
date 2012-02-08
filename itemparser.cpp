@@ -17,222 +17,222 @@ const QString ItemParser::enhancedDamageFormat = tr("+%1% Enhanced Damage");
 
 ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &bytes)
 {
-	ItemInfo *item = 0;
-	bool ok = true;
-	int attempt = 0, searchEndOffset = 0;
-	// loop tries maximum 5 times to read past JM in case it's a part of item
-	do
-	{
-		inputDataStream.skipRawData(2); // JM
-		int itemStartOffset = inputDataStream.device()->pos();
-		if (!searchEndOffset)
-			searchEndOffset = itemStartOffset;
-		int nextItemOffset = bytes.indexOf(itemHeader, searchEndOffset);
-		if (nextItemOffset == -1)
-			nextItemOffset = bytes.size();
-		else if (bytes.mid(nextItemOffset - 3, 2) == plugyPageHeader) // for plugy stashes
-			nextItemOffset -= 3;
-		int itemSize = nextItemOffset - itemStartOffset;
+    ItemInfo *item = 0;
+    bool ok = true;
+    int attempt = 0, searchEndOffset = 0;
+    // loop tries maximum 5 times to read past JM in case it's a part of item
+    do
+    {
+        inputDataStream.skipRawData(2); // JM
+        int itemStartOffset = inputDataStream.device()->pos();
+        if (!searchEndOffset)
+            searchEndOffset = itemStartOffset;
+        int nextItemOffset = bytes.indexOf(itemHeader, searchEndOffset);
+        if (nextItemOffset == -1)
+            nextItemOffset = bytes.size();
+        else if (bytes.mid(nextItemOffset - 3, 2) == plugyPageHeader) // for plugy stashes
+            nextItemOffset -= 3;
+        int itemSize = nextItemOffset - itemStartOffset;
 
-		QString itemBitData;
-		itemBitData.reserve(itemSize * 8);
-		for (int i = 0; i < itemSize; ++i)
-		{
-			quint8 aByte;
-			inputDataStream >> aByte;
-			itemBitData.prepend(binaryStringFromNumber(aByte));
-		}
-		ReverseBitReader bitReader(itemBitData);
+        QString itemBitData;
+        itemBitData.reserve(itemSize * 8);
+        for (int i = 0; i < itemSize; ++i)
+        {
+            quint8 aByte;
+            inputDataStream >> aByte;
+            itemBitData.prepend(binaryStringFromNumber(aByte));
+        }
+        ReverseBitReader bitReader(itemBitData);
 
-		if (item)
-			delete item;
-		item = new ItemInfo(bitReader.notReadBits());
-		item->isQuest = bitReader.readBool();
-		bitReader.skip(3);
-		item->isIdentified = bitReader.readBool();
-		bitReader.skip(5);
-		bitReader.skip(); // is duped
-		item->isSocketed = bitReader.readBool();
-		bitReader.skip(2);
-		bitReader.skip(2); // is illegal equip + unk
-		item->isEar = bitReader.readBool();
-		item->isStarter = bitReader.readBool();
-		bitReader.skip(2);
-		bitReader.skip();
-		item->isExtended = !bitReader.readBool();
-		item->isEthereal = bitReader.readBool();
-		bitReader.skip();
-		item->isPersonalized = bitReader.readBool();
-		bitReader.skip();
-		item->isRW = bitReader.readBool();
-		bitReader.skip(5);
-		bitReader.skip(8); // version - should be 101
-		bitReader.skip(2);
-		item->location = bitReader.readNumber(3);
-		item->whereEquipped = bitReader.readNumber(4);
-		item->column = bitReader.readNumber(4);
-		item->row = bitReader.readNumber(4);
-		if (item->location == 2) // belt
-		{
-			item->row = item->column / 4;
-			item->column %= 4;
-		}
-		item->storage = bitReader.readNumber(3);
+        if (item)
+            delete item;
+        item = new ItemInfo(bitReader.notReadBits());
+        item->isQuest = bitReader.readBool();
+        bitReader.skip(3);
+        item->isIdentified = bitReader.readBool();
+        bitReader.skip(5);
+        bitReader.skip(); // is duped
+        item->isSocketed = bitReader.readBool();
+        bitReader.skip(2);
+        bitReader.skip(2); // is illegal equip + unk
+        item->isEar = bitReader.readBool();
+        item->isStarter = bitReader.readBool();
+        bitReader.skip(2);
+        bitReader.skip();
+        item->isExtended = !bitReader.readBool();
+        item->isEthereal = bitReader.readBool();
+        bitReader.skip();
+        item->isPersonalized = bitReader.readBool();
+        bitReader.skip();
+        item->isRW = bitReader.readBool();
+        bitReader.skip(5);
+        bitReader.skip(8); // version - should be 101
+        bitReader.skip(2);
+        item->location = bitReader.readNumber(3);
+        item->whereEquipped = bitReader.readNumber(4);
+        item->column = bitReader.readNumber(4);
+        item->row = bitReader.readNumber(4);
+        if (item->location == 2) // belt
+        {
+            item->row = item->column / 4;
+            item->column %= 4;
+        }
+        item->storage = bitReader.readNumber(3);
 
-		for (int i = 0; i < 3; ++i)
-			item->itemType += static_cast<quint8>(bitReader.readNumber(8));
-		bitReader.skip(8); // skip last space (byte 4 at 84-92)
+        for (int i = 0; i < 3; ++i)
+            item->itemType += static_cast<quint8>(bitReader.readNumber(8));
+        bitReader.skip(8); // skip last space (byte 4 at 84-92)
 
-		if (item->isExtended)
-		{
-			item->socketablesNumber = bitReader.readNumber(3);
-			item->guid = bitReader.readNumber(32);
-			item->ilvl = bitReader.readNumber(7);
-			item->quality = bitReader.readNumber(4);
-			if (bitReader.readBool())
-				item->variableGraphicIndex = bitReader.readNumber(3) + 1;
-			if (bitReader.readBool()) // class info
+        if (item->isExtended)
+        {
+            item->socketablesNumber = bitReader.readNumber(3);
+            item->guid = bitReader.readNumber(32);
+            item->ilvl = bitReader.readNumber(7);
+            item->quality = bitReader.readNumber(4);
+            if (bitReader.readBool())
+                item->variableGraphicIndex = bitReader.readNumber(3) + 1;
+            if (bitReader.readBool()) // class info
                 bitReader.skip(11);
 
             const ItemBase &itemBase = ItemDataBase::Items()->value(item->itemType);
-			switch (item->quality)
-			{
-			case Enums::ItemQuality::Normal:
-				break;
-			case Enums::ItemQuality::LowQuality: case Enums::ItemQuality::HighQuality:
-				item->nonMagicType = bitReader.readNumber(3);
-				break;
-			case Enums::ItemQuality::Magic:
-				bitReader.skip(22); // prefix & suffix
-				break;
-			case Enums::ItemQuality::Set: case Enums::ItemQuality::Unique:
-				item->setOrUniqueId = bitReader.readNumber(12);
-				break;
-			case Enums::ItemQuality::Rare: case Enums::ItemQuality::Crafted:
-				bitReader.skip(16); // first & second names
-				for (int i = 0; i < 6; ++i)
-					if (bitReader.readBool())
-						bitReader.skip(11); // prefix or suffix (1-3)
-				break;
-			case Enums::ItemQuality::Honorific:
-				bitReader.skip(16); // no idea what these bits mean
-				break;
-			default:
-				ERROR_BOX_NO_PARENT(tr("Item '%1' of unknown quality '%2' found!").arg(itemBase.name).arg(item->quality));
-				break;
-			}
+            switch (item->quality)
+            {
+            case Enums::ItemQuality::Normal:
+                break;
+            case Enums::ItemQuality::LowQuality: case Enums::ItemQuality::HighQuality:
+                item->nonMagicType = bitReader.readNumber(3);
+                break;
+            case Enums::ItemQuality::Magic:
+                bitReader.skip(22); // prefix & suffix
+                break;
+            case Enums::ItemQuality::Set: case Enums::ItemQuality::Unique:
+                item->setOrUniqueId = bitReader.readNumber(12);
+                break;
+            case Enums::ItemQuality::Rare: case Enums::ItemQuality::Crafted:
+                bitReader.skip(16); // first & second names
+                for (int i = 0; i < 6; ++i)
+                    if (bitReader.readBool())
+                        bitReader.skip(11); // prefix or suffix (1-3)
+                break;
+            case Enums::ItemQuality::Honorific:
+                bitReader.skip(16); // no idea what these bits mean
+                break;
+            default:
+                ERROR_BOX_NO_PARENT(tr("Item '%1' of unknown quality '%2' found!").arg(itemBase.name).arg(item->quality));
+                break;
+            }
 
-			if (item->isRW)
-				bitReader.skip(16); // RW code - don't know how to use it
-			if (item->isPersonalized)
-			{
-				for (int i = 0; i < 16; ++i)
-				{
-					quint8 c = static_cast<quint8>(bitReader.readNumber(7));
-					if (!c)
-						break;
-					item->inscribedName += c;
-				}
-			}
-			bitReader.skip(); // tome of ID bit
-			if (item->itemType == "ibk" || item->itemType == "tbk")
-				bitReader.skip(5); // some tome bits
-			if (itemBase.genericType == Enums::ItemTypeGeneric::Armor)
-			{
-				const ItemPropertyTxt &defenceProp = ItemDataBase::Properties()->value(Enums::ItemProperties::Defence);
-				item->defense = bitReader.readNumber(defenceProp.bits) - defenceProp.add;
-			}
-			if (itemBase.genericType != Enums::ItemTypeGeneric::Misc)
-			{
-				const ItemPropertyTxt &maxDurabilityProp = ItemDataBase::Properties()->value(Enums::ItemProperties::DurabilityMax);
-				item->maxDurability = bitReader.readNumber(maxDurabilityProp.bits) - maxDurabilityProp.add;
-				if (item->maxDurability)
-				{
-					const ItemPropertyTxt &durabilityProp = ItemDataBase::Properties()->value(Enums::ItemProperties::Durability);
-					item->currentDurability = bitReader.readNumber(durabilityProp.bits) - durabilityProp.add;
-					if (item->maxDurability < item->currentDurability)
-						item->maxDurability = item->currentDurability;
-				}
-			}
-			item->quantity = itemBase.isStackable ? bitReader.readNumber(9) : -1;
-			if (item->isSocketed)
-				item->socketsNumber = bitReader.readNumber(4);
+            if (item->isRW)
+                bitReader.skip(16); // RW code - don't know how to use it
+            if (item->isPersonalized)
+            {
+                for (int i = 0; i < 16; ++i)
+                {
+                    quint8 c = static_cast<quint8>(bitReader.readNumber(7));
+                    if (!c)
+                        break;
+                    item->inscribedName += c;
+                }
+            }
+            bitReader.skip(); // tome of ID bit
+            if (item->itemType == "ibk" || item->itemType == "tbk")
+                bitReader.skip(5); // some tome bits
+            if (itemBase.genericType == Enums::ItemTypeGeneric::Armor)
+            {
+                const ItemPropertyTxt &defenceProp = ItemDataBase::Properties()->value(Enums::ItemProperties::Defence);
+                item->defense = bitReader.readNumber(defenceProp.bits) - defenceProp.add;
+            }
+            if (itemBase.genericType != Enums::ItemTypeGeneric::Misc)
+            {
+                const ItemPropertyTxt &maxDurabilityProp = ItemDataBase::Properties()->value(Enums::ItemProperties::DurabilityMax);
+                item->maxDurability = bitReader.readNumber(maxDurabilityProp.bits) - maxDurabilityProp.add;
+                if (item->maxDurability)
+                {
+                    const ItemPropertyTxt &durabilityProp = ItemDataBase::Properties()->value(Enums::ItemProperties::Durability);
+                    item->currentDurability = bitReader.readNumber(durabilityProp.bits) - durabilityProp.add;
+                    if (item->maxDurability < item->currentDurability)
+                        item->maxDurability = item->currentDurability;
+                }
+            }
+            item->quantity = itemBase.isStackable ? bitReader.readNumber(9) : -1;
+            if (item->isSocketed)
+                item->socketsNumber = bitReader.readNumber(4);
 
-			bool hasSetLists[5] = {false};
-			if (item->quality == Enums::ItemQuality::Set)
-				for (int i = 0; i < 5; i++)
-					hasSetLists[i] = bitReader.readBool(); // should always be false for MXL
+            bool hasSetLists[5] = {false};
+            if (item->quality == Enums::ItemQuality::Set)
+                for (int i = 0; i < 5; i++)
+                    hasSetLists[i] = bitReader.readBool(); // should always be false for MXL
 
-			item->props = parseItemProperties(bitReader, &ok);
-			if (!ok)
-			{
-				inputDataStream.device()->seek(itemStartOffset - 2); // set to JM - beginning of the item
-				item->props.insert(1, ItemProperty(tr("Error parsing item properties (ok == 0), please report!")));
-				searchEndOffset = nextItemOffset + 1;
-				continue;
+            item->props = parseItemProperties(bitReader, &ok);
+            if (!ok)
+            {
+                inputDataStream.device()->seek(itemStartOffset - 2); // set to JM - beginning of the item
+                item->props.insert(1, ItemProperty(tr("Error parsing item properties (ok == 0), please report!")));
+                searchEndOffset = nextItemOffset + 1;
+                continue;
             }
 
             //for (int i = 0; i < 5; ++i)
             //    if (hasSetLists[i])
             //        outStream << "set property list #" << i+1 << " should be here\n";
 
-			if (item->isRW)
-			{
-				item->rwProps = parseItemProperties(bitReader, &ok);
-				if (!ok)
-				{
-					inputDataStream.device()->seek(itemStartOffset - 2); // set to JM - beginning of the item
-					item->rwProps.insert(1, ItemProperty(tr("Error parsing RW properties, please report!")));
-					searchEndOffset = nextItemOffset + 1;
-					continue;
+            if (item->isRW)
+            {
+                item->rwProps = parseItemProperties(bitReader, &ok);
+                if (!ok)
+                {
+                    inputDataStream.device()->seek(itemStartOffset - 2); // set to JM - beginning of the item
+                    item->rwProps.insert(1, ItemProperty(tr("Error parsing RW properties, please report!")));
+                    searchEndOffset = nextItemOffset + 1;
+                    continue;
                 }
-			}
+            }
 
-			// parse all socketables
-			QList<QByteArray> runeTypes;
-			for (int i = 0; i < item->socketablesNumber; ++i)
-			{
-				ItemInfo *socketableInfo = parseItem(inputDataStream, bytes);
-				item->socketablesInfo += socketableInfo;
-				if (item->isRW && i >= item->socketablesNumber - 2) // get the last socket filler to obtain RW name (and previous one to prevent disambiguation)
-					runeTypes.prepend(i != item->socketablesNumber - 1 ? QByteArray() : socketableInfo->itemType);
-			}
+            // parse all socketables
+            QList<QByteArray> runeTypes;
+            for (int i = 0; i < item->socketablesNumber; ++i)
+            {
+                ItemInfo *socketableInfo = parseItem(inputDataStream, bytes);
+                item->socketablesInfo += socketableInfo;
+                if (item->isRW && i >= item->socketablesNumber - 2) // get the last socket filler to obtain RW name (and previous one to prevent disambiguation)
+                    runeTypes.prepend(i != item->socketablesNumber - 1 ? QByteArray() : socketableInfo->itemType);
+            }
 
-			if (runeTypes.size())
-			{
-				RunewordKeyPair rwKey = qMakePair(runeTypes.at(0), runeTypes.size() > 1 ? runeTypes.at(1) : QByteArray());
-				if (rwKey == qMakePair(QByteArray("r56"), QByteArray("r55"))) // maybe it's 'Eternal'?
-					item->rwName = ItemDataBase::RW()->value(qMakePair(QByteArray("r51"), QByteArray("r52"))).name;
-				else
-				{
-					QMultiHash<RunewordKeyPair, RunewordInfo>::const_iterator iter = ItemDataBase::RW()->find(rwKey);
-					for (; iter != ItemDataBase::RW()->end() && iter.key() == rwKey; ++iter)
-					{
+            if (runeTypes.size())
+            {
+                RunewordKeyPair rwKey = qMakePair(runeTypes.at(0), runeTypes.size() > 1 ? runeTypes.at(1) : QByteArray());
+                if (rwKey == qMakePair(QByteArray("r56"), QByteArray("r55"))) // maybe it's 'Eternal'?
+                    item->rwName = ItemDataBase::RW()->value(qMakePair(QByteArray("r51"), QByteArray("r52"))).name;
+                else
+                {
+                    QMultiHash<RunewordKeyPair, RunewordInfo>::const_iterator iter = ItemDataBase::RW()->find(rwKey);
+                    for (; iter != ItemDataBase::RW()->end() && iter.key() == rwKey; ++iter)
+                    {
                         const RunewordInfo &rwInfo = iter.value();
-						if (itemTypeInheritsFromTypes(itemBase.typeString, rwInfo.allowedItemTypes))
-						{
-							item->rwName = rwInfo.name;
-							break;
-						}
-					}
-					if (iter == ItemDataBase::RW()->end())
-						item->rwName = tr("Unknown RW, please report!");
-				}
-			}
-			else if (item->isRW)
-				item->rwName = tr("Unknown RW (no socketables detected), please report!");
-		}
-		else
-			item->quality = Enums::ItemQuality::Normal;
-	} while (!ok && ++attempt < 5);
-	return item;
+                        if (itemTypeInheritsFromTypes(itemBase.typeString, rwInfo.allowedItemTypes))
+                        {
+                            item->rwName = rwInfo.name;
+                            break;
+                        }
+                    }
+                    if (iter == ItemDataBase::RW()->end())
+                        item->rwName = tr("Unknown RW, please report!");
+                }
+            }
+            else if (item->isRW)
+                item->rwName = tr("Unknown RW (no socketables detected), please report!");
+        }
+        else
+            item->quality = Enums::ItemQuality::Normal;
+    } while (!ok && ++attempt < 5);
+    return item;
 }
 
 PropertiesMultiMap ItemParser::parseItemProperties(ReverseBitReader &bitReader, bool *ok)
 {
-	PropertiesMultiMap props;
-	while (bitReader.pos() != -1)
-	{
+    PropertiesMultiMap props;
+    while (bitReader.pos() != -1)
+    {
         try
         {
             int id = bitReader.readNumber(Enums::CharacterStats::StatCodeLength);
@@ -340,95 +340,95 @@ PropertiesMultiMap ItemParser::parseItemProperties(ReverseBitReader &bitReader, 
             props.insert(Enums::ItemProperties::Requirements, ItemProperty(tr("Error parsing item properties (exception == %1), please report!").arg(exceptionCode)));
             return props;
         }
-	}
+    }
 
-	*ok = false;
-	return PropertiesMultiMap();
+    *ok = false;
+    return PropertiesMultiMap();
 }
 
 void ItemParser::writeItems(const ItemsList &items, QDataStream &ds)
 {
-	foreach (ItemInfo *item, items)
-	{
-		ds.writeRawData(itemHeader.constData(), itemHeader.size()); // do not write '\0'
+    foreach (ItemInfo *item, items)
+    {
+        ds.writeRawData(itemHeader.constData(), itemHeader.size()); // do not write '\0'
 
-		QByteArray itemBytes;
-		for (int i = 0; i < item->bitString.length(); i += 8)
-			itemBytes.prepend(item->bitString.mid(i, 8).toShort(0, 2));
-		ds.writeRawData(itemBytes.constData(), itemBytes.size()); // do not write '\0'
+        QByteArray itemBytes;
+        for (int i = 0; i < item->bitString.length(); i += 8)
+            itemBytes.prepend(item->bitString.mid(i, 8).toShort(0, 2));
+        ds.writeRawData(itemBytes.constData(), itemBytes.size()); // do not write '\0'
 
-		writeItems(item->socketablesInfo, ds);
-	}
+        writeItems(item->socketablesInfo, ds);
+    }
 }
 
 ItemInfo *ItemParser::loadItemFromFile(const QString &filePath)
 {
-	ItemInfo *item = 0;
-	QFile itemFile(filePath);
-	if (itemFile.open(QIODevice::ReadOnly))
-	{
-		QByteArray itemBytes = itemFile.readAll();
-		itemFile.close();
+    ItemInfo *item = 0;
+    QFile itemFile(filePath);
+    if (itemFile.open(QIODevice::ReadOnly))
+    {
+        QByteArray itemBytes = itemFile.readAll();
+        itemFile.close();
 
-		QDataStream ds(itemBytes);
-		ds.setByteOrder(QDataStream::LittleEndian);
+        QDataStream ds(itemBytes);
+        ds.setByteOrder(QDataStream::LittleEndian);
 
-		item = parseItem(ds, itemBytes);
-		item->hasChanged = true;
-		item->row = item->column = -1;
-	}
-	else
-		ERROR_BOX_NO_PARENT(tr("Error opening file '%1'\nReason: %2").arg(filePath).arg(itemFile.errorString()));
-	return item;
+        item = parseItem(ds, itemBytes);
+        item->hasChanged = true;
+        item->row = item->column = -1;
+    }
+    else
+        ERROR_BOX_NO_PARENT(tr("Error opening file '%1'\nReason: %2").arg(filePath).arg(itemFile.errorString()));
+    return item;
 }
 
 ItemsList ItemParser::itemsLocatedAt(int storage, int location /*= Enums::ItemLocation::Stored*/)
 {
-	ItemsList items, *characterItems = ItemDataBase::currentCharacterItems;
-	for (int i = 0; i < characterItems->size(); ++i)
-	{
-		ItemInfo *item = characterItems->at(i);
-		if (item->location == location && item->storage == storage)
-			items += item;
-	}
-	return items;
+    ItemsList items, *characterItems = ItemDataBase::currentCharacterItems;
+    for (int i = 0; i < characterItems->size(); ++i)
+    {
+        ItemInfo *item = characterItems->at(i);
+        if (item->location == location && item->storage == storage)
+            items += item;
+    }
+    return items;
 }
 
 bool ItemParser::storeItemIn(ItemInfo *item, Enums::ItemStorage::ItemStorageEnum storage, quint8 rows, quint8 cols, int plugyPage /*= 0*/)
 {
-	ItemsList items = itemsLocatedAt(storage);
-	for (quint8 i = 0; i < rows; ++i)
-		for (quint8 j = 0; j < cols; ++j)
-			if (canStoreItemAt(i, j, item->itemType, items, rows, cols))
-			{
-				item->storage = storage;
-				item->row = i;
-				item->column = j;
-				return true;
-			}
+    ItemsList items = itemsLocatedAt(storage);
+    for (quint8 i = 0; i < rows; ++i)
+        for (quint8 j = 0; j < cols; ++j)
+            if (canStoreItemAt(i, j, item->itemType, items, rows, cols))
+            {
+                item->storage = storage;
+                item->row = i;
+                item->column = j;
+                return true;
+            }
 
-	return false;
+    return false;
 }
 
 bool ItemParser::canStoreItemAt(quint8 row, quint8 col, const QByteArray &storeItemType, const ItemsList &items, int rowsTotal, int colsTotal, int plugyPage /*= 0*/)
 {
     // col is horizontal (x), row is vertical (y)
-	const ItemBase &storeItemBase = ItemDataBase::Items()->value(storeItemType);
-	QRect storeItemRect(col, row, storeItemBase.width, storeItemBase.height);
+    const ItemBase &storeItemBase = ItemDataBase::Items()->value(storeItemType);
+    QRect storeItemRect(col, row, storeItemBase.width, storeItemBase.height);
     if (storeItemRect.right() >= colsTotal || storeItemRect.bottom() >= rowsTotal) // beyond grid
         return false;
 
-	bool ok = true;
-	foreach (ItemInfo *item, items)
-	{
-		const ItemBase &itemBase = ItemDataBase::Items()->value(item->itemType);
-		if (storeItemRect.intersects(QRect(item->column, item->row, itemBase.width, itemBase.height)))
-		{
-			ok = false;
-			break;
-		}
-	}
-	return ok;
+    bool ok = true;
+    foreach (ItemInfo *item, items)
+    {
+        const ItemBase &itemBase = ItemDataBase::Items()->value(item->itemType);
+        if (storeItemRect.intersects(QRect(item->column, item->row, itemBase.width, itemBase.height)))
+        {
+            ok = false;
+            break;
+        }
+    }
+    return ok;
 }
 
 bool ItemParser::itemTypeInheritsFromTypes(const QByteArray &itemType, const QList<QByteArray> &allowedItemTypes)

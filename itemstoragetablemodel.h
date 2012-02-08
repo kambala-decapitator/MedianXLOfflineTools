@@ -12,12 +12,12 @@ class ItemStorageTableModel : public QAbstractTableModel
     Q_OBJECT
 
 public:
-	static const int columns;
+    static const int columns;
 
     explicit ItemStorageTableModel(int rows, QObject *parent = 0) : QAbstractTableModel(parent), _rows(rows) {}
 
-    virtual int	rowCount(const QModelIndex &parent = QModelIndex()) const { Q_UNUSED(parent); return _rows; }
-    virtual int	columnCount(const QModelIndex &parent = QModelIndex()) const { Q_UNUSED(parent); return columns; }
+    virtual int    rowCount(const QModelIndex &parent = QModelIndex()) const { Q_UNUSED(parent); return _rows; }
+    virtual int    columnCount(const QModelIndex &parent = QModelIndex()) const { Q_UNUSED(parent); return columns; }
     virtual QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
 
     virtual ItemInfo *itemAt(const QModelIndex &modelIndex) const { return _itemsHash[qMakePair(modelIndex.row(), modelIndex.column())]; }

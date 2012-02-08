@@ -9,11 +9,11 @@
 
 int main(int argc, char *argv[])
 {
-	QApplication app(argc, argv);
+    QApplication app(argc, argv);
 
-	app.setOrganizationName("kambala");
-	app.setApplicationName("Median XL Offline Tools");
-	app.setApplicationVersion("0.2");
+    app.setOrganizationName("kambala");
+    app.setApplicationName("Median XL Offline Tools");
+    app.setApplicationVersion("0.2");
 
 
     LanguageManager &langManager = LanguageManager::instance();
@@ -24,18 +24,18 @@ int main(int argc, char *argv[])
 #endif
     "Resources");
 
-	QTranslator myappTranslator;
+    QTranslator myappTranslator;
     if (!myappTranslator.load(app.applicationName().remove(' ').toLower() + "_" + langManager.currentLocale, langManager.translationsPath))
         langManager.currentLocale = langManager.defaultLocale;
-	app.installTranslator(&myappTranslator);
+    app.installTranslator(&myappTranslator);
 
-	QTranslator qtTranslator;
+    QTranslator qtTranslator;
     qtTranslator.load("qt_" + langManager.currentLocale, langManager.translationsPath);
-	app.installTranslator(&qtTranslator);
+    app.installTranslator(&qtTranslator);
 
 
-	MedianXLOfflineTools w;
-	w.show();
+    MedianXLOfflineTools w;
+    w.show();
 
-	return app.exec();
+    return app.exec();
 }

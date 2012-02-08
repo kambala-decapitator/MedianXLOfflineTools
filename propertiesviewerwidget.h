@@ -39,7 +39,7 @@ public slots:
 
 private slots:
 #ifndef Q_WS_MACX
-	void currentItemTabChanged(int index);
+    void currentItemTabChanged(int index);
 #endif
 
 private:
@@ -54,7 +54,7 @@ private:
     void removeMysticOrbsFromProperties(const QSet<int> &mysticOrbs, PropertiesMultiMap *props);
     int indexOfPropertyValue(int id, PropertiesMultiMap *props);
     void modifyMysticOrbProperty(int id, int decrement, PropertiesMultiMap *props);
-	int totalMysticOrbValue(int moCode, PropertiesMap *props);
+    int totalMysticOrbValue(int moCode, PropertiesMap *props);
     PropertiesMultiMap *propertiesWithCode(int code);
 
     void addProperties(PropertiesMap *mutableProps, const PropertiesMap &propsToAdd);

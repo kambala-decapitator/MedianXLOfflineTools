@@ -18,7 +18,7 @@ PropertiesViewerWidget::PropertiesViewerWidget(QWidget *parent) : QWidget(parent
 
     //connect(ui.removeAllMysticOrbsPushButton, SIGNAL(clicked()), SLOT(removeAllMysticOrbs()));
 #ifndef Q_WS_MACX
-	connect(ui.tabWidget, SIGNAL(currentChanged(int)), SLOT(currentItemTabChanged(int)));
+    connect(ui.tabWidget, SIGNAL(currentChanged(int)), SLOT(currentItemTabChanged(int)));
 #endif
 
     ui.tabWidget->setCurrentIndex(0); // set tab icons
@@ -147,11 +147,11 @@ void PropertiesViewerWidget::displayItemProperties(ItemInfo *item)
     if (itemBase.genericType == Enums::ItemTypeGeneric::Armor)
     {
         int baseDef = item->defense, totalDef = baseDef;
-		ItemProperty foo;
-		int ed = allProps.value(Enums::ItemProperties::EnhancedDefence, foo).value + (allProps.value(Enums::ItemProperties::EnhancedDefenceBoCL, foo).value * *ItemDataBase::clvl) / 32;
-		if (ed)
-			totalDef = (totalDef * (100 + ed)) / 100;
-		totalDef += allProps.value(Enums::ItemProperties::Defence, foo).value + (allProps.value(Enums::ItemProperties::DefenceBoCL, foo).value * *ItemDataBase::clvl) / 32;
+        ItemProperty foo;
+        int ed = allProps.value(Enums::ItemProperties::EnhancedDefence, foo).value + (allProps.value(Enums::ItemProperties::EnhancedDefenceBoCL, foo).value * *ItemDataBase::clvl) / 32;
+        if (ed)
+            totalDef = (totalDef * (100 + ed)) / 100;
+        totalDef += allProps.value(Enums::ItemProperties::Defence, foo).value + (allProps.value(Enums::ItemProperties::DefenceBoCL, foo).value * *ItemDataBase::clvl) / 32;
         if (totalDef < 0)
             totalDef = 0;
 
@@ -174,14 +174,14 @@ void PropertiesViewerWidget::displayItemProperties(ItemInfo *item)
     if (itemBase.isStackable)
         itemDescription += "<br>" + tr("Quantity: %1").arg(item->quantity);
     if (itemBase.classCode > -1)
-	{
-		itemDescription += "<br>";
-		QString text = tr("(%1 Only)", "class-specific item").arg(Enums::ClassName::classes().at(itemBase.classCode));
-		if (itemBase.classCode != *ItemDataBase::charClass)
-			itemDescription += htmlStringFromDiabloColorString(text, Red) + colorReplacementString(White);
-		else
-			itemDescription += text;
-	}
+    {
+        itemDescription += "<br>";
+        QString text = tr("(%1 Only)", "class-specific item").arg(Enums::ClassName::classes().at(itemBase.classCode));
+        if (itemBase.classCode != *ItemDataBase::charClass)
+            itemDescription += htmlStringFromDiabloColorString(text, Red) + colorReplacementString(White);
+        else
+            itemDescription += text;
+    }
 
     int rlvl;
     switch (item->quality)
@@ -230,8 +230,8 @@ void PropertiesViewerWidget::displayItemProperties(ItemInfo *item)
 
     if (item->isSocketed)
         itemDescription += "<br>" + htmlStringFromDiabloColorString(tr("Socketed: (%1), Inserted: (%2)").arg(item->socketsNumber).arg(item->socketablesNumber), Blue);
-	if (item->isEthereal)
-		itemDescription += "<br>" + htmlStringFromDiabloColorString(tr("Ethereal (Cannot be Repaired)"), Blue);
+    if (item->isEthereal)
+        itemDescription += "<br>" + htmlStringFromDiabloColorString(tr("Ethereal (Cannot be Repaired)"), Blue);
 
     // show existing set items from current set
     if (item->quality == Enums::ItemQuality::Set)
@@ -468,10 +468,10 @@ void PropertiesViewerWidget::modifyMysticOrbProperty(int id, int decrement, Prop
     const ItemPropertyTxt &propertyTxt = ItemDataBase::Properties()->value(id);
     int bitsLength = (1 + isEnhancedDamageProp) * propertyTxt.bits;
 
-	ItemProperty prop = props->value(id);
+    ItemProperty prop = props->value(id);
     prop.value -= decrement;
     if (prop.value)
-	{
+    {
         QString newBits = binaryStringFromNumber(prop.value + propertyTxt.add, false, propertyTxt.bits); // it's not a mistake that I'm not using bitsLength here
         if (isEnhancedDamageProp)
         {
@@ -479,8 +479,8 @@ void PropertiesViewerWidget::modifyMysticOrbProperty(int id, int decrement, Prop
             prop.displayString = ItemParser::enhancedDamageFormat.arg(prop.value);
         }
         _item->bitString.replace(valueIndex, bitsLength, newBits); // place modified value
-		props->replace(id, prop);
-	}
+        props->replace(id, prop);
+    }
     else
     {
         _item->bitString.remove(valueIndex, bitsLength + propertyTxt.saveParamBits + Enums::CharacterStats::StatCodeLength);
@@ -490,8 +490,8 @@ void PropertiesViewerWidget::modifyMysticOrbProperty(int id, int decrement, Prop
 
 int PropertiesViewerWidget::totalMysticOrbValue(int moCode, PropertiesMap *props)
 {
-	quint8 multiplier = 1 + (_item->quality == Enums::ItemQuality::Crafted || _item->quality == Enums::ItemQuality::Honorific);
-	return props->value(moCode).value * ItemDataBase::MysticOrbs()->value(moCode).value * multiplier;
+    quint8 multiplier = 1 + (_item->quality == Enums::ItemQuality::Crafted || _item->quality == Enums::ItemQuality::Honorific);
+    return props->value(moCode).value * ItemDataBase::MysticOrbs()->value(moCode).value * multiplier;
 }
 
 PropertiesMultiMap *PropertiesViewerWidget::propertiesWithCode(int code)
@@ -553,7 +553,7 @@ bool PropertiesViewerWidget::isClassCharm()
 #ifndef Q_WS_MACX
 void PropertiesViewerWidget::currentItemTabChanged(int index)
 {
-	for (int i = 0; i < ui.tabWidget->count(); ++i)
-		ui.tabWidget->setTabIcon(i, QIcon(QString(":/PropertiesViewerWidget/Resources/icons/arrow_%1").arg(i == index ? "down" : "right")));
+    for (int i = 0; i < ui.tabWidget->count(); ++i)
+        ui.tabWidget->setTabIcon(i, QIcon(QString(":/PropertiesViewerWidget/Resources/icons/arrow_%1").arg(i == index ? "down" : "right")));
 }
 #endif

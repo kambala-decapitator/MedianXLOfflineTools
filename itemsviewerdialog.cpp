@@ -21,8 +21,8 @@ const QList<int> ItemsViewerDialog::rows = QList<int>() << 11 << 6 << 8 << 10 <<
 
 ItemsViewerDialog::ItemsViewerDialog(QWidget *parent) : QDialog(parent), _tabWidget(new QTabWidget(this))
 {
-	setAttribute(Qt::WA_DeleteOnClose);
-	setWindowFlags(windowFlags() & ~Qt::WindowContextHelpButtonHint);
+    setAttribute(Qt::WA_DeleteOnClose);
+    setWindowFlags(windowFlags() & ~Qt::WindowContextHelpButtonHint);
     setWindowTitle(tr("Items viewer"));
 
     QHBoxLayout *layout = new QHBoxLayout(this);
@@ -43,7 +43,7 @@ ItemsViewerDialog::ItemsViewerDialog(QWidget *parent) : QDialog(parent), _tabWid
     }
 
     restoreGeometry(QSettings().value("itemsViewerGeometry").toByteArray());
-	_tabWidget->widget(0)->setFocus();
+    _tabWidget->widget(0)->setFocus();
 }
 
 void ItemsViewerDialog::closeEvent(QCloseEvent *event)
@@ -123,13 +123,13 @@ void ItemsViewerDialog::updateItems()
 
 int ItemsViewerDialog::indexFromItemStorage(int storage)
 {
-	return storage > Enums::ItemStorage::Inventory ? storage - 2 : storage;
+    return storage > Enums::ItemStorage::Inventory ? storage - 2 : storage;
 }
 
 void ItemsViewerDialog::showItem(ItemInfo *item)
 {
-	_tabWidget->setCurrentIndex(indexFromItemStorage(item->storage));
-	static_cast<ItemsPropertiesSplitter *>(_tabWidget->currentWidget())->showItem(item);
+    _tabWidget->setCurrentIndex(indexFromItemStorage(item->storage));
+    static_cast<ItemsPropertiesSplitter *>(_tabWidget->currentWidget())->showItem(item);
 }
 
 void ItemsViewerDialog::enableCubeTab()
