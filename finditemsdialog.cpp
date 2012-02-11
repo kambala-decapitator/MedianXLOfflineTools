@@ -1,6 +1,6 @@
 #include "finditemsdialog.h"
 #include "itemdatabase.h"
-#include "findresultstreeview.h"
+#include "findresultsdialog.h"
 
 #include <QGridLayout>
 #include <QVBoxLayout>
@@ -38,6 +38,7 @@ FindItemsDialog::FindItemsDialog(QWidget *parent) : QDialog(parent), _searchPerf
 
     connect(ui.nextButton, SIGNAL(clicked()), SLOT(findNext()));
     connect(ui.previousButton, SIGNAL(clicked()), SLOT(findPrevious()));
+    connect(ui.searchResultsButton, SIGNAL(clicked()), SLOT(showResults()));
     connect(ui.searchComboBox, SIGNAL(editTextChanged(const QString &)), SLOT(searchTextChanged()));
 
     connect(ui.caseSensitiveCheckBox, SIGNAL(toggled(bool)), SLOT(resetSearchStatus()));
@@ -119,9 +120,12 @@ void FindItemsDialog::findPrevious()
 
 void FindItemsDialog::showResults()
 {
-    // TODO: make it show (add as a child to QDialog)
-    FindResultsTreeView *treeView = new FindResultsTreeView(this);
-    treeView->show();
+    if (!_resultsDialog)
+    {
+        _resultsDialog = new FindResultsDialog(&_searchResult, this);
+        _resultsDialog->show();
+    }
+    _resultsDialog->activateWindow();
 }
 
 void FindItemsDialog::searchTextChanged()
@@ -207,6 +211,9 @@ void FindItemsDialog::saveSettings()
     settings.setValue("regex", ui.regexCheckBox->isChecked());
     settings.setValue("searchProps", ui.searchPropsCheckBox->isChecked());
     settings.endGroup();
+
+    if (_resultsDialog)
+        _resultsDialog->saveSettings();
 }
 
 void FindItemsDialog::show()

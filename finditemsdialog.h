@@ -6,7 +6,10 @@
 #include "structs.h"
 
 #include <QDialog>
+#include <QPointer>
 
+
+class FindResultsDialog;
 
 class FindItemsDialog : public QDialog
 {
@@ -37,6 +40,7 @@ private:
     ItemsList _searchResult;
     bool _searchPerformed;
     int _currentIndex;
+    QPointer<FindResultsDialog> _resultsDialog;
 
     void performSearch();
     void nothingFound();

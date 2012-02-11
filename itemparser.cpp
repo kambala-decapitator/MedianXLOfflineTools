@@ -382,9 +382,9 @@ ItemInfo *ItemParser::loadItemFromFile(const QString &filePath)
     return item;
 }
 
-ItemsList ItemParser::itemsLocatedAt(int storage, int location /*= Enums::ItemLocation::Stored*/)
+ItemsList ItemParser::itemsLocatedAt(int storage, ItemsList *allItems /*= 0*/, int location /*= Enums::ItemLocation::Stored*/)
 {
-    ItemsList items, *characterItems = ItemDataBase::currentCharacterItems;
+    ItemsList items, *characterItems = allItems ? allItems : ItemDataBase::currentCharacterItems;
     for (int i = 0; i < characterItems->size(); ++i)
     {
         ItemInfo *item = characterItems->at(i);

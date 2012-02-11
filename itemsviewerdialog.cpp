@@ -58,7 +58,7 @@ void ItemsViewerDialog::updateItems()
     for (int i = GearIndex; i <= LastIndex; ++i)
     {
         bool isGear = i == GearIndex;
-        ItemsList items = ItemParser::itemsLocatedAt(Enums::ItemStorage::metaEnum().value(i), isGear);
+        ItemsList items = ItemParser::itemsLocatedAt(Enums::ItemStorage::metaEnum().value(i), 0, isGear);
         if (isGear)
         {
             foreach (ItemInfo *item, items)

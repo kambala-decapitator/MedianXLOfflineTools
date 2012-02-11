@@ -183,6 +183,18 @@
     <ClCompile Include="GeneratedFiles\Template\moc_findresultstreeview.cpp">
       <Filter>Generated Files\Template</Filter>
     </ClCompile>
+    <ClCompile Include="findresultsdialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_findresultsdialog.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_findresultsdialog.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Template\moc_findresultsdialog.cpp">
+      <Filter>Generated Files\Template</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="colors.hpp">
@@ -297,6 +309,9 @@
       <Filter>Header Files</Filter>
     </CustomBuild>
     <CustomBuild Include="findresultstreeview.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="findresultsdialog.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
   </ItemGroup>

@@ -1,9 +1,13 @@
 #include "findresultstreeview.h"
-#include "findresultstreemodel.h"
 
 
 FindResultsTreeView::FindResultsTreeView(QWidget *parent) : QTreeView(parent)
 {
-    _findResultsModel = new FindResultsTreeModel(this);
-    setModel(_findResultsModel);
+    setEditTriggers(QAbstractItemView::NoEditTriggers);
+    //setHorizontalScrollMode(QAbstractItemView::ScrollPerPixel);
+    //setVerticalScrollMode(QAbstractItemView::ScrollPerItem);
+    setSelectionMode(QAbstractItemView::SingleSelection);
+    setHeaderHidden(true);
+    setRootIsDecorated(false);
+    setUniformRowHeights(true);
 }
