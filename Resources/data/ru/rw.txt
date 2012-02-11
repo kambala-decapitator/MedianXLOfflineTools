@@ -485,7 +485,7 @@ nstf						Стикс	r56
 nknf						Джинкс	r13		
 scyh						Зерно Конфликта	r49		
 shie	shld					Камнеслово!	gsg		
-bswd	baxe					Gharaniq	r33		
+bswd	baxe					Гараник	r33		
 dstf						Ложбан	r45		
 ashd						Мироносица	r55		
 h2h						Анархия	r46		
@@ -510,7 +510,7 @@ weap						Камнеслово!	7$a
 weap						Камнеслово!	sku		
 shie	shld					Камнеслово!	yo3		
 staf						Эрилаз	r51		
-tors						Спасибо всем!\nMedian 2005-2011\nВечность	r51	r52	
+tors						Спасибо всем!\nMedian 2005-2012\nВечность	r51	r52	
 glov						Икар	r49		
 weap						Архангел	r53	r53	
 armo						Камнеслово!	5$a		

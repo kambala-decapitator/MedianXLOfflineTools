@@ -195,7 +195,7 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
                 ItemInfo *socketableInfo = parseItem(inputDataStream, bytes);
                 item->socketablesInfo += socketableInfo;
                 if (item->isRW && i >= item->socketablesNumber - 2) // get the last socket filler to obtain RW name (and previous one to prevent disambiguation)
-                    runeTypes.prepend(/*i != item->socketablesNumber - 1*/socketableInfo->itemType == "jew" ? QByteArray() : socketableInfo->itemType);
+                    runeTypes.prepend(socketableInfo->itemType == "jew" ? QByteArray() : socketableInfo->itemType);
             }
 
             if (runeTypes.size())
