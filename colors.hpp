@@ -54,19 +54,19 @@ const QList<QLatin1Char> colorCodes = QList<QLatin1Char>()
 
 // real colors
 const QList<QColor> colors = QList<QColor>()
-                             << QColor(Qt::white)
-                             << QColor(Qt::red)
-                             << QColor(Qt::green)
-                             << QColor(80, 80, 200)
-                             << QColor(160, 145, 105)
-                             << QColor(Qt::darkGray)
-                                // black was here
-                             << QColor(170, 160, 120)
-                             << QColor(250, 170, 35)
-                             << QColor(Qt::yellow)
-                             << QColor(Qt::darkGreen)
-                             << QColor(150, 90, 250)
-                                ;
+    << QColor(Qt::white)
+    << QColor(Qt::red)
+    << QColor(Qt::green)
+    << QColor(80, 80, 200)
+    << QColor(160, 145, 105)
+    << QColor(Qt::darkGray)
+    // black was here
+    << QColor(170, 160, 120)
+    << QColor(250, 170, 35)
+    << QColor(Qt::yellow)
+    << QColor(Qt::darkGreen)
+    << QColor(150, 90, 250)
+    ;
 
 // user-readable color codes: unicodeColorHeader + colorCodes.at(i) == colorStrings.at(i)
 const QList<QByteArray> colorStrings = QList<QByteArray>()

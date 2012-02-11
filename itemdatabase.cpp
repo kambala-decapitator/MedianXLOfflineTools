@@ -356,19 +356,8 @@ QList<QByteArray> ItemDataBase::stringArrayOfCurrentLineInFile(QFile &f)
     return itemString.isEmpty() || itemString.startsWith('#') ? QList<QByteArray>() : itemString.split('\t');
 }
 
-QString ItemDataBase::completeItemName(ItemInfo *item, bool shouldUseColor)
+QString ItemDataBase::completeItemName(ItemInfo *item, bool shouldUseColor, bool showQualityText /*= true*/)
 {
-    static QHash<int, ColorIndex> itemQualityColorsHash;
-    if (itemQualityColorsHash.isEmpty())
-    {
-        itemQualityColorsHash[Enums::ItemQuality::Set] = Green;
-        itemQualityColorsHash[Enums::ItemQuality::Unique] = Gold;
-        itemQualityColorsHash[Enums::ItemQuality::Crafted] = Orange;
-        itemQualityColorsHash[Enums::ItemQuality::Rare] = Yellow;
-        itemQualityColorsHash[Enums::ItemQuality::Magic] = Blue;
-        itemQualityColorsHash[Enums::ItemQuality::Honorific] = DarkGreen;
-    }
-
     QString itemName = Items()->value(item->itemType).name, nonMagicalQuality;
     if (item->quality == Enums::ItemQuality::LowQuality)
         nonMagicalQuality = NonMagicItemQualities()->at(item->nonMagicType);
@@ -430,49 +419,70 @@ QString ItemDataBase::completeItemName(ItemInfo *item, bool shouldUseColor)
     if (shouldUseColor)
     {
         if (!item->isRW)
-        {
-            ColorIndex colorIndex = itemQualityColorsHash.value(item->quality);
-            if (!itemQualityColorsHash.contains(item->quality) && (item->isSocketed || item->isEthereal))
-                colorIndex = DarkGrey;
-            itemName = htmlStringFromDiabloColorString(itemName, colorIndex);
-        }
+            itemName = htmlStringFromDiabloColorString(itemName, colorOfItem(item));
     }
     else
     {
         foreach (const QByteArray &colorString, colorStrings)
             itemName.remove(colorString);
 
-        QString quality;
-        switch (item->quality)
+        if (showQualityText)
         {
-        case Enums::ItemQuality::Magic:
-            quality = tr("magic");
-            break;
-        case Enums::ItemQuality::Set:
-            quality = tr("set");
-            break;
-        case Enums::ItemQuality::Rare:
-            quality = tr("rare");
-            break;
-        case Enums::ItemQuality::Unique:
-            quality = tr("unique");
-            break;
-        case Enums::ItemQuality::Crafted:
-            quality = tr("crafted");
-            break;
-        case Enums::ItemQuality::Honorific:
-            quality = tr("honorific");
-            break;
-        default:
-            break;
-        }
-        if (!quality.isEmpty()) // skip non-magic types
-            itemName.prepend(QString("[%1]<br>").arg(quality));
-        else if (item->isRW)
-            itemName.prepend(QString("[%1]<br>").arg(tr("runeword")));
+            QString quality;
+            switch (item->quality)
+            {
+            case Enums::ItemQuality::Magic:
+                quality = tr("magic");
+                break;
+            case Enums::ItemQuality::Set:
+                quality = tr("set");
+                break;
+            case Enums::ItemQuality::Rare:
+                quality = tr("rare");
+                break;
+            case Enums::ItemQuality::Unique:
+                quality = tr("unique");
+                break;
+            case Enums::ItemQuality::Crafted:
+                quality = tr("crafted");
+                break;
+            case Enums::ItemQuality::Honorific:
+                quality = tr("honorific");
+                break;
+            default:
+                break;
+            }
+            if (!quality.isEmpty()) // skip non-magic types
+                itemName.prepend(QString("[%1]<br>").arg(quality));
+            else if (item->isRW)
+                itemName.prepend(QString("[%1]<br>").arg(tr("runeword")));
 
-        if (item->isEthereal)
-            itemName += QString("<br>[%1]").arg(tr("ethereal"));
+            if (item->isEthereal)
+                itemName += QString("<br>[%1]").arg(tr("ethereal"));
+        }
     }
     return itemName;
+}
+
+QHash<int, ColorIndex> *ItemDataBase::itemQualityColorsHash()
+{
+    static QHash<int, ColorIndex> colorsHash;
+    if (colorsHash.isEmpty())
+    {
+        colorsHash[Enums::ItemQuality::Set] = Green;
+        colorsHash[Enums::ItemQuality::Unique] = Gold;
+        colorsHash[Enums::ItemQuality::Crafted] = Orange;
+        colorsHash[Enums::ItemQuality::Rare] = Yellow;
+        colorsHash[Enums::ItemQuality::Magic] = Blue;
+        colorsHash[Enums::ItemQuality::Honorific] = DarkGreen;
+    }
+    return &colorsHash;
+}
+
+ColorIndex ItemDataBase::colorOfItem(ItemInfo *item)
+{
+    return !itemQualityColorsHash()->contains(item->quality) && (item->isSocketed || item->isEthereal) ? DarkGrey : itemQualityColorsHash()->value(item->quality);
+    //ColorIndex colorIndex = itemQualityColorsHash()->value(item->quality);
+    //if (!itemQualityColorsHash()->contains(item->quality) && (item->isSocketed || item->isEthereal))
+    //    colorIndex = DarkGrey;
 }

@@ -25,7 +25,9 @@ public:
     static QStringList *NonMagicItemQualities();
 
     static QStringList completeSetForName(const QString &setName) { return _sets.values(setName); }
-    static QString completeItemName(ItemInfo *item, bool shouldUseColor);
+    static QString completeItemName(ItemInfo *item, bool shouldUseColor, bool showQualityText = true);
+    static QHash<int, ColorIndex> *itemQualityColorsHash();
+    static ColorIndex colorOfItem(ItemInfo *item);
 
     static ItemsList *currentCharacterItems;
 

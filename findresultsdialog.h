@@ -6,9 +6,9 @@
 #include "structs.h"
 
 
-class FindResultsTreeModel;
-class FindResultsTreeView;
 class QCloseEvent;
+class QTreeWidget;
+class QEvent;
 
 class FindResultsDialog : public QDialog
 {
@@ -19,12 +19,19 @@ public:
 
     void saveSettings();
 
+    void updateItems(ItemsList *newItems);
+    void selectItem(ItemInfo *item);
+
 protected:
     void closeEvent(QCloseEvent *e);
+    bool eventFilter(QObject *obj, QEvent *event);
+
+signals:
+    void showItem(ItemInfo *item);
 
 private:
-    FindResultsTreeModel *_resultsTreeModel;
-    FindResultsTreeView *_resultsTreeView;
+    QTreeWidget *_resultsTreeWidget;
+    QMap<int, ItemsList> _foundItemsMap;
 };
 
 #endif // FINDRESULTSDIALOG_H

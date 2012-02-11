@@ -16,7 +16,6 @@ PropertiesViewerWidget::PropertiesViewerWidget(QWidget *parent) : QWidget(parent
 {
     ui.setupUi(this);
 
-    //connect(ui.removeAllMysticOrbsPushButton, SIGNAL(clicked()), SLOT(removeAllMysticOrbs()));
 #ifndef Q_WS_MACX
     connect(ui.tabWidget, SIGNAL(currentChanged(int)), SLOT(currentItemTabChanged(int)));
 #endif
@@ -97,7 +96,6 @@ void PropertiesViewerWidget::displayItemProperties(ItemInfo *item)
             ++iter;
     }
     renderItemDescription(ui.itemAndMysticOrbsTextEdit);
-    //ui.removeAllMysticOrbsPushButton->setEnabled(hasMysticOrbs());
 
     const ItemBase &itemBase = ItemDataBase::Items()->value(item->itemType);
     ui.socketablesTextEdit->clear();
@@ -341,7 +339,7 @@ QString PropertiesViewerWidget::propertyDisplay(const ItemProperty &propDisplay,
         value = (value * *ItemDataBase::clvl) / 32;
 
     char valueStringSigned[10];
-    ::sprintf(valueStringSigned, "%+d", value);
+    ::sprintf_s(valueStringSigned, "%+d", value);
 
     switch (prop.descFunc)
     {
@@ -503,15 +501,19 @@ void PropertiesViewerWidget::addProperties(PropertiesMap *mutableProps, const Pr
 {
     for (PropertiesMultiMap::const_iterator iter = propsToAdd.constBegin(); iter != propsToAdd.constEnd(); ++iter)
     {
-        if (mutableProps->contains(iter.key()))
+        bool shouldNotAddNewProp;
+        if (shouldNotAddNewProp = mutableProps->contains(iter.key()))
         {
             ItemProperty &prop = (*mutableProps)[iter.key()];
-            prop.value += iter.value().value;
-            if (iter.key() == Enums::ItemProperties::EnhancedDamage)
-                prop.displayString = ItemParser::enhancedDamageFormat.arg(prop.value);
+            if (shouldNotAddNewProp = prop.param == iter.value().param)
+            {
+                prop.value += iter.value().value;
+                if (iter.key() == Enums::ItemProperties::EnhancedDamage)
+                    prop.displayString = ItemParser::enhancedDamageFormat.arg(prop.value);
+            }
         }
-        else
-            mutableProps->insert(iter.key(), iter.value());
+        if (!shouldNotAddNewProp)
+            mutableProps->insertMulti(iter.key(), iter.value());
     }
 }
 

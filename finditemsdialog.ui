@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>381</width>
+    <width>347</width>
     <height>138</height>
    </rect>
   </property>
@@ -117,7 +117,7 @@
     <rect>
      <x>261</x>
      <y>69</y>
-     <width>104</width>
+     <width>76</width>
      <height>23</height>
     </rect>
    </property>
@@ -128,7 +128,7 @@
     </sizepolicy>
    </property>
    <property name="text">
-    <string>Last search results</string>
+    <string>Search results</string>
    </property>
   </widget>
   <widget class="QPushButton" name="closeButton">

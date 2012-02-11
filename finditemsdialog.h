@@ -33,6 +33,7 @@ private slots:
     void findNext();
     void findPrevious();
     void showResults();
+    void updateCurrentIndexForItem(ItemInfo *item);
 
     void searchTextChanged();
 
@@ -47,7 +48,7 @@ private:
 
     void loadSettings();
     void updateWindowTitle();
-    void changeItem();
+    void changeItem(bool changeResultsSelection = true);
     void setButtonsDisabled(bool disabled, bool updateResultButton = true);
 };
 

@@ -31,7 +31,7 @@ QMetaEnum metaEnumFromName(const char *enumName)
 }
 
 // item conditions for STL algorithms
-class ItemInfo;
+struct ItemInfo;
 bool isCube(ItemInfo *item);
 bool hasChanged(ItemInfo *item);
 

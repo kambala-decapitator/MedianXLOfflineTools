@@ -245,6 +245,7 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
 
             QMenu *menuDisenchant = new QMenu(tr("Disenchant into"), _itemsView);
             menuDisenchant->addActions(QList<QAction *>() << actionShards << actionSol);
+            menuDisenchant->menuAction()->setDisabled(true); // TODO: remove
             actions << menuDisenchant->menuAction();
         }
         // TODO 0.3

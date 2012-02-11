@@ -3,6 +3,7 @@
 - based on blessed life skill level
 - pearl of wisdom color, shrines color
 - already upgraded - failed/succeeded (if possible)
+- search results selection color (style sheets)
 - insertred unique jewel names (check)
 - move most functionality from splitter to tableview
 - search and fix all TODOs in code
@@ -52,3 +53,4 @@ v0.3:
 - nice display of property 'Adds x-y ... damage'
 - show UMO properties and color
 - try unMO UMOs
+- calculate correct str/dex bonus based on character stats

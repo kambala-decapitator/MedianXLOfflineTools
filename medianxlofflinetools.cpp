@@ -1155,7 +1155,7 @@ bool MedianXLOfflineTools::processSaveFile(const QString &charPath)
         inputDataStream >> mercExp;
         editableCharInfo.mercenary.experience = mercExp;
         for (quint8 i = 1; i <= Enums::CharacterStats::MaxLevel; ++i)
-            if (mercExp < i * i * (i + 1))
+            if (mercExp < static_cast<quint32>(i * i * (i + 1)))
             {
                 editableCharInfo.mercenary.level = i - 1;
                 break;
@@ -1392,7 +1392,7 @@ bool MedianXLOfflineTools::processSaveFile(const QString &charPath)
         return false;
     }
 
-    bool isMercItemListBad = editableCharInfo.mercenary.exists ^ mercItemsOffset != eof;
+    bool isMercItemListBad = editableCharInfo.mercenary.exists ^ (mercItemsOffset != eof);
     if (isMercItemListBad)
     {
         ERROR_BOX(tr("Mercenary items data is corrupted!"));

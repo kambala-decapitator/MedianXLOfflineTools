@@ -45,6 +45,8 @@ FindItemsDialog::FindItemsDialog(QWidget *parent) : QDialog(parent), _searchPerf
     connect(ui.exactMatchCheckBox, SIGNAL(toggled(bool)), SLOT(resetSearchStatus()));
     connect(ui.regexCheckBox, SIGNAL(toggled(bool)), SLOT(resetSearchStatus()));
 
+    ui.searchPropsCheckBox->setDisabled(true);
+
     loadSettings();
 }
 
@@ -124,8 +126,16 @@ void FindItemsDialog::showResults()
     {
         _resultsDialog = new FindResultsDialog(&_searchResult, this);
         _resultsDialog->show();
+        _resultsDialog->selectItem(_searchResult[_currentIndex]);
+        connect(_resultsDialog, SIGNAL(showItem(ItemInfo *)), SLOT(updateCurrentIndexForItem(ItemInfo *)));
     }
     _resultsDialog->activateWindow();
+}
+
+void FindItemsDialog::updateCurrentIndexForItem(ItemInfo *item)
+{
+    _currentIndex = _searchResult.indexOf(item);
+    changeItem(false);
 }
 
 void FindItemsDialog::searchTextChanged()
@@ -136,6 +146,7 @@ void FindItemsDialog::searchTextChanged()
 
 void FindItemsDialog::performSearch()
 {
+    QString searchText = ui.searchComboBox->currentText();
     _searchResult.clear();
     foreach (ItemInfo *item, *ItemDataBase::currentCharacterItems)
     {
@@ -143,7 +154,7 @@ void FindItemsDialog::performSearch()
         Qt::CaseSensitivity cs = static_cast<Qt::CaseSensitivity>(ui.caseSensitiveCheckBox->isChecked());
         if (ui.regexCheckBox->isChecked())
         {
-            QRegExp rx(ui.searchComboBox->currentText(), cs);
+            QRegExp rx(searchText, cs);
             if (ui.exactMatchCheckBox->isChecked())
             {
                 if (rx.exactMatch(itemText))
@@ -159,25 +170,44 @@ void FindItemsDialog::performSearch()
         {
             if (ui.exactMatchCheckBox->isChecked())
             {
-                if (!itemText.compare(ui.searchComboBox->currentText(), cs))
+                if (!itemText.compare(searchText, cs))
                     _searchResult += item;
             }
             else
             {
-                if (itemText.contains(ui.searchComboBox->currentText(), cs))
+                if (itemText.contains(searchText, cs))
                     _searchResult += item;
             }
         }
     }
 
     _searchPerformed = true;
-    ui.searchResultsButton->setEnabled(_searchResult.size() > 0);
+    ui.searchResultsButton->setEnabled(!_searchResult.isEmpty());
+
+    if (_resultsDialog)
+        _resultsDialog->updateItems(&_searchResult);
+
+    // move the search string to the top of the last searches list if it is present there and not on the top
+    if (ui.searchComboBox->currentIndex() > 0)
+    {
+        QStringList history;
+        for (int i = 0; i < ui.searchComboBox->count(); ++i)
+            history += ui.searchComboBox->itemText(i);
+        history.move(ui.searchComboBox->currentIndex(), 0);
+
+        ui.searchComboBox->clear();
+        ui.searchComboBox->addItems(history);
+    }
 }
 
 void FindItemsDialog::nothingFound()
 {
     emit itemFound(0);
     setButtonsDisabled(true);
+
+    if (_resultsDialog)
+        _resultsDialog->updateItems(&_searchResult);
+
     ERROR_BOX(tr("No items found"));
 }
 
@@ -232,10 +262,14 @@ void FindItemsDialog::updateWindowTitle()
     setWindowTitle(title);
 }
 
-void FindItemsDialog::changeItem()
+void FindItemsDialog::changeItem(bool changeResultsSelection /*= true*/)
 {
-    emit itemFound(_searchResult[_currentIndex]);
+    ItemInfo *item = _searchResult[_currentIndex];
+    emit itemFound(item);
     updateWindowTitle();
+
+    if (changeResultsSelection && _resultsDialog)
+        _resultsDialog->selectItem(item);
 }
 
 void FindItemsDialog::setButtonsDisabled(bool disabled, bool updateResultButton /*= true*/)
