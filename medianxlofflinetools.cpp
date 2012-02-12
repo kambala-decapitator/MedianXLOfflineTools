@@ -113,13 +113,9 @@ void MedianXLOfflineTools::openRecentFile()
 
 void MedianXLOfflineTools::reloadCharacter()
 {
-    if (ui.actionAskBeforeReload->isChecked())
-    {
-        QMessageBox box(QMessageBox::Question, qApp->applicationName(), tr("Do you really want to reload character? All unsaved changes will be lost."), QMessageBox::Yes | QMessageBox::No, this);
-        if (box.exec() == QMessageBox::No)
-            return;
-    }
-    
+    if (ui.actionAskBeforeReload->isChecked() && QUESTION_BOX_YESNO(tr("Do you really want to reload character? All unsaved changes will be lost."), QMessageBox::Yes) == QMessageBox::No)
+        return;
+
     if (loadFile(_charPath))
         ui.statusBar->showMessage(tr("Character reloaded"), 3000);
 }
@@ -580,6 +576,7 @@ void MedianXLOfflineTools::showItems(bool activate /*= true*/)
 {
     ItemDataBase::clvl = &_editableCharInfo.basicInfo.level;
     ItemDataBase::charClass = &_editableCharInfo.basicInfo.classCode;
+    ItemDataBase::charSkills = &_editableCharInfo.basicInfo.skills;
 
     if (_itemsDialog)
     {
@@ -635,14 +632,8 @@ void MedianXLOfflineTools::giveCube()
 
 void MedianXLOfflineTools::backupSettingTriggered(bool checked)
 {
-    if (!checked)
-    {
-        if (QMessageBox::question(this, qApp->applicationName(), tr("Are you sure you want to disable automatic backups? Then don't blame me if your character gets corrupted."),
-            QMessageBox::Yes | QMessageBox::No, QMessageBox::No) == QMessageBox::No)
-        {
-            ui.actionBackup->setChecked(true);
-        }
-    }
+    if (!checked && QUESTION_BOX_YESNO(tr("Are you sure you want to disable automatic backups? Then don't blame me if your character gets corrupted."), QMessageBox::No) == QMessageBox::No)
+        ui.actionBackup->setChecked(true);
 }
 
 void MedianXLOfflineTools::aboutApp()
@@ -766,6 +757,11 @@ void MedianXLOfflineTools::createLayout()
                                                            << ui.vitalitySpinBox << ui.energySpinBox << ui.inventoryGoldLineEdit << ui.stashGoldLineEdit << ui.mercLevelLineEdit;
     foreach (QWidget *w, widgetsToFixSize)
         w->setFixedSize(w->size());
+
+    QList<QLineEdit *> readonlyLineEdits = QList<QLineEdit *>() << ui.freeSkillPointsLineEdit
+        << ui.freeStatPointsLineEdit << ui.signetsOfLearningEatenLineEdit << ui.signetsOfSkillEatenLineEdit << ui.inventoryGoldLineEdit << ui.stashGoldLineEdit << ui.mercLevelLineEdit;
+    foreach (QLineEdit *lineEdit, readonlyLineEdits)
+        lineEdit->setStyleSheet("background-color: rgb(227, 227, 227);");
 
     createCharacterGroupBoxLayout();
     createMercGroupBoxLayout();
@@ -917,6 +913,8 @@ void MedianXLOfflineTools::saveSettings() const
 
     if (_findItemsDialog)
         _findItemsDialog->saveSettings();
+    if (_itemsDialog)
+        _itemsDialog->saveSettings();
 }
 
 void MedianXLOfflineTools::fillMaps()
@@ -1324,10 +1322,16 @@ bool MedianXLOfflineTools::processSaveFile(const QString &charPath)
     }
 
     // skills
-    int skills = 0, maxPossibleSkills = totalPossibleSkillPoints(clvl, editableCharInfo.questsInfo.denOfEvilQuestsCompleted, editableCharInfo.questsInfo.radamentQuestsCompleted,
-                                                                 editableCharInfo.questsInfo.izualQuestsCompleted, _statsDynamicData.property("SignetsOfSkillEaten").toInt());
+    quint16 skills = 0, maxPossibleSkills = totalPossibleSkillPoints(clvl, editableCharInfo.questsInfo.denOfEvilQuestsCompleted, editableCharInfo.questsInfo.radamentQuestsCompleted,
+                                                                     editableCharInfo.questsInfo.izualQuestsCompleted, _statsDynamicData.property("SignetsOfSkillEaten").toInt());
+    editableCharInfo.basicInfo.skills.clear();
     for (int i = 0; i < skillsNumber; ++i)
-        skills += _saveFileContents.at(skillsOffset + 2 + i);
+    {
+        quint8 skillValue = _saveFileContents.at(skillsOffset + 2 + i);
+        //qDebug("skill %d = %d", i, skillValue);
+        skills += skillValue;
+        editableCharInfo.basicInfo.skills += skillValue;
+    }
     skills += _statsDynamicData.property("FreeSkillPoints").toUInt();
     if (skills > maxPossibleSkills) // check if skills are hacked
     {

@@ -14,6 +14,7 @@ class QD2CharRenamer : public QDialog
 
 public:
     static const int maxNameLength;
+    static const QStringList colorNames;
     static void updateNamePreview(QTextEdit *previewTextEdit, const QString &name);
 
     QD2CharRenamer(QWidget *parent, const QString &originalName);

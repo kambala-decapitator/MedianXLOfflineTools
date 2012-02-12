@@ -37,11 +37,6 @@ public:
 public slots:
     void removeAllMysticOrbs();
 
-private slots:
-#ifndef Q_WS_MACX
-    void currentItemTabChanged(int index);
-#endif
-
 private:
     Ui::PropertiesViewerWidget ui;
     ItemInfo *_item;
@@ -55,7 +50,6 @@ private:
     int indexOfPropertyValue(int id, PropertiesMultiMap *props);
     void modifyMysticOrbProperty(int id, int decrement, PropertiesMultiMap *props);
     int totalMysticOrbValue(int moCode, PropertiesMap *props);
-    PropertiesMultiMap *propertiesWithCode(int code);
 
     void addProperties(PropertiesMap *mutableProps, const PropertiesMap &propsToAdd);
     void collectMysticOrbsDataFromProps(QSet<int> *moSet, const PropertiesMap &props, QTextEdit *textEdit, bool isClassCharm_);

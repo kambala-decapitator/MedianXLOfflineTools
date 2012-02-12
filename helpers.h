@@ -3,13 +3,14 @@
 
 // message boxes
 #include <QMessageBox>
-#define CUSTOM_BOX(type, message) QMessageBox::type(this, qApp->applicationName(), message)
-#define ERROR_BOX(message) CUSTOM_BOX(critical, message)
-#define INFO_BOX(message) CUSTOM_BOX(information, message)
-#define WARNING_BOX(message) CUSTOM_BOX(warning, message)
+#define CUSTOM_BOX(type, message, buttons, defaultButton) QMessageBox::type(this, qApp->applicationName(), message, buttons, defaultButton)
+#define CUSTOM_BOX_OK(type, message) CUSTOM_BOX(type, message, QMessageBox::Ok, QMessageBox::Ok)
+#define ERROR_BOX(message) CUSTOM_BOX_OK(critical, message)
+#define INFO_BOX(message) CUSTOM_BOX_OK(information, message)
+#define WARNING_BOX(message) CUSTOM_BOX_OK(warning, message)
 #define ERROR_BOX_NO_PARENT(message) QMessageBox::critical(0, qApp->applicationName(), message)
-// file is QFile instance
-#define ERROR_BOX_FILE(message, file) CUSTOM_BOX(critical, message.arg(QDir::toNativeSeparators(file.fileName()), file.errorString()))
+#define ERROR_BOX_FILE(message, file) CUSTOM_BOX_OK(critical, message.arg(QDir::toNativeSeparators(file.fileName()), file.errorString())) // file is QFile instance
+#define QUESTION_BOX_YESNO(message, defaultButton) CUSTOM_BOX(question, message, QMessageBox::Yes | QMessageBox::No, defaultButton)
 
 // string building
 class QString;

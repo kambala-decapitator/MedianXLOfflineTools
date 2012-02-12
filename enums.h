@@ -230,8 +230,10 @@ public:
         RequiredLevel = 92,
         DamageToUndead = 122,
         Indestructible = 152,
-        DefenceBoCL = 214,
-        EnhancedDefenceBoCL,
+        DefenceBasedOnClvl = 214,
+        EnhancedDefenceBasedOnClvl,
+        StrengthBasedOnBlessedLifeSlvl = 503,
+        DexterityBasedOnBlessedLifeSlvl,
         End = 511
     };
 };

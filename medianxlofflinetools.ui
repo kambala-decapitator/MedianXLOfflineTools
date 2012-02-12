@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>700</width>
+    <width>698</width>
     <height>360</height>
    </rect>
   </property>
@@ -163,9 +163,6 @@
        <width>65</width>
        <height>20</height>
       </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(227, 227, 227);</string>
      </property>
      <property name="readOnly">
       <bool>true</bool>
@@ -573,7 +570,7 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>700</width>
+     <width>698</width>
      <height>21</height>
     </rect>
    </property>

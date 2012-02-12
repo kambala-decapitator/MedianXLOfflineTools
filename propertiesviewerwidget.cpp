@@ -5,20 +5,15 @@
 #include "colors.hpp"
 #include "itemparser.h"
 
-#include <QDebug>
 #include <QSettings>
 
 static const QString baseFormat("<html><body bgcolor = \"black\"><div align = \"center\" style = \"color: #ffffff\">%1</div></body></html>");
 static const QList<QByteArray> damageToUndeadTypes = QList<QByteArray>() << "mace" << "hamm" << "staf" << "scep" << "club" << "wand";
 
 
-PropertiesViewerWidget::PropertiesViewerWidget(QWidget *parent) : QWidget(parent), _item(0), htmlLine(htmlStringFromDiabloColorString("<hr>"))//(htmlStringFromDiabloColorString("----------"))
+PropertiesViewerWidget::PropertiesViewerWidget(QWidget *parent) : QWidget(parent), _item(0), htmlLine(htmlStringFromDiabloColorString("<hr>"))
 {
     ui.setupUi(this);
-
-#ifndef Q_WS_MACX
-    connect(ui.tabWidget, SIGNAL(currentChanged(int)), SLOT(currentItemTabChanged(int)));
-#endif
 
     ui.tabWidget->setCurrentIndex(0); // set tab icons
 }
@@ -126,7 +121,7 @@ void PropertiesViewerWidget::displayItemProperties(ItemInfo *item)
 
             ui.socketablesTextEdit->append(htmlLine);
         }
-        ui.socketablesTextEdit->undo(); // remove last separator
+        //ui.socketablesTextEdit->undo(); // remove last <hr>
         renderItemDescription(ui.socketablesTextEdit);
     }
 
@@ -146,10 +141,10 @@ void PropertiesViewerWidget::displayItemProperties(ItemInfo *item)
     {
         int baseDef = item->defense, totalDef = baseDef;
         ItemProperty foo;
-        int ed = allProps.value(Enums::ItemProperties::EnhancedDefence, foo).value + (allProps.value(Enums::ItemProperties::EnhancedDefenceBoCL, foo).value * *ItemDataBase::clvl) / 32;
+        int ed = allProps.value(Enums::ItemProperties::EnhancedDefence, foo).value + (allProps.value(Enums::ItemProperties::EnhancedDefenceBasedOnClvl, foo).value * *ItemDataBase::clvl) / 32;
         if (ed)
             totalDef = (totalDef * (100 + ed)) / 100;
-        totalDef += allProps.value(Enums::ItemProperties::Defence, foo).value + (allProps.value(Enums::ItemProperties::DefenceBoCL, foo).value * *ItemDataBase::clvl) / 32;
+        totalDef += allProps.value(Enums::ItemProperties::Defence, foo).value + (allProps.value(Enums::ItemProperties::DefenceBasedOnClvl, foo).value * *ItemDataBase::clvl) / 32;
         if (totalDef < 0)
             totalDef = 0;
 
@@ -224,7 +219,7 @@ void PropertiesViewerWidget::displayItemProperties(ItemInfo *item)
         itemDescription += "<br>" + ui.allTextEdit->toPlainText();
     }
     if (shouldAddDamageToUndeadInTheBottom)
-        itemDescription += "<br>" + tr("+50% Damage to Undead");
+        itemDescription += "<br>" + htmlStringFromDiabloColorString(tr("+50% Damage to Undead"), Blue);
 
     if (item->isSocketed)
         itemDescription += "<br>" + htmlStringFromDiabloColorString(tr("Socketed: (%1), Inserted: (%2)").arg(item->socketsNumber).arg(item->socketablesNumber), Blue);
@@ -335,8 +330,13 @@ QString PropertiesViewerWidget::propertyDisplay(const ItemProperty &propDisplay,
 
     const ItemPropertyTxt &prop = ItemDataBase::Properties()->value(propId);
     QString description = value < 0 ? prop.descNegative : prop.descPositive, result;
-    if (prop.descStringAdd.contains(tr("Based on Character Level", "translate only if Median XL is translated into your language!")))
-        value = (value * *ItemDataBase::clvl) / 32;
+    if (prop.descStringAdd.contains(tr("Based on", "'based on clvl' property; translate only if Median XL is translated into your language! (i.e. there's localized data in Resources/data/<language>)")))
+    {
+        if (propId == Enums::ItemProperties::StrengthBasedOnBlessedLifeSlvl || propId == Enums::ItemProperties::DexterityBasedOnBlessedLifeSlvl)
+            value = *ItemDataBase::charClass == Enums::ClassName::Paladin ? (value * ItemDataBase::charSkills->last()) / 32 : 0; // TODO: use txt to get the Blessed Life index
+        else // based on clvl
+            value = (value * *ItemDataBase::clvl) / 32;
+    }
 
     char valueStringSigned[10];
     ::sprintf_s(valueStringSigned, "%+d", value);
@@ -380,9 +380,9 @@ QString PropertiesViewerWidget::propertyDisplay(const ItemProperty &propDisplay,
         result = QString("%1% %2 %3").arg(value).arg(description).arg(ItemDataBase::Monsters()->value(propDisplay.param));
         break;
     // 9, 10, 14, 16-19 - absent
-    // everything else is constructed in parseItemProperties() (has displayString)
+    // everything else is constructed in ItemParser::parseItemProperties() (has displayString)
     default:
-        result = tr("[special case %4, please report] %1 '%2' (ID %3)").arg(value).arg(description).arg(propId).arg(prop.descFunc);
+        result = tr("[special case %1, please report] %2 '%3' (id %4)").arg(prop.descFunc).arg(value).arg(description).arg(propId);
     }
     return result;
 }
@@ -492,11 +492,6 @@ int PropertiesViewerWidget::totalMysticOrbValue(int moCode, PropertiesMap *props
     return props->value(moCode).value * ItemDataBase::MysticOrbs()->value(moCode).value * multiplier;
 }
 
-PropertiesMultiMap *PropertiesViewerWidget::propertiesWithCode(int code)
-{
-    return _item->props.contains(code) ? &_item->props : &_item->rwProps;
-}
-
 void PropertiesViewerWidget::addProperties(PropertiesMap *mutableProps, const PropertiesMap &propsToAdd)
 {
     for (PropertiesMultiMap::const_iterator iter = propsToAdd.constBegin(); iter != propsToAdd.constEnd(); ++iter)
@@ -551,11 +546,3 @@ bool PropertiesViewerWidget::isClassCharm()
 {
     return ItemDataBase::Items()->value(_item->itemType).typeString.startsWith("ara");
 }
-
-#ifndef Q_WS_MACX
-void PropertiesViewerWidget::currentItemTabChanged(int index)
-{
-    for (int i = 0; i < ui.tabWidget->count(); ++i)
-        ui.tabWidget->setTabIcon(i, QIcon(QString(":/PropertiesViewerWidget/Resources/icons/arrow_%1").arg(i == index ? "down" : "right")));
-}
-#endif

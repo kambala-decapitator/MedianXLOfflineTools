@@ -79,6 +79,7 @@ struct CharacterInfo
         bool isHardcore;
         bool hadDied;
         quint16 totalSkillPoints, totalStatPoints;
+        QList<quint8> skills;
     } basicInfo;
 
     struct

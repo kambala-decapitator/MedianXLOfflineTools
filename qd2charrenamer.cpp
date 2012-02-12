@@ -8,6 +8,20 @@
 // statics
 
 const int QD2CharRenamer::maxNameLength = 15;
+const QStringList QD2CharRenamer::colorNames = QStringList()
+    << tr("white")
+    << tr("red")
+    << tr("green")
+    << tr("blue")
+    << tr("gold")
+    << tr("dark gray")
+    // black was here
+    << tr("tan")
+    << tr("orange")
+    << tr("yellow")
+    << "foo" // to skip dark green
+    << tr("violet")
+    ;
 
 void QD2CharRenamer::updateNamePreview(QTextEdit *previewTextEdit, const QString &name)
 {
@@ -65,6 +79,18 @@ void QD2CharRenamer::saveName()
         ERROR_BOX(ui.charNameLineEdit->toolTip());
     else
     {
+        bool hasColor = false;
+        for (int i = 0; i < colorCodes.size(); ++i)
+        {
+            if (newName.contains(unicodeColorHeader + colorCodes.at(i)))
+            {
+                hasColor = true;
+                break;
+            }
+        }
+        if (hasColor && QUESTION_BOX_YESNO(tr("Character with colored name can't join multiplayer games. Are you sure you want to continue?"), QMessageBox::Yes) == QMessageBox::No)
+            return;
+
         _originalCharName = newName;
         accept();
     }
@@ -98,21 +124,6 @@ void QD2CharRenamer::insertColor()
 
 void QD2CharRenamer::createColorMenu()
 {
-    QStringList colorNames = QStringList() // had to move it here because strings aren't translated otherwise
-                               << tr("white")
-                               << tr("red")
-                               << tr("green")
-                               << tr("blue")
-                               << tr("gold")
-                               << tr("dark gray")
-                                  // black was here
-                               << tr("tan")
-                               << tr("orange")
-                               << tr("yellow")
-                               << "foo" // to skip dark green
-                               << tr("violet")
-                                  ;
-
     QMenu *colorMenu = new QMenu(ui.colorButton);
     QPixmap pix(24, 24);
     for (int i = 0; i < correctColorsNum; ++i)

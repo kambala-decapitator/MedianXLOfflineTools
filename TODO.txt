@@ -1,15 +1,14 @@
 - finish search dialog
+- removing stat MO should decrease corresponding stat on character if the item is in the gear list
 - merc items
-- based on blessed life skill level
 - pearl of wisdom color, shrines color
-- already upgraded - failed/succeeded (if possible)
 - search results selection color (style sheets)
+- move recent files to separate sub-menu
 - insertred unique jewel names (check)
 - move most functionality from splitter to tableview
 - search and fix all TODOs in code
 - add a check for avoid >= 100%
 - remove QDebug
-- remove absolute paths to data files
 - file association
 - copy files to destdir:
 1.

@@ -14,7 +14,7 @@
 #include <QSettings>
 
 
-const int ItemsViewerDialog::cellSize = 36;
+const int ItemsViewerDialog::cellSize = 32;
 // !!!: add elements here when adding new tab
 const QStringList ItemsViewerDialog::tabNames = QStringList() << tr("Gear") << tr("Inventory") << tr("Cube") << tr("Stash") << tr("Personal Stash") << tr("Shared Stash") << tr("Hardcore Stash");
 const QList<int> ItemsViewerDialog::rows = QList<int>() << 11 << 6 << 8 << 10 << 10 << 10 << 10;
@@ -42,14 +42,31 @@ ItemsViewerDialog::ItemsViewerDialog(QWidget *parent) : QDialog(parent), _tabWid
             tableView->setColumnWidth(j, cellSize);
     }
 
-    restoreGeometry(QSettings().value("itemsViewerGeometry").toByteArray());
+    loadSettings();
     _tabWidget->widget(0)->setFocus();
+}
+
+void ItemsViewerDialog::loadSettings()
+{
+    QSettings settings;
+    restoreGeometry(settings.value("itemsViewerGeometry").toByteArray());
+
+    for (int i = GearIndex; i <= LastIndex; ++i)
+        static_cast<ItemsPropertiesSplitter *>(_tabWidget->widget(i))->restoreState(settings.value(QString("itemsTab%1_state").arg(i)).toByteArray());
+}
+
+void ItemsViewerDialog::saveSettings()
+{
+    QSettings settings;
+    settings.setValue("itemsViewerGeometry", saveGeometry());
+
+    for (int i = GearIndex; i <= LastIndex; ++i)
+        settings.setValue(QString("itemsTab%1_state").arg(i), static_cast<ItemsPropertiesSplitter *>(_tabWidget->widget(i))->saveState());
 }
 
 void ItemsViewerDialog::closeEvent(QCloseEvent *event)
 {
-    QSettings settings;
-    settings.setValue("itemsViewerGeometry", saveGeometry());
+    saveSettings();
     event->accept();
 }
 

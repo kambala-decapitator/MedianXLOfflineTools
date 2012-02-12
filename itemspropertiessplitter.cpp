@@ -87,7 +87,7 @@ ItemsPropertiesSplitter::ItemsPropertiesSplitter(ItemStorageTableView *itemsView
     addWidget(_propertiesWidget);
 
     setChildrenCollapsible(false);
-    setStretchFactor(0, 4);
+    //setStretchFactor(0, 4);
 
     connect(_itemsView->selectionModel(), SIGNAL(currentChanged(const QModelIndex &, const QModelIndex &)), SLOT(itemSelected(const QModelIndex &)));
     connect(_itemsView, SIGNAL(customContextMenuRequested(const QPoint &)), SLOT(showContextMenu(const QPoint &)));

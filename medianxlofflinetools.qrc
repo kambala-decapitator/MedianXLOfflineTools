@@ -9,10 +9,6 @@
         <file>Resources/icons/open.png</file>
         <file>Resources/icons/reload.png</file>
     </qresource>
-    <qresource prefix="/PropertiesViewerWidget">
-        <file>Resources/icons/arrow_down.png</file>
-        <file>Resources/icons/arrow_right.png</file>
-    </qresource>
     <qresource prefix="/PlugyArrows">
         <file>Resources/icons/plugy/first.png</file>
         <file>Resources/icons/plugy/last.png</file>

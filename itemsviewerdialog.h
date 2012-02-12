@@ -42,11 +42,15 @@ public:
 
     void enableCubeTab();
 
+    void saveSettings();
+
 protected:
     void closeEvent(QCloseEvent *event);
 
 private:
     QTabWidget *_tabWidget;
+
+    void loadSettings();
 };
 
 #endif // ITEMSVIEWERWIDGET_H

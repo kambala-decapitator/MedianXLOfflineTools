@@ -34,6 +34,7 @@ public:
     // bad design, but I'm lazy to create a new class
     static quint8 *clvl;
     static Enums::ClassName::ClassNameEnum *charClass;
+    static QList<quint8> *charSkills;
 
 private:
     static QList<QByteArray> stringArrayOfCurrentLineInFile(QFile &f);

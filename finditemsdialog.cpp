@@ -4,6 +4,7 @@
 
 #include <QGridLayout>
 #include <QVBoxLayout>
+#include <QLineEdit>
 
 #include <QRegExp>
 #include <QSettings>
@@ -45,9 +46,13 @@ FindItemsDialog::FindItemsDialog(QWidget *parent) : QDialog(parent), _searchPerf
     connect(ui.exactMatchCheckBox, SIGNAL(toggled(bool)), SLOT(resetSearchStatus()));
     connect(ui.regexCheckBox, SIGNAL(toggled(bool)), SLOT(resetSearchStatus()));
 
-    ui.searchPropsCheckBox->setDisabled(true);
-
     loadSettings();
+}
+
+void FindItemsDialog::activateWindow()
+{
+    QDialog::activateWindow();
+    ui.searchComboBox->lineEdit()->selectAll();
 }
 
 void FindItemsDialog::findNext()
@@ -147,6 +152,9 @@ void FindItemsDialog::searchTextChanged()
 void FindItemsDialog::performSearch()
 {
     QString searchText = ui.searchComboBox->currentText();
+    if (ui.searchPropsCheckBox->isChecked())
+        searchText += "";
+
     _searchResult.clear();
     foreach (ItemInfo *item, *ItemDataBase::currentCharacterItems)
     {
