@@ -8,6 +8,10 @@
 
 #include <QSettings>
 
+#ifndef QT_NO_DEBUG
+#include <QDebug>
+#endif
+
 static const QString baseFormat("<html><body bgcolor = \"black\"><div align = \"center\" style = \"color: #ffffff\">%1</div></body></html>");
 
 
@@ -59,30 +63,7 @@ void PropertiesViewerWidget::displayItemProperties(ItemInfo *item)
         {
             if (isClassCharm)
             {
-                QString &desc = iter.value().displayString;
-                switch (iter.key())
-                {
-                case 313:
-                    desc = tr("They have Windows in Hell");
-                    break;
-                case 314:
-                    desc = tr("Mirror Mirror");
-                    break;
-                case 400:
-                    desc = tr("Countess");
-                    break;
-                case 401:
-                    desc = tr("Level Challenge 2");
-                    break;
-                case 403:
-                    desc = tr("Crowned");
-                    break;
-                default:
-                    desc = tr("Challenge with id %1 found, please report!").arg(iter.key());
-                    break;
-                }
-                desc = QString("[%1]").arg(desc);
-
+                PropertiesDisplayManager::addChallengeNamesToClassCharm(iter);
                 ++iter;
             }
             else
@@ -101,22 +82,7 @@ void PropertiesViewerWidget::displayItemProperties(ItemInfo *item)
         {
             ui.socketablesTextEdit->append(ItemDataBase::completeItemName(socketableItem, true));
 
-            PropertiesMap props;
-            if (ItemDataBase::Socketables()->contains(socketableItem->itemType)) // it's a gem or a rune
-            {
-                const SocketableItemInfo &socketableItemInfo = ItemDataBase::Socketables()->value(socketableItem->itemType);
-                int index = itemBase.socketableType + 1;
-                const QList<SocketableItemInfo::Properties> &socketableProps = socketableItemInfo.properties[static_cast<SocketableItemInfo::PropertyType>(index)];
-                foreach (const SocketableItemInfo::Properties &prop, socketableProps)
-                {
-                    if (prop.code == Enums::ItemProperties::EnhancedDamage)
-                        props[prop.code].displayString = ItemParser::enhancedDamageFormat.arg(prop.value);
-                    if (prop.code != -1)
-                        props[prop.code] = ItemProperty(prop.value, prop.param);
-                }
-            }
-            else // it's a jewel
-                props = socketableItem->props;
+            PropertiesMap props = ItemDataBase::isGenericSocketable(socketableItem) ? PropertiesDisplayManager::genericSocketableProperties(socketableItem, itemBase.socketableType) : socketableItem->props;
             displayProperties(ui.socketablesTextEdit, props, false);
             PropertiesDisplayManager::addProperties(&allProps, props);
 
@@ -127,7 +93,7 @@ void PropertiesViewerWidget::displayItemProperties(ItemInfo *item)
     }
 
     // create full item description
-    QString itemDescription = ItemDataBase::completeItemName(item, true) + colorReplacementString(White) + "<br>" + tr("Item Level: %1").arg(item->ilvl);
+    QString itemDescription = ItemDataBase::completeItemName(item, true) + colorReplacementString(White) + htmlLineBreak + tr("Item Level: %1").arg(item->ilvl);
     if (item->isRW)
     {
         QString runes;
@@ -135,7 +101,7 @@ void PropertiesViewerWidget::displayItemProperties(ItemInfo *item)
             if (ItemDataBase::Items()->value(socketable->itemType).typeString == "rune")
                 runes += ItemDataBase::Socketables()->value(socketable->itemType).letter;
         if (!runes.isEmpty()) // gem-/jewelwords don't have any letters
-            itemDescription += "<br>" + htmlStringFromDiabloColorString(QString("'%1'").arg(runes), Gold) + colorReplacementString(White);
+            itemDescription += htmlLineBreak + htmlStringFromDiabloColorString(QString("'%1'").arg(runes), Gold) + colorReplacementString(White);
     }
 
     if (itemBase.genericType == Enums::ItemTypeGeneric::Armor)
@@ -149,7 +115,7 @@ void PropertiesViewerWidget::displayItemProperties(ItemInfo *item)
         if (totalDef < 0)
             totalDef = 0;
 
-        QString defString = "<br>" + tr("Defense: %1");
+        QString defString = htmlLineBreak + tr("Defense: %1");
         if (baseDef != totalDef)
             itemDescription += defString.arg(htmlStringFromDiabloColorString(QString::number(totalDef), Blue)) + colorReplacementString(White) + QString(" (%1)").arg(baseDef);
         else
@@ -157,7 +123,7 @@ void PropertiesViewerWidget::displayItemProperties(ItemInfo *item)
     }
     if (itemBase.genericType != Enums::ItemTypeGeneric::Misc && item->maxDurability)
     {
-        itemDescription += "<br>" + tr("Durability") + ": ";
+        itemDescription += htmlLineBreak + tr("Durability") + ": ";
         bool isIndestructible = allProps.value(Enums::ItemProperties::Indestructible).value == 1;
         if (isIndestructible)
             itemDescription += QString("%1 [").arg(QChar(0x221e)); // infinity
@@ -166,10 +132,10 @@ void PropertiesViewerWidget::displayItemProperties(ItemInfo *item)
             itemDescription += "]";
     }
     if (itemBase.isStackable)
-        itemDescription += "<br>" + tr("Quantity: %1").arg(item->quantity);
+        itemDescription += htmlLineBreak + tr("Quantity: %1").arg(item->quantity);
     if (itemBase.classCode > -1)
     {
-        itemDescription += "<br>";
+        itemDescription += htmlLineBreak;
         QString text = tr("(%1 Only)", "class-specific item").arg(Enums::ClassName::classes().at(itemBase.classCode));
         if (itemBase.classCode != *ItemDataBase::charClass)
             itemDescription += htmlStringFromDiabloColorString(text, Red) + colorReplacementString(White);
@@ -202,7 +168,7 @@ void PropertiesViewerWidget::displayItemProperties(ItemInfo *item)
     }
     int actualRlvl = qMax(rlvl, maxSocketableRlvl) + (allProps.contains(Enums::ItemProperties::RequiredLevel) ? allProps[Enums::ItemProperties::RequiredLevel].value : 0);
     if (actualRlvl)
-        itemDescription += "<br>" + htmlStringFromDiabloColorString(tr("Required Level: %1").arg(actualRlvl > 555 ? 555 : actualRlvl), *ItemDataBase::clvl < actualRlvl ? Red : White);
+        itemDescription += htmlLineBreak + htmlStringFromDiabloColorString(tr("Required Level: %1").arg(actualRlvl > 555 ? 555 : actualRlvl), *ItemDataBase::clvl < actualRlvl ? Red : White);
 
     // add '+50% damage to undead' if item type matches
     bool shouldAddDamageToUndeadInTheBottom = false;
@@ -216,15 +182,33 @@ void PropertiesViewerWidget::displayItemProperties(ItemInfo *item)
 
     if (allProps.size())
     {
-        displayProperties(ui.allTextEdit, allProps, false);
-        itemDescription += "<br>" + ui.allTextEdit->toPlainText();
+        displayProperties(ui.allTextEdit, allProps/*, false*/); // it's actually empty here
+        itemDescription += htmlLineBreak + ui.allTextEdit->toPlainText();
     }
+    else if (ItemDataBase::isGenericSocketable(item))
+    {
+        static const QStringList gearNames = QStringList() << tr("Armor") << tr("Shield") << tr("Weapon");
+        QStringList propStrings;
+        for (qint8 socketableType = SocketableItemInfo::Armor; socketableType <= SocketableItemInfo::Weapon; ++socketableType)
+        {
+            PropertiesMap props = PropertiesDisplayManager::genericSocketableProperties(item, socketableType - 1);
+            displayProperties(ui.allTextEdit, props);
+            QString propText = ui.allTextEdit->toPlainText().replace("\n", ", ");
+            propStrings += htmlLineBreak + QString("%1: %2").arg(htmlStringFromDiabloColorString(gearNames.at(socketableType)), propText);
+        }
+        // weapon properties should be first
+        propStrings.move(propStrings.size() - 1, 0);
+        itemDescription += htmlLineBreak + propStrings.join("");
+
+        ui.tabWidget->setTabEnabled(1, false);
+    }
+
     if (shouldAddDamageToUndeadInTheBottom)
-        itemDescription += "<br>" + htmlStringFromDiabloColorString(tr("+50% Damage to Undead"), Blue);
+        itemDescription += htmlLineBreak + htmlStringFromDiabloColorString(tr("+50% Damage to Undead"), Blue);
     if (item->isSocketed)
-        itemDescription += "<br>" + htmlStringFromDiabloColorString(tr("Socketed: (%1), Inserted: (%2)").arg(item->socketsNumber).arg(item->socketablesNumber), Blue);
+        itemDescription += htmlLineBreak + htmlStringFromDiabloColorString(tr("Socketed: (%1), Inserted: (%2)").arg(item->socketsNumber).arg(item->socketablesNumber), Blue);
     if (item->isEthereal)
-        itemDescription += "<br>" + htmlStringFromDiabloColorString(tr("Ethereal (Cannot be Repaired)"), Blue);
+        itemDescription += htmlLineBreak + htmlStringFromDiabloColorString(tr("Ethereal (Cannot be Repaired)"), Blue);
 
     // show existing set items from current set
     if (item->quality == Enums::ItemQuality::Set)
@@ -272,7 +256,7 @@ void PropertiesViewerWidget::displayProperties(QTextEdit *textEdit, const Proper
 
 void PropertiesViewerWidget::renderItemDescription(QTextEdit *textEdit, QString *description /*= 0*/)
 {
-    textEdit->setText(baseFormat.arg((description ? *description : textEdit->toPlainText()).replace('\n', "<br>")));
+    textEdit->setText(baseFormat.arg((description ? *description : textEdit->toPlainText()).replace('\n', htmlLineBreak)));
 }
 
 void PropertiesViewerWidget::removeAllMysticOrbs()

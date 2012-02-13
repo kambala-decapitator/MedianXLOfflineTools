@@ -20,7 +20,11 @@ FindResultsDialog::FindResultsDialog(ItemsList *items, QWidget *parent) : QDialo
 {
     setAttribute(Qt::WA_DeleteOnClose);
     setWindowFlags(windowFlags() | Qt::Tool);
-    setStyleSheet("QTreeWidget {background-color: black;}");
+    setStyleSheet("QTreeWidget { background-color: black; }"
+                  "QTreeWidget::item { selection-color: red; }"
+                  "QTreeWidget::item:hover { border: 1px solid #bfcde4; }"
+                  "QTreeWidget::item:selected { border: 1px solid #567dbc;  }"
+                 );
     setWindowTitle(tr("Search results"));
 
     _resultsTreeWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);
@@ -28,7 +32,6 @@ FindResultsDialog::FindResultsDialog(ItemsList *items, QWidget *parent) : QDialo
     _resultsTreeWidget->setSelectionMode(QAbstractItemView::SingleSelection);
     _resultsTreeWidget->setHeaderHidden(true);
     _resultsTreeWidget->setUniformRowHeights(true);
-    //_resultsTreeWidget->setStyleSheet("background-color: black");
     _resultsTreeWidget->setColumnCount(1);
 
     updateItems(items);
@@ -81,7 +84,7 @@ void FindResultsDialog::updateItems(ItemsList *newItems)
 
         foreach (ItemInfo *item, locationItems)
         {
-            QTreeWidgetItem *childItem = new QTreeWidgetItem(QStringList(ItemDataBase::completeItemName(item, false, false).replace("<br>", " ", Qt::CaseInsensitive).replace(QRegExp("\\s+"), " ")));
+            QTreeWidgetItem *childItem = new QTreeWidgetItem(QStringList(ItemDataBase::completeItemName(item, false, false).replace(htmlLineBreak, " ", Qt::CaseInsensitive).replace(QRegExp("\\s+"), " ")));
             childItem->setToolTip(0, ItemDataBase::completeItemName(item, false));
             if (i >= ItemsViewerDialog::PersonalStashIndex)
                 childItem->setText(0, QString("[%1] ").arg(tr("p. %1", "page abbreviation").arg(item->plugyPage)) + childItem->text(0));

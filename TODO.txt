@@ -1,5 +1,3 @@
-- finish search dialog
-- merc items
 - pearl of wisdom color, shrines color
 - search results selection color (style sheets)
 - move recent files to separate sub-menu
@@ -47,6 +45,7 @@ write in changelog:
 v0.3:
 - affix rlvl support
 - drag & drop
+- merc items
 - create plugy stashes
 - nice display of property 'Adds x-y ... damage'
 - show UMO properties and color

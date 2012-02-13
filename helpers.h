@@ -15,6 +15,7 @@
 // string building
 class QString;
 static const QChar zeroChar('0');
+static const QString htmlLineBreak("<br>");
 QString binaryStringFromNumber(quint64 number, bool needsInversion = false, int fieldWidth = 8);
 QString colorHexString(const QColor &c);
 QString colorReplacementString(int colorIndex);

@@ -172,6 +172,10 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
                 continue;
             }
 
+            PropertiesMultiMap::iterator blessPropIter = item->props.find(Enums::ItemProperties::TrophyOrBless);
+            if (blessPropIter != item->props.end())
+                blessPropIter.value().displayString = QString("[%1]").arg(ItemDataBase::isUberCharm(item) ? tr("Trophy'd") : tr("Blessed"));
+
             //for (int i = 0; i < 5; ++i)
             //    if (hasSetLists[i])
             //        outStream << "set property list #" << i+1 << " should be here\n";

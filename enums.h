@@ -232,6 +232,7 @@ public:
         Indestructible = 152,
         DefenceBasedOnClvl = 214,
         EnhancedDefenceBasedOnClvl,
+        TrophyOrBless = 219,
         StrengthBasedOnBlessedLifeSlvl = 503,
         DexterityBasedOnBlessedLifeSlvl,
         End = 511

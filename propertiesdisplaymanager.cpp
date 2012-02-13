@@ -2,6 +2,10 @@
 #include "itemdatabase.h"
 #include "itemparser.h"
 
+#ifndef QT_NO_DEBUG
+#include <QDebug>
+#endif
+
 
 const QList<QByteArray> PropertiesDisplayManager::damageToUndeadTypes = QList<QByteArray>() << "mace" << "hamm" << "staf" << "scep" << "club" << "wand";
 
@@ -11,9 +15,7 @@ QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item)
 
     PropertiesMap allProps = item->props;
     if (item->isRW)
-    {
         addProperties(&allProps, item->rwProps);
-    }
 
     PropertiesMap::iterator iter = allProps.begin();
     while (iter != allProps.end())
@@ -22,29 +24,7 @@ QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item)
         {
             if (isClassCharm)
             {
-                QString &desc = iter.value().displayString;
-                switch (iter.key())
-                {
-                case 313:
-                    desc = tr("They have Windows in Hell");
-                    break;
-                case 314:
-                    desc = tr("Mirror Mirror");
-                    break;
-                case 400:
-                    desc = tr("Countess");
-                    break;
-                case 401:
-                    desc = tr("Level Challenge 2");
-                    break;
-                case 403:
-                    desc = tr("Crowned");
-                    break;
-                default:
-                    desc = tr("Challenge with id %1 found, please report!").arg(iter.key());
-                    break;
-                }
-                desc = QString("[%1]").arg(desc);
+                addChallengeNamesToClassCharm(iter);
 
                 //++iter;
             }
@@ -57,31 +37,11 @@ QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item)
 
     const ItemBase &itemBase = ItemDataBase::Items()->value(item->itemType);
     if (item->socketablesInfo.size())
-    {
         foreach (ItemInfo *socketableItem, item->socketablesInfo)
-        {
-            PropertiesMap props;
-            if (ItemDataBase::Socketables()->contains(socketableItem->itemType)) // it's a gem or a rune
-            {
-                const SocketableItemInfo &socketableItemInfo = ItemDataBase::Socketables()->value(socketableItem->itemType);
-                int index = itemBase.socketableType + 1;
-                const QList<SocketableItemInfo::Properties> &socketableProps = socketableItemInfo.properties[static_cast<SocketableItemInfo::PropertyType>(index)];
-                foreach (const SocketableItemInfo::Properties &prop, socketableProps)
-                {
-                    if (prop.code == Enums::ItemProperties::EnhancedDamage)
-                        props[prop.code].displayString = ItemParser::enhancedDamageFormat.arg(prop.value);
-                    if (prop.code != -1)
-                        props[prop.code] = ItemProperty(prop.value, prop.param);
-                }
-            }
-            else // it's a jewel
-                props = socketableItem->props;
-            addProperties(&allProps, props);
-        }
-    }
+            addProperties(&allProps, ItemDataBase::isGenericSocketable(socketableItem) ? genericSocketableProperties(socketableItem, itemBase.socketableType) : socketableItem->props);
 
     // create full item description
-    QString itemDescription = ItemDataBase::completeItemName(item, false).replace("<br>", "\n") + "\n" + tr("Item Level: %1").arg(item->ilvl);
+    QString itemDescription = ItemDataBase::completeItemName(item, false).replace(htmlLineBreak, "\n") + "\n" + tr("Item Level: %1").arg(item->ilvl);
     if (item->isRW)
     {
         QString runes;
@@ -169,6 +129,32 @@ QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item)
             itemDescription += "\n" + iter.value().displayString;
         }
     }
+    else if (ItemDataBase::isGenericSocketable(item))
+    {
+        static const QStringList gearNames = QStringList() << tr("Armor") << tr("Shield") << tr("Weapon");
+        QStringList propStrings;
+        for (qint8 socketableType = SocketableItemInfo::Armor; socketableType <= SocketableItemInfo::Weapon; ++socketableType)
+        {
+            PropertiesMap props = PropertiesDisplayManager::genericSocketableProperties(item, socketableType - 1);
+            QMap<quint8, ItemPropertyDisplay> propsDisplayMap;
+            constructPropertyStrings(props, &propsDisplayMap);
+
+            QString propText;
+            QMap<quint8, ItemPropertyDisplay>::const_iterator iter = propsDisplayMap.constEnd();
+            while (iter != propsDisplayMap.constBegin())
+            {
+                --iter;
+                propText += iter.value().displayString + ", ";
+            }
+            propText.remove(propText.length() - 2, 2); // remove last ", "
+
+            propStrings += QString("\n%1: %2").arg(gearNames.at(socketableType), propText);
+        }
+        // weapon properties should be first
+        propStrings.move(propStrings.size() - 1, 0);
+        itemDescription += "\n" + propStrings.join("");
+    }
+
     if (shouldAddDamageToUndeadInTheBottom)
         itemDescription += "\n" + tr("+50% Damage to Undead");
     if (item->isSocketed)
@@ -252,14 +238,11 @@ void PropertiesDisplayManager::constructPropertyStrings(const PropertiesMap &pro
             }
         }
     }
-
-    if (outDisplayPropertiesMap)
-        *outDisplayPropertiesMap = propsDisplayMap;
+    *outDisplayPropertiesMap = propsDisplayMap;
 }
 
 QString PropertiesDisplayManager::propertyDisplay(const ItemProperty &propDisplay, int propId)
 {
-    // TODO: maybe add indication of trophy/bless if propId == 219
     int value = propDisplay.value;
     if (!value)
         return QString();
@@ -315,9 +298,51 @@ QString PropertiesDisplayManager::propertyDisplay(const ItemProperty &propDispla
         result = QString("%1% %2 %3").arg(value).arg(description).arg(ItemDataBase::Monsters()->value(propDisplay.param));
         break;
     // 9, 10, 14, 16-19 - absent
-    // everything else is constructed in ItemParser::parseItemProperties() (has displayString)
+    // everything else is constructed in ItemParser (mostly in parseItemProperties()), i.e. has displayString
     default:
         result = tr("[special case %1, please report] %2 '%3' (id %4)").arg(prop.descFunc).arg(value).arg(description).arg(propId);
     }
     return result;
+}
+
+PropertiesMap PropertiesDisplayManager::genericSocketableProperties(ItemInfo *socketableItem, qint8 socketableType)
+{
+    PropertiesMap props;
+    const SocketableItemInfo &socketableItemInfo = ItemDataBase::Socketables()->value(socketableItem->itemType);
+    const QList<SocketableItemInfo::Properties> &socketableProps = socketableItemInfo.properties[static_cast<SocketableItemInfo::PropertyType>(socketableType + 1)];
+    foreach (const SocketableItemInfo::Properties &prop, socketableProps)
+    {
+        if (prop.code == Enums::ItemProperties::EnhancedDamage)
+            props[prop.code].displayString = ItemParser::enhancedDamageFormat.arg(prop.value);
+        else if (prop.code != -1)
+            props[prop.code] = ItemProperty(prop.value, prop.param);
+    }
+    return props;
+}
+
+void PropertiesDisplayManager::addChallengeNamesToClassCharm(PropertiesMap::iterator &iter)
+{
+    QString &desc = iter.value().displayString;
+    switch (iter.key())
+    {
+    case 313:
+        desc = tr("They have Windows in Hell");
+        break;
+    case 314:
+        desc = tr("Mirror Mirror");
+        break;
+    case 400:
+        desc = tr("Countess");
+        break;
+    case 401:
+        desc = tr("Level Challenge 2");
+        break;
+    case 403:
+        desc = tr("Crowned");
+        break;
+    default:
+        desc = tr("Challenge with id %1 found, please report!").arg(iter.key());
+        break;
+    }
+    desc = QString("[%1]").arg(desc);
 }

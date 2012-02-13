@@ -15,6 +15,9 @@ public:
     static void addProperties(PropertiesMap *mutableProps, const PropertiesMap &propsToAdd);
     static void constructPropertyStrings(const PropertiesMap &properties, QMap<quint8, ItemPropertyDisplay> *outDisplayPropertiesMap);
     static QString propertyDisplay(const ItemProperty &propDisplay, int propId);
+    static PropertiesMap genericSocketableProperties(ItemInfo *socketableItem, qint8 socketableType);
+
+    static void addChallengeNamesToClassCharm(PropertiesMap::iterator &iter);
 
     static const QList<QByteArray> damageToUndeadTypes;
 };

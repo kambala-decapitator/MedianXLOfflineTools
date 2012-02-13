@@ -398,7 +398,7 @@ QString ItemDataBase::completeItemName(ItemInfo *item, bool shouldUseColor, bool
         if (shouldUseColor && item->isRW)
             itemName = htmlStringFromDiabloColorString(itemName, DarkGrey);
         // dirty hack for 'Eternal' RW
-        itemName.prepend(QString("%1<br>").arg(specialName.contains("2005-") ? specialName.replace("\\n", "<br>") : specialName));
+        itemName.prepend(QString("%1<br>").arg(specialName.contains("2005-") ? specialName.replace("\\n", htmlLineBreak) : specialName));
     }
     if (itemName.contains("\\n"))
     {
@@ -417,7 +417,7 @@ QString ItemDataBase::completeItemName(ItemInfo *item, bool shouldUseColor, bool
             else // multiline names
             {
                 std::reverse(list.begin(), list.end());
-                itemName = list.join("<br>");
+                itemName = list.join(htmlLineBreak);
             }
         }
     }
@@ -497,4 +497,9 @@ bool ItemDataBase::isClassCharm(ItemInfo *item)
 bool ItemDataBase::isUberCharm(ItemInfo *item)
 {
     return ItemParser::itemTypeInheritsFromTypes(Items()->value(item->itemType).typeString, QList<QByteArray>() << "char");
+}
+
+bool ItemDataBase::isGenericSocketable(ItemInfo *item)
+{
+    return Socketables()->contains(item->itemType);
 }
