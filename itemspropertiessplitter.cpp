@@ -18,8 +18,7 @@
 #include <limits>
 
 
-static const QString iconPathFormat(":/PlugyArrows/Resources/icons/plugy/%1.png");
-static const QList<QByteArray> charmType = QList<QByteArray>() << "char";
+static const QString iconPathFormat(":/PlugyArrows/icons/plugy/%1.png");
 
 ItemsPropertiesSplitter::ItemsPropertiesSplitter(ItemStorageTableView *itemsView, ItemStorageTableModel *itemsModel, bool shouldCreateNavigation, QWidget *parent)
     : QSplitter(Qt::Horizontal, parent), _itemsView(itemsView), _itemsModel(itemsModel)
@@ -233,7 +232,7 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
         separator->setSeparator(true);
         actions << separator;
 
-        if (item->quality == Enums::ItemQuality::Set || item->quality == Enums::ItemQuality::Unique && !ItemParser::itemTypeInheritsFromTypes(ItemDataBase::Items()->value(item->itemType).typeString, charmType))
+        if (item->quality == Enums::ItemQuality::Set || item->quality == Enums::ItemQuality::Unique && !ItemDataBase::isUberCharm(item))
         {
             QAction *actionShards = new QAction(QIcon(ResourcePathManager::pathForImageName("invfary4")), tr("Arcane Shards"), _itemsView);
             actionShards->setObjectName("shards");

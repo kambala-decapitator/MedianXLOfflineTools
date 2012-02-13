@@ -1,0 +1,323 @@
+#include "propertiesdisplaymanager.h"
+#include "itemdatabase.h"
+#include "itemparser.h"
+
+
+const QList<QByteArray> PropertiesDisplayManager::damageToUndeadTypes = QList<QByteArray>() << "mace" << "hamm" << "staf" << "scep" << "club" << "wand";
+
+QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item)
+{
+    bool isClassCharm = ItemDataBase::isClassCharm(item);
+
+    PropertiesMap allProps = item->props;
+    if (item->isRW)
+    {
+        addProperties(&allProps, item->rwProps);
+    }
+
+    PropertiesMap::iterator iter = allProps.begin();
+    while (iter != allProps.end())
+    {
+        if (ItemDataBase::MysticOrbs()->contains(iter.key()))
+        {
+            if (isClassCharm)
+            {
+                QString &desc = iter.value().displayString;
+                switch (iter.key())
+                {
+                case 313:
+                    desc = tr("They have Windows in Hell");
+                    break;
+                case 314:
+                    desc = tr("Mirror Mirror");
+                    break;
+                case 400:
+                    desc = tr("Countess");
+                    break;
+                case 401:
+                    desc = tr("Level Challenge 2");
+                    break;
+                case 403:
+                    desc = tr("Crowned");
+                    break;
+                default:
+                    desc = tr("Challenge with id %1 found, please report!").arg(iter.key());
+                    break;
+                }
+                desc = QString("[%1]").arg(desc);
+
+                //++iter;
+            }
+            //else
+            //    iter = allProps.erase(iter);
+        }
+        //else
+        ++iter;
+    }
+
+    const ItemBase &itemBase = ItemDataBase::Items()->value(item->itemType);
+    if (item->socketablesInfo.size())
+    {
+        foreach (ItemInfo *socketableItem, item->socketablesInfo)
+        {
+            PropertiesMap props;
+            if (ItemDataBase::Socketables()->contains(socketableItem->itemType)) // it's a gem or a rune
+            {
+                const SocketableItemInfo &socketableItemInfo = ItemDataBase::Socketables()->value(socketableItem->itemType);
+                int index = itemBase.socketableType + 1;
+                const QList<SocketableItemInfo::Properties> &socketableProps = socketableItemInfo.properties[static_cast<SocketableItemInfo::PropertyType>(index)];
+                foreach (const SocketableItemInfo::Properties &prop, socketableProps)
+                {
+                    if (prop.code == Enums::ItemProperties::EnhancedDamage)
+                        props[prop.code].displayString = ItemParser::enhancedDamageFormat.arg(prop.value);
+                    if (prop.code != -1)
+                        props[prop.code] = ItemProperty(prop.value, prop.param);
+                }
+            }
+            else // it's a jewel
+                props = socketableItem->props;
+            addProperties(&allProps, props);
+        }
+    }
+
+    // create full item description
+    QString itemDescription = ItemDataBase::completeItemName(item, false).replace("<br>", "\n") + "\n" + tr("Item Level: %1").arg(item->ilvl);
+    if (item->isRW)
+    {
+        QString runes;
+        foreach (ItemInfo *socketable, item->socketablesInfo)
+            if (ItemDataBase::Items()->value(socketable->itemType).typeString == "rune")
+                runes += ItemDataBase::Socketables()->value(socketable->itemType).letter;
+        if (!runes.isEmpty()) // gem-/jewelwords don't have any letters
+            itemDescription += QString("\n'%1'").arg(runes);
+    }
+
+    if (itemBase.genericType == Enums::ItemTypeGeneric::Armor)
+    {
+        int baseDef = item->defense, totalDef = baseDef;
+        ItemProperty foo;
+        int ed = allProps.value(Enums::ItemProperties::EnhancedDefence, foo).value + (allProps.value(Enums::ItemProperties::EnhancedDefenceBasedOnClvl, foo).value * *ItemDataBase::clvl) / 32;
+        if (ed)
+            totalDef = (totalDef * (100 + ed)) / 100;
+        totalDef += allProps.value(Enums::ItemProperties::Defence, foo).value + (allProps.value(Enums::ItemProperties::DefenceBasedOnClvl, foo).value * *ItemDataBase::clvl) / 32;
+        if (totalDef < 0)
+            totalDef = 0;
+
+        QString defString = "\n" + tr("Defense: %1");
+        if (baseDef != totalDef)
+            itemDescription += QString("%1 (%2)").arg(defString.arg(QString::number(totalDef))).arg(baseDef);
+        else
+            itemDescription += defString.arg(baseDef);
+    }
+    if (itemBase.genericType != Enums::ItemTypeGeneric::Misc && item->maxDurability)
+    {
+        itemDescription += QString("\n%1: ").arg(tr("Durability"));
+        bool isIndestructible = allProps.value(Enums::ItemProperties::Indestructible).value == 1;
+        if (isIndestructible)
+            itemDescription += QString("%1 [").arg(QChar(0x221e)); // infinity
+        itemDescription += tr("%1 of %2", "durability").arg(item->currentDurability).arg(item->maxDurability);
+        if (isIndestructible)
+            itemDescription += "]";
+    }
+    if (itemBase.isStackable)
+        itemDescription += "\n" + tr("Quantity: %1").arg(item->quantity);
+    if (itemBase.classCode > -1)
+        itemDescription += "\n" + tr("(%1 Only)", "class-specific item").arg(Enums::ClassName::classes().at(itemBase.classCode));
+
+    int rlvl;
+    switch (item->quality)
+    {
+    case Enums::ItemQuality::Set:
+        rlvl = 100;
+        break;
+    case Enums::ItemQuality::Unique:
+        rlvl = ItemDataBase::Uniques()->contains(item->setOrUniqueId) ? ItemDataBase::Uniques()->value(item->setOrUniqueId).rlvl : ItemDataBase::Items()->value(item->itemType).rlvl;
+        break;
+    default:
+        rlvl = itemBase.rlvl;
+        break;
+    }
+    int maxSocketableRlvl = 0;
+    foreach (ItemInfo *socketableItem, item->socketablesInfo)
+    {
+        int socketableRlvl = ItemDataBase::Items()->value(socketableItem->itemType).rlvl;
+        if (maxSocketableRlvl < socketableRlvl)
+            maxSocketableRlvl = socketableRlvl;
+    }
+    int actualRlvl = qMax(rlvl, maxSocketableRlvl) + (allProps.contains(Enums::ItemProperties::RequiredLevel) ? allProps[Enums::ItemProperties::RequiredLevel].value : 0);
+    if (actualRlvl)
+        itemDescription += "\n" + tr("Required Level: %1").arg(actualRlvl > 555 ? 555 : actualRlvl);
+
+    // add '+50% damage to undead' if item type matches
+    bool shouldAddDamageToUndeadInTheBottom = false;
+    if (ItemParser::itemTypeInheritsFromTypes(itemBase.typeString, damageToUndeadTypes))
+    {
+        if (allProps.contains(Enums::ItemProperties::DamageToUndead))
+            allProps[Enums::ItemProperties::DamageToUndead].value += 50;
+        else
+            shouldAddDamageToUndeadInTheBottom = true;
+    }
+
+    if (allProps.size())
+    {
+        QMap<quint8, ItemPropertyDisplay> propsDisplayMap;
+        constructPropertyStrings(allProps, &propsDisplayMap);
+        QMap<quint8, ItemPropertyDisplay>::const_iterator iter = propsDisplayMap.constEnd();
+        while (iter != propsDisplayMap.constBegin())
+        {
+            --iter;
+            itemDescription += "\n" + iter.value().displayString;
+        }
+    }
+    if (shouldAddDamageToUndeadInTheBottom)
+        itemDescription += "\n" + tr("+50% Damage to Undead");
+    if (item->isSocketed)
+        itemDescription += "\n" + tr("Socketed: (%1), Inserted: (%2)").arg(item->socketsNumber).arg(item->socketablesNumber);
+    if (item->isEthereal)
+        itemDescription += "\n" + tr("Ethereal (Cannot be Repaired)");
+    return itemDescription;
+}
+
+void PropertiesDisplayManager::addProperties(PropertiesMap *mutableProps, const PropertiesMap &propsToAdd)
+{
+    for (PropertiesMultiMap::const_iterator iter = propsToAdd.constBegin(); iter != propsToAdd.constEnd(); ++iter)
+    {
+        bool shouldNotAddNewProp;
+        if (shouldNotAddNewProp = mutableProps->contains(iter.key()))
+        {
+            ItemProperty &prop = (*mutableProps)[iter.key()];
+            if (shouldNotAddNewProp = (prop.param == iter.value().param))
+            {
+                prop.value += iter.value().value;
+                if (iter.key() == Enums::ItemProperties::EnhancedDamage)
+                    prop.displayString = ItemParser::enhancedDamageFormat.arg(prop.value);
+            }
+        }
+        if (!shouldNotAddNewProp)
+            mutableProps->insertMulti(iter.key(), iter.value());
+    }
+}
+
+void PropertiesDisplayManager::constructPropertyStrings(const PropertiesMap &properties, QMap<quint8, ItemPropertyDisplay> *outDisplayPropertiesMap)
+{
+    QMap<quint8, ItemPropertyDisplay> propsDisplayMap;
+    for (PropertiesMap::const_iterator iter = properties.constBegin(); iter != properties.constEnd(); ++iter)
+    {
+        const ItemProperty &prop = iter.value();
+        int propId = iter.key();
+        // don't include secondary_(min/max)damage
+        if (propId == Enums::ItemProperties::MinimumDamageSecondary && properties.contains(Enums::ItemProperties::MinimumDamage) ||
+            propId == Enums::ItemProperties::MaximumDamageSecondary && properties.contains(Enums::ItemProperties::MaximumDamage))
+        {
+            continue;
+        }
+
+        QString displayString = prop.displayString.isEmpty() ? propertyDisplay(prop, propId) : prop.displayString;
+        if (!displayString.isEmpty())
+            propsDisplayMap.insertMulti(ItemDataBase::Properties()->value(propId).descPriority,
+            ItemPropertyDisplay(displayString, ItemDataBase::Properties()->value(propId).descPriority, propId));
+    }
+
+    // group properties
+    for (QMap<quint8, ItemPropertyDisplay>::iterator iter = propsDisplayMap.begin(); iter != propsDisplayMap.end(); ++iter)
+    {
+        ItemPropertyDisplay &itemPropDisplay = iter.value();
+        const ItemPropertyTxt &itemPropertyTxt = ItemDataBase::Properties()->value(itemPropDisplay.propertyId);
+        if (itemPropertyTxt.groupIDs.size())
+        {
+            QList<quint16> availableGroupIDs;
+            int propValue = properties[itemPropDisplay.propertyId].value;
+            for (QMap<quint8, ItemPropertyDisplay>::const_iterator jter = propsDisplayMap.constBegin(); jter != propsDisplayMap.constEnd(); ++jter)
+            {
+                int propId = jter.value().propertyId;
+                if (itemPropertyTxt.groupIDs.contains(propId) && properties[propId].value == propValue)
+                    availableGroupIDs += propId;
+            }
+            qSort(availableGroupIDs);
+            if (itemPropertyTxt.groupIDs == availableGroupIDs) // all props from the group are present
+            {
+                if (properties[itemPropDisplay.propertyId].value > 0)
+                    itemPropDisplay.displayString.replace(itemPropertyTxt.descPositive, itemPropertyTxt.descGroupPositive);
+                else
+                    itemPropDisplay.displayString.replace(itemPropertyTxt.descNegative, itemPropertyTxt.descGroupNegative);
+
+                QMap<quint8, ItemPropertyDisplay>::iterator jter = propsDisplayMap.begin();
+                while (jter != propsDisplayMap.end())
+                {
+                    if (availableGroupIDs.contains(jter.value().propertyId))
+                        jter = propsDisplayMap.erase(jter);
+                    else
+                        ++jter;
+                }
+            }
+        }
+    }
+
+    if (outDisplayPropertiesMap)
+        *outDisplayPropertiesMap = propsDisplayMap;
+}
+
+QString PropertiesDisplayManager::propertyDisplay(const ItemProperty &propDisplay, int propId)
+{
+    // TODO: maybe add indication of trophy/bless if propId == 219
+    int value = propDisplay.value;
+    if (!value)
+        return QString();
+
+    const ItemPropertyTxt &prop = ItemDataBase::Properties()->value(propId);
+    QString description = value < 0 ? prop.descNegative : prop.descPositive, result;
+    if (prop.descStringAdd.contains(tr("Based on", "'based on clvl' property; translate only if Median XL is translated into your language! (i.e. there's localized data in Resources/data/<language>)")))
+    {
+        if (propId == Enums::ItemProperties::StrengthBasedOnBlessedLifeSlvl || propId == Enums::ItemProperties::DexterityBasedOnBlessedLifeSlvl)
+            value = *ItemDataBase::charClass == Enums::ClassName::Paladin ? (value * ItemDataBase::charSkills->last()) / 32 : 0; // TODO 0.3+: use ItemDataBase::skills() to get the Blessed Life index
+        else // based on clvl
+            value = (value * *ItemDataBase::clvl) / 32;
+    }
+
+    char valueStringSigned[10];
+    ::sprintf_s(valueStringSigned, "%+d", value);
+
+    switch (prop.descFunc) // it's described in http://phrozenkeep.hugelaser.com/index.php?ind=reviews&op=entry_view&iden=448 - ItemStatCost.txt tutorial
+    {
+    case 0:
+        break;
+    case 1:
+        result = QString(prop.descVal == 1 ? "%1 %2" : "%2 %1").arg(valueStringSigned).arg(description); // 1 or 2
+        break;
+    case 2:
+        result = QString(prop.descVal == 1 ? "%1% %2" : "%2 %1%").arg(value).arg(description); // 1 or 2
+        break;
+    case 3:
+        result = prop.descVal ? QString("%1 %2").arg(description).arg(value) : description; // 0 or 2
+        break;
+    case 4:
+        result = QString(prop.descVal == 1 ? "%1% %2" : "%2 %1%").arg(valueStringSigned).arg(description); // 1 or 2
+        break;
+    case 5: // HCMTF
+        result = QString("%1 %2%").arg(description).arg(value * 100 / 128);
+        break;
+    case 6:
+        result = QString(QString(prop.descVal == 1 ? "%1 %2" : "%2 %1") + " %3").arg(valueStringSigned).arg(description).arg(prop.descStringAdd); // 1 or 2
+        break;
+    case 7: case 8:
+        result = QString(QString(prop.descVal == 1 ? "%1% %2" : "%2 %1%") + " %3").arg(prop.descFunc == 7 ? QString::number(value) : valueStringSigned, description, prop.descStringAdd);
+        break;
+    case 11:
+        result = tr("Repairs 1 Durability in %1 Seconds").arg(100 / value);
+        break;
+    case 12:
+        result = QString("%1 %2").arg(description).arg(valueStringSigned);
+        break;
+    case 20:
+        result = QString("%1% %2").arg(value * -1).arg(description); // 1 or 2
+        break;
+    case 23: // reanimate
+        result = QString("%1% %2 %3").arg(value).arg(description).arg(ItemDataBase::Monsters()->value(propDisplay.param));
+        break;
+    // 9, 10, 14, 16-19 - absent
+    // everything else is constructed in ItemParser::parseItemProperties() (has displayString)
+    default:
+        result = tr("[special case %1, please report] %2 '%3' (id %4)").arg(prop.descFunc).arg(value).arg(description).arg(propId);
+    }
+    return result;
+}

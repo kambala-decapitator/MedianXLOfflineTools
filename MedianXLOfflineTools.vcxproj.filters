@@ -81,9 +81,6 @@
     <ClCompile Include="resurrectpenaltydialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="GeneratedFiles\qrc_medianxlofflinetools.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
     <ClCompile Include="GeneratedFiles\Release\moc_enums.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
@@ -171,6 +168,12 @@
     <ClCompile Include="GeneratedFiles\Template\moc_findresultsdialog.cpp">
       <Filter>Generated Files\Template</Filter>
     </ClCompile>
+    <ClCompile Include="propertiesdisplaymanager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\qrc_medianxlofflinetools.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="colors.hpp">
@@ -218,19 +221,14 @@
     <ClInclude Include="languagemanager.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="propertiesdisplaymanager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="medianxlofflinetools_ru.ts">
       <Filter>Translation Files</Filter>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="Resources\win\icon.rc">
-      <Filter>Resource Files</Filter>
-    </ResourceCompile>
-    <ResourceCompile Include="Resources\win\MedianXLOfflineTools.rc">
-      <Filter>Resource Files</Filter>
-    </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="enums.h">
@@ -272,9 +270,6 @@
     <CustomBuild Include="resurrectpenaltydialog.ui">
       <Filter>Form Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="medianxlofflinetools.qrc">
-      <Filter>Resource Files</Filter>
-    </CustomBuild>
     <CustomBuild Include="finditemsdialog.ui">
       <Filter>Form Files</Filter>
     </CustomBuild>
@@ -284,5 +279,13 @@
     <CustomBuild Include="findresultsdialog.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
+    <CustomBuild Include="Resources\medianxlofflinetools.qrc">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Resources\win\medianxlofflinetools.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
   </ItemGroup>
 </Project>

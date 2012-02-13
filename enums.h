@@ -182,7 +182,7 @@ public:
     enum
     {
         StatCodeLength = 9,
-        MaxLevel = 126,
+        MaxLevel = 126, // Median XL has max level of 120, while Median Hardened (it's abandoned, but nevertheless) - 126
         InventoryGoldFactor = 10000,
         StashGoldMax = 2500000,
         SignetsOfLearningMax = 500,

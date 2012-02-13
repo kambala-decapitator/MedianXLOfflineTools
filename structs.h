@@ -17,10 +17,12 @@ struct ItemProperty
 };
 Q_DECLARE_TYPEINFO(ItemProperty, Q_MOVABLE_TYPE);
 
+typedef QMultiMap<int, ItemProperty> PropertiesMultiMap;
+typedef QMap<int, ItemProperty> PropertiesMap;
+
 
 struct ItemInfo;
 typedef QList<ItemInfo *> ItemsList;
-typedef QMultiMap<int, ItemProperty> PropertiesMultiMap;
 
 struct ItemInfo
 {
@@ -63,6 +65,17 @@ struct PlugyStashInfo
     bool hasGold;
     quint32 gold, lastPage;
 };
+
+
+struct ItemPropertyDisplay
+{
+    QString displayString;
+    int priority, propertyId;
+
+    ItemPropertyDisplay() {}
+    ItemPropertyDisplay(const QString &displayString_, int priority_, int propertyId_) : displayString(displayString_), priority(priority_), propertyId(propertyId_) {}
+};
+Q_DECLARE_TYPEINFO(ItemPropertyDisplay, Q_MOVABLE_TYPE);
 
 
 // character

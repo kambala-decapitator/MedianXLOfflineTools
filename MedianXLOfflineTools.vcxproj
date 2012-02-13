@@ -107,6 +107,14 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="GeneratedFiles\qrc_medianxlofflinetools.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="GeneratedFiles\Release\moc_findresultsdialog.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">true</ExcludedFromBuild>
@@ -116,6 +124,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="itemparser.cpp" />
+    <ClCompile Include="propertiesdisplaymanager.cpp" />
     <ClCompile Include="reversebitreader.cpp" />
     <ClCompile Include="enums.cpp" />
     <ClCompile Include="finditemsdialog.cpp" />
@@ -142,12 +151,6 @@
     <ClCompile Include="propertiesviewerwidget.cpp" />
     <ClCompile Include="qd2charrenamer.cpp" />
     <ClCompile Include="resurrectpenaltydialog.cpp" />
-    <ClCompile Include="GeneratedFiles\qrc_medianxlofflinetools.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-      </PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-      </PrecompiledHeader>
-    </ClCompile>
     <ClCompile Include="GeneratedFiles\Release\moc_enums.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">true</ExcludedFromBuild>
@@ -238,6 +241,7 @@
       <Command Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  "-I." "-I.\GeneratedFiles" "-I." "-I." "-I."</Command>
     </CustomBuild>
     <ClInclude Include="itemparser.h" />
+    <ClInclude Include="propertiesdisplaymanager.h" />
     <ClInclude Include="resourcepathmanager.hpp" />
     <ClInclude Include="reversebitreader.h" />
     <ClInclude Include="colors.hpp" />
@@ -406,18 +410,6 @@
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
     </CustomBuild>
-    <CustomBuild Include="medianxlofflinetools.qrc">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Rcc%27ing %(Filename)%(Extension)...</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\rcc.exe" -name "%(Filename)" -no-compress "%(FullPath)" -o .\GeneratedFiles\qrc_%(Filename).cpp
-</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath);%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\qrc_%(Filename).cpp;%(Outputs)</Outputs>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Rcc%27ing %(Filename)%(Extension)...</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\rcc.exe" -name "%(Filename)" -no-compress "%(FullPath)" -o .\GeneratedFiles\qrc_%(Filename).cpp
-</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(FullPath);%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\qrc_%(Filename).cpp;%(Outputs)</Outputs>
-    </CustomBuild>
     <CustomBuild Include="finditemsdialog.ui">
       <FileType>Document</FileType>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
@@ -434,10 +426,24 @@
       <Command Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
     </CustomBuild>
     <None Include="medianxlofflinetools_ru.ts" />
+    <CustomBuild Include="Resources\medianxlofflinetools.qrc">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath);.\Resources\Resources\icons\icon.png;.\Resources\Resources\icons\qt.png;.\Resources\Resources\icons\save.png;.\Resources\Resources\icons\items.png;.\Resources\Resources\icons\about.png;.\Resources\Resources\icons\find.png;.\Resources\Resources\icons\open.png;.\Resources\Resources\icons\reload.png;.\Resources\Resources\icons\plugy\first.png;.\Resources\Resources\icons\plugy\last.png;.\Resources\Resources\icons\plugy\left.png;.\Resources\Resources\icons\plugy\left10.png;.\Resources\Resources\icons\plugy\left100.png;.\Resources\Resources\icons\plugy\right.png;.\Resources\Resources\icons\plugy\right10.png;.\Resources\Resources\icons\plugy\right100.png;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Rcc%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\qrc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\rcc.exe" -name "%(Filename)" -no-compress "%(FullPath)" -o .\GeneratedFiles\qrc_%(Filename).cpp</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(FullPath);.\Resources\Resources\icons\icon.png;.\Resources\Resources\icons\qt.png;.\Resources\Resources\icons\save.png;.\Resources\Resources\icons\items.png;.\Resources\Resources\icons\about.png;.\Resources\Resources\icons\find.png;.\Resources\Resources\icons\open.png;.\Resources\Resources\icons\reload.png;.\Resources\Resources\icons\plugy\first.png;.\Resources\Resources\icons\plugy\last.png;.\Resources\Resources\icons\plugy\left.png;.\Resources\Resources\icons\plugy\left10.png;.\Resources\Resources\icons\plugy\left100.png;.\Resources\Resources\icons\plugy\right.png;.\Resources\Resources\icons\plugy\right10.png;.\Resources\Resources\icons\plugy\right100.png;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Rcc%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\qrc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\rcc.exe" -name "%(Filename)" -no-compress "%(FullPath)" -o .\GeneratedFiles\qrc_%(Filename).cpp</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">%(FullPath);.\Resources\Resources\icons\icon.png;.\Resources\Resources\icons\qt.png;.\Resources\Resources\icons\save.png;.\Resources\Resources\icons\items.png;.\Resources\Resources\icons\about.png;.\Resources\Resources\icons\find.png;.\Resources\Resources\icons\open.png;.\Resources\Resources\icons\reload.png;.\Resources\Resources\icons\plugy\first.png;.\Resources\Resources\icons\plugy\last.png;.\Resources\Resources\icons\plugy\left.png;.\Resources\Resources\icons\plugy\left10.png;.\Resources\Resources\icons\plugy\left100.png;.\Resources\Resources\icons\plugy\right.png;.\Resources\Resources\icons\plugy\right10.png;.\Resources\Resources\icons\plugy\right100.png;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">Rcc%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">.\GeneratedFiles\qrc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">"$(QTDIR)\bin\rcc.exe" -name "%(Filename)" -no-compress "%(FullPath)" -o .\GeneratedFiles\qrc_%(Filename).cpp</Command>
+    </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="Resources\win\icon.rc" />
-    <ResourceCompile Include="Resources\win\MedianXLOfflineTools.rc" />
+    <ResourceCompile Include="Resources\win\medianxlofflinetools.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

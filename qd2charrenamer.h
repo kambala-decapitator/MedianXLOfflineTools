@@ -17,7 +17,7 @@ public:
     static const QStringList colorNames;
     static void updateNamePreview(QTextEdit *previewTextEdit, const QString &name);
 
-    QD2CharRenamer(QWidget *parent, const QString &originalName);
+    QD2CharRenamer(const QString &originalName, bool shouldWarn, QWidget *parent = 0);
 
     QString name() const { return _originalCharName; }
 
@@ -29,6 +29,7 @@ private slots:
 private:
     Ui::QD2CharRenamerClass ui;
     QString _originalCharName;
+    bool _shouldWarn;
 
     void createColorMenu();
 };

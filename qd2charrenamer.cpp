@@ -32,7 +32,7 @@ void QD2CharRenamer::updateNamePreview(QTextEdit *previewTextEdit, const QString
 
 // ctor
 
-QD2CharRenamer::QD2CharRenamer(QWidget *parent, const QString &originalName) : QDialog(parent), _originalCharName(originalName)
+QD2CharRenamer::QD2CharRenamer(const QString &originalName, bool shouldWarn, QWidget *parent) : QDialog(parent), _originalCharName(originalName), _shouldWarn(shouldWarn)
 {
     ui.setupUi(this);
     setWindowFlags(windowFlags() & ~Qt::WindowContextHelpButtonHint);
@@ -88,7 +88,7 @@ void QD2CharRenamer::saveName()
                 break;
             }
         }
-        if (hasColor && QUESTION_BOX_YESNO(tr("Character with colored name can't join multiplayer games. Are you sure you want to continue?"), QMessageBox::Yes) == QMessageBox::No)
+        if (hasColor && _shouldWarn && QUESTION_BOX_YESNO(tr("Character with colored name can't join multiplayer games. Are you sure you want to continue?"), QMessageBox::Yes) == QMessageBox::No)
             return;
 
         _originalCharName = newName;

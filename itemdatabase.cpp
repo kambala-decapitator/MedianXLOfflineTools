@@ -2,9 +2,13 @@
 #include "helpers.h"
 #include "colors.hpp"
 #include "resourcepathmanager.hpp"
+#include "itemparser.h"
 
 #include <QFile>
+
+#ifndef QT_NO_DEBUG
 #include <QDebug>
+#endif
 
 
 QMultiHash<QString, QString> ItemDataBase::_sets;
@@ -442,7 +446,7 @@ QString ItemDataBase::completeItemName(ItemInfo *item, bool shouldUseColor, bool
                 quality = tr("rare");
                 break;
             case Enums::ItemQuality::Unique:
-                quality = tr("unique");
+                quality = isUberCharm(item) ? tr("charm") : tr("unique");
                 break;
             case Enums::ItemQuality::Crafted:
                 quality = tr("crafted");
@@ -483,7 +487,14 @@ QHash<int, ColorIndex> *ItemDataBase::itemQualityColorsHash()
 ColorIndex ItemDataBase::colorOfItem(ItemInfo *item)
 {
     return !itemQualityColorsHash()->contains(item->quality) && (item->isSocketed || item->isEthereal) ? DarkGrey : itemQualityColorsHash()->value(item->quality);
-    //ColorIndex colorIndex = itemQualityColorsHash()->value(item->quality);
-    //if (!itemQualityColorsHash()->contains(item->quality) && (item->isSocketed || item->isEthereal))
-    //    colorIndex = DarkGrey;
+}
+
+bool ItemDataBase::isClassCharm(ItemInfo *item)
+{
+    return Items()->value(item->itemType).typeString.startsWith("ara");
+}
+
+bool ItemDataBase::isUberCharm(ItemInfo *item)
+{
+    return ItemParser::itemTypeInheritsFromTypes(Items()->value(item->itemType).typeString, QList<QByteArray>() << "char");
 }

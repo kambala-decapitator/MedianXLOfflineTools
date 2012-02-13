@@ -28,6 +28,8 @@ public:
     static QString completeItemName(ItemInfo *item, bool shouldUseColor, bool showQualityText = true);
     static QHash<int, ColorIndex> *itemQualityColorsHash();
     static ColorIndex colorOfItem(ItemInfo *item);
+    static bool isClassCharm(ItemInfo *item);
+    static bool isUberCharm(ItemInfo *item);
 
     static ItemsList *currentCharacterItems;
 

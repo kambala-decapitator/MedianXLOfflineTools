@@ -242,14 +242,14 @@ PropertiesMultiMap ItemParser::parseItemProperties(ReverseBitReader &bitReader, 
                 return props;
             }
 
-            const ItemPropertyTxt &prop = ItemDataBase::Properties()->value(id);
+            const ItemPropertyTxt &txtProperty = ItemDataBase::Properties()->value(id);
             ItemProperty propToAdd;
-            propToAdd.param = prop.saveParamBits ? bitReader.readNumber(prop.saveParamBits) : 0;
-            propToAdd.value = bitReader.readNumber(prop.bits) - prop.add;
+            propToAdd.param = txtProperty.saveParamBits ? bitReader.readNumber(txtProperty.saveParamBits) : 0;
+            propToAdd.value = bitReader.readNumber(txtProperty.bits) - txtProperty.add;
             if (id == Enums::ItemProperties::EnhancedDamage)
             {
-                qint16 minEnhDamage = bitReader.readNumber(prop.bits) - prop.add;
-                if (minEnhDamage < propToAdd.value) // usually it's not possible, but let's make sure
+                qint16 minEnhDamage = bitReader.readNumber(txtProperty.bits) - txtProperty.add;
+                if (minEnhDamage < propToAdd.value) // it shouldn't possible (they must always be equal), but let's make sure
                     propToAdd.value = minEnhDamage;
                 propToAdd.displayString = enhancedDamageFormat.arg(propToAdd.value);
                 //if (minEnhDamage != propToAdd.value)
@@ -264,7 +264,7 @@ PropertiesMultiMap ItemParser::parseItemProperties(ReverseBitReader &bitReader, 
                     hasLength = true; // length is present only when min damage is specified
                 else if (id == 52) // +%d magic damage
                 {
-                    QString desc = prop.descPositive;
+                    QString desc = txtProperty.descPositive;
                     propToAdd.displayString = desc.replace("%d", "%1").arg(propToAdd.value);
                 }
                 props.insert(id++, propToAdd);
@@ -310,34 +310,30 @@ PropertiesMultiMap ItemParser::parseItemProperties(ReverseBitReader &bitReader, 
                 const SkillInfo &skill = ItemDataBase::Skills()->at(propToAdd.param);
                 propToAdd.displayString = tr("+%1 to %2").arg(propToAdd.value).arg(skill.name);
                 if (id == 107)
-                    propToAdd.displayString = " " + tr("(%1 Only)", "class-specific skill").arg(skill.classCode > -1 ? Enums::ClassName::classes().at(skill.classCode) : "FAIL");
+                    propToAdd.displayString += " " + tr("(%1 Only)", "class-specific skill").arg(skill.classCode > -1 ? Enums::ClassName::classes().at(skill.classCode) : "TROLOLOL");
             }
             else if (id == 204)
             {
                 propToAdd.displayString = tr("Level %1 %2 (%3/%4 Charges)").arg(propToAdd.param & 63).arg(ItemDataBase::Skills()->value(propToAdd.param >> 6).name)
                     .arg(propToAdd.value & 255).arg(propToAdd.value >> 8);
             }
-            //else if (id == 219)
-            //    propToAdd.displayString = "trophy'd charm or blessed craft";
-            else if (QString(prop.descPositive).startsWith('%')) // ctc
+            else if (QString(txtProperty.descPositive).startsWith('%')) // ctc
             {
-                QString desc = prop.descPositive;
+                QString desc = txtProperty.descPositive;
                 for (int i = 0, k = 1; k <= 3 && i < desc.length(); ++i)
                     if (desc.at(i) == '%' && desc.at(i + 1).isLetter())
                         desc[++i] = QString::number(k++).at(0);
                 propToAdd.displayString = desc.replace("%%", "%").arg(propToAdd.value).arg(propToAdd.param & 63).arg(ItemDataBase::Skills()->value(propToAdd.param >> 6).name);
             }
             else if (ItemDataBase::MysticOrbs()->contains(id))
-            {
                 propToAdd.displayString = QString("%1 x '%2'").arg(propToAdd.value).arg(ItemDataBase::Items()->value(ItemDataBase::MysticOrbs()->value(id).itemCode).name);
-            }
 
             props.insert(id, propToAdd);
         }
         catch (int exceptionCode)
         {
             *ok = true;
-            // Requirements prop has the lowest descpriority, so it'll appear at the bottom
+            // Requirements txtProperty has the lowest descpriority, so it'll appear at the bottom
             props.insert(Enums::ItemProperties::Requirements, ItemProperty(tr("Error parsing item properties (exception == %1), please report!").arg(exceptionCode)));
             return props;
         }

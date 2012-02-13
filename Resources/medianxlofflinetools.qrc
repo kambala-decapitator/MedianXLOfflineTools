@@ -1,0 +1,22 @@
+<RCC>
+    <qresource prefix="/MedianXLOfflineTools">
+        <file>icons/icon.png</file>
+        <file>icons/qt.png</file>
+        <file>icons/save.png</file>
+        <file>icons/items.png</file>
+        <file>icons/about.png</file>
+        <file>icons/find.png</file>
+        <file>icons/open.png</file>
+        <file>icons/reload.png</file>
+    </qresource>
+    <qresource prefix="/PlugyArrows">
+        <file>icons/plugy/first.png</file>
+        <file>icons/plugy/last.png</file>
+        <file>icons/plugy/left.png</file>
+        <file>icons/plugy/left10.png</file>
+        <file>icons/plugy/left100.png</file>
+        <file>icons/plugy/right.png</file>
+        <file>icons/plugy/right10.png</file>
+        <file>icons/plugy/right100.png</file>
+    </qresource>
+</RCC>

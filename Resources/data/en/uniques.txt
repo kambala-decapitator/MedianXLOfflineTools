@@ -13,14 +13,179 @@
 11	Asheara's Cateye	100
 12	Dragon's Egg	100
 13	Heavenstone	100
+14	\white;not yet implemented - CHEATER	100
+15	\white;not yet implemented - CHEATER	100
+16	\white;not yet implemented - CHEATER	100
+17	\white;not yet implemented - CHEATER	100
+18	\white;not yet implemented - CHEATER	100
+19	\white;not yet implemented - CHEATER	100
+20	\white;not yet implemented - CHEATER	100
+21	\white;not yet implemented - CHEATER	100
+22	\white;not yet implemented - CHEATER	100
+23	\white;not yet implemented - CHEATER	100
+24	\white;not yet implemented - CHEATER	100
+25	\white;not yet implemented - CHEATER	100
+26	\white;not yet implemented - CHEATER	100
+27	\white;not yet implemented - CHEATER	100
+28	\white;not yet implemented - CHEATER	100
+29	\white;not yet implemented - CHEATER	100
+30	\white;not yet implemented - CHEATER	100
+31	\white;not yet implemented - CHEATER	100
+32	\white;not yet implemented - CHEATER	100
+33	\white;not yet implemented - CHEATER	100
+34	\white;not yet implemented - CHEATER	100
+35	\white;not yet implemented - CHEATER	100
+36	\white;not yet implemented - CHEATER	100
+37	\white;not yet implemented - CHEATER	100
+38	\white;not yet implemented - CHEATER	100
+39	\white;not yet implemented - CHEATER	100
+40	\white;not yet implemented - CHEATER	100
+41	\white;not yet implemented - CHEATER	100
+42	\white;not yet implemented - CHEATER	100
+43	\white;not yet implemented - CHEATER	100
+44	\white;not yet implemented - CHEATER	100
+45	\white;not yet implemented - CHEATER	100
+46	\white;not yet implemented - CHEATER	100
+47	\white;not yet implemented - CHEATER	100
+48	\white;not yet implemented - CHEATER	100
+49	\white;not yet implemented - CHEATER	100
+50	\white;not yet implemented - CHEATER	100
+51	\white;not yet implemented - CHEATER	100
+52	\white;not yet implemented - CHEATER	100
+53	\white;not yet implemented - CHEATER	100
+54	\white;not yet implemented - CHEATER	100
+55	\white;not yet implemented - CHEATER	100
+56	\white;not yet implemented - CHEATER	100
+57	\white;not yet implemented - CHEATER	100
+58	\white;not yet implemented - CHEATER	100
+59	\white;not yet implemented - CHEATER	100
+60	\white;not yet implemented - CHEATER	100
+61	\white;not yet implemented - CHEATER	100
+62	\white;not yet implemented - CHEATER	100
+63	\white;not yet implemented - CHEATER	100
+64	\white;not yet implemented - CHEATER	100
+65	\white;not yet implemented - CHEATER	100
+66	\white;not yet implemented - CHEATER	100
+67	\white;not yet implemented - CHEATER	100
+68	\white;not yet implemented - CHEATER	100
+69	\white;not yet implemented - CHEATER	100
+70	\white;not yet implemented - CHEATER	100
+71	\white;not yet implemented - CHEATER	100
+72	\white;not yet implemented - CHEATER	100
+73	\white;not yet implemented - CHEATER	100
+74	\white;not yet implemented - CHEATER	100
+75	\white;not yet implemented - CHEATER	100
+76	\white;not yet implemented - CHEATER	100
+77	\white;not yet implemented - CHEATER	100
+78	\white;not yet implemented - CHEATER	100
+79	\white;not yet implemented - CHEATER	100
+80	\white;not yet implemented - CHEATER	100
+81	\white;not yet implemented - CHEATER	100
+82	\white;not yet implemented - CHEATER	100
+83	\white;not yet implemented - CHEATER	100
+84	\white;not yet implemented - CHEATER	100
+85	\white;not yet implemented - CHEATER	100
+86	\white;not yet implemented - CHEATER	100
+87	\white;not yet implemented - CHEATER	100
+88	\white;not yet implemented - CHEATER	100
+89	\white;not yet implemented - CHEATER	100
+90	\white;not yet implemented - CHEATER	100
+91	\white;not yet implemented - CHEATER	100
+92	\white;not yet implemented - CHEATER	100
+93	\white;not yet implemented - CHEATER	100
+94	\white;not yet implemented - CHEATER	100
+95	\white;not yet implemented - CHEATER	100
+96	\white;not yet implemented - CHEATER	100
+97	\white;not yet implemented - CHEATER	100
+98	\white;not yet implemented - CHEATER	100
+99	\white;not yet implemented - CHEATER	100
+100	\white;not yet implemented - CHEATER	100
+101	\white;not yet implemented - CHEATER	100
+102	\white;not yet implemented - CHEATER	100
+103	\white;not yet implemented - CHEATER	100
+104	\white;not yet implemented - CHEATER	100
+105	\white;not yet implemented - CHEATER	100
+106	\white;not yet implemented - CHEATER	100
+107	\white;not yet implemented - CHEATER	100
+108	\white;not yet implemented - CHEATER	100
+109	\white;not yet implemented - CHEATER	100
+110	\white;not yet implemented - CHEATER	100
+111	\white;not yet implemented - CHEATER	100
+112	\white;not yet implemented - CHEATER	100
+113	\white;not yet implemented - CHEATER	100
+114	\white;not yet implemented - CHEATER	100
+115	\white;not yet implemented - CHEATER	100
+116	\white;not yet implemented - CHEATER	100
+117	\white;not yet implemented - CHEATER	100
+118	\white;not yet implemented - CHEATER	100
+119	\white;not yet implemented - CHEATER	100
+120	\white;not yet implemented - CHEATER	100
+121	\white;not yet implemented - CHEATER	100
+122	\white;not yet implemented - CHEATER	100
+123	\white;not yet implemented - CHEATER	100
+124	\white;not yet implemented - CHEATER	100
+125	\white;not yet implemented - CHEATER	100
+126	\white;not yet implemented - CHEATER	100
+127	\white;not yet implemented - CHEATER	100
+128	\white;not yet implemented - CHEATER	100
+129	\white;not yet implemented - CHEATER	100
+130	\white;not yet implemented - CHEATER	100
+131	\white;not yet implemented - CHEATER	100
+132	\white;not yet implemented - CHEATER	100
+133	\white;not yet implemented - CHEATER	100
+134	\white;not yet implemented - CHEATER	100
+135	\white;not yet implemented - CHEATER	100
+136	\white;not yet implemented - CHEATER	100
+137	\white;not yet implemented - CHEATER	100
+138	\white;not yet implemented - CHEATER	100
+139	\white;not yet implemented - CHEATER	100
+140	\white;not yet implemented - CHEATER	100
+141	\white;not yet implemented - CHEATER	100
+142	\white;not yet implemented - CHEATER	100
+143	\white;not yet implemented - CHEATER	100
+144	\white;not yet implemented - CHEATER	100
+145	\white;not yet implemented - CHEATER	100
+146	\white;not yet implemented - CHEATER	100
+147	\white;not yet implemented - CHEATER	100
+148	\white;not yet implemented - CHEATER	100
+149	\white;not yet implemented - CHEATER	100
+150	\white;not yet implemented - CHEATER	100
+151	\white;not yet implemented - CHEATER	100
+152	\white;not yet implemented - CHEATER	100
+153	\white;not yet implemented - CHEATER	100
+154	\white;not yet implemented - CHEATER	100
+155	\white;not yet implemented - CHEATER	100
+156	\white;not yet implemented - CHEATER	100
+157	\white;not yet implemented - CHEATER	100
+158	\white;not yet implemented - CHEATER	100
+159	\white;not yet implemented - CHEATER	100
+160	\white;not yet implemented - CHEATER	100
+161	\white;not yet implemented - CHEATER	100
+162	\white;not yet implemented - CHEATER	100
+163	\white;not yet implemented - CHEATER	100
+164	\white;not yet implemented - CHEATER	100
+165	\white;not yet implemented - CHEATER	100
+166	\white;not yet implemented - CHEATER	100
+167	\white;not yet implemented - CHEATER	100
+168	\white;not yet implemented - CHEATER	100
+169	\white;not yet implemented - CHEATER	100
+170	\white;not yet implemented - CHEATER	100
+171	\white;not yet implemented - CHEATER	100
+172	\white;not yet implemented - CHEATER	100
+173	\white;not yet implemented - CHEATER	100
+174	\white;not yet implemented - CHEATER	100
+175	\white;not yet implemented - CHEATER	100
 176	Book of Summoning	1
 177	Horazon's Focus	40
 178	Optical Detector	60
 179	Laser Focus Crystal	80
+180	Azmodan's Heart	555
 181	Spirit Trance Herb	100
 182	Idol of Vanity	100
 183	The Butcher's Tooth	40
 184	Visions of Akarat	100
+185	Scroll of Kings	555
+186	Sacred Worldstone Key	555
 187	Moon of the Spider	100
 188	Legacy of Blood	100
 189	Spirit of Damnation	120
@@ -216,6 +381,7 @@
 379	Leoric's Legion	34
 380	Leoric's Legion	43
 381	Leoric's Legion	52
+382	The Gauntlet	100
 383	Stillwater	10
 384	Stillwater	19
 385	Stillwater	27
@@ -257,6 +423,7 @@
 421	Rabbit's Foot	25
 422	Rabbit's Foot	34
 423	Rabbit's Foot	43
+424	Everchase	100
 425	Shieldcracker	5
 426	Shieldcracker	14
 427	Shieldcracker	23
@@ -320,6 +487,12 @@
 485	The Jester	35
 486	The Jester	44
 487	The Wanderer's Hood	100
+488	Wedding Dress of the Zann	12
+489	Wedding Dress of the Zann	21
+490	Wedding Dress of the Zann	31
+491	Wedding Dress of the Zann	39
+492	Wedding Dress of the Zann	48
+493	Wedding Dress of the Zann	55
 494	Armor of the Old Religion	100
 495	Snakehair	5
 496	Snakehair	14
@@ -733,6 +906,7 @@
 904	Leather of Aut	28
 905	Leather of Aut	37
 906	Leather of Aut	45
+907	Wyand's Fervor	100
 908	Sawfish	4
 909	Sawfish	13
 910	Sawfish	22
@@ -1068,6 +1242,7 @@
 1240	Zerae's Veil	27
 1241	Zerae's Veil	36
 1242	Zerae's Veil	45
+1243	Crown of the Rakkas	100
 1244	Magnet Rock	7
 1245	Magnet Rock	16
 1246	Magnet Rock	25
@@ -1187,6 +1362,12 @@
 1360	Sharkbaiter	39
 1361	Sharkbaiter	47
 1362	Hratli's Craft	100
+1363	Oreichalcos	4
+1364	Oreichalcos	13
+1365	Oreichalcos	21
+1366	Oreichalcos	30
+1367	Oreichalcos	39
+1368	Oreichalcos	48
 1369	Hypnodisk	100
 1370	Wardance	4
 1371	Wardance	13
@@ -1370,6 +1551,12 @@
 1549	Compass of Souls	51
 1550	Compass of Souls	59
 1551	Mente Scura	100
+1552	Grimspirit	10
+1553	Grimspirit	19
+1554	Grimspirit	28
+1555	Grimspirit	37
+1556	Grimspirit	46
+1557	Grimspirit	54
 1558	Nature's Orphan	100
 1559	Jitan's Kamon	6
 1560	Jitan's Kamon	15
@@ -1377,6 +1564,7 @@
 1562	Jitan's Kamon	32
 1563	Jitan's Kamon	41
 1564	Jitan's Kamon	49
+1565	Candlewake	100
 1566	Flowerspring	6
 1567	Flowerspring	16
 1568	Flowerspring	25
@@ -1581,13 +1769,27 @@
 1767	Shadowchild	48
 1768	Demonlure	100
 1769	Crystalline Flame Medallion	120
+1770	\white;not yet implemented - CHEATER	555
+1771	\white;not yet implemented - CHEATER	555
+1772	\white;not yet implemented - CHEATER	555
+1773	\white;not yet implemented - CHEATER	555
+1774	\white;not yet implemented - CHEATER	555
+1775	\white;not yet implemented - CHEATER	555
+1776	\white;not yet implemented - CHEATER	555
+1777	\white;not yet implemented - CHEATER	555
+1778	\white;not yet implemented - CHEATER	555
+1779	\white;not yet implemented - CHEATER	555
+1780	\white;not yet implemented - CHEATER	555
+1781	\white;not yet implemented - CHEATER	555
 1782	Moo moo moo Moooo! Moo!\nFool's Gold	100
 1783	Silver Seal of Ureh	120
 1784	Astrogha's Venom Stinger	120
+1785	\white;not yet implemented - CHEATER	100
 1786	Teganze Pendant	60
 1787	Klaatu Barada Nikto	120
 1788	The Idiot Ball	60
 1789	Seal of the Nephalem Kings	120
+1790	The Book of Lies	555
 1791	Ring of the Five	100
 1792	Assur's Bane	100
 1793	By Robert Marks\nDemonsbane	100
@@ -1595,14 +1797,18 @@
 1795	The Glorious Book of Median	100
 1796	Beads of the Snake Queen	100
 1797	Bad Mood Ring	100
+1798	Lady of Storms	555
 1799	Evenstar	100
 1800	Orc Torque Torc	100
 1801	Phase Crystal	100
+1802	Bard's Joke	40
 1803	Cornerstone of the World	100
 1804	Cornerstone of the World	100
 1805	Cornerstone of the World	100
 1806	Cornerstone of the World	100
+1807	Cornerstone of the World	100
 1808	Cornerstone of the World	100
+1809	Cornerstone of the World	100
 1810	Cornerstone of the World	100
 1811	Cornerstone of the World	100
 1812	Cornerstone of the World	100
@@ -1610,20 +1816,27 @@
 1814	Cornerstone of the World	100
 1815	Cornerstone of the World	100
 1816	Cornerstone of the World	100
+1817	Cornerstone of the World	100
 1818	Cornerstone of the World	100
 1819	Cornerstone of the World	100
 1820	Cornerstone of the World	100
+1821	Cornerstone of the World	100
 1822	Cornerstone of the World	100
+1823	Cornerstone of the World	100
 1824	Cornerstone of the World	100
+1825	Cornerstone of the World	100
 1826	Cornerstone of the World	100
+1827	Cornerstone of the World	100
 1828	Cornerstone of the World	100
 1829	Cornerstone of the World	100
 1830	Cornerstone of the World	100
 1831	Cornerstone of the World	100
 1832	Cornerstone of the World	100
+1833	Cornerstone of the World	100
 1834	Cornerstone of the World	100
 1835	Cornerstone of the World	100
 1836	Cornerstone of the World	100
+1837	Cornerstone of the World	100
 1838	Cornerstone of the World	100
 1839	Cornerstone of the World	100
 1840	Cornerstone of the World	100
@@ -1636,7 +1849,9 @@
 1847	Cornerstone of the World	100
 1848	Cornerstone of the World	100
 1849	Cornerstone of the World	100
+1850	Cornerstone of the World	100
 1851	Cornerstone of the World	100
+1852	Cornerstone of the World	100
 1853	Cornerstone of the World	100
 1854	Cornerstone of the World	100
 1855	Cornerstone of the World	100
@@ -1650,9 +1865,13 @@
 1863	Cornerstone of the World	100
 1864	Cornerstone of the World	100
 1865	Cornerstone of the World	100
+1866	Cornerstone of the World	100
 1867	Cornerstone of the World	100
 1868	Cornerstone of the World	100
+1869	Cornerstone of the World	100
 1870	Cornerstone of the World	100
+1871	Cornerstone of the World	100
+1872	Cornerstone of the World	100
 1873	Cornerstone of the World	100
 1874	Cornerstone of the World	100
 1875	Cornerstone of the World	100
@@ -1666,6 +1885,7 @@
 1883	Cornerstone of the World	100
 1884	Cornerstone of the World	100
 1885	Cornerstone of the World	100
+1886	Cornerstone of the World	100
 1887	Cornerstone of the World	100
 1888	Cornerstone of the World	100
 1889	Cornerstone of the World	100
@@ -1691,15 +1911,19 @@
 1909	Cornerstone of the World	100
 1910	Cornerstone of the World	100
 1911	Cornerstone of the World	100
+1912	Cornerstone of the World	100
 1913	Cornerstone of the World	100
+1914	Cornerstone of the World	100
 1915	Cornerstone of the World	100
 1916	Cornerstone of the World	100
 1917	Cornerstone of the World	100
 1918	Cornerstone of the World	100
 1919	Cornerstone of the World	100
+1920	Cornerstone of the World	100
 1921	Cornerstone of the World	100
 1922	Cornerstone of the World	100
 1923	Cornerstone of the World	100
+1924	Cornerstone of the World	100
 1925	Cornerstone of the World	100
 1926	Cornerstone of the World	100
 1927	Cornerstone of the World	100
@@ -1722,14 +1946,18 @@
 1944	Cornerstone of the World	100
 1945	Cornerstone of the World	100
 1946	Cornerstone of the World	100
+1947	Cornerstone of the World	100
 1948	Cornerstone of the World	100
 1949	Cornerstone of the World	100
+1950	Cornerstone of the World	100
 1951	Cornerstone of the World	100
 1952	Cornerstone of the World	100
 1953	Cornerstone of the World	100
+1954	Cornerstone of the World	100
 1955	Cornerstone of the World	100
 1956	Cornerstone of the World	100
 1957	Cornerstone of the World	100
+1958	Cornerstone of the World	100
 1959	Cornerstone of the World	100
 1960	Cornerstone of the World	100
 1961	Cornerstone of the World	100
@@ -1737,7 +1965,9 @@
 1963	Cornerstone of the World	100
 1964	Cornerstone of the World	100
 1965	Cornerstone of the World	100
+1966	Cornerstone of the World	100
 1967	Cornerstone of the World	100
+1968	Cornerstone of the World	100
 1969	Cornerstone of the World	100
 1970	Cornerstone of the World	100
 1971	Cornerstone of the World	100
@@ -1749,10 +1979,13 @@
 1977	Cornerstone of the World	100
 1978	Black Dwarf	120
 1979	Ouroboros	120
+1980	Atomus	0
 1981	QQ	0
+1982	(Please Dupe and Trade To Everyone)\nToken Imbalanced Beta Item	121
 1983	Niradyahk	80
 1984	Self-Referential Unlisted Secret Item	80
 1985	The Only Item That Will Never Be Duped	80
+1986	Xepera Xeper Xeperu	120
 1987	Hanabigami	60
 1988	The Tranquilizer	60
 1989	Katamari	30
@@ -1760,7 +1993,28 @@
 1991	Fren Slairea	30
 1992	The Seal of Kharos	60
 1993	Scarab of Death	60
+1994	\white;not yet implemented - CHEATER	100
+1995	\white;not yet implemented - CHEATER	100
+1996	\white;not yet implemented - CHEATER	100
+1997	\white;not yet implemented - CHEATER	100
+1998	\white;not yet implemented - CHEATER	100
+1999	\white;not yet implemented - CHEATER	100
+2000	\white;not yet implemented - CHEATER	100
+2001	\white;not yet implemented - CHEATER	100
+2002	\white;not yet implemented - CHEATER	100
+2003	\white;not yet implemented - CHEATER	100
+2004	\white;not yet implemented - CHEATER	100
+2005	\white;not yet implemented - CHEATER	100
+2006	\white;not yet implemented - CHEATER	100
+2007	\white;not yet implemented - CHEATER	100
+2008	\white;not yet implemented - CHEATER	100
+2009	\white;not yet implemented - CHEATER	100
+2010	\white;not yet implemented - CHEATER	100
+2011	\white;not yet implemented - CHEATER	100
+2012	\white;not yet implemented - CHEATER	100
+2013	\white;not yet implemented - CHEATER	100
 2014	Tobio's Key	100
+2015	Grand Armor	100
 2016	Ramcharge	100
 2017	The Doom Gong of Xiansai	100
 2018	Wandelkoning	100
@@ -1788,6 +2042,7 @@
 2040	Aiden's Lament	100
 2041	Angelhost	100
 2042	Satanskind	100
+2043	Crown of the Black Rose	555
 2044	Ylfa Ban	100
 2045	Windsinger	100
 2046	Shadowtwin	100
@@ -1824,6 +2079,7 @@
 2077	Earthbender	100
 2078	Idol of Rygnar	100
 2079	Lionblood Crest	100
+2080	Siggard's Revenge	100
 2081	Phoenix Down	100
 2082	Skin of Kabraxis	100
 2083	Lilith's Temptation	100
@@ -1842,6 +2098,7 @@
 2096	Splinter Mail	100
 2097	Spellbreaker	100
 2098	The Book of Kalen	100
+2099	Maiden Mother Crown	555
 2100	Fiddlesticks	100
 2101	Judge's Sin	100
 2102	Mudpool	100
@@ -1852,6 +2109,7 @@
 2107	Soulhungerer	100
 2108	Hawking Axe	100
 2109	Buzzbomb	100
+2110	 	100
 2111	Tylwulf's Betrayal	100
 2112	Abyssus	100
 2113	Issalfarstafr	100
@@ -1861,6 +2119,7 @@
 2117	Globus Cruciger	100
 2118	Greiz' Cheat	100
 2119	Roflchopper	100
+2120	Aeterna	100
 2121	Esubane	100
 2122	The Cactus	100
 2123	Weird Sister	100
@@ -1889,7 +2148,9 @@
 2146	Dead Lake's Lady	100
 2147	Elder Law	100
 2148	Siegehammer of Morgen Keep	100
+2149	Sword of the White Void	100
 2150	Cruciatus	100
+2151	 	100
 2152	Flintstone Axe	100
 2153	Chober Chaber	100
 2154	Kamehameha	100
@@ -1944,9 +2205,11 @@
 2203	The Whistling Death	100
 2204	Starmaiden	100
 2205	Heartseeker	100
+2206	Fury of Hellfire	100
 2207	Stormcaller	100
 2208	Two-Face Blade	100
 2209	The Caduceus	100
+2210	 	100
 2211	Slavemaster	100
 2212	Fleshmender	100
 2213	Brainsplatter	100
@@ -1956,6 +2219,7 @@
 2217	Banecat	100
 2218	Zakarwa's Betrayal	100
 2219	Zular Khan's Tempest	100
+2220	Soul Reaver	100
 2221	Timefather	100
 2222	Pitlord's Pendulum	100
 2223	Facemelter	100
@@ -1970,11 +2234,22 @@
 2232	Apocalypta	100
 2233	Dryhten Ealdor	100
 2234	Kekeke	100
+2235	Laz' Social Experiment	555
 2236	Lamen of the Archbishop	100
 2237	Arkenstone	100
 2238	Gallowlaugh	120
+2239	Queen Esu's Consort	100
+2240	Heartcore	100
+2241	The Coliseum	100
+2242	Foramen	100
+2243	En Taro Idunn	100
+2244	Jaguar Warrior	100
+2245	Echo Shard	100
+2246	Free Tone	100
 2247	Der Nebelring	120
 2248	Ras Algethi	100
+2249	Gatecrasher	100
+2250	Kriss Talline	555
 2251	Bag of Tricks	100
 2252	Lammergeier	100
 2253	\gold;I Am Rich	0
@@ -1984,9 +2259,191 @@
 2257	The Book of Lies	60
 2258	Maiden Mother Crown	100
 2259	Crown of the Black Rose	100
+2260	Cornerstone of the World	100
+2261	Cornerstone of the World	100
+2262	Cornerstone of the World	100
+2263	Cornerstone of the World	100
+2264	Cornerstone of the World	100
+2265	Cornerstone of the World	100
+2266	Cornerstone of the World	100
+2267	Cornerstone of the World	100
+2268	Cornerstone of the World	100
+2269	Cornerstone of the World	100
+2270	Cornerstone of the World	100
+2271	Cornerstone of the World	100
+2272	Cornerstone of the World	100
+2273	Cornerstone of the World	100
+2274	Cornerstone of the World	100
+2275	Cornerstone of the World	100
+2276	Cornerstone of the World	100
+2277	Cornerstone of the World	100
+2278	Cornerstone of the World	100
+2279	Cornerstone of the World	100
+2280	Cornerstone of the World	100
+2281	Cornerstone of the World	100
+2282	Cornerstone of the World	100
+2283	Cornerstone of the World	100
+2284	Cornerstone of the World	100
+2285	Cornerstone of the World	100
+2286	Cornerstone of the World	100
+2287	Cornerstone of the World	100
+2288	Cornerstone of the World	100
+2289	Cornerstone of the World	100
+2290	Cornerstone of the World	100
+2291	Cornerstone of the World	100
+2292	Cornerstone of the World	100
+2293	Cornerstone of the World	100
+2294	Cornerstone of the World	100
+2295	Cornerstone of the World	100
+2296	Cornerstone of the World	100
+2297	Cornerstone of the World	100
+2298	Cornerstone of the World	100
+2299	Cornerstone of the World	100
+2300	Cornerstone of the World	100
+2301	Cornerstone of the World	100
+2302	Cornerstone of the World	100
+2303	Cornerstone of the World	100
+2304	Cornerstone of the World	100
+2305	Cornerstone of the World	100
+2306	Cornerstone of the World	100
+2307	Cornerstone of the World	100
+2308	Cornerstone of the World	100
+2309	Cornerstone of the World	100
+2310	Cornerstone of the World	100
+2311	Cornerstone of the World	100
+2312	Cornerstone of the World	100
+2313	Cornerstone of the World	100
+2314	Cornerstone of the World	100
+2315	Cornerstone of the World	100
+2316	Cornerstone of the World	100
+2317	Cornerstone of the World	100
+2318	Cornerstone of the World	100
+2319	Cornerstone of the World	100
+2320	Cornerstone of the World	100
+2321	Cornerstone of the World	100
+2322	Cornerstone of the World	100
+2323	Cornerstone of the World	100
+2324	Cornerstone of the World	100
+2325	Cornerstone of the World	100
+2326	Cornerstone of the World	100
+2327	Cornerstone of the World	100
+2328	Cornerstone of the World	100
+2329	Cornerstone of the World	100
+2330	Cornerstone of the World	100
+2331	Cornerstone of the World	100
+2332	Cornerstone of the World	100
+2333	Cornerstone of the World	100
+2334	Cornerstone of the World	100
+2335	Cornerstone of the World	100
+2336	Cornerstone of the World	100
+2337	Cornerstone of the World	100
+2338	Cornerstone of the World	100
+2339	Cornerstone of the World	100
+2340	Cornerstone of the World	100
+2341	Cornerstone of the World	100
+2342	Cornerstone of the World	100
+2343	Cornerstone of the World	100
+2344	Cornerstone of the World	100
+2345	Cornerstone of the World	100
+2346	Cornerstone of the World	100
+2347	Cornerstone of the World	100
+2348	Cornerstone of the World	100
+2349	Cornerstone of the World	100
+2350	Cornerstone of the World	100
+2351	Cornerstone of the World	100
+2352	Cornerstone of the World	100
+2353	Cornerstone of the World	100
+2354	Cornerstone of the World	100
+2355	Cornerstone of the World	100
+2356	Cornerstone of the World	100
+2357	Cornerstone of the World	100
+2358	Cornerstone of the World	100
+2359	Cornerstone of the World	100
+2360	Cornerstone of the World	100
+2361	Cornerstone of the World	100
+2362	Cornerstone of the World	100
+2363	Cornerstone of the World	100
+2364	Cornerstone of the World	100
+2365	Cornerstone of the World	100
+2366	Cornerstone of the World	100
+2367	Cornerstone of the World	100
+2368	Cornerstone of the World	100
+2369	Cornerstone of the World	100
+2370	Cornerstone of the World	100
+2371	Cornerstone of the World	100
+2372	Cornerstone of the World	100
+2373	Cornerstone of the World	100
+2374	Cornerstone of the World	100
+2375	Cornerstone of the World	100
+2376	Cornerstone of the World	100
+2377	Cornerstone of the World	100
+2378	Cornerstone of the World	100
+2379	Cornerstone of the World	100
+2380	Cornerstone of the World	100
+2381	Cornerstone of the World	100
+2382	Cornerstone of the World	100
+2383	Cornerstone of the World	100
+2384	Cornerstone of the World	100
+2385	Cornerstone of the World	100
+2386	Cornerstone of the World	100
+2387	Cornerstone of the World	100
+2388	Cornerstone of the World	100
+2389	Cornerstone of the World	100
+2390	Cornerstone of the World	100
+2391	Cornerstone of the World	100
+2392	Cornerstone of the World	100
+2393	Cornerstone of the World	100
+2394	Cornerstone of the World	100
+2395	Cornerstone of the World	100
+2396	Cornerstone of the World	100
+2397	Cornerstone of the World	100
+2398	Cornerstone of the World	100
+2399	Cornerstone of the World	100
+2400	Cornerstone of the World	100
+2401	Cornerstone of the World	100
+2402	Cornerstone of the World	100
+2403	Cornerstone of the World	100
+2404	Cornerstone of the World	100
+2405	Cornerstone of the World	100
+2406	Cornerstone of the World	100
+2407	Cornerstone of the World	100
+2408	Cornerstone of the World	100
+2409	Cornerstone of the World	100
+2410	Cornerstone of the World	100
+2411	Cornerstone of the World	100
+2412	Cornerstone of the World	100
+2413	Cornerstone of the World	100
+2414	Cornerstone of the World	100
+2415	Cornerstone of the World	100
+2416	Cornerstone of the World	100
+2417	Cornerstone of the World	100
+2418	Cornerstone of the World	100
+2419	Cornerstone of the World	100
+2420	Cornerstone of the World	100
+2421	Cornerstone of the World	100
+2422	Cornerstone of the World	100
+2423	Cornerstone of the World	100
+2424	Cornerstone of the World	100
+2425	Cornerstone of the World	100
+2426	Cornerstone of the World	100
+2427	Cornerstone of the World	100
+2428	Cornerstone of the World	100
+2429	Cornerstone of the World	100
+2430	Cornerstone of the World	100
+2431	Cornerstone of the World	100
+2432	Cornerstone of the World	100
+2433	Cornerstone of the World	100
+2434	Cornerstone of the World	100
 2435	Wishmaster	0
+2436	Ring of Mourning	100
+2437	Black Hand Sigil	100
+2438	Akarat's Nails	100
+2439	The Tesseract	100
+2440	Khanduran Royal Pendant	100
+2441	Locket of Dreams	100
 2442	Noob Loop	0
 2443	Jerhyn's Tawiz	0
+2444	Aerial's Skull	0
 2445	Bloodbond	50
 2446	Pandemonium	50
 2447	Crown of the Rakkas	100

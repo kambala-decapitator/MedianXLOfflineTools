@@ -1,6 +1,7 @@
 #include "finditemsdialog.h"
 #include "itemdatabase.h"
 #include "findresultsdialog.h"
+#include "propertiesdisplaymanager.h"
 
 #include <QGridLayout>
 #include <QVBoxLayout>
@@ -8,6 +9,10 @@
 
 #include <QRegExp>
 #include <QSettings>
+
+#ifndef QT_NO_DEBUG
+#include <QDebug>
+#endif
 
 
 FindItemsDialog::FindItemsDialog(QWidget *parent) : QDialog(parent), _searchPerformed(false)
@@ -45,6 +50,7 @@ FindItemsDialog::FindItemsDialog(QWidget *parent) : QDialog(parent), _searchPerf
     connect(ui.caseSensitiveCheckBox, SIGNAL(toggled(bool)), SLOT(resetSearchStatus()));
     connect(ui.exactMatchCheckBox, SIGNAL(toggled(bool)), SLOT(resetSearchStatus()));
     connect(ui.regexCheckBox, SIGNAL(toggled(bool)), SLOT(resetSearchStatus()));
+    connect(ui.searchPropsCheckBox, SIGNAL(toggled(bool)), SLOT(resetSearchStatus()));
 
     loadSettings();
 }
@@ -152,13 +158,10 @@ void FindItemsDialog::searchTextChanged()
 void FindItemsDialog::performSearch()
 {
     QString searchText = ui.searchComboBox->currentText();
-    if (ui.searchPropsCheckBox->isChecked())
-        searchText += "";
-
     _searchResult.clear();
     foreach (ItemInfo *item, *ItemDataBase::currentCharacterItems)
     {
-        QString itemText = ItemDataBase::completeItemName(item, false);
+        QString itemText = ui.searchPropsCheckBox->isChecked() ? PropertiesDisplayManager::completeItemDescription(item) : ItemDataBase::completeItemName(item, false);
         Qt::CaseSensitivity cs = static_cast<Qt::CaseSensitivity>(ui.caseSensitiveCheckBox->isChecked());
         if (ui.regexCheckBox->isChecked())
         {

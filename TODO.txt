@@ -1,5 +1,4 @@
 - finish search dialog
-- removing stat MO should decrease corresponding stat on character if the item is in the gear list
 - merc items
 - pearl of wisdom color, shrines color
 - search results selection color (style sheets)

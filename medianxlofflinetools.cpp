@@ -28,7 +28,7 @@
 #include <cmath>
 
 
-static const QString lastSavePathKey("lastSavePath"), releaseDate("17.01.2012");
+static const QString lastSavePathKey("lastSavePath"), releaseDate("17.02.2012"), backupExtension("bak");
 
 //#define MAKE_HC
 
@@ -301,7 +301,14 @@ void MedianXLOfflineTools::saveCharacter()
     QString savePath = settings.value(lastSavePathKey).toString(), fileName = savePath + "/" + newName, saveFileName = fileName + ".d2s";
 
     QFile outputFile(saveFileName);
-    backupFile(outputFile);
+    if (hasNameChanged)
+    {
+        QFile oldFile(QString("%1/%2.d2s").arg(savePath, _editableCharInfo.basicInfo.originalName));
+        backupFile(oldFile);
+    }
+    else
+        backupFile(outputFile);
+
     if (outputFile.open(QIODevice::WriteOnly))
     {
         int bytesWritten = outputFile.write(tempFileContents);
@@ -326,10 +333,10 @@ void MedianXLOfflineTools::saveCharacter()
                 QDir sourceFileDir(savePath, isStrangeName ? "*" : _editableCharInfo.basicInfo.originalName + ".*");
                 foreach (const QFileInfo &fileInfo, sourceFileDir.entryInfoList())
                 {
-                    if (isStrangeName && fileInfo.baseName() != _editableCharInfo.basicInfo.originalName)
+                    QString extension = fileInfo.suffix();
+                    if (isStrangeName && fileInfo.baseName() != _editableCharInfo.basicInfo.originalName || extension == backupExtension)
                         continue;
 
-                    QString extension = fileInfo.suffix();
                     QFile sourceFile(fileInfo.canonicalFilePath());
                     if (extension == "d2s") // delete
                     {
@@ -421,7 +428,7 @@ void MedianXLOfflineTools::respecSkills(bool shouldRespec)
 
 void MedianXLOfflineTools::rename()
 {
-    QD2CharRenamer renameWidget(this, _editableCharInfo.basicInfo.originalName);
+    QD2CharRenamer renameWidget(_editableCharInfo.basicInfo.originalName, ui.actionWarnWhenColoredName->isChecked(), this);
     if (renameWidget.exec())
     {
         _editableCharInfo.basicInfo.newName = renameWidget.name();
@@ -873,6 +880,7 @@ void MedianXLOfflineTools::loadSettings()
     settings.beginGroup("options");
     ui.actionLoadLastUsedCharacter->setChecked(settings.value("loadLastCharacter", true).toBool());
     ui.actionAskBeforeReload->setChecked(settings.value("askBeforeReload", true).toBool());
+    ui.actionWarnWhenColoredName->setChecked(settings.value("warnWhenColoredName", true).toBool());
     ui.actionBackup->setChecked(settings.value("makeBackups", true).toBool());
     ui.actionOpenItemsAutomatically->setChecked(settings.value("openItemsAutomatically").toBool());
     ui.actionReloadSharedStashes->setChecked(settings.value("reloadSharedStashes").toBool());
@@ -899,6 +907,7 @@ void MedianXLOfflineTools::saveSettings() const
     settings.beginGroup("options");
     settings.setValue("loadLastCharacter", ui.actionLoadLastUsedCharacter->isChecked());
     settings.setValue("askBeforeReload", ui.actionAskBeforeReload->isChecked());
+    settings.setValue("warnWhenColoredName", ui.actionWarnWhenColoredName->isChecked());
     settings.setValue("makeBackups", ui.actionBackup->isChecked());
     settings.setValue("openItemsAutomatically", ui.actionOpenItemsAutomatically->isChecked());
     settings.setValue("reloadSharedStashes", ui.actionReloadSharedStashes->isChecked());
@@ -1944,7 +1953,7 @@ void MedianXLOfflineTools::backupFile(QFile &file)
 {
     if (ui.actionBackup->isChecked())
     {
-        QFile backupFile(file.fileName() + ".bak");
+        QFile backupFile(file.fileName() + "." + backupExtension);
         if (backupFile.exists() && !backupFile.remove())
             ERROR_BOX_FILE(tr("Error removing old backup '%1'\nReason: %2"), backupFile);
         else

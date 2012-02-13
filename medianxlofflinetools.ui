@@ -12,7 +12,7 @@
   </property>
   <property name="windowIcon">
    <iconset resource="medianxlofflinetools.qrc">
-    <normaloff>:/MedianXLOfflineTools/Resources/icons/icon.png</normaloff>:/MedianXLOfflineTools/Resources/icons/icon.png</iconset>
+    <normaloff>:/MedianXLOfflineTools/icons/icon.png</normaloff>:/MedianXLOfflineTools/icons/icon.png</iconset>
   </property>
   <property name="unifiedTitleAndToolBarOnMac">
    <bool>true</bool>
@@ -624,6 +624,7 @@ p, li { white-space: pre-wrap; }
     </widget>
     <addaction name="actionLoadLastUsedCharacter"/>
     <addaction name="actionAskBeforeReload"/>
+    <addaction name="actionWarnWhenColoredName"/>
     <addaction name="actionBackup"/>
     <addaction name="separator"/>
     <addaction name="actionOpenItemsAutomatically"/>
@@ -681,7 +682,7 @@ p, li { white-space: pre-wrap; }
   <action name="actionLoadCharacter">
    <property name="icon">
     <iconset resource="medianxlofflinetools.qrc">
-     <normaloff>:/MedianXLOfflineTools/Resources/icons/open.png</normaloff>:/MedianXLOfflineTools/Resources/icons/open.png</iconset>
+     <normaloff>:/MedianXLOfflineTools/icons/open.png</normaloff>:/MedianXLOfflineTools/icons/open.png</iconset>
    </property>
    <property name="text">
     <string>L&amp;oad Character...</string>
@@ -699,7 +700,7 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="icon">
     <iconset resource="medianxlofflinetools.qrc">
-     <normaloff>:/MedianXLOfflineTools/Resources/icons/save.png</normaloff>:/MedianXLOfflineTools/Resources/icons/save.png</iconset>
+     <normaloff>:/MedianXLOfflineTools/icons/save.png</normaloff>:/MedianXLOfflineTools/icons/save.png</iconset>
    </property>
    <property name="text">
     <string>&amp;Save Character</string>
@@ -722,7 +723,7 @@ p, li { white-space: pre-wrap; }
   <action name="actionAbout">
    <property name="icon">
     <iconset resource="medianxlofflinetools.qrc">
-     <normaloff>:/MedianXLOfflineTools/Resources/icons/about.png</normaloff>:/MedianXLOfflineTools/Resources/icons/about.png</iconset>
+     <normaloff>:/MedianXLOfflineTools/icons/about.png</normaloff>:/MedianXLOfflineTools/icons/about.png</iconset>
    </property>
    <property name="text">
     <string>About</string>
@@ -740,7 +741,7 @@ p, li { white-space: pre-wrap; }
   <action name="actionAboutQt">
    <property name="icon">
     <iconset resource="medianxlofflinetools.qrc">
-     <normaloff>:/MedianXLOfflineTools/Resources/icons/qt.png</normaloff>:/MedianXLOfflineTools/Resources/icons/qt.png</iconset>
+     <normaloff>:/MedianXLOfflineTools/icons/qt.png</normaloff>:/MedianXLOfflineTools/icons/qt.png</iconset>
    </property>
    <property name="text">
     <string>About Qt</string>
@@ -814,7 +815,7 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="icon">
     <iconset resource="medianxlofflinetools.qrc">
-     <normaloff>:/MedianXLOfflineTools/Resources/icons/reload.png</normaloff>:/MedianXLOfflineTools/Resources/icons/reload.png</iconset>
+     <normaloff>:/MedianXLOfflineTools/icons/reload.png</normaloff>:/MedianXLOfflineTools/icons/reload.png</iconset>
    </property>
    <property name="text">
     <string>&amp;Reload Character</string>
@@ -865,7 +866,7 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="icon">
     <iconset resource="medianxlofflinetools.qrc">
-     <normaloff>:/MedianXLOfflineTools/Resources/icons/items.png</normaloff>:/MedianXLOfflineTools/Resources/icons/items.png</iconset>
+     <normaloff>:/MedianXLOfflineTools/icons/items.png</normaloff>:/MedianXLOfflineTools/icons/items.png</iconset>
    </property>
    <property name="text">
     <string>Show</string>
@@ -919,7 +920,7 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="icon">
     <iconset resource="medianxlofflinetools.qrc">
-     <normaloff>:/MedianXLOfflineTools/Resources/icons/find.png</normaloff>:/MedianXLOfflineTools/Resources/icons/find.png</iconset>
+     <normaloff>:/MedianXLOfflineTools/icons/find.png</normaloff>:/MedianXLOfflineTools/icons/find.png</iconset>
    </property>
    <property name="text">
     <string>Find...</string>
@@ -1026,6 +1027,20 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="text">
     <string>Make backups before saving</string>
+   </property>
+  </action>
+  <action name="actionWarnWhenColoredName">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Warn when new name has color</string>
+   </property>
+   <property name="statusTip">
+    <string>Show confirmation dialog when using color in new name</string>
    </property>
   </action>
  </widget>

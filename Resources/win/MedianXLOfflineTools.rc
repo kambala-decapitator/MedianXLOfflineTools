@@ -12,6 +12,9 @@
 /////////////////////////////////////////////////////////////////////////////
 #undef APSTUDIO_READONLY_SYMBOLS
 
+// application icon
+IDI_ICON1	ICON	DISCARDABLE	"icon.ico"
+
 /////////////////////////////////////////////////////////////////////////////
 // Russian resources
 
@@ -70,7 +73,7 @@ BEGIN
         BLOCK "000004b0"
         BEGIN
             VALUE "CompanyName", "kambala"
-            VALUE "FileDescription", "Offline analogue of grig's MXL Online Tools"
+            VALUE "FileDescription", "Offline analogue of grig's Median XL Online Tools"
             VALUE "FileVersion", "0.2"
             VALUE "InternalName", "MedianXLOfflineTools"
             VALUE "LegalCopyright", "Copyright (C) kambala 2011-2012"
