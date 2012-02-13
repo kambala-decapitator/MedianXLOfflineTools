@@ -258,7 +258,13 @@ QString PropertiesDisplayManager::propertyDisplay(const ItemProperty &propDispla
     }
 
     char valueStringSigned[10];
-    ::sprintf_s(valueStringSigned, "%+d", value);
+#ifdef Q_WS_WIN32
+    ::sprintf_s
+#else
+    sprintf
+#endif
+    (valueStringSigned, "%+d", value);
+
 
     switch (prop.descFunc) // it's described in http://phrozenkeep.hugelaser.com/index.php?ind=reviews&op=entry_view&iden=448 - ItemStatCost.txt tutorial
     {

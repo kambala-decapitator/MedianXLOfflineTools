@@ -24,7 +24,9 @@ SOURCES += main.cpp \
     finditemsdialog.cpp \
     reversebitwriter.cpp \
     reversebitreader.cpp \
-    itemparser.cpp
+    itemparser.cpp \
+    propertiesdisplaymanager.cpp \
+    findresultsdialog.cpp
 
 HEADERS  += medianxlofflinetools.h \
     resurrectpenaltydialog.h \
@@ -44,7 +46,9 @@ HEADERS  += medianxlofflinetools.h \
     reversebitwriter.h \
     reversebitreader.h \
     itemparser.h \
-    resourcepathmanager.hpp
+    resourcepathmanager.hpp \
+    propertiesdisplaymanager.h \
+    findresultsdialog.h
 
 FORMS    += medianxlofflinetools.ui \
     resurrectpenaltydialog.ui \
@@ -54,7 +58,7 @@ FORMS    += medianxlofflinetools.ui \
 
 TRANSLATIONS += medianxlofflinetools_ru.ts
 
-RESOURCES += medianxlofflinetools.qrc
+RESOURCES += resources/medianxlofflinetools.qrc
 
 
 macx {
