@@ -2,13 +2,11 @@
 #define FINDITEMSWIDGET_H
 
 #include "ui_finditemsdialog.h"
-#include "findresultsdialog.h"
+#include "findresultswidget.h"
 
 #include <QDialog>
-#include <QPointer>
 
 
-//class FindResultsDialog;
 class ItemInfo;
 class QShowEvent;
 
@@ -38,16 +36,17 @@ signals:
 private slots:
     void findNext();
     void findPrevious();
-    void showResults();
+    void toggleResults();
     void updateCurrentIndexForItem(ItemInfo *item);
 
     void searchTextChanged();
 
 private:
     QList<SearchResultItem> _searchResult; // item and matched string
-    bool _searchPerformed;
+    bool _searchPerformed, _searchResultsChanged;
     int _currentIndex;
-    QPointer<FindResultsDialog> _resultsDialog;
+    FindResultsWidget *_resultsWidget;
+    int _lastResultsHeight;
 
     void performSearch();
     void nothingFound();

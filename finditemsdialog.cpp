@@ -1,6 +1,5 @@
 #include "finditemsdialog.h"
 #include "itemdatabase.h"
-//#include "findresultsdialog.h"
 #include "propertiesdisplaymanager.h"
 #include "structs.h"
 
@@ -16,7 +15,7 @@
 #endif
 
 
-FindItemsDialog::FindItemsDialog(QWidget *parent) : QDialog(parent), _searchPerformed(false)
+FindItemsDialog::FindItemsDialog(QWidget *parent) : QDialog(parent), _searchPerformed(false), _searchResultsChanged(false), _resultsWidget(new FindResultsWidget(this)), _lastResultsHeight(-1)
 {
     ui.setupUi(this);
     setWindowFlags(windowFlags() & ~Qt::WindowContextHelpButtonHint);
@@ -35,25 +34,42 @@ FindItemsDialog::FindItemsDialog(QWidget *parent) : QDialog(parent), _searchPerf
     vbox->addWidget(ui.previousButton);
     vbox->addWidget(ui.searchResultsButton);
     vbox->addStretch();
+    vbox->addWidget(ui.helpButton);
     vbox->addWidget(ui.closeButton);
 
-    QGridLayout *mainGrid = new QGridLayout(this);
+    QGridLayout *mainGrid = new QGridLayout;
+    //mainGrid->addWidget(ui.searchComboBox, 0, 0, 1, 2, Qt::AlignTop);
+    //mainGrid->addWidget(ui.caseSensitiveCheckBox, 1, 0);
+    //mainGrid->addWidget(ui.exactMatchCheckBox, 1, 1);
+    //mainGrid->addWidget(ui.regexCheckBox, 2, 0);
+    //mainGrid->addWidget(ui.multilineRegExpCheckBox, 2, 1);
+    //mainGrid->addWidget(ui.searchPropsCheckBox, 3, 0);
+    //mainGrid->addWidget(ui.wrapAroundCheckBox, 3, 1);
+    //mainGrid->addLayout(vbox, 0, 2, 4, 1, Qt::AlignRight);
     mainGrid->addWidget(ui.searchComboBox, 0, 0, Qt::AlignTop);
     mainGrid->addLayout(checkboxGrid, 1, 0);
-    mainGrid->addLayout(vbox, 0, 1, 2, 1);
+    mainGrid->addLayout(vbox, 0, 1, 2, 1, Qt::AlignRight);
 
-    setFixedHeight(height());
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    mainLayout->addLayout(mainGrid);
+    //mainLayout->addStretch();
+    mainLayout->addWidget(_resultsWidget);
+
+    toggleResults();
+    _resultsWidget->hide();
 
     connect(ui.nextButton, SIGNAL(clicked()), SLOT(findNext()));
     connect(ui.previousButton, SIGNAL(clicked()), SLOT(findPrevious()));
-    connect(ui.searchResultsButton, SIGNAL(clicked()), SLOT(showResults()));
+    connect(ui.searchResultsButton, SIGNAL(clicked()), SLOT(toggleResults()));
     connect(ui.searchComboBox, SIGNAL(editTextChanged(const QString &)), SLOT(searchTextChanged()));
+    connect(_resultsWidget, SIGNAL(showItem(ItemInfo *)), SLOT(updateCurrentIndexForItem(ItemInfo *)));
 
     QList<QCheckBox *> checkBoxes = QList<QCheckBox *>() << ui.caseSensitiveCheckBox << ui.exactMatchCheckBox << ui.regexCheckBox << ui.multilineRegExpCheckBox << ui.searchPropsCheckBox;
     foreach (QCheckBox *checkBox, checkBoxes)
         connect(checkBox, SIGNAL(toggled(bool)), SLOT(resetSearchStatus()));
 
     loadSettings();
+    adjustSize();
 }
 
 void FindItemsDialog::activateWindow()
@@ -132,16 +148,43 @@ void FindItemsDialog::findPrevious()
     }
 }
 
-void FindItemsDialog::showResults()
+void FindItemsDialog::toggleResults()
 {
-    if (!_resultsDialog)
+    //if (!_resultsWidget)
+    //{
+    //    _resultsWidget = new FindResultsWidget(this);
+    //    //_resultsWidget->show();
+    //    connect(_resultsWidget, SIGNAL(showItem(ItemInfo *)), SLOT(updateCurrentIndexForItem(ItemInfo *)));
+    //}
+    //_resultsWidget->activateWindow();
+    if (_resultsWidget->isVisible())
+        _lastResultsHeight = _resultsWidget->height();
+    _resultsWidget->setVisible(!_resultsWidget->isVisible());
+
+    if (_resultsWidget->isVisible())
     {
-        _resultsDialog = new FindResultsDialog(&_searchResult, this);
-        _resultsDialog->show();
-        _resultsDialog->selectItem(_searchResult[_currentIndex].first);
-        connect(_resultsDialog, SIGNAL(showItem(ItemInfo *)), SLOT(updateCurrentIndexForItem(ItemInfo *)));
+        ui.searchResultsButton->setText(tr("Hide results"));
+
+        QSize oldSize = size();
+        int newHeight = oldSize.height() + (_lastResultsHeight == -1 ? _resultsWidget->sizeHint().height() : _lastResultsHeight);
+        resize(oldSize.width(), newHeight);
+
+        if (_searchResultsChanged)
+        {
+            _resultsWidget->updateItems(&_searchResult);
+            _resultsWidget->selectItem(_searchResult[_currentIndex].first);
+            _searchResultsChanged = false;
+        }
     }
-    _resultsDialog->activateWindow();
+    else
+    {
+        ui.searchResultsButton->setText(tr("Show results"));
+
+        QSize oldSize = size();
+        int newHeight = oldSize.height() - _lastResultsHeight;
+        setMinimumHeight(newHeight);
+        resize(oldSize.width(), newHeight);
+    }
 }
 
 void FindItemsDialog::updateCurrentIndexForItem(ItemInfo *item)
@@ -234,11 +277,9 @@ void FindItemsDialog::performSearch()
         }
     }
 
-    _searchPerformed = true;
+    _searchPerformed = _searchResultsChanged = true;
     ui.searchResultsButton->setEnabled(!_searchResult.isEmpty());
-
-    if (_resultsDialog)
-        _resultsDialog->updateItems(&_searchResult);
+    _resultsWidget->updateItems(&_searchResult);
 
     // move the search string to the top of the last searches list if it is present there and not on the top
     if (ui.searchComboBox->currentIndex() > 0)
@@ -258,8 +299,9 @@ void FindItemsDialog::nothingFound()
     emit itemFound(0);
     setButtonsDisabled(true);
 
-    if (_resultsDialog)
-        _resultsDialog->updateItems(&_searchResult);
+    _resultsWidget->updateItems(&_searchResult);
+    if (_resultsWidget->isVisible())
+        toggleResults();
 
     ERROR_BOX(tr("No items found"));
 }
@@ -268,7 +310,9 @@ void FindItemsDialog::loadSettings()
 {
     QSettings settings;
     settings.beginGroup("findDialog");
-    restoreGeometry(settings.value("geometry").toByteArray());
+    //restoreGeometry(settings.value("geometry").toByteArray());
+    if (settings.contains("pos"))
+        move(settings.value("pos").toPoint());
     ui.searchComboBox->addItems(settings.value("searchHistory").toStringList());
     ui.caseSensitiveCheckBox->setChecked(settings.value("caseSensitive").toBool());
     ui.exactMatchCheckBox->setChecked(settings.value("exactMatch").toBool());
@@ -287,7 +331,8 @@ void FindItemsDialog::saveSettings()
 
     QSettings settings;
     settings.beginGroup("findDialog");
-    settings.setValue("geometry", saveGeometry());
+    //settings.setValue("geometry", saveGeometry());
+    settings.setValue("pos", pos());
     settings.setValue("searchHistory", history);
     settings.setValue("caseSensitive", ui.caseSensitiveCheckBox->isChecked());
     settings.setValue("exactMatch", ui.exactMatchCheckBox->isChecked());
@@ -296,9 +341,6 @@ void FindItemsDialog::saveSettings()
     settings.setValue("searchProps", ui.searchPropsCheckBox->isChecked());
     settings.setValue("wrapAround", ui.wrapAroundCheckBox->isChecked());
     settings.endGroup();
-
-    if (_resultsDialog)
-        _resultsDialog->saveSettings();
 }
 
 //void FindItemsDialog::show()
@@ -323,8 +365,8 @@ void FindItemsDialog::changeItem(bool changeResultsSelection /*= true*/)
     emit itemFound(item);
     updateWindowTitle();
 
-    if (changeResultsSelection && _resultsDialog)
-        _resultsDialog->selectItem(item);
+    if (changeResultsSelection && _resultsWidget)
+        _resultsWidget->selectItem(item);
 }
 
 void FindItemsDialog::setButtonsDisabled(bool disabled, bool updateResultButton /*= true*/)

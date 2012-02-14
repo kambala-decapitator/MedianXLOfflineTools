@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>347</width>
-    <height>138</height>
+    <height>176</height>
    </rect>
   </property>
   <widget class="QComboBox" name="searchComboBox">
@@ -15,7 +15,7 @@
     <rect>
      <x>20</x>
      <y>20</y>
-     <width>151</width>
+     <width>221</width>
      <height>22</height>
     </rect>
    </property>
@@ -36,7 +36,7 @@
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>80</y>
+     <y>120</y>
      <width>115</width>
      <height>17</height>
     </rect>
@@ -49,7 +49,7 @@
    <property name="geometry">
     <rect>
      <x>21</x>
-     <y>61</y>
+     <y>101</y>
      <width>92</width>
      <height>17</height>
     </rect>
@@ -62,7 +62,7 @@
    <property name="geometry">
     <rect>
      <x>140</x>
-     <y>60</y>
+     <y>100</y>
      <width>82</width>
      <height>17</height>
     </rect>
@@ -75,7 +75,7 @@
    <property name="geometry">
     <rect>
      <x>140</x>
-     <y>100</y>
+     <y>140</y>
      <width>86</width>
      <height>17</height>
     </rect>
@@ -127,15 +127,12 @@
      <verstretch>0</verstretch>
     </sizepolicy>
    </property>
-   <property name="text">
-    <string>Search results</string>
-   </property>
   </widget>
   <widget class="QPushButton" name="closeButton">
    <property name="geometry">
     <rect>
      <x>260</x>
-     <y>100</y>
+     <y>140</y>
      <width>75</width>
      <height>23</height>
     </rect>
@@ -182,7 +179,7 @@
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>100</y>
+     <y>140</y>
      <width>119</width>
      <height>17</height>
     </rect>
@@ -201,13 +198,26 @@
    <property name="geometry">
     <rect>
      <x>140</x>
-     <y>80</y>
+     <y>120</y>
      <width>101</width>
      <height>17</height>
     </rect>
    </property>
    <property name="text">
     <string>Multiline Regex</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="helpButton">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>110</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Help</string>
    </property>
   </widget>
  </widget>

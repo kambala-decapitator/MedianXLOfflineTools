@@ -1,10 +1,11 @@
-#include "findresultsdialog.h"
+#include "findresultswidget.h"
 #include "itemsviewerdialog.h"
 #include "itemparser.h"
 #include "itemdatabase.h"
 
+#include <QGroupBox>
 #include <QTreeWidget>
-#include <QCloseEvent>
+#include <QKeyEvent>
 #include <QVBoxLayout>
 #include <QHBoxLayout>
 #include <QPushButton>
@@ -16,16 +17,13 @@
 #endif
 
 
-FindResultsDialog::FindResultsDialog(QList<SearchResultItem> *items, QWidget *parent) : QDialog(parent), _resultsTreeWidget(new QTreeWidget(this))
+FindResultsWidget::FindResultsWidget(QWidget *parent) : QWidget(parent), _groupBox(new QGroupBox(tr("Results"), this)), _resultsTreeWidget(new QTreeWidget(_groupBox))
 {
-    setAttribute(Qt::WA_DeleteOnClose);
-    //setWindowFlags(windowFlags() | Qt::Drawer);
     setStyleSheet("QTreeWidget { background-color: black; }"
                   "QTreeWidget::item { selection-color: red; }"
                   "QTreeWidget::item:hover { border: 1px solid #bfcde4; }"
                   "QTreeWidget::item:selected { border: 1px solid #567dbc; }"
                  );
-    setWindowTitle(tr("Search results"));
 
     _resultsTreeWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);
     _resultsTreeWidget->setHorizontalScrollMode(QAbstractItemView::ScrollPerPixel);
@@ -33,8 +31,6 @@ FindResultsDialog::FindResultsDialog(QList<SearchResultItem> *items, QWidget *pa
     _resultsTreeWidget->setHeaderHidden(true);
     _resultsTreeWidget->setUniformRowHeights(true);
     _resultsTreeWidget->setColumnCount(1);
-
-    updateItems(items);
 
     QPushButton *expandAllButton = new QPushButton(tr("Expand all"), this), *collapseAllButton = new QPushButton(tr("Collapse all"), this);
     connect(expandAllButton, SIGNAL(clicked()), _resultsTreeWidget, SLOT(expandAll()));
@@ -45,28 +41,20 @@ FindResultsDialog::FindResultsDialog(QList<SearchResultItem> *items, QWidget *pa
     hboxLayout->addStretch();
     hboxLayout->addWidget(collapseAllButton);
 
-    QVBoxLayout *mainLayout = new QVBoxLayout(this);
-    mainLayout->addWidget(_resultsTreeWidget);
-    mainLayout->addLayout(hboxLayout);
+    QVBoxLayout *groupBoxLayout = new QVBoxLayout(_groupBox);
+    groupBoxLayout->addWidget(_resultsTreeWidget);
+    groupBoxLayout->addLayout(hboxLayout);
 
-    restoreGeometry(QSettings().value("findResultsGeometry").toByteArray());
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    mainLayout->addWidget(_groupBox);
+
+    setMinimumHeight(sizeHint().height());
 
     _resultsTreeWidget->installEventFilter(this);
     _resultsTreeWidget->viewport()->installEventFilter(this); // mouse clicks are delivered to viewport rather than to the widget itself
 }
 
-void FindResultsDialog::closeEvent(QCloseEvent *e)
-{
-    saveSettings();
-    e->accept();
-}
-
-void FindResultsDialog::saveSettings()
-{
-    QSettings().setValue("findResultsGeometry", saveGeometry());
-}
-
-void FindResultsDialog::updateItems(QList<SearchResultItem> *newItems)
+void FindResultsWidget::updateItems(QList<SearchResultItem> *newItems)
 {
     _resultsTreeWidget->clear();
     _foundItemsMap.clear();
@@ -109,13 +97,13 @@ void FindResultsDialog::updateItems(QList<SearchResultItem> *newItems)
     _resultsTreeWidget->expandAll();
 }
 
-void FindResultsDialog::selectItem(ItemInfo *item)
+void FindResultsWidget::selectItem(ItemInfo *item)
 {
     int topItemIndex = ItemsViewerDialog::indexFromItemStorage(item->storage);
     _resultsTreeWidget->setCurrentItem(_resultsTreeWidget->topLevelItem(topItemIndex)->child(_foundItemsMap[topItemIndex].indexOf(item)));
 }
 
-bool FindResultsDialog::eventFilter(QObject *obj, QEvent *event)
+bool FindResultsWidget::eventFilter(QObject *obj, QEvent *event)
 {
     bool shouldShowItem = false;
     if (obj == _resultsTreeWidget)
@@ -140,5 +128,5 @@ bool FindResultsDialog::eventFilter(QObject *obj, QEvent *event)
         }
     }
 
-    return QDialog::eventFilter(obj, event);
+    return QWidget::eventFilter(obj, event);
 }
