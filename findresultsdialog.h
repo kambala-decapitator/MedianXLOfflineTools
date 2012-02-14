@@ -6,6 +6,8 @@
 #include "structs.h"
 
 
+typedef QPair<ItemInfo *, QString> SearchResultItem;
+
 class QCloseEvent;
 class QTreeWidget;
 class QEvent;
@@ -15,11 +17,11 @@ class FindResultsDialog : public QDialog
     Q_OBJECT
 
 public:
-    FindResultsDialog(ItemsList *items, QWidget *parent);
+    FindResultsDialog(QList<SearchResultItem> *items, QWidget *parent);
 
     void saveSettings();
 
-    void updateItems(ItemsList *newItems);
+    void updateItems(QList<SearchResultItem> *newItems);
     void selectItem(ItemInfo *item);
 
 protected:

@@ -1,7 +1,8 @@
+- make search dialog on top of everything
+- unite search dialog and results (mac drawer)
 - pearl of wisdom color, shrines color
-- search results selection color (style sheets)
 - move recent files to separate sub-menu
-- insertred unique jewel names (check)
+- inserted unique jewel names (check)
 - move most functionality from splitter to tableview
 - search and fix all TODOs in code
 - add a check for avoid >= 100%

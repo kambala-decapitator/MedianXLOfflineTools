@@ -35,8 +35,8 @@
   <widget class="QCheckBox" name="regexCheckBox">
    <property name="geometry">
     <rect>
-     <x>119</x>
-     <y>84</y>
+     <x>20</x>
+     <y>80</y>
      <width>115</width>
      <height>17</height>
     </rect>
@@ -61,8 +61,8 @@
   <widget class="QCheckBox" name="exactMatchCheckBox">
    <property name="geometry">
     <rect>
-     <x>119</x>
-     <y>61</y>
+     <x>140</x>
+     <y>60</y>
      <width>82</width>
      <height>17</height>
     </rect>
@@ -74,8 +74,8 @@
   <widget class="QCheckBox" name="wrapAroundCheckBox">
    <property name="geometry">
     <rect>
-     <x>21</x>
-     <y>84</y>
+     <x>140</x>
+     <y>100</y>
      <width>86</width>
      <height>17</height>
     </rect>
@@ -181,8 +181,8 @@
   <widget class="QCheckBox" name="searchPropsCheckBox">
    <property name="geometry">
     <rect>
-     <x>120</x>
-     <y>110</y>
+     <x>20</x>
+     <y>100</y>
      <width>119</width>
      <height>17</height>
     </rect>
@@ -192,6 +192,22 @@
    </property>
    <property name="checked">
     <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="multilineRegExpCheckBox">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>80</y>
+     <width>101</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Multiline Regex</string>
    </property>
   </widget>
  </widget>
@@ -211,6 +227,22 @@
     <hint type="destinationlabel">
      <x>348</x>
      <y>116</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>regexCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>multilineRegExpCheckBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>91</x>
+     <y>90</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>143</x>
+     <y>90</y>
     </hint>
    </hints>
   </connection>

@@ -16,7 +16,7 @@
 #endif
 
 
-FindResultsDialog::FindResultsDialog(ItemsList *items, QWidget *parent) : QDialog(parent), _resultsTreeWidget(new QTreeWidget(this))
+FindResultsDialog::FindResultsDialog(QList<SearchResultItem> *items, QWidget *parent) : QDialog(parent), _resultsTreeWidget(new QTreeWidget(this))
 {
     setAttribute(Qt::WA_DeleteOnClose);
     setWindowFlags(windowFlags() | Qt::Tool);
@@ -66,14 +66,17 @@ void FindResultsDialog::saveSettings()
     QSettings().setValue("findResultsGeometry", saveGeometry());
 }
 
-void FindResultsDialog::updateItems(ItemsList *newItems)
+void FindResultsDialog::updateItems(QList<SearchResultItem> *newItems)
 {
     _resultsTreeWidget->clear();
     _foundItemsMap.clear();
 
     for (int i = ItemsViewerDialog::GearIndex; i <= ItemsViewerDialog::LastIndex; ++i)
     {
-        ItemsList locationItems = ItemParser::itemsLocatedAt(Enums::ItemStorage::metaEnum().value(i), newItems, i == ItemsViewerDialog::GearIndex);
+        ItemsList items;
+        foreach (const SearchResultItem &searchItem, *newItems)
+            items += searchItem.first;
+        ItemsList locationItems = ItemParser::itemsLocatedAt(Enums::ItemStorage::metaEnum().value(i), &items, i == ItemsViewerDialog::GearIndex);
         _foundItemsMap[i] = locationItems;
 
         QString topLevelItemText = ItemsViewerDialog::tabNames.at(i);
@@ -84,8 +87,17 @@ void FindResultsDialog::updateItems(ItemsList *newItems)
 
         foreach (ItemInfo *item, locationItems)
         {
+            QString matchedText;
+            foreach (const SearchResultItem &searchItem, *newItems)
+                if (searchItem.first == item)
+                {
+                    matchedText = searchItem.second;
+                    break;
+                }
+
             QTreeWidgetItem *childItem = new QTreeWidgetItem(QStringList(ItemDataBase::completeItemName(item, false, false).replace(htmlLineBreak, " ", Qt::CaseInsensitive).replace(QRegExp("\\s+"), " ")));
-            childItem->setToolTip(0, ItemDataBase::completeItemName(item, false));
+            //childItem->setToolTip(0, ItemDataBase::completeItemName(item, false));
+            childItem->setToolTip(0, matchedText);
             if (i >= ItemsViewerDialog::PersonalStashIndex)
                 childItem->setText(0, QString("[%1] ").arg(tr("p. %1", "page abbreviation").arg(item->plugyPage)) + childItem->text(0));
             childItem->setForeground(0, colors.at(ItemDataBase::colorOfItem(item)));

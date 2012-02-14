@@ -2,14 +2,14 @@
 #define FINDITEMSWIDGET_H
 
 #include "ui_finditemsdialog.h"
-
-#include "structs.h"
+#include "findresultsdialog.h"
 
 #include <QDialog>
 #include <QPointer>
 
 
-class FindResultsDialog;
+//class FindResultsDialog;
+class ItemInfo;
 
 class FindItemsDialog : public QDialog
 {
@@ -40,7 +40,7 @@ private slots:
     void searchTextChanged();
 
 private:
-    ItemsList _searchResult;
+    QList<SearchResultItem> _searchResult; // item and matched string
     bool _searchPerformed;
     int _currentIndex;
     QPointer<FindResultsDialog> _resultsDialog;
