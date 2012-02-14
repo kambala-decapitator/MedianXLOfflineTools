@@ -26,7 +26,7 @@ SOURCES += main.cpp \
     reversebitreader.cpp \
     itemparser.cpp \
     propertiesdisplaymanager.cpp \
-    findresultsdialog.cpp
+    findresultswidget.cpp
 
 HEADERS  += medianxlofflinetools.h \
     resurrectpenaltydialog.h \
@@ -48,7 +48,7 @@ HEADERS  += medianxlofflinetools.h \
     itemparser.h \
     resourcepathmanager.hpp \
     propertiesdisplaymanager.h \
-    findresultsdialog.h
+    findresultswidget.h
 
 FORMS    += medianxlofflinetools.ui \
     resurrectpenaltydialog.ui \
@@ -75,8 +75,8 @@ macx {
     }
 }
 win32 {
-    # RC_FILE = Resources/win/medianxlofflinetools.rc
-    # LIBS += "c:/Program Files/Microsoft SDKs/Windows/v7.0A/Lib/shell32.lib"
+    RC_FILE = Resources/win/medianxlofflinetools.rc
+    #LIBS += "c:/Program Files/Microsoft SDKs/Windows/v7.0A/Lib/shell32.lib"
 }
 
 # QMAKE_CXXFLAGS += -std=c++0x
