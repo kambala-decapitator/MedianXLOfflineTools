@@ -301,13 +301,13 @@ void FindItemsDialog::saveSettings()
         _resultsDialog->saveSettings();
 }
 
-void FindItemsDialog::show()
-{
-    QDialog::show();
-
-    if (ui.searchComboBox->currentIndex() == -1 || ui.searchComboBox->currentText().isEmpty())
-        ui.searchComboBox->setCurrentIndex(0);
-}
+//void FindItemsDialog::show()
+//{
+//    QDialog::show();
+//
+//    if (ui.searchComboBox->currentIndex() == -1 || ui.searchComboBox->currentText().isEmpty())
+//        ui.searchComboBox->setCurrentIndex(0);
+//}
 
 void FindItemsDialog::updateWindowTitle()
 {
@@ -339,4 +339,10 @@ void FindItemsDialog::resetSearchStatus()
 {
     _searchPerformed = false;
     setButtonsDisabled(ui.searchComboBox->currentText().isEmpty(), false);
+}
+
+void FindItemsDialog::showEvent(QShowEvent *e)
+{
+    if (ui.searchComboBox->currentIndex() == -1 || ui.searchComboBox->currentText().isEmpty())
+        ui.searchComboBox->setCurrentIndex(0);
 }

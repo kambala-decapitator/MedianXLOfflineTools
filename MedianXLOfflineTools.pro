@@ -75,7 +75,7 @@ macx {
     }
 }
 win32 {
-    # RC_FILE = Resources/win/icon.rc
+    # RC_FILE = Resources/win/medianxlofflinetools.rc
     # LIBS += "c:/Program Files/Microsoft SDKs/Windows/v7.0A/Lib/shell32.lib"
 }
 

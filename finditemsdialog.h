@@ -10,6 +10,7 @@
 
 //class FindResultsDialog;
 class ItemInfo;
+class QShowEvent;
 
 class FindItemsDialog : public QDialog
 {
@@ -26,7 +27,10 @@ public:
 
 public slots:
     void resetSearchStatus();
-    void show();
+    //void show();
+
+protected:
+    void showEvent(QShowEvent *e);
 
 signals:
     void itemFound(ItemInfo *item);

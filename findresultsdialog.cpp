@@ -19,11 +19,11 @@
 FindResultsDialog::FindResultsDialog(QList<SearchResultItem> *items, QWidget *parent) : QDialog(parent), _resultsTreeWidget(new QTreeWidget(this))
 {
     setAttribute(Qt::WA_DeleteOnClose);
-    setWindowFlags(windowFlags() | Qt::Tool);
+    //setWindowFlags(windowFlags() | Qt::Drawer);
     setStyleSheet("QTreeWidget { background-color: black; }"
                   "QTreeWidget::item { selection-color: red; }"
                   "QTreeWidget::item:hover { border: 1px solid #bfcde4; }"
-                  "QTreeWidget::item:selected { border: 1px solid #567dbc;  }"
+                  "QTreeWidget::item:selected { border: 1px solid #567dbc; }"
                  );
     setWindowTitle(tr("Search results"));
 

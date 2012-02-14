@@ -41,7 +41,7 @@ const int MedianXLOfflineTools::skillsNumber = 30;
 const int MedianXLOfflineTools::difficultiesNumber = 3;
 const int MedianXLOfflineTools::statPointsPerLevel = 5;
 const int MedianXLOfflineTools::skillPointsPerLevel = 1;
-const int MedianXLOfflineTools::maxRecentFiles = 5;
+const int MedianXLOfflineTools::maxRecentFiles = 10;
 
 
 // ctor
