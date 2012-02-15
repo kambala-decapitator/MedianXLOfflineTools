@@ -5,12 +5,12 @@
 - try fixing disenchant
 - compress and maybe encrypt txt data
 -----
-- move recent files to separate sub-menu
 - show experince bar and completion of current level in %
 - completed skill/stat quests
 - export item to bbcode/html
 - link for skillpoint planner
 - generate some bbcode/html report about character and/or plugy stashes contents
+- move recent files to separate sub-menu
 - add a check for avoid >= 100%
 - uncomment 'like duping items'
 - d2s file association

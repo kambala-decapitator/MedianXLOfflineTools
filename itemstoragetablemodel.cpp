@@ -53,14 +53,15 @@ QVariant ItemStorageTableModel::data(const QModelIndex &index, int role) const
                     // Do transparency
                     transparent.fill(Qt::transparent);
                     QPainter p(&transparent);
-                    p.setCompositionMode(QPainter::CompositionMode_Source);
+                    //p.setCompositionMode(QPainter::CompositionMode_Source);
+                    p.setOpacity(0.5);
                     p.drawPixmap(0, 0, pixmap);
-                    p.setCompositionMode(QPainter::CompositionMode_DestinationIn);
+                    //p.setCompositionMode(QPainter::CompositionMode_DestinationIn);
                     // Set transparency level to 127 (possible values are 0-255)
                     // The alpha channel of a color specifies the transparency effect, 
                     // 0 represents a fully transparent color, while 255 represents 
                     // a fully opaque color.
-                    p.fillRect(transparent.rect(), QColor(0, 0, 0, 127));
+                    //p.fillRect(transparent.rect(), QColor(0, 0, 0, 127));
                     p.end();
 
                     // Set original picture's reference to new transparent one
