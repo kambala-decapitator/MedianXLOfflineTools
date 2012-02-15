@@ -45,34 +45,20 @@ QVariant ItemStorageTableModel::data(const QModelIndex &index, int role) const
                 QPixmap pixmap(imagePath);
                 if (item->isEthereal)
                 {
-                    // apply transparency: http://www.developer.nokia.com/Community/Wiki/CS001515_-_Transparent_QPixmap_picture
-
-                    // Create new picture for transparent
+                    // apply transparency: http://www.developer.nokia.com/Community/Wiki/CS001515_-_Transparent_QPixmap_picture (modified)
                     QPixmap transparent(pixmap.size());
-
-                    // Do transparency
                     transparent.fill(Qt::transparent);
                     QPainter p(&transparent);
-                    //p.setCompositionMode(QPainter::CompositionMode_Source);
                     p.setOpacity(0.5);
                     p.drawPixmap(0, 0, pixmap);
-                    //p.setCompositionMode(QPainter::CompositionMode_DestinationIn);
-                    // Set transparency level to 127 (possible values are 0-255)
-                    // The alpha channel of a color specifies the transparency effect, 
-                    // 0 represents a fully transparent color, while 255 represents 
-                    // a fully opaque color.
-                    //p.fillRect(transparent.rect(), QColor(0, 0, 0, 127));
                     p.end();
 
-                    // Set original picture's reference to new transparent one
                     pixmap = transparent;
                 }
                 return pixmap;
             }
         case Qt::ToolTipRole:
             return ItemDataBase::completeItemName(item, false);
-        //case Qt::StatusTipRole:
-        //    return ItemDataBase::completeItemName(item, false).replace("\n", " ");
         case Qt::ForegroundRole:
             return Qt::white;
         }
