@@ -1,14 +1,25 @@
-- make search dialog on top of everything
-- unite search dialog and results (mac drawer)
-- pearl of wisdom color, shrines color
+- reset search if new character loaded or failed to load
+- modify exact match somehow
+- write help for search
+- pearl of wisdom color, shrines color (use rendering from QTblEditor)
+- try fixing disenchant
+- compress and maybe encrypt txt data
+-----
 - move recent files to separate sub-menu
-- inserted unique jewel names (check)
-- move most functionality from splitter to tableview
-- search and fix all TODOs in code
+- show experince bar and completion of current level in %
+- completed skill/stat quests
+- export item to bbcode/html
+- link for skillpoint planner
+- generate some bbcode/html report about character and/or plugy stashes contents
 - add a check for avoid >= 100%
-- remove QDebug
-- file association
-- copy files to destdir:
+- uncomment 'like duping items'
+- d2s file association
+- maybe win7 taskbar and mac dock menu support to open recent files
+-----
+- move most functionality from splitter to tableview
+- search and fix all 'TODO:' in code
+- remove all qDebug()
+- copy files to destdir from .pro:
 1.
 linux-g++{
     #...

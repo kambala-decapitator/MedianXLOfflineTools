@@ -20,6 +20,7 @@
 #include <QFile>
 #include <QDataStream>
 #include <QTranslator>
+#include <QTimer>
 
 #ifndef QT_NO_DEBUG
 #include <QDebug>
@@ -28,7 +29,7 @@
 #include <cmath>
 
 
-static const QString lastSavePathKey("lastSavePath"), releaseDate("17.02.2012"), backupExtension("bak");
+static const QString lastSavePathKey("lastSavePath"), releaseDate("17.02.2012"), backupExtension("bak"), readonlyCss("background-color: rgb(227, 227, 227)");
 
 //#define MAKE_HC
 
@@ -581,10 +582,6 @@ void MedianXLOfflineTools::showFoundItem(ItemInfo *item)
 
 void MedianXLOfflineTools::showItems(bool activate /*= true*/)
 {
-    ItemDataBase::clvl = &_editableCharInfo.basicInfo.level;
-    ItemDataBase::charClass = &_editableCharInfo.basicInfo.classCode;
-    ItemDataBase::charSkills = &_editableCharInfo.basicInfo.skills;
-
     if (_itemsDialog)
     {
         if (activate)
@@ -594,6 +591,12 @@ void MedianXLOfflineTools::showItems(bool activate /*= true*/)
     {
         _itemsDialog = new ItemsViewerDialog(this);
         _itemsDialog->show();
+
+        if (!activate)
+        {
+            _findItemsDialog->activateWindow();
+            _findItemsDialog->raise();
+        }
     }
 }
 
@@ -765,10 +768,10 @@ void MedianXLOfflineTools::createLayout()
     foreach (QWidget *w, widgetsToFixSize)
         w->setFixedSize(w->size());
 
-    QList<QLineEdit *> readonlyLineEdits = QList<QLineEdit *>() << ui.freeSkillPointsLineEdit
-        << ui.freeStatPointsLineEdit << ui.signetsOfLearningEatenLineEdit << ui.signetsOfSkillEatenLineEdit << ui.inventoryGoldLineEdit << ui.stashGoldLineEdit << ui.mercLevelLineEdit;
+    QList<QLineEdit *> readonlyLineEdits = QList<QLineEdit *>() << ui.freeSkillPointsLineEdit << ui.freeStatPointsLineEdit << ui.signetsOfLearningEatenLineEdit << ui.signetsOfSkillEatenLineEdit
+                                                                << ui.inventoryGoldLineEdit << ui.stashGoldLineEdit << ui.mercLevelLineEdit << ui.classLineEdit;
     foreach (QLineEdit *lineEdit, readonlyLineEdits)
-        lineEdit->setStyleSheet("background-color: rgb(227, 227, 227);");
+        lineEdit->setStyleSheet(readonlyCss);
 
     createCharacterGroupBoxLayout();
     createMercGroupBoxLayout();
@@ -1034,6 +1037,10 @@ bool MedianXLOfflineTools::loadFile(const QString &charPath)
         addToRecentFiles(charPath);
 
         ItemDataBase::currentCharacterItems = &_editableCharInfo.items.character;
+        ItemDataBase::clvl = &_editableCharInfo.basicInfo.level;
+        ItemDataBase::charClass = &_editableCharInfo.basicInfo.classCode;
+        ItemDataBase::charSkills = &_editableCharInfo.basicInfo.skills;
+
         if (_itemsDialog)
             _itemsDialog->updateItems();
         if (_itemsDialog || ui.actionOpenItemsAutomatically->isChecked())
@@ -1722,7 +1729,7 @@ void MedianXLOfflineTools::updateCharacterTitle(bool isHardcore)
     if (_editableCharInfo.basicInfo.isHardcore && _editableCharInfo.basicInfo.hadDied)
         newTitle += QString(" (%1)").arg(tr("DEAD", "HC character is dead"));
     ui.titleLineEdit->setText(newTitle);
-    ui.titleLineEdit->setStyleSheet(QString("color: %1").arg(isHardcore ? "red" : "black"));
+    ui.titleLineEdit->setStyleSheet(QString("%1; color: %2;").arg(readonlyCss, isHardcore ? "red" : "black"));
 }
 
 void MedianXLOfflineTools::setStats()

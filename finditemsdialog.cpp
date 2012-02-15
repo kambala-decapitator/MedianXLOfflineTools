@@ -6,6 +6,7 @@
 #include <QGridLayout>
 #include <QVBoxLayout>
 #include <QLineEdit>
+#include <QDesktopWidget>
 
 #include <QRegExp>
 #include <QSettings>
@@ -52,7 +53,6 @@ FindItemsDialog::FindItemsDialog(QWidget *parent) : QDialog(parent), _searchPerf
 
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->addLayout(mainGrid);
-    //mainLayout->addStretch();
     mainLayout->addWidget(_resultsWidget);
 
     toggleResults();
@@ -70,13 +70,14 @@ FindItemsDialog::FindItemsDialog(QWidget *parent) : QDialog(parent), _searchPerf
 
     loadSettings();
     adjustSize();
+    setMaximumHeight(qApp->desktop()->availableGeometry().height() - 50);
 }
 
-void FindItemsDialog::activateWindow()
-{
-    QDialog::activateWindow();
-    ui.searchComboBox->lineEdit()->selectAll();
-}
+//void FindItemsDialog::activateWindow()
+//{
+//    QDialog::activateWindow();
+//    ui.searchComboBox->lineEdit()->selectAll();
+//}
 
 void FindItemsDialog::findNext()
 {
@@ -167,6 +168,7 @@ void FindItemsDialog::toggleResults()
 
         QSize oldSize = size();
         int newHeight = oldSize.height() + (_lastResultsHeight == -1 ? _resultsWidget->sizeHint().height() : _lastResultsHeight);
+        setMinimumHeight(minimumHeight() + _resultsWidget->minimumHeight());
         resize(oldSize.width(), newHeight);
 
         if (_searchResultsChanged)
@@ -387,4 +389,5 @@ void FindItemsDialog::showEvent(QShowEvent *e)
 {
     if (ui.searchComboBox->currentIndex() == -1 || ui.searchComboBox->currentText().isEmpty())
         ui.searchComboBox->setCurrentIndex(0);
+    ui.searchComboBox->lineEdit()->selectAll();
 }

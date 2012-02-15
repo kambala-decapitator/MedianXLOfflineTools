@@ -19,7 +19,7 @@ public:
 
     FindItemsDialog(QWidget *parent = 0);
 
-    void activateWindow();
+    //void activateWindow();
 
     void saveSettings();
 
