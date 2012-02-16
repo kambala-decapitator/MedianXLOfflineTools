@@ -20,18 +20,8 @@ QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item)
     PropertiesMap::iterator iter = allProps.begin();
     while (iter != allProps.end())
     {
-        if (ItemDataBase::MysticOrbs()->contains(iter.key()))
-        {
-            if (isClassCharm)
-            {
-                addChallengeNamesToClassCharm(iter);
-
-                //++iter;
-            }
-            //else
-            //    iter = allProps.erase(iter);
-        }
-        //else
+        if (ItemDataBase::MysticOrbs()->contains(iter.key()) && isClassCharm)
+            addChallengeNamesToClassCharm(iter);
         ++iter;
     }
 
@@ -168,19 +158,20 @@ void PropertiesDisplayManager::addProperties(PropertiesMap *mutableProps, const 
 {
     for (PropertiesMultiMap::const_iterator iter = propsToAdd.constBegin(); iter != propsToAdd.constEnd(); ++iter)
     {
+        int propId = iter.key();
         bool shouldNotAddNewProp;
-        if (shouldNotAddNewProp = mutableProps->contains(iter.key()))
+        if (shouldNotAddNewProp = mutableProps->contains(propId))
         {
-            ItemProperty &prop = (*mutableProps)[iter.key()];
+            ItemProperty &prop = (*mutableProps)[propId];
             if (shouldNotAddNewProp = (prop.param == iter.value().param))
             {
                 prop.value += iter.value().value;
-                if (iter.key() == Enums::ItemProperties::EnhancedDamage)
+                if (propId == Enums::ItemProperties::EnhancedDamage)
                     prop.displayString = ItemParser::enhancedDamageFormat.arg(prop.value);
             }
         }
         if (!shouldNotAddNewProp)
-            mutableProps->insertMulti(iter.key(), iter.value());
+            mutableProps->insertMulti(propId, iter.value());
     }
 }
 
@@ -301,7 +292,7 @@ QString PropertiesDisplayManager::propertyDisplay(const ItemProperty &propDispla
         result = QString("%1% %2").arg(value * -1).arg(description); // 1 or 2
         break;
     case 23: // reanimate
-        result = QString("%1% %2 %3").arg(value).arg(description).arg(ItemDataBase::Monsters()->value(propDisplay.param));
+        result = QString("%1% %2 %3").arg(value).arg(description).arg(htmlStringFromDiabloColorString(ItemDataBase::Monsters()->value(propDisplay.param), Blue));
         break;
     // 9, 10, 14, 16-19 - absent
     // everything else is constructed in ItemParser (mostly in parseItemProperties()), i.e. has displayString
@@ -318,10 +309,10 @@ PropertiesMap PropertiesDisplayManager::genericSocketableProperties(ItemInfo *so
     const QList<SocketableItemInfo::Properties> &socketableProps = socketableItemInfo.properties[static_cast<SocketableItemInfo::PropertyType>(socketableType + 1)];
     foreach (const SocketableItemInfo::Properties &prop, socketableProps)
     {
+        if (prop.code != -1)
+            props[prop.code] = ItemProperty(prop.value, prop.param);
         if (prop.code == Enums::ItemProperties::EnhancedDamage)
             props[prop.code].displayString = ItemParser::enhancedDamageFormat.arg(prop.value);
-        else if (prop.code != -1)
-            props[prop.code] = ItemProperty(prop.value, prop.param);
     }
     return props;
 }

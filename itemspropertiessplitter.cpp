@@ -226,6 +226,7 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
         connect(actionBbCode, SIGNAL(triggered()), SLOT(exportBbCode()));
         QMenu *menuExport = new QMenu(tr("Export as"), _itemsView);
         menuExport->addActions(QList<QAction *>() << actionHtml << actionBbCode);
+        menuExport->menuAction()->setDisabled(true); // TODO: remove
         actions << menuExport->menuAction();
 
         QAction *separator = new QAction(_itemsView);

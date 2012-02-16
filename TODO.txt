@@ -1,7 +1,6 @@
-- reset search if new character loaded or failed to load
+- fix additional colors of properties and colors + multiline
 - modify exact match somehow
 - write help for search
-- pearl of wisdom color, shrines color (use rendering from QTblEditor)
 - try fixing disenchant
 - compress and maybe encrypt txt data
 -----
@@ -55,11 +54,15 @@ write in changelog:
 - correct text color on the class charm :P
 
 v0.3:
+- sort stashes
 - affix rlvl support
 - drag & drop
 - merc items
 - create plugy stashes
 - nice display of property 'Adds x-y ... damage'
-- show UMO properties and color
+- unsocket items
+- show UMO properties
 - try unMO UMOs
 - calculate correct str/dex bonus based on character stats
+- display actual stat values
+- fix MO display (found are displayed as 'mystic orb', bought ones - their property)

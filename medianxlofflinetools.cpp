@@ -653,15 +653,19 @@ void MedianXLOfflineTools::aboutApp()
     aboutBox.setIconPixmap(windowIcon().pixmap(64));
     aboutBox.setTextFormat(Qt::RichText);
     QString appFullName = qApp->applicationName() + " " + qApp->applicationVersion();
-    aboutBox.setText(QString("<b>%1</b><br>").arg(appFullName) + tr("Released: %1").arg(releaseDate));
+    aboutBox.setText(QString("<b>%1</b>%2").arg(appFullName, htmlLineBreak) + tr("Released: %1").arg(releaseDate));
     QString email("decapitator@ukr.net");
-    aboutBox.setInformativeText(tr("<i>Author:</i> Filipenkov Andrey (<b>kambala</b>)") +
-                                QString("<br><i>ICQ:</i> 287764961<br><i>E-mail:</i> <a href=\"mailto:%1?subject=%2\">%1</a><br><br>")
-                                .arg(email, appFullName) + tr("<a href=\"http://modsbylaz.14.forumer.com/viewtopic.php?t=23147\">Official Median XL Forum thread</a>"
-                                                              "<br><a href=\"http://forum.worldofplayers.ru/showthread.php?t=34489\">Official Russian Median XL Forum thread</a>") + "<br><br>" +
-                                tr("<b>Credits:</b><ul><li><a href=\"http://modsbylaz.hugelaser.com/\">BrotherLaz</a> for this awesome mod</li>"
-                                   "<li><a href=\"http://modsbylaz.14.forumer.com/profile.php?mode=viewprofile&u=33805\">grig</a> for the Perl source of "
-                                   "<a href=\"http://grig.vlexofree.com/\">Median XL Online Tools</a> and tips</li></ul>"));
+    aboutBox.setInformativeText(
+        tr("<i>Author:</i> Filipenkov Andrey (<b>kambala</b>)") + QString("%1<i>ICQ:</i> 287764961%1<i>E-mail:</i> <a href=\"mailto:%2?subject=%3\">%2</a>%1%1").arg(htmlLineBreak, email, appFullName) +
+        tr("<a href=\"http://modsbylaz.14.forumer.com/viewtopic.php?t=23147\">Official Median XL Forum thread</a><br>"
+           "<a href=\"http://forum.worldofplayers.ru/showthread.php?t=34489\">Official Russian Median XL Forum thread</a>") + htmlLineBreak + htmlLineBreak +
+        tr("<b>Credits:</b>"
+           "<ul>"
+             "<li><a href=\"http://modsbylaz.hugelaser.com/\">BrotherLaz</a> for this awesome mod</li>"
+             "<li><a href=\"http://modsbylaz.14.forumer.com/profile.php?mode=viewprofile&u=33805\">grig</a> for the Perl source of "
+                 "<a href=\"http://grig.vlexofree.com/\">Median XL Online Tools</a> and tips</li>"
+           "</ul>")
+    );
     aboutBox.exec();
 }
 
@@ -1030,7 +1034,8 @@ bool MedianXLOfflineTools::loadFile(const QString &charPath)
     if (charPath.isEmpty())
         return false;
 
-    if (processSaveFile(charPath))
+    bool result;
+    if (result = processSaveFile(charPath))
     {
         _charPath = charPath;
         updateUI();
@@ -1049,8 +1054,6 @@ bool MedianXLOfflineTools::loadFile(const QString &charPath)
         QSettings settings;
         settings.beginGroup("recentItems");
         settings.setValue(lastSavePathKey, QFileInfo(charPath).canonicalPath());
-
-        return true;
     }
     else
     {
@@ -1059,9 +1062,12 @@ bool MedianXLOfflineTools::loadFile(const QString &charPath)
 
         clearUI();
         setWindowTitle(qApp->applicationName());
-
-        return false;
     }
+
+    if (_findItemsDialog)
+        _findItemsDialog->clearResults();
+
+    return result;
 }
 
 bool MedianXLOfflineTools::processSaveFile(const QString &charPath)

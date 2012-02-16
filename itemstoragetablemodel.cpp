@@ -45,7 +45,7 @@ QVariant ItemStorageTableModel::data(const QModelIndex &index, int role) const
                 QPixmap pixmap(imagePath);
                 if (item->isEthereal)
                 {
-                    // apply transparency: http://www.developer.nokia.com/Community/Wiki/CS001515_-_Transparent_QPixmap_picture (modified)
+                    // apply transparency: http://www.developer.nokia.com/Community/Wiki/CS001515_-_Transparent_QPixmap_picture (modified because it doesn't work on Mac OS X)
                     QPixmap transparent(pixmap.size());
                     transparent.fill(Qt::transparent);
                     QPainter p(&transparent);

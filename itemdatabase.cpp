@@ -397,8 +397,9 @@ QString ItemDataBase::completeItemName(ItemInfo *item, bool shouldUseColor, bool
     {
         if (shouldUseColor && item->isRW)
             itemName = htmlStringFromDiabloColorString(itemName, DarkGrey);
+        itemName.prepend(specialName + htmlLineBreak);
         // dirty hack for 'Eternal' RW
-        itemName.prepend(QString("%1<br>").arg(specialName.contains("2005-") ? specialName.replace("\\n", htmlLineBreak) : specialName));
+        //itemName.prepend(QString("%1<br>").arg(specialName.contains("2005-") ? specialName.replace("\\n", htmlLineBreak) : specialName));
     }
     if (itemName.contains("\\n"))
     {
@@ -414,11 +415,11 @@ QString ItemDataBase::completeItemName(ItemInfo *item, bool shouldUseColor, bool
                 list[1] = rx.cap(1);
                 itemName = QString("%1<br>%2").arg(list.at(1), list.at(0));
             }
-            else // multiline names
-            {
-                std::reverse(list.begin(), list.end());
-                itemName = list.join(htmlLineBreak);
-            }
+            //else // multiline names
+            //{
+            //    std::reverse(list.begin(), list.end());
+            //    itemName = list.join(htmlLineBreak);
+            //}
         }
     }
     if (shouldUseColor)
@@ -458,12 +459,12 @@ QString ItemDataBase::completeItemName(ItemInfo *item, bool shouldUseColor, bool
                 break;
             }
             if (!quality.isEmpty()) // skip non-magic types
-                itemName.prepend(QString("[%1]<br>").arg(quality));
+                itemName.prepend(QString("[%1]%2").arg(quality, htmlLineBreak));
             else if (item->isRW)
-                itemName.prepend(QString("[%1]<br>").arg(tr("runeword")));
+                itemName.prepend(QString("[%1]%2").arg(tr("runeword"), htmlLineBreak));
 
             if (item->isEthereal)
-                itemName += QString("<br>[%1]").arg(tr("ethereal"));
+                itemName += QString("%1[%2]").arg(htmlLineBreak, tr("ethereal"));
         }
     }
     return itemName;

@@ -84,7 +84,6 @@ void FindResultsWidget::updateItems(QList<SearchResultItem> *newItems)
                 }
 
             QTreeWidgetItem *childItem = new QTreeWidgetItem(QStringList(ItemDataBase::completeItemName(item, false, false).replace(htmlLineBreak, " ", Qt::CaseInsensitive).replace(QRegExp("\\s+"), " ")));
-            //childItem->setToolTip(0, ItemDataBase::completeItemName(item, false));
             childItem->setToolTip(0, matchedText);
             if (i >= ItemsViewerDialog::PersonalStashIndex)
                 childItem->setText(0, QString("[%1] ").arg(tr("p. %1", "page abbreviation").arg(item->plugyPage)) + childItem->text(0));

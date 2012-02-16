@@ -39,14 +39,6 @@ FindItemsDialog::FindItemsDialog(QWidget *parent) : QDialog(parent), _searchPerf
     vbox->addWidget(ui.closeButton);
 
     QGridLayout *mainGrid = new QGridLayout;
-    //mainGrid->addWidget(ui.searchComboBox, 0, 0, 1, 2, Qt::AlignTop);
-    //mainGrid->addWidget(ui.caseSensitiveCheckBox, 1, 0);
-    //mainGrid->addWidget(ui.exactMatchCheckBox, 1, 1);
-    //mainGrid->addWidget(ui.regexCheckBox, 2, 0);
-    //mainGrid->addWidget(ui.multilineRegExpCheckBox, 2, 1);
-    //mainGrid->addWidget(ui.searchPropsCheckBox, 3, 0);
-    //mainGrid->addWidget(ui.wrapAroundCheckBox, 3, 1);
-    //mainGrid->addLayout(vbox, 0, 2, 4, 1, Qt::AlignRight);
     mainGrid->addWidget(ui.searchComboBox, 0, 0, Qt::AlignTop);
     mainGrid->addLayout(checkboxGrid, 1, 0);
     mainGrid->addLayout(vbox, 0, 1, 2, 1, Qt::AlignRight);
@@ -57,6 +49,9 @@ FindItemsDialog::FindItemsDialog(QWidget *parent) : QDialog(parent), _searchPerf
 
     toggleResults();
     _resultsWidget->hide();
+    
+    ui.nextButton->setToolTip(QKeySequence(QKeySequence::FindNext).toString(QKeySequence::NativeText));
+    ui.previousButton->setToolTip(QKeySequence(QKeySequence::FindPrevious).toString(QKeySequence::NativeText));
 
     connect(ui.nextButton, SIGNAL(clicked()), SLOT(findNext()));
     connect(ui.previousButton, SIGNAL(clicked()), SLOT(findPrevious()));
@@ -73,11 +68,12 @@ FindItemsDialog::FindItemsDialog(QWidget *parent) : QDialog(parent), _searchPerf
     setMaximumHeight(qApp->desktop()->availableGeometry().height() - 50);
 }
 
-//void FindItemsDialog::activateWindow()
-//{
-//    QDialog::activateWindow();
-//    ui.searchComboBox->lineEdit()->selectAll();
-//}
+void FindItemsDialog::clearResults()
+{
+    _searchResult.clear();
+    searchTextChanged(); // text doesn't actually change here, I just don't want to create new method that only calls this one
+    nothingFound(false);
+}
 
 void FindItemsDialog::findNext()
 {
@@ -124,7 +120,7 @@ void FindItemsDialog::findPrevious()
             {
                 if (ui.wrapAroundCheckBox->isChecked())
                 {
-                    _currentIndex = _searchResult.size() - 1;
+                    _currentIndex = _searchResult.size();
                     qApp->beep();
                 }
                 else
@@ -151,13 +147,6 @@ void FindItemsDialog::findPrevious()
 
 void FindItemsDialog::toggleResults()
 {
-    //if (!_resultsWidget)
-    //{
-    //    _resultsWidget = new FindResultsWidget(this);
-    //    //_resultsWidget->show();
-    //    connect(_resultsWidget, SIGNAL(showItem(ItemInfo *)), SLOT(updateCurrentIndexForItem(ItemInfo *)));
-    //}
-    //_resultsWidget->activateWindow();
     if (_resultsWidget->isVisible())
         _lastResultsHeight = _resultsWidget->height();
     _resultsWidget->setVisible(!_resultsWidget->isVisible());
@@ -198,7 +187,6 @@ void FindItemsDialog::updateCurrentIndexForItem(ItemInfo *item)
             break;
         ++_currentIndex;
     }
-    //_currentIndex = _searchResult.indexOf(item);
     changeItem(false);
 }
 
@@ -296,23 +284,25 @@ void FindItemsDialog::performSearch()
     }
 }
 
-void FindItemsDialog::nothingFound()
+void FindItemsDialog::nothingFound(bool wasSearchDone /*= true*/)
 {
     emit itemFound(0);
-    setButtonsDisabled(true);
+
+    if (wasSearchDone)
+        setButtonsDisabled(true);
 
     _resultsWidget->updateItems(&_searchResult);
     if (_resultsWidget->isVisible())
         toggleResults();
 
-    ERROR_BOX(tr("No items found"));
+    if (wasSearchDone)
+        ERROR_BOX(tr("No items found"));
 }
 
 void FindItemsDialog::loadSettings()
 {
     QSettings settings;
     settings.beginGroup("findDialog");
-    //restoreGeometry(settings.value("geometry").toByteArray());
     if (settings.contains("pos"))
         move(settings.value("pos").toPoint());
     ui.searchComboBox->addItems(settings.value("searchHistory").toStringList());
@@ -333,7 +323,6 @@ void FindItemsDialog::saveSettings()
 
     QSettings settings;
     settings.beginGroup("findDialog");
-    //settings.setValue("geometry", saveGeometry());
     settings.setValue("pos", pos());
     settings.setValue("searchHistory", history);
     settings.setValue("caseSensitive", ui.caseSensitiveCheckBox->isChecked());
@@ -344,14 +333,6 @@ void FindItemsDialog::saveSettings()
     settings.setValue("wrapAround", ui.wrapAroundCheckBox->isChecked());
     settings.endGroup();
 }
-
-//void FindItemsDialog::show()
-//{
-//    QDialog::show();
-//
-//    if (ui.searchComboBox->currentIndex() == -1 || ui.searchComboBox->currentText().isEmpty())
-//        ui.searchComboBox->setCurrentIndex(0);
-//}
 
 void FindItemsDialog::updateWindowTitle()
 {

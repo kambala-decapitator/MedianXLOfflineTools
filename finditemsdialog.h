@@ -19,13 +19,11 @@ public:
 
     FindItemsDialog(QWidget *parent = 0);
 
-    //void activateWindow();
-
     void saveSettings();
+    void clearResults();
 
 public slots:
     void resetSearchStatus();
-    //void show();
 
 protected:
     void showEvent(QShowEvent *e);
@@ -49,7 +47,7 @@ private:
     int _lastResultsHeight;
 
     void performSearch();
-    void nothingFound();
+    void nothingFound(bool wasSearchDone = true);
 
     void loadSettings();
     void updateWindowTitle();

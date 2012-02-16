@@ -183,7 +183,7 @@ void PropertiesViewerWidget::displayItemProperties(ItemInfo *item)
     if (allProps.size())
     {
         displayProperties(ui.allTextEdit, allProps/*, false*/); // it's actually empty here
-        itemDescription += htmlLineBreak + ui.allTextEdit->toPlainText();
+        itemDescription += htmlLineBreak + htmlStringFromDiabloColorString(ui.allTextEdit->toPlainText(), Blue);
     }
     else if (ItemDataBase::isGenericSocketable(item))
     {
@@ -194,7 +194,7 @@ void PropertiesViewerWidget::displayItemProperties(ItemInfo *item)
             PropertiesMap props = PropertiesDisplayManager::genericSocketableProperties(item, socketableType - 1);
             displayProperties(ui.allTextEdit, props);
             QString propText = ui.allTextEdit->toPlainText().replace("\n", ", ");
-            propStrings += htmlLineBreak + QString("%1: %2").arg(htmlStringFromDiabloColorString(gearNames.at(socketableType)), propText);
+            propStrings += htmlLineBreak + QString("%1: %2").arg(gearNames.at(socketableType), htmlStringFromDiabloColorString(propText, Blue));
         }
         // weapon properties should be first
         propStrings.move(propStrings.size() - 1, 0);
@@ -214,7 +214,7 @@ void PropertiesViewerWidget::displayItemProperties(ItemInfo *item)
     if (item->quality == Enums::ItemQuality::Set)
     {
         const QString &setName = ItemDataBase::Sets()->value(item->setOrUniqueId).setName;
-        itemDescription += "<br><br>" + htmlStringFromDiabloColorString(setName, Gold);
+        itemDescription += htmlLineBreak + htmlLineBreak + htmlStringFromDiabloColorString(setName, Gold);
 
         foreach (const QString &setItemName, ItemDataBase::completeSetForName(setName))
         {
@@ -227,7 +227,7 @@ void PropertiesViewerWidget::displayItemProperties(ItemInfo *item)
                     break;
                 }
             }
-            itemDescription += QString("<br>%1").arg(htmlStringFromDiabloColorString(setItemName, found ? Green : Red));
+            itemDescription += htmlLineBreak + htmlStringFromDiabloColorString(setItemName, found ? Green : Red);
         }
     }
 
@@ -250,7 +250,7 @@ void PropertiesViewerWidget::displayProperties(QTextEdit *textEdit, const Proper
     while (iter != propsDisplayMap.constBegin())
     {
         --iter;
-        textEdit->append(htmlStringFromDiabloColorString(iter.value().displayString, Blue));
+        textEdit->append(htmlStringFromDiabloColorString(iter.value().displayString/*, Blue*/));
     }
 }
 
