@@ -174,7 +174,11 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
 
             PropertiesMultiMap::iterator blessPropIter = item->props.find(Enums::ItemProperties::TrophyOrBless);
             if (blessPropIter != item->props.end())
-                blessPropIter.value().displayString = QString("[%1]").arg(ItemDataBase::isUberCharm(item) ? tr("Trophy'd") : tr("Blessed"));
+            {
+                QString newDesc = ItemDataBase::isUberCharm(item) ? (ItemDataBase::isClassCharm(item) ? tr("Veterans") : tr("Trophy'd"))
+                                                                  : tr("Blessed");
+                blessPropIter.value().displayString = QString("[%1]").arg(newDesc);
+            }
 
             //for (int i = 0; i < 5; ++i)
             //    if (hasSetLists[i])

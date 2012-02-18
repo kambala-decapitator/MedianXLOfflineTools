@@ -23,7 +23,7 @@ static const QString iconPathFormat(":/PlugyArrows/icons/plugy/%1.png");
 ItemsPropertiesSplitter::ItemsPropertiesSplitter(ItemStorageTableView *itemsView, ItemStorageTableModel *itemsModel, bool shouldCreateNavigation, QWidget *parent)
     : QSplitter(Qt::Horizontal, parent), _itemsView(itemsView), _itemsModel(itemsModel)
 {
-    setHandleWidth(1);
+//    setHandleWidth(1);
 
     _itemsView->setContextMenuPolicy(Qt::CustomContextMenu);
     _itemsView->setEditTriggers(QAbstractItemView::NoEditTriggers);
@@ -32,7 +32,7 @@ ItemsPropertiesSplitter::ItemsPropertiesSplitter(ItemStorageTableView *itemsView
     _itemsView->setSelectionMode(QAbstractItemView::SingleSelection);
     //_itemsView->setStyleSheet("QAbstractItemView::item:selected:active { background:black } QAbstractItemView::item:hover { color:green; background-color: yellow }");
     _itemsView->setStyleSheet("QAbstractItemView::item:selected:active { background:black }");
-    _itemsView->setGridStyle(Qt::DashLine);
+    _itemsView->setGridStyle(Qt::SolidLine);
     _itemsView->setCornerButtonEnabled(false);
     _itemsView->horizontalHeader()->hide();
     _itemsView->verticalHeader()->hide();
@@ -68,6 +68,9 @@ ItemsPropertiesSplitter::ItemsPropertiesSplitter(ItemStorageTableView *itemsView
         //hlayout->addStretch();
         hlayout->addWidget(_rightButton);
         hlayout->addWidget(_right10Button);
+        // glue everything together (used mainly for Mac OS X)
+        hlayout->setSpacing(0);
+        hlayout->setMargin(0);
 
         QWidget *w = new QWidget(this);
         QVBoxLayout *vlayout = new QVBoxLayout(w);
@@ -159,6 +162,13 @@ void ItemsPropertiesSplitter::showItem(ItemInfo *item)
     _itemsView->setCurrentIndex(_itemsModel->index(item->row, item->column));
 }
 
+void ItemsPropertiesSplitter::showFirstItem()
+{
+    // sometimes item is selected, but there's no visual selection
+    if (_itemsView->selectionModel()->selectedIndexes().isEmpty() || !selectedItem(false))
+        showItem(_itemsModel->firstItem());
+}
+
 void ItemsPropertiesSplitter::updateItems(const ItemsList &newItems)
 {
     _propertiesWidget->clear();
@@ -171,6 +181,9 @@ void ItemsPropertiesSplitter::updateItems(const ItemsList &newItems)
         if (itemBase.height > 1 || itemBase.width > 1) // to prevent warnings to the console
             _itemsView->setSpan(item->row, item->column, itemBase.height, itemBase.width);
     }
+
+    if (!newItems.isEmpty())
+        showFirstItem();
 }
 
 void ItemsPropertiesSplitter::updateItemsForCurrentPage()

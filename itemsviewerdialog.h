@@ -47,10 +47,14 @@ public:
 protected:
     void closeEvent(QCloseEvent *event);
 
+private slots:
+    void tabChanged(int newIndex);
+
 private:
     QTabWidget *_tabWidget;
 
     void loadSettings();
+    ItemsPropertiesSplitter *splitterAtIndex(int tabIndex);
 };
 
 #endif // ITEMSVIEWERWIDGET_H

@@ -72,7 +72,7 @@ MedianXLOfflineTools::MedianXLOfflineTools(QWidget *parent, Qt::WFlags flags) : 
     if (ui.actionLoadLastUsedCharacter->isChecked() && !_recentFilesList.isEmpty())
         loadFile(_recentFilesList.at(0));
     else
-        setWindowTitle(qApp->applicationName());
+        updateWindowTitle();
 }
 
 
@@ -850,10 +850,10 @@ void MedianXLOfflineTools::createStatsGroupBoxLayout()
     gridLayout->addWidget(new QLabel(tr("Stash Gold")), 0, 3, Qt::AlignRight);
     gridLayout->addWidget(ui.stashGoldLineEdit, 0, 4);
 
-    gridLayout->addWidget(new QLabel(tr("Free Skill Points")), 1, 0, Qt::AlignRight);
+    gridLayout->addWidget(new QLabel(tr("Free Skills")), 1, 0, Qt::AlignRight);
     gridLayout->addWidget(ui.freeSkillPointsLineEdit, 1, 1);
     gridLayout->addWidget(ui.respecSkillsCheckBox, 1, 2);
-    gridLayout->addWidget(new QLabel(tr("Signets of Skill Eaten")), 1, 3, Qt::AlignRight);
+    gridLayout->addWidget(new QLabel(tr("Signets of Skill")), 1, 3, Qt::AlignRight);
     gridLayout->addWidget(ui.signetsOfSkillEatenLineEdit, 1, 4);
 
     gridLayout->addWidget(ui.statsTableWidget, 2, 2, 4, 3, Qt::AlignCenter);
@@ -866,10 +866,10 @@ void MedianXLOfflineTools::createStatsGroupBoxLayout()
     gridLayout->addWidget(ui.vitalitySpinBox, 4, 1);
     gridLayout->addWidget(ui.energySpinBox, 5, 1);
 
-    gridLayout->addWidget(new QLabel(tr("Free Stat Points")), 6, 0, Qt::AlignRight);
+    gridLayout->addWidget(new QLabel(tr("Free Stats")), 6, 0, Qt::AlignRight);
     gridLayout->addWidget(ui.freeStatPointsLineEdit, 6, 1);
     gridLayout->addWidget(ui.respecStatsButton, 6, 2);
-    gridLayout->addWidget(new QLabel(tr("Signets of Learning Eaten")), 6, 3, Qt::AlignRight);
+    gridLayout->addWidget(new QLabel(tr("Signets of Learning")), 6, 3, Qt::AlignRight);
     gridLayout->addWidget(ui.signetsOfLearningEatenLineEdit, 6, 4);
 }
 
@@ -1061,7 +1061,7 @@ bool MedianXLOfflineTools::loadFile(const QString &charPath)
         _charPath.clear();
 
         clearUI();
-        setWindowTitle(qApp->applicationName());
+        updateWindowTitle();
     }
 
     if (_findItemsDialog)
@@ -1806,8 +1806,8 @@ void MedianXLOfflineTools::updateStatusTips(int newStatPoints, int investedStatP
 
 void MedianXLOfflineTools::updateWindowTitle()
 {
-    setWindowTitle(QString("%1 - %2").arg(QDir::toNativeSeparators(_charPath), qApp->applicationName()));
-    //setWindowFilePath(_charPath);
+//    setWindowTitle(QString("%1 - %2").arg(QDir::toNativeSeparators(_charPath), qApp->applicationName()));
+    setWindowFilePath(_charPath);
 }
 
 void MedianXLOfflineTools::updateTableStats(QTableWidgetItem *item, int diff, int statPerPoint)

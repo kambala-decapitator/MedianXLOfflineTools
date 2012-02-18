@@ -34,7 +34,7 @@ ItemsViewerDialog::ItemsViewerDialog(QWidget *parent) : QDialog(parent), _tabWid
 
     for (int i = GearIndex; i <= LastIndex; ++i)
     {
-        ItemsPropertiesSplitter *splitter = static_cast<ItemsPropertiesSplitter *>(_tabWidget->widget(i));
+        ItemsPropertiesSplitter *splitter = splitterAtIndex(i);
         QTableView *tableView = static_cast<QTableView *>(splitter->itemsView());
         for (int j = 0; j < splitter->itemsModel()->rowCount(); ++j)
             tableView->setRowHeight(j, cellSize);
@@ -42,8 +42,9 @@ ItemsViewerDialog::ItemsViewerDialog(QWidget *parent) : QDialog(parent), _tabWid
             tableView->setColumnWidth(j, cellSize);
     }
 
+    connect(_tabWidget, SIGNAL(currentChanged(int)), SLOT(tabChanged(int)));
+
     loadSettings();
-    _tabWidget->widget(0)->setFocus();
 }
 
 void ItemsViewerDialog::loadSettings()
@@ -52,7 +53,12 @@ void ItemsViewerDialog::loadSettings()
     restoreGeometry(settings.value("itemsViewerGeometry").toByteArray());
 
     for (int i = GearIndex; i <= LastIndex; ++i)
-        static_cast<ItemsPropertiesSplitter *>(_tabWidget->widget(i))->restoreState(settings.value(QString("itemsTab%1_state").arg(i)).toByteArray());
+        splitterAtIndex(i)->restoreState(settings.value(QString("itemsTab%1_state").arg(i)).toByteArray());
+}
+
+ItemsPropertiesSplitter *ItemsViewerDialog::splitterAtIndex(int tabIndex)
+{
+    return static_cast<ItemsPropertiesSplitter *>(_tabWidget->widget(tabIndex));
 }
 
 void ItemsViewerDialog::saveSettings()
@@ -61,13 +67,18 @@ void ItemsViewerDialog::saveSettings()
     settings.setValue("itemsViewerGeometry", saveGeometry());
 
     for (int i = GearIndex; i <= LastIndex; ++i)
-        settings.setValue(QString("itemsTab%1_state").arg(i), static_cast<ItemsPropertiesSplitter *>(_tabWidget->widget(i))->saveState());
+        settings.setValue(QString("itemsTab%1_state").arg(i), splitterAtIndex(i)->saveState());
 }
 
 void ItemsViewerDialog::closeEvent(QCloseEvent *event)
 {
     saveSettings();
     event->accept();
+}
+
+void ItemsViewerDialog::tabChanged(int newIndex)
+{
+    splitterAtIndex(newIndex)->showFirstItem();
 }
 
 void ItemsViewerDialog::updateItems()
@@ -133,7 +144,7 @@ void ItemsViewerDialog::updateItems()
                 }
             }
         }
-        static_cast<ItemsPropertiesSplitter *>(_tabWidget->widget(i))->setItems(items);
+        splitterAtIndex(i)->setItems(items);
         _tabWidget->setTabEnabled(i, !items.isEmpty());
     }
 }
@@ -146,7 +157,7 @@ int ItemsViewerDialog::indexFromItemStorage(int storage)
 void ItemsViewerDialog::showItem(ItemInfo *item)
 {
     _tabWidget->setCurrentIndex(indexFromItemStorage(item->storage));
-    static_cast<ItemsPropertiesSplitter *>(_tabWidget->currentWidget())->showItem(item);
+    splitterAtIndex(_tabWidget->currentIndex())->showItem(item);
 }
 
 void ItemsViewerDialog::enableCubeTab()

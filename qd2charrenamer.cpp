@@ -130,8 +130,13 @@ void QD2CharRenamer::createColorMenu()
     {
         if (i == DarkGreen) // ':' can't be used for filename
             continue;
+
         pix.fill(colors.at(i));
-        colorMenu->addAction(QIcon(pix), QString("%1 (%2)").arg(unicodeColorHeader + colorCodes.at(i), colorNames.at(i)), this, SLOT(insertColor()));
+        QAction *colorAction = new QAction(QIcon(pix), QString("%1 (%2)").arg(unicodeColorHeader + colorCodes.at(i), colorNames.at(i)), this);
+        colorAction->setIconVisibleInMenu(true); // explicitly show icons on Mac OS X
+        connect(colorAction, SIGNAL(triggered()), SLOT(insertColor()));
+
+        colorMenu->addAction(colorAction);
     }
 
     QAction *infoAction = colorMenu->addAction(tr("\"Dynamic\" colors below"));

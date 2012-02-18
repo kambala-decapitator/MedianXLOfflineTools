@@ -17,11 +17,12 @@ public:
     explicit ItemStorageTableModel(int rows, QObject *parent = 0) : QAbstractTableModel(parent), _rows(rows) {}
 
     virtual int    rowCount(const QModelIndex &parent = QModelIndex()) const { Q_UNUSED(parent); return _rows; }
-    virtual int    columnCount(const QModelIndex &parent = QModelIndex()) const { Q_UNUSED(parent); return columns; }
+    virtual int columnCount(const QModelIndex &parent = QModelIndex()) const { Q_UNUSED(parent); return columns; }
     virtual QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
 
     virtual ItemInfo *itemAt(const QModelIndex &modelIndex) const { return _itemsHash[qMakePair(modelIndex.row(), modelIndex.column())]; }
     void setItems(const ItemsList &newItems);
+    ItemInfo *firstItem() { return _itemsHash.begin().value(); }
 
 private:
     int _rows;

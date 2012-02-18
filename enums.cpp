@@ -135,15 +135,15 @@ namespace Enums
 
     int ItemOffsets::offsetLength(ItemOffsetsEnum offset)
     {
-        static QHash<int, int> hash;
+        static QHash<ItemOffsetsEnum, int> hash;
         if (hash.isEmpty())
         {
-            hash.insert(Ethereal, 1);
-            hash.insert(Location, 3);
-            hash.insert(EquipIndex, 4);
-            hash.insert(Columns, 4);
-            hash.insert(Rows, 3);
-            hash.insert(Storage, 3);
+            hash[Ethereal] = 1;
+            hash[Location] = 3;
+            hash[EquipIndex] = 4;
+            hash[Columns] = 4;
+            hash[Rows] = 3;
+            hash[Storage] = 3;
         }
         return hash.value(offset);
     }

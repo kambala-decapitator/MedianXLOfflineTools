@@ -15,6 +15,10 @@ int main(int argc, char *argv[])
     app.setApplicationName("Median XL Offline Tools");
     app.setApplicationVersion("0.2");
 
+#ifdef Q_WS_MACX
+    app.setAttribute(Qt::AA_DontShowIconsInMenus);
+#endif
+
 
     LanguageManager &langManager = LanguageManager::instance();
     langManager.currentLocale = QSettings().value(langManager.languageKey, QLocale::system().name().left(2)).toString();

@@ -25,6 +25,7 @@ public:
 
     void setItems(const ItemsList &newItems);
     void showItem(ItemInfo *item);
+    void showFirstItem();
 
 protected:
     void keyPressEvent(QKeyEvent *keyEvent);
@@ -62,9 +63,6 @@ private:
     void updateItems(const ItemsList &newItems);
     void performDeleteItem(ItemInfo *item);
     ItemInfo *selectedItem(bool showError = true);
-    //ItemInfo *itemFromCoordinate(const QPoint &pos);
-    //QAction *actionFromSender(QObject *sender, const QLatin1String &errorActionText);
-    //ItemInfo *itemFromAction(QAction *action);
 
     void addItemToList(ItemInfo *item, int pos = -1);
     void removeItemFromList(ItemInfo *item);
