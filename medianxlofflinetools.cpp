@@ -52,6 +52,7 @@ MedianXLOfflineTools::MedianXLOfflineTools(QWidget *parent, Qt::WFlags flags) : 
     maxValueFormat(tr("Max: %1")), minValueFormat(tr("Min: %1")), investedValueFormat(tr("Invested: %1")), _isLoaded(false)
 {
     ui.setupUi(this);
+    ui.menuOptions->menuAction()->setMenuRole(QAction::PreferencesRole);
 
     _exitSeparator = ui.menuFile->insertSeparator(ui.actionExit);
     createLanguageMenu();
@@ -619,12 +620,12 @@ void MedianXLOfflineTools::giveCube()
 
     // predefined position is (0,0) in inventory
     if (cube->column)
-        ReverseBitWriter::replaceValueInBitString(cube->bitString, Enums::ItemOffsets::Columns, 4, cube->column);
+        ReverseBitWriter::replaceValueInBitString(cube->bitString, Enums::ItemOffsets::Columns, cube->column);
     if (cube->row)
-        ReverseBitWriter::replaceValueInBitString(cube->bitString, Enums::ItemOffsets::Rows, 3, cube->row);
+        ReverseBitWriter::replaceValueInBitString(cube->bitString, Enums::ItemOffsets::Rows, cube->row);
     if (cube->storage != Enums::ItemStorage::Inventory)
     {
-        ReverseBitWriter::replaceValueInBitString(cube->bitString, Enums::ItemOffsets::Storage, 3, cube->storage);
+        ReverseBitWriter::replaceValueInBitString(cube->bitString, Enums::ItemOffsets::Storage, cube->storage);
 
         ItemInfo *plugyCube = new ItemInfo(*cube);
         plugyCube->storage = Enums::ItemStorage::PersonalStash;

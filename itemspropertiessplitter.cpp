@@ -86,7 +86,7 @@ ItemsPropertiesSplitter::ItemsPropertiesSplitter(ItemStorageTableView *itemsView
     addWidget(_propertiesWidget);
 
     setChildrenCollapsible(false);
-    //setStretchFactor(0, 4);
+    setStretchFactor(1, 4);
 
     connect(_itemsView->selectionModel(), SIGNAL(currentChanged(const QModelIndex &, const QModelIndex &)), SLOT(itemSelected(const QModelIndex &)));
     connect(_itemsView, SIGNAL(customContextMenuRequested(const QPoint &)), SLOT(showContextMenu(const QPoint &)));
@@ -120,8 +120,7 @@ void ItemsPropertiesSplitter::keyPressEvent(QKeyEvent *keyEvent)
 
         _isShiftPressed = true;
     }
-    else
-        QSplitter::keyPressEvent(keyEvent);
+    QSplitter::keyPressEvent(keyEvent);
 }
 
 void ItemsPropertiesSplitter::keyReleaseEvent(QKeyEvent *keyEvent)
@@ -136,8 +135,7 @@ void ItemsPropertiesSplitter::keyReleaseEvent(QKeyEvent *keyEvent)
 
         _isShiftPressed = false;
     }
-    else
-        QSplitter::keyPressEvent(keyEvent);
+    QSplitter::keyPressEvent(keyEvent);
 }
 
 void ItemsPropertiesSplitter::setItems(const ItemsList &newItems)
@@ -179,10 +177,8 @@ void ItemsPropertiesSplitter::updateItemsForCurrentPage()
 {
     ItemsList pagedItems;
     foreach (ItemInfo *item, _allItems)
-    {
         if (item->plugyPage == static_cast<quint32>(_pageSpinBox->value()))
             pagedItems += item;
-    }
     updateItems(pagedItems);
 }
 
@@ -245,7 +241,7 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
 
             QMenu *menuDisenchant = new QMenu(tr("Disenchant into"), _itemsView);
             menuDisenchant->addActions(QList<QAction *>() << actionShards << actionSol);
-            menuDisenchant->menuAction()->setDisabled(true); // TODO: remove
+            menuDisenchant->menuAction()->setDisabled(item->location == Enums::ItemLocation::Equipped); // you can't disenchant equipped items
             actions << menuDisenchant->menuAction();
         }
         // TODO 0.3
@@ -304,7 +300,6 @@ void ItemsPropertiesSplitter::disenchantItem()
     QString path = ResourcePathManager::dataPathForFileName(QString("items/%1.d2i").arg(action->objectName() == "signet" ? "signet_of_learning" : "arcane_shard"));
     ItemInfo *newItem = ItemParser::loadItemFromFile(path);
 
-    // TODO: fix if item is on the character
     ItemsList items = ItemParser::itemsLocatedAt(item->storage);
     items.removeOne(item);
     if (!ItemParser::canStoreItemAt(item->row, item->column, newItem->itemType, items, ItemsViewerDialog::rows.at(ItemsViewerDialog::indexFromItemStorage(item->storage)), 10))
@@ -318,35 +313,56 @@ void ItemsPropertiesSplitter::disenchantItem()
     newItem->column = item->column;
     newItem->storage = item->storage;
     newItem->whereEquipped = item->whereEquipped;
-    newItem->location = Enums::ItemLocation::Stored;
+    //newItem->location = Enums::ItemLocation::Stored;
     newItem->plugyPage = item->plugyPage;
 
     // update bits
     bool isPlugyStorage = newItem->storage == Enums::ItemStorage::PersonalStash || newItem->storage == Enums::ItemStorage::SharedStash || newItem->storage == Enums::ItemStorage::HCStash;
-    ReverseBitWriter::replaceValueInBitString(newItem->bitString, Enums::ItemOffsets::Storage, 3, isPlugyStorage ? Enums::ItemStorage::Stash : newItem->storage);
-    ReverseBitWriter::replaceValueInBitString(newItem->bitString, Enums::ItemOffsets::Columns, 4, newItem->column);
-    ReverseBitWriter::replaceValueInBitString(newItem->bitString, Enums::ItemOffsets::Rows, 3, newItem->row);
-    ReverseBitWriter::replaceValueInBitString(newItem->bitString, Enums::ItemOffsets::EquipIndex, 4, newItem->whereEquipped);
-    ReverseBitWriter::replaceValueInBitString(newItem->bitString, Enums::ItemOffsets::Location, 3, newItem->location);
+    ReverseBitWriter::replaceValueInBitString(newItem->bitString, Enums::ItemOffsets::Storage, isPlugyStorage ? Enums::ItemStorage::Stash : newItem->storage);
+    ReverseBitWriter::replaceValueInBitString(newItem->bitString, Enums::ItemOffsets::Columns, newItem->column);
+    ReverseBitWriter::replaceValueInBitString(newItem->bitString, Enums::ItemOffsets::Rows, newItem->row);
+    ReverseBitWriter::replaceValueInBitString(newItem->bitString, Enums::ItemOffsets::EquipIndex, newItem->whereEquipped);
+    //ReverseBitWriter::replaceValueInBitString(newItem->bitString, Enums::ItemOffsets::Location, newItem->location);
 
-    ItemsList personalStashItems = ItemParser::itemsLocatedAt(Enums::ItemStorage::PersonalStash);
-    if (newItem->storage == Enums::ItemStorage::Stash && !personalStashItems.isEmpty() || newItem->storage == Enums::ItemStorage::PersonalStash)
+    if (newItem->storage == Enums::ItemStorage::Stash)
     {
-        ItemInfo *copy = new ItemInfo(*newItem);
-        copy->storage = newItem->storage == Enums::ItemStorage::Stash ? Enums::ItemStorage::PersonalStash : Enums::ItemStorage::Stash;
-        copy->plugyPage = newItem->storage == Enums::ItemStorage::Stash;
-        // TODO: finish
+        ItemsList personalStashItems = ItemParser::itemsLocatedAt(Enums::ItemStorage::PersonalStash);
+        bool found = false;
+        foreach (ItemInfo *personalStashItem, personalStashItems)
+            if (personalStashItem->plugyPage == 1)
+            {
+                foreach (ItemInfo *stashItem, items)
+                {
+
+                }
+            }
+        if (found)
+        {
+            ItemInfo *copy = new ItemInfo(*newItem);
+            copy->storage = Enums::ItemStorage::PersonalStash;
+            copy->plugyPage = 1;
+        }
+    }
+    else if (newItem->storage == Enums::ItemStorage::PersonalStash)
+    {
+        ItemsList stashItems = ItemParser::itemsLocatedAt(Enums::ItemStorage::Stash);
+        if (stashItems.indexOf(item) != -1)
+        {
+            ItemInfo *copy = new ItemInfo(*newItem);
+            copy->storage = Enums::ItemStorage::Stash;
+            copy->plugyPage = 0;
+        }
     }
 
     performDeleteItem(item);
     addItemToList(newItem, insertIndex);
 }
 
-//void ItemsPropertiesSplitter::unsocketItem()
-//{
-//
-//}
-//
+void ItemsPropertiesSplitter::unsocketItem()
+{
+
+}
+
 //void ItemsPropertiesSplitter::makeNonEthereal()
 //{
 //    ItemInfo *item = selectedItem();
@@ -355,7 +371,7 @@ void ItemsPropertiesSplitter::disenchantItem()
 //        item->hasChanged = true;
 //
 //        item->isEthereal = false;
-//        ReverseBitWriter::replaceValueInBitString(item->bitString, Enums::ItemOffsets::Ethereal, 1, 0);
+//        ReverseBitWriter::replaceValueInBitString(item->bitString, Enums::ItemOffsets::Ethereal, 0);
 //
 //        if (ItemDataBase::Items()->value(item->itemType).genericType == Enums::ItemTypeGeneric::Armor)
 //        {

@@ -43,7 +43,7 @@ private slots:
     void exportHtml();
     void exportBbCode();
     void disenchantItem();
-    //void unsocketItem();
+    void unsocketItem();
     //void makeNonEthereal();
     void deleteItem();
 

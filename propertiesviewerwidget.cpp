@@ -15,7 +15,7 @@
 static const QString baseFormat("<html><body bgcolor = \"black\"><div align = \"center\" style = \"color: #ffffff\">%1</div></body></html>");
 
 
-PropertiesViewerWidget::PropertiesViewerWidget(QWidget *parent) : QWidget(parent), _item(0), htmlLine(htmlStringFromDiabloColorString("<hr>"))
+PropertiesViewerWidget::PropertiesViewerWidget(QWidget *parent) : QWidget(parent), htmlLine(htmlStringFromDiabloColorString("<hr>")), _item(0)
 {
     ui.setupUi(this);
 

@@ -9,6 +9,7 @@
 
 namespace Enums
 {
+
 class Offsets
 {
 public:
@@ -207,8 +208,6 @@ public:
         Weapon,
         Misc
     };
-
-    static ItemTypeGenericEnum typeFromString(const QByteArray &itemType);
 };
 
 
@@ -289,7 +288,7 @@ public:
 class ItemOffsets
 {
 public:
-    enum
+    enum ItemOffsetsEnum
     {
         Ethereal = 0x26,
         Location = 0x3A,
@@ -298,7 +297,10 @@ public:
         Rows = 0x45,
         Storage = 0x49
     };
+
+    static int offsetLength(ItemOffsetsEnum offset); // modify whenever enum is modified
 };
-}
+
+} // namespace Enums
 
 #endif // ENUMS_H

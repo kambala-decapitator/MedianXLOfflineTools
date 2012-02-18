@@ -1,5 +1,7 @@
 #include "enums.h"
 
+#include <QHash>
+
 
 namespace Enums
 {
@@ -28,7 +30,7 @@ namespace Enums
     const QStringList &Mercenary::types()
     {
         static const QStringList types = QStringList() << tr("Ranger") << tr("Priestess") << tr("Exemplar") << tr("Shapeshifter") << tr("Fighter Mage")
-            << tr("Necrolyte") << tr("Bloodmage") << tr("Abjurer") << tr("Barbarian");
+                                                       << tr("Necrolyte") << tr("Bloodmage") << tr("Abjurer") << tr("Barbarian");
         return types;
     }
 
@@ -130,15 +132,19 @@ namespace Enums
         }
     }
 
-    ItemTypeGeneric::ItemTypeGenericEnum ItemTypeGeneric::typeFromString(const QByteArray &itemType)
+
+    int ItemOffsets::offsetLength(ItemOffsetsEnum offset)
     {
-        ItemTypeGeneric::ItemTypeGenericEnum result = Unknown;
-        if (itemType == "armo")
-            result = ItemTypeGeneric::Armor;
-        else if (itemType == "weap")
-            result = ItemTypeGeneric::Weapon;
-        else if (itemType == "misc")
-            result = ItemTypeGeneric::Misc;
-        return result;
+        static QHash<int, int> hash;
+        if (hash.isEmpty())
+        {
+            hash.insert(Ethereal, 1);
+            hash.insert(Location, 3);
+            hash.insert(EquipIndex, 4);
+            hash.insert(Columns, 4);
+            hash.insert(Rows, 3);
+            hash.insert(Storage, 3);
+        }
+        return hash.value(offset);
     }
 }
