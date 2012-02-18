@@ -13,8 +13,9 @@ class PropertiesDisplayManager
 public:
     static QString completeItemDescription(ItemInfo *item); // this is an ugly copy-paste from properties viewer, but I didn't find a better way; currently used for search
     static void addProperties(PropertiesMap *mutableProps, const PropertiesMap &propsToAdd);
-    static void constructPropertyStrings(const PropertiesMap &properties, QMap<quint8, ItemPropertyDisplay> *outDisplayPropertiesMap);
-    static QString propertyDisplay(const ItemProperty &propDisplay, int propId);
+    // currently shouldColor is used for reanimates' names only
+    static void constructPropertyStrings(const PropertiesMap &properties, QMap<quint8, ItemPropertyDisplay> *outDisplayPropertiesMap, bool shouldColor = false);
+    static QString propertyDisplay(const ItemProperty &propDisplay, int propId, bool shouldColor = false);
     static PropertiesMap genericSocketableProperties(ItemInfo *socketableItem, qint8 socketableType);
 
     static void addChallengeNamesToClassCharm(PropertiesMap::iterator &iter);

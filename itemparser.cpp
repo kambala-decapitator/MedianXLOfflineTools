@@ -193,18 +193,18 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
             }
 
             // parse all socketables
-            QList<QByteArray> runeTypes;
+            QList<QByteArray> rwSocketableTypes;
             for (int i = 0; i < item->socketablesNumber; ++i)
             {
                 ItemInfo *socketableInfo = parseItem(inputDataStream, bytes);
                 item->socketablesInfo += socketableInfo;
                 if (item->isRW && i >= item->socketablesNumber - 2) // get the last socket filler to obtain RW name (and previous one to prevent disambiguation)
-                    runeTypes.prepend(socketableInfo->itemType == "jew" ? QByteArray() : socketableInfo->itemType);
+                    rwSocketableTypes.prepend(socketableInfo->itemType == "jew" && i != item->socketablesNumber - 1 ? QByteArray() : socketableInfo->itemType);
             }
 
-            if (runeTypes.size())
+            if (!rwSocketableTypes.isEmpty())
             {
-                RunewordKeyPair rwKey = qMakePair(runeTypes.at(0), runeTypes.size() > 1 ? runeTypes.at(1) : QByteArray());
+                RunewordKeyPair rwKey = qMakePair(rwSocketableTypes.at(0), rwSocketableTypes.size() > 1 ? rwSocketableTypes.at(1) : QByteArray());
                 if (rwKey == qMakePair(QByteArray("r56"), QByteArray("r55"))) // maybe it's 'Eternal'?
                     item->rwName = ItemDataBase::RW()->value(qMakePair(QByteArray("r51"), QByteArray("r52"))).name;
                 else
@@ -330,7 +330,7 @@ PropertiesMultiMap ItemParser::parseItemProperties(ReverseBitReader &bitReader, 
                 propToAdd.displayString = desc.replace("%%", "%").arg(propToAdd.value).arg(propToAdd.param & 63).arg(ItemDataBase::Skills()->value(propToAdd.param >> 6).name);
             }
             else if (ItemDataBase::MysticOrbs()->contains(id))
-                propToAdd.displayString = QString("%1 x '%2'").arg(propToAdd.value).arg(ItemDataBase::Items()->value(ItemDataBase::MysticOrbs()->value(id).itemCode).name);
+                propToAdd.displayString = QString("%1 x '%2'").arg(propToAdd.value).arg(mysticOrbReadableProperty(ItemDataBase::Items()->value(ItemDataBase::MysticOrbs()->value(id).itemCode).name));
 
             props.insert(id, propToAdd);
         }
@@ -442,4 +442,10 @@ bool ItemParser::itemTypesInheritFromTypes(const QList<QByteArray> &itemTypes, c
     foreach (const QByteArray &itemType, itemTypes)
         return allowedItemTypes.contains(itemType) ? true : itemTypesInheritFromTypes(ItemDataBase::ItemTypes()->value(itemType), allowedItemTypes);
     return false;
+}
+
+QString ItemParser::mysticOrbReadableProperty(const QString &fullDescription)
+{
+    int start = fullDescription.indexOf("\\n") + 2, end = fullDescription.indexOf("\\n", start);
+    return fullDescription.mid(start, end - start);
 }

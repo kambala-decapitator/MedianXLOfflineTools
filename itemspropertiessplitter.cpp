@@ -145,7 +145,7 @@ void ItemsPropertiesSplitter::setItems(const ItemsList &newItems)
     _allItems = newItems;
     if (_left10Button)
     {
-        _lastNotEmptyPage = _allItems.size() ? _allItems.last()->plugyPage : 0;
+        _lastNotEmptyPage = !_allItems.isEmpty() ? _allItems.last()->plugyPage : 0;
         _pageSpinBox->setSuffix(QString(" / %1").arg(_lastNotEmptyPage));
         _pageSpinBox->setMaximum(_lastNotEmptyPage);
         updateItemsForCurrentPage();
@@ -330,7 +330,7 @@ void ItemsPropertiesSplitter::disenchantItem()
     ReverseBitWriter::replaceValueInBitString(newItem->bitString, Enums::ItemOffsets::Location, 3, newItem->location);
 
     ItemsList personalStashItems = ItemParser::itemsLocatedAt(Enums::ItemStorage::PersonalStash);
-    if (newItem->storage == Enums::ItemStorage::Stash && personalStashItems.size() > 0 || newItem->storage == Enums::ItemStorage::PersonalStash)
+    if (newItem->storage == Enums::ItemStorage::Stash && !personalStashItems.isEmpty() || newItem->storage == Enums::ItemStorage::PersonalStash)
     {
         ItemInfo *copy = new ItemInfo(*newItem);
         copy->storage = newItem->storage == Enums::ItemStorage::Stash ? Enums::ItemStorage::PersonalStash : Enums::ItemStorage::Stash;

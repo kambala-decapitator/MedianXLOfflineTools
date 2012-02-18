@@ -134,7 +134,7 @@ void ItemsViewerDialog::updateItems()
             }
         }
         static_cast<ItemsPropertiesSplitter *>(_tabWidget->widget(i))->setItems(items);
-        _tabWidget->setTabEnabled(i, items.size() > 0);
+        _tabWidget->setTabEnabled(i, !items.isEmpty());
     }
 }
 

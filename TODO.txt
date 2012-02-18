@@ -1,7 +1,7 @@
-- fix additional colors of properties and colors + multiline
 - modify exact match somehow
 - write help for search
 - try fixing disenchant
+- translate runes' letters
 - compress and maybe encrypt txt data
 -----
 - show experince bar and completion of current level in %
@@ -10,6 +10,7 @@
 - link for skillpoint planner
 - generate some bbcode/html report about character and/or plugy stashes contents
 - move recent files to separate sub-menu
+- add save prompt
 - add a check for avoid >= 100%
 - uncomment 'like duping items'
 - d2s file association

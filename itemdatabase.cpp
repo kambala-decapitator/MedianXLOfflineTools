@@ -21,7 +21,7 @@ QList<quint8> *ItemDataBase::charSkills = 0;
 QHash<QByteArray, ItemBase> *ItemDataBase::Items()
 {
     static QHash<QByteArray, ItemBase> allItems;
-    if (!allItems.size())
+    if (allItems.isEmpty())
     {
         QFile f(ResourcePathManager::localizedPathForFileName("items"));
         if (!f.open(QIODevice::ReadOnly | QIODevice::Text))
@@ -56,7 +56,7 @@ QHash<QByteArray, ItemBase> *ItemDataBase::Items()
 QHash<QByteArray, QList<QByteArray> > *ItemDataBase::ItemTypes()
 {
     static QHash<QByteArray, QList<QByteArray> > types;
-    if (!types.size())
+    if (types.isEmpty())
     {
         QFile f(ResourcePathManager::dataPathForFileName("itemtypes.txt"));
         if (!f.open(QIODevice::ReadOnly | QIODevice::Text))
@@ -80,7 +80,7 @@ QHash<QByteArray, QList<QByteArray> > *ItemDataBase::ItemTypes()
 QHash<uint, ItemPropertyTxt> *ItemDataBase::Properties()
 {
     static QHash<uint, ItemPropertyTxt> allProperties;
-    if (!allProperties.size())
+    if (allProperties.isEmpty())
     {
         QFile f(ResourcePathManager::localizedPathForFileName("props"));
         if (!f.open(QIODevice::ReadOnly | QIODevice::Text))
@@ -124,7 +124,7 @@ QHash<uint, ItemPropertyTxt> *ItemDataBase::Properties()
 QHash<uint, SetItemInfo> *ItemDataBase::Sets()
 {
     static QHash<uint, SetItemInfo> allSets;
-    if (!allSets.size())
+    if (allSets.isEmpty())
     {
         QFile f(ResourcePathManager::localizedPathForFileName("sets"));
         if (!f.open(QIODevice::ReadOnly | QIODevice::Text))
@@ -155,7 +155,7 @@ QHash<uint, SetItemInfo> *ItemDataBase::Sets()
 QList<SkillInfo> *ItemDataBase::Skills()
 {
     static QList<SkillInfo> allSkills;
-    if (!allSkills.size())
+    if (allSkills.isEmpty())
     {
         QFile f(ResourcePathManager::localizedPathForFileName("skills"));
         if (!f.open(QIODevice::ReadOnly | QIODevice::Text))
@@ -182,7 +182,7 @@ QList<SkillInfo> *ItemDataBase::Skills()
 QHash<uint, UniqueItemInfo> *ItemDataBase::Uniques()
 {
     static QHash<uint, UniqueItemInfo> allUniques;
-    if (!allUniques.size())
+    if (allUniques.isEmpty())
     {
         QFile f(ResourcePathManager::localizedPathForFileName("uniques"));
         if (!f.open(QIODevice::ReadOnly | QIODevice::Text))
@@ -209,7 +209,7 @@ QHash<uint, UniqueItemInfo> *ItemDataBase::Uniques()
 QHash<uint, MysticOrb> *ItemDataBase::MysticOrbs()
 {
     static QHash<uint, MysticOrb> allMysticOrbs;
-    if (!allMysticOrbs.size())
+    if (allMysticOrbs.isEmpty())
     {
         QFile f(ResourcePathManager::dataPathForFileName("mo.txt"));
         if (!f.open(QIODevice::ReadOnly | QIODevice::Text))
@@ -237,7 +237,7 @@ QHash<uint, MysticOrb> *ItemDataBase::MysticOrbs()
 QHash<uint, QString> *ItemDataBase::Monsters()
 {
     static QHash<uint, QString> allMonsters;
-    if (!allMonsters.size())
+    if (allMonsters.isEmpty())
     {
         QFile f(ResourcePathManager::localizedPathForFileName("monsters"));
         if (!f.open(QIODevice::ReadOnly | QIODevice::Text))
@@ -261,7 +261,7 @@ QHash<uint, QString> *ItemDataBase::Monsters()
 QMultiHash<RunewordKeyPair, RunewordInfo> *ItemDataBase::RW()
 {
     static QMultiHash<RunewordKeyPair, RunewordInfo> allRunewords;
-    if (!allRunewords.size())
+    if (allRunewords.isEmpty())
     {
         QFile f(ResourcePathManager::localizedPathForFileName("rw"));
         if (!f.open(QIODevice::ReadOnly | QIODevice::Text))
@@ -290,7 +290,7 @@ QMultiHash<RunewordKeyPair, RunewordInfo> *ItemDataBase::RW()
 QHash<QByteArray, SocketableItemInfo> *ItemDataBase::Socketables()
 {
     static QHash<QByteArray, SocketableItemInfo> allSocketables;
-    if (!allSocketables.size())
+    if (allSocketables.isEmpty())
     {
         QFile f(ResourcePathManager::localizedPathForFileName("socketables"));
         if (!f.open(QIODevice::ReadOnly | QIODevice::Text))
@@ -336,7 +336,7 @@ QHash<QByteArray, SocketableItemInfo> *ItemDataBase::Socketables()
 QStringList *ItemDataBase::NonMagicItemQualities()
 {
     static QStringList allQualities;
-    if (!allQualities.size())
+    if (allQualities.isEmpty())
     {
         QFile f(ResourcePathManager::localizedPathForFileName("LowQualityItems"));
         if (!f.open(QIODevice::ReadOnly | QIODevice::Text))
@@ -373,7 +373,7 @@ QString ItemDataBase::completeItemName(ItemInfo *item, bool shouldUseColor, bool
         int genderSize = 4, actualTypeStart = nonMagicalQuality.indexOf(itemName.left(genderSize)) + genderSize;
         nonMagicalQuality = nonMagicalQuality.mid(actualTypeStart, nonMagicalQuality.indexOf('[', actualTypeStart) - actualTypeStart);
     }
-    if (itemName.startsWith('['))
+    if (itemName.startsWith('[')) // gender/number
         itemName.remove(0, 4);
     if (!nonMagicalQuality.isEmpty())
         itemName.prepend(nonMagicalQuality + " ");
@@ -391,44 +391,46 @@ QString ItemDataBase::completeItemName(ItemInfo *item, bool shouldUseColor, bool
     else if (item->quality == Enums::ItemQuality::Unique)
         specialName = Uniques()->value(item->setOrUniqueId).name;
     else if (item->isRW)
-        specialName = shouldUseColor ? htmlStringFromDiabloColorString(item->rwName, Gold) : item->rwName;
+        specialName = item->rwName;
 
-    if (!specialName.isEmpty() && specialName != itemName)
+    if (isUberCharm(item))
     {
-        if (shouldUseColor && item->isRW)
-            itemName = htmlStringFromDiabloColorString(itemName, DarkGrey);
-        itemName.prepend(specialName + htmlLineBreak);
-        // dirty hack for 'Eternal' RW
-        //itemName.prepend(QString("%1<br>").arg(specialName.contains("2005-") ? specialName.replace("\\n", htmlLineBreak) : specialName));
-    }
-    if (itemName.contains("\\n"))
-    {
-        QStringList list = itemName.split("\\n");
-        if (list.at(0).contains(list.at(1)))
-            itemName = list.at(0);
-        else
-        {
-            QRegExp rx("(.+)<br>\\1");
-            rx.setMinimal(true);
-            if (rx.indexIn(list.at(1)) != -1)
-            {
-                list[1] = rx.cap(1);
-                itemName = QString("%1<br>%2").arg(list.at(1), list.at(0));
-            }
-            //else // multiline names
-            //{
-            //    std::reverse(list.begin(), list.end());
-            //    itemName = list.join(htmlLineBreak);
-            //}
-        }
+        // choose the longest name
+        if (specialName.length() > itemName.length())
+            itemName = specialName;
+        specialName.clear();
     }
     if (shouldUseColor)
     {
-        if (!item->isRW)
-            itemName = htmlStringFromDiabloColorString(itemName, colorOfItem(item));
+        if (item->isRW)
+        {
+            itemName = htmlStringFromDiabloColorString(itemName, DarkGrey);
+            specialName = htmlStringFromDiabloColorString(specialName, Gold);
+            itemName.prepend(specialName + htmlLineBreak);
+        }
+        else
+        {
+            bool hasSpecialName = !specialName.isEmpty() && specialName != itemName;
+            ColorIndex colorIndex = colorOfItem(item);
+            itemName = htmlStringFromDiabloColorString(itemName, colorIndex);
+            if (hasSpecialName)
+            {
+                specialName = htmlStringFromDiabloColorString(specialName, colorIndex);
+                itemName.prepend(specialName + htmlLineBreak);
+            }
+        }
     }
     else
     {
+        if (!specialName.isEmpty() && specialName != itemName)
+            itemName.prepend(specialName + htmlLineBreak);
+
+        // reverse lines in itemName
+        QStringList lines = itemName.split("\\n");
+        std::reverse(lines.begin(), lines.end());
+        itemName = lines.join(htmlLineBreak);
+
+        itemName.remove("\\grey;");
         foreach (const QByteArray &colorString, colorStrings)
             itemName.remove(colorString);
 

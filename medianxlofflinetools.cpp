@@ -69,7 +69,7 @@ MedianXLOfflineTools::MedianXLOfflineTools(QWidget *parent, Qt::WFlags flags) : 
     //ui.freeSkillPointsLineEdit->setReadOnly(false);
     //ui.freeStatPointsLineEdit->setReadOnly(false);
 
-    if (ui.actionLoadLastUsedCharacter->isChecked() && _recentFilesList.size())
+    if (ui.actionLoadLastUsedCharacter->isChecked() && !_recentFilesList.isEmpty())
         loadFile(_recentFilesList.at(0));
     else
         setWindowTitle(qApp->applicationName());
@@ -685,7 +685,7 @@ void MedianXLOfflineTools::createLanguageMenu()
 {
     QString appTranslationName = qApp->applicationName().remove(' ').toLower();
     QStringList fileNames = QDir(LanguageManager::instance().translationsPath, QString("%1_*.qm").arg(appTranslationName)).entryList(QDir::Files);
-    if (fileNames.size())
+    if (!fileNames.isEmpty())
     {
         QMenu *languageMenu = new QMenu(tr("&Language", "Language menu"), this);
         ui.menuOptions->addSeparator();
@@ -1710,7 +1710,7 @@ void MedianXLOfflineTools::updateUI()
 
     ui.actionGiveCube->setDisabled(std::find_if(_editableCharInfo.items.character.constBegin(), _editableCharInfo.items.character.constEnd(), isCube) != _editableCharInfo.items.character.constEnd());
 
-    bool hasItems = _editableCharInfo.items.character.size() > 0;
+    bool hasItems = !_editableCharInfo.items.character.isEmpty();
     ui.actionShowItems->setEnabled(hasItems);
     ui.actionFind->setEnabled(hasItems);
     updateWindowTitle();

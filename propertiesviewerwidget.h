@@ -29,15 +29,15 @@ private:
     ItemInfo *_item;
     QSet<int> _itemMysticOrbs, _rwMysticOrbs;
 
-    void displayProperties(QTextEdit *textEdit, const PropertiesMap &properties, bool shouldClearText = true);
-    void renderItemDescription(QTextEdit *textEdit, QString *description = 0);
+    QString displayProperties(const PropertiesMap &properties);
+    void renderItemDescription(QTextEdit *textEdit, const QString &description);
 
     void removeMysticOrbsFromProperties(const QSet<int> &mysticOrbs, PropertiesMultiMap *props);
     int indexOfPropertyValue(int id, PropertiesMultiMap *props);
     void modifyMysticOrbProperty(int id, int decrement, PropertiesMultiMap *props);
     int totalMysticOrbValue(int moCode, PropertiesMap *props);
 
-    void collectMysticOrbsDataFromProps(QSet<int> *moSet, const PropertiesMap &props, QTextEdit *textEdit, bool isClassCharm);
+    QString collectMysticOrbsDataFromProps(QSet<int> *moSet, const PropertiesMap &props, bool isClassCharm);
 };
 
 #endif // PROPERTIESVIEWERWIDGET_H

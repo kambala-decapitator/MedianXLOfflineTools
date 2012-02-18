@@ -26,7 +26,7 @@ QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item)
     }
 
     const ItemBase &itemBase = ItemDataBase::Items()->value(item->itemType);
-    if (item->socketablesInfo.size())
+    //if (!item->socketablesInfo.isEmpty())
         foreach (ItemInfo *socketableItem, item->socketablesInfo)
             addProperties(&allProps, ItemDataBase::isGenericSocketable(socketableItem) ? genericSocketableProperties(socketableItem, itemBase.socketableType) : socketableItem->props);
 
@@ -108,7 +108,7 @@ QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item)
             shouldAddDamageToUndeadInTheBottom = true;
     }
 
-    if (allProps.size())
+    if (!allProps.isEmpty())
     {
         QMap<quint8, ItemPropertyDisplay> propsDisplayMap;
         constructPropertyStrings(allProps, &propsDisplayMap);
@@ -175,7 +175,7 @@ void PropertiesDisplayManager::addProperties(PropertiesMap *mutableProps, const 
     }
 }
 
-void PropertiesDisplayManager::constructPropertyStrings(const PropertiesMap &properties, QMap<quint8, ItemPropertyDisplay> *outDisplayPropertiesMap)
+void PropertiesDisplayManager::constructPropertyStrings(const PropertiesMap &properties, QMap<quint8, ItemPropertyDisplay> *outDisplayPropertiesMap, bool shouldColor /*= false*/)
 {
     QMap<quint8, ItemPropertyDisplay> propsDisplayMap;
     for (PropertiesMap::const_iterator iter = properties.constBegin(); iter != properties.constEnd(); ++iter)
@@ -189,7 +189,7 @@ void PropertiesDisplayManager::constructPropertyStrings(const PropertiesMap &pro
             continue;
         }
 
-        QString displayString = prop.displayString.isEmpty() ? propertyDisplay(prop, propId) : prop.displayString;
+        QString displayString = prop.displayString.isEmpty() ? propertyDisplay(prop, propId, shouldColor) : prop.displayString;
         if (!displayString.isEmpty())
             propsDisplayMap.insertMulti(ItemDataBase::Properties()->value(propId).descPriority,
             ItemPropertyDisplay(displayString, ItemDataBase::Properties()->value(propId).descPriority, propId));
@@ -200,7 +200,7 @@ void PropertiesDisplayManager::constructPropertyStrings(const PropertiesMap &pro
     {
         ItemPropertyDisplay &itemPropDisplay = iter.value();
         const ItemPropertyTxt &itemPropertyTxt = ItemDataBase::Properties()->value(itemPropDisplay.propertyId);
-        if (itemPropertyTxt.groupIDs.size())
+        if (!itemPropertyTxt.groupIDs.isEmpty())
         {
             QList<quint16> availableGroupIDs;
             int propValue = properties[itemPropDisplay.propertyId].value;
@@ -232,7 +232,7 @@ void PropertiesDisplayManager::constructPropertyStrings(const PropertiesMap &pro
     *outDisplayPropertiesMap = propsDisplayMap;
 }
 
-QString PropertiesDisplayManager::propertyDisplay(const ItemProperty &propDisplay, int propId)
+QString PropertiesDisplayManager::propertyDisplay(const ItemProperty &propDisplay, int propId, bool shouldColor /*= false*/)
 {
     int value = propDisplay.value;
     if (!value)
@@ -240,17 +240,17 @@ QString PropertiesDisplayManager::propertyDisplay(const ItemProperty &propDispla
 
     const ItemPropertyTxt &prop = ItemDataBase::Properties()->value(propId);
     QString description = value < 0 ? prop.descNegative : prop.descPositive, result;
-    if (prop.descStringAdd.contains(tr("Based on", "'based on clvl' property; translate only if Median XL is translated into your language! (i.e. there's localized data in Resources/data/<language>)")))
+    if (prop.descStringAdd.contains(tr("Based on", "'based on level' property; translate only if Median XL is translated into your language! (i.e. there's localized data in Resources/data/<language>)")))
     {
         if (propId == Enums::ItemProperties::StrengthBasedOnBlessedLifeSlvl || propId == Enums::ItemProperties::DexterityBasedOnBlessedLifeSlvl)
-            value = *ItemDataBase::charClass == Enums::ClassName::Paladin ? (value * ItemDataBase::charSkills->last()) / 32 : 0; // TODO 0.3+: use ItemDataBase::skills() to get the Blessed Life index
+            value = *ItemDataBase::charClass == Enums::ClassName::Paladin ? (value * ItemDataBase::charSkills->last()) / 32 : 0; // TODO 0.3+: use ItemDataBase::Skills() to get the Blessed Life index
         else // based on clvl
             value = (value * *ItemDataBase::clvl) / 32;
     }
 
     char valueStringSigned[10];
 #ifdef Q_WS_WIN32
-    ::sprintf_s
+    sprintf_s
 #else
     sprintf
 #endif
@@ -292,8 +292,11 @@ QString PropertiesDisplayManager::propertyDisplay(const ItemProperty &propDispla
         result = QString("%1% %2").arg(value * -1).arg(description); // 1 or 2
         break;
     case 23: // reanimate
-        result = QString("%1% %2 %3").arg(value).arg(description).arg(htmlStringFromDiabloColorString(ItemDataBase::Monsters()->value(propDisplay.param), Blue));
-        break;
+        {
+            QString mosnterName = ItemDataBase::Monsters()->value(propDisplay.param);
+            result = QString("%1% %2 %3").arg(value).arg(description).arg(shouldColor ? htmlStringFromDiabloColorString(mosnterName, Blue) : mosnterName);
+            break;
+        }
     // 9, 10, 14, 16-19 - absent
     // everything else is constructed in ItemParser (mostly in parseItemProperties()), i.e. has displayString
     default:

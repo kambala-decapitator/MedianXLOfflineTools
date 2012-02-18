@@ -31,6 +31,7 @@ public:
 
 private:
     static bool itemTypesInheritFromTypes(const QList<QByteArray> &itemTypes, const QList<QByteArray> &allowedItemTypes);
+    static QString mysticOrbReadableProperty(const QString &fullDescription);
 };
 
 #endif // ITEMPARSER_H

@@ -18,7 +18,7 @@ static const QChar zeroChar('0');
 static const QString htmlLineBreak("<br>");
 QString binaryStringFromNumber(quint64 number, bool needsInversion = false, int fieldWidth = 8);
 QString colorHexString(const QColor &c);
-QString colorReplacementString(int colorIndex);
+QString coloredText(const QString &text, int colorIndex);
 
 #include "colors.hpp"
 QString htmlStringFromDiabloColorString(const QString &name, ColorIndex defaultColor = White);

@@ -79,7 +79,7 @@ void FindItemsDialog::findNext()
 {
     if (_searchPerformed)
     {
-        if (_searchResult.size())
+        if (!_searchResult.isEmpty())
         {
             if (_currentIndex + 1 == _searchResult.size())
             {
@@ -114,7 +114,7 @@ void FindItemsDialog::findPrevious()
 {
     if (_searchPerformed)
     {
-        if (_searchResult.size())
+        if (!_searchResult.isEmpty())
         {
             if (_currentIndex - 1 == -1)
             {

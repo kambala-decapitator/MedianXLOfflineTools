@@ -68,7 +68,7 @@ void FindResultsWidget::updateItems(QList<SearchResultItem> *newItems)
         _foundItemsMap[i] = locationItems;
 
         QString topLevelItemText = ItemsViewerDialog::tabNames.at(i);
-        if (locationItems.size())
+        if (!locationItems.isEmpty())
             topLevelItemText += QString(" (%1)").arg(locationItems.size());
         QTreeWidgetItem *topLevelItem = new QTreeWidgetItem(QStringList(topLevelItemText));
         topLevelItem->setForeground(0, Qt::white);

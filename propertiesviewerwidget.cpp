@@ -35,24 +35,17 @@ void PropertiesViewerWidget::displayItemProperties(ItemInfo *item)
     }
 
     ui.tabWidget->setTabEnabled(0, true);
-    ui.tabWidget->setTabEnabled(1, true);
+    ui.tabWidget->setTabEnabled(1, !item->props.isEmpty());
     ui.tabWidget->setTabEnabled(2, item->isRW);
-    ui.tabWidget->setTabEnabled(3, item->socketablesInfo.size() > 0);
+    ui.tabWidget->setTabEnabled(3, !item->socketablesInfo.isEmpty());
 
     bool isClassCharm = ItemDataBase::isClassCharm(item);
-    collectMysticOrbsDataFromProps(&_itemMysticOrbs, item->props, ui.itemAndMysticOrbsTextEdit, isClassCharm);
-    collectMysticOrbsDataFromProps(&_rwMysticOrbs, item->rwProps, ui.rwAndMysticOrbsTextEdit, isClassCharm);
+    renderItemDescription(ui.itemAndMysticOrbsTextEdit, collectMysticOrbsDataFromProps(&_itemMysticOrbs, item->props, isClassCharm));
 
     PropertiesMap allProps = item->props;
     if (item->isRW)
     {
-        // insertHtml() can't be used because it breaks the RW name color
-        QString text = ui.rwAndMysticOrbsTextEdit->toHtml();
-        ui.rwAndMysticOrbsTextEdit->clear();
-        ui.rwAndMysticOrbsTextEdit->append(htmlStringFromDiabloColorString(item->rwName, Gold));
-        ui.rwAndMysticOrbsTextEdit->append(text);
-        renderItemDescription(ui.rwAndMysticOrbsTextEdit);
-        
+        renderItemDescription(ui.rwAndMysticOrbsTextEdit, collectMysticOrbsDataFromProps(&_rwMysticOrbs, item->rwProps, isClassCharm));
         PropertiesDisplayManager::addProperties(&allProps, item->rwProps);
     }
 
@@ -72,28 +65,23 @@ void PropertiesViewerWidget::displayItemProperties(ItemInfo *item)
         else
             ++iter;
     }
-    renderItemDescription(ui.itemAndMysticOrbsTextEdit);
 
     const ItemBase &itemBase = ItemDataBase::Items()->value(item->itemType);
     ui.socketablesTextEdit->clear();
-    if (item->socketablesInfo.size())
+    if (!item->socketablesInfo.isEmpty())
     {
+        QString html;
         foreach (ItemInfo *socketableItem, item->socketablesInfo)
         {
-            ui.socketablesTextEdit->append(ItemDataBase::completeItemName(socketableItem, true));
-
             PropertiesMap props = ItemDataBase::isGenericSocketable(socketableItem) ? PropertiesDisplayManager::genericSocketableProperties(socketableItem, itemBase.socketableType) : socketableItem->props;
-            displayProperties(ui.socketablesTextEdit, props, false);
             PropertiesDisplayManager::addProperties(&allProps, props);
-
-            ui.socketablesTextEdit->append(htmlLine);
+            html += ItemDataBase::completeItemName(socketableItem, true) + htmlLineBreak + displayProperties(props) + htmlLine;
         }
-        //ui.socketablesTextEdit->undo(); // remove last <hr>
-        renderItemDescription(ui.socketablesTextEdit);
+        renderItemDescription(ui.socketablesTextEdit, html);
     }
 
     // create full item description
-    QString itemDescription = ItemDataBase::completeItemName(item, true) + colorReplacementString(White) + htmlLineBreak + tr("Item Level: %1").arg(item->ilvl);
+    QString itemDescription = ItemDataBase::completeItemName(item, true) + htmlLineBreak + tr("Item Level: %1").arg(item->ilvl) + htmlLineBreak;
     if (item->isRW)
     {
         QString runes;
@@ -101,7 +89,7 @@ void PropertiesViewerWidget::displayItemProperties(ItemInfo *item)
             if (ItemDataBase::Items()->value(socketable->itemType).typeString == "rune")
                 runes += ItemDataBase::Socketables()->value(socketable->itemType).letter;
         if (!runes.isEmpty()) // gem-/jewelwords don't have any letters
-            itemDescription += htmlLineBreak + htmlStringFromDiabloColorString(QString("'%1'").arg(runes), Gold) + colorReplacementString(White);
+            itemDescription += htmlStringFromDiabloColorString(QString("'%1'").arg(runes), Gold) + htmlLineBreak;
     }
 
     if (itemBase.genericType == Enums::ItemTypeGeneric::Armor)
@@ -115,32 +103,34 @@ void PropertiesViewerWidget::displayItemProperties(ItemInfo *item)
         if (totalDef < 0)
             totalDef = 0;
 
-        QString defString = htmlLineBreak + tr("Defense: %1");
+        QString defString = tr("Defense: %1");
         if (baseDef != totalDef)
-            itemDescription += defString.arg(htmlStringFromDiabloColorString(QString::number(totalDef), Blue)) + colorReplacementString(White) + QString(" (%1)").arg(baseDef);
+            itemDescription += defString.arg(htmlStringFromDiabloColorString(QString::number(totalDef), Blue)) + QString(" (%1)").arg(baseDef);
         else
             itemDescription += defString.arg(baseDef);
+        itemDescription += htmlLineBreak;
     }
     if (itemBase.genericType != Enums::ItemTypeGeneric::Misc && item->maxDurability)
     {
-        itemDescription += htmlLineBreak + tr("Durability") + ": ";
+        itemDescription += tr("Durability") + ": ";
         bool isIndestructible = allProps.value(Enums::ItemProperties::Indestructible).value == 1;
         if (isIndestructible)
             itemDescription += QString("%1 [").arg(QChar(0x221e)); // infinity
         itemDescription += tr("%1 of %2", "durability").arg(item->currentDurability).arg(item->maxDurability);
         if (isIndestructible)
             itemDescription += "]";
+        itemDescription += htmlLineBreak;
     }
     if (itemBase.isStackable)
-        itemDescription += htmlLineBreak + tr("Quantity: %1").arg(item->quantity);
+        itemDescription += tr("Quantity: %1").arg(item->quantity) + htmlLineBreak;
     if (itemBase.classCode > -1)
     {
-        itemDescription += htmlLineBreak;
         QString text = tr("(%1 Only)", "class-specific item").arg(Enums::ClassName::classes().at(itemBase.classCode));
         if (itemBase.classCode != *ItemDataBase::charClass)
-            itemDescription += htmlStringFromDiabloColorString(text, Red) + colorReplacementString(White);
+            itemDescription += htmlStringFromDiabloColorString(text, Red);
         else
             itemDescription += text;
+        itemDescription += htmlLineBreak;
     }
 
     int rlvl;
@@ -168,7 +158,7 @@ void PropertiesViewerWidget::displayItemProperties(ItemInfo *item)
     }
     int actualRlvl = qMax(rlvl, maxSocketableRlvl) + (allProps.contains(Enums::ItemProperties::RequiredLevel) ? allProps[Enums::ItemProperties::RequiredLevel].value : 0);
     if (actualRlvl)
-        itemDescription += htmlLineBreak + htmlStringFromDiabloColorString(tr("Required Level: %1").arg(actualRlvl > 555 ? 555 : actualRlvl), *ItemDataBase::clvl < actualRlvl ? Red : White);
+        itemDescription += htmlStringFromDiabloColorString(tr("Required Level: %1").arg(actualRlvl > 555 ? 555 : actualRlvl), *ItemDataBase::clvl < actualRlvl ? Red : White) + htmlLineBreak;
 
     // add '+50% damage to undead' if item type matches
     bool shouldAddDamageToUndeadInTheBottom = false;
@@ -180,11 +170,8 @@ void PropertiesViewerWidget::displayItemProperties(ItemInfo *item)
             shouldAddDamageToUndeadInTheBottom = true;
     }
 
-    if (allProps.size())
-    {
-        displayProperties(ui.allTextEdit, allProps/*, false*/); // it's actually empty here
-        itemDescription += htmlLineBreak + htmlStringFromDiabloColorString(ui.allTextEdit->toPlainText(), Blue);
-    }
+    if (!allProps.isEmpty())
+        itemDescription += displayProperties(allProps);
     else if (ItemDataBase::isGenericSocketable(item))
     {
         static const QStringList gearNames = QStringList() << tr("Armor") << tr("Shield") << tr("Weapon");
@@ -192,29 +179,26 @@ void PropertiesViewerWidget::displayItemProperties(ItemInfo *item)
         for (qint8 socketableType = SocketableItemInfo::Armor; socketableType <= SocketableItemInfo::Weapon; ++socketableType)
         {
             PropertiesMap props = PropertiesDisplayManager::genericSocketableProperties(item, socketableType - 1);
-            displayProperties(ui.allTextEdit, props);
-            QString propText = ui.allTextEdit->toPlainText().replace("\n", ", ");
-            propStrings += htmlLineBreak + QString("%1: %2").arg(gearNames.at(socketableType), htmlStringFromDiabloColorString(propText, Blue));
+            QString propText = displayProperties(props).replace(QRegExp(htmlLineBreak + "(?!</font>)"), ", "); // don't replace last <br>
+            propStrings += QString("%1: %2").arg(gearNames.at(socketableType), propText);
         }
         // weapon properties should be first
         propStrings.move(propStrings.size() - 1, 0);
         itemDescription += htmlLineBreak + propStrings.join("");
-
-        ui.tabWidget->setTabEnabled(1, false);
     }
 
     if (shouldAddDamageToUndeadInTheBottom)
-        itemDescription += htmlLineBreak + htmlStringFromDiabloColorString(tr("+50% Damage to Undead"), Blue);
+        itemDescription += htmlStringFromDiabloColorString(tr("+50% Damage to Undead"), Blue) + htmlLineBreak;
     if (item->isSocketed)
-        itemDescription += htmlLineBreak + htmlStringFromDiabloColorString(tr("Socketed: (%1), Inserted: (%2)").arg(item->socketsNumber).arg(item->socketablesNumber), Blue);
+        itemDescription += htmlStringFromDiabloColorString(tr("Socketed: (%1), Inserted: (%2)").arg(item->socketsNumber).arg(item->socketablesNumber), Blue) + htmlLineBreak;
     if (item->isEthereal)
-        itemDescription += htmlLineBreak + htmlStringFromDiabloColorString(tr("Ethereal (Cannot be Repaired)"), Blue);
+        itemDescription += htmlStringFromDiabloColorString(tr("Ethereal (Cannot be Repaired)"), Blue) + htmlLineBreak;
 
     // show existing set items from current set
     if (item->quality == Enums::ItemQuality::Set)
     {
         const QString &setName = ItemDataBase::Sets()->value(item->setOrUniqueId).setName;
-        itemDescription += htmlLineBreak + htmlLineBreak + htmlStringFromDiabloColorString(setName, Gold);
+        itemDescription += htmlLineBreak + htmlStringFromDiabloColorString(setName, Gold);
 
         foreach (const QString &setItemName, ItemDataBase::completeSetForName(setName))
         {
@@ -231,7 +215,7 @@ void PropertiesViewerWidget::displayItemProperties(ItemInfo *item)
         }
     }
 
-    renderItemDescription(ui.allTextEdit, &itemDescription);
+    renderItemDescription(ui.allTextEdit, itemDescription);
 
     // awkward way to force center align
     QSize originalSize = size();
@@ -239,24 +223,23 @@ void PropertiesViewerWidget::displayItemProperties(ItemInfo *item)
     resize(originalSize);
 }
 
-void PropertiesViewerWidget::displayProperties(QTextEdit *textEdit, const PropertiesMap &properties, bool shouldClearText)
+QString PropertiesViewerWidget::displayProperties(const PropertiesMap &properties)
 {
-    if (shouldClearText)
-        textEdit->clear();
-
     QMap<quint8, ItemPropertyDisplay> propsDisplayMap;
-    PropertiesDisplayManager::constructPropertyStrings(properties, &propsDisplayMap);
+    PropertiesDisplayManager::constructPropertyStrings(properties, &propsDisplayMap, true);
+    QString html;
     QMap<quint8, ItemPropertyDisplay>::const_iterator iter = propsDisplayMap.constEnd();
     while (iter != propsDisplayMap.constBegin())
     {
         --iter;
-        textEdit->append(htmlStringFromDiabloColorString(iter.value().displayString/*, Blue*/));
+        html += htmlStringFromDiabloColorString(iter.value().displayString, NoColor) + htmlLineBreak;
     }
+    return coloredText(html, Blue);
 }
 
-void PropertiesViewerWidget::renderItemDescription(QTextEdit *textEdit, QString *description /*= 0*/)
+void PropertiesViewerWidget::renderItemDescription(QTextEdit *textEdit, const QString &description)
 {
-    textEdit->setText(baseFormat.arg((description ? *description : textEdit->toPlainText()).replace('\n', htmlLineBreak)));
+    textEdit->setText(baseFormat.arg(QString(description).replace('\n', htmlLineBreak)));
 }
 
 void PropertiesViewerWidget::removeAllMysticOrbs()
@@ -359,7 +342,7 @@ int PropertiesViewerWidget::totalMysticOrbValue(int moCode, PropertiesMap *props
     return props->value(moCode).value * ItemDataBase::MysticOrbs()->value(moCode).value * multiplier;
 }
 
-void PropertiesViewerWidget::collectMysticOrbsDataFromProps(QSet<int> *moSet, const PropertiesMap &props, QTextEdit *textEdit, bool isClassCharm)
+QString PropertiesViewerWidget::collectMysticOrbsDataFromProps(QSet<int> *moSet, const PropertiesMap &props, bool isClassCharm)
 {
     moSet->clear();
 
@@ -376,15 +359,16 @@ void PropertiesViewerWidget::collectMysticOrbsDataFromProps(QSet<int> *moSet, co
         else
             ++iter;
     }
-    displayProperties(textEdit, propsWithoutMO);
+    QString html = displayProperties(propsWithoutMO);
 
-    if (moSet->size())
+    if (!moSet->isEmpty())
     {
-        textEdit->append(htmlLine);
+        html += htmlLine + htmlLineBreak;
         foreach (int moCode, *moSet)
         {
             // quick & dirty hack with const_cast
-            textEdit->append(QString("%1 = %2").arg(props[moCode].displayString).arg(totalMysticOrbValue(moCode, const_cast<PropertiesMap *>(&props))));
+            html += QString("%1 = %2").arg(props[moCode].displayString).arg(totalMysticOrbValue(moCode, const_cast<PropertiesMap *>(&props))) + htmlLineBreak;
         }
     }
+    return html;
 }
