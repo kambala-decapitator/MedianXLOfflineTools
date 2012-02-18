@@ -1,7 +1,6 @@
 - modify exact match somehow
 - write help for search
 - try fixing disenchant
-- translate runes' letters
 - compress and maybe encrypt txt data
 -----
 - show experince bar and completion of current level in %
