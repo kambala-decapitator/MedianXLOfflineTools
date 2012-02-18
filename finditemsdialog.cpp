@@ -24,11 +24,11 @@ FindItemsDialog::FindItemsDialog(QWidget *parent) : QDialog(parent), _searchPerf
 
     QGridLayout *checkboxGrid = new QGridLayout;
     checkboxGrid->addWidget(ui.caseSensitiveCheckBox, 0, 0);
-    checkboxGrid->addWidget(ui.exactMatchCheckBox, 0, 1);
-    checkboxGrid->addWidget(ui.regexCheckBox, 1, 0);
-    checkboxGrid->addWidget(ui.multilineRegExpCheckBox, 1, 1);
-    checkboxGrid->addWidget(ui.searchPropsCheckBox, 2, 0);
-    checkboxGrid->addWidget(ui.wrapAroundCheckBox, 2, 1);
+    checkboxGrid->addWidget(ui.searchPropsCheckBox, 1, 0);
+    checkboxGrid->addWidget(ui.wrapAroundCheckBox, 2, 0);
+    checkboxGrid->addWidget(ui.regexCheckBox, 0, 1);
+    checkboxGrid->addWidget(ui.minimalMatchCheckBox, 1, 1);
+    checkboxGrid->addWidget(ui.multilineMatchCheckBox, 2, 1);
 
     QVBoxLayout *vbox = new QVBoxLayout;
     vbox->addWidget(ui.nextButton);
@@ -59,7 +59,7 @@ FindItemsDialog::FindItemsDialog(QWidget *parent) : QDialog(parent), _searchPerf
     connect(ui.searchComboBox, SIGNAL(editTextChanged(const QString &)), SLOT(searchTextChanged()));
     connect(_resultsWidget, SIGNAL(showItem(ItemInfo *)), SLOT(updateCurrentIndexForItem(ItemInfo *)));
 
-    QList<QCheckBox *> checkBoxes = QList<QCheckBox *>() << ui.caseSensitiveCheckBox << ui.exactMatchCheckBox << ui.regexCheckBox << ui.multilineRegExpCheckBox << ui.searchPropsCheckBox;
+    QList<QCheckBox *> checkBoxes = QList<QCheckBox *>() << ui.caseSensitiveCheckBox << ui.minimalMatchCheckBox << ui.regexCheckBox << ui.multilineMatchCheckBox << ui.searchPropsCheckBox;
     foreach (QCheckBox *checkBox, checkBoxes)
         connect(checkBox, SIGNAL(toggled(bool)), SLOT(resetSearchStatus()));
 
@@ -207,62 +207,47 @@ void FindItemsDialog::performSearch()
         if (ui.regexCheckBox->isChecked())
         {
             QRegExp rx(searchText, cs, QRegExp::RegExp2);
-            if (ui.exactMatchCheckBox->isChecked())
+            rx.setMinimal(ui.minimalMatchCheckBox->isChecked());
+            if (ui.multilineMatchCheckBox->isChecked())
             {
-                if (rx.exactMatch(itemText))
-                    _searchResult += qMakePair(item, rx.cap());
+                int matchIndex = rx.indexIn(itemText);
+                if (matchIndex != -1)
+                {
+                    int previousLineBreak = itemText.lastIndexOf("\n", matchIndex) + 1, nextLineBreak = itemText.indexOf("\n", matchIndex + rx.cap().length());
+                    QString matchedLine = nextLineBreak != -1 ? itemText.mid(previousLineBreak, nextLineBreak - previousLineBreak) : itemText.mid(previousLineBreak);
+                    matchIndex = rx.indexIn(matchedLine);
+                    matchedLine.insert(matchIndex, "<b>");
+                    matchedLine.insert(matchIndex + rx.cap().length() + 3, "</b>");
+                    matchedLine.replace("\n", htmlLineBreak);
+                    _searchResult += qMakePair(item, matchedLine);
+                }
             }
             else
             {
-                if (ui.multilineRegExpCheckBox->isChecked())
+                QStringList lines = itemText.split("\n");
+                foreach (QString line, lines)
                 {
-                    int matchIndex = rx.indexIn(itemText);
+                    int matchIndex = rx.indexIn(line);
                     if (matchIndex != -1)
                     {
-                        int previousLineBreak = itemText.lastIndexOf("\n", matchIndex) + 1, nextLineBreak = itemText.indexOf("\n", matchIndex + rx.cap().length());
-                        QString matchedLine = nextLineBreak != -1 ? itemText.mid(previousLineBreak, nextLineBreak - previousLineBreak) : itemText.mid(previousLineBreak);
-                        matchIndex = rx.indexIn(matchedLine);
-                        matchedLine.insert(matchIndex, "<b>");
-                        matchedLine.insert(matchIndex + rx.cap().length() + 3, "</b>");
-                        matchedLine.replace("\n", htmlLineBreak);
-                        _searchResult += qMakePair(item, matchedLine);
-                    }
-                }
-                else
-                {
-                    QStringList lines = itemText.split("\n");
-                    foreach (QString line, lines)
-                    {
-                        int matchIndex = rx.indexIn(line);
-                        if (matchIndex != -1)
-                        {
-                            line.insert(matchIndex, "<b>");
-                            line.insert(matchIndex + rx.cap().length() + 3, "</b>");
-                            _searchResult += qMakePair(item, line);
-                        }
+                        line.insert(matchIndex, "<b>");
+                        line.insert(matchIndex + rx.cap().length() + 3, "</b>");
+                        _searchResult += qMakePair(item, line);
                     }
                 }
             }
         }
         else
         {
-            if (ui.exactMatchCheckBox->isChecked())
+            int matchIndex = itemText.indexOf(searchText, 0, cs);
+            if (matchIndex != -1)
             {
-                if (!itemText.compare(searchText, cs))
-                    _searchResult += qMakePair(item, itemText);
-            }
-            else
-            {
-                int matchIndex = itemText.indexOf(searchText, 0, cs);
-                if (matchIndex != -1)
-                {
-                    int previousLineBreak = itemText.lastIndexOf("\n", matchIndex) + 1, nextLineBreak = itemText.indexOf("\n", matchIndex + searchText.length());
-                    QString matchedLine = nextLineBreak != -1 ? itemText.mid(previousLineBreak, nextLineBreak - previousLineBreak) : itemText.mid(previousLineBreak);
-                    matchIndex = matchedLine.indexOf(searchText, 0, cs);
-                    matchedLine.insert(matchIndex, "<b>");
-                    matchedLine.insert(matchIndex + searchText.length() + 3, "</b>");
-                    _searchResult += qMakePair(item, matchedLine);
-                }
+                int previousLineBreak = itemText.lastIndexOf("\n", matchIndex) + 1, nextLineBreak = itemText.indexOf("\n", matchIndex + searchText.length());
+                QString matchedLine = nextLineBreak != -1 ? itemText.mid(previousLineBreak, nextLineBreak - previousLineBreak) : itemText.mid(previousLineBreak);
+                matchIndex = matchedLine.indexOf(searchText, 0, cs);
+                matchedLine.insert(matchIndex, "<b>");
+                matchedLine.insert(matchIndex + searchText.length() + 3, "</b>");
+                _searchResult += qMakePair(item, matchedLine);
             }
         }
     }
@@ -307,8 +292,8 @@ void FindItemsDialog::loadSettings()
         move(settings.value("pos").toPoint());
     ui.searchComboBox->addItems(settings.value("searchHistory").toStringList());
     ui.caseSensitiveCheckBox->setChecked(settings.value("caseSensitive").toBool());
-    ui.exactMatchCheckBox->setChecked(settings.value("exactMatch").toBool());
-    ui.multilineRegExpCheckBox->setChecked(settings.value("regexMultiline").toBool());
+    ui.minimalMatchCheckBox->setChecked(settings.value("regexMinimalMatch").toBool());
+    ui.multilineMatchCheckBox->setChecked(settings.value("regexMultilineMatch").toBool());
     ui.regexCheckBox->setChecked(settings.value("regex").toBool());
     ui.searchPropsCheckBox->setChecked(settings.value("searchProps").toBool());
     ui.wrapAroundCheckBox->setChecked(settings.value("wrapAround", true).toBool());
@@ -317,7 +302,7 @@ void FindItemsDialog::loadSettings()
 
 void FindItemsDialog::saveSettings()
 {
-    QStringList history; // 10 strings max
+    QStringList history; // save 10 strings max
     for (int i = 0; i < ui.searchComboBox->count() && i < 10; ++i)
         history += ui.searchComboBox->itemText(i);
 
@@ -326,9 +311,9 @@ void FindItemsDialog::saveSettings()
     settings.setValue("pos", pos());
     settings.setValue("searchHistory", history);
     settings.setValue("caseSensitive", ui.caseSensitiveCheckBox->isChecked());
-    settings.setValue("exactMatch", ui.exactMatchCheckBox->isChecked());
+    settings.setValue("regexMinimalMatch", ui.minimalMatchCheckBox->isChecked());
+    settings.setValue("regexMultilineMatch", ui.multilineMatchCheckBox->isChecked());
     settings.setValue("regex", ui.regexCheckBox->isChecked());
-    settings.setValue("regexMultiline", ui.multilineRegExpCheckBox->isChecked());
     settings.setValue("searchProps", ui.searchPropsCheckBox->isChecked());
     settings.setValue("wrapAround", ui.wrapAroundCheckBox->isChecked());
     settings.endGroup();

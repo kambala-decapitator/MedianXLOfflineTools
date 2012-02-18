@@ -35,8 +35,8 @@
   <widget class="QCheckBox" name="regexCheckBox">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>120</y>
+     <x>140</x>
+     <y>100</y>
      <width>115</width>
      <height>17</height>
     </rect>
@@ -58,23 +58,29 @@
     <string>Case sensitive</string>
    </property>
   </widget>
-  <widget class="QCheckBox" name="exactMatchCheckBox">
+  <widget class="QCheckBox" name="minimalMatchCheckBox">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="geometry">
     <rect>
      <x>140</x>
-     <y>100</y>
-     <width>82</width>
+     <y>120</y>
+     <width>103</width>
      <height>17</height>
     </rect>
    </property>
+   <property name="toolTip">
+    <string>All greedy quantifiers become non-greedy, e.g. .+ and *+ transform in .+? and *+? respectively</string>
+   </property>
    <property name="text">
-    <string>Exact match</string>
+    <string>Minimal matching</string>
    </property>
   </widget>
   <widget class="QCheckBox" name="wrapAroundCheckBox">
    <property name="geometry">
     <rect>
-     <x>140</x>
+     <x>20</x>
      <y>140</y>
      <width>86</width>
      <height>17</height>
@@ -179,7 +185,7 @@
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>140</y>
+     <y>120</y>
      <width>119</width>
      <height>17</height>
     </rect>
@@ -191,20 +197,23 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QCheckBox" name="multilineRegExpCheckBox">
+  <widget class="QCheckBox" name="multilineMatchCheckBox">
    <property name="enabled">
     <bool>false</bool>
    </property>
    <property name="geometry">
     <rect>
      <x>140</x>
-     <y>120</y>
-     <width>101</width>
+     <y>140</y>
+     <width>107</width>
      <height>17</height>
     </rect>
    </property>
+   <property name="toolTip">
+    <string>Treat string as single line (emulation of Perl's /s option)</string>
+   </property>
    <property name="text">
-    <string>Multiline Regex</string>
+    <string>Multiline matching</string>
    </property>
   </widget>
   <widget class="QPushButton" name="helpButton">
@@ -243,7 +252,7 @@
   <connection>
    <sender>regexCheckBox</sender>
    <signal>toggled(bool)</signal>
-   <receiver>multilineRegExpCheckBox</receiver>
+   <receiver>multilineMatchCheckBox</receiver>
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -253,6 +262,22 @@
     <hint type="destinationlabel">
      <x>143</x>
      <y>90</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>regexCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>minimalMatchCheckBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>51</x>
+     <y>127</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>166</x>
+     <y>113</y>
     </hint>
    </hints>
   </connection>

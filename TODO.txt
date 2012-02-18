@@ -1,4 +1,3 @@
-- modify exact match somehow
 - write help for search
 - try fixing disenchant
 - compress and maybe encrypt txt data
