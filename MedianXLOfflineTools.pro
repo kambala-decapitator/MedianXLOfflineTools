@@ -80,3 +80,6 @@ win32 {
 }
 
 # QMAKE_CXXFLAGS += -std=c++0x
+
+OTHER_FILES += \
+    TODO.txt

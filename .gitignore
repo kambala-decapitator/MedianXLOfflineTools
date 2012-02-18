@@ -31,3 +31,4 @@ _ReSharper*/
 *.user
 *sdf
 ipch/
+*.DS_Store

@@ -1,5 +1,7 @@
 - write help for search
 - try fixing disenchant
+- fix stats table size
+- add shortcuts to plugy navigation
 - compress and maybe encrypt txt data
 -----
 - show experince bar and completion of current level in %
@@ -18,32 +20,11 @@
 - search and fix all 'TODO:' in code
 - remove all qDebug()
 - copy files to destdir from .pro:
-1.
-linux-g++{
-    #...
-    EXTRA_BINFILES += \
-        $${THIRDPARTY_PATH}/gstreamer-0.10/linux/plugins/libgstrtp.so \
-        $${THIRDPARTY_PATH}/gstreamer-0.10/linux/plugins/libgstvideo4linux2.so
-    for(FILE,EXTRA_BINFILES) {
-        QMAKE_POST_LINK += $$quote(cp $${FILE} $${DESTDIR}$$escape_expand(\n\t))
-    }
-}
+http://stackoverflow.com/questions/7631249/how-to-copy-update-resources-frameworks-or-plugins-to-the-mac-os-x-app-bundl
+http://developer.qt.nokia.com/faq/answer/is_there_a_way_to_tell_qmake_to_copy_files_into_my_application_bundle_e.g._
+http://developer.qt.nokia.com/forums/viewthread/12208
 
-win32 {
-    #...
-    EXTRA_BINFILES += \
-        $${THIRDPARTY_PATH}/glib-2.0/win32/bin/libglib-2.0.dll \
-        $${THIRDPARTY_PATH}/glib-2.0/win32/bin/libgmodule-2.0.dll
-    EXTRA_BINFILES_WIN = $${EXTRA_BINFILES}
-    EXTRA_BINFILES_WIN ~= s,/,\\,g
-    DESTDIR_WIN = $${DESTDIR}
-    DESTDIR_WIN ~= s,/,\\,g
-    for(FILE,EXTRA_BINFILES_WIN) {
-        QMAKE_POST_LINK +=$$quote(cmd /c copy /y $${FILE} $${DESTDIR_WIN}$$escape_expand(\n\t))
-    }
-}
-
-2. INSTALLS
+INSTALLS
 images.path    = $${DESTDIR}/images
 images.files   += images/splashscreen.png
 images.files   += images/logo.png

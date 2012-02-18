@@ -52,7 +52,6 @@ MedianXLOfflineTools::MedianXLOfflineTools(QWidget *parent, Qt::WFlags flags) : 
     maxValueFormat(tr("Max: %1")), minValueFormat(tr("Min: %1")), investedValueFormat(tr("Invested: %1")), _isLoaded(false)
 {
     ui.setupUi(this);
-    ui.menuOptions->menuAction()->setMenuRole(QAction::PreferencesRole);
 
     _exitSeparator = ui.menuFile->insertSeparator(ui.actionExit);
     createLanguageMenu();
