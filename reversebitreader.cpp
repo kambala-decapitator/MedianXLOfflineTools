@@ -40,7 +40,7 @@ int ReverseBitReader::setPos(int newPos)
 
 void ReverseBitReader::skip(int length)
 {
-    if (_pos - length >= 0 && _pos - length <= _bitString.length())
+    if (_pos - length > 0 && _pos - length <= _bitString.length())
         _pos -= length;
     else
     {

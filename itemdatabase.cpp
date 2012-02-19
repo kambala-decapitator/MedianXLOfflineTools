@@ -38,15 +38,16 @@ QHash<QByteArray, ItemBase> *ItemDataBase::Items()
 
             ItemBase item;
             item.name = QString::fromUtf8(data.at(1));
-            item.width = data.at(2).toUShort();
-            item.height = data.at(3).toUShort();
-            item.genericType = static_cast<Enums::ItemTypeGeneric::ItemTypeGenericEnum>(data.at(4).toUShort());
-            item.isStackable = data.at(5).toUShort();
-            item.rlvl = data.at(6).toUShort();
-            item.imageName = data.at(7);
-            item.typeString = data.at(8);
-            item.socketableType = data.at(9).isEmpty() ? -1 : data.at(9).toShort();
-            item.classCode = data.at(10).toShort();
+            item.spelldesc = QString::fromUtf8(data.at(2)); // currently only misc items have it
+            item.width = data.at(3).toUShort();
+            item.height = data.at(4).toUShort();
+            item.genericType = static_cast<Enums::ItemTypeGeneric::ItemTypeGenericEnum>(data.at(5).toUShort());
+            item.isStackable = data.at(6).toUShort();
+            item.rlvl = data.at(7).toUShort();
+            item.imageName = data.at(8);
+            item.typeString = data.at(9);
+            item.socketableType = data.at(10).isEmpty() ? -1 : data.at(10).toShort();
+            item.classCode = data.at(11).toShort();
             allItems[data.at(0)] = item;
         }
     }
@@ -423,16 +424,8 @@ QString ItemDataBase::completeItemName(ItemInfo *item, bool shouldUseColor, bool
     else
     {
         if (!specialName.isEmpty() && specialName != itemName)
-            itemName.prepend(specialName + htmlLineBreak);
-
-        // reverse lines in itemName
-        QStringList lines = itemName.split("\\n");
-        std::reverse(lines.begin(), lines.end());
-        itemName = lines.join(htmlLineBreak);
-
-        itemName.remove("\\grey;");
-        foreach (const QByteArray &colorString, colorStrings)
-            itemName.remove(colorString);
+            itemName += "\\n" + specialName;
+        expandMultilineString(&itemName);
 
         if (showQualityText)
         {
@@ -465,11 +458,29 @@ QString ItemDataBase::completeItemName(ItemInfo *item, bool shouldUseColor, bool
             else if (item->isRW)
                 itemName.prepend(QString("[%1]%2").arg(tr("runeword"), htmlLineBreak));
 
+            QString spelldesc = Items()->value(item->itemType).spelldesc;
+            if (!spelldesc.isEmpty())
+            {
+                expandMultilineString(&spelldesc);
+                itemName += htmlLineBreak + spelldesc;
+            }
+
+            itemName.remove("\\grey;");
+            foreach (const QByteArray &colorString, colorStrings)
+                itemName.remove(colorString);
+
             if (item->isEthereal)
                 itemName += QString("%1[%2]").arg(htmlLineBreak, tr("ethereal"));
         }
     }
     return itemName;
+}
+
+void ItemDataBase::expandMultilineString(QString *stringToExpand)
+{
+    QStringList lines = stringToExpand->split("\\n");
+    std::reverse(lines.begin(), lines.end());
+    *stringToExpand = lines.join(htmlLineBreak);
 }
 
 QHash<int, ColorIndex> *ItemDataBase::itemQualityColorsHash()

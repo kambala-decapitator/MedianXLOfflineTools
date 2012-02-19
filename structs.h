@@ -174,7 +174,7 @@ struct BaseStats
 
 struct ItemBase
 {
-    QString name;
+    QString name, spelldesc;
     quint8 width, height;
     Enums::ItemTypeGeneric::ItemTypeGenericEnum genericType;
     bool isStackable;

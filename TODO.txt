@@ -1,8 +1,7 @@
 - finish fixing disenchant
 - fix stats table size
-- make spelldescstr be concatenated at runtime to correctly display ilvl
 - write help for search
-- add a check for avoid >= 100%
+- add a check for avoid >= 100%, for ctc > 100%
 - uncomment 'like duping items'
 - compress and maybe encrypt txt data
 -----

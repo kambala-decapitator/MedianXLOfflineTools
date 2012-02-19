@@ -82,6 +82,8 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
 
     // create full item description
     QString itemDescription = ItemDataBase::completeItemName(item, true) + htmlLineBreak + tr("Item Level: %1").arg(item->ilvl) + htmlLineBreak;
+    if (!itemBase.spelldesc.isEmpty())
+        itemDescription += htmlStringFromDiabloColorString(itemBase.spelldesc) + htmlLineBreak;
     if (item->isRW)
     {
         QString runes;

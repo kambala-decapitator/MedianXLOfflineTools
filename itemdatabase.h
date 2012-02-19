@@ -42,6 +42,7 @@ public:
 
 private:
     static QList<QByteArray> stringArrayOfCurrentLineInFile(QFile &f);
+    static void expandMultilineString(QString *stringToExpand);
 
     static QMultiHash<QString, QString> _sets;
 };
