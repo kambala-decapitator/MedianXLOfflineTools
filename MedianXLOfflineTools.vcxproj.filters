@@ -229,6 +229,7 @@
     <None Include="medianxlofflinetools_ru.ts">
       <Filter>Translation Files</Filter>
     </None>
+    <None Include="TODO.txt" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="enums.h">

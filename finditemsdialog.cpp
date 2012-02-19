@@ -256,6 +256,13 @@ void FindItemsDialog::performSearch()
     ui.searchResultsButton->setEnabled(!_searchResult.isEmpty());
     _resultsWidget->updateItems(&_searchResult);
 
+    // search text isn't added if a user presses find next/previous button directly
+    if (ui.searchComboBox->findText(searchText) == -1)
+    {
+        ui.searchComboBox->insertItem(0, searchText);
+        ui.searchComboBox->setCurrentIndex(0);
+    }
+
     // move the search string to the top of the last searches list if it is present there and not on the top
     if (ui.searchComboBox->currentIndex() > 0)
     {

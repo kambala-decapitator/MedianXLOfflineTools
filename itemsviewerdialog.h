@@ -54,6 +54,7 @@ private:
     QTabWidget *_tabWidget;
 
     void loadSettings();
+
     ItemsPropertiesSplitter *splitterAtIndex(int tabIndex);
 };
 

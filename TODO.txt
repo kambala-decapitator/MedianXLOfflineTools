@@ -1,7 +1,8 @@
 - write help for search
-- try fixing disenchant
+- finish fixing disenchant
+- update number of items in tab name when plugy page is switched
+- make shortcuts for plugy navigation work and remove ItemStorageTableView class (eventFilter)
 - fix stats table size
-- add shortcuts to plugy navigation
 - compress and maybe encrypt txt data
 -----
 - show experince bar and completion of current level in %

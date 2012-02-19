@@ -1806,8 +1806,11 @@ void MedianXLOfflineTools::updateStatusTips(int newStatPoints, int investedStatP
 
 void MedianXLOfflineTools::updateWindowTitle()
 {
-//    setWindowTitle(QString("%1 - %2").arg(QDir::toNativeSeparators(_charPath), qApp->applicationName()));
+#ifdef Q_WS_WIN32
+    setWindowTitle(_charPath.isEmpty() ? qApp->applicationName() : QString("%1 - %2[*]").arg(QDir::toNativeSeparators(_charPath), qApp->applicationName()));
+#else
     setWindowFilePath(_charPath);
+#endif
 }
 
 void MedianXLOfflineTools::updateTableStats(QTableWidgetItem *item, int diff, int statPerPoint)

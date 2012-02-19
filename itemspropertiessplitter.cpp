@@ -23,20 +23,23 @@ static const QString iconPathFormat(":/PlugyArrows/icons/plugy/%1.png");
 ItemsPropertiesSplitter::ItemsPropertiesSplitter(ItemStorageTableView *itemsView, ItemStorageTableModel *itemsModel, bool shouldCreateNavigation, QWidget *parent)
     : QSplitter(Qt::Horizontal, parent), _itemsView(itemsView), _itemsModel(itemsModel)
 {
-//    setHandleWidth(1);
-
     _itemsView->setContextMenuPolicy(Qt::CustomContextMenu);
     _itemsView->setEditTriggers(QAbstractItemView::NoEditTriggers);
     _itemsView->setHorizontalScrollMode(QAbstractItemView::ScrollPerPixel);
     _itemsView->setVerticalScrollMode(QAbstractItemView::ScrollPerPixel);
     _itemsView->setSelectionMode(QAbstractItemView::SingleSelection);
-    //_itemsView->setStyleSheet("QAbstractItemView::item:selected:active { background:black } QAbstractItemView::item:hover { color:green; background-color: yellow }");
-    _itemsView->setStyleSheet("QAbstractItemView::item:selected:active { background:black }");
+    _itemsView->setStyleSheet("QTableView::item { background: black; border: solid 0.5px; }"
+                              //"QTableView::item:!focus { border: dashed 1px red; }"
+                              //"QTableView::icon:selected { left: -1px; }"
+                             );
     _itemsView->setGridStyle(Qt::SolidLine);
     _itemsView->setCornerButtonEnabled(false);
     _itemsView->horizontalHeader()->hide();
     _itemsView->verticalHeader()->hide();
     _itemsView->setModel(_itemsModel);
+
+    _itemsView->installEventFilter(this);
+    installEventFilter(this);
 
     if (shouldCreateNavigation)
     {
@@ -63,14 +66,12 @@ ItemsPropertiesSplitter::ItemsPropertiesSplitter(ItemStorageTableView *itemsView
         QHBoxLayout *hlayout = new QHBoxLayout;
         hlayout->addWidget(_left10Button);
         hlayout->addWidget(_leftButton);
-        //hlayout->addStretch();
         hlayout->addWidget(_pageSpinBox);
-        //hlayout->addStretch();
         hlayout->addWidget(_rightButton);
         hlayout->addWidget(_right10Button);
         // glue everything together (used mainly for Mac OS X)
         hlayout->setSpacing(0);
-        hlayout->setMargin(0);
+        hlayout->setContentsMargins(QMargins());
 
         QWidget *w = new QWidget(this);
         QVBoxLayout *vlayout = new QVBoxLayout(w);
@@ -89,7 +90,7 @@ ItemsPropertiesSplitter::ItemsPropertiesSplitter(ItemStorageTableView *itemsView
     addWidget(_propertiesWidget);
 
     setChildrenCollapsible(false);
-    setStretchFactor(1, 4);
+    setStretchFactor(1, 5);
 
     connect(_itemsView->selectionModel(), SIGNAL(currentChanged(const QModelIndex &, const QModelIndex &)), SLOT(itemSelected(const QModelIndex &)));
     connect(_itemsView, SIGNAL(customContextMenuRequested(const QPoint &)), SLOT(showContextMenu(const QPoint &)));
@@ -111,34 +112,74 @@ void ItemsPropertiesSplitter::itemSelected(const QModelIndex &index)
     _propertiesWidget->displayItemProperties(_itemsModel->itemAt(index));
 }
 
+bool ItemsPropertiesSplitter::eventFilter(QObject *obj, QEvent *event)
+{
+    // TODO: implement
+    return false;
+}
+
 void ItemsPropertiesSplitter::keyPressEvent(QKeyEvent *keyEvent)
 {
-    if (_left10Button && keyEvent->key() == Qt::Key_Shift)
+    if (_left10Button)
     {
-        _left10Button->setIcon(QIcon(iconPathFormat.arg("left100")));
-        _leftButton->setIcon(QIcon(iconPathFormat.arg("first")));
-        _rightButton->setIcon(QIcon(iconPathFormat.arg("last")));
-        _rightButton->setToolTip(QString::number(_lastNotEmptyPage));
-        _right10Button->setIcon(QIcon(iconPathFormat.arg("right100")));
+        if (_isShiftPressed = keyEventHasShift(keyEvent))
+        {
+            _left10Button->setIcon(QIcon(iconPathFormat.arg("left100")));
+            _left10Button->setToolTip(QKeySequence(Qt::ALT + Qt::SHIFT + Qt::Key_Left).toString(QKeySequence::NativeText));
 
-        _isShiftPressed = true;
+            _leftButton->setIcon(QIcon(iconPathFormat.arg("first")));
+            _leftButton->setToolTip(QKeySequence(Qt::CTRL + Qt::SHIFT + Qt::Key_Left).toString(QKeySequence::NativeText));
+
+            _rightButton->setIcon(QIcon(iconPathFormat.arg("last")));
+            _rightButton->setToolTip(QKeySequence(Qt::CTRL + Qt::SHIFT + Qt::Key_Right).toString(QKeySequence::NativeText));
+
+            _right10Button->setIcon(QIcon(iconPathFormat.arg("right100")));
+            _right10Button->setToolTip(QKeySequence(Qt::ALT + Qt::SHIFT + Qt::Key_Right).toString(QKeySequence::NativeText));
+        }
+
+        int key = keyEvent->key();
+        if (keyEvent->modifiers() & Qt::CTRL)
+        {
+            if (key == Qt::Key_Left)
+                leftClicked();
+            else if (key == Qt::Key_Right)
+                rightClicked();
+        }
+        else if (keyEvent->modifiers() & Qt::ALT)
+        {
+            if (key == Qt::Key_Left)
+                left10Clicked();
+            else if (key == Qt::Key_Right)
+                right10Clicked();
+        }
     }
     QSplitter::keyPressEvent(keyEvent);
 }
 
 void ItemsPropertiesSplitter::keyReleaseEvent(QKeyEvent *keyEvent)
 {
-    if (_left10Button && keyEvent->key() == Qt::Key_Shift)
+    if (_left10Button && keyEventHasShift(keyEvent))
     {
         _left10Button->setIcon(QIcon(iconPathFormat.arg("left10")));
+        _left10Button->setToolTip(QKeySequence(Qt::ALT + Qt::Key_Left).toString(QKeySequence::NativeText));
+
         _leftButton->setIcon(QIcon(iconPathFormat.arg("left")));
+        _leftButton->setToolTip(QKeySequence(Qt::CTRL + Qt::Key_Left).toString(QKeySequence::NativeText));
+
         _rightButton->setIcon(QIcon(iconPathFormat.arg("right")));
-        _rightButton->setToolTip(QString());
+        _rightButton->setToolTip(QKeySequence(Qt::CTRL + Qt::Key_Right).toString(QKeySequence::NativeText));
+
         _right10Button->setIcon(QIcon(iconPathFormat.arg("right10")));
+        _right10Button->setToolTip(QKeySequence(Qt::ALT + Qt::Key_Right).toString(QKeySequence::NativeText));
 
         _isShiftPressed = false;
     }
     QSplitter::keyPressEvent(keyEvent);
+}
+
+bool ItemsPropertiesSplitter::keyEventHasShift(QKeyEvent *keyEvent)
+{
+    return keyEvent->key() == Qt::Key_Shift || keyEvent->modifiers() & Qt::SHIFT;
 }
 
 void ItemsPropertiesSplitter::setItems(const ItemsList &newItems)
@@ -340,20 +381,19 @@ void ItemsPropertiesSplitter::disenchantItem()
     if (newItem->storage == Enums::ItemStorage::Stash)
     {
         ItemsList personalStashItems = ItemParser::itemsLocatedAt(Enums::ItemStorage::PersonalStash);
-        bool found = false;
+        int index = 0;
         foreach (ItemInfo *personalStashItem, personalStashItems)
-            if (personalStashItem->plugyPage == 1)
-            {
-                foreach (ItemInfo *stashItem, items)
-                {
-
-                }
-            }
-        if (found)
+        {
+            if (personalStashItem->plugyPage == 1 && personalStashItem->bitString == newItem->bitString)
+                break;
+            ++index;
+        }
+        if (index < personalStashItems.size())
         {
             ItemInfo *copy = new ItemInfo(*newItem);
             copy->storage = Enums::ItemStorage::PersonalStash;
             copy->plugyPage = 1;
+            // TODO: finish
         }
     }
     else if (newItem->storage == Enums::ItemStorage::PersonalStash)

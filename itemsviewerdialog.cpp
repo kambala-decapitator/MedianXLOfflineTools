@@ -23,7 +23,6 @@ ItemsViewerDialog::ItemsViewerDialog(QWidget *parent) : QDialog(parent), _tabWid
 {
     setAttribute(Qt::WA_DeleteOnClose);
     setWindowFlags(windowFlags() & ~Qt::WindowContextHelpButtonHint);
-    setWindowTitle(tr("Items viewer"));
 
     QHBoxLayout *layout = new QHBoxLayout(this);
     layout->addWidget(_tabWidget);
@@ -45,6 +44,7 @@ ItemsViewerDialog::ItemsViewerDialog(QWidget *parent) : QDialog(parent), _tabWid
     connect(_tabWidget, SIGNAL(currentChanged(int)), SLOT(tabChanged(int)));
 
     loadSettings();
+    _tabWidget->widget(0)->setFocus();
 }
 
 void ItemsViewerDialog::loadSettings()
@@ -83,6 +83,7 @@ void ItemsViewerDialog::tabChanged(int newIndex)
 
 void ItemsViewerDialog::updateItems()
 {
+    quint32 itemsTotal = 0;
     for (int i = GearIndex; i <= LastIndex; ++i)
     {
         bool isGear = i == GearIndex;
@@ -145,8 +146,14 @@ void ItemsViewerDialog::updateItems()
             }
         }
         splitterAtIndex(i)->setItems(items);
+
+        _tabWidget->setTabText(i, tabNames.at(i) + QString(" (%1)").arg(items.size()));
         _tabWidget->setTabEnabled(i, !items.isEmpty());
+        
+        itemsTotal += items.size();
     }
+    
+    setWindowTitle(tr("Items viewer (items total: %1)").arg(itemsTotal));
 }
 
 int ItemsViewerDialog::indexFromItemStorage(int storage)

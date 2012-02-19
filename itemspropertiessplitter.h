@@ -5,6 +5,7 @@
 
 #include <QSplitter>
 
+
 class ItemStorageTableView;
 class ItemStorageTableModel;
 class PropertiesViewerWidget;
@@ -28,6 +29,7 @@ public:
     void showFirstItem();
 
 protected:
+    bool eventFilter(QObject *obj, QEvent *event);
     void keyPressEvent(QKeyEvent *keyEvent);
     void keyReleaseEvent(QKeyEvent *keyEvent);
 
@@ -59,6 +61,8 @@ private:
     quint32 _lastNotEmptyPage;
 
     bool _isShiftPressed;
+
+    bool keyEventHasShift(QKeyEvent *keyEvent);
 
     void updateItems(const ItemsList &newItems);
     void performDeleteItem(ItemInfo *item);

@@ -27,8 +27,7 @@ QVariant ItemStorageTableModel::data(const QModelIndex &index, int role) const
     if (item)
     {
         const ItemBase &itemBase = ItemDataBase::Items()->value(item->itemType);
-        // quick hack for jewel
-        QString imageName = item->itemType != "jew" ? itemBase.imageName : "invjw";
+        QString imageName = item->itemType == "jew" ? "invjw" : itemBase.imageName; // quick hack for jewel
         if (item->variableGraphicIndex && QRegExp("\\d$").indexIn(imageName) == -1) // some items already have correct name despite the variableGraphicIndex (e.g. Assur's Bane)
             imageName += QString::number(item->variableGraphicIndex);
         QString imagePath = ResourcePathManager::pathForImageName(imageName);

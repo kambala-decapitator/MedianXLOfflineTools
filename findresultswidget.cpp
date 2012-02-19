@@ -20,6 +20,7 @@
 FindResultsWidget::FindResultsWidget(QWidget *parent) : QWidget(parent), _groupBox(new QGroupBox(tr("Results"), this)), _resultsTreeWidget(new QTreeWidget(_groupBox))
 {
     setStyleSheet("QTreeWidget { background-color: black; }"
+                  "QTreeWidget::branch { color: white; }"
                   "QTreeWidget::item { selection-color: red; }"
                   "QTreeWidget::item:hover { border: 1px solid #bfcde4; }"
                   "QTreeWidget::item:selected { border: 1px solid #567dbc; }"
