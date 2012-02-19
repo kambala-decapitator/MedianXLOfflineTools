@@ -8,7 +8,6 @@
 
 typedef QPair<ItemInfo *, QString> SearchResultItem;
 
-class QGroupBox;
 class QTreeWidget;
 class QEvent;
 
@@ -29,7 +28,6 @@ signals:
     void showItem(ItemInfo *item);
 
 private:
-    QGroupBox *_groupBox;
     QTreeWidget *_resultsTreeWidget;
     QMap<int, ItemsList> _foundItemsMap;
 };

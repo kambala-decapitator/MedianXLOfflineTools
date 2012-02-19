@@ -190,7 +190,7 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
                 if (!ok)
                 {
                     inputDataStream.device()->seek(itemStartOffset - 2); // set to JM - beginning of the item
-                    item->rwProps.insert(1, ItemProperty(tr("Error parsing RW properties, please report!")));
+                    item->rwProps.insert(1, ItemProperty(tr("Error parsing RW properties (ok == 0), please report!")));
                     searchEndOffset = nextItemOffset + 1;
                     continue;
                 }
@@ -383,11 +383,11 @@ ItemInfo *ItemParser::loadItemFromFile(const QString &filePath)
         item->row = item->column = -1;
     }
     else
-        ERROR_BOX_NO_PARENT(tr("Error opening file '%1'\nReason: %2").arg(filePath).arg(itemFile.errorString()));
+        ERROR_BOX_NO_PARENT(tr("Error opening file '%1'").arg(filePath).arg(itemFile.errorString()));
     return item;
 }
 
-ItemsList ItemParser::itemsLocatedAt(int storage, ItemsList *allItems /*= 0*/, int location /*= Enums::ItemLocation::Stored*/)
+ItemsList ItemParser::itemsStoredIn(int storage, ItemsList *allItems /*= 0*/, int location /*= Enums::ItemLocation::Stored*/)
 {
     ItemsList items, *characterItems = allItems ? allItems : ItemDataBase::currentCharacterItems;
     for (int i = 0; i < characterItems->size(); ++i)
@@ -401,7 +401,7 @@ ItemsList ItemParser::itemsLocatedAt(int storage, ItemsList *allItems /*= 0*/, i
 
 bool ItemParser::storeItemIn(ItemInfo *item, Enums::ItemStorage::ItemStorageEnum storage, quint8 rows, quint8 cols, int plugyPage /*= 0*/)
 {
-    ItemsList items = itemsLocatedAt(storage);
+    ItemsList items = itemsStoredIn(storage);
     for (quint8 i = 0; i < rows; ++i)
         for (quint8 j = 0; j < cols; ++j)
             if (canStoreItemAt(i, j, item->itemType, items, rows, cols))

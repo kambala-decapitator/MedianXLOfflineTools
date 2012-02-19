@@ -16,8 +16,8 @@ qint64 ReverseBitReader::readNumber(int length, bool *ok /*= 0*/)
         if (ok)
             *ok = false;
 
-        _pos = _bitString.length() + 1;
         qWarning("attempt to read past bitstring length");
+        _pos = _bitString.length() + 1;
         throw 1;
         return 0;
     }
@@ -40,7 +40,7 @@ int ReverseBitReader::setPos(int newPos)
 
 void ReverseBitReader::skip(int length)
 {
-    if (_pos - length > 0 && _pos - length <= _bitString.length())
+    if (_pos - length >= 0 && _pos - length <= _bitString.length())
         _pos -= length;
     else
     {

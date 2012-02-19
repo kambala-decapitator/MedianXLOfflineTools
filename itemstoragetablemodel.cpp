@@ -16,7 +16,7 @@ void ItemStorageTableModel::setItems(const ItemsList &newItems)
 
     _itemsHash.clear();
     foreach (ItemInfo *item, newItems)
-        _itemsHash[qMakePair(item->row, item->column)] = item;
+        addItem(item);
     
     endResetModel();
 }

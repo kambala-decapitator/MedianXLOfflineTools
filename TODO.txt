@@ -1,8 +1,9 @@
-- write help for search
 - finish fixing disenchant
-- update number of items in tab name when plugy page is switched
-- make shortcuts for plugy navigation work and remove ItemStorageTableView class (eventFilter)
 - fix stats table size
+- make spelldescstr be concatenated at runtime to correctly display ilvl
+- write help for search
+- add a check for avoid >= 100%
+- uncomment 'like duping items'
 - compress and maybe encrypt txt data
 -----
 - show experince bar and completion of current level in %
@@ -12,12 +13,10 @@
 - generate some bbcode/html report about character and/or plugy stashes contents
 - move recent files to separate sub-menu
 - add save prompt
-- add a check for avoid >= 100%
-- uncomment 'like duping items'
+- move most functionality from splitter to tableview
 - d2s file association
 - maybe win7 taskbar and mac dock menu support to open recent files
 -----
-- move most functionality from splitter to tableview
 - search and fix all 'TODO:' in code
 - remove all qDebug()
 - copy files to destdir from .pro:
@@ -36,14 +35,15 @@ write in changelog:
 
 v0.3:
 - sort stashes
-- affix rlvl support
+- affix rlvl (and maybe names) support
 - drag & drop
 - merc items
-- create plugy stashes
+- creation of plugy stashes
 - nice display of property 'Adds x-y ... damage'
 - unsocket items
 - show UMO properties
 - try unMO UMOs
 - calculate correct str/dex bonus based on character stats
 - display actual stat values
-- fix MO display (found are displayed as 'mystic orb', bought ones - their property)
+- display skill tree
+- skills allocation

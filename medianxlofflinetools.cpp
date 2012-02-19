@@ -10,6 +10,7 @@
 #include "reversebitwriter.h"
 #include "itemparser.h"
 #include "reversebitreader.h"
+#include "itemspropertiessplitter.h"
 
 #include <QCloseEvent>
 #include <QFormLayout>
@@ -261,7 +262,7 @@ void MedianXLOfflineTools::saveCharacter()
         backupFile(inputFile);
         if (!inputFile.open(QIODevice::WriteOnly))
         {
-            ERROR_BOX_FILE(tr("Error creating file '%1'\nReason: %2"), inputFile);
+            ERROR_BOX_FILE(tr("Error creating file '%1'"), inputFile);
             continue;
         }
 
@@ -342,12 +343,12 @@ void MedianXLOfflineTools::saveCharacter()
                     if (extension == "d2s") // delete
                     {
                         if (!sourceFile.remove())
-                            ERROR_BOX_FILE(tr("Error removing file '%1'\nReason: %2"), sourceFile);
+                            ERROR_BOX_FILE(tr("Error removing file '%1'"), sourceFile);
                     }
                     else // rename
                     {
                         if (!sourceFile.rename(fileName + "." + extension) && !isOldNameEmpty)
-                            ERROR_BOX_FILE(tr("Error renaming file '%1'\nReason: %2"), sourceFile);
+                            ERROR_BOX_FILE(tr("Error renaming file '%1'"), sourceFile);
                     }
                 }
 
@@ -364,10 +365,10 @@ void MedianXLOfflineTools::saveCharacter()
             INFO_BOX(tr("File '%1' successfully saved!").arg(QDir::toNativeSeparators(saveFileName)));
         }
         else
-            ERROR_BOX_FILE(tr("Error writing file '%1'\nReason: %2"), outputFile);
+            ERROR_BOX_FILE(tr("Error writing file '%1'"), outputFile);
     }
     else
-        ERROR_BOX_FILE(tr("Error creating file '%1'\nReason: %2"), outputFile);
+        ERROR_BOX_FILE(tr("Error creating file '%1'"), outputFile);
 }
 
 void MedianXLOfflineTools::statChanged(int newValue)
@@ -590,6 +591,7 @@ void MedianXLOfflineTools::showItems(bool activate /*= true*/)
     else
     {
         _itemsDialog = new ItemsViewerDialog(this);
+        connect(_itemsDialog->tabWidget(), SIGNAL(currentChanged(int)), SLOT(itemStorageTabChanged(int)));
         _itemsDialog->show();
 
         if (!activate)
@@ -597,6 +599,28 @@ void MedianXLOfflineTools::showItems(bool activate /*= true*/)
             _findItemsDialog->activateWindow();
             _findItemsDialog->raise();
         }
+    }
+}
+
+void MedianXLOfflineTools::itemStorageTabChanged(int tabIndex)
+{
+    bool isPlugyStorage = _itemsDialog->isPlugyStorageIndex(tabIndex);
+    ui.menuGoToPage->setEnabled(isPlugyStorage);
+
+    QList<QAction *> plugyNavigationActions = QList<QAction *>() << ui.actionPrevious10 << ui.actionPreviousPage << ui.actionNextPage << ui.actionNext10
+                                                                 << ui.actionPrevious100 << ui.actionFirstPage << ui.actionLastPage << ui.actionNext100;
+    foreach (QAction *action, plugyNavigationActions)
+        action->disconnect();
+
+    if (isPlugyStorage)
+    {
+        QList<const char *> plugyNavigationSlots = QList<const char *>() << SLOT(previous10Pages()) << SLOT(previousPage()) << SLOT(nextPage()) << SLOT(next10Pages())
+                                                                         << SLOT(previous100Pages()) << SLOT(firstPage()) << SLOT(lastPage()) << SLOT(next100Pages());
+        Q_ASSERT(plugyNavigationActions.size() == plugyNavigationSlots.size()); // let's make sure that I can count correctly :)
+
+        ItemsPropertiesSplitter *plugyTab = _itemsDialog->splitterAtIndex(tabIndex);
+        for (int i = 0; i < plugyNavigationActions.size(); ++i)
+            connect(plugyNavigationActions[i], SIGNAL(triggered()), plugyTab, plugyNavigationSlots[i]);
     }
 }
 
@@ -619,9 +643,9 @@ void MedianXLOfflineTools::giveCube()
 
     // predefined position is (0,0) in inventory
     if (cube->column)
-        ReverseBitWriter::replaceValueInBitString(cube->bitString, Enums::ItemOffsets::Columns, cube->column);
+        ReverseBitWriter::replaceValueInBitString(cube->bitString, Enums::ItemOffsets::Column, cube->column);
     if (cube->row)
-        ReverseBitWriter::replaceValueInBitString(cube->bitString, Enums::ItemOffsets::Rows, cube->row);
+        ReverseBitWriter::replaceValueInBitString(cube->bitString, Enums::ItemOffsets::Row, cube->row);
     if (cube->storage != Enums::ItemStorage::Inventory)
     {
         ReverseBitWriter::replaceValueInBitString(cube->bitString, Enums::ItemOffsets::Storage, cube->storage);
@@ -1075,7 +1099,7 @@ bool MedianXLOfflineTools::processSaveFile(const QString &charPath)
     QFile inputFile(charPath);
     if (!inputFile.open(QIODevice::ReadOnly))
     {
-        ERROR_BOX_FILE(tr("Error opening file '%1'\nReason: %2"), inputFile);
+        ERROR_BOX_FILE(tr("Error opening file '%1'"), inputFile);
         return false;
     }
 
@@ -1449,9 +1473,10 @@ bool MedianXLOfflineTools::processSaveFile(const QString &charPath)
     QString oldSharedStashPath = _plugyStashesHash[Enums::ItemStorage::SharedStash].path, oldHCStashPath = _plugyStashesHash[Enums::ItemStorage::HCStash].path;
 
     QFileInfo charPathFileInfo(charPath);
-    _plugyStashesHash[Enums::ItemStorage::PersonalStash].path = ui.actionAutoOpenPersonalStash->isChecked() ? QString("%1/%2.d2x").arg(charPathFileInfo.canonicalPath(), charPathFileInfo.baseName()) : QString();
-    _plugyStashesHash[Enums::ItemStorage::SharedStash].path = ui.actionAutoOpenSharedStash->isChecked() ? charPathFileInfo.canonicalPath() + "/_LOD_SharedStashSave.sss" : QString();
-    _plugyStashesHash[Enums::ItemStorage::HCStash].path = ui.actionAutoOpenHCShared->isChecked() ? charPathFileInfo.canonicalPath() + "/_LOD_HC_SharedStashSave.sss" : QString();
+    QString canonicalCharPath = charPathFileInfo.canonicalPath();
+    _plugyStashesHash[Enums::ItemStorage::PersonalStash].path = ui.actionAutoOpenPersonalStash->isChecked() ? QString("%1/%2.d2x").arg(canonicalCharPath, charPathFileInfo.baseName()) : QString();
+    _plugyStashesHash[Enums::ItemStorage::SharedStash].path = ui.actionAutoOpenSharedStash->isChecked() ? canonicalCharPath + "/_LOD_SharedStashSave.sss" : QString();
+    _plugyStashesHash[Enums::ItemStorage::HCStash].path = ui.actionAutoOpenHCShared->isChecked() ? canonicalCharPath + "/_LOD_HC_SharedStashSave.sss" : QString();
 
     bool sharedStashPathChanged = oldSharedStashPath != _plugyStashesHash[Enums::ItemStorage::SharedStash].path, hcStashPathChanged = oldHCStashPath != _plugyStashesHash[Enums::ItemStorage::HCStash].path;
     if (ui.actionReloadSharedStashes->isChecked())
@@ -1481,19 +1506,19 @@ bool MedianXLOfflineTools::processSaveFile(const QString &charPath)
 
     // check for duped items
     // TODO: uncomment
-    /*QSet<quint32> itemIDs;
-    foreach (ItemInfo *item, editableCharInfo.items.character)
-        if (item->isExtended)
-        {
-            if (itemIDs.contains(item->guid))
-            {
-                WARNING_BOX(tr("Like duping items, eh?"));
-                break;
-            }
-            else
-                itemIDs.insert(item->guid);
-        }
-        */
+    //QSet<quint32> itemIDs;
+    //foreach (ItemInfo *item, editableCharInfo.items.character)
+    //    if (item->isExtended)
+    //    {
+    //        if (itemIDs.contains(item->guid))
+    //        {
+    //            WARNING_BOX(tr("Like duping items, eh?"));
+    //            break;
+    //        }
+    //        else
+    //            itemIDs.insert(item->guid);
+    //    }
+
     clearItems(sharedStashPathChanged, hcStashPathChanged);
     ItemsList savedItems = _editableCharInfo.items.character;
     _editableCharInfo = editableCharInfo;
@@ -1527,12 +1552,17 @@ inline int MedianXLOfflineTools::totalPossibleSkillPoints(int level, int doe, in
     return (level - 1) * skillPointsPerLevel + doe + radament + izual * 2 + sosEaten;
 }
 
-bool MedianXLOfflineTools::processPlugyStash(QHash<Enums::ItemStorage::ItemStorageEnum, PlugyStashInfo>::iterator &iter, ItemsList *items)
+void MedianXLOfflineTools::processPlugyStash(QHash<Enums::ItemStorage::ItemStorageEnum, PlugyStashInfo>::iterator &iter, ItemsList *items)
 {
     PlugyStashInfo &info = iter.value();
     QFile inputFile(info.path);
+    if (!(info.exists = inputFile.exists()))
+        return;
     if (!(info.exists = inputFile.open(QIODevice::ReadOnly)))
-        return true;
+    {
+        ERROR_BOX_FILE(tr("Error opening PlugY stash '%1'"), inputFile);
+        return;
+    }
 
     QByteArray bytes = inputFile.readAll();
     inputFile.close();
@@ -1549,7 +1579,7 @@ bool MedianXLOfflineTools::processPlugyStash(QHash<Enums::ItemStorage::ItemStora
     if (bytes.left(headerSize) != header)
     {
         ERROR_BOX(tr("PlugY stash '%1' has wrong header").arg(QFileInfo(info.path).fileName()));
-        return false;
+        return;
     }
     info.header = header;
 
@@ -1570,13 +1600,13 @@ bool MedianXLOfflineTools::processPlugyStash(QHash<Enums::ItemStorage::ItemStora
         if (bytes.mid(inputDataStream.device()->pos(), 2) != ItemParser::plugyPageHeader)
         {
             ERROR_BOX(tr("Page %1 of '%2' has wrong PlugY header").arg(page).arg(QFileInfo(info.path).fileName()));
-            return false;
+            return;
         }
         inputDataStream.skipRawData(3);
         if (bytes.mid(inputDataStream.device()->pos(), 2) != ItemParser::itemHeader)
         {
             ERROR_BOX(tr("Page %1 of '%2' has wrong item header").arg(page).arg(QFileInfo(info.path).fileName()));
-            return false;
+            return;
         }
         inputDataStream.skipRawData(2);
 
@@ -1590,8 +1620,6 @@ bool MedianXLOfflineTools::processPlugyStash(QHash<Enums::ItemStorage::ItemStora
             items->append(item);
         }
     }
-
-    return true;
 }
 
 void MedianXLOfflineTools::clearUI()
@@ -1972,11 +2000,11 @@ void MedianXLOfflineTools::backupFile(QFile &file)
     {
         QFile backupFile(file.fileName() + "." + backupExtension);
         if (backupFile.exists() && !backupFile.remove())
-            ERROR_BOX_FILE(tr("Error removing old backup '%1'\nReason: %2"), backupFile);
+            ERROR_BOX_FILE(tr("Error removing old backup '%1'"), backupFile);
         else
         {
             if (!file.copy(backupFile.fileName()))
-                ERROR_BOX_FILE(tr("Error creating backup for file '%1'\nReason: %2"), file);
+                ERROR_BOX_FILE(tr("Error creating backup of '%1'"), file);
         }
     }
 }

@@ -40,22 +40,30 @@ public:
     void updateItems();
     void showItem(ItemInfo *item);
 
-    void enableCubeTab();
+    //void enableCubeTab();
 
     void saveSettings();
+
+    bool isPlugyStorageIndex(int index) { return index >= PersonalStashIndex && index <= HCStashIndex; }
+    QTabWidget *tabWidget() { return _tabWidget; }
+    ItemsPropertiesSplitter *splitterAtIndex(int tabIndex);
 
 protected:
     void closeEvent(QCloseEvent *event);
 
 private slots:
-    void tabChanged(int newIndex);
+    void tabChanged(int tabIndex);
+    void itemCountChangedInCurrentTab(int newCount);
+    void decreaseItemCount();
 
 private:
     QTabWidget *_tabWidget;
+    quint64 _itemsTotal;
 
     void loadSettings();
 
-    ItemsPropertiesSplitter *splitterAtIndex(int tabIndex);
+    void itemCountChangedInTab(int tabIndex, int newCount);
+    void updateWindowTitle();
 };
 
 #endif // ITEMSVIEWERWIDGET_H

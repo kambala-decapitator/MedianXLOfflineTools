@@ -387,8 +387,8 @@
       <string notr="true">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Lucida Grande'; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt;&quot;&gt;&lt;br /&gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;&lt;br /&gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="classLineEdit">
@@ -583,7 +583,7 @@ p, li { white-space: pre-wrap; }
      <x>0</x>
      <y>0</y>
      <width>698</width>
-     <height>22</height>
+     <height>21</height>
     </rect>
    </property>
    <property name="nativeMenuBar">
@@ -647,8 +647,24 @@ p, li { white-space: pre-wrap; }
     <property name="title">
      <string>Items</string>
     </property>
-    <addaction name="separator"/>
+    <widget class="QMenu" name="menuGoToPage">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="title">
+      <string>Go to page</string>
+     </property>
+     <addaction name="actionFirstPage"/>
+     <addaction name="actionPrevious100"/>
+     <addaction name="actionPrevious10"/>
+     <addaction name="actionPreviousPage"/>
+     <addaction name="actionNextPage"/>
+     <addaction name="actionNext10"/>
+     <addaction name="actionNext100"/>
+     <addaction name="actionLastPage"/>
+    </widget>
     <addaction name="actionShowItems"/>
+    <addaction name="menuGoToPage"/>
     <addaction name="separator"/>
     <addaction name="actionFind"/>
     <addaction name="actionFindNext"/>
@@ -881,7 +897,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/MedianXLOfflineTools/icons/items.png</normaloff>:/MedianXLOfflineTools/icons/items.png</iconset>
    </property>
    <property name="text">
-    <string>Show</string>
+    <string>Show items</string>
    </property>
    <property name="toolTip">
     <string>Show Items</string>
@@ -1053,6 +1069,126 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="statusTip">
     <string>Show confirmation dialog when using color in new name</string>
+   </property>
+  </action>
+  <action name="actionFirstPage">
+   <property name="icon">
+    <iconset resource="resources/medianxlofflinetools.qrc">
+     <normaloff>:/PlugyArrows/icons/plugy/first.png</normaloff>:/PlugyArrows/icons/plugy/first.png</iconset>
+   </property>
+   <property name="text">
+    <string>First</string>
+   </property>
+   <property name="shortcut">
+    <string notr="true">Ctrl+Shift+Left</string>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::ApplicationShortcut</enum>
+   </property>
+  </action>
+  <action name="actionPrevious100">
+   <property name="icon">
+    <iconset resource="resources/medianxlofflinetools.qrc">
+     <normaloff>:/PlugyArrows/icons/plugy/left100.png</normaloff>:/PlugyArrows/icons/plugy/left100.png</iconset>
+   </property>
+   <property name="text">
+    <string>Previous 100</string>
+   </property>
+   <property name="shortcut">
+    <string notr="true">Alt+Shift+Left</string>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::ApplicationShortcut</enum>
+   </property>
+  </action>
+  <action name="actionPrevious10">
+   <property name="icon">
+    <iconset resource="resources/medianxlofflinetools.qrc">
+     <normaloff>:/PlugyArrows/icons/plugy/left10.png</normaloff>:/PlugyArrows/icons/plugy/left10.png</iconset>
+   </property>
+   <property name="text">
+    <string>Previous 10</string>
+   </property>
+   <property name="shortcut">
+    <string notr="true">Alt+Left</string>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::ApplicationShortcut</enum>
+   </property>
+  </action>
+  <action name="actionPreviousPage">
+   <property name="icon">
+    <iconset resource="resources/medianxlofflinetools.qrc">
+     <normaloff>:/PlugyArrows/icons/plugy/left.png</normaloff>:/PlugyArrows/icons/plugy/left.png</iconset>
+   </property>
+   <property name="text">
+    <string>Previous</string>
+   </property>
+   <property name="shortcut">
+    <string notr="true">Ctrl+Left</string>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::ApplicationShortcut</enum>
+   </property>
+  </action>
+  <action name="actionNextPage">
+   <property name="icon">
+    <iconset resource="resources/medianxlofflinetools.qrc">
+     <normaloff>:/PlugyArrows/icons/plugy/right.png</normaloff>:/PlugyArrows/icons/plugy/right.png</iconset>
+   </property>
+   <property name="text">
+    <string>Next</string>
+   </property>
+   <property name="shortcut">
+    <string notr="true">Ctrl+Right</string>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::ApplicationShortcut</enum>
+   </property>
+  </action>
+  <action name="actionNext10">
+   <property name="icon">
+    <iconset resource="resources/medianxlofflinetools.qrc">
+     <normaloff>:/PlugyArrows/icons/plugy/right10.png</normaloff>:/PlugyArrows/icons/plugy/right10.png</iconset>
+   </property>
+   <property name="text">
+    <string>Next 10</string>
+   </property>
+   <property name="shortcut">
+    <string notr="true">Alt+Right</string>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::ApplicationShortcut</enum>
+   </property>
+  </action>
+  <action name="actionNext100">
+   <property name="icon">
+    <iconset resource="resources/medianxlofflinetools.qrc">
+     <normaloff>:/PlugyArrows/icons/plugy/right100.png</normaloff>:/PlugyArrows/icons/plugy/right100.png</iconset>
+   </property>
+   <property name="text">
+    <string>Next 100</string>
+   </property>
+   <property name="shortcut">
+    <string notr="true">Alt+Shift+Right</string>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::ApplicationShortcut</enum>
+   </property>
+  </action>
+  <action name="actionLastPage">
+   <property name="icon">
+    <iconset resource="resources/medianxlofflinetools.qrc">
+     <normaloff>:/PlugyArrows/icons/plugy/last.png</normaloff>:/PlugyArrows/icons/plugy/last.png</iconset>
+   </property>
+   <property name="text">
+    <string>Last</string>
+   </property>
+   <property name="shortcut">
+    <string notr="true">Ctrl+Shift+Right</string>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::ApplicationShortcut</enum>
    </property>
   </action>
  </widget>

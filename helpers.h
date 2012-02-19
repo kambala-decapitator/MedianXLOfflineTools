@@ -9,7 +9,7 @@
 #define INFO_BOX(message) CUSTOM_BOX_OK(information, message)
 #define WARNING_BOX(message) CUSTOM_BOX_OK(warning, message)
 #define ERROR_BOX_NO_PARENT(message) QMessageBox::critical(0, qApp->applicationName(), message)
-#define ERROR_BOX_FILE(message, file) CUSTOM_BOX_OK(critical, message.arg(QDir::toNativeSeparators(file.fileName()), file.errorString())) // file is QFile instance
+#define ERROR_BOX_FILE(message, file) CUSTOM_BOX_OK(critical, message.arg(QDir::toNativeSeparators(file.fileName())) + "\n" + tr("Reason: %1", "error with file").arg(file.errorString())) // file is QFile instance
 #define QUESTION_BOX_YESNO(message, defaultButton) CUSTOM_BOX(question, message, QMessageBox::Yes | QMessageBox::No, defaultButton)
 
 // string building

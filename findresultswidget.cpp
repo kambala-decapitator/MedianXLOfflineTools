@@ -17,7 +17,7 @@
 #endif
 
 
-FindResultsWidget::FindResultsWidget(QWidget *parent) : QWidget(parent), _groupBox(new QGroupBox(tr("Results"), this)), _resultsTreeWidget(new QTreeWidget(_groupBox))
+FindResultsWidget::FindResultsWidget(QWidget *parent) : QWidget(parent), _resultsTreeWidget(new QTreeWidget(this))
 {
     setStyleSheet("QTreeWidget { background-color: black; }"
                   "QTreeWidget::branch { color: white; }"
@@ -42,12 +42,9 @@ FindResultsWidget::FindResultsWidget(QWidget *parent) : QWidget(parent), _groupB
     hboxLayout->addStretch();
     hboxLayout->addWidget(collapseAllButton);
 
-    QVBoxLayout *groupBoxLayout = new QVBoxLayout(_groupBox);
+    QVBoxLayout *groupBoxLayout = new QVBoxLayout(this);
     groupBoxLayout->addWidget(_resultsTreeWidget);
     groupBoxLayout->addLayout(hboxLayout);
-
-    QVBoxLayout *mainLayout = new QVBoxLayout(this);
-    mainLayout->addWidget(_groupBox);
 
     setMinimumHeight(sizeHint().height());
 
@@ -65,7 +62,7 @@ void FindResultsWidget::updateItems(QList<SearchResultItem> *newItems)
         ItemsList items;
         foreach (const SearchResultItem &searchItem, *newItems)
             items += searchItem.first;
-        ItemsList locationItems = ItemParser::itemsLocatedAt(Enums::ItemStorage::metaEnum().value(i), &items, i == ItemsViewerDialog::GearIndex);
+        ItemsList locationItems = ItemParser::itemsStoredIn(Enums::ItemStorage::metaEnum().value(i), &items, i == ItemsViewerDialog::GearIndex);
         _foundItemsMap[i] = locationItems;
 
         QString topLevelItemText = ItemsViewerDialog::tabNames.at(i);

@@ -54,6 +54,7 @@ private slots:
     void showFoundItem(ItemInfo *item);
 
     void showItems(bool activate = true);
+    void itemStorageTabChanged(int tabIndex);
     void giveCube();
 
     void backupSettingTriggered(bool checked);
@@ -134,7 +135,7 @@ private:
     QByteArray statisticBytes();
     inline void addStatisticBits(QString &bitsString, quint64 number, int fieldWidth);
 
-    bool processPlugyStash(QHash<Enums::ItemStorage::ItemStorageEnum, PlugyStashInfo>::iterator &iter, ItemsList *items);
+    void processPlugyStash(QHash<Enums::ItemStorage::ItemStorageEnum, PlugyStashInfo>::iterator &iter, ItemsList *items);
     void clearItems(bool sharedStashPathChanged = true, bool hcStashPathChanged = true);
 
     void backupFile(QFile &file);

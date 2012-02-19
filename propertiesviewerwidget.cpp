@@ -22,7 +22,7 @@ PropertiesViewerWidget::PropertiesViewerWidget(QWidget *parent) : QWidget(parent
     ui.tabWidget->setCurrentIndex(0); // set tab icons
 }
 
-void PropertiesViewerWidget::displayItemProperties(ItemInfo *item)
+void PropertiesViewerWidget::showItem(ItemInfo *item)
 {
     ui.allTextEdit->clear();
     ui.tabWidget->setEnabled(item != 0);
@@ -40,12 +40,12 @@ void PropertiesViewerWidget::displayItemProperties(ItemInfo *item)
     ui.tabWidget->setTabEnabled(3, !item->socketablesInfo.isEmpty());
 
     bool isClassCharm = ItemDataBase::isClassCharm(item);
-    renderItemDescription(ui.itemAndMysticOrbsTextEdit, collectMysticOrbsDataFromProps(&_itemMysticOrbs, item->props, isClassCharm));
+    renderHtml(ui.itemAndMysticOrbsTextEdit, collectMysticOrbsDataFromProps(&_itemMysticOrbs, item->props, isClassCharm));
 
     PropertiesMap allProps = item->props;
     if (item->isRW)
     {
-        renderItemDescription(ui.rwAndMysticOrbsTextEdit, collectMysticOrbsDataFromProps(&_rwMysticOrbs, item->rwProps, isClassCharm));
+        renderHtml(ui.rwAndMysticOrbsTextEdit, collectMysticOrbsDataFromProps(&_rwMysticOrbs, item->rwProps, isClassCharm));
         PropertiesDisplayManager::addProperties(&allProps, item->rwProps);
     }
 
@@ -75,9 +75,9 @@ void PropertiesViewerWidget::displayItemProperties(ItemInfo *item)
         {
             PropertiesMap props = ItemDataBase::isGenericSocketable(socketableItem) ? PropertiesDisplayManager::genericSocketableProperties(socketableItem, itemBase.socketableType) : socketableItem->props;
             PropertiesDisplayManager::addProperties(&allProps, props);
-            html += ItemDataBase::completeItemName(socketableItem, true) + htmlLineBreak + displayProperties(props) + htmlLine;
+            html += ItemDataBase::completeItemName(socketableItem, true) + htmlLineBreak + propertiesToHtml(props) + htmlLine;
         }
-        renderItemDescription(ui.socketablesTextEdit, html);
+        renderHtml(ui.socketablesTextEdit, html);
     }
 
     // create full item description
@@ -171,7 +171,7 @@ void PropertiesViewerWidget::displayItemProperties(ItemInfo *item)
     }
 
     if (!allProps.isEmpty())
-        itemDescription += displayProperties(allProps);
+        itemDescription += propertiesToHtml(allProps);
     else if (ItemDataBase::isGenericSocketable(item))
     {
         static const QStringList gearNames = QStringList() << tr("Armor") << tr("Shield") << tr("Weapon");
@@ -179,7 +179,7 @@ void PropertiesViewerWidget::displayItemProperties(ItemInfo *item)
         for (qint8 socketableType = SocketableItemInfo::Armor; socketableType <= SocketableItemInfo::Weapon; ++socketableType)
         {
             PropertiesMap props = PropertiesDisplayManager::genericSocketableProperties(item, socketableType - 1);
-            QString propText = displayProperties(props).replace(QRegExp(htmlLineBreak + "(?!</font>)"), ", "); // don't replace last <br>
+            QString propText = propertiesToHtml(props).replace(QRegExp(htmlLineBreak + "(?!</font>)"), ", "); // don't replace last <br>
             propStrings += QString("%1: %2").arg(gearNames.at(socketableType), propText);
         }
         // weapon properties should be first
@@ -215,7 +215,7 @@ void PropertiesViewerWidget::displayItemProperties(ItemInfo *item)
         }
     }
 
-    renderItemDescription(ui.allTextEdit, itemDescription);
+    renderHtml(ui.allTextEdit, itemDescription);
 
     // awkward way to force center align
     QSize originalSize = size();
@@ -223,7 +223,7 @@ void PropertiesViewerWidget::displayItemProperties(ItemInfo *item)
     resize(originalSize);
 }
 
-QString PropertiesViewerWidget::displayProperties(const PropertiesMap &properties)
+QString PropertiesViewerWidget::propertiesToHtml(const PropertiesMap &properties)
 {
     QMap<quint8, ItemPropertyDisplay> propsDisplayMap;
     PropertiesDisplayManager::constructPropertyStrings(properties, &propsDisplayMap, true);
@@ -237,7 +237,7 @@ QString PropertiesViewerWidget::displayProperties(const PropertiesMap &propertie
     return coloredText(html, Blue);
 }
 
-void PropertiesViewerWidget::renderItemDescription(QTextEdit *textEdit, const QString &description)
+void PropertiesViewerWidget::renderHtml(QTextEdit *textEdit, const QString &description)
 {
     textEdit->setText(baseFormat.arg(QString(description).replace('\n', htmlLineBreak)));
 }
@@ -259,7 +259,7 @@ void PropertiesViewerWidget::removeAllMysticOrbs()
     }
 
     _item->hasChanged = true;
-    displayItemProperties(_item);
+    showItem(_item);
 }
 
 void PropertiesViewerWidget::removeMysticOrbsFromProperties(const QSet<int> &mysticOrbs, PropertiesMultiMap *props)
@@ -359,7 +359,7 @@ QString PropertiesViewerWidget::collectMysticOrbsDataFromProps(QSet<int> *moSet,
         else
             ++iter;
     }
-    QString html = displayProperties(propsWithoutMO);
+    QString html = propertiesToHtml(propsWithoutMO);
 
     if (!moSet->isEmpty())
     {

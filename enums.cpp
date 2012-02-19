@@ -141,8 +141,8 @@ namespace Enums
             hash[Ethereal] = 1;
             hash[Location] = 3;
             hash[EquipIndex] = 4;
-            hash[Columns] = 4;
-            hash[Rows] = 3;
+            hash[Column] = 4;
+            hash[Row] = 3;
             hash[Storage] = 3;
         }
         return hash.value(offset);

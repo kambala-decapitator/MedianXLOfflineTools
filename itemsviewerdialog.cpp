@@ -15,7 +15,7 @@
 
 
 const int ItemsViewerDialog::cellSize = 32;
-// !!!: add elements here when adding new tab
+// add elements here when adding new tab
 const QStringList ItemsViewerDialog::tabNames = QStringList() << tr("Gear") << tr("Inventory") << tr("Cube") << tr("Stash") << tr("Personal Stash") << tr("Shared Stash") << tr("Hardcore Stash");
 const QList<int> ItemsViewerDialog::rows = QList<int>() << 11 << 6 << 8 << 10 << 10 << 10 << 10;
 
@@ -28,7 +28,12 @@ ItemsViewerDialog::ItemsViewerDialog(QWidget *parent) : QDialog(parent), _tabWid
     layout->addWidget(_tabWidget);
 
     for (int i = GearIndex; i <= LastIndex; ++i)
-        _tabWidget->addTab(new ItemsPropertiesSplitter(new ItemStorageTableView(this), new ItemStorageTableModel(rows.at(i), this), i >= PersonalStashIndex, this), tabNames.at(i));
+    {
+        ItemsPropertiesSplitter *splitter = new ItemsPropertiesSplitter(new ItemStorageTableView(this), new ItemStorageTableModel(rows.at(i), this), i >= PersonalStashIndex, this);
+        connect(splitter, SIGNAL(itemCountChanged(int)), SLOT(itemCountChangedInCurrentTab(int)));
+        connect(splitter, SIGNAL(itemDeleted()), SLOT(decreaseItemCount()));
+        _tabWidget->addTab(splitter, tabNames.at(i));
+    }
     updateItems();
 
     for (int i = GearIndex; i <= LastIndex; ++i)
@@ -44,7 +49,7 @@ ItemsViewerDialog::ItemsViewerDialog(QWidget *parent) : QDialog(parent), _tabWid
     connect(_tabWidget, SIGNAL(currentChanged(int)), SLOT(tabChanged(int)));
 
     loadSettings();
-    _tabWidget->widget(0)->setFocus();
+    _tabWidget->setCurrentIndex(0);
 }
 
 void ItemsViewerDialog::loadSettings()
@@ -76,18 +81,29 @@ void ItemsViewerDialog::closeEvent(QCloseEvent *event)
     event->accept();
 }
 
-void ItemsViewerDialog::tabChanged(int newIndex)
+void ItemsViewerDialog::tabChanged(int tabIndex)
 {
-    splitterAtIndex(newIndex)->showFirstItem();
+    splitterAtIndex(tabIndex)->showFirstItem();
+}
+
+void ItemsViewerDialog::itemCountChangedInCurrentTab(int newCount)
+{
+    itemCountChangedInTab(_tabWidget->currentIndex(), newCount);
+}
+
+void ItemsViewerDialog::itemCountChangedInTab(int tabIndex, int newCount)
+{
+    QString newTabTitle = isPlugyStorageIndex(tabIndex) ? QString(" (%1 / %2)").arg(splitterAtIndex(tabIndex)->itemsModel()->itemCount()).arg(newCount) : QString(" (%1)").arg(newCount);
+    _tabWidget->setTabText(tabIndex, tabNames.at(tabIndex) + newTabTitle);
 }
 
 void ItemsViewerDialog::updateItems()
 {
-    quint32 itemsTotal = 0;
+    _itemsTotal = 0;
     for (int i = GearIndex; i <= LastIndex; ++i)
     {
         bool isGear = i == GearIndex;
-        ItemsList items = ItemParser::itemsLocatedAt(Enums::ItemStorage::metaEnum().value(i), 0, isGear);
+        ItemsList items = ItemParser::itemsStoredIn(Enums::ItemStorage::metaEnum().value(i), 0, isGear);
         if (isGear)
         {
             foreach (ItemInfo *item, items)
@@ -146,14 +162,13 @@ void ItemsViewerDialog::updateItems()
             }
         }
         splitterAtIndex(i)->setItems(items);
-
-        _tabWidget->setTabText(i, tabNames.at(i) + QString(" (%1)").arg(items.size()));
-        _tabWidget->setTabEnabled(i, !items.isEmpty());
+        itemCountChangedInTab(i, items.size());
+        //_tabWidget->setTabEnabled(i, !items.isEmpty());
         
-        itemsTotal += items.size();
+        _itemsTotal += items.size();
     }
     
-    setWindowTitle(tr("Items viewer (items total: %1)").arg(itemsTotal));
+    updateWindowTitle();
 }
 
 int ItemsViewerDialog::indexFromItemStorage(int storage)
@@ -167,7 +182,18 @@ void ItemsViewerDialog::showItem(ItemInfo *item)
     splitterAtIndex(_tabWidget->currentIndex())->showItem(item);
 }
 
-void ItemsViewerDialog::enableCubeTab()
+//void ItemsViewerDialog::enableCubeTab()
+//{
+//    _tabWidget->setTabEnabled(CubeIndex, true);
+//}
+
+void ItemsViewerDialog::updateWindowTitle()
 {
-    _tabWidget->setTabEnabled(CubeIndex, true);
+    setWindowTitle(tr("Items viewer (items total: %1)").arg(_itemsTotal));
+}
+
+void ItemsViewerDialog::decreaseItemCount()
+{
+    --_itemsTotal;
+    updateWindowTitle();
 }

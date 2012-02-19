@@ -293,8 +293,8 @@ public:
         Ethereal = 0x26,
         Location = 0x3A,
         EquipIndex = 0x3D,
-        Columns = 0x41,
-        Rows = 0x45,
+        Column = 0x41,
+        Row = 0x45,
         Storage = 0x49
     };
 

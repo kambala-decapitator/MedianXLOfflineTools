@@ -28,9 +28,10 @@ ItemsPropertiesSplitter::ItemsPropertiesSplitter(ItemStorageTableView *itemsView
     _itemsView->setHorizontalScrollMode(QAbstractItemView::ScrollPerPixel);
     _itemsView->setVerticalScrollMode(QAbstractItemView::ScrollPerPixel);
     _itemsView->setSelectionMode(QAbstractItemView::SingleSelection);
-    _itemsView->setStyleSheet("QTableView::item { background: black; border: solid 0.5px; }"
-                              //"QTableView::item:!focus { border: dashed 1px red; }"
-                              //"QTableView::icon:selected { left: -1px; }"
+    _itemsView->setStyleSheet("QTableView { background-color: black; gridline-color: green; }"
+                              //"QTableView::item:selected:active { show-decoration-selected: 0; }"
+                              "QTableView::item:selected { background-color: transparent; }"// selection-color: yellow; border: 3px solid red;
+                              //"QTableView::icon:selected { left: 1px;}"
                              );
     _itemsView->setGridStyle(Qt::SolidLine);
     _itemsView->setCornerButtonEnabled(false);
@@ -105,53 +106,32 @@ ItemsPropertiesSplitter::ItemsPropertiesSplitter(ItemStorageTableView *itemsView
         connect(_rightButton, SIGNAL(clicked()), SLOT(rightClicked()));
         connect(_right10Button, SIGNAL(clicked()), SLOT(right10Clicked()));
     }
+
+    _itemsView->setFocus();
 }
 
 void ItemsPropertiesSplitter::itemSelected(const QModelIndex &index)
 {
-    _propertiesWidget->displayItemProperties(_itemsModel->itemAt(index));
-}
-
-bool ItemsPropertiesSplitter::eventFilter(QObject *obj, QEvent *event)
-{
-    // TODO: implement
-    return false;
+    _propertiesWidget->showItem(_itemsModel->itemAt(index));
 }
 
 void ItemsPropertiesSplitter::keyPressEvent(QKeyEvent *keyEvent)
 {
-    if (_left10Button)
+    if (_left10Button && keyEventHasShift(keyEvent))
     {
-        if (_isShiftPressed = keyEventHasShift(keyEvent))
-        {
-            _left10Button->setIcon(QIcon(iconPathFormat.arg("left100")));
-            _left10Button->setToolTip(QKeySequence(Qt::ALT + Qt::SHIFT + Qt::Key_Left).toString(QKeySequence::NativeText));
+        _left10Button->setIcon(QIcon(iconPathFormat.arg("left100")));
+        setShortcutTextInButtonTooltip(_left10Button, Qt::ALT + Qt::SHIFT + Qt::Key_Left);
 
-            _leftButton->setIcon(QIcon(iconPathFormat.arg("first")));
-            _leftButton->setToolTip(QKeySequence(Qt::CTRL + Qt::SHIFT + Qt::Key_Left).toString(QKeySequence::NativeText));
+        _leftButton->setIcon(QIcon(iconPathFormat.arg("first")));
+        setShortcutTextInButtonTooltip(_leftButton, Qt::CTRL + Qt::SHIFT + Qt::Key_Left);
 
-            _rightButton->setIcon(QIcon(iconPathFormat.arg("last")));
-            _rightButton->setToolTip(QKeySequence(Qt::CTRL + Qt::SHIFT + Qt::Key_Right).toString(QKeySequence::NativeText));
+        _rightButton->setIcon(QIcon(iconPathFormat.arg("last")));
+        setShortcutTextInButtonTooltip(_rightButton, Qt::CTRL + Qt::SHIFT + Qt::Key_Right);
 
-            _right10Button->setIcon(QIcon(iconPathFormat.arg("right100")));
-            _right10Button->setToolTip(QKeySequence(Qt::ALT + Qt::SHIFT + Qt::Key_Right).toString(QKeySequence::NativeText));
-        }
+        _right10Button->setIcon(QIcon(iconPathFormat.arg("right100")));
+        setShortcutTextInButtonTooltip(_right10Button, Qt::ALT + Qt::SHIFT + Qt::Key_Right);
 
-        int key = keyEvent->key();
-        if (keyEvent->modifiers() & Qt::CTRL)
-        {
-            if (key == Qt::Key_Left)
-                leftClicked();
-            else if (key == Qt::Key_Right)
-                rightClicked();
-        }
-        else if (keyEvent->modifiers() & Qt::ALT)
-        {
-            if (key == Qt::Key_Left)
-                left10Clicked();
-            else if (key == Qt::Key_Right)
-                right10Clicked();
-        }
+        _isShiftPressed = true;
     }
     QSplitter::keyPressEvent(keyEvent);
 }
@@ -161,16 +141,16 @@ void ItemsPropertiesSplitter::keyReleaseEvent(QKeyEvent *keyEvent)
     if (_left10Button && keyEventHasShift(keyEvent))
     {
         _left10Button->setIcon(QIcon(iconPathFormat.arg("left10")));
-        _left10Button->setToolTip(QKeySequence(Qt::ALT + Qt::Key_Left).toString(QKeySequence::NativeText));
+        setShortcutTextInButtonTooltip(_left10Button, Qt::ALT + Qt::Key_Left);
 
         _leftButton->setIcon(QIcon(iconPathFormat.arg("left")));
-        _leftButton->setToolTip(QKeySequence(Qt::CTRL + Qt::Key_Left).toString(QKeySequence::NativeText));
+        setShortcutTextInButtonTooltip(_leftButton, Qt::CTRL + Qt::Key_Left);
 
         _rightButton->setIcon(QIcon(iconPathFormat.arg("right")));
-        _rightButton->setToolTip(QKeySequence(Qt::CTRL + Qt::Key_Right).toString(QKeySequence::NativeText));
+        setShortcutTextInButtonTooltip(_rightButton, Qt::CTRL + Qt::Key_Right);
 
         _right10Button->setIcon(QIcon(iconPathFormat.arg("right10")));
-        _right10Button->setToolTip(QKeySequence(Qt::ALT + Qt::Key_Right).toString(QKeySequence::NativeText));
+        setShortcutTextInButtonTooltip(_right10Button, Qt::ALT + Qt::Key_Right);
 
         _isShiftPressed = false;
     }
@@ -182,25 +162,19 @@ bool ItemsPropertiesSplitter::keyEventHasShift(QKeyEvent *keyEvent)
     return keyEvent->key() == Qt::Key_Shift || keyEvent->modifiers() & Qt::SHIFT;
 }
 
-void ItemsPropertiesSplitter::setItems(const ItemsList &newItems)
+void ItemsPropertiesSplitter::setShortcutTextInButtonTooltip(QPushButton *button, const QKeySequence &keySequence)
 {
-    _allItems = newItems;
-    if (_left10Button)
-    {
-        _lastNotEmptyPage = !_allItems.isEmpty() ? _allItems.last()->plugyPage : 0;
-        _pageSpinBox->setSuffix(QString(" / %1").arg(_lastNotEmptyPage));
-        _pageSpinBox->setMaximum(_lastNotEmptyPage);
-        updateItemsForCurrentPage();
-    }
-    else
-        updateItems(_allItems);
+    button->setToolTip(keySequence.toString(QKeySequence::NativeText));
 }
 
 void ItemsPropertiesSplitter::showItem(ItemInfo *item)
 {
-    if (item->plugyPage)
-        _pageSpinBox->setValue(item->plugyPage);
-    _itemsView->setCurrentIndex(_itemsModel->index(item->row, item->column));
+    if (item)
+    {
+        if (item->plugyPage)
+            _pageSpinBox->setValue(item->plugyPage);
+        _itemsView->setCurrentIndex(_itemsModel->index(item->row, item->column));
+    }
 }
 
 void ItemsPropertiesSplitter::showFirstItem()
@@ -208,6 +182,29 @@ void ItemsPropertiesSplitter::showFirstItem()
     // sometimes item is selected, but there's no visual selection
     if (_itemsView->selectionModel()->selectedIndexes().isEmpty() || !selectedItem(false))
         showItem(_itemsModel->firstItem());
+}
+
+bool compareItemsByPlugyPage(ItemInfo *a, ItemInfo *b)
+{
+    return a->plugyPage < b->plugyPage;
+}
+
+void ItemsPropertiesSplitter::setItems(const ItemsList &newItems)
+{
+    _allItems = newItems;
+    if (_left10Button)
+    {
+        // using _allItems.last()->plugyPage would've been easy, but it's not always correct (new items obtained in the app are added to the end)
+        ItemsList::iterator maxPageIter = std::max_element(_allItems.begin(), _allItems.end(), compareItemsByPlugyPage);
+        _lastNotEmptyPage = maxPageIter == _allItems.end() ? 0 : (*maxPageIter)->plugyPage;//!_allItems.isEmpty() ? _allItems.last()->plugyPage : 0;
+        
+        _pageSpinBox->setSuffix(QString(" / %1").arg(_lastNotEmptyPage));
+        _pageSpinBox->setMaximum(_lastNotEmptyPage);
+        
+        updateItemsForCurrentPage(false);
+    }
+    else
+        updateItems(_allItems);
 }
 
 void ItemsPropertiesSplitter::updateItems(const ItemsList &newItems)
@@ -223,23 +220,19 @@ void ItemsPropertiesSplitter::updateItems(const ItemsList &newItems)
             _itemsView->setSpan(item->row, item->column, itemBase.height, itemBase.width);
     }
 
-    if (!newItems.isEmpty())
-        showFirstItem();
+    showFirstItem();
 }
 
-void ItemsPropertiesSplitter::updateItemsForCurrentPage()
+void ItemsPropertiesSplitter::updateItemsForCurrentPage(bool pageChanged /*= true*/)
 {
     ItemsList pagedItems;
     foreach (ItemInfo *item, _allItems)
         if (item->plugyPage == static_cast<quint32>(_pageSpinBox->value()))
             pagedItems += item;
     updateItems(pagedItems);
-}
 
-void ItemsPropertiesSplitter::left10Clicked()
-{
-    quint32 step = _isShiftPressed ? 100 : 10;
-    _pageSpinBox->setValue(qFloor((_pageSpinBox->value() - 1) / step) * step);
+    if (pageChanged)
+        emit itemCountChanged(_allItems.size());
 }
 
 void ItemsPropertiesSplitter::leftClicked()
@@ -256,6 +249,12 @@ void ItemsPropertiesSplitter::rightClicked()
         _pageSpinBox->setValue(_lastNotEmptyPage);
     else
         _pageSpinBox->stepUp();
+}
+
+void ItemsPropertiesSplitter::left10Clicked()
+{
+    quint32 step = _isShiftPressed ? 100 : 10;
+    _pageSpinBox->setValue(qFloor((_pageSpinBox->value() - 1) / step) * step);
 }
 
 void ItemsPropertiesSplitter::right10Clicked()
@@ -330,6 +329,14 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
     }
 }
 
+ItemInfo *ItemsPropertiesSplitter::selectedItem(bool showError /*= true*/)
+{
+    ItemInfo *item = _itemsModel->itemAt(_itemsView->selectionModel()->currentIndex());
+    if (!item && showError)
+        ERROR_BOX("TROLOLOL no item selection found");
+    return item;
+}
+
 void ItemsPropertiesSplitter::exportHtml()
 {
 
@@ -350,11 +357,10 @@ void ItemsPropertiesSplitter::disenchantItem()
         return;
     }
 
-    int insertIndex = _allItems.indexOf(item);
     QString path = ResourcePathManager::dataPathForFileName(QString("items/%1.d2i").arg(action->objectName() == "signet" ? "signet_of_learning" : "arcane_shard"));
     ItemInfo *newItem = ItemParser::loadItemFromFile(path);
 
-    ItemsList items = ItemParser::itemsLocatedAt(item->storage);
+    ItemsList items = ItemParser::itemsStoredIn(item->storage);
     items.removeOne(item);
     if (!ItemParser::canStoreItemAt(item->row, item->column, newItem->itemType, items, ItemsViewerDialog::rows.at(ItemsViewerDialog::indexFromItemStorage(item->storage)), 10))
     {
@@ -373,32 +379,46 @@ void ItemsPropertiesSplitter::disenchantItem()
     // update bits
     bool isPlugyStorage = newItem->storage == Enums::ItemStorage::PersonalStash || newItem->storage == Enums::ItemStorage::SharedStash || newItem->storage == Enums::ItemStorage::HCStash;
     ReverseBitWriter::replaceValueInBitString(newItem->bitString, Enums::ItemOffsets::Storage, isPlugyStorage ? Enums::ItemStorage::Stash : newItem->storage);
-    ReverseBitWriter::replaceValueInBitString(newItem->bitString, Enums::ItemOffsets::Columns, newItem->column);
-    ReverseBitWriter::replaceValueInBitString(newItem->bitString, Enums::ItemOffsets::Rows, newItem->row);
+    ReverseBitWriter::replaceValueInBitString(newItem->bitString, Enums::ItemOffsets::Column, newItem->column);
+    ReverseBitWriter::replaceValueInBitString(newItem->bitString, Enums::ItemOffsets::Row, newItem->row);
     ReverseBitWriter::replaceValueInBitString(newItem->bitString, Enums::ItemOffsets::EquipIndex, newItem->whereEquipped);
     //ReverseBitWriter::replaceValueInBitString(newItem->bitString, Enums::ItemOffsets::Location, newItem->location);
 
     if (newItem->storage == Enums::ItemStorage::Stash)
     {
-        ItemsList personalStashItems = ItemParser::itemsLocatedAt(Enums::ItemStorage::PersonalStash);
-        int index = 0;
-        foreach (ItemInfo *personalStashItem, personalStashItems)
+        // plugy saves last opened page as the stash page
+        //int storage = 0;, oldItemIndex;
+        ItemInfo *plugyItem = 0;
+        for (int i = Enums::ItemStorage::PersonalStash; i <= Enums::ItemStorage::HCStash; ++i)
         {
-            if (personalStashItem->plugyPage == 1 && personalStashItem->bitString == newItem->bitString)
+            ItemsList plugyStashItems = ItemParser::itemsStoredIn(i);
+            //oldItemIndex = 0;
+            foreach (ItemInfo *plugyStashItem, plugyStashItems)
+            {
+                if (plugyStashItem->bitString == newItem->bitString)
+                {
+                    plugyItem = plugyStashItem;
+                    break;
+                }
+                //++oldItemIndex;
+            }
+            if (plugyItem)
                 break;
-            ++index;
         }
-        if (index < personalStashItems.size())
+
+        if (plugyItem)
         {
             ItemInfo *copy = new ItemInfo(*newItem);
-            copy->storage = Enums::ItemStorage::PersonalStash;
-            copy->plugyPage = 1;
-            // TODO: finish
+            copy->storage = plugyItem->storage;
+            copy->plugyPage = plugyItem->plugyPage;
+
+            performDeleteItem(plugyItem, false);
+            addItemToList(copy, false);
         }
     }
-    else if (newItem->storage == Enums::ItemStorage::PersonalStash)
+    else if (newItem->storage >= Enums::ItemStorage::PersonalStash && newItem->storage <= Enums::ItemStorage::HCStash)
     {
-        ItemsList stashItems = ItemParser::itemsLocatedAt(Enums::ItemStorage::Stash);
+        ItemsList stashItems = ItemParser::itemsStoredIn(Enums::ItemStorage::Stash);
         if (stashItems.indexOf(item) != -1)
         {
             ItemInfo *copy = new ItemInfo(*newItem);
@@ -408,7 +428,7 @@ void ItemsPropertiesSplitter::disenchantItem()
     }
 
     performDeleteItem(item);
-    addItemToList(newItem, insertIndex);
+    addItemToList(newItem);
 }
 
 void ItemsPropertiesSplitter::unsocketItem()
@@ -441,39 +461,46 @@ void ItemsPropertiesSplitter::unsocketItem()
 void ItemsPropertiesSplitter::deleteItem()
 {
     ItemInfo *item = selectedItem();
-    if (item && QMessageBox::question(this, qApp->applicationName(), tr("Are you sure you want to delete this item?"), QMessageBox::Yes, QMessageBox::No) == QMessageBox::Yes)
+    if (item && QUESTION_BOX_YESNO(tr("Are you sure you want to delete this item?"), QMessageBox::No) == QMessageBox::Yes)
+    {
         performDeleteItem(item);
+        showFirstItem();
+
+        emit itemCountChanged(_allItems.size());
+        emit itemDeleted();
+    }
 }
 
-void ItemsPropertiesSplitter::performDeleteItem(ItemInfo *item)
+void ItemsPropertiesSplitter::performDeleteItem(ItemInfo *item, bool currentStorage /*= true*/)
 {
     // TODO 0.3: add option to unsocket at first
-    removeItemFromList(item);
+    removeItemFromList(item, currentStorage);
     qDeleteAll(item->socketablesInfo);
     delete item;
-
-    setItems(_allItems); // maybe not needed?
 }
 
-ItemInfo *ItemsPropertiesSplitter::selectedItem(bool showError /*= true*/)
-{
-    ItemInfo *item = _itemsModel->itemAt(_itemsView->selectionModel()->currentIndex());
-    if (!item && showError)
-        ERROR_BOX("TROLOLOL no item selection found");
-    return item;
-}
-
-void ItemsPropertiesSplitter::addItemToList(ItemInfo *item, int pos /*= -1*/)
+void ItemsPropertiesSplitter::addItemToList(ItemInfo *item, bool currentStorage /*= true*/)
 {
     ItemDataBase::currentCharacterItems->append(item);
-    if (pos > -1)
-        _allItems.insert(pos, item);
-    else
+    
+    if (currentStorage)
+    {
         _allItems.append(item);
+        _itemsModel->addItem(item);
+        _propertiesWidget->showItem(item);
+    }
 }
 
-void ItemsPropertiesSplitter::removeItemFromList(ItemInfo *item)
+void ItemsPropertiesSplitter::removeItemFromList(ItemInfo *item, bool currentStorage /*= true*/)
 {
     ItemDataBase::currentCharacterItems->removeOne(item);
-    _allItems.removeOne(item);
+    
+    if (currentStorage)
+    {
+        _propertiesWidget->clear();
+
+        _allItems.removeOne(item);
+        _itemsModel->removeItem(item);
+        _itemsView->setSpan(item->row, item->column, 1, 1);
+    }
 }

@@ -12,6 +12,7 @@ class PropertiesViewerWidget;
 class QModelIndex;
 class QPushButton;
 class QDoubleSpinBox;
+class QKeySequence;
 
 class ItemsPropertiesSplitter : public QSplitter
 {
@@ -28,18 +29,34 @@ public:
     void showItem(ItemInfo *item);
     void showFirstItem();
 
+public slots:
+    // these 8 are connected to main menu actions
+    void previous10Pages() { left10Clicked(); }
+    void previousPage() { leftClicked(); }
+    void nextPage() { rightClicked(); }
+    void next10Pages() { right10Clicked(); }
+
+    // emulating pressed shift if action was pressed by mouse
+    void previous100Pages() { _isShiftPressed = true; left10Clicked(); _isShiftPressed = false; }
+    void firstPage() { _isShiftPressed = true; leftClicked(); _isShiftPressed = false; }
+    void lastPage() { _isShiftPressed = true; rightClicked(); _isShiftPressed = false; }
+    void next100Pages() { _isShiftPressed = true; right10Clicked(); _isShiftPressed = false; }
+
 protected:
-    bool eventFilter(QObject *obj, QEvent *event);
     void keyPressEvent(QKeyEvent *keyEvent);
     void keyReleaseEvent(QKeyEvent *keyEvent);
+
+signals:
+    void itemCountChanged(int itemCount);
+    void itemDeleted();
 
 private slots:
     void itemSelected(const QModelIndex &index);
 
-    void updateItemsForCurrentPage();
-    void left10Clicked();
+    void updateItemsForCurrentPage(bool pageChanged = true);
     void leftClicked();
     void rightClicked();
+    void left10Clicked();
     void right10Clicked();
 
     void showContextMenu(const QPoint &pos);
@@ -63,13 +80,14 @@ private:
     bool _isShiftPressed;
 
     bool keyEventHasShift(QKeyEvent *keyEvent);
+    void setShortcutTextInButtonTooltip(QPushButton *button, const QKeySequence &keySequence);
 
     void updateItems(const ItemsList &newItems);
-    void performDeleteItem(ItemInfo *item);
+    void performDeleteItem(ItemInfo *item, bool currentStorage = true);
     ItemInfo *selectedItem(bool showError = true);
 
-    void addItemToList(ItemInfo *item, int pos = -1);
-    void removeItemFromList(ItemInfo *item);
+    void addItemToList(ItemInfo *item, bool currentStorage = true);
+    void removeItemFromList(ItemInfo *item, bool currentStorage = true);
 };
 
 #endif // ITEMSPROPERTIESSPLITTER_H

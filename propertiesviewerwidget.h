@@ -15,8 +15,8 @@ class PropertiesViewerWidget : public QWidget
 public:
     explicit PropertiesViewerWidget(QWidget *parent = 0);
 
-    void displayItemProperties(ItemInfo *item);
-    void clear() { displayItemProperties(0); }
+    void showItem(ItemInfo *item);
+    void clear() { showItem(0); }
     bool hasMysticOrbs() const { return _itemMysticOrbs.size() + _rwMysticOrbs.size() > 0; }
 
     const QString htmlLine; // it's intended that it's a class member and not static
@@ -29,8 +29,8 @@ private:
     ItemInfo *_item;
     QSet<int> _itemMysticOrbs, _rwMysticOrbs;
 
-    QString displayProperties(const PropertiesMap &properties);
-    void renderItemDescription(QTextEdit *textEdit, const QString &description);
+    QString propertiesToHtml(const PropertiesMap &properties);
+    void renderHtml(QTextEdit *textEdit, const QString &description);
 
     void removeMysticOrbsFromProperties(const QSet<int> &mysticOrbs, PropertiesMultiMap *props);
     int indexOfPropertyValue(int id, PropertiesMultiMap *props);
