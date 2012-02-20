@@ -149,24 +149,16 @@ struct BaseStats
         }
     } statsAtStart;
 
-    struct StatsPerLevel
+    struct StatsStep
     {
         qint32 life, stamina, mana; // divide by 4 and floor
 
-        StatsPerLevel() {}
-        StatsPerLevel(qint32 l, qint32 s, qint32 m) : life(l), stamina(s), mana(m) {}
-    } statsPerLevel;
-
-    struct StatsPerPoint
-    {
-        qint32 life, stamina, mana; // divide by 4 and floor
-
-        StatsPerPoint() {}
-        StatsPerPoint(qint32 l, qint32 s, qint32 m) : life(l), stamina(s), mana(m) {}
-    } statsPerPoint;
+        StatsStep() {}
+        StatsStep(qint32 l, qint32 s, qint32 m) : life(l), stamina(s), mana(m) {}
+    } statsPerLevel, statsPerPoint;
 
     BaseStats() {}
-    BaseStats(StatsAtStart s, StatsPerLevel l, StatsPerPoint p) : statsAtStart(s), statsPerLevel(l), statsPerPoint(p) {}
+    BaseStats(StatsAtStart s, StatsStep l, StatsStep p) : statsAtStart(s), statsPerLevel(l), statsPerPoint(p) {}
 };
 
 

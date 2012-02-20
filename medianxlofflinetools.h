@@ -127,7 +127,8 @@ private:
     inline void recalculateStatPoints();
     void updateStatusTips(int newStatPoints, int investedStatPoints, int newSkillPoints, int investedSkillPoints);
     inline void updateWindowTitle();
-    void updateTableStats(QTableWidgetItem *item, int diff, int statPerPoint);
+    void updateTableStats(const BaseStats::StatsStep &statsPerStep, int diff, QSpinBox *senderSpinBox = 0);
+    void updateTableItemStat(QTableWidgetItem *item, int diff, int statPerPoint);
     inline void updateCompoundStatusTip(QWidget *widget, const QString &firstString, const QString &secondString);
     inline void updateMinCompoundStatusTip(QWidget *widget, int minValue, int investedValue);
     inline void updateMaxCompoundStatusTip(QWidget *widget, int maxValue, int investedValue);

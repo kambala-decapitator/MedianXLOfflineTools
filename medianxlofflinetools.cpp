@@ -403,19 +403,7 @@ void MedianXLOfflineTools::statChanged(int newValue)
         QStatusTipEvent event(senderSpinBox->statusTip());
         qApp->sendEvent(senderSpinBox, &event);
 
-        BaseStats::StatsPerPoint charStatsPerPoint = _baseStatsMap[_editableCharInfo.basicInfo.classCode].statsPerPoint;
-        if (senderSpinBox == ui.vitalitySpinBox)
-        {
-            updateTableStats(ui.statsTableWidget->item(0, 0), diff, charStatsPerPoint.life); // current life
-            updateTableStats(ui.statsTableWidget->item(0, 1), diff, charStatsPerPoint.life); // base life
-            updateTableStats(ui.statsTableWidget->item(2, 0), diff, charStatsPerPoint.stamina); // current stamina
-            updateTableStats(ui.statsTableWidget->item(2, 1), diff, charStatsPerPoint.stamina); // base stamina
-        }
-        else if (senderSpinBox == ui.energySpinBox)
-        {
-            updateTableStats(ui.statsTableWidget->item(1, 0), diff, charStatsPerPoint.mana); // current mana
-            updateTableStats(ui.statsTableWidget->item(1, 1), diff, charStatsPerPoint.mana); // base mana
-        }
+        updateTableStats(_baseStatsMap[_editableCharInfo.basicInfo.classCode].statsPerPoint, diff, senderSpinBox);
     }
 }
 
@@ -449,9 +437,12 @@ void MedianXLOfflineTools::rename()
 
 void MedianXLOfflineTools::levelChanged(int newClvl)
 {
-    if (_isLoaded && qAbs(_oldClvl - newClvl) < _editableCharInfo.basicInfo.level)
+    int lvlDiff = _oldClvl - newClvl;
+    if (_isLoaded && qAbs(lvlDiff) < _editableCharInfo.basicInfo.level)
     {
-        int statsDiff = (_oldClvl - newClvl) * statPointsPerLevel;
+        updateTableStats(_baseStatsMap[_editableCharInfo.basicInfo.classCode].statsPerLevel, -lvlDiff);
+
+        int statsDiff = lvlDiff * statPointsPerLevel;
         _oldClvl = newClvl;
         if (ui.freeStatPointsLineEdit->text().toInt() - statsDiff < 0)
             respecStats();
@@ -980,13 +971,13 @@ void MedianXLOfflineTools::fillMaps()
     _lineEditsStatsMap[Enums::CharacterStats::SignetsOfLearningEaten] = ui.signetsOfLearningEatenLineEdit;
     _lineEditsStatsMap[Enums::CharacterStats::SignetsOfSkillEaten] = ui.signetsOfSkillEatenLineEdit;
 
-    _baseStatsMap[Enums::ClassName::Amazon] = BaseStats(BaseStats::StatsAtStart(25, 25, 20, 15, 84), BaseStats::StatsPerLevel(100, 40, 60), BaseStats::StatsPerPoint(8, 8, 18));
-    _baseStatsMap[Enums::ClassName::Sorceress] = BaseStats(BaseStats::StatsAtStart(10, 25, 15, 35, 74), BaseStats::StatsPerLevel(100, 40, 60), BaseStats::StatsPerPoint(8, 8, 18));
-    _baseStatsMap[Enums::ClassName::Necromancer] = BaseStats(BaseStats::StatsAtStart(15, 25, 20, 25, 79), BaseStats::StatsPerLevel(80, 20, 80), BaseStats::StatsPerPoint(4, 8, 24));
-    _baseStatsMap[Enums::ClassName::Paladin] = BaseStats(BaseStats::StatsAtStart(25, 20, 25, 15, 89), BaseStats::StatsPerLevel(120, 60, 40), BaseStats::StatsPerPoint(12, 8, 12));
-    _baseStatsMap[Enums::ClassName::Barbarian] = BaseStats(BaseStats::StatsAtStart(30, 20, 30, 5, 92), BaseStats::StatsPerLevel(120, 60, 40), BaseStats::StatsPerPoint(12, 8, 12));
-    _baseStatsMap[Enums::ClassName::Druid] = BaseStats(BaseStats::StatsAtStart(25, 20, 15, 25, 84), BaseStats::StatsPerLevel(80, 20, 80), BaseStats::StatsPerPoint(4, 8, 24));
-    _baseStatsMap[Enums::ClassName::Assassin] = BaseStats(BaseStats::StatsAtStart(20, 35, 15, 15, 95), BaseStats::StatsPerLevel(100, 40, 60), BaseStats::StatsPerPoint(8, 8, 18));
+    _baseStatsMap[Enums::ClassName::Amazon] = BaseStats(BaseStats::StatsAtStart(25, 25, 20, 15, 84), BaseStats::StatsStep(100, 40, 60), BaseStats::StatsStep(8, 8, 18));
+    _baseStatsMap[Enums::ClassName::Sorceress] = BaseStats(BaseStats::StatsAtStart(10, 25, 15, 35, 74), BaseStats::StatsStep(100, 40, 60), BaseStats::StatsStep(8, 8, 18));
+    _baseStatsMap[Enums::ClassName::Necromancer] = BaseStats(BaseStats::StatsAtStart(15, 25, 20, 25, 79), BaseStats::StatsStep(80, 20, 80), BaseStats::StatsStep(4, 8, 24));
+    _baseStatsMap[Enums::ClassName::Paladin] = BaseStats(BaseStats::StatsAtStart(25, 20, 25, 15, 89), BaseStats::StatsStep(120, 60, 40), BaseStats::StatsStep(12, 8, 12));
+    _baseStatsMap[Enums::ClassName::Barbarian] = BaseStats(BaseStats::StatsAtStart(30, 20, 30, 5, 92), BaseStats::StatsStep(120, 60, 40), BaseStats::StatsStep(12, 8, 12));
+    _baseStatsMap[Enums::ClassName::Druid] = BaseStats(BaseStats::StatsAtStart(25, 20, 15, 25, 84), BaseStats::StatsStep(80, 20, 80), BaseStats::StatsStep(4, 8, 24));
+    _baseStatsMap[Enums::ClassName::Assassin] = BaseStats(BaseStats::StatsAtStart(20, 35, 15, 15, 95), BaseStats::StatsStep(100, 40, 60), BaseStats::StatsStep(8, 8, 18));
 }
 
 void MedianXLOfflineTools::connectSignals()
@@ -1867,7 +1858,23 @@ void MedianXLOfflineTools::updateWindowTitle()
 #endif
 }
 
-void MedianXLOfflineTools::updateTableStats(QTableWidgetItem *item, int diff, int statPerPoint)
+void MedianXLOfflineTools::updateTableStats(const BaseStats::StatsStep &statsPerStep, int diff, QSpinBox *senderSpinBox /*= 0*/)
+{
+    if (!senderSpinBox || senderSpinBox && senderSpinBox == ui.vitalitySpinBox)
+    {
+        updateTableItemStat(ui.statsTableWidget->item(0, 0), diff, statsPerStep.life); // current life
+        updateTableItemStat(ui.statsTableWidget->item(0, 1), diff, statsPerStep.life); // base life
+        updateTableItemStat(ui.statsTableWidget->item(2, 0), diff, statsPerStep.stamina); // current stamina
+        updateTableItemStat(ui.statsTableWidget->item(2, 1), diff, statsPerStep.stamina); // base stamina
+    }
+    if (!senderSpinBox || senderSpinBox && senderSpinBox == ui.energySpinBox)
+    {
+        updateTableItemStat(ui.statsTableWidget->item(1, 0), diff, statsPerStep.mana); // current mana
+        updateTableItemStat(ui.statsTableWidget->item(1, 1), diff, statsPerStep.mana); // base mana
+    }
+}
+
+void MedianXLOfflineTools::updateTableItemStat(QTableWidgetItem *item, int diff, int statPerPoint)
 {
     double newValue = item->text().toDouble() + diff * statPerPoint / 4.0;
     if (newValue > 8191)
