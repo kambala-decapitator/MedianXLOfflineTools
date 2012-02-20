@@ -142,7 +142,7 @@ namespace Enums
             hash[Location] = 3;
             hash[EquipIndex] = 4;
             hash[Column] = 4;
-            hash[Row] = 3;
+            hash[Row] = 4;
             hash[Storage] = 3;
         }
         return hash.value(offset);

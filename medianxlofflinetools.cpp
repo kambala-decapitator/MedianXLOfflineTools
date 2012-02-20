@@ -13,7 +13,7 @@
 #include "itemspropertiessplitter.h"
 
 #include <QCloseEvent>
-#include <QFormLayout>
+#include <QGridLayout>
 #include <QFileDialog>
 #include <QLabel>
 
@@ -21,7 +21,6 @@
 #include <QFile>
 #include <QDataStream>
 #include <QTranslator>
-#include <QTimer>
 
 #ifndef QT_NO_DEBUG
 #include <QDebug>
@@ -30,7 +29,7 @@
 #include <cmath>
 
 
-static const QString lastSavePathKey("lastSavePath"), releaseDate("17.02.2012"), backupExtension("bak"), readonlyCss("background-color: rgb(227, 227, 227)");
+static const QString lastSavePathKey("lastSavePath"), releaseDate("20.02.2012"), backupExtension("bak"), readonlyCss("background-color: rgb(227, 227, 227)");
 
 //#define MAKE_HC
 //#define ENABLE_PERSONALIZE
@@ -600,7 +599,7 @@ void MedianXLOfflineTools::showItems(bool activate /*= true*/)
     }
     else
     {
-        _itemsDialog = new ItemsViewerDialog(this);
+        _itemsDialog = new ItemsViewerDialog(getPlugyStashesExistenceHash(), this);
         connect(_itemsDialog->tabWidget(), SIGNAL(currentChanged(int)), SLOT(itemStorageTabChanged(int)));
         _itemsDialog->show();
 
@@ -626,8 +625,6 @@ void MedianXLOfflineTools::itemStorageTabChanged(int tabIndex)
     {
         QList<const char *> plugyNavigationSlots = QList<const char *>() << SLOT(previous10Pages()) << SLOT(previousPage()) << SLOT(nextPage()) << SLOT(next10Pages())
                                                                          << SLOT(previous100Pages()) << SLOT(firstPage()) << SLOT(lastPage()) << SLOT(next100Pages());
-        Q_ASSERT(plugyNavigationActions.size() == plugyNavigationSlots.size()); // let's make sure that I can count correctly :)
-
         ItemsPropertiesSplitter *plugyTab = _itemsDialog->splitterAtIndex(tabIndex);
         for (int i = 0; i < plugyNavigationActions.size(); ++i)
             connect(plugyNavigationActions[i], SIGNAL(triggered()), plugyTab, plugyNavigationSlots[i]);
@@ -636,15 +633,12 @@ void MedianXLOfflineTools::itemStorageTabChanged(int tabIndex)
 
 void MedianXLOfflineTools::giveCube()
 {
-    QString cubePath = ResourcePathManager::dataPathForFileName("items/cube.d2i");
-    ItemInfo *cube = ItemParser::loadItemFromFile(cubePath);
+    ItemInfo *cube = ItemParser::loadItemFromFile("cube");
     if (!cube)
-    {
-        ERROR_BOX(tr("Error loading '%1'").arg(cubePath));
         return;
-    }
     
-    if (!ItemParser::storeItemIn(cube, Enums::ItemStorage::Inventory, 6, 10) && !ItemParser::storeItemIn(cube, Enums::ItemStorage::Stash, 10, 10))
+    if (!ItemParser::storeItemIn(cube, Enums::ItemStorage::Inventory, ItemsViewerDialog::rows.at(ItemsViewerDialog::tabIndexFromItemStorage(Enums::ItemStorage::Inventory))) &&
+        !ItemParser::storeItemIn(cube, Enums::ItemStorage::Stash,     ItemsViewerDialog::rows.at(ItemsViewerDialog::tabIndexFromItemStorage(Enums::ItemStorage::Stash))))
     {
         ERROR_BOX(tr("You have no free space in inventory and stash to store the Cube"));
         delete cube;
@@ -656,7 +650,9 @@ void MedianXLOfflineTools::giveCube()
         ReverseBitWriter::replaceValueInBitString(cube->bitString, Enums::ItemOffsets::Column, cube->column);
     if (cube->row)
         ReverseBitWriter::replaceValueInBitString(cube->bitString, Enums::ItemOffsets::Row, cube->row);
-    if (cube->storage != Enums::ItemStorage::Inventory)
+
+    QHash<int, bool> plugyStashesExistenceHash = getPlugyStashesExistenceHash();
+    if (cube->storage != Enums::ItemStorage::Inventory && plugyStashesExistenceHash[Enums::ItemStorage::PersonalStash])
     {
         ReverseBitWriter::replaceValueInBitString(cube->bitString, Enums::ItemOffsets::Storage, cube->storage);
 
@@ -668,10 +664,10 @@ void MedianXLOfflineTools::giveCube()
     _editableCharInfo.items.character += cube;
 
     if (_itemsDialog)
-        _itemsDialog->updateItems();
+        _itemsDialog->updateItems(plugyStashesExistenceHash);
 
     ui.actionGiveCube->setDisabled(true);
-    INFO_BOX(tr("Cube has been stored in %1 at (%2,%3)").arg(ItemsViewerDialog::tabNames.at(ItemsViewerDialog::indexFromItemStorage(cube->storage))).arg(cube->row + 1).arg(cube->column + 1));
+    INFO_BOX(tr("Cube has been stored in %1 at (%2,%3)").arg(ItemsViewerDialog::tabNames.at(ItemsViewerDialog::tabIndexFromItemStorage(cube->storage))).arg(cube->row + 1).arg(cube->column + 1));
 }
 
 void MedianXLOfflineTools::backupSettingTriggered(bool checked)
@@ -698,6 +694,9 @@ void MedianXLOfflineTools::aboutApp()
              "<li><a href=\"http://modsbylaz.hugelaser.com/\">BrotherLaz</a> for this awesome mod</li>"
              "<li><a href=\"http://modsbylaz.14.forumer.com/profile.php?mode=viewprofile&u=33805\">grig</a> for the Perl source of "
                  "<a href=\"http://grig.vlexofree.com/\">Median XL Online Tools</a> and tips</li>"
+             "<li><a href=\"http://phrozenkeep.hugelaser.com/index.php?ind=reviews&op=section_view&idev=4\">Phrozen Keep File Guides</a> for tons of useful information on txt sources</li>"
+             "<li><a href=\"http://modsbylaz.14.forumer.com/profile.php?mode=viewprofile&u=44046\">FixeR</a> and <a href=\"http://forum.worldofplayers.ru/member.php?u=84592\">Zelgadiss</a> "
+                 "for intensive testing and tips on GUI & functionality</li>"
            "</ul>")
     );
     aboutBox.exec();
@@ -1081,7 +1080,7 @@ bool MedianXLOfflineTools::loadFile(const QString &charPath)
         ItemDataBase::charSkills = &_editableCharInfo.basicInfo.skills;
 
         if (_itemsDialog)
-            _itemsDialog->updateItems();
+            _itemsDialog->updateItems(getPlugyStashesExistenceHash());
         if (_itemsDialog || ui.actionOpenItemsAutomatically->isChecked())
             showItems();
 
@@ -1466,14 +1465,7 @@ bool MedianXLOfflineTools::processSaveFile(const QString &charPath)
         editableCharInfo.items.character += item;
 
         int avoidKey = Enums::ItemProperties::Avoid1;
-        // copypasting ftw!
-        if (item->location == Enums::ItemLocation::Equipped)
-        {
-            avoidValue += item->props.value(avoidKey).value + item->rwProps.value(avoidKey).value;
-            foreach (ItemInfo *socketableItem, item->socketablesInfo)
-                avoidValue += socketableItem->props.value(avoidKey).value + socketableItem->rwProps.value(avoidKey).value;
-        }
-        else if (item->storage == Enums::ItemStorage::Inventory && ItemDataBase::isUberCharm(item))
+        if (item->location == Enums::ItemLocation::Equipped || item->storage == Enums::ItemStorage::Inventory && ItemDataBase::isUberCharm(item))
         {
             avoidValue += item->props.value(avoidKey).value + item->rwProps.value(avoidKey).value;
             foreach (ItemInfo *socketableItem, item->socketablesInfo)
@@ -1484,7 +1476,7 @@ bool MedianXLOfflineTools::processSaveFile(const QString &charPath)
     {
         QString avoidText = tr("100% avoid is kewl");
         if (avoidValue > 100)
-            avoidText += " " + tr("(well, you have %1% actually)").arg(avoidValue);
+            avoidText += QString(" (%1)").arg(tr("well, you have %1% actually", "avoid").arg(avoidValue));
         WARNING_BOX(avoidText);
     }
 
@@ -2041,4 +2033,12 @@ void MedianXLOfflineTools::backupFile(QFile &file)
                 ERROR_BOX_FILE(tr("Error creating backup of '%1'"), file);
         }
     }
+}
+
+QHash<int, bool> MedianXLOfflineTools::getPlugyStashesExistenceHash() const
+{
+    QHash<int, bool> plugyStashesExistenceHash;
+    for (QHash<Enums::ItemStorage::ItemStorageEnum, PlugyStashInfo>::const_iterator iter = _plugyStashesHash.constBegin(); iter != _plugyStashesHash.constEnd(); ++iter)
+        plugyStashesExistenceHash[iter.key()] = iter.value().exists;
+    return plugyStashesExistenceHash;
 }

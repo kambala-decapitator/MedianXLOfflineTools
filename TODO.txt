@@ -1,7 +1,5 @@
-- finish fixing disenchant
 - fix stats table size
 - write help for search
-- uncomment 'like duping items'
 - compress and maybe encrypt txt data
 -----
 - show experince bar and completion of current level in %

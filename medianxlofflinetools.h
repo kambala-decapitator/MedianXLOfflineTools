@@ -136,6 +136,7 @@ private:
     inline void addStatisticBits(QString &bitsString, quint64 number, int fieldWidth);
 
     void processPlugyStash(QHash<Enums::ItemStorage::ItemStorageEnum, PlugyStashInfo>::iterator &iter, ItemsList *items);
+    QHash<int, bool> getPlugyStashesExistenceHash() const;
     void clearItems(bool sharedStashPathChanged = true, bool hcStashPathChanged = true);
 
     void backupFile(QFile &file);

@@ -2,6 +2,7 @@
 #include "itemdatabase.h"
 #include "reversebitreader.h"
 #include "helpers.h"
+#include "resourcepathmanager.hpp"
 
 #include <QFile>
 #include <QDataStream>
@@ -376,9 +377,10 @@ void ItemParser::writeItems(const ItemsList &items, QDataStream &ds)
     }
 }
 
-ItemInfo *ItemParser::loadItemFromFile(const QString &filePath)
+ItemInfo *ItemParser::loadItemFromFile(const QString &fileName)
 {
     ItemInfo *item = 0;
+    QString filePath = ResourcePathManager::pathForResourceItem(fileName);
     QFile itemFile(filePath);
     if (itemFile.open(QIODevice::ReadOnly))
     {
@@ -393,7 +395,7 @@ ItemInfo *ItemParser::loadItemFromFile(const QString &filePath)
         item->row = item->column = -1;
     }
     else
-        ERROR_BOX_NO_PARENT(tr("Error opening file '%1'").arg(filePath).arg(itemFile.errorString()));
+        ERROR_BOX_NO_PARENT(tr("Error loading '%1'").arg(filePath) + "\n" + tr("Reason: %1", "error with file").arg(itemFile.errorString()));
     return item;
 }
 
@@ -409,12 +411,12 @@ ItemsList ItemParser::itemsStoredIn(int storage, ItemsList *allItems /*= 0*/, in
     return items;
 }
 
-bool ItemParser::storeItemIn(ItemInfo *item, Enums::ItemStorage::ItemStorageEnum storage, quint8 rows, quint8 cols, int plugyPage /*= 0*/)
+bool ItemParser::storeItemIn(ItemInfo *item, Enums::ItemStorage::ItemStorageEnum storage, quint8 rowsTotal, quint8 colsTotal /*= 10*/, int plugyPage /*= 0*/)
 {
     ItemsList items = itemsStoredIn(storage);
-    for (quint8 i = 0; i < rows; ++i)
-        for (quint8 j = 0; j < cols; ++j)
-            if (canStoreItemAt(i, j, item->itemType, items, rows, cols))
+    for (quint8 i = 0; i < rowsTotal; ++i)
+        for (quint8 j = 0; j < colsTotal; ++j)
+            if (canStoreItemAt(i, j, item->itemType, items, rowsTotal, colsTotal))
             {
                 item->storage = storage;
                 item->row = i;
@@ -425,7 +427,7 @@ bool ItemParser::storeItemIn(ItemInfo *item, Enums::ItemStorage::ItemStorageEnum
     return false;
 }
 
-bool ItemParser::canStoreItemAt(quint8 row, quint8 col, const QByteArray &storeItemType, const ItemsList &items, int rowsTotal, int colsTotal, int plugyPage /*= 0*/)
+bool ItemParser::canStoreItemAt(quint8 row, quint8 col, const QByteArray &storeItemType, const ItemsList &items, int rowsTotal, int colsTotal /*= 10*/, int plugyPage /*= 0*/)
 {
     // col is horizontal (x), row is vertical (y)
     const ItemBase &storeItemBase = ItemDataBase::Items()->value(storeItemType);

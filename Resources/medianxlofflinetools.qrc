@@ -19,4 +19,10 @@
         <file>icons/plugy/right10.png</file>
         <file>icons/plugy/right100.png</file>
     </qresource>
+    <qresource prefix="/Items">
+        <file>data/items/arcane_crystal.d2i</file>
+        <file>data/items/arcane_shard.d2i</file>
+        <file>data/items/cube.d2i</file>
+        <file>data/items/signet_of_learning.d2i</file>
+    </qresource>
 </RCC>

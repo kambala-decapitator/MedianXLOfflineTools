@@ -49,6 +49,7 @@ protected:
 signals:
     void itemCountChanged(int itemCount);
     void itemDeleted();
+    //void storageModified(int storage);
 
 private slots:
     void itemSelected(const QModelIndex &index);

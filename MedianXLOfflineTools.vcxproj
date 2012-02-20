@@ -425,7 +425,6 @@
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
       <Command Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
     </CustomBuild>
-    <None Include="medianxlofflinetools_ru.ts" />
     <CustomBuild Include="Resources\medianxlofflinetools.qrc">
       <FileType>Document</FileType>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath);.\Resources\Resources\icons\icon.png;.\Resources\Resources\icons\qt.png;.\Resources\Resources\icons\save.png;.\Resources\Resources\icons\items.png;.\Resources\Resources\icons\about.png;.\Resources\Resources\icons\find.png;.\Resources\Resources\icons\open.png;.\Resources\Resources\icons\reload.png;.\Resources\Resources\icons\plugy\first.png;.\Resources\Resources\icons\plugy\last.png;.\Resources\Resources\icons\plugy\left.png;.\Resources\Resources\icons\plugy\left10.png;.\Resources\Resources\icons\plugy\left100.png;.\Resources\Resources\icons\plugy\right.png;.\Resources\Resources\icons\plugy\right10.png;.\Resources\Resources\icons\plugy\right100.png;%(AdditionalInputs)</AdditionalInputs>
@@ -441,6 +440,8 @@
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">.\GeneratedFiles\qrc_%(Filename).cpp;%(Outputs)</Outputs>
       <Command Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">"$(QTDIR)\bin\rcc.exe" -name "%(Filename)" -no-compress "%(FullPath)" -o .\GeneratedFiles\qrc_%(Filename).cpp</Command>
     </CustomBuild>
+    <None Include="Resources\translations\medianxlofflinetools.ts" />
+    <None Include="Resources\translations\medianxlofflinetools_ru.ts" />
     <None Include="TODO.txt" />
   </ItemGroup>
   <ItemGroup>

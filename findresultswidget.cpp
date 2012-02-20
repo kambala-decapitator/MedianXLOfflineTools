@@ -96,7 +96,7 @@ void FindResultsWidget::updateItems(QList<SearchResultItem> *newItems)
 
 void FindResultsWidget::selectItem(ItemInfo *item)
 {
-    int topItemIndex = ItemsViewerDialog::indexFromItemStorage(item->storage);
+    int topItemIndex = ItemsViewerDialog::tabIndexFromItemStorage(item->storage);
     _resultsTreeWidget->setCurrentItem(_resultsTreeWidget->topLevelItem(topItemIndex)->child(_foundItemsMap[topItemIndex].indexOf(item)));
 }
 

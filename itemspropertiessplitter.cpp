@@ -357,12 +357,10 @@ void ItemsPropertiesSplitter::disenchantItem()
         return;
     }
 
-    QString path = ResourcePathManager::dataPathForFileName(QString("items/%1.d2i").arg(action->objectName() == "signet" ? "signet_of_learning" : "arcane_shard"));
-    ItemInfo *newItem = ItemParser::loadItemFromFile(path);
-
     ItemsList items = ItemParser::itemsStoredIn(item->storage);
     items.removeOne(item);
-    if (!ItemParser::canStoreItemAt(item->row, item->column, newItem->itemType, items, ItemsViewerDialog::rows.at(ItemsViewerDialog::indexFromItemStorage(item->storage)), 10))
+    ItemInfo *newItem = ItemParser::loadItemFromFile(action->objectName() == "signet" ? "signet_of_learning" : "arcane_shard");
+    if (!ItemParser::canStoreItemAt(item->row, item->column, newItem->itemType, items, ItemsViewerDialog::rows.at(ItemsViewerDialog::tabIndexFromItemStorage(item->storage))))
     {
         ERROR_BOX("If you see this text (which you shouldn't), please tell me which item you've just tried to disenchant");
         delete newItem;
@@ -384,48 +382,46 @@ void ItemsPropertiesSplitter::disenchantItem()
     ReverseBitWriter::replaceValueInBitString(newItem->bitString, Enums::ItemOffsets::EquipIndex, newItem->whereEquipped);
     //ReverseBitWriter::replaceValueInBitString(newItem->bitString, Enums::ItemOffsets::Location, newItem->location);
 
-    if (newItem->storage == Enums::ItemStorage::Stash)
-    {
-        // plugy saves last opened page as the stash page
-        //int storage = 0;, oldItemIndex;
-        ItemInfo *plugyItem = 0;
-        for (int i = Enums::ItemStorage::PersonalStash; i <= Enums::ItemStorage::HCStash; ++i)
-        {
-            ItemsList plugyStashItems = ItemParser::itemsStoredIn(i);
-            //oldItemIndex = 0;
-            foreach (ItemInfo *plugyStashItem, plugyStashItems)
-            {
-                if (plugyStashItem->bitString == newItem->bitString)
-                {
-                    plugyItem = plugyStashItem;
-                    break;
-                }
-                //++oldItemIndex;
-            }
-            if (plugyItem)
-                break;
-        }
+    //if (newItem->storage == Enums::ItemStorage::Stash)
+    //{
+    //    // plugy saves last opened page as the stash page, so we should find the correct page
+    //    ItemInfo *plugyItem = 0;
+    //    for (int i = Enums::ItemStorage::PersonalStash; i <= Enums::ItemStorage::HCStash; ++i)
+    //    {
+    //        ItemsList plugyStashItems = ItemParser::itemsStoredIn(i);
+    //        foreach (ItemInfo *plugyStashItem, plugyStashItems)
+    //        {
+    //            if (plugyStashItem->bitString == newItem->bitString)
+    //            {
+    //                plugyItem = plugyStashItem;
+    //                break;
+    //            }
+    //        }
+    //        if (plugyItem)
+    //            break;
+    //    }
 
-        if (plugyItem)
-        {
-            ItemInfo *copy = new ItemInfo(*newItem);
-            copy->storage = plugyItem->storage;
-            copy->plugyPage = plugyItem->plugyPage;
+    //    if (plugyItem)
+    //    {
+    //        ItemInfo *copy = new ItemInfo(*newItem);
+    //        copy->storage = plugyItem->storage;
+    //        copy->plugyPage = plugyItem->plugyPage;
 
-            performDeleteItem(plugyItem, false);
-            addItemToList(copy, false);
-        }
-    }
-    else if (newItem->storage >= Enums::ItemStorage::PersonalStash && newItem->storage <= Enums::ItemStorage::HCStash)
-    {
-        ItemsList stashItems = ItemParser::itemsStoredIn(Enums::ItemStorage::Stash);
-        if (stashItems.indexOf(item) != -1)
-        {
-            ItemInfo *copy = new ItemInfo(*newItem);
-            copy->storage = Enums::ItemStorage::Stash;
-            copy->plugyPage = 0;
-        }
-    }
+    //        performDeleteItem(plugyItem, false);
+    //        addItemToList(copy, false);
+    //        //emit storageModified(copy->storage);
+    //    }
+    //}
+    //else if (newItem->storage >= Enums::ItemStorage::PersonalStash && newItem->storage <= Enums::ItemStorage::HCStash)
+    //{
+    //    ItemsList stashItems = ItemParser::itemsStoredIn(Enums::ItemStorage::Stash);
+    //    if (stashItems.indexOf(item) != -1)
+    //    {
+    //        ItemInfo *copy = new ItemInfo(*newItem);
+    //        copy->storage = Enums::ItemStorage::Stash;
+    //        copy->plugyPage = 0;
+    //    }
+    //}
 
     performDeleteItem(item);
     addItemToList(newItem);

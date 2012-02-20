@@ -33,11 +33,11 @@ public:
     static const QStringList tabNames;
     static const QList<int> rows;
 
-    static int indexFromItemStorage(int storage);
+    static int tabIndexFromItemStorage(int storage);
 
-    explicit ItemsViewerDialog(QWidget *parent);
+    explicit ItemsViewerDialog(const QHash<int, bool> &plugyStashesExistenceHash, QWidget *parent = 0);
 
-    void updateItems();
+    void updateItems(const QHash<int, bool> &plugyStashesExistenceHash);
     void showItem(ItemInfo *item);
 
     //void enableCubeTab();
@@ -55,6 +55,7 @@ private slots:
     void tabChanged(int tabIndex);
     void itemCountChangedInCurrentTab(int newCount);
     void decreaseItemCount();
+    //int storageItemsModified(int storage);
 
 private:
     QTabWidget *_tabWidget;

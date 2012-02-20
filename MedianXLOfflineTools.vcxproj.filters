@@ -226,10 +226,13 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="medianxlofflinetools_ru.ts">
+    <None Include="TODO.txt" />
+    <None Include="Resources\translations\medianxlofflinetools.ts">
       <Filter>Translation Files</Filter>
     </None>
-    <None Include="TODO.txt" />
+    <None Include="Resources\translations\medianxlofflinetools_ru.ts">
+      <Filter>Translation Files</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="enums.h">

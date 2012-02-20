@@ -19,7 +19,7 @@ const int ItemsViewerDialog::cellSize = 32;
 const QStringList ItemsViewerDialog::tabNames = QStringList() << tr("Gear") << tr("Inventory") << tr("Cube") << tr("Stash") << tr("Personal Stash") << tr("Shared Stash") << tr("Hardcore Stash");
 const QList<int> ItemsViewerDialog::rows = QList<int>() << 11 << 6 << 8 << 10 << 10 << 10 << 10;
 
-ItemsViewerDialog::ItemsViewerDialog(QWidget *parent) : QDialog(parent), _tabWidget(new QTabWidget(this))
+ItemsViewerDialog::ItemsViewerDialog(const QHash<int, bool> &plugyStashesExistenceHash, QWidget *parent) : QDialog(parent), _tabWidget(new QTabWidget(this))
 {
     setAttribute(Qt::WA_DeleteOnClose);
     setWindowFlags(windowFlags() & ~Qt::WindowContextHelpButtonHint);
@@ -32,9 +32,10 @@ ItemsViewerDialog::ItemsViewerDialog(QWidget *parent) : QDialog(parent), _tabWid
         ItemsPropertiesSplitter *splitter = new ItemsPropertiesSplitter(new ItemStorageTableView(this), new ItemStorageTableModel(rows.at(i), this), i >= PersonalStashIndex, this);
         connect(splitter, SIGNAL(itemCountChanged(int)), SLOT(itemCountChangedInCurrentTab(int)));
         connect(splitter, SIGNAL(itemDeleted()), SLOT(decreaseItemCount()));
+        //connect(splitter, SIGNAL(storageModified(int)), SLOT(storageItemsModified(int)));
         _tabWidget->addTab(splitter, tabNames.at(i));
     }
-    updateItems();
+    updateItems(plugyStashesExistenceHash);
 
     for (int i = GearIndex; i <= LastIndex; ++i)
     {
@@ -97,7 +98,7 @@ void ItemsViewerDialog::itemCountChangedInTab(int tabIndex, int newCount)
     _tabWidget->setTabText(tabIndex, tabNames.at(tabIndex) + newTabTitle);
 }
 
-void ItemsViewerDialog::updateItems()
+void ItemsViewerDialog::updateItems(const QHash<int, bool> &plugyStashesExistenceHash)
 {
     _itemsTotal = 0;
     for (int i = GearIndex; i <= LastIndex; ++i)
@@ -163,22 +164,24 @@ void ItemsViewerDialog::updateItems()
         }
         splitterAtIndex(i)->setItems(items);
         itemCountChangedInTab(i, items.size());
-        //_tabWidget->setTabEnabled(i, !items.isEmpty());
         
         _itemsTotal += items.size();
     }
+
+    for (QHash<int, bool>::const_iterator iter = plugyStashesExistenceHash.constBegin(); iter != plugyStashesExistenceHash.constEnd(); ++iter)
+        _tabWidget->setTabEnabled(tabIndexFromItemStorage(iter.key()), iter.value());
     
     updateWindowTitle();
 }
 
-int ItemsViewerDialog::indexFromItemStorage(int storage)
+int ItemsViewerDialog::tabIndexFromItemStorage(int storage)
 {
     return storage > Enums::ItemStorage::Inventory ? storage - 2 : storage;
 }
 
 void ItemsViewerDialog::showItem(ItemInfo *item)
 {
-    _tabWidget->setCurrentIndex(indexFromItemStorage(item->storage));
+    _tabWidget->setCurrentIndex(tabIndexFromItemStorage(item->storage));
     splitterAtIndex(_tabWidget->currentIndex())->showItem(item);
 }
 
@@ -197,3 +200,8 @@ void ItemsViewerDialog::decreaseItemCount()
     --_itemsTotal;
     updateWindowTitle();
 }
+
+//int ItemsViewerDialog::storageItemsModified(int storage)
+//{
+//    int tabIndex = tabIndexFromItemStorage(storage);
+//}

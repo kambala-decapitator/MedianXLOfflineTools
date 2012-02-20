@@ -24,10 +24,10 @@ public:
 
     static void writeItems(const ItemsList &items, QDataStream &ds);
 
-    static ItemInfo *loadItemFromFile(const QString &filePath);
+    static ItemInfo *loadItemFromFile(const QString &fileName);
     static ItemsList itemsStoredIn(int storage, ItemsList *allItems = 0, int location = Enums::ItemLocation::Stored);
-    static bool storeItemIn(ItemInfo *item, Enums::ItemStorage::ItemStorageEnum storage, quint8 rows, quint8 cols, int plugyPage = 0);
-    static bool canStoreItemAt(quint8 row, quint8 col, const QByteArray &storeItemType, const ItemsList &items, int rowsTotal, int colsTotal, int plugyPage = 0);
+    static bool storeItemIn(ItemInfo *item, Enums::ItemStorage::ItemStorageEnum storage, quint8 rowsTotal, quint8 colsTotal = 10, int plugyPage = 0);
+    static bool canStoreItemAt(quint8 row, quint8 col, const QByteArray &storeItemType, const ItemsList &items, int rowsTotal, int colsTotal = 10, int plugyPage = 0);
 
 private:
     static bool itemTypesInheritFromTypes(const QList<QByteArray> &itemTypes, const QList<QByteArray> &allowedItemTypes);

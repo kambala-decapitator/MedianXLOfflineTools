@@ -28,7 +28,7 @@ SOURCES += main.cpp \
     propertiesdisplaymanager.cpp \
     findresultswidget.cpp
 
-HEADERS  += medianxlofflinetools.h \
+HEADERS += medianxlofflinetools.h \
     resurrectpenaltydialog.h \
     qd2charrenamer.h \
     enums.h \
@@ -50,22 +50,23 @@ HEADERS  += medianxlofflinetools.h \
     propertiesdisplaymanager.h \
     findresultswidget.h
 
-FORMS    += medianxlofflinetools.ui \
+FORMS += medianxlofflinetools.ui \
     resurrectpenaltydialog.ui \
     qd2charrenamer.ui \
     propertiesviewerwidget.ui \
     finditemsdialog.ui
 
-TRANSLATIONS += medianxlofflinetools_ru.ts
-
 RESOURCES += resources/medianxlofflinetools.qrc
+
+TRANSLATIONS += resources/translations/medianxlofflinetools_ru.ts \
+    resources/translations/medianxlofflinetools.ts
 
 
 macx {
-    OTHER_FILES += Resources/mac/Info.plist
+    OTHER_FILES += resources/mac/Info.plist
     
-    ICON = Resources/mac/icon.icns
-    QMAKE_INFO_PLIST = Resources/mac/Info.plist
+    ICON = resources/mac/icon.icns
+    QMAKE_INFO_PLIST = resources/mac/Info.plist
 
     CONFIG(release, debug|release) {
         message(release build)
@@ -75,11 +76,11 @@ macx {
     }
 }
 win32 {
-    RC_FILE = Resources/win/medianxlofflinetools.rc
-    #LIBS += "c:/Program Files/Microsoft SDKs/Windows/v7.0A/Lib/shell32.lib"
+    RC_FILE = resources/win/medianxlofflinetools.rc
+    # LIBS += "c:/Program Files/Microsoft SDKs/Windows/v7.0A/Lib/shell32.lib"
 }
 
 # QMAKE_CXXFLAGS += -std=c++0x
 
-OTHER_FILES += \
-    TODO.txt
+
+OTHER_FILES += TODO.txt

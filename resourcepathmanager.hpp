@@ -10,6 +10,7 @@ public:
     static QString dataPathForFileName(const QString &fileName) { return QString("%1/data/%2").arg(LanguageManager::instance().resourcesPath).arg(fileName); }
     static QString localizedPathForFileName(const QString &fileName) { return dataPathForFileName(QString("%1/%2.txt").arg(LanguageManager::instance().locale()).arg(fileName)); }
     static QString pathForImageName(const QString &imageName) { return dataPathForFileName(QString("images/%1.png").arg(imageName)); }
+    static QString pathForResourceItem(const QString &itemName) { return QString(":/Items/data/items/%1.d2i").arg(itemName); }
 };
 
 #endif // RESOURCEPATHMANAGER_HPP
