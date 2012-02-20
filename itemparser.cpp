@@ -335,7 +335,7 @@ PropertiesMultiMap ItemParser::parseItemProperties(ReverseBitReader &bitReader, 
                 propToAdd.displayString = tr("Level %1 %2 (%3/%4 Charges)").arg(propToAdd.param & 63).arg(ItemDataBase::Skills()->value(propToAdd.param >> 6).name)
                     .arg(propToAdd.value & 255).arg(propToAdd.value >> 8);
             }
-            else if (QString(txtProperty.descPositive).startsWith('%')) // ctc
+            else if (txtProperty.descPositive.startsWith('%')) // ctc
             {
                 QString desc = txtProperty.descPositive;
                 for (int i = 0, k = 1; k <= 3 && i < desc.length(); ++i)

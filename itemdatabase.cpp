@@ -378,8 +378,6 @@ QString ItemDataBase::completeItemName(ItemInfo *item, bool shouldUseColor, bool
         itemName.remove(0, 4);
     if (!nonMagicalQuality.isEmpty())
         itemName.prepend(nonMagicalQuality + " ");
-    if (!item->inscribedName.isEmpty())
-        itemName.prepend(tr("%1's ", "personalized name").arg(item->inscribedName));
 
     QString specialName;
     if (item->quality == Enums::ItemQuality::Set)
@@ -401,6 +399,10 @@ QString ItemDataBase::completeItemName(ItemInfo *item, bool shouldUseColor, bool
             itemName = specialName;
         specialName.clear();
     }
+
+    if (!item->inscribedName.isEmpty())
+        (specialName.isEmpty() || item->isRW ? itemName : specialName).prepend(tr("%1's ", "personalized name").arg(item->inscribedName));
+
     if (shouldUseColor)
     {
         if (item->isRW)

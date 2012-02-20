@@ -33,6 +33,7 @@
 static const QString lastSavePathKey("lastSavePath"), releaseDate("17.02.2012"), backupExtension("bak"), readonlyCss("background-color: rgb(227, 227, 227)");
 
 //#define MAKE_HC
+//#define ENABLE_PERSONALIZE
 
 
 // static const
@@ -140,7 +141,7 @@ void MedianXLOfflineTools::saveCharacter()
 
     if (ui.activateWaypointsCheckBox->isChecked())
     {
-        QByteArray activatedWaypointsBytes(5, 0xFF); // 40x'1'
+        QByteArray activatedWaypointsBytes(5, 0xFF); // 40 x '1'
         for (int startPos = Enums::Offsets::WaypointsData + 2, i = 0; i < difficultiesNumber; ++i, startPos += 24)
             tempFileContents.replace(startPos, activatedWaypointsBytes.size(), activatedWaypointsBytes);
     }
@@ -166,36 +167,45 @@ void MedianXLOfflineTools::saveCharacter()
     QDataStream outputDataStream(&tempFileContents, QIODevice::ReadWrite);
     outputDataStream.setByteOrder(QDataStream::LittleEndian);
 
-    /*quint8 curDiff[difficultiesNumber] = {0, 0, 0};
- curDiff[ui.currentDifficultyComboBox->currentIndex()] = 128 + ui.currentActSpinBox->value() - 1; // 10000xxx
- outputDataStream.skipRawData(Enums::Offsets::CurrentLocation);
- for (int i = 0; i < difficultiesNumber; ++i)
-  outputDataStream << curDiff[i];*/
+    //quint8 curDiff[difficultiesNumber] = {0, 0, 0};
+    //curDiff[ui.currentDifficultyComboBox->currentIndex()] = 128 + ui.currentActSpinBox->value() - 1; // 10000xxx
+    //outputDataStream.skipRawData(Enums::Offsets::CurrentLocation);
+    //for (int i = 0; i < difficultiesNumber; ++i)
+    //    outputDataStream << curDiff[i];
 
-    /*outputDataStream.skipRawData(Enums::Offsets::Progression);
- outputDataStream << quint16(13); // set max act to 4 in Destruction
- outputDataStream.device()->reset();*/
-    /*quint16 one = 1;
- outputDataStream.skipRawData(Enums::Offsets::QuestsData + 2*96 + 30); // Destruction A3
- outputDataStream << one;
- outputDataStream.skipRawData(14); // A4
- outputDataStream << one;
- outputDataStream.skipRawData(4); // A4Q3 (A4Q2 is skipRawData(6) for some reason)
- outputDataStream << one;         // is completed
- outputDataStream.skipRawData(2); // A5
- outputDataStream << one;
- outputDataStream.device()->reset();
- outputDataStream.skipRawData(Enums::Offsets::CurrentLocation + 2); // set current diff to Dest and act to 4
- quint8 v = 131; // 10000011
- outputDataStream << v;
- outputDataStream.device()->reset();*/
+    //outputDataStream.skipRawData(Enums::Offsets::Progression);
+    //outputDataStream << quint16(13); // set max act to 4 in Destruction
+    //outputDataStream.device()->reset();
+
+    //quint16 one = 1;
+    //outputDataStream.skipRawData(Enums::Offsets::QuestsData + 2 * Enums::Quests::Size + 30); // Destruction A3
+    //outputDataStream << one;
+    //outputDataStream.skipRawData(14); // A4
+    //outputDataStream << one;
+    //outputDataStream.skipRawData(4); // A4Q3 (A4Q2 is skipRawData(6) for some reason)
+    //outputDataStream << one;         // is completed
+    //outputDataStream.skipRawData(2); // A5
+    //outputDataStream << one;
+    //outputDataStream.device()->reset();
+    //outputDataStream.skipRawData(Enums::Offsets::CurrentLocation + 2); // set current diff to Dest and act to 4
+    //quint8 v = 131; // 10000011
+    //outputDataStream << v;
+    //outputDataStream.device()->reset();
+#ifdef ENABLE_PERSONALIZE
+    for (int i = 0; i < difficultiesNumber; ++i)
+    {
+        outputDataStream.device()->seek(Enums::Offsets::QuestsData + i * Enums::Quests::Size + Enums::Quests::Nihlathak);
+        outputDataStream << quint16(Enums::Quests::IsTaskDone);
+    }
+    outputDataStream.device()->reset();
+#endif
 
     QString newName = _editableCharInfo.basicInfo.newName;
     bool hasNameChanged = !newName.isEmpty() && _editableCharInfo.basicInfo.originalName != newName;
     if (hasNameChanged)
     {
         outputDataStream.device()->seek(Enums::Offsets::Name);
-#if defined(Q_WS_MACX)
+#ifdef Q_WS_MACX
         QByteArray newNameByteArray = macTextCodec()->fromUnicode(newName);
 #else
         QByteArray newNameByteArray = newName.toLocal8Bit();
@@ -1449,9 +1459,33 @@ bool MedianXLOfflineTools::processSaveFile(const QString &charPath)
         return false;
     }
 
+    quint32 avoidValue = 0;
     for (int i = 0; i < charItemsTotal; ++i)
     {
-        editableCharInfo.items.character += ItemParser::parseItem(inputDataStream, _saveFileContents);
+        ItemInfo *item = ItemParser::parseItem(inputDataStream, _saveFileContents);
+        editableCharInfo.items.character += item;
+
+        int avoidKey = Enums::ItemProperties::Avoid1;
+        // copypasting ftw!
+        if (item->location == Enums::ItemLocation::Equipped)
+        {
+            avoidValue += item->props.value(avoidKey).value + item->rwProps.value(avoidKey).value;
+            foreach (ItemInfo *socketableItem, item->socketablesInfo)
+                avoidValue += socketableItem->props.value(avoidKey).value + socketableItem->rwProps.value(avoidKey).value;
+        }
+        else if (item->storage == Enums::ItemStorage::Inventory && ItemDataBase::isUberCharm(item))
+        {
+            avoidValue += item->props.value(avoidKey).value + item->rwProps.value(avoidKey).value;
+            foreach (ItemInfo *socketableItem, item->socketablesInfo)
+                avoidValue += socketableItem->props.value(avoidKey).value + socketableItem->rwProps.value(avoidKey).value;
+        }
+    }
+    if (avoidValue >= 100)
+    {
+        QString avoidText = tr("100% avoid is kewl");
+        if (avoidValue > 100)
+            avoidText += " " + tr("(well, you have %1% actually)").arg(avoidValue);
+        WARNING_BOX(avoidText);
     }
 
     if (editableCharInfo.items.corpses)

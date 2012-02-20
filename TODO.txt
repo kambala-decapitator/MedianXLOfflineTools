@@ -1,7 +1,6 @@
 - finish fixing disenchant
 - fix stats table size
 - write help for search
-- add a check for avoid >= 100%, for ctc > 100%
 - uncomment 'like duping items'
 - compress and maybe encrypt txt data
 -----

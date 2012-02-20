@@ -139,7 +139,8 @@ public:
         Radament = 0x12,
         LamEsensTome = 0x22,
         Izual = 0x32,
-        Act5Enabled = 0x38
+        Act5Enabled = 0x38,
+        Nihlathak = 0x4C
     };
 
     enum
@@ -232,6 +233,9 @@ public:
         DefenceBasedOnClvl = 214,
         EnhancedDefenceBasedOnClvl,
         TrophyOrBless = 219,
+        Avoid1 = 338,
+        Avoid2 = 339,
+        Avoid3 = 340,
         StrengthBasedOnBlessedLifeSlvl = 503,
         DexterityBasedOnBlessedLifeSlvl,
         End = 511
