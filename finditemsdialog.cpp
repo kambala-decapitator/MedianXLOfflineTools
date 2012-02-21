@@ -157,7 +157,11 @@ void FindItemsDialog::toggleResults()
 
         QSize oldSize = size();
         int newHeight = oldSize.height() + (_lastResultsHeight == -1 ? _resultsWidget->sizeHint().height() : _lastResultsHeight);
-        setMinimumHeight(minimumHeight() + _resultsWidget->minimumHeight());
+        setMinimumHeight(minimumHeight() + _resultsWidget->minimumHeight()
+#ifdef Q_WS_MACX
+                        + 35 // dialog becomes smaller without this for some reason
+#endif
+                         );
         resize(oldSize.width(), newHeight);
 
         if (_searchResultsChanged)
@@ -360,6 +364,8 @@ void FindItemsDialog::resetSearchStatus()
 
 void FindItemsDialog::showEvent(QShowEvent *e)
 {
+    Q_UNUSED(e);
+
     if (ui.searchComboBox->currentIndex() == -1 || ui.searchComboBox->currentText().isEmpty())
         ui.searchComboBox->setCurrentIndex(0);
     ui.searchComboBox->lineEdit()->selectAll();

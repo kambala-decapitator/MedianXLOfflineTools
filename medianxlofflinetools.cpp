@@ -323,7 +323,7 @@ void MedianXLOfflineTools::saveCharacter()
     if (outputFile.open(QIODevice::WriteOnly))
     {
         int bytesWritten = outputFile.write(tempFileContents);
-        if (bytesWritten == fileSize)
+        if (bytesWritten == static_cast<int>(fileSize)) // shut the compiler up
         {
             outputFile.flush();
             _saveFileContents = tempFileContents;
@@ -345,7 +345,7 @@ void MedianXLOfflineTools::saveCharacter()
                 foreach (const QFileInfo &fileInfo, sourceFileDir.entryInfoList())
                 {
                     QString extension = fileInfo.suffix();
-                    if (isStrangeName && fileInfo.baseName() != _editableCharInfo.basicInfo.originalName || extension == backupExtension)
+                    if ((isStrangeName && fileInfo.baseName() != _editableCharInfo.basicInfo.originalName) || extension == backupExtension)
                         continue;
 
                     QFile sourceFile(fileInfo.canonicalFilePath());
@@ -420,7 +420,7 @@ void MedianXLOfflineTools::respecStats()
 
 void MedianXLOfflineTools::respecSkills(bool shouldRespec)
 {
-    int skills = _editableCharInfo.basicInfo.totalSkillPoints;
+    quint16 skills = _editableCharInfo.basicInfo.totalSkillPoints;
     ui.freeSkillPointsLineEdit->setText(QString::number(shouldRespec ? skills : _statsDynamicData.property("FreeSkillPoints").toUInt()));
     updateMaxCompoundStatusTip(ui.freeSkillPointsLineEdit, skills, shouldRespec ? 0 : skills - _statsDynamicData.property("FreeSkillPoints").toUInt());
 }
@@ -1060,7 +1060,7 @@ bool MedianXLOfflineTools::loadFile(const QString &charPath)
         return false;
 
     bool result;
-    if (result = processSaveFile(charPath))
+    if ((result = processSaveFile(charPath)))
     {
         _charPath = charPath;
         updateUI();
@@ -1186,7 +1186,7 @@ bool MedianXLOfflineTools::processSaveFile(const QString &charPath)
     inputDataStream.device()->seek(Enums::Offsets::Mercenary);
     quint32 mercID;
     inputDataStream >> mercID;
-    if (editableCharInfo.mercenary.exists = (mercID != 0))
+    if ((editableCharInfo.mercenary.exists = (mercID != 0)))
     {
         quint16 mercName, mercValue;
         inputDataStream >> mercName >> mercValue;
@@ -1459,7 +1459,7 @@ bool MedianXLOfflineTools::processSaveFile(const QString &charPath)
         editableCharInfo.items.character += item;
 
         int avoidKey = Enums::ItemProperties::Avoid1;
-        if (item->location == Enums::ItemLocation::Equipped || item->storage == Enums::ItemStorage::Inventory && ItemDataBase::isUberCharm(item))
+        if (item->location == Enums::ItemLocation::Equipped || (item->storage == Enums::ItemStorage::Inventory && ItemDataBase::isUberCharm(item)))
         {
             avoidValue += item->props.value(avoidKey).value + item->rwProps.value(avoidKey).value;
             foreach (ItemInfo *socketableItem, item->socketablesInfo)
@@ -1507,15 +1507,15 @@ bool MedianXLOfflineTools::processSaveFile(const QString &charPath)
         switch (iter.key())
         {
         case Enums::ItemStorage::PersonalStash:
-            if (!ui.actionAutoOpenPersonalStash->isChecked())
+            if (!(_plugyStashesHash[iter.key()].exists = ui.actionAutoOpenPersonalStash->isChecked()))
                 continue;
             break;
         case Enums::ItemStorage::SharedStash:
-            if (!sharedStashPathChanged || !ui.actionAutoOpenSharedStash->isChecked())
+            if (!(_plugyStashesHash[iter.key()].exists = ui.actionAutoOpenSharedStash->isChecked()) || !sharedStashPathChanged)
                 continue;
             break;
         case Enums::ItemStorage::HCStash:
-            if (!hcStashPathChanged || !ui.actionAutoOpenHCShared->isChecked())
+            if (!(_plugyStashesHash[iter.key()].exists = ui.actionAutoOpenHCShared->isChecked()) || !hcStashPathChanged)
                 continue;
             break;
         default:
@@ -1608,7 +1608,7 @@ void MedianXLOfflineTools::processPlugyStash(QHash<Enums::ItemStorage::ItemStora
     inputDataStream.skipRawData(headerSize);
 
     inputDataStream >> info.version;
-    if (info.hasGold = (bytes.mid(headerSize + 1 + 4, 2) != ItemParser::plugyPageHeader))
+    if ((info.hasGold = (bytes.mid(headerSize + 1 + 4, 2) != ItemParser::plugyPageHeader)))
         inputDataStream >> info.gold;
     if (iter.key() == Enums::ItemStorage::SharedStash)
         _sharedGold = info.gold;
@@ -1861,14 +1861,14 @@ void MedianXLOfflineTools::updateWindowTitle()
 
 void MedianXLOfflineTools::updateTableStats(const BaseStats::StatsStep &statsPerStep, int diff, QSpinBox *senderSpinBox /*= 0*/)
 {
-    if (!senderSpinBox || senderSpinBox && senderSpinBox == ui.vitalitySpinBox)
+    if (!senderSpinBox || (senderSpinBox && senderSpinBox == ui.vitalitySpinBox))
     {
         updateTableItemStat(ui.statsTableWidget->item(0, 0), diff, statsPerStep.life); // current life
         updateTableItemStat(ui.statsTableWidget->item(0, 1), diff, statsPerStep.life); // base life
         updateTableItemStat(ui.statsTableWidget->item(2, 0), diff, statsPerStep.stamina); // current stamina
         updateTableItemStat(ui.statsTableWidget->item(2, 1), diff, statsPerStep.stamina); // base stamina
     }
-    if (!senderSpinBox || senderSpinBox && senderSpinBox == ui.energySpinBox)
+    if (!senderSpinBox || (senderSpinBox && senderSpinBox == ui.energySpinBox))
     {
         updateTableItemStat(ui.statsTableWidget->item(1, 0), diff, statsPerStep.mana); // current mana
         updateTableItemStat(ui.statsTableWidget->item(1, 1), diff, statsPerStep.mana); // base mana
@@ -1933,7 +1933,7 @@ QByteArray MedianXLOfflineTools::statisticBytes()
             {
                 int totalPossibleFreeStats = totalPossibleStatPoints(ui.levelSpinBox->value(), _editableCharInfo.questsInfo.lamEsensTomeQuestsCompleted,
                                                                      _lineEditsStatsMap[Enums::CharacterStats::SignetsOfLearningEaten]->text().toInt()) - investedStatPoints();
-                if (value > totalPossibleFreeStats) // prevent hacks
+                if (value > static_cast<quint32>(totalPossibleFreeStats)) // prevent hacks and shut the compiler up
                 {
                     value = totalPossibleFreeStats;
                     WARNING_BOX(hackerDetected);

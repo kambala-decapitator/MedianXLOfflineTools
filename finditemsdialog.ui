@@ -71,7 +71,7 @@
     </rect>
    </property>
    <property name="toolTip">
-    <string>All greedy quantifiers become non-greedy, e.g. .+ and *+ transform in .+? and *+? respectively</string>
+    <string>All greedy quantifiers become non-greedy, for example .+ and *+ transform in .+? and *+? respectively</string>
    </property>
    <property name="text">
     <string>Minimal matching</string>

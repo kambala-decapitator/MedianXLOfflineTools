@@ -7,7 +7,7 @@
 #include <QDialog>
 
 
-class ItemInfo;
+struct ItemInfo;
 class QShowEvent;
 
 class FindItemsDialog : public QDialog

@@ -32,7 +32,7 @@ public:
     static ItemInfo *loadItemFromFile(const QString &fileName);
     static ItemsList itemsStoredIn(int storage, int location = Enums::ItemLocation::Stored, quint32 *pPlugyPage = 0, ItemsList *allItems = 0);
     static bool storeItemIn(ItemInfo *item, Enums::ItemStorage::ItemStorageEnum storage, quint8 rowsTotal, quint32 plugyPage = 0, quint8 colsTotal = 10);
-    static bool canStoreItemAt(quint8 row, quint8 col, const QByteArray &storeItemType, const ItemsList &items, int rowsTotal, quint32 plugyPage = 0, int colsTotal = 10);
+    static bool canStoreItemAt(quint8 row, quint8 col, const QByteArray &storeItemType, const ItemsList &items, int rowsTotal, int colsTotal = 10);
 
     static bool isClassCharm(ItemInfo *item);
     static bool isUberCharm(ItemInfo *item);

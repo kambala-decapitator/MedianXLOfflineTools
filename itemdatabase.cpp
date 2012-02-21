@@ -533,7 +533,7 @@ ItemsList ItemDataBase::itemsStoredIn(int storage, int location /*= Enums::ItemL
     for (int i = 0; i < characterItems->size(); ++i)
     {
         ItemInfo *item = characterItems->at(i);
-        if (item->storage == storage && item->location == location && (!pPlugyPage || pPlugyPage && item->plugyPage == *pPlugyPage))
+        if (item->storage == storage && item->location == location && (!pPlugyPage || (pPlugyPage && item->plugyPage == *pPlugyPage)))
             items += item;
     }
     return items;
@@ -555,7 +555,7 @@ bool ItemDataBase::storeItemIn(ItemInfo *item, Enums::ItemStorage::ItemStorageEn
             return false;
 }
 
-bool ItemDataBase::canStoreItemAt(quint8 row, quint8 col, const QByteArray &storeItemType, const ItemsList &items, int rowsTotal, quint32 plugyPage /*= 0*/, int colsTotal /*= 10*/)
+bool ItemDataBase::canStoreItemAt(quint8 row, quint8 col, const QByteArray &storeItemType, const ItemsList &items, int rowsTotal, int colsTotal /*= 10*/)
 {
     // col is horizontal (x), row is vertical (y)
     const ItemBase &storeItemBase = ItemDataBase::Items()->value(storeItemType);

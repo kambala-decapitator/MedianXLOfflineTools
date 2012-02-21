@@ -13,6 +13,10 @@ void ItemStorageTableView::keyPressEvent(QKeyEvent *event)
         QModelIndex newIndex = indexAt(visualRect(currentIndex()).topLeft());
         selectionModel()->setCurrentIndex(newIndex, QItemSelectionModel::ClearAndSelect);
     }
+#ifdef Q_WS_MACX
+    else if (key == Qt::Key_Backspace)
+#else
     else if (key == Qt::Key_Delete)
+#endif
         emit deleteSelectedItem();
 }

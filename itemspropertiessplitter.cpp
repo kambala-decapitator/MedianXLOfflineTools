@@ -29,9 +29,8 @@ ItemsPropertiesSplitter::ItemsPropertiesSplitter(ItemStorageTableView *itemsView
     _itemsView->setVerticalScrollMode(QAbstractItemView::ScrollPerPixel);
     _itemsView->setSelectionMode(QAbstractItemView::SingleSelection);
     _itemsView->setStyleSheet("QTableView { background-color: black; gridline-color: green; }"
-                              //"QTableView::item:selected:active { show-decoration-selected: 0; }"
-                              "QTableView::item:selected { background-color: transparent; }"// selection-color: yellow; border: 3px solid red;
-                              //"QTableView::icon:selected { left: 1px;}"
+                              "QTableView::item:selected { background-color: black; border: 1px solid #d9d9d9; }"
+                              "QTableView::icon:selected { right: 1px; }"
                              );
     _itemsView->setGridStyle(Qt::SolidLine);
     _itemsView->setCornerButtonEnabled(false);
@@ -55,7 +54,11 @@ ItemsPropertiesSplitter::ItemsPropertiesSplitter(ItemStorageTableView *itemsView
             button->setIconSize(QSize(32, 20));
             button->resize(button->minimumSizeHint());
         }
+
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Waddress-of-temporary"
         keyReleaseEvent(&QKeyEvent(QEvent::KeyRelease, Qt::Key_Shift, 0)); // hacky way to set button icons
+#pragma clang diagnostic pop
 
         _pageSpinBox = new QDoubleSpinBox(this);
         _pageSpinBox->setDecimals(0);
@@ -199,7 +202,7 @@ void ItemsPropertiesSplitter::setItems(const ItemsList &newItems)
         _lastNotEmptyPage = maxPageIter == _allItems.end() ? 0 : (*maxPageIter)->plugyPage;//!_allItems.isEmpty() ? _allItems.last()->plugyPage : 0;
         
         _pageSpinBox->setSuffix(QString(" / %1").arg(_lastNotEmptyPage));
-        _pageSpinBox->setMaximum(_lastNotEmptyPage);
+        _pageSpinBox->setRange(1, _lastNotEmptyPage);
         
         updateItemsForCurrentPage(false);
     }
@@ -282,7 +285,7 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
         //separator->setSeparator(true);
         //actions << separator;
 
-        if (item->quality == Enums::ItemQuality::Set || item->quality == Enums::ItemQuality::Unique && !ItemDataBase::isUberCharm(item))
+        if (item->quality == Enums::ItemQuality::Set || (item->quality == Enums::ItemQuality::Unique && !ItemDataBase::isUberCharm(item)))
         {
             QAction *actionShards = new QAction(QIcon(ResourcePathManager::pathForImageName("invfary4")), tr("Arcane Shards"), _itemsView);
             //actionShards->setShortcut(QKeySequence("Alt+D"));
@@ -323,7 +326,13 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
         }
 
         QAction *actionDelete = new QAction(tr("Delete"), _itemsView);
-        actionDelete->setShortcut(QKeySequence::Delete);
+        actionDelete->setShortcut(
+#ifdef Q_WS_MACX
+                    Qt::Key_Backspace
+#else
+                    QKeySequence::Delete
+#endif
+                    );
         connect(actionDelete, SIGNAL(triggered()), SLOT(deleteItem()));
         actions << actionDelete;
 
@@ -458,7 +467,7 @@ void ItemsPropertiesSplitter::unsocketItem()
 
 void ItemsPropertiesSplitter::deleteItem()
 {
-    ItemInfo *item = selectedItem();
+    ItemInfo *item = selectedItem(false);
     if (item && QUESTION_BOX_YESNO(tr("Are you sure you want to delete this item?"), QMessageBox::No) == QMessageBox::Yes)
     {
         bool isCube = ItemDataBase::isCube(item);

@@ -32,6 +32,8 @@ QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item)
 
     // create full item description
     QString itemDescription = ItemDataBase::completeItemName(item, false).replace(htmlLineBreak, "\n") + "\n" + tr("Item Level: %1").arg(item->ilvl);
+    if (!itemBase.spelldesc.isEmpty())
+        itemDescription += itemBase.spelldesc + "\n";
     if (item->isRW)
     {
         QString runes;
@@ -160,10 +162,10 @@ void PropertiesDisplayManager::addProperties(PropertiesMap *mutableProps, const 
     {
         int propId = iter.key();
         bool shouldNotAddNewProp;
-        if (shouldNotAddNewProp = mutableProps->contains(propId))
+        if ((shouldNotAddNewProp = mutableProps->contains(propId)))
         {
             ItemProperty &prop = (*mutableProps)[propId];
-            if (shouldNotAddNewProp = (prop.param == iter.value().param))
+            if ((shouldNotAddNewProp = (prop.param == iter.value().param)))
             {
                 prop.value += iter.value().value;
                 if (propId == Enums::ItemProperties::EnhancedDamage)
@@ -183,8 +185,8 @@ void PropertiesDisplayManager::constructPropertyStrings(const PropertiesMap &pro
         const ItemProperty &prop = iter.value();
         int propId = iter.key();
         // don't include secondary_(min/max)damage
-        if (propId == Enums::ItemProperties::MinimumDamageSecondary && properties.contains(Enums::ItemProperties::MinimumDamage) ||
-            propId == Enums::ItemProperties::MaximumDamageSecondary && properties.contains(Enums::ItemProperties::MaximumDamage))
+        if ((propId == Enums::ItemProperties::MinimumDamageSecondary && properties.contains(Enums::ItemProperties::MinimumDamage)) ||
+            (propId == Enums::ItemProperties::MaximumDamageSecondary && properties.contains(Enums::ItemProperties::MaximumDamage)))
         {
             continue;
         }

@@ -11,6 +11,7 @@
 #include <QPushButton>
 
 #include <QSettings>
+#include <QList>
 
 #ifndef QT_NO_DEBUG
 #include <QDebug>
@@ -20,7 +21,7 @@
 FindResultsWidget::FindResultsWidget(QWidget *parent) : QWidget(parent), _resultsTreeWidget(new QTreeWidget(this))
 {
     setStyleSheet("QTreeWidget { background-color: black; }"
-                  "QTreeWidget::branch { color: white; }"
+                  //"QTreeWidget::branch { background-color: black; }"
                   "QTreeWidget::item { selection-color: red; }"
                   "QTreeWidget::item:hover { border: 1px solid #bfcde4; }"
                   "QTreeWidget::item:selected { border: 1px solid #567dbc; }"
@@ -29,9 +30,10 @@ FindResultsWidget::FindResultsWidget(QWidget *parent) : QWidget(parent), _result
     _resultsTreeWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);
     _resultsTreeWidget->setHorizontalScrollMode(QAbstractItemView::ScrollPerPixel);
     _resultsTreeWidget->setSelectionMode(QAbstractItemView::SingleSelection);
-    _resultsTreeWidget->setHeaderHidden(true);
+//    _resultsTreeWidget->setHeaderHidden(true);
     _resultsTreeWidget->setUniformRowHeights(true);
-    _resultsTreeWidget->setColumnCount(1);
+    _resultsTreeWidget->setColumnCount(2);
+    _resultsTreeWidget->setHeaderLabels(QStringList() << tr("Item name") << tr("Special name"));
 
     QPushButton *expandAllButton = new QPushButton(tr("Expand all"), this), *collapseAllButton = new QPushButton(tr("Collapse all"), this);
     connect(expandAllButton, SIGNAL(clicked()), _resultsTreeWidget, SLOT(expandAll()));
@@ -48,6 +50,7 @@ FindResultsWidget::FindResultsWidget(QWidget *parent) : QWidget(parent), _result
 
     setMinimumHeight(sizeHint().height());
 
+//    installEventFilter(this);
     _resultsTreeWidget->installEventFilter(this);
     _resultsTreeWidget->viewport()->installEventFilter(this); // mouse clicks are delivered to viewport rather than to the widget itself
 }
@@ -81,11 +84,37 @@ void FindResultsWidget::updateItems(QList<SearchResultItem> *newItems)
                     break;
                 }
 
-            QTreeWidgetItem *childItem = new QTreeWidgetItem(QStringList(ItemDataBase::completeItemName(item, false, false).replace(htmlLineBreak, " ", Qt::CaseInsensitive).replace(QRegExp("\\s+"), " ")));
-            childItem->setToolTip(0, matchedText);
+            QString htmlName = ItemDataBase::completeItemName(item, true);//, false).replace(htmlLineBreak, " ", Qt::CaseInsensitive).replace(QRegExp("\\s+"), " ");
+            QStringList list;// = htmlName.split(htmlLineBreak);
+            QList<QColor> colors;// = QList<QColor>::fromStdList(std::list<QColor>(list.size(), Qt::white));
+            QRegExp rx("<font color = \"(.+)\">(.+)</font>");
+            rx.setMinimal(true);
+            int matchIndex = 0;
+//            for (int i = 0; i < list.size(); ++i)
+//            {
+            while ((matchIndex = rx.indexIn(htmlName, matchIndex)) != -1)
+                {
+                matchIndex += rx.cap().length();
+                    colors.prepend(rx.cap(1));
+                    list.prepend(rx.cap(2).replace(htmlLineBreak, " ", Qt::CaseInsensitive).trimmed());
+                }
+//            }
+
+//            QTreeWidgetItem *childItem = new QTreeWidgetItem(QStringList(htmlName));
+            QTreeWidgetItem *childItem = new QTreeWidgetItem(list);
+//            childItem->setToolTip(0, matchedText);
             if (i >= ItemsViewerDialog::PersonalStashIndex)
                 childItem->setText(0, QString("[%1] ").arg(tr("p. %1", "page abbreviation").arg(item->plugyPage)) + childItem->text(0));
-            childItem->setForeground(0, colors.at(ItemDataBase::colorOfItem(item)));
+//            childItem->setForeground(0, colors.at(ItemDataBase::colorOfItem(item)));
+            for (int i = 0; i < list.size(); ++i)
+            {
+                childItem->setForeground(i, colors.at(i));
+                childItem->setToolTip(i, matchedText);
+            }
+//            _resultsTreeWidget->setColumnWidth(0, 75);
+            int newWidth = width() / 2;
+            if (newWidth > _resultsTreeWidget->columnWidth(0))
+                _resultsTreeWidget->setColumnWidth(0, newWidth);
 
             topLevelItem->addChild(childItem);
         }
@@ -113,6 +142,13 @@ bool FindResultsWidget::eventFilter(QObject *obj, QEvent *event)
     }
     else if (obj == _resultsTreeWidget->viewport())
         shouldShowItem = event->type() == QEvent::MouseButtonDblClick;
+//    else if (obj == this && event->type() == QEvent::Resize)
+//    {
+//        QResizeEvent *resizeEvent = static_cast<QResizeEvent *>(event);
+//        int cols = _resultsTreeWidget->columnCount(), newWidth = resizeEvent->size().width() / cols;
+//        for (int i = 0; i < cols; ++i)
+//            _resultsTreeWidget->setColumnWidth(i, newWidth);
+//    }
 
     if (shouldShowItem)
     {
