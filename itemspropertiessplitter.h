@@ -49,6 +49,7 @@ protected:
 signals:
     void itemCountChanged(int itemCount);
     void itemDeleted();
+    void cubeDeleted(bool deleted = true); // param is here because I want to connect this signal directly to QAction's setEnabled() slot
     //void storageModified(int storage);
 
 private slots:

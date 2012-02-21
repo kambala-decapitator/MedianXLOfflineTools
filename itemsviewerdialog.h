@@ -40,16 +40,20 @@ public:
     void updateItems(const QHash<int, bool> &plugyStashesExistenceHash);
     void showItem(ItemInfo *item);
 
-    //void enableCubeTab();
-
     void saveSettings();
-
     bool isPlugyStorageIndex(int index) { return index >= PersonalStashIndex && index <= HCStashIndex; }
+
     QTabWidget *tabWidget() { return _tabWidget; }
     ItemsPropertiesSplitter *splitterAtIndex(int tabIndex);
 
+public slots:
+    void setCubeTabDisabled(bool disabled);
+
 protected:
     void closeEvent(QCloseEvent *event);
+
+signals:
+    void cubeDeleted(bool deleted = true); // param is here because I want to connect this signal directly to QAction's setEnabled() slot
 
 private slots:
     void tabChanged(int tabIndex);

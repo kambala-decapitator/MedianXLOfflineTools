@@ -32,6 +32,8 @@ ItemsViewerDialog::ItemsViewerDialog(const QHash<int, bool> &plugyStashesExisten
         ItemsPropertiesSplitter *splitter = new ItemsPropertiesSplitter(new ItemStorageTableView(this), new ItemStorageTableModel(rows.at(i), this), i >= PersonalStashIndex, this);
         connect(splitter, SIGNAL(itemCountChanged(int)), SLOT(itemCountChangedInCurrentTab(int)));
         connect(splitter, SIGNAL(itemDeleted()), SLOT(decreaseItemCount()));
+        connect(splitter, SIGNAL(cubeDeleted(bool)), SIGNAL(cubeDeleted(bool)));
+        connect(splitter, SIGNAL(cubeDeleted(bool)), SLOT(setCubeTabDisabled(bool)));
         //connect(splitter, SIGNAL(storageModified(int)), SLOT(storageItemsModified(int)));
         _tabWidget->addTab(splitter, tabNames.at(i));
     }
@@ -94,7 +96,7 @@ void ItemsViewerDialog::itemCountChangedInCurrentTab(int newCount)
 
 void ItemsViewerDialog::itemCountChangedInTab(int tabIndex, int newCount)
 {
-    QString newTabTitle = isPlugyStorageIndex(tabIndex) ? QString(" (%1 / %2)").arg(splitterAtIndex(tabIndex)->itemsModel()->itemCount()).arg(newCount) : QString(" (%1)").arg(newCount);
+    QString newTabTitle = isPlugyStorageIndex(tabIndex) ? QString(" (%1/%2)").arg(splitterAtIndex(tabIndex)->itemsModel()->itemCount()).arg(newCount) : QString(" (%1)").arg(newCount);
     _tabWidget->setTabText(tabIndex, tabNames.at(tabIndex) + newTabTitle);
 }
 
@@ -104,7 +106,7 @@ void ItemsViewerDialog::updateItems(const QHash<int, bool> &plugyStashesExistenc
     for (int i = GearIndex; i <= LastIndex; ++i)
     {
         bool isGear = i == GearIndex;
-        ItemsList items = ItemParser::itemsStoredIn(Enums::ItemStorage::metaEnum().value(i), 0, isGear);
+        ItemsList items = ItemDataBase::itemsStoredIn(Enums::ItemStorage::metaEnum().value(i), isGear);
         if (isGear)
         {
             foreach (ItemInfo *item, items)
@@ -168,6 +170,7 @@ void ItemsViewerDialog::updateItems(const QHash<int, bool> &plugyStashesExistenc
         _itemsTotal += items.size();
     }
 
+    setCubeTabDisabled(!ItemDataBase::hasCube());
     for (QHash<int, bool>::const_iterator iter = plugyStashesExistenceHash.constBegin(); iter != plugyStashesExistenceHash.constEnd(); ++iter)
         _tabWidget->setTabEnabled(tabIndexFromItemStorage(iter.key()), iter.value());
     
@@ -185,10 +188,10 @@ void ItemsViewerDialog::showItem(ItemInfo *item)
     splitterAtIndex(_tabWidget->currentIndex())->showItem(item);
 }
 
-//void ItemsViewerDialog::enableCubeTab()
-//{
-//    _tabWidget->setTabEnabled(CubeIndex, true);
-//}
+void ItemsViewerDialog::setCubeTabDisabled(bool disabled)
+{
+    _tabWidget->setTabEnabled(CubeIndex, !disabled);
+}
 
 void ItemsViewerDialog::updateWindowTitle()
 {

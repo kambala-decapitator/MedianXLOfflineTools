@@ -340,11 +340,11 @@ void PropertiesViewerWidget::modifyMysticOrbProperty(int id, int decrement, Prop
 
 int PropertiesViewerWidget::totalMysticOrbValue(int moCode, PropertiesMap *props)
 {
-    quint8 multiplier = 1 + (_item->quality == Enums::ItemQuality::Crafted || _item->quality == Enums::ItemQuality::Honorific);
+    quint8 multiplier = 1 + isMysticOrbEffectDoubled();
     return props->value(moCode).value * ItemDataBase::MysticOrbs()->value(moCode).value * multiplier;
 }
 
-QString PropertiesViewerWidget::collectMysticOrbsDataFromProps(QSet<int> *moSet, const PropertiesMap &props, bool isClassCharm)
+QString PropertiesViewerWidget::collectMysticOrbsDataFromProps(QSet<int> *moSet, PropertiesMap &props, bool isClassCharm)
 {
     moSet->clear();
 
@@ -368,9 +368,16 @@ QString PropertiesViewerWidget::collectMysticOrbsDataFromProps(QSet<int> *moSet,
         html += htmlLine + htmlLineBreak;
         foreach (int moCode, *moSet)
         {
+            if (isMysticOrbEffectDoubled())
+                props[moCode].displayString += " x 2";
             // quick & dirty hack with const_cast
             html += QString("%1 = %2").arg(props[moCode].displayString).arg(totalMysticOrbValue(moCode, const_cast<PropertiesMap *>(&props))) + htmlLineBreak;
         }
     }
     return html;
+}
+
+bool PropertiesViewerWidget::isMysticOrbEffectDoubled()
+{
+    return _item->quality == Enums::ItemQuality::Crafted || _item->quality == Enums::ItemQuality::Honorific;
 }

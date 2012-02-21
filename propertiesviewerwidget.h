@@ -37,7 +37,8 @@ private:
     void modifyMysticOrbProperty(int id, int decrement, PropertiesMultiMap *props);
     int totalMysticOrbValue(int moCode, PropertiesMap *props);
 
-    QString collectMysticOrbsDataFromProps(QSet<int> *moSet, const PropertiesMap &props, bool isClassCharm);
+    QString collectMysticOrbsDataFromProps(QSet<int> *moSet, PropertiesMap &props, bool isClassCharm);
+    bool isMysticOrbEffectDoubled();
 };
 
 #endif // PROPERTIESVIEWERWIDGET_H

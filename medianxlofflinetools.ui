@@ -865,9 +865,6 @@ p, li { white-space: pre-wrap; }
    <property name="text">
     <string>Convert to Softcore</string>
    </property>
-   <property name="shortcut">
-    <string>Alt+S</string>
-   </property>
   </action>
   <action name="actionResurrect">
    <property name="enabled">
@@ -875,9 +872,6 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="text">
     <string>Resurrect</string>
-   </property>
-   <property name="shortcut">
-    <string>Alt+R</string>
    </property>
   </action>
   <action name="actionToolbar">

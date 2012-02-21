@@ -1,5 +1,6 @@
 #include "helpers.h"
 #include "structs.h"
+#include "itemdatabase.h"
 
 #include <QString>
 #include <QStack>
@@ -82,9 +83,9 @@ QString htmlStringFromDiabloColorString(const QString &name, ColorIndex defaultC
     return result;
 }
 
-bool isCube(ItemInfo *item)
+bool isCubeItem(ItemInfo *item)
 {
-    return (item->storage == Enums::ItemStorage::Inventory || item->storage == Enums::ItemStorage::Stash) && item->itemType == "box";
+    return (item->storage == Enums::ItemStorage::Inventory || item->storage == Enums::ItemStorage::Stash) && ItemDataBase::isCube(item);
 }
 
 bool hasChanged(ItemInfo *item)

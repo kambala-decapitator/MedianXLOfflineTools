@@ -179,7 +179,7 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
                 if (blessPropIter != item->props.end())
                 {
                     QString newDesc = ItemDataBase::isUberCharm(item) ? (ItemDataBase::isClassCharm(item) ? tr("Veterans") : tr("Trophy'd"))
-                        : tr("Blessed");
+                                                                      : tr("Blessed");
                     blessPropIter.value().displayString = QString("[%1]").arg(newDesc);
                 }
 
@@ -375,77 +375,6 @@ void ItemParser::writeItems(const ItemsList &items, QDataStream &ds)
 
         writeItems(item->socketablesInfo, ds);
     }
-}
-
-ItemInfo *ItemParser::loadItemFromFile(const QString &fileName)
-{
-    ItemInfo *item = 0;
-    QString filePath = ResourcePathManager::pathForResourceItem(fileName);
-    QFile itemFile(filePath);
-    if (itemFile.open(QIODevice::ReadOnly))
-    {
-        QByteArray itemBytes = itemFile.readAll();
-        itemFile.close();
-
-        QDataStream ds(itemBytes);
-        ds.setByteOrder(QDataStream::LittleEndian);
-
-        item = parseItem(ds, itemBytes);
-        item->hasChanged = true;
-        item->row = item->column = -1;
-    }
-    else
-        ERROR_BOX_NO_PARENT(tr("Error loading '%1'").arg(filePath) + "\n" + tr("Reason: %1", "error with file").arg(itemFile.errorString()));
-    return item;
-}
-
-ItemsList ItemParser::itemsStoredIn(int storage, ItemsList *allItems /*= 0*/, int location /*= Enums::ItemLocation::Stored*/)
-{
-    ItemsList items, *characterItems = allItems ? allItems : ItemDataBase::currentCharacterItems;
-    for (int i = 0; i < characterItems->size(); ++i)
-    {
-        ItemInfo *item = characterItems->at(i);
-        if (item->storage == storage && item->location == location)
-            items += item;
-    }
-    return items;
-}
-
-bool ItemParser::storeItemIn(ItemInfo *item, Enums::ItemStorage::ItemStorageEnum storage, quint8 rowsTotal, quint8 colsTotal /*= 10*/, int plugyPage /*= 0*/)
-{
-    ItemsList items = itemsStoredIn(storage);
-    for (quint8 i = 0; i < rowsTotal; ++i)
-        for (quint8 j = 0; j < colsTotal; ++j)
-            if (canStoreItemAt(i, j, item->itemType, items, rowsTotal, colsTotal))
-            {
-                item->storage = storage;
-                item->row = i;
-                item->column = j;
-                return true;
-            }
-
-    return false;
-}
-
-bool ItemParser::canStoreItemAt(quint8 row, quint8 col, const QByteArray &storeItemType, const ItemsList &items, int rowsTotal, int colsTotal /*= 10*/, int plugyPage /*= 0*/)
-{
-    // col is horizontal (x), row is vertical (y)
-    const ItemBase &storeItemBase = ItemDataBase::Items()->value(storeItemType);
-    QRect storeItemRect(col, row, storeItemBase.width, storeItemBase.height);
-    if (storeItemRect.right() >= colsTotal || storeItemRect.bottom() >= rowsTotal) // beyond grid
-        return false;
-
-    bool ok = true;
-    foreach (ItemInfo *item, items)
-    {
-        const ItemBase &itemBase = ItemDataBase::Items()->value(item->itemType);
-        if (storeItemRect.intersects(QRect(item->column, item->row, itemBase.width, itemBase.height)))
-        {
-            ok = false;
-            break;
-        }
-    }
-    return ok;
 }
 
 bool ItemParser::itemTypeInheritsFromTypes(const QByteArray &itemType, const QList<QByteArray> &allowedItemTypes)

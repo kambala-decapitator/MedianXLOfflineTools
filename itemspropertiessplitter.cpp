@@ -270,25 +270,27 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
     {
         QList<QAction *> actions;
 
-        QAction *actionHtml = new QAction("HTML", _itemsView), *actionBbCode = new QAction("BBCode", _itemsView);
-        connect(actionHtml, SIGNAL(triggered()), SLOT(exportHtml()));
-        connect(actionBbCode, SIGNAL(triggered()), SLOT(exportBbCode()));
-        QMenu *menuExport = new QMenu(tr("Export as"), _itemsView);
-        menuExport->addActions(QList<QAction *>() << actionHtml << actionBbCode);
-        menuExport->menuAction()->setDisabled(true); // TODO: remove
-        actions << menuExport->menuAction();
+        // TODO: uncomment when implementing
+        //QAction *actionHtml = new QAction("HTML", _itemsView), *actionBbCode = new QAction("BBCode", _itemsView);
+        //connect(actionHtml, SIGNAL(triggered()), SLOT(exportHtml()));
+        //connect(actionBbCode, SIGNAL(triggered()), SLOT(exportBbCode()));
+        //QMenu *menuExport = new QMenu(tr("Export as"), _itemsView);
+        //menuExport->addActions(QList<QAction *>() << actionHtml << actionBbCode);
+        //actions << menuExport->menuAction();
 
-        QAction *separator = new QAction(_itemsView);
-        separator->setSeparator(true);
-        actions << separator;
+        //QAction *separator = new QAction(_itemsView);
+        //separator->setSeparator(true);
+        //actions << separator;
 
         if (item->quality == Enums::ItemQuality::Set || item->quality == Enums::ItemQuality::Unique && !ItemDataBase::isUberCharm(item))
         {
             QAction *actionShards = new QAction(QIcon(ResourcePathManager::pathForImageName("invfary4")), tr("Arcane Shards"), _itemsView);
+            //actionShards->setShortcut(QKeySequence("Alt+D"));
             actionShards->setObjectName("shards");
             connect(actionShards, SIGNAL(triggered()), SLOT(disenchantItem()));
 
             QAction *actionSol = new QAction(QIcon(ResourcePathManager::pathForImageName("sigil1b")), tr("Signet of Learning"), _itemsView);
+            //actionSol->setShortcut(QKeySequence("Ctrl+D"));
             actionSol->setObjectName("signet");
             connect(actionSol, SIGNAL(triggered()), SLOT(disenchantItem()));
 
@@ -357,10 +359,10 @@ void ItemsPropertiesSplitter::disenchantItem()
         return;
     }
 
-    ItemsList items = ItemParser::itemsStoredIn(item->storage);
+    ItemsList items = ItemDataBase::itemsStoredIn(item->storage, item->location, item->plugyPage ? &item->plugyPage : 0);
     items.removeOne(item);
-    ItemInfo *newItem = ItemParser::loadItemFromFile(action->objectName() == "signet" ? "signet_of_learning" : "arcane_shard");
-    if (!ItemParser::canStoreItemAt(item->row, item->column, newItem->itemType, items, ItemsViewerDialog::rows.at(ItemsViewerDialog::tabIndexFromItemStorage(item->storage))))
+    ItemInfo *newItem = ItemDataBase::loadItemFromFile(action->objectName() == "signet" ? "signet_of_learning" : "arcane_shard");
+    if (!ItemDataBase::canStoreItemAt(item->row, item->column, newItem->itemType, items, ItemsViewerDialog::rows.at(ItemsViewerDialog::tabIndexFromItemStorage(item->storage)), item->plugyPage))
     {
         ERROR_BOX("If you see this text (which you shouldn't), please tell me which item you've just tried to disenchant");
         delete newItem;
@@ -459,11 +461,21 @@ void ItemsPropertiesSplitter::deleteItem()
     ItemInfo *item = selectedItem();
     if (item && QUESTION_BOX_YESNO(tr("Are you sure you want to delete this item?"), QMessageBox::No) == QMessageBox::Yes)
     {
+        bool isCube = ItemDataBase::isCube(item);
+        if (isCube && !ItemDataBase::itemsStoredIn(Enums::ItemStorage::Cube).isEmpty())
+        {
+            //ERROR_BOX(tr("You can't delete Cube that has items inside"));
+            if (QUESTION_BOX_YESNO(tr("Cube is not empty. Do you really want to delete it?\nNote: its items will be preserved. You can recover them by getting new Cube."), QMessageBox::No) == QMessageBox::No)
+                return;
+        }
+
         performDeleteItem(item);
         showFirstItem();
 
         emit itemCountChanged(_allItems.size());
         emit itemDeleted();
+        if (isCube)
+            emit cubeDeleted();
     }
 }
 

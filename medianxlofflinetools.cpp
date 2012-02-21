@@ -29,7 +29,7 @@
 #include <cmath>
 
 
-static const QString lastSavePathKey("lastSavePath"), releaseDate("20.02.2012"), backupExtension("bak"), readonlyCss("background-color: rgb(227, 227, 227)");
+static const QString lastSavePathKey("lastSavePath"), releaseDate("21.02.2012"), backupExtension("bak"), readonlyCss("background-color: rgb(227, 227, 227)");
 
 //#define MAKE_HC
 //#define ENABLE_PERSONALIZE
@@ -592,6 +592,7 @@ void MedianXLOfflineTools::showItems(bool activate /*= true*/)
     {
         _itemsDialog = new ItemsViewerDialog(getPlugyStashesExistenceHash(), this);
         connect(_itemsDialog->tabWidget(), SIGNAL(currentChanged(int)), SLOT(itemStorageTabChanged(int)));
+        connect(_itemsDialog, SIGNAL(cubeDeleted(bool)), ui.actionGiveCube, SLOT(setEnabled(bool)));
         _itemsDialog->show();
 
         if (!activate)
@@ -624,12 +625,12 @@ void MedianXLOfflineTools::itemStorageTabChanged(int tabIndex)
 
 void MedianXLOfflineTools::giveCube()
 {
-    ItemInfo *cube = ItemParser::loadItemFromFile("cube");
+    ItemInfo *cube = ItemDataBase::loadItemFromFile("cube");
     if (!cube)
         return;
     
-    if (!ItemParser::storeItemIn(cube, Enums::ItemStorage::Inventory, ItemsViewerDialog::rows.at(ItemsViewerDialog::tabIndexFromItemStorage(Enums::ItemStorage::Inventory))) &&
-        !ItemParser::storeItemIn(cube, Enums::ItemStorage::Stash,     ItemsViewerDialog::rows.at(ItemsViewerDialog::tabIndexFromItemStorage(Enums::ItemStorage::Stash))))
+    if (!ItemDataBase::storeItemIn(cube, Enums::ItemStorage::Inventory, ItemsViewerDialog::rows.at(ItemsViewerDialog::tabIndexFromItemStorage(Enums::ItemStorage::Inventory))) &&
+        !ItemDataBase::storeItemIn(cube, Enums::ItemStorage::Stash,     ItemsViewerDialog::rows.at(ItemsViewerDialog::tabIndexFromItemStorage(Enums::ItemStorage::Stash))))
     {
         ERROR_BOX(tr("You have no free space in inventory and stash to store the Cube"));
         delete cube;
@@ -971,13 +972,13 @@ void MedianXLOfflineTools::fillMaps()
     _lineEditsStatsMap[Enums::CharacterStats::SignetsOfLearningEaten] = ui.signetsOfLearningEatenLineEdit;
     _lineEditsStatsMap[Enums::CharacterStats::SignetsOfSkillEaten] = ui.signetsOfSkillEatenLineEdit;
 
-    _baseStatsMap[Enums::ClassName::Amazon] = BaseStats(BaseStats::StatsAtStart(25, 25, 20, 15, 84), BaseStats::StatsStep(100, 40, 60), BaseStats::StatsStep(8, 8, 18));
-    _baseStatsMap[Enums::ClassName::Sorceress] = BaseStats(BaseStats::StatsAtStart(10, 25, 15, 35, 74), BaseStats::StatsStep(100, 40, 60), BaseStats::StatsStep(8, 8, 18));
-    _baseStatsMap[Enums::ClassName::Necromancer] = BaseStats(BaseStats::StatsAtStart(15, 25, 20, 25, 79), BaseStats::StatsStep(80, 20, 80), BaseStats::StatsStep(4, 8, 24));
-    _baseStatsMap[Enums::ClassName::Paladin] = BaseStats(BaseStats::StatsAtStart(25, 20, 25, 15, 89), BaseStats::StatsStep(120, 60, 40), BaseStats::StatsStep(12, 8, 12));
-    _baseStatsMap[Enums::ClassName::Barbarian] = BaseStats(BaseStats::StatsAtStart(30, 20, 30, 5, 92), BaseStats::StatsStep(120, 60, 40), BaseStats::StatsStep(12, 8, 12));
-    _baseStatsMap[Enums::ClassName::Druid] = BaseStats(BaseStats::StatsAtStart(25, 20, 15, 25, 84), BaseStats::StatsStep(80, 20, 80), BaseStats::StatsStep(4, 8, 24));
-    _baseStatsMap[Enums::ClassName::Assassin] = BaseStats(BaseStats::StatsAtStart(20, 35, 15, 15, 95), BaseStats::StatsStep(100, 40, 60), BaseStats::StatsStep(8, 8, 18));
+    _baseStatsMap[Enums::ClassName::Amazon]      = BaseStats(BaseStats::StatsAtStart(25, 25, 20, 15, 84), BaseStats::StatsStep(100, 40, 60), BaseStats::StatsStep( 8, 8, 18));
+    _baseStatsMap[Enums::ClassName::Sorceress]   = BaseStats(BaseStats::StatsAtStart(10, 25, 15, 35, 74), BaseStats::StatsStep(100, 40, 60), BaseStats::StatsStep( 8, 8, 18));
+    _baseStatsMap[Enums::ClassName::Necromancer] = BaseStats(BaseStats::StatsAtStart(15, 25, 20, 25, 79), BaseStats::StatsStep( 80, 20, 80), BaseStats::StatsStep( 4, 8, 24));
+    _baseStatsMap[Enums::ClassName::Paladin]     = BaseStats(BaseStats::StatsAtStart(25, 20, 25, 15, 89), BaseStats::StatsStep(120, 60, 40), BaseStats::StatsStep(12, 8, 12));
+    _baseStatsMap[Enums::ClassName::Barbarian]   = BaseStats(BaseStats::StatsAtStart(30, 20, 30,  5, 92), BaseStats::StatsStep(120, 60, 40), BaseStats::StatsStep(12, 8, 12));
+    _baseStatsMap[Enums::ClassName::Druid]       = BaseStats(BaseStats::StatsAtStart(25, 20, 15, 25, 84), BaseStats::StatsStep( 80, 20, 80), BaseStats::StatsStep( 4, 8, 24));
+    _baseStatsMap[Enums::ClassName::Assassin]    = BaseStats(BaseStats::StatsAtStart(20, 35, 15, 15, 95), BaseStats::StatsStep(100, 40, 60), BaseStats::StatsStep( 8, 8, 18));
 }
 
 void MedianXLOfflineTools::connectSignals()
@@ -1069,6 +1070,8 @@ bool MedianXLOfflineTools::loadFile(const QString &charPath)
         ItemDataBase::clvl = &_editableCharInfo.basicInfo.level;
         ItemDataBase::charClass = &_editableCharInfo.basicInfo.classCode;
         ItemDataBase::charSkills = &_editableCharInfo.basicInfo.skills;
+
+        ui.actionGiveCube->setDisabled(ItemDataBase::hasCube());
 
         if (_itemsDialog)
             _itemsDialog->updateItems(getPlugyStashesExistenceHash());
@@ -1752,8 +1755,6 @@ void MedianXLOfflineTools::updateUI()
 
         ui.mercGroupBox->setEnabled(true);
     }
-
-    ui.actionGiveCube->setDisabled(std::find_if(_editableCharInfo.items.character.constBegin(), _editableCharInfo.items.character.constEnd(), isCube) != _editableCharInfo.items.character.constEnd());
 
     bool hasItems = !_editableCharInfo.items.character.isEmpty();
     ui.actionShowItems->setEnabled(hasItems);

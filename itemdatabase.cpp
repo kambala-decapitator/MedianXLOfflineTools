@@ -505,6 +505,77 @@ ColorIndex ItemDataBase::colorOfItem(ItemInfo *item)
     return !itemQualityColorsHash()->contains(item->quality) && (item->isSocketed || item->isEthereal) ? DarkGrey : itemQualityColorsHash()->value(item->quality);
 }
 
+ItemInfo *ItemDataBase::loadItemFromFile(const QString &fileName)
+{
+    ItemInfo *item = 0;
+    QString filePath = ResourcePathManager::pathForResourceItem(fileName);
+    QFile itemFile(filePath);
+    if (itemFile.open(QIODevice::ReadOnly))
+    {
+        QByteArray itemBytes = itemFile.readAll();
+        itemFile.close();
+
+        QDataStream ds(itemBytes);
+        ds.setByteOrder(QDataStream::LittleEndian);
+
+        item = ItemParser::parseItem(ds, itemBytes);
+        item->hasChanged = true;
+        item->row = item->column = -1;
+    }
+    else
+        ERROR_BOX_NO_PARENT(tr("Error loading '%1'").arg(filePath) + "\n" + tr("Reason: %1", "error with file").arg(itemFile.errorString()));
+    return item;
+}
+
+ItemsList ItemDataBase::itemsStoredIn(int storage, int location /*= Enums::ItemLocation::Stored*/, quint32 *pPlugyPage /*= 0*/, ItemsList *allItems /*= 0*/)
+{
+    ItemsList items, *characterItems = allItems ? allItems : currentCharacterItems;
+    for (int i = 0; i < characterItems->size(); ++i)
+    {
+        ItemInfo *item = characterItems->at(i);
+        if (item->storage == storage && item->location == location && (!pPlugyPage || pPlugyPage && item->plugyPage == *pPlugyPage))
+            items += item;
+    }
+    return items;
+}
+
+bool ItemDataBase::storeItemIn(ItemInfo *item, Enums::ItemStorage::ItemStorageEnum storage, quint8 rowsTotal, quint32 plugyPage /*= 0*/, quint8 colsTotal /*= 10*/)
+{
+    ItemsList items = itemsStoredIn(storage, Enums::ItemLocation::Stored, plugyPage ? &plugyPage : 0);
+    for (quint8 i = 0; i < rowsTotal; ++i)
+        for (quint8 j = 0; j < colsTotal; ++j)
+            if (canStoreItemAt(i, j, item->itemType, items, rowsTotal, colsTotal))
+            {
+                item->storage = storage;
+                item->row = i;
+                item->column = j;
+                return true;
+            }
+
+            return false;
+}
+
+bool ItemDataBase::canStoreItemAt(quint8 row, quint8 col, const QByteArray &storeItemType, const ItemsList &items, int rowsTotal, quint32 plugyPage /*= 0*/, int colsTotal /*= 10*/)
+{
+    // col is horizontal (x), row is vertical (y)
+    const ItemBase &storeItemBase = ItemDataBase::Items()->value(storeItemType);
+    QRect storeItemRect(col, row, storeItemBase.width, storeItemBase.height);
+    if (storeItemRect.right() >= colsTotal || storeItemRect.bottom() >= rowsTotal) // beyond grid
+        return false;
+
+    bool ok = true;
+    foreach (ItemInfo *item, items)
+    {
+        const ItemBase &itemBase = ItemDataBase::Items()->value(item->itemType);
+        if (storeItemRect.intersects(QRect(item->column, item->row, itemBase.width, itemBase.height)))
+        {
+            ok = false;
+            break;
+        }
+    }
+    return ok;
+}
+
 bool ItemDataBase::isClassCharm(ItemInfo *item)
 {
     return Items()->value(item->itemType).typeString.startsWith("ara");
@@ -518,4 +589,14 @@ bool ItemDataBase::isUberCharm(ItemInfo *item)
 bool ItemDataBase::isGenericSocketable(ItemInfo *item)
 {
     return Socketables()->contains(item->itemType);
+}
+
+bool ItemDataBase::isCube(ItemInfo *item)
+{
+    return item->itemType == "box";
+}
+
+bool ItemDataBase::hasCube()
+{
+    return std::find_if(currentCharacterItems->constBegin(), currentCharacterItems->constEnd(), isCubeItem) != currentCharacterItems->constEnd();
 }
