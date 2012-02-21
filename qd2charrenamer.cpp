@@ -39,7 +39,6 @@ QD2CharRenamer::QD2CharRenamer(const QString &originalName, bool shouldWarn, QWi
 {
     ui.setupUi(this);
     setWindowFlags(windowFlags() & ~Qt::WindowContextHelpButtonHint);
-    setWindowModality(Qt::WindowModal);
     setFixedSize(size());
 
     createColorMenu();

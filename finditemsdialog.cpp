@@ -7,6 +7,8 @@
 #include <QVBoxLayout>
 #include <QLineEdit>
 #include <QDesktopWidget>
+#include <QTextEdit>
+#include <QDialogButtonBox>
 
 #include <QRegExp>
 #include <QSettings>
@@ -185,31 +187,43 @@ void FindItemsDialog::toggleResults()
 
 void FindItemsDialog::showHelp()
 {
-    QMessageBox msgBox(this);
-    msgBox.setWindowTitle(tr("Search help"));
-    msgBox.setIcon(QMessageBox::Information);
-    msgBox.setTextFormat(Qt::RichText);
-    msgBox.setText(tr(
-                      "<h3>Item names</h3>"
-                      "<p>All items except non-magical ones have their quality listed inside [] at the very beginning of item description. Valid values are: magic, rare, unique, set, crafted, honorific.</p>"
-                      "<p>Runewords and charms are considered a special type of quality, so they have [runeword] and [charm] respectively.</p>"
-                      "<p>Ethereal items also have [ethereal] in the end of item name (just name, not full description).</p>"
-                      "<p>Set items have complete set name listed inside [] after set item name.</p>"
-                      "<p>Personalized items have character name as it appears in game. The exception are items with affixes because affix display isn't supported in the current version of the application.</p>"
-                      "<p>To see an example of such an item description, simply hover your mouse upon any item in the items window and look at the tooltip.</p>"
-                      "<h3>Item properties</h3>"
-                      "<p>If the 'Search in properties' checkbox is checked, then the search is made not only by item name (as explained above), but also in item properties.</p>"
-                      "<p>Properties appear the same way as they do in the item description view. Diablo color codes are also present here to simplify search for e.g. elite reanimates.</p>"
-                      "<h3>Regular expressions</h3>"
-                      "<p>Regular expression syntax is mostly Perl-compatible, but there're some limitations. "
-                      "Refer to the <a href=\"http://developer.qt.nokia.com/doc/qregexp.html#details\">Qt regular expressions description</a> for more information.</p>"
-                      "<p>Regular expressions-only checkboxes in the dialog have tooltips on what they mean if it's not clear.</p>"
-                      "<p>Hint: enter . (period) as a search text to see all your items :)</p>"
-                      "<h3>Search results</h3>"
-                      "<p>Hovering upon an item in the search results drop-down will display matched line with an actual match highlighted in <b>bold</b>.</p>"
-                      "<p>Double-clicking or pressing Return/Enter on an item shows it in the items window.</p>"
-                     ));
-    msgBox.exec();
+    QDialog dlg;
+    dlg.setWindowTitle(tr("Search help"));
+
+    QTextEdit *textEdit = new QTextEdit(&dlg);
+    textEdit->setAcceptRichText(true);
+    textEdit->setAlignment(Qt::AlignJustify);
+    textEdit->setReadOnly(true);
+    textEdit->setHtml(tr(
+                          "<h3>Item names</h3>"
+                          "<p>All items except non-magical ones have their quality listed inside [] at the very beginning of item description. Valid values are: magic, rare, unique, set, crafted, honorific.</p>"
+                          "<p>Runewords and charms are considered a special type of quality, so they have [runeword] and [charm] respectively.</p>"
+                          "<p>Ethereal items also have [ethereal] in the end of item name (just name, not full description).</p>"
+                          "<p>Set items have complete set name listed inside [] after set item name.</p>"
+                          "<p>Personalized items have character name as it appears in game. The exception are items with affixes because affix display isn't supported in the current version of the application.</p>"
+                          "<p>To see an example of such an item description, simply hover your mouse upon any item in the items window and look at the tooltip.</p>"
+                          "<h3>Item properties</h3>"
+                          "<p>If the 'Search in properties' checkbox is checked, then the search is made not only by item name (as explained above), but also in item properties.</p>"
+                          "<p>Properties appear the same way as they do in the item description view. Diablo color codes are also present here to simplify search for e.g. elite reanimates.</p>"
+                          "<h3>Regular expressions</h3>"
+                          "<p>Regular expressions syntax is mostly Perl-compatible, but there're some limitations. "
+                          "Refer to the Qt regular expressions description (http://developer.qt.nokia.com/doc/qregexp.html#details) for more information.</p>"
+                          "<p>Regular expressions-only checkboxes in the dialog have tooltips on what they mean if it's not clear.</p>"
+                          "<p>Hint: enter . (period) as a search text to see all your items :)</p>"
+                          "<h3>Search results</h3>"
+                          "<p>Hovering upon an item in the search results drop-down will display matched line with an actual match highlighted in <b>bold</b>.</p>"
+                          "<p>Double-clicking or pressing Return/Enter on an item shows it in the items window.</p>"
+                          ));
+
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok, Qt::Horizontal, &dlg);
+    connect(buttonBox, SIGNAL(accepted()), &dlg, SLOT(accept()));
+
+    QVBoxLayout *vbox = new QVBoxLayout(&dlg);
+    vbox->addWidget(textEdit);
+    vbox->addWidget(buttonBox);
+
+    dlg.resize(400, 400);
+    dlg.exec();
 }
 
 void FindItemsDialog::updateCurrentIndexForItem(ItemInfo *item)

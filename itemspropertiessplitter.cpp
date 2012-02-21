@@ -475,11 +475,8 @@ void ItemsPropertiesSplitter::deleteItem()
     {
         bool isCube = ItemDataBase::isCube(item);
         if (isCube && !ItemDataBase::itemsStoredIn(Enums::ItemStorage::Cube).isEmpty())
-        {
-            //ERROR_BOX(tr("You can't delete Cube that has items inside"));
-            if (QUESTION_BOX_YESNO(tr("Cube is not empty. Do you really want to delete it?\nNote: its items will be preserved. You can recover them by getting new Cube."), QMessageBox::No) == QMessageBox::No)
+            if (QUESTION_BOX_YESNO(tr("Cube is not empty. Do you really want to delete it?\nNote: items inside will be preserved. You can recover them by getting new Cube."), QMessageBox::No) == QMessageBox::No)
                 return;
-        }
 
         performDeleteItem(item);
         showFirstItem();
