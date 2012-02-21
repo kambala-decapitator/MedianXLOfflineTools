@@ -32,3 +32,4 @@ _ReSharper*/
 *sdf
 ipch/
 *.DS_Store
+*-build-*

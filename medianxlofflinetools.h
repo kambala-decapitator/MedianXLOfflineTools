@@ -83,7 +83,7 @@ private:
     QHash<Enums::ItemStorage::ItemStorageEnum, PlugyStashInfo> _plugyStashesHash;
 
     // consts
-    QList<quint32> mercExperience;
+    QList<quint32> experienceTable;
     QVector<QStringList> mercNames;
     //const QStringList difficulties;
     const QString hackerDetected, maxValueFormat, minValueFormat, investedValueFormat;

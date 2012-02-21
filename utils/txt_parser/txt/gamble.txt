@@ -1,0 +1,1323 @@
+name	code
+amulet	amu
+ring	rin
+Aerin Shield (Grade 1)	w23
+Aerin Shield (Grade 2)	w43
+Aerin Shield (Grade 3)	w63
+Aerin Shield (Grade 4)	w83
+Aerin Shield (Grade 5)	e13
+Aerin Shield (Grade 6)	e33
+Ancient Armor (Grade 1)	614
+Ancient Armor (Grade 2)	660
+Ancient Armor (Grade 3)	706
+Ancient Armor (Grade 4)	752
+Ancient Armor (Grade 5)	798
+Ancient Armor (Grade 6)	844
+Antlers (Grade 1)	w12
+Antlers (Grade 2)	w32
+Antlers (Grade 3)	w52
+Antlers (Grade 4)	w72
+Antlers (Grade 5)	w92
+Antlers (Grade 6)	e22
+Aspis (Grade 1)	8@N
+Aspis (Grade 2)	9@N
+Aspis (Grade 3)	1@O
+Aspis (Grade 4)	2@O
+Aspis (Grade 5)	3@O
+Aspis (Grade 6)	4@O
+Assault Helmet (Grade 1)	w18
+Assault Helmet (Grade 2)	w38
+Assault Helmet (Grade 3)	w58
+Assault Helmet (Grade 4)	w78
+Assault Helmet (Grade 5)	w98
+Assault Helmet (Grade 6)	e28
+Athulua's Hand (Grade 1)	01!
+Athulua's Hand (Grade 2)	02!
+Athulua's Hand (Grade 3)	03!
+Athulua's Hand (Grade 4)	04!
+Athulua's Hand (Grade 5)	05!
+Athulua's Hand (Grade 6)	06!
+Avenger Guard (Grade 1)	w19
+Avenger Guard (Grade 2)	w39
+Avenger Guard (Grade 3)	w59
+Avenger Guard (Grade 4)	w79
+Avenger Guard (Grade 5)	w99
+Avenger Guard (Grade 6)	e29
+Banded Plate (Grade 1)	4@I
+Banded Plate (Grade 2)	5@I
+Banded Plate (Grade 3)	6@I
+Banded Plate (Grade 4)	7@I
+Banded Plate (Grade 5)	8@I
+Banded Plate (Grade 6)	9@I
+Belt (Grade 1)	629
+Belt (Grade 2)	675
+Belt (Grade 3)	721
+Belt (Grade 4)	767
+Belt (Grade 5)	813
+Belt (Grade 6)	859
+Blackguard Helm (Grade 1)	50!
+Blackguard Helm (Grade 2)	51!
+Blackguard Helm (Grade 3)	52!
+Blackguard Helm (Grade 4)	53!
+Blackguard Helm (Grade 5)	54!
+Blackguard Helm (Grade 6)	55!
+Bladed Shield (Grade 1)	4@P
+Bladed Shield (Grade 2)	5@P
+Bladed Shield (Grade 3)	6@P
+Bladed Shield (Grade 4)	7@P
+Bladed Shield (Grade 5)	8@P
+Bladed Shield (Grade 6)	9@P
+Bone Helm (Grade 1)	645
+Bone Helm (Grade 2)	691
+Bone Helm (Grade 3)	737
+Bone Helm (Grade 4)	783
+Bone Helm (Grade 5)	829
+Bone Helm (Grade 6)	875
+Bone Shield (Grade 1)	642
+Bone Shield (Grade 2)	688
+Bone Shield (Grade 3)	734
+Bone Shield (Grade 4)	780
+Bone Shield (Grade 5)	826
+Bone Shield (Grade 6)	872
+Boots (Grade 1)	637
+Boots (Grade 2)	683
+Boots (Grade 3)	729
+Boots (Grade 4)	775
+Boots (Grade 5)	821
+Boots (Grade 6)	867
+Breast Plate (Grade 1)	607
+Breast Plate (Grade 2)	653
+Breast Plate (Grade 3)	699
+Breast Plate (Grade 4)	745
+Breast Plate (Grade 5)	791
+Breast Plate (Grade 6)	837
+Bronze Shield (Grade 1)	29!
+Bronze Shield (Grade 2)	30!
+Bronze Shield (Grade 3)	31!
+Bronze Shield (Grade 4)	32!
+Bronze Shield (Grade 5)	33!
+Bronze Shield (Grade 6)	34!
+Buckler (Grade 1)	621
+Buckler (Grade 2)	667
+Buckler (Grade 3)	713
+Buckler (Grade 4)	759
+Buckler (Grade 5)	805
+Buckler (Grade 6)	851
+Bull Shield (Grade 1)	22!
+Bull Shield (Grade 2)	23!
+Bull Shield (Grade 3)	24!
+Bull Shield (Grade 4)	25!
+Bull Shield (Grade 5)	26!
+Bull Shield (Grade 6)	27!
+Cap (Grade 1)	615
+Cap (Grade 2)	661
+Cap (Grade 3)	707
+Cap (Grade 4)	753
+Cap (Grade 5)	799
+Cap (Grade 6)	845
+Ceremonial Armor (Grade 1)	2@J
+Ceremonial Armor (Grade 2)	3@J
+Ceremonial Armor (Grade 3)	4@J
+Ceremonial Armor (Grade 4)	5@J
+Ceremonial Armor (Grade 5)	6@J
+Ceremonial Armor (Grade 6)	7@J
+Cervelliere (Grade 1)	7@K
+Cervelliere (Grade 2)	8@K
+Cervelliere (Grade 3)	9@K
+Cervelliere (Grade 4)	1@L
+Cervelliere (Grade 5)	2@L
+Cervelliere (Grade 6)	3@L
+Chain Boots (Grade 1)	639
+Chain Boots (Grade 2)	685
+Chain Boots (Grade 3)	731
+Chain Boots (Grade 4)	777
+Chain Boots (Grade 5)	823
+Chain Boots (Grade 6)	869
+Chain Gloves (Grade 1)	634
+Chain Gloves (Grade 2)	680
+Chain Gloves (Grade 3)	726
+Chain Gloves (Grade 4)	772
+Chain Gloves (Grade 5)	818
+Chain Gloves (Grade 6)	864
+Chain Mail (Grade 1)	606
+Chain Mail (Grade 2)	652
+Chain Mail (Grade 3)	698
+Chain Mail (Grade 4)	744
+Chain Mail (Grade 5)	790
+Chain Mail (Grade 6)	836
+Circlet (Grade 1)	k01
+Circlet (Grade 2)	k05
+Circlet (Grade 3)	k09
+Circlet (Grade 4)	k13
+Circlet (Grade 5)	k17
+Circlet (Grade 6)	k21
+Coronet (Grade 1)	k02
+Coronet (Grade 2)	k06
+Coronet (Grade 3)	k10
+Coronet (Grade 4)	k14
+Coronet (Grade 5)	k18
+Coronet (Grade 6)	k22
+Crown (Grade 1)	620
+Crown (Grade 2)	666
+Crown (Grade 3)	712
+Crown (Grade 4)	758
+Crown (Grade 5)	804
+Crown (Grade 6)	850
+Crown Shield (Grade 1)	w24
+Crown Shield (Grade 2)	w44
+Crown Shield (Grade 3)	w64
+Crown Shield (Grade 4)	w84
+Crown Shield (Grade 5)	e14
+Crown Shield (Grade 6)	e34
+Demon Head (Grade 1)	w29
+Demon Head (Grade 2)	w49
+Demon Head (Grade 3)	w69
+Demon Head (Grade 4)	w89
+Demon Head (Grade 5)	e19
+Demon Head (Grade 6)	e39
+Diadem (Grade 1)	k04
+Diadem (Grade 2)	k08
+Diadem (Grade 3)	k12
+Diadem (Grade 4)	k16
+Diadem (Grade 5)	k20
+Diadem (Grade 6)	k24
+Einherjar Helm (Grade 1)	5@L
+Einherjar Helm (Grade 2)	6@L
+Einherjar Helm (Grade 3)	7@L
+Einherjar Helm (Grade 4)	8@L
+Einherjar Helm (Grade 5)	9@L
+Einherjar Helm (Grade 6)	1@M
+Falcon Mask (Grade 1)	w13
+Falcon Mask (Grade 2)	w33
+Falcon Mask (Grade 3)	w53
+Falcon Mask (Grade 4)	w73
+Falcon Mask (Grade 5)	w93
+Falcon Mask (Grade 6)	e23
+Fanged Helm (Grade 1)	w16
+Fanged Helm (Grade 2)	w36
+Fanged Helm (Grade 3)	w56
+Fanged Helm (Grade 4)	w76
+Fanged Helm (Grade 5)	w96
+Fanged Helm (Grade 6)	e26
+Field Plate (Grade 1)	610
+Field Plate (Grade 2)	656
+Field Plate (Grade 3)	702
+Field Plate (Grade 4)	748
+Field Plate (Grade 5)	794
+Field Plate (Grade 6)	840
+Full Helm (Grade 1)	618
+Full Helm (Grade 2)	664
+Full Helm (Grade 3)	710
+Full Helm (Grade 4)	756
+Full Helm (Grade 5)	802
+Full Helm (Grade 6)	848
+Full Plate Mail (Grade 1)	613
+Full Plate Mail (Grade 2)	659
+Full Plate Mail (Grade 3)	705
+Full Plate Mail (Grade 4)	751
+Full Plate Mail (Grade 5)	797
+Full Plate Mail (Grade 6)	843
+Gambeson (Grade 1)	1@G
+Gambeson (Grade 2)	2@G
+Gambeson (Grade 3)	3@G
+Gambeson (Grade 4)	4@G
+Gambeson (Grade 5)	5@G
+Gambeson (Grade 6)	6@G
+Gargoyle Head (Grade 1)	w28
+Gargoyle Head (Grade 2)	w48
+Gargoyle Head (Grade 3)	w68
+Gargoyle Head (Grade 4)	w88
+Gargoyle Head (Grade 5)	e18
+Gargoyle Head (Grade 6)	e38
+Gauntlets (Grade 1)	636
+Gauntlets (Grade 2)	682
+Gauntlets (Grade 3)	728
+Gauntlets (Grade 4)	774
+Gauntlets (Grade 5)	820
+Gauntlets (Grade 6)	866
+Gilded Shield (Grade 1)	36!
+Gilded Shield (Grade 2)	37!
+Gilded Shield (Grade 3)	38!
+Gilded Shield (Grade 4)	39!
+Gilded Shield (Grade 5)	40!
+Gilded Shield (Grade 6)	41!
+Gothic Plate (Grade 1)	612
+Gothic Plate (Grade 2)	658
+Gothic Plate (Grade 3)	704
+Gothic Plate (Grade 4)	750
+Gothic Plate (Grade 5)	796
+Gothic Plate (Grade 6)	842
+Gothic Shield (Grade 1)	626
+Gothic Shield (Grade 2)	672
+Gothic Shield (Grade 3)	718
+Gothic Shield (Grade 4)	764
+Gothic Shield (Grade 5)	810
+Gothic Shield (Grade 6)	856
+Great Helm (Grade 1)	619
+Great Helm (Grade 2)	665
+Great Helm (Grade 3)	711
+Great Helm (Grade 4)	757
+Great Helm (Grade 5)	803
+Great Helm (Grade 6)	849
+Greaves (Grade 1)	641
+Greaves (Grade 2)	687
+Greaves (Grade 3)	733
+Greaves (Grade 4)	779
+Greaves (Grade 5)	825
+Greaves (Grade 6)	871
+Hard Leather Armor (Grade 1)	602
+Hard Leather Armor (Grade 2)	648
+Hard Leather Armor (Grade 3)	694
+Hard Leather Armor (Grade 4)	740
+Hard Leather Armor (Grade 5)	786
+Hard Leather Armor (Grade 6)	832
+Hawk Helm (Grade 1)	w11
+Hawk Helm (Grade 2)	w31
+Hawk Helm (Grade 3)	w51
+Hawk Helm (Grade 4)	w71
+Hawk Helm (Grade 5)	w91
+Hawk Helm (Grade 6)	e21
+Heavy Belt (Grade 1)	630
+Heavy Belt (Grade 2)	676
+Heavy Belt (Grade 3)	722
+Heavy Belt (Grade 4)	768
+Heavy Belt (Grade 5)	814
+Heavy Belt (Grade 6)	860
+Heavy Boots (Grade 1)	638
+Heavy Boots (Grade 2)	684
+Heavy Boots (Grade 3)	730
+Heavy Boots (Grade 4)	776
+Heavy Boots (Grade 5)	822
+Heavy Boots (Grade 6)	868
+Heavy Gloves (Grade 1)	633
+Heavy Gloves (Grade 2)	679
+Heavy Gloves (Grade 3)	725
+Heavy Gloves (Grade 4)	771
+Heavy Gloves (Grade 5)	817
+Heavy Gloves (Grade 6)	863
+Helm (Grade 1)	617
+Helm (Grade 2)	663
+Helm (Grade 3)	709
+Helm (Grade 4)	755
+Helm (Grade 5)	801
+Helm (Grade 6)	847
+Heraldic Shield (Grade 1)	w22
+Heraldic Shield (Grade 2)	w42
+Heraldic Shield (Grade 3)	w62
+Heraldic Shield (Grade 4)	w82
+Heraldic Shield (Grade 5)	e12
+Heraldic Shield (Grade 6)	e32
+Horned Helm (Grade 1)	w17
+Horned Helm (Grade 2)	w37
+Horned Helm (Grade 3)	w57
+Horned Helm (Grade 4)	w77
+Horned Helm (Grade 5)	w97
+Horned Helm (Grade 6)	e27
+Hundsgugel (Grade 1)	43!
+Hundsgugel (Grade 2)	44!
+Hundsgugel (Grade 3)	45!
+Hundsgugel (Grade 4)	46!
+Hundsgugel (Grade 5)	47!
+Hundsgugel (Grade 6)	48!
+Jawbone Cap (Grade 1)	w15
+Jawbone Cap (Grade 2)	w35
+Jawbone Cap (Grade 3)	w55
+Jawbone Cap (Grade 4)	w75
+Jawbone Cap (Grade 5)	w95
+Jawbone Cap (Grade 6)	e25
+Kazarghand (Grade 1)	6@H
+Kazarghand (Grade 2)	7@H
+Kazarghand (Grade 3)	8@H
+Kazarghand (Grade 4)	9@H
+Kazarghand (Grade 5)	1@I
+Kazarghand (Grade 6)	2@I
+Kite Shield (Grade 1)	624
+Kite Shield (Grade 2)	670
+Kite Shield (Grade 3)	716
+Kite Shield (Grade 4)	762
+Kite Shield (Grade 5)	808
+Kite Shield (Grade 6)	854
+Lamellar Armor (Grade 1)	8@G
+Lamellar Armor (Grade 2)	9@G
+Lamellar Armor (Grade 3)	1@H
+Lamellar Armor (Grade 4)	2@H
+Lamellar Armor (Grade 5)	3@H
+Lamellar Armor (Grade 6)	4@H
+Large Shield (Grade 1)	623
+Large Shield (Grade 2)	669
+Large Shield (Grade 3)	715
+Large Shield (Grade 4)	761
+Large Shield (Grade 5)	807
+Large Shield (Grade 6)	853
+Leather Armor (Grade 1)	601
+Leather Armor (Grade 2)	647
+Leather Armor (Grade 3)	693
+Leather Armor (Grade 4)	739
+Leather Armor (Grade 5)	785
+Leather Armor (Grade 6)	831
+Leather Gloves (Grade 1)	632
+Leather Gloves (Grade 2)	678
+Leather Gloves (Grade 3)	724
+Leather Gloves (Grade 4)	770
+Leather Gloves (Grade 5)	816
+Leather Gloves (Grade 6)	862
+Light Belt (Grade 1)	628
+Light Belt (Grade 2)	674
+Light Belt (Grade 3)	720
+Light Belt (Grade 4)	766
+Light Belt (Grade 5)	812
+Light Belt (Grade 6)	858
+Light Gauntlets (Grade 1)	635
+Light Gauntlets (Grade 2)	681
+Light Gauntlets (Grade 3)	727
+Light Gauntlets (Grade 4)	773
+Light Gauntlets (Grade 5)	819
+Light Gauntlets (Grade 6)	865
+Light Plate (Grade 1)	611
+Light Plate (Grade 2)	657
+Light Plate (Grade 3)	703
+Light Plate (Grade 4)	749
+Light Plate (Grade 5)	795
+Light Plate (Grade 6)	841
+Light Plated Boots (Grade 1)	640
+Light Plated Boots (Grade 2)	686
+Light Plated Boots (Grade 3)	732
+Light Plated Boots (Grade 4)	778
+Light Plated Boots (Grade 5)	824
+Light Plated Boots (Grade 6)	870
+Mask (Grade 1)	644
+Mask (Grade 2)	690
+Mask (Grade 3)	736
+Mask (Grade 4)	782
+Mask (Grade 5)	828
+Mask (Grade 6)	874
+Morion (Grade 1)	9@J
+Morion (Grade 2)	1@K
+Morion (Grade 3)	2@K
+Morion (Grade 4)	3@K
+Morion (Grade 5)	4@K
+Morion (Grade 6)	5@K
+Parma (Grade 1)	1@N
+Parma (Grade 2)	2@N
+Parma (Grade 3)	3@N
+Parma (Grade 4)	4@N
+Parma (Grade 5)	5@N
+Parma (Grade 6)	6@N
+Phoenix Shield (Grade 1)	08!
+Phoenix Shield (Grade 2)	09!
+Phoenix Shield (Grade 3)	10!
+Phoenix Shield (Grade 4)	11!
+Phoenix Shield (Grade 5)	12!
+Phoenix Shield (Grade 6)	13!
+Plate Mail (Grade 1)	609
+Plate Mail (Grade 2)	655
+Plate Mail (Grade 3)	701
+Plate Mail (Grade 4)	747
+Plate Mail (Grade 5)	793
+Plate Mail (Grade 6)	839
+Plated Belt (Grade 1)	631
+Plated Belt (Grade 2)	677
+Plated Belt (Grade 3)	723
+Plated Belt (Grade 4)	769
+Plated Belt (Grade 5)	815
+Plated Belt (Grade 6)	861
+Preserved Head (Grade 1)	w25
+Preserved Head (Grade 2)	w45
+Preserved Head (Grade 3)	w65
+Preserved Head (Grade 4)	w85
+Preserved Head (Grade 5)	e15
+Preserved Head (Grade 6)	e35
+Quilted Armor (Grade 1)	600
+Quilted Armor (Grade 2)	646
+Quilted Armor (Grade 3)	692
+Quilted Armor (Grade 4)	738
+Quilted Armor (Grade 5)	784
+Quilted Armor (Grade 6)	830
+Ring Mail (Grade 1)	604
+Ring Mail (Grade 2)	650
+Ring Mail (Grade 3)	696
+Ring Mail (Grade 4)	742
+Ring Mail (Grade 5)	788
+Ring Mail (Grade 6)	834
+Rondache (Grade 1)	w21
+Rondache (Grade 2)	w41
+Rondache (Grade 3)	w61
+Rondache (Grade 4)	w81
+Rondache (Grade 5)	e11
+Rondache (Grade 6)	e31
+Sash (Grade 1)	627
+Sash (Grade 2)	673
+Sash (Grade 3)	719
+Sash (Grade 4)	765
+Sash (Grade 5)	811
+Sash (Grade 6)	857
+Scale Mail (Grade 1)	605
+Scale Mail (Grade 2)	651
+Scale Mail (Grade 3)	697
+Scale Mail (Grade 4)	743
+Scale Mail (Grade 5)	789
+Scale Mail (Grade 6)	835
+Setzschild (Grade 1)	15!
+Setzschild (Grade 2)	16!
+Setzschild (Grade 3)	17!
+Setzschild (Grade 4)	18!
+Setzschild (Grade 5)	19!
+Setzschild (Grade 6)	20!
+Skull Cap (Grade 1)	616
+Skull Cap (Grade 2)	662
+Skull Cap (Grade 3)	708
+Skull Cap (Grade 4)	754
+Skull Cap (Grade 5)	800
+Skull Cap (Grade 6)	846
+Small Shield (Grade 1)	622
+Small Shield (Grade 2)	668
+Small Shield (Grade 3)	714
+Small Shield (Grade 4)	760
+Small Shield (Grade 5)	806
+Small Shield (Grade 6)	852
+Spangenhelm (Grade 1)	3@M
+Spangenhelm (Grade 2)	4@M
+Spangenhelm (Grade 3)	5@M
+Spangenhelm (Grade 4)	6@M
+Spangenhelm (Grade 5)	7@M
+Spangenhelm (Grade 6)	8@M
+Spiked Shield (Grade 1)	643
+Spiked Shield (Grade 2)	689
+Spiked Shield (Grade 3)	735
+Spiked Shield (Grade 4)	781
+Spiked Shield (Grade 5)	827
+Spiked Shield (Grade 6)	873
+Spirit Mask (Grade 1)	w14
+Spirit Mask (Grade 2)	w34
+Spirit Mask (Grade 3)	w54
+Spirit Mask (Grade 4)	w74
+Spirit Mask (Grade 5)	w94
+Spirit Mask (Grade 6)	e24
+Splint Mail (Grade 1)	608
+Splint Mail (Grade 2)	654
+Splint Mail (Grade 3)	700
+Splint Mail (Grade 4)	746
+Splint Mail (Grade 5)	792
+Splint Mail (Grade 6)	838
+Studded Leather (Grade 1)	603
+Studded Leather (Grade 2)	649
+Studded Leather (Grade 3)	695
+Studded Leather (Grade 4)	741
+Studded Leather (Grade 5)	787
+Studded Leather (Grade 6)	833
+Targe (Grade 1)	w20
+Targe (Grade 2)	w40
+Targe (Grade 3)	w60
+Targe (Grade 4)	w80
+Targe (Grade 5)	e10
+Targe (Grade 6)	e30
+Tiara (Grade 1)	k03
+Tiara (Grade 2)	k07
+Tiara (Grade 3)	k11
+Tiara (Grade 4)	k15
+Tiara (Grade 5)	k19
+Tiara (Grade 6)	k23
+Totem Shield (Grade 1)	6@O
+Totem Shield (Grade 2)	7@O
+Totem Shield (Grade 3)	8@O
+Totem Shield (Grade 4)	9@O
+Totem Shield (Grade 5)	1@P
+Totem Shield (Grade 6)	2@P
+Tower Shield (Grade 1)	625
+Tower Shield (Grade 2)	671
+Tower Shield (Grade 3)	717
+Tower Shield (Grade 4)	763
+Tower Shield (Grade 5)	809
+Tower Shield (Grade 6)	855
+Unraveller Head (Grade 1)	w27
+Unraveller Head (Grade 2)	w47
+Unraveller Head (Grade 3)	w67
+Unraveller Head (Grade 4)	w87
+Unraveller Head (Grade 5)	e17
+Unraveller Head (Grade 6)	e37
+Wolf Head (Grade 1)	w10
+Wolf Head (Grade 2)	w30
+Wolf Head (Grade 3)	w50
+Wolf Head (Grade 4)	w70
+Wolf Head (Grade 5)	w90
+Wolf Head (Grade 6)	e20
+Zombie Head (Grade 1)	w26
+Zombie Head (Grade 2)	w46
+Zombie Head (Grade 3)	w66
+Zombie Head (Grade 4)	w86
+Zombie Head (Grade 5)	e16
+Zombie Head (Grade 6)	e36
+Angel Star (Grade 1)	4@A
+Angel Star (Grade 2)	5@A
+Angel Star (Grade 3)	6@A
+Angel Star (Grade 4)	7@A
+Angel Star (Grade 5)	8@A
+Angel Star (Grade 6)	9@A
+Axe (Grade 1)	115
+Axe (Grade 2)	183
+Axe (Grade 3)	251
+Axe (Grade 4)	319
+Axe (Grade 5)	387
+Axe (Grade 6)	455
+Backsword (Grade 1)	7@5
+Backsword (Grade 2)	8@5
+Backsword (Grade 3)	9@5
+Backsword (Grade 4)	1@6
+Backsword (Grade 5)	2@6
+Backsword (Grade 6)	3@6
+Balanced Axe (Grade 1)	150
+Balanced Axe (Grade 2)	218
+Balanced Axe (Grade 3)	286
+Balanced Axe (Grade 4)	354
+Balanced Axe (Grade 5)	422
+Balanced Axe (Grade 6)	490
+Balanced Knife (Grade 1)	148
+Balanced Knife (Grade 2)	216
+Balanced Knife (Grade 3)	284
+Balanced Knife (Grade 4)	352
+Balanced Knife (Grade 5)	420
+Balanced Knife (Grade 6)	488
+Bardiche (Grade 1)	156
+Bardiche (Grade 2)	224
+Bardiche (Grade 3)	292
+Bardiche (Grade 4)	360
+Bardiche (Grade 5)	428
+Bardiche (Grade 6)	496
+Bastard Sword (Grade 1)	110
+Bastard Sword (Grade 2)	178
+Bastard Sword (Grade 3)	246
+Bastard Sword (Grade 4)	314
+Bastard Sword (Grade 5)	382
+Bastard Sword (Grade 6)	450
+Battle Axe (Grade 1)	121
+Battle Axe (Grade 2)	189
+Battle Axe (Grade 3)	257
+Battle Axe (Grade 4)	325
+Battle Axe (Grade 5)	393
+Battle Axe (Grade 6)	461
+Battle Staff (Grade 1)	154
+Battle Staff (Grade 2)	222
+Battle Staff (Grade 3)	290
+Battle Staff (Grade 4)	358
+Battle Staff (Grade 5)	426
+Battle Staff (Grade 6)	494
+Blade (Grade 1)	145
+Blade (Grade 2)	213
+Blade (Grade 3)	281
+Blade (Grade 4)	349
+Blade (Grade 5)	417
+Blade (Grade 6)	485
+Blade Talons (Grade 1)	j25
+Blade Talons (Grade 2)	j42
+Blade Talons (Grade 3)	j59
+Blade Talons (Grade 4)	j76
+Blade Talons (Grade 5)	j93
+Blade Talons (Grade 6)	o20
+Bone Wand (Grade 1)	l12
+Bone Wand (Grade 2)	l16
+Bone Wand (Grade 3)	l20
+Bone Wand (Grade 4)	l24
+Bone Wand (Grade 5)	l28
+Bone Wand (Grade 6)	l32
+Bonebreaker (Grade 1)	8@8
+Bonebreaker (Grade 2)	9@8
+Bonebreaker (Grade 3)	1@9
+Bonebreaker (Grade 4)	2@9
+Bonebreaker (Grade 5)	3@9
+Bonebreaker (Grade 6)	4@9
+Brandistock (Grade 1)	139
+Brandistock (Grade 2)	207
+Brandistock (Grade 3)	275
+Brandistock (Grade 4)	343
+Brandistock (Grade 5)	411
+Brandistock (Grade 6)	479
+Broad Axe  (Grade 1)	120
+Broad Axe  (Grade 2)	188
+Broad Axe  (Grade 3)	256
+Broad Axe  (Grade 4)	324
+Broad Axe  (Grade 5)	392
+Broad Axe  (Grade 6)	460
+Broad Sword (Grade 1)	104
+Broad Sword (Grade 2)	172
+Broad Sword (Grade 3)	240
+Broad Sword (Grade 4)	308
+Broad Sword (Grade 5)	376
+Broad Sword (Grade 6)	444
+Bronze Sword (Grade 1)	3@7
+Bronze Sword (Grade 2)	4@7
+Bronze Sword (Grade 3)	5@7
+Bronze Sword (Grade 4)	6@7
+Bronze Sword (Grade 5)	7@7
+Bronze Sword (Grade 6)	8@7
+Cestus (Grade 1)	j23
+Cestus (Grade 2)	j40
+Cestus (Grade 3)	j57
+Cestus (Grade 4)	j74
+Cestus (Grade 5)	j91
+Cestus (Grade 6)	o18
+Clasped Orb (Grade 1)	j13
+Clasped Orb (Grade 2)	j30
+Clasped Orb (Grade 3)	j47
+Clasped Orb (Grade 4)	j64
+Clasped Orb (Grade 5)	j81
+Clasped Orb (Grade 6)	j98
+Claws (Grade 1)	j24
+Claws (Grade 2)	j41
+Claws (Grade 3)	j58
+Claws (Grade 4)	j75
+Claws (Grade 5)	j92
+Claws (Grade 6)	o19
+Claymore (Grade 1)	108
+Claymore (Grade 2)	176
+Claymore (Grade 3)	244
+Claymore (Grade 4)	312
+Claymore (Grade 5)	380
+Claymore (Grade 6)	448
+Club (Grade 1)	124
+Club (Grade 2)	192
+Club (Grade 3)	260
+Club (Grade 4)	328
+Club (Grade 5)	396
+Club (Grade 6)	464
+Composite Bow (Grade 1)	163
+Composite Bow (Grade 2)	231
+Composite Bow (Grade 3)	299
+Composite Bow (Grade 4)	367
+Composite Bow (Grade 5)	435
+Composite Bow (Grade 6)	503
+Compound Bow (Grade 1)	1@1
+Compound Bow (Grade 2)	2@1
+Compound Bow (Grade 3)	3@1
+Compound Bow (Grade 4)	4@1
+Compound Bow (Grade 5)	5@1
+Compound Bow (Grade 6)	6@1
+Crossbow (Grade 1)	l53
+Crossbow (Grade 2)	l57
+Crossbow (Grade 3)	l61
+Crossbow (Grade 4)	l65
+Crossbow (Grade 5)	l69
+Crossbow (Grade 6)	l73
+Crystal Sword (Grade 1)	113
+Crystal Sword (Grade 2)	181
+Crystal Sword (Grade 3)	249
+Crystal Sword (Grade 4)	317
+Crystal Sword (Grade 5)	385
+Crystal Sword (Grade 6)	453
+Dagger (Grade 1)	142
+Dagger (Grade 2)	210
+Dagger (Grade 3)	278
+Dagger (Grade 4)	346
+Dagger (Grade 5)	414
+Dagger (Grade 6)	482
+Dart Thrower (Grade 1)	5@D
+Dart Thrower (Grade 2)	6@D
+Dart Thrower (Grade 3)	7@D
+Dart Thrower (Grade 4)	8@D
+Dart Thrower (Grade 5)	9@D
+Dart Thrower (Grade 6)	1@E
+Dirk (Grade 1)	143
+Dirk (Grade 2)	211
+Dirk (Grade 3)	279
+Dirk (Grade 4)	347
+Dirk (Grade 5)	415
+Dirk (Grade 6)	483
+Double Axe (Grade 1)	116
+Double Axe (Grade 2)	184
+Double Axe (Grade 3)	252
+Double Axe (Grade 4)	320
+Double Axe (Grade 5)	388
+Double Axe (Grade 6)	456
+Dragon Stone (Grade 1)	j14
+Dragon Stone (Grade 2)	j31
+Dragon Stone (Grade 3)	j48
+Dragon Stone (Grade 4)	j65
+Dragon Stone (Grade 5)	j82
+Dragon Stone (Grade 6)	j99
+Eagle Orb (Grade 1)	j10
+Eagle Orb (Grade 2)	j27
+Eagle Orb (Grade 3)	j44
+Eagle Orb (Grade 4)	j61
+Eagle Orb (Grade 5)	j78
+Eagle Orb (Grade 6)	j95
+Falchion (Grade 1)	103
+Falchion (Grade 2)	171
+Falchion (Grade 3)	239
+Falchion (Grade 4)	307
+Falchion (Grade 5)	375
+Falchion (Grade 6)	443
+Flail (Grade 1)	128
+Flail (Grade 2)	196
+Flail (Grade 3)	264
+Flail (Grade 4)	332
+Flail (Grade 5)	400
+Flail (Grade 6)	468
+Flamberge (Grade 1)	111
+Flamberge (Grade 2)	179
+Flamberge (Grade 3)	247
+Flamberge (Grade 4)	315
+Flamberge (Grade 5)	383
+Flamberge (Grade 6)	451
+Flying Knife (Grade 1)	147
+Flying Knife (Grade 2)	215
+Flying Knife (Grade 3)	283
+Flying Knife (Grade 4)	351
+Flying Knife (Grade 5)	419
+Flying Knife (Grade 6)	487
+Giant Axe (Grade 1)	123
+Giant Axe (Grade 2)	191
+Giant Axe (Grade 3)	259
+Giant Axe (Grade 4)	327
+Giant Axe (Grade 5)	395
+Giant Axe (Grade 6)	463
+Giant Sword (Grade 1)	109
+Giant Sword (Grade 2)	177
+Giant Sword (Grade 3)	245
+Giant Sword (Grade 4)	313
+Giant Sword (Grade 5)	381
+Giant Sword (Grade 6)	449
+Glaive (Grade 1)	135
+Glaive (Grade 2)	203
+Glaive (Grade 3)	271
+Glaive (Grade 4)	339
+Glaive (Grade 5)	407
+Glaive (Grade 6)	475
+Gnarled Staff (Grade 1)	153
+Gnarled Staff (Grade 2)	221
+Gnarled Staff (Grade 3)	289
+Gnarled Staff (Grade 4)	357
+Gnarled Staff (Grade 5)	425
+Gnarled Staff (Grade 6)	493
+Goedendag (Grade 1)	6@9
+Goedendag (Grade 2)	7@9
+Goedendag (Grade 3)	8@9
+Goedendag (Grade 4)	9@9
+Goedendag (Grade 5)	1@A
+Goedendag (Grade 6)	2@A
+Grand Scepter (Grade 1)	130
+Grand Scepter (Grade 2)	198
+Grand Scepter (Grade 3)	266
+Grand Scepter (Grade 4)	334
+Grand Scepter (Grade 5)	402
+Grand Scepter (Grade 6)	470
+Great Axe (Grade 1)	122
+Great Axe (Grade 2)	190
+Great Axe (Grade 3)	258
+Great Axe (Grade 4)	326
+Great Axe (Grade 5)	394
+Great Axe (Grade 6)	462
+Great Maul (Grade 1)	l36
+Great Maul (Grade 2)	l39
+Great Maul (Grade 3)	l42
+Great Maul (Grade 4)	l45
+Great Maul (Grade 5)	l48
+Great Maul (Grade 6)	l51
+Great Sword (Grade 1)	112
+Great Sword (Grade 2)	180
+Great Sword (Grade 3)	248
+Great Sword (Grade 4)	316
+Great Sword (Grade 5)	384
+Great Sword (Grade 6)	452
+Grim Wand (Grade 1)	l13
+Grim Wand (Grade 2)	l17
+Grim Wand (Grade 3)	l21
+Grim Wand (Grade 4)	l25
+Grim Wand (Grade 5)	l29
+Grim Wand (Grade 6)	l33
+Halberd (Grade 1)	159
+Halberd (Grade 2)	227
+Halberd (Grade 3)	295
+Halberd (Grade 4)	363
+Halberd (Grade 5)	431
+Halberd (Grade 6)	499
+Hand Axe (Grade 1)	114
+Hand Axe (Grade 2)	182
+Hand Axe (Grade 3)	250
+Hand Axe (Grade 4)	318
+Hand Axe (Grade 5)	386
+Hand Axe (Grade 6)	454
+Hand of God (Grade 1)	9@B
+Hand of God (Grade 2)	1@C
+Hand of God (Grade 3)	2@C
+Hand of God (Grade 4)	3@C
+Hand of God (Grade 5)	4@C
+Hand of God (Grade 6)	5@C
+Hatchet Hands (Grade 1)	j22
+Hatchet Hands (Grade 2)	j39
+Hatchet Hands (Grade 3)	j56
+Hatchet Hands (Grade 4)	j73
+Hatchet Hands (Grade 5)	j90
+Hatchet Hands (Grade 6)	o17
+Heavy Crossbow (Grade 1)	l54
+Heavy Crossbow (Grade 2)	l58
+Heavy Crossbow (Grade 3)	l62
+Heavy Crossbow (Grade 4)	l66
+Heavy Crossbow (Grade 5)	l70
+Heavy Crossbow (Grade 6)	l74
+Hunter's Bow (Grade 1)	161
+Hunter's Bow (Grade 2)	229
+Hunter's Bow (Grade 3)	297
+Hunter's Bow (Grade 4)	365
+Hunter's Bow (Grade 5)	433
+Hunter's Bow (Grade 6)	501
+Ida (Grade 1)	5@6
+Ida (Grade 2)	6@6
+Ida (Grade 3)	7@6
+Ida (Grade 4)	8@6
+Ida (Grade 5)	9@6
+Ida (Grade 6)	1@7
+Javelin (Grade 1)	132
+Javelin (Grade 2)	200
+Javelin (Grade 3)	268
+Javelin (Grade 4)	336
+Javelin (Grade 5)	404
+Javelin (Grade 6)	472
+Katar (Grade 1)	j20
+Katar (Grade 2)	j37
+Katar (Grade 3)	j54
+Katar (Grade 4)	j71
+Katar (Grade 5)	j88
+Katar (Grade 6)	o15
+Kriegsmesser (Grade 1)	1@8
+Kriegsmesser (Grade 2)	2@8
+Kriegsmesser (Grade 3)	3@8
+Kriegsmesser (Grade 4)	4@8
+Kriegsmesser (Grade 5)	5@8
+Kriegsmesser (Grade 6)	6@8
+Kriss (Grade 1)	144
+Kriss (Grade 2)	212
+Kriss (Grade 3)	280
+Kriss (Grade 4)	348
+Kriss (Grade 5)	416
+Kriss (Grade 6)	484
+Large Axe (Grade 1)	119
+Large Axe (Grade 2)	187
+Large Axe (Grade 3)	255
+Large Axe (Grade 4)	323
+Large Axe (Grade 5)	391
+Large Axe (Grade 6)	459
+Light Crossbow (Grade 1)	l52
+Light Crossbow (Grade 2)	l56
+Light Crossbow (Grade 3)	l60
+Light Crossbow (Grade 4)	l64
+Light Crossbow (Grade 5)	l68
+Light Crossbow (Grade 6)	l72
+Long Battle Bow (Grade 1)	165
+Long Battle Bow (Grade 2)	233
+Long Battle Bow (Grade 3)	301
+Long Battle Bow (Grade 4)	369
+Long Battle Bow (Grade 5)	437
+Long Battle Bow (Grade 6)	505
+Long Bow (Grade 1)	162
+Long Bow (Grade 2)	230
+Long Bow (Grade 3)	298
+Long Bow (Grade 4)	366
+Long Bow (Grade 5)	434
+Long Bow (Grade 6)	502
+Long Staff (Grade 1)	152
+Long Staff (Grade 2)	220
+Long Staff (Grade 3)	288
+Long Staff (Grade 4)	356
+Long Staff (Grade 5)	424
+Long Staff (Grade 6)	492
+Long Sword  (Grade 1)	105
+Long Sword  (Grade 2)	173
+Long Sword  (Grade 3)	241
+Long Sword  (Grade 4)	309
+Long Sword  (Grade 5)	377
+Long Sword  (Grade 6)	445
+Long War Bow (Grade 1)	167
+Long War Bow (Grade 2)	235
+Long War Bow (Grade 3)	303
+Long War Bow (Grade 4)	371
+Long War Bow (Grade 5)	439
+Long War Bow (Grade 6)	507
+Mace (Grade 1)	126
+Mace (Grade 2)	194
+Mace (Grade 3)	262
+Mace (Grade 4)	330
+Mace (Grade 5)	398
+Mace (Grade 6)	466
+Maiden Javelin (Grade 1)	j19
+Maiden Javelin (Grade 2)	j36
+Maiden Javelin (Grade 3)	j53
+Maiden Javelin (Grade 4)	j70
+Maiden Javelin (Grade 5)	j87
+Maiden Javelin (Grade 6)	o14
+Maiden Pike (Grade 1)	j18
+Maiden Pike (Grade 2)	j35
+Maiden Pike (Grade 3)	j52
+Maiden Pike (Grade 4)	j69
+Maiden Pike (Grade 5)	j86
+Maiden Pike (Grade 6)	o13
+Maiden Spear (Grade 1)	j17
+Maiden Spear (Grade 2)	x34
+Maiden Spear (Grade 3)	j51
+Maiden Spear (Grade 4)	j68
+Maiden Spear (Grade 5)	j85
+Maiden Spear (Grade 6)	o12
+Maple Bow (Grade 1)	6@2
+Maple Bow (Grade 2)	7@2
+Maple Bow (Grade 3)	8@2
+Maple Bow (Grade 4)	9@2
+Maple Bow (Grade 5)	1@3
+Maple Bow (Grade 6)	2@3
+Maul (Grade 1)	l35
+Maul (Grade 2)	l38
+Maul (Grade 3)	l41
+Maul (Grade 4)	l44
+Maul (Grade 5)	l47
+Maul (Grade 6)	l50
+Military Pick (Grade 1)	117
+Military Pick (Grade 2)	185
+Military Pick (Grade 3)	253
+Military Pick (Grade 4)	321
+Military Pick (Grade 5)	389
+Military Pick (Grade 6)	457
+Morning Star (Grade 1)	127
+Morning Star (Grade 2)	195
+Morning Star (Grade 3)	263
+Morning Star (Grade 4)	331
+Morning Star (Grade 5)	399
+Morning Star (Grade 6)	467
+Needle Crossbow (Grade 1)	7@C
+Needle Crossbow (Grade 2)	8@C
+Needle Crossbow (Grade 3)	9@C
+Needle Crossbow (Grade 4)	1@D
+Needle Crossbow (Grade 5)	2@D
+Needle Crossbow (Grade 6)	3@D
+Pike (Grade 1)	141
+Pike (Grade 2)	209
+Pike (Grade 3)	277
+Pike (Grade 4)	345
+Pike (Grade 5)	413
+Pike (Grade 6)	481
+Pilum (Grade 1)	133
+Pilum (Grade 2)	201
+Pilum (Grade 3)	269
+Pilum (Grade 4)	337
+Pilum (Grade 5)	405
+Pilum (Grade 6)	473
+Scythe (Grade 1)	158
+Scythe (Grade 2)	226
+Scythe (Grade 3)	294
+Scythe (Grade 4)	362
+Scythe (Grade 5)	430
+Scythe (Grade 6)	498
+Recurve Bow (Grade 1)	2@4
+Recurve Bow (Grade 2)	3@4
+Recurve Bow (Grade 3)	4@4
+Recurve Bow (Grade 4)	5@4
+Recurve Bow (Grade 5)	6@4
+Recurve Bow (Grade 6)	7@4
+Reflex Bow (Grade 1)	j16
+Reflex Bow (Grade 2)	j33
+Reflex Bow (Grade 3)	j50
+Reflex Bow (Grade 4)	j67
+Reflex Bow (Grade 5)	j84
+Reflex Bow (Grade 6)	o11
+Repeating Crossbow (Grade 1)	l55
+Repeating Crossbow (Grade 2)	l59
+Repeating Crossbow (Grade 3)	l63
+Repeating Crossbow (Grade 4)	l67
+Repeating Crossbow (Grade 5)	l71
+Repeating Crossbow (Grade 6)	l75
+Saber (Grade 1)	102
+Saber (Grade 2)	170
+Saber (Grade 3)	238
+Saber (Grade 4)	306
+Saber (Grade 5)	374
+Saber (Grade 6)	442
+Sacred Globe (Grade 1)	j11
+Sacred Globe (Grade 2)	j28
+Sacred Globe (Grade 3)	j45
+Sacred Globe (Grade 4)	j62
+Sacred Globe (Grade 5)	j79
+Sacred Globe (Grade 6)	j96
+Scepter (Grade 1)	129
+Scepter (Grade 2)	197
+Scepter (Grade 3)	265
+Scepter (Grade 4)	333
+Scepter (Grade 5)	401
+Scepter (Grade 6)	469
+Scimitar (Grade 1)	101
+Scimitar (Grade 2)	169
+Scimitar (Grade 3)	237
+Scimitar (Grade 4)	305
+Scimitar (Grade 5)	373
+Scimitar (Grade 6)	441
+Scissors Katar (Grade 1)	j26
+Scissors Katar (Grade 2)	j43
+Scissors Katar (Grade 3)	j60
+Scissors Katar (Grade 4)	j77
+Scissors Katar (Grade 5)	j94
+Scissors Katar (Grade 6)	o21
+Serpent Bow (Grade 1)	8@1
+Serpent Bow (Grade 2)	9@1
+Serpent Bow (Grade 3)	1@2
+Serpent Bow (Grade 4)	2@2
+Serpent Bow (Grade 5)	3@2
+Serpent Bow (Grade 6)	4@2
+Short Battle Bow (Grade 1)	164
+Short Battle Bow (Grade 2)	232
+Short Battle Bow (Grade 3)	300
+Short Battle Bow (Grade 4)	368
+Short Battle Bow (Grade 5)	436
+Short Battle Bow (Grade 6)	504
+Short Bow (Grade 1)	160
+Short Bow (Grade 2)	228
+Short Bow (Grade 3)	296
+Short Bow (Grade 4)	364
+Short Bow (Grade 5)	432
+Short Bow (Grade 6)	500
+Short Spear (Grade 1)	134
+Short Spear (Grade 2)	202
+Short Spear (Grade 3)	270
+Short Spear (Grade 4)	338
+Short Spear (Grade 5)	406
+Short Spear (Grade 6)	474
+Short Staff (Grade 1)	151
+Short Staff (Grade 2)	219
+Short Staff (Grade 3)	287
+Short Staff (Grade 4)	355
+Short Staff (Grade 5)	423
+Short Staff (Grade 6)	491
+Short Sword (Grade 1)	100
+Short Sword (Grade 2)	168
+Short Sword (Grade 3)	236
+Short Sword (Grade 4)	304
+Short Sword (Grade 5)	372
+Short Sword (Grade 6)	440
+Short War Bow (Grade 1)	166
+Short War Bow (Grade 2)	234
+Short War Bow (Grade 3)	302
+Short War Bow (Grade 4)	370
+Short War Bow (Grade 5)	438
+Short War Bow (Grade 6)	506
+Smoked Sphere (Grade 1)	j12
+Smoked Sphere (Grade 2)	j29
+Smoked Sphere (Grade 3)	j46
+Smoked Sphere (Grade 4)	j63
+Smoked Sphere (Grade 5)	j80
+Smoked Sphere (Grade 6)	j97
+Spatha (Grade 1)	9@4
+Spatha (Grade 2)	1@5
+Spatha (Grade 3)	2@5
+Spatha (Grade 4)	3@5
+Spatha (Grade 5)	4@5
+Spatha (Grade 6)	5@5
+Spear (Grade 1)	137
+Spear (Grade 2)	205
+Spear (Grade 3)	273
+Spear (Grade 4)	341
+Spear (Grade 5)	409
+Spear (Grade 6)	477
+Spetum (Grade 1)	140
+Spetum (Grade 2)	208
+Spetum (Grade 3)	276
+Spetum (Grade 4)	344
+Spetum (Grade 5)	412
+Spetum (Grade 6)	480
+Spiked Club (Grade 1)	125
+Spiked Club (Grade 2)	193
+Spiked Club (Grade 3)	261
+Spiked Club (Grade 4)	329
+Spiked Club (Grade 5)	397
+Spiked Club (Grade 6)	465
+Stag Bow (Grade 1)	j15
+Stag Bow (Grade 2)	j32
+Stag Bow (Grade 3)	j49
+Stag Bow (Grade 4)	j66
+Stag Bow (Grade 5)	j83
+Stag Bow (Grade 6)	o10
+Stinger Crossbow (Grade 1)	3@E
+Stinger Crossbow (Grade 2)	4@E
+Stinger Crossbow (Grade 3)	5@E
+Stinger Crossbow (Grade 4)	6@E
+Stinger Crossbow (Grade 5)	7@E
+Stinger Crossbow (Grade 6)	8@E
+Throwing Axe (Grade 1)	149
+Throwing Axe (Grade 2)	217
+Throwing Axe (Grade 3)	285
+Throwing Axe (Grade 4)	353
+Throwing Axe (Grade 5)	421
+Throwing Axe (Grade 6)	489
+Throwing Knife (Grade 1)	146
+Throwing Knife (Grade 2)	214
+Throwing Knife (Grade 3)	282
+Throwing Knife (Grade 4)	350
+Throwing Knife (Grade 5)	418
+Throwing Knife (Grade 6)	486
+Throwing Spear (Grade 1)	136
+Throwing Spear (Grade 2)	204
+Throwing Spear (Grade 3)	272
+Throwing Spear (Grade 4)	340
+Throwing Spear (Grade 5)	408
+Throwing Spear (Grade 6)	476
+Trebuchet (Grade 1)	1@F
+Trebuchet (Grade 2)	2@F
+Trebuchet (Grade 3)	3@F
+Trebuchet (Grade 4)	4@F
+Trebuchet (Grade 5)	5@F
+Trebuchet (Grade 6)	6@F
+Trident (Grade 1)	138
+Trident (Grade 2)	206
+Trident (Grade 3)	274
+Trident (Grade 4)	342
+Trident (Grade 5)	410
+Trident (Grade 6)	478
+Two-Handed Sword (Grade 1)	107
+Two-Handed Sword (Grade 2)	175
+Two-Handed Sword (Grade 3)	243
+Two-Handed Sword (Grade 4)	311
+Two-Handed Sword (Grade 5)	379
+Two-Handed Sword (Grade 6)	447
+Viper Bow (Grade 1)	4@3
+Viper Bow (Grade 2)	5@3
+Viper Bow (Grade 3)	6@3
+Viper Bow (Grade 4)	7@3
+Viper Bow (Grade 5)	8@3
+Viper Bow (Grade 6)	9@3
+Voulge (Grade 1)	157
+Voulge (Grade 2)	225
+Voulge (Grade 3)	293
+Voulge (Grade 4)	361
+Voulge (Grade 5)	429
+Voulge (Grade 6)	497
+Wand (Grade 1)	l10
+Wand (Grade 2)	l14
+Wand (Grade 3)	l18
+Wand (Grade 4)	l22
+Wand (Grade 5)	l26
+Wand (Grade 6)	l30
+War Axe (Grade 1)	118
+War Axe (Grade 2)	186
+War Axe (Grade 3)	254
+War Axe (Grade 4)	322
+War Axe (Grade 5)	390
+War Axe (Grade 6)	458
+War Hammer (Grade 1)	l34
+War Hammer (Grade 2)	l37
+War Hammer (Grade 3)	l40
+War Hammer (Grade 4)	l43
+War Hammer (Grade 5)	l46
+War Hammer (Grade 6)	l49
+War Scepter (Grade 1)	131
+War Scepter (Grade 2)	199
+War Scepter (Grade 3)	267
+War Scepter (Grade 4)	335
+War Scepter (Grade 5)	403
+War Scepter (Grade 6)	471
+War Staff (Grade 1)	155
+War Staff (Grade 2)	223
+War Staff (Grade 3)	291
+War Staff (Grade 4)	359
+War Staff (Grade 5)	427
+War Staff (Grade 6)	495
+War Sword (Grade 1)	106
+War Sword (Grade 2)	174
+War Sword (Grade 3)	242
+War Sword (Grade 4)	310
+War Sword (Grade 5)	378
+War Sword (Grade 6)	446
+Wrist Blade (Grade 1)	j21
+Wrist Blade (Grade 2)	j38
+Wrist Blade (Grade 3)	j55
+Wrist Blade (Grade 4)	j72
+Wrist Blade (Grade 5)	j89
+Wrist Blade (Grade 6)	o16
+Yew Wand (Grade 1)	l11
+Yew Wand (Grade 2)	l15
+Yew Wand (Grade 3)	l19
+Yew Wand (Grade 4)	l23
+Yew Wand (Grade 5)	l27
+Yew Wand (Grade 6)	l31
+Naginata (Grade 1)	!01
+Naginata (Grade 2)	!02
+Naginata (Grade 3)	!03
+Naginata (Grade 4)	!04
+Naginata (Grade 5)	!05
+Naginata (Grade 6)	!06
+Raptor Scythe (Grade 1)	!08
+Raptor Scythe (Grade 2)	!09
+Raptor Scythe (Grade 3)	!10
+Raptor Scythe (Grade 4)	!11
+Raptor Scythe (Grade 5)	!12
+Raptor Scythe (Grade 6)	!13
+Bonesplitter (Grade 1)	!15
+Bonesplitter (Grade 2)	!16
+Bonesplitter (Grade 3)	!17
+Bonesplitter (Grade 4)	!18
+Bonesplitter (Grade 5)	!19
+Bonesplitter (Grade 6)	!20
+Mammen Axe (Grade 1)	!22
+Mammen Axe (Grade 2)	!23
+Mammen Axe (Grade 3)	!24
+Mammen Axe (Grade 4)	!25
+Mammen Axe (Grade 5)	!26
+Mammen Axe (Grade 6)	!27
+Hammerhead Axe (Grade 1)	19@
+Hammerhead Axe (Grade 2)	!29
+Hammerhead Axe (Grade 3)	!30
+Hammerhead Axe (Grade 4)	!31
+Hammerhead Axe (Grade 5)	!32
+Hammerhead Axe (Grade 6)	!33
+Ono (Grade 1)	!35
+Ono (Grade 2)	!36
+Ono (Grade 3)	!37
+Ono (Grade 4)	!38
+Ono (Grade 5)	!39
+Ono (Grade 6)	!40
+Valaska (Grade 1)	!42
+Valaska (Grade 2)	!43
+Valaska (Grade 3)	!44
+Valaska (Grade 4)	!45
+Valaska (Grade 5)	!46
+Valaska (Grade 6)	!47
+Labrys (Grade 1)	!49
+Labrys (Grade 2)	!50
+Labrys (Grade 3)	!51
+Labrys (Grade 4)	!52
+Labrys (Grade 5)	!53
+Labrys (Grade 6)	!54
+Flamen Staff (Grade 1)	!56
+Flamen Staff (Grade 2)	!57
+Flamen Staff (Grade 3)	!58
+Flamen Staff (Grade 4)	!59
+Flamen Staff (Grade 5)	!60
+Flamen Staff (Grade 6)	!61
+Marrow Staff (Grade 1)	!63
+Marrow Staff (Grade 2)	!64
+Marrow Staff (Grade 3)	!65
+Marrow Staff (Grade 4)	!66
+Marrow Staff (Grade 5)	!67
+Marrow Staff (Grade 6)	!68
+Hexblade (Grade 1)	!70
+Hexblade (Grade 2)	!71
+Hexblade (Grade 3)	!72
+Hexblade (Grade 4)	!73
+Hexblade (Grade 5)	!74
+Hexblade (Grade 6)	!75
+Spirit Edge (Grade 1)	!77
+Spirit Edge (Grade 2)	!78
+Spirit Edge (Grade 3)	!79
+Spirit Edge (Grade 4)	!80
+Spirit Edge (Grade 5)	!81
+Spirit Edge (Grade 6)	!82
+Holy Lance (Grade 1)	!84
+Holy Lance (Grade 2)	!85
+Holy Lance (Grade 3)	!86
+Holy Lance (Grade 4)	!87
+Holy Lance (Grade 5)	!88
+Holy Lance (Grade 6)	!89
+Tepoztopilli (Grade 1)	!91
+Tepoztopilli (Grade 2)	!92
+Tepoztopilli (Grade 3)	!93
+Tepoztopilli (Grade 4)	!94
+Tepoztopilli (Grade 5)	!95
+Tepoztopilli (Grade 6)	!96
+Warp Blade (Grade 1)	!98
+Warp Blade (Grade 2)	!99
+Warp Blade (Grade 3)	!1!
+Warp Blade (Grade 4)	!2!
+Warp Blade (Grade 5)	!3!
+Warp Blade (Grade 6)	!4!

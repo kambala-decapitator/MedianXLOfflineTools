@@ -35,8 +35,9 @@ private slots:
     void findNext();
     void findPrevious();
     void toggleResults();
-    void updateCurrentIndexForItem(ItemInfo *item);
+    void showHelp();
 
+    void updateCurrentIndexForItem(ItemInfo *item);
     void searchTextChanged();
 
 private:

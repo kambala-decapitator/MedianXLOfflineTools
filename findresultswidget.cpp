@@ -144,6 +144,7 @@ bool FindResultsWidget::eventFilter(QObject *obj, QEvent *event)
         {
             ItemInfo *item = _foundItemsMap[_resultsTreeWidget->indexOfTopLevelItem(parentItem)].at(parentItem->indexOfChild(currentItem));
             emit showItem(item);
+            return true;
         }
     }
 

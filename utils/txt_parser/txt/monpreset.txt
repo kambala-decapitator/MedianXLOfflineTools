@@ -1,0 +1,252 @@
+Act	*old	Place
+1	gheed	gheed
+1	cain1	cain1
+1	akara	akara
+1	chicken	chicken
+1	rogue1	rogue1
+1	kashya	kashya
+1	cow	cow
+1	warriv1	warriv1
+1	charsi	charsi
+1	andariel	andariel
+1	place_fallen	place_nothing
+1	place_fallenshaman	place_nothing
+1	place_bloodraven	place_bloodraven
+1	cow	cow
+1	camel	camel
+1	place_unique_pack	place_unique_pack
+1	place_npc_pack	place_npc_pack
+1	place_nothing	place_nothing
+1	place_nothing	place_nothing
+1	place_champion	place_nothing
+1	navi	navi
+1	rogue1	rogue1
+1	rogue3	rogue3
+1	gargoyletrap	gargoyletrap
+1	place_fallennest	place_nothing
+1	place_talkingrogue	place_talkingrogue
+1	place_fallen	place_nothing
+1	place_fallenshaman	place_nothing
+1	trap-horzmissile	trap-horzmissile
+1	trap-vertmissile	trap-vertmissile
+1	place_group25	place_group25
+1	place_group50	place_group50
+1	place_group75	place_group75
+1	place_group100	place_group100
+1	Bishibosh	Bishibosh
+1	Bonebreak	Bonebreak
+1	Coldcrow	Coldcrow
+1	Rakanishu	Rakanishu
+1	Treehead WoodFist	Treehead WoodFist
+1	Griswold	Griswold
+1	The Countess	The Countess
+1	Pitspawn Fouldog	Pitspawn Fouldog
+1	Flamespike the Crawler	Flamespike the Crawler
+1	Boneash	Boneash
+1	The Smith	The Smith
+1	The Cow King	The Cow King
+1	Corpsefire	Corpsefire
+1		Winged Death
+1		Inarius
+1		High Cleric Gray
+1		High Cleric Dorian
+1		Crystal Ball
+1		Glass Skull the Jagged
+1		JurisKhan
+1		WycBoss1
+1		WycBoss2
+1		WycBoss3
+1		WycBoss4
+1		WycBoss5
+2	warriv2	warriv2
+2	atma	atma
+2	drognan	drognan
+2	fara	fara
+2	place_nothing	place_nothing
+2	place_nothing	place_nothing
+2	place_nothing	place_nothing
+2	place_nothing	place_nothing
+2	greiz	greiz
+2	elzix	elzix
+2	lysander	lysander
+2	meshif1	meshif1
+2	geglash	geglash
+2	jerhyn	jerhyn
+2	place_unique_pack	place_unique_pack
+2	place_npc_pack	place_npc_pack
+2	place_nothing	place_nothing
+2	summoner	summoner
+2	Radament	Radament
+2	duriel	duriel
+2	cain2	cain2
+2	place_champion	place_nothing
+2	act2male	act2male
+2	act2female	act2female
+2	act2guard1	act2guard1
+2	act2vendor1	act2vendor1
+2	act2vendor2	act2vendor2
+2	place_tightspotboss	place_tightspotboss
+2	fish	fish
+2	place_talkingguard	place_talkingguard
+2	place_dumbguard	place_dumbguard
+2	place_maggot	place_nothing
+2	place_maggotegg	place_nothing
+2	place_nothing	place_nothing
+2	gargoyletrap	gargoyletrap
+2	trap-horzmissile	trap-horzmissile
+2	trap-vertmissile	trap-vertmissile
+2	place_group25	place_group25
+2	place_group50	place_group50
+2	place_group75	place_group75
+2	place_group100	place_group100
+2	lightningspire	lightningspire
+2	firetower	firetower
+2	place_nothing	place_nothing
+2	place_nothing	place_nothing
+2	place_nothing	place_nothing
+2	Bloodwitch the Wild	Bloodwitch the Wild
+2	Fangskin	Fangskin
+2	Beetleburst	Beetleburst
+2	Leatherarm	Leatherarm
+2	Coldworm the Burrower	Coldworm the Burrower
+2	Fire Eye	Fire Eye
+2	Dark Elder	Dark Elder
+2	Ancient Kaa the Soulless	Ancient Kaa the Soulless
+2	act2guard4	act2guard4
+2	act2guard5	act2guard5
+2	sarcophagus	sarcophagus
+2	tyrael1	tyrael1
+2	skeleton5	skeleton5
+2		Sharp Tooth Sayer
+2		Flamespike the Crawler
+3	cain3	cain3
+3	place_champion	place_nothing
+3	act3male	act3male
+3	act3female	act3female
+3	asheara	asheara
+3	hratli	hratli
+3	alkor	alkor
+3	ormus	ormus
+3	meshif2	meshif2
+3	place_amphibian	place_nothing
+3	place_tentacle_ns	place_tentacle_ns
+3	place_tentacle_ew	place_tentacle_ew
+3	place_fetishnest	place_nothing
+3	trap-horzmissile	trap-horzmissile
+3	trap-vertmissile	trap-vertmissile
+3	natalya	natalya
+3	place_mosquitonest	place_nothing
+3	place_group25	place_group25
+3	place_group50	place_group50
+3	place_group75	place_group75
+3	place_group100	place_group100
+3	compellingorb	compellingorb
+3	mephisto	mephisto
+3	trap-melee	trap-melee
+3	mephistospirit	mephistospirit
+3	act3hire	act3hire
+3	place_fetish	place_nothing
+3	place_fetishshaman	place_nothing
+3	Web Mage the Burning	Web Mage the Burning
+3	Witch Doctor Endugu	Witch Doctor Endugu
+3	Stormtree	Stormtree
+3	Sarina the Battlemaid	Sarina the Battlemaid
+3	Icehawk Riftwing	Icehawk Riftwing
+3	Ismail Vilehand	Ismail Vilehand
+3	Geleb Flamefinger	Geleb Flamefinger
+3	Bremm Sparkfist	Bremm Sparkfist
+3	Toorc Icefist	Toorc Icefist
+3	Wyand Voidfinger	Wyand Voidfinger
+3	Maffer Dragonhand	Maffer Dragonhand
+3		The Tormentor
+3		Riftwraith the Cannibal
+3		Death Projector
+3		RathmaPrimus
+4	place_champion	place_nothing
+4	trap-horzmissile	trap-horzmissile
+4	trap-vertmissile	trap-vertmissile
+4	place_group25	place_group25
+4	place_group50	place_group50
+4	place_group75	place_group75
+4	place_group100	place_group100
+4	tyrael2	tyrael2
+4	window2	window2
+4	window1	window1
+4	jamella	jamella
+4	halbu	halbu
+4	hellmeteor	hellmeteor
+4	izual	izual
+4	diablo	diablo
+4	Winged Death	place_nothing
+4	The Tormentor	place_nothing
+4	Taintbreeder	place_nothing
+4	Riftwraith the Cannibal	place_nothing
+4	Infector of Souls	Infector of Souls
+4	Lord De Seis	Lord De Seis
+4	Grand Vizier of Chaos	Grand Vizier of Chaos
+4	trappedsoul1	trappedsoul1
+4	trappedsoul2	trappedsoul2
+4	regurgitator3	regurgitator3
+4	cain4	cain4
+4	malachai	malachai
+4	The Feature Creep	The Feature Creep
+4		Anodized Elite
+5	larzuk	larzuk
+5	drehya	drehya
+5	malah	malah
+5	nihlathak	nihlathak
+5	qual-kehk	qual-kehk
+5	place_impgroup	place_nothing
+5	Siege Boss	Siege Boss
+5	tyrael3	tyrael3
+5	cain6	cain6
+5	place_imp	place_nothing
+5	place_minion	place_nothing
+5	place_miniongroup	place_nothing
+5	catapult2	catapult2
+5	catapult1	catapult1
+5	place_bloodlord	place_nothing
+5	catapultspotter2	catapultspotter2
+5	catapultspotter1	catapultspotter1
+5	act5barb1	act5barb1
+5	place_deadbarb	place_deadbarb
+5	place_deadminion	place_deadminion
+5	place_deadimp	place_deadimp
+5	cain6	cain6
+5	act5barb3	act5barb3
+5	place_reanimateddead	place_nothing
+5	ancientstatue1	ancientstatue1
+5	ancientstatue2	ancientstatue2
+5	ancientstatue3	ancientstatue3
+5	Dac Farren	Dac Farren
+5	baalthrone	baalthrone
+5	baaltaunt	baaltaunt
+5	injuredbarb1	injuredbarb1
+5	injuredbarb2	injuredbarb2
+5	injuredbarb3	injuredbarb3
+5	baalcrab	baalcrab
+5	Axe Dweller	place_nothing
+5	Bonesaw Breaker	place_nothing
+5	Megaflow Rectifier	Megaflow Rectifier
+5	Eyeback Unleashed	Eyeback Unleashed
+5	Threash Socket	Threash Socket
+5	Pindleskin	Pindleskin
+5	Snapchip Shatter	Snapchip Shatter
+5	Anodized Elite	place_nothing
+5	Vinvear Molech	Vinvear Molech
+5	Sharp Tooth Sayer	place_nothing
+5	Magma Torquer	place_nothing
+5	Blaze Ripper	place_nothing
+5	Frozenstein	Frozenstein
+5	worldstoneeffect	worldstoneeffect
+5	chicken	chicken
+5	place_champion	place_nothing
+5	evilhut	place_nothing
+5	place_nothing	place_nothing
+5	place_nothing	place_nothing
+5	place_nothing	place_nothing
+5	place_nothing	place_nothing
+5	place_nothing	place_nothing
+5		NewMalic
+5		NewPrimus
+5		SpiritOfMefis

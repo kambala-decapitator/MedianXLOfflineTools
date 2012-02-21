@@ -2,6 +2,7 @@
 #define LANGUAGEMANAGER_HPP
 
 #include <QString>
+#include <QDir>
 
 
 class LanguageManager
@@ -13,7 +14,7 @@ public:
         return obj;
     }
 
-    QString locale() const { return currentLocale == "ru" ? "ru" : defaultLocale; }
+    const QString &modLocalization() const { static const QString s(QDir(QString("%1/data/%2").arg(resourcesPath, currentLocale)).exists() ? currentLocale : defaultLocale); return s; }
     void setResourcesPath(const QString &path) { resourcesPath = path; translationsPath = resourcesPath + "/translations"; }
 
     const QString languageKey, defaultLocale;

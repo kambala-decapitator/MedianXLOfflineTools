@@ -25,7 +25,10 @@ const QStringList QD2CharRenamer::colorNames = QStringList()
 
 void QD2CharRenamer::updateNamePreview(QTextEdit *previewTextEdit, const QString &name)
 {
-    previewTextEdit->setHtml(QString("<html><body bgcolor=\"black\">%1</body></html>").arg(htmlStringFromDiabloColorString(name)));
+    QString htmlName = QString("<html><body bgcolor=\"black\"><font color = \"#ffffff\">%1</font></body></html>").arg(name); // white by default
+    for (int i = 0; i < correctColorsNum; i++) // replace color codes with their hex values for HTML
+        htmlName.replace(QString("%1%2").arg(unicodeColorHeader).arg(colorCodes.at(i)), QString("</font><font color = \"%1\">").arg(colorHexString(colors.at(i))));
+    previewTextEdit->setHtml(htmlName);
     previewTextEdit->setStatusTip(name);
 }
 
@@ -100,6 +103,7 @@ void QD2CharRenamer::nameChanged(const QString &newName)
 {
     ui.buttonBox->button(QDialogButtonBox::Ok)->setEnabled(newName != _originalCharName && newName.length() > 1);
     updateNamePreview(ui.charNamePreview, ui.charNameLineEdit->text());
+    setWindowTitle(tr("Rename (%1/15)", "param is the number of characters in the name").arg(ui.charNameLineEdit->text().length()));
 }
 
 void QD2CharRenamer::insertColor()

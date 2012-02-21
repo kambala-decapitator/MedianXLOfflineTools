@@ -1,0 +1,256 @@
+state	id	group	Laz / status	remhit	nosend	transform	aura	curable	curse	active	immed	restrict	disguise	blue	attblue	damblue	armblue	rfblue	rlblue	rcblue	stambarblue	rpblue	attred	damred	armred	rfred	rlred	rcred	rpred	exp	plrstaydeath	monstaydeath	bossstaydeath	hide	shatter	udead	life	green	pgsv	nooverlays	noclear	bossinv	meleeonly	notondead	overlay1	overlay2	overlay3	overlay4	pgsvoverlay	castoverlay	removerlay	stat	setfunc	remfunc	missile	skill	itemtype	itemtrans	colorpri	colorshift	light-r	light-g	light-b	onsound	offsound	gfxtype	gfxclass	cltevent	clteventfunc	cltactivefunc	srvactivefunc	eol
+none	0																																																																							0
+freeze	1																															1		1	1	1									shackles_effect						shackles_disappear								90	108	255	255	255	impact_bluemotize_1								0
+poison	2																																				1	1												poisonhit									80	104	128	255	128	impact_poison_1								0
+resistfire	3						1				1							1																											aura_resistfire					cast_resistfire		fireresist												paladin_aura_resistfire								0
+resistcold	4						1				1									1																									aura_resistcold					cast_resistcold		coldresist												paladin_aura_resistcold								0
+resistlight	5						1				1								1																										aura_resistlight					cast_resistlight		lightresist												paladin_aura_resistlightning								0
+resistmagic	6																																																																							0
+playerbody	7																																																																							0
+resistall	8						1				1							1	1	1																									aura_resistall_front	aura_resistall_back				cast_resistall	rainbowkaboom	lightresist												paladin_aura_salvation	object_barrel_explode							0
+amplifydamage	9							1																																					curseamplifydamage					curse_hit		damageresist												necromancer_amplifydamage								0
+burnbabyburn	10		RETRIBUTE					1	1																	1	1	1	1																bloodfire							fireresist							105	100	255	0	0	paladin_aura_holyfire	object_barrel_explode							0
+cold	11													1																																						velocitypercent							90	108	150	215	255	impact_bluemotize_1								0
+inferno	12				1																																																																			0
+shellshock	13		FORCE SHOUT																					1																					deaf														13	13	64	64	255	ghost_effect	object_barrel_explode							0
+lordjusticar	14		VESSEL OF JUDGMENT																																										zomgwhyme																			paladin_conversion	object_barrel_explode						146	0
+amazonfury	15		MONSTER PALSHIFT																																										whirlwind							velocitypercent												sorceress_firebolt_impact_1	object_barrel_explode							0
+wefoundawitch	16		BLOOD FURY				1																																						almightstate					almightcast		passive_fire_mastery							55	100	255	128	128	necromancer_reversevampire	object_barrel_explode							0
+yaaaaaaaaaargh	17		BLOODHATRED						1		1					1																													blindingrage							hpregen							65	100	255	128	128	barbarian_howl_1	object_barrel_explode							0
+skill_move	18		UNKNOWN																																																																					0
+plasmashield	19		BAAL SHARD CURSE																																										bluedotoverhead					bluedotoverhead		magic_damage_reduction							60	0	128	144	255	paladin_aura_resistlightning	object_barrel_explode							0
+careforabloodbath	20		BLOODBATH								1					1																													blindingrage							passive_weaponblock							65	1	255	128	128	baal_summonflash	object_barrel_explode							0
+stunned	21																																												stun																											0
+raptured	22		RAPTURE																																										turbofront					turbofront		attackrate												monster_cast_fire	object_barrel_explode							0
+dimvision	23							1																																					cursedimvision					curse_hit														necromancer_dimvision								0
+slowed	24																																												slowspelloverlay	warpuff				slowspellcast									45	108	128	128	255	sorceress_nova								0
+killed2	25		ON-KILL CURSE																																										baal_on_throne							levelchallenge_kill_check							140	73	255	0	0	paladin_redeemed_soul	object_barrel_explode							0
+malewitchaura	26		MALE WITCH																																										doomgate							passive2							80	73	255	32	0	sorceress_thunder_cast	object_barrel_explode							0
+taunt	27							1							1	1																													taunt																			barbarian_battlecry_state								0
+hounforshadowspirit	28		HOUNFOR STATE																																																								37	32	128	196	255									0
+darkened	29		UNSEELIE CURSE									1																																						mooncast		hpregen							160	40	0	0	30	darkness_falls	object_barrel_explode							0
+bonusforcuddling	30		MINION RADIUS AURA				1									1																													mininova_aura							damagepercent																				0
+elementalfury	31	14	ARCANE FURY																																										ghostlights							item_fastercastrate							55	1	164	255	164	paladin_aura_holylight	object_barrel_explode							0
+maenadfury	32	5	ECSTATIC FRENZY													1									1																				fetish_aura					fetish_aura		velocitypercent												maenad3	object_barrel_explode							0
+earthwaterairfire	33		FIREDANCE																																										threeproc					threeproc		passive_fire_mastery							20	1	255	192	192	object_fissure_1	object_barrel_explode							0
+vanquish_female	34		VANQUISH MERC VER				1									1																													vanquishedoverlay					vanquishedcast		damagepercent							100	101	255	255	0	femvanquish4860	object_barrel_explode							0
+gunslotsofguns	35		NEPHALEM WEAPONS													1																													nephalemed					rainbowkaboom														batdemon_shock_1	object_barrel_explode							0
+thorns	36						1																																						aura_thorns_front	aura_thorns_back																		paladin_aura_thorns								0
+hard_aura	37		HARD MODE AURA				1																																													damagepercent																				0
+mercedes	38		MERC AURA				1																																											evocation		item_poisonlengthresist												paladin_aura_holyfire	object_barrel_explode							0
+iamaurilbowdown	39		ICE ELEMENTALS AURA														1																																			armor_override_percent																				0
+burningveiled	40		BURNING VEIL				1									1																													bloodlusted					ragewoah									124	100	255	192	128									0
+aura_1	41						1				1					1																													barb_1							damagepercent												barbarian_shout_1								0
+concentration	42		MON AURA				1				1					1																													concentrationfront	concentrationback						damagepercent												paladin_aura_concentration								0
+blackstorm	43		SYMPHONY OF DESTR																																										blackstormcircles				ghostlights															sylohiny	object_barrel_explode							0
+mega_apple	44		APPLE																																															appleheal		hpregen													object_barrel_explode							0
+crawlbeforeme	45		CHRONOFIELD																																										manabubblescast	warpuff				manabubblescast		velocitypercent							45	108	128	128	255	sorceress_nova	object_barrel_explode							0
+hounfor	46		HOUNFOR																																																																					0
+aura_2	47						1				1	1				1	1																												barb_2							item_strength_percent												barbarian_battleorders_1								0
+aura_3	48						1				1																																		barb_3							poisonmindam												barbarian_howl_1								0
+fanaticism	49						1				1				1	1																													fanaticismfront	fanaticismback						attackrate																				0
+redemption	50						1																																						fastglowcast					fastglowcast														barbarian_battlecry_state	object_barrel_explode							0
+aura_4	51						1				1																																		barb_4							hpregen												barbarian_command_1								0
+preventheal	52																								1																											armorclass							115	101	255	128	64									0
+conversion	53	10						1	1																					1															conversionaura						mastercharmerflash													paladin_conversion								0
+uninterruptable	54																																																					7																		0
+witchquestaura	55		WITCH SPARKLES				1																																						witchaura_ping					witchaura_ping														paladin_aura_purification								0
+terror	56							1																																					curseterror					curse_hit														necromancer_taint								0
+unholynova	57		BLACK MASS																																																	passive_dodge							125	105	255	128	255									0
+unfortunate	58		FORTRESS LOCKOUT									1																																								fade							85	1	255	128	0		object_barrel_explode							0
+eatsyou	59		KNIGHT OF DEATH				1																																						blackcurse					curse_hit		strength							50	1	255	128	156	cursor_durability_break	object_barrel_explode							0
+decrepify	60		COUATL AURA					1																1																					cursedecrepify					curse_hit		skill_decrepify												necromancer_decrepify								0
+lowerresist	61							1																		1	1	1	1																curselowerresist					curse_hit		lightresist																				0
+openwounds	62									1																											1																																	85		0
+whosyourlordfather	63		HYMN																																															woooh	woooh2	item_healonstriking							80	22	255	174	128	paladin_aura_blessedaim	object_barrel_explode							0
+beaconsavengerstate	64		BEACON																																										tinysparklesoverlay														50	1	255	128	192	air_raid_siren	object_barrel_explode						146	0
+shamanstrance	65		SHAMANIC TRANCE													1																													massiveorange					firecrackerz		skill_vindicate_effect							25	1	255	128	128	barbarian_howl_1	object_barrel_explode							0
+broadsided	66		BROADSIDE LOCKOUT									1					1																																			fade							90	1	0	128	255		object_barrel_explode							0
+invishieldaura	67						1				1						1																																			damageresist							33	109	255	0	255	paladin_handofgod_cast	object_barrel_explode							0
+necroshadowspirit	68		NECRO PET STATE																																																								36	20	0	255	255									0
+aura_5	69						1				1																																		barb_4							attackrate												barbarian_command_1								0
+electricshield	70		LIGHTNING SHIELD				1																																						static_shielded					static_shieldedcast		item_attackertakeslightdamage							75	1	81	81	255	barbarian_command_1	object_barrel_explode							0
+passive_1	71																																																			passive1																				0
+passive_2	72																																																			passive2																				0
+passive_3	73																																																			passive3																				0
+negativeresist	74		UNKNOWN																																										curseamplifydamage					curse_hit		damageresist												necromancer_amplifydamage								0
+druidcirclesavengerstate	75		FAERIE FIRE																																										aura_resistall_back					cast_resistall														paladin_aura_blessedaim	object_barrel_explode						146	0
+bzzzzzzzzzzzzz	76		SCOURGE PET STATE																																										swarm_overlay					splatter																						0
+zeraesavengerstate	77		WAR SPIRIT																																										warspiritfront	warspiritback				warspiritcast									35	1	255	255	128	druid_morph	object_barrel_explode						146	0
+phasebombcurse	78		PHASE BOMB DEBUFF																																										phasedoutomg					crashedneonlight		fireresist							88	106	128	255	255	sorceress_telekinesis	object_barrel_explode							0
+passive_6	79										1																																									passive6																				0
+triumphstate	80		TAKEDOWN				1										1																																			skill_armor_percent							110	49	255	255	64									0
+bladesoflight	81		BLADES OF LIGHT (DEP)				1																																						valkyrie							thorns_percent							80	1	255	128	64	paladin_aura_purification	object_barrel_explode							0
+zomgrefuge	82		SHADOW REFUGE				1																																													velocitypercent							95	40	255	128	64	paladin_aura_defiance	object_barrel_explode							0
+passive_4	83										1																																									passive4																				0
+abolishcurse	84	10	OFFENSIVE COTH																																										mastercharmerflash							normal_damage_reduction							140	34	0	255	0	paladin_aura_salvation	object_barrel_explode							0
+nomanaregen	85				1																																																																			0
+justhit	86	1			1																																																																			0
+ongoing_thunderdome	87		LIGHTNING ARENA																																										cyclonearmor3front	cyclonearmor3back													44	1	64	192	255		object_barrel_explode						146	0
+killed3	88		ON-KILL CURSE																																										blackmass	mbwabwa					kaboooooooooom	levelchallenge_kill_check							5	1	255	255	255		object_barrel_explode							0
+behindenemylines	89		COLOSSEUM					1																	1																				darkturbofront						darkturbofront	damagepercent							20	1	0	128	255	tentaclehead_death_1	object_barrel_explode							0
+blue	90													1																																													100	108	150	215	255									0
+red	91																																																										70	100	255	178	64									0
+death_delay	92																																																																							0
+pantherstaunt	93		HELLCAT AURA				1				1	1																																	lockdown							hpregen							105	40	64	128	255	paladin_aura_blessedaim								0
+frenzy	94		OVERLAY																																											frenzy						skill_frenzy																				0
+thunderbeared	95		THUNDERBEAR STATE									1																																	evocation	evocationfront	evocationback					velocitypercent							105	34	128	255	255	druid_morph	object_barrel_explode							0
+revive	96																															1	1			1																	15						85	15	0	128	255									0
+ensie	97	3	SORCERESS MORPH			1							1																													1								fire_cast_1																2	1					0
+sourceunit	98																															1	1																				4	2																		0
+redeemed	99																															1	1	1		1																	10			redemption								paladin_redeemed_soul								0
+healthpot	100																																																																							0
+snakepoison	101		SNAKE POISON CURSE																																		1	1							swarm_overlay					poisonhit									20	105	192	255	192	impact_poison_1	object_barrel_explode							0
+just_portaled	102																																																																							0
+wraithverged	103		WRAITHVERGE																							1	1	1	1																valkyrie														70	102	255	255	0	paladin_aura_holyfire	object_barrel_explode							0
+corpse_nodraw	104																															1	1	1		1																																				0
+alignment	105																														1	1	1																																							0
+manapot	106																																																																							0
+shatter	107																															1	1	1	1	1																																				0
+sync_warped	108																														1																																									0
+conversion_save	109																																																																							0
+pregnant	110																																												impregnated									10																		0
+hellfireaura	111		SUMMON JINNI																																										littletwinkles					curse_hit		passive_fire_pierce							25	1	255	128	0									0
+rabies	112																																												turbooooo														95	100	255	178	64	tentaclehead_death_1	object_barrel_explode							0
+taintedblood	113		TAINTED BLOOD				1																														1	1							splotch							hpregen							80	104	128	255	128	impact_poison_1	object_barrel_explode							0
+blood_mana	114							1	1																																				blood_mana																											0
+burning	115																																												burning																											0
+ongoing_tezla	116		NOVA CHARGE																																										cyclonearmor1front	cyclonearmor1back													40	1	192	192	255		object_barrel_explode						146	0
+reddish	117		MONSTER PALSHIFT																																																								70	69	255	128	0									0
+corpse_noselect	118																														1	1	1			1																																				0
+ongoing_napalm	119		PATH OF FLAMES																																										cyclonearmor3front	cyclonearmor3back													44	1	255	192	64		object_barrel_explode						146	0
+qqstate	120		MOONSTRIKE													1																													freezebolts							maxhp							10	1	144	144	255	tentaclehead_death_1	object_barrel_explode							0
+skilldelay	121	8	SKILL TIMER																																																																					0
+totemicslow	122		DEATHS FURY TOTEM								1																																		totem1aura							item_slow							20	1	255	192	192									0
+totemicheal	123		BLOOD TIDE TOTEM								1																																		totem2aura							item_maxhp_percent							20	1	255	192	192									0
+deathlordstate	124	3	DEATHLORD			1	1					1	1				1																									1								splatter	crashedneonlight	damagepercent							50	1	192	255	192	call_deathlord	object_barrel_explode	1	1275					0
+progressive_fire	125		BATSTRIKE																																				1										progressive_bat_1			progressive_fire	1	1											object_barrel_explode							0
+passive_lockout	126		LIONESS								1	1				1	1																																			passivelockout							100	101	255	192	128									0
+greatermanifest	127		GREATER MANIF								1																																									skill_ancientspirits_synergy																				0
+shrine_armor	128																1																												shrine_armor	shrine_shimmer00						armorclass																				0
+shrine_combat	129														1	1																													shrine_combat	shrine_shimmer00						tohit																				0
+shrine_resist_lightning	130																		1																										shrine_resist_lightning	shrine_shimmer01						lightresist																				0
+shrine_resist_fire	131																	1																											shrine_resist_fire	shrine_shimmer00						fireresist																				0
+shrine_resist_cold	132																			1																									shrine_resist_cold	shrine_shimmer01						coldresist																				0
+shrine_resist_poison	133																					1																							shrine_resist_poison	shrine_shimmer01						poisonresist																				0
+shrine_skill	134																																												shrine_skill	shrine_shimmer00							9	6																		0
+shrine_mana_regen	135																																												shrine_mana_regen	shrine_shimmer01																										0
+shrine_stamina	136																				1																								shrine_stamina	shrine_shimmer01						stamina																				0
+shrine_experience	137																																												shrine_experience	shrine_shimmer00																										0
+totemicvoodoo	138		ELEMENTAL TOTEM								1																																		totem4aura							damageresist							20	1	255	192	192									0
+queenofthemoon	139		MOON QUEEN																																																						tors	dblu	30	1	128	128	255	darkness_falls								0
+bear	140	3	MERC BEAR MORPH			1							1			1	1																										1										14											druid_morph	druid_morph	1	431					0
+bloodlust	141		UNUSED						1																																				bloodlust_state	bloodlust_state																										0
+changeclass	142		UNKNOWN																																																		5																			0
+resonance	143		RESONANCE DEBUFF																																										resonance							passive_dodge							70	102	255	192	0									0
+rathmastwin	144	3	RATHMAS CHOSEN													1																													darkwytch					curse_hit		item_poisonlengthresist							200	73	255	0	0	rathmacall1	object_barrel_explode							0
+queenofbladesstate	145		QUEEN OF BLADES																																										bladeshield					cloaked															object_barrel_explode						146	0
+invis	146																																																				12	8																		0
+aura_6	147		KRAKEN STANCE				1				1																																		barb_4							normal_damage_reduction												barbarian_taunt_1								0
+totemicattack	148		HOWLING TOTEM								1																																		totem5aura							damagepercent							20	1	255	192	192									0
+totemicmanatide	149		MANA TIDE TOTEM								1																																		totemXaura							manarecoverybonus							20	1	255	192	192									0
+vine_beast	150									1																																											11																	89		0
+cyclonearmor	151		UNUSED																																					1	1				cyclonearmor1front	cyclonearmor2front	cyclonearmor3front						8	5																		0
+clawmastery	152		ELFIN ARROWS																																																																					0
+cloak_of_shadows	153			1													1																												whitecircle					whitecircle		damagepercent	2				armo	lblu	30	1	128	128	255	darkness_falls	object_barrel_explode							0
+recycled	154																															1	1	1		1																																				0
+bacchanalia	155		BACCHANALIA																																																	passive_have_bacchanalia					weap	cred						maenad2								0
+cloaked	156								1																1																				cloaked							skill_armor_percent																				0
+deadringer	157	3	DRUID MORPH			1							1																													1								fire_cast_1																2	5					0
+killedandrewarded	158		SPECIAL ON-KILL CURSE																																										baal_on_throne							levelchallenge_kill_check							140	73	255	0	0	paladin_redeemed_soul	object_barrel_explode							0
+overlordsaura	159						1																																						eviloverlordaura							passive_aura_addmax												necromancer_attract								0
+pantherstate	160	16	BANEBLADE				1					1				1	1																												firecrown					psicast	mooncast	damagepercent					tors	dblu	50	73	192	192	255	darkness_falls	object_barrel_explode	2	1					0
+growl	161	4	SUPERBEAST			1							1			1																													sanctuaryfront	sanctuaryback	spirit_of_barbs			crashedneonlight		passive_fire_mastery							82	73	255	144	255	blackfury_active	object_barrel_explode	1	1220					0
+curseofkali	162		MAHASATTVA																							1	1	1	1																														150	69	255	0	0	golemfire_death	object_barrel_explode							0
+aaaaaaarrrgh	163		GRAVEYARD																																										redmass1	blackmass						damagepercent												graveyardactivate	object_barrel_explode						146	0
+debugcontrol	164		UNUSED																																																																					0
+itemset1	165																																																																							0
+itemset2	166																																																																							0
+itemset3	167																																																																							0
+itemset4	168																																																																							0
+itemset5	169																																																																							0
+itemset6	170				1																																																																			0
+runeword	171				1																																																																			0
+restinpeace	172																															1	1			1								1									17		redemption									paladin_redeemed_soul								0
+corpseexp	173																															1	1	1		1								1									18		corpseexplosion									necromancer_corpseexp_1								0
+whirlwind	174																																												alarmclockoverlay														150	47	255	0	0									0
+fullsetgeneric	175																																												aura_fanatic																											0
+monsterset	176	3				1							1																																					fire_cast_2																1	135					0
+generic_aura	177		VARIOUS								1																																																													0
+growl_neutral	178	4	MONSTER SUPERBEAST													1																													sanctuaryfront	sanctuaryback	spirit_of_barbs			crashedneonlight		damagepercent							80	73	255	96	255	blackfury_active	object_barrel_explode							0
+aura_itemonly	179		CRANE STANCE				1				1					1																													barb_1							damagepercent												barbarian_warcry_1								0
+amazinggrace	180		AMAZING GRACE				1									1																													amazinggrace							passive_dodge																				0
+slayed	181		SLAYER OVERLAY																																										slayercloud					slayercloud									80	73	255	0	0									0
+flashblast	182		FLASH GRAPHIC																																										flashfront	flashback													115	108	0	0	255									0
+bloodflashblast	183		BLOODFLASH GRAPHIC																																										bloodflashfront	bloodflashback													115	100	255	0	0									0
+porkulator	184		PORKULATOR			1		1					1																													1								curse_hit														sandmaggot_emerge	object_barrel_explode	1	1747					0
+healingeffect	185		LIFEBLOOD																																										appleongoing					appleheal		hpregen													object_barrel_explode							0
+meslayer	186		DARK KING																																										slayercloud					mooncast		passive2							80	1	255	128	128	sorceress_thunder_cast	object_barrel_explode							0
+elempot	187	6					1																																						potrunning					potactivate	potdeactivate	item_allskills												sorceress_thunder_cast	object_barrel_explode							0
+concpot	188	6					1																																						potrunning					potactivate	potdeactivate	profession_duration_mod												sorceress_thunder_cast	object_barrel_explode							0
+tritonstate	189	3	1.B9 NEW STATE			1	1					1	1			1																										1								mooncast	mooncast	damagepercent							50	1	192	255	192	andariel_rock_1	object_barrel_explode	1	1687					0
+gargoyle	190		SPELLBIND																																															mooncast		hpregen							105	74	255	64	64	andariel_rock_1	object_barrel_explode							0
+regenpotion	191		HEALING POTION				1																																						receiving					healing		hpregen													object_barrel_explode							0
+lovepot	192	6					1																																						potrunning					potactivate	potdeactivate	item_reducedprices												sorceress_thunder_cast	object_barrel_explode							0
+barbaricheal	193		INNER FIRE				1																																						receiving					healing		hpregen							75	1	255	178	64	necromancer_taint	object_barrel_explode							0
+innerbeast	194		MARK OF THE WILD				1									1																													heart_of_wolverine					succubae_death		damagepercent							75	1	255	255	144	barbarian_warcry_1	object_barrel_explode							0
+darkpowered	195		DARK POWER				1									1																													darkpowered														50	1	255	144	255		object_barrel_explode							0
+bloodlusted	196		BLOODLUST				1									1																													bloodlusted					ragewoah									50	1	255	192	128		object_barrel_explode							0
+godmode	197		SACRED ARMOR				1										1																												winterstate					wintercast		normal_damage_reduction							100	73	64	172	255	paladin_handofgod_cast	object_barrel_explode							0
+caution	198		CAUTIOUS STRIKE				1										1																																			damageresist							100	1	128	128	255	barbarian_shout_1	object_barrel_explode							0
+ravenstrike	199		RAVEN HEART				1																																						ravensoverlay					ravenscast		passive_cold_mastery							55	73	128	255	128	assassin_chat_f_2	object_barrel_explode							0
+justbeenhit	200		WHEN STRUCK CURSE																																										justbeenhitcurse							event_hit2																				0
+adrpot	201	6					1																																						potrunning					potactivate	potdeactivate	manarecoverybonus												sorceress_thunder_cast	object_barrel_explode							0
+hexed	202		MIASMA					1																																					poisondark					curse_hit		item_tohit_percent							110	105	0	128	255		object_barrel_explode							0
+banished	203		BANISH					1	1																																				cursebanish					curse_hit		damageresist							110	1	32	144	255	necromancer_taint	object_barrel_explode							0
+doomed	204		DOOM					1	1																																				extravaganza														110	100	255	64	0	barbarian_battlecry_state	object_barrel_explode							0
+poisonflashblast	205		POISON FLASH																																										poisonflashfront	poisonflashback													115	104	64	255	64									0
+artofwar	206		MOUNTAIN KING								1					1																																				item_strength_percent							51	1	255	224	202									0
+goodberries	207	13	GOODBERRY				1																																						charm1	charm2				thornedhulk_death		hpregen							50	1	255	178	64	shrine_warping	object_barrel_explode							0
+runforyourlife	208	5	DEMONIC SPEED				1																		1																				darkturbofront							velocitypercent							70	1	255	174	174	paladin_handofgod_cast	object_barrel_explode							0
+vanquish	209		VANQUISH				1									1																													vanquishedoverlay					vanquishedcast		damagepercent							100	101	255	255	0	paladin_chat_f_2	object_barrel_explode							0
+shadowsaura	210		DEMON BLOOD AURA																																										evilshadowaura							item_maxhp_percent												necromancer_reversevampire								0
+frenzygraphic	211		KING KOTH OVERLAY																																										whirlwind																											0
+harbinger	212		UNHOLY ARMOR				1																																						harbingerstate					harbingercast		normal_damage_reduction							100	73	128	255	144	paladin_aura_sanctuary	object_barrel_explode							0
+acidaura	213		ACID FIENDS AURA																																										sbo							passive_pois_mastery												necromancer_weaken								0
+passive_5	214										1																																									passive5																				0
+evocation	215		TERROR STRIKE				1					1					1																												evocation	evocationfront	evocationback					passive_fire_mastery							105	73	192	128	255	paladin_aura_meditation	object_barrel_explode							0
+devilish	216		TOTEM GRAPHIC																																																								36	20	192	255	192									0
+thundara	217		THUNDERGOD																																										lightningshielded					lightningshieldedcast														sorceress_thunder_bolt	object_barrel_explode						146	0
+violence	218		MOONBEAM				1																																													damageresist							110	100	144	212	255	paladin_vengeance								0
+celerity	219		CELERITY				1																																											catapult_death_e	catapult_death_s	velocitypercent							55	102	255	255	96	paladin_handofgod_cast	object_barrel_explode							0
+darkstardragons	220		DARK STAR OVERLAY																																										slayercloud	tinysparklesoverlay						passive2							80	73	0	0	255	sorceress_thunder_cast	object_barrel_explode							0
+ongoing_typhoidmary	221		HIVE																																										cyclonearmor2front	cyclonearmor2back													38	1	192	255	192		object_barrel_explode						146	0
+lion_hearts	222		LIONESS									1				1	1																																			passivelockout							40	1	255	192	168									0
+pctdrainaura	223		PERCENT LIFEDRAIN				1				1																																									hpregen																				0
+exppot	224	6					1																																						potrunning					potactivate	potdeactivate	item_addexperience												sorceress_thunder_cast	object_barrel_explode							0
+magpot	225	6					1																																						potrunning					potactivate	potdeactivate	item_magicbonus												sorceress_thunder_cast	object_barrel_explode							0
+goldpot	226	6					1																																						potrunning					potactivate	potdeactivate	item_goldbonus												sorceress_thunder_cast	object_barrel_explode							0
+shower_of_rox	227		SHOWER OF ROCKS					1															1																						greenamp					curse_hit		item_tohit_percent							120	1	0	255	0	necromancer_confuse	object_barrel_explode							0
+where_eagles_dare	228		SCREAMING EAGLE					1																1																					bigtornado1	bigtornado2				curse_hit		attackrate												single_twister	object_barrel_explode							0
+holydara	229		MERKABAH																																										redcircle					flyingredparticles														singing_sun	object_barrel_explode						146	0
+wychfire	230		WYCHWIND AND BTS																						1																											damageresist							105	108	192	128	255		object_barrel_explode							0
+trapratstate	231	3	TRAP RAT MORPH			1	1					1	1			1	1																									1								mooncast	mooncast	damagepercent							50	1	255	255	192	andariel_rock_1	object_barrel_explode	1	1686					0
+unshieldaura	232						1				1						1																																			fireresist							50	73	255	0	255	necromancer_amplifydamage	object_barrel_explode							0
+noshieldaura	233						1				1						1																																			damageresist												paladin_handofgod_cast	object_barrel_explode							0
+justkilledenemy	234		WHEN KILL CURSE																																																	hpregen																				0
+vindicated	235		VINDICATE					1	1																																				cursevindicate					charm_cast_1		vindicate_maxhp							110	1	255	255	0	sorceress_thunder_cast	object_barrel_explode							0
+diablotwin	236	3				1	1						1																																					curse_hit		item_maxhp_percent												paladin_handofgod_cast	object_barrel_explode	1	243					0
+charm_crushing	237	9	THRILL OF THE HUNT								1																																		charm_effect_5					charm_cast_5		charm_aura_crushingblow							50	1	255	255	128	assassin_cloakofdarkness	object_barrel_explode							0
+freakingnightmare	238		NIGHTMARE					1	1																																				cursenightmare							velocitypercent							115	109	255	96	255	paladin_aura_redemption	object_barrel_explode							0
+lionheartstate	239	5	LIONHEART				1									1	1																												lionheartoverlay					glowcast		damagepercent							70	1	255	192	128	paladin_chant	object_barrel_explode							0
+galioami	240		IDOL OF SCOSGLEN														1																																			velocitypercent							110	74	255	144	144	idolofscosglen_on	idolofscosglen_burst						146	0
+bloodfountain	241	7	BLOODY MARY				1																																						bloodymaryoverlay					bloodymarycast		skill_bloodymary_bonus							75	1	255	81	81	barbarian_battlecry_state	object_barrel_explode							0
+purifyingspring	242	7	PAGAN HEART				1																																						paganheartoverlay					paganheartcast		skill_paganheart_bonus							75	1	144	144	255	barbarian_battlecry_state	object_barrel_explode							0
+warpfieldactive	243		WARP FIELD AURA																				1																						warpfield_aura					curse_hit		attackrate							60	102	128	0	0									0
+eviltwin	244	3				1	1						1																																					curse_hit		item_maxhp_percent												paladin_holyshield	object_barrel_explode	1	544					0
+mindcontrolling	245		GENERIC MORPH AURA				1																																						shieldwalleffect					shieldwalleffect														paladin_holyshield	object_barrel_explode							0
+balefiredrain	246		BALEFIRE																																										balefireoverlay					balefireoverlay		hpregen																				0
+akaratisgoingtodie	247		WEAKNESS NOVA				1									1																													whirlwind					crashedneonlight		fireresist							50	1	0	0	255	sorceress_thunder_cast	object_barrel_explode							0
+hamstringstrike	248		HAMSTRING				1																																													stunlength							105	20	144	255	255	barbarian_howl_1	object_barrel_explode							0
+shieldaura	249						1				1						1																																			damageresist							33	102	255	255	0	paladin_handofgod_cast	object_barrel_explode							0
+burnedbyburn	250		DAZZLE					1	1																																				cursesunburn					curse_hit		damageresist							40	1	255	128	0	paladin_aura_salvation	object_barrel_explode							0
+bloodvengeanceaura	251		SPIRIT OF VENGEANCE																																										bloodvengeancefront	bloodvengeanceback						passive_fire_mastery																				0
+totemicguardian	252		TOTEMIC GUARDIAN																																															cursesunburn		item_totembound																				0
+cowdisguise	253	3	COW DISGUISE			1	1					1	1			1																										1								cursesunburn	cursesunburn	damagepercent							50	1	255	255	192	andariel_rock_1	object_barrel_explode	1	956					0
+petristrike	254		TITAN STRIKE				1							1			1																																			item_strength_percent							105	74	255	144	144	andariel_rock_1	object_barrel_explode							0

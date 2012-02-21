@@ -29,7 +29,7 @@
 #include <cmath>
 
 
-static const QString lastSavePathKey("lastSavePath"), releaseDate("21.02.2012"), backupExtension("bak"), readonlyCss("background-color: rgb(227, 227, 227)");
+static const QString lastSavePathKey("lastSavePath"), releaseDate("22.02.2012"), backupExtension("bak"), readonlyCss("background-color: rgb(227, 227, 227)");
 
 //#define MAKE_HC
 //#define ENABLE_PERSONALIZE
@@ -362,7 +362,7 @@ void MedianXLOfflineTools::saveCharacter()
                 }
 
                 _editableCharInfo.basicInfo.originalName = newName;
-                _editableCharInfo.basicInfo.newName.clear();
+                //_editableCharInfo.basicInfo.newName.clear();
 
                 _recentFilesList[0] = saveFileName;
                 updateRecentFilesActions();
@@ -427,7 +427,7 @@ void MedianXLOfflineTools::respecSkills(bool shouldRespec)
 
 void MedianXLOfflineTools::rename()
 {
-    QD2CharRenamer renameWidget(_editableCharInfo.basicInfo.originalName, ui.actionWarnWhenColoredName->isChecked(), this);
+    QD2CharRenamer renameWidget(_editableCharInfo.basicInfo.newName, ui.actionWarnWhenColoredName->isChecked(), this);
     if (renameWidget.exec())
     {
         _editableCharInfo.basicInfo.newName = renameWidget.name();
@@ -750,36 +750,30 @@ void MedianXLOfflineTools::loadData()
 
 void MedianXLOfflineTools::loadExpTable()
 {
-    QFile f(ResourcePathManager::dataPathForFileName("exptable.txt"));
-    if (!f.open(QIODevice::ReadOnly | QIODevice::Text))
-    {
-        ERROR_BOX(tr("Experience table not loaded.\nReason: %1").arg(f.errorString()));
+    QFile f;
+    if (!ItemDataBase::createUncompressedTempFile(ResourcePathManager::dataPathForFileName("exptable.dat"), tr("Experience table data not loaded."), &f))
         return;
-    }
 
     QList<QByteArray> expLines = f.readAll().split('\n');
-    mercExperience.reserve(Enums::CharacterStats::MaxLevel);
+    experienceTable.reserve(Enums::CharacterStats::MaxLevel);
     foreach (const QByteArray &numberString, expLines)
         if (!numberString.isEmpty())
-            mercExperience.append(numberString.toUInt());
+            experienceTable.append(numberString.toUInt());
+    f.remove();
 }
 
 void MedianXLOfflineTools::loadMercNames()
 {
-    QFile f(ResourcePathManager::localizedPathForFileName("mercs"));
-    if (!f.open(QIODevice::ReadOnly | QIODevice::Text))
-    {
-        ERROR_BOX(tr("Mercenary names not loaded.\nReason: %1").arg(f.errorString()));
-        //close();
+    QFile f;
+    if (!ItemDataBase::createUncompressedTempFile(ResourcePathManager::localizedPathForFileName("mercs"), tr("Mercenary names not loaded."), &f))
         return;
-    }
 
     QList<QByteArray> mercLines = f.readAll().split('\n');
     QStringList actNames;
     mercNames.reserve(4);
     foreach (const QByteArray &mercName, mercLines)
     {
-        if (mercName.isEmpty())
+        if (mercName.startsWith("-"))
         {
             mercNames += actNames;
             actNames.clear();
@@ -787,6 +781,7 @@ void MedianXLOfflineTools::loadMercNames()
         else
             actNames += QString::fromUtf8(mercName);
     }
+    f.remove();
 }
 
 void MedianXLOfflineTools::createLayout()
@@ -1134,6 +1129,7 @@ bool MedianXLOfflineTools::processSaveFile(const QString &charPath)
     CharacterInfo editableCharInfo;
     editableCharInfo.basicInfo.originalName = _saveFileContents.constData() + Enums::Offsets::Name;
     editableCharInfo.basicInfo.originalName.replace(ansiColorHeader, unicodeColorHeader);
+    editableCharInfo.basicInfo.newName = editableCharInfo.basicInfo.originalName;
 
     inputDataStream.device()->seek(Enums::Offsets::Status);
     quint8 status, progression, classCode, clvl;
@@ -1527,19 +1523,20 @@ bool MedianXLOfflineTools::processSaveFile(const QString &charPath)
     }
 
     // check for duped items
-    // TODO: uncomment
-    //QSet<quint32> itemIDs;
-    //foreach (ItemInfo *item, editableCharInfo.items.character)
-    //    if (item->isExtended)
-    //    {
-    //        if (itemIDs.contains(item->guid))
-    //        {
-    //            WARNING_BOX(tr("Like duping items, eh?"));
-    //            break;
-    //        }
-    //        else
-    //            itemIDs.insert(item->guid);
-    //    }
+    QSet<quint32> itemIDs;
+    foreach (ItemInfo *item, editableCharInfo.items.character)
+    {
+        if (item->isExtended)
+        {
+            if (itemIDs.contains(item->guid))
+            {
+                WARNING_BOX(tr("Like duping items, eh?"));
+                break;
+            }
+            else
+                itemIDs.insert(item->guid);
+        }
+    }
 
     clearItems(sharedStashPathChanged, hcStashPathChanged);
     ItemsList savedItems = _editableCharInfo.items.character;
@@ -1951,7 +1948,7 @@ QByteArray MedianXLOfflineTools::statisticBytes()
                 addStatisticBits(result, newClvl, Enums::CharacterStats::statLengthFromValue(Enums::CharacterStats::Level));
                 _statsDynamicData.setProperty("Level", newClvl);
 
-                quint32 newExp = mercExperience.at(newClvl - 1);
+                quint32 newExp = experienceTable.at(newClvl - 1);
                 if (newExp) // must not be present for level 1 character
                 {
                     addStatisticBits(result, Enums::CharacterStats::Experience, Enums::CharacterStats::StatCodeLength);

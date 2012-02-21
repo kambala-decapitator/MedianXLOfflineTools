@@ -10,6 +10,9 @@
 #include <QDebug>
 #endif
 
+#define TOUINT16(byteArray) (static_cast<quint8>(byteArray.at(0)) + (static_cast<quint8>(byteArray.at(1)) << 8))
+#define CRC_OF_BYTEARRAY(byteArray) qChecksum(byteArray.constData(), byteArray.length())
+
 
 QMultiHash<QString, QString> ItemDataBase::_sets;
 
@@ -18,17 +21,55 @@ quint8 *ItemDataBase::clvl = 0;
 Enums::ClassName::ClassNameEnum *ItemDataBase::charClass = 0;
 QList<quint8> *ItemDataBase::charSkills = 0;
 
+bool ItemDataBase::createUncompressedTempFile(const QString &compressedFilePath, const QString &errorMessage, QFile *uncompressedFile)
+{
+    QFile f(compressedFilePath);
+    if (!f.open(QIODevice::ReadOnly))
+    {
+        ERROR_BOX_NO_PARENT(errorMessage + "\n" + tr("Reason: %1").arg(f.errorString()));
+        return false;
+    }
+
+    QByteArray compressedCrcData = f.read(2), originalCrcData = f.read(2);
+    quint16 compressedCrc = TOUINT16(compressedCrcData), originalCrc = TOUINT16(originalCrcData);
+    static const QString decompressError(tr("Error decrypting file '%1'"));
+    QByteArray compressedDataFile = f.readAll();
+    if (CRC_OF_BYTEARRAY(compressedDataFile) != compressedCrc)
+    {
+        ERROR_BOX_NO_PARENT(decompressError.arg(compressedFilePath));
+        return false;
+    }
+
+    QByteArray originalFileData = qUncompress(compressedDataFile);
+    if (CRC_OF_BYTEARRAY(originalFileData) != originalCrc)
+    {
+        ERROR_BOX_NO_PARENT(decompressError.arg(compressedFilePath));
+        return false;
+    }
+
+    uncompressedFile->setFileName(QString("%1/%2_temp.txt").arg(QDir::tempPath(), qApp->applicationName()));
+    uncompressedFile->remove();
+    if (!uncompressedFile->open(QIODevice::ReadWrite))
+    {
+        ERROR_BOX_NO_PARENT(decompressError.arg(compressedFilePath));
+        return false;
+    }
+
+    uncompressedFile->write(originalFileData);
+    uncompressedFile->flush();
+    uncompressedFile->reset();
+
+    return true;
+}
+
 QHash<QByteArray, ItemBase> *ItemDataBase::Items()
 {
     static QHash<QByteArray, ItemBase> allItems;
     if (allItems.isEmpty())
     {
-        QFile f(ResourcePathManager::localizedPathForFileName("items"));
-        if (!f.open(QIODevice::ReadOnly | QIODevice::Text))
-        {
-            ERROR_BOX_NO_PARENT(tr("Items data not loaded.\nReason: %1").arg(f.errorString()));
+        QFile f;
+        if (!createUncompressedTempFile(ResourcePathManager::localizedPathForFileName("items"), tr("Items data not loaded."), &f))
             return 0;
-        }
 
         while (!f.atEnd())
         {
@@ -50,6 +91,7 @@ QHash<QByteArray, ItemBase> *ItemDataBase::Items()
             item.classCode = data.at(11).toShort();
             allItems[data.at(0)] = item;
         }
+        f.remove();
     }
     return &allItems;
 }
@@ -59,12 +101,9 @@ QHash<QByteArray, QList<QByteArray> > *ItemDataBase::ItemTypes()
     static QHash<QByteArray, QList<QByteArray> > types;
     if (types.isEmpty())
     {
-        QFile f(ResourcePathManager::dataPathForFileName("itemtypes.txt"));
-        if (!f.open(QIODevice::ReadOnly | QIODevice::Text))
-        {
-            ERROR_BOX_NO_PARENT(tr("Item types data not loaded.\nReason: %1").arg(f.errorString()));
+        QFile f;
+        if (!createUncompressedTempFile(ResourcePathManager::dataPathForFileName("itemtypes.dat"), tr("Item types data not loaded."), &f))
             return 0;
-        }
 
         while (!f.atEnd())
         {
@@ -74,6 +113,7 @@ QHash<QByteArray, QList<QByteArray> > *ItemDataBase::ItemTypes()
 
             types[data.at(0)] = data.at(1).split(',');
         }
+        f.remove();
     }
     return &types;
 }
@@ -83,12 +123,9 @@ QHash<uint, ItemPropertyTxt> *ItemDataBase::Properties()
     static QHash<uint, ItemPropertyTxt> allProperties;
     if (allProperties.isEmpty())
     {
-        QFile f(ResourcePathManager::localizedPathForFileName("props"));
-        if (!f.open(QIODevice::ReadOnly | QIODevice::Text))
-        {
-            ERROR_BOX_NO_PARENT(tr("Properties data not loaded.\nReason: %1").arg(f.errorString()));
+        QFile f;
+        if (!createUncompressedTempFile(ResourcePathManager::localizedPathForFileName("props"), tr("Properties data not loaded."), &f))
             return 0;
-        }
 
         while (!f.atEnd())
         {
@@ -118,6 +155,7 @@ QHash<uint, ItemPropertyTxt> *ItemDataBase::Properties()
             item.saveParamBits = data.at(16).toUShort();
             allProperties[data.at(0).toUInt()] = item;
         }
+        f.remove();
     }
     return &allProperties;
 }
@@ -127,12 +165,9 @@ QHash<uint, SetItemInfo> *ItemDataBase::Sets()
     static QHash<uint, SetItemInfo> allSets;
     if (allSets.isEmpty())
     {
-        QFile f(ResourcePathManager::localizedPathForFileName("sets"));
-        if (!f.open(QIODevice::ReadOnly | QIODevice::Text))
-        {
-            ERROR_BOX_NO_PARENT(tr("Sets data not loaded.\nReason: %1").arg(f.errorString()));
+        QFile f;
+        if (!createUncompressedTempFile(ResourcePathManager::localizedPathForFileName("sets"), tr("Sets data not loaded."), &f))
             return 0;
-        }
 
         while (!f.atEnd())
         {
@@ -149,6 +184,7 @@ QHash<uint, SetItemInfo> *ItemDataBase::Sets()
             if (_sets.count(item.setName) < 5)
                 _sets.insert(item.setName, item.itemName);
         }
+        f.remove();
     }
     return &allSets;
 }
@@ -158,12 +194,9 @@ QList<SkillInfo> *ItemDataBase::Skills()
     static QList<SkillInfo> allSkills;
     if (allSkills.isEmpty())
     {
-        QFile f(ResourcePathManager::localizedPathForFileName("skills"));
-        if (!f.open(QIODevice::ReadOnly | QIODevice::Text))
-        {
-            ERROR_BOX_NO_PARENT(tr("Skills data not loaded.\nReason: %1").arg(f.errorString()));
+        QFile f;
+        if (!createUncompressedTempFile(ResourcePathManager::localizedPathForFileName("skills"), tr("Skills data not loaded."), &f))
             return 0;
-        }
 
         while (!f.atEnd())
         {
@@ -176,6 +209,7 @@ QList<SkillInfo> *ItemDataBase::Skills()
             item.classCode = data.at(2).toShort();
             allSkills.push_back(item);
         }
+        f.remove();
     }
     return &allSkills;
 }
@@ -185,12 +219,9 @@ QHash<uint, UniqueItemInfo> *ItemDataBase::Uniques()
     static QHash<uint, UniqueItemInfo> allUniques;
     if (allUniques.isEmpty())
     {
-        QFile f(ResourcePathManager::localizedPathForFileName("uniques"));
-        if (!f.open(QIODevice::ReadOnly | QIODevice::Text))
-        {
-            ERROR_BOX_NO_PARENT(tr("Skills data not loaded.\nReason: %1").arg(f.errorString()));
+        QFile f;
+        if (!createUncompressedTempFile(ResourcePathManager::localizedPathForFileName("uniques"), tr("Uniques data not loaded."), &f))
             return 0;
-        }
 
         while (!f.atEnd())
         {
@@ -203,6 +234,7 @@ QHash<uint, UniqueItemInfo> *ItemDataBase::Uniques()
             item.rlvl = data.at(2).toUShort();
             allUniques[data.at(0).toUInt()] = item;
         }
+        f.remove();
     }
     return &allUniques;
 }
@@ -212,12 +244,9 @@ QHash<uint, MysticOrb> *ItemDataBase::MysticOrbs()
     static QHash<uint, MysticOrb> allMysticOrbs;
     if (allMysticOrbs.isEmpty())
     {
-        QFile f(ResourcePathManager::dataPathForFileName("mo.txt"));
-        if (!f.open(QIODevice::ReadOnly | QIODevice::Text))
-        {
-            ERROR_BOX_NO_PARENT(tr("Mystic Orbs data not loaded.\nReason: %1").arg(f.errorString()));
+        QFile f;
+        if (!createUncompressedTempFile(ResourcePathManager::dataPathForFileName("mo.dat"), tr("Mystic Orbs data not loaded."), &f))
             return 0;
-        }
         
         while (!f.atEnd())
         {
@@ -231,6 +260,7 @@ QHash<uint, MysticOrb> *ItemDataBase::MysticOrbs()
             item.value = data.at(3).toUShort();
             allMysticOrbs[data.at(0).toUInt()] = item;
         }
+        f.remove();
     }
     return &allMysticOrbs;
 }
@@ -240,12 +270,9 @@ QHash<uint, QString> *ItemDataBase::Monsters()
     static QHash<uint, QString> allMonsters;
     if (allMonsters.isEmpty())
     {
-        QFile f(ResourcePathManager::localizedPathForFileName("monsters"));
-        if (!f.open(QIODevice::ReadOnly | QIODevice::Text))
-        {
-            ERROR_BOX_NO_PARENT(tr("Monster names not loaded.\nReason: %1").arg(f.errorString()));
+        QFile f;
+        if (!createUncompressedTempFile(ResourcePathManager::localizedPathForFileName("monsters"), tr("Monster names not loaded."), &f))
             return 0;
-        }
 
         while (!f.atEnd())
         {
@@ -255,6 +282,7 @@ QHash<uint, QString> *ItemDataBase::Monsters()
 
             allMonsters[data.at(0).toUInt()] = QString::fromUtf8(data.at(1));
         }
+        f.remove();
     }
     return &allMonsters;
 }
@@ -264,12 +292,9 @@ QMultiHash<RunewordKeyPair, RunewordInfo> *ItemDataBase::RW()
     static QMultiHash<RunewordKeyPair, RunewordInfo> allRunewords;
     if (allRunewords.isEmpty())
     {
-        QFile f(ResourcePathManager::localizedPathForFileName("rw"));
-        if (!f.open(QIODevice::ReadOnly | QIODevice::Text))
-        {
-            ERROR_BOX_NO_PARENT(tr("Runewords data not loaded.\nReason: %1").arg(f.errorString()));
+        QFile f;
+        if (!createUncompressedTempFile(ResourcePathManager::localizedPathForFileName("rw"), tr("Runewords data not loaded."), &f))
             return 0;
-        }
 
         while (!f.atEnd())
         {
@@ -284,6 +309,7 @@ QMultiHash<RunewordKeyPair, RunewordInfo> *ItemDataBase::RW()
             item.name = QString::fromUtf8(data.at(6));
             allRunewords.insert(qMakePair(data.at(7), data.size() == 9 ? data.at(8) : QByteArray()), item);
         }
+        f.remove();
     }
     return &allRunewords;
 }
@@ -293,12 +319,9 @@ QHash<QByteArray, SocketableItemInfo> *ItemDataBase::Socketables()
     static QHash<QByteArray, SocketableItemInfo> allSocketables;
     if (allSocketables.isEmpty())
     {
-        QFile f(ResourcePathManager::localizedPathForFileName("socketables"));
-        if (!f.open(QIODevice::ReadOnly | QIODevice::Text))
-        {
-            ERROR_BOX_NO_PARENT(tr("Socketables data not loaded.\nReason: %1").arg(f.errorString()));
+        QFile f;
+        if (!createUncompressedTempFile(ResourcePathManager::localizedPathForFileName("socketables"), tr("Socketables data not loaded."), &f))
             return 0;
-        }
 
         while (!f.atEnd())
         {
@@ -330,6 +353,7 @@ QHash<QByteArray, SocketableItemInfo> *ItemDataBase::Socketables()
             }
             allSocketables[data.at(0)] = item;
         }
+        f.remove();
     }
     return &allSocketables;
 }
@@ -339,12 +363,9 @@ QStringList *ItemDataBase::NonMagicItemQualities()
     static QStringList allQualities;
     if (allQualities.isEmpty())
     {
-        QFile f(ResourcePathManager::localizedPathForFileName("LowQualityItems"));
-        if (!f.open(QIODevice::ReadOnly | QIODevice::Text))
-        {
-            ERROR_BOX_NO_PARENT(tr("Non-magic qualities data not loaded.\nReason: %1").arg(f.errorString()));
+        QFile f;
+        if (!createUncompressedTempFile(ResourcePathManager::localizedPathForFileName("LowQualityItems"), tr("Non-magic qualities data not loaded."), &f))
             return 0;
-        }
 
         while (!f.atEnd())
         {
@@ -352,6 +373,7 @@ QStringList *ItemDataBase::NonMagicItemQualities()
             if (!data.isEmpty())
                 allQualities << QString::fromUtf8(data.at(0));
         }
+        f.remove();
     }
     return &allQualities;
 }
@@ -467,9 +489,7 @@ QString ItemDataBase::completeItemName(ItemInfo *item, bool shouldUseColor, bool
                 itemName += htmlLineBreak + spelldesc;
             }
 
-            itemName.remove("\\grey;");
-            foreach (const QByteArray &colorString, colorStrings)
-                itemName.remove(colorString);
+            removeColorCodesFromString(itemName);
 
             if (item->isEthereal)
                 itemName += QString("%1[%2]").arg(htmlLineBreak, tr("ethereal"));
@@ -503,6 +523,14 @@ QHash<int, ColorIndex> *ItemDataBase::itemQualityColorsHash()
 ColorIndex ItemDataBase::colorOfItem(ItemInfo *item)
 {
     return !itemQualityColorsHash()->contains(item->quality) && (item->isSocketed || item->isEthereal) ? DarkGrey : itemQualityColorsHash()->value(item->quality);
+}
+
+QString &ItemDataBase::removeColorCodesFromString(QString &s)
+{
+    s.remove("\\grey;");
+    foreach (const QByteArray &colorString, colorStrings)
+        s.remove(colorString);
+    return s;
 }
 
 ItemInfo *ItemDataBase::loadItemFromFile(const QString &fileName)

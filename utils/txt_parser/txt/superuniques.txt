@@ -1,0 +1,85 @@
+Superunique	Name	Class	hcIdx	MonSound	Mod1	Mod2	Mod3	*Laz / mods	MinGrp	MaxGrp	EClass	AutoPos	Stacks	Replaceable	Utrans	Utrans(N)	Utrans(H)	TC	TC(N)	TC(H)	*eol
+Bishibosh	Snotspill	loki_special	0		6	0	0	fast	8	8	0	1	0		11	11	11	Act 1 Super A	Act 1 (N) Super A	Act 1 (H) Super A	0
+Bonebreak	Pukerat the Unclean	fallenchild3	1		7	0	0	curse	6	6	0	1	0		5	5	5	Act 1 Super A	Act 1 (N) Super A	Act 1 (H) Super A	0
+Coldcrow	Grimspike	su_quillsA	2		5	0	0	strong	0	0	0	1	0		18	18	18	Act 1 Super A	Act 1 (N) Super A	Act 1 (H) Super A	0
+Rakanishu	El Chupacabras	su_quillsA	3		7	0	0	curse	8	8	0	0	0	1	29	29	29	Act 1 Super B	Act 1 (N) Super B	Act 1 (H) Super B	0
+Treehead WoodFist	Wrathraven	wingedfiend2	4		5	25	0	strong mana	4	4	0	1	0	1	4	4	4	Act 1 Super B	Act 1 (N) Super B	Act 1 (H) Super B	0
+Griswold	Griswold	griswold	5		7	28	0	curse stone	0	0	0	1	0	1	17	17	17	Act 1 Super B	Act 1 (N) Super B	Act 1 (H) Super B	0
+The Countess	The Countess	corruptrogue3	6	countess	6	7	11	fast curse maggot	6	6	0	1	0		16	16	16	Countess	Countess (N)	Countess (H)	0
+Pitspawn Fouldog	Moonbender	su_wingedfiendA	7		6	17	0	fast lightning	7	7	0	1	0		31	31	31	Act 1 Super B	Act 1 (N) Super B	Act 1 (H) Super B	0
+Flamespike the Crawler	Flower Prowler	prowler_special	8		6	7	11	fast curse maggot	7	7	0	1	0		16	16	16	Act 2 Super B	Act 2 (N) Super B	Act 2 (H) Super B	0
+Boneash	Blightfire	blightfire_special	9		5	9	0	strong fire	0	0	0	1	0		15	15	15	Act 1 Super C	Act 1 (N) Super C	Act 1 (H) Super C	0
+Radament	Radament	radament	10		7	25	0	curse mana	0	0	0	1	0		30	30	30	Act 2 Super A	Act 2 (N) Super A	Act 2 (H) Super A	0
+Bloodwitch the Wild	Kermit	kermit_special	11		5	6	0	strong fast	4	4	0	1	0		29	29	29	Act 2 Super A	Act 2 (N) Super A	Act 2 (H) Super A	0
+Fangskin	Plaguewrath	plague_special	12		6	29	0	fast multi	7	7	0	1	0		14	14	14	Act 2 Super B	Act 2 (N) Super B	Act 2 (H) Super B	0
+Beetleburst	Fleshdoom	su_firewizard1	13		5	7	9	strong curse fire	5	5	0	1	0	1	13	13	13	Act 2 Super B	Act 2 (N) Super B	Act 2 (H) Super B	0
+Leatherarm	Doomweaver	su_spideyA	14		7	25	0	curse mana	3	3	0	1	0		25	25	25	Act 2 Super B	Act 2 (N) Super B	Act 2 (H) Super B	0
+Coldworm the Burrower	Warmaggot the Mad	maggotqueen1	15		8	9	0	resist fire	0	0	0	0	0		13	13	13	Act 2 Super B	Act 2 (N) Super B	Act 2 (H) Super B	0
+Fire Eye	Deadeye	su_skelmage	16		8	18	0	resist cold	6	6	0	1	0		12	12	12	Act 2 Super B	Act 2 (N) Super B	Act 2 (H) Super B	0
+Dark Elder	Fatal Morgana	fatal_special	17		6	27	27	fast tele	5	5	0	1	0	1	27	27	27	Act 2 Super B	Act 2 (N) Super B	Act 2 (H) Super B	0
+The Summoner	The Summoner	summoner	18		0	0	0		0	0	0	1	0		26	26	26	Summoner	Summoner (N)	Summoner (H)	0
+Ancient Kaa the Soulless	Warpwing	su_ghost5	19		6	18	26	fast cold tele	3	3	0	1	0		11	11	11	Act 2 Super C	Act 2 (N) Super C	Act 2 (H) Super C	0
+The Smith	The Smith	smith	20		7	9	0	curse fire	0	0	0	1	0		26	26	26	Smith	Smith (N)	Smith (H)	0
+Web Mage the Burning	Gharbad the Weak	su_goatwarriorA	21		5	7	0	strong curse	8	8	0	1	0		19	19	19	Act 3 Super A	Act 3 (N) Super A	Act 3 (H) Super A	0
+Witch Doctor Endugu	Deathspit	su_aciddogA	22		6	25	0	fast mana	2	2	0	1	0		20	20	20	Act 3 Super B	Act 3 (N) Super B	Act 3 (H) Super B	0
+Stormtree	The Vizier	su_undeadmage4	23		25	28	0	mana stone	1	1	0	1	0	1	35	35	35	Act 3 Super B	Act 3 (N) Super B	Act 3 (H) Super B	0
+Sarina the Battlemaid	Nightwing the Cold	su_wingedfiend4	24		6	18	0	fast cold	7	7	0	1	0	1	36	36	36	Act 3 Super B	Act 3 (N) Super B	Act 3 (H) Super B	0
+Icehawk Riftwing	Goldblight of the Flame	su_firewizard2	25		7	18	0	curse cold	2	2	0	1	0		21	21	21	Act 3 Super A	Act 3 (N) Super A	Act 3 (H) Super A	0
+Ismail Vilehand	Zhar the Mad	zhar_mage1	26		8	27	0	resist tele	1	1	0	1	0		36	36	36	Act 4 Super A	Act 4 (N) Super A	Act 4 (H) Super A	0
+Geleb Flamefinger	Deathshade Fleshmaul	su_runepriest2	27		18	26	0	cold tele	3	3	0	1	0		37	37	37	Act 4 Super A	Act 4 (N) Super A	Act 4 (H) Super A	0
+Bremm Sparkfist	Gorestone	su_magmademon2	28		6	25	0	fast mana	5	5	0	1	0		22	22	22	Act 4 Super A	Act 4 (N) Super A	Act 4 (H) Super A	0
+Toorc Icefist	Lachdanan	cleric4_special	29		5	7	0	strong curse	4	4	0	1	0		23	23	23	Act 4 Super A	Act 4 (N) Super A	Act 4 (H) Super A	0
+Wyand Voidfinger	Bilefroth the Pit Master	su_bugbearE	30		7	18	0	curse cold	4	4	0	1	0		38	38	38	Act 4 Super A	Act 4 (N) Super A	Act 4 (H) Super A	0
+Maffer Dragonhand	Bloodmoon Soulfire	su_bigcat4	31		6	8	0	fast resist	4	4	0	1	0		23	23	23	Act 4 Super A	Act 4 (N) Super A	Act 4 (H) Super A	0
+Winged Death	InfernalMachine	tower_special	32		11	0	0	maggot	0	0	0	1	0		24	24	24	Act 3 Super B	Act 3 (N) Super B	Infernal Reward	0
+The Tormentor	Doomlock	doomlock_special	33		6	8	0	fast resist	6	6	0	1	0		9	9	9	Act 3 Super A	Act 3 (N) Super A	Act 3 (H) Super A	0
+Taintbreeder	Blightstone the Weak	blightstone_special	34		5	7	0	strong curse	6	6	0	1	0		10	10	10	Act 4 Super B	Act 4 (N) Super B	Act 4 (H) Super B	0
+Riftwraith the Cannibal	Azmodan	azmo_special	35		11	0	0	maggot	0	0	0	1	0		25	25	25	Act 5 Super C	Act 5 (N) Super C	Azmodan Reward	0
+Infector of Souls	Doomcloud	su_bossclan5	36		6	17	0	fast lightning	5	5	0	1	0		26	26	26	Act 4 Super B	Act 4 (N) Super B	Act 4 (H) Super B	0
+Lord De Seis	Bluehorn The Flayer	su_onyxknight2	37		5	8	0	strong resist *1B9 NAMECHANGE	5	5	0	1	0		11	11	11	Act 4 Super C	Act 4 (N) Super C	Act 4 (H) Super C	0
+Grand Vizier of Chaos	Viletouch	su_cultist2	38		7	9	0	curse fire	5	5	0	1	0		26	26	26	Act 4 Super B	Act 4 (N) Super B	Act 4 (H) Super B	0
+The Cow King	Ghosthoof the Possessed	secret1	39		6	17	0	fast lightning	6	6	0	1	0		27	27	27	Act 5 Super C	Act 5 (N) Super C	Act 5 (H) Super C	0
+Corpsefire	Prince Albrecht	archskel1	40		18	27	0	cold tele	10	10	0	1	0		25	25	25	Albrecht	Act 1 (N) Super A	Act 1 (H) Super A	0
+The Feature Creep	The Feature Creep	hephasto	41		7	27	0	curse tele	0	0	0	1	0		20	20	20	Haphesto	Haphesto (N)	Haphesto (H)	0
+	Expansion																				0
+Siege Boss	Siege Boss	goatpriest4	42		5	8	0	strong resist	3	3	1	0	1		7	7	7	Act 5 Champ A	Act 5 (N) Champ A	Act 5 (H) Champ A	0
+Ancient Barbarian 1	Ancient Barbarian 1	ancientbarb1	43		0	0	0		0	0	1	0	1		25	25	25	Act 5 Super C	Act 5 (N) Super C	Act 5 (H) Super C	0
+Ancient Barbarian 2	Ancient Barbarian 2	ancientbarb2	44		0	0	0		0	0	1	0	1		26	26	26	Act 5 Super C	Act 5 (N) Super C	Act 5 (H) Super C	0
+Ancient Barbarian 3	Ancient Barbarian 3	ancientbarb3	45		0	0	0		0	0	1	0	1		11	11	11	Act 5 Super C	Act 5 (N) Super C	Act 5 (H) Super C	0
+Axe Dweller	Axe Dweller	quest_scaster	46		6	25	0	fast mana	2	2	1	0	0		20	20	20	Act 5 Cast C	Act 5 (N) Cast C	Act 5 (H) Cast C	0
+Bonesaw Breaker	Spirit of Pain	pain_special	47		0	0	0		0	0	1	0	0		35	35	35	Act 5 Super C	Act 5 (N) Super C	Act 5 (H) Super C	0
+Dac Farren	Graywar the Slayer	su_undeadbird4	48		7	26	0	curse tele	5	5	1	0	0	1	36	36	36	Act 5 Super B	Act 5 (N) Super B	Act 5 (H) Super B	0
+Megaflow Rectifier	Blackash the Burning	su_archskel5	49		7	8	0	curse resist	4	4	1	0	0	1	21	21	21	Act 5 Champ A	Act 5 (N) Champ A	Act 5 (H) Champ A	0
+Eyeback Unleashed	Gorefeast	su_balrog4	50		6	27	0	fast spectral	2	2	1	0	0		8	8	8	Act 5 Super A	Act 5 (N) Super A	Act 5 (H) Super A	0
+Threash Socket	Bloodskin Darkbow	darkbow_special	51		7	9	0	curse fire	6	6	1	0	0		37	37	37	Act 5 Super C	Act 5 (N) Super C	Act 5 (H) Super C	0
+Pindleskin	Lionskull the Bent	su_killermoo5	52		25	27	0	mana spectral	5	5	1	0	0		22	22	22	Act 5 Super C	Act 5 (N) Super C	Act 5 (H) Super C	0
+Snapchip Shatter	Brokenstorm	su_icedemon3	53		6	18	0	fast cold	5	5	1	0	0		23	23	23	Act 5 Super C	Act 5 (N) Super C	Act 5 (H) Super C	0
+Anodized Elite	Sinwar of the Storm	sinwar_special	54		17	27	0	lightning spectral	8	8	1	0	0		38	38	38	Act 5 Super C	Act 5 (N) Super C	Act 5 (H) Super C	0
+Vinvear Molech	Howlingire the Shade	howlingire_special	55		5	6	0	strong fast	2	2	1	0	0		23	23	23	Act 2 Super B	Act 2 (N) Super B	Act 2 (H) Super B	0
+Sharp Tooth Sayer	Stormbane	stormbane_special	56		6	8	35	fast resist shatter	4	4	1	0	0		24	24	24	Act 3 Super A	Act 3 (N) Super A	Act 3 (H) Super A	0
+Magma Torquer	Spirit of Hatred	hatred_special	57		0	0	0		0	0	1	0	0		9	9	9	Act 5 Super C	Act 5 (N) Super C	Act 5 (H) Super C	0
+Blaze Ripper	Spirit of Terror	terror_special	58		0	0	0		0	0	1	0	0		10	10	10	Act 5 Super C	Act 5 (N) Super C	Act 5 (H) Super C	0
+Frozenstein	Coldkill Iceguard	su_dragon3	59		6	26	0	fast tele	8	8	1	0	0		19	19	19	Act 5 Super C	Act 5 (N) Super C	Act 5 (H) Super C	0
+Nihlathak Boss	Nihlathak	nihlathakboss	60		0	0	0		0	0	1	0	1		28	28	28	Nihlathak (D)	Nihlathak (N) (D)	Nihlathak (H) (D)	0
+Baal Subject 1	Red Vex	wimp_succubusclan	61		7	25	0	curse mana	6	6	0	0	1		29	29	29	Act 5 Champ C	Act 5 (N) Champ C	Act 5 (H) Champ C	0
+Baal Subject 2	Blackstorm	hell_bane	62		6	25	0	fast mana	4	4	0	0	1		21	21	21	Act 5 Champ C	Act 5 (N) Champ C	Act 5 (H) Champ C	0
+Baal Subject 3	Dreadjudge	hell_evilpriest	63		5	26	0	strong tele	8	8	1	0	1		36	36	36	Act 5 Champ C	Act 5 (N) Champ C	Act 5 (H) Champ C	0
+Baal Subject 4	Sir Gorash	wimp_killermoo	64		5	7	0	strong curse	8	8	1	0	1		20	20	20	Act 5 Champ C	Act 5 (N) Champ C	Act 5 (H) Champ C	0
+Baal Subject 5	CrazyTower	crazy_tower	65		8	9	0	resist fire	0	0	1	0	1		20	20	20	Pre Baal	Pre Baal (N)	Pre Baal (H)	0
+Death Projector	Death Projector	quest_laser	66		0	0	0		0	0	1	0	1		8	8	8	Act 5 Super C	Act 5 (N) Super C	Laser Reward	0
+Inarius	Inarius	quest_inarius	67		11	25	0	maggot mana	0	0	1	0	1		8	8	8	Act 5 Super C	Act 5 (N) Super C	Inarius Reward	0
+High Cleric Gray	High Cleric Gray	quest_subboss	68		0	0	0		0	0	1	0	1		8	8	8	Act 5 Cast C	Act 5 (N) Cast C	Act 5 (H) Cast C	0
+High Cleric Dorian	High Cleric Dorian	quest_subboss	69		0	0	0		0	0	1	0	1		8	8	8	Act 5 Cast C	Act 5 (N) Cast C	Act 5 (H) Cast C	0
+Crystal Ball	Crystal Ball	quest_crystal	70		25	0	0	mana	0	0	1	0	1		8	8	8	Act 5 Super C	Act 5 (N) Super C	Crystal Reward	0
+Glass Skull the Jagged	Glass Skull the Jagged	quest_icedemon	71		0	0	0		3	3	1	0	1		8	8	8	Act 5 Super C	Act 5 (N) Super C	Act 5 (H) Super C	0
+NewMalic	NewMalic	quest_malic	72		11	27	0	maggot spectral	0	0	1	0	1		8	8	8	Act 5 Super C	Act 5 (N) Super C	Malic Reward	0
+NewPrimus	Lucion	quest_lucion	73		18	25	27	cold mana spectral	0	0	1	0	1		8	8	8	Act 5 Super C	Act 5 (N) Super C	Lucion Reward	0
+SpiritOfAnguish	Spirit of Anguish	anguish_special	74		0	0	0		0	0	1	0	0		20	20	20	Act 5 Super C	Act 5 (N) Super C	Act 5 (H) Super C	0
+SpiritOfMefis	SpiritOfMefis	quest_scaster	75		6	25	0	fast mana	2	2	1	0	0		20	20	20	Act 5 Super C	Act 5 (N) Super C	Act 5 (H) Super C	0
+RathmaPrimus	RathmaPrimus	rathma_primus	76		6	0	0	fast	0	0	1	0	0		22	22	22	Act 5 Super C	Act 5 (N) Super C	Rathma Primus Reward	0
+JurisKhan	JurisKhan	ureh_undeadknight	77		11	0	0	maggot	0	0	1	0	0		22	22	22	Baal	Baal (N)	Juris Khan Reward	0
+WycBoss1	WycBoss1	robedagger	78		11	0	0	maggot	0	0	1	0	0		11	11	11	Baal	Baal (N)	Boss 5 Reward	0
+WycBoss2	WycBoss2	zombierags	79		11	0	0	maggot	0	0	1	0	0		11	11	11	Baal	Baal (N)	Boss 4 Reward	0
+WycBoss3	WycBoss3	greenzombie	80		11	0	0	maggot	0	0	1	0	0		11	11	11	Baal	Baal (N)	Boss 3 Reward	0
+WycBoss4	WycBoss4	cloakdagger	81		11	0	0	maggot	0	0	1	0	0		11	11	11	Baal	Baal (N)	Boss 2 Reward	0
+WycBoss5	WycBoss5	orkshaman	82		11	0	0	maggot	0	0	1	0	0		11	11	11	Baal	Baal (N)	Boss 1 Reward	0

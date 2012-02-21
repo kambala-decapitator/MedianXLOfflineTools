@@ -1,7 +1,4 @@
-- fix stats table size
-- write help for search
-- compress and maybe encrypt txt data
------
+v0.2.1:
 - show experince bar and completion of current level in %
 - completed skill/stat quests
 - export item to bbcode/html
@@ -10,6 +7,7 @@
 - move recent files to separate sub-menu
 - add save prompt
 - move most functionality from splitter to tableview
+- get exp table and base char stats from txt
 - d2s file association
 - maybe win7 taskbar and mac dock menu support to open recent files
 -----
@@ -31,7 +29,7 @@ write in changelog:
 
 v0.3:
 - sort stashes
-- affix rlvl (and maybe names) support
+- affix rlvl (and maybe names - then modify help text) support
 - drag & drop
 - merc items
 - creation of plugy stashes

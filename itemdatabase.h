@@ -12,6 +12,8 @@ class ItemDataBase
     Q_DECLARE_TR_FUNCTIONS(ItemDataBase)
 
 public:
+    static bool createUncompressedTempFile(const QString &compressedFilePath, const QString &errorMessage, QFile *uncompressedFile);
+
     static QHash<QByteArray, ItemBase> *Items();
     static QHash<QByteArray, QList<QByteArray> > *ItemTypes();
     static QHash<uint, ItemPropertyTxt> *Properties();
@@ -28,6 +30,7 @@ public:
     static QString completeItemName(ItemInfo *item, bool shouldUseColor, bool showQualityText = true);
     static QHash<int, ColorIndex> *itemQualityColorsHash();
     static ColorIndex colorOfItem(ItemInfo *item);
+    static QString &removeColorCodesFromString(QString &s);
 
     static ItemInfo *loadItemFromFile(const QString &fileName);
     static ItemsList itemsStoredIn(int storage, int location = Enums::ItemLocation::Stored, quint32 *pPlugyPage = 0, ItemsList *allItems = 0);

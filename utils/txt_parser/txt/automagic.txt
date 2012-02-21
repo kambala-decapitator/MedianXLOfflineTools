@@ -1,0 +1,471 @@
+Name	version	spawnable	rare	level	maxlevel	levelreq	class	classlevelreq	frequency	group	mod1code	mod1param	mod1min	mod1max	mod2code	mod2param	mod2min	mod2max	mod3code	mod3param	mod3min	mod3max	transform	transformcolor	itype1	itype2	itype3	itype4	itype5	itype6	itype7	etype1	etype2	etype3	divide	multiply	add
+unSocketable	100	1	1	1		0			10	400													1		armo	misl	ring	amul							0	0	0
+sockNormal	100	1	1	1		0			10	401	sock		1	1									1		armo	misl	ring	amul							0	0	0
+sockNormal	100	1	1	1		0			9	402	sock		1	2									1		armo	misl	ring	amul							0	0	0
+sockNormal	100	1	1	1		0			8	403	sock		1	3									1		armo	misl	ring	amul							0	0	0
+sockNormal	100	1	1	1		0			7	404	sock		1	4									1		armo	misl	ring	amul							0	0	0
+sockNormal	100	1	1	1		0			6	405	sock		1	5									1		armo	misl	ring	amul							0	0	0
+sockNormal	100	1	1	1		0			5	406	sock		1	6									1		armo	misl	ring	amul							0	0	0
+sockNormal	100	1	1	1		0			10	401													1		armo	misl	ring	amul							0	0	0
+sockNormal	100	1	1	1		0			11	402													1		armo	misl	ring	amul							0	0	0
+sockNormal	100	1	1	1		0			12	403													1		armo	misl	ring	amul							0	0	0
+sockNormal	100	1	1	1		0			13	404													1		armo	misl	ring	amul							0	0	0
+sockNormal	100	1	1	1		0			14	405													1		armo	misl	ring	amul							0	0	0
+sockNormal	100	1	1	1		0			15	406													1		armo	misl	ring	amul							0	0	0
+sockJavelin	100	1	1	1		0			10	401	dex-add	51	51	51	sock		1	1					1		jave							ajav			0	0	0
+sockJavelin	100	1	1	1		0			9	402	dex-add	51	51	51	sock		1	2					1		jave							ajav			0	0	0
+sockJavelin	100	1	1	1		0			8	403	dex-add	51	51	51	sock		1	3					1		jave							ajav			0	0	0
+sockJavelin	100	1	1	1		0			7	404	dex-add	51	51	51	sock		1	4					1		jave							ajav			0	0	0
+sockJavelin	100	1	1	1		0			6	405	dex-add	51	51	51	sock		1	5					1		jave							ajav			0	0	0
+sockJavelin	100	1	1	1		0			5	406	dex-add	51	51	51	sock		1	6					1		jave							ajav			0	0	0
+sockJavelin	100	1	1	1		0			10	401	dex-add	51	51	51									1		jave							ajav			0	0	0
+sockJavelin	100	1	1	1		0			11	402	dex-add	51	51	51									1		jave							ajav			0	0	0
+sockJavelin	100	1	1	1		0			12	403	dex-add	51	51	51									1		jave							ajav			0	0	0
+sockJavelin	100	1	1	1		0			13	404	dex-add	51	51	51									1		jave							ajav			0	0	0
+sockJavelin	100	1	1	1		0			14	405	dex-add	51	51	51									1		jave							ajav			0	0	0
+sockJavelin	100	1	1	1		0			15	406	dex-add	51	51	51									1		jave							ajav			0	0	0
+sockTaxe	100	1	1	1		0			10	401	str-add	51	51	51	sock		1	1					1		taxe										0	0	0
+sockTaxe	100	1	1	1		0			9	402	str-add	51	51	51	sock		1	2					1		taxe										0	0	0
+sockTaxe	100	1	1	1		0			8	403	str-add	51	51	51	sock		1	3					1		taxe										0	0	0
+sockTaxe	100	1	1	1		0			7	404	str-add	51	51	51	sock		1	4					1		taxe										0	0	0
+sockTaxe	100	1	1	1		0			6	405	str-add	51	51	51	sock		1	5					1		taxe										0	0	0
+sockTaxe	100	1	1	1		0			5	406	str-add	51	51	51	sock		1	6					1		taxe										0	0	0
+sockTaxe	100	1	1	1		0			10	401	str-add	51	51	51									1		taxe										0	0	0
+sockTaxe	100	1	1	1		0			11	402	str-add	51	51	51									1		taxe										0	0	0
+sockTaxe	100	1	1	1		0			12	403	str-add	51	51	51									1		taxe										0	0	0
+sockTaxe	100	1	1	1		0			13	404	str-add	51	51	51									1		taxe										0	0	0
+sockTaxe	100	1	1	1		0			14	405	str-add	51	51	51									1		taxe										0	0	0
+sockTaxe	100	1	1	1		0			15	406	str-add	51	51	51									1		taxe										0	0	0
+sockTknife	100	1	1	1		0			10	401	dex-add	51	51	51	sock		1	1					1		tkni										0	0	0
+sockTknife	100	1	1	1		0			9	402	dex-add	51	51	51	sock		1	2					1		tkni										0	0	0
+sockTknife	100	1	1	1		0			8	403	dex-add	51	51	51	sock		1	3					1		tkni										0	0	0
+sockTknife	100	1	1	1		0			7	404	dex-add	51	51	51	sock		1	4					1		tkni										0	0	0
+sockTknife	100	1	1	1		0			6	405	dex-add	51	51	51	sock		1	5					1		tkni										0	0	0
+sockTknife	100	1	1	1		0			5	406	dex-add	51	51	51	sock		1	6					1		tkni										0	0	0
+sockTknife	100	1	1	1		0			10	401	dex-add	51	51	51									1		tkni										0	0	0
+sockTknife	100	1	1	1		0			11	402	dex-add	51	51	51									1		tkni										0	0	0
+sockTknife	100	1	1	1		0			12	403	dex-add	51	51	51									1		tkni										0	0	0
+sockTknife	100	1	1	1		0			13	404	dex-add	51	51	51									1		tkni										0	0	0
+sockTknife	100	1	1	1		0			14	405	dex-add	51	51	51									1		tkni										0	0	0
+sockTknife	100	1	1	1		0			15	406	dex-add	51	51	51									1		tkni										0	0	0
+sockPal1H	100	1	1	1		0			10	401	str-add	76	76	76	sock		1	1					1		pclb	pmac									0	0	0
+sockPal1H	100	1	1	1		0			9	402	str-add	76	76	76	sock		1	2					1		pclb	pmac									0	0	0
+sockPal1H	100	1	1	1		0			8	403	str-add	76	76	76	sock		1	3					1		pclb	pmac									0	0	0
+sockPal1H	100	1	1	1		0			7	404	str-add	76	76	76	sock		1	4					1		pclb	pmac									0	0	0
+sockPal1H	100	1	1	1		0			6	405	str-add	76	76	76	sock		1	5					1		pclb	pmac									0	0	0
+sockPal1H	100	1	1	1		0			5	406	str-add	76	76	76	sock		1	6					1		pclb	pmac									0	0	0
+sockPal1H	100	1	1	1		0			10	401	str-add	76	76	76									1		pclb	pmac									0	0	0
+sockPal1H	100	1	1	1		0			11	402	str-add	76	76	76									1		pclb	pmac									0	0	0
+sockPal1H	100	1	1	1		0			12	403	str-add	76	76	76									1		pclb	pmac									0	0	0
+sockPal1H	100	1	1	1		0			13	404	str-add	76	76	76									1		pclb	pmac									0	0	0
+sockPal1H	100	1	1	1		0			14	405	str-add	76	76	76									1		pclb	pmac									0	0	0
+sockPal1H	100	1	1	1		0			15	406	str-add	76	76	76									1		pclb	pmac									0	0	0
+sockAxe	100	1	1	1		0			10	401	str-add	51	51	51	sock		1	1					1		axe							baxe	taxe	2hax	0	0	0
+sockAxe	100	1	1	1		0			9	402	str-add	51	51	51	sock		1	2					1		axe							baxe	taxe	2hax	0	0	0
+sockAxe	100	1	1	1		0			8	403	str-add	51	51	51	sock		1	3					1		axe							baxe	taxe	2hax	0	0	0
+sockAxe	100	1	1	1		0			7	404	str-add	51	51	51	sock		1	4					1		axe							baxe	taxe	2hax	0	0	0
+sockAxe	100	1	1	1		0			6	405	str-add	51	51	51	sock		1	5					1		axe							baxe	taxe	2hax	0	0	0
+sockAxe	100	1	1	1		0			5	406	str-add	51	51	51	sock		1	6					1		axe							baxe	taxe	2hax	0	0	0
+sockAxe	100	1	1	1		0			10	401	str-add	51	51	51									1		axe							baxe	taxe	2hax	0	0	0
+sockAxe	100	1	1	1		0			11	402	str-add	51	51	51									1		axe							baxe	taxe	2hax	0	0	0
+sockAxe	100	1	1	1		0			12	403	str-add	51	51	51									1		axe							baxe	taxe	2hax	0	0	0
+sockAxe	100	1	1	1		0			13	404	str-add	51	51	51									1		axe							baxe	taxe	2hax	0	0	0
+sockAxe	100	1	1	1		0			14	405	str-add	51	51	51									1		axe							baxe	taxe	2hax	0	0	0
+sockAxe	100	1	1	1		0			15	406	str-add	51	51	51									1		axe							baxe	taxe	2hax	0	0	0
+sockAxe	100	1	1	1		0			10	401	str-add	76	76	76	sock		1	1					1		2hax							baxe	taxe		0	0	0
+sockAxe	100	1	1	1		0			9	402	str-add	76	76	76	sock		1	2					1		2hax							baxe	taxe		0	0	0
+sockAxe	100	1	1	1		0			8	403	str-add	76	76	76	sock		1	3					1		2hax							baxe	taxe		0	0	0
+sockAxe	100	1	1	1		0			7	404	str-add	76	76	76	sock		1	4					1		2hax							baxe	taxe		0	0	0
+sockAxe	100	1	1	1		0			6	405	str-add	76	76	76	sock		1	5					1		2hax							baxe	taxe		0	0	0
+sockAxe	100	1	1	1		0			5	406	str-add	76	76	76	sock		1	6					1		2hax							baxe	taxe		0	0	0
+sockAxe	100	1	1	1		0			10	401	str-add	76	76	76									1		2hax							baxe	taxe		0	0	0
+sockAxe	100	1	1	1		0			11	402	str-add	76	76	76									1		2hax							baxe	taxe		0	0	0
+sockAxe	100	1	1	1		0			12	403	str-add	76	76	76									1		2hax							baxe	taxe		0	0	0
+sockAxe	100	1	1	1		0			13	404	str-add	76	76	76									1		2hax							baxe	taxe		0	0	0
+sockAxe	100	1	1	1		0			14	405	str-add	76	76	76									1		2hax							baxe	taxe		0	0	0
+sockAxe	100	1	1	1		0			15	406	str-add	76	76	76									1		2hax							baxe	taxe		0	0	0
+sockBarSW	100	1	1	1		0			10	401	str-add	76	76	76	sock		1	1					1		bswd										0	0	0
+sockBarSW	100	1	1	1		0			9	402	str-add	76	76	76	sock		1	2					1		bswd										0	0	0
+sockBarSW	100	1	1	1		0			8	403	str-add	76	76	76	sock		1	3					1		bswd										0	0	0
+sockBarSW	100	1	1	1		0			7	404	str-add	76	76	76	sock		1	4					1		bswd										0	0	0
+sockBarSW	100	1	1	1		0			6	405	str-add	76	76	76	sock		1	5					1		bswd										0	0	0
+sockBarSW	100	1	1	1		0			5	406	str-add	76	76	76	sock		1	6					1		bswd										0	0	0
+sockBarSW	100	1	1	1		0			10	401	str-add	76	76	76									1		bswd										0	0	0
+sockBarSW	100	1	1	1		0			11	402	str-add	76	76	76									1		bswd										0	0	0
+sockBarSW	100	1	1	1		0			12	403	str-add	76	76	76									1		bswd										0	0	0
+sockBarSW	100	1	1	1		0			13	404	str-add	76	76	76									1		bswd										0	0	0
+sockBarSW	100	1	1	1		0			14	405	str-add	76	76	76									1		bswd										0	0	0
+sockBarSW	100	1	1	1		0			15	406	str-add	76	76	76									1		bswd										0	0	0
+sockPole	100	1	1	1		0			10	401	str-add	76	76	76	sock		1	1					1		pole							scyh	nagi		0	0	0
+sockPole	100	1	1	1		0			9	402	str-add	76	76	76	sock		1	2					1		pole							scyh	nagi		0	0	0
+sockPole	100	1	1	1		0			8	403	str-add	76	76	76	sock		1	3					1		pole							scyh	nagi		0	0	0
+sockPole	100	1	1	1		0			7	404	str-add	76	76	76	sock		1	4					1		pole							scyh	nagi		0	0	0
+sockPole	100	1	1	1		0			6	405	str-add	76	76	76	sock		1	5					1		pole							scyh	nagi		0	0	0
+sockPole	100	1	1	1		0			5	406	str-add	76	76	76	sock		1	6					1		pole							scyh	nagi		0	0	0
+sockPole	100	1	1	1		0			10	401	str-add	76	76	76									1		pole							scyh	nagi		0	0	0
+sockPole	100	1	1	1		0			11	402	str-add	76	76	76									1		pole							scyh	nagi		0	0	0
+sockPole	100	1	1	1		0			12	403	str-add	76	76	76									1		pole							scyh	nagi		0	0	0
+sockPole	100	1	1	1		0			13	404	str-add	76	76	76									1		pole							scyh	nagi		0	0	0
+sockPole	100	1	1	1		0			14	405	str-add	76	76	76									1		pole							scyh	nagi		0	0	0
+sockPole	100	1	1	1		0			15	406	str-add	76	76	76									1		pole							scyh	nagi		0	0	0
+sockSW	100	1	1	1		0			10	401	str-add	51	51	51	sock		1	1					1		swor							bswd	crsd	2hsd	0	0	0
+sockSW	100	1	1	1		0			9	402	str-add	51	51	51	sock		1	2					1		swor							bswd	crsd	2hsd	0	0	0
+sockSW	100	1	1	1		0			8	403	str-add	51	51	51	sock		1	3					1		swor							bswd	crsd	2hsd	0	0	0
+sockSW	100	1	1	1		0			7	404	str-add	51	51	51	sock		1	4					1		swor							bswd	crsd	2hsd	0	0	0
+sockSW	100	1	1	1		0			6	405	str-add	51	51	51	sock		1	5					1		swor							bswd	crsd	2hsd	0	0	0
+sockSW	100	1	1	1		0			5	406	str-add	51	51	51	sock		1	6					1		swor							bswd	crsd	2hsd	0	0	0
+sockSW	100	1	1	1		0			10	401	str-add	51	51	51									1		swor							bswd	crsd	2hsd	0	0	0
+sockSW	100	1	1	1		0			11	402	str-add	51	51	51									1		swor							bswd	crsd	2hsd	0	0	0
+sockSW	100	1	1	1		0			12	403	str-add	51	51	51									1		swor							bswd	crsd	2hsd	0	0	0
+sockSW	100	1	1	1		0			13	404	str-add	51	51	51									1		swor							bswd	crsd	2hsd	0	0	0
+sockSW	100	1	1	1		0			14	405	str-add	51	51	51									1		swor							bswd	crsd	2hsd	0	0	0
+sockSW	100	1	1	1		0			15	406	str-add	51	51	51									1		swor							bswd	crsd	2hsd	0	0	0
+sockSW	100	1	1	1		0			10	401	str-add	76	76	76	sock		1	1					1		2hsd							bswd	crsd		0	0	0
+sockSW	100	1	1	1		0			9	402	str-add	76	76	76	sock		1	2					1		2hsd							bswd	crsd		0	0	0
+sockSW	100	1	1	1		0			8	403	str-add	76	76	76	sock		1	3					1		2hsd							bswd	crsd		0	0	0
+sockSW	100	1	1	1		0			7	404	str-add	76	76	76	sock		1	4					1		2hsd							bswd	crsd		0	0	0
+sockSW	100	1	1	1		0			6	405	str-add	76	76	76	sock		1	5					1		2hsd							bswd	crsd		0	0	0
+sockSW	100	1	1	1		0			5	406	str-add	76	76	76	sock		1	6					1		2hsd							bswd	crsd		0	0	0
+sockSW	100	1	1	1		0			10	401	str-add	76	76	76									1		2hsd							bswd	crsd		0	0	0
+sockSW	100	1	1	1		0			11	402	str-add	76	76	76									1		2hsd							bswd	crsd		0	0	0
+sockSW	100	1	1	1		0			12	403	str-add	76	76	76									1		2hsd							bswd	crsd		0	0	0
+sockSW	100	1	1	1		0			13	404	str-add	76	76	76									1		2hsd							bswd	crsd		0	0	0
+sockSW	100	1	1	1		0			14	405	str-add	76	76	76									1		2hsd							bswd	crsd		0	0	0
+sockSW	100	1	1	1		0			15	406	str-add	76	76	76									1		2hsd							bswd	crsd		0	0	0
+sockStaf	100	1	1	1		0			10	401	dex-add	25	25	25	sock		1	1					1		staf							dstf	nstf		0	0	0
+sockStaf	100	1	1	1		0			9	402	dex-add	25	25	25	sock		1	2					1		staf							dstf	nstf		0	0	0
+sockStaf	100	1	1	1		0			8	403	dex-add	25	25	25	sock		1	3					1		staf							dstf	nstf		0	0	0
+sockStaf	100	1	1	1		0			7	404	dex-add	25	25	25	sock		1	4					1		staf							dstf	nstf		0	0	0
+sockStaf	100	1	1	1		0			6	405	dex-add	25	25	25	sock		1	5					1		staf							dstf	nstf		0	0	0
+sockStaf	100	1	1	1		0			5	406	dex-add	25	25	25	sock		1	6					1		staf							dstf	nstf		0	0	0
+sockStaf	100	1	1	1		0			10	401	dex-add	25	25	25									1		staf							dstf	nstf		0	0	0
+sockStaf	100	1	1	1		0			11	402	dex-add	25	25	25									1		staf							dstf	nstf		0	0	0
+sockStaf	100	1	1	1		0			12	403	dex-add	25	25	25									1		staf							dstf	nstf		0	0	0
+sockStaf	100	1	1	1		0			13	404	dex-add	25	25	25									1		staf							dstf	nstf		0	0	0
+sockStaf	100	1	1	1		0			14	405	dex-add	25	25	25									1		staf							dstf	nstf		0	0	0
+sockStaf	100	1	1	1		0			15	406	dex-add	25	25	25									1		staf							dstf	nstf		0	0	0
+sockDagg	100	1	1	1		0			10	401	dex-add	51	51	51	sock		1	1					1		knif							nknf	tkni		0	0	0
+sockDagg	100	1	1	1		0			9	402	dex-add	51	51	51	sock		1	2					1		knif							nknf	tkni		0	0	0
+sockDagg	100	1	1	1		0			8	403	dex-add	51	51	51	sock		1	3					1		knif							nknf	tkni		0	0	0
+sockDagg	100	1	1	1		0			7	404	dex-add	51	51	51	sock		1	4					1		knif							nknf	tkni		0	0	0
+sockDagg	100	1	1	1		0			6	405	dex-add	51	51	51	sock		1	5					1		knif							nknf	tkni		0	0	0
+sockDagg	100	1	1	1		0			5	406	dex-add	51	51	51	sock		1	6					1		knif							nknf	tkni		0	0	0
+sockDagg	100	1	1	1		0			10	401	dex-add	51	51	51									1		knif							nknf	tkni		0	0	0
+sockDagg	100	1	1	1		0			11	402	dex-add	51	51	51									1		knif							nknf	tkni		0	0	0
+sockDagg	100	1	1	1		0			12	403	dex-add	51	51	51									1		knif							nknf	tkni		0	0	0
+sockDagg	100	1	1	1		0			13	404	dex-add	51	51	51									1		knif							nknf	tkni		0	0	0
+sockDagg	100	1	1	1		0			14	405	dex-add	51	51	51									1		knif							nknf	tkni		0	0	0
+sockDagg	100	1	1	1		0			15	406	dex-add	51	51	51									1		knif							nknf	tkni		0	0	0
+sockHTH	100	1	1	1		0			10	401	dex-add	76	76	76	sock		1	1					1		h2h										0	0	0
+sockHTH	100	1	1	1		0			9	402	dex-add	76	76	76	sock		1	2					1		h2h										0	0	0
+sockHTH	100	1	1	1		0			8	403	dex-add	76	76	76	sock		1	3					1		h2h										0	0	0
+sockHTH	100	1	1	1		0			7	404	dex-add	76	76	76	sock		1	4					1		h2h										0	0	0
+sockHTH	100	1	1	1		0			6	405	dex-add	76	76	76	sock		1	5					1		h2h										0	0	0
+sockHTH	100	1	1	1		0			5	406	dex-add	76	76	76	sock		1	6					1		h2h										0	0	0
+sockHTH	100	1	1	1		0			10	401	dex-add	76	76	76									1		h2h										0	0	0
+sockHTH	100	1	1	1		0			11	402	dex-add	76	76	76									1		h2h										0	0	0
+sockHTH	100	1	1	1		0			12	403	dex-add	76	76	76									1		h2h										0	0	0
+sockHTH	100	1	1	1		0			13	404	dex-add	76	76	76									1		h2h										0	0	0
+sockHTH	100	1	1	1		0			14	405	dex-add	76	76	76									1		h2h										0	0	0
+sockHTH	100	1	1	1		0			15	406	dex-add	76	76	76									1		h2h										0	0	0
+sockWand	100	1	1	1		0			10	401	dex-add	25	25	25	sock		1	1					1		wand										0	0	0
+sockWand	100	1	1	1		0			9	402	dex-add	25	25	25	sock		1	2					1		wand										0	0	0
+sockWand	100	1	1	1		0			8	403	dex-add	25	25	25	sock		1	3					1		wand										0	0	0
+sockWand	100	1	1	1		0			7	404	dex-add	25	25	25	sock		1	4					1		wand										0	0	0
+sockWand	100	1	1	1		0			6	405	dex-add	25	25	25	sock		1	5					1		wand										0	0	0
+sockWand	100	1	1	1		0			5	406	dex-add	25	25	25	sock		1	6					1		wand										0	0	0
+sockWand	100	1	1	1		0			10	401	dex-add	25	25	25									1		wand										0	0	0
+sockWand	100	1	1	1		0			11	402	dex-add	25	25	25									1		wand										0	0	0
+sockWand	100	1	1	1		0			12	403	dex-add	25	25	25									1		wand										0	0	0
+sockWand	100	1	1	1		0			13	404	dex-add	25	25	25									1		wand										0	0	0
+sockWand	100	1	1	1		0			14	405	dex-add	25	25	25									1		wand										0	0	0
+sockWand	100	1	1	1		0			15	406	dex-add	25	25	25									1		wand										0	0	0
+sockSpea	100	1	1	1		0			10	401	dex-add	76	76	76	sock		1	1					1		spea							aspe	pspe	jave	0	0	0
+sockSpea	100	1	1	1		0			9	402	dex-add	76	76	76	sock		1	2					1		spea							aspe	pspe	jave	0	0	0
+sockSpea	100	1	1	1		0			8	403	dex-add	76	76	76	sock		1	3					1		spea							aspe	pspe	jave	0	0	0
+sockSpea	100	1	1	1		0			7	404	dex-add	76	76	76	sock		1	4					1		spea							aspe	pspe	jave	0	0	0
+sockSpea	100	1	1	1		0			6	405	dex-add	76	76	76	sock		1	5					1		spea							aspe	pspe	jave	0	0	0
+sockSpea	100	1	1	1		0			5	406	dex-add	76	76	76	sock		1	6					1		spea							aspe	pspe	jave	0	0	0
+sockSpea	100	1	1	1		0			10	401	dex-add	76	76	76									1		spea							aspe	pspe	jave	0	0	0
+sockSpea	100	1	1	1		0			11	402	dex-add	76	76	76									1		spea							aspe	pspe	jave	0	0	0
+sockSpea	100	1	1	1		0			12	403	dex-add	76	76	76									1		spea							aspe	pspe	jave	0	0	0
+sockSpea	100	1	1	1		0			13	404	dex-add	76	76	76									1		spea							aspe	pspe	jave	0	0	0
+sockSpea	100	1	1	1		0			14	405	dex-add	76	76	76									1		spea							aspe	pspe	jave	0	0	0
+sockSpea	100	1	1	1		0			15	406	dex-add	76	76	76									1		spea							aspe	pspe	jave	0	0	0
+sockOrb	100	1	1	1		0			10	401	dex-add	51	51	51	sock		1	1					1		orb										0	0	0
+sockOrb	100	1	1	1		0			9	402	dex-add	51	51	51	sock		1	2					1		orb										0	0	0
+sockOrb	100	1	1	1		0			8	403	dex-add	51	51	51	sock		1	3					1		orb										0	0	0
+sockOrb	100	1	1	1		0			7	404	dex-add	51	51	51	sock		1	4					1		orb										0	0	0
+sockOrb	100	1	1	1		0			6	405	dex-add	51	51	51	sock		1	5					1		orb										0	0	0
+sockOrb	100	1	1	1		0			5	406	dex-add	51	51	51	sock		1	6					1		orb										0	0	0
+sockOrb	100	1	1	1		0			10	401	dex-add	51	51	51									1		orb										0	0	0
+sockOrb	100	1	1	1		0			11	402	dex-add	51	51	51									1		orb										0	0	0
+sockOrb	100	1	1	1		0			12	403	dex-add	51	51	51									1		orb										0	0	0
+sockOrb	100	1	1	1		0			13	404	dex-add	51	51	51									1		orb										0	0	0
+sockOrb	100	1	1	1		0			14	405	dex-add	51	51	51									1		orb										0	0	0
+sockOrb	100	1	1	1		0			15	406	dex-add	51	51	51									1		orb										0	0	0
+sockMace	100	1	1	1		0			10	401	str-add	51	51	51	sock		1	1					1		club	mace						pclb	pmac		0	0	0
+sockMace	100	1	1	1		0			9	402	str-add	51	51	51	sock		1	2					1		club	mace						pclb	pmac		0	0	0
+sockMace	100	1	1	1		0			8	403	str-add	51	51	51	sock		1	3					1		club	mace						pclb	pmac		0	0	0
+sockMace	100	1	1	1		0			7	404	str-add	51	51	51	sock		1	4					1		club	mace						pclb	pmac		0	0	0
+sockMace	100	1	1	1		0			6	405	str-add	51	51	51	sock		1	5					1		club	mace						pclb	pmac		0	0	0
+sockMace	100	1	1	1		0			5	406	str-add	51	51	51	sock		1	6					1		club	mace						pclb	pmac		0	0	0
+sockMace	100	1	1	1		0			10	401	str-add	51	51	51									1		club	mace						pclb	pmac		0	0	0
+sockMace	100	1	1	1		0			11	402	str-add	51	51	51									1		club	mace						pclb	pmac		0	0	0
+sockMace	100	1	1	1		0			12	403	str-add	51	51	51									1		club	mace						pclb	pmac		0	0	0
+sockMace	100	1	1	1		0			13	404	str-add	51	51	51									1		club	mace						pclb	pmac		0	0	0
+sockMace	100	1	1	1		0			14	405	str-add	51	51	51									1		club	mace						pclb	pmac		0	0	0
+sockMace	100	1	1	1		0			15	406	str-add	51	51	51									1		club	mace						pclb	pmac		0	0	0
+sockBow	100	1	1	1		0			10	401	dex-add	51	51	51	sock		1	1					1		bow							xbow	dbow	abow	0	0	0
+sockBow	100	1	1	1		0			9	402	dex-add	51	51	51	sock		1	2					1		bow							xbow	dbow	abow	0	0	0
+sockBow	100	1	1	1		0			8	403	dex-add	51	51	51	sock		1	3					1		bow							xbow	dbow	abow	0	0	0
+sockBow	100	1	1	1		0			7	404	dex-add	51	51	51	sock		1	4					1		bow							xbow	dbow	abow	0	0	0
+sockBow	100	1	1	1		0			6	405	dex-add	51	51	51	sock		1	5					1		bow							xbow	dbow	abow	0	0	0
+sockBow	100	1	1	1		0			5	406	dex-add	51	51	51	sock		1	6					1		bow							xbow	dbow	abow	0	0	0
+sockBow	100	1	1	1		0			10	401	dex-add	51	51	51									1		bow							xbow	dbow	abow	0	0	0
+sockBow	100	1	1	1		0			11	402	dex-add	51	51	51									1		bow							xbow	dbow	abow	0	0	0
+sockBow	100	1	1	1		0			12	403	dex-add	51	51	51									1		bow							xbow	dbow	abow	0	0	0
+sockBow	100	1	1	1		0			13	404	dex-add	51	51	51									1		bow							xbow	dbow	abow	0	0	0
+sockBow	100	1	1	1		0			14	405	dex-add	51	51	51									1		bow							xbow	dbow	abow	0	0	0
+sockBow	100	1	1	1		0			15	406	dex-add	51	51	51									1		bow							xbow	dbow	abow	0	0	0
+sockDbow	100	1	1	1		0			10	401	str-add	76	76	76	sock		1	1					1		dbow										0	0	0
+sockDbow	100	1	1	1		0			9	402	str-add	76	76	76	sock		1	2					1		dbow										0	0	0
+sockDbow	100	1	1	1		0			8	403	str-add	76	76	76	sock		1	3					1		dbow										0	0	0
+sockDbow	100	1	1	1		0			7	404	str-add	76	76	76	sock		1	4					1		dbow										0	0	0
+sockDbow	100	1	1	1		0			6	405	str-add	76	76	76	sock		1	5					1		dbow										0	0	0
+sockDbow	100	1	1	1		0			5	406	str-add	76	76	76	sock		1	6					1		dbow										0	0	0
+sockDbow	100	1	1	1		0			10	401	str-add	76	76	76									1		dbow										0	0	0
+sockDbow	100	1	1	1		0			11	402	str-add	76	76	76									1		dbow										0	0	0
+sockDbow	100	1	1	1		0			12	403	str-add	76	76	76									1		dbow										0	0	0
+sockDbow	100	1	1	1		0			13	404	str-add	76	76	76									1		dbow										0	0	0
+sockDbow	100	1	1	1		0			14	405	str-add	76	76	76									1		dbow										0	0	0
+sockDbow	100	1	1	1		0			15	406	str-add	76	76	76									1		dbow										0	0	0
+sockXbow	100	1	1	1		0			10	401	str-add	51	51	51	sock		1	1					1		xbow							nxbw			0	0	0
+sockXbow	100	1	1	1		0			9	402	str-add	51	51	51	sock		1	2					1		xbow							nxbw			0	0	0
+sockXbow	100	1	1	1		0			8	403	str-add	51	51	51	sock		1	3					1		xbow							nxbw			0	0	0
+sockXbow	100	1	1	1		0			7	404	str-add	51	51	51	sock		1	4					1		xbow							nxbw			0	0	0
+sockXbow	100	1	1	1		0			6	405	str-add	51	51	51	sock		1	5					1		xbow							nxbw			0	0	0
+sockXbow	100	1	1	1		0			5	406	str-add	51	51	51	sock		1	6					1		xbow							nxbw			0	0	0
+sockXbow	100	1	1	1		0			10	401	str-add	51	51	51									1		xbow							nxbw			0	0	0
+sockXbow	100	1	1	1		0			11	402	str-add	51	51	51									1		xbow							nxbw			0	0	0
+sockXbow	100	1	1	1		0			12	403	str-add	51	51	51									1		xbow							nxbw			0	0	0
+sockXbow	100	1	1	1		0			13	404	str-add	51	51	51									1		xbow							nxbw			0	0	0
+sockXbow	100	1	1	1		0			14	405	str-add	51	51	51									1		xbow							nxbw			0	0	0
+sockXbow	100	1	1	1		0			15	406	str-add	51	51	51									1		xbow							nxbw			0	0	0
+sockCrsd	100	1	1	1		0			10	401	dex-add	51	51	51	sock		1	1					1		crsd							scrd			0	0	0
+sockCrsd	100	1	1	1		0			9	402	dex-add	51	51	51	sock		1	2					1		crsd							scrd			0	0	0
+sockCrsd	100	1	1	1		0			8	403	dex-add	51	51	51	sock		1	3					1		crsd							scrd			0	0	0
+sockCrsd	100	1	1	1		0			7	404	dex-add	51	51	51	sock		1	4					1		crsd							scrd			0	0	0
+sockCrsd	100	1	1	1		0			6	405	dex-add	51	51	51	sock		1	5					1		crsd							scrd			0	0	0
+sockCrsd	100	1	1	1		0			5	406	dex-add	51	51	51	sock		1	6					1		crsd							scrd			0	0	0
+sockCrsd	100	1	1	1		0			10	401	dex-add	51	51	51									1		crsd							scrd			0	0	0
+sockCrsd	100	1	1	1		0			11	402	dex-add	51	51	51									1		crsd							scrd			0	0	0
+sockCrsd	100	1	1	1		0			12	403	dex-add	51	51	51									1		crsd							scrd			0	0	0
+sockCrsd	100	1	1	1		0			13	404	dex-add	51	51	51									1		crsd							scrd			0	0	0
+sockCrsd	100	1	1	1		0			14	405	dex-add	51	51	51									1		crsd							scrd			0	0	0
+sockCrsd	100	1	1	1		0			15	406	dex-add	51	51	51									1		crsd							scrd			0	0	0
+sockNxbw	100	1	1	1		0			10	401	str-add	76	76	76	sock		1	1					1		nxbw										0	0	0
+sockNxbw	100	1	1	1		0			9	402	str-add	76	76	76	sock		1	2					1		nxbw										0	0	0
+sockNxbw	100	1	1	1		0			8	403	str-add	76	76	76	sock		1	3					1		nxbw										0	0	0
+sockNxbw	100	1	1	1		0			7	404	str-add	76	76	76	sock		1	4					1		nxbw										0	0	0
+sockNxbw	100	1	1	1		0			6	405	str-add	76	76	76	sock		1	5					1		nxbw										0	0	0
+sockNxbw	100	1	1	1		0			5	406	str-add	76	76	76	sock		1	6					1		nxbw										0	0	0
+sockNxbw	100	1	1	1		0			10	401	str-add	76	76	76									1		nxbw										0	0	0
+sockNxbw	100	1	1	1		0			11	402	str-add	76	76	76									1		nxbw										0	0	0
+sockNxbw	100	1	1	1		0			12	403	str-add	76	76	76									1		nxbw										0	0	0
+sockNxbw	100	1	1	1		0			13	404	str-add	76	76	76									1		nxbw										0	0	0
+sockNxbw	100	1	1	1		0			14	405	str-add	76	76	76									1		nxbw										0	0	0
+sockNxbw	100	1	1	1		0			15	406	str-add	76	76	76									1		nxbw										0	0	0
+sockScep	100	1	1	1		0			10	401	dex-add	51	51	51	sock		1	1					1		scep										0	0	0
+sockScep	100	1	1	1		0			9	402	dex-add	51	51	51	sock		1	2					1		scep										0	0	0
+sockScep	100	1	1	1		0			8	403	dex-add	51	51	51	sock		1	3					1		scep										0	0	0
+sockScep	100	1	1	1		0			7	404	dex-add	51	51	51	sock		1	4					1		scep										0	0	0
+sockScep	100	1	1	1		0			6	405	dex-add	51	51	51	sock		1	5					1		scep										0	0	0
+sockScep	100	1	1	1		0			5	406	dex-add	51	51	51	sock		1	6					1		scep										0	0	0
+sockScep	100	1	1	1		0			10	401	dex-add	51	51	51									1		scep										0	0	0
+sockScep	100	1	1	1		0			11	402	dex-add	51	51	51									1		scep										0	0	0
+sockScep	100	1	1	1		0			12	403	dex-add	51	51	51									1		scep										0	0	0
+sockScep	100	1	1	1		0			13	404	dex-add	51	51	51									1		scep										0	0	0
+sockScep	100	1	1	1		0			14	405	dex-add	51	51	51									1		scep										0	0	0
+sockScep	100	1	1	1		0			15	406	dex-add	51	51	51									1		scep										0	0	0
+sockHamm	100	1	1	1		0			10	401	str-add	76	76	76	sock		1	1					1		hamm							pham			0	0	0
+sockHamm	100	1	1	1		0			9	402	str-add	76	76	76	sock		1	2					1		hamm							pham			0	0	0
+sockHamm	100	1	1	1		0			8	403	str-add	76	76	76	sock		1	3					1		hamm							pham			0	0	0
+sockHamm	100	1	1	1		0			7	404	str-add	76	76	76	sock		1	4					1		hamm							pham			0	0	0
+sockHamm	100	1	1	1		0			6	405	str-add	76	76	76	sock		1	5					1		hamm							pham			0	0	0
+sockHamm	100	1	1	1		0			5	406	str-add	76	76	76	sock		1	6					1		hamm							pham			0	0	0
+sockHamm	100	1	1	1		0			10	401	str-add	76	76	76									1		hamm							pham			0	0	0
+sockHamm	100	1	1	1		0			11	402	str-add	76	76	76									1		hamm							pham			0	0	0
+sockHamm	100	1	1	1		0			12	403	str-add	76	76	76									1		hamm							pham			0	0	0
+sockHamm	100	1	1	1		0			13	404	str-add	76	76	76									1		hamm							pham			0	0	0
+sockHamm	100	1	1	1		0			14	405	str-add	76	76	76									1		hamm							pham			0	0	0
+sockHamm	100	1	1	1		0			15	406	str-add	76	76	76									1		hamm							pham			0	0	0
+sockPham	100	1	1	1		0			10	401	str-add	102	102	102	innate-grace	84	5	1	sock		1	1	1		pham										0	0	0
+sockPham	100	1	1	1		0			9	402	str-add	102	102	102	innate-grace	84	5	1	sock		1	2	1		pham										0	0	0
+sockPham	100	1	1	1		0			8	403	str-add	102	102	102	innate-grace	84	5	1	sock		1	3	1		pham										0	0	0
+sockPham	100	1	1	1		0			7	404	str-add	102	102	102	innate-grace	84	5	1	sock		1	4	1		pham										0	0	0
+sockPham	100	1	1	1		0			6	405	str-add	102	102	102	innate-grace	84	5	1	sock		1	5	1		pham										0	0	0
+sockPham	100	1	1	1		0			5	406	str-add	102	102	102	innate-grace	84	5	1	sock		1	6	1		pham										0	0	0
+sockPham	100	1	1	1		0			10	401	str-add	102	102	102	innate-grace	84	5	1					1		pham										0	0	0
+sockPham	100	1	1	1		0			11	402	str-add	102	102	102	innate-grace	84	5	1					1		pham										0	0	0
+sockPham	100	1	1	1		0			12	403	str-add	102	102	102	innate-grace	84	5	1					1		pham										0	0	0
+sockPham	100	1	1	1		0			13	404	str-add	102	102	102	innate-grace	84	5	1					1		pham										0	0	0
+sockPham	100	1	1	1		0			14	405	str-add	102	102	102	innate-grace	84	5	1					1		pham										0	0	0
+sockPham	100	1	1	1		0			15	406	str-add	102	102	102	innate-grace	84	5	1					1		pham										0	0	0
+sockAjav	100	1	1	1		0			10	401	dex-add	76	76	76	sock		1	1					1		ajav										0	0	0
+sockAjav	100	1	1	1		0			9	402	dex-add	76	76	76	sock		1	2					1		ajav										0	0	0
+sockAjav	100	1	1	1		0			8	403	dex-add	76	76	76	sock		1	3					1		ajav										0	0	0
+sockAjav	100	1	1	1		0			7	404	dex-add	76	76	76	sock		1	4					1		ajav										0	0	0
+sockAjav	100	1	1	1		0			6	405	dex-add	76	76	76	sock		1	5					1		ajav										0	0	0
+sockAjav	100	1	1	1		0			5	406	dex-add	76	76	76	sock		1	6					1		ajav										0	0	0
+sockAjav	100	1	1	1		0			10	401	dex-add	76	76	76									1		ajav										0	0	0
+sockAjav	100	1	1	1		0			11	402	dex-add	76	76	76									1		ajav										0	0	0
+sockAjav	100	1	1	1		0			12	403	dex-add	76	76	76									1		ajav										0	0	0
+sockAjav	100	1	1	1		0			13	404	dex-add	76	76	76									1		ajav										0	0	0
+sockAjav	100	1	1	1		0			14	405	dex-add	76	76	76									1		ajav										0	0	0
+sockAjav	100	1	1	1		0			15	406	dex-add	76	76	76									1		ajav										0	0	0
+sockAjav	100	1	1	1		0			10	401	dex-add	102	102	102	innate-impact	146	25	1	sock		1	1	1		aspe										0	0	0
+sockAjav	100	1	1	1		0			9	402	dex-add	102	102	102	innate-impact	146	25	1	sock		1	2	1		aspe										0	0	0
+sockAjav	100	1	1	1		0			8	403	dex-add	102	102	102	innate-impact	146	25	1	sock		1	3	1		aspe										0	0	0
+sockAjav	100	1	1	1		0			7	404	dex-add	102	102	102	innate-impact	146	25	1	sock		1	4	1		aspe										0	0	0
+sockAjav	100	1	1	1		0			6	405	dex-add	102	102	102	innate-impact	146	25	1	sock		1	5	1		aspe										0	0	0
+sockAjav	100	1	1	1		0			5	406	dex-add	102	102	102	innate-impact	146	25	1	sock		1	6	1		aspe										0	0	0
+sockAjav	100	1	1	1		0			10	401	dex-add	102	102	102	innate-impact	146	25	1					1		aspe										0	0	0
+sockAjav	100	1	1	1		0			11	402	dex-add	102	102	102	innate-impact	146	25	1					1		aspe										0	0	0
+sockAjav	100	1	1	1		0			12	403	dex-add	102	102	102	innate-impact	146	25	1					1		aspe										0	0	0
+sockAjav	100	1	1	1		0			13	404	dex-add	102	102	102	innate-impact	146	25	1					1		aspe										0	0	0
+sockAjav	100	1	1	1		0			14	405	dex-add	102	102	102	innate-impact	146	25	1					1		aspe										0	0	0
+sockAjav	100	1	1	1		0			15	406	dex-add	102	102	102	innate-impact	146	25	1					1		aspe										0	0	0
+sockScyh	100	1	1	1		0			10	401	dex-add	76	76	76	sock		1	1					1		scyh							nscy	nagi		0	0	0
+sockScyh	100	1	1	1		0			9	402	dex-add	76	76	76	sock		1	2					1		scyh							nscy	nagi		0	0	0
+sockScyh	100	1	1	1		0			8	403	dex-add	76	76	76	sock		1	3					1		scyh							nscy	nagi		0	0	0
+sockScyh	100	1	1	1		0			7	404	dex-add	76	76	76	sock		1	4					1		scyh							nscy	nagi		0	0	0
+sockScyh	100	1	1	1		0			6	405	dex-add	76	76	76	sock		1	5					1		scyh							nscy	nagi		0	0	0
+sockScyh	100	1	1	1		0			5	406	dex-add	76	76	76	sock		1	6					1		scyh							nscy	nagi		0	0	0
+sockScyh	100	1	1	1		0			10	401	dex-add	76	76	76									1		scyh							nscy	nagi		0	0	0
+sockScyh	100	1	1	1		0			11	402	dex-add	76	76	76									1		scyh							nscy	nagi		0	0	0
+sockScyh	100	1	1	1		0			12	403	dex-add	76	76	76									1		scyh							nscy	nagi		0	0	0
+sockScyh	100	1	1	1		0			13	404	dex-add	76	76	76									1		scyh							nscy	nagi		0	0	0
+sockScyh	100	1	1	1		0			14	405	dex-add	76	76	76									1		scyh							nscy	nagi		0	0	0
+sockScyh	100	1	1	1		0			15	406	dex-add	76	76	76									1		scyh							nscy	nagi		0	0	0
+sockAbow	100	1	1	1		0			10	401	dex-add	76	76	76	sock		1	1					1		abow										0	0	0
+sockAbow	100	1	1	1		0			9	402	dex-add	76	76	76	sock		1	2					1		abow										0	0	0
+sockAbow	100	1	1	1		0			8	403	dex-add	76	76	76	sock		1	3					1		abow										0	0	0
+sockAbow	100	1	1	1		0			7	404	dex-add	76	76	76	sock		1	4					1		abow										0	0	0
+sockAbow	100	1	1	1		0			6	405	dex-add	76	76	76	sock		1	5					1		abow										0	0	0
+sockAbow	100	1	1	1		0			5	406	dex-add	76	76	76	sock		1	6					1		abow										0	0	0
+sockAbow	100	1	1	1		0			10	401	dex-add	76	76	76									1		abow										0	0	0
+sockAbow	100	1	1	1		0			11	402	dex-add	76	76	76									1		abow										0	0	0
+sockAbow	100	1	1	1		0			12	403	dex-add	76	76	76									1		abow										0	0	0
+sockAbow	100	1	1	1		0			13	404	dex-add	76	76	76									1		abow										0	0	0
+sockAbow	100	1	1	1		0			14	405	dex-add	76	76	76									1		abow										0	0	0
+sockAbow	100	1	1	1		0			15	406	dex-add	76	76	76									1		abow										0	0	0
+sockNagi	100	1	1	1		0			10	401	dex-add	102	102	102	innate-skill	760	100	1	sock		1	1	1		nagi										0	0	0
+sockNagi	100	1	1	1		0			9	402	dex-add	102	102	102	innate-skill	760	100	1	sock		1	2	1		nagi										0	0	0
+sockNagi	100	1	1	1		0			8	403	dex-add	102	102	102	innate-skill	760	100	1	sock		1	3	1		nagi										0	0	0
+sockNagi	100	1	1	1		0			7	404	dex-add	102	102	102	innate-skill	760	100	1	sock		1	4	1		nagi										0	0	0
+sockNagi	100	1	1	1		0			6	405	dex-add	102	102	102	innate-skill	760	100	1	sock		1	5	1		nagi										0	0	0
+sockNagi	100	1	1	1		0			5	406	dex-add	102	102	102	innate-skill	760	100	1	sock		1	6	1		nagi										0	0	0
+sockNagi	100	1	1	1		0			10	401	dex-add	102	102	102	innate-skill	760	100	1					1		nagi										0	0	0
+sockNagi	100	1	1	1		0			11	402	dex-add	102	102	102	innate-skill	760	100	1					1		nagi										0	0	0
+sockNagi	100	1	1	1		0			12	403	dex-add	102	102	102	innate-skill	760	100	1					1		nagi										0	0	0
+sockNagi	100	1	1	1		0			13	404	dex-add	102	102	102	innate-skill	760	100	1					1		nagi										0	0	0
+sockNagi	100	1	1	1		0			14	405	dex-add	102	102	102	innate-skill	760	100	1					1		nagi										0	0	0
+sockNagi	100	1	1	1		0			15	406	dex-add	102	102	102	innate-skill	760	100	1					1		nagi										0	0	0
+sockNscy	100	1	1	1		0			10	401	str-add	102	102	102	innate-impact	146	25	1	sock		1	1	1		nscy										0	0	0
+sockNscy	100	1	1	1		0			9	402	str-add	102	102	102	innate-impact	146	25	1	sock		1	2	1		nscy										0	0	0
+sockNscy	100	1	1	1		0			8	403	str-add	102	102	102	innate-impact	146	25	1	sock		1	3	1		nscy										0	0	0
+sockNscy	100	1	1	1		0			7	404	str-add	102	102	102	innate-impact	146	25	1	sock		1	4	1		nscy										0	0	0
+sockNscy	100	1	1	1		0			6	405	str-add	102	102	102	innate-impact	146	25	1	sock		1	5	1		nscy										0	0	0
+sockNscy	100	1	1	1		0			5	406	str-add	102	102	102	innate-impact	146	25	1	sock		1	6	1		nscy										0	0	0
+sockNscy	100	1	1	1		0			10	401	str-add	102	102	102	innate-impact	146	25	1					1		nscy										0	0	0
+sockNscy	100	1	1	1		0			11	402	str-add	102	102	102	innate-impact	146	25	1					1		nscy										0	0	0
+sockNscy	100	1	1	1		0			12	403	str-add	102	102	102	innate-impact	146	25	1					1		nscy										0	0	0
+sockNscy	100	1	1	1		0			13	404	str-add	102	102	102	innate-impact	146	25	1					1		nscy										0	0	0
+sockNscy	100	1	1	1		0			14	405	str-add	102	102	102	innate-impact	146	25	1					1		nscy										0	0	0
+sockNscy	100	1	1	1		0			15	406	str-add	102	102	102	innate-impact	146	25	1					1		nscy										0	0	0
+sockBaxe	100	1	1	1		0			10	401	str-add	76	76	76	sock		1	1					1		baxe							2hbx			0	0	0
+sockBaxe	100	1	1	1		0			9	402	str-add	76	76	76	sock		1	2					1		baxe							2hbx			0	0	0
+sockBaxe	100	1	1	1		0			8	403	str-add	76	76	76	sock		1	3					1		baxe							2hbx			0	0	0
+sockBaxe	100	1	1	1		0			7	404	str-add	76	76	76	sock		1	4					1		baxe							2hbx			0	0	0
+sockBaxe	100	1	1	1		0			6	405	str-add	76	76	76	sock		1	5					1		baxe							2hbx			0	0	0
+sockBaxe	100	1	1	1		0			5	406	str-add	76	76	76	sock		1	6					1		baxe							2hbx			0	0	0
+sockBaxe	100	1	1	1		0			10	401	str-add	76	76	76									1		baxe							2hbx			0	0	0
+sockBaxe	100	1	1	1		0			11	402	str-add	76	76	76									1		baxe							2hbx			0	0	0
+sockBaxe	100	1	1	1		0			12	403	str-add	76	76	76									1		baxe							2hbx			0	0	0
+sockBaxe	100	1	1	1		0			13	404	str-add	76	76	76									1		baxe							2hbx			0	0	0
+sockBaxe	100	1	1	1		0			14	405	str-add	76	76	76									1		baxe							2hbx			0	0	0
+sockBaxe	100	1	1	1		0			15	406	str-add	76	76	76									1		baxe							2hbx			0	0	0
+sockBaxe	100	1	1	1		0			10	401	str-add	102	102	102	innate-fury	147	50	1	sock		1	1	1		2hbx										0	0	0
+sockBaxe	100	1	1	1		0			9	402	str-add	102	102	102	innate-fury	147	50	1	sock		1	2	1		2hbx										0	0	0
+sockBaxe	100	1	1	1		0			8	403	str-add	102	102	102	innate-fury	147	50	1	sock		1	3	1		2hbx										0	0	0
+sockBaxe	100	1	1	1		0			7	404	str-add	102	102	102	innate-fury	147	50	1	sock		1	4	1		2hbx										0	0	0
+sockBaxe	100	1	1	1		0			6	405	str-add	102	102	102	innate-fury	147	50	1	sock		1	5	1		2hbx										0	0	0
+sockBaxe	100	1	1	1		0			5	406	str-add	102	102	102	innate-fury	147	50	1	sock		1	6	1		2hbx										0	0	0
+sockBaxe	100	1	1	1		0			10	401	str-add	102	102	102	innate-fury	147	50	1					1		2hbx										0	0	0
+sockBaxe	100	1	1	1		0			11	402	str-add	102	102	102	innate-fury	147	50	1					1		2hbx										0	0	0
+sockBaxe	100	1	1	1		0			12	403	str-add	102	102	102	innate-fury	147	50	1					1		2hbx										0	0	0
+sockBaxe	100	1	1	1		0			13	404	str-add	102	102	102	innate-fury	147	50	1					1		2hbx										0	0	0
+sockBaxe	100	1	1	1		0			14	405	str-add	102	102	102	innate-fury	147	50	1					1		2hbx										0	0	0
+sockBaxe	100	1	1	1		0			15	406	str-add	102	102	102	innate-fury	147	50	1					1		2hbx										0	0	0
+sockDstf	100	1	1	1		0			10	401	str-add	25	25	25	sock		1	1					1		dstf										0	0	0
+sockDstf	100	1	1	1		0			9	402	str-add	25	25	25	sock		1	2					1		dstf										0	0	0
+sockDstf	100	1	1	1		0			8	403	str-add	25	25	25	sock		1	3					1		dstf										0	0	0
+sockDstf	100	1	1	1		0			7	404	str-add	25	25	25	sock		1	4					1		dstf										0	0	0
+sockDstf	100	1	1	1		0			6	405	str-add	25	25	25	sock		1	5					1		dstf										0	0	0
+sockDstf	100	1	1	1		0			5	406	str-add	25	25	25	sock		1	6					1		dstf										0	0	0
+sockDstf	100	1	1	1		0			10	401	str-add	25	25	25									1		dstf										0	0	0
+sockDstf	100	1	1	1		0			11	402	str-add	25	25	25									1		dstf										0	0	0
+sockDstf	100	1	1	1		0			12	403	str-add	25	25	25									1		dstf										0	0	0
+sockDstf	100	1	1	1		0			13	404	str-add	25	25	25									1		dstf										0	0	0
+sockDstf	100	1	1	1		0			14	405	str-add	25	25	25									1		dstf										0	0	0
+sockDstf	100	1	1	1		0			15	406	str-add	25	25	25									1		dstf										0	0	0
+sockNstf	100	1	1	1		0			10	401	str-add	25	25	25	sock		1	1					1		nstf										0	0	0
+sockNstf	100	1	1	1		0			9	402	str-add	25	25	25	sock		1	2					1		nstf										0	0	0
+sockNstf	100	1	1	1		0			8	403	str-add	25	25	25	sock		1	3					1		nstf										0	0	0
+sockNstf	100	1	1	1		0			7	404	str-add	25	25	25	sock		1	4					1		nstf										0	0	0
+sockNstf	100	1	1	1		0			6	405	str-add	25	25	25	sock		1	5					1		nstf										0	0	0
+sockNstf	100	1	1	1		0			5	406	str-add	25	25	25	sock		1	6					1		nstf										0	0	0
+sockNstf	100	1	1	1		0			10	401	str-add	25	25	25									1		nstf										0	0	0
+sockNstf	100	1	1	1		0			11	402	str-add	25	25	25									1		nstf										0	0	0
+sockNstf	100	1	1	1		0			12	403	str-add	25	25	25									1		nstf										0	0	0
+sockNstf	100	1	1	1		0			13	404	str-add	25	25	25									1		nstf										0	0	0
+sockNstf	100	1	1	1		0			14	405	str-add	25	25	25									1		nstf										0	0	0
+sockNstf	100	1	1	1		0			15	406	str-add	25	25	25									1		nstf										0	0	0
+sockNknf	100	1	1	1		0			10	401	dex-add	76	76	76	sock		1	1					1		nknf										0	0	0
+sockNknf	100	1	1	1		0			9	402	dex-add	76	76	76	sock		1	2					1		nknf										0	0	0
+sockNknf	100	1	1	1		0			8	403	dex-add	76	76	76	sock		1	3					1		nknf										0	0	0
+sockNknf	100	1	1	1		0			7	404	dex-add	76	76	76	sock		1	4					1		nknf										0	0	0
+sockNknf	100	1	1	1		0			6	405	dex-add	76	76	76	sock		1	5					1		nknf										0	0	0
+sockNknf	100	1	1	1		0			5	406	dex-add	76	76	76	sock		1	6					1		nknf										0	0	0
+sockNknf	100	1	1	1		0			10	401	dex-add	76	76	76									1		nknf										0	0	0
+sockNknf	100	1	1	1		0			11	402	dex-add	76	76	76									1		nknf										0	0	0
+sockNknf	100	1	1	1		0			12	403	dex-add	76	76	76									1		nknf										0	0	0
+sockNknf	100	1	1	1		0			13	404	dex-add	76	76	76									1		nknf										0	0	0
+sockNknf	100	1	1	1		0			14	405	dex-add	76	76	76									1		nknf										0	0	0
+sockNknf	100	1	1	1		0			15	406	dex-add	76	76	76									1		nknf										0	0	0
+sockPspe	100	1	1	1		0			10	401	str-add	102	102	102	sock		1	1	innate-grace	84	5	1	1		pspe										0	0	0
+sockPspe	100	1	1	1		0			9	402	str-add	102	102	102	sock		1	2	innate-grace	84	5	1	1		pspe										0	0	0
+sockPspe	100	1	1	1		0			8	403	str-add	102	102	102	sock		1	3	innate-grace	84	5	1	1		pspe										0	0	0
+sockPspe	100	1	1	1		0			7	404	str-add	102	102	102	sock		1	4	innate-grace	84	5	1	1		pspe										0	0	0
+sockPspe	100	1	1	1		0			6	405	str-add	102	102	102	sock		1	5	innate-grace	84	5	1	1		pspe										0	0	0
+sockPspe	100	1	1	1		0			5	406	str-add	102	102	102	sock		1	6	innate-grace	84	5	1	1		pspe										0	0	0
+sockPspe	100	1	1	1		0			10	401	str-add	102	102	102	innate-grace	84	5	1					1		pspe										0	0	0
+sockPspe	100	1	1	1		0			11	402	str-add	102	102	102	innate-grace	84	5	1					1		pspe										0	0	0
+sockPspe	100	1	1	1		0			12	403	str-add	102	102	102	innate-grace	84	5	1					1		pspe										0	0	0
+sockPspe	100	1	1	1		0			13	404	str-add	102	102	102	innate-grace	84	5	1					1		pspe										0	0	0
+sockPspe	100	1	1	1		0			14	405	str-add	102	102	102	innate-grace	84	5	1					1		pspe										0	0	0
+sockPspe	100	1	1	1		0			15	406	str-add	102	102	102	innate-grace	84	5	1					1		pspe										0	0	0
+sockScrd	100	1	1	1		0			10	401	dex-add	76	76	76	innate-skill	760	100	1	sock		1	1	1		scrd										0	0	0
+sockScrd	100	1	1	1		0			9	402	dex-add	76	76	76	innate-skill	760	100	1	sock		1	2	1		scrd										0	0	0
+sockScrd	100	1	1	1		0			8	403	dex-add	76	76	76	innate-skill	760	100	1	sock		1	3	1		scrd										0	0	0
+sockScrd	100	1	1	1		0			7	404	dex-add	76	76	76	innate-skill	760	100	1	sock		1	4	1		scrd										0	0	0
+sockScrd	100	1	1	1		0			6	405	dex-add	76	76	76	innate-skill	760	100	1	sock		1	5	1		scrd										0	0	0
+sockScrd	100	1	1	1		0			5	406	dex-add	76	76	76	innate-skill	760	100	1	sock		1	6	1		scrd										0	0	0
+sockScrd	100	1	1	1		0			10	401	dex-add	76	76	76	innate-skill	760	100	1					1		scrd										0	0	0
+sockScrd	100	1	1	1		0			11	402	dex-add	76	76	76	innate-skill	760	100	1					1		scrd										0	0	0
+sockScrd	100	1	1	1		0			12	403	dex-add	76	76	76	innate-skill	760	100	1					1		scrd										0	0	0
+sockScrd	100	1	1	1		0			13	404	dex-add	76	76	76	innate-skill	760	100	1					1		scrd										0	0	0
+sockScrd	100	1	1	1		0			14	405	dex-add	76	76	76	innate-skill	760	100	1					1		scrd										0	0	0
+sockScrd	100	1	1	1		0			15	406	dex-add	76	76	76	innate-skill	760	100	1					1		scrd										0	0	0
+sockAmu	100	1	1	1		0			10	494	dex-add		1	1									1		scrd										0	0	0
