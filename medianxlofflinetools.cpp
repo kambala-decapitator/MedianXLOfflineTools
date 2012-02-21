@@ -821,6 +821,8 @@ void MedianXLOfflineTools::createLayout()
     mainLayout->addWidget(ui.statsGroupBox);
 
     ui.statsTableWidget->verticalHeader()->setDefaultAlignment(Qt::AlignCenter);
+    ui.statsTableWidget->horizontalHeader()->setResizeMode(QHeaderView::Stretch);
+    ui.statsTableWidget->setFixedHeight(ui.statsTableWidget->height());
 }
 
 void MedianXLOfflineTools::createCharacterGroupBoxLayout()

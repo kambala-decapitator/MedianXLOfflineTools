@@ -55,10 +55,13 @@ ItemsPropertiesSplitter::ItemsPropertiesSplitter(ItemStorageTableView *itemsView
             button->resize(button->minimumSizeHint());
         }
 
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Waddress-of-temporary"
-        keyReleaseEvent(&QKeyEvent(QEvent::KeyRelease, Qt::Key_Shift, 0)); // hacky way to set button icons
-#pragma clang diagnostic pop
+//#pragma warning(disable : 4068)
+//#pragma clang diagnostic push
+//#pragma clang diagnostic ignored "-Waddress-of-temporary"
+        QKeyEvent keyEvent(QEvent::KeyRelease, Qt::Key_Shift, 0);
+        keyReleaseEvent(&keyEvent);
+        //keyReleaseEvent(&QKeyEvent(QEvent::KeyRelease, Qt::Key_Shift, 0)); // hacky way to set button icons
+//#pragma clang diagnostic pop
 
         _pageSpinBox = new QDoubleSpinBox(this);
         _pageSpinBox->setDecimals(0);
