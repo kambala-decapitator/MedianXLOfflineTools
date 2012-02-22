@@ -5,6 +5,7 @@
 
 use strict;
 use warnings;
+use File::Path qw/make_path/;
 # use Data::Dumper;
 
 my $locale = $ARGV[0] // 'en', my $tbl;
@@ -215,6 +216,7 @@ if ($locale ne 'en')
 
 # generate
 my $prefix = "generated/$locale";
+make_path $prefix;
 
 my $itemTypes = parsetxt("itemtypes.txt", "#code"=>"0", "code0"=>4, "equiv1"=>"5", equiv2 => 6, bodyLoc => 9, "class"=>30);
 open my $out, ">", "generated/itemtypes.txt";

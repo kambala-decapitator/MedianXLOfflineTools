@@ -1,4 +1,7 @@
 v0.2.1:
+- gear items should have 8 columns 
+- show belt items in gear
+- navigation menu doesn't disable on items window close
 - show experince bar and completion of current level in %
 - completed skill/stat quests
 - export item to bbcode/html
@@ -25,6 +28,7 @@ images.files   += images/logo.png
 INSTALLS       += images
 
 future versions:
+- new data structure for items - QMap with item storage as a key
 - sort stashes
 - affix rlvl (and maybe names - then modify help text) support
 - drag & drop
