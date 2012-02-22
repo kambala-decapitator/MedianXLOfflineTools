@@ -24,10 +24,7 @@ images.files   += images/splashscreen.png
 images.files   += images/logo.png
 INSTALLS       += images
 
-write in changelog:
-- correct text color on the class charm :P
-
-v0.3:
+future versions:
 - sort stashes
 - affix rlvl (and maybe names - then modify help text) support
 - drag & drop
@@ -41,3 +38,4 @@ v0.3:
 - display actual stat values
 - display skill tree
 - skills allocation
+- item requirements
