@@ -271,7 +271,7 @@ void MedianXLOfflineTools::saveCharacter()
         backupFile(inputFile);
         if (!inputFile.open(QIODevice::WriteOnly))
         {
-            ERROR_BOX_FILE(tr("Error creating file '%1'"), inputFile);
+            showErrorMessageBoxForFile(tr("Error creating file '%1'"), inputFile);
             continue;
         }
 
@@ -352,12 +352,12 @@ void MedianXLOfflineTools::saveCharacter()
                     if (extension == "d2s") // delete
                     {
                         if (!sourceFile.remove())
-                            ERROR_BOX_FILE(tr("Error removing file '%1'"), sourceFile);
+                            showErrorMessageBoxForFile(tr("Error removing file '%1'"), sourceFile);
                     }
                     else // rename
                     {
                         if (!sourceFile.rename(fileName + "." + extension) && !isOldNameEmpty)
-                            ERROR_BOX_FILE(tr("Error renaming file '%1'"), sourceFile);
+                            showErrorMessageBoxForFile(tr("Error renaming file '%1'"), sourceFile);
                     }
                 }
 
@@ -374,10 +374,10 @@ void MedianXLOfflineTools::saveCharacter()
             INFO_BOX(tr("File '%1' successfully saved!").arg(QDir::toNativeSeparators(saveFileName)));
         }
         else
-            ERROR_BOX_FILE(tr("Error writing file '%1'"), outputFile);
+            showErrorMessageBoxForFile(tr("Error writing file '%1'"), outputFile);
     }
     else
-        ERROR_BOX_FILE(tr("Error creating file '%1'"), outputFile);
+        showErrorMessageBoxForFile(tr("Error creating file '%1'"), outputFile);
 }
 
 void MedianXLOfflineTools::statChanged(int newValue)
@@ -659,7 +659,7 @@ void MedianXLOfflineTools::giveCube()
         _itemsDialog->updateItems(plugyStashesExistenceHash);
 
     ui.actionGiveCube->setDisabled(true);
-    INFO_BOX(tr("Cube has been stored in %1 at (%2,%3)").arg(ItemsViewerDialog::tabNames.at(ItemsViewerDialog::tabIndexFromItemStorage(cube->storage))).arg(cube->row + 1).arg(cube->column + 1));
+    INFO_BOX(tr("Cube has been stored in %1 at (%2,%3)").arg(ItemsViewerDialog::tabNameAtIndex(ItemsViewerDialog::tabIndexFromItemStorage(cube->storage))).arg(cube->row + 1).arg(cube->column + 1));
 }
 
 void MedianXLOfflineTools::backupSettingTriggered(bool checked)
@@ -1099,7 +1099,7 @@ bool MedianXLOfflineTools::processSaveFile(const QString &charPath)
     QFile inputFile(charPath);
     if (!inputFile.open(QIODevice::ReadOnly))
     {
-        ERROR_BOX_FILE(tr("Error opening file '%1'"), inputFile);
+        showErrorMessageBoxForFile(tr("Error opening file '%1'"), inputFile);
         return false;
     }
 
@@ -1579,7 +1579,7 @@ void MedianXLOfflineTools::processPlugyStash(QHash<Enums::ItemStorage::ItemStora
         return;
     if (!(info.exists = inputFile.open(QIODevice::ReadOnly)))
     {
-        ERROR_BOX_FILE(tr("Error opening PlugY stash '%1'"), inputFile);
+        showErrorMessageBoxForFile(tr("Error opening PlugY stash '%1'"), inputFile);
         return;
     }
 
@@ -1738,7 +1738,7 @@ void MedianXLOfflineTools::updateUI()
     ui.signetsOfSkillEatenLineEdit->setStatusTip(maxValueFormat.arg(Enums::CharacterStats::SignetsOfSkillMax));
     ui.stashGoldLineEdit->setStatusTip(maxValueFormat.arg(QLocale().toString(Enums::CharacterStats::StashGoldMax)));
     if (_sharedGold)
-        ui.stashGoldLineEdit->setStatusTip(ui.stashGoldLineEdit->statusTip() + ", " + tr("Shared: %1").arg(QLocale().toString(_sharedGold)));
+        ui.stashGoldLineEdit->setStatusTip(ui.stashGoldLineEdit->statusTip() + ", " + tr("Shared: %1", "amount of gold in shared stash").arg(QLocale().toString(_sharedGold)));
 
     if (_editableCharInfo.mercenary.exists)
     {
@@ -2033,11 +2033,11 @@ void MedianXLOfflineTools::backupFile(QFile &file)
     {
         QFile backupFile(file.fileName() + "." + backupExtension);
         if (backupFile.exists() && !backupFile.remove())
-            ERROR_BOX_FILE(tr("Error removing old backup '%1'"), backupFile);
+            showErrorMessageBoxForFile(tr("Error removing old backup '%1'"), backupFile);
         else
         {
             if (!file.copy(backupFile.fileName()))
-                ERROR_BOX_FILE(tr("Error creating backup of '%1'"), file);
+                showErrorMessageBoxForFile(tr("Error creating backup of '%1'"), file);
         }
     }
 }
@@ -2048,4 +2048,9 @@ QHash<int, bool> MedianXLOfflineTools::getPlugyStashesExistenceHash() const
     for (QHash<Enums::ItemStorage::ItemStorageEnum, PlugyStashInfo>::const_iterator iter = _plugyStashesHash.constBegin(); iter != _plugyStashesHash.constEnd(); ++iter)
         plugyStashesExistenceHash[iter.key()] = iter.value().exists;
     return plugyStashesExistenceHash;
+}
+
+void MedianXLOfflineTools::showErrorMessageBoxForFile(const QString &message, const QFile &file)
+{
+    CUSTOM_BOX_OK(critical, message.arg(QDir::toNativeSeparators(file.fileName())) + "\n" + tr("Reason: %1", "error with file").arg(file.errorString()));
 }

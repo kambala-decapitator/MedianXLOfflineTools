@@ -14,7 +14,12 @@
 
 const QByteArray ItemParser::itemHeader("JM");
 const QByteArray ItemParser::plugyPageHeader("ST");
-const QString ItemParser::enhancedDamageFormat = tr("+%1% Enhanced Damage");
+
+const QString &ItemParser::enhancedDamageFormat()
+{
+    static const QString s = tr("+%1% Enhanced Damage");
+    return s;
+}
 
 ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &bytes)
 {
@@ -270,7 +275,7 @@ PropertiesMultiMap ItemParser::parseItemProperties(ReverseBitReader &bitReader, 
                 qint16 minEnhDamage = bitReader.readNumber(txtProperty.bits) - txtProperty.add;
                 if (minEnhDamage < propToAdd.value) // it shouldn't possible (they must always be equal), but let's make sure
                     propToAdd.value = minEnhDamage;
-                propToAdd.displayString = enhancedDamageFormat.arg(propToAdd.value);
+                propToAdd.displayString = enhancedDamageFormat().arg(propToAdd.value);
                 //if (minEnhDamage != propToAdd.value)
                 //    propToAdd.displayString += " " + QString("[min ED %1 != max ED %2]").arg(minEnhDamage).arg(propToAdd.value);
             }
@@ -323,11 +328,11 @@ PropertiesMultiMap ItemParser::parseItemProperties(ReverseBitReader &bitReader, 
             }
 
             if (id == 83)
-                propToAdd.displayString = tr("+%1 to %2 Skill Levels").arg(propToAdd.value).arg(Enums::ClassName::classes().at(propToAdd.param));
+                propToAdd.displayString = tr("+%1 to %2 Skill Levels", "+x to class skills").arg(propToAdd.value).arg(Enums::ClassName::classes().at(propToAdd.param));
             else if (id == 97 || id == 107)
             {
                 const SkillInfo &skill = ItemDataBase::Skills()->at(propToAdd.param);
-                propToAdd.displayString = tr("+%1 to %2").arg(propToAdd.value).arg(skill.name);
+                propToAdd.displayString = tr("+%1 to %2", "oskill").arg(propToAdd.value).arg(skill.name);
                 if (id == 107)
                     propToAdd.displayString += " " + tr("(%1 Only)", "class-specific skill").arg(skill.classCode > -1 ? Enums::ClassName::classes().at(skill.classCode) : "TROLOLOL");
             }

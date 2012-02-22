@@ -65,7 +65,7 @@ void FindResultsWidget::updateItems(QList<SearchResultItem> *newItems)
         ItemsList locationItems = ItemDataBase::itemsStoredIn(Enums::ItemStorage::metaEnum().value(i), i == ItemsViewerDialog::GearIndex, 0, &items);
         _foundItemsMap[i] = locationItems;
 
-        QString topLevelItemText = ItemsViewerDialog::tabNames.at(i);
+        QString topLevelItemText = ItemsViewerDialog::tabNameAtIndex(i);
         if (!locationItems.isEmpty())
             topLevelItemText += QString(" (%1)").arg(locationItems.size());
         QTreeWidgetItem *topLevelItem = new QTreeWidgetItem(QStringList(topLevelItemText));

@@ -30,10 +30,10 @@ public:
     };
 
     static const int cellSize;
-    static const QStringList tabNames;
     static const QList<int> rows;
 
     static int tabIndexFromItemStorage(int storage);
+    static const QString &tabNameAtIndex(int i);
 
     explicit ItemsViewerDialog(const QHash<int, bool> &plugyStashesExistenceHash, QWidget *parent = 0);
 

@@ -326,7 +326,7 @@ void PropertiesViewerWidget::modifyMysticOrbProperty(int id, int decrement, Prop
         if (isEnhancedDamageProp)
         {
             newBits += newBits;
-            prop.displayString = ItemParser::enhancedDamageFormat.arg(prop.value);
+            prop.displayString = ItemParser::enhancedDamageFormat().arg(prop.value);
         }
         _item->bitString.replace(valueIndex, bitsLength, newBits); // place modified value
         props->replace(id, prop);

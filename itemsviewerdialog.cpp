@@ -15,8 +15,6 @@
 
 
 const int ItemsViewerDialog::cellSize = 32;
-// add elements here when adding new tab
-const QStringList ItemsViewerDialog::tabNames = QStringList() << tr("Gear") << tr("Inventory") << tr("Cube") << tr("Stash") << tr("Personal Stash") << tr("Shared Stash") << tr("Hardcore Stash");
 const QList<int> ItemsViewerDialog::rows = QList<int>() << 11 << 6 << 8 << 10 << 10 << 10 << 10;
 
 ItemsViewerDialog::ItemsViewerDialog(const QHash<int, bool> &plugyStashesExistenceHash, QWidget *parent) : QDialog(parent), _tabWidget(new QTabWidget(this))
@@ -35,7 +33,7 @@ ItemsViewerDialog::ItemsViewerDialog(const QHash<int, bool> &plugyStashesExisten
         connect(splitter, SIGNAL(cubeDeleted(bool)), SIGNAL(cubeDeleted(bool)));
         connect(splitter, SIGNAL(cubeDeleted(bool)), SLOT(setCubeTabDisabled(bool)));
         //connect(splitter, SIGNAL(storageModified(int)), SLOT(storageItemsModified(int)));
-        _tabWidget->addTab(splitter, tabNames.at(i));
+        _tabWidget->addTab(splitter, tabNameAtIndex(i));
     }
     updateItems(plugyStashesExistenceHash);
 
@@ -97,7 +95,7 @@ void ItemsViewerDialog::itemCountChangedInCurrentTab(int newCount)
 void ItemsViewerDialog::itemCountChangedInTab(int tabIndex, int newCount)
 {
     QString newTabTitle = isPlugyStorageIndex(tabIndex) ? QString(" (%1/%2)").arg(splitterAtIndex(tabIndex)->itemsModel()->itemCount()).arg(newCount) : QString(" (%1)").arg(newCount);
-    _tabWidget->setTabText(tabIndex, tabNames.at(tabIndex) + newTabTitle);
+    _tabWidget->setTabText(tabIndex, tabNameAtIndex(tabIndex) + newTabTitle);
 }
 
 void ItemsViewerDialog::updateItems(const QHash<int, bool> &plugyStashesExistenceHash)
@@ -180,6 +178,13 @@ void ItemsViewerDialog::updateItems(const QHash<int, bool> &plugyStashesExistenc
 int ItemsViewerDialog::tabIndexFromItemStorage(int storage)
 {
     return storage > Enums::ItemStorage::Inventory ? storage - 2 : storage;
+}
+
+const QString &ItemsViewerDialog::tabNameAtIndex(int i)
+{
+    // add elements here when adding new tab
+    static const QStringList tabNames = QStringList() << tr("Gear") << tr("Inventory") << tr("Cube") << tr("Stash") << tr("Personal Stash") << tr("Shared Stash") << tr("Hardcore Stash");
+    return tabNames.at(i);
 }
 
 void ItemsViewerDialog::showItem(ItemInfo *item)

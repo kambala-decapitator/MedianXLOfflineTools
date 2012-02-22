@@ -141,6 +141,7 @@ private:
     void clearItems(bool sharedStashPathChanged = true, bool hcStashPathChanged = true);
 
     void backupFile(QFile &file);
+    void showErrorMessageBoxForFile(const QString &message, const QFile &file);
 };
 
 #endif // MEDIANXLOFFLINETOOLS_H

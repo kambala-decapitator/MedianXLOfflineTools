@@ -8,20 +8,6 @@
 // statics
 
 const int QD2CharRenamer::maxNameLength = 15;
-const QStringList QD2CharRenamer::colorNames = QStringList()
-    << tr("white")
-    << tr("red")
-    << tr("green")
-    << tr("blue")
-    << tr("gold")
-    << tr("dark gray")
-    // black was here
-    << tr("tan")
-    << tr("orange")
-    << tr("yellow")
-    << "foo" // to skip dark green
-    << tr("violet")
-    ;
 
 void QD2CharRenamer::updateNamePreview(QTextEdit *previewTextEdit, const QString &name)
 {
@@ -35,11 +21,13 @@ void QD2CharRenamer::updateNamePreview(QTextEdit *previewTextEdit, const QString
 
 // ctor
 
-QD2CharRenamer::QD2CharRenamer(const QString &originalName, bool shouldWarn, QWidget *parent) : QDialog(parent), _originalCharName(originalName), _shouldWarn(shouldWarn)
+QD2CharRenamer::QD2CharRenamer(const QString &originalName, bool shouldWarn, QWidget *parent) : QDialog(parent), _originalCharName(originalName), _shouldWarn(shouldWarn),
+    colorNames(QStringList() << tr("white") << tr("red") << tr("green") << tr("blue") << tr("gold") << tr("dark gray") << tr("tan") << tr("orange") << tr("yellow") << "foo" << tr("violet"))
 {
     ui.setupUi(this);
     setWindowFlags(windowFlags() & ~Qt::WindowContextHelpButtonHint);
     setFixedSize(size());
+
 
     createColorMenu();
     ui.charNameLineEdit->setMaxLength(maxNameLength);

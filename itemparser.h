@@ -16,7 +16,7 @@ class ItemParser
 
 public:
     static const QByteArray itemHeader, plugyPageHeader;
-    static const QString enhancedDamageFormat;
+    static const QString &enhancedDamageFormat(); // stupid lupdate
 
     static ItemInfo *parseItem(QDataStream &inputDataStream, const QByteArray &bytes);
     static PropertiesMultiMap parseItemProperties(ReverseBitReader &bitReader, bool *ok);

@@ -188,6 +188,7 @@ void FindItemsDialog::toggleResults()
 void FindItemsDialog::showHelp()
 {
     QDialog dlg;
+    dlg.setWindowFlags(dlg.windowFlags() & ~Qt::WindowContextHelpButtonHint);
     dlg.setWindowTitle(tr("Search help"));
 
     QTextEdit *textEdit = new QTextEdit(&dlg);
@@ -198,7 +199,7 @@ void FindItemsDialog::showHelp()
                           "<h3>Item names</h3>"
                           "<p>All items except non-magical ones have their quality listed inside [] at the very beginning of item description. Valid values are: magic, rare, unique, set, crafted, honorific.</p>"
                           "<p>Runewords and charms are considered a special type of quality, so they have [runeword] and [charm] respectively.</p>"
-                          "<p>Ethereal items also have [ethereal] in the end of item name (just name, not full description).</p>"
+                          "<p>Ethereal items also have [ethereal] in the end of the item name.</p>"
                           "<p>Set items have complete set name listed inside [] after set item name.</p>"
                           "<p>Personalized items have character name as it appears in game. The exception are items with affixes because affix display isn't supported in the current version of the application.</p>"
                           "<p>To see an example of such an item description, simply hover your mouse upon any item in the items window and look at the tooltip.</p>"
