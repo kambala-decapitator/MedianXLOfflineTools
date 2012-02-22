@@ -10,9 +10,6 @@
 #define INFO_BOX(message) CUSTOM_BOX_OK(information, message)
 #define WARNING_BOX(message) CUSTOM_BOX_OK(warning, message)
 #define ERROR_BOX_NO_PARENT(message) QMessageBox::critical(0, qApp->applicationName(), message)
-// file is QFile instance
-//#define ERROR_BOX_FILE(message, file) CUSTOM_BOX_OK(critical, message.arg(QDir::toNativeSeparators(file.fileName())) + "\n" + \
-//                                                              qApp->translate("MedianXLOfflineTools", "Reason: %1", "error with file").arg(file.errorString()))
 
 // string building
 class QString;
