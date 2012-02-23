@@ -285,7 +285,8 @@ public:
     enum ItemLocationEnum
     {
         Stored = 0,
-        Equipped
+        Equipped,
+        Belt
     };
 };
 

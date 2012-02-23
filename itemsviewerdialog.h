@@ -53,7 +53,8 @@ protected:
     void closeEvent(QCloseEvent *event);
 
 signals:
-    void cubeDeleted(bool deleted = true); // param is here because I want to connect this signal directly to QAction's setEnabled() slot
+    void cubeDeleted(bool deleted = true); // param is here because I want to connect this signal directly to QAction's setEnabled()  slot
+    void closing(bool closing = true);     // param is here because I want to connect this signal directly to QAction's setDisabled() slot
 
 private slots:
     void tabChanged(int tabIndex);

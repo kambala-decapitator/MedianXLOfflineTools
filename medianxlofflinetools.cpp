@@ -593,6 +593,7 @@ void MedianXLOfflineTools::showItems(bool activate /*= true*/)
         _itemsDialog = new ItemsViewerDialog(getPlugyStashesExistenceHash(), this);
         connect(_itemsDialog->tabWidget(), SIGNAL(currentChanged(int)), SLOT(itemStorageTabChanged(int)));
         connect(_itemsDialog, SIGNAL(cubeDeleted(bool)), ui.actionGiveCube, SLOT(setEnabled(bool)));
+        connect(_itemsDialog, SIGNAL(closing(bool)), ui.menuGoToPage->menuAction(), SLOT(setDisabled(bool)));
         _itemsDialog->show();
 
         if (!activate)
@@ -1520,22 +1521,6 @@ bool MedianXLOfflineTools::processSaveFile(const QString &charPath)
             break;
         }
         processPlugyStash(iter, &editableCharInfo.items.character);
-    }
-
-    // check for duped items
-    QSet<quint32> itemIDs;
-    foreach (ItemInfo *item, editableCharInfo.items.character)
-    {
-        if (item->isExtended)
-        {
-            if (itemIDs.contains(item->guid))
-            {
-                WARNING_BOX(tr("Like duping items, eh?"));
-                break;
-            }
-            else
-                itemIDs.insert(item->guid);
-        }
     }
 
     clearItems(sharedStashPathChanged, hcStashPathChanged);

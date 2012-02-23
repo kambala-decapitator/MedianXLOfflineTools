@@ -12,12 +12,10 @@ class ItemStorageTableModel : public QAbstractTableModel
     Q_OBJECT
 
 public:
-    static const int columns;
-
-    explicit ItemStorageTableModel(int rows, QObject *parent = 0) : QAbstractTableModel(parent), _rows(rows) {}
+    explicit ItemStorageTableModel(int rows, int columns, QObject *parent = 0) : QAbstractTableModel(parent), _rows(rows), _columns(columns) {}
 
     virtual int    rowCount(const QModelIndex &parent = QModelIndex()) const { Q_UNUSED(parent); return _rows; }
-    virtual int columnCount(const QModelIndex &parent = QModelIndex()) const { Q_UNUSED(parent); return columns; }
+    virtual int columnCount(const QModelIndex &parent = QModelIndex()) const { Q_UNUSED(parent); return _columns; }
     virtual QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
 
     int itemCount() const { return _itemsHash.size(); }
@@ -30,7 +28,7 @@ public:
     void removeItem(ItemInfo *item) { _itemsHash.remove(qMakePair(item->row, item->column)); }
 
 private:
-    int _rows;
+    int _rows, _columns;
 
     typedef QPair<int, int> TableKey;
     QHash<TableKey, ItemInfo *> _itemsHash;

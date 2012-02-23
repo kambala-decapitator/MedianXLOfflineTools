@@ -20,15 +20,15 @@
 
 static const QString iconPathFormat(":/PlugyArrows/icons/plugy/%1.png");
 
-ItemsPropertiesSplitter::ItemsPropertiesSplitter(ItemStorageTableView *itemsView, ItemStorageTableModel *itemsModel, bool shouldCreateNavigation, QWidget *parent)
-    : QSplitter(Qt::Horizontal, parent), _itemsView(itemsView), _itemsModel(itemsModel)
+ItemsPropertiesSplitter::ItemsPropertiesSplitter(ItemStorageTableView *itemsView, bool shouldCreateNavigation, QWidget *parent)
+    : QSplitter(Qt::Horizontal, parent), _itemsView(itemsView)
 {
     _itemsView->setContextMenuPolicy(Qt::CustomContextMenu);
     _itemsView->setEditTriggers(QAbstractItemView::NoEditTriggers);
     _itemsView->setHorizontalScrollMode(QAbstractItemView::ScrollPerPixel);
     _itemsView->setVerticalScrollMode(QAbstractItemView::ScrollPerPixel);
     _itemsView->setSelectionMode(QAbstractItemView::SingleSelection);
-    _itemsView->setStyleSheet("QTableView { background-color: black; gridline-color: green; }"
+    _itemsView->setStyleSheet("QTableView { background-color: black; gridline-color: #808080; }"
                               "QTableView::item:selected { background-color: black; border: 1px solid #d9d9d9; }"
                               "QTableView::icon:selected { right: 1px; }"
                              );
@@ -36,7 +36,6 @@ ItemsPropertiesSplitter::ItemsPropertiesSplitter(ItemStorageTableView *itemsView
     _itemsView->setCornerButtonEnabled(false);
     _itemsView->horizontalHeader()->hide();
     _itemsView->verticalHeader()->hide();
-    _itemsView->setModel(_itemsModel);
 
     _itemsView->installEventFilter(this);
     installEventFilter(this);
@@ -52,16 +51,11 @@ ItemsPropertiesSplitter::ItemsPropertiesSplitter(ItemStorageTableView *itemsView
         foreach (QPushButton *button, buttons)
         {
             button->setIconSize(QSize(32, 20));
-            button->resize(button->minimumSizeHint());
+//            button->resize(button->minimumSizeHint());
         }
-
-//#pragma warning(disable : 4068)
-//#pragma clang diagnostic push
-//#pragma clang diagnostic ignored "-Waddress-of-temporary"
+        // hacky way to set button icons
         QKeyEvent keyEvent(QEvent::KeyRelease, Qt::Key_Shift, 0);
         keyReleaseEvent(&keyEvent);
-        //keyReleaseEvent(&QKeyEvent(QEvent::KeyRelease, Qt::Key_Shift, 0)); // hacky way to set button icons
-//#pragma clang diagnostic pop
 
         _pageSpinBox = new QDoubleSpinBox(this);
         _pageSpinBox->setDecimals(0);
@@ -83,6 +77,8 @@ ItemsPropertiesSplitter::ItemsPropertiesSplitter(ItemStorageTableView *itemsView
         QWidget *w = new QWidget(this);
         QVBoxLayout *vlayout = new QVBoxLayout(w);
         vlayout->addWidget(_itemsView);
+        vlayout->setSpacing(0);
+        vlayout->setContentsMargins(QMargins());
         vlayout->addLayout(hlayout);
 
         addWidget(w);
@@ -99,7 +95,6 @@ ItemsPropertiesSplitter::ItemsPropertiesSplitter(ItemStorageTableView *itemsView
     setChildrenCollapsible(false);
     setStretchFactor(1, 5);
 
-    connect(_itemsView->selectionModel(), SIGNAL(currentChanged(const QModelIndex &, const QModelIndex &)), SLOT(itemSelected(const QModelIndex &)));
     connect(_itemsView, SIGNAL(customContextMenuRequested(const QPoint &)), SLOT(showContextMenu(const QPoint &)));
     connect(_itemsView, SIGNAL(deleteSelectedItem()), SLOT(deleteItem()));
 
@@ -116,9 +111,11 @@ ItemsPropertiesSplitter::ItemsPropertiesSplitter(ItemStorageTableView *itemsView
     _itemsView->setFocus();
 }
 
-void ItemsPropertiesSplitter::itemSelected(const QModelIndex &index)
+void ItemsPropertiesSplitter::setModel(ItemStorageTableModel *model)
 {
-    _propertiesWidget->showItem(_itemsModel->itemAt(index));
+    _itemsModel = model;
+    _itemsView->setModel(model);
+    connect(_itemsView->selectionModel(), SIGNAL(currentChanged(const QModelIndex &, const QModelIndex &)), SLOT(itemSelected(const QModelIndex &)));
 }
 
 void ItemsPropertiesSplitter::keyPressEvent(QKeyEvent *keyEvent)
@@ -171,6 +168,11 @@ bool ItemsPropertiesSplitter::keyEventHasShift(QKeyEvent *keyEvent)
 void ItemsPropertiesSplitter::setShortcutTextInButtonTooltip(QPushButton *button, const QKeySequence &keySequence)
 {
     button->setToolTip(keySequence.toString(QKeySequence::NativeText));
+}
+
+void ItemsPropertiesSplitter::itemSelected(const QModelIndex &index)
+{
+    _propertiesWidget->showItem(_itemsModel->itemAt(index));
 }
 
 void ItemsPropertiesSplitter::showItem(ItemInfo *item)
@@ -276,27 +278,26 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
     {
         QList<QAction *> actions;
 
-        // TODO: uncomment when implementing
-        //QAction *actionHtml = new QAction("HTML", _itemsView), *actionBbCode = new QAction("BBCode", _itemsView);
-        //connect(actionHtml, SIGNAL(triggered()), SLOT(exportHtml()));
-        //connect(actionBbCode, SIGNAL(triggered()), SLOT(exportBbCode()));
-        //QMenu *menuExport = new QMenu(tr("Export as"), _itemsView);
-        //menuExport->addActions(QList<QAction *>() << actionHtml << actionBbCode);
-        //actions << menuExport->menuAction();
+        QAction *actionHtml = new QAction("HTML", _itemsView), *actionBbCode = new QAction("BBCode", _itemsView);
+        connect(actionHtml, SIGNAL(triggered()), SLOT(exportHtml()));
+        connect(actionBbCode, SIGNAL(triggered()), SLOT(exportBbCode()));
+        QMenu *menuExport = new QMenu(tr("Export as"), _itemsView);
+        menuExport->addActions(QList<QAction *>() << actionHtml << actionBbCode);
+        actions << menuExport->menuAction();
 
-        //QAction *separator = new QAction(_itemsView);
-        //separator->setSeparator(true);
-        //actions << separator;
+        QAction *separator = new QAction(_itemsView);
+        separator->setSeparator(true);
+        actions << separator;
 
         if (item->quality == Enums::ItemQuality::Set || (item->quality == Enums::ItemQuality::Unique && !ItemDataBase::isUberCharm(item)))
         {
             QAction *actionShards = new QAction(QIcon(ResourcePathManager::pathForImageName("invfary4")), tr("Arcane Shards"), _itemsView);
-            //actionShards->setShortcut(QKeySequence("Alt+D"));
+            actionShards->setShortcut(QKeySequence("Alt+D"));
             actionShards->setObjectName("shards");
             connect(actionShards, SIGNAL(triggered()), SLOT(disenchantItem()));
 
             QAction *actionSol = new QAction(QIcon(ResourcePathManager::pathForImageName("sigil1b")), tr("Signet of Learning"), _itemsView);
-            //actionSol->setShortcut(QKeySequence("Ctrl+D"));
+            actionSol->setShortcut(QKeySequence("Ctrl+D"));
             actionSol->setObjectName("signet");
             connect(actionSol, SIGNAL(triggered()), SLOT(disenchantItem()));
 
@@ -324,6 +325,7 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
         if (_propertiesWidget->hasMysticOrbs())
         {
             QAction *actionRemoveMO = new QAction(tr("Remove Mystic Orbs"), _itemsView);
+            actionRemoveMO->setShortcut(QKeySequence("Ctrl+M"));
             connect(actionRemoveMO, SIGNAL(triggered()), _propertiesWidget, SLOT(removeAllMysticOrbs()));
             actions << actionRemoveMO;
         }
@@ -337,7 +339,10 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
 #endif
                     );
         connect(actionDelete, SIGNAL(triggered()), SLOT(deleteItem()));
-        actions << actionDelete;
+
+        separator = new QAction(_itemsView);
+        separator->setSeparator(true);
+        actions << separator << actionDelete;
 
         QMenu::exec(actions, _itemsView->mapToGlobal(pos));
     }
@@ -374,7 +379,7 @@ void ItemsPropertiesSplitter::disenchantItem()
     ItemsList items = ItemDataBase::itemsStoredIn(item->storage, item->location, item->plugyPage ? &item->plugyPage : 0);
     items.removeOne(item);
     ItemInfo *newItem = ItemDataBase::loadItemFromFile(action->objectName() == "signet" ? "signet_of_learning" : "arcane_shard");
-    if (!ItemDataBase::canStoreItemAt(item->row, item->column, newItem->itemType, items, ItemsViewerDialog::rows.at(ItemsViewerDialog::tabIndexFromItemStorage(item->storage)), item->plugyPage))
+    if (!ItemDataBase::canStoreItemAt(item->row, item->column, newItem->itemType, items, ItemsViewerDialog::rows.at(ItemsViewerDialog::tabIndexFromItemStorage(item->storage))))
     {
         ERROR_BOX("If you see this text (which you shouldn't), please tell me which item you've just tried to disenchant");
         delete newItem;

@@ -19,7 +19,9 @@ class ItemsPropertiesSplitter : public QSplitter
     Q_OBJECT
 
 public:
-    explicit ItemsPropertiesSplitter(ItemStorageTableView *itemsView, ItemStorageTableModel *itemsModel, bool shouldCreateNavigation, QWidget *parent);
+    explicit ItemsPropertiesSplitter(ItemStorageTableView *itemsView, bool shouldCreateNavigation, QWidget *parent = 0);
+
+    void setModel(ItemStorageTableModel *model);
 
     PropertiesViewerWidget *propertiesWidget() const { return _propertiesWidget; }
     ItemStorageTableView *itemsView() const { return _itemsView; }
@@ -31,16 +33,20 @@ public:
 
 public slots:
     // these 8 are connected to main menu actions
-    void previous10Pages() { left10Clicked(); }
-    void previousPage() { leftClicked(); }
-    void nextPage() { rightClicked(); }
-    void next10Pages() { right10Clicked(); }
+    void previous10Pages() { left10Clicked();  }
+    void previousPage()    { leftClicked();    }
+    void nextPage()        { rightClicked();   }
+    void next10Pages()     { right10Clicked(); }
 
     // emulating pressed shift if action was pressed by mouse
-    void previous100Pages() { _isShiftPressed = true; left10Clicked(); _isShiftPressed = false; }
-    void firstPage() { _isShiftPressed = true; leftClicked(); _isShiftPressed = false; }
-    void lastPage() { _isShiftPressed = true; rightClicked(); _isShiftPressed = false; }
-    void next100Pages() { _isShiftPressed = true; right10Clicked(); _isShiftPressed = false; }
+//    void previous100Pages() { _isShiftPressed = true; left10Clicked(); _isShiftPressed = false; }
+//    void firstPage() { _isShiftPressed = true; leftClicked(); _isShiftPressed = false; }
+//    void lastPage() { _isShiftPressed = true; rightClicked(); _isShiftPressed = false; }
+//    void next100Pages() { _isShiftPressed = true; right10Clicked(); _isShiftPressed = false; }
+    void previous100Pages() { emulateShiftAndInvokeMethod(&ItemsPropertiesSplitter::left10Clicked);  }
+    void firstPage()        { emulateShiftAndInvokeMethod(&ItemsPropertiesSplitter::leftClicked);    }
+    void lastPage()         { emulateShiftAndInvokeMethod(&ItemsPropertiesSplitter::rightClicked);   }
+    void next100Pages()     { emulateShiftAndInvokeMethod(&ItemsPropertiesSplitter::right10Clicked); }
 
 protected:
     void keyPressEvent(QKeyEvent *keyEvent);
@@ -81,6 +87,7 @@ private:
 
     bool _isShiftPressed;
 
+    void emulateShiftAndInvokeMethod(void (ItemsPropertiesSplitter::*method)(void)) { _isShiftPressed = true; (this->*method)(); _isShiftPressed = false; }
     bool keyEventHasShift(QKeyEvent *keyEvent);
     void setShortcutTextInButtonTooltip(QPushButton *button, const QKeySequence &keySequence);
 

@@ -8,8 +8,6 @@
 #include <QPainter>
 
 
-const int ItemStorageTableModel::columns = 10;
-
 void ItemStorageTableModel::setItems(const ItemsList &newItems)
 {
     beginResetModel();

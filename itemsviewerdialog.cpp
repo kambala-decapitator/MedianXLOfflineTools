@@ -27,7 +27,9 @@ ItemsViewerDialog::ItemsViewerDialog(const QHash<int, bool> &plugyStashesExisten
 
     for (int i = GearIndex; i <= LastIndex; ++i)
     {
-        ItemsPropertiesSplitter *splitter = new ItemsPropertiesSplitter(new ItemStorageTableView(this), new ItemStorageTableModel(rows.at(i), this), i >= PersonalStashIndex, this);
+        ItemsPropertiesSplitter *splitter = new ItemsPropertiesSplitter(new ItemStorageTableView(this), i >= PersonalStashIndex, this);
+        ItemStorageTableModel *model = new ItemStorageTableModel(rows.at(i), i == GearIndex ? 8 : 10, splitter);
+        splitter->setModel(model);
         connect(splitter, SIGNAL(itemCountChanged(int)), SLOT(itemCountChangedInCurrentTab(int)));
         connect(splitter, SIGNAL(itemDeleted()), SLOT(decreaseItemCount()));
         connect(splitter, SIGNAL(cubeDeleted(bool)), SIGNAL(cubeDeleted(bool)));
@@ -79,6 +81,7 @@ void ItemsViewerDialog::saveSettings()
 void ItemsViewerDialog::closeEvent(QCloseEvent *event)
 {
     saveSettings();
+    emit closing();
     event->accept();
 }
 
@@ -103,9 +106,9 @@ void ItemsViewerDialog::updateItems(const QHash<int, bool> &plugyStashesExistenc
     _itemsTotal = 0;
     for (int i = GearIndex; i <= LastIndex; ++i)
     {
-        bool isGear = i == GearIndex;
-        ItemsList items = ItemDataBase::itemsStoredIn(Enums::ItemStorage::metaEnum().value(i), isGear);
-        if (isGear)
+        bool isGearTab = i == GearIndex;
+        ItemsList items = ItemDataBase::itemsStoredIn(Enums::ItemStorage::metaEnum().value(i), isGearTab ? Enums::ItemLocation::Equipped : Enums::ItemLocation::Stored);
+        if (isGearTab)
         {
             foreach (ItemInfo *item, items)
             {
@@ -161,6 +164,15 @@ void ItemsViewerDialog::updateItems(const QHash<int, bool> &plugyStashesExistenc
                     break;
                 }
             }
+
+            int lastRowIndex = rows.at(i) - 1;
+            ItemsList beltItems = ItemDataBase::itemsStoredIn(Enums::ItemStorage::NotInStorage, Enums::ItemLocation::Belt);
+            foreach (ItemInfo *item, beltItems)
+            {
+                item->row = lastRowIndex - item->row;
+                item->column += 2;
+            }
+            items += beltItems;
         }
         splitterAtIndex(i)->setItems(items);
         itemCountChangedInTab(i, items.size());
