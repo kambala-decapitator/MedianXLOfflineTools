@@ -2,6 +2,7 @@ v0.2.1:
 - gear items should have 8 columns 
 - show belt items in gear
 - navigation menu doesn't disable on items window close
+- disenchant hotkeys
 - show experince bar and completion of current level in %
 - completed skill/stat quests
 - export item to bbcode/html
