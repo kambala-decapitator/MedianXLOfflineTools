@@ -70,6 +70,7 @@ private:
 
     void itemCountChangedInTab(int tabIndex, int newCount);
     void updateWindowTitle();
+    void updateBeltItemsCoordinates(bool restore, ItemsList *pBeltItems);
 };
 
 #endif // ITEMSVIEWERWIDGET_H

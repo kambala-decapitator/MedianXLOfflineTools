@@ -382,42 +382,42 @@
 <context>
     <name>ItemsPropertiesSplitter</name>
     <message>
-        <location filename="../../itemspropertiessplitter.cpp" line="68"/>
+        <location filename="../../itemspropertiessplitter.cpp" line="59"/>
         <source>Page #</source>
         <translation>Стр. №</translation>
     </message>
     <message>
-        <location filename="../../itemspropertiessplitter.cpp" line="293"/>
+        <location filename="../../itemspropertiessplitter.cpp" line="518"/>
         <source>Arcane Shards</source>
         <translation>Тайные Осколки</translation>
     </message>
     <message>
-        <location filename="../../itemspropertiessplitter.cpp" line="298"/>
+        <location filename="../../itemspropertiessplitter.cpp" line="525"/>
         <source>Signet of Learning</source>
         <translation>Печать Обучения</translation>
     </message>
     <message>
-        <location filename="../../itemspropertiessplitter.cpp" line="303"/>
+        <location filename="../../itemspropertiessplitter.cpp" line="295"/>
         <source>Disenchant into</source>
         <translation>Расщепить на</translation>
     </message>
     <message>
-        <location filename="../../itemspropertiessplitter.cpp" line="326"/>
+        <location filename="../../itemspropertiessplitter.cpp" line="538"/>
         <source>Remove Mystic Orbs</source>
         <translation>Удалить Мистические Сферы</translation>
     </message>
     <message>
-        <location filename="../../itemspropertiessplitter.cpp" line="331"/>
+        <location filename="../../itemspropertiessplitter.cpp" line="544"/>
         <source>Delete</source>
         <translation>Удалить</translation>
     </message>
     <message>
-        <location filename="../../itemspropertiessplitter.cpp" line="474"/>
+        <location filename="../../itemspropertiessplitter.cpp" line="454"/>
         <source>Are you sure you want to delete this item?</source>
         <translation>Вы точно хотите удалить этот предмет?</translation>
     </message>
     <message>
-        <location filename="../../itemspropertiessplitter.cpp" line="478"/>
+        <location filename="../../itemspropertiessplitter.cpp" line="458"/>
         <source>Cube is not empty. Do you really want to delete it?
 Note: items inside will be preserved. You can recover them by getting new Cube.</source>
         <translation>Куб не пуст. Вы точно хотите его удалить?
@@ -427,42 +427,42 @@ Note: items inside will be preserved. You can recover them by getting new Cube.<
 <context>
     <name>ItemsViewerDialog</name>
     <message>
-        <location filename="../../itemsviewerdialog.cpp" line="186"/>
+        <location filename="../../itemsviewerdialog.cpp" line="194"/>
         <source>Gear</source>
         <translation>Экипировка</translation>
     </message>
     <message>
-        <location filename="../../itemsviewerdialog.cpp" line="186"/>
+        <location filename="../../itemsviewerdialog.cpp" line="194"/>
         <source>Inventory</source>
         <translation>Инвентарь</translation>
     </message>
     <message>
-        <location filename="../../itemsviewerdialog.cpp" line="186"/>
+        <location filename="../../itemsviewerdialog.cpp" line="194"/>
         <source>Cube</source>
         <translation>Куб</translation>
     </message>
     <message>
-        <location filename="../../itemsviewerdialog.cpp" line="186"/>
+        <location filename="../../itemsviewerdialog.cpp" line="194"/>
         <source>Stash</source>
         <translation>Сундук</translation>
     </message>
     <message>
-        <location filename="../../itemsviewerdialog.cpp" line="186"/>
+        <location filename="../../itemsviewerdialog.cpp" line="194"/>
         <source>Personal Stash</source>
         <translation>Личный Сундук</translation>
     </message>
     <message>
-        <location filename="../../itemsviewerdialog.cpp" line="186"/>
+        <location filename="../../itemsviewerdialog.cpp" line="194"/>
         <source>Shared Stash</source>
         <translation>Общий Сундук</translation>
     </message>
     <message>
-        <location filename="../../itemsviewerdialog.cpp" line="186"/>
+        <location filename="../../itemsviewerdialog.cpp" line="194"/>
         <source>Hardcore Stash</source>
         <translation>Смертный Сундук</translation>
     </message>
     <message>
-        <location filename="../../itemsviewerdialog.cpp" line="203"/>
+        <location filename="../../itemsviewerdialog.cpp" line="211"/>
         <source>Items viewer (items total: %1)</source>
         <translation>Просмотр предметов (всего предметов: %1)</translation>
     </message>
@@ -470,7 +470,7 @@ Note: items inside will be preserved. You can recover them by getting new Cube.<
 <context>
     <name>Language</name>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="728"/>
+        <location filename="../../medianxlofflinetools.cpp" line="729"/>
         <source>English</source>
         <comment>Your language name</comment>
         <translation>Русский</translation>
@@ -534,86 +534,86 @@ Note: items inside will be preserved. You can recover them by getting new Cube.<
         <translation>Файл &apos;%1&apos; успешно сохранён!</translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="674"/>
+        <location filename="../../medianxlofflinetools.cpp" line="675"/>
         <source>About %1</source>
         <translation>О %1</translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="678"/>
+        <location filename="../../medianxlofflinetools.cpp" line="679"/>
         <source>Released: %1</source>
         <translation>Выпущено: %1</translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="681"/>
+        <location filename="../../medianxlofflinetools.cpp" line="682"/>
         <source>&lt;i&gt;Author:&lt;/i&gt; Filipenkov Andrey (&lt;b&gt;kambala&lt;/b&gt;)</source>
         <translation>&lt;i&gt;Автор:&lt;/i&gt; Филипенков Андрей (&lt;b&gt;kambala&lt;/b&gt;)</translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="682"/>
+        <location filename="../../medianxlofflinetools.cpp" line="683"/>
         <source>&lt;a href=&quot;http://modsbylaz.14.forumer.com/viewtopic.php?t=23147&quot;&gt;Official Median XL Forum thread&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://forum.worldofplayers.ru/showthread.php?t=34489&quot;&gt;Official Russian Median XL Forum thread&lt;/a&gt;</source>
         <translation>&lt;a href=&quot;http://modsbylaz.14.forumer.com/viewtopic.php?t=23147&quot;&gt;Тема на официальном форуме Median XL&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://forum.worldofplayers.ru/showthread.php?t=34489&quot;&gt;Тема на официальном русском форуме Median XL&lt;/a&gt;</translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="715"/>
+        <location filename="../../medianxlofflinetools.cpp" line="716"/>
         <source>&amp;Language</source>
         <comment>Language menu</comment>
         <translation>&amp;Язык</translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="826"/>
-        <location filename="../../medianxlofflinetools.cpp" line="862"/>
+        <location filename="../../medianxlofflinetools.cpp" line="832"/>
+        <location filename="../../medianxlofflinetools.cpp" line="868"/>
         <source>Name</source>
         <translation>Имя</translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="830"/>
+        <location filename="../../medianxlofflinetools.cpp" line="836"/>
         <source>Class</source>
         <translation>Класс</translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="832"/>
-        <location filename="../../medianxlofflinetools.cpp" line="860"/>
+        <location filename="../../medianxlofflinetools.cpp" line="838"/>
+        <location filename="../../medianxlofflinetools.cpp" line="866"/>
         <source>Level</source>
         <translation>Уровень</translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="834"/>
+        <location filename="../../medianxlofflinetools.cpp" line="840"/>
         <source>Title</source>
         <comment>Character title - Slayer/Champion/etc.</comment>
         <translation>Титул</translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="858"/>
+        <location filename="../../medianxlofflinetools.cpp" line="864"/>
         <source>Type</source>
         <translation>Тип</translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="869"/>
+        <location filename="../../medianxlofflinetools.cpp" line="875"/>
         <source>Inventory Gold</source>
         <translation>Золота в Инвентаре</translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="872"/>
+        <location filename="../../medianxlofflinetools.cpp" line="878"/>
         <source>Stash Gold</source>
         <translation>Золота в Сундуке</translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="882"/>
+        <location filename="../../medianxlofflinetools.cpp" line="888"/>
         <source>Strength</source>
         <translation>Сила</translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="883"/>
+        <location filename="../../medianxlofflinetools.cpp" line="889"/>
         <source>Dexterity</source>
         <translation>Ловкость</translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="884"/>
+        <location filename="../../medianxlofflinetools.cpp" line="890"/>
         <source>Vitality</source>
         <translation>Живучесть</translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="885"/>
+        <location filename="../../medianxlofflinetools.cpp" line="891"/>
         <source>Energy</source>
         <translation>Энергиия</translation>
     </message>
@@ -639,226 +639,221 @@ Note: items inside will be preserved. You can recover them by getting new Cube.<
         <translation>Ошибка при записи файла &apos;%1&apos;</translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="635"/>
+        <location filename="../../medianxlofflinetools.cpp" line="636"/>
         <source>You have no free space in inventory and stash to store the Cube</source>
         <translation>У вас нет свободного места в инвентаре и сундуке для сохранения Куба</translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="662"/>
+        <location filename="../../medianxlofflinetools.cpp" line="663"/>
         <source>Cube has been stored in %1 at (%2,%3)</source>
         <translation>Куб сохранён в %1 в клетку (%2,%3)</translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="667"/>
+        <location filename="../../medianxlofflinetools.cpp" line="668"/>
         <source>Are you sure you want to disable automatic backups? Then don&apos;t blame me if your character gets corrupted.</source>
         <translation>Вы точно хотите отключить автоматическое создание резервных копий? Тогда не вините меня если вдруг ваш персонаж сломается.</translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="684"/>
+        <location filename="../../medianxlofflinetools.cpp" line="685"/>
         <source>&lt;b&gt;Credits:&lt;/b&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;http://modsbylaz.hugelaser.com/&quot;&gt;BrotherLaz&lt;/a&gt; for this awesome mod&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://modsbylaz.14.forumer.com/profile.php?mode=viewprofile&amp;u=33805&quot;&gt;grig&lt;/a&gt; for the Perl source of &lt;a href=&quot;http://grig.vlexofree.com/&quot;&gt;Median XL Online Tools&lt;/a&gt; and tips&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://phrozenkeep.hugelaser.com/index.php?ind=reviews&amp;op=section_view&amp;idev=4&quot;&gt;Phrozen Keep File Guides&lt;/a&gt; for tons of useful information on txt sources&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://modsbylaz.14.forumer.com/profile.php?mode=viewprofile&amp;u=44046&quot;&gt;FixeR&lt;/a&gt; and &lt;a href=&quot;http://forum.worldofplayers.ru/member.php?u=84592&quot;&gt;Zelgadiss&lt;/a&gt; for intensive testing and tips on GUI &amp; functionality&lt;/li&gt;&lt;/ul&gt;</source>
         <translation>&lt;b&gt;Благодарности:&lt;/b&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;http://modsbylaz.hugelaser.com/&quot;&gt;BrotherLaz&apos;у&lt;/a&gt; за этот шикарный мод&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://modsbylaz.14.forumer.com/profile.php?mode=viewprofile&amp;u=33805&quot;&gt;grig&apos;у&lt;/a&gt; за Перловские исходники его &lt;a href=&quot;http://grig.vlexofree.com/&quot;&gt;Median XL Online Tools&lt;/a&gt; и за помощь&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://phrozenkeep.hugelaser.com/index.php?ind=reviews&amp;op=section_view&amp;idev=4&quot;&gt;Phrozen Keep Гайдам&lt;/a&gt; за кучу полезной информации по текстовикам&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://modsbylaz.14.forumer.com/profile.php?mode=viewprofile&amp;u=44046&quot;&gt;FixeR&apos;у&lt;/a&gt; и &lt;a href=&quot;http://forum.worldofplayers.ru/member.php?u=84592&quot;&gt;Zelgadiss&apos;у&lt;/a&gt; за интенсивное тестирование и советы по ГУИ и функциональности&lt;/li&gt;&lt;/ul&gt;</translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="754"/>
+        <location filename="../../medianxlofflinetools.cpp" line="755"/>
         <source>Experience table data not loaded.</source>
         <translation>Таблица опыта не загружена.</translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="768"/>
+        <location filename="../../medianxlofflinetools.cpp" line="769"/>
         <source>Mercenary names not loaded.</source>
         <translation>Имена наёмников не загружены.</translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="875"/>
+        <location filename="../../medianxlofflinetools.cpp" line="881"/>
         <source>Free Skills</source>
         <translation>Невложеных Навыков</translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="878"/>
+        <location filename="../../medianxlofflinetools.cpp" line="884"/>
         <source>Signets of Skill</source>
         <translation>Печатей Навыка</translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="891"/>
+        <location filename="../../medianxlofflinetools.cpp" line="897"/>
         <source>Free Stats</source>
         <translation>Невложеных Атрибутов</translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="894"/>
+        <location filename="../../medianxlofflinetools.cpp" line="900"/>
         <source>Signets of Learning</source>
         <translation>Печатей Обучения</translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1102"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1108"/>
         <source>Error opening file &apos;%1&apos;</source>
         <translation>Ошибка при открытии файла &apos;%1&apos;</translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1116"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1122"/>
         <source>Wrong file signature: should be 0x%1, got 0x%2.</source>
         <translation>Неверная сигнатура файла: должна быть 0x%1, а тут - 0x%2.</translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1125"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1131"/>
         <source>Character checksum doesn&apos;t match. Looks like it&apos;s corrupted.</source>
         <translation>Контрольная сумма персонажа не совпадает. Похоже, он повреждён.</translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1144"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1150"/>
         <source>This is not Expansion character.</source>
         <translation>Это не персонаж Расширения.</translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1152"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1158"/>
         <source>Wrong class value: got %1</source>
         <translation>Некорректное значение класса: %1</translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1159"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1165"/>
         <source>Wrong progression value: got %1</source>
         <translation>Некорректное значение прогресса: %1</translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1166"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1172"/>
         <source>Wrong level: got %1</source>
         <translation>Некорректный уровень %1</translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1193"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1199"/>
         <source>Wrong mercenary code: got %1</source>
         <translation>Некорректный код наёмника: %1</translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1213"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1219"/>
         <source>Quests data not found!</source>
         <translation>Данные о квестах не найдены!</translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1231"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1237"/>
         <source>Waypoint data not found!</source>
         <translation>Данные о телепортах не найдены!</translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1258"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1264"/>
         <source>NPC data not found!</source>
         <translation>Данные о NPC не найдены!</translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1265"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1271"/>
         <source>Stats data not found!</source>
         <translation>Данные о статистиках не найдены!</translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1274"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1280"/>
         <source>Skills data not found!</source>
         <translation>Данные о навыках не найдены!</translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1307"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1313"/>
         <source>Unknown statistic code found: %1. This is not Median XL character.</source>
         <translation>Найден неизвестный код статистики: %1. Этот персонаж - не из Median XL.</translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1314"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1320"/>
         <source>Level in statistics (%1) isn&apos;t equal the one in header (%2).</source>
         <translation>Уровень в статистиках (%1) - не такой, как в заголовке (%2).</translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1349"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1355"/>
         <source>Stats data is corrupted!</source>
         <translation>Данные о статистиках повреждены!</translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1401"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1407"/>
         <source>Items data not found!</source>
         <translation>Данные о предметах не найдены!</translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1424"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1430"/>
         <source>Items list doesn&apos;t have a terminator!</source>
         <translation>У списка вещей нету завершающего символа!</translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1434"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1440"/>
         <source>Mercenary items section not found!</source>
         <translation>Секция с вещами наёмника не найдена!</translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1442"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1448"/>
         <source>Save file is not terminated correctly!</source>
         <translation>Файл сохранения завершён некорректно!</translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1449"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1455"/>
         <source>Mercenary items data is corrupted!</source>
         <translation>Данные о вещах наёмника повреждены!</translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1469"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1475"/>
         <source>100% avoid is kewl</source>
         <translation>Ололо 100% авоид</translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1471"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1477"/>
         <source>well, you have %1% actually</source>
         <comment>avoid</comment>
         <translation>ну, вообще-то у вас %1%</translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1533"/>
-        <source>Like duping items, eh?</source>
-        <translation>Так, что тут у нас - любитель дюпать предметы?</translation>
-    </message>
-    <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1582"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1572"/>
         <source>Error opening PlugY stash &apos;%1&apos;</source>
         <translation>Ошибка при открытии сундука Плаги&apos;%1&apos;</translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1600"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1590"/>
         <source>PlugY stash &apos;%1&apos; has wrong header</source>
         <translation>У сундука Плаги &apos;%1&apos; неправильный хедер</translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1621"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1611"/>
         <source>Page %1 of &apos;%2&apos; has wrong PlugY header</source>
         <translation>У %1-й страницы &apos;%2&apos; неправильный хедер Плаги</translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1627"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1617"/>
         <source>Page %1 of &apos;%2&apos; has wrong item header</source>
         <translation>У %1-й страницы &apos;%2&apos; неправильный хедер предмета</translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1741"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1731"/>
         <source>Shared: %1</source>
         <comment>amount of gold in shared stash</comment>
         <translatorcomment>количество золота в общем сундуке</translatorcomment>
         <translation>Общий Сундук: %1</translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1781"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1771"/>
         <source>DEAD</source>
         <comment>HC character is dead</comment>
         <translation>ТРУП</translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1985"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1975"/>
         <source>Stats string is not byte aligned!</source>
         <translation>Строка статистик не выровнена по границе байта!</translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="2036"/>
+        <location filename="../../medianxlofflinetools.cpp" line="2026"/>
         <source>Error removing old backup &apos;%1&apos;</source>
         <translation>Ошибка при удалении старой резервной копии &apos;%1&apos;</translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="2040"/>
+        <location filename="../../medianxlofflinetools.cpp" line="2030"/>
         <source>Error creating backup of &apos;%1&apos;</source>
         <translation>Ошибка при создании резервной копии &apos;%1&apos;</translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="2055"/>
+        <location filename="../../medianxlofflinetools.cpp" line="2045"/>
         <source>Reason: %1</source>
         <comment>error with file</comment>
         <translation>Причина: %1</translation>
@@ -1448,69 +1443,69 @@ Note: items inside will be preserved. You can recover them by getting new Cube.<
         <translation>В гнёздах</translation>
     </message>
     <message>
-        <location filename="../../propertiesviewerwidget.cpp" line="84"/>
+        <location filename="../../propertiesviewerwidget.cpp" line="88"/>
         <source>Item Level: %1</source>
         <translation>Уровень Предмета: %1</translation>
     </message>
     <message>
-        <location filename="../../propertiesviewerwidget.cpp" line="108"/>
+        <location filename="../../propertiesviewerwidget.cpp" line="112"/>
         <source>Defense: %1</source>
         <translation>Защита: %1</translation>
     </message>
     <message>
-        <location filename="../../propertiesviewerwidget.cpp" line="117"/>
+        <location filename="../../propertiesviewerwidget.cpp" line="121"/>
         <source>Durability</source>
         <translation>Прочность</translation>
     </message>
     <message>
-        <location filename="../../propertiesviewerwidget.cpp" line="121"/>
+        <location filename="../../propertiesviewerwidget.cpp" line="125"/>
         <source>%1 of %2</source>
         <comment>durability</comment>
         <translation>%1 из %2</translation>
     </message>
     <message>
-        <location filename="../../propertiesviewerwidget.cpp" line="127"/>
+        <location filename="../../propertiesviewerwidget.cpp" line="131"/>
         <source>Quantity: %1</source>
         <translation>Количество: %1</translation>
     </message>
     <message>
-        <location filename="../../propertiesviewerwidget.cpp" line="130"/>
+        <location filename="../../propertiesviewerwidget.cpp" line="134"/>
         <source>(%1 Only)</source>
         <comment>class-specific item</comment>
         <translation>(Только %1)</translation>
     </message>
     <message>
-        <location filename="../../propertiesviewerwidget.cpp" line="163"/>
+        <location filename="../../propertiesviewerwidget.cpp" line="167"/>
         <source>Required Level: %1</source>
         <translation>Нужен Уровень: %1</translation>
     </message>
     <message>
-        <location filename="../../propertiesviewerwidget.cpp" line="179"/>
+        <location filename="../../propertiesviewerwidget.cpp" line="183"/>
         <source>Armor</source>
         <translation>Броня</translation>
     </message>
     <message>
-        <location filename="../../propertiesviewerwidget.cpp" line="179"/>
+        <location filename="../../propertiesviewerwidget.cpp" line="183"/>
         <source>Shield</source>
         <translation>Щит</translation>
     </message>
     <message>
-        <location filename="../../propertiesviewerwidget.cpp" line="179"/>
+        <location filename="../../propertiesviewerwidget.cpp" line="183"/>
         <source>Weapon</source>
         <translation>Оружие</translation>
     </message>
     <message>
-        <location filename="../../propertiesviewerwidget.cpp" line="193"/>
+        <location filename="../../propertiesviewerwidget.cpp" line="197"/>
         <source>+50% Damage to Undead</source>
         <translation>+50% Урон Нежити</translation>
     </message>
     <message>
-        <location filename="../../propertiesviewerwidget.cpp" line="195"/>
+        <location filename="../../propertiesviewerwidget.cpp" line="199"/>
         <source>Socketed: (%1), Inserted: (%2)</source>
         <translation>Гнёзд: (%1), Вставлено: (%2)</translation>
     </message>
     <message>
-        <location filename="../../propertiesviewerwidget.cpp" line="197"/>
+        <location filename="../../propertiesviewerwidget.cpp" line="201"/>
         <source>Ethereal (Cannot be Repaired)</source>
         <translation>Неземной (Нельзя Починить)</translation>
     </message>

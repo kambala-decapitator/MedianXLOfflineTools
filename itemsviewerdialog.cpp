@@ -81,6 +81,7 @@ void ItemsViewerDialog::saveSettings()
 void ItemsViewerDialog::closeEvent(QCloseEvent *event)
 {
     saveSettings();
+    updateBeltItemsCoordinates(true, 0);
     emit closing();
     event->accept();
 }
@@ -165,13 +166,8 @@ void ItemsViewerDialog::updateItems(const QHash<int, bool> &plugyStashesExistenc
                 }
             }
 
-            int lastRowIndex = rows.at(i) - 1;
             ItemsList beltItems = ItemDataBase::itemsStoredIn(Enums::ItemStorage::NotInStorage, Enums::ItemLocation::Belt);
-            foreach (ItemInfo *item, beltItems)
-            {
-                item->row = lastRowIndex - item->row;
-                item->column += 2;
-            }
+            updateBeltItemsCoordinates(false, &beltItems);
             items += beltItems;
         }
         splitterAtIndex(i)->setItems(items);
@@ -219,6 +215,17 @@ void ItemsViewerDialog::decreaseItemCount()
 {
     --_itemsTotal;
     updateWindowTitle();
+}
+
+void ItemsViewerDialog::updateBeltItemsCoordinates(bool restore, ItemsList *pBeltItems)
+{
+    ItemsList beltItems = pBeltItems ? *pBeltItems : ItemDataBase::itemsStoredIn(Enums::ItemStorage::NotInStorage, Enums::ItemLocation::Belt);
+    int lastRowIndex = rows.at(GearIndex) - 1;
+    foreach (ItemInfo *item, beltItems)
+    {
+        item->row = lastRowIndex - item->row;
+        item->column += restore ? -2 : 2;
+    }
 }
 
 //int ItemsViewerDialog::storageItemsModified(int storage)

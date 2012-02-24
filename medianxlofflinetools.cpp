@@ -593,7 +593,7 @@ void MedianXLOfflineTools::showItems(bool activate /*= true*/)
         _itemsDialog = new ItemsViewerDialog(getPlugyStashesExistenceHash(), this);
         connect(_itemsDialog->tabWidget(), SIGNAL(currentChanged(int)), SLOT(itemStorageTabChanged(int)));
         connect(_itemsDialog, SIGNAL(cubeDeleted(bool)), ui.actionGiveCube, SLOT(setEnabled(bool)));
-        connect(_itemsDialog, SIGNAL(closing(bool)), ui.menuGoToPage->menuAction(), SLOT(setDisabled(bool)));
+        connect(_itemsDialog, SIGNAL(closing(bool)), ui.menuGoToPage, SLOT(setDisabled(bool)));
         _itemsDialog->show();
 
         if (!activate)
@@ -609,15 +609,15 @@ void MedianXLOfflineTools::itemStorageTabChanged(int tabIndex)
     bool isPlugyStorage = _itemsDialog->isPlugyStorageIndex(tabIndex);
     ui.menuGoToPage->setEnabled(isPlugyStorage);
 
-    QList<QAction *> plugyNavigationActions = QList<QAction *>() << ui.actionPrevious10 << ui.actionPreviousPage << ui.actionNextPage << ui.actionNext10
-                                                                 << ui.actionPrevious100 << ui.actionFirstPage << ui.actionLastPage << ui.actionNext100;
+    static const QList<QAction *> plugyNavigationActions = QList<QAction *>() << ui.actionPrevious10 << ui.actionPreviousPage << ui.actionNextPage << ui.actionNext10
+                                                                              << ui.actionPrevious100 << ui.actionFirstPage << ui.actionLastPage << ui.actionNext100;
     foreach (QAction *action, plugyNavigationActions)
         action->disconnect();
 
     if (isPlugyStorage)
     {
-        QList<const char *> plugyNavigationSlots = QList<const char *>() << SLOT(previous10Pages()) << SLOT(previousPage()) << SLOT(nextPage()) << SLOT(next10Pages())
-                                                                         << SLOT(previous100Pages()) << SLOT(firstPage()) << SLOT(lastPage()) << SLOT(next100Pages());
+        static const QList<const char *> plugyNavigationSlots = QList<const char *>() << SLOT(previous10Pages()) << SLOT(previousPage()) << SLOT(nextPage()) << SLOT(next10Pages())
+                                                                                      << SLOT(previous100Pages()) << SLOT(firstPage()) << SLOT(lastPage()) << SLOT(next100Pages());
         ItemsPropertiesSplitter *plugyTab = _itemsDialog->splitterAtIndex(tabIndex);
         for (int i = 0; i < plugyNavigationActions.size(); ++i)
             connect(plugyNavigationActions[i], SIGNAL(triggered()), plugyTab, plugyNavigationSlots[i]);
@@ -759,7 +759,7 @@ void MedianXLOfflineTools::loadExpTable()
     experienceTable.reserve(Enums::CharacterStats::MaxLevel);
     foreach (const QByteArray &numberString, expLines)
         if (!numberString.isEmpty())
-            experienceTable.append(numberString.toUInt());
+            experienceTable.append(numberString.trimmed().toUInt());
     f.remove();
 }
 
@@ -780,7 +780,7 @@ void MedianXLOfflineTools::loadMercNames()
             actNames.clear();
         }
         else
-            actNames += QString::fromUtf8(mercName);
+            actNames += QString::fromUtf8(mercName.trimmed());
     }
     f.remove();
 }
@@ -820,7 +820,10 @@ void MedianXLOfflineTools::createLayout()
     ui.statsTableWidget->horizontalHeader()->setResizeMode(QHeaderView::Stretch);
     ui.statsTableWidget->setFixedHeight(ui.statsTableWidget->height());
 
-//    resize(minimumSizeHint());
+    // on Mac OS X some UI elements become ugly if main window is set to minimumSize()
+#ifndef Q_WS_MACX
+    resize(minimumSizeHint());
+#endif
 }
 
 void MedianXLOfflineTools::createCharacterGroupBoxLayout()
