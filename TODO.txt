@@ -1,5 +1,4 @@
 v0.2.1:
-- disenchant hotkeys
 - show experince bar and completion of current level in %
 - completed skill/stat quests
 - export item to bbcode/html

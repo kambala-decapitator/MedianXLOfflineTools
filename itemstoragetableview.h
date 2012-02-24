@@ -13,9 +13,6 @@ public:
 
 protected:
     virtual void keyPressEvent(QKeyEvent *event);
-
-signals:
-    void deleteSelectedItem();
 };
 
 #endif // ITEMSTORAGETABLEVIEW_H

@@ -37,9 +37,6 @@ ItemsPropertiesSplitter::ItemsPropertiesSplitter(ItemStorageTableView *itemsView
     _itemsView->horizontalHeader()->hide();
     _itemsView->verticalHeader()->hide();
 
-    _itemsView->installEventFilter(this);
-    installEventFilter(this);
-
     if (shouldCreateNavigation)
     {
         _left10Button = new QPushButton(this);
@@ -92,11 +89,12 @@ ItemsPropertiesSplitter::ItemsPropertiesSplitter(ItemStorageTableView *itemsView
     _propertiesWidget = new PropertiesViewerWidget(parent);
     addWidget(_propertiesWidget);
 
+    createItemActions();
+
     setChildrenCollapsible(false);
     setStretchFactor(1, 5);
 
     connect(_itemsView, SIGNAL(customContextMenuRequested(const QPoint &)), SLOT(showContextMenu(const QPoint &)));
-    connect(_itemsView, SIGNAL(deleteSelectedItem()), SLOT(deleteItem()));
 
     if (shouldCreateNavigation)
     {
@@ -172,7 +170,13 @@ void ItemsPropertiesSplitter::setShortcutTextInButtonTooltip(QPushButton *button
 
 void ItemsPropertiesSplitter::itemSelected(const QModelIndex &index)
 {
-    _propertiesWidget->showItem(_itemsModel->itemAt(index));
+    ItemInfo *item = _itemsModel->itemAt(index);
+    _propertiesWidget->showItem(item);
+
+    bool allowDisnechant = !item ? false : (item->quality == Enums::ItemQuality::Set || (item->quality == Enums::ItemQuality::Unique && !ItemDataBase::isUberCharm(item))) && item->location != Enums::ItemLocation::Equipped;
+    _itemActions[DisenchantShards]->setEnabled(allowDisnechant);
+    _itemActions[DisenchantSignet]->setEnabled(allowDisnechant);
+    _itemActions[RemoveMO]->setEnabled(_propertiesWidget->hasMysticOrbs());
 }
 
 void ItemsPropertiesSplitter::showItem(ItemInfo *item)
@@ -278,41 +282,25 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
     {
         QList<QAction *> actions;
 
-        QAction *actionHtml = new QAction("HTML", _itemsView), *actionBbCode = new QAction("BBCode", _itemsView);
-        connect(actionHtml, SIGNAL(triggered()), SLOT(exportHtml()));
-        connect(actionBbCode, SIGNAL(triggered()), SLOT(exportBbCode()));
-        QMenu *menuExport = new QMenu(tr("Export as"), _itemsView);
-        menuExport->addActions(QList<QAction *>() << actionHtml << actionBbCode);
-        actions << menuExport->menuAction();
+//        QMenu *menuExport = new QMenu(tr("Export as"), _itemsView);
+//        menuExport->addActions(QList<QAction *>() << _itemActions[ExportBbCode] << _itemActions[ExportHtml]);
+//        actions << menuExport->menuAction();
 
-        QAction *separator = new QAction(_itemsView);
-        separator->setSeparator(true);
-        actions << separator;
+//        QAction *separator = new QAction(_itemsView);
+//        separator->setSeparator(true);
+//        actions << separator;
 
         if (item->quality == Enums::ItemQuality::Set || (item->quality == Enums::ItemQuality::Unique && !ItemDataBase::isUberCharm(item)))
         {
-            QAction *actionShards = new QAction(QIcon(ResourcePathManager::pathForImageName("invfary4")), tr("Arcane Shards"), _itemsView);
-            actionShards->setShortcut(QKeySequence("Alt+D"));
-            actionShards->setObjectName("shards");
-            connect(actionShards, SIGNAL(triggered()), SLOT(disenchantItem()));
-
-            QAction *actionSol = new QAction(QIcon(ResourcePathManager::pathForImageName("sigil1b")), tr("Signet of Learning"), _itemsView);
-            actionSol->setShortcut(QKeySequence("Ctrl+D"));
-            actionSol->setObjectName("signet");
-            connect(actionSol, SIGNAL(triggered()), SLOT(disenchantItem()));
-
             QMenu *menuDisenchant = new QMenu(tr("Disenchant into"), _itemsView);
-            menuDisenchant->addActions(QList<QAction *>() << actionShards << actionSol);
+            menuDisenchant->addActions(QList<QAction *>() << _itemActions[DisenchantShards] << _itemActions[DisenchantSignet]);
             menuDisenchant->menuAction()->setDisabled(item->location == Enums::ItemLocation::Equipped); // you can't disenchant equipped items
             actions << menuDisenchant->menuAction();
         }
+
         // TODO 0.3
-        //if (item->isSocketed && item->socketablesNumber)
-        //{
-        //    QAction *actionUnsocket = new QAction(tr("Unsocket"), _itemsView);
-        //    connect(actionUnsocket, SIGNAL(triggered()), SLOT(unsocketItem()));
-        //    actions << actionUnsocket;
-        //}
+//        if (item->isSocketed && item->socketablesNumber)
+//            actions << _itemActions[Unsocket];
 
         // no need
         //if (item->isEthereal)
@@ -323,26 +311,11 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
         //}
 
         if (_propertiesWidget->hasMysticOrbs())
-        {
-            QAction *actionRemoveMO = new QAction(tr("Remove Mystic Orbs"), _itemsView);
-            actionRemoveMO->setShortcut(QKeySequence("Ctrl+M"));
-            connect(actionRemoveMO, SIGNAL(triggered()), _propertiesWidget, SLOT(removeAllMysticOrbs()));
-            actions << actionRemoveMO;
-        }
+            actions << _itemActions[RemoveMO];
 
-        QAction *actionDelete = new QAction(tr("Delete"), _itemsView);
-        actionDelete->setShortcut(
-#ifdef Q_WS_MACX
-                    Qt::Key_Backspace
-#else
-                    QKeySequence::Delete
-#endif
-                    );
-        connect(actionDelete, SIGNAL(triggered()), SLOT(deleteItem()));
-
-        separator = new QAction(_itemsView);
+        QAction *separator = new QAction(_itemsView);
         separator->setSeparator(true);
-        actions << separator << actionDelete;
+        actions << separator << _itemActions[Delete];
 
         QMenu::exec(actions, _itemsView->mapToGlobal(pos));
     }
@@ -444,6 +417,8 @@ void ItemsPropertiesSplitter::disenchantItem()
 
     performDeleteItem(item);
     addItemToList(newItem);
+
+    _itemsView->setCurrentIndex(_itemsModel->index(newItem->row, newItem->column));
 }
 
 void ItemsPropertiesSplitter::unsocketItem()
@@ -525,4 +500,56 @@ void ItemsPropertiesSplitter::removeItemFromList(ItemInfo *item, bool currentSto
         _itemsModel->removeItem(item);
         _itemsView->setSpan(item->row, item->column, 1, 1);
     }
+}
+
+void ItemsPropertiesSplitter::createItemActions()
+{
+    // TODO: uncomment when impementing export
+//    QAction *actionBbCode = new QAction("BBCode", _itemsView);
+//    connect(actionBbCode, SIGNAL(triggered()), SLOT(exportBbCode()));
+//    _itemsView->addAction(actionBbCode);
+//    _itemActions[ExportBbCode] = actionBbCode;
+
+//    QAction *actionHtml = new QAction("HTML", _itemsView);
+//    connect(actionHtml, SIGNAL(triggered()), SLOT(exportHtml()));
+//    _itemsView->addAction(actionHtml);
+//    _itemActions[ExportHtml] = actionHtml;
+
+    QAction *actionShards = new QAction(QIcon(ResourcePathManager::pathForImageName("invfary4")), tr("Arcane Shards"), _itemsView);
+    actionShards->setShortcut(QKeySequence("Alt+D"));
+    actionShards->setObjectName("shards");
+    connect(actionShards, SIGNAL(triggered()), SLOT(disenchantItem()));
+    _itemsView->addAction(actionShards);
+    _itemActions[DisenchantShards] = actionShards;
+
+    QAction *actionSol = new QAction(QIcon(ResourcePathManager::pathForImageName("sigil1b")), tr("Signet of Learning"), _itemsView);
+    actionSol->setShortcut(QKeySequence("Ctrl+D"));
+    actionSol->setObjectName("signet");
+    connect(actionSol, SIGNAL(triggered()), SLOT(disenchantItem()));
+    _itemsView->addAction(actionSol);
+    _itemActions[DisenchantSignet] = actionSol;
+
+    // TODO 0.3: unsocket
+//    QAction *actionUnsocket = new QAction(tr("Unsocket"), _itemsView);
+//    connect(actionUnsocket, SIGNAL(triggered()), SLOT(unsocketItem()));
+//    _itemsView->addAction(actionUnsocket);
+//    _itemActions[Unsocket] = actionUnsocket;
+
+    QAction *actionRemoveMO = new QAction(tr("Remove Mystic Orbs"), _itemsView);
+    actionRemoveMO->setShortcut(QKeySequence("Ctrl+M"));
+    connect(actionRemoveMO, SIGNAL(triggered()), _propertiesWidget, SLOT(removeAllMysticOrbs()));
+    _itemsView->addAction(actionRemoveMO);
+    _itemActions[RemoveMO] = actionRemoveMO;
+
+    QAction *actionDelete = new QAction(tr("Delete"), _itemsView);
+    actionDelete->setShortcut(
+#ifdef Q_WS_MACX
+                Qt::Key_Backspace
+#else
+                QKeySequence::Delete
+#endif
+                );
+    connect(actionDelete, SIGNAL(triggered()), SLOT(deleteItem()));
+    _itemsView->addAction(actionDelete);
+    _itemActions[Delete] = actionDelete;
 }

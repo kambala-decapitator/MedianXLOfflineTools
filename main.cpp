@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
 
     app.setOrganizationName("kambala");
     app.setApplicationName("Median XL Offline Tools");
-    app.setApplicationVersion("0.2");
+    app.setApplicationVersion("0.2.0.1");
 
 #ifdef Q_WS_MACX
     app.setAttribute(Qt::AA_DontShowIconsInMenus);

@@ -29,7 +29,7 @@
 #include <cmath>
 
 
-static const QString lastSavePathKey("lastSavePath"), releaseDate("22.02.2012"), backupExtension("bak"), readonlyCss("background-color: rgb(227, 227, 227)");
+static const QString lastSavePathKey("lastSavePath"), releaseDate("24.02.2012"), backupExtension("bak"), readonlyCss("background-color: rgb(227, 227, 227)");
 
 //#define MAKE_HC
 //#define ENABLE_PERSONALIZE
@@ -819,6 +819,8 @@ void MedianXLOfflineTools::createLayout()
     ui.statsTableWidget->verticalHeader()->setDefaultAlignment(Qt::AlignCenter);
     ui.statsTableWidget->horizontalHeader()->setResizeMode(QHeaderView::Stretch);
     ui.statsTableWidget->setFixedHeight(ui.statsTableWidget->height());
+
+//    resize(minimumSizeHint());
 }
 
 void MedianXLOfflineTools::createCharacterGroupBoxLayout()

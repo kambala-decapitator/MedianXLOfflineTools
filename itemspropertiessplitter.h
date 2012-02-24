@@ -76,15 +76,26 @@ private slots:
     void deleteItem();
 
 private:
+    enum ItemAction
+    {
+        ExportBbCode,
+        ExportHtml,
+        DisenchantShards,
+        DisenchantSignet,
+        Unsocket,
+        RemoveMO,
+        Delete
+    };
+
     PropertiesViewerWidget *_propertiesWidget;
     ItemStorageTableView *_itemsView;
     ItemStorageTableModel *_itemsModel;
     QPushButton *_left10Button, *_leftButton, *_rightButton, *_right10Button;
     QDoubleSpinBox *_pageSpinBox;
+    QHash<ItemAction, QAction *> _itemActions;
 
     ItemsList _allItems;
     quint32 _lastNotEmptyPage;
-
     bool _isShiftPressed;
 
     void emulateShiftAndInvokeMethod(void (ItemsPropertiesSplitter::*method)(void)) { _isShiftPressed = true; (this->*method)(); _isShiftPressed = false; }
@@ -97,6 +108,8 @@ private:
 
     void addItemToList(ItemInfo *item, bool currentStorage = true);
     void removeItemFromList(ItemInfo *item, bool currentStorage = true);
+
+    void createItemActions();
 };
 
 #endif // ITEMSPROPERTIESSPLITTER_H

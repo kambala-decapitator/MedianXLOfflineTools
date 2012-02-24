@@ -24,8 +24,12 @@ PropertiesViewerWidget::PropertiesViewerWidget(QWidget *parent) : QWidget(parent
 
 void PropertiesViewerWidget::showItem(ItemInfo *item)
 {
+    _itemMysticOrbs.clear();
+    _rwMysticOrbs.clear();
+
     ui.allTextEdit->clear();
     ui.tabWidget->setEnabled(item != 0);
+
     if (!(_item = item))
     {
         ui.itemAndMysticOrbsTextEdit->clear();
@@ -346,8 +350,6 @@ int PropertiesViewerWidget::totalMysticOrbValue(int moCode, PropertiesMap *props
 
 QString PropertiesViewerWidget::collectMysticOrbsDataFromProps(QSet<int> *moSet, PropertiesMap &props, bool isClassCharm)
 {
-    moSet->clear();
-
     PropertiesMap propsWithoutMO = props;
     PropertiesMap::iterator iter = propsWithoutMO.begin();
     while (iter != propsWithoutMO.end())
