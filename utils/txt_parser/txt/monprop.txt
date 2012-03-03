@@ -11,7 +11,7 @@ morphist2		fade				1	1	state			230	1	1																									fade			1	1	state	
 shadowfiends		res-curse				100	100	state			87	1	1	hit-skill	Shadowfiends Shadows Buff		686	5	1																			res-curse			100	100	state		87	1	1	hit-skill		686	5	1																res-curse			100	100	state		87	1	1	hit-skill		686	5	1																0
 familiarbats		fade				1	1	state			2	0	0																									fade			1	1	state		2	0	0																					fade			1	1	state		2	0	0																					0
 deathknights		fade				1	1	state			91	0	0																									fade			1	1	state		91	0	0																					fade			1	1	state		91	0	0																					0
-aciddevils		hit-skill			223	10	5																															hit-skill		223	10	5																										hit-skill		223	10	5																										0
+aciddevils		hit-skill			223	10	5	avoidance				33	33																									hit-skill		223	10	5	avoidance			33	33																					hit-skill		223	10	5	avoidance			33	33																					0
 barbtotems		ac-miss				50	50																															ac-miss			50	50																										ac-miss			50	50																										0
 attacktotems		ac-miss				50	50	reanimate			1693	100	100																									ac-miss			50	50	reanimate		1693	100	100																					ac-miss			50	50	reanimate		1693	100	100																					0
 explodingtotems		ac-miss				50	50	death-skill			765	100	5																									ac-miss			50	50	death-skill		765	100	5																					ac-miss			50	50	death-skill		765	100	5																					0

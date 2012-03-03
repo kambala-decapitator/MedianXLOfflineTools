@@ -2,6 +2,7 @@
 #include "itemdatabase.h"
 #include "propertiesdisplaymanager.h"
 #include "structs.h"
+#include "characterinfo.hpp"
 
 #include <QGridLayout>
 #include <QVBoxLayout>
@@ -249,7 +250,7 @@ void FindItemsDialog::performSearch()
 {
     QString searchText = ui.searchComboBox->currentText();
     _searchResult.clear();
-    foreach (ItemInfo *item, *ItemDataBase::currentCharacterItems)
+    foreach (ItemInfo *item, CharacterInfo::instance().items.character)
     {
         QString itemText = ui.searchPropsCheckBox->isChecked() ? PropertiesDisplayManager::completeItemDescription(item) : ItemDataBase::completeItemName(item, false);
         Qt::CaseSensitivity cs = static_cast<Qt::CaseSensitivity>(ui.caseSensitiveCheckBox->isChecked());

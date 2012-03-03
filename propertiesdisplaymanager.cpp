@@ -1,6 +1,7 @@
 #include "propertiesdisplaymanager.h"
 #include "itemdatabase.h"
 #include "itemparser.h"
+#include "characterinfo.hpp"
 
 #ifndef QT_NO_DEBUG
 #include <QDebug>
@@ -47,11 +48,12 @@ QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item)
     if (itemBase.genericType == Enums::ItemTypeGeneric::Armor)
     {
         int baseDef = item->defense, totalDef = baseDef;
+        quint8 clvl = CharacterInfo::instance().basicInfo.level;
         ItemProperty foo;
-        int ed = allProps.value(Enums::ItemProperties::EnhancedDefence, foo).value + (allProps.value(Enums::ItemProperties::EnhancedDefenceBasedOnClvl, foo).value * *ItemDataBase::clvl) / 32;
+        int ed = allProps.value(Enums::ItemProperties::EnhancedDefence, foo).value + (allProps.value(Enums::ItemProperties::EnhancedDefenceBasedOnClvl, foo).value * clvl) / 32;
         if (ed)
             totalDef = (totalDef * (100 + ed)) / 100;
-        totalDef += allProps.value(Enums::ItemProperties::Defence, foo).value + (allProps.value(Enums::ItemProperties::DefenceBasedOnClvl, foo).value * *ItemDataBase::clvl) / 32;
+        totalDef += allProps.value(Enums::ItemProperties::Defence, foo).value + (allProps.value(Enums::ItemProperties::DefenceBasedOnClvl, foo).value * clvl) / 32;
         if (totalDef < 0)
             totalDef = 0;
 
@@ -245,9 +247,9 @@ QString PropertiesDisplayManager::propertyDisplay(const ItemProperty &propDispla
     if (prop.descStringAdd.contains(tr("Based on", "'based on level' property; translate only if Median XL is translated into your language! (i.e. there's localized data in Resources/data/<language>)")))
     {
         if (propId == Enums::ItemProperties::StrengthBasedOnBlessedLifeSlvl || propId == Enums::ItemProperties::DexterityBasedOnBlessedLifeSlvl)
-            value = *ItemDataBase::charClass == Enums::ClassName::Paladin ? (value * ItemDataBase::charSkills->last()) / 32 : 0; // TODO 0.3+: use ItemDataBase::Skills() to get the Blessed Life index
+            value = CharacterInfo::instance().basicInfo.classCode == Enums::ClassName::Paladin ? (value * CharacterInfo::instance().basicInfo.skills.last()) / 32 : 0; // TODO 0.3+: use ItemDataBase::Skills() to obtain Blessed Life index
         else // based on clvl
-            value = (value * *ItemDataBase::clvl) / 32;
+            value = (value * CharacterInfo::instance().basicInfo.level) / 32;
     }
 
     char valueStringSigned[10];

@@ -5,6 +5,7 @@
 #include "colors.hpp"
 #include "itemparser.h"
 #include "propertiesdisplaymanager.h"
+#include "characterinfo.hpp"
 
 #include <QSettings>
 
@@ -98,14 +99,15 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
             itemDescription += htmlStringFromDiabloColorString(QString("'%1'").arg(runes), Gold) + htmlLineBreak;
     }
 
+    quint8 clvl = CharacterInfo::instance().basicInfo.level;
     if (itemBase.genericType == Enums::ItemTypeGeneric::Armor)
     {
         int baseDef = item->defense, totalDef = baseDef;
         ItemProperty foo;
-        int ed = allProps.value(Enums::ItemProperties::EnhancedDefence, foo).value + (allProps.value(Enums::ItemProperties::EnhancedDefenceBasedOnClvl, foo).value * *ItemDataBase::clvl) / 32;
+        int ed = allProps.value(Enums::ItemProperties::EnhancedDefence, foo).value + (allProps.value(Enums::ItemProperties::EnhancedDefenceBasedOnClvl, foo).value * clvl) / 32;
         if (ed)
             totalDef = (totalDef * (100 + ed)) / 100;
-        totalDef += allProps.value(Enums::ItemProperties::Defence, foo).value + (allProps.value(Enums::ItemProperties::DefenceBasedOnClvl, foo).value * *ItemDataBase::clvl) / 32;
+        totalDef += allProps.value(Enums::ItemProperties::Defence, foo).value + (allProps.value(Enums::ItemProperties::DefenceBasedOnClvl, foo).value * clvl) / 32;
         if (totalDef < 0)
             totalDef = 0;
 
@@ -132,7 +134,7 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
     if (itemBase.classCode > -1)
     {
         QString text = tr("(%1 Only)", "class-specific item").arg(Enums::ClassName::classes().at(itemBase.classCode));
-        if (itemBase.classCode != *ItemDataBase::charClass)
+        if (itemBase.classCode != CharacterInfo::instance().basicInfo.classCode)
             itemDescription += htmlStringFromDiabloColorString(text, Red);
         else
             itemDescription += text;
@@ -164,7 +166,7 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
     }
     int actualRlvl = qMax(rlvl, maxSocketableRlvl) + (allProps.contains(Enums::ItemProperties::RequiredLevel) ? allProps[Enums::ItemProperties::RequiredLevel].value : 0);
     if (actualRlvl)
-        itemDescription += htmlStringFromDiabloColorString(tr("Required Level: %1").arg(actualRlvl > 555 ? 555 : actualRlvl), *ItemDataBase::clvl < actualRlvl ? Red : White) + htmlLineBreak;
+        itemDescription += htmlStringFromDiabloColorString(tr("Required Level: %1").arg(actualRlvl > 555 ? 555 : actualRlvl), clvl < actualRlvl ? Red : White) + htmlLineBreak;
 
     // add '+50% damage to undead' if item type matches
     bool shouldAddDamageToUndeadInTheBottom = false;
@@ -209,7 +211,7 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
         foreach (const QString &setItemName, ItemDataBase::completeSetForName(setName))
         {
             bool found = false;
-            foreach (ItemInfo *anItem, *ItemDataBase::currentCharacterItems)
+            foreach (ItemInfo *anItem, CharacterInfo::instance().items.character)
             {
                 if (anItem->quality == Enums::ItemQuality::Set && ItemDataBase::Sets()->value(anItem->setOrUniqueId).itemName == setItemName)
                 {

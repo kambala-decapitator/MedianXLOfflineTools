@@ -240,7 +240,7 @@
 238		-1			
 239		-1			
 240		-1			
-241		-1			
+241	Blindside	-1	0	0	0
 242		-1			
 243		-1			
 244		-1			
@@ -380,7 +380,7 @@
 378	Egg Trap	5	1	3	3
 379	Ferocity	5	1	4	3
 380	Thorn Wall	5	1	5	3
-381	Blindside	5	3	1	1
+381	Laughing Ghost	5	3	1	1
 382	Cascade	5	3	2	1
 383	Spore Shot	5	3	3	1
 384	Elfin Weapons	5	3	4	1
@@ -993,7 +993,7 @@
 991		-1			
 992		-1			
 993	Shower of Rocks	-1	1	4	1
-994	Blindside	-1	3	1	1
+994	Blindside	-1	0	0	0
 995		-1			
 996		-1			
 997	Cold Fear	-1	0	0	0

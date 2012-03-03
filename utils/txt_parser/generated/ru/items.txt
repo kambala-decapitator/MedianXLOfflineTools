@@ -2083,7 +2083,7 @@ O0+	\orange;what it seems to be \nMagic is not always \nEnchanted Shrine (10 Cha
 &09	\orange;Мистическая Сфера	\blue;+2 Требуемый Уровень\n+1% к Физ./Маг. Урону Заклинаний\n\white;Смешайте с Вещью для Добавления Бонуса	1	1	2	0	0	pearl4	asaa		-1
 P9+	\orange;refreshed \nDrink and be \nDivine Shrine (1 Charge)		1	2	2	0	0	jbscross	thng		-1
 &62	\orange;Мистическая Сфера	\blue;+2 Требуемый Уровень\n+2 Фактора Энергии к Урону Заклинаний\n\white;Смешайте с Любым Оружием для Добавления Бонуса	1	1	2	0	0	pearl2	asaa		-1
-zen	Спасибо за игру\nhttp://forum.worldofplayers.ru/forumdisplay.php?f=769\nhttp://modsbylaz.hugelaser.com/\nMedian XL 2012 v004		1	2	2	0	0	invjbi	woot		-1
+zen	Спасибо за игру\nhttp://forum.worldofplayers.ru/forumdisplay.php?f=769\nhttp://modsbylaz.hugelaser.com/\nMedian XL 2012 v005		1	2	2	0	0	invjbi	woot		-1
 sku	\purple;Череп		1	1	2	0	12	invsku	gemz		-1
 &32	\orange;Мистическая Сфера	\blue;+2 Требуемый Уровень\n2% Кража Жизни при Попадании\n\white;Смешайте с Любым Оружием для Добавления Бонуса	1	1	2	0	0	pearl2	asaa		-1
 ne6	Амулет		1	1	2	0	0	invamu	amul		-1

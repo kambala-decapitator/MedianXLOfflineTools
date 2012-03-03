@@ -67,14 +67,12 @@ private:
     QMap<Enums::CharacterStats::StatisticEnum, QSpinBox *> _spinBoxesStatsMap;
     QMap<Enums::CharacterStats::StatisticEnum, QLineEdit *> _lineEditsStatsMap;
     QStringList _recentFilesList;
-    QAction *_exitSeparator;
     QPointer<ItemsViewerDialog> _itemsDialog;
     FindItemsDialog *_findItemsDialog;
 
     // data
     QString _charPath;
     QByteArray _saveFileContents;
-    CharacterInfo _editableCharInfo;
     QObject _statsDynamicData;
     int _oldStatValues[4];
     QMap<Enums::ClassName::ClassNameEnum, BaseStats> _baseStatsMap;

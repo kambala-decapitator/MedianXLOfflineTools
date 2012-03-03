@@ -48,7 +48,8 @@ HEADERS += medianxlofflinetools.h \
     itemparser.h \
     resourcepathmanager.hpp \
     propertiesdisplaymanager.h \
-    findresultswidget.h
+    findresultswidget.h \
+    characterinfo.hpp
 
 FORMS += medianxlofflinetools.ui \
     resurrectpenaltydialog.ui \

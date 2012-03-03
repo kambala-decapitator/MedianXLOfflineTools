@@ -1,15 +1,15 @@
 v0.2.1:
-- show experince bar and completion of current level in %
-- completed skill/stat quests
 - export item to bbcode/html
 - link for skillpoint planner
 - generate some bbcode/html report about character and/or plugy stashes contents
-- move recent files to separate sub-menu
 - add save prompt
 - move most functionality from splitter to tableview
 - get exp table and base char stats from txt
 - d2s file association
 - maybe win7 taskbar and mac dock menu support to open recent files
+- mass disenchant (dialog and multiple selection) - if not too time consuming
+- show experince bar and completion of current level in %
+- completed skill/stat quests
 -----
 - search and fix all 'TODO:' in code
 - remove all qDebug()

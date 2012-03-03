@@ -3,6 +3,7 @@
 #include "colors.hpp"
 #include "resourcepathmanager.hpp"
 #include "itemparser.h"
+#include "characterinfo.hpp"
 
 #include <QFile>
 
@@ -15,11 +16,6 @@
 
 
 QMultiHash<QString, QString> ItemDataBase::_sets;
-
-ItemsList *ItemDataBase::currentCharacterItems = 0;
-quint8 *ItemDataBase::clvl = 0;
-Enums::ClassName::ClassNameEnum *ItemDataBase::charClass = 0;
-QList<quint8> *ItemDataBase::charSkills = 0;
 
 bool ItemDataBase::createUncompressedTempFile(const QString &compressedFilePath, const QString &errorMessage, QFile *uncompressedFile)
 {
@@ -557,7 +553,7 @@ ItemInfo *ItemDataBase::loadItemFromFile(const QString &fileName)
 
 ItemsList ItemDataBase::itemsStoredIn(int storage, int location /*= Enums::ItemLocation::Stored*/, quint32 *pPlugyPage /*= 0*/, ItemsList *allItems /*= 0*/)
 {
-    ItemsList items, *characterItems = allItems ? allItems : currentCharacterItems;
+    ItemsList items, *characterItems = allItems ? allItems : &CharacterInfo::instance().items.character;
     for (int i = 0; i < characterItems->size(); ++i)
     {
         ItemInfo *item = characterItems->at(i);
@@ -626,5 +622,6 @@ bool ItemDataBase::isCube(ItemInfo *item)
 
 bool ItemDataBase::hasCube()
 {
-    return std::find_if(currentCharacterItems->constBegin(), currentCharacterItems->constEnd(), isCubeItem) != currentCharacterItems->constEnd();
+    const ItemsList &items = CharacterInfo::instance().items.character;
+    return std::find_if(items.constBegin(), items.constEnd(), isCubeItem) != items.constEnd();
 }

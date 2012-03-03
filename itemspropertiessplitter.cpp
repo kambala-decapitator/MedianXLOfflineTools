@@ -7,6 +7,7 @@
 #include "resourcepathmanager.hpp"
 #include "itemsviewerdialog.h"
 #include "reversebitwriter.h"
+#include "characterinfo.hpp"
 
 #include <QPushButton>
 #include <QDoubleSpinBox>
@@ -478,7 +479,7 @@ void ItemsPropertiesSplitter::performDeleteItem(ItemInfo *item, bool currentStor
 
 void ItemsPropertiesSplitter::addItemToList(ItemInfo *item, bool currentStorage /*= true*/)
 {
-    ItemDataBase::currentCharacterItems->append(item);
+    CharacterInfo::instance().items.character.append(item);
     
     if (currentStorage)
     {
@@ -490,7 +491,7 @@ void ItemsPropertiesSplitter::addItemToList(ItemInfo *item, bool currentStorage 
 
 void ItemsPropertiesSplitter::removeItemFromList(ItemInfo *item, bool currentStorage /*= true*/)
 {
-    ItemDataBase::currentCharacterItems->removeOne(item);
+    CharacterInfo::instance().items.character.removeOne(item);
     
     if (currentStorage)
     {

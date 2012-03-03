@@ -11,6 +11,7 @@
 #include "itemparser.h"
 #include "reversebitreader.h"
 #include "itemspropertiessplitter.h"
+#include "characterinfo.hpp"
 
 #include <QCloseEvent>
 #include <QGridLayout>
@@ -53,8 +54,6 @@ MedianXLOfflineTools::MedianXLOfflineTools(QWidget *parent, Qt::WFlags flags) : 
     maxValueFormat(tr("Max: %1")), minValueFormat(tr("Min: %1")), investedValueFormat(tr("Invested: %1")), _isLoaded(false)
 {
     ui.setupUi(this);
-
-    _exitSeparator = ui.menuFile->insertSeparator(ui.actionExit);
     createLanguageMenu();
 
     loadData();
@@ -129,14 +128,14 @@ void MedianXLOfflineTools::saveCharacter()
         return;
 
     QByteArray tempFileContents(_saveFileContents);
-    tempFileContents.replace(Enums::Offsets::StatsData, _editableCharInfo.skillsOffset - Enums::Offsets::StatsData, statsBytes);
-    int diff = Enums::Offsets::StatsData + statsBytes.size() - _editableCharInfo.skillsOffset;
-    _editableCharInfo.skillsOffset = Enums::Offsets::StatsData + statsBytes.size();
-    _editableCharInfo.itemsOffset += diff;
-    _editableCharInfo.itemsEndOffset += diff;
+    tempFileContents.replace(Enums::Offsets::StatsData, CharacterInfo::instance().skillsOffset - Enums::Offsets::StatsData, statsBytes);
+    int diff = Enums::Offsets::StatsData + statsBytes.size() - CharacterInfo::instance().skillsOffset;
+    CharacterInfo::instance().skillsOffset = Enums::Offsets::StatsData + statsBytes.size();
+    CharacterInfo::instance().itemsOffset += diff;
+    CharacterInfo::instance().itemsEndOffset += diff;
 
     if (ui.respecSkillsCheckBox->isChecked())
-        tempFileContents.replace(_editableCharInfo.skillsOffset + 2, skillsNumber, QByteArray(skillsNumber, 0));
+        tempFileContents.replace(CharacterInfo::instance().skillsOffset + 2, skillsNumber, QByteArray(skillsNumber, 0));
 
     if (ui.activateWaypointsCheckBox->isChecked())
     {
@@ -146,18 +145,18 @@ void MedianXLOfflineTools::saveCharacter()
     }
 
     if (ui.convertToSoftcoreCheckBox->isChecked())
-        _editableCharInfo.basicInfo.isHardcore = false;
+        CharacterInfo::instance().basicInfo.isHardcore = false;
 
 #ifdef MAKE_HC
-    _editableCharInfo.basicInfo.isHardcore = true;
-    _editableCharInfo.basicInfo.hadDied = false;
+    CharacterInfo::instance().basicInfo.isHardcore = true;
+    CharacterInfo::instance().basicInfo.hadDied = false;
 #endif
     char statusValue = tempFileContents[Enums::Offsets::Status];
-    if (_editableCharInfo.basicInfo.hadDied)
+    if (CharacterInfo::instance().basicInfo.hadDied)
         statusValue |= Enums::StatusBits::HadDied;
     else
         statusValue &= ~Enums::StatusBits::HadDied;
-    if (_editableCharInfo.basicInfo.isHardcore)
+    if (CharacterInfo::instance().basicInfo.isHardcore)
         statusValue |= Enums::StatusBits::IsHardcore;
     else
         statusValue &= ~Enums::StatusBits::IsHardcore;
@@ -199,8 +198,8 @@ void MedianXLOfflineTools::saveCharacter()
     outputDataStream.device()->reset();
 #endif
 
-    QString newName = _editableCharInfo.basicInfo.newName;
-    bool hasNameChanged = !newName.isEmpty() && _editableCharInfo.basicInfo.originalName != newName;
+    QString newName = CharacterInfo::instance().basicInfo.newName;
+    bool hasNameChanged = !newName.isEmpty() && CharacterInfo::instance().basicInfo.originalName != newName;
     if (hasNameChanged)
     {
         outputDataStream.device()->seek(Enums::Offsets::Name);
@@ -213,13 +212,13 @@ void MedianXLOfflineTools::saveCharacter()
         outputDataStream.writeRawData(newNameByteArray.constData(), newNameByteArray.length());
     }
     else
-        newName = _editableCharInfo.basicInfo.originalName;
+        newName = CharacterInfo::instance().basicInfo.originalName;
 
     quint8 newClvl = ui.levelSpinBox->value();
-    if (_editableCharInfo.basicInfo.level != newClvl)
+    if (CharacterInfo::instance().basicInfo.level != newClvl)
     {
-        _editableCharInfo.basicInfo.level = newClvl;
-        _editableCharInfo.basicInfo.totalSkillPoints = ui.freeSkillPointsLineEdit->text().toUShort();
+        CharacterInfo::instance().basicInfo.level = newClvl;
+        CharacterInfo::instance().basicInfo.totalSkillPoints = ui.freeSkillPointsLineEdit->text().toUShort();
         recalculateStatPoints();
 
         outputDataStream.device()->seek(Enums::Offsets::Level);
@@ -228,19 +227,19 @@ void MedianXLOfflineTools::saveCharacter()
         ui.levelSpinBox->setMaximum(newClvl);
     }
 
-    if (_editableCharInfo.mercenary.exists)
+    if (CharacterInfo::instance().mercenary.exists)
     {
-        quint16 newMercValue = Enums::Mercenary::mercBaseValueFromCode(_editableCharInfo.mercenary.code) + ui.mercTypeComboBox->currentIndex();
-        _editableCharInfo.mercenary.code = Enums::Mercenary::mercCodeFromValue(newMercValue);
-        _editableCharInfo.mercenary.nameIndex = ui.mercNameComboBox->currentIndex();
+        quint16 newMercValue = Enums::Mercenary::mercBaseValueFromCode(CharacterInfo::instance().mercenary.code) + ui.mercTypeComboBox->currentIndex();
+        CharacterInfo::instance().mercenary.code = Enums::Mercenary::mercCodeFromValue(newMercValue);
+        CharacterInfo::instance().mercenary.nameIndex = ui.mercNameComboBox->currentIndex();
         outputDataStream.device()->seek(Enums::Offsets::Mercenary + 4);
-        outputDataStream << _editableCharInfo.mercenary.nameIndex << newMercValue;
+        outputDataStream << CharacterInfo::instance().mercenary.nameIndex << newMercValue;
     }
 
     int characterItemsSize = 2;
     ItemsList characterItems;
     QHash<Enums::ItemStorage::ItemStorageEnum, ItemsList > plugyItemsHash;
-    foreach (ItemInfo *item, _editableCharInfo.items.character)
+    foreach (ItemInfo *item, CharacterInfo::instance().items.character)
     {
         switch (item->storage)
         {
@@ -297,8 +296,8 @@ void MedianXLOfflineTools::saveCharacter()
         }
     }
 
-    tempFileContents.replace(_editableCharInfo.itemsOffset, _editableCharInfo.itemsEndOffset - _editableCharInfo.itemsOffset, QByteArray(characterItemsSize, 0));
-    outputDataStream.device()->seek(_editableCharInfo.itemsOffset);
+    tempFileContents.replace(CharacterInfo::instance().itemsOffset, CharacterInfo::instance().itemsEndOffset - CharacterInfo::instance().itemsOffset, QByteArray(characterItemsSize, 0));
+    outputDataStream.device()->seek(CharacterInfo::instance().itemsOffset);
     outputDataStream << static_cast<quint16>(characterItems.size());
     ItemParser::writeItems(characterItems, outputDataStream);
 
@@ -314,7 +313,7 @@ void MedianXLOfflineTools::saveCharacter()
     QFile outputFile(saveFileName);
     if (hasNameChanged)
     {
-        QFile oldFile(QString("%1/%2.d2s").arg(savePath, _editableCharInfo.basicInfo.originalName));
+        QFile oldFile(QString("%1/%2.d2s").arg(savePath, CharacterInfo::instance().basicInfo.originalName));
         backupFile(oldFile);
     }
     else
@@ -331,21 +330,21 @@ void MedianXLOfflineTools::saveCharacter()
             if (hasNameChanged)
             {
                 // delete .d2s and rename all other related files like .d2x, .key, .ma0, etc.
-                bool isOldNameEmpty = QRegExp(QString("[ %1]+").arg(QChar(QChar::Nbsp))).exactMatch(_editableCharInfo.basicInfo.originalName);
+                bool isOldNameEmpty = QRegExp(QString("[ %1]+").arg(QChar(QChar::Nbsp))).exactMatch(CharacterInfo::instance().basicInfo.originalName);
                 bool hasNonAsciiChars = false;
-                for (int i = 0; i < _editableCharInfo.basicInfo.originalName.length(); ++i)
-                    if (_editableCharInfo.basicInfo.originalName.at(i).unicode() > 255)
+                for (int i = 0; i < CharacterInfo::instance().basicInfo.originalName.length(); ++i)
+                    if (CharacterInfo::instance().basicInfo.originalName.at(i).unicode() > 255)
                     {
                         hasNonAsciiChars = true;
                         break;
                     }
 
                 bool isStrangeName = hasNonAsciiChars || isOldNameEmpty;
-                QDir sourceFileDir(savePath, isStrangeName ? "*" : _editableCharInfo.basicInfo.originalName + ".*");
+                QDir sourceFileDir(savePath, isStrangeName ? "*" : CharacterInfo::instance().basicInfo.originalName + ".*");
                 foreach (const QFileInfo &fileInfo, sourceFileDir.entryInfoList())
                 {
                     QString extension = fileInfo.suffix();
-                    if ((isStrangeName && fileInfo.baseName() != _editableCharInfo.basicInfo.originalName) || extension == backupExtension)
+                    if ((isStrangeName && fileInfo.baseName() != CharacterInfo::instance().basicInfo.originalName) || extension == backupExtension)
                         continue;
 
                     QFile sourceFile(fileInfo.canonicalFilePath());
@@ -361,8 +360,8 @@ void MedianXLOfflineTools::saveCharacter()
                     }
                 }
 
-                _editableCharInfo.basicInfo.originalName = newName;
-                //_editableCharInfo.basicInfo.newName.clear();
+                CharacterInfo::instance().basicInfo.originalName = newName;
+                //CharacterInfo::instance().basicInfo.newName.clear();
 
                 _recentFilesList[0] = saveFileName;
                 updateRecentFilesActions();
@@ -403,7 +402,7 @@ void MedianXLOfflineTools::statChanged(int newValue)
         QStatusTipEvent event(senderSpinBox->statusTip());
         qApp->sendEvent(senderSpinBox, &event);
 
-        updateTableStats(_baseStatsMap[_editableCharInfo.basicInfo.classCode].statsPerPoint, diff, senderSpinBox);
+        updateTableStats(_baseStatsMap[CharacterInfo::instance().basicInfo.classCode].statsPerPoint, diff, senderSpinBox);
     }
 }
 
@@ -412,7 +411,7 @@ void MedianXLOfflineTools::respecStats()
     for (int i = Enums::CharacterStats::Strength; i <= Enums::CharacterStats::Vitality; ++i)
     {
         Enums::CharacterStats::StatisticEnum statCode = static_cast<Enums::CharacterStats::StatisticEnum>(i);
-        int baseStat = _baseStatsMap[_editableCharInfo.basicInfo.classCode].statsAtStart.statFromCode(statCode);
+        int baseStat = _baseStatsMap[CharacterInfo::instance().basicInfo.classCode].statsAtStart.statFromCode(statCode);
         _spinBoxesStatsMap[statCode]->setValue(baseStat);
     }
     ui.statusBar->clearMessage();
@@ -420,27 +419,27 @@ void MedianXLOfflineTools::respecStats()
 
 void MedianXLOfflineTools::respecSkills(bool shouldRespec)
 {
-    quint16 skills = _editableCharInfo.basicInfo.totalSkillPoints;
+    quint16 skills = CharacterInfo::instance().basicInfo.totalSkillPoints;
     ui.freeSkillPointsLineEdit->setText(QString::number(shouldRespec ? skills : _statsDynamicData.property("FreeSkillPoints").toUInt()));
     updateMaxCompoundStatusTip(ui.freeSkillPointsLineEdit, skills, shouldRespec ? 0 : skills - _statsDynamicData.property("FreeSkillPoints").toUInt());
 }
 
 void MedianXLOfflineTools::rename()
 {
-    QD2CharRenamer renameWidget(_editableCharInfo.basicInfo.newName, ui.actionWarnWhenColoredName->isChecked(), this);
+    QD2CharRenamer renameWidget(CharacterInfo::instance().basicInfo.newName, ui.actionWarnWhenColoredName->isChecked(), this);
     if (renameWidget.exec())
     {
-        _editableCharInfo.basicInfo.newName = renameWidget.name();
-        QD2CharRenamer::updateNamePreview(ui.charNamePreview, _editableCharInfo.basicInfo.newName);
+        CharacterInfo::instance().basicInfo.newName = renameWidget.name();
+        QD2CharRenamer::updateNamePreview(ui.charNamePreview, CharacterInfo::instance().basicInfo.newName);
     }
 }
 
 void MedianXLOfflineTools::levelChanged(int newClvl)
 {
     int lvlDiff = _oldClvl - newClvl;
-    if (_isLoaded && qAbs(lvlDiff) < _editableCharInfo.basicInfo.level)
+    if (_isLoaded && qAbs(lvlDiff) < CharacterInfo::instance().basicInfo.level)
     {
-        updateTableStats(_baseStatsMap[_editableCharInfo.basicInfo.classCode].statsPerLevel, -lvlDiff);
+        updateTableStats(_baseStatsMap[CharacterInfo::instance().basicInfo.classCode].statsPerLevel, -lvlDiff);
 
         int statsDiff = lvlDiff * statPointsPerLevel;
         _oldClvl = newClvl;
@@ -450,17 +449,17 @@ void MedianXLOfflineTools::levelChanged(int newClvl)
         foreach (QSpinBox *spinBox, _spinBoxesStatsMap)
             spinBox->setMaximum(spinBox->maximum() - statsDiff);
 
-        bool hasLevelChanged = newClvl != _editableCharInfo.basicInfo.level;
+        bool hasLevelChanged = newClvl != CharacterInfo::instance().basicInfo.level;
         if (_resurrectionPenalty != ResurrectPenaltyDialog::Skills)
         {
             ui.respecSkillsCheckBox->setChecked(hasLevelChanged);
             ui.respecSkillsCheckBox->setDisabled(hasLevelChanged);
         }
 
-        int newSkillPoints = _editableCharInfo.basicInfo.totalSkillPoints, investedSkillPoints = 0;
+        int newSkillPoints = CharacterInfo::instance().basicInfo.totalSkillPoints, investedSkillPoints = 0;
         if (hasLevelChanged)
         {
-            newSkillPoints -= (_editableCharInfo.basicInfo.level - newClvl) * skillPointsPerLevel;
+            newSkillPoints -= (CharacterInfo::instance().basicInfo.level - newClvl) * skillPointsPerLevel;
             ui.freeSkillPointsLineEdit->setText(QString::number(newSkillPoints));
         }
         else if (_resurrectionPenalty == ResurrectPenaltyDialog::Skills)
@@ -478,19 +477,19 @@ void MedianXLOfflineTools::resurrect()
     ResurrectPenaltyDialog dlg(this);
     if (dlg.exec())
     {
-        _editableCharInfo.basicInfo.hadDied = false;
+        CharacterInfo::instance().basicInfo.hadDied = false;
         updateHardcoreUIElements();
         updateCharacterTitle(true);
 
-        ui.levelSpinBox->setMaximum(_editableCharInfo.basicInfo.level);
-        ui.levelSpinBox->setValue(_editableCharInfo.basicInfo.level);
+        ui.levelSpinBox->setMaximum(CharacterInfo::instance().basicInfo.level);
+        ui.levelSpinBox->setValue(CharacterInfo::instance().basicInfo.level);
 
         _resurrectionPenalty = dlg.resurrectionPenalty();
         switch (_resurrectionPenalty)
         {
         case ResurrectPenaltyDialog::Levels:
         {
-            int newLevel = _editableCharInfo.basicInfo.level - ResurrectPenaltyDialog::levelPenalty;
+            int newLevel = CharacterInfo::instance().basicInfo.level - ResurrectPenaltyDialog::levelPenalty;
             if (newLevel < 1)
                 newLevel = 1;
             ui.levelSpinBox->setMaximum(newLevel); // setValue() is invoked implicitly
@@ -505,7 +504,7 @@ void MedianXLOfflineTools::resurrect()
 
             ushort newSkillPoints = ui.freeSkillPointsLineEdit->text().toUShort();
             newSkillPoints -= newSkillPoints * ResurrectPenaltyDialog::skillPenalty;
-            _editableCharInfo.basicInfo.totalSkillPoints = newSkillPoints;
+            CharacterInfo::instance().basicInfo.totalSkillPoints = newSkillPoints;
 
             ui.freeSkillPointsLineEdit->setText(QString::number(newSkillPoints));
             updateMaxCompoundStatusTip(ui.freeSkillPointsLineEdit, newSkillPoints, 0);
@@ -518,7 +517,7 @@ void MedianXLOfflineTools::resurrect()
 
             ushort newStatPoints = ui.freeStatPointsLineEdit->text().toUShort(), diff = newStatPoints * ResurrectPenaltyDialog::statPenalty;
             newStatPoints -= diff;
-            _editableCharInfo.basicInfo.totalStatPoints = newStatPoints;
+            CharacterInfo::instance().basicInfo.totalStatPoints = newStatPoints;
 
             ui.freeStatPointsLineEdit->setText(QString::number(newStatPoints));
             updateMaxCompoundStatusTip(ui.freeStatPointsLineEdit, newStatPoints, 0);
@@ -541,7 +540,7 @@ void MedianXLOfflineTools::convertToSoftcore(bool isSoftcore)
 
 //void MedianXLOfflineTools::currentDifficultyChanged(int newDifficulty)
 //{
-//    quint8 progression = _editableCharInfo.basicInfo.titleCode, maxDifficulty = ui.currentDifficultyComboBox->count() - 1, maxAct;
+//    quint8 progression = CharacterInfo::instance().basicInfo.titleCode, maxDifficulty = ui.currentDifficultyComboBox->count() - 1, maxAct;
 //    if (progression == Enums::Progression::Completed - 1 || newDifficulty != maxDifficulty)
 //        maxAct = 5;
 //    else
@@ -652,9 +651,9 @@ void MedianXLOfflineTools::giveCube()
         ItemInfo *plugyCube = new ItemInfo(*cube);
         plugyCube->storage = Enums::ItemStorage::PersonalStash;
         plugyCube->plugyPage = 1;
-        _editableCharInfo.items.character += plugyCube;
+        CharacterInfo::instance().items.character += plugyCube;
     }
-    _editableCharInfo.items.character += cube;
+    CharacterInfo::instance().items.character += cube;
 
     if (_itemsDialog)
         _itemsDialog->updateItems(plugyStashesExistenceHash);
@@ -1020,16 +1019,14 @@ void MedianXLOfflineTools::connectSignals()
 
 void MedianXLOfflineTools::updateRecentFilesActions()
 {
-    // not the best solution to remove recent files
-    foreach (QAction *action, ui.menuFile->actions())
-        if (action->statusTip().endsWith(".d2s"))
-            ui.menuFile->removeAction(action);
+    ui.menuRecentCharacters->clear();
+    ui.menuRecentCharacters->setDisabled(_recentFilesList.isEmpty());
 
     for (int i = 0; i < _recentFilesList.length(); ++i)
     {
         QString filePath = _recentFilesList.at(i);
         if (QFile::exists(filePath))
-            ui.menuFile->insertAction(_exitSeparator, createRecentFileAction(filePath, i + 1));
+            ui.menuRecentCharacters->addAction(createRecentFileAction(filePath, i + 1));
         else
             _recentFilesList.removeAt(i--);
     }
@@ -1068,11 +1065,6 @@ bool MedianXLOfflineTools::loadFile(const QString &charPath)
         _charPath = charPath;
         updateUI();
         addToRecentFiles(charPath);
-
-        ItemDataBase::currentCharacterItems = &_editableCharInfo.items.character;
-        ItemDataBase::clvl = &_editableCharInfo.basicInfo.level;
-        ItemDataBase::charClass = &_editableCharInfo.basicInfo.classCode;
-        ItemDataBase::charSkills = &_editableCharInfo.basicInfo.skills;
 
         ui.actionGiveCube->setDisabled(ItemDataBase::hasCube());
 
@@ -1132,10 +1124,9 @@ bool MedianXLOfflineTools::processSaveFile(const QString &charPath)
         return false;
     }
 
-    CharacterInfo editableCharInfo;
-    editableCharInfo.basicInfo.originalName = _saveFileContents.constData() + Enums::Offsets::Name;
-    editableCharInfo.basicInfo.originalName.replace(ansiColorHeader, unicodeColorHeader);
-    editableCharInfo.basicInfo.newName = editableCharInfo.basicInfo.originalName;
+    CharacterInfo::instance().basicInfo.originalName = _saveFileContents.constData() + Enums::Offsets::Name;
+    CharacterInfo::instance().basicInfo.originalName.replace(ansiColorHeader, unicodeColorHeader);
+    CharacterInfo::instance().basicInfo.newName = CharacterInfo::instance().basicInfo.originalName;
 
     inputDataStream.device()->seek(Enums::Offsets::Status);
     quint8 status, progression, classCode, clvl;
@@ -1150,29 +1141,29 @@ bool MedianXLOfflineTools::processSaveFile(const QString &charPath)
         ERROR_BOX(tr("This is not Expansion character."));
         return false;
     }
-    editableCharInfo.basicInfo.isHardcore = status & Enums::StatusBits::IsHardcore;
-    editableCharInfo.basicInfo.hadDied = status & Enums::StatusBits::HadDied;
+    CharacterInfo::instance().basicInfo.isHardcore = status & Enums::StatusBits::IsHardcore;
+    CharacterInfo::instance().basicInfo.hadDied = status & Enums::StatusBits::HadDied;
 
     if (classCode > Enums::ClassName::Assassin)
     {
         ERROR_BOX(tr("Wrong class value: got %1").arg(classCode));
         return false;
     }
-    editableCharInfo.basicInfo.classCode = static_cast<Enums::ClassName::ClassNameEnum>(classCode);
+    CharacterInfo::instance().basicInfo.classCode = static_cast<Enums::ClassName::ClassNameEnum>(classCode);
 
     if (progression >= Enums::Progression::Completed)
     {
         ERROR_BOX(tr("Wrong progression value: got %1").arg(progression));
         return false;
     }
-    editableCharInfo.basicInfo.titleCode = progression;
+    CharacterInfo::instance().basicInfo.titleCode = progression;
 
     if (!clvl || clvl > Enums::CharacterStats::MaxLevel)
     {
         ERROR_BOX(tr("Wrong level: got %1").arg(clvl));
         return false;
     }
-    editableCharInfo.basicInfo.level = clvl;
+    CharacterInfo::instance().basicInfo.level = clvl;
 
     //inputDataStream.device()->seek(Enums::Offsets::CurrentLocation);
     //for (int i = 0; i < 3; ++i)
@@ -1181,8 +1172,8 @@ bool MedianXLOfflineTools::processSaveFile(const QString &charPath)
     //    inputDataStream >> difficulty;
     //    if (difficulty & Enums::DifficultyBits::IsActive)
     //    {
-    //        editableCharInfo.basicInfo.currentDifficulty = i;
-    //        editableCharInfo.basicInfo.currentAct = (difficulty & Enums::DifficultyBits::CurrentAct) + 1;
+    //        CharacterInfo::instance().basicInfo.currentDifficulty = i;
+    //        CharacterInfo::instance().basicInfo.currentAct = (difficulty & Enums::DifficultyBits::CurrentAct) + 1;
     //        break;
     //    }
     //}
@@ -1190,7 +1181,7 @@ bool MedianXLOfflineTools::processSaveFile(const QString &charPath)
     inputDataStream.device()->seek(Enums::Offsets::Mercenary);
     quint32 mercID;
     inputDataStream >> mercID;
-    if ((editableCharInfo.mercenary.exists = (mercID != 0)))
+    if ((CharacterInfo::instance().mercenary.exists = (mercID != 0)))
     {
         quint16 mercName, mercValue;
         inputDataStream >> mercName >> mercValue;
@@ -1199,16 +1190,16 @@ bool MedianXLOfflineTools::processSaveFile(const QString &charPath)
             ERROR_BOX(tr("Wrong mercenary code: got %1").arg(mercValue));
             return false;
         }
-        editableCharInfo.mercenary.code = Enums::Mercenary::mercCodeFromValue(mercValue);
-        editableCharInfo.mercenary.nameIndex = mercName;
+        CharacterInfo::instance().mercenary.code = Enums::Mercenary::mercCodeFromValue(mercValue);
+        CharacterInfo::instance().mercenary.nameIndex = mercName;
 
         quint32 mercExp;
         inputDataStream >> mercExp;
-        editableCharInfo.mercenary.experience = mercExp;
+        CharacterInfo::instance().mercenary.experience = mercExp;
         for (quint8 i = 1; i <= Enums::CharacterStats::MaxLevel; ++i)
             if (mercExp < static_cast<quint32>(i * i * (i + 1)))
             {
-                editableCharInfo.mercenary.level = i - 1;
+                CharacterInfo::instance().mercenary.level = i - 1;
                 break;
             }
     }
@@ -1219,16 +1210,16 @@ bool MedianXLOfflineTools::processSaveFile(const QString &charPath)
         ERROR_BOX(tr("Quests data not found!"));
         return false;
     }
-    editableCharInfo.questsInfo.denOfEvilQuestsCompleted = editableCharInfo.questsInfo.radamentQuestsCompleted = 0;
-    editableCharInfo.questsInfo.lamEsensTomeQuestsCompleted = editableCharInfo.questsInfo.izualQuestsCompleted = 0;
+    CharacterInfo::instance().questsInfo.denOfEvilQuestsCompleted = CharacterInfo::instance().questsInfo.radamentQuestsCompleted = 0;
+    CharacterInfo::instance().questsInfo.lamEsensTomeQuestsCompleted = CharacterInfo::instance().questsInfo.izualQuestsCompleted = 0;
     for (int i = 0; i < difficultiesNumber; ++i)
     {
         int baseOffset = Enums::Offsets::QuestsData + i * Enums::Quests::Size;
-        editableCharInfo.questsInfo.denOfEvilQuestsCompleted += _saveFileContents.at(baseOffset + Enums::Quests::DenOfEvil) & Enums::Quests::IsCompleted;
-        editableCharInfo.questsInfo.radamentQuestsCompleted += _saveFileContents.at(baseOffset + Enums::Quests::Radament) & Enums::Quests::IsCompleted ||
+        CharacterInfo::instance().questsInfo.denOfEvilQuestsCompleted += _saveFileContents.at(baseOffset + Enums::Quests::DenOfEvil) & Enums::Quests::IsCompleted;
+        CharacterInfo::instance().questsInfo.radamentQuestsCompleted += _saveFileContents.at(baseOffset + Enums::Quests::Radament) & Enums::Quests::IsCompleted ||
                                                                _saveFileContents.at(baseOffset + Enums::Quests::Radament) & Enums::Quests::IsTaskDone;
-        editableCharInfo.questsInfo.lamEsensTomeQuestsCompleted += _saveFileContents.at(baseOffset + Enums::Quests::LamEsensTome) & Enums::Quests::IsCompleted;
-        editableCharInfo.questsInfo.izualQuestsCompleted += _saveFileContents.at(baseOffset + Enums::Quests::Izual) & Enums::Quests::IsCompleted;
+        CharacterInfo::instance().questsInfo.lamEsensTomeQuestsCompleted += _saveFileContents.at(baseOffset + Enums::Quests::LamEsensTome) & Enums::Quests::IsCompleted;
+        CharacterInfo::instance().questsInfo.izualQuestsCompleted += _saveFileContents.at(baseOffset + Enums::Quests::Izual) & Enums::Quests::IsCompleted;
     }
 
     // WP
@@ -1280,7 +1271,7 @@ bool MedianXLOfflineTools::processSaveFile(const QString &charPath)
         ERROR_BOX(tr("Skills data not found!"));
         return false;
     }
-    editableCharInfo.skillsOffset = skillsOffset;
+    CharacterInfo::instance().skillsOffset = skillsOffset;
 
     int statsSize = skillsOffset - Enums::Offsets::StatsData;
     QString statsBitData;
@@ -1342,7 +1333,7 @@ bool MedianXLOfflineTools::processSaveFile(const QString &charPath)
         }
         else if (statCode >= Enums::CharacterStats::Strength && statCode <= Enums::CharacterStats::Vitality)
         {
-            int baseStat = _baseStatsMap[editableCharInfo.basicInfo.classCode].statsAtStart.statFromCode(static_cast<Enums::CharacterStats::StatisticEnum>(statCode));
+            int baseStat = _baseStatsMap[CharacterInfo::instance().basicInfo.classCode].statsAtStart.statFromCode(static_cast<Enums::CharacterStats::StatisticEnum>(statCode));
             totalStats += statValue - baseStat;
         }
         else if (statCode == Enums::CharacterStats::FreeStatPoints)
@@ -1356,14 +1347,14 @@ bool MedianXLOfflineTools::processSaveFile(const QString &charPath)
         return false;
     }
 
-    int totalPossibleStats = totalPossibleStatPoints(clvl, editableCharInfo.questsInfo.lamEsensTomeQuestsCompleted, _statsDynamicData.property("SignetsOfLearningEaten").toInt());
+    int totalPossibleStats = totalPossibleStatPoints(clvl, CharacterInfo::instance().questsInfo.lamEsensTomeQuestsCompleted, _statsDynamicData.property("SignetsOfLearningEaten").toInt());
     if (totalStats > totalPossibleStats) // check if stats are hacked
     {
         QMetaEnum statisticMetaEnum = Enums::CharacterStats::statisticMetaEnum();
         for (int i = Enums::CharacterStats::Strength; i <= Enums::CharacterStats::Vitality; ++i)
         {
             Enums::CharacterStats::StatisticEnum statCode = static_cast<Enums::CharacterStats::StatisticEnum>(i);
-            int baseStat = _baseStatsMap[editableCharInfo.basicInfo.classCode].statsAtStart.statFromCode(statCode);
+            int baseStat = _baseStatsMap[CharacterInfo::instance().basicInfo.classCode].statsAtStart.statFromCode(statCode);
             _statsDynamicData.setProperty(statisticMetaEnum.key(i), baseStat);
         }
         _statsDynamicData.setProperty("FreeStatPoints", totalPossibleStats);
@@ -1375,29 +1366,29 @@ bool MedianXLOfflineTools::processSaveFile(const QString &charPath)
     }
 
     // skills
-    quint16 skills = 0, maxPossibleSkills = totalPossibleSkillPoints(clvl, editableCharInfo.questsInfo.denOfEvilQuestsCompleted, editableCharInfo.questsInfo.radamentQuestsCompleted,
-                                                                     editableCharInfo.questsInfo.izualQuestsCompleted, _statsDynamicData.property("SignetsOfSkillEaten").toInt());
-    editableCharInfo.basicInfo.skills.clear();
+    quint16 skills = 0, maxPossibleSkills = totalPossibleSkillPoints(clvl, CharacterInfo::instance().questsInfo.denOfEvilQuestsCompleted, CharacterInfo::instance().questsInfo.radamentQuestsCompleted,
+                                                                     CharacterInfo::instance().questsInfo.izualQuestsCompleted, _statsDynamicData.property("SignetsOfSkillEaten").toInt());
+    CharacterInfo::instance().basicInfo.skills.clear();
     for (int i = 0; i < skillsNumber; ++i)
     {
         quint8 skillValue = _saveFileContents.at(skillsOffset + 2 + i);
         //qDebug("skill %d = %d", i, skillValue);
         skills += skillValue;
-        editableCharInfo.basicInfo.skills += skillValue;
+        CharacterInfo::instance().basicInfo.skills += skillValue;
     }
     skills += _statsDynamicData.property("FreeSkillPoints").toUInt();
     if (skills > maxPossibleSkills) // check if skills are hacked
     {
         skills = maxPossibleSkills;
         _statsDynamicData.setProperty("FreeSkillPoints", skills);
-        _saveFileContents.replace(editableCharInfo.skillsOffset + 2, skillsNumber, QByteArray(skillsNumber, 0));
+        _saveFileContents.replace(CharacterInfo::instance().skillsOffset + 2, skillsNumber, QByteArray(skillsNumber, 0));
         if (!wasHackWarningShown)
         {
             WARNING_BOX(hackerDetected);
             wasHackWarningShown = true;
         }
     }
-    editableCharInfo.basicInfo.totalSkillPoints = skills;
+    CharacterInfo::instance().basicInfo.totalSkillPoints = skills;
 
     // items
     inputDataStream.skipRawData(skillsNumber + 2);
@@ -1407,7 +1398,7 @@ bool MedianXLOfflineTools::processSaveFile(const QString &charPath)
         ERROR_BOX(tr("Items data not found!"));
         return false;
     }
-    editableCharInfo.itemsOffset = charItemsOffset + 2;
+    CharacterInfo::instance().itemsOffset = charItemsOffset + 2;
     inputDataStream.skipRawData(2); // pointing to the beginning of item data
 
     quint16 charItemsTotal;
@@ -1416,21 +1407,21 @@ bool MedianXLOfflineTools::processSaveFile(const QString &charPath)
     const int itemListTerminatorSize = 4, maxCorpses = 15;
     char itemListTerminator[itemListTerminatorSize] = {'J', 'M', 0, 0};
     int itemListTerminatorOffset;
-    editableCharInfo.items.corpses = 0;
+    CharacterInfo::instance().items.corpses = 0;
     do
     {
         itemListTerminatorOffset = _saveFileContents.indexOf(QByteArray(itemListTerminator, itemListTerminatorSize), charItemsOffset);
         if (itemListTerminatorOffset != -1)
             break;
-        itemListTerminator[2] = ++editableCharInfo.items.corpses;
-    } while (editableCharInfo.items.corpses <= maxCorpses);
+        itemListTerminator[2] = ++CharacterInfo::instance().items.corpses;
+    } while (CharacterInfo::instance().items.corpses <= maxCorpses);
 
     if (itemListTerminatorOffset == -1)
     {
         ERROR_BOX(tr("Items list doesn't have a terminator!"));
         return false;
     }
-    editableCharInfo.itemsEndOffset = itemListTerminatorOffset;
+    CharacterInfo::instance().itemsEndOffset = itemListTerminatorOffset;
     // TODO: this calculation is wrong
     itemListTerminatorOffset += itemListTerminatorSize + 4 + 12; // JM0100 + unknown
 
@@ -1449,7 +1440,7 @@ bool MedianXLOfflineTools::processSaveFile(const QString &charPath)
         return false;
     }
 
-    bool isMercItemListBad = editableCharInfo.mercenary.exists ^ (mercItemsOffset != eof);
+    bool isMercItemListBad = CharacterInfo::instance().mercenary.exists ^ (mercItemsOffset != eof);
     if (isMercItemListBad)
     {
         ERROR_BOX(tr("Mercenary items data is corrupted!"));
@@ -1457,10 +1448,11 @@ bool MedianXLOfflineTools::processSaveFile(const QString &charPath)
     }
 
     quint32 avoidValue = 0;
+    ItemsList itemsBuffer;
     for (int i = 0; i < charItemsTotal; ++i)
     {
         ItemInfo *item = ItemParser::parseItem(inputDataStream, _saveFileContents);
-        editableCharInfo.items.character += item;
+        itemsBuffer += item;
 
         int avoidKey = Enums::ItemProperties::Avoid1;
         if (item->location == Enums::ItemLocation::Equipped || (item->storage == Enums::ItemStorage::Inventory && ItemDataBase::isUberCharm(item)))
@@ -1478,13 +1470,13 @@ bool MedianXLOfflineTools::processSaveFile(const QString &charPath)
         WARNING_BOX(avoidText);
     }
 
-    if (editableCharInfo.items.corpses)
+    if (CharacterInfo::instance().items.corpses)
     {
         inputDataStream.device()->seek(itemListTerminatorOffset);
         // process corpse items
     }
 
-    if (editableCharInfo.mercenary.exists)
+    if (CharacterInfo::instance().mercenary.exists)
     {
         // process merc items
         mercItemsOffset += 2;
@@ -1525,13 +1517,11 @@ bool MedianXLOfflineTools::processSaveFile(const QString &charPath)
         default:
             break;
         }
-        processPlugyStash(iter, &editableCharInfo.items.character);
+        processPlugyStash(iter, &itemsBuffer);
     }
 
     clearItems(sharedStashPathChanged, hcStashPathChanged);
-    ItemsList savedItems = _editableCharInfo.items.character;
-    _editableCharInfo = editableCharInfo;
-    _editableCharInfo.items.character += savedItems;
+    CharacterInfo::instance().items.character += itemsBuffer;
 
     return true;
 }
@@ -1701,28 +1691,28 @@ void MedianXLOfflineTools::updateUI()
     foreach (QGroupBox *groupBox, groupBoxes)
         groupBox->setEnabled(true);
 
-    QD2CharRenamer::updateNamePreview(ui.charNamePreview, _editableCharInfo.basicInfo.originalName);
+    QD2CharRenamer::updateNamePreview(ui.charNamePreview, CharacterInfo::instance().basicInfo.originalName);
 
-    ui.hardcoreGroupBox->setEnabled(_editableCharInfo.basicInfo.isHardcore);
-    if (_editableCharInfo.basicInfo.isHardcore)
+    ui.hardcoreGroupBox->setEnabled(CharacterInfo::instance().basicInfo.isHardcore);
+    if (CharacterInfo::instance().basicInfo.isHardcore)
         updateHardcoreUIElements();
 
-    ui.classLineEdit->setText(Enums::ClassName::classes().at(_editableCharInfo.basicInfo.classCode));
-    updateCharacterTitle(_editableCharInfo.basicInfo.isHardcore);
+    ui.classLineEdit->setText(Enums::ClassName::classes().at(CharacterInfo::instance().basicInfo.classCode));
+    updateCharacterTitle(CharacterInfo::instance().basicInfo.isHardcore);
 
     //ui.currentDifficultyComboBox->setEnabled(true);
     //ui.currentDifficultyComboBox->addItems(difficulties.mid(0, titleAndMaxDifficulty.second + 1));
-    //ui.currentDifficultyComboBox->setCurrentIndex(_editableCharInfo.basicInfo.currentDifficulty);
-    //ui.currentActSpinBox->setValue(_editableCharInfo.basicInfo.currentAct);
+    //ui.currentDifficultyComboBox->setCurrentIndex(CharacterInfo::instance().basicInfo.currentDifficulty);
+    //ui.currentActSpinBox->setValue(CharacterInfo::instance().basicInfo.currentAct);
 
-    _oldClvl = _editableCharInfo.basicInfo.level;
+    _oldClvl = CharacterInfo::instance().basicInfo.level;
     ui.levelSpinBox->setMaximum(_oldClvl);
     ui.levelSpinBox->setValue(_oldClvl);
 
     setStats();
     recalculateStatPoints();
 
-    int stats = _editableCharInfo.basicInfo.totalStatPoints, skills = _editableCharInfo.basicInfo.totalSkillPoints;
+    int stats = CharacterInfo::instance().basicInfo.totalStatPoints, skills = CharacterInfo::instance().basicInfo.totalSkillPoints;
     updateStatusTips(stats, stats - _statsDynamicData.property("FreeStatPoints").toInt(), skills, skills - _statsDynamicData.property("FreeSkillPoints").toInt());
     ui.signetsOfLearningEatenLineEdit->setStatusTip(maxValueFormat.arg(Enums::CharacterStats::SignetsOfLearningMax));
     ui.signetsOfSkillEatenLineEdit->setStatusTip(maxValueFormat.arg(Enums::CharacterStats::SignetsOfSkillMax));
@@ -1730,22 +1720,22 @@ void MedianXLOfflineTools::updateUI()
     if (_sharedGold)
         ui.stashGoldLineEdit->setStatusTip(ui.stashGoldLineEdit->statusTip() + ", " + tr("Shared: %1", "amount of gold in shared stash").arg(QLocale().toString(_sharedGold)));
 
-    if (_editableCharInfo.mercenary.exists)
+    if (CharacterInfo::instance().mercenary.exists)
     {
         int mercTypeIndex;
-        QPair<int, int> mercArraySlice = Enums::Mercenary::allowedTypesForMercCode(_editableCharInfo.mercenary.code, &mercTypeIndex);
+        QPair<int, int> mercArraySlice = Enums::Mercenary::allowedTypesForMercCode(CharacterInfo::instance().mercenary.code, &mercTypeIndex);
         ui.mercTypeComboBox->addItems(Enums::Mercenary::types().mid(mercArraySlice.first, mercArraySlice.second));
         ui.mercTypeComboBox->setCurrentIndex(mercTypeIndex);
 
-        ui.mercNameComboBox->addItems(mercNames.at(Enums::Mercenary::mercNamesIndexFromCode(_editableCharInfo.mercenary.code)));
-        ui.mercNameComboBox->setCurrentIndex(_editableCharInfo.mercenary.nameIndex);
+        ui.mercNameComboBox->addItems(mercNames.at(Enums::Mercenary::mercNamesIndexFromCode(CharacterInfo::instance().mercenary.code)));
+        ui.mercNameComboBox->setCurrentIndex(CharacterInfo::instance().mercenary.nameIndex);
 
-        ui.mercLevelLineEdit->setText(QString::number(_editableCharInfo.mercenary.level));
+        ui.mercLevelLineEdit->setText(QString::number(CharacterInfo::instance().mercenary.level));
 
         ui.mercGroupBox->setEnabled(true);
     }
 
-    bool hasItems = !_editableCharInfo.items.character.isEmpty();
+    bool hasItems = !CharacterInfo::instance().items.character.isEmpty();
     ui.actionShowItems->setEnabled(hasItems);
     ui.actionFind->setEnabled(hasItems);
     updateWindowTitle();
@@ -1755,19 +1745,20 @@ void MedianXLOfflineTools::updateUI()
 
 void MedianXLOfflineTools::updateHardcoreUIElements()
 {
-    ui.convertToSoftcoreCheckBox->setDisabled(_editableCharInfo.basicInfo.hadDied);
-    ui.actionConvertToSoftcore->setDisabled(_editableCharInfo.basicInfo.hadDied);
-    ui.resurrectButton->setEnabled(_editableCharInfo.basicInfo.hadDied);
-    ui.actionResurrect->setEnabled(_editableCharInfo.basicInfo.hadDied);
+    bool hadDied = CharacterInfo::instance().basicInfo.hadDied;
+    ui.convertToSoftcoreCheckBox->setDisabled(hadDied);
+    ui.actionConvertToSoftcore->setDisabled(hadDied);
+    ui.resurrectButton->setEnabled(hadDied);
+    ui.actionResurrect->setEnabled(hadDied);
 }
 
 void MedianXLOfflineTools::updateCharacterTitle(bool isHardcore)
 {
-    bool isMale = _editableCharInfo.basicInfo.classCode >= Enums::ClassName::Necromancer && _editableCharInfo.basicInfo.classCode <= Enums::ClassName::Druid;
-    quint8 progression = _editableCharInfo.basicInfo.titleCode;
+    bool isMale = CharacterInfo::instance().basicInfo.classCode >= Enums::ClassName::Necromancer && CharacterInfo::instance().basicInfo.classCode <= Enums::ClassName::Druid;
+    quint8 progression = CharacterInfo::instance().basicInfo.titleCode;
     QPair<QString, quint8> titleAndMaxDifficulty = Enums::Progression::titleNameAndMaxDifficultyFromValue(progression, isMale, isHardcore);
     QString newTitle = titleAndMaxDifficulty.first;
-    if (_editableCharInfo.basicInfo.isHardcore && _editableCharInfo.basicInfo.hadDied)
+    if (CharacterInfo::instance().basicInfo.isHardcore && CharacterInfo::instance().basicInfo.hadDied)
         newTitle += QString(" (%1)").arg(tr("DEAD", "HC character is dead"));
     ui.titleLineEdit->setText(newTitle);
     ui.titleLineEdit->setStyleSheet(QString("%1; color: %2;").arg(readonlyCss, isHardcore ? "red" : "black"));
@@ -1786,7 +1777,7 @@ void MedianXLOfflineTools::setStats()
         {
             _oldStatValues[statCode] = value;
 
-            quint8 baseValue = _baseStatsMap[_editableCharInfo.basicInfo.classCode].statsAtStart.statFromCode(statCode);
+            quint8 baseValue = _baseStatsMap[CharacterInfo::instance().basicInfo.classCode].statsAtStart.statFromCode(statCode);
             QSpinBox *spinBox = _spinBoxesStatsMap[statCode];
             spinBox->setMinimum(baseValue);
             spinBox->setMaximum(value);
@@ -1822,14 +1813,14 @@ int MedianXLOfflineTools::investedStatPoints()
     for (quint8 i = Enums::CharacterStats::Strength; i <= Enums::CharacterStats::Vitality; ++i)
     {
         Enums::CharacterStats::StatisticEnum ienum = static_cast<Enums::CharacterStats::StatisticEnum>(i);
-        sum += _spinBoxesStatsMap[ienum]->value() - _baseStatsMap[_editableCharInfo.basicInfo.classCode].statsAtStart.statFromCode(ienum);
+        sum += _spinBoxesStatsMap[ienum]->value() - _baseStatsMap[CharacterInfo::instance().basicInfo.classCode].statsAtStart.statFromCode(ienum);
     }
     return sum;
 }
 
 void MedianXLOfflineTools::recalculateStatPoints()
 {
-    _editableCharInfo.basicInfo.totalStatPoints = investedStatPoints() + ui.freeStatPointsLineEdit->text().toUInt();
+    CharacterInfo::instance().basicInfo.totalStatPoints = investedStatPoints() + ui.freeStatPointsLineEdit->text().toUInt();
 }
 
 void MedianXLOfflineTools::updateStatusTips(int newStatPoints, int investedStatPoints, int newSkillPoints, int investedSkillPoints)
@@ -1920,7 +1911,7 @@ QByteArray MedianXLOfflineTools::statisticBytes()
                 value++; // SignetsOfLearningEaten should be set to 501
             else if (statCode == Enums::CharacterStats::FreeStatPoints)
             {
-                int totalPossibleFreeStats = totalPossibleStatPoints(ui.levelSpinBox->value(), _editableCharInfo.questsInfo.lamEsensTomeQuestsCompleted,
+                int totalPossibleFreeStats = totalPossibleStatPoints(ui.levelSpinBox->value(), CharacterInfo::instance().questsInfo.lamEsensTomeQuestsCompleted,
                                                                      _lineEditsStatsMap[Enums::CharacterStats::SignetsOfLearningEaten]->text().toInt()) - investedStatPoints();
                 if (value > static_cast<quint32>(totalPossibleFreeStats)) // prevent hacks and shut the compiler up
                 {
@@ -1931,7 +1922,7 @@ QByteArray MedianXLOfflineTools::statisticBytes()
         }
         else if (statCode != Enums::CharacterStats::End && isExpAndLevelNotSet) // level or exp
         {
-            quint8 clvl = _editableCharInfo.basicInfo.level, newClvl = ui.levelSpinBox->value();
+            quint8 clvl = CharacterInfo::instance().basicInfo.level, newClvl = ui.levelSpinBox->value();
             if (clvl != newClvl) // set new level and experience explicitly
             {
                 addStatisticBits(result, Enums::CharacterStats::Level, Enums::CharacterStats::StatCodeLength);
@@ -1993,7 +1984,7 @@ void MedianXLOfflineTools::addStatisticBits(QString &bitsString, quint64 number,
 
 void MedianXLOfflineTools::clearItems(bool sharedStashPathChanged /*= true*/, bool hcStashPathChanged /*= true*/)
 {
-    QMutableListIterator<ItemInfo *> itemIterator(_editableCharInfo.items.character);
+    QMutableListIterator<ItemInfo *> itemIterator(CharacterInfo::instance().items.character);
     while (itemIterator.hasNext())
     {
         ItemInfo *item = itemIterator.next();

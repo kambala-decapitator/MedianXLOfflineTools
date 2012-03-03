@@ -596,8 +596,15 @@ p, li { white-space: pre-wrap; }
     <property name="separatorsCollapsible">
      <bool>true</bool>
     </property>
+    <widget class="QMenu" name="menuRecentCharacters">
+     <property name="title">
+      <string>Recent Characters</string>
+     </property>
+    </widget>
     <addaction name="actionLoadCharacter"/>
+    <addaction name="menuRecentCharacters"/>
     <addaction name="actionReloadCharacter"/>
+    <addaction name="separator"/>
     <addaction name="actionSaveCharacter"/>
     <addaction name="separator"/>
     <addaction name="actionExit"/>
@@ -672,9 +679,17 @@ p, li { white-space: pre-wrap; }
     <addaction name="separator"/>
     <addaction name="actionGiveCube"/>
    </widget>
+   <widget class="QMenu" name="menuExport">
+    <property name="title">
+     <string>Export</string>
+    </property>
+    <addaction name="actionSkillPlan"/>
+    <addaction name="actionExportCharacterInfo"/>
+   </widget>
    <addaction name="menuFile"/>
    <addaction name="menuEdit"/>
    <addaction name="menuItems"/>
+   <addaction name="menuExport"/>
    <addaction name="menuOptions"/>
    <addaction name="menuHelp"/>
   </widget>
@@ -1183,6 +1198,19 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="shortcutContext">
     <enum>Qt::ApplicationShortcut</enum>
+   </property>
+  </action>
+  <action name="actionSkillPlan">
+   <property name="text">
+    <string>Skill plan</string>
+   </property>
+   <property name="statusTip">
+    <string>Generate a link for Tub's Skillpoint Planner</string>
+   </property>
+  </action>
+  <action name="actionExportCharacterInfo">
+   <property name="text">
+    <string>Character info</string>
    </property>
   </action>
  </widget>

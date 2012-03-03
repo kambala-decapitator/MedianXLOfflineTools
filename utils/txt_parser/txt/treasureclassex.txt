@@ -718,87 +718,87 @@ Countess Rune (H)				3					15	Runes 15	10																																0
 Countess Item				4					49	NDgold1	80		Act 1 Equip C	40		Act 2 Junk	20		Act 2 Good	10																							0
 Countess Item (N)				4					49	NDgold2	80		Act 1 (N) Equip C	40		Act 2 (N) Junk	20		Act 2 (N) Good	10																							0
 Countess Item (H)				4					48	NDgold3	80		Act 1 (H) Equip C	40		Act 2 (H) Junk	20		Act 2 (H) Good	10																							0
-Countess				-2	896	896	1024	1024	0	Countess Item	1		Countess Rune	1																													0
-Countess (N)				-2	896	896	1024	1024	0	Countess Item (N)	1		Countess Rune (N)	1																													0
-Countess (H)				-2	896	896	1024	1024	0	Countess Item (H)	1		Countess Rune (H)	1																													0
+Countess				-2	512	896	1024	1024	0	Countess Item	1		Countess Rune	1																													0
+Countess (N)				-2	512	896	1024	1024	0	Countess Item (N)	1		Countess Rune (N)	1																													0
+Countess (H)				-2	512	896	1024	1024	0	Countess Item (H)	1		Countess Rune (H)	1																													0
 Smith				-3					0	Act 1 Uitem C	2		Signets Minor	1																													0
 Smith (N)				-3					0	Act 1 (H) Uitem C	2		Signets Minor	1																													0
 Smith (H)				-3					0	Act 1 (H) Uitem C	2		Signets Full	1																													0
-Andariel				4	896	896	1024	1024		Act 2 Equip A	90																																0
-Andariel (N)				4	896	896	1024	1024		Act 2 (N) Equip A	90																																0
-Andariel (H)				4	896	896	1024	1024		Act 2 (H) Equip A	90																																0
-Andarielq				4	912	912	1024	1024		Act 2 Equip A	100																																0
-Andarielq (N)				4	912	912	1024	1024		Act 2 (N) Equip A	100																																0
-Andarielq (H)				4	912	912	1024	1024		Act 2 (H) Equip A	100																																0
-Summoner				5	896	896	1024	1024	50	NDgold1	40		Act 2 Equip C	50		Act 3 Junk	20		Act 3 Good	30																							0
-Summoner (N)				5	896	896	1024	1024	50	NDgold2	40		Act 2 (N) Equip C	50		Act 3 (N) Junk	20		Act 3 (N) Good	30																							0
-Summoner (H)				5	896	896	1024	1024	50	NDgold3	35		Act 2 (H) Equip C	50		Act 3 (H) Junk	20		Act 3 (H) Good	30																							0
-Duriel				4	896	896	1024	1024		Act 3 Equip A	90																																0
-Duriel (N)				4	896	896	1024	1024		Act 3 (N) Equip A	90																																0
-Duriel (H)				4	896	896	1024	1024		Act 3 (H) Equip A	90																																0
-Durielq				4	912	912	1024	1024		Act 3 Equip A	100																																0
-Durielq (N)				4	912	912	1024	1024		Act 3 (N) Equip A	100																																0
-Durielq (H)				4	912	912	1024	1024		Act 3 (H) Equip A	100																																0
+Andariel				4	512	896	1024	1024		Act 2 Equip A	90																																0
+Andariel (N)				4	512	896	1024	1024		Act 2 (N) Equip A	90																																0
+Andariel (H)				4	512	896	1024	1024		Act 2 (H) Equip A	90																																0
+Andarielq				4	512	912	1024	1024		Act 2 Equip A	100																																0
+Andarielq (N)				4	512	912	1024	1024		Act 2 (N) Equip A	100																																0
+Andarielq (H)				4	512	912	1024	1024		Act 2 (H) Equip A	100																																0
+Summoner				5	512	896	1024	1024	50	NDgold1	40		Act 2 Equip C	50		Act 3 Junk	20		Act 3 Good	30																							0
+Summoner (N)				5	512	896	1024	1024	50	NDgold2	40		Act 2 (N) Equip C	50		Act 3 (N) Junk	20		Act 3 (N) Good	30																							0
+Summoner (H)				5	512	896	1024	1024	50	NDgold3	35		Act 2 (H) Equip C	50		Act 3 (H) Junk	20		Act 3 (H) Good	30																							0
+Duriel				4	512	896	1024	1024		Act 3 Equip A	90																																0
+Duriel (N)				4	512	896	1024	1024		Act 3 (N) Equip A	90																																0
+Duriel (H)				4	512	896	1024	1024		Act 3 (H) Equip A	90																																0
+Durielq				4	512	912	1024	1024		Act 3 Equip A	100																																0
+Durielq (N)				4	512	912	1024	1024		Act 3 (N) Equip A	100																																0
+Durielq (H)				4	512	912	1024	1024		Act 3 (H) Equip A	100																																0
 Trapped Soul				1					50	NDTC	50																																0
 Trapped Soul (N)				1					50	NDTC	50																																0
 Trapped Soul (H)				1					50	NDTC	50																																0
-Mephisto				4	896	896	1024	1024		Act 4 Equip A	90																																0
-Mephisto (N)				4	896	896	1024	1024		Act 4 (N) Equip A	90																																0
-Mephisto (H)				4	896	896	1024	1024		Act 4 (H) Equip A	90																																0
-Mephistoq				4	912	912	1024	1024		Act 4 Equip A	100																																0
-Mephistoq (N)				4	912	912	1024	1024		Act 4 (N) Equip A	100																																0
-Mephistoq (H)				4	912	912	1024	1024		Act 4 (H) Equip A	100																																0
-Izual				5	896	896	1024	1024	50	NDgold1	69		Act 4 Equip B	50		Act 4 Junk	10		Act 4 Good	20																							0
-Izual (N)				5	896	896	1024	1024	50	NDgold2	69		Act 4 (N) Equip B	50		Act 4 (N) Junk	10		Act 4 (N) Good	20																							0
-Izual (H)				5	896	896	1024	1024	50	NDgold3	68		Act 4 (H) Equip B	50		Act 4 (H) Junk	10		Act 4 (H) Good	20																							0
-Haphesto				5	896	896	1024	1024	50	NDgold3	59		Act 5 Equip A	60		Act 5 Junk	20		Act 5 Good	10																							0
-Haphesto (N)				5	896	896	1024	1024	50	NDgold4	59		Act 5 (N) Equip A	60		Act 5 (N) Junk	20		Act 5 (N) Good	10																							0
-Haphesto (H)				5	896	896	1024	1024	50	NDgold5	58		Act 5 (H) Equip A	60		Act 5 (H) Junk	20		Act 5 (H) Good	10																							0
-Diablo				4	912	912	1024	1024		Act 5 Equip A	90																																0
-Diablo (N)				4	912	912	1024	1024		Act 5 (N) Equip A	90																																0
-Diablo (H)				4	912	912	1024	1024		Act 5 (H) Equip A	90																																0
-Diabloq				4	896	896	1024	1024		Act 5 Equip A	100																																0
-Diabloq (N)				4	896	896	1024	1024		Act 5 (N) Equip A	100																																0
-Diabloq (H)				4	896	896	1024	1024		Act 5 (H) Equip A	100																																0
-Nihlathak				3	912	912	1024	1024		Act 5 Equip B	100																																0
-Nihlathak (N)				3	912	912	1024	1024		Act 5 (N) Equip B	100																																0
-Nihlathak (H)				2	912	912	1024	1024		Act 5 (H) Equip B	100																																0
-Baal				4	896	896	1024	1024		Act 1 (N) Equip A	150																																0
-Baal (N)				4	896	896	1024	1024		Act 1 (H) Equip A	150																																0
-Baal (H)				4	896	896	1024	1024		Act 5 (H) Equip B	150																																0
-Baalq				4	912	912	1024	1024		Act 1 (N) Equip A	150																																0
-Baalq (N)				4	912	912	1024	1024		Act 1 (H) Equip A	150																																0
-Baalq (H)				4	912	912	1024	1024		Act 5 (H) Equip B	150																																0
-Andariel Act				1	996	1024	996	1024		Act 2 Equip A	90																																0
-Andariel (N) Act				1	996	1024	996	1024		Act 2 (N) Equip A	90																																0
-Andariel (H) Act				2	996	1024	996	1024		Act 2 (H) Equip A	90																																0
-Andarielq Act				1	996	1024	996	1024		Act 2 Equip A	100																																0
-Andarielq (N) Act				1	996	1024	996	1024		Act 2 (N) Equip A	100																																0
-Andarielq (H) Act				2	996	1024	996	1024		Act 2 (H) Equip A	100																																0
-Duriel Act				1	996	1024	996	1024		Act 3 Equip A	90																																0
-Duriel (N) Act				1	996	1024	996	1024		Act 3 (N) Equip A	90																																0
-Duriel (H) Act				2	996	1024	996	1024		Act 3 (H) Equip A	90																																0
-Durielq Act				1	996	1024	996	1024		Act 3 Equip A	100																																0
-Durielq (N) Act				1	996	1024	996	1024		Act 3 (N) Equip A	100																																0
-Durielq (H) Act				2	996	1024	996	1024		Act 3 (H) Equip A	100																																0
-Mephisto Act				2	996	1024	996	1024		Act 4 Equip A	90																																0
-Mephisto (N) Act				2	996	1024	996	1024		Act 4 (N) Equip A	90																																0
-Mephisto (H) Act				3	996	1024	996	1024		Act 4 (H) Equip A	90																																0
-Mephistoq Act				2	996	1024	996	1024		Act 4 Equip A	100																																0
-Mephistoq (N) Act				2	996	1024	996	1024		Act 4 (N) Equip A	100																																0
-Mephistoq (H) Act				3	996	1024	996	1024		Act 4 (H) Equip A	100																																0
-Diablo Act				2	996	1024	996	1024		Act 5 Equip A	90																																0
-Diablo (N) Act				3	996	1024	996	1024		Act 5 (N) Equip A	90																																0
-Diablo (H) Act				4	996	1024	996	1024		Act 5 (H) Equip A	90																																0
-Diabloq Act				2	996	1024	996	1024		Act 5 Equip A	100																																0
-Diabloq (N) Act				3	996	1024	996	1024		Act 5 (N) Equip A	100																																0
-Diabloq (H) Act				4	996	1024	996	1024		Act 5 (H) Equip A	100																																0
-Baal Act				2	996	1024	996	1024		Act 1 (N) Equip A	150																																0
-Baal (N) Act				3	996	1024	996	1024		Act 1 (H) Equip A	150																																0
-Baal (H) Act				4	996	1024	996	1024		Act 5 (H) Equip B	150																																0
-Baalq Act				2	996	1024	996	1024		Act 1 (N) Equip A	150																																0
-Baalq (N) Act				3	996	1024	996	1024		Act 1 (H) Equip A	150																																0
-Baalq (H) Act				4	996	1024	996	1024		Act 5 (H) Equip B	150																																0
+Mephisto				4	512	896	1024	1024		Act 4 Equip A	90																																0
+Mephisto (N)				4	512	896	1024	1024		Act 4 (N) Equip A	90																																0
+Mephisto (H)				4	512	896	1024	1024		Act 4 (H) Equip A	90																																0
+Mephistoq				4	512	912	1024	1024		Act 4 Equip A	100																																0
+Mephistoq (N)				4	512	912	1024	1024		Act 4 (N) Equip A	100																																0
+Mephistoq (H)				4	512	912	1024	1024		Act 4 (H) Equip A	100																																0
+Izual				5	512	896	1024	1024	50	NDgold1	69		Act 4 Equip B	50		Act 4 Junk	10		Act 4 Good	20																							0
+Izual (N)				5	512	896	1024	1024	50	NDgold2	69		Act 4 (N) Equip B	50		Act 4 (N) Junk	10		Act 4 (N) Good	20																							0
+Izual (H)				5	512	896	1024	1024	50	NDgold3	68		Act 4 (H) Equip B	50		Act 4 (H) Junk	10		Act 4 (H) Good	20																							0
+Haphesto				5	512	896	1024	1024	50	NDgold3	59		Act 5 Equip A	60		Act 5 Junk	20		Act 5 Good	10																							0
+Haphesto (N)				5	512	896	1024	1024	50	NDgold4	59		Act 5 (N) Equip A	60		Act 5 (N) Junk	20		Act 5 (N) Good	10																							0
+Haphesto (H)				5	512	896	1024	1024	50	NDgold5	58		Act 5 (H) Equip A	60		Act 5 (H) Junk	20		Act 5 (H) Good	10																							0
+Diablo				4	512	912	1024	1024		Act 5 Equip A	90																																0
+Diablo (N)				4	512	912	1024	1024		Act 5 (N) Equip A	90																																0
+Diablo (H)				4	512	912	1024	1024		Act 5 (H) Equip A	90																																0
+Diabloq				4	512	896	1024	1024		Act 5 Equip A	100																																0
+Diabloq (N)				4	512	896	1024	1024		Act 5 (N) Equip A	100																																0
+Diabloq (H)				4	512	896	1024	1024		Act 5 (H) Equip A	100																																0
+Nihlathak				3	512	912	1024	1024		Act 5 Equip B	100																																0
+Nihlathak (N)				3	512	912	1024	1024		Act 5 (N) Equip B	100																																0
+Nihlathak (H)				2	512	912	1024	1024		Act 5 (H) Equip B	100																																0
+Baal				4	512	896	1024	1024		Act 1 (N) Equip A	150																																0
+Baal (N)				4	512	896	1024	1024		Act 1 (H) Equip A	150																																0
+Baal (H)				4	512	896	1024	1024		Act 5 (H) Equip B	150																																0
+Baalq				4	512	912	1024	1024		Act 1 (N) Equip A	150																																0
+Baalq (N)				4	512	912	1024	1024		Act 1 (H) Equip A	150																																0
+Baalq (H)				4	512	912	1024	1024		Act 5 (H) Equip B	150																																0
+Andariel Act				1	512	1024	996	1024		Act 2 Equip A	90																																0
+Andariel (N) Act				1	512	1024	996	1024		Act 2 (N) Equip A	90																																0
+Andariel (H) Act				2	512	1024	996	1024		Act 2 (H) Equip A	90																																0
+Andarielq Act				1	512	1024	996	1024		Act 2 Equip A	100																																0
+Andarielq (N) Act				1	512	1024	996	1024		Act 2 (N) Equip A	100																																0
+Andarielq (H) Act				2	512	1024	996	1024		Act 2 (H) Equip A	100																																0
+Duriel Act				1	512	1024	996	1024		Act 3 Equip A	90																																0
+Duriel (N) Act				1	512	1024	996	1024		Act 3 (N) Equip A	90																																0
+Duriel (H) Act				2	512	1024	996	1024		Act 3 (H) Equip A	90																																0
+Durielq Act				1	512	1024	996	1024		Act 3 Equip A	100																																0
+Durielq (N) Act				1	512	1024	996	1024		Act 3 (N) Equip A	100																																0
+Durielq (H) Act				2	512	1024	996	1024		Act 3 (H) Equip A	100																																0
+Mephisto Act				2	512	1024	996	1024		Act 4 Equip A	90																																0
+Mephisto (N) Act				2	512	1024	996	1024		Act 4 (N) Equip A	90																																0
+Mephisto (H) Act				3	512	1024	996	1024		Act 4 (H) Equip A	90																																0
+Mephistoq Act				2	512	1024	996	1024		Act 4 Equip A	100																																0
+Mephistoq (N) Act				2	512	1024	996	1024		Act 4 (N) Equip A	100																																0
+Mephistoq (H) Act				3	512	1024	996	1024		Act 4 (H) Equip A	100																																0
+Diablo Act				2	512	1024	996	1024		Act 5 Equip A	90																																0
+Diablo (N) Act				3	512	1024	996	1024		Act 5 (N) Equip A	90																																0
+Diablo (H) Act				4	512	1024	996	1024		Act 5 (H) Equip A	90																																0
+Diabloq Act				2	512	1024	996	1024		Act 5 Equip A	100																																0
+Diabloq (N) Act				3	512	1024	996	1024		Act 5 (N) Equip A	100																																0
+Diabloq (H) Act				4	512	1024	996	1024		Act 5 (H) Equip A	100																																0
+Baal Act				2	512	1024	996	1024		Act 1 (N) Equip A	150																																0
+Baal (N) Act				3	512	1024	996	1024		Act 1 (H) Equip A	150																																0
+Baal (H) Act				4	512	1024	996	1024		Act 5 (H) Equip B	150																																0
+Baalq Act				2	512	1024	996	1024		Act 1 (N) Equip A	150																																0
+Baalq (N) Act				3	512	1024	996	1024		Act 1 (H) Equip A	150																																0
+Baalq (H) Act				4	512	1024	996	1024		Act 5 (H) Equip B	150																																0
 Andariel (D)				-2	1024					Andariel Act	1		Runes 6	1																													0
 Andariel (N) (D)				-3	1024					Andariel (N) Act	1		Runes 12	1		!@6	1																										0
 Andariel (H) (D)				-3	1024					Andariel (H) Act	1		Runes 18	1		!@6	1																										0
