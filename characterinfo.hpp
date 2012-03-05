@@ -14,7 +14,7 @@ public:
         return obj;
     }
 
-    struct
+    struct CharacterInfoBasic
     {
         QString originalName, newName;
         Enums::ClassName::ClassNameEnum classCode; // immutable

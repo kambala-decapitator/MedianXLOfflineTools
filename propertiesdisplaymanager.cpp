@@ -246,10 +246,11 @@ QString PropertiesDisplayManager::propertyDisplay(const ItemProperty &propDispla
     QString description = value < 0 ? prop.descNegative : prop.descPositive, result;
     if (prop.descStringAdd.contains(tr("Based on", "'based on level' property; translate only if Median XL is translated into your language! (i.e. there's localized data in Resources/data/<language>)")))
     {
+        const CharacterInfo::CharacterInfoBasic &basicInfo = CharacterInfo::instance().basicInfo;
         if (propId == Enums::ItemProperties::StrengthBasedOnBlessedLifeSlvl || propId == Enums::ItemProperties::DexterityBasedOnBlessedLifeSlvl)
-            value = CharacterInfo::instance().basicInfo.classCode == Enums::ClassName::Paladin ? (value * CharacterInfo::instance().basicInfo.skills.last()) / 32 : 0; // TODO 0.3+: use ItemDataBase::Skills() to obtain Blessed Life index
+            value = basicInfo.classCode == Enums::ClassName::Paladin ? (value * basicInfo.skills.last()) / 32 : 0; // TODO 0.3+: use ItemDataBase::Skills() to obtain Blessed Life index
         else // based on clvl
-            value = (value * CharacterInfo::instance().basicInfo.level) / 32;
+            value = (value * basicInfo.level) / 32;
     }
 
     char valueStringSigned[10];

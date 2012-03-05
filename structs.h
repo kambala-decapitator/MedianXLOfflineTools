@@ -110,13 +110,16 @@ struct BaseStats
         }
     } statsAtStart;
 
-    struct StatsStep
+    typedef struct StatsStep
     {
         qint32 life, stamina, mana; // divide by 4 and floor
 
         StatsStep() {}
         StatsStep(qint32 l, qint32 s, qint32 m) : life(l), stamina(s), mana(m) {}
-    } statsPerLevel, statsPerPoint;
+    } StatsPerLevel, StatsPerPoint;
+    
+    StatsPerLevel statsPerLevel;
+    StatsPerPoint statsPerPoint;
 
     BaseStats() {}
     BaseStats(StatsAtStart s, StatsStep l, StatsStep p) : statsAtStart(s), statsPerLevel(l), statsPerPoint(p) {}
@@ -159,7 +162,7 @@ struct SetItemInfo
 struct SkillInfo
 {
     QString name;
-    qint8 classCode;
+    qint8 classCode/*, tab, row, col*/;
 };
 Q_DECLARE_TYPEINFO(SkillInfo, Q_MOVABLE_TYPE);
 

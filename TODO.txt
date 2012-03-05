@@ -1,7 +1,8 @@
 v0.2.1:
-- export item to bbcode/html
 - link for skillpoint planner
+- export item to bbcode/html
 - generate some bbcode/html report about character and/or plugy stashes contents
+- add a message box for corrupted items
 - add save prompt
 - move most functionality from splitter to tableview
 - get exp table and base char stats from txt
@@ -11,6 +12,7 @@ v0.2.1:
 - show experince bar and completion of current level in %
 - completed skill/stat quests
 -----
+- delete all items from last plugy page and check if it'll work after saving
 - search and fix all 'TODO:' in code
 - remove all qDebug()
 - copy files to destdir from .pro:

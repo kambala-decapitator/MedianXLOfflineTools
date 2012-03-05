@@ -64,7 +64,7 @@ private slots:
 private:
     // UI
     Ui::MedianXLOfflineToolsClass ui;
-    QMap<Enums::CharacterStats::StatisticEnum, QSpinBox *> _spinBoxesStatsMap;
+    QMap<Enums::CharacterStats::StatisticEnum, QSpinBox  *> _spinBoxesStatsMap;
     QMap<Enums::CharacterStats::StatisticEnum, QLineEdit *> _lineEditsStatsMap;
     QStringList _recentFilesList;
     QPointer<ItemsViewerDialog> _itemsDialog;
@@ -75,7 +75,8 @@ private:
     QByteArray _saveFileContents;
     QObject _statsDynamicData;
     int _oldStatValues[4];
-    QMap<Enums::ClassName::ClassNameEnum, BaseStats> _baseStatsMap;
+    QMap <Enums::ClassName::ClassNameEnum, BaseStats> _baseStatsMap;
+    QHash<Enums::ClassName::ClassNameEnum, QList<int>> _characterSkillsIndeces;
     int _oldClvl;
     quint32 _sharedGold;
     QHash<Enums::ItemStorage::ItemStorageEnum, PlugyStashInfo> _plugyStashesHash;
