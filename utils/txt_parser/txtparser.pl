@@ -283,7 +283,7 @@ for my $hashRef (@$processedSkills)
 {
     $count++;
     print $out $count;
-    print $out "\t".($hashRef->{$_} // '') for (@skillKeys);
+    print $out "\t".($hashRef->{$_} // ($_ eq 'name' ? '' : 0)) for (@skillKeys);
     print $out "\n";
 }
 close $out;

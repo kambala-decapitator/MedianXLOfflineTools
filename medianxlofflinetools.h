@@ -57,6 +57,8 @@ private slots:
     void itemStorageTabChanged(int tabIndex);
     void giveCube();
 
+    void getSkillPlan();
+
     void backupSettingTriggered(bool checked);
 
     void aboutApp();
@@ -66,6 +68,7 @@ private:
     Ui::MedianXLOfflineToolsClass ui;
     QMap<Enums::CharacterStats::StatisticEnum, QSpinBox  *> _spinBoxesStatsMap;
     QMap<Enums::CharacterStats::StatisticEnum, QLineEdit *> _lineEditsStatsMap;
+    QLabel *_charPathLabel;
     QStringList _recentFilesList;
     QPointer<ItemsViewerDialog> _itemsDialog;
     FindItemsDialog *_findItemsDialog;
@@ -76,7 +79,7 @@ private:
     QObject _statsDynamicData;
     int _oldStatValues[4];
     QMap <Enums::ClassName::ClassNameEnum, BaseStats> _baseStatsMap;
-    QHash<Enums::ClassName::ClassNameEnum, QList<int>> _characterSkillsIndeces;
+    QHash<Enums::ClassName::ClassNameEnum, QPair<QList<int>, QList<int> > > _characterSkillsIndeces; // first is save file order, second - visual and planner order
     int _oldClvl;
     quint32 _sharedGold;
     QHash<Enums::ItemStorage::ItemStorageEnum, PlugyStashInfo> _plugyStashesHash;
@@ -114,8 +117,8 @@ private:
     bool loadFile(const QString &charPath);
     bool processSaveFile(const QString &charPath);
     quint32 checksum(const QByteArray &charByteArray) const;
-    inline int totalPossibleStatPoints(int level, int lamEsen, int solsEaten);
-    inline int totalPossibleSkillPoints(int level, int doe, int radament, int izual, int sosEaten);
+    inline int totalPossibleStatPoints(int level);
+    inline int totalPossibleSkillPoints();
 
     void clearUI();
     void updateUI();

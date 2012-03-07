@@ -203,9 +203,9 @@ QList<SkillInfo> *ItemDataBase::Skills()
             SkillInfo item;
             item.name = QString::fromUtf8(data.at(1));
             item.classCode = data.at(2).toShort();
-            //item.tab = data.at(3).toShort();
-            //item.row = data.at(4).toShort();
-            //item.col = data.at(5).toShort();
+            item.tab = data.at(3).toShort();
+            item.row = data.at(4).toShort();
+            item.col = data.at(5).toShort();
             allSkills.push_back(item);
         }
         f.remove();

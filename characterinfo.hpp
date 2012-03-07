@@ -5,6 +5,9 @@
 
 #include <QString>
 
+#include <numeric>
+
+
 class CharacterInfo
 {
 public:
@@ -24,12 +27,23 @@ public:
         bool isHardcore;
         bool hadDied;
         quint16 totalSkillPoints, totalStatPoints;
-        QList<quint8> skills;
+        SkillList skills;
+        SkillList skillsReadable; // used in planner and skill tree
     } basicInfo;
 
     struct
     {
-        quint8 denOfEvilQuestsCompleted, radamentQuestsCompleted, lamEsensTomeQuestsCompleted, izualQuestsCompleted; // 0-3
+        QList<quint8> denOfEvil, radament, lamEsensTome, izual; // range of values is 0-3
+
+        quint8 denOfEvilQuestsCompleted()    const { return sumOfList(denOfEvil);    }
+        quint8 radamentQuestsCompleted()     const { return sumOfList(radament);     }
+        quint8 lamEsensTomeQuestsCompleted() const { return sumOfList(lamEsensTome); }
+        quint8 izualQuestsCompleted()        const { return sumOfList(izual);        }
+
+        void clear() { denOfEvil.clear(); radament.clear(); lamEsensTome.clear(); izual.clear(); }
+
+    private:
+        quint8 sumOfList(const QList<quint8> &list) const { return std::accumulate(list.constBegin(), list.constEnd(), quint8(0)); }
     } questsInfo;
 
     struct

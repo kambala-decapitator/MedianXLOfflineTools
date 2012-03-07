@@ -162,9 +162,11 @@ struct SetItemInfo
 struct SkillInfo
 {
     QString name;
-    qint8 classCode/*, tab, row, col*/;
+    qint8 classCode, tab, row, col;
 };
 Q_DECLARE_TYPEINFO(SkillInfo, Q_MOVABLE_TYPE);
+
+typedef QList<quint8> SkillList;
 
 struct UniqueItemInfo
 {

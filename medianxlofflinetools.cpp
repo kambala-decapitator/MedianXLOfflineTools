@@ -12,6 +12,7 @@
 #include "reversebitreader.h"
 #include "itemspropertiessplitter.h"
 #include "characterinfo.hpp"
+#include "skillplandialog.h"
 
 #include <QCloseEvent>
 #include <QGridLayout>
@@ -666,6 +667,50 @@ void MedianXLOfflineTools::giveCube()
     INFO_BOX(tr("Cube has been stored in %1 at (%2,%3)").arg(ItemsViewerDialog::tabNameAtIndex(ItemsViewerDialog::tabIndexFromItemStorage(cube->storage))).arg(cube->row + 1).arg(cube->column + 1));
 }
 
+void MedianXLOfflineTools::getSkillPlan()
+{
+    SkillplanDialog dlg(this);
+    dlg.exec();
+    QString version("2012005"), versionReadable("2012 v005"); // TODO: read from file
+    QString skillQuests("111111111"); // TODO: save to char info
+    QString miniGames("1111"); // TODO: read from class charm (note the windows in hell - 3rd - must always be 1)
+    QString baseUrl("http://www.authmann.de/d2/mxl/skillpointplanner/?v=%1&class=%2&lvl=%3&bonus=%4&skills=%5&mg=%6&sos=%7&name=%8");
+    QString skillStr;
+    const CharacterInfo::CharacterInfoBasic &basicInfo = CharacterInfo::instance().basicInfo;
+    foreach (quint8 skillValue, basicInfo.skillsReadable)
+        skillStr += QString("%1_").arg(skillValue);
+    quint8 classCode;
+    switch (basicInfo.classCode)
+    {
+    case Enums::ClassName::Amazon:
+        classCode = 1;
+        break;
+    case Enums::ClassName::Assassin:
+        classCode = 2;
+        break;
+    case Enums::ClassName::Barbarian:
+        classCode = 3;
+        break;
+    case Enums::ClassName::Druid:
+        classCode = 4;
+        break;
+    case Enums::ClassName::Necromancer:
+        classCode = 5;
+        break;
+    case Enums::ClassName::Paladin:
+        classCode = 6;
+        break;
+    case Enums::ClassName::Sorceress:
+        classCode = 7;
+        break;
+    default: // unreachable
+        classCode = 0;
+        break;
+    }
+    QString url = baseUrl.arg(version).arg(classCode).arg(basicInfo.level).arg(skillQuests + "11111110", skillStr, miniGames, ui.signetsOfSkillEatenLineEdit->text(), basicInfo.newName);
+    QString baseText("<a href = \"%1\">%2 %3 (%4, %5)</a>"), text = baseText.arg(url, tr("Skillplan"), basicInfo.newName, Enums::ClassName::classes().at(basicInfo.classCode), versionReadable);
+}
+
 void MedianXLOfflineTools::backupSettingTriggered(bool checked)
 {
     if (!checked && QUESTION_BOX_YESNO(tr("Are you sure you want to disable automatic backups? Then don't blame me if your character gets corrupted."), QMessageBox::No) == QMessageBox::No)
@@ -750,6 +795,7 @@ void MedianXLOfflineTools::loadData()
 {
     loadExpTable();
     loadMercNames();
+    SkillplanDialog::loadModVersion();
 }
 
 void MedianXLOfflineTools::loadExpTable()
@@ -822,6 +868,9 @@ void MedianXLOfflineTools::createLayout()
     ui.statsTableWidget->verticalHeader()->setDefaultAlignment(Qt::AlignCenter);
     ui.statsTableWidget->horizontalHeader()->setResizeMode(QHeaderView::Stretch);
     ui.statsTableWidget->setFixedHeight(ui.statsTableWidget->height());
+
+    _charPathLabel = new QLabel(this);
+    ui.statusBar->addPermanentWidget(_charPathLabel);
 
     // on Mac OS X some UI elements become ugly if main window is set to minimumSize()
 #ifndef Q_WS_MACX
@@ -987,13 +1036,24 @@ void MedianXLOfflineTools::fillMaps()
     _baseStatsMap[Enums::ClassName::Assassin]    = BaseStats(BaseStats::StatsAtStart(20, 35, 15, 15, 95), BaseStats::StatsPerLevel(100, 40, 60), BaseStats::StatsPerPoint( 8, 8, 18));
 
     const QList<SkillInfo> &skills = *ItemDataBase::Skills();
+    int n = skills.size();
     for (int classCode = Enums::ClassName::Amazon; classCode <= Enums::ClassName::Assassin; ++classCode)
     {
         QList<int> skillsIndeces;
-        for (int i = 0; i < skills.size(); ++i)
+        for (int i = 0; i < n; ++i)
             if (skills.at(i).classCode == classCode)
                 skillsIndeces += i;
-        _characterSkillsIndeces[static_cast<Enums::ClassName::ClassNameEnum>(classCode)] = skillsIndeces;
+        _characterSkillsIndeces[static_cast<Enums::ClassName::ClassNameEnum>(classCode)].first = skillsIndeces;
+
+        for (int i = 0; i < 6; ++i)
+        {
+            int start = i * 5, end = start + 5;
+            for (int j = start; j < end - 1; ++j)
+                for (int k = j + 1; k < end; ++k)
+                    if (ItemDataBase::Skills()->value(skillsIndeces.at(j)).row > ItemDataBase::Skills()->value(skillsIndeces.at(k)).row)
+                        skillsIndeces.swap(j, k);
+        }
+        _characterSkillsIndeces[static_cast<Enums::ClassName::ClassNameEnum>(classCode)].second = skillsIndeces;
     }
 }
 
@@ -1011,6 +1071,9 @@ void MedianXLOfflineTools::connectSignals()
     // items
     connect(ui.actionShowItems, SIGNAL(triggered()), SLOT(showItems()));
     connect(ui.actionGiveCube, SIGNAL(triggered()), SLOT(giveCube()));
+
+    // export
+    connect(ui.actionSkillPlan, SIGNAL(triggered()), SLOT(getSkillPlan()));
 
     // options
     connect(ui.actionBackup, SIGNAL(triggered(bool)), SLOT(backupSettingTriggered(bool)));
@@ -1225,15 +1288,14 @@ bool MedianXLOfflineTools::processSaveFile(const QString &charPath)
         ERROR_BOX(tr("Quests data not found!"));
         return false;
     }
-    charInfo.questsInfo.denOfEvilQuestsCompleted = charInfo.questsInfo.radamentQuestsCompleted = 0;
-    charInfo.questsInfo.lamEsensTomeQuestsCompleted = charInfo.questsInfo.izualQuestsCompleted = 0;
+    charInfo.questsInfo.clear();
     for (int i = 0; i < difficultiesNumber; ++i)
     {
         int baseOffset = Enums::Offsets::QuestsData + i * Enums::Quests::Size;
-        charInfo.questsInfo.denOfEvilQuestsCompleted += _saveFileContents.at(baseOffset + Enums::Quests::DenOfEvil) & Enums::Quests::IsCompleted;
-        charInfo.questsInfo.radamentQuestsCompleted += _saveFileContents.at(baseOffset + Enums::Quests::Radament) & (Enums::Quests::IsCompleted | Enums::Quests::IsTaskDone);
-        charInfo.questsInfo.lamEsensTomeQuestsCompleted += _saveFileContents.at(baseOffset + Enums::Quests::LamEsensTome) & Enums::Quests::IsCompleted;
-        charInfo.questsInfo.izualQuestsCompleted += _saveFileContents.at(baseOffset + Enums::Quests::Izual) & Enums::Quests::IsCompleted;
+        charInfo.questsInfo.denOfEvil += _saveFileContents.at(baseOffset + Enums::Quests::DenOfEvil) & Enums::Quests::IsCompleted;
+        charInfo.questsInfo.radament += _saveFileContents.at(baseOffset + Enums::Quests::Radament) & (Enums::Quests::IsCompleted | Enums::Quests::IsTaskDone);
+        charInfo.questsInfo.lamEsensTome += _saveFileContents.at(baseOffset + Enums::Quests::LamEsensTome) & Enums::Quests::IsCompleted;
+        charInfo.questsInfo.izual += _saveFileContents.at(baseOffset + Enums::Quests::Izual) & Enums::Quests::IsCompleted;
     }
 
     // WP
@@ -1361,7 +1423,7 @@ bool MedianXLOfflineTools::processSaveFile(const QString &charPath)
         return false;
     }
 
-    int totalPossibleStats = totalPossibleStatPoints(clvl, charInfo.questsInfo.lamEsensTomeQuestsCompleted, _statsDynamicData.property("SignetsOfLearningEaten").toInt());
+    int totalPossibleStats = totalPossibleStatPoints(CharacterInfo::instance().basicInfo.level);
     if (totalStats > totalPossibleStats) // check if stats are hacked
     {
         QMetaEnum statisticMetaEnum = Enums::CharacterStats::statisticMetaEnum();
@@ -1380,8 +1442,7 @@ bool MedianXLOfflineTools::processSaveFile(const QString &charPath)
     }
 
     // skills
-    quint16 skills = 0, maxPossibleSkills = totalPossibleSkillPoints(clvl, charInfo.questsInfo.denOfEvilQuestsCompleted, charInfo.questsInfo.radamentQuestsCompleted,
-                                                                     charInfo.questsInfo.izualQuestsCompleted, _statsDynamicData.property("SignetsOfSkillEaten").toInt());
+    quint16 skills = 0, maxPossibleSkills = totalPossibleSkillPoints();
     charInfo.basicInfo.skills.clear();
     charInfo.basicInfo.skills.reserve(skillsNumber);
     for (int i = 0; i < skillsNumber; ++i)
@@ -1389,7 +1450,7 @@ bool MedianXLOfflineTools::processSaveFile(const QString &charPath)
         quint8 skillValue = _saveFileContents.at(skillsOffset + 2 + i);
         skills += skillValue;
         charInfo.basicInfo.skills += skillValue;
-        qDebug() << skillValue << ItemDataBase::Skills()->value(_characterSkillsIndeces[charInfo.basicInfo.classCode].at(i)).name;
+        //qDebug() << skillValue << ItemDataBase::Skills()->value(_characterSkillsIndeces[charInfo.basicInfo.classCode].first.at(i)).name;
     }
     skills += _statsDynamicData.property("FreeSkillPoints").toUInt();
     if (skills > maxPossibleSkills) // check if skills are hacked
@@ -1404,6 +1465,14 @@ bool MedianXLOfflineTools::processSaveFile(const QString &charPath)
         }
     }
     charInfo.basicInfo.totalSkillPoints = skills;
+
+    const QPair<QList<int>, QList<int>> &skillsIndeces = _characterSkillsIndeces[charInfo.basicInfo.classCode];
+    for (int i = 0; i < skillsNumber; ++i)
+    {
+        int skillIndex = skillsIndeces.second.at(i);
+        charInfo.basicInfo.skillsReadable += charInfo.basicInfo.skills.at(skillsIndeces.first.indexOf(skillIndex));
+        //qDebug() << charInfo.basicInfo.skillsReadable.last() << ItemDataBase::Skills()->value(skillIndex).name;
+    }
 
     // items
     inputDataStream.skipRawData(skillsNumber + 2);
@@ -1555,14 +1624,16 @@ quint32 MedianXLOfflineTools::checksum(const QByteArray &charByteArray) const
     return sum;
 }
 
-inline int MedianXLOfflineTools::totalPossibleStatPoints(int level, int lamEsen, int solsEaten)
+inline int MedianXLOfflineTools::totalPossibleStatPoints(int level)
 {
-    return (level - 1) * statPointsPerLevel + 5 * lamEsen + solsEaten;
+    return (level - 1) * statPointsPerLevel + 5 * CharacterInfo::instance().questsInfo.lamEsensTomeQuestsCompleted() + _statsDynamicData.property("SignetsOfLearningEaten").toInt();
 }
 
-inline int MedianXLOfflineTools::totalPossibleSkillPoints(int level, int doe, int radament, int izual, int sosEaten)
+inline int MedianXLOfflineTools::totalPossibleSkillPoints()
 {
-    return (level - 1) * skillPointsPerLevel + doe + radament + izual * 2 + sosEaten;
+    const CharacterInfo &charInfo = CharacterInfo::instance();
+    return (charInfo.basicInfo.level - 1) * skillPointsPerLevel + charInfo.questsInfo.denOfEvilQuestsCompleted() + charInfo.questsInfo.radamentQuestsCompleted() + charInfo.questsInfo.izualQuestsCompleted() * 2 +
+        _statsDynamicData.property("SignetsOfSkillEaten").toInt();
 }
 
 void MedianXLOfflineTools::processPlugyStash(QHash<Enums::ItemStorage::ItemStorageEnum, PlugyStashInfo>::iterator &iter, ItemsList *items)
@@ -1848,10 +1919,13 @@ void MedianXLOfflineTools::updateStatusTips(int newStatPoints, int investedStatP
 
 void MedianXLOfflineTools::updateWindowTitle()
 {
-#ifdef Q_WS_WIN32
-    setWindowTitle(_charPath.isEmpty() ? qApp->applicationName() : QString("%1 - %2[*]").arg(QDir::toNativeSeparators(_charPath), qApp->applicationName()));
+    _charPathLabel->setText(QDir::toNativeSeparators(_charPath));
+    // making setWindowFilePath() work correctly
+#ifdef Q_WS_MACX
+    //setWindowFilePath(_charPath);
+    setWindowTitle(_charPath.isEmpty() ? QString() : QString("%1 (%2)").arg(QFileInfo(_charPath).fileName(), SkillplanDialog::modVersionReadable()));
 #else
-    setWindowFilePath(_charPath);
+    setWindowTitle(_charPath.isEmpty() ? qApp->applicationName() : QString("%1[*] (%2) %3 %4").arg(QFileInfo(_charPath).fileName(), SkillplanDialog::modVersionReadable(), QChar(0x2014), qApp->applicationName()));
 #endif
 }
 
@@ -1923,12 +1997,15 @@ QByteArray MedianXLOfflineTools::statisticBytes()
         else if (statCode != Enums::CharacterStats::End && statCode != Enums::CharacterStats::Level && statCode != Enums::CharacterStats::Experience)
         {
             value = _lineEditsStatsMap[statCode]->text().toULongLong();
-            if (statCode == Enums::CharacterStats::SignetsOfLearningEaten && value == Enums::CharacterStats::SignetsOfLearningMax)
-                value++; // SignetsOfLearningEaten should be set to 501
+            // signets should be set to (max + 1)
+            if ((statCode == Enums::CharacterStats::SignetsOfLearningEaten && value == Enums::CharacterStats::SignetsOfLearningMax) ||
+                (statCode == Enums::CharacterStats::SignetsOfSkillEaten    && value == Enums::CharacterStats::SignetsOfSkillMax))
+            {
+                ++value;
+            }
             else if (statCode == Enums::CharacterStats::FreeStatPoints)
             {
-                int totalPossibleFreeStats = totalPossibleStatPoints(ui.levelSpinBox->value(), CharacterInfo::instance().questsInfo.lamEsensTomeQuestsCompleted,
-                                                                     _lineEditsStatsMap[Enums::CharacterStats::SignetsOfLearningEaten]->text().toInt()) - investedStatPoints();
+                int totalPossibleFreeStats = totalPossibleStatPoints(ui.levelSpinBox->value()) - investedStatPoints();
                 if (value > static_cast<quint32>(totalPossibleFreeStats)) // prevent hacks and shut the compiler up
                 {
                     value = totalPossibleFreeStats;

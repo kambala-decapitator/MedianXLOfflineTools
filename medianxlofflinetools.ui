@@ -1016,7 +1016,7 @@ p, li { white-space: pre-wrap; }
     <string>Always reload shared stashes</string>
    </property>
    <property name="statusTip">
-    <string>Always reload shared stashes when loading a character (may slow down the loading speed)</string>
+    <string>Reload shared stashes when loading a character (may be slow)</string>
    </property>
   </action>
   <action name="actionAutoOpenPersonalStash">
