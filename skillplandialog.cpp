@@ -19,10 +19,11 @@ void SkillplanDialog::loadModVersion()
             QList<QByteArray> lineData = f.readLine().split('\t');
             if (lineData.size() > 1)
             {
+                QByteArray text = lineData.at(1).trimmed();
                 if (lineData.at(0) == "readable")
-                    _modVersionReadable = lineData.at(1);
+                    _modVersionReadable = text;
                 else if (lineData.at(0) == "planner")
-                    _modVersionPlanner = lineData.at(1);
+                    _modVersionPlanner = text;
             }
         }
     }
@@ -35,6 +36,7 @@ void SkillplanDialog::loadModVersion()
 SkillplanDialog::SkillplanDialog(QWidget *parent) : QDialog(parent)
 {
     ui.setupUi(this);
+    setWindowModality(Qt::WindowModal);
     setWindowFlags(windowFlags() & ~Qt::WindowContextHelpButtonHint);
 
     connect(ui.copyHtmlButton, SIGNAL(clicked()), SLOT(copyHtml()));

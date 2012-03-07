@@ -1466,7 +1466,7 @@ bool MedianXLOfflineTools::processSaveFile(const QString &charPath)
     }
     charInfo.basicInfo.totalSkillPoints = skills;
 
-    const QPair<QList<int>, QList<int>> &skillsIndeces = _characterSkillsIndeces[charInfo.basicInfo.classCode];
+    const QPair<QList<int>, QList<int> > &skillsIndeces = _characterSkillsIndeces[charInfo.basicInfo.classCode];
     for (int i = 0; i < skillsNumber; ++i)
     {
         int skillIndex = skillsIndeces.second.at(i);
@@ -1744,7 +1744,7 @@ void MedianXLOfflineTools::clearUI()
         groupBox->setDisabled(true);
 
     QList<QAction *> actions = QList<QAction *>() << ui.actionRespecStats << ui.actionRespecSkills << ui.actionActivateWaypoints << ui.actionSaveCharacter << ui.actionRename << ui.actionReloadCharacter
-        << ui.actionFind << ui.actionFindNext << ui.actionFindPrevious << ui.actionShowItems;
+        << ui.actionFind << ui.actionFindNext << ui.actionFindPrevious << ui.actionShowItems << ui.actionSkillPlan << ui.actionExportCharacterInfo;
     foreach (QAction *action, actions)
         action->setDisabled(true);
 
@@ -1766,8 +1766,8 @@ void MedianXLOfflineTools::updateUI()
 {
     clearUI();
 
-    QList<QAction *> actions = QList<QAction *>() << ui.actionRespecStats << ui.actionRespecSkills << ui.actionActivateWaypoints
-                                                  << ui.actionSaveCharacter << ui.actionRename << ui.actionReloadCharacter;
+    QList<QAction *> actions = QList<QAction *>() << ui.actionRespecStats << ui.actionRespecSkills << ui.actionActivateWaypoints << ui.actionSaveCharacter << ui.actionRename
+                                                  << ui.actionReloadCharacter << ui.actionSkillPlan << ui.actionExportCharacterInfo;
     foreach (QAction *action, actions)
         action->setEnabled(true);
     ui.respecSkillsCheckBox->setEnabled(true);

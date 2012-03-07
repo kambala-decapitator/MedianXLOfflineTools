@@ -26,7 +26,8 @@ SOURCES += main.cpp \
     reversebitreader.cpp \
     itemparser.cpp \
     propertiesdisplaymanager.cpp \
-    findresultswidget.cpp
+    findresultswidget.cpp \
+    skillplandialog.cpp
 
 HEADERS += medianxlofflinetools.h \
     resurrectpenaltydialog.h \
@@ -49,13 +50,15 @@ HEADERS += medianxlofflinetools.h \
     resourcepathmanager.hpp \
     propertiesdisplaymanager.h \
     findresultswidget.h \
-    characterinfo.hpp
+    characterinfo.hpp \
+    skillplandialog.h
 
 FORMS += medianxlofflinetools.ui \
     resurrectpenaltydialog.ui \
     qd2charrenamer.ui \
     propertiesviewerwidget.ui \
-    finditemsdialog.ui
+    finditemsdialog.ui \
+    skillplandialog.ui
 
 RESOURCES += resources/medianxlofflinetools.qrc
 
