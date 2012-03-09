@@ -32,20 +32,27 @@ struct ItemInfo
     // fields below exist if isExtended == true
     quint32 guid;
     quint8 socketablesNumber, ilvl, quality, variableGraphicIndex;
-    int nonMagicType; // quality == 1 || quality == 3 (low quality or superior)
-    int setOrUniqueId; // key to get SetItemInfo or UniqueItemInfo
-    QString inscribedName; // isPersonalized == true
-    int defense; // itemBase.genericType == Enums::ItemType::Armor
+    int nonMagicType;                     // quality == 1 || quality == 3 (low quality or superior)
+    int setOrUniqueId;                    // key to get SetItemInfo or UniqueItemInfo
+    QString inscribedName;                // isPersonalized == true
+    int defense;                          // itemBase.genericType == Enums::ItemType::Armor
     int currentDurability, maxDurability; // itemBase.genericType != Enums::ItemTypeGeneric::Misc
-    int quantity; // itemBase.isStackable == true
-    qint8 socketsNumber; // isSocketed == true
+    int quantity;                         // itemBase.isStackable == true
+    qint8 socketsNumber;                  // isSocketed == true
     PropertiesMultiMap props, rwProps;
-    ItemsList socketablesInfo; // 0 ≤ size ≤ 6
-    QString rwName; // isRW == true
+    ItemsList socketablesInfo;            // 0 <= size <= 6
+    QString rwName;                       // isRW == true
 
     quint32 plugyPage;
     bool hasChanged;
     QString bitString;
+
+    enum ParsingStatus
+    {
+        Failed,
+        Corrupted,
+        Ok
+    } status;
 
     ItemInfo() { init(); }
     ItemInfo(const QString &bits) : bitString(bits) { init(); }

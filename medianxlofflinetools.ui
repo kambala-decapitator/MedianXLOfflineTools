@@ -1202,7 +1202,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="actionSkillPlan">
    <property name="text">
-    <string>Skill plan</string>
+    <string>Skillplan</string>
    </property>
    <property name="statusTip">
     <string>Generate a link for Tub's Skillpoint Planner</string>

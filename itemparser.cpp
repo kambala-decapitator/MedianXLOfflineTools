@@ -24,7 +24,7 @@ const QString &ItemParser::enhancedDamageFormat()
 ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &bytes)
 {
     ItemInfo *item = 0;
-    bool ok = true;
+    ItemInfo::ParsingStatus status = ItemInfo::Ok;
     int attempt = 0, searchEndOffset = 0;
     // loop tries maximum 5 times to read past JM in case it's a part of item
     do
@@ -39,6 +39,8 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
         else if (bytes.mid(nextItemOffset - 3, 2) == plugyPageHeader) // for plugy stashes
             nextItemOffset -= 3;
         int itemSize = nextItemOffset - itemStartOffset;
+        if (itemSize <= 0)
+            break;
 
         try
         {
@@ -171,11 +173,11 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
                     for (int i = 0; i < 5; i++)
                         hasSetLists[i] = bitReader.readBool(); // should always be false for MXL
 
-                item->props = parseItemProperties(bitReader, &ok);
-                if (!ok)
+                item->props = parseItemProperties(bitReader, &status);
+                if (status == ItemInfo::Failed)
                 {
                     inputDataStream.device()->seek(itemStartOffset - 2); // set to JM - beginning of the item
-                    item->props.insert(1, ItemProperty(tr("Error parsing item properties (ok == 0), please report!")));
+                    item->props.insert(1, ItemProperty(tr("Error parsing item properties (status == failed), please report!")));
                     searchEndOffset = nextItemOffset + 1;
                     continue;
                 }
@@ -194,11 +196,11 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
 
                 if (item->isRW)
                 {
-                    item->rwProps = parseItemProperties(bitReader, &ok);
-                    if (!ok)
+                    item->rwProps = parseItemProperties(bitReader, &status);
+                    if (status == ItemInfo::Failed)
                     {
                         inputDataStream.device()->seek(itemStartOffset - 2); // set to JM - beginning of the item
-                        item->rwProps.insert(1, ItemProperty(tr("Error parsing RW properties (ok == 0), please report!")));
+                        item->rwProps.insert(1, ItemProperty(tr("Error parsing RW properties (status == failed), please report!")));
                         searchEndOffset = nextItemOffset + 1;
                         continue;
                     }
@@ -244,16 +246,18 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
         }
         catch (int exceptionCode)
         {
-            ok = false;
+            status = ItemInfo::Corrupted;
             inputDataStream.device()->seek(itemStartOffset - 2); // set to JM - beginning of the item
             searchEndOffset = nextItemOffset + 1;
             continue;
         }
-    } while (!ok && ++attempt < 5);
+    } while (status != ItemInfo::Ok && ++attempt < 5);
+
+    item->status = status;
     return item;
 }
 
-PropertiesMultiMap ItemParser::parseItemProperties(ReverseBitReader &bitReader, bool *ok)
+PropertiesMultiMap ItemParser::parseItemProperties(ReverseBitReader &bitReader, ItemInfo::ParsingStatus *status)
 {
     PropertiesMultiMap props;
     while (bitReader.pos() != -1)
@@ -263,7 +267,7 @@ PropertiesMultiMap ItemParser::parseItemProperties(ReverseBitReader &bitReader, 
             int id = bitReader.readNumber(Enums::CharacterStats::StatCodeLength);
             if (id == Enums::ItemProperties::End)
             {
-                *ok = true;
+                *status = ItemInfo::Ok;
                 return props;
             }
 
@@ -357,14 +361,14 @@ PropertiesMultiMap ItemParser::parseItemProperties(ReverseBitReader &bitReader, 
         }
         catch (int exceptionCode)
         {
-            *ok = true;
+            *status = ItemInfo::Corrupted;
             // Requirements txtProperty has the lowest descpriority, so it'll appear at the bottom
             props.insert(Enums::ItemProperties::Requirements, ItemProperty(tr("Error parsing item properties (exception == %1), please report!").arg(exceptionCode)));
             return props;
         }
     }
 
-    *ok = false;
+    *status = ItemInfo::Failed;
     return PropertiesMultiMap();
 }
 

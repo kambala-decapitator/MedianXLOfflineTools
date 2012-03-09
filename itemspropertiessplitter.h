@@ -39,10 +39,6 @@ public slots:
     void next10Pages()     { right10Clicked(); }
 
     // emulating pressed shift if action was pressed by mouse
-//    void previous100Pages() { _isShiftPressed = true; left10Clicked(); _isShiftPressed = false; }
-//    void firstPage() { _isShiftPressed = true; leftClicked(); _isShiftPressed = false; }
-//    void lastPage() { _isShiftPressed = true; rightClicked(); _isShiftPressed = false; }
-//    void next100Pages() { _isShiftPressed = true; right10Clicked(); _isShiftPressed = false; }
     void previous100Pages() { emulateShiftAndInvokeMethod(&ItemsPropertiesSplitter::left10Clicked);  }
     void firstPage()        { emulateShiftAndInvokeMethod(&ItemsPropertiesSplitter::leftClicked);    }
     void lastPage()         { emulateShiftAndInvokeMethod(&ItemsPropertiesSplitter::rightClicked);   }
@@ -55,8 +51,9 @@ protected:
 signals:
     void itemCountChanged(int itemCount);
     void itemDeleted();
-    void cubeDeleted(bool deleted = true); // param is here because I want to connect this signal directly to QAction's setEnabled() slot
+    void cubeDeleted(bool = true);  // connect directly to QAction's setEnabled() slot
     //void storageModified(int storage);
+    void itemsChanged(bool = true); // connect directly to QMainWindow's setWindowModified() slot
 
 private slots:
     void itemSelected(const QModelIndex &index);
@@ -68,8 +65,7 @@ private slots:
     void right10Clicked();
 
     void showContextMenu(const QPoint &pos);
-    void exportHtml();
-    void exportBbCode();
+    void exportText();
     void disenchantItem();
     void unsocketItem();
     //void makeNonEthereal();

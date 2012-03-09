@@ -1,8 +1,6 @@
-v0.2.1:
+v0.3:
 - export item to bbcode/html
 - generate some bbcode/html report about character and/or plugy stashes contents
-- add a message box for corrupted items
-- add save prompt
 - move most functionality from splitter to tableview
 - get exp table and base char stats from txt
 - d2s file association

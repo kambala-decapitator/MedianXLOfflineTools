@@ -33,6 +33,7 @@ ItemsViewerDialog::ItemsViewerDialog(const QHash<int, bool> &plugyStashesExisten
         splitter->setModel(model);
         connect(splitter, SIGNAL(itemCountChanged(int)), SLOT(itemCountChangedInCurrentTab(int)));
         connect(splitter, SIGNAL(itemDeleted()), SLOT(decreaseItemCount()));
+        connect(splitter, SIGNAL(itemsChanged(bool)), SIGNAL(itemsChanged(bool)));
         connect(splitter, SIGNAL(cubeDeleted(bool)), SIGNAL(cubeDeleted(bool)));
         connect(splitter, SIGNAL(cubeDeleted(bool)), SLOT(setCubeTabDisabled(bool)));
         //connect(splitter, SIGNAL(storageModified(int)), SLOT(storageItemsModified(int)));

@@ -18,6 +18,10 @@
 
 #include <limits>
 
+#ifndef QT_NO_DEBUG
+#include <QDebug>
+#endif
+
 
 static const QString iconPathFormat(":/PlugyArrows/icons/plugy/%1.png");
 
@@ -47,10 +51,7 @@ ItemsPropertiesSplitter::ItemsPropertiesSplitter(ItemStorageTableView *itemsView
 
         QList<QPushButton *> buttons = QList<QPushButton *>() << _left10Button << _leftButton << _rightButton << _right10Button;
         foreach (QPushButton *button, buttons)
-        {
             button->setIconSize(QSize(32, 20));
-//            button->resize(button->minimumSizeHint());
-        }
         // hacky way to set button icons
         QKeyEvent keyEvent(QEvent::KeyRelease, Qt::Key_Shift, 0);
         keyReleaseEvent(&keyEvent);
@@ -283,23 +284,23 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
     {
         QList<QAction *> actions;
 
-//        QMenu *menuExport = new QMenu(tr("Export as"), _itemsView);
-//        menuExport->addActions(QList<QAction *>() << _itemActions[ExportBbCode] << _itemActions[ExportHtml]);
-//        actions << menuExport->menuAction();
+        QMenu *menuExport = new QMenu(tr("Export as"), _itemsView);
+        menuExport->addActions(QList<QAction *>() << _itemActions[ExportBbCode] << _itemActions[ExportHtml]);
+        actions << menuExport->menuAction();
 
-//        QAction *separator = new QAction(_itemsView);
-//        separator->setSeparator(true);
-//        actions << separator;
+        QAction *separator = new QAction(_itemsView);
+        separator->setSeparator(true);
+        actions << separator;
 
         if (item->quality == Enums::ItemQuality::Set || (item->quality == Enums::ItemQuality::Unique && !ItemDataBase::isUberCharm(item)))
         {
             QMenu *menuDisenchant = new QMenu(tr("Disenchant into"), _itemsView);
-            menuDisenchant->addActions(QList<QAction *>() << _itemActions[DisenchantShards] << _itemActions[DisenchantSignet]);
+            menuDisenchant->addActions(QList<QAction *>() << _itemActions[DisenchantSignet] << _itemActions[DisenchantShards]);
             menuDisenchant->menuAction()->setDisabled(item->location == Enums::ItemLocation::Equipped); // you can't disenchant equipped items
             actions << menuDisenchant->menuAction();
         }
 
-        // TODO 0.3
+        // TODO 0.4
 //        if (item->isSocketed && item->socketablesNumber)
 //            actions << _itemActions[Unsocket];
 
@@ -314,7 +315,7 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
         if (_propertiesWidget->hasMysticOrbs())
             actions << _itemActions[RemoveMO];
 
-        QAction *separator = new QAction(_itemsView);
+        separator = new QAction(_itemsView);
         separator->setSeparator(true);
         actions << separator << _itemActions[Delete];
 
@@ -330,12 +331,7 @@ ItemInfo *ItemsPropertiesSplitter::selectedItem(bool showError /*= true*/)
     return item;
 }
 
-void ItemsPropertiesSplitter::exportHtml()
-{
-
-}
-
-void ItemsPropertiesSplitter::exportBbCode()
+void ItemsPropertiesSplitter::exportText()
 {
 
 }
@@ -487,6 +483,8 @@ void ItemsPropertiesSplitter::addItemToList(ItemInfo *item, bool currentStorage 
         _itemsModel->addItem(item);
         _propertiesWidget->showItem(item);
     }
+
+    emit itemsChanged();
 }
 
 void ItemsPropertiesSplitter::removeItemFromList(ItemInfo *item, bool currentStorage /*= true*/)
@@ -501,27 +499,25 @@ void ItemsPropertiesSplitter::removeItemFromList(ItemInfo *item, bool currentSto
         _itemsModel->removeItem(item);
         _itemsView->setSpan(item->row, item->column, 1, 1);
     }
+
+    emit itemsChanged();
 }
 
 void ItemsPropertiesSplitter::createItemActions()
 {
-    // TODO: uncomment when impementing export
-//    QAction *actionBbCode = new QAction("BBCode", _itemsView);
-//    connect(actionBbCode, SIGNAL(triggered()), SLOT(exportBbCode()));
-//    _itemsView->addAction(actionBbCode);
-//    _itemActions[ExportBbCode] = actionBbCode;
+    QAction *actionBbCode = new QAction("BBCode", _itemsView);
+    actionBbCode->setShortcut(QKeySequence("Ctrl+E"));
+    actionBbCode->setObjectName("bbcode");
+    connect(actionBbCode, SIGNAL(triggered()), SLOT(exportText()));
+    _itemsView->addAction(actionBbCode);
+    _itemActions[ExportBbCode] = actionBbCode;
 
-//    QAction *actionHtml = new QAction("HTML", _itemsView);
-//    connect(actionHtml, SIGNAL(triggered()), SLOT(exportHtml()));
-//    _itemsView->addAction(actionHtml);
-//    _itemActions[ExportHtml] = actionHtml;
-
-    QAction *actionShards = new QAction(QIcon(ResourcePathManager::pathForImageName("invfary4")), tr("Arcane Shards"), _itemsView);
-    actionShards->setShortcut(QKeySequence("Alt+D"));
-    actionShards->setObjectName("shards");
-    connect(actionShards, SIGNAL(triggered()), SLOT(disenchantItem()));
-    _itemsView->addAction(actionShards);
-    _itemActions[DisenchantShards] = actionShards;
+    QAction *actionHtml = new QAction("HTML", _itemsView);
+    actionHtml->setShortcut(QKeySequence("Alt+E"));
+    actionHtml->setObjectName("html");
+    connect(actionHtml, SIGNAL(triggered()), SLOT(exportText()));
+    _itemsView->addAction(actionHtml);
+    _itemActions[ExportHtml] = actionHtml;
 
     QAction *actionSol = new QAction(QIcon(ResourcePathManager::pathForImageName("sigil1b")), tr("Signet of Learning"), _itemsView);
     actionSol->setShortcut(QKeySequence("Ctrl+D"));
@@ -530,7 +526,14 @@ void ItemsPropertiesSplitter::createItemActions()
     _itemsView->addAction(actionSol);
     _itemActions[DisenchantSignet] = actionSol;
 
-    // TODO 0.3: unsocket
+    QAction *actionShards = new QAction(QIcon(ResourcePathManager::pathForImageName("invfary4")), tr("Arcane Shards"), _itemsView);
+    actionShards->setShortcut(QKeySequence("Alt+D"));
+    actionShards->setObjectName("shards");
+    connect(actionShards, SIGNAL(triggered()), SLOT(disenchantItem()));
+    _itemsView->addAction(actionShards);
+    _itemActions[DisenchantShards] = actionShards;
+
+    // TODO 0.4: unsocket
 //    QAction *actionUnsocket = new QAction(tr("Unsocket"), _itemsView);
 //    connect(actionUnsocket, SIGNAL(triggered()), SLOT(unsocketItem()));
 //    _itemsView->addAction(actionUnsocket);

@@ -92,12 +92,11 @@ private:
     bool _isLoaded;
     ResurrectPenaltyDialog::ResurrectionPenalty _resurrectionPenalty;
 
-    void createLanguageMenu();
-
     void loadData();
     void loadExpTable();
     void loadMercNames();
 
+    void createLanguageMenu();
     void createLayout();
     void createCharacterGroupBoxLayout();
     void createMercGroupBoxLayout();
@@ -116,20 +115,22 @@ private:
     bool loadFile(const QString &charPath);
     bool processSaveFile(const QString &charPath);
     quint32 checksum(const QByteArray &charByteArray) const;
+
     inline int totalPossibleStatPoints(int level);
     inline int totalPossibleSkillPoints();
+    int investedStatPoints();
+    inline void recalculateStatPoints();
 
     void clearUI();
     void updateUI();
     inline void updateHardcoreUIElements();
     void updateCharacterTitle(bool isHardcore);
     void setStats();
-    int investedStatPoints();
-    inline void recalculateStatPoints();
-    void updateStatusTips(int newStatPoints, int investedStatPoints, int newSkillPoints, int investedSkillPoints);
+
     inline void updateWindowTitle();
     void updateTableStats(const BaseStats::StatsStep &statsPerStep, int diff, QSpinBox *senderSpinBox = 0);
     void updateTableItemStat(QTableWidgetItem *item, int diff, int statPerPoint);
+    void updateStatusTips(int newStatPoints, int investedStatPoints, int newSkillPoints, int investedSkillPoints);
     inline void updateCompoundStatusTip(QWidget *widget, const QString &firstString, const QString &secondString);
     inline void updateMinCompoundStatusTip(QWidget *widget, int minValue, int investedValue);
     inline void updateMaxCompoundStatusTip(QWidget *widget, int maxValue, int investedValue);
@@ -143,6 +144,8 @@ private:
 
     void backupFile(QFile &file);
     void showErrorMessageBoxForFile(const QString &message, const QFile &file);
+    QString itemStorageAndCoordinatesString(const QString &text, ItemInfo *item);
+    bool maybeSave();
 };
 
 #endif // MEDIANXLOFFLINETOOLS_H

@@ -27,9 +27,8 @@ QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item)
     }
 
     const ItemBase &itemBase = ItemDataBase::Items()->value(item->itemType);
-    //if (!item->socketablesInfo.isEmpty())
-        foreach (ItemInfo *socketableItem, item->socketablesInfo)
-            addProperties(&allProps, ItemDataBase::isGenericSocketable(socketableItem) ? genericSocketableProperties(socketableItem, itemBase.socketableType) : socketableItem->props);
+    foreach (ItemInfo *socketableItem, item->socketablesInfo)
+        addProperties(&allProps, ItemDataBase::isGenericSocketable(socketableItem) ? genericSocketableProperties(socketableItem, itemBase.socketableType) : socketableItem->props);
 
     // create full item description
     QString itemDescription = ItemDataBase::completeItemName(item, false).replace(htmlLineBreak, "\n") + "\n" + tr("Item Level: %1").arg(item->ilvl);

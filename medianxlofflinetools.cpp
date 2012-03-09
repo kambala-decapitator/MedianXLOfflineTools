@@ -55,9 +55,9 @@ MedianXLOfflineTools::MedianXLOfflineTools(QWidget *parent, Qt::WFlags flags) : 
     maxValueFormat(tr("Max: %1")), minValueFormat(tr("Min: %1")), investedValueFormat(tr("Invested: %1")), _isLoaded(false)
 {
     ui.setupUi(this);
-    createLanguageMenu();
 
     loadData();
+    createLanguageMenu();
     createLayout();
     loadSettings();
     fillMaps();
@@ -65,10 +65,6 @@ MedianXLOfflineTools::MedianXLOfflineTools(QWidget *parent, Qt::WFlags flags) : 
     
     ui.actionFindNext->setShortcut(QKeySequence::FindNext);
     ui.actionFindPrevious->setShortcut(QKeySequence::FindPrevious);
-
-    //ui.signetsOfLearningEatenLineEdit->setReadOnly(false);
-    //ui.freeSkillPointsLineEdit->setReadOnly(false);
-    //ui.freeStatPointsLineEdit->setReadOnly(false);
 
     if (ui.actionLoadLastUsedCharacter->isChecked() && !_recentFilesList.isEmpty())
         loadFile(_recentFilesList.at(0));
@@ -108,9 +104,7 @@ void MedianXLOfflineTools::loadCharacter()
 
 void MedianXLOfflineTools::openRecentFile()
 {
-    QAction *action = qobject_cast<QAction *>(sender());
-    QString fileName = QDir::fromNativeSeparators(action->statusTip());
-    loadFile(fileName);
+    loadFile(qobject_cast<QAction *>(sender())->statusTip());
 }
 
 void MedianXLOfflineTools::reloadCharacter()
@@ -363,13 +357,13 @@ void MedianXLOfflineTools::saveCharacter()
                 }
 
                 charInfo.basicInfo.originalName = newName;
-                //charInfo.basicInfo.newName.clear();
 
                 _recentFilesList[0] = saveFileName;
                 updateRecentFilesActions();
             }
 
             _charPath = saveFileName;
+            setWindowModified(false);
             loadFile(_charPath); // update all UI at once by reloading the file
 
             INFO_BOX(tr("File '%1' successfully saved!").arg(QDir::toNativeSeparators(saveFileName)));
@@ -405,6 +399,7 @@ void MedianXLOfflineTools::statChanged(int newValue)
         qApp->sendEvent(senderSpinBox, &event);
 
         updateTableStats(_baseStatsMap[CharacterInfo::instance().basicInfo.classCode].statsPerPoint, diff, senderSpinBox);
+        setWindowModified(true);
     }
 }
 
@@ -417,6 +412,7 @@ void MedianXLOfflineTools::respecStats()
         _spinBoxesStatsMap[statCode]->setValue(baseStat);
     }
     ui.statusBar->clearMessage();
+    setWindowModified(true);
 }
 
 void MedianXLOfflineTools::respecSkills(bool shouldRespec)
@@ -424,6 +420,7 @@ void MedianXLOfflineTools::respecSkills(bool shouldRespec)
     quint16 skills = CharacterInfo::instance().basicInfo.totalSkillPoints;
     ui.freeSkillPointsLineEdit->setText(QString::number(shouldRespec ? skills : CharacterInfo::instance().basicInfo.statsDynamicData.property("FreeSkillPoints").toUInt()));
     updateMaxCompoundStatusTip(ui.freeSkillPointsLineEdit, skills, shouldRespec ? 0 : skills - CharacterInfo::instance().basicInfo.statsDynamicData.property("FreeSkillPoints").toUInt());
+    setWindowModified(true);
 }
 
 void MedianXLOfflineTools::rename()
@@ -434,6 +431,7 @@ void MedianXLOfflineTools::rename()
     {
         newName = renameWidget.name();
         QD2CharRenamer::updateNamePreview(ui.charNamePreview, newName);
+        setWindowModified(true);
     }
 }
 
@@ -535,12 +533,15 @@ void MedianXLOfflineTools::resurrect()
         default:
             break;
         }
+
+        setWindowModified(true);
     }
 }
 
 void MedianXLOfflineTools::convertToSoftcore(bool isSoftcore)
 {
     updateCharacterTitle(!isSoftcore);
+    setWindowModified(true);
 }
 
 //void MedianXLOfflineTools::currentDifficultyChanged(int newDifficulty)
@@ -598,6 +599,7 @@ void MedianXLOfflineTools::showItems(bool activate /*= true*/)
         connect(_itemsDialog->tabWidget(), SIGNAL(currentChanged(int)), SLOT(itemStorageTabChanged(int)));
         connect(_itemsDialog, SIGNAL(cubeDeleted(bool)), ui.actionGiveCube, SLOT(setEnabled(bool)));
         connect(_itemsDialog, SIGNAL(closing(bool)), ui.menuGoToPage, SLOT(setDisabled(bool)));
+        connect(_itemsDialog, SIGNAL(itemsChanged(bool)), SLOT(setWindowModified(bool)));
         _itemsDialog->show();
 
         if (!activate)
@@ -664,7 +666,8 @@ void MedianXLOfflineTools::giveCube()
         _itemsDialog->updateItems(plugyStashesExistenceHash);
 
     ui.actionGiveCube->setDisabled(true);
-    INFO_BOX(tr("Cube has been stored in %1 at (%2,%3)").arg(ItemsViewerDialog::tabNameAtIndex(ItemsViewerDialog::tabIndexFromItemStorage(cube->storage))).arg(cube->row + 1).arg(cube->column + 1));
+    setWindowModified(true);
+    INFO_BOX(itemStorageAndCoordinatesString(tr("Cube has been stored in %1 at (%2,%3)"), cube));
 }
 
 void MedianXLOfflineTools::getSkillPlan()
@@ -710,48 +713,17 @@ void MedianXLOfflineTools::aboutApp()
 
 void MedianXLOfflineTools::closeEvent(QCloseEvent *e)
 {
-    saveSettings();
-    e->accept();
+    if (maybeSave())
+    {
+        saveSettings();
+        e->accept();
+    }
+    else
+        e->ignore();
 }
 
 
 // private methods
-
-void MedianXLOfflineTools::createLanguageMenu()
-{
-    QString appTranslationName = qApp->applicationName().remove(' ').toLower();
-    QStringList fileNames = QDir(LanguageManager::instance().translationsPath, QString("%1_*.qm").arg(appTranslationName)).entryList(QDir::Files);
-    if (!fileNames.isEmpty())
-    {
-        QMenu *languageMenu = new QMenu(tr("&Language", "Language menu"), this);
-        ui.menuOptions->addSeparator();
-        ui.menuOptions->addMenu(languageMenu);
-
-        QActionGroup *languageActionGroup = new QActionGroup(this);
-        connect(languageActionGroup, SIGNAL(triggered(QAction *)), SLOT(switchLanguage(QAction *)));
-
-        // HACK: insert English language
-        fileNames.prepend(QString("%1_%2.qm").arg(appTranslationName, LanguageManager::instance().defaultLocale));
-        foreach (const QString &fileName, fileNames)
-        {
-            QTranslator translator;
-            translator.load(fileName, LanguageManager::instance().translationsPath);
-            QString language = translator.translate("Language", "English", "Your language name");
-            if (language.isEmpty())
-                language = "English";
-
-            QAction *action = new QAction(language, this);
-            action->setCheckable(true);
-            QString locale = fileName.mid(fileName.indexOf('_') + 1, 2);
-            action->setStatusTip(locale);
-            languageMenu->addAction(action);
-            languageActionGroup->addAction(action);
-
-            if (locale == LanguageManager::instance().currentLocale)
-                action->setChecked(true);
-        }
-    }
-}
 
 void MedianXLOfflineTools::loadData()
 {
@@ -794,6 +766,42 @@ void MedianXLOfflineTools::loadMercNames()
             actNames += QString::fromUtf8(mercName.trimmed());
     }
     f.remove();
+}
+
+void MedianXLOfflineTools::createLanguageMenu()
+{
+    QString appTranslationName = qApp->applicationName().remove(' ').toLower();
+    QStringList fileNames = QDir(LanguageManager::instance().translationsPath, QString("%1_*.qm").arg(appTranslationName)).entryList(QDir::Files);
+    if (!fileNames.isEmpty())
+    {
+        QMenu *languageMenu = new QMenu(tr("&Language", "Language menu"), this);
+        ui.menuOptions->addSeparator();
+        ui.menuOptions->addMenu(languageMenu);
+
+        QActionGroup *languageActionGroup = new QActionGroup(this);
+        connect(languageActionGroup, SIGNAL(triggered(QAction *)), SLOT(switchLanguage(QAction *)));
+
+        // HACK: insert English language
+        fileNames.prepend(QString("%1_%2.qm").arg(appTranslationName, LanguageManager::instance().defaultLocale));
+        foreach (const QString &fileName, fileNames)
+        {
+            QTranslator translator;
+            translator.load(fileName, LanguageManager::instance().translationsPath);
+            QString language = translator.translate("Language", "English", "Your language name");
+            if (language.isEmpty())
+                language = "English";
+
+            QAction *action = new QAction(language, this);
+            action->setCheckable(true);
+            QString locale = fileName.mid(fileName.indexOf('_') + 1, 2);
+            action->setStatusTip(locale);
+            languageMenu->addAction(action);
+            languageActionGroup->addAction(action);
+
+            if (locale == LanguageManager::instance().currentLocale)
+                action->setChecked(true);
+        }
+    }
 }
 
 void MedianXLOfflineTools::createLayout()
@@ -1095,7 +1103,7 @@ QAction *MedianXLOfflineTools::createRecentFileAction(const QString &fileName, i
 
 bool MedianXLOfflineTools::loadFile(const QString &charPath)
 {
-    if (charPath.isEmpty())
+    if (charPath.isEmpty() || !maybeSave())
         return false;
 
     bool result;
@@ -1128,6 +1136,7 @@ bool MedianXLOfflineTools::loadFile(const QString &charPath)
     if (_findItemsDialog)
         _findItemsDialog->clearResults();
 
+    setWindowModified(false);
     return result;
 }
 
@@ -1452,11 +1461,15 @@ bool MedianXLOfflineTools::processSaveFile(const QString &charPath)
     quint16 charItemsTotal;
     inputDataStream >> charItemsTotal;
     quint32 avoidValue = 0;
+    QString corruptedItems;
     ItemsList itemsBuffer;
     for (int i = 0; i < charItemsTotal; ++i)
     {
         ItemInfo *item = ItemParser::parseItem(inputDataStream, _saveFileContents);
         itemsBuffer += item;
+
+        if (item->status != ItemInfo::Ok)
+            corruptedItems += itemStorageAndCoordinatesString(tr("Corrupted item detected in %1 at (%2,%3)"), item) + "\n";
 
         int avoidKey = Enums::ItemProperties::Avoid1;
         if (item->location == Enums::ItemLocation::Equipped || (item->storage == Enums::ItemStorage::Inventory && ItemDataBase::isUberCharm(item)))
@@ -1473,6 +1486,8 @@ bool MedianXLOfflineTools::processSaveFile(const QString &charPath)
             avoidText += QString(" (%1)").arg(tr("well, you have %1% actually", "avoid").arg(avoidValue));
         WARNING_BOX(avoidText);
     }
+    if (!corruptedItems.isEmpty())
+        ERROR_BOX(corruptedItems.trimmed());
     charInfo.itemsEndOffset = inputDataStream.device()->pos();
 
     const int itemListTerminatorSize = 4, maxCorpses = 15;
@@ -1600,6 +1615,22 @@ inline int MedianXLOfflineTools::totalPossibleSkillPoints()
         CharacterInfo::instance().basicInfo.statsDynamicData.property("SignetsOfSkillEaten").toInt();
 }
 
+int MedianXLOfflineTools::investedStatPoints()
+{
+    quint16 sum = 0;
+    for (quint8 i = Enums::CharacterStats::Strength; i <= Enums::CharacterStats::Vitality; ++i)
+    {
+        Enums::CharacterStats::StatisticEnum ienum = static_cast<Enums::CharacterStats::StatisticEnum>(i);
+        sum += _spinBoxesStatsMap[ienum]->value() - _baseStatsMap[CharacterInfo::instance().basicInfo.classCode].statsAtStart.statFromCode(ienum);
+    }
+    return sum;
+}
+
+void MedianXLOfflineTools::recalculateStatPoints()
+{
+    CharacterInfo::instance().basicInfo.totalStatPoints = investedStatPoints() + ui.freeStatPointsLineEdit->text().toUInt();
+}
+
 void MedianXLOfflineTools::processPlugyStash(QHash<Enums::ItemStorage::ItemStorageEnum, PlugyStashInfo>::iterator &iter, ItemsList *items)
 {
     PlugyStashInfo &info = iter.value();
@@ -1641,8 +1672,8 @@ void MedianXLOfflineTools::processPlugyStash(QHash<Enums::ItemStorage::ItemStora
     if (iter.key() == Enums::ItemStorage::SharedStash)
         _sharedGold = info.gold;
 
+    QString corruptedItems;
     inputDataStream >> info.lastPage;
-
     for (quint32 page = 1; page <= info.lastPage; ++page)
     {
         if (bytes.mid(inputDataStream.device()->pos(), 2) != ItemParser::plugyPageHeader)
@@ -1666,8 +1697,13 @@ void MedianXLOfflineTools::processPlugyStash(QHash<Enums::ItemStorage::ItemStora
             item->storage = iter.key();
             item->plugyPage = page;
             items->append(item);
+
+            if (item->status != ItemInfo::Ok)
+                corruptedItems += itemStorageAndCoordinatesString(tr("Corrupted item detected in %1 on page %4 at (%2,%3)"), item) + "\n";
         }
     }
+    if (!corruptedItems.isEmpty())
+        ERROR_BOX(corruptedItems.trimmed());
 }
 
 void MedianXLOfflineTools::clearUI()
@@ -1858,35 +1894,11 @@ void MedianXLOfflineTools::setStats()
             spinBox->setMaximum(spinBox->maximum() + freeStats);
 }
 
-int MedianXLOfflineTools::investedStatPoints()
-{
-    quint16 sum = 0;
-    for (quint8 i = Enums::CharacterStats::Strength; i <= Enums::CharacterStats::Vitality; ++i)
-    {
-        Enums::CharacterStats::StatisticEnum ienum = static_cast<Enums::CharacterStats::StatisticEnum>(i);
-        sum += _spinBoxesStatsMap[ienum]->value() - _baseStatsMap[CharacterInfo::instance().basicInfo.classCode].statsAtStart.statFromCode(ienum);
-    }
-    return sum;
-}
-
-void MedianXLOfflineTools::recalculateStatPoints()
-{
-    CharacterInfo::instance().basicInfo.totalStatPoints = investedStatPoints() + ui.freeStatPointsLineEdit->text().toUInt();
-}
-
-void MedianXLOfflineTools::updateStatusTips(int newStatPoints, int investedStatPoints, int newSkillPoints, int investedSkillPoints)
-{
-    updateMaxCompoundStatusTip(ui.freeStatPointsLineEdit, newStatPoints, investedStatPoints);
-    updateMaxCompoundStatusTip(ui.freeSkillPointsLineEdit, newSkillPoints, investedSkillPoints);
-    ui.inventoryGoldLineEdit->setStatusTip(maxValueFormat.arg(QLocale().toString(_oldClvl * Enums::CharacterStats::InventoryGoldFactor)));
-}
-
 void MedianXLOfflineTools::updateWindowTitle()
 {
     _charPathLabel->setText(QDir::toNativeSeparators(_charPath));
     // making setWindowFilePath() work correctly
 #ifdef Q_WS_MACX
-    //setWindowFilePath(_charPath);
     setWindowTitle(_charPath.isEmpty() ? QString() : QString("%1 (%2)").arg(QFileInfo(_charPath).fileName(), SkillplanDialog::modVersionReadable()));
 #else
     setWindowTitle(_charPath.isEmpty() ? qApp->applicationName() : QString("%1[*] (%2) %3 %4").arg(QFileInfo(_charPath).fileName(), SkillplanDialog::modVersionReadable(), QChar(0x2014), qApp->applicationName()));
@@ -1922,6 +1934,13 @@ void MedianXLOfflineTools::updateTableItemStat(QTableWidgetItem *item, int diff,
     }
     else
         item->setText("0");
+}
+
+void MedianXLOfflineTools::updateStatusTips(int newStatPoints, int investedStatPoints, int newSkillPoints, int investedSkillPoints)
+{
+    updateMaxCompoundStatusTip(ui.freeStatPointsLineEdit, newStatPoints, investedStatPoints);
+    updateMaxCompoundStatusTip(ui.freeSkillPointsLineEdit, newSkillPoints, investedSkillPoints);
+    ui.inventoryGoldLineEdit->setStatusTip(maxValueFormat.arg(QLocale().toString(_oldClvl * Enums::CharacterStats::InventoryGoldFactor)));
 }
 
 void MedianXLOfflineTools::updateCompoundStatusTip(QWidget *widget, const QString &firstString, const QString &secondString)
@@ -2091,4 +2110,29 @@ QHash<int, bool> MedianXLOfflineTools::getPlugyStashesExistenceHash() const
 void MedianXLOfflineTools::showErrorMessageBoxForFile(const QString &message, const QFile &file)
 {
     CUSTOM_BOX_OK(critical, message.arg(QDir::toNativeSeparators(file.fileName())) + "\n" + tr("Reason: %1", "error with file").arg(file.errorString()));
+}
+
+QString MedianXLOfflineTools::itemStorageAndCoordinatesString(const QString &text, ItemInfo *item)
+{
+    return text.arg(ItemsViewerDialog::tabNameAtIndex(ItemsViewerDialog::tabIndexFromItemStorage(item->storage))).arg(item->row + 1).arg(item->column + 1).arg(item->plugyPage);
+}
+
+bool MedianXLOfflineTools::maybeSave()
+{
+    if (isWindowModified())
+    {
+        QMessageBox msgBox(this);
+        msgBox.setIcon(QMessageBox::Warning);
+        msgBox.setText(tr("Character has been modified."));
+        msgBox.setInformativeText(tr("Do you want to save your changes?"));
+        msgBox.setStandardButtons(QMessageBox::Save | QMessageBox::Discard | QMessageBox::Cancel);
+        msgBox.setDefaultButton(QMessageBox::Save);
+        msgBox.setWindowModality(Qt::WindowModal);
+        int result = msgBox.exec();
+        if (result == QMessageBox::Save)
+            saveCharacter();
+        else if (result == QMessageBox::Cancel)
+            return false;
+    }
+    return true;
 }

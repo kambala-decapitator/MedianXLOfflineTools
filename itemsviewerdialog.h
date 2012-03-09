@@ -53,8 +53,9 @@ protected:
     void closeEvent(QCloseEvent *event);
 
 signals:
-    void cubeDeleted(bool deleted = true); // param is here because I want to connect this signal directly to QAction's setEnabled()  slot
-    void closing(bool closing = true);     // param is here because I want to connect this signal directly to QAction's setDisabled() slot
+    void cubeDeleted(bool = true);  // connect directly to QAction's setEnabled() slot
+    void closing(bool = true);      // connect directly to QAction's setDisabled() slot
+    void itemsChanged(bool = true); // connect directly to QMainWindow's setWindowModified() slot
 
 private slots:
     void tabChanged(int tabIndex);
