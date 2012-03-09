@@ -25,23 +25,8 @@
 
 static const QString iconPathFormat(":/PlugyArrows/icons/plugy/%1.png");
 
-ItemsPropertiesSplitter::ItemsPropertiesSplitter(ItemStorageTableView *itemsView, bool shouldCreateNavigation, QWidget *parent)
-    : QSplitter(Qt::Horizontal, parent), _itemsView(itemsView)
+ItemsPropertiesSplitter::ItemsPropertiesSplitter(ItemStorageTableView *itemsView, bool shouldCreateNavigation, QWidget *parent) : QSplitter(Qt::Horizontal, parent), _itemsView(itemsView)
 {
-    _itemsView->setContextMenuPolicy(Qt::CustomContextMenu);
-    _itemsView->setEditTriggers(QAbstractItemView::NoEditTriggers);
-    _itemsView->setHorizontalScrollMode(QAbstractItemView::ScrollPerPixel);
-    _itemsView->setVerticalScrollMode(QAbstractItemView::ScrollPerPixel);
-    _itemsView->setSelectionMode(QAbstractItemView::SingleSelection);
-    _itemsView->setStyleSheet("QTableView { background-color: black; gridline-color: #808080; }"
-                              "QTableView::item:selected { background-color: black; border: 1px solid #d9d9d9; }"
-                              "QTableView::icon:selected { right: 1px; }"
-                             );
-    _itemsView->setGridStyle(Qt::SolidLine);
-    _itemsView->setCornerButtonEnabled(false);
-    _itemsView->horizontalHeader()->hide();
-    _itemsView->verticalHeader()->hide();
-
     if (shouldCreateNavigation)
     {
         _left10Button = new QPushButton(this);
@@ -102,9 +87,9 @@ ItemsPropertiesSplitter::ItemsPropertiesSplitter(ItemStorageTableView *itemsView
     {
         connect(_pageSpinBox, SIGNAL(valueChanged(double)), SLOT(updateItemsForCurrentPage()));
 
-        connect(_left10Button, SIGNAL(clicked()), SLOT(left10Clicked()));
-        connect(_leftButton, SIGNAL(clicked()), SLOT(leftClicked()));
-        connect(_rightButton, SIGNAL(clicked()), SLOT(rightClicked()));
+        connect(_left10Button,  SIGNAL(clicked()), SLOT(left10Clicked()));
+        connect(_leftButton,    SIGNAL(clicked()), SLOT(leftClicked()));
+        connect(_rightButton,   SIGNAL(clicked()), SLOT(rightClicked()));
         connect(_right10Button, SIGNAL(clicked()), SLOT(right10Clicked()));
     }
 
@@ -542,6 +527,7 @@ void ItemsPropertiesSplitter::createItemActions()
     QAction *actionRemoveMO = new QAction(tr("Remove Mystic Orbs"), _itemsView);
     actionRemoveMO->setShortcut(QKeySequence("Ctrl+M"));
     connect(actionRemoveMO, SIGNAL(triggered()), _propertiesWidget, SLOT(removeAllMysticOrbs()));
+    connect(actionRemoveMO, SIGNAL(triggered()), SIGNAL(itemsChanged()));
     _itemsView->addAction(actionRemoveMO);
     _itemActions[RemoveMO] = actionRemoveMO;
 

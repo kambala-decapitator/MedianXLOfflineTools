@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>698</width>
-    <height>360</height>
+    <width>670</width>
+    <height>367</height>
    </rect>
   </property>
   <property name="windowIcon">
@@ -24,7 +24,7 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>350</x>
+      <x>320</x>
       <y>10</y>
       <width>341</width>
       <height>281</height>
@@ -321,7 +321,7 @@
      <rect>
       <x>20</x>
       <y>10</y>
-      <width>313</width>
+      <width>291</width>
       <height>211</height>
      </rect>
     </property>
@@ -582,7 +582,7 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>698</width>
+     <width>670</width>
      <height>21</height>
     </rect>
    </property>
@@ -642,7 +642,6 @@ p, li { white-space: pre-wrap; }
      <addaction name="actionAutoOpenHCShared"/>
     </widget>
     <addaction name="actionLoadLastUsedCharacter"/>
-    <addaction name="actionAskBeforeReload"/>
     <addaction name="actionWarnWhenColoredName"/>
     <addaction name="actionBackup"/>
     <addaction name="separator"/>
@@ -718,6 +717,9 @@ p, li { white-space: pre-wrap; }
    <addaction name="separator"/>
    <addaction name="actionShowItems"/>
    <addaction name="actionFind"/>
+   <addaction name="separator"/>
+   <addaction name="actionSkillPlan"/>
+   <addaction name="actionExportCharacterInfo"/>
    <addaction name="separator"/>
    <addaction name="actionAbout"/>
   </widget>
@@ -994,20 +996,6 @@ p, li { white-space: pre-wrap; }
     <enum>Qt::ApplicationShortcut</enum>
    </property>
   </action>
-  <action name="actionAskBeforeReload">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
-   <property name="checked">
-    <bool>true</bool>
-   </property>
-   <property name="text">
-    <string>Ask before reloading character</string>
-   </property>
-   <property name="statusTip">
-    <string>Show confirmation dialog when trying to reload a character</string>
-   </property>
-  </action>
   <action name="actionReloadSharedStashes">
    <property name="checkable">
     <bool>true</bool>
@@ -1210,7 +1198,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="actionExportCharacterInfo">
    <property name="text">
-    <string>Character info</string>
+    <string>Character Info</string>
    </property>
   </action>
  </widget>

@@ -1,7 +1,6 @@
 v0.3:
 - export item to bbcode/html
 - generate some bbcode/html report about character and/or plugy stashes contents
-- move most functionality from splitter to tableview
 - get exp table and base char stats from txt
 - d2s file association
 - maybe win7 taskbar and mac dock menu support to open recent files

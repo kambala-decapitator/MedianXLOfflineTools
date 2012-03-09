@@ -109,9 +109,6 @@ void MedianXLOfflineTools::openRecentFile()
 
 void MedianXLOfflineTools::reloadCharacter()
 {
-    if (ui.actionAskBeforeReload->isChecked() && QUESTION_BOX_YESNO(tr("Do you really want to reload character? All unsaved changes will be lost."), QMessageBox::Yes) == QMessageBox::No)
-        return;
-
     if (loadFile(_charPath))
         ui.statusBar->showMessage(tr("Character reloaded"), 3000);
 }
@@ -936,7 +933,6 @@ void MedianXLOfflineTools::loadSettings()
 
     settings.beginGroup("options");
     ui.actionLoadLastUsedCharacter->setChecked(settings.value("loadLastCharacter", true).toBool());
-    ui.actionAskBeforeReload->setChecked(settings.value("askBeforeReload", true).toBool());
     ui.actionWarnWhenColoredName->setChecked(settings.value("warnWhenColoredName", true).toBool());
     ui.actionBackup->setChecked(settings.value("makeBackups", true).toBool());
     ui.actionOpenItemsAutomatically->setChecked(settings.value("openItemsAutomatically").toBool());
@@ -963,7 +959,6 @@ void MedianXLOfflineTools::saveSettings() const
     
     settings.beginGroup("options");
     settings.setValue("loadLastCharacter", ui.actionLoadLastUsedCharacter->isChecked());
-    settings.setValue("askBeforeReload", ui.actionAskBeforeReload->isChecked());
     settings.setValue("warnWhenColoredName", ui.actionWarnWhenColoredName->isChecked());
     settings.setValue("makeBackups", ui.actionBackup->isChecked());
     settings.setValue("openItemsAutomatically", ui.actionOpenItemsAutomatically->isChecked());
@@ -997,6 +992,7 @@ void MedianXLOfflineTools::fillMaps()
     _lineEditsStatsMap[Enums::CharacterStats::SignetsOfLearningEaten] = ui.signetsOfLearningEatenLineEdit;
     _lineEditsStatsMap[Enums::CharacterStats::SignetsOfSkillEaten] = ui.signetsOfSkillEatenLineEdit;
 
+    // TODO: read from file
     _baseStatsMap[Enums::ClassName::Amazon]      = BaseStats(BaseStats::StatsAtStart(25, 25, 20, 15, 84), BaseStats::StatsPerLevel(100, 40, 60), BaseStats::StatsPerPoint( 8, 8, 18));
     _baseStatsMap[Enums::ClassName::Sorceress]   = BaseStats(BaseStats::StatsAtStart(10, 25, 15, 35, 74), BaseStats::StatsPerLevel(100, 40, 60), BaseStats::StatsPerPoint( 8, 8, 18));
     _baseStatsMap[Enums::ClassName::Necromancer] = BaseStats(BaseStats::StatsAtStart(15, 25, 20, 25, 79), BaseStats::StatsPerLevel( 80, 20, 80), BaseStats::StatsPerPoint( 4, 8, 24));
@@ -2121,11 +2117,8 @@ bool MedianXLOfflineTools::maybeSave()
 {
     if (isWindowModified())
     {
-        QMessageBox msgBox(this);
-        msgBox.setIcon(QMessageBox::Warning);
-        msgBox.setText(tr("Character has been modified."));
+        QMessageBox msgBox(QMessageBox::Warning, qApp->applicationName(), tr("Character has been modified."), QMessageBox::Save | QMessageBox::Discard | QMessageBox::Cancel, this);
         msgBox.setInformativeText(tr("Do you want to save your changes?"));
-        msgBox.setStandardButtons(QMessageBox::Save | QMessageBox::Discard | QMessageBox::Cancel);
         msgBox.setDefaultButton(QMessageBox::Save);
         msgBox.setWindowModality(Qt::WindowModal);
         int result = msgBox.exec();
