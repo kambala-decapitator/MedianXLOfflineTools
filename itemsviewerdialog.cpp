@@ -5,6 +5,7 @@
 #include "itemdatabase.h"
 #include "propertiesviewerwidget.h"
 #include "itemparser.h"
+#include "characterinfo.hpp"
 
 #include <QTabWidget>
 #include <QHeaderView>
@@ -176,7 +177,7 @@ void ItemsViewerDialog::updateItems(const QHash<int, bool> &plugyStashesExistenc
         _itemsTotal += items.size();
     }
 
-    setCubeTabDisabled(!ItemDataBase::hasCube());
+    setCubeTabDisabled(!CharacterInfo::instance().items.hasCube());
     for (QHash<int, bool>::const_iterator iter = plugyStashesExistenceHash.constBegin(); iter != plugyStashesExistenceHash.constEnd(); ++iter)
         _tabWidget->setTabEnabled(tabIndexFromItemStorage(iter.key()), iter.value());
     

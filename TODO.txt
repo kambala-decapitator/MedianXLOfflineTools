@@ -1,5 +1,4 @@
 v0.2.1:
-- link for skillpoint planner
 - export item to bbcode/html
 - generate some bbcode/html report about character and/or plugy stashes contents
 - add a message box for corrupted items

@@ -22,7 +22,7 @@ public:
     static QHash<uint, UniqueItemInfo> *Uniques();
     static QHash<uint, MysticOrb> *MysticOrbs();
     static QHash<uint, QString> *Monsters();
-    static QMultiHash<RunewordKeyPair, RunewordInfo> *RW();
+    static RunewordHash *RW();
     static QHash<QByteArray, SocketableItemInfo> *Socketables();
     static QStringList *NonMagicItemQualities();
 
@@ -41,7 +41,6 @@ public:
     static bool isUberCharm(ItemInfo *item);
     static bool isGenericSocketable(ItemInfo *item); // checks if an item is a gem or a rune
     static bool isCube(ItemInfo *item);
-    static bool hasCube();
 
 private:
     static QList<QByteArray> stringArrayOfCurrentLineInFile(QFile &f);

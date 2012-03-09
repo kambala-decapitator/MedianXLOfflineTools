@@ -26,14 +26,18 @@ public:
         //quint8 currentDifficulty, currentAct; // not used atm
         bool isHardcore;
         bool hadDied;
-        quint16 totalSkillPoints, totalStatPoints;
+
+        QObject statsDynamicData;
+        quint16 totalStatPoints;
+        
         SkillList skills;
         SkillList skillsReadable; // used in planner and skill tree
+        quint16 totalSkillPoints;
     } basicInfo;
 
     struct
     {
-        QList<quint8> denOfEvil, radament, lamEsensTome, izual; // range of values is 0-3
+        QList<bool> denOfEvil, radament, lamEsensTome, izual; // size == 3
 
         quint8 denOfEvilQuestsCompleted()    const { return sumOfList(denOfEvil);    }
         quint8 radamentQuestsCompleted()     const { return sumOfList(radament);     }
@@ -43,7 +47,7 @@ public:
         void clear() { denOfEvil.clear(); radament.clear(); lamEsensTome.clear(); izual.clear(); }
 
     private:
-        quint8 sumOfList(const QList<quint8> &list) const { return std::accumulate(list.constBegin(), list.constEnd(), quint8(0)); }
+        quint8 sumOfList(const QList<bool> &list) const { return std::accumulate(list.constBegin(), list.constEnd(), quint8(0)); }
     } questsInfo;
 
     struct
@@ -59,6 +63,8 @@ public:
     {
         quint8 corpses;
         ItemsList character;
+
+        bool hasCube() { return std::find_if(character.constBegin(), character.constEnd(), isCubeInCharacterItems) != character.constEnd(); }
     } items;
 
     // itemsOffset points to the number of character items - just after the very first JM

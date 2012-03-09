@@ -234,11 +234,28 @@ public:
         EnhancedDefenceBasedOnClvl,
         TrophyOrBless = 219,
         Avoid1 = 338,
-        Avoid2 = 339,
-        Avoid3 = 340,
+        Avoid2,
+        Avoid3,
+        MaxSlvlIncrease = 479,
         StrengthBasedOnBlessedLifeSlvl = 503,
         DexterityBasedOnBlessedLifeSlvl,
         End = 511
+    };
+};
+
+class ClassCharmChallenges
+{
+public:
+    enum
+    {
+        WindowsInHell = 313,
+        MirrorMirror = 314,
+        Countess = 400,
+        LC2 = 401,
+        Crowned = 403,
+        Bremmtown = 419,
+        Ennead = 473,
+        BlackRoad = 474
     };
 };
 

@@ -1,12 +1,30 @@
 #include "helpers.h"
 #include "structs.h"
 #include "itemdatabase.h"
+#include "itemparser.h"
 
 #include <QString>
 #include <QStack>
 
 #include <algorithm>
 
+
+// private
+
+bool isRWInGear(ItemInfo *item, const QByteArray &rune, const QByteArray &itemType)
+{
+    if (item->isRW && item->location == Enums::ItemLocation::Equipped && ItemParser::itemTypeInheritsFromType(ItemDataBase::Items()->value(item->itemType).typeString, itemType))
+    {
+        const RunewordHash *const rwHash = ItemDataBase::RW();
+        RunewordKeyPair rwKey = qMakePair(rune, QByteArray());
+        for (RunewordHash::const_iterator iter = rwHash->find(rwKey); iter != rwHash->end() && iter.key() == rwKey; ++iter)
+            if (ItemParser::itemTypeInheritsFromTypes(itemType, iter.value().allowedItemTypes))
+                return true;
+    }
+    return false;
+}
+
+// public
 
 QString binaryStringFromNumber(quint64 number, bool needsInversion, int fieldWidth)
 {
@@ -83,7 +101,7 @@ QString htmlStringFromDiabloColorString(const QString &name, ColorIndex defaultC
     return result;
 }
 
-bool isCubeItem(ItemInfo *item)
+bool isCubeInCharacterItems(ItemInfo *item)
 {
     return (item->storage == Enums::ItemStorage::Inventory || item->storage == Enums::ItemStorage::Stash) && ItemDataBase::isCube(item);
 }
@@ -91,4 +109,34 @@ bool isCubeItem(ItemInfo *item)
 bool hasChanged(ItemInfo *item)
 {
     return item->hasChanged;
+}
+
+bool isClassCharm(ItemInfo *item)
+{
+    return ItemDataBase::isClassCharm(item);
+}
+
+bool isCrystallineFlameMedallion(ItemInfo *item)
+{
+    return item->itemType == "lok";
+}
+
+bool isMoonOfSpider(ItemInfo *item)
+{
+    return item->itemType == "yqe";
+}
+
+bool isLegacyOfBlood(ItemInfo *item)
+{
+    return item->itemType == "adi";
+}
+
+bool isDrekavacInGear(ItemInfo *item)
+{
+    return isRWInGear(item, "r51", "glov"); // Taha in gloves
+}
+
+bool isVeneficaInGear(ItemInfo *item)
+{
+    return isRWInGear(item, "r53", "stor"); // Qor in sorc armor
 }

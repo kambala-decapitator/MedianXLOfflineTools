@@ -330,19 +330,19 @@ void PropertiesDisplayManager::addChallengeNamesToClassCharm(PropertiesMap::iter
     QString &desc = iter.value().displayString;
     switch (iter.key())
     {
-    case 313:
+    case Enums::ClassCharmChallenges::WindowsInHell:
         desc = tr("They have Windows in Hell");
         break;
-    case 314:
+    case Enums::ClassCharmChallenges::MirrorMirror:
         desc = tr("Mirror Mirror");
         break;
-    case 400:
+    case Enums::ClassCharmChallenges::Countess:
         desc = tr("Countess");
         break;
-    case 401:
+    case Enums::ClassCharmChallenges::LC2:
         desc = tr("Level Challenge 2");
         break;
-    case 403:
+    case Enums::ClassCharmChallenges::Crowned:
         desc = tr("Crowned");
         break;
     default:

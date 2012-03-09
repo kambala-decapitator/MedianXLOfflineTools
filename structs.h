@@ -188,6 +188,7 @@ struct RunewordInfo
     QString name;
 };
 typedef QPair<QByteArray, QByteArray> RunewordKeyPair;
+typedef QMultiHash<RunewordKeyPair, RunewordInfo> RunewordHash;
 
 struct SocketableItemInfo
 {

@@ -22,7 +22,7 @@ QString coloredText(const QString &text, int colorIndex);
 #include "colors.hpp"
 QString htmlStringFromDiabloColorString(const QString &name, ColorIndex defaultColor = White);
 
-// QMetaEnum getter
+// QMetaEnum getter. Moving definition to .cpp causes unresolved external symbols, so don't touch it.
 #include <QMetaEnum>
 template<class T>
 QMetaEnum metaEnumFromName(const char *enumName)
@@ -33,7 +33,13 @@ QMetaEnum metaEnumFromName(const char *enumName)
 
 // item conditions for STL algorithms
 struct ItemInfo;
-bool isCubeItem(ItemInfo *item);
+bool isCubeInCharacterItems(ItemInfo *item);
 bool hasChanged(ItemInfo *item);
+bool isClassCharm(ItemInfo *item);
+bool isCrystallineFlameMedallion(ItemInfo *item);
+bool isMoonOfSpider(ItemInfo *item);
+bool isLegacyOfBlood(ItemInfo *item);
+bool isDrekavacInGear(ItemInfo *item);
+bool isVeneficaInGear(ItemInfo *item);
 
 #endif // HELPERS_H

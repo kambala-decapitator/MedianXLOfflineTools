@@ -221,8 +221,9 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
                         item->rwName = ItemDataBase::RW()->value(qMakePair(QByteArray("r51"), QByteArray("r52"))).name;
                     else
                     {
-                        QMultiHash<RunewordKeyPair, RunewordInfo>::const_iterator iter = ItemDataBase::RW()->find(rwKey);
-                        for (; iter != ItemDataBase::RW()->end() && iter.key() == rwKey; ++iter)
+                        const RunewordHash *const rwHash = ItemDataBase::RW();
+                        RunewordHash::const_iterator iter = rwHash->find(rwKey);
+                        for (; iter != rwHash->end() && iter.key() == rwKey; ++iter)
                         {
                             const RunewordInfo &rwInfo = iter.value();
                             if (itemTypeInheritsFromTypes(itemBase.typeString, rwInfo.allowedItemTypes))
@@ -231,7 +232,7 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
                                 break;
                             }
                         }
-                        if (iter == ItemDataBase::RW()->end())
+                        if (iter == rwHash->end())
                             item->rwName = tr("Unknown RW, please report!");
                     }
                 }
@@ -380,6 +381,11 @@ void ItemParser::writeItems(const ItemsList &items, QDataStream &ds)
 
         writeItems(item->socketablesInfo, ds);
     }
+}
+
+bool ItemParser::itemTypeInheritsFromType(const QByteArray &itemType, const QByteArray &allowedItemType)
+{
+    return itemTypeInheritsFromTypes(itemType, QList<QByteArray>() << allowedItemType);
 }
 
 bool ItemParser::itemTypeInheritsFromTypes(const QByteArray &itemType, const QList<QByteArray> &allowedItemTypes)

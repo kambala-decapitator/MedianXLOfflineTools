@@ -76,7 +76,6 @@ private:
     // data
     QString _charPath;
     QByteArray _saveFileContents;
-    QObject _statsDynamicData;
     int _oldStatValues[4];
     QMap <Enums::ClassName::ClassNameEnum, BaseStats> _baseStatsMap;
     QHash<Enums::ClassName::ClassNameEnum, QPair<QList<int>, QList<int> > > _characterSkillsIndeces; // first is save file order, second - visual and planner order

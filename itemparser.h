@@ -20,6 +20,7 @@ public:
 
     static ItemInfo *parseItem(QDataStream &inputDataStream, const QByteArray &bytes);
     static PropertiesMultiMap parseItemProperties(ReverseBitReader &bitReader, bool *ok);
+    static bool itemTypeInheritsFromType(const QByteArray &itemType, const QByteArray &allowedItemType);
     static bool itemTypeInheritsFromTypes(const QByteArray &itemType, const QList<QByteArray> &allowedItemTypes);
 
     static void writeItems(const ItemsList &items, QDataStream &ds);

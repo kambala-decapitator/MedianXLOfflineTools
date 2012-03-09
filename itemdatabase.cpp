@@ -286,9 +286,9 @@ QHash<uint, QString> *ItemDataBase::Monsters()
     return &allMonsters;
 }
 
-QMultiHash<RunewordKeyPair, RunewordInfo> *ItemDataBase::RW()
+RunewordHash *ItemDataBase::RW()
 {
-    static QMultiHash<RunewordKeyPair, RunewordInfo> allRunewords;
+    static RunewordHash allRunewords;
     if (allRunewords.isEmpty())
     {
         QFile f;
@@ -610,7 +610,7 @@ bool ItemDataBase::isClassCharm(ItemInfo *item)
 
 bool ItemDataBase::isUberCharm(ItemInfo *item)
 {
-    return ItemParser::itemTypeInheritsFromTypes(Items()->value(item->itemType).typeString, QList<QByteArray>() << "char");
+    return ItemParser::itemTypeInheritsFromType(Items()->value(item->itemType).typeString, "char");
 }
 
 bool ItemDataBase::isGenericSocketable(ItemInfo *item)
@@ -621,10 +621,4 @@ bool ItemDataBase::isGenericSocketable(ItemInfo *item)
 bool ItemDataBase::isCube(ItemInfo *item)
 {
     return item->itemType == "box";
-}
-
-bool ItemDataBase::hasCube()
-{
-    const ItemsList &items = CharacterInfo::instance().items.character;
-    return std::find_if(items.constBegin(), items.constEnd(), isCubeItem) != items.constEnd();
 }
