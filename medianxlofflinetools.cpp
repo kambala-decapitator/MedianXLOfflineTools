@@ -91,6 +91,12 @@ void MedianXLOfflineTools::switchLanguage(QAction *languageAction)
     }
 }
 
+void MedianXLOfflineTools::wasModified(bool modified)
+{
+    setWindowModified(modified);
+    ui.actionReloadCharacter->setEnabled(modified);
+}
+
 void MedianXLOfflineTools::loadCharacter()
 {
     QSettings settings;
@@ -360,7 +366,7 @@ void MedianXLOfflineTools::saveCharacter()
             }
 
             _charPath = saveFileName;
-            setWindowModified(false);
+            wasModified(false);
             loadFile(_charPath); // update all UI at once by reloading the file
 
             INFO_BOX(tr("File '%1' successfully saved!").arg(QDir::toNativeSeparators(saveFileName)));
@@ -396,7 +402,7 @@ void MedianXLOfflineTools::statChanged(int newValue)
         qApp->sendEvent(senderSpinBox, &event);
 
         updateTableStats(_baseStatsMap[CharacterInfo::instance().basicInfo.classCode].statsPerPoint, diff, senderSpinBox);
-        setWindowModified(true);
+        wasModified(true);
     }
 }
 
@@ -409,7 +415,7 @@ void MedianXLOfflineTools::respecStats()
         _spinBoxesStatsMap[statCode]->setValue(baseStat);
     }
     ui.statusBar->clearMessage();
-    setWindowModified(true);
+    wasModified(true);
 }
 
 void MedianXLOfflineTools::respecSkills(bool shouldRespec)
@@ -417,7 +423,7 @@ void MedianXLOfflineTools::respecSkills(bool shouldRespec)
     quint16 skills = CharacterInfo::instance().basicInfo.totalSkillPoints;
     ui.freeSkillPointsLineEdit->setText(QString::number(shouldRespec ? skills : CharacterInfo::instance().basicInfo.statsDynamicData.property("FreeSkillPoints").toUInt()));
     updateMaxCompoundStatusTip(ui.freeSkillPointsLineEdit, skills, shouldRespec ? 0 : skills - CharacterInfo::instance().basicInfo.statsDynamicData.property("FreeSkillPoints").toUInt());
-    setWindowModified(true);
+    wasModified(true);
 }
 
 void MedianXLOfflineTools::rename()
@@ -428,7 +434,7 @@ void MedianXLOfflineTools::rename()
     {
         newName = renameWidget.name();
         QD2CharRenamer::updateNamePreview(ui.charNamePreview, newName);
-        setWindowModified(true);
+        wasModified(true);
     }
 }
 
@@ -531,14 +537,14 @@ void MedianXLOfflineTools::resurrect()
             break;
         }
 
-        setWindowModified(true);
+        wasModified(true);
     }
 }
 
 void MedianXLOfflineTools::convertToSoftcore(bool isSoftcore)
 {
     updateCharacterTitle(!isSoftcore);
-    setWindowModified(true);
+    wasModified(true);
 }
 
 //void MedianXLOfflineTools::currentDifficultyChanged(int newDifficulty)
@@ -596,7 +602,7 @@ void MedianXLOfflineTools::showItems(bool activate /*= true*/)
         connect(_itemsDialog->tabWidget(), SIGNAL(currentChanged(int)), SLOT(itemStorageTabChanged(int)));
         connect(_itemsDialog, SIGNAL(cubeDeleted(bool)), ui.actionGiveCube, SLOT(setEnabled(bool)));
         connect(_itemsDialog, SIGNAL(closing(bool)), ui.menuGoToPage, SLOT(setDisabled(bool)));
-        connect(_itemsDialog, SIGNAL(itemsChanged(bool)), SLOT(setWindowModified(bool)));
+        connect(_itemsDialog, SIGNAL(itemsChanged(bool)), SLOT(wasModified(bool)));
         _itemsDialog->show();
 
         if (!activate)
@@ -663,7 +669,7 @@ void MedianXLOfflineTools::giveCube()
         _itemsDialog->updateItems(plugyStashesExistenceHash);
 
     ui.actionGiveCube->setDisabled(true);
-    setWindowModified(true);
+    wasModified(true);
     INFO_BOX(itemStorageAndCoordinatesString(tr("Cube has been stored in %1 at (%2,%3)"), cube));
 }
 
@@ -1109,8 +1115,6 @@ bool MedianXLOfflineTools::loadFile(const QString &charPath)
         updateUI();
         addToRecentFiles(charPath);
 
-        ui.actionGiveCube->setDisabled(CharacterInfo::instance().items.hasCube());
-
         if (_itemsDialog)
             _itemsDialog->updateItems(getPlugyStashesExistenceHash());
         if (_itemsDialog || ui.actionOpenItemsAutomatically->isChecked())
@@ -1132,7 +1136,6 @@ bool MedianXLOfflineTools::loadFile(const QString &charPath)
     if (_findItemsDialog)
         _findItemsDialog->clearResults();
 
-    setWindowModified(false);
     return result;
 }
 
@@ -1739,8 +1742,8 @@ void MedianXLOfflineTools::clearUI()
     foreach (QGroupBox *groupBox, groupBoxes)
         groupBox->setDisabled(true);
 
-    QList<QAction *> actions = QList<QAction *>() << ui.actionRespecStats << ui.actionRespecSkills << ui.actionActivateWaypoints << ui.actionSaveCharacter << ui.actionRename << ui.actionReloadCharacter
-        << ui.actionFind << ui.actionFindNext << ui.actionFindPrevious << ui.actionShowItems << ui.actionSkillPlan << ui.actionExportCharacterInfo;
+    QList<QAction *> actions = QList<QAction *>() << ui.actionReloadCharacter << ui.actionRespecStats << ui.actionRespecSkills << ui.actionActivateWaypoints << ui.actionSaveCharacter << ui.actionRename
+                                                  << ui.actionReloadCharacter << ui.actionFind << ui.actionFindNext << ui.actionFindPrevious << ui.actionShowItems << ui.actionSkillPlan << ui.actionExportCharacterInfo;
     foreach (QAction *action, actions)
         action->setDisabled(true);
 
@@ -1762,8 +1765,8 @@ void MedianXLOfflineTools::updateUI()
 {
     clearUI();
 
-    QList<QAction *> actions = QList<QAction *>() << ui.actionRespecStats << ui.actionRespecSkills << ui.actionActivateWaypoints << ui.actionSaveCharacter << ui.actionRename
-                                                  << ui.actionReloadCharacter << ui.actionSkillPlan << ui.actionExportCharacterInfo;
+    QList<QAction *> actions = QList<QAction *>() << ui.actionRespecStats << ui.actionRespecSkills << ui.actionActivateWaypoints << ui.actionSaveCharacter
+                                                  << ui.actionRename << ui.actionSkillPlan << ui.actionExportCharacterInfo;
     foreach (QAction *action, actions)
         action->setEnabled(true);
     ui.respecSkillsCheckBox->setEnabled(true);
@@ -1820,6 +1823,7 @@ void MedianXLOfflineTools::updateUI()
     bool hasItems = !charInfo.items.character.isEmpty();
     ui.actionShowItems->setEnabled(hasItems);
     ui.actionFind->setEnabled(hasItems);
+    ui.actionGiveCube->setDisabled(CharacterInfo::instance().items.hasCube());
     updateWindowTitle();
 
     _isLoaded = true;
@@ -2121,11 +2125,19 @@ bool MedianXLOfflineTools::maybeSave()
         msgBox.setInformativeText(tr("Do you want to save your changes?"));
         msgBox.setDefaultButton(QMessageBox::Save);
         msgBox.setWindowModality(Qt::WindowModal);
-        int result = msgBox.exec();
-        if (result == QMessageBox::Save)
+        switch (msgBox.exec())
+        {
+        case QMessageBox::Save:
             saveCharacter();
-        else if (result == QMessageBox::Cancel)
+            break;
+        case QMessageBox::Cancel:
             return false;
+        case QMessageBox::Discard:
+            wasModified(false);
+            break;
+        default:
+            break;
+        }
     }
     return true;
 }
