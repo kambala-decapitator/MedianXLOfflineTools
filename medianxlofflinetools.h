@@ -36,12 +36,15 @@ protected:
 
 private slots:
     void switchLanguage(QAction *languageAction);
+    void wasModified(bool modified);
 
+    // file
     void loadCharacter();
     void openRecentFile();
     void reloadCharacter();
     void saveCharacter();
 
+    // edit
     void statChanged(int newValue);
     void respecStats();
     void respecSkills(bool shouldRespec);
@@ -53,14 +56,18 @@ private slots:
     void findItem();
     void showFoundItem(ItemInfo *item);
 
+    // items
     void showItems(bool activate = true);
     void itemStorageTabChanged(int tabIndex);
     void giveCube();
 
+    // export
     void getSkillPlan();
 
+    // options
     void backupSettingTriggered(bool checked);
 
+    // about
     void aboutApp();
 
 private:
