@@ -726,6 +726,7 @@ void MedianXLOfflineTools::loadData()
 {
     loadExpTable();
     loadMercNames();
+    loadBaseStats();
     SkillplanDialog::loadModVersion();
 }
 
@@ -762,6 +763,36 @@ void MedianXLOfflineTools::loadMercNames()
         else
             actNames += QString::fromUtf8(mercName.trimmed());
     }
+    f.remove();
+}
+
+void MedianXLOfflineTools::loadBaseStats()
+{
+    QFile f;
+    if (!ItemDataBase::createUncompressedTempFile(ResourcePathManager::dataPathForFileName("basestats.dat"), tr("Base stats data not loaded, using predefined one."), &f))
+    {
+        _baseStatsMap[Enums::ClassName::Amazon]      = BaseStats(BaseStats::StatsAtStart(25, 25, 20, 15, 84), BaseStats::StatsPerLevel(100, 40, 60), BaseStats::StatsPerPoint( 8, 8, 18));
+        _baseStatsMap[Enums::ClassName::Sorceress]   = BaseStats(BaseStats::StatsAtStart(10, 25, 15, 35, 74), BaseStats::StatsPerLevel(100, 40, 60), BaseStats::StatsPerPoint( 8, 8, 18));
+        _baseStatsMap[Enums::ClassName::Necromancer] = BaseStats(BaseStats::StatsAtStart(15, 25, 20, 25, 79), BaseStats::StatsPerLevel( 80, 20, 80), BaseStats::StatsPerPoint( 4, 8, 24));
+        _baseStatsMap[Enums::ClassName::Paladin]     = BaseStats(BaseStats::StatsAtStart(25, 20, 25, 15, 89), BaseStats::StatsPerLevel(120, 60, 40), BaseStats::StatsPerPoint(12, 8, 12));
+        _baseStatsMap[Enums::ClassName::Barbarian]   = BaseStats(BaseStats::StatsAtStart(30, 20, 30,  5, 92), BaseStats::StatsPerLevel(120, 60, 40), BaseStats::StatsPerPoint(12, 8, 12));
+        _baseStatsMap[Enums::ClassName::Druid]       = BaseStats(BaseStats::StatsAtStart(25, 20, 15, 25, 84), BaseStats::StatsPerLevel( 80, 20, 80), BaseStats::StatsPerPoint( 4, 8, 24));
+        _baseStatsMap[Enums::ClassName::Assassin]    = BaseStats(BaseStats::StatsAtStart(20, 35, 15, 15, 95), BaseStats::StatsPerLevel(100, 40, 60), BaseStats::StatsPerPoint( 8, 8, 18));
+        return;
+    }
+
+    QList<QByteArray> lines = f.readAll().split('\n');
+    foreach (const QByteArray &s, lines)
+        if (!s.isEmpty() && s.at(0) != '#')
+        {
+            QList<QByteArray> numbers = s.trimmed().split('\t');
+            _baseStatsMap[static_cast<Enums::ClassName::ClassNameEnum>(numbers.at(0).toUInt())] = BaseStats
+                (
+                BaseStats::StatsAtStart (numbers.at(1).toInt(), numbers.at(2).toInt(), numbers.at(4).toInt(), numbers.at(3).toInt(), numbers.at(5).toInt()), // order is correct - energy value comes before vitality in the file
+                BaseStats::StatsPerLevel(numbers.at(6).toInt(), numbers.at(7).toInt(), numbers.at(8).toInt()),
+                BaseStats::StatsPerPoint(numbers.at(9).toInt(), numbers.at(10).toInt(), numbers.at(11).toInt())
+                );
+        }
     f.remove();
 }
 
@@ -992,15 +1023,6 @@ void MedianXLOfflineTools::fillMaps()
     _lineEditsStatsMap[Enums::CharacterStats::SignetsOfLearningEaten] = ui.signetsOfLearningEatenLineEdit;
     _lineEditsStatsMap[Enums::CharacterStats::SignetsOfSkillEaten] = ui.signetsOfSkillEatenLineEdit;
 
-    // TODO: read from file
-    _baseStatsMap[Enums::ClassName::Amazon]      = BaseStats(BaseStats::StatsAtStart(25, 25, 20, 15, 84), BaseStats::StatsPerLevel(100, 40, 60), BaseStats::StatsPerPoint( 8, 8, 18));
-    _baseStatsMap[Enums::ClassName::Sorceress]   = BaseStats(BaseStats::StatsAtStart(10, 25, 15, 35, 74), BaseStats::StatsPerLevel(100, 40, 60), BaseStats::StatsPerPoint( 8, 8, 18));
-    _baseStatsMap[Enums::ClassName::Necromancer] = BaseStats(BaseStats::StatsAtStart(15, 25, 20, 25, 79), BaseStats::StatsPerLevel( 80, 20, 80), BaseStats::StatsPerPoint( 4, 8, 24));
-    _baseStatsMap[Enums::ClassName::Paladin]     = BaseStats(BaseStats::StatsAtStart(25, 20, 25, 15, 89), BaseStats::StatsPerLevel(120, 60, 40), BaseStats::StatsPerPoint(12, 8, 12));
-    _baseStatsMap[Enums::ClassName::Barbarian]   = BaseStats(BaseStats::StatsAtStart(30, 20, 30,  5, 92), BaseStats::StatsPerLevel(120, 60, 40), BaseStats::StatsPerPoint(12, 8, 12));
-    _baseStatsMap[Enums::ClassName::Druid]       = BaseStats(BaseStats::StatsAtStart(25, 20, 15, 25, 84), BaseStats::StatsPerLevel( 80, 20, 80), BaseStats::StatsPerPoint( 4, 8, 24));
-    _baseStatsMap[Enums::ClassName::Assassin]    = BaseStats(BaseStats::StatsAtStart(20, 35, 15, 15, 95), BaseStats::StatsPerLevel(100, 40, 60), BaseStats::StatsPerPoint( 8, 8, 18));
-
     const QList<SkillInfo> &skills = *ItemDataBase::Skills();
     int n = skills.size();
     for (int classCode = Enums::ClassName::Amazon; classCode <= Enums::ClassName::Assassin; ++classCode)
@@ -1016,7 +1038,7 @@ void MedianXLOfflineTools::fillMaps()
             int start = i * 5, end = start + 5;
             for (int j = start; j < end - 1; ++j)
                 for (int k = j + 1; k < end; ++k)
-                    if (ItemDataBase::Skills()->value(skillsIndeces.at(j)).row > ItemDataBase::Skills()->value(skillsIndeces.at(k)).row)
+                    if (skills[skillsIndeces.at(j)].row > skills[skillsIndeces.at(k)].row)
                         skillsIndeces.swap(j, k);
         }
         _characterSkillsIndeces[static_cast<Enums::ClassName::ClassNameEnum>(classCode)].second = skillsIndeces;

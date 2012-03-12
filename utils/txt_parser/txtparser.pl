@@ -370,6 +370,25 @@ for my $gemCode (keys %$gems)
 }
 close $out;
 
+my @baseStatsKeys = qw/strength dexterity energy vitality stamina lifePerLevel staminaPerLevel manaPerLevel lifePerPoint staminaPerPoint manaPerPoint/;
+my %baseStatsParams = (_autoindex => 0, stamina => 6, '!_class' => {col => 0, val => 'Expansion'});
+$baseStatsParams{$baseStatsKeys[$_]} = $_ + 1  for (0..3);
+$baseStatsParams{$baseStatsKeys[$_]} = $_ + 13 for (5..10);
+my $baseStats = parsetxt("charstats.txt", %baseStatsParams);
+
+open $out, ">", "generated/basestats.txt";
+print $out "#classcode\t".join("\t", @baseStatsKeys)."\n";
+my $classCode = 0;
+for my $i (0..scalar @$baseStats)
+{
+    next unless defined $baseStats->[$i];
+    print $out $classCode;
+    print $out "\t", $baseStats->[$i]->{$_} for (@baseStatsKeys);
+    print $out "\n";
+    $classCode++;
+}
+close $out;
+
 # open my $out, ">", "d2items.pm";
 # print $out saveStructure($miscTypes, "itemMisc", 80);
 # print $out saveStructure($weaponTypes, "itemWeapons", 80);

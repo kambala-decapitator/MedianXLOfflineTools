@@ -95,6 +95,7 @@ private:
     void loadData();
     void loadExpTable();
     void loadMercNames();
+    void loadBaseStats();
 
     void createLanguageMenu();
     void createLayout();

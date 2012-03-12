@@ -3,7 +3,7 @@ call create_translation en
 call create_translation ru
 
 cd generated
-..\compressfiles itemtypes.txt mo.txt exptable.txt
+..\compressfiles itemtypes.txt mo.txt exptable.txt basestats.txt
 move /Y *.dat ..\data\
 
 cd ..
