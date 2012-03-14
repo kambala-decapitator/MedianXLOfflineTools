@@ -73,7 +73,7 @@ BEGIN
         BLOCK "000004b0"
         BEGIN
             VALUE "CompanyName", "kambala"
-            VALUE "FileDescription", "Offline analogue of grig's Median XL Online Tools"
+            VALUE "FileDescription", "Median XL Offline Tools"
             VALUE "FileVersion", "0.3"
             VALUE "InternalName", "MedianXLOfflineTools"
             VALUE "LegalCopyright", "Copyright (C) kambala 2011-2012"

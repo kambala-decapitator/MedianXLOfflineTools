@@ -15,6 +15,8 @@
 #include "skillplandialog.h"
 
 #include <QCloseEvent>
+#include <QDropEvent>
+#include <QDragEnterEvent>
 #include <QGridLayout>
 #include <QFileDialog>
 #include <QLabel>
@@ -23,6 +25,15 @@
 #include <QFile>
 #include <QDataStream>
 #include <QTranslator>
+#include <QUrl>
+
+#ifdef Q_WS_WIN32
+#include <Shlobj.h>
+#endif
+
+#ifdef Q_WS_MACX
+#include <QFileOpenEvent>
+#endif
 
 #ifndef QT_NO_DEBUG
 #include <QDebug>
@@ -31,7 +42,8 @@
 #include <cmath>
 
 
-static const QString lastSavePathKey("lastSavePath"), releaseDate("24.02.2012"), backupExtension("bak"), readonlyCss("background-color: rgb(227, 227, 227)");
+static const QString lastSavePathKey("lastSavePath"), releaseDate("24.03.2012"), backupExtension("bak"), readonlyCss("background-color: rgb(227, 227, 227)");
+static const QString characterExtension("d2s"), characterExtensionWithDot = "." + characterExtension;
 
 //#define MAKE_HC
 //#define ENABLE_PERSONALIZE
@@ -50,12 +62,13 @@ const int MedianXLOfflineTools::maxRecentFiles = 10;
 
 // ctor
 
-MedianXLOfflineTools::MedianXLOfflineTools(QWidget *parent, Qt::WFlags flags) : QMainWindow(parent, flags), _findItemsDialog(0), hackerDetected(tr("1337 hacker detected! Please, play legit.")),
-    //difficulties(QStringList() << tr("Hatred") << tr("Nightmare") << tr("Destruction")),
+MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *parent, Qt::WFlags flags) : QMainWindow(parent, flags), _findItemsDialog(0),
+    hackerDetected(tr("1337 hacker detected! Please, play legit.")), //difficulties(QStringList() << tr("Hatred") << tr("Nightmare") << tr("Destruction")),
     maxValueFormat(tr("Max: %1")), minValueFormat(tr("Min: %1")), investedValueFormat(tr("Invested: %1")), _isLoaded(false)
 {
     ui.setupUi(this);
 
+    checkFileAssociations();
     loadData();
     createLanguageMenu();
     createLayout();
@@ -66,7 +79,13 @@ MedianXLOfflineTools::MedianXLOfflineTools(QWidget *parent, Qt::WFlags flags) : 
     ui.actionFindNext->setShortcut(QKeySequence::FindNext);
     ui.actionFindPrevious->setShortcut(QKeySequence::FindPrevious);
 
-    if (ui.actionLoadLastUsedCharacter->isChecked() && !_recentFilesList.isEmpty())
+#ifdef Q_WS_MACX
+    qApp->installEventFilter(this);
+#endif
+
+    if (!cmdPath.isEmpty())
+        loadFile(cmdPath);
+    else if (ui.actionLoadLastUsedCharacter->isChecked() && !_recentFilesList.isEmpty())
         loadFile(_recentFilesList.at(0));
     else
         updateWindowTitle();
@@ -103,7 +122,7 @@ void MedianXLOfflineTools::loadCharacter()
     settings.beginGroup("recentItems");
     QString lastSavePath = settings.value(lastSavePathKey).toString();
 
-    QString charPath = QFileDialog::getOpenFileName(this, tr("Load Character"), lastSavePath, tr("Diablo 2 Save Files (*.d2s)"));
+    QString charPath = QFileDialog::getOpenFileName(this, tr("Load Character"), lastSavePath, tr("Diablo 2 Save Files") + QString(" (*%1)").arg(characterExtensionWithDot));
     if (loadFile(charPath))
         ui.statusBar->showMessage(tr("Character loaded"), 3000);
 }
@@ -307,12 +326,12 @@ void MedianXLOfflineTools::saveCharacter()
 
     QSettings settings;
     settings.beginGroup("recentItems");
-    QString savePath = settings.value(lastSavePathKey).toString(), fileName = savePath + "/" + newName, saveFileName = fileName + ".d2s";
+    QString savePath = settings.value(lastSavePathKey).toString(), fileName = savePath + "/" + newName, saveFileName = fileName + characterExtensionWithDot;
 
     QFile outputFile(saveFileName);
     if (hasNameChanged)
     {
-        QFile oldFile(QString("%1/%2.d2s").arg(savePath, charInfo.basicInfo.originalName));
+        QFile oldFile(QString("%1/%2.%3").arg(savePath, charInfo.basicInfo.originalName, characterExtension));
         backupFile(oldFile);
     }
     else
@@ -347,7 +366,7 @@ void MedianXLOfflineTools::saveCharacter()
                         continue;
 
                     QFile sourceFile(fileInfo.canonicalFilePath());
-                    if (extension == "d2s") // delete
+                    if (extension == characterExtension) // delete
                     {
                         if (!sourceFile.remove())
                             showErrorMessageBoxForFile(tr("Error removing file '%1'"), sourceFile);
@@ -725,8 +744,63 @@ void MedianXLOfflineTools::closeEvent(QCloseEvent *e)
         e->ignore();
 }
 
+void MedianXLOfflineTools::dragEnterEvent(QDragEnterEvent *event)
+{
+    const QMimeData *mimeData = event->mimeData();
+    if (mimeData->hasUrls())
+    {
+        QString path = mimeData->urls().at(0).toLocalFile();
+        if (path.right(4).toLower() == characterExtensionWithDot)
+            event->acceptProposedAction();
+    }
+}
+
+void MedianXLOfflineTools::dropEvent(QDropEvent *event)
+{
+    loadFile(event->mimeData()->urls().at(0).toLocalFile());
+    event->acceptProposedAction();
+}
+
+#ifdef Q_WS_MACX
+bool MedianXLOfflineTools::eventFilter(QObject *obj, QEvent *event)
+{
+    if (obj == qApp && event->type() == QEvent::FileOpen)
+        return loadFile(static_cast<QFileOpenEvent *>(event)->file());
+    return QMainWindow::eventFilter(obj, event);
+}
+#endif
+
 
 // private methods
+
+void MedianXLOfflineTools::checkFileAssociations()
+{
+#ifdef Q_WS_WIN32
+    QString fileType("Diablo2.savefile.character");
+    QString cmdOpenFileFormat("%1/shell/open/command/."), defaultApplicationRegistryPath = cmdOpenFileFormat.arg(fileType), appPath = QDir::toNativeSeparators(qApp->applicationFilePath());
+    QSettings settings("HKEY_CLASSES_ROOT", QSettings::NativeFormat);
+    // TODO: also check      HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.d2s\UserChoice\Progid (now it's Applications\XVI32.exe)
+    // on XP must be checked HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.d2s\Application (if present, contains some binary name)
+    if (!settings.value(defaultApplicationRegistryPath).toString().startsWith(appPath))
+    {
+        QString defaultValueFormat("%1/.");
+        settings.setValue(defaultValueFormat.arg(characterExtensionWithDot), fileType);
+        settings.setValue(defaultValueFormat.arg(fileType), "Diablo 2 character save file");
+        settings.setValue(defaultApplicationRegistryPath, appPath + " \"%1\"");
+
+        QString binaryName = QFileInfo(appPath).fileName(), registryAppPath = QString("Applications/%1").arg(binaryName);
+        settings.setValue(cmdOpenFileFormat.arg(registryAppPath), appPath + " \"%1\"");
+        settings.setValue(QString("%1/SupportedTypes/%2").arg(registryAppPath, characterExtensionWithDot), QString(""));
+
+        QSettings hklm("HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\App Paths", QSettings::NativeFormat);
+        hklm.setValue(defaultValueFormat.arg(binaryName), appPath);
+        hklm.setValue(QString("%1/Path").arg(binaryName), QDir::toNativeSeparators(qApp->applicationDirPath()));
+
+        SHChangeNotify(SHCNE_ASSOCCHANGED, 0, 0, 0);
+        INFO_BOX("file association changed");
+    }
+#endif
+}
 
 void MedianXLOfflineTools::loadData()
 {
@@ -1127,7 +1201,7 @@ QAction *MedianXLOfflineTools::createRecentFileAction(const QString &fileName, i
 
 bool MedianXLOfflineTools::loadFile(const QString &charPath)
 {
-    if (charPath.isEmpty() || !maybeSave())
+    if (charPath.isEmpty() || !charPath.endsWith(characterExtensionWithDot) || !maybeSave())
         return false;
 
     bool result;

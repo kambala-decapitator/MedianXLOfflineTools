@@ -22,11 +22,11 @@ int main(int argc, char *argv[])
 
     LanguageManager &langManager = LanguageManager::instance();
     langManager.currentLocale = QSettings().value(langManager.languageKey, QLocale::system().name().left(2)).toString();
-    langManager.setResourcesPath(
+    langManager.setResourcesPath(app.applicationDirPath() +
 #ifdef Q_WS_MACX
-    app.applicationDirPath() + "/../"
+    "/.." +
 #endif
-    "Resources");
+    "/Resources");
 
     QTranslator myappTranslator;
     if (!myappTranslator.load(app.applicationName().remove(' ').toLower() + "_" + langManager.currentLocale, langManager.translationsPath))
@@ -38,7 +38,7 @@ int main(int argc, char *argv[])
     app.installTranslator(&qtTranslator);
 
 
-    MedianXLOfflineTools w;
+    MedianXLOfflineTools w(argc > 1 ? argv[1] : QString());
     w.show();
 
     return app.exec();

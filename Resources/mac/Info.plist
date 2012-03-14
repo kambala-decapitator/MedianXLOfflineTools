@@ -22,5 +22,18 @@
 	<string>4</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © kambala 2011-2012</string>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>d2s</string>
+			</array>
+			<key>CFBundleTypeRole</key>
+			<string>Viewer</string>
+			<key>LSIsAppleDefaultForType</key>
+			<true/>
+		</dict>
+	</array>
 </dict>
 </plist>

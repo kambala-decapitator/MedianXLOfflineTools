@@ -10,6 +10,9 @@
     <height>367</height>
    </rect>
   </property>
+  <property name="acceptDrops">
+   <bool>true</bool>
+  </property>
   <property name="windowIcon">
    <iconset resource="resources/medianxlofflinetools.qrc">
     <normaloff>:/MedianXLOfflineTools/icons/icon.png</normaloff>:/MedianXLOfflineTools/icons/icon.png</iconset>
@@ -1189,6 +1192,9 @@ p, li { white-space: pre-wrap; }
    </property>
   </action>
   <action name="actionSkillPlan">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>Skillplan</string>
    </property>
@@ -1197,6 +1203,9 @@ p, li { white-space: pre-wrap; }
    </property>
   </action>
   <action name="actionExportCharacterInfo">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>Character Info</string>
    </property>

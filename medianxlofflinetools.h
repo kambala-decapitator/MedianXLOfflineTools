@@ -14,7 +14,10 @@
 
 
 class QCloseEvent;
+class QDragEnterEvent;
+class QDropEvent;
 class QFile;
+
 class ItemsViewerDialog;
 class FindItemsDialog;
 
@@ -28,11 +31,16 @@ public:
     static const int skillsNumber, difficultiesNumber, maxRecentFiles;
     static const int statPointsPerLevel, skillPointsPerLevel;
 
-    MedianXLOfflineTools(QWidget *parent = 0, Qt::WFlags flags = 0);
+    MedianXLOfflineTools(const QString &cmdPath = QString(), QWidget *parent = 0, Qt::WFlags flags = 0);
     virtual ~MedianXLOfflineTools() { clearItems(); }
 
 protected:
     void closeEvent(QCloseEvent *e);
+    virtual void dragEnterEvent(QDragEnterEvent *event);
+    virtual void dropEvent(QDropEvent *event);
+#ifdef Q_WS_MACX
+    bool eventFilter(QObject *obj, QEvent *event);
+#endif
 
 private slots:
     void switchLanguage(QAction *languageAction);
@@ -98,6 +106,8 @@ private:
 
     bool _isLoaded;
     ResurrectPenaltyDialog::ResurrectionPenalty _resurrectionPenalty;
+
+    void checkFileAssociations();
 
     void loadData();
     void loadExpTable();
