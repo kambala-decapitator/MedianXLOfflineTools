@@ -27,12 +27,10 @@
 #include <QTranslator>
 #include <QUrl>
 
-#ifdef Q_WS_WIN32
+#if defined(Q_WS_WIN32)
 #include <Shlobj.h>
-#endif
-
-#ifdef Q_WS_MACX
-#include <QFileOpenEvent>
+#elif defined(Q_WS_MACX)
+#include <ApplicationServices/ApplicationServices.h>
 #endif
 
 #ifndef QT_NO_DEBUG
@@ -89,6 +87,42 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *pare
         loadFile(_recentFilesList.at(0));
     else
         updateWindowTitle();
+}
+
+bool MedianXLOfflineTools::loadFile(const QString &charPath)
+{
+    if (charPath.isEmpty() || !charPath.endsWith(characterExtensionWithDot) || !maybeSave())
+        return false;
+
+    bool result;
+    if ((result = processSaveFile(charPath)))
+    {
+        _charPath = charPath;
+        updateUI();
+        addToRecentFiles(charPath);
+
+        if (_itemsDialog)
+            _itemsDialog->updateItems(getPlugyStashesExistenceHash());
+        if (_itemsDialog || ui.actionOpenItemsAutomatically->isChecked())
+            showItems();
+
+        QSettings settings;
+        settings.beginGroup("recentItems");
+        settings.setValue(lastSavePathKey, QFileInfo(charPath).canonicalPath());
+    }
+    else
+    {
+        _saveFileContents.clear();
+        _charPath.clear();
+
+        clearUI();
+        updateWindowTitle();
+    }
+
+    if (_findItemsDialog)
+        _findItemsDialog->clearResults();
+
+    return result;
 }
 
 
@@ -761,21 +795,12 @@ void MedianXLOfflineTools::dropEvent(QDropEvent *event)
     event->acceptProposedAction();
 }
 
-#ifdef Q_WS_MACX
-bool MedianXLOfflineTools::eventFilter(QObject *obj, QEvent *event)
-{
-    if (obj == qApp && event->type() == QEvent::FileOpen)
-        return loadFile(static_cast<QFileOpenEvent *>(event)->file());
-    return QMainWindow::eventFilter(obj, event);
-}
-#endif
-
 
 // private methods
 
 void MedianXLOfflineTools::checkFileAssociations()
 {
-#ifdef Q_WS_WIN32
+#if defined(Q_WS_WIN32)
     QString fileType("Diablo2.savefile.character");
     QString cmdOpenFileFormat("%1/shell/open/command/."), defaultApplicationRegistryPath = cmdOpenFileFormat.arg(fileType), appPath = QDir::toNativeSeparators(qApp->applicationFilePath());
     QSettings settings("HKEY_CLASSES_ROOT", QSettings::NativeFormat);
@@ -799,6 +824,20 @@ void MedianXLOfflineTools::checkFileAssociations()
         SHChangeNotify(SHCNE_ASSOCCHANGED, 0, 0, 0);
         INFO_BOX("file association changed");
     }
+#elif defined(Q_WS_MACX)
+    FSRef appRef = {{0}}; // shut clang up
+    OSStatus err = LSGetApplicationForInfo(kLSUnknownType, kLSUnknownCreator, CFSTR("d2s"), kLSRolesEditor, &appRef, NULL);
+    if (err == noErr)
+    {
+        CFStringRef displayName = NULL;
+        err = LSCopyDisplayNameForRef(&appRef, &displayName);
+        CFShow(displayName);
+        CFRelease(displayName);
+    }
+    else
+        qDebug("failed to get default app for d2s: %d", err);
+#else
+#error Add code to check file association or remove/comment this line
 #endif
 }
 
@@ -1197,42 +1236,6 @@ QAction *MedianXLOfflineTools::createRecentFileAction(const QString &fileName, i
     recentFileAction->setStatusTip(QDir::toNativeSeparators(fileName));
     connect(recentFileAction, SIGNAL(triggered()), SLOT(openRecentFile()));
     return recentFileAction;
-}
-
-bool MedianXLOfflineTools::loadFile(const QString &charPath)
-{
-    if (charPath.isEmpty() || !charPath.endsWith(characterExtensionWithDot) || !maybeSave())
-        return false;
-
-    bool result;
-    if ((result = processSaveFile(charPath)))
-    {
-        _charPath = charPath;
-        updateUI();
-        addToRecentFiles(charPath);
-
-        if (_itemsDialog)
-            _itemsDialog->updateItems(getPlugyStashesExistenceHash());
-        if (_itemsDialog || ui.actionOpenItemsAutomatically->isChecked())
-            showItems();
-
-        QSettings settings;
-        settings.beginGroup("recentItems");
-        settings.setValue(lastSavePathKey, QFileInfo(charPath).canonicalPath());
-    }
-    else
-    {
-        _saveFileContents.clear();
-        _charPath.clear();
-
-        clearUI();
-        updateWindowTitle();
-    }
-
-    if (_findItemsDialog)
-        _findItemsDialog->clearResults();
-
-    return result;
 }
 
 bool MedianXLOfflineTools::processSaveFile(const QString &charPath)

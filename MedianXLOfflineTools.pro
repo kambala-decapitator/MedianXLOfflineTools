@@ -27,7 +27,8 @@ SOURCES += main.cpp \
     itemparser.cpp \
     propertiesdisplaymanager.cpp \
     findresultswidget.cpp \
-    skillplandialog.cpp
+    skillplandialog.cpp \
+    application.cpp
 
 HEADERS += medianxlofflinetools.h \
     resurrectpenaltydialog.h \
@@ -51,7 +52,8 @@ HEADERS += medianxlofflinetools.h \
     propertiesdisplaymanager.h \
     findresultswidget.h \
     characterinfo.hpp \
-    skillplandialog.h
+    skillplandialog.h \
+    application.h
 
 FORMS += medianxlofflinetools.ui \
     resurrectpenaltydialog.ui \
@@ -68,15 +70,16 @@ TRANSLATIONS += resources/translations/medianxlofflinetools_ru.ts \
 
 macx {
     OTHER_FILES += resources/mac/Info.plist
-    
+
     ICON = resources/mac/icon.icns
     QMAKE_INFO_PLIST = resources/mac/Info.plist
+    LIBS += -framework ApplicationServices
 
     CONFIG(release, debug|release) {
         message(release build)
         QMAKE_MAC_SDK = /Developer/SDKs/MacOSX10.5.sdk
         CONFIG += x86 ppc
-        QMAKE_MACOSX_DEPLOYMENT_TARGET = 10.4
+        QMAKE_MACOSX_DEPLOYMENT_TARGET = 10.5
     }
 }
 win32 {

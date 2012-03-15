@@ -34,13 +34,12 @@ public:
     MedianXLOfflineTools(const QString &cmdPath = QString(), QWidget *parent = 0, Qt::WFlags flags = 0);
     virtual ~MedianXLOfflineTools() { clearItems(); }
 
+    bool loadFile(const QString &charPath);
+
 protected:
     void closeEvent(QCloseEvent *e);
     virtual void dragEnterEvent(QDragEnterEvent *event);
     virtual void dropEvent(QDropEvent *event);
-#ifdef Q_WS_MACX
-    bool eventFilter(QObject *obj, QEvent *event);
-#endif
 
 private slots:
     void switchLanguage(QAction *languageAction);
@@ -130,7 +129,6 @@ private:
     void addToRecentFiles(const QString &fileName);
     QAction *createRecentFileAction(const QString &fileName, int index);
 
-    bool loadFile(const QString &charPath);
     bool processSaveFile(const QString &charPath);
     quint32 checksum(const QByteArray &charByteArray) const;
 
