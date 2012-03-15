@@ -803,6 +803,7 @@ void MedianXLOfflineTools::checkFileAssociations()
 #if defined(Q_WS_WIN32)
     QString fileType("Diablo2.savefile.character");
     QString cmdOpenFileFormat("%1/shell/open/command/."), defaultApplicationRegistryPath = cmdOpenFileFormat.arg(fileType), appPath = QDir::toNativeSeparators(qApp->applicationFilePath());
+    // TODO: write also to HKEY_CURRENT_USER\\Software\\Classes (in case user is not admin)
     QSettings settings("HKEY_CLASSES_ROOT", QSettings::NativeFormat);
     // TODO: also check      HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.d2s\UserChoice\Progid (now it's Applications\XVI32.exe)
     // on XP must be checked HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.d2s\Application (if present, contains some binary name)
