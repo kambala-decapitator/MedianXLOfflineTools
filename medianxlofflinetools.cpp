@@ -29,6 +29,7 @@
 
 #if defined(Q_WS_WIN32)
 #include <Shlobj.h>
+#include <Shobjidl.h>
 #elif defined(Q_WS_MACX)
 #include <ApplicationServices/ApplicationServices.h>
 #endif
@@ -801,29 +802,61 @@ void MedianXLOfflineTools::dropEvent(QDropEvent *event)
 void MedianXLOfflineTools::checkFileAssociations()
 {
 #if defined(Q_WS_WIN32)
-    QString fileType("Diablo2.savefile.character");
-    QString cmdOpenFileFormat("%1/shell/open/command/."), defaultApplicationRegistryPath = cmdOpenFileFormat.arg(fileType), appPath = QDir::toNativeSeparators(qApp->applicationFilePath());
-    // TODO: write also to HKEY_CURRENT_USER\\Software\\Classes (in case user is not admin)
-    QSettings settings("HKEY_CLASSES_ROOT", QSettings::NativeFormat);
-    // TODO: also check      HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.d2s\UserChoice\Progid (now it's Applications\XVI32.exe)
-    // on XP must be checked HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.d2s\Application (if present, contains some binary name)
-    if (!settings.value(defaultApplicationRegistryPath).toString().startsWith(appPath))
+    QString appPath = QDir::toNativeSeparators(qApp->applicationFilePath()), binaryName = QFileInfo(appPath).fileName();
+    if (QSysInfo::windowsVersion() < QSysInfo::WV_VISTA)
     {
-        QString defaultValueFormat("%1/.");
-        settings.setValue(defaultValueFormat.arg(characterExtensionWithDot), fileType);
-        settings.setValue(defaultValueFormat.arg(fileType), "Diablo 2 character save file");
-        settings.setValue(defaultApplicationRegistryPath, appPath + " \"%1\"");
+        QString fileType("Diablo2.savefile.character");
+        QString cmdOpenFileFormat("%1/shell/open/command/."), defaultApplicationRegistryPath = cmdOpenFileFormat.arg(fileType);
+        // TODO: write also to HKEY_CURRENT_USER\\Software\\Classes (in case user is not admin)
+        QSettings settings("HKEY_CURRENT_USER\\Software\\Classes", QSettings::NativeFormat);
+        // TODO: also check      HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.d2s\UserChoice\Progid (now it's Applications\XVI32.exe)
+        // on XP must be checked HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.d2s\Application (if present, contains some binary name)
+        if (!settings.value(defaultApplicationRegistryPath).toString().startsWith(appPath))
+        {
+            QString defaultValueFormat("%1/.");
+            settings.setValue(defaultValueFormat.arg(characterExtensionWithDot), fileType);
+            settings.setValue(defaultValueFormat.arg(fileType), "Diablo 2 character save file");
+            settings.setValue(defaultApplicationRegistryPath, appPath + " \"%1\"");
 
-        QString binaryName = QFileInfo(appPath).fileName(), registryAppPath = QString("Applications/%1").arg(binaryName);
-        settings.setValue(cmdOpenFileFormat.arg(registryAppPath), appPath + " \"%1\"");
-        settings.setValue(QString("%1/SupportedTypes/%2").arg(registryAppPath, characterExtensionWithDot), QString(""));
+            QString registryAppPath = QString("Applications/%1").arg(binaryName);
+            settings.setValue(cmdOpenFileFormat.arg(registryAppPath), appPath + " \"%1\"");
+            settings.setValue(QString("%1/SupportedTypes/%2").arg(registryAppPath, characterExtensionWithDot), QString(""));
 
-        QSettings hklm("HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\App Paths", QSettings::NativeFormat);
-        hklm.setValue(defaultValueFormat.arg(binaryName), appPath);
-        hklm.setValue(QString("%1/Path").arg(binaryName), QDir::toNativeSeparators(qApp->applicationDirPath()));
+            QSettings hklm("HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\App Paths", QSettings::NativeFormat);
+            hklm.setValue(defaultValueFormat.arg(binaryName), appPath);
+            hklm.setValue(QString("%1/Path").arg(binaryName), QDir::toNativeSeparators(qApp->applicationDirPath()));
 
-        SHChangeNotify(SHCNE_ASSOCCHANGED, 0, 0, 0);
-        INFO_BOX("file association changed");
+            SHChangeNotify(SHCNE_ASSOCCHANGED, 0, 0, 0);
+            INFO_BOX("file association changed");
+        }
+    }
+    else
+    {
+        IApplicationAssociationRegistration *pAAR;
+        HRESULT hr = CoCreateInstance(CLSID_ApplicationAssociationRegistration, NULL, CLSCTX_INPROC, __uuidof(IApplicationAssociationRegistration), (void **)&pAAR);
+        qDebug("CoCreateInstance result: %#x", hr);
+        if (SUCCEEDED(hr))
+        {
+            QStdWString appNameStdWstr = binaryName.toStdWString(), extensionWithDotStdWstr = characterExtensionWithDot.toStdWString();
+            LPCWSTR appNameWstr = appNameStdWstr.c_str(), extensionWithDotWstr = extensionWithDotStdWstr.c_str();
+            OutputDebugString(appNameWstr);
+            BOOL isDefault;
+            hr = pAAR->QueryAppIsDefault(extensionWithDotWstr, AT_FILEEXTENSION, AL_EFFECTIVE, appNameWstr, &isDefault); // returns 0x80070002 if app doesn't exist in registry
+            qDebug("\nQueryAppIsDefault result: %#x, is default: %d", hr, isDefault);
+            if (!isDefault)
+            {
+                LPWSTR defaultAppNameWstr;
+                hr = pAAR->QueryCurrentDefault(extensionWithDotWstr, AT_FILEEXTENSION, AL_EFFECTIVE, &defaultAppNameWstr);
+                OutputDebugString(defaultAppNameWstr);
+                qDebug("\nQueryCurrentDefault result: %#x", hr);
+
+                //hr = pAAR->SetAppAsDefault(appNameWstr, extensionWithDotWstr, AT_FILEEXTENSION);
+                //qDebug("SetAppAsDefault result: %#x", hr);
+                //if (SUCCEEDED(hr))
+                //    qDebug("app is default now");
+            }
+            pAAR->Release();
+        }
     }
 #elif defined(Q_WS_MACX)
     FSRef defaultAppRef = {{0}}; // shut clang up
