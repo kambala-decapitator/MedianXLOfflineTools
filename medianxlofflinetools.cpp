@@ -826,17 +826,27 @@ void MedianXLOfflineTools::checkFileAssociations()
         INFO_BOX("file association changed");
     }
 #elif defined(Q_WS_MACX)
-    FSRef appRef = {{0}}; // shut clang up
-    OSStatus err = LSGetApplicationForInfo(kLSUnknownType, kLSUnknownCreator, CFSTR("d2s"), kLSRolesEditor, &appRef, NULL);
-    if (err == noErr)
+    FSRef defaultAppRef = {{0}}; // shut clang up
+    OSStatus err = LSGetApplicationForInfo(kLSUnknownType, kLSUnknownCreator, CFSTR("d2s"), kLSRolesAll, &defaultAppRef, NULL);
+    if (err != noErr)
     {
-        CFStringRef displayName = NULL;
-        err = LSCopyDisplayNameForRef(&appRef, &displayName);
-        CFShow(displayName);
-        CFRelease(displayName);
+        qDebug("error getting default app: %d", err);
+        return;
     }
-    else
-        qDebug("failed to get default app for d2s: %d", err);
+
+    CFURLRef bundlePath = CFBundleCopyBundleURL(CFBundleGetMainBundle());
+    if (LSRegisterURL(bundlePath) == noErr)
+        qDebug("registered");
+    CFRelease(bundlePath);
+
+    CFStringRef displayName = NULL;
+    err = LSCopyDisplayNameForRef(&defaultAppRef, &displayName);
+    CFShow(displayName);
+    CFIndex l = CFStringGetLength(displayName);
+    char *cstr = new char[l+1];
+    qDebug("was copying string successful: %d", CFStringGetCString(displayName, cstr, l+1, kCFStringEncodingMacRoman));
+    INFO_BOX(cstr);
+    CFRelease(displayName);
 #else
 #error Add code to check file association or remove/comment this line
 #endif
