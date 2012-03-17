@@ -36,7 +36,16 @@ Application::Application(int &argc, char **argv) : QApplication(argc, argv)
     qtTranslator.load("qt_" + langManager.currentLocale, langManager.translationsPath);
     installTranslator(&qtTranslator);
 
-    _mainWindow = new MedianXLOfflineTools(argc > 1 ? argv[1] : QString());
+//    if (argc > 0)
+//    {
+//        QString params;
+//        for (int i = 1; i < argc; ++i)
+//            params += QString("%1 %2\n").arg(i).arg(argv[i]);
+//        qDebug("params: %s", qPrintable(params));
+//        QMessageBox::information(0, "params", params);
+//    }
+
+    _mainWindow = new MedianXLOfflineTools/*(argc > 1 ? argv[1] : QString())*/;
     _mainWindow->show();
 }
 

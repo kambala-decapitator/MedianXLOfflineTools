@@ -860,26 +860,46 @@ void MedianXLOfflineTools::checkFileAssociations()
     }
 #elif defined(Q_WS_MACX)
     FSRef defaultAppRef = {{0}}; // shut clang up
-    OSStatus err = LSGetApplicationForInfo(kLSUnknownType, kLSUnknownCreator, CFSTR("d2s"), kLSRolesAll, &defaultAppRef, NULL);
-    if (err != noErr)
+    CFStringRef characterExtensionCF = CFStringCreateWithCharacters(kCFAllocatorDefault, (const UniChar *)characterExtension.unicode(), characterExtension.length());
+    OSStatus err;
+    if ((err = LSGetApplicationForInfo(kLSUnknownType, kLSUnknownCreator, characterExtensionCF, kLSRolesAll, &defaultAppRef, NULL)) != noErr)
     {
+        CFRelease(characterExtensionCF);
         qDebug("error getting default app: %d", err);
         return;
     }
 
-    CFURLRef bundlePath = CFBundleCopyBundleURL(CFBundleGetMainBundle());
-    if (LSRegisterURL(bundlePath) == noErr)
-        qDebug("registered");
-    CFRelease(bundlePath);
+    CFURLRef defaultAppUrl = CFURLCreateFromFSRef(NULL, &defaultAppRef);
+    CFStringRef defaultAppPath = CFURLCopyFileSystemPath(defaultAppUrl, kCFURLPOSIXPathStyle);
+    CFRelease(defaultAppUrl);
 
-    CFStringRef displayName = NULL;
-    err = LSCopyDisplayNameForRef(&defaultAppRef, &displayName);
-    CFShow(displayName);
-    CFIndex l = CFStringGetLength(displayName);
-    char *cstr = new char[l+1];
-    qDebug("was copying string successful: %d", CFStringGetCString(displayName, cstr, l+1, kCFStringEncodingMacRoman));
-    INFO_BOX(cstr);
-    CFRelease(displayName);
+    CFBundleRef mainBundle = CFBundleGetMainBundle();
+    CFURLRef bundleUrl = CFBundleCopyBundleURL(mainBundle);
+    CFStringRef bundlePath = CFURLCopyFileSystemPath(bundleUrl, kCFURLPOSIXPathStyle);
+    CFRelease(bundleUrl);
+
+    bool isDefault = CFStringCompare(bundlePath, defaultAppPath, 0) == kCFCompareEqualTo;
+    CFRelease(defaultAppPath);
+    CFRelease(bundlePath);
+    if (!isDefault)
+    {
+        CFArrayRef UTIs = UTTypeCreateAllIdentifiersForTag(kUTTagClassFilenameExtension, characterExtensionCF, nil);
+        CFStringRef bundleIdentifier = CFBundleGetIdentifier(mainBundle);
+        for (CFIndex i = 0, n = CFArrayGetCount(UTIs); i < n; ++i)
+        {
+            CFStringRef UTI = (CFStringRef)CFArrayGetValueAtIndex(UTIs, i);
+            CFShow(UTI);
+            if ((err = LSSetDefaultRoleHandlerForContentType(UTI, kLSRolesEditor, bundleIdentifier)) == noErr)
+                qDebug("app registered as default");
+            else
+                qDebug("error registering app as default: %d", err);
+        }
+        CFRelease(UTIs);
+    }
+    else
+        qDebug("app is default");
+
+    CFRelease(characterExtensionCF);
 #else
 #error Add code to check file association or remove/comment this line
 #endif
