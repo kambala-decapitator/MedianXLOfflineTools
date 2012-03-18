@@ -26,7 +26,7 @@ class MedianXLOfflineTools : public QMainWindow
     Q_OBJECT
 
 public:
-    static const QString compoundFormat;
+    static const QString compoundFormat, characterExtension, characterExtensionWithDot;
     static const quint32 fileSignature;
     static const int skillsNumber, difficultiesNumber, maxRecentFiles;
     static const int statPointsPerLevel, skillPointsPerLevel;
@@ -106,7 +106,11 @@ private:
     bool _isLoaded;
     ResurrectPenaltyDialog::ResurrectionPenalty _resurrectionPenalty;
 
+#if defined(Q_WS_WIN32) || defined(Q_WS_MACX)
     void checkFileAssociations();
+#else
+#error Place implementation to check file association to e.g. medianxlofflinetools_linux.cpp or comment this line
+#endif
 
     void loadData();
     void loadExpTable();

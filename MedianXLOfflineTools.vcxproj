@@ -149,6 +149,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="itemparser.cpp" />
+    <ClCompile Include="medianxlofflinetools_win.cpp" />
     <ClCompile Include="propertiesdisplaymanager.cpp" />
     <ClCompile Include="reversebitreader.cpp" />
     <ClCompile Include="enums.cpp" />

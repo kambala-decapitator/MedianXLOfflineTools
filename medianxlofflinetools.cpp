@@ -27,13 +27,6 @@
 #include <QTranslator>
 #include <QUrl>
 
-#if defined(Q_WS_WIN32)
-#include <Shlobj.h>
-#include <Shobjidl.h>
-#elif defined(Q_WS_MACX)
-#include <ApplicationServices/ApplicationServices.h>
-#endif
-
 #ifndef QT_NO_DEBUG
 #include <QDebug>
 #endif
@@ -42,7 +35,6 @@
 
 
 static const QString lastSavePathKey("lastSavePath"), releaseDate("24.03.2012"), backupExtension("bak"), readonlyCss("background-color: rgb(227, 227, 227)");
-static const QString characterExtension("d2s"), characterExtensionWithDot = "." + characterExtension;
 
 //#define MAKE_HC
 //#define ENABLE_PERSONALIZE
@@ -51,6 +43,8 @@ static const QString characterExtension("d2s"), characterExtensionWithDot = "." 
 // static const
 
 const QString MedianXLOfflineTools::compoundFormat("%1, %2");
+const QString MedianXLOfflineTools::characterExtension("d2s");
+const QString MedianXLOfflineTools::characterExtensionWithDot("." + characterExtension);
 const quint32 MedianXLOfflineTools::fileSignature = 0xAA55AA55;
 const int MedianXLOfflineTools::skillsNumber = 30;
 const int MedianXLOfflineTools::difficultiesNumber = 3;
@@ -78,10 +72,6 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *pare
     ui.actionFindNext->setShortcut(QKeySequence::FindNext);
     ui.actionFindPrevious->setShortcut(QKeySequence::FindPrevious);
 
-#ifdef Q_WS_MACX
-    qApp->installEventFilter(this);
-#endif
-
     if (!cmdPath.isEmpty())
         loadFile(cmdPath);
     else if (ui.actionLoadLastUsedCharacter->isChecked() && !_recentFilesList.isEmpty())
@@ -92,7 +82,8 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *pare
 
 bool MedianXLOfflineTools::loadFile(const QString &charPath)
 {
-    if (charPath.isEmpty() || !charPath.endsWith(characterExtensionWithDot) || !maybeSave())
+    // if double clicking, maybe there's an additional quote in the end of the string
+    if (charPath.isEmpty() || /*!charPath.endsWith(characterExtensionWithDot)*/!charPath.contains(QRegExp(QString("\\.%1(\"?)$").arg(characterExtension))) || !maybeSave())
         return false;
 
     bool result;
@@ -109,7 +100,7 @@ bool MedianXLOfflineTools::loadFile(const QString &charPath)
 
         QSettings settings;
         settings.beginGroup("recentItems");
-        settings.setValue(lastSavePathKey, QFileInfo(charPath).canonicalPath());
+        settings.setValue(lastSavePathKey, QDir::toNativeSeparators(QFileInfo(charPath).canonicalPath()));
     }
     else
     {
@@ -799,112 +790,6 @@ void MedianXLOfflineTools::dropEvent(QDropEvent *event)
 
 // private methods
 
-void MedianXLOfflineTools::checkFileAssociations()
-{
-#if defined(Q_WS_WIN32)
-    QString appPath = QDir::toNativeSeparators(qApp->applicationFilePath()), binaryName = QFileInfo(appPath).fileName();
-    if (QSysInfo::windowsVersion() < QSysInfo::WV_VISTA)
-    {
-        QString fileType("Diablo2.savefile.character");
-        QString cmdOpenFileFormat("%1/shell/open/command/."), defaultApplicationRegistryPath = cmdOpenFileFormat.arg(fileType);
-        // TODO: write also to HKEY_CURRENT_USER\\Software\\Classes (in case user is not admin)
-        QSettings settings("HKEY_CURRENT_USER\\Software\\Classes", QSettings::NativeFormat);
-        // TODO: also check      HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.d2s\UserChoice\Progid (now it's Applications\XVI32.exe)
-        // on XP must be checked HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.d2s\Application (if present, contains some binary name)
-        if (!settings.value(defaultApplicationRegistryPath).toString().startsWith(appPath))
-        {
-            QString defaultValueFormat("%1/.");
-            settings.setValue(defaultValueFormat.arg(characterExtensionWithDot), fileType);
-            settings.setValue(defaultValueFormat.arg(fileType), "Diablo 2 character save file");
-            settings.setValue(defaultApplicationRegistryPath, appPath + " \"%1\"");
-
-            QString registryAppPath = QString("Applications/%1").arg(binaryName);
-            settings.setValue(cmdOpenFileFormat.arg(registryAppPath), appPath + " \"%1\"");
-            settings.setValue(QString("%1/SupportedTypes/%2").arg(registryAppPath, characterExtensionWithDot), QString(""));
-
-            QSettings hklm("HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\App Paths", QSettings::NativeFormat);
-            hklm.setValue(defaultValueFormat.arg(binaryName), appPath);
-            hklm.setValue(QString("%1/Path").arg(binaryName), QDir::toNativeSeparators(qApp->applicationDirPath()));
-
-            SHChangeNotify(SHCNE_ASSOCCHANGED, 0, 0, 0);
-            INFO_BOX("file association changed");
-        }
-    }
-    else
-    {
-        IApplicationAssociationRegistration *pAAR;
-        HRESULT hr = CoCreateInstance(CLSID_ApplicationAssociationRegistration, NULL, CLSCTX_INPROC, __uuidof(IApplicationAssociationRegistration), (void **)&pAAR);
-        qDebug("CoCreateInstance result: %#x", hr);
-        if (SUCCEEDED(hr))
-        {
-            QStdWString appNameStdWstr = binaryName.toStdWString(), extensionWithDotStdWstr = characterExtensionWithDot.toStdWString();
-            LPCWSTR appNameWstr = appNameStdWstr.c_str(), extensionWithDotWstr = extensionWithDotStdWstr.c_str();
-            OutputDebugString(appNameWstr);
-            BOOL isDefault;
-            hr = pAAR->QueryAppIsDefault(extensionWithDotWstr, AT_FILEEXTENSION, AL_EFFECTIVE, appNameWstr, &isDefault); // returns 0x80070002 if app doesn't exist in registry
-            qDebug("\nQueryAppIsDefault result: %#x, is default: %d", hr, isDefault);
-            if (!isDefault)
-            {
-                LPWSTR defaultAppNameWstr;
-                hr = pAAR->QueryCurrentDefault(extensionWithDotWstr, AT_FILEEXTENSION, AL_EFFECTIVE, &defaultAppNameWstr);
-                OutputDebugString(defaultAppNameWstr);
-                qDebug("\nQueryCurrentDefault result: %#x", hr);
-
-                //hr = pAAR->SetAppAsDefault(appNameWstr, extensionWithDotWstr, AT_FILEEXTENSION);
-                //qDebug("SetAppAsDefault result: %#x", hr);
-                //if (SUCCEEDED(hr))
-                //    qDebug("app is default now");
-            }
-            pAAR->Release();
-        }
-    }
-#elif defined(Q_WS_MACX)
-    FSRef defaultAppRef = {{0}}; // shut clang up
-    CFStringRef characterExtensionCF = CFStringCreateWithCharacters(kCFAllocatorDefault, (const UniChar *)characterExtension.unicode(), characterExtension.length());
-    OSStatus err;
-    if ((err = LSGetApplicationForInfo(kLSUnknownType, kLSUnknownCreator, characterExtensionCF, kLSRolesAll, &defaultAppRef, NULL)) != noErr)
-    {
-        CFRelease(characterExtensionCF);
-        qDebug("error getting default app: %d", err);
-        return;
-    }
-
-    CFURLRef defaultAppUrl = CFURLCreateFromFSRef(NULL, &defaultAppRef);
-    CFStringRef defaultAppPath = CFURLCopyFileSystemPath(defaultAppUrl, kCFURLPOSIXPathStyle);
-    CFRelease(defaultAppUrl);
-
-    CFBundleRef mainBundle = CFBundleGetMainBundle();
-    CFURLRef bundleUrl = CFBundleCopyBundleURL(mainBundle);
-    CFStringRef bundlePath = CFURLCopyFileSystemPath(bundleUrl, kCFURLPOSIXPathStyle);
-    CFRelease(bundleUrl);
-
-    bool isDefault = CFStringCompare(bundlePath, defaultAppPath, 0) == kCFCompareEqualTo;
-    CFRelease(defaultAppPath);
-    CFRelease(bundlePath);
-    if (!isDefault)
-    {
-        CFArrayRef UTIs = UTTypeCreateAllIdentifiersForTag(kUTTagClassFilenameExtension, characterExtensionCF, nil);
-        CFStringRef bundleIdentifier = CFBundleGetIdentifier(mainBundle);
-        for (CFIndex i = 0, n = CFArrayGetCount(UTIs); i < n; ++i)
-        {
-            CFStringRef UTI = (CFStringRef)CFArrayGetValueAtIndex(UTIs, i);
-            CFShow(UTI);
-            if ((err = LSSetDefaultRoleHandlerForContentType(UTI, kLSRolesEditor, bundleIdentifier)) == noErr)
-                qDebug("app registered as default");
-            else
-                qDebug("error registering app as default: %d", err);
-        }
-        CFRelease(UTIs);
-    }
-    else
-        qDebug("app is default");
-
-    CFRelease(characterExtensionCF);
-#else
-#error Add code to check file association or remove/comment this line
-#endif
-}
-
 void MedianXLOfflineTools::loadData()
 {
     loadExpTable();
@@ -1289,7 +1174,7 @@ void MedianXLOfflineTools::addToRecentFiles(const QString &fileName)
     {
         if (_recentFilesList.length() == maxRecentFiles)
             _recentFilesList.removeLast();
-        _recentFilesList.prepend(fileName);
+        _recentFilesList.prepend(QDir::toNativeSeparators(fileName));
     }
     updateRecentFilesActions();
 }

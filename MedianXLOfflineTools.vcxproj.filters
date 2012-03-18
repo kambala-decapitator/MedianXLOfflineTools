@@ -198,6 +198,9 @@
     <ClCompile Include="GeneratedFiles\Template\moc_application.cpp">
       <Filter>Generated Files\Template</Filter>
     </ClCompile>
+    <ClCompile Include="medianxlofflinetools_win.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="colors.hpp">

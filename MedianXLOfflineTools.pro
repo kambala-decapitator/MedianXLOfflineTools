@@ -67,13 +67,27 @@ RESOURCES += resources/medianxlofflinetools.qrc
 TRANSLATIONS += resources/translations/medianxlofflinetools_ru.ts \
     resources/translations/medianxlofflinetools.ts
 
+OTHER_FILES += TODO.txt
 
+
+# QMAKE_CXXFLAGS += -std=c++0x
+
+
+win32 {
+    SOURCES += medianxlofflinetools_win.cpp
+    LIBS += -lshell32 \ # SHChangeNotify()
+        -lole32         # CoCreateInstance()
+    
+    RC_FILE = resources/win/medianxlofflinetools.rc
+}
 macx {
-    OTHER_FILES += resources/mac/Info.plist
+    SOURCES += medianxlofflinetools_mac.cpp
+    LIBS += -framework ApplicationServices
 
     ICON = resources/mac/icon.icns
     QMAKE_INFO_PLIST = resources/mac/Info.plist
-    LIBS += -framework ApplicationServices
+    
+    OTHER_FILES += resources/mac/Info.plist
 
     CONFIG(release, debug|release) {
         message(release build)
@@ -82,12 +96,3 @@ macx {
         QMAKE_MACOSX_DEPLOYMENT_TARGET = 10.5
     }
 }
-win32 {
-    RC_FILE = resources/win/medianxlofflinetools.rc
-    # LIBS += "c:/Program Files/Microsoft SDKs/Windows/v7.0A/Lib/shell32.lib"
-}
-
-# QMAKE_CXXFLAGS += -std=c++0x
-
-
-OTHER_FILES += TODO.txt
