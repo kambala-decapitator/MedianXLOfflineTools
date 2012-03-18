@@ -89,6 +89,7 @@ macx {
     
     OTHER_FILES += resources/mac/Info.plist
 
+    # release build is intended to be compiled on 10.6 (or even earlier) for PPC support
     CONFIG(release, debug|release) {
         message(release build)
         QMAKE_MAC_SDK = /Developer/SDKs/MacOSX10.5.sdk

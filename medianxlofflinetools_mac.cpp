@@ -35,7 +35,7 @@ void MedianXLOfflineTools::checkFileAssociations()
         {
             CFStringRef UTI = (CFStringRef)CFArrayGetValueAtIndex(UTIs, i);
             CFShow(UTI);
-            if ((err = LSSetDefaultRoleHandlerForContentType(UTI, kLSRolesEditor, bundleIdentifier)) == noErr)
+            if ((err = LSSetDefaultRoleHandlerForContentType(UTI, kLSRolesAll, bundleIdentifier)) == noErr)
                 qDebug("app registered as default");
             else
                 qDebug("error registering app as default: %d", err);
