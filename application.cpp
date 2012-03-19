@@ -7,10 +7,11 @@
 
 #ifdef Q_WS_MACX
 #include <QFileOpenEvent>
+#include <QTimer>
 #endif
 
 
-Application::Application(int &argc, char **argv) : QApplication(argc, argv)
+Application::Application(int &argc, char **argv) : QApplication(argc, argv), _mainWindow(0), _showWindowMacTimer(0)
 {
     setOrganizationName("kambala");
     setApplicationName("Median XL Offline Tools");
@@ -36,8 +37,19 @@ Application::Application(int &argc, char **argv) : QApplication(argc, argv)
     qtTranslator.load("qt_" + langManager.currentLocale, langManager.translationsPath);
     installTranslator(&qtTranslator);
 
-    _mainWindow = new MedianXLOfflineTools(argc > 1 ? argv[1] : QString());
-    _mainWindow->show();
+    if (argc > 1)
+        _param = argv[1];
+#ifdef Q_WS_MACX
+    if (_param.isEmpty())
+    {
+        _showWindowMacTimer = new QTimer;
+        _showWindowMacTimer->setSingleShot(true);
+        connect(_showWindowMacTimer, SIGNAL(timeout()), SLOT(createAndShowMainWindow()));
+        _showWindowMacTimer->start(0);
+    }
+    else
+#endif
+        createAndShowMainWindow();
 }
 
 Application::~Application()
@@ -45,39 +57,36 @@ Application::~Application()
     delete _mainWindow;
 }
 
-//#include <execinfo.h>
-//void print_trace (void)
-//{
-//    void *array[10];
-//    size_t size;
-//    char **strings;
-//    size_t i;
 
-//    size = backtrace (array, 50);
-//    strings = backtrace_symbols (array, size);
+void Application::createAndShowMainWindow()
+{
+    _mainWindow = new MedianXLOfflineTools(_param);
+#ifdef Q_WS_MACX
+    disableLionWindowRestoration();
+#endif
+    _mainWindow->show();
 
-//    CFStringRef s = CFStringCreateWithFormat(kCFAllocatorDefault, 0, CFSTR("Obtained %zd stack frames"), size);
-//    CFShow(s);
-//    CFRelease(s);
-//    //       printf ("Obtained %zd stack frames.\n", size);
-//    for (i = 0; i < size; i++)
-//    {
-//        //          printf ("%s\n", strings[i]);
-//        s = CFStringCreateWithCString(kCFAllocatorDefault, strings[i], kCFStringEncodingUTF8);
-//        CFShow(s);
-//        CFRelease(s);
-//    }
+    if (_showWindowMacTimer)
+        delete _showWindowMacTimer;
+}
 
-//    free (strings);
-//}
 
 #ifdef Q_WS_MACX
 bool Application::event(QEvent *ev)
 {
     if (ev->type() == QEvent::FileOpen)
     {
-//        print_trace();
-        _mainWindow->loadFile(static_cast<QFileOpenEvent *>(ev)->file());
+        _param = static_cast<QFileOpenEvent *>(ev)->file();
+        if (!_mainWindow)
+        {
+            _showWindowMacTimer->stop();
+            delete _showWindowMacTimer;
+            _showWindowMacTimer = 0;
+
+            createAndShowMainWindow();
+        }
+        else
+            _mainWindow->loadFile(_param);
         return true;
     }
     return QApplication::event(ev);

@@ -5,6 +5,7 @@
 
 
 class MedianXLOfflineTools;
+class QTimer;
 
 class Application : public QApplication
 {
@@ -19,8 +20,17 @@ protected:
     bool event(QEvent *ev);
 #endif
 
+private slots:
+    void createAndShowMainWindow();
+
 private:
     MedianXLOfflineTools *_mainWindow;
+    QString _param;
+#ifdef Q_WS_MACX
+    QTimer *_showWindowMacTimer;
+
+    void disableLionWindowRestoration();
+#endif
 };
 
 #endif // APPLICATION_H
