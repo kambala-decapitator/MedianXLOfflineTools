@@ -5,8 +5,13 @@
 #include <QFileInfo>
 #include <QSettings>
 
+#define WIN_VISTA_OR_LATER (defined(NTDDI_VISTA) || defined(_WIN32_WINNT_VISTA))
+#define WIN_7_OR_LATER     (defined(NTDDI_WIN7)  || defined(_WIN32_WINNT_WIN7))
+
 #include <Shlobj.h>
+#if WIN_VISTA_OR_LATER
 #include <Shobjidl.h>
+#endif
 
 
 bool isDefaultBeforeVista()
@@ -23,6 +28,7 @@ void MedianXLOfflineTools::checkFileAssociations()
     QSettings hklmSoftware("HKEY_LOCAL_MACHINE\\Software", QSettings::NativeFormat);
     if (QSysInfo::windowsVersion() < QSysInfo::WV_VISTA)
     {
+        return;
         // check key "Application" in HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.d2s\ (if present, contains some binary name)
         hklmSoftware.beginGroup("Classes");
         if (!hklmSoftware.value(defaultApplicationRegistryPath).toString().startsWith(appPath))
@@ -46,6 +52,7 @@ void MedianXLOfflineTools::checkFileAssociations()
         }
         hklmSoftware.endGroup();
     }
+#if WIN_VISTA_OR_LATER
     else
     {
         IApplicationAssociationRegistration *pAAR;
@@ -99,15 +106,15 @@ void MedianXLOfflineTools::checkFileAssociations()
 
             if (!isDefault && SUCCEEDED(hr))
             {
-                LPWSTR defaultAppNameWstr;
-                hr = pAAR->QueryCurrentDefault(extensionWithDotWstr, AT_FILEEXTENSION, AL_EFFECTIVE, &defaultAppNameWstr); // returns HRESULT_FROM_WIN32(ERROR_NO_ASSOCIATION) if no app is associated
-                if (SUCCEEDED(hr))
-                {
-                    OutputDebugString(defaultAppNameWstr);
-                    qDebug(" - default app");
-                }
-                else
-                    qDebug("QueryCurrentDefault() failed with result: %ld", HRESULT_CODE(hr));
+                //LPWSTR defaultAppNameWstr;
+                //hr = pAAR->QueryCurrentDefault(extensionWithDotWstr, AT_FILEEXTENSION, AL_EFFECTIVE, &defaultAppNameWstr); // returns HRESULT_FROM_WIN32(ERROR_NO_ASSOCIATION) if no app is associated
+                //if (SUCCEEDED(hr))
+                //{
+                //    OutputDebugString(defaultAppNameWstr);
+                //    qDebug(" - default app");
+                //}
+                //else
+                //    qDebug("QueryCurrentDefault() failed with result: %ld", HRESULT_CODE(hr));
 
                 hr = pAAR->SetAppAsDefault(appNameWstr, extensionWithDotWstr, AT_FILEEXTENSION); // may also return HRESULT_FROM_WIN32(ERROR_FILE_NOT_FOUND) if extension isn't registered
                 if (SUCCEEDED(hr))
@@ -121,4 +128,5 @@ void MedianXLOfflineTools::checkFileAssociations()
         else
             ERROR_BOX(tr("Error calling CoCreateInstance(): %1").arg(HRESULT_CODE(hr)));
     }
+#endif
 }

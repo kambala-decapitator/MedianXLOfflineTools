@@ -11,13 +11,15 @@
 #endif
 
 
-Application::Application(int &argc, char **argv) : QApplication(argc, argv), _mainWindow(0), _showWindowMacTimer(0)
+Application::Application(int &argc, char **argv) : QApplication(argc, argv), _mainWindow(0)
 {
     setOrganizationName("kambala");
     setApplicationName("Median XL Offline Tools");
     setApplicationVersion("0.3");
 #ifdef Q_WS_MACX
     setAttribute(Qt::AA_DontShowIconsInMenus);
+
+    _showWindowMacTimer = 0;
 #endif
 
     LanguageManager &langManager = LanguageManager::instance();
@@ -66,8 +68,10 @@ void Application::createAndShowMainWindow()
 #endif
     _mainWindow->show();
 
+#ifdef Q_WS_MACX
     if (_showWindowMacTimer)
         delete _showWindowMacTimer;
+#endif
 }
 
 
