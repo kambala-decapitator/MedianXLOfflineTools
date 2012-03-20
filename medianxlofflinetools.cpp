@@ -856,8 +856,8 @@ void MedianXLOfflineTools::loadBaseStats()
             QList<QByteArray> numbers = s.trimmed().split('\t');
             _baseStatsMap[static_cast<Enums::ClassName::ClassNameEnum>(numbers.at(0).toUInt())] = BaseStats
                 (
-                BaseStats::StatsAtStart (numbers.at(1).toInt(), numbers.at(2).toInt(), numbers.at(4).toInt(), numbers.at(3).toInt(), numbers.at(5).toInt()), // order is correct - energy value comes before vitality in the file
-                BaseStats::StatsPerLevel(numbers.at(6).toInt(), numbers.at(7).toInt(), numbers.at(8).toInt()),
+                BaseStats::StatsAtStart (numbers.at(1).toInt(), numbers.at(2).toInt(),  numbers.at(4).toInt(), numbers.at(3).toInt(), numbers.at(5).toInt()), // order is correct - energy value comes before vitality in the file
+                BaseStats::StatsPerLevel(numbers.at(6).toInt(), numbers.at(7).toInt(),  numbers.at(8).toInt()),
                 BaseStats::StatsPerPoint(numbers.at(9).toInt(), numbers.at(10).toInt(), numbers.at(11).toInt())
                 );
         }

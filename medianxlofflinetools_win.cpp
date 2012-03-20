@@ -5,11 +5,15 @@
 #include <QFileInfo>
 #include <QSettings>
 
-#define WIN_VISTA_OR_LATER (defined(NTDDI_VISTA) || defined(_WIN32_WINNT_VISTA))
-#define WIN_7_OR_LATER     (defined(NTDDI_WIN7)  || defined(_WIN32_WINNT_WIN7))
+#if defined(NTDDI_VISTA) || defined(_WIN32_WINNT_VISTA)
+#    define WIN_VISTA_OR_LATER
+#    if defined(NTDDI_WIN7) || defined(_WIN32_WINNT_WIN7)
+#        define WIN_7_OR_LATER
+#    endif
+#endif
 
 #include <Shlobj.h>
-#if WIN_VISTA_OR_LATER
+#ifdef WIN_VISTA_OR_LATER
 #include <Shobjidl.h>
 #endif
 
@@ -52,7 +56,7 @@ void MedianXLOfflineTools::checkFileAssociations()
         }
         hklmSoftware.endGroup();
     }
-#if WIN_VISTA_OR_LATER
+#ifdef WIN_VISTA_OR_LATER
     else
     {
         IApplicationAssociationRegistration *pAAR;
