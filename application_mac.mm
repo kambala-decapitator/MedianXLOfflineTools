@@ -1,8 +1,6 @@
 #include "application.h"
 #include "medianxlofflinetools.h"
 
-//#import <AppKit/NSWindow.h>
-
 
 #if MAC_OS_X_VERSION_MAX_ALLOWED < 1070
 @interface NSWindow (RestorationHackForOldSDKs)

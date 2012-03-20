@@ -1153,8 +1153,6 @@ void MedianXLOfflineTools::connectSignals()
 void MedianXLOfflineTools::updateRecentFilesActions()
 {
     ui.menuRecentCharacters->clear();
-    ui.menuRecentCharacters->setDisabled(_recentFilesList.isEmpty());
-
     for (int i = 0; i < _recentFilesList.length(); ++i)
     {
         QString filePath = _recentFilesList.at(i);
@@ -1163,6 +1161,12 @@ void MedianXLOfflineTools::updateRecentFilesActions()
         else
             _recentFilesList.removeAt(i--);
     }
+    ui.menuRecentCharacters->setDisabled(_recentFilesList.isEmpty());
+
+#ifdef Q_WS_MACX
+    extern void qt_mac_set_dock_menu(QMenu *);
+    qt_mac_set_dock_menu(ui.menuRecentCharacters);
+#endif
 }
 
 void MedianXLOfflineTools::addToRecentFiles(const QString &fileName)
@@ -1181,7 +1185,13 @@ void MedianXLOfflineTools::addToRecentFiles(const QString &fileName)
 
 QAction *MedianXLOfflineTools::createRecentFileAction(const QString &fileName, int index)
 {
+    // don't use numbers on Mac OS X because there're no mnemonics
+#ifdef Q_WS_MACX
+    Q_UNUSED(index);
+    QAction *recentFileAction = new QAction(QFileInfo(fileName).fileName(), this);
+#else
     QAction *recentFileAction = new QAction(QString("&%1 %2").arg(index).arg(QFileInfo(fileName).fileName()), this);
+#endif
     recentFileAction->setStatusTip(QDir::toNativeSeparators(fileName));
     connect(recentFileAction, SIGNAL(triggered()), SLOT(openRecentFile()));
     return recentFileAction;

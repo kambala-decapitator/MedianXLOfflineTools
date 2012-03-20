@@ -63,12 +63,11 @@ Application::~Application()
 void Application::createAndShowMainWindow()
 {
     _mainWindow = new MedianXLOfflineTools(_param);
-#ifdef Q_WS_MACX
-    disableLionWindowRestoration();
-#endif
     _mainWindow->show();
 
 #ifdef Q_WS_MACX
+    disableLionWindowRestoration();
+
     if (_showWindowMacTimer)
         delete _showWindowMacTimer;
 #endif
