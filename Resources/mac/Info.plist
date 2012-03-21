@@ -21,6 +21,8 @@
 	</array>
 	<key>CFBundleExecutable</key>
 	<string>@EXECUTABLE@</string>
+	<key>CFBundleGetInfoString</key>
+	<string>Copyright © kambala 2011-2012</string>
 	<key>CFBundleIconFile</key>
 	<string>@ICON@</string>
 	<key>CFBundleIdentifier</key>

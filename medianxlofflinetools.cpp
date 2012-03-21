@@ -105,8 +105,7 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *pare
 
 bool MedianXLOfflineTools::loadFile(const QString &charPath)
 {
-    // if double clicking, maybe there's an additional quote in the end of the string
-    bool unsupportedFile = !charPath.endsWith(characterExtensionWithDot)/*!charPath.contains(QRegExp(QString("\\.%1(\"?)$").arg(characterExtension)))*/;
+    bool unsupportedFile = !charPath.endsWith(characterExtensionWithDot);
     if (charPath.isEmpty() || unsupportedFile || !maybeSave())
     {
         if (!charPath.isEmpty() && unsupportedFile)

@@ -77,7 +77,7 @@ win32 {
     SOURCES += medianxlofflinetools_win.cpp
 
     LIBS += -lshell32 \ # SHChangeNotify()
-        -lole32         # CoCreateInstance()
+            -lole32     # CoCreateInstance()
     
     RC_FILE = resources/win/medianxlofflinetools.rc
 }
