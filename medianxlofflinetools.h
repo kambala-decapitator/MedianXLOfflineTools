@@ -43,7 +43,7 @@ protected:
 
 private slots:
     void switchLanguage(QAction *languageAction);
-    void wasModified(bool modified);
+    void setModified(bool modified);
 
     // file
     void loadCharacter();
@@ -106,10 +106,19 @@ private:
     bool _isLoaded;
     ResurrectPenaltyDialog::ResurrectionPenalty _resurrectionPenalty;
 
+    // all platform-specific methods are defined in medinaxlofflinetools_<platform>.cpp
+    // the following group of methods is Windows 7 specific
+#ifdef Q_WS_WIN32
+    void setAppUserModelID();
+    void syncWindowsTaskbarRecentFiles();
+    void removeFromWindowsRecentFiles(const QString &filePath);
+    void addToWindowsRecentFiles(const QString &filePath);
+#endif
+
 #if defined(Q_WS_WIN32) || defined(Q_WS_MACX)
     void checkFileAssociations();
 #else
-#error Place implementation to check file association to e.g. medianxlofflinetools_linux.cpp or comment this line
+#error Place implementation to check file association to e.g. medianxlofflinetools_linux.cpp and remove #ifdefs in constructor, or comment this line
 #endif
 
     void loadData();

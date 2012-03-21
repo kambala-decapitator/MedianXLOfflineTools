@@ -29,18 +29,27 @@
 
 #ifndef QT_NO_DEBUG
 #include <QDebug>
+#include <QDate>
 #endif
 
 #include <cmath>
 
 
-static const QString lastSavePathKey("lastSavePath"), releaseDate("24.03.2012"), backupExtension("bak"), readonlyCss("background-color: rgb(227, 227, 227)");
+// additional defines
+
+#ifdef QT_NO_DEBUG
+#define RELEASE_DATE "31.03.2012"
+#else
+#define RELEASE_DATE QDate::currentDate().toString("dd.MM.yyyy") // :)
+#endif
 
 //#define MAKE_HC
 //#define ENABLE_PERSONALIZE
 
 
 // static const
+
+static const QString lastSavePathKey("lastSavePath"), backupExtension("bak"), readonlyCss("background-color: rgb(227, 227, 227)");
 
 const QString MedianXLOfflineTools::compoundFormat("%1, %2");
 const QString MedianXLOfflineTools::characterExtension("d2s");
@@ -61,16 +70,30 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *pare
 {
     ui.setupUi(this);
 
+#ifdef Q_WS_WIN32
+    setAppUserModelID(); // is actually used only in Windows 7 and later
+#endif
+
+#if defined(Q_WS_WIN32) || defined(Q_WS_MACX)
     checkFileAssociations();
+#endif
     loadData();
     createLanguageMenu();
     createLayout();
     loadSettings();
     fillMaps();
     connectSignals();
+
+#ifdef Q_WS_WIN32
+    syncWindowsTaskbarRecentFiles(); // is actually used only in Windows 7 and later
+#endif
     
     ui.actionFindNext->setShortcut(QKeySequence::FindNext);
     ui.actionFindPrevious->setShortcut(QKeySequence::FindPrevious);
+
+    // TODO: remove when implementing export info
+    ui.menuExport->removeAction(ui.actionExportCharacterInfo);
+    ui.mainToolBar->removeAction(ui.actionExportCharacterInfo);
 
     if (!cmdPath.isEmpty())
         loadFile(cmdPath);
@@ -83,8 +106,13 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *pare
 bool MedianXLOfflineTools::loadFile(const QString &charPath)
 {
     // if double clicking, maybe there's an additional quote in the end of the string
-    if (charPath.isEmpty() || /*!charPath.endsWith(characterExtensionWithDot)*/!charPath.contains(QRegExp(QString("\\.%1(\"?)$").arg(characterExtension))) || !maybeSave())
+    bool unsupportedFile = !charPath.endsWith(characterExtensionWithDot)/*!charPath.contains(QRegExp(QString("\\.%1(\"?)$").arg(characterExtension)))*/;
+    if (charPath.isEmpty() || unsupportedFile || !maybeSave())
+    {
+        if (!charPath.isEmpty() && unsupportedFile)
+            ERROR_BOX(tr("'%1' files are not supported", "param is file extension").arg(charPath.right(4)));
         return false;
+    }
 
     bool result;
     if ((result = processSaveFile(charPath)))
@@ -136,10 +164,11 @@ void MedianXLOfflineTools::switchLanguage(QAction *languageAction)
     }
 }
 
-void MedianXLOfflineTools::wasModified(bool modified)
+void MedianXLOfflineTools::setModified(bool modified)
 {
     setWindowModified(modified);
     ui.actionReloadCharacter->setEnabled(modified);
+    ui.actionSaveCharacter->setEnabled(modified);
 }
 
 void MedianXLOfflineTools::loadCharacter()
@@ -411,7 +440,7 @@ void MedianXLOfflineTools::saveCharacter()
             }
 
             _charPath = saveFileName;
-            wasModified(false);
+            setModified(false);
             loadFile(_charPath); // update all UI at once by reloading the file
 
             INFO_BOX(tr("File '%1' successfully saved!").arg(QDir::toNativeSeparators(saveFileName)));
@@ -447,7 +476,7 @@ void MedianXLOfflineTools::statChanged(int newValue)
         qApp->sendEvent(senderSpinBox, &event);
 
         updateTableStats(_baseStatsMap[CharacterInfo::instance().basicInfo.classCode].statsPerPoint, diff, senderSpinBox);
-        wasModified(true);
+        setModified(true);
     }
 }
 
@@ -460,7 +489,7 @@ void MedianXLOfflineTools::respecStats()
         _spinBoxesStatsMap[statCode]->setValue(baseStat);
     }
     ui.statusBar->clearMessage();
-    wasModified(true);
+    setModified(true);
 }
 
 void MedianXLOfflineTools::respecSkills(bool shouldRespec)
@@ -468,7 +497,7 @@ void MedianXLOfflineTools::respecSkills(bool shouldRespec)
     quint16 skills = CharacterInfo::instance().basicInfo.totalSkillPoints;
     ui.freeSkillPointsLineEdit->setText(QString::number(shouldRespec ? skills : CharacterInfo::instance().basicInfo.statsDynamicData.property("FreeSkillPoints").toUInt()));
     updateMaxCompoundStatusTip(ui.freeSkillPointsLineEdit, skills, shouldRespec ? 0 : skills - CharacterInfo::instance().basicInfo.statsDynamicData.property("FreeSkillPoints").toUInt());
-    wasModified(true);
+    setModified(true);
 }
 
 void MedianXLOfflineTools::rename()
@@ -479,7 +508,7 @@ void MedianXLOfflineTools::rename()
     {
         newName = renameWidget.name();
         QD2CharRenamer::updateNamePreview(ui.charNamePreview, newName);
-        wasModified(true);
+        setModified(true);
     }
 }
 
@@ -582,14 +611,14 @@ void MedianXLOfflineTools::resurrect()
             break;
         }
 
-        wasModified(true);
+        setModified(true);
     }
 }
 
 void MedianXLOfflineTools::convertToSoftcore(bool isSoftcore)
 {
     updateCharacterTitle(!isSoftcore);
-    wasModified(true);
+    setModified(true);
 }
 
 //void MedianXLOfflineTools::currentDifficultyChanged(int newDifficulty)
@@ -647,7 +676,7 @@ void MedianXLOfflineTools::showItems(bool activate /*= true*/)
         connect(_itemsDialog->tabWidget(), SIGNAL(currentChanged(int)), SLOT(itemStorageTabChanged(int)));
         connect(_itemsDialog, SIGNAL(cubeDeleted(bool)), ui.actionGiveCube, SLOT(setEnabled(bool)));
         connect(_itemsDialog, SIGNAL(closing(bool)), ui.menuGoToPage, SLOT(setDisabled(bool)));
-        connect(_itemsDialog, SIGNAL(itemsChanged(bool)), SLOT(wasModified(bool)));
+        connect(_itemsDialog, SIGNAL(itemsChanged(bool)), SLOT(setModified(bool)));
         _itemsDialog->show();
 
         if (!activate)
@@ -714,7 +743,7 @@ void MedianXLOfflineTools::giveCube()
         _itemsDialog->updateItems(plugyStashesExistenceHash);
 
     ui.actionGiveCube->setDisabled(true);
-    wasModified(true);
+    setModified(true);
     INFO_BOX(itemStorageAndCoordinatesString(tr("Cube has been stored in %1 at (%2,%3)"), cube));
 }
 
@@ -737,7 +766,7 @@ void MedianXLOfflineTools::aboutApp()
     aboutBox.setIconPixmap(windowIcon().pixmap(64));
     aboutBox.setTextFormat(Qt::RichText);
     QString appFullName = qApp->applicationName() + " " + qApp->applicationVersion();
-    aboutBox.setText(QString("<b>%1</b>%2").arg(appFullName, htmlLineBreak) + tr("Released: %1").arg(releaseDate));
+    aboutBox.setText(QString("<b>%1</b>%2").arg(appFullName, htmlLineBreak) + tr("Released: %1").arg(RELEASE_DATE));
     QString email("decapitator@ukr.net");
     aboutBox.setInformativeText(
         tr("<i>Author:</i> Filipenkov Andrey (<b>kambala</b>)") + QString("%1<i>ICQ:</i> 287764961%1<i>E-mail:</i> <a href=\"mailto:%2?subject=%3\">%2</a>%1%1").arg(htmlLineBreak, email, appFullName) +
@@ -1177,7 +1206,14 @@ void MedianXLOfflineTools::addToRecentFiles(const QString &fileName)
     else
     {
         if (_recentFilesList.length() == maxRecentFiles)
+        {
+#ifdef Q_WS_WIN32
+            QString removedFilePath = _recentFilesList.takeLast();
+            removeFromWindowsRecentFiles(removedFilePath);
+#else
             _recentFilesList.removeLast();
+#endif
+        }
         _recentFilesList.prepend(QDir::toNativeSeparators(fileName));
     }
     updateRecentFilesActions();
@@ -1547,13 +1583,14 @@ bool MedianXLOfflineTools::processSaveFile(const QString &charPath)
         ERROR_BOX(corruptedItems.trimmed());
     charInfo.itemsEndOffset = inputDataStream.device()->pos();
 
+    // TODO: read corpse data immediately
     const int itemListTerminatorSize = 4, maxCorpses = 15;
     char itemListTerminator[itemListTerminatorSize] = {'J', 'M', 0, 0};
     int itemListTerminatorOffset;
     charInfo.items.corpses = 0;
     do
     {
-        itemListTerminatorOffset = _saveFileContents.indexOf(QByteArray(itemListTerminator, itemListTerminatorSize), charItemsOffset);
+        itemListTerminatorOffset = _saveFileContents.indexOf(QByteArray(itemListTerminator, itemListTerminatorSize), charInfo.itemsEndOffset);
         if (itemListTerminatorOffset != -1)
             break;
         itemListTerminator[2] = ++charInfo.items.corpses;
@@ -1800,8 +1837,8 @@ void MedianXLOfflineTools::clearUI()
     foreach (QGroupBox *groupBox, groupBoxes)
         groupBox->setDisabled(true);
 
-    QList<QAction *> actions = QList<QAction *>() << ui.actionReloadCharacter << ui.actionRespecStats << ui.actionRespecSkills << ui.actionActivateWaypoints << ui.actionSaveCharacter << ui.actionRename
-                                                  << ui.actionReloadCharacter << ui.actionFind << ui.actionFindNext << ui.actionFindPrevious << ui.actionShowItems << ui.actionSkillPlan << ui.actionExportCharacterInfo;
+    QList<QAction *> actions = QList<QAction *>() << ui.actionReloadCharacter << ui.actionSaveCharacter << ui.actionRespecStats << ui.actionRespecSkills << ui.actionActivateWaypoints << ui.actionRename
+                                                  << ui.actionFind << ui.actionFindNext << ui.actionFindPrevious << ui.actionShowItems << ui.actionSkillPlan << ui.actionExportCharacterInfo;
     foreach (QAction *action, actions)
         action->setDisabled(true);
 
@@ -1823,7 +1860,7 @@ void MedianXLOfflineTools::updateUI()
 {
     clearUI();
 
-    QList<QAction *> actions = QList<QAction *>() << ui.actionRespecStats << ui.actionRespecSkills << ui.actionActivateWaypoints << ui.actionSaveCharacter
+    QList<QAction *> actions = QList<QAction *>() << ui.actionRespecStats << ui.actionRespecSkills << ui.actionActivateWaypoints
                                                   << ui.actionRename << ui.actionSkillPlan << ui.actionExportCharacterInfo;
     foreach (QAction *action, actions)
         action->setEnabled(true);
@@ -2191,7 +2228,7 @@ bool MedianXLOfflineTools::maybeSave()
         case QMessageBox::Cancel:
             return false;
         case QMessageBox::Discard:
-            wasModified(false);
+            setModified(false);
             break;
         default:
             break;

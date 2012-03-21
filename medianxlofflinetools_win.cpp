@@ -18,6 +18,82 @@
 #endif
 
 
+// recent files
+
+void MedianXLOfflineTools::setAppUserModelID()
+{
+#ifdef WIN_7_OR_LATER
+    HRESULT hr;
+    if (SUCCEEDED((hr = SetCurrentProcessExplicitAppUserModelID(QString("%1.%2").arg(QString(qApp->applicationName()).remove(' '), characterExtension).toStdWString().c_str()))))
+        qDebug("SetCurrentProcessExplicitAppUserModelID success");
+    else
+        qDebug("SetCurrentProcessExplicitAppUserModelID error: %d", HRESULT_CODE(hr));
+#endif
+}
+
+void MedianXLOfflineTools::syncWindowsTaskbarRecentFiles()
+{
+#ifdef WIN_7_OR_LATER
+    IApplicationDocumentLists *pADL;
+    HRESULT hr = CoCreateInstance(CLSID_ApplicationDocumentLists, NULL, CLSCTX_INPROC, IID_PPV_ARGS(&pADL));
+    if (SUCCEEDED(hr))
+    {
+        IObjectArray *pRecentItemsArray;
+        if (SUCCEEDED(hr = pADL->GetList(ADLT_RECENT, maxRecentFiles, IID_PPV_ARGS(&pRecentItemsArray))))
+        {
+            UINT n;
+            if (SUCCEEDED(hr = pRecentItemsArray->GetCount(&n)))
+            {
+                qDebug("got %u recent items", n);
+                for (int i = 0; i < n; ++i)
+                {
+                    IShellLink *psi;
+                    if (SUCCEEDED(hr = pRecentItemsArray->GetAt(i, IID_PPV_ARGS(&psi))))
+                    {
+                        TCHAR path[MAX_PATH];
+                        if (SUCCEEDED(psi->GetPath(path, MAX_PATH, NULL, 0)))
+                            OutputDebugString(path);
+                        else
+                            qDebug("Error calling GetPath(): %d", HRESULT_CODE(hr));
+                    }
+                }
+            }
+        }
+        else
+            qDebug("Error calling GetList(): %d", HRESULT_CODE(hr));
+
+        pADL->Release();
+    }
+    else
+        qDebug("Error calling CoCreateInstance(CLSID_ApplicationDocumentLists): %d", HRESULT_CODE(hr));
+#endif
+}
+
+void MedianXLOfflineTools::removeFromWindowsRecentFiles(const QString &filePath)
+{
+#ifdef WIN_7_OR_LATER
+    IApplicationDestinations *pAD;
+    HRESULT hr = CoCreateInstance(CLSID_ApplicationDestinations, NULL, CLSCTX_INPROC, IID_PPV_ARGS(&pAD));
+    if (SUCCEEDED(hr))
+    {
+
+        pAD->Release();
+    }
+    else
+        qDebug("Error calling CoCreateInstance(CLSID_ApplicationDestinations): %d", HRESULT_CODE(hr));
+#endif
+}
+
+void MedianXLOfflineTools::addToWindowsRecentFiles(const QString &filePath)
+{
+#ifdef WIN_7_OR_LATER
+
+#endif
+}
+
+
+// file associations
+
 bool isDefaultBeforeVista()
 {
     return true;
@@ -130,7 +206,7 @@ void MedianXLOfflineTools::checkFileAssociations()
             pAAR->Release();
         }
         else
-            ERROR_BOX(tr("Error calling CoCreateInstance(): %1").arg(HRESULT_CODE(hr)));
+            ERROR_BOX(tr("Error calling CoCreateInstance(CLSID_ApplicationAssociationRegistration): %1").arg(HRESULT_CODE(hr)));
     }
 #endif
 }

@@ -6,7 +6,7 @@
 
 TARGET = MedianXLOfflineTools
 TEMPLATE = app
-VERSION = 0.3
+VERSION = 0.2.1
 
 
 SOURCES += main.cpp \
@@ -86,8 +86,8 @@ macx {
 
     OBJECTIVE_SOURCES += application_mac.mm
 
-    LIBS += -framework ApplicationServices \
-            -framework AppKit
+    LIBS += -framework ApplicationServices \ # LSGetApplicationForInfo() 
+            -framework AppKit                # NSWindow calls to disable Lion window resoration
 
     ICON = resources/mac/icon.icns
     QMAKE_INFO_PLIST = resources/mac/Info.plist

@@ -179,7 +179,11 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
     }
 
     if (!allProps.isEmpty())
+    {
+        if (!item->isIdentified)
+            itemDescription += htmlStringFromDiabloColorString(tr("[Unidentified]"), Red) + htmlLineBreak;
         itemDescription += propertiesToHtml(allProps);
+    }
     else if (ItemDataBase::isGenericSocketable(item))
     {
         static const QStringList gearNames = QStringList() << tr("Armor") << tr("Shield") << tr("Weapon");

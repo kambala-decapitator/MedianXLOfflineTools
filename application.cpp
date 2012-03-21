@@ -15,7 +15,7 @@ Application::Application(int &argc, char **argv) : QApplication(argc, argv), _ma
 {
     setOrganizationName("kambala");
     setApplicationName("Median XL Offline Tools");
-    setApplicationVersion("0.3");
+    setApplicationVersion("0.2.1");
 #ifdef Q_WS_MACX
     setAttribute(Qt::AA_DontShowIconsInMenus);
 

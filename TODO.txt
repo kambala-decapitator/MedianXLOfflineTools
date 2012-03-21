@@ -1,7 +1,11 @@
+v0.2.1:
+- maybe win7 taskbar and mac dock menu support to open recent files
+- integrate QtSingleApplication
+- finish file associations (dialog, options, etc.)
+
 v0.3:
 - export item to bbcode/html
 - generate some bbcode/html report about character and/or plugy stashes contents
-- maybe win7 taskbar and mac dock menu support to open recent files
 - mass disenchant (dialog and multiple selection) - if not too time consuming
 - show experince bar and completion of current level in %
 - completed skill/stat quests
@@ -24,7 +28,7 @@ future versions:
 - new data structure for items - QMap with item storage as a key
 - sort stashes
 - affix rlvl (and maybe names - then modify help text) support
-- drag & drop
+- items drag & drop
 - merc items
 - creation of plugy stashes
 - nice display of property 'Adds x-y ... damage'

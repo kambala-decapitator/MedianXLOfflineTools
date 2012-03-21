@@ -113,6 +113,9 @@ QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item)
 
     if (!allProps.isEmpty())
     {
+        if (!item->isIdentified)
+            itemDescription += "\n" + tr("[Unidentified]");
+
         QMap<quint8, ItemPropertyDisplay> propsDisplayMap;
         constructPropertyStrings(allProps, &propsDisplayMap);
         QMap<quint8, ItemPropertyDisplay>::const_iterator iter = propsDisplayMap.constEnd();

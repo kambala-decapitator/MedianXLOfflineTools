@@ -269,13 +269,13 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
     {
         QList<QAction *> actions;
 
-        QMenu *menuExport = new QMenu(tr("Export as"), _itemsView);
-        menuExport->addActions(QList<QAction *>() << _itemActions[ExportBbCode] << _itemActions[ExportHtml]);
-        actions << menuExport->menuAction();
+        //QMenu *menuExport = new QMenu(tr("Export as"), _itemsView);
+        //menuExport->addActions(QList<QAction *>() << _itemActions[ExportBbCode] << _itemActions[ExportHtml]);
+        //actions << menuExport->menuAction();
 
-        QAction *separator = new QAction(_itemsView);
-        separator->setSeparator(true);
-        actions << separator;
+        //QAction *separator = new QAction(_itemsView);
+        //separator->setSeparator(true);
+        //actions << separator;
 
         if (item->quality == Enums::ItemQuality::Set || (item->quality == Enums::ItemQuality::Unique && !ItemDataBase::isUberCharm(item)))
         {
@@ -300,7 +300,7 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
         if (_propertiesWidget->hasMysticOrbs())
             actions << _itemActions[RemoveMO];
 
-        separator = new QAction(_itemsView);
+        QAction *separator = new QAction(_itemsView);
         separator->setSeparator(true);
         actions << separator << _itemActions[Delete];
 
@@ -490,19 +490,19 @@ void ItemsPropertiesSplitter::removeItemFromList(ItemInfo *item, bool currentSto
 
 void ItemsPropertiesSplitter::createItemActions()
 {
-    QAction *actionBbCode = new QAction("BBCode", _itemsView);
-    actionBbCode->setShortcut(QKeySequence("Ctrl+E"));
-    actionBbCode->setObjectName("bbcode");
-    connect(actionBbCode, SIGNAL(triggered()), SLOT(exportText()));
-    _itemsView->addAction(actionBbCode);
-    _itemActions[ExportBbCode] = actionBbCode;
+    //QAction *actionBbCode = new QAction("BBCode", _itemsView);
+    //actionBbCode->setShortcut(QKeySequence("Ctrl+E"));
+    //actionBbCode->setObjectName("bbcode");
+    //connect(actionBbCode, SIGNAL(triggered()), SLOT(exportText()));
+    //_itemsView->addAction(actionBbCode);
+    //_itemActions[ExportBbCode] = actionBbCode;
 
-    QAction *actionHtml = new QAction("HTML", _itemsView);
-    actionHtml->setShortcut(QKeySequence("Alt+E"));
-    actionHtml->setObjectName("html");
-    connect(actionHtml, SIGNAL(triggered()), SLOT(exportText()));
-    _itemsView->addAction(actionHtml);
-    _itemActions[ExportHtml] = actionHtml;
+    //QAction *actionHtml = new QAction("HTML", _itemsView);
+    //actionHtml->setShortcut(QKeySequence("Alt+E"));
+    //actionHtml->setObjectName("html");
+    //connect(actionHtml, SIGNAL(triggered()), SLOT(exportText()));
+    //_itemsView->addAction(actionHtml);
+    //_itemActions[ExportHtml] = actionHtml;
 
     QAction *actionSol = new QAction(QIcon(ResourcePathManager::pathForImageName("sigil1b")), tr("Signet of Learning"), _itemsView);
     actionSol->setShortcut(QKeySequence("Ctrl+D"));

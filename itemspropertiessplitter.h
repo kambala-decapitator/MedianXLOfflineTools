@@ -74,11 +74,11 @@ private slots:
 private:
     enum ItemAction
     {
-        ExportBbCode,
-        ExportHtml,
+        //ExportBbCode,
+        //ExportHtml,
         DisenchantShards,
         DisenchantSignet,
-        Unsocket,
+        //Unsocket,
         RemoveMO,
         Delete
     };
