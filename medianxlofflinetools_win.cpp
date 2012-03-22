@@ -20,11 +20,26 @@
 
 // recent files
 
+const QString &MedianXLOfflineTools::progID()
+{
+    static const QString progId = QString("%1.%2").arg(qApp->applicationName().remove(' '), characterExtension);
+    return progId;
+}
+
+LPCWSTR MedianXLOfflineTools::appUserModelID()
+{
+    static QStdWString appUserModelId = progID().toStdWString();
+    return appUserModelId.c_str();
+}
+
 void MedianXLOfflineTools::setAppUserModelID()
 {
 #ifdef WIN_7_OR_LATER
+    if (QSysInfo::windowsVersion() < QSysInfo::WV_WINDOWS7)
+        return;
+
     HRESULT hr;
-    if (SUCCEEDED((hr = SetCurrentProcessExplicitAppUserModelID(QString("%1.%2").arg(QString(qApp->applicationName()).remove(' '), characterExtension).toStdWString().c_str()))))
+    if (SUCCEEDED((hr = SetCurrentProcessExplicitAppUserModelID(appUserModelID()))))
         qDebug("SetCurrentProcessExplicitAppUserModelID success");
     else
         qDebug("SetCurrentProcessExplicitAppUserModelID error: %d", HRESULT_CODE(hr));
@@ -34,60 +49,157 @@ void MedianXLOfflineTools::setAppUserModelID()
 void MedianXLOfflineTools::syncWindowsTaskbarRecentFiles()
 {
 #ifdef WIN_7_OR_LATER
+    if (QSysInfo::windowsVersion() < QSysInfo::WV_WINDOWS7)
+        return;
+
+    qDebug("sync recent");
     IApplicationDocumentLists *pADL;
     HRESULT hr = CoCreateInstance(CLSID_ApplicationDocumentLists, NULL, CLSCTX_INPROC, IID_PPV_ARGS(&pADL));
     if (SUCCEEDED(hr))
     {
-        IObjectArray *pRecentItemsArray;
-        if (SUCCEEDED(hr = pADL->GetList(ADLT_RECENT, maxRecentFiles, IID_PPV_ARGS(&pRecentItemsArray))))
+        if (SUCCEEDED(hr = pADL->SetAppID(appUserModelID())))
         {
-            UINT n;
-            if (SUCCEEDED(hr = pRecentItemsArray->GetCount(&n)))
+            IObjectArray *pRecentItemsArray;
+            if (SUCCEEDED(hr = pADL->GetList(ADLT_RECENT, /*maxRecentFiles*/0, IID_PPV_ARGS(&pRecentItemsArray))))
             {
-                qDebug("got %u recent items", n);
-                for (int i = 0; i < n; ++i)
+                UINT n;
+                if (SUCCEEDED(hr = pRecentItemsArray->GetCount(&n)))
                 {
-                    IShellLink *psi;
-                    if (SUCCEEDED(hr = pRecentItemsArray->GetAt(i, IID_PPV_ARGS(&psi))))
+                    qDebug("got %u recent items", n);
+                    QStringList recentFilesForTaskbar(_recentFilesList);
+                    for (UINT i = 0; i < n; ++i)
                     {
-                        TCHAR path[MAX_PATH];
-                        if (SUCCEEDED(psi->GetPath(path, MAX_PATH, NULL, 0)))
-                            OutputDebugString(path);
+                        IShellItem *pShellItem;
+                        if (SUCCEEDED(hr = pRecentItemsArray->GetAt(i, IID_PPV_ARGS(&pShellItem))))
+                        {
+                            LPWSTR path = NULL;
+                            if (SUCCEEDED(hr = pShellItem->GetDisplayName(SIGDN_FILESYSPATH, &path)))
+                                recentFilesForTaskbar.removeOne(QString::fromStdWString(path));
+                            else
+                                qDebug("Error calling GetPath(): %d", HRESULT_CODE(hr));
+                            CoTaskMemFree(path);
+                        }
                         else
-                            qDebug("Error calling GetPath(): %d", HRESULT_CODE(hr));
+                            qDebug("Error calling GetAt(): %d", HRESULT_CODE(hr));
                     }
+
+                    foreach (const QString &recentFile, recentFilesForTaskbar)
+                        addToWindowsRecentFiles(recentFile);
                 }
+                else
+                    qDebug("Error calling GetCount(): %d", HRESULT_CODE(hr));
             }
+            else
+                qDebug("Error calling GetList(): %d", HRESULT_CODE(hr));
         }
         else
-            qDebug("Error calling GetList(): %d", HRESULT_CODE(hr));
+            qDebug("Error calling SetAppID(): %d", HRESULT_CODE(hr));
 
         pADL->Release();
     }
     else
         qDebug("Error calling CoCreateInstance(CLSID_ApplicationDocumentLists): %d", HRESULT_CODE(hr));
+    qDebug("-----");
 #endif
 }
 
 void MedianXLOfflineTools::removeFromWindowsRecentFiles(const QString &filePath)
 {
 #ifdef WIN_7_OR_LATER
-    IApplicationDestinations *pAD;
-    HRESULT hr = CoCreateInstance(CLSID_ApplicationDestinations, NULL, CLSCTX_INPROC, IID_PPV_ARGS(&pAD));
+    if (QSysInfo::windowsVersion() < QSysInfo::WV_WINDOWS7)
+        return;
+
+    qDebug("remove from recent");
+    IApplicationDocumentLists *pADL;
+    HRESULT hr = CoCreateInstance(CLSID_ApplicationDocumentLists, NULL, CLSCTX_INPROC, IID_PPV_ARGS(&pADL));
     if (SUCCEEDED(hr))
     {
+        if (SUCCEEDED(hr = pADL->SetAppID(appUserModelID())))
+        {
+            IObjectArray *pRecentItemsArray;
+            if (SUCCEEDED(hr = pADL->GetList(ADLT_RECENT, /*maxRecentFiles*/0, IID_PPV_ARGS(&pRecentItemsArray))))
+            {
+                UINT n;
+                if (SUCCEEDED(hr = pRecentItemsArray->GetCount(&n)))
+                {
+                    qDebug("got %u recent items", n);
+                    for (UINT i = 0; i < n; ++i)
+                    {
+                        IShellItem *pShellItem;
+                        if (SUCCEEDED(hr = pRecentItemsArray->GetAt(i, IID_PPV_ARGS(&pShellItem))))
+                        {
+                            LPWSTR path = NULL;
+                            if (SUCCEEDED(hr = pShellItem->GetDisplayName(SIGDN_FILESYSPATH, &path)))
+                            {
+                                if (!wcscmp(path, filePath.toStdWString().c_str()))
+                                {
+                                    IApplicationDestinations *pAD;
+                                    HRESULT hr = CoCreateInstance(CLSID_ApplicationDestinations, NULL, CLSCTX_INPROC, IID_PPV_ARGS(&pAD));
+                                    if (SUCCEEDED(hr))
+                                    {
+                                        if (SUCCEEDED(hr = pAD->SetAppID(appUserModelID())))
+                                        {
+                                            if (SUCCEEDED(hr = pAD->RemoveDestination(pShellItem)))
+                                                qDebug("successfully removed");
+                                            else
+                                                qDebug("Error calling RemoveDestination(): %d", HRESULT_CODE(hr));
+                                        }
+                                        else
+                                            qDebug("Error calling SetAppID(): %d", HRESULT_CODE(hr));
 
-        pAD->Release();
+                                        pAD->Release();
+                                    }
+                                    else
+                                        qDebug("Error calling CoCreateInstance(CLSID_ApplicationDestinations): %d", HRESULT_CODE(hr));
+
+                                    break;
+                                }
+                            }
+                            else
+                                qDebug("Error calling GetDisplayName(): %d", HRESULT_CODE(hr));
+
+                            CoTaskMemFree(path);
+                        }
+                        else
+                            qDebug("Error calling GetAt(): %d", HRESULT_CODE(hr));
+                    }
+                }
+                else
+                    qDebug("Error calling GetCount(): %d", HRESULT_CODE(hr));
+            }
+            else
+                qDebug("Error calling GetList(): %d", HRESULT_CODE(hr));
+        }
+        else
+            qDebug("Error calling SetAppID(): %d", HRESULT_CODE(hr));
+
+        pADL->Release();
     }
     else
-        qDebug("Error calling CoCreateInstance(CLSID_ApplicationDestinations): %d", HRESULT_CODE(hr));
+        qDebug("Error calling CoCreateInstance(CLSID_ApplicationDocumentLists): %d", HRESULT_CODE(hr));
+    qDebug("-----");
 #endif
+    
 }
 
 void MedianXLOfflineTools::addToWindowsRecentFiles(const QString &filePath)
 {
 #ifdef WIN_7_OR_LATER
+    if (QSysInfo::windowsVersion() < QSysInfo::WV_WINDOWS7)
+        return;
 
+    qDebug("add '%s' to recent", qPrintable(filePath));
+    IShellItem *pShellItem;
+    HRESULT hr = SHCreateItemFromParsingName(filePath.toStdWString().c_str(), NULL, IID_PPV_ARGS(&pShellItem));
+    if (SUCCEEDED(hr))
+    {
+        SHARDAPPIDINFO info;
+        info.psi = pShellItem;
+        info.pszAppID = appUserModelID();
+        SHAddToRecentDocs(SHARD_APPIDINFO, &info);
+    }
+    else
+        qDebug("Error calling SHCreateItemFromParsingName(): %d", HRESULT_CODE(hr));
 #endif
 }
 
@@ -103,7 +215,7 @@ void MedianXLOfflineTools::checkFileAssociations()
 {
     QString appPath = QDir::toNativeSeparators(qApp->applicationFilePath()), binaryName = QFileInfo(appPath).fileName(), defaultValueFormat("%1/."), cmdOpenFileFormat("%1/shell/open/command/.");
     QString registryAppPath = QString("Applications/%1").arg(binaryName), binaryPathWithParam = QString("\"%1\" \"%2\"").arg(appPath, "%1"); // "path/to/exe" "%1"
-    QString appName = qApp->applicationName(), progId = QString("%1.%2").arg(QString(appName).remove(' '), characterExtension), defaultApplicationRegistryPath = cmdOpenFileFormat.arg(progId);
+    QString defaultApplicationRegistryPath = cmdOpenFileFormat.arg(progID());
 
     QSettings hklmSoftware("HKEY_LOCAL_MACHINE\\Software", QSettings::NativeFormat);
     if (QSysInfo::windowsVersion() < QSysInfo::WV_VISTA)
@@ -114,12 +226,12 @@ void MedianXLOfflineTools::checkFileAssociations()
         if (!hklmSoftware.value(defaultApplicationRegistryPath).toString().startsWith(appPath))
         {
             // TODO: same code in Vista+ section
-            hklmSoftware.setValue(defaultValueFormat.arg(characterExtensionWithDot), progId);
-            hklmSoftware.setValue(defaultValueFormat.arg(progId), "Diablo 2 character save file");
+            hklmSoftware.setValue(defaultValueFormat.arg(characterExtensionWithDot), progID());
+            hklmSoftware.setValue(defaultValueFormat.arg(progID()), "Diablo 2 character save file");
             hklmSoftware.setValue(defaultApplicationRegistryPath, binaryPathWithParam);
 
             hklmSoftware.setValue(cmdOpenFileFormat.arg(registryAppPath), binaryPathWithParam);
-            hklmSoftware.setValue(QString("%1/SupportedTypes/%2").arg(registryAppPath, characterExtensionWithDot), QString(""));
+            hklmSoftware.setValue(QString("%1/SupportedTypes/%2").arg(registryAppPath, characterExtensionWithDot), QString("")); // empty string must be set, but not null string
             hklmSoftware.endGroup();
 
             hklmSoftware.beginGroup("Microsoft/Windows/CurrentVersion/App Paths");
@@ -139,6 +251,7 @@ void MedianXLOfflineTools::checkFileAssociations()
         HRESULT hr = CoCreateInstance(CLSID_ApplicationAssociationRegistration, NULL, CLSCTX_INPROC, IID_PPV_ARGS(&pAAR));
         if (SUCCEEDED(hr))
         {
+            QString appName = qApp->applicationName();
             QStdWString appNameStdWstr = appName.toStdWString(), extensionWithDotStdWstr = characterExtensionWithDot.toStdWString();
             LPCWSTR appNameWstr = appNameStdWstr.c_str(), extensionWithDotWstr = extensionWithDotStdWstr.c_str();
 
@@ -152,9 +265,9 @@ void MedianXLOfflineTools::checkFileAssociations()
 
                 // TODO: it's ugly copypaste from above
                 hklmSoftware.beginGroup("Classes");
-                hklmSoftware.setValue(defaultValueFormat.arg(characterExtensionWithDot), progId);
+                hklmSoftware.setValue(defaultValueFormat.arg(characterExtensionWithDot), progID());
 
-                hklmSoftware.setValue(defaultValueFormat.arg(progId), "Diablo 2 character save file");
+                hklmSoftware.setValue(defaultValueFormat.arg(progID()), "Diablo 2 character save file");
                 hklmSoftware.setValue(defaultApplicationRegistryPath, binaryPathWithParam);
 
                 hklmSoftware.setValue(cmdOpenFileFormat.arg(registryAppPath), binaryPathWithParam);
@@ -172,7 +285,7 @@ void MedianXLOfflineTools::checkFileAssociations()
                 hklmSoftware.beginGroup(appRegistryPath);
                 hklmSoftware.setValue("ApplicationName", appName);
                 hklmSoftware.setValue("ApplicationDescription", tr("Offline analogue of grig's Median XL Online Tools"));
-                hklmSoftware.setValue("FileAssociations/" + characterExtensionWithDot, progId);
+                hklmSoftware.setValue("FileAssociations/" + characterExtensionWithDot, progID());
                 hklmSoftware.endGroup();
 
                 hklmSoftware.setValue("RegisteredApplications/" + appName, "Software\\" + QDir::toNativeSeparators(appRegistryPath));

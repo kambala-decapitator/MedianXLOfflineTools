@@ -109,6 +109,8 @@ private:
     // all platform-specific methods are defined in medinaxlofflinetools_<platform>.cpp
     // the following group of methods is Windows 7 specific
 #ifdef Q_WS_WIN32
+    static const QString &progID();
+    static LPCWSTR appUserModelID();
     void setAppUserModelID();
     void syncWindowsTaskbarRecentFiles();
     void removeFromWindowsRecentFiles(const QString &filePath);

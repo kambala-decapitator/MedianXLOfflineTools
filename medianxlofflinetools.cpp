@@ -1199,7 +1199,18 @@ void MedianXLOfflineTools::updateRecentFilesActions()
 
 void MedianXLOfflineTools::addToRecentFiles(const QString &fileName)
 {
-    int index = _recentFilesList.indexOf(fileName);
+    QString nativeFileName = QDir::toNativeSeparators(fileName);
+    int index = _recentFilesList.indexOf(nativeFileName);
+#ifdef Q_WS_WIN32
+    // previous version didn't use native separators
+    if (index == -1)
+    {
+        index = _recentFilesList.indexOf(fileName);
+        if (index != -1)
+            _recentFilesList[index] = nativeFileName;
+    }
+#endif
+
     if (index != -1) // it's already in the list
         _recentFilesList.move(index, 0);
     else
@@ -1207,14 +1218,16 @@ void MedianXLOfflineTools::addToRecentFiles(const QString &fileName)
         if (_recentFilesList.length() == maxRecentFiles)
         {
 #ifdef Q_WS_WIN32
-            QString removedFilePath = _recentFilesList.takeLast();
-            removeFromWindowsRecentFiles(removedFilePath);
+            removeFromWindowsRecentFiles(QDir::toNativeSeparators(_recentFilesList.takeLast()));
 #else
             _recentFilesList.removeLast();
 #endif
         }
-        _recentFilesList.prepend(QDir::toNativeSeparators(fileName));
+        _recentFilesList.prepend(nativeFileName);
     }
+#ifdef Q_WS_WIN32
+    addToWindowsRecentFiles(nativeFileName); // Windows moves file to the top itself if it already exists in the list
+#endif
     updateRecentFilesActions();
 }
 
