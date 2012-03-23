@@ -198,7 +198,7 @@ EternalBonePile		1		1	1	1	100	x0x	Eternal Bone Pile		196	10000	ACTIVE				1	5	500
 SunstoneOfFire		1		1	1	1	50	x1x	Sunstone of Fire		197	10000	ACTIVE				1	5	5000								ac		10	10	pierce-fire		6	10	dmg-fire		15	20																																					0
 SunstoneOfIce		1		1	1	1	50	x2x	Sunstone of Ice		198	10000	ACTIVE				1	5	5000								ac		10	10	pierce-cold		6	10	dmg-cold	75	15	20																																					0
 SunstoneOfThunder		1		1	1	1	50	x3x	Sunstone of Thunder		199	10000	ACTIVE				1	5	5000								ac		10	10	pierce-ltng		6	10	dmg-ltng		15	20																																					0
-JollyRoger		1		1	1	1	5	yq7	Jolly Roger		200	10000	ACTIVE				1	5	5000								desc-instructions		1	1	desc-difficulty		1	1	aura	290	1	1	hmc-checker		4	4																																	0
+JollyRoger		1		1	1	1	5	yq7	Jolly Roger		200	10000	ACTIVE				1	5	5000								desc-instructions		1	1	desc-difficulty		1	1	state	16	1	1	hmc-checker		4	4																																	0
 Sacred Sunstone		1		1	1	1	90	x01	Amazon Class Reward		201	10000	ACTIVE				1	5	5000								light		2	2	needs-upgraded		1	1	needs-lced		1	1	skillcap		1	1																																	0
 Shadow Vortex		1		1	1	1	90	x02	Assassin Class Reward		202	10000	ACTIVE				1	5	5000								light		2	2	needs-upgraded		1	1	needs-lced		1	1	skillcap		1	1																																	0
 Worldstone Orb		1		1	1	1	90	x03	Barbarian Class Reward		203	10000	ACTIVE				1	5	5000								light		2	2	needs-upgraded		1	1	needs-lced		1	1	skillcap		1	1																																	0
@@ -2478,3 +2478,6 @@ SevenHeadsOfTathamet		1		1	1	120	100	!14	Raptor Scythe (Sacred)				REALM UNIQUE	
 WashiBaiRon		1		1	1	120	100	7@F	Trebuchet (Sacred)				REALM UNIQUE					5	5000	lred	lred						sock		6	6	str-add		76	76	dmg%		301	350	dmg-mag		1500	2000	dmg-norm		400	800	swing3		100	100	hit-skill	496	2	5	reduce-ac		50	50																	0
 Xtalline2		1		1	1	1	120	lok	Crystalline Flame Medaillon		1770		ACTIVE				1	5	5000	lblu	lblu						abs-fire%		10	10	abs-cold%		10	10	abs-ltng%		10	10	oskill	773	1	1																																	0
 New7DigitronicSlicer		1		1	1	120	100	7@N	Parma (Sacred)				REALM UNIQUE					5	5000	lgrn	cgrn						sock		4	4	ac%		201	250	hp-minion		100	100	swing3		100	100	dmg-minion		150	150	res-all-minion		50	50	ignore-ac		1	1	slow		10	10	uninterrupt		50	50	ass		4	5	att-skill	144	50	20					0
+TathametBook		1		1	1	1	120	sxr	Tathamet Book of Summoning				TATHAMET BOOK				1	5	5000	blac	blac						oskill	1045	1	1																																													0
+AnuSoulTrophy		1		1	1	1	0	sxx	Essence of Anu				just an ingredient dood				1	5	5000	cred	cred						state	242	1	1																																													0
+AnuSoulCharm		1		1	1	1	120	sxt	Unfathomable Spirit				final charm				1	5	5000								reanimate-rand	1	1836	1842	reanimate-rand	1	1836	1842	reanimate-rand	1	1836	1842	reanimate	1843	1	1	death-skill	115	10	1	state	164	1	1																									0

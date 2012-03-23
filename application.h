@@ -1,19 +1,22 @@
 #ifndef APPLICATION_H
 #define APPLICATION_H
 
-#include <QApplication>
+#include "qtsingleapplication/qtsingleapplication.h"
 
 
 class MedianXLOfflineTools;
 class QTimer;
 
-class Application : public QApplication
+class Application : public QtSingleApplication
 {
     Q_OBJECT
 
 public:
     explicit Application(int &argc, char **argv);
     virtual ~Application();
+
+//public slots:
+//    void activateWindow();
 
 protected:
 #ifdef Q_WS_MACX

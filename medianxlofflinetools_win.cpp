@@ -256,7 +256,7 @@ void MedianXLOfflineTools::checkFileAssociations()
             LPCWSTR appNameWstr = appNameStdWstr.c_str(), extensionWithDotWstr = extensionWithDotStdWstr.c_str();
 
             BOOL isDefault;
-            hr = pAAR->QueryAppIsDefault(extensionWithDotWstr, AT_FILEEXTENSION, AL_EFFECTIVE, appNameWstr, &isDefault); // returns HRESULT_FROM_WIN32(ERROR_FILE_NOT_FOUND) if app doesn't exist in registry
+            hr = pAAR->QueryAppIsDefault(extensionWithDotWstr, AT_FILEEXTENSION, AL_EFFECTIVE, appNameWstr, &isDefault);
             if (HRESULT_CODE(hr) == ERROR_FILE_NOT_FOUND)
             {
                 qDebug("app is not in the registry, adding it");
@@ -300,7 +300,8 @@ void MedianXLOfflineTools::checkFileAssociations()
             if (!isDefault && SUCCEEDED(hr))
             {
                 //LPWSTR defaultAppNameWstr;
-                //hr = pAAR->QueryCurrentDefault(extensionWithDotWstr, AT_FILEEXTENSION, AL_EFFECTIVE, &defaultAppNameWstr); // returns HRESULT_FROM_WIN32(ERROR_NO_ASSOCIATION) if no app is associated
+                // returns HRESULT_FROM_WIN32(ERROR_NO_ASSOCIATION) if no app is associated
+                //hr = pAAR->QueryCurrentDefault(extensionWithDotWstr, AT_FILEEXTENSION, AL_EFFECTIVE, &defaultAppNameWstr);
                 //if (SUCCEEDED(hr))
                 //{
                 //    OutputDebugString(defaultAppNameWstr);
@@ -309,7 +310,8 @@ void MedianXLOfflineTools::checkFileAssociations()
                 //else
                 //    qDebug("QueryCurrentDefault() failed with result: %ld", HRESULT_CODE(hr));
 
-                hr = pAAR->SetAppAsDefault(appNameWstr, extensionWithDotWstr, AT_FILEEXTENSION); // may also return HRESULT_FROM_WIN32(ERROR_FILE_NOT_FOUND) if extension isn't registered
+                // returns HRESULT_FROM_WIN32(ERROR_FILE_NOT_FOUND) if extension isn't registered
+                hr = pAAR->SetAppAsDefault(appNameWstr, extensionWithDotWstr, AT_FILEEXTENSION);
                 if (SUCCEEDED(hr))
                     qDebug("app is default now");
                 else

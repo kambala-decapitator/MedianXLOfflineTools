@@ -1401,3 +1401,25 @@ seq_yourmine	A1	5			0
 seq_yourmine	A1	6			0
 seq_yourmine	A1	7			0
 seq_yourmine	A1	8			0
+seq_anubosscharge	WL	0		1	0
+seq_anubosscharge	WL	1		1	0
+seq_anubosscharge	WL	2		1	0
+seq_anubosscharge	WL	3		1	0
+seq_anubosscharge	WL	4		1	0
+seq_anubosscharge	WL	5		1	0
+seq_anubosscharge	WL	6		1	0
+seq_anubosscharge	WL	7		1	0
+seq_anubosscharge	WL	8		1	0
+seq_anubosscharge	WL	9		1	0
+seq_anubosscharge	WL	10		1	0
+seq_anubosscharge	WL	11		1	0
+seq_anubosscharge	WL	12		1	0
+seq_anubosscharge	WL	13		1	0
+seq_anubosscharge	WL	14		1	0
+seq_anubosscharge	WL	15		1	0
+seq_anubosscharge	A1	12			0
+seq_anubosscharge	A1	10		1	0
+seq_anubosscharge	A1	9			0
+seq_anubosscharge	A1	8			0
+seq_anubosscharge	A1	3			0
+seq_anubosscharge	A1	2			0

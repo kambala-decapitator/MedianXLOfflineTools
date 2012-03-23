@@ -1817,3 +1817,25 @@
 1819	\yellow;Серебряная Стрела
 1820	Draconic Emissary
 1821	Размытый
+1822	TathametDragon
+1823	GodAnu
+1824	BadAnu
+1825	TathMinion
+1826	RiftTrap
+1827	RiftTrap
+1828	RiftTrap
+1829	TathFiend
+1830	TathMinion
+1831	RiftTrap
+1832	BadAnu
+1833	RiftTrap
+1834	TathametDragon
+1835	BadAnu
+1836	PrimeLies
+1837	PrimeSin
+1838	PrimePain
+1839	PrimeAnguish
+1840	PrimeDestruction
+1841	PrimeTerror
+1842	PrimeHatred
+1843	PrimePure

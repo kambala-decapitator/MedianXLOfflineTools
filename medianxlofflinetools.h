@@ -34,6 +34,7 @@ public:
     MedianXLOfflineTools(const QString &cmdPath = QString(), QWidget *parent = 0, Qt::WFlags flags = 0);
     virtual ~MedianXLOfflineTools() { clearItems(); }
 
+public slots:
     bool loadFile(const QString &charPath);
 
 protected:

@@ -7,6 +7,7 @@
 TARGET = MedianXLOfflineTools
 TEMPLATE = app
 VERSION = 0.2.1
+QT += network
 
 
 SOURCES += main.cpp \
@@ -28,7 +29,10 @@ SOURCES += main.cpp \
            propertiesdisplaymanager.cpp \
            findresultswidget.cpp \
            skillplandialog.cpp \
-           application.cpp
+           application.cpp \
+           qtsingleapplication/qtsingleapplication.cpp \
+           qtsingleapplication/qtlockedfile.cpp \
+           qtsingleapplication/qtlocalpeer.cpp
 
 HEADERS += medianxlofflinetools.h \
            resurrectpenaltydialog.h \
@@ -53,7 +57,10 @@ HEADERS += medianxlofflinetools.h \
            findresultswidget.h \
            characterinfo.hpp \
            skillplandialog.h \
-           application.h
+           application.h \
+           qtsingleapplication/qtsingleapplication.h \
+           qtsingleapplication/qtlockedfile.h \
+           qtsingleapplication/qtlocalpeer.h
 
 FORMS += medianxlofflinetools.ui \
          resurrectpenaltydialog.ui \
@@ -74,7 +81,8 @@ OTHER_FILES += TODO.txt
 
 
 win32 {
-    SOURCES += medianxlofflinetools_win.cpp
+    SOURCES += medianxlofflinetools_win.cpp \
+               qtsingleapplication/qtlockedfile_win.cpp
 
     LIBS += -lshell32 \ # SHChangeNotify()
             -lole32     # CoCreateInstance()
@@ -101,4 +109,7 @@ macx {
         CONFIG += x86 ppc
         QMAKE_MACOSX_DEPLOYMENT_TARGET = 10.5
     }
+}
+unix {
+    SOURCES += qtsingleapplication/qtlockedfile_unix.cpp
 }

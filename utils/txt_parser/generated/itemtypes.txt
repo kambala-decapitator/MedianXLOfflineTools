@@ -1,6 +1,7 @@
 #code	equiv
 arag	char
 scha	char
+xrar	tors
 qblt	belt,ct1a
 cloa	tors,assn
 qasp	aspe,ct2w
@@ -87,6 +88,7 @@ sphm	pham,ct2w
 club	blun
 qhlm	helm,ct1a
 pala	clas
+xrgv	glov
 baxe	axe
 tcur	amul
 h2h2	h2h
@@ -101,6 +103,7 @@ qpol	pole,ct2w
 assn	clas
 wpot	poti
 scep	rod
+xrbl	belt
 jewl	sock
 elix	misc
 rpot	hpot,mpot
@@ -145,6 +148,7 @@ gem3	gem
 sock	misc
 qhed	head,ct1a
 shld	armo,seco
+xrbt	boot
 gemz	gem
 bhlm	helm
 orb	mele,sorc
@@ -174,6 +178,7 @@ tpot	thro
 belt	armo
 rune	sock
 taxe	comb,axe
+xrhd	helm
 tors	armo
 pclb	club
 szhm	azhm,ct1a

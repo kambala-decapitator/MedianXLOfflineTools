@@ -171,3 +171,8 @@
 296	Apeskull	Testament of the Apes
 297	Apehand	Testament of the Apes
 298	Apefoot	Testament of the Apes
+299	XRLegs	XRThe Pearl
+300	XRArms	XRThe Pearl
+301	XRBelt	XRThe Pearl
+302	XRBody	XRThe Pearl
+303	XRHead	XRThe Pearl

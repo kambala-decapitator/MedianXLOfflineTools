@@ -43,6 +43,9 @@
       <Extensions>cpp;moc</Extensions>
       <SourceControlFiles>False</SourceControlFiles>
     </Filter>
+    <Filter Include="qtsingleapplication">
+      <UniqueIdentifier>{4349ff68-037b-4550-a163-aaf749dbc7e5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="enums.cpp">
@@ -201,6 +204,30 @@
     <ClCompile Include="medianxlofflinetools_win.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_qtlocalpeer.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_qtlocalpeer.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Template\moc_qtlocalpeer.cpp">
+      <Filter>Generated Files\Template</Filter>
+    </ClCompile>
+    <ClCompile Include="qtsingleapplication\qtsingleapplication.cpp">
+      <Filter>qtsingleapplication</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_qtsingleapplication.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_qtsingleapplication.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Template\moc_qtsingleapplication.cpp">
+      <Filter>Generated Files\Template</Filter>
+    </ClCompile>
+    <ClCompile Include="qtsingleapplication\qtlocalpeer.cpp">
+      <Filter>qtsingleapplication</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="colors.hpp">
@@ -256,6 +283,9 @@
     </ClInclude>
     <ClInclude Include="GeneratedFiles\ui_skillplandialog.h">
       <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="qtsingleapplication\qtlockedfile.h">
+      <Filter>qtsingleapplication</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -327,6 +357,12 @@
     </CustomBuild>
     <CustomBuild Include="application.h">
       <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="qtsingleapplication\qtlocalpeer.h">
+      <Filter>qtsingleapplication</Filter>
+    </CustomBuild>
+    <CustomBuild Include="qtsingleapplication\qtsingleapplication.h">
+      <Filter>qtsingleapplication</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>

@@ -117,8 +117,11 @@ bool MedianXLOfflineTools::loadFile(const QString &charPath)
     if ((result = processSaveFile(charPath)))
     {
         _charPath = charPath;
-        updateUI();
         addToRecentFiles(charPath);
+        
+        updateUI();
+        //activateWindow();
+        //raise();
 
         if (_itemsDialog)
             _itemsDialog->updateItems(getPlugyStashesExistenceHash());

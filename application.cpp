@@ -10,11 +10,19 @@
 #include <QTimer>
 #endif
 
+static const QString appName("Median XL Offline Tools");
 
-Application::Application(int &argc, char **argv) : QApplication(argc, argv), _mainWindow(0)
+
+Application::Application(int &argc, char **argv) : QtSingleApplication(appName, argc, argv), _mainWindow(0)
 {
+    if (argc > 1)
+        _param = argv[1];
+
+    if (sendMessage(_param))
+        return;
+
     setOrganizationName("kambala");
-    setApplicationName("Median XL Offline Tools");
+    setApplicationName(appName);
     setApplicationVersion("0.2.1");
 #ifdef Q_WS_MACX
     setAttribute(Qt::AA_DontShowIconsInMenus);
@@ -39,8 +47,6 @@ Application::Application(int &argc, char **argv) : QApplication(argc, argv), _ma
     qtTranslator.load("qt_" + langManager.currentLocale, langManager.translationsPath);
     installTranslator(&qtTranslator);
 
-    if (argc > 1)
-        _param = argv[1];
 #ifdef Q_WS_MACX
     if (_param.isEmpty())
     {
@@ -56,7 +62,8 @@ Application::Application(int &argc, char **argv) : QApplication(argc, argv), _ma
 
 Application::~Application()
 {
-    delete _mainWindow;
+    if (_mainWindow)
+        delete _mainWindow;
 }
 
 
@@ -64,6 +71,9 @@ void Application::createAndShowMainWindow()
 {
     _mainWindow = new MedianXLOfflineTools(_param);
     _mainWindow->show();
+
+    setActivationWindow(_mainWindow);
+    connect(this, SIGNAL(messageReceived(const QString &)), _mainWindow, SLOT(loadFile(const QString &)));
 
 #ifdef Q_WS_MACX
     disableLionWindowRestoration();
@@ -73,25 +83,12 @@ void Application::createAndShowMainWindow()
 #endif
 }
 
-
-#ifdef Q_WS_MACX
-bool Application::event(QEvent *ev)
-{
-    if (ev->type() == QEvent::FileOpen)
-    {
-        _param = static_cast<QFileOpenEvent *>(ev)->file();
-        if (!_mainWindow)
-        {
-            _showWindowMacTimer->stop();
-            delete _showWindowMacTimer;
-            _showWindowMacTimer = 0;
-
-            createAndShowMainWindow();
-        }
-        else
-            _mainWindow->loadFile(_param);
-        return true;
-    }
-    return QApplication::event(ev);
-}
-#endif
+//void Application::activateWindow()
+//{
+//    //QtSingleApplication::activateWindow();
+//#ifdef Q_WS_WIN32
+//    HWND hWnd = activationWindow()->winId();
+//    ShowWindow(hWnd, SW_SHOW);
+//    SetForegroundWindow(hWnd);
+//#endif
+//}

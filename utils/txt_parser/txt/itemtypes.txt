@@ -227,3 +227,8 @@ Craft Sacred Minor (Armor)	shrine craft/bless			ct1a			0	0					0	0	0	0			0	0	0	0
 Craft Sacred Major (Armor)	shrine craft/bless			ct2a			0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
 Craft Sacred Minor (Weapon)	shrine craft/bless			ct1w			0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
 Craft Sacred Major (Weapon)	shrine craft/bless			ct2w			0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
+Special Set Head	xaru set items			xrhd	helm		0	1	head	head			0	0	0	0			0	0	0	0	0	0	0	0	3		1		0								0
+Special Set Armor	xaru set items			xrar	tors		0	1	tors	tors			0	0	0	0			0	0	0	0	0	0	0	0	3		1		0								0
+Special Set Boots	xaru set items			xrbt	boot		0	1	feet	feet			0	0	0	0			0	0	0	0	0	0	0	0	3		1		0								0
+Special Set Gloves	xaru set items			xrgv	glov		0	1	glov	glov			0	0	0	0			0	0	0	0	0	0	0	0	3		1		0								0
+Special Set Belt	xaru set items			xrbl	belt		0	1	belt	belt			0	0	0	0			0	0	0	0	0	0	0	0	3		1		0								0

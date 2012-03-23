@@ -171,3 +171,8 @@
 296	Обезьяний Череп	Завещание Обезьян
 297	Обезьянья Рука	Завещание Обезьян
 298	Обезьянья Нога	Завещание Обезьян
+299	XRLegs	XRThe Pearl
+300	XRArms	XRThe Pearl
+301	XRBelt	XRThe Pearl
+302	XRBody	XRThe Pearl
+303	XRHead	XRThe Pearl

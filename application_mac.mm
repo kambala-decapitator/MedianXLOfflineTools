@@ -21,3 +21,23 @@ void Application::disableLionWindowRestoration()
         [window invalidateRestorableState];
     }
 }
+
+bool Application::event(QEvent *ev)
+{
+    if (ev->type() == QEvent::FileOpen)
+    {
+        _param = static_cast<QFileOpenEvent *>(ev)->file();
+        if (!_mainWindow)
+        {
+            _showWindowMacTimer->stop();
+            delete _showWindowMacTimer;
+            _showWindowMacTimer = 0;
+
+            createAndShowMainWindow();
+        }
+        else
+            _mainWindow->loadFile(_param);
+        return true;
+    }
+    return QApplication::event(ev);
+}
