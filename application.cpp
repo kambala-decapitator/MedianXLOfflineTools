@@ -75,9 +75,7 @@ void Application::createAndShowMainWindow()
     connect(this, SIGNAL(messageReceived(const QString &)), _mainWindow, SLOT(loadFile(const QString &)));
 
 #ifdef Q_WS_MACX
-#if MAC_OS_X_VERSION_MAX_ALLOWED >= 1070
     disableLionWindowRestoration();
-#endif
 
     if (_showWindowMacTimer)
         delete _showWindowMacTimer;

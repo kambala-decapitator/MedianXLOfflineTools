@@ -26,12 +26,12 @@ bool Application::event(QEvent *ev)
 }
 
 
-#if MAC_OS_X_VERSION_MAX_ALLOWED >= 1070
 void Application::disableLionWindowRestoration()
 {
+#if MAC_OS_X_VERSION_MAX_ALLOWED >= 1070
     NSWindow *window = [reinterpret_cast<NSView *>(_mainWindow->winId()) window];
     [window setRestorationClass:nil];
     [window setRestorable:NO];
     [window invalidateRestorableState];
-}
 #endif
+}
