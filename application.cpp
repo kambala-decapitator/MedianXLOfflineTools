@@ -6,7 +6,6 @@
 #include <QTranslator>
 
 #ifdef Q_WS_MACX
-#include <QFileOpenEvent>
 #include <QTimer>
 #endif
 
@@ -17,13 +16,13 @@ Application::Application(int &argc, char **argv) : QtSingleApplication(appName, 
 {
     if (argc > 1)
         _param = argv[1];
-
     if (sendMessage(_param))
         return;
 
     setOrganizationName("kambala");
     setApplicationName(appName);
     setApplicationVersion("0.2.1");
+
 #ifdef Q_WS_MACX
     setAttribute(Qt::AA_DontShowIconsInMenus);
 
@@ -76,7 +75,9 @@ void Application::createAndShowMainWindow()
     connect(this, SIGNAL(messageReceived(const QString &)), _mainWindow, SLOT(loadFile(const QString &)));
 
 #ifdef Q_WS_MACX
+#if MAC_OS_X_VERSION_MAX_ALLOWED >= 1070
     disableLionWindowRestoration();
+#endif
 
     if (_showWindowMacTimer)
         delete _showWindowMacTimer;

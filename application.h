@@ -32,7 +32,9 @@ private:
 #ifdef Q_WS_MACX
     QTimer *_showWindowMacTimer;
 
+#if MAC_OS_X_VERSION_MAX_ALLOWED >= 1070
     void disableLionWindowRestoration();
+#endif
 #endif
 };
 
