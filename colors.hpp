@@ -12,12 +12,13 @@ static QTextCodec *macTextCodec() { return QTextCodec::codecForName("MacRoman");
 
 
 const char ansiChar = 0xFF;
-const char ansiColorHeaderChars[] = {ansiChar, 0x63};
-const QByteArray ansiColorHeader(ansiColorHeaderChars);
+const int colorHeaderSize = 2;
+const char ansiColorHeaderChars[colorHeaderSize] = {ansiChar, 0x63};
+const QByteArray ansiColorHeader(ansiColorHeaderChars, colorHeaderSize);
 // Blizzard uses ANSI codepage to read save files' names
 #if defined(Q_WS_WIN32)
 static WCHAR unicodeWChar;
-static int unusedValueJustToRemoveError = MultiByteToWideChar(CP_ACP, 0, &ansiChar, 1, &unicodeWChar, 1);
+static int foo = MultiByteToWideChar(CP_ACP, 0, &ansiChar, 1, &unicodeWChar, 1);
 const QChar unicodeChar = unicodeWChar;
 #elif defined(Q_WS_MACX)
 const QChar unicodeChar = macTextCodec()->toUnicode(&ansiChar).at(0);

@@ -114,7 +114,7 @@ bool MedianXLOfflineTools::loadFile(const QString &charPath)
     }
 
 #ifdef Q_WS_WIN32
-    _charPath = QString(charPath).replace(ansiColorHeader, unicodeColorHeader);
+    _charPath = QString(charPath).replace(ansiColorHeader, unicodeColorHeader); // stupid shell
 #else
     _charPath = charPath;
 #endif
@@ -1283,8 +1283,7 @@ bool MedianXLOfflineTools::processSaveFile()
 
     CharacterInfo &charInfo = CharacterInfo::instance();
     charInfo.basicInfo.originalName = _saveFileContents.constData() + Enums::Offsets::Name;
-    charInfo.basicInfo.originalName.replace(ansiColorHeader, unicodeColorHeader);
-    charInfo.basicInfo.newName = charInfo.basicInfo.originalName;
+    charInfo.basicInfo.newName = charInfo.basicInfo.originalName.replace(ansiColorHeader, unicodeColorHeader);
 
     inputDataStream.device()->seek(Enums::Offsets::Status);
     quint8 status, progression, classCode, clvl;

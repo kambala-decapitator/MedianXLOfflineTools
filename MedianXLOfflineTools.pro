@@ -85,7 +85,7 @@ win32 {
                qtsingleapplication/qtlockedfile_win.cpp
 
     LIBS += -lshell32 \ # SHChangeNotify()
-            -lole32     # CoCreateInstance()
+            -lole32     # CoCreateInstance() and other COM shit
     
     RC_FILE = resources/win/medianxlofflinetools.rc
 }
@@ -102,13 +102,25 @@ macx {
     
     OTHER_FILES += resources/mac/Info.plist
 
+    # for Xcode 4.3+
+    MAC_SDK = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk
+    # for earlier versions
+    if (!exists($$MAC_SDK)) {
+        MAC_SDK = /Developer/SDKs/MacOSX10.6.sdk
+    }
+
     # release build is intended to be compiled on 10.6 (or even earlier) for PPC support
     CONFIG(release, debug|release) {
         message(release build)
-        QMAKE_MAC_SDK = /Developer/SDKs/MacOSX10.5.sdk
+        MAC_SDK = /Developer/SDKs/MacOSX10.5.sdk
         CONFIG += x86 ppc
         QMAKE_MACOSX_DEPLOYMENT_TARGET = 10.5
     }
+
+    if (!exists($$MAC_SDK)) {
+        error(The selected Mac OS X SDK does not exist at $$MAC_SDK!)
+    }
+    QMAKE_MAC_SDK = $$MAC_SDK
 }
 unix {
     SOURCES += qtsingleapplication/qtlockedfile_unix.cpp

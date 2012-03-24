@@ -22,7 +22,7 @@ bool Application::event(QEvent *ev)
             _mainWindow->loadFile(_param);
         return true;
     }
-    return QApplication::event(ev);
+    return QtSingleApplication::event(ev);
 }
 
 
