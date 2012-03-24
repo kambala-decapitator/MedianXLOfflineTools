@@ -113,15 +113,16 @@ bool MedianXLOfflineTools::loadFile(const QString &charPath)
         return false;
     }
 
+#ifdef Q_WS_WIN32
+    _charPath = QString(charPath).replace(ansiColorHeader, unicodeColorHeader);
+#else
+    _charPath = charPath;
+#endif
     bool result;
-    if ((result = processSaveFile(charPath)))
+    if ((result = processSaveFile()))
     {
-        _charPath = charPath;
-        addToRecentFiles(charPath);
-        
+        addToRecentFiles();
         updateUI();
-        //activateWindow();
-        //raise();
 
         if (_itemsDialog)
             _itemsDialog->updateItems(getPlugyStashesExistenceHash());
@@ -189,9 +190,9 @@ void MedianXLOfflineTools::openRecentFile()
     loadFile(qobject_cast<QAction *>(sender())->statusTip());
 }
 
-void MedianXLOfflineTools::reloadCharacter()
+void MedianXLOfflineTools::reloadCharacter(bool notify /*= true*/)
 {
-    if (loadFile(_charPath))
+    if (loadFile(_charPath) && notify)
         ui.statusBar->showMessage(tr("Character reloaded"), 3000);
 }
 
@@ -443,7 +444,7 @@ void MedianXLOfflineTools::saveCharacter()
 
             _charPath = saveFileName;
             setModified(false);
-            loadFile(_charPath); // update all UI at once by reloading the file
+            reloadCharacter(false); // update all UI at once by reloading the file
 
             INFO_BOX(tr("File '%1' successfully saved!").arg(QDir::toNativeSeparators(saveFileName)));
         }
@@ -1200,15 +1201,15 @@ void MedianXLOfflineTools::updateRecentFilesActions()
 #endif
 }
 
-void MedianXLOfflineTools::addToRecentFiles(const QString &fileName)
+void MedianXLOfflineTools::addToRecentFiles()
 {
-    QString nativeFileName = QDir::toNativeSeparators(fileName);
+    QString nativeFileName = QDir::toNativeSeparators(_charPath);
     int index = _recentFilesList.indexOf(nativeFileName);
 #ifdef Q_WS_WIN32
     // previous version didn't use native separators
     if (index == -1)
     {
-        index = _recentFilesList.indexOf(fileName);
+        index = _recentFilesList.indexOf(_charPath);
         if (index != -1)
             _recentFilesList[index] = nativeFileName;
     }
@@ -1248,9 +1249,9 @@ QAction *MedianXLOfflineTools::createRecentFileAction(const QString &fileName, i
     return recentFileAction;
 }
 
-bool MedianXLOfflineTools::processSaveFile(const QString &charPath)
+bool MedianXLOfflineTools::processSaveFile()
 {
-    QFile inputFile(charPath);
+    QFile inputFile(_charPath);
     if (!inputFile.open(QIODevice::ReadOnly))
     {
         showErrorMessageBoxForFile(tr("Error opening file '%1'"), inputFile);
@@ -1659,7 +1660,7 @@ bool MedianXLOfflineTools::processSaveFile(const QString &charPath)
     // parse plugy stashes
     QString oldSharedStashPath = _plugyStashesHash[Enums::ItemStorage::SharedStash].path, oldHCStashPath = _plugyStashesHash[Enums::ItemStorage::HCStash].path;
 
-    QFileInfo charPathFileInfo(charPath);
+    QFileInfo charPathFileInfo(_charPath);
     QString canonicalCharPath = charPathFileInfo.canonicalPath();
     _plugyStashesHash[Enums::ItemStorage::PersonalStash].path = ui.actionAutoOpenPersonalStash->isChecked() ? QString("%1/%2.d2x").arg(canonicalCharPath, charPathFileInfo.baseName()) : QString();
     _plugyStashesHash[Enums::ItemStorage::SharedStash].path = ui.actionAutoOpenSharedStash->isChecked() ? canonicalCharPath + "/_LOD_SharedStashSave.sss" : QString();

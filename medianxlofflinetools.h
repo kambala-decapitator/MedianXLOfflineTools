@@ -49,7 +49,7 @@ private slots:
     // file
     void loadCharacter();
     void openRecentFile();
-    void reloadCharacter();
+    void reloadCharacter(bool notify = true);
     void saveCharacter();
 
     // edit
@@ -142,10 +142,10 @@ private:
     void connectSignals();
 
     void updateRecentFilesActions();
-    void addToRecentFiles(const QString &fileName);
+    void addToRecentFiles();
     QAction *createRecentFileAction(const QString &fileName, int index);
 
-    bool processSaveFile(const QString &charPath);
+    bool processSaveFile();
     quint32 checksum(const QByteArray &charByteArray) const;
 
     inline int totalPossibleStatPoints(int level);

@@ -15,9 +15,6 @@ public:
     explicit Application(int &argc, char **argv);
     virtual ~Application();
 
-//public slots:
-//    void activateWindow();
-
 protected:
 #ifdef Q_WS_MACX
     bool event(QEvent *ev);

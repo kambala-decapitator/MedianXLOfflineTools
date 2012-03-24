@@ -28,8 +28,7 @@ const QString &MedianXLOfflineTools::progID()
 
 LPCWSTR MedianXLOfflineTools::appUserModelID()
 {
-    static QStdWString appUserModelId = progID().toStdWString();
-    return appUserModelId.c_str();
+    return progID().utf16();
 }
 
 void MedianXLOfflineTools::setAppUserModelID()
@@ -60,7 +59,7 @@ void MedianXLOfflineTools::syncWindowsTaskbarRecentFiles()
         if (SUCCEEDED(hr = pADL->SetAppID(appUserModelID())))
         {
             IObjectArray *pRecentItemsArray;
-            if (SUCCEEDED(hr = pADL->GetList(ADLT_RECENT, /*maxRecentFiles*/0, IID_PPV_ARGS(&pRecentItemsArray))))
+            if (SUCCEEDED(hr = pADL->GetList(ADLT_RECENT, maxRecentFiles, IID_PPV_ARGS(&pRecentItemsArray))))
             {
                 UINT n;
                 if (SUCCEEDED(hr = pRecentItemsArray->GetCount(&n)))
@@ -74,7 +73,7 @@ void MedianXLOfflineTools::syncWindowsTaskbarRecentFiles()
                         {
                             LPWSTR path = NULL;
                             if (SUCCEEDED(hr = pShellItem->GetDisplayName(SIGDN_FILESYSPATH, &path)))
-                                recentFilesForTaskbar.removeOne(QString::fromStdWString(path));
+                                recentFilesForTaskbar.removeOne(QString::fromUtf16(path));
                             else
                                 qDebug("Error calling GetPath(): %d", HRESULT_CODE(hr));
                             CoTaskMemFree(path);
@@ -117,7 +116,7 @@ void MedianXLOfflineTools::removeFromWindowsRecentFiles(const QString &filePath)
         if (SUCCEEDED(hr = pADL->SetAppID(appUserModelID())))
         {
             IObjectArray *pRecentItemsArray;
-            if (SUCCEEDED(hr = pADL->GetList(ADLT_RECENT, /*maxRecentFiles*/0, IID_PPV_ARGS(&pRecentItemsArray))))
+            if (SUCCEEDED(hr = pADL->GetList(ADLT_RECENT, maxRecentFiles, IID_PPV_ARGS(&pRecentItemsArray))))
             {
                 UINT n;
                 if (SUCCEEDED(hr = pRecentItemsArray->GetCount(&n)))
@@ -131,7 +130,7 @@ void MedianXLOfflineTools::removeFromWindowsRecentFiles(const QString &filePath)
                             LPWSTR path = NULL;
                             if (SUCCEEDED(hr = pShellItem->GetDisplayName(SIGDN_FILESYSPATH, &path)))
                             {
-                                if (!wcscmp(path, filePath.toStdWString().c_str()))
+                                if (!wcscmp(path, filePath.utf16()))
                                 {
                                     IApplicationDestinations *pAD;
                                     HRESULT hr = CoCreateInstance(CLSID_ApplicationDestinations, NULL, CLSCTX_INPROC, IID_PPV_ARGS(&pAD));
@@ -190,7 +189,7 @@ void MedianXLOfflineTools::addToWindowsRecentFiles(const QString &filePath)
 
     qDebug("add '%s' to recent", qPrintable(filePath));
     IShellItem *pShellItem;
-    HRESULT hr = SHCreateItemFromParsingName(filePath.toStdWString().c_str(), NULL, IID_PPV_ARGS(&pShellItem));
+    HRESULT hr = SHCreateItemFromParsingName(/*QString(filePath).replace(unicodeColorHeader, ansiColorHeader)*/filePath.utf16(), NULL, IID_PPV_ARGS(&pShellItem));
     if (SUCCEEDED(hr))
     {
         SHARDAPPIDINFO info;
@@ -252,8 +251,7 @@ void MedianXLOfflineTools::checkFileAssociations()
         if (SUCCEEDED(hr))
         {
             QString appName = qApp->applicationName();
-            QStdWString appNameStdWstr = appName.toStdWString(), extensionWithDotStdWstr = characterExtensionWithDot.toStdWString();
-            LPCWSTR appNameWstr = appNameStdWstr.c_str(), extensionWithDotWstr = extensionWithDotStdWstr.c_str();
+            LPCWSTR appNameWstr = appName.utf16(), extensionWithDotWstr = characterExtensionWithDot.utf16();
 
             BOOL isDefault;
             hr = pAAR->QueryAppIsDefault(extensionWithDotWstr, AT_FILEEXTENSION, AL_EFFECTIVE, appNameWstr, &isDefault);
