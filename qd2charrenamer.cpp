@@ -1,5 +1,5 @@
 #include "qd2charrenamer.h"
-#include "colors.hpp"
+#include "colorsmanager.hpp"
 #include "helpers.h"
 
 #include <QMenu>
@@ -12,8 +12,8 @@ const int QD2CharRenamer::maxNameLength = 15;
 void QD2CharRenamer::updateNamePreview(QTextEdit *previewTextEdit, const QString &name)
 {
     QString htmlName = QString("<html><body bgcolor=\"black\"><font color = \"#ffffff\">%1</font></body></html>").arg(name); // white by default
-    for (int i = 0; i < correctColorsNum; i++) // replace color codes with their hex values for HTML
-        htmlName.replace(QString("%1%2").arg(unicodeColorHeader).arg(colorCodes.at(i)), QString("</font><font color = \"%1\">").arg(colorHexString(colors.at(i))));
+    for (int i = 0; i < ColorsManager::correctColorsNum(); i++) // replace color codes with their hex values for HTML
+        htmlName.replace(QString("%1%2").arg(ColorsManager::unicodeColorHeader()).arg(ColorsManager::colorCodes().at(i)), QString("</font><font color = \"%1\">").arg(colorHexString(ColorsManager::colors().at(i))));
     previewTextEdit->setHtml(htmlName);
     previewTextEdit->setStatusTip(name);
 }
@@ -53,7 +53,7 @@ void QD2CharRenamer::saveName()
     if (!isBadName)
     {
         QString nameToCheck = newName;
-        nameToCheck.remove(unicodeColorHeader);
+        nameToCheck.remove(ColorsManager::unicodeColorHeader());
         for (int i = 0; i < nameToCheck.length(); ++i)
         {
             QChar c = nameToCheck.at(i);
@@ -70,9 +70,9 @@ void QD2CharRenamer::saveName()
     else
     {
         bool hasColor = false;
-        for (int i = 0; i < colorCodes.size(); ++i)
+        for (int i = 0; i < ColorsManager::colorCodes().size(); ++i)
         {
-            if (newName.contains(unicodeColorHeader + colorCodes.at(i)))
+            if (newName.contains(ColorsManager::unicodeColorHeader() + ColorsManager::colorCodes().at(i)))
             {
                 hasColor = true;
                 break;
@@ -100,7 +100,7 @@ void QD2CharRenamer::insertColor()
         QAction *menuItem = qobject_cast<QAction *>(sender());
         QString codeToInsert = menuItem->text().left(3);
         // don't insert white in the beginning because it's a waste of characters
-        if (!(ui.charNameLineEdit->cursorPosition() == 0 && codeToInsert == unicodeColorHeader + colorCodes.at(0)))
+        if (!(ui.charNameLineEdit->cursorPosition() == 0 && codeToInsert == ColorsManager::unicodeColorHeader() + ColorsManager::colorCodes().at(0)))
             ui.charNameLineEdit->insert(codeToInsert);
         else
             qApp->beep();
@@ -117,14 +117,16 @@ void QD2CharRenamer::createColorMenu()
 {
     QMenu *colorMenu = new QMenu(ui.colorButton);
     QPixmap pix(24, 24);
-    for (int i = 0; i < correctColorsNum; ++i)
+    for (int i = 0; i < ColorsManager::correctColorsNum(); ++i)
     {
-        if (i == DarkGreen) // ':' can't be used for filename
+        if (i == ColorsManager::DarkGreen) // ':' can't be used for filename
             continue;
 
-        pix.fill(colors.at(i));
-        QAction *colorAction = new QAction(QIcon(pix), QString("%1 (%2)").arg(unicodeColorHeader + colorCodes.at(i), colorNames.at(i)), this);
-        colorAction->setIconVisibleInMenu(true); // explicitly show icons on Mac OS X
+        pix.fill(ColorsManager::colors().at(i));
+        QAction *colorAction = new QAction(QIcon(pix), QString("%1 (%2)").arg(ColorsManager::unicodeColorHeader() + ColorsManager::colorCodes().at(i), colorNames.at(i)), this);
+#ifdef Q_WS_MACX
+        colorAction->setIconVisibleInMenu(true); // explicitly show color icons on Mac OS X
+#endif
         connect(colorAction, SIGNAL(triggered()), SLOT(insertColor()));
 
         colorMenu->addAction(colorAction);
@@ -133,7 +135,7 @@ void QD2CharRenamer::createColorMenu()
     QAction *infoAction = colorMenu->addAction(tr("\"Dynamic\" colors below"));
     infoAction->setEnabled(false);
 
-    for (int i = correctColorsNum; i < colorCodes.size(); ++i)
-        colorMenu->addAction(unicodeColorHeader + colorCodes.at(i), this, SLOT(insertColor()));
+    for (int i = ColorsManager::correctColorsNum(); i < ColorsManager::colorCodes().size(); ++i)
+        colorMenu->addAction(ColorsManager::unicodeColorHeader() + ColorsManager::colorCodes().at(i), this, SLOT(insertColor()));
     ui.colorButton->setMenu(colorMenu);
 }

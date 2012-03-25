@@ -15,6 +15,15 @@ public:
     explicit Application(int &argc, char **argv);
     virtual ~Application();
 
+    static const QString appName;
+
+public slots:
+#ifdef Q_WS_WIN32
+    // use WinAPI instead of default implementation to bring window to foreground
+    void activateWindow() {}
+    void activateWindowWinAPI();
+#endif
+
 protected:
 #ifdef Q_WS_MACX
     bool event(QEvent *ev);

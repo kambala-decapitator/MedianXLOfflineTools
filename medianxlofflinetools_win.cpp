@@ -130,7 +130,7 @@ void MedianXLOfflineTools::removeFromWindowsRecentFiles(const QString &filePath)
                             LPWSTR path = NULL;
                             if (SUCCEEDED(hr = pShellItem->GetDisplayName(SIGDN_FILESYSPATH, &path)))
                             {
-                                if (!wcscmp(path, filePath.utf16()))
+                                if (!wcscmp(path, QDir::toNativeSeparators(filePath).utf16()))
                                 {
                                     IApplicationDestinations *pAD;
                                     HRESULT hr = CoCreateInstance(CLSID_ApplicationDestinations, NULL, CLSCTX_INPROC, IID_PPV_ARGS(&pAD));
@@ -189,7 +189,7 @@ void MedianXLOfflineTools::addToWindowsRecentFiles(const QString &filePath)
 
     qDebug("add '%s' to recent", qPrintable(filePath));
     IShellItem *pShellItem;
-    HRESULT hr = SHCreateItemFromParsingName(/*QString(filePath).replace(unicodeColorHeader, ansiColorHeader)*/filePath.utf16(), NULL, IID_PPV_ARGS(&pShellItem));
+    HRESULT hr = SHCreateItemFromParsingName(filePath.utf16(), NULL, IID_PPV_ARGS(&pShellItem));
     if (SUCCEEDED(hr))
     {
         SHARDAPPIDINFO info;

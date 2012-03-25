@@ -1,6 +1,6 @@
 #include "itemdatabase.h"
 #include "helpers.h"
-#include "colors.hpp"
+#include "colorsmanager.hpp"
 #include "resourcepathmanager.hpp"
 #include "itemparser.h"
 #include "characterinfo.hpp"
@@ -428,14 +428,14 @@ QString ItemDataBase::completeItemName(ItemInfo *item, bool shouldUseColor, bool
     {
         if (item->isRW)
         {
-            itemName = htmlStringFromDiabloColorString(itemName, DarkGrey);
-            specialName = htmlStringFromDiabloColorString(specialName, Gold);
+            itemName = htmlStringFromDiabloColorString(itemName, ColorsManager::DarkGrey);
+            specialName = htmlStringFromDiabloColorString(specialName, ColorsManager::Gold);
             itemName.prepend(specialName + htmlLineBreak);
         }
         else
         {
             bool hasSpecialName = !specialName.isEmpty() && specialName != itemName;
-            ColorIndex colorIndex = colorOfItem(item);
+            ColorsManager::ColorIndex colorIndex = colorOfItem(item);
             itemName = htmlStringFromDiabloColorString(itemName, colorIndex);
             if (hasSpecialName)
             {
@@ -504,30 +504,30 @@ void ItemDataBase::expandMultilineString(QString *stringToExpand)
     *stringToExpand = lines.join(htmlLineBreak);
 }
 
-QHash<int, ColorIndex> *ItemDataBase::itemQualityColorsHash()
+QHash<int, ColorsManager::ColorIndex> *ItemDataBase::itemQualityColorsHash()
 {
-    static QHash<int, ColorIndex> colorsHash;
+    static QHash<int, ColorsManager::ColorIndex> colorsHash;
     if (colorsHash.isEmpty())
     {
-        colorsHash[Enums::ItemQuality::Set] = Green;
-        colorsHash[Enums::ItemQuality::Unique] = Gold;
-        colorsHash[Enums::ItemQuality::Crafted] = Orange;
-        colorsHash[Enums::ItemQuality::Rare] = Yellow;
-        colorsHash[Enums::ItemQuality::Magic] = Blue;
-        colorsHash[Enums::ItemQuality::Honorific] = DarkGreen;
+        colorsHash[Enums::ItemQuality::Set] = ColorsManager::Green;
+        colorsHash[Enums::ItemQuality::Unique] = ColorsManager::Gold;
+        colorsHash[Enums::ItemQuality::Crafted] = ColorsManager::Orange;
+        colorsHash[Enums::ItemQuality::Rare] = ColorsManager::Yellow;
+        colorsHash[Enums::ItemQuality::Magic] = ColorsManager::Blue;
+        colorsHash[Enums::ItemQuality::Honorific] = ColorsManager::DarkGreen;
     }
     return &colorsHash;
 }
 
-ColorIndex ItemDataBase::colorOfItem(ItemInfo *item)
+ColorsManager::ColorIndex ItemDataBase::colorOfItem(ItemInfo *item)
 {
-    return !itemQualityColorsHash()->contains(item->quality) && (item->isSocketed || item->isEthereal) ? DarkGrey : itemQualityColorsHash()->value(item->quality);
+    return !itemQualityColorsHash()->contains(item->quality) && (item->isSocketed || item->isEthereal) ? ColorsManager::DarkGrey : itemQualityColorsHash()->value(item->quality);
 }
 
 QString &ItemDataBase::removeColorCodesFromString(QString &s)
 {
     s.remove("\\grey;");
-    foreach (const QByteArray &colorString, colorStrings)
+    foreach (const QByteArray &colorString, ColorsManager::colorStrings())
         s.remove(colorString);
     return s;
 }

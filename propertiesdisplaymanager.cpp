@@ -301,7 +301,7 @@ QString PropertiesDisplayManager::propertyDisplay(const ItemProperty &propDispla
     case 23: // reanimate
         {
             QString mosnterName = ItemDataBase::Monsters()->value(propDisplay.param);
-            result = QString("%1% %2 %3").arg(value).arg(description).arg(shouldColor ? htmlStringFromDiabloColorString(mosnterName, Blue) : mosnterName);
+            result = QString("%1% %2 %3").arg(value).arg(description).arg(shouldColor ? htmlStringFromDiabloColorString(mosnterName, ColorsManager::Blue) : mosnterName);
             break;
         }
     // 9, 10, 14, 16-19 - absent

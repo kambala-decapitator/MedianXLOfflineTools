@@ -228,11 +228,11 @@
     <ClCompile Include="qtsingleapplication\qtlocalpeer.cpp">
       <Filter>qtsingleapplication</Filter>
     </ClCompile>
+    <ClCompile Include="application_win.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="colors.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="helpers.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -286,6 +286,9 @@
     </ClInclude>
     <ClInclude Include="qtsingleapplication\qtlockedfile.h">
       <Filter>qtsingleapplication</Filter>
+    </ClInclude>
+    <ClInclude Include="colorsmanager.hpp">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

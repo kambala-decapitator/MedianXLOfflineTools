@@ -41,7 +41,7 @@ QString colorHexString(const QColor &c)
 
 QString coloredText(const QString &text, int colorIndex)
 {
-    return QString("<font color = \"%1\">%2</font>").arg(colorHexString(colors.at(colorIndex)), text);
+    return QString("<font color = \"%1\">%2</font>").arg(colorHexString(ColorsManager::colors().at(colorIndex)), text);
 }
 
 bool colorStringsIndecesLessThan(const QPair<int, int> &a, const QPair<int, int> &b)
@@ -49,17 +49,17 @@ bool colorStringsIndecesLessThan(const QPair<int, int> &a, const QPair<int, int>
     return a.second < b.second;
 }
 
-QString htmlStringFromDiabloColorString(const QString &name, ColorIndex defaultColor /*= White*/)
+QString htmlStringFromDiabloColorString(const QString &name, ColorsManager::ColorIndex defaultColor /*= White*/)
 {
     QString text = name;
-    if (defaultColor != NoColor)
-        text.prepend(colorStrings.at(defaultColor));
-    text.replace("\\n", htmlLineBreak).replace("\\grey;", colorStrings.at(White));
+    if (defaultColor != ColorsManager::NoColor)
+        text.prepend(ColorsManager::colorStrings().at(defaultColor));
+    text.replace("\\n", htmlLineBreak).replace("\\grey;", ColorsManager::colorStrings().at(ColorsManager::White));
 
     QList<QPair<int, int> > colorStringsIndeces; // <index_of_color_string_in_array, position_in_string>
-    for (int i = 0; i < colors.size(); ++i)
+    for (int i = 0; i < ColorsManager::colors().size(); ++i)
     {
-        QString colorString = colorStrings.at(i);
+        QString colorString = ColorsManager::colorStrings().at(i);
         int occurencesCount = text.count(colorString), position = 0, length = colorString.length();
         for (int j = 0; j < occurencesCount; ++j, position += length)
         {
@@ -79,7 +79,7 @@ QString htmlStringFromDiabloColorString(const QString &name, ColorIndex defaultC
     for (int i = 0; i < colorsNumberInString; ++i)
     {
         int index = colorStringsIndeces.at(i).first;
-        int position = colorStringsIndeces.at(i).second + colorStrings.at(index).length(); // skip colorString
+        int position = colorStringsIndeces.at(i).second + ColorsManager::colorStrings().at(index).length(); // skip colorString
         QString coloredText_ = text.mid(position, i != colorsNumberInString - 1 ? colorStringsIndeces.at(i + 1).second - position : -1);
 
         QStringList lines = coloredText_.split(htmlLineBreak);

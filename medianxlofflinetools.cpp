@@ -1,5 +1,5 @@
 #include "medianxlofflinetools.h"
-#include "colors.hpp"
+#include "colorsmanager.hpp"
 #include "qd2charrenamer.h"
 #include "helpers.h"
 #include "itemsviewerdialog.h"
@@ -114,7 +114,7 @@ bool MedianXLOfflineTools::loadFile(const QString &charPath)
     }
 
 #ifdef Q_WS_WIN32
-    _charPath = QString(charPath).replace(ansiColorHeader, unicodeColorHeader); // stupid shell
+    _charPath = QString(charPath).replace(ColorsManager::ansiColorHeader(), ColorsManager::unicodeColorHeader()); // stupid shell
 #else
     _charPath = charPath;
 #endif
@@ -131,7 +131,7 @@ bool MedianXLOfflineTools::loadFile(const QString &charPath)
 
         QSettings settings;
         settings.beginGroup("recentItems");
-        settings.setValue(lastSavePathKey, QDir::toNativeSeparators(QFileInfo(charPath).canonicalPath()));
+        settings.setValue(lastSavePathKey, QDir::toNativeSeparators(QFileInfo(_charPath).canonicalPath()));
     }
     else
     {
@@ -384,12 +384,12 @@ void MedianXLOfflineTools::saveCharacter()
 
     QSettings settings;
     settings.beginGroup("recentItems");
-    QString savePath = settings.value(lastSavePathKey).toString(), fileName = savePath + "/" + newName, saveFileName = fileName + characterExtensionWithDot;
+    QString savePath = settings.value(lastSavePathKey).toString() + QDir::separator(), fileName = savePath + newName, saveFileName = fileName + characterExtensionWithDot;
 
     QFile outputFile(saveFileName);
     if (hasNameChanged)
     {
-        QFile oldFile(QString("%1/%2.%3").arg(savePath, charInfo.basicInfo.originalName, characterExtension));
+        QFile oldFile(QString("%1%2.%3").arg(savePath, charInfo.basicInfo.originalName, characterExtension));
         backupFile(oldFile);
     }
     else
@@ -438,6 +438,7 @@ void MedianXLOfflineTools::saveCharacter()
 
                 charInfo.basicInfo.originalName = newName;
 
+                removeFromWindowsRecentFiles(_recentFilesList.at(0)); // old file doesn't exist any more
                 _recentFilesList[0] = saveFileName;
                 updateRecentFilesActions();
             }
@@ -1191,7 +1192,14 @@ void MedianXLOfflineTools::updateRecentFilesActions()
         if (QFile::exists(filePath))
             ui.menuRecentCharacters->addAction(createRecentFileAction(filePath, i + 1));
         else
-            _recentFilesList.removeAt(i--);
+        {
+#ifdef Q_WS_WIN32
+            removeFromWindowsRecentFiles(_recentFilesList.takeAt(i));
+#else
+            _recentFilesList.removeAt(i);
+#endif
+            --i;
+        }
     }
     ui.menuRecentCharacters->setDisabled(_recentFilesList.isEmpty());
 
@@ -1222,7 +1230,7 @@ void MedianXLOfflineTools::addToRecentFiles()
         if (_recentFilesList.length() == maxRecentFiles)
         {
 #ifdef Q_WS_WIN32
-            removeFromWindowsRecentFiles(QDir::toNativeSeparators(_recentFilesList.takeLast()));
+            removeFromWindowsRecentFiles(_recentFilesList.takeLast());
 #else
             _recentFilesList.removeLast();
 #endif
@@ -1283,7 +1291,7 @@ bool MedianXLOfflineTools::processSaveFile()
 
     CharacterInfo &charInfo = CharacterInfo::instance();
     charInfo.basicInfo.originalName = _saveFileContents.constData() + Enums::Offsets::Name;
-    charInfo.basicInfo.newName = charInfo.basicInfo.originalName.replace(ansiColorHeader, unicodeColorHeader);
+    charInfo.basicInfo.newName = charInfo.basicInfo.originalName.replace(ColorsManager::ansiColorHeader(), ColorsManager::unicodeColorHeader());
 
     inputDataStream.device()->seek(Enums::Offsets::Status);
     quint8 status, progression, classCode, clvl;

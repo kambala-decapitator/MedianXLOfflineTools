@@ -19,8 +19,8 @@ QString binaryStringFromNumber(quint64 number, bool needsInversion = false, int 
 QString colorHexString(const QColor &c);
 QString coloredText(const QString &text, int colorIndex);
 
-#include "colors.hpp"
-QString htmlStringFromDiabloColorString(const QString &name, ColorIndex defaultColor = White);
+#include "colorsmanager.hpp"
+QString htmlStringFromDiabloColorString(const QString &name, ColorsManager::ColorIndex defaultColor = ColorsManager::White);
 
 // QMetaEnum getter. Moving definition to .cpp causes unresolved external symbols, so don't touch it.
 #include <QMetaEnum>
