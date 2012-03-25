@@ -38,7 +38,7 @@ HEADERS += medianxlofflinetools.h \
            resurrectpenaltydialog.h \
            qd2charrenamer.h \
            enums.h \
-           colors.hpp \
+           colorsmanager.hpp \
            itemdatabase.h \
            structs.h \
            propertiesviewerwidget.h \
@@ -85,7 +85,8 @@ win32 {
                qtsingleapplication/qtlockedfile_win.cpp
 
     LIBS += -lshell32 \ # SHChangeNotify()
-            -lole32     # CoCreateInstance() and other COM shit
+            -lole32 \   # CoCreateInstance() and other COM shit
+            -luser32    # AllowSetForegroundWindow()
     
     RC_FILE = resources/win/medianxlofflinetools.rc
 }
