@@ -228,9 +228,6 @@
     <ClCompile Include="qtsingleapplication\qtlocalpeer.cpp">
       <Filter>qtsingleapplication</Filter>
     </ClCompile>
-    <ClCompile Include="application_win.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="helpers.h">

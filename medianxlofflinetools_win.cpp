@@ -17,6 +17,14 @@
 #include <Shobjidl.h>
 #endif
 
+#define SHELL32_HANDLE GetModuleHandle(L"shell32.dll")
+
+#ifdef WIN_7_OR_LATER
+typedef HRESULT (__stdcall *PSCPEAUMID)(PCWSTR);                                 // SetCurrentProcessExplicitAppUserModelID()
+typedef HRESULT (__stdcall *PSHCIFPN)(PCWSTR, IBindCtx *, const IID &, void **); // SHCreateItemFromParsingName()
+#endif
+typedef void (__stdcall *PSHATRD)(UINT, LPCVOID);                                // SHAddToRecentDocs()
+
 
 // recent files
 
@@ -34,23 +42,21 @@ LPCWSTR MedianXLOfflineTools::appUserModelID()
 void MedianXLOfflineTools::setAppUserModelID()
 {
 #ifdef WIN_7_OR_LATER
-    if (QSysInfo::windowsVersion() < QSysInfo::WV_WINDOWS7)
-        return;
-
-    HRESULT hr;
-    if (SUCCEEDED((hr = SetCurrentProcessExplicitAppUserModelID(appUserModelID()))))
-        qDebug("SetCurrentProcessExplicitAppUserModelID success");
-    else
-        qDebug("SetCurrentProcessExplicitAppUserModelID error: %d", HRESULT_CODE(hr));
+    PSCPEAUMID pSetCurrentProcessExplicitAppUserModelID = (PSCPEAUMID)GetProcAddress(SHELL32_HANDLE, "SetCurrentProcessExplicitAppUserModelID");
+    if (pSetCurrentProcessExplicitAppUserModelID)
+    {
+        HRESULT hr = pSetCurrentProcessExplicitAppUserModelID(appUserModelID());
+        if (SUCCEEDED(hr))
+            qDebug("SetCurrentProcessExplicitAppUserModelID success");
+        else
+            qDebug("SetCurrentProcessExplicitAppUserModelID error: %d", HRESULT_CODE(hr));
+    }
 #endif
 }
 
 void MedianXLOfflineTools::syncWindowsTaskbarRecentFiles()
 {
 #ifdef WIN_7_OR_LATER
-    if (QSysInfo::windowsVersion() < QSysInfo::WV_WINDOWS7)
-        return;
-
     qDebug("sync recent");
     IApplicationDocumentLists *pADL;
     HRESULT hr = CoCreateInstance(CLSID_ApplicationDocumentLists, NULL, CLSCTX_INPROC, IID_PPV_ARGS(&pADL));
@@ -105,9 +111,6 @@ void MedianXLOfflineTools::syncWindowsTaskbarRecentFiles()
 void MedianXLOfflineTools::removeFromWindowsRecentFiles(const QString &filePath)
 {
 #ifdef WIN_7_OR_LATER
-    if (QSysInfo::windowsVersion() < QSysInfo::WV_WINDOWS7)
-        return;
-
     qDebug("remove from recent");
     IApplicationDocumentLists *pADL;
     HRESULT hr = CoCreateInstance(CLSID_ApplicationDocumentLists, NULL, CLSCTX_INPROC, IID_PPV_ARGS(&pADL));
@@ -183,23 +186,32 @@ void MedianXLOfflineTools::removeFromWindowsRecentFiles(const QString &filePath)
 
 void MedianXLOfflineTools::addToWindowsRecentFiles(const QString &filePath)
 {
-#ifdef WIN_7_OR_LATER
-    if (QSysInfo::windowsVersion() < QSysInfo::WV_WINDOWS7)
-        return;
-
     qDebug("add '%s' to recent", qPrintable(filePath));
-    IShellItem *pShellItem;
-    HRESULT hr = SHCreateItemFromParsingName(filePath.utf16(), NULL, IID_PPV_ARGS(&pShellItem));
-    if (SUCCEEDED(hr))
+    HMODULE shell32Handle = SHELL32_HANDLE;
+    PSHATRD pSHAddToRecentDocs = (PSHATRD)GetProcAddress(shell32Handle, "SHAddToRecentDocs");
+#ifdef WIN_7_OR_LATER
+    PSHCIFPN pSHCreateItemFromParsingName = (PSHCIFPN)GetProcAddress(shell32Handle, "SHCreateItemFromParsingName");
+    if (pSHCreateItemFromParsingName)
     {
-        SHARDAPPIDINFO info;
-        info.psi = pShellItem;
-        info.pszAppID = appUserModelID();
-        SHAddToRecentDocs(SHARD_APPIDINFO, &info);
+        IShellItem *pShellItem;
+        HRESULT hr = pSHCreateItemFromParsingName(filePath.utf16(), NULL, IID_PPV_ARGS(&pShellItem));
+        if (SUCCEEDED(hr))
+        {
+            SHARDAPPIDINFO info;
+            info.psi = pShellItem;
+            info.pszAppID = appUserModelID();
+            pSHAddToRecentDocs(SHARD_APPIDINFO, &info);
+        }
+        else
+            qDebug("Error calling SHCreateItemFromParsingName(): %d", HRESULT_CODE(hr));
     }
     else
-        qDebug("Error calling SHCreateItemFromParsingName(): %d", HRESULT_CODE(hr));
 #endif
+    if (pSHAddToRecentDocs)
+    {
+        // just add to recent files on systems before Windows 7
+        pSHAddToRecentDocs(SHARD_PATHW, filePath.utf16());
+    }
 }
 
 
@@ -219,10 +231,9 @@ void MedianXLOfflineTools::checkFileAssociations()
     QSettings hklmSoftware("HKEY_LOCAL_MACHINE\\Software", QSettings::NativeFormat);
     if (QSysInfo::windowsVersion() < QSysInfo::WV_VISTA)
     {
-        return;
         // check key "Application" in HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.d2s\ (if present, contains some binary name)
         hklmSoftware.beginGroup("Classes");
-        if (!hklmSoftware.value(defaultApplicationRegistryPath).toString().startsWith(appPath))
+        if (hklmSoftware.value(defaultApplicationRegistryPath).toString() != binaryPathWithParam)
         {
             // TODO: same code in Vista+ section
             hklmSoftware.setValue(defaultValueFormat.arg(characterExtensionWithDot), progID());

@@ -15,14 +15,8 @@ public:
     explicit Application(int &argc, char **argv);
     virtual ~Application();
 
-    static const QString appName;
-
 public slots:
-#ifdef Q_WS_WIN32
-    // use WinAPI instead of default implementation to bring window to foreground
-    void activateWindow() {}
-    void activateWindowWinAPI();
-#endif
+    void activateWindow();
 
 protected:
 #ifdef Q_WS_MACX
@@ -31,6 +25,7 @@ protected:
 
 private slots:
     void createAndShowMainWindow();
+    void setParam(const QString &param) { _param = param; }
 
 private:
     MedianXLOfflineTools *_mainWindow;

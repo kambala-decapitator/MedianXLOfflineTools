@@ -9,20 +9,19 @@
 #include <QTimer>
 #endif
 
+static const QString appName("Median XL Offline Tools");
 
-const QString Application::appName("Median XL Offline Tools");
 
 Application::Application(int &argc, char **argv) : QtSingleApplication(appName, argc, argv), _mainWindow(0)
 {
+#ifdef Q_WS_WIN32
+    ::AllowSetForegroundWindow(ASFW_ANY);
+#endif
+
     if (argc > 1)
         _param = argv[1];
     if (sendMessage(_param))
-    {
-#ifdef Q_WS_WIN32
-        activateWindowWinAPI();
-#endif
         return;
-    }
 
     setOrganizationName("kambala");
     setApplicationName(appName);
@@ -77,7 +76,7 @@ void Application::createAndShowMainWindow()
     _mainWindow->show();
 
     setActivationWindow(_mainWindow);
-    connect(this, SIGNAL(messageReceived(const QString &)), _mainWindow, SLOT(loadFile(const QString &)));
+    connect(this, SIGNAL(messageReceived(const QString &)), SLOT(setParam(const QString &)));
 
 #ifdef Q_WS_MACX
     disableLionWindowRestoration();
@@ -85,4 +84,10 @@ void Application::createAndShowMainWindow()
     if (_showWindowMacTimer)
         delete _showWindowMacTimer;
 #endif
+}
+
+void Application::activateWindow()
+{
+    QtSingleApplication::activateWindow();
+    _mainWindow->loadFile(_param);
 }
