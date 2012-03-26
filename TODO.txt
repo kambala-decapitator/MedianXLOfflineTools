@@ -1,6 +1,4 @@
 v0.2.1:
-- maybe win7 taskbar and mac dock menu support to open recent files
-- integrate QtSingleApplication
 - finish file associations (dialog, options, etc.)
 
 v0.3:

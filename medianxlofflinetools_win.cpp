@@ -23,16 +23,16 @@
 typedef HRESULT (__stdcall *PSCPEAUMID)(PCWSTR);                                 // SetCurrentProcessExplicitAppUserModelID()
 typedef HRESULT (__stdcall *PSHCIFPN)(PCWSTR, IBindCtx *, const IID &, void **); // SHCreateItemFromParsingName()
 #endif
-typedef void (__stdcall *PSHATRD)(UINT, LPCVOID);                                // SHAddToRecentDocs()
 
-
-// recent files
 
 const QString &MedianXLOfflineTools::progID()
 {
     static const QString progId = QString("%1.%2").arg(qApp->applicationName().remove(' '), characterExtension);
     return progId;
 }
+
+
+// recent files
 
 LPCWSTR MedianXLOfflineTools::appUserModelID()
 {
@@ -104,7 +104,6 @@ void MedianXLOfflineTools::syncWindowsTaskbarRecentFiles()
     }
     else
         qDebug("Error calling CoCreateInstance(CLSID_ApplicationDocumentLists): %d", HRESULT_CODE(hr));
-    qDebug("-----");
 #endif
 }
 
@@ -187,10 +186,8 @@ void MedianXLOfflineTools::removeFromWindowsRecentFiles(const QString &filePath)
 void MedianXLOfflineTools::addToWindowsRecentFiles(const QString &filePath)
 {
     qDebug("add '%s' to recent", qPrintable(filePath));
-    HMODULE shell32Handle = SHELL32_HANDLE;
-    PSHATRD pSHAddToRecentDocs = (PSHATRD)GetProcAddress(shell32Handle, "SHAddToRecentDocs");
 #ifdef WIN_7_OR_LATER
-    PSHCIFPN pSHCreateItemFromParsingName = (PSHCIFPN)GetProcAddress(shell32Handle, "SHCreateItemFromParsingName");
+    PSHCIFPN pSHCreateItemFromParsingName = (PSHCIFPN)GetProcAddress(SHELL32_HANDLE, "SHCreateItemFromParsingName");
     if (pSHCreateItemFromParsingName)
     {
         IShellItem *pShellItem;
@@ -200,17 +197,16 @@ void MedianXLOfflineTools::addToWindowsRecentFiles(const QString &filePath)
             SHARDAPPIDINFO info;
             info.psi = pShellItem;
             info.pszAppID = appUserModelID();
-            pSHAddToRecentDocs(SHARD_APPIDINFO, &info);
+            SHAddToRecentDocs(SHARD_APPIDINFO, &info);
         }
         else
             qDebug("Error calling SHCreateItemFromParsingName(): %d", HRESULT_CODE(hr));
     }
     else
 #endif
-    if (pSHAddToRecentDocs)
     {
         // just add to recent files on systems before Windows 7
-        pSHAddToRecentDocs(SHARD_PATHW, filePath.utf16());
+        SHAddToRecentDocs(SHARD_PATHW, filePath.utf16());
     }
 }
 
@@ -249,7 +245,7 @@ void MedianXLOfflineTools::checkFileAssociations()
             hklmSoftware.setValue(QString("%1/Path").arg(binaryName), QDir::toNativeSeparators(qApp->applicationDirPath()));
             // end
 
-            SHChangeNotify(SHCNE_ASSOCCHANGED, 0, 0, 0);
+            SHChangeNotify(SHCNE_ASSOCCHANGED, 0, NULL, NULL);
             qDebug("file association changed");
         }
         hklmSoftware.endGroup();
@@ -308,17 +304,6 @@ void MedianXLOfflineTools::checkFileAssociations()
 
             if (!isDefault && SUCCEEDED(hr))
             {
-                //LPWSTR defaultAppNameWstr;
-                // returns HRESULT_FROM_WIN32(ERROR_NO_ASSOCIATION) if no app is associated
-                //hr = pAAR->QueryCurrentDefault(extensionWithDotWstr, AT_FILEEXTENSION, AL_EFFECTIVE, &defaultAppNameWstr);
-                //if (SUCCEEDED(hr))
-                //{
-                //    OutputDebugString(defaultAppNameWstr);
-                //    qDebug(" - default app");
-                //}
-                //else
-                //    qDebug("QueryCurrentDefault() failed with result: %ld", HRESULT_CODE(hr));
-
                 // returns HRESULT_FROM_WIN32(ERROR_FILE_NOT_FOUND) if extension isn't registered
                 hr = pAAR->SetAppAsDefault(appNameWstr, extensionWithDotWstr, AT_FILEEXTENSION);
                 if (SUCCEEDED(hr))
