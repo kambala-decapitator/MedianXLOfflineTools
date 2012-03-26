@@ -280,7 +280,7 @@ void MedianXLOfflineTools::saveCharacter()
     {
         outputDataStream.device()->seek(Enums::Offsets::Name);
 #ifdef Q_WS_MACX
-        QByteArray newNameByteArray = macTextCodec()->fromUnicode(newName);
+        QByteArray newNameByteArray = ColorsManager::macTextCodec()->fromUnicode(newName);
 #else
         QByteArray newNameByteArray = newName.toLocal8Bit();
 #endif
@@ -437,8 +437,9 @@ void MedianXLOfflineTools::saveCharacter()
                 }
 
                 charInfo.basicInfo.originalName = newName;
-
+#ifdef Q_WS_WIN32
                 removeFromWindowsRecentFiles(_recentFilesList.at(0)); // old file doesn't exist any more
+#endif
                 _recentFilesList[0] = saveFileName;
                 updateRecentFilesActions();
             }
