@@ -16,8 +16,6 @@ public:
 #ifdef Q_WS_WIN32
     static QString progIdForExtension(const QString &extensionWithDot);
 #endif
-
-private:
 };
 
 #endif // FILEASSOCIATIONMANAGER_H

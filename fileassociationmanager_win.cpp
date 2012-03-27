@@ -9,6 +9,11 @@
 
 // helpers
 
+QString extensionWithDotFromExtension(const QString &extension)
+{
+    return extension.startsWith('.') ? extension : '.' + extension;
+}
+
 QString executablePath()
 {
     return QDir::toNativeSeparators(qApp->applicationFilePath());
@@ -75,7 +80,7 @@ void registerApplication(const QString &extensionWithDot)
 bool FileAssociationManager::isApplicationDefaultForExtension(const QString &extension)
 {
     bool isDefault;
-    QString extensionWithDot = extension.startsWith('.') ? extension : '.' + extension;
+    QString extensionWithDot = extensionWithDotFromExtension(extension);
     if (QSysInfo::windowsVersion() < QSysInfo::WV_VISTA)
     {
         QSettings hklmSoftwareClasses("HKEY_LOCAL_MACHINE\\Software\\Classes", QSettings::NativeFormat);
@@ -120,7 +125,7 @@ bool FileAssociationManager::isApplicationDefaultForExtension(const QString &ext
 
 void FileAssociationManager::makeApplicationDefaultForExtension(const QString &extension)
 {
-    QString extensionWithDot = extension.startsWith('.') ? extension : '.' + extension;
+    QString extensionWithDot = extensionWithDotFromExtension(extension);
     registerProgID(extensionWithDot);
     registerApplication(extensionWithDot);
     ::SHChangeNotify(SHCNE_ASSOCCHANGED, 0, NULL, NULL);

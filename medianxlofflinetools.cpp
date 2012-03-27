@@ -80,6 +80,8 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *pare
     {
         FileAssociationManager::makeApplicationDefaultForExtension(characterExtensionWithDot);
     }
+    else
+        qDebug("app is default already");
 #else
 #error Add implementation to check file association to e.g. fileassociationmanager_linux.cpp or comment this line
 #endif
