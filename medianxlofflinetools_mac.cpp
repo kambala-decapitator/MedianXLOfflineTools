@@ -7,8 +7,8 @@ void MedianXLOfflineTools::checkFileAssociations()
 {
     FSRef defaultAppRef = {{0}}; // shut clang up
     CFStringRef characterExtensionCF = CFStringCreateWithCharacters(kCFAllocatorDefault, (const UniChar *)characterExtension.unicode(), characterExtension.length());
-    OSStatus err;
-    if ((err = LSGetApplicationForInfo(kLSUnknownType, kLSUnknownCreator, characterExtensionCF, kLSRolesAll, &defaultAppRef, NULL)) != noErr)
+    OSStatus err = LSGetApplicationForInfo(kLSUnknownType, kLSUnknownCreator, characterExtensionCF, kLSRolesAll, &defaultAppRef, NULL);
+    if (err != noErr)
     {
         CFRelease(characterExtensionCF);
         qDebug("error getting default app: %d", err);

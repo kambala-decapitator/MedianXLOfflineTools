@@ -108,6 +108,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="application.cpp" />
+    <ClCompile Include="fileassociationmanager_win.cpp" />
     <ClCompile Include="findresultswidget.cpp" />
     <ClCompile Include="GeneratedFiles\Debug\moc_application.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
@@ -284,6 +285,7 @@
     <ClCompile Include="skillplandialog.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="windowsincludes.h" />
     <CustomBuild Include="findresultswidget.h">
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing findresultswidget.h...</Message>
@@ -314,6 +316,7 @@
     </CustomBuild>
     <ClInclude Include="characterinfo.hpp" />
     <ClInclude Include="colorsmanager.hpp" />
+    <ClInclude Include="fileassociationmanager.h" />
     <ClInclude Include="GeneratedFiles\ui_skillplandialog.h" />
     <ClInclude Include="itemparser.h" />
     <ClInclude Include="propertiesdisplaymanager.h" />

@@ -228,6 +228,9 @@
     <ClCompile Include="qtsingleapplication\qtlocalpeer.cpp">
       <Filter>qtsingleapplication</Filter>
     </ClCompile>
+    <ClCompile Include="fileassociationmanager_win.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="helpers.h">
@@ -285,6 +288,12 @@
       <Filter>qtsingleapplication</Filter>
     </ClInclude>
     <ClInclude Include="colorsmanager.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fileassociationmanager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windowsincludes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

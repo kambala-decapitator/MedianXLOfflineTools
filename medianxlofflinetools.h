@@ -118,12 +118,6 @@ private:
     void addToWindowsRecentFiles(const QString &filePath); // also used by earlier Windows versions
 #endif
 
-#if defined(Q_WS_WIN32) || defined(Q_WS_MACX)
-    void checkFileAssociations();
-#else
-#error Place implementation to check file association to e.g. medianxlofflinetools_linux.cpp and remove #ifdefs in constructor, or comment this line
-#endif
-
     void loadData();
     void loadExpTable();
     void loadMercNames();

@@ -13,6 +13,7 @@
 #include "itemspropertiessplitter.h"
 #include "characterinfo.hpp"
 #include "skillplandialog.h"
+#include "fileassociationmanager.h"
 
 #include <QCloseEvent>
 #include <QDropEvent>
@@ -75,7 +76,12 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *pare
 #endif
 
 #if defined(Q_WS_WIN32) || defined(Q_WS_MACX)
-    checkFileAssociations();
+    if (!FileAssociationManager::isApplicationDefaultForExtension(characterExtensionWithDot))
+    {
+        FileAssociationManager::makeApplicationDefaultForExtension(characterExtensionWithDot);
+    }
+#else
+#error Add implementation to check file association to e.g. fileassociationmanager_linux.cpp or comment this line
 #endif
     loadData();
     createLanguageMenu();

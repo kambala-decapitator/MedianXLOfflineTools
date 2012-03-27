@@ -60,7 +60,8 @@ HEADERS += medianxlofflinetools.h \
            application.h \
            qtsingleapplication/qtsingleapplication.h \
            qtsingleapplication/qtlockedfile.h \
-           qtsingleapplication/qtlocalpeer.h
+           qtsingleapplication/qtlocalpeer.h \
+           fileassociationmanager.h
 
 FORMS += medianxlofflinetools.ui \
          resurrectpenaltydialog.ui \
@@ -82,7 +83,10 @@ OTHER_FILES += TODO.txt
 
 win32 {
     SOURCES += medianxlofflinetools_win.cpp \
-               qtsingleapplication/qtlockedfile_win.cpp
+               qtsingleapplication/qtlockedfile_win.cpp \
+               fileassociationmanager_win.cpp
+               
+    HEADERS += windowsincludes.h
 
     LIBS += -lshell32 \ # SHChangeNotify()
             -lole32 \   # CoCreateInstance() and other COM shit
@@ -91,7 +95,7 @@ win32 {
     RC_FILE = resources/win/medianxlofflinetools.rc
 }
 macx {
-    SOURCES += medianxlofflinetools_mac.cpp
+    SOURCES += fileassociationmanager_mac.cpp
 
     OBJECTIVE_SOURCES += application_mac.mm
 
