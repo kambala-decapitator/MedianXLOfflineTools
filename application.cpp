@@ -5,6 +5,10 @@
 #include <QSettings>
 #include <QTranslator>
 
+#ifdef Q_WS_WIN32
+#include <QTextCodec>
+#endif
+
 #ifdef Q_WS_MACX
 #include <QTimer>
 #endif
@@ -19,7 +23,13 @@ Application::Application(int &argc, char **argv) : QtSingleApplication(appName, 
 #endif
 
     if (argc > 1)
+    {
+#ifdef Q_WS_WIN32
+        _param = QTextCodec::codecForName("cp1251")->toUnicode(argv[1]);
+#else
         _param = argv[1];
+#endif
+    }
     if (sendMessage(_param))
         return;
 

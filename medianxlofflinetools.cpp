@@ -14,6 +14,7 @@
 #include "characterinfo.hpp"
 #include "skillplandialog.h"
 #include "fileassociationmanager.h"
+#include "messagecheckbox.h"
 
 #include <QCloseEvent>
 #include <QDropEvent>
@@ -75,22 +76,38 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *pare
     setAppUserModelID(); // is actually used only in Windows 7 and later
 #endif
 
-#if defined(Q_WS_WIN32) || defined(Q_WS_MACX)
-    if (!FileAssociationManager::isApplicationDefaultForExtension(characterExtensionWithDot))
-    {
-        FileAssociationManager::makeApplicationDefaultForExtension(characterExtensionWithDot);
-    }
-    else
-        qDebug("app is default already");
-#else
-#error Add implementation to check file association to e.g. fileassociationmanager_linux.cpp or comment this line
-#endif
     loadData();
     createLanguageMenu();
     createLayout();
     loadSettings();
     fillMaps();
     connectSignals();
+
+#if defined(Q_WS_WIN32) || defined(Q_WS_MACX)
+    bool isDefault;
+    if (!(isDefault = FileAssociationManager::isApplicationDefaultForExtension(characterExtensionWithDot)))
+    {
+        if (ui.actionCheckFileAssociations->isChecked())
+        {
+            MessageCheckBox box(tr("%1 is not associated with %2 files.\n\nDo you want to do it?").arg(qApp->applicationName(), characterExtensionWithDot), ui.actionCheckFileAssociations->text(), this);
+            box.setChecked(true);
+            int result = box.exec();
+            ui.actionCheckFileAssociations->setChecked(box.isChecked());
+            if (result)
+            {
+                FileAssociationManager::makeApplicationDefaultForExtension(characterExtensionWithDot);
+                isDefault = true;
+            }
+        }
+    }
+    else
+        qDebug("Application is default already");
+
+    ui.actionAssociate->setDisabled(isDefault);
+    ui.actionAssociate->setStatusTip(isDefault ? tr("Application is default already") : QString());
+#else
+#error Add implementation to check file association to e.g. fileassociationmanager_linux.cpp or comment this line
+#endif
 
 #ifdef Q_WS_WIN32
     syncWindowsTaskbarRecentFiles(); // is actually used only in Windows 7 and later
@@ -121,11 +138,7 @@ bool MedianXLOfflineTools::loadFile(const QString &charPath)
         return false;
     }
 
-#ifdef Q_WS_WIN32
-    _charPath = QString(charPath).replace(ColorsManager::ansiColorHeader(), ColorsManager::unicodeColorHeader()); // stupid shell
-#else
     _charPath = charPath;
-#endif
     bool result;
     if ((result = processSaveFile()))
     {
@@ -772,6 +785,12 @@ void MedianXLOfflineTools::backupSettingTriggered(bool checked)
         ui.actionBackup->setChecked(true);
 }
 
+void MedianXLOfflineTools::associateFiles()
+{
+    FileAssociationManager::makeApplicationDefaultForExtension(characterExtension);
+    ui.actionAssociate->setDisabled(true);
+}
+
 void MedianXLOfflineTools::aboutApp()
 {
     QMessageBox aboutBox(this);
@@ -1085,6 +1104,10 @@ void MedianXLOfflineTools::loadSettings()
     ui.actionAutoOpenHCShared->setChecked(settings.value("hcShared", true).toBool());
     settings.endGroup();
 
+    //settings.beginGroup("fileAssociations");
+    ui.actionCheckFileAssociations->setChecked(settings.value("checkAssociations", true).toBool());
+    //settings.endGroup();
+
     settings.endGroup();
 }
 
@@ -1110,6 +1133,10 @@ void MedianXLOfflineTools::saveSettings() const
     settings.setValue("shared", ui.actionAutoOpenSharedStash->isChecked());
     settings.setValue("hcShared", ui.actionAutoOpenHCShared->isChecked());
     settings.endGroup();
+
+    //settings.beginGroup("fileAssociations");
+    settings.setValue("checkAssociations", ui.actionCheckFileAssociations->isChecked());
+    //settings.endGroup();
 
     settings.endGroup();
 
@@ -1175,6 +1202,7 @@ void MedianXLOfflineTools::connectSignals()
 
     // options
     connect(ui.actionBackup, SIGNAL(triggered(bool)), SLOT(backupSettingTriggered(bool)));
+    connect(ui.actionAssociate, SIGNAL(triggered()), SLOT(associateFiles()));
 
     // about
     connect(ui.actionAbout, SIGNAL(triggered()), SLOT(aboutApp()));

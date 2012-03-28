@@ -74,6 +74,7 @@ private slots:
 
     // options
     void backupSettingTriggered(bool checked);
+    void associateFiles();
 
     // about
     void aboutApp();

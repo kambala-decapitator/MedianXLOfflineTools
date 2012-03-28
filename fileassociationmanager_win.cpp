@@ -74,6 +74,15 @@ void registerApplication(const QString &extensionWithDot)
 #endif
 }
 
+bool isRegisteredApplicationOverridenInFileExts(const QString &extensionWithDot, bool removeIfExists)
+{
+    QSettings hkcuFileExts("HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FileExts\\" + extensionWithDot, QSettings::NativeFormat);
+    bool result = hkcuFileExts.contains("Application") && hkcuFileExts.value("Application").toString() != QFileInfo(executablePath()).fileName();
+    if (result && removeIfExists)
+        hkcuFileExts.remove("Application");
+    return result;
+}
+
 
 // FileAssociationManager implementation
 
@@ -87,8 +96,7 @@ bool FileAssociationManager::isApplicationDefaultForExtension(const QString &ext
         isDefault = hklmSoftwareClasses.value(openWithFormat().arg(FileAssociationManager::progIdForExtension(extensionWithDot))).toString() == executablePathWithParam();
         if (isDefault)
         {
-            QSettings hkcuFileExts("HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FileExts\\" + extensionWithDot, QSettings::NativeFormat);
-            if (hkcuFileExts.contains("Application") && hkcuFileExts.value("Application").toString() != QFileInfo(executablePath()).fileName())
+            if (isRegisteredApplicationOverridenInFileExts(extensionWithDot, false))
                 isDefault = false;
         }
     }
@@ -128,10 +136,11 @@ void FileAssociationManager::makeApplicationDefaultForExtension(const QString &e
     QString extensionWithDot = extensionWithDotFromExtension(extension);
     registerProgID(extensionWithDot);
     registerApplication(extensionWithDot);
-    ::SHChangeNotify(SHCNE_ASSOCCHANGED, 0, NULL, NULL);
 
+    if (QSysInfo::windowsVersion() < QSysInfo::WV_VISTA)
+        isRegisteredApplicationOverridenInFileExts(extensionWithDot, true);
 #ifdef WIN_VISTA_OR_LATER
-    if (QSysInfo::windowsVersion() >= QSysInfo::WV_VISTA)
+    else
     {
         IApplicationAssociationRegistration *pAAR;
         HRESULT hr = CoCreateInstance(CLSID_ApplicationAssociationRegistration, NULL, CLSCTX_INPROC, IID_PPV_ARGS(&pAAR));
@@ -149,6 +158,8 @@ void FileAssociationManager::makeApplicationDefaultForExtension(const QString &e
             qDebug("Error calling CoCreateInstance(CLSID_ApplicationAssociationRegistration): %d", HRESULT_CODE(hr));
     }
 #endif
+
+    ::SHChangeNotify(SHCNE_ASSOCCHANGED, 0, NULL, NULL);
 }
 
 QString FileAssociationManager::progIdForExtension(const QString &extensionWithDot)

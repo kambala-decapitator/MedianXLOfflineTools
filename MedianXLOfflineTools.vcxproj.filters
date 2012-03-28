@@ -231,6 +231,18 @@
     <ClCompile Include="fileassociationmanager_win.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="messagecheckbox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_messagecheckbox.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_messagecheckbox.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Template\moc_messagecheckbox.cpp">
+      <Filter>Generated Files\Template</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="helpers.h">
@@ -372,6 +384,9 @@
     </CustomBuild>
     <CustomBuild Include="qtsingleapplication\qtsingleapplication.h">
       <Filter>qtsingleapplication</Filter>
+    </CustomBuild>
+    <CustomBuild Include="messagecheckbox.h">
+      <Filter>Header Files</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>

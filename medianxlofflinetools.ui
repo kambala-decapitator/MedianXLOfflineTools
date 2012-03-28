@@ -651,6 +651,9 @@ p, li { white-space: pre-wrap; }
     <addaction name="actionOpenItemsAutomatically"/>
     <addaction name="menuAuto_open_shared_stashes"/>
     <addaction name="actionReloadSharedStashes"/>
+    <addaction name="separator"/>
+    <addaction name="actionCheckFileAssociations"/>
+    <addaction name="actionAssociate"/>
    </widget>
    <widget class="QMenu" name="menuItems">
     <property name="title">
@@ -1208,6 +1211,22 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="text">
     <string>Character Info</string>
+   </property>
+  </action>
+  <action name="actionCheckFileAssociations">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Check file associations on start</string>
+   </property>
+  </action>
+  <action name="actionAssociate">
+   <property name="text">
+    <string>Associate with .d2s files</string>
    </property>
   </action>
  </widget>
