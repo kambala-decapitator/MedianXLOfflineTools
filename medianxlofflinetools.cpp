@@ -149,6 +149,9 @@ bool MedianXLOfflineTools::loadFile(const QString &charPath)
         addToRecentFiles();
         updateUI();
 
+        raise();
+        activateWindow();
+
         // it is here because currentIndexChanged signal is emited when items are added to the combobox
         connect(ui.mercTypeComboBox, SIGNAL(currentIndexChanged(int)), SLOT(modify()));
         connect(ui.mercNameComboBox, SIGNAL(currentIndexChanged(int)), SLOT(modify()));
@@ -854,9 +857,6 @@ void MedianXLOfflineTools::dropEvent(QDropEvent *event)
 {
     loadFile(event->mimeData()->urls().at(0).toLocalFile());
     event->acceptProposedAction();
-
-    raise();
-    activateWindow();
 }
 
 
