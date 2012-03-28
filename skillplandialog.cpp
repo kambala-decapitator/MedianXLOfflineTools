@@ -156,7 +156,8 @@ void SkillplanDialog::contructUrls()
 
 void SkillplanDialog::showHelp()
 {
-    INFO_BOX(tr("Help"));
+    INFO_BOX(tr("If you check a checkbox, then corresponding value is taken from your character. If you don't, then maximum possible value is used.\n\n"
+                "To copy simple link: right-click the blue-highlighted link and click on the menu command."));
 }
 
 void SkillplanDialog::done(int r)

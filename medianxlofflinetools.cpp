@@ -84,8 +84,8 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *pare
     connectSignals();
 
 #if defined(Q_WS_WIN32) || defined(Q_WS_MACX)
-    bool isDefault;
-    if (!(isDefault = FileAssociationManager::isApplicationDefaultForExtension(characterExtensionWithDot)))
+    bool isDefault = FileAssociationManager::isApplicationDefaultForExtension(characterExtensionWithDot);
+    if (!isDefault)
     {
         if (ui.actionCheckFileAssociations->isChecked())
         {
@@ -100,8 +100,6 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *pare
             }
         }
     }
-    else
-        qDebug("Application is default already");
 
     ui.actionAssociate->setDisabled(isDefault);
     ui.actionAssociate->setStatusTip(isDefault ? tr("Application is default already") : QString());
@@ -1260,15 +1258,14 @@ void MedianXLOfflineTools::updateRecentFilesActions()
 
 void MedianXLOfflineTools::addToRecentFiles()
 {
-    QString nativeFileName = QDir::toNativeSeparators(_charPath);
-    int index = _recentFilesList.indexOf(nativeFileName);
+    int index = _recentFilesList.indexOf(_charPath);
 #ifdef Q_WS_WIN32
     // previous version didn't use native separators
     if (index == -1)
     {
-        index = _recentFilesList.indexOf(_charPath);
+        index = _recentFilesList.indexOf(QDir::fromNativeSeparators(_charPath));
         if (index != -1)
-            _recentFilesList[index] = nativeFileName;
+            _recentFilesList[index] = _charPath;
     }
 #endif
 
@@ -1284,10 +1281,10 @@ void MedianXLOfflineTools::addToRecentFiles()
             _recentFilesList.removeLast();
 #endif
         }
-        _recentFilesList.prepend(nativeFileName);
+        _recentFilesList.prepend(_charPath);
     }
 #ifdef Q_WS_WIN32
-    addToWindowsRecentFiles(nativeFileName); // Windows moves file to the top itself if it already exists in the list
+    addToWindowsRecentFiles(_charPath); // Windows moves file to the top itself if it already exists in the list
 #endif
     updateRecentFilesActions();
 }

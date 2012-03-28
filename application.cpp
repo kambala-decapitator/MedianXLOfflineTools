@@ -25,7 +25,7 @@ Application::Application(int &argc, char **argv) : QtSingleApplication(appName, 
     if (argc > 1)
     {
 #ifdef Q_WS_WIN32
-        _param = QTextCodec::codecForName("cp1251")->toUnicode(argv[1]);
+        _param = QTextCodec::codecForLocale()->toUnicode(argv[1]); // stupid Windows
 #else
         _param = argv[1];
 #endif
