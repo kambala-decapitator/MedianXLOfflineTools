@@ -24,6 +24,7 @@ private slots:
     void copyHtml();
     void copyBbcode();
     void contructUrls();
+    void showHelp();
 
     virtual void done(int r);
 

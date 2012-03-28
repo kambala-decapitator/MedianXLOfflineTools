@@ -40,7 +40,7 @@
 // additional defines
 
 #ifdef QT_NO_DEBUG
-#define RELEASE_DATE "31.03.2012"
+#define RELEASE_DATE "29.03.2012"
 #else
 #define RELEASE_DATE QDate::currentDate().toString("dd.MM.yyyy") // :)
 #endif
@@ -138,12 +138,20 @@ bool MedianXLOfflineTools::loadFile(const QString &charPath)
         return false;
     }
 
+    // don't call slot a lot of times while loading character
+    disconnect(ui.mercTypeComboBox);
+    disconnect(ui.mercNameComboBox);
+
     _charPath = charPath;
     bool result;
     if ((result = processSaveFile()))
     {
         addToRecentFiles();
         updateUI();
+
+        // it is here because currentIndexChanged signal is emited when items are added to the combobox
+        connect(ui.mercTypeComboBox, SIGNAL(currentIndexChanged(int)), SLOT(modify()));
+        connect(ui.mercNameComboBox, SIGNAL(currentIndexChanged(int)), SLOT(modify()));
 
         if (_itemsDialog)
             _itemsDialog->updateItems(getPlugyStashesExistenceHash());
@@ -191,7 +199,7 @@ void MedianXLOfflineTools::switchLanguage(QAction *languageAction)
 void MedianXLOfflineTools::setModified(bool modified)
 {
     setWindowModified(modified);
-    ui.actionReloadCharacter->setEnabled(modified);
+//    ui.actionReloadCharacter->setEnabled(modified);
     ui.actionSaveCharacter->setEnabled(modified);
 }
 
@@ -846,6 +854,9 @@ void MedianXLOfflineTools::dropEvent(QDropEvent *event)
 {
     loadFile(event->mimeData()->urls().at(0).toLocalFile());
     event->acceptProposedAction();
+
+    raise();
+    activateWindow();
 }
 
 
@@ -1218,6 +1229,7 @@ void MedianXLOfflineTools::connectSignals()
     connect(ui.convertToSoftcoreCheckBox, SIGNAL(toggled(bool)), SLOT(convertToSoftcore(bool)));
     connect(ui.respecSkillsCheckBox, SIGNAL(toggled(bool)), SLOT(respecSkills(bool)));
     //connect(ui.currentDifficultyComboBox, SIGNAL(currentIndexChanged(int)), SLOT(currentDifficultyChanged(int)));
+    connect(ui.activateWaypointsCheckBox, SIGNAL(clicked()), SLOT(modify()));
 }
 
 void MedianXLOfflineTools::updateRecentFilesActions()
@@ -1920,7 +1932,7 @@ void MedianXLOfflineTools::updateUI()
 {
     clearUI();
 
-    QList<QAction *> actions = QList<QAction *>() << ui.actionRespecStats << ui.actionRespecSkills << ui.actionActivateWaypoints
+    QList<QAction *> actions = QList<QAction *>() << ui.actionReloadCharacter << ui.actionRespecStats << ui.actionRespecSkills << ui.actionActivateWaypoints
                                                   << ui.actionRename << ui.actionSkillPlan << ui.actionExportCharacterInfo;
     foreach (QAction *action, actions)
         action->setEnabled(true);
@@ -1979,6 +1991,8 @@ void MedianXLOfflineTools::updateUI()
     ui.actionShowItems->setEnabled(hasItems);
     ui.actionFind->setEnabled(hasItems);
     ui.actionGiveCube->setDisabled(CharacterInfo::instance().items.hasCube());
+
+    setModified(false);
     updateWindowTitle();
 
     _isLoaded = true;

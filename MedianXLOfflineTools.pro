@@ -97,10 +97,13 @@ win32 {
 macx {
     SOURCES += fileassociationmanager_mac.cpp
 
-    OBJECTIVE_SOURCES += application_mac.mm
+    OBJECTIVE_SOURCES += application_mac.mm \
+                         messagecheckbox_mac.mm
+
+    OBJECTIVE_HEADERS += messagecheckbox.h
 
     LIBS += -framework ApplicationServices \ # LSGetApplicationForInfo() 
-            -framework AppKit                # NSWindow calls to disable Lion window resoration
+            -framework AppKit                # NSWindow calls to disable Lion window resoration and NSAlert
 
     ICON = resources/mac/icon.icns
     QMAKE_INFO_PLIST = resources/mac/Info.plist
@@ -129,4 +132,10 @@ macx {
 }
 unix {
     SOURCES += qtsingleapplication/qtlockedfile_unix.cpp
+}
+
+!macx {
+    SOURCES += messagecheckbox.cpp
+
+    HEADERS += messagecheckbox.h
 }

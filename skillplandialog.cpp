@@ -47,6 +47,7 @@ SkillplanDialog::SkillplanDialog(QWidget *parent) : QDialog(parent)
 
     connect(ui.copyHtmlButton, SIGNAL(clicked()), SLOT(copyHtml()));
     connect(ui.copyBbcodeButton, SIGNAL(clicked()), SLOT(copyBbcode()));
+    connect(ui.buttonBox, SIGNAL(helpRequested()), SLOT(showHelp()));
 
     foreach (QCheckBox *checkBox, QList<QCheckBox *>() << ui.skillQuestsCheckBox << ui.charmsCheckBox << ui.minigamesCheckBox << ui.signetsCheckBox << ui.itemsCheckBox)
         connect(checkBox, SIGNAL(clicked()), SLOT(contructUrls()));
@@ -99,7 +100,8 @@ void SkillplanDialog::contructUrls()
     if (ui.minigamesCheckBox->isChecked())
     {
         // "1" is Windows in Hell - it was removed in Omega, and bonus transferred to the class charm itself
-        minigames = !classCharm ? "0000" : QString("%1%2%3%4").arg(classCharm->props.contains(Enums::ClassCharmChallenges::Countess)).arg(classCharm->props.contains(Enums::ClassCharmChallenges::Crowned)).arg(1)
+        minigames = !classCharm ? "0000" : QString("%1%2%3%4").arg(classCharm->props.contains(Enums::ClassCharmChallenges::Countess))
+                                                              .arg(classCharm->props.contains(Enums::ClassCharmChallenges::Crowned)).arg(1)
                                                               .arg(classCharm->props.contains(Enums::ClassCharmChallenges::MirrorMirror));
     }
     else
@@ -150,6 +152,11 @@ void SkillplanDialog::contructUrls()
     ui.linkLabel->setText(htmlText);
     ui.htmlLinkLineEdit->setText(htmlText);
     ui.bbcodeLinkLineEdit->setText(bbcodeText);
+}
+
+void SkillplanDialog::showHelp()
+{
+    INFO_BOX(tr("Help"));
 }
 
 void SkillplanDialog::done(int r)

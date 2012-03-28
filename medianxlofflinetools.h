@@ -45,6 +45,7 @@ protected:
 private slots:
     void switchLanguage(QAction *languageAction);
     void setModified(bool modified);
+    void modify() { setModified(true); }
 
     // file
     void loadCharacter();
@@ -108,10 +109,8 @@ private:
     bool _isLoaded;
     ResurrectPenaltyDialog::ResurrectionPenalty _resurrectionPenalty;
 
-    // all platform-specific methods are defined in medinaxlofflinetools_<platform>.cpp
     // the following group of methods is Windows 7 specific
 #ifdef Q_WS_WIN32
-    static const QString &progID(); // also used by earlier Windows versions
     static LPCWSTR appUserModelID();
     void setAppUserModelID();
     void syncWindowsTaskbarRecentFiles();

@@ -1,5 +1,7 @@
 v0.2.1:
-- finish file associations (dialog, options, etc.)
+- remove same files that differ only in slash (on Windows) from recent
+- colored names in recent menu on Windows
+- write help for skillplan
 
 v0.3:
 - export item to bbcode/html
@@ -38,3 +40,4 @@ future versions:
 - display skill tree
 - skills allocation
 - item requirements
+- when reloading character, explicitly reload shared stashes that were modified
