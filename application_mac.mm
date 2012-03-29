@@ -16,7 +16,7 @@ bool Application::event(QEvent *ev)
             delete _showWindowMacTimer;
             _showWindowMacTimer = 0;
 
-            createAndShowMainWindow();
+            allowShowMainWindow();
         }
         else
             _mainWindow->loadFile(_param);

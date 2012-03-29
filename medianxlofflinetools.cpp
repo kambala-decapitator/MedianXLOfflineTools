@@ -819,8 +819,8 @@ void MedianXLOfflineTools::aboutApp()
              "<li><a href=\"http://modsbylaz.14.forumer.com/profile.php?mode=viewprofile&u=33805\">grig</a> for the Perl source of "
                  "<a href=\"http://grig.vlexofree.com/\">Median XL Online Tools</a> and tips</li>"
              "<li><a href=\"http://phrozenkeep.hugelaser.com/index.php?ind=reviews&op=section_view&idev=4\">Phrozen Keep File Guides</a> for tons of useful information on txt sources</li>"
-             "<li><a href=\"http://modsbylaz.14.forumer.com/profile.php?mode=viewprofile&u=44046\">FixeR</a> and <a href=\"http://forum.worldofplayers.ru/member.php?u=84592\">Zelgadiss</a> "
-                 "for intensive testing and tips on GUI & functionality</li>"
+             "<li><a href=\"http://modsbylaz.14.forumer.com/profile.php?mode=viewprofile&u=44046\">FixeR</a>, <a href=\"http://forum.worldofplayers.ru/member.php?u=84592\">Zelgadiss</a> and "
+                 "<a href=\"http://modsbylaz.14.forumer.com/profile.php?mode=viewprofile&u=44840\">moonra</a> for intensive testing and tips on GUI & functionality</li>"
            "</ul>")
     );
     aboutBox.exec();
@@ -853,7 +853,7 @@ void MedianXLOfflineTools::dragEnterEvent(QDragEnterEvent *event)
 
 void MedianXLOfflineTools::dropEvent(QDropEvent *event)
 {
-    loadFile(event->mimeData()->urls().at(0).toLocalFile());
+    loadFile(QDir::toNativeSeparators(event->mimeData()->urls().at(0).toLocalFile()));
     event->acceptProposedAction();
 }
 

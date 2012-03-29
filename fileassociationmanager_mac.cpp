@@ -1,4 +1,5 @@
 #include "fileassociationmanager.h"
+#include "helpers.h"
 
 #include <QString>
 
@@ -20,7 +21,7 @@ bool FileAssociationManager::isApplicationDefaultForExtension(const QString &ext
     QString extensionWithoutDot = extensionWithoutDotFromExtension(extension);
     CFStringRef extensionWithoutDotCF = CFStringCreateWithCharacters(kCFAllocatorDefault, (const UniChar *)extensionWithoutDot.unicode(), extensionWithoutDot.length());
 
-    bool isDefault = true;
+    bool isDefault;
     FSRef defaultAppRef = {{0}}; // shut clang up
     OSStatus err = LSGetApplicationForInfo(kLSUnknownType, kLSUnknownCreator, extensionWithoutDotCF, kLSRolesAll, &defaultAppRef, NULL);
     if (err == noErr)
@@ -43,8 +44,8 @@ bool FileAssociationManager::isApplicationDefaultForExtension(const QString &ext
         isDefault = false;
     else
     {
-        qDebug("error getting default app: %d", err);
         isDefault = true; // don't try to register in case of error
+        ERROR_BOX_NO_PARENT(QString("Error calling LSGetApplicationForInfo(): %1").arg(err));
     }
 
     CFRelease(extensionWithoutDotCF);
@@ -67,9 +68,10 @@ void FileAssociationManager::makeApplicationDefaultForExtension(const QString &e
         CFStringRef UTI = (CFStringRef)CFArrayGetValueAtIndex(UTIs, i);
         OSStatus err = LSSetDefaultRoleHandlerForContentType(UTI, kLSRolesAll, bundleIdentifier);
         if (err == noErr)
-            qDebug("app registered as default");
+            qDebug("app is default now");
         else
-            qDebug("error registering app as default: %d", err);
+            ERROR_BOX_NO_PARENT(QString("Error calling LSSetDefaultRoleHandlerForContentType(): %1").arg(err));
     }
+    
     CFRelease(UTIs);
 }

@@ -1,5 +1,6 @@
 #include "fileassociationmanager.h"
 #include "windowsincludes.h"
+#include "helpers.h"
 
 #include <QDir>
 #include <QFileInfo>
@@ -117,7 +118,7 @@ bool FileAssociationManager::isApplicationDefaultForExtension(const QString &ext
                 hr = S_OK;
             }
             else if (FAILED(hr))
-                qDebug("Error calling QueryAppIsDefault(): %d", HRESULT_CODE(hr));
+                ERROR_BOX_NO_PARENT(QString("Error calling QueryAppIsDefault(): %1").arg(HRESULT_CODE(hr)));
 
             if (SUCCEEDED(hr))
                 isDefault = static_cast<bool>(isDefaultBOOL);
@@ -125,7 +126,7 @@ bool FileAssociationManager::isApplicationDefaultForExtension(const QString &ext
             pAAR->Release();
         }
         else
-            qDebug("Error calling CoCreateInstance(CLSID_ApplicationAssociationRegistration): %d", HRESULT_CODE(hr));
+            ERROR_BOX_NO_PARENT(QString("Error calling CoCreateInstance(CLSID_ApplicationAssociationRegistration): %1").arg(HRESULT_CODE(hr)));
     }
 #endif
     return isDefault;
@@ -150,19 +151,19 @@ void FileAssociationManager::makeApplicationDefaultForExtension(const QString &e
             if (SUCCEEDED(hr))
                 qDebug("app is default now");
             else
-                qDebug("SetAppAsDefault() failed with result: %d", HRESULT_CODE(hr));
+                ERROR_BOX_NO_PARENT(QString("Error calling SetAppAsDefault(): %1").arg(HRESULT_CODE(hr)));
 
             pAAR->Release();
         }
         else
-            qDebug("Error calling CoCreateInstance(CLSID_ApplicationAssociationRegistration): %d", HRESULT_CODE(hr));
+            ERROR_BOX_NO_PARENT(QString("Error calling CoCreateInstance(CLSID_ApplicationAssociationRegistration): %1").arg(HRESULT_CODE(hr)));
     }
 #endif
 
     ::SHChangeNotify(SHCNE_ASSOCCHANGED, 0, NULL, NULL);
 }
 
-QString FileAssociationManager::progIdForExtension(const QString &extensionWithDot)
+QString FileAssociationManager::progIdForExtension(const QString &extension)
 {
-    return qApp->applicationName().remove(' ') + extensionWithDot;
+    return qApp->applicationName().remove(' ') + extensionWithDotFromExtension(extension);
 }

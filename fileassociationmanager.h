@@ -14,7 +14,7 @@ public:
     static void makeApplicationDefaultForExtension(const QString &extension);
 
 #ifdef Q_WS_WIN32
-    static QString progIdForExtension(const QString &extensionWithDot);
+    static QString progIdForExtension(const QString &extension);
 #endif
 };
 

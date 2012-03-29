@@ -16,7 +16,7 @@
 static const QString appName("Median XL Offline Tools");
 
 
-Application::Application(int &argc, char **argv) : QtSingleApplication(appName, argc, argv), _mainWindow(0)
+Application::Application(int &argc, char **argv) : QtSingleApplication(appName, argc, argv), _mainWindow(0), _shouldAllowShowMainWindow(false)
 {
 #ifdef Q_WS_WIN32
     ::AllowSetForegroundWindow(ASFW_ANY);
@@ -41,36 +41,17 @@ Application::Application(int &argc, char **argv) : QtSingleApplication(appName, 
     setAttribute(Qt::AA_DontShowIconsInMenus);
 
     _showWindowMacTimer = 0;
-#endif
 
-    LanguageManager &langManager = LanguageManager::instance();
-    langManager.currentLocale = QSettings().value(langManager.languageKey, QLocale::system().name().left(2)).toString();
-    langManager.setResourcesPath(applicationDirPath() +
-#ifdef Q_WS_MACX
-    "/.."
-#endif
-    "/Resources");
-
-    QTranslator myappTranslator;
-    if (!myappTranslator.load(applicationName().remove(' ').toLower() + "_" + langManager.currentLocale, langManager.translationsPath))
-        langManager.currentLocale = langManager.defaultLocale;
-    installTranslator(&myappTranslator);
-
-    QTranslator qtTranslator;
-    qtTranslator.load("qt_" + langManager.currentLocale, langManager.translationsPath);
-    installTranslator(&qtTranslator);
-
-#ifdef Q_WS_MACX
     if (_param.isEmpty())
     {
         _showWindowMacTimer = new QTimer;
         _showWindowMacTimer->setSingleShot(true);
-        connect(_showWindowMacTimer, SIGNAL(timeout()), SLOT(createAndShowMainWindow()));
+        connect(_showWindowMacTimer, SIGNAL(timeout()), SLOT(allowShowMainWindow()));
         _showWindowMacTimer->start(0);
     }
     else
 #endif
-        createAndShowMainWindow();
+        allowShowMainWindow();
 }
 
 Application::~Application()
@@ -79,6 +60,16 @@ Application::~Application()
         delete _mainWindow;
 }
 
+
+void Application::allowShowMainWindow()
+{
+    _shouldAllowShowMainWindow = true;
+
+#ifdef Q_WS_MACX
+    if (_showWindowMacTimer)
+        delete _showWindowMacTimer;
+#endif
+}
 
 void Application::createAndShowMainWindow()
 {
@@ -90,9 +81,6 @@ void Application::createAndShowMainWindow()
 
 #ifdef Q_WS_MACX
     disableLionWindowRestoration();
-
-    if (_showWindowMacTimer)
-        delete _showWindowMacTimer;
 #endif
 }
 
