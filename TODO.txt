@@ -1,8 +1,3 @@
-v0.2.1:
-- remove same files that differ only in slash (on Windows) from recent
-- colored names in recent menu on Windows
-- write help for skillplan
-
 v0.3:
 - export item to bbcode/html
 - generate some bbcode/html report about character and/or plugy stashes contents
