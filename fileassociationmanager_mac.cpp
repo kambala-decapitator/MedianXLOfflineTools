@@ -2,6 +2,7 @@
 #include "helpers.h"
 
 #include <QString>
+#include <QCoreApplication>
 
 #include <ApplicationServices/ApplicationServices.h>
 

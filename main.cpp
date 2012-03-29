@@ -11,16 +11,13 @@ int main(int argc, char *argv[])
     if (app.isRunning())
         return 0;
 
-    // this dirty hack makes translations work - they can't be applied in QApplication's constructor
-    while (!app.shouldAllowShowMainWindow());
-
     LanguageManager &langManager = LanguageManager::instance();
     langManager.currentLocale = QSettings().value(langManager.languageKey, QLocale::system().name().left(2)).toString();
     langManager.setResourcesPath(app.applicationDirPath() +
 #ifdef Q_WS_MACX
         "/.."
 #endif
-        "/Resources");
+        "/resources");
 
     QTranslator myappTranslator;
     if (!myappTranslator.load(app.applicationName().remove(' ').toLower() + "_" + langManager.currentLocale, langManager.translationsPath))
@@ -31,6 +28,6 @@ int main(int argc, char *argv[])
     qtTranslator.load("qt_" + langManager.currentLocale, langManager.translationsPath);
     app.installTranslator(&qtTranslator);
 
-    app.createAndShowMainWindow();
+    app.init();
     return app.exec();
 }

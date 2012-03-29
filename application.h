@@ -15,10 +15,9 @@ public:
     explicit Application(int &argc, char **argv);
     virtual ~Application();
 
-    bool shouldAllowShowMainWindow() const { return _shouldAllowShowMainWindow; }
+    void init();
 
 public slots:
-    void createAndShowMainWindow();
     void activateWindow();
 
 protected:
@@ -28,16 +27,16 @@ protected:
 
 private slots:
     void setParam(const QString &param) { _param = param; }
-    void allowShowMainWindow();
+    void createAndShowMainWindow();
 
 private:
     MedianXLOfflineTools *_mainWindow;
     QString _param;
-    bool _shouldAllowShowMainWindow;
 #ifdef Q_WS_MACX
     QTimer *_showWindowMacTimer;
 
     void disableLionWindowRestoration();
+    void maybeDeleteTimer();
 #endif
 };
 
