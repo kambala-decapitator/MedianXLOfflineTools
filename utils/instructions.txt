@@ -1,0 +1,17 @@
+The following instructions are for Windows. If you want to translate using Mac OS X, write me a message and I'll give you Mac OS X versions of required utilities.
+
+If Median XL is translated into your language, then you can generate localized data for the app. To do this, go to the 'mod data' folder and:
+0. Install Perl if you don't have it yet.
+1. Create a folder with your localization name in the 'tbl' folder. For example, if you're translating into French, you'll have something like 'tbl/fr'.
+2. Place txt-converted .tbls in the created folder. Files must have UTF-8 encoding.
+3. If runes' names inserted in the item ('letter' field in txt/runes.txt) differ from English ones, create a file 'runes.txt' in the created folder and fill it with names wth the following structure: english_name<tab>your_name<new line> (<tab> is tabulation character, <new line> is new line character). Better don't leave empty string at the end of the file (it shouldn't matter actually, but I haven't checked). You don't have to place all runes (those that are not found in the file will stay in English) or do it in some particular order. File must have UTF-8 encoding.
+4. If you want to translate non-magic item qualities and/or merc names, copy 'LowQualityItems.txt' and/or 'mercs.txt' from 'generated/en' folder to your 'generated/<localization folder>' (for example, 'generated/fr'). It is very important for the files to have exactly the same number of lines - otherwise the application may crash (array out of bounds). The order of lines also matters, but only for display. Important: do not remove the '-' character in merc names - it's act delimiter. Files must have UTF-8 encoding.
+5. Now you need to run the data generator. Open command line, cd to 'mod_data' folder and run 'create_translation.bat folder_name_from_step_1' (for example, 'create_translation.bat fr' without quotes of course). This will run the perl script and compress generated files, which can be found in 'mod data/data' after - you need to send me this folder along with the app translation.
+
+Note: mod sources (txt files in the 'txt' folder) in this archive are for Median XL 2012 v005. If you want to generate localized data later for another mod version, just replace the sources and tbl text and run the script again.
+
+I've included the 'ru' (Russian) folder as an example. You can generate russian translation by running 'create_translation.bat ru'.
+
+-----
+
+Translating the app itself is much easier, although there's no magic script that translates it instead of you :) Go to the 'app' folder, run linguist.exe (if it doesn't want to start, copy QtCore4.dll and QtGui4.dll from the app distribution to this folder), open 'foo/bar/medianxlofflinetools.ts' (it's so awkwardly placed to make the .ui files be displayed in linguist), choose the language you're translating into, and go ahead. After you're done, send me the .ts file, and I'll create and upload the .qm translation file(s), which must be placed in the 'resources/translations' folder of the app - new language should appear in the language menu after restarting the application.

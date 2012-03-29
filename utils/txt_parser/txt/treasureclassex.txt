@@ -844,14 +844,14 @@ Hell Trinket				1						µ09	1		Blank TC	49																													0
 Laz Trinket				1						µ10	1		Blank TC	49																													0
 Astrogha Trinket				1						µ11	1		Blank TC	49																													0
 Azmodan Trinket				1						µ12	1		Blank TC	49																													0
-Azmodan Reward Charm				-2	1024		1024	1024		AzmodansHeart2	1		!@D	1																													0
+Azmodan Reward Charm				-1	1024		1024	1024		AzmodansHeart2	1																																0
 Infernal Reward Charm				-1	1024		1024	1024		OpticalDetector	1																																0
 Akarat Reward Charm				-1	1024		1024	1024		BookOfAkarat	1																																0
 Tal Rasha Reward Charm				-1	1024		1024	1024		ScrollOfKings2	1																																0
 Laser Reward Charm				-1	1024		1024	1024		LaserFocusCrystal	1																																0
 Butcher Reward Charm				-1	1024		1024	1024		ButchersTooth	1																																0
 Koth Reward Charm				-1	1024		1024	1024		SacredWorldstoneKey2	1																																0
-Inarius Reward Charm				-2	1024		1024	1024		IdolOfVanity	1		!@I	1																													0
+Inarius Reward Charm				-1	1024		1024	1024		IdolOfVanity	1																																0
 Overlord Reward Charm				-1	1024		1024	1024		SpiritOfDamnation	1																																0
 Fleshdoom Reward Charm				-1	1024		1024	1024		CursedShadowfang	1																																0
 Ennead Reward Charm				1	1024		1024	1024	11	HotTJ	1																																0
@@ -872,7 +872,7 @@ Bone Reward Charm				1	1024		1024	1024	5	BloodRedScryingStone	1																	
 Rodeo Reward Charm				1	1024		1024	1024		FLSG	1																																0
 Laz Reward Charm				1	1024		1024	1024		SROTA	1																																0
 Astrogha Reward Charm				1	1024		1024	1024		VSTI	1																																0
-Belial Reward Charm				-2	1024		1024	1024		TheBookOfLies2	1		!@E	1																													0
+Belial Reward Charm				1	1024		1024	1024		TheBookOfLies2	1																																0
 Azmodan Reward				-3						Azmodan Reward Charm	1		Azmodan Trinket	1		Baal (H)	1																										0
 Infernal Reward				-2						Infernal Reward Charm	1		Act 5 (H) Super C	1																													0
 Akarat Reward				-3						Akarat Reward Charm	1		Akarat Trinket	1		Act 5 (H) Cast C	1																										0
@@ -906,7 +906,7 @@ Skovos Reward				-2						Skovos Reward Charm	1		Mephisto	1																						
 Philios Reward				-2						Philios Reward Charm	1		Mephisto	1																													0
 Lycander Reward				-2						Lycander Reward Charm	1		Mephisto	1																													0
 Hell Reward				-3						Hell Reward Charm	1		Hell Trinket	1		Baal (H)	1																										0
-Imperius Reward				-3						Imperius Reward Charm	1		Imperius Trinket	1		!@F	1																										0
+Imperius Reward				-3						Imperius Reward Charm	1		Imperius Trinket	1		Act 5 (H) Cast C	1																										0
 Toraja Reward				-2						Toraja Reward Charm	1		Baal (H)	1																													0
 Bone Reward				-2						Bone Reward Charm	1		Baal (H)	1																													0
 Rodeo Reward				-3						Rodeo Reward Charm	1		Unique Crystal Rodeo	1		Baal (H)	1																										0
@@ -1467,11 +1467,3 @@ Act 4 (H) Vizjun B		27	80	3					100	NDTC	600		Act 4 (H) Equip B	10		Act 4 (H) Go
 Act 5 (H) Vizjun A		27	81	3					100	NDTC	600		Act 5 (H) Equip A	10		Act 5 (H) Good	5		jew	2																							0
 Act 5 (H) Vizjun B		27	83	3					100	NDTC	600		Act 5 (H) Equip B	10		Act 5 (H) Good	5		jew	2																							0
 Act 5 (H) Vizjun C		27	85	3					100	NDTC	600		Act 5 (H) Equip C	10		Act 5 (H) Good	5		jew	2																							0
-New Izual Drop				-2						!@H	1		Izual (H)	1																													0
-New Lilith Drop				-2						!@J	1		Act 5 (H) Torajian Runes	1																													0
-Malthael Reward				-3						Imperius Reward Charm	1		Imperius Trinket	1		!@G	1																										0
-Tathamet Set Drop				1	0	1024	0	0	0	XRLegs	33		XRArms	33		XRBelt	33																										0
-Corrupt Anu Special Drop				-1	0	1024	0	0	0	XRBody	1																																0
-Corrupt Anu Trinket				1	1024		1024	1024		AnuSoulTrophy	10		Blank TC	90																													0
-Corrupt Anu Final Drop				-2	0	1024	0	0	0	XRHead	1		Corrupt Anu Trinket	1																													0
-Xaru Test TC				1	0	1024	0	0	100	XRLegs	1		XRArms	1		XRBelt	1		XRHead	1		XRBody	1		AnuSoulTrophy	1																	0

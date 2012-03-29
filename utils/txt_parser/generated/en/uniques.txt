@@ -2478,6 +2478,3 @@
 2476	Washi Bai Ron	100
 2477	Crystalline Flame Medallion	120
 2478	Digitron Disk	100
-2479	TathametBook	120
-2480	AnuSoulTrophy	0
-2481	AnuSoulCharm	120

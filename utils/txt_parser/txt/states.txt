@@ -150,7 +150,7 @@ aura_6	147		KRAKEN STANCE				1				1																																		barb_4					
 totemicattack	148		HOWLING TOTEM								1																																		totem5aura							damagepercent							20	1	255	192	192									0
 totemicmanatide	149		MANA TIDE TOTEM								1																																		totemXaura							manarecoverybonus							20	1	255	192	192									0
 vine_beast	150									1																																											11																	89		0
-tathubershieldaura	151		TATH UBER TOTEM				1				1	1																																	sanctuaryfront	sanctuaryback					sanctuaryknockback	damageresist							10	0	255	255	255	paladin_aura_meditation	fingermage_bolt_impact_1							0
+cyclonearmor	151		UNUSED																																					1	1				cyclonearmor1front	cyclonearmor2front	cyclonearmor3front						8	5																		0
 clawmastery	152		ELFIN ARROWS																																																																					0
 cloak_of_shadows	153			1													1																												whitecircle					whitecircle		damagepercent	2				armo	lblu	30	1	128	128	255	darkness_falls	object_barrel_explode							0
 recycled	154																															1	1	1		1																																				0
@@ -163,7 +163,7 @@ pantherstate	160	16	BANEBLADE				1					1				1	1																												firec
 growl	161	4	SUPERBEAST			1							1			1																													sanctuaryfront	sanctuaryback	spirit_of_barbs			crashedneonlight		passive_fire_mastery							82	73	255	144	255	blackfury_active	object_barrel_explode	1	1220					0
 curseofkali	162		MAHASATTVA																							1	1	1	1																														150	69	255	0	0	golemfire_death	object_barrel_explode							0
 aaaaaaarrrgh	163		GRAVEYARD																																										redmass1	blackmass						damagepercent												graveyardactivate	object_barrel_explode						146	0
-pearlsetaura	164		FULL ANU SET AURA				1																																						hellaurasmall					hellaurasmallcast									200	0	128	128	255	object_diabloseal								0
+debugcontrol	164		UNUSED																																																																					0
 itemset1	165																																																																							0
 itemset2	166																																																																							0
 itemset3	167																																																																							0
@@ -248,7 +248,7 @@ mindcontrolling	245		GENERIC MORPH AURA				1																																				
 balefiredrain	246		BALEFIRE																																										balefireoverlay					balefireoverlay		hpregen																				0
 akaratisgoingtodie	247		WEAKNESS NOVA				1									1																													whirlwind					crashedneonlight		fireresist							50	1	0	0	255	sorceress_thunder_cast	object_barrel_explode							0
 hamstringstrike	248		HAMSTRING				1																																													stunlength							105	20	144	255	255	barbarian_howl_1	object_barrel_explode							0
-shieldaura	249						1				1	1					1																																			damageresist							33	102	255	255	0	paladin_handofgod_cast	object_barrel_explode							0
+shieldaura	249						1				1						1																																			damageresist							33	102	255	255	0	paladin_handofgod_cast	object_barrel_explode							0
 burnedbyburn	250		DAZZLE					1	1																																				cursesunburn					curse_hit		damageresist							40	1	255	128	0	paladin_aura_salvation	object_barrel_explode							0
 bloodvengeanceaura	251		SPIRIT OF VENGEANCE																																										bloodvengeancefront	bloodvengeanceback						passive_fire_mastery																				0
 totemicguardian	252		TOTEMIC GUARDIAN																																															cursesunburn		item_totembound																				0

@@ -2,11 +2,11 @@ description	enabled	ladder	min diff	version	op	param	value	class	numinputs	input
 Staff of Kings + Viper amulet -> Horadric Staff	1				28				2	msf	vip						hst																																																																																												0
 Khalim Flail + Khalim Heart + Khalim Eye + Khalim Brain -> Super Khalim Flail	1				28				4	qf1	qhr	qey	qbr				qf2																																																																																												0
 Wirt's Leg + jewel -> Cow Portal	1				28				2	leg	tbk						Cow Portal																																																																																												0
-test recipe				100					2	armo,any	hpot						useitem	100			oskill			115	1	1																																																																																			0
-test recipe				100					3	armo,any	hpot,qty=2						useitem	100																																																																																											0
-test recipe				100					4	armo,any	hpot,qty=3						useitem	100			oskill			1045	1	1																																																																																			0
-test recipe				100					1	hpot,qty=1							AnuSoulCharm																																																																																												0
-test recipe				100					2	hpot,qty=2							TathametBook																																																																																												0
+test recipe				100					2	armo,any	hpot						useitem	100			oskill			1024	1	1	oskill			1025	1	1	oskill			1026	1	1	oskill			1027	1	1	oskill			1028	1	1																																																											0
+test recipe				100					3	armo,any	hpot,qty=2						useitem	100			oskill			1029	1	1	oskill			1030	1	1	oskill			1031	1	1	oskill			1032	1	1	oskill			1033	1	1																																																											0
+test recipe				100					4	armo,any	hpot,qty=3						useitem	100			oskill			1034	1	1	oskill			1035	1	1	oskill			1036	1	1	oskill			1037	1	1																																																																	0
+test recipe				100					4	hpot,qty=4							zkx																																																																																												0
+test recipe				100					1	hpot							@38,set	100																																																																																											0
 test recipe				100					3	mpot,qty=2	key						w43,uni	95																																																																																											0
 stardragon upgrade decoy	1			100	18	491	1	ama	2	Sacred Sunstone	qum						useitem																																																																																												0
 stardragon upgrade decoy	1			100	18	491	1	ass	2	Shadow Vortex	qum						useitem																																																																																												0
@@ -11476,8 +11476,3 @@ destruction	1			100					77	9oµ							9oµ																																								
 destruction	1			100					78	9oµ							9oµ																																																																																												0
 destruction	1			100					79	9oµ							9oµ																																																																																												0
 destruction	1			100					80	9oµ							9oµ																																																																																												0
-Dogma Combine Hell	1								7	!@6	!@7	!@8	!@9	!@A	!@D	!@E	!@K																																																																																												0
-Dogma Combine Heaven	1								3	!@H	!@F	!@G					!@L																																																																																												0
-Dogma Combine Sanctuary	1								2	!@I	!@J						!@M																																																																																												0
-To Book of cain	1								3	!@K	!@L	!@M					TathametBook																																																																																												0
-Screw the Set Xaru	1								7	xt1,set	xt2,set	xt3,set	xt4,set	xt5,set	sxx	sxr	AnuSoulCharm																																																																																												0
