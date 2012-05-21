@@ -38,7 +38,7 @@ public:
 #elif defined(Q_WS_MACX)
             unicodeColorHeader = macTextCodec()->toUnicode(ansiHeader);
 #else
-#error Make sure to fix next line
+#warning Make sure to fix next line
             unicodeColorHeader = ansiHeader;
 #endif
         }

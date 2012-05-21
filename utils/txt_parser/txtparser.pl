@@ -53,7 +53,7 @@ my $descArrayRef = [
 {key => "dgrpstrneg", col => 50, expanded => "descGroupNegative"},
 {key => "dgrpstr2",   col => 51, expanded => "descGroupStringAdd"}
 ];
-my %propertiesHash = ("stat"=>"0", "bits"=>"22", "add"=>"23", "saveParamBits"=>"24", descpriority=>40, descfunc=>41, descval=>42, dgrp=>46, dgrpfunc=>47, dgrpval=>48); $propertiesHash{$_->{key}} = $_->{col} for (@$descArrayRef);
+my %propertiesHash = ("stat"=>"0", bitsSave=>10, "bits"=>"22", "add"=>"23", "saveParamBits"=>"24", descpriority=>40, descfunc=>41, descval=>42, dgrp=>46, dgrpfunc=>47, dgrpval=>48); $propertiesHash{$_->{key}} = $_->{col} for (@$descArrayRef);
 my $itemProperties = parsetxt("itemstatcost.txt", _index=>"1", %propertiesHash);
 &tblExpandArray($itemProperties, $_->{key}, $_->{expanded}) for (@$descArrayRef);
 
@@ -303,10 +303,13 @@ $count = -1;
 for my $hashRef (@$itemProperties)
 {
     $count++;
-    next unless defined $hashRef->{bits};
-    my $s;
-    $s .= "\t".($hashRef->{$_} // '') for (@propKeys);
-    print $out "${count}$s\n";
+    next unless defined $hashRef->{bits} or defined $hashRef->{bitsSave};
+    # my $s;
+    # $s .= "\t".($hashRef->{$_} // '') for (@propKeys);
+    # print $out "${count}$s\n";
+    print $out $count;
+    print $out "\t".($hashRef->{$_} // '') for (@propKeys);
+    print $out "\n";
 }
 close $out;
 

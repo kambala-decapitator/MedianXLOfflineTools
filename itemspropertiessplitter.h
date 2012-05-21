@@ -53,7 +53,7 @@ signals:
     void itemDeleted();
     void cubeDeleted(bool = true);  // connect directly to QAction's setEnabled() slot
     //void storageModified(int storage);
-    void itemsChanged(bool = true); // connect directly to QMainWindow's setWindowModified() slot
+    void itemsChanged(bool = true); // connect directly to main window's setModified() slot
 
 private slots:
     void itemSelected(const QModelIndex &index);

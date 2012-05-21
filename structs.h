@@ -151,7 +151,7 @@ struct ItemBase
 struct ItemPropertyTxt
 {
     quint16 add;
-    quint8 bits;
+    quint8 bits, saveBits; // saveBits != 0 only for properties from Enums::CharacterStats::StatisticEnum
     QList<quint16> groupIDs;
     QString descGroupNegative, descGroupPositive, descGroupStringAdd;
     QString descNegative, descPositive, descStringAdd;

@@ -116,3 +116,10 @@ Perfect Amber		19	5$e	3	reanimate	800	5	5	hp/paragon	32	32	32					res-ltng		20	2
 Krys Rune	Krys	18	r54	2	att-damage		100	100	ac/runemaster	32	32	32					att-damage		25	25	ac/runemaster	32	32	32					att-damage		25	25	ac/runemaster	32	32	32				0
 Auhe Rune	Auhe	18	r55	2	regen-mana		15	15	ac/runemaster	32	32	32					regen-mana		5	5	ac/runemaster	32	32	32					regen-mana		5	5	ac/runemaster	32	32	32				0
 Sha'ad Rune	Shaad	18	r56	2	dmg%		30	30	ac/runemaster	32	32	32					ac%		30	30	ac/runemaster	32	32	32					ac%		30	30	ac/runemaster	32	32	32				0
+Fire Rune	Fire	18	r57	2																																				0
+Phys Rune	Earth	18	r58	2																																				0
+Magic Rune	Magic	18	r59	2																																				0
+Pois Rune	Poison	18	r60	2																																				0
+Ltng Rune	Light	18	r61	2																																				0
+Cold Rune	Cold	18	r62	2																																				0
+Ultra Rune	Ultra	18	r98	2																																				0

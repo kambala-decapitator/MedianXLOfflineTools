@@ -34,15 +34,13 @@ QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item)
     QString itemDescription = ItemDataBase::completeItemName(item, false).replace(htmlLineBreak, "\n") + "\n" + tr("Item Level: %1").arg(item->ilvl);
     if (!itemBase.spelldesc.isEmpty())
         itemDescription += itemBase.spelldesc + "\n";
-    if (item->isRW)
-    {
-        QString runes;
-        foreach (ItemInfo *socketable, item->socketablesInfo)
-            if (ItemDataBase::Items()->value(socketable->itemType).typeString == "rune")
-                runes += ItemDataBase::Socketables()->value(socketable->itemType).letter;
-        if (!runes.isEmpty()) // gem-/jewelwords don't have any letters
-            itemDescription += QString("\n'%1'").arg(runes);
-    }
+
+    QString runes;
+    foreach (ItemInfo *socketable, item->socketablesInfo)
+        if (ItemDataBase::Items()->value(socketable->itemType).typeString == "rune")
+            runes += ItemDataBase::Socketables()->value(socketable->itemType).letter;
+    if (!runes.isEmpty()) // gem-/jewelwords don't have any letters
+        itemDescription += QString("\n'%1'").arg(runes);
 
     if (itemBase.genericType == Enums::ItemTypeGeneric::Armor)
     {
@@ -99,7 +97,7 @@ QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item)
     }
     int actualRlvl = qMax(rlvl, maxSocketableRlvl) + (allProps.contains(Enums::ItemProperties::RequiredLevel) ? allProps[Enums::ItemProperties::RequiredLevel].value : 0);
     if (actualRlvl)
-        itemDescription += "\n" + tr("Required Level: %1").arg(actualRlvl > 555 ? 555 : actualRlvl);
+        itemDescription += "\n" + tr("Required Level: %1").arg(/*actualRlvl > 555 ? 555 : */actualRlvl);
 
     // add '+50% damage to undead' if item type matches
     bool shouldAddDamageToUndeadInTheBottom = false;

@@ -158,3 +158,4 @@ veilkingsound	greatermummy_attack_1	weapon_2hs_large_1	0	4	100	190	greatermummy_
 l4dwitchsnd		weapon_2ht_1		8		255		weapon_2ht_1		8		255	assassin_shadow_hit_1	assassin_shadow_death_1	2	1										witch_cry_tobelooped	120		witch_awaken											0
 malewitchsnd		weapon_2ht_1		8		255		weapon_2ht_1		8		255	izual_hit_1	izual_death	2	1										male_witch_cry_tobelooped	120		smitethewicked											0
 dragonsnd	vilemother_attack_1	weapon_1hs_large_1	0	7	100	190	vilemother_attack_1	weapon_1hs_large_1	0	7	100	190	vilemother_hit_1	vilemother_death_1	2	1	call_doyourbidding					walk_flesh_1	2	3	100	vilemother_neutral_1	150													0
+kabraxis	kabraxis_attack_1	weapon_2hs_large_1	0	3	95	160	kabraxis_attack_1	weapon_2hs_large_1	0	3	95	160	kabraxis_gethit_1	kabraxis_death_1	0	1					heavy_walk_dirt_1	golemiron_walk_1	2	0	10				kabraxis_taunt_1											0

@@ -11,18 +11,19 @@
 
 // private
 
-bool isRWInGear(ItemInfo *item, const QByteArray &rune, const QByteArray &itemType)
+bool isRWInGear(ItemInfo *item, const QByteArray &rune, const QByteArray &allowedItemType)
 {
-    if (item->isRW && item->location == Enums::ItemLocation::Equipped && ItemParser::itemTypeInheritsFromType(ItemDataBase::Items()->value(item->itemType).typeString, itemType))
+    if (item->isRW && item->location == Enums::ItemLocation::Equipped && ItemParser::itemTypeInheritsFromType(ItemDataBase::Items()->value(item->itemType).typeString, allowedItemType))
     {
         const RunewordHash *const rwHash = ItemDataBase::RW();
         RunewordKeyPair rwKey = qMakePair(rune, QByteArray());
         for (RunewordHash::const_iterator iter = rwHash->find(rwKey); iter != rwHash->end() && iter.key() == rwKey; ++iter)
-            if (ItemParser::itemTypeInheritsFromTypes(itemType, iter.value().allowedItemTypes))
+            if (ItemParser::itemTypeInheritsFromTypes(allowedItemType, iter.value().allowedItemTypes))
                 return true;
     }
     return false;
 }
+
 
 // public
 
@@ -101,6 +102,11 @@ QString htmlStringFromDiabloColorString(const QString &name, ColorsManager::Colo
     return result;
 }
 
+bool isUltimative()
+{
+    return ItemDataBase::Properties()->value(Enums::CharacterStats::Strength).saveBits == 11;
+}
+
 bool isCubeInCharacterItems(ItemInfo *item)
 {
     return (item->storage == Enums::ItemStorage::Inventory || item->storage == Enums::ItemStorage::Stash) && ItemDataBase::isCube(item);
@@ -139,4 +145,39 @@ bool isDrekavacInGear(ItemInfo *item)
 bool isVeneficaInGear(ItemInfo *item)
 {
     return isRWInGear(item, "r53", "stor"); // Qor in sorc armor
+}
+
+bool isSacred(ItemInfo *item)
+{
+    return ItemParser::itemTypeInheritsFromTypes(ItemDataBase::Items()->value(item->itemType).typeString, QList<QByteArray>() << "ct1a" << "ct2a" << "ct1w" << "ct2w");
+}
+
+bool isCharacterOrb(const QByteArray &itemType)
+{
+    return itemType == ">.<";
+}
+
+bool isSunstoneOfElements(const QByteArray &itemType)
+{
+    return itemType == "x#x";
+}
+
+bool isCharacterOrbOrSunstoneOfElements(const QByteArray &itemType)
+{
+    return isSunstoneOfElements(itemType) || isCharacterOrb(itemType);
+}
+
+bool isCharacterOrb(ItemInfo *item)
+{
+    return isCharacterOrb(item->itemType);
+}
+
+bool isSunstoneOfElements(ItemInfo *item)
+{
+    return isSunstoneOfElements(item->itemType);
+}
+
+bool isCharacterOrbOrSunstoneOfElements(ItemInfo *item)
+{
+    return isCharacterOrbOrSunstoneOfElements(item->itemType);
 }

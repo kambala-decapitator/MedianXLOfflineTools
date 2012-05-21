@@ -132,23 +132,24 @@ QHash<uint, ItemPropertyTxt> *ItemDataBase::Properties()
             ItemPropertyTxt item;
             item.add = data.at(1).toUShort();
             item.bits = data.at(2).toUShort();
-            QList<QByteArray> groupIDs = data.at(3).split(',');
+            item.saveBits = data.at(3).toUShort();
+            QList<QByteArray> groupIDs = data.at(4).split(',');
             if (!groupIDs.at(0).isEmpty())
                 foreach (const QByteArray &id, groupIDs)
                     item.groupIDs += id.toUShort();
-            item.descGroupNegative = QString::fromUtf8(data.at(4));
-            item.descGroupPositive = QString::fromUtf8(data.at(5));
-            item.descGroupStringAdd = QString::fromUtf8(data.at(6));
-            item.descNegative = QString::fromUtf8(data.at(7));
-            item.descPositive = QString::fromUtf8(data.at(8));
-            item.descStringAdd = QString::fromUtf8(data.at(9));
-            item.descFunc = data.at(10).toUShort();
-            item.descPriority = data.at(11).toUShort();
-            item.descVal = data.at(12).toUShort();
-            item.descGroupFunc = data.at(13).toUShort();
-            item.descGroupPriority = data.at(14).toUShort();
-            item.descGroupVal = data.at(15).toUShort();
-            item.saveParamBits = data.at(16).toUShort();
+            item.descGroupNegative = QString::fromUtf8(data.at(5));
+            item.descGroupPositive = QString::fromUtf8(data.at(6));
+            item.descGroupStringAdd = QString::fromUtf8(data.at(7));
+            item.descNegative = QString::fromUtf8(data.at(8));
+            item.descPositive = QString::fromUtf8(data.at(9));
+            item.descStringAdd = QString::fromUtf8(data.at(10));
+            item.descFunc = data.at(11).toUShort();
+            item.descPriority = data.at(12).toUShort();
+            item.descVal = data.at(13).toUShort();
+            item.descGroupFunc = data.at(14).toUShort();
+            item.descGroupPriority = data.at(15).toUShort();
+            item.descGroupVal = data.at(16).toUShort();
+            item.saveParamBits = data.at(17).toUShort();
             allProperties[data.at(0).toUInt()] = item;
         }
         f.remove();
@@ -603,9 +604,14 @@ bool ItemDataBase::canStoreItemAt(quint8 row, quint8 col, const QByteArray &stor
     return ok;
 }
 
+bool ItemDataBase::isClassCharm(const QByteArray &itemType)
+{
+    return Items()->value(itemType).typeString.startsWith("ara");
+}
+
 bool ItemDataBase::isClassCharm(ItemInfo *item)
 {
-    return Items()->value(item->itemType).typeString.startsWith("ara");
+    return isClassCharm(item->itemType);
 }
 
 bool ItemDataBase::isUberCharm(ItemInfo *item)

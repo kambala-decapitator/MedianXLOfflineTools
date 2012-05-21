@@ -37,6 +37,7 @@ public:
     static bool storeItemIn(ItemInfo *item, Enums::ItemStorage::ItemStorageEnum storage, quint8 rowsTotal, quint32 plugyPage = 0, quint8 colsTotal = 10);
     static bool canStoreItemAt(quint8 row, quint8 col, const QByteArray &storeItemType, const ItemsList &items, int rowsTotal, int colsTotal = 10);
 
+    static bool isClassCharm(const QByteArray &itemType);
     static bool isClassCharm(ItemInfo *item);
     static bool isUberCharm(ItemInfo *item);
     static bool isGenericSocketable(ItemInfo *item); // checks if an item is a gem or a rune

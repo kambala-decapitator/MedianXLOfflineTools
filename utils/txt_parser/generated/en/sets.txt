@@ -171,3 +171,17 @@
 296	Apeskull	Testament of the Apes
 297	Apehand	Testament of the Apes
 298	Apefoot	Testament of the Apes
+299	Laz's Chasuble	\orange;[BrotherLaz Tribute Set]\n\gold;Archibishop Lazarus
+300	Laz's Surplice Cap	\orange;[BrotherLaz Tribute Set]\n\gold;Archibishop Lazarus
+301	Laz's Votive Lamp	\orange;[BrotherLaz Tribute Set]\n\gold;Archibishop Lazarus
+303	xarugas' Dominion	\orange;[Community Tribute Set]\n\gold;All Is One
+305	Stealthmaster's Triumph	\orange;[Community Tribute Set]\n\gold;All Is One
+306	Greg's Silent Scream	\orange;[Community Tribute Set]\n\gold;All Is One
+308	\gold;Natasha, the Assassin	\orange;[MarcoNecroX Tribute Set]\n\gold;Cowboys From Hell
+309	\gold;fearless, the Barbarian	\orange;[MarcoNecroX Tribute Set]\n\gold;Cowboys From Hell
+310	\gold;MISSINGNO, the Paladin	\orange;[MarcoNecroX Tribute Set]\n\gold;Cowboys From Hell
+311	\gold;Zoology, the Amazon	\orange;[MarcoNecroX Tribute Set]\n\gold;Cowboys From Hell
+312	\gold;Tanya, the Sorceress	\orange;[MarcoNecroX Tribute Set]\n\gold;Cowboys From Hell
+314	Laz's Lamen	\orange;[BrotherLaz Tribute Set]\n\gold;Archibishop Lazarus
+315	rad's Guerrilla Warfare 	\orange;[Community Tribute Set]\n\gold;All Is One
+316	Segolia's Fenrir's Mercy	\orange;[Community Tribute Set]\n\gold;All Is One

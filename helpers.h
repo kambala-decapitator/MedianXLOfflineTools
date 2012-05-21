@@ -31,6 +31,8 @@ QMetaEnum metaEnumFromName(const char *enumName)
     return metaObject.enumerator(metaObject.indexOfEnumerator(enumName));
 }
 
+bool isUltimative();
+
 // item conditions for STL algorithms
 struct ItemInfo;
 bool isCubeInCharacterItems(ItemInfo *item);
@@ -41,5 +43,13 @@ bool isMoonOfSpider(ItemInfo *item);
 bool isLegacyOfBlood(ItemInfo *item);
 bool isDrekavacInGear(ItemInfo *item);
 bool isVeneficaInGear(ItemInfo *item);
+// for Ultimative
+bool isSacred(ItemInfo *item);
+bool isCharacterOrb(const QByteArray &itemType);
+bool isSunstoneOfElements(const QByteArray &itemType);
+bool isCharacterOrbOrSunstoneOfElements(const QByteArray &itemType);
+bool isCharacterOrb(ItemInfo *item);
+bool isSunstoneOfElements(ItemInfo *item);
+bool isCharacterOrbOrSunstoneOfElements(ItemInfo *item);
 
 #endif // HELPERS_H

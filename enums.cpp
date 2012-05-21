@@ -109,30 +109,6 @@ namespace Enums
     }
 
 
-    int CharacterStats::statLengthFromValue(quint8 value)
-    {
-        switch(value)
-        {
-        case Strength: case Energy: case Dexterity: case Vitality: case SignetsOfLearningEaten:
-            return 12;
-        case FreeStatPoints:
-            return 11;
-        case FreeSkillPoints: case SignetsOfSkillEaten:
-            return 8;
-        case Life: case BaseLife: case Mana: case BaseMana: case Stamina: case BaseStamina:
-            return 21;
-        case Level:
-            return 7;
-        case Experience:
-            return 32;
-        case StashGold: case InventoryGold:
-            return 25;
-        default:
-            return 0;
-        }
-    }
-
-
     int ItemOffsets::offsetLength(ItemOffsetsEnum offset)
     {
         static QHash<ItemOffsetsEnum, int> hash;

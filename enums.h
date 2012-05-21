@@ -191,7 +191,6 @@ public:
         SignetsOfSkillMax = 3
     };
 
-    static int statLengthFromValue(quint8 value);
     static QMetaEnum statisticMetaEnum() { return metaEnumFromName<CharacterStats>("StatisticEnum"); }
     static const char *statisticNameFromValue(quint8 value) { return statisticMetaEnum().valueToKey(value); }
 };

@@ -44,16 +44,16 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
     ui.tabWidget->setTabEnabled(2, item->isRW);
     ui.tabWidget->setTabEnabled(3, !item->socketablesInfo.isEmpty());
 
-    bool isClassCharm = ItemDataBase::isClassCharm(item);
-    renderHtml(ui.itemAndMysticOrbsTextEdit, collectMysticOrbsDataFromProps(&_itemMysticOrbs, item->props, isClassCharm));
+    renderHtml(ui.itemAndMysticOrbsTextEdit, collectMysticOrbsDataFromProps(&_itemMysticOrbs, item->props, item->itemType));
 
     PropertiesMap allProps = item->props;
     if (item->isRW)
     {
-        renderHtml(ui.rwAndMysticOrbsTextEdit, collectMysticOrbsDataFromProps(&_rwMysticOrbs, item->rwProps, isClassCharm));
+        renderHtml(ui.rwAndMysticOrbsTextEdit, collectMysticOrbsDataFromProps(&_rwMysticOrbs, item->rwProps, item->itemType));
         PropertiesDisplayManager::addProperties(&allProps, item->rwProps);
     }
 
+    bool isClassCharm = ItemDataBase::isClassCharm(item);
     PropertiesMap::iterator iter = allProps.begin();
     while (iter != allProps.end())
     {
@@ -89,15 +89,13 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
     QString itemDescription = ItemDataBase::completeItemName(item, true) + htmlLineBreak + tr("Item Level: %1").arg(item->ilvl) + htmlLineBreak;
     if (!itemBase.spelldesc.isEmpty())
         itemDescription += htmlStringFromDiabloColorString(itemBase.spelldesc) + htmlLineBreak;
-    if (item->isRW)
-    {
-        QString runes;
-        foreach (ItemInfo *socketable, item->socketablesInfo)
-            if (ItemDataBase::Items()->value(socketable->itemType).typeString == "rune")
-                runes += ItemDataBase::Socketables()->value(socketable->itemType).letter;
-        if (!runes.isEmpty()) // gem-/jewelwords don't have any letters
-            itemDescription += htmlStringFromDiabloColorString(QString("'%1'").arg(runes), ColorsManager::Gold) + htmlLineBreak;
-    }
+
+    QString runes;
+    foreach (ItemInfo *socketable, item->socketablesInfo)
+        if (ItemDataBase::Items()->value(socketable->itemType).typeString == "rune")
+            runes += ItemDataBase::Socketables()->value(socketable->itemType).letter;
+    if (!runes.isEmpty()) // gem-/jewelwords don't have any letters
+        itemDescription += htmlStringFromDiabloColorString(QString("'%1'").arg(runes), ColorsManager::Gold) + htmlLineBreak;
 
     quint8 clvl = CharacterInfo::instance().basicInfo.level;
     if (itemBase.genericType == Enums::ItemTypeGeneric::Armor)
@@ -166,7 +164,7 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
     }
     int actualRlvl = qMax(rlvl, maxSocketableRlvl) + (allProps.contains(Enums::ItemProperties::RequiredLevel) ? allProps[Enums::ItemProperties::RequiredLevel].value : 0);
     if (actualRlvl)
-        itemDescription += htmlStringFromDiabloColorString(tr("Required Level: %1").arg(actualRlvl > 555 ? 555 : actualRlvl), clvl < actualRlvl ? ColorsManager::Red : ColorsManager::White) + htmlLineBreak;
+        itemDescription += htmlStringFromDiabloColorString(tr("Required Level: %1").arg(/*actualRlvl > 555 ? 555 : */actualRlvl), clvl < actualRlvl ? ColorsManager::Red : ColorsManager::White) + htmlLineBreak;
 
     // add '+50% damage to undead' if item type matches
     bool shouldAddDamageToUndeadInTheBottom = false;
@@ -354,7 +352,7 @@ int PropertiesViewerWidget::totalMysticOrbValue(int moCode, PropertiesMap *props
     return props->value(moCode).value * ItemDataBase::MysticOrbs()->value(moCode).value * multiplier;
 }
 
-QString PropertiesViewerWidget::collectMysticOrbsDataFromProps(QSet<int> *moSet, PropertiesMap &props, bool isClassCharm)
+QString PropertiesViewerWidget::collectMysticOrbsDataFromProps(QSet<int> *moSet, PropertiesMap &props, const QByteArray &itemType)
 {
     PropertiesMap propsWithoutMO = props;
     PropertiesMap::iterator iter = propsWithoutMO.begin();
@@ -362,7 +360,7 @@ QString PropertiesViewerWidget::collectMysticOrbsDataFromProps(QSet<int> *moSet,
     {
         if (ItemDataBase::MysticOrbs()->contains(iter.key()))
         {
-            if (!isClassCharm)
+            if (!ItemDataBase::isClassCharm(itemType) && !isCharacterOrbOrSunstoneOfElements(itemType))
                 moSet->insert(iter.key());
             iter = propsWithoutMO.erase(iter);
         }

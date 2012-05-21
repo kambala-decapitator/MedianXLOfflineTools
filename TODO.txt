@@ -1,3 +1,7 @@
+v0.2.2:
+- correctly save plugy stashes with deleted items
+- remove specific MOs
+
 v0.3:
 - export item to bbcode/html
 - generate some bbcode/html report about character and/or plugy stashes contents
@@ -36,3 +40,4 @@ future versions:
 - skills allocation
 - item requirements
 - when reloading character, explicitly reload shared stashes that were modified
+- http://modsbylaz.14.forumer.com/viewtopic.php?p=424505#424505

@@ -1401,3 +1401,11 @@ seq_yourmine	A1	5			0
 seq_yourmine	A1	6			0
 seq_yourmine	A1	7			0
 seq_yourmine	A1	8			0
+seq_pillarattack	NU	0			0
+seq_pillarattack	NU	1			0
+seq_pillarattack	NU	2			0
+seq_pillarattack	NU	3			0
+seq_pillarattack	NU	4			0
+seq_pillarattack	NU	5			0
+seq_pillarattack	NU	6		4	0
+seq_pillarattack	NU	7			0

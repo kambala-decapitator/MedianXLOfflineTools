@@ -104,7 +104,7 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *pare
     ui.actionAssociate->setDisabled(isDefault);
     ui.actionAssociate->setStatusTip(isDefault ? tr("Application is default already") : QString());
 #else
-#error Add implementation to check file association to e.g. fileassociationmanager_linux.cpp or comment this line
+#warning Add implementation to check file association to e.g. fileassociationmanager_linux.cpp or comment this line
 #endif
 
 #ifdef Q_WS_WIN32
@@ -150,7 +150,7 @@ bool MedianXLOfflineTools::loadFile(const QString &charPath)
         raise();
         activateWindow();
 
-        // it is here because currentIndexChanged signal is emited when items are added to the combobox
+        // it is here because currentIndexChanged signal is emitted when items are added to the combobox
         connect(ui.mercTypeComboBox, SIGNAL(currentIndexChanged(int)), SLOT(modify()));
         connect(ui.mercNameComboBox, SIGNAL(currentIndexChanged(int)), SLOT(modify()));
 
@@ -171,6 +171,8 @@ bool MedianXLOfflineTools::loadFile(const QString &charPath)
         clearUI();
         updateWindowTitle();
     }
+
+    setModified(false);
 
     if (_findItemsDialog)
         _findItemsDialog->clearResults();
@@ -646,7 +648,11 @@ void MedianXLOfflineTools::resurrect()
             break;
         }
 
-        setModified(true);
+        // for Ultimative, don't allow resurrected characters stay on hardcore
+        if (isUltimative())
+            convertToSoftcore(true);
+        else
+            setModified(true);
     }
 }
 
@@ -796,7 +802,11 @@ void MedianXLOfflineTools::backupSettingTriggered(bool checked)
 
 void MedianXLOfflineTools::associateFiles()
 {
+#if defined(Q_WS_WIN32) || defined(Q_WS_MACX)
     FileAssociationManager::makeApplicationDefaultForExtension(characterExtension);
+#else
+#warning Add implementation to check file association to e.g. fileassociationmanager_linux.cpp or comment this line
+#endif
     ui.actionAssociate->setDisabled(true);
 }
 
@@ -1507,7 +1517,7 @@ bool MedianXLOfflineTools::processSaveFile()
         if (statCode == Enums::CharacterStats::End)
             break;
 
-        int statLength = Enums::CharacterStats::statLengthFromValue(statCode);
+        int statLength = ItemDataBase::Properties()->value(statCode).saveBits;//Enums::CharacterStats::statLengthFromValue(statCode);
         if (!statLength)
         {
             ERROR_BOX(tr("Unknown statistic code found: %1. This is not Median XL character.").arg(statCode));
@@ -1989,7 +1999,6 @@ void MedianXLOfflineTools::updateUI()
     ui.actionFind->setEnabled(hasItems);
     ui.actionGiveCube->setDisabled(CharacterInfo::instance().items.hasCube());
 
-    setModified(false);
     updateWindowTitle();
 
     _isLoaded = true;
@@ -2168,14 +2177,14 @@ QByteArray MedianXLOfflineTools::statisticBytes()
             if (clvl != newClvl) // set new level and experience explicitly
             {
                 addStatisticBits(result, Enums::CharacterStats::Level, Enums::CharacterStats::StatCodeLength);
-                addStatisticBits(result, newClvl, Enums::CharacterStats::statLengthFromValue(Enums::CharacterStats::Level));
+                addStatisticBits(result, newClvl, ItemDataBase::Properties()->value(Enums::CharacterStats::Level).saveBits);
                 CharacterInfo::instance().basicInfo.statsDynamicData.setProperty("Level", newClvl);
 
                 quint32 newExp = experienceTable.at(newClvl - 1);
                 if (newExp) // must not be present for level 1 character
                 {
                     addStatisticBits(result, Enums::CharacterStats::Experience, Enums::CharacterStats::StatCodeLength);
-                    addStatisticBits(result, newExp, Enums::CharacterStats::statLengthFromValue(Enums::CharacterStats::Experience));
+                    addStatisticBits(result, newExp, ItemDataBase::Properties()->value(Enums::CharacterStats::Experience).saveBits);
                 }
                 CharacterInfo::instance().basicInfo.statsDynamicData.setProperty("Experience", newExp);
 
@@ -2196,7 +2205,7 @@ QByteArray MedianXLOfflineTools::statisticBytes()
         if (value)
         {
             addStatisticBits(result, statCode, Enums::CharacterStats::StatCodeLength);
-            addStatisticBits(result, value, Enums::CharacterStats::statLengthFromValue(statCode));
+            addStatisticBits(result, value, ItemDataBase::Properties()->value(statCode).saveBits);
         }
 
         CharacterInfo::instance().basicInfo.statsDynamicData.setProperty(enumKey, value);

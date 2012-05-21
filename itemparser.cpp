@@ -401,7 +401,8 @@ bool ItemParser::itemTypeInheritsFromTypes(const QByteArray &itemType, const QLi
 bool ItemParser::itemTypesInheritFromTypes(const QList<QByteArray> &itemTypes, const QList<QByteArray> &allowedItemTypes)
 {
     foreach (const QByteArray &itemType, itemTypes)
-        return allowedItemTypes.contains(itemType) ? true : itemTypesInheritFromTypes(ItemDataBase::ItemTypes()->value(itemType), allowedItemTypes);
+        if (allowedItemTypes.contains(itemType) || itemTypesInheritFromTypes(ItemDataBase::ItemTypes()->value(itemType), allowedItemTypes))
+            return true;
     return false;
 }
 

@@ -7,7 +7,7 @@ qasp	aspe,ct2w
 arac	char
 key	misc
 gemt	gem
-boot	armo
+boot	armo,hlm1
 qbhe	qhlm
 drui	clas
 crsd	swor
@@ -39,7 +39,7 @@ aspe	spea,amaz
 bshi	shie
 poti	misc
 spea	mele
-2hbx	baxe
+2hbx	baxe,2hax
 qplt	pelt,ct1a
 qphm	phlm,ct1a
 qaur	ashd,ct1a
@@ -59,6 +59,7 @@ snag	nagi,ct2w
 qjvn	jave,ct1w
 qcqv	qmsl
 qabw	abow,ct2w
+helm	armo,hlm1
 spsp	pspe,ct2w
 nknf	knif
 gemp	gem
@@ -96,7 +97,6 @@ dstf	staf
 sphz	pzhm,ct1a
 nstf	staf
 qtax	taxe,ct1w
-helm	armo
 qpol	pole,ct2w
 assn	clas
 wpot	poti
@@ -130,6 +130,7 @@ ajav	jave,amaz
 araa	char
 xbow	miss
 miss	weap
+#bow	bow
 char	misc
 mele	weap
 gemr	gem
@@ -158,12 +159,12 @@ nagi	mele
 basd	shie
 crow	helm
 amaz	clas
-glov	armo
+glov	armo,hlm1
 qswd	swor,ct1w
 qcrs	crsd,ct1w
 qajv	ajav,ct1w
 lcha	char
-amul	misc
+amul	misc,hlm1
 staf	rod
 ring	misc
 s2hb	2hbs,ct2w
@@ -171,7 +172,7 @@ qh2h	h2h,ct1w
 necr	clas
 phlm	helm,barb
 tpot	thro
-belt	armo
+belt	armo,hlm1
 rune	sock
 taxe	comb,axe
 tors	armo
@@ -180,7 +181,7 @@ szhm	azhm,ct1a
 stor	tors
 ashd	shie,pala
 gold	misc
-2hbs	bswd
+2hbs	bswd,2hsd
 tkni	comb,knif
 mcha	char
 snxb	nxbw,ct2w
