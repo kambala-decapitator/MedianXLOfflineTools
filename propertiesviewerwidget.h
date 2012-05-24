@@ -17,12 +17,15 @@ public:
 
     void showItem(ItemInfo *item);
     void clear() { showItem(0); }
-    bool hasMysticOrbs() const { return _itemMysticOrbs.size() + _rwMysticOrbs.size() > 0; }
+    int mysticOrbsTotal() const { return _itemMysticOrbs.size() + _rwMysticOrbs.size(); }
+    bool hasMysticOrbs() const { return mysticOrbsTotal() > 0; }
+    const QSet<int> &mysticOrbs(bool isItemMo) const { return isItemMo ? _itemMysticOrbs : _rwMysticOrbs; }
 
     const QString htmlLine; // it's intended that it's a class member and not static
 
 public slots:
     void removeAllMysticOrbs();
+    void removeMysticOrb();
 
 private:
     Ui::PropertiesViewerWidget ui;
@@ -33,9 +36,13 @@ private:
     void renderHtml(QTextEdit *textEdit, const QString &description);
 
     void removeMysticOrbsFromProperties(const QSet<int> &mysticOrbs, PropertiesMultiMap *props);
+    void removeMysticOrbData(int moCode, PropertiesMultiMap *props);
     int indexOfPropertyValue(int id, PropertiesMultiMap *props);
     void modifyMysticOrbProperty(int id, int decrement, PropertiesMultiMap *props);
     int totalMysticOrbValue(int moCode, PropertiesMap *props);
+    void decreaseRequiredLevel(int moNumber, PropertiesMultiMap *props) { modifyMysticOrbProperty(Enums::ItemProperties::RequiredLevel, moNumber * 2, props); }
+    void byteAlignBits();
+    void updateItem() { _item->hasChanged = true; showItem(_item); }
 
     QString collectMysticOrbsDataFromProps(QSet<int> *moSet, PropertiesMap &props, const QByteArray &itemType);
     bool isMysticOrbEffectDoubled();

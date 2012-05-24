@@ -66,6 +66,13 @@ ItemsPropertiesSplitter::ItemsPropertiesSplitter(ItemStorageTableView *itemsView
         vlayout->addLayout(hlayout);
 
         addWidget(w);
+
+        connect(_pageSpinBox, SIGNAL(valueChanged(double)), SLOT(updateItemsForCurrentPage()));
+
+        connect(_left10Button,  SIGNAL(clicked()), SLOT(left10Clicked()));
+        connect(_leftButton,    SIGNAL(clicked()), SLOT(leftClicked()));
+        connect(_rightButton,   SIGNAL(clicked()), SLOT(rightClicked()));
+        connect(_right10Button, SIGNAL(clicked()), SLOT(right10Clicked()));
     }
     else
     {
@@ -81,19 +88,9 @@ ItemsPropertiesSplitter::ItemsPropertiesSplitter(ItemStorageTableView *itemsView
     setChildrenCollapsible(false);
     setStretchFactor(1, 5);
 
-    connect(_itemsView, SIGNAL(customContextMenuRequested(const QPoint &)), SLOT(showContextMenu(const QPoint &)));
-
-    if (shouldCreateNavigation)
-    {
-        connect(_pageSpinBox, SIGNAL(valueChanged(double)), SLOT(updateItemsForCurrentPage()));
-
-        connect(_left10Button,  SIGNAL(clicked()), SLOT(left10Clicked()));
-        connect(_leftButton,    SIGNAL(clicked()), SLOT(leftClicked()));
-        connect(_rightButton,   SIGNAL(clicked()), SLOT(rightClicked()));
-        connect(_right10Button, SIGNAL(clicked()), SLOT(right10Clicked()));
-    }
-
     _itemsView->setFocus();
+
+    connect(_itemsView, SIGNAL(customContextMenuRequested(const QPoint &)), SLOT(showContextMenu(const QPoint &)));
 }
 
 void ItemsPropertiesSplitter::setModel(ItemStorageTableModel *model)
@@ -160,10 +157,10 @@ void ItemsPropertiesSplitter::itemSelected(const QModelIndex &index)
     ItemInfo *item = _itemsModel->itemAt(index);
     _propertiesWidget->showItem(item);
 
-    bool allowDisnechant = !item ? false : (item->quality == Enums::ItemQuality::Set || (item->quality == Enums::ItemQuality::Unique && !ItemDataBase::isUberCharm(item))) && item->location != Enums::ItemLocation::Equipped;
-    _itemActions[DisenchantShards]->setEnabled(allowDisnechant);
-    _itemActions[DisenchantSignet]->setEnabled(allowDisnechant);
-    _itemActions[RemoveMO]->setEnabled(_propertiesWidget->hasMysticOrbs());
+//    bool allowDisnechant = !item ? false : (item->quality == Enums::ItemQuality::Set || (item->quality == Enums::ItemQuality::Unique && !ItemDataBase::isUberCharm(item))) && item->location != Enums::ItemLocation::Equipped;
+//    _itemActions[DisenchantShards]->setEnabled(allowDisnechant);
+//    _itemActions[DisenchantSignet]->setEnabled(allowDisnechant);
+//    _itemActions[RemoveMO]->setEnabled(_propertiesWidget->hasMysticOrbs());
 }
 
 void ItemsPropertiesSplitter::showItem(ItemInfo *item)
@@ -183,10 +180,10 @@ void ItemsPropertiesSplitter::showFirstItem()
         showItem(_itemsModel->firstItem());
 }
 
-bool compareItemsByPlugyPage(ItemInfo *a, ItemInfo *b)
-{
-    return a->plugyPage < b->plugyPage;
-}
+//bool compareItemsByPlugyPage(ItemInfo *a, ItemInfo *b)
+//{
+//    return a->plugyPage < b->plugyPage;
+//}
 
 void ItemsPropertiesSplitter::setItems(const ItemsList &newItems)
 {
@@ -194,7 +191,8 @@ void ItemsPropertiesSplitter::setItems(const ItemsList &newItems)
     if (_left10Button)
     {
         // using _allItems.last()->plugyPage would've been easy, but it's not always correct (new items obtained in the app are added to the end)
-        ItemsList::iterator maxPageIter = std::max_element(_allItems.begin(), _allItems.end(), compareItemsByPlugyPage);
+//        ItemsList::iterator maxPageIter = std::max_element(_allItems.begin(), _allItems.end(), compareItemsByPlugyPage);
+        ItemsList::iterator maxPageIter = std::max_element(_allItems.begin(), _allItems.end(), [](ItemInfo *a, ItemInfo *b){ return a->plugyPage < b->plugyPage; });
         _lastNotEmptyPage = maxPageIter == _allItems.end() ? 0 : (*maxPageIter)->plugyPage;//!_allItems.isEmpty() ? _allItems.last()->plugyPage : 0;
         
         _pageSpinBox->setSuffix(QString(" / %1").arg(_lastNotEmptyPage));
@@ -271,11 +269,7 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
 
         //QMenu *menuExport = new QMenu(tr("Export as"), _itemsView);
         //menuExport->addActions(QList<QAction *>() << _itemActions[ExportBbCode] << _itemActions[ExportHtml]);
-        //actions << menuExport->menuAction();
-
-        //QAction *separator = new QAction(_itemsView);
-        //separator->setSeparator(true);
-        //actions << separator;
+        //actions << menuExport->menuAction() << separator();
 
         bool isUltimative_ = isUltimative();
 
@@ -302,13 +296,33 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
         //    actions << actionMakeNonEthereal;
         //}
 
+        int moTotal = _propertiesWidget->mysticOrbsTotal();
         // in Ultimative, Character Orb and Sunstone of Elements use same stat IDs as MOs, but those can't be removed
-        if (_propertiesWidget->hasMysticOrbs() && (!isUltimative_ || !isCharacterOrbOrSunstoneOfElements(item)))
-            actions << _itemActions[RemoveMO];
+        if (moTotal > 0 && !(isUltimative_ && isCharacterOrbOrSunstoneOfElements(item)))
+        {
+            QAction *actionToAdd = nullptr;
+            if (moTotal > 1)
+            {
+                QMenu *menuMO = new QMenu(_itemsView);
+                _itemActions[RemoveMO]->setText(tr("All"));
+                menuMO->addActions(QList<QAction *>() << _itemActions[RemoveMO] << separator());
 
-        QAction *separator = new QAction(_itemsView);
-        separator->setSeparator(true);
-        actions << separator << _itemActions[Delete];
+                createActionsForMysticOrbs(menuMO, true, item);
+                menuMO->addAction(separator());
+                createActionsForMysticOrbs(menuMO, false, item);
+
+                actionToAdd = menuMO->menuAction();
+            }
+            else
+            {
+                actionToAdd = _itemActions[RemoveMO];
+            }
+
+            actionToAdd->setText(tr("Remove Mystic Orbs"));
+            actions << actionToAdd;
+        }
+
+        actions << separator() << _itemActions[Delete];
 
         QMenu::exec(actions, _itemsView->mapToGlobal(pos));
     }
@@ -316,6 +330,7 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
 
 ItemInfo *ItemsPropertiesSplitter::selectedItem(bool showError /*= true*/)
 {
+    //QModelIndexList selectedIndexes = _itemsView->selectionModel()->selectedIndexes();
     ItemInfo *item = _itemsModel->itemAt(_itemsView->selectionModel()->currentIndex());
     if (!item && showError)
         ERROR_BOX("TROLOLOL no item selection found");
@@ -453,6 +468,11 @@ void ItemsPropertiesSplitter::deleteItem()
         emit itemDeleted();
         if (isCube)
             emit cubeDeleted();
+
+        // a hack to make stash modified
+        ItemInfo *someItem = _itemsModel->firstItem();
+        if (someItem)
+            someItem->hasChanged = true;
     }
 }
 
@@ -530,7 +550,7 @@ void ItemsPropertiesSplitter::createItemActions()
 //    _itemsView->addAction(actionUnsocket);
 //    _itemActions[Unsocket] = actionUnsocket;
 
-    QAction *actionRemoveMO = new QAction(tr("Remove Mystic Orbs"), _itemsView);
+    QAction *actionRemoveMO = new QAction(_itemsView);
     actionRemoveMO->setShortcut(QKeySequence("Ctrl+M"));
     connect(actionRemoveMO, SIGNAL(triggered()), _propertiesWidget, SLOT(removeAllMysticOrbs()));
     connect(actionRemoveMO, SIGNAL(triggered()), SIGNAL(itemsChanged()));
@@ -548,4 +568,24 @@ void ItemsPropertiesSplitter::createItemActions()
     connect(actionDelete, SIGNAL(triggered()), SLOT(deleteItem()));
     _itemsView->addAction(actionDelete);
     _itemActions[Delete] = actionDelete;
+}
+
+QAction *ItemsPropertiesSplitter::separator()
+{
+    QAction *sep = new QAction(_itemsView);
+    sep->setSeparator(true);
+    return sep;
+}
+
+void ItemsPropertiesSplitter::createActionsForMysticOrbs(QMenu *parentMenu, bool isItemMO, ItemInfo *item)
+{
+    foreach (int moCode, _propertiesWidget->mysticOrbs(isItemMO))
+    {
+        QAction *moAction = new QAction((isItemMO ? item->props : item->rwProps).value(moCode).displayString, _itemsView);
+        moAction->setProperty("isItemMO", isItemMO);
+        moAction->setProperty("moCode", moCode);
+        connect(moAction, SIGNAL(triggered()), _propertiesWidget, SLOT(removeMysticOrb()));
+        connect(moAction, SIGNAL(triggered()), SIGNAL(itemsChanged()));
+        parentMenu->addAction(moAction);
+    }
 }

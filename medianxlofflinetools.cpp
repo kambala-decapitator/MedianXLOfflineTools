@@ -40,7 +40,7 @@
 // additional defines
 
 #ifdef QT_NO_DEBUG
-#define RELEASE_DATE "29.03.2012"
+#define RELEASE_DATE "24.05.2012"
 #else
 #define RELEASE_DATE QDate::currentDate().toString("dd.MM.yyyy") // :)
 #endif

@@ -1,6 +1,5 @@
 v0.2.2:
-- correctly save plugy stashes with deleted items
-- remove specific MOs
+- multiple selection + delete/disenchant
 
 v0.3:
 - export item to bbcode/html

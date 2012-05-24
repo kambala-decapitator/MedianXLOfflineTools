@@ -13,6 +13,7 @@ class QModelIndex;
 class QPushButton;
 class QDoubleSpinBox;
 class QKeySequence;
+class QMenu;
 
 class ItemsPropertiesSplitter : public QSplitter
 {
@@ -106,6 +107,8 @@ private:
     void removeItemFromList(ItemInfo *item, bool currentStorage = true);
 
     void createItemActions();
+    QAction *separator();
+    void createActionsForMysticOrbs(QMenu *parentMenu, bool isItemMO, ItemInfo *item);
 };
 
 #endif // ITEMSPROPERTIESSPLITTER_H

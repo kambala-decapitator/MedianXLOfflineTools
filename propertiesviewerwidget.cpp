@@ -257,19 +257,22 @@ void PropertiesViewerWidget::removeAllMysticOrbs()
     removeMysticOrbsFromProperties(_itemMysticOrbs, &_item->props);
     removeMysticOrbsFromProperties(_rwMysticOrbs, &_item->rwProps);
 
-    // byte align
-    int extraBits = _item->bitString.length() % 8;
-    if (extraBits)
-    {
-        int zerosBeforeFirst1 = _item->bitString.indexOf('1'), zerosToAppend = 8 - extraBits;
-        if (zerosBeforeFirst1 + zerosToAppend < 8)
-            _item->bitString.prepend(QString(zerosToAppend, zeroChar));
-        else
-            _item->bitString.remove(0, extraBits);
-    }
+    byteAlignBits();
+    updateItem();
+}
 
-    _item->hasChanged = true;
-    showItem(_item);
+void PropertiesViewerWidget::removeMysticOrb()
+{
+    QAction *action = qobject_cast<QAction *>(sender());
+    bool isItemMo = action->property("isItemMO").toBool();
+    int moCode = action->property("moCode").toInt();
+    PropertiesMultiMap *props = &(isItemMo ? _item->props : _item->rwProps);
+
+    int moNumber = props->value(moCode).value; // must be queried before calling removeMysticOrbData()
+    removeMysticOrbData(moCode, props);
+    decreaseRequiredLevel(moNumber, props);
+    byteAlignBits();
+    updateItem();
 }
 
 void PropertiesViewerWidget::removeMysticOrbsFromProperties(const QSet<int> &mysticOrbs, PropertiesMultiMap *props)
@@ -277,20 +280,23 @@ void PropertiesViewerWidget::removeMysticOrbsFromProperties(const QSet<int> &mys
     int moNumber = 0;
     foreach (int moCode, mysticOrbs)
     {
-        modifyMysticOrbProperty(ItemDataBase::MysticOrbs()->value(moCode).statId, totalMysticOrbValue(moCode, props), props);
-
-        // remove MO data
-        const ItemPropertyTxt &propertyTxt = ItemDataBase::Properties()->value(moCode);
-        int valueIndex = indexOfPropertyValue(moCode, props);
-        if (valueIndex > -1)
-            _item->bitString.remove(valueIndex, propertyTxt.bits + propertyTxt.saveParamBits + Enums::CharacterStats::StatCodeLength);
-
         moNumber += props->value(moCode).value;
-        props->remove(moCode);
+        removeMysticOrbData(moCode, props);
     }
+    decreaseRequiredLevel(moNumber, props);
+}
 
-    // decrease rlvl
-    modifyMysticOrbProperty(Enums::ItemProperties::RequiredLevel, moNumber * 2, props);
+void PropertiesViewerWidget::removeMysticOrbData(int moCode, PropertiesMultiMap *props)
+{
+    modifyMysticOrbProperty(ItemDataBase::MysticOrbs()->value(moCode).statId, totalMysticOrbValue(moCode, props), props);
+
+    // remove MO data
+    const ItemPropertyTxt &propertyTxt = ItemDataBase::Properties()->value(moCode);
+    int valueIndex = indexOfPropertyValue(moCode, props);
+    if (valueIndex > -1)
+        _item->bitString.remove(valueIndex, propertyTxt.bits + propertyTxt.saveParamBits + Enums::CharacterStats::StatCodeLength);
+
+    props->remove(moCode);
 }
 
 int PropertiesViewerWidget::indexOfPropertyValue(int id, PropertiesMultiMap *props)
@@ -317,6 +323,9 @@ int PropertiesViewerWidget::indexOfPropertyValue(int id, PropertiesMultiMap *pro
 
 void PropertiesViewerWidget::modifyMysticOrbProperty(int id, int decrement, PropertiesMultiMap *props)
 {
+    if (!decrement)
+        return;
+
     int valueIndex = indexOfPropertyValue(id, props);
     if (valueIndex <= -1)
         return;
@@ -350,6 +359,19 @@ int PropertiesViewerWidget::totalMysticOrbValue(int moCode, PropertiesMap *props
 {
     quint8 multiplier = 1 + isMysticOrbEffectDoubled();
     return props->value(moCode).value * ItemDataBase::MysticOrbs()->value(moCode).value * multiplier;
+}
+
+void PropertiesViewerWidget::byteAlignBits()
+{
+    int extraBits = _item->bitString.length() % 8;
+    if (extraBits)
+    {
+        int zerosBeforeFirst1 = _item->bitString.indexOf('1'), zerosToAppend = 8 - extraBits;
+        if (zerosBeforeFirst1 + zerosToAppend < 8)
+            _item->bitString.prepend(QString(zerosToAppend, zeroChar));
+        else
+            _item->bitString.remove(0, extraBits);
+    }
 }
 
 QString PropertiesViewerWidget::collectMysticOrbsDataFromProps(QSet<int> *moSet, PropertiesMap &props, const QByteArray &itemType)

@@ -94,7 +94,9 @@ void SkillplanDialog::contructUrls()
         maxSkillLevelCharms += QString::number(cfm && cfm->props.contains(Enums::ItemProperties::MaxSlvlIncrease));
     }
     else
-        maxSkillLevelCharms = "1111111";
+        maxSkillLevelCharms = "111111";
+
+    QString maxSkillLevelItems = ui.itemsCheckBox->isChecked() ? hasItemBoolString(charInfo, isDrekavacInGear) + hasItemBoolString(charInfo, isVeneficaInGear) : "11";
 
     QString minigames;
     if (ui.minigamesCheckBox->isChecked())
@@ -106,8 +108,6 @@ void SkillplanDialog::contructUrls()
     }
     else
         minigames = "1111";
-
-    QString maxSkillLevelItems = ui.itemsCheckBox->isChecked() ? (hasItemBoolString(charInfo, isDrekavacInGear) + hasItemBoolString(charInfo, isVeneficaInGear)) : "11";
 
     QString skillStr;
     foreach (quint8 skillValue, charInfo.basicInfo.skillsReadable)
