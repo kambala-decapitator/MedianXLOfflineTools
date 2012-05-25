@@ -119,7 +119,7 @@ Sha'ad Rune	Shaad	18	r56	2	dmg%		30	30	ac/runemaster	32	32	32					ac%		30	30	ac/
 Fire Rune	Fire	18	r57	2																																				0
 Phys Rune	Earth	18	r58	2																																				0
 Magic Rune	Magic	18	r59	2																																				0
-Pois Rune	Poison	18	r60	2																																				0
+Pois Rune	Pois	18	r60	2																																				0
 Ltng Rune	Light	18	r61	2																																				0
 Cold Rune	Cold	18	r62	2																																				0
 Ultra Rune	Ultra	18	r98	2																																				0

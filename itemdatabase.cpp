@@ -381,7 +381,7 @@ QStringList *ItemDataBase::NonMagicItemQualities()
 QList<QByteArray> ItemDataBase::stringArrayOfCurrentLineInFile(QFile &f)
 {
     QByteArray itemString = f.readLine().trimmed();
-    return itemString.isEmpty() || itemString.startsWith('#') ? QList<QByteArray>() : itemString.split('\t');
+    return itemString.isEmpty() || (f.pos() == 0 && itemString.startsWith('#')) ? QList<QByteArray>() : itemString.split('\t');
 }
 
 QString ItemDataBase::completeItemName(ItemInfo *item, bool shouldUseColor, bool showQualityText /*= true*/)

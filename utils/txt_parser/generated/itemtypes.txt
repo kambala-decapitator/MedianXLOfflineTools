@@ -3,6 +3,7 @@ arag	char
 scha	char
 qblt	belt,ct1a
 cloa	tors,assn
+ct1a	ssgl
 qasp	aspe,ct2w
 arac	char
 key	misc
@@ -54,6 +55,7 @@ blun	mele
 wand	rod
 scrd	mele
 qorb	orb,ct1w
+weap	dcht
 s2hd	2hsd,ct2w
 snag	nagi,ct2w
 qjvn	jave,ct1w
@@ -66,6 +68,7 @@ gemp	gem
 azhm	helm
 pole	mele
 nscy	scyh
+ct2w	ssgl
 dbow	bow
 2hsd	swor
 qspe	spea,ct2w
@@ -97,11 +100,12 @@ dstf	staf
 sphz	pzhm,ct1a
 nstf	staf
 qtax	taxe,ct1w
+hlm1	dcht
 qpol	pole,ct2w
 assn	clas
 wpot	poti
 scep	rod
-jewl	sock
+jewl	sock,dcht
 elix	misc
 rpot	hpot,mpot
 qclb	club,ct1w
@@ -109,12 +113,13 @@ head	shie,necr
 pzhm	helm
 gem0	gem
 s2hx	2hbx,ct2w
-misl	misc
+misl	misc,dcht
 sscd	scrd,ct1w
 spcb	pclb,ct1w
 knif	mele
 gems	gem
 qwnd	wand,ct1w
+ct2a	ssgl
 snst	nstf,ct2w
 gem2	gem
 ishd	shie
@@ -148,6 +153,7 @@ qhed	head,ct1a
 shld	armo,seco
 gemz	gem
 bhlm	helm
+ct1w	ssgl
 orb	mele,sorc
 bow	miss
 qscy	scyh,ct2w
@@ -166,7 +172,7 @@ qajv	ajav,ct1w
 lcha	char
 amul	misc,hlm1
 staf	rod
-ring	misc
+ring	misc,dcht
 s2hb	2hbs,ct2w
 qh2h	h2h,ct1w
 necr	clas
@@ -201,6 +207,7 @@ qknf	knif,ct1w
 body	misc
 bowq	misl
 kill	misc
+armo	dcht
 pmac	mace
 qbot	boot,ct1a
 sisd	ishd,ct1a

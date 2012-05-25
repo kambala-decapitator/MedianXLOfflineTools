@@ -2213,7 +2213,7 @@
 "amu"	"Amulet"
 "vip"	"Top of the Horadric Staff"
 "rin"	"Ring"
-"gld"	"Gold"
+"gld"	"\gold;Gold"
 "bks"	"Scroll of Inifuss"
 "bkd"	"Key to the Cairn Stones"
 "aqv"	"Arrow Quiver"

@@ -36,7 +36,7 @@ Crystal Divisor				1						Crystal 8	249		Unique Crystal 4	1																					
 Jewelry A				1				1024		rin	4		amu	4		jew	2		Crystal Divisor	4																							0
 Jewelry B				1				1024		rin	4		amu	4		jew	2		Crystal Divisor	4																							0
 Jewelry C				1				1024		rin	4		amu	4		jew	2		Crystal Divisor	4																							0
-Unique Crystal Rodeo				1						Unique Crystal 4	1		Crystal 8	9																													0
+Unique Crystal Rodeo				1						Unique Crystal 4	1		Crystal 8	49																													0
 ChippedNGem				1						yo1	1		g$a	2		9$a	2		7$a	2		5$a	2																				0
 FlawedNGem				1						yo2	1		g$b	2		9$b	2		7$b	2		5$b	2																				0
 NormalNGem				1						yo3	1		g$c	2		9$c	2		7$c	2		5$c	2																				0
@@ -1493,5 +1493,12 @@ zvxmvknkmnmnxvjn4				1						qum	1																																0
 zvxmvknkmnmnxvjn5				1						#X9	1																																0
 zvxmvknkmnmnxvjn6				1	1024					mlmxvzmvnjnajnjnjcznjn	1																																0
 sagkaskfmalsfmalksfm				-6						zvxmvknkmnmnxvjn1	1		zvxmvknkmnmnxvjn2	1		zvxmvknkmnmnxvjn3	1		zvxmvknkmnmnxvjn4	1		zvxmvknkmnmnxvjn5	1		zvxmvknkmnmnxvjn6	1																	0
-GiftBoxYAY				1						#X9	1																																
-GriswoldTCex				-2						GiftBoxYAY	1		Act 1 Super B	1																													
+GiftBoxYAY				1						#X9	1																																0
+GriswoldTCex				-2						GiftBoxYAY	1		Act 1 Super B	1																													0
+Diablo Charm0				1	1024					Diablo Clone Charm	1																																0
+Diablo Giftboxeh				1						#2^	1																																0
+Diablo Dropz		20	85	3	0	1024	0	0		Act 5 (H) Heroic Bias C	1		Act 5 (H) Heroic Bias C	1		Act 5 (H) Heroic Bias C	1																								2	1	0
+Uber Diablo Drops				-3						Diablo Dropz	1		Diablo Giftboxeh	1		Diablo Charm0	1																										0
+I Am Rich Gem				1	1024					NewSuperGem	25		Blank TC	25																													
+My Own Charm				1	1024					MyOwnCharm	25		Blank TC	25																													
+MarcoNecroX Secret Boss				-3						Kabraxis Equip Drop	1		My Own Charm	1		I Am Rich Gem	1																										

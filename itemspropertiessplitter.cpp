@@ -157,10 +157,11 @@ void ItemsPropertiesSplitter::itemSelected(const QModelIndex &index)
     ItemInfo *item = _itemsModel->itemAt(index);
     _propertiesWidget->showItem(item);
 
-//    bool allowDisnechant = !item ? false : (item->quality == Enums::ItemQuality::Set || (item->quality == Enums::ItemQuality::Unique && !ItemDataBase::isUberCharm(item))) && item->location != Enums::ItemLocation::Equipped;
-//    _itemActions[DisenchantShards]->setEnabled(allowDisnechant);
-//    _itemActions[DisenchantSignet]->setEnabled(allowDisnechant);
-//    _itemActions[RemoveMO]->setEnabled(_propertiesWidget->hasMysticOrbs());
+    // correctly disables hotkeys
+    bool allowDisnechant = !item ? false : (item->quality == Enums::ItemQuality::Set || (item->quality == Enums::ItemQuality::Unique && !ItemDataBase::isUberCharm(item))) && item->location != Enums::ItemLocation::Equipped;
+    _itemActions[DisenchantShards]->setEnabled(allowDisnechant);
+    _itemActions[DisenchantSignet]->setEnabled(allowDisnechant);
+    _itemActions[RemoveMO]->setEnabled(_propertiesWidget->hasMysticOrbs());
 }
 
 void ItemsPropertiesSplitter::showItem(ItemInfo *item)
@@ -267,6 +268,7 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
     {
         QList<QAction *> actions;
 
+        // TODO 0.3
         //QMenu *menuExport = new QMenu(tr("Export as"), _itemsView);
         //menuExport->addActions(QList<QAction *>() << _itemActions[ExportBbCode] << _itemActions[ExportHtml]);
         //actions << menuExport->menuAction() << separator();

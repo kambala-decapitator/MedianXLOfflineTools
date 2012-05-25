@@ -1200,7 +1200,7 @@
 1202	\yellow;Brood Swarm\blue;
 1203	\yellow;Cog\blue;
 1204	\yellow;Ice Clan\blue;
-1205	Infernal Contraption
+1205	(                       Infernal Contraption                       )
 1206	\dgrey;Baal (Vision of Destruction)\blue;
 1207	\gold;Vasily
 1208	\gold;Esu
@@ -1591,7 +1591,7 @@
 1593	\yellow;Cenobite\blue;
 1594	Crusher
 1595	\yellow;Grizzly Giant\blue;
-1596	\gold;Belial, Lord of Lies
+1596	\gold;(                       Belial, Lord of Lies                       )
 1597	\green;Pit Stone\blue;
 1598	\green;Wicked Man\blue;
 1599	\green;Rock Maul Demon\blue;
@@ -1927,3 +1927,14 @@
 1929	\gold;Quest Totem
 1930	\red;(                          Volrath The Vile                          )
 1931	\orange;Vilespawn
+1932	\red;(     Minion of Terror     )
+1933	\red;(     Minion of Terror     )
+1934	\red;(     Minion of Terror     )
+1935	\red;(     Minion of Terror     )
+1936	\purple;Ghost of Terror
+1937	Uldyssian's Ghost
+1938	\red;(                         VN_Dragon                         )
+1939	Skeleton
+1940	\purple;(                        MarcoNecroX (Secret Boss)                        )
+1941	\orange;Punishment Turret\blue;
+1942	\orange;Punishment Turret\blue;

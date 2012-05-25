@@ -5,7 +5,7 @@ Horadric Staff		1		1			15	hst	MESSAGE		3	10000						5	5000	lgld	lgld						extra-
 Hell Forge Hammer		1		1			20	hfh	Hammer		4	10000						5	5000	cred	cred						dmg%		50	50	dmg-max		15	15	dmg-stun		25	25	res-fire		40	40	kill-skill	518	50	2																													0
 KhalimFlail		1		1			15	qf1	Flail		5	10000						5	5000	dgry	dgry						dmg%		50	50	heal-kill		5	5	swing3		20	20	att%		75	75																																	0
 SuperKhalimFlail		1		1			20	qf2	Flail		6	10000						5	5000	lgld	lgld						dmg%		50	50	heal-kill		5	5	swing3		20	20	att%		150	150	hp%-mp%		20	20	charged	311	66	6	vit%		15	15	enr%		15	15	dmg-max		40	40													0
-The Boulder		1		2000	1	1	1	jew	Jewel		7	4000						5	5000								crush		1	1	str		3	5	ease		10	10																																					0
+The Boulder		1		5000	1	1	1	jew	Jewel		7	4000						5	5000								crush		1	1	str		3	5	ease		10	10																																					0
 ThisIsASecretMessage		1		2000	1	20	20	jew	Jewel		8	4001						5	5000								extra-all		1	3	enr-factor		3	5																																									0
 Demonstone Blood		1		2000	1	40	40	jew	JOOOL!!!!!!!		9	4002						5	5000								dmg-fire		5	20	dmg-cold	75	5	20	dmg-ltng		5	20	hp%		2	3																																	0
 Zakarum Stoning Rock		1		2000	1	60	60	jew	Jewel		10	4003						5	5000								dmg-demon		6	10	kill-skill	595	1	4	dmg-stun		15	15	dmg-global		5	5																																	0
@@ -214,14 +214,14 @@ TestTube		1		50	1	1	1	cqv	Crossbow Quiver (Sacred)		212	3004	ACTIVE					5	5000		
 LarzuksBandolier		1		40	1	40	40	cqv	Crossbow Quiver (Sacred)		213	3005	ACTIVE					5	5000								sock		1	1	swing3		40	40	dmg-fire		15	30	kill-skill	302	2	6	str		11	15																													0
 PlagueGland		1		30	1	80	80	cqv	Crossbow Quiver (Sacred)		214	3006	ACTIVE					5	5000								sock		1	1	dmg-pois	250	512	896	pierce-pois		6	10	kill-skill	535	5	2	res-pois		31	50	regen		21	25																									0
 WhyDoIAlwaysListenToIdiots		1		20	1	120	120	cqv	Crossbow Quiver (Sacred)		215	3007	ACTIVE					5	5000								sock		1	1	kill-skill	541	10	5	dmg-max		21	40	crush		2	5	move3		10	10	balance3		10	10																									0
-BecauseImADoormatX		1		50	1	1	1	amu	Amulet (Sacred)		216	2500	ACTIVE					5	5000								sock		1	1	regen		-5	-5	gold%		51	75	extra-pm		6	10	kill-skill	525	33	10																													0
+BecauseImADoormatX		1		150	1	1	1	amu	Amulet (Sacred)		216	2500	ACTIVE					5	5000								sock		1	1	regen		-5	-5	gold%		51	75	extra-pm		6	10	kill-skill	525	33	10																													0
 ThatsWhyX		1		50	1	20	20	amu	Amulet (Sacred)		217	2501	ACTIVE					5	5000								sock		1	1	lifesteal		3	6	hp		50	50	nec		1	1	maxminions		2	2	reanimate	1585	5	5																									0
 GrmblX		1		50	1	40	40	amu	Amulet (Sacred)		218	2502	ACTIVE					5	5000								sock		1	1	ac-global		16	20	allskills		1	1	light		3	4	str%		6	10	dex%		6	10																									0
 AthuluasOracleX		1		50	1	60	60	amu	Amulet (Sacred)		219	2503	ACTIVE					5	5000								sock		1	1	allskills		1	1	uninterrupt		16	20	move3		10	10	swing3		10	10	att%		101	250																									0
 DreamcatcherX		1		50	1	80	80	amu	Amulet (Sacred)		220	2504	ACTIVE					5	5000								sock		1	1	allskills		2	2	cast3		15	15	pierce-all		6	10	mana-kill		31	40	res-all		21	25																									0
 WitchmoonX		1		50	1	100	100	amu	Amulet (Sacred)		221	2505	ACTIVE					5	5000								sock		1	1	allskills		1	2	dmg-to-mana		11	15	att-skill	508	4	17	extra-all		16	20	mana%		40	40	enr-factor		11	15																					0
 Death Ward		1		50	1	120	120	amu	Amulet (Sacred)		222	2506	ACTIVE					5	5000								sock		1	1	res-pois		41	50	res-curse		21	25	heal-thorns		41	50	light		2	2	allskills		2	2	dmg-norm		25	100																					0
-RingOfDiscoX		1		50	1	1	1	rin	Ring (Sacred)		223	2507	ACTIVE					5	5000								sock		1	1	move3		20	20	stamdrain		50	50	kill-skill	496	2	8	stam		101	150																													0
+RingOfDiscoX		1		150	1	1	1	rin	Ring (Sacred)		223	2507	ACTIVE					5	5000								sock		1	1	move3		20	20	stamdrain		50	50	kill-skill	496	2	8	stam		101	150																													0
 RingOfTruthX		1		50	1	20	20	rin	Ring (Sacred)		224	2508	ACTIVE					5	5000								sock		1	1	slow-thorns		3	5	balance3		15	15	block3		25	25	ac-global		11	15	light		2	2	att%		31	50																					0
 EmpyreanBandX		1		50	1	40	40	rin	Ring (Sacred)		225	2509	ACTIVE					5	5000								sock		1	1	hp%-mp%		10	10	all-stats%		3	5	kill-skill	340	1	7	gold%		51	100																													0
 RipstarX		1		50	1	60	60	rin	Ring (Sacred)		226	2510	ACTIVE					5	5000								sock		1	1	dmg/lvl	32	32	32	openwounds		31	50	heal-melee		11	20																																	0
@@ -2014,7 +2014,7 @@ SkillsdLastSkillEver				1	1	120	100	@28	Sash (Sacred)		1		OUTDATED					5	5000			
 SkillsdLastSkillEver				1	1	120	100	@35	Chain Gloves (Sacred)		1		OUTDATED					5	5000																																																								0
 SkillsdLastSkillEver				1	1	120	100	8@J	Ceremonial Armor (Sacred)		1		OUTDATED					5	5000																																																								0
 New2TobiosKey		1		4	1	120	100	@60	Aerin Shield (Sacred)				S2 BONUS ITEM					5	5000	dgld	lred						sock		6	6	ac%		201	250	extra-fire		31	40	extra-pm		31	40	wrath-synergy		31	40	pagan2		2	2	enr		100	100	ac		1000	1000	enr-factor		50	50	cast3		20	20	res-fire		50	50	res-ltng		-25	-25	0
-NewGrandArmor		1		4	1	120	100	@15	Ancient Armor (Sacred)				REALM UNIQUE					5	5000	dred	dred						sock		6	6	ac%		301	350	dmg-global		100	100	hp%		11	15	hp		500	500	regen		401	500	red-dmg		100	100	red-dmg%		10	10	red-mag		10	10	ease		500	500									0
+NewGrandArmor				4	1	120	100	@15	Ancient Armor (Sacred)				REALM UNIQUE					5	5000	dred	dred						sock		6	6	ac%		301	350	dmg-global		100	100	hp%		11	15	hp		500	500	regen		401	500	red-dmg		100	100	red-dmg%		10	10	red-mag		10	10	ease		500	500									0
 Ramcharge		1		4	1	120	100	@49	Antlers (Sacred)				REALM UNIQUE					5	5000	dgry	dgry						sock		4	4	ac%		301	350	ease		500	500	str%		21	25	slow		5	5	dmg-norm		150	450	dmg-global		50	50	howl		3	3																	0
 NewGongItem		1		4	1	120	100	5@O	Aspis (Sacred)				REALM UNIQUE					5	5000	blac	dgld						sock		6	6	ac%		251	300	att-skill	780	1	12	crush		3	5	str%		11	15	ass		2	2	dex%		21	25	dmg-ltng		1	1000	dmg-cold	25	1	1000	hit-skill	450	1	18	heal-kill		250	250	block		1	1	0
 NewWandelkoning		1		4	1	120	100	@55	Assault Helmet (Sacred)				S2 BONUS ITEM					5	5000	blac	blac						sock		4	4	ac%		301	350	hp-minion		-50	-50	dmg-global		101	150	str%		21	30	swing3		40	40	ac-global		21	25	dmg-max		201	300	indestruct		1	1	dex%		21	30	enr%		21	30	vit%		21	30	0
@@ -2056,7 +2056,7 @@ NewAncientsLegacy		1		4	1	120	100	42!	Gilded Shield (Sacred)				SECRET BONUS ITE
 NewGoetiaPlate		1		4	1	120	100	@13	Gothic Plate (Sacred)				REALM UNIQUE					5	5000	blac	blac						sock		6	6	ac%		301	350	hp-minion		201	250	dmg-minion		101	150	allskills		3	3	regen		1000	1000	hp		1000	1000	mana		1000	1000	maxminions		5	5	light		-4	-4	color	3	3	3	state	91	1	1	0
 ShieldHakan		1		4	1	120	100	@27	Gothic Shield (Sacred)				REALM UNIQUE					5	5000	lyel	lyel						sock		4	4	block3		75	75	red-dmg%		5	5	uninterrupt		20	20	att-skill	436	5	34	allskills		1	1	hp		500	500	light		2	2	gold%		500	500													0
 NewMetalhead		1		4	1	120	100	@20	Great Helm (Sacred)				REALM UNIQUE					5	5000	lgry	lgry						sock		4	4	ac		2001	2500	ac-global		21	25	str		50	50	howl		2	2	heal-hit		2	2	ignore-ac		1	1	att-skill	595	3	10	att-skill	980	3	10	dmg-ltng		1	333	light		-5	-5	reanimate	1463	5	5	0
-StampedeItem		1		4	1	120	100	@42	Greaves (Sacred)				REALM UNIQUE					5	5000	dred	dred						sock		4	4	ac%		201	250	maxminions		2	2	dmg-minion		50	50	hp-minion		-25	-25	mana		500	500	crush		10	10	gethit-skill	67	1	50																	0
+StampedeItem		1		4	1	200	666	@42	Greaves (Sacred)				REALM UNIQUE					5	5000	dred	dred						sock		4	4	ac%		201	250	maxminions		2	2	dmg-minion		50	50	hp-minion		-25	-25	mana		500	500	crush		10	10																					0
 New2MaggotspawnShell		1		4	1	120	100	@03	Hard Leather Armor (Sacred)				S2 BONUS ITEM					5	5000	lgrn	lgrn						sock		6	6	ac%		301	350	ac		1000	1000	indestruct		1	1	ac-global		31	40	extra-pois		31	40	pierce-pois		11	15	allskills		2	2	att%		100	100	dmg-pois	50	2048	2048	lifesteal		14	16					0
 NewPeacebringer		1		4	1	120	100	@48	Hawk Helm (Sacred)				REALM UNIQUE					5	5000	lgry	lgry						sock		4	4	ac%		151	200	hit-skill	492	10	15	dex		51	100	str		51	100	gold%		500	500	kill-skill	762	1	37	light		-4	-4	swing3		25	25	move3		35	35	dmg-norm		25	50					0
 NewEdgewulfsGirdle		1		4	1	120	100	@31	Heavy Belt (Sacred)				SECRET BONUS ITEM					5	5000	blac	blac						sock		2	2	str		200	200	vit		-50	-50	red-dmg%		5	5																																	0
@@ -2079,7 +2079,7 @@ NewHellbourneDisciple		1		4	1	120	100	@12	Light Plate (Sacred)				SECRET BONUS I
 NewEarth4		1		4	1	120	100	@41	Light Plated Boots (Sacred)				SECRET BONUS ITEM					5	5000	dgry	dgry						sock		4	4	ac%		201	250	oskill	901	30	33	extra-pm		41	50	move3		20	20	str		41	60	red-dmg		25	25	indestruct		1	1	death-skill	612	100	56	ac-global		21	25									0
 NewIdolOfRygnar		1		4	1	120	100	@45	Mask (Sacred)				SECRET BONUS ITEM					5	5000	lyel	lgld						sock		4	4	ac%		201	250	howl		2	2	lifesteal		26	33	nec		2	2	dmg-global		200	200	str		41	50	dex		41	50	att-damage		500	500	gold%		750	750	light		5	5					0
 New5Lioncrest		1		4	1	120	100	6@K	Morion (Sacred)				S2 BONUS ITEM					5	5000	lgld	lgld						sock		4	4	ac%		251	300	kill-skill	981	2	7	dmg-max		71	100	block		-2	-2	hp		1000	1000	lifesteal		13	15	swing3		30	30																	0
-NewSiggardsRevenge		1		4	1	120	100	7@N	Parma (Sacred)				REALM UNIQUE					5	5000	blac	blac						sock		4	4	ac%		201	250	block		2	2	dex		150	150	str		-50	-50	att%		101	150	reanimate	1378	10	10	dmg-demon		301	350	indestruct		1	1	demon-heal		101	150	crush		20	20					0
+NewSiggardsRevenge				4	1	120	100	7@N	Parma (Sacred)				REALM UNIQUE					5	5000	blac	blac						sock		4	4	ac%		201	250	block		2	2	dex		150	150	str		-50	-50	att%		101	150	reanimate	1378	10	10	dmg-demon		301	350	indestruct		1	1	demon-heal		101	150	crush		20	20					0
 NewPhoenixDown		1		4	1	120	100	14!	Phoenix Shield (Sacred)				REALM UNIQUE					5	5000	dred	dred						sock		6	6	ama		2	2	block		1	1	cast3		50	50	extra-fire		41	50	extra-pm		41	50	regen		1000	1000	vit		150	150	heal-thorns		100	100	oskill	1003	5	9									0
 NewSkinOfKabraxis		1		4	1	120	100	@10	Plate Mail (Sacred)				SECRET BONUS ITEM					5	5000	blac	dred						sock		6	6	ac		5000	5000	demon-heal		200	200	str		150	150	att-skill	518	33	29	charged	388	20	19	dmg-demon		100	100	red-dmg%		-25	-25	state	74	1	1	strbonusblue		10	10	light		-10	-10	abs-fire		100	100	0
 New2LilithsBelt		1		4	1	120	100	@32	Plated Belt (Sacred)				S2 BONUS ITEM					5	5000	blac	blac	flpblt	invblt	item_cap		item_cap	sock		2	2	ease		-100	-100	hit-skill	542	5	2	all-stats		-25	-25	mag%		200	200	ac%		301	350																									0
@@ -2118,8 +2118,8 @@ NewDreamweaver		1		4	1	120	100	95@	Blade Talons (Sacred)				REALM UNIQUE					5	5
 New2Prestidigator		1		4	1	120	100	71@	Bone Wand (Sacred)				S2 BONUS ITEM					5	5000	oran	oran						sock		2	2	dex-add	25	25	25	nec		2	2	oskill	386	11	14	oskill	462	11	14	extra-fire		31	40	extra-ltng		31	40	enr%		21	25	cheap		5	5	ease		-50	-50									0
 NewGlobusCruciger		1		4	1	120	100	5@9	Bonebreaker (Sacred)				REALM UNIQUE					5	5000	lyel	lyel						sock		3	3	str-add	76	76	76	pal		4	4	ease		-20	-20	str-factor		250	250	enr-factor		100	100	str%		31	40	enr%		31	40	extra-fire		41	50	extra-pm		41	50	swing3		-50	-50	heal-kill		41	50	0
 New3TheCheater		1		4	1	120	100	40@	Brandistock (Sacred)				S3 BONUS ITEM					5	5000	dred	dred						sock		6	6	dex-add	76	76	76	dmg%		301	350	dmg-max		201	250	att-skill	263	5	49	dmg-pois	500	256	256	pierce-pois		50	50	swing3		-20	-20	ama		4	6	dmg-stun		50	50	ease		-50	-50					0
-NewRoflchopper		1		4	1	120	100	21@	Broad Axe (Sacred)				SECRET BONUS ITEM					5	5000	oran	oran						sock		6	6	str-add		76	76	dmg%		251	300	dmg-norm		150	400	dmg-ac		500	500	kill-skill	889	50	13	levelup-skill	67	100	50	aura	296	5	5	desc-drunk		1	1	str		51	70	att%		150	150					0
-NewAeterna		1		4	1	120	100	05@	Broad Sword (Sacred)				REALM UNIQUE					5	5000	blac	blac						sock		6	6	str-add		51	51	dmg%		300	350	dmg-mag		2000	2500	swing3		100	100	innate-grace	84	5	1	att-skill	340	5	25	ease		-50	-50	att-damage		50	50													0
+NewRoflchopper		1		4	1	120	100	21@	Broad Axe (Sacred)				SECRET BONUS ITEM					5	5000	oran	oran						sock		6	6	str-add		76	76	dmg%		251	300	dmg-norm		150	400	dmg-ac		500	500	kill-skill	889	50	13	str%		25	25	aura	296	5	5	desc-drunk		1	1	str		51	70	att%		150	150					0
+NewAeterna				4	1	120	100	05@	Broad Sword (Sacred)				REALM UNIQUE					5	5000	blac	blac						sock		6	6	str-add		51	51	dmg%		300	350	dmg-mag		2000	2500	swing3		100	100	innate-grace	84	5	1	att-skill	340	5	25	ease		-50	-50	att-damage		50	50													0
 NewEsubane		1		4	1	120	100	9@7	Bronze Sword (Sacred)				SECRET BONUS ITEM					5	5000	lgld	lgld						sock		6	6	str-add		76	76	dmg%		301	350	dmg-norm		250	500	kill-skill	780	5	18	manasteal		42	47	res-all		31	40	dmg-ltng		1	500	str		100	100	dex		100	100	bar		2	2					0
 NewCactus		1		4	1	120	100	93@	Cestus (Sacred)				SECRET BONUS ITEM					5	5000	dgrn	dgrn						sock		3	3	dex-add	76	76	76	dmg%		251	300	dmg-norm		150	300	gethit-skill	779	25	10	pierce-pois		100	100	slow		20	20	openwounds		100	100	heal-hit		5	5	hit-skill	330	1	59	res-pois-len		50	50	att%		150	150	0
 NewWeirdSister		1		4	1	120	100	83@	Clasped Orb (Sacred)				REALM UNIQUE					5	5000	lblu	dgry						sock		2	2	dex-add	51	51	51	sor		2	2	oskill	404	20	29	hp-minion		41	50	res-all-minion		75	75	hp		1000	1000	oskill	405	20	29	fade		1	1	mana		1000	1000	red-dmg%		5	5					0
@@ -2148,7 +2148,7 @@ NewLionsClaw		1		4	1	120	100	3@A	Goedendag (Sacred)				REALM UNIQUE					5	5000	l
 NewLakesLady		1		4	1	120	100	31@	Grand Scepter (Sacred)				REALM UNIQUE					5	5000	dgry	dgry						sock		3	3	dex-add	51	51	51	extra-pm		41	50	extra-ltng		41	50	dex%		21	25	enr%		21	25	enr-factor		100	100	str-factor		100	100	block3		50	50	str%		21	25	pal		4	4	regen-mana		25	25	0
 NewElderLaw		1		4	1	120	100	23@	Great Axe (Sacred)				SECRET BONUS ITEM					5	5000	lgld	dgld						sock		6	6	str-add		76	76	dmg%		251	300	dmg-norm		200	400	str		400	400	dex		200	200	gold%		500	500	mag%		150	150	dmg-undead		150	150	cheap		10	10									0
 NewSiegehammer		1		4	1	120	100	75@	Great Maul (Sacred)				SECRET BONUS ITEM					5	5000	dgry	dred						sock		6	6	str-add		76	76	crush		50	50	dmg-demon		500	500	dmg-norm		200	500	demon-heal		400	400	hp		666	666	oskill	28	4	6																	0
-NewWhiteVoid		1		4	1	120	100	13@	Great Sword (Sacred)				REALM UNIQUE					5	5000	lgry	lgry						sock		6	6	str-add		76	76	dmg%		251	300	dmg-mag		1500	2500	dmg-max		401	500	crush		11	15	noheal		1	1	dmg-global		101	150	mana-melee		100	100	reanimate	926	50	50									0
+NewWhiteVoid				4	1	120	100	13@	Great Sword (Sacred)				REALM UNIQUE					5	5000	lgry	lgry						sock		6	6	str-add		76	76	dmg%		251	300	dmg-mag		1500	2500	dmg-max		401	500	crush		11	15	noheal		1	1	dmg-global		101	150	mana-melee		100	100	reanimate	926	50	50									0
 NewCruciatus		1		4	1	120	100	72@	Grim Wand (Sacred)				REALM UNIQUE					5	5000	blac	blac						sock		2	2	dex-add	25	25	25	nec		3	3	oskill	263	22	26	extra-pois		41	50	mana		1000	1000	extra-totems		1	1	hp		250	250	thorns%		50	50													0
 DescBlank		0		4	1	120	100	60@	Halberd (Sacred)				REALM UNIQUE					5	5000																																																								0
 New2Flintstone		1		4	1	120	100	15@	Hand Axe (Sacred)				S2 BONUS ITEM					5	5000	lyel	lyel						sock		3	3	str-add		51	51	dru		2	2	extra-fire		41	50	str-factor		41	50	pierce-fire		21	25	dmg-stun		125	125	dmg-fire		250	500	dmg-mag		250	500	hp		250	250									0
@@ -2205,7 +2205,7 @@ New3BuckingBertha		1		4	1	120	100	9@E	Stinger Crossbow (Sacred)				REALM UNIQUE	
 NewWhistlingDeath		1		4	1	120	100	50@	Throwing Axe (Sacred)				REALM UNIQUE					5	5000	dred	dred						sock		2	2	str-add		51	51	pierce-pois		100	100	dmg-pois	250	128	512	bar		4	4	dmg%		201	250	hit-skill	542	10	15	dmg-ac		-250	-250	heal-kill		200	200	slow		20	20	howl		7	7					0
 NewStarmaiden		1		4	1	120	100	47@	Throwing Knife (Sacred)				REALM UNIQUE					5	5000	dblu	dblu						sock		2	2	dex-add	51	51	51	dmg%		301	350	dmg-norm		150	300	pierce-fire		21	25	pierce-cold		21	25	pierce-pois		21	25	kill-skill	563	5	29	ass		4	4	heal-hit		3	3	mana-hit		5	5					0
 New2Heartseeker		1		4	1	120	100	37@	Throwing Spear (Sacred)				S2 BONUS ITEM					5	5000	lred	lred						sock		4	4	dex-add	51	51	51	dmg%		251	300	dmg-norm		100	150	crush		21	25	openwounds		100	100	lifesteal		11	14	kill-skill	712	10	4	vit		-10	-10	att%		250	250	ama		2	2					0
-NewFuryHell		1		4	1	120	100	7@F	Trebuchet (Sacred)				REALM UNIQUE					5	5000	lred	lred						sock		6	6	str-add		76	76	dmg%		301	350	dmg-fire		1500	2000	extra-fire		101	150	pierce-fire		31	40	hit-skill	311	1	30	res-fire-max		5	5	abs-fire		100	100	reanimate	1592	2	2									0
+NewFuryHell				4	1	120	100	7@F	Trebuchet (Sacred)				REALM UNIQUE					5	5000	lred	lred						sock		6	6	str-add		76	76	dmg%		301	350	dmg-fire		1500	2000	extra-fire		101	150	pierce-fire		31	40	hit-skill	311	1	30	res-fire-max		5	5	abs-fire		100	100	reanimate	1592	2	2									0
 NewStormcaller		1		4	1	120	100	39@	Trident (Sacred)				SECRET BONUS ITEM					5	5000	lblu	lblu						sock		6	6	dex-add	76	76	76	dmg%		251	300	strbonusblue	24	24	24	dmg-norm		200	500	att-skill	461	25	23	att-skill	980	10	8	pierce-ltng		31	40	slow		15	15	res-ltng-max		-50	-50	dmg-stun		100	100					0
 New2TwoFaceBlade		1		4	1	120	100	08@	Two-Handed Sword (Sacred)				S2 BONUS ITEM					5	5000	oran	oran						sock		4	4	str-add		76	76	dmg%		251	300	dmg-norm		50	150	oskill	763	2	4	str%		20	20	vit%		-20	-20	gold%		1	1																	0
 NewTheCaduceus		1		4	1	120	100	1@4	Viper Bow (Sacred)				REALM UNIQUE					5	5000	lgrn	lgrn						sock		6	6	str-add		76	76	dmg%		301	350	dmg-norm		150	500	regen		1000	1000	slow		20	20	oskill	358	4	7	dmg-demon		150	150	pierce-pois		11	15	dru		2	2									0
@@ -2219,7 +2219,7 @@ New2LegionsName		1		4	1	120	100	07@	War Sword (Sacred)				REALM UNIQUE					5	500
 New2BaneCat		1		4	1	120	100	91@	Wrist Blade (Sacred)				S2 BONUS ITEM					5	5000	dblu	dblu						sock		3	3	dex-add	76	76	76	dmg%		301	350	dmg-norm		200	400	kill-skill	621	1	1	reanimate	1273	11	15	color	3	3	3	light		-20	-20	ass		2	2	swing3		50	50	manasteal		11	16					0
 NewZakarwasBetrayal		1		4	1	120	100	70@	Yew Wand (Sacred)				SECRET BONUS ITEM					5	5000	dgld	dgld						sock		2	2	dex-add	25	25	25	oskill	763	16	18	oskill	905	32	37	nec		2	2	dmg-minion		61	80	hp-minion		41	60	desc-dbaura		1	1	aura	297	1	1	oskill	797	19	22	light		-2	-2	regen-mana		31	50	0
 NewZularKhansTempest		1		4	1	120	100	!07	Naginata (Sacred)				SECRET BONUS ITEM					5	5000	blac	blac						sock		6	6	dex-add	102	102	102	innate-skill	760	100	1	dmg%		301	350	swing3		60	60	avoidance		10	10	dmg-norm		400	800	att-skill	34	1	20	pierce-all		60	60	dex%		50	50	regen		-500	-500	str%		50	50	0
-NewSoulReaver		1		4	1	120	100	!14	Raptor Scythe (Sacred)				REALM UNIQUE					5	5000	blac	blac						sock		6	6	str-add		102	102	dmg%		301	350	nec		4	4	dmg-global		151	200	manasteal		21	25	lifesteal		21	25	heal-melee		250	250	mana-melee		500	500	reanimate	632	50	50	innate-impact	146	25	1					0
+NewSoulReaver				4	1	120	100	!14	Raptor Scythe (Sacred)				REALM UNIQUE					5	5000	blac	blac						sock		6	6	str-add		102	102	dmg%		301	350	nec		4	4	dmg-global		151	200	manasteal		21	25	lifesteal		21	25	heal-melee		250	250	mana-melee		500	500	reanimate	632	50	50	innate-impact	146	25	1					0
 Timefather		1		4	1	120	100	!21	Bonesplitter (Sacred)				REALM UNIQUE					5	5000	dblu	dblu						sock		6	6	str-add		102	102	dmg%		301	350	dmg-norm		500	750	swing3		40	40	knock		1	1	dmg-stun		200	200	aura	284	40	40	desc-drainaura		1	1	nec		4	4	freeze		2	2	innate-impact	146	25	1	0
 NewPitlordsPendulum		1		4	1	120	100	!28	Mammen Axe (Sacred)				REALM UNIQUE					5	5000	blac	blac						sock		3	3	str-add		76	76	dmg%		251	300	dmg-norm		200	400	dmg-pois	256	8192	12288	pierce-pois		100	100	reanimate	1682	5	5	slow		21	25	howl		7	7	openwounds		25	25	dmg-demon		201	250					0
 New2Facemelter		1		4	1	120	100	!34	Hammerhead Axe (Sacred)				S2 BONUS ITEM					5	5000	dpur	lpur						sock		6	6	str-add		76	76	dmg%		301	350	dmg/lvl	192	192	192	cast3		40	40	allskills		3	3	oskill	443	16	18	oskill	1001	9	12	extra-all		51	60	enr-factor		75	75	addxp		5	5					0
@@ -2261,188 +2261,188 @@ Maiden Mother Crown		1		2	1	120	100	@69	Tiara (Sacred)				REALM UNIQUE					5	500
 New2BlackRoseCrown		1		2	1	120	100	@70	Diadem (Sacred)				S2 BONUS ITEM					5	5000	dpur	dpur						sock		4	4	ac		-500	-500	enr-factor		-25	-25	ass		2	3	nec		2	3	skill-dur		30	30	balance3		40	40	heal-kill		41	50	hp-minion		41	50	hp		500	500									0
 Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Curare		10000	DONT		NEW AND IMPROVED			5	5000								oskill	601	1	1	levelreq		10	10																																									0
 Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Paragon		10000	YOU		NEW AND IMPROVED			5	5000								oskill	602	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Spirit of Vengeance		10000	FUCKING		NEW AND IMPROVED			5	5000								oskill	603	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Beacon		10000	DARE		NEW AND IMPROVED			5	5000								oskill	604	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Spirit of Vengeance		10000	FUCKING		NEW AND IMPROVED			5	5000								oskill	603	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Beacon		10000	DARE		NEW AND IMPROVED			5	5000								oskill	604	1	1	levelreq		10	10																																									0
 Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Way of the Gryphon		10000	HACKING		NEW AND IMPROVED			5	5000								oskill	605	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Phase Bomb		10000	THESE		NEW AND IMPROVED			5	5000								oskill	624	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Kraken Stance		10000	INTO		NEW AND IMPROVED			5	5000								oskill	607	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Phase Bomb		10000	THESE		NEW AND IMPROVED			5	5000								oskill	624	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Kraken Stance		10000	INTO		NEW AND IMPROVED			5	5000								oskill	607	1	1	levelreq		10	10																																									0
 Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Runemaster		10000	BEING		NEW AND IMPROVED			5	5000								oskill	608	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Shamanic Trance		10000	YOU		NEW AND IMPROVED			5	5000								oskill	609	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Shamanic Trance		10000	YOU		NEW AND IMPROVED			5	5000								oskill	609	1	1	levelreq		10	10																																									0
 Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Force of Nature		10000	FUCKING		NEW AND IMPROVED			5	5000								oskill	610	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Faerie Fire		10000	SHADOW		NEW AND IMPROVED			5	5000								oskill	611	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Tremor		10000	DIABLO		NEW AND IMPROVED			5	5000								oskill	612	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Summon Jinn		10000	ASSHOLES		NEW AND IMPROVED			5	5000								oskill	613	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Rathmas Chosen		10000	BUNCH		NEW AND IMPROVED			5	5000								oskill	614	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Faerie Fire		10000	SHADOW		NEW AND IMPROVED			5	5000								oskill	611	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Tremor		10000	DIABLO		NEW AND IMPROVED			5	5000								oskill	612	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Summon Jinn		10000	ASSHOLES		NEW AND IMPROVED			5	5000								oskill	613	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Rathmas Chosen		10000	BUNCH		NEW AND IMPROVED			5	5000								oskill	614	1	1	levelreq		10	10																																									0
 Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Death Ward		10000	OF		NEW AND IMPROVED			5	5000								oskill	615	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	WhiteZombie		10000	STUPID		NEW AND IMPROVED			5	5000								oskill	616	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Superbeast		10000	POWER		NEW AND IMPROVED			5	5000								oskill	617	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	WhiteZombie		10000	STUPID		NEW AND IMPROVED			5	5000								oskill	616	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Superbeast		10000	POWER		NEW AND IMPROVED			5	5000								oskill	617	1	1	levelreq		10	10																																									0
 Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Plague		10000	TRIPPING		NEW AND IMPROVED			5	5000								oskill	618	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Slow		10000	NO		NEW AND IMPROVED			5	5000								oskill	619	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Slow		10000	NO		NEW AND IMPROVED			5	5000								oskill	619	1	1	levelreq		10	10																																									0
 Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Witch Blood		10000	LIFE		NEW AND IMPROVED			5	5000								oskill	620	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Bane Hunter		10000	RETARDS		NEW AND IMPROVED			5	5000								oskill	621	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Electrobolt Spell	481		electrobolt		NEW AND IMPROVED			5	5000								oskill	481	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Other Avatar	562		other_avatar		NEW AND IMPROVED			5	5000								oskill	562	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Other Banish	563		other_banish		NEW AND IMPROVED			5	5000								oskill	563	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Other Blast Wave	564		other_blastwave		NEW AND IMPROVED			5	5000								oskill	564	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Other Demonic Speed	565		other_demonicspeed		NEW AND IMPROVED			5	5000								oskill	565	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Other Fire Cascade	566		other_firecascade		NEW AND IMPROVED			5	5000								oskill	566	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Other Pandemonium	567		other_pandemonium		NEW AND IMPROVED			5	5000								oskill	567	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Other Possess	568		other_possess		NEW AND IMPROVED			5	5000								oskill	568	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Other Raven Flight	569		other_ravenflight		NEW AND IMPROVED			5	5000								oskill	569	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Other Raven Heart	570		other_ravenheart		NEW AND IMPROVED			5	5000								oskill	570	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Other Shackles of Ice	571		other_shacklesofice		NEW AND IMPROVED			5	5000								oskill	571	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Other Typhoon Sentry	572		other_typhoonsentry		NEW AND IMPROVED			5	5000								oskill	572	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Fire Star	632		firestar		NEW AND IMPROVED			5	5000								oskill	632	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Phalanx	634		phalanx		NEW AND IMPROVED			5	5000								oskill	634	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Guided Chain	635		guidedchain		NEW AND IMPROVED			5	5000								oskill	635	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Silver Streak	636		silverstreak		NEW AND IMPROVED			5	5000								oskill	636	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Exorcism	637		exorcism		NEW AND IMPROVED			5	5000								oskill	637	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Scatter Shot	642		scattershot		NEW AND IMPROVED			5	5000								oskill	642	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Overpower	643		overpower		NEW AND IMPROVED			5	5000								oskill	643	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Golden Calf	652		goldencalf		NEW AND IMPROVED			5	5000								oskill	652	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Bloodspeakers Mark	666		bloodspeakers mark		NEW AND IMPROVED			5	5000								oskill	666	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Champions of the Sun	668		championsofthesun		NEW AND IMPROVED			5	5000								oskill	668	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Lightning Shield	669		lightningshield		NEW AND IMPROVED			5	5000								oskill	669	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Summon Overlord	670		summonoverlord		NEW AND IMPROVED			5	5000								oskill	670	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Liche Totem	671		lichetotem		NEW AND IMPROVED			5	5000								oskill	671	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Bloody Mary	672		bloodymary		NEW AND IMPROVED			5	5000								oskill	672	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Pagan Heart	673		paganheart		NEW AND IMPROVED			5	5000								oskill	673	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Cherub Strike	676		cherubstrike		NEW AND IMPROVED			5	5000								oskill	676	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Supernova	680		supernova		NEW AND IMPROVED			5	5000								oskill	680	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Dark Power	687		darkpower		NEW AND IMPROVED			5	5000								oskill	687	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Conquest	688		conquest		NEW AND IMPROVED			5	5000								oskill	688	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Hamstring	689		hamstring		NEW AND IMPROVED			5	5000								oskill	689	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Cautious Strike	690		cautiousstrike		NEW AND IMPROVED			5	5000								oskill	690	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Time Strike	691		timestrike		NEW AND IMPROVED			5	5000								oskill	691	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Sunspear	693		sunspear		NEW AND IMPROVED			5	5000								oskill	693	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Death Coil	694		deathcoil		NEW AND IMPROVED			5	5000								oskill	694	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Shadow Blade	695		shadowblade		NEW AND IMPROVED			5	5000								oskill	695	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Nightmare	697		nightmare		NEW AND IMPROVED			5	5000								oskill	697	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Vanquish	698		vanquish		NEW AND IMPROVED			5	5000								oskill	698	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Cataclysm	699		cataclysm		NEW AND IMPROVED			5	5000								oskill	699	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Doom Serpents	701		doomserpents		NEW AND IMPROVED			5	5000								oskill	701	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Glacial Nova	702		glacialnova		NEW AND IMPROVED			5	5000								oskill	702	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Frozen Crown	703		frozencrown		NEW AND IMPROVED			5	5000								oskill	703	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Vortex	705		vortex		NEW AND IMPROVED			5	5000								oskill	705	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Mana Coil	706		manacoil		NEW AND IMPROVED			5	5000								oskill	706	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Blade Barrier	746		bladebarrier		NEW AND IMPROVED			5	5000								oskill	746	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Summon Thunder Bear	757		summonthunderbear		NEW AND IMPROVED			5	5000								oskill	757	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Summon Shock Beast	761		summonshockbeast		NEW AND IMPROVED			5	5000								oskill	761	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Pyroclastic Flow	766		pyroclasticflow		NEW AND IMPROVED			5	5000								oskill	766	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Blood Flash	777		bloodflash		NEW AND IMPROVED			5	5000								oskill	777	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Apocalypse	789		apocalypse		NEW AND IMPROVED			5	5000								oskill	789	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Summon Daystar	791		summondaystar		NEW AND IMPROVED			5	5000								oskill	791	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Summon Shredder	792		summonshredder		NEW AND IMPROVED			5	5000								oskill	792	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Summon Bane Monster	793		summonbanemonster		NEW AND IMPROVED			5	5000								oskill	793	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Dead Wall Totem	797		deadwalltotem		NEW AND IMPROVED			5	5000								oskill	797	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Ice Bolt Nova	798		iceboltnova		NEW AND IMPROVED			5	5000								oskill	798	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Mon Spike Ripple	800		spikeripple		NEW AND IMPROVED			5	5000								oskill	800	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Wyrd	802		wyrd		NEW AND IMPROVED			5	5000								oskill	802	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Flash	807		flash		NEW AND IMPROVED			5	5000								oskill	807	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Rune of Fire	809		runeoffire		NEW AND IMPROVED			5	5000								oskill	809	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Summon Fallen	812		summonfallen		NEW AND IMPROVED			5	5000								oskill	812	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Elemental Rain	820		elementalrain		NEW AND IMPROVED			5	5000								oskill	820	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Greater Charm	822		greatercharm		NEW AND IMPROVED			5	5000								oskill	822	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Flash Charm	823		flashcharm		NEW AND IMPROVED			5	5000								oskill	823	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Meteor Shower	824		meteorshower		NEW AND IMPROVED			5	5000								oskill	824	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Countdown	825		countdown		NEW AND IMPROVED			5	5000								oskill	825	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Ball Lightning	826		balllightning		NEW AND IMPROVED			5	5000								oskill	826	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Shadow Avatar	828		shadowavatar		NEW AND IMPROVED			5	5000								oskill	828	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Jitans Gate	829		jitansgate		NEW AND IMPROVED			5	5000								oskill	829	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Bloodstar	833		bloodstar		NEW AND IMPROVED			5	5000								oskill	833	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Blood Fury	839		bloodfury		NEW AND IMPROVED			5	5000								oskill	839	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Shock Flower	840		shockflower		NEW AND IMPROVED			5	5000								oskill	840	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Summon Sinner	870		summonsinner		NEW AND IMPROVED			5	5000								oskill	870	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Summon Avalanche	871		summonavalanche		NEW AND IMPROVED			5	5000								oskill	871	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Summon Glowing Fungus	872		summonglowingf		NEW AND IMPROVED			5	5000								oskill	872	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Rune of Mana	873		runeofmana		NEW AND IMPROVED			5	5000								oskill	873	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Player Dynamite	882		barreloffun		NEW AND IMPROVED			5	5000								oskill	882	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Cone of Cold	883		coneofcold		NEW AND IMPROVED			5	5000								oskill	883	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	ATMG Sentry	884		atmgsentry		NEW AND IMPROVED			5	5000								oskill	884	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Patriot Sentry	885		patriotsentry		NEW AND IMPROVED			5	5000								oskill	885	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Ravage	886		ravage		NEW AND IMPROVED			5	5000								oskill	886	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Feral Strike	887		feralstrike		NEW AND IMPROVED			5	5000								oskill	887	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Thorn Field	888		thornfield		NEW AND IMPROVED			5	5000								oskill	888	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Player Chickens	889		chickenlickin		NEW AND IMPROVED			5	5000								oskill	889	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Tantrum	890		tantrum		NEW AND IMPROVED			5	5000								oskill	890	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Gorefest	891		gorefest		NEW AND IMPROVED			5	5000								oskill	891	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Ancients Hand	892		ancientshand		NEW AND IMPROVED			5	5000								oskill	892	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Call Henchman	894		callhenchman		NEW AND IMPROVED			5	5000								oskill	894	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Call Blood Golem	895		callbloodgolem		NEW AND IMPROVED			5	5000								oskill	895	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Call Necrobot	896		callnecrobot		NEW AND IMPROVED			5	5000								oskill	896	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Bane Hunter		10000	RETARDS		NEW AND IMPROVED			5	5000								oskill	621	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Electrobolt Spell	481		electrobolt		NEW AND IMPROVED			5	5000								oskill	481	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Other Avatar	562		other_avatar		NEW AND IMPROVED			5	5000								oskill	562	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Other Banish	563		other_banish		NEW AND IMPROVED			5	5000								oskill	563	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Other Blast Wave	564		other_blastwave		NEW AND IMPROVED			5	5000								oskill	564	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Other Demonic Speed	565		other_demonicspeed		NEW AND IMPROVED			5	5000								oskill	565	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Other Fire Cascade	566		other_firecascade		NEW AND IMPROVED			5	5000								oskill	566	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Other Pandemonium	567		other_pandemonium		NEW AND IMPROVED			5	5000								oskill	567	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Other Possess	568		other_possess		NEW AND IMPROVED			5	5000								oskill	568	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Other Raven Flight	569		other_ravenflight		NEW AND IMPROVED			5	5000								oskill	569	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Other Raven Heart	570		other_ravenheart		NEW AND IMPROVED			5	5000								oskill	570	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Other Shackles of Ice	571		other_shacklesofice		NEW AND IMPROVED			5	5000								oskill	571	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Other Typhoon Sentry	572		other_typhoonsentry		NEW AND IMPROVED			5	5000								oskill	572	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Fire Star	632		firestar		NEW AND IMPROVED			5	5000								oskill	632	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Phalanx	634		phalanx		NEW AND IMPROVED			5	5000								oskill	634	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Guided Chain	635		guidedchain		NEW AND IMPROVED			5	5000								oskill	635	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Silver Streak	636		silverstreak		NEW AND IMPROVED			5	5000								oskill	636	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Exorcism	637		exorcism		NEW AND IMPROVED			5	5000								oskill	637	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Scatter Shot	642		scattershot		NEW AND IMPROVED			5	5000								oskill	642	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Overpower	643		overpower		NEW AND IMPROVED			5	5000								oskill	643	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Golden Calf	652		goldencalf		NEW AND IMPROVED			5	5000								oskill	652	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Bloodspeakers Mark	666		bloodspeakers mark		NEW AND IMPROVED			5	5000								oskill	666	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Champions of the Sun	668		championsofthesun		NEW AND IMPROVED			5	5000								oskill	668	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Lightning Shield	669		lightningshield		NEW AND IMPROVED			5	5000								oskill	669	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Summon Overlord	670		summonoverlord		NEW AND IMPROVED			5	5000								oskill	670	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Liche Totem	671		lichetotem		NEW AND IMPROVED			5	5000								oskill	671	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Bloody Mary	672		bloodymary		NEW AND IMPROVED			5	5000								oskill	672	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Pagan Heart	673		paganheart		NEW AND IMPROVED			5	5000								oskill	673	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Cherub Strike	676		cherubstrike		NEW AND IMPROVED			5	5000								oskill	676	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Supernova	680		supernova		NEW AND IMPROVED			5	5000								oskill	680	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Dark Power	687		darkpower		NEW AND IMPROVED			5	5000								oskill	687	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Conquest	688		conquest		NEW AND IMPROVED			5	5000								oskill	688	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Hamstring	689		hamstring		NEW AND IMPROVED			5	5000								oskill	689	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Cautious Strike	690		cautiousstrike		NEW AND IMPROVED			5	5000								oskill	690	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Time Strike	691		timestrike		NEW AND IMPROVED			5	5000								oskill	691	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Sunspear	693		sunspear		NEW AND IMPROVED			5	5000								oskill	693	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Death Coil	694		deathcoil		NEW AND IMPROVED			5	5000								oskill	694	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Shadow Blade	695		shadowblade		NEW AND IMPROVED			5	5000								oskill	695	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Nightmare	697		nightmare		NEW AND IMPROVED			5	5000								oskill	697	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Vanquish	698		vanquish		NEW AND IMPROVED			5	5000								oskill	698	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Cataclysm	699		cataclysm		NEW AND IMPROVED			5	5000								oskill	699	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Doom Serpents	701		doomserpents		NEW AND IMPROVED			5	5000								oskill	701	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Glacial Nova	702		glacialnova		NEW AND IMPROVED			5	5000								oskill	702	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Frozen Crown	703		frozencrown		NEW AND IMPROVED			5	5000								oskill	703	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Vortex	705		vortex		NEW AND IMPROVED			5	5000								oskill	705	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Mana Coil	706		manacoil		NEW AND IMPROVED			5	5000								oskill	706	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Blade Barrier	746		bladebarrier		NEW AND IMPROVED			5	5000								oskill	746	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Summon Thunder Bear	757		summonthunderbear		NEW AND IMPROVED			5	5000								oskill	757	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Summon Shock Beast	761		summonshockbeast		NEW AND IMPROVED			5	5000								oskill	761	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Pyroclastic Flow	766		pyroclasticflow		NEW AND IMPROVED			5	5000								oskill	766	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Blood Flash	777		bloodflash		NEW AND IMPROVED			5	5000								oskill	777	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Apocalypse	789		apocalypse		NEW AND IMPROVED			5	5000								oskill	789	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Summon Daystar	791		summondaystar		NEW AND IMPROVED			5	5000								oskill	791	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Summon Shredder	792		summonshredder		NEW AND IMPROVED			5	5000								oskill	792	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Summon Bane Monster	793		summonbanemonster		NEW AND IMPROVED			5	5000								oskill	793	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Dead Wall Totem	797		deadwalltotem		NEW AND IMPROVED			5	5000								oskill	797	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Ice Bolt Nova	798		iceboltnova		NEW AND IMPROVED			5	5000								oskill	798	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Mon Spike Ripple	800		spikeripple		NEW AND IMPROVED			5	5000								oskill	800	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Wyrd	802		wyrd		NEW AND IMPROVED			5	5000								oskill	802	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Flash	807		flash		NEW AND IMPROVED			5	5000								oskill	807	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Rune of Fire	809		runeoffire		NEW AND IMPROVED			5	5000								oskill	809	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Summon Fallen	812		summonfallen		NEW AND IMPROVED			5	5000								oskill	812	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Elemental Rain	820		elementalrain		NEW AND IMPROVED			5	5000								oskill	820	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Greater Charm	822		greatercharm		NEW AND IMPROVED			5	5000								oskill	822	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Flash Charm	823		flashcharm		NEW AND IMPROVED			5	5000								oskill	823	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Meteor Shower	824		meteorshower		NEW AND IMPROVED			5	5000								oskill	824	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Countdown	825		countdown		NEW AND IMPROVED			5	5000								oskill	825	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Ball Lightning	826		balllightning		NEW AND IMPROVED			5	5000								oskill	826	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Shadow Avatar	828		shadowavatar		NEW AND IMPROVED			5	5000								oskill	828	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Jitans Gate	829		jitansgate		NEW AND IMPROVED			5	5000								oskill	829	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Bloodstar	833		bloodstar		NEW AND IMPROVED			5	5000								oskill	833	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Blood Fury	839		bloodfury		NEW AND IMPROVED			5	5000								oskill	839	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Shock Flower	840		shockflower		NEW AND IMPROVED			5	5000								oskill	840	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Summon Sinner	870		summonsinner		NEW AND IMPROVED			5	5000								oskill	870	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Summon Avalanche	871		summonavalanche		NEW AND IMPROVED			5	5000								oskill	871	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Summon Glowing Fungus	872		summonglowingf		NEW AND IMPROVED			5	5000								oskill	872	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Rune of Mana	873		runeofmana		NEW AND IMPROVED			5	5000								oskill	873	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Player Dynamite	882		barreloffun		NEW AND IMPROVED			5	5000								oskill	882	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Cone of Cold	883		coneofcold		NEW AND IMPROVED			5	5000								oskill	883	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	ATMG Sentry	884		atmgsentry		NEW AND IMPROVED			5	5000								oskill	884	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Patriot Sentry	885		patriotsentry		NEW AND IMPROVED			5	5000								oskill	885	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Ravage	886		ravage		NEW AND IMPROVED			5	5000								oskill	886	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Feral Strike	887		feralstrike		NEW AND IMPROVED			5	5000								oskill	887	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Thorn Field	888		thornfield		NEW AND IMPROVED			5	5000								oskill	888	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Player Chickens	889		chickenlickin		NEW AND IMPROVED			5	5000								oskill	889	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Tantrum	890		tantrum		NEW AND IMPROVED			5	5000								oskill	890	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Gorefest	891		gorefest		NEW AND IMPROVED			5	5000								oskill	891	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Ancients Hand	892		ancientshand		NEW AND IMPROVED			5	5000								oskill	892	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Call Henchman	894		callhenchman		NEW AND IMPROVED			5	5000								oskill	894	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Call Blood Golem	895		callbloodgolem		NEW AND IMPROVED			5	5000								oskill	895	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Call Necrobot	896		callnecrobot		NEW AND IMPROVED			5	5000								oskill	896	1	1	levelreq		10	10																																									0
 Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Call Angel King Safe	897		callangelking		NEW AND IMPROVED			5	5000								oskill	897	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Typhoon	898		typhoon		NEW AND IMPROVED			5	5000								oskill	898	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Squall Gust	899		squallgust		NEW AND IMPROVED			5	5000								oskill	899	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Medusa	900		medusa		NEW AND IMPROVED			5	5000								oskill	900	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Lapidate	901		lapidate		NEW AND IMPROVED			5	5000								oskill	901	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Squall Wave	902		squallwave		NEW AND IMPROVED			5	5000								oskill	902	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Arrow Swarm	903		arrowswarm		NEW AND IMPROVED			5	5000								oskill	903	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Clobber	904		clobber		NEW AND IMPROVED			5	5000								oskill	904	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Summon Sirens	905		summonsirens		NEW AND IMPROVED			5	5000								oskill	905	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Static Ward	906		staticward		NEW AND IMPROVED			5	5000								oskill	906	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Summon Rats	959		summonrats		NEW AND IMPROVED			5	5000								oskill	959	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Devils Fang Totem	967		devilsfangtotem		NEW AND IMPROVED			5	5000								oskill	967	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Wraith Arrow	969		wraitharrow		NEW AND IMPROVED			5	5000								oskill	969	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Guard Tower	972		guardtower		NEW AND IMPROVED			5	5000								oskill	972	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	BFG83K	976		bfg83k		NEW AND IMPROVED			5	5000								oskill	976	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	SMG	977		smg		NEW AND IMPROVED			5	5000								oskill	977	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Typhoon	898		typhoon		NEW AND IMPROVED			5	5000								oskill	898	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Squall Gust	899		squallgust		NEW AND IMPROVED			5	5000								oskill	899	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Medusa	900		medusa		NEW AND IMPROVED			5	5000								oskill	900	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Lapidate	901		lapidate		NEW AND IMPROVED			5	5000								oskill	901	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Squall Wave	902		squallwave		NEW AND IMPROVED			5	5000								oskill	902	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Arrow Swarm	903		arrowswarm		NEW AND IMPROVED			5	5000								oskill	903	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Clobber	904		clobber		NEW AND IMPROVED			5	5000								oskill	904	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Summon Sirens	905		summonsirens		NEW AND IMPROVED			5	5000								oskill	905	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Static Ward	906		staticward		NEW AND IMPROVED			5	5000								oskill	906	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Summon Rats	959		summonrats		NEW AND IMPROVED			5	5000								oskill	959	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Devils Fang Totem	967		devilsfangtotem		NEW AND IMPROVED			5	5000								oskill	967	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Wraith Arrow	969		wraitharrow		NEW AND IMPROVED			5	5000								oskill	969	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Guard Tower	972		guardtower		NEW AND IMPROVED			5	5000								oskill	972	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	BFG83K	976		bfg83k		NEW AND IMPROVED			5	5000								oskill	976	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	SMG	977		smg		NEW AND IMPROVED			5	5000								oskill	977	1	1	levelreq		10	10																																									0
 Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Amatoxin	979		amatoxin		NEW AND IMPROVED			5	5000								oskill	979	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Path of Flames	983		pathofflames		NEW AND IMPROVED			5	5000								oskill	983	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Body of the Savior	984		body of the savior		NEW AND IMPROVED			5	5000								oskill	984	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Cold Fear	997		coldfear		NEW AND IMPROVED			5	5000								oskill	997	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Frozen Soul	998		frozensoul		NEW AND IMPROVED			5	5000								oskill	998	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Lightning Wall	999		lightningwall		NEW AND IMPROVED			5	5000								oskill	999	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Searing Orb	1000		searingorb		NEW AND IMPROVED			5	5000								oskill	1000	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	DisinUber	1001		disinuber		NEW AND IMPROVED			5	5000								oskill	1001	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Venomous Spirit	1002		venomousspirit		NEW AND IMPROVED			5	5000								oskill	1002	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Inner Fire	1003		innerfire		NEW AND IMPROVED			5	5000								oskill	1003	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Dinferno	1004		disco_inferno		NEW AND IMPROVED			5	5000								oskill	1004	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Disintegrate	1005		disintegrate		NEW AND IMPROVED			5	5000								oskill	1005	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Rune of Ice	1008		runeofice		NEW AND IMPROVED			5	5000								oskill	1008	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Hawk Talons	1010		hawktalons		NEW AND IMPROVED			5	5000								oskill	1010	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Whirlpool	1012		whirlpool		NEW AND IMPROVED			5	5000								oskill	1012	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Mark of the Wild	1013		markofthewild		NEW AND IMPROVED			5	5000								oskill	1013	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Call Leprechaun	1014		callleprechaun		NEW AND IMPROVED			5	5000								oskill	1014	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Dominate	1016		dominate		NEW AND IMPROVED			5	5000								oskill	1016	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Charm	1018		charm		NEW AND IMPROVED			5	5000								oskill	1018	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Summon Darklings	1021		summondarklings		NEW AND IMPROVED			5	5000								oskill	1021	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Exploding Totem	1022		explodingtotem		NEW AND IMPROVED			5	5000								oskill	1022	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Titan Strike	8		titanstrike		NEW AND IMPROVED			5	5000								oskill	8	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Deathstrike	17		deathstrike		NEW AND IMPROVED			5	5000								oskill	17	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Soulshatter	18		soulshatter		NEW AND IMPROVED			5	5000								oskill	18	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Black Lotus Strike	19		blacklotusstrike		NEW AND IMPROVED			5	5000								oskill	19	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Death Blossom	20		deathblossom		NEW AND IMPROVED			5	5000								oskill	20	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Holy Trap	21		holytrap		NEW AND IMPROVED			5	5000								oskill	21	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Fear Bomb Totem	22		fearbombtotem		NEW AND IMPROVED			5	5000								oskill	22	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	OHMAN	24		ohman		NEW AND IMPROVED			5	5000								oskill	24	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Rock Shock	28		rockshock		NEW AND IMPROVED			5	5000								oskill	28	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Unholy Armor	29		unholyarmor		NEW AND IMPROVED			5	5000								oskill	29	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Rain of Bombs	30		rainofbombs		NEW AND IMPROVED			5	5000								oskill	30	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Mana Tide Totem	57		manatidetotem		NEW AND IMPROVED			5	5000								oskill	57	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Elemental Totem	58		elementaltotem		NEW AND IMPROVED			5	5000								oskill	58	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Wrath	76		wrath		NEW AND IMPROVED			5	5000								oskill	76	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Totembound Guardian	83		totemboundguardian		NEW AND IMPROVED			5	5000								oskill	83	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Fire Fountain	111		firefountain		NEW AND IMPROVED			5	5000								oskill	111	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Hailstorm	119		hailstorm		NEW AND IMPROVED			5	5000								oskill	119	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Seal of Fire	134		sealoffire		NEW AND IMPROVED			5	5000								oskill	134	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Firebolt Nova	142		fireboltnova		NEW AND IMPROVED			5	5000								oskill	142	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Nova Bomb	153		novabomb		NEW AND IMPROVED			5	5000								oskill	153	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Immolation Bomb	154		immolationbomb		NEW AND IMPROVED			5	5000								oskill	154	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Lightning Arena	236		lightningarena		NEW AND IMPROVED			5	5000								oskill	236	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Punisher	263		punisher		NEW AND IMPROVED			5	5000								oskill	263	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Gamma Field	120		gammafield		NEW AND IMPROVED			5	5000								oskill	120	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Spiral Dance	1011		spiraldance		NEW AND IMPROVED			5	5000								oskill	1011	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Ice Lance	104		icelance		NEW AND IMPROVED			5	5000								oskill	104	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	Jewel	Diseased Cattle	139		diseasedcattle		NEW AND IMPROVED			5	5000								oskill	139	1	1	levelreq		10	10																																									0
-New5Wishmaster		1		50	1	1	0	jew	Jewel				S5					5	5000								mag%		20	20	att-skill	116	2	1																																									0
-RingOfMourning		1		1	1	120	100	rin	Ring (Sacred)		223	2507	REALM UNIQUE					5	5000								vit		-100	-100	dex		200	200	regen-mana		11	15	balance3		25	25																																	0
-BlackHandSigil		1		1	1	120	100	rin	Ring (Sacred)		223	2507	REALM UNIQUE					5	5000								kill-skill	330	3	62	dmg-pois	200	2048	2048	dmg-norm		50	100	light		-5	-5																																	0
-AkaratsNails		1		1	1	120	100	rin	Ring (Sacred)		223	2507	REALM UNIQUE					5	5000								regen		-250	-250	dmg-global		150	150	crush		15	15	openwounds		10	10	att-skill	500	10	2																													0
-TheTesseract		1		1	1	120	100	amu	Amulet (Sacred)		223	2507	REALM UNIQUE					5	5000								extra-fire		1	50	extra-cold		1	50	extra-ltng		1	50	extra-pois		1	50	pierce-fire		1	40	pierce-cold		1	40	pierce-ltng		1	40	pierce-pois		1	40	allskills		2	2	cast3		25	25									0
-KhanduranRoyalPendant		1		1	1	120	100	amu	Amulet (Sacred)		223	2507	REALM UNIQUE					5	5000								skillcap		1	1	charged	616	25	5	block		1	1																																					0
-LocketOfDreams		1		1	1	120	100	amu	Amulet (Sacred)		223	2507	REALM UNIQUE					5	5000								allskills		2	2	pot-rate		41	50	vit		100	100	gold%		450	450	light		2	2	heal-thorns		151	200																									0
-TheNoobLoop		1		10	1	1	0	rin	Ring (Sacred)		223	2507	REALM UNIQUE					5	5000								str		11	15	dex		11	15	dmg-norm		10	20	addxp		5	5																																	0
-JerhynsTawiz		1		10	1	1	0	amu	Amulet (Sacred)		223	2507	REALM UNIQUE					5	5000								addxp		20	20	dmg-demon		21	25	regen		100	100																																					0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Path of Flames	983		pathofflames		NEW AND IMPROVED			5	5000								oskill	983	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Body of the Savior	984		body of the savior		NEW AND IMPROVED			5	5000								oskill	984	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Cold Fear	997		coldfear		NEW AND IMPROVED			5	5000								oskill	997	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Frozen Soul	998		frozensoul		NEW AND IMPROVED			5	5000								oskill	998	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Lightning Wall	999		lightningwall		NEW AND IMPROVED			5	5000								oskill	999	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Searing Orb	1000		searingorb		NEW AND IMPROVED			5	5000								oskill	1000	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	DisinUber	1001		disinuber		NEW AND IMPROVED			5	5000								oskill	1001	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Venomous Spirit	1002		venomousspirit		NEW AND IMPROVED			5	5000								oskill	1002	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Inner Fire	1003		innerfire		NEW AND IMPROVED			5	5000								oskill	1003	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Dinferno	1004		disco_inferno		NEW AND IMPROVED			5	5000								oskill	1004	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Disintegrate	1005		disintegrate		NEW AND IMPROVED			5	5000								oskill	1005	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Rune of Ice	1008		runeofice		NEW AND IMPROVED			5	5000								oskill	1008	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Hawk Talons	1010		hawktalons		NEW AND IMPROVED			5	5000								oskill	1010	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Whirlpool	1012		whirlpool		NEW AND IMPROVED			5	5000								oskill	1012	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Mark of the Wild	1013		markofthewild		NEW AND IMPROVED			5	5000								oskill	1013	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Call Leprechaun	1014		callleprechaun		NEW AND IMPROVED			5	5000								oskill	1014	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Dominate	1016		dominate		NEW AND IMPROVED			5	5000								oskill	1016	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Charm	1018		charm		NEW AND IMPROVED			5	5000								oskill	1018	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Summon Darklings	1021		summondarklings		NEW AND IMPROVED			5	5000								oskill	1021	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Exploding Totem	1022		explodingtotem		NEW AND IMPROVED			5	5000								oskill	1022	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Titan Strike	8		titanstrike		NEW AND IMPROVED			5	5000								oskill	8	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Deathstrike	17		deathstrike		NEW AND IMPROVED			5	5000								oskill	17	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Soulshatter	18		soulshatter		NEW AND IMPROVED			5	5000								oskill	18	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Black Lotus Strike	19		blacklotusstrike		NEW AND IMPROVED			5	5000								oskill	19	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Death Blossom	20		deathblossom		NEW AND IMPROVED			5	5000								oskill	20	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Holy Trap	21		holytrap		NEW AND IMPROVED			5	5000								oskill	21	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Fear Bomb Totem	22		fearbombtotem		NEW AND IMPROVED			5	5000								oskill	22	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	OHMAN	24		ohman		NEW AND IMPROVED			5	5000								oskill	24	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Rock Shock	28		rockshock		NEW AND IMPROVED			5	5000								oskill	28	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Unholy Armor	29		unholyarmor		NEW AND IMPROVED			5	5000								oskill	29	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Rain of Bombs	30		rainofbombs		NEW AND IMPROVED			5	5000								oskill	30	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Mana Tide Totem	57		manatidetotem		NEW AND IMPROVED			5	5000								oskill	57	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Elemental Totem	58		elementaltotem		NEW AND IMPROVED			5	5000								oskill	58	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Wrath	76		wrath		NEW AND IMPROVED			5	5000								oskill	76	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Totembound Guardian	83		totemboundguardian		NEW AND IMPROVED			5	5000								oskill	83	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Fire Fountain	111		firefountain		NEW AND IMPROVED			5	5000								oskill	111	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Hailstorm	119		hailstorm		NEW AND IMPROVED			5	5000								oskill	119	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Seal of Fire	134		sealoffire		NEW AND IMPROVED			5	5000								oskill	134	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Firebolt Nova	142		fireboltnova		NEW AND IMPROVED			5	5000								oskill	142	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Nova Bomb	153		novabomb		NEW AND IMPROVED			5	5000								oskill	153	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Immolation Bomb	154		immolationbomb		NEW AND IMPROVED			5	5000								oskill	154	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Lightning Arena	236		lightningarena		NEW AND IMPROVED			5	5000								oskill	236	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Punisher	263		punisher		NEW AND IMPROVED			5	5000								oskill	263	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Gamma Field	120		gammafield		NEW AND IMPROVED			5	5000								oskill	120	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Spiral Dance	1011		spiraldance		NEW AND IMPROVED			5	5000								oskill	1011	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Ice Lance	104		icelance		NEW AND IMPROVED			5	5000								oskill	104	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld				1	1	120	100	jew	Jewel	Diseased Cattle	139		diseasedcattle		NEW AND IMPROVED			5	5000								oskill	139	1	1	levelreq		10	10																																									0
+New5Wishmaster				50	1	1	0	jew	Jewel				S5					5	5000								mag%		20	20	att-skill	116	2	1																																									0
+RingOfMourning				1	1	120	100	rin	Ring (Sacred)		223	2507	REALM UNIQUE					5	5000								vit		-100	-100	dex		200	200	regen-mana		11	15	balance3		25	25																																	0
+BlackHandSigil				1	1	120	100	rin	Ring (Sacred)		223	2507	REALM UNIQUE					5	5000								kill-skill	330	3	62	dmg-pois	200	2048	2048	dmg-norm		50	100	light		-5	-5																																	0
+AkaratsNails				1	1	120	100	rin	Ring (Sacred)		223	2507	REALM UNIQUE					5	5000								regen		-250	-250	dmg-global		150	150	crush		15	15	openwounds		10	10	att-skill	500	10	2																													0
+TheTesseract				1	1	120	100	amu	Amulet (Sacred)		223	2507	REALM UNIQUE					5	5000								extra-fire		1	50	extra-cold		1	50	extra-ltng		1	50	extra-pois		1	50	pierce-fire		1	40	pierce-cold		1	40	pierce-ltng		1	40	pierce-pois		1	40	allskills		2	2	cast3		25	25									0
+KhanduranRoyalPendant				1	1	120	100	amu	Amulet (Sacred)		223	2507	REALM UNIQUE					5	5000								skillcap		1	1	charged	616	25	5	block		1	1																																					0
+LocketOfDreams				1	1	120	100	amu	Amulet (Sacred)		223	2507	REALM UNIQUE					5	5000								allskills		2	2	pot-rate		41	50	vit		100	100	gold%		450	450	light		2	2	heal-thorns		151	200																									0
+TheNoobLoop				10	1	1	0	rin	Ring (Sacred)		223	2507	REALM UNIQUE					5	5000								str		11	15	dex		11	15	dmg-norm		10	20	addxp		5	5																																	0
+JerhynsTawiz				10	1	1	0	amu	Amulet (Sacred)		223	2507	REALM UNIQUE					5	5000								addxp		20	20	dmg-demon		21	25	regen		100	100																																					0
 RetardModeCharm		0		1	1	1	0	yq9	Retard Mode Charm		200	10000	ACTIVE				1	5	5000								hp%-mp%		-75	-75	red-dmg%		-50	-50	res-all-max		-25	-25	res-all		-100	-100	all-stats		-100	-100	mag%		500	500	gold%		750	750	addxp		150	150	gethit-skill	551	5	1	state	243	1	1	hp-minion		-50	-50	dmg-minion		-50	-50	0
 BloodbondUnique		1		15	1	50	50	rin	Ring (Sacred)		223	2507	REALM UNIQUE					5	5000								kill-skill	109	1	50	red-dmg		5	5	addxp		5	5	regen		40	40																																	0
 PandemoniumUnique		1		15	1	50	50	amu	Amulet (Sacred)		223	2507	REALM UNIQUE					5	5000								levelup-skill	108	100	50	aura	295	4	4	allskills		1	1	desc-swap		1	1	extra-all		20	20	dmg-norm		15	30																									0
@@ -2480,7 +2480,7 @@ Xtalline2		1		2	1	1	120	lok	Crystalline Flame Medaillon		1770		ACTIVE				1	5	500
 New7DigitronicSlicer		1		4	1	120	100	7@N	Parma (Sacred)				REALM UNIQUE					5	5000	lgrn	cgrn						sock		4	4	ac%		201	250	hp-minion		100	100	swing3		100	100	dmg-minion		150	150	res-all-minion		50	50	ignore-ac		1	1	slow		10	10	uninterrupt		50	50	ass		4	5	att-skill	144	50	20					0
 ScissorsKatarSU3		1		1	1	120	100	96@	Scissors Katar (Sacred)				ACTIVE					5	5000	dred	dred						sock		3	3	dmg-fire		666	666	reanimate	1862	1	1	oskill	445	5	10	att-skill	453	10	33	kill-skill	927	2	2	swing3		66	66	reanimate	360	5	5	dmg%		333	333	dex-add	76	76	76									0
 StagBowSU3		1		1	1	120	100	85@	Stag Bow (Sacred)				ACTIVE					5	5000	dgld	dgld		bow_elefury				sock		6	6	dex-add	76	76	76	reanimate	1849	0	3	reanimate	1850	0	3	reanimate	1851	0	3	dmg%		250	350	pierce-fcl		20	30					dmg-norm		150	200	kill-skill	702	3	10	kill-skill	680	3	10	kill-skill	699	3	10	0
-NaginataSU3		1		1	1	120	100	!07	Naginata (Sacred)				ACTIVE					5	5000	dgrn	dgrn		naginagi				sock		6	6	dex-add	102	102	102	oskill	15	1	50	desc_superbeasty		1	1	dmg%		301	350	dmg-min		250	500	dmg-max		500	750	pierce-fcl		10	30	state	161	1	1					slow		10	30	innate-skill	760	100	1	0
+NaginataSU3		1		1	1	120	100	!07	Naginata (Sacred)				ACTIVE					5	5000	dgrn	dgrn		naginagi				sock		6	6	dex-add	102	102	102	oskill	15	10	20	desc_superbeasty		1	1	dmg%		301	350	dmg-min		250	500	dmg-max		500	750	pierce-fcl		10	30	state	161	1	1					slow		10	30	innate-skill	760	100	1	0
 LabrysSU3		1		1	1	120	100	!55	Labrys (Sacred)				ACTIVE					5	5000	dred	dred		labrryss				sock		6	6	str-add	102	102	102	oskill	392	5	15	state	189	1	1	dmg%		301	350	dmg-max		600	800	att-skill	394	10	24	swing3		50	50	heal-kill		50	100	indestruct		1	1	innate-fury	147	50	1	desc_fatasstriton		1	1	0
 MaidenJavelinSU3		1		1	1	120	100	89@	Maiden Javelin (Sacred)				ACTIVE					5	5000	dgld	dgld						sock		3	3	dex-add	76	76	76	swing3		30	30	hit-skill	699	1	15	hit-skill	680	1	15	hit-skill	702	1	15	skill	305	10	30	dmg%		200	250	crush		20	25	pierce-ltng		33	33	pierce-cold		33	33	pierce-fire		33	33	0
 ReflexBowSU3		1		1	1	120	100	86@	Reflex Bow (Sacred)				ACTIVE					5	5000	cred	cred						sock		6	6	dex-add	76	76	76	swing3		100	100	dmg-norm		250	500	dmg%		301	350	hit-skill	382	1	1	hit-skill	383	1	1	hit-skill	492	15	23					att%		100	150	lifesteal		20	30					0
@@ -2623,7 +2623,7 @@ TowerShieldSU3		1		1	1	120	100	@26					ACTIVE					5	5000	dred	dred						sock		4	
 GargoyleHeadSU3		1		1	1	120	100	@65					ACTIVE					5	5000	dgld	dgld						sock		4	4	ac%		250	300	dmg-minion		25	25	res-all-minion		15	15	hp-minion		40	50	att%-minion		100	150	maxminions		3	4	move3		30	30	res-all		21	25	dur%		-25	-25	ease		-20	-20					0
 DemonHeadSU3		1		1	1	120	100	@66					ACTIVE					5	5000	blac	blac						sock		4	4	ac%		301	350	gethit-skill	439	10	24	dmg-norm		25	75	heal-hit		1	2	nec		1	2	ac-global		25	25	swing3		25	25	mag%		50	50	dex%		15	20	dex		1	75					0
 PhoenixShieldSU3		1		1	1	120	100	14!					ACTIVE					5	5000	dgld	dgld						sock		4	4	ac%		251	300	oskill	609	3	8	red-dmg%		-15	-15	ac		500	500	cast3		25	25	ama		1	2	res-all		15	15	light		3	3	enr%		15	20	ease		50	50					0
-1AmmySU3		1		1	1	120	120	amu					ACTIVE					5	5000				superammy				pierce-all		100	100																																													0
+1AmmySU3		1		1	1	666	666	amu	DISABLED				ACTIVE					5	5000				superammy				pierce-all		35	35																																													0
 2AmmySU3		1		1	1	120	100	amu					ACTIVE					5	5000								hit-skill	691	5	5	dmg-norm		25	50	lifesteal		5	5	allskills		2	3	res-all		10	10	red-dmg%		5	5																									0
 3AmmySU3		1		1	1	120	100	amu					ACTIVE					5	5000								extra-all		30	35	allskills		1	3	mana%		10	10	enr%		15	20	heal-kill		25	50																													0
 4AmmySU3		1		1	1	120	100	amu					ACTIVE					5	5000								move3		50	50	ama		0	4	ass		0	4	bar		0	4	dru		0	4	nec		0	4	sor		0	4	pal		0	4	allskills		0	1	swing3		0	50	cast3		0	50	balance3		0	50	0
@@ -2646,8 +2646,12 @@ FakeSunstoneOfThunder		1		1	1	1	50	x3x																																										
 FakeSunstoneOfIce		1		1	1	1	50	x2x																																																																			0
 SunstoneOfTheElements		1		1	1	1	666	x#x	DISABLED								1	5	5000								res-all		20	20	allskills		2	2	all-stats%		15	15	all3		20	20	ac		100	100	pierce-fcl		6	10																									0
 UldyssianCharm		1		1	1	1	120	##.									1	5	5000								gethit-skill	248	5	1	allskills		1	1	res-all		10	30	charged	876	100	1	reanimate	1928	1	1																													0
-SuperBowSU		1		1	1	120	120	v#X	Deity's bow Upgraded	SECRETTTTTT								10	100000								dex-add	102	102	102	str-add	102	102	102	death-skill	163	100	1	dmg%		200	200	dmg-norm		400	1000	kill-skill	587	20	15	oskill	1088	10	10	dmg-fire		333	666	dmg-cold		333	666	dmg-ltng		333	666	dmg-mag		333	666	allskills		3	3	0
+SuperBowSU		1		1	1	120	120	v#X	Deity's bow Upgraded	SECRETTTTTT								10	100000								dex-add	102	102	102	str-add	102	102	102	death-skill	163	100	1	dmg%		200	200	dmg-norm		400	1000	kill-skill	587	15	15	oskill	1088	10	10	dmg-fire		111	666	dmg-cold		111	666	dmg-ltng		111	666	dmg-mag		111	666	allskills		1	1	0
 x#y		1		1	1	1	50	x#x	Sunstone of the Elements	Upgraded via Cubemain							1	5	1000								dmg-fire		15	20	dmg-cold	75	15	20	dmg-ltng		15	20																																					0
 NewStartingCharm		1		1	1	1	0	>.<	**Character orb**				ACTIVE				1	5	5000								aura	1051	1	1	fuck-you		-500	-500																																									0
-New Median Statue		0		1	1	1	666	#X7		LC0							1	5	5000								charged	262	1	1	aura	1092	3	5																																									
-mlmxvzmvnjnajnjnjcznjn		0		1	1	1	666	#X0	good ol' gem	LC0							1	5	5000								allskills		1	1	res-all-max		-15	-15																																									
+New Median Statue				1	1	1	666	#X7		LC0							1	5	5000								charged	262	1	1	aura	1092	3	5																																									
+mlmxvzmvnjnajnjnjcznjn				1	1	1	666	#X0	good ol' gem	LC0							1	5	5000								allskills		1	1	res-all-max		-15	-15																																									
+Diablo Clone Charm				1	1	1	120	#1^					ACTIVE				1	5	5000								hp%		1	5	skill-rand	2	301	475	dmg-fire		200	300	reanimate	1945	0	1	move3		20	20																													0
+1AmmySU32		1		1	1	120	120	amu					ACTIVE					5	5000				superammy				pierce-all		35	35																																													0
+StampedeItem2		1		4	1	120	100	@42	Greaves (Sacred)				REALM UNIQUE					5	5000	dred	dred						sock		4	4	ac%		201	250	maxminions		2	2	dmg-minion		50	50	hp-minion		-25	-25	mana		500	500	crush		10	10																					0
+MyOwnCharm		1		1	1	1	120	#Y^									1	5	5000					darkness_falls		darkness_falls	anykill-skill	62	1	20	damage-skill	54	10	5	allskills		1	1	pierce-all		15	15	move3		25	25																													

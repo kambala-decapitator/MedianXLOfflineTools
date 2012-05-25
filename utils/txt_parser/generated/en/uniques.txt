@@ -2056,7 +2056,7 @@
 2054	Goetia Plate	100
 2055	Shield of Hakan II	100
 2056	Metalhead	100
-2057	Rodeo's Tramplers	100
+2057	Rodeo's Tramplers [DISABLED/LEGACY]	666
 2058	Maggotspawn Shell	100
 2059	Peacebringer	100
 2060	Edgewulf's Girdle	100
@@ -2623,7 +2623,7 @@
 2621	Deadmaster	100
 2622	Grim Silhouette	100
 2623	Sunbeam	100
-2624	Quov Tsin's Talisman	120
+2624	Quov Tsin's Talisman [DISABLED/LEGACY]	666
 2625	Dyers Eve	100
 2626	Vizjerei's Necklace	100
 2627	In For The Kill	100
@@ -2637,7 +2637,7 @@
 2635	Zann Esu's Stone	100
 2636	Inarius' Rock	100
 2637	Soul of Kabraxis	120
-2638	\red;Welcome! Median XL: Ultimative v3b\blue;	666
+2638	\red;Welcome! Median XL: Ultimative v4\blue;	666
 2639	SuperTestItamz	1
 2640	\gold;Six Angel Bag	60
 2641	Spirit of Damnation	120
@@ -2648,6 +2648,10 @@
 2646	\gold;Uldyssian's Sword	120
 2647	\red;Valkyrie's Prime	120
 2648	\gold;Sunstone of the Elements	50
-2649	\red;Welcome! Median XL: Ultimative v3b\blue;	0
+2649	\red;Welcome! Median XL: Ultimative v4\blue;	0
 2650	Wormhole of Deadly Doom	666
 2651	\gold;Harkon Crystal	666
+2652	\gold;Diablo's Essence	120
+2653	Quov Tsin's Talisman	120
+2654	Rodeo's Tramplers	100
+2655	Creator's Hand	120

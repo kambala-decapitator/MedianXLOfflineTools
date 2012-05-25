@@ -209,7 +209,11 @@ if ($locale ne 'en')
     {
         my %letters;
         while(<$runeLetters>) { $letters{$1} = $2 if /^(\w+)\t(.+)$/ }
-        for (keys %$gems) { $gems->{$_}->{letter} = $letters{$gems->{$_}->{letter}} if defined $gems->{$_}->{letter} }
+        for (keys %$gems)
+        {
+            my $letter = $gems->{$_}->{letter};
+            $gems->{$_}->{letter} = $letters{$letter} if defined $letter and defined $letters{$letter};
+        }
     }
     else { print "inserted runes will stay in English - failed to open tbl/$locale/runes.txt: $!\n" }
 }

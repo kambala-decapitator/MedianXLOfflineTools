@@ -4,8 +4,7 @@ Khalim Flail + Khalim Heart + Khalim Eye + Khalim Brain -> Super Khalim Flail	1	
 Wirt's Leg + jewel -> Cow Portal	1				28				2	leg	tbk						Cow Portal																																																																																												0
 test recipe				100					1	hpot							useitem	100			oskill			1020	1	1																																																																																			0
 test recipe				100					3	armo,any	hpot,qty=2							100			oskill			1029	1	1	oskill			1030	1	1	oskill			1031	1	1	oskill			1032	1	1	oskill			1033	1	1																																																											0
-test recipe	0			100					1	armo,any							useitem				avoidance				100	100																										120		120																											120		120																										0
-test recipe	0			100					2	hpot,qty=2							#X2	120		120																															#X3	120		120																										#X6	120		120																										0
+test recipe	0			100					2	armo,any	hpot						useitem				kill-skill			732	50	1																									dcht,uni	120		120																										dcht,uni	120		120																										0
 Kabraxis Recipe pt. 1	1			100					3	isc	k.Z	tsc					brx																																																																																												0
 test recipe				100					3	mpot,qty=2	key						w43,uni	95																																																																																											0
 stardragon upgrade decoy	1			100	18	491	1	ama	2	Sacred Sunstone	qum						useitem																																																																																												0
@@ -563,21 +562,22 @@ random modifier recipe: any amulet + rune x3 -> chance at bonus	1			100	18	443		
 random modifier recipe: any ring + rune x3 -> chance at bonus	1			100	18	443			2	ring,any	6oµ						useitem				extra-all	20			10	10	upgraded				1	1																																																																													0
 random modifier recipe: any quiver + rune x3 -> chance at bonus	1			100	18	443			2	misl,any	6oµ						useitem				all-stats%	20			5	5	upgraded				1	1																																																																													0
 random modifier recipe: any jewel + rune x3 -> chance at bonus	1			100	18	443			2	jewl,any	6oµ						useitem				str	20			2	2	dex	20			2	2	enr	20			2	2	vit	20			2	2	upgraded				1	1																																																											0
-jewelcrafting: magic Jewel + Perfect Gem + Tir Rune -> reroll, bling bonus	1				3	183	50		3	jewl,any	7oµ	r03					jew,crf			95	mag%				6	10																																																																																			0
-jewelcrafting: magic Jewel + Perfect Gem + Ith Rune -> reroll, resistance bonus	1				3	183	50		3	jewl,any	7oµ	r06					jew,crf			95	res-all				3	5																																																																																			0
-jewelcrafting: magic Jewel + Perfect Gem + Ort Rune -> reroll, ease bonus	1				3	183	100		3	jewl,any	7oµ	r09					jew,crf			95	ease				-2	-4																																																																																			0
-jewelcrafting: magic Jewel + Perfect Gem + Shael Rune -> reroll, ac bonus	1				3	183	100		3	jewl,any	7oµ	r13					jew,crf			95	ac				21	50																																																																																			0
-jewelcrafting: magic Jewel + Perfect Gem + Lum Rune -> reroll, mega exp bonus	1				3	183	150		3	jewl,any	7oµ	r17					jew,crf			95	addxp				1	2																																																																																			0
-jewelcrafting: magic Jewel + Perfect Gem + Lem Rune -> reroll, attribute bonus	1				3	183	150		3	jewl,any	7oµ	r20					jew,crf			95	all-stats				3	5																																																																																			0
-jewelcrafting: magic Jewel + Perfect Gem + Ist Rune -> reroll, minion life bonus	1				3	183	200		3	jewl,any	7oµ	r24					jew,crf			95	hp-minion				4	6																																																																																			0
-jewelcrafting: magic Jewel + Perfect Gem + Ohm Rune -> reroll, damage bonus	1				3	183	200		3	jewl,any	7oµ	r27					jew,crf			95	dmg-max				4	12																																																																																			0
-jewelcrafting: magic Jewel + Perfect Gem + Ber Rune -> reroll, vampiric bonus	1				3	183	250		3	jewl,any	7oµ	r30					jew,crf			95	lifesteal				1	2	manasteal				1	2																																																																													0
-jewelcrafting: magic Jewel + Perfect Gem + Zod Rune -> reroll, elemental bonus	1				3	183	250		3	jewl,any	7oµ	r33					jew,crf			95	extra-all				1	3																																																																																			0
-jewelcrafting: magic Jewel + Perfect Gem + Kur Rune -> reroll, minion damage bonus	1				3	183	300		3	jewl,any	7oµ	r36					jew,crf			95	dmg-minion				3	6																																																																																			0
-jewelcrafting: magic Jewel + Perfect Gem + Nas Rune -> reroll, slow bonus	1				3	183	300		3	jewl,any	7oµ	r39					jew,crf			95	slow-melee				1	1																																																																																			0
-jewelcrafting: magic Jewel + Perfect Gem + Vith Rune -> reroll, vampiric bonus	1				3	183	350		3	jewl,any	7oµ	r42					jew,crf			95	res-all-minion				2	4																																																																																			0
-jewelcrafting: magic Jewel + Perfect Gem + Thai Rune -> reroll, elemental bonus	1				3	183	350		3	jewl,any	7oµ	r45					jew,crf			95	dmg-min				6	15																																																																																			0
-jewelcrafting: magic Jewel + Perfect Gem + Nih Rune -> reroll, consume bonus	1				3	183	400		3	jewl,any	7oµ	r48					jew,crf			95	heal-melee				2	8	mana-melee				2	8																																																																													0
+jewelcrafting: magic Jewel + Perfect Gem + Tir Rune -> reroll, bling bonus	1				3	183	50		3	jewl,any	7oµ	r03					jew,crf			85	mag%				6	10																																																																																			0
+jewelcrafting: magic Jewel + Perfect Gem + Ith Rune -> reroll, resistance bonus	1				3	183	50		3	jewl,any	7oµ	r06					jew,crf			85	res-all				3	5																																																																																			0
+jewelcrafting: magic Jewel + Perfect Gem + Ort Rune -> reroll, ease bonus	1				3	183	100		3	jewl,any	7oµ	r09					jew,crf			85	ease				-2	-4																																																																																			0
+jewelcrafting: magic Jewel + Perfect Gem + Shael Rune -> reroll, ac bonus	1				3	183	100		3	jewl,any	7oµ	r13					jew,crf			85	ac				21	50																																																																																			0
+jewelcrafting: magic Jewel + Perfect Gem + Lum Rune -> reroll, mega exp bonus	1				3	183	150		3	jewl,any	7oµ	r17					jew,crf			85	addxp				1	2																																																																																			0
+jewelcrafting: magic Jewel + Perfect Gem + Lem Rune -> reroll, attribute bonus	1				3	183	150		3	jewl,any	7oµ	r20					jew,crf			85	all-stats				3	5																																																																																			0
+jewelcrafting: magic Jewel + Perfect Gem + Ist Rune -> reroll, minion life bonus	1				3	183	200		3	jewl,any	7oµ	r24					jew,crf			85	hp-minion				4	6																																																																																			0
+jewelcrafting: magic Jewel + Perfect Gem + Ohm Rune -> reroll, damage bonus	1				3	183	200		3	jewl,any	7oµ	r27					jew,crf			85	dmg-max				4	12																																																																																			0
+jewelcrafting: magic Jewel + Perfect Gem + Ber Rune -> reroll, vampiric bonus	1				3	183	250		3	jewl,any	7oµ	r30					jew,crf			85	lifesteal				1	2	manasteal				1	2																																																																													0
+jewelcrafting: magic Jewel + Perfect Gem + Zod Rune -> reroll, elemental bonus	1				3	183	250		3	jewl,any	7oµ	r33					jew,crf			85	extra-all				1	3																																																																																			0
+jewelcrafting: magic Jewel + Perfect Gem + Kur Rune -> reroll, minion damage bonus	1				3	183	300		3	jewl,any	7oµ	r36					jew,crf			85	dmg-minion				3	6																																																																																			0
+jewelcrafting: magic Jewel + Perfect Gem + Nas Rune -> reroll, slow bonus	1				3	183	300		3	jewl,any	7oµ	r39					jew,crf			85	slow-melee				1	1																																																																																			0
+jewelcrafting: magic Jewel + Perfect Gem + Vith Rune -> reroll, vampiric bonus	1				3	183	350		3	jewl,any	7oµ	r42					jew,crf			85	res-all-minion				2	4																																																																																			0
+jewelcrafting: magic Jewel + Perfect Gem + Thai Rune -> reroll, elemental bonus	1				3	183	350		3	jewl,any	7oµ	r45					jew,crf			85	dmg-min				6	15																																																																																			0
+jewelcrafting: magic Jewel + Perfect Gem + Nih Rune -> reroll, consume bonus	1				3	183	500		3	jewl,any	7oµ	r50					jew,crf			85	heal-kill				2	4	mana-kill				2	4																																																																													0
+jewelcrafting: magic Jewel + Perfect Gem + Nih Rune -> reroll, consume bonus	1				3	183	400		3	jewl,any	7oµ	r48					jew,crf			85	heal-melee				2	8	mana-melee				2	8																																																																													0
 zomghelp recipe: magic weapon + rare amulet + rare ring -> variable ED reroll	1			100	10	12	1		3	weap,mag	amul,mag	ring,mag					usetype,mag			1	dmg%				25	25																																																																																			0
 zomghelp recipe: magic weapon + rare amulet + rare ring -> variable ED reroll	1			100	10	12	2		3	weap,mag	amul,mag	ring,mag					usetype,mag			1	dmg%				27	27																																																																																			0
 zomghelp recipe: magic weapon + rare amulet + rare ring -> variable ED reroll	1			100	10	12	3		3	weap,mag	amul,mag	ring,mag					usetype,mag			1	dmg%				29	29																																																																																			0
@@ -8395,14 +8395,14 @@ affix crystal recipe: item + crystal -> add modifier	1			100					2	ring,any	z5+	
 full honorifics	1			100					3	weap,mag	vic	mec					usetype,tmp			100	desc-honorific				1	1	sock			6	6	6																																																																													0
 full honorifics	1			100					3	armo,mag	vic	mec					usetype,tmp			100	desc-honorific				1	1	sock			6	6	6																																																																													0
 shards to container	1								5	qul,qty=5							qum																																																																																												0
-dupe recipe	1			100	18	276	0		3	weap,noe	qum	1oµ					useitem,uns				levelreq				5	5	item-duped				1	1																							levelreq			5	5	item-duped			1	1																																													0
-dupe recipe	1			100	18	276	0		3	armo,noe	qum	1oµ					useitem,uns				levelreq				5	5	item-duped				1	1																							levelreq			5	5	item-duped			1	1																																													0
-dupe recipe	1			100	18	276	0		3	misl,any	qum	1oµ					useitem,uns				levelreq				5	5	item-duped				1	1																							levelreq			5	5	item-duped			1	1																																													0
-dupe recipe	1			100	18	276	0		3	ring,any	qum	1oµ					useitem				levelreq				5	5	item-duped				1	1																							levelreq			5	5	item-duped			1	1																																													0
-dupe recipe	1			100	18	276	0		3	amul,any	qum	1oµ					useitem				levelreq				5	5	item-duped				1	1																							levelreq			5	5	item-duped			1	1																																													0
+dupe recipe	1			100	18	276	0		3	weap,noe	qum	1oµ					useitem,uns				levelreq				21	21	item-duped				1	1																							levelreq			21	21	item-duped			1	1																																													0
+dupe recipe	1			100	18	276	0		3	armo,noe	qum	1oµ					useitem,uns				levelreq				21	21	item-duped				1	1																							levelreq			21	21	item-duped			1	1																																													0
+dupe recipe	1			100	18	276	0		3	misl,any	qum	1oµ					useitem,uns				levelreq				21	21	item-duped				1	1																							levelreq			21	21	item-duped			1	1																																													0
+dupe recipe	1			100	18	276	0		3	ring,any	qum	1oµ					useitem				levelreq				21	21	item-duped				1	1																							levelreq			21	21	item-duped			1	1																																													0
+dupe recipe	1			100	18	276	0		3	amul,any	qum	1oµ					useitem				levelreq				21	21	item-duped				1	1																							levelreq			21	21	item-duped			1	1																																													0
 dupe 2	1			100					3	jew,mag	qum	1oµ					useitem				item-duped				1	1																													item-duped			1	1																																																		0
 dupe 2	1			100					3	jew,rar	qum	1oµ					useitem				item-duped				1	1																													item-duped			1	1																																																		0
-dupe 2	1			100					3	jew,crf	qum	1oµ					useitem				item-duped				1	1																													item-duped			1	1																																																		0
+dupe 2	0			100					3	jew,crf	qum	1oµ					useitem				item-duped				1	1																													item-duped			1	1																																																		0
 dupe 2	1			100					3	The Boulder	qum	1oµ					useitem				item-duped				1	1																													item-duped			1	1																																																		0
 dupe 2	1			100					3	ThisIsASecretMessage	qum	1oµ					useitem				item-duped				1	1																													item-duped			1	1																																																		0
 dupe 2	1			100					3	Demonstone Blood	qum	1oµ					useitem				item-duped				1	1																													item-duped			1	1																																																		0
@@ -10627,7 +10627,7 @@ RIP	1			100					3	amul,any	9oµ	qum					useitem				rip				1	1																				
 RIP	1			100					3	jew,any	9oµ	qum					useitem				rip				1	1																									9oµ																																																										0
 upgrade dark ring	1			100					6	l@l	m@m	oµo	p@p	q@q	BossKillerRing		UpgradedBossKillerRing	100																																																																																											0
 i am rich				100					3	UniqueDemonsbane	EternalBonePile	Xtalline2					u@v																																																																																												0
-i am richer	1			100					3	µ06	µ13	µ14					NewSuperGem	95																																																																																											0
+i am richer				100					3	µ06	µ13	µ14					NewSuperGem	95																																																																																											0
 i am druid	1			100	3	288	1	dru	1	weap,rar							b@b																																																																																												0
 i am druid	1			100	3	288	1	dru	1	armo,rar							b@b																																																																																												0
 i am druid	1			100	3	288	1	dru	1	ring,rar							b@b																																																																																												0
@@ -11688,7 +11688,7 @@ Token Recipe 3	1			100				dru	7	!@B	zkw	zky	zkr	zku	zkq	zkx	#X3																	
 Token Recipe 4	1			100				bar	7	qum,qty=6	&71						#X4																																																																																												0
 Token Recipe 5	1			100				nec	7	r56	r55	r54	r53	r52	r51	hpot	#X5																																																																																												0
 Token Recipe 6	1			100				sor	7	r57	r58	r59	r60	r61	r62	r98	#X6																																																																																												0
-Bonus Recipe	1			100					2	bow	@##						useitem				ignore-ac			1	1	1																																																																																			0
+Bonus Recipe	1			100	16	219	0		2	bow,uni	@##						useitem				ignore-ac	25		1	1	1	blessings-counter				1	1																																																																													0
 Ice Recipe	1			100	15	459	15		2	x#y	FakeSunstoneOfIce						useitem																																		FakeSunstoneOfIce																																																										0
 Ice Recipe	1			100					2	x#y	FakeSunstoneOfIce						useitem				xsignet63				15	15	allskills				2	2	pierce-cold				10	10	ac				10	10																																																																	0
 Fire Recipe	1			100	15	460	15		2	x#y	FakeSunstoneOfFire						useitem																																		FakeSunstoneOfFire																																																										0
@@ -11699,18 +11699,6 @@ Greater Exp Sig	1			100					3	zku,qty=3							zkr																															
 Greater Stat Sig	1			100					5	zkq,qty=5							zk#																																																																																												0
 Greater Gold Sig	1			100					3	zkw,qty=3							zkx																																																																																												0
 Greater Stat Sig 2	1			100					5	zk#,qty=5							zky																																																																																												0
-Test Recipe	0			100	6	14	1337	ass	3	tier	key,qty=2						usetype,uni	120																																																																																											0
-Test Recipe	0			100	6	14	1337	ass	3	jewl	key,qty=2						jewl,uni	120																																																																																											0
-Test Recipe	0			100	6	14	1337	ass	3	amul	key,qty=2						amul,uni	120																																																																																											0
-Test Recipe	0			100	6	14	1337	ass	3	ring	key,qty=2						ring,uni	120																																																																																											0
-Test Recipe	0			100	6	14	1337	ass	3	aqv	key,qty=2						aqv,uni	120																																																																																											0
-Test Recipe	0			100	6	14	1337	ass	3	cqv	key,qty=2						cqv,uni	120																																																																																											0
-Test Recipe	0			100	6	14	1337	ass	3	armor	key,qty=2						usetype,uni	120																																																																																											0
-Test Recipe	0			100	6	14	1337	ass	3	weap	key,qty=2						usetype,uni	120																																																																																											0
-Test Recipe	0			100	6	14	1337	ass	3	ct1a	key,qty=2						usetype,uni	120																																																																																											
-Test Recipe	0			100	6	14	1337	ass	3	ct2a	key,qty=2						usetype,uni	120																																																																																											
-Test Recipe	0			100	6	14	1337	ass	3	ct1w	key,qty=2						usetype,uni	120																																																																																											
-Test Recipe	0			100	6	14	1337	ass	3	ct2w	key,qty=2						usetype,uni	120																																																																																											
 disenchant as signet	1			100					2	ct1a,uni	0oµ						zkq																																		0oµ																																																										0
 disenchant as signet	1			100					2	ct2a,uni	0oµ						zkq																																		0oµ																																																										0
 disenchant as signet	1			100					2	ct1w,uni	0oµ						zkq																																		0oµ																																																										0
@@ -11731,13 +11719,13 @@ LC0 Charm Decoy	0			100	3	12	2	dru	2	mlmxvzmvnjnajnjnjcznjn	hpot																
 LC0 Charm Decoy	0			100	3	12	2	nec	2	mlmxvzmvnjnajnjnjcznjn	hpot																																																																																																		0
 LC0 Charm Decoy	0			100	3	12	2	pal	2	mlmxvzmvnjnajnjnjcznjn	hpot																																																																																																		0
 LC0 Charm Decoy	0			100	3	12	2	sor	2	mlmxvzmvnjnajnjnjcznjn	hpot																																																																																																		0
-LC0 Equip	1			100	6	507	31	ama	2	#X9	tsc						15!,uni	100			item-duped				1	1																									608,uni	100			item-duped			1	1																					7@K,uni	100			item-duped			1	1																					0
-LC0 Equip	1			100	6	507	31	ass	2	#X9	tsc						!01,uni	100			item-duped				1	1																									639,uni	100			item-duped			1	1																					606,uni	100			item-duped			1	1																					0
-LC0 Equip	1			100	6	507	31	bar	2	#X9	tsc						36!,uni	100			item-duped				1	1																									1@8,uni	100			item-duped			1	1																					w19,uni	100			item-duped			1	1																					0
-LC0 Equip	1			100	6	507	31	dru	2	#X9	tsc						w14,uni	100			item-duped				1	1																									643,uni	100			item-duped			1	1																					613,uni	100			item-duped			1	1																					0
-LC0 Equip	1			100	6	507	31	nec	2	#X9	tsc						w29,uni	100			item-duped				1	1																									644,uni	100			item-duped			1	1																					610,uni	100			item-duped			1	1																					0
-LC0 Equip	1			100	6	507	31	pal	2	#X9	tsc						614,uni	100			item-duped				1	1																									50!,uni	100			item-duped			1	1																					w24,uni	100			item-duped			1	1																					0
-LC0 Equip	1			100	6	507	31	sor	2	#X9	tsc						2@J,uni	100			item-duped				1	1																									!98,uni	100			item-duped			1	1																					638,uni	100			item-duped			1	1																					0
+LC0 Equip	1			100				ama	2	#X9	tsc						15!,uni	100			item-duped				1	1																									608,uni	100			item-duped			1	1																					7@K,uni	100			item-duped			1	1																					0
+LC0 Equip	1			100				ass	2	#X9	tsc						!01,uni	100			item-duped				1	1																									639,uni	100			item-duped			1	1																					606,uni	100			item-duped			1	1																					0
+LC0 Equip	1			100				bar	2	#X9	tsc						36!,uni	100			item-duped				1	1																									1@8,uni	100			item-duped			1	1																					w19,uni	100			item-duped			1	1																					0
+LC0 Equip	1			100				dru	2	#X9	tsc						w14,uni	100			item-duped				1	1																									643,uni	100			item-duped			1	1																					613,uni	100			item-duped			1	1																					0
+LC0 Equip	1			100				nec	2	#X9	tsc						w29,uni	100			item-duped				1	1																									644,uni	100			item-duped			1	1																					610,uni	100			item-duped			1	1																					0
+LC0 Equip	1			100				pal	2	#X9	tsc						614,uni	100			item-duped				1	1																									50!,uni	100			item-duped			1	1																					w24,uni	100			item-duped			1	1																					0
+LC0 Equip	1			100				sor	2	#X9	tsc						2@J,uni	100			item-duped				1	1																									!98,uni	100			item-duped			1	1																					638,uni	100			item-duped			1	1																					0
 LC0 Charm	0			100	6	507	31	ama	2	mlmxvzmvnjnajnjnjcznjn	hpot						useitem				xsignet65				15	15	res-all-max				15	15	addxp				15	15	ama				1	1	all-stats%				15	15																																																											0
 LC0 Charm	0			100	6	507	31	ass	2	mlmxvzmvnjnajnjnjcznjn	hpot						useitem				xsignet65				15	15	res-all-max				15	15	addxp				15	15	ass				1	1	hp%				10	10																																																											0
 LC0 Charm	0			100	6	507	31	bar	2	mlmxvzmvnjnajnjnjcznjn	hpot						useitem				xsignet65				15	15	res-all-max				15	15	addxp				15	15	bar				1	1	stance-radius				8	8																																																											0
@@ -11745,3 +11733,128 @@ LC0 Charm	0			100	6	507	31	dru	2	mlmxvzmvnjnajnjnjcznjn	hpot						useitem				xsi
 LC0 Charm	0			100	6	507	31	nec	2	mlmxvzmvnjnajnjnjcznjn	hpot						useitem				xsignet65				15	15	res-all-max				15	15	addxp				15	15	nec				1	1	move3				50	50																																																											0
 LC0 Charm	0			100	6	507	31	pal	2	mlmxvzmvnjnajnjnjcznjn	hpot						useitem				xsignet65				15	15	res-all-max				15	15	addxp				15	15	pal				1	1	pierce-all				25	25																																																											0
 LC0 Charm	0			100	6	507	31	sor	2	mlmxvzmvnjnajnjnjcznjn	hpot						useitem				xsignet65				15	15	res-all-max				15	15	addxp				15	15	sor				1	1	res-all				35	35																																																											0
+Uptier Custom Signet	1			100					2	02^	zkq						03^																																																																																												0
+Uptier Custom Signet	1			100					2	03^	zkq						04^																																																																																												0
+Uptier Custom Signet	1			100					2	04^	zkq						zk#																																																																																												0
+Uptier Custom Signet	1			100					2	06^	zkq						07^																																																																																												0
+Uptier Custom Signet	1			100					2	07^	zkq						08^																																																																																												0
+Uptier Custom Signet	1			100					2	08^	zkq						09^																																																																																												0
+Uptier Custom Signet	1			100					2	09^	zkq						10^																																																																																												0
+Uptier Custom Signet	1			100					2	10^	zkq						11^																																																																																												0
+Uptier Custom Signet	1			100					2	11^	zkq						12^																																																																																												0
+Uptier Custom Signet	1			100					2	12^	zkq						13^																																																																																												0
+Uptier Custom Signet	1			100					2	13^	zkq						14^																																																																																												0
+Uptier Custom Signet	1			100					2	14^	zkq						15^																																																																																												0
+Uptier Custom Signet	1			100					2	15^	zkq						16^																																																																																												0
+Uptier Custom Signet	1			100					2	16^	zkq						17^																																																																																												0
+Uptier Custom Signet	1			100					2	17^	zkq						18^																																																																																												0
+Uptier Custom Signet	1			100					2	18^	zkq						19^																																																																																												0
+Uptier Custom Signet	1			100					2	19^	zkq						20^																																																																																												0
+Uptier Custom Signet	1			100					2	20^	zkq						21^																																																																																												0
+Uptier Custom Signet	1			100					2	21^	zkq						22^																																																																																												0
+Uptier Custom Signet	1			100					2	22^	zkq						23^																																																																																												0
+Uptier Custom Signet	1			100					2	23^	zkq						24^																																																																																												0
+Uptier Custom Signet	1			100					2	24^	zkq						zky																																																																																												0
+Downgrade Custom Signet	1			100					1	02^							zkq																																		zkq																																																										0
+Downgrade Custom Signet	1			100					1	03^							02^																																		zkq																																																										0
+Downgrade Custom Signet	1			100					1	04^							03^																																		zkq																																																										0
+Downgrade Custom Signet	1			100					1	06^							zk#																																		zkq																																																										0
+Downgrade Custom Signet	1			100					1	07^							06^																																		zkq																																																										0
+Downgrade Custom Signet	1			100					1	08^							07^																																		zkq																																																										0
+Downgrade Custom Signet	1			100					1	09^							08^																																		zkq																																																										0
+Downgrade Custom Signet	1			100					1	10^							09^																																		zkq																																																										0
+Downgrade Custom Signet	1			100					1	11^							10^																																		zkq																																																										0
+Downgrade Custom Signet	1			100					1	12^							11^																																		zkq																																																										0
+Downgrade Custom Signet	1			100					1	13^							12^																																		zkq																																																										0
+Downgrade Custom Signet	1			100					1	14^							13^																																		zkq																																																										0
+Downgrade Custom Signet	1			100					1	15^							14^																																		zkq																																																										0
+Downgrade Custom Signet	1			100					1	16^							15^																																		zkq																																																										0
+Downgrade Custom Signet	1			100					1	17^							16^																																		zkq																																																										0
+Downgrade Custom Signet	1			100					1	18^							17^																																		zkq																																																										0
+Downgrade Custom Signet	1			100					1	19^							18^																																		zkq																																																										0
+Downgrade Custom Signet	1			100					1	20^							19^																																		zkq																																																										0
+Downgrade Custom Signet	1			100					1	21^							20^																																		zkq																																																										0
+Downgrade Custom Signet	1			100					1	22^							21^																																		zkq																																																										0
+Downgrade Custom Signet	1			100					1	23^							22^																																		zkq																																																										0
+Downgrade Custom Signet	1			100					1	24^							23^																																		zkq																																																										0
+Mass Disenchant Unique	1			100					3	ssgl,uni,qty=2	0oµ						02^																																		0oµ																																																										0
+Mass Disenchant Unique	1			100					4	ssgl,uni,qty=3	0oµ						03^																																		0oµ																																																										0
+Mass Disenchant Unique	1			100					5	ssgl,uni,qty=4	0oµ						04^																																		0oµ																																																										0
+Mass Disenchant Unique	1			100					6	ssgl,uni,qty=5	0oµ						zk#																																		0oµ																																																										0
+Mass Disenchant Unique	1			100					7	ssgl,uni,qty=6	0oµ						06^																																		0oµ																																																										0
+Mass Disenchant Unique	1			100					8	ssgl,uni,qty=7	0oµ						07^																																		0oµ																																																										0
+Mass Disenchant Unique	1			100					9	ssgl,uni,qty=8	0oµ						08^																																		0oµ																																																										0
+Mass Disenchant Unique	1			100					10	ssgl,uni,qty=9	0oµ						09^																																		0oµ																																																										0
+Mass Disenchant Unique	1			100					11	ssgl,uni,qty=10	0oµ						10^																																		0oµ																																																										0
+Mass Disenchant Unique	1			100					12	ssgl,uni,qty=11	0oµ						11^																																		0oµ																																																										0
+Mass Disenchant Unique	1			100					13	ssgl,uni,qty=12	0oµ						12^																																		0oµ																																																										0
+Mass Disenchant Unique	1			100					14	ssgl,uni,qty=13	0oµ						13^																																		0oµ																																																										0
+Mass Disenchant Unique	1			100					15	ssgl,uni,qty=14	0oµ						14^																																		0oµ																																																										0
+Mass Disenchant Unique	1			100					16	ssgl,uni,qty=15	0oµ						15^																																		0oµ																																																										0
+Mass Disenchant Unique	1			100					17	ssgl,uni,qty=16	0oµ						16^																																		0oµ																																																										0
+Mass Disenchant Unique	1			100					18	ssgl,uni,qty=17	0oµ						17^																																		0oµ																																																										0
+Mass Disenchant Unique	1			100					19	ssgl,uni,qty=18	0oµ						18^																																		0oµ																																																										0
+Mass Disenchant Unique	1			100					20	ssgl,uni,qty=19	0oµ						19^																																		0oµ																																																										0
+Mass Disenchant Unique	1			100					21	ssgl,uni,qty=20	0oµ						20^																																		0oµ																																																										0
+Mass Disenchant Unique	1			100					22	ssgl,uni,qty=21	0oµ						21^																																		0oµ																																																										0
+Mass Disenchant Unique	1			100					23	ssgl,uni,qty=22	0oµ						22^																																		0oµ																																																										0
+Mass Disenchant Unique	1			100					24	ssgl,uni,qty=23	0oµ						23^																																		0oµ																																																										0
+Mass Disenchant Unique	1			100					25	ssgl,uni,qty=24	0oµ						24^																																		0oµ																																																										0
+Mass Disenchant Unique	1			100					26	ssgl,uni,qty=25	0oµ						zky																																		0oµ																																																										0
+Mass Disenchant Set	1			100					3	ssgl,set,qty=2	0oµ						02^																																		0oµ																																																										0
+Mass Disenchant Set	1			100					4	ssgl,set,qty=3	0oµ						03^																																		0oµ																																																										0
+Mass Disenchant Set	1			100					5	ssgl,set,qty=4	0oµ						04^																																		0oµ																																																										0
+Mass Disenchant Set	1			100					6	ssgl,set,qty=5	0oµ						zk#																																		0oµ																																																										0
+Mass Disenchant Set	1			100					7	ssgl,set,qty=6	0oµ						06^																																		0oµ																																																										0
+Mass Disenchant Set	1			100					8	ssgl,set,qty=7	0oµ						07^																																		0oµ																																																										0
+Mass Disenchant Set	1			100					9	ssgl,set,qty=8	0oµ						08^																																		0oµ																																																										0
+Mass Disenchant Set	1			100					10	ssgl,set,qty=9	0oµ						09^																																		0oµ																																																										0
+Mass Disenchant Set	1			100					11	ssgl,set,qty=10	0oµ						10^																																		0oµ																																																										0
+Mass Disenchant Set	1			100					12	ssgl,set,qty=11	0oµ						11^																																		0oµ																																																										0
+Mass Disenchant Set	1			100					13	ssgl,set,qty=12	0oµ						12^																																		0oµ																																																										0
+Mass Disenchant Set	1			100					14	ssgl,set,qty=13	0oµ						13^																																		0oµ																																																										0
+Mass Disenchant Set	1			100					15	ssgl,set,qty=14	0oµ						14^																																		0oµ																																																										0
+Mass Disenchant Set	1			100					16	ssgl,set,qty=15	0oµ						15^																																		0oµ																																																										0
+Mass Disenchant Set	1			100					17	ssgl,set,qty=16	0oµ						16^																																		0oµ																																																										0
+Mass Disenchant Set	1			100					18	ssgl,set,qty=17	0oµ						17^																																		0oµ																																																										0
+Mass Disenchant Set	1			100					19	ssgl,set,qty=18	0oµ						18^																																		0oµ																																																										0
+Mass Disenchant Set	1			100					20	ssgl,set,qty=19	0oµ						19^																																		0oµ																																																										0
+Mass Disenchant Set	1			100					21	ssgl,set,qty=20	0oµ						20^																																		0oµ																																																										0
+Mass Disenchant Set	1			100					22	ssgl,set,qty=21	0oµ						21^																																		0oµ																																																										0
+Mass Disenchant Set	1			100					23	ssgl,set,qty=22	0oµ						22^																																		0oµ																																																										0
+Mass Disenchant Set	1			100					24	ssgl,set,qty=23	0oµ						23^																																		0oµ																																																										0
+Mass Disenchant Set	1			100					25	ssgl,set,qty=24	0oµ						24^																																		0oµ																																																										0
+Mass Disenchant Set	1			100					26	ssgl,set,qty=25	0oµ						zky																																		0oµ																																																										0
+Super Gift Box	1			100					2	#2^	dog						ssgl,uni	120		120																															ssgl,uni	120		120																										ssgl,uni	120		120																										0
+Random UMO roll	1			100					3	asa#,qty=3							asa#																																																																																												0
+Upgrade Shards	1			100					2	qul,qty=2							#3^																																																																																												0
+Upgrade Shards	1			100					3	qul,qty=3							#4^																																																																																												0
+Upgrade Shards	1			100					4	qul,qty=4							#5^																																																																																												0
+Upgrade Shards	1			100					2	#3^	qul						#4^																																																																																												0
+Upgrade Shards	1			100					3	#3^	qul,qty=2						#5^																																																																																												0
+Upgrade Shards	1			100					4	#3^	qul,qty=3						qum																																																																																												0
+Upgrade Shards	1			100					2	#3^,qty=2							#5^																																																																																												0
+Upgrade Shards	1			100					2	#3^	#4^						qum																																																																																												0
+Upgrade Shards	1			100					3	#3^,qty=2	qul						qum																																																																																												0
+Upgrade Shards	1			100					2	#4^	qul						#5^																																																																																												0
+Upgrade Shards	1			100					3	#4^	qul,qty=2						qum																																																																																												0
+Upgrade Shards	1			100					2	#5^	qul						qum																																																																																												0
+Disenchant Shards	1			100	18	276	0		3	dcht,uni,qty=2	3oµ						#3^																																		3oµ																																																										0
+Disenchant Shards	1			100	18	276	0		4	dcht,uni,qty=3	3oµ						#4^																																		3oµ																																																										0
+Disenchant Shards	1			100	18	276	0		5	dcht,uni,qty=4	3oµ						#5^																																		3oµ																																																										0
+Disenchant Shards	1			100	18	276	0		6	dcht,uni,qty=5	3oµ						qum																																		3oµ																																																										0
+Disenchant Shards	1			100	18	276	0		7	dcht,uni,qty=6	3oµ						qum																																		qul																													3oµ																													0
+Disenchant Shards	1			100	18	276	0		8	dcht,uni,qty=7	3oµ						qum																																		#3^																													3oµ																													0
+Disenchant Shards	1			100	18	276	0		9	dcht,uni,qty=8	3oµ						qum																																		#4^																													3oµ																													0
+Disenchant Shards	1			100	18	276	0		10	dcht,uni,qty=9	3oµ						qum																																		#5^																													3oµ																													0
+Disenchant Shards	1			100	18	276	0		11	dcht,uni,qty=10	3oµ						qum																																		qum																													3oµ																													0
+Disenchant Shards	1			100	18	276	0		3	dcht,set,qty=2	3oµ						#3^																																		3oµ																																																										0
+Disenchant Shards	1			100	18	276	0		4	dcht,set,qty=3	3oµ						#4^																																		3oµ																																																										0
+Disenchant Shards	1			100	18	276	0		5	dcht,set,qty=4	3oµ						#5^																																		3oµ																																																										0
+Disenchant Shards	1			100	18	276	0		6	dcht,set,qty=5	3oµ						qum																																		3oµ																																																										0
+Disenchant Shards	1			100	18	276	0		7	dcht,set,qty=6	3oµ						qum																																		qul																													3oµ																													0
+Disenchant Shards	1			100	18	276	0		8	dcht,set,qty=7	3oµ						qum																																		#3^																													3oµ																													0
+Disenchant Shards	1			100	18	276	0		9	dcht,set,qty=8	3oµ						qum																																		#4^																													3oµ																													0
+Disenchant Shards	1			100	18	276	0		10	dcht,set,qty=9	3oµ						qum																																		#5^																													3oµ																													0
+Disenchant Shards	1			100	18	276	0		11	dcht,set,qty=10	3oµ						qum																																		qum																													3oµ																													0
+VN_Dragon	1			100					2	????	??????						useitem				oskill			1111	1	1																																																																																			0

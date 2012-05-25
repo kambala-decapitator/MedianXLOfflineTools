@@ -109,7 +109,7 @@ r48	\purple;Nih Rune	Nih	409		10							409		10							409		10
 gpw	\purple;Perfect Diamond		359		5							39,41,43,45		5							329,330,331,332,377		5						
 gpg	\purple;Perfect Emerald		74		20							45		30							22		10						
 gcv	\purple;Chipped Amethyst		360		1							440		2							119		10						
-r60	\grey;Secret Rune\n\purple;Poison Rune	Poison																											
+r60	\grey;Secret Rune\n\purple;Poison Rune	Pois																											
 g$b	\purple;Flawed Onyx		43		8							164		2							470		4						
 r35	\purple;Lah Rune	Lah	359,360,361,362		3							359,360,361,362		3							359,360,361,362		3						
 skl	\purple;Flawless Skull		16		13							110		4							17		13						

@@ -8812,7 +8812,7 @@
 "kbKabraxis"	"\dgreen;(                                  Кабраксис, Вор Надежды                                  )\blue;"
 "kbPillarOfSkulls"	"\dgreen;(                                  Колонна Черепов                                  )\blue;"
 "kbLight"	"\blue;Элементаль Молнии\blue;"
-"kbFire"	"\blue;Элементаль Огняblue;"
+"kbFire"	"\blue;Элементаль Огня\blue;"
 "kbIce"	"\blue;Элементаль Льда\blue;"
 "kbEarth"	"\blue;Элементаль Земли\blue;"
 "kbMagic"	"\blue;Элементаль Магии\blue;"
