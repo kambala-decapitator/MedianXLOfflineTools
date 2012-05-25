@@ -1,6 +1,3 @@
-v0.2.2:
-- multiple selection + delete/disenchant
-
 v0.3:
 - export item to bbcode/html
 - generate some bbcode/html report about character and/or plugy stashes contents

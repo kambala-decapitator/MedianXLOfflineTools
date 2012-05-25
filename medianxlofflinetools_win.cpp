@@ -74,7 +74,7 @@ void MedianXLOfflineTools::syncWindowsTaskbarRecentFiles()
                     }
 
                     foreach (const QString &recentFile, recentFilesForTaskbar)
-                        addToWindowsRecentFiles(QDir::toNativeSeparators(recentFile));
+                        addToWindowsRecentFiles(QString(recentFile).replace("/", "\\", Qt::CaseInsensitive)); // QDir::toNativeSeparators() doesn't help here
                 }
                 else
                     qDebug("Error calling GetCount(): %d", HRESULT_CODE(hr));

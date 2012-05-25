@@ -157,11 +157,23 @@ void ItemsPropertiesSplitter::itemSelected(const QModelIndex &index)
     ItemInfo *item = _itemsModel->itemAt(index);
     _propertiesWidget->showItem(item);
 
-    // correctly disables hotkeys
-    bool allowDisnechant = !item ? false : (item->quality == Enums::ItemQuality::Set || (item->quality == Enums::ItemQuality::Unique && !ItemDataBase::isUberCharm(item))) && item->location != Enums::ItemLocation::Equipped;
-    _itemActions[DisenchantShards]->setEnabled(allowDisnechant);
-    _itemActions[DisenchantSignet]->setEnabled(allowDisnechant);
-    _itemActions[RemoveMO]->setEnabled(_propertiesWidget->hasMysticOrbs());
+    // correctly disable hotkeys
+    bool isUltimative_ = isUltimative();
+
+    if (item && item->location != Enums::ItemLocation::Equipped && (item->quality == Enums::ItemQuality::Set || (item->quality == Enums::ItemQuality::Unique && !ItemDataBase::isUberCharm(item) && ItemDataBase::Uniques()->contains(item->setOrUniqueId))))
+    {
+        _itemActions[DisenchantShards]->setDisabled(isUltimative_ && item->props.contains(276)); // prohibit disenchanting TUs from the Gift Box into shards. 276 is ID of item-duped property
+        // Ultimative prohibits disenchanting TUs into signets
+        _itemActions[DisenchantSignet]->setDisabled(isUltimative_ && item->quality == Enums::ItemQuality::Unique && ItemDataBase::Items()->value(item->itemType).genericType != Enums::ItemTypeGeneric::Misc && !isSacred(item));
+    }
+    else
+    {
+        _itemActions[DisenchantShards]->setDisabled(true);
+        _itemActions[DisenchantSignet]->setDisabled(true);
+    }
+
+    // in Ultimative, Character Orb and Sunstone of Elements use same stat IDs as MOs, but those can't be removed
+    _itemActions[RemoveMO]->setEnabled(_propertiesWidget->hasMysticOrbs() && !(isUltimative_ && isCharacterOrbOrSunstoneOfElements(item)));
 }
 
 void ItemsPropertiesSplitter::showItem(ItemInfo *item)
@@ -191,7 +203,7 @@ void ItemsPropertiesSplitter::setItems(const ItemsList &newItems)
     _allItems = newItems;
     if (_left10Button)
     {
-        // using _allItems.last()->plugyPage would've been easy, but it's not always correct (new items obtained in the app are added to the end)
+        // using _allItems.last()->plugyPage would've been easy, but it's not always correct (new items added via app are added to the end)
 //        ItemsList::iterator maxPageIter = std::max_element(_allItems.begin(), _allItems.end(), compareItemsByPlugyPage);
         ItemsList::iterator maxPageIter = std::max_element(_allItems.begin(), _allItems.end(), [](ItemInfo *a, ItemInfo *b){ return a->plugyPage < b->plugyPage; });
         _lastNotEmptyPage = maxPageIter == _allItems.end() ? 0 : (*maxPageIter)->plugyPage;//!_allItems.isEmpty() ? _allItems.last()->plugyPage : 0;
@@ -273,16 +285,14 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
         //menuExport->addActions(QList<QAction *>() << _itemActions[ExportBbCode] << _itemActions[ExportHtml]);
         //actions << menuExport->menuAction() << separator();
 
-        bool isUltimative_ = isUltimative();
-
-        if (item->quality == Enums::ItemQuality::Set || (item->quality == Enums::ItemQuality::Unique && !ItemDataBase::isUberCharm(item)))
+        if (_itemActions[DisenchantShards]->isEnabled())
         {
             QMenu *menuDisenchant = new QMenu(tr("Disenchant into"), _itemsView);
-            // Ultimative prohibits disenchanting TUs into signets
-            if (!(isUltimative_ && item->quality == Enums::ItemQuality::Unique && ItemDataBase::Items()->value(item->itemType).genericType != Enums::ItemTypeGeneric::Misc && !isSacred(item)))
+            if (_itemActions[DisenchantSignet]->isEnabled())
                 menuDisenchant->addAction(_itemActions[DisenchantSignet]);
-            menuDisenchant->addAction(_itemActions[DisenchantShards]);
-            menuDisenchant->menuAction()->setDisabled(item->location == Enums::ItemLocation::Equipped); // you can't disenchant equipped items
+            if (_itemActions[DisenchantShards]->isEnabled())
+                menuDisenchant->addAction(_itemActions[DisenchantShards]);
+//            menuDisenchant->menuAction()->setDisabled(item->location == Enums::ItemLocation::Equipped); // you can't disenchant equipped items
             actions << menuDisenchant->menuAction();
         }
 
@@ -298,12 +308,10 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
         //    actions << actionMakeNonEthereal;
         //}
 
-        int moTotal = _propertiesWidget->mysticOrbsTotal();
-        // in Ultimative, Character Orb and Sunstone of Elements use same stat IDs as MOs, but those can't be removed
-        if (moTotal > 0 && !(isUltimative_ && isCharacterOrbOrSunstoneOfElements(item)))
+        if (_itemActions[RemoveMO]->isEnabled())
         {
             QAction *actionToAdd = nullptr;
-            if (moTotal > 1)
+            if (_propertiesWidget->mysticOrbsTotal() > 1)
             {
                 QMenu *menuMO = new QMenu(_itemsView);
                 _itemActions[RemoveMO]->setText(tr("All"));

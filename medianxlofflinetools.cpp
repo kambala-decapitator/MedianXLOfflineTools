@@ -1517,10 +1517,10 @@ bool MedianXLOfflineTools::processSaveFile()
         if (statCode == Enums::CharacterStats::End)
             break;
 
-        int statLength = ItemDataBase::Properties()->value(statCode).saveBits;//Enums::CharacterStats::statLengthFromValue(statCode);
+        int statLength = ItemDataBase::Properties()->value(statCode).saveBits;
         if (!statLength)
         {
-            ERROR_BOX(tr("Unknown statistic code found: %1. This is not Median XL character.").arg(statCode));
+            ERROR_BOX(tr("Unknown statistic code found: %1. This is not %2 character.", "second param is mod name").arg(statCode).arg("Median XL" + (isUltimative() ? " Ultimative" : QString())));
             return false;
         }
         qint64 statValue = bitReader.readNumber(statLength);
