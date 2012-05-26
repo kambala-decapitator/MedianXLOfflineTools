@@ -193,10 +193,10 @@ void ItemsPropertiesSplitter::showFirstItem()
         showItem(_itemsModel->firstItem());
 }
 
-//bool compareItemsByPlugyPage(ItemInfo *a, ItemInfo *b)
-//{
-//    return a->plugyPage < b->plugyPage;
-//}
+bool compareItemsByPlugyPage(ItemInfo *a, ItemInfo *b)
+{
+    return a->plugyPage < b->plugyPage;
+}
 
 void ItemsPropertiesSplitter::setItems(const ItemsList &newItems)
 {
@@ -204,8 +204,7 @@ void ItemsPropertiesSplitter::setItems(const ItemsList &newItems)
     if (_left10Button)
     {
         // using _allItems.last()->plugyPage would've been easy, but it's not always correct (new items added via app are added to the end)
-//        ItemsList::iterator maxPageIter = std::max_element(_allItems.begin(), _allItems.end(), compareItemsByPlugyPage);
-        ItemsList::iterator maxPageIter = std::max_element(_allItems.begin(), _allItems.end(), [](ItemInfo *a, ItemInfo *b){ return a->plugyPage < b->plugyPage; });
+        ItemsList::iterator maxPageIter = std::max_element(_allItems.begin(), _allItems.end(), compareItemsByPlugyPage);
         _lastNotEmptyPage = maxPageIter == _allItems.end() ? 0 : (*maxPageIter)->plugyPage;//!_allItems.isEmpty() ? _allItems.last()->plugyPage : 0;
         
         _pageSpinBox->setSuffix(QString(" / %1").arg(_lastNotEmptyPage));
@@ -310,7 +309,7 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
 
         if (_itemActions[RemoveMO]->isEnabled())
         {
-            QAction *actionToAdd = nullptr;
+            QAction *actionToAdd = 0;
             if (_propertiesWidget->mysticOrbsTotal() > 1)
             {
                 QMenu *menuMO = new QMenu(_itemsView);
