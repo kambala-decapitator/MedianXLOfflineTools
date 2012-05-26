@@ -104,7 +104,7 @@ QString htmlStringFromDiabloColorString(const QString &name, ColorsManager::Colo
 
 bool isUltimative()
 {
-    return ItemDataBase::Properties()->value(Enums::CharacterStats::Strength).saveBits == 11;
+    return ItemDataBase::Properties()->value(Enums::CharacterStats::Strength).saveBits != 12;
 }
 
 bool isCubeInCharacterItems(ItemInfo *item)
