@@ -97,6 +97,7 @@ void ItemsPropertiesSplitter::setModel(ItemStorageTableModel *model)
 {
     _itemsModel = model;
     _itemsView->setModel(model);
+    // TODO 0.3: change signal to selectionChanged
     connect(_itemsView->selectionModel(), SIGNAL(currentChanged(const QModelIndex &, const QModelIndex &)), SLOT(itemSelected(const QModelIndex &)));
 }
 
@@ -205,7 +206,7 @@ void ItemsPropertiesSplitter::setItems(const ItemsList &newItems)
     {
         // using _allItems.last()->plugyPage would've been easy, but it's not always correct (new items added via app are added to the end)
         ItemsList::iterator maxPageIter = std::max_element(_allItems.begin(), _allItems.end(), compareItemsByPlugyPage);
-        _lastNotEmptyPage = maxPageIter == _allItems.end() ? 0 : (*maxPageIter)->plugyPage;//!_allItems.isEmpty() ? _allItems.last()->plugyPage : 0;
+        _lastNotEmptyPage = maxPageIter == _allItems.end() ? 0 : (*maxPageIter)->plugyPage;
         
         _pageSpinBox->setSuffix(QString(" / %1").arg(_lastNotEmptyPage));
         _pageSpinBox->setRange(1, _lastNotEmptyPage);
@@ -291,7 +292,6 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
                 menuDisenchant->addAction(_itemActions[DisenchantSignet]);
             if (_itemActions[DisenchantShards]->isEnabled())
                 menuDisenchant->addAction(_itemActions[DisenchantShards]);
-//            menuDisenchant->menuAction()->setDisabled(item->location == Enums::ItemLocation::Equipped); // you can't disenchant equipped items
             actions << menuDisenchant->menuAction();
         }
 

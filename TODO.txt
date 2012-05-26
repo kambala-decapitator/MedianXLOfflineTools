@@ -1,4 +1,5 @@
 v0.3:
+- creation of plugy stashes and moving items around
 - export item to bbcode/html
 - generate some bbcode/html report about character and/or plugy stashes contents
 - mass disenchant (dialog and multiple selection) - if not too time consuming
@@ -7,7 +8,6 @@ v0.3:
 -----
 - delete all items from last plugy page and check if it'll work after saving
 - search and fix all 'TODO:' in code
-- remove all qDebug()
 - copy files to destdir from .pro:
 http://stackoverflow.com/questions/7631249/how-to-copy-update-resources-frameworks-or-plugins-to-the-mac-os-x-app-bundl
 http://developer.qt.nokia.com/faq/answer/is_there_a_way_to_tell_qmake_to_copy_files_into_my_application_bundle_e.g._
@@ -24,8 +24,7 @@ future versions:
 - sort stashes
 - affix rlvl (and maybe names - then modify help text) support
 - items drag & drop
-- merc items
-- creation of plugy stashes
+- merc & corpse items
 - nice display of property 'Adds x-y ... damage'
 - unsocket items
 - show UMO properties

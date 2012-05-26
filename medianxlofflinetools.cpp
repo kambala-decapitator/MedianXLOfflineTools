@@ -114,7 +114,7 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *pare
     ui.actionFindNext->setShortcut(QKeySequence::FindNext);
     ui.actionFindPrevious->setShortcut(QKeySequence::FindPrevious);
 
-    // TODO: remove when implementing export info
+    // TODO 0.3: remove when implementing export info
     ui.menuExport->removeAction(ui.actionExportCharacterInfo);
     ui.mainToolBar->removeAction(ui.actionExportCharacterInfo);
 
@@ -363,7 +363,17 @@ void MedianXLOfflineTools::saveCharacter()
         }
     }
 
-    // TODO: place lower
+    tempFileContents.replace(charInfo.itemsOffset, charInfo.itemsEndOffset - charInfo.itemsOffset, QByteArray(characterItemsSize, 0));
+    outputDataStream.device()->seek(charInfo.itemsOffset);
+    outputDataStream << static_cast<quint16>(characterItems.size());
+    ItemParser::writeItems(characterItems, outputDataStream);
+
+    quint32 fileSize = tempFileContents.size();
+    outputDataStream.device()->seek(Enums::Offsets::FileSize);
+    outputDataStream << fileSize;
+    outputDataStream << checksum(tempFileContents);
+
+    // save plugy stashes if changed
     for (QHash<Enums::ItemStorage::ItemStorageEnum, PlugyStashInfo>::const_iterator iter = _plugyStashesHash.constBegin(); iter != _plugyStashesHash.constEnd(); ++iter)
     {
         const ItemsList &items = plugyItemsHash[iter.key()];
@@ -404,20 +414,10 @@ void MedianXLOfflineTools::saveCharacter()
         }
     }
 
-    tempFileContents.replace(charInfo.itemsOffset, charInfo.itemsEndOffset - charInfo.itemsOffset, QByteArray(characterItemsSize, 0));
-    outputDataStream.device()->seek(charInfo.itemsOffset);
-    outputDataStream << static_cast<quint16>(characterItems.size());
-    ItemParser::writeItems(characterItems, outputDataStream);
-
-    quint32 fileSize = tempFileContents.size();
-    outputDataStream.device()->seek(Enums::Offsets::FileSize);
-    outputDataStream << fileSize;
-    outputDataStream << checksum(tempFileContents);
-
+    // save the character
     QSettings settings;
     settings.beginGroup("recentItems");
     QString savePath = settings.value(lastSavePathKey).toString() + QDir::separator(), fileName = savePath + newName, saveFileName = fileName + characterExtensionWithDot;
-
     QFile outputFile(saveFileName);
     if (hasNameChanged)
     {
@@ -1662,7 +1662,7 @@ bool MedianXLOfflineTools::processSaveFile()
         ERROR_BOX(corruptedItems.trimmed());
     charInfo.itemsEndOffset = inputDataStream.device()->pos();
 
-    // TODO: read corpse data immediately
+    // TODO 0.3: read corpse data immediately
     const int itemListTerminatorSize = 4, maxCorpses = 15;
     char itemListTerminator[itemListTerminatorSize] = {'J', 'M', 0, 0};
     int itemListTerminatorOffset;
@@ -1680,7 +1680,7 @@ bool MedianXLOfflineTools::processSaveFile()
         ERROR_BOX(tr("Items list doesn't have a terminator!"));
         return false;
     }
-    // TODO: this calculation is wrong
+    // TODO 0.3: this calculation is wrong
     itemListTerminatorOffset += itemListTerminatorSize + 4 + 12; // JM0100 + unknown
 
     int mercItemsOffset = _saveFileContents.lastIndexOf("jf");
