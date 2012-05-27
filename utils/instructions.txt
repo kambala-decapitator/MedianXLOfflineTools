@@ -10,6 +10,8 @@ If Median XL is translated into your language, then you can generate localized d
 
 Note: mod sources (txt files in the 'txt' folder) in this archive are for Median XL 2012 v005. If you want to generate localized data later for another mod version, just replace the sources and tbl text and run the script again.
 
+Note 2: default mod data for v0.2.2 (and higher) is 2012 v005 + Kehjan Labyrinth + Tathamet vs Anu. Since this xarugas's mod is closed-source, you'll have to ask either me or xarugas to obtain permission and the required files.
+
 I've included the 'ru' (Russian) folder as an example. You can generate russian translation by running 'create_translation.bat ru'.
 
 -----

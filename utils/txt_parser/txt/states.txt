@@ -140,7 +140,7 @@ shrine_experience	137																																												shrine_experien
 totemicvoodoo	138		ELEMENTAL TOTEM								1																																		totem4aura							damageresist							20	1	255	192	192									0
 queenofthemoon	139		MOON QUEEN																																																						tors	dblu	30	1	128	128	255	darkness_falls								0
 bear	140	3	MERC BEAR MORPH			1							1			1	1																										1										14											druid_morph	druid_morph	1	431					0
-generic_auraX	141										1																																																													0
+bloodlust	141		UNUSED						1																																				bloodlust_state	bloodlust_state																										0
 changeclass	142		UNKNOWN																																																		5																			0
 resonance	143		RESONANCE DEBUFF																																										resonance							passive_dodge							70	102	255	192	0									0
 rathmastwin	144	3	RATHMAS CHOSEN													1																													darkwytch					curse_hit		item_poisonlengthresist							200	73	255	0	0	rathmacall1	object_barrel_explode							0
@@ -150,7 +150,7 @@ aura_6	147		KRAKEN STANCE				1				1																																		barb_4					
 totemicattack	148		HOWLING TOTEM								1																																		totem5aura							damagepercent							20	1	255	192	192									0
 totemicmanatide	149		MANA TIDE TOTEM								1																																		totemXaura							manarecoverybonus							20	1	255	192	192									0
 vine_beast	150									1																																											11																	89		0
-passive_ultimativeX	151																																																			passive_ultimative																				0
+cyclonearmor	151		UNUSED																																					1	1				cyclonearmor1front	cyclonearmor2front	cyclonearmor3front						8	5																		0
 clawmastery	152		ELFIN ARROWS																																																																					0
 cloak_of_shadows	153			1													1																												whitecircle					whitecircle		damagepercent	2				armo	lblu	30	1	128	128	255	darkness_falls	object_barrel_explode							0
 recycled	154																															1	1	1		1																																				0
@@ -163,7 +163,7 @@ pantherstate	160	16	BANEBLADE				1					1				1	1																												firec
 growl	161	4	SUPERBEAST			1							1			1																													sanctuaryfront	sanctuaryback	spirit_of_barbs			crashedneonlight		passive_fire_mastery							82	73	255	144	255	blackfury_active	object_barrel_explode	1	1220					0
 curseofkali	162		MAHASATTVA																							1	1	1	1																														150	69	255	0	0	golemfire_death	object_barrel_explode							0
 aaaaaaarrrgh	163		GRAVEYARD																																										redmass1	blackmass						damagepercent												graveyardactivate	object_barrel_explode						146	0
-braxishieldaura	164		KABRAXIS				1				1																																																10	0	255	255	255									0
+debugcontrol	164		UNUSED																																																																					0
 itemset1	165																																																																							0
 itemset2	166																																																																							0
 itemset3	167																																																																							0
@@ -252,5 +252,5 @@ shieldaura	249						1				1						1																																			damageresist
 burnedbyburn	250		DAZZLE					1	1																																				cursesunburn					curse_hit		damageresist							40	1	255	128	0	paladin_aura_salvation	object_barrel_explode							0
 bloodvengeanceaura	251		SPIRIT OF VENGEANCE																																										bloodvengeancefront	bloodvengeanceback						passive_fire_mastery																				0
 totemicguardian	252		TOTEMIC GUARDIAN																																															cursesunburn		item_totembound																				0
-cowdisguise	253	3	COW DISGUISE			1	1					1	1			1																										1								cursesunburn	cursesunburn	damagepercent							50	1	255	255	192	andariel_rock_1	object_barrel_explode	1	1939					0
+cowdisguise	253	3	COW DISGUISE			1	1					1	1			1																										1								cursesunburn	cursesunburn	damagepercent							50	1	255	255	192	andariel_rock_1	object_barrel_explode	1	956					0
 petristrike	254		TITAN STRIKE				1							1			1																																			item_strength_percent							105	74	255	144	144	andariel_rock_1	object_barrel_explode							0

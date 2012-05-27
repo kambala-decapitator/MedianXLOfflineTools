@@ -36,7 +36,7 @@ Crystal Divisor				1						Crystal 8	249		Unique Crystal 4	1																					
 Jewelry A				1				1024		rin	4		amu	4		jew	2		Crystal Divisor	4																							0
 Jewelry B				1				1024		rin	4		amu	4		jew	2		Crystal Divisor	4																							0
 Jewelry C				1				1024		rin	4		amu	4		jew	2		Crystal Divisor	4																							0
-Unique Crystal Rodeo				1						Unique Crystal 4	1		Crystal 8	49																													0
+Unique Crystal Rodeo				1						Unique Crystal 4	1		Crystal 8	9																													0
 ChippedNGem				1						yo1	1		g$a	2		9$a	2		7$a	2		5$a	2																				0
 FlawedNGem				1						yo2	1		g$b	2		9$b	2		7$b	2		5$b	2																				0
 NormalNGem				1						yo3	1		g$c	2		9$c	2		7$c	2		5$c	2																				0
@@ -711,7 +711,7 @@ Act 4 (H) Super C		18	87	-4					0	Act 4 (H) Uitem B	2		Act 4 (H) Cpot B	2							
 Act 5 (H) Super A		18	90	-4					0	Act 5 (H) Uitem A	2		Act 5 (H) Cpot A	2																													0
 Act 5 (H) Super B		18	93	-4					0	Act 5 (H) Uitem B	2		Act 5 (H) Cpot B	2																													0
 Act 5 (H) Super C		18	95	-4					0	Act 5 (H) Uitem C	2		Act 5 (H) Cpot C	2																													0
-Albrecht				-3					0	NewStartingCharm	1		Act 1 Super A	2																													0
+Albrecht				-3					0	Act 1 Super A	1		Crystal Divisor	2																													0
 Countess Rune				3					15	Runes 5	10																																0
 Countess Rune (N)				3					15	Runes 10	10																																0
 Countess Rune (H)				3					15	Runes 15	10																																0
@@ -852,11 +852,11 @@ Laser Reward Charm				-1	1024		1024	1024		LaserFocusCrystal	1																			
 Butcher Reward Charm				-1	1024		1024	1024		ButchersTooth	1																																0
 Koth Reward Charm				-1	1024		1024	1024		SacredWorldstoneKey2	1																																0
 Inarius Reward Charm				-1	1024		1024	1024		IdolOfVanity	1																																0
-Overlord Reward Charm				-1	1024		1024	1024		NewSpiritOfDamnation	1																																0
+Overlord Reward Charm				-1	1024		1024	1024		SpiritOfDamnation	1																																0
 Fleshdoom Reward Charm				-1	1024		1024	1024		CursedShadowfang	1																																0
 Ennead Reward Charm				1	1024		1024	1024	11	HotTJ	1																																0
-Malic Reward Charm				-1	1024		1024	1024		NewSixAngelBag	1																																0
-Lucion Reward Charm				-1	1024		1024	1024		kZ8	1																																0
+Malic Reward Charm				-1	1024		1024	1024		SixAngelBag	1																																0
+Lucion Reward Charm				-1	1024		1024	1024		SunlessCrystalBird	1																																0
 Zakarum Reward Charm				1	1024		1024	1024	11	ZakarumsEar	1																																0
 Rathma Primus Reward Charm				1	1024		1024	1024	5	HerbalQuintessence	1																																0
 Aldric Reward Charm				1	1024		1024	1024	5	TomeOfTheSpider	1																																0
@@ -923,90 +923,90 @@ Robot (H) Reward 2				6	980	980	871	1024		Act 5 (H) Equip C	120		Act 5 (H) Good	
 Robot (H) Reward 3				6	972	972	864	1024		Act 5 (H) Equip C	90		Act 5 (H) Good	20		Runes Super	90																										0
 Robot (H) Reward 4				6	964	964	856	1024		Act 5 (H) Equip C	60		Act 5 (H) Good	20		Runes Super	120																										0
 Robot (H) Reward 5				6	956	956	849	1024		Act 5 (H) Equip C	30		Act 5 (H) Good	20		Runes Super	150																										0
-Act 1 Unique Bias A		19	0	1	256				50	NDTC	70		Act 1 Junk	1	0%	Act 1 Equip A	45	24%	Act 1 Good	4	2%	Clue Gem 10	1	0%																			0
-Act 1 Unique Bias B		19	5	1	256				50	NDTC	70		Act 1 Junk	1	0%	Act 1 Equip B	45	24%	Act 1 Good B	4	2%																						0
-Act 1 Unique Bias C		19	9	1	256				50	NDTC	70		Act 1 Junk	1	0%	Act 1 Equip C	45	24%	Act 1 Good C	4	2%																						0
-Act 2 Unique Bias A		19	12	1	256				50	NDTC	70		Act 2 Junk	1	0%	Act 2 Equip A	45	24%	Act 2 Good	4	2%																						0
-Act 2 Unique Bias B		19	15	1	256				50	NDTC	70		Act 2 Junk	1	0%	Act 2 Equip B	45	24%	Act 2 Good	4	2%																						0
-Act 2 Unique Bias C		19	18	1	256				50	NDTC	70		Act 2 Junk	1	0%	Act 2 Equip C	45	24%	Act 3 Good	4	2%																						0
-Act 3 Unique Bias A		19	20	1	256				50	NDTC	70		Act 3 Junk	1	0%	Act 3 Equip A	45	24%	Act 3 Good	4	2%																						0
-Act 3 Unique Bias B		19	22	1	256				50	NDTC	70		Act 3 Junk	1	0%	Act 3 Equip B	45	24%	Act 3 Good	4	2%																						0
-Act 3 Unique Bias C		19	24	1	256				50	NDTC	70		Act 3 Junk	1	0%	Act 3 Equip C	45	24%	Act 3 Good	4	2%																						0
-Act 4 Unique Bias A		19	26	1	256				50	NDTC	70		Act 4 Junk	1	0%	Act 4 Equip A	45	24%	Act 4 Good	4	2%																						0
-Act 4 Unique Bias B		19	29	1	256				50	NDTC	70		Act 4 Junk	1	0%	Act 4 Equip B	45	24%	Act 4 Good	4	2%																						0
-Act 5 Unique Bias A		19	32	1	256				50	NDTC	70		Act 5 Junk	1	0%	Act 5 Equip A	45	24%	Act 5 Good	4	2%																						0
-Act 5 Unique Bias B		19	34	1	256				50	NDTC	70		Act 5 Junk	1	0%	Act 5 Equip B	45	24%	Act 5 Good	4	2%																						0
-Act 5 Unique Bias C		19	36	1	256				50	NDTC	70		Act 5 Junk	1	0%	Act 5 Equip C	45	24%	Act 5 Good	4	2%																						0
-Act 1 (N) Unique Bias A		19	38	1	256				50	NDTC	70		Act 1 (N) Junk	1	0%	Act 1 (N) Equip A	45	24%	Act 1 (N) Good	4	2%																						0
-Act 1 (N) Unique Bias B		19	40	1	256				50	NDTC	70		Act 1 (N) Junk	1	0%	Act 1 (N) Equip B	45	24%	Act 1 (N) Good	4	2%																						0
-Act 1 (N) Unique Bias C		19	41	1	256				50	NDTC	70		Act 1 (N) Junk	1	0%	Act 1 (N) Equip B	45	24%	Act 1 (N) Good	4	2%																						0
-Act 2 (N) Unique Bias A		19	42	1	256				50	NDTC	70		Act 2 (N) Junk	1	0%	Act 2 (N) Equip A	45	24%	Act 2 (N) Good	4	2%																						0
-Act 2 (N) Unique Bias B		19	44	1	256				50	NDTC	70		Act 2 (N) Junk	1	0%	Act 2 (N) Equip B	45	24%	Act 2 (N) Good	4	2%																						0
-Act 2 (N) Unique Bias C		19	45	1	256				50	NDTC	70		Act 2 (N) Junk	1	0%	Act 2 (N) Equip B	45	24%	Act 2 (N) Good	4	2%																						0
-Act 3 (N) Unique Bias A		19	46	1	256				50	NDTC	70		Act 3 (N) Junk	1	0%	Act 3 (N) Equip A	45	24%	Act 3 (N) Good	4	2%																						0
-Act 3 (N) Unique Bias B		19	48	1	256				50	NDTC	70		Act 3 (N) Junk	1	0%	Act 3 (N) Equip B	45	24%	Act 3 (N) Good	4	2%																						0
-Act 3 (N) Unique Bias C		19	50	1	256				50	NDTC	70		Act 3 (N) Junk	1	0%	Act 3 (N) Equip B	45	24%	Act 3 (N) Good	4	2%																						0
-Act 4 (N) Unique Bias A		19	51	1	256				50	NDTC	70		Act 4 (N) Junk	1	0%	Act 4 (N) Equip A	45	24%	Act 4 (N) Good	4	2%																						0
-Act 4 (N) Unique Bias B		19	54	1	256				50	NDTC	70		Act 4 (N) Junk	1	0%	Act 4 (N) Equip B	45	24%	Act 4 (N) Good	4	2%																						0
-Act 5 (N) Unique Bias A		19	57	1	256				50	NDTC	70		Act 5 (N) Junk	1	0%	Act 5 (N) Equip A	45	24%	Act 5 (N) Good	4	2%																						0
-Act 5 (N) Unique Bias B		19	60	1	256				50	NDTC	70		Act 5 (N) Junk	1	0%	Act 5 (N) Equip B	45	24%	Act 5 (N) Good	4	2%																						0
-Act 5 (N) Unique Bias C		19	62	1	256				50	NDTC	70		Act 5 (N) Junk	1	0%	Act 5 (N) Equip C	45	24%	Act 5 (N) Good	4	2%																						0
-Act 1 (H) Unique Bias A		19	63	1	256				50	NDTC	70		Act 1 (H) Junk	1	0%	Act 1 (H) Equip A	45	24%	Act 1 (H) Good	4	2%																						0
-Act 1 (H) Unique Bias B		19	66	1	256				50	NDTC	70		Act 1 (H) Junk	1	0%	Act 1 (H) Equip B	45	24%	Act 1 (H) Good	4	2%																						0
-Act 1 (H) Unique Bias C		19	68	1	256				50	NDTC	70		Act 1 (H) Junk	1	0%	Act 1 (H) Equip B	45	24%	Act 1 (H) Good	4	2%																						0
-Act 2 (H) Unique Bias A		19	69	1	256				50	NDTC	70		Act 1 (H) Junk	1	0%	Act 2 (H) Equip A	45	24%	Act 2 (H) Good	4	2%																						0
-Act 2 (H) Unique Bias B		19	71	1	256				50	NDTC	70		Act 1 (H) Junk	1	0%	Act 2 (H) Equip B	45	24%	Act 2 (H) Good	4	2%																						0
-Act 2 (H) Unique Bias C		19	72	1	256				50	NDTC	70		Act 1 (H) Junk	1	0%	Act 2 (H) Equip B	45	24%	Act 2 (H) Good	4	2%																						0
-Act 3 (H) Unique Bias A		19	74	1	256				50	NDTC	70		Act 1 (H) Junk	1	0%	Act 3 (H) Equip A	45	24%	Act 3 (H) Good	4	2%																						0
-Act 3 (H) Unique Bias B		19	75	1	256				50	NDTC	70		Act 1 (H) Junk	1	0%	Act 3 (H) Equip B	45	24%	Act 3 (H) Good	4	2%																						0
-Act 3 (H) Unique Bias C		19	77	1	256				50	NDTC	70		Act 1 (H) Junk	1	0%	Act 3 (H) Equip B	45	24%	Act 3 (H) Good	4	2%																						0
-Act 4 (H) Unique Bias A		19	78	1	256				50	NDTC	70		Act 1 (H) Junk	1	0%	Act 4 (H) Equip A	45	24%	Act 4 (H) Good	4	2%																						0
-Act 4 (H) Unique Bias B		19	80	1	256				50	NDTC	70		Act 1 (H) Junk	1	0%	Act 4 (H) Equip B	45	24%	Act 4 (H) Good	4	2%																						0
-Act 5 (H) Unique Bias A		19	81	1	256				50	NDTC	70		Act 1 (H) Junk	1	0%	Act 5 (H) Equip A	45	24%	Act 5 (H) Good	4	2%																						0
-Act 5 (H) Unique Bias B		19	83	1	256				50	NDTC	70		Act 1 (H) Junk	1	0%	Act 5 (H) Equip B	45	24%	Act 5 (H) Good	4	2%																						0
-Act 5 (H) Unique Bias C		19	85	1	256				50	NDTC	70		Act 1 (H) Junk	1	0%	Act 5 (H) Equip C	45	24%	Act 5 (H) Good	4	2%																						0
-Act 1 Set Bias A		20	0	1		384			30	NDTC	40		Act 1 Junk	1		Act 1 Equip A	20		Act 1 Good	4		Clue Gem 10	1	0%																			0
-Act 1 Set Bias B		20	5	1		384			30	NDTC	40		Act 1 Junk	1		Act 1 Equip B	20		Act 1 Good B	4																							0
-Act 1 Set Bias C		20	9	1		384			30	NDTC	40		Act 1 Junk	1		Act 1 Equip C	20		Act 1 Good C	4																							0
-Act 2 Set Bias A		20	12	1		384			30	NDTC	40		Act 2 Junk	1		Act 2 Equip A	20		Act 2 Good	4																							0
-Act 2 Set Bias B		20	15	1		384			30	NDTC	40		Act 2 Junk	1		Act 2 Equip B	20		Act 2 Good	4																							0
-Act 2 Set Bias C		20	18	1		384			30	NDTC	40		Act 2 Junk	1		Act 2 Equip C	20		Act 3 Good	4																							0
-Act 3 Set Bias A		20	20	1		384			30	NDTC	40		Act 3 Junk	1		Act 3 Equip A	20		Act 3 Good	4																							0
-Act 3 Set Bias B		20	22	1		384			30	NDTC	40		Act 3 Junk	1		Act 3 Equip B	20		Act 3 Good	4																							0
-Act 3 Set Bias C		20	24	1		384			30	NDTC	40		Act 3 Junk	1		Act 3 Equip C	20		Act 3 Good	4																							0
-Act 4 Set Bias A		20	26	1		384			30	NDTC	40		Act 4 Junk	1		Act 4 Equip A	20		Act 4 Good	4																							0
-Act 4 Set Bias B		20	29	1		384			30	NDTC	40		Act 4 Junk	1		Act 4 Equip B	20		Act 4 Good	4																							0
-Act 5 Set Bias A		20	32	1		384			30	NDTC	40		Act 5 Junk	1		Act 5 Equip A	20		Act 5 Good	4																							0
-Act 5 Set Bias B		20	34	1		384			30	NDTC	40		Act 5 Junk	1		Act 5 Equip B	20		Act 5 Good	4																							0
-Act 5 Set Bias C		20	36	1		384			30	NDTC	40		Act 5 Junk	1		Act 5 Equip C	20		Act 5 Good	4																							0
-Act 1 (N) Set Bias A		20	38	1		384			30	NDTC	40		Act 1 (N) Junk	1		Act 1 (N) Equip A	20		Act 1 (N) Good	4																							0
-Act 1 (N) Set Bias B		20	40	1		384			30	NDTC	40		Act 1 (N) Junk	1		Act 1 (N) Equip B	20		Act 1 (N) Good	4																							0
-Act 1 (N) Set Bias C		20	41	1		384			30	NDTC	40		Act 1 (N) Junk	1		Act 1 (N) Equip B	20		Act 1 (N) Good	4																							0
-Act 2 (N) Set Bias A		20	42	1		384			30	NDTC	40		Act 2 (N) Junk	1		Act 2 (N) Equip A	20		Act 2 (N) Good	4																							0
-Act 2 (N) Set Bias B		20	44	1		384			30	NDTC	40		Act 2 (N) Junk	1		Act 2 (N) Equip B	20		Act 2 (N) Good	4																							0
-Act 2 (N) Set Bias C		20	45	1		384			30	NDTC	40		Act 2 (N) Junk	1		Act 2 (N) Equip B	20		Act 2 (N) Good	4																							0
-Act 3 (N) Set Bias A		20	46	1		384			30	NDTC	40		Act 3 (N) Junk	1		Act 3 (N) Equip A	20		Act 3 (N) Good	4																							0
-Act 3 (N) Set Bias B		20	48	1		384			30	NDTC	40		Act 3 (N) Junk	1		Act 3 (N) Equip B	20		Act 3 (N) Good	4																							0
-Act 3 (N) Set Bias C		20	50	1		384			30	NDTC	40		Act 3 (N) Junk	1		Act 3 (N) Equip B	20		Act 3 (N) Good	4																							0
-Act 4 (N) Set Bias A		20	51	1		384			30	NDTC	40		Act 4 (N) Junk	1		Act 4 (N) Equip A	20		Act 4 (N) Good	4																							0
-Act 4 (N) Set Bias B		20	54	1		384			30	NDTC	40		Act 4 (N) Junk	1		Act 4 (N) Equip B	20		Act 4 (N) Good	4																							0
-Act 5 (N) Set Bias A		20	57	1		384			30	NDTC	40		Act 5 (N) Junk	1		Act 5 (N) Equip A	20		Act 5 (N) Good	4																							0
-Act 5 (N) Set Bias B		20	60	1		384			30	NDTC	40		Act 5 (N) Junk	1		Act 5 (N) Equip B	20		Act 5 (N) Good	4																							0
-Act 5 (N) Set Bias C		20	62	1		384			30	NDTC	40		Act 5 (N) Junk	1		Act 5 (N) Equip C	20		Act 5 (N) Good	4																							0
-Act 1 (H) Set Bias A		20	63	1		384			30	NDTC	40		Act 1 (H) Junk	1		Act 1 (H) Equip A	20		Act 1 (H) Good	4																							0
-Act 1 (H) Set Bias B		20	66	1		384			30	NDTC	40		Act 1 (H) Junk	1		Act 1 (H) Equip B	20		Act 1 (H) Good	4																							0
-Act 1 (H) Set Bias C		20	68	1		384			30	NDTC	40		Act 1 (H) Junk	1		Act 1 (H) Equip B	20		Act 1 (H) Good	4																							0
-Act 2 (H) Set Bias A		20	69	1		384			30	NDTC	40		Act 1 (H) Junk	1		Act 2 (H) Equip A	20		Act 2 (H) Good	4																							0
-Act 2 (H) Set Bias B		20	71	1		384			30	NDTC	40		Act 1 (H) Junk	1		Act 2 (H) Equip B	20		Act 2 (H) Good	4																							0
-Act 2 (H) Set Bias C		20	72	1		384			30	NDTC	40		Act 1 (H) Junk	1		Act 2 (H) Equip B	20		Act 2 (H) Good	4																							0
-Act 3 (H) Set Bias A		20	74	1		384			30	NDTC	40		Act 1 (H) Junk	1		Act 3 (H) Equip A	20		Act 3 (H) Good	4																							0
-Act 3 (H) Set Bias B		20	75	1		384			30	NDTC	40		Act 1 (H) Junk	1		Act 3 (H) Equip B	20		Act 3 (H) Good	4																							0
-Act 3 (H) Set Bias C		20	77	1		384			30	NDTC	40		Act 1 (H) Junk	1		Act 3 (H) Equip B	20		Act 3 (H) Good	4																							0
-Act 4 (H) Set Bias A		20	78	1		384			30	NDTC	40		Act 1 (H) Junk	1		Act 4 (H) Equip A	20		Act 4 (H) Good	4																							0
-Act 4 (H) Set Bias B		20	80	1		384			30	NDTC	40		Act 1 (H) Junk	1		Act 4 (H) Equip B	20		Act 4 (H) Good	4																							0
-Act 5 (H) Set Bias A		20	81	1		384			30	NDTC	40		Act 1 (H) Junk	1		Act 5 (H) Equip A	20		Act 5 (H) Good	4																							0
-Act 5 (H) Set Bias B		20	83	1		384			30	NDTC	40		Act 1 (H) Junk	1		Act 5 (H) Equip B	20		Act 5 (H) Good	4																							0
-Act 5 (H) Set Bias C		20	85	1		384			30	NDTC	40		Act 1 (H) Junk	1		Act 5 (H) Equip C	20		Act 5 (H) Good	4																							0
+Act 1 Unique Bias A		19	0	1	640				50	NDTC	70		Act 1 Junk	1	0%	Act 1 Equip A	45	24%	Act 1 Good	4	2%	Clue Gem 10	1	0%																			0
+Act 1 Unique Bias B		19	5	1	640				50	NDTC	70		Act 1 Junk	1	0%	Act 1 Equip B	45	24%	Act 1 Good B	4	2%																						0
+Act 1 Unique Bias C		19	9	1	640				50	NDTC	70		Act 1 Junk	1	0%	Act 1 Equip C	45	24%	Act 1 Good C	4	2%																						0
+Act 2 Unique Bias A		19	12	1	640				50	NDTC	70		Act 2 Junk	1	0%	Act 2 Equip A	45	24%	Act 2 Good	4	2%																						0
+Act 2 Unique Bias B		19	15	1	640				50	NDTC	70		Act 2 Junk	1	0%	Act 2 Equip B	45	24%	Act 2 Good	4	2%																						0
+Act 2 Unique Bias C		19	18	1	640				50	NDTC	70		Act 2 Junk	1	0%	Act 2 Equip C	45	24%	Act 3 Good	4	2%																						0
+Act 3 Unique Bias A		19	20	1	640				50	NDTC	70		Act 3 Junk	1	0%	Act 3 Equip A	45	24%	Act 3 Good	4	2%																						0
+Act 3 Unique Bias B		19	22	1	640				50	NDTC	70		Act 3 Junk	1	0%	Act 3 Equip B	45	24%	Act 3 Good	4	2%																						0
+Act 3 Unique Bias C		19	24	1	640				50	NDTC	70		Act 3 Junk	1	0%	Act 3 Equip C	45	24%	Act 3 Good	4	2%																						0
+Act 4 Unique Bias A		19	26	1	640				50	NDTC	70		Act 4 Junk	1	0%	Act 4 Equip A	45	24%	Act 4 Good	4	2%																						0
+Act 4 Unique Bias B		19	29	1	640				50	NDTC	70		Act 4 Junk	1	0%	Act 4 Equip B	45	24%	Act 4 Good	4	2%																						0
+Act 5 Unique Bias A		19	32	1	640				50	NDTC	70		Act 5 Junk	1	0%	Act 5 Equip A	45	24%	Act 5 Good	4	2%																						0
+Act 5 Unique Bias B		19	34	1	640				50	NDTC	70		Act 5 Junk	1	0%	Act 5 Equip B	45	24%	Act 5 Good	4	2%																						0
+Act 5 Unique Bias C		19	36	1	640				50	NDTC	70		Act 5 Junk	1	0%	Act 5 Equip C	45	24%	Act 5 Good	4	2%																						0
+Act 1 (N) Unique Bias A		19	38	1	640				50	NDTC	70		Act 1 (N) Junk	1	0%	Act 1 (N) Equip A	45	24%	Act 1 (N) Good	4	2%																						0
+Act 1 (N) Unique Bias B		19	40	1	640				50	NDTC	70		Act 1 (N) Junk	1	0%	Act 1 (N) Equip B	45	24%	Act 1 (N) Good	4	2%																						0
+Act 1 (N) Unique Bias C		19	41	1	640				50	NDTC	70		Act 1 (N) Junk	1	0%	Act 1 (N) Equip B	45	24%	Act 1 (N) Good	4	2%																						0
+Act 2 (N) Unique Bias A		19	42	1	640				50	NDTC	70		Act 2 (N) Junk	1	0%	Act 2 (N) Equip A	45	24%	Act 2 (N) Good	4	2%																						0
+Act 2 (N) Unique Bias B		19	44	1	640				50	NDTC	70		Act 2 (N) Junk	1	0%	Act 2 (N) Equip B	45	24%	Act 2 (N) Good	4	2%																						0
+Act 2 (N) Unique Bias C		19	45	1	640				50	NDTC	70		Act 2 (N) Junk	1	0%	Act 2 (N) Equip B	45	24%	Act 2 (N) Good	4	2%																						0
+Act 3 (N) Unique Bias A		19	46	1	640				50	NDTC	70		Act 3 (N) Junk	1	0%	Act 3 (N) Equip A	45	24%	Act 3 (N) Good	4	2%																						0
+Act 3 (N) Unique Bias B		19	48	1	640				50	NDTC	70		Act 3 (N) Junk	1	0%	Act 3 (N) Equip B	45	24%	Act 3 (N) Good	4	2%																						0
+Act 3 (N) Unique Bias C		19	50	1	640				50	NDTC	70		Act 3 (N) Junk	1	0%	Act 3 (N) Equip B	45	24%	Act 3 (N) Good	4	2%																						0
+Act 4 (N) Unique Bias A		19	51	1	640				50	NDTC	70		Act 4 (N) Junk	1	0%	Act 4 (N) Equip A	45	24%	Act 4 (N) Good	4	2%																						0
+Act 4 (N) Unique Bias B		19	54	1	640				50	NDTC	70		Act 4 (N) Junk	1	0%	Act 4 (N) Equip B	45	24%	Act 4 (N) Good	4	2%																						0
+Act 5 (N) Unique Bias A		19	57	1	640				50	NDTC	70		Act 5 (N) Junk	1	0%	Act 5 (N) Equip A	45	24%	Act 5 (N) Good	4	2%																						0
+Act 5 (N) Unique Bias B		19	60	1	640				50	NDTC	70		Act 5 (N) Junk	1	0%	Act 5 (N) Equip B	45	24%	Act 5 (N) Good	4	2%																						0
+Act 5 (N) Unique Bias C		19	62	1	640				50	NDTC	70		Act 5 (N) Junk	1	0%	Act 5 (N) Equip C	45	24%	Act 5 (N) Good	4	2%																						0
+Act 1 (H) Unique Bias A		19	63	1	640				50	NDTC	70		Act 1 (H) Junk	1	0%	Act 1 (H) Equip A	45	24%	Act 1 (H) Good	4	2%																						0
+Act 1 (H) Unique Bias B		19	66	1	640				50	NDTC	70		Act 1 (H) Junk	1	0%	Act 1 (H) Equip B	45	24%	Act 1 (H) Good	4	2%																						0
+Act 1 (H) Unique Bias C		19	68	1	640				50	NDTC	70		Act 1 (H) Junk	1	0%	Act 1 (H) Equip B	45	24%	Act 1 (H) Good	4	2%																						0
+Act 2 (H) Unique Bias A		19	69	1	640				50	NDTC	70		Act 1 (H) Junk	1	0%	Act 2 (H) Equip A	45	24%	Act 2 (H) Good	4	2%																						0
+Act 2 (H) Unique Bias B		19	71	1	640				50	NDTC	70		Act 1 (H) Junk	1	0%	Act 2 (H) Equip B	45	24%	Act 2 (H) Good	4	2%																						0
+Act 2 (H) Unique Bias C		19	72	1	640				50	NDTC	70		Act 1 (H) Junk	1	0%	Act 2 (H) Equip B	45	24%	Act 2 (H) Good	4	2%																						0
+Act 3 (H) Unique Bias A		19	74	1	640				50	NDTC	70		Act 1 (H) Junk	1	0%	Act 3 (H) Equip A	45	24%	Act 3 (H) Good	4	2%																						0
+Act 3 (H) Unique Bias B		19	75	1	640				50	NDTC	70		Act 1 (H) Junk	1	0%	Act 3 (H) Equip B	45	24%	Act 3 (H) Good	4	2%																						0
+Act 3 (H) Unique Bias C		19	77	1	640				50	NDTC	70		Act 1 (H) Junk	1	0%	Act 3 (H) Equip B	45	24%	Act 3 (H) Good	4	2%																						0
+Act 4 (H) Unique Bias A		19	78	1	640				50	NDTC	70		Act 1 (H) Junk	1	0%	Act 4 (H) Equip A	45	24%	Act 4 (H) Good	4	2%																						0
+Act 4 (H) Unique Bias B		19	80	1	640				50	NDTC	70		Act 1 (H) Junk	1	0%	Act 4 (H) Equip B	45	24%	Act 4 (H) Good	4	2%																						0
+Act 5 (H) Unique Bias A		19	81	1	640				50	NDTC	70		Act 1 (H) Junk	1	0%	Act 5 (H) Equip A	45	24%	Act 5 (H) Good	4	2%																						0
+Act 5 (H) Unique Bias B		19	83	1	640				50	NDTC	70		Act 1 (H) Junk	1	0%	Act 5 (H) Equip B	45	24%	Act 5 (H) Good	4	2%																						0
+Act 5 (H) Unique Bias C		19	85	1	640				50	NDTC	70		Act 1 (H) Junk	1	0%	Act 5 (H) Equip C	45	24%	Act 5 (H) Good	4	2%																						0
+Act 1 Set Bias A		20	0	1		768			30	NDTC	40		Act 1 Junk	1		Act 1 Equip A	20		Act 1 Good	4		Clue Gem 10	1	0%																			0
+Act 1 Set Bias B		20	5	1		768			30	NDTC	40		Act 1 Junk	1		Act 1 Equip B	20		Act 1 Good B	4																							0
+Act 1 Set Bias C		20	9	1		768			30	NDTC	40		Act 1 Junk	1		Act 1 Equip C	20		Act 1 Good C	4																							0
+Act 2 Set Bias A		20	12	1		768			30	NDTC	40		Act 2 Junk	1		Act 2 Equip A	20		Act 2 Good	4																							0
+Act 2 Set Bias B		20	15	1		768			30	NDTC	40		Act 2 Junk	1		Act 2 Equip B	20		Act 2 Good	4																							0
+Act 2 Set Bias C		20	18	1		768			30	NDTC	40		Act 2 Junk	1		Act 2 Equip C	20		Act 3 Good	4																							0
+Act 3 Set Bias A		20	20	1		768			30	NDTC	40		Act 3 Junk	1		Act 3 Equip A	20		Act 3 Good	4																							0
+Act 3 Set Bias B		20	22	1		768			30	NDTC	40		Act 3 Junk	1		Act 3 Equip B	20		Act 3 Good	4																							0
+Act 3 Set Bias C		20	24	1		768			30	NDTC	40		Act 3 Junk	1		Act 3 Equip C	20		Act 3 Good	4																							0
+Act 4 Set Bias A		20	26	1		768			30	NDTC	40		Act 4 Junk	1		Act 4 Equip A	20		Act 4 Good	4																							0
+Act 4 Set Bias B		20	29	1		768			30	NDTC	40		Act 4 Junk	1		Act 4 Equip B	20		Act 4 Good	4																							0
+Act 5 Set Bias A		20	32	1		768			30	NDTC	40		Act 5 Junk	1		Act 5 Equip A	20		Act 5 Good	4																							0
+Act 5 Set Bias B		20	34	1		768			30	NDTC	40		Act 5 Junk	1		Act 5 Equip B	20		Act 5 Good	4																							0
+Act 5 Set Bias C		20	36	1		768			30	NDTC	40		Act 5 Junk	1		Act 5 Equip C	20		Act 5 Good	4																							0
+Act 1 (N) Set Bias A		20	38	1		768			30	NDTC	40		Act 1 (N) Junk	1		Act 1 (N) Equip A	20		Act 1 (N) Good	4																							0
+Act 1 (N) Set Bias B		20	40	1		768			30	NDTC	40		Act 1 (N) Junk	1		Act 1 (N) Equip B	20		Act 1 (N) Good	4																							0
+Act 1 (N) Set Bias C		20	41	1		768			30	NDTC	40		Act 1 (N) Junk	1		Act 1 (N) Equip B	20		Act 1 (N) Good	4																							0
+Act 2 (N) Set Bias A		20	42	1		768			30	NDTC	40		Act 2 (N) Junk	1		Act 2 (N) Equip A	20		Act 2 (N) Good	4																							0
+Act 2 (N) Set Bias B		20	44	1		768			30	NDTC	40		Act 2 (N) Junk	1		Act 2 (N) Equip B	20		Act 2 (N) Good	4																							0
+Act 2 (N) Set Bias C		20	45	1		768			30	NDTC	40		Act 2 (N) Junk	1		Act 2 (N) Equip B	20		Act 2 (N) Good	4																							0
+Act 3 (N) Set Bias A		20	46	1		768			30	NDTC	40		Act 3 (N) Junk	1		Act 3 (N) Equip A	20		Act 3 (N) Good	4																							0
+Act 3 (N) Set Bias B		20	48	1		768			30	NDTC	40		Act 3 (N) Junk	1		Act 3 (N) Equip B	20		Act 3 (N) Good	4																							0
+Act 3 (N) Set Bias C		20	50	1		768			30	NDTC	40		Act 3 (N) Junk	1		Act 3 (N) Equip B	20		Act 3 (N) Good	4																							0
+Act 4 (N) Set Bias A		20	51	1		768			30	NDTC	40		Act 4 (N) Junk	1		Act 4 (N) Equip A	20		Act 4 (N) Good	4																							0
+Act 4 (N) Set Bias B		20	54	1		768			30	NDTC	40		Act 4 (N) Junk	1		Act 4 (N) Equip B	20		Act 4 (N) Good	4																							0
+Act 5 (N) Set Bias A		20	57	1		768			30	NDTC	40		Act 5 (N) Junk	1		Act 5 (N) Equip A	20		Act 5 (N) Good	4																							0
+Act 5 (N) Set Bias B		20	60	1		768			30	NDTC	40		Act 5 (N) Junk	1		Act 5 (N) Equip B	20		Act 5 (N) Good	4																							0
+Act 5 (N) Set Bias C		20	62	1		768			30	NDTC	40		Act 5 (N) Junk	1		Act 5 (N) Equip C	20		Act 5 (N) Good	4																							0
+Act 1 (H) Set Bias A		20	63	1		768			30	NDTC	40		Act 1 (H) Junk	1		Act 1 (H) Equip A	20		Act 1 (H) Good	4																							0
+Act 1 (H) Set Bias B		20	66	1		768			30	NDTC	40		Act 1 (H) Junk	1		Act 1 (H) Equip B	20		Act 1 (H) Good	4																							0
+Act 1 (H) Set Bias C		20	68	1		768			30	NDTC	40		Act 1 (H) Junk	1		Act 1 (H) Equip B	20		Act 1 (H) Good	4																							0
+Act 2 (H) Set Bias A		20	69	1		768			30	NDTC	40		Act 1 (H) Junk	1		Act 2 (H) Equip A	20		Act 2 (H) Good	4																							0
+Act 2 (H) Set Bias B		20	71	1		768			30	NDTC	40		Act 1 (H) Junk	1		Act 2 (H) Equip B	20		Act 2 (H) Good	4																							0
+Act 2 (H) Set Bias C		20	72	1		768			30	NDTC	40		Act 1 (H) Junk	1		Act 2 (H) Equip B	20		Act 2 (H) Good	4																							0
+Act 3 (H) Set Bias A		20	74	1		768			30	NDTC	40		Act 1 (H) Junk	1		Act 3 (H) Equip A	20		Act 3 (H) Good	4																							0
+Act 3 (H) Set Bias B		20	75	1		768			30	NDTC	40		Act 1 (H) Junk	1		Act 3 (H) Equip B	20		Act 3 (H) Good	4																							0
+Act 3 (H) Set Bias C		20	77	1		768			30	NDTC	40		Act 1 (H) Junk	1		Act 3 (H) Equip B	20		Act 3 (H) Good	4																							0
+Act 4 (H) Set Bias A		20	78	1		768			30	NDTC	40		Act 1 (H) Junk	1		Act 4 (H) Equip A	20		Act 4 (H) Good	4																							0
+Act 4 (H) Set Bias B		20	80	1		768			30	NDTC	40		Act 1 (H) Junk	1		Act 4 (H) Equip B	20		Act 4 (H) Good	4																							0
+Act 5 (H) Set Bias A		20	81	1		768			30	NDTC	40		Act 1 (H) Junk	1		Act 5 (H) Equip A	20		Act 5 (H) Good	4																							0
+Act 5 (H) Set Bias B		20	83	1		768			30	NDTC	40		Act 1 (H) Junk	1		Act 5 (H) Equip B	20		Act 5 (H) Good	4																							0
+Act 5 (H) Set Bias C		20	85	1		768			30	NDTC	40		Act 1 (H) Junk	1		Act 5 (H) Equip C	20		Act 5 (H) Good	4																							0
 Act 1 Sacred Equip A		24	0	1						weap3	7		armo3	7																													0
 Act 1 Sacred Equip B		24	5	1						weap3	3		armo3	3		weap6	7		armo6	7																							0
 Act 1 Sacred Equip C		24	9	1						weap3	2		armo3	1		weap6	6		armo6	3		weap9	14		armo9	7		weap12	2		armo12	1											0
@@ -1180,137 +1180,137 @@ Act 4 (H) Rare Bias B		22	80	1			512		30	NDTC	40		Act 1 (H) Junk	1		Act 4 (H) Eq
 Act 5 (H) Rare Bias A		22	81	1			512		30	NDTC	40		Act 1 (H) Junk	1		Act 5 (H) Equip A	20		Act 5 (H) Good	4																							0
 Act 5 (H) Rare Bias B		22	83	1			512		30	NDTC	40		Act 1 (H) Junk	1		Act 5 (H) Equip B	20		Act 5 (H) Good	4																							0
 Act 5 (H) Rare Bias C		22	85	1			512		30	NDTC	40		Act 1 (H) Junk	1		Act 5 (H) Equip C	20		Act 5 (H) Good	4																							0
-Act 1 Elite A		23	0	2	90		768	1024	100	NDTC	42		Act 1 Equip A	49		Act 1 Good	4		Clue Gem 10	1	0%																						0
-Act 1 Elite B		23	5	2	90		768	1024	100	NDTC	42		Act 1 Equip B	49		Act 1 Good B	4																										0
-Act 1 Elite C		23	9	2	90		768	1024	100	NDTC	42		Act 1 Equip C	49		Act 1 Good C	4																										0
-Act 2 Elite A		23	12	2	90		768	1024	100	NDTC	42		Act 2 Equip A	49		Act 2 Good	4																										0
-Act 2 Elite B		23	15	2	90		768	1024	100	NDTC	42		Act 2 Equip B	49		Act 2 Good	4																										0
-Act 2 Elite C		23	18	2	90		768	1024	100	NDTC	42		Act 2 Equip C	49		Act 3 Good	4																										0
-Act 3 Elite A		23	20	2	90		768	1024	100	NDTC	42		Act 3 Equip A	49		Act 3 Good	4																										0
-Act 3 Elite B		23	22	2	90		768	1024	100	NDTC	42		Act 3 Equip B	49		Act 3 Good	4																										0
-Act 3 Elite C		23	24	2	90		768	1024	100	NDTC	42		Act 3 Equip C	49		Act 3 Good	4																										0
-Act 4 Elite A		23	26	2	90		768	1024	100	NDTC	42		Act 4 Equip A	49		Act 4 Good	4																										0
-Act 4 Elite B		23	29	2	90		768	1024	100	NDTC	42		Act 4 Equip B	49		Act 4 Good	4																										0
-Act 5 Elite A		23	32	2	90		768	1024	100	NDTC	42		Act 5 Equip A	49		Act 5 Good	4																										0
-Act 5 Elite B		23	34	2	90		768	1024	100	NDTC	42		Act 5 Equip B	49		Act 5 Good	4																										0
-Act 5 Elite C		23	36	2	90		768	1024	100	NDTC	42		Act 5 Equip C	49		Act 5 Good	4																										0
-Act 1 (N) Elite A		23	38	2	90		768	1024	100	NDTC	42		Act 1 (N) Equip A	49		Act 1 (N) Good	4																										0
-Act 1 (N) Elite B		23	40	2	90		768	1024	100	NDTC	42		Act 1 (N) Equip B	49		Act 1 (N) Good	4																										0
-Act 1 (N) Elite C		23	41	2	90		768	1024	100	NDTC	42		Act 1 (N) Equip B	49		Act 1 (N) Good	4																										0
-Act 2 (N) Elite A		23	42	2	90		768	1024	100	NDTC	42		Act 2 (N) Equip A	49		Act 2 (N) Good	4																										0
-Act 2 (N) Elite B		23	44	2	90		768	1024	100	NDTC	42		Act 2 (N) Equip B	49		Act 2 (N) Good	4																										0
-Act 2 (N) Elite C		23	45	2	90		768	1024	100	NDTC	42		Act 2 (N) Equip B	49		Act 2 (N) Good	4																										0
-Act 3 (N) Elite A		23	46	2	90		768	1024	100	NDTC	42		Act 3 (N) Equip A	49		Act 3 (N) Good	4																										0
-Act 3 (N) Elite B		23	48	2	90		768	1024	100	NDTC	42		Act 3 (N) Equip B	49		Act 3 (N) Good	4																										0
-Act 3 (N) Elite C		23	50	2	90		768	1024	100	NDTC	42		Act 3 (N) Equip B	49		Act 3 (N) Good	4																										0
-Act 4 (N) Elite A		23	51	2	90		768	1024	100	NDTC	42		Act 4 (N) Equip A	49		Act 4 (N) Good	4																										0
-Act 4 (N) Elite B		23	54	2	90		768	1024	100	NDTC	42		Act 4 (N) Equip B	49		Act 4 (N) Good	4																										0
-Act 5 (N) Elite A		23	57	2	90		768	1024	100	NDTC	42		Act 5 (N) Equip A	49		Act 5 (N) Good	4																										0
-Act 5 (N) Elite B		23	60	2	90		768	1024	100	NDTC	42		Act 5 (N) Equip B	49		Act 5 (N) Good	4																										0
-Act 5 (N) Elite C		23	62	2	90		768	1024	100	NDTC	42		Act 5 (N) Equip C	49		Act 5 (N) Good	4																										0
-Act 1 (H) Elite A		23	63	2	90		768	1024	100	NDTC	42		Act 1 (H) Equip A	49		Act 1 (H) Good	4																										0
-Act 1 (H) Elite B		23	66	2	90		768	1024	100	NDTC	42		Act 1 (H) Equip B	49		Act 1 (H) Good	4																										0
-Act 1 (H) Elite C		23	68	2	90		768	1024	100	NDTC	42		Act 1 (H) Equip B	49		Act 1 (H) Good	4																										0
-Act 2 (H) Elite A		23	69	2	90		768	1024	100	NDTC	42		Act 2 (H) Equip A	49		Act 2 (H) Good	4																										0
-Act 2 (H) Elite B		23	71	2	90		768	1024	100	NDTC	42		Act 2 (H) Equip B	49		Act 2 (H) Good	4																										0
-Act 2 (H) Elite C		23	72	2	90		768	1024	100	NDTC	42		Act 2 (H) Equip B	49		Act 2 (H) Good	4																										0
-Act 3 (H) Elite A		23	74	2	90		768	1024	100	NDTC	42		Act 3 (H) Equip A	49		Act 3 (H) Good	4																										0
-Act 3 (H) Elite B		23	75	2	90		768	1024	100	NDTC	42		Act 3 (H) Equip B	49		Act 3 (H) Good	4																										0
-Act 3 (H) Elite C		23	77	2	90		768	1024	100	NDTC	42		Act 3 (H) Equip B	49		Act 3 (H) Good	4																										0
-Act 4 (H) Elite A		23	78	2	90		768	1024	100	NDTC	42		Act 4 (H) Equip A	49		Act 4 (H) Good	4																										0
-Act 4 (H) Elite B		23	80	2	90		768	1024	100	NDTC	42		Act 4 (H) Equip B	49		Act 4 (H) Good	4																										0
-Act 5 (H) Elite A		23	81	2	90		768	1024	100	NDTC	42		Act 5 (H) Equip A	49		Act 5 (H) Good	4																										0
-Act 5 (H) Elite B		23	83	2	90		768	1024	100	NDTC	42		Act 5 (H) Equip B	49		Act 5 (H) Good	4																										0
-Act 5 (H) Elite C		23	85	2	90		768	1024	100	NDTC	42		Act 5 (H) Equip C	49		Act 5 (H) Good	4																										0
+Act 1 Elite A		23	0	2	256		768	1024	100	NDTC	42		Act 1 Equip A	49		Act 1 Good	4		Clue Gem 10	1	0%																						0
+Act 1 Elite B		23	5	2	256		768	1024	100	NDTC	42		Act 1 Equip B	49		Act 1 Good B	4																										0
+Act 1 Elite C		23	9	2	256		768	1024	100	NDTC	42		Act 1 Equip C	49		Act 1 Good C	4																										0
+Act 2 Elite A		23	12	2	256		768	1024	100	NDTC	42		Act 2 Equip A	49		Act 2 Good	4																										0
+Act 2 Elite B		23	15	2	256		768	1024	100	NDTC	42		Act 2 Equip B	49		Act 2 Good	4																										0
+Act 2 Elite C		23	18	2	256		768	1024	100	NDTC	42		Act 2 Equip C	49		Act 3 Good	4																										0
+Act 3 Elite A		23	20	2	256		768	1024	100	NDTC	42		Act 3 Equip A	49		Act 3 Good	4																										0
+Act 3 Elite B		23	22	2	256		768	1024	100	NDTC	42		Act 3 Equip B	49		Act 3 Good	4																										0
+Act 3 Elite C		23	24	2	256		768	1024	100	NDTC	42		Act 3 Equip C	49		Act 3 Good	4																										0
+Act 4 Elite A		23	26	2	256		768	1024	100	NDTC	42		Act 4 Equip A	49		Act 4 Good	4																										0
+Act 4 Elite B		23	29	2	256		768	1024	100	NDTC	42		Act 4 Equip B	49		Act 4 Good	4																										0
+Act 5 Elite A		23	32	2	256		768	1024	100	NDTC	42		Act 5 Equip A	49		Act 5 Good	4																										0
+Act 5 Elite B		23	34	2	256		768	1024	100	NDTC	42		Act 5 Equip B	49		Act 5 Good	4																										0
+Act 5 Elite C		23	36	2	256		768	1024	100	NDTC	42		Act 5 Equip C	49		Act 5 Good	4																										0
+Act 1 (N) Elite A		23	38	2	256		768	1024	100	NDTC	42		Act 1 (N) Equip A	49		Act 1 (N) Good	4																										0
+Act 1 (N) Elite B		23	40	2	256		768	1024	100	NDTC	42		Act 1 (N) Equip B	49		Act 1 (N) Good	4																										0
+Act 1 (N) Elite C		23	41	2	256		768	1024	100	NDTC	42		Act 1 (N) Equip B	49		Act 1 (N) Good	4																										0
+Act 2 (N) Elite A		23	42	2	256		768	1024	100	NDTC	42		Act 2 (N) Equip A	49		Act 2 (N) Good	4																										0
+Act 2 (N) Elite B		23	44	2	256		768	1024	100	NDTC	42		Act 2 (N) Equip B	49		Act 2 (N) Good	4																										0
+Act 2 (N) Elite C		23	45	2	256		768	1024	100	NDTC	42		Act 2 (N) Equip B	49		Act 2 (N) Good	4																										0
+Act 3 (N) Elite A		23	46	2	256		768	1024	100	NDTC	42		Act 3 (N) Equip A	49		Act 3 (N) Good	4																										0
+Act 3 (N) Elite B		23	48	2	256		768	1024	100	NDTC	42		Act 3 (N) Equip B	49		Act 3 (N) Good	4																										0
+Act 3 (N) Elite C		23	50	2	256		768	1024	100	NDTC	42		Act 3 (N) Equip B	49		Act 3 (N) Good	4																										0
+Act 4 (N) Elite A		23	51	2	256		768	1024	100	NDTC	42		Act 4 (N) Equip A	49		Act 4 (N) Good	4																										0
+Act 4 (N) Elite B		23	54	2	256		768	1024	100	NDTC	42		Act 4 (N) Equip B	49		Act 4 (N) Good	4																										0
+Act 5 (N) Elite A		23	57	2	256		768	1024	100	NDTC	42		Act 5 (N) Equip A	49		Act 5 (N) Good	4																										0
+Act 5 (N) Elite B		23	60	2	256		768	1024	100	NDTC	42		Act 5 (N) Equip B	49		Act 5 (N) Good	4																										0
+Act 5 (N) Elite C		23	62	2	256		768	1024	100	NDTC	42		Act 5 (N) Equip C	49		Act 5 (N) Good	4																										0
+Act 1 (H) Elite A		23	63	2	256		768	1024	100	NDTC	42		Act 1 (H) Equip A	49		Act 1 (H) Good	4																										0
+Act 1 (H) Elite B		23	66	2	256		768	1024	100	NDTC	42		Act 1 (H) Equip B	49		Act 1 (H) Good	4																										0
+Act 1 (H) Elite C		23	68	2	256		768	1024	100	NDTC	42		Act 1 (H) Equip B	49		Act 1 (H) Good	4																										0
+Act 2 (H) Elite A		23	69	2	256		768	1024	100	NDTC	42		Act 2 (H) Equip A	49		Act 2 (H) Good	4																										0
+Act 2 (H) Elite B		23	71	2	256		768	1024	100	NDTC	42		Act 2 (H) Equip B	49		Act 2 (H) Good	4																										0
+Act 2 (H) Elite C		23	72	2	256		768	1024	100	NDTC	42		Act 2 (H) Equip B	49		Act 2 (H) Good	4																										0
+Act 3 (H) Elite A		23	74	2	256		768	1024	100	NDTC	42		Act 3 (H) Equip A	49		Act 3 (H) Good	4																										0
+Act 3 (H) Elite B		23	75	2	256		768	1024	100	NDTC	42		Act 3 (H) Equip B	49		Act 3 (H) Good	4																										0
+Act 3 (H) Elite C		23	77	2	256		768	1024	100	NDTC	42		Act 3 (H) Equip B	49		Act 3 (H) Good	4																										0
+Act 4 (H) Elite A		23	78	2	256		768	1024	100	NDTC	42		Act 4 (H) Equip A	49		Act 4 (H) Good	4																										0
+Act 4 (H) Elite B		23	80	2	256		768	1024	100	NDTC	42		Act 4 (H) Equip B	49		Act 4 (H) Good	4																										0
+Act 5 (H) Elite A		23	81	2	256		768	1024	100	NDTC	42		Act 5 (H) Equip A	49		Act 5 (H) Good	4																										0
+Act 5 (H) Elite B		23	83	2	256		768	1024	100	NDTC	42		Act 5 (H) Equip B	49		Act 5 (H) Good	4																										0
+Act 5 (H) Elite C		23	85	2	256		768	1024	100	NDTC	42		Act 5 (H) Equip C	49		Act 5 (H) Good	4																										0
 Act 5 (H) Torajian Runes				3			512		50	NDTC	34		Act 1 (H) Junk	1		Act 5 (H) Equip C	5		Act 5 (H) Good Toraja Bias	20																							0
 IotSS Gold Bias				2						NDTC	15		gld	25		Act 5 Cast C	10																										0
 IotSS Gold Bias (N)				2						NDTC	10		gld	30		Act 5 (N) Cast C	10																										0
 IotSS Gold Bias (H)				2						NDTC	5		gld	35		Act 5 (H) Cast C	10																										0
-Act 1 Everything Bias A		22	0	1	22	32	64		30	NDTC	45		Act 1 Junk	1		Act 1 Equip A	20		Act 1 Good	4		Clue Gem 10	1	0%																			0
-Act 1 Everything Bias B		22	5	1	22	32	64		30	NDTC	45		Act 1 Junk	1		Act 1 Equip B	20		Act 1 Good B	4																							0
-Act 1 Everything Bias C		22	9	1	22	32	64		30	NDTC	45		Act 1 Junk	1		Act 1 Equip C	20		Act 1 Good C	4																							0
-Act 2 Everything Bias A		22	12	1	22	32	64		30	NDTC	45		Act 2 Junk	1		Act 2 Equip A	20		Act 2 Good	4																							0
-Act 2 Everything Bias B		22	15	1	22	32	64		30	NDTC	45		Act 2 Junk	1		Act 2 Equip B	20		Act 2 Good	4																							0
-Act 2 Everything Bias C		22	18	1	22	32	64		30	NDTC	45		Act 2 Junk	1		Act 2 Equip C	20		Act 3 Good	4																							0
-Act 3 Everything Bias A		22	20	1	22	32	64		30	NDTC	45		Act 3 Junk	1		Act 3 Equip A	20		Act 3 Good	4																							0
-Act 3 Everything Bias B		22	22	1	22	32	64		30	NDTC	45		Act 3 Junk	1		Act 3 Equip B	20		Act 3 Good	4																							0
-Act 3 Everything Bias C		22	24	1	22	32	64		30	NDTC	45		Act 3 Junk	1		Act 3 Equip C	20		Act 3 Good	4																							0
-Act 4 Everything Bias A		22	26	1	22	32	64		30	NDTC	45		Act 4 Junk	1		Act 4 Equip A	20		Act 4 Good	4																							0
-Act 4 Everything Bias B		22	29	1	22	32	64		30	NDTC	45		Act 4 Junk	1		Act 4 Equip B	20		Act 4 Good	4																							0
-Act 5 Everything Bias A		22	32	1	22	32	64		30	NDTC	45		Act 5 Junk	1		Act 5 Equip A	20		Act 5 Good	4																							0
-Act 5 Everything Bias B		22	34	1	22	32	64		30	NDTC	45		Act 5 Junk	1		Act 5 Equip B	20		Act 5 Good	4																							0
-Act 5 Everything Bias C		22	36	1	22	32	64		30	NDTC	45		Act 5 Junk	1		Act 5 Equip C	20		Act 5 Good	4																							0
-Act 1 (N) Everything Bias A		22	38	1	22	32	64		30	NDTC	45		Act 1 (N) Junk	1		Act 1 (N) Equip A	20		Act 1 (N) Good	4																							0
-Act 1 (N) Everything Bias B		22	40	1	22	32	64		30	NDTC	45		Act 1 (N) Junk	1		Act 1 (N) Equip B	20		Act 1 (N) Good	4																							0
-Act 1 (N) Everything Bias C		22	41	1	22	32	64		30	NDTC	45		Act 1 (N) Junk	1		Act 1 (N) Equip B	20		Act 1 (N) Good	4																							0
-Act 2 (N) Everything Bias A		22	42	1	22	32	64		30	NDTC	45		Act 2 (N) Junk	1		Act 2 (N) Equip A	20		Act 2 (N) Good	4																							0
-Act 2 (N) Everything Bias B		22	44	1	22	32	64		30	NDTC	45		Act 2 (N) Junk	1		Act 2 (N) Equip B	20		Act 2 (N) Good	4																							0
-Act 2 (N) Everything Bias C		22	45	1	22	32	64		30	NDTC	45		Act 2 (N) Junk	1		Act 2 (N) Equip B	20		Act 2 (N) Good	4																							0
-Act 3 (N) Everything Bias A		22	46	1	22	32	64		30	NDTC	45		Act 3 (N) Junk	1		Act 3 (N) Equip A	20		Act 3 (N) Good	4																							0
-Act 3 (N) Everything Bias B		22	48	1	22	32	64		30	NDTC	45		Act 3 (N) Junk	1		Act 3 (N) Equip B	20		Act 3 (N) Good	4																							0
-Act 3 (N) Everything Bias C		22	50	1	22	32	64		30	NDTC	45		Act 3 (N) Junk	1		Act 3 (N) Equip B	20		Act 3 (N) Good	4																							0
-Act 4 (N) Everything Bias A		22	51	1	22	32	64		30	NDTC	45		Act 4 (N) Junk	1		Act 4 (N) Equip A	20		Act 4 (N) Good	4																							0
-Act 4 (N) Everything Bias B		22	54	1	22	32	64		30	NDTC	45		Act 4 (N) Junk	1		Act 4 (N) Equip B	20		Act 4 (N) Good	4																							0
-Act 5 (N) Everything Bias A		22	57	1	22	32	64		30	NDTC	45		Act 5 (N) Junk	1		Act 5 (N) Equip A	20		Act 5 (N) Good	4																							0
-Act 5 (N) Everything Bias B		22	60	1	22	32	64		30	NDTC	45		Act 5 (N) Junk	1		Act 5 (N) Equip B	20		Act 5 (N) Good	4																							0
-Act 5 (N) Everything Bias C		22	62	1	22	32	64		30	NDTC	45		Act 5 (N) Junk	1		Act 5 (N) Equip C	20		Act 5 (N) Good	4																							0
-Act 1 (H) Everything Bias A		22	63	1	22	32	64		30	NDTC	45		Act 1 (H) Junk	1		Act 1 (H) Equip A	20		Act 1 (H) Good	4																							0
-Act 1 (H) Everything Bias B		22	66	1	22	32	64		30	NDTC	45		Act 1 (H) Junk	1		Act 1 (H) Equip B	20		Act 1 (H) Good	4																							0
-Act 1 (H) Everything Bias C		22	68	1	22	32	64		30	NDTC	45		Act 1 (H) Junk	1		Act 1 (H) Equip B	20		Act 1 (H) Good	4																							0
-Act 2 (H) Everything Bias A		22	69	1	22	32	64		30	NDTC	45		Act 1 (H) Junk	1		Act 2 (H) Equip A	20		Act 2 (H) Good	4																							0
-Act 2 (H) Everything Bias B		22	71	1	22	32	64		30	NDTC	45		Act 1 (H) Junk	1		Act 2 (H) Equip B	20		Act 2 (H) Good	4																							0
-Act 2 (H) Everything Bias C		22	72	1	22	32	64		30	NDTC	45		Act 1 (H) Junk	1		Act 2 (H) Equip B	20		Act 2 (H) Good	4																							0
-Act 3 (H) Everything Bias A		22	74	1	22	32	64		30	NDTC	45		Act 1 (H) Junk	1		Act 3 (H) Equip A	20		Act 3 (H) Good	4																							0
-Act 3 (H) Everything Bias B		22	75	1	22	32	64		30	NDTC	45		Act 1 (H) Junk	1		Act 3 (H) Equip B	20		Act 3 (H) Good	4																							0
-Act 3 (H) Everything Bias C		22	77	1	22	32	64		30	NDTC	45		Act 1 (H) Junk	1		Act 3 (H) Equip B	20		Act 3 (H) Good	4																							0
-Act 4 (H) Everything Bias A		22	78	1	22	32	64		30	NDTC	45		Act 1 (H) Junk	1		Act 4 (H) Equip A	20		Act 4 (H) Good	4																							0
-Act 4 (H) Everything Bias B		22	80	1	22	32	64		30	NDTC	45		Act 1 (H) Junk	1		Act 4 (H) Equip B	20		Act 4 (H) Good	4																							0
-Act 5 (H) Everything Bias A		22	81	1	22	32	64		30	NDTC	45		Act 1 (H) Junk	1		Act 5 (H) Equip A	20		Act 5 (H) Good	4																							0
-Act 5 (H) Everything Bias B		22	83	1	22	32	64		30	NDTC	45		Act 1 (H) Junk	1		Act 5 (H) Equip B	20		Act 5 (H) Good	4																							0
-Act 5 (H) Everything Bias C		22	85	1	22	32	64		30	NDTC	45		Act 1 (H) Junk	1		Act 5 (H) Equip C	20		Act 5 (H) Good	4																							0
+Act 1 Everything Bias A		22	0	1	64	64	64		30	NDTC	45		Act 1 Junk	1		Act 1 Equip A	20		Act 1 Good	4		Clue Gem 10	1	0%																			0
+Act 1 Everything Bias B		22	5	1	64	64	64		30	NDTC	45		Act 1 Junk	1		Act 1 Equip B	20		Act 1 Good B	4																							0
+Act 1 Everything Bias C		22	9	1	64	64	64		30	NDTC	45		Act 1 Junk	1		Act 1 Equip C	20		Act 1 Good C	4																							0
+Act 2 Everything Bias A		22	12	1	64	64	64		30	NDTC	45		Act 2 Junk	1		Act 2 Equip A	20		Act 2 Good	4																							0
+Act 2 Everything Bias B		22	15	1	64	64	64		30	NDTC	45		Act 2 Junk	1		Act 2 Equip B	20		Act 2 Good	4																							0
+Act 2 Everything Bias C		22	18	1	64	64	64		30	NDTC	45		Act 2 Junk	1		Act 2 Equip C	20		Act 3 Good	4																							0
+Act 3 Everything Bias A		22	20	1	64	64	64		30	NDTC	45		Act 3 Junk	1		Act 3 Equip A	20		Act 3 Good	4																							0
+Act 3 Everything Bias B		22	22	1	64	64	64		30	NDTC	45		Act 3 Junk	1		Act 3 Equip B	20		Act 3 Good	4																							0
+Act 3 Everything Bias C		22	24	1	64	64	64		30	NDTC	45		Act 3 Junk	1		Act 3 Equip C	20		Act 3 Good	4																							0
+Act 4 Everything Bias A		22	26	1	64	64	64		30	NDTC	45		Act 4 Junk	1		Act 4 Equip A	20		Act 4 Good	4																							0
+Act 4 Everything Bias B		22	29	1	64	64	64		30	NDTC	45		Act 4 Junk	1		Act 4 Equip B	20		Act 4 Good	4																							0
+Act 5 Everything Bias A		22	32	1	64	64	64		30	NDTC	45		Act 5 Junk	1		Act 5 Equip A	20		Act 5 Good	4																							0
+Act 5 Everything Bias B		22	34	1	64	64	64		30	NDTC	45		Act 5 Junk	1		Act 5 Equip B	20		Act 5 Good	4																							0
+Act 5 Everything Bias C		22	36	1	64	64	64		30	NDTC	45		Act 5 Junk	1		Act 5 Equip C	20		Act 5 Good	4																							0
+Act 1 (N) Everything Bias A		22	38	1	64	64	64		30	NDTC	45		Act 1 (N) Junk	1		Act 1 (N) Equip A	20		Act 1 (N) Good	4																							0
+Act 1 (N) Everything Bias B		22	40	1	64	64	64		30	NDTC	45		Act 1 (N) Junk	1		Act 1 (N) Equip B	20		Act 1 (N) Good	4																							0
+Act 1 (N) Everything Bias C		22	41	1	64	64	64		30	NDTC	45		Act 1 (N) Junk	1		Act 1 (N) Equip B	20		Act 1 (N) Good	4																							0
+Act 2 (N) Everything Bias A		22	42	1	64	64	64		30	NDTC	45		Act 2 (N) Junk	1		Act 2 (N) Equip A	20		Act 2 (N) Good	4																							0
+Act 2 (N) Everything Bias B		22	44	1	64	64	64		30	NDTC	45		Act 2 (N) Junk	1		Act 2 (N) Equip B	20		Act 2 (N) Good	4																							0
+Act 2 (N) Everything Bias C		22	45	1	64	64	64		30	NDTC	45		Act 2 (N) Junk	1		Act 2 (N) Equip B	20		Act 2 (N) Good	4																							0
+Act 3 (N) Everything Bias A		22	46	1	64	64	64		30	NDTC	45		Act 3 (N) Junk	1		Act 3 (N) Equip A	20		Act 3 (N) Good	4																							0
+Act 3 (N) Everything Bias B		22	48	1	64	64	64		30	NDTC	45		Act 3 (N) Junk	1		Act 3 (N) Equip B	20		Act 3 (N) Good	4																							0
+Act 3 (N) Everything Bias C		22	50	1	64	64	64		30	NDTC	45		Act 3 (N) Junk	1		Act 3 (N) Equip B	20		Act 3 (N) Good	4																							0
+Act 4 (N) Everything Bias A		22	51	1	64	64	64		30	NDTC	45		Act 4 (N) Junk	1		Act 4 (N) Equip A	20		Act 4 (N) Good	4																							0
+Act 4 (N) Everything Bias B		22	54	1	64	64	64		30	NDTC	45		Act 4 (N) Junk	1		Act 4 (N) Equip B	20		Act 4 (N) Good	4																							0
+Act 5 (N) Everything Bias A		22	57	1	64	64	64		30	NDTC	45		Act 5 (N) Junk	1		Act 5 (N) Equip A	20		Act 5 (N) Good	4																							0
+Act 5 (N) Everything Bias B		22	60	1	64	64	64		30	NDTC	45		Act 5 (N) Junk	1		Act 5 (N) Equip B	20		Act 5 (N) Good	4																							0
+Act 5 (N) Everything Bias C		22	62	1	64	64	64		30	NDTC	45		Act 5 (N) Junk	1		Act 5 (N) Equip C	20		Act 5 (N) Good	4																							0
+Act 1 (H) Everything Bias A		22	63	1	64	64	64		30	NDTC	45		Act 1 (H) Junk	1		Act 1 (H) Equip A	20		Act 1 (H) Good	4																							0
+Act 1 (H) Everything Bias B		22	66	1	64	64	64		30	NDTC	45		Act 1 (H) Junk	1		Act 1 (H) Equip B	20		Act 1 (H) Good	4																							0
+Act 1 (H) Everything Bias C		22	68	1	64	64	64		30	NDTC	45		Act 1 (H) Junk	1		Act 1 (H) Equip B	20		Act 1 (H) Good	4																							0
+Act 2 (H) Everything Bias A		22	69	1	64	64	64		30	NDTC	45		Act 1 (H) Junk	1		Act 2 (H) Equip A	20		Act 2 (H) Good	4																							0
+Act 2 (H) Everything Bias B		22	71	1	64	64	64		30	NDTC	45		Act 1 (H) Junk	1		Act 2 (H) Equip B	20		Act 2 (H) Good	4																							0
+Act 2 (H) Everything Bias C		22	72	1	64	64	64		30	NDTC	45		Act 1 (H) Junk	1		Act 2 (H) Equip B	20		Act 2 (H) Good	4																							0
+Act 3 (H) Everything Bias A		22	74	1	64	64	64		30	NDTC	45		Act 1 (H) Junk	1		Act 3 (H) Equip A	20		Act 3 (H) Good	4																							0
+Act 3 (H) Everything Bias B		22	75	1	64	64	64		30	NDTC	45		Act 1 (H) Junk	1		Act 3 (H) Equip B	20		Act 3 (H) Good	4																							0
+Act 3 (H) Everything Bias C		22	77	1	64	64	64		30	NDTC	45		Act 1 (H) Junk	1		Act 3 (H) Equip B	20		Act 3 (H) Good	4																							0
+Act 4 (H) Everything Bias A		22	78	1	64	64	64		30	NDTC	45		Act 1 (H) Junk	1		Act 4 (H) Equip A	20		Act 4 (H) Good	4																							0
+Act 4 (H) Everything Bias B		22	80	1	64	64	64		30	NDTC	45		Act 1 (H) Junk	1		Act 4 (H) Equip B	20		Act 4 (H) Good	4																							0
+Act 5 (H) Everything Bias A		22	81	1	64	64	64		30	NDTC	45		Act 1 (H) Junk	1		Act 5 (H) Equip A	20		Act 5 (H) Good	4																							0
+Act 5 (H) Everything Bias B		22	83	1	64	64	64		30	NDTC	45		Act 1 (H) Junk	1		Act 5 (H) Equip B	20		Act 5 (H) Good	4																							0
+Act 5 (H) Everything Bias C		22	85	1	64	64	64		30	NDTC	45		Act 1 (H) Junk	1		Act 5 (H) Equip C	20		Act 5 (H) Good	4																							0
 Dark Reward Charm				1	1024		1024	1024		BossKillerRing	1																																0
-Act 1 Sacred Bias A		25	0	1	140			1024	250	NDTC	300		Act 1 Junk	10		Act 1 Sacred Equip A	200		Act 1 Good	10		Dark Reward Charm	1																				0
-Act 1 Sacred Bias B		25	5	1	140			1024	250	NDTC	300		Act 1 Junk	10		Act 1 Sacred Equip B	200		Act 1 Good B	10		Dark Reward Charm	1																				0
-Act 1 Sacred Bias C		25	9	1	140			1024	250	NDTC	300		Act 1 Junk	10		Act 1 Sacred Equip C	200		Act 1 Good C	10		Dark Reward Charm	1																				0
-Act 2 Sacred Bias A		25	12	1	140			1024	250	NDTC	300		Act 2 Junk	10		Act 2 Sacred Equip A	200		Act 2 Good	10		Dark Reward Charm	1																				0
-Act 2 Sacred Bias B		25	15	1	140			1024	250	NDTC	300		Act 2 Junk	10		Act 2 Sacred Equip B	200		Act 2 Good	10		Dark Reward Charm	1																				0
-Act 2 Sacred Bias C		25	18	1	140			1024	250	NDTC	300		Act 2 Junk	10		Act 2 Sacred Equip C	200		Act 3 Good	10		Dark Reward Charm	1																				0
-Act 3 Sacred Bias A		25	20	1	140			1024	250	NDTC	300		Act 3 Junk	10		Act 3 Sacred Equip A	200		Act 3 Good	10		Dark Reward Charm	1																				0
-Act 3 Sacred Bias B		25	22	1	140			1024	250	NDTC	300		Act 3 Junk	10		Act 3 Sacred Equip B	200		Act 3 Good	10		Dark Reward Charm	1																				0
-Act 3 Sacred Bias C		25	24	1	140			1024	250	NDTC	300		Act 3 Junk	10		Act 3 Sacred Equip C	200		Act 3 Good	10		Dark Reward Charm	1																				0
-Act 4 Sacred Bias A		25	26	1	140			1024	250	NDTC	300		Act 4 Junk	10		Act 4 Sacred Equip A	200		Act 4 Good	10		Dark Reward Charm	1																				0
-Act 4 Sacred Bias B		25	29	1	140			1024	250	NDTC	300		Act 4 Junk	10		Act 4 Sacred Equip B	200		Act 4 Good	10		Dark Reward Charm	1																				0
-Act 5 Sacred Bias A		25	32	1	140			1024	250	NDTC	300		Act 5 Junk	10		Act 5 Sacred Equip A	200		Act 5 Good	10		Dark Reward Charm	1																				0
-Act 5 Sacred Bias B		25	34	1	140			1024	250	NDTC	300		Act 5 Junk	10		Act 5 Sacred Equip B	200		Act 5 Good	10		Dark Reward Charm	1																				0
-Act 5 Sacred Bias C		25	36	1	140			1024	250	NDTC	300		Act 5 Junk	10		Act 5 Sacred Equip C	200		Act 5 Good	10		Dark Reward Charm	1																				0
-Act 1 (N) Sacred Bias A		25	38	1	140			1024	250	NDTC	300		Act 1 (N) Junk	10		Act 1 (N) Sacred Equip A	200		Act 1 (N) Good	10		Dark Reward Charm	1																				0
-Act 1 (N) Sacred Bias B		25	40	1	140			1024	250	NDTC	300		Act 1 (N) Junk	10		Act 1 (N) Sacred Equip B	200		Act 1 (N) Good	10		Dark Reward Charm	1																				0
-Act 1 (N) Sacred Bias C		25	41	1	140			1024	250	NDTC	300		Act 1 (N) Junk	10		Act 1 (N) Sacred Equip C	200		Act 1 (N) Good	10		Dark Reward Charm	1																				0
-Act 2 (N) Sacred Bias A		25	42	1	140			1024	250	NDTC	300		Act 2 (N) Junk	10		Act 2 (N) Sacred Equip A	200		Act 2 (N) Good	10		Dark Reward Charm	1																				0
-Act 2 (N) Sacred Bias B		25	44	1	140			1024	250	NDTC	300		Act 2 (N) Junk	10		Act 2 (N) Sacred Equip B	200		Act 2 (N) Good	10		Dark Reward Charm	1																				0
-Act 2 (N) Sacred Bias C		25	45	1	140			1024	250	NDTC	300		Act 2 (N) Junk	10		Act 2 (N) Sacred Equip C	200		Act 2 (N) Good	10		Dark Reward Charm	1																				0
-Act 3 (N) Sacred Bias A		25	46	1	140			1024	250	NDTC	300		Act 3 (N) Junk	10		Act 3 (N) Sacred Equip A	200		Act 3 (N) Good	10		Dark Reward Charm	1																				0
-Act 3 (N) Sacred Bias B		25	48	1	140			1024	250	NDTC	300		Act 3 (N) Junk	10		Act 3 (N) Sacred Equip B	200		Act 3 (N) Good	10		Dark Reward Charm	1																				0
-Act 3 (N) Sacred Bias C		25	50	1	140			1024	250	NDTC	300		Act 3 (N) Junk	10		Act 3 (N) Sacred Equip C	200		Act 3 (N) Good	10		Dark Reward Charm	1																				0
-Act 4 (N) Sacred Bias A		25	51	1	140			1024	250	NDTC	300		Act 4 (N) Junk	10		Act 4 (N) Sacred Equip A	200		Act 4 (N) Good	10		Dark Reward Charm	1																				0
-Act 4 (N) Sacred Bias B		25	54	1	140			1024	250	NDTC	300		Act 4 (N) Junk	10		Act 4 (N) Sacred Equip B	200		Act 4 (N) Good	10		Dark Reward Charm	1																				0
-Act 5 (N) Sacred Bias A		25	57	1	140			1024	250	NDTC	300		Act 5 (N) Junk	10		Act 4 (N) Sacred Equip C	200		Act 5 (N) Good	10		Dark Reward Charm	1																				0
-Act 5 (N) Sacred Bias B		25	60	1	140			1024	250	NDTC	300		Act 5 (N) Junk	10		Act 5 (N) Sacred Equip A	200		Act 5 (N) Good	10		Dark Reward Charm	1																				0
-Act 5 (N) Sacred Bias C		25	62	1	140			1024	250	NDTC	300		Act 5 (N) Junk	10		Act 5 (N) Sacred Equip B	200		Act 5 (N) Good	10		Dark Reward Charm	1																				0
-Act 1 (H) Sacred Bias A		25	63	1	140			1024	250	NDTC	300		Act 1 (H) Junk	10		Act 5 (N) Sacred Equip C	200		Act 1 (H) Good	10		Dark Reward Charm	1																				0
-Act 1 (H) Sacred Bias B		25	66	1	140			1024	250	NDTC	300		Act 1 (H) Junk	10		Act 1 (H) Sacred Equip A	200		Act 1 (H) Good	10		Dark Reward Charm	1																				0
-Act 1 (H) Sacred Bias C		25	68	1	140			1024	250	NDTC	300		Act 1 (H) Junk	10		Act 1 (H) Sacred Equip B	200		Act 1 (H) Good	10		Dark Reward Charm	1																				0
-Act 2 (H) Sacred Bias A		25	69	1	140			1024	250	NDTC	300		Act 1 (H) Junk	10		Act 2 (H) Sacred Equip A	200		Act 2 (H) Good	10		Dark Reward Charm	1																				0
-Act 2 (H) Sacred Bias B		25	71	1	140			1024	250	NDTC	300		Act 1 (H) Junk	10		Act 2 (H) Sacred Equip B	200		Act 2 (H) Good	10		Dark Reward Charm	1																				0
-Act 2 (H) Sacred Bias C		25	72	1	140			1024	250	NDTC	300		Act 1 (H) Junk	10		Act 2 (H) Sacred Equip C	200		Act 2 (H) Good	10		Dark Reward Charm	1																				0
-Act 3 (H) Sacred Bias A		25	74	1	140			1024	250	NDTC	300		Act 1 (H) Junk	10		Act 3 (H) Sacred Equip A	200		Act 3 (H) Good	10		Dark Reward Charm	1																				0
-Act 3 (H) Sacred Bias B		25	75	1	140			1024	250	NDTC	300		Act 1 (H) Junk	10		Act 3 (H) Sacred Equip B	200		Act 3 (H) Good	10		Dark Reward Charm	1																				0
-Act 3 (H) Sacred Bias C		25	77	1	140			1024	250	NDTC	300		Act 1 (H) Junk	10		Act 3 (H) Sacred Equip C	200		Act 3 (H) Good	10		Dark Reward Charm	1																				0
-Act 4 (H) Sacred Bias A		25	78	1	140			1024	250	NDTC	300		Act 1 (H) Junk	10		Act 4 (H) Sacred Equip A	200		Act 4 (H) Good	10		Dark Reward Charm	1																				0
-Act 4 (H) Sacred Bias B		25	80	1	140			1024	250	NDTC	300		Act 1 (H) Junk	10		Act 4 (H) Sacred Equip B	200		Act 4 (H) Good	10		Dark Reward Charm	1																				0
-Act 5 (H) Sacred Bias A		25	81	1	140			1024	250	NDTC	300		Act 1 (H) Junk	10		Act 5 (H) Sacred Equip A	200		Act 5 (H) Good	10		Dark Reward Charm	1																				0
-Act 5 (H) Sacred Bias B		25	83	1	140			1024	250	NDTC	300		Act 1 (H) Junk	10		Act 5 (H) Sacred Equip B	200		Act 5 (H) Good	10		Dark Reward Charm	1																				0
-Act 5 (H) Sacred Bias C		25	85	1	140			1024	250	NDTC	300		Act 1 (H) Junk	10		Act 5 (H) Sacred Equip C	200		Act 5 (H) Good	10		Dark Reward Charm	1																				0
+Act 1 Sacred Bias A		25	0	1	384			1024	250	NDTC	300		Act 1 Junk	10		Act 1 Sacred Equip A	200		Act 1 Good	10		Dark Reward Charm	1																				0
+Act 1 Sacred Bias B		25	5	1	384			1024	250	NDTC	300		Act 1 Junk	10		Act 1 Sacred Equip B	200		Act 1 Good B	10		Dark Reward Charm	1																				0
+Act 1 Sacred Bias C		25	9	1	384			1024	250	NDTC	300		Act 1 Junk	10		Act 1 Sacred Equip C	200		Act 1 Good C	10		Dark Reward Charm	1																				0
+Act 2 Sacred Bias A		25	12	1	384			1024	250	NDTC	300		Act 2 Junk	10		Act 2 Sacred Equip A	200		Act 2 Good	10		Dark Reward Charm	1																				0
+Act 2 Sacred Bias B		25	15	1	384			1024	250	NDTC	300		Act 2 Junk	10		Act 2 Sacred Equip B	200		Act 2 Good	10		Dark Reward Charm	1																				0
+Act 2 Sacred Bias C		25	18	1	384			1024	250	NDTC	300		Act 2 Junk	10		Act 2 Sacred Equip C	200		Act 3 Good	10		Dark Reward Charm	1																				0
+Act 3 Sacred Bias A		25	20	1	384			1024	250	NDTC	300		Act 3 Junk	10		Act 3 Sacred Equip A	200		Act 3 Good	10		Dark Reward Charm	1																				0
+Act 3 Sacred Bias B		25	22	1	384			1024	250	NDTC	300		Act 3 Junk	10		Act 3 Sacred Equip B	200		Act 3 Good	10		Dark Reward Charm	1																				0
+Act 3 Sacred Bias C		25	24	1	384			1024	250	NDTC	300		Act 3 Junk	10		Act 3 Sacred Equip C	200		Act 3 Good	10		Dark Reward Charm	1																				0
+Act 4 Sacred Bias A		25	26	1	384			1024	250	NDTC	300		Act 4 Junk	10		Act 4 Sacred Equip A	200		Act 4 Good	10		Dark Reward Charm	1																				0
+Act 4 Sacred Bias B		25	29	1	384			1024	250	NDTC	300		Act 4 Junk	10		Act 4 Sacred Equip B	200		Act 4 Good	10		Dark Reward Charm	1																				0
+Act 5 Sacred Bias A		25	32	1	384			1024	250	NDTC	300		Act 5 Junk	10		Act 5 Sacred Equip A	200		Act 5 Good	10		Dark Reward Charm	1																				0
+Act 5 Sacred Bias B		25	34	1	384			1024	250	NDTC	300		Act 5 Junk	10		Act 5 Sacred Equip B	200		Act 5 Good	10		Dark Reward Charm	1																				0
+Act 5 Sacred Bias C		25	36	1	384			1024	250	NDTC	300		Act 5 Junk	10		Act 5 Sacred Equip C	200		Act 5 Good	10		Dark Reward Charm	1																				0
+Act 1 (N) Sacred Bias A		25	38	1	384			1024	250	NDTC	300		Act 1 (N) Junk	10		Act 1 (N) Sacred Equip A	200		Act 1 (N) Good	10		Dark Reward Charm	1																				0
+Act 1 (N) Sacred Bias B		25	40	1	384			1024	250	NDTC	300		Act 1 (N) Junk	10		Act 1 (N) Sacred Equip B	200		Act 1 (N) Good	10		Dark Reward Charm	1																				0
+Act 1 (N) Sacred Bias C		25	41	1	384			1024	250	NDTC	300		Act 1 (N) Junk	10		Act 1 (N) Sacred Equip C	200		Act 1 (N) Good	10		Dark Reward Charm	1																				0
+Act 2 (N) Sacred Bias A		25	42	1	384			1024	250	NDTC	300		Act 2 (N) Junk	10		Act 2 (N) Sacred Equip A	200		Act 2 (N) Good	10		Dark Reward Charm	1																				0
+Act 2 (N) Sacred Bias B		25	44	1	384			1024	250	NDTC	300		Act 2 (N) Junk	10		Act 2 (N) Sacred Equip B	200		Act 2 (N) Good	10		Dark Reward Charm	1																				0
+Act 2 (N) Sacred Bias C		25	45	1	384			1024	250	NDTC	300		Act 2 (N) Junk	10		Act 2 (N) Sacred Equip C	200		Act 2 (N) Good	10		Dark Reward Charm	1																				0
+Act 3 (N) Sacred Bias A		25	46	1	384			1024	250	NDTC	300		Act 3 (N) Junk	10		Act 3 (N) Sacred Equip A	200		Act 3 (N) Good	10		Dark Reward Charm	1																				0
+Act 3 (N) Sacred Bias B		25	48	1	384			1024	250	NDTC	300		Act 3 (N) Junk	10		Act 3 (N) Sacred Equip B	200		Act 3 (N) Good	10		Dark Reward Charm	1																				0
+Act 3 (N) Sacred Bias C		25	50	1	384			1024	250	NDTC	300		Act 3 (N) Junk	10		Act 3 (N) Sacred Equip C	200		Act 3 (N) Good	10		Dark Reward Charm	1																				0
+Act 4 (N) Sacred Bias A		25	51	1	384			1024	250	NDTC	300		Act 4 (N) Junk	10		Act 4 (N) Sacred Equip A	200		Act 4 (N) Good	10		Dark Reward Charm	1																				0
+Act 4 (N) Sacred Bias B		25	54	1	384			1024	250	NDTC	300		Act 4 (N) Junk	10		Act 4 (N) Sacred Equip B	200		Act 4 (N) Good	10		Dark Reward Charm	1																				0
+Act 5 (N) Sacred Bias A		25	57	1	384			1024	250	NDTC	300		Act 5 (N) Junk	10		Act 4 (N) Sacred Equip C	200		Act 5 (N) Good	10		Dark Reward Charm	1																				0
+Act 5 (N) Sacred Bias B		25	60	1	384			1024	250	NDTC	300		Act 5 (N) Junk	10		Act 5 (N) Sacred Equip A	200		Act 5 (N) Good	10		Dark Reward Charm	1																				0
+Act 5 (N) Sacred Bias C		25	62	1	384			1024	250	NDTC	300		Act 5 (N) Junk	10		Act 5 (N) Sacred Equip B	200		Act 5 (N) Good	10		Dark Reward Charm	1																				0
+Act 1 (H) Sacred Bias A		25	63	1	384			1024	250	NDTC	300		Act 1 (H) Junk	10		Act 5 (N) Sacred Equip C	200		Act 1 (H) Good	10		Dark Reward Charm	1																				0
+Act 1 (H) Sacred Bias B		25	66	1	384			1024	250	NDTC	300		Act 1 (H) Junk	10		Act 1 (H) Sacred Equip A	200		Act 1 (H) Good	10		Dark Reward Charm	1																				0
+Act 1 (H) Sacred Bias C		25	68	1	384			1024	250	NDTC	300		Act 1 (H) Junk	10		Act 1 (H) Sacred Equip B	200		Act 1 (H) Good	10		Dark Reward Charm	1																				0
+Act 2 (H) Sacred Bias A		25	69	1	384			1024	250	NDTC	300		Act 1 (H) Junk	10		Act 2 (H) Sacred Equip A	200		Act 2 (H) Good	10		Dark Reward Charm	1																				0
+Act 2 (H) Sacred Bias B		25	71	1	384			1024	250	NDTC	300		Act 1 (H) Junk	10		Act 2 (H) Sacred Equip B	200		Act 2 (H) Good	10		Dark Reward Charm	1																				0
+Act 2 (H) Sacred Bias C		25	72	1	384			1024	250	NDTC	300		Act 1 (H) Junk	10		Act 2 (H) Sacred Equip C	200		Act 2 (H) Good	10		Dark Reward Charm	1																				0
+Act 3 (H) Sacred Bias A		25	74	1	384			1024	250	NDTC	300		Act 1 (H) Junk	10		Act 3 (H) Sacred Equip A	200		Act 3 (H) Good	10		Dark Reward Charm	1																				0
+Act 3 (H) Sacred Bias B		25	75	1	384			1024	250	NDTC	300		Act 1 (H) Junk	10		Act 3 (H) Sacred Equip B	200		Act 3 (H) Good	10		Dark Reward Charm	1																				0
+Act 3 (H) Sacred Bias C		25	77	1	384			1024	250	NDTC	300		Act 1 (H) Junk	10		Act 3 (H) Sacred Equip C	200		Act 3 (H) Good	10		Dark Reward Charm	1																				0
+Act 4 (H) Sacred Bias A		25	78	1	384			1024	250	NDTC	300		Act 1 (H) Junk	10		Act 4 (H) Sacred Equip A	200		Act 4 (H) Good	10		Dark Reward Charm	1																				0
+Act 4 (H) Sacred Bias B		25	80	1	384			1024	250	NDTC	300		Act 1 (H) Junk	10		Act 4 (H) Sacred Equip B	200		Act 4 (H) Good	10		Dark Reward Charm	1																				0
+Act 5 (H) Sacred Bias A		25	81	1	384			1024	250	NDTC	300		Act 1 (H) Junk	10		Act 5 (H) Sacred Equip A	200		Act 5 (H) Good	10		Dark Reward Charm	1																				0
+Act 5 (H) Sacred Bias B		25	83	1	384			1024	250	NDTC	300		Act 1 (H) Junk	10		Act 5 (H) Sacred Equip B	200		Act 5 (H) Good	10		Dark Reward Charm	1																				0
+Act 5 (H) Sacred Bias C		25	85	1	384			1024	250	NDTC	300		Act 1 (H) Junk	10		Act 5 (H) Sacred Equip C	200		Act 5 (H) Good	10		Dark Reward Charm	1																				0
 Act 1 Robot Bias A		26	0	1				1024	250	NDTC	500		Act 1 Junk	10		Act 1 Robot Equip A	200		Act 1 Good	40																							0
 Act 1 Robot Bias B		26	5	1				1024	250	NDTC	500		Act 1 Junk	10		Act 1 Robot Equip B	200		Act 1 Good B	40																							0
 Act 1 Robot Bias C		26	9	1				1024	250	NDTC	500		Act 1 Junk	10		Act 1 Robot Equip C	200		Act 1 Good C	40																							0
@@ -1375,48 +1375,48 @@ Laz Surprise Reward				-3						Laz Surprise Reward Charm	1		Laz Surprise Trinket
 Robotic Bias				1						Blank TC	6		Act 5 Robot Bias C	1																													0
 Robotic (N) Bias				1						Blank TC	5		Act 5 (N) Robot Bias C	1																													0
 Robotic (H) Bias				1						Blank TC	3		Act 5 (H) Robot Bias C	1																													0
-Act 1 Heroic Bias A		19	0	1	200	256	1024	1024	50	NDTC	80		Act 1 Equip A	40	24%	Act 1 Good	5	2%	Clue Gem 10	1				0%																			0
-Act 1 Heroic Bias B		19	5	1	200	256	1024	1024	50	NDTC	80		Act 1 Equip B	40	24%	Act 1 Good B	5	2%																									0
-Act 1 Heroic Bias C		19	9	1	200	256	1024	1024	50	NDTC	80		Act 1 Equip C	40	24%	Act 1 Good C	5	2%																									0
-Act 2 Heroic Bias A		19	12	1	200	256	1024	1024	50	NDTC	80		Act 2 Equip A	40	24%	Act 2 Good	5	2%																									0
-Act 2 Heroic Bias B		19	15	1	200	256	1024	1024	50	NDTC	80		Act 2 Equip B	40	24%	Act 2 Good	5	2%																									0
-Act 2 Heroic Bias C		19	18	1	200	256	1024	1024	50	NDTC	80		Act 2 Equip C	40	24%	Act 3 Good	5	2%																									0
-Act 3 Heroic Bias A		19	20	1	200	256	1024	1024	50	NDTC	80		Act 3 Equip A	40	24%	Act 3 Good	5	2%																									0
-Act 3 Heroic Bias B		19	22	1	200	256	1024	1024	50	NDTC	80		Act 3 Equip B	40	24%	Act 3 Good	5	2%																									0
-Act 3 Heroic Bias C		19	24	1	200	256	1024	1024	50	NDTC	80		Act 3 Equip C	40	24%	Act 3 Good	5	2%																									0
-Act 4 Heroic Bias A		19	26	1	200	256	1024	1024	50	NDTC	80		Act 4 Equip A	40	24%	Act 4 Good	5	2%																									0
-Act 4 Heroic Bias B		19	29	1	200	256	1024	1024	50	NDTC	80		Act 4 Equip B	40	24%	Act 4 Good	5	2%																									0
-Act 5 Heroic Bias A		19	32	1	200	256	1024	1024	50	NDTC	80		Act 5 Equip A	40	24%	Act 5 Good	5	2%																									0
-Act 5 Heroic Bias B		19	34	1	200	256	1024	1024	50	NDTC	80		Act 5 Equip B	40	24%	Act 5 Good	5	2%																									0
-Act 5 Heroic Bias C		19	36	1	200	256	1024	1024	50	NDTC	80		Act 5 Equip C	40	24%	Act 5 Good	5	2%																									0
-Act 1 (N) Heroic Bias A		19	38	1	200	256	1024	1024	50	NDTC	80		Act 1 (N) Equip A	40	24%	Act 1 (N) Good	5	2%																									0
-Act 1 (N) Heroic Bias B		19	40	1	200	256	1024	1024	50	NDTC	80		Act 1 (N) Equip B	40	24%	Act 1 (N) Good	5	2%																									0
-Act 1 (N) Heroic Bias C		19	41	1	200	256	1024	1024	50	NDTC	80		Act 1 (N) Equip B	40	24%	Act 1 (N) Good	5	2%																									0
-Act 2 (N) Heroic Bias A		19	42	1	200	256	1024	1024	50	NDTC	80		Act 2 (N) Equip A	40	24%	Act 2 (N) Good	5	2%																									0
-Act 2 (N) Heroic Bias B		19	44	1	200	256	1024	1024	50	NDTC	80		Act 2 (N) Equip B	40	24%	Act 2 (N) Good	5	2%																									0
-Act 2 (N) Heroic Bias C		19	45	1	200	256	1024	1024	50	NDTC	80		Act 2 (N) Equip B	40	24%	Act 2 (N) Good	5	2%																									0
-Act 3 (N) Heroic Bias A		19	46	1	200	256	1024	1024	50	NDTC	80		Act 3 (N) Equip A	40	24%	Act 3 (N) Good	5	2%																									0
-Act 3 (N) Heroic Bias B		19	48	1	200	256	1024	1024	50	NDTC	80		Act 3 (N) Equip B	40	24%	Act 3 (N) Good	5	2%																									0
-Act 3 (N) Heroic Bias C		19	50	1	200	256	1024	1024	50	NDTC	80		Act 3 (N) Equip B	40	24%	Act 3 (N) Good	5	2%																									0
-Act 4 (N) Heroic Bias A		19	51	1	200	256	1024	1024	50	NDTC	80		Act 4 (N) Equip A	40	24%	Act 4 (N) Good	5	2%																									0
-Act 4 (N) Heroic Bias B		19	54	1	200	256	1024	1024	50	NDTC	80		Act 4 (N) Equip B	40	24%	Act 4 (N) Good	5	2%																									0
-Act 5 (N) Heroic Bias A		19	57	1	200	256	1024	1024	50	NDTC	80		Act 5 (N) Equip A	40	24%	Act 5 (N) Good	5	2%																									0
-Act 5 (N) Heroic Bias B		19	60	1	200	256	1024	1024	50	NDTC	80		Act 5 (N) Equip B	40	24%	Act 5 (N) Good	5	2%																									0
-Act 5 (N) Heroic Bias C		19	62	1	200	256	1024	1024	50	NDTC	80		Act 5 (N) Equip C	40	24%	Act 5 (N) Good	5	2%																									0
-Act 1 (H) Heroic Bias A		19	63	1	200	256	1024	1024	50	NDTC	80		Act 1 (H) Equip A	40	24%	Act 1 (H) Good	5	2%																									0
-Act 1 (H) Heroic Bias B		19	66	1	200	256	1024	1024	50	NDTC	80		Act 1 (H) Equip B	40	24%	Act 1 (H) Good	5	2%																									0
-Act 1 (H) Heroic Bias C		19	68	1	200	256	1024	1024	50	NDTC	80		Act 1 (H) Equip B	40	24%	Act 1 (H) Good	5	2%																									0
-Act 2 (H) Heroic Bias A		19	69	1	200	256	1024	1024	50	NDTC	80		Act 2 (H) Equip A	40	24%	Act 2 (H) Good	5	2%																									0
-Act 2 (H) Heroic Bias B		19	71	1	200	256	1024	1024	50	NDTC	80		Act 2 (H) Equip B	40	24%	Act 2 (H) Good	5	2%																									0
-Act 2 (H) Heroic Bias C		19	72	1	200	256	1024	1024	50	NDTC	80		Act 2 (H) Equip B	40	24%	Act 2 (H) Good	5	2%																									0
-Act 3 (H) Heroic Bias A		19	74	1	200	256	1024	1024	50	NDTC	80		Act 3 (H) Equip A	40	24%	Act 3 (H) Good	5	2%																									0
-Act 3 (H) Heroic Bias B		19	75	1	200	256	1024	1024	50	NDTC	80		Act 3 (H) Equip B	40	24%	Act 3 (H) Good	5	2%																									0
-Act 3 (H) Heroic Bias C		19	77	1	200	256	1024	1024	50	NDTC	80		Act 3 (H) Equip B	40	24%	Act 3 (H) Good	5	2%																									0
-Act 4 (H) Heroic Bias A		19	78	1	200	256	1024	1024	50	NDTC	80		Act 4 (H) Equip A	40	24%	Act 4 (H) Good	5	2%																									0
-Act 4 (H) Heroic Bias B		19	80	1	200	256	1024	1024	50	NDTC	80		Act 4 (H) Equip B	40	24%	Act 4 (H) Good	5	2%																									0
-Act 5 (H) Heroic Bias A		19	81	1	200	256	1024	1024	50	NDTC	80		Act 5 (H) Equip A	40	24%	Act 5 (H) Good	5	2%																									0
-Act 5 (H) Heroic Bias B		19	83	1	200	256	1024	1024	50	NDTC	80		Act 5 (H) Equip B	40	24%	Act 5 (H) Good	5	2%																									0
-Act 5 (H) Heroic Bias C		19	85	1	200	256	1024	1024	50	NDTC	80		Act 5 (H) Equip C	40	24%	Act 5 (H) Good	5	2%																									0
+Act 1 Heroic Bias A		19	0	1	512	512	1024	1024	50	NDTC	80		Act 1 Equip A	40	24%	Act 1 Good	5	2%	Clue Gem 10	1				0%																			0
+Act 1 Heroic Bias B		19	5	1	512	512	1024	1024	50	NDTC	80		Act 1 Equip B	40	24%	Act 1 Good B	5	2%																									0
+Act 1 Heroic Bias C		19	9	1	512	512	1024	1024	50	NDTC	80		Act 1 Equip C	40	24%	Act 1 Good C	5	2%																									0
+Act 2 Heroic Bias A		19	12	1	512	512	1024	1024	50	NDTC	80		Act 2 Equip A	40	24%	Act 2 Good	5	2%																									0
+Act 2 Heroic Bias B		19	15	1	512	512	1024	1024	50	NDTC	80		Act 2 Equip B	40	24%	Act 2 Good	5	2%																									0
+Act 2 Heroic Bias C		19	18	1	512	512	1024	1024	50	NDTC	80		Act 2 Equip C	40	24%	Act 3 Good	5	2%																									0
+Act 3 Heroic Bias A		19	20	1	512	512	1024	1024	50	NDTC	80		Act 3 Equip A	40	24%	Act 3 Good	5	2%																									0
+Act 3 Heroic Bias B		19	22	1	512	512	1024	1024	50	NDTC	80		Act 3 Equip B	40	24%	Act 3 Good	5	2%																									0
+Act 3 Heroic Bias C		19	24	1	512	512	1024	1024	50	NDTC	80		Act 3 Equip C	40	24%	Act 3 Good	5	2%																									0
+Act 4 Heroic Bias A		19	26	1	512	512	1024	1024	50	NDTC	80		Act 4 Equip A	40	24%	Act 4 Good	5	2%																									0
+Act 4 Heroic Bias B		19	29	1	512	512	1024	1024	50	NDTC	80		Act 4 Equip B	40	24%	Act 4 Good	5	2%																									0
+Act 5 Heroic Bias A		19	32	1	512	512	1024	1024	50	NDTC	80		Act 5 Equip A	40	24%	Act 5 Good	5	2%																									0
+Act 5 Heroic Bias B		19	34	1	512	512	1024	1024	50	NDTC	80		Act 5 Equip B	40	24%	Act 5 Good	5	2%																									0
+Act 5 Heroic Bias C		19	36	1	512	512	1024	1024	50	NDTC	80		Act 5 Equip C	40	24%	Act 5 Good	5	2%																									0
+Act 1 (N) Heroic Bias A		19	38	1	512	512	1024	1024	50	NDTC	80		Act 1 (N) Equip A	40	24%	Act 1 (N) Good	5	2%																									0
+Act 1 (N) Heroic Bias B		19	40	1	512	512	1024	1024	50	NDTC	80		Act 1 (N) Equip B	40	24%	Act 1 (N) Good	5	2%																									0
+Act 1 (N) Heroic Bias C		19	41	1	512	512	1024	1024	50	NDTC	80		Act 1 (N) Equip B	40	24%	Act 1 (N) Good	5	2%																									0
+Act 2 (N) Heroic Bias A		19	42	1	512	512	1024	1024	50	NDTC	80		Act 2 (N) Equip A	40	24%	Act 2 (N) Good	5	2%																									0
+Act 2 (N) Heroic Bias B		19	44	1	512	512	1024	1024	50	NDTC	80		Act 2 (N) Equip B	40	24%	Act 2 (N) Good	5	2%																									0
+Act 2 (N) Heroic Bias C		19	45	1	512	512	1024	1024	50	NDTC	80		Act 2 (N) Equip B	40	24%	Act 2 (N) Good	5	2%																									0
+Act 3 (N) Heroic Bias A		19	46	1	512	512	1024	1024	50	NDTC	80		Act 3 (N) Equip A	40	24%	Act 3 (N) Good	5	2%																									0
+Act 3 (N) Heroic Bias B		19	48	1	512	512	1024	1024	50	NDTC	80		Act 3 (N) Equip B	40	24%	Act 3 (N) Good	5	2%																									0
+Act 3 (N) Heroic Bias C		19	50	1	512	512	1024	1024	50	NDTC	80		Act 3 (N) Equip B	40	24%	Act 3 (N) Good	5	2%																									0
+Act 4 (N) Heroic Bias A		19	51	1	512	512	1024	1024	50	NDTC	80		Act 4 (N) Equip A	40	24%	Act 4 (N) Good	5	2%																									0
+Act 4 (N) Heroic Bias B		19	54	1	512	512	1024	1024	50	NDTC	80		Act 4 (N) Equip B	40	24%	Act 4 (N) Good	5	2%																									0
+Act 5 (N) Heroic Bias A		19	57	1	512	512	1024	1024	50	NDTC	80		Act 5 (N) Equip A	40	24%	Act 5 (N) Good	5	2%																									0
+Act 5 (N) Heroic Bias B		19	60	1	512	512	1024	1024	50	NDTC	80		Act 5 (N) Equip B	40	24%	Act 5 (N) Good	5	2%																									0
+Act 5 (N) Heroic Bias C		19	62	1	512	512	1024	1024	50	NDTC	80		Act 5 (N) Equip C	40	24%	Act 5 (N) Good	5	2%																									0
+Act 1 (H) Heroic Bias A		19	63	1	512	512	1024	1024	50	NDTC	80		Act 1 (H) Equip A	40	24%	Act 1 (H) Good	5	2%																									0
+Act 1 (H) Heroic Bias B		19	66	1	512	512	1024	1024	50	NDTC	80		Act 1 (H) Equip B	40	24%	Act 1 (H) Good	5	2%																									0
+Act 1 (H) Heroic Bias C		19	68	1	512	512	1024	1024	50	NDTC	80		Act 1 (H) Equip B	40	24%	Act 1 (H) Good	5	2%																									0
+Act 2 (H) Heroic Bias A		19	69	1	512	512	1024	1024	50	NDTC	80		Act 2 (H) Equip A	40	24%	Act 2 (H) Good	5	2%																									0
+Act 2 (H) Heroic Bias B		19	71	1	512	512	1024	1024	50	NDTC	80		Act 2 (H) Equip B	40	24%	Act 2 (H) Good	5	2%																									0
+Act 2 (H) Heroic Bias C		19	72	1	512	512	1024	1024	50	NDTC	80		Act 2 (H) Equip B	40	24%	Act 2 (H) Good	5	2%																									0
+Act 3 (H) Heroic Bias A		19	74	1	512	512	1024	1024	50	NDTC	80		Act 3 (H) Equip A	40	24%	Act 3 (H) Good	5	2%																									0
+Act 3 (H) Heroic Bias B		19	75	1	512	512	1024	1024	50	NDTC	80		Act 3 (H) Equip B	40	24%	Act 3 (H) Good	5	2%																									0
+Act 3 (H) Heroic Bias C		19	77	1	512	512	1024	1024	50	NDTC	80		Act 3 (H) Equip B	40	24%	Act 3 (H) Good	5	2%																									0
+Act 4 (H) Heroic Bias A		19	78	1	512	512	1024	1024	50	NDTC	80		Act 4 (H) Equip A	40	24%	Act 4 (H) Good	5	2%																									0
+Act 4 (H) Heroic Bias B		19	80	1	512	512	1024	1024	50	NDTC	80		Act 4 (H) Equip B	40	24%	Act 4 (H) Good	5	2%																									0
+Act 5 (H) Heroic Bias A		19	81	1	512	512	1024	1024	50	NDTC	80		Act 5 (H) Equip A	40	24%	Act 5 (H) Good	5	2%																									0
+Act 5 (H) Heroic Bias B		19	83	1	512	512	1024	1024	50	NDTC	80		Act 5 (H) Equip B	40	24%	Act 5 (H) Good	5	2%																									0
+Act 5 (H) Heroic Bias C		19	85	1	512	512	1024	1024	50	NDTC	80		Act 5 (H) Equip C	40	24%	Act 5 (H) Good	5	2%																									0
 TE Shadows				-1						!@1	1																																0
 TE Landmass				-1						!@2	1																																0
 TE Glowing				-1						!@3	1																																0
@@ -1467,38 +1467,3 @@ Act 4 (H) Vizjun B		27	80	3					100	NDTC	600		Act 4 (H) Equip B	10		Act 4 (H) Go
 Act 5 (H) Vizjun A		27	81	3					100	NDTC	600		Act 5 (H) Equip A	10		Act 5 (H) Good	5		jew	2																							0
 Act 5 (H) Vizjun B		27	83	3					100	NDTC	600		Act 5 (H) Equip B	10		Act 5 (H) Good	5		jew	2																							0
 Act 5 (H) Vizjun C		27	85	3					100	NDTC	600		Act 5 (H) Equip C	10		Act 5 (H) Good	5		jew	2																							0
-Kabraxis Charm				1	1024					KabraxisSoul	1																																0
-Kabraxis Trophy				1						bxt	1		Blank TC	49																													0
-UnknkownSkullX				1						r99	25		Blank TC	25																													0
-Kabraxis Equip Drop			85	2	1024	0	0	0		weap81	4		armo81	1		weap84	6		armo84	3		weap87	14		armo87	7		weap90	6		armo90	3							266	35	1565	1	0
-Kabraxis Drop				-4						Kabraxis Charm	1		Kabraxis Trophy	1		Kabraxis Equip Drop	1		UnknkownSkullX	1																							0
-TC-Fire				1						Kx6	8		Blank TC	42																													0
-TC-Cold				1						Kx5	8		Blank TC	42																													0
-TC-Pois				1						Kx3	8		Blank TC	42																													0
-TC-Magic				1						Kx2	8		Blank TC	42																													0
-TC-Phys				1						Kx1	8		Blank TC	42																													0
-TC-Ltng				1						Kx4	8		Blank TC	42																													0
-Uldyssian Charm				1	1024					UldyssianCharm	25		Blank TC	25																													0
-Uldyssian Trophy				1						##/	1		Blank TC	49																													0
-Uldyssian Equip Drop			85	2	1024	0	0	0		weap81	4		armo81	1		weap84	6		armo84	3		weap87	14		armo87	7		weap90	6		armo90	3							266	35	1565	1	0
-Uldyssian Drop				-3						Uldyssian Charm	1		Uldyssian Trophy	1		Uldyssian Equip Drop	1																										0
-Athulua's Bow				1						@##	1																																0
-Athulua's Drop				-2						Athulua's Bow	1		Uldyssian Equip Drop	1																													0
-asgagasgacxxcc				1						x#y	1																																0
-asgagasgacxxccxx				1						asgagasgacxxcc	1																																0
-zvxmvknkmnmnxvjn1				1						gld,mul=32096	1																																0
-zvxmvknkmnmnxvjn2				1						qum	1																																0
-zvxmvknkmnmnxvjn3				1						qum	1																																0
-zvxmvknkmnmnxvjn4				1						qum	1																																0
-zvxmvknkmnmnxvjn5				1						#X9	1																																0
-zvxmvknkmnmnxvjn6				1	1024					mlmxvzmvnjnajnjnjcznjn	1																																0
-sagkaskfmalsfmalksfm				-6						zvxmvknkmnmnxvjn1	1		zvxmvknkmnmnxvjn2	1		zvxmvknkmnmnxvjn3	1		zvxmvknkmnmnxvjn4	1		zvxmvknkmnmnxvjn5	1		zvxmvknkmnmnxvjn6	1																	0
-GiftBoxYAY				1						#X9	1																																0
-GriswoldTCex				-2						GiftBoxYAY	1		Act 1 Super B	1																													0
-Diablo Charm0				1	1024					Diablo Clone Charm	1																																0
-Diablo Giftboxeh				1						#2^	1																																0
-Diablo Dropz		20	85	3	0	1024	0	0		Act 5 (H) Heroic Bias C	1		Act 5 (H) Heroic Bias C	1		Act 5 (H) Heroic Bias C	1																								2	1	0
-Uber Diablo Drops				-3						Diablo Dropz	1		Diablo Giftboxeh	1		Diablo Charm0	1																										0
-I Am Rich Gem				1	1024					NewSuperGem	25		Blank TC	25																													
-My Own Charm				1	1024					MyOwnCharm	25		Blank TC	25																													
-MarcoNecroX Secret Boss				-3						Kabraxis Equip Drop	1		My Own Charm	1		I Am Rich Gem	1																										

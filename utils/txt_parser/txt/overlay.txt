@@ -524,5 +524,3 @@ appleongoing	AmazonHealSpell	0	20	Amazon	0	1	0	1	1	0	0	0	0	0	0	16	0	3	1	8	255	18
 resonance	ValkarieGlow	0	20	all	1	1	0	0	0	5	0	0	0	0	0	16	0	3	4	8	255	96	0	1	0
 resonancestart	ValkarieEmerge	0	16	all	0	1	0	0	0	0	0	0	0	0	0	32	0	3	1	4	255	96	0	1	0
 deaf	AuraPrayerFront	100	16	all	1	1	0	0	0	0	0	-55	-65	-75	-85	8	0	3	3	6	0	0	255	1	0
-bonecastoverlay	extra\BoneCast	100	16	all	0	1	0	0	0	0	0	0	0	0	0	16	0	3	1	2	0	0	255	1	0
-braxis_haste	braxishaste	100	24	all	0	1	0	0	0	0	0	0	0	0	0	18	0	3	1	4	0	255	0	1	0

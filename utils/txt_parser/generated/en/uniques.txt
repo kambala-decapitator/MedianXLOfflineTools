@@ -188,16 +188,16 @@
 186	Sacred Worldstone Key	555
 187	Moon of the Spider	100
 188	Legacy of Blood	100
-189	Spirit of Damnation	666
+189	Spirit of Damnation	120
 190	Hammer of the Taan Judges	40
-191	Six Angel Bag	666
-192	Sunless Crystal Bird	666
+191	Six Angel Bag	60
+192	Sunless Crystal Bird	60
 193	Zakarum's Ear	80
 194	Sunstone of the Gods	100
 195	Eternal Bone Pile	100
-196	Sunstone of Fire	666
-197	Sunstone of Ice	666
-198	Sunstone of Thunder	666
+196	Sunstone of Fire	50
+197	Sunstone of Ice	50
+198	Sunstone of Thunder	50
 199	Hard Mode Charm	5
 200	(Amazon Challenge Item)\nSacred Sunstone	90
 201	(Assassin Challenge Item)\nShadow Vortex	90
@@ -332,7 +332,7 @@
 330	Addertongue	34
 331	Addertongue	43
 332	Addertongue	52
-333	(                                   Fleshdoom                                   )	100
+333	Fleshdoom	100
 334	Skullhammer	5
 335	Skullhammer	14
 336	Skullhammer	24
@@ -2056,7 +2056,7 @@
 2054	Goetia Plate	100
 2055	Shield of Hakan II	100
 2056	Metalhead	100
-2057	Rodeo's Tramplers [DISABLED/LEGACY]	666
+2057	Rodeo's Tramplers	100
 2058	Maggotspawn Shell	100
 2059	Peacebringer	100
 2060	Edgewulf's Girdle	100
@@ -2478,180 +2478,8 @@
 2476	Washi Bai Ron	100
 2477	Crystalline Flame Medallion	120
 2478	Digitron Disk	100
-2479	Tentacles of Terror	100
-2480	Elemental Fury	100
-2481	Hovering Dame	100
-2482	The King of Ents	100
-2483	Divine Dart	100
-2484	Ranger's Path	100
-2485	Panthera's Bite	100
-2486	Thono's Tentacle	100
-2487	Screen of Viz-Jaq'Taar	100
-2488	Trollskull	100
-2489	Hunter's Ravage	100
-2490	Dragonfly	100
-2491	Ghoul's Soul	100
-2492	Horadrim's Fist	100
-2493	Noctule	100
-2494	Dragonfish	100
-2495	Thunderbird	100
-2496	Firebird	100
-2497	Killer's Omen	100
-2498	Scream of Nature	100
-2499	Gladiator's Rage	100
-2500	Berserrker	100
-2501	The Might of the Ancients	100
-2502	Colliding Fury	100
-2503	Leoric's Hand	100
-2504	Bovine Cleaver	100
-2505	Falcon Swoop	100
-2506	The Butcher's Cleaver	100
-2507	Dragonclaw	100
-2508	Polar Vortex	100
-2509	Wrath of Nature	100
-2510	Mage's Pulse	100
-2511	Prowler's Slash	100
-2512	Reaper's Hand	100
-2513	Shadowfiend	100
-2514	Satan's Void	100
-2515	Dark Talon	100
-2516	The Mangling Sting	100
-2517	Advent of Hatred	100
-2518	Black Doom	100
-2519	Phoenix Feather	100
-2520	Fury of the Storm	100
-2521	Heart of Fire	100
-2522	Claws of Frost	100
-2523	Vheran's Experiments	100
-2524	Napalm Death	100
-2525	Spirit of Light	100
-2526	Morning Fury	100
-2527	Blackened	100
-2528	Venom Sting	100
-2529	Jaguar's Grasp	100
-2530	Mistress of Pain	100
-2531	Glowing Vertigo	100
-2532	Tormentor	100
-2533	Holy Wars	100
-2534	Steel Punisher	100
-2535	Warrior's Robe	100
-2536	Coat of Darkness	100
-2537	Shedding Skin	100
-2538	Scales of the Drake	100
-2539	Hide of the Basilisk	100
-2540	Kerrigan's Chest	100
-2541	Mage's Denial	100
-2542	Wolverine Skin	100
-2543	Segnitia	100
-2544	Auriel's Robe	100
-2545	Strength Beyond Strength	100
-2546	Vizjerei's Ritual	100
-2547	Mercenary Bomb	100
-2548	Pestilence	100
-2549	Goblin's Skull	100
-2550	Cat's Pounce	100
-2551	Gehenna	100
-2552	Naga's Reign	100
-2553	Sepultura	100
-2554	Arcane Protection	100
-2555	Warlock's Brilliance	100
-2556	Rathma's Phantom	100
-2557	Rogue's Miracle	100
-2558	Gematria	100
-2559	Polar Breath	100
-2560	Stone Guardian	100
-2561	Wizard's Wall	100
-2562	Linarian's Legacy	100
-2563	Ward of Ransim	100
-2564	Rainbow Fury	100
-2565	Grim Icon	100
-2566	Lightning Enchanted	100
-2567	Lunar Eclipse	100
-2568	Dementia	100
-2569	Black Void	100
-2570	Champion of the Truine	100
-2571	Demonic Touch	100
-2572	Gulag's Frenzy	100
-2573	Conqueror's Mercy	100
-2574	Blind Anger	100
-2575	Centuria Insectorum	100
-2576	Wizard's Path	100
-2577	Titan's Steps	100
-2578	Angel's Wrath	100
-2579	Steel Terror	100
-2580	Knight's Grace	100
-2581	Skull of Lioness	100
-2582	Rainbow Maiden	100
-2583	Corona Aureola	100
-2584	Devastator	100
-2585	Disc of Blood	100
-2586	Golden Chariot	100
-2587	Silver Scorpion	100
-2588	Soul Harvest	100
-2589	Eternal Bodyguard	100
-2590	Zayl's Temptation	100
-2591	Gathering Storm	100
-2592	Shaman's Grace	100
-2593	Satan's Dark Delight	100
-2594	Bear Grin	100
-2595	Wolf Teeth	100
-2596	Shaggy Beast	100
-2597	Albrecht's Slumber	100
-2598	Lilith's Legion	100
-2599	Predator's Trophy	100
-2600	Wisdom of Scosglen	100
-2601	Forest Defender	100
-2602	Sky Spirit	100
-2603	Ranger's Disguise	100
-2604	Eerie Flash	100
-2605	Dark Guardian	100
-2606	Sentry of Death	100
-2607	Blessed Wrath	100
-2608	Fauztin's Shadow	100
-2609	Mark of the Que-Hegan	100
-2610	Phoenix Ash	100
-2611	Holy Saviour	100
-2612	The Vanquisher	100
-2613	Sculptor of Pain	100
-2614	Wizard's Cloak	100
-2615	Adamantine Guard	100
-2616	Frozen Heart	100
-2617	Mage's Whirlpool	100
-2618	Atanna Khan's Dress	100
-2619	Sahuagin Skin	100
-2620	Mountain King	100
-2621	Deadmaster	100
-2622	Grim Silhouette	100
-2623	Sunbeam	100
-2624	Quov Tsin's Talisman [DISABLED/LEGACY]	666
-2625	Dyers Eve	100
-2626	Vizjerei's Necklace	100
-2627	In For The Kill	100
-2628	Adrenaline Rush	100
-2629	Elemental Band	100
-2630	Witchcraft	100
-2631	Ballantine's 1827	100
-2632	Devil's Dance	100
-2633	Arrowsider	100
-2634	Suicide Note	100
-2635	Zann Esu's Stone	100
-2636	Inarius' Rock	100
-2637	Soul of Kabraxis	120
-2638	\red;Welcome! Median XL: Ultimative v4\blue;	666
-2639	SuperTestItamz	1
-2640	\gold;Six Angel Bag	60
-2641	Spirit of Damnation	120
-2642	Sunstone of Fire (Upgraded)	50
-2643	Sunstone of Thunder (Upgraded)	50
-2644	Sunstone of Ice (Upgraded)	50
-2645	Sunstone of the Elements	666
-2646	\gold;Uldyssian's Sword	120
-2647	\red;Valkyrie's Prime	120
-2648	\gold;Sunstone of the Elements	50
-2649	\red;Welcome! Median XL: Ultimative v4\blue;	0
-2650	Wormhole of Deadly Doom	666
-2651	\gold;Harkon Crystal	666
-2652	\gold;Diablo's Essence	120
-2653	Quov Tsin's Talisman	120
-2654	Rodeo's Tramplers	100
-2655	Creator's Hand	120
+2479	The Book of Cain	120
+2480	Essence of Anu	0
+2481	Unfathomable Spirit	120
+2482	Seal of the Six	120
+2483	Minister's Mark	120
