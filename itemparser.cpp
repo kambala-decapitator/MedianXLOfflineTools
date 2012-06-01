@@ -243,6 +243,13 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
             }
             else
                 item->quality = Enums::ItemQuality::Normal;
+
+            if (item->storage != Enums::ItemStorage::NotInStorage && item->location > Enums::ItemLocation::Belt) // plugy uses 6 in shared stash
+                throw 4;
+            else if (item->whereEquipped > 12)
+                throw 5;
+            else if (item->storage > Enums::ItemStorage::Stash)
+                throw 6;
         }
         catch (int exceptionCode)
         {

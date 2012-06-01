@@ -562,7 +562,7 @@ ItemsList ItemDataBase::itemsStoredIn(int storage, int location /*= Enums::ItemL
     for (int i = 0; i < characterItems->size(); ++i)
     {
         ItemInfo *item = characterItems->at(i);
-        if (item->storage == storage && item->location == location && (!pPlugyPage || (pPlugyPage && item->plugyPage == *pPlugyPage)))
+        if (item->storage == storage && item->location == location && (!pPlugyPage || item->plugyPage == *pPlugyPage))
             items += item;
     }
     return items;
