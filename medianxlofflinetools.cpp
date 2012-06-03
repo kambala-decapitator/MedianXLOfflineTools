@@ -1123,9 +1123,7 @@ void MedianXLOfflineTools::loadSettings()
     ui.actionAutoOpenHCShared->setChecked(settings.value("hcShared", true).toBool());
     settings.endGroup();
 
-    //settings.beginGroup("fileAssociations");
     ui.actionCheckFileAssociations->setChecked(settings.value("checkAssociations", true).toBool());
-    //settings.endGroup();
 
     settings.endGroup();
 }
@@ -1153,9 +1151,7 @@ void MedianXLOfflineTools::saveSettings() const
     settings.setValue("hcShared", ui.actionAutoOpenHCShared->isChecked());
     settings.endGroup();
 
-    //settings.beginGroup("fileAssociations");
     settings.setValue("checkAssociations", ui.actionCheckFileAssociations->isChecked());
-    //settings.endGroup();
 
     settings.endGroup();
 
@@ -1189,14 +1185,20 @@ void MedianXLOfflineTools::fillMaps()
                 skillsIndeces += i;
         _characterSkillsIndeces[static_cast<Enums::ClassName::ClassNameEnum>(classCode)].first = skillsIndeces;
 
-        for (int i = 0; i < 6; ++i)
-        {
-            int start = i * 5, end = start + 5;
-            for (int j = start; j < end - 1; ++j)
-                for (int k = j + 1; k < end; ++k)
-                    if (skills[skillsIndeces.at(j)].row > skills[skillsIndeces.at(k)].row)
-                        skillsIndeces.swap(j, k);
-        }
+        qSort(skillsIndeces.begin(), skillsIndeces.end(), [&](int i, int j) -> bool
+            {
+                const SkillInfo &iSkill = skills[i], jSkill = skills[j];
+                if (iSkill.tab == jSkill.tab)
+                {
+                    if (iSkill.col == jSkill.col)
+                        return iSkill.row < jSkill.row;
+                    else
+                        return iSkill.col < jSkill.col;
+                }
+                else
+                    return iSkill.tab < jSkill.tab;
+            }
+        );
         _characterSkillsIndeces[static_cast<Enums::ClassName::ClassNameEnum>(classCode)].second = skillsIndeces;
     }
 }
@@ -1599,7 +1601,7 @@ bool MedianXLOfflineTools::processSaveFile()
     if (skills > maxPossibleSkills) // check if skills are hacked
     {
         skills = maxPossibleSkills;
-        charInfo.basicInfo.statsDynamicData.setProperty("FreeSkillPoints", skills);
+        charInfo.basicInfo.statsDynamicData.setProperty("FreeSkillPoints", maxPossibleSkills);
         _saveFileContents.replace(charInfo.skillsOffset + 2, skillsNumber, QByteArray(skillsNumber, 0));
         if (!wasHackWarningShown)
         {

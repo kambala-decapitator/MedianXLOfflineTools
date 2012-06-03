@@ -50,10 +50,10 @@ SkillplanDialog::SkillplanDialog(QWidget *parent) : QDialog(parent)
     connect(ui.buttonBox, SIGNAL(helpRequested()), SLOT(showHelp()));
 
     foreach (QCheckBox *checkBox, QList<QCheckBox *>() << ui.skillQuestsCheckBox << ui.charmsCheckBox << ui.minigamesCheckBox << ui.signetsCheckBox << ui.itemsCheckBox)
-        connect(checkBox, SIGNAL(clicked()), SLOT(contructUrls()));
+        connect(checkBox, SIGNAL(clicked()), SLOT(constructUrls()));
 
     loadSettings();
-    contructUrls();
+    constructUrls();
 
     setFixedSize(sizeHint());
 }
@@ -68,7 +68,7 @@ void SkillplanDialog::copyBbcode()
     qApp->clipboard()->setText(ui.bbcodeLinkLineEdit->text());
 }
 
-void SkillplanDialog::contructUrls()
+void SkillplanDialog::constructUrls()
 {
     const CharacterInfo &charInfo = CharacterInfo::instance();
     QString skillQuests;

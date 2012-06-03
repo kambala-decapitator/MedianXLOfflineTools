@@ -23,7 +23,7 @@ public:
 private slots:
     void copyHtml();
     void copyBbcode();
-    void contructUrls();
+    void constructUrls();
     void showHelp();
 
     virtual void done(int r);
