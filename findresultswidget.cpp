@@ -94,7 +94,7 @@ void FindResultsWidget::updateItems(QList<SearchResultItem> *newItems)
             {
                 matchIndex += rx.cap().length();
                 colors.prepend(rx.cap(1));
-                list.prepend(rx.cap(2).replace(htmlLineBreak, " ", Qt::CaseInsensitive).trimmed());
+                list.prepend(rx.cap(2).replace(kHtmlLineBreak, " ", Qt::CaseInsensitive).trimmed());
             }
 
             QTreeWidgetItem *childItem = new QTreeWidgetItem(list);

@@ -13,8 +13,8 @@ class ResurrectPenaltyDialog : public QDialog
 public:
     ResurrectPenaltyDialog(QWidget *parent = 0);
 
-    static const int levelPenalty;
-    static const double statPenalty, skillPenalty;
+    static const int kLevelPenalty;
+    static const double kStatPenalty, kSkillPenalty;
 
     enum ResurrectionPenalty
     {

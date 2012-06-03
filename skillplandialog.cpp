@@ -9,8 +9,8 @@
 
 
 // TODO: check current mod version
-static const QString defaultModVersionReadable("2012 v005"), defaultModVersionPlanner("2012005");
-static const QString baseUrl("http://www.authmann.de/d2/mxl/skillpointplanner/?v=%1&class=%2&lvl=%3&bonus=%4&skills=%5&mg=%6&sos=%8&name=%7");
+static const QString kDefaultModVersionReadable("2012 v005"), kDefaultModVersionPlanner("2012005");
+static const QString kBaseUrl("http://www.authmann.de/d2/mxl/skillpointplanner/?v=%1&class=%2&lvl=%3&bonus=%4&skills=%5&mg=%6&sos=%8&name=%7");
 
 QString SkillplanDialog::_modVersionReadable;
 QString SkillplanDialog::_modVersionPlanner;
@@ -34,9 +34,9 @@ void SkillplanDialog::loadModVersion()
         }
     }
     if (_modVersionReadable.isEmpty())
-        _modVersionReadable = defaultModVersionReadable;
+        _modVersionReadable = kDefaultModVersionReadable;
     if (_modVersionPlanner.isEmpty())
-        _modVersionPlanner = defaultModVersionPlanner;
+        _modVersionPlanner = kDefaultModVersionPlanner;
 }
 
 SkillplanDialog::SkillplanDialog(QWidget *parent) : QDialog(parent)
@@ -143,7 +143,7 @@ void SkillplanDialog::constructUrls()
         break;
     }
 
-    QString url = baseUrl.arg(modVersionPlanner()).arg(classCodePlanner).arg(charInfo.basicInfo.level).arg(skillQuests + maxSkillLevelCharms + maxSkillLevelItems, skillStr, minigames, charInfo.basicInfo.newName)
+    QString url = kBaseUrl.arg(modVersionPlanner()).arg(classCodePlanner).arg(charInfo.basicInfo.level).arg(skillQuests + maxSkillLevelCharms + maxSkillLevelItems, skillStr, minigames, charInfo.basicInfo.newName)
                          .arg(ui.signetsCheckBox->isChecked() ? charInfo.basicInfo.statsDynamicData.property("SignetsOfSkillEaten").toUInt() : Enums::CharacterStats::SignetsOfSkillMax);
     QString linkText = QString("%1 %2 (%3, %4)").arg(tr("Skillplan"), charInfo.basicInfo.newName, Enums::ClassName::classes().at(classCode), modVersionReadable());
     QString htmlText = QString("<a href = \"%1\">%2</a>").arg(url, linkText);

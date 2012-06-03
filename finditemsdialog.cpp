@@ -268,7 +268,7 @@ void FindItemsDialog::performSearch()
                     matchIndex = rx.indexIn(matchedLine);
                     matchedLine.insert(matchIndex, "<b>");
                     matchedLine.insert(matchIndex + rx.cap().length() + 3, "</b>");
-                    matchedLine.replace("\n", htmlLineBreak);
+                    matchedLine.replace("\n", kHtmlLineBreak);
                     _searchResult += qMakePair(item, matchedLine);
                 }
             }

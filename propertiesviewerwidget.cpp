@@ -13,10 +13,11 @@
 #include <QDebug>
 #endif
 
-static const QString baseFormat("<html><body bgcolor = \"black\"><div align = \"center\" style = \"color: #ffffff\">%1</div></body></html>");
+
+static const QString kBaseFormat("<html><body bgcolor=\"black\"><div align=\"center\" style=\"color: #ffffff\">%1</div></body></html>");
 
 
-PropertiesViewerWidget::PropertiesViewerWidget(QWidget *parent) : QWidget(parent), htmlLine(htmlStringFromDiabloColorString("<hr>")), _item(0)
+PropertiesViewerWidget::PropertiesViewerWidget(QWidget *parent) : QWidget(parent), htmlLine(htmlStringFromDiabloColorString("<hr />")), _item(0)
 {
     ui.setupUi(this);
 
@@ -80,22 +81,22 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
         {
             PropertiesMap props = ItemDataBase::isGenericSocketable(socketableItem) ? PropertiesDisplayManager::genericSocketableProperties(socketableItem, itemBase.socketableType) : socketableItem->props;
             PropertiesDisplayManager::addProperties(&allProps, props);
-            html += ItemDataBase::completeItemName(socketableItem, true) + htmlLineBreak + propertiesToHtml(props) + htmlLine;
+            html += ItemDataBase::completeItemName(socketableItem, true) + kHtmlLineBreak + propertiesToHtml(props) + htmlLine;
         }
         renderHtml(ui.socketablesTextEdit, html);
     }
 
     // create full item description
-    QString itemDescription = ItemDataBase::completeItemName(item, true) + htmlLineBreak + tr("Item Level: %1").arg(item->ilvl) + htmlLineBreak;
+    QString itemDescription = ItemDataBase::completeItemName(item, true) + kHtmlLineBreak + tr("Item Level: %1").arg(item->ilvl) + kHtmlLineBreak;
     if (!itemBase.spelldesc.isEmpty())
-        itemDescription += htmlStringFromDiabloColorString(itemBase.spelldesc) + htmlLineBreak;
+        itemDescription += htmlStringFromDiabloColorString(itemBase.spelldesc) + kHtmlLineBreak;
 
     QString runes;
     foreach (ItemInfo *socketable, item->socketablesInfo)
         if (ItemDataBase::Items()->value(socketable->itemType).typeString == "rune")
             runes += ItemDataBase::Socketables()->value(socketable->itemType).letter;
     if (!runes.isEmpty()) // gem-/jewelwords don't have any letters
-        itemDescription += htmlStringFromDiabloColorString(QString("'%1'").arg(runes), ColorsManager::Gold) + htmlLineBreak;
+        itemDescription += htmlStringFromDiabloColorString(QString("'%1'").arg(runes), ColorsManager::Gold) + kHtmlLineBreak;
 
     quint8 clvl = CharacterInfo::instance().basicInfo.level;
     if (itemBase.genericType == Enums::ItemTypeGeneric::Armor)
@@ -114,7 +115,7 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
             itemDescription += defString.arg(htmlStringFromDiabloColorString(QString::number(totalDef), ColorsManager::Blue)) + QString(" (%1)").arg(baseDef);
         else
             itemDescription += defString.arg(baseDef);
-        itemDescription += htmlLineBreak;
+        itemDescription += kHtmlLineBreak;
     }
     if (itemBase.genericType != Enums::ItemTypeGeneric::Misc && item->maxDurability)
     {
@@ -125,10 +126,10 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
         itemDescription += tr("%1 of %2", "durability").arg(item->currentDurability).arg(item->maxDurability);
         if (isIndestructible)
             itemDescription += "]";
-        itemDescription += htmlLineBreak;
+        itemDescription += kHtmlLineBreak;
     }
     if (itemBase.isStackable)
-        itemDescription += tr("Quantity: %1").arg(item->quantity) + htmlLineBreak;
+        itemDescription += tr("Quantity: %1").arg(item->quantity) + kHtmlLineBreak;
     if (itemBase.classCode > -1)
     {
         QString text = tr("(%1 Only)", "class-specific item").arg(Enums::ClassName::classes().at(itemBase.classCode));
@@ -136,7 +137,7 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
             itemDescription += htmlStringFromDiabloColorString(text, ColorsManager::Red);
         else
             itemDescription += text;
-        itemDescription += htmlLineBreak;
+        itemDescription += kHtmlLineBreak;
     }
 
     int rlvl;
@@ -164,11 +165,11 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
     }
     int actualRlvl = qMax(rlvl, maxSocketableRlvl) + (allProps.contains(Enums::ItemProperties::RequiredLevel) ? allProps[Enums::ItemProperties::RequiredLevel].value : 0);
     if (actualRlvl)
-        itemDescription += htmlStringFromDiabloColorString(tr("Required Level: %1").arg(/*actualRlvl > 555 ? 555 : */actualRlvl), clvl < actualRlvl ? ColorsManager::Red : ColorsManager::White) + htmlLineBreak;
+        itemDescription += htmlStringFromDiabloColorString(tr("Required Level: %1").arg(/*actualRlvl > 555 ? 555 : */actualRlvl), clvl < actualRlvl ? ColorsManager::Red : ColorsManager::White) + kHtmlLineBreak;
 
     // add '+50% damage to undead' if item type matches
     bool shouldAddDamageToUndeadInTheBottom = false;
-    if (ItemParser::itemTypeInheritsFromTypes(itemBase.typeString, PropertiesDisplayManager::damageToUndeadTypes))
+    if (ItemParser::itemTypeInheritsFromTypes(itemBase.typeString, PropertiesDisplayManager::kDamageToUndeadTypes))
     {
         if (allProps.contains(Enums::ItemProperties::DamageToUndead))
             allProps[Enums::ItemProperties::DamageToUndead].value += 50;
@@ -179,7 +180,7 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
     if (!allProps.isEmpty())
     {
         if (!item->isIdentified)
-            itemDescription += htmlStringFromDiabloColorString(tr("[Unidentified]"), ColorsManager::Red) + htmlLineBreak;
+            itemDescription += htmlStringFromDiabloColorString(tr("[Unidentified]"), ColorsManager::Red) + kHtmlLineBreak;
         itemDescription += propertiesToHtml(allProps);
     }
     else if (ItemDataBase::isGenericSocketable(item))
@@ -189,26 +190,26 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
         for (qint8 socketableType = SocketableItemInfo::Armor; socketableType <= SocketableItemInfo::Weapon; ++socketableType)
         {
             PropertiesMap props = PropertiesDisplayManager::genericSocketableProperties(item, socketableType - 1);
-            QString propText = propertiesToHtml(props).replace(QRegExp(htmlLineBreak + "(?!</font>)"), ", "); // don't replace last <br>
+            QString propText = propertiesToHtml(props).replace(QRegExp(kHtmlLineBreak + "(?!</font>)"), ", "); // don't replace last <br>
             propStrings += QString("%1: %2").arg(gearNames.at(socketableType), propText);
         }
         // weapon properties should be first
         propStrings.move(propStrings.size() - 1, 0);
-        itemDescription += htmlLineBreak + propStrings.join("");
+        itemDescription += kHtmlLineBreak + propStrings.join("");
     }
 
     if (shouldAddDamageToUndeadInTheBottom)
-        itemDescription += htmlStringFromDiabloColorString(tr("+50% Damage to Undead"), ColorsManager::Blue) + htmlLineBreak;
+        itemDescription += htmlStringFromDiabloColorString(tr("+50% Damage to Undead"), ColorsManager::Blue) + kHtmlLineBreak;
     if (item->isSocketed)
-        itemDescription += htmlStringFromDiabloColorString(tr("Socketed: (%1), Inserted: (%2)").arg(item->socketsNumber).arg(item->socketablesNumber), ColorsManager::Blue) + htmlLineBreak;
+        itemDescription += htmlStringFromDiabloColorString(tr("Socketed: (%1), Inserted: (%2)").arg(item->socketsNumber).arg(item->socketablesNumber), ColorsManager::Blue) + kHtmlLineBreak;
     if (item->isEthereal)
-        itemDescription += htmlStringFromDiabloColorString(tr("Ethereal (Cannot be Repaired)"), ColorsManager::Blue) + htmlLineBreak;
+        itemDescription += htmlStringFromDiabloColorString(tr("Ethereal (Cannot be Repaired)"), ColorsManager::Blue) + kHtmlLineBreak;
 
     // show existing set items from current set
     if (item->quality == Enums::ItemQuality::Set)
     {
         const QString &setName = ItemDataBase::Sets()->value(item->setOrUniqueId).setName;
-        itemDescription += htmlLineBreak + htmlStringFromDiabloColorString(setName, ColorsManager::Gold);
+        itemDescription += kHtmlLineBreak + htmlStringFromDiabloColorString(setName, ColorsManager::Gold);
 
         foreach (const QString &setItemName, ItemDataBase::completeSetForName(setName))
         {
@@ -221,7 +222,7 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
                     break;
                 }
             }
-            itemDescription += htmlLineBreak + htmlStringFromDiabloColorString(setItemName, found ? ColorsManager::Green : ColorsManager::Red);
+            itemDescription += kHtmlLineBreak + htmlStringFromDiabloColorString(setItemName, found ? ColorsManager::Green : ColorsManager::Red);
         }
     }
 
@@ -242,14 +243,14 @@ QString PropertiesViewerWidget::propertiesToHtml(const PropertiesMap &properties
     while (iter != propsDisplayMap.constBegin())
     {
         --iter;
-        html += htmlStringFromDiabloColorString(iter.value().displayString, ColorsManager::NoColor) + htmlLineBreak;
+        html += htmlStringFromDiabloColorString(iter.value().displayString, ColorsManager::NoColor) + kHtmlLineBreak;
     }
     return coloredText(html, ColorsManager::Blue);
 }
 
 void PropertiesViewerWidget::renderHtml(QTextEdit *textEdit, const QString &description)
 {
-    textEdit->setText(baseFormat.arg(QString(description).replace('\n', htmlLineBreak)));
+    textEdit->setText(kBaseFormat.arg(QString(description).replace('\n', kHtmlLineBreak)));
 }
 
 void PropertiesViewerWidget::removeAllMysticOrbs()
@@ -368,7 +369,7 @@ void PropertiesViewerWidget::byteAlignBits()
     {
         int zerosBeforeFirst1 = _item->bitString.indexOf('1'), zerosToAppend = 8 - extraBits;
         if (zerosBeforeFirst1 + zerosToAppend < 8)
-            _item->bitString.prepend(QString(zerosToAppend, zeroChar));
+            _item->bitString.prepend(QString(zerosToAppend, kZeroChar));
         else
             _item->bitString.remove(0, extraBits);
     }
@@ -393,13 +394,13 @@ QString PropertiesViewerWidget::collectMysticOrbsDataFromProps(QSet<int> *moSet,
 
     if (!moSet->isEmpty())
     {
-        html += htmlLine + htmlLineBreak;
+        html += htmlLine + kHtmlLineBreak;
         foreach (int moCode, *moSet)
         {
             if (isMysticOrbEffectDoubled())
                 props[moCode].displayString += " x 2";
             // quick & dirty hack with const_cast
-            html += QString("%1 = %2").arg(props[moCode].displayString).arg(totalMysticOrbValue(moCode, const_cast<PropertiesMap *>(&props))) + htmlLineBreak;
+            html += QString("%1 = %2").arg(props[moCode].displayString).arg(totalMysticOrbValue(moCode, const_cast<PropertiesMap *>(&props))) + kHtmlLineBreak;
         }
     }
     return html;

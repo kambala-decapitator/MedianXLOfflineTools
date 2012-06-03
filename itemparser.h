@@ -15,7 +15,7 @@ class ItemParser
     Q_DECLARE_TR_FUNCTIONS(ItemParser)
 
 public:
-    static const QByteArray itemHeader, plugyPageHeader;
+    static const QByteArray kItemHeader, kPlugyPageHeader;
     static const QString &enhancedDamageFormat(); // stupid lupdate
 
     static ItemInfo *parseItem(QDataStream &inputDataStream, const QByteArray &bytes);

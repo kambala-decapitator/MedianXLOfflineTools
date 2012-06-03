@@ -51,23 +51,23 @@
 
 // static const
 
-static const QString lastSavePathKey("lastSavePath"), backupExtension("bak"), readonlyCss("background-color: rgb(227, 227, 227)");
+static const QString kLastSavePathKey("lastSavePath"), kBackupExtension("bak"), kReadonlyCss("background-color: rgb(227, 227, 227)");
 
-const QString MedianXLOfflineTools::compoundFormat("%1, %2");
-const QString MedianXLOfflineTools::characterExtension("d2s");
-const QString MedianXLOfflineTools::characterExtensionWithDot("." + characterExtension);
-const quint32 MedianXLOfflineTools::fileSignature = 0xAA55AA55;
-const int MedianXLOfflineTools::skillsNumber = 30;
-const int MedianXLOfflineTools::difficultiesNumber = 3;
-const int MedianXLOfflineTools::statPointsPerLevel = 5;
-const int MedianXLOfflineTools::skillPointsPerLevel = 1;
-const int MedianXLOfflineTools::maxRecentFiles = 10;
+const QString MedianXLOfflineTools::kCompoundFormat("%1, %2");
+const QString MedianXLOfflineTools::kCharacterExtension("d2s");
+const QString MedianXLOfflineTools::kCharacterExtensionWithDot("." + kCharacterExtension);
+const quint32 MedianXLOfflineTools::kFileSignature = 0xAA55AA55;
+const int MedianXLOfflineTools::kSkillsNumber = 30;
+const int MedianXLOfflineTools::kDifficultiesNumber = 3;
+const int MedianXLOfflineTools::kStatPointsPerLevel = 5;
+const int MedianXLOfflineTools::kSkillPointsPerLevel = 1;
+const int MedianXLOfflineTools::kMaxRecentFiles = 10;
 
 
 // ctor
 
 MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *parent, Qt::WFlags flags) : QMainWindow(parent, flags), _findItemsDialog(0),
-    hackerDetected(tr("1337 hacker detected! Please, play legit.")), //difficulties(QStringList() << tr("Hatred") << tr("Nightmare") << tr("Destruction")),
+    hackerDetected(tr("1337 hacker detected! Please, play legit.")), //difficulties(QStringList() << tr("Hatred") << tr("Terror") << tr("Destruction")),
     maxValueFormat(tr("Max: %1")), minValueFormat(tr("Min: %1")), investedValueFormat(tr("Invested: %1")), _isLoaded(false)
 {
     ui.setupUi(this);
@@ -84,18 +84,18 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *pare
     connectSignals();
 
 #if defined(Q_WS_WIN32) || defined(Q_WS_MACX)
-    bool isDefault = FileAssociationManager::isApplicationDefaultForExtension(characterExtensionWithDot);
+    bool isDefault = FileAssociationManager::isApplicationDefaultForExtension(kCharacterExtensionWithDot);
     if (!isDefault)
     {
         if (ui.actionCheckFileAssociations->isChecked())
         {
-            MessageCheckBox box(tr("%1 is not associated with %2 files.\n\nDo you want to do it?").arg(qApp->applicationName(), characterExtensionWithDot), ui.actionCheckFileAssociations->text(), this);
+            MessageCheckBox box(tr("%1 is not associated with %2 files.\n\nDo you want to do it?").arg(qApp->applicationName(), kCharacterExtensionWithDot), ui.actionCheckFileAssociations->text(), this);
             box.setChecked(true);
             int result = box.exec();
             ui.actionCheckFileAssociations->setChecked(box.isChecked());
             if (result)
             {
-                FileAssociationManager::makeApplicationDefaultForExtension(characterExtensionWithDot);
+                FileAssociationManager::makeApplicationDefaultForExtension(kCharacterExtensionWithDot);
                 isDefault = true;
             }
         }
@@ -128,7 +128,7 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *pare
 
 bool MedianXLOfflineTools::loadFile(const QString &charPath)
 {
-    bool unsupportedFile = !charPath.endsWith(characterExtensionWithDot);
+    bool unsupportedFile = !charPath.endsWith(kCharacterExtensionWithDot);
     if (charPath.isEmpty() || unsupportedFile || !maybeSave())
     {
         if (!charPath.isEmpty() && unsupportedFile)
@@ -161,7 +161,7 @@ bool MedianXLOfflineTools::loadFile(const QString &charPath)
 
         QSettings settings;
         settings.beginGroup("recentItems");
-        settings.setValue(lastSavePathKey, QDir::toNativeSeparators(QFileInfo(_charPath).canonicalPath()));
+        settings.setValue(kLastSavePathKey, QDir::toNativeSeparators(QFileInfo(_charPath).canonicalPath()));
     }
     else
     {
@@ -210,9 +210,9 @@ void MedianXLOfflineTools::loadCharacter()
 {
     QSettings settings;
     settings.beginGroup("recentItems");
-    QString lastSavePath = settings.value(lastSavePathKey).toString();
+    QString lastSavePath = settings.value(kLastSavePathKey).toString();
 
-    QString charPath = QFileDialog::getOpenFileName(this, tr("Load Character"), lastSavePath, tr("Diablo 2 Save Files") + QString(" (*%1)").arg(characterExtensionWithDot));
+    QString charPath = QFileDialog::getOpenFileName(this, tr("Load Character"), lastSavePath, tr("Diablo 2 Save Files") + QString(" (*%1)").arg(kCharacterExtensionWithDot));
     if (loadFile(charPath))
         ui.statusBar->showMessage(tr("Character loaded"), 3000);
 }
@@ -243,12 +243,12 @@ void MedianXLOfflineTools::saveCharacter()
     charInfo.itemsEndOffset += diff;
 
     if (ui.respecSkillsCheckBox->isChecked())
-        tempFileContents.replace(charInfo.skillsOffset + 2, skillsNumber, QByteArray(skillsNumber, 0));
+        tempFileContents.replace(charInfo.skillsOffset + 2, kSkillsNumber, QByteArray(kSkillsNumber, 0));
 
     if (ui.activateWaypointsCheckBox->isChecked())
     {
         QByteArray activatedWaypointsBytes(5, 0xFF); // 40 x '1'
-        for (int startPos = Enums::Offsets::WaypointsData + 2, i = 0; i < difficultiesNumber; ++i, startPos += 24)
+        for (int startPos = Enums::Offsets::WaypointsData + 2, i = 0; i < kDifficultiesNumber; ++i, startPos += 24)
             tempFileContents.replace(startPos, activatedWaypointsBytes.size(), activatedWaypointsBytes);
     }
 
@@ -298,7 +298,7 @@ void MedianXLOfflineTools::saveCharacter()
     //outputDataStream << v;
     //outputDataStream.device()->reset();
 #ifdef ENABLE_PERSONALIZE
-    for (int i = 0; i < difficultiesNumber; ++i)
+    for (int i = 0; i < kDifficultiesNumber; ++i)
     {
         outputDataStream.device()->seek(Enums::Offsets::QuestsData + i * Enums::Quests::Size + Enums::Quests::Nihlathak);
         outputDataStream << quint16(Enums::Quests::IsTaskDone);
@@ -316,7 +316,7 @@ void MedianXLOfflineTools::saveCharacter()
 #else
         QByteArray newNameByteArray = newName.toLocal8Bit();
 #endif
-        newNameByteArray += QByteArray(QD2CharRenamer::maxNameLength + 1 - newName.length(), '\0'); // add trailing nulls
+        newNameByteArray += QByteArray(QD2CharRenamer::kMaxNameLength + 1 - newName.length(), '\0'); // add trailing nulls
         outputDataStream.writeRawData(newNameByteArray.constData(), newNameByteArray.length());
     }
     else
@@ -407,8 +407,8 @@ void MedianXLOfflineTools::saveCharacter()
                 if (anItem->plugyPage == page)
                     pageItems += anItem;
 
-            plugyFileDataStream.writeRawData(ItemParser::plugyPageHeader.constData(), ItemParser::plugyPageHeader.size() + 1); // write '\0'
-            plugyFileDataStream.writeRawData(ItemParser::itemHeader.constData(), ItemParser::itemHeader.size()); // do not write '\0'
+            plugyFileDataStream.writeRawData(ItemParser::kPlugyPageHeader.constData(), ItemParser::kPlugyPageHeader.size() + 1); // write '\0'
+            plugyFileDataStream.writeRawData(ItemParser::kItemHeader.constData(), ItemParser::kItemHeader.size()); // do not write '\0'
             plugyFileDataStream << static_cast<quint16>(pageItems.size());
             ItemParser::writeItems(pageItems, plugyFileDataStream);
         }
@@ -417,11 +417,11 @@ void MedianXLOfflineTools::saveCharacter()
     // save the character
     QSettings settings;
     settings.beginGroup("recentItems");
-    QString savePath = settings.value(lastSavePathKey).toString() + QDir::separator(), fileName = savePath + newName, saveFileName = fileName + characterExtensionWithDot;
+    QString savePath = settings.value(kLastSavePathKey).toString() + QDir::separator(), fileName = savePath + newName, saveFileName = fileName + kCharacterExtensionWithDot;
     QFile outputFile(saveFileName);
     if (hasNameChanged)
     {
-        QFile oldFile(QString("%1%2.%3").arg(savePath, charInfo.basicInfo.originalName, characterExtension));
+        QFile oldFile(QString("%1%2.%3").arg(savePath, charInfo.basicInfo.originalName, kCharacterExtension));
         backupFile(oldFile);
     }
     else
@@ -452,11 +452,11 @@ void MedianXLOfflineTools::saveCharacter()
                 foreach (const QFileInfo &fileInfo, sourceFileDir.entryInfoList())
                 {
                     QString extension = fileInfo.suffix();
-                    if ((isStrangeName && fileInfo.baseName() != charInfo.basicInfo.originalName) || extension == backupExtension)
+                    if ((isStrangeName && fileInfo.baseName() != charInfo.basicInfo.originalName) || extension == kBackupExtension)
                         continue;
 
                     QFile sourceFile(fileInfo.canonicalFilePath());
-                    if (extension == characterExtension) // delete
+                    if (extension == kCharacterExtension) // delete
                     {
                         if (!sourceFile.remove())
                             showErrorMessageBoxForFile(tr("Error removing file '%1'"), sourceFile);
@@ -557,7 +557,7 @@ void MedianXLOfflineTools::levelChanged(int newClvl)
     {
         updateTableStats(_baseStatsMap[basicInfo.classCode].statsPerLevel, -lvlDiff);
 
-        int statsDiff = lvlDiff * statPointsPerLevel;
+        int statsDiff = lvlDiff * kStatPointsPerLevel;
         _oldClvl = newClvl;
         if (ui.freeStatPointsLineEdit->text().toInt() - statsDiff < 0)
             respecStats();
@@ -575,7 +575,7 @@ void MedianXLOfflineTools::levelChanged(int newClvl)
         int newSkillPoints = basicInfo.totalSkillPoints, investedSkillPoints = 0;
         if (hasLevelChanged)
         {
-            newSkillPoints -= (basicInfo.level - newClvl) * skillPointsPerLevel;
+            newSkillPoints -= (basicInfo.level - newClvl) * kSkillPointsPerLevel;
             ui.freeSkillPointsLineEdit->setText(QString::number(newSkillPoints));
         }
         else if (_resurrectionPenalty == ResurrectPenaltyDialog::Skills)
@@ -606,7 +606,7 @@ void MedianXLOfflineTools::resurrect()
         {
         case ResurrectPenaltyDialog::Levels:
         {
-            int newLevel = basicInfo.level - ResurrectPenaltyDialog::levelPenalty;
+            int newLevel = basicInfo.level - ResurrectPenaltyDialog::kLevelPenalty;
             if (newLevel < 1)
                 newLevel = 1;
             ui.levelSpinBox->setMaximum(newLevel); // setValue() is invoked implicitly
@@ -620,7 +620,7 @@ void MedianXLOfflineTools::resurrect()
             ui.respecSkillsCheckBox->setDisabled(true);
 
             ushort newSkillPoints = ui.freeSkillPointsLineEdit->text().toUShort();
-            newSkillPoints -= newSkillPoints * ResurrectPenaltyDialog::skillPenalty;
+            newSkillPoints -= newSkillPoints * ResurrectPenaltyDialog::kSkillPenalty;
             basicInfo.totalSkillPoints = newSkillPoints;
 
             ui.freeSkillPointsLineEdit->setText(QString::number(newSkillPoints));
@@ -632,7 +632,7 @@ void MedianXLOfflineTools::resurrect()
         {
             respecStats();
 
-            ushort newStatPoints = ui.freeStatPointsLineEdit->text().toUShort(), diff = newStatPoints * ResurrectPenaltyDialog::statPenalty;
+            ushort newStatPoints = ui.freeStatPointsLineEdit->text().toUShort(), diff = newStatPoints * ResurrectPenaltyDialog::kStatPenalty;
             newStatPoints -= diff;
             basicInfo.totalStatPoints = newStatPoints;
 
@@ -754,8 +754,8 @@ void MedianXLOfflineTools::giveCube()
     if (!cube)
         return;
     
-    if (!ItemDataBase::storeItemIn(cube, Enums::ItemStorage::Inventory, ItemsViewerDialog::rows.at(ItemsViewerDialog::tabIndexFromItemStorage(Enums::ItemStorage::Inventory))) &&
-        !ItemDataBase::storeItemIn(cube, Enums::ItemStorage::Stash,     ItemsViewerDialog::rows.at(ItemsViewerDialog::tabIndexFromItemStorage(Enums::ItemStorage::Stash))))
+    if (!ItemDataBase::storeItemIn(cube, Enums::ItemStorage::Inventory, ItemsViewerDialog::kRows.at(ItemsViewerDialog::tabIndexFromItemStorage(Enums::ItemStorage::Inventory))) &&
+        !ItemDataBase::storeItemIn(cube, Enums::ItemStorage::Stash,     ItemsViewerDialog::kRows.at(ItemsViewerDialog::tabIndexFromItemStorage(Enums::ItemStorage::Stash))))
     {
         ERROR_BOX(tr("You have no free space in inventory and stash to store the Cube"));
         delete cube;
@@ -803,7 +803,7 @@ void MedianXLOfflineTools::backupSettingTriggered(bool checked)
 void MedianXLOfflineTools::associateFiles()
 {
 #if defined(Q_WS_WIN32) || defined(Q_WS_MACX)
-    FileAssociationManager::makeApplicationDefaultForExtension(characterExtension);
+    FileAssociationManager::makeApplicationDefaultForExtension(kCharacterExtension);
 #else
 #warning Add implementation to check file association to e.g. fileassociationmanager_linux.cpp or comment this line
 #endif
@@ -817,12 +817,12 @@ void MedianXLOfflineTools::aboutApp()
     aboutBox.setIconPixmap(windowIcon().pixmap(64));
     aboutBox.setTextFormat(Qt::RichText);
     QString appFullName = qApp->applicationName() + " " + qApp->applicationVersion();
-    aboutBox.setText(QString("<b>%1</b>%2").arg(appFullName, htmlLineBreak) + tr("Released: %1").arg(RELEASE_DATE));
+    aboutBox.setText(QString("<b>%1</b>%2").arg(appFullName, kHtmlLineBreak) + tr("Released: %1").arg(RELEASE_DATE));
     QString email("decapitator@ukr.net");
     aboutBox.setInformativeText(
-        tr("<i>Author:</i> Filipenkov Andrey (<b>kambala</b>)") + QString("%1<i>ICQ:</i> 287764961%1<i>E-mail:</i> <a href=\"mailto:%2?subject=%3\">%2</a>%1%1").arg(htmlLineBreak, email, appFullName) +
+        tr("<i>Author:</i> Filipenkov Andrey (<b>kambala</b>)") + QString("%1<i>ICQ:</i> 287764961%1<i>E-mail:</i> <a href=\"mailto:%2?subject=%3\">%2</a>%1%1").arg(kHtmlLineBreak, email, appFullName) +
         tr("<a href=\"http://modsbylaz.14.forumer.com/viewtopic.php?t=23147\">Official Median XL Forum thread</a><br>"
-           "<a href=\"http://forum.worldofplayers.ru/showthread.php?t=34489\">Official Russian Median XL Forum thread</a>") + htmlLineBreak + htmlLineBreak +
+           "<a href=\"http://forum.worldofplayers.ru/showthread.php?t=34489\">Official Russian Median XL Forum thread</a>") + kHtmlLineBreak + kHtmlLineBreak +
         tr("<b>Credits:</b>"
            "<ul>"
              "<li><a href=\"http://modsbylaz.hugelaser.com/\">BrotherLaz</a> for this awesome mod</li>"
@@ -856,7 +856,7 @@ void MedianXLOfflineTools::dragEnterEvent(QDragEnterEvent *event)
     if (mimeData->hasUrls())
     {
         QString path = mimeData->urls().at(0).toLocalFile();
-        if (path.right(4).toLower() == characterExtensionWithDot)
+        if (path.right(4).toLower() == kCharacterExtensionWithDot)
             event->acceptProposedAction();
     }
 }
@@ -931,6 +931,7 @@ void MedianXLOfflineTools::loadBaseStats()
 
     QList<QByteArray> lines = f.readAll().split('\n');
     foreach (const QByteArray &s, lines)
+    {
         if (!s.isEmpty() && s.at(0) != '#')
         {
             QList<QByteArray> numbers = s.trimmed().split('\t');
@@ -941,6 +942,7 @@ void MedianXLOfflineTools::loadBaseStats()
                 BaseStats::StatsPerPoint(numbers.at(9).toInt(), numbers.at(10).toInt(), numbers.at(11).toInt())
                 );
         }
+    }
     f.remove();
 }
 
@@ -991,11 +993,12 @@ void MedianXLOfflineTools::createLayout()
     QList<QLineEdit *> readonlyLineEdits = QList<QLineEdit *>() << ui.freeSkillPointsLineEdit << ui.freeStatPointsLineEdit << ui.signetsOfLearningEatenLineEdit << ui.signetsOfSkillEatenLineEdit
                                                                 << ui.inventoryGoldLineEdit << ui.stashGoldLineEdit << ui.mercLevelLineEdit << ui.classLineEdit;
     foreach (QLineEdit *lineEdit, readonlyLineEdits)
-        lineEdit->setStyleSheet(readonlyCss);
+        lineEdit->setStyleSheet(kReadonlyCss);
 
     createCharacterGroupBoxLayout();
     createMercGroupBoxLayout();
     createStatsGroupBoxLayout();
+    createQuestsGroupBoxLayout();
 
     //QGridLayout *grid = new QGridLayout(centralWidget());
     //grid->addWidget(ui.characterGroupBox, 0, 0);
@@ -1004,7 +1007,8 @@ void MedianXLOfflineTools::createLayout()
 
     QVBoxLayout *vbl = new QVBoxLayout;
     vbl->addWidget(ui.characterGroupBox);
-    vbl->addStretch();
+    //vbl->addStretch();
+    vbl->addWidget(_questsGroupBox);
     vbl->addWidget(ui.mercGroupBox);
 
     QHBoxLayout *mainLayout = new QHBoxLayout(centralWidget());
@@ -1099,6 +1103,33 @@ void MedianXLOfflineTools::createStatsGroupBoxLayout()
     gridLayout->addWidget(ui.signetsOfLearningEatenLineEdit, 6, 4);
 }
 
+void MedianXLOfflineTools::createQuestsGroupBoxLayout()
+{
+    _questsGroupBox = new QGroupBox(tr("Quests"), this);
+
+    QList<int> questKeys = QList<int>() << Enums::Quests::DenOfEvil << Enums::Quests::Radament << Enums::Quests::Izual << Enums::Quests::LamEsensTome;
+    foreach (int quest, questKeys)
+    {
+        QCheckBox *hatredCheckBox = new QCheckBox(tr("Hatred"), _questsGroupBox), *terrorCheckBox = new QCheckBox(tr("Terror"), _questsGroupBox), *destCheckBox = new QCheckBox(tr("Destruction"), _questsGroupBox);
+        hatredCheckBox->setDisabled(true); terrorCheckBox->setDisabled(true); destCheckBox->setDisabled(true);
+        _checkboxesQuestsHash[quest] = QList<QCheckBox *>() << hatredCheckBox << terrorCheckBox << destCheckBox;
+    }
+
+    QGridLayout *gridLayout = new QGridLayout(_questsGroupBox);
+    gridLayout->addWidget(new QLabel(tr("Den of Evil")), 0, 0);
+    gridLayout->addWidget(new QLabel(tr("Radament")), 1, 0);
+    gridLayout->addWidget(new QLabel(tr("Izual")), 2, 0);
+    gridLayout->addWidget(new QLabel(tr("Lam Esen")), 4, 0);
+
+    for (int i = 0; i < questKeys.size(); ++i)
+        for (int j = 0; j < kDifficultiesNumber; ++j)
+            gridLayout->addWidget(_checkboxesQuestsHash[questKeys.at(i)].at(j), i != 3 ? i : 4, j + 1);
+
+    QFrame *line = new QFrame(_questsGroupBox);
+    line->setFrameShape(QFrame::HLine);
+    gridLayout->addWidget(line, 3, 0, 1, 4);
+}
+
 void MedianXLOfflineTools::loadSettings()
 {
     QSettings settings;
@@ -1161,6 +1192,20 @@ void MedianXLOfflineTools::saveSettings() const
         _itemsDialog->saveSettings();
 }
 
+bool compareSkillIndexes(int i, int j)
+{
+    const SkillInfo &iSkill = ItemDataBase::Skills()->value(i), jSkill = ItemDataBase::Skills()->value(j);
+    if (iSkill.tab == jSkill.tab)
+    {
+        if (iSkill.col == jSkill.col)
+            return iSkill.row < jSkill.row;
+        else
+            return iSkill.col < jSkill.col;
+    }
+    else
+        return iSkill.tab < jSkill.tab;
+}
+
 void MedianXLOfflineTools::fillMaps()
 {
     _spinBoxesStatsMap[Enums::CharacterStats::Strength] = ui.strengthSpinBox;
@@ -1179,27 +1224,14 @@ void MedianXLOfflineTools::fillMaps()
     int n = skills.size();
     for (int classCode = Enums::ClassName::Amazon; classCode <= Enums::ClassName::Assassin; ++classCode)
     {
-        QList<int> skillsIndeces;
+        QList<int> skillsIndexes;
         for (int i = 0; i < n; ++i)
             if (skills.at(i).classCode == classCode)
-                skillsIndeces += i;
-        _characterSkillsIndeces[static_cast<Enums::ClassName::ClassNameEnum>(classCode)].first = skillsIndeces;
+                skillsIndexes += i;
+        _characterSkillsIndexes[static_cast<Enums::ClassName::ClassNameEnum>(classCode)].first = skillsIndexes;
 
-        qSort(skillsIndeces.begin(), skillsIndeces.end(), [&](int i, int j) -> bool
-            {
-                const SkillInfo &iSkill = skills[i], jSkill = skills[j];
-                if (iSkill.tab == jSkill.tab)
-                {
-                    if (iSkill.col == jSkill.col)
-                        return iSkill.row < jSkill.row;
-                    else
-                        return iSkill.col < jSkill.col;
-                }
-                else
-                    return iSkill.tab < jSkill.tab;
-            }
-        );
-        _characterSkillsIndeces[static_cast<Enums::ClassName::ClassNameEnum>(classCode)].second = skillsIndeces;
+        qSort(skillsIndexes.begin(), skillsIndexes.end(), compareSkillIndexes);
+        _characterSkillsIndexes[static_cast<Enums::ClassName::ClassNameEnum>(classCode)].second = skillsIndexes;
     }
 }
 
@@ -1285,7 +1317,7 @@ void MedianXLOfflineTools::addToRecentFiles()
         _recentFilesList.move(index, 0);
     else
     {
-        if (_recentFilesList.length() == maxRecentFiles)
+        if (_recentFilesList.length() == kMaxRecentFiles)
         {
 #ifdef Q_WS_WIN32
             removeFromWindowsRecentFiles(_recentFilesList.takeLast());
@@ -1332,9 +1364,9 @@ bool MedianXLOfflineTools::processSaveFile()
 
     quint32 signature;
     inputDataStream >> signature;
-    if (signature != fileSignature)
+    if (signature != kFileSignature)
     {
-        ERROR_BOX(tr("Wrong file signature: should be 0x%1, got 0x%2.").arg(fileSignature, 0, 16).arg(signature, 0, 16));
+        ERROR_BOX(tr("Wrong file signature: should be 0x%1, got 0x%2.").arg(kFileSignature, 0, 16).arg(signature, 0, 16));
         return false;
     }
 
@@ -1434,7 +1466,7 @@ bool MedianXLOfflineTools::processSaveFile()
         return false;
     }
     charInfo.questsInfo.clear();
-    for (int i = 0; i < difficultiesNumber; ++i)
+    for (int i = 0; i < kDifficultiesNumber; ++i)
     {
         int baseOffset = Enums::Offsets::QuestsData + i * Enums::Quests::Size;
         charInfo.questsInfo.denOfEvil += static_cast<bool>(_saveFileContents.at(baseOffset + Enums::Quests::DenOfEvil) & Enums::Quests::IsCompleted);
@@ -1589,8 +1621,8 @@ bool MedianXLOfflineTools::processSaveFile()
     // skills
     quint16 skills = 0, maxPossibleSkills = totalPossibleSkillPoints();
     charInfo.basicInfo.skills.clear();
-    charInfo.basicInfo.skills.reserve(skillsNumber);
-    for (int i = 0; i < skillsNumber; ++i)
+    charInfo.basicInfo.skills.reserve(kSkillsNumber);
+    for (int i = 0; i < kSkillsNumber; ++i)
     {
         quint8 skillValue = _saveFileContents.at(skillsOffset + 2 + i);
         skills += skillValue;
@@ -1602,7 +1634,7 @@ bool MedianXLOfflineTools::processSaveFile()
     {
         skills = maxPossibleSkills;
         charInfo.basicInfo.statsDynamicData.setProperty("FreeSkillPoints", maxPossibleSkills);
-        _saveFileContents.replace(charInfo.skillsOffset + 2, skillsNumber, QByteArray(skillsNumber, 0));
+        _saveFileContents.replace(charInfo.skillsOffset + 2, kSkillsNumber, QByteArray(kSkillsNumber, 0));
         if (!wasHackWarningShown)
         {
             WARNING_BOX(hackerDetected);
@@ -1611,10 +1643,10 @@ bool MedianXLOfflineTools::processSaveFile()
     }
     charInfo.basicInfo.totalSkillPoints = skills;
 
-    const QPair<QList<int>, QList<int> > &skillsIndeces = _characterSkillsIndeces[charInfo.basicInfo.classCode];
+    const QPair<QList<int>, QList<int> > &skillsIndeces = _characterSkillsIndexes[charInfo.basicInfo.classCode];
     charInfo.basicInfo.skillsReadable.clear();
-    charInfo.basicInfo.skillsReadable.reserve(skillsNumber);
-    for (int i = 0; i < skillsNumber; ++i)
+    charInfo.basicInfo.skillsReadable.reserve(kSkillsNumber);
+    for (int i = 0; i < kSkillsNumber; ++i)
     {
         int skillIndex = skillsIndeces.second.at(i);
         charInfo.basicInfo.skillsReadable += charInfo.basicInfo.skills.at(skillsIndeces.first.indexOf(skillIndex));
@@ -1622,9 +1654,9 @@ bool MedianXLOfflineTools::processSaveFile()
     }
 
     // items
-    inputDataStream.skipRawData(skillsNumber + 2);
+    inputDataStream.skipRawData(kSkillsNumber + 2);
     int charItemsOffset = inputDataStream.device()->pos();
-    if (_saveFileContents.mid(charItemsOffset, 2) != ItemParser::itemHeader)
+    if (_saveFileContents.mid(charItemsOffset, 2) != ItemParser::kItemHeader)
     {
         ERROR_BOX(tr("Items data not found!"));
         return false;
@@ -1780,13 +1812,13 @@ quint32 MedianXLOfflineTools::checksum(const QByteArray &charByteArray) const
 
 inline int MedianXLOfflineTools::totalPossibleStatPoints(int level)
 {
-    return (level - 1) * statPointsPerLevel + 5 * CharacterInfo::instance().questsInfo.lamEsensTomeQuestsCompleted() + CharacterInfo::instance().basicInfo.statsDynamicData.property("SignetsOfLearningEaten").toInt();
+    return (level - 1) * kStatPointsPerLevel + 5 * CharacterInfo::instance().questsInfo.lamEsensTomeQuestsCompleted() + CharacterInfo::instance().basicInfo.statsDynamicData.property("SignetsOfLearningEaten").toInt();
 }
 
 inline int MedianXLOfflineTools::totalPossibleSkillPoints()
 {
     const CharacterInfo &charInfo = CharacterInfo::instance();
-    return (charInfo.basicInfo.level - 1) * skillPointsPerLevel + charInfo.questsInfo.denOfEvilQuestsCompleted() + charInfo.questsInfo.radamentQuestsCompleted() + charInfo.questsInfo.izualQuestsCompleted() * 2 +
+    return (charInfo.basicInfo.level - 1) * kSkillPointsPerLevel + charInfo.questsInfo.denOfEvilQuestsCompleted() + charInfo.questsInfo.radamentQuestsCompleted() + charInfo.questsInfo.izualQuestsCompleted() * 2 +
         CharacterInfo::instance().basicInfo.statsDynamicData.property("SignetsOfSkillEaten").toInt();
 }
 
@@ -1842,7 +1874,7 @@ void MedianXLOfflineTools::processPlugyStash(QHash<Enums::ItemStorage::ItemStora
     inputDataStream.skipRawData(headerSize);
 
     inputDataStream >> info.version;
-    if ((info.hasGold = (bytes.mid(headerSize + 1 + 4, 2) != ItemParser::plugyPageHeader)))
+    if ((info.hasGold = (bytes.mid(headerSize + 1 + 4, 2) != ItemParser::kPlugyPageHeader)))
         inputDataStream >> info.gold;
     if (iter.key() == Enums::ItemStorage::SharedStash)
         _sharedGold = info.gold;
@@ -1851,13 +1883,13 @@ void MedianXLOfflineTools::processPlugyStash(QHash<Enums::ItemStorage::ItemStora
     inputDataStream >> info.lastPage;
     for (quint32 page = 1; page <= info.lastPage; ++page)
     {
-        if (bytes.mid(inputDataStream.device()->pos(), 2) != ItemParser::plugyPageHeader)
+        if (bytes.mid(inputDataStream.device()->pos(), 2) != ItemParser::kPlugyPageHeader)
         {
             ERROR_BOX(tr("Page %1 of '%2' has wrong PlugY header").arg(page).arg(QFileInfo(info.path).fileName()));
             return;
         }
         inputDataStream.skipRawData(3);
-        if (bytes.mid(inputDataStream.device()->pos(), 2) != ItemParser::itemHeader)
+        if (bytes.mid(inputDataStream.device()->pos(), 2) != ItemParser::kItemHeader)
         {
             ERROR_BOX(tr("Page %1 of '%2' has wrong item header").arg(page).arg(QFileInfo(info.path).fileName()));
             return;
@@ -1910,11 +1942,13 @@ void MedianXLOfflineTools::clearUI()
     //ui.currentActSpinBox->setValue(1);
 
     QList<QCheckBox *> checkBoxes = QList<QCheckBox *>() << ui.convertToSoftcoreCheckBox << ui.activateWaypointsCheckBox << ui.respecSkillsCheckBox;
+    foreach (QList<QCheckBox *> questCheckBoxes, _checkboxesQuestsHash.values())
+        checkBoxes << questCheckBoxes;
     foreach (QCheckBox *checkbox, checkBoxes)
         checkbox->setChecked(false);
     ui.respecStatsButton->setChecked(false);
 
-    QList<QGroupBox *> groupBoxes = QList<QGroupBox *>() << ui.characterGroupBox << ui.statsGroupBox << ui.mercGroupBox;
+    QList<QGroupBox *> groupBoxes = QList<QGroupBox *>() << ui.characterGroupBox << ui.statsGroupBox << ui.mercGroupBox << _questsGroupBox;
     foreach (QGroupBox *groupBox, groupBoxes)
         groupBox->setDisabled(true);
 
@@ -1924,6 +1958,7 @@ void MedianXLOfflineTools::clearUI()
         action->setDisabled(true);
 
     for (int i = 0; i < ui.statsTableWidget->rowCount(); ++i)
+    {
         for (int j = 0; j < ui.statsTableWidget->columnCount(); ++j)
         {
             QTableWidgetItem *item = ui.statsTableWidget->item(i, j);
@@ -1935,6 +1970,7 @@ void MedianXLOfflineTools::clearUI()
             }
             item->setText(QString());
         }
+    }
 }
 
 void MedianXLOfflineTools::updateUI()
@@ -1947,7 +1983,7 @@ void MedianXLOfflineTools::updateUI()
         action->setEnabled(true);
     ui.respecSkillsCheckBox->setEnabled(true);
 
-    QList<QGroupBox *> groupBoxes = QList<QGroupBox *>() << ui.characterGroupBox << ui.statsGroupBox;
+    QList<QGroupBox *> groupBoxes = QList<QGroupBox *>() << ui.characterGroupBox << ui.statsGroupBox << _questsGroupBox;
     foreach (QGroupBox *groupBox, groupBoxes)
         groupBox->setEnabled(true);
 
@@ -1996,6 +2032,14 @@ void MedianXLOfflineTools::updateUI()
         ui.mercGroupBox->setEnabled(true);
     }
 
+    for (int i = 0; i < kDifficultiesNumber; ++i)
+    {
+        _checkboxesQuestsHash[Enums::Quests::DenOfEvil][i]->setChecked(charInfo.questsInfo.denOfEvil.at(i));
+        _checkboxesQuestsHash[Enums::Quests::Radament][i]->setChecked(charInfo.questsInfo.radament.at(i));
+        _checkboxesQuestsHash[Enums::Quests::Izual][i]->setChecked(charInfo.questsInfo.izual.at(i));
+        _checkboxesQuestsHash[Enums::Quests::LamEsensTome][i]->setChecked(charInfo.questsInfo.lamEsensTome.at(i));
+    }
+
     bool hasItems = !charInfo.items.character.isEmpty();
     ui.actionShowItems->setEnabled(hasItems);
     ui.actionFind->setEnabled(hasItems);
@@ -2025,7 +2069,7 @@ void MedianXLOfflineTools::updateCharacterTitle(bool isHardcore)
     if (basicInfo.isHardcore && basicInfo.hadDied)
         newTitle += QString(" (%1)").arg(tr("DEAD", "HC character is dead"));
     ui.titleLineEdit->setText(newTitle);
-    ui.titleLineEdit->setStyleSheet(QString("%1; color: %2;").arg(readonlyCss, isHardcore ? "red" : "black"));
+    ui.titleLineEdit->setStyleSheet(QString("%1; color: %2;").arg(kReadonlyCss, isHardcore ? "red" : "black"));
 }
 
 void MedianXLOfflineTools::setStats()
@@ -2122,7 +2166,7 @@ void MedianXLOfflineTools::updateStatusTips(int newStatPoints, int investedStatP
 
 void MedianXLOfflineTools::updateCompoundStatusTip(QWidget *widget, const QString &firstString, const QString &secondString)
 {
-    widget->setStatusTip(compoundFormat.arg(firstString, secondString));
+    widget->setStatusTip(kCompoundFormat.arg(firstString, secondString));
 }
 
 void MedianXLOfflineTools::updateMinCompoundStatusTip(QWidget *widget, int minValue, int investedValue)
@@ -2265,7 +2309,7 @@ void MedianXLOfflineTools::backupFile(QFile &file)
 {
     if (ui.actionBackup->isChecked())
     {
-        QFile backupFile(file.fileName() + "." + backupExtension);
+        QFile backupFile(file.fileName() + "." + kBackupExtension);
         if (backupFile.exists() && !backupFile.remove())
             showErrorMessageBoxForFile(tr("Error removing old backup '%1'"), backupFile);
         else

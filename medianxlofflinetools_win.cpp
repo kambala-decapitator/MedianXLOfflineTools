@@ -19,7 +19,7 @@ typedef HRESULT (__stdcall *PSHCIFPN)(PCWSTR, IBindCtx *, const IID &, void **);
 
 PCWSTR MedianXLOfflineTools::appUserModelID()
 {
-    static const QString progId = FileAssociationManager::progIdForExtension(characterExtensionWithDot);
+    static const QString progId = FileAssociationManager::progIdForExtension(kCharacterExtensionWithDot);
     return progId.utf16();
 }
 
@@ -49,7 +49,7 @@ void MedianXLOfflineTools::syncWindowsTaskbarRecentFiles()
         if (SUCCEEDED(hr = pADL->SetAppID(appUserModelID())))
         {
             IObjectArray *pRecentItemsArray;
-            if (SUCCEEDED(hr = pADL->GetList(ADLT_RECENT, maxRecentFiles, IID_PPV_ARGS(&pRecentItemsArray))))
+            if (SUCCEEDED(hr = pADL->GetList(ADLT_RECENT, kMaxRecentFiles, IID_PPV_ARGS(&pRecentItemsArray))))
             {
                 UINT n;
                 if (SUCCEEDED(hr = pRecentItemsArray->GetCount(&n)))
@@ -103,7 +103,7 @@ void MedianXLOfflineTools::removeFromWindowsRecentFiles(const QString &filePath)
         if (SUCCEEDED(hr = pADL->SetAppID(appUserModelID())))
         {
             IObjectArray *pRecentItemsArray;
-            if (SUCCEEDED(hr = pADL->GetList(ADLT_RECENT, maxRecentFiles, IID_PPV_ARGS(&pRecentItemsArray))))
+            if (SUCCEEDED(hr = pADL->GetList(ADLT_RECENT, kMaxRecentFiles, IID_PPV_ARGS(&pRecentItemsArray))))
             {
                 UINT n;
                 if (SUCCEEDED(hr = pRecentItemsArray->GetCount(&n)))

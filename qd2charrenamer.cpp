@@ -7,7 +7,7 @@
 
 // statics
 
-const int QD2CharRenamer::maxNameLength = 15;
+const int QD2CharRenamer::kMaxNameLength = 15;
 
 void QD2CharRenamer::updateNamePreview(QTextEdit *previewTextEdit, const QString &name)
 {
@@ -30,7 +30,7 @@ QD2CharRenamer::QD2CharRenamer(const QString &originalName, bool shouldWarn, QWi
 
 
     createColorMenu();
-    ui.charNameLineEdit->setMaxLength(maxNameLength);
+    ui.charNameLineEdit->setMaxLength(kMaxNameLength);
 
     connect(ui.charNameLineEdit, SIGNAL(textChanged(const QString &)), SLOT(nameChanged(const QString &)));
     connect(ui.buttonBox, SIGNAL(accepted()), SLOT(saveName()));
@@ -95,7 +95,7 @@ void QD2CharRenamer::nameChanged(const QString &newName)
 
 void QD2CharRenamer::insertColor()
 {
-    if (ui.charNameLineEdit->text().length() + 3 <= maxNameLength)
+    if (ui.charNameLineEdit->text().length() + 3 <= kMaxNameLength)
     {
         QAction *menuItem = qobject_cast<QAction *>(sender());
         QString codeToInsert = menuItem->text().left(3);

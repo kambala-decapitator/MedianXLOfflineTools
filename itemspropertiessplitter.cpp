@@ -23,7 +23,7 @@
 #endif
 
 
-static const QString iconPathFormat(":/PlugyArrows/icons/plugy/%1.png");
+static const QString kIconPathFormat(":/PlugyArrows/icons/plugy/%1.png");
 
 ItemsPropertiesSplitter::ItemsPropertiesSplitter(ItemStorageTableView *itemsView, bool shouldCreateNavigation, QWidget *parent) : QSplitter(Qt::Horizontal, parent), _itemsView(itemsView)
 {
@@ -105,16 +105,16 @@ void ItemsPropertiesSplitter::keyPressEvent(QKeyEvent *keyEvent)
 {
     if (_left10Button && keyEventHasShift(keyEvent))
     {
-        _left10Button->setIcon(QIcon(iconPathFormat.arg("left100")));
+        _left10Button->setIcon(QIcon(kIconPathFormat.arg("left100")));
         setShortcutTextInButtonTooltip(_left10Button, Qt::ALT + Qt::SHIFT + Qt::Key_Left);
 
-        _leftButton->setIcon(QIcon(iconPathFormat.arg("first")));
+        _leftButton->setIcon(QIcon(kIconPathFormat.arg("first")));
         setShortcutTextInButtonTooltip(_leftButton, Qt::CTRL + Qt::SHIFT + Qt::Key_Left);
 
-        _rightButton->setIcon(QIcon(iconPathFormat.arg("last")));
+        _rightButton->setIcon(QIcon(kIconPathFormat.arg("last")));
         setShortcutTextInButtonTooltip(_rightButton, Qt::CTRL + Qt::SHIFT + Qt::Key_Right);
 
-        _right10Button->setIcon(QIcon(iconPathFormat.arg("right100")));
+        _right10Button->setIcon(QIcon(kIconPathFormat.arg("right100")));
         setShortcutTextInButtonTooltip(_right10Button, Qt::ALT + Qt::SHIFT + Qt::Key_Right);
 
         _isShiftPressed = true;
@@ -126,16 +126,16 @@ void ItemsPropertiesSplitter::keyReleaseEvent(QKeyEvent *keyEvent)
 {
     if (_left10Button && keyEventHasShift(keyEvent))
     {
-        _left10Button->setIcon(QIcon(iconPathFormat.arg("left10")));
+        _left10Button->setIcon(QIcon(kIconPathFormat.arg("left10")));
         setShortcutTextInButtonTooltip(_left10Button, Qt::ALT + Qt::Key_Left);
 
-        _leftButton->setIcon(QIcon(iconPathFormat.arg("left")));
+        _leftButton->setIcon(QIcon(kIconPathFormat.arg("left")));
         setShortcutTextInButtonTooltip(_leftButton, Qt::CTRL + Qt::Key_Left);
 
-        _rightButton->setIcon(QIcon(iconPathFormat.arg("right")));
+        _rightButton->setIcon(QIcon(kIconPathFormat.arg("right")));
         setShortcutTextInButtonTooltip(_rightButton, Qt::CTRL + Qt::Key_Right);
 
-        _right10Button->setIcon(QIcon(iconPathFormat.arg("right10")));
+        _right10Button->setIcon(QIcon(kIconPathFormat.arg("right10")));
         setShortcutTextInButtonTooltip(_right10Button, Qt::ALT + Qt::Key_Right);
 
         _isShiftPressed = false;
@@ -364,7 +364,7 @@ void ItemsPropertiesSplitter::disenchantItem()
     ItemsList items = ItemDataBase::itemsStoredIn(item->storage, item->location, item->plugyPage ? &item->plugyPage : 0);
     items.removeOne(item);
     ItemInfo *newItem = ItemDataBase::loadItemFromFile(action->objectName() == "signet" ? "signet_of_learning" : "arcane_shard");
-    if (!ItemDataBase::canStoreItemAt(item->row, item->column, newItem->itemType, items, ItemsViewerDialog::rows.at(ItemsViewerDialog::tabIndexFromItemStorage(item->storage))))
+    if (!ItemDataBase::canStoreItemAt(item->row, item->column, newItem->itemType, items, ItemsViewerDialog::kRows.at(ItemsViewerDialog::tabIndexFromItemStorage(item->storage))))
     {
         ERROR_BOX("If you see this text (which you shouldn't), please tell me which item you've just tried to disenchant");
         delete newItem;

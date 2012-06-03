@@ -60,6 +60,7 @@ QVariant ItemStorageTableModel::data(const QModelIndex &index, int role) const
             return Qt::white;
         }
     }
+
     if (role == Qt::BackgroundRole) // not in switch because it doesn't depend on item
         return Qt::black;
 

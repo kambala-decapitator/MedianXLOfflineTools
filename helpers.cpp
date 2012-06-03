@@ -29,7 +29,7 @@ bool isRWInGear(ItemInfo *item, const QByteArray &rune, const QByteArray &allowe
 
 QString binaryStringFromNumber(quint64 number, bool needsInversion, int fieldWidth)
 {
-    QString binaryString = QString("%1").arg(number, fieldWidth, 2, zeroChar);
+    QString binaryString = QString("%1").arg(number, fieldWidth, 2, kZeroChar);
     if (needsInversion)
         std::reverse(binaryString.begin(), binaryString.end());
     return binaryString;
@@ -37,7 +37,7 @@ QString binaryStringFromNumber(quint64 number, bool needsInversion, int fieldWid
 
 QString colorHexString(const QColor &c)
 {
-    return QString("#%1%2%3").arg(c.red(), 2, 16, zeroChar).arg(c.green(), 2, 16, zeroChar).arg(c.blue(), 2, 16, zeroChar);
+    return QString("#%1%2%3").arg(c.red(), 2, 16, kZeroChar).arg(c.green(), 2, 16, kZeroChar).arg(c.blue(), 2, 16, kZeroChar);
 }
 
 QString coloredText(const QString &text, int colorIndex)
@@ -55,7 +55,7 @@ QString htmlStringFromDiabloColorString(const QString &name, ColorsManager::Colo
     QString text = name;
     if (defaultColor != ColorsManager::NoColor)
         text.prepend(ColorsManager::colorStrings().at(defaultColor));
-    text.replace("\\n", htmlLineBreak).replace("\\grey;", ColorsManager::colorStrings().at(ColorsManager::White));
+    text.replace("\\n", kHtmlLineBreak).replace("\\grey;", ColorsManager::colorStrings().at(ColorsManager::White));
 
     QList<QPair<int, int> > colorStringsIndeces; // <index_of_color_string_in_array, position_in_string>
     for (int i = 0; i < ColorsManager::colors().size(); ++i)
@@ -83,13 +83,13 @@ QString htmlStringFromDiabloColorString(const QString &name, ColorsManager::Colo
         int position = colorStringsIndeces.at(i).second + ColorsManager::colorStrings().at(index).length(); // skip colorString
         QString coloredText_ = text.mid(position, i != colorsNumberInString - 1 ? colorStringsIndeces.at(i + 1).second - position : -1);
 
-        QStringList lines = coloredText_.split(htmlLineBreak);
+        QStringList lines = coloredText_.split(kHtmlLineBreak);
         QString reversedLines;
         for (QStringList::const_iterator i = lines.end() - 1; i != lines.begin() - 1; --i)
         {
             reversedLines.append(*i);
             if (i != lines.begin())
-                reversedLines.append(htmlLineBreak);
+                reversedLines.append(kHtmlLineBreak);
         }
         if (!reversedLines.isEmpty())
             colorStringsStack.push(coloredText(reversedLines, index));

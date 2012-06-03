@@ -31,8 +31,6 @@ MessageCheckBox::MessageCheckBox(const QString &text, const QString &checkboxTex
 
     QVBoxLayout *layout = new QVBoxLayout(this);
     layout->addLayout(grid);
-    //layout->addWidget(_text);
-    //layout->addWidget(_checkBox);
     layout->addWidget(_buttonBox);
 
     connect(_buttonBox, SIGNAL(accepted()), SLOT(accept()));

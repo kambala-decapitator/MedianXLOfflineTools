@@ -26,10 +26,10 @@ class MedianXLOfflineTools : public QMainWindow
     Q_OBJECT
 
 public:
-    static const QString compoundFormat, characterExtension, characterExtensionWithDot;
-    static const quint32 fileSignature;
-    static const int skillsNumber, difficultiesNumber, maxRecentFiles;
-    static const int statPointsPerLevel, skillPointsPerLevel;
+    static const QString kCompoundFormat, kCharacterExtension, kCharacterExtensionWithDot;
+    static const quint32 kFileSignature;
+    static const int kSkillsNumber, kDifficultiesNumber, kMaxRecentFiles;
+    static const int kStatPointsPerLevel, kSkillPointsPerLevel;
 
     MedianXLOfflineTools(const QString &cmdPath = QString(), QWidget *parent = 0, Qt::WFlags flags = 0);
     virtual ~MedianXLOfflineTools() { clearItems(); }
@@ -89,13 +89,15 @@ private:
     QStringList _recentFilesList;
     QPointer<ItemsViewerDialog> _itemsDialog;
     FindItemsDialog *_findItemsDialog;
+    QGroupBox *_questsGroupBox;
+    QHash<int, QList<QCheckBox *> > _checkboxesQuestsHash;
 
     // data
     QString _charPath;
     QByteArray _saveFileContents;
     int _oldStatValues[4];
     QMap <Enums::ClassName::ClassNameEnum, BaseStats> _baseStatsMap;
-    QHash<Enums::ClassName::ClassNameEnum, QPair<QList<int>, QList<int> > > _characterSkillsIndeces; // first is save file order, second - visual and planner order
+    QHash<Enums::ClassName::ClassNameEnum, QPair<QList<int>, QList<int> > > _characterSkillsIndexes; // first is save file order, second - visual and planner order
     int _oldClvl;
     quint32 _sharedGold;
     QHash<Enums::ItemStorage::ItemStorageEnum, PlugyStashInfo> _plugyStashesHash;
@@ -128,6 +130,7 @@ private:
     void createCharacterGroupBoxLayout();
     void createMercGroupBoxLayout();
     void createStatsGroupBoxLayout();
+    void createQuestsGroupBoxLayout();
 
     void loadSettings();
     void saveSettings() const;

@@ -15,8 +15,8 @@
 #include <QSettings>
 
 
-const int ItemsViewerDialog::cellSize = 32;
-const QList<int> ItemsViewerDialog::rows = QList<int>() << 11 << 6 << 8 << 10 << 10 << 10 << 10;
+const int ItemsViewerDialog::kCellSize = 32;
+const QList<int> ItemsViewerDialog::kRows = QList<int>() << 11 << 6 << 8 << 10 << 10 << 10 << 10;
 
 ItemsViewerDialog::ItemsViewerDialog(const QHash<int, bool> &plugyStashesExistenceHash, QWidget *parent) : QDialog(parent), _tabWidget(new QTabWidget(this))
 {
@@ -29,7 +29,7 @@ ItemsViewerDialog::ItemsViewerDialog(const QHash<int, bool> &plugyStashesExisten
     for (int i = GearIndex; i <= LastIndex; ++i)
     {
         ItemsPropertiesSplitter *splitter = new ItemsPropertiesSplitter(new ItemStorageTableView(this), i >= PersonalStashIndex, this);
-        ItemStorageTableModel *model = new ItemStorageTableModel(rows.at(i), i == GearIndex ? 8 : 10, splitter);
+        ItemStorageTableModel *model = new ItemStorageTableModel(kRows.at(i), i == GearIndex ? 8 : 10, splitter);
         splitter->setModel(model);
         connect(splitter, SIGNAL(itemCountChanged(int)), SLOT(itemCountChangedInCurrentTab(int)));
         connect(splitter, SIGNAL(itemDeleted()), SLOT(decreaseItemCount()));
@@ -46,9 +46,9 @@ ItemsViewerDialog::ItemsViewerDialog(const QHash<int, bool> &plugyStashesExisten
         ItemsPropertiesSplitter *splitter = splitterAtIndex(i);
         QTableView *tableView = static_cast<QTableView *>(splitter->itemsView());
         for (int j = 0; j < splitter->itemsModel()->rowCount(); ++j)
-            tableView->setRowHeight(j, cellSize);
+            tableView->setRowHeight(j, kCellSize);
         for (int j = 0; j < splitter->itemsModel()->columnCount(); ++j)
-            tableView->setColumnWidth(j, cellSize);
+            tableView->setColumnWidth(j, kCellSize);
     }
 
     connect(_tabWidget, SIGNAL(currentChanged(int)), SLOT(tabChanged(int)));
@@ -222,7 +222,7 @@ void ItemsViewerDialog::decreaseItemCount()
 void ItemsViewerDialog::updateBeltItemsCoordinates(bool restore, ItemsList *pBeltItems)
 {
     ItemsList beltItems = pBeltItems ? *pBeltItems : ItemDataBase::itemsStoredIn(Enums::ItemStorage::NotInStorage, Enums::ItemLocation::Belt);
-    int lastRowIndex = rows.at(GearIndex) - 1;
+    int lastRowIndex = kRows.at(GearIndex) - 1;
     foreach (ItemInfo *item, beltItems)
     {
         item->row = lastRowIndex - item->row;

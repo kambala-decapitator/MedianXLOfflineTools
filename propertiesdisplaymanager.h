@@ -20,7 +20,7 @@ public:
 
     static void addChallengeNamesToClassCharm(PropertiesMap::iterator &iter);
 
-    static const QList<QByteArray> damageToUndeadTypes;
+    static const QList<QByteArray> kDamageToUndeadTypes;
 };
 
 #endif // PROPERTIESDISPLAYMANAGER_H

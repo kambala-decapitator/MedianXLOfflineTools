@@ -432,7 +432,7 @@ QString ItemDataBase::completeItemName(ItemInfo *item, bool shouldUseColor, bool
         {
             itemName = htmlStringFromDiabloColorString(itemName, ColorsManager::DarkGrey);
             specialName = htmlStringFromDiabloColorString(specialName, ColorsManager::Gold);
-            itemName.prepend(specialName + htmlLineBreak);
+            itemName.prepend(specialName + kHtmlLineBreak);
         }
         else
         {
@@ -442,7 +442,7 @@ QString ItemDataBase::completeItemName(ItemInfo *item, bool shouldUseColor, bool
             if (hasSpecialName)
             {
                 specialName = htmlStringFromDiabloColorString(specialName, colorIndex);
-                itemName.prepend(specialName + htmlLineBreak);
+                itemName.prepend(specialName + kHtmlLineBreak);
             }
         }
     }
@@ -479,21 +479,21 @@ QString ItemDataBase::completeItemName(ItemInfo *item, bool shouldUseColor, bool
                 break;
             }
             if (!quality.isEmpty()) // skip non-magic types
-                itemName.prepend(QString("[%1]%2").arg(quality, htmlLineBreak));
+                itemName.prepend(QString("[%1]%2").arg(quality, kHtmlLineBreak));
             else if (item->isRW)
-                itemName.prepend(QString("[%1]%2").arg(tr("runeword"), htmlLineBreak));
+                itemName.prepend(QString("[%1]%2").arg(tr("runeword"), kHtmlLineBreak));
 
             QString spelldesc = Items()->value(item->itemType).spelldesc;
             if (!spelldesc.isEmpty())
             {
                 expandMultilineString(&spelldesc);
-                itemName += htmlLineBreak + spelldesc;
+                itemName += kHtmlLineBreak + spelldesc;
             }
 
             removeColorCodesFromString(itemName);
 
             if (item->isEthereal)
-                itemName += QString("%1[%2]").arg(htmlLineBreak, tr("ethereal"));
+                itemName += QString("%1[%2]").arg(kHtmlLineBreak, tr("ethereal"));
         }
     }
     return itemName;
@@ -503,7 +503,7 @@ void ItemDataBase::expandMultilineString(QString *stringToExpand)
 {
     QStringList lines = stringToExpand->split("\\n");
     std::reverse(lines.begin(), lines.end());
-    *stringToExpand = lines.join(htmlLineBreak);
+    *stringToExpand = lines.join(kHtmlLineBreak);
 }
 
 QHash<int, ColorsManager::ColorIndex> *ItemDataBase::itemQualityColorsHash()

@@ -1,9 +1,9 @@
 #include "resurrectpenaltydialog.h"
 
 
-const int ResurrectPenaltyDialog::levelPenalty = 10;
-const double ResurrectPenaltyDialog::skillPenalty = 0.025;
-const double ResurrectPenaltyDialog::statPenalty = 0.04;
+const int ResurrectPenaltyDialog::kLevelPenalty = 10;
+const double ResurrectPenaltyDialog::kSkillPenalty = 0.025;
+const double ResurrectPenaltyDialog::kStatPenalty = 0.04;
 
 ResurrectPenaltyDialog::ResurrectPenaltyDialog(QWidget *parent) : QDialog(parent)
 {

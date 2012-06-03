@@ -8,7 +8,7 @@
 #endif
 
 
-const QList<QByteArray> PropertiesDisplayManager::damageToUndeadTypes = QList<QByteArray>() << "mace" << "hamm" << "staf" << "scep" << "club" << "wand";
+const QList<QByteArray> PropertiesDisplayManager::kDamageToUndeadTypes = QList<QByteArray>() << "mace" << "hamm" << "staf" << "scep" << "club" << "wand";
 
 QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item)
 {
@@ -31,7 +31,7 @@ QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item)
         addProperties(&allProps, ItemDataBase::isGenericSocketable(socketableItem) ? genericSocketableProperties(socketableItem, itemBase.socketableType) : socketableItem->props);
 
     // create full item description
-    QString itemDescription = ItemDataBase::completeItemName(item, false).replace(htmlLineBreak, "\n") + "\n" + tr("Item Level: %1").arg(item->ilvl);
+    QString itemDescription = ItemDataBase::completeItemName(item, false).replace(kHtmlLineBreak, "\n") + "\n" + tr("Item Level: %1").arg(item->ilvl);
     if (!itemBase.spelldesc.isEmpty())
         itemDescription += itemBase.spelldesc + "\n";
 
@@ -101,7 +101,7 @@ QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item)
 
     // add '+50% damage to undead' if item type matches
     bool shouldAddDamageToUndeadInTheBottom = false;
-    if (ItemParser::itemTypeInheritsFromTypes(itemBase.typeString, damageToUndeadTypes))
+    if (ItemParser::itemTypeInheritsFromTypes(itemBase.typeString, kDamageToUndeadTypes))
     {
         if (allProps.contains(Enums::ItemProperties::DamageToUndead))
             allProps[Enums::ItemProperties::DamageToUndead].value += 50;

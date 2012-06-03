@@ -13,7 +13,7 @@ class QD2CharRenamer : public QDialog
     Q_OBJECT
 
 public:
-    static const int maxNameLength;
+    static const int kMaxNameLength;
     static void updateNamePreview(QTextEdit *previewTextEdit, const QString &name);
 
     QD2CharRenamer(const QString &originalName, bool shouldWarn, QWidget *parent = 0);

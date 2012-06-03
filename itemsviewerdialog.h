@@ -29,8 +29,8 @@ public:
         LastIndex = HCStashIndex
     };
 
-    static const int cellSize;
-    static const QList<int> rows;
+    static const int kCellSize;
+    static const QList<int> kRows;
 
     static int tabIndexFromItemStorage(int storage);
     static const QString &tabNameAtIndex(int i);

@@ -12,8 +12,8 @@
 #endif
 
 
-const QByteArray ItemParser::itemHeader("JM");
-const QByteArray ItemParser::plugyPageHeader("ST");
+const QByteArray ItemParser::kItemHeader("JM");
+const QByteArray ItemParser::kPlugyPageHeader("ST");
 
 const QString &ItemParser::enhancedDamageFormat()
 {
@@ -33,10 +33,10 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
         int itemStartOffset = inputDataStream.device()->pos();
         if (!searchEndOffset)
             searchEndOffset = itemStartOffset;
-        int nextItemOffset = bytes.indexOf(itemHeader, searchEndOffset);
+        int nextItemOffset = bytes.indexOf(kItemHeader, searchEndOffset);
         if (nextItemOffset == -1)
             nextItemOffset = bytes.size();
-        else if (bytes.mid(nextItemOffset - 3, 2) == plugyPageHeader) // for plugy stashes
+        else if (bytes.mid(nextItemOffset - 3, 2) == kPlugyPageHeader) // for plugy stashes
             nextItemOffset -= 3;
         int itemSize = nextItemOffset - itemStartOffset;
         if (itemSize <= 0)
@@ -384,7 +384,7 @@ void ItemParser::writeItems(const ItemsList &items, QDataStream &ds)
 {
     foreach (ItemInfo *item, items)
     {
-        ds.writeRawData(itemHeader.constData(), itemHeader.size()); // do not write '\0'
+        ds.writeRawData(kItemHeader.constData(), kItemHeader.size()); // do not write '\0'
 
         QByteArray itemBytes;
         for (int i = 0; i < item->bitString.length(); i += 8)

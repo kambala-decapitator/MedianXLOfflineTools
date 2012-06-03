@@ -10,6 +10,8 @@
 
 // helpers
 
+static const QString kOpenWithFormat("%1/shell/open/command/.");
+
 QString extensionWithDotFromExtension(const QString &extension)
 {
     return extension.startsWith('.') ? extension : '.' + extension;
@@ -18,11 +20,6 @@ QString extensionWithDotFromExtension(const QString &extension)
 QString executablePath()
 {
     return QDir::toNativeSeparators(qApp->applicationFilePath());
-}
-
-QString openWithFormat()
-{
-    return "%1/shell/open/command/.";
 }
 
 QString executablePathWithParam()
@@ -40,7 +37,7 @@ void registerProgID(const QString &extensionWithDot)
     QSettings hklmSoftwareClasses("HKEY_LOCAL_MACHINE\\Software\\Classes", QSettings::NativeFormat);
     hklmSoftwareClasses.setValue(QString("%1/.").arg(extensionWithDot), progId);
     hklmSoftwareClasses.setValue(QString("%1/.").arg(progId), "Diablo 2 character save file");
-    hklmSoftwareClasses.setValue(openWithFormat().arg(progId), executablePathWithParam());
+    hklmSoftwareClasses.setValue(kOpenWithFormat.arg(progId), executablePathWithParam());
 }
 
 void registerApplication(const QString &extensionWithDot)
@@ -55,7 +52,7 @@ void registerApplication(const QString &extensionWithDot)
 
     QString registryApplications = QString("Applications/%1").arg(executableName);
     hklmSoftware.beginGroup("Classes");
-    hklmSoftware.setValue(openWithFormat().arg(registryApplications), executablePathWithParam());
+    hklmSoftware.setValue(kOpenWithFormat.arg(registryApplications), executablePathWithParam());
     hklmSoftware.setValue(QString("%1/SupportedTypes/%2").arg(registryApplications, extensionWithDot), QString("")); // empty string is intended
     hklmSoftware.endGroup();
 
@@ -94,7 +91,7 @@ bool FileAssociationManager::isApplicationDefaultForExtension(const QString &ext
     if (QSysInfo::windowsVersion() < QSysInfo::WV_VISTA)
     {
         QSettings hklmSoftwareClasses("HKEY_LOCAL_MACHINE\\Software\\Classes", QSettings::NativeFormat);
-        isDefault = hklmSoftwareClasses.value(openWithFormat().arg(FileAssociationManager::progIdForExtension(extensionWithDot))).toString() == executablePathWithParam();
+        isDefault = hklmSoftwareClasses.value(kOpenWithFormat.arg(FileAssociationManager::progIdForExtension(extensionWithDot))).toString() == executablePathWithParam();
         if (isDefault)
         {
             if (isRegisteredApplicationOverridenInFileExts(extensionWithDot, false))

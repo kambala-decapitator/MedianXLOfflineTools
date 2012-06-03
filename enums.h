@@ -3,7 +3,6 @@
 
 #include "helpers.h"
 
-#include <QStringList>
 #include <QCoreApplication>
 
 

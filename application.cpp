@@ -7,10 +7,10 @@
 #include <QTimer>
 #endif
 
-static const QString appName("Median XL Offline Tools");
+static const QString kAppName("Median XL Offline Tools");
 
 
-Application::Application(int &argc, char **argv) : QtSingleApplication(appName, argc, argv), _mainWindow(0)
+Application::Application(int &argc, char **argv) : QtSingleApplication(kAppName, argc, argv), _mainWindow(0)
 {
 #ifdef Q_WS_WIN32
     ::AllowSetForegroundWindow(ASFW_ANY);
@@ -28,7 +28,7 @@ Application::Application(int &argc, char **argv) : QtSingleApplication(appName, 
         return;
 
     setOrganizationName("kambala");
-    setApplicationName(appName);
+    setApplicationName(kAppName);
     setApplicationVersion("0.2.2");
 #ifdef Q_WS_MACX
     setAttribute(Qt::AA_DontShowIconsInMenus);
