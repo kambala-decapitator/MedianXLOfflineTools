@@ -100,10 +100,10 @@ void FindResultsWidget::updateItems(QList<SearchResultItem> *newItems)
             QTreeWidgetItem *childItem = new QTreeWidgetItem(list);
             if (i >= ItemsViewerDialog::PersonalStashIndex)
                 childItem->setText(0, QString("[%1] ").arg(tr("p. %1", "page abbreviation").arg(item->plugyPage)) + childItem->text(0));
-            for (int i = 0; i < list.size(); ++i)
+            for (int j = 0; j < list.size(); ++j)
             {
-                childItem->setForeground(i, colors.at(i));
-                childItem->setToolTip(i, matchedText);
+                childItem->setForeground(j, colors.at(j));
+                childItem->setToolTip(j, matchedText);
             }
 
             int newWidth = width() / 2;

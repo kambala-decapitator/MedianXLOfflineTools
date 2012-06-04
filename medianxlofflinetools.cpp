@@ -41,7 +41,7 @@
 // additional defines
 
 #ifdef QT_NO_DEBUG
-#define RELEASE_DATE "27.05.2012" // TODO: don't forget to change
+#define RELEASE_DATE "06.06.2012" // TODO: don't forget to change
 #else
 #define RELEASE_DATE QDate::currentDate().toString("dd.MM.yyyy") // :)
 #endif
@@ -1620,7 +1620,6 @@ bool MedianXLOfflineTools::processSaveFile()
     int totalPossibleStats = totalPossibleStatPoints(charInfo.basicInfo.level);
     if (totalStats > totalPossibleStats) // check if stats are hacked
     {
-        QMetaEnum statisticMetaEnum = Enums::CharacterStats::statisticMetaEnum();
         for (int i = Enums::CharacterStats::Strength; i <= Enums::CharacterStats::Vitality; ++i)
         {
             Enums::CharacterStats::StatisticEnum statCode = static_cast<Enums::CharacterStats::StatisticEnum>(i);

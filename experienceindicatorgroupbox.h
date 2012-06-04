@@ -2,8 +2,9 @@
 #define EXPERIENCEINDICATORGROUPBOX_H
 
 #include <QGroupBox>
-#include <QProgressBar>
 
+
+class QProgressBar;
 
 class ExperienceIndicatorGroupBox : public QGroupBox
 {
@@ -12,8 +13,8 @@ class ExperienceIndicatorGroupBox : public QGroupBox
 public:
     ExperienceIndicatorGroupBox(QWidget *parent);
 
-    void setCurrentExperience(quint32 exp)   { _progressBar->setValue(exp); }
-    void setNextLevelExperience(quint32 exp) { _progressBar->setMaximum(exp); }
+    void setNextLevelExperience(quint32 exp);
+    void setCurrentExperience(quint32 exp);
 
 private:
     QProgressBar *_progressBar;

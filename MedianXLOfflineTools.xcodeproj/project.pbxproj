@@ -1,0 +1,704 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00C7057FF2266096D754151C /* itemparser.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 134C5214854B7E89B70E1B38 /* itemparser.cpp */; settings = {ATTRIBUTES = (); }; };
+		04DE3337E2AE172B5D36AFF7 /* application_mac.mm in Build Sources */ = {isa = PBXBuildFile; fileRef = 4003C8FF31A7868D0AC66678 /* application_mac.mm */; settings = {ATTRIBUTES = (); }; };
+		069D05B0128AE5DC7EE31738 /* QtCore.framework in Frameworks & Libraries */ = {isa = PBXBuildFile; fileRef = 7BC2E65A5E699A5E5D834CA2 /* QtCore.framework */; };
+		0A4144109FCEBF9CB2301BE6 /* skillplandialog.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 107FCE7A3256D0ECA5761546 /* skillplandialog.cpp */; settings = {ATTRIBUTES = (); }; };
+		0F6D2BB85009343A64CE79A8 /* itemstoragetablemodel.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 33C0281AE895F6F1D288680C /* itemstoragetablemodel.cpp */; settings = {ATTRIBUTES = (); }; };
+		1C8AE356AC924FA121BCAE78 /* reversebitreader.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 35D9C9B4AC80510BCEA863B7 /* reversebitreader.cpp */; settings = {ATTRIBUTES = (); }; };
+		21A53A3D3E73324CB327896D /* qd2charrenamer.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = BB2819382ED1400D8D730443 /* qd2charrenamer.cpp */; settings = {ATTRIBUTES = (); }; };
+		276D78C24C0B950D7392B755 /* fileassociationmanager_mac.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 1E744FC824BC439C8BDE0C64 /* fileassociationmanager_mac.cpp */; settings = {ATTRIBUTES = (); }; };
+		2B093CA6F071B023A473CED0 /* main.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 118FCBAABA162BA17933C789 /* main.cpp */; settings = {ATTRIBUTES = (); }; };
+		2E9F173F144B42803711F654 /* moc_propertiesviewerwidget.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 954D2F14C515B9F2F106008A /* moc_propertiesviewerwidget.cpp */; settings = {ATTRIBUTES = (); }; };
+		2F84BB742FB68F12BF2E4868 /* propertiesviewerwidget.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 864865BD7CF9B2ED31A33C5D /* propertiesviewerwidget.cpp */; settings = {ATTRIBUTES = (); }; };
+		31A2ABBCCD6D7081905A7B30 /* helpers.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 9DF8BB12FF11D5408ADC7086 /* helpers.cpp */; settings = {ATTRIBUTES = (); }; };
+		3826A0833FCB54E86728C6EF /* QtNetwork.framework in Frameworks & Libraries */ = {isa = PBXBuildFile; fileRef = B6B9970B86A6C219B0869FE9 /* QtNetwork.framework */; };
+		501667F26B3C1FF6767A7C12 /* QtGui.framework in Frameworks & Libraries */ = {isa = PBXBuildFile; fileRef = 9B36DA7E32F0304E780E7972 /* QtGui.framework */; };
+		51D4DBF7CB8537BE86EBD055 /* AppKit.framework in Frameworks & Libraries */ = {isa = PBXBuildFile; fileRef = 821416211D63F190AAAD016A /* AppKit.framework */; };
+		5E97B4CEB6F000A1E27BC7F2 /* resurrectpenaltydialog.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = C1A9E060AAA12B497C8F3B91 /* resurrectpenaltydialog.cpp */; settings = {ATTRIBUTES = (); }; };
+		6923BAD493D5E5CC54E107C7 /* medianxlofflinetools.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 048D7B835A93D44117D969B1 /* medianxlofflinetools.cpp */; settings = {ATTRIBUTES = (); }; };
+		73634ECD5C724AE557D52043 /* itemdatabase.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = FFE7684627752FF67C3CD35D /* itemdatabase.cpp */; settings = {ATTRIBUTES = (); }; };
+		78BB12D12BE8F99B19493879 /* moc_finditemsdialog.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = B9D8BD7BA460F99AD062AF08 /* moc_finditemsdialog.cpp */; settings = {ATTRIBUTES = (); }; };
+		7AD9DDBA85996A831E975A3E /* moc_findresultswidget.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = F118FB0BC619473AC333F7A5 /* moc_findresultswidget.cpp */; settings = {ATTRIBUTES = (); }; };
+		7DBDA13986FB52F629B68C87 /* moc_itemstoragetableview.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = B1555E4249E75628A4999156 /* moc_itemstoragetableview.cpp */; settings = {ATTRIBUTES = (); }; };
+		895786EDC000434EFCF2C3A4 /* icon.icns in Bundle Resources */ = {isa = PBXBuildFile; fileRef = 57FE2B1EE658C9D723157766 /* icon.icns */; settings = {ATTRIBUTES = (); }; };
+		8A0E857578A39169112B63D3 /* application.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = C06D1ED2CAED84DCC3F4E76A /* application.cpp */; settings = {ATTRIBUTES = (); }; };
+		8E8B600FEB3FEFA6CFF1794F /* moc_skillplandialog.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 21B9F4A381F662CF139EEA33 /* moc_skillplandialog.cpp */; settings = {ATTRIBUTES = (); }; };
+		8E9CACAB4753602297AD9598 /* propertiesdisplaymanager.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 9496FE6F7644EF9859BB340B /* propertiesdisplaymanager.cpp */; settings = {ATTRIBUTES = (); }; };
+		921BA341186AF0F2556E26EE /* moc_itemstoragetablemodel.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 6E0F7A39E6D33F8DCF3A3882 /* moc_itemstoragetablemodel.cpp */; settings = {ATTRIBUTES = (); }; };
+		95226DA277BD9648277EB94F /* itemspropertiessplitter.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 9045BCCC40EE153DECB2F200 /* itemspropertiessplitter.cpp */; settings = {ATTRIBUTES = (); }; };
+		A09B6C8F4BD65519FF5EF5DA /* moc_application.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 815FFBFB0D8FA5D4188616FA /* moc_application.cpp */; settings = {ATTRIBUTES = (); }; };
+		A6BF33642D4408F437404357 /* moc_itemsviewerdialog.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = DDCD2B3240AC93BDC1AC2748 /* moc_itemsviewerdialog.cpp */; settings = {ATTRIBUTES = (); }; };
+		A8BA6FFB47BB1BD81D7FBD98 /* itemsviewerdialog.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = BB35BC6199B5362D4DDC4E81 /* itemsviewerdialog.cpp */; settings = {ATTRIBUTES = (); }; };
+		AB191A955E35E32AA265564E /* experienceindicatorgroupbox.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 92D0C0D68926B7F4E8A412F1 /* experienceindicatorgroupbox.cpp */; settings = {ATTRIBUTES = (); }; };
+		B09132059B01BF93ACB07F02 /* moc_enums.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 457C18608DE1E1EB5A10C3F3 /* moc_enums.cpp */; settings = {ATTRIBUTES = (); }; };
+		B0CB039B3B4323FC3D471B59 /* enums.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = E34D230637628A8CD6C3EA30 /* enums.cpp */; settings = {ATTRIBUTES = (); }; };
+		B14AFF375B11F951842C979C /* itemstoragetableview.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 0D597AF1812341262648E491 /* itemstoragetableview.cpp */; settings = {ATTRIBUTES = (); }; };
+		B3864626FF1CA65F25FCD359 /* reversebitwriter.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = EABC55D3078843605EC937FD /* reversebitwriter.cpp */; settings = {ATTRIBUTES = (); }; };
+		C351D9D7A092461B00233A33 /* moc_qd2charrenamer.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 190B7FBB10DB0B16B5046F23 /* moc_qd2charrenamer.cpp */; settings = {ATTRIBUTES = (); }; };
+		C8B906053E4EC2AAFC66309A /* moc_qtlocalpeer.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 3B263EC2B01DF1ACE4B9ED3D /* moc_qtlocalpeer.cpp */; settings = {ATTRIBUTES = (); }; };
+		CF43789BC75DF60EE05AC492 /* moc_itemspropertiessplitter.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 1225D5B7D03A2D0D8E968A94 /* moc_itemspropertiessplitter.cpp */; settings = {ATTRIBUTES = (); }; };
+		D95ADDE608951E7F272AD7CA /* finditemsdialog.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 29E97D19C2DA77D38DADA780 /* finditemsdialog.cpp */; settings = {ATTRIBUTES = (); }; };
+		DF06D3F49E4DB3ED883545FB /* moc_medianxlofflinetools.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 0092663B5ABB9A5FDE3A55C2 /* moc_medianxlofflinetools.cpp */; settings = {ATTRIBUTES = (); }; };
+		E03FD021FA960BCA4F1B1C61 /* messagecheckbox_mac.mm in Build Sources */ = {isa = PBXBuildFile; fileRef = 640B0B8B14AFDE50375F6CB6 /* messagecheckbox_mac.mm */; settings = {ATTRIBUTES = (); }; };
+		E76D73B303E351243A84BC8E /* qtlocalpeer.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 2F004A54FA510C70CF3BC9FC /* qtlocalpeer.cpp */; settings = {ATTRIBUTES = (); }; };
+		E88FA4062BD69817D57B0217 /* moc_experienceindicatorgroupbox.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 5CEEC24EAE9893368C3C470E /* moc_experienceindicatorgroupbox.cpp */; settings = {ATTRIBUTES = (); }; };
+		EA3F671A9E7077E1C5E9427A /* moc_qtsingleapplication.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 73A3D27301B92EEF800C2C64 /* moc_qtsingleapplication.cpp */; settings = {ATTRIBUTES = (); }; };
+		EA6AD9C4DA7DF1365038EF99 /* findresultswidget.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 046193EA83F955D427162245 /* findresultswidget.cpp */; settings = {ATTRIBUTES = (); }; };
+		F0285486DB9135A3A8C91B6A /* qtsingleapplication.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 080C84CE92E8C74010FF9355 /* qtsingleapplication.cpp */; settings = {ATTRIBUTES = (); }; };
+		F2FDBFD0C58EBEDFE231A6DF /* qrc_medianxlofflinetools.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = B06652142F8E356218335B39 /* qrc_medianxlofflinetools.cpp */; settings = {ATTRIBUTES = (); }; };
+		F9E76E570E10AF14870553A7 /* ApplicationServices.framework in Frameworks & Libraries */ = {isa = PBXBuildFile; fileRef = 27AE7A480FD6C52FCA80FECD /* ApplicationServices.framework */; };
+		FB9DFA9EEC4BEBD9F0D80E8F /* moc_resurrectpenaltydialog.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 6887EB9D0EC054A91A5B9F07 /* moc_resurrectpenaltydialog.cpp */; settings = {ATTRIBUTES = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0092663B5ABB9A5FDE3A55C2 /* moc_medianxlofflinetools.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_medianxlofflinetools.cpp; sourceTree = "<group>"; };
+		0313823CCF5B5C4DBAE2A3E8 /* reversebitwriter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = reversebitwriter.h; sourceTree = "<group>"; };
+		03B66D70A47E9FB94741974E /* itemparser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = itemparser.h; sourceTree = "<group>"; };
+		046193EA83F955D427162245 /* findresultswidget.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = findresultswidget.cpp; sourceTree = "<group>"; };
+		048D7B835A93D44117D969B1 /* medianxlofflinetools.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = medianxlofflinetools.cpp; sourceTree = "<group>"; };
+		051D1AB88DDA0AB7FFA6D407 /* ui_resurrectpenaltydialog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ui_resurrectpenaltydialog.h; sourceTree = "<group>"; };
+		080C84CE92E8C74010FF9355 /* qtsingleapplication.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = qtsingleapplication.cpp; path = qtsingleapplication/qtsingleapplication.cpp; sourceTree = "<group>"; };
+		09198D1FF69E14CF80220596 /* itemsviewerdialog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = itemsviewerdialog.h; sourceTree = "<group>"; };
+		0D597AF1812341262648E491 /* itemstoragetableview.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = itemstoragetableview.cpp; sourceTree = "<group>"; };
+		107FCE7A3256D0ECA5761546 /* skillplandialog.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = skillplandialog.cpp; sourceTree = "<group>"; };
+		118FCBAABA162BA17933C789 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		1225D5B7D03A2D0D8E968A94 /* moc_itemspropertiessplitter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_itemspropertiessplitter.cpp; sourceTree = "<group>"; };
+		134C5214854B7E89B70E1B38 /* itemparser.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = itemparser.cpp; sourceTree = "<group>"; };
+		18AC80D4A510EA33B37145C9 /* qd2charrenamer.ui */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = qd2charrenamer.ui; sourceTree = "<group>"; };
+		190B7FBB10DB0B16B5046F23 /* moc_qd2charrenamer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_qd2charrenamer.cpp; sourceTree = "<group>"; };
+		1C8010DBD505B823EDE2746F /* resurrectpenaltydialog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = resurrectpenaltydialog.h; sourceTree = "<group>"; };
+		1DADC0B8E2F6027D2B6D40DD /* structs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = structs.h; sourceTree = "<group>"; };
+		1E744FC824BC439C8BDE0C64 /* fileassociationmanager_mac.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = fileassociationmanager_mac.cpp; sourceTree = "<group>"; };
+		21B9F4A381F662CF139EEA33 /* moc_skillplandialog.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_skillplandialog.cpp; sourceTree = "<group>"; };
+		27AE7A480FD6C52FCA80FECD /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = /System/Library/Frameworks/ApplicationServices.framework; sourceTree = "<absolute>"; };
+		28715C4E68DB636B3BED5BB4 /* itemdatabase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = itemdatabase.h; sourceTree = "<group>"; };
+		29E97D19C2DA77D38DADA780 /* finditemsdialog.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = finditemsdialog.cpp; sourceTree = "<group>"; };
+		2B1192F40CE631B10BEFA4B0 /* resourcepathmanager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = resourcepathmanager.hpp; sourceTree = "<group>"; };
+		2F004A54FA510C70CF3BC9FC /* qtlocalpeer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = qtlocalpeer.cpp; path = qtsingleapplication/qtlocalpeer.cpp; sourceTree = "<group>"; };
+		32900774B5D2D9CC68EC9667 /* fileassociationmanager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fileassociationmanager.h; sourceTree = "<group>"; };
+		33C0281AE895F6F1D288680C /* itemstoragetablemodel.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = itemstoragetablemodel.cpp; sourceTree = "<group>"; };
+		350C6E0AA06044F2D4BCB10F /* itemstoragetableview.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = itemstoragetableview.h; sourceTree = "<group>"; };
+		35D9C9B4AC80510BCEA863B7 /* reversebitreader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = reversebitreader.cpp; sourceTree = "<group>"; };
+		3B1ED9A220D37E0F2969CFCA /* propertiesdisplaymanager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = propertiesdisplaymanager.h; sourceTree = "<group>"; };
+		3B263EC2B01DF1ACE4B9ED3D /* moc_qtlocalpeer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_qtlocalpeer.cpp; sourceTree = "<group>"; };
+		3E24D015FFE43041FAACA4C4 /* enums.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = enums.h; sourceTree = "<group>"; };
+		4003C8FF31A7868D0AC66678 /* application_mac.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = application_mac.mm; sourceTree = "<group>"; };
+		40EEE5E4BF46D9CE22FED30E /* qd2charrenamer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = qd2charrenamer.h; sourceTree = "<group>"; };
+		4147D111E93FFC38D5F56B3F /* propertiesviewerwidget.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = propertiesviewerwidget.h; sourceTree = "<group>"; };
+		41B5802369A95F860933A1AF /* skillplandialog.ui */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = skillplandialog.ui; sourceTree = "<group>"; };
+		457C18608DE1E1EB5A10C3F3 /* moc_enums.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_enums.cpp; sourceTree = "<group>"; };
+		4D6E68A38295F99B7324EC7C /* medianxlofflinetools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = medianxlofflinetools.h; sourceTree = "<group>"; };
+		52E6A8B49132AB1956541CCE /* ui_propertiesviewerwidget.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ui_propertiesviewerwidget.h; sourceTree = "<group>"; };
+		54C6FFB76D814CBC6C602AA3 /* reversebitreader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = reversebitreader.h; sourceTree = "<group>"; };
+		57EC01D096611301042E626B /* ui_medianxlofflinetools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ui_medianxlofflinetools.h; sourceTree = "<group>"; };
+		57FE2B1EE658C9D723157766 /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = icon.icns; path = resources/mac/icon.icns; sourceTree = "<group>"; };
+		59D7D03F3F76416088F83910 /* ui_skillplandialog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ui_skillplandialog.h; sourceTree = "<group>"; };
+		5CEEC24EAE9893368C3C470E /* moc_experienceindicatorgroupbox.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_experienceindicatorgroupbox.cpp; sourceTree = "<group>"; };
+		60ED7402D501FE7FA4068D8F /* colorsmanager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = colorsmanager.hpp; sourceTree = "<group>"; };
+		633965930DF94524CA097B37 /* propertiesviewerwidget.ui */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = propertiesviewerwidget.ui; sourceTree = "<group>"; };
+		640B0B8B14AFDE50375F6CB6 /* messagecheckbox_mac.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = messagecheckbox_mac.mm; sourceTree = "<group>"; };
+		6887EB9D0EC054A91A5B9F07 /* moc_resurrectpenaltydialog.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_resurrectpenaltydialog.cpp; sourceTree = "<group>"; };
+		6E0F7A39E6D33F8DCF3A3882 /* moc_itemstoragetablemodel.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_itemstoragetablemodel.cpp; sourceTree = "<group>"; };
+		73A3D27301B92EEF800C2C64 /* moc_qtsingleapplication.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_qtsingleapplication.cpp; sourceTree = "<group>"; };
+		7BC2E65A5E699A5E5D834CA2 /* QtCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtCore.framework; path = /Library/Frameworks/QtCore.framework; sourceTree = "<absolute>"; };
+		815FFBFB0D8FA5D4188616FA /* moc_application.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_application.cpp; sourceTree = "<group>"; };
+		821416211D63F190AAAD016A /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		83B1A57E1BE4548405E8A5AD /* itemstoragetablemodel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = itemstoragetablemodel.h; sourceTree = "<group>"; };
+		864865BD7CF9B2ED31A33C5D /* propertiesviewerwidget.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = propertiesviewerwidget.cpp; sourceTree = "<group>"; };
+		8B9D6A21C2B02D0B980A59EC /* ui_qd2charrenamer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ui_qd2charrenamer.h; sourceTree = "<group>"; };
+		8F46D2DA5140DD3AFC4771D9 /* application.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = application.h; sourceTree = "<group>"; };
+		9045BCCC40EE153DECB2F200 /* itemspropertiessplitter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = itemspropertiessplitter.cpp; sourceTree = "<group>"; };
+		919E2048F1A9EF3D864E026A /* finditemsdialog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = finditemsdialog.h; sourceTree = "<group>"; };
+		92D0C0D68926B7F4E8A412F1 /* experienceindicatorgroupbox.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = experienceindicatorgroupbox.cpp; sourceTree = "<group>"; };
+		9496FE6F7644EF9859BB340B /* propertiesdisplaymanager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = propertiesdisplaymanager.cpp; sourceTree = "<group>"; };
+		954D2F14C515B9F2F106008A /* moc_propertiesviewerwidget.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_propertiesviewerwidget.cpp; sourceTree = "<group>"; };
+		99909FF0E3532A0626D2CCDD /* MedianXLOfflineTools.pro */ = {isa = PBXFileReference; lastKnownFileType = text; path = MedianXLOfflineTools.pro; sourceTree = "<group>"; };
+		9B36DA7E32F0304E780E7972 /* QtGui.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtGui.framework; path = /Library/Frameworks/QtGui.framework; sourceTree = "<absolute>"; };
+		9DF8BB12FF11D5408ADC7086 /* helpers.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = helpers.cpp; sourceTree = "<group>"; };
+		ACF50AAB157D5770004DA221 /* MedianXLOfflineTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedianXLOfflineTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B06652142F8E356218335B39 /* qrc_medianxlofflinetools.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = qrc_medianxlofflinetools.cpp; sourceTree = "<group>"; };
+		B1555E4249E75628A4999156 /* moc_itemstoragetableview.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_itemstoragetableview.cpp; sourceTree = "<group>"; };
+		B6B9970B86A6C219B0869FE9 /* QtNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtNetwork.framework; path = /Library/Frameworks/QtNetwork.framework; sourceTree = "<absolute>"; };
+		B9D8BD7BA460F99AD062AF08 /* moc_finditemsdialog.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_finditemsdialog.cpp; sourceTree = "<group>"; };
+		BB2819382ED1400D8D730443 /* qd2charrenamer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = qd2charrenamer.cpp; sourceTree = "<group>"; };
+		BB35BC6199B5362D4DDC4E81 /* itemsviewerdialog.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = itemsviewerdialog.cpp; sourceTree = "<group>"; };
+		BC42B1EFA42154B0BC04CA57 /* experienceindicatorgroupbox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = experienceindicatorgroupbox.h; sourceTree = "<group>"; };
+		C06D1ED2CAED84DCC3F4E76A /* application.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = application.cpp; sourceTree = "<group>"; };
+		C1A9E060AAA12B497C8F3B91 /* resurrectpenaltydialog.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = resurrectpenaltydialog.cpp; sourceTree = "<group>"; };
+		C220A3797A2B91EEFE70F7C0 /* itemspropertiessplitter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = itemspropertiessplitter.h; sourceTree = "<group>"; };
+		C4EE8274D905B75D4D6320C0 /* finditemsdialog.ui */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = finditemsdialog.ui; sourceTree = "<group>"; };
+		D1014A9B1A9E020E8BD0EEA1 /* resurrectpenaltydialog.ui */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = resurrectpenaltydialog.ui; sourceTree = "<group>"; };
+		D62C549A94EF5B37F477C302 /* qtlockedfile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = qtlockedfile.h; path = qtsingleapplication/qtlockedfile.h; sourceTree = "<group>"; };
+		D686E3B3B9F0B6277F808527 /* characterinfo.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = characterinfo.hpp; sourceTree = "<group>"; };
+		DA5503B917227CED52256B8D /* medianxlofflinetools.qrc */ = {isa = PBXFileReference; lastKnownFileType = text; name = medianxlofflinetools.qrc; path = resources/medianxlofflinetools.qrc; sourceTree = "<group>"; };
+		DDCD2B3240AC93BDC1AC2748 /* moc_itemsviewerdialog.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_itemsviewerdialog.cpp; sourceTree = "<group>"; };
+		DE0867D5A1B5D662E894D77C /* helpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = helpers.h; sourceTree = "<group>"; };
+		E0E5871E5CE7B948B7D33DC5 /* ui_finditemsdialog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ui_finditemsdialog.h; sourceTree = "<group>"; };
+		E189C1DC3E06BF6A9D76A6A1 /* qtsingleapplication.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = qtsingleapplication.h; path = qtsingleapplication/qtsingleapplication.h; sourceTree = "<group>"; };
+		E34D230637628A8CD6C3EA30 /* enums.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = enums.cpp; sourceTree = "<group>"; };
+		E3E9AFF10597B81B5BD6D401 /* medianxlofflinetools.ui */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = medianxlofflinetools.ui; sourceTree = "<group>"; };
+		E48142269E1CC2CF9FD343F2 /* findresultswidget.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = findresultswidget.h; sourceTree = "<group>"; };
+		E7AF51C8A9AB40F1B427BD6F /* qtlocalpeer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = qtlocalpeer.h; path = qtsingleapplication/qtlocalpeer.h; sourceTree = "<group>"; };
+		EABC55D3078843605EC937FD /* reversebitwriter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = reversebitwriter.cpp; sourceTree = "<group>"; };
+		EFE68327DD1039397A061F7E /* languagemanager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = languagemanager.hpp; sourceTree = "<group>"; };
+		F118FB0BC619473AC333F7A5 /* moc_findresultswidget.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_findresultswidget.cpp; sourceTree = "<group>"; };
+		F4408DF4D4324033BBD4B664 /* skillplandialog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = skillplandialog.h; sourceTree = "<group>"; };
+		FFE7684627752FF67C3CD35D /* itemdatabase.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = itemdatabase.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2A1043669E6E5A7426EA502A /* Frameworks & Libraries */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9E76E570E10AF14870553A7 /* ApplicationServices.framework in Frameworks & Libraries */,
+				51D4DBF7CB8537BE86EBD055 /* AppKit.framework in Frameworks & Libraries */,
+				501667F26B3C1FF6767A7C12 /* QtGui.framework in Frameworks & Libraries */,
+				069D05B0128AE5DC7EE31738 /* QtCore.framework in Frameworks & Libraries */,
+				3826A0833FCB54E86728C6EF /* QtNetwork.framework in Frameworks & Libraries */,
+			);
+			name = "Frameworks & Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		05596AB53D8D521C69802C27 /* MedianXLOfflineTools */ = {
+			isa = PBXGroup;
+			children = (
+				FB61758D0F0FDA4BA867C3D5 /* Sources */,
+				46E892BBB6BB6952967E0561 /* Temporary Sources */,
+				883D7615C4D2DE3FA1218F12 /* Headers */,
+				7CABE3C80E79AD2B307756D2 /* Sources [qmake] */,
+				3E4431212F852BE94A75A1A8 /* Sources [Compile] */,
+				52C235EBF1C9B07808119459 /* Sources [RCC] */,
+				EEC299C65D5017EB9DD513B0 /* Sources [UIC] */,
+				ED1E82605DD74B483AF3C982 /* External Frameworks and Libraries */,
+				ACF50AAC157D5770004DA221 /* Products */,
+			);
+			name = MedianXLOfflineTools;
+			sourceTree = "<group>";
+		};
+		16A82DA2701971900CCC9274 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				DA5503B917227CED52256B8D /* medianxlofflinetools.qrc */,
+			);
+			name = resources;
+			sourceTree = "<group>";
+		};
+		3D7BD5E49998522E444FC917 /* qtsingleapplication */ = {
+			isa = PBXGroup;
+			children = (
+				E189C1DC3E06BF6A9D76A6A1 /* qtsingleapplication.h */,
+				D62C549A94EF5B37F477C302 /* qtlockedfile.h */,
+				E7AF51C8A9AB40F1B427BD6F /* qtlocalpeer.h */,
+			);
+			name = qtsingleapplication;
+			sourceTree = "<group>";
+		};
+		3E4431212F852BE94A75A1A8 /* Sources [Compile] */ = {
+			isa = PBXGroup;
+			children = (
+				4003C8FF31A7868D0AC66678 /* application_mac.mm */,
+				640B0B8B14AFDE50375F6CB6 /* messagecheckbox_mac.mm */,
+			);
+			name = "Sources [Compile]";
+			sourceTree = "<group>";
+		};
+		46E892BBB6BB6952967E0561 /* Temporary Sources */ = {
+			isa = PBXGroup;
+			children = (
+				0092663B5ABB9A5FDE3A55C2 /* moc_medianxlofflinetools.cpp */,
+				6887EB9D0EC054A91A5B9F07 /* moc_resurrectpenaltydialog.cpp */,
+				190B7FBB10DB0B16B5046F23 /* moc_qd2charrenamer.cpp */,
+				457C18608DE1E1EB5A10C3F3 /* moc_enums.cpp */,
+				954D2F14C515B9F2F106008A /* moc_propertiesviewerwidget.cpp */,
+				DDCD2B3240AC93BDC1AC2748 /* moc_itemsviewerdialog.cpp */,
+				6E0F7A39E6D33F8DCF3A3882 /* moc_itemstoragetablemodel.cpp */,
+				B1555E4249E75628A4999156 /* moc_itemstoragetableview.cpp */,
+				1225D5B7D03A2D0D8E968A94 /* moc_itemspropertiessplitter.cpp */,
+				B9D8BD7BA460F99AD062AF08 /* moc_finditemsdialog.cpp */,
+				F118FB0BC619473AC333F7A5 /* moc_findresultswidget.cpp */,
+				21B9F4A381F662CF139EEA33 /* moc_skillplandialog.cpp */,
+				815FFBFB0D8FA5D4188616FA /* moc_application.cpp */,
+				73A3D27301B92EEF800C2C64 /* moc_qtsingleapplication.cpp */,
+				3B263EC2B01DF1ACE4B9ED3D /* moc_qtlocalpeer.cpp */,
+				5CEEC24EAE9893368C3C470E /* moc_experienceindicatorgroupbox.cpp */,
+				B06652142F8E356218335B39 /* qrc_medianxlofflinetools.cpp */,
+				57EC01D096611301042E626B /* ui_medianxlofflinetools.h */,
+				051D1AB88DDA0AB7FFA6D407 /* ui_resurrectpenaltydialog.h */,
+				8B9D6A21C2B02D0B980A59EC /* ui_qd2charrenamer.h */,
+				52E6A8B49132AB1956541CCE /* ui_propertiesviewerwidget.h */,
+				E0E5871E5CE7B948B7D33DC5 /* ui_finditemsdialog.h */,
+				59D7D03F3F76416088F83910 /* ui_skillplandialog.h */,
+			);
+			name = "Temporary Sources";
+			sourceTree = "<group>";
+		};
+		52C235EBF1C9B07808119459 /* Sources [RCC] */ = {
+			isa = PBXGroup;
+			children = (
+				16A82DA2701971900CCC9274 /* resources */,
+			);
+			name = "Sources [RCC]";
+			sourceTree = "<group>";
+		};
+		7CABE3C80E79AD2B307756D2 /* Sources [qmake] */ = {
+			isa = PBXGroup;
+			children = (
+				99909FF0E3532A0626D2CCDD /* MedianXLOfflineTools.pro */,
+			);
+			name = "Sources [qmake]";
+			sourceTree = "<group>";
+		};
+		883D7615C4D2DE3FA1218F12 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				4D6E68A38295F99B7324EC7C /* medianxlofflinetools.h */,
+				1C8010DBD505B823EDE2746F /* resurrectpenaltydialog.h */,
+				40EEE5E4BF46D9CE22FED30E /* qd2charrenamer.h */,
+				3E24D015FFE43041FAACA4C4 /* enums.h */,
+				60ED7402D501FE7FA4068D8F /* colorsmanager.hpp */,
+				28715C4E68DB636B3BED5BB4 /* itemdatabase.h */,
+				1DADC0B8E2F6027D2B6D40DD /* structs.h */,
+				4147D111E93FFC38D5F56B3F /* propertiesviewerwidget.h */,
+				09198D1FF69E14CF80220596 /* itemsviewerdialog.h */,
+				83B1A57E1BE4548405E8A5AD /* itemstoragetablemodel.h */,
+				350C6E0AA06044F2D4BCB10F /* itemstoragetableview.h */,
+				C220A3797A2B91EEFE70F7C0 /* itemspropertiessplitter.h */,
+				DE0867D5A1B5D662E894D77C /* helpers.h */,
+				919E2048F1A9EF3D864E026A /* finditemsdialog.h */,
+				EFE68327DD1039397A061F7E /* languagemanager.hpp */,
+				0313823CCF5B5C4DBAE2A3E8 /* reversebitwriter.h */,
+				54C6FFB76D814CBC6C602AA3 /* reversebitreader.h */,
+				03B66D70A47E9FB94741974E /* itemparser.h */,
+				2B1192F40CE631B10BEFA4B0 /* resourcepathmanager.hpp */,
+				3B1ED9A220D37E0F2969CFCA /* propertiesdisplaymanager.h */,
+				E48142269E1CC2CF9FD343F2 /* findresultswidget.h */,
+				D686E3B3B9F0B6277F808527 /* characterinfo.hpp */,
+				F4408DF4D4324033BBD4B664 /* skillplandialog.h */,
+				8F46D2DA5140DD3AFC4771D9 /* application.h */,
+				3D7BD5E49998522E444FC917 /* qtsingleapplication */,
+				32900774B5D2D9CC68EC9667 /* fileassociationmanager.h */,
+				BC42B1EFA42154B0BC04CA57 /* experienceindicatorgroupbox.h */,
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
+		9B7ED392A56F53FF8FAAE397 /* mac */ = {
+			isa = PBXGroup;
+			children = (
+				57FE2B1EE658C9D723157766 /* icon.icns */,
+			);
+			name = mac;
+			sourceTree = "<group>";
+		};
+		ACF50AAC157D5770004DA221 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ACF50AAB157D5770004DA221 /* MedianXLOfflineTools.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B06B937E4E5DB1B571475081 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				9B7ED392A56F53FF8FAAE397 /* mac */,
+			);
+			name = resources;
+			sourceTree = "<group>";
+		};
+		ED1E82605DD74B483AF3C982 /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				27AE7A480FD6C52FCA80FECD /* ApplicationServices.framework */,
+				821416211D63F190AAAD016A /* AppKit.framework */,
+				9B36DA7E32F0304E780E7972 /* QtGui.framework */,
+				7BC2E65A5E699A5E5D834CA2 /* QtCore.framework */,
+				B6B9970B86A6C219B0869FE9 /* QtNetwork.framework */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		EEC299C65D5017EB9DD513B0 /* Sources [UIC] */ = {
+			isa = PBXGroup;
+			children = (
+				E3E9AFF10597B81B5BD6D401 /* medianxlofflinetools.ui */,
+				D1014A9B1A9E020E8BD0EEA1 /* resurrectpenaltydialog.ui */,
+				18AC80D4A510EA33B37145C9 /* qd2charrenamer.ui */,
+				633965930DF94524CA097B37 /* propertiesviewerwidget.ui */,
+				C4EE8274D905B75D4D6320C0 /* finditemsdialog.ui */,
+				41B5802369A95F860933A1AF /* skillplandialog.ui */,
+			);
+			name = "Sources [UIC]";
+			sourceTree = "<group>";
+		};
+		FB61758D0F0FDA4BA867C3D5 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				118FCBAABA162BA17933C789 /* main.cpp */,
+				048D7B835A93D44117D969B1 /* medianxlofflinetools.cpp */,
+				C1A9E060AAA12B497C8F3B91 /* resurrectpenaltydialog.cpp */,
+				BB2819382ED1400D8D730443 /* qd2charrenamer.cpp */,
+				E34D230637628A8CD6C3EA30 /* enums.cpp */,
+				FFE7684627752FF67C3CD35D /* itemdatabase.cpp */,
+				864865BD7CF9B2ED31A33C5D /* propertiesviewerwidget.cpp */,
+				BB35BC6199B5362D4DDC4E81 /* itemsviewerdialog.cpp */,
+				33C0281AE895F6F1D288680C /* itemstoragetablemodel.cpp */,
+				0D597AF1812341262648E491 /* itemstoragetableview.cpp */,
+				9045BCCC40EE153DECB2F200 /* itemspropertiessplitter.cpp */,
+				9DF8BB12FF11D5408ADC7086 /* helpers.cpp */,
+				29E97D19C2DA77D38DADA780 /* finditemsdialog.cpp */,
+				EABC55D3078843605EC937FD /* reversebitwriter.cpp */,
+				35D9C9B4AC80510BCEA863B7 /* reversebitreader.cpp */,
+				134C5214854B7E89B70E1B38 /* itemparser.cpp */,
+				9496FE6F7644EF9859BB340B /* propertiesdisplaymanager.cpp */,
+				046193EA83F955D427162245 /* findresultswidget.cpp */,
+				107FCE7A3256D0ECA5761546 /* skillplandialog.cpp */,
+				C06D1ED2CAED84DCC3F4E76A /* application.cpp */,
+				FFE3DE6C109FE9D692516288 /* qtsingleapplication */,
+				92D0C0D68926B7F4E8A412F1 /* experienceindicatorgroupbox.cpp */,
+				1E744FC824BC439C8BDE0C64 /* fileassociationmanager_mac.cpp */,
+				B06B937E4E5DB1B571475081 /* resources */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		FFE3DE6C109FE9D692516288 /* qtsingleapplication */ = {
+			isa = PBXGroup;
+			children = (
+				080C84CE92E8C74010FF9355 /* qtsingleapplication.cpp */,
+				2F004A54FA510C70CF3BC9FC /* qtlocalpeer.cpp */,
+			);
+			name = qtsingleapplication;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8809DAB93CDAEF6872EB4898 /* MedianXLOfflineTools */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17B3380A4D6A7D415E7F2E1E /* Build configuration list for PBXNativeTarget "MedianXLOfflineTools" */;
+			buildPhases = (
+				D7BA7D76DAB5DD13389D6332 /* Qt Qmake */,
+				A0A52A2ADF7A1E2A99738674 /* Qt Preprocessors */,
+				C29B8785722055ED95EF7B57 /* Build Sources */,
+				2A1043669E6E5A7426EA502A /* Frameworks & Libraries */,
+				3787F99312C85FF0073FD7BA /* Bundle Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MedianXLOfflineTools;
+			productName = MedianXLOfflineTools;
+			productReference = ACF50AAB157D5770004DA221 /* MedianXLOfflineTools.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		91B15E841AA80083484172DE /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = CC82A9286117DFED018F418F /* Build configuration list for PBXProject "MedianXLOfflineTools" */;
+			compatibilityVersion = "Xcode 2.4";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 05596AB53D8D521C69802C27 /* MedianXLOfflineTools */;
+			productRefGroup = ACF50AAC157D5770004DA221 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8809DAB93CDAEF6872EB4898 /* MedianXLOfflineTools */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3787F99312C85FF0073FD7BA /* Bundle Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				895786EDC000434EFCF2C3A4 /* icon.icns in Bundle Resources */,
+			);
+			name = "Bundle Resources";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A0A52A2ADF7A1E2A99738674 /* Qt Preprocessors */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "Qt Preprocessors";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/kambala/Documents/Projects/Qt/MedianXLOfflineTools/MedianXLOfflineTools -f 'MedianXLOfflineTools.xcodeproj/qt_preprocess.mak'";
+		};
+		D7BA7D76DAB5DD13389D6332 /* Qt Qmake */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "Qt Qmake";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/kambala/Documents/Projects/Qt/MedianXLOfflineTools/MedianXLOfflineTools -f 'MedianXLOfflineTools.xcodeproj/qt_makeqmake.mak'";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C29B8785722055ED95EF7B57 /* Build Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B093CA6F071B023A473CED0 /* main.cpp in Build Sources */,
+				6923BAD493D5E5CC54E107C7 /* medianxlofflinetools.cpp in Build Sources */,
+				5E97B4CEB6F000A1E27BC7F2 /* resurrectpenaltydialog.cpp in Build Sources */,
+				21A53A3D3E73324CB327896D /* qd2charrenamer.cpp in Build Sources */,
+				B0CB039B3B4323FC3D471B59 /* enums.cpp in Build Sources */,
+				73634ECD5C724AE557D52043 /* itemdatabase.cpp in Build Sources */,
+				2F84BB742FB68F12BF2E4868 /* propertiesviewerwidget.cpp in Build Sources */,
+				A8BA6FFB47BB1BD81D7FBD98 /* itemsviewerdialog.cpp in Build Sources */,
+				0F6D2BB85009343A64CE79A8 /* itemstoragetablemodel.cpp in Build Sources */,
+				B14AFF375B11F951842C979C /* itemstoragetableview.cpp in Build Sources */,
+				95226DA277BD9648277EB94F /* itemspropertiessplitter.cpp in Build Sources */,
+				31A2ABBCCD6D7081905A7B30 /* helpers.cpp in Build Sources */,
+				D95ADDE608951E7F272AD7CA /* finditemsdialog.cpp in Build Sources */,
+				B3864626FF1CA65F25FCD359 /* reversebitwriter.cpp in Build Sources */,
+				1C8AE356AC924FA121BCAE78 /* reversebitreader.cpp in Build Sources */,
+				00C7057FF2266096D754151C /* itemparser.cpp in Build Sources */,
+				8E9CACAB4753602297AD9598 /* propertiesdisplaymanager.cpp in Build Sources */,
+				EA6AD9C4DA7DF1365038EF99 /* findresultswidget.cpp in Build Sources */,
+				0A4144109FCEBF9CB2301BE6 /* skillplandialog.cpp in Build Sources */,
+				8A0E857578A39169112B63D3 /* application.cpp in Build Sources */,
+				F0285486DB9135A3A8C91B6A /* qtsingleapplication.cpp in Build Sources */,
+				E76D73B303E351243A84BC8E /* qtlocalpeer.cpp in Build Sources */,
+				AB191A955E35E32AA265564E /* experienceindicatorgroupbox.cpp in Build Sources */,
+				276D78C24C0B950D7392B755 /* fileassociationmanager_mac.cpp in Build Sources */,
+				DF06D3F49E4DB3ED883545FB /* moc_medianxlofflinetools.cpp in Build Sources */,
+				FB9DFA9EEC4BEBD9F0D80E8F /* moc_resurrectpenaltydialog.cpp in Build Sources */,
+				C351D9D7A092461B00233A33 /* moc_qd2charrenamer.cpp in Build Sources */,
+				B09132059B01BF93ACB07F02 /* moc_enums.cpp in Build Sources */,
+				2E9F173F144B42803711F654 /* moc_propertiesviewerwidget.cpp in Build Sources */,
+				A6BF33642D4408F437404357 /* moc_itemsviewerdialog.cpp in Build Sources */,
+				921BA341186AF0F2556E26EE /* moc_itemstoragetablemodel.cpp in Build Sources */,
+				7DBDA13986FB52F629B68C87 /* moc_itemstoragetableview.cpp in Build Sources */,
+				CF43789BC75DF60EE05AC492 /* moc_itemspropertiessplitter.cpp in Build Sources */,
+				78BB12D12BE8F99B19493879 /* moc_finditemsdialog.cpp in Build Sources */,
+				7AD9DDBA85996A831E975A3E /* moc_findresultswidget.cpp in Build Sources */,
+				8E8B600FEB3FEFA6CFF1794F /* moc_skillplandialog.cpp in Build Sources */,
+				A09B6C8F4BD65519FF5EF5DA /* moc_application.cpp in Build Sources */,
+				EA3F671A9E7077E1C5E9427A /* moc_qtsingleapplication.cpp in Build Sources */,
+				C8B906053E4EC2AAFC66309A /* moc_qtlocalpeer.cpp in Build Sources */,
+				E88FA4062BD69817D57B0217 /* moc_experienceindicatorgroupbox.cpp in Build Sources */,
+				F2FDBFD0C58EBEDFE231A6DF /* qrc_medianxlofflinetools.cpp in Build Sources */,
+				04DE3337E2AE172B5D36AFF7 /* application_mac.mm in Build Sources */,
+				E03FD021FA960BCA4F1B1C61 /* messagecheckbox_mac.mm in Build Sources */,
+			);
+			name = "Build Sources";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		4B72B24813252891014BCF61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					/Library/Frameworks,
+					/Library/Frameworks,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				GCC_WARN_PEDANTIC = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_PARAMETER = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					/Library/Frameworks/QtCore.framework/Versions/4/Headers,
+					/usr/include/QtCore,
+					/Library/Frameworks/QtNetwork.framework/Versions/4/Headers,
+					/usr/include/QtNetwork,
+					/Library/Frameworks/QtGui.framework/Versions/4/Headers,
+					/usr/include/QtGui,
+					/usr/include,
+					.,
+					.,
+					/usr/local/include,
+					/System/Library/Frameworks/CarbonCore.framework/Headers,
+					"/usr/local/Qt4.8/mkspecs/macx-xcode",
+				);
+				INFOPLIST_FILE = resources/mac/Info.plist;
+				LIBRARY_SEARCH_PATHS = (
+					/Library/Frameworks,
+					/System/Library/Frameworks/,
+				);
+				OTHER_CFLAGS = (
+					"-pipe",
+					"-g",
+					"-Wall",
+					"-W",
+					"-DQT_GUI_LIB",
+					"-DQT_NETWORK_LIB",
+					"-DQT_CORE_LIB",
+					"-DQT_SHARED",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-pipe",
+					"-g",
+					"-Wall",
+					"-W",
+					"-DQT_GUI_LIB",
+					"-DQT_NETWORK_LIB",
+					"-DQT_CORE_LIB",
+					"-DQT_SHARED",
+				);
+				OTHER_LDFLAGS = (
+					"-headerpad_max_install_names",
+					"-L/Library/Frameworks",
+					"-F/Library/Frameworks",
+				);
+				PRODUCT_NAME = MedianXLOfflineTools;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		8C7174830A1E4DCBA0332EC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				PRODUCT_NAME = MedianXLOfflineTools;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		BEC09A62E69C3553534FF35E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = MedianXLOfflineTools;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		D70590BEB531B51029F711BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					/Library/Frameworks,
+					/Library/Frameworks,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				GCC_WARN_PEDANTIC = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_PARAMETER = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					/Library/Frameworks/QtCore.framework/Versions/4/Headers,
+					/usr/include/QtCore,
+					/Library/Frameworks/QtNetwork.framework/Versions/4/Headers,
+					/usr/include/QtNetwork,
+					/Library/Frameworks/QtGui.framework/Versions/4/Headers,
+					/usr/include/QtGui,
+					/usr/include,
+					.,
+					.,
+					/usr/local/include,
+					/System/Library/Frameworks/CarbonCore.framework/Headers,
+					"/usr/local/Qt4.8/mkspecs/macx-xcode",
+				);
+				INFOPLIST_FILE = resources/mac/Info.plist;
+				LIBRARY_SEARCH_PATHS = (
+					/Library/Frameworks,
+					/System/Library/Frameworks/,
+				);
+				OTHER_CFLAGS = (
+					"-pipe",
+					"-g",
+					"-Wall",
+					"-W",
+					"-DQT_GUI_LIB",
+					"-DQT_NETWORK_LIB",
+					"-DQT_CORE_LIB",
+					"-DQT_SHARED",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-pipe",
+					"-g",
+					"-Wall",
+					"-W",
+					"-DQT_GUI_LIB",
+					"-DQT_NETWORK_LIB",
+					"-DQT_CORE_LIB",
+					"-DQT_SHARED",
+				);
+				OTHER_LDFLAGS = (
+					"-headerpad_max_install_names",
+					"-L/Library/Frameworks",
+					"-F/Library/Frameworks",
+				);
+				PRODUCT_NAME = MedianXLOfflineTools;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		17B3380A4D6A7D415E7F2E1E /* Build configuration list for PBXNativeTarget "MedianXLOfflineTools" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEC09A62E69C3553534FF35E /* Debug */,
+				8C7174830A1E4DCBA0332EC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC82A9286117DFED018F418F /* Build configuration list for PBXProject "MedianXLOfflineTools" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B72B24813252891014BCF61 /* Debug */,
+				D70590BEB531B51029F711BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 91B15E841AA80083484172DE /* Project object */;
+}
