@@ -15,6 +15,7 @@
 #include "skillplandialog.h"
 #include "fileassociationmanager.h"
 #include "messagecheckbox.h"
+#include "experienceindicatorgroupbox.h"
 
 #include <QCloseEvent>
 #include <QDropEvent>
@@ -1008,12 +1009,17 @@ void MedianXLOfflineTools::createLayout()
     QVBoxLayout *vbl = new QVBoxLayout;
     vbl->addWidget(ui.characterGroupBox);
     //vbl->addStretch();
-    vbl->addWidget(_questsGroupBox);
+    //vbl->addWidget(_questsGroupBox);
     vbl->addWidget(ui.mercGroupBox);
+
+    QVBoxLayout *vbl1 = new QVBoxLayout;
+    vbl1->addWidget(ui.statsGroupBox);
+    vbl1->addWidget(_questsGroupBox);
 
     QHBoxLayout *mainLayout = new QHBoxLayout(centralWidget());
     mainLayout->addLayout(vbl);
-    mainLayout->addWidget(ui.statsGroupBox);
+    mainLayout->addLayout(vbl1);
+    //mainLayout->addWidget(ui.statsGroupBox);
 
     ui.statsTableWidget->verticalHeader()->setDefaultAlignment(Qt::AlignCenter);
     ui.statsTableWidget->horizontalHeader()->setResizeMode(QHeaderView::Stretch);
@@ -1054,21 +1060,30 @@ void MedianXLOfflineTools::createCharacterGroupBoxLayout()
     hbl2->addStretch();
     hbl2->addWidget(ui.resurrectButton);
 
+    _expGroupBox = new ExperienceIndicatorGroupBox(this);
+
     QVBoxLayout *vbl = new QVBoxLayout(ui.characterGroupBox);
     vbl->addLayout(gridLayout);
     //vbl->addLayout(hbl1);
+    vbl->addWidget(_expGroupBox);
     vbl->addWidget(ui.hardcoreGroupBox);
 }
 
 void MedianXLOfflineTools::createMercGroupBoxLayout()
 {
-    QHBoxLayout *hbl = new QHBoxLayout(ui.mercGroupBox);
+    QHBoxLayout *hbl = new QHBoxLayout;
     hbl->addWidget(new QLabel(tr("Type")));
     hbl->addWidget(ui.mercTypeComboBox);
     hbl->addWidget(new QLabel(tr("Level")));
     hbl->addWidget(ui.mercLevelLineEdit);
     hbl->addWidget(new QLabel(tr("Name")));
     hbl->addWidget(ui.mercNameComboBox);
+
+    _mercExpGroupBox = new ExperienceIndicatorGroupBox(this);
+
+    QVBoxLayout *vbl = new QVBoxLayout(ui.mercGroupBox);
+    vbl->addLayout(hbl);
+    vbl->addWidget(_mercExpGroupBox);
 }
 
 void MedianXLOfflineTools::createStatsGroupBoxLayout()
@@ -1119,7 +1134,7 @@ void MedianXLOfflineTools::createQuestsGroupBoxLayout()
     gridLayout->addWidget(new QLabel(tr("Den of Evil")), 0, 0);
     gridLayout->addWidget(new QLabel(tr("Radament")), 1, 0);
     gridLayout->addWidget(new QLabel(tr("Izual")), 2, 0);
-    gridLayout->addWidget(new QLabel(tr("Lam Esen")), 4, 0);
+    gridLayout->addWidget(new QLabel(tr("Lam Esen's Tome")), 4, 0);
 
     for (int i = 0; i < questKeys.size(); ++i)
         for (int j = 0; j < kDifficultiesNumber; ++j)
@@ -1452,7 +1467,7 @@ bool MedianXLOfflineTools::processSaveFile()
         inputDataStream >> mercExp;
         charInfo.mercenary.experience = mercExp;
         for (quint8 i = 1; i <= Enums::CharacterStats::MaxLevel; ++i)
-            if (mercExp < static_cast<quint32>(i * i * (i + 1)))
+            if (mercExp < mercExperienceForLevel(i))
             {
                 charInfo.mercenary.level = i - 1;
                 break;
@@ -1971,6 +1986,8 @@ void MedianXLOfflineTools::clearUI()
             item->setText(QString());
         }
     }
+
+    _mercExpGroupBox->setCurrentExperience(0);
 }
 
 void MedianXLOfflineTools::updateUI()
@@ -2006,6 +2023,10 @@ void MedianXLOfflineTools::updateUI()
     ui.levelSpinBox->setMaximum(_oldClvl);
     ui.levelSpinBox->setValue(_oldClvl);
 
+    quint32 exp = charInfo.basicInfo.statsDynamicData.property(Enums::CharacterStats::statisticNameFromValue(Enums::CharacterStats::Experience)).toUInt();
+    _expGroupBox->setNextLevelExperience(_oldClvl + 1 < 120 ? experienceTable.at(_oldClvl + 1) : exp);
+    _expGroupBox->setCurrentExperience(exp);
+
     setStats();
     recalculateStatPoints();
 
@@ -2028,6 +2049,9 @@ void MedianXLOfflineTools::updateUI()
         ui.mercNameComboBox->setCurrentIndex(charInfo.mercenary.nameIndex);
 
         ui.mercLevelLineEdit->setText(QString::number(charInfo.mercenary.level));
+
+        _mercExpGroupBox->setNextLevelExperience(charInfo.mercenary.level != 119 ? mercExperienceForLevel(charInfo.mercenary.level + 1) : charInfo.mercenary.experience);
+        _mercExpGroupBox->setCurrentExperience(charInfo.mercenary.experience);
 
         ui.mercGroupBox->setEnabled(true);
     }

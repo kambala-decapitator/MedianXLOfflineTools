@@ -20,6 +20,7 @@ class QFile;
 
 class ItemsViewerDialog;
 class FindItemsDialog;
+class ExperienceIndicatorGroupBox;
 
 class MedianXLOfflineTools : public QMainWindow
 {
@@ -89,6 +90,7 @@ private:
     QStringList _recentFilesList;
     QPointer<ItemsViewerDialog> _itemsDialog;
     FindItemsDialog *_findItemsDialog;
+    ExperienceIndicatorGroupBox *_mercExpGroupBox, *_expGroupBox;
     QGroupBox *_questsGroupBox;
     QHash<int, QList<QCheckBox *> > _checkboxesQuestsHash;
 
@@ -155,6 +157,7 @@ private:
     inline void updateHardcoreUIElements();
     void updateCharacterTitle(bool isHardcore);
     void setStats();
+    quint32 mercExperienceForLevel(quint8 level) { return static_cast<quint32>(level * level * (level + 1)); }
 
     inline void updateWindowTitle();
     void updateTableStats(const BaseStats::StatsStep &statsPerStep, int diff, QSpinBox *senderSpinBox = 0);
