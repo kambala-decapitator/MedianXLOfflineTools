@@ -1001,25 +1001,26 @@ void MedianXLOfflineTools::createLayout()
     createStatsGroupBoxLayout();
     createQuestsGroupBoxLayout();
 
-    //QGridLayout *grid = new QGridLayout(centralWidget());
-    //grid->addWidget(ui.characterGroupBox, 0, 0);
-    //grid->addWidget(ui.mercGroupBox, 1, 0);
-    //grid->addWidget(ui.statsGroupBox, 0, 1, 2, 1);
+    QGridLayout *grid = new QGridLayout(centralWidget());
+    grid->addWidget(ui.characterGroupBox, 0, 0);
+    grid->addWidget(ui.mercGroupBox, 1, 0);
+    grid->addWidget(ui.statsGroupBox, 0, 1);
+    grid->addWidget(_questsGroupBox, 1, 1);
 
-    QVBoxLayout *vbl = new QVBoxLayout;
-    vbl->addWidget(ui.characterGroupBox);
-    //vbl->addStretch();
-    //vbl->addWidget(_questsGroupBox);
-    vbl->addWidget(ui.mercGroupBox);
+    //QVBoxLayout *vbl = new QVBoxLayout;
+    //vbl->addWidget(ui.characterGroupBox);
+    ////vbl->addStretch();
+    ////vbl->addWidget(_questsGroupBox);
+    //vbl->addWidget(ui.mercGroupBox);
 
-    QVBoxLayout *vbl1 = new QVBoxLayout;
-    vbl1->addWidget(ui.statsGroupBox);
-    vbl1->addWidget(_questsGroupBox);
+    //QVBoxLayout *vbl1 = new QVBoxLayout;
+    //vbl1->addWidget(ui.statsGroupBox);
+    //vbl1->addWidget(_questsGroupBox);
 
-    QHBoxLayout *mainLayout = new QHBoxLayout(centralWidget());
-    mainLayout->addLayout(vbl);
-    mainLayout->addLayout(vbl1);
-    //mainLayout->addWidget(ui.statsGroupBox);
+    //QHBoxLayout *mainLayout = new QHBoxLayout(centralWidget());
+    //mainLayout->addLayout(vbl);
+    //mainLayout->addLayout(vbl1);
+    ////mainLayout->addWidget(ui.statsGroupBox);
 
     ui.statsTableWidget->verticalHeader()->setDefaultAlignment(Qt::AlignCenter);
     ui.statsTableWidget->horizontalHeader()->setResizeMode(QHeaderView::Stretch);
@@ -1083,6 +1084,7 @@ void MedianXLOfflineTools::createMercGroupBoxLayout()
 
     QVBoxLayout *vbl = new QVBoxLayout(ui.mercGroupBox);
     vbl->addLayout(hbl);
+    vbl->addStretch();
     vbl->addWidget(_mercExpGroupBox);
 }
 

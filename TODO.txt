@@ -3,7 +3,6 @@ v0.3:
 - export item to bbcode/html
 - generate some bbcode/html report about character and/or plugy stashes contents
 - mass disenchant (dialog and multiple selection) - if not too time consuming
-- show experince bar and completion of current level in %
 -----
 - delete all items from last plugy page and check if it'll work after saving
 - search and fix all 'TODO:' in code

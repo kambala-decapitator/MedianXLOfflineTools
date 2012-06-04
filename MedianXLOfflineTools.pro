@@ -32,7 +32,8 @@ SOURCES += main.cpp \
            application.cpp \
            qtsingleapplication/qtsingleapplication.cpp \
            qtsingleapplication/qtlockedfile.cpp \
-           qtsingleapplication/qtlocalpeer.cpp
+           qtsingleapplication/qtlocalpeer.cpp \
+           experienceindicatorgroupbox.cpp
 
 HEADERS += medianxlofflinetools.h \
            resurrectpenaltydialog.h \
@@ -61,7 +62,8 @@ HEADERS += medianxlofflinetools.h \
            qtsingleapplication/qtsingleapplication.h \
            qtsingleapplication/qtlockedfile.h \
            qtsingleapplication/qtlocalpeer.h \
-           fileassociationmanager.h
+           fileassociationmanager.h \
+           experienceindicatorgroupbox.h
 
 FORMS += medianxlofflinetools.ui \
          resurrectpenaltydialog.ui \
