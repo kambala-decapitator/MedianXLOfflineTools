@@ -13,8 +13,10 @@ class ExperienceIndicatorGroupBox : public QGroupBox
 public:
     ExperienceIndicatorGroupBox(QWidget *parent);
 
+    void setPreviousLevelExperience(quint32 exp);
     void setNextLevelExperience(quint32 exp);
     void setCurrentExperience(quint32 exp);
+    void reset();
 
 private:
     QProgressBar *_progressBar;

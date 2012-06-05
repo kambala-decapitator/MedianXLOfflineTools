@@ -1,49 +1,34 @@
 #ifndef MESSAGECHECKBOX_H
 #define MESSAGECHECKBOX_H
 
-#include <QtGlobal>
+class MessageCheckBoxPrivateBase
+{
+public:
+    virtual ~MessageCheckBoxPrivateBase() {}
 
-#ifdef Q_WS_MACX
-//@class NSAlert;
+    virtual void setChecked(bool checked) = 0;
+    virtual bool isChecked() = 0;
+
+    virtual int exec() = 0;
+};
+
+
+class QString;
 class QWidget;
 
 class MessageCheckBox
 {
 public:
     MessageCheckBox(const QString &text, const QString &checkboxText, QWidget *parent = 0);
-    virtual ~MessageCheckBox();
+    virtual ~MessageCheckBox() { delete d; }
 
-    void setChecked(bool checked);
-    bool isChecked();
+    void setChecked(bool checked) { d->setChecked(checked); }
+    bool isChecked() { return d->isChecked(); }
 
-public:
-    int exec();
-
-private:
-//    NSAlert *_alert;
-};
-#else
-#include <QDialog>
-
-class QLabel;
-class QCheckBox;
-class QDialogButtonBox;
-
-class MessageCheckBox : public QDialog
-{
-    Q_OBJECT
-
-public:
-    MessageCheckBox(const QString &text, const QString &checkboxText, QWidget *parent = 0);
-
-    void setChecked(bool checked);
-    bool isChecked();
+    int exec() { return d->exec(); }
 
 private:
-    QLabel *_text;
-    QCheckBox *_checkBox;
-    QDialogButtonBox *_buttonBox;
+    MessageCheckBoxPrivateBase *d;
 };
-#endif // Q_WS_MACX
 
 #endif // MESSAGECHECKBOX_H

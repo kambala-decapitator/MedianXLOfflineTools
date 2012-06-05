@@ -533,8 +533,9 @@ void MedianXLOfflineTools::respecStats()
 void MedianXLOfflineTools::respecSkills(bool shouldRespec)
 {
     quint16 skills = CharacterInfo::instance().basicInfo.totalSkillPoints;
-    ui.freeSkillPointsLineEdit->setText(QString::number(shouldRespec ? skills : CharacterInfo::instance().basicInfo.statsDynamicData.property("FreeSkillPoints").toUInt()));
-    updateMaxCompoundStatusTip(ui.freeSkillPointsLineEdit, skills, shouldRespec ? 0 : skills - CharacterInfo::instance().basicInfo.statsDynamicData.property("FreeSkillPoints").toUInt());
+    quint32 freeSkills = CharacterInfo::instance().basicInfo.statsDynamicData.property("FreeSkillPoints").toUInt();
+    ui.freeSkillPointsLineEdit->setText(QString::number(shouldRespec ? skills : freeSkills));
+    updateMaxCompoundStatusTip(ui.freeSkillPointsLineEdit, skills, shouldRespec ? 0 : skills - freeSkills);
     setModified(true);
 }
 
@@ -558,11 +559,11 @@ void MedianXLOfflineTools::levelChanged(int newClvl)
     {
         updateTableStats(_baseStatsMap[basicInfo.classCode].statsPerLevel, -lvlDiff);
 
-        int statsDiff = lvlDiff * kStatPointsPerLevel;
         _oldClvl = newClvl;
-        if (ui.freeStatPointsLineEdit->text().toInt() - statsDiff < 0)
+        int statsDiff = lvlDiff * kStatPointsPerLevel, newFreeStats = ui.freeStatPointsLineEdit->text().toInt() - statsDiff;
+        if (newFreeStats < 0)
             respecStats();
-        ui.freeStatPointsLineEdit->setText(QString::number(ui.freeStatPointsLineEdit->text().toInt() - statsDiff));
+        ui.freeStatPointsLineEdit->setText(QString::number(newFreeStats));
         foreach (QSpinBox *spinBox, _spinBoxesStatsMap)
             spinBox->setMaximum(spinBox->maximum() - statsDiff);
 
@@ -585,7 +586,7 @@ void MedianXLOfflineTools::levelChanged(int newClvl)
             investedSkillPoints = newSkillPoints - CharacterInfo::instance().basicInfo.statsDynamicData.property("FreeSkillPoints").toInt();
 
         int investedStats = investedStatPoints();
-        updateStatusTips(ui.freeStatPointsLineEdit->text().toInt() + investedStats, investedStats, newSkillPoints, investedSkillPoints);
+        updateStatusTips(newFreeStats + investedStats, investedStats, newSkillPoints, investedSkillPoints);
     }
 }
 
@@ -1988,7 +1989,9 @@ void MedianXLOfflineTools::clearUI()
         }
     }
 
-    _mercExpGroupBox->setCurrentExperience(0);
+    _expGroupBox->reset();
+    //_mercExpGroupBox->setCurrentExperience(0);
+    _mercExpGroupBox->reset();
 }
 
 void MedianXLOfflineTools::updateUI()
@@ -2025,7 +2028,8 @@ void MedianXLOfflineTools::updateUI()
     ui.levelSpinBox->setValue(_oldClvl);
 
     quint32 exp = charInfo.basicInfo.statsDynamicData.property(Enums::CharacterStats::statisticNameFromValue(Enums::CharacterStats::Experience)).toUInt();
-    _expGroupBox->setNextLevelExperience(_oldClvl + 1 < 120 ? experienceTable.at(_oldClvl + 1) : exp);
+    _expGroupBox->setPreviousLevelExperience(experienceTable.at(_oldClvl - (_oldClvl != 120 ? 1 : 2)));
+    _expGroupBox->setNextLevelExperience(_oldClvl != 120 ? experienceTable.at(_oldClvl) : exp);
     _expGroupBox->setCurrentExperience(exp);
 
     setStats();
@@ -2051,6 +2055,7 @@ void MedianXLOfflineTools::updateUI()
 
         ui.mercLevelLineEdit->setText(QString::number(charInfo.mercenary.level));
 
+        _mercExpGroupBox->setPreviousLevelExperience(mercExperienceForLevel(charInfo.mercenary.level - (charInfo.mercenary.level != 119 ? 0 : 1)));
         _mercExpGroupBox->setNextLevelExperience(charInfo.mercenary.level != 119 ? mercExperienceForLevel(charInfo.mercenary.level + 1) : charInfo.mercenary.experience);
         _mercExpGroupBox->setCurrentExperience(charInfo.mercenary.experience);
 
@@ -2176,7 +2181,7 @@ void MedianXLOfflineTools::updateTableItemStat(QTableWidgetItem *item, int diff,
     if (newValue > 0)
     {
         double foo;
-        item->setText(modf(newValue, &foo) ? QString::number(newValue, 'f', 1) : QString::number(newValue));
+        item->setText(modf(newValue, &foo) > 0.000001 ? QString::number(newValue, 'f', 1) : QString::number(newValue));
     }
     else
         item->setText("0");
@@ -2244,12 +2249,13 @@ QByteArray MedianXLOfflineTools::statisticBytes()
         }
         else if (statCode != Enums::CharacterStats::End && isExpAndLevelNotSet) // level or exp
         {
+            QObject &statsDynamicData = CharacterInfo::instance().basicInfo.statsDynamicData;
             quint8 clvl = CharacterInfo::instance().basicInfo.level, newClvl = ui.levelSpinBox->value();
             if (clvl != newClvl) // set new level and experience explicitly
             {
                 addStatisticBits(result, Enums::CharacterStats::Level, Enums::CharacterStats::StatCodeLength);
                 addStatisticBits(result, newClvl, ItemDataBase::Properties()->value(Enums::CharacterStats::Level).saveBits);
-                CharacterInfo::instance().basicInfo.statsDynamicData.setProperty("Level", newClvl);
+                statsDynamicData.setProperty("Level", newClvl);
 
                 quint32 newExp = experienceTable.at(newClvl - 1);
                 if (newExp) // must not be present for level 1 character
@@ -2257,13 +2263,13 @@ QByteArray MedianXLOfflineTools::statisticBytes()
                     addStatisticBits(result, Enums::CharacterStats::Experience, Enums::CharacterStats::StatCodeLength);
                     addStatisticBits(result, newExp, ItemDataBase::Properties()->value(Enums::CharacterStats::Experience).saveBits);
                 }
-                CharacterInfo::instance().basicInfo.statsDynamicData.setProperty("Experience", newExp);
+                statsDynamicData.setProperty("Experience", newExp);
 
                 isExpAndLevelNotSet = false;
                 continue;
             }
             else
-                value = CharacterInfo::instance().basicInfo.statsDynamicData.property(enumKey).toULongLong();
+                value = statsDynamicData.property(enumKey).toULongLong();
         }
         else if (statCode == Enums::CharacterStats::End) // byte align
         {

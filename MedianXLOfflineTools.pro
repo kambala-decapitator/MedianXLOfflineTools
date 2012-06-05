@@ -63,6 +63,7 @@ HEADERS += medianxlofflinetools.h \
            qtsingleapplication/qtlockedfile.h \
            qtsingleapplication/qtlocalpeer.h \
            fileassociationmanager.h \
+           messagecheckbox.h \
            experienceindicatorgroupbox.h
 
 FORMS += medianxlofflinetools.ui \
@@ -80,7 +81,7 @@ TRANSLATIONS += resources/translations/medianxlofflinetools_ru.ts \
 OTHER_FILES += TODO.txt
 
 
-# QMAKE_CXXFLAGS += -std=c++0x
+# QMAKE_CXXFLAGS += -std=c++11
 
 
 win32 {
@@ -100,9 +101,7 @@ macx {
     SOURCES += fileassociationmanager_mac.cpp
 
     OBJECTIVE_SOURCES += application_mac.mm \
-                         messagecheckbox_mac.mm
-
-    OBJECTIVE_HEADERS += messagecheckbox.h
+                         messagecheckbox_mac_p.mm
 
     LIBS += -framework ApplicationServices \ # LSGetApplicationForInfo() 
             -framework AppKit                # NSWindow calls to disable Lion window resoration and NSAlert
@@ -110,7 +109,7 @@ macx {
     ICON = resources/mac/icon.icns
     QMAKE_INFO_PLIST = resources/mac/Info.plist
     
-    OTHER_FILES += resources/mac/Info.plist
+    OTHER_FILES += $$QMAKE_INFO_PLIST
 
     # for Xcode 4.3+
     MAC_SDK = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk
@@ -137,7 +136,5 @@ unix {
 }
 
 !macx {
-    SOURCES += messagecheckbox.cpp
-
-    HEADERS += messagecheckbox.h
+    SOURCES += messagecheckbox_p.cpp
 }

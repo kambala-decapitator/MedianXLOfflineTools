@@ -263,11 +263,11 @@ void FindItemsDialog::performSearch()
                 int matchIndex = rx.indexIn(itemText);
                 if (matchIndex != -1)
                 {
-                    int previousLineBreak = itemText.lastIndexOf("\n", matchIndex) + 1, nextLineBreak = itemText.indexOf("\n", matchIndex + rx.cap().length());
+                    int matchLength = rx.cap().length(), previousLineBreak = itemText.lastIndexOf("\n", matchIndex) + 1, nextLineBreak = itemText.indexOf("\n", matchIndex + matchLength);
                     QString matchedLine = nextLineBreak != -1 ? itemText.mid(previousLineBreak, nextLineBreak - previousLineBreak) : itemText.mid(previousLineBreak);
                     matchIndex = rx.indexIn(matchedLine);
                     matchedLine.insert(matchIndex, "<b>");
-                    matchedLine.insert(matchIndex + rx.cap().length() + 3, "</b>");
+                    matchedLine.insert(matchIndex + matchLength + 3, "</b>");
                     matchedLine.replace("\n", kHtmlLineBreak);
                     _searchResult += qMakePair(item, matchedLine);
                 }

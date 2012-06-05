@@ -231,18 +231,6 @@
     <ClCompile Include="fileassociationmanager_win.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="messagecheckbox.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Debug\moc_messagecheckbox.cpp">
-      <Filter>Generated Files\Debug</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_messagecheckbox.cpp">
-      <Filter>Generated Files\Release</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Template\moc_messagecheckbox.cpp">
-      <Filter>Generated Files\Template</Filter>
-    </ClCompile>
     <ClCompile Include="experienceindicatorgroupbox.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -254,6 +242,9 @@
     </ClCompile>
     <ClCompile Include="GeneratedFiles\Template\moc_experienceindicatorgroupbox.cpp">
       <Filter>Generated Files\Template</Filter>
+    </ClCompile>
+    <ClCompile Include="messagecheckbox_p.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -402,6 +393,15 @@
     </CustomBuild>
     <CustomBuild Include="experienceindicatorgroupbox.h">
       <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GeneratedFiles\Debug\messagecheckbox_p.moc">
+      <Filter>Generated Files\Debug</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GeneratedFiles\Release\messagecheckbox_p.moc">
+      <Filter>Generated Files\Release</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GeneratedFiles\Template\messagecheckbox_p.moc">
+      <Filter>Generated Files\Template</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
