@@ -10,12 +10,12 @@
 #include <QStyle>
 
 
-class MessageCheckBoxPrivate : public QDialog, public MessageCheckBoxPrivateBase
+class MessageCheckBoxImpl : public QDialog
 {
     Q_OBJECT
 
 public:
-    MessageCheckBoxPrivate(const QString &text, const QString &checkboxText, QWidget *parent = 0) : QDialog(parent), textLabel(new QLabel(text, this)),
+    MessageCheckBoxImpl(const QString &text, const QString &checkboxText, QWidget *parent = 0) : QDialog(parent), textLabel(new QLabel(text, this)),
         checkBox(new QCheckBox(checkboxText, this)), buttonBox(new QDialogButtonBox(QDialogButtonBox::Yes | QDialogButtonBox::No, Qt::Horizontal, this))
     {
         QStyle *style_ = style();
@@ -44,15 +44,6 @@ public:
         setWindowTitle(qApp->applicationName());
     }
 
-    virtual ~MessageCheckBoxPrivate() {}
-
-    virtual void setChecked(bool checked) { checkBox->setChecked(checked); }
-    virtual bool isChecked() { return checkBox->isChecked(); }
-
-public slots:
-    virtual int exec() { return QDialog::exec(); }
-
-private:
     QLabel *textLabel;
     QCheckBox *checkBox;
     QDialogButtonBox *buttonBox;
@@ -61,4 +52,12 @@ private:
 #include "messagecheckbox_p.moc"
 
 
-MessageCheckBox::MessageCheckBox(const QString &text, const QString &checkboxText, QWidget *parent /*= 0*/) : d(new MessageCheckBoxPrivate(text, checkboxText, parent)) {}
+// MessageCheckBox implementation
+
+MessageCheckBox::MessageCheckBox(const QString &text, const QString &checkboxText, QWidget *parent /*= 0*/) : _impl(new MessageCheckBoxImpl(text, checkboxText, parent)) {}
+MessageCheckBox::~MessageCheckBox() {}
+
+void MessageCheckBox::setChecked(bool checked) { _impl->checkBox->setChecked(checked); }
+bool MessageCheckBox::isChecked() const { return _impl->checkBox->isChecked(); }
+
+int MessageCheckBox::exec() { return _impl->exec(); }

@@ -1,43 +1,42 @@
 #include "messagecheckbox.h"
 
-// #include <QStringList>
 #include <QCoreApplication>
 
 #import <AppKit/NSAlert.h>
 #import <AppKit/NSButton.h>
 
-#define NSSTRING_FROM_QSTRING(s) [NSString stringWithCharacters:(const unichar *)s.unicode() length:s.length()]
 
-
-class MacMessageCheckBoxPrivate : public MessageCheckBoxPrivateBase
+class MessageCheckBoxImpl
 {
 public:
-    MacMessageCheckBoxPrivate(const QString &text, const QString &checkboxText, QWidget *parent = 0)
+    MessageCheckBoxImpl(const QString &text, const QString &checkboxText, QWidget *parent = 0) : alert([[NSAlert alloc] init])
     {
         Q_UNUSED(parent);
 
-        _alert = [[NSAlert alloc] init];
-        [_alert setAlertStyle:NSCriticalAlertStyle];
-        [_alert setMessageText:NSSTRING_FROM_QSTRING(text)];
-        [_alert setShowsHelp:NO];
-        [_alert setShowsSuppressionButton:YES];
-        [[_alert suppressionButton] setTitle:NSSTRING_FROM_QSTRING(checkboxText)];
+        [alert setAlertStyle:NSCriticalAlertStyle];
+        [alert setMessageText:nsstringFromQstring(text)];
+        [alert setShowsHelp:NO];
+        [alert setShowsSuppressionButton:YES];
+        [[alert suppressionButton] setTitle:nsstringFromQstring(checkboxText)];
         // dirty hack to remove ampersands from strings
-        [_alert addButtonWithTitle:NSSTRING_FROM_QSTRING(qApp->translate("QDialogButtonBox", "&Yes").remove('&'))]; // returns 1000
-        [_alert addButtonWithTitle:NSSTRING_FROM_QSTRING(qApp->translate("QDialogButtonBox", "&No" ).remove('&'))]; // returns 1001
+        [alert addButtonWithTitle:nsstringFromQstring(qApp->translate("QDialogButtonBox", "&Yes").remove('&'))]; // returns 1000
+        [alert addButtonWithTitle:nsstringFromQstring(qApp->translate("QDialogButtonBox", "&No" ).remove('&'))]; // returns 1001
     }
 
-    virtual ~MacMessageCheckBoxPrivate() { [_alert release]; }
+    virtual ~MessageCheckBoxImpl() { [alert release]; }
 
-    virtual void setChecked(bool checked) { [[_alert suppressionButton] setState:(checked ? NSOnState : NSOffState)]; }
-    virtual bool isChecked() { return [[_alert suppressionButton] state] == NSOnState; }
+    static NSString *nsstringFromQstring(const QString &s) { return [NSString stringWithCharacters:(const unichar *)s.unicode() length:s.length()]; }
 
-public slots:
-    virtual int exec() { return !([_alert runModal] - 1000); }
-
-private:
-    NSAlert *_alert;
+    NSAlert *alert;
 };
 
 
-MessageCheckBox::MessageCheckBox(const QString &text, const QString &checkboxText, QWidget *parent /*= 0*/) : d(new MacMessageCheckBoxPrivate(text, checkboxText, parent)) {}
+// MessageCheckBox implementation
+
+MessageCheckBox::MessageCheckBox(const QString &text, const QString &checkboxText, QWidget *parent /*= 0*/) : _impl(new MessageCheckBoxImpl(text, checkboxText, parent)) {}
+MessageCheckBox::~MessageCheckBox() { delete _impl; }
+
+void MessageCheckBox::setChecked(bool checked) { [[_impl->alert suppressionButton] setState:(checked ? NSOnState : NSOffState)]; }
+bool MessageCheckBox::isChecked() const { return [[_impl->alert suppressionButton] state] == NSOnState; }
+
+int MessageCheckBox::exec() { return !([_impl->alert runModal] - 1000); }
