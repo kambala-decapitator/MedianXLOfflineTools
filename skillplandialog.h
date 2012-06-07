@@ -21,8 +21,7 @@ public:
     static const QString &modVersionPlanner()  { return _modVersionPlanner;  }
 
 private slots:
-    void copyHtml();
-    void copyBbcode();
+    void copyLinkWithTags();
     void constructUrls();
     void showHelp();
 

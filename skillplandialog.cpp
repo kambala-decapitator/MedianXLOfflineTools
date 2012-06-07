@@ -45,8 +45,11 @@ SkillplanDialog::SkillplanDialog(QWidget *parent) : QDialog(parent)
     setWindowModality(Qt::WindowModal);
     setWindowFlags(windowFlags() & ~Qt::WindowContextHelpButtonHint);
 
-    connect(ui.copyHtmlButton, SIGNAL(clicked()), SLOT(copyHtml()));
-    connect(ui.copyBbcodeButton, SIGNAL(clicked()), SLOT(copyBbcode()));
+    ui.copyHtmlButton->setObjectName("html");
+    ui.copyBbcodeButton->setObjectName("bbcode");
+
+    connect(ui.copyHtmlButton,   SIGNAL(clicked()), SLOT(copyLinkWithTags()));
+    connect(ui.copyBbcodeButton, SIGNAL(clicked()), SLOT(copyLinkWithTags()));
     connect(ui.buttonBox, SIGNAL(helpRequested()), SLOT(showHelp()));
 
     foreach (QCheckBox *checkBox, QList<QCheckBox *>() << ui.skillQuestsCheckBox << ui.charmsCheckBox << ui.minigamesCheckBox << ui.signetsCheckBox << ui.itemsCheckBox)
@@ -58,14 +61,9 @@ SkillplanDialog::SkillplanDialog(QWidget *parent) : QDialog(parent)
     setFixedSize(sizeHint());
 }
 
-void SkillplanDialog::copyHtml()
+void SkillplanDialog::copyLinkWithTags()
 {
-    qApp->clipboard()->setText(ui.htmlLinkLineEdit->text());
-}
-
-void SkillplanDialog::copyBbcode()
-{
-    qApp->clipboard()->setText(ui.bbcodeLinkLineEdit->text());
+    qApp->clipboard()->setText((sender()->objectName() == QLatin1String("html") ? ui.htmlLinkLineEdit : ui.bbcodeLinkLineEdit)->text());
 }
 
 void SkillplanDialog::constructUrls()
@@ -144,7 +142,7 @@ void SkillplanDialog::constructUrls()
     }
 
     QString url = kBaseUrl.arg(modVersionPlanner()).arg(classCodePlanner).arg(charInfo.basicInfo.level).arg(skillQuests + maxSkillLevelCharms + maxSkillLevelItems, skillStr, minigames, charInfo.basicInfo.newName)
-                         .arg(ui.signetsCheckBox->isChecked() ? charInfo.basicInfo.statsDynamicData.property("SignetsOfSkillEaten").toUInt() : Enums::CharacterStats::SignetsOfSkillMax);
+                          .arg(ui.signetsCheckBox->isChecked() ? charInfo.basicInfo.statsDynamicData.property("SignetsOfSkillEaten").toUInt() : Enums::CharacterStats::SignetsOfSkillMax);
     QString linkText = QString("%1 %2 (%3, %4)").arg(tr("Skillplan"), charInfo.basicInfo.newName, Enums::ClassName::classes().at(classCode), modVersionReadable());
     QString htmlText = QString("<a href = \"%1\">%2</a>").arg(url, linkText);
     QString bbcodeText = QString("[url=%1]%2[/url]").arg(url, linkText);

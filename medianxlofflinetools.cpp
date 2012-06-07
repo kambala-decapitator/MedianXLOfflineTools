@@ -561,7 +561,10 @@ void MedianXLOfflineTools::levelChanged(int newClvl)
         _oldClvl = newClvl;
         int statsDiff = lvlDiff * kStatPointsPerLevel, newFreeStats = ui.freeStatPointsLineEdit->text().toInt() - statsDiff;
         if (newFreeStats < 0)
+        {
             respecStats();
+            newFreeStats = ui.freeStatPointsLineEdit->text().toInt() - statsDiff;
+        }
         ui.freeStatPointsLineEdit->setText(QString::number(newFreeStats));
         foreach (QSpinBox *spinBox, _spinBoxesStatsMap)
             spinBox->setMaximum(spinBox->maximum() - statsDiff);
