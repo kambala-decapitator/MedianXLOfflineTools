@@ -166,6 +166,7 @@ private:
     inline void updateCompoundStatusTip(QWidget *widget, const QString &firstString, const QString &secondString);
     inline void updateMinCompoundStatusTip(QWidget *widget, int minValue, int investedValue);
     inline void updateMaxCompoundStatusTip(QWidget *widget, int maxValue, int investedValue);
+    void updateAssociateAction(bool disable);
 
     QByteArray statisticBytes();
     inline void addStatisticBits(QString &bitsString, quint64 number, int fieldWidth);

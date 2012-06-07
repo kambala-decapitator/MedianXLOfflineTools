@@ -102,8 +102,7 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *pare
         }
     }
 
-    ui.actionAssociate->setDisabled(isDefault);
-    ui.actionAssociate->setStatusTip(isDefault ? tr("Application is default already") : QString());
+    updateAssociateAction(isDefault);
 #else
 #warning Add implementation to check file association to e.g. fileassociationmanager_linux.cpp or comment this line
 #endif
@@ -809,7 +808,7 @@ void MedianXLOfflineTools::associateFiles()
 #else
 #warning Add implementation to check file association to e.g. fileassociationmanager_linux.cpp or comment this line
 #endif
-    ui.actionAssociate->setDisabled(true);
+    updateAssociateAction(true);
 }
 
 void MedianXLOfflineTools::aboutApp()
@@ -2028,8 +2027,17 @@ void MedianXLOfflineTools::updateUI()
     ui.levelSpinBox->setValue(_oldClvl);
 
     quint32 exp = charInfo.basicInfo.statsDynamicData.property(Enums::CharacterStats::statisticNameFromValue(Enums::CharacterStats::Experience)).toUInt();
-    _expGroupBox->setPreviousLevelExperience(experienceTable.at(_oldClvl - (_oldClvl != 120 ? 1 : 2)));
-    _expGroupBox->setNextLevelExperience(_oldClvl != 120 ? experienceTable.at(_oldClvl) : exp);
+    if ((_oldClvl == Enums::CharacterStats::MaxNonHardenedLevel && exp < experienceTable.at(Enums::CharacterStats::MaxNonHardenedLevel - 1) + 5) || _oldClvl == Enums::CharacterStats::MaxLevel)
+    {
+        // display levels 120 and 126 as 100% of progressbar
+        _expGroupBox->setPreviousLevelExperience(experienceTable.at(_oldClvl - 2));
+        _expGroupBox->setNextLevelExperience(exp);
+    }
+    else
+    {
+        _expGroupBox->setPreviousLevelExperience(experienceTable.at(_oldClvl - 1));
+        _expGroupBox->setNextLevelExperience(experienceTable.at(_oldClvl));
+    }
     _expGroupBox->setCurrentExperience(exp);
 
     setStats();
@@ -2055,8 +2063,18 @@ void MedianXLOfflineTools::updateUI()
 
         ui.mercLevelLineEdit->setText(QString::number(charInfo.mercenary.level));
 
-        _mercExpGroupBox->setPreviousLevelExperience(mercExperienceForLevel(charInfo.mercenary.level - (charInfo.mercenary.level != 119 ? 0 : 1)));
-        _mercExpGroupBox->setNextLevelExperience(charInfo.mercenary.level != 119 ? mercExperienceForLevel(charInfo.mercenary.level + 1) : charInfo.mercenary.experience);
+        if ((charInfo.mercenary.level == Enums::CharacterStats::MaxNonHardenedLevel - 1 && charInfo.mercenary.experience < mercExperienceForLevel(Enums::CharacterStats::MaxNonHardenedLevel) + 5) ||
+             charInfo.mercenary.level == Enums::CharacterStats::MaxLevel - 1)
+        {
+            // display levels 119 and 125 as 100% of progressbar
+            _mercExpGroupBox->setPreviousLevelExperience(mercExperienceForLevel(charInfo.mercenary.level - 1));
+            _mercExpGroupBox->setNextLevelExperience(charInfo.mercenary.experience);
+        }
+        else
+        {
+            _mercExpGroupBox->setPreviousLevelExperience(mercExperienceForLevel(charInfo.mercenary.level));
+            _mercExpGroupBox->setNextLevelExperience(mercExperienceForLevel(charInfo.mercenary.level + 1));
+        }
         _mercExpGroupBox->setCurrentExperience(charInfo.mercenary.experience);
 
         ui.mercGroupBox->setEnabled(true);
@@ -2207,6 +2225,12 @@ void MedianXLOfflineTools::updateMinCompoundStatusTip(QWidget *widget, int minVa
 void MedianXLOfflineTools::updateMaxCompoundStatusTip(QWidget *widget, int maxValue, int investedValue)
 {
     updateCompoundStatusTip(widget, maxValueFormat.arg(maxValue), investedValueFormat.arg(investedValue));
+}
+
+void MedianXLOfflineTools::updateAssociateAction(bool disable)
+{
+    ui.actionAssociate->setDisabled(disable);
+    ui.actionAssociate->setStatusTip(disable ? tr("Application is default already") : QString());
 }
 
 QByteArray MedianXLOfflineTools::statisticBytes()
