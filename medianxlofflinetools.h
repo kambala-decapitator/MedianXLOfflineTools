@@ -17,6 +17,8 @@ class QCloseEvent;
 class QDragEnterEvent;
 class QDropEvent;
 class QFile;
+class QNetworkAccessManager;
+class QNetworkReply;
 
 class ItemsViewerDialog;
 class FindItemsDialog;
@@ -27,7 +29,7 @@ class MedianXLOfflineTools : public QMainWindow
     Q_OBJECT
 
 public:
-    static const QString kCompoundFormat, kCharacterExtension, kCharacterExtensionWithDot;
+    static const QString kCompoundFormat, kCharacterExtension, kCharacterExtensionWithDot, kForumThreadHtmlLinks;
     static const quint32 kFileSignature;
     static const int kSkillsNumber, kDifficultiesNumber, kMaxRecentFiles;
     static const int kStatPointsPerLevel, kSkillPointsPerLevel;
@@ -47,6 +49,7 @@ private slots:
     void switchLanguage(QAction *languageAction);
     void setModified(bool modified);
     void modify() { setModified(true); }
+    void networkReplyFinished(QNetworkReply *reply);
 
     // file
     void loadCharacter();
@@ -78,7 +81,8 @@ private slots:
     void backupSettingTriggered(bool checked);
     void associateFiles();
 
-    // about
+    // help
+    void checkUpdates();
     void aboutApp();
 
 private:
@@ -112,6 +116,7 @@ private:
 
     bool _isLoaded;
     ResurrectPenaltyDialog::ResurrectionPenalty _resurrectionPenalty;
+    QNetworkAccessManager *_qnam;
 
     // the following group of methods is Windows 7 specific
 #ifdef Q_WS_WIN32
@@ -179,6 +184,8 @@ private:
     void showErrorMessageBoxForFile(const QString &message, const QFile &file);
     QString itemStorageAndCoordinatesString(const QString &text, ItemInfo *item);
     bool maybeSave();
+
+    void checkUpdatesFromUrl(const QUrl &url);
 };
 
 #endif // MEDIANXLOFFLINETOOLS_H

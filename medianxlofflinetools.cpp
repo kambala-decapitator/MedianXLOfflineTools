@@ -30,6 +30,9 @@
 #include <QTranslator>
 #include <QUrl>
 
+#include <QNetworkAccessManager>
+#include <QNetworkReply>
+
 #ifndef QT_NO_DEBUG
 #include <QDebug>
 #include <QDate>
@@ -57,6 +60,8 @@ static const QString kLastSavePathKey("lastSavePath"), kBackupExtension("bak"), 
 const QString MedianXLOfflineTools::kCompoundFormat("%1, %2");
 const QString MedianXLOfflineTools::kCharacterExtension("d2s");
 const QString MedianXLOfflineTools::kCharacterExtensionWithDot("." + kCharacterExtension);
+const QString MedianXLOfflineTools::kForumThreadHtmlLinks = tr("<a href=\"http://modsbylaz.14.forumer.com/viewtopic.php?t=23147\">Official Median XL Forum thread</a><br>"
+                                                               "<a href=\"http://forum.worldofplayers.ru/showthread.php?t=34489\">Official Russian Median XL Forum thread</a>");
 const quint32 MedianXLOfflineTools::kFileSignature = 0xAA55AA55;
 const int MedianXLOfflineTools::kSkillsNumber = 30;
 const int MedianXLOfflineTools::kDifficultiesNumber = 3;
@@ -110,6 +115,9 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *pare
 #ifdef Q_WS_WIN32
     syncWindowsTaskbarRecentFiles(); // is actually used only in Windows 7 and later
 #endif
+
+    if (ui.actionCheckForUpdatesOnStart->isChecked())
+        checkUpdates();
     
     ui.actionFindNext->setShortcut(QKeySequence::FindNext);
     ui.actionFindPrevious->setShortcut(QKeySequence::FindPrevious);
@@ -589,6 +597,10 @@ void MedianXLOfflineTools::levelChanged(int newClvl)
 
         int investedStats = investedStatPoints();
         updateStatusTips(newFreeStats + investedStats, investedStats, newSkillPoints, investedSkillPoints);
+
+        _expGroupBox->setPreviousLevelExperience(experienceTable.at(newClvl - 1));
+        _expGroupBox->setNextLevelExperience(experienceTable.at(newClvl));
+        _expGroupBox->setCurrentExperience(experienceTable.at(newClvl - 1));
     }
 }
 
@@ -814,6 +826,11 @@ void MedianXLOfflineTools::associateFiles()
     updateAssociateAction(true);
 }
 
+void MedianXLOfflineTools::checkUpdates()
+{
+    checkUpdatesFromUrl(QUrl("http://modsbylaz.14.forumer.com/viewforum.php?f=21"));
+}
+
 void MedianXLOfflineTools::aboutApp()
 {
     QMessageBox aboutBox(this);
@@ -825,8 +842,7 @@ void MedianXLOfflineTools::aboutApp()
     QString email("decapitator@ukr.net");
     aboutBox.setInformativeText(
         tr("<i>Author:</i> Filipenkov Andrey (<b>kambala</b>)") + QString("%1<i>ICQ:</i> 287764961%1<i>E-mail:</i> <a href=\"mailto:%2?subject=%3\">%2</a>%1%1").arg(kHtmlLineBreak, email, appFullName) +
-        tr("<a href=\"http://modsbylaz.14.forumer.com/viewtopic.php?t=23147\">Official Median XL Forum thread</a><br>"
-           "<a href=\"http://forum.worldofplayers.ru/showthread.php?t=34489\">Official Russian Median XL Forum thread</a>") + kHtmlLineBreak + kHtmlLineBreak +
+        kForumThreadHtmlLinks + kHtmlLineBreak + kHtmlLineBreak +
         tr("<b>Credits:</b>"
            "<ul>"
              "<li><a href=\"http://modsbylaz.hugelaser.com/\">BrotherLaz</a> for this awesome mod</li>"
@@ -1175,6 +1191,7 @@ void MedianXLOfflineTools::loadSettings()
     settings.endGroup();
 
     ui.actionCheckFileAssociations->setChecked(settings.value("checkAssociations", true).toBool());
+    ui.actionCheckForUpdatesOnStart->setChecked(settings.value("checkUpdates", true).toBool());
 
     settings.endGroup();
 }
@@ -1203,6 +1220,7 @@ void MedianXLOfflineTools::saveSettings() const
     settings.endGroup();
 
     settings.setValue("checkAssociations", ui.actionCheckFileAssociations->isChecked());
+    settings.setValue("checkUpdates", ui.actionCheckForUpdatesOnStart->isChecked());
 
     settings.endGroup();
 
@@ -1277,7 +1295,8 @@ void MedianXLOfflineTools::connectSignals()
     connect(ui.actionBackup, SIGNAL(triggered(bool)), SLOT(backupSettingTriggered(bool)));
     connect(ui.actionAssociate, SIGNAL(triggered()), SLOT(associateFiles()));
 
-    // about
+    // help
+    connect(ui.actionCheckForUpdates, SIGNAL(triggered()), SLOT(checkUpdates()));
     connect(ui.actionAbout, SIGNAL(triggered()), SLOT(aboutApp()));
     connect(ui.actionAboutQt, SIGNAL(triggered()), qApp, SLOT(aboutQt()));
 
@@ -2066,7 +2085,7 @@ void MedianXLOfflineTools::updateUI()
 
         ui.mercLevelLineEdit->setText(QString::number(charInfo.mercenary.level));
 
-        if ((charInfo.mercenary.level == Enums::CharacterStats::MaxNonHardenedLevel - 1 && charInfo.mercenary.experience < mercExperienceForLevel(Enums::CharacterStats::MaxNonHardenedLevel) + 5) ||
+        if ((charInfo.mercenary.level == Enums::CharacterStats::MaxNonHardenedLevel - 1 && charInfo.mercenary.experience < mercExperienceForLevel(Enums::CharacterStats::MaxNonHardenedLevel - 1) + 5) ||
              charInfo.mercenary.level == Enums::CharacterStats::MaxLevel - 1)
         {
             // display levels 119 and 125 as 100% of progressbar
@@ -2419,4 +2438,34 @@ bool MedianXLOfflineTools::maybeSave()
         }
     }
     return true;
+}
+
+void MedianXLOfflineTools::checkUpdatesFromUrl(const QUrl &url)
+{
+    _qnam = new QNetworkAccessManager;
+    connect(_qnam, SIGNAL(finished(QNetworkReply *)), SLOT(networkReplyFinished(QNetworkReply *)));
+    _qnam->get(QNetworkRequest(url));
+}
+
+void MedianXLOfflineTools::networkReplyFinished(QNetworkReply *reply)
+{
+    QByteArray webpage = reply->readAll();
+    reply->deleteLater();
+    _qnam->deleteLater();
+
+    QRegExp rx(QString("%1 v(.+)<\\/a>").arg(qApp->applicationName()));
+    rx.setMinimal(true);
+    if (rx.indexIn(webpage) != -1)
+    {
+        QString version = rx.cap(1);
+        // TODO: don't forget to change > to <
+        if (qApp->applicationVersion() > version)
+            INFO_BOX(tr("New version <b>%1</b> is available!").arg(version) + kHtmlLineBreak + kHtmlLineBreak + kForumThreadHtmlLinks);
+    }
+    else
+    {
+        QUrl newUrl("http://forum.worldofplayers.ru/forumdisplay.php?f=935");
+        if (newUrl != reply->url())
+            checkUpdatesFromUrl(newUrl);
+    }
 }
