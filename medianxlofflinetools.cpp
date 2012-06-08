@@ -122,6 +122,10 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *pare
     ui.actionFindNext->setShortcut(QKeySequence::FindNext);
     ui.actionFindPrevious->setShortcut(QKeySequence::FindPrevious);
 
+#ifdef Q_WS_MACX
+    moveUpdateAction();
+#endif
+
     // TODO 0.3: remove when implementing export info
     ui.menuExport->removeAction(ui.actionExportCharacterInfo);
     ui.mainToolBar->removeAction(ui.actionExportCharacterInfo);
@@ -2459,7 +2463,7 @@ void MedianXLOfflineTools::networkReplyFinished(QNetworkReply *reply)
     {
         QString version = rx.cap(1);
         // TODO: don't forget to change > to <
-        if (qApp->applicationVersion() > version)
+        if (qApp->applicationVersion() < version)
             INFO_BOX(tr("New version <b>%1</b> is available!").arg(version) + kHtmlLineBreak + kHtmlLineBreak + kForumThreadHtmlLinks);
     }
     else

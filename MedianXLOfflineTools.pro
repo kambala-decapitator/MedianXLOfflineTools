@@ -101,7 +101,8 @@ macx {
     SOURCES += fileassociationmanager_mac.cpp
 
     OBJECTIVE_SOURCES += application_mac.mm \
-                         messagecheckbox_mac_p.mm
+                         messagecheckbox_mac_p.mm \
+                         medianxlofflinetools_mac.mm
 
     LIBS += -framework ApplicationServices \ # LSGetApplicationForInfo() 
             -framework AppKit                # NSWindow calls to disable Lion window resoration and NSAlert

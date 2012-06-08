@@ -40,6 +40,8 @@ public:
 public slots:
     bool loadFile(const QString &charPath);
 
+//    virtual void show() { QMainWindow::show(); moveUpdateAction(); }
+
 protected:
     void closeEvent(QCloseEvent *e);
     virtual void dragEnterEvent(QDragEnterEvent *event);
@@ -125,6 +127,10 @@ private:
     void syncWindowsTaskbarRecentFiles();
     void removeFromWindowsRecentFiles(const QString &filePath);
     void addToWindowsRecentFiles(const QString &filePath); // also used by earlier Windows versions
+#endif
+
+#ifdef Q_WS_MACX
+    void moveUpdateAction();
 #endif
 
     void loadData();
