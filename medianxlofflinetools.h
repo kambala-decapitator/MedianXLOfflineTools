@@ -13,9 +13,6 @@
 #include <QPointer>
 
 
-//class QCloseEvent;
-//class QDragEnterEvent;
-//class QDropEvent;
 class QFile;
 class QNetworkAccessManager;
 class QNetworkReply;

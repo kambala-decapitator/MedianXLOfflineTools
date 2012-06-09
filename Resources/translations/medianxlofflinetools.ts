@@ -1245,7 +1245,7 @@ Do you want to do it?</source>
     </message>
     <message>
         <location filename="../../medianxlofflinetools.ui" line="1252"/>
-        <source>Check for update</source>
+        <source>Check for Update</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

@@ -671,8 +671,8 @@
       <TranslationFiles Include="Resources\translations\*.qm" />
       <DataFiles Include="Resources\data\**\*.*" />
     </ItemGroup>
-    <Copy SourceFiles="@(QtDlls)" DestinationFolder="$(OutDir)" />
-    <Copy SourceFiles="@(TranslationFiles)" DestinationFolder="$(OutDir)Resources\translations" />
+    <Copy SourceFiles="@(QtDlls)" DestinationFolder="$(OutDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="@(TranslationFiles)" DestinationFolder="$(OutDir)Resources\translations" SkipUnchangedFiles="true" />
     <Copy SourceFiles="@(DataFiles)" DestinationFiles="@(DataFiles->'$(OutDir)Resources\data\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
     <RemoveDir Directories="$(OutDir)Resources\data\items" />
   </Target>

@@ -1077,26 +1077,14 @@ Do you want to do it?</source>
         <translation>&amp;Правка</translation>
     </message>
     <message>
-        <source>Options</source>
-        <translation type="obsolete">Настройки</translation>
-    </message>
-    <message>
         <location filename="../../medianxlofflinetools.ui" line="643"/>
         <source>Auto-open shared stashes</source>
         <translation>Авто-открытие общих сундуков</translation>
     </message>
     <message>
-        <source>Items</source>
-        <translation type="obsolete">Предметы</translation>
-    </message>
-    <message>
         <location filename="../../medianxlofflinetools.ui" line="671"/>
         <source>Go to page</source>
         <translation>Перейти на страницу</translation>
-    </message>
-    <message>
-        <source>Export</source>
-        <translation type="obsolete">Экспорт</translation>
     </message>
     <message>
         <location filename="../../medianxlofflinetools.ui" line="710"/>
@@ -1256,8 +1244,8 @@ Do you want to do it?</source>
     </message>
     <message>
         <location filename="../../medianxlofflinetools.ui" line="1252"/>
-        <source>Check for update</source>
-        <translation>Проверить обновление</translation>
+        <source>Check for Update</source>
+        <translation>Проверить Обновление</translation>
     </message>
     <message>
         <location filename="../../medianxlofflinetools.ui" line="1014"/>
