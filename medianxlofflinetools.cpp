@@ -123,7 +123,7 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *pare
     ui.actionFindPrevious->setShortcut(QKeySequence::FindPrevious);
 
 #ifdef Q_WS_MACX
-    QTimer::singleShot(1, this, SLOT(moveUpdateActionToAppleMenu())); // needs a slight delay to create menu
+    QTimer::singleShot(500, this, SLOT(moveUpdateActionToAppleMenu())); // needs a slight delay to create menu
 #endif
 
     // TODO 0.3: remove when implementing export info
