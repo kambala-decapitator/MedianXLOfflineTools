@@ -33,24 +33,23 @@
 #include <QNetworkAccessManager>
 #include <QNetworkReply>
 
-#ifndef QT_NO_DEBUG
-#include <QDebug>
-#include <QDate>
-#endif
-
 #include <cmath>
 
 
 // additional defines
 
 #ifdef QT_NO_DEBUG
-#define RELEASE_DATE "08.06.2012" // TODO: don't forget to change
+#define RELEASE_DATE "09.06.2012" // TODO: don't forget to change
 #else
+#include <QDebug>
+#include <QDate>
+
 #define RELEASE_DATE QDate::currentDate().toString("dd.MM.yyyy") // :)
 #endif
 
 //#define MAKE_HC
 //#define ENABLE_PERSONALIZE
+//#define MAKE_FINISHED_CHARACTER
 
 
 // static const
@@ -60,8 +59,6 @@ static const QString kLastSavePathKey("lastSavePath"), kBackupExtension("bak"), 
 const QString MedianXLOfflineTools::kCompoundFormat("%1, %2");
 const QString MedianXLOfflineTools::kCharacterExtension("d2s");
 const QString MedianXLOfflineTools::kCharacterExtensionWithDot("." + kCharacterExtension);
-const QString MedianXLOfflineTools::kForumThreadHtmlLinks = tr("<a href=\"http://modsbylaz.14.forumer.com/viewtopic.php?t=23147\">Official Median XL Forum thread</a><br>"
-                                                               "<a href=\"http://forum.worldofplayers.ru/showthread.php?t=34489\">Official Russian Median XL Forum thread</a>");
 const quint32 MedianXLOfflineTools::kFileSignature = 0xAA55AA55;
 const int MedianXLOfflineTools::kSkillsNumber = 30;
 const int MedianXLOfflineTools::kDifficultiesNumber = 3;
@@ -74,7 +71,9 @@ const int MedianXLOfflineTools::kMaxRecentFiles = 10;
 
 MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *parent, Qt::WFlags flags) : QMainWindow(parent, flags), _findItemsDialog(0),
     hackerDetected(tr("1337 hacker detected! Please, play legit.")), //difficulties(QStringList() << tr("Hatred") << tr("Terror") << tr("Destruction")),
-    maxValueFormat(tr("Max: %1")), minValueFormat(tr("Min: %1")), investedValueFormat(tr("Invested: %1")), _isLoaded(false)
+    maxValueFormat(tr("Max: %1")), minValueFormat(tr("Min: %1")), investedValueFormat(tr("Invested: %1")),
+    kForumThreadHtmlLinks(tr("<a href=\"http://modsbylaz.14.forumer.com/viewtopic.php?t=23147\">Official Median XL Forum thread</a><br>"
+                             "<a href=\"http://forum.worldofplayers.ru/showthread.php?t=34489\">Official Russian Median XL Forum thread</a>")), _isLoaded(false)
 {
     ui.setupUi(this);
 
@@ -116,8 +115,8 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *pare
     syncWindowsTaskbarRecentFiles(); // is actually used only in Windows 7 and later
 #endif
 
-    if (ui.actionCheckForUpdatesOnStart->isChecked())
-        checkUpdates();
+    if (ui.actionCheckForUpdateOnStart->isChecked())
+        checkForUpdate();
     
     ui.actionFindNext->setShortcut(QKeySequence::FindNext);
     ui.actionFindPrevious->setShortcut(QKeySequence::FindPrevious);
@@ -137,6 +136,9 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *pare
     else
         updateWindowTitle();
 }
+
+
+// slots
 
 bool MedianXLOfflineTools::loadFile(const QString &charPath)
 {
@@ -185,15 +187,15 @@ bool MedianXLOfflineTools::loadFile(const QString &charPath)
     }
 
     setModified(false);
+#ifdef MAKE_FINISHED_CHARACTER
+    ui.actionSaveCharacter->setEnabled(true);
+#endif
 
     if (_findItemsDialog)
         _findItemsDialog->clearResults();
 
     return result;
 }
-
-
-// slots
 
 void MedianXLOfflineTools::switchLanguage(QAction *languageAction)
 {
@@ -214,7 +216,6 @@ void MedianXLOfflineTools::switchLanguage(QAction *languageAction)
 void MedianXLOfflineTools::setModified(bool modified)
 {
     setWindowModified(modified);
-//    ui.actionReloadCharacter->setEnabled(modified);
     ui.actionSaveCharacter->setEnabled(modified);
 }
 
@@ -242,11 +243,22 @@ void MedianXLOfflineTools::reloadCharacter(bool notify /*= true*/)
 
 void MedianXLOfflineTools::saveCharacter()
 {
+    CharacterInfo &charInfo = CharacterInfo::instance();
+#ifdef MAKE_FINISHED_CHARACTER
+    charInfo.basicInfo.level = 120;
+    ui.levelSpinBox->setMaximum(120);
+    ui.levelSpinBox->setValue(120);
+    charInfo.basicInfo.level = 1;
+    ui.freeSkillPointsLineEdit->setText("134");
+    ui.freeStatPointsLineEdit->setText("1110");
+    ui.signetsOfLearningEatenLineEdit->setText("500");
+    ui.signetsOfSkillEatenLineEdit->setText("3");
+#endif
+
     QByteArray statsBytes = statisticBytes();
     if (statsBytes.isEmpty())
         return;
 
-    CharacterInfo &charInfo = CharacterInfo::instance();
     QByteArray tempFileContents(_saveFileContents);
     tempFileContents.replace(Enums::Offsets::StatsData, charInfo.skillsOffset - Enums::Offsets::StatsData, statsBytes);
     int diff = Enums::Offsets::StatsData + statsBytes.size() - charInfo.skillsOffset;
@@ -257,7 +269,9 @@ void MedianXLOfflineTools::saveCharacter()
     if (ui.respecSkillsCheckBox->isChecked())
         tempFileContents.replace(charInfo.skillsOffset + 2, kSkillsNumber, QByteArray(kSkillsNumber, 0));
 
+#ifndef MAKE_FINISHED_CHARACTER
     if (ui.activateWaypointsCheckBox->isChecked())
+#endif
     {
         QByteArray activatedWaypointsBytes(5, 0xFF); // 40 x '1'
         for (int startPos = Enums::Offsets::WaypointsData + 2, i = 0; i < kDifficultiesNumber; ++i, startPos += 24)
@@ -291,31 +305,58 @@ void MedianXLOfflineTools::saveCharacter()
     //for (int i = 0; i < difficultiesNumber; ++i)
     //    outputDataStream << curDiff[i];
 
-    //outputDataStream.skipRawData(Enums::Offsets::Progression);
-    //outputDataStream << quint16(13); // set max act to 4 in Destruction
-    //outputDataStream.device()->reset();
+#ifdef MAKE_FINISHED_CHARACTER
+    outputDataStream.skipRawData(Enums::Offsets::Progression);
+    outputDataStream << static_cast<quint16>(15); // become (m|p)atriarch
 
-    //quint16 one = 1;
-    //outputDataStream.skipRawData(Enums::Offsets::QuestsData + 2 * Enums::Quests::Size + 30); // Destruction A3
-    //outputDataStream << one;
-    //outputDataStream.skipRawData(14); // A4
-    //outputDataStream << one;
-    //outputDataStream.skipRawData(4); // A4Q3 (A4Q2 is skipRawData(6) for some reason)
-    //outputDataStream << one;         // is completed
-    //outputDataStream.skipRawData(2); // A5
-    //outputDataStream << one;
-    //outputDataStream.device()->reset();
-    //outputDataStream.skipRawData(Enums::Offsets::CurrentLocation + 2); // set current diff to Dest and act to 4
-    //quint8 v = 131; // 10000011
-    //outputDataStream << v;
-    //outputDataStream.device()->reset();
+    quint16 one = 1;
+    // enable all acts in all difficulties
+    for (int i = 0; i < kDifficultiesNumber; ++i)
+    {
+        outputDataStream.device()->seek(Enums::Offsets::QuestsData + i * Enums::Quests::Size); // A1 (0)
+        outputDataStream << one;
+        outputDataStream.skipRawData(6);  // Cain (8)
+        outputDataStream << one;
+        outputDataStream.skipRawData(4);  // A2 (14)
+        outputDataStream << one;
+        outputDataStream.skipRawData(14); // A3 (30)
+        outputDataStream << one;
+        outputDataStream.skipRawData(12); // Mephisto (44) + A4 (46)
+        outputDataStream << one << one;
+        outputDataStream.skipRawData(4);  // A4Q3 (52)
+        outputDataStream << one;
+        outputDataStream.skipRawData(2);  // A5 (56)
+        outputDataStream << one;
+    }
+
+    // set current difficulty to Destruction and act to 5
+    outputDataStream.device()->seek(Enums::Offsets::CurrentLocation);
+    outputDataStream << static_cast<quint8>(0);   // Hatred
+    outputDataStream << static_cast<quint8>(0);   // Terror
+    outputDataStream << static_cast<quint8>(132); // Destruction (10000100)
+
+    // complete skill/stat points quests
+    quint16 questComplete = static_cast<quint16>(0) | Enums::Quests::IsCompleted;
+    for (int i = 0; i < kDifficultiesNumber; ++i)
+    {
+        int baseOffset = Enums::Offsets::QuestsData + i * Enums::Quests::Size;
+        outputDataStream.device()->seek(baseOffset + Enums::Quests::DenOfEvil);
+        outputDataStream << questComplete;
+        outputDataStream.device()->seek(baseOffset + Enums::Quests::Radament);
+        outputDataStream << questComplete;
+        outputDataStream.device()->seek(baseOffset + Enums::Quests::LamEsensTome);
+        outputDataStream << questComplete;
+        outputDataStream.device()->seek(baseOffset + Enums::Quests::Izual);
+        outputDataStream << questComplete;
+    }
+#endif
+    
 #ifdef ENABLE_PERSONALIZE
     for (int i = 0; i < kDifficultiesNumber; ++i)
     {
         outputDataStream.device()->seek(Enums::Offsets::QuestsData + i * Enums::Quests::Size + Enums::Quests::Nihlathak);
         outputDataStream << quint16(Enums::Quests::IsTaskDone);
     }
-    outputDataStream.device()->reset();
 #endif
 
     QString newName = charInfo.basicInfo.newName;
@@ -335,7 +376,9 @@ void MedianXLOfflineTools::saveCharacter()
         newName = charInfo.basicInfo.originalName;
 
     quint8 newClvl = ui.levelSpinBox->value();
+#ifndef MAKE_FINISHED_CHARACTER
     if (charInfo.basicInfo.level != newClvl)
+#endif
     {
         charInfo.basicInfo.level = newClvl;
         charInfo.basicInfo.totalSkillPoints = ui.freeSkillPointsLineEdit->text().toUShort();
@@ -602,9 +645,7 @@ void MedianXLOfflineTools::levelChanged(int newClvl)
         int investedStats = investedStatPoints();
         updateStatusTips(newFreeStats + investedStats, investedStats, newSkillPoints, investedSkillPoints);
 
-        _expGroupBox->setPreviousLevelExperience(experienceTable.at(newClvl - 1));
-        _expGroupBox->setNextLevelExperience(experienceTable.at(newClvl));
-        _expGroupBox->setCurrentExperience(experienceTable.at(newClvl - 1));
+        updateCharacterExperienceProgressbar(experienceTable.at(newClvl - 1));
     }
 }
 
@@ -830,9 +871,10 @@ void MedianXLOfflineTools::associateFiles()
     updateAssociateAction(true);
 }
 
-void MedianXLOfflineTools::checkUpdates()
+void MedianXLOfflineTools::checkForUpdate()
 {
-    checkUpdatesFromUrl(QUrl("http://modsbylaz.14.forumer.com/viewforum.php?f=21"));
+    _isManuallyCheckingForUpdate = sender() != 0;
+    checkForUpdateFromUrl(QUrl("http://modsbylaz.14.forumer.com/viewforum.php?f=21"));
 }
 
 void MedianXLOfflineTools::aboutApp()
@@ -1195,7 +1237,7 @@ void MedianXLOfflineTools::loadSettings()
     settings.endGroup();
 
     ui.actionCheckFileAssociations->setChecked(settings.value("checkAssociations", true).toBool());
-    ui.actionCheckForUpdatesOnStart->setChecked(settings.value("checkUpdates", true).toBool());
+    ui.actionCheckForUpdateOnStart->setChecked(settings.value("checkUpdates", true).toBool());
 
     settings.endGroup();
 }
@@ -1224,7 +1266,7 @@ void MedianXLOfflineTools::saveSettings() const
     settings.endGroup();
 
     settings.setValue("checkAssociations", ui.actionCheckFileAssociations->isChecked());
-    settings.setValue("checkUpdates", ui.actionCheckForUpdatesOnStart->isChecked());
+    settings.setValue("checkUpdates", ui.actionCheckForUpdateOnStart->isChecked());
 
     settings.endGroup();
 
@@ -1300,7 +1342,7 @@ void MedianXLOfflineTools::connectSignals()
     connect(ui.actionAssociate, SIGNAL(triggered()), SLOT(associateFiles()));
 
     // help
-    connect(ui.actionCheckForUpdates, SIGNAL(triggered()), SLOT(checkUpdates()));
+    connect(ui.actionCheckForUpdate, SIGNAL(triggered()), SLOT(checkForUpdate()));
     connect(ui.actionAbout, SIGNAL(triggered()), SLOT(aboutApp()));
     connect(ui.actionAboutQt, SIGNAL(triggered()), qApp, SLOT(aboutQt()));
 
@@ -1861,7 +1903,7 @@ inline int MedianXLOfflineTools::totalPossibleSkillPoints()
 {
     const CharacterInfo &charInfo = CharacterInfo::instance();
     return (charInfo.basicInfo.level - 1) * kSkillPointsPerLevel + charInfo.questsInfo.denOfEvilQuestsCompleted() + charInfo.questsInfo.radamentQuestsCompleted() + charInfo.questsInfo.izualQuestsCompleted() * 2 +
-        CharacterInfo::instance().basicInfo.statsDynamicData.property("SignetsOfSkillEaten").toInt();
+        charInfo.basicInfo.statsDynamicData.property("SignetsOfSkillEaten").toInt();
 }
 
 int MedianXLOfflineTools::investedStatPoints()
@@ -2015,7 +2057,6 @@ void MedianXLOfflineTools::clearUI()
     }
 
     _expGroupBox->reset();
-    //_mercExpGroupBox->setCurrentExperience(0);
     _mercExpGroupBox->reset();
 }
 
@@ -2052,19 +2093,7 @@ void MedianXLOfflineTools::updateUI()
     ui.levelSpinBox->setMaximum(_oldClvl);
     ui.levelSpinBox->setValue(_oldClvl);
 
-    quint32 exp = charInfo.basicInfo.statsDynamicData.property(Enums::CharacterStats::statisticNameFromValue(Enums::CharacterStats::Experience)).toUInt();
-    if ((_oldClvl == Enums::CharacterStats::MaxNonHardenedLevel && exp < experienceTable.at(Enums::CharacterStats::MaxNonHardenedLevel - 1) + 5) || _oldClvl == Enums::CharacterStats::MaxLevel)
-    {
-        // display levels 120 and 126 as 100% of progressbar
-        _expGroupBox->setPreviousLevelExperience(experienceTable.at(_oldClvl - 2));
-        _expGroupBox->setNextLevelExperience(exp);
-    }
-    else
-    {
-        _expGroupBox->setPreviousLevelExperience(experienceTable.at(_oldClvl - 1));
-        _expGroupBox->setNextLevelExperience(experienceTable.at(_oldClvl));
-    }
-    _expGroupBox->setCurrentExperience(exp);
+    updateCharacterExperienceProgressbar(charInfo.basicInfo.statsDynamicData.property(Enums::CharacterStats::statisticNameFromValue(Enums::CharacterStats::Experience)).toUInt());
 
     setStats();
     recalculateStatPoints();
@@ -2259,6 +2288,22 @@ void MedianXLOfflineTools::updateAssociateAction(bool disable)
     ui.actionAssociate->setStatusTip(disable ? tr("Application is default already") : QString());
 }
 
+void MedianXLOfflineTools::updateCharacterExperienceProgressbar(quint32 newExperience)
+{
+    if ((_oldClvl == Enums::CharacterStats::MaxNonHardenedLevel && newExperience < experienceTable.at(Enums::CharacterStats::MaxNonHardenedLevel - 1) + 5) || _oldClvl == Enums::CharacterStats::MaxLevel)
+    {
+        // display levels 120 and 126 as 100% of progressbar
+        _expGroupBox->setPreviousLevelExperience(experienceTable.at(_oldClvl - 2));
+        _expGroupBox->setNextLevelExperience(newExperience);
+    }
+    else
+    {
+        _expGroupBox->setPreviousLevelExperience(experienceTable.at(_oldClvl - 1));
+        _expGroupBox->setNextLevelExperience(experienceTable.at(_oldClvl));
+    }
+    _expGroupBox->setCurrentExperience(newExperience);
+}
+
 QByteArray MedianXLOfflineTools::statisticBytes()
 {
     QString result;
@@ -2287,6 +2332,7 @@ QByteArray MedianXLOfflineTools::statisticBytes()
             {
                 ++value;
             }
+#ifndef MAKE_FINISHED_CHARACTER
             else if (statCode == Enums::CharacterStats::FreeStatPoints)
             {
                 int totalPossibleFreeStats = totalPossibleStatPoints(ui.levelSpinBox->value()) - investedStatPoints();
@@ -2296,6 +2342,7 @@ QByteArray MedianXLOfflineTools::statisticBytes()
                     WARNING_BOX(hackerDetected);
                 }
             }
+#endif
         }
         else if (statCode != Enums::CharacterStats::End && isExpAndLevelNotSet) // level or exp
         {
@@ -2444,7 +2491,7 @@ bool MedianXLOfflineTools::maybeSave()
     return true;
 }
 
-void MedianXLOfflineTools::checkUpdatesFromUrl(const QUrl &url)
+void MedianXLOfflineTools::checkForUpdateFromUrl(const QUrl &url)
 {
     _qnam = new QNetworkAccessManager;
     connect(_qnam, SIGNAL(finished(QNetworkReply *)), SLOT(networkReplyFinished(QNetworkReply *)));
@@ -2462,14 +2509,15 @@ void MedianXLOfflineTools::networkReplyFinished(QNetworkReply *reply)
     if (rx.indexIn(webpage) != -1)
     {
         QString version = rx.cap(1);
-        // TODO: don't forget to change > to <
         if (qApp->applicationVersion() < version)
             INFO_BOX(tr("New version <b>%1</b> is available!").arg(version) + kHtmlLineBreak + kHtmlLineBreak + kForumThreadHtmlLinks);
+        else if (_isManuallyCheckingForUpdate)
+            INFO_BOX(tr("You have the latest version"));
     }
     else
     {
         QUrl newUrl("http://forum.worldofplayers.ru/forumdisplay.php?f=935");
         if (newUrl != reply->url())
-            checkUpdatesFromUrl(newUrl);
+            checkForUpdateFromUrl(newUrl);
     }
 }

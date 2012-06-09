@@ -96,6 +96,19 @@ win32 {
             -luser32    # AllowSetForegroundWindow()
     
     RC_FILE = resources/win/medianxlofflinetools.rc
+
+    CONFIG(release, debug|release) {
+#        appresources.path = $$DESTDIR
+#        appresources.files += resources/translations/*.qm
+#        appresources.files += resources/data/*
+#        appresources.files -= resources/data/items
+#        INSTALLS += appresources
+
+#        copyfiles.commands += @call xcopy resources\\translations\\*.qm $$DESTDIR\\resources\\translations\\ /Y /S
+#        copyfiles.commands += @call xcopy resources/data/* $$DESTDIR/resources/data/ /Y /S
+#        copyfiles.commands += @call rmdir $$DESTDIR/resources/data/items /S /Q
+#        QMAKE_EXTRA_TARGETS += copyfiles
+    }
 }
 macx {
     SOURCES += fileassociationmanager_mac.cpp
@@ -118,6 +131,9 @@ macx {
     if (!exists($$MAC_SDK)) {
         MAC_SDK = /Developer/SDKs/MacOSX10.6.sdk
     }
+    if (!exists($$MAC_SDK)) {
+        MAC_SDK = /Developer/SDKs/MacOSX10.5.sdk
+    }
 
     # release build is intended to be compiled on 10.6 (or even earlier) for PPC support
     CONFIG(release, debug|release) {
@@ -128,7 +144,7 @@ macx {
     }
 
     if (!exists($$MAC_SDK)) {
-        error(The selected Mac OS X SDK does not exist at $$MAC_SDK!)
+        error(Selected Mac OS X SDK does not exist at $$MAC_SDK!)
     }
     QMAKE_MAC_SDK = $$MAC_SDK
 }

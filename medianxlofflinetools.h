@@ -29,7 +29,7 @@ class MedianXLOfflineTools : public QMainWindow
     Q_OBJECT
 
 public:
-    static const QString kCompoundFormat, kCharacterExtension, kCharacterExtensionWithDot, kForumThreadHtmlLinks;
+    static const QString kCompoundFormat, kCharacterExtension, kCharacterExtensionWithDot;
     static const quint32 kFileSignature;
     static const int kSkillsNumber, kDifficultiesNumber, kMaxRecentFiles;
     static const int kStatPointsPerLevel, kSkillPointsPerLevel;
@@ -84,7 +84,7 @@ private slots:
     void associateFiles();
 
     // help
-    void checkUpdates();
+    void checkForUpdate();
     void aboutApp();
 
 private:
@@ -114,11 +114,12 @@ private:
     QList<quint32> experienceTable;
     QVector<QStringList> mercNames;
     //const QStringList difficulties;
-    const QString hackerDetected, maxValueFormat, minValueFormat, investedValueFormat;
+    const QString hackerDetected, maxValueFormat, minValueFormat, investedValueFormat, kForumThreadHtmlLinks;
 
     bool _isLoaded;
     ResurrectPenaltyDialog::ResurrectionPenalty _resurrectionPenalty;
     QNetworkAccessManager *_qnam;
+    bool _isManuallyCheckingForUpdate;
 
     // the following group of methods is Windows 7 specific
 #ifdef Q_WS_WIN32
@@ -178,6 +179,7 @@ private:
     inline void updateMinCompoundStatusTip(QWidget *widget, int minValue, int investedValue);
     inline void updateMaxCompoundStatusTip(QWidget *widget, int maxValue, int investedValue);
     void updateAssociateAction(bool disable);
+    void updateCharacterExperienceProgressbar(quint32 newExperience);
 
     QByteArray statisticBytes();
     inline void addStatisticBits(QString &bitsString, quint64 number, int fieldWidth);
@@ -191,7 +193,7 @@ private:
     QString itemStorageAndCoordinatesString(const QString &text, ItemInfo *item);
     bool maybeSave();
 
-    void checkUpdatesFromUrl(const QUrl &url);
+    void checkForUpdateFromUrl(const QUrl &url);
 };
 
 #endif // MEDIANXLOFFLINETOOLS_H

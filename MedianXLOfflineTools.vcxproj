@@ -37,10 +37,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)\..\$(Configuration)\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)$(Configuration)\</IntDir>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)\..\$(Configuration)\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)$(Configuration)\</IntDir>
+    <OutDir>$(ProjectDir)\..\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)$(Configuration)\</IntDir>
     <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
     <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
     <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
@@ -54,7 +52,6 @@
     <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\include;$(IncludePath)</IncludePath>
     <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\lib;$(LibraryPath)</LibraryPath>
     <SourcePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\src;$(SourcePath)</SourcePath>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">$(ProjectDir)\..\$(Configuration)\</OutDir>
     <ReferencePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Windows\Microsoft.NET\Framework\v3.5;C:\Windows\Microsoft.NET\Framework\v2.0.50727;$(ReferencePath)</ReferencePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -668,4 +665,15 @@
       <UserProperties lreleaseOptions="" lupdateOnBuild="0" lupdateOptions="" MocDir=".\GeneratedFiles\$(ConfigurationName)" MocOptions="" QtVersion_x0020_Win32="$(DefaultQtVersion)" RccDir=".\GeneratedFiles" UicDir=".\GeneratedFiles" />
     </VisualStudio>
   </ProjectExtensions>
+  <Target Name="AfterBuild" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> 
+    <ItemGroup>
+      <QtDlls Include="$(QTDIR)\bin\QtCore4.dll;$(QTDIR)\bin\QtGui4.dll;$(QTDIR)\bin\QtNetwork4.dll" />
+      <TranslationFiles Include="Resources\translations\*.qm" />
+      <DataFiles Include="Resources\data\**\*.*" />
+    </ItemGroup>
+    <Copy SourceFiles="@(QtDlls)" DestinationFolder="$(OutDir)" />
+    <Copy SourceFiles="@(TranslationFiles)" DestinationFolder="$(OutDir)Resources\translations" />
+    <Copy SourceFiles="@(DataFiles)" DestinationFiles="@(DataFiles->'$(OutDir)Resources\data\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
+    <RemoveDir Directories="$(OutDir)Resources\data\items" />
+  </Target>
 </Project>
