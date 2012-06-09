@@ -1,5 +1,7 @@
 #include "messagecheckbox.h"
 
+#import "machelpers.h"
+
 #include <QCoreApplication>
 
 #import <AppKit/NSAlert.h>
@@ -14,18 +16,16 @@ public:
         Q_UNUSED(parent);
 
         [alert setAlertStyle:NSCriticalAlertStyle];
-        [alert setMessageText:nsstringFromQstring(text)];
+        [alert setMessageText:NSStringFromQString(text)];
         [alert setShowsHelp:NO];
         [alert setShowsSuppressionButton:YES];
-        [[alert suppressionButton] setTitle:nsstringFromQstring(checkboxText)];
+        [[alert suppressionButton] setTitle:NSStringFromQString(checkboxText)];
         // dirty hack to remove ampersands from strings
-        [alert addButtonWithTitle:nsstringFromQstring(qApp->translate("QDialogButtonBox", "&Yes").remove('&'))]; // returns 1000
-        [alert addButtonWithTitle:nsstringFromQstring(qApp->translate("QDialogButtonBox", "&No" ).remove('&'))]; // returns 1001
+        [alert addButtonWithTitle:NSStringFromQString(qApp->translate("QDialogButtonBox", "&Yes").remove('&'))]; // returns 1000
+        [alert addButtonWithTitle:NSStringFromQString(qApp->translate("QDialogButtonBox", "&No" ).remove('&'))]; // returns 1001
     }
 
     virtual ~MessageCheckBoxImpl() { [alert release]; }
-
-    static NSString *nsstringFromQstring(const QString &s) { return [NSString stringWithCharacters:(const unichar *)s.unicode() length:s.length()]; }
 
     NSAlert *alert;
 };

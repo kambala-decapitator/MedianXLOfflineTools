@@ -476,7 +476,7 @@ Note: items inside will be preserved. You can recover them by getting new Cube.<
 <context>
     <name>Language</name>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1034"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1035"/>
         <source>English</source>
         <comment>Your language name</comment>
         <translation type="unfinished"></translation>
@@ -485,469 +485,474 @@ Note: items inside will be preserved. You can recover them by getting new Cube.<
 <context>
     <name>MedianXLOfflineTools</name>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="73"/>
+        <location filename="../../medianxlofflinetools.cpp" line="74"/>
         <source>1337 hacker detected! Please, play legit.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="74"/>
+        <location filename="../../medianxlofflinetools.cpp" line="75"/>
         <source>Max: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="74"/>
+        <location filename="../../medianxlofflinetools.cpp" line="75"/>
         <source>Min: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="74"/>
+        <location filename="../../medianxlofflinetools.cpp" line="75"/>
         <source>Invested: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="210"/>
+        <location filename="../../medianxlofflinetools.cpp" line="211"/>
         <source>Language will be changed next time you run the application</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="228"/>
+        <location filename="../../medianxlofflinetools.cpp" line="229"/>
         <source>Load Character</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="230"/>
+        <location filename="../../medianxlofflinetools.cpp" line="231"/>
         <source>Character loaded</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="true">
-        <location filename="../../medianxlofflinetools.cpp" line="241"/>
+        <location filename="../../medianxlofflinetools.cpp" line="242"/>
         <source>Character reloaded</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="538"/>
+        <location filename="../../medianxlofflinetools.cpp" line="539"/>
         <source>File &apos;%1&apos; successfully saved!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="883"/>
+        <location filename="../../medianxlofflinetools.cpp" line="884"/>
         <source>About %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="887"/>
+        <location filename="../../medianxlofflinetools.cpp" line="888"/>
         <source>Released: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="890"/>
+        <location filename="../../medianxlofflinetools.cpp" line="891"/>
         <source>&lt;i&gt;Author:&lt;/i&gt; Filipenkov Andrey (&lt;b&gt;kambala&lt;/b&gt;)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="892"/>
+        <location filename="../../medianxlofflinetools.cpp" line="893"/>
         <source>&lt;b&gt;Credits:&lt;/b&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;http://modsbylaz.hugelaser.com/&quot;&gt;BrotherLaz&lt;/a&gt; for this awesome mod&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://modsbylaz.14.forumer.com/profile.php?mode=viewprofile&amp;u=33805&quot;&gt;grig&lt;/a&gt; for the Perl source of &lt;a href=&quot;http://grig.vlexofree.com/&quot;&gt;Median XL Online Tools&lt;/a&gt; and tips&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://phrozenkeep.hugelaser.com/index.php?ind=reviews&amp;op=section_view&amp;idev=4&quot;&gt;Phrozen Keep File Guides&lt;/a&gt; for tons of useful information on txt sources&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://modsbylaz.14.forumer.com/profile.php?mode=viewprofile&amp;u=44046&quot;&gt;FixeR&lt;/a&gt;, &lt;a href=&quot;http://forum.worldofplayers.ru/member.php?u=84592&quot;&gt;Zelgadiss&lt;/a&gt; and &lt;a href=&quot;http://modsbylaz.14.forumer.com/profile.php?mode=viewprofile&amp;u=44840&quot;&gt;moonra&lt;/a&gt; for intensive testing and tips on GUI &amp; functionality&lt;/li&gt;&lt;/ul&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1021"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1022"/>
         <source>&amp;Language</source>
         <comment>Language menu</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1106"/>
-        <location filename="../../medianxlofflinetools.cpp" line="1145"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1107"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1146"/>
         <source>Name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1110"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1111"/>
         <source>Class</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1112"/>
-        <location filename="../../medianxlofflinetools.cpp" line="1143"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1113"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1144"/>
         <source>Level</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1114"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1115"/>
         <source>Title</source>
         <comment>Character title - Slayer/Champion/etc.</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1141"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1142"/>
         <source>Type</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1159"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1160"/>
         <source>Inventory Gold</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1162"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1163"/>
         <source>Stash Gold</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1172"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1173"/>
         <source>Strength</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1173"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1174"/>
         <source>Dexterity</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1174"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1175"/>
         <source>Vitality</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1175"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1176"/>
         <source>Energy</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="446"/>
-        <location filename="../../medianxlofflinetools.cpp" line="544"/>
+        <location filename="../../medianxlofflinetools.cpp" line="447"/>
+        <location filename="../../medianxlofflinetools.cpp" line="545"/>
         <source>Error creating file &apos;%1&apos;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="97"/>
+        <location filename="../../medianxlofflinetools.cpp" line="98"/>
         <source>%1 is not associated with %2 files.
 
 Do you want to do it?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="2288"/>
+        <location filename="../../medianxlofflinetools.cpp" line="2289"/>
         <source>Application is default already</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="149"/>
+        <location filename="../../medianxlofflinetools.cpp" line="150"/>
         <source>&apos;%1&apos; files are not supported</source>
         <comment>param is file extension</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="75"/>
+        <location filename="../../medianxlofflinetools.cpp" line="76"/>
         <source>&lt;a href=&quot;http://modsbylaz.14.forumer.com/viewtopic.php?t=23147&quot;&gt;Official Median XL Forum thread&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://forum.worldofplayers.ru/showthread.php?t=34489&quot;&gt;Official Russian Median XL Forum thread&lt;/a&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="228"/>
+        <location filename="../../medianxlofflinetools.cpp" line="229"/>
         <source>Diablo 2 Save Files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="517"/>
+        <location filename="../../medianxlofflinetools.cpp" line="518"/>
         <source>Error removing file &apos;%1&apos;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="522"/>
+        <location filename="../../medianxlofflinetools.cpp" line="523"/>
         <source>Error renaming file &apos;%1&apos;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="541"/>
+        <location filename="../../medianxlofflinetools.cpp" line="542"/>
         <source>Error writing file &apos;%1&apos;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="821"/>
+        <location filename="../../medianxlofflinetools.cpp" line="822"/>
         <source>You have no free space in inventory and stash to store the Cube</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="849"/>
+        <location filename="../../medianxlofflinetools.cpp" line="850"/>
         <source>Cube has been stored in %1 at (%2,%3)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="860"/>
+        <location filename="../../medianxlofflinetools.cpp" line="861"/>
         <source>Are you sure you want to disable automatic backups? Then don&apos;t blame me if your character gets corrupted.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="950"/>
+        <location filename="../../medianxlofflinetools.cpp" line="951"/>
         <source>Experience table data not loaded.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="964"/>
+        <location filename="../../medianxlofflinetools.cpp" line="965"/>
         <source>Mercenary names not loaded.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="986"/>
+        <location filename="../../medianxlofflinetools.cpp" line="987"/>
         <source>Base stats data not loaded, using predefined one.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1165"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1166"/>
         <source>Free Skills</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1168"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1169"/>
         <source>Signets of Skill</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1181"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1182"/>
         <source>Free Stats</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1184"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1185"/>
         <source>Signets of Learning</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1190"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1191"/>
         <source>Quests</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1195"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1196"/>
         <source>Hatred</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1195"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1196"/>
         <source>Terror</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1195"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1196"/>
         <source>Destruction</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1201"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1202"/>
         <source>Den of Evil</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1202"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1203"/>
         <source>Radament</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1203"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1204"/>
         <source>Izual</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1204"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1205"/>
         <source>Lam Esen&apos;s Tome</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1440"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1441"/>
         <source>Error opening file &apos;%1&apos;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1454"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1455"/>
         <source>Wrong file signature: should be 0x%1, got 0x%2.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1463"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1464"/>
         <source>Character checksum doesn&apos;t match. Looks like it&apos;s corrupted.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1481"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1482"/>
         <source>This is not Expansion character.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1489"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1490"/>
         <source>Wrong class value: got %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1496"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1497"/>
         <source>Wrong progression value: got %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1503"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1504"/>
         <source>Wrong level: got %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1530"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1531"/>
         <source>Wrong mercenary code: got %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1550"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1551"/>
         <source>Quests data not found!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1566"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1567"/>
         <source>Waypoint data not found!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1593"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1594"/>
         <source>NPC data not found!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1600"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1601"/>
         <source>Stats data not found!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1609"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1610"/>
         <source>Skills data not found!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1649"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1650"/>
         <source>Level in statistics (%1) isn&apos;t equal the one in header (%2).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1684"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1685"/>
         <source>Stats data is corrupted!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1745"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1746"/>
         <source>Items data not found!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1762"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1763"/>
         <source>Corrupted item detected in %1 at (%2,%3)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1798"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1799"/>
         <source>Items list doesn&apos;t have a terminator!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1807"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1808"/>
         <source>Mercenary items section not found!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1815"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1816"/>
         <source>Save file is not terminated correctly!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1822"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1823"/>
         <source>Mercenary items data is corrupted!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="2473"/>
+        <location filename="../../medianxlofflinetools.cpp" line="2474"/>
         <source>Character has been modified.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="2474"/>
+        <location filename="../../medianxlofflinetools.cpp" line="2475"/>
         <source>Do you want to save your changes?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="2513"/>
+        <location filename="../../medianxlofflinetools.cpp" line="2514"/>
         <source>New version &lt;b&gt;%1&lt;/b&gt; is available!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="2515"/>
+        <location filename="../../medianxlofflinetools.cpp" line="2516"/>
         <source>You have the latest version</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1774"/>
+        <location filename="../../medianxlofflinetools.cpp" line="2524"/>
+        <source>Error contacting update server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../medianxlofflinetools.cpp" line="1775"/>
         <source>100% avoid is kewl</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1642"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1643"/>
         <source>Unknown statistic code found: %1. This is not %2 character.</source>
         <comment>second param is mod name</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1776"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1777"/>
         <source>well, you have %1% actually</source>
         <comment>avoid</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1933"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1934"/>
         <source>Error opening PlugY stash &apos;%1&apos;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1951"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1952"/>
         <source>PlugY stash &apos;%1&apos; has wrong header</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1972"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1973"/>
         <source>Page %1 of &apos;%2&apos; has wrong PlugY header</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1978"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1979"/>
         <source>Page %1 of &apos;%2&apos; has wrong item header</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1993"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1994"/>
         <source>Corrupted item detected in %1 on page %4 at (%2,%3)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="2107"/>
+        <location filename="../../medianxlofflinetools.cpp" line="2108"/>
         <source>Shared: %1</source>
         <comment>amount of gold in shared stash</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="2173"/>
+        <location filename="../../medianxlofflinetools.cpp" line="2174"/>
         <source>DEAD</source>
         <comment>HC character is dead</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="2391"/>
+        <location filename="../../medianxlofflinetools.cpp" line="2392"/>
         <source>Stats string is not byte aligned!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="2442"/>
+        <location filename="../../medianxlofflinetools.cpp" line="2443"/>
         <source>Error removing old backup &apos;%1&apos;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="2446"/>
+        <location filename="../../medianxlofflinetools.cpp" line="2447"/>
         <source>Error creating backup of &apos;%1&apos;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="2461"/>
+        <location filename="../../medianxlofflinetools.cpp" line="2462"/>
         <source>Reason: %1</source>
         <comment>error with file</comment>
         <translation type="unfinished"></translation>
@@ -1061,28 +1066,13 @@ Do you want to do it?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.ui" line="639"/>
-        <source>Options</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../medianxlofflinetools.ui" line="643"/>
         <source>Auto-open shared stashes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.ui" line="664"/>
-        <source>Items</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../medianxlofflinetools.ui" line="671"/>
         <source>Go to page</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../medianxlofflinetools.ui" line="693"/>
-        <source>Export</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1261,6 +1251,21 @@ Do you want to do it?</source>
     <message>
         <location filename="../../medianxlofflinetools.ui" line="1014"/>
         <source>Always reload shared stashes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../medianxlofflinetools.ui" line="639"/>
+        <source>&amp;Options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../medianxlofflinetools.ui" line="664"/>
+        <source>&amp;Items</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../medianxlofflinetools.ui" line="693"/>
+        <source>E&amp;xport</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

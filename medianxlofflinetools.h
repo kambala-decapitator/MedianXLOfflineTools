@@ -13,9 +13,9 @@
 #include <QPointer>
 
 
-class QCloseEvent;
-class QDragEnterEvent;
-class QDropEvent;
+//class QCloseEvent;
+//class QDragEnterEvent;
+//class QDropEvent;
 class QFile;
 class QNetworkAccessManager;
 class QNetworkReply;
@@ -40,10 +40,8 @@ public:
 public slots:
     bool loadFile(const QString &charPath);
 
-//    virtual void show() { QMainWindow::show(); moveUpdateAction(); }
-
 protected:
-    void closeEvent(QCloseEvent *e);
+    virtual void closeEvent(QCloseEvent *e);
     virtual void dragEnterEvent(QDragEnterEvent *event);
     virtual void dropEvent(QDropEvent *event);
 
@@ -52,6 +50,10 @@ private slots:
     void setModified(bool modified);
     void modify() { setModified(true); }
     void networkReplyFinished(QNetworkReply *reply);
+
+#ifdef Q_WS_MACX
+    void moveUpdateActionToAppleMenu();
+#endif
 
     // file
     void loadCharacter();
@@ -128,10 +130,6 @@ private:
     void syncWindowsTaskbarRecentFiles();
     void removeFromWindowsRecentFiles(const QString &filePath);
     void addToWindowsRecentFiles(const QString &filePath); // also used by earlier Windows versions
-#endif
-
-#ifdef Q_WS_MACX
-    void moveUpdateAction();
 #endif
 
     void loadData();

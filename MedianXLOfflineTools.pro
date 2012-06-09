@@ -80,9 +80,7 @@ TRANSLATIONS += resources/translations/medianxlofflinetools_ru.ts \
 
 OTHER_FILES += TODO.txt
 
-
 # QMAKE_CXXFLAGS += -std=c++11
-
 
 win32 {
     SOURCES += medianxlofflinetools_win.cpp \
@@ -111,11 +109,13 @@ win32 {
     }
 }
 macx {
-    SOURCES += fileassociationmanager_mac.cpp
-
     OBJECTIVE_SOURCES += application_mac.mm \
                          messagecheckbox_mac_p.mm \
-                         medianxlofflinetools_mac.mm
+                         medianxlofflinetools_mac.mm \
+                         machelpers.mm \
+                         fileassociationmanager_mac.mm
+
+    OBJECTIVE_HEADERS += machelpers.h
 
     LIBS += -framework ApplicationServices \ # LSGetApplicationForInfo() 
             -framework AppKit                # NSWindow calls to disable Lion window resoration and NSAlert
@@ -141,12 +141,19 @@ macx {
         MAC_SDK = /Developer/SDKs/MacOSX10.5.sdk
         CONFIG += x86 ppc
         QMAKE_MACOSX_DEPLOYMENT_TARGET = 10.5
+
+        appresources.files += resources/translations
+        appresources.files += resources/data
     }
 
     if (!exists($$MAC_SDK)) {
         error(Selected Mac OS X SDK does not exist at $$MAC_SDK!)
     }
     QMAKE_MAC_SDK = $$MAC_SDK
+
+    appresources.files += resources/mac/locversion.plist
+    appresources.path = Contents/Resources
+    QMAKE_BUNDLE_DATA += appresources
 }
 unix {
     SOURCES += qtsingleapplication/qtlockedfile_unix.cpp

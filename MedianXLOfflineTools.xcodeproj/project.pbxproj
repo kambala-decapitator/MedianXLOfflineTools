@@ -38,6 +38,8 @@
 		A6BF33642D4408F437404357 /* moc_itemsviewerdialog.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = DDCD2B3240AC93BDC1AC2748 /* moc_itemsviewerdialog.cpp */; settings = {ATTRIBUTES = (); }; };
 		A8BA6FFB47BB1BD81D7FBD98 /* itemsviewerdialog.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = BB35BC6199B5362D4DDC4E81 /* itemsviewerdialog.cpp */; settings = {ATTRIBUTES = (); }; };
 		AB191A955E35E32AA265564E /* experienceindicatorgroupbox.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 92D0C0D68926B7F4E8A412F1 /* experienceindicatorgroupbox.cpp */; settings = {ATTRIBUTES = (); }; };
+		AC3374951583C8D300704733 /* medianxlofflinetools_mac.mm in Build Sources */ = {isa = PBXBuildFile; fileRef = AC3374931583C8D300704733 /* medianxlofflinetools_mac.mm */; };
+		AC3374961583C8D300704733 /* messagecheckbox_mac_p.mm in Build Sources */ = {isa = PBXBuildFile; fileRef = AC3374941583C8D300704733 /* messagecheckbox_mac_p.mm */; };
 		B09132059B01BF93ACB07F02 /* moc_enums.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 457C18608DE1E1EB5A10C3F3 /* moc_enums.cpp */; settings = {ATTRIBUTES = (); }; };
 		B0CB039B3B4323FC3D471B59 /* enums.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = E34D230637628A8CD6C3EA30 /* enums.cpp */; settings = {ATTRIBUTES = (); }; };
 		B14AFF375B11F951842C979C /* itemstoragetableview.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 0D597AF1812341262648E491 /* itemstoragetableview.cpp */; settings = {ATTRIBUTES = (); }; };
@@ -47,7 +49,6 @@
 		CF43789BC75DF60EE05AC492 /* moc_itemspropertiessplitter.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 1225D5B7D03A2D0D8E968A94 /* moc_itemspropertiessplitter.cpp */; settings = {ATTRIBUTES = (); }; };
 		D95ADDE608951E7F272AD7CA /* finditemsdialog.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 29E97D19C2DA77D38DADA780 /* finditemsdialog.cpp */; settings = {ATTRIBUTES = (); }; };
 		DF06D3F49E4DB3ED883545FB /* moc_medianxlofflinetools.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 0092663B5ABB9A5FDE3A55C2 /* moc_medianxlofflinetools.cpp */; settings = {ATTRIBUTES = (); }; };
-		E03FD021FA960BCA4F1B1C61 /* messagecheckbox_mac.mm in Build Sources */ = {isa = PBXBuildFile; fileRef = 640B0B8B14AFDE50375F6CB6 /* messagecheckbox_mac.mm */; settings = {ATTRIBUTES = (); }; };
 		E76D73B303E351243A84BC8E /* qtlocalpeer.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 2F004A54FA510C70CF3BC9FC /* qtlocalpeer.cpp */; settings = {ATTRIBUTES = (); }; };
 		E88FA4062BD69817D57B0217 /* moc_experienceindicatorgroupbox.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 5CEEC24EAE9893368C3C470E /* moc_experienceindicatorgroupbox.cpp */; settings = {ATTRIBUTES = (); }; };
 		EA3F671A9E7077E1C5E9427A /* moc_qtsingleapplication.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 73A3D27301B92EEF800C2C64 /* moc_qtsingleapplication.cpp */; settings = {ATTRIBUTES = (); }; };
@@ -104,7 +105,6 @@
 		5CEEC24EAE9893368C3C470E /* moc_experienceindicatorgroupbox.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_experienceindicatorgroupbox.cpp; sourceTree = "<group>"; };
 		60ED7402D501FE7FA4068D8F /* colorsmanager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = colorsmanager.hpp; sourceTree = "<group>"; };
 		633965930DF94524CA097B37 /* propertiesviewerwidget.ui */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = propertiesviewerwidget.ui; sourceTree = "<group>"; };
-		640B0B8B14AFDE50375F6CB6 /* messagecheckbox_mac.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = messagecheckbox_mac.mm; sourceTree = "<group>"; };
 		6887EB9D0EC054A91A5B9F07 /* moc_resurrectpenaltydialog.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_resurrectpenaltydialog.cpp; sourceTree = "<group>"; };
 		6E0F7A39E6D33F8DCF3A3882 /* moc_itemstoragetablemodel.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_itemstoragetablemodel.cpp; sourceTree = "<group>"; };
 		73A3D27301B92EEF800C2C64 /* moc_qtsingleapplication.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_qtsingleapplication.cpp; sourceTree = "<group>"; };
@@ -123,6 +123,9 @@
 		99909FF0E3532A0626D2CCDD /* MedianXLOfflineTools.pro */ = {isa = PBXFileReference; lastKnownFileType = text; path = MedianXLOfflineTools.pro; sourceTree = "<group>"; };
 		9B36DA7E32F0304E780E7972 /* QtGui.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtGui.framework; path = /Library/Frameworks/QtGui.framework; sourceTree = "<absolute>"; };
 		9DF8BB12FF11D5408ADC7086 /* helpers.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = helpers.cpp; sourceTree = "<group>"; };
+		AC3374931583C8D300704733 /* medianxlofflinetools_mac.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = medianxlofflinetools_mac.mm; sourceTree = "<group>"; };
+		AC3374941583C8D300704733 /* messagecheckbox_mac_p.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = messagecheckbox_mac_p.mm; sourceTree = "<group>"; };
+		AC3374971583C8EE00704733 /* messagecheckbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = messagecheckbox.h; sourceTree = "<group>"; };
 		ACF50AAB157D5770004DA221 /* MedianXLOfflineTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedianXLOfflineTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B06652142F8E356218335B39 /* qrc_medianxlofflinetools.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = qrc_medianxlofflinetools.cpp; sourceTree = "<group>"; };
 		B1555E4249E75628A4999156 /* moc_itemstoragetableview.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_itemstoragetableview.cpp; sourceTree = "<group>"; };
@@ -208,8 +211,9 @@
 		3E4431212F852BE94A75A1A8 /* Sources [Compile] */ = {
 			isa = PBXGroup;
 			children = (
+				AC3374931583C8D300704733 /* medianxlofflinetools_mac.mm */,
+				AC3374941583C8D300704733 /* messagecheckbox_mac_p.mm */,
 				4003C8FF31A7868D0AC66678 /* application_mac.mm */,
-				640B0B8B14AFDE50375F6CB6 /* messagecheckbox_mac.mm */,
 			);
 			name = "Sources [Compile]";
 			sourceTree = "<group>";
@@ -263,6 +267,7 @@
 		883D7615C4D2DE3FA1218F12 /* Headers */ = {
 			isa = PBXGroup;
 			children = (
+				AC3374971583C8EE00704733 /* messagecheckbox.h */,
 				4D6E68A38295F99B7324EC7C /* medianxlofflinetools.h */,
 				1C8010DBD505B823EDE2746F /* resurrectpenaltydialog.h */,
 				40EEE5E4BF46D9CE22FED30E /* qd2charrenamer.h */,
@@ -509,7 +514,8 @@
 				E88FA4062BD69817D57B0217 /* moc_experienceindicatorgroupbox.cpp in Build Sources */,
 				F2FDBFD0C58EBEDFE231A6DF /* qrc_medianxlofflinetools.cpp in Build Sources */,
 				04DE3337E2AE172B5D36AFF7 /* application_mac.mm in Build Sources */,
-				E03FD021FA960BCA4F1B1C61 /* messagecheckbox_mac.mm in Build Sources */,
+				AC3374951583C8D300704733 /* medianxlofflinetools_mac.mm in Build Sources */,
+				AC3374961583C8D300704733 /* messagecheckbox_mac_p.mm in Build Sources */,
 			);
 			name = "Build Sources";
 			runOnlyForDeploymentPostprocessing = 0;

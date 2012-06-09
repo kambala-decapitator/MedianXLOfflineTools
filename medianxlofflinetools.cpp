@@ -29,6 +29,7 @@
 #include <QDataStream>
 #include <QTranslator>
 #include <QUrl>
+#include <QTimer>
 
 #include <QNetworkAccessManager>
 #include <QNetworkReply>
@@ -122,7 +123,7 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *pare
     ui.actionFindPrevious->setShortcut(QKeySequence::FindPrevious);
 
 #ifdef Q_WS_MACX
-    moveUpdateAction();
+    QTimer::singleShot(1, this, SLOT(moveUpdateActionToAppleMenu())); // needs a slight delay to create menu
 #endif
 
     // TODO 0.3: remove when implementing export info
@@ -2036,8 +2037,8 @@ void MedianXLOfflineTools::clearUI()
     foreach (QGroupBox *groupBox, groupBoxes)
         groupBox->setDisabled(true);
 
-    QList<QAction *> actions = QList<QAction *>() << ui.actionReloadCharacter << ui.actionSaveCharacter << ui.actionRespecStats << ui.actionRespecSkills << ui.actionActivateWaypoints << ui.actionRename
-                                                  << ui.actionFind << ui.actionFindNext << ui.actionFindPrevious << ui.actionShowItems << ui.actionSkillPlan << ui.actionExportCharacterInfo;
+    QList<QAction *> actions = QList<QAction *>() << ui.actionReloadCharacter << ui.actionSaveCharacter << ui.actionRespecStats << ui.actionRespecSkills << ui.actionActivateWaypoints << ui.actionRename << ui.actionConvertToSoftcore
+                                                  << ui.actionResurrect << ui.actionFind << ui.actionFindNext << ui.actionFindPrevious << ui.actionShowItems << ui.actionSkillPlan << ui.actionExportCharacterInfo;
     foreach (QAction *action, actions)
         action->setDisabled(true);
 
@@ -2504,7 +2505,7 @@ void MedianXLOfflineTools::networkReplyFinished(QNetworkReply *reply)
     reply->deleteLater();
     _qnam->deleteLater();
 
-    QRegExp rx(QString("%1 v(.+)<\\/a>").arg(qApp->applicationName()));
+    QRegExp rx(QString("%1 v(.+)</a>").arg(qApp->applicationName()));
     rx.setMinimal(true);
     if (rx.indexIn(webpage) != -1)
     {
@@ -2519,5 +2520,7 @@ void MedianXLOfflineTools::networkReplyFinished(QNetworkReply *reply)
         QUrl newUrl("http://forum.worldofplayers.ru/forumdisplay.php?f=935");
         if (newUrl != reply->url())
             checkForUpdateFromUrl(newUrl);
+        else if (_isManuallyCheckingForUpdate)
+            ERROR_BOX(tr("Error contacting update server"));
     }
 }
