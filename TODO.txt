@@ -23,3 +23,28 @@ future versions:
 - item requirements
 - when reloading character, explicitly reload shared stashes that were modified
 - http://modsbylaz.14.forumer.com/viewtopic.php?p=424505#424505
+
+1.
+# escape command to allow multiple lines in Makefile
+defineReplace(mle) {
+    return ( $$1$$escape_expand(\\n\\t) )
+}
+
+QMAKE_POST_LINK += $$mle(echo 1 > $${OUT_PWD}/$(DESTDIR_TARGET)/../file1.txt) # Makefile-only!
+QMAKE_POST_LINK += $$mle(echo 2 > $${OUT_PWD}/$(DESTDIR_TARGET)/../file2.txt)
+QMAKE_POST_LINK += $$mle(echo 3 > $${OUT_PWD}/$(DESTDIR_TARGET)/../file3.txt)
+
+2.
+# copy Qt DLLs
+win32 {
+    defineReplace(mle) {
+        return ( $$1$$escape_expand(\\n\\t) )
+    }
+
+    T="$${OUT_PWD}/$(DESTDIR_TARGET)/../"
+
+    for(ql, QT) {
+        qln="qt$${ql}$${QT_MAJOR_VERSION}.dll"
+        QMAKE_POST_LINK += $$mle(if not exist \"$$T\\$$qln\" copy /y \"$$[QT_INSTALL_BINS]\\$$qln\" \"$$T\")
+    }
+}

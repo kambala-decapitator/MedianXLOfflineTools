@@ -8,14 +8,22 @@ ItemStorageTableView::ItemStorageTableView(QWidget *parent /*= 0*/) : QTableView
 {
     setContextMenuPolicy(Qt::CustomContextMenu);
     setEditTriggers(QAbstractItemView::NoEditTriggers);
+    setSelectionMode(QAbstractItemView::SingleSelection); // TODO 0.3: change to ExtendedSelection
+
     setHorizontalScrollMode(QAbstractItemView::ScrollPerPixel);
     setVerticalScrollMode(QAbstractItemView::ScrollPerPixel);
-    setSelectionMode(QAbstractItemView::SingleSelection); // TODO 0.3: change to ExtendedSelection
+
+    setGridStyle(Qt::SolidLine);
     setStyleSheet("QTableView { background-color: black; gridline-color: #808080; }"
                   "QTableView::item:selected { background-color: black; border: 1px solid #d9d9d9; }"
                   "QTableView::icon:selected { right: 1px; }"
                  );
-    setGridStyle(Qt::SolidLine);
+
+    setDragEnabled(true);
+    setAcceptDrops(true);
+    setDragDropMode(QAbstractItemView::DragDrop);
+    setDropIndicatorShown(true);
+
     setCornerButtonEnabled(false);
     horizontalHeader()->hide();
     verticalHeader()->hide();

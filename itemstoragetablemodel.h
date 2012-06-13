@@ -18,6 +18,10 @@ public:
     virtual int columnCount(const QModelIndex &parent = QModelIndex()) const { Q_UNUSED(parent); return _columns; }
     virtual QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
 
+    virtual Qt::DropActions supportedDropActions() const { return Qt::MoveAction; }
+    virtual Qt::ItemFlags flags(const QModelIndex &index) const;
+    virtual bool dropMimeData(const QMimeData *data, Qt::DropAction action, int row, int column, const QModelIndex &parent);
+
     int itemCount() const { return _itemsHash.size(); }
 
     ItemInfo *itemAt(const QModelIndex &modelIndex) const { return _itemsHash[qMakePair(modelIndex.row(), modelIndex.column())]; }

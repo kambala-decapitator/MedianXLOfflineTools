@@ -2,10 +2,15 @@
 #include "itemdatabase.h"
 #include "resourcepathmanager.hpp"
 
-#include <QFile>
-
 #include <QPixmap>
 #include <QPainter>
+
+#include <QFile>
+#include <QMimeData>
+
+#ifndef QT_NO_DEBUG
+#include <QDebug>
+#endif
 
 
 void ItemStorageTableModel::setItems(const ItemsList &newItems)
@@ -65,4 +70,23 @@ QVariant ItemStorageTableModel::data(const QModelIndex &index, int role) const
         return Qt::black;
 
     return QVariant();
+}
+
+Qt::ItemFlags ItemStorageTableModel::flags(const QModelIndex &index) const
+{
+    return QAbstractTableModel::flags(index) | Qt::ItemIsDragEnabled | Qt::ItemIsDropEnabled;
+}
+
+bool ItemStorageTableModel::dropMimeData(const QMimeData *data, Qt::DropAction action, int row, int column, const QModelIndex &parent)
+{
+    QByteArray encoded = data->data("application/x-qabstractitemmodeldatalist");
+    QDataStream stream(&encoded, QIODevice::ReadOnly);
+    while (!stream.atEnd())
+    {
+        int r, c;
+        QMap<int,  QVariant> roleDataMap;
+        stream >> r >> c >> roleDataMap;
+        qDebug() << "dropping" << ItemDataBase::Items()->value(itemAt(index(r, c))->itemType).name << "from" << r << c;
+    }
+    return true;
 }
