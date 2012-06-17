@@ -81,12 +81,16 @@ bool ItemStorageTableModel::dropMimeData(const QMimeData *data, Qt::DropAction a
 {
     QByteArray encoded = data->data("application/x-qabstractitemmodeldatalist");
     QDataStream stream(&encoded, QIODevice::ReadOnly);
+    ItemInfo *droppedItem = 0;
     while (!stream.atEnd())
     {
         int r, c;
         QMap<int,  QVariant> roleDataMap;
         stream >> r >> c >> roleDataMap;
-        qDebug() << "dropping" << ItemDataBase::Items()->value(itemAt(index(r, c))->itemType).name << "from" << r << c;
+        droppedItem = itemAt(index(r, c));
+        qDebug() << roleDataMap;
+        if (droppedItem)
+            qDebug() << "dropping" << ItemDataBase::Items()->value(droppedItem->itemType).name << "from" << r << c;
     }
     return true;
 }

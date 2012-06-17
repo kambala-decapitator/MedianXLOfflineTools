@@ -72,6 +72,7 @@ public:
 
 private:
     CharacterInfo() {}
+    Q_DISABLE_COPY(CharacterInfo)
 };
 
 #endif // CHARACTERINFO_H

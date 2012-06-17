@@ -51,6 +51,7 @@
 //#define MAKE_HC
 //#define ENABLE_PERSONALIZE
 //#define MAKE_FINISHED_CHARACTER
+#define DISABLE_CRC_CHECK
 
 
 // static const
@@ -1459,11 +1460,13 @@ bool MedianXLOfflineTools::processSaveFile()
     inputDataStream.device()->seek(Enums::Offsets::Checksum);
     quint32 fileChecksum, computedChecksum = checksum(_saveFileContents);
     inputDataStream >> fileChecksum;
+#ifndef DISABLE_CRC_CHECK
     if (fileChecksum != computedChecksum)
     {
         ERROR_BOX(tr("Character checksum doesn't match. Looks like it's corrupted."));
         return false;
     }
+#endif
 
     CharacterInfo &charInfo = CharacterInfo::instance();
     charInfo.basicInfo.originalName = _saveFileContents.constData() + Enums::Offsets::Name;
