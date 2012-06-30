@@ -185,7 +185,6 @@ private:
 
     void backupFile(QFile &file);
     void showErrorMessageBoxForFile(const QString &message, const QFile &file);
-    QString itemStorageAndCoordinatesString(const QString &text, ItemInfo *item);
     bool maybeSave();
 
     void checkForUpdateFromUrl(const QUrl &url);

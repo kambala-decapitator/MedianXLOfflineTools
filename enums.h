@@ -303,7 +303,9 @@ public:
     {
         Stored = 0,
         Equipped,
-        Belt
+        Belt,
+        Merc,
+        Corpse
     };
 };
 

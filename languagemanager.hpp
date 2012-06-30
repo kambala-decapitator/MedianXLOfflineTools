@@ -22,6 +22,7 @@ public:
 
 private:
     LanguageManager() : languageKey("language"), defaultLocale("en") {}
+    Q_DISABLE_COPY(LanguageManager)
 };
 
 #endif // LANGUAGEMANAGER_HPP

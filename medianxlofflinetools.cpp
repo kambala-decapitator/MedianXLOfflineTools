@@ -57,6 +57,7 @@
 // static const
 
 static const QString kLastSavePathKey("lastSavePath"), kBackupExtension("bak"), kReadonlyCss("background-color: rgb(227, 227, 227)");
+static const QByteArray kMercHeader("jf");
 
 const QString MedianXLOfflineTools::kCompoundFormat("%1, %2");
 const QString MedianXLOfflineTools::kCharacterExtension("d2s");
@@ -848,7 +849,7 @@ void MedianXLOfflineTools::giveCube()
 
     ui.actionGiveCube->setDisabled(true);
     setModified(true);
-    INFO_BOX(itemStorageAndCoordinatesString(tr("Cube has been stored in %1 at (%2,%3)"), cube));
+    INFO_BOX(ItemParser::itemStorageAndCoordinatesString(tr("Cube has been stored in %1 at (%2,%3)"), cube));
 }
 
 void MedianXLOfflineTools::getSkillPlan()
@@ -1754,18 +1755,16 @@ bool MedianXLOfflineTools::processSaveFile()
 
     quint16 charItemsTotal;
     inputDataStream >> charItemsTotal;
-    quint32 avoidValue = 0;
-    QString corruptedItems;
     ItemsList itemsBuffer;
-    for (int i = 0; i < charItemsTotal; ++i)
+    QString corruptedItems = ItemParser::parseItemsToBuffer(charItemsTotal, inputDataStream, _saveFileContents, tr("Corrupted item detected in %1 at (%2,%3)"), &itemsBuffer);
+    if (!corruptedItems.isEmpty())
+        ERROR_BOX(corruptedItems.trimmed());
+    charInfo.itemsEndOffset = inputDataStream.device()->pos();
+
+    const int avoidKey = Enums::ItemProperties::Avoid1;
+    quint32 avoidValue = 0;
+    foreach (ItemInfo *item, itemsBuffer)
     {
-        ItemInfo *item = ItemParser::parseItem(inputDataStream, _saveFileContents);
-        itemsBuffer += item;
-
-        if (item->status != ItemInfo::Ok)
-            corruptedItems += itemStorageAndCoordinatesString(tr("Corrupted item detected in %1 at (%2,%3)"), item) + "\n";
-
-        int avoidKey = Enums::ItemProperties::Avoid1;
         if (item->location == Enums::ItemLocation::Equipped || (item->storage == Enums::ItemStorage::Inventory && ItemDataBase::isUberCharm(item)))
         {
             avoidValue += item->props.value(avoidKey).value + item->rwProps.value(avoidKey).value;
@@ -1780,66 +1779,53 @@ bool MedianXLOfflineTools::processSaveFile()
             avoidText += QString(" (%1)").arg(tr("well, you have %1% actually", "avoid").arg(avoidValue));
         WARNING_BOX(avoidText);
     }
-    if (!corruptedItems.isEmpty())
-        ERROR_BOX(corruptedItems.trimmed());
-    charInfo.itemsEndOffset = inputDataStream.device()->pos();
 
-    // TODO 0.3: read corpse data immediately
-    const int itemListTerminatorSize = 4, maxCorpses = 15;
-    char itemListTerminator[itemListTerminatorSize] = {'J', 'M', 0, 0};
-    int itemListTerminatorOffset;
-    charInfo.items.corpses = 0;
-    do
+    // corpse data
+    inputDataStream.skipRawData(2); // JM
+    inputDataStream >> charInfo.basicInfo.corpses;
+    if (charInfo.basicInfo.corpses)
     {
-        itemListTerminatorOffset = _saveFileContents.indexOf(QByteArray(itemListTerminator, itemListTerminatorSize), charInfo.itemsEndOffset);
-        if (itemListTerminatorOffset != -1)
-            break;
-        itemListTerminator[2] = ++charInfo.items.corpses;
-    } while (charInfo.items.corpses <= maxCorpses);
+        inputDataStream.skipRawData(12 + 2); // some unknown corpse data + JM
+        quint16 corpseItemsTotal;
+        inputDataStream >> corpseItemsTotal;
+        ItemsList corpseItems;
+        ItemParser::parseItemsToBuffer(corpseItemsTotal, inputDataStream, _saveFileContents.left(_saveFileContents.indexOf(kMercHeader)), tr("Corrupted item detected in %1 in slot %4"), &corpseItems);
+        foreach (ItemInfo *item, corpseItems)
+            item->location = Enums::ItemLocation::Corpse;
+        itemsBuffer += corpseItems;
 
-    if (itemListTerminatorOffset == -1)
-    {
-        ERROR_BOX(tr("Items list doesn't have a terminator!"));
-        return false;
+        // after saving there can actually be only one corpse, but let's be safe
+        if (charInfo.basicInfo.corpses > 1)
+        {
+            qDebug("more than one corpse found!");
+            inputDataStream.device()->seek(_saveFileContents.indexOf(kMercHeader));
+        }
     }
-    // TODO 0.3: this calculation is wrong
-    itemListTerminatorOffset += itemListTerminatorSize + 4 + 12; // JM0100 + unknown
 
-    int mercItemsOffset = _saveFileContents.lastIndexOf("jf");
-    if (mercItemsOffset == -1)
+    // merc
+    if (_saveFileContents.mid(inputDataStream.device()->pos(), 2) != kMercHeader)
     {
         ERROR_BOX(tr("Mercenary items section not found!"));
         return false;
     }
-    mercItemsOffset += 2;
+    inputDataStream.skipRawData(2);
+    if (charInfo.mercenary.exists)
+    {
+        inputDataStream.skipRawData(2); // JM
+        quint16 mercItemsTotal;
+        inputDataStream >> mercItemsTotal;
+        ItemsList mercItems;
+        ItemParser::parseItemsToBuffer(mercItemsTotal, inputDataStream, _saveFileContents.left(_saveFileContents.size() - 3), tr("Corrupted item detected in %1 in slot %4"), &mercItems);
+        foreach (ItemInfo *item, mercItems)
+            item->location = Enums::ItemLocation::Merc;
+        itemsBuffer += mercItems;
+    }
 
-    int eof = _saveFileContents.lastIndexOf("kf");
-    if (eof != _saveFileContents.size() - 3 || _saveFileContents.at(_saveFileContents.size() - 1) != 0)
+    // end
+    if (_saveFileContents.mid(inputDataStream.device()->pos(), 2) != "kf" || _saveFileContents.at(_saveFileContents.size() - 1) != 0)
     {
         ERROR_BOX(tr("Save file is not terminated correctly!"));
         return false;
-    }
-
-    bool isMercItemListBad = charInfo.mercenary.exists ^ (mercItemsOffset != eof);
-    if (isMercItemListBad)
-    {
-        ERROR_BOX(tr("Mercenary items data is corrupted!"));
-        return false;
-    }
-
-    if (charInfo.items.corpses)
-    {
-        inputDataStream.device()->seek(itemListTerminatorOffset);
-        // process corpse items
-    }
-
-    if (charInfo.mercenary.exists)
-    {
-        // process merc items
-        mercItemsOffset += 2;
-        quint16 mercItemsTotal;
-        inputDataStream.device()->seek(mercItemsOffset);
-        inputDataStream >> mercItemsTotal;
     }
 
     // parse plugy stashes
@@ -1986,16 +1972,14 @@ void MedianXLOfflineTools::processPlugyStash(QHash<Enums::ItemStorage::ItemStora
 
         quint16 itemsOnPage;
         inputDataStream >> itemsOnPage;
-        for (int i = 0; i < itemsOnPage; ++i)
+        ItemsList plugyItems;
+        ItemParser::parseItemsToBuffer(itemsOnPage, inputDataStream, bytes, tr("Corrupted item detected in %1 on page %4 at (%2,%3)"), &plugyItems);
+        foreach (ItemInfo *item, plugyItems)
         {
-            ItemInfo *item = ItemParser::parseItem(inputDataStream, bytes);
             item->storage = iter.key();
             item->plugyPage = page;
-            items->append(item);
-
-            if (item->status != ItemInfo::Ok)
-                corruptedItems += itemStorageAndCoordinatesString(tr("Corrupted item detected in %1 on page %4 at (%2,%3)"), item) + "\n";
         }
+        items->append(plugyItems);
     }
     if (!corruptedItems.isEmpty())
         ERROR_BOX(corruptedItems.trimmed());
@@ -2463,11 +2447,6 @@ QHash<int, bool> MedianXLOfflineTools::getPlugyStashesExistenceHash() const
 void MedianXLOfflineTools::showErrorMessageBoxForFile(const QString &message, const QFile &file)
 {
     CUSTOM_BOX_OK(critical, message.arg(QDir::toNativeSeparators(file.fileName())) + "\n" + tr("Reason: %1", "error with file").arg(file.errorString()));
-}
-
-QString MedianXLOfflineTools::itemStorageAndCoordinatesString(const QString &text, ItemInfo *item)
-{
-    return text.arg(ItemsViewerDialog::tabNameAtIndex(ItemsViewerDialog::tabIndexFromItemStorage(item->storage))).arg(item->row + 1).arg(item->column + 1).arg(item->plugyPage);
 }
 
 bool MedianXLOfflineTools::maybeSave()

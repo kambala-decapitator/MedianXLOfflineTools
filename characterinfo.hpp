@@ -33,6 +33,8 @@ public:
         SkillList skills;
         SkillList skillsReadable; // used in planner and skill tree
         quint16 totalSkillPoints;
+
+        quint16 corpses;
     } basicInfo;
 
     struct
@@ -61,7 +63,6 @@ public:
 
     struct
     {
-        quint8 corpses;
         ItemsList character;
 
         bool hasCube() { return std::find_if(character.constBegin(), character.constEnd(), isCubeInCharacterItems) != character.constEnd(); }

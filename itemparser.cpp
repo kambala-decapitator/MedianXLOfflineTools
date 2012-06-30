@@ -3,6 +3,7 @@
 #include "reversebitreader.h"
 #include "helpers.h"
 #include "resourcepathmanager.hpp"
+#include "itemsviewerdialog.h"
 
 #include <QFile>
 #include <QDataStream>
@@ -19,6 +20,21 @@ const QString &ItemParser::enhancedDamageFormat()
 {
     static const QString s = tr("+%1% Enhanced Damage");
     return s;
+}
+
+
+QString ItemParser::parseItemsToBuffer(quint16 itemsTotal, QDataStream &inputDataStream, const QByteArray &bytes, const QString &corruptedItemFormat, ItemsList *itemsBuffer)
+{
+    QString corruptedItemsString;
+    for (quint16 i = 0; i < itemsTotal; ++i)
+    {
+        ItemInfo *item = ItemParser::parseItem(inputDataStream, bytes);
+        itemsBuffer->append(item);
+
+        if (item->status != ItemInfo::Ok)
+            corruptedItemsString += itemStorageAndCoordinatesString(corruptedItemFormat, item) + "\n";
+    }
+    return corruptedItemsString;
 }
 
 ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &bytes)
@@ -393,6 +409,11 @@ void ItemParser::writeItems(const ItemsList &items, QDataStream &ds)
 
         writeItems(item->socketablesInfo, ds);
     }
+}
+
+QString ItemParser::itemStorageAndCoordinatesString(const QString &text, ItemInfo *item)
+{
+    return text.arg(ItemsViewerDialog::tabNameAtIndex(ItemsViewerDialog::tabIndexFromItemStorage(item->storage))).arg(item->row + 1).arg(item->column + 1).arg(item->plugyPage ? item->plugyPage : item->whereEquipped);
 }
 
 bool ItemParser::itemTypeInheritsFromType(const QByteArray &itemType, const QByteArray &allowedItemType)

@@ -25,8 +25,8 @@ public:
     void setModel(ItemStorageTableModel *model);
 
     PropertiesViewerWidget *propertiesWidget() const { return _propertiesWidget; }
-    ItemStorageTableView *itemsView() const { return _itemsView; }
-    ItemStorageTableModel *itemsModel() const { return _itemsModel; }
+    ItemStorageTableView   *itemsView()        const { return _itemsView; }
+    ItemStorageTableModel  *itemsModel()       const { return _itemsModel; }
 
     void setItems(const ItemsList &newItems);
     void showItem(ItemInfo *item);
