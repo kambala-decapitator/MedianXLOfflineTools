@@ -17,6 +17,7 @@ public:
     static void updateNamePreview(QTextEdit *previewTextEdit, const QString &name);
 
     QD2CharRenamer(const QString &originalName, bool shouldWarn, QWidget *parent = 0);
+    virtual ~QD2CharRenamer() {}
 
     QString name() const { return _originalCharName; }
 

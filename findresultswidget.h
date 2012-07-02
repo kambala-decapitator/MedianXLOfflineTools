@@ -17,6 +17,7 @@ class FindResultsWidget : public QWidget
 
 public:
     FindResultsWidget(QWidget *parent = 0);
+    virtual ~FindResultsWidget() {}
 
     void updateItems(QList<SearchResultItem> *newItems);
     void selectItem(ItemInfo *item);

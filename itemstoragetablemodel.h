@@ -13,6 +13,7 @@ class ItemStorageTableModel : public QAbstractTableModel
 
 public:
     explicit ItemStorageTableModel(int rows, int columns, QObject *parent = 0) : QAbstractTableModel(parent), _rows(rows), _columns(columns) {}
+    virtual ~ItemStorageTableModel() {}
 
     virtual int    rowCount(const QModelIndex &parent = QModelIndex()) const { Q_UNUSED(parent); return _rows; }
     virtual int columnCount(const QModelIndex &parent = QModelIndex()) const { Q_UNUSED(parent); return _columns; }

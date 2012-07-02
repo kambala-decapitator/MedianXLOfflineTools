@@ -33,7 +33,9 @@ SOURCES += main.cpp \
            qtsingleapplication/qtsingleapplication.cpp \
            qtsingleapplication/qtlockedfile.cpp \
            qtsingleapplication/qtlocalpeer.cpp \
-           experienceindicatorgroupbox.cpp
+           experienceindicatorgroupbox.cpp \
+           plugyitemssplitter.cpp \
+           gearitemssplitter.cpp
 
 HEADERS += medianxlofflinetools.h \
            resurrectpenaltydialog.h \
@@ -64,7 +66,9 @@ HEADERS += medianxlofflinetools.h \
            qtsingleapplication/qtlocalpeer.h \
            fileassociationmanager.h \
            messagecheckbox.h \
-           experienceindicatorgroupbox.h
+           experienceindicatorgroupbox.h \
+           plugyitemssplitter.h \
+           gearitemssplitter.h
 
 FORMS += medianxlofflinetools.ui \
          resurrectpenaltydialog.ui \
@@ -95,7 +99,7 @@ win32 {
     
     RC_FILE = resources/win/medianxlofflinetools.rc
 
-    CONFIG(release, debug|release) {
+#    CONFIG(release, debug|release) {
 #        appresources.path = $$DESTDIR
 #        appresources.files += resources/translations/*.qm
 #        appresources.files += resources/data/*
@@ -106,7 +110,7 @@ win32 {
 #        copyfiles.commands += @call xcopy resources/data/* $$DESTDIR/resources/data/ /Y /S
 #        copyfiles.commands += @call rmdir $$DESTDIR/resources/data/items /S /Q
 #        QMAKE_EXTRA_TARGETS += copyfiles
-    }
+#    }
 }
 macx {
     OBJECTIVE_SOURCES += application_mac.mm \

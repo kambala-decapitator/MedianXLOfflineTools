@@ -15,6 +15,7 @@ class SkillplanDialog : public QDialog
 
 public:
     SkillplanDialog(QWidget *parent = 0);
+    virtual ~SkillplanDialog() {}
 
     static void loadModVersion();
     static const QString &modVersionReadable() { return _modVersionReadable; }

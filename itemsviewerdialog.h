@@ -36,6 +36,7 @@ public:
     static const QString &tabNameAtIndex(int i);
 
     explicit ItemsViewerDialog(const QHash<int, bool> &plugyStashesExistenceHash, QWidget *parent = 0);
+    virtual ~ItemsViewerDialog() {}
 
     void updateItems(const QHash<int, bool> &plugyStashesExistenceHash);
     void showItem(ItemInfo *item);

@@ -9,77 +9,16 @@
 #include "reversebitwriter.h"
 #include "characterinfo.hpp"
 
-#include <QPushButton>
-#include <QDoubleSpinBox>
-#include <QKeyEvent>
 #include <QMenu>
-
-#include <qmath.h>
-
-#include <limits>
 
 #ifndef QT_NO_DEBUG
 #include <QDebug>
 #endif
 
 
-static const QString kIconPathFormat(":/PlugyArrows/icons/plugy/%1.png");
-
-ItemsPropertiesSplitter::ItemsPropertiesSplitter(ItemStorageTableView *itemsView, bool shouldCreateNavigation, QWidget *parent) : QSplitter(Qt::Horizontal, parent), _itemsView(itemsView)
+ItemsPropertiesSplitter::ItemsPropertiesSplitter(ItemStorageTableView *itemsView, QWidget *parent) : QSplitter(Qt::Horizontal, parent), _itemsView(itemsView)
 {
-    if (shouldCreateNavigation)
-    {
-        _left10Button = new QPushButton(this);
-        _leftButton = new QPushButton(this);
-        _rightButton = new QPushButton(this);
-        _right10Button = new QPushButton(this);
-
-        QList<QPushButton *> buttons = QList<QPushButton *>() << _left10Button << _leftButton << _rightButton << _right10Button;
-        foreach (QPushButton *button, buttons)
-            button->setIconSize(QSize(32, 20));
-        // hacky way to set button icons
-        QKeyEvent keyEvent(QEvent::KeyRelease, Qt::Key_Shift, 0);
-        keyReleaseEvent(&keyEvent);
-
-        _pageSpinBox = new QDoubleSpinBox(this);
-        _pageSpinBox->setDecimals(0);
-        _pageSpinBox->setPrefix(tr("Page #"));
-        _pageSpinBox->setRange(1, (std::numeric_limits<quint32>::max)());
-        _pageSpinBox->setValue(1);
-        _pageSpinBox->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
-
-        QHBoxLayout *hlayout = new QHBoxLayout;
-        hlayout->addWidget(_left10Button);
-        hlayout->addWidget(_leftButton);
-        hlayout->addWidget(_pageSpinBox);
-        hlayout->addWidget(_rightButton);
-        hlayout->addWidget(_right10Button);
-        // glue everything together (used mainly for Mac OS X)
-        hlayout->setSpacing(0);
-        hlayout->setContentsMargins(QMargins());
-
-        QWidget *w = new QWidget(this);
-        QVBoxLayout *vlayout = new QVBoxLayout(w);
-        vlayout->addWidget(_itemsView);
-        vlayout->setSpacing(0);
-        vlayout->setContentsMargins(QMargins());
-        vlayout->addLayout(hlayout);
-
-        addWidget(w);
-
-        connect(_pageSpinBox, SIGNAL(valueChanged(double)), SLOT(updateItemsForCurrentPage()));
-
-        connect(_left10Button,  SIGNAL(clicked()), SLOT(left10Clicked()));
-        connect(_leftButton,    SIGNAL(clicked()), SLOT(leftClicked()));
-        connect(_rightButton,   SIGNAL(clicked()), SLOT(rightClicked()));
-        connect(_right10Button, SIGNAL(clicked()), SLOT(right10Clicked()));
-    }
-    else
-    {
-        _left10Button = _leftButton = _rightButton = _right10Button = 0;
-        addWidget(_itemsView);
-    }
-
+    addWidget(_itemsView);
     _propertiesWidget = new PropertiesViewerWidget(parent);
     addWidget(_propertiesWidget);
 
@@ -99,58 +38,6 @@ void ItemsPropertiesSplitter::setModel(ItemStorageTableModel *model)
     _itemsView->setModel(model);
     // TODO 0.3: change signal to selectionChanged
     connect(_itemsView->selectionModel(), SIGNAL(currentChanged(const QModelIndex &, const QModelIndex &)), SLOT(itemSelected(const QModelIndex &)));
-}
-
-void ItemsPropertiesSplitter::keyPressEvent(QKeyEvent *keyEvent)
-{
-    if (_left10Button && keyEventHasShift(keyEvent))
-    {
-        _left10Button->setIcon(QIcon(kIconPathFormat.arg("left100")));
-        setShortcutTextInButtonTooltip(_left10Button, Qt::ALT + Qt::SHIFT + Qt::Key_Left);
-
-        _leftButton->setIcon(QIcon(kIconPathFormat.arg("first")));
-        setShortcutTextInButtonTooltip(_leftButton, Qt::CTRL + Qt::SHIFT + Qt::Key_Left);
-
-        _rightButton->setIcon(QIcon(kIconPathFormat.arg("last")));
-        setShortcutTextInButtonTooltip(_rightButton, Qt::CTRL + Qt::SHIFT + Qt::Key_Right);
-
-        _right10Button->setIcon(QIcon(kIconPathFormat.arg("right100")));
-        setShortcutTextInButtonTooltip(_right10Button, Qt::ALT + Qt::SHIFT + Qt::Key_Right);
-
-        _isShiftPressed = true;
-    }
-    QSplitter::keyPressEvent(keyEvent);
-}
-
-void ItemsPropertiesSplitter::keyReleaseEvent(QKeyEvent *keyEvent)
-{
-    if (_left10Button && keyEventHasShift(keyEvent))
-    {
-        _left10Button->setIcon(QIcon(kIconPathFormat.arg("left10")));
-        setShortcutTextInButtonTooltip(_left10Button, Qt::ALT + Qt::Key_Left);
-
-        _leftButton->setIcon(QIcon(kIconPathFormat.arg("left")));
-        setShortcutTextInButtonTooltip(_leftButton, Qt::CTRL + Qt::Key_Left);
-
-        _rightButton->setIcon(QIcon(kIconPathFormat.arg("right")));
-        setShortcutTextInButtonTooltip(_rightButton, Qt::CTRL + Qt::Key_Right);
-
-        _right10Button->setIcon(QIcon(kIconPathFormat.arg("right10")));
-        setShortcutTextInButtonTooltip(_right10Button, Qt::ALT + Qt::Key_Right);
-
-        _isShiftPressed = false;
-    }
-    QSplitter::keyPressEvent(keyEvent);
-}
-
-bool ItemsPropertiesSplitter::keyEventHasShift(QKeyEvent *keyEvent)
-{
-    return keyEvent->key() == Qt::Key_Shift || keyEvent->modifiers() & Qt::SHIFT;
-}
-
-void ItemsPropertiesSplitter::setShortcutTextInButtonTooltip(QPushButton *button, const QKeySequence &keySequence)
-{
-    button->setToolTip(keySequence.toString(QKeySequence::NativeText));
 }
 
 void ItemsPropertiesSplitter::itemSelected(const QModelIndex &index)
@@ -180,11 +67,7 @@ void ItemsPropertiesSplitter::itemSelected(const QModelIndex &index)
 void ItemsPropertiesSplitter::showItem(ItemInfo *item)
 {
     if (item)
-    {
-        if (item->plugyPage)
-            _pageSpinBox->setValue(item->plugyPage);
         _itemsView->setCurrentIndex(_itemsModel->index(item->row, item->column));
-    }
 }
 
 void ItemsPropertiesSplitter::showFirstItem()
@@ -194,27 +77,10 @@ void ItemsPropertiesSplitter::showFirstItem()
         showItem(_itemsModel->firstItem());
 }
 
-bool compareItemsByPlugyPage(ItemInfo *a, ItemInfo *b)
-{
-    return a->plugyPage < b->plugyPage;
-}
-
 void ItemsPropertiesSplitter::setItems(const ItemsList &newItems)
 {
     _allItems = newItems;
-    if (_left10Button)
-    {
-        // using _allItems.last()->plugyPage would've been easy, but it's not always correct (new items added via app are added to the end)
-        ItemsList::iterator maxPageIter = std::max_element(_allItems.begin(), _allItems.end(), compareItemsByPlugyPage);
-        _lastNotEmptyPage = maxPageIter == _allItems.end() ? 0 : (*maxPageIter)->plugyPage;
-        
-        _pageSpinBox->setSuffix(QString(" / %1").arg(_lastNotEmptyPage));
-        _pageSpinBox->setRange(1, _lastNotEmptyPage);
-        
-        updateItemsForCurrentPage(false);
-    }
-    else
-        updateItems(_allItems);
+    updateItems(_allItems);
 }
 
 void ItemsPropertiesSplitter::updateItems(const ItemsList &newItems)
@@ -231,46 +97,6 @@ void ItemsPropertiesSplitter::updateItems(const ItemsList &newItems)
     }
 
     showFirstItem();
-}
-
-void ItemsPropertiesSplitter::updateItemsForCurrentPage(bool pageChanged /*= true*/)
-{
-    ItemsList pagedItems;
-    foreach (ItemInfo *item, _allItems)
-        if (item->plugyPage == static_cast<quint32>(_pageSpinBox->value()))
-            pagedItems += item;
-    updateItems(pagedItems);
-
-    if (pageChanged)
-        emit itemCountChanged(_allItems.size());
-}
-
-void ItemsPropertiesSplitter::leftClicked()
-{
-    if (_isShiftPressed)
-        _pageSpinBox->setValue(1);
-    else
-        _pageSpinBox->stepDown();
-}
-
-void ItemsPropertiesSplitter::rightClicked()
-{
-    if (_isShiftPressed)
-        _pageSpinBox->setValue(_lastNotEmptyPage);
-    else
-        _pageSpinBox->stepUp();
-}
-
-void ItemsPropertiesSplitter::left10Clicked()
-{
-    quint32 step = _isShiftPressed ? 100 : 10;
-    _pageSpinBox->setValue(qFloor((_pageSpinBox->value() - 1) / step) * step);
-}
-
-void ItemsPropertiesSplitter::right10Clicked()
-{
-    quint32 step = _isShiftPressed ? 100 : 10;
-    _pageSpinBox->setValue(qCeil((_pageSpinBox->value() + 1) / step) * step);
 }
 
 void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)

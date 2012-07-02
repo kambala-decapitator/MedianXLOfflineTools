@@ -10,6 +10,7 @@ class ItemStorageTableView : public QTableView
 
 public:
     explicit ItemStorageTableView(QWidget *parent = 0);
+    virtual ~ItemStorageTableView() {}
 
 protected:
     virtual void keyPressEvent(QKeyEvent *event);

@@ -1,5 +1,7 @@
 #include "itemsviewerdialog.h"
 #include "itemspropertiessplitter.h"
+#include "plugyitemssplitter.h"
+#include "gearitemssplitter.h"
 #include "itemstoragetableview.h"
 #include "itemstoragetablemodel.h"
 #include "itemdatabase.h"
@@ -28,16 +30,22 @@ ItemsViewerDialog::ItemsViewerDialog(const QHash<int, bool> &plugyStashesExisten
 
     for (int i = GearIndex; i <= LastIndex; ++i)
     {
-        ItemsPropertiesSplitter *splitter = new ItemsPropertiesSplitter(new ItemStorageTableView(this), i >= PersonalStashIndex, this);
-        ItemStorageTableModel *model = new ItemStorageTableModel(kRows.at(i), i == GearIndex ? 8 : 10, splitter);
-        splitter->setModel(model);
+        ItemsPropertiesSplitter *splitter;
+        if (i == GearIndex)
+            splitter = new GearItemsSplitter(new ItemStorageTableView(this), this);
+        else if (i < PersonalStashIndex)
+            splitter = new ItemsPropertiesSplitter(new ItemStorageTableView(this), this);
+        else
+            splitter = new PlugyItemsSplitter(new ItemStorageTableView(this), this);
+        splitter->setModel(new ItemStorageTableModel(kRows.at(i), i == GearIndex ? 8 : 10, splitter));
+        _tabWidget->addTab(splitter, tabNameAtIndex(i));
+
         connect(splitter, SIGNAL(itemCountChanged(int)), SLOT(itemCountChangedInCurrentTab(int)));
         connect(splitter, SIGNAL(itemDeleted()), SLOT(decreaseItemCount()));
         connect(splitter, SIGNAL(itemsChanged(bool)), SIGNAL(itemsChanged(bool)));
         connect(splitter, SIGNAL(cubeDeleted(bool)), SIGNAL(cubeDeleted(bool)));
         connect(splitter, SIGNAL(cubeDeleted(bool)), SLOT(setCubeTabDisabled(bool)));
         //connect(splitter, SIGNAL(storageModified(int)), SLOT(storageItemsModified(int)));
-        _tabWidget->addTab(splitter, tabNameAtIndex(i));
     }
     updateItems(plugyStashesExistenceHash);
 
@@ -113,6 +121,9 @@ void ItemsViewerDialog::updateItems(const QHash<int, bool> &plugyStashesExistenc
         ItemsList items = ItemDataBase::itemsStoredIn(Enums::ItemStorage::metaEnum().value(i), isGearTab ? Enums::ItemLocation::Equipped : Enums::ItemLocation::Stored);
         if (isGearTab)
         {
+            items += ItemDataBase::itemsStoredIn(Enums::ItemStorage::NotInStorage, Enums::ItemLocation::Merc);
+            items += ItemDataBase::itemsStoredIn(Enums::ItemStorage::NotInStorage, Enums::ItemLocation::Corpse);
+
             foreach (ItemInfo *item, items)
             {
                 switch (item->whereEquipped)
@@ -165,6 +176,9 @@ void ItemsViewerDialog::updateItems(const QHash<int, bool> &plugyStashesExistenc
                     item->row = 7;
                     item->column = 6;
                     break;
+                default:
+                    qDebug("item->whereEquipped == %d!!!", item->whereEquipped);
+                    break;
                 }
             }
 
@@ -172,8 +186,9 @@ void ItemsViewerDialog::updateItems(const QHash<int, bool> &plugyStashesExistenc
             updateBeltItemsCoordinates(false, &beltItems);
             items += beltItems;
         }
+        else // itemCountChanged() signal is sent from GearItemsSplitter when setItems() is called
+            itemCountChangedInTab(i, items.size());
         splitterAtIndex(i)->setItems(items);
-        itemCountChangedInTab(i, items.size());
         
         _itemsTotal += items.size();
     }

@@ -51,7 +51,7 @@
 //#define MAKE_HC
 //#define ENABLE_PERSONALIZE
 //#define MAKE_FINISHED_CHARACTER
-#define DISABLE_CRC_CHECK
+//#define DISABLE_CRC_CHECK
 
 
 // static const
@@ -797,15 +797,15 @@ void MedianXLOfflineTools::itemStorageTabChanged(int tabIndex)
     bool isPlugyStorage = _itemsDialog->isPlugyStorageIndex(tabIndex);
     ui.menuGoToPage->setEnabled(isPlugyStorage);
 
-    static const QList<QAction *> plugyNavigationActions = QList<QAction *>() << ui.actionPrevious10 << ui.actionPreviousPage << ui.actionNextPage << ui.actionNext10
-                                                                              << ui.actionPrevious100 << ui.actionFirstPage << ui.actionLastPage << ui.actionNext100;
+    static const QList<QAction *> plugyNavigationActions = QList<QAction *>() << ui.actionPrevious10  << ui.actionPreviousPage << ui.actionNextPage << ui.actionNext10
+                                                                              << ui.actionPrevious100 << ui.actionFirstPage    << ui.actionLastPage << ui.actionNext100;
     foreach (QAction *action, plugyNavigationActions)
         action->disconnect();
 
     if (isPlugyStorage)
     {
-        static const QList<const char *> plugyNavigationSlots = QList<const char *>() << SLOT(previous10Pages()) << SLOT(previousPage()) << SLOT(nextPage()) << SLOT(next10Pages())
-                                                                                      << SLOT(previous100Pages()) << SLOT(firstPage()) << SLOT(lastPage()) << SLOT(next100Pages());
+        static const QList<const char *> plugyNavigationSlots = QList<const char *>() << SLOT(previous10Pages())  << SLOT(previousPage()) << SLOT(nextPage()) << SLOT(next10Pages())
+                                                                                      << SLOT(previous100Pages()) << SLOT(firstPage())    << SLOT(lastPage()) << SLOT(next100Pages());
         ItemsPropertiesSplitter *plugyTab = _itemsDialog->splitterAtIndex(tabIndex);
         for (int i = 0; i < plugyNavigationActions.size(); ++i)
             connect(plugyNavigationActions[i], SIGNAL(triggered()), plugyTab, plugyNavigationSlots[i]);

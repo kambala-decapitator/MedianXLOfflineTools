@@ -12,6 +12,7 @@ class ResurrectPenaltyDialog : public QDialog
 
 public:
     ResurrectPenaltyDialog(QWidget *parent = 0);
+    virtual ~ResurrectPenaltyDialog() {}
 
     static const int kLevelPenalty;
     static const double kStatPenalty, kSkillPenalty;

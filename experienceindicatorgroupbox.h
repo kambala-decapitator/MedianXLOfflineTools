@@ -12,6 +12,7 @@ class ExperienceIndicatorGroupBox : public QGroupBox
 
 public:
     ExperienceIndicatorGroupBox(QWidget *parent);
+    virtual ~ExperienceIndicatorGroupBox() {}
 
     void setPreviousLevelExperience(quint32 exp);
     void setNextLevelExperience(quint32 exp);
