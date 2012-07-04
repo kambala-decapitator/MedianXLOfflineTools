@@ -26,7 +26,7 @@ void ItemStorageTableModel::setItems(const ItemsList &newItems)
 
 QVariant ItemStorageTableModel::data(const QModelIndex &index, int role) const
 {
-    ItemInfo *item = itemAt(index);
+    ItemInfo *item = itemAtIndex(index);
     if (item)
     {
         const ItemBase &itemBase = ItemDataBase::Items()->value(item->itemType);
@@ -74,23 +74,49 @@ QVariant ItemStorageTableModel::data(const QModelIndex &index, int role) const
 
 Qt::ItemFlags ItemStorageTableModel::flags(const QModelIndex &index) const
 {
-    return QAbstractTableModel::flags(index) | Qt::ItemIsDragEnabled | Qt::ItemIsDropEnabled;
+    Qt::ItemFlags flags_ = QAbstractTableModel::flags(index);
+    flags_ |= itemAtIndex(index) ? Qt::ItemIsDragEnabled : Qt::ItemIsDropEnabled;
+    return flags_;
 }
 
-bool ItemStorageTableModel::dropMimeData(const QMimeData *data, Qt::DropAction action, int row, int column, const QModelIndex &parent)
+bool ItemStorageTableModel::dropMimeData(const QMimeData *mimeData, Qt::DropAction action, int row, int column, const QModelIndex &parent)
 {
-    QByteArray encoded = data->data("application/x-qabstractitemmodeldatalist");
-    QDataStream stream(&encoded, QIODevice::ReadOnly);
-    ItemInfo *droppedItem = 0;
-    while (!stream.atEnd())
-    {
-        int r, c;
-        QMap<int,  QVariant> roleDataMap;
-        stream >> r >> c >> roleDataMap;
-        droppedItem = itemAt(index(r, c));
-        qDebug() << roleDataMap;
-        if (droppedItem)
-            qDebug() << "dropping" << ItemDataBase::Items()->value(droppedItem->itemType).name << "from" << r << c;
-    }
+    Q_UNUSED(action);
+
+    ItemInfo *droppedItem = itemFromMimeData(mimeData);
+    QModelIndex newIndex = index(row, column), oldIndex = index(droppedItem->row, droppedItem->column);
+    removeItem(droppedItem);
+    droppedItem->row = newIndex.row();
+    droppedItem->column = newIndex.column();
+    addItem(droppedItem);
+    emit itemMoved(newIndex, oldIndex);
     return true;
+}
+
+ItemsList ItemStorageTableModel::items() const
+{
+    ItemsList items_;
+    foreach (ItemInfo *item, _itemsHash)
+        items_ += item;
+    return items_;
+}
+
+bool ItemStorageTableModel::canStoreItemWithMimeDataAtIndex(const QMimeData *mimeData, const QModelIndex &index) const
+{
+    ItemInfo *item = itemFromMimeData(mimeData);
+    ItemsList items_ = items();
+    items_.removeOne(item);
+    return ItemDataBase::canStoreItemAt(index.row(), index.column(), item->itemType, items_, _rows, _columns);
+}
+
+ItemInfo *ItemStorageTableModel::itemFromMimeData(const QMimeData *mimeData) const
+{
+    QByteArray encoded = mimeData->data("application/x-qabstractitemmodeldatalist");
+    QDataStream stream(&encoded, QIODevice::ReadOnly);
+//    while (!stream.atEnd())
+    int rowFrom, colFrom;
+//    QMap<int,  QVariant> roleDataMap;
+    stream >> rowFrom >> colFrom;// >> roleDataMap;
+//    qDebug() << roleDataMap;
+    return itemAtIndex(index(rowFrom, colFrom));
 }

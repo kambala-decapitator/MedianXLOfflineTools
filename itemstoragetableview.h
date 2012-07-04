@@ -14,6 +14,16 @@ public:
 
 protected:
     virtual void keyPressEvent(QKeyEvent *event);
+
+    virtual void dragMoveEvent(QDragMoveEvent *event);
+    virtual void dropEvent(QDropEvent *event);
+
+private slots:
+//    void itemClicked(const QModelIndex &index);
+
+private:
+    QModelIndex originIndexInRectOfIndex(const QModelIndex &index) { return indexAt(visualRect(index).topLeft()); }
+    QModelIndex actualIndexAt(const QPoint &p) { return model()->index(rowAt(p.y()), columnAt(p.x())); }
 };
 
 #endif // ITEMSTORAGETABLEVIEW_H

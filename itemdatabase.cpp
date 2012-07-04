@@ -581,7 +581,7 @@ bool ItemDataBase::storeItemIn(ItemInfo *item, Enums::ItemStorage::ItemStorageEn
                 return true;
             }
 
-            return false;
+    return false;
 }
 
 bool ItemDataBase::canStoreItemAt(quint8 row, quint8 col, const QByteArray &storeItemType, const ItemsList &items, int rowsTotal, int colsTotal /*= 10*/)

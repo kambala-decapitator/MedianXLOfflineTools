@@ -38,11 +38,12 @@ void ItemsPropertiesSplitter::setModel(ItemStorageTableModel *model)
     _itemsView->setModel(model);
     // TODO 0.3: change signal to selectionChanged
     connect(_itemsView->selectionModel(), SIGNAL(currentChanged(const QModelIndex &, const QModelIndex &)), SLOT(itemSelected(const QModelIndex &)));
+    connect(_itemsModel, SIGNAL(itemMoved(const QModelIndex &, const QModelIndex &)), SLOT(moveItem(const QModelIndex &, const QModelIndex &)));
 }
 
 void ItemsPropertiesSplitter::itemSelected(const QModelIndex &index)
 {
-    ItemInfo *item = _itemsModel->itemAt(index);
+    ItemInfo *item = _itemsModel->itemAtIndex(index);
     _propertiesWidget->showItem(item);
 
     // correctly disable hotkeys
@@ -62,6 +63,20 @@ void ItemsPropertiesSplitter::itemSelected(const QModelIndex &index)
 
     // in Ultimative, Character Orb and Sunstone of Elements use same stat IDs as MOs, but those can't be removed
     _itemActions[RemoveMO]->setEnabled(_propertiesWidget->hasMysticOrbs() && !(isUltimative_ && isCharacterOrbOrSunstoneOfElements(item)));
+}
+
+void ItemsPropertiesSplitter::moveItem(const QModelIndex &newIndex, const QModelIndex &oldIndex)
+{
+    ItemInfo *item = _itemsModel->itemAtIndex(newIndex);
+    ReverseBitWriter::replaceValueInBitString(item->bitString, Enums::ItemOffsets::Column, item->column);
+    ReverseBitWriter::replaceValueInBitString(item->bitString, Enums::ItemOffsets::Row,    item->row);
+    item->hasChanged = true;
+
+    _itemsView->setSpan(oldIndex.row(), oldIndex.column(), 1, 1);
+    setCellSpanForItem(item);
+    _itemsView->setCurrentIndex(newIndex);
+
+    emit itemsChanged();
 }
 
 void ItemsPropertiesSplitter::showItem(ItemInfo *item)
@@ -90,11 +105,7 @@ void ItemsPropertiesSplitter::updateItems(const ItemsList &newItems)
 
     _itemsView->clearSpans();
     foreach (ItemInfo *item, newItems)
-    {
-        const ItemBase &itemBase = ItemDataBase::Items()->value(item->itemType);
-        if (itemBase.height > 1 || itemBase.width > 1) // to prevent warnings to the console
-            _itemsView->setSpan(item->row, item->column, itemBase.height, itemBase.width);
-    }
+        setCellSpanForItem(item);
 
     showFirstItem();
 }
@@ -166,10 +177,17 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
 ItemInfo *ItemsPropertiesSplitter::selectedItem(bool showError /*= true*/)
 {
     //QModelIndexList selectedIndexes = _itemsView->selectionModel()->selectedIndexes();
-    ItemInfo *item = _itemsModel->itemAt(_itemsView->selectionModel()->currentIndex());
+    ItemInfo *item = _itemsModel->itemAtIndex(_itemsView->selectionModel()->currentIndex());
     if (!item && showError)
         ERROR_BOX("TROLOLOL no item selection found");
     return item;
+}
+
+void ItemsPropertiesSplitter::setCellSpanForItem(ItemInfo *item)
+{
+    const ItemBase &itemBase = ItemDataBase::Items()->value(item->itemType);
+    if (itemBase.height > 1 || itemBase.width > 1) // to prevent warnings to the console
+        _itemsView->setSpan(item->row, item->column, itemBase.height, itemBase.width);
 }
 
 void ItemsPropertiesSplitter::exportText()
@@ -206,9 +224,9 @@ void ItemsPropertiesSplitter::disenchantItem()
 
     // update bits
     bool isPlugyStorage = newItem->storage == Enums::ItemStorage::PersonalStash || newItem->storage == Enums::ItemStorage::SharedStash || newItem->storage == Enums::ItemStorage::HCStash;
-    ReverseBitWriter::replaceValueInBitString(newItem->bitString, Enums::ItemOffsets::Storage, isPlugyStorage ? Enums::ItemStorage::Stash : newItem->storage);
-    ReverseBitWriter::replaceValueInBitString(newItem->bitString, Enums::ItemOffsets::Column, newItem->column);
-    ReverseBitWriter::replaceValueInBitString(newItem->bitString, Enums::ItemOffsets::Row, newItem->row);
+    ReverseBitWriter::replaceValueInBitString(newItem->bitString, Enums::ItemOffsets::Storage,    isPlugyStorage ? Enums::ItemStorage::Stash : newItem->storage);
+    ReverseBitWriter::replaceValueInBitString(newItem->bitString, Enums::ItemOffsets::Column,     newItem->column);
+    ReverseBitWriter::replaceValueInBitString(newItem->bitString, Enums::ItemOffsets::Row,        newItem->row);
     ReverseBitWriter::replaceValueInBitString(newItem->bitString, Enums::ItemOffsets::EquipIndex, newItem->whereEquipped);
     //ReverseBitWriter::replaceValueInBitString(newItem->bitString, Enums::ItemOffsets::Location, newItem->location);
 
