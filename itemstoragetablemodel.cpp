@@ -20,14 +20,14 @@ void ItemStorageTableModel::setItems(const ItemsList &newItems)
     _itemsHash.clear();
     foreach (ItemInfo *item, newItems)
         addItem(item);
-    
+
     endResetModel();
 }
 
 QVariant ItemStorageTableModel::data(const QModelIndex &index, int role) const
 {
     ItemInfo *item = itemAtIndex(index);
-    if (item)
+    if (_dragOriginIndex != index && item)
     {
         const ItemBase &itemBase = ItemDataBase::Items()->value(item->itemType);
         QString imageName = item->itemType == "jew" ? "invjw" : itemBase.imageName; // quick hack for jewel
@@ -81,14 +81,17 @@ Qt::ItemFlags ItemStorageTableModel::flags(const QModelIndex &index) const
 
 bool ItemStorageTableModel::dropMimeData(const QMimeData *mimeData, Qt::DropAction action, int row, int column, const QModelIndex &parent)
 {
-    Q_UNUSED(action);
+    Q_UNUSED(action); Q_UNUSED(parent);
 
     ItemInfo *droppedItem = itemFromMimeData(mimeData);
     QModelIndex newIndex = index(row, column), oldIndex = index(droppedItem->row, droppedItem->column);
-    removeItem(droppedItem);
-    droppedItem->row = newIndex.row();
-    droppedItem->column = newIndex.column();
-    addItem(droppedItem);
+    if (newIndex != oldIndex)
+    {
+        removeItem(droppedItem);
+        droppedItem->row = newIndex.row();
+        droppedItem->column = newIndex.column();
+        addItem(droppedItem);
+    }
     emit itemMoved(newIndex, oldIndex);
     return true;
 }

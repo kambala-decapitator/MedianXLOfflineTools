@@ -71,7 +71,6 @@ protected:
     void updateItems(const ItemsList &newItems);
     void performDeleteItem(ItemInfo *item, bool currentStorage = true);
     ItemInfo *selectedItem(bool showError = true);
-    void setCellSpanForItem(ItemInfo *item);
 
     void addItemToList(ItemInfo *item, bool currentStorage = true);
     void removeItemFromList(ItemInfo *item, bool currentStorage = true);

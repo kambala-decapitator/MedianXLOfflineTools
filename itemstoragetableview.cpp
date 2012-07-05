@@ -6,12 +6,16 @@
 #include <QHeaderView>
 #include <QKeyEvent>
 
+#include <QTimer>
+
 #ifndef QT_NO_DEBUG
 #include <QDebug>
 #endif
 
+#define ITEMS_MODEL static_cast<ItemStorageTableModel *>(model())
 
-ItemStorageTableView::ItemStorageTableView(QWidget *parent /*= 0*/) : QTableView(parent)
+
+ItemStorageTableView::ItemStorageTableView(QWidget *parent /*= 0*/) : QTableView(parent), _dragLeaveTimer(new QTimer(this))
 {
     setContextMenuPolicy(Qt::CustomContextMenu);
     setEditTriggers(QAbstractItemView::NoEditTriggers);
@@ -34,7 +38,16 @@ ItemStorageTableView::ItemStorageTableView(QWidget *parent /*= 0*/) : QTableView
     horizontalHeader()->hide();
     verticalHeader()->hide();
 
+    _dragLeaveTimer->setInterval(100);
+    connect(_dragLeaveTimer, SIGNAL(timeout()), SLOT(checkIfStillDragging()));
+
 //    connect(this, SIGNAL(clicked(const QModelIndex &)), SLOT(itemClicked(const QModelIndex &)));
+}
+
+void ItemStorageTableView::setCellSpanForItem(ItemInfo *item)
+{
+    const ItemBase &itemBase = ItemDataBase::Items()->value(item->itemType);
+    setSpan(item->row, item->column, itemBase.height, itemBase.width);
 }
 
 void ItemStorageTableView::keyPressEvent(QKeyEvent *event)
@@ -46,21 +59,76 @@ void ItemStorageTableView::keyPressEvent(QKeyEvent *event)
         selectionModel()->setCurrentIndex(originIndexInRectOfIndex(currentIndex()), QItemSelectionModel::ClearAndSelect);
 }
 
+void ItemStorageTableView::dragEnterEvent(QDragEnterEvent *event)
+{
+    _dragLeaveTimer->stop();
+
+    ItemStorageTableModel *model_ = ITEMS_MODEL;
+    if (!model_->dragOriginIndex().isValid())
+    {
+        QModelIndex index = indexAt(event->pos());
+        model_->setDragOriginIndex(index);
+        setSpan(index.row(), index.column(), 1, 1);
+    }
+    selectionModel()->clearSelection();
+
+    QTableView::dragEnterEvent(event);
+}
+
 void ItemStorageTableView::dragMoveEvent(QDragMoveEvent *event)
 {
-    if (static_cast<ItemStorageTableModel *>(model())->canStoreItemWithMimeDataAtIndex(event->mimeData(), actualIndexAt(event->pos())))
+    if (ITEMS_MODEL->canStoreItemWithMimeDataAtIndex(event->mimeData(), indexForDragDropEvent(event)))
         event->acceptProposedAction();
     else
         event->ignore();
 }
 
+void ItemStorageTableView::dragLeaveEvent(QDragLeaveEvent *event)
+{
+    QTableView::dragLeaveEvent(event);
+
+    _dragLeaveTimer->setSingleShot(true);
+    _dragLeaveTimer->start();
+}
+
 void ItemStorageTableView::dropEvent(QDropEvent *event)
 {
-    QModelIndex index = actualIndexAt(event->pos());
+    dragStopped();
+
+    QModelIndex index = indexForDragDropEvent(event);
     if (index.isValid() && model()->dropMimeData(event->mimeData(), event->dropAction(), index.row(), index.column(), index.parent()))
         event->acceptProposedAction();
     else
         event->ignore();
+}
+
+void ItemStorageTableView::checkIfStillDragging()
+{
+    if (findChild<QDrag *>()) // item has left current view
+    {
+        _dragLeaveTimer->setSingleShot(false);
+        if (!_dragLeaveTimer->isActive())
+            _dragLeaveTimer->start();
+    }
+    else // dragging stopped
+    {
+        _dragLeaveTimer->stop();
+
+        QModelIndex originalIndex = ITEMS_MODEL->dragOriginIndex();
+        dragStopped();
+        setCellSpanForItem(ITEMS_MODEL->itemAtIndex(originalIndex));
+        setCurrentIndex(originalIndex);
+    }
+}
+
+QModelIndex ItemStorageTableView::indexForDragDropEvent(QDropEvent *event)
+{
+    return actualIndexAt(event->pos() - findChild<QDrag *>()->hotSpot() + QPoint(rowHeight(0), columnWidth(0)) / 3);
+}
+
+void ItemStorageTableView::dragStopped()
+{
+    ITEMS_MODEL->setDragOriginIndex(QModelIndex());
 }
 
 //void ItemStorageTableView::itemClicked(const QModelIndex &index)

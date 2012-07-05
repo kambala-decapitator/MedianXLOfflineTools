@@ -58,7 +58,7 @@ struct ItemInfo
     ItemInfo(const QString &bits) : bitString(bits) { init(); }
 
 private:
-    void init() { plugyPage = 0; hasChanged = false; ilvl = 1; variableGraphicIndex = 0; }
+    void init() { plugyPage = 0; hasChanged = false; ilvl = 1; variableGraphicIndex = 0; location = row = column = storage = -1; whereEquipped = 0; }
 };
 Q_DECLARE_TYPEINFO(ItemInfo, Q_MOVABLE_TYPE);
 

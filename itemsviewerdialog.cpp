@@ -16,6 +16,10 @@
 
 #include <QSettings>
 
+#ifndef QT_NO_DEBUG
+#include <QDebug>
+#endif
+
 
 const int ItemsViewerDialog::kCellSize = 32;
 const QList<int> ItemsViewerDialog::kRows = QList<int>() << 11 << 6 << 8 << 10 << 10 << 10 << 10;
@@ -52,10 +56,11 @@ ItemsViewerDialog::ItemsViewerDialog(const QHash<int, bool> &plugyStashesExisten
     for (int i = GearIndex; i <= LastIndex; ++i)
     {
         ItemsPropertiesSplitter *splitter = splitterAtIndex(i);
-        QTableView *tableView = static_cast<QTableView *>(splitter->itemsView());
-        for (int j = 0; j < splitter->itemsModel()->rowCount(); ++j)
+        QAbstractTableModel *model = splitter->itemsModel();
+        QTableView *tableView = splitter->itemsView();
+        for (int j = 0; j < model->rowCount(); ++j)
             tableView->setRowHeight(j, kCellSize);
-        for (int j = 0; j < splitter->itemsModel()->columnCount(); ++j)
+        for (int j = 0; j < model->columnCount(); ++j)
             tableView->setColumnWidth(j, kCellSize);
     }
 
@@ -88,12 +93,12 @@ void ItemsViewerDialog::saveSettings()
         settings.setValue(QString("itemsTab%1_state").arg(i), splitterAtIndex(i)->saveState());
 }
 
-void ItemsViewerDialog::closeEvent(QCloseEvent *event)
+void ItemsViewerDialog::reject()
 {
     saveSettings();
     updateBeltItemsCoordinates(true, 0);
     emit closing();
-    event->accept();
+    QDialog::reject();
 }
 
 void ItemsViewerDialog::tabChanged(int tabIndex)
@@ -209,7 +214,8 @@ const QString &ItemsViewerDialog::tabNameAtIndex(int i)
 {
     // add elements here when adding new tab
     static const QStringList tabNames = QStringList() << tr("Gear") << tr("Inventory") << tr("Cube") << tr("Stash") << tr("Personal Stash") << tr("Shared Stash") << tr("Hardcore Stash");
-    return tabNames.at(i);
+    static const QString unknownName = tr("UNKNOWN STORAGE");
+    return i >= 0 && i < tabNames.size() ? tabNames.at(i) : unknownName;
 }
 
 void ItemsViewerDialog::showItem(ItemInfo *item)

@@ -49,9 +49,7 @@ public:
 
 public slots:
     void setCubeTabDisabled(bool disabled);
-
-protected:
-    void closeEvent(QCloseEvent *event);
+    virtual void reject();
 
 signals:
     void cubeDeleted(bool = true);  // connect directly to QAction's setEnabled() slot

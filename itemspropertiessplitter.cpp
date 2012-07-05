@@ -73,7 +73,7 @@ void ItemsPropertiesSplitter::moveItem(const QModelIndex &newIndex, const QModel
     item->hasChanged = true;
 
     _itemsView->setSpan(oldIndex.row(), oldIndex.column(), 1, 1);
-    setCellSpanForItem(item);
+    _itemsView->setCellSpanForItem(item);
     _itemsView->setCurrentIndex(newIndex);
 
     emit itemsChanged();
@@ -105,7 +105,7 @@ void ItemsPropertiesSplitter::updateItems(const ItemsList &newItems)
 
     _itemsView->clearSpans();
     foreach (ItemInfo *item, newItems)
-        setCellSpanForItem(item);
+        _itemsView->setCellSpanForItem(item);
 
     showFirstItem();
 }
@@ -181,13 +181,6 @@ ItemInfo *ItemsPropertiesSplitter::selectedItem(bool showError /*= true*/)
     if (!item && showError)
         ERROR_BOX("TROLOLOL no item selection found");
     return item;
-}
-
-void ItemsPropertiesSplitter::setCellSpanForItem(ItemInfo *item)
-{
-    const ItemBase &itemBase = ItemDataBase::Items()->value(item->itemType);
-    if (itemBase.height > 1 || itemBase.width > 1) // to prevent warnings to the console
-        _itemsView->setSpan(item->row, item->column, itemBase.height, itemBase.width);
 }
 
 void ItemsPropertiesSplitter::exportText()

@@ -35,6 +35,9 @@ public:
     void addItem(ItemInfo *item) { _itemsHash[qMakePair(item->row, item->column)] = item; }
     void removeItem(ItemInfo *item) { _itemsHash.remove(qMakePair(item->row, item->column)); }
 
+    const QModelIndex &dragOriginIndex() const { return _dragOriginIndex; }
+    void setDragOriginIndex(const QModelIndex &index) { _dragOriginIndex = index; }
+
 signals:
     void itemMoved(const QModelIndex &newIndex, const QModelIndex &oldIndex);
 
@@ -43,6 +46,7 @@ private:
 
     typedef QPair<int, int> TableKey;
     QHash<TableKey, ItemInfo *> _itemsHash;
+    QModelIndex _dragOriginIndex;
 };
 
 #endif // ITEMSTORAGETABLEMODEL_H

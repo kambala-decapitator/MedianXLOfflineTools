@@ -51,7 +51,7 @@
 //#define MAKE_HC
 //#define ENABLE_PERSONALIZE
 //#define MAKE_FINISHED_CHARACTER
-//#define DISABLE_CRC_CHECK
+#define DISABLE_CRC_CHECK
 
 
 // static const
@@ -413,10 +413,20 @@ void MedianXLOfflineTools::saveCharacter()
             plugyItemsHash[static_cast<Enums::ItemStorage::ItemStorageEnum>(item->storage)] += item;
             break;
         default:
-            characterItems += item;
-            characterItemsSize += 2 + item->bitString.length() / 8; // JM + item bytes
-            foreach (ItemInfo *socketableItem, item->socketablesInfo)
-                characterItemsSize += 2 + socketableItem->bitString.length() / 8; // JM + item bytes
+            switch (item->location)
+            {
+            // TODO: finish
+            case Enums::ItemLocation::Merc:
+                break;
+            case Enums::ItemLocation::Corpse:
+                break;
+            default:
+                characterItems += item;
+                characterItemsSize += 2 + item->bitString.length() / 8; // JM + item bytes
+                foreach (ItemInfo *socketableItem, item->socketablesInfo)
+                    characterItemsSize += 2 + socketableItem->bitString.length() / 8; // JM + item bytes
+                break;
+            }
             break;
         }
     }
@@ -1223,6 +1233,8 @@ void MedianXLOfflineTools::loadSettings()
 
     settings.beginGroup("recentItems");
     _recentFilesList = settings.value("recentFiles").toStringList();
+    for (int i = 0; i < _recentFilesList.size(); ++i)
+        _recentFilesList[i] = QDir::toNativeSeparators(_recentFilesList.at(i));
     updateRecentFilesActions();
     settings.endGroup();
 
@@ -1760,6 +1772,7 @@ bool MedianXLOfflineTools::processSaveFile()
     if (!corruptedItems.isEmpty())
         ERROR_BOX(corruptedItems.trimmed());
     charInfo.itemsEndOffset = inputDataStream.device()->pos();
+    qDebug("items end offset %u", charInfo.itemsEndOffset);
 
     const int avoidKey = Enums::ItemProperties::Avoid1;
     quint32 avoidValue = 0;

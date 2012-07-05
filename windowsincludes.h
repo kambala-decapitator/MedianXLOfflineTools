@@ -12,7 +12,7 @@
 
 #include <Shlobj.h>
 #ifdef WIN_VISTA_OR_LATER
-#include <Shobjidl.h>
+#   include <Shobjidl.h>
 #endif
 
 #endif // WINDOWSINCLUDES_H

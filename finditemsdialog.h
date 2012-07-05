@@ -25,6 +25,7 @@ public:
 
 public slots:
     void resetSearchStatus();
+    virtual void reject() { saveSettings(); QDialog::reject(); }
 
 protected:
     void showEvent(QShowEvent *e);

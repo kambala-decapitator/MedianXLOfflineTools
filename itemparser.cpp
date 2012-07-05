@@ -34,6 +34,8 @@ QString ItemParser::parseItemsToBuffer(quint16 itemsTotal, QDataStream &inputDat
         if (item->status != ItemInfo::Ok)
             corruptedItemsString += itemStorageAndCoordinatesString(corruptedItemFormat, item) + "\n";
     }
+    if (itemsBuffer->size() != itemsTotal)
+        qDebug("should be %u items, got %d", itemsTotal, itemsBuffer->size());
     return corruptedItemsString;
 }
 
@@ -42,7 +44,7 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
     ItemInfo *item = 0;
     ItemInfo::ParsingStatus status = ItemInfo::Ok;
     int attempt = 0, searchEndOffset = 0;
-    // loop tries maximum 5 times to read past JM in case it's a part of item
+    // loop tries maximum 2 times to read past JM in case it's a part of item
     do
     {
         inputDataStream.skipRawData(2); // JM
@@ -269,15 +271,20 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
         }
         catch (int exceptionCode)
         {
-            qDebug("caught exception while parsing item: %d", exceptionCode);
+            qDebug("caught exception %d while parsing item (%d - %d)", exceptionCode, itemStartOffset, nextItemOffset);
             status = ItemInfo::Corrupted;
             inputDataStream.device()->seek(itemStartOffset - 2); // set to JM - beginning of the item
             searchEndOffset = nextItemOffset + 1;
             continue;
         }
-    } while (status != ItemInfo::Ok && ++attempt < 5);
+    } while (status != ItemInfo::Ok && ++attempt < 2);
 
-    item->status = status;
+    if ((item->status = status) != ItemInfo::Ok)
+    {
+        qDebug("current offset %d", inputDataStream.device()->pos());
+        inputDataStream.device()->seek(searchEndOffset - 1);
+        qDebug("new offset %d", inputDataStream.device()->pos());
+    }
     return item;
 }
 
@@ -385,6 +392,7 @@ PropertiesMultiMap ItemParser::parseItemProperties(ReverseBitReader &bitReader, 
         }
         catch (int exceptionCode)
         {
+            qDebug("caught exception while parsing item properties: %d", exceptionCode);
             *status = ItemInfo::Corrupted;
             // Requirements txtProperty has the lowest descpriority, so it'll appear at the bottom
             props.insert(Enums::ItemProperties::Requirements, ItemProperty(tr("Error parsing item properties (exception == %1), please report!").arg(exceptionCode)));
