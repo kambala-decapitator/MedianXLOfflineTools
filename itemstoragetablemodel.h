@@ -38,6 +38,8 @@ public:
     const QModelIndex &dragOriginIndex() const { return _dragOriginIndex; }
     void setDragOriginIndex(const QModelIndex &index) { _dragOriginIndex = index; }
 
+    void setHighlightIndexes(const QModelIndexList &indexes) { _highlightIndexes = indexes; }
+
 signals:
     void itemMoved(const QModelIndex &newIndex, const QModelIndex &oldIndex);
 
@@ -47,6 +49,7 @@ private:
     typedef QPair<int, int> TableKey;
     QHash<TableKey, ItemInfo *> _itemsHash;
     QModelIndex _dragOriginIndex;
+    QModelIndexList _highlightIndexes;
 };
 
 #endif // ITEMSTORAGETABLEMODEL_H

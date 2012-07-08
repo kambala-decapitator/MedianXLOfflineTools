@@ -37,7 +37,7 @@ QString binaryStringFromNumber(quint64 number, bool needsInversion, int fieldWid
 
 QString colorHexString(const QColor &c)
 {
-    return QString("#%1%2%3").arg(c.red(), 2, 16, kZeroChar).arg(c.green(), 2, 16, kZeroChar).arg(c.blue(), 2, 16, kZeroChar);
+    return c.name();//QString("#%1%2%3").arg(c.red(), 2, 16, kZeroChar).arg(c.green(), 2, 16, kZeroChar).arg(c.blue(), 2, 16, kZeroChar);
 }
 
 QString coloredText(const QString &text, int colorIndex)
