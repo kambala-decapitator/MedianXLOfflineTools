@@ -43,7 +43,7 @@ QVariant ItemStorageTableModel::data(const QModelIndex &index, int role) const
         }
 
         QColor color(isGreen ? Qt::green : Qt::red);
-        color.setAlpha(191);
+        color.setAlpha(128);
         QPixmap pixmap(32,32);
         pixmap.fill(color);
         return pixmap;
@@ -57,7 +57,7 @@ QVariant ItemStorageTableModel::data(const QModelIndex &index, int role) const
         ItemInfo *item = itemAtIndex(index);
         if (item)
         {
-            const ItemBase &itemBase = ItemDataBase::Items()->value(item->itemType);
+            const ItemBase &itemBase = ItemDataBase::Items()->operator[](item->itemType);
             QString imageName = item->itemType == "jew" ? "invjw" : itemBase.imageName; // quick hack for jewel
             if (item->variableGraphicIndex && QRegExp("\\d$").indexIn(imageName) == -1) // some items already have correct name despite the variableGraphicIndex (e.g. Assur's Bane)
                 imageName += QString::number(item->variableGraphicIndex);

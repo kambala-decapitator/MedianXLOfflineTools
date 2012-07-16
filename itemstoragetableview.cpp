@@ -49,7 +49,7 @@ ItemStorageTableModel *ItemStorageTableView::model() const
 
 void ItemStorageTableView::setCellSpanForItem(ItemInfo *item)
 {
-    const ItemBase &itemBase = ItemDataBase::Items()->value(item->itemType);
+    const ItemBase &itemBase = ItemDataBase::Items()->operator[](item->itemType);
     setSpan(item->row, item->column, itemBase.height, itemBase.width);
 }
 
@@ -77,25 +77,18 @@ void ItemStorageTableView::dragEnterEvent(QDragEnterEvent *event)
 
     if (!_draggedItem)
         _draggedItem = model_->itemFromMimeData(event->mimeData());
-    const ItemBase &dragItemBase = ItemDataBase::Items()->operator[](_draggedItem->itemType);
-    QModelIndexList highlightIndexes;
-    highlightIndexes += index;
-    for (int i = 0; i < dragItemBase.width; ++i)
-        for (int j = 0; j < dragItemBase.height; ++j)
-            if (i || j) // first index is already in the list
-            {
-                QModelIndex anIndex = model_->index(index.row() + i, index.column() + j);
-                if (anIndex.isValid())
-                    highlightIndexes += anIndex;
-            }
-    model_->setHighlightIndexes(highlightIndexes);
+    updateHighlightIndexesForOriginIndex(index);
 
     QTableView::dragEnterEvent(event);
 }
 
 void ItemStorageTableView::dragMoveEvent(QDragMoveEvent *event)
 {
-    if (model()->canStoreItemWithMimeDataAtIndex(event->mimeData(), indexForDragDropEvent(event)))
+    QModelIndex index = indexForDragDropEvent(event);
+    updateHighlightIndexesForOriginIndex(index);
+    viewport()->update();
+
+    if (model()->canStoreItemWithMimeDataAtIndex(event->mimeData(), index))
         event->acceptProposedAction();
     else
         event->ignore();
@@ -105,6 +98,8 @@ void ItemStorageTableView::dragLeaveEvent(QDragLeaveEvent *event)
 {
     QTableView::dragLeaveEvent(event);
 
+    model()->setHighlightIndexes(QModelIndexList());
+
     _dragLeaveTimer->setSingleShot(true);
     _dragLeaveTimer->start();
 }
@@ -112,6 +107,7 @@ void ItemStorageTableView::dragLeaveEvent(QDragLeaveEvent *event)
 void ItemStorageTableView::dropEvent(QDropEvent *event)
 {
     dragStopped();
+    model()->setHighlightIndexes(QModelIndexList());
 
     QModelIndex index = indexForDragDropEvent(event);
     if (index.isValid() && model()->dropMimeData(event->mimeData(), event->dropAction(), index.row(), index.column(), index.parent()))
@@ -140,14 +136,31 @@ void ItemStorageTableView::checkIfStillDragging()
     }
 }
 
-QModelIndex ItemStorageTableView::actualIndexAt(const QPoint &p)
+QModelIndex ItemStorageTableView::actualIndexAt(const QPoint &p) const
 {
     return model()->index(rowAt(p.y()), columnAt(p.x()));
 }
 
-QModelIndex ItemStorageTableView::indexForDragDropEvent(QDropEvent *event)
+QModelIndex ItemStorageTableView::indexForDragDropEvent(QDropEvent *event) const
 {
     return actualIndexAt(event->pos() - findChild<QDrag *>()->hotSpot() + QPoint(rowHeight(0), columnWidth(0)) / 3);
+}
+
+void ItemStorageTableView::updateHighlightIndexesForOriginIndex(const QModelIndex &originIndex) const
+{
+    ItemStorageTableModel *model_ = model();
+    const ItemBase &dragItemBase = ItemDataBase::Items()->operator[](_draggedItem->itemType);
+    QModelIndexList highlightIndexes;
+    highlightIndexes += originIndex;
+    for (int i = 0; i < dragItemBase.width; ++i)
+        for (int j = 0; j < dragItemBase.height; ++j)
+            if (i || j) // first index is already in the list
+            {
+                QModelIndex anIndex = model_->index(originIndex.row() + j, originIndex.column() + i);
+                if (anIndex.isValid())
+                    highlightIndexes += anIndex;
+            }
+    model()->setHighlightIndexes(highlightIndexes);
 }
 
 void ItemStorageTableView::dragStopped()

@@ -37,9 +37,11 @@ private:
     QTimer *_dragLeaveTimer;
     ItemInfo *_draggedItem;
 
-    QModelIndex originIndexInRectOfIndex(const QModelIndex &index) { return indexAt(visualRect(index).topLeft()); }
-    QModelIndex actualIndexAt(const QPoint &p);
-    QModelIndex indexForDragDropEvent(QDropEvent *event);
+    QModelIndex originIndexInRectOfIndex(const QModelIndex &index) const { return indexAt(visualRect(index).topLeft()); }
+    QModelIndex actualIndexAt(const QPoint &p) const;
+    QModelIndex indexForDragDropEvent(QDropEvent *event) const;
+
+    void updateHighlightIndexesForOriginIndex(const QModelIndex &originIndex) const;
 
     void dragStopped();
 };

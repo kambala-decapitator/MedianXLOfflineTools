@@ -26,7 +26,7 @@ QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item)
         ++iter;
     }
 
-    const ItemBase &itemBase = ItemDataBase::Items()->value(item->itemType);
+    const ItemBase &itemBase = ItemDataBase::Items()->operator[](item->itemType);
     foreach (ItemInfo *socketableItem, item->socketablesInfo)
         addProperties(&allProps, ItemDataBase::isGenericSocketable(socketableItem) ? genericSocketableProperties(socketableItem, itemBase.socketableType) : socketableItem->props);
 
@@ -37,8 +37,8 @@ QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item)
 
     QString runes;
     foreach (ItemInfo *socketable, item->socketablesInfo)
-        if (ItemDataBase::Items()->value(socketable->itemType).typeString == "rune")
-            runes += ItemDataBase::Socketables()->value(socketable->itemType).letter;
+        if (ItemDataBase::Items()->operator[](socketable->itemType).typeString == "rune")
+            runes += ItemDataBase::Socketables()->operator[](socketable->itemType).letter;
     if (!runes.isEmpty()) // gem-/jewelwords don't have any letters
         itemDescription += QString("\n'%1'").arg(runes);
 
@@ -82,7 +82,7 @@ QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item)
         rlvl = 100;
         break;
     case Enums::ItemQuality::Unique:
-        rlvl = ItemDataBase::Uniques()->contains(item->setOrUniqueId) ? ItemDataBase::Uniques()->value(item->setOrUniqueId).rlvl : ItemDataBase::Items()->value(item->itemType).rlvl;
+        rlvl = ItemDataBase::Uniques()->contains(item->setOrUniqueId) ? ItemDataBase::Uniques()->operator[](item->setOrUniqueId).rlvl : ItemDataBase::Items()->operator[](item->itemType).rlvl;
         break;
     default:
         rlvl = itemBase.rlvl;
@@ -91,7 +91,7 @@ QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item)
     int maxSocketableRlvl = 0;
     foreach (ItemInfo *socketableItem, item->socketablesInfo)
     {
-        int socketableRlvl = ItemDataBase::Items()->value(socketableItem->itemType).rlvl;
+        int socketableRlvl = ItemDataBase::Items()->operator[](socketableItem->itemType).rlvl;
         if (maxSocketableRlvl < socketableRlvl)
             maxSocketableRlvl = socketableRlvl;
     }
@@ -195,15 +195,15 @@ void PropertiesDisplayManager::constructPropertyStrings(const PropertiesMap &pro
 
         QString displayString = prop.displayString.isEmpty() ? propertyDisplay(prop, propId, shouldColor) : prop.displayString;
         if (!displayString.isEmpty())
-            propsDisplayMap.insertMulti(ItemDataBase::Properties()->value(propId).descPriority,
-            ItemPropertyDisplay(displayString, ItemDataBase::Properties()->value(propId).descPriority, propId));
+            propsDisplayMap.insertMulti(ItemDataBase::Properties()->operator[](propId).descPriority,
+            ItemPropertyDisplay(displayString, ItemDataBase::Properties()->operator[](propId).descPriority, propId));
     }
 
     // group properties
     for (QMap<quint8, ItemPropertyDisplay>::iterator iter = propsDisplayMap.begin(); iter != propsDisplayMap.end(); ++iter)
     {
         ItemPropertyDisplay &itemPropDisplay = iter.value();
-        const ItemPropertyTxt &itemPropertyTxt = ItemDataBase::Properties()->value(itemPropDisplay.propertyId);
+        const ItemPropertyTxt &itemPropertyTxt = ItemDataBase::Properties()->operator[](itemPropDisplay.propertyId);
         if (!itemPropertyTxt.groupIDs.isEmpty())
         {
             QList<quint16> availableGroupIDs;
@@ -242,7 +242,7 @@ QString PropertiesDisplayManager::propertyDisplay(const ItemProperty &propDispla
     if (!value)
         return QString();
 
-    const ItemPropertyTxt &prop = ItemDataBase::Properties()->value(propId);
+    const ItemPropertyTxt &prop = ItemDataBase::Properties()->operator[](propId);
     QString description = value < 0 ? prop.descNegative : prop.descPositive, result;
     if (prop.descStringAdd.contains(tr("Based on", "'based on level' property; translate only if Median XL is translated into your language! (i.e. there's localized data in Resources/data/<language>)")))
     {
@@ -298,7 +298,7 @@ QString PropertiesDisplayManager::propertyDisplay(const ItemProperty &propDispla
         break;
     case 23: // reanimate
         {
-            QString mosnterName = ItemDataBase::Monsters()->value(propDisplay.param);
+            QString mosnterName = ItemDataBase::Monsters()->operator[](propDisplay.param);
             result = QString("%1% %2 %3").arg(value).arg(description).arg(shouldColor ? htmlStringFromDiabloColorString(mosnterName, ColorsManager::Blue) : mosnterName);
             break;
         }
@@ -313,7 +313,7 @@ QString PropertiesDisplayManager::propertyDisplay(const ItemProperty &propDispla
 PropertiesMap PropertiesDisplayManager::genericSocketableProperties(ItemInfo *socketableItem, qint8 socketableType)
 {
     PropertiesMap props;
-    const SocketableItemInfo &socketableItemInfo = ItemDataBase::Socketables()->value(socketableItem->itemType);
+    const SocketableItemInfo &socketableItemInfo = ItemDataBase::Socketables()->operator[](socketableItem->itemType);
     const QList<SocketableItemInfo::Properties> &socketableProps = socketableItemInfo.properties[static_cast<SocketableItemInfo::PropertyType>(socketableType + 1)];
     foreach (const SocketableItemInfo::Properties &prop, socketableProps)
     {
