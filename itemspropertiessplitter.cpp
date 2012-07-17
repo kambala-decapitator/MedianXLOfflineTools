@@ -53,7 +53,7 @@ void ItemsPropertiesSplitter::itemSelected(const QModelIndex &index)
     {
         _itemActions[DisenchantShards]->setDisabled(isUltimative_ && item->props.contains(276)); // prohibit disenchanting TUs from the Gift Box into shards. 276 is ID of item-duped property
         // Ultimative prohibits disenchanting TUs into signets
-        _itemActions[DisenchantSignet]->setDisabled(isUltimative_ && item->quality == Enums::ItemQuality::Unique && ItemDataBase::Items()->value(item->itemType).genericType != Enums::ItemTypeGeneric::Misc && !isSacred(item));
+        _itemActions[DisenchantSignet]->setDisabled(isUltimative_ && item->quality == Enums::ItemQuality::Unique && ItemDataBase::Items()->operator[](item->itemType).genericType != Enums::ItemTypeGeneric::Misc && !isSacred(item));
     }
     else
     {
@@ -285,11 +285,11 @@ void ItemsPropertiesSplitter::unsocketItem()
 //        item->isEthereal = false;
 //        ReverseBitWriter::replaceValueInBitString(item->bitString, Enums::ItemOffsets::Ethereal, 0);
 //
-//        if (ItemDataBase::Items()->value(item->itemType).genericType == Enums::ItemTypeGeneric::Armor)
+//        if (ItemDataBase::Items()->operator[](item->itemType).genericType == Enums::ItemTypeGeneric::Armor)
 //        {
 //            // TODO if will bring back: find the correct position for replacement (the defense offset isn't static)
 //            item->defense /= 1.5;
-//            const ItemPropertyTxt &defenceProp = ItemDataBase::Properties()->value(Enums::ItemProperties::Defence);
+//            const ItemPropertyTxt &defenceProp = ItemDataBase::Properties()->operator[](Enums::ItemProperties::Defence);
 //            ReverseBitWriter::replaceValueInBitString(item->bitString, Enums::ItemOffsets::Ethereal, defenceProp.bits, item->defense + defenceProp.add);
 //        }
 //

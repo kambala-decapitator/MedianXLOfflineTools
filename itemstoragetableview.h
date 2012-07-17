@@ -5,6 +5,7 @@
 
 
 struct ItemInfo;
+class ItemStorageTableModel;
 
 class QTimer;
 
@@ -15,6 +16,8 @@ class ItemStorageTableView : public QTableView
 public:
     explicit ItemStorageTableView(QWidget *parent = 0);
     virtual ~ItemStorageTableView() {}
+
+    ItemStorageTableModel *model() const;
 
     void setCellSpanForItem(ItemInfo *item);
 
@@ -32,10 +35,13 @@ private slots:
 
 private:
     QTimer *_dragLeaveTimer;
+    ItemInfo *_draggedItem;
 
-    QModelIndex originIndexInRectOfIndex(const QModelIndex &index) { return indexAt(visualRect(index).topLeft()); }
-    QModelIndex actualIndexAt(const QPoint &p) { return model()->index(rowAt(p.y()), columnAt(p.x())); }
-    QModelIndex indexForDragDropEvent(QDropEvent *event);
+    QModelIndex originIndexInRectOfIndex(const QModelIndex &index) const { return indexAt(visualRect(index).topLeft()); }
+    QModelIndex actualIndexAt(const QPoint &p) const;
+    QModelIndex indexForDragDropEvent(QDropEvent *event) const;
+
+    void updateHighlightIndexesForOriginIndex(const QModelIndex &originIndex) const;
 
     void dragStopped();
 };

@@ -13,7 +13,7 @@
 
 bool isRWInGear(ItemInfo *item, const QByteArray &rune, const QByteArray &allowedItemType)
 {
-    if (item->isRW && item->location == Enums::ItemLocation::Equipped && ItemParser::itemTypeInheritsFromType(ItemDataBase::Items()->value(item->itemType).typeString, allowedItemType))
+    if (item->isRW && item->location == Enums::ItemLocation::Equipped && ItemParser::itemTypeInheritsFromType(ItemDataBase::Items()->operator[](item->itemType).typeString, allowedItemType))
     {
         const RunewordHash *const rwHash = ItemDataBase::RW();
         RunewordKeyPair rwKey = qMakePair(rune, QByteArray());
@@ -37,7 +37,7 @@ QString binaryStringFromNumber(quint64 number, bool needsInversion, int fieldWid
 
 QString colorHexString(const QColor &c)
 {
-    return QString("#%1%2%3").arg(c.red(), 2, 16, kZeroChar).arg(c.green(), 2, 16, kZeroChar).arg(c.blue(), 2, 16, kZeroChar);
+    return c.name();//QString("#%1%2%3").arg(c.red(), 2, 16, kZeroChar).arg(c.green(), 2, 16, kZeroChar).arg(c.blue(), 2, 16, kZeroChar);
 }
 
 QString coloredText(const QString &text, int colorIndex)
@@ -104,7 +104,7 @@ QString htmlStringFromDiabloColorString(const QString &name, ColorsManager::Colo
 
 bool isUltimative()
 {
-    return ItemDataBase::Properties()->value(Enums::CharacterStats::Strength).saveBits != 12;
+    return ItemDataBase::Properties()->operator[](Enums::CharacterStats::Strength).saveBits != 12;
 }
 
 bool isCubeInCharacterItems(ItemInfo *item)
@@ -149,7 +149,7 @@ bool isVeneficaInGear(ItemInfo *item)
 
 bool isSacred(ItemInfo *item)
 {
-    return ItemParser::itemTypeInheritsFromTypes(ItemDataBase::Items()->value(item->itemType).typeString, QList<QByteArray>() << "ct1a" << "ct2a" << "ct1w" << "ct2w");
+    return ItemParser::itemTypeInheritsFromTypes(ItemDataBase::Items()->operator[](item->itemType).typeString, QList<QByteArray>() << "ct1a" << "ct2a" << "ct1w" << "ct2w");
 }
 
 bool isCharacterOrb(const QByteArray &itemType)

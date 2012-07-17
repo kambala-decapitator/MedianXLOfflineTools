@@ -587,7 +587,7 @@ bool ItemDataBase::storeItemIn(ItemInfo *item, Enums::ItemStorage::ItemStorageEn
 bool ItemDataBase::canStoreItemAt(quint8 row, quint8 col, const QByteArray &storeItemType, const ItemsList &items, int rowsTotal, int colsTotal /*= 10*/)
 {
     // col is horizontal (x), row is vertical (y)
-    const ItemBase &storeItemBase = ItemDataBase::Items()->value(storeItemType);
+    const ItemBase &storeItemBase = ItemDataBase::Items()->operator[](storeItemType);
     QRect storeItemRect(col, row, storeItemBase.width, storeItemBase.height);
     if (storeItemRect.right() >= colsTotal || storeItemRect.bottom() >= rowsTotal) // beyond grid
         return false;
@@ -595,7 +595,7 @@ bool ItemDataBase::canStoreItemAt(quint8 row, quint8 col, const QByteArray &stor
     bool ok = true;
     foreach (ItemInfo *item, items)
     {
-        const ItemBase &itemBase = ItemDataBase::Items()->value(item->itemType);
+        const ItemBase &itemBase = ItemDataBase::Items()->operator[](item->itemType);
         if (storeItemRect.intersects(QRect(item->column, item->row, itemBase.width, itemBase.height)))
         {
             ok = false;

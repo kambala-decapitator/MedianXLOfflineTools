@@ -13,12 +13,13 @@ void MedianXLOfflineTools::moveUpdateActionToAppleMenu()
     NSMenu *mainMenu = [NSApp mainMenu];
     NSMenuItem *helpMenuItem = [mainMenu itemWithTitle:NSStringFromQString(ui.menuHelp->title())];
     NSMenu *helpMenu = [helpMenuItem submenu];
-    NSMenuItem *checkForUpdateMenuItem = [helpMenu itemAtIndex:0];
+    NSMenuItem *checkForUpdateMenuItem = [[helpMenu itemAtIndex:0] retain];
 
     [helpMenu removeItem:checkForUpdateMenuItem];
     if ([helpMenu numberOfItems] == 1) // only 'find' left
         [mainMenu removeItem:helpMenuItem];
     [[[mainMenu itemAtIndex:0] submenu] insertItem:checkForUpdateMenuItem atIndex:3];
+    [checkForUpdateMenuItem release];
 
     [pool release];
 }

@@ -72,7 +72,7 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
             ++iter;
     }
 
-    const ItemBase &itemBase = ItemDataBase::Items()->value(item->itemType);
+    const ItemBase &itemBase = ItemDataBase::Items()->operator[](item->itemType);
     ui.socketablesTextEdit->clear();
     if (!item->socketablesInfo.isEmpty())
     {
@@ -93,8 +93,8 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
 
     QString runes;
     foreach (ItemInfo *socketable, item->socketablesInfo)
-        if (ItemDataBase::Items()->value(socketable->itemType).typeString == "rune")
-            runes += ItemDataBase::Socketables()->value(socketable->itemType).letter;
+        if (ItemDataBase::Items()->operator[](socketable->itemType).typeString == "rune")
+            runes += ItemDataBase::Socketables()->operator[](socketable->itemType).letter;
     if (!runes.isEmpty()) // gem-/jewelwords don't have any letters
         itemDescription += htmlStringFromDiabloColorString(QString("'%1'").arg(runes), ColorsManager::Gold) + kHtmlLineBreak;
 
@@ -147,7 +147,7 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
         rlvl = 100;
         break;
     case Enums::ItemQuality::Unique:
-        rlvl = ItemDataBase::Uniques()->contains(item->setOrUniqueId) ? ItemDataBase::Uniques()->value(item->setOrUniqueId).rlvl : ItemDataBase::Items()->value(item->itemType).rlvl;
+        rlvl = ItemDataBase::Uniques()->contains(item->setOrUniqueId) ? ItemDataBase::Uniques()->operator[](item->setOrUniqueId).rlvl : ItemDataBase::Items()->operator[](item->itemType).rlvl;
         break;
 //  case Enums::ItemQuality::Rare: case Enums::ItemQuality::Crafted: case Enums::ItemQuality::Magic:
         // TODO 0.3+: add support for affix rlvl
@@ -159,7 +159,7 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
     int maxSocketableRlvl = 0;
     foreach (ItemInfo *socketableItem, item->socketablesInfo)
     {
-        int socketableRlvl = ItemDataBase::Items()->value(socketableItem->itemType).rlvl;
+        int socketableRlvl = ItemDataBase::Items()->operator[](socketableItem->itemType).rlvl;
         if (maxSocketableRlvl < socketableRlvl)
             maxSocketableRlvl = socketableRlvl;
     }
@@ -208,7 +208,7 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
     // show existing set items from current set
     if (item->quality == Enums::ItemQuality::Set)
     {
-        const QString &setName = ItemDataBase::Sets()->value(item->setOrUniqueId).setName;
+        const QString &setName = ItemDataBase::Sets()->operator[](item->setOrUniqueId).setName;
         itemDescription += kHtmlLineBreak + htmlStringFromDiabloColorString(setName, ColorsManager::Gold);
 
         foreach (const QString &setItemName, ItemDataBase::completeSetForName(setName))
@@ -216,7 +216,7 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
             bool found = false;
             foreach (ItemInfo *anItem, CharacterInfo::instance().items.character)
             {
-                if (anItem->quality == Enums::ItemQuality::Set && ItemDataBase::Sets()->value(anItem->setOrUniqueId).itemName == setItemName)
+                if (anItem->quality == Enums::ItemQuality::Set && ItemDataBase::Sets()->operator[](anItem->setOrUniqueId).itemName == setItemName)
                 {
                     found = true;
                     break;
@@ -289,10 +289,10 @@ void PropertiesViewerWidget::removeMysticOrbsFromProperties(const QSet<int> &mys
 
 void PropertiesViewerWidget::removeMysticOrbData(int moCode, PropertiesMultiMap *props)
 {
-    modifyMysticOrbProperty(ItemDataBase::MysticOrbs()->value(moCode).statId, totalMysticOrbValue(moCode, props), props);
+    modifyMysticOrbProperty(ItemDataBase::MysticOrbs()->operator[](moCode).statId, totalMysticOrbValue(moCode, props), props);
 
     // remove MO data
-    const ItemPropertyTxt &propertyTxt = ItemDataBase::Properties()->value(moCode);
+    const ItemPropertyTxt &propertyTxt = ItemDataBase::Properties()->operator[](moCode);
     int valueIndex = indexOfPropertyValue(moCode, props);
     if (valueIndex > -1)
         _item->bitString.remove(valueIndex, propertyTxt.bits + propertyTxt.saveParamBits + Enums::CharacterStats::StatCodeLength);
@@ -303,7 +303,7 @@ void PropertiesViewerWidget::removeMysticOrbData(int moCode, PropertiesMultiMap 
 int PropertiesViewerWidget::indexOfPropertyValue(int id, PropertiesMultiMap *props)
 {
     bool isMaxEnhDamageProp = id == Enums::ItemProperties::EnhancedDamage;
-    const ItemPropertyTxt &property = ItemDataBase::Properties()->value(id);
+    const ItemPropertyTxt &property = ItemDataBase::Properties()->operator[](id);
     qulonglong value = props->value(id).value + property.add;
     if (isMaxEnhDamageProp)
     {
@@ -333,7 +333,7 @@ void PropertiesViewerWidget::modifyMysticOrbProperty(int id, int decrement, Prop
 
     // ED value is stored as a sequence of 2 equal values
     bool isEnhancedDamageProp = id == Enums::ItemProperties::EnhancedDamage;
-    const ItemPropertyTxt &propertyTxt = ItemDataBase::Properties()->value(id);
+    const ItemPropertyTxt &propertyTxt = ItemDataBase::Properties()->operator[](id);
     int bitsLength = (1 + isEnhancedDamageProp) * propertyTxt.bits;
 
     ItemProperty prop = props->value(id);
@@ -359,7 +359,7 @@ void PropertiesViewerWidget::modifyMysticOrbProperty(int id, int decrement, Prop
 int PropertiesViewerWidget::totalMysticOrbValue(int moCode, PropertiesMap *props)
 {
     quint8 multiplier = 1 + isMysticOrbEffectDoubled();
-    return props->value(moCode).value * ItemDataBase::MysticOrbs()->value(moCode).value * multiplier;
+    return props->value(moCode).value * ItemDataBase::MysticOrbs()->operator[](moCode).value * multiplier;
 }
 
 void PropertiesViewerWidget::byteAlignBits()

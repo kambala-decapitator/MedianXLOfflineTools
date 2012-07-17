@@ -1293,7 +1293,7 @@ void MedianXLOfflineTools::saveSettings() const
 
 bool compareSkillIndexes(int i, int j)
 {
-    const SkillInfo &iSkill = ItemDataBase::Skills()->value(i), jSkill = ItemDataBase::Skills()->value(j);
+    const SkillInfo &iSkill = ItemDataBase::Skills()->operator[](i), &jSkill = ItemDataBase::Skills()->operator[](j);
     if (iSkill.tab == jSkill.tab)
     {
         if (iSkill.col == jSkill.col)
@@ -1653,7 +1653,7 @@ bool MedianXLOfflineTools::processSaveFile()
         if (statCode == Enums::CharacterStats::End)
             break;
 
-        int statLength = ItemDataBase::Properties()->value(statCode).saveBits;
+        int statLength = ItemDataBase::Properties()->operator[](statCode).saveBits;
         if (!statLength)
         {
             ERROR_BOX(tr("Unknown statistic code found: %1. This is not %2 character.", "second param is mod name").arg(statCode).arg("Median XL" + (isUltimative() ? " Ultimative" : QString())));
@@ -1728,7 +1728,7 @@ bool MedianXLOfflineTools::processSaveFile()
         quint8 skillValue = _saveFileContents.at(skillsOffset + 2 + i);
         skills += skillValue;
         charInfo.basicInfo.skills += skillValue;
-        //qDebug() << skillValue << ItemDataBase::Skills()->value(_characterSkillsIndeces[charInfo.basicInfo.classCode].first.at(i)).name;
+        //qDebug() << skillValue << ItemDataBase::Skills()->operator[](_characterSkillsIndeces[charInfo.basicInfo.classCode].first.at(i)).name;
     }
     skills += charInfo.basicInfo.statsDynamicData.property("FreeSkillPoints").toUInt();
     if (skills > maxPossibleSkills) // check if skills are hacked
@@ -1751,7 +1751,7 @@ bool MedianXLOfflineTools::processSaveFile()
     {
         int skillIndex = skillsIndeces.second.at(i);
         charInfo.basicInfo.skillsReadable += charInfo.basicInfo.skills.at(skillsIndeces.first.indexOf(skillIndex));
-        //qDebug() << charInfo.basicInfo.skillsReadable.last() << ItemDataBase::Skills()->value(skillIndex).name;
+        //qDebug() << charInfo.basicInfo.skillsReadable.last() << ItemDataBase::Skills()->operator[](skillIndex).name;
     }
 
     // items
@@ -2352,14 +2352,14 @@ QByteArray MedianXLOfflineTools::statisticBytes()
             if (clvl != newClvl) // set new level and experience explicitly
             {
                 addStatisticBits(result, Enums::CharacterStats::Level, Enums::CharacterStats::StatCodeLength);
-                addStatisticBits(result, newClvl, ItemDataBase::Properties()->value(Enums::CharacterStats::Level).saveBits);
+                addStatisticBits(result, newClvl, ItemDataBase::Properties()->operator[](Enums::CharacterStats::Level).saveBits);
                 statsDynamicData.setProperty("Level", newClvl);
 
                 quint32 newExp = experienceTable.at(newClvl - 1);
                 if (newExp) // must not be present for level 1 character
                 {
                     addStatisticBits(result, Enums::CharacterStats::Experience, Enums::CharacterStats::StatCodeLength);
-                    addStatisticBits(result, newExp, ItemDataBase::Properties()->value(Enums::CharacterStats::Experience).saveBits);
+                    addStatisticBits(result, newExp, ItemDataBase::Properties()->operator[](Enums::CharacterStats::Experience).saveBits);
                 }
                 statsDynamicData.setProperty("Experience", newExp);
 
@@ -2380,7 +2380,7 @@ QByteArray MedianXLOfflineTools::statisticBytes()
         if (value)
         {
             addStatisticBits(result, statCode, Enums::CharacterStats::StatCodeLength);
-            addStatisticBits(result, value, ItemDataBase::Properties()->value(statCode).saveBits);
+            addStatisticBits(result, value, ItemDataBase::Properties()->operator[](statCode).saveBits);
         }
 
         CharacterInfo::instance().basicInfo.statsDynamicData.setProperty(enumKey, value);

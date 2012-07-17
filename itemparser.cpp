@@ -122,7 +122,7 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
                 if (bitReader.readBool()) // class info
                     bitReader.skip(11);
 
-                const ItemBase &itemBase = ItemDataBase::Items()->value(item->itemType);
+                const ItemBase &itemBase = ItemDataBase::Items()->operator[](item->itemType);
                 switch (item->quality)
                 {
                 case Enums::ItemQuality::Normal:
@@ -167,16 +167,16 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
                     bitReader.skip(5); // some tome bits
                 if (itemBase.genericType == Enums::ItemTypeGeneric::Armor)
                 {
-                    const ItemPropertyTxt &defenceProp = ItemDataBase::Properties()->value(Enums::ItemProperties::Defence);
+                    const ItemPropertyTxt &defenceProp = ItemDataBase::Properties()->operator[](Enums::ItemProperties::Defence);
                     item->defense = bitReader.readNumber(defenceProp.bits) - defenceProp.add;
                 }
                 if (itemBase.genericType != Enums::ItemTypeGeneric::Misc)
                 {
-                    const ItemPropertyTxt &maxDurabilityProp = ItemDataBase::Properties()->value(Enums::ItemProperties::DurabilityMax);
+                    const ItemPropertyTxt &maxDurabilityProp = ItemDataBase::Properties()->operator[](Enums::ItemProperties::DurabilityMax);
                     item->maxDurability = bitReader.readNumber(maxDurabilityProp.bits) - maxDurabilityProp.add;
                     if (item->maxDurability)
                     {
-                        const ItemPropertyTxt &durabilityProp = ItemDataBase::Properties()->value(Enums::ItemProperties::Durability);
+                        const ItemPropertyTxt &durabilityProp = ItemDataBase::Properties()->operator[](Enums::ItemProperties::Durability);
                         item->currentDurability = bitReader.readNumber(durabilityProp.bits) - durabilityProp.add;
                         if (item->maxDurability < item->currentDurability)
                             item->maxDurability = item->currentDurability;
@@ -281,9 +281,9 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
 
     if ((item->status = status) != ItemInfo::Ok)
     {
-        qDebug("current offset %d", inputDataStream.device()->pos());
+        qDebug("current offset %lld", inputDataStream.device()->pos());
         inputDataStream.device()->seek(searchEndOffset - 1);
-        qDebug("new offset %d", inputDataStream.device()->pos());
+        qDebug("new offset %lld", inputDataStream.device()->pos());
     }
     return item;
 }
@@ -302,7 +302,7 @@ PropertiesMultiMap ItemParser::parseItemProperties(ReverseBitReader &bitReader, 
                 return props;
             }
 
-            const ItemPropertyTxt &txtProperty = ItemDataBase::Properties()->value(id);
+            const ItemPropertyTxt &txtProperty = ItemDataBase::Properties()->operator[](id);
             ItemProperty propToAdd;
             propToAdd.param = txtProperty.saveParamBits ? bitReader.readNumber(txtProperty.saveParamBits) : 0;
             propToAdd.value = bitReader.readNumber(txtProperty.bits) - txtProperty.add;
@@ -333,7 +333,7 @@ PropertiesMultiMap ItemParser::parseItemProperties(ReverseBitReader &bitReader, 
             if (hasMinElementalDamage)
             {
                 // get max elemental damage
-                const ItemPropertyTxt &maxElementalDamageProp = ItemDataBase::Properties()->value(id);
+                const ItemPropertyTxt &maxElementalDamageProp = ItemDataBase::Properties()->operator[](id);
                 propToAdd.value = bitReader.readNumber(maxElementalDamageProp.bits) - maxElementalDamageProp.add;
 
                 if (id == 53) // +%d magic damage
@@ -345,7 +345,7 @@ PropertiesMultiMap ItemParser::parseItemProperties(ReverseBitReader &bitReader, 
 
                 if (hasLength) // cold or poison length
                 {
-                    const ItemPropertyTxt &lengthProp = ItemDataBase::Properties()->value(++id);
+                    const ItemPropertyTxt &lengthProp = ItemDataBase::Properties()->operator[](++id);
                     qint16 length = bitReader.readNumber(lengthProp.bits) - lengthProp.add;
                     //propToAdd.displayString = QString(" with length of %1 frames (%2 second(s))").arg(length).arg(static_cast<double>(length) / 25.0, 1);
                     //propToAdd.value = length;
@@ -374,7 +374,7 @@ PropertiesMultiMap ItemParser::parseItemProperties(ReverseBitReader &bitReader, 
             }
             else if (id == 204)
             {
-                propToAdd.displayString = tr("Level %1 %2 (%3/%4 Charges)").arg(propToAdd.param & 63).arg(ItemDataBase::Skills()->value(propToAdd.param >> 6).name)
+                propToAdd.displayString = tr("Level %1 %2 (%3/%4 Charges)").arg(propToAdd.param & 63).arg(ItemDataBase::Skills()->operator[](propToAdd.param >> 6).name)
                     .arg(propToAdd.value & 255).arg(propToAdd.value >> 8);
             }
             else if (txtProperty.descPositive.startsWith('%')) // ctc
@@ -383,10 +383,10 @@ PropertiesMultiMap ItemParser::parseItemProperties(ReverseBitReader &bitReader, 
                 for (int i = 0, k = 1; k <= 3 && i < desc.length(); ++i)
                     if (desc.at(i) == '%' && desc.at(i + 1).isLetter())
                         desc[++i] = QString::number(k++).at(0);
-                propToAdd.displayString = desc.replace("%%", "%").arg(propToAdd.value).arg(propToAdd.param & 63).arg(ItemDataBase::Skills()->value(propToAdd.param >> 6).name);
+                propToAdd.displayString = desc.replace("%%", "%").arg(propToAdd.value).arg(propToAdd.param & 63).arg(ItemDataBase::Skills()->operator[](propToAdd.param >> 6).name);
             }
             else if (ItemDataBase::MysticOrbs()->contains(id))
-                propToAdd.displayString = QString("%1 x '%2'").arg(propToAdd.value).arg(mysticOrbReadableProperty(ItemDataBase::Items()->value(ItemDataBase::MysticOrbs()->value(id).itemCode).spelldesc));
+                propToAdd.displayString = QString("%1 x '%2'").arg(propToAdd.value).arg(mysticOrbReadableProperty(ItemDataBase::Items()->operator[](ItemDataBase::MysticOrbs()->operator[](id).itemCode).spelldesc));
 
             props.insert(id, propToAdd);
         }
@@ -437,7 +437,7 @@ bool ItemParser::itemTypeInheritsFromTypes(const QByteArray &itemType, const QLi
 bool ItemParser::itemTypesInheritFromTypes(const QList<QByteArray> &itemTypes, const QList<QByteArray> &allowedItemTypes)
 {
     foreach (const QByteArray &itemType, itemTypes)
-        if (allowedItemTypes.contains(itemType) || itemTypesInheritFromTypes(ItemDataBase::ItemTypes()->value(itemType), allowedItemTypes))
+        if (allowedItemTypes.contains(itemType) || itemTypesInheritFromTypes(ItemDataBase::ItemTypes()->operator[](itemType), allowedItemTypes))
             return true;
     return false;
 }
