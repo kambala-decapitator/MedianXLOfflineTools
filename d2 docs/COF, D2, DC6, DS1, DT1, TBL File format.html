@@ -1,0 +1,2879 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<!-- begin document head -->
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta name="generator" content="MKPortal" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta content="no-cache" http-equiv="no-cache" />
+  <meta http-equiv="Cache-Control" content="no-cache" />
+  
+<link rel="icon" href="favicon.ico" type="image/x-icon" /> 
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <style type="text/css">
+/*
++--------------------------------------------------------------------------
+|   Cascading Style Sheet for MKportal "Forum" Portal Template
+|   ========================================
+|   by Meo aka Luponero [Amedeo de longis]
+|      Don K. Colburn [visiblesoul.net]
+|   Copyright (c) 2004-2007 mkportal.it
+|   http://www.mkportal.it
+|   Email: luponero@mclink.it
++--------------------------------------------------------------------------
+|   > MKPortal
+|   > Written By Amedeo de longis
+|   > Date started: 9.2.2004
++--------------------------------------------------------------------------
+*/
+
+/*=============================
+M
+K  global styles
+P
+=============================*/
+/* IMPORT body */
+body,
+body {
+	/* Text-Sizing with ems: http://www.clagnut.com/blog/348/ */
+	font-family: "Lucida Grande", Verdana, Helvetica, Arial, sans-serif;
+	color: #FFFFFF;
+	background-color: #000000;
+	font-size: 62.5%; /* This sets the default font size to be equivalent to 10px */
+	margin: 0;
+}
+
+body {
+	font-size: 10px;
+	margin:0px; 
+	padding:0px; /* Opera 0 margin */	
+	text-align: center; /* center in IE */ 
+}
+
+/* IMPORT body background (used for SMF) */
+td { padding: 0; }
+
+/* portal wrapper */
+#mkwrapper {
+	text-align:left; /* left-align text in IE */	
+	margin: 0px auto 0px auto;
+}
+
+/* IMPORT logostrip */
+#mklogostrip,
+#importlogostrip {	
+	background-color: #000000;	
+}
+
+/* logostrip */
+#mklogostrip {
+	text-align: left;
+}
+
+/* IMPORT global font formatting */
+table,
+tr,
+td,
+.tdglobal,
+.importfont {
+	font-size: 10px; 
+	color: #FFFFFF;
+	font-family: Verdana, Arial, Helvetica, sans-serif;	
+}
+
+/* global font formatting */
+table,
+tr,
+td,
+.tdglobal {
+	font-size: 10px;	
+}
+
+/* IMPORT main portal table bg (if different than body bg) */
+.tabmain,
+.importmain {	
+	font-size: 10px;	
+}
+
+/* main portal table */
+.tabmain {
+	margin:0px;
+	padding:0px;	
+}
+
+/* images */
+img { 		
+	border: 0px;
+	vertical-align: middle; /* Meo: Added in C1.2 */
+}
+
+/* Onyx - justified body for long texts */
+div.body_just {
+	font-size: 12px;
+	text-align: justify;
+}
+
+/*=============================
+M
+K IMPORT LIGHT BACKGROUND
+P
+=============================*/
+.modulecell,
+.urlo2,
+.tabnews,
+.trattini,
+.trattini3,
+.tablemenu,
+.taburlo,
+.row1 {
+	background-color: #2F2F4F;
+	padding: 0;
+}
+
+/*=============================
+M
+K IMPORT MEDIUM BACKGROUND
+P
+=============================*/
+.navigatore,
+.tdblock,
+.moduleborder,
+.modulex,
+.mkpagecurrent,
+.row2 {
+	background-color: #2F2F4F;
+	padding: 0;
+}
+
+/*=============================
+M
+K IMPORT DARK BACKGROUND
+P
+=============================*/
+.urlo,
+.sottotitolo,
+th {
+	color: #FFFFFF;
+	font-size: 1.1em;
+	font-weight: bold;
+	background-color: #113274;
+	background-image: url('../forum/styles/BlackRock/theme/images/cellpic3.gif');
+	white-space: nowrap;
+	padding: 7px 5px;
+}
+
+/*=============================
+M
+K  border and divider styles
+P
+=============================*/
+/* vertical spacer image used in portal skin */
+/* .vspacer {
+	background-image: url(../mkportal/templates/Forum/images/punto_vert.gif);
+	background-repeat: repeat-y;
+	background-color: transparent;	
+} */
+
+/* IMPORT border-color */
+.tabmain,
+.tablemenu, /* block wrapper, chat button strip */
+.taburlo,
+.urlo2,
+.tabnews,
+.trattini,
+.trattini2,
+.trattini3,
+.mkpagelink,
+.mkpagelinklast,
+.mkpagecurrent,
+.titadmin,
+.importborders {
+	border: 1px solid #000000;	
+}
+	
+.trattini { /*used only in tpl_main.php(deprecated), blog, ad_blocks.php*/
+	border-width: 1px 0 0 0;
+	border-style: dashed;
+}
+
+/* blocks admin */
+.trattini2 {
+	border-width: 0 1px 0 0;
+	border-style: dashed;
+}
+
+.trattini3 { /* used only in blog, quotes, urlobox, calendar*/
+	border-width: 0 0 1px 0;
+	border-style: dashed;
+}
+
+/*=============================
+M
+K  hyperlink styles
+P
+=============================*/
+/* IMPORT global links */
+a:link,
+a:active,
+a.uno:link,
+.importlink {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #00ffff;	
+	text-decoration: none;	
+}
+
+a:visited,
+a.uno:visited,
+.importvisited {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #00ffff;	
+	text-decoration: none;	
+}
+
+a:hover,
+a.uno:hover,
+.importhover {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	text-decoration: underline;
+}
+
+/* a:active {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #496c9f;	
+	text-decoration: none; 	
+} */
+
+/* bold navbar, block, module links */
+a.uno:link {
+	font-size: 10px;
+	font-weight: bold;
+	text-decoration: none
+}
+
+a.uno:visited {	
+	font-size: 10px; 
+	font-weight: bold;
+	text-decoration: none
+}
+
+
+a.uno:hover {
+	font-size: 10px;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+/* Onyx - bigger links for titles in Articles and so on*/
+a.cat_big:link {
+	font-size: 12px;
+	text-decoration: none
+}
+
+a.cat_big:visited {	
+	font-size: 12px; 
+	text-decoration: none
+}
+
+
+a.cat_big:hover {
+	font-size: 12px;
+	text-decoration: underline;
+}
+
+/* block text links */
+/* .tablemenu a:link, a:visited {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #496c9f;	
+	text-decoration: none;	
+}
+
+.tablemenu a:hover {
+	text-decoration: underline;
+}
+
+.tablemenu a:active { 
+	text-decoration: none; 	
+} */
+
+/* global contrasting text and hyperlink color */
+.mktxtcontr,
+a.mktxtcontr:link, 
+a.mktxtcontr:visited {	
+	color: #ffffff;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a.mktxtcontr:hover {
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+/* contrasting text and hyperlink color 2 (admin) */
+.mktxtcontr2,
+a.mktxtcontr2:link, 
+a.mktxtcontr2:visited {
+	color: #0000ff;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a.mktxtcontr2:hover {
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+/*=============================
+M
+K  form styles
+P
+=============================*/
+/* remove margin after closing "form" tag in MSIE */
+form {
+	margin: 0;
+	padding: 0
+}
+
+/* IMPORT form styles */
+input,
+textarea,
+select,
+.bgselect, /* input fields */
+.mkbutton, /* global submit buttons */
+.mkblkinput, /* block input */
+.mkradio, 
+input {
+	color: #333333;
+	font-family: "Lucida Grande", Verdana, Helvetica, sans-serif;
+	font-size: 1.1em;
+	font-weight: normal;
+	padding: 1px;
+	border: 1px solid #A9B8C2;
+	background-color: #FAFAFA;
+}
+
+/* set form padding and margin */
+/*.mkbutton,*/ /* global submit buttons */
+/* textarea,*/
+input,
+select,
+.bgselect, /* input fields */
+.mkblkinput /* block input */
+{
+	margin: 0px;
+	padding: 0px;
+	font-size: 9px;
+	font-weight: normal; /* needed for Mozilla */	
+}
+
+.mkbutton { /* Global submit buttons */
+	padding: 3px;
+}
+
+.mkbbbutton { /* MKP BBcode editor buttons */
+	margin: 0;
+	padding: 0;
+}
+
+/* radio/checkbox buttons - remove background color and border in IE */ 
+/* .mkradio {
+	background-color: transparent;
+	border-width: 0px;
+} */
+
+/* configure blog textarea */
+textarea.mkwrap1 {
+	overflow: auto;
+	/* width: 230px; */
+	width: 100%;
+}
+
+/* edit blog textarea */
+textarea.mkwrap2 {
+	overflow: auto;
+	width: 500px ;
+}
+
+/*=============================
+M
+K  navstrip styles
+P
+=============================*/
+/* top navstrip */
+.navigatore {	
+	vertical-align: bottom;
+	text-align: right;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: 300;
+	font-size: 9px;
+	border: 0;
+}
+
+/*=============================
+M
+K  block styles
+P
+=============================*/
+/* used in functions.php (function main_page) */
+.blocks {
+	padding: 0px;
+}
+
+/* block td cell */
+.tdblock {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	border: 0;
+	margin: 2px;	
+}
+
+/* block title bar */
+.sottotitolo {
+	vertical-align: bottom;	
+	text-align: left;
+	font-size: 11px;
+	font-weight: bold;
+	color:#00ff00; 
+}
+
+/* horizontal spacer between blocks */
+.tdspacer {
+	line-height: 3px;
+}
+
+/*=============================
+M
+K  module global styles
+P
+=============================*/
+/* IMPORT module table headings */
+th.modulex,
+.cattitle {
+
+}
+th.modulex {
+	white-space: nowrap;
+}
+.modulex {
+	border-width: 0 0 0 0;
+}
+/* Reviews description text */
+.modulelite {
+	font-size: 10pt;
+	/* color:#a6bbcd;*/
+}
+
+/* block padding (news, admin) */
+.contents {
+	padding: 10px;
+	font-size: 12px;
+}
+
+/* module pagination links */
+.mkpagelink {
+	padding:1px 3px 1px 3px;
+	font-weight: normal;
+}
+
+.mkpagelinklast {
+	padding:1px 3px 1px 3px;
+	font-weight:normal;
+}
+
+.mkpagecurrent {
+	padding:1px 3px 1px 3px;
+	font-weight:normal;
+}
+
+/* admin cp titles with top border - used in frontend and backend */
+.titadmin {
+	margin: 0px;
+	font-size: 11px;
+	font-weight: bold;
+	border-width: 1px 0 0 0;
+	border-style: dashed;
+}
+/*=============================
+M
+K  shoutbox module styles
+P
+=============================*/
+td.taburlo{	
+	margin:5px;
+	padding:5px;
+	border: 0;	
+}
+	
+/* shouter and date cell */
+.urlo {
+	line-height: 18px;
+	vertical-align: bottom;
+	text-align: left;	
+	font-size: 11px;
+	font-weight: bold;
+	padding: 4px;		 
+}
+
+/* shout cell */
+.urlo2 {
+	padding: 4px;
+	border-width: 0 0 1px 0;
+	border-style: solid;
+	text-align: left;
+	font-size: 11px;
+	font-weight: bold;
+}
+
+/* white shouter text */
+/* .urlocontrast {	
+	color: #ffffff;
+} */
+
+/*=============================
+M
+K  news module styles
+P
+=============================*/
+/* news table with border */
+.tabnews {
+	border-width: 1px;
+	border-style: solid;
+	margin:0px; 
+	padding:10px;
+	font-size: 10px;	
+}
+
+/* news table custom */
+.tabnews1 {
+	border-width: 1px;
+	border-style: solid;
+	border-color: #000;
+	margin:0px; 
+	padding:0px;
+}
+
+/*=============================
+M
+K  font styles
+P
+=============================*/
+/* red error page text */
+.mkerror {	
+	font-size: 12pt;
+	color: #ff0000;
+	font-weight:bold;
+}
+
+/* MKPQuote quotation text */
+/* .mkquote { 		
+	color: #0000ff;	
+} */
+
+/* MKPGallery module ecard, offline page */
+.ecardtitle,
+.offlinetxt {
+	font-size: 10pt; 
+	font-weight: bold;
+	text-align: center;
+}
+/*Onyx - image gallery border - Firefox-compatible*/
+#imgtable1, #imgtable1 td {border: 1px solid #000;}
+
+
+/*=============================
+M
+K  BBcode quote styles
+P
+=============================*/
+.mkquoteball {
+	font-size: 9px; 
+	color: #666666;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	background-color: #ffffff;	
+	padding: 0;	
+}
+
+.mkquotetext {
+	font-size: 10px; 
+	color: #666666;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	background-color: #ffffff;
+	margin: 0;
+	padding: 0;	
+}
+
+table .mkquotetable{				
+	width: auto; /* IE */	
+	text-align: left;
+}
+
+/* Added in C1.2 */
+/* Table background highlight */
+.bghighlight1 {
+	background-color: #EAF8EB;
+}
+/* Table background highlight 2 */
+.bghighlight2 {
+	background-color: #EFCBCB;
+}
+/* mkportal footer copyright - Do not remove, modify or obscure the copyright text */
+.mkcopyright {
+	font-size: 10px;
+}
+.mkcopyright a {
+	text-decoration: none;
+}
+/* Calendar block current day highlighting */
+#mkcaltoday {
+	border:2px;
+	border-style:outset;
+	background-color: #0000ff;
+}
+
+/* Table Cell Alignment ltr/rtl */
+
+/* default is "left" */
+.mkalign1 {
+	text-align: left;
+}
+
+/* default is "right" */
+.mkalign2 {
+	text-align: right;
+}
+
+</style>
+
+<link rel="stylesheet" href="mkportal/modules/rss/files/simplepie.css" type="text/css" media="screen, projector" />
+
+  
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="content-language" content="en-gb" />
+<meta http-equiv="content-style-type" content="text/css" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<meta name="title" content="View topic - COF, D2, DC6, DS1, DT1, TBL File format" />
+<meta name="description" lang="en" content="Starting from now, I'll try to make my in-progress documentations about miscelaneous file format here, to have some kind of reference, until they become good ..." />
+<meta name="keywords"    content="are, can, this, have, from, some, they, use, make, about, but, for, tbl, file, you" />
+<meta name="category"    content="general" />
+<meta name="robots"      content="index,follow" />
+<meta name="distribution" content="global" />
+<meta name="resource-type" content="document" />
+<meta name="copyright" content="The Phrozen Keep" />
+<title>The Phrozen Keep &bull; View topic - COF, D2, DC6, DS1, DT1, TBL File format</title>
+
+<link rel="stylesheet" href="./styles/BlackRock/theme/stylesheet.css" type="text/css" />
+
+<script type="text/javascript">
+// <![CDATA[
+
+function popup(url, width, height, name)
+{
+	if (!name)
+	{
+		name = '_popup';
+	}
+
+	window.open(url.replace(/&amp;/g, '&'), name, 'height=' + height + ',resizable=yes,scrollbars=yes,width=' + width);
+	return false;
+}
+
+function jumpto()
+{
+	var page = prompt('Enter the page number you wish to go to:', '1');
+	var per_page = '';
+	var base_url = '';
+
+	if (page !== null && !isNaN(page) && page == Math.floor(page) && page > 0)
+	{
+		if (base_url.indexOf('?') == -1)
+		{
+			document.location.href = base_url + '?start=' + ((page - 1) * per_page);
+		}
+		else
+		{
+			document.location.href = base_url.replace(/&amp;/g, '&') + '&start=' + ((page - 1) * per_page);
+		}
+	}
+}
+
+/**
+* Find a member
+*/
+function find_username(url)
+{
+	popup(url, 760, 570, '_usersearch');
+	return false;
+}
+
+/**
+* Mark/unmark checklist
+* id = ID of parent container, name = name prefix, state = state [true/false]
+*/
+function marklist(id, name, state)
+{
+	var parent = document.getElementById(id);
+	if (!parent)
+	{
+		eval('parent = document.' + id);
+	}
+
+	if (!parent)
+	{
+		return;
+	}
+
+	var rb = parent.getElementsByTagName('input');
+	
+	for (var r = 0; r < rb.length; r++)
+	{
+		if (rb[r].name.substr(0, name.length) == name)
+		{
+			rb[r].checked = state;
+		}
+	}
+}
+
+function selectCode(a)
+{
+   // Get ID of code block
+   var e = a.parentNode.parentNode.getElementsByTagName('CODE')[0];
+
+   // Not IE
+   if (window.getSelection)
+   {
+      var s = window.getSelection();
+      // Safari
+      if (s.setBaseAndExtent)
+      {
+         s.setBaseAndExtent(e, 0, e, e.innerText.length - 1);
+      }
+      // Firefox and Opera
+      else
+      {
+         var r = document.createRange();
+         r.selectNodeContents(e);
+         s.removeAllRanges();
+         s.addRange(r);
+      }
+   }
+   // Some older browsers
+   else if (document.getSelection)
+   {
+      var s = document.getSelection();
+      var r = document.createRange();
+      r.selectNodeContents(e);
+      s.removeAllRanges();
+      s.addRange(r);
+   }
+   // IE
+   else if (document.selection)
+   {
+      var r = document.body.createTextRange();
+      r.moveToElementText(e);
+      r.select();
+   }
+}
+
+// ]]>
+</script>
+<link href="./styles/BlackRock/theme/prime_links/prime_links.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="./styles/BlackRock/template/tooltip.js"></script>
+
+  <script type="text/javascript">
+	mkportalurl = 'http://phrozenkeep.hugelaser.com/';
+	var MKAJAX_IMAGES_PATH = "../mkportal/templates/Forum/images/mkajax/";
+    	var MKAJAX_SITEPATH = "../";
+  </script>
+  <script type="text/javascript" src="../mkportal/templates/Forum/mkp.js"></script>
+  <script type="text/javascript" src="../mkportal/templates/Forum/mkp.ext.ajax.js"></script>
+  
+<script type="text/javascript" src="..//mkportal/blocks/imgmenu/js/mootools.js"></script>
+<script type="text/javascript" src="..//mkportal/blocks/imgmenu/imgmenu.js"></script>
+<link href="..//mkportal/blocks/imgmenu/imgmenu.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">td { padding: 0; }</style>
+
+</head>
+
+
+<body id="phpbb" class="section-index ltr" style="padding: 0px;" onload="javascript:GetPos();">
+<a name="top"></a>
+
+<!-- end document head -->
+
+<!-- begin open main table -->
+
+<div id="mkwrapper" style="width: 100%;">
+<table class="tabmain" width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
+
+  <tr>
+    <td width="100%" align="center">
+
+      <table border="0" width="100%" cellpadding="0" cellspacing="0">
+
+<!-- end open main table -->
+
+<!-- begin logostrip -->
+  
+	<tr>
+	  <td id="mklogostrip" width="100%">
+
+     <TABLE border="0" cellpadding="0" cellspacing="0" WIDTH="100%" background="images/pagetop_middle.gif">
+<TR>
+        <TD><img src="images/pagetop_left2.png" height="120" width="500" naturalsizeflag="0" align="bottom"></td>
+	<td align="center" valign="bottom">
+<!-- original header     
+                                <script type="text/javascript">< ! - -
+                                        google_ad_client = "pub-0170085626153842";
+                                        google_ad_width = 468;
+                                        google_ad_height = 60;
+                                        google_ad_format = "468x60_as";
+                                        google_ad_channel ="";
+                                        google_ad_type = "text";
+                                        google_color_border = "2F2F4F";
+                                        google_color_bg = "2F2F4F";
+                                        google_color_link = "2F2F4F";
+                                        google_color_url = "336699";
+                                        google_color_text = "333333";
+                                / / - - ></script>
+                                <script type="text/javascript"
+                                  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+                                </script>//-->
+
+	</td>
+        <TD width="500"><div align="right"><img src="images/pagetop_right2.png" title="... And the heavens shall tremble" width="500" height="120" " naturalsizeflag="0" align="bottom"></div>
+</TR>
+</TABLE>
+
+
+<!-- 10 anniversary header 
+<TABLE border="0" cellpadding="0" cellspacing="0" WIDTH="100%" background="images/pagetop_middle10.gif">
+<TR>
+        <TD><img src="images/pagetop_left10.png" height="120" width="500" naturalsizeflag="0" align="bottom"></td>
+	<td align="center" valign="bottom">
+	</td>
+        <TD width="500"><div align="right"><img src="images/pagetop_right10.png" title="" width="500" height="120" " naturalsizeflag="0" align="bottom"></div>
+</TR>
+</TABLE>
+//-->
+
+          </td>
+	</tr>
+	
+<!-- end logostrip -->
+
+<!-- begin linkbar -->
+
+<!-- end linkbar -->
+
+<!-- begin open portal body -->
+
+	<tr align="center">
+	  <td width="100%">
+	    <table border="0" width="100%" cellspacing="0" cellpadding="0">
+	      <tr>
+
+<!-- end open portal body -->
+
+<script type="text/javascript">
+			
+			window.addEvent('domready', function(){
+				var myMenu = new ImageMenu($$('#imageMenu a'),{openWidth:310, border:2});
+			});
+		</script>  
+
+	      
+<!-- begin left column -->
+
+		<td id="menusx" valign="top">
+		<div id="menucontents" class="mkalign1" style="">
+		<div class="mkalign2"><a href="javascript:ColumnClose('menusx');MemoPos('MKmenusx', '1');"><img src="../mkportal/templates/Forum/images/f2.gif" border="0" alt="" /></a>&nbsp;</div>
+		  <table cellpadding="0" cellspacing="2" border="0" style="width: 140px;">
+		  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Main Menu</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      
+		      		<tr><td width="100%" class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php" title="Home">Home</a>
+<!-- end block link template -->
+</td></tr>
+			
+		      		<tr><td width="100%" class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="../forum/index.php" title="The Phrozen Forums">The Phrozen Forums</a>
+<!-- end block link template -->
+</td></tr>
+			
+		      		<tr><td width="100%" class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?ind=reviews" title="Knowledge Base">Knowledge Base</a>
+<!-- end block link template -->
+</td></tr>
+			
+		      		<tr><td width="100%" class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?ind=gallery" title="Image Gallery">Image Gallery</a>
+<!-- end block link template -->
+</td></tr>
+			
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Forum</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      <tr><td class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?pid=1" title="Terms of Service">Terms of Service</a>
+<!-- end block link template -->
+</td></tr><tr><td class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="../forum/search.php?search_id=newposts" title="New posts">New posts</a>
+<!-- end block link template -->
+</td></tr><tr><td class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="../forum/memberlist.php" title="Users">Users</a>
+<!-- end block link template -->
+</td></tr><tr><td class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="../forum/faq.php" title="Help">Help</a>
+<!-- end block link template -->
+</td></tr>
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Search</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      <tr><td class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="../forum/search.php" title="Forum">Forum</a>
+<!-- end block link template -->
+</td></tr><tr><td class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?ind=gallery&amp;op=search" title="Images">Images</a>
+<!-- end block link template -->
+</td></tr><tr><td class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?ind=reviews&amp;op=search" title="Knowledge Base">Knowledge Base</a>
+<!-- end block link template -->
+</td></tr>
+				<tr>
+				  <td class="tdblock" align="center">
+				    <a href="http://www.google.com/"><img src="http://phrozenkeep.hugelaser.com/mkportal/modules/search/google_logo.png" alt="Google" align="top" /></a><br />
+
+				    <form action="http://www.google.com/search" method="get" target="blank">	    
+				    <input size="12" name="q" class="mkblkinput" /><br />
+				    <input type="hidden" name="hl" />
+				    <input type="submit" name="btnG" value="Search" class="mkbutton" />
+				    </form>
+				  </td>
+				</tr>
+
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Features</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      <tr><td class="blocks"><table style="width: 100%;" border="0" cellspacing="1" cellpadding="0"><tbody><tr><td class="tdblock"> <a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?ind=reviews&op=entry_view&iden=455">History of the Site</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?ind=reviews&op=section_view&idev=9">Humor</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?ind=reviews&op=section_view&idev=10">Interviews</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?ind=reviews&op=section_view&idev=11">Mod Reviews</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?pid=34">Linking To Us</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?pid=28">Unofficial IRC</a></td></tr> </tbody></table></td></tr>
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">File Center</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      <tr><td class="blocks"><table border="0" cellspacing="1" cellpadding="0" width="100%">
+<tbody>
+<tr>
+<td class="tdblock"> <a class="uno" href="/filecenter/dload.php">Main Page</a></td>
+</tr>
+<tr>
+<td class="tdblock"> <a class="uno" href="/filecenter/dload.php?action=search">File Search</a></td>
+</tr>
+<tr>
+<td class="tdblock"> <a class="uno" href="/filecenter/dload.php?action=category&cat_id=113">Hosted Sites</a></td>
+</tr>
+<tr>
+<td class="tdblock"> <a class="uno" href="/filecenter/dload.php?action=category&cat_id=109">Humor</a></td>
+</tr>
+<tr>
+<td class="tdblock"> <a class="uno" href="/filecenter/dload.php?action=category&cat_id=97">Miscellaneous</a></td>
+</tr>
+<tr>
+<td class="tdblock"> <a class="uno" href="/filecenter/dload.php?action=category&cat_id=1">Mod Making Tools</a></td>
+</tr>
+<tr>
+<td class="tdblock"> <a class="uno" href="/filecenter/dload.php?action=category&cat_id=2">Mod Archive</a></td>
+</tr>
+<tr>
+<td class="tdblock"> <a class="uno" href="/filecenter/dload.php?action=category&cat_id=87">Old Forum Dumps</a></td>
+</tr>
+<tr>
+<td class="tdblock"> <a class="uno" href="/filecenter/dload.php?action=category&cat_id=27">Patches</a></td>
+</tr>
+<tr>
+<td class="tdblock"> <a class="uno" href="/filecenter/dload.php?action=category&cat_id=39">Plugins</a></td>
+</tr>
+<tr>
+<td class="tdblock"> <a class="uno" href="/filecenter/dload.php?action=category&cat_id=38">Resources</a></td>
+</tr>
+</tbody>
+</table></td></tr>
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Diablo II Mod Sites</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      <tr><td class="blocks"><table style="width: 100%;" border="0" cellspacing="1" cellpadding="0"><tbody><tr><td class="tdblock"> <a class="uno" href="http://bth.d2mods.com/" target="_blank">Back to Hellfire</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://bfed2.diablomods.ru/" target="_blank">Battle for Elements</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://blackened.d2mods.com" target="_blank">Blackened</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://n.ethz.ch/student/henninav/" target="_blank">d2:elements</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://es.d2mods.com" target="_blank">Eastern Sun</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://d2immersion.com/" target="_blank">Immersion</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://modsbylaz.hugelaser.com/" target="_blank">Mods by Laz</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://www.sevenlances.net/" target="_blank">Seven Lances</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://perso.wanadoo.fr/maususatlas/TohXt/Index.html" target="_blank">Time of Heroes</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://www.walhallamod.de/" target="_blank">Walhalla</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://zyel.d2mods.com" target="_blank">Zy-El</a></td></tr></tbody></table></td></tr>
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Modding Resources</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      <tr><td class="blocks"><table style="width: 100%;" border="0" cellspacing="1" cellpadding="0"><tbody><tr><td class="tdblock">&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?pid=32">Diabolic Cartography</a></td></tr> <tr><td class="tdblock">&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?pid=22">Incandescence</a></td></tr> <tr><td class="tdblock">&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?pid=33">Infinitum</a></td></tr> <tr><td class="tdblock">&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?pid=21">Inventharia</a></td></tr> <tr><td class="tdblock">&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?pid=23">Warped Tiles</a></td></tr></tbody></table></td></tr>
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Partner Sites</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      <tr><td class="blocks"><table style="width: 100%;" border="0" cellspacing="1" cellpadding="0"><tbody><tr><td class="tdblock"> <a class="uno" href="http://18v.biz/portal.html" target="_blank">18v.biz</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://www.blizzplanet.com/" target="_blank">Blizzplanet</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://www.diablo2.com/" target="_blank">Diablo2.com</a></td></tr><tr><td class="tdblock"> <a class="uno" href="http://www.diablo3plaza.com/" target="_blank">Diablo3Plaza</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://www.diablogamer.com/" target="_blank">DiabloGamer.com</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://www.diabloii.net/" target="_blank">Diabloii.net</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://www.diablowiki.com/" target="_blank">DiabloWiki</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://www.hugelaser.com/" target="_blank">Huge Laser</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://www.lurkerlounge.com/" target="_blank">Lurker Lounge</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://modsreloaded.com/" target="_blank">Mods Reloaded</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://www.neoarcadia.com/" target="_blank">Neoarcadia.com</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://www.planetdiablo.com/" target="_blank">PlanetDiablo</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://www.theamazonbasin.com/" target="_blank">The Amazon Basin</a></td></tr></tbody></table></td></tr>
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Credits</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      <tr><td width="100%" class="tdblock">&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?pid=11">Copyrights</a></td></tr>
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+		  </table>
+		</div>
+		<div id="menucloseds" style="display:none">
+		<div class="mkalign2"><a href="javascript:ColumnOpen('menusx');MemoPos('MKmenusx', '0');"><img src="../mkportal/templates/Forum/images/f1.gif" border="0"  alt="" /></a></div>
+		</div>
+		</td>
+
+<!-- end left column -->
+
+<!-- begin column spacer -->
+
+		<td class="vspacer" width="0%">&nbsp;</td>
+
+<!-- end column spacer -->
+
+<!-- begin center column -->
+
+		<td valign="top" class="mkalign1" width="100%">
+
+<div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "pub-3246876018000001";
+/* Phrozen Keep Leaderboard */
+google_ad_slot = "7514462417";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+
+		  <table cellpadding="0" cellspacing="3" border="0" width="100%"> 
+		  <tr><td valign="top" class="mkalign1">
+
+
+<div id="main-block">
+
+<a name="top"></a>
+
+<div id="wrapheader">
+
+	
+
+	<div id="menubar" style="margin: 5px 5px 0 5px;" >
+		<table width="100%" cellspacing="0">
+		<tr>
+			<td class="genmed">
+				<img src="./styles/BlackRock/theme/images/icon_mini_login.gif" alt="*" /> <a href="./ucp.php?mode=logout&amp;sid=b906a6ac8049986af72bfe2740ee24b2">Logout [ kambala ]</a>&nbsp; &nbsp;<img src="./styles/BlackRock/theme/images/icon_mini_message.gif" alt="*" /> <a href="./ucp.php?i=pm&amp;folder=inbox"><strong>0</strong> new messages</a>			</td>
+			<td class="genmed" align="right">
+				<img src="./styles/BlackRock/theme/images/icon_mini_faq.gif" alt="*" /> <a href="./faq.php">FAQ</a>
+				&nbsp; &nbsp;<img src="./styles/BlackRock/theme/images/icon_mini_search.gif" alt="*" /> <a href="./search.php">Search</a>&nbsp; &nbsp;<img src="./styles/BlackRock/theme/images/icon_mini_members.gif" alt="*" /> <a href="./memberlist.php">Members</a>&nbsp; &nbsp;<img src="./styles/BlackRock/theme/images/icon_mini_profile.gif"  alt="*" /> <a href="./ucp.php">User Control Panel</a>			</td>
+		</tr>
+		</table>
+	</div>
+</div><table class="tablebg" width="100%" cellspacing="1" cellpadding="0" style="margin-top: 5px;">
+	<tr>
+		<td>
+			<p class="breadcrumbs"><a href="./index.php">Board index</a> &#187; <a href="./viewforum.php?f=161">Diablo 2 Discussion</a> &#187; <a href="./viewforum.php?f=165">Diablo 2 Mod Making</a> &#187; <a href="./viewforum.php?f=7">Tools</a></p>
+		</td>
+	</tr>
+	</table>
+<div id="pageheader">
+	<h3><a class="titles" href="./viewtopic.php?f=7&amp;t=724&amp;start=0">COF, D2, DC6, DS1, DT1, TBL File format</a></h3>
+</div>
+
+<br clear="all" /><br />
+
+<div id="pagecontent">
+
+	<table width="100%" cellspacing="1">
+	<tr>
+		<td align="left" valign="middle" nowrap="nowrap">
+		<a href="./posting.php?mode=post&amp;f=7"><img src="./styles/BlackRock/imageset/en/post.gif" alt="Post new topic" title="Post new topic" /></a>&nbsp;<a href="./posting.php?mode=reply&amp;f=7&amp;t=724"><img src="./styles/BlackRock/imageset/en/reply-locked.gif" alt="This topic is locked, you cannot edit posts or make further replies." title="This topic is locked, you cannot edit posts or make further replies." /></a>		</td>
+					<td class="nav" valign="middle" nowrap="nowrap">&nbsp;Page <strong>1</strong> of <strong>1</strong><br /></td>
+			<td class="gensmall" nowrap="nowrap">&nbsp;[ 6 posts ]&nbsp;</td>
+			<td class="gensmall" width="100%" align="right" nowrap="nowrap"></td>
+			</tr>
+	</table>
+
+	<table class="tablebg" width="100%" cellspacing="1">
+	<tr>
+		<td class="cat">
+			<table width="100%" cellspacing="0">
+			<tr>
+				<td class="nav" nowrap="nowrap">&nbsp;
+				<a href="./viewtopic.php?uid=37948&amp;f=7&amp;t=724&amp;watch=topic&amp;start=0&amp;hash=87c5138a" title="Subscribe topic">Subscribe topic</a> | <a href="./viewtopic.php?f=7&amp;t=724&amp;start=0&amp;bookmark=1&amp;hash=87c5138a" title="Bookmark topic">Bookmark topic</a> | <a href="./viewtopic.php?f=7&amp;t=724&amp;start=0&amp;view=print" title="Print view">Print view</a> | <a href="./memberlist.php?mode=email&amp;t=724" title="E-mail friend">E-mail friend</a>				</td>
+				<td class="nav" align="right" nowrap="nowrap"><a href="./viewtopic.php?f=7&amp;t=724&amp;view=previous">Previous topic</a> | <a href="./viewtopic.php?f=7&amp;t=724&amp;view=next">Next topic</a>&nbsp;</td>
+			</tr>
+			</table>
+		</td>
+	</tr>
+	</table>
+
+	<table class="tablebg" width="100%" cellspacing="1">
+			<tr>
+			<th>Author</th>
+			<th>Message</th>
+		</tr>
+	<tr class="row1">
+			<td align="center" valign="middle">
+				<a name="p5557"></a>
+				<b class="postauthor" style="color: #00CC00">	
+					<a href="#" onclick="insert_text('[b][color=#00CC00]Paul Siramy[/color][/b], ', true, false); return false;"><span style="color: #00CC00;" class="username-coloured">Paul Siramy</span></a>
+					</b>
+			</td>
+			<td width="100%" height="25">
+				<table width="100%" cellspacing="0">
+				<tr>
+									<td class="gensmall" width="100%"><div style="float: left;"><a href="./viewtopic.php?p=5557#p5557"><img src="./styles/BlackRock/imageset/icon_post_target.gif" alt="Post" title="Post" /></a><b>Posted:</b> 07 Jun 2002, 23:54&nbsp;<br />&nbsp;<b>Post subject:</b> COF, D2, DC6, DS1, DT1, TBL File format</div><div style="float: right;">&nbsp;</div></td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+		
+		<tr class="row1">
+			<td valign="top" class="profile">
+				<table cellspacing="4" align="center" width="150">
+							<tr>
+					<td><img src="./styles/BlackRock/imageset/en/offline.gif" alt="Offline" title="Offline" /></td>
+				</tr>
+							<tr>
+					<td class="postdetails">Moderator</td>
+				</tr>
+							<tr>
+					<td><img src="./images/ranks/shield-3.gif" alt="Moderator" title="Moderator" /></td>
+				</tr>
+							<tr>
+					<td class="postdetails">Principality</td>
+				</tr>
+							<tr>
+					<td><img src="./download/file.php?avatar=30.gif" width="100" height="100" alt="User avatar" /></td>
+				</tr>
+							</table>
+
+				<span class="postdetails">
+					<br /><b>Age:</b> 36<br /><b>Joined:</b> 25 May 2002, 16:39<br /><b>Posts:</b> 2770<br /><b>Location:</b> La Garenne Colombes (near Paris)<br /><b>Gender:</b> <img src="./styles/BlackRock/imageset/icon_gender_m.gif" alt="Male" title="Male" />				</span>
+
+			</td>
+			<td valign="top">
+				<table width="100%" cellspacing="5">
+				<tr>
+					<td>
+					
+						<div class="postbody">Starting from now, I'll try to make my <em>in-progress</em> documentations about miscelaneous file format here, to have some kind of reference, until they become good to give to the &quot;Phrozen Keep Ressources&quot;. I'll try to make 1 post for each format too. In order to keep it &quot;clean&quot; I'll lock the topic, but this can be debated.<br /><br />Since the posts are long, I have made this links if you want to use them :<br /><a href="http://d2mods.com/forum/viewtopic.php?t=724#p5558" class="postlink" rel="nofollow" onclick="this.target='_blank';"><span style="color: cyan">DT1 Format</span></a> 7 June 2002<br /><a href="http://d2mods.com/forum/viewtopic.php?t=724#p5559" class="postlink" rel="nofollow" onclick="this.target='_blank';"><span style="color: cyan">DS1 Format</span></a> 16 June 2002<br /><a href="http://d2mods.com/forum/viewtopic.php?t=724#p32580" class="postlink" rel="nofollow" onclick="this.target='_blank';"><span style="color: cyan">COF and D2 Formats</span></a><br /><a href="http://d2mods.com/forum/viewtopic.php?t=724#p107072" class="postlink" rel="nofollow" onclick="this.target='_blank';"><span style="color: cyan">TBL Format</span></a> 13 november 2003<br /><a href="http://d2mods.com/forum/viewtopic.php?t=724#p148076" class="postlink" rel="nofollow" onclick="this.target='_blank';"><span style="color: cyan">DC6 Format</span></a> 8 january 2004</div>
+
+											<span class="postbody"><br />_________________<br /><span style="font-size: 85%; line-height: normal"><a href="http://paul.siramy.free.fr/_divers/dt1/DT1%20Tools.zip" class="postlink zip_link" rel="nofollow" onclick="this.target='_blank';">DT1 Tools</a> - <a href="http://paul.siramy.free.fr/_divers/ds1/dl_ds1edit.html" class="postlink" rel="nofollow" onclick="this.target='_blank';">DS1 Editor</a> - <a href="http://paul.siramy.free.fr/_divers/mpql.zip" class="postlink zip_link" rel="nofollow" onclick="this.target='_blank';">MPQ list file</a> - <a href="http://paul.siramy.free.fr/_divers2/extracting_diablo2_animations.zip" class="postlink zip_link" rel="nofollow" onclick="this.target='_blank';">Extracting D2 Animation</a> - <a href="http://paul.siramy.free.fr/_divers2/tut_any_units_ds1/" class="postlink" rel="nofollow" onclick="this.target='_blank';">Adding ANY Monsters and ANY Objects to a DS1</a> - <a href="http://paul.siramy.free.fr/_divers2/tmptutcmap/" class="postlink" rel="nofollow" onclick="this.target='_blank';">New monster color variations from scratch</a><br /><span style="color: #AAAAAA"><em>&quot;Sorry I can't give you offsets or anything, my dlls are always very mutant compared to what's in the release&quot;</em> - <strong>Isolde, aka Peter Hu, 30 Jun 2002</strong></span></span></span>
+												<br /><br />
+							<span class="gensmall">Last edited by <a href="./memberlist.php?mode=viewprofile&amp;u=30" style="color: #00CC00;" class="username-coloured">Paul Siramy</a> on 24 Jun 2004, 03:31, edited 33 times in total.</span>
+						<br clear="all" /><br />					</td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+
+		<tr class="row1">
+			<td class="profile"><strong><a href="#wrapheader">Top</a></strong></td>
+			<td><div class="gensmall" style="float: left;">&nbsp;<a href="./memberlist.php?mode=viewprofile&amp;u=30"><img src="./styles/BlackRock/imageset/en/icon_profile.gif" alt="Profile" title="Profile" /></a> <a href="./ucp.php?i=pm&amp;mode=compose&amp;action=quotepost&amp;p=5557"><img src="./styles/BlackRock/imageset/en/icon_pm.gif" alt="Send private message" title="Send private message" /></a> <a href="./memberlist.php?mode=email&amp;u=30"><img src="./styles/BlackRock/imageset/en/icon_email.gif" alt="E-mail" title="E-mail" /></a> &nbsp;</div> <div class="gensmall" style="float: right;"><a href="./report.php?f=7&amp;p=5557"><img src="./styles/BlackRock/imageset/en/icon_report.gif" alt="Report this post" title="Report this post" /></a> <a href="./posting.php?mode=quote&amp;f=7&amp;p=5557"><img src="./styles/BlackRock/imageset/en/icon_quote.gif" alt="Reply with quote" title="Reply with quote" /></a> &nbsp;</div></td>
+			</tr>
+
+	<tr>
+		<td class="spacer" colspan="2" height="10"><img src="images/spacer.gif" alt="" width="1" height="1" /></td>
+	</tr>
+	</table>
+	<table class="tablebg" width="100%" cellspacing="1">
+	<tr class="row2">
+			<td align="center" valign="middle">
+				<a name="p5558"></a>
+				<b class="postauthor" style="color: #00CC00">	
+					<a href="#" onclick="insert_text('[b][color=#00CC00]Paul Siramy[/color][/b], ', true, false); return false;"><span style="color: #00CC00;" class="username-coloured">Paul Siramy</span></a>
+					</b>
+			</td>
+			<td width="100%" height="25">
+				<table width="100%" cellspacing="0">
+				<tr>
+									<td class="gensmall" width="100%"><div style="float: left;"><a href="./viewtopic.php?p=5558#p5558"><img src="./styles/BlackRock/imageset/icon_post_target.gif" alt="Post" title="Post" /></a><b>Posted:</b> 07 Jun 2002, 23:55&nbsp;<br />&nbsp;<b>Post subject:</b> DT1 Format</div><div style="float: right;">&nbsp;</div></td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+		
+		<tr class="row2">
+			<td valign="top" class="profile">
+				<table cellspacing="4" align="center" width="150">
+							<tr>
+					<td><img src="./styles/BlackRock/imageset/en/offline.gif" alt="Offline" title="Offline" /></td>
+				</tr>
+							<tr>
+					<td class="postdetails">Moderator</td>
+				</tr>
+							<tr>
+					<td><img src="./images/ranks/shield-3.gif" alt="Moderator" title="Moderator" /></td>
+				</tr>
+							<tr>
+					<td class="postdetails">Principality</td>
+				</tr>
+							<tr>
+					<td><img src="./download/file.php?avatar=30.gif" width="100" height="100" alt="User avatar" /></td>
+				</tr>
+							</table>
+
+				<span class="postdetails">
+					<br /><b>Age:</b> 36<br /><b>Joined:</b> 25 May 2002, 16:39<br /><b>Posts:</b> 2770<br /><b>Location:</b> La Garenne Colombes (near Paris)<br /><b>Gender:</b> <img src="./styles/BlackRock/imageset/icon_gender_m.gif" alt="Male" title="Male" />				</span>
+
+			</td>
+			<td valign="top">
+				<table width="100%" cellspacing="5">
+				<tr>
+					<td>
+					
+						<div class="postbody"><span style="color: orange"><span style="font-size: 167%; line-height: normal"><strong>DT1 Format </strong></span></span> <span style="color: cyan">  (thanks to <strong>Clannad</strong> for the original dt1 format source)</span><br /><br /><br /><br /> <img src="./images/smilies/icon_arrow.gif" alt=":arrow:" title="Arrow" /> This doc has been completly rewrite, and is now available here : <a href="http://paul.siramy.free.fr/_divers/dt1_doc/" class="postlink" rel="nofollow" onclick="this.target='_blank';">http://paul.siramy.free.fr/_divers/dt1_doc/</a>, or you can take the ZIP version (<a href="http://paul.siramy.free.fr/_divers/dt1_doc.zip" class="postlink zip_link" rel="nofollow" onclick="this.target='_blank';">http://paul.siramy.free.fr/_divers/dt1_doc.zip</a>, 192 KB). It is also in the knownledge base : <a href="http://d2mods.com/index.php?ind=reviews&amp;op=entry_view&amp;iden=40" class="postlink" rel="nofollow" onclick="this.target='_blank';">Knowledge Base-&gt;File Formats-&gt;The DT1 Format</a>, but as of 26 june 2010, it lacks screenshots : they must have been lost during a web migration.<br /><br /><br /><br /><br /><span style="color: yellow"><strong>Structure of a dt1</strong></span><br /><br /><ul>   * file header<br />   * X block headers<br />   * X sub-block struct, each one structured like that :<br />   <ul>      - Y sub-blocks header<br />      - Y sub-blocks data<br />   </ul></ul><br /><br /><br /><span style="color: yellow"><strong>Concepts</strong></span><br />A block is a tile (160 pixels width max, variable height)<br />A tile can be understand as a floor with / without wall<br />The game use 3d-isometric tiles<br />A tile is composed of many sub-tiles<br /><ul>   * Floor have 5*5 (25) sub-tiles (or less)<br />   <ul>      - Sub-tiles are in 3d-isometric shape<br />   </ul>   * Walls have variable amount of sub-tiles<br />   <ul>      - Each sub-tiles fit in a 32*32 pixels box<br />   </ul></ul>Roof exists : they are floors *above* regular floors<br />        (important for player/tile drawing priority) <br /><br /><br /><br /><span style="color: yellow"><strong>File Header</strong></span><br /><br /><div><div class="codetitle"><b>Code:</b> <a href="#" style="color: #FF6600" onclick="selectCode(this); return false;" class="postlink-local">Select all</a></div><div class="codecontent"><code># bytes name&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; description<br />------- --------------- --------------------------------------------<br />4&nbsp; &nbsp; &nbsp; &nbsp;x1&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; version (= 7)<br />4&nbsp; &nbsp; &nbsp; &nbsp;x2&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; version (= 6)<br />260&nbsp; &nbsp; &nbsp;zeros1&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; unused<br />4&nbsp; &nbsp; &nbsp; &nbsp;nb_block&nbsp; &nbsp; &nbsp; &nbsp; # of blocks<br />4&nbsp; &nbsp; &nbsp; &nbsp;bh_ptr&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; pointer in file to block headers (= 0x114)<br /></code></div></div><br /><br /><br />There are some dt1 with x1 and x2 not equal to 7 and 6. They are in<br />another format, or maybe just in a variation of this format, which<br />is not yet known. <br /><br /><br /><br /><br /><span style="color: yellow"><strong>Block Header</strong></span><br /><br /><div><div class="codetitle"><b>Code:</b> <a href="#" style="color: #FF6600" onclick="selectCode(this); return false;" class="postlink-local">Select all</a></div><div class="codecontent"><code> <br /># bytes name&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; description<br />------- --------------- --------------------------------------------------------<br />4&nbsp; &nbsp; &nbsp; &nbsp;direction&nbsp; &nbsp; &nbsp; &nbsp;direction<br />2&nbsp; &nbsp; &nbsp; &nbsp;roof_y&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; # of pixels to the up when drawing the block<br />1&nbsp; &nbsp; &nbsp; &nbsp;sound&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;sound index when walking / runing<br />1&nbsp; &nbsp; &nbsp; &nbsp;animated&nbsp; &nbsp; &nbsp; &nbsp; set to 0x01 when floor is animated<br />4&nbsp; &nbsp; &nbsp; &nbsp;size_y&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; power of 32 pixels<br />4&nbsp; &nbsp; &nbsp; &nbsp;size_x&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; power of 32 pixels<br />4&nbsp; &nbsp; &nbsp; &nbsp;zeros1&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; unused<br />4&nbsp; &nbsp; &nbsp; &nbsp;orientation&nbsp; &nbsp; &nbsp;orientation (islveo's corner prop 1)<br />4&nbsp; &nbsp; &nbsp; &nbsp;main_index&nbsp; &nbsp; &nbsp; main index<br />4&nbsp; &nbsp; &nbsp; &nbsp;sub_index&nbsp; &nbsp; &nbsp; &nbsp;sub-index<br />4&nbsp; &nbsp; &nbsp; &nbsp;frame&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;if floor animated, # of frame else ?<br />1&nbsp; &nbsp; &nbsp; &nbsp;unknown_a&nbsp; &nbsp; &nbsp; &nbsp;?<br />1&nbsp; &nbsp; &nbsp; &nbsp;unknown_b&nbsp; &nbsp; &nbsp; &nbsp;?<br />1&nbsp; &nbsp; &nbsp; &nbsp;unknown_c&nbsp; &nbsp; &nbsp; &nbsp;?<br />1&nbsp; &nbsp; &nbsp; &nbsp;unknown_d&nbsp; &nbsp; &nbsp; &nbsp;?<br />25&nbsp; &nbsp; &nbsp; floor_flags&nbsp; &nbsp; &nbsp;for each sub-tiles from right to left, then bottom to up<br />7&nbsp; &nbsp; &nbsp; &nbsp;zeros2&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; unused<br />4&nbsp; &nbsp; &nbsp; &nbsp;data_ptr&nbsp; &nbsp; &nbsp; &nbsp; pointer to sub-block headers<br />4&nbsp; &nbsp; &nbsp; &nbsp;length&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; length of the sub-blocks<br />4&nbsp; &nbsp; &nbsp; &nbsp;sub_block&nbsp; &nbsp; &nbsp; &nbsp;number of sub-blocks<br />12&nbsp; &nbsp; &nbsp; zeros3&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; unused<br /></code></div></div><br /><br />What identified a dt1 in the ds1 (d2's map) is a not a simple index, it's a<br />combination of orientation / main_index / sub_index. There can be more than<br />1 tile with this combination in the dt1. In this case, the game choose 1<br />randomly whithin the same. <br /><br />direction seems to be a &quot;general orientation&quot;, and orientation some kind<br />of a part of this one. When direction is 3, there IS always 2 kind of tiles,<br />1 with orientation = 3, and another with 4. These 3 and 4 must be draw at<br />the same place, they are the left and right part of a corner. <br /><br />roof_y tells in how many pixels the tile must be draw upper. <br /><br />size_y and size_x are the &quot;box&quot; where the tile can fit in. Relative to the<br />bottom-left corner of the bitmap. <br /><br />if floor is animated, frame is the number of frame in the animation. But it<br />is also used in other case... I think this is some kind of &quot;rarity&quot; for the<br />tiles with the same orientation / main_index / sub_index. <br /><br />floor_flags are for each sub-tiles of the floor, even if there is only a<br />wall to draw. It is used to know if the player can go thru the sub-tile, but<br />maybe for some kind of transparency too. <br /><br />Floors and roof (orientation = 0 and 15) need to be draw 80 pixels lower than<br />the walls. <br /><br /><br /><br /><br /><span style="color: yellow"><strong>Sub-Block Header</strong></span><br /><br /><div><div class="codetitle"><b>Code:</b> <a href="#" style="color: #FF6600" onclick="selectCode(this); return false;" class="postlink-local">Select all</a></div><div class="codecontent"><code># bytes name&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; description<br />------- --------------- ---------------------------------------------------------<br />2&nbsp; &nbsp; &nbsp; &nbsp;x_pos&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;x offset where to raw the sub-tile<br />2&nbsp; &nbsp; &nbsp; &nbsp;y_pos&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;y offset where to draw the sub-tile<br />2&nbsp; &nbsp; &nbsp; &nbsp;zeros1&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; unused<br />1&nbsp; &nbsp; &nbsp; &nbsp;grid_x&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if sub-tile of floor, its x position in the floor<br />1&nbsp; &nbsp; &nbsp; &nbsp;grid_y&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if sub-tile of floor, its y position in the floor<br />2&nbsp; &nbsp; &nbsp; &nbsp;tile_format&nbsp; &nbsp; &nbsp;method of drawing the sub-tile<br />4&nbsp; &nbsp; &nbsp; &nbsp;sub-length&nbsp; &nbsp; &nbsp; length of the sub-block data<br />2&nbsp; &nbsp; &nbsp; &nbsp;zeros2&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; unused<br />4&nbsp; &nbsp; &nbsp; &nbsp;data_offset&nbsp; &nbsp; &nbsp;pointer FROM SUB-BLOCK HEADER of this datas<br /></code></div></div><br /><br />if tile_format = 0x0001 it is a 3d-isometric sub-tile, else regular one <br /><br />sample of code for drawing 3d-isometric sub-tile (in C language)<br /><br /><br /><div><div class="codetitle"><b>Code:</b> <a href="#" style="color: #FF6600" onclick="selectCode(this); return false;" class="postlink-local">Select all</a></div><div class="codecontent"><code>void draw_sub_tile_isometric (BITMAP * dst, int x0, int y0, const UBYTE * data, int length)<br />{<br />&nbsp; &nbsp;UBYTE * ptr = data;<br />&nbsp; &nbsp;int&nbsp; &nbsp;x, y=0, n,<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;xjump&#91;15&#93; = {14, 12, 10, 8, 6, 4, 2, 0, 2, 4, 6, 8, 10, 12, 14},<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;nbpix&#91;15&#93; = {4, 8, 12, 16, 20, 24, 28, 32, 28, 24, 20, 16, 12, 8, 4};<br /><br />&nbsp; &nbsp;// 3d-isometric subtile is 256 bytes, no more, no less<br />&nbsp; &nbsp;if (length != 256)<br />&nbsp; &nbsp; &nbsp; return;<br /><br />&nbsp; &nbsp;// draw<br />&nbsp; &nbsp;while (length &gt; 0)<br />&nbsp; &nbsp;{<br />&nbsp; &nbsp; &nbsp; x = xjump&#91;y&#93;;<br />&nbsp; &nbsp; &nbsp; n = nbpix&#91;y&#93;;<br />&nbsp; &nbsp; &nbsp; length -= n;<br />&nbsp; &nbsp; &nbsp; while (n)<br />&nbsp; &nbsp; &nbsp; {<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;putpixel(dst, x0+x, y0+y, * ptr);<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;ptr++;<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;x++;<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;n--;<br />&nbsp; &nbsp; &nbsp; }<br />&nbsp; &nbsp; &nbsp; y++;<br />&nbsp; &nbsp;}<br />}<br /></code></div></div><br />1st line : draw 4 pixels<br />2nd line : draw 8 pixels<br />3nd line : draw 12 pixles<br />etc... <br /><br /><br /><br />sample of code for drawing normal sub-tile (in C language) <br /><br /><br /><div><div class="codetitle"><b>Code:</b> <a href="#" style="color: #FF6600" onclick="selectCode(this); return false;" class="postlink-local">Select all</a></div><div class="codecontent"><code>void draw_sub_tile_normal (BITMAP * dst, int x0, int y0, const UBYTE * data, int length)<br />{<br />&nbsp; &nbsp;UBYTE * ptr = data, b1, b2;<br />&nbsp; &nbsp;int&nbsp; &nbsp;x=0, y=0;<br /><br />&nbsp; &nbsp;// draw<br />&nbsp; &nbsp;while (length &gt; 0)<br />&nbsp; &nbsp;{<br />&nbsp; &nbsp; &nbsp; b1 = * ptr;<br />&nbsp; &nbsp; &nbsp; b2 = * (ptr + 1);<br />&nbsp; &nbsp; &nbsp; ptr += 2;<br />&nbsp; &nbsp; &nbsp; length -= 2;<br />&nbsp; &nbsp; &nbsp; if (b1 || b2)<br />&nbsp; &nbsp; &nbsp; {<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;x += b1;<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;length -= b2;<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;while (b2)<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; putpixel(dst, x0+x, y0+y, * ptr);<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ptr++;<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; x++;<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; b2--;<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}<br />&nbsp; &nbsp; &nbsp; }<br />&nbsp; &nbsp; &nbsp; else<br />&nbsp; &nbsp; &nbsp; {<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;x = 0;<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;y++;<br />&nbsp; &nbsp; &nbsp; }<br />&nbsp; &nbsp;}<br />}<br /></code></div></div><br />1st byte is pixels to &quot;jump&quot;, 2nd is number of &quot;solid&quot; pixels, followed by the pixels.<br />when 1st and 2nd bytes are 0 and 0, next line.<br /><br />The <strong>DT1 Tools</strong> that you can find in my signature are some prog that use this format, and their sources are provided.<br /><br />13 november 2003 : update the dt1 format doc URL</div>
+
+											<span class="postbody"><br />_________________<br /><span style="font-size: 85%; line-height: normal"><a href="http://paul.siramy.free.fr/_divers/dt1/DT1%20Tools.zip" class="postlink zip_link" rel="nofollow" onclick="this.target='_blank';">DT1 Tools</a> - <a href="http://paul.siramy.free.fr/_divers/ds1/dl_ds1edit.html" class="postlink" rel="nofollow" onclick="this.target='_blank';">DS1 Editor</a> - <a href="http://paul.siramy.free.fr/_divers/mpql.zip" class="postlink zip_link" rel="nofollow" onclick="this.target='_blank';">MPQ list file</a> - <a href="http://paul.siramy.free.fr/_divers2/extracting_diablo2_animations.zip" class="postlink zip_link" rel="nofollow" onclick="this.target='_blank';">Extracting D2 Animation</a> - <a href="http://paul.siramy.free.fr/_divers2/tut_any_units_ds1/" class="postlink" rel="nofollow" onclick="this.target='_blank';">Adding ANY Monsters and ANY Objects to a DS1</a> - <a href="http://paul.siramy.free.fr/_divers2/tmptutcmap/" class="postlink" rel="nofollow" onclick="this.target='_blank';">New monster color variations from scratch</a><br /><span style="color: #AAAAAA"><em>&quot;Sorry I can't give you offsets or anything, my dlls are always very mutant compared to what's in the release&quot;</em> - <strong>Isolde, aka Peter Hu, 30 Jun 2002</strong></span></span></span>
+												<br /><br />
+							<span class="gensmall">Last edited by <a href="./memberlist.php?mode=viewprofile&amp;u=30" style="color: #00CC00;" class="username-coloured">Paul Siramy</a> on 17 May 2004, 17:06, edited 7 times in total.</span>
+						<br clear="all" /><br />					</td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+
+		<tr class="row2">
+			<td class="profile"><strong><a href="#wrapheader">Top</a></strong></td>
+			<td><div class="gensmall" style="float: left;">&nbsp;<a href="./memberlist.php?mode=viewprofile&amp;u=30"><img src="./styles/BlackRock/imageset/en/icon_profile.gif" alt="Profile" title="Profile" /></a> <a href="./ucp.php?i=pm&amp;mode=compose&amp;action=quotepost&amp;p=5558"><img src="./styles/BlackRock/imageset/en/icon_pm.gif" alt="Send private message" title="Send private message" /></a> <a href="./memberlist.php?mode=email&amp;u=30"><img src="./styles/BlackRock/imageset/en/icon_email.gif" alt="E-mail" title="E-mail" /></a> &nbsp;</div> <div class="gensmall" style="float: right;"><a href="./report.php?f=7&amp;p=5558"><img src="./styles/BlackRock/imageset/en/icon_report.gif" alt="Report this post" title="Report this post" /></a> <a href="./posting.php?mode=quote&amp;f=7&amp;p=5558"><img src="./styles/BlackRock/imageset/en/icon_quote.gif" alt="Reply with quote" title="Reply with quote" /></a> &nbsp;</div></td>
+			</tr>
+
+	<tr>
+		<td class="spacer" colspan="2" height="10"><img src="images/spacer.gif" alt="" width="1" height="1" /></td>
+	</tr>
+	</table>
+	<table class="tablebg" width="100%" cellspacing="1">
+	<tr class="row1">
+			<td align="center" valign="middle">
+				<a name="p5559"></a>
+				<b class="postauthor" style="color: #00CC00">	
+					<a href="#" onclick="insert_text('[b][color=#00CC00]Paul Siramy[/color][/b], ', true, false); return false;"><span style="color: #00CC00;" class="username-coloured">Paul Siramy</span></a>
+					</b>
+			</td>
+			<td width="100%" height="25">
+				<table width="100%" cellspacing="0">
+				<tr>
+									<td class="gensmall" width="100%"><div style="float: left;"><a href="./viewtopic.php?p=5559#p5559"><img src="./styles/BlackRock/imageset/icon_post_target.gif" alt="Post" title="Post" /></a><b>Posted:</b> 07 Jun 2002, 23:56&nbsp;<br />&nbsp;<b>Post subject:</b> DS1 Format</div><div style="float: right;">&nbsp;</div></td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+		
+		<tr class="row1">
+			<td valign="top" class="profile">
+				<table cellspacing="4" align="center" width="150">
+							<tr>
+					<td><img src="./styles/BlackRock/imageset/en/offline.gif" alt="Offline" title="Offline" /></td>
+				</tr>
+							<tr>
+					<td class="postdetails">Moderator</td>
+				</tr>
+							<tr>
+					<td><img src="./images/ranks/shield-3.gif" alt="Moderator" title="Moderator" /></td>
+				</tr>
+							<tr>
+					<td class="postdetails">Principality</td>
+				</tr>
+							<tr>
+					<td><img src="./download/file.php?avatar=30.gif" width="100" height="100" alt="User avatar" /></td>
+				</tr>
+							</table>
+
+				<span class="postdetails">
+					<br /><b>Age:</b> 36<br /><b>Joined:</b> 25 May 2002, 16:39<br /><b>Posts:</b> 2770<br /><b>Location:</b> La Garenne Colombes (near Paris)<br /><b>Gender:</b> <img src="./styles/BlackRock/imageset/icon_gender_m.gif" alt="Male" title="Male" />				</span>
+
+			</td>
+			<td valign="top">
+				<table width="100%" cellspacing="5">
+				<tr>
+					<td>
+					
+						<div class="postbody"><span style="color: orange"><span style="font-size: 167%; line-height: normal"><strong>DS1 Format </strong></span></span> <span style="color: cyan">(thanks for <strong>Isilveo</strong> for the original ds1 format source)</span><br /><br /><br />Commented assembly listing of the ds1 loader function : <a href="http://d2mods.com/forum/viewtopic.php?p=46314" class="postlink" rel="nofollow" onclick="this.target='_blank';">ds1_load() D2Common.6FD76520 1.09b</a><br /><br /><br />last edit : 26 June 2010 : fixed the link, and removed the (very) old and out-of-date description</div>
+
+											<span class="postbody"><br />_________________<br /><span style="font-size: 85%; line-height: normal"><a href="http://paul.siramy.free.fr/_divers/dt1/DT1%20Tools.zip" class="postlink zip_link" rel="nofollow" onclick="this.target='_blank';">DT1 Tools</a> - <a href="http://paul.siramy.free.fr/_divers/ds1/dl_ds1edit.html" class="postlink" rel="nofollow" onclick="this.target='_blank';">DS1 Editor</a> - <a href="http://paul.siramy.free.fr/_divers/mpql.zip" class="postlink zip_link" rel="nofollow" onclick="this.target='_blank';">MPQ list file</a> - <a href="http://paul.siramy.free.fr/_divers2/extracting_diablo2_animations.zip" class="postlink zip_link" rel="nofollow" onclick="this.target='_blank';">Extracting D2 Animation</a> - <a href="http://paul.siramy.free.fr/_divers2/tut_any_units_ds1/" class="postlink" rel="nofollow" onclick="this.target='_blank';">Adding ANY Monsters and ANY Objects to a DS1</a> - <a href="http://paul.siramy.free.fr/_divers2/tmptutcmap/" class="postlink" rel="nofollow" onclick="this.target='_blank';">New monster color variations from scratch</a><br /><span style="color: #AAAAAA"><em>&quot;Sorry I can't give you offsets or anything, my dlls are always very mutant compared to what's in the release&quot;</em> - <strong>Isolde, aka Peter Hu, 30 Jun 2002</strong></span></span></span>
+												<br /><br />
+							<span class="gensmall">Last edited by <a href="./memberlist.php?mode=viewprofile&amp;u=30" style="color: #00CC00;" class="username-coloured">Paul Siramy</a> on 22 Nov 2002, 10:22, edited 7 times in total.</span>
+						<br clear="all" /><br />					</td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+
+		<tr class="row1">
+			<td class="profile"><strong><a href="#wrapheader">Top</a></strong></td>
+			<td><div class="gensmall" style="float: left;">&nbsp;<a href="./memberlist.php?mode=viewprofile&amp;u=30"><img src="./styles/BlackRock/imageset/en/icon_profile.gif" alt="Profile" title="Profile" /></a> <a href="./ucp.php?i=pm&amp;mode=compose&amp;action=quotepost&amp;p=5559"><img src="./styles/BlackRock/imageset/en/icon_pm.gif" alt="Send private message" title="Send private message" /></a> <a href="./memberlist.php?mode=email&amp;u=30"><img src="./styles/BlackRock/imageset/en/icon_email.gif" alt="E-mail" title="E-mail" /></a> &nbsp;</div> <div class="gensmall" style="float: right;"><a href="./report.php?f=7&amp;p=5559"><img src="./styles/BlackRock/imageset/en/icon_report.gif" alt="Report this post" title="Report this post" /></a> <a href="./posting.php?mode=quote&amp;f=7&amp;p=5559"><img src="./styles/BlackRock/imageset/en/icon_quote.gif" alt="Reply with quote" title="Reply with quote" /></a> &nbsp;</div></td>
+			</tr>
+
+	<tr>
+		<td class="spacer" colspan="2" height="10"><img src="images/spacer.gif" alt="" width="1" height="1" /></td>
+	</tr>
+	</table>
+	<table class="tablebg" width="100%" cellspacing="1">
+	<tr class="row2">
+			<td align="center" valign="middle">
+				<a name="p32580"></a>
+				<b class="postauthor" style="color: #00CC00">	
+					<a href="#" onclick="insert_text('[b][color=#00CC00]Paul Siramy[/color][/b], ', true, false); return false;"><span style="color: #00CC00;" class="username-coloured">Paul Siramy</span></a>
+					</b>
+			</td>
+			<td width="100%" height="25">
+				<table width="100%" cellspacing="0">
+				<tr>
+									<td class="gensmall" width="100%"><div style="float: left;"><a href="./viewtopic.php?p=32580#p32580"><img src="./styles/BlackRock/imageset/icon_post_target.gif" alt="Post" title="Post" /></a><b>Posted:</b> 06 Sep 2002, 09:17&nbsp;<br />&nbsp;<b>Post subject:</b> COF and D2 Format</div><div style="float: right;">&nbsp;</div></td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+		
+		<tr class="row2">
+			<td valign="top" class="profile">
+				<table cellspacing="4" align="center" width="150">
+							<tr>
+					<td><img src="./styles/BlackRock/imageset/en/offline.gif" alt="Offline" title="Offline" /></td>
+				</tr>
+							<tr>
+					<td class="postdetails">Moderator</td>
+				</tr>
+							<tr>
+					<td><img src="./images/ranks/shield-3.gif" alt="Moderator" title="Moderator" /></td>
+				</tr>
+							<tr>
+					<td class="postdetails">Principality</td>
+				</tr>
+							<tr>
+					<td><img src="./download/file.php?avatar=30.gif" width="100" height="100" alt="User avatar" /></td>
+				</tr>
+							</table>
+
+				<span class="postdetails">
+					<br /><b>Age:</b> 36<br /><b>Joined:</b> 25 May 2002, 16:39<br /><b>Posts:</b> 2770<br /><b>Location:</b> La Garenne Colombes (near Paris)<br /><b>Gender:</b> <img src="./styles/BlackRock/imageset/icon_gender_m.gif" alt="Male" title="Male" />				</span>
+
+			</td>
+			<td valign="top">
+				<table width="100%" cellspacing="5">
+				<tr>
+					<td>
+					
+						<div class="postbody"><span style="color: orange"><span style="font-size: 167%; line-height: normal"><strong>COF and D2 Format </strong></span></span>
+<br />
+<br />I'll just provide some links, since I'm not in the mood to make some copy/paste :
+<br />
+<br /><a href="http://phrozenkeep.hugelaser.com/forum/viewtopic.php?p=22693" class="postlink" rel="nofollow" onclick="this.target='_blank';"><span style="text-decoration: underline">some stats on .cof</span></a> (and format)
+<br /><a href="http://phrozenkeep.hugelaser.com/forum/viewtopic.php?p=23223" class="postlink" rel="nofollow" onclick="this.target='_blank';"><span style="text-decoration: underline">chars_cof.d2 &amp; cmncof_a*.cof format, &amp; stats</span></a>
+<br /><a href="http://phrozenkeep.hugelaser.com/forum/viewtopic.php?p=22930" class="postlink" rel="nofollow" onclick="this.target='_blank';"><span style="text-decoration: underline">stats on animdata.d2 &amp; eanimdata.d2</span></a>
+<br />
+<br />
+<br />Some tools I have made :
+<br /><a href="http://paul.siramy.free.fr/_divers/animdata_edit.zip" class="postlink zip_link" rel="nofollow" onclick="this.target='_blank';"><span style="text-decoration: underline">animdata_edit.zip</span></a>
+<br /><a href="http://paul.siramy.free.fr/_divers/cofinfo.zip" class="postlink zip_link" rel="nofollow" onclick="this.target='_blank';"><span style="text-decoration: underline">cofinfo.zip</span></a>
+<br /><a href="http://paul.siramy.free.fr/_divers/d2_cof.zip" class="postlink zip_link" rel="nofollow" onclick="this.target='_blank';"><span style="text-decoration: underline">d2_cof.zip</span></a></div>
+
+											<span class="postbody"><br />_________________<br /><span style="font-size: 85%; line-height: normal"><a href="http://paul.siramy.free.fr/_divers/dt1/DT1%20Tools.zip" class="postlink zip_link" rel="nofollow" onclick="this.target='_blank';">DT1 Tools</a> - <a href="http://paul.siramy.free.fr/_divers/ds1/dl_ds1edit.html" class="postlink" rel="nofollow" onclick="this.target='_blank';">DS1 Editor</a> - <a href="http://paul.siramy.free.fr/_divers/mpql.zip" class="postlink zip_link" rel="nofollow" onclick="this.target='_blank';">MPQ list file</a> - <a href="http://paul.siramy.free.fr/_divers2/extracting_diablo2_animations.zip" class="postlink zip_link" rel="nofollow" onclick="this.target='_blank';">Extracting D2 Animation</a> - <a href="http://paul.siramy.free.fr/_divers2/tut_any_units_ds1/" class="postlink" rel="nofollow" onclick="this.target='_blank';">Adding ANY Monsters and ANY Objects to a DS1</a> - <a href="http://paul.siramy.free.fr/_divers2/tmptutcmap/" class="postlink" rel="nofollow" onclick="this.target='_blank';">New monster color variations from scratch</a><br /><span style="color: #AAAAAA"><em>&quot;Sorry I can't give you offsets or anything, my dlls are always very mutant compared to what's in the release&quot;</em> - <strong>Isolde, aka Peter Hu, 30 Jun 2002</strong></span></span></span>
+					<br clear="all" /><br />					</td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+
+		<tr class="row2">
+			<td class="profile"><strong><a href="#wrapheader">Top</a></strong></td>
+			<td><div class="gensmall" style="float: left;">&nbsp;<a href="./memberlist.php?mode=viewprofile&amp;u=30"><img src="./styles/BlackRock/imageset/en/icon_profile.gif" alt="Profile" title="Profile" /></a> <a href="./ucp.php?i=pm&amp;mode=compose&amp;action=quotepost&amp;p=32580"><img src="./styles/BlackRock/imageset/en/icon_pm.gif" alt="Send private message" title="Send private message" /></a> <a href="./memberlist.php?mode=email&amp;u=30"><img src="./styles/BlackRock/imageset/en/icon_email.gif" alt="E-mail" title="E-mail" /></a> &nbsp;</div> <div class="gensmall" style="float: right;"><a href="./report.php?f=7&amp;p=32580"><img src="./styles/BlackRock/imageset/en/icon_report.gif" alt="Report this post" title="Report this post" /></a> <a href="./posting.php?mode=quote&amp;f=7&amp;p=32580"><img src="./styles/BlackRock/imageset/en/icon_quote.gif" alt="Reply with quote" title="Reply with quote" /></a> &nbsp;</div></td>
+			</tr>
+
+	<tr>
+		<td class="spacer" colspan="2" height="10"><img src="images/spacer.gif" alt="" width="1" height="1" /></td>
+	</tr>
+	</table>
+	<table class="tablebg" width="100%" cellspacing="1">
+	<tr class="row1">
+			<td align="center" valign="middle">
+				<a name="p107072"></a>
+				<b class="postauthor" style="color: #00CC00">	
+					<a href="#" onclick="insert_text('[b][color=#00CC00]Paul Siramy[/color][/b], ', true, false); return false;"><span style="color: #00CC00;" class="username-coloured">Paul Siramy</span></a>
+					</b>
+			</td>
+			<td width="100%" height="25">
+				<table width="100%" cellspacing="0">
+				<tr>
+									<td class="gensmall" width="100%"><div style="float: left;"><a href="./viewtopic.php?p=107072#p107072"><img src="./styles/BlackRock/imageset/icon_post_target.gif" alt="Post" title="Post" /></a><b>Posted:</b> 20 Jun 2003, 13:44&nbsp;<br />&nbsp;<b>Post subject:</b> Re: Files format (DT1, DS1, COF, D2, TBL) &amp; win_ds1edit</div><div style="float: right;">&nbsp;</div></td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+		
+		<tr class="row1">
+			<td valign="top" class="profile">
+				<table cellspacing="4" align="center" width="150">
+							<tr>
+					<td><img src="./styles/BlackRock/imageset/en/offline.gif" alt="Offline" title="Offline" /></td>
+				</tr>
+							<tr>
+					<td class="postdetails">Moderator</td>
+				</tr>
+							<tr>
+					<td><img src="./images/ranks/shield-3.gif" alt="Moderator" title="Moderator" /></td>
+				</tr>
+							<tr>
+					<td class="postdetails">Principality</td>
+				</tr>
+							<tr>
+					<td><img src="./download/file.php?avatar=30.gif" width="100" height="100" alt="User avatar" /></td>
+				</tr>
+							</table>
+
+				<span class="postdetails">
+					<br /><b>Age:</b> 36<br /><b>Joined:</b> 25 May 2002, 16:39<br /><b>Posts:</b> 2770<br /><b>Location:</b> La Garenne Colombes (near Paris)<br /><b>Gender:</b> <img src="./styles/BlackRock/imageset/icon_gender_m.gif" alt="Male" title="Male" />				</span>
+
+			</td>
+			<td valign="top">
+				<table width="100%" cellspacing="5">
+				<tr>
+					<td>
+					
+						<div class="postbody"><span style="color: orange"><span style="font-size: 167%; line-height: normal"><strong>TBL Format</strong></span></span><br /><br />This is discuss in these topics :<br /><ul><li><a href="http://d2mods.com/forum/viewtopic.php?t=7080" class="postlink" rel="nofollow" onclick="this.target='_blank';"><span style="text-decoration: underline">string table format?</span></a></li><li><a href="http://d2mods.com/forum/viewtopic.php?p=138758#p138758" class="postlink" rel="nofollow" onclick="this.target='_blank';"><span style="text-decoration: underline">TBL file read order and keys</span></a></li><li><a href="http://d2mods.com/forum/viewtopic.php?p=202077#p202077" class="postlink" rel="nofollow" onclick="this.target='_blank';"><span style="text-decoration: underline">About *.tbl files</span></a></li><li><a href="http://d2mods.com/forum/viewtopic.php?f=7&amp;t=47573" class="postlink" rel="nofollow" onclick="this.target='_blank';"><span style="text-decoration: underline">DTbl tool &amp; library released [update 11.10.07]</span></a></li></ul></div>
+
+											<span class="postbody"><br />_________________<br /><span style="font-size: 85%; line-height: normal"><a href="http://paul.siramy.free.fr/_divers/dt1/DT1%20Tools.zip" class="postlink zip_link" rel="nofollow" onclick="this.target='_blank';">DT1 Tools</a> - <a href="http://paul.siramy.free.fr/_divers/ds1/dl_ds1edit.html" class="postlink" rel="nofollow" onclick="this.target='_blank';">DS1 Editor</a> - <a href="http://paul.siramy.free.fr/_divers/mpql.zip" class="postlink zip_link" rel="nofollow" onclick="this.target='_blank';">MPQ list file</a> - <a href="http://paul.siramy.free.fr/_divers2/extracting_diablo2_animations.zip" class="postlink zip_link" rel="nofollow" onclick="this.target='_blank';">Extracting D2 Animation</a> - <a href="http://paul.siramy.free.fr/_divers2/tut_any_units_ds1/" class="postlink" rel="nofollow" onclick="this.target='_blank';">Adding ANY Monsters and ANY Objects to a DS1</a> - <a href="http://paul.siramy.free.fr/_divers2/tmptutcmap/" class="postlink" rel="nofollow" onclick="this.target='_blank';">New monster color variations from scratch</a><br /><span style="color: #AAAAAA"><em>&quot;Sorry I can't give you offsets or anything, my dlls are always very mutant compared to what's in the release&quot;</em> - <strong>Isolde, aka Peter Hu, 30 Jun 2002</strong></span></span></span>
+												<br /><br />
+							<span class="gensmall">Last edited by <a href="./memberlist.php?mode=viewprofile&amp;u=30" style="color: #00CC00;" class="username-coloured">Paul Siramy</a> on 18 Nov 2004, 22:14, edited 3 times in total.</span>
+						<br clear="all" /><br />					</td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+
+		<tr class="row1">
+			<td class="profile"><strong><a href="#wrapheader">Top</a></strong></td>
+			<td><div class="gensmall" style="float: left;">&nbsp;<a href="./memberlist.php?mode=viewprofile&amp;u=30"><img src="./styles/BlackRock/imageset/en/icon_profile.gif" alt="Profile" title="Profile" /></a> <a href="./ucp.php?i=pm&amp;mode=compose&amp;action=quotepost&amp;p=107072"><img src="./styles/BlackRock/imageset/en/icon_pm.gif" alt="Send private message" title="Send private message" /></a> <a href="./memberlist.php?mode=email&amp;u=30"><img src="./styles/BlackRock/imageset/en/icon_email.gif" alt="E-mail" title="E-mail" /></a> &nbsp;</div> <div class="gensmall" style="float: right;"><a href="./report.php?f=7&amp;p=107072"><img src="./styles/BlackRock/imageset/en/icon_report.gif" alt="Report this post" title="Report this post" /></a> <a href="./posting.php?mode=quote&amp;f=7&amp;p=107072"><img src="./styles/BlackRock/imageset/en/icon_quote.gif" alt="Reply with quote" title="Reply with quote" /></a> &nbsp;</div></td>
+			</tr>
+
+	<tr>
+		<td class="spacer" colspan="2" height="10"><img src="images/spacer.gif" alt="" width="1" height="1" /></td>
+	</tr>
+	</table>
+	<table class="tablebg" width="100%" cellspacing="1">
+	<tr class="row2">
+			<td align="center" valign="middle">
+				<a name="p148076"></a>
+				<b class="postauthor" style="color: #00CC00">	
+					<a href="#" onclick="insert_text('[b][color=#00CC00]Paul Siramy[/color][/b], ', true, false); return false;"><span style="color: #00CC00;" class="username-coloured">Paul Siramy</span></a>
+					</b>
+			</td>
+			<td width="100%" height="25">
+				<table width="100%" cellspacing="0">
+				<tr>
+									<td class="gensmall" width="100%"><div style="float: left;"><a href="./viewtopic.php?p=148076#p148076"><img src="./styles/BlackRock/imageset/icon_post_target.gif" alt="Post" title="Post" /></a><b>Posted:</b> 08 Jan 2004, 06:45&nbsp;<br />&nbsp;<b>Post subject:</b> DC6 Format</div><div style="float: right;">&nbsp;</div></td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+		
+		<tr class="row2">
+			<td valign="top" class="profile">
+				<table cellspacing="4" align="center" width="150">
+							<tr>
+					<td><img src="./styles/BlackRock/imageset/en/offline.gif" alt="Offline" title="Offline" /></td>
+				</tr>
+							<tr>
+					<td class="postdetails">Moderator</td>
+				</tr>
+							<tr>
+					<td><img src="./images/ranks/shield-3.gif" alt="Moderator" title="Moderator" /></td>
+				</tr>
+							<tr>
+					<td class="postdetails">Principality</td>
+				</tr>
+							<tr>
+					<td><img src="./download/file.php?avatar=30.gif" width="100" height="100" alt="User avatar" /></td>
+				</tr>
+							</table>
+
+				<span class="postdetails">
+					<br /><b>Age:</b> 36<br /><b>Joined:</b> 25 May 2002, 16:39<br /><b>Posts:</b> 2770<br /><b>Location:</b> La Garenne Colombes (near Paris)<br /><b>Gender:</b> <img src="./styles/BlackRock/imageset/icon_gender_m.gif" alt="Male" title="Male" />				</span>
+
+			</td>
+			<td valign="top">
+				<table width="100%" cellspacing="5">
+				<tr>
+					<td>
+					
+						<div class="postbody"><span style="color: orange"><span style="font-size: 167%; line-height: normal"><strong>DC6 Format</strong></span></span>
+<br />
+<br />In short, the dc6 format is :<ul><li> file header </li><li> file pointers to frame header </li><li> table of frame datas, each one beeing :<br /><ul>   <li> frame header <br />   </li><li> encoding pixels of this frame</li></ul></li></ul><br /><span style="color: #00FF00">File Header :</span><br /><div><div class="codetitle"><b>Code:</b> <a href="#" style="color: #FF6600" onclick="selectCode(this); return false;" class="postlink-local">Select all</a></div><div class="codecontent"><code>typedef struct <br />&#123; <br />&nbsp; &nbsp;long&nbsp; version;&nbsp; &nbsp; &nbsp; &nbsp; // 06 00 00 00 <br />&nbsp; &nbsp;long&nbsp; unknown1;&nbsp; &nbsp; &nbsp; &nbsp;// 01 00 00 00 <br />&nbsp; &nbsp;long&nbsp; unknown2;&nbsp; &nbsp; &nbsp; &nbsp;// 00 00 00 00 <br />&nbsp; &nbsp;UBYTE termination&#91;4&#93;; // EE EE EE EE or CD CD CD CD <br />&nbsp; &nbsp;long&nbsp; directions;&nbsp; &nbsp; &nbsp;// xx 00 00 00 <br />&nbsp; &nbsp;long&nbsp; frames_per_dir; // xx 00 00 00 <br />&#125; DC6_HEADER_S;</code></div></div><br /><br />A dc6 start by 00000006 00000001 00000000<br />It is folowed by the termination code (EEEEEEEE ou CDCDCDCD) <br />Then the number of directions<br />Then the number of frames per directions<br /><br />Mephisto is a dc6, and it has 8 directions. The total number of frames in the dc6 is of course <span style="color: yellow">(# of directions) * (# of frames per directions)</span><br /><br /><br />After this file header comes the <span style="color: #00FF00">table of pointers</span>.<br />This is a table of pointers in file. In C it should be something like <span style="color: yellow">long frame_header_ptr[num_direction][num_frame]</span>. Therefore a dc6 with 8 directions and 2 frames per directions will have 16 pointers.<br />* 1st = direction 1 frame 1<br />* 2nd = direction 1 frame 2<br />* 3rd = direction 2 frame 1<br />* and so on...<br /><br /><br />After the table of pointers, come a <span style="color: #00FF00">succession of Blocks</span>. Each block is an image which have a maximum of 256*256 pixels. These blocks have a frame header, followed immediately by the encoded pixels. Note : the pixels are coded from bottom to up ! The scheme of the encoding is simple : This is even not RLE since here there's only the transparency information which is coded, the non-transparent pixels beeing a succession of RAW pixels color. To decode the pixels :<ul><li> if BYTE = 0x80, end of line, position the cursor on the start of the line above.</li><li> else <ul><li> if <span style="color: yellow">BYTE & 0x80</span> (if bit 7 is set) then write "BYTE & 0x7F" (the 7 lower bits) transparent pixels.</li><li> else it is a segment of RAW pixels (of max 127 pixels). Read this BYTE number of bytes and write them in the image.</li></ul></li></ul>Note : if the cursor reach the end of the line, we don't jump to the start of the above line : an End Of Line MUST be a 0x80 BYTE.<br /><br /><br />format of a frame header :<br /><div><div class="codetitle"><b>Code:</b> <a href="#" style="color: #FF6600" onclick="selectCode(this); return false;" class="postlink-local">Select all</a></div><div class="codecontent"><code>typedef struct <br />&#123; <br />&nbsp; &nbsp;long flip; <br />&nbsp; &nbsp;long width; <br />&nbsp; &nbsp;long height; <br />&nbsp; &nbsp;long offset_x; <br />&nbsp; &nbsp;long offset_y;&nbsp; &nbsp; &nbsp; &nbsp; // from bottom border, not up <br />&nbsp; &nbsp;long unknown; <br />&nbsp; &nbsp;long next_block; <br />&nbsp; &nbsp;long length; <br />&#125; DC6_FRAME_HEADER_S;</code></div></div><br />In Diablo II, usually the 'flip' is = zero, and therefore the encoding of the scanlines is from bottom to top, but if the bit is set it's from top to bottom.<br /><br />width & height : sizes of this frame image, in pixels<br /><br />offset_x & y : position of this frame. Used for Mephisto, or the character animation while choosing a savegame. In short : offsets are like in the DCC format.<br /><br />next_block : not really used for the decoding<br /><br />length : # of bytes to decode to get this frame image. These bytes are placed immediately after the frame header, this means right after the 'length' data. These bytes are followed by 3 or 4 termination bytes (check the file header).<br /><br />Note : there's no palette info in the dc6, so the user must have the choice :<br /><div><div class="codetitle"><b>Code:</b> <a href="#" style="color: #FF6600" onclick="selectCode(this); return false;" class="postlink-local">Select all</a></div><div class="codecontent"><code>act1&nbsp; &nbsp; &nbsp; : act 1 stuffs & inventory gfx <br />act2&nbsp; &nbsp; &nbsp; : act 2 stuffs & inventory gfx <br />act3&nbsp; &nbsp; &nbsp; : act 3 stuffs & inventory gfx <br />act4&nbsp; &nbsp; &nbsp; : act 4 stuffs & inventory gfx <br />act5&nbsp; &nbsp; &nbsp; : act 5 stuffs & inventory gfx <br />endgame&nbsp; &nbsp;: ending screen &#40;Talrasha giving you honorific title&#41; <br />endgame2&nbsp; : ending screen &#40;Cain giving you honorific title&#41; <br />fechar&nbsp; &nbsp; : character creation screen <br />loading&nbsp; &nbsp;: loading screen &#40;the Wanderer in front of the Monastery doors&#41; <br />menu0&nbsp; &nbsp; &nbsp;: Beta screenshot # 1<br />menu1&nbsp; &nbsp; &nbsp;: Beta screenshot # 2<br />menu2&nbsp; &nbsp; &nbsp;: Beta screenshot # 3<br />menu3&nbsp; &nbsp; &nbsp;: Beta screenshot # 4<br />menu4&nbsp; &nbsp; &nbsp;: Beta screenshot # 5<br />sky&nbsp; &nbsp; &nbsp; &nbsp;: game selection screen <br />static&nbsp; &nbsp; : all GUI &#40;Graphic User Interface&#41; stuff &#40;get some random results&#41; <br />trademark : trademark screen <br />units&nbsp; &nbsp; &nbsp;: all the GUI icons &#40;but in has been succefully used for the <br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; trademark screen, game select & Gui stuff, without distorsion&#41;</code></div></div><br /><br />Palettes are in <span style="color: orange">data\global\palette</span> . In there, there are sub-directories. In these ones the .dat file are the palette (256 entries of BGR color), .pl2 are a collection of tons of colormaps, based on the palette.<br /><br />For more details you can check the sources of these tool :<ul><li> <a href="http://paul.siramy.free.fr/_divers/dc6color.zip" class="postlink zip_link" rel="nofollow" onclick="this.target='_blank';">dc6color</a></li><li> <a href="http://paul.siramy.free.fr/_divers/dc6con.zip" class="postlink zip_link" rel="nofollow" onclick="this.target='_blank';">dc6con</a></li><li> <a href="http://paul.siramy.free.fr/_divers/dc6edit.zip" class="postlink zip_link" rel="nofollow" onclick="this.target='_blank';">dc6edit</a></li><li> <a href="http://paul.siramy.free.fr/_divers/dc6font.zip" class="postlink zip_link" rel="nofollow" onclick="this.target='_blank';">dc6font</a></li><li> <a href="http://paul.siramy.free.fr/_divers/dc6table.zip" class="postlink zip_link" rel="nofollow" onclick="this.target='_blank';">dc6table</a></li></ul>
+<br />And you can also check this topic : <a href="http://phrozenkeep.hugelaser.com/forum/viewtopic.php?t=18588" class="postlink" rel="nofollow" onclick="this.target='_blank';">dc6 file format help</a></div>
+
+											<span class="postbody"><br />_________________<br /><span style="font-size: 85%; line-height: normal"><a href="http://paul.siramy.free.fr/_divers/dt1/DT1%20Tools.zip" class="postlink zip_link" rel="nofollow" onclick="this.target='_blank';">DT1 Tools</a> - <a href="http://paul.siramy.free.fr/_divers/ds1/dl_ds1edit.html" class="postlink" rel="nofollow" onclick="this.target='_blank';">DS1 Editor</a> - <a href="http://paul.siramy.free.fr/_divers/mpql.zip" class="postlink zip_link" rel="nofollow" onclick="this.target='_blank';">MPQ list file</a> - <a href="http://paul.siramy.free.fr/_divers2/extracting_diablo2_animations.zip" class="postlink zip_link" rel="nofollow" onclick="this.target='_blank';">Extracting D2 Animation</a> - <a href="http://paul.siramy.free.fr/_divers2/tut_any_units_ds1/" class="postlink" rel="nofollow" onclick="this.target='_blank';">Adding ANY Monsters and ANY Objects to a DS1</a> - <a href="http://paul.siramy.free.fr/_divers2/tmptutcmap/" class="postlink" rel="nofollow" onclick="this.target='_blank';">New monster color variations from scratch</a><br /><span style="color: #AAAAAA"><em>&quot;Sorry I can't give you offsets or anything, my dlls are always very mutant compared to what's in the release&quot;</em> - <strong>Isolde, aka Peter Hu, 30 Jun 2002</strong></span></span></span>
+												<br /><br />
+							<span class="gensmall">Last edited by <a href="./memberlist.php?mode=viewprofile&amp;u=30" style="color: #00CC00;" class="username-coloured">Paul Siramy</a> on 08 Jan 2004, 20:20, edited 4 times in total.</span>
+						<br clear="all" /><br />					</td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+
+		<tr class="row2">
+			<td class="profile"><strong><a href="#wrapheader">Top</a></strong></td>
+			<td><div class="gensmall" style="float: left;">&nbsp;<a href="./memberlist.php?mode=viewprofile&amp;u=30"><img src="./styles/BlackRock/imageset/en/icon_profile.gif" alt="Profile" title="Profile" /></a> <a href="./ucp.php?i=pm&amp;mode=compose&amp;action=quotepost&amp;p=148076"><img src="./styles/BlackRock/imageset/en/icon_pm.gif" alt="Send private message" title="Send private message" /></a> <a href="./memberlist.php?mode=email&amp;u=30"><img src="./styles/BlackRock/imageset/en/icon_email.gif" alt="E-mail" title="E-mail" /></a> &nbsp;</div> <div class="gensmall" style="float: right;"><a href="./report.php?f=7&amp;p=148076"><img src="./styles/BlackRock/imageset/en/icon_report.gif" alt="Report this post" title="Report this post" /></a> <a href="./posting.php?mode=quote&amp;f=7&amp;p=148076"><img src="./styles/BlackRock/imageset/en/icon_quote.gif" alt="Reply with quote" title="Reply with quote" /></a> &nbsp;</div></td>
+			</tr>
+
+	<tr>
+		<td class="spacer" colspan="2" height="10"><img src="images/spacer.gif" alt="" width="1" height="1" /></td>
+	</tr>
+	</table>
+	<table width="100%" cellspacing="1" class="tablebg">
+	<tr align="center">
+		<td class="cat"><form name="viewtopic" method="post" action="./viewtopic.php?f=7&amp;t=724&amp;start=0"><span class="gensmall">Display posts from previous:</span> <select name="st" id="st"><option value="0" selected="selected">All posts</option><option value="1">1 day</option><option value="7">7 days</option><option value="14">2 weeks</option><option value="30">1 month</option><option value="90">3 months</option><option value="180">6 months</option><option value="365">1 year</option></select>&nbsp;<span class="gensmall">Sort by</span> <select name="sk" id="sk"><option value="a">Author</option><option value="t" selected="selected">Post time</option><option value="s">Subject</option></select> <select name="sd" id="sd"><option value="a" selected="selected">Ascending</option><option value="d">Descending</option></select>&nbsp;<input class="btnlite" type="submit" value="Go" name="sort" /></form></td>
+	</tr>
+	</table>
+	
+	<table width="100%" cellspacing="1">
+	<tr>
+		<td align="left" valign="middle" nowrap="nowrap">
+		<a href="./posting.php?mode=post&amp;f=7"><img src="./styles/BlackRock/imageset/en/post.gif" alt="Post new topic" title="Post new topic" /></a>&nbsp;<a href="./posting.php?mode=reply&amp;f=7&amp;t=724"><img src="./styles/BlackRock/imageset/en/reply-locked.gif" alt="This topic is locked, you cannot edit posts or make further replies." title="This topic is locked, you cannot edit posts or make further replies." /></a>		</td>
+					<td class="nav" valign="middle" nowrap="nowrap">&nbsp;Page <strong>1</strong> of <strong>1</strong><br /></td>
+			<td class="gensmall" nowrap="nowrap">&nbsp;[ 6 posts ]&nbsp;</td>
+			<td class="gensmall" width="100%" align="right" nowrap="nowrap"></td>
+			</tr>
+	</table>
+
+</div>
+<script type="text/javascript">
+var LANG_TOO_FEW_CHARS 		= 'Your message contains too few characters.';
+var LANG_L_NO_TEXT_SELECTED	= 'Select text and try again';
+var	form_name 				= 'postform';
+var	text_name 				= 'message';
+var in_quick_reply			= true;
+</script>
+<script type="text/javascript" src="./styles/BlackRock/template/quickreply_editor.js" ></script>
+<script type="text/javascript" src="./styles/BlackRock/template/editor.js" ></script>
+	<form action="./posting.php?sid=b906a6ac8049986af72bfe2740ee24b2" method="post" id="postform" name="postform" onsubmit="return checkQuickForm(this)">
+    <input type="hidden" name="creation_time" value="1315145911" />
+<input type="hidden" name="form_token" value="a5d44ae9b35bb561ef83dd6b6bdbd11d21af60c0" />
+	<table class="tablebg" width="50%" cellspacing="1" align="left">
+		<th>Post a reply</th>
+			       	<input type="hidden" name="subject" value="Re: COF, D2, DC6, DS1, DT1, TBL File format" />
+				<tr>
+			<td class="row1">
+				<table width="100%">
+					<tr>
+						<td width="80%" align="center" style="padding:10px;"><textarea name="message" id="message" rows="6" cols="50" tabindex="3" style="width:80%"></textarea></td>
+						<td width="20%" align="center" valign="top">
+							<table width="100%" cellspacing="5" cellpadding="0" border="0" align="center">
+							<tr>
+								<td class="gensmall" align="center"><b>Smilies</b></td>
+							</tr>
+							<tr>
+								<td align="center">
+                                                                              <a href="#" onclick="insert_text(':D', true); return false;"><img src="./images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Very Happy" /></a>
+                                                                                 <a href="#" onclick="insert_text(':)', true); return false;"><img src="./images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile" /></a>
+                                                                                 <a href="#" onclick="insert_text(':(', true); return false;"><img src="./images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad" /></a>
+                                                                                 <a href="#" onclick="insert_text(':o', true); return false;"><img src="./images/smilies/icon_surprised.gif" width="15" height="15" alt=":o" title="Surprised" /></a>
+                                                                                 <a href="#" onclick="insert_text('8-O', true); return false;"><img src="./images/smilies/icon_eek.gif" width="19" height="25" alt="8-O" title="Shocked" /></a>
+                                                                                 <a href="#" onclick="insert_text(':cool:', true); return false;"><img src="./images/smilies/icon_cool.gif" width="15" height="15" alt=":cool:" title="Cool" /></a>
+                                                                                 <a href="#" onclick="insert_text(':lol:', true); return false;"><img src="./images/smilies/icon_lol.gif" width="15" height="15" alt=":lol:" title="Laughing" /></a>
+                                                                                 <a href="#" onclick="insert_text(':x', true); return false;"><img src="./images/smilies/icon_mad.gif" width="15" height="15" alt=":x" title="Mad" /></a>
+                                                                                 <a href="#" onclick="insert_text(':P', true); return false;"><img src="./images/smilies/icon_razz.gif" width="15" height="15" alt=":P" title="Razz" /></a>
+                                                                                 <a href="#" onclick="insert_text(':oops:', true); return false;"><img src="./images/smilies/icon_redface.gif" width="15" height="15" alt=":oops:" title="Embarassed" /></a>
+                                                                                 <a href="#" onclick="insert_text(':cry:', true); return false;"><img src="./images/smilies/icon_cry.gif" width="25" height="15" alt=":cry:" title="Very Sad" /></a>
+                                                                                 <a href="#" onclick="insert_text(':twisted:', true); return false;"><img src="./images/smilies/icon_twisted.gif" width="15" height="15" alt=":twisted:" title="Twisted Evil" /></a>
+                                                                                 <a href="#" onclick="insert_text(':roll:', true); return false;"><img src="./images/smilies/icon_rolleyes.gif" width="15" height="15" alt=":roll:" title="Rolling Eyes" /></a>
+                                                                                 <a href="#" onclick="insert_text(';)', true); return false;"><img src="./images/smilies/icon_wink.gif" width="15" height="15" alt=";)" title="Wink" /></a>
+                                                                                 <a href="#" onclick="insert_text(':!:', true); return false;"><img src="./images/smilies/icon_exclaim.gif" width="15" height="15" alt=":!:" title="Exclamation" /></a>
+                                                                                 <a href="#" onclick="insert_text(':?:', true); return false;"><img src="./images/smilies/icon_question.gif" width="15" height="15" alt=":?:" title="Question" /></a>
+                                                                                 <a href="#" onclick="insert_text(':idea:', true); return false;"><img src="./images/smilies/icon_idea.gif" width="15" height="15" alt=":idea:" title="Idea" /></a>
+                                                                                 <a href="#" onclick="insert_text(':arrow:', true); return false;"><img src="./images/smilies/icon_arrow.gif" width="15" height="15" alt=":arrow:" title="Arrow" /></a>
+                                                                                 <a href="#" onclick="insert_text(':-|', true); return false;"><img src="./images/smilies/icon_neutral.gif" width="15" height="15" alt=":-|" title="Neutral" /></a>
+                                                                                 <a href="#" onclick="insert_text(':mrgreen:', true); return false;"><img src="./images/smilies/icon_mrgreen.gif" width="15" height="15" alt=":mrgreen:" title="Mr. Green" /></a>
+                                                                              <br /><a href="./posting.php?mode=smilies&amp;f=7" onclick="window.open('./posting.php?mode=smilies&amp;f=7', '_phpbbsmilies', 'HEIGHT=350,resizable=yes,scrollbars=yes,WIDTH=300'); return false;">View more smilies</a>
+                                    								</td>
+							</tr>					
+							</table>						
+						</td>
+					</tr>
+					<tr>
+						<td class="row1" colspan="2" style="padding-left:7%">
+							<table cellpadding="1">
+																	<tr><td><input type="checkbox" class="radio" name="attach_sig" id="attach_sig" checked="checked" /> Attach a signature (signatures can be altered via the UCP)</td></tr>
+																	<tr><td><input type="checkbox" class="radio" name="quote_last_msg" id="quote_last_msg" /> Quote the last message</td></tr>
+																	<tr><td><input type="checkbox" class="radio" name="notify" id="notify" /> Notify me when a reply is posted</td></tr>
+											
+								<tr><td><a href="#" onclick="quoteSelection(); return false;">Quote Selected</a></td></tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td class="cat" align="center">
+				<input type="hidden" name="t" value="724" />
+<input type="hidden" name="f" value="7" />
+<input type="hidden" name="mode" value="reply" />
+<input type="hidden" name="lastclick" value="1315145911" />
+<input type="hidden" name="icon" value="0" />
+				<input type='hidden' name='last_post' value='[quote="Paul Siramy"][color=orange][size=167][b]DC6 Format[/b][/size][/color]
+
+In short, the dc6 format is :[list][*] file header [/*]
+[*] file pointers to frame header [/*]
+[*] table of frame datas, each one beeing :
+[list]
+   [*] frame header 
+   [/*][*] encoding pixels of this frame[/*][/list][/*][/list]
+
+[color=#00FF00]File Header :[/color]
+[code]typedef struct 
+&#123; 
+   long  version;        // 06 00 00 00 
+   long  unknown1;       // 01 00 00 00 
+   long  unknown2;       // 00 00 00 00 
+   UBYTE termination&#91;4&#93;; // EE EE EE EE or CD CD CD CD 
+   long  directions;     // xx 00 00 00 
+   long  frames_per_dir; // xx 00 00 00 
+&#125; DC6_HEADER_S;[/code]
+
+A dc6 start by 00000006 00000001 00000000
+It is folowed by the termination code (EEEEEEEE ou CDCDCDCD) 
+Then the number of directions
+Then the number of frames per directions
+
+Mephisto is a dc6, and it has 8 directions. The total number of frames in the dc6 is of course [color=yellow](# of directions) * (# of frames per directions)[/color]
+
+
+After this file header comes the [color=#00FF00]table of pointers[/color].
+This is a table of pointers in file. In C it should be something like [color=yellow]long frame_header_ptr[num_direction][num_frame][/color]. Therefore a dc6 with 8 directions and 2 frames per directions will have 16 pointers.
+* 1st = direction 1 frame 1
+* 2nd = direction 1 frame 2
+* 3rd = direction 2 frame 1
+* and so on...
+
+
+After the table of pointers, come a [color=#00FF00]succession of Blocks[/color]. Each block is an image which have a maximum of 256*256 pixels. These blocks have a frame header, followed immediately by the encoded pixels. Note : the pixels are coded from bottom to up ! The scheme of the encoding is simple : This is even not RLE since here there&#39;s only the transparency information which is coded, the non-transparent pixels beeing a succession of RAW pixels color. To decode the pixels :[list][*] if BYTE = 0x80, end of line, position the cursor on the start of the line above.[/*]
+[*] else [list][*] if [color=yellow]BYTE & 0x80[/color] (if bit 7 is set) then write "BYTE & 0x7F" (the 7 lower bits) transparent pixels.[/*]
+[*] else it is a segment of RAW pixels (of max 127 pixels). Read this BYTE number of bytes and write them in the image.[/*][/list][/*][/list]
+Note : if the cursor reach the end of the line, we don&#39;t jump to the start of the above line : an End Of Line MUST be a 0x80 BYTE.
+
+
+format of a frame header :
+[code]typedef struct 
+&#123; 
+   long flip; 
+   long width; 
+   long height; 
+   long offset_x; 
+   long offset_y;        // from bottom border, not up 
+   long unknown; 
+   long next_block; 
+   long length; 
+&#125; DC6_FRAME_HEADER_S;[/code]
+In Diablo II, usually the &#39;flip&#39; is = zero, and therefore the encoding of the scanlines is from bottom to top, but if the bit is set it&#39;s from top to bottom.
+
+width & height : sizes of this frame image, in pixels
+
+offset_x & y : position of this frame. Used for Mephisto, or the character animation while choosing a savegame. In short : offsets are like in the DCC format.
+
+next_block : not really used for the decoding
+
+length : # of bytes to decode to get this frame image. These bytes are placed immediately after the frame header, this means right after the &#39;length&#39; data. These bytes are followed by 3 or 4 termination bytes (check the file header).
+
+Note : there&#39;s no palette info in the dc6, so the user must have the choice :
+[code]act1      &#58; act 1 stuffs & inventory gfx 
+act2      &#58; act 2 stuffs & inventory gfx 
+act3      &#58; act 3 stuffs & inventory gfx 
+act4      &#58; act 4 stuffs & inventory gfx 
+act5      &#58; act 5 stuffs & inventory gfx 
+endgame   &#58; ending screen &#40;Talrasha giving you honorific title&#41; 
+endgame2  &#58; ending screen &#40;Cain giving you honorific title&#41; 
+fechar    &#58; character creation screen 
+loading   &#58; loading screen &#40;the Wanderer in front of the Monastery doors&#41; 
+menu0     &#58; Beta screenshot # 1
+menu1     &#58; Beta screenshot # 2
+menu2     &#58; Beta screenshot # 3
+menu3     &#58; Beta screenshot # 4
+menu4     &#58; Beta screenshot # 5
+sky       &#58; game selection screen 
+static    &#58; all GUI &#40;Graphic User Interface&#41; stuff &#40;get some random results&#41; 
+trademark &#58; trademark screen 
+units     &#58; all the GUI icons &#40;but in has been succefully used for the 
+            trademark screen, game select & Gui stuff, without distorsion&#41;[/code]
+
+Palettes are in [color=orange]data\global\palette[/color] . In there, there are sub-directories. In these ones the .dat file are the palette (256 entries of BGR color), .pl2 are a collection of tons of colormaps, based on the palette.
+
+For more details you can check the sources of these tool :[list][*] [url=http&#58;//paul&#46;siramy&#46;free&#46;fr/_divers/dc6color&#46;zip]dc6color[/url][/*]
+[*] [url=http&#58;//paul&#46;siramy&#46;free&#46;fr/_divers/dc6con&#46;zip]dc6con[/url][/*]
+[*] [url=http&#58;//paul&#46;siramy&#46;free&#46;fr/_divers/dc6edit&#46;zip]dc6edit[/url][/*]
+[*] [url=http&#58;//paul&#46;siramy&#46;free&#46;fr/_divers/dc6font&#46;zip]dc6font[/url][/*]
+[*] [url=http&#58;//paul&#46;siramy&#46;free&#46;fr/_divers/dc6table&#46;zip]dc6table[/url][/*][/list]
+And you can also check this topic : [url=http&#58;//phrozenkeep&#46;it-point&#46;com/forum/viewtopic&#46;php?t=18588]dc6 file format help[/url][/quote]' />			
+				<input type="submit" class="btnlite" tabindex="5" name="preview" value="Preview" />
+				&nbsp;<input type="submit" class="btnmain" accesskey="s" tabindex="6" name="post" value="Submit" />
+			</td>			
+		</tr>
+	</table>
+	</form>
+<div id="pagefooter"></div>
+
+<br clear="all" />
+
+<table class="tablebg" width="100%" cellspacing="1" cellpadding="0" style="margin-top: 5px;">
+	<tr>
+		<td>
+			<p class="breadcrumbs"><a href="./index.php">Board index</a> &#187; <a href="./viewforum.php?f=161">Diablo 2 Discussion</a> &#187; <a href="./viewforum.php?f=165">Diablo 2 Mod Making</a> &#187; <a href="./viewforum.php?f=7">Tools</a></p>
+		</td>
+	</tr>
+	</table>	<br clear="all" />
+
+	<table class="tablebg" width="100%" cellspacing="1">
+	<tr>
+		<td class="cat"><h4>Who is online</h4></td>
+	</tr>
+	<tr>
+		<td class="row1"><p class="gensmall">Users browsing this forum: No registered users and 1 guest</p></td>
+	</tr>
+	</table>
+
+<br clear="all" />
+
+<table width="100%" cellspacing="1">
+<tr>
+	<td width="40%" valign="top" nowrap="nowrap" align="left"></td>
+	<td align="right" valign="top" nowrap="nowrap"><span class="gensmall">You <strong>can</strong> post new topics in this forum<br />You <strong>can</strong> reply to topics in this forum<br />You <strong>can</strong> edit your posts in this forum<br />You <strong>can</strong> delete your posts in this forum<br />You <strong>can</strong> post attachments in this forum<br /></span></td>
+</tr>
+</table>
+
+<br clear="all" />
+
+<table width="100%" cellspacing="0">
+<tr>
+	<td><form method="post" name="search" action="./search.php?t=724"><span class="gensmall">Search for:</span> <input class="post" type="text" name="keywords" size="20" /> <input class="btnlite" type="submit" value="Go" /></form></td>
+	<td align="right">	<form method="post" name="jumpbox" action="./viewforum.php" onsubmit="if(document.jumpbox.f.value == -1){return false;}">
+
+	<table cellspacing="0" cellpadding="0" border="0">
+	<tr>
+		<td nowrap="nowrap"><span class="gensmall">Jump to:</span>&nbsp;<select name="f" onchange="if(this.options[this.selectedIndex].value != -1){ document.forms['jumpbox'].submit() }">
+
+					<option value="-1">Select a forum</option>
+		<option value="-1">------------------</option>			<option value="160">The Phrozen Keep Forums</option>
+					<option value="1">&nbsp; &nbsp;Staff Announcements</option>
+					<option value="5">&nbsp; &nbsp;Member Аnnouncements</option>
+					<option value="131">&nbsp; &nbsp;Multi-Player Matchups</option>
+					<option value="118">&nbsp; &nbsp;Job Offerings</option>
+					<option value="75">&nbsp; &nbsp;Keep Updates</option>
+					<option value="182">&nbsp; &nbsp;Keep Polls</option>
+					<option value="2">&nbsp; &nbsp;Feedback</option>
+					<option value="161">Diablo 2 Discussion</option>
+					<option value="165">&nbsp; &nbsp;Diablo 2 Mod Making</option>
+					<option value="4">&nbsp; &nbsp;&nbsp; &nbsp;General Mod Making</option>
+					<option value="7" selected="selected">&nbsp; &nbsp;&nbsp; &nbsp;Tools</option>
+					<option value="6">&nbsp; &nbsp;&nbsp; &nbsp;Multimedia</option>
+					<option value="81">&nbsp; &nbsp;&nbsp; &nbsp;Map Editing</option>
+					<option value="8">&nbsp; &nbsp;&nbsp; &nbsp;Code Editing</option>
+					<option value="133">&nbsp; &nbsp;&nbsp; &nbsp;PlugY|NefEx|D2Mod</option>
+					<option value="122">&nbsp; &nbsp;&nbsp; &nbsp;Skill Clinic</option>
+					<option value="35">&nbsp; &nbsp;&nbsp; &nbsp;Mod Concepts &amp; Research</option>
+					<option value="77">&nbsp; &nbsp;&nbsp; &nbsp;Mac Modding</option>
+					<option value="10">&nbsp; &nbsp;Diablo 2 Chatter</option>
+					<option value="159">&nbsp; &nbsp;Diablo 3 Chatter</option>
+					<option value="167">Diablo 2 Mod Forums</option>
+					<option value="109">&nbsp; &nbsp;Back to Hellfire</option>
+					<option value="142">&nbsp; &nbsp;Battle for Elements</option>
+					<option value="181">&nbsp; &nbsp;Black Omen Productions</option>
+					<option value="157">&nbsp; &nbsp;&nbsp; &nbsp;Mods by Nefarius</option>
+					<option value="89">&nbsp; &nbsp;&nbsp; &nbsp;Shadow Empires</option>
+					<option value="82">&nbsp; &nbsp;Blackened</option>
+					<option value="178">&nbsp; &nbsp;Diabolic Studios</option>
+					<option value="146">&nbsp; &nbsp;&nbsp; &nbsp;Diabolic Studios Site</option>
+					<option value="108">&nbsp; &nbsp;&nbsp; &nbsp;The Hordes of Chaos</option>
+					<option value="116">&nbsp; &nbsp;&nbsp; &nbsp;Dark Alliance Beta Testing</option>
+					<option value="58">&nbsp; &nbsp;&nbsp; &nbsp;Dark Alliance</option>
+					<option value="15">&nbsp; &nbsp;Eastern Sun</option>
+					<option value="151">&nbsp; &nbsp;Legacy of the Horadrim</option>
+					<option value="138">&nbsp; &nbsp;Talonrage's Requiem of Sorrow</option>
+					<option value="53">&nbsp; &nbsp;Zy-El: Trial by Fire</option>
+					<option value="32">&nbsp; &nbsp;The Sandbox</option>
+					<option value="176">&nbsp; &nbsp;Unsupported Mods</option>
+					<option value="87">&nbsp; &nbsp;&nbsp; &nbsp;Nezeramontias</option>
+					<option value="12">&nbsp; &nbsp;&nbsp; &nbsp;Ancestral Recall</option>
+					<option value="91">&nbsp; &nbsp;&nbsp; &nbsp;Kingdom of Tenai</option>
+					<option value="119">&nbsp; &nbsp;&nbsp; &nbsp;Mods by GuyAskingQuestion</option>
+					<option value="24">&nbsp; &nbsp;&nbsp; &nbsp;The Fury Within: Ancients &amp; Awakening</option>
+					<option value="16">&nbsp; &nbsp;&nbsp; &nbsp;Darkness Weaves</option>
+					<option value="26">&nbsp; &nbsp;&nbsp; &nbsp;V&amp;K Mods</option>
+					<option value="18">&nbsp; &nbsp;&nbsp; &nbsp;New Dawn &amp; North Star</option>
+					<option value="23">&nbsp; &nbsp;&nbsp; &nbsp;Baldur's Gate Mod</option>
+					<option value="20">&nbsp; &nbsp;&nbsp; &nbsp;Sir_Generals Rune Mod</option>
+					<option value="84">&nbsp; &nbsp;&nbsp; &nbsp;Dragons' Uprising</option>
+					<option value="29">&nbsp; &nbsp;&nbsp; &nbsp;Seasons After</option>
+					<option value="37">&nbsp; &nbsp;&nbsp; &nbsp;CryptForge</option>
+					<option value="72">&nbsp; &nbsp;&nbsp; &nbsp;d2:elements</option>
+					<option value="92">&nbsp; &nbsp;&nbsp; &nbsp;Escape From The Afterlife</option>
+					<option value="128">&nbsp; &nbsp;&nbsp; &nbsp;Underkill</option>
+					<option value="132">&nbsp; &nbsp;&nbsp; &nbsp;Pagan Heart</option>
+					<option value="177">&nbsp; &nbsp;&nbsp; &nbsp;Hades Mods</option>
+					<option value="140">&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;Apocalypse</option>
+					<option value="130">&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;Cubaholics</option>
+					<option value="113">&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;Hades Underworld</option>
+					<option value="180">&nbsp; &nbsp;&nbsp; &nbsp;Sanctum Arcanum</option>
+					<option value="14">&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;Arcanum Archives</option>
+					<option value="154">&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;Rise of the Old Gods</option>
+					<option value="171">Miscellaneous</option>
+					<option value="152">&nbsp; &nbsp;Off-Topic</option>
+					<option value="11">&nbsp; &nbsp;Testing</option>
+					<option value="173">Currently Unavailable</option>
+					<option value="102">&nbsp; &nbsp;Upcoming Forums</option>
+					<option value="172">&nbsp; &nbsp;Limbo</option>
+					<option value="13">&nbsp; &nbsp;&nbsp; &nbsp;Seven Lances</option>
+					<option value="44">&nbsp; &nbsp;&nbsp; &nbsp;Wheel of Time</option>
+					<option value="61">&nbsp; &nbsp;&nbsp; &nbsp;Tactics Central</option>
+					<option value="50">&nbsp; &nbsp;&nbsp; &nbsp;Mod Reviews</option>
+					<option value="51">&nbsp; &nbsp;&nbsp; &nbsp;DoomsDay</option>
+					<option value="62">&nbsp; &nbsp;&nbsp; &nbsp;Time of Heroes</option>
+					<option value="111">&nbsp; &nbsp;&nbsp; &nbsp;Bloodwars, Inc.</option>
+					<option value="107">&nbsp; &nbsp;&nbsp; &nbsp;Darque Onyx Mods</option>
+					<option value="38">&nbsp; &nbsp;&nbsp; &nbsp;Cabal Wars - Aeons Tide</option>
+					<option value="45">&nbsp; &nbsp;&nbsp; &nbsp;Deathfile's Sanctuary</option>
+					<option value="88">&nbsp; &nbsp;&nbsp; &nbsp;A Pledge To Evil</option>
+					<option value="40">&nbsp; &nbsp;&nbsp; &nbsp;When Worlds Collide II</option>
+					<option value="56">&nbsp; &nbsp;&nbsp; &nbsp;Prophecy of Shadows</option>
+					<option value="59">&nbsp; &nbsp;&nbsp; &nbsp;Valhalla</option>
+					<option value="110">&nbsp; &nbsp;&nbsp; &nbsp;Darque Onyx Site</option>
+					<option value="52">&nbsp; &nbsp;&nbsp; &nbsp;Visions of Valor</option>
+					<option value="136">&nbsp; &nbsp;&nbsp; &nbsp;Cheater's Choice Series</option>
+					<option value="60">&nbsp; &nbsp;&nbsp; &nbsp;Dark Sabbath</option>
+					<option value="55">&nbsp; &nbsp;&nbsp; &nbsp;Corrupted Death</option>
+					<option value="49">&nbsp; &nbsp;&nbsp; &nbsp;Belize's Revenge</option>
+					<option value="76">&nbsp; &nbsp;&nbsp; &nbsp;Brother Laz</option>
+					<option value="104">&nbsp; &nbsp;&nbsp; &nbsp;Chaos Empire</option>
+					<option value="126">&nbsp; &nbsp;&nbsp; &nbsp;Odin's Runeword Mod</option>
+					<option value="124">&nbsp; &nbsp;&nbsp; &nbsp;Stormbringer</option>
+					<option value="78">&nbsp; &nbsp;&nbsp; &nbsp;The Dark Omen</option>
+					<option value="137">&nbsp; &nbsp;&nbsp; &nbsp;Mods By Laz</option>
+					<option value="47">&nbsp; &nbsp;&nbsp; &nbsp;The Stairway to Oblivion</option>
+		
+		</select>&nbsp;<input class="btnlite" type="submit" value="Go" /></td>
+	</tr>
+	</table>
+
+	</form>
+</td>
+</tr>
+</table>
+
+</div>
+
+<!--
+	We request you retain the full copyright notice below including the link to www.phpbb.com.
+	This not only gives respect to the large amount of time given freely by the developers
+	but also helps build interest, traffic and use of phpBB3. If you (honestly) cannot retain
+	the full copyright we ask you at least leave in place the "Powered by phpBB" line, with
+	"phpBB" linked to www.phpbb.com. If you refuse to include even this then support on our
+	forums may be affected.
+
+	The phpBB Group : 2006
+//-->
+
+<div id="wrapfooter">
+	<span class="copyright">Powered by <a href="http://www.phpbb.com/">phpBB</a> &copy; 2000, 2002, 2005, 2007 phpBB Group
+	<br />Black Rock template by onyx (based on BlackSoul for phpBB2)
+	</span>
+</div>
+</div>
+
+
+</td></tr>
+		  </table>
+		</td>
+
+<!-- end center column -->
+		
+<!-- begin column spacer -->
+
+		<td class="vspacer" width="0%">&nbsp;</td>
+
+<!-- end column spacer -->
+
+<!-- begin right column -->
+
+		<td id="menudx" valign="top">
+		<div id="menucontentr" class="mkalign1" style="display:none">
+		<div class="mkalign1">&nbsp;<a href="javascript:ColumnClose('menudx');MemoPos('MKmenudx', '1')"><img src="../mkportal/templates/Forum/images/f1.gif" border="0" alt="" /></a></div>
+		  <table cellpadding="0" cellspacing="2" border="0" style="width: 140px;">
+		  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Personal Menu</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      
+				<tr>
+				  <td width="100%" class="tdblock" align="center">
+				  Welcome kambala
+				  </td>
+				</tr>
+				<tr>
+				  <td width="100%" class="tdblock" align="center">
+				  
+				  </td>
+				</tr>
+				<tr>
+				  <td width="100%" class="tdblock" align="center">
+				  <span class="mktxtcontr">Last Visited:</span>
+				  </td>
+				</tr>
+				<tr>
+				  <td width="100%" align="center" class="tdglobal">
+				  Saturday, 03 September 2011 22:21
+				  </td>
+				</tr>
+				
+				<tr>
+				<td width="100%"  class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="../forum/ucp.php" title="Personal CP">Personal CP</a>
+<!-- end block link template -->
+
+				  </td>
+				</tr>
+				<tr>
+				  <td width="100%" class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="../forum/ucp.php?i=pm&amp;folder=inbox" title="PM (0/0)">PM (0/0)</a>
+<!-- end block link template -->
+
+				  </td>
+				</tr>
+				<tr>
+				  <td width="100%" class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="../forum/ucp.php?mode=logout&amp;sid=b906a6ac8049986af72bfe2740ee24b2" title="Log Out">Log Out</a>
+<!-- end block link template -->
+
+				  </td>
+				</tr>
+     	 	
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Who Is Online?</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      
+				<tr>
+				  <td width="100%">
+				    <table border="0" width="100%" cellpadding="1" cellspacing="1">
+				      <tr>
+					<td class="tdblock">
+					<span class="mktxtcontr">25</span> Users online:
+					</td>
+				      </tr>
+				      <tr>
+					<td class="tdglobal">
+					<b>17</b> &nbsp;Guests<br /><b>1</b> &nbsp;Anonymous<br /><b>7</b> &nbsp;Visible:<br /> <a href="../forum/memberlist.php?mode=viewprofile&amp;u=12403">Al-T</a>, <span style="color:#9E8DA7"><strong>Google [Bot]</strong></span>, <span style="color:#9E8DA7"><strong>Google Adsense [Bot]</strong></span>, <a href="../forum/memberlist.php?mode=viewprofile&amp;u=37948">kambala</a>, <a href="../forum/memberlist.php?mode=viewprofile&amp;u=4069" style="color:#FF6600"><strong>onyx</strong></a>, <a href="../forum/memberlist.php?mode=viewprofile&amp;u=8587">Stabby_McTwist</a>, <span style="color:#9E8DA7"><strong>Yahoo [Bot]</strong></span>
+					</td>
+				      </tr>
+				    </table>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="../forum/viewonline.php" title="Last click">Last click</a>
+<!-- end block link template -->
+
+				  </td>
+				</tr>	
+     	 	
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Recent Discussions</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      
+				<tr>
+				  <td width="100%" class="tdblock">
+				  <a class="uno" href="../forum/viewtopic.php?f=53&amp;t=58384&amp;p=458579#p458579">Re: Pure Grind Tournament</a>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdglobal">
+				  by: <a href="../forum/memberlist.php?mode=viewprofile&amp;u=12403">Al-T</a><br /> on: Sunday, 04 September 2011 16:17
+				  </td>
+				</tr>
+			
+				<tr>
+				  <td width="100%" class="tdblock">
+				  <a class="uno" href="../forum/viewtopic.php?f=53&amp;t=58482&amp;p=458578#p458578">Re: Treasure Hunters M...</a>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdglobal">
+				  by: <a href="../forum/memberlist.php?mode=viewprofile&amp;u=4467">Mynx</a><br /> on: Sunday, 04 September 2011 15:47
+				  </td>
+				</tr>
+			
+				<tr>
+				  <td width="100%" class="tdblock">
+				  <a class="uno" href="../forum/viewtopic.php?f=53&amp;t=58482&amp;p=458577#p458577">Re: Treasure Hunters M...</a>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdglobal">
+				  by: <a href="../forum/memberlist.php?mode=viewprofile&amp;u=4467">Mynx</a><br /> on: Sunday, 04 September 2011 14:48
+				  </td>
+				</tr>
+			
+				<tr>
+				  <td width="100%" class="tdblock">
+				  <a class="uno" href="../forum/viewtopic.php?f=8&amp;t=58526&amp;p=458576#p458576">Re: [1.13c] Hardcoded ...</a>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdglobal">
+				  by: <a href="../forum/memberlist.php?mode=viewprofile&amp;u=16844" style="color:#00CC00"><strong>Necrolis</strong></a><br /> on: Sunday, 04 September 2011 14:32
+				  </td>
+				</tr>
+			
+				<tr>
+				  <td width="100%" class="tdblock">
+				  <a class="uno" href="../forum/viewtopic.php?f=53&amp;t=58384&amp;p=458575#p458575">Re: Pure Grind Tournament</a>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdglobal">
+				  by: <a href="../forum/memberlist.php?mode=viewprofile&amp;u=26202">QL</a><br /> on: Sunday, 04 September 2011 14:13
+				  </td>
+				</tr>
+			
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Site Stats</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      
+				<tr>
+				  <td class="tdblock">
+				  <span class="mktxtcontr">443049</span> Posts:
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdglobal">
+				  54465 Topics
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdglobal">
+				  388584 Replies<br />
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdblock">
+				  <span class="mktxtcontr">329</span> Images:
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdglobal">
+				  Inside the Image Gallery<br />
+				  </td>
+				</tr>				
+				<tr>
+				  <td class="tdblock">
+				  <span class="mktxtcontr">422</span> Articles:
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdglobal">
+				  Inside the Knowledge Base<br />
+				  </td>
+				</tr>				
+				<tr>
+				  <td class="tdblock">
+				  <span class="mktxtcontr">29114</span> Reg. Members:
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdglobal">
+				  Last: <a class="uno" href="../forum/memberlist.php?mode=viewprofile&amp;u=40473">LinuraGamtova</a>
+				  </td>
+				</tr>
+				<!--<tr>
+				  <td class="tdblock">
+				  Browsed Pages:
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdglobal">
+				  <center><img src="../mkportal/templates/Forum/images/led/1.gif" style="border: solid 1px #ffffff;" alt="" /><img src="../mkportal/templates/Forum/images/led/0.gif" style="border: solid 1px #ffffff;" alt="" /><img src="../mkportal/templates/Forum/images/led/7.gif" style="border: solid 1px #ffffff;" alt="" /><img src="../mkportal/templates/Forum/images/led/1.gif" style="border: solid 1px #ffffff;" alt="" /><img src="../mkportal/templates/Forum/images/led/1.gif" style="border: solid 1px #ffffff;" alt="" /><img src="../mkportal/templates/Forum/images/led/7.gif" style="border: solid 1px #ffffff;" alt="" /><img src="../mkportal/templates/Forum/images/led/3.gif" style="border: solid 1px #ffffff;" alt="" /><img src="../mkportal/templates/Forum/images/led/8.gif" style="border: solid 1px #ffffff;" alt="" /></center>
+				  </td>
+				</tr> -->
+
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Calendar</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      
+				<tr>
+				  <td class="tdblock" >
+
+				    <form action="http://phrozenkeep.hugelaser.com/forum/viewtopic.php?t=724#cal" name="CalForm" method="post">
+				    <table width="100%" align="center" border="0" cellspacing="1" cellpadding="0">
+				      <tr>
+					<td class="tdglobal" style="text-align:center;" align="center" colspan="7">
+					  <input type="hidden" name="old_y" value="2011" />
+					  <input type="hidden" name="old_y" value="9" />
+					  <select name="m_m" class="bgselect" onchange="document.CalForm.submit();">
+					  
+					  <option value="1"  >Jan</option>
+
+					  <option value="2"  >Feb</option>
+
+					  <option value="3"  >Mar</option>
+
+					  <option value="4"  >Apr</option>
+
+					  <option value="5"  >May</option>
+
+					  <option value="6"  >Jun</option>
+
+					  <option value="7"  >Jul</option>
+
+					  <option value="8"  >Aug</option>
+
+					  <option value="9" selected="selected" >Sep</option>
+
+					  <option value="10"  >Oct</option>
+
+					  <option value="11"  >Nov</option>
+
+					  <option value="12"  >Dec</option>
+
+					  </select>
+					  <select name="y_y" class="bgselect" onchange="document.CalForm.submit();">
+					  
+					  <option value="2008"  >2008</option>
+
+					  <option value="2009"  >2009</option>
+
+					  <option value="2010"  >2010</option>
+
+					  <option value="2011" selected="selected" >2011</option>
+
+					  <option value="2012"  >2012</option>
+
+					  <option value="2013"  >2013</option>
+
+					  <option value="2014"  >2014</option>
+
+					  </select>
+					</td>
+				      </tr>      
+			      
+				      
+				      <tr>
+					<th class="modulex" style="height: 18px; padding: 0px; margin: 0px; border: 0px; font-size: 10px; width: 14%" align="center" valign="middle">Su</th>
+					   
+					<th class="modulex" style="height: 18px; padding: 0px; margin: 0px; border: 0px; font-size: 10px; width: 14%" align="center" valign="middle">Mo</th>
+					   
+					<th class="modulex" style="height: 18px; padding: 0px; margin: 0px; border: 0px; font-size: 10px; width: 14%" align="center" valign="middle">Tu</th>
+					   
+					<th class="modulex" style="height: 18px; padding: 0px; margin: 0px; border: 0px; font-size: 10px; width: 14%" align="center" valign="middle">We</th>
+					   
+					<th class="modulex" style="height: 18px; padding: 0px; margin: 0px; border: 0px; font-size: 10px; width: 14%" align="center" valign="middle">Th</th>
+					   
+					<th class="modulex" style="height: 18px; padding: 0px; margin: 0px; border: 0px; font-size: 10px; width: 14%" align="center" valign="middle">Fr</th>
+					   
+					<th class="modulex" style="height: 18px; padding: 0px; margin: 0px; border: 0px; font-size: 10px; width: 14%" align="center" valign="middle">Sa</th>
+					   				      
+				      
+				      </tr>
+				      <tr>
+				
+					<td class="tdblock" style="height:10px; width:4px; padding: 0px; margin: 0px; border: 0px;"><br /></td>
+					
+					<td class="tdblock" style="height:10px; width:4px; padding: 0px; margin: 0px; border: 0px;"><br /></td>
+					
+					<td class="tdblock" style="height:10px; width:4px; padding: 0px; margin: 0px; border: 0px;"><br /></td>
+					
+					<td class="tdblock" style="height:10px; width:4px; padding: 0px; margin: 0px; border: 0px;"><br /></td>
+					
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">1</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">2</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">3</td>
+				
+				      </tr>
+				      <tr>
+				
+				      <td class="tdblock" id="mkcaltoday" style="font-size: 10px; height:10px" valign="middle" align="center"><b>4</b></td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">5</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">6</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">7</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">8</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">9</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center"><a class="uno" href="#&amp;code=showday&amp;y=2011&amp;m=9&amp;d=10&amp;month=9&amp;day=10&amp;year=2011">10</a></td>
+				
+				      </tr>
+				      <tr>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">11</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center"><a class="uno" href="#&amp;code=showday&amp;y=2011&amp;m=9&amp;d=12&amp;month=9&amp;day=12&amp;year=2011">12</a></td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">13</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center"><a class="uno" href="#&amp;code=showday&amp;y=2011&amp;m=9&amp;d=14&amp;month=9&amp;day=14&amp;year=2011">14</a></td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center"><a class="uno" href="#&amp;code=showday&amp;y=2011&amp;m=9&amp;d=15&amp;month=9&amp;day=15&amp;year=2011">15</a></td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">16</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">17</td>
+				
+				      </tr>
+				      <tr>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center"><a class="uno" href="#&amp;code=showday&amp;y=2011&amp;m=9&amp;d=18&amp;month=9&amp;day=18&amp;year=2011">18</a></td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">19</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center"><a class="uno" href="#&amp;code=showday&amp;y=2011&amp;m=9&amp;d=20&amp;month=9&amp;day=20&amp;year=2011">20</a></td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">21</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">22</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">23</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center"><a class="uno" href="#&amp;code=showday&amp;y=2011&amp;m=9&amp;d=24&amp;month=9&amp;day=24&amp;year=2011">24</a></td>
+				
+				      </tr>
+				      <tr>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">25</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">26</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center"><a class="uno" href="#&amp;code=showday&amp;y=2011&amp;m=9&amp;d=27&amp;month=9&amp;day=27&amp;year=2011">27</a></td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center"><a class="uno" href="#&amp;code=showday&amp;y=2011&amp;m=9&amp;d=28&amp;month=9&amp;day=28&amp;year=2011">28</a></td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">29</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center"><a class="uno" href="#&amp;code=showday&amp;y=2011&amp;m=9&amp;d=30&amp;month=9&amp;day=30&amp;year=2011">30</a></td>
+				
+					<td class="tdblock" style="height:10px; width:4px; padding: 0px; margin: 0px; border: 0px;"><br /></td>
+									      
+				      
+				    </tr>
+				    <tr>
+				      <td class="trattini3" style="font-size: 1px; background: transparent;" colspan="7">&nbsp;</td>
+				    </tr>
+				    				      
+				      							
+				    </table>
+				    </form>
+
+				  </td>
+				</tr>
+
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Random Image</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      
+				<tr>
+				  <td align="center"><img style="cursor: url(../mkportal/templates/Forum/images/mkajax/zoomin.cur), pointer;" src="http://phrozenkeep.hugelaser.com/mkportal/modules/gallery/album/a_20.jpg" border="0" width="120" height="68" alt="Click to enlarge" onclick="ajax_showPop('../index.php?ind=ajax&amp;act=showgal&amp;idp=20', 1);return false" />
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdblock" align="center"><a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?ind=gallery&amp;op=foto_show&amp;ida=20">Circa Apr 2004-4</a><br />
+				  </td>
+				</tr>
+			
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Phrozen Keep Poll</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      
+				<tr>
+				  <td class="tdblock">
+				  <a href="../forum/viewtopic.php?t=55546&amp;view=viewpoll">Which type of Diablo 2 mod do you like best?</a><br /><br />
+				  </td>
+				</tr>
+            
+				<tr>
+				  <td class="tdblock3">
+				  Total Conversion
+				  </td>
+				</tr>
+				<tr>
+				  <td align="left">
+					<div align="left" style="width: 130px; ">
+				  		<img src="../mkportal/templates/Forum/images/bar-start.gif" width="4" height="11" alt="" /><img src="../mkportal/templates/Forum/images/bar.gif" width="65" height="11" alt="" /><img src="../mkportal/templates/Forum/images/bar-end.gif" width="4" height="11" alt="" />
+					</div>54.43%<br /><br />
+		  		</td>
+				</tr>
+
+                
+				<tr>
+				  <td class="tdblock3">
+				  Balance Mod
+				  </td>
+				</tr>
+				<tr>
+				  <td align="left">
+					<div align="left" style="width: 130px; ">
+				  		<img src="../mkportal/templates/Forum/images/bar-start.gif" width="4" height="11" alt="" /><img src="../mkportal/templates/Forum/images/bar.gif" width="18" height="11" alt="" /><img src="../mkportal/templates/Forum/images/bar-end.gif" width="4" height="11" alt="" />
+					</div>14.56%<br /><br />
+		  		</td>
+				</tr>
+
+                
+				<tr>
+				  <td class="tdblock3">
+				  New Features Added
+				  </td>
+				</tr>
+				<tr>
+				  <td align="left">
+					<div align="left" style="width: 130px; ">
+				  		<img src="../mkportal/templates/Forum/images/bar-start.gif" width="4" height="11" alt="" /><img src="../mkportal/templates/Forum/images/bar.gif" width="34" height="11" alt="" /><img src="../mkportal/templates/Forum/images/bar-end.gif" width="4" height="11" alt="" />
+					</div>28.48%<br /><br />
+		  		</td>
+				</tr>
+
+                
+				<tr>
+				  <td class="tdblock3">
+				  Drop Mod
+				  </td>
+				</tr>
+				<tr>
+				  <td align="left">
+					<div align="left" style="width: 130px; ">
+				  		<img src="../mkportal/templates/Forum/images/bar-start.gif" width="4" height="11" alt="" /><img src="../mkportal/templates/Forum/images/bar.gif" width="3" height="11" alt="" /><img src="../mkportal/templates/Forum/images/bar-end.gif" width="4" height="11" alt="" />
+					</div>2.53%<br /><br />
+		  		</td>
+				</tr>
+
+                
+				<tr>
+				  <td class="tdblock">
+				  <span class="mktxtcontr">158</span> Total Voters
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdglobal">
+				  <a href="../forum/viewtopic.php?t=55546&amp;view=viewpoll">View poll...</a>
+				  </td>
+				</tr>
+            
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Random Quote</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      			
+				<tr>
+				</tr>
+				<tr>
+				  <td class="tdglobal">
+				  <i><b>By the time a man realizes that maybe his father was right, he usually has a son who thinks he's wrong.</b></i><br />(<b>Charles Wadsworth</b>)
+				  </td>
+				</tr>			
+				
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+		  </table>
+		</div>
+		<div id="menuclosedr" style="">
+		<div class="mkalign1"><a href="javascript:ColumnOpen('menudx');MemoPos('MKmenudx', '0')"><img src="../mkportal/templates/Forum/images/f2.gif" border="0" alt="" /></a></div>
+		</div>
+		</td>
+		
+<!-- end right column -->
+
+<!-- begin close portal body -->
+
+	      </tr>
+	    </table>
+	  </td>
+	</tr>
+	
+<!-- end close portal body -->
+
+<!-- begin close main table -->
+
+      </table>
+
+    </td>
+  </tr>
+</table>
+</div>
+
+<!-- end close main table -->
+
+<!-- begin footer -->
+<!-- you can add your credits here  -->
+
+<!-- end footer -->
+  <p align="center"><span class="mkcopyright" style="font-size: 10px">Powered by <a style="font-size: 10px" href="http://www.mkportal.it/" target="_blank">MKPortal</a> &copy;2003-2008 <a style="font-size: 10px" href="http://www.mkportal.it/" target="_blank">mkportal.it</a></span></p>
+
+</body>
+</html>
+
+<!-- end footer -->

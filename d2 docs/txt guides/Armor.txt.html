@@ -1,0 +1,3621 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<!-- begin document head -->
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta name="generator" content="MKPortal" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta content="no-cache" http-equiv="no-cache" />
+  <meta http-equiv="Cache-Control" content="no-cache" />
+  <title>The Phrozen Keep - Knowledge Base - Armor.txt File Guide</title>
+  <meta name="description" content="Diablo 2 Modmaking Central" />
+  <meta name="keywords" content="diablo, diablo2, diabloii, diablo3, diabloiii, mods, modmaking, modding, mod tools, phrozen, forum" />
+<link rel="icon" href="favicon.ico" type="image/x-icon" /> 
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <style type="text/css">
+/*
++--------------------------------------------------------------------------
+|   Cascading Style Sheet for MKportal "Forum" Portal Template
+|   ========================================
+|   by Meo aka Luponero [Amedeo de longis]
+|      Don K. Colburn [visiblesoul.net]
+|   Copyright (c) 2004-2007 mkportal.it
+|   http://www.mkportal.it
+|   Email: luponero@mclink.it
++--------------------------------------------------------------------------
+|   > MKPortal
+|   > Written By Amedeo de longis
+|   > Date started: 9.2.2004
++--------------------------------------------------------------------------
+*/
+
+/*=============================
+M
+K  global styles
+P
+=============================*/
+/* IMPORT body */
+body,
+body {
+	/* Text-Sizing with ems: http://www.clagnut.com/blog/348/ */
+	font-family: "Lucida Grande", Verdana, Helvetica, Arial, sans-serif;
+	color: #FFFFFF;
+	background-color: #000000;
+	font-size: 62.5%; /* This sets the default font size to be equivalent to 10px */
+	margin: 0;
+}
+
+body {
+	font-size: 10px;
+	margin:0px; 
+	padding:0px; /* Opera 0 margin */	
+	text-align: center; /* center in IE */ 
+}
+
+/* IMPORT body background (used for SMF) */
+td { padding: 0; }
+
+/* portal wrapper */
+#mkwrapper {
+	text-align:left; /* left-align text in IE */	
+	margin: 0px auto 0px auto;
+}
+
+/* IMPORT logostrip */
+#mklogostrip,
+#importlogostrip {	
+	background-color: #000000;	
+}
+
+/* logostrip */
+#mklogostrip {
+	text-align: left;
+}
+
+/* IMPORT global font formatting */
+table,
+tr,
+td,
+.tdglobal,
+.importfont {
+	font-size: 10px; 
+	color: #FFFFFF;
+	font-family: Verdana, Arial, Helvetica, sans-serif;	
+}
+
+/* global font formatting */
+table,
+tr,
+td,
+.tdglobal {
+	font-size: 10px;	
+}
+
+/* IMPORT main portal table bg (if different than body bg) */
+.tabmain,
+.importmain {	
+	font-size: 10px;	
+}
+
+/* main portal table */
+.tabmain {
+	margin:0px;
+	padding:0px;	
+}
+
+/* images */
+img { 		
+	border: 0px;
+	vertical-align: middle; /* Meo: Added in C1.2 */
+}
+
+/* Onyx - justified body for long texts */
+div.body_just {
+	font-size: 12px;
+	text-align: justify;
+}
+
+/*=============================
+M
+K IMPORT LIGHT BACKGROUND
+P
+=============================*/
+.modulecell,
+.urlo2,
+.tabnews,
+.trattini,
+.trattini3,
+.tablemenu,
+.taburlo,
+.row1 {
+	background-color: #2F2F4F;
+	padding: 0;
+}
+
+/*=============================
+M
+K IMPORT MEDIUM BACKGROUND
+P
+=============================*/
+.navigatore,
+.tdblock,
+.moduleborder,
+.modulex,
+.mkpagecurrent,
+.row2 {
+	background-color: #2F2F4F;
+	padding: 0;
+}
+
+/*=============================
+M
+K IMPORT DARK BACKGROUND
+P
+=============================*/
+.urlo,
+.sottotitolo,
+th {
+	color: #FFFFFF;
+	font-size: 1.1em;
+	font-weight: bold;
+	background-color: #113274;
+	background-image: url('./forum/styles/BlackRock/theme/images/cellpic3.gif');
+	white-space: nowrap;
+	padding: 7px 5px;
+}
+
+/*=============================
+M
+K  border and divider styles
+P
+=============================*/
+/* vertical spacer image used in portal skin */
+/* .vspacer {
+	background-image: url(./mkportal/templates/Forum/images/punto_vert.gif);
+	background-repeat: repeat-y;
+	background-color: transparent;	
+} */
+
+/* IMPORT border-color */
+.tabmain,
+.tablemenu, /* block wrapper, chat button strip */
+.taburlo,
+.urlo2,
+.tabnews,
+.trattini,
+.trattini2,
+.trattini3,
+.mkpagelink,
+.mkpagelinklast,
+.mkpagecurrent,
+.titadmin,
+.importborders {
+	border: 1px solid #000000;	
+}
+	
+.trattini { /*used only in tpl_main.php(deprecated), blog, ad_blocks.php*/
+	border-width: 1px 0 0 0;
+	border-style: dashed;
+}
+
+/* blocks admin */
+.trattini2 {
+	border-width: 0 1px 0 0;
+	border-style: dashed;
+}
+
+.trattini3 { /* used only in blog, quotes, urlobox, calendar*/
+	border-width: 0 0 1px 0;
+	border-style: dashed;
+}
+
+/*=============================
+M
+K  hyperlink styles
+P
+=============================*/
+/* IMPORT global links */
+a:link,
+a:active,
+a.uno:link,
+.importlink {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #00ffff;	
+	text-decoration: none;	
+}
+
+a:visited,
+a.uno:visited,
+.importvisited {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #00ffff;	
+	text-decoration: none;	
+}
+
+a:hover,
+a.uno:hover,
+.importhover {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	text-decoration: underline;
+}
+
+/* a:active {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #496c9f;	
+	text-decoration: none; 	
+} */
+
+/* bold navbar, block, module links */
+a.uno:link {
+	font-size: 10px;
+	font-weight: bold;
+	text-decoration: none
+}
+
+a.uno:visited {	
+	font-size: 10px; 
+	font-weight: bold;
+	text-decoration: none
+}
+
+
+a.uno:hover {
+	font-size: 10px;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+/* Onyx - bigger links for titles in Articles and so on*/
+a.cat_big:link {
+	font-size: 12px;
+	text-decoration: none
+}
+
+a.cat_big:visited {	
+	font-size: 12px; 
+	text-decoration: none
+}
+
+
+a.cat_big:hover {
+	font-size: 12px;
+	text-decoration: underline;
+}
+
+/* block text links */
+/* .tablemenu a:link, a:visited {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #496c9f;	
+	text-decoration: none;	
+}
+
+.tablemenu a:hover {
+	text-decoration: underline;
+}
+
+.tablemenu a:active { 
+	text-decoration: none; 	
+} */
+
+/* global contrasting text and hyperlink color */
+.mktxtcontr,
+a.mktxtcontr:link, 
+a.mktxtcontr:visited {	
+	color: #ffffff;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a.mktxtcontr:hover {
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+/* contrasting text and hyperlink color 2 (admin) */
+.mktxtcontr2,
+a.mktxtcontr2:link, 
+a.mktxtcontr2:visited {
+	color: #0000ff;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a.mktxtcontr2:hover {
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+/*=============================
+M
+K  form styles
+P
+=============================*/
+/* remove margin after closing "form" tag in MSIE */
+form {
+	margin: 0;
+	padding: 0
+}
+
+/* IMPORT form styles */
+input,
+textarea,
+select,
+.bgselect, /* input fields */
+.mkbutton, /* global submit buttons */
+.mkblkinput, /* block input */
+.mkradio, 
+input {
+	color: #333333;
+	font-family: "Lucida Grande", Verdana, Helvetica, sans-serif;
+	font-size: 1.1em;
+	font-weight: normal;
+	padding: 1px;
+	border: 1px solid #A9B8C2;
+	background-color: #FAFAFA;
+}
+
+/* set form padding and margin */
+/*.mkbutton,*/ /* global submit buttons */
+/* textarea,*/
+input,
+select,
+.bgselect, /* input fields */
+.mkblkinput /* block input */
+{
+	margin: 0px;
+	padding: 0px;
+	font-size: 9px;
+	font-weight: normal; /* needed for Mozilla */	
+}
+
+.mkbutton { /* Global submit buttons */
+	padding: 3px;
+}
+
+.mkbbbutton { /* MKP BBcode editor buttons */
+	margin: 0;
+	padding: 0;
+}
+
+/* radio/checkbox buttons - remove background color and border in IE */ 
+/* .mkradio {
+	background-color: transparent;
+	border-width: 0px;
+} */
+
+/* configure blog textarea */
+textarea.mkwrap1 {
+	overflow: auto;
+	/* width: 230px; */
+	width: 100%;
+}
+
+/* edit blog textarea */
+textarea.mkwrap2 {
+	overflow: auto;
+	width: 500px ;
+}
+
+/*=============================
+M
+K  navstrip styles
+P
+=============================*/
+/* top navstrip */
+.navigatore {	
+	vertical-align: bottom;
+	text-align: right;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: 300;
+	font-size: 9px;
+	border: 0;
+}
+
+/*=============================
+M
+K  block styles
+P
+=============================*/
+/* used in functions.php (function main_page) */
+.blocks {
+	padding: 0px;
+}
+
+/* block td cell */
+.tdblock {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	border: 0;
+	margin: 2px;	
+}
+
+/* block title bar */
+.sottotitolo {
+	vertical-align: bottom;	
+	text-align: left;
+	font-size: 11px;
+	font-weight: bold;
+	color:#00ff00; 
+}
+
+/* horizontal spacer between blocks */
+.tdspacer {
+	line-height: 3px;
+}
+
+/*=============================
+M
+K  module global styles
+P
+=============================*/
+/* IMPORT module table headings */
+th.modulex,
+.cattitle {
+
+}
+th.modulex {
+	white-space: nowrap;
+}
+.modulex {
+	border-width: 0 0 0 0;
+}
+/* Reviews description text */
+.modulelite {
+	font-size: 10pt;
+	/* color:#a6bbcd;*/
+}
+
+/* block padding (news, admin) */
+.contents {
+	padding: 10px;
+	font-size: 12px;
+}
+
+/* module pagination links */
+.mkpagelink {
+	padding:1px 3px 1px 3px;
+	font-weight: normal;
+}
+
+.mkpagelinklast {
+	padding:1px 3px 1px 3px;
+	font-weight:normal;
+}
+
+.mkpagecurrent {
+	padding:1px 3px 1px 3px;
+	font-weight:normal;
+}
+
+/* admin cp titles with top border - used in frontend and backend */
+.titadmin {
+	margin: 0px;
+	font-size: 11px;
+	font-weight: bold;
+	border-width: 1px 0 0 0;
+	border-style: dashed;
+}
+/*=============================
+M
+K  shoutbox module styles
+P
+=============================*/
+td.taburlo{	
+	margin:5px;
+	padding:5px;
+	border: 0;	
+}
+	
+/* shouter and date cell */
+.urlo {
+	line-height: 18px;
+	vertical-align: bottom;
+	text-align: left;	
+	font-size: 11px;
+	font-weight: bold;
+	padding: 4px;		 
+}
+
+/* shout cell */
+.urlo2 {
+	padding: 4px;
+	border-width: 0 0 1px 0;
+	border-style: solid;
+	text-align: left;
+	font-size: 11px;
+	font-weight: bold;
+}
+
+/* white shouter text */
+/* .urlocontrast {	
+	color: #ffffff;
+} */
+
+/*=============================
+M
+K  news module styles
+P
+=============================*/
+/* news table with border */
+.tabnews {
+	border-width: 1px;
+	border-style: solid;
+	margin:0px; 
+	padding:10px;
+	font-size: 10px;	
+}
+
+/* news table custom */
+.tabnews1 {
+	border-width: 1px;
+	border-style: solid;
+	border-color: #000;
+	margin:0px; 
+	padding:0px;
+}
+
+/*=============================
+M
+K  font styles
+P
+=============================*/
+/* red error page text */
+.mkerror {	
+	font-size: 12pt;
+	color: #ff0000;
+	font-weight:bold;
+}
+
+/* MKPQuote quotation text */
+/* .mkquote { 		
+	color: #0000ff;	
+} */
+
+/* MKPGallery module ecard, offline page */
+.ecardtitle,
+.offlinetxt {
+	font-size: 10pt; 
+	font-weight: bold;
+	text-align: center;
+}
+/*Onyx - image gallery border - Firefox-compatible*/
+#imgtable1, #imgtable1 td {border: 1px solid #000;}
+
+
+/*=============================
+M
+K  BBcode quote styles
+P
+=============================*/
+.mkquoteball {
+	font-size: 9px; 
+	color: #666666;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	background-color: #ffffff;	
+	padding: 0;	
+}
+
+.mkquotetext {
+	font-size: 10px; 
+	color: #666666;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	background-color: #ffffff;
+	margin: 0;
+	padding: 0;	
+}
+
+table .mkquotetable{				
+	width: auto; /* IE */	
+	text-align: left;
+}
+
+/* Added in C1.2 */
+/* Table background highlight */
+.bghighlight1 {
+	background-color: #EAF8EB;
+}
+/* Table background highlight 2 */
+.bghighlight2 {
+	background-color: #EFCBCB;
+}
+/* mkportal footer copyright - Do not remove, modify or obscure the copyright text */
+.mkcopyright {
+	font-size: 10px;
+}
+.mkcopyright a {
+	text-decoration: none;
+}
+/* Calendar block current day highlighting */
+#mkcaltoday {
+	border:2px;
+	border-style:outset;
+	background-color: #0000ff;
+}
+
+/* Table Cell Alignment ltr/rtl */
+
+/* default is "left" */
+.mkalign1 {
+	text-align: left;
+}
+
+/* default is "right" */
+.mkalign2 {
+	text-align: right;
+}
+
+</style>
+
+<link rel="stylesheet" href="mkportal/modules/rss/files/simplepie.css" type="text/css" media="screen, projector" />
+
+  
+  <script type="text/javascript">
+	mkportalurl = 'http://phrozenkeep.hugelaser.com/';
+	var MKAJAX_IMAGES_PATH = "./mkportal/templates/Forum/images/mkajax/";
+    	var MKAJAX_SITEPATH = "./";
+  </script>
+  <script type="text/javascript" src="./mkportal/templates/Forum/mkp.js"></script>
+  <script type="text/javascript" src="./mkportal/templates/Forum/mkp.ext.ajax.js"></script>
+  
+<script type="text/javascript" src=".//mkportal/blocks/imgmenu/js/mootools.js"></script>
+<script type="text/javascript" src=".//mkportal/blocks/imgmenu/imgmenu.js"></script>
+<link href=".//mkportal/blocks/imgmenu/imgmenu.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+
+<body onload="javascript:GetPos()">
+<a name="top"></a>
+
+<!-- end document head -->
+
+<!-- begin open main table -->
+
+<div id="mkwrapper" style="width: 100%;">
+<table class="tabmain" width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
+
+  <tr>
+    <td width="100%" align="center">
+
+      <table border="0" width="100%" cellpadding="0" cellspacing="0">
+
+<!-- end open main table -->
+
+<!-- begin logostrip -->
+  
+	<tr>
+	  <td id="mklogostrip" width="100%">
+
+     <TABLE border="0" cellpadding="0" cellspacing="0" WIDTH="100%" background="images/pagetop_middle.gif">
+<TR>
+        <TD><img src="images/pagetop_left2.png" height="120" width="500" naturalsizeflag="0" align="bottom"></td>
+	<td align="center" valign="bottom">
+<!-- original header     
+                                <script type="text/javascript">< ! - -
+                                        google_ad_client = "pub-0170085626153842";
+                                        google_ad_width = 468;
+                                        google_ad_height = 60;
+                                        google_ad_format = "468x60_as";
+                                        google_ad_channel ="";
+                                        google_ad_type = "text";
+                                        google_color_border = "2F2F4F";
+                                        google_color_bg = "2F2F4F";
+                                        google_color_link = "2F2F4F";
+                                        google_color_url = "336699";
+                                        google_color_text = "333333";
+                                / / - - ></script>
+                                <script type="text/javascript"
+                                  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+                                </script>//-->
+
+	</td>
+        <TD width="500"><div align="right"><img src="images/pagetop_right2.png" title="... And the heavens shall tremble" width="500" height="120" " naturalsizeflag="0" align="bottom"></div>
+</TR>
+</TABLE>
+
+
+<!-- 10 anniversary header 
+<TABLE border="0" cellpadding="0" cellspacing="0" WIDTH="100%" background="images/pagetop_middle10.gif">
+<TR>
+        <TD><img src="images/pagetop_left10.png" height="120" width="500" naturalsizeflag="0" align="bottom"></td>
+	<td align="center" valign="bottom">
+	</td>
+        <TD width="500"><div align="right"><img src="images/pagetop_right10.png" title="" width="500" height="120" " naturalsizeflag="0" align="bottom"></div>
+</TR>
+</TABLE>
+//-->
+
+          </td>
+	</tr>
+	
+<!-- end logostrip -->
+
+<!-- begin linkbar -->
+
+<!-- end linkbar -->
+
+<!-- begin open portal body -->
+
+	<tr align="center">
+	  <td width="100%">
+	    <table border="0" width="100%" cellspacing="0" cellpadding="0">
+	      <tr>
+
+<!-- end open portal body -->
+
+<script type="text/javascript">
+			
+			window.addEvent('domready', function(){
+				var myMenu = new ImageMenu($$('#imageMenu a'),{openWidth:310, border:2});
+			});
+		</script>  
+
+	      
+<!-- begin left column -->
+
+		<td id="menusx" valign="top">
+		<div id="menucontents" class="mkalign1" style="">
+		<div class="mkalign2"><a href="javascript:ColumnClose('menusx');MemoPos('MKmenusx', '1');"><img src="./mkportal/templates/Forum/images/f2.gif" border="0" alt="" /></a>&nbsp;</div>
+		  <table cellpadding="0" cellspacing="2" border="0" style="width: 140px;">
+		  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Main Menu</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      
+		      		<tr><td width="100%" class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php" title="Home">Home</a>
+<!-- end block link template -->
+</td></tr>
+			
+		      		<tr><td width="100%" class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="./forum/index.php" title="The Phrozen Forums">The Phrozen Forums</a>
+<!-- end block link template -->
+</td></tr>
+			
+		      		<tr><td width="100%" class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?ind=reviews" title="Knowledge Base">Knowledge Base</a>
+<!-- end block link template -->
+</td></tr>
+			
+		      		<tr><td width="100%" class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?ind=gallery" title="Image Gallery">Image Gallery</a>
+<!-- end block link template -->
+</td></tr>
+			
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Forum</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      <tr><td class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?pid=1" title="Terms of Service">Terms of Service</a>
+<!-- end block link template -->
+</td></tr><tr><td class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="./forum/search.php?search_id=newposts" title="New posts">New posts</a>
+<!-- end block link template -->
+</td></tr><tr><td class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="./forum/memberlist.php" title="Users">Users</a>
+<!-- end block link template -->
+</td></tr><tr><td class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="./forum/faq.php" title="Help">Help</a>
+<!-- end block link template -->
+</td></tr>
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Search</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      <tr><td class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="./forum/search.php" title="Forum">Forum</a>
+<!-- end block link template -->
+</td></tr><tr><td class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?ind=gallery&amp;op=search" title="Images">Images</a>
+<!-- end block link template -->
+</td></tr><tr><td class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?ind=reviews&amp;op=search" title="Knowledge Base">Knowledge Base</a>
+<!-- end block link template -->
+</td></tr>
+				<tr>
+				  <td class="tdblock" align="center">
+				    <a href="http://www.google.com/"><img src="http://phrozenkeep.hugelaser.com/mkportal/modules/search/google_logo.png" alt="Google" align="top" /></a><br />
+
+				    <form action="http://www.google.com/search" method="get" target="blank">	    
+				    <input size="12" name="q" class="mkblkinput" /><br />
+				    <input type="hidden" name="hl" />
+				    <input type="submit" name="btnG" value="Search" class="mkbutton" />
+				    </form>
+				  </td>
+				</tr>
+
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Features</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      <tr><td class="blocks"><table style="width: 100%;" border="0" cellspacing="1" cellpadding="0"><tbody><tr><td class="tdblock"> <a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?ind=reviews&op=entry_view&iden=455">History of the Site</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?ind=reviews&op=section_view&idev=9">Humor</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?ind=reviews&op=section_view&idev=10">Interviews</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?ind=reviews&op=section_view&idev=11">Mod Reviews</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?pid=34">Linking To Us</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?pid=28">Unofficial IRC</a></td></tr> </tbody></table></td></tr>
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">File Center</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      <tr><td class="blocks"><table border="0" cellspacing="1" cellpadding="0" width="100%">
+<tbody>
+<tr>
+<td class="tdblock"> <a class="uno" href="/filecenter/dload.php">Main Page</a></td>
+</tr>
+<tr>
+<td class="tdblock"> <a class="uno" href="/filecenter/dload.php?action=search">File Search</a></td>
+</tr>
+<tr>
+<td class="tdblock"> <a class="uno" href="/filecenter/dload.php?action=category&cat_id=113">Hosted Sites</a></td>
+</tr>
+<tr>
+<td class="tdblock"> <a class="uno" href="/filecenter/dload.php?action=category&cat_id=109">Humor</a></td>
+</tr>
+<tr>
+<td class="tdblock"> <a class="uno" href="/filecenter/dload.php?action=category&cat_id=97">Miscellaneous</a></td>
+</tr>
+<tr>
+<td class="tdblock"> <a class="uno" href="/filecenter/dload.php?action=category&cat_id=1">Mod Making Tools</a></td>
+</tr>
+<tr>
+<td class="tdblock"> <a class="uno" href="/filecenter/dload.php?action=category&cat_id=2">Mod Archive</a></td>
+</tr>
+<tr>
+<td class="tdblock"> <a class="uno" href="/filecenter/dload.php?action=category&cat_id=87">Old Forum Dumps</a></td>
+</tr>
+<tr>
+<td class="tdblock"> <a class="uno" href="/filecenter/dload.php?action=category&cat_id=27">Patches</a></td>
+</tr>
+<tr>
+<td class="tdblock"> <a class="uno" href="/filecenter/dload.php?action=category&cat_id=39">Plugins</a></td>
+</tr>
+<tr>
+<td class="tdblock"> <a class="uno" href="/filecenter/dload.php?action=category&cat_id=38">Resources</a></td>
+</tr>
+</tbody>
+</table></td></tr>
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Diablo II Mod Sites</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      <tr><td class="blocks"><table style="width: 100%;" border="0" cellspacing="1" cellpadding="0"><tbody><tr><td class="tdblock"> <a class="uno" href="http://bth.d2mods.com/" target="_blank">Back to Hellfire</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://bfed2.diablomods.ru/" target="_blank">Battle for Elements</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://blackened.d2mods.com" target="_blank">Blackened</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://n.ethz.ch/student/henninav/" target="_blank">d2:elements</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://es.d2mods.com" target="_blank">Eastern Sun</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://d2immersion.com/" target="_blank">Immersion</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://modsbylaz.hugelaser.com/" target="_blank">Mods by Laz</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://www.sevenlances.net/" target="_blank">Seven Lances</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://perso.wanadoo.fr/maususatlas/TohXt/Index.html" target="_blank">Time of Heroes</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://www.walhallamod.de/" target="_blank">Walhalla</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://zyel.d2mods.com" target="_blank">Zy-El</a></td></tr></tbody></table></td></tr>
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Modding Resources</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      <tr><td class="blocks"><table style="width: 100%;" border="0" cellspacing="1" cellpadding="0"><tbody><tr><td class="tdblock">&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?pid=32">Diabolic Cartography</a></td></tr> <tr><td class="tdblock">&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?pid=22">Incandescence</a></td></tr> <tr><td class="tdblock">&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?pid=33">Infinitum</a></td></tr> <tr><td class="tdblock">&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?pid=21">Inventharia</a></td></tr> <tr><td class="tdblock">&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?pid=23">Warped Tiles</a></td></tr></tbody></table></td></tr>
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Partner Sites</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      <tr><td class="blocks"><table style="width: 100%;" border="0" cellspacing="1" cellpadding="0"><tbody><tr><td class="tdblock"> <a class="uno" href="http://18v.biz/portal.html" target="_blank">18v.biz</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://www.blizzplanet.com/" target="_blank">Blizzplanet</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://www.diablo2.com/" target="_blank">Diablo2.com</a></td></tr><tr><td class="tdblock"> <a class="uno" href="http://www.diablo3plaza.com/" target="_blank">Diablo3Plaza</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://www.diablogamer.com/" target="_blank">DiabloGamer.com</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://www.diabloii.net/" target="_blank">Diabloii.net</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://www.diablowiki.com/" target="_blank">DiabloWiki</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://www.hugelaser.com/" target="_blank">Huge Laser</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://www.lurkerlounge.com/" target="_blank">Lurker Lounge</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://modsreloaded.com/" target="_blank">Mods Reloaded</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://www.neoarcadia.com/" target="_blank">Neoarcadia.com</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://www.planetdiablo.com/" target="_blank">PlanetDiablo</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://www.theamazonbasin.com/" target="_blank">The Amazon Basin</a></td></tr></tbody></table></td></tr>
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Credits</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      <tr><td width="100%" class="tdblock">&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?pid=11">Copyrights</a></td></tr>
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+		  </table>
+		</div>
+		<div id="menucloseds" style="display:none">
+		<div class="mkalign2"><a href="javascript:ColumnOpen('menusx');MemoPos('MKmenusx', '0');"><img src="./mkportal/templates/Forum/images/f1.gif" border="0"  alt="" /></a></div>
+		</div>
+		</td>
+
+<!-- end left column -->
+
+<!-- begin column spacer -->
+
+		<td class="vspacer" width="0%">&nbsp;</td>
+
+<!-- end column spacer -->
+
+<!-- begin center column -->
+
+		<td valign="top" class="mkalign1" width="100%">
+
+<div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "pub-3246876018000001";
+/* Phrozen Keep Leaderboard */
+google_ad_slot = "7514462417";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+
+		  <table cellpadding="0" cellspacing="3" border="0" width="100%"> 
+		  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Knowledge Base</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      <tr align="center">
+  <td>
+
+    <script type="text/javascript">
+	  <!--
+	    function selChd(jumpsection) {
+	    var selIdx = jumpsection.selectedIndex;
+		    var newSel = jumpsection.options[selIdx].value;
+	    location.href='index.php?ind=reviews&op=section_view&idev=' + newSel;
+	}
+	    function selChoc(jumpsection) {
+	    var selIdx = jumpsection.selectedIndex;
+		    var newSel = jumpsection.options[selIdx].value;
+	    location.href='index.php?ind=reviews&order=' + newSel;
+	}
+	    function selChoe(jumpsection, idev) {
+	    var selIdx = jumpsection.selectedIndex;
+		    var newSel = jumpsection.options[selIdx].value;
+	    location.href='index.php?ind=reviews&op=section_view&idev=' + idev + '&order=' + newSel;
+	}
+	  //-->
+    </script>
+    
+    <br />
+    <table width="98%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+	<td width="60%" class="mkalign1">
+	<img src="./mkportal/templates/Forum/images/locbar.gif" alt="" /><a href="index.php?ind=reviews">Knowledge Base</a>-&gt;<a href="index.php?ind=reviews&amp;op=section_view&amp;idev=4">File Guides (1.1x)</a>-&gt;<a href="#">Armor.txt File Guide</a>
+	</td>
+	<td width="40%" class="modulelite mkalign2">
+	  <a href="index.php?ind=reviews&amp;op=search">[ Search ]</a>
+	</td>
+      </tr>
+    </table>
+    <br />
+    <table width="98%" border="0" cellspacing="1" cellpadding="0" class="moduleborder mkalign1">
+      <tr>
+	<td>
+	  <table width="100%" border="0" cellpadding="0" cellspacing="1" class="modulebg">
+            <tr>
+              <td width="100%" height="25" class="tdblock"> <img class="mkicon" src="./mkportal/templates/Forum/images/arrow.gif" alt="" />Armor.txt File Guide</td>
+            </tr>
+            <tr>
+              <td>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td>
+                      <table width="100%" border="0" cellspacing="1" cellpadding="5">
+		      							
+			<tr>
+                            <td class="modulecell mkalign1" width="20%" valign="middle">Title</td>
+                            <td class="modulecell mkalign1" colspan="2" width="80%" style="font-size: 14px;"><b>Armor.txt File Guide</b></td>
+			</tr>
+			<tr>
+                            <td class="modulecell mkalign1" width="20%" valign="top">Description</td>
+                            <td class="modulecell mkalign1" colspan="2" width="80%">by Nefarius, Kingpin, Ric Faith & Paul Siramy</td>
+			</tr>
+			
+			
+			
+			
+			
+			
+			
+			<tr>
+                            <td class="modulecell mkalign1" width="20%" valign="top">Sent by</td>
+                            <td class="modulecell mkalign1" colspan="2" width="80%"></td>
+			</tr>
+			<tr>
+				<td colspan="3"><hr /></td>
+			</tr>
+			<tr>
+                            <td colspan="3" class="modulecell mkalign1" style="font-size: 12px;"><div class="body_just">      <p align="left"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><b><font size="4" color="#FFCC00"><a name="guide_overview"></a>OVERVIEW 
+        :</font></b></font></p>
+      <p align="left"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><b><font color="#00EE00">Armor.txt</font></b>, 
+        <b><font color="#00EE00">Misc.txt</font></b> and <b><font color="#00EE00">Weapons.txt</font></b> 
+        have many identical columns. That's because in fact these 3 text files 
+        are part of 1 bigger file : when the game reads these 3 tables, it merges 
+        them all, one after another, into one and unique table.</font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">These 
+        3 text files contain <font color="#FFFF00">all the base items</font> of 
+        the game : normal / exceptional / elite versions of items like armor, 
+        helm, gaunt, shield, weapon, gems, potion, key, scroll ...</font></p>
+      <p align="left"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">Incidently, 
+        that means you can add columns to any one of these 3 files. For instance 
+        if you add the columns <font color="#33FFFF">Transmogrify</font>, <font color="#00FF00"> 
+        <font color="#33FFFF">TMogType</font></font>, <font color="#33FFFF">TMogMin</font> 
+        and <font color="#00FF00"> <font color="#33FFFF">TMogMax</font></font> 
+        to <b><font color="#00EE00">Armor.txt</font></b> and use them for an Helm, 
+        then this Helm will be able to be Transmute into another item, something 
+        that doesn't look possible at first glance since the 4 columns are not 
+        originally in <b><font color="#00EE00">Armor.txt</font></b>.</font></p>
+      <p align="left"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">Note 
+        : to add columns in a .txt, don't use D2Excel, as this program can't do 
+        the job. Instead, use MS Excel or another spreadsheet that can import 
+        and export tab-delimited .txt files.</font></p>
+
+
+
+      <p align="left"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><b><font size="4" color="#FFCC00"><a name="guide_relatives"></a>RELATED 
+        .TXT FILES :</font></b><br>
+        </font></p>
+      <table width="100%" border="0" cellspacing="0" cellpadding="4">
+        <tr align="left" valign="top"> 
+          <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">    </font></td>
+          <td> 
+            <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00CC33"><b><font color="#00EE00" size="3">This 
+              file is using:</font></b></font></p>
+            <ul>
+              <li><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font color="#33FFFF">AutoMagic.txt</font></font></li>
+              <li><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#33FFFF">Belt.txt</font></li>
+              <li><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#33FFFF">Composit.txt</font></li>
+              <li><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#33FFFF">ItemTypes.txt</font></li>
+              <li><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#33FFFF">Missiles.txt</font></li>
+              <li><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#33FFFF">Sound.txt</font></li>
+            </ul>
+          </td>
+          <td> 
+            <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00CC33"><b><font color="#00EE00" size="3">This 
+              file is used by :</font></b></font></p>
+            <ul>
+              <li><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#33FFFF">CharStats.txt</font></li>
+              <li><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#33FFFF">CompCode.txt</font></li>
+              <li><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#33FFFF">CubeMain.txt</font></li>
+              <li><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+                <font color="#33FFFF">SetItems.txt</font></font></li>
+              <li><font color="#33FFFF" face="Verdana, Arial, Helvetica, sans-serif" size="2">UniqueItems.txt</font></li>
+              <li><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#33FFFF">...</font></li>
+            </ul>
+          </td>
+        </tr>
+      </table></p>
+
+
+
+      <p align="left"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><b><font size="4" color="#FFCC00"><a name="guide_columns"></a>COLUMN 
+        DESCRIPTIONS :</font></b><br>
+        </font></p>
+      <div align="left"> 
+        <table width="100%" border="0" cellspacing="0" cellpadding="4">
+          <tr> 
+            <td colspan="2" align="left" valign="top"> 
+              <hr>
+            </td>
+          </tr>
+          <tr> 
+            <td align="left" valign="top" width="27%"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font size="4" color="#FFCC00"><a name="col_name"></a></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#999999">name</font></b></td>
+            <td align="left" valign="top" width="73%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">Reference 
+              only, it's a comment field.<br>
+                </font></td>
+          </tr>
+          <tr> 
+            <td colspan="2" align="left" valign="top"> 
+              <hr>
+            </td>
+          </tr>
+          <tr> 
+            <td align="left" valign="top" width="27%"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font size="4" color="#FFCC00"><a name="col_version"></a></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">version</font></b></td>
+            <td align="left" valign="top" width="73%"><font face="Courier New, Courier, mono" size="2" color="#FFFF00">  0</font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+              = Classic D2<br>
+              <font color="#FFFF00" face="Courier New, Courier, mono">100</font><font color="#FFFF00"> 
+              </font>= Expansion<br>
+              <br>
+              An item set to 100 cannot be generated in Classic Diablo II.<br>
+                </font></td>
+          </tr>
+          <tr> 
+            <td colspan="2" align="left" valign="top"> 
+              <hr>
+            </td>
+          </tr>
+          <tr> 
+            <td align="left" valign="top" width="27%"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font size="4" color="#FFCC00"><a name="col_compactsave"></a></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">compactsave</font></b></td>
+            <td align="left" valign="top" width="73%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font color="#FFFF00">0 
+              </font>= don't use compact save</font><br>
+              <font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#FFFF00">1 
+              </font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">= 
+              use compact save<br>
+              <br>
+              This is related to the savegames. An item that is saved in a compact 
+              way takes less space in the save file, but in counter-part it has 
+              no stats : no quantity, no automagic, no affixes, no damage, no 
+              armor, no durability ...<br>
+              <br>
+              This is used by items that don't need any stats to be stored, like 
+              Healing Potions or Gems.<br>
+                </font></td>
+          </tr>
+          <tr> 
+            <td colspan="2" align="left" valign="top"> 
+              <hr>
+            </td>
+          </tr>
+          <tr> 
+            <td align="left" valign="top" width="27%"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font size="4" color="#FFCC00"><a name="col_rarity"></a></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">rarity</font></b></td>
+            <td align="left" valign="top" width="73%"><font face="Courier New, Courier, mono" size="2" color="#FFFF00">   0</font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+              = Exclude this item from armor racks<br>
+              <font color="#FFFF00" face="Courier New, Courier, mono">>= 1</font> 
+              = set the rarity for this item to drop from an armor rack, the higher, 
+              the rarer<br>
+              <br>
+              Warning : there needs to be at least 1 armor with rarity <font color="#FFFF00">0</font> 
+              or <font color="#FFFF00">1</font> (but 1 is probably better), othervise 
+              the game will crash when you use an armor rack because it won't 
+              find any armor available.<br>
+                </font></td>
+          </tr>
+          <tr> 
+            <td colspan="2" align="left" valign="top"> 
+              <hr>
+            </td>
+          </tr>
+          <tr> 
+            <td align="left" valign="top" width="27%"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font size="4" color="#FFCC00"><a name="col_spawnable"></a></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">spawnable</font></b></td>
+            <td align="left" valign="top" width="73%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font color="#FFFF00">0 
+              </font>= can <b>never</b> be sold by NPCs</font><br>
+              <font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#FFFF00">1</font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+              = can be sold by NPCs<br>
+                </font></td>
+          </tr>
+          <tr> 
+            <td colspan="2" align="left" valign="top"> 
+              <hr>
+            </td>
+          </tr>
+          <tr> 
+            <td align="left" valign="top" width="27%"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font size="4" color="#FFCC00"><a name="col_minac"></a><a name="col_maxac"></a></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">minac<br>
+              </font></b><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">maxac</font></b></td>
+            <td align="left" valign="top" width="73%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#FFFF00">Minimum</font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+              and <font color="#FFFF00">Maximum</font> Armor Class (AC) this item 
+              can have.<br>
+              <br>
+              <font color="#00EE00"><b>IitemStatsCost.txt</b></font> sets the 
+              limit to how high these values can be.</font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">  
+              <br>
+                </font></td>
+          </tr>
+          <tr> 
+            <td colspan="2" align="left" valign="top"> 
+              <hr>
+            </td>
+          </tr>
+          <tr> 
+            <td align="left" valign="top" width="27%"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font size="4" color="#FFCC00"><a name="col_absorbs"></a></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#999999">absorbs</font></b></td>
+            <td align="left" valign="top" width="73%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">Not 
+              used.<br>
+              <br>
+              Older function was probably like "damage reduced by x".<br>
+                </font></td>
+          </tr>
+          <tr> 
+            <td colspan="2" align="left" valign="top"> 
+              <hr>
+            </td>
+          </tr>
+          <tr> 
+            <td align="left" valign="top" width="27%"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font size="4" color="#FFCC00"><a name="col_speed"></a></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">speed</font></b></td>
+            <td align="left" valign="top" width="73%"> 
+              <table border="0" cellspacing="0" cellpadding="0">
+                <tr align="left" valign="top"> 
+                  <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#FFFF00">Positive 
+                    value</font></td>
+                  <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">= 
+                    slower walk/run</font></td>
+                </tr>
+                <tr align="left" valign="top"> 
+                  <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font color="#FFFF00">Negative 
+                    value </font></font></td>
+                  <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">= 
+                    faster walk/run<br>
+                      </font></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr> 
+            <td colspan="2" align="left" valign="top"> 
+              <hr>
+            </td>
+          </tr>
+          <tr> 
+            <td align="left" valign="top" width="27%"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font size="4" color="#FFCC00"><a name="col_reqstr"></a></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">reqstr</font></b></td>
+            <td align="left" valign="top" width="73%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">Required 
+              Strength, range from <font color="#FFFF00">0</font> to <font color="#FFFF00">65535</font>.<br>
+              <br>
+              If you set a higher value than 65535 or less than 0 you will have 
+              a rollover. For instance, if you try to use the value 65538, then 
+              it'll be replace by 2 in the game.<br>
+                </font></td>
+          </tr>
+          <tr> 
+            <td colspan="2" align="left" valign="top"> 
+              <hr>
+            </td>
+          </tr>
+          <tr> 
+            <td align="left" valign="top" width="27%"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font size="4" color="#FFCC00"><a name="col_levelreq"></a></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">levelreq</font></b></td>
+            <td align="left" valign="top" width="73%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+              Level Requirement.<br>
+              <br>
+              The minimum level the Player must be to use that item.<br>
+                </font></td>
+          </tr>
+          <tr> 
+            <td colspan="2" align="left" valign="top"> 
+              <hr>
+            </td>
+          </tr>
+          <tr> 
+            <td align="left" valign="top" width="27%"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font size="4" color="#FFCC00"><a name="col_block"></a></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">block</font></b></td>
+            <td align="left" valign="top" width="73%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">Percent 
+              Chance to Block.<br>
+              <br>
+              Block chances are capped at <font color="#FFFF00">75</font> %.<br>
+                </font></td>
+          </tr>
+          <tr> 
+            <td colspan="2" align="left" valign="top"> 
+              <hr>
+            </td>
+          </tr>
+          <tr> 
+            <td align="left" valign="top" width="27%"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font size="4" color="#FFCC00"><a name="col_durability"></a><a name="col_nodurability"></a><a name="col_durwarning"></a></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">durability<br>
+              </font></b><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">nodurability<br>
+              </font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">durwarning</font></b></td>
+            <td align="left" valign="top" width="73%"> 
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">durability</font></b> 
+                = Base Durability</font></p>
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font color="#FFFF00">255</font> 
+                  is the maximum, higher values will make a rollover. So if you 
+                  set Durability to 257 the item will be set to have a durability 
+                  of only 1.</font></p>
+              </blockquote>
+              <p> </p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#FFFF00"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">nodurability 
+                </font></b></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">= 
+                does it even have a Durability ?</font></p>
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#FFFF00">1 
+                  </font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">= 
+                  indestructible<br>
+                  <font color="#FFFF00">0 </font>= use the Base Durability.<br>
+                  <br>
+                  Note that if the item is set to don't use durability, not only 
+                  that it'll be an indestructible item, but you also won't read 
+                  any durability line in the item description.</font></p>
+              </blockquote>
+              <p> </p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">durwarning</font></b> 
+                = durability where the warning icon appear.</font></p>
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">When 
+                  the current durability of the item is less or equal to this 
+                  value, an icon appear on the screen to inform the Player the 
+                  location of the item which is about to break.<br>
+                    </font></p>
+              </blockquote>
+            </td>
+          </tr>
+          <tr> 
+            <td colspan="2" align="left" valign="top"> 
+              <hr>
+            </td>
+          </tr>
+          <tr> 
+            <td align="left" valign="top" width="27%"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font size="4" color="#FFCC00"><a name="col_cost"></a></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">cost</font></b></td>
+            <td align="left" valign="top" width="73%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+              Base Cost.<br>
+                </font></td>
+          </tr>
+          <tr> 
+            <td colspan="2" align="left" valign="top"> 
+              <hr>
+            </td>
+          </tr>
+          <tr> 
+            <td align="left" valign="top" width="27%"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font size="4" color="#FFCC00"><a name="col_gamble_cost"></a></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">gamble 
+              cost</font></b></td>
+            <td align="left" valign="top" width="73%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+              Override default Gamble Cost.<br>
+              <br>
+              Only works for <font color="#FFFF00">Rings</font> and <font color="#FFFF00">Amulets</font>, 
+              in <font color="#00EE00"><b>Misc.txt</b></font>.<br>
+                </font></td>
+          </tr>
+          <tr> 
+            <td colspan="2" align="left" valign="top"> 
+              <hr>
+            </td>
+          </tr>
+          <tr> 
+            <td align="left" valign="top" width="27%"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font size="4" color="#FFCC00"><a name="col_code"></a><a name="col_namestr"></a></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">code<br>
+              </font></b><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">namestr</font></b></td>
+            <td align="left" valign="top" width="73%"> 
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+                <b><font color="#00EE00">code</font></b> = This is a 3-letter/number 
+                code.</font></p>
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">The 
+                  code for an item. It needs to be unique; not used by any other 
+                  item. It is used as reference into several other .txt files.<br>
+                  <br>
+                  It is NOT necessary to add this code to a TBL file anymore.</font></p>
+              </blockquote>
+              <p> </p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><b><font color="#00EE00">namestr</font></b> 
+                = code OR name.</font></p>
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">If 
+                  this string is NOT present in a TBL, it will be considered directly 
+                  as the name of the item, but if this code IS present in a TBL 
+                  then it'll be that TBL record that will be used as the name 
+                  of the item instead.<br>
+                  <br>
+                  Note that if you want a string name with at least 1 space, then 
+                  you'll have to create a record in a TBL.<br>
+                    </font></p>
+              </blockquote>
+            </td>
+          </tr>
+          <tr> 
+            <td colspan="2" align="left" valign="top"> 
+              <hr>
+            </td>
+          </tr>
+          <tr> 
+            <td align="left" valign="top" width="27%"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font size="4" color="#FFCC00"><a name="col_normcode"></a></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font size="4" color="#FFCC00"><a name="col_ubercode"></a><a name="col_ultracode"></a></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">normcode<br>
+              </font></b><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">ubercode<br>
+              </font></b><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">ultracode</font></b></td>
+            <td align="left" valign="top" width="73%"> 
+              <table border="0" cellspacing="0" cellpadding="0">
+                <tr align="left" valign="top"> 
+                  <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">normcode </font></b></font></td>
+                  <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">= 
+                    code of the item in its <font color="#FFFF00">normal</font> 
+                    version</font></td>
+                </tr>
+                <tr align="left" valign="top"> 
+                  <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">ubercode</font></b></font></td>
+                  <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">= 
+                    code of the item in its <font color="#FFFF00">exceptional</font> 
+                    version</font></td>
+                </tr>
+                <tr align="left" valign="top"> 
+                  <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">ultracode</font></b></font></td>
+                  <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">= 
+                    code of the item in its <font color="#FFFF00">elite</font> 
+                    version</font></td>
+                </tr>
+              </table>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">To 
+                know the version of an item (like for a recipe that upgrade only 
+                normal items into their exceptional version), the game take its 
+                <b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">code</font></b>, 
+                and compare it with these 3 columns.<br>
+                <br>
+                For instance</font> <font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">the 
+                <font color="#FFFF00">Lion Helm</font> has :</font></p>
+              <ul>
+                <li><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">code</font></b> 
+                  = <font color="#FFFF00">ba7</font></font></li>
+                <li><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">normcode</font></b> 
+                  = <font color="#FFFF00">ba2</font></font></li>
+                <li><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><b><font color="#00EE00">uber</font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">code</font></b> 
+                  = <font color="#FFFF00">ba7</font></font></li>
+                <li><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">ultracode</font></b> 
+                  = <font color="#FFFF00">bac</font></font></li>
+              </ul>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">Therefore 
+                the <font color="#FFFF00">Lion Helm</font> in an <b>exceptional</b> 
+                item, and then this cube recipe won't work.<br>
+                  </font></p>
+            </td>
+          </tr>
+          <tr> 
+            <td colspan="2" align="left" valign="top"> 
+              <hr>
+            </td>
+          </tr>
+          <tr> 
+            <td align="left" valign="top" width="27%"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font size="4" color="#FFCC00"><a name="col_level"></a></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">level</font></b></td>
+            <td align="left" valign="top" width="73%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">Base 
+              Item Level (also known as Quality Level - <font color="#FFFF00">qlvl</font>)<br>
+              <br>
+              This is NOT the <font color="#FFFF00">ilvl</font> of the item (which 
+              determines what possible affixes can appear on the item). Instead, 
+              this quality level is used when the game create its <font color="#FFFF00">weapXX</font> 
+              and <font color="#FFFF00">armoXX</font> Treasure Classes (TC), and 
+              to avoid Monsters / Chests of droping any level of items. For instance, 
+              a monster with a Level of 20 cannot drop a level 30 armor used by 
+              the "armo30" preset TC.<br>
+                </font></td>
+          </tr>
+          <tr> 
+            <td colspan="2" align="left" valign="top"> 
+              <hr>
+            </td>
+          </tr>
+          <tr> 
+            <td align="left" valign="top" width="27%"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font size="4" color="#FFCC00"><a name="col_magic_lvl"></a></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">magic 
+              lvl</font></b></td>
+            <td align="left" valign="top" width="73%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+              Additional Magic Level (also known as <font color="#FFFF00">mlvl</font>).<br>
+              <br>
+              For instance if this value is set to 5 and you have find the item 
+              when gambling while you were at a Player level of 10, then you can 
+              get lvl 15 affixes on this item.<br>
+                </font></td>
+          </tr>
+          <tr> 
+            <td colspan="2" align="left" valign="top"> 
+              <hr>
+            </td>
+          </tr>
+          <tr> 
+            <td align="left" valign="top" width="27%"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font size="4" color="#FFCC00"><a name="col_auto_prefix"></a></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">auto 
+              prefix</font></b></td>
+            <td align="left" valign="top" width="73%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+              Prefix that automatically spawn on this item.<br>
+              <br>
+              Taken from the column <font color="#66FFFF">group</font> of <font color="#00EE00"><b>AutoMagic.txt</b></font>.<br>
+                </font></td>
+          </tr>
+          <tr> 
+            <td colspan="2" align="left" valign="top"> 
+              <hr>
+            </td>
+          </tr>
+          <tr> 
+            <td align="left" valign="top" width="27%"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font size="4" color="#FFCC00"><a name="col_alternategfx"></a></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">alternategfx</font></b></td>
+            <td align="left" valign="top" width="73%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+              This is the code of the DCC to use for a Player Animation.<br>
+              <br>
+              For instance, the Gothic Shield (code=<font color="#FFFF00">gts</font>) 
+              has <font color="#FFFF00">kit</font> in its <b><font color="#00ee00">alternategfx</font></b> 
+              column. That means that if a Barbarian equip himself whith that 
+              shield, in his A1 (Attack 1) mode animation his SH (Shield) layer 
+              component will use the DCC BA<b>SH</b><font color="#00FF00"><font color="#FFFF00"><b>KIT</b></font></font>A11HS.DCC, 
+              and NOT the file BA<b>SHGTS</b>A11HS.DCC nor the file BA<b>SHBUC</b>A11HS.DCC.<br>
+                </font></td>
+          </tr>
+          <tr> 
+            <td colspan="2" align="left" valign="top"> 
+              <hr>
+            </td>
+          </tr>
+          <tr> 
+            <td align="left" valign="top" width="27%"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font size="4" color="#FFCC00"><a name="col_OpenBetaGfx"></a></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#999999">OpenBetaGfx</font></b></td>
+            <td align="left" valign="top" width="73%"> 
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+                Not used.<br>
+                <br>
+                Reference what <b><font color="#00EE00">alternategfx</font></b> 
+                it was using in the D2 Beta.<br>
+                  </font></p>
+            </td>
+          </tr>
+          <tr> 
+            <td colspan="2" align="left" valign="top"> 
+              <hr>
+            </td>
+          </tr>
+          <tr> 
+            <td align="left" valign="top" width="27%"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font size="4" color="#FFCC00"><a name="col_spelloffset"></a></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#999999">spelloffset</font></b></td>
+            <td align="left" valign="top" width="73%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+              Unknown.<br>
+              <br>
+              Only present in <b><font color="#00EE00">Armor.txt</font></b>.<br>
+                </font></td>
+          </tr>
+          <tr> 
+            <td colspan="2" align="left" valign="top"> 
+              <hr>
+            </td>
+          </tr>
+          <tr> 
+            <td align="left" valign="top" width="27%"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font size="4" color="#FFCC00"><a name="col_component"></a></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">component</font></b></td>
+            <td align="left" valign="top" width="73%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+              <font color="#FFFF00"> Layer</font> of the Player Animation that 
+              the item is using.<br>
+              <br>
+              Taken from <font color="#00EE00"><b>Composit.txt</b></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">, 
+              that's the index of the line :<br>
+              <br>
+              </font></font> 
+              <table width="100%" border="0" cellspacing="0" cellpadding="4">
+                <tr valign="top"> 
+                  <td width="18%" align="right"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#FFFF00">0</font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+                    :</font></td>
+                  <td width="35%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">HD 
+                    (Head)</font></td>
+                  <td width="11%" align="right"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#FFFF00">8</font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+                    :</font></td>
+                  <td width="36%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">S1 
+                    (Right Shoulder)</font></td>
+                </tr>
+                <tr valign="top"> 
+                  <td width="18%" align="right"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#FFFF00">1</font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+                    :</font></td>
+                  <td width="35%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">TR 
+                    (Torso)</font></td>
+                  <td width="11%" align="right"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#FFFF00">9</font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+                    :</font></td>
+                  <td width="36%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">S2 
+                    (Left Shoulder)</font></td>
+                </tr>
+                <tr valign="top"> 
+                  <td width="18%" align="right"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#FFFF00">2</font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+                    :</font></td>
+                  <td width="35%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">LG 
+                    (Legs)</font></td>
+                  <td width="11%" align="right"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#FFFF00">10</font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+                    :</font></td>
+                  <td width="36%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">S3 
+                    (Necro Shield)</font></td>
+                </tr>
+                <tr valign="top"> 
+                  <td width="18%" align="right"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#FFFF00">3</font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+                    :</font></td>
+                  <td width="35%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">RA 
+                    (Right Arm)</font></td>
+                  <td width="11%" align="right"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#FFFF00">11</font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+                    :</font></td>
+                  <td width="36%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">S4 
+                    (Special 4)</font></td>
+                </tr>
+                <tr valign="top"> 
+                  <td width="18%" align="right"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#FFFF00">4</font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+                    :</font></td>
+                  <td width="35%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">LA 
+                    (Left Arm)</font></td>
+                  <td width="11%" align="right"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#FFFF00">12</font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+                    :</font></td>
+                  <td width="36%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">S5 
+                    (Special 5)</font></td>
+                </tr>
+                <tr valign="top"> 
+                  <td width="18%" align="right"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#FFFF00">5</font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+                    :</font></td>
+                  <td width="35%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">RH 
+                    (Right Hand)</font></td>
+                  <td width="11%" align="right"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#FFFF00">13</font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+                    :</font></td>
+                  <td width="36%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">S6 
+                    (Special 6)</font></td>
+                </tr>
+                <tr valign="top"> 
+                  <td width="18%" align="right"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#FFFF00">6</font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+                    :</font></td>
+                  <td width="35%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">LH 
+                    (Left Hand)</font></td>
+                  <td width="11%" align="right"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#FFFF00">14</font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+                    :</font></td>
+                  <td width="36%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">S7 
+                    (Special 7)</font></td>
+                </tr>
+                <tr valign="top"> 
+                  <td width="18%" align="right"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#FFFF00">7</font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+                    :</font></td>
+                  <td width="35%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">SH 
+                    (Shield) </font></td>
+                  <td width="11%" align="right"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#FFFF00">15</font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+                    :</font></td>
+                  <td width="36%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">S8 
+                    (Special 8)</font></td>
+                </tr>
+              </table>
+              <font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><br>
+              A value of <font color="#FFFF00">16</font> means that the item don't 
+              use any layers, since this is an invalid index in <font color="#00EE00"><b>Composit.txt</b></font>.<br>
+                </font></td>
+          </tr>
+          <tr> 
+            <td colspan="2" align="left" valign="top"> 
+              <hr>
+            </td>
+          </tr>
+          <tr> 
+            <td align="left" valign="top" width="27%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><b><font color="#FFCC00"><a name="col_rArm"></a><a name="col_lArm"></a><a name="col_Torso"></a><a name="col_Legs"></a><a name="col_rSPad"></a><a name="col_lSPad"></a></font><font color="#00EE00">rArm<br>
+              </font></b> <b><font color="#00EE00">lArm<br>
+              </font></b> <b><font color="#00EE00">Torso<br>
+              </font></b> <b><font color="#00EE00">Legs<br>
+              </font></b> <b><font color="#00EE00">rSPad<br>
+              </font></b> <b><font color="#00EE00">lSPad</font></b></font></td>
+            <td align="left" valign="top" width="73%"> 
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+                Composition of an Armor. Each component in unmodded D2 can have 
+                3 versions, Light / Medium / Heavy. These columns indicates wich 
+                version to use for all components (which DCC to use for all layers).</font></p>
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#FFFF00">0</font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+                  = LIT (Light)<br>
+                  <font color="#FFFF00">1</font> = MED (Medium)<br>
+                  <font color="#FFFF00">2</font> = HVY (Heavy)</font></p>
+              </blockquote>
+              <table width="100%" border="0" cellspacing="0" cellpadding="4">
+                <tr> 
+                  <td width="9%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><b><font color="#00EE00">rArm</font></b></font></td>
+                  <td width="91%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">: 
+                    layer <font color="#FFFF00">RA</font> (Right Arm)</font></td>
+                </tr>
+                <tr> 
+                  <td width="9%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><b><font color="#00EE00">lArm</font></b></font></td>
+                  <td width="91%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">: 
+                    layer <font color="#FFFF00">LA</font> (Left Arm)</font></td>
+                </tr>
+                <tr> 
+                  <td width="9%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><b><font color="#00EE00">Torso  </font></b></font></td>
+                  <td width="91%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">: 
+                    layer <font color="#FFFF00">TR</font> (Torso)</font></td>
+                </tr>
+                <tr> 
+                  <td width="9%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><b><font color="#00EE00">Legs</font></b></font></td>
+                  <td width="91%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">: 
+                    layer <font color="#FFFF00">LG</font> (Legs)</font></td>
+                </tr>
+                <tr> 
+                  <td width="9%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><b><font color="#00EE00">rSPad  </font></b></font></td>
+                  <td width="91%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">: 
+                    layer <font color="#FFFF00">S1</font> (Special 1 - Right Shoulder)</font></td>
+                </tr>
+                <tr> 
+                  <td width="9%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><b><font color="#00EE00">lSPad</font></b></font></td>
+                  <td width="91%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">: 
+                    layer <font color="#FFFF00">S2</font> (Special 2 - Left Shoulder)</font></td>
+                </tr>
+              </table>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">For 
+                instance the Quilted Armor has <b><font color="#00EE00">rSPad</font></b> 
+                = <font color="#FFFF00">1</font> and <b><font color="#00EE00">lSPad</font></b> 
+                = <font color="#FFFF00">1</font>. Therefore this armor when equiped 
+                by an Amazon will be all red (LIT version) except for the shoulders 
+                that will be both gray (MED version).<br>
+                  </font></p>
+            </td>
+          </tr>
+          <tr> 
+            <td colspan="2" align="left" valign="top"> 
+              <hr>
+            </td>
+          </tr>
+          <tr> 
+            <td align="left" valign="top" width="27%"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font size="4" color="#FFCC00"><a name="col_flippyfile"></a></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font size="4" color="#FFCC00"><a name="col_invfile"></a><a name="col_uniqueinvfile"></a><a name="col_setinvfile"></a></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">flippyfile<br>
+              </font></b><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">invfile<br>
+              </font></b><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">uniqueinvfile<br>
+              </font></b><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">setinvfile</font></b></td>
+            <td align="left" valign="top" width="73%"> 
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">T<font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">hese 
+                4 columns are DC6 filename to use for various situation</font></font></p>
+              <table width="100%" border="0" cellspacing="0" cellpadding="4">
+                <tr> 
+                  <td width="14%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">flippyfile</font></b></font></td>
+                  <td width="86%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">: 
+                    animation when the item <font color="#FFFF00">drop</font></font></td>
+                </tr>
+                <tr> 
+                  <td width="14%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">invfile</font></b></font></td>
+                  <td width="86%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">: 
+                    item in the <font color="#FFFF00">inventory</font></font></td>
+                </tr>
+                <tr> 
+                  <td width="14%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">uniqueinvfile  </font></b></font></td>
+                  <td width="86%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">: 
+                    if present, file to use for the <font color="#FFFF00">Unique</font> 
+                    version</font></td>
+                </tr>
+                <tr> 
+                  <td width="14%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">setinvfile</font></b></font></td>
+                  <td width="86%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">: 
+                    if present, file to use for the <font color="#FFFF00">Set</font> 
+                    version</font></td>
+                </tr>
+              </table>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">All 
+                these files are in the <font color="#FFFF00">DataGlobalItems</font> 
+                directory. For instance if the <b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">flippyfile</font></b> 
+                cell has <font color="#FFFF00">flpcap</font>, then the game will 
+                use the file <font color="#FFFF00">DataGlobalItemsflpcap.dc6</font> 
+                when the item drop.</font><br>
+                  </p>
+            </td>
+          </tr>
+          <tr> 
+            <td colspan="2" align="left" valign="top"> 
+              <hr>
+            </td>
+          </tr>
+          <tr> 
+            <td align="left" valign="top" width="27%"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font size="4" color="#FFCC00"><a name="col_invwidth"></a><a name="col_invheight"></a></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">invwidth<br>
+              </font></b><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">invheight</font></b></td>
+            <td align="left" valign="top" width="73%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+              <font color="#FFFF00">Width</font> and <font color="#FFFF00">Height</font> 
+              of the item in the Inventory, in number of cells.<br>
+              </font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">  
+              </font></td>
+          </tr>
+          <tr> 
+            <td colspan="2" align="left" valign="top"> 
+              <hr>
+            </td>
+          </tr>
+          <tr> 
+            <td align="left" valign="top" width="27%"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font size="4" color="#FFCC00"><a name="col_hasinv"></a></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font size="4" color="#FFCC00"><a name="col_gemsockets"></a><a name="col_gemapplytype"></a></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">hasinv<br>
+              </font></b><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">gemsockets<br>
+              </font></b><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">gemapplytype</font></b></td>
+            <td align="left" valign="top" width="73%"> 
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+                These 3 columns are used as Socketing parameters.</font></p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font color="#FFFF00"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">hasinv</font></b> 
+                </font>= indicate if the item has an "inventory". This 
+                one is needed to store the gems / runes within.</font></p>
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font color="#FFFF00">1 
+                  </font>= can be socketed<br>
+                  <font color="#FFFF00">0 </font>= cannot be socketed</font></p>
+              </blockquote>
+              <p> </p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">gemsockets</font></b> 
+                = potential maximum of sockets for this item.</font></p>
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">Note 
+                  that in any cases the item won't be able to have more sockets 
+                  than its number of inventory cells (<b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">invwidth</font></b> 
+                  * <b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">invheight</font></b>).<br>
+                  <br>
+                  In addition, there are 3 columns in <b><font color="#00EE00">ItemTypes.txt</font></b> 
+                  that limit this number of sockets, based on the level of the 
+                  monster that drop the item. The columns are <font color="#33FFFF">MaxSock1</font>, 
+                  <font color="#33FFFF">MaxSock25</font> and <font color="#33FFFF">MaxSock40</font>.<br>
+                  <br>
+                  For instance if an helm has <b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">gemsockets</font></b> 
+                  = <font color="#FFFF00">4</font>, but <font color="#33FFFF">MaxSock1</font> 
+                  = <font color="#FFFF00">2</font>, then this helm, when drop 
+                  by a monster of level < 25, will only have 2 sockets.</font></p>
+              </blockquote>
+              <p> </p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">gemapplytype</font></b> 
+                = gem effect.</font></p>
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+                  <font color="#FFFF00">0 </font>= weapon<br>
+                  <font color="#FFFF00">1</font> = armor / helm<br>
+                  <font color="#FFFF00">2</font> = shield<br>
+                  <br>
+                  If you use another value, your item won't be able to have sockets.<br>
+                    </font></p>
+              </blockquote>
+            </td>
+          </tr>
+          <tr> 
+            <td colspan="2" align="left" valign="top"> 
+              <hr>
+            </td>
+          </tr>
+          <tr> 
+            <td align="left" valign="top" width="27%"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font size="4" color="#FFCC00"><a name="col_useable"></a></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">useable</font></b></td>
+            <td align="left" valign="top" width="73%"> 
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+                <font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">Does 
+                this item do something special when right-click ?</font></font></p>
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#FFFF00">1 
+                  </font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">= 
+                  useable<br>
+                  </font><font color="#FFFF00">0</font> = not useable</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">This 
+                column is used especially in <b><font color="#00EE00">Misc.txt</font></b>, 
+                for <font color="#FFFF00">Potions</font> / <font color="#FFFF00">Scrolls</font>.<br>
+                <br>
+                Note : The game know what to with the item by its <a href="#col_code"><u>code</u></a>. 
+                Unless you're doing dll editing, don't expect an item to do something 
+                just because you have set this column to <font color="#FFFF00">1</font>.</font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><br>
+                  </font></p>
+            </td>
+          </tr>
+          <tr> 
+            <td colspan="2" align="left" valign="top"> 
+              <hr>
+            </td>
+          </tr>
+          <tr> 
+            <td align="left" valign="top" width="27%"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font size="4" color="#FFCC00"><a name="col_throwable"></a></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#999999">throwable</font></b></td>
+            <td align="left" valign="top" width="73%"> 
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+                Not used.<br>
+                <br>
+                Can this item be thrown ?</font></p>
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#FFFF00">1 
+                  </font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">= 
+                  throwable<br>
+                  <font color="#FFFF00">0</font> = not throwable</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">This 
+                information is in <b><font color="#00EE00">ItemTypes.txt</font></b> 
+                in fact : in <b><font color="#00EE00">Armor.txt</font></b> and 
+                <b><font color="#00EE00">Misc.txt</font></b> the column is all 
+                filled with <font color="#FFFF00">0</font>, and is not present 
+                in <b><font color="#00EE00">Weapons.txt</font></b>.<br>
+                  </font></p>
+            </td>
+          </tr>
+          <tr> 
+            <td colspan="2" align="left" valign="top"> 
+              <hr>
+            </td>
+          </tr>
+          <tr> 
+            <td align="left" valign="top" width="27%"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font size="4" color="#FFCC00"><a name="col_missiletype"></a></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">missiletype</font></b></td>
+            <td align="left" valign="top" width="73%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+              Missile to shoot if you throw this item.<br>
+              <br>
+              Taken from the column <font color="#66FFFF">Id</font> in <b><font color="#00FF00">Missiles.txt</font></b>.<br>
+                </font></td>
+          </tr>
+          <tr> 
+            <td colspan="2" align="left" valign="top"> 
+              <hr>
+            </td>
+          </tr>
+          <tr> 
+            <td align="left" valign="top" width="27%"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font size="4" color="#FFCC00"><a name="col_stackable"></a></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font size="4" color="#FFCC00"><a name="col_minstack"></a><a name="col_maxstack"></a><a name="col_qntwarning"></a></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">stackable<br>
+              </font></b><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">minstack<br>
+              </font></b><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">maxstack<br>
+              </font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">qntwarning</font></b></td>
+            <td align="left" valign="top" width="73%"> 
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+                <b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">stackable</font></b> 
+                = can this item be stacked ?</font></p>
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#FFFF00">1 
+                  </font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">= 
+                  stackable, has quantity<br>
+                  <font color="#FFFF00">0 </font>= not stackable</font></p>
+                <p> </p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">minstack</font></b> 
+                = <font color="#FFFF00">Minimum</font> quantity the item has when 
+                spawned.</font></p>
+              <p> </p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">maxstack</font></b> 
+                = <font color="#FFFF00">Maximum</font> quantity the item can have.</font></p>
+              <p> </p>
+              <p><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">qntwarning</font></b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+                = quantity where the warning icon appear.</font></p>
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">When 
+                  the current quantity of the item is less or equal to this value, 
+                  an icon appear on the screen to inform the Player that he has 
+                  wasted most of the stack.</font></p>
+                <p> </p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">These 
+                columns are not used in <b><font color="#00EE00">Armor.txt</font></b>, 
+                only in <b><font color="#00EE00">Misc.txt</font></b> (Keys, Books) 
+                and <b><font color="#00EE00">Weapons.txt</font></b> (Javelins, 
+                Arrows ...)<br>
+                  </font></p>
+            </td>
+          </tr>
+          <tr> 
+            <td colspan="2" align="left" valign="top"> 
+              <hr>
+            </td>
+          </tr>
+          <tr> 
+            <td align="left" valign="top" width="27%"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font size="4" color="#FFCC00"><a name="col_type"></a></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font size="4" color="#FFCC00"><a name="col_type2"></a></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">type<br>
+              </font></b><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">type2</font></b></td>
+            <td align="left" valign="top" width="73%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#FFFF00">Base 
+              Types</font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+              of the item. Types are used for Cube Recipes, Socketing...<br>
+              <br>
+              They're taken from the column <font color="#66FFFF">Code</font> 
+              in <b><font color="#00EE00">ItemTypes.txt</font></b>.<br>
+                </font></td>
+          </tr>
+          <tr> 
+            <td colspan="2" align="left" valign="top"> 
+              <hr>
+            </td>
+          </tr>
+          <tr> 
+            <td align="left" valign="top" width="27%"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font size="4" color="#FFCC00"><a name="col_dropsound"></a></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font size="4" color="#FFCC00"><a name="col_dropsfxframe"></a><a name="col_usesound"></a></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">dropsound<br>
+              </font></b><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">dropsfxframe<br>
+              </font></b><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">usesound</font></b></td>
+            <td align="left" valign="top" width="73%"> 
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+                <b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">dropsound</font></b> 
+                = Tells what sound to use when the item drops.</font></p>
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">The 
+                  code is taken from the column <font color="#33FFFF">Sound</font> 
+                  in <b><font color="#00EE00">Sound.txt</font></b>.</font></p>
+              </blockquote>
+              <p> </p>
+              <p><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">dropsfxframe</font></b> 
+                = <font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+                Number of frames the sound will play.</font></p>
+              <p> </p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">usesound</font></b> 
+                = Tells what sound to use when the item is used.</font></p>
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+                  For instance, this column is used when the player is moving 
+                  the item around his Inventory.<br>
+                  <br>
+                  </font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">The 
+                  code is taken from the column <font color="#33FFFF">Sound</font> 
+                  in <b><font color="#00EE00">Sound.txt</font></b>.<br>
+                    </font></p>
+              </blockquote>
+            </td>
+          </tr>
+          <tr> 
+            <td colspan="2" align="left" valign="top"> 
+              <hr>
+            </td>
+          </tr>
+          <tr> 
+            <td align="left" valign="top" width="27%"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font size="4" color="#FFCC00"><a name="col_quest"></a></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font size="4" color="#FFCC00"><a name="col_questdiffcheck"></a></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">quest<br>
+              questdiffcheck</font></b></td>
+            <td align="left" valign="top" width="73%"> 
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+                <b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">quest</font></b> 
+                = Some hardcoded <font color="#FFFF00">ID</font> for Quests items.</font></p>
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">A 
+                  Quest item is Unique, you can only pick one with the same ID, 
+                  and you can't sell it to a NPC.</font></p>
+              </blockquote>
+              <p> </p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">questdiffcheck 
+                </font></b> = this item has a difficulty check.</font></p>
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">when 
+                  set to <font color="#FFFF00">1</font>, this item will work as 
+                  a Quest item only in the difficuly where it has been spawned. 
+                  This is how the game block you from using a <b>Viper Amulet</b> 
+                  get in <b>Normal</b> difficulty to work in <b>Nightmare</b> 
+                  difficulty.<br>
+                  <br>
+                  This column is originaly only present in <b><font color="#00EE00">Misc.txt</font></b> 
+                  and <b><font color="#00EE00">Weapons.txt</font></b>.<br>
+                    </font></p>
+              </blockquote>
+            </td>
+          </tr>
+          <tr> 
+            <td colspan="2" align="left" valign="top"> 
+              <hr>
+            </td>
+          </tr>
+          <tr> 
+            <td align="left" valign="top" width="27%"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font size="4" color="#FFCC00"><a name="col_unique"></a></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">unique</font></b></td>
+            <td align="left" valign="top" width="73%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+              <font color="#FFFF00">1 </font>= only unique version<br>
+              <font color="#FFFF00">0 </font>= no restrictions<br>
+              <br>
+              This is used by quest items, to ensure there's only a Unique version 
+              of the item.<br>
+              <br>
+              If a non-quest item set this column to 1, then only Unique versions 
+              of this item will spawned.<br>
+                </font></td>
+          </tr>
+          <tr> 
+            <td colspan="2" align="left" valign="top"> 
+              <hr>
+            </td>
+          </tr>
+          <tr> 
+            <td align="left" valign="top" width="27%"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font size="4" color="#FFCC00"><a name="col_transparent"></a></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#999999">transparent</font></b></td>
+            <td align="left" valign="top" width="73%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">Unknown, 
+              apparently has no effect in game.<br>
+              <br>
+              Maybe a flag indicating if the item use some kind of translucency 
+              effect or not ?<br>
+                </font></td>
+          </tr>
+          <tr> 
+            <td colspan="2" align="left" valign="top"> 
+              <hr>
+            </td>
+          </tr>
+          <tr> 
+            <td align="left" valign="top" width="27%"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font size="4" color="#FFCC00"><a name="col_transtbl"></a></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#999999">transtbl</font></b></td>
+            <td align="left" valign="top" width="73%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">Unknown, 
+              apparently has no effect in game.<br>
+              <br>
+              Maybe some kind of translucency level, if the <font color="#FF0000"><b><font color="#999999">transparent</font></b></font> 
+              column is set ?<br>
+                </font></td>
+          </tr>
+          <tr> 
+            <td colspan="2" align="left" valign="top"> 
+              <hr>
+            </td>
+          </tr>
+          <tr> 
+            <td align="left" valign="top" width="27%"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font size="4" color="#FFCC00"><a name="col_quivered"></a></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">quivered</font></b></td>
+            <td align="left" valign="top" width="73%"> 
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+                </font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font color="#FFFF00">1</font> 
+                = this item needs ammunitions<br>
+                <font color="#FFFF00">0</font> = no ammunitions required</font></p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">This 
+                column is not used in <b><font color="#00EE00">Armor.txt</font></b> 
+                nor in <b><font color="#00EE00">Misc.txt</font></b>, just in <b><font color="#00EE00">Weapons.txt</font></b> 
+                (Bows, Crossbows)<br>
+                  </font></p>
+            </td>
+          </tr>
+          <tr> 
+            <td colspan="2" align="left" valign="top"> 
+              <hr>
+            </td>
+          </tr>
+          <tr> 
+            <td align="left" valign="top" width="27%"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font size="4" color="#FFCC00"><a name="col_lightradius"></a></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#999999">lightradius</font></b></td>
+            <td align="left" valign="top" width="73%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+              Not used.<br>
+                </font></td>
+          </tr>
+          <tr> 
+            <td colspan="2" align="left" valign="top"> 
+              <hr>
+            </td>
+          </tr>
+          <tr> 
+            <td align="left" valign="top" width="27%"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font color="#FFCC00"><a name="col_belt"></a></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">belt</font></b></td>
+            <td align="left" valign="top" width="73%"> 
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+                <u>in Armor.txt:</u></font></p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">This 
+                is an index telling which type of Belt it is :<br>
+                </font></p>
+              <table border="0" cellspacing="0" cellpadding="4">
+                <tr align="left" valign="top"> 
+                  <td align="right"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#FFFF00">       0</font></td>
+                  <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">: 
+                    Not used / Belt    </font></td>
+                  <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">Not 
+                    used / (1 row)</font></td>
+                </tr>
+                <tr align="left" valign="top"> 
+                  <td align="right"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#FFFF00">1</font></td>
+                  <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">: 
+                    Sash</font></td>
+                  <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">(2 
+                    rows)</font></td>
+                </tr>
+                <tr align="left" valign="top"> 
+                  <td align="right"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#999999">2</font></td>
+                  <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#999999">: 
+                    Not used</font></td>
+                  <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#999999">(1 
+                    row - starting belt)</font></td>
+                </tr>
+                <tr align="left" valign="top"> 
+                  <td align="right"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#FFFF00">3</font></td>
+                  <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">: 
+                    Girdle</font></td>
+                  <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">(4 
+                    rows)</font></td>
+                </tr>
+                <tr align="left" valign="top"> 
+                  <td align="right"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#FFFF00">4</font></td>
+                  <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">: 
+                    Light Belt</font></td>
+                  <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">(2 
+                    rows)</font></td>
+                </tr>
+                <tr align="left" valign="top"> 
+                  <td align="right"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#FFFF00">5</font></td>
+                  <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">: 
+                    Heavy Belt  </font></td>
+                  <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">(3 
+                    rows)</font></td>
+                </tr>
+                <tr align="left" valign="top"> 
+                  <td align="right"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#FFFF00">6</font></td>
+                  <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">: 
+                    Uber Belt</font></td>
+                  <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">(4 
+                    rows)</font></td>
+                </tr>
+              </table>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><br>
+                <br>
+                This is an ( hardcoded ? ) index of the line to use from <b><font color="#00EE00">Belt.txt</font></b>. 
+                Only the lines above <font color="#FFFF00">Expansion</font> are 
+                used.<br>
+                <br>
+                <font color="#FFFF00">Uber Belt</font> is a type of Belt found 
+                in Nightmare / Hell.</font></p>
+              <p> </p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><u>in 
+                Misc.txt :</u></font></p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">The 
+                column have another meaning :</font></p>
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#FFFF00">0</font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+                  = can NOT be put into a belt<br>
+                  <font color="#FFFF00">1</font> = can be placed into a belt</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">Since 
+                <b><font color="#00EE00">Misc.txt</font></b> and <b><font color="#00EE00">Armor.txt</font></b> 
+                are part of the same file, it seems that the game looks for the 
+                <font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><a href="#col_type">type</a></font> 
+                of the item first, and *then* decide how to understand the value 
+                in this column.<br>
+                  </font></p>
+            </td>
+          </tr>
+          <tr> 
+            <td colspan="2" align="left" valign="top"> 
+              <hr>
+            </td>
+          </tr>
+          <tr> 
+            <td align="left" valign="top" width="27%"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font size="4" color="#FFCC00"><a name="col_mindam"></a></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font size="4" color="#FFCC00"><a name="col_maxdam"></a></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">mindam<br>
+              </font></b><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">maxdam</font></b></td>
+            <td align="left" valign="top" width="73%"> 
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+                Minimum and Maximum damage that this item provide.<br>
+                <br>
+                Note that the damages aren't always apparent in the item description.<br>
+                <br>
+                </font></p>
+              <table border="0" cellspacing="0" cellpadding="2">
+                <tr align="left" valign="top"> 
+                  <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">       </font></td>
+                  <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">on 
+                    Shield</font></td>
+                  <td align="center">=</td>
+                  <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">Smite 
+                    damages</font></td>
+                </tr>
+                <tr align="left" valign="top"> 
+                  <td> </td>
+                  <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">on 
+                    Boots</font></td>
+                  <td align="center">=</td>
+                  <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+                    Kick damages</font></td>
+                </tr>
+                <tr align="left" valign="top"> 
+                  <td> </td>
+                  <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">on 
+                    Weapon</font></td>
+                  <td align="center"> = </td>
+                  <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+                    1-Hand Melee damages<br>
+                      </font></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr> 
+            <td colspan="2" align="left" valign="top"> 
+              <hr>
+            </td>
+          </tr>
+          <tr> 
+            <td align="left" valign="top" width="27%"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font size="4" color="#FFCC00"><a name="col_StrBonus"></a></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font size="4" color="#FFCC00"><a name="col_DexBonus"></a></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">StrBonus<br>
+              </font></b><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">DexBonus</font></b></td>
+            <td align="left" valign="top" width="73%"> 
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+                <b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">StrBonus</font></b> 
+                = Amount of Strength to double the item damages.</font></p>
+              <p><br>
+                <font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">DexBonus</font></b> 
+                = Amount of Dexterity to double the item damages.</font></p>
+              <p><br>
+                <font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">In 
+                <font color="#00EE00"> <b>Armor.txt</b></font> only Boots are 
+                using these columns, but for a better explanation here's the exemple 
+                of the </font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#FFFF00">Maiden 
+                Spear</font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+                in <b><font color="#00EE00">Weapons.txt</font></b>, since it's 
+                the same logic anyway.<br>
+                <br>
+                The </font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#FFFF00">Maiden 
+                Spear</font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+                has :</font></p>
+              <table border="0" cellspacing="0" cellpadding="2">
+                <tr> 
+                  <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">       </font></td>
+                  <td align="left"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">StrBonus</font></td>
+                  <td align="center">=</td>
+                  <td align="right"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">80</font></td>
+                </tr>
+                <tr> 
+                  <td> </td>
+                  <td align="left"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">DexBonus</font></td>
+                  <td align="center">=</td>
+                  <td align="right"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+                    50</font></td>
+                </tr>
+                <tr> 
+                  <td> </td>
+                  <td align="left"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">2handmindam</font></td>
+                  <td align="center">=</td>
+                  <td align="right"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+                    18</font></td>
+                </tr>
+                <tr> 
+                  <td> </td>
+                  <td align="left"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">2handmaxdam </font></td>
+                  <td align="center">=</td>
+                  <td align="right"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+                     24</font></td>
+                </tr>
+              </table>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">If 
+                the Player has Strength = 100 and Dexterity = 120, the Maiden 
+                Spear will provide 83-111 damages instead of 18-24 :</font></p>
+              <ul>
+                <li><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#FFFF00">Damages 
+                  bonus by Strength</font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+                  :<br>
+                  </font> 
+                  <table border="0" cellspacing="0" cellpadding="2">
+                    <tr> 
+                      <td align="left"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">Min</font></td>
+                      <td align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">=</font></td>
+                      <td align="left"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">18 
+                        * 100 / 80 = 22.5</font></td>
+                    </tr>
+                    <tr> 
+                      <td align="left"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">Max</font></td>
+                      <td align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> = </font></td>
+                      <td align="left"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">24 
+                        * 100 / 80 = 30</font></td>
+                    </tr>
+                  </table>
+                  <font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><br>
+                  <br>
+                  </font></li>
+                <li><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#FFFF00">Damages 
+                  Bonus by Dexterity</font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+                  :<br>
+                  </font> 
+                  <table border="0" cellspacing="0" cellpadding="2">
+                    <tr> 
+                      <td align="left"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">Min</font></td>
+                      <td align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">=</font></td>
+                      <td align="left"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">18 
+                        * 120 / 50 = 43.2</font></td>
+                    </tr>
+                    <tr> 
+                      <td align="left"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">Max</font></td>
+                      <td align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> = </font></td>
+                      <td align="left"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">24 
+                        * 120 / 50 = 57.6</font></td>
+                    </tr>
+                  </table>
+                  <font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><br>
+                  <br>
+                  </font></li>
+                <li><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#FFFF00">Total 
+                  Min damages</font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+                  = 18 + 22 + 43 = 83<br>
+                  <br>
+                  </font></li>
+                <li><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#FFFF00">Total 
+                  Max damages</font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+                  = 24 + 30 + 57 = 111<br>
+                    </font></li>
+              </ul>
+            </td>
+          </tr>
+          <tr> 
+            <td colspan="2" align="left" valign="top"> 
+              <hr>
+            </td>
+          </tr>
+          <tr> 
+            <td align="left" valign="top" width="27%"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font size="4" color="#FFCC00"><a name="col_gemoffset"></a></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#999999">gemoffset</font></b></td>
+            <td align="left" valign="top" width="73%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+              Placeholder field used to link a socketable item with the corresponding record in Gems.txt, where one exists.  Data is filled in at game loading time.  Unknown if non-zero values allow multiple record selectivity.<br>
+                </font></td>
+          </tr>
+          <tr> 
+            <td colspan="2" align="left" valign="top"> 
+              <hr>
+            </td>
+          </tr>
+          <tr> 
+            <td align="left" valign="top" width="27%"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font size="4" color="#FFCC00"><a name="col_bitfield1"></a></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">bitfield1</font></b></td>
+            <td align="left" valign="top" width="73%"> 
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+                Bitfield used primarily for various things, but now only for knowing 
+                the composition of the item :</font></p>
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#FFFF00">1</font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+                  = Leather item<br>
+                  <font color="#FFFF00">3</font> = Metal item</font></p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">The 
+                Iron Golem can only be summoned from Metal Items.<br>
+                  </font></p>
+            </td>
+          </tr>
+          <tr> 
+            <td colspan="2" align="left" valign="top"> 
+              <hr>
+            </td>
+          </tr>
+          <tr> 
+            <td align="left" valign="top" width="27%"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font size="4" color="#FFCC00"><a name="col_vendorMin"></a><a name="col_vendorMax"></a></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font size="4" color="#FFCC00"><a name="col_vendorMagicMin"></a><a name="col_vendorMagicMax"></a></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font size="4" color="#FFCC00"><a name="col_vendorMagicLvl"></a></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">vendorMin<br>
+              </font></b><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">vendorMax<br>
+              </font></b><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">vendorMagicMin<br>
+              </font></b><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">vendorMagicMax<br>
+              </font></b><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">vendorMagicLvl</font></b></td>
+            <td align="left" valign="top" width="73%"> 
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+                These columns control what the different Vendors can sells.<br>
+                <br>
+                Replace <b><font color="#00EE00">vendor</font></b> by :</font></p>
+              <blockquote> 
+                <table border="0" cellspacing="0" cellpadding="4">
+                  <tr align="left" valign="top"> 
+                    <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">Charsi<br>
+                      Gheed<br>
+                      Akara<br>
+                      Fara<br>
+                      Lysander  <br>
+                      Drognan<br>
+                      Hratli<br>
+                      Alkor<br>
+                      Ormus</font></td>
+                    <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">Elzix<br>
+                      Asheara<br>
+                      Cain<br>
+                      Halbu<br>
+                      Jamella<br>
+                      Larzuk<br>
+                      Malah<br>
+                      Drehya</font></td>
+                  </tr>
+                </table>
+                <p> </p>
+              </blockquote>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><b><font color="#00EE00">vendorMin</font></b> 
+                / <b><font color="#00EE00">vendorMax</font></b> = Minimum / Maximum 
+                amount of items of this type the vendor can sell. Do not increase 
+                too much, you will CRASH if the game spawns too many items.</font></p>
+              <p> </p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><b><font color="#00EE00">vendorMagicMin</font></b> 
+                / <b><font color="#00EE00">vendorMagicMax</font></b> = Minimum 
+                / Maximum amount of <font color="#FFFF00">magical</font> items 
+                of this type the vendor can sell.</font></p>
+              <p> </p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><b><font color="#00EE00">vendorMagicLvl</font></b> 
+                = Maximum Magic Level an item can get from the affixes.<br>
+                  </font></p>
+            </td>
+          </tr>
+          <tr> 
+            <td colspan="2" align="left" valign="top"> 
+              <hr>
+            </td>
+          </tr>
+          <tr> 
+            <td align="left" valign="top" width="27%"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font size="4" color="#FFCC00"><a name="col_PermStoreItem"></a></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">PermStoreItem</font></b></td>
+            <td align="left" valign="top" width="73%"> 
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+                This column is not originally present in <b><font color="#00EE00">Armor.txt</font></b> 
+                (only in <b><font color="#00EE00">Misc.txt</font></b> and <b><font color="#00EE00">Weapons.txt</font></b>), 
+                but you should add it. It is used to make Permanent items, so 
+                Vendors will always sell them.</font></p>
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#FFFF00">1</font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+                  = always present in a Vendor inventory<br>
+                  <font color="#FFFF00">0</font> = not always sellable<br>
+                    </font></p>
+              </blockquote>
+            </td>
+          </tr>
+          <tr> 
+            <td colspan="2" align="left" valign="top"> 
+              <hr>
+            </td>
+          </tr>
+          <tr> 
+            <td align="left" valign="top"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font size="4" color="#FFCC00"><a name="col_Source_Art"></a></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font size="4" color="#FFCC00"><a name="col_Game_Art"></a></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#999999">Source 
+              Art</font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00"><br>
+              </font></b><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#999999">Game 
+              Art</font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00"><br>
+              </font></b></td>
+            <td align="left" valign="top"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+              Not used.</font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><br>
+                </font></td>
+          </tr>
+          <tr> 
+            <td colspan="2" align="left" valign="top"> 
+              <hr>
+            </td>
+          </tr>
+          <tr> 
+            <td align="left" valign="top"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font size="4" color="#FFCC00"><a name="col_Transform"></a></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font size="4" color="#FFCC00"><a name="col_InvTrans"></a></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">Transform<br>
+              </font></b><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">InvTrans</font></b></td>
+            <td align="left" valign="top"> 
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+                <b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">Transform</font></b> 
+                = colormap to use for the animated version of the item.</font></p>
+              <p> </p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">InvTrans</font></b> 
+                = colormap to use for the inventory version.</font></p>
+              <p> </p>
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white">For 
+                a detailled explanation, check <a href="http://phrozenkeep.planetdiablo.gamespy.com/forum/kb.php?mode=article&k=57" target="colormaps"><u>this 
+                doc</u></a><br>
+                  </font></p>
+            </td>
+          </tr>
+          <tr> 
+            <td colspan="2" align="left" valign="top"> 
+              <hr>
+            </td>
+          </tr>
+          <tr> 
+            <td align="left" valign="top" width="27%"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font size="4" color="#FFCC00"><a name="col_SkipName"></a></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">SkipName</font></b></td>
+            <td align="left" valign="top" width="73%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+              For items like the viper amulet (which doesn't say <font color="#FFFF00">Viper 
+              Amulet</font> twice). It makes the game skips the Base name in the 
+              item description.<br>
+                </font></td>
+          </tr>
+          <tr> 
+            <td colspan="2" align="left" valign="top"> 
+              <hr>
+            </td>
+          </tr>
+          <tr> 
+            <td align="left" valign="top"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font size="4" color="#FFCC00"><a name="col_NightmareUpgrade"></a><a name="col_HellUpgrade"> 
+              </a></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">NightmareUpgrade<br>
+              </font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">HellUpgrade<br>
+              </font></b></td>
+            <td align="left" valign="top"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+              <a href="#col_code"><u>code</u></a> of the item the Vendor will 
+              sell instead of this item in Nightmare / Hell. <font color="#FFFF00">xxx</font> 
+              = no change.<br>
+                </font></td>
+          </tr>
+          <tr> 
+            <td colspan="2" align="left" valign="top"> 
+              <hr>
+            </td>
+          </tr>
+          <tr> 
+            <td align="left" valign="top" width="27%"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"><font size="4" color="#FFCC00"><a name="col_nameable"></a></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#00EE00">nameable</font></b></td>
+            <td align="left" valign="top" width="73%"> 
+              <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+                Used by the reward of Anya's quest : is the Item Nameable ?</font></p>
+              <blockquote> 
+                <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#FFFF00">1</font><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="white"> 
+                  = can be personalized<br>
+                  <font color="#FFFF00">0</font> = can't be personalized<br>
+                    </font></p>
+              </blockquote>
+            </td>
+          </tr>
+          <tr> 
+            <td colspan="2" align="left" valign="top"> 
+              <hr>
+            </td>
+          </tr>
+        </table>
+      </div></div></td>
+			</tr>
+			<tr>
+				<td colspan="3"><hr /></td>
+			</tr>
+			<tr>
+                            <td class="modulecell mkalign1" width="20%" valign="top">Votes</td>
+                            <td class="modulecell mkalign1" colspan="2" width="80%">Votes: 2 - Average: 4 <img src="./mkportal/templates/Forum/images/spacer.gif" width="90" height="5" alt="" /><br /><img src="./mkportal/templates/Forum/images/scale.gif" width="129" alt="" /><br /><img src="./mkportal/templates/Forum/images/bar-start.gif" height="11" alt="" /><img src="./mkportal/templates/Forum/images/bar.gif" width="94" height="11" alt="" /><img src="./mkportal/templates/Forum/images/bar-end.gif" height="11" alt="" />
+			    </td>
+			</tr>
+
+
+
+			<tr>
+                          <td class="modulecell" colspan="3">
+                            <table width="50%" align="center">
+                              <tr>
+				<td align="center" class="functions" width="200"><a href="index.php?ind=reviews&amp;op=submit_comment&amp;ide=2"><img src="./mkportal/templates/Forum/images/comment.gif" border="0" alt="" /></a></td>
+				<td align="center" class="functions" width="200"><a href="index.php?ind=reviews&amp;op=submit_rate&amp;ide=2"><img src="./mkportal/templates/Forum/images/rate.gif" border="0" alt="" /></a></td>
+                              </tr>
+                              <tr>
+				<td align="center" class="functions" width="200"><a href="index.php?ind=reviews&amp;op=submit_comment&amp;ide=2">Add a Comment</a></td>
+				<td align="center" class="functions" width="200"><a href="index.php?ind=reviews&amp;op=submit_rate&amp;ide=2">Rate</a></td>
+                              </tr>
+                            </table>
+                          </td>
+			</tr>
+
+		<tr>
+		  <td class="tdblock" colspan="3">
+		  Comments
+		  </td>
+		  </tr><tr>
+						  <td colspan="3"><hr /></td>
+		</tr>
+		
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+	    </tr>
+	  </table>
+	</td>
+      </tr>
+    </table>
+    
+    <br />
+    <table width="98%" border="0" cellspacing="1" cellpadding="0" align="center" class="moduleborder">
+      <tr>
+	<td>
+	  <table width="100%" border="0" cellpadding="0" cellspacing="2" class="modulebg">
+	    <tr>
+	      <td>
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+		  <tr>
+		    <td>
+		      <table width="100%" border="0" cellspacing="1" cellpadding="5">
+			<tr>
+			  <td class="modulex" colspan="2">
+			    Stat
+			  </td>
+			</tr>
+			<tr>
+			  <td width="40" align="center" class="modulecell"><img src="./mkportal/templates/Forum/images/stats.gif" alt="" /></td>
+			  <td class="modulecell">There are 422 articles in the Database<br />Most Viewed: <a href="index.php?ind=reviews&amp;op=entry_view&amp;iden=298">[LOD v.1.10] Hades Underworld Mod</a><br />Most Rated: <a href="index.php?ind=reviews&amp;op=entry_view&amp;iden=332">Guide: How to get rid of your fellow modmakers</a></td>
+			</tr>
+		      </table>
+		    </td>
+		  </tr>
+		</table>
+	      </td>
+	    </tr>
+	  </table>
+	</td>
+      </tr>
+    </table>
+    <br />
+    <table width="98%" border="0" cellspacing="0" cellpadding="0" align="center">
+      <tr>
+	<td class="modulebg">
+	<div class="mkalign1" style="margin: 4px 0;"></div>
+	</td>
+      </tr>
+    </table>
+
+    <table width="98%" class="moduleborder" border="0" cellspacing="1" cellpadding="1" align="center">
+      <tr>
+	<td class="modulebg">
+	  <table width="100%" border="0" cellspacing="0" cellpadding="4" class="mkalign2">
+	    <tr>
+	      <td class="modulex mkalign1" width="*">
+		Total users browsing the Knowledge Base: 1 (1 Registered Members 0 Guests and 0 Anonymous Members)<br />Visible members are:  <a href="./forum/memberlist.php?mode=viewprofile&amp;u=37948">kambala</a>
+	      </td>
+	    </tr>
+	  </table>
+	</td>
+      </tr>
+    </table>
+
+    <table width="98%" align="center">
+      <tr>
+	<td align="center">
+	<br /><br /><div align="center"><a href="http://www.mkportal.it" target="_blank">MKPReviews</a> &copy;2003-2008 <a href="http://www.mkportal.it" target="_blank">mkportal.it</a></div>
+	</td>
+      </tr>
+    </table>
+  </td>
+</tr>
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+		  </table>
+		</td>
+
+<!-- end center column -->
+		
+<!-- begin column spacer -->
+
+		<td class="vspacer" width="0%">&nbsp;</td>
+
+<!-- end column spacer -->
+
+<!-- begin right column -->
+
+		<td id="menudx" valign="top">
+		<div id="menucontentr" class="mkalign1" style="">
+		<div class="mkalign1">&nbsp;<a href="javascript:ColumnClose('menudx');MemoPos('MKmenudx', '1')"><img src="./mkportal/templates/Forum/images/f1.gif" border="0" alt="" /></a></div>
+		  <table cellpadding="0" cellspacing="2" border="0" style="width: 140px;">
+		  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Personal Menu</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      
+				<tr>
+				  <td width="100%" class="tdblock" align="center">
+				  Welcome kambala
+				  </td>
+				</tr>
+				<tr>
+				  <td width="100%" class="tdblock" align="center">
+				  
+				  </td>
+				</tr>
+				<tr>
+				  <td width="100%" class="tdblock" align="center">
+				  <span class="mktxtcontr">Last Visited:</span>
+				  </td>
+				</tr>
+				<tr>
+				  <td width="100%" align="center" class="tdglobal">
+				  Friday, 12 August 2011 14:54
+				  </td>
+				</tr>
+				
+				<tr>
+				<td width="100%"  class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="./forum/ucp.php" title="Personal CP">Personal CP</a>
+<!-- end block link template -->
+
+				  </td>
+				</tr>
+				<tr>
+				  <td width="100%" class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="./forum/ucp.php?i=pm&amp;folder=inbox" title="PM (0/0)">PM (0/0)</a>
+<!-- end block link template -->
+
+				  </td>
+				</tr>
+				<tr>
+				  <td width="100%" class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="./forum/ucp.php?mode=logout&amp;sid=100a977ea93bf5ba990226e98ae79235" title="Log Out">Log Out</a>
+<!-- end block link template -->
+
+				  </td>
+				</tr>
+     	 	
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Who Is Online?</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      
+				<tr>
+				  <td width="100%">
+				    <table border="0" width="100%" cellpadding="1" cellspacing="1">
+				      <tr>
+					<td class="tdblock">
+					<span class="mktxtcontr">14</span> Users online:
+					</td>
+				      </tr>
+				      <tr>
+					<td class="tdglobal">
+					<b>8</b> &nbsp;Guests<br /><b>0</b> &nbsp;Anonymous<br /><b>6</b> &nbsp;Visible:<br /> <a href="./forum/memberlist.php?mode=viewprofile&amp;u=12403">Al-T</a>, <span style="color:#9E8DA7"><strong>Google [Bot]</strong></span>, <span style="color:#9E8DA7"><strong>Google Adsense [Bot]</strong></span>, <a href="./forum/memberlist.php?mode=viewprofile&amp;u=99">JrEye</a>, <a href="./forum/memberlist.php?mode=viewprofile&amp;u=37948">kambala</a>, <span style="color:#9E8DA7"><strong>Yahoo [Bot]</strong></span>
+					</td>
+				      </tr>
+				    </table>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="./forum/viewonline.php" title="Last click">Last click</a>
+<!-- end block link template -->
+
+				  </td>
+				</tr>	
+     	 	
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Recent Discussions</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      
+				<tr>
+				  <td width="100%" class="tdblock">
+				  <a class="uno" href="./forum/viewtopic.php?f=53&amp;t=58257&amp;p=457845#p457845">Re: Billybgame&#039;s ...</a>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdglobal">
+				  by: <a href="./forum/memberlist.php?mode=viewprofile&amp;u=12403">Al-T</a><br /> on: Friday, 12 August 2011 21:34
+				  </td>
+				</tr>
+			
+				<tr>
+				  <td width="100%" class="tdblock">
+				  <a class="uno" href="./forum/viewtopic.php?f=7&amp;t=15454&amp;p=457844#p457844">Re: AFJ tbl Editor</a>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdglobal">
+				  by: <a href="./forum/memberlist.php?mode=viewprofile&amp;u=16844" style="color:#00CC00"><strong>Necrolis</strong></a><br /> on: Friday, 12 August 2011 20:56
+				  </td>
+				</tr>
+			
+				<tr>
+				  <td width="100%" class="tdblock">
+				  <a class="uno" href="./forum/viewtopic.php?f=53&amp;t=58257&amp;p=457832#p457832">Re: Billybgame&#039;s ...</a>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdglobal">
+				  by: <a href="./forum/memberlist.php?mode=viewprofile&amp;u=16347">Billybgame</a><br /> on: Friday, 12 August 2011 20:49
+				  </td>
+				</tr>
+			
+				<tr>
+				  <td width="100%" class="tdblock">
+				  <a class="uno" href="./forum/viewtopic.php?f=122&amp;t=58420&amp;p=457843#p457843">Re: Skill/Missle on Mo...</a>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdglobal">
+				  by: <a href="./forum/memberlist.php?mode=viewprofile&amp;u=37516">kidpaddle94</a><br /> on: Friday, 12 August 2011 20:01
+				  </td>
+				</tr>
+			
+				<tr>
+				  <td width="100%" class="tdblock">
+				  <a class="uno" href="./forum/viewtopic.php?f=53&amp;t=58384&amp;p=457842#p457842">Re: Pure Grind Tournament</a>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdglobal">
+				  by: <a href="./forum/memberlist.php?mode=viewprofile&amp;u=12403">Al-T</a><br /> on: Friday, 12 August 2011 19:45
+				  </td>
+				</tr>
+			
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Site Stats</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      
+				<tr>
+				  <td class="tdblock">
+				  <span class="mktxtcontr">442333</span> Posts:
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdglobal">
+				  54364 Topics
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdglobal">
+				  387969 Replies<br />
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdblock">
+				  <span class="mktxtcontr">328</span> Images:
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdglobal">
+				  Inside the Image Gallery<br />
+				  </td>
+				</tr>				
+				<tr>
+				  <td class="tdblock">
+				  <span class="mktxtcontr">422</span> Articles:
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdglobal">
+				  Inside the Knowledge Base<br />
+				  </td>
+				</tr>				
+				<tr>
+				  <td class="tdblock">
+				  <span class="mktxtcontr">29060</span> Reg. Members:
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdglobal">
+				  Last: <a class="uno" href="./forum/memberlist.php?mode=viewprofile&amp;u=40409">Rehbock_</a>
+				  </td>
+				</tr>
+				<!--<tr>
+				  <td class="tdblock">
+				  Browsed Pages:
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdglobal">
+				  <center><img src="./mkportal/templates/Forum/images/led/1.gif" style="border: solid 1px #ffffff;" alt="" /><img src="./mkportal/templates/Forum/images/led/0.gif" style="border: solid 1px #ffffff;" alt="" /><img src="./mkportal/templates/Forum/images/led/3.gif" style="border: solid 1px #ffffff;" alt="" /><img src="./mkportal/templates/Forum/images/led/8.gif" style="border: solid 1px #ffffff;" alt="" /><img src="./mkportal/templates/Forum/images/led/8.gif" style="border: solid 1px #ffffff;" alt="" /><img src="./mkportal/templates/Forum/images/led/0.gif" style="border: solid 1px #ffffff;" alt="" /><img src="./mkportal/templates/Forum/images/led/3.gif" style="border: solid 1px #ffffff;" alt="" /><img src="./mkportal/templates/Forum/images/led/1.gif" style="border: solid 1px #ffffff;" alt="" /></center>
+				  </td>
+				</tr> -->
+
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Calendar</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      
+				<tr>
+				  <td class="tdblock" >
+
+				    <form action="http://phrozenkeep.hugelaser.com/index.php?ind=reviews&amp;op=entry_view&amp;iden=2#cal" name="CalForm" method="post">
+				    <table width="100%" align="center" border="0" cellspacing="1" cellpadding="0">
+				      <tr>
+					<td class="tdglobal" style="text-align:center;" align="center" colspan="7">
+					  <input type="hidden" name="old_y" value="2011" />
+					  <input type="hidden" name="old_y" value="8" />
+					  <select name="m_m" class="bgselect" onchange="document.CalForm.submit();">
+					  
+					  <option value="1"  >Jan</option>
+
+					  <option value="2"  >Feb</option>
+
+					  <option value="3"  >Mar</option>
+
+					  <option value="4"  >Apr</option>
+
+					  <option value="5"  >May</option>
+
+					  <option value="6"  >Jun</option>
+
+					  <option value="7"  >Jul</option>
+
+					  <option value="8" selected="selected" >Aug</option>
+
+					  <option value="9"  >Sep</option>
+
+					  <option value="10"  >Oct</option>
+
+					  <option value="11"  >Nov</option>
+
+					  <option value="12"  >Dec</option>
+
+					  </select>
+					  <select name="y_y" class="bgselect" onchange="document.CalForm.submit();">
+					  
+					  <option value="2008"  >2008</option>
+
+					  <option value="2009"  >2009</option>
+
+					  <option value="2010"  >2010</option>
+
+					  <option value="2011" selected="selected" >2011</option>
+
+					  <option value="2012"  >2012</option>
+
+					  <option value="2013"  >2013</option>
+
+					  <option value="2014"  >2014</option>
+
+					  </select>
+					</td>
+				      </tr>      
+			      
+				      
+				      <tr>
+					<th class="modulex" style="height: 18px; padding: 0px; margin: 0px; border: 0px; font-size: 10px; width: 14%" align="center" valign="middle">Su</th>
+					   
+					<th class="modulex" style="height: 18px; padding: 0px; margin: 0px; border: 0px; font-size: 10px; width: 14%" align="center" valign="middle">Mo</th>
+					   
+					<th class="modulex" style="height: 18px; padding: 0px; margin: 0px; border: 0px; font-size: 10px; width: 14%" align="center" valign="middle">Tu</th>
+					   
+					<th class="modulex" style="height: 18px; padding: 0px; margin: 0px; border: 0px; font-size: 10px; width: 14%" align="center" valign="middle">We</th>
+					   
+					<th class="modulex" style="height: 18px; padding: 0px; margin: 0px; border: 0px; font-size: 10px; width: 14%" align="center" valign="middle">Th</th>
+					   
+					<th class="modulex" style="height: 18px; padding: 0px; margin: 0px; border: 0px; font-size: 10px; width: 14%" align="center" valign="middle">Fr</th>
+					   
+					<th class="modulex" style="height: 18px; padding: 0px; margin: 0px; border: 0px; font-size: 10px; width: 14%" align="center" valign="middle">Sa</th>
+					   				      
+				      
+				      </tr>
+				      <tr>
+				
+					<td class="tdblock" style="height:10px; width:4px; padding: 0px; margin: 0px; border: 0px;"><br /></td>
+					
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">1</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">2</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">3</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">4</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">5</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">6</td>
+				
+				      </tr>
+				      <tr>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">7</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">8</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">9</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">10</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">11</td>
+				
+				      <td class="tdblock" id="mkcaltoday" style="font-size: 10px; height:10px" valign="middle" align="center"><b>12</b></td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">13</td>
+				
+				      </tr>
+				      <tr>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">14</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">15</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">16</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">17</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">18</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">19</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">20</td>
+				
+				      </tr>
+				      <tr>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">21</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">22</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">23</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">24</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">25</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">26</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">27</td>
+				
+				      </tr>
+				      <tr>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">28</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">29</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">30</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">31</td>
+				
+					<td class="tdblock" style="height:10px; width:4px; padding: 0px; margin: 0px; border: 0px;"><br /></td>
+					
+					<td class="tdblock" style="height:10px; width:4px; padding: 0px; margin: 0px; border: 0px;"><br /></td>
+					
+					<td class="tdblock" style="height:10px; width:4px; padding: 0px; margin: 0px; border: 0px;"><br /></td>
+									      
+				      
+				    </tr>
+				    <tr>
+				      <td class="trattini3" style="font-size: 1px; background: transparent;" colspan="7">&nbsp;</td>
+				    </tr>
+				    				      
+				      							
+				    </table>
+				    </form>
+
+				  </td>
+				</tr>
+
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Random Image</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      
+				<tr>
+				  <td align="center"><img style="cursor: url(./mkportal/templates/Forum/images/mkajax/zoomin.cur), pointer;" src="http://phrozenkeep.hugelaser.com/mkportal/modules/gallery/album/t_a_168.jpg" border="0" alt="Click to enlarge" onclick="ajax_showPop('./index.php?ind=ajax&amp;act=showgal&amp;idp=168', 1);return false" />
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdblock" align="center"><a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?ind=gallery&amp;op=foto_show&amp;ida=168">D2 Screenshot 140</a><br />
+				  </td>
+				</tr>
+			
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Phrozen Keep Poll</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      
+				<tr>
+				  <td class="tdblock">
+				  <a href="./forum/viewtopic.php?t=55546&amp;view=viewpoll">Which type of Diablo 2 mod do you like best?</a><br /><br />
+				  </td>
+				</tr>
+            
+				<tr>
+				  <td class="tdblock3">
+				  Total Conversion
+				  </td>
+				</tr>
+				<tr>
+				  <td align="left">
+					<div align="left" style="width: 130px; ">
+				  		<img src="./mkportal/templates/Forum/images/bar-start.gif" width="4" height="11" alt="" /><img src="./mkportal/templates/Forum/images/bar.gif" width="65" height="11" alt="" /><img src="./mkportal/templates/Forum/images/bar-end.gif" width="4" height="11" alt="" />
+					</div>54.14%<br /><br />
+		  		</td>
+				</tr>
+
+                
+				<tr>
+				  <td class="tdblock3">
+				  Balance Mod
+				  </td>
+				</tr>
+				<tr>
+				  <td align="left">
+					<div align="left" style="width: 130px; ">
+				  		<img src="./mkportal/templates/Forum/images/bar-start.gif" width="4" height="11" alt="" /><img src="./mkportal/templates/Forum/images/bar.gif" width="18" height="11" alt="" /><img src="./mkportal/templates/Forum/images/bar-end.gif" width="4" height="11" alt="" />
+					</div>14.65%<br /><br />
+		  		</td>
+				</tr>
+
+                
+				<tr>
+				  <td class="tdblock3">
+				  New Features Added
+				  </td>
+				</tr>
+				<tr>
+				  <td align="left">
+					<div align="left" style="width: 130px; ">
+				  		<img src="./mkportal/templates/Forum/images/bar-start.gif" width="4" height="11" alt="" /><img src="./mkportal/templates/Forum/images/bar.gif" width="35" height="11" alt="" /><img src="./mkportal/templates/Forum/images/bar-end.gif" width="4" height="11" alt="" />
+					</div>28.66%<br /><br />
+		  		</td>
+				</tr>
+
+                
+				<tr>
+				  <td class="tdblock3">
+				  Drop Mod
+				  </td>
+				</tr>
+				<tr>
+				  <td align="left">
+					<div align="left" style="width: 130px; ">
+				  		<img src="./mkportal/templates/Forum/images/bar-start.gif" width="4" height="11" alt="" /><img src="./mkportal/templates/Forum/images/bar.gif" width="3" height="11" alt="" /><img src="./mkportal/templates/Forum/images/bar-end.gif" width="4" height="11" alt="" />
+					</div>2.55%<br /><br />
+		  		</td>
+				</tr>
+
+                
+				<tr>
+				  <td class="tdblock">
+				  <span class="mktxtcontr">157</span> Total Voters
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdglobal">
+				  <a href="./forum/viewtopic.php?t=55546&amp;view=viewpoll">View poll...</a>
+				  </td>
+				</tr>
+            
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Random Quote</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      			
+				<tr>
+				</tr>
+				<tr>
+				  <td class="tdglobal">
+				  <i><b>The world is a comedy for those who think; a tragedy for those who feel.</b></i><br />(<b>Anonymous</b>)
+				  </td>
+				</tr>			
+				
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+		  </table>
+		</div>
+		<div id="menuclosedr" style="display:none">
+		<div class="mkalign1"><a href="javascript:ColumnOpen('menudx');MemoPos('MKmenudx', '0')"><img src="./mkportal/templates/Forum/images/f2.gif" border="0" alt="" /></a></div>
+		</div>
+		</td>
+		
+<!-- end right column -->
+
+<!-- begin close portal body -->
+
+	      </tr>
+	    </table>
+	  </td>
+	</tr>
+	
+<!-- end close portal body -->
+
+<!-- begin close main table -->
+
+      </table>
+
+    </td>
+  </tr>
+</table>
+</div>
+
+<!-- end close main table -->
+
+<!-- begin footer -->
+<!-- you can add your credits here  -->
+
+<!-- end footer -->
+  <p align="center"><span class="mkcopyright" style="font-size: 10px">Powered by <a style="font-size: 10px" href="http://www.mkportal.it/" target="_blank">MKPortal</a> &copy;2003-2008 <a style="font-size: 10px" href="http://www.mkportal.it/" target="_blank">mkportal.it</a></span></p>
+
+</body>
+</html>
+
+<!-- end footer -->

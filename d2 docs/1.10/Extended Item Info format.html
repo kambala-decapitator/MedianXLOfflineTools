@@ -1,0 +1,91 @@
+<HTML>
+
+<HEAD><TITLE>Sloan V. Roy JM Record - Extended Item Info format - Version 1.10 </TITLE>
+</HEAD>
+<BODY>
+<P><A HREF=../index.html> Back to ericjwin  </A></P>
+<P><A HREF=udietood2s.html> Back to Sloan V. Roy D2S File Format</A></P>
+<P><A HREF=udietooitems.html> Back to Sloan V. Roy D2S Item Structure Format</A></P>
+<P><A HREF=extend.html> Back to Sloan V. Roy D2S Item Info Format</A></P>
+
+
+<br><FONT size=4>Sloan V. Roy JM Record - Extended Item Info format - Version 1.10 </FONT>
+
+<br><br>
+<FONT SIZE=2>
+
+
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=0 width=810>
+
+
+<TR><TD width=48><B>type</TD><TD width=135><B>name</TD><TD width=58><B>bits</TD><TD width=185><B>desc</TD>
+	<TD width=45><B>cond1</TD><TD width=75><B>condvar1</TD><TD width=64><B>condval1</TD><TD width=45><B>cond2</TD>
+	<TD width=65><B>condvar2</TD><TD width=64><B>condval2</TD><TD width=400><B>comment</TD>
+</TR>
+
+
+
+</TR><TD>BYTE</TD><TD>nGems</TD><TD>3</TD><TD>Number of Gems</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR><TD>DWRD</TD><TD>dwGUID</TD><TD>32</TD><TD>GUID</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR><TD>BYTE</TD><TD>iLevel</TD><TD>7</TD><TD>Drop level</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR><TD>BYTE</TD><TD>iQual</TD><TD>4</TD><TD>Quality</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR><TD>BOOL</TD><TD>bVarGfx</TD><TD>1</TD><TD>Variable Graphic flag</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR><TD>BYTE</TD><TD>iVarGfx</TD><TD>3</TD><TD>Variable Graphic Number</TD><TD>0</TD><TD>bVarGfx</TD><TD>1</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR><TD>BOOL</TD><TD>bClass</TD><TD>1</TD><TD>Class Info Flag</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR><TD>WORD</TD><TD>wClass</TD><TD>11</TD><TD>Class Info</TD><TD>0</TD><TD>bClass</TD><TD>1</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR><TD>BYTE</TD><TD>loQual</TD><TD>3</TD><TD>Low Quality sub-type</TD><TD>0</TD><TD>iQual</TD><TD>1</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR><TD>BYTE</TD><TD>hiQual</TD><TD>3</TD><TD>Hi Quality sub-type</TD><TD>0</TD><TD>iQual</TD><TD>3</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR><TD>WORD</TD><TD>wPrefix</TD><TD>11</TD><TD>Magic Prefix</TD><TD>0</TD><TD>iQual</TD><TD>4</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR><TD>WORD</TD><TD>wSuffix</TD><TD>11</TD><TD>Magic Suffix</TD><TD>0</TD><TD>iQual</TD><TD>4</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR><TD>WORD</TD><TD>wSetId</TD><TD>12</TD><TD>Set ID</TD><TD>0</TD><TD>iQual</TD><TD>5</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR><TD>BYTE</TD><TD>wRname1</TD><TD>8</TD><TD>First Rare Name</TD><TD>0</TD><TD>iQual</TD><TD>6</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR><TD>BYTE</TD><TD>wRname2</TD><TD>8</TD><TD>Second Rare Name</TD><TD>0</TD><TD>iQual</TD><TD>6</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR><TD>BOOL</TD><TD>bPref1</TD><TD>1</TD><TD>Prefix 1 flag</TD><TD>0</TD><TD>iQual</TD><TD>6</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR><TD>WORD</TD><TD>wPref1</TD><TD>11</TD><TD>Prefix 1</TD><TD>0</TD><TD>iQual</TD><TD>6</TD><TD>.0</TD><TD>bPref1</TD><TD>1</TD><TD>.</TD>
+</TR><TD>BOOL</TD><TD>bSuff1</TD><TD>1</TD><TD>Suffix 1 flag</TD><TD>0</TD><TD>iQual</TD><TD>6</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR><TD>WORD</TD><TD>wSuff1</TD><TD>11</TD><TD>Suffix 1</TD><TD>0</TD><TD>iQual</TD><TD>6</TD><TD>.0</TD><TD>bSuff1</TD><TD>1</TD><TD>.</TD>
+</TR><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR><TD>BOOL</TD><TD>bPref2</TD><TD>1</TD><TD>Prefix 2 flag</TD><TD>0</TD><TD>iQual</TD><TD>6</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR><TD>WORD</TD><TD>wPref2</TD><TD>11</TD><TD>Prefix 2</TD><TD>0</TD><TD>iQual</TD><TD>6</TD><TD>.0</TD><TD>bPref2</TD><TD>1</TD><TD>.</TD>
+</TR><TD>BOOL</TD><TD>bSuff2</TD><TD>1</TD><TD>Suffix 2 flag</TD><TD>0</TD><TD>iQual</TD><TD>6</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR><TD>WORD</TD><TD>wSuff2</TD><TD>11</TD><TD>Suffix 2</TD><TD>0</TD><TD>iQual</TD><TD>6</TD><TD>.0</TD><TD>bSuff2</TD><TD>1</TD><TD>.</TD>
+</TR><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR><TD>BOOL</TD><TD>bPref3</TD><TD>1</TD><TD>Prefix 3 flag</TD><TD>0</TD><TD>iQual</TD><TD>6</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR><TD>WORD</TD><TD>wPref3</TD><TD>11</TD><TD>Prefix 3</TD><TD>0</TD><TD>iQual</TD><TD>6</TD><TD>.0</TD><TD>bPref3</TD><TD>1</TD><TD>.</TD>
+</TR><TD>BOOL</TD><TD>bSuff3</TD><TD>1</TD><TD>Suffix 3 flag</TD><TD>0</TD><TD>iQual</TD><TD>6</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR><TD>WORD</TD><TD>wSuff3</TD><TD>11</TD><TD>Suffix 3</TD><TD>0</TD><TD>iQual</TD><TD>6</TD><TD>.0</TD><TD>bSuff3</TD><TD>1</TD><TD>.</TD>
+</TR><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR><TD>BYTE</TD><TD>wRname1</TD><TD>8</TD><TD>First Rare Name</TD><TD>0</TD><TD>iQual</TD><TD>8</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR><TD>BYTE</TD><TD>wRname2</TD><TD>8</TD><TD>Second Rare Name</TD><TD>0</TD><TD>iQual</TD><TD>8</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR><TD>BOOL</TD><TD>bPref1</TD><TD>1</TD><TD>Prefix 1 flag</TD><TD>0</TD><TD>iQual</TD><TD>8</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR><TD>WORD</TD><TD>wPref1</TD><TD>11</TD><TD>Prefix 1</TD><TD>0</TD><TD>iQual</TD><TD>8</TD><TD>.0</TD><TD>bPref1</TD><TD>1</TD><TD>.</TD>
+</TR><TD>BOOL</TD><TD>bSuff1</TD><TD>1</TD><TD>Suffix 1 flag</TD><TD>0</TD><TD>iQual</TD><TD>8</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR><TD>WORD</TD><TD>wSuff1</TD><TD>11</TD><TD>Suffix 1</TD><TD>0</TD><TD>iQual</TD><TD>8</TD><TD>.0</TD><TD>bSuff1</TD><TD>1</TD><TD>.</TD>
+</TR><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR><TD>BOOL</TD><TD>bPref2</TD><TD>1</TD><TD>Prefix 2 flag</TD><TD>0</TD><TD>iQual</TD><TD>8</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR><TD>WORD</TD><TD>wPref2</TD><TD>11</TD><TD>Prefix 2</TD><TD>0</TD><TD>iQual</TD><TD>8</TD><TD>.0</TD><TD>bPref2</TD><TD>1</TD><TD>.</TD>
+</TR><TD>BOOL</TD><TD>bSuff2</TD><TD>1</TD><TD>Suffix 2 flag</TD><TD>0</TD><TD>iQual</TD><TD>8</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR><TD>WORD</TD><TD>wSuff2</TD><TD>11</TD><TD>Suffix 2</TD><TD>0</TD><TD>iQual</TD><TD>8</TD><TD>.0</TD><TD>bSuff2</TD><TD>1</TD><TD>.</TD>
+</TR><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR><TD>BOOL</TD><TD>bPref3</TD><TD>1</TD><TD>Prefix 3 flag</TD><TD>0</TD><TD>iQual</TD><TD>8</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR><TD>WORD</TD><TD>wPref3</TD><TD>11</TD><TD>Prefix 3</TD><TD>0</TD><TD>iQual</TD><TD>8</TD><TD>.0</TD><TD>bPref3</TD><TD>1</TD><TD>.</TD>
+</TR><TD>BOOL</TD><TD>bSuff3</TD><TD>1</TD><TD>Suffix 3 flag</TD><TD>0</TD><TD>iQual</TD><TD>8</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR><TD>WORD</TD><TD>wSuff3</TD><TD>11</TD><TD>Suffix 3</TD><TD>0</TD><TD>iQual</TD><TD>8</TD><TD>.0</TD><TD>bSuff3</TD><TD>1</TD><TD>.</TD>
+</TR><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR><TD>WORD</TD><TD>wUniId</TD><TD>12</TD><TD>Unique ID</TD><TD>0</TD><TD>iQual</TD><TD>7</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR><TD>WORD</TD><TD>wRune</TD><TD>16</TD><TD>Rune word</TD><TD>0</TD><TD>bRuneWord</TD><TD>1</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR><TD>ASC7</TD><TD>sIName</TD><TD>15</TD><TD>Inscribed Name</TD><TD>0</TD><TD>bInscribed</TD><TD>1</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR><TD>BYTE</TD><TD>iTome</TD><TD>5</TD><TD>Tome Bits ???</TD><TD>0</TD><TD>sType</TD><TD>book</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+
+
+</TR>
+</TABLE>
+<br><br><br>
+<br><br><br>
+
+</BODY>
+</HTML>

@@ -1,0 +1,67 @@
+<HTML>
+
+<HEAD><TITLE>Sloan V. Roy JM Record - Item Structure format - Version 1.10 </TITLE>
+</HEAD>
+<BODY>
+<P><A HREF=../index.html> Back to ericjwin  </A></P>
+<P><A HREF=udietood2s.html> Back to Sloan V. Roy D2S File Format</A></P>
+<P><A HREF=http://home.stx.rr.com/svr> Udie Too's Homepage  </A></P>
+<P><A HREF=http://home.stx.rr.com/svr/formats/formats.htm> Udie Too's D2S File Format  </A></P>
+
+
+
+<br><FONT size=4>Sloan V. Roy JM Record - Item Structure format - Version 1.10 </FONT>
+
+<br><br>
+<FONT SIZE=2>
+
+
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=0 width=1260>
+
+
+<TR><TD width=48><B>type</TD><TD width=135><B>name</TD><TD width=58><B>bits</TD><TD width=135><B>desc</TD>
+	<TD width=45><B>cond1</TD><TD width=75><B>condvar1</TD><TD width=64><B>condval1</TD><TD width=45><B>cond2</TD>
+	<TD width=65><B>condvar2</TD><TD width=64><B>condval2</TD><TD width=700><B>comment</TD>
+
+
+</TR><TR><TD>ASC8</TD><TD>majic</TD><TD>2</TD><TD>Record ID</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>JM</TD>
+</TR><TR><TD>BOOL</TD><TD>bQuest</TD><TD>1</TD><TD>Quest Item</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>?</TD>
+</TR><TR><TD>BYTE</TD><TD>unk21</TD><TD>3</TD><TD>Unknown</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>x</TD>
+</TR><TR><TD>BOOL</TD><TD>bId</TD><TD>1</TD><TD>Identified</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>x</TD>
+</TR><TR><TD>BYTE</TD><TD>unk25</TD><TD>3</TD><TD>Unknown</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>x</TD>
+</TR><TR><TD>BYTE</TD><TD>unk30</TD><TD>2</TD><TD>Unknown</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>x</TD>
+</TR><TR><TD>BOOL</TD><TD>bDup</TD><TD>1</TD><TD>Duplicate Item ?</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>?</TD>
+</TR><TR><TD>BOOL</TD><TD>bSocketed</TD><TD>1</TD><TD>Socketed</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>x</TD>
+</TR><TR><TD>BYTE</TD><TD>unk34</TD><TD>2</TD><TD>Unknown</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>x</TD>
+</TR><TR><TD>BOOL</TD><TD>bIllegal</TD><TD>1</TD><TD>Illegal Equip</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>1 - bad equipped (red) ?</TD>
+</TR><TR><TD>BYTE</TD><TD>unk37</TD><TD>1</TD><TD>Unknown</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>x</TD>
+</TR><TR><TD>BYTE</TD><TD>bEar</TD><TD>1</TD><TD>Ear Structure</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>x</TD>
+</TR><TR><TD>BOOL</TD><TD>bStarter</TD><TD>1</TD><TD>Starter Item flag</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>x</TD>
+</TR><TR><TD>BYTE</TD><TD>unk42</TD><TD>2</TD><TD>Unknown</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>x</TD>
+</TR><TR><TD>BYTE</TD><TD>unk44</TD><TD>1</TD><TD>Unknown</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>x<TD>
+</TR><TR><TD>BOOL</TD><TD>bSimple</TD><TD>1</TD><TD>Simple Structure flag</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>x</TD>
+</TR><TR><TD>BOOL</TD><TD>bEthereal</TD><TD>1</TD><TD>Ethereal</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>x</TD>
+</TR><TR><TD>BYTE</TD><TD>unk47</TD><TD>1</TD><TD>Unknown</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>always 1</TD>
+</TR><TR><TD>BOOL</TD><TD>bInscribed</TD><TD>1</TD><TD>Inscribed</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>x</TD>
+</TR><TR><TD>BYTE</TD><TD>unk51</TD><TD>1</TD><TD>Unknown</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>x</TD>
+</TR><TR><TD>BOOL</TD><TD>bRuneWord</TD><TD>1</TD><TD>Has Rune Word</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>x</TD>
+</TR><TR><TD>BYTE</TD><TD>unk53</TD><TD>5</TD><TD>Unknown</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>x</TD>
+</TR><TR><TD>BYTE</TD><TD>unk60</TD><TD>8</TD><TD>Version</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>0x64 = exp.,0x01 = nonexp</TD>
+</TR><TR><TD>BYTE</TD><TD>unk70</TD><TD>2</TD><TD>Unknown</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>more bits of version ?</TD>
+</TR><TR><TD>BYTE</TD><TD>iLoc</TD><TD>3</TD><TD>Location </TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>0 = grid 1 = equipped 2 = on belt 3 = ? 4 = in hand 5 = ? 6 = socket 7 = ?</TD>
+</TR><TR><TD>BYTE</TD><TD>iPos</TD><TD>4</TD><TD>Position on body</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>01 = head, 02 = neck, 03 = tors, 04 = rarm, 05 = larm, 06 = lrin, 07 = rrin, 08 = belt, 09 = feet, 0a = glov, 0b = ralt, 0c = lalt, 00 = grid (none)</TD>
+</TR><TR><TD>BYTE</TD><TD>iCol</TD><TD>4</TD><TD>Grid Column</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>row & col for belted items, junk for equipped</TD>
+</TR><TR><TD>BYTE</TD><TD>iRow</TD><TD>4</TD><TD>Grid Row</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>junk</TD>
+</TR><TR><TD>BYTE</TD><TD>iStoredIn</TD><TD>3</TD><TD>Stored In</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>0 = equip/belt 1 = inventory 2 = ? 3 = ? 4 = cube 5 = stash</TD>
+</TR><TR><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>x</TD>
+</TR><TR><TD>FILE</TD><TD><a href="Ear Info format.html">Ear format</a></TD><TD>0</TD><TD>Ear Format</TD><TD>0</TD><TD>bEar</TD><TD>1.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>x</TD>
+</TR><TR><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>x</TD>
+</TR><TR><TD>FILE</TD><TD><a href="Item Info format.html">Item Info format</a></TD><TD>0</TD><TD>Item Format</TD><TD>0</TD><TD>bEar</TD><TD>0.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>normal items (non-ears)</TD>
+
+
+</TABLE>
+<br><br><br>
+<br><br><br>
+
+</BODY>
+</HTML>

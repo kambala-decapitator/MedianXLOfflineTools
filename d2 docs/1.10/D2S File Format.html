@@ -1,0 +1,129 @@
+<HTML>
+
+<HEAD><TITLE>Sloan V. Roy D2S File Format - Version 1.10 </TITLE>
+</HEAD>
+<BODY>
+<P><A HREF=../index.html> Back to ericjwin  </A></P>
+<P><A HREF=http://home.stx.rr.com/svr> Udie Too's Homepage  </A></P>
+<P><A HREF=http://home.stx.rr.com/svr/formats/formats.htm> Udie Too's D2S File Format  </A></P>
+
+<br><FONT size=4>Sloan V. Roy D2S File Format - Version 1.10 </FONT>
+
+<br><br>
+<FONT SIZE=2>
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=0 width=1260>
+
+
+<TR><TD width=48><B>type</TD><TD width=135><B>name</TD><TD width=58><B>bits</TD><TD width=221><B>desc</TD>
+	<TD width=45><B>cond1</TD><TD width=75><B>condvar1</TD><TD width=64><B>condval1</TD><TD width=45><B>cond2</TD>
+	<TD width=65><B>condvar2</TD><TD width=64><B>condval2</TD><TD width=700><B>comment</TD>
+</TR> <TR><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR> <TR><TD>ASC8</TD><TD>dwMajic</TD><TD>2</TD><TD>File ID</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR> <TR><TD>DWRD</TD><TD>dwVersion</TD><TD>32</TD><TD>File Version</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR> <TR><TD>DWRD</TD><TD>dwSize</TD><TD>32</TD><TD>File Size</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR> <TR><TD>DWRD</TD><TD>dwCRC</TD><TD>32</TD><TD>File CRC</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR> <TR><TD>DWRD</TD><TD>dwWeaponSet</TD><TD>32</TD><TD>Weapon Set</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR> <TR><TD>ASC8</TD><TD>Name</TD><TD>16</TD><TD>Character Name</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR> <TR><TD>BYTE</TD><TD>charType</TD><TD>8</TD><TD>Character Type</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR> <TR><TD>BYTE</TD><TD>charTitle</TD><TD>8</TD><TD>Character Title</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR> <TR><TD>WORD</TD><TD>unk1</TD><TD>16</TD><TD>Unknown</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>// 00 00</TD>
+</TR> <TR><TD>BYTE</TD><TD>charClass</TD><TD>8</TD><TD>Character Class</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR> <TR><TD>WORD</TD><TD>unk2</TD><TD>16</TD><TD>Unknown</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>// 10 1E</TD>
+</TR> <TR><TD>BYTE</TD><TD>charLevel</TD><TD>8</TD><TD>Level</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR> <TR><TD>DWRD</TD><TD>unk3</TD><TD>32</TD><TD>Unknown</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR> <TR><TD>DWRD</TD><TD>dwTime</TD><TD>32</TD><TD>Time Stamp</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR> <TR><TD>DWRD</TD><TD>unk4</TD><TD>32</TD><TD>Unknown</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>// FF FF FF FF</TD>
+</TR> <TR><TD>DWRD</TD><TD>dwSkillKey[16]</TD><TD>32</TD><TD>Skill Keys</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>// No Array support in format !!!</TD>
+</TR> <TR><TD>DWRD</TD><TD>dwLeftSkill1</TD><TD>32</TD><TD>Left Skill Weapon Set 1</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR> <TR><TD>DWRD</TD><TD>dwRightSkill1</TD><TD>32</TD><TD>Right Skill Weapon Set 1</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR> <TR><TD>DWRD</TD><TD>dwLeftSkill2</TD><TD>32</TD><TD>Left Skill Weapon Set 2</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR> <TR><TD>DWRD</TD><TD>dwRightSkill2</TD><TD>32</TD><TD>Right Skill Weapon Set 2</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR> <TR><TD>BYTE</TD><TD>outfit[16]</TD><TD>8</TD><TD>Character Load graphics</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>// No Array support in format !!!</TD>
+</TR> <TR><TD>BYTE</TD><TD>colors[16]</TD><TD>8</TD><TD>Character Load Colors</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>// No Array support in format !!!</TD>
+</TR> <TR><TD>BYTE</TD><TD>Town1</TD><TD>8</TD><TD>Normal Town</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>// Only town for last played mode is set</TD>
+</TR> <TR><TD>BYTE</TD><TD>Town2</TD><TD>8</TD><TD>Nightmare Town</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR> <TR><TD>BYTE</TD><TD>Town3</TD><TD>8</TD><TD>Hell Town</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR> <TR><TD>DWRD</TD><TD>dwMapSeed</TD><TD>32</TD><TD>Map Random Seed</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR> <TR><TD>WORD</TD><TD>unk5</TD><TD>16</TD><TD>Unknown</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>// 00 00</TD>
+</TR> <TR><TD>BYTE</TD><TD>bMercDead</TD><TD>8</TD><TD>Merc Dead Flag</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR> <TR><TD>BYTE</TD><TD>unk6</TD><TD>8</TD><TD>Unknown</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR> <TR><TD>DWRD</TD><TD>dwMercControl</TD><TD>32</TD><TD>Merc Control seed</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR> <TR><TD>WORD</TD><TD>wMercName</TD><TD>16</TD><TD>Merc Name Index</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR> <TR><TD>WORD</TD><TD>wMercType</TD><TD>16</TD><TD>Merc Type</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR> <TR><TD>DWRD</TD><TD>dwMercExp</TD><TD>32</TD><TD>Merc Experience</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR> <TR><TD>BYTE</TD><TD>unk7[0x90]</TD><TD>8</TD><TD>Unknown</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>// No Array support in format !!!</TD>
+</TR> <TR><TD>FILE</TD><TD><b><a href="#Questinfo"> Quest Info </a></TD><TD>0</TD><TD>Questinfo Header</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>// Act/Quest info header</TD>
+</TR> <TR><TD>FILE</TD><TD><b><a href="#Waypoints"> Waypoints </a></TD><TD>0</TD><TD>Waypoints</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>// waypoints</TD>
+</TR> <TR><TD>FILE</TD><TD><b><a href="#NPCState"> NPC State </a></TD><TD>0</TD><TD>NPCState</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>// NPC greeting control</TD>
+</TR> <TR><TD>PROP</TD><TD><b><a href="../d2filestruct.html"> Player Stats </a></TD><TD>0</TD><TD>Player Stats</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>// stats read like properties</TD>
+</TR> <TR><TD>FILE</TD><TD><b><a href="#PlayerSkills"> Player Skills </a></TD><TD>0</TD><TD>Player Skills</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>// skills</TD>
+</TR> <TR><TD>FILE</TD><TD><b><a href="#ItemList"> Item List </a></TD><TD>0</TD><TD>Player Item List</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR> <TR><TD>WORD</TD><TD>iCorpses</TD><TD>16</TD><TD>Number of Corpses</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR> <TR><TD>FILE</TD><TD><b><a href="#CorpseList"> Corpse List </a></TD><TD>iCorpses</TD><TD>Corpse List</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>// need to add support for variable 'bits'</TD>
+</TR> <TR><TD>ASC8</TD><TD>d2jf</TD><TD>2</TD><TD>Merc List majic</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR> <TR><TD>FILE</TD><TD><b><a href="#ItemList"> Item List </a></TD><TD>0</TD><TD>Merc Item List</TD><TD>0</TD><TD>bHasMerc</TD><TD>1</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR> <TR><TD>ASC8</TD><TD>d2kf</TD><TD>2</TD><TD>Iron Golem majic</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR> <TR><TD>BYTE</TD><TD>bHasGolem</TD><TD>8</TD><TD>Iron Golem Flag</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR> <TR><TD>FILE</TD><TD><b><a href="Item Structure format.html"> Item Format </a></TD><TD>0</TD><TD>Golem Item</TD><TD>0</TD><TD>bHasGolem</TD><TD>1</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+
+</TR> <TR><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+
+</TR> <TR><TD>.</TD><TD><b><a name="CorpseList"> Corpse List </a></TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR> <TR><TD>BYTE</TD><TD>bodyInfo[12]</TD><TD>8</TD><TD>Corpse Info</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR> <TR><TD>FILE</TD><TD><b><a href="#ItemList"> Item List </a></TD><TD>0</TD><TD>Corpse Item List</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+
+</TR> <TR><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+
+</TR> <TR><TD>.</TD><TD><b><a name="ItemList"> Item List </a></TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR> <TR><TD>ASC8</TD><TD>dwMajic</TD><TD>2</TD><TD>Item List majic</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>// JM</TD>
+</TR> <TR><TD>WORD</TD><TD>nItems</TD><TD>16</TD><TD>Number of Items</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR> <TR><TD>FILE</TD><TD><b><a href="Item Structure format.html"> Item Format </a></TD><TD>nItems</TD><TD>Item Records</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD></TD>
+
+</TR> <TR><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+
+</TR> <TR><TD>.</TD><TD><b><a name="Questinfo"> Quest Info </a></TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>// Act/Quest info header</TD>
+</TR> <TR><TD>ASC8</TD><TD>dwMajic</TD><TD>4</TD><TD>Record ID</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>// Woo! </TD>
+</TR> <TR><TD>DWRD</TD><TD>dwActs</TD><TD>32</TD><TD>Numer of acts</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR> <TR><TD>WORD</TD><TD>wSize</TD><TD>16</TD><TD>Size in bytes</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR> <TR><TD>FILE</TD><TD><b><a href="#ActInfo"> Act Info </a></TD><TD>3*wActs</TD><TD>Quest/Act states</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+
+</TR> <TR><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+
+</TR> <TR><TD>.</TD><TD><b><b><a name="ActInfo"> Act Info </a> </TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR> <TR><TD>WORD</TD><TD>wActStart</TD><TD>16</TD><TD>Act Start info</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR> <TR><TD>WORD</TD><TD>wQuestStatus[6]</TD><TD>16</TD><TD>Quest Status</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR> <TR><TD>WORD</TD><TD>wActEnd</TD><TD>16</TD><TD>Act End flags</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+
+</TR> <TR><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+
+</TR> <TR><TD>.</TD><TD><b><b><a name="Waypoints"> Waypoints </a></TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>// waypoints</TD>
+</TR> <TR><TD>ASC8</TD><TD>wMajic</TD><TD>2</TD><TD>Record ID</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR> <TR><TD>BYTE</TD><TD>unk[6]</TD><TD>8</TD><TD>Unknown</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR> <TR><TD>DWRD</TD><TD>wp[3*6]</TD><TD>32</TD><TD>Waypoint Data</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+
+</TR> <TR><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+
+</TR> <TR><TD>.</TD><TD><b><a name="NPCState"> NPC State </a> </TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>// NPC state control</TD>
+</TR> <TR><TD>ASC8</TD><TD>wMajic</TD><TD>2</TD><TD>Record ID (0x7701)</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR> <TR><TD>WORD</TD><TD>wSize</TD><TD>16</TD><TD>size of struct</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR> <TR><TD>DWRD</TD><TD>normal[2]</TD><TD>32</TD><TD>Normal</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR> <TR><TD>DWRD</TD><TD>nightmare[2]</TD><TD>32</TD><TD>Nightmare</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR> <TR><TD>DWRD</TD><TD>hell[2]</TD><TD>32</TD><TD>Hell</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR> <TR><TD>DWRD</TD><TD>normal1[2]</TD><TD>32</TD><TD>Normal1</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR> <TR><TD>DWRD</TD><TD>nightmare1[2]</TD><TD>32</TD><TD>Nightmare1</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR> <TR><TD>DWRD</TD><TD>hell1[2]</TD><TD>32</TD><TD>Hell1</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+
+</TR> <TR><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+
+</TR> <TR><TD>.</TD><TD><b><a name="PlayerSkills"> Player Skills </a></TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>// skills</TD>
+</TR> <TR><TD>ASC8</TD><TD>wMajic</TD><TD>2</TD><TD>Record ID</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TR> <TR><TD>BYTE</TD><TD>skill_lvls[30]</TD><TD>8</TD><TD>Skill Levels</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD><TD>.</TD>
+</TABLE>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+</BODY>
+</HTML>

@@ -1,0 +1,2488 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<!-- begin document head -->
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta name="generator" content="MKPortal" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta content="no-cache" http-equiv="no-cache" />
+  <meta http-equiv="Cache-Control" content="no-cache" />
+  <title>The Phrozen Keep - Knowledge Base - ItemStatCost.txt</title>
+  <meta name="description" content="Diablo 2 Modmaking Central" />
+  <meta name="keywords" content="diablo, diablo2, diabloii, diablo3, diabloiii, mods, modmaking, modding, mod tools, phrozen, forum" />
+<link rel="icon" href="favicon.ico" type="image/x-icon" /> 
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <style type="text/css">
+/*
++--------------------------------------------------------------------------
+|   Cascading Style Sheet for MKportal "Forum" Portal Template
+|   ========================================
+|   by Meo aka Luponero [Amedeo de longis]
+|      Don K. Colburn [visiblesoul.net]
+|   Copyright (c) 2004-2007 mkportal.it
+|   http://www.mkportal.it
+|   Email: luponero@mclink.it
++--------------------------------------------------------------------------
+|   > MKPortal
+|   > Written By Amedeo de longis
+|   > Date started: 9.2.2004
++--------------------------------------------------------------------------
+*/
+
+/*=============================
+M
+K  global styles
+P
+=============================*/
+/* IMPORT body */
+body,
+body {
+	/* Text-Sizing with ems: http://www.clagnut.com/blog/348/ */
+	font-family: "Lucida Grande", Verdana, Helvetica, Arial, sans-serif;
+	color: #FFFFFF;
+	background-color: #000000;
+	font-size: 62.5%; /* This sets the default font size to be equivalent to 10px */
+	margin: 0;
+}
+
+body {
+	font-size: 10px;
+	margin:0px; 
+	padding:0px; /* Opera 0 margin */	
+	text-align: center; /* center in IE */ 
+}
+
+/* IMPORT body background (used for SMF) */
+td { padding: 0; }
+
+/* portal wrapper */
+#mkwrapper {
+	text-align:left; /* left-align text in IE */	
+	margin: 0px auto 0px auto;
+}
+
+/* IMPORT logostrip */
+#mklogostrip,
+#importlogostrip {	
+	background-color: #000000;	
+}
+
+/* logostrip */
+#mklogostrip {
+	text-align: left;
+}
+
+/* IMPORT global font formatting */
+table,
+tr,
+td,
+.tdglobal,
+.importfont {
+	font-size: 10px; 
+	color: #FFFFFF;
+	font-family: Verdana, Arial, Helvetica, sans-serif;	
+}
+
+/* global font formatting */
+table,
+tr,
+td,
+.tdglobal {
+	font-size: 10px;	
+}
+
+/* IMPORT main portal table bg (if different than body bg) */
+.tabmain,
+.importmain {	
+	font-size: 10px;	
+}
+
+/* main portal table */
+.tabmain {
+	margin:0px;
+	padding:0px;	
+}
+
+/* images */
+img { 		
+	border: 0px;
+	vertical-align: middle; /* Meo: Added in C1.2 */
+}
+
+/* Onyx - justified body for long texts */
+div.body_just {
+	font-size: 12px;
+	text-align: justify;
+}
+
+/*=============================
+M
+K IMPORT LIGHT BACKGROUND
+P
+=============================*/
+.modulecell,
+.urlo2,
+.tabnews,
+.trattini,
+.trattini3,
+.tablemenu,
+.taburlo,
+.row1 {
+	background-color: #2F2F4F;
+	padding: 0;
+}
+
+/*=============================
+M
+K IMPORT MEDIUM BACKGROUND
+P
+=============================*/
+.navigatore,
+.tdblock,
+.moduleborder,
+.modulex,
+.mkpagecurrent,
+.row2 {
+	background-color: #2F2F4F;
+	padding: 0;
+}
+
+/*=============================
+M
+K IMPORT DARK BACKGROUND
+P
+=============================*/
+.urlo,
+.sottotitolo,
+th {
+	color: #FFFFFF;
+	font-size: 1.1em;
+	font-weight: bold;
+	background-color: #113274;
+	background-image: url('./forum/styles/BlackRock/theme/images/cellpic3.gif');
+	white-space: nowrap;
+	padding: 7px 5px;
+}
+
+/*=============================
+M
+K  border and divider styles
+P
+=============================*/
+/* vertical spacer image used in portal skin */
+/* .vspacer {
+	background-image: url(./mkportal/templates/Forum/images/punto_vert.gif);
+	background-repeat: repeat-y;
+	background-color: transparent;	
+} */
+
+/* IMPORT border-color */
+.tabmain,
+.tablemenu, /* block wrapper, chat button strip */
+.taburlo,
+.urlo2,
+.tabnews,
+.trattini,
+.trattini2,
+.trattini3,
+.mkpagelink,
+.mkpagelinklast,
+.mkpagecurrent,
+.titadmin,
+.importborders {
+	border: 1px solid #000000;	
+}
+	
+.trattini { /*used only in tpl_main.php(deprecated), blog, ad_blocks.php*/
+	border-width: 1px 0 0 0;
+	border-style: dashed;
+}
+
+/* blocks admin */
+.trattini2 {
+	border-width: 0 1px 0 0;
+	border-style: dashed;
+}
+
+.trattini3 { /* used only in blog, quotes, urlobox, calendar*/
+	border-width: 0 0 1px 0;
+	border-style: dashed;
+}
+
+/*=============================
+M
+K  hyperlink styles
+P
+=============================*/
+/* IMPORT global links */
+a:link,
+a:active,
+a.uno:link,
+.importlink {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #00ffff;	
+	text-decoration: none;	
+}
+
+a:visited,
+a.uno:visited,
+.importvisited {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #00ffff;	
+	text-decoration: none;	
+}
+
+a:hover,
+a.uno:hover,
+.importhover {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	text-decoration: underline;
+}
+
+/* a:active {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #496c9f;	
+	text-decoration: none; 	
+} */
+
+/* bold navbar, block, module links */
+a.uno:link {
+	font-size: 10px;
+	font-weight: bold;
+	text-decoration: none
+}
+
+a.uno:visited {	
+	font-size: 10px; 
+	font-weight: bold;
+	text-decoration: none
+}
+
+
+a.uno:hover {
+	font-size: 10px;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+/* Onyx - bigger links for titles in Articles and so on*/
+a.cat_big:link {
+	font-size: 12px;
+	text-decoration: none
+}
+
+a.cat_big:visited {	
+	font-size: 12px; 
+	text-decoration: none
+}
+
+
+a.cat_big:hover {
+	font-size: 12px;
+	text-decoration: underline;
+}
+
+/* block text links */
+/* .tablemenu a:link, a:visited {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #496c9f;	
+	text-decoration: none;	
+}
+
+.tablemenu a:hover {
+	text-decoration: underline;
+}
+
+.tablemenu a:active { 
+	text-decoration: none; 	
+} */
+
+/* global contrasting text and hyperlink color */
+.mktxtcontr,
+a.mktxtcontr:link, 
+a.mktxtcontr:visited {	
+	color: #ffffff;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a.mktxtcontr:hover {
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+/* contrasting text and hyperlink color 2 (admin) */
+.mktxtcontr2,
+a.mktxtcontr2:link, 
+a.mktxtcontr2:visited {
+	color: #0000ff;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a.mktxtcontr2:hover {
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+/*=============================
+M
+K  form styles
+P
+=============================*/
+/* remove margin after closing "form" tag in MSIE */
+form {
+	margin: 0;
+	padding: 0
+}
+
+/* IMPORT form styles */
+input,
+textarea,
+select,
+.bgselect, /* input fields */
+.mkbutton, /* global submit buttons */
+.mkblkinput, /* block input */
+.mkradio, 
+input {
+	color: #333333;
+	font-family: "Lucida Grande", Verdana, Helvetica, sans-serif;
+	font-size: 1.1em;
+	font-weight: normal;
+	padding: 1px;
+	border: 1px solid #A9B8C2;
+	background-color: #FAFAFA;
+}
+
+/* set form padding and margin */
+/*.mkbutton,*/ /* global submit buttons */
+/* textarea,*/
+input,
+select,
+.bgselect, /* input fields */
+.mkblkinput /* block input */
+{
+	margin: 0px;
+	padding: 0px;
+	font-size: 9px;
+	font-weight: normal; /* needed for Mozilla */	
+}
+
+.mkbutton { /* Global submit buttons */
+	padding: 3px;
+}
+
+.mkbbbutton { /* MKP BBcode editor buttons */
+	margin: 0;
+	padding: 0;
+}
+
+/* radio/checkbox buttons - remove background color and border in IE */ 
+/* .mkradio {
+	background-color: transparent;
+	border-width: 0px;
+} */
+
+/* configure blog textarea */
+textarea.mkwrap1 {
+	overflow: auto;
+	/* width: 230px; */
+	width: 100%;
+}
+
+/* edit blog textarea */
+textarea.mkwrap2 {
+	overflow: auto;
+	width: 500px ;
+}
+
+/*=============================
+M
+K  navstrip styles
+P
+=============================*/
+/* top navstrip */
+.navigatore {	
+	vertical-align: bottom;
+	text-align: right;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: 300;
+	font-size: 9px;
+	border: 0;
+}
+
+/*=============================
+M
+K  block styles
+P
+=============================*/
+/* used in functions.php (function main_page) */
+.blocks {
+	padding: 0px;
+}
+
+/* block td cell */
+.tdblock {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	border: 0;
+	margin: 2px;	
+}
+
+/* block title bar */
+.sottotitolo {
+	vertical-align: bottom;	
+	text-align: left;
+	font-size: 11px;
+	font-weight: bold;
+	color:#00ff00; 
+}
+
+/* horizontal spacer between blocks */
+.tdspacer {
+	line-height: 3px;
+}
+
+/*=============================
+M
+K  module global styles
+P
+=============================*/
+/* IMPORT module table headings */
+th.modulex,
+.cattitle {
+
+}
+th.modulex {
+	white-space: nowrap;
+}
+.modulex {
+	border-width: 0 0 0 0;
+}
+/* Reviews description text */
+.modulelite {
+	font-size: 10pt;
+	/* color:#a6bbcd;*/
+}
+
+/* block padding (news, admin) */
+.contents {
+	padding: 10px;
+	font-size: 12px;
+}
+
+/* module pagination links */
+.mkpagelink {
+	padding:1px 3px 1px 3px;
+	font-weight: normal;
+}
+
+.mkpagelinklast {
+	padding:1px 3px 1px 3px;
+	font-weight:normal;
+}
+
+.mkpagecurrent {
+	padding:1px 3px 1px 3px;
+	font-weight:normal;
+}
+
+/* admin cp titles with top border - used in frontend and backend */
+.titadmin {
+	margin: 0px;
+	font-size: 11px;
+	font-weight: bold;
+	border-width: 1px 0 0 0;
+	border-style: dashed;
+}
+/*=============================
+M
+K  shoutbox module styles
+P
+=============================*/
+td.taburlo{	
+	margin:5px;
+	padding:5px;
+	border: 0;	
+}
+	
+/* shouter and date cell */
+.urlo {
+	line-height: 18px;
+	vertical-align: bottom;
+	text-align: left;	
+	font-size: 11px;
+	font-weight: bold;
+	padding: 4px;		 
+}
+
+/* shout cell */
+.urlo2 {
+	padding: 4px;
+	border-width: 0 0 1px 0;
+	border-style: solid;
+	text-align: left;
+	font-size: 11px;
+	font-weight: bold;
+}
+
+/* white shouter text */
+/* .urlocontrast {	
+	color: #ffffff;
+} */
+
+/*=============================
+M
+K  news module styles
+P
+=============================*/
+/* news table with border */
+.tabnews {
+	border-width: 1px;
+	border-style: solid;
+	margin:0px; 
+	padding:10px;
+	font-size: 10px;	
+}
+
+/* news table custom */
+.tabnews1 {
+	border-width: 1px;
+	border-style: solid;
+	border-color: #000;
+	margin:0px; 
+	padding:0px;
+}
+
+/*=============================
+M
+K  font styles
+P
+=============================*/
+/* red error page text */
+.mkerror {	
+	font-size: 12pt;
+	color: #ff0000;
+	font-weight:bold;
+}
+
+/* MKPQuote quotation text */
+/* .mkquote { 		
+	color: #0000ff;	
+} */
+
+/* MKPGallery module ecard, offline page */
+.ecardtitle,
+.offlinetxt {
+	font-size: 10pt; 
+	font-weight: bold;
+	text-align: center;
+}
+/*Onyx - image gallery border - Firefox-compatible*/
+#imgtable1, #imgtable1 td {border: 1px solid #000;}
+
+
+/*=============================
+M
+K  BBcode quote styles
+P
+=============================*/
+.mkquoteball {
+	font-size: 9px; 
+	color: #666666;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	background-color: #ffffff;	
+	padding: 0;	
+}
+
+.mkquotetext {
+	font-size: 10px; 
+	color: #666666;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	background-color: #ffffff;
+	margin: 0;
+	padding: 0;	
+}
+
+table .mkquotetable{				
+	width: auto; /* IE */	
+	text-align: left;
+}
+
+/* Added in C1.2 */
+/* Table background highlight */
+.bghighlight1 {
+	background-color: #EAF8EB;
+}
+/* Table background highlight 2 */
+.bghighlight2 {
+	background-color: #EFCBCB;
+}
+/* mkportal footer copyright - Do not remove, modify or obscure the copyright text */
+.mkcopyright {
+	font-size: 10px;
+}
+.mkcopyright a {
+	text-decoration: none;
+}
+/* Calendar block current day highlighting */
+#mkcaltoday {
+	border:2px;
+	border-style:outset;
+	background-color: #0000ff;
+}
+
+/* Table Cell Alignment ltr/rtl */
+
+/* default is "left" */
+.mkalign1 {
+	text-align: left;
+}
+
+/* default is "right" */
+.mkalign2 {
+	text-align: right;
+}
+
+</style>
+
+<link rel="stylesheet" href="mkportal/modules/rss/files/simplepie.css" type="text/css" media="screen, projector" />
+
+  
+  <script type="text/javascript">
+	mkportalurl = 'http://phrozenkeep.hugelaser.com/';
+	var MKAJAX_IMAGES_PATH = "./mkportal/templates/Forum/images/mkajax/";
+    	var MKAJAX_SITEPATH = "./";
+  </script>
+  <script type="text/javascript" src="./mkportal/templates/Forum/mkp.js"></script>
+  <script type="text/javascript" src="./mkportal/templates/Forum/mkp.ext.ajax.js"></script>
+  
+<script type="text/javascript" src=".//mkportal/blocks/imgmenu/js/mootools.js"></script>
+<script type="text/javascript" src=".//mkportal/blocks/imgmenu/imgmenu.js"></script>
+<link href=".//mkportal/blocks/imgmenu/imgmenu.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+
+<body onload="javascript:GetPos()">
+<a name="top"></a>
+
+<!-- end document head -->
+
+<!-- begin open main table -->
+
+<div id="mkwrapper" style="width: 100%;">
+<table class="tabmain" width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
+
+  <tr>
+    <td width="100%" align="center">
+
+      <table border="0" width="100%" cellpadding="0" cellspacing="0">
+
+<!-- end open main table -->
+
+<!-- begin logostrip -->
+  
+	<tr>
+	  <td id="mklogostrip" width="100%">
+
+     <TABLE border="0" cellpadding="0" cellspacing="0" WIDTH="100%" background="images/pagetop_middle.gif">
+<TR>
+        <TD><img src="images/pagetop_left2.png" height="120" width="500" naturalsizeflag="0" align="bottom"></td>
+	<td align="center" valign="bottom">
+<!-- original header     
+                                <script type="text/javascript">< ! - -
+                                        google_ad_client = "pub-0170085626153842";
+                                        google_ad_width = 468;
+                                        google_ad_height = 60;
+                                        google_ad_format = "468x60_as";
+                                        google_ad_channel ="";
+                                        google_ad_type = "text";
+                                        google_color_border = "2F2F4F";
+                                        google_color_bg = "2F2F4F";
+                                        google_color_link = "2F2F4F";
+                                        google_color_url = "336699";
+                                        google_color_text = "333333";
+                                / / - - ></script>
+                                <script type="text/javascript"
+                                  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+                                </script>//-->
+
+	</td>
+        <TD width="500"><div align="right"><img src="images/pagetop_right2.png" title="... And the heavens shall tremble" width="500" height="120" " naturalsizeflag="0" align="bottom"></div>
+</TR>
+</TABLE>
+
+
+<!-- 10 anniversary header 
+<TABLE border="0" cellpadding="0" cellspacing="0" WIDTH="100%" background="images/pagetop_middle10.gif">
+<TR>
+        <TD><img src="images/pagetop_left10.png" height="120" width="500" naturalsizeflag="0" align="bottom"></td>
+	<td align="center" valign="bottom">
+	</td>
+        <TD width="500"><div align="right"><img src="images/pagetop_right10.png" title="" width="500" height="120" " naturalsizeflag="0" align="bottom"></div>
+</TR>
+</TABLE>
+//-->
+
+          </td>
+	</tr>
+	
+<!-- end logostrip -->
+
+<!-- begin linkbar -->
+
+<!-- end linkbar -->
+
+<!-- begin open portal body -->
+
+	<tr align="center">
+	  <td width="100%">
+	    <table border="0" width="100%" cellspacing="0" cellpadding="0">
+	      <tr>
+
+<!-- end open portal body -->
+
+<script type="text/javascript">
+			
+			window.addEvent('domready', function(){
+				var myMenu = new ImageMenu($$('#imageMenu a'),{openWidth:310, border:2});
+			});
+		</script>  
+
+	      
+<!-- begin left column -->
+
+		<td id="menusx" valign="top">
+		<div id="menucontents" class="mkalign1" style="">
+		<div class="mkalign2"><a href="javascript:ColumnClose('menusx');MemoPos('MKmenusx', '1');"><img src="./mkportal/templates/Forum/images/f2.gif" border="0" alt="" /></a>&nbsp;</div>
+		  <table cellpadding="0" cellspacing="2" border="0" style="width: 140px;">
+		  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Main Menu</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      
+		      		<tr><td width="100%" class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php" title="Home">Home</a>
+<!-- end block link template -->
+</td></tr>
+			
+		      		<tr><td width="100%" class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="./forum/index.php" title="The Phrozen Forums">The Phrozen Forums</a>
+<!-- end block link template -->
+</td></tr>
+			
+		      		<tr><td width="100%" class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?ind=reviews" title="Knowledge Base">Knowledge Base</a>
+<!-- end block link template -->
+</td></tr>
+			
+		      		<tr><td width="100%" class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?ind=gallery" title="Image Gallery">Image Gallery</a>
+<!-- end block link template -->
+</td></tr>
+			
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Forum</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      <tr><td class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?pid=1" title="Terms of Service">Terms of Service</a>
+<!-- end block link template -->
+</td></tr><tr><td class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="./forum/search.php?search_id=newposts" title="New posts">New posts</a>
+<!-- end block link template -->
+</td></tr><tr><td class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="./forum/memberlist.php" title="Users">Users</a>
+<!-- end block link template -->
+</td></tr><tr><td class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="./forum/faq.php" title="Help">Help</a>
+<!-- end block link template -->
+</td></tr>
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Search</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      <tr><td class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="./forum/search.php" title="Forum">Forum</a>
+<!-- end block link template -->
+</td></tr><tr><td class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?ind=gallery&amp;op=search" title="Images">Images</a>
+<!-- end block link template -->
+</td></tr><tr><td class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?ind=reviews&amp;op=search" title="Knowledge Base">Knowledge Base</a>
+<!-- end block link template -->
+</td></tr>
+				<tr>
+				  <td class="tdblock" align="center">
+				    <a href="http://www.google.com/"><img src="http://phrozenkeep.hugelaser.com/mkportal/modules/search/google_logo.png" alt="Google" align="top" /></a><br />
+
+				    <form action="http://www.google.com/search" method="get" target="blank">	    
+				    <input size="12" name="q" class="mkblkinput" /><br />
+				    <input type="hidden" name="hl" />
+				    <input type="submit" name="btnG" value="Search" class="mkbutton" />
+				    </form>
+				  </td>
+				</tr>
+
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Features</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      <tr><td class="blocks"><table style="width: 100%;" border="0" cellspacing="1" cellpadding="0"><tbody><tr><td class="tdblock"> <a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?ind=reviews&op=entry_view&iden=455">History of the Site</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?ind=reviews&op=section_view&idev=9">Humor</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?ind=reviews&op=section_view&idev=10">Interviews</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?ind=reviews&op=section_view&idev=11">Mod Reviews</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?pid=34">Linking To Us</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?pid=28">Unofficial IRC</a></td></tr> </tbody></table></td></tr>
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">File Center</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      <tr><td class="blocks"><table border="0" cellspacing="1" cellpadding="0" width="100%">
+<tbody>
+<tr>
+<td class="tdblock"> <a class="uno" href="/filecenter/dload.php">Main Page</a></td>
+</tr>
+<tr>
+<td class="tdblock"> <a class="uno" href="/filecenter/dload.php?action=search">File Search</a></td>
+</tr>
+<tr>
+<td class="tdblock"> <a class="uno" href="/filecenter/dload.php?action=category&cat_id=113">Hosted Sites</a></td>
+</tr>
+<tr>
+<td class="tdblock"> <a class="uno" href="/filecenter/dload.php?action=category&cat_id=109">Humor</a></td>
+</tr>
+<tr>
+<td class="tdblock"> <a class="uno" href="/filecenter/dload.php?action=category&cat_id=97">Miscellaneous</a></td>
+</tr>
+<tr>
+<td class="tdblock"> <a class="uno" href="/filecenter/dload.php?action=category&cat_id=1">Mod Making Tools</a></td>
+</tr>
+<tr>
+<td class="tdblock"> <a class="uno" href="/filecenter/dload.php?action=category&cat_id=2">Mod Archive</a></td>
+</tr>
+<tr>
+<td class="tdblock"> <a class="uno" href="/filecenter/dload.php?action=category&cat_id=87">Old Forum Dumps</a></td>
+</tr>
+<tr>
+<td class="tdblock"> <a class="uno" href="/filecenter/dload.php?action=category&cat_id=27">Patches</a></td>
+</tr>
+<tr>
+<td class="tdblock"> <a class="uno" href="/filecenter/dload.php?action=category&cat_id=39">Plugins</a></td>
+</tr>
+<tr>
+<td class="tdblock"> <a class="uno" href="/filecenter/dload.php?action=category&cat_id=38">Resources</a></td>
+</tr>
+</tbody>
+</table></td></tr>
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Diablo II Mod Sites</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      <tr><td class="blocks"><table style="width: 100%;" border="0" cellspacing="1" cellpadding="0"><tbody><tr><td class="tdblock"> <a class="uno" href="http://bth.d2mods.com/" target="_blank">Back to Hellfire</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://bfed2.diablomods.ru/" target="_blank">Battle for Elements</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://blackened.d2mods.com" target="_blank">Blackened</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://n.ethz.ch/student/henninav/" target="_blank">d2:elements</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://es.d2mods.com" target="_blank">Eastern Sun</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://d2immersion.com/" target="_blank">Immersion</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://modsbylaz.hugelaser.com/" target="_blank">Mods by Laz</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://www.sevenlances.net/" target="_blank">Seven Lances</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://perso.wanadoo.fr/maususatlas/TohXt/Index.html" target="_blank">Time of Heroes</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://www.walhallamod.de/" target="_blank">Walhalla</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://zyel.d2mods.com" target="_blank">Zy-El</a></td></tr></tbody></table></td></tr>
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Modding Resources</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      <tr><td class="blocks"><table style="width: 100%;" border="0" cellspacing="1" cellpadding="0"><tbody><tr><td class="tdblock">&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?pid=32">Diabolic Cartography</a></td></tr> <tr><td class="tdblock">&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?pid=22">Incandescence</a></td></tr> <tr><td class="tdblock">&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?pid=33">Infinitum</a></td></tr> <tr><td class="tdblock">&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?pid=21">Inventharia</a></td></tr> <tr><td class="tdblock">&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?pid=23">Warped Tiles</a></td></tr></tbody></table></td></tr>
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Partner Sites</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      <tr><td class="blocks"><table style="width: 100%;" border="0" cellspacing="1" cellpadding="0"><tbody><tr><td class="tdblock"> <a class="uno" href="http://18v.biz/portal.html" target="_blank">18v.biz</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://www.blizzplanet.com/" target="_blank">Blizzplanet</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://www.diablo2.com/" target="_blank">Diablo2.com</a></td></tr><tr><td class="tdblock"> <a class="uno" href="http://www.diablo3plaza.com/" target="_blank">Diablo3Plaza</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://www.diablogamer.com/" target="_blank">DiabloGamer.com</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://www.diabloii.net/" target="_blank">Diabloii.net</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://www.diablowiki.com/" target="_blank">DiabloWiki</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://www.hugelaser.com/" target="_blank">Huge Laser</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://www.lurkerlounge.com/" target="_blank">Lurker Lounge</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://modsreloaded.com/" target="_blank">Mods Reloaded</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://www.neoarcadia.com/" target="_blank">Neoarcadia.com</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://www.planetdiablo.com/" target="_blank">PlanetDiablo</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://www.theamazonbasin.com/" target="_blank">The Amazon Basin</a></td></tr></tbody></table></td></tr>
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Credits</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      <tr><td width="100%" class="tdblock">&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?pid=11">Copyrights</a></td></tr>
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+		  </table>
+		</div>
+		<div id="menucloseds" style="display:none">
+		<div class="mkalign2"><a href="javascript:ColumnOpen('menusx');MemoPos('MKmenusx', '0');"><img src="./mkportal/templates/Forum/images/f1.gif" border="0"  alt="" /></a></div>
+		</div>
+		</td>
+
+<!-- end left column -->
+
+<!-- begin column spacer -->
+
+		<td class="vspacer" width="0%">&nbsp;</td>
+
+<!-- end column spacer -->
+
+<!-- begin center column -->
+
+		<td valign="top" class="mkalign1" width="100%">
+
+<div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "pub-3246876018000001";
+/* Phrozen Keep Leaderboard */
+google_ad_slot = "7514462417";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+
+		  <table cellpadding="0" cellspacing="3" border="0" width="100%"> 
+		  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Knowledge Base</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      <tr align="center">
+  <td>
+
+    <script type="text/javascript">
+	  <!--
+	    function selChd(jumpsection) {
+	    var selIdx = jumpsection.selectedIndex;
+		    var newSel = jumpsection.options[selIdx].value;
+	    location.href='index.php?ind=reviews&op=section_view&idev=' + newSel;
+	}
+	    function selChoc(jumpsection) {
+	    var selIdx = jumpsection.selectedIndex;
+		    var newSel = jumpsection.options[selIdx].value;
+	    location.href='index.php?ind=reviews&order=' + newSel;
+	}
+	    function selChoe(jumpsection, idev) {
+	    var selIdx = jumpsection.selectedIndex;
+		    var newSel = jumpsection.options[selIdx].value;
+	    location.href='index.php?ind=reviews&op=section_view&idev=' + idev + '&order=' + newSel;
+	}
+	  //-->
+    </script>
+    
+    <br />
+    <table width="98%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+	<td width="60%" class="mkalign1">
+	<img src="./mkportal/templates/Forum/images/locbar.gif" alt="" /><a href="index.php?ind=reviews">Knowledge Base</a>-&gt;<a href="index.php?ind=reviews&amp;op=section_view&amp;idev=4">File Guides (1.1x)</a>-&gt;<a href="#">ItemStatCost.txt</a>
+	</td>
+	<td width="40%" class="modulelite mkalign2">
+	  <a href="index.php?ind=reviews&amp;op=search">[ Search ]</a>
+	</td>
+      </tr>
+    </table>
+    <br />
+    <table width="98%" border="0" cellspacing="1" cellpadding="0" class="moduleborder mkalign1">
+      <tr>
+	<td>
+	  <table width="100%" border="0" cellpadding="0" cellspacing="1" class="modulebg">
+            <tr>
+              <td width="100%" height="25" class="tdblock"> <img class="mkicon" src="./mkportal/templates/Forum/images/arrow.gif" alt="" />ItemStatCost.txt</td>
+            </tr>
+            <tr>
+              <td>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td>
+                      <table width="100%" border="0" cellspacing="1" cellpadding="5">
+		      							
+			<tr>
+                            <td class="modulecell mkalign1" width="20%" valign="middle">Title</td>
+                            <td class="modulecell mkalign1" colspan="2" width="80%" style="font-size: 14px;"><b>ItemStatCost.txt</b></td>
+			</tr>
+			<tr>
+                            <td class="modulecell mkalign1" width="20%" valign="top">Description</td>
+                            <td class="modulecell mkalign1" colspan="2" width="80%">by Nefarius</td>
+			</tr>
+			
+			
+			
+			
+			
+			
+			
+			<tr>
+                            <td class="modulecell mkalign1" width="20%" valign="top">Sent by</td>
+                            <td class="modulecell mkalign1" colspan="2" width="80%"></td>
+			</tr>
+			<tr>
+				<td colspan="3"><hr /></td>
+			</tr>
+			<tr>
+                            <td colspan="3" class="modulecell mkalign1" style="font-size: 12px;"><div class="body_just"><span style="font-weight: bold"><span style="color: yellow">Stat</span></span> - An Id pointer used in other *.txt files (Properties.txt, Skills.txt, States.txt and also within ItemStatCost.txt) to refer to this stat, this field must be unique, otherwise you're looking into a world of glitches and bugs.
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="color: #888888">Id</span></span> - This field isn't compiled into the bin files, and thus only serves as reference for the internal numeric Id. The internal idea is identical to the # of the record in the array (that is, the first stat would be 0, the second 1 and so on).
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="color: yellow">Send Other</span></span> - A boolean that controls whenever the value of this stat is sent to other players, this is only semi functional because most of this is hardcoded to specific stats only, leave it set only for the stats that are being sent in vanilla (Strength, Dexterity etc) because the game needs to keep clients up to date on these values to function properly (otherwise you'll just glitch up the game).
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="color: yellow">Signed</span></span> - A boolean that controls whenever the stat is signed (can be both positive and negative) or unsigned (can only be positive), this doesn't really seam to make any difference because whenever a stat is really signed or unsigned depends on how the code is designed to use it, and not on this column, for example Life, Mana, Stamina (etc) can all become negative when they exceed 8388607 * 256 no matter what you set this too, I suspect this simply has to do with the way the game reads stat packets because these packets generally only transmit stats in WORD size and it would need to know if they are signed or unsigned for a semi-proper conversion (...)
+
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="color: yellow">Send Bits</span></span> - How many bits of data the game will attempt to fit into a stat update packet for the value of the stat if the stat is sent to clients, again this is not really utilized too a very great extent because most of this is hardcoded, in general for signed stats, it is best to set this to 1 more then <span style="font-weight: bold">Save Bits</span> (so say, if save bits is 31 then set this to 32), for unsigned stats it shouldn't matter. Stats with <span style="font-weight: bold">Save Bits</span> of 32 are never treated as signed, always unsigned, and you can't really set <span style="font-weight: bold">Send Bits</span> to above 32 bits anyway (for very obvious reasons).
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="color: yellow">Send Param</span></span> - How many bits of data the game will attempt to fit into a stat update packet for the parameter of the stat if the stat is sent to clients, it is best to set this to 1 more then <span style="font-weight: bold">Save Param Bits</span> unless it is set to 32 bits (in which case it is unsigned), otherwise the param is always signed. This is used to transmit things like the skill granted by oskills (etc), however the same applies here as applied to the previous column, this is almost entirely hardcoded.
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="color: yellow">UpdateAnimRate</span></span> - This boolean tells the game to call the speed handler and properly adjust the speed of a unit when a stat with this boolean set to true is altered on the unit (via a skill for example), this is for example the case when an aura is applied, so that the speed of the unit changes immediately and not after the current cycle (either attack, walk to a cell etc) ends... As usual, this is rather hardcoded so you'd need to expand the code if you add custom speed stats like these!
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="color: yellow">Saved</span></span> - This boolean controls whenever the value of the stat is saved on characters inside the *.d2s file after you leave the game, be aware that statNo 511 is used to signify the "End-Of-Stat-Section" and cannot be used, there are reports that only stats 0 to 255 are saveable and other reports that all 510 stats are saveable, I haven't tested this myself so I cannot validate either claim ATM... Looking at the *.d2s reading and writing code I however could not find any artificially imposed limitation (other then the aforementioned fact stat 511 cannot be used for anything).
+
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="color: yellow">CSvSigned</span></span> - If the previous column is set to true, this boolean controls whenever the stat is saved in signed or unsigned format, this makes no real difference, other then the fact the way it is written and read from the *.d2s is different (this has more revelance when you have the source code at hand and don't want to get tons of warning messages about signed / unsigned mismatch I guess)...
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="color: yellow">CSvBits</span></span> - How many bits of data are allocated to the value of this stat within the *.d2s file stat section when the stat is saved (only used if the <span style="font-weight: bold">Saved</span> boolean is true), for unsigned stats you can go all the way to 32 bits (allowing for a range of 0 to 4294967295), for signed stats you can go only to 31 bits (allowing for a range of -2147483648 to 2147483647), it makes no real difference as stated for the previous column, keep it like in vanilla for the existing stats though, it works so no need to fix it. Setting this field to 32 bits for a signed stat has the same effect as setting <span style="font-weight: bold">CSvSigned</span> to false.
+
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="color: yellow">CSvParam</span></span> - How many bits of data are allocated to the parameter of this stat within the *.d2s file stat section when the stat is saved (only used if the <span style="font-weight: bold">Saved</span> boolean is true), the parameter is always signed, unless you set this to 32 bits, in which case it becomes unsigned. The same applies here as for the previous column...
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="color: yellow">fCallback</span></span> - This boolean controls whenever the stat-assignment callback function is called by the game if the value of this stat changes, this is used to assign / remove item events, skills, auras, states and more to the character / monster... For new special effects you have to expand the callback function... It will work fine for new stats that trigger item events however!
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="color: yellow">fMin</span></span> - This boolean controls whenever the game will attempt to keep the stat in range calling a special function (and at times doing this inline, such as when the stats are altered by an aura), this prevents stats like strength, dexterity, energy, vitality (etc) from dropping below zero...
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="color: yellow">MinAccr</span></span> - This field (a DWORD btw) controls the minimum value that the stat is capped to, this seams (I haven't verified this) to work hand-in-hand with <span style="font-weight: bold">fMin</span>, however the times I've seen the code access that flag inline I haven't seen it utilize this column, but rather use hardcoded minimum values!
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="color: yellow">Encode</span></span> - This field tells the game whenever to encode the stat (and in this case in what way to encode it) when it is saved to conserve space, this is used for complex stats with more then just a parameter and a value such as 'chance to cast on event', which have to store the chance, sLvl <span style="font-style: italic">and</span> the skill to cast, the arithmetics of this are rather complex and aren't within the scope of this fileguide, you can read about them in several old forum posts however... For new stats, follow the theme vanilla is using and use this only if you try to duplicate a stat that is encoded in vanilla!
+
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="color: yellow">Add</span></span> and <span style="font-weight: bold"><span style="color: yellow">Multiply</span></span> - These two fields control the additional price added to an item's cost (be aware that certain stats like armorclass on armors (etc) are treated more then once as there are hardcoded cases for them!), the bonus equals: <span style="color: #00ff00">cost * (1 + value * multiply / 1024)) + add</span> (...)
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="color: #888888">Divide</span></span> - This field is not used by the code anymore, the game uses a inline function for all this price judgling, and it never accesses divide, rather it uses a hardcoded division by 1024!
+
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="color: yellow">ValShift</span></span> - This field tells the game how the stat is going to be read from and written to items, it does not control whenever the stat is generally used in higher precision, this is entirely hardcoded! Basically this field is only there to save space in the *.d2s file, so that instead of having to save +256 life it will simply save +1 life when this stat is present on an item!
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="color: yellow">1.09-Save Bits</span></span> and <span style="font-weight: bold"><span style="color: yellow">1.09-Save Add</span></span> - These fields are used only for items imported from v1.07 - v1.09, they replace <span style="font-weight: bold">Save Bits</span> and <span style="font-weight: bold">Save Add</span> so that you can convert the items to the old stat format to the new one, character stats didn't use ItemStatCost.txt prior to v1.10 so this doesn't apply to those stats... If you want to prevent people from cheating by creating a v1.09 character and then entering your mod with hacked items (that will get automatically converted by the game), simply blank out all these columns and they'll get a nice "bad stats" or "bad inventory" error in their face <img src="images/smiles/icon_wink.gif" alt="icon_wink.gif" border="0" />
+
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="color: yellow">Save Bits</span></span> and <span style="font-weight: bold"><span style="color: yellow">Save Add</span></span> - These fields control how many bits of data are allocated to the value of this stat within the *.d2s file item stat section <span style="font-weight: bold">ONLY</span>, they have almost no realtime application at all, stats granted by skills and monster stats (etc) are <span style="font-style: italic">not in any way or form</span> bound to this! The only realtime application this has is when an item is getting compressed / decompressed (which happens every time you pick it up or do anything with it) any way, with this misconception taken off the shelf, lets look at how they work. <span style="font-weight: bold">Save Bits</span> controls how many bits of data are allocated to the stat value (see discussion under <span style="font-weight: bold">CSvBits</span> for more info about unsigned / signed implications on what values you can use in this field), the actual maximum value of the stat is therefore equal to <span style="color: #00ff00">2^SaveBits-1</span>, now <span style="font-weight: bold">Save Add</span> comes into play, this controls how large the negative range of the stat can be, for example a <span style="font-weight: bold">Save Add</span> equal to 100 would allow you to use -100 for this stat on an item, this also means the maximum value possible for the stat decreases by 100, thus the final range possible for a stat is <span style="color: #00ff00">-SaveAdd to 2^SaveBits-(SaveAdd+1)</span>.
+
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="color: yellow">Save Param Bits</span></span> - This field controls how many bits of data are allocated to the parameter of this stat when it is saved on items, the same applies here as to the previous column and to <span style="font-weight: bold">CSvParam</span> so refer to the description of these columns, <span style="font-weight: bold">Save Add</span> does not effect the maximum or minimum value of the stat's parameter however... It is best to set this to 17 for all stats that use any form of Id for their parameter (either a skill or a monster etc), because most Id ranges are capped to 65,535, and these parameters always being signed unless they are set to store 32 bits means this will allow you to use all Ids without any fear of glitches or bugs!
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="color: yellow">KeepZero</span></span> - This boolean supposedly controls whenever to prevent the stat from going negative, probably working hand-in-hand with some of the <span style="font-weight: bold">fMin</span> implementations, at best the effect is however only client-side, as we all know stats like mana and stamina can roll over when they exceed 8388607 * 256!
+
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="color: yellow">Op</span></span>, <span style="font-weight: bold"><span style="color: yellow">Op Param</span></span>, <span style="font-weight: bold"><span style="color: yellow">Op Base</span></span> and <span style="font-weight: bold"><span style="color: yellow">Op Stat1</span></span> to <span style="font-weight: bold"><span style="color: yellow">Op Stat3</span></span> - These fields control special forms of stat assignment used for example for stats that add a bonus depending on cLvl (etc), I'll explain each of the op methods in detail below (there are in total 13 op formulae, but not all are used by the game)... Leaving this field blank or setting it to 0 will use the default op, that just adds the stat to the unit directly... In the below formulae, opstat refers to the stats set in the three <span style="font-weight: bold">Op Stat</span> columns, statvalue refers to the value of the stat itself (the stat that has the op stuff assigned to it), basevalue refers to the stat set in the <span style="font-weight: bold">Op Base</span> column and param refers to the value set in the <span style="font-weight: bold">Op Param</span> column!
+
+<br />
+
+<br />
+1 - adds <span style="color: #00ff00">opstat.base * statvalue / 100</span> to the opstat.
+<br />
+
+<br />
+2 - adds <span style="color: #00ff00">(statvalue * basevalue) / (2 ^ param)</span> to the opstat, this does not work properly with any stat other then level because of the way this is updated, it is only refreshed when you re-equip the item, your character is saved or you level up, similar to passive skills, just because it looks like it works in the item description does not mean it does, the game just recalculates the information in <span style="font-weight: bold">the description</span> every frame, while the values remain unchanged serverside.
+
+<br />
+
+<br />
+3 - this is a percentage based version of op #2, look at op #2 for information about the formula behind it, just remember the stat is increased by a percentage rather then by adding an integer.
+<br />
+
+<br />
+4 - this works the same way op #2 works, however the stat bonus is added to the item and not to the player (so that +defense per level properly adds the defense to the armor and not to the character directly!)
+<br />
+
+<br />
+5 - this works like op #4 but is percentage based, it is used for percentage based increase of stats that are found on the item itself, and not stats that are found on the character.
+<br />
+
+<br />
+6 - like for op #7, however this adds a plain bonus to the stat, and just like #7 it also doesn't work so I won't bother to explain the arithmetic behind it either.
+<br />
+
+<br />
+7 - this is used to increase a stat based on the current daytime of the game world by a percentage, there is no need to explain the arithmetics behind it because frankly enough <span style="font-style: italic">it just doesn't work serverside</span>, it only updates clientside so this op is essentially useless.
+<br />
+
+<br />
+8 - hardcoded to work only with maxmana, this will apply the proper amount of mana to your character based on CharStats.txt for the amount of energy the stat added (doesn't work for non characters)
+<br />
+
+<br />
+9 - hardcoded to work only with maxhp and maxstamina, this will apply the proper amount of maxhp and maxstamina to your character based on CharStats.txt for the amount of vitality the stat added (doesn't work for non characters)
+<br />
+
+<br />
+10 - doesn't do anything, this has no switch case in the op function.
+
+<br />
+
+<br />
+11 - adds <span style="color: #00ff00">opstat.base * statvalue / 100</span> similar to 1 and 13, the code just does a few more checks
+<br />
+
+<br />
+12 - doesn't do anything, this has no switch case in the op function.
+<br />
+
+<br />
+13 - adds <span style="color: #00ff00">opstat.base * statvalue / 100</span> to the value of opstat, this is useable only on items it will not apply the bonus to other unit types (this is why it is used for +% durability, +% level requirement, +% damage, +% defense [etc]).
+
+<br />
+
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="color: yellow">Direct</span></span> - this boolean controls whenever this stat has a maximum stat associated with it, which among others means that unless you screw up something badly, this stat can never exceed the value of the maximum stat and that any change to this stat is permanent (a skill that alters mana, hitpoints or stamina is permanent, while a skill that alters maxmana, maxhp and maxstamina is temporary). You do not need to specify a maximum stat for the effect to be permanent, this can be used to get kill counters to work (look for SVR's old post).
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="color: yellow">MaxStat</span></span> - the maximum stat associated with this stat, this field only ever has an effect if <span style="font-weight: bold">Direct</span> is set to true, see the discussion under that field. Percentage based increases to the max stat will usually alter this stat too, however this has some hardcoded aspects to it and is not entirely softcoded.
+
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="color: yellow">ItemSpecific</span></span> - this boolean controls whenever this stat is specific to a single item, that is, if you socket a jewel that adds +durability or +quantity into something else, the quantity or durability of both items will not stack when a general call to GetStat is returned, however whenever this works properly is unknown, I at least haven't tested it and nobody else has either. It should also prevent the stat from being added to the item owners accumulated total of that stat.
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="color: yellow">DamageRelated</span></span> - this boolean controls whenever the stat will be restricted to a single weapon and not stack with the item owners accumulated total of that stat when he equips the weapon (this is used to prevent barbarians who dual wield from for example having 50% lifesteal if one weapon has 1% and the other 49% no matter what weapon they swing). To explain this more indepth, when you swing your weapon the game copies all these stats (from the weapon involved) to a temporary statlist that is then flushed after the attack is completed (this is not 100% what happens, but it should give you an idea).
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="color: yellow">ItemEvent1</span></span> and <span style="font-weight: bold"><span style="color: yellow">ItemEvent2</span></span> - the event (from Events.txt) that will trigger the associated event function be aware that not every event will work with every event function, and some event functions will not work when set as an item event!
+
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="color: yellow">ItemEventFunc1</span></span> and <span style="font-weight: bold"><span style="color: yellow">ItemEventFunc2</span></span> - the event function associated with the corresponding event set in the previous columns. Below is a list of events and what they do.
+<br />
+
+<br />
+1 - shoots a missile at the owner of a missile that has just hit you (Chilling Armor uses this)
+<br />
+2 - freezes the attacker for a set duration the attacker (Frozen Armor uses this)
+<br />
+3 - does cold damage to and chills the attacker (Shiver Armor uses this)
+
+<br />
+4 - % of damage taken is done to the attacker (Iron Maiden, thorns uses a hardcoded stat)
+<br />
+5 - % of damage done added to life, bypassing the targets resistance (used by Life Tap)
+<br />
+6 - attacker takes physical damage of #
+<br />
+7 - knocks the target back
+<br />
+8 - induces fear in the target making it run away
+<br />
+9 - applies Dim Vision to the target (it casts the actual curse on the monster)
+<br />
+10 - attacker takes lightning damage of #
+<br />
+11 - attacker takes fire damage of #
+<br />
+
+12 - attacker takes cold damage of #
+<br />
+13 - % damage taken is added to mana
+<br />
+14 - freezes the target
+<br />
+15 - causes the target to bleed and lose life (negative life regen)
+<br />
+16 - crushing blow against the target
+<br />
+17 - mana after killing a monster
+<br />
+18 - life after killing a demon
+<br />
+19 - slows the target
+<br />
+20 - casts a skill against the defender
+
+<br />
+21 - casts a skill against the attacker
+<br />
+22 - absorbs physical damage taken (used by Bone Armor)
+<br />
+23 - transfers damage done from the summon to the owner (used by Blood Golem)
+<br />
+24 - used by Energy Shield to absorb damage and shift it from life to mana
+<br />
+25 - absorbs elemental damage taken (used by Cyclone Armor)
+<br />
+26 - transfers damage taken from the summon to the owner (used by Blood Golem)
+<br />
+27 - used to slow the attacker if he hits a unit that has the slow target stat (used by Clay Golem)
+<br />
+28 - life after killing a monster
+<br />
+
+29 - destroys the corpse of a killed monster (rest in peace effect)
+<br />
+30 - cast a skill when the event occurs, without a target
+<br />
+31 - reanimate the target as the specified monster
+<br />
+
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="color: yellow">DescPriority</span></span> - the higher this value is the further up in the item description this stat will be listed, if more then one stat share the same priority they are listed in the order they are inside the file, valid values range between 0 and 255.
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="color: yellow">DescFunc</span></span> - the function used for generating the description for this stat, this works like the descfuncs in SkillDesc.txt pretty much. See below for an explanation of individual functions, these are listed the way they would show up if DescVal is set to 1. This follows the syntax Char used in the old fileguide, but includes the functions he didn't cover.
+
+<br />
+
+<br />
+1 - +[value] [string1]
+<br />
+2 - [value]% [string1]
+<br />
+3 - [value] [string1]
+<br />
+4 - +[value]% [string1]
+<br />
+5 - [value*100/128]% [string1]
+<br />
+6 - +[value] [string1] [string2]
+<br />
+7 - [value]% [string1] [string2]
+<br />
+
+8 - +[value]% [string1] [string2]
+<br />
+9 - [value] [string1] [string2]
+<br />
+10 - [value*100/128]% [string1] [string2]
+<br />
+11 - Repairs 1 Durability In [100 / value] Seconds
+<br />
+12 - [string1] +[value]
+<br />
+13 - +[value] to [class] Skill Levels
+<br />
+14 - +[value] to [skilltab] Skill Levels ([class] Only)
+<br />
+15 - [chance]% to case [slvl] [skill] on [event]
+<br />
+16 - Level [sLvl] [skill] Aura When Equipped 
+
+<br />
+17 - [value] [string1] (Increases near [time])
+<br />
+18 - [value]% [string1] (Increases near [time])
+<br />
+19 - this is used by stats that use Blizzard's sprintf implementation (if you don't know what that is, it won't be of interest to you eitherway I guess), look at how prismatic is setup, the string is the format that gets passed to their sprintf spinoff.
+<br />
+20 - [value * -1]% [string1]
+<br />
+21 - [value * -1] [string1]
+<br />
+22 - [value]% [string1] [montype] (warning: this is bugged in vanilla and doesn't work properly, see CE forum)
+<br />
+23 - [value]% [string1] [monster]
+<br />
+24 - used for charges, we all know how that desc looks <img src="images/smiles/icon_wink.gif" alt="icon_wink.gif" border="0" />
+
+<br />
+25 - not used by vanilla, present in the code but I didn't test it yet
+<br />
+26 - not used by vanilla, present in the code but I didn't test it yet
+<br />
+27 - +[value] to [skill] ([class] Only)
+<br />
+28 - +[value] to [skill]
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="color: yellow">DescVal</span></span> - Controls whenever and if so in what way the stat value is shown, 0 = doesn't show the value of the stat, 1 = shows the value of the stat infront of the description, 2 = shows the value of the stat after the description.
+<br />
+
+<br />
+
+<span style="font-weight: bold"><span style="color: yellow">DescStrPos</span></span> - The string used for the description when the stat value is positive.
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="color: yellow">DescStrNeg</span></span> - The string used for the description when the stat value is negative.
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="color: yellow">DescStr2</span></span> - An additional string used by some DescFuncs, usually used as a suffix or for aditional info (such as per character level etc).
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="color: yellow">dGrp</span></span> - When all stats in this group are present on the same item and they all have the same value, replace their description with the associated group description.
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="color: yellow">dGrpFunc</span></span> - The same as <span style="font-weight: bold">DescFunc</span>, just for the group description
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="color: yellow">dGrpVal</span></span> - The same as <span style="font-weight: bold">DescVal</span>, just for the group description
+
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="color: yellow">dGrpStrPos</span></span> - The same as <span style="font-weight: bold">DescStrPos</span>, just for the group description
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="color: yellow">dGrpStrNeg</span></span> - The same as <span style="font-weight: bold">DescStrNeg</span>, just for the group description
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="color: yellow">dGrpStr2</span></span> - The same as <span style="font-weight: bold">DescStr2</span>, just for the group description
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="color: yellow">Stuff</span></span> - Stay <span style="font-weight: bold">far</span> away from this column unless you really know what you're doing and / or work for Blizzard, this column is used during bin-file creation to generate a cache regulating the op-stat stuff and other things, changing it can be futile, it works like the constants column in MonUMod.txt and has no other relation to ItemStatCost.txt, the first stat in the file simply must have this set <span style="font-style: italic">or else</span> you may break the entire op stuff.</div></td>
+			</tr>
+			<tr>
+				<td colspan="3"><hr /></td>
+			</tr>
+			<tr>
+                            <td class="modulecell mkalign1" width="20%" valign="top">Votes</td>
+                            <td class="modulecell mkalign1" colspan="2" width="80%">Votes: 3 - Average: 5 <img src="./mkportal/templates/Forum/images/spacer.gif" width="115" height="5" alt="" /><br /><img src="./mkportal/templates/Forum/images/scale.gif" width="129" alt="" /><br /><img src="./mkportal/templates/Forum/images/bar-start.gif" height="11" alt="" /><img src="./mkportal/templates/Forum/images/bar.gif" width="119" height="11" alt="" /><img src="./mkportal/templates/Forum/images/bar-end.gif" height="11" alt="" />
+			    </td>
+			</tr>
+
+
+
+			<tr>
+                          <td class="modulecell" colspan="3">
+                            <table width="50%" align="center">
+                              <tr>
+				<td align="center" class="functions" width="200"><a href="index.php?ind=reviews&amp;op=submit_comment&amp;ide=448"><img src="./mkportal/templates/Forum/images/comment.gif" border="0" alt="" /></a></td>
+				<td align="center" class="functions" width="200"><a href="index.php?ind=reviews&amp;op=submit_rate&amp;ide=448"><img src="./mkportal/templates/Forum/images/rate.gif" border="0" alt="" /></a></td>
+                              </tr>
+                              <tr>
+				<td align="center" class="functions" width="200"><a href="index.php?ind=reviews&amp;op=submit_comment&amp;ide=448">Add a Comment</a></td>
+				<td align="center" class="functions" width="200"><a href="index.php?ind=reviews&amp;op=submit_rate&amp;ide=448">Rate</a></td>
+                              </tr>
+                            </table>
+                          </td>
+			</tr>
+
+		<tr>
+		  <td class="tdblock" colspan="3">
+		  Comments
+		  </td>
+		  </tr><tr>
+						  <td colspan="3"><hr /></td>
+		</tr>
+		
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+	    </tr>
+	  </table>
+	</td>
+      </tr>
+    </table>
+    
+    <br />
+    <table width="98%" border="0" cellspacing="1" cellpadding="0" align="center" class="moduleborder">
+      <tr>
+	<td>
+	  <table width="100%" border="0" cellpadding="0" cellspacing="2" class="modulebg">
+	    <tr>
+	      <td>
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+		  <tr>
+		    <td>
+		      <table width="100%" border="0" cellspacing="1" cellpadding="5">
+			<tr>
+			  <td class="modulex" colspan="2">
+			    Stat
+			  </td>
+			</tr>
+			<tr>
+			  <td width="40" align="center" class="modulecell"><img src="./mkportal/templates/Forum/images/stats.gif" alt="" /></td>
+			  <td class="modulecell">There are 422 articles in the Database<br />Most Viewed: <a href="index.php?ind=reviews&amp;op=entry_view&amp;iden=298">[LOD v.1.10] Hades Underworld Mod</a><br />Most Rated: <a href="index.php?ind=reviews&amp;op=entry_view&amp;iden=332">Guide: How to get rid of your fellow modmakers</a></td>
+			</tr>
+		      </table>
+		    </td>
+		  </tr>
+		</table>
+	      </td>
+	    </tr>
+	  </table>
+	</td>
+      </tr>
+    </table>
+    <br />
+    <table width="98%" border="0" cellspacing="0" cellpadding="0" align="center">
+      <tr>
+	<td class="modulebg">
+	<div class="mkalign1" style="margin: 4px 0;"></div>
+	</td>
+      </tr>
+    </table>
+
+    <table width="98%" class="moduleborder" border="0" cellspacing="1" cellpadding="1" align="center">
+      <tr>
+	<td class="modulebg">
+	  <table width="100%" border="0" cellspacing="0" cellpadding="4" class="mkalign2">
+	    <tr>
+	      <td class="modulex mkalign1" width="*">
+		Total users browsing the Knowledge Base: 1 (1 Registered Members 0 Guests and 0 Anonymous Members)<br />Visible members are:  <a href="./forum/memberlist.php?mode=viewprofile&amp;u=37948">kambala</a>
+	      </td>
+	    </tr>
+	  </table>
+	</td>
+      </tr>
+    </table>
+
+    <table width="98%" align="center">
+      <tr>
+	<td align="center">
+	<br /><br /><div align="center"><a href="http://www.mkportal.it" target="_blank">MKPReviews</a> &copy;2003-2008 <a href="http://www.mkportal.it" target="_blank">mkportal.it</a></div>
+	</td>
+      </tr>
+    </table>
+  </td>
+</tr>
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+		  </table>
+		</td>
+
+<!-- end center column -->
+		
+<!-- begin column spacer -->
+
+		<td class="vspacer" width="0%">&nbsp;</td>
+
+<!-- end column spacer -->
+
+<!-- begin right column -->
+
+		<td id="menudx" valign="top">
+		<div id="menucontentr" class="mkalign1" style="">
+		<div class="mkalign1">&nbsp;<a href="javascript:ColumnClose('menudx');MemoPos('MKmenudx', '1')"><img src="./mkportal/templates/Forum/images/f1.gif" border="0" alt="" /></a></div>
+		  <table cellpadding="0" cellspacing="2" border="0" style="width: 140px;">
+		  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Personal Menu</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      
+				<tr>
+				  <td width="100%" class="tdblock" align="center">
+				  Welcome kambala
+				  </td>
+				</tr>
+				<tr>
+				  <td width="100%" class="tdblock" align="center">
+				  
+				  </td>
+				</tr>
+				<tr>
+				  <td width="100%" class="tdblock" align="center">
+				  <span class="mktxtcontr">Last Visited:</span>
+				  </td>
+				</tr>
+				<tr>
+				  <td width="100%" align="center" class="tdglobal">
+				  Friday, 12 August 2011 14:54
+				  </td>
+				</tr>
+				
+				<tr>
+				<td width="100%"  class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="./forum/ucp.php" title="Personal CP">Personal CP</a>
+<!-- end block link template -->
+
+				  </td>
+				</tr>
+				<tr>
+				  <td width="100%" class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="./forum/ucp.php?i=pm&amp;folder=inbox" title="PM (0/0)">PM (0/0)</a>
+<!-- end block link template -->
+
+				  </td>
+				</tr>
+				<tr>
+				  <td width="100%" class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="./forum/ucp.php?mode=logout&amp;sid=100a977ea93bf5ba990226e98ae79235" title="Log Out">Log Out</a>
+<!-- end block link template -->
+
+				  </td>
+				</tr>
+     	 	
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Who Is Online?</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      
+				<tr>
+				  <td width="100%">
+				    <table border="0" width="100%" cellpadding="1" cellspacing="1">
+				      <tr>
+					<td class="tdblock">
+					<span class="mktxtcontr">15</span> Users online:
+					</td>
+				      </tr>
+				      <tr>
+					<td class="tdglobal">
+					<b>9</b> &nbsp;Guests<br /><b>0</b> &nbsp;Anonymous<br /><b>6</b> &nbsp;Visible:<br /> <a href="./forum/memberlist.php?mode=viewprofile&amp;u=12403">Al-T</a>, <span style="color:#9E8DA7"><strong>Google [Bot]</strong></span>, <span style="color:#9E8DA7"><strong>Google Adsense [Bot]</strong></span>, <a href="./forum/memberlist.php?mode=viewprofile&amp;u=99">JrEye</a>, <a href="./forum/memberlist.php?mode=viewprofile&amp;u=37948">kambala</a>, <span style="color:#9E8DA7"><strong>Yahoo [Bot]</strong></span>
+					</td>
+				      </tr>
+				    </table>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="./forum/viewonline.php" title="Last click">Last click</a>
+<!-- end block link template -->
+
+				  </td>
+				</tr>	
+     	 	
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Recent Discussions</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      
+				<tr>
+				  <td width="100%" class="tdblock">
+				  <a class="uno" href="./forum/viewtopic.php?f=53&amp;t=58257&amp;p=457845#p457845">Re: Billybgame&#039;s ...</a>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdglobal">
+				  by: <a href="./forum/memberlist.php?mode=viewprofile&amp;u=12403">Al-T</a><br /> on: Friday, 12 August 2011 21:34
+				  </td>
+				</tr>
+			
+				<tr>
+				  <td width="100%" class="tdblock">
+				  <a class="uno" href="./forum/viewtopic.php?f=7&amp;t=15454&amp;p=457844#p457844">Re: AFJ tbl Editor</a>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdglobal">
+				  by: <a href="./forum/memberlist.php?mode=viewprofile&amp;u=16844" style="color:#00CC00"><strong>Necrolis</strong></a><br /> on: Friday, 12 August 2011 20:56
+				  </td>
+				</tr>
+			
+				<tr>
+				  <td width="100%" class="tdblock">
+				  <a class="uno" href="./forum/viewtopic.php?f=53&amp;t=58257&amp;p=457832#p457832">Re: Billybgame&#039;s ...</a>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdglobal">
+				  by: <a href="./forum/memberlist.php?mode=viewprofile&amp;u=16347">Billybgame</a><br /> on: Friday, 12 August 2011 20:49
+				  </td>
+				</tr>
+			
+				<tr>
+				  <td width="100%" class="tdblock">
+				  <a class="uno" href="./forum/viewtopic.php?f=122&amp;t=58420&amp;p=457843#p457843">Re: Skill/Missle on Mo...</a>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdglobal">
+				  by: <a href="./forum/memberlist.php?mode=viewprofile&amp;u=37516">kidpaddle94</a><br /> on: Friday, 12 August 2011 20:01
+				  </td>
+				</tr>
+			
+				<tr>
+				  <td width="100%" class="tdblock">
+				  <a class="uno" href="./forum/viewtopic.php?f=53&amp;t=58384&amp;p=457842#p457842">Re: Pure Grind Tournament</a>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdglobal">
+				  by: <a href="./forum/memberlist.php?mode=viewprofile&amp;u=12403">Al-T</a><br /> on: Friday, 12 August 2011 19:45
+				  </td>
+				</tr>
+			
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Site Stats</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      
+				<tr>
+				  <td class="tdblock">
+				  <span class="mktxtcontr">442333</span> Posts:
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdglobal">
+				  54364 Topics
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdglobal">
+				  387969 Replies<br />
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdblock">
+				  <span class="mktxtcontr">328</span> Images:
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdglobal">
+				  Inside the Image Gallery<br />
+				  </td>
+				</tr>				
+				<tr>
+				  <td class="tdblock">
+				  <span class="mktxtcontr">422</span> Articles:
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdglobal">
+				  Inside the Knowledge Base<br />
+				  </td>
+				</tr>				
+				<tr>
+				  <td class="tdblock">
+				  <span class="mktxtcontr">29060</span> Reg. Members:
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdglobal">
+				  Last: <a class="uno" href="./forum/memberlist.php?mode=viewprofile&amp;u=40409">Rehbock_</a>
+				  </td>
+				</tr>
+				<!--<tr>
+				  <td class="tdblock">
+				  Browsed Pages:
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdglobal">
+				  <center><img src="./mkportal/templates/Forum/images/led/1.gif" style="border: solid 1px #ffffff;" alt="" /><img src="./mkportal/templates/Forum/images/led/0.gif" style="border: solid 1px #ffffff;" alt="" /><img src="./mkportal/templates/Forum/images/led/3.gif" style="border: solid 1px #ffffff;" alt="" /><img src="./mkportal/templates/Forum/images/led/8.gif" style="border: solid 1px #ffffff;" alt="" /><img src="./mkportal/templates/Forum/images/led/8.gif" style="border: solid 1px #ffffff;" alt="" /><img src="./mkportal/templates/Forum/images/led/0.gif" style="border: solid 1px #ffffff;" alt="" /><img src="./mkportal/templates/Forum/images/led/1.gif" style="border: solid 1px #ffffff;" alt="" /><img src="./mkportal/templates/Forum/images/led/4.gif" style="border: solid 1px #ffffff;" alt="" /></center>
+				  </td>
+				</tr> -->
+
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Calendar</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      
+				<tr>
+				  <td class="tdblock" >
+
+				    <form action="http://phrozenkeep.hugelaser.com/index.php?ind=reviews&amp;op=entry_view&amp;iden=448#cal" name="CalForm" method="post">
+				    <table width="100%" align="center" border="0" cellspacing="1" cellpadding="0">
+				      <tr>
+					<td class="tdglobal" style="text-align:center;" align="center" colspan="7">
+					  <input type="hidden" name="old_y" value="2011" />
+					  <input type="hidden" name="old_y" value="8" />
+					  <select name="m_m" class="bgselect" onchange="document.CalForm.submit();">
+					  
+					  <option value="1"  >Jan</option>
+
+					  <option value="2"  >Feb</option>
+
+					  <option value="3"  >Mar</option>
+
+					  <option value="4"  >Apr</option>
+
+					  <option value="5"  >May</option>
+
+					  <option value="6"  >Jun</option>
+
+					  <option value="7"  >Jul</option>
+
+					  <option value="8" selected="selected" >Aug</option>
+
+					  <option value="9"  >Sep</option>
+
+					  <option value="10"  >Oct</option>
+
+					  <option value="11"  >Nov</option>
+
+					  <option value="12"  >Dec</option>
+
+					  </select>
+					  <select name="y_y" class="bgselect" onchange="document.CalForm.submit();">
+					  
+					  <option value="2008"  >2008</option>
+
+					  <option value="2009"  >2009</option>
+
+					  <option value="2010"  >2010</option>
+
+					  <option value="2011" selected="selected" >2011</option>
+
+					  <option value="2012"  >2012</option>
+
+					  <option value="2013"  >2013</option>
+
+					  <option value="2014"  >2014</option>
+
+					  </select>
+					</td>
+				      </tr>      
+			      
+				      
+				      <tr>
+					<th class="modulex" style="height: 18px; padding: 0px; margin: 0px; border: 0px; font-size: 10px; width: 14%" align="center" valign="middle">Su</th>
+					   
+					<th class="modulex" style="height: 18px; padding: 0px; margin: 0px; border: 0px; font-size: 10px; width: 14%" align="center" valign="middle">Mo</th>
+					   
+					<th class="modulex" style="height: 18px; padding: 0px; margin: 0px; border: 0px; font-size: 10px; width: 14%" align="center" valign="middle">Tu</th>
+					   
+					<th class="modulex" style="height: 18px; padding: 0px; margin: 0px; border: 0px; font-size: 10px; width: 14%" align="center" valign="middle">We</th>
+					   
+					<th class="modulex" style="height: 18px; padding: 0px; margin: 0px; border: 0px; font-size: 10px; width: 14%" align="center" valign="middle">Th</th>
+					   
+					<th class="modulex" style="height: 18px; padding: 0px; margin: 0px; border: 0px; font-size: 10px; width: 14%" align="center" valign="middle">Fr</th>
+					   
+					<th class="modulex" style="height: 18px; padding: 0px; margin: 0px; border: 0px; font-size: 10px; width: 14%" align="center" valign="middle">Sa</th>
+					   				      
+				      
+				      </tr>
+				      <tr>
+				
+					<td class="tdblock" style="height:10px; width:4px; padding: 0px; margin: 0px; border: 0px;"><br /></td>
+					
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">1</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">2</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">3</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">4</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">5</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">6</td>
+				
+				      </tr>
+				      <tr>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">7</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">8</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">9</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">10</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">11</td>
+				
+				      <td class="tdblock" id="mkcaltoday" style="font-size: 10px; height:10px" valign="middle" align="center"><b>12</b></td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">13</td>
+				
+				      </tr>
+				      <tr>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">14</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">15</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">16</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">17</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">18</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">19</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">20</td>
+				
+				      </tr>
+				      <tr>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">21</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">22</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">23</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">24</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">25</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">26</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">27</td>
+				
+				      </tr>
+				      <tr>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">28</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">29</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">30</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">31</td>
+				
+					<td class="tdblock" style="height:10px; width:4px; padding: 0px; margin: 0px; border: 0px;"><br /></td>
+					
+					<td class="tdblock" style="height:10px; width:4px; padding: 0px; margin: 0px; border: 0px;"><br /></td>
+					
+					<td class="tdblock" style="height:10px; width:4px; padding: 0px; margin: 0px; border: 0px;"><br /></td>
+									      
+				      
+				    </tr>
+				    <tr>
+				      <td class="trattini3" style="font-size: 1px; background: transparent;" colspan="7">&nbsp;</td>
+				    </tr>
+				    				      
+				      							
+				    </table>
+				    </form>
+
+				  </td>
+				</tr>
+
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Random Image</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      
+				<tr>
+				  <td align="center"><img style="cursor: url(./mkportal/templates/Forum/images/mkajax/zoomin.cur), pointer;" src="http://phrozenkeep.hugelaser.com/mkportal/modules/gallery/album/t_a_304.jpg" border="0" alt="Click to enlarge" onclick="ajax_showPop('./index.php?ind=ajax&amp;act=showgal&amp;idp=304', 1);return false" />
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdblock" align="center"><a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?ind=gallery&amp;op=foto_show&amp;ida=304">D2 scrabble</a><br />
+				  </td>
+				</tr>
+			
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Phrozen Keep Poll</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      
+				<tr>
+				  <td class="tdblock">
+				  <a href="./forum/viewtopic.php?t=55546&amp;view=viewpoll">Which type of Diablo 2 mod do you like best?</a><br /><br />
+				  </td>
+				</tr>
+            
+				<tr>
+				  <td class="tdblock3">
+				  Total Conversion
+				  </td>
+				</tr>
+				<tr>
+				  <td align="left">
+					<div align="left" style="width: 130px; ">
+				  		<img src="./mkportal/templates/Forum/images/bar-start.gif" width="4" height="11" alt="" /><img src="./mkportal/templates/Forum/images/bar.gif" width="65" height="11" alt="" /><img src="./mkportal/templates/Forum/images/bar-end.gif" width="4" height="11" alt="" />
+					</div>54.14%<br /><br />
+		  		</td>
+				</tr>
+
+                
+				<tr>
+				  <td class="tdblock3">
+				  Balance Mod
+				  </td>
+				</tr>
+				<tr>
+				  <td align="left">
+					<div align="left" style="width: 130px; ">
+				  		<img src="./mkportal/templates/Forum/images/bar-start.gif" width="4" height="11" alt="" /><img src="./mkportal/templates/Forum/images/bar.gif" width="18" height="11" alt="" /><img src="./mkportal/templates/Forum/images/bar-end.gif" width="4" height="11" alt="" />
+					</div>14.65%<br /><br />
+		  		</td>
+				</tr>
+
+                
+				<tr>
+				  <td class="tdblock3">
+				  New Features Added
+				  </td>
+				</tr>
+				<tr>
+				  <td align="left">
+					<div align="left" style="width: 130px; ">
+				  		<img src="./mkportal/templates/Forum/images/bar-start.gif" width="4" height="11" alt="" /><img src="./mkportal/templates/Forum/images/bar.gif" width="35" height="11" alt="" /><img src="./mkportal/templates/Forum/images/bar-end.gif" width="4" height="11" alt="" />
+					</div>28.66%<br /><br />
+		  		</td>
+				</tr>
+
+                
+				<tr>
+				  <td class="tdblock3">
+				  Drop Mod
+				  </td>
+				</tr>
+				<tr>
+				  <td align="left">
+					<div align="left" style="width: 130px; ">
+				  		<img src="./mkportal/templates/Forum/images/bar-start.gif" width="4" height="11" alt="" /><img src="./mkportal/templates/Forum/images/bar.gif" width="3" height="11" alt="" /><img src="./mkportal/templates/Forum/images/bar-end.gif" width="4" height="11" alt="" />
+					</div>2.55%<br /><br />
+		  		</td>
+				</tr>
+
+                
+				<tr>
+				  <td class="tdblock">
+				  <span class="mktxtcontr">157</span> Total Voters
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdglobal">
+				  <a href="./forum/viewtopic.php?t=55546&amp;view=viewpoll">View poll...</a>
+				  </td>
+				</tr>
+            
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Random Quote</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      			
+				<tr>
+				</tr>
+				<tr>
+				  <td class="tdglobal">
+				  <i><b>The world is a comedy for those who think; a tragedy for those who feel.</b></i><br />(<b>Anonymous</b>)
+				  </td>
+				</tr>			
+				
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+		  </table>
+		</div>
+		<div id="menuclosedr" style="display:none">
+		<div class="mkalign1"><a href="javascript:ColumnOpen('menudx');MemoPos('MKmenudx', '0')"><img src="./mkportal/templates/Forum/images/f2.gif" border="0" alt="" /></a></div>
+		</div>
+		</td>
+		
+<!-- end right column -->
+
+<!-- begin close portal body -->
+
+	      </tr>
+	    </table>
+	  </td>
+	</tr>
+	
+<!-- end close portal body -->
+
+<!-- begin close main table -->
+
+      </table>
+
+    </td>
+  </tr>
+</table>
+</div>
+
+<!-- end close main table -->
+
+<!-- begin footer -->
+<!-- you can add your credits here  -->
+
+<!-- end footer -->
+  <p align="center"><span class="mkcopyright" style="font-size: 10px">Powered by <a style="font-size: 10px" href="http://www.mkportal.it/" target="_blank">MKPortal</a> &copy;2003-2008 <a style="font-size: 10px" href="http://www.mkportal.it/" target="_blank">mkportal.it</a></span></p>
+
+</body>
+</html>
+
+<!-- end footer -->
