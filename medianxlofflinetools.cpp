@@ -1656,11 +1656,14 @@ bool MedianXLOfflineTools::processSaveFile()
         int statLength = ItemDataBase::Properties()->operator[](statCode).saveBits;
         if (!statLength)
         {
-            ERROR_BOX(tr("Unknown statistic code found: %1. This is not %2 character.", "second param is mod name").arg(statCode).arg("Median XL" + (isUltimative() ? " Ultimative" : QString())));
+            QString modName("Median XL");
+            if (isUltimative())
+                modName += QString(" Ultimative v%1").arg(isUltimative4() ? "4" : "5+");
+            ERROR_BOX(tr("Unknown statistic code found: %1. This is not %2 character.", "second param is mod name").arg(statCode).arg(modName));
             return false;
         }
-        qint64 statValue = bitReader.readNumber(statLength);
 
+        qint64 statValue = bitReader.readNumber(statLength);
         if (statCode == Enums::CharacterStats::Level && statValue != clvl)
         {
             ERROR_BOX(tr("Level in statistics (%1) isn't equal the one in header (%2).").arg(statValue).arg(clvl));

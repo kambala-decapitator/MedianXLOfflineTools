@@ -32,6 +32,8 @@ QMetaEnum metaEnumFromName(const char *enumName)
 }
 
 bool isUltimative();
+bool isUltimative4();
+bool isUltimative5OrLater();
 
 // item conditions for STL algorithms
 struct ItemInfo;

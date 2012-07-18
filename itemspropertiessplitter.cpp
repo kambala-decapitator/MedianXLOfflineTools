@@ -48,10 +48,9 @@ void ItemsPropertiesSplitter::itemSelected(const QModelIndex &index)
 
     // correctly disable hotkeys
     bool isUltimative_ = isUltimative();
-
     if (item && item->location != Enums::ItemLocation::Equipped && (item->quality == Enums::ItemQuality::Set || (item->quality == Enums::ItemQuality::Unique && !ItemDataBase::isUberCharm(item) && ItemDataBase::Uniques()->contains(item->setOrUniqueId))))
     {
-        _itemActions[DisenchantShards]->setDisabled(isUltimative_ && item->props.contains(276)); // prohibit disenchanting TUs from the Gift Box into shards. 276 is ID of item-duped property
+        _itemActions[DisenchantShards]->setDisabled(isUltimative_ && item->props.contains(Enums::ItemProperties::ItemDuped)); // prohibit disenchanting TUs from the Gift Box into shards
         // Ultimative prohibits disenchanting TUs into signets
         _itemActions[DisenchantSignet]->setDisabled(isUltimative_ && item->quality == Enums::ItemQuality::Unique && ItemDataBase::Items()->operator[](item->itemType).genericType != Enums::ItemTypeGeneric::Misc && !isSacred(item));
     }

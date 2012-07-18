@@ -233,6 +233,7 @@ public:
         DefenceBasedOnClvl = 214,
         EnhancedDefenceBasedOnClvl,
         TrophyOrBless = 219,
+        ItemDuped = 276,
         Avoid1 = 338,
         Avoid2,
         Avoid3,
