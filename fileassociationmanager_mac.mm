@@ -26,18 +26,10 @@ bool FileAssociationManager::isApplicationDefaultForExtension(const QString &ext
     OSStatus err = LSGetApplicationForInfo(kLSUnknownType, kLSUnknownCreator, (CFStringRef)NSStringFromQString(extensionWithoutDotFromExtension(extension)), kLSRolesAll, &defaultAppRef, NULL);
     if (err == noErr)
     {
-        CFURLRef defaultAppUrl = CFURLCreateFromFSRef(kCFAllocatorDefault, &defaultAppRef);
-        CFStringRef defaultAppPath = CFURLCopyFileSystemPath(defaultAppUrl, kCFURLPOSIXPathStyle);
+        CFURLRef defaultAppUrl = CFURLCreateFromFSRef(kCFAllocatorDefault, &defaultAppRef), bundleUrl = CFBundleCopyBundleURL(CFBundleGetMainBundle());
+        isDefault = CFEqual(defaultAppUrl, bundleUrl);
         CFRelease(defaultAppUrl);
-
-        CFURLRef bundleUrl = CFBundleCopyBundleURL(CFBundleGetMainBundle());
-        CFStringRef bundlePath = CFURLCopyFileSystemPath(bundleUrl, kCFURLPOSIXPathStyle);
         CFRelease(bundleUrl);
-
-        isDefault = CFStringCompare(bundlePath, defaultAppPath, 0) == kCFCompareEqualTo;
-
-        CFRelease(bundlePath);
-        CFRelease(defaultAppPath);
     }
     else if (err == kLSApplicationNotFoundErr)
         isDefault = false;
