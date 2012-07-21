@@ -10,17 +10,38 @@
 #include "characterinfo.hpp"
 
 #include <QMenu>
+#include <QGroupBox>
+#include <QPushButton>
+#include <QHBoxLayout>
+#include <QVBoxLayout>
 
 #ifndef QT_NO_DEBUG
 #include <QDebug>
 #endif
 
 
-ItemsPropertiesSplitter::ItemsPropertiesSplitter(ItemStorageTableView *itemsView, QWidget *parent) : QSplitter(Qt::Horizontal, parent), _itemsView(itemsView)
+ItemsPropertiesSplitter::ItemsPropertiesSplitter(ItemStorageTableView *itemsView, QWidget *parent) : QSplitter(Qt::Horizontal, parent), _propertiesWidget(new PropertiesViewerWidget(parent)),
+    _itemsView(itemsView), _disenchantBox(new QGroupBox(tr("Disenchant everything here to:"), this)), _upgradeBox(new QGroupBox(tr("Upgrade here all:"), this)),
+    _disenchantToCrystalsButton(new QPushButton(tr("Arcane Crystals/Shards"), _disenchantBox)), _disenchantToSignetsButton(new QPushButton(tr("Signets of Learning"), _disenchantBox)),
+    _upgradeGemsButton(new QPushButton(tr("Gems"), _upgradeBox)), _upgradeRunesButton(new QPushButton(tr("Runes"), _upgradeBox)), _upgradeBothButton(new QPushButton(tr("Both"), _upgradeBox))
 {
-    addWidget(_itemsView);
-    _propertiesWidget = new PropertiesViewerWidget(parent);
+    QWidget *w = new QWidget(this);
+    addWidget(w);
     addWidget(_propertiesWidget);
+
+    QVBoxLayout *vlayout = new QVBoxLayout(w);
+    vlayout->addWidget(_itemsView);
+    vlayout->addWidget(_disenchantBox);
+    vlayout->addWidget(_upgradeBox);
+
+    QHBoxLayout *disenchantBoxLayout = new QHBoxLayout(_disenchantBox);
+    disenchantBoxLayout->addWidget(_disenchantToCrystalsButton);
+    disenchantBoxLayout->addWidget(_disenchantToSignetsButton);
+
+    QHBoxLayout *upgradeBoxLayout = new QHBoxLayout(_upgradeBox);
+    upgradeBoxLayout->addWidget(_upgradeGemsButton);
+    upgradeBoxLayout->addWidget(_upgradeRunesButton);
+    upgradeBoxLayout->addWidget(_upgradeBothButton);
 
     createItemActions();
 

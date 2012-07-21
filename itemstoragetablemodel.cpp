@@ -32,10 +32,13 @@ QVariant ItemStorageTableModel::data(const QModelIndex &index, int role) const
     if (role == Qt::DecorationRole && _highlightIndexes.contains(index))
     {
         bool isGreen = true;
+        ItemInfo *draggedItem = itemAtIndex(_dragOriginIndex);
+        ItemsList items_ = items();
+        items_.removeOne(draggedItem);
         foreach (const QModelIndex &anIndex, _highlightIndexes)
         {
             // 1x1 item should be checked, so let's use Arcane Crystal for this
-            if (!ItemDataBase::canStoreItemAt(anIndex.row(), anIndex.column(), "qum", items(), _rows, _columns))
+            if (!ItemDataBase::canStoreItemAt(anIndex.row(), anIndex.column(), "qum", items_, _rows, _columns))
             {
                 isGreen = false;
                 break;
@@ -43,8 +46,8 @@ QVariant ItemStorageTableModel::data(const QModelIndex &index, int role) const
         }
 
         QColor color(isGreen ? Qt::green : Qt::red);
-        color.setAlpha(128);
-        QPixmap pixmap(32,32);
+        color.setAlpha(64);
+        QPixmap pixmap(32, 32);
         pixmap.fill(color);
         return pixmap;
 //        QPainter p(&pixmap);

@@ -28,9 +28,10 @@ ItemStorageTableView::ItemStorageTableView(QWidget *parent /*= 0*/) : QTableView
                   "QTableView::icon:selected { right: 1px; }"
                  );
 
-    setDragDropMode(QAbstractItemView::DragDrop);
-    setDragDropOverwriteMode(false);
-    setDropIndicatorShown(true);
+    // TODO 0.3: uncomment to allow drag & drop
+//    setDragDropMode(QAbstractItemView::DragDrop);
+//    setDragDropOverwriteMode(false);
+//    setDropIndicatorShown(true);
 
     setCornerButtonEnabled(false);
     horizontalHeader()->hide();
@@ -38,8 +39,6 @@ ItemStorageTableView::ItemStorageTableView(QWidget *parent /*= 0*/) : QTableView
 
     _dragLeaveTimer->setInterval(100);
     connect(_dragLeaveTimer, SIGNAL(timeout()), SLOT(checkIfStillDragging()));
-
-//    connect(this, SIGNAL(clicked(const QModelIndex &)), SLOT(itemClicked(const QModelIndex &)));
 }
 
 ItemStorageTableModel *ItemStorageTableView::model() const
@@ -88,7 +87,7 @@ void ItemStorageTableView::dragMoveEvent(QDragMoveEvent *event)
     updateHighlightIndexesForOriginIndex(index);
     viewport()->update();
 
-    if (model()->canStoreItemWithMimeDataAtIndex(event->mimeData(), index))
+    if (index.isValid() && model()->canStoreItemWithMimeDataAtIndex(event->mimeData(), index))
         event->acceptProposedAction();
     else
         event->ignore();
@@ -160,7 +159,7 @@ void ItemStorageTableView::updateHighlightIndexesForOriginIndex(const QModelInde
                 if (anIndex.isValid())
                     highlightIndexes += anIndex;
             }
-    model()->setHighlightIndexes(highlightIndexes);
+    model_->setHighlightIndexes(highlightIndexes);
 }
 
 void ItemStorageTableView::dragStopped()
@@ -168,8 +167,3 @@ void ItemStorageTableView::dragStopped()
     _draggedItem = 0;
     model()->setDragOriginIndex(QModelIndex());
 }
-
-//void ItemStorageTableView::itemClicked(const QModelIndex &index)
-//{
-//    startDrag(Qt::MoveAction);
-//}

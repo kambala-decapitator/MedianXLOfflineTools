@@ -12,11 +12,9 @@
 #define ERROR_BOX_NO_PARENT(message) QMessageBox::critical(0, qApp->applicationName(), message)
 
 // string building
-class QString;
 static const QChar kZeroChar('0');
 static const QString kHtmlLineBreak("<br />");
 QString binaryStringFromNumber(quint64 number, bool needsInversion = false, int fieldWidth = 8);
-QString colorHexString(const QColor &c);
 QString coloredText(const QString &text, int colorIndex);
 
 #include "colorsmanager.hpp"

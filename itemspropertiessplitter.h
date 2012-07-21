@@ -12,6 +12,8 @@ class PropertiesViewerWidget;
 
 class QModelIndex;
 class QMenu;
+class QGroupBox;
+class QPushButton;
 
 class ItemsPropertiesSplitter : public QSplitter
 {
@@ -63,9 +65,12 @@ protected:
 
     PropertiesViewerWidget *_propertiesWidget;
     ItemStorageTableView *_itemsView;
-    ItemStorageTableModel *_itemsModel;
+    QGroupBox *_disenchantBox, *_upgradeBox;
+    QPushButton *_disenchantToCrystalsButton, *_disenchantToSignetsButton;
+    QPushButton *_upgradeGemsButton, *_upgradeRunesButton, *_upgradeBothButton;
     QHash<ItemAction, QAction *> _itemActions;
 
+    ItemStorageTableModel *_itemsModel;
     ItemsList _allItems;
 
     void updateItems(const ItemsList &newItems);

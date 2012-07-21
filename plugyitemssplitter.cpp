@@ -6,6 +6,7 @@
 #include <QHBoxLayout>
 #include <QVBoxLayout>
 #include <QKeyEvent>
+#include <QCheckBox>
 
 #include <qmath.h>
 
@@ -41,9 +42,6 @@ PlugyItemsSplitter::PlugyItemsSplitter(ItemStorageTableView *itemsView, QWidget 
     _pageSpinBox->setValue(1);
     _pageSpinBox->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
 
-    QWidget *w = new QWidget(this);
-    insertWidget(0, w);
-
     QHBoxLayout *hlayout = new QHBoxLayout;
     hlayout->addWidget(_left10Button);
     hlayout->addWidget(_leftButton);
@@ -54,11 +52,18 @@ PlugyItemsSplitter::PlugyItemsSplitter(ItemStorageTableView *itemsView, QWidget 
     hlayout->setSpacing(0);
     hlayout->setContentsMargins(QMargins());
 
-    QVBoxLayout *vlayout = new QVBoxLayout(w);
-    vlayout->addWidget(_itemsView);
-    vlayout->setSpacing(0);
-    vlayout->setContentsMargins(QMargins());
-    vlayout->addLayout(hlayout);
+    _hline = new QFrame(this);
+    _hline->setFrameShape(QFrame::HLine);
+
+    _applyActionToAllPagesCheckbox = new QCheckBox(tr("Apply to all pages"), this);
+    _applyActionToAllPagesCheckbox->setChecked(true);
+
+    QVBoxLayout *vlayout = static_cast<QVBoxLayout *>(widget(0)->layout());
+    vlayout->insertLayout(1, hlayout);
+    vlayout->insertWidget(2, _hline);
+    vlayout->insertWidget(3, _applyActionToAllPagesCheckbox, 0, Qt::AlignCenter);
+//    vlayout->setSpacing(0);
+//    vlayout->setContentsMargins(QMargins());
 
     connect(_pageSpinBox, SIGNAL(valueChanged(double)), SLOT(updateItemsForCurrentPage()));
 

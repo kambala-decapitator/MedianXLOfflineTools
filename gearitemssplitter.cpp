@@ -5,21 +5,23 @@
 #include <QPushButton>
 #include <QHBoxLayout>
 #include <QVBoxLayout>
+#include <QGroupBox>
 
 
 GearItemsSplitter::GearItemsSplitter(ItemStorageTableView *itemsView, QWidget *parent) : ItemsPropertiesSplitter(itemsView, parent), _button1(new QPushButton(this)), _button2(new QPushButton(this)),
     kButtonNames(QStringList() << tr("Character") << tr("Mercenary") << tr("Corpse")), _currentGearButtonNameIndex(CharacterNameIndex)
 {
-    QWidget *w = new QWidget(this);
-    insertWidget(0, w);
-
     QHBoxLayout *hlayout = new QHBoxLayout;
     hlayout->addWidget(_button1);
     hlayout->addWidget(_button2);
 
-    QVBoxLayout *vlayout = new QVBoxLayout(w);
-    vlayout->addWidget(_itemsView);
+    QVBoxLayout *vlayout = static_cast<QVBoxLayout *>(widget(0)->layout());
+    vlayout->removeWidget(_disenchantBox);
+    vlayout->removeWidget(_upgradeBox);
     vlayout->addLayout(hlayout);
+
+    delete _disenchantBox;
+    delete _upgradeBox;
 
     connect(_button1, SIGNAL(clicked()), SLOT(changeGear()));
     connect(_button2, SIGNAL(clicked()), SLOT(changeGear()));

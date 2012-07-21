@@ -30,7 +30,6 @@ protected:
     virtual void dropEvent(QDropEvent *event);
 
 private slots:
-//    void itemClicked(const QModelIndex &index);
     void checkIfStillDragging();
 
 private:

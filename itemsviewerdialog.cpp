@@ -41,7 +41,7 @@ ItemsViewerDialog::ItemsViewerDialog(const QHash<int, bool> &plugyStashesExisten
             splitter = new ItemsPropertiesSplitter(new ItemStorageTableView(this), this);
         else
             splitter = new PlugyItemsSplitter(new ItemStorageTableView(this), this);
-        splitter->setModel(new ItemStorageTableModel(kRows.at(i), i == GearIndex ? 8 : 10, splitter));
+        splitter->setModel(new ItemStorageTableModel(i == InventoryIndex && isUltimative5OrLater() ? 8 : kRows.at(i), i == GearIndex ? 8 : 10, splitter));
         _tabWidget->addTab(splitter, tabNameAtIndex(i));
 
         connect(splitter, SIGNAL(itemCountChanged(int)), SLOT(itemCountChangedInCurrentTab(int)));

@@ -9,13 +9,13 @@ use File::Path qw/make_path/;
 # use Data::Dumper;
 
 my $locale = $ARGV[0] // 'en', my $tbl;
-&readTbl($_) for ('string', 'expansionstring', 'patchstring');
+&readTbl($_) for ('string', 'expansionstring', 'patchstring'); # do not change order of the files!
 
 sub readTbl
 {
     my $filename = shift;
     open my $tmpfile, "<", "tbl/$locale/${filename}.txt";
-    for (<$tmpfile>) { $tbl->{$1} = $2 if /\"([^\"]+)\"\t\"([^\"]*)\"$/ }
+    for (<$tmpfile>) { $tbl->{$1} = $2 if /\"(.+?)\"\t\"(.*)\"$/ }
     close $tmpfile;
 }
 
@@ -75,7 +75,7 @@ sub statIdsFromPropertyStat
 {
     (my $property, my $getAllStats) = @_;
     $getAllStats = 1 unless defined $getAllStats;
-    
+
     my $propsStat = undef;
     # handle special cases
     if ($property =~ /^dmg\-(max|min)$/) { $propsStat = $1."damage" }
@@ -85,7 +85,7 @@ sub statIdsFromPropertyStat
         for (0..scalar @$itemProperties) { return $_ if $itemProperties->[$_]->{stat} eq $propsStat };
         return undef;
     }
-    
+
     my @ids;
     for my $statKey (sort keys %propertiesStatsHash)
     {
@@ -138,7 +138,7 @@ my %classes = (ama => 0, sor => 1, nec => 2, pal => 3, bar => 4, dru => 5, ass =
 foreach my $elem (@$skills)
 {
     $index++;
-    
+
     $processedSkills->[$index]->{iname1} = $elem->{dbgname};
     $processedSkills->[$index]->{class} = defined $elem->{class} ? $classes{$elem->{class}} : -1;
     next unless defined $elem->{internalName};
@@ -172,7 +172,7 @@ for my $miscItem (keys %$miscTypes)
     my $hashRef = $miscTypes->{$miscItem};
     # no UMO support because there's no simple way to determine if it has been cubed with item (it doesn't have 'x_signet*' stat)
     next unless defined $hashRef->{type} and $hashRef->{type} eq 'asaa';
-    
+
     my $cubeMo = $cubemain->{$miscItem};
     for (0..scalar @$itemProperties)
     {
@@ -244,10 +244,10 @@ for my $ref ($armorTypes, $weaponTypes, $miscTypes)
     {
         my $hashRef = $ref->{$itemCode};
         next unless defined $hashRef->{w};
-        
+
         my $type = $hashRef->{type};
         printf $out "%s\t%s\t%s\t%d\t%d\t%s\t%d\t%d\t%s\t%s\t", $itemCode, $hashRef->{$itemName}, ($hashRef->{$spellDescStr} // ''), $hashRef->{w}, $hashRef->{h}, $itemType, ($hashRef->{stackable} // 0), ($hashRef->{rlvl} // 0), $hashRef->{image}, $type;
-        
+
         for my $itemName (keys %$itemTypes) # find which class it belongs to
         {
             $hashRef = $itemTypes->{$itemName};
@@ -368,7 +368,7 @@ for my $gemCode (keys %$gems)
                 $i += 2; # skip param and value
                 next;
             }
-            
+
             $value = &statIdsFromPropertyStat($value);
         }
         print $out "\t".($value // '');
@@ -414,7 +414,7 @@ sub saveStructure
     my $name = shift;
     my $lineLen = shift;
     $lineLen = 80 unless defined $lineLen;
-    
+
     my @tmp = split(/\n/, Dumper($parsed));
     my $output = "";
     my $line = "";
@@ -440,7 +440,7 @@ sub saveStructure
             $output.=$line."\n";
             $line = $elem;
         }
-        else 
+        else
         {
             $line.=$elem;
         }
@@ -462,7 +462,7 @@ sub parsetxt
     $fname = "txt/$fname";
     open my $fh, "<", $fname or return undef;
     my $parsed;
-    
+
     my $count = -1;
     my $firstLine = 1;
     foreach my $line (<$fh>)
@@ -489,7 +489,7 @@ sub parsetxt
                     _log ("BAD - !$key");
                 }
             }
-            
+
             #print "line[$count]:ok=$ok -> ";
             if ($ok == 1)
             {
@@ -510,7 +510,7 @@ sub parsetxt
                         $ok = 0 unless defined $indexValue;
                         _log ("BAD2 - indexValue for $key") unless $ok;
                     }
-                }    
+                }
                 my $addOnce = 0;
                 foreach my $key(keys %structure)
                 {
@@ -522,7 +522,7 @@ sub parsetxt
                         _log ("BAD3 - subhash for $key=$structure{$key}") unless $ok;
                     }
                 }
-                
+
                 # add the record
                 if ($ok == 1)
                 {
@@ -565,7 +565,7 @@ sub parsetxt
     }
     close $fh;
     return $parsed;
-}    
+}
 
 sub trim($)
 {

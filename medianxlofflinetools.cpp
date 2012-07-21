@@ -51,7 +51,7 @@
 //#define MAKE_HC
 //#define ENABLE_PERSONALIZE
 //#define MAKE_FINISHED_CHARACTER
-#define DISABLE_CRC_CHECK
+//#define DISABLE_CRC_CHECK
 
 
 // static const

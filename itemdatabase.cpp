@@ -231,7 +231,7 @@ QHash<uint, UniqueItemInfo> *ItemDataBase::Uniques()
 
             UniqueItemInfo item;
             item.name = QString::fromUtf8(data.at(1));
-            item.rlvl = data.at(2).toUShort();
+            item.rlvl = data.size() > 2 ? data.at(2).toUShort() : 0;
             allUniques[data.at(0).toUInt()] = item;
         }
         f.remove();

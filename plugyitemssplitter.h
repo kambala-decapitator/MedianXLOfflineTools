@@ -7,6 +7,7 @@
 class QPushButton;
 class QDoubleSpinBox;
 class QKeySequence;
+class QCheckBox;
 
 class PlugyItemsSplitter : public ItemsPropertiesSplitter
 {
@@ -46,6 +47,8 @@ private slots:
 private:
     QPushButton *_left10Button, *_leftButton, *_rightButton, *_right10Button;
     QDoubleSpinBox *_pageSpinBox;
+    QFrame *_hline;
+    QCheckBox *_applyActionToAllPagesCheckbox;
 
     quint32 _lastNotEmptyPage;
     bool _isShiftPressed;

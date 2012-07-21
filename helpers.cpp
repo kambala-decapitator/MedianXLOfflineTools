@@ -35,14 +35,9 @@ QString binaryStringFromNumber(quint64 number, bool needsInversion, int fieldWid
     return binaryString;
 }
 
-QString colorHexString(const QColor &c)
-{
-    return c.name();//QString("#%1%2%3").arg(c.red(), 2, 16, kZeroChar).arg(c.green(), 2, 16, kZeroChar).arg(c.blue(), 2, 16, kZeroChar);
-}
-
 QString coloredText(const QString &text, int colorIndex)
 {
-    return QString("<font color = \"%1\">%2</font>").arg(colorHexString(ColorsManager::colors().at(colorIndex)), text);
+    return QString("<font color = \"%1\">%2</font>").arg(ColorsManager::colors().at(colorIndex).name(), text);
 }
 
 bool colorStringsIndecesLessThan(const QPair<int, int> &a, const QPair<int, int> &b)
@@ -61,11 +56,10 @@ QString htmlStringFromDiabloColorString(const QString &name, ColorsManager::Colo
     for (int i = 0; i < ColorsManager::colors().size(); ++i)
     {
         QString colorString = ColorsManager::colorStrings().at(i);
-        int occurencesCount = text.count(colorString), position = 0, length = colorString.length();
-        for (int j = 0; j < occurencesCount; ++j, position += length)
+        for (int j = 0, n = text.count(colorString), pos = 0; j < n; ++j, pos += colorString.length())
         {
-            position = text.indexOf(colorString, position);
-            colorStringsIndeces += qMakePair(i, position);
+            pos = text.indexOf(colorString, pos);
+            colorStringsIndeces += qMakePair(i, pos);
         }
     }
 
@@ -80,8 +74,8 @@ QString htmlStringFromDiabloColorString(const QString &name, ColorsManager::Colo
     for (int i = 0; i < colorsNumberInString; ++i)
     {
         int index = colorStringsIndeces.at(i).first;
-        int position = colorStringsIndeces.at(i).second + ColorsManager::colorStrings().at(index).length(); // skip colorString
-        QString coloredText_ = text.mid(position, i != colorsNumberInString - 1 ? colorStringsIndeces.at(i + 1).second - position : -1);
+        int pos = colorStringsIndeces.at(i).second + ColorsManager::colorStrings().at(index).length(); // skip colorString
+        QString coloredText_ = text.mid(pos, i != colorsNumberInString - 1 ? colorStringsIndeces.at(i + 1).second - pos : -1);
 
         QStringList lines = coloredText_.split(kHtmlLineBreak);
         QString reversedLines;

@@ -13,7 +13,7 @@ void QD2CharRenamer::updateNamePreview(QTextEdit *previewTextEdit, const QString
 {
     QString htmlName = QString("<html><body bgcolor=\"black\"><font color = \"#ffffff\">%1</font></body></html>").arg(name); // white by default
     for (int i = 0; i < ColorsManager::correctColorsNum(); i++) // replace color codes with their hex values for HTML
-        htmlName.replace(QString("%1%2").arg(ColorsManager::unicodeColorHeader()).arg(ColorsManager::colorCodes().at(i)), QString("</font><font color = \"%1\">").arg(colorHexString(ColorsManager::colors().at(i))));
+        htmlName.replace(QString("%1%2").arg(ColorsManager::unicodeColorHeader()).arg(ColorsManager::colorCodes().at(i)), QString("</font><font color = \"%1\">").arg(ColorsManager::colors().at(i).name()));
     previewTextEdit->setHtml(htmlName);
     previewTextEdit->setStatusTip(name);
 }

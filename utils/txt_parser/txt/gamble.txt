@@ -1321,3 +1321,39 @@ Warp Blade (Grade 3)	!1!
 Warp Blade (Grade 4)	!2!
 Warp Blade (Grade 5)	!3!
 Warp Blade (Grade 6)	!4!
+jewel1	jew
+jewel2	jew
+jewel3	jew
+jewel4	jew
+jewel5	jew
+jewel6	jew
+jewel7	jew
+jewel8	jew
+jewel9	jew
+jewel10	jew
+jewel11	jew
+jewel12	jew
+jewel13	jew
+jewel14	jew
+jewel15	jew
+jewel16	jew
+jewel17	jew
+jewel18	jew
+jewel19	jew
+jewel20	jew
+jewel21	jew
+jewel22	jew
+jewel23	jew
+jewel24	jew
+jewel25	jew
+jewel26	jew
+jewel27	jew
+jewel28	jew
+jewel29	jew
+jewel30	jew
+jewel31	jew
+jewel32	jew
+jewel33	jew
+jewel34	jew
+jewel35	jew
+jewel36	jew
