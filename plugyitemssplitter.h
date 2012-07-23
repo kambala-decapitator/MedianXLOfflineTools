@@ -4,10 +4,8 @@
 #include "itemspropertiessplitter.h"
 
 
-class QPushButton;
 class QDoubleSpinBox;
 class QKeySequence;
-class QCheckBox;
 
 class PlugyItemsSplitter : public ItemsPropertiesSplitter
 {
@@ -44,6 +42,8 @@ private slots:
     void left10Clicked();
     void right10Clicked();
 
+    void applyActionToAllPagesChanged();
+
 private:
     QPushButton *_left10Button, *_leftButton, *_rightButton, *_right10Button;
     QDoubleSpinBox *_pageSpinBox;
@@ -52,6 +52,7 @@ private:
 
     quint32 _lastNotEmptyPage;
     bool _isShiftPressed;
+    ItemsList _pagedItems;
 
     void emulateShiftAndInvokeMethod(void (PlugyItemsSplitter::*method)(void)) { _isShiftPressed = true; (this->*method)(); _isShiftPressed = false; }
     bool keyEventHasShift(QKeyEvent *keyEvent);

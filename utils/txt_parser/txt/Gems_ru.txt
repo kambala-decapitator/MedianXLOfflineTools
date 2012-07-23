@@ -36,8 +36,8 @@ Flawless Skull		2	skl	3	dmg%		13	13	hp/paragon	32	32	32					ac%		13	13	hp/parago
 Perfect Skull		2	skz	3	dmg%		15	15	hp/paragon	32	32	32					ac%		15	15	hp/paragon	32	32	32					res-pois-len		5	5	hp/paragon	32	32	32				0
 Expansion																																								0
 El Rune	Эл	18	r01	2	light		1	1	ac/runemaster	32	32	32					light		1	1	ac/runemaster	32	32	32					light		1	1	ac/runemaster	32	32	32				0
-Eld Rune	Элd	18	r02	2	att%		25	25	ac/runemaster	32	32	32					att%		25	25	ac/runemaster	32	32	32					att%		25	25	ac/runemaster	32	32	32				0
-Tir Rune	Тиp	18	r03	2	gold%		75	75	ac/runemaster	32	32	32					gold%		50	50	ac/runemaster	32	32	32					gold%		50	50	ac/runemaster	32	32	32				0
+Eld Rune	Эlд	18	r02	2	att%		25	25	ac/runemaster	32	32	32					att%		25	25	ac/runemaster	32	32	32					att%		25	25	ac/runemaster	32	32	32				0
+Tir Rune	Tир	18	r03	2	gold%		75	75	ac/runemaster	32	32	32					gold%		50	50	ac/runemaster	32	32	32					gold%		50	50	ac/runemaster	32	32	32				0
 Nef Rune	Heф	18	r04	2	poison-dur		15	15	ac/runemaster	32	32	32					poison-dur		10	10	ac/runemaster	32	32	32					poison-dur		10	10	ac/runemaster	32	32	32				0
 Eth Rune	Эт	18	r05	2	dmg-max		10	10	ac/runemaster	32	32	32					dmg-max		5	5	ac/runemaster	32	32	32					dmg-max		5	5	ac/runemaster	32	32	32				0
 Ith Rune	Ит	18	r06	2	dmg%		15	15	ac/runemaster	32	32	32					ac%		15	15	ac/runemaster	32	32	32					ac%		15	15	ac/runemaster	32	32	32				0
@@ -46,45 +46,45 @@ Ral Rune	Paл	18	r08	2	extra-fire		5	5	ac/runemaster	32	32	32					extra-fire		5	
 Ort Rune	Opт	18	r09	2	extra-ltng		5	5	ac/runemaster	32	32	32					extra-ltng		5	5	ac/runemaster	32	32	32					extra-ltng		5	5	ac/runemaster	32	32	32				0
 Thul Rune	Tул	18	r10	2	extra-cold		5	5	ac/runemaster	32	32	32					extra-cold		5	5	ac/runemaster	32	32	32					extra-cold		5	5	ac/runemaster	32	32	32				0
 Amn Rune	Aмн	18	r11	2	thorns%		25	25	ac/runemaster	32	32	32					thorns%		25	25	ac/runemaster	32	32	32					thorns%		25	25	ac/runemaster	32	32	32				0
-Sol Rune	Сoл	18	r12	2	extra-pois		5	5	ac/runemaster	32	32	32					extra-pois		5	5	ac/runemaster	32	32	32					extra-pois		5	5	ac/runemaster	32	32	32				0
-Shael Rune	Шael	18	r13	2	str		10	10	ac/runemaster	32	32	32					str		10	10	ac/runemaster	32	32	32					str		10	10	ac/runemaster	32	32	32				0
+Sol Rune	Coл	18	r12	2	extra-pois		5	5	ac/runemaster	32	32	32					extra-pois		5	5	ac/runemaster	32	32	32					extra-pois		5	5	ac/runemaster	32	32	32				0
+Shael Rune	Шaэ	18	r13	2	str		10	10	ac/runemaster	32	32	32					str		10	10	ac/runemaster	32	32	32					str		10	10	ac/runemaster	32	32	32				0
 Dol Rune	Дoл	18	r14	2	dmg-min		10	10	ac/runemaster	32	32	32					dmg-min		5	5	ac/runemaster	32	32	32					dmg-min		5	5	ac/runemaster	32	32	32				0
 Hel Rune	Xeл	18	r15	2	extra-pm		5	5	ac/runemaster	32	32	32					extra-pm		5	5	ac/runemaster	32	32	32					extra-pm		5	5	ac/runemaster	32	32	32				0
-Io Rune	Иo	18	r16	2	dex%		5	5	ac/runemaster	32	32	32					dex%		5	5	ac/runemaster	32	32	32					dex%		5	5	ac/runemaster	32	32	32				0
+Io Rune	Ио	18	r16	2	dex%		5	5	ac/runemaster	32	32	32					dex%		5	5	ac/runemaster	32	32	32					dex%		5	5	ac/runemaster	32	32	32				0
 Lum Rune	Люm	18	r17	2	mag%		20	20	ac/runemaster	32	32	32					mag%		20	20	ac/runemaster	32	32	32					mag%		20	20	ac/runemaster	32	32	32				0
-Ko Rune	Ko	18	r18	2	str%		5	5	ac/runemaster	32	32	32					str%		5	5	ac/runemaster	32	32	32					str%		5	5	ac/runemaster	32	32	32				0
+Ko Rune	Ко	18	r18	2	str%		5	5	ac/runemaster	32	32	32					str%		5	5	ac/runemaster	32	32	32					str%		5	5	ac/runemaster	32	32	32				0
 Fal Rune	Фaл	18	r19	2	dex		10	10	ac/runemaster	32	32	32					dex		10	10	ac/runemaster	32	32	32					dex		10	10	ac/runemaster	32	32	32				0
-Lem Rune	Лem	18	r20	2	addxp		2	2	ac/runemaster	32	32	32					addxp		2	2	ac/runemaster	32	32	32					addxp		2	2	ac/runemaster	32	32	32				0
+Lem Rune	Лeм	18	r20	2	addxp		2	2	ac/runemaster	32	32	32					addxp		2	2	ac/runemaster	32	32	32					addxp		2	2	ac/runemaster	32	32	32				0
 Pul Rune	Пyл	18	r21	2	res-fire		40	40	ac/runemaster	32	32	32					res-fire		30	30	ac/runemaster	32	32	32					res-fire		30	30	ac/runemaster	32	32	32				0
 Um Rune	Ум	18	r22	2	enr%		5	5	ac/runemaster	32	32	32					enr%		5	5	ac/runemaster	32	32	32					enr%		5	5	ac/runemaster	32	32	32				0
 Mal Rune	Maл	18	r23	2	res-pois		40	40	ac/runemaster	32	32	32					res-pois		30	30	ac/runemaster	32	32	32					res-pois		30	30	ac/runemaster	32	32	32				0
 Ist Rune	Иcт	18	r24	2	enr		10	10	ac/runemaster	32	32	32					enr		10	10	ac/runemaster	32	32	32					enr		10	10	ac/runemaster	32	32	32				0
 Gul Rune	Гyл	18	r25	2	res-cold		40	40	ac/runemaster	32	32	32					res-cold		30	30	ac/runemaster	32	32	32					res-cold		30	30	ac/runemaster	32	32	32				0
 Vex Rune	Beкc	18	r26	2	half-freeze		1	1	ac/runemaster	32	32	32					half-freeze		1	1	ac/runemaster	32	32	32					half-freeze		1	1	ac/runemaster	32	32	32				0
-Ohm Rune	Oм	18	r27	2	vit%		5	5	ac/runemaster	32	32	32					vit%		5	5	ac/runemaster	32	32	32					vit%		5	5	ac/runemaster	32	32	32				0
-Lo Rune	Лo	18	r28	2	res-ltng		40	40	ac/runemaster	32	32	32					res-ltng		30	30	ac/runemaster	32	32	32					res-ltng		30	30	ac/runemaster	32	32	32				0
+Ohm Rune	Ом	18	r27	2	vit%		5	5	ac/runemaster	32	32	32					vit%		5	5	ac/runemaster	32	32	32					vit%		5	5	ac/runemaster	32	32	32				0
+Lo Rune	Ло	18	r28	2	res-ltng		40	40	ac/runemaster	32	32	32					res-ltng		30	30	ac/runemaster	32	32	32					res-ltng		30	30	ac/runemaster	32	32	32				0
 Sur Rune	Cуp	18	r29	2	craft-points		25	25	ac/runemaster	32	32	32					craft-points		25	25	ac/runemaster	32	32	32					craft-points		25	25	ac/runemaster	32	32	32				0
 Ber Rune	Бep	18	r30	2	uninterrupt		10	10	ac/runemaster	32	32	32					uninterrupt		5	5	ac/runemaster	32	32	32					uninterrupt		5	5	ac/runemaster	32	32	32				0
 Jah Rune	Джa	18	r31	2	dmg%		25	25	ac/runemaster	32	32	32					ac%		25	25	ac/runemaster	32	32	32					ac%		25	25	ac/runemaster	32	32	32				0
 Cham Rune	Чaм	18	r32	2	vit		10	10	ac/runemaster	32	32	32					vit		10	10	ac/runemaster	32	32	32					vit		10	10	ac/runemaster	32	32	32				0
 Zod Rune	Зoд	18	r33	2	slow-melee		5	5	ac/runemaster	32	32	32					slow-thorns		5	5	ac/runemaster	32	32	32					slow-thorns		5	5	ac/runemaster	32	32	32				0
-Sha Rune	Шa	18	r34	2	swing3		15	15	ac/runemaster	32	32	32					swing3		15	15	ac/runemaster	32	32	32					swing3		15	15	ac/runemaster	32	32	32				0
-Lah Rune	Лaх	18	r35	2	all-stats%		3	3	ac/runemaster	32	32	32					all-stats%		3	3	ac/runemaster	32	32	32					all-stats%		3	3	ac/runemaster	32	32	32				0
-Kur Rune	Kур	18	r36	2	move3		15	15	ac/runemaster	32	32	32					move3		15	15	ac/runemaster	32	32	32					move3		15	15	ac/runemaster	32	32	32				0
+Sha Rune	Ша	18	r34	2	swing3		15	15	ac/runemaster	32	32	32					swing3		15	15	ac/runemaster	32	32	32					swing3		15	15	ac/runemaster	32	32	32				0
+Lah Rune	Ла	18	r35	2	all-stats%		3	3	ac/runemaster	32	32	32					all-stats%		3	3	ac/runemaster	32	32	32					all-stats%		3	3	ac/runemaster	32	32	32				0
+Kur Rune	Куp	18	r36	2	move3		15	15	ac/runemaster	32	32	32					move3		15	15	ac/runemaster	32	32	32					move3		15	15	ac/runemaster	32	32	32				0
 Ix Rune	Икc	18	r37	2	cast3		15	15	ac/runemaster	32	32	32					cast3		15	15	ac/runemaster	32	32	32					cast3		15	15	ac/runemaster	32	32	32				0
-Thur Rune	Tур	18	r38	2	att%-minion		50	50	ac/runemaster	32	32	32					att%-minion		50	50	ac/runemaster	32	32	32					att%-minion		50	50	ac/runemaster	32	32	32				0
-Nas Rune	Нaс	18	r39	2	hp-minion		10	10	ac/runemaster	32	32	32					hp-minion		10	10	ac/runemaster	32	32	32					hp-minion		10	10	ac/runemaster	32	32	32				0
-Ath Rune	Aт	18	r40	2	balance3		15	15	ac/runemaster	32	32	32					balance3		15	15	ac/runemaster	32	32	32					balance3		15	15	ac/runemaster	32	32	32				0
-Kra Rune	Kрa	18	r41	2	res-all-minion		5	5	ac/runemaster	32	32	32					res-all-minion		5	5	ac/runemaster	32	32	32					res-all-minion		5	5	ac/runemaster	32	32	32				0
+Thur Rune	Tуp	18	r38	2	att%-minion		50	50	ac/runemaster	32	32	32					att%-minion		50	50	ac/runemaster	32	32	32					att%-minion		50	50	ac/runemaster	32	32	32				0
+Nas Rune	Hac	18	r39	2	hp-minion		10	10	ac/runemaster	32	32	32					hp-minion		10	10	ac/runemaster	32	32	32					hp-minion		10	10	ac/runemaster	32	32	32				0
+Ath Rune	Ат	18	r40	2	balance3		15	15	ac/runemaster	32	32	32					balance3		15	15	ac/runemaster	32	32	32					balance3		15	15	ac/runemaster	32	32	32				0
+Kra Rune	Kpa	18	r41	2	res-all-minion		5	5	ac/runemaster	32	32	32					res-all-minion		5	5	ac/runemaster	32	32	32					res-all-minion		5	5	ac/runemaster	32	32	32				0
 Vith Rune	Bит	18	r42	2	pot-rate		5	5	ac/runemaster	32	32	32					pot-rate		5	5	ac/runemaster	32	32	32					pot-rate		5	5	ac/runemaster	32	32	32				0
-No Rune	Нo	18	r43	2	block3		15	15	ac/runemaster	32	32	32					block3		15	15	ac/runemaster	32	32	32					block3		15	15	ac/runemaster	32	32	32				0
+No Rune	Но	18	r43	2	block3		15	15	ac/runemaster	32	32	32					block3		15	15	ac/runemaster	32	32	32					block3		15	15	ac/runemaster	32	32	32				0
 Yul Rune	Юл	18	r44	2	dmg-minion		10	10	ac/runemaster	32	32	32					dmg-minion		10	10	ac/runemaster	32	32	32					dmg-minion		10	10	ac/runemaster	32	32	32				0
 Thai Rune	Taи	18	r45	2	res-all		15	15	ac/runemaster	32	32	32					res-all		15	15	ac/runemaster	32	32	32					res-all		15	15	ac/runemaster	32	32	32				0
-Rha Rune	Рa	18	r46	2	ac		200	200	ac/runemaster	32	32	32					ac		200	200	ac/runemaster	32	32	32					ac		200	200	ac/runemaster	32	32	32				0
+Rha Rune	Ра	18	r46	2	ac		200	200	ac/runemaster	32	32	32					ac		200	200	ac/runemaster	32	32	32					ac		200	200	ac/runemaster	32	32	32				0
 Xar Rune	Kcap	18	r47	2	hp%-mp%		2	2	ac/runemaster	32	32	32					hp%-mp%		2	2	ac/runemaster	32	32	32					hp%-mp%		2	2	ac/runemaster	32	32	32				0
 Nih Rune	Hиx	18	r48	2	skill-dur		10	10	ac/runemaster	32	32	32					skill-dur		10	10	ac/runemaster	32	32	32					skill-dur		10	10	ac/runemaster	32	32	32				0
 Lai Rune	Лaи	18	r49	2	dmg-global		5	5	ac/runemaster	32	32	32					dmg-global		5	5	ac/runemaster	32	32	32					dmg-global		5	5	ac/runemaster	32	32	32				0
-On Rune	Oн	18	r50	2	ac-global		5	5	ac/runemaster	32	32	32					ac-global		5	5	ac/runemaster	32	32	32					ac-global		5	5	ac/runemaster	32	32	32				0
+On Rune	Он	18	r50	2	ac-global		5	5	ac/runemaster	32	32	32					ac-global		5	5	ac/runemaster	32	32	32					ac-global		5	5	ac/runemaster	32	32	32				0
 Taha Rune	Taxa	18	r51	2	dmg-max		40	40	ac/runemaster	32	32	32					dmg-max		20	20	ac/runemaster	32	32	32					dmg-max		20	20	ac/runemaster	32	32	32				0
 Ghal Rune	Гaл	18	r52	2	enr-factor		15	15	ac/runemaster	32	32	32					enr-factor		5	5	ac/runemaster	32	32	32					enr-factor		5	5	ac/runemaster	32	32	32				0
 Qor Rune	Kуop	18	r53	2	ease		-12	-12	ac/runemaster	32	32	32					ease		-12	-12	ac/runemaster	32	32	32					ease		-12	-12	ac/runemaster	32	32	32				0
@@ -116,10 +116,10 @@ Perfect Amber		19	5$e	3	reanimate	800	5	5	hp/paragon	32	32	32					res-ltng		20	2
 Krys Rune	Kpиc	18	r54	2	att-damage		100	100	ac/runemaster	32	32	32					att-damage		25	25	ac/runemaster	32	32	32					att-damage		25	25	ac/runemaster	32	32	32				0
 Auhe Rune	Aуxe	18	r55	2	regen-mana		15	15	ac/runemaster	32	32	32					regen-mana		5	5	ac/runemaster	32	32	32					regen-mana		5	5	ac/runemaster	32	32	32				0
 Sha'ad Rune	Шaad	18	r56	2	dmg%		30	30	ac/runemaster	32	32	32					ac%		30	30	ac/runemaster	32	32	32					ac%		30	30	ac/runemaster	32	32	32				0
-Fire Rune	Oгo	18	r57	2																																				0
-Phys Rune	Зeм	18	r58	2																																				0
-Magic Rune	Maг	18	r59	2																																				0
-Pois Rune	Йaд	18	r60	2																																				0
-Ltng Rune	Moл	18	r61	2																																				0
-Cold Rune	Хoл	18	r62	2																																				0
-Ultra Rune	Yль	18	r98	2																																				0
+Fire Rune	Oгo	18	r57	2	dmg-fire		100	200									dmg-fire		50	100									dmg-fire		50	100								0
+Phys Rune	Зem	18	r58	2	dmg-norm		10	20									dmg-norm		5	10									dmg-norm		5	10								0
+Magic Rune	Maг	18	r59	2	dmg-mag		100	200									dmg-mag		50	100									dmg-mag		50	100								0
+Pois Rune	Йaд	18	r60	2	dmg-pois	25	2050	4100									dmg-pois	25	1025	2050									dmg-pois	25	1025	2050								0
+Ltng Rune	Moл	18	r61	2	dmg-ltng		100	200									dmg-ltng		50	100									dmg-ltng		50	100								0
+Cold Rune	Xoл	18	r62	2	dmg-cold		100	200									dmg-cold		50	100									dmg-cold		50	100								0
+Ultra Rune	Yль	18	r98	2	dmg%		50	50									ac%		50	50									ac%		50	50								0

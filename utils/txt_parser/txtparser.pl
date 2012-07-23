@@ -25,7 +25,13 @@ sub tblExpandArray
     (my $itemProperties, my $field, my $newFieldName) = @_;
     $newFieldName = $realNameField unless defined $newFieldName;
     $field = "tbl" unless defined $field;
-    for (@$itemProperties) { $_->{$newFieldName} = $tbl->{$_->{$field}} // $_->{$field} if defined $_->{$field} }
+    for (@$itemProperties)
+    {
+        $_->{$newFieldName} = $tbl->{$_->{$field}} // $_->{$field} if defined $_->{$field};
+        next unless defined $_->{$newFieldName};
+        $_->{$newFieldName} =~ s/\</&lt;/g;
+        $_->{$newFieldName} =~ s/\>/&gt;/g;
+    }
 }
 
 my ($nameStr, $spellDescStr) = qw/namestr spelldescstr/;
@@ -46,12 +52,12 @@ my %propertiesStatsHash; $propertiesStatsHash{"stat".($_ + 1)} = 6 + $_ * 4 for 
 my $properties = parsetxt("properties.txt", "#code"=>"0", %propertiesStatsHash, '!_enabled' => {col => 1, val => $zeroRe});
 
 my $descArrayRef = [
-{key => "descstrpos", col => 43, expanded => "descPositive"},
-{key => "descstrneg", col => 44, expanded => "descNegative"},
-{key => "descstr2",   col => 45, expanded => "descStringAdd"},
-{key => "dgrpstrpos", col => 49, expanded => "descGroupPositive"},
-{key => "dgrpstrneg", col => 50, expanded => "descGroupNegative"},
-{key => "dgrpstr2",   col => 51, expanded => "descGroupStringAdd"}
+    {key => "descstrpos", col => 43, expanded => "descPositive"},
+    {key => "descstrneg", col => 44, expanded => "descNegative"},
+    {key => "descstr2",   col => 45, expanded => "descStringAdd"},
+    {key => "dgrpstrpos", col => 49, expanded => "descGroupPositive"},
+    {key => "dgrpstrneg", col => 50, expanded => "descGroupNegative"},
+    {key => "dgrpstr2",   col => 51, expanded => "descGroupStringAdd"},
 ];
 my %propertiesHash = ("stat"=>"0", bitsSave=>10, "bits"=>"22", "add"=>"23", "saveParamBits"=>"24", descpriority=>40, descfunc=>41, descval=>42, dgrp=>46, dgrpfunc=>47, dgrpval=>48); $propertiesHash{$_->{key}} = $_->{col} for (@$descArrayRef);
 my $itemProperties = parsetxt("itemstatcost.txt", _index=>"1", %propertiesHash);

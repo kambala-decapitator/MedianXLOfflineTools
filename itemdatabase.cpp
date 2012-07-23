@@ -629,3 +629,20 @@ bool ItemDataBase::isCube(ItemInfo *item)
 {
     return item->itemType == "box";
 }
+
+bool ItemDataBase::canDisenchantIntoArcaneShards(ItemInfo *item)
+{
+    // Ultimative prohibits disenchanting TUs from the Gift Box into shards
+    return canDisenchant(item) && !(isUltimative() && item->props.contains(Enums::ItemProperties::ItemDuped));
+}
+
+bool ItemDataBase::canDisenchantIntoSignetOfLearning(ItemInfo *item)
+{
+    // Ultimative prohibits disenchanting TUs into signets
+    return canDisenchant(item) && !(isUltimative() && item->quality == Enums::ItemQuality::Unique && Items()->operator[](item->itemType).genericType != Enums::ItemTypeGeneric::Misc && !isSacred(item));
+}
+
+bool ItemDataBase::canDisenchant(ItemInfo *item)
+{
+    return item && item->location != Enums::ItemLocation::Equipped && (item->quality == Enums::ItemQuality::Set || (item->quality == Enums::ItemQuality::Unique && !isUberCharm(item) && Uniques()->contains(item->setOrUniqueId)));
+}

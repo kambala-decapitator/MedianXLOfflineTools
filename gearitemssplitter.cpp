@@ -8,7 +8,7 @@
 #include <QGroupBox>
 
 
-GearItemsSplitter::GearItemsSplitter(ItemStorageTableView *itemsView, QWidget *parent) : ItemsPropertiesSplitter(itemsView, parent), _button1(new QPushButton(this)), _button2(new QPushButton(this)),
+GearItemsSplitter::GearItemsSplitter(ItemStorageTableView *itemsView, QWidget *parent) : ItemsPropertiesSplitter(itemsView, parent, false), _button1(new QPushButton(this)), _button2(new QPushButton(this)),
     kButtonNames(QStringList() << tr("Character") << tr("Mercenary") << tr("Corpse")), _currentGearButtonNameIndex(CharacterNameIndex)
 {
     QHBoxLayout *hlayout = new QHBoxLayout;
@@ -16,12 +16,7 @@ GearItemsSplitter::GearItemsSplitter(ItemStorageTableView *itemsView, QWidget *p
     hlayout->addWidget(_button2);
 
     QVBoxLayout *vlayout = static_cast<QVBoxLayout *>(widget(0)->layout());
-    vlayout->removeWidget(_disenchantBox);
-    vlayout->removeWidget(_upgradeBox);
     vlayout->addLayout(hlayout);
-
-    delete _disenchantBox;
-    delete _upgradeBox;
 
     connect(_button1, SIGNAL(clicked()), SLOT(changeGear()));
     connect(_button2, SIGNAL(clicked()), SLOT(changeGear()));

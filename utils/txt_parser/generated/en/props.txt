@@ -367,7 +367,7 @@
 424	2	2						Trial of Blood completed!	Trial of Blood completed!		3	16	0					black_4
 425	2	2						Trial of Contrition completed!	Trial of Contrition completed!		3	18	0					black_5
 426	2	2						\orange;Well Done!\red;	\yellow;You have reached the gambling limit. Please reset your Trader's Chest!\blue;		3	1	0					black_6
-427	2	2						\orange;Congratulations!\blue;	\red;>> Do not use at level 120 <<\blue;		3	1	0					black_7
+427	2	2						\orange;Congratulations!\blue;	\red;&gt;&gt; Do not use at level 120 &lt;&lt;\blue;		3	1	0					black_7
 429	0	8						Damage Reduction to Pact of Blood	Damage Reduction to Pact of Blood		4	18	1					passive_rejuv_dr
 430	0	8						to All Skills when using an Apple	to All Skills when using an Apple		1	50	1					skill_paganheart_synergy
 431	50	9						Bonus to Poison Skill Duration	Bonus to Poison Skill Duration		4	149	1					skill_poison_dur
@@ -425,4 +425,4 @@
 505	0	10						Drain Life	Replenish Life	(Based on Character Level)	6	60	2					item_hpregen_perlevel
 506	0	1						\red;Superbeast Morph\blue;	\red;Superbeast Morph\blue;		3	159	0					desc-superbeasty
 508	0	1						\red;Treewarden Morph\blue;	\red;Treewarden Morph\blue;		3	159	0					desc-fatasstriton
-509	500	10						\red;>> Do not use at level 120 <<\blue;	\red;>> Do not use at level 120 <<\blue;		3	254	0					fuck_you#
+509	500	10						\red;&gt;&gt; Do not use at level 120 &lt;&lt;\blue;	\red;&gt;&gt; Do not use at level 120 &lt;&lt;\blue;		3	254	0					fuck_you#

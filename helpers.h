@@ -37,12 +37,14 @@ bool isUltimative5OrLater();
 struct ItemInfo;
 bool isCubeInCharacterItems(ItemInfo *item);
 bool hasChanged(ItemInfo *item);
+
 bool isClassCharm(ItemInfo *item);
 bool isCrystallineFlameMedallion(ItemInfo *item);
 bool isMoonOfSpider(ItemInfo *item);
 bool isLegacyOfBlood(ItemInfo *item);
 bool isDrekavacInGear(ItemInfo *item);
 bool isVeneficaInGear(ItemInfo *item);
+bool isArcaneShard(ItemInfo *item);
 // for Ultimative
 bool isSacred(ItemInfo *item);
 bool isCharacterOrb(const QByteArray &itemType);

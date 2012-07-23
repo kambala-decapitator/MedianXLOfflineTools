@@ -248,7 +248,7 @@ QString PropertiesDisplayManager::propertyDisplay(const ItemProperty &propDispla
     {
         const CharacterInfo::CharacterInfoBasic &basicInfo = CharacterInfo::instance().basicInfo;
         if (propId == Enums::ItemProperties::StrengthBasedOnBlessedLifeSlvl || propId == Enums::ItemProperties::DexterityBasedOnBlessedLifeSlvl)
-            value = basicInfo.classCode == Enums::ClassName::Paladin ? (value * basicInfo.skills.last()) / 32 : 0; // TODO 0.3+: use ItemDataBase::Skills() to obtain Blessed Life index
+            value = basicInfo.classCode == Enums::ClassName::Paladin ? (value * basicInfo.skills.last()) / 32 : 0; // TODO 0.4+: use ItemDataBase::Skills() to obtain Blessed Life index
         else // based on clvl
             value = (value * basicInfo.level) / 32;
     }

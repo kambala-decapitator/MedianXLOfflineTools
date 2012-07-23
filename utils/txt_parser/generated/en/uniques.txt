@@ -49,7 +49,7 @@
 47	Zakarum's Ear	80
 48	Moon of the Spider	100
 49	Spirit Trance Herb	100
-50	\red;Welcome! Median XL: Ultimative v6\blue;	0
+50	\red;Welcome! Median XL: Ultimative v6b\blue;	0
 51	Hammer of the Taan Judges	40
 52	The Book of Lies	60
 53	By Robert Marks\nDemonsbane	100

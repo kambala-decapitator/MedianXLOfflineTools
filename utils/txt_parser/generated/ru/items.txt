@@ -1924,7 +1924,7 @@ pa9	Амулет		1	1	2	0	0	invamu	amul		-1
 L4+	\orange;as one grows strong \nSome are weakened \nMysterious Shrine (6 Charges)		1	2	2	0	0	jbscross	thng		-1
 &60	\orange;Мистическая Сфера	\blue;+2 Требуемый Уровень\n+10 к Жизни при Рукопашной Атаке\n\white;Смешайте с Любым Оружием для Добавления Бонуса	1	1	2	0	0	orb_weap	asaa		-1
 &33	\orange;Мистическая Сфера	\blue;+2 Требуемый Уровень\n2% Кража Маны при Попадании\n\white;Смешайте с Любым Оружием для Добавления Бонуса	1	1	2	0	0	orb_weap	asaa		-1
->.<	\gold; Сфера Персонажа\blue;	\red;>> Не делайте этого на 120 уровне <<\blue;\n\orange;предметами, можно получить интересные эффекты!\blue;\n\orange;Смешивая этот талисман с различными\blue;	2	2	2	0	0	newcharorxb	grtz		-1
+>.<	\gold; Сфера Персонажа\blue;	\orange;предметами, можно получить интересные эффекты!\blue;\n\orange;Смешивая этот талисман с различными\blue;	2	2	2	0	0	newcharorxb	grtz		-1
 a59	Центральный Кристалл Лазера		1	1	2	0	0	invdss	grtz		-1
 ba7	Амулет		1	1	2	0	0	invamu	amul		-1
 P2+	\orange;refreshed \nDrink and be \nDivine Shrine (8 Charges)		1	2	2	0	0	jbscross	thng		-1
@@ -2130,7 +2130,7 @@ O0+	\orange;what it seems to be \nMagic is not always \nEnchanted Shrine (10 Cha
 &09	\orange;Мистическая Сфера	\blue;+2 Требуемый Уровень\n+1% к Физ./Маг. Урону Заклинаний\n\white;Смешайте с Вещью для Добавления Бонуса	1	1	2	0	0	orb_any	asaa		-1
 P9+	\orange;refreshed \nDrink and be \nDivine Shrine (1 Charge)		1	2	2	0	0	jbscross	thng		-1
 &62	\orange;Мистическая Сфера	\blue;+2 Требуемый Уровень\n+2 Фактора Энергии к Урону Заклинаний\n\white;Смешайте с Любым Оружием для Добавления Бонуса	1	1	2	0	0	orb_weap	asaa		-1
-zen	Median XL - Ultimative v6\n\red;РИДМИ	[СМЕШАЙ МЕНЯ С ЛЕЧЕБНЫМ ЗЕЛЬЕМ]\n\n\orange;из Лакданана в Травинкале\n- Воля Халима теперь выпадает\nв Храме Когтистой Гадюки Уровень 2\n- Хорадрический Посох теперь падает\n\red;ВАЖНО\n\n\gold;Ultimative от \grey;MarcoNecroX\n\gold;Median XL от \dgreen;BrotherLaz\n\n\red;Спасибо за игру!	1	2	2	0	0	invjbi	woot		-1
+zen	Median XL - Ultimative v6b\n\red;РИДМИ	[СМЕШАЙ МЕНЯ С ЛЕЧЕБНЫМ ЗЕЛЬЕМ]\n\n\orange;из Лакданана в Травинкале\n- Воля Халима теперь выпадает\nв Храме Когтистой Гадюки Уровень 2\n- Хорадрический Посох теперь падает\n\red;ВАЖНО\n\n\gold;Ultimative от \grey;MarcoNecroX\n\gold;Median XL от \dgreen;BrotherLaz\n\n\red;Спасибо за игру!	1	2	2	0	0	invjbi	woot		-1
 sku	\purple;Череп		1	1	2	0	12	invsku	gemz		-1
 #X1	\red;Догма Страдания	\orange;Используется для мощых рецептов\n\orange;Секретный Реагент!	1	1	2	0	0	newsignet1	thng		-1
 &32	\orange;Мистическая Сфера	\blue;+2 Требуемый Уровень\n2% Кража Жизни при Попадании\n\white;Смешайте с Любым Оружием для Добавления Бонуса	1	1	2	0	0	orb_weap	asaa		-1

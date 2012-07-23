@@ -43,10 +43,15 @@ public:
     static bool isGenericSocketable(ItemInfo *item); // checks if an item is a gem or a rune
     static bool isCube(ItemInfo *item);
 
+    static bool canDisenchantIntoArcaneShards(ItemInfo *item);
+    static bool canDisenchantIntoSignetOfLearning(ItemInfo *item);
+
 private:
+    static QMultiHash<QString, QString> _sets;
+
     static QList<QByteArray> stringArrayOfCurrentLineInFile(QFile &f);
     static void expandMultilineString(QString *stringToExpand);
 
-    static QMultiHash<QString, QString> _sets;
+    static bool canDisenchant(ItemInfo *item);
 };
 #endif // ITEMDATABASE_H

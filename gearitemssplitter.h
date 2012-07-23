@@ -4,8 +4,6 @@
 #include "itemspropertiessplitter.h"
 
 
-class QPushButton;
-
 class GearItemsSplitter : public ItemsPropertiesSplitter
 {
     Q_OBJECT

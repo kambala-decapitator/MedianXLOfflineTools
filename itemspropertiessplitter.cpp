@@ -12,18 +12,18 @@
 #include <QMenu>
 #include <QGroupBox>
 #include <QPushButton>
+#include <QCheckBox>
 #include <QHBoxLayout>
 #include <QVBoxLayout>
+#include <QGridLayout>
 
 #ifndef QT_NO_DEBUG
 #include <QDebug>
 #endif
 
 
-ItemsPropertiesSplitter::ItemsPropertiesSplitter(ItemStorageTableView *itemsView, QWidget *parent) : QSplitter(Qt::Horizontal, parent), _propertiesWidget(new PropertiesViewerWidget(parent)),
-    _itemsView(itemsView), _disenchantBox(new QGroupBox(tr("Disenchant everything here to:"), this)), _upgradeBox(new QGroupBox(tr("Upgrade here all:"), this)),
-    _disenchantToCrystalsButton(new QPushButton(tr("Arcane Crystals/Shards"), _disenchantBox)), _disenchantToSignetsButton(new QPushButton(tr("Signets of Learning"), _disenchantBox)),
-    _upgradeGemsButton(new QPushButton(tr("Gems"), _upgradeBox)), _upgradeRunesButton(new QPushButton(tr("Runes"), _upgradeBox)), _upgradeBothButton(new QPushButton(tr("Both"), _upgradeBox))
+ItemsPropertiesSplitter::ItemsPropertiesSplitter(ItemStorageTableView *itemsView, QWidget *parent /*= 0*/, bool createChildren /*= true*/) : QSplitter(Qt::Horizontal, parent), _itemsView(itemsView),
+    _propertiesWidget(new PropertiesViewerWidget(parent))
 {
     QWidget *w = new QWidget(this);
     addWidget(w);
@@ -31,17 +31,47 @@ ItemsPropertiesSplitter::ItemsPropertiesSplitter(ItemStorageTableView *itemsView
 
     QVBoxLayout *vlayout = new QVBoxLayout(w);
     vlayout->addWidget(_itemsView);
-    vlayout->addWidget(_disenchantBox);
-    vlayout->addWidget(_upgradeBox);
 
-    QHBoxLayout *disenchantBoxLayout = new QHBoxLayout(_disenchantBox);
-    disenchantBoxLayout->addWidget(_disenchantToCrystalsButton);
-    disenchantBoxLayout->addWidget(_disenchantToSignetsButton);
+    if (createChildren)
+    {
+        _disenchantBox = new QGroupBox(tr("Disenchant uniques/sets here to:"), this);
 
-    QHBoxLayout *upgradeBoxLayout = new QHBoxLayout(_upgradeBox);
-    upgradeBoxLayout->addWidget(_upgradeGemsButton);
-    upgradeBoxLayout->addWidget(_upgradeRunesButton);
-    upgradeBoxLayout->addWidget(_upgradeBothButton);
+        _disenchantToShardsButton = new QPushButton(tr("Arcane Shards"), _disenchantBox);
+        _upgradeToCrystalsCheckbox = new QCheckBox(tr("Upgrade to Crystals"), _disenchantBox);
+        _upgradeToCrystalsCheckbox->setChecked(true);
+
+        _disenchantToSignetButton = new QPushButton(tr("Signets of Learning"), _disenchantBox);
+        _eatSignetsCheckbox = new QCheckBox(tr("Eat Signets"), _disenchantBox);
+        _eatSignetsCheckbox->setChecked(true);
+
+        connect(_disenchantToShardsButton, SIGNAL(clicked()), SLOT(disenchantAllItems()));
+        connect(_disenchantToSignetButton, SIGNAL(clicked()), SLOT(disenchantAllItems()));
+
+        QGridLayout *disenchantGridLayout = new QGridLayout(_disenchantBox);
+        disenchantGridLayout->addWidget(_disenchantToShardsButton, 0, 0);
+        disenchantGridLayout->addWidget(_upgradeToCrystalsCheckbox, 1, 0, Qt::AlignCenter);
+        disenchantGridLayout->addWidget(_disenchantToSignetButton, 0, 1);
+        disenchantGridLayout->addWidget(_eatSignetsCheckbox, 1, 1, Qt::AlignCenter);
+
+        _upgradeBox = new QGroupBox(tr("Upgrade here all:"), this);
+        _upgradeGemsButton = new QPushButton(tr("Gems"), _upgradeBox);
+        _upgradeRunesButton = new QPushButton(tr("Runes"), _upgradeBox);
+        _upgradeBothButton = new QPushButton(tr("Both"), _upgradeBox);
+
+        QHBoxLayout *upgradeBoxLayout = new QHBoxLayout(_upgradeBox);
+        upgradeBoxLayout->addWidget(_upgradeGemsButton);
+        upgradeBoxLayout->addWidget(_upgradeRunesButton);
+        upgradeBoxLayout->addWidget(_upgradeBothButton);
+
+        vlayout->addWidget(_disenchantBox);
+        vlayout->addWidget(_upgradeBox);
+    }
+    else
+    {
+        _disenchantBox = _upgradeBox = 0;
+        _disenchantToShardsButton = _disenchantToSignetButton = _upgradeGemsButton = _upgradeRunesButton = _upgradeBothButton = 0;
+        _upgradeToCrystalsCheckbox = _eatSignetsCheckbox = 0;
+    }
 
     createItemActions();
 
@@ -57,7 +87,7 @@ void ItemsPropertiesSplitter::setModel(ItemStorageTableModel *model)
 {
     _itemsModel = model;
     _itemsView->setModel(model);
-    // TODO 0.3: change signal to selectionChanged
+    // TODO 0.4: change signal to selectionChanged
     connect(_itemsView->selectionModel(), SIGNAL(currentChanged(const QModelIndex &, const QModelIndex &)), SLOT(itemSelected(const QModelIndex &)));
     connect(_itemsModel, SIGNAL(itemMoved(const QModelIndex &, const QModelIndex &)), SLOT(moveItem(const QModelIndex &, const QModelIndex &)));
 }
@@ -68,21 +98,10 @@ void ItemsPropertiesSplitter::itemSelected(const QModelIndex &index)
     _propertiesWidget->showItem(item);
 
     // correctly disable hotkeys
-    bool isUltimative_ = isUltimative();
-    if (item && item->location != Enums::ItemLocation::Equipped && (item->quality == Enums::ItemQuality::Set || (item->quality == Enums::ItemQuality::Unique && !ItemDataBase::isUberCharm(item) && ItemDataBase::Uniques()->contains(item->setOrUniqueId))))
-    {
-        _itemActions[DisenchantShards]->setDisabled(isUltimative_ && item->props.contains(Enums::ItemProperties::ItemDuped)); // prohibit disenchanting TUs from the Gift Box into shards
-        // Ultimative prohibits disenchanting TUs into signets
-        _itemActions[DisenchantSignet]->setDisabled(isUltimative_ && item->quality == Enums::ItemQuality::Unique && ItemDataBase::Items()->operator[](item->itemType).genericType != Enums::ItemTypeGeneric::Misc && !isSacred(item));
-    }
-    else
-    {
-        _itemActions[DisenchantShards]->setDisabled(true);
-        _itemActions[DisenchantSignet]->setDisabled(true);
-    }
-
+    _itemActions[DisenchantShards]->setDisabled(ItemDataBase::canDisenchantIntoArcaneShards(item));
+    _itemActions[DisenchantSignet]->setDisabled(ItemDataBase::canDisenchantIntoSignetOfLearning(item));
     // in Ultimative, Character Orb and Sunstone of Elements use same stat IDs as MOs, but those can't be removed
-    _itemActions[RemoveMO]->setEnabled(_propertiesWidget->hasMysticOrbs() && !(isUltimative_ && isCharacterOrbOrSunstoneOfElements(item)));
+    _itemActions[RemoveMO]->setEnabled(_propertiesWidget->hasMysticOrbs() && !(isUltimative() && isCharacterOrbOrSunstoneOfElements(item)));
 }
 
 void ItemsPropertiesSplitter::moveItem(const QModelIndex &newIndex, const QModelIndex &oldIndex)
@@ -116,6 +135,34 @@ void ItemsPropertiesSplitter::setItems(const ItemsList &newItems)
 {
     _allItems = newItems;
     updateItems(_allItems);
+
+    updateButtonsState();
+}
+
+void ItemsPropertiesSplitter::updateButtonsState(ItemsList *items /*= 0*/)
+{
+    updateDisenchantButtonsState(items);
+    updateUpgradeButtonsState(items);
+}
+
+void ItemsPropertiesSplitter::updateDisenchantButtonsState(ItemsList *items /*= 0*/)
+{
+    bool allowShards = false, allowSignets = false;
+    foreach (ItemInfo *item, items ? *items : _allItems)
+    {
+        if (!allowShards)
+            allowShards = ItemDataBase::canDisenchantIntoArcaneShards(item);
+        if (!allowSignets)
+            allowSignets = ItemDataBase::canDisenchantIntoSignetOfLearning(item);
+        if (allowShards && allowSignets)
+            break;
+    }
+    _disenchantToShardsButton->setEnabled(allowShards);
+    _disenchantToSignetButton->setEnabled(allowSignets);
+}
+
+void ItemsPropertiesSplitter::updateUpgradeButtonsState(ItemsList *items /*= 0*/)
+{
 }
 
 void ItemsPropertiesSplitter::updateItems(const ItemsList &newItems)
@@ -137,7 +184,7 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
     {
         QList<QAction *> actions;
 
-        // TODO 0.3
+        // TODO 0.4
         //QMenu *menuExport = new QMenu(tr("Export as"), _itemsView);
         //menuExport->addActions(QList<QAction *>() << _itemActions[ExportBbCode] << _itemActions[ExportHtml]);
         //actions << menuExport->menuAction() << separator();
@@ -152,7 +199,7 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
             actions << menuDisenchant->menuAction();
         }
 
-        // TODO 0.3
+        // TODO 0.4
 //        if (item->isSocketed && item->socketablesNumber)
 //            actions << _itemActions[Unsocket];
 
@@ -180,9 +227,7 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
                 actionToAdd = menuMO->menuAction();
             }
             else
-            {
                 actionToAdd = _itemActions[RemoveMO];
-            }
 
             actionToAdd->setText(tr("Remove Mystic Orbs"));
             actions << actionToAdd;
@@ -208,7 +253,7 @@ void ItemsPropertiesSplitter::exportText()
 
 }
 
-void ItemsPropertiesSplitter::disenchantItem()
+void ItemsPropertiesSplitter::disenchantSelectedItem()
 {
     QAction *action = qobject_cast<QAction *>(sender());
     ItemInfo *item = selectedItem();
@@ -232,7 +277,6 @@ void ItemsPropertiesSplitter::disenchantItem()
     newItem->column = item->column;
     newItem->storage = item->storage;
     newItem->whereEquipped = item->whereEquipped;
-    //newItem->location = Enums::ItemLocation::Stored;
     newItem->plugyPage = item->plugyPage;
 
     // update bits
@@ -290,10 +334,10 @@ void ItemsPropertiesSplitter::disenchantItem()
     _itemsView->setCurrentIndex(_itemsModel->index(newItem->row, newItem->column));
 }
 
-void ItemsPropertiesSplitter::unsocketItem()
-{
+//void ItemsPropertiesSplitter::unsocketItem()
+//{
 
-}
+//}
 
 //void ItemsPropertiesSplitter::makeNonEthereal()
 //{
@@ -344,7 +388,7 @@ void ItemsPropertiesSplitter::deleteItem()
 
 void ItemsPropertiesSplitter::performDeleteItem(ItemInfo *item, bool currentStorage /*= true*/)
 {
-    // TODO 0.3: add option to unsocket at first
+    // TODO 0.4: add option to unsocket at first
     removeItemFromList(item, currentStorage);
     qDeleteAll(item->socketablesInfo);
     delete item;
@@ -380,6 +424,33 @@ void ItemsPropertiesSplitter::removeItemFromList(ItemInfo *item, bool currentSto
     emit itemsChanged();
 }
 
+void ItemsPropertiesSplitter::disenchantAllItems()
+{
+    bool toShards = sender() == _disenchantToShardsButton;
+    ItemInfo *disenchantedItem = ItemDataBase::loadItemFromFile(toShards ? "signet_of_learning" : "arcane_shard");
+    foreach (ItemInfo *item, _allItems)
+    {
+        if ((toShards && ItemDataBase::canDisenchantIntoArcaneShards(item)) || (!toShards && ItemDataBase::canDisenchantIntoSignetOfLearning(item)))
+        {
+            disenchantItemIntoItem(item, disenchantedItem);
+        }
+    }
+
+    if (toShards && _upgradeToCrystalsCheckbox->isChecked())
+    {
+        int shards = std::count_if(_allItems.constBegin(), _allItems.constEnd(), isArcaneShard);
+        qDebug() << shards << "shards found";
+        if (shards >= 5)
+        {
+            // TODO: upgrade to crystals
+        }
+    }
+}
+
+void ItemsPropertiesSplitter::disenchantItemIntoItem(ItemInfo *oldItem, ItemInfo *newItem)
+{
+}
+
 void ItemsPropertiesSplitter::createItemActions()
 {
     //QAction *actionBbCode = new QAction("BBCode", _itemsView);
@@ -399,14 +470,14 @@ void ItemsPropertiesSplitter::createItemActions()
     QAction *actionSol = new QAction(QIcon(ResourcePathManager::pathForImageName("sigil1b")), tr("Signet of Learning"), _itemsView);
     actionSol->setShortcut(QKeySequence("Ctrl+D"));
     actionSol->setObjectName("signet");
-    connect(actionSol, SIGNAL(triggered()), SLOT(disenchantItem()));
+    connect(actionSol, SIGNAL(triggered()), SLOT(disenchantSelectedItem()));
     _itemsView->addAction(actionSol);
     _itemActions[DisenchantSignet] = actionSol;
 
     QAction *actionShards = new QAction(QIcon(ResourcePathManager::pathForImageName("invfary4")), tr("Arcane Shards"), _itemsView);
     actionShards->setShortcut(QKeySequence("Alt+D"));
     actionShards->setObjectName("shards");
-    connect(actionShards, SIGNAL(triggered()), SLOT(disenchantItem()));
+    connect(actionShards, SIGNAL(triggered()), SLOT(disenchantSelectedItem()));
     _itemsView->addAction(actionShards);
     _itemActions[DisenchantShards] = actionShards;
 

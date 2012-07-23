@@ -151,6 +151,11 @@ bool isVeneficaInGear(ItemInfo *item)
     return isRWInGear(item, "r53", "stor"); // Qor in sorc armor
 }
 
+bool isArcaneShard(ItemInfo *item)
+{
+    return item->itemType == "qul"; // Ultimative shards: #3^, #4^, #5^
+}
+
 bool isSacred(ItemInfo *item)
 {
     return ItemParser::itemTypeInheritsFromTypes(ItemDataBase::Items()->operator[](item->itemType).typeString, QList<QByteArray>() << "ct1a" << "ct2a" << "ct1w" << "ct2w");

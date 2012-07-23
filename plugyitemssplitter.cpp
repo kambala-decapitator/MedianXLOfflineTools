@@ -71,6 +71,8 @@ PlugyItemsSplitter::PlugyItemsSplitter(ItemStorageTableView *itemsView, QWidget 
     connect(_leftButton,    SIGNAL(clicked()), SLOT(leftClicked()));
     connect(_rightButton,   SIGNAL(clicked()), SLOT(rightClicked()));
     connect(_right10Button, SIGNAL(clicked()), SLOT(right10Clicked()));
+
+    connect(_applyActionToAllPagesCheckbox, SIGNAL(toggled(bool)), SLOT(applyActionToAllPagesChanged()));
 }
 
 void PlugyItemsSplitter::keyPressEvent(QKeyEvent *keyEvent)
@@ -151,11 +153,13 @@ void PlugyItemsSplitter::setItems(const ItemsList &newItems)
 
 void PlugyItemsSplitter::updateItemsForCurrentPage(bool pageChanged /*= true*/)
 {
-    ItemsList pagedItems;
+    _pagedItems.clear();
     foreach (ItemInfo *item, _allItems)
         if (item->plugyPage == static_cast<quint32>(_pageSpinBox->value()))
-            pagedItems += item;
-    updateItems(pagedItems);
+            _pagedItems += item;
+    updateItems(_pagedItems);
+
+    applyActionToAllPagesChanged();
 
     if (pageChanged)
         emit itemCountChanged(_allItems.size());
@@ -187,4 +191,9 @@ void PlugyItemsSplitter::right10Clicked()
 {
     quint32 step = _isShiftPressed ? 100 : 10;
     _pageSpinBox->setValue(qCeil((_pageSpinBox->value() + 1) / step) * step);
+}
+
+void PlugyItemsSplitter::applyActionToAllPagesChanged()
+{
+    updateButtonsState(_applyActionToAllPagesCheckbox->isChecked() ? 0 : &_pagedItems);
 }

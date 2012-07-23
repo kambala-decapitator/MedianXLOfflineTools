@@ -2130,7 +2130,7 @@ O0+	\orange;Enchanted Shrine (10 Charges)		1	2	2	0	0	jbscross	thng		-1
 &09	\orange;Mystic Orb	\blue;+2 Required Level\n+1% to Physical/Magic Spell Damage\n\white;Cube with Item to Add Bonus	1	1	2	0	0	orb_any	asaa		-1
 P9+	\orange;Divine Shrine (1 Charge)		1	2	2	0	0	jbscross	thng		-1
 &62	\orange;Mystic Orb	\blue;+2 Required Level\n+2 Energy Factor to Spell Damage\n\white;Cube with Any Weapon to Add Bonus	1	1	2	0	0	orb_weap	asaa		-1
-zen	Median XL - Ultimative v6\n\red; READ ME 	[CUBE ME WITH A HEALTH POTION]\n\n\orange;Lachdanan in Travincal.\n- Khalims Will now drops from\nthe Claw Viper Temple Level 2\n- Horadric Staff now drops in\n\red;IMPORTANT NOTE\n\n\gold;Ultimative by \grey;MarcoNecroX\n\gold;Median XL by \dgreen;BrotherLaz\n\n\red;Thanks for playing!	1	2	2	0	0	invjbi	woot		-1
+zen	Median XL - Ultimative v6b\n\red; READ ME 	[CUBE ME WITH A HEALTH POTION]\n\n\orange;Lachdanan in Travincal.\n- Khalims Will now drops from\nthe Claw Viper Temple Level 2\n- Horadric Staff now drops in\n\red;IMPORTANT NOTE\n\n\gold;Ultimative by \grey;MarcoNecroX\n\gold;Median XL by \dgreen;BrotherLaz\n\n\red;Thanks for playing!	1	2	2	0	0	invjbi	woot		-1
 sku	\purple;Skull		1	1	2	0	12	invsku	gemz		-1
 #X1	\red;Token of Suffering	\orange;Usable for powerful recipes\n\orange;Secret Reagent!	1	1	2	0	0	newsignet1	thng		-1
 &32	\orange;Mystic Orb	\blue;+2 Required Level\n2% Life Stolen per Hit\n\white;Cube with Any Weapon to Add Bonus	1	1	2	0	0	orb_weap	asaa		-1

@@ -14,13 +14,14 @@ class QModelIndex;
 class QMenu;
 class QGroupBox;
 class QPushButton;
+class QCheckBox;
 
 class ItemsPropertiesSplitter : public QSplitter
 {
     Q_OBJECT
 
 public:
-    explicit ItemsPropertiesSplitter(ItemStorageTableView *itemsView, QWidget *parent = 0);
+    explicit ItemsPropertiesSplitter(ItemStorageTableView *itemsView, QWidget *parent = 0, bool createChildren = true);
     virtual ~ItemsPropertiesSplitter() {}
 
     void setModel(ItemStorageTableModel *model);
@@ -40,16 +41,19 @@ signals:
     //void storageModified(int storage);
     void itemsChanged(bool = true); // connect directly to main window's setModified() slot
 
-private slots:
+protected slots:
     void itemSelected(const QModelIndex &index);
     void moveItem(const QModelIndex &newIndex, const QModelIndex &oldIndex);
 
     void showContextMenu(const QPoint &pos);
     void exportText();
-    void disenchantItem();
-    void unsocketItem();
+    void disenchantSelectedItem();
+//    void unsocketItem();
     //void makeNonEthereal();
     void deleteItem();
+
+    void disenchantAllItems();
+    void disenchantItemIntoItem(ItemInfo *oldItem, ItemInfo *newItem);
 
 protected:
     enum ItemAction
@@ -63,15 +67,23 @@ protected:
         Delete
     };
 
-    PropertiesViewerWidget *_propertiesWidget;
     ItemStorageTableView *_itemsView;
-    QGroupBox *_disenchantBox, *_upgradeBox;
-    QPushButton *_disenchantToCrystalsButton, *_disenchantToSignetsButton;
-    QPushButton *_upgradeGemsButton, *_upgradeRunesButton, *_upgradeBothButton;
-    QHash<ItemAction, QAction *> _itemActions;
+    PropertiesViewerWidget *_propertiesWidget;
 
+    QGroupBox *_disenchantBox;
+    QPushButton *_disenchantToShardsButton, *_disenchantToSignetButton;
+    QCheckBox *_upgradeToCrystalsCheckbox, *_eatSignetsCheckbox;
+
+    QGroupBox *_upgradeBox;
+    QPushButton *_upgradeGemsButton, *_upgradeRunesButton, *_upgradeBothButton;
+
+    QHash<ItemAction, QAction *> _itemActions;
     ItemStorageTableModel *_itemsModel;
     ItemsList _allItems;
+
+    void updateButtonsState(ItemsList *items = 0);
+    void updateDisenchantButtonsState(ItemsList *items = 0);
+    void updateUpgradeButtonsState(ItemsList *items = 0);
 
     void updateItems(const ItemsList &newItems);
     void performDeleteItem(ItemInfo *item, bool currentStorage = true);
