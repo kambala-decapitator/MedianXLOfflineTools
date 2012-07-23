@@ -1,6 +1,7 @@
 #include "gearitemssplitter.h"
 #include "itemstoragetableview.h"
 #include "itemdatabase.h"
+#include "characterinfo.hpp"
 
 #include <QPushButton>
 #include <QHBoxLayout>
@@ -31,6 +32,7 @@ void GearItemsSplitter::setItems(const ItemsList &newItems)
     _gearItems[CorpseNameIndex]     = ItemDataBase::itemsStoredIn(Enums::ItemStorage::NotInStorage, Enums::ItemLocation::Corpse,   0, &_allItems);
 
     changeButtonText(_button1, MercenaryNameIndex);
+    _button1->setEnabled(CharacterInfo::instance().mercenary.exists);
     changeButtonText(_button2, CorpseNameIndex);
     _button2->setDisabled(_gearItems[CorpseNameIndex].isEmpty());
 

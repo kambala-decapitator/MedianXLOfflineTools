@@ -62,8 +62,7 @@ PlugyItemsSplitter::PlugyItemsSplitter(ItemStorageTableView *itemsView, QWidget 
     vlayout->insertLayout(1, hlayout);
     vlayout->insertWidget(2, _hline);
     vlayout->insertWidget(3, _applyActionToAllPagesCheckbox, 0, Qt::AlignCenter);
-//    vlayout->setSpacing(0);
-//    vlayout->setContentsMargins(QMargins());
+    vlayout->setSpacing(0);
 
     connect(_pageSpinBox, SIGNAL(valueChanged(double)), SLOT(updateItemsForCurrentPage()));
 
