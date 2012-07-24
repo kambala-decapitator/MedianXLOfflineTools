@@ -150,7 +150,7 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
         rlvl = ItemDataBase::Uniques()->contains(item->setOrUniqueId) ? ItemDataBase::Uniques()->operator[](item->setOrUniqueId).rlvl : ItemDataBase::Items()->operator[](item->itemType).rlvl;
         break;
 //  case Enums::ItemQuality::Rare: case Enums::ItemQuality::Crafted: case Enums::ItemQuality::Magic:
-        // TODO 0.4+: add support for affix rlvl
+        // TODO: [0.4+] add support for affix rlvl
 //      break;
     default:
         rlvl = itemBase.rlvl;

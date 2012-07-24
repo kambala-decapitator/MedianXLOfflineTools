@@ -90,6 +90,7 @@ QVariant ItemStorageTableModel::data(const QModelIndex &index, int role) const
                     }
                     return pixmap;
                 }
+                break;
             case Qt::ToolTipRole:
                 return ItemDataBase::completeItemName(item, false);
             case Qt::ForegroundRole:

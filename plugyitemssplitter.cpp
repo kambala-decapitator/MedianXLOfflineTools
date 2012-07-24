@@ -62,7 +62,9 @@ PlugyItemsSplitter::PlugyItemsSplitter(ItemStorageTableView *itemsView, QWidget 
     vlayout->insertLayout(1, hlayout);
     vlayout->insertWidget(2, _hline);
     vlayout->insertWidget(3, _applyActionToAllPagesCheckbox, 0, Qt::AlignCenter);
+#ifdef Q_WS_MACX
     vlayout->setSpacing(0);
+#endif
 
     connect(_pageSpinBox, SIGNAL(valueChanged(double)), SLOT(updateItemsForCurrentPage()));
 
@@ -114,6 +116,31 @@ void PlugyItemsSplitter::keyReleaseEvent(QKeyEvent *keyEvent)
         _isShiftPressed = false;
     }
     ItemsPropertiesSplitter::keyPressEvent(keyEvent);
+}
+
+bool PlugyItemsSplitter::isItemInCurrentStorage(ItemInfo *item) const
+{
+    return item->plugyPage == _pageSpinBox->value();
+}
+
+void PlugyItemsSplitter::addItemToList(ItemInfo *item, bool currentStorage /*= true*/, bool emitSignal /*= true*/)
+{
+    ItemsPropertiesSplitter::addItemToList(item, currentStorage, emitSignal);
+    if (currentStorage)
+        _pagedItems.append(item);
+}
+
+void PlugyItemsSplitter::removeItemFromList(ItemInfo *item, bool currentStorage /*= true*/, bool emitSignal /*= true*/)
+{
+    ItemsPropertiesSplitter::removeItemFromList(item, currentStorage, emitSignal);
+    if (currentStorage)
+        _pagedItems.removeOne(item);
+}
+
+void PlugyItemsSplitter::disenchantAllItems(ItemsList *items /*= 0*/)
+{
+    Q_UNUSED(items);
+    ItemsPropertiesSplitter::disenchantAllItems(_applyActionToAllPagesCheckbox->isChecked() ? &_allItems : &_pagedItems);
 }
 
 bool PlugyItemsSplitter::keyEventHasShift(QKeyEvent *keyEvent)

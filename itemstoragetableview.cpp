@@ -17,7 +17,7 @@ ItemStorageTableView::ItemStorageTableView(QWidget *parent /*= 0*/) : QTableView
 {
     setContextMenuPolicy(Qt::CustomContextMenu);
     setEditTriggers(QAbstractItemView::NoEditTriggers);
-    setSelectionMode(QAbstractItemView::SingleSelection); // TODO 0.4: change to ExtendedSelection
+    setSelectionMode(QAbstractItemView::SingleSelection); // TODO: [0.4] change to ExtendedSelection
 
     setHorizontalScrollMode(QAbstractItemView::ScrollPerPixel);
     setVerticalScrollMode(QAbstractItemView::ScrollPerPixel);
@@ -28,7 +28,7 @@ ItemStorageTableView::ItemStorageTableView(QWidget *parent /*= 0*/) : QTableView
                   "QTableView::icon:selected { right: 1px; }"
                  );
 
-    // TODO 0.4: uncomment to allow drag & drop
+    // TODO: [0.4] uncomment to allow drag & drop
 //    setDragDropMode(QAbstractItemView::DragDrop);
 //    setDragDropOverwriteMode(false);
 //    setDropIndicatorShown(true);

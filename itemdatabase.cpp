@@ -644,5 +644,5 @@ bool ItemDataBase::canDisenchantIntoSignetOfLearning(ItemInfo *item)
 
 bool ItemDataBase::canDisenchant(ItemInfo *item)
 {
-    return item && item->location != Enums::ItemLocation::Equipped && (item->quality == Enums::ItemQuality::Set || (item->quality == Enums::ItemQuality::Unique && !isUberCharm(item) && Uniques()->contains(item->setOrUniqueId)));
+    return item && item->location != Enums::ItemLocation::Equipped && ((item->quality == Enums::ItemQuality::Set && Sets()->contains(item->setOrUniqueId)) || (item->quality == Enums::ItemQuality::Unique && !isUberCharm(item) && Uniques()->contains(item->setOrUniqueId)));
 }

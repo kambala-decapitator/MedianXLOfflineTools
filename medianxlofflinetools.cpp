@@ -128,7 +128,7 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *pare
     QTimer::singleShot(500, this, SLOT(moveUpdateActionToAppleMenu())); // needs a slight delay to create menu
 #endif
 
-    // TODO 0.4: remove when implementing export info
+    // TODO: [0.4] remove when implementing export info
     ui.menuExport->removeAction(ui.actionExportCharacterInfo);
     ui.mainToolBar->removeAction(ui.actionExportCharacterInfo);
 

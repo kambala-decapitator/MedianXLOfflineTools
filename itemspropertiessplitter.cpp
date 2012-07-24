@@ -87,7 +87,7 @@ void ItemsPropertiesSplitter::setModel(ItemStorageTableModel *model)
 {
     _itemsModel = model;
     _itemsView->setModel(model);
-    // TODO 0.4: change signal to selectionChanged
+    // TODO: [0.4] change signal to selectionChanged
     connect(_itemsView->selectionModel(), SIGNAL(currentChanged(const QModelIndex &, const QModelIndex &)), SLOT(itemSelected(const QModelIndex &)));
     connect(_itemsModel, SIGNAL(itemMoved(const QModelIndex &, const QModelIndex &)), SLOT(moveItem(const QModelIndex &, const QModelIndex &)));
 }
@@ -96,10 +96,12 @@ void ItemsPropertiesSplitter::itemSelected(const QModelIndex &index)
 {
     ItemInfo *item = _itemsModel->itemAtIndex(index);
     _propertiesWidget->showItem(item);
+    if (item)
+    qDebug() << ItemDataBase::Items()->value(item->itemType).typeString;
 
     // correctly disable hotkeys
-    _itemActions[DisenchantShards]->setDisabled(ItemDataBase::canDisenchantIntoArcaneShards(item));
-    _itemActions[DisenchantSignet]->setDisabled(ItemDataBase::canDisenchantIntoSignetOfLearning(item));
+    _itemActions[DisenchantShards]->setEnabled(ItemDataBase::canDisenchantIntoArcaneShards(item));
+    _itemActions[DisenchantSignet]->setEnabled(ItemDataBase::canDisenchantIntoSignetOfLearning(item));
     // in Ultimative, Character Orb and Sunstone of Elements use same stat IDs as MOs, but those can't be removed
     _itemActions[RemoveMO]->setEnabled(_propertiesWidget->hasMysticOrbs() && !(isUltimative() && isCharacterOrbOrSunstoneOfElements(item)));
 }
@@ -184,7 +186,7 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
     {
         QList<QAction *> actions;
 
-        // TODO 0.4
+        // TODO: 0.4
         //QMenu *menuExport = new QMenu(tr("Export as"), _itemsView);
         //menuExport->addActions(QList<QAction *>() << _itemActions[ExportBbCode] << _itemActions[ExportHtml]);
         //actions << menuExport->menuAction() << separator();
@@ -199,7 +201,7 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
             actions << menuDisenchant->menuAction();
         }
 
-        // TODO 0.4
+        // TODO: 0.4
 //        if (item->isSocketed && item->socketablesNumber)
 //            actions << _itemActions[Unsocket];
 
@@ -263,75 +265,12 @@ void ItemsPropertiesSplitter::disenchantSelectedItem()
         return;
     }
 
-    ItemsList items = ItemDataBase::itemsStoredIn(item->storage, item->location, item->plugyPage ? &item->plugyPage : 0);
-    items.removeOne(item);
     ItemInfo *newItem = ItemDataBase::loadItemFromFile(action->objectName() == "signet" ? "signet_of_learning" : "arcane_shard");
-    if (!ItemDataBase::canStoreItemAt(item->row, item->column, newItem->itemType, items, ItemsViewerDialog::kRows.at(ItemsViewerDialog::tabIndexFromItemStorage(item->storage))))
-    {
-        ERROR_BOX("If you see this text (which you shouldn't), please tell me which item you've just tried to disenchant");
-        delete newItem;
-        return;
-    }
+    ItemInfo *newItemStored = disenchantItemIntoItem(item, newItem);
+    delete newItem;
 
-    newItem->row = item->row;
-    newItem->column = item->column;
-    newItem->storage = item->storage;
-    newItem->whereEquipped = item->whereEquipped;
-    newItem->plugyPage = item->plugyPage;
-
-    // update bits
-    bool isPlugyStorage = newItem->storage == Enums::ItemStorage::PersonalStash || newItem->storage == Enums::ItemStorage::SharedStash || newItem->storage == Enums::ItemStorage::HCStash;
-    ReverseBitWriter::replaceValueInBitString(newItem->bitString, Enums::ItemOffsets::Storage,    isPlugyStorage ? Enums::ItemStorage::Stash : newItem->storage);
-    ReverseBitWriter::replaceValueInBitString(newItem->bitString, Enums::ItemOffsets::Column,     newItem->column);
-    ReverseBitWriter::replaceValueInBitString(newItem->bitString, Enums::ItemOffsets::Row,        newItem->row);
-    ReverseBitWriter::replaceValueInBitString(newItem->bitString, Enums::ItemOffsets::EquipIndex, newItem->whereEquipped);
-    //ReverseBitWriter::replaceValueInBitString(newItem->bitString, Enums::ItemOffsets::Location, newItem->location);
-
-    //if (newItem->storage == Enums::ItemStorage::Stash)
-    //{
-    //    // plugy saves last opened page as the stash page, so we should find the correct page
-    //    ItemInfo *plugyItem = 0;
-    //    for (int i = Enums::ItemStorage::PersonalStash; i <= Enums::ItemStorage::HCStash; ++i)
-    //    {
-    //        ItemsList plugyStashItems = ItemParser::itemsStoredIn(i);
-    //        foreach (ItemInfo *plugyStashItem, plugyStashItems)
-    //        {
-    //            if (plugyStashItem->bitString == newItem->bitString)
-    //            {
-    //                plugyItem = plugyStashItem;
-    //                break;
-    //            }
-    //        }
-    //        if (plugyItem)
-    //            break;
-    //    }
-
-    //    if (plugyItem)
-    //    {
-    //        ItemInfo *copy = new ItemInfo(*newItem);
-    //        copy->storage = plugyItem->storage;
-    //        copy->plugyPage = plugyItem->plugyPage;
-
-    //        performDeleteItem(plugyItem, false);
-    //        addItemToList(copy, false);
-    //        //emit storageModified(copy->storage);
-    //    }
-    //}
-    //else if (newItem->storage >= Enums::ItemStorage::PersonalStash && newItem->storage <= Enums::ItemStorage::HCStash)
-    //{
-    //    ItemsList stashItems = ItemParser::itemsStoredIn(Enums::ItemStorage::Stash);
-    //    if (stashItems.indexOf(item) != -1)
-    //    {
-    //        ItemInfo *copy = new ItemInfo(*newItem);
-    //        copy->storage = Enums::ItemStorage::Stash;
-    //        copy->plugyPage = 0;
-    //    }
-    //}
-
-    performDeleteItem(item);
-    addItemToList(newItem);
-
-    _itemsView->setCurrentIndex(_itemsModel->index(newItem->row, newItem->column));
+    if (newItemStored) // let's be safe
+        _itemsView->setCurrentIndex(_itemsModel->index(newItemStored->row, newItemStored->column));
 }
 
 //void ItemsPropertiesSplitter::unsocketItem()
@@ -386,69 +325,154 @@ void ItemsPropertiesSplitter::deleteItem()
     }
 }
 
-void ItemsPropertiesSplitter::performDeleteItem(ItemInfo *item, bool currentStorage /*= true*/)
+void ItemsPropertiesSplitter::performDeleteItem(ItemInfo *item, bool currentStorage /*= true*/, bool emitSignal /*= true*/)
 {
-    // TODO 0.4: add option to unsocket at first
-    removeItemFromList(item, currentStorage);
+    // TODO: [0.4] add option to unsocket at first
+    removeItemFromList(item, currentStorage, emitSignal);
     qDeleteAll(item->socketablesInfo);
     delete item;
 }
 
-void ItemsPropertiesSplitter::addItemToList(ItemInfo *item, bool currentStorage /*= true*/)
+void ItemsPropertiesSplitter::addItemToList(ItemInfo *item, bool currentStorage /*= true*/, bool emitSignal /*= true*/)
 {
     CharacterInfo::instance().items.character.append(item);
-    
+
+    _allItems.append(item);
     if (currentStorage)
     {
-        _allItems.append(item);
         _itemsModel->addItem(item);
-        _propertiesWidget->showItem(item);
+        if (selectedItem(false) == item) // signal is emitted only when single item is disenchanted (through context menu), so we don't need extra parameter for just another name
+            _propertiesWidget->showItem(item);
     }
 
-    emit itemsChanged();
+    if (emitSignal)
+        emit itemsChanged();
 }
 
-void ItemsPropertiesSplitter::removeItemFromList(ItemInfo *item, bool currentStorage /*= true*/)
+void ItemsPropertiesSplitter::removeItemFromList(ItemInfo *item, bool currentStorage /*= true*/, bool emitSignal /*= true*/)
 {
     CharacterInfo::instance().items.character.removeOne(item);
-    
+
+    _allItems.removeOne(item);
+    if (selectedItem(false) == item)
+        _propertiesWidget->clear();
     if (currentStorage)
     {
-        _propertiesWidget->clear();
-
-        _allItems.removeOne(item);
         _itemsModel->removeItem(item);
         _itemsView->setSpan(item->row, item->column, 1, 1);
     }
 
-    emit itemsChanged();
+    if (emitSignal)
+        emit itemsChanged();
 }
 
-void ItemsPropertiesSplitter::disenchantAllItems()
+void ItemsPropertiesSplitter::disenchantAllItems(ItemsList *items /*= 0*/)
 {
     bool toShards = sender() == _disenchantToShardsButton;
-    ItemInfo *disenchantedItem = ItemDataBase::loadItemFromFile(toShards ? "signet_of_learning" : "arcane_shard");
-    foreach (ItemInfo *item, _allItems)
+    ItemInfo *disenchantedItem = ItemDataBase::loadItemFromFile(toShards ? "arcane_shard" : "signet_of_learning");
+    ItemsList &items_ = items ? *items : _allItems;
+    foreach (ItemInfo *item, items_)
     {
         if ((toShards && ItemDataBase::canDisenchantIntoArcaneShards(item)) || (!toShards && ItemDataBase::canDisenchantIntoSignetOfLearning(item)))
         {
-            disenchantItemIntoItem(item, disenchantedItem);
+            // if (!toShards && _eatSignetsCheckbox->isChecked()) // TODO: don't create new items in this case
+            disenchantItemIntoItem(item, disenchantedItem, false);
         }
     }
+    delete disenchantedItem;
 
     if (toShards && _upgradeToCrystalsCheckbox->isChecked())
     {
-        int shards = std::count_if(_allItems.constBegin(), _allItems.constEnd(), isArcaneShard);
+        int shards = std::count_if(items_.constBegin(), items_.constEnd(), isArcaneShard);
         qDebug() << shards << "shards found";
         if (shards >= 5)
         {
             // TODO: upgrade to crystals
         }
     }
+
+    if (toShards || !isUltimative())
+    {
+        _disenchantToShardsButton->setDisabled(true);
+        _disenchantToSignetButton->setDisabled(true);
+    }
+    else // TUs may leave after disenchanting to signets in Ultimative
+        updateDisenchantButtonsState();
+    emit itemsChanged();
 }
 
-void ItemsPropertiesSplitter::disenchantItemIntoItem(ItemInfo *oldItem, ItemInfo *newItem)
+ItemInfo *ItemsPropertiesSplitter::disenchantItemIntoItem(ItemInfo *oldItem, ItemInfo *newItem, bool emitSignal /*= true*/)
 {
+    ItemsList items = ItemDataBase::itemsStoredIn(oldItem->storage, oldItem->location, oldItem->plugyPage ? &oldItem->plugyPage : 0);
+    items.removeOne(oldItem);
+    ItemInfo *newItemCopy = new ItemInfo(*newItem); // it's safe because there're no properties and no socketables
+    if (!ItemDataBase::canStoreItemAt(oldItem->row, oldItem->column, newItemCopy->itemType, items, ItemsViewerDialog::kRows.at(ItemsViewerDialog::tabIndexFromItemStorage(oldItem->storage))))
+    {
+        ERROR_BOX("If you see this text (which you shouldn't), please tell me which item you've just tried to disenchant");
+        delete newItemCopy;
+        return 0;
+    }
+
+    newItemCopy->row = oldItem->row;
+    newItemCopy->column = oldItem->column;
+    newItemCopy->storage = oldItem->storage;
+    newItemCopy->whereEquipped = oldItem->whereEquipped;
+    newItemCopy->plugyPage = oldItem->plugyPage;
+
+    // update bits
+    bool isPlugyStorage = newItemCopy->storage == Enums::ItemStorage::PersonalStash || newItemCopy->storage == Enums::ItemStorage::SharedStash || newItemCopy->storage == Enums::ItemStorage::HCStash;
+    ReverseBitWriter::replaceValueInBitString(newItemCopy->bitString, Enums::ItemOffsets::Storage,    isPlugyStorage ? Enums::ItemStorage::Stash : newItemCopy->storage);
+    ReverseBitWriter::replaceValueInBitString(newItemCopy->bitString, Enums::ItemOffsets::Column,     newItemCopy->column);
+    ReverseBitWriter::replaceValueInBitString(newItemCopy->bitString, Enums::ItemOffsets::Row,        newItemCopy->row);
+    ReverseBitWriter::replaceValueInBitString(newItemCopy->bitString, Enums::ItemOffsets::EquipIndex, newItemCopy->whereEquipped);
+    //ReverseBitWriter::replaceValueInBitString(newItem->bitString, Enums::ItemOffsets::Location, newItem->location);
+
+    //if (newItem->storage == Enums::ItemStorage::Stash)
+    //{
+    //    // plugy saves last opened page as the stash page, so we should find the correct page
+    //    ItemInfo *plugyItem = 0;
+    //    for (int i = Enums::ItemStorage::PersonalStash; i <= Enums::ItemStorage::HCStash; ++i)
+    //    {
+    //        ItemsList plugyStashItems = ItemParser::itemsStoredIn(i);
+    //        foreach (ItemInfo *plugyStashItem, plugyStashItems)
+    //        {
+    //            if (plugyStashItem->bitString == newItem->bitString)
+    //            {
+    //                plugyItem = plugyStashItem;
+    //                break;
+    //            }
+    //        }
+    //        if (plugyItem)
+    //            break;
+    //    }
+
+    //    if (plugyItem)
+    //    {
+    //        ItemInfo *copy = new ItemInfo(*newItem);
+    //        copy->storage = plugyItem->storage;
+    //        copy->plugyPage = plugyItem->plugyPage;
+
+    //        performDeleteItem(plugyItem, false);
+    //        addItemToList(copy, false);
+    //        //emit storageModified(copy->storage);
+    //    }
+    //}
+    //else if (newItem->storage >= Enums::ItemStorage::PersonalStash && newItem->storage <= Enums::ItemStorage::HCStash)
+    //{
+    //    ItemsList stashItems = ItemParser::itemsStoredIn(Enums::ItemStorage::Stash);
+    //    if (stashItems.indexOf(item) != -1)
+    //    {
+    //        ItemInfo *copy = new ItemInfo(*newItem);
+    //        copy->storage = Enums::ItemStorage::Stash;
+    //        copy->plugyPage = 0;
+    //    }
+    //}
+
+    bool isCurrentStorage = isItemInCurrentStorage(newItemCopy);
+    performDeleteItem(oldItem, isCurrentStorage, emitSignal);
+    addItemToList(newItemCopy, isCurrentStorage, emitSignal);
+
+    return newItemCopy;
 }
 
 void ItemsPropertiesSplitter::createItemActions()
@@ -481,7 +505,7 @@ void ItemsPropertiesSplitter::createItemActions()
     _itemsView->addAction(actionShards);
     _itemActions[DisenchantShards] = actionShards;
 
-    // TODO 0.4: unsocket
+    // TODO: [0.4] unsocket
 //    QAction *actionUnsocket = new QAction(tr("Unsocket"), _itemsView);
 //    connect(actionUnsocket, SIGNAL(triggered()), SLOT(unsocketItem()));
 //    _itemsView->addAction(actionUnsocket);

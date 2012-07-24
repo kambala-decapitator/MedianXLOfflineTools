@@ -52,8 +52,7 @@ protected slots:
     //void makeNonEthereal();
     void deleteItem();
 
-    void disenchantAllItems();
-    void disenchantItemIntoItem(ItemInfo *oldItem, ItemInfo *newItem);
+    virtual void disenchantAllItems(ItemsList *items = 0);
 
 protected:
     enum ItemAction
@@ -86,11 +85,13 @@ protected:
     void updateUpgradeButtonsState(ItemsList *items = 0);
 
     void updateItems(const ItemsList &newItems);
-    void performDeleteItem(ItemInfo *item, bool currentStorage = true);
+    void performDeleteItem(ItemInfo *item, bool currentStorage = true, bool emitSignal = true);
     ItemInfo *selectedItem(bool showError = true);
 
-    void addItemToList(ItemInfo *item, bool currentStorage = true);
-    void removeItemFromList(ItemInfo *item, bool currentStorage = true);
+    virtual void addItemToList(ItemInfo *item, bool currentStorage = true, bool emitSignal = true);
+    virtual void removeItemFromList(ItemInfo *item, bool currentStorage = true, bool emitSignal = true);
+    ItemInfo *disenchantItemIntoItem(ItemInfo *oldItem, ItemInfo *newItem, bool emitSignal = true);
+    virtual bool isItemInCurrentStorage(ItemInfo *item) const { Q_UNUSED(item); return true; }
 
     void createItemActions();
     QAction *separator();

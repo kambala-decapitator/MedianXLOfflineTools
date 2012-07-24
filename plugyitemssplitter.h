@@ -35,6 +35,13 @@ protected:
     void keyPressEvent(QKeyEvent *keyEvent);
     void keyReleaseEvent(QKeyEvent *keyEvent);
 
+    virtual bool isItemInCurrentStorage(ItemInfo *item) const;
+    virtual void addItemToList(ItemInfo *item, bool currentStorage = true, bool emitSignal = true);
+    virtual void removeItemFromList(ItemInfo *item, bool currentStorage = true, bool emitSignal = true);
+
+protected slots:
+    virtual void disenchantAllItems(ItemsList *items = 0);
+
 private slots:
     void updateItemsForCurrentPage(bool pageChanged = true);
     void leftClicked();
