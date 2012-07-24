@@ -18,6 +18,11 @@ public:
     virtual void setItems(const ItemsList &newItems);
     virtual void showItem(ItemInfo *item);
 
+    virtual QPair<bool, bool> updateDisenchantButtonsState(bool includeUniques, bool includeSets, ItemsList *items = 0);
+    virtual QPair<bool, bool> updateUpgradeButtonsState(ItemsList *items = 0);
+
+    virtual void disenchantAllItems(bool toShards, bool upgradeToCrystals, bool eatSignets, bool includeUniques, bool includeSets, ItemsList *items = 0);
+
 public slots:
     // these 8 are connected to main menu actions
     void previous10Pages() { left10Clicked();  }
@@ -31,6 +36,8 @@ public slots:
     void lastPage()         { emulateShiftAndInvokeMethod(&PlugyItemsSplitter::rightClicked);   }
     void next100Pages()     { emulateShiftAndInvokeMethod(&PlugyItemsSplitter::right10Clicked); }
 
+    void setApplyActionToAllPages(bool b) { _shouldApplyActionToAllPages = b; }
+
 protected:
     void keyPressEvent(QKeyEvent *keyEvent);
     void keyReleaseEvent(QKeyEvent *keyEvent);
@@ -39,27 +46,24 @@ protected:
     virtual void addItemToList(ItemInfo *item, bool currentStorage = true, bool emitSignal = true);
     virtual void removeItemFromList(ItemInfo *item, bool currentStorage = true, bool emitSignal = true);
 
-protected slots:
-    virtual void disenchantAllItems(ItemsList *items = 0);
+signals:
+    void pageChanged();
 
 private slots:
-    void updateItemsForCurrentPage(bool pageChanged = true);
+    void updateItemsForCurrentPage(bool pageChanged_ = true);
     void leftClicked();
     void rightClicked();
     void left10Clicked();
     void right10Clicked();
 
-    void applyActionToAllPagesChanged();
-
 private:
     QPushButton *_left10Button, *_leftButton, *_rightButton, *_right10Button;
     QDoubleSpinBox *_pageSpinBox;
-    QFrame *_hline;
-    QCheckBox *_applyActionToAllPagesCheckbox;
 
     quint32 _lastNotEmptyPage;
     bool _isShiftPressed;
     ItemsList _pagedItems;
+    bool _shouldApplyActionToAllPages;
 
     void emulateShiftAndInvokeMethod(void (PlugyItemsSplitter::*method)(void)) { _isShiftPressed = true; (this->*method)(); _isShiftPressed = false; }
     bool keyEventHasShift(QKeyEvent *keyEvent);

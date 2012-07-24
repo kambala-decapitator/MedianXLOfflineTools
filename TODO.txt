@@ -1,17 +1,21 @@
-- search and fix all 'TODO:' in code
-
 v0.3:
-- creation of plugy stashes and moving items around
-- export item to bbcode/html
+- finish saving of corpse/merc items
+- finish mass disenchant
+- finish gem/rune upgrade
+- add display of special unique item image (col 24 in uniqueitems.txt)
+- increase number of backups with date in file name
+- when reloading character, explicitly reload shared stashes that were modified
+
+v0.4:
+- creation of plugy stashes and moving items around (finish implementing drag & drop)
 - generate some bbcode/html report about character and/or plugy stashes contents
-- mass disenchant (dialog and multiple selection) - if not too time consuming
+- mass disenchant (multiple selection) - maybe
+- export item to bbcode/html
 
 future versions:
 - new data structure for items - QMap with item storage as a key
 - sort stashes
 - affix rlvl (and maybe names - then modify help text) support
-- items drag & drop
-- merc & corpse items
 - nice display of property 'Adds x-y ... damage'
 - unsocket items
 - show UMO properties
@@ -21,7 +25,6 @@ future versions:
 - display skill tree
 - skills allocation
 - item requirements
-- when reloading character, explicitly reload shared stashes that were modified
 - http://modsbylaz.14.forumer.com/viewtopic.php?p=424505#424505
 
 1.

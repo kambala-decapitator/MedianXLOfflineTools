@@ -6,7 +6,6 @@
 #include <QHBoxLayout>
 #include <QVBoxLayout>
 #include <QKeyEvent>
-#include <QCheckBox>
 
 #include <qmath.h>
 
@@ -21,7 +20,7 @@ bool compareItemsByPlugyPage(ItemInfo *a, ItemInfo *b)
 }
 
 
-PlugyItemsSplitter::PlugyItemsSplitter(ItemStorageTableView *itemsView, QWidget *parent) : ItemsPropertiesSplitter(itemsView, parent)
+PlugyItemsSplitter::PlugyItemsSplitter(ItemStorageTableView *itemsView, QWidget *parent) : ItemsPropertiesSplitter(itemsView, parent), _shouldApplyActionToAllPages(true)
 {
     _left10Button = new QPushButton(this);
     _leftButton = new QPushButton(this);
@@ -42,6 +41,9 @@ PlugyItemsSplitter::PlugyItemsSplitter(ItemStorageTableView *itemsView, QWidget 
     _pageSpinBox->setValue(1);
     _pageSpinBox->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
 
+    QWidget *w = new QWidget(this);
+    insertWidget(0, w);
+
     QHBoxLayout *hlayout = new QHBoxLayout;
     hlayout->addWidget(_left10Button);
     hlayout->addWidget(_leftButton);
@@ -52,19 +54,11 @@ PlugyItemsSplitter::PlugyItemsSplitter(ItemStorageTableView *itemsView, QWidget 
     hlayout->setSpacing(0);
     hlayout->setContentsMargins(QMargins());
 
-    _hline = new QFrame(this);
-    _hline->setFrameShape(QFrame::HLine);
-
-    _applyActionToAllPagesCheckbox = new QCheckBox(tr("Apply to all pages"), this);
-    _applyActionToAllPagesCheckbox->setChecked(true);
-
-    QVBoxLayout *vlayout = static_cast<QVBoxLayout *>(widget(0)->layout());
-    vlayout->insertLayout(1, hlayout);
-    vlayout->insertWidget(2, _hline);
-    vlayout->insertWidget(3, _applyActionToAllPagesCheckbox, 0, Qt::AlignCenter);
-#ifdef Q_WS_MACX
+    QVBoxLayout *vlayout = new QVBoxLayout(w);
+    vlayout->addWidget(_itemsView);
+    vlayout->addLayout(hlayout);
     vlayout->setSpacing(0);
-#endif
+    vlayout->setContentsMargins(QMargins());
 
     connect(_pageSpinBox, SIGNAL(valueChanged(double)), SLOT(updateItemsForCurrentPage()));
 
@@ -72,8 +66,6 @@ PlugyItemsSplitter::PlugyItemsSplitter(ItemStorageTableView *itemsView, QWidget 
     connect(_leftButton,    SIGNAL(clicked()), SLOT(leftClicked()));
     connect(_rightButton,   SIGNAL(clicked()), SLOT(rightClicked()));
     connect(_right10Button, SIGNAL(clicked()), SLOT(right10Clicked()));
-
-    connect(_applyActionToAllPagesCheckbox, SIGNAL(toggled(bool)), SLOT(applyActionToAllPagesChanged()));
 }
 
 void PlugyItemsSplitter::keyPressEvent(QKeyEvent *keyEvent)
@@ -137,10 +129,10 @@ void PlugyItemsSplitter::removeItemFromList(ItemInfo *item, bool currentStorage 
         _pagedItems.removeOne(item);
 }
 
-void PlugyItemsSplitter::disenchantAllItems(ItemsList *items /*= 0*/)
+void PlugyItemsSplitter::disenchantAllItems(bool toShards, bool upgradeToCrystals, bool eatSignets, bool includeUniques, bool includeSets, ItemsList *items /*= 0*/)
 {
     Q_UNUSED(items);
-    ItemsPropertiesSplitter::disenchantAllItems(_applyActionToAllPagesCheckbox->isChecked() ? &_allItems : &_pagedItems);
+    ItemsPropertiesSplitter::disenchantAllItems(toShards, upgradeToCrystals, eatSignets, includeUniques, includeSets, _shouldApplyActionToAllPages ? &_allItems : &_pagedItems);
 }
 
 bool PlugyItemsSplitter::keyEventHasShift(QKeyEvent *keyEvent)
@@ -163,6 +155,18 @@ void PlugyItemsSplitter::showItem(ItemInfo *item)
     }
 }
 
+QPair<bool, bool> PlugyItemsSplitter::updateDisenchantButtonsState(bool includeUniques, bool includeSets, ItemsList *items)
+{
+    Q_UNUSED(items);
+    return ItemsPropertiesSplitter::updateDisenchantButtonsState(includeUniques, includeSets, _shouldApplyActionToAllPages ? &_allItems : &_pagedItems);
+}
+
+QPair<bool, bool> PlugyItemsSplitter::updateUpgradeButtonsState(ItemsList *items)
+{
+    Q_UNUSED(items);
+    return ItemsPropertiesSplitter::updateUpgradeButtonsState(_shouldApplyActionToAllPages ? &_allItems : &_pagedItems);
+}
+
 void PlugyItemsSplitter::setItems(const ItemsList &newItems)
 {
     _allItems = newItems;
@@ -177,7 +181,7 @@ void PlugyItemsSplitter::setItems(const ItemsList &newItems)
     updateItemsForCurrentPage(false);
 }
 
-void PlugyItemsSplitter::updateItemsForCurrentPage(bool pageChanged /*= true*/)
+void PlugyItemsSplitter::updateItemsForCurrentPage(bool pageChanged_ /*= true*/)
 {
     _pagedItems.clear();
     foreach (ItemInfo *item, _allItems)
@@ -185,10 +189,11 @@ void PlugyItemsSplitter::updateItemsForCurrentPage(bool pageChanged /*= true*/)
             _pagedItems += item;
     updateItems(_pagedItems);
 
-    applyActionToAllPagesChanged();
-
-    if (pageChanged)
+    if (pageChanged_)
+    {
         emit itemCountChanged(_allItems.size());
+        emit pageChanged();
+    }
 }
 
 void PlugyItemsSplitter::leftClicked()
@@ -217,9 +222,4 @@ void PlugyItemsSplitter::right10Clicked()
 {
     quint32 step = _isShiftPressed ? 100 : 10;
     _pageSpinBox->setValue(qCeil((_pageSpinBox->value() + 1) / step) * step);
-}
-
-void PlugyItemsSplitter::applyActionToAllPagesChanged()
-{
-    updateButtonsState(_applyActionToAllPagesCheckbox->isChecked() ? 0 : &_pagedItems);
 }

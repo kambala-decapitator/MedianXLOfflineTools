@@ -10,68 +10,16 @@
 #include "characterinfo.hpp"
 
 #include <QMenu>
-#include <QGroupBox>
-#include <QPushButton>
-#include <QCheckBox>
-#include <QHBoxLayout>
-#include <QVBoxLayout>
-#include <QGridLayout>
 
 #ifndef QT_NO_DEBUG
 #include <QDebug>
 #endif
 
 
-ItemsPropertiesSplitter::ItemsPropertiesSplitter(ItemStorageTableView *itemsView, QWidget *parent /*= 0*/, bool createChildren /*= true*/) : QSplitter(Qt::Horizontal, parent), _itemsView(itemsView),
-    _propertiesWidget(new PropertiesViewerWidget(parent))
+ItemsPropertiesSplitter::ItemsPropertiesSplitter(ItemStorageTableView *itemsView, QWidget *parent /*= 0*/) : QSplitter(Qt::Horizontal, parent), _itemsView(itemsView), _propertiesWidget(new PropertiesViewerWidget(parent))
 {
-    QWidget *w = new QWidget(this);
-    addWidget(w);
+    addWidget(_itemsView);
     addWidget(_propertiesWidget);
-
-    QVBoxLayout *vlayout = new QVBoxLayout(w);
-    vlayout->addWidget(_itemsView);
-
-    if (createChildren)
-    {
-        _disenchantBox = new QGroupBox(tr("Disenchant uniques/sets here to:"), this);
-
-        _disenchantToShardsButton = new QPushButton(tr("Arcane Shards"), _disenchantBox);
-        _upgradeToCrystalsCheckbox = new QCheckBox(tr("Upgrade to Crystals"), _disenchantBox);
-        _upgradeToCrystalsCheckbox->setChecked(true);
-
-        _disenchantToSignetButton = new QPushButton(tr("Signets of Learning"), _disenchantBox);
-        _eatSignetsCheckbox = new QCheckBox(tr("Eat Signets"), _disenchantBox);
-        _eatSignetsCheckbox->setChecked(true);
-
-        connect(_disenchantToShardsButton, SIGNAL(clicked()), SLOT(disenchantAllItems()));
-        connect(_disenchantToSignetButton, SIGNAL(clicked()), SLOT(disenchantAllItems()));
-
-        QGridLayout *disenchantGridLayout = new QGridLayout(_disenchantBox);
-        disenchantGridLayout->addWidget(_disenchantToShardsButton, 0, 0);
-        disenchantGridLayout->addWidget(_upgradeToCrystalsCheckbox, 1, 0, Qt::AlignCenter);
-        disenchantGridLayout->addWidget(_disenchantToSignetButton, 0, 1);
-        disenchantGridLayout->addWidget(_eatSignetsCheckbox, 1, 1, Qt::AlignCenter);
-
-        _upgradeBox = new QGroupBox(tr("Upgrade here all:"), this);
-        _upgradeGemsButton = new QPushButton(tr("Gems"), _upgradeBox);
-        _upgradeRunesButton = new QPushButton(tr("Runes"), _upgradeBox);
-        _upgradeBothButton = new QPushButton(tr("Both"), _upgradeBox);
-
-        QHBoxLayout *upgradeBoxLayout = new QHBoxLayout(_upgradeBox);
-        upgradeBoxLayout->addWidget(_upgradeGemsButton);
-        upgradeBoxLayout->addWidget(_upgradeRunesButton);
-        upgradeBoxLayout->addWidget(_upgradeBothButton);
-
-        vlayout->addWidget(_disenchantBox);
-        vlayout->addWidget(_upgradeBox);
-    }
-    else
-    {
-        _disenchantBox = _upgradeBox = 0;
-        _disenchantToShardsButton = _disenchantToSignetButton = _upgradeGemsButton = _upgradeRunesButton = _upgradeBothButton = 0;
-        _upgradeToCrystalsCheckbox = _eatSignetsCheckbox = 0;
-    }
 
     createItemActions();
 
@@ -135,34 +83,32 @@ void ItemsPropertiesSplitter::setItems(const ItemsList &newItems)
 {
     _allItems = newItems;
     updateItems(_allItems);
-
-    updateButtonsState();
 }
 
-void ItemsPropertiesSplitter::updateButtonsState(ItemsList *items /*= 0*/)
-{
-    updateDisenchantButtonsState(items);
-    updateUpgradeButtonsState(items);
-}
-
-void ItemsPropertiesSplitter::updateDisenchantButtonsState(ItemsList *items /*= 0*/)
+QPair<bool, bool> ItemsPropertiesSplitter::updateDisenchantButtonsState(bool includeUniques, bool includeSets, ItemsList *items /*= 0*/)
 {
     bool allowShards = false, allowSignets = false;
-    foreach (ItemInfo *item, items ? *items : _allItems)
+    if (includeUniques || includeSets)
     {
-        if (!allowShards)
-            allowShards = ItemDataBase::canDisenchantIntoArcaneShards(item);
-        if (!allowSignets)
-            allowSignets = ItemDataBase::canDisenchantIntoSignetOfLearning(item);
-        if (allowShards && allowSignets)
-            break;
+        foreach (ItemInfo *item, items ? *items : _allItems)
+        {
+            if ((includeUniques && item->quality == Enums::ItemQuality::Unique) || (includeSets && item->quality == Enums::ItemQuality::Set))
+            {
+                if (!allowShards)
+                    allowShards = ItemDataBase::canDisenchantIntoArcaneShards(item);
+                if (!allowSignets)
+                    allowSignets = ItemDataBase::canDisenchantIntoSignetOfLearning(item);
+                if (allowShards && allowSignets)
+                    break;
+            }
+        }
     }
-    _disenchantToShardsButton->setEnabled(allowShards);
-    _disenchantToSignetButton->setEnabled(allowSignets);
+    return qMakePair(allowShards, allowSignets);
 }
 
-void ItemsPropertiesSplitter::updateUpgradeButtonsState(ItemsList *items /*= 0*/)
+QPair<bool, bool> ItemsPropertiesSplitter::updateUpgradeButtonsState(ItemsList *items /*= 0*/)
 {
+    return qMakePair(false, false);
 }
 
 void ItemsPropertiesSplitter::updateItems(const ItemsList &newItems)
@@ -364,22 +310,21 @@ void ItemsPropertiesSplitter::removeItemFromList(ItemInfo *item, bool currentSto
         emit itemsChanged();
 }
 
-void ItemsPropertiesSplitter::disenchantAllItems(ItemsList *items /*= 0*/)
+void ItemsPropertiesSplitter::disenchantAllItems(bool toShards, bool upgradeToCrystals, bool eatSignets, bool includeUniques, bool includeSets, ItemsList *items /*= 0*/)
 {
-    bool toShards = sender() == _disenchantToShardsButton;
     ItemInfo *disenchantedItem = ItemDataBase::loadItemFromFile(toShards ? "arcane_shard" : "signet_of_learning");
     ItemsList &items_ = items ? *items : _allItems;
     foreach (ItemInfo *item, items_)
     {
         if ((toShards && ItemDataBase::canDisenchantIntoArcaneShards(item)) || (!toShards && ItemDataBase::canDisenchantIntoSignetOfLearning(item)))
         {
-            // if (!toShards && _eatSignetsCheckbox->isChecked()) // TODO: don't create new items in this case
+            // if (!toShards && eatSignets) // TODO: don't create new items in this case
             disenchantItemIntoItem(item, disenchantedItem, false);
         }
     }
     delete disenchantedItem;
 
-    if (toShards && _upgradeToCrystalsCheckbox->isChecked())
+    if (toShards && upgradeToCrystals)
     {
         int shards = std::count_if(items_.constBegin(), items_.constEnd(), isArcaneShard);
         qDebug() << shards << "shards found";
@@ -389,13 +334,6 @@ void ItemsPropertiesSplitter::disenchantAllItems(ItemsList *items /*= 0*/)
         }
     }
 
-    if (toShards || !isUltimative())
-    {
-        _disenchantToShardsButton->setDisabled(true);
-        _disenchantToSignetButton->setDisabled(true);
-    }
-    else // TUs may leave after disenchanting to signets in Ultimative
-        updateDisenchantButtonsState();
     emit itemsChanged();
 }
 

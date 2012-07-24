@@ -8,9 +8,13 @@
 
 
 class ItemsPropertiesSplitter;
+
 class QTabWidget;
 class QCloseEvent;
 class QModelIndex;
+class QGroupBox;
+class QPushButton;
+class QCheckBox;
 
 class ItemsViewerDialog : public QDialog
 {
@@ -60,11 +64,28 @@ private slots:
     void tabChanged(int tabIndex);
     void itemCountChangedInCurrentTab(int newCount);
     void decreaseItemCount();
-    //int storageItemsModified(int storage);
+
+    void applyActionToAllPagesChanged(bool b);
+    void updateButtonsState();
+    void updateDisenchantButtonsState();
+    void updateUpgradeButtonsState();
+
+    void disenchantAllItems();
 
 private:
     QTabWidget *_tabWidget;
     quint64 _itemsTotal;
+
+    QGroupBox *_itemManagementBox;
+    QGroupBox *_disenchantBox;
+    QPushButton *_disenchantToShardsButton, *_disenchantToSignetButton;
+    QCheckBox *_upgradeToCrystalsCheckbox, *_eatSignetsCheckbox;
+    QCheckBox *_uniquesCheckbox, *_setsCheckbox;
+
+    QGroupBox *_upgradeBox;
+    QPushButton *_upgradeGemsButton, *_upgradeRunesButton, *_upgradeBothButton;
+
+    QCheckBox *_applyActionToAllPagesCheckbox;
 
     void loadSettings();
 
