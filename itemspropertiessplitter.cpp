@@ -96,8 +96,6 @@ void ItemsPropertiesSplitter::itemSelected(const QModelIndex &index)
 {
     ItemInfo *item = _itemsModel->itemAtIndex(index);
     _propertiesWidget->showItem(item);
-    if (item)
-    qDebug() << ItemDataBase::Items()->value(item->itemType).typeString;
 
     // correctly disable hotkeys
     _itemActions[DisenchantShards]->setEnabled(ItemDataBase::canDisenchantIntoArcaneShards(item));

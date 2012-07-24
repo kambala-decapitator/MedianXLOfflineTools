@@ -405,7 +405,7 @@ QString ItemDataBase::completeItemName(ItemInfo *item, bool shouldUseColor, bool
     QString specialName;
     if (item->quality == Enums::ItemQuality::Set)
     {
-        const SetItemInfo &setItem = Sets()->value(item->setOrUniqueId);
+        const SetItemInfo &setItem = Sets()->operator[](item->setOrUniqueId);
         specialName = setItem.itemName;
         if (!shouldUseColor)
             specialName += QString(" [%1]").arg(setItem.setName);
@@ -607,7 +607,7 @@ bool ItemDataBase::canStoreItemAt(quint8 row, quint8 col, const QByteArray &stor
 
 bool ItemDataBase::isClassCharm(const QByteArray &itemType)
 {
-    return Items()->value(itemType).typeString.startsWith("ara");
+    return Items()->operator[](itemType).typeString.startsWith("ara");
 }
 
 bool ItemDataBase::isClassCharm(ItemInfo *item)
@@ -617,7 +617,7 @@ bool ItemDataBase::isClassCharm(ItemInfo *item)
 
 bool ItemDataBase::isUberCharm(ItemInfo *item)
 {
-    return ItemParser::itemTypeInheritsFromType(Items()->value(item->itemType).typeString, "char");
+    return ItemParser::itemTypeInheritsFromType(Items()->operator[](item->itemType).typeString, "char");
 }
 
 bool ItemDataBase::isGenericSocketable(ItemInfo *item)
