@@ -49,7 +49,8 @@ ItemStorageTableModel *ItemStorageTableView::model() const
 void ItemStorageTableView::setCellSpanForItem(ItemInfo *item)
 {
     const ItemBase &itemBase = ItemDataBase::Items()->operator[](item->itemType);
-    setSpan(item->row, item->column, itemBase.height, itemBase.width);
+    if (!(rowSpan(item->row, item->column) == 1 && itemBase.height == 1 && columnSpan(item->row, item->column) == 1 && itemBase.width == 1))
+        setSpan(item->row, item->column, itemBase.height, itemBase.width);
 }
 
 void ItemStorageTableView::keyPressEvent(QKeyEvent *event)
@@ -70,7 +71,8 @@ void ItemStorageTableView::dragEnterEvent(QDragEnterEvent *event)
     if (!model_->dragOriginIndex().isValid())
     {
         model_->setDragOriginIndex(index);
-        setSpan(index.row(), index.column(), 1, 1);
+        if (rowSpan(index.row(), index.column()) > 1 || columnSpan(index.row(), index.column()) > 1)
+            setSpan(index.row(), index.column(), 1, 1);
     }
     selectionModel()->clearSelection();
 

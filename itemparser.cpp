@@ -246,7 +246,7 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
                         for (; iter != rwHash->end() && iter.key() == rwKey; ++iter)
                         {
                             const RunewordInfo &rwInfo = iter.value();
-                            if (itemTypeInheritsFromTypes(itemBase.typeString, rwInfo.allowedItemTypes))
+                            if (itemTypesInheritFromTypes(itemBase.types, rwInfo.allowedItemTypes))
                             {
                                 item->rwName = rwInfo.name;
                                 break;
@@ -424,9 +424,9 @@ QString ItemParser::itemStorageAndCoordinatesString(const QString &text, ItemInf
     return text.arg(ItemsViewerDialog::tabNameAtIndex(ItemsViewerDialog::tabIndexFromItemStorage(item->storage))).arg(item->row + 1).arg(item->column + 1).arg(item->plugyPage ? item->plugyPage : item->whereEquipped);
 }
 
-bool ItemParser::itemTypeInheritsFromType(const QByteArray &itemType, const QByteArray &allowedItemType)
+bool ItemParser::itemTypesInheritFromType(const QList<QByteArray> &itemTypes, const QByteArray &allowedItemType)
 {
-    return itemTypeInheritsFromTypes(itemType, QList<QByteArray>() << allowedItemType);
+    return itemTypesInheritFromTypes(itemTypes, QList<QByteArray>() << allowedItemType);
 }
 
 bool ItemParser::itemTypeInheritsFromTypes(const QByteArray &itemType, const QList<QByteArray> &allowedItemTypes)

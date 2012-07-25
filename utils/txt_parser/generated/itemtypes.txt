@@ -50,7 +50,7 @@ bswd	swor
 qmac	mace,ct1w
 qstf	staf,ct2w
 arae	char
-qham	hamm,ct1w
+qham	hamm
 blun	mele
 wand	rod
 scrd	mele

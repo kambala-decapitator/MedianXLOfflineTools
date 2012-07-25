@@ -7,7 +7,6 @@
 
 
 class QDataStream;
-//class QString;
 class ReverseBitReader;
 
 class ItemParser
@@ -21,14 +20,15 @@ public:
     static QString parseItemsToBuffer(quint16 itemsTotal, QDataStream &inputDataStream, const QByteArray &bytes, const QString &corruptedItemFormat, ItemsList *itemsBuffer);
     static ItemInfo *parseItem(QDataStream &inputDataStream, const QByteArray &bytes);
     static PropertiesMultiMap parseItemProperties(ReverseBitReader &bitReader, ItemInfo::ParsingStatus *status);
-    static bool itemTypeInheritsFromType(const QByteArray &itemType, const QByteArray &allowedItemType);
+
+    static bool itemTypesInheritFromType(const QList<QByteArray> &itemTypes, const QByteArray &allowedItemType);
     static bool itemTypeInheritsFromTypes(const QByteArray &itemType, const QList<QByteArray> &allowedItemTypes);
+    static bool itemTypesInheritFromTypes(const QList<QByteArray> &itemTypes, const QList<QByteArray> &allowedItemTypes);
 
     static void writeItems(const ItemsList &items, QDataStream &ds);
     static QString itemStorageAndCoordinatesString(const QString &text, ItemInfo *item);
 
 private:
-    static bool itemTypesInheritFromTypes(const QList<QByteArray> &itemTypes, const QList<QByteArray> &allowedItemTypes);
     static QString mysticOrbReadableProperty(const QString &fullDescription);
 };
 

@@ -142,10 +142,11 @@ struct ItemBase
     Enums::ItemTypeGeneric::ItemTypeGenericEnum genericType;
     bool isStackable;
     quint16 rlvl;
-    QByteArray imageName, typeString;
+    QByteArray imageName;
+    QList<QByteArray> types;
     qint8 socketableType, classCode;
 
-    ItemBase() : imageName(0), typeString(0) {}
+//    ItemBase() : imageName(0), typeString(0) {}
 };
 
 struct ItemPropertyTxt
@@ -179,6 +180,7 @@ struct UniqueItemInfo
 {
     QString name;
     quint16 rlvl;
+    QByteArray imageName;
 };
 
 struct MysticOrb

@@ -1,7 +1,8 @@
 v0.3:
-- finish saving of corpse/merc items
+- get itemtype from armor/weapons/misc.txt
 - finish mass disenchant
 - finish gem/rune upgrade
+- finish saving of corpse/merc items
 - add display of special unique item image (col 24 in uniqueitems.txt)
 - increase number of backups with date in file name
 - when reloading character, explicitly reload shared stashes that were modified

@@ -13,7 +13,7 @@
 
 bool isRWInGear(ItemInfo *item, const QByteArray &rune, const QByteArray &allowedItemType)
 {
-    if (item->isRW && item->location == Enums::ItemLocation::Equipped && ItemParser::itemTypeInheritsFromType(ItemDataBase::Items()->operator[](item->itemType).typeString, allowedItemType))
+    if (item->isRW && item->location == Enums::ItemLocation::Equipped && ItemParser::itemTypesInheritFromType(ItemDataBase::Items()->operator[](item->itemType).types, allowedItemType))
     {
         const RunewordHash *const rwHash = ItemDataBase::RW();
         RunewordKeyPair rwKey = qMakePair(rune, QByteArray());
@@ -158,7 +158,7 @@ bool isArcaneShard(ItemInfo *item)
 
 bool isSacred(ItemInfo *item)
 {
-    return ItemParser::itemTypeInheritsFromTypes(ItemDataBase::Items()->operator[](item->itemType).typeString, QList<QByteArray>() << "ct1a" << "ct2a" << "ct1w" << "ct2w");
+    return ItemParser::itemTypesInheritFromTypes(ItemDataBase::Items()->operator[](item->itemType).types, QList<QByteArray>() << "ct1a" << "ct2a" << "ct1w" << "ct2w");
 }
 
 bool isCharacterOrb(const QByteArray &itemType)

@@ -76,7 +76,7 @@ private:
     QTabWidget *_tabWidget;
     quint64 _itemsTotal;
 
-    QGroupBox *_itemManagementBox;
+    QWidget *_itemManagementWidget;
     QGroupBox *_disenchantBox;
     QPushButton *_disenchantToShardsButton, *_disenchantToSignetButton;
     QCheckBox *_upgradeToCrystalsCheckbox, *_eatSignetsCheckbox;

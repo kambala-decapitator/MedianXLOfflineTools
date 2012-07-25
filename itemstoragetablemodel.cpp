@@ -62,7 +62,13 @@ QVariant ItemStorageTableModel::data(const QModelIndex &index, int role) const
         {
             const ItemBase &itemBase = ItemDataBase::Items()->operator[](item->itemType);
             QString imageName = item->itemType == "jew" ? "invjw" : itemBase.imageName; // quick hack for jewel
-            if (item->variableGraphicIndex && QRegExp("\\d$").indexIn(imageName) == -1) // some items already have correct name despite the variableGraphicIndex (e.g. Assur's Bane)
+            if (item->quality == Enums::ItemQuality::Unique)
+            {
+                const UniqueItemInfo &uniqueInfo = ItemDataBase::Uniques()->operator[](item->setOrUniqueId);
+                if (!uniqueInfo.imageName.isEmpty())
+                    imageName = uniqueInfo.imageName;
+            }
+            else if (item->variableGraphicIndex && QRegExp("\\d$").indexIn(imageName) == -1)
                 imageName += QString::number(item->variableGraphicIndex);
             QString imagePath = ResourcePathManager::pathForImageName(imageName);
 
@@ -82,7 +88,7 @@ QVariant ItemStorageTableModel::data(const QModelIndex &index, int role) const
                         QPixmap transparent(pixmap.size());
                         transparent.fill(Qt::transparent);
                         QPainter p(&transparent);
-                        p.setOpacity(0.6);
+                        p.setOpacity(0.5);
                         p.drawPixmap(0, 0, pixmap);
                         p.end();
 

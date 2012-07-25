@@ -59,7 +59,8 @@ void ItemsPropertiesSplitter::moveItem(const QModelIndex &newIndex, const QModel
     ReverseBitWriter::replaceValueInBitString(item->bitString, Enums::ItemOffsets::Row,    item->row);
     item->hasChanged = true;
 
-    _itemsView->setSpan(oldIndex.row(), oldIndex.column(), 1, 1);
+    if (_itemsView->rowSpan(oldIndex.row(), oldIndex.column()) > 1 || _itemsView->columnSpan(oldIndex.row(), oldIndex.column()) > 1)
+        _itemsView->setSpan(oldIndex.row(), oldIndex.column(), 1, 1);
     _itemsView->setCellSpanForItem(item);
     _itemsView->setCurrentIndex(newIndex);
 
@@ -303,7 +304,8 @@ void ItemsPropertiesSplitter::removeItemFromList(ItemInfo *item, bool currentSto
     if (currentStorage)
     {
         _itemsModel->removeItem(item);
-        _itemsView->setSpan(item->row, item->column, 1, 1);
+        if (_itemsView->rowSpan(item->row, item->column) > 1 || _itemsView->columnSpan(item->row, item->column) > 1)
+            _itemsView->setSpan(item->row, item->column, 1, 1);
     }
 
     if (emitSignal)

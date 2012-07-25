@@ -37,7 +37,7 @@ QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item)
 
     QString runes;
     foreach (ItemInfo *socketable, item->socketablesInfo)
-        if (ItemDataBase::Items()->operator[](socketable->itemType).typeString == "rune")
+        if (ItemDataBase::Items()->operator[](socketable->itemType).types.first() == "rune")
             runes += ItemDataBase::Socketables()->operator[](socketable->itemType).letter;
     if (!runes.isEmpty()) // gem-/jewelwords don't have any letters
         itemDescription += QString("\n'%1'").arg(runes);
@@ -101,7 +101,7 @@ QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item)
 
     // add '+50% damage to undead' if item type matches
     bool shouldAddDamageToUndeadInTheBottom = false;
-    if (ItemParser::itemTypeInheritsFromTypes(itemBase.typeString, kDamageToUndeadTypes))
+    if (ItemParser::itemTypesInheritFromTypes(itemBase.types, kDamageToUndeadTypes))
     {
         if (allProps.contains(Enums::ItemProperties::DamageToUndead))
             allProps[Enums::ItemProperties::DamageToUndead].value += 50;

@@ -111,7 +111,7 @@ sub statIdsFromPropertyStat
 }
 sub statIdFromPropertyStat { &statIdsFromPropertyStat($_[0], 0) }
 
-my $uniques = parsetxt("uniqueitems.txt", _autoindex=>"0", iName=>"0", rlvl=>7);
+my $uniques = parsetxt("uniqueitems.txt", _autoindex=>"0", iName=>"0", rlvl=>7, image=>23);
 &tblExpandArray($uniques, "iName");
 
 my $sets = parsetxt("setitems.txt",_autoindex=>"0", iIName=>"0", iSName=>"1", '!_lodSet' => {col => 6, val => qr/^old LoD$/});
@@ -130,9 +130,9 @@ for my $setElement (@$sets)
 }
 
 my $itemName = 'name';
-my $armorTypes = parsetxt("armor.txt", $itemName=>"0", "#code"=>"18", $nameStr=>19, w=>"29", h=>"30", type=>49, rlvl=>15, image => 35);
-my $weaponTypes = parsetxt("weapons.txt", $itemName=>"0", "#code"=>"3", $nameStr=>5, w=>"41", h=>"42", type=>1, stackable=>43, rlvl=>28, image => 48);
-my $miscTypes = parsetxt("misc.txt", $itemName=>"0", "#code"=>"18", $nameStr=>20, $spellDescStr=>68, w=>"22", h=>"23", type=>37, stackable=>48, rlvl=>8, image => 28);
+my $armorTypes = parsetxt("armor.txt", $itemName=>"0", "#code"=>"18", $nameStr=>19, w=>"29", h=>"30", type=>49, type2=>50, rlvl=>15, image => 35);
+my $weaponTypes = parsetxt("weapons.txt", $itemName=>"0", "#code"=>"3", $nameStr=>5, w=>"41", h=>"42", type=>1, type2=>2, stackable=>43, rlvl=>28, image => 48);
+my $miscTypes = parsetxt("misc.txt", $itemName=>"0", "#code"=>"18", $nameStr=>20, $spellDescStr=>68, w=>"22", h=>"23", type=>37, type2=>38, stackable=>48, rlvl=>8, image => 28);
 &tblExpandHash($_, $itemName) for ($armorTypes, $weaponTypes, $miscTypes);
 
 my $skills = parsetxt("skills.txt", _index=>"1", "dbgname"=>"0", "internalName"=>"3", "class"=>"2", "srvmissile"=>"15", "srvmissilea"=>"18", "srvmissileb"=>"19", "srvmissilec"=>"20", "SrcDam"=>"220");
@@ -252,7 +252,9 @@ for my $ref ($armorTypes, $weaponTypes, $miscTypes)
         next unless defined $hashRef->{w};
 
         my $type = $hashRef->{type};
-        printf $out "%s\t%s\t%s\t%d\t%d\t%s\t%d\t%d\t%s\t%s\t", $itemCode, $hashRef->{$itemName}, ($hashRef->{$spellDescStr} // ''), $hashRef->{w}, $hashRef->{h}, $itemType, ($hashRef->{stackable} // 0), ($hashRef->{rlvl} // 0), $hashRef->{image}, $type;
+        printf $out "%s\t%s\t%s\t%d\t%d\t%s\t%d\t%d\t%s\t%s", $itemCode, $hashRef->{$itemName}, ($hashRef->{$spellDescStr} // ''), $hashRef->{w}, $hashRef->{h}, $itemType, ($hashRef->{stackable} // 0), ($hashRef->{rlvl} // 0), $hashRef->{image}, $type;
+        print $out ",", $hashRef->{type2} if defined $hashRef->{type2};
+        print $out "\t";
 
         for my $itemName (keys %$itemTypes) # find which class it belongs to
         {
@@ -271,11 +273,11 @@ for my $ref ($armorTypes, $weaponTypes, $miscTypes)
 close $out;
 
 open $out, ">", "$prefix/uniques.txt";
-print $out "#index\titem\trlvl\n";
+print $out "#index\titem\trlvl\timage\n";
 my $count = -1;
 for my $hashRef (@$uniques)
 {
-    print $out "$count\t$hashRef->{$realNameField}\t".($hashRef->{rlvl} // 0)."\n" if defined $hashRef->{$realNameField};
+    printf $out "%d\t%s\t%d\t%s\n", $count, $hashRef->{$realNameField}, $hashRef->{rlvl}, ($hashRef->{image} // '') if defined $hashRef->{$realNameField};
     $count++;
 }
 close $out;

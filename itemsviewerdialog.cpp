@@ -8,6 +8,7 @@
 #include "propertiesviewerwidget.h"
 #include "itemparser.h"
 #include "characterinfo.hpp"
+#include "kexpandablegroupbox/kexpandablegroupbox.h"
 
 #include <QTabWidget>
 #include <QHBoxLayout>
@@ -29,15 +30,19 @@
 const int ItemsViewerDialog::kCellSize = 32;
 const QList<int> ItemsViewerDialog::kRows = QList<int>() << 11 << 6 << 8 << 10 << 10 << 10 << 10;
 
-ItemsViewerDialog::ItemsViewerDialog(const QHash<int, bool> &plugyStashesExistenceHash, QWidget *parent) : QDialog(parent), _tabWidget(new QTabWidget(this)), _itemManagementBox(new QGroupBox(tr("Item management"), this))
+ItemsViewerDialog::ItemsViewerDialog(const QHash<int, bool> &plugyStashesExistenceHash, QWidget *parent) : QDialog(parent), _tabWidget(new QTabWidget(this)), _itemManagementWidget(new QWidget(this))
 {
     setAttribute(Qt::WA_DeleteOnClose);
     setWindowFlags(windowFlags() & ~Qt::WindowContextHelpButtonHint);
 
+    KExpandableGroupBox *expandableBox = new KExpandableGroupBox(tr("Item management"), this);
+    expandableBox->setAnimateExpansion(false);
+    expandableBox->setWidget(_itemManagementWidget);
+
     // main layout
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->addWidget(_tabWidget);
-    mainLayout->addWidget(_itemManagementBox);
+    mainLayout->addWidget(expandableBox);
 
     // tabwidget setup
     for (int i = GearIndex; i <= LastIndex; ++i)
@@ -75,10 +80,10 @@ ItemsViewerDialog::ItemsViewerDialog(const QHash<int, bool> &plugyStashesExisten
     }
 
     // item management groupbox setup
-    _itemManagementBox->setDisabled(true);
+    _itemManagementWidget->setDisabled(true);
 
     // disenchant box setup
-    _disenchantBox = new QGroupBox(tr("Disenchant items here to:"), _itemManagementBox);
+    _disenchantBox = new QGroupBox(tr("Mass Disenchant"), _itemManagementWidget);
 
     _disenchantToShardsButton = new QPushButton(tr("Arcane Shards"), _disenchantBox);
     _upgradeToCrystalsCheckbox = new QCheckBox(tr("Upgrade to Crystals"), _disenchantBox);
@@ -92,21 +97,34 @@ ItemsViewerDialog::ItemsViewerDialog(const QHash<int, bool> &plugyStashesExisten
     _eatSignetsCheckbox->setChecked(true);
     _setsCheckbox->setChecked(true);
 
+    QGroupBox *box = new QGroupBox(tr("Disenchant:"), this);
+    QHBoxLayout *hlayout = new QHBoxLayout(box);
+    hlayout->addWidget(_uniquesCheckbox);
+    hlayout->addStretch();
+    hlayout->addWidget(_setsCheckbox);
+
     connect(_disenchantToShardsButton, SIGNAL(clicked()), SLOT(disenchantAllItems()));
     connect(_disenchantToSignetButton, SIGNAL(clicked()), SLOT(disenchantAllItems()));
     connect(_uniquesCheckbox, SIGNAL(toggled(bool)), SLOT(updateButtonsState()));
     connect(   _setsCheckbox, SIGNAL(toggled(bool)), SLOT(updateButtonsState()));
 
-    QGridLayout *disenchantGridLayout = new QGridLayout(_disenchantBox);
+    QVBoxLayout *vboxLayout = new QVBoxLayout(_disenchantBox);
+    vboxLayout->addWidget(box);
+
+    box = new QGroupBox(tr("To:"), this);
+
+    QGridLayout *disenchantGridLayout = new QGridLayout(box);
     disenchantGridLayout->addWidget(_disenchantToShardsButton, 0, 0);
     disenchantGridLayout->addWidget(_upgradeToCrystalsCheckbox, 1, 0, Qt::AlignCenter);
-    disenchantGridLayout->addWidget(_uniquesCheckbox, 2, 0, Qt::AlignCenter);
+//    disenchantGridLayout->addWidget(_uniquesCheckbox, 2, 0, Qt::AlignCenter);
     disenchantGridLayout->addWidget(_disenchantToSignetButton, 0, 1);
     disenchantGridLayout->addWidget(_eatSignetsCheckbox, 1, 1, Qt::AlignCenter);
-    disenchantGridLayout->addWidget(_setsCheckbox, 2, 1, Qt::AlignCenter);
+//    disenchantGridLayout->addWidget(_setsCheckbox, 2, 1, Qt::AlignCenter);
+
+    vboxLayout->addWidget(box);
 
     // upgrade box setup
-    _upgradeBox = new QGroupBox(tr("Upgrade here all:"), _itemManagementBox);
+    _upgradeBox = new QGroupBox(tr("Upgrade here all:"), _itemManagementWidget);
     _upgradeGemsButton = new QPushButton(tr("Gems"), _upgradeBox);
     _upgradeRunesButton = new QPushButton(tr("Runes"), _upgradeBox);
     _upgradeBothButton = new QPushButton(tr("Both"), _upgradeBox);
@@ -122,12 +140,15 @@ ItemsViewerDialog::ItemsViewerDialog(const QHash<int, bool> &plugyStashesExisten
     connect(_applyActionToAllPagesCheckbox, SIGNAL(toggled(bool)), SLOT(applyActionToAllPagesChanged(bool)));
 
     // item management groupbox layout
-    QHBoxLayout *itemManagementBoxLayout = new QHBoxLayout(_itemManagementBox);
+    QHBoxLayout *itemManagementBoxLayout = new QHBoxLayout(_itemManagementWidget);
     itemManagementBoxLayout->addWidget(_disenchantBox);
     itemManagementBoxLayout->addStretch();
     itemManagementBoxLayout->addWidget(_applyActionToAllPagesCheckbox/*, 0, Qt::AlignCenter*/);
     itemManagementBoxLayout->addStretch();
     itemManagementBoxLayout->addWidget(_upgradeBox);
+
+//    _itemManagementBox->setFixedHeight(_itemManagementBox->minimumSizeHint().height());
+//    expandableBox->setFixedHeight(_itemManagementBox->height() + 20);
 
     // misc
     connect(_tabWidget, SIGNAL(currentChanged(int)), SLOT(tabChanged(int)));
@@ -170,7 +191,7 @@ void ItemsViewerDialog::reject()
 void ItemsViewerDialog::tabChanged(int tabIndex)
 {
     splitterAtIndex(tabIndex)->showFirstItem();
-    _itemManagementBox->setEnabled(tabIndex > GearIndex);
+    _itemManagementWidget->setEnabled(tabIndex > GearIndex);
     _applyActionToAllPagesCheckbox->setEnabled(isPlugyStorageIndex(tabIndex));
     if (tabIndex > GearIndex)
     {

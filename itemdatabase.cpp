@@ -82,7 +82,7 @@ QHash<QByteArray, ItemBase> *ItemDataBase::Items()
             item.isStackable = data.at(6).toUShort();
             item.rlvl = data.at(7).toUShort();
             item.imageName = data.at(8);
-            item.typeString = data.at(9);
+            item.types = data.at(9).split(',');
             item.socketableType = data.at(10).isEmpty() ? -1 : data.at(10).toShort();
             item.classCode = data.at(11).toShort();
             allItems[data.at(0)] = item;
@@ -231,7 +231,9 @@ QHash<uint, UniqueItemInfo> *ItemDataBase::Uniques()
 
             UniqueItemInfo item;
             item.name = QString::fromUtf8(data.at(1));
-            item.rlvl = data.size() > 2 ? data.at(2).toUShort() : 0;
+            item.rlvl = data.at(2).toUShort();
+            if (data.size() > 3)
+                item.imageName = data.at(3);
             allUniques[data.at(0).toUInt()] = item;
         }
         f.remove();
@@ -607,7 +609,10 @@ bool ItemDataBase::canStoreItemAt(quint8 row, quint8 col, const QByteArray &stor
 
 bool ItemDataBase::isClassCharm(const QByteArray &itemType)
 {
-    return Items()->operator[](itemType).typeString.startsWith("ara");
+    foreach (const QByteArray &type, Items()->operator[](itemType).types)
+        if (type.startsWith("ara"))
+            return true;
+    return false;
 }
 
 bool ItemDataBase::isClassCharm(ItemInfo *item)
@@ -617,7 +622,7 @@ bool ItemDataBase::isClassCharm(ItemInfo *item)
 
 bool ItemDataBase::isUberCharm(ItemInfo *item)
 {
-    return ItemParser::itemTypeInheritsFromType(Items()->operator[](item->itemType).typeString, "char");
+    return ItemParser::itemTypesInheritFromType(Items()->operator[](item->itemType).types, "char");
 }
 
 bool ItemDataBase::isGenericSocketable(ItemInfo *item)

@@ -137,7 +137,7 @@ Bow (Sacred)				qbow	bow	ct2w	0	1	rarm	larm	bowq		0	0	0	0		1	0	0	0	0	6	6	6	1	3		
 Axe (Sacred)				qaxe	axe	ct1w	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	3		0		0							weap	0
 Club (Sacred)				qclb	club	ct1w	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	3		0		0							weap	0
 Sword (Sacred)				qswd	swor	ct1w	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	3		0		0							weap	0
-Hammer (Sacred)				qham	hamm	ct1w	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	3		0		0							weap	0
+Hammer (Sacred)				qham	hamm		1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	3		0		0							weap	0
 Knife (Sacred)				qknf	knif	ct1w	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	3		0		0							weap	0
 Spear (Sacred)				qspe	spea	ct2w	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	3		0		0							weap	0
 Polearm (Sacred)				qpol	pole	ct2w	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	3		0		0							weap	0

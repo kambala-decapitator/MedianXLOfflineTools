@@ -35,7 +35,8 @@ SOURCES += main.cpp \
            qtsingleapplication/qtlocalpeer.cpp \
            experienceindicatorgroupbox.cpp \
            plugyitemssplitter.cpp \
-           gearitemssplitter.cpp
+           gearitemssplitter.cpp \
+           kexpandablegroupbox/kexpandablegroupbox.cpp
 
 HEADERS += medianxlofflinetools.h \
            resurrectpenaltydialog.h \
@@ -68,7 +69,8 @@ HEADERS += medianxlofflinetools.h \
            messagecheckbox.h \
            experienceindicatorgroupbox.h \
            plugyitemssplitter.h \
-           gearitemssplitter.h
+           gearitemssplitter.h \
+           kexpandablegroupbox/kexpandablegroupbox.h
 
 FORMS += medianxlofflinetools.ui \
          resurrectpenaltydialog.ui \
