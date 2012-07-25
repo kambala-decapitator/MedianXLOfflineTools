@@ -324,18 +324,67 @@ void ItemsPropertiesSplitter::disenchantAllItems(bool toShards, bool upgradeToCr
             disenchantItemIntoItem(item, disenchantedItem, false);
         }
     }
-    delete disenchantedItem;
 
     if (toShards && upgradeToCrystals)
     {
-        int shards = std::count_if(items_.constBegin(), items_.constEnd(), isArcaneShard);
-        qDebug() << shards << "shards found";
-        if (shards >= 5)
+        int shards = std::count_if(items_.constBegin(), items_.constEnd(), isArcaneShard), shards2 = 0, shards3 = 0, shards4 = 0;
+        qDebug() << "shards" << shards;
+        if (isUltimative())
         {
-            // TODO: upgrade to crystals
+            shards2 = std::count_if(items_.constBegin(), items_.constEnd(), isArcaneShard2);
+            shards3 = std::count_if(items_.constBegin(), items_.constEnd(), isArcaneShard3);
+            shards4 = std::count_if(items_.constBegin(), items_.constEnd(), isArcaneShard4);
+            qDebug() << "shards2" << shards2 << "shards3" << shards3 << "shards4" << shards4;
+            shards += shards2 * 2 + shards3 * 3 + shards4 * 4;
+        }
+        qDebug() << shards << "shards total";
+        int crystals = shards / 5;
+        qDebug() << crystals << "crystals";
+        if (crystals)
+        {
+            Enums::ItemStorage::ItemStorageEnum storage = static_cast<Enums::ItemStorage::ItemStorageEnum>(items_.first()->storage);
+            foreach (ItemInfo *item, items_)
+            {
+                if (isArcaneShard(item) || isArcaneShard2(item) || isArcaneShard3(item) || isArcaneShard4(item))
+                    performDeleteItem(item, isItemInCurrentStorage(item), false);
+            }
+//            switch (shardsLeft)
+//            {
+//            case 0:
+//                break;
+//            case 1:
+//                break;
+//            case 2:
+//                break;
+//            case 3:
+//                break;
+//            case 4:
+//                break;
+//            }
+
+            for (int i = 0; i < crystals; ++i)
+            {
+                ItemInfo *crystal = ItemDataBase::loadItemFromFile("arcane_crystal");
+                if (!ItemDataBase::storeItemIn(crystal, storage, ItemsViewerDialog::rowsInStorageAtIndex(storage)))
+                    qDebug("fail");
+                else
+                    addItemToList(crystal, isItemInCurrentStorage(crystal), false);
+            }
+
+            int shardsLeft = shards - crystals * 5;
+            qDebug() << shardsLeft << "shardsLeft";
+            for (int i = 0; i < shardsLeft; ++i)
+            {
+                ItemInfo *shard = new ItemInfo(*disenchantedItem);
+                if (!ItemDataBase::storeItemIn(shard, storage, ItemsViewerDialog::rowsInStorageAtIndex(storage)))
+                    qDebug("fail");
+                else
+                    addItemToList(shard, isItemInCurrentStorage(shard), false);
+            }
         }
     }
 
+    delete disenchantedItem;
     emit itemsChanged();
 }
 
@@ -344,7 +393,7 @@ ItemInfo *ItemsPropertiesSplitter::disenchantItemIntoItem(ItemInfo *oldItem, Ite
     ItemsList items = ItemDataBase::itemsStoredIn(oldItem->storage, oldItem->location, oldItem->plugyPage ? &oldItem->plugyPage : 0);
     items.removeOne(oldItem);
     ItemInfo *newItemCopy = new ItemInfo(*newItem); // it's safe because there're no properties and no socketables
-    if (!ItemDataBase::canStoreItemAt(oldItem->row, oldItem->column, newItemCopy->itemType, items, ItemsViewerDialog::kRows.at(ItemsViewerDialog::tabIndexFromItemStorage(oldItem->storage))))
+    if (!ItemDataBase::canStoreItemAt(oldItem->row, oldItem->column, newItemCopy->itemType, items, ItemsViewerDialog::rowsInStorageAtIndex(oldItem->storage)))
     {
         ERROR_BOX("If you see this text (which you shouldn't), please tell me which item you've just tried to disenchant");
         delete newItemCopy;
@@ -359,11 +408,11 @@ ItemInfo *ItemsPropertiesSplitter::disenchantItemIntoItem(ItemInfo *oldItem, Ite
 
     // update bits
     bool isPlugyStorage = newItemCopy->storage == Enums::ItemStorage::PersonalStash || newItemCopy->storage == Enums::ItemStorage::SharedStash || newItemCopy->storage == Enums::ItemStorage::HCStash;
-    ReverseBitWriter::replaceValueInBitString(newItemCopy->bitString, Enums::ItemOffsets::Storage,    isPlugyStorage ? Enums::ItemStorage::Stash : newItemCopy->storage);
+    ReverseBitWriter::replaceValueInBitString(newItemCopy->bitString, Enums::ItemOffsets::Storage, isPlugyStorage ? Enums::ItemStorage::Stash : newItemCopy->storage);
     ReverseBitWriter::replaceValueInBitString(newItemCopy->bitString, Enums::ItemOffsets::Column,     newItemCopy->column);
     ReverseBitWriter::replaceValueInBitString(newItemCopy->bitString, Enums::ItemOffsets::Row,        newItemCopy->row);
-    ReverseBitWriter::replaceValueInBitString(newItemCopy->bitString, Enums::ItemOffsets::EquipIndex, newItemCopy->whereEquipped);
-    //ReverseBitWriter::replaceValueInBitString(newItem->bitString, Enums::ItemOffsets::Location, newItem->location);
+//    ReverseBitWriter::replaceValueInBitString(newItemCopy->bitString, Enums::ItemOffsets::EquipIndex, newItemCopy->whereEquipped);
+//    ReverseBitWriter::replaceValueInBitString(newItem->bitString, Enums::ItemOffsets::Location, newItem->location);
 
     //if (newItem->storage == Enums::ItemStorage::Stash)
     //{

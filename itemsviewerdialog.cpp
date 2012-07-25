@@ -91,16 +91,17 @@ ItemsViewerDialog::ItemsViewerDialog(const QHash<int, bool> &plugyStashesExisten
 //    _uniquesCheckbox = new QCheckBox(tr("Uniques"), _disenchantBox);
     _uniquesCheckbox = new QRadioButton(tr("Uniques"), _disenchantBox);
     _upgradeToCrystalsCheckbox->setChecked(true);
-    _uniquesCheckbox->setChecked(true);
+//    _uniquesCheckbox->setChecked(true);
 
     _disenchantToSignetButton = new QPushButton(tr("Signets of Learning"), _disenchantBox);
     _eatSignetsCheckbox = new QCheckBox(tr("Eat Signets"), _disenchantBox);
 //    _setsCheckbox = new QCheckBox(tr("Sets"), _disenchantBox);
     _setsCheckbox = new QRadioButton(tr("Sets"), _disenchantBox);
     _eatSignetsCheckbox->setChecked(true);
-    _setsCheckbox->setChecked(true);
+//    _setsCheckbox->setChecked(true);
 
     _bothQualitiesCheckbox = new QRadioButton(tr("Both"), _disenchantBox);
+    _bothQualitiesCheckbox->setChecked(true);
 
     QGroupBox *box = new QGroupBox(tr("Disenchant:"), this);
     QHBoxLayout *hlayout = new QHBoxLayout(box);
@@ -306,6 +307,11 @@ void ItemsViewerDialog::updateItems(const QHash<int, bool> &plugyStashesExistenc
         _tabWidget->setTabEnabled(tabIndexFromItemStorage(iter.key()), iter.value());
     
     updateWindowTitle();
+}
+
+int ItemsViewerDialog::rowsInStorageAtIndex(int storage)
+{
+    return kRows.at(storage);
 }
 
 int ItemsViewerDialog::tabIndexFromItemStorage(int storage)

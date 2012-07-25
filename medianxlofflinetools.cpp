@@ -828,8 +828,8 @@ void MedianXLOfflineTools::giveCube()
     if (!cube)
         return;
     
-    if (!ItemDataBase::storeItemIn(cube, Enums::ItemStorage::Inventory, ItemsViewerDialog::kRows.at(ItemsViewerDialog::tabIndexFromItemStorage(Enums::ItemStorage::Inventory))) &&
-        !ItemDataBase::storeItemIn(cube, Enums::ItemStorage::Stash,     ItemsViewerDialog::kRows.at(ItemsViewerDialog::tabIndexFromItemStorage(Enums::ItemStorage::Stash))))
+    if (!ItemDataBase::storeItemIn(cube, Enums::ItemStorage::Inventory, ItemsViewerDialog::rowsInStorageAtIndex(Enums::ItemStorage::Inventory)) &&
+        !ItemDataBase::storeItemIn(cube, Enums::ItemStorage::Stash,     ItemsViewerDialog::rowsInStorageAtIndex(Enums::ItemStorage::Stash)))
     {
         ERROR_BOX(tr("You have no free space in inventory and stash to store the Cube"));
         delete cube;
@@ -837,15 +837,15 @@ void MedianXLOfflineTools::giveCube()
     }
 
     // predefined position is (0,0) in inventory
-    if (cube->column)
-        ReverseBitWriter::replaceValueInBitString(cube->bitString, Enums::ItemOffsets::Column, cube->column);
-    if (cube->row)
-        ReverseBitWriter::replaceValueInBitString(cube->bitString, Enums::ItemOffsets::Row, cube->row);
+//    if (cube->column)
+//        ReverseBitWriter::replaceValueInBitString(cube->bitString, Enums::ItemOffsets::Column, cube->column);
+//    if (cube->row)
+//        ReverseBitWriter::replaceValueInBitString(cube->bitString, Enums::ItemOffsets::Row, cube->row);
 
     QHash<int, bool> plugyStashesExistenceHash = getPlugyStashesExistenceHash();
     if (cube->storage != Enums::ItemStorage::Inventory && plugyStashesExistenceHash[Enums::ItemStorage::PersonalStash])
     {
-        ReverseBitWriter::replaceValueInBitString(cube->bitString, Enums::ItemOffsets::Storage, cube->storage);
+//        ReverseBitWriter::replaceValueInBitString(cube->bitString, Enums::ItemOffsets::Storage, cube->storage);
 
         ItemInfo *plugyCube = new ItemInfo(*cube);
         plugyCube->storage = Enums::ItemStorage::PersonalStash;

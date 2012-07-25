@@ -62,13 +62,17 @@ QVariant ItemStorageTableModel::data(const QModelIndex &index, int role) const
         {
             const ItemBase &itemBase = ItemDataBase::Items()->operator[](item->itemType);
             QString imageName = item->itemType == "jew" ? "invjw" : itemBase.imageName; // quick hack for jewel
+            bool isUniqueImage = false;
             if (item->quality == Enums::ItemQuality::Unique)
             {
                 const UniqueItemInfo &uniqueInfo = ItemDataBase::Uniques()->operator[](item->setOrUniqueId);
                 if (!uniqueInfo.imageName.isEmpty())
+                {
                     imageName = uniqueInfo.imageName;
+                    isUniqueImage = true;
+                }
             }
-            else if (item->variableGraphicIndex && QRegExp("\\d$").indexIn(imageName) == -1)
+            if (!isUniqueImage && item->variableGraphicIndex && QRegExp("\\d$").indexIn(imageName) == -1)
                 imageName += QString::number(item->variableGraphicIndex);
             QString imagePath = ResourcePathManager::pathForImageName(imageName);
 

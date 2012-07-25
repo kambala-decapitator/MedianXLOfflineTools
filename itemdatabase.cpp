@@ -4,6 +4,7 @@
 #include "resourcepathmanager.hpp"
 #include "itemparser.h"
 #include "characterinfo.hpp"
+#include "reversebitwriter.h"
 
 #include <QFile>
 
@@ -580,6 +581,9 @@ bool ItemDataBase::storeItemIn(ItemInfo *item, Enums::ItemStorage::ItemStorageEn
                 item->storage = storage;
                 item->row = i;
                 item->column = j;
+                ReverseBitWriter::replaceValueInBitString(item->bitString, Enums::ItemOffsets::Storage, storage > Enums::ItemStorage::Stash ? Enums::ItemStorage::Stash : storage);
+                ReverseBitWriter::replaceValueInBitString(item->bitString, Enums::ItemOffsets::Column, item->column);
+                ReverseBitWriter::replaceValueInBitString(item->bitString, Enums::ItemOffsets::Row, item->row);
                 return true;
             }
 
@@ -644,7 +648,7 @@ bool ItemDataBase::canDisenchantIntoArcaneShards(ItemInfo *item)
 bool ItemDataBase::canDisenchantIntoSignetOfLearning(ItemInfo *item)
 {
     // Ultimative prohibits disenchanting TUs into signets
-    return canDisenchant(item) && !(isUltimative() && item->quality == Enums::ItemQuality::Unique && Items()->operator[](item->itemType).genericType != Enums::ItemTypeGeneric::Misc && !isSacred(item));
+    return canDisenchant(item) && !(isUltimative() && item->quality == Enums::ItemQuality::Unique && Items()->operator[](item->itemType).genericType != Enums::ItemTypeGeneric::Misc && isTiered(item));
 }
 
 bool ItemDataBase::canDisenchant(ItemInfo *item)

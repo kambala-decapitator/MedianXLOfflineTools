@@ -121,6 +121,16 @@ bool hasChanged(ItemInfo *item)
     return item->hasChanged;
 }
 
+bool isTiered(ItemInfo *item)
+{
+    return ItemDataBase::Items()->operator[](item->itemType).types.contains("tier");
+}
+
+bool isSacred(ItemInfo *item)
+{
+    return !isTiered(item);
+}
+
 bool isClassCharm(ItemInfo *item)
 {
     return ItemDataBase::isClassCharm(item);
@@ -153,12 +163,7 @@ bool isVeneficaInGear(ItemInfo *item)
 
 bool isArcaneShard(ItemInfo *item)
 {
-    return item->itemType == "qul"; // Ultimative shards: #3^, #4^, #5^
-}
-
-bool isSacred(ItemInfo *item)
-{
-    return ItemParser::itemTypesInheritFromTypes(ItemDataBase::Items()->operator[](item->itemType).types, QList<QByteArray>() << "ct1a" << "ct2a" << "ct1w" << "ct2w");
+    return item->itemType == "qul";
 }
 
 bool isCharacterOrb(const QByteArray &itemType)
@@ -189,4 +194,19 @@ bool isSunstoneOfElements(ItemInfo *item)
 bool isCharacterOrbOrSunstoneOfElements(ItemInfo *item)
 {
     return isCharacterOrbOrSunstoneOfElements(item->itemType);
+}
+
+bool isArcaneShard2(ItemInfo *item)
+{
+    return item->itemType == "#3^";
+}
+
+bool isArcaneShard3(ItemInfo *item)
+{
+    return item->itemType == "#4^";
+}
+
+bool isArcaneShard4(ItemInfo *item)
+{
+    return item->itemType == "#5^";
 }
