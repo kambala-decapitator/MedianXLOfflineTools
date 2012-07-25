@@ -48,6 +48,7 @@ bool isLegacyOfBlood(ItemInfo *item);
 bool isDrekavacInGear(ItemInfo *item);
 bool isVeneficaInGear(ItemInfo *item);
 bool isArcaneShard(ItemInfo *item);
+bool isSignetOfLearning(ItemInfo *item);
 // for Ultimative
 bool isCharacterOrb(const QByteArray &itemType);
 bool isSunstoneOfElements(const QByteArray &itemType);
@@ -58,5 +59,7 @@ bool isCharacterOrbOrSunstoneOfElements(ItemInfo *item);
 bool isArcaneShard2(ItemInfo *item);
 bool isArcaneShard3(ItemInfo *item);
 bool isArcaneShard4(ItemInfo *item);
+
+bool compareItemsByPlugyPage(ItemInfo *a, ItemInfo *b);
 
 #endif // HELPERS_H

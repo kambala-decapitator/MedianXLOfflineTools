@@ -166,6 +166,11 @@ bool isArcaneShard(ItemInfo *item)
     return item->itemType == "qul";
 }
 
+bool isSignetOfLearning(ItemInfo *item)
+{
+    return item->itemType == "zkq" || item->itemType == "zkc";
+}
+
 bool isCharacterOrb(const QByteArray &itemType)
 {
     return itemType == ">.<";
@@ -209,4 +214,10 @@ bool isArcaneShard3(ItemInfo *item)
 bool isArcaneShard4(ItemInfo *item)
 {
     return item->itemType == "#5^";
+}
+
+
+bool compareItemsByPlugyPage(ItemInfo *a, ItemInfo *b)
+{
+    return a->plugyPage < b->plugyPage;
 }

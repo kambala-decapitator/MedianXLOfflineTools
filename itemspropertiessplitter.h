@@ -73,13 +73,14 @@ protected:
     ItemsList _allItems;
 
     void updateItems(const ItemsList &newItems);
-    void performDeleteItem(ItemInfo *item, bool currentStorage = true, bool emitSignal = true);
+    void performDeleteItem(ItemInfo *item, bool emitSignal = true);
     ItemInfo *selectedItem(bool showError = true);
 
-    virtual void addItemToList(ItemInfo *item, bool currentStorage = true, bool emitSignal = true);
-    virtual void removeItemFromList(ItemInfo *item, bool currentStorage = true, bool emitSignal = true);
+    virtual void addItemToList(ItemInfo *item, bool emitSignal = true);
+    virtual void removeItemFromList(ItemInfo *item, bool emitSignal = true);
     ItemInfo *disenchantItemIntoItem(ItemInfo *oldItem, ItemInfo *newItem, bool emitSignal = true);
     virtual bool isItemInCurrentStorage(ItemInfo *item) const { Q_UNUSED(item); return true; }
+    virtual bool storeItemInStorage(ItemInfo *item, int storage);
 
     void createItemActions();
     QAction *separator();

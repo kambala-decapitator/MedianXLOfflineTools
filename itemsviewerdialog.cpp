@@ -89,33 +89,33 @@ ItemsViewerDialog::ItemsViewerDialog(const QHash<int, bool> &plugyStashesExisten
     _disenchantToShardsButton = new QPushButton(tr("Arcane Shards"), _disenchantBox);
     _upgradeToCrystalsCheckbox = new QCheckBox(tr("Upgrade to Crystals"), _disenchantBox);
 //    _uniquesCheckbox = new QCheckBox(tr("Uniques"), _disenchantBox);
-    _uniquesCheckbox = new QRadioButton(tr("Uniques"), _disenchantBox);
+    _uniquesRadioButton = new QRadioButton(tr("Uniques"), _disenchantBox);
     _upgradeToCrystalsCheckbox->setChecked(true);
 //    _uniquesCheckbox->setChecked(true);
 
     _disenchantToSignetButton = new QPushButton(tr("Signets of Learning"), _disenchantBox);
     _eatSignetsCheckbox = new QCheckBox(tr("Eat Signets"), _disenchantBox);
 //    _setsCheckbox = new QCheckBox(tr("Sets"), _disenchantBox);
-    _setsCheckbox = new QRadioButton(tr("Sets"), _disenchantBox);
+    _setsRadioButton = new QRadioButton(tr("Sets"), _disenchantBox);
     _eatSignetsCheckbox->setChecked(true);
 //    _setsCheckbox->setChecked(true);
 
-    _bothQualitiesCheckbox = new QRadioButton(tr("Both"), _disenchantBox);
-    _bothQualitiesCheckbox->setChecked(true);
+    _bothQualitiesRadioButton = new QRadioButton(tr("Both"), _disenchantBox);
+    _bothQualitiesRadioButton->setChecked(true);
 
     QGroupBox *box = new QGroupBox(tr("Disenchant:"), this);
     QHBoxLayout *hlayout = new QHBoxLayout(box);
-    hlayout->addWidget(_uniquesCheckbox);
+    hlayout->addWidget(_uniquesRadioButton);
     hlayout->addStretch();
-    hlayout->addWidget(_setsCheckbox);
+    hlayout->addWidget(_setsRadioButton);
     hlayout->addStretch();
-    hlayout->addWidget(_bothQualitiesCheckbox);
+    hlayout->addWidget(_bothQualitiesRadioButton);
 
     connect(_disenchantToShardsButton, SIGNAL(clicked()), SLOT(disenchantAllItems()));
     connect(_disenchantToSignetButton, SIGNAL(clicked()), SLOT(disenchantAllItems()));
-    connect(      _uniquesCheckbox, SIGNAL(toggled(bool)), SLOT(updateDisenchantButtonsState()));
-    connect(         _setsCheckbox, SIGNAL(toggled(bool)), SLOT(updateDisenchantButtonsState()));
-    connect(_bothQualitiesCheckbox, SIGNAL(toggled(bool)), SLOT(updateDisenchantButtonsState()));
+    connect(      _uniquesRadioButton, SIGNAL(toggled(bool)), SLOT(updateDisenchantButtonsState()));
+    connect(         _setsRadioButton, SIGNAL(toggled(bool)), SLOT(updateDisenchantButtonsState()));
+    connect(_bothQualitiesRadioButton, SIGNAL(toggled(bool)), SLOT(updateDisenchantButtonsState()));
 
     QVBoxLayout *vboxLayout = new QVBoxLayout(_disenchantBox);
     vboxLayout->addWidget(box);
@@ -311,7 +311,7 @@ void ItemsViewerDialog::updateItems(const QHash<int, bool> &plugyStashesExistenc
 
 int ItemsViewerDialog::rowsInStorageAtIndex(int storage)
 {
-    return kRows.at(storage);
+    return kRows.at(tabIndexFromItemStorage(storage));
 }
 
 int ItemsViewerDialog::tabIndexFromItemStorage(int storage)
@@ -363,8 +363,8 @@ void ItemsViewerDialog::updateButtonsState()
 
 void ItemsViewerDialog::updateDisenchantButtonsState()
 {
-    bool areUniquesSelected = _uniquesCheckbox->isChecked(), areSetsSelected = _setsCheckbox->isChecked();
-    if (_bothQualitiesCheckbox->isChecked())
+    bool areUniquesSelected = _uniquesRadioButton->isChecked(), areSetsSelected = _setsRadioButton->isChecked();
+    if (_bothQualitiesRadioButton->isChecked())
         areUniquesSelected = areSetsSelected = true;
     QPair<bool, bool> allowDisenchantButtons = splitterAtIndex(_tabWidget->currentIndex())->updateDisenchantButtonsState(areUniquesSelected, areSetsSelected);
     _disenchantToShardsButton->setEnabled(allowDisenchantButtons.first);
@@ -381,8 +381,10 @@ void ItemsViewerDialog::updateUpgradeButtonsState()
 
 void ItemsViewerDialog::disenchantAllItems()
 {
-    bool toShards = sender() == _disenchantToShardsButton;
-    splitterAtIndex(_tabWidget->currentIndex())->disenchantAllItems(toShards, _upgradeToCrystalsCheckbox->isChecked(), _eatSignetsCheckbox->isChecked(), _uniquesCheckbox->isChecked(), _setsCheckbox->isChecked());
+    bool toShards = sender() == _disenchantToShardsButton, areUniquesSelected = _uniquesRadioButton->isChecked(), areSetsSelected = _setsRadioButton->isChecked();
+    if (_bothQualitiesRadioButton->isChecked())
+        areUniquesSelected = areSetsSelected = true;
+    splitterAtIndex(_tabWidget->currentIndex())->disenchantAllItems(toShards, _upgradeToCrystalsCheckbox->isChecked(), _eatSignetsCheckbox->isChecked(), areUniquesSelected, areSetsSelected);
     if (toShards || !isUltimative())
     {
         _disenchantToShardsButton->setDisabled(true);

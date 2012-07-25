@@ -1,5 +1,7 @@
 #include "plugyitemssplitter.h"
 #include "itemstoragetableview.h"
+#include "itemdatabase.h"
+#include "itemsviewerdialog.h"
 
 #include <QPushButton>
 #include <QDoubleSpinBox>
@@ -11,13 +13,12 @@
 
 #include <limits>
 
+#ifndef QT_NO_DEBUG
+#include <QDebug>
+#endif
+
 
 static const QString kIconPathFormat(":/PlugyArrows/icons/plugy/%1.png");
-
-bool compareItemsByPlugyPage(ItemInfo *a, ItemInfo *b)
-{
-    return a->plugyPage < b->plugyPage;
-}
 
 
 PlugyItemsSplitter::PlugyItemsSplitter(ItemStorageTableView *itemsView, QWidget *parent) : ItemsPropertiesSplitter(itemsView, parent), _shouldApplyActionToAllPages(true)
@@ -115,24 +116,56 @@ bool PlugyItemsSplitter::isItemInCurrentStorage(ItemInfo *item) const
     return item->plugyPage == _pageSpinBox->value();
 }
 
-void PlugyItemsSplitter::addItemToList(ItemInfo *item, bool currentStorage /*= true*/, bool emitSignal /*= true*/)
+void PlugyItemsSplitter::addItemToList(ItemInfo *item, bool emitSignal /*= true*/)
 {
-    ItemsPropertiesSplitter::addItemToList(item, currentStorage, emitSignal);
-    if (currentStorage)
+    ItemsPropertiesSplitter::addItemToList(item, emitSignal);
+    if (isItemInCurrentStorage(item))
         _pagedItems.append(item);
 }
 
-void PlugyItemsSplitter::removeItemFromList(ItemInfo *item, bool currentStorage /*= true*/, bool emitSignal /*= true*/)
+void PlugyItemsSplitter::removeItemFromList(ItemInfo *item, bool emitSignal /*= true*/)
 {
-    ItemsPropertiesSplitter::removeItemFromList(item, currentStorage, emitSignal);
-    if (currentStorage)
+    ItemsPropertiesSplitter::removeItemFromList(item, emitSignal);
+    if (isItemInCurrentStorage(item))
         _pagedItems.removeOne(item);
+}
+
+bool PlugyItemsSplitter::storeItemInStorage(ItemInfo *item, int storage)
+{
+    bool result;
+    for (quint32 i = 1; i <= _lastNotEmptyPage; ++i)
+    {
+        result = ItemDataBase::storeItemIn(item, static_cast<Enums::ItemStorage::ItemStorageEnum>(storage), ItemsViewerDialog::rowsInStorageAtIndex(storage), i);
+        if (result)
+            break;
+    }
+    if (!result)
+        qDebug() << "failed to store" << ItemDataBase::Items()->operator[](item->itemType).name << "in plugy storage";
+    else
+        addItemToList(item, false);
+    return result;
 }
 
 void PlugyItemsSplitter::disenchantAllItems(bool toShards, bool upgradeToCrystals, bool eatSignets, bool includeUniques, bool includeSets, ItemsList *items /*= 0*/)
 {
-    Q_UNUSED(items);
-    ItemsPropertiesSplitter::disenchantAllItems(toShards, upgradeToCrystals, eatSignets, includeUniques, includeSets, _shouldApplyActionToAllPages ? &_allItems : &_pagedItems);
+//    Q_UNUSED(items);
+    items = _shouldApplyActionToAllPages ? &_allItems : &_pagedItems;
+    ItemsPropertiesSplitter::disenchantAllItems(toShards, upgradeToCrystals, eatSignets, includeUniques, includeSets, items);
+    if (_shouldApplyActionToAllPages)
+    {
+        if ((toShards && !upgradeToCrystals) || (!toShards && !eatSignets))
+        {
+            // move signets/shards to the beginning
+            foreach (ItemInfo *item, *items)
+            {
+                if ((toShards && isArcaneShard(item)) || (!toShards && isSignetOfLearning(item)))
+                {
+                    storeItemInStorage(item, item->storage);
+                }
+            }
+        }
+        setItems(_allItems); // update spinbox value and range
+    }
 }
 
 bool PlugyItemsSplitter::keyEventHasShift(QKeyEvent *keyEvent)
@@ -172,8 +205,8 @@ void PlugyItemsSplitter::setItems(const ItemsList &newItems)
     _allItems = newItems;
 
     // using _allItems.last()->plugyPage would've been easy, but it's not always correct (new items added via app are added to the end)
-    ItemsList::iterator maxPageIter = std::max_element(_allItems.begin(), _allItems.end(), compareItemsByPlugyPage);
-    _lastNotEmptyPage = maxPageIter == _allItems.end() ? 0 : (*maxPageIter)->plugyPage;
+    ItemsList::const_iterator maxPageIter = std::max_element(_allItems.constBegin(), _allItems.constEnd(), compareItemsByPlugyPage);
+    _lastNotEmptyPage = maxPageIter == _allItems.constEnd() ? 0 : (*maxPageIter)->plugyPage;
 
     _pageSpinBox->setSuffix(QString(" / %1").arg(_lastNotEmptyPage));
     _pageSpinBox->setRange(1, _lastNotEmptyPage);

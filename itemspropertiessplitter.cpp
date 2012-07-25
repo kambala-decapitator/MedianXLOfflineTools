@@ -270,20 +270,20 @@ void ItemsPropertiesSplitter::deleteItem()
     }
 }
 
-void ItemsPropertiesSplitter::performDeleteItem(ItemInfo *item, bool currentStorage /*= true*/, bool emitSignal /*= true*/)
+void ItemsPropertiesSplitter::performDeleteItem(ItemInfo *item, bool emitSignal /*= true*/)
 {
     // TODO: [0.4] add option to unsocket at first
-    removeItemFromList(item, currentStorage, emitSignal);
+    removeItemFromList(item, emitSignal);
     qDeleteAll(item->socketablesInfo);
     delete item;
 }
 
-void ItemsPropertiesSplitter::addItemToList(ItemInfo *item, bool currentStorage /*= true*/, bool emitSignal /*= true*/)
+void ItemsPropertiesSplitter::addItemToList(ItemInfo *item, bool emitSignal /*= true*/)
 {
     CharacterInfo::instance().items.character.append(item);
 
     _allItems.append(item);
-    if (currentStorage)
+    if (isItemInCurrentStorage(item))
     {
         _itemsModel->addItem(item);
         if (selectedItem(false) == item) // signal is emitted only when single item is disenchanted (through context menu), so we don't need extra parameter for just another name
@@ -294,14 +294,14 @@ void ItemsPropertiesSplitter::addItemToList(ItemInfo *item, bool currentStorage 
         emit itemsChanged();
 }
 
-void ItemsPropertiesSplitter::removeItemFromList(ItemInfo *item, bool currentStorage /*= true*/, bool emitSignal /*= true*/)
+void ItemsPropertiesSplitter::removeItemFromList(ItemInfo *item, bool emitSignal /*= true*/)
 {
     CharacterInfo::instance().items.character.removeOne(item);
 
     _allItems.removeOne(item);
     if (selectedItem(false) == item)
         _propertiesWidget->clear();
-    if (currentStorage)
+    if (isItemInCurrentStorage(item))
     {
         _itemsModel->removeItem(item);
         if (_itemsView->rowSpan(item->row, item->column) > 1 || _itemsView->columnSpan(item->row, item->column) > 1)
@@ -318,68 +318,52 @@ void ItemsPropertiesSplitter::disenchantAllItems(bool toShards, bool upgradeToCr
     ItemsList &items_ = items ? *items : _allItems;
     foreach (ItemInfo *item, items_)
     {
-        if ((toShards && ItemDataBase::canDisenchantIntoArcaneShards(item)) || (!toShards && ItemDataBase::canDisenchantIntoSignetOfLearning(item)))
+        if ((item->quality == Enums::ItemQuality::Unique && includeUniques) || (item->quality == Enums::ItemQuality::Set && includeSets))
         {
-            // if (!toShards && eatSignets) // TODO: don't create new items in this case
-            disenchantItemIntoItem(item, disenchantedItem, false);
+            if ((toShards && ItemDataBase::canDisenchantIntoArcaneShards(item)) || (!toShards && ItemDataBase::canDisenchantIntoSignetOfLearning(item)))
+            {
+                // if (!toShards && eatSignets) // TODO: don't create new items in this case
+                disenchantItemIntoItem(item, disenchantedItem, false);
+            }
         }
     }
 
     if (toShards && upgradeToCrystals)
     {
-        int shards = std::count_if(items_.constBegin(), items_.constEnd(), isArcaneShard), shards2 = 0, shards3 = 0, shards4 = 0;
-        qDebug() << "shards" << shards;
-        if (isUltimative())
+        int shards = 0;
+        foreach (ItemInfo *item, items_)
         {
-            shards2 = std::count_if(items_.constBegin(), items_.constEnd(), isArcaneShard2);
-            shards3 = std::count_if(items_.constBegin(), items_.constEnd(), isArcaneShard3);
-            shards4 = std::count_if(items_.constBegin(), items_.constEnd(), isArcaneShard4);
-            qDebug() << "shards2" << shards2 << "shards3" << shards3 << "shards4" << shards4;
-            shards += shards2 * 2 + shards3 * 3 + shards4 * 4;
+            if (isArcaneShard(item))
+                ++shards;
+            else if (isArcaneShard2(item))
+                shards += 2;
+            else if (isArcaneShard3(item))
+                shards += 3;
+            else if (isArcaneShard4(item))
+                shards += 4;
         }
-        qDebug() << shards << "shards total";
+
         int crystals = shards / 5;
-        qDebug() << crystals << "crystals";
         if (crystals)
         {
-            Enums::ItemStorage::ItemStorageEnum storage = static_cast<Enums::ItemStorage::ItemStorageEnum>(items_.first()->storage);
+            int storage = items_.first()->storage;
             foreach (ItemInfo *item, items_)
-            {
                 if (isArcaneShard(item) || isArcaneShard2(item) || isArcaneShard3(item) || isArcaneShard4(item))
-                    performDeleteItem(item, isItemInCurrentStorage(item), false);
-            }
-//            switch (shardsLeft)
-//            {
-//            case 0:
-//                break;
-//            case 1:
-//                break;
-//            case 2:
-//                break;
-//            case 3:
-//                break;
-//            case 4:
-//                break;
-//            }
+                    performDeleteItem(item, false);
 
+            ItemInfo *crystal = ItemDataBase::loadItemFromFile("arcane_crystal");
             for (int i = 0; i < crystals; ++i)
             {
-                ItemInfo *crystal = ItemDataBase::loadItemFromFile("arcane_crystal");
-                if (!ItemDataBase::storeItemIn(crystal, storage, ItemsViewerDialog::rowsInStorageAtIndex(storage)))
-                    qDebug("fail");
-                else
-                    addItemToList(crystal, isItemInCurrentStorage(crystal), false);
+                ItemInfo *crystalCopy = new ItemInfo(*crystal);
+                storeItemInStorage(crystalCopy, storage);
             }
+            delete crystal;
 
             int shardsLeft = shards - crystals * 5;
-            qDebug() << shardsLeft << "shardsLeft";
             for (int i = 0; i < shardsLeft; ++i)
             {
                 ItemInfo *shard = new ItemInfo(*disenchantedItem);
-                if (!ItemDataBase::storeItemIn(shard, storage, ItemsViewerDialog::rowsInStorageAtIndex(storage)))
-                    qDebug("fail");
-                else
-                    addItemToList(shard, isItemInCurrentStorage(shard), false);
+                storeItemInStorage(shard, storage);
             }
         }
     }
@@ -455,11 +439,20 @@ ItemInfo *ItemsPropertiesSplitter::disenchantItemIntoItem(ItemInfo *oldItem, Ite
     //    }
     //}
 
-    bool isCurrentStorage = isItemInCurrentStorage(newItemCopy);
-    performDeleteItem(oldItem, isCurrentStorage, emitSignal);
-    addItemToList(newItemCopy, isCurrentStorage, emitSignal);
+    performDeleteItem(oldItem, emitSignal);
+    addItemToList(newItemCopy, emitSignal);
 
     return newItemCopy;
+}
+
+bool ItemsPropertiesSplitter::storeItemInStorage(ItemInfo *item, int storage)
+{
+    bool result = ItemDataBase::storeItemIn(item, static_cast<Enums::ItemStorage::ItemStorageEnum>(storage), ItemsViewerDialog::rowsInStorageAtIndex(storage));
+    if (!result)
+        qDebug() << "failed to store" << ItemDataBase::Items()->operator [](item->itemType).name;
+    else
+        addItemToList(item, false);
+    return result;
 }
 
 void ItemsPropertiesSplitter::createItemActions()

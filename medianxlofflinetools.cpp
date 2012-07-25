@@ -172,7 +172,10 @@ bool MedianXLOfflineTools::loadFile(const QString &charPath)
         connect(ui.mercNameComboBox, SIGNAL(currentIndexChanged(int)), SLOT(modify()));
 
         if (_itemsDialog)
+        {
             _itemsDialog->updateItems(getPlugyStashesExistenceHash());
+            _itemsDialog->updateButtonsState();
+        }
         if (_itemsDialog || ui.actionOpenItemsAutomatically->isChecked())
             showItems();
 
@@ -442,13 +445,13 @@ void MedianXLOfflineTools::saveCharacter()
     outputDataStream << checksum(tempFileContents);
 
     // save plugy stashes if changed
-    for (QHash<Enums::ItemStorage::ItemStorageEnum, PlugyStashInfo>::const_iterator iter = _plugyStashesHash.constBegin(); iter != _plugyStashesHash.constEnd(); ++iter)
+    for (QHash<Enums::ItemStorage::ItemStorageEnum, PlugyStashInfo>::iterator iter = _plugyStashesHash.begin(); iter != _plugyStashesHash.end(); ++iter)
     {
         const ItemsList &items = plugyItemsHash[iter.key()];
         if (std::find_if(items.constBegin(), items.constEnd(), hasChanged) == items.constEnd())
             continue;
 
-        const PlugyStashInfo &info = iter.value();
+        PlugyStashInfo &info = iter.value();
         QFile inputFile(info.path);
         if (!inputFile.exists())
             continue;
@@ -459,6 +462,9 @@ void MedianXLOfflineTools::saveCharacter()
             showErrorMessageBoxForFile(tr("Error creating file '%1'"), inputFile);
             continue;
         }
+
+        ItemsList::const_iterator maxPageIter = std::max_element(items.constBegin(), items.constEnd(), compareItemsByPlugyPage);
+        info.lastPage = maxPageIter == items.constEnd() ? 0 : (*maxPageIter)->plugyPage;
 
         QDataStream plugyFileDataStream(&inputFile);
         plugyFileDataStream.setByteOrder(QDataStream::LittleEndian);

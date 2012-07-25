@@ -43,8 +43,9 @@ protected:
     void keyReleaseEvent(QKeyEvent *keyEvent);
 
     virtual bool isItemInCurrentStorage(ItemInfo *item) const;
-    virtual void addItemToList(ItemInfo *item, bool currentStorage = true, bool emitSignal = true);
-    virtual void removeItemFromList(ItemInfo *item, bool currentStorage = true, bool emitSignal = true);
+    virtual void addItemToList(ItemInfo *item, bool emitSignal = true);
+    virtual void removeItemFromList(ItemInfo *item, bool emitSignal = true);
+    virtual bool storeItemInStorage(ItemInfo *item, int storage);
 
 signals:
     void pageChanged();

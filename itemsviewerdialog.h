@@ -35,7 +35,7 @@ public:
     };
 
     static const int kCellSize;
-    static const QList<int> kRows;
+    static const QList<int> kRows; // TODO: [0.4] move to some other place
 
     static int rowsInStorageAtIndex(int storage);
     static int tabIndexFromItemStorage(int storage);
@@ -56,6 +56,7 @@ public:
 public slots:
     void setCubeTabDisabled(bool disabled);
     virtual void reject();
+    void updateButtonsState();
 
 signals:
     void cubeDeleted(bool = true);  // connect directly to QAction's setEnabled() slot
@@ -68,7 +69,6 @@ private slots:
     void decreaseItemCount();
 
     void applyActionToAllPagesChanged(bool b);
-    void updateButtonsState();
     void updateDisenchantButtonsState();
     void updateUpgradeButtonsState();
 
@@ -77,12 +77,12 @@ private slots:
 private:
     QTabWidget *_tabWidget;
     quint64 _itemsTotal;
-
     QWidget *_itemManagementWidget;
+
     QGroupBox *_disenchantBox;
     QPushButton *_disenchantToShardsButton, *_disenchantToSignetButton;
     QCheckBox *_upgradeToCrystalsCheckbox, *_eatSignetsCheckbox;
-    QRadioButton *_uniquesCheckbox, *_setsCheckbox, *_bothQualitiesCheckbox;
+    QRadioButton *_uniquesRadioButton, *_setsRadioButton, *_bothQualitiesRadioButton;
 
     QGroupBox *_upgradeBox;
     QPushButton *_upgradeGemsButton, *_upgradeRunesButton, *_upgradeBothButton;
