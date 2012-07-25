@@ -15,6 +15,7 @@ class QModelIndex;
 class QGroupBox;
 class QPushButton;
 class QCheckBox;
+class QRadioButton;
 
 class ItemsViewerDialog : public QDialog
 {
@@ -80,7 +81,7 @@ private:
     QGroupBox *_disenchantBox;
     QPushButton *_disenchantToShardsButton, *_disenchantToSignetButton;
     QCheckBox *_upgradeToCrystalsCheckbox, *_eatSignetsCheckbox;
-    QCheckBox *_uniquesCheckbox, *_setsCheckbox;
+    QRadioButton *_uniquesCheckbox, *_setsCheckbox, *_bothQualitiesCheckbox;
 
     QGroupBox *_upgradeBox;
     QPushButton *_upgradeGemsButton, *_upgradeRunesButton, *_upgradeBothButton;

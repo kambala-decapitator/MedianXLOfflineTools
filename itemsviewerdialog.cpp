@@ -19,6 +19,7 @@
 #include <QGroupBox>
 #include <QPushButton>
 #include <QCheckBox>
+#include <QRadioButton>
 
 #include <QSettings>
 
@@ -87,26 +88,33 @@ ItemsViewerDialog::ItemsViewerDialog(const QHash<int, bool> &plugyStashesExisten
 
     _disenchantToShardsButton = new QPushButton(tr("Arcane Shards"), _disenchantBox);
     _upgradeToCrystalsCheckbox = new QCheckBox(tr("Upgrade to Crystals"), _disenchantBox);
-    _uniquesCheckbox = new QCheckBox(tr("Uniques"), _disenchantBox);
+//    _uniquesCheckbox = new QCheckBox(tr("Uniques"), _disenchantBox);
+    _uniquesCheckbox = new QRadioButton(tr("Uniques"), _disenchantBox);
     _upgradeToCrystalsCheckbox->setChecked(true);
     _uniquesCheckbox->setChecked(true);
 
     _disenchantToSignetButton = new QPushButton(tr("Signets of Learning"), _disenchantBox);
     _eatSignetsCheckbox = new QCheckBox(tr("Eat Signets"), _disenchantBox);
-    _setsCheckbox = new QCheckBox(tr("Sets"), _disenchantBox);
+//    _setsCheckbox = new QCheckBox(tr("Sets"), _disenchantBox);
+    _setsCheckbox = new QRadioButton(tr("Sets"), _disenchantBox);
     _eatSignetsCheckbox->setChecked(true);
     _setsCheckbox->setChecked(true);
+
+    _bothQualitiesCheckbox = new QRadioButton(tr("Both"), _disenchantBox);
 
     QGroupBox *box = new QGroupBox(tr("Disenchant:"), this);
     QHBoxLayout *hlayout = new QHBoxLayout(box);
     hlayout->addWidget(_uniquesCheckbox);
     hlayout->addStretch();
     hlayout->addWidget(_setsCheckbox);
+    hlayout->addStretch();
+    hlayout->addWidget(_bothQualitiesCheckbox);
 
     connect(_disenchantToShardsButton, SIGNAL(clicked()), SLOT(disenchantAllItems()));
     connect(_disenchantToSignetButton, SIGNAL(clicked()), SLOT(disenchantAllItems()));
-    connect(_uniquesCheckbox, SIGNAL(toggled(bool)), SLOT(updateButtonsState()));
-    connect(   _setsCheckbox, SIGNAL(toggled(bool)), SLOT(updateButtonsState()));
+    connect(      _uniquesCheckbox, SIGNAL(toggled(bool)), SLOT(updateDisenchantButtonsState()));
+    connect(         _setsCheckbox, SIGNAL(toggled(bool)), SLOT(updateDisenchantButtonsState()));
+    connect(_bothQualitiesCheckbox, SIGNAL(toggled(bool)), SLOT(updateDisenchantButtonsState()));
 
     QVBoxLayout *vboxLayout = new QVBoxLayout(_disenchantBox);
     vboxLayout->addWidget(box);
@@ -349,7 +357,10 @@ void ItemsViewerDialog::updateButtonsState()
 
 void ItemsViewerDialog::updateDisenchantButtonsState()
 {
-    QPair<bool, bool> allowDisenchantButtons = splitterAtIndex(_tabWidget->currentIndex())->updateDisenchantButtonsState(_uniquesCheckbox->isChecked(), _setsCheckbox->isChecked());
+    bool areUniquesSelected = _uniquesCheckbox->isChecked(), areSetsSelected = _setsCheckbox->isChecked();
+    if (_bothQualitiesCheckbox->isChecked())
+        areUniquesSelected = areSetsSelected = true;
+    QPair<bool, bool> allowDisenchantButtons = splitterAtIndex(_tabWidget->currentIndex())->updateDisenchantButtonsState(areUniquesSelected, areSetsSelected);
     _disenchantToShardsButton->setEnabled(allowDisenchantButtons.first);
     _disenchantToSignetButton->setEnabled(allowDisenchantButtons.second);
 }
