@@ -119,7 +119,7 @@ bool PlugyItemsSplitter::isItemInCurrentStorage(ItemInfo *item) const
 void PlugyItemsSplitter::addItemToList(ItemInfo *item, bool emitSignal /*= true*/)
 {
     ItemsPropertiesSplitter::addItemToList(item, emitSignal);
-    if (isItemInCurrentStorage(item))
+    if (isItemInCurrentStorage(item) && !_pagedItems.contains(item))
         _pagedItems.append(item);
 }
 
@@ -148,7 +148,6 @@ bool PlugyItemsSplitter::storeItemInStorage(ItemInfo *item, int storage)
 
 void PlugyItemsSplitter::disenchantAllItems(bool toShards, bool upgradeToCrystals, bool eatSignets, bool includeUniques, bool includeSets, ItemsList *items /*= 0*/)
 {
-//    Q_UNUSED(items);
     items = _shouldApplyActionToAllPages ? &_allItems : &_pagedItems;
     ItemsPropertiesSplitter::disenchantAllItems(toShards, upgradeToCrystals, eatSignets, includeUniques, includeSets, items);
     if (_shouldApplyActionToAllPages)
@@ -188,13 +187,13 @@ void PlugyItemsSplitter::showItem(ItemInfo *item)
     }
 }
 
-QPair<bool, bool> PlugyItemsSplitter::updateDisenchantButtonsState(bool includeUniques, bool includeSets, ItemsList *items)
+QPair<bool, bool> PlugyItemsSplitter::updateDisenchantButtonsState(bool includeUniques, bool includeSets, bool toCrystals, ItemsList *items /*= 0*/)
 {
     Q_UNUSED(items);
-    return ItemsPropertiesSplitter::updateDisenchantButtonsState(includeUniques, includeSets, _shouldApplyActionToAllPages ? &_allItems : &_pagedItems);
+    return ItemsPropertiesSplitter::updateDisenchantButtonsState(includeUniques, includeSets, toCrystals, _shouldApplyActionToAllPages ? &_allItems : &_pagedItems);
 }
 
-QPair<bool, bool> PlugyItemsSplitter::updateUpgradeButtonsState(ItemsList *items)
+QPair<bool, bool> PlugyItemsSplitter::updateUpgradeButtonsState(ItemsList *items /*= 0*/)
 {
     Q_UNUSED(items);
     return ItemsPropertiesSplitter::updateUpgradeButtonsState(_shouldApplyActionToAllPages ? &_allItems : &_pagedItems);

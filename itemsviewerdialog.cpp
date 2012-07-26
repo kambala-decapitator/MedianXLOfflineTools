@@ -113,9 +113,11 @@ ItemsViewerDialog::ItemsViewerDialog(const QHash<int, bool> &plugyStashesExisten
 
     connect(_disenchantToShardsButton, SIGNAL(clicked()), SLOT(disenchantAllItems()));
     connect(_disenchantToSignetButton, SIGNAL(clicked()), SLOT(disenchantAllItems()));
-    connect(      _uniquesRadioButton, SIGNAL(toggled(bool)), SLOT(updateDisenchantButtonsState()));
-    connect(         _setsRadioButton, SIGNAL(toggled(bool)), SLOT(updateDisenchantButtonsState()));
-    connect(_bothQualitiesRadioButton, SIGNAL(toggled(bool)), SLOT(updateDisenchantButtonsState()));
+
+    connect(       _uniquesRadioButton, SIGNAL(toggled(bool)), SLOT(updateDisenchantButtonsState()));
+    connect(          _setsRadioButton, SIGNAL(toggled(bool)), SLOT(updateDisenchantButtonsState()));
+    connect( _bothQualitiesRadioButton, SIGNAL(toggled(bool)), SLOT(updateDisenchantButtonsState()));
+    connect(_upgradeToCrystalsCheckbox, SIGNAL(toggled(bool)), SLOT(updateDisenchantButtonsState()));
 
     QVBoxLayout *vboxLayout = new QVBoxLayout(_disenchantBox);
     vboxLayout->addWidget(box);
@@ -152,12 +154,9 @@ ItemsViewerDialog::ItemsViewerDialog(const QHash<int, bool> &plugyStashesExisten
     QHBoxLayout *itemManagementBoxLayout = new QHBoxLayout(_itemManagementWidget);
     itemManagementBoxLayout->addWidget(_disenchantBox);
     itemManagementBoxLayout->addStretch();
-    itemManagementBoxLayout->addWidget(_applyActionToAllPagesCheckbox/*, 0, Qt::AlignCenter*/);
+    itemManagementBoxLayout->addWidget(_applyActionToAllPagesCheckbox);
     itemManagementBoxLayout->addStretch();
     itemManagementBoxLayout->addWidget(_upgradeBox);
-
-//    _itemManagementBox->setFixedHeight(_itemManagementBox->minimumSizeHint().height());
-//    expandableBox->setFixedHeight(_itemManagementBox->height() + 20);
 
     // misc
     connect(_tabWidget, SIGNAL(currentChanged(int)), SLOT(tabChanged(int)));
@@ -295,10 +294,10 @@ void ItemsViewerDialog::updateItems(const QHash<int, bool> &plugyStashesExistenc
             updateBeltItemsCoordinates(false, &beltItems);
             items += beltItems;
         }
-        else // itemCountChanged() signal is sent from GearItemsSplitter when setItems() is called
-            itemCountChangedInTab(i, items.size());
         splitterAtIndex(i)->setItems(items);
-        
+
+        if (!isGearTab) // itemCountChanged() signal is sent from GearItemsSplitter when setItems() is called
+            itemCountChangedInTab(i, items.size());
         _itemsTotal += items.size();
     }
 
@@ -366,7 +365,7 @@ void ItemsViewerDialog::updateDisenchantButtonsState()
     bool areUniquesSelected = _uniquesRadioButton->isChecked(), areSetsSelected = _setsRadioButton->isChecked();
     if (_bothQualitiesRadioButton->isChecked())
         areUniquesSelected = areSetsSelected = true;
-    QPair<bool, bool> allowDisenchantButtons = splitterAtIndex(_tabWidget->currentIndex())->updateDisenchantButtonsState(areUniquesSelected, areSetsSelected);
+    QPair<bool, bool> allowDisenchantButtons = splitterAtIndex(_tabWidget->currentIndex())->updateDisenchantButtonsState(areUniquesSelected, areSetsSelected, _upgradeToCrystalsCheckbox->isChecked());
     _disenchantToShardsButton->setEnabled(allowDisenchantButtons.first);
     _disenchantToSignetButton->setEnabled(allowDisenchantButtons.second);
 }

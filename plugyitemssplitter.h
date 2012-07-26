@@ -18,7 +18,7 @@ public:
     virtual void setItems(const ItemsList &newItems);
     virtual void showItem(ItemInfo *item);
 
-    virtual QPair<bool, bool> updateDisenchantButtonsState(bool includeUniques, bool includeSets, ItemsList *items = 0);
+    virtual QPair<bool, bool> updateDisenchantButtonsState(bool includeUniques, bool includeSets, bool toCrystals, ItemsList *items = 0);
     virtual QPair<bool, bool> updateUpgradeButtonsState(ItemsList *items = 0);
 
     virtual void disenchantAllItems(bool toShards, bool upgradeToCrystals, bool eatSignets, bool includeUniques, bool includeSets, ItemsList *items = 0);

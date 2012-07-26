@@ -15,6 +15,8 @@
 #include <QDebug>
 #endif
 
+static const int kShardsPerCrystal = 5;
+
 
 ItemsPropertiesSplitter::ItemsPropertiesSplitter(ItemStorageTableView *itemsView, QWidget *parent /*= 0*/) : QSplitter(Qt::Horizontal, parent), _itemsView(itemsView), _propertiesWidget(new PropertiesViewerWidget(parent))
 {
@@ -86,24 +88,37 @@ void ItemsPropertiesSplitter::setItems(const ItemsList &newItems)
     updateItems(_allItems);
 }
 
-QPair<bool, bool> ItemsPropertiesSplitter::updateDisenchantButtonsState(bool includeUniques, bool includeSets, ItemsList *items /*= 0*/)
+QPair<bool, bool> ItemsPropertiesSplitter::updateDisenchantButtonsState(bool includeUniques, bool includeSets, bool toCrystals, ItemsList *items /*= 0*/)
 {
     bool allowShards = false, allowSignets = false;
-    if (includeUniques || includeSets)
+    int shards = 0;
+    foreach (ItemInfo *item, items ? *items : _allItems)
     {
-        foreach (ItemInfo *item, items ? *items : _allItems)
+        if (toCrystals)
         {
-            if ((includeUniques && item->quality == Enums::ItemQuality::Unique) || (includeSets && item->quality == Enums::ItemQuality::Set))
-            {
-                if (!allowShards)
-                    allowShards = ItemDataBase::canDisenchantIntoArcaneShards(item);
-                if (!allowSignets)
-                    allowSignets = ItemDataBase::canDisenchantIntoSignetOfLearning(item);
-                if (allowShards && allowSignets)
-                    break;
-            }
+            if (isArcaneShard(item))
+                ++shards;
+            else if (isArcaneShard2(item))
+                shards += 2;
+            else if (isArcaneShard3(item))
+                shards += 3;
+            else if (isArcaneShard4(item))
+                shards += 4;
+        }
+
+        if ((includeUniques && item->quality == Enums::ItemQuality::Unique) || (includeSets && item->quality == Enums::ItemQuality::Set))
+        {
+            if (!allowShards)
+                allowShards = ItemDataBase::canDisenchantIntoArcaneShards(item);
+            if (!allowSignets)
+                allowSignets = ItemDataBase::canDisenchantIntoSignetOfLearning(item);
+            if (allowShards && allowSignets)
+                break;
         }
     }
+    // allow just upgrading shards to crystals
+    if (toCrystals && !allowShards && shards >= kShardsPerCrystal)
+        allowShards = true;
     return qMakePair(allowShards, allowSignets);
 }
 
@@ -280,9 +295,11 @@ void ItemsPropertiesSplitter::performDeleteItem(ItemInfo *item, bool emitSignal 
 
 void ItemsPropertiesSplitter::addItemToList(ItemInfo *item, bool emitSignal /*= true*/)
 {
-    CharacterInfo::instance().items.character.append(item);
+    if (!CharacterInfo::instance().items.character.contains(item))
+        CharacterInfo::instance().items.character.append(item);
 
-    _allItems.append(item);
+    if (!_allItems.contains(item))
+        _allItems.append(item);
     if (isItemInCurrentStorage(item))
     {
         _itemsModel->addItem(item);
@@ -343,10 +360,11 @@ void ItemsPropertiesSplitter::disenchantAllItems(bool toShards, bool upgradeToCr
                 shards += 4;
         }
 
-        int crystals = shards / 5;
+        int crystals = shards / kShardsPerCrystal;
         if (crystals)
         {
             int storage = items_.first()->storage;
+            int i = 0;
             foreach (ItemInfo *item, items_)
                 if (isArcaneShard(item) || isArcaneShard2(item) || isArcaneShard3(item) || isArcaneShard4(item))
                     performDeleteItem(item, false);
@@ -359,17 +377,20 @@ void ItemsPropertiesSplitter::disenchantAllItems(bool toShards, bool upgradeToCr
             }
             delete crystal;
 
-            int shardsLeft = shards - crystals * 5;
+            int shardsLeft = shards - crystals * kShardsPerCrystal;
             for (int i = 0; i < shardsLeft; ++i)
             {
                 ItemInfo *shard = new ItemInfo(*disenchantedItem);
                 storeItemInStorage(shard, storage);
             }
+
+            emit itemCountChanged(items_.size());
         }
     }
 
     delete disenchantedItem;
     emit itemsChanged();
+    _itemsView->viewport()->update();
 }
 
 ItemInfo *ItemsPropertiesSplitter::disenchantItemIntoItem(ItemInfo *oldItem, ItemInfo *newItem, bool emitSignal /*= true*/)
