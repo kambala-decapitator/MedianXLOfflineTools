@@ -79,10 +79,10 @@ QString htmlStringFromDiabloColorString(const QString &name, ColorsManager::Colo
 
         QStringList lines = coloredText_.split(kHtmlLineBreak);
         QString reversedLines;
-        for (QStringList::const_iterator iter = lines.end() - 1; iter != lines.begin() - 1; --iter)
+        for (QStringList::const_iterator iter = lines.constEnd() - 1; iter != lines.constBegin() - 1; --iter)
         {
             reversedLines.append(*iter);
-            if (iter != lines.begin())
+            if (iter != lines.constBegin())
                 reversedLines.append(kHtmlLineBreak);
         }
         if (!reversedLines.isEmpty())

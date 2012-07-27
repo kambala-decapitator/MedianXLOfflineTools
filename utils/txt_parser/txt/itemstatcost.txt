@@ -1,10 +1,10 @@
 Stat	ID	* Laz / comments	Send Other	Signed	Send Bits	Send Param Bits	UpdateAnimRate	Saved	CSvSigned	CSvBits	CSvParam	fCallback	fMin	MinAccr	Encode	Add	Multiply	Divide	ValShift	1.09-Save Bits	1.09-Save Add	Save Bits	Save Add	Save Param Bits	keepzero	op	op param	op base	op stat1	op stat2	op stat3	direct	maxstat	itemspecific	damagerelated	itemevent1	itemeventfunc1	itemevent2	itemeventfunc2	descpriority	descfunc	descval	descstrpos	descstrneg	descstr2	dgrp	dgrpfunc	dgrpval	dgrpstrpos	dgrpstrneg	dgrpstr2	stuff	*eol
-strength	0		1		11			1	0	12			1	1		125	55	1024		7	32	12	100																	67	1	1	ModStr1a	ModStr1a		1	1	1	Moditem2allattrib	Moditem2allattrib		6	0
-energy	1				11			1	0	12			1	1		100	55	1024		7	32	12	100			8			maxmana											61	1	1	ModStr1d	ModStr1d		1	1	1	Moditem2allattrib	Moditem2allattrib			0
-dexterity	2		1		11			1	0	12			1	1		125	55	1024		7	32	12	100																	65	1	1	ModStr1b	ModStr1b		1	1	1	Moditem2allattrib	Moditem2allattrib			0
-vitality	3				11			1	0	12			1	1		100	55	1024		7	32	12	100			9			maxhp	maxstamina										63	1	1	ModStr1c	ModStr1c		1	1	1	Moditem2allattrib	Moditem2allattrib			0
+strength	0		1		11			1	0	11			1	1		125	55	1024		7	32	12	100																	67	1	1	ModStr1a	ModStr1a		1	1	1	Moditem2allattrib	Moditem2allattrib		6	0
+energy	1				11			1	0	11			1	1		100	55	1024		7	32	12	100			8			maxmana											61	1	1	ModStr1d	ModStr1d		1	1	1	Moditem2allattrib	Moditem2allattrib			0
+dexterity	2		1		11			1	0	11			1	1		125	55	1024		7	32	12	100																	65	1	1	ModStr1b	ModStr1b		1	1	1	Moditem2allattrib	Moditem2allattrib			0
+vitality	3				11			1	0	11			1	1		100	55	1024		7	32	12	100			9			maxhp	maxstamina										63	1	1	ModStr1c	ModStr1c		1	1	1	Moditem2allattrib	Moditem2allattrib			0
 statpts	4				9			1	0	11								1024																																			0
-newskills	5				9			1	0	9								1024																																			0
+newskills	5				9			1	0	8								1024																																			0
 hitpoints	6				32			1	0	21								1024	8													1	maxhp																				0
 maxhp	7				32			1	0	21		1	1	1		56	20	1024	8	8	32	11	150																	59	1	1	ModStr1u	ModStr1u									0
 mana	8				32			1	0	21								1024	8						1							1	maxmana																				0
@@ -36,16 +36,16 @@ armorclass_vs_hth	33			1	16											13	7	1024		8	0	10	0																	70	1	1
 normal_damage_reduction	34			1	10											188	200	1024		6	30	10	110																	22	3	2	ModStr2u	ModStr2u									0
 magic_damage_reduction	35			1	10											397	340	1024		6	30	10	30																	21	3	2	ModStr2t	ModStr2t									0
 damageresist	36			1	9											152	68	1024		8	0	10	100																	22	2	2	ModStr2u	ModitemCursedDR									0
-magicresist	37			1	9											164	68	1024		8	0	8	100																	41	4	2	ModStr1m	ModStr1m									0
-maxmagicresist	38			1	9											1091	409	1024		5	0	8	100																	46	4	1	ModStr5x	ModStr5x									0
-fireresist	39			1	9											43	20	1024		8	0	8	100																	36	4	2	ModStr1j	ModStr1j		2	4	2	ItemmodAllRes	ItemmodAllRes			0
-maxfireresist	40			1	9											584	256	1024		5	0	8	100																	42	4	1	ModStr5u	ModStr5u		7	4	1	ItemmodAllMaxRes	ItemmodAllMaxRes			0
-lightresist	41			1	9											43	20	1024		8	0	8	100																	38	4	2	ModStr1l	ModStr1l		2	4	2	ItemmodAllRes	ItemmodAllRes			0
-maxlightresist	42			1	9											584	256	1024		5	0	8	100																	43	4	1	ModStr5w	ModStr5w		7	4	1	ItemmodAllMaxRes	ItemmodAllMaxRes			0
-coldresist	43			1	9											43	20	1024		8	0	8	100																	40	4	2	ModStr1k	ModStr1k		2	4	2	ItemmodAllRes	ItemmodAllRes			0
-maxcoldresist	44			1	9											584	256	1024		5	0	8	100																	44	4	1	ModStr5v	ModStr5v		7	4	1	ItemmodAllMaxRes	ItemmodAllMaxRes			0
-poisonresist	45			1	9											43	20	1024		8	0	8	100																	34	4	2	ModStr1n	ModStr1n		2	4	2	ItemmodAllRes	ItemmodAllRes			0
-maxpoisonresist	46			1	9											526	256	1024		5	0	8	100																	45	4	1	ModStr5y	ModStr5y		7	4	1	ItemmodAllMaxRes	ItemmodAllMaxRes			0
+magicresist	37			1	9											164	68	1024		8	0	9	100																	41	4	2	ModStr1m	ModStr1m									0
+maxmagicresist	38			1	9											1091	409	1024		5	0	9	100																	46	4	1	ModStr5x	ModStr5x									0
+fireresist	39			1	9											43	20	1024		8	0	9	100																	36	4	2	ModStr1j	ModStr1j		2	4	2	ItemmodAllRes	ItemmodAllRes			0
+maxfireresist	40			1	9											584	256	1024		5	0	9	100																	42	4	1	ModStr5u	ModStr5u		7	4	1	ItemmodAllMaxRes	ItemmodAllMaxRes			0
+lightresist	41			1	9											43	20	1024		8	0	9	100																	38	4	2	ModStr1l	ModStr1l		2	4	2	ItemmodAllRes	ItemmodAllRes			0
+maxlightresist	42			1	9											584	256	1024		5	0	9	100																	43	4	1	ModStr5w	ModStr5w		7	4	1	ItemmodAllMaxRes	ItemmodAllMaxRes			0
+coldresist	43			1	9											43	20	1024		8	0	9	100																	40	4	2	ModStr1k	ModStr1k		2	4	2	ItemmodAllRes	ItemmodAllRes			0
+maxcoldresist	44			1	9											584	256	1024		5	0	9	100																	44	4	1	ModStr5v	ModStr5v		7	4	1	ItemmodAllMaxRes	ItemmodAllMaxRes			0
+poisonresist	45			1	9											43	20	1024		8	0	9	100																	34	4	2	ModStr1n	ModStr1n		2	4	2	ItemmodAllRes	ItemmodAllRes			0
+maxpoisonresist	46			1	9											526	256	1024		5	0	9	100																	45	4	1	ModStr5y	ModStr5y		7	4	1	ItemmodAllMaxRes	ItemmodAllMaxRes			0
 damageaura	47			1	16													1024																																			0
 firemindam	48			1	16											11	10	1024		8	0	12	0												1					102	1	1	ModStr1p	ModStr1p									0
 firemaxdam	49			1	16											19	10	1024		8	0	12	0												1					101	1	1	ModStr1o	ModStr1o									0
@@ -78,11 +78,11 @@ item_maxdurability_percent	75			1	7											117	10	1024		7	20	10	100			1			max
 item_maxhp_percent	76			1	16											112	8	1024		6	10	10	100			11			maxhp											58	2	2	ModStr2g	ModitemCursedHPPct		10	2	2	ModitemHPManaP	ModitemHPManaP			0
 item_maxmana_percent	77			1	16											112	8	1024		6	10	10	100			11			maxmana											54	2	2	ModStr2h	ModitemCursedMPPct		10	2	2	ModitemHPManaP	ModitemHPManaP			0
 item_attackertakesdamage	78			1	16							1				112	128	1024		7	0	10	0													damagedinmelee	6	damagedbymissile	6	13	3	2	ModStr1v	ModStr1v									0
-item_goldbonus	79			1	10											187	34	1024		9	100	11	75																	10	2	1	ModStr1w	ModitemCursedGold									0
-item_magicbonus	80			1	10											577	102	1024		8	100	11	75																	8	2	1	ModStr1x	ModitemCursedMF									0
+item_goldbonus	79			1	10											187	34	1024		9	100	10	75																	10	2	1	ModStr1w	ModitemCursedGold									0
+item_magicbonus	80			1	9											577	102	1024		8	100	10	75																	8	2	1	ModStr1x	ModitemCursedMF									0
 item_knockback	81			1	8							1				105	0	1024		7	0	2	0												1	domeleedamage	7	domissiledamage	7	76	3	0	ModStr1y	ModStr1y									0
 item_timeduration	82			1	10													1024		9	20	9	20																														0
-item_addclassskills	83			1	3	3						1				224	51	1024		3	0	4	0	3																150	13	1	ModStr3a	ModStr3a									0
+item_addclassskills	83			1	5	3						1				224	51	1024		3	0	4	0	3																150	13	1	ModStr3a	ModStr3a									0
 unsentparam1	84																	1024		3	0																																0
 item_addexperience	85			1	9											36015	519	1024		3	0	8	25																	11	4	1	Moditem2ExpG	Moditem2ExpG									0
 item_healafterkill	86			1	7							1				30	101	1024		3	0	10	0													kill	28			16	1	1	ModitemHPaK	ModitemHPaK									0
@@ -92,13 +92,13 @@ item_lightradius	89			1	5							1				15	51	1024		4	4	8	5																	6	1	1	M
 item_lightcolor	90			1	24							1				155	0	1024		5	0	24	0																														0
 item_req_percent	91			1	8											26	-34	1024		8	100	10	100																	0	4	2	ModStr3h	ModStr3h									0
 item_levelreq	92																	1024		6	20	7																		2	1	1	ModitemRLZOMG	ModitemRLZOMG									0
-item_fasterattackrate	93		1	1	9											1042	156	1024		7	20	9	60												1					145	2	1	ModStr4m	ModitemCursedIAS									0
+item_fasterattackrate	93		1	1	9											1042	156	1024		7	20	10	60												1					145	2	1	ModStr4m	ModitemCursedIAS									0
 item_levelreqpct	94															1042	-52	1024		7	20	10	64			1			item_levelreq											58	4	2	ModitemLevReq	ModitemLevReq									0
 lastblockframe	95																	1024		6	20																																0
-item_fastermovevelocity	96		1	1	9											4083	156	1024		7	20	9	50																	148	2	1	ModStr4s	ModitemCursedMove									0
+item_fastermovevelocity	96		1	1	9											4083	156	1024		7	20	10	50																	148	2	1	ModStr4s	ModitemCursedMove									0
 item_nonclassskill	97			1	15	11						1			1	181	327	1024		7	20	6	1	11																81	28												0
 state	98		1		1	8						1				415	64	1024		6	20	1		8																													0
-item_fastergethitrate	99		1	1	9											1065	72	1024		7	20	9	50																	139	2	1	ModStr4p	ModitemCursedFHR									0
+item_fastergethitrate	99		1	1	9											1065	72	1024		7	20	10	50																	139	2	1	ModStr4p	ModitemCursedFHR									0
 monster_playercount	100																	1024		7	20																																0
 skill_poison_override_length	101				8													1024		6	20	6	0																														0
 item_fasterblockrate	102		1	1	9											1484	72	1024		7	20	10	20																	136	2	1	ModStr4y	ModitemSlowerBlock									0
@@ -126,7 +126,7 @@ item_demon_tohit	123			1	13											15	7	1024		10	128	10	128												1					
 item_undead_tohit	124			1	13											11	7	1024		10	128	10	128												1					106	1	1	ModStr4k	ModStr4k									0
 item_throwable	125			1	2											82	1024	1024		1	0	1	0																	5	3	0	ModStr5a	ModStr5a									0
 item_elemskill	126			1	3	3						1				76	1024	1024		4	0	3	0	3																157	1	1	ModitemColdSkills	ModitemColdSkills									0
-item_allskills	127			1	5							1				8	2	1024		3	0	4	0																	158	1	1	ModStr3k	ModStr3k									0
+item_allskills	127			1	8							1				8	2	1024		3	0	5	0																	158	1	1	ModStr3k	ModStr3k									0
 item_attackertakeslightdamage	128			1	6							1				4	102	1024		5	0	10	0													damagedinmelee	10			14	3	2	ModStr3j	ModStr3j		14	3	2	ModitemAllThorns				0
 ironmaiden_level	129			1	10													1024																																			0
 lifetap_level	130			1	10													1024																																			0
@@ -194,10 +194,10 @@ x_signet02	191	c		1	12											13	4	1024		5	0	5	0																													
 x_signet03	192	c		1	12											13	4	1024		5	0	5	0																														0
 x_signet04	193	c		1	12											13	4	1024		5	0	5	0																														0
 item_numsockets	194			1	4											38	170	1024		4	0	4	0											1																			0
-item_skillonattack	195			1	7	17						1			2	190	256	1024		21	0	8	0	17											1	domeleeattack	20			160	15		ItemExpansiveChancX	ItemExpansiveChancX									0
-item_skillonkill	196			1	7	17						1			2	85	19	1024		21	0	8	0	17											1	kill	20			160	15		ModitemskonKill	ModitemskonKill									0
-item_skillondeath	197			1	7	17						1			2	11	9	1024		21	0	8	0	17												killed	30			160	15		Moditemskondeath	Moditemskondeath									0
-item_skillonhit	198			1	7	17						1			2	190	256	1024		21	0	8	0	17											1	domeleedamage	20	domissiledamage	20	160	15		ItemExpansiveChanc1	ItemExpansiveChanc1									0
+item_skillonattack	195			1	7	17						1			2	190	256	1024		21	0	7	0	17											1	domeleeattack	20			160	15		ItemExpansiveChancX	ItemExpansiveChancX									0
+item_skillonkill	196			1	7	17						1			2	85	19	1024		21	0	7	0	17											1	kill	20			160	15		ModitemskonKill	ModitemskonKill									0
+item_skillondeath	197			1	7	17						1			2	11	9	1024		21	0	7	0	17												killed	30			160	15		Moditemskondeath	Moditemskondeath									0
+item_skillonhit	198			1	7	17						1			2	190	256	1024		21	0	7	0	17											1	domeleedamage	20	domissiledamage	20	160	15		ItemExpansiveChanc1	ItemExpansiveChanc1									0
 item_skillonlevelup	199			1	7	17						1			2	7	6	1024		21	0	7	0	17												levelup	30			160	15		ModitemskonLevel	ModitemskonLevel									0
 item_megaimpact	200	NEW OMG		1	7	17						1			2	190	256	1024		21	0	7	0	17											1	domeleeattack	20			204	3	0	ModitemMegaImpact	ModitemMegaImpact									0
 item_skillongethit	201			1	7	17						1			2	190	256	1024		21	0	7	0	17												damagedinmelee	21	damagedbymissile	21	160	15		ItemExpansiveChanc2	ItemExpansiveChanc2									0
@@ -337,9 +337,9 @@ passive_ltng_pierce	334			1	9												2493	1024		8	0	8	0																	88	2
 passive_cold_pierce	335			1	9												1984	1024		8	0	8	0																	88	20	1	Moditemenrescoldsk	Moditemenrescoldsk		6	20	1	ModitemResallsk	ModitemResallsk			0
 passive_pois_pierce	336			1	9												2345	1024		8	0	8	0																	88	20	1	Moditemenrespoissk	Moditemenrespoissk		6	20	1	ModitemResallsk	ModitemResallsk			0
 passive_critical_strike	337			1	9													1024		8	0	8	0																														0
-passive_dodge	338			1	9											8	14	1024		7	0	8	0																	40	2	1	ModitemArrrgh	ModitemArrrgh		8	2	1	ModitemAvoidance	ModitemAvoidance			0
-passive_avoid	339			1	9											8	14	1024		7	0	8	0																	40	2	1	ModitemArrrgh	ModitemArrrgh		8	2	1	ModitemAvoidance	ModitemAvoidance			0
-passive_evade	340			1	9											8	14	1024		7	0	8	0																	40	2	1	ModitemArrrgh	ModitemArrrgh		8	2	1	ModitemAvoidance	ModitemAvoidance			0
+passive_dodge	338			1	9											8	14	1024		7	0	7	0																	40	2	1	ModitemArrrgh	ModitemArrrgh		8	2	1	ModitemAvoidance	ModitemAvoidance			0
+passive_avoid	339			1	9											8	14	1024		7	0	7	0																	40	2	1	ModitemArrrgh	ModitemArrrgh		8	2	1	ModitemAvoidance	ModitemAvoidance			0
+passive_evade	340			1	9											8	14	1024		7	0	7	0																	40	2	1	ModitemArrrgh	ModitemArrrgh		8	2	1	ModitemAvoidance	ModitemAvoidance			0
 passive_warmth	341			1	9													1024		8	0	8	0																														0
 passive_mastery_melee_th	342			1	11	8												1024		8	0	8	0																														0
 passive_mastery_melee_dmg	343			1	11	8										15	207	1024		8	0	8	0																							4	3	0	ModitemPeril	ModitemPeril			0
@@ -420,13 +420,13 @@ shadowfiends_pierce_buff	417	skills.txt		1	12													1024																		
 item_needschallenged	418	cubemain.txt		1	12											8	2	1024		2	0	2	0																	146	3	0	ModitemNeedsLCed	ModitemNeedsLCed									0
 hm_c	419	hard mode challenge counter		1	12											11	7	1024		8	0	8	0																	2	3	0	DescWtfIsThis	DescWtfIsThis									0
 event_hit2	420	technical - not suited for affixes		1	12													1024																																			0
-black_1	421	black road fodder		1	12											666	13	1024		2	0	2	2																	20	3	0	DescBlack1	DescBlack1									0
-black_2	422	black road fodder		1	12											666	13	1024		2	0	2	2																	19	3	0	DescBlack2	DescBlack2									0
-black_3	423	black road fodder		1	12											666	13	1024		2	0	2	2																	17	3	0	DescBlack3	DescBlack3									0
-black_4	424	black road fodder		1	12											666	13	1024		2	0	2	2																	16	3	0	DescBlack4	DescBlack4									0
-black_5	425	black road fodder		1	12											666	13	1024		2	0	2	2																	18	3	0	DescBlack5	DescBlack5									0
-black_6	426	black road fodder		1	12											666	13	1024		2	0	2	2																	1	3	0	DescBlack6	DescWhatsUpBro									0
-black_7	427	black road fodder		1	12											666	13	1024		2	0	2	2																	1	3	0	DescBlack7	Desc_Ultimative_You_Won									0
+black_1	421	black road fodder		1	12											666	13	1024		2	0	2	0																	20	3	0	DescBlack1	DescBlack1									0
+black_2	422	black road fodder		1	12											666	13	1024		2	0	2	0																	19	3	0	DescBlack2	DescBlack2									0
+black_3	423	black road fodder		1	12											666	13	1024		2	0	2	0																	17	3	0	DescBlack3	DescBlack3									0
+black_4	424	black road fodder		1	12											666	13	1024		2	0	2	0																	16	3	0	DescBlack4	DescBlack4									0
+black_5	425	black road fodder		1	12											666	13	1024		2	0	2	0																	18	3	0	DescBlack5	DescBlack5									0
+black_6	426	black road fodder		1	12											666	13	1024		2	0	2	0																	15	3	0	DescBlack6	DescBlack6									0
+black_7	427	black road fodder		1	12											666	13	1024		2	0	2	0																	14	3	0	DescBlack7	DescBlack7									0
 blackroad_kill_check	428	black road fodder		1	12													1024																																			0
 passive_rejuv_dr	429	skills.txt		1	12											8	2	1024		8	0	8	0																	18	4	1	ModitemRejuvSyn	ModitemRejuvSyn									0
 skill_paganheart_synergy	430	misc.txt		1	12											33	6	1024		8	0	8	0																	50	1	1	ModitemPaganB	ModitemPaganB									0
@@ -465,7 +465,7 @@ x_signet66	462	c		1	12											13	4	1024		5	0	5	0																													
 x_signet67	463	c		1	12											13	4	1024		5	0	5	0																														0
 x_signet68	464	c		1	12											13	4	1024		5	0	5	0																														0
 x_signet69	465	c		1	12											13	4	1024		5	0	5	0																														0
-x_signet70	466	c		1	12											13	4	1024		5	0	7	0																														0
+x_signet70	466	c		1	12											13	4	1024		5	0	5	0																														0
 skill_elixirs_synergy	467	misc.txt		1	12											33	6	1024		10	0	10	0																	49	4	1	ModitemElix	ModitemElix									0
 skill_light_mastery	468	skills.txt		1	12													1024																																			0
 skill_shadow_mastery	469	skills.txt		1	12													1024																																			0
@@ -478,7 +478,7 @@ item_desc_druidmorph	475	desc only		1	12													1024		1	0	1	0														
 item_desc_dbaura	476	desc only		1	12													1024		1	0	1	0																	159	3	0	ModitemDBA	ModitemDBA									0
 item_desc_hardaura	477	desc only		1	12													1024		4	1	4	1																	158	1	1	ModitemIncDif	ModitemIncDif									0
 item_desc_instructions	478	desc only		1	12													1024		1	0	1	0																	159	3	0	ModitemJollyRoger	ModitemJollyRoger									0
-skill_more	479	skills.txt		1	12											404	118	1024		3	0	4	0																	69	3	2	ModitemMorSkillz	ModitemMorSkillz									0
+skill_more	479	skills.txt		1	12											404	118	1024		3	0	3	0																	69	3	2	ModitemMorSkillz	ModitemMorSkillz									0
 item_skill_paragon	480	itemstatcost.txt		1	12											902	227	1024		5	0	5	0																	75	1	1	ModitemParagon	ModitemParagon									0
 item_skill_runemaster	481	itemstatcost.txt		1	12											902	227	1024		5	0	5	0																	74	4	1	ModitemRunemaster	ModitemRunemaster									0
 item_gem_paragon	482	hidden bonus		1	6													1024		6	0	10	0			2	5	item_skill_paragon	vitality																								0

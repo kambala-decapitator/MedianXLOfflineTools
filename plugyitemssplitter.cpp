@@ -8,6 +8,12 @@
 #include <QHBoxLayout>
 #include <QVBoxLayout>
 #include <QKeyEvent>
+#include <QProgressBar>
+
+//#include <QtConcurrentRun>
+//#include <QFuture>
+//#include <QFutureWatcher>
+//#include <QtConcurrentMap>
 
 #include <qmath.h>
 
@@ -139,12 +145,55 @@ bool PlugyItemsSplitter::storeItemInStorage(ItemInfo *item, int storage)
         if (result)
             break;
     }
-    if (!result)
-        qDebug() << "failed to store" << ItemDataBase::Items()->operator[](item->itemType).name << "in plugy storage";
-    else
+    if (result)
         addItemToList(item, false);
     return result;
 }
+
+//void PlugyItemsSplitter::moveItemsToFirstPages(ItemsList *items, bool toShards)
+//{
+//    foreach (ItemInfo *item, *items)
+//        if ((toShards && isArcaneShard(item)) || (!toShards && isSignetOfLearning(item)))
+//            storeItemInStorage(item, item->storage);
+//}
+
+//class A : public QObject
+//{
+//    Q_OBJECT
+
+//public:
+//    A(QObject *parent = 0) : QObject() {}
+//    virtual ~A() {}
+
+//public slots:
+//    void started() { qDebug() << Q_FUNC_INFO; }
+//    void progressRangeChanged(int min, int max) { qDebug() << "min" << min << "max" << max; }
+//    void	progressTextChanged ( const QString & progressText ) { qDebug() << "progressText" << progressText; }
+//    void	progressValueChanged ( int progressValue ) { qDebug() << "progressValue" << progressValue; }
+//    void	finished () { qDebug() << Q_FUNC_INFO; }
+//};
+
+//#include "plugyitemssplitter.moc"
+
+class ProgressBarModal : public QProgressBar
+{
+public:
+    ProgressBarModal(QWidget *parent = 0) : QProgressBar(parent)
+    {
+        setRange(0, 0);
+        setTextVisible(false);
+        setWindowTitle(tr("Please wait..."));
+        setWindowFlags(Qt::CustomizeWindowHint | Qt::WindowTitleHint);
+        setWindowModality(Qt::ApplicationModal);
+        adjustSize();
+        setFixedSize(size());
+    }
+
+    void centerInWidget(QWidget *w) { move(w->mapToGlobal(QPoint((w->size().width() - size().width()) / 2, (w->size().height() - size().height()) / 2))); }
+
+protected:
+    void closeEvent(QCloseEvent *e) { e->ignore(); }
+};
 
 void PlugyItemsSplitter::disenchantAllItems(bool toShards, bool upgradeToCrystals, bool eatSignets, bool includeUniques, bool includeSets, ItemsList *items /*= 0*/)
 {
@@ -152,16 +201,40 @@ void PlugyItemsSplitter::disenchantAllItems(bool toShards, bool upgradeToCrystal
     ItemsPropertiesSplitter::disenchantAllItems(toShards, upgradeToCrystals, eatSignets, includeUniques, includeSets, items);
     if (_shouldApplyActionToAllPages)
     {
-        if ((toShards && !upgradeToCrystals) || (!toShards && !eatSignets))
+        // move signets/shards to the beginning
+        if ((toShards && !upgradeToCrystals) || !toShards)
         {
-            // move signets/shards to the beginning
+            ProgressBarModal progressBar;
+            //progressBar.setRange(0, 0);
+            //progressBar.setTextVisible(false);
+            //progressBar.setWindowTitle(tr("Please wait..."));
+            //progressBar.setWindowFlags(Qt::CustomizeWindowHint | Qt::WindowTitleHint);
+            //progressBar.setWindowModality(Qt::ApplicationModal);
+            //progressBar.adjustSize();
+            //progressBar.setFixedSize(progressBar.size());
+            //progressBar.move(mapToGlobal(QPoint((size().width() - progressBar.size().width()) / 2, (size().height() - progressBar.size().height()) / 2)));
+            progressBar.centerInWidget(this);
+            progressBar.show();
+
             foreach (ItemInfo *item, *items)
             {
                 if ((toShards && isArcaneShard(item)) || (!toShards && isSignetOfLearning(item)))
                 {
+                    qApp->processEvents();
                     storeItemInStorage(item, item->storage);
                 }
             }
+            // TODO: [0.4+] optimize
+//            QFutureWatcher<void> *watcher = new QFutureWatcher<void>;
+//            A *a = new A;
+//            connect(watcher, SIGNAL(started()), a, SLOT(started()));
+//            connect(watcher, SIGNAL(progressRangeChanged(int, int)), a, SLOT(progressRangeChanged(int, int)));
+//            connect(watcher, SIGNAL(progressTextChanged ( const QString &)), a, SLOT(progressTextChanged ( const QString &)));
+//            connect(watcher, SIGNAL(progressValueChanged ( int)), a, SLOT(progressValueChanged ( int)));
+//            connect(watcher, SIGNAL(finished()), a, SLOT(finished()));
+//            QFuture<void> f = QtConcurrent::run(this, &PlugyItemsSplitter::moveItemsToFirstPages, items, toShards);
+////            QFuture<void> f = QtConcurrent::map(*items, &PlugyItemsSplitter::moveItemsToFirstPages);
+//            watcher->setFuture(f);
         }
         setItems(_allItems); // update spinbox value and range
     }
@@ -215,9 +288,10 @@ void PlugyItemsSplitter::setItems(const ItemsList &newItems)
 
 void PlugyItemsSplitter::updateItemsForCurrentPage(bool pageChanged_ /*= true*/)
 {
+    quint32 currentPage = static_cast<quint32>(_pageSpinBox->value());
     _pagedItems.clear();
     foreach (ItemInfo *item, _allItems)
-        if (item->plugyPage == static_cast<quint32>(_pageSpinBox->value()))
+        if (item->plugyPage == currentPage)
             _pagedItems += item;
     updateItems(_pagedItems);
 

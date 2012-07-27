@@ -965,7 +965,7 @@
 967	\orange;Хорадрический Маг
 968	Хорадрический Охранник
 969	(                                 Излучатель Смерти                                 )
-970	\orange;Механик Смерти\blue;
+970	\orange;Механик Смерти
 971	\gold;(                                 Мясник                                 )\blue;
 972	Chicken (Critter)
 973	\gold;(                                 Король Кот                                 )\blue;
@@ -1055,7 +1055,7 @@
 1057	\green;Кровавый Брат\blue;
 1058	\green;Плеть Бури
 1059	\gold;(                                 Лорд Примус                                 )\blue;
-1060	\orange;Кровавый Ползун\blue;
+1060	\orange;Кровавый Ползун
 1061	Crystalline King
 1062	Костяной Лучник
 1063	Пылающий Мертвец-Лучник
@@ -1694,18 +1694,18 @@
 1696	Тотем Бомбы Страха
 1697	Рогатый Бог
 1698	\white;Midnight Fairy
-1699	\dgreen;Бурекогтевый Ужас\blue;
-1700	\dgreen;Пустошь\blue;
-1701	\dgreen;Светящаяся Капля\blue;
-1702	\dgreen;Фея-Ведьма\blue;
-1703	\dgreen;Охотник за Смертью\blue;
+1699	\dgreen;Бурекогтевый Ужас
+1700	\dgreen;Пустошь
+1701	\dgreen;Светящаяся Капля
+1702	\dgreen;Фея-Ведьма
+1703	\dgreen;Охотник за Смертью
 1704	потревоженная Ведьма...
 1705	ПРЕВЕД МЕДВЕД
-1706	\dgreen;Бурекогтевый Ужас\blue;
-1707	\dgreen;Пустошь\blue;
-1708	\dgreen;Светящаяся Капля\blue;
-1709	\dgreen;Фея-Ведьма\blue;
-1710	\dgreen;Охотник за Смертью\blue;
+1706	\dgreen;Бурекогтевый Ужас
+1707	\dgreen;Пустошь
+1708	\dgreen;Светящаяся Капля
+1709	\dgreen;Фея-Ведьма
+1710	\dgreen;Охотник за Смертью
 1711	потревоженная Ведьма...
 1712	\yellow;Осколочное Отродье
 1713	\yellow;Капканная Крыса\blue;
@@ -1754,8 +1754,8 @@
 1756	\orange;Фэйр
 1757	\orange;Бессолнечный Пировальщик
 1758	\orange;Бессолнечный Мутант
-1759	\yellow;Свиноруб\blue;
-1760	\yellow;Свиноруб\blue;
+1759	\yellow;Свиноруб
+1760	\yellow;Свиноруб
 1761	\yellow;Куча Мала
 1762	\yellow;Куча Мала
 1763	\yellow;Гемочума
@@ -1927,10 +1927,10 @@
 1929	\gold;Тотем Поиска
 1930	\red;(                          Подлый Волраф                          )
 1931	\orange;Подлое Отродье
-1932	\red;(      Существо Ужаса      )\blue;
-1933	\red;(      Существо Ужаса      )\blue;
-1934	\red;(      Существо Ужаса      )\blue;
-1935	\red;(      Существо Ужаса      )\blue;
+1932	\red;(     Существо Ужаса     )
+1933	\red;(     Существо Ужаса     )
+1934	\red;(     Существо Ужаса     )
+1935	\red;(     Существо Ужаса     )
 1936	\purple;Призрак Ужаса
 1937	Призрак Ульдиссиана
 1938	\red;(                         Дракон                        )
@@ -1938,152 +1938,3 @@
 1940	\purple;(                        МакроНекроКС (Секретный Босс)                        )
 1941	\orange;Карательная Турель
 1942	\orange;Карательная Турель
-1943	\red;Темный Дух
-1944	Дух
-1945	\orange;Механик Смерти\blue;
-1946	TathametDragon
-1947	GodAnu
-1948	BadAnu
-1949	TathMinion
-1950	RiftTrap
-1951	RiftTrap
-1952	RiftTrap
-1953	TathFiend
-1954	TathMinion
-1955	RiftTrap
-1956	BadAnu
-1957	RiftTrap
-1958	TathametDragon
-1959	BadAnu
-1960	PrimeLies
-1961	PrimeSin
-1962	PrimePain
-1963	PrimeAnguish
-1964	PrimeDestruction
-1965	PrimeTerror
-1966	PrimeHatred
-1967	PrimePure
-1968	NeoBarb
-1969	NeoPaladin
-1970	NeoNecro
-1971	NeoSorc
-1972	NeoSin1
-1973	MazeSecretWolf
-1974	MazeSecretSin
-1975	NeoAmazon
-1976	NeoNecroSkel
-1977	NeoNecroKnight
-1978	NeoDruid1
-1979	NeoDruid2
-1980	MazeGiant
-1981	MazeWizard
-1982	MazeDemonWizard
-1983	MazeMinion
-1984	GenAgaliarept
-1985	GenNebiros
-1986	GenSatanachia
-1987	GenSargatanas
-1988	GenLucifuge
-1989	GenFleuretty
-1990	MazeTrapSwarm
-1991	MazeTrapGeneric
-1992	MazeTrapGeneric
-1993	\yellow;Куча Мала
-1994	Волк-Спутник
-1995	Адский волк
-1996	MazeTrapGeneric
-1997	MazeTrapGeneric
-1998	MazeTrapGeneric
-1999	MazeTrapGeneric
-2000	MazeTrapGeneric
-2001	MazeTrapGeneric
-2002	MazeTrapGeneric
-2003	MazeTrapGeneric
-2004	MazeTrapGeneric
-2005	MazeTrapGeneric
-2006	MazeTrapGeneric
-2007	MazeTrapGeneric
-2008	MazeTrapGeneric
-2009	MazeTrapGeneric
-2010	DemiSealTotem
-2011	DemiSealTotem
-2012	DemiSealTotem
-2013	DemiSealTotem
-2014	DemiSealTotem
-2015	DemiSealTotem
-2016	HellGeneralTotem
-2017	MazeTrapGeneric
-2018	SecretBabylon
-2019	\orange;Песчаная Личинка
-2020	\orange;Яйцо Песчаной Личинки
-2021	\orange;Молодая Песчаная Личинка
-2022	\orange;Яйцо Песчаной Личинки
-2023	\orange;Призрак Песчаной Личинки
-2024	\orange;Песчаная Змея
-2025	\orange;Призрак Песчаной Личинки
-2026	\red;Пламя\blue;
-2027	\blue;Снег
-2028	\dgreen;Яд\blue;
-2029	\orange;Иллюзия\blue;
-2030	\yellow;Гроза\blue;
-2031	\grey;Камень\blue;
-2032	\gold;(                              Хрисаор                              )
-2033	\orange;Голиаф\blue;
-2034	Водный Часовой
-2035	\purple;(                         Хрисаор (Секретный Босс)                         )
-2036	\gold;Ловушка
-2037	\orange;Мерзость\blue;
-2038	\gold;Ловушка
-2039	\orange;Ловушка Зилота
-2040	\orange;Зилот
-2041	\orange;Гнездо Зилотов
-2042	\red;НЕ БЕСПОКОИТЬ
-2043	потревоженная Ведьма...
-2044	\purple;(                         Испуганная Ведьма                         )
-2045	\orange;Гнездо Зилотов
-2046	\orange;Зилот
-2047	\gold;смертельная ловушка...
-2048	GenLucifuge
-2049	\red;(                           Подлый Волраф                           )
-2050	Ловушка
-2051	\orange;Небесный Наследник\blue;
-2052	\orange;Энкег\blue;
-2053	~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2054	\orange;Лесное Пугало\blue;
-2055	\orange;Химера\blue;
-2056	\orange;Слуга Смерти\blue;
-2057	\orange;Повелитель Демонов\blue;
-2058	\orange;Утонувший Зверь\blue;
-2059	\orange;Гехрелет\blue;
-2060	\orange;Тьма\blue;
-2061	\orange;Гигантские Охотники\blue;
-2062	\gold;(                         Валтек, Колдун Визжири                         )
-2063	\orange;Костяной Голем\blue;
-2064	\orange;Земной Дьявол\blue;
-2065	\orange;Железный Гигант\blue;
-2066	\orange;Каменная Лягушка\blue;
-2067	\orange;Краснорукий Солдат\blue;
-2068	\orange;Стервятник-Гарпия\blue;
-2069	\orange;Хобгоблин\blue;
-2070	\orange;Король Ящеров\blue;
-2071	\orange;Человек-Ящер\blue;
-2072	\orange;Темный Огр\blue;
-2073	\orange;Полярный Червь\blue;
-2074	\orange;Скелетная Тень\blue;
-2075	\orange;Гигантский Скелет\blue;
-2076	\orange;Скелет-Священник\blue;
-2077	\orange;Существо Хаоса\blue;
-2078	\orange;Виверн\blue;
-2079	\orange;Токола\blue;
-2080	\orange;Болотная Рептилия\blue;
-2081	\orange;Подземный Хищник\blue;
-2082	\orange;Проклятый Воин\blue;
-2083	\gold;(                Андариэль, Дева Мучений                )
-2084	\gold;(                           Дуриэль, Владыка Боли                      )
-2085	\gold;(               Дул'Мефистос, Владыка Ненависти               )
-2086	\gold;(                    Аль'Диаболос, Владыка Ужаса                    )
-2087	\gold;(                    Тор'Баалос, Владыка Разрушения                    )
-2088	\gold;(          Печать Богов          )
-2090	\red;Божий Страж
-2091	\orange;Chimaera Trap
-2092	Тотем Сердца Огня

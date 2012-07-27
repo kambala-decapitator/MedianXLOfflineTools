@@ -36,7 +36,7 @@ SOURCES += main.cpp \
            experienceindicatorgroupbox.cpp \
            plugyitemssplitter.cpp \
            gearitemssplitter.cpp \
-           kexpandablegroupbox/kexpandablegroupbox.cpp
+           kexpandablegroupbox.cpp
 
 HEADERS += medianxlofflinetools.h \
            resurrectpenaltydialog.h \
@@ -70,7 +70,7 @@ HEADERS += medianxlofflinetools.h \
            experienceindicatorgroupbox.h \
            plugyitemssplitter.h \
            gearitemssplitter.h \
-           kexpandablegroupbox/kexpandablegroupbox.h
+           kexpandablegroupbox.h
 
 FORMS += medianxlofflinetools.ui \
          resurrectpenaltydialog.ui \
@@ -92,13 +92,13 @@ win32 {
     SOURCES += medianxlofflinetools_win.cpp \
                qtsingleapplication/qtlockedfile_win.cpp \
                fileassociationmanager_win.cpp
-               
+
     HEADERS += windowsincludes.h
 
     LIBS += -lshell32 \ # SHChangeNotify()
             -lole32 \   # CoCreateInstance() and other COM shit
             -luser32    # AllowSetForegroundWindow()
-    
+
     RC_FILE = resources/win/medianxlofflinetools.rc
 
 #    CONFIG(release, debug|release) {
@@ -123,12 +123,12 @@ macx {
 
     OBJECTIVE_HEADERS += machelpers.h
 
-    LIBS += -framework ApplicationServices \ # LSGetApplicationForInfo() 
+    LIBS += -framework ApplicationServices \ # LSGetApplicationForInfo()
             -framework AppKit                # NSWindow calls to disable Lion window resoration and NSAlert
 
     ICON = resources/mac/icon.icns
     QMAKE_INFO_PLIST = resources/mac/Info.plist
-    
+
     OTHER_FILES += $$QMAKE_INFO_PLIST
 
     # for Xcode 4.3+

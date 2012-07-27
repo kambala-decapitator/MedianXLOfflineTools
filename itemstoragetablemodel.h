@@ -28,7 +28,7 @@ public:
     bool canStoreItemWithMimeDataAtIndex(const QMimeData *mimeData, const QModelIndex &index) const;
 
     ItemInfo *itemAtIndex(const QModelIndex &modelIndex) const { return _itemsHash[qMakePair(modelIndex.row(), modelIndex.column())]; }
-    ItemInfo *firstItem() { return _itemsHash.begin() == _itemsHash.end() ? 0 : _itemsHash.begin().value(); }
+    ItemInfo *firstItem() { return _itemsHash.constBegin() == _itemsHash.constEnd() ? 0 : _itemsHash.begin().value(); }
     ItemInfo *itemFromMimeData(const QMimeData *mimeData) const;
 
     void setItems(const ItemsList &newItems);

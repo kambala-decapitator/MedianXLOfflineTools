@@ -17,6 +17,8 @@
      Boston, MA 02110-1301, USA.
 */
 
+#include "kexpandablegroupbox.h"
+
 #include <QtGui/QPainter>
 #include <QtGui/QMouseEvent>
 #include <QtGui/QStyle>
@@ -27,8 +29,6 @@
 #include <QtGui/QAbstractButton>
 #include <QtCore/QTimeLine>
 
-#include "kexpandablegroupbox.h"
-
 /******************************************************************
  * Helper classes
  *****************************************************************/
@@ -36,70 +36,42 @@
 class ClickableLabel : public QLabel
 {
     Q_OBJECT
-    public:
-        ClickableLabel( QWidget* parent = 0 );
-        ~ClickableLabel();
+public:
+    ClickableLabel( QWidget* parent = 0 ) : QLabel( parent ) {}
+    virtual ~ClickableLabel() {}
 
-        void mouseReleaseEvent( QMouseEvent *e );
+protected:
+    void mouseReleaseEvent( QMouseEvent *e ) { Q_UNUSED( e ); emit clicked(); }
 
-    signals:
-        void clicked();
+signals:
+    void clicked();
 };
-
-ClickableLabel::ClickableLabel( QWidget* parent )
-        : QLabel( parent )
-{
-}
-
-ClickableLabel::~ClickableLabel()
-{
-}
-
-void ClickableLabel::mouseReleaseEvent( QMouseEvent *e )
-{
-        Q_UNUSED( e );
-        emit clicked();
-}
 
 class ArrowButton : public QAbstractButton
 {
-    public:
-        ArrowButton(QWidget *parent = 0);
-        ~ArrowButton();
+public:
+    ArrowButton(QWidget *parent = 0) : QAbstractButton(parent) {}
+    virtual ~ArrowButton() {}
 
-        QSize sizeHint() const { return QSize(16, 16); }
+    QSize sizeHint() const { return QSize(16, 16); }
 
-    protected:
-        void paintEvent(QPaintEvent*);
+protected:
+    void paintEvent(QPaintEvent *event)
+    {
+        Q_UNUSED(event);
+        QPainter p(this);
+        QStyleOption opt;
+        int h = sizeHint().height();
+        opt.rect = QRect(0,(height()- h)/2, h, h);
+        opt.palette = palette();
+        opt.state = QStyle::State_Children;
+        if (isChecked())
+            opt.state |= QStyle::State_Open;
 
-    private:
+        style()->drawPrimitive(QStyle::PE_IndicatorBranch, &opt, &p);
+        p.end();
+    }
 };
-
-ArrowButton::ArrowButton(QWidget *parent)
-: QAbstractButton(parent)
-{
-}
-
-
-ArrowButton::~ArrowButton()
-{
-}
-
-void ArrowButton::paintEvent(QPaintEvent *event)
-{
-    Q_UNUSED(event);
-    QPainter p(this);
-    QStyleOption opt;
-    int h = sizeHint().height();
-    opt.rect = QRect(0,(height()- h)/2, h, h);
-    opt.palette = palette();
-    opt.state = QStyle::State_Children;
-    if (isChecked())
-        opt.state |= QStyle::State_Open;
-
-    style()->drawPrimitive(QStyle::PE_IndicatorBranch, &opt, &p);
-    p.end();
-}
 
 
 /******************************************************************

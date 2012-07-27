@@ -62,6 +62,7 @@ signals:
     void cubeDeleted(bool = true);  // connect directly to QAction's setEnabled() slot
     void closing(bool = true);      // connect directly to QAction's setDisabled() slot
     void itemsChanged(bool = true); // connect directly to QMainWindow's setWindowModified() slot
+    void signetsOfLearningEaten(int signets);
 
 private slots:
     void tabChanged(int tabIndex);

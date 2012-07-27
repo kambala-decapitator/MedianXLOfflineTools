@@ -1116,7 +1116,6 @@ j60	Scissors Katar (3)		1	3	1	0	15	invskr	h2h,tier	1	6
 163	Composite Bow (1)		2	3	1	0	2	invcbw	bow,tier	1	-1
 2@7	Ida (Sacred)		2	3	1	0	30	invbsdu	sbsd	1	4
 !80	Spirit Edge (4)		1	3	1	0	20	inv9blu	nknf,tier	1	2
-€00	NO NAME		1	4	1	0	120	lab_sword	####	1	-1
 395	Giant Axe (5)		2	3	1	0	24	invgix	2hax,tier	1	-1
 j56	Hatchet Hands (3)		1	3	1	0	11	invaxf	h2h,tier	1	6
 l23	Yew Wand (4)		1	2	1	0	15	invywn	wand,tier	1	2
@@ -1565,7 +1564,7 @@ j77	Scissors Katar (4)		1	3	1	0	20	invskr	h2h,tier	1	6
 196	Flail (2)		2	3	1	0	10	invfla	mace,tier	1	-1
 242	War Sword (3)		1	3	1	0	15	invwsd	swor,tier	1	-1
 0g1	\red;Elixir of Greater Greed	+350% Magic Find for 60 seconds	1	1	2	0	0	invpoo	hpot		-1
-K0+	\orange;Shimmering Shrine (10 Charges)		1	2	2	0	0	@Shimmering	thng		-1
+K0+	\orange;Shimmering Shrine (10 Charges)		1	2	2	0	0	jbscross	thng		-1
 aqv	Arrow Quiver		1	3	2	1	0	invqvr	bowq	2	-1
 quy	Cube Reagent (4/4)\n\orange;Dazzling Arcane Crystal		1	1	2	0	0	orb_weap	thng		-1
 P4+	\orange;Divine Shrine (6 Charges)		1	2	2	0	0	jbscross	thng		-1
@@ -1581,45 +1580,43 @@ hp2	Light Healing Potion	Regenerates 100% Life in 9 seconds	1	1	2	0	0	invhp2	hpo
 bpl	NO NAME		1	1	2	1	0	invbpl	mpot		-1
 4oµ	Cube Reagent\n\orange;Oil of Enhancement		1	1	2	0	0	oil_enhancement	thng		-1
 b@b	\red;Goodberry	A magical fruit of the Glor-An-Fhaidha...	1	1	2	0	0	cherries	hpot		-1
-J8+	\orange;Sacred Shrine (1 Charges)		1	2	2	0	0	@Sacred	thng		-1
+J8+	\orange;Sacred Shrine (1 Charges)		1	2	2	0	0	jbscross	thng		-1
 9$a	\purple;Chipped Bloodstone		1	1	2	0	1	invgsca	gemp,gem0		-1
-C2+	\orange;uiet Shrine (8 Charges)		1	2	2	0	0	@Quiet	thng		-1
+C2+	\orange;uiet Shrine (8 Charges)		1	2	2	0	0	jbscross	thng		-1
 &34	\orange;Mystic Orb	\blue;+2 Required Level\n1% Chance to cast level 3 Celerity on Attack\n\white;Cube with Any Weapon to Add Bonus	1	1	2	0	0	orb_weap	asaa		-1
 cm3	WARNING: HACKED ITEM\nGrand Charm		0	0	2	0	0	invsst	hpot		-1
 27+	\orange;Mystic Orb	\blue;+2 Required Level\nTotal Character Defense Plus 2%\n\white;Cube with Any Armor to Add Bonus	1	1	2	0	0	orb_armo	asaa		-1
 &a4	\orange;Mystic Orb	\blue;+2 Required Level\n+1 to Summon Shredder\n\white;Cube with Ring/Amulet to Add Bonus	1	1	2	0	0	orb_misc	asaa		-1
-C3+	\orange;Quiet Shrine (7 Charges)		1	2	2	0	0	@Quiet	thng		-1
-E9+	\orange;Weird Shrine (1 Charge)		1	2	2	0	0	@Weird	thng		-1
+C3+	\orange;Quiet Shrine (7 Charges)		1	2	2	0	0	jbscross	thng		-1
+E9+	\orange;Weird Shrine (1 Charge)		1	2	2	0	0	jbscross	thng		-1
 !@B	\dgreen;Signet of Skill	Right-click: Free Skill Points:	1	1	2	0	0	sigil4B	poti		-1
 r19	\purple;Fal Rune		1	1	2	0	41	invrFal	rune		-1
 31+	\orange;Mystic Orb	\blue;+2 Required Level\n+1% Experience Gained\n\white;Cube with Any Weapon to Add Bonus	1	1	2	0	0	orb_weap	asaa		-1
-B5+	\orange;Abandoned Shrine (5 Charges)		1	2	2	0	0	@Abandoned	thng		-1
+B5+	\orange;Abandoned Shrine (5 Charges)		1	2	2	0	0	jbscross	thng		-1
 zog	\red;Life Pack	Right-click: Life Restored:	1	1	2	0	0	stonemars	poti		-1
 gcy	\purple;Chipped Topaz		1	1	2	0	1	invgsya	gemt,gem0		-1
-`^`	Trader's Chest	\red;Cube the chest with a Skull to reset stats!\n\orange;stats but it will lower other stats in exchange!\nThis mighty chest allows you to increase certain\gold;	1	1	2	0	120	foolsbox	grtz		-1
 ne9	Amulet		1	1	2	0	0	invamu	amul		-1
 45+	\orange;Mystic Orb	\blue;+2 Required Level\n+25 Crafting Points\n\white;Cube with Ring/Amulet to Add Bonus	1	1	2	0	0	orb_misc	asaa		-1
-M8+	\orange;Spiritual Shrine (2 Charges)		1	2	2	0	0	@Spiritual	thng		-1
+M8+	\orange;Spiritual Shrine (2 Charges)		1	2	2	0	0	jbscross	thng		-1
 ned	Amulet		1	1	2	0	0	invamu	amul		-1
 L6+	\orange;Mysterious Shrine (4 Charges)		1	2	2	0	0	jbscross	thng		-1
 r25	\purple;Gul Rune		1	1	2	0	53	invrGul	rune		-1
 r98	\grey;The Ultimate Power\n\red;Kabraxis' Stone		1	1	2	0	120	ultra-rune	rune		-1
 06-	\red;Pearl of Wisdom	\dgrey;are worth it, especially on Destruction.\nultimate challenge, but the rewards\nanother time. The enemies there pose the\nare sprawling fields and cities from\nHidden in the deepest caves, uberlevels\n\n-- Uberlevels --	1	1	2	0	0	ShinieWhite	thng		-1
-µ13	\orange;MCS Trophy	Cube with the Cold Fusion Schematics...	1	1	2	0	0	kVizjun	thng		-1
+µ13	\orange;MCS Trophy	Cube with the Cold Fusion Schematics...	1	1	2	0	0	apple	thng		-1
 ey4	\red;Elixir of Wealth	+300% Gold Find for 60 seconds	1	1	2	0	0	invxyz	hpot		-1
 r13	\purple;Shael Rune		1	1	2	0	29	invrShae	rune		-1
 vps	Stamina Potion		1	1	2	0	0	invwps	spot		-1
 r43	\purple;No Rune		1	1	2	0	100	r-a-14	rune		-1
 a61	Sacred Worldstone Key		1	1	2	0	0	newsacwk	grtz		-1
 cm2	WARNING: HACKED ITEM\nLarge Charm		0	0	2	0	0	invwnd	hpot		-1
-`|#	The Sleep		1	1	2	0	120	jewelabc	grtz		-1
 ob6	Amulet		1	1	2	0	0	invamu	amul		-1
 r32	\purple;Cham Rune		1	1	2	0	67	invrCham	rune		-1
 38+	\orange;Mystic Orb	\blue;+2 Required Level\nAdds Stun Attack: 0.2 seconds\n\white;Cube with Any Weapon to Add Bonus	1	1	2	0	0	orb_weap	asaa		-1
 0g6	\red;Elixir of Greater Vitality	PotPoisReloadedDesc	1	1	2	0	0	invxyz	hpot		-1
 drf	Amulet		1	1	2	0	0	invamu	amul		-1
 27-	\red;Pearl of Wisdom	\dgrey;Location: Act 1 The Hole 2\nEasy (1/8)\nSummoning Uberquest\n\n-- The Butcher --	1	1	2	0	0	shiniePurple	thng		-1
-F6+	\orange;Gloomy Shrine (4 Charges)		1	2	2	0	0	@Gloomy	thng		-1
+F6+	\orange;Gloomy Shrine (4 Charges)		1	2	2	0	0	jbscross	thng		-1
 pab	Amulet		1	1	2	0	0	invamu	amul		-1
 mp5	Super Mana Potion	Mana Regeneration +150% for 6 seconds	1	1	2	0	0	invmp5	mpot		-1
 26+	\orange;Mystic Orb	\blue;+2 Required Level\n+15% Enhanced Defense\n\white;Cube with Any Armor to Add Bonus	1	1	2	0	0	orb_armo	asaa		-1
@@ -1632,7 +1629,6 @@ rvs	Rejuvenation Potion	Regenerates Life and Mana over 8 seconds	1	1	2	0	0	invvp
 a67	Congratulations. You got it\nSpirit of Damnation		1	1	2	0	0	invsple	grtz		-1
 qus	Cube Reagent (1/4)\n\orange;Regular Arcane Crystal		1	1	2	0	0	pearl4	thng		-1
 zkw	\dgreen;Signet of Gold	Right-click: Gold in Bank:	1	1	2	0	0	sigil3B	poti		-1
-||_	\grey;Cube Reagent\n\orange;Cursed Crystal		1	1	2	0	0	green_gem	thng		-1
 15^	\dgreen;Custom Signet of Learning	Right-click: Free Attribute Points:	1	1	2	0	0	newlearningFTW	poti		-1
 5$d	\purple;Flawless Amber		1	1	2	0	15	invgsad	geml,gem3		-1
 61+	\orange;Mystic Orb	\blue;+2 Required Level\n+10 Mana on Striking in Melee\n\white;Cube with Any Weapon to Add Bonus	1	1	2	0	0	orb_weap	asaa		-1
@@ -1642,17 +1638,17 @@ drb	Amulet		1	1	2	0	0	invamu	amul		-1
 54+	\orange;Mystic Orb	\blue;+2 Required Level\n1% Reanimate As: Fallen One\n\white;Cube with Any Armor to Add Bonus	1	1	2	0	0	orb_armo	asaa		-1
 &13	\orange;Mystic Orb	\blue;+2 Required Level\n+2% Bonus to Summoned Minion Life\n\white;Cube with Item to Add Bonus	1	1	2	0	0	orb_any	asaa		-1
 &44	\orange;Mystic Orb	\blue;+2 Required Level\n-1% to Enemy Poison Resistance\n\white;Cube with Item to Add Bonus	1	1	2	0	0	orb_any	asaa		-1
-H3+	\orange;Fascinating Shrine (7 Charges)		1	2	2	0	0	@Fascinating	thng		-1
+H3+	\orange;Fascinating Shrine (7 Charges)		1	2	2	0	0	jbscross	thng		-1
 a58	Scroll of Kings		1	1	2	0	0	invscb2	grtz		-1
-K9+	\orange;Shimmering Shrine (1 Charge)		1	2	2	0	0	@Shimmering	thng		-1
-A0+	\orange;Creepy Shrine (10 Charges)		1	2	2	0	0	@Creepy	thng		-1
+K9+	\orange;Shimmering Shrine (1 Charge)		1	2	2	0	0	jbscross	thng		-1
+A0+	\orange;Creepy Shrine (10 Charges)		1	2	2	0	0	jbscross	thng		-1
 64+	\orange;Mystic Orb	\blue;+2 Required Level\n3% Faster Cast Rate\n\white;Cube with Any Weapon to Add Bonus	1	1	2	0	0	orb_weap	asaa		-1
 98-	\red;Pearl of Wisdom	\dgrey;Location: Act 1 Cave Level 2\nExtreme (6/8)\nUberlevel\n\n-- Duncraig (bonus uberquest) --	1	1	2	0	0	shinieGreen	thng		-1
 &79	\orange;Mystic Orb\nAuriel's Focus	\blue;+10 Required Level\nPoison Length Reduced by 2%\n+10 to Energy\n+25% Enhanced Defense\n2% Bonus to Energy Factor\n\white;Cube with Any Armor to Add Bonus	1	1	2	0	0	orb_armo	asaa,asa#		-1
-G7+	\orange;Tainted Shrine (3 Charges)		1	2	2	0	0	@Tainted	thng		-1
+G7+	\orange;Tainted Shrine (3 Charges)		1	2	2	0	0	jbscross	thng		-1
 c@c	\red;Moon Symbol	A blessed symbol of the goddess...	1	1	2	0	0	moon1	poti		-1
 16^	\dgreen;Custom Signet of Learning	Right-click: Free Attribute Points:	1	1	2	0	0	newlearningFTW	poti		-1
-µ01	\orange;Lord Aldric Jitan Trophy	Cube with the Moon of the Spider...	1	1	2	0	0	kLAJ	thng		-1
+µ01	\orange;Lord Aldric Jitan Trophy	Cube with the Moon of the Spider...	1	1	2	0	0	apple	thng		-1
 &53	\orange;Mystic Orb	\blue;+2 Required Level\nRegenerate Life +5\n\white;Cube with Any Armor to Add Bonus	1	1	2	0	0	orb_armo	asaa		-1
 gpv	\purple;Perfect Amethyst		1	1	2	0	18	invgsve	gema,gem4		-1
 x@x	The Glorious Book of Median		1	1	2	0	0	invsbk2	grtz		-1
@@ -1665,14 +1661,14 @@ am7	Amulet		1	1	2	0	0	invamu	amul		-1
 hpo	NO NAME		1	1	2	0	0	invrps	hpot		-1
 Kx1	\red;Earth Stone	\orange;Cube with an unknown skull	1	1	2	0	0	phys-rune	thng		-1
 scz	Scalp		1	1	2	0	0	invscp	body		-1
-I4+	\orange;Ornate Shrine (6 Charges)		1	2	2	0	0	@Ornate	thng		-1
-A5+	\orange;Creepy Shrine (5 Charges)		1	2	2	0	0	@Creepy	thng		-1
+I4+	\orange;Ornate Shrine (6 Charges)		1	2	2	0	0	jbscross	thng		-1
+A5+	\orange;Creepy Shrine (5 Charges)		1	2	2	0	0	jbscross	thng		-1
 k.Z	\red;Key of Damnation		2	2	2	0	0	k-Z	thng		-1
-E4+	\orange;Weird Shrine (6 Charges)		1	2	2	0	0	@Weird	thng		-1
+E4+	\orange;Weird Shrine (6 Charges)		1	2	2	0	0	jbscross	thng		-1
 skz	\purple;Perfect Skull		1	1	2	0	18	invskz	gemz,gem4		-1
 qum	\grey;Cube Reagent\n\orange;Arcane Crystal		1	1	2	0	0	gemcontainer	thng		-1
 57+	\orange;Mystic Orb	\blue;+2 Required Level\n1% Chance to cast level 3 Miasma on Attack\n\white;Cube with Any Weapon to Add Bonus	1	1	2	0	0	orb_weap	asaa		-1
-H7+	\orange;Fascinating Shrine (3 Charges)		1	2	2	0	0	@Fascinating	thng		-1
+H7+	\orange;Fascinating Shrine (3 Charges)		1	2	2	0	0	jbscross	thng		-1
 m@m	\dgreen;Spinecracker's Sigil		1	1	2	0	0	ring03	thng		-1
 08-	\red;Pearl of Wisdom	\dgrey;smarter than your common foe. Beware!\nmonsters are far more dangerous and\nthroughout Sanctuary, Elite\nWalking among their lesser brethren\n\n-- Elite Monsters --	1	1	2	0	0	ShinieWhite	thng		-1
 pa4	Amulet		1	1	2	0	0	invamu	amul		-1
@@ -1686,8 +1682,8 @@ bps	NO NAME		1	1	2	1	0	invbps	mpot		-1
 spe	Spleen		1	1	2	0	0	invsple	body		-1
 04^	\dgreen;Custom Signet of Learning	Right-click: Free Attribute Points:	1	1	2	0	0	newlearningFTW	poti		-1
 gfg	\purple;Flawed Emerald		1	1	2	0	5	invgsgb	geme,gem1		-1
-r99	\red;Unknown Skull		1	1	2	0	0	braxrune	thng		-1
-µ04	\orange;Akarat Trophy	Cube with the Visions of Akarat...	1	1	2	0	0	kAkarat	thng		-1
+r99	\red;Unknown Skull		1	1	2	0	120	braxrune	thng		-1
+µ04	\orange;Akarat Trophy	Cube with the Visions of Akarat...	1	1	2	0	0	apple	thng		-1
 L7+	\orange;Mysterious Shrine (3 Charges)		1	2	2	0	0	jbscross	thng		-1
 &21	\orange;Mystic Orb	\blue;+2 Required Level\nFire Resist +6%\n\white;Cube with Any Armor to Add Bonus	1	1	2	0	0	orb_armo	asaa		-1
 &73	\orange;Mystic Orb\nZayl's Soul Orb	\blue;+10 Required Level\nHalf Freeze Duration\n+25 to Mana\n1% Reanimate As: Flying Scimitar\n\white;Cube with Item to Add Bonus	1	1	2	0	0	orb_any	asaa,asa#		-1
@@ -1697,26 +1693,26 @@ gly	\purple;Flawless Topaz		1	1	2	0	15	invgsyd	gemt,gem3		-1
 brz	Brain		1	1	2	0	0	invbrnz	body		-1
 pac	Amulet		1	1	2	0	0	invamu	amul		-1
 &41	\orange;Mystic Orb	\blue;+2 Required Level\n-1% to Enemy Fire Resistance\n\white;Cube with Item to Add Bonus	1	1	2	0	0	orb_any	asaa		-1
-N2+	\orange;Magical Shrine (8 Charges)		1	2	2	0	0	@Magical	thng		-1
-N1+	\orange;Magical Shrine (9 Charges)		1	2	2	0	0	@Magical	thng		-1
+N2+	\orange;Magical Shrine (8 Charges)		1	2	2	0	0	jbscross	thng		-1
+N1+	\orange;Magical Shrine (9 Charges)		1	2	2	0	0	jbscross	thng		-1
 O2+	\orange;Enchanted Shrine (8 Charges)		1	2	2	0	0	jbscross	thng		-1
 x03	Worldstone Orb		1	1	2	0	0	invgmy	arac		4
 17^	\dgreen;Custom Signet of Learning	Right-click: Free Attribute Points:	1	1	2	0	0	newlearningFTW	poti		-1
 &a3	\orange;Mystic Orb	\blue;+2 Required Level\n+1 to Summon Daystar\n\white;Cube with Ring/Amulet to Add Bonus	1	1	2	0	0	orb_misc	asaa		-1
 25+	\orange;Mystic Orb	\blue;+2 Required Level\n2% Curse Length Reduction\n\white;Cube with Any Armor to Add Bonus	1	1	2	0	0	orb_armo	asaa		-1
-J7+	\orange;Sacred Shrine (3 Charges)		1	2	2	0	0	@Sacred	thng		-1
-F4+	\orange;Gloomy Shrine (6 Charges)		1	2	2	0	0	@Gloomy	thng		-1
+J7+	\orange;Sacred Shrine (3 Charges)		1	2	2	0	0	jbscross	thng		-1
+F4+	\orange;Gloomy Shrine (6 Charges)		1	2	2	0	0	jbscross	thng		-1
 hrt	Heart		1	1	2	0	0	invhrt	body		-1
 &07	\orange;Mystic Orb	\blue;+2 Required Level\n+1% to Lightning Spell Damage\n\white;Cube with Item to Add Bonus	1	1	2	0	0	orb_any	asaa		-1
 a57	Visions of Akarat		1	1	2	0	0	invsbk2	grtz		-1
 qut	Cube Reagent (2/4)\n\orange;Glowing Arcane Crystal		1	1	2	0	0	orb_armo	thng		-1
 o@o	\dgreen;Eyegouger's Sigil		1	1	2	0	0	ring06	thng		-1
-E8+	\orange;Weird Shrine (2 Charges)		1	2	2	0	0	@Weird	thng		-1
+E8+	\orange;Weird Shrine (2 Charges)		1	2	2	0	0	jbscross	thng		-1
 ob4	Amulet		1	1	2	0	0	invamu	amul		-1
 02-	\red;Pearl of Wisdom	\dgrey;and you may survive combat more easily!\nmode. The loss of speed is minimal\nTo avoid this penalty, hit R to enter walk\nchance to block are reduced when you run.\nAs in the regular game, your defense and\n\n-- Defense Penalty --	1	1	2	0	0	ShinieWhite	thng		-1
 a66	Idol of Vanity		1	1	2	0	0	newidolofvanity	grtz		-1
 am8	Amulet		1	1	2	0	0	invamu	amul		-1
-E1+	\orange;Weird Shrine (9 Charges)		1	2	2	0	0	@Weird	thng		-1
+E1+	\orange;Weird Shrine (9 Charges)		1	2	2	0	0	jbscross	thng		-1
 skc	\purple;Chipped Skull		1	1	2	0	1	invskc	gemz,gem0		-1
 qqc	Bolt Quiver (Sacred)		1	3	2	1	75	invcqv	qcqv	2	-1
 rin	Ring		1	1	2	0	0	invrin	ring		-1
@@ -1724,7 +1720,7 @@ r56	\grey;Great Rune\n\purple;Sha'ad Rune		1	1	2	0	100	r-d-12	rune		-1
 52+	\orange;Mystic Orb	\blue;+2 Required Level\n3% Faster Hit Recovery\n\white;Cube with Any Armor to Add Bonus	1	1	2	0	0	orb_armo	asaa		-1
 r54	\grey;Great Rune\n\purple;Krys Rune		1	1	2	0	100	r-d-07	rune		-1
 qux	Cube Reagent (3/4)\n\orange;Brilliant Arcane Crystal		1	1	2	0	0	orb_misc	thng		-1
-µ14	\orange;Brother Laz Trophy	Cube with the Glorious Book of Median...	1	1	2	0	0	kLazbro	thng		-1
+µ14	\orange;Brother Laz Trophy	Cube with the Glorious Book of Median...	1	1	2	0	0	apple	thng		-1
 ob2	Amulet		1	1	2	0	0	invamu	amul		-1
 34+	\orange;Mystic Orb	\blue;+2 Required Level\n1% Chance to cast level 3 Celerity on Attack\n\white;Cube with Any Weapon to Add Bonus	1	1	2	0	0	orb_weap	asaa		-1
 paa	Amulet		1	1	2	0	0	invamu	amul		-1
@@ -1732,19 +1728,19 @@ paa	Amulet		1	1	2	0	0	invamu	amul		-1
 ba6	Amulet		1	1	2	0	0	invamu	amul		-1
 ear	Ear		1	1	2	0	0	invear	play		-1
 10+	\orange;Mystic Orb	\blue;+2 Required Level\nDamage Reduced by 2\n\white;Cube with Item to Add Bonus	1	1	2	0	0	orb_any	asaa		-1
-J6+	\orange;Sacred Shrine (4 Charges)		1	2	2	0	0	@Sacred	thng		-1
+J6+	\orange;Sacred Shrine (4 Charges)		1	2	2	0	0	jbscross	thng		-1
 l@l	\dgreen;Skinrender's Sigil		1	1	2	0	0	ring01	thng		-1
-F8+	\orange;Gloomy Shrine (2 Charges)		1	2	2	0	0	@Gloomy	thng		-1
+F8+	\orange;Gloomy Shrine (2 Charges)		1	2	2	0	0	jbscross	thng		-1
 44+	\orange;Mystic Orb	\blue;+2 Required Level\n-1% to Enemy Poison Resistance\n\white;Cube with Item to Add Bonus	1	1	2	0	0	orb_any	asaa		-1
 obd	Amulet		1	1	2	0	0	invamu	amul		-1
 &90	\orange;Mystic Orb\nCrystal of Tears	\blue;+10 Required Level\n-20 to Life\nAdds 5-15 Damage\n\white;Cube with Any Armor to Add Bonus	1	1	2	0	0	orb_armo	asaa,asa#		-1
-B7+	\orange;Abandoned Shrine (3 Charges)		1	2	2	0	0	@Abandoned	thng		-1
+B7+	\orange;Abandoned Shrine (3 Charges)		1	2	2	0	0	jbscross	thng		-1
 9tw	Amulet		1	1	2	0	0	invamu	amul		-1
-C5+	\orange;fQuiet Shrine (5 Charges)		1	2	2	0	0	@Quiet	thng		-1
+C5+	\orange;fQuiet Shrine (5 Charges)		1	2	2	0	0	jbscross	thng		-1
 ob1	Amulet		1	1	2	0	0	invamu	amul		-1
-N0+	\orange;Magical Shrine (10 Charges)		1	2	2	0	0	@Magical	thng		-1
-r59	\grey;Secret Rune\n\purple;Magic Rune		1	1	2	0	100	magic-rune	rune		-1
-R0+	\orange;Stone Shrine (10 Charges)		1	2	2	0	0	@Stone	thng		-1
+N0+	\orange;Magical Shrine (10 Charges)		1	2	2	0	0	jbscross	thng		-1
+r59	\grey;Secret Rune\n\purple;Magic Rune		1	1	2	0	120	magic-rune	rune		-1
+R0+	\orange;Stone Shrine (10 Charges)		1	2	2	0	0	jbscross	thng		-1
 gcr	\purple;Chipped Ruby		1	1	2	0	1	invgsra	gemr,gem0		-1
 tal	Tail		1	1	2	0	0	invtail	body		-1
 zky	\dgreen;Greater Signet of Learning	Right-click: Free Attribute Points:	1	1	2	0	0	sigilXL	poti		-1
@@ -1756,61 +1752,60 @@ g$c	\purple;Onyx		1	1	2	0	12	invgsoc	gemq,gem2		-1
 40-	\red;Pearl of Wisdom	\dgrey;Location: Act 1 Crypt\nImpossible (7/8)\nUberlevel\n\n-- Kingdom of Shadow --	1	1	2	0	0	shinieGreen	thng		-1
 39+	\orange;Mystic Orb	\blue;+2 Required Level\n1% Chance of Crushing Blow\n\white;Cube with Any Weapon to Add Bonus	1	1	2	0	0	orb_weap	asaa		-1
 O5+	\orange;Enchanted Shrine (5 Charges)		1	2	2	0	0	jbscross	thng		-1
-G0+	\orange;Tainted Shrine (10 Charges)		1	2	2	0	0	@Tainted	thng		-1
+G0+	\orange;Tainted Shrine (10 Charges)		1	2	2	0	0	jbscross	thng		-1
 vic	Cube Reagent\n\orange;Sacrifical Heart		1	1	2	0	0	invhrt	thng		-1
 &64	\orange;Mystic Orb	\blue;+2 Required Level\n3% Faster Cast Rate\n\white;Cube with Any Weapon to Add Bonus	1	1	2	0	0	orb_weap	asaa		-1
 L3+	\orange;Mysterious Shrine (7 Charges)		1	2	2	0	0	jbscross	thng		-1
-F3+	\orange;Gloomy Shrine (7 Charges)		1	2	2	0	0	@Gloomy	thng		-1
+F3+	\orange;Gloomy Shrine (7 Charges)		1	2	2	0	0	jbscross	thng		-1
 7$a	\purple;Chipped Turquoise		1	1	2	0	1	invgsta	gemo,gem0		-1
 eo7	\red;Elixir of Fire	Fire Spell Damage +50% for 60 seconds	1	1	2	0	0	invxyz	hpot		-1
 r02	\purple;Eld Rune		1	1	2	0	11	invrEld	rune		-1
 23^	\dgreen;Custom Signet of Learning	Right-click: Free Attribute Points:	1	1	2	0	0	newlearningFTW	poti		-1
 37+	\orange;Mystic Orb	\blue;+2 Required Level\n+10 to Maximum Damage\n\white;Cube with Any Weapon to Add Bonus	1	1	2	0	0	orb_weap	asaa		-1
-E2+	\orange;Weird Shrine (8 Charges)		1	2	2	0	0	@Weird	thng		-1
-R4+	\orange;Stone Shrine (6 Charges)		1	2	2	0	0	@Stone	thng		-1
+E2+	\orange;Weird Shrine (8 Charges)		1	2	2	0	0	jbscross	thng		-1
+R4+	\orange;Stone Shrine (6 Charges)		1	2	2	0	0	jbscross	thng		-1
 a56	Azmodan's Heart		1	1	2	0	0	invhrt	grtz		-1
 5$e	\purple;Perfect Amber		1	1	2	0	18	invgsae	geml,gem4		-1
 obc	Amulet		1	1	2	0	0	invamu	amul		-1
 x3x	Sunstone of Thunder	\red;Cube with your Sunstone of the Elements!	1	1	2	0	0	invgmw	grtz		-1
-K7+	\orange;Shimmering Shrine (3 Charges)		1	2	2	0	0	@Shimmering	thng		-1
+K7+	\orange;Shimmering Shrine (3 Charges)		1	2	2	0	0	jbscross	thng		-1
 adi	By Richard Knaak\nLegacy of Blood		1	1	2	0	0	invhscr2	grtz		-1
 r05	\purple;Eth Rune		1	1	2	0	15	invrEth	rune		-1
 &91	\orange;Mystic Orb\nEssence of Itherael	\blue;+10 Required Level\nTotal Character Defense Plus 5%\nEnhanced Weapon Damage +15%\n\white;Cube with Any Armor to Add Bonus	1	1	2	0	0	orb_armo	asaa,asa#		-1
-K3+	\orange;Shimmering Shrine (7 Charges)		1	2	2	0	0	@Shimmering	thng		-1
-C8+	\orange;Quiet Shrine (2 Charges)		1	2	2	0	0	@Quiet	thng		-1
+K3+	\orange;Shimmering Shrine (7 Charges)		1	2	2	0	0	jbscross	thng		-1
+C8+	\orange;Quiet Shrine (2 Charges)		1	2	2	0	0	jbscross	thng		-1
 dr1	Amulet		1	1	2	0	0	invamu	amul		-1
 &06	\orange;Mystic Orb	\blue;+2 Required Level\n+1% to Cold Spell Damage\n\white;Cube with Item to Add Bonus	1	1	2	0	0	orb_any	asaa		-1
-M4+	\orange;Spiritual Shrine (6 Charges)		1	2	2	0	0	@Spiritual	thng		-1
+M4+	\orange;Spiritual Shrine (6 Charges)		1	2	2	0	0	jbscross	thng		-1
 hrb	Herb		1	1	2	0	0	invhrb	herb		-1
 skf	\purple;Flawed Skull		1	1	2	0	5	invskf	gemz,gem1		-1
-D4+	\orange;erie Shrine (6 Charges)		1	2	2	0	0	@Eerie	thng		-1
-|\#	Brachyceran's Token		1	1	2	0	0	maggotlairfag	grtz		-1
-I5+	\orange;Ornate Shrine (5 Charges)		1	2	2	0	0	@Ornate	thng		-1
-C0+	\orange;Quiet Shrine (10 Charges)		1	2	2	0	0	@Quiet	thng		-1
+D4+	\orange;erie Shrine (6 Charges)		1	2	2	0	0	jbscross	thng		-1
+I5+	\orange;Ornate Shrine (5 Charges)		1	2	2	0	0	jbscross	thng		-1
+C0+	\orange;Quiet Shrine (10 Charges)		1	2	2	0	0	jbscross	thng		-1
 2x5	\dgreen;Alpha Brain		1	1	2	0	0	invbrnz	thng		-1
 gpb	\purple;Perfect Sapphire		1	1	2	0	18	invgsbe	gems,gem4		-1
 &56	\orange;Mystic Orb	\blue;+2 Required Level\n1% Chance to cast level 4 Spike Nova on Attack\n\white;Cube with Any Weapon to Add Bonus	1	1	2	0	0	orb_weap	asaa		-1
 32-	\red;Pearl of Wisdom	\dgrey;Location: Act 1 Tower Cellar\nExtreme (6/8)\nSummoning Uberquest\n\n-- Legacy of Blood --	1	1	2	0	0	shiniePurple	thng		-1
 glb	\purple;Flawless Sapphire		1	1	2	0	15	invgsbd	gems,gem3		-1
 02+	\orange;Mystic Orb	\blue;+2 Required Level\n+2 to Dexterity\n\white;Cube with Item to Add Bonus	1	1	2	0	0	orb_any	asaa		-1
-H2+	\orange;Fascinating Shrine (8 Charges)		1	2	2	0	0	@Fascinating	thng		-1
+H2+	\orange;Fascinating Shrine (8 Charges)		1	2	2	0	0	jbscross	thng		-1
 gpg	\purple;Perfect Emerald		1	1	2	0	18	invgsge	geme,gem4		-1
 18-	\red;Pearl of Wisdom	\dgrey;Feel free to experiment!\ncreate a powerful but random crafted item.\nitem with a Portable Shrine to\nCube a sacred rare, set, unique or crafted\n\n-- Shrines and Crafting --	1	1	2	0	0	shinieYellow	thng		-1
 0sc	Scroll of Knowledge		1	1	2	0	0	invrsc	scro		-1
 19+	\orange;Mystic Orb	\blue;+2 Required Level\n+25 Defense\n\white;Cube with Ring/Amulet to Add Bonus	1	1	2	0	0	orb_misc	asaa		-1
 mp2	Light Mana Potion	Mana Regeneration +75% for 9 seconds	1	1	2	0	0	invmp2	mpot		-1
 Kx4	\red;Light Stone	\orange;Cube with an unknown skull	1	1	2	0	0	ltng-rune	thng		-1
-M2+	\orange;Spiritual Shrine (8 Charges)		1	2	2	0	0	@Spiritual	thng		-1
-R6+	\orange;Stone Shrine (4 Charges)		1	2	2	0	0	@Stone	thng		-1
+M2+	\orange;Spiritual Shrine (8 Charges)		1	2	2	0	0	jbscross	thng		-1
+R6+	\orange;Stone Shrine (4 Charges)		1	2	2	0	0	jbscross	thng		-1
 #X3	\red;Token of Hatred	\orange;Usable for powerful recipes\n\orange;Secret Reagent!	1	1	2	0	0	newsignet3	thng		-1
 r10	\purple;Thul Rune		1	1	2	0	23	invrThul	rune		-1
 !@4	\dgreen;Evil Eye of the Fairy Witch		1	1	2	0	0	evileye	thng		-1
 51+	\orange;Mystic Orb	\blue;+2 Required Level\n5% Faster Run/Walk\n\white;Cube with Any Armor to Add Bonus	1	1	2	0	0	orb_armo	asaa		-1
-I3+	\orange;Ornate Shrine (7 Charges)		1	2	2	0	0	@Ornate	thng		-1
-µ03	\orange;Judgement Day Trophy	Cube with the Crystalline Flame Medallion...	1	1	2	0	0	kJday	thng		-1
+I3+	\orange;Ornate Shrine (7 Charges)		1	2	2	0	0	jbscross	thng		-1
+µ03	\orange;Judgement Day Trophy	Cube with the Crystalline Flame Medallion...	1	1	2	0	0	apple	thng		-1
 &61	\orange;Mystic Orb	\blue;+2 Required Level\n+10 Mana on Striking in Melee\n\white;Cube with Any Weapon to Add Bonus	1	1	2	0	0	orb_weap	asaa		-1
 &50	\orange;Mystic Orb	\blue;+2 Required Level\n3% Faster Block Rate\n\white;Cube with Any Armor to Add Bonus	1	1	2	0	0	orb_armo	asaa		-1
-A6+	\orange;Creepy Shrine (4 Charges)		1	2	2	0	0	@Creepy	thng		-1
+A6+	\orange;Creepy Shrine (4 Charges)		1	2	2	0	0	jbscross	thng		-1
 21+	\orange;Mystic Orb	\blue;+2 Required Level\nFire Resist +6%\n\white;Cube with Any Armor to Add Bonus	1	1	2	0	0	orb_armo	asaa		-1
 eyz	Eye		1	1	2	0	0	inveye	body		-1
 cm1	WARNING: HACKED ITEM\nSmall Charm		0	0	2	0	0	invchm	hpot		-1
@@ -1818,11 +1813,11 @@ cm1	WARNING: HACKED ITEM\nSmall Charm		0	0	2	0	0	invchm	hpot		-1
 yq7	Hard Mode Charm		2	2	2	0	0	hardmode	grtz		-1
 mec	Cube Reagent\n\orange;Meditation Candle		1	1	2	0	0	invcndl	thng		-1
 r31	\purple;Jah Rune		1	1	2	0	65	invrJo	rune		-1
-C9+	\orange;Quiet Shrine (1 Charge)		1	2	2	0	0	@Quiet	thng		-1
+C9+	\orange;Quiet Shrine (1 Charge)		1	2	2	0	0	jbscross	thng		-1
 obf	Amulet		1	1	2	0	0	invamu	amul		-1
 qmu	Amulet (Sacred)		1	1	2	0	75	invamu	qamu		-1
-K8+	\orange;Shimmering Shrine (2 Charges)		1	2	2	0	0	@Shimmering	thng		-1
-D7+	\orange;Eerie Shrine (3 Charges)		1	2	2	0	0	@Eerie	thng		-1
+K8+	\orange;Shimmering Shrine (2 Charges)		1	2	2	0	0	jbscross	thng		-1
+D7+	\orange;Eerie Shrine (3 Charges)		1	2	2	0	0	jbscross	thng		-1
 &78	\orange;Mystic Orb\nThe Moon Crystal	\blue;+10 Required Level\nRegenerate Mana +10%\nLightning Resist 5%\nCold Resist 5%\n5% Faster Cast Rate\n\white;Cube with Any Armor to Add Bonus	1	1	2	0	0	orb_armo	asaa,asa#		-1
 49+	\orange;Mystic Orb	\blue;+2 Required Level\n10% Damage Reflected\n\white;Cube with Any Armor to Add Bonus	1	1	2	0	0	orb_armo	asaa		-1
 09+	\orange;Mystic Orb	\blue;+2 Required Level\n+1% to Physical/Magic Spell Damage\n\white;Cube with Item to Add Bonus	1	1	2	0	0	orb_any	asaa		-1
@@ -1835,11 +1830,10 @@ pa2	Amulet		1	1	2	0	0	invamu	amul		-1
 bkd	Key to the Cairn Stones		2	2	2	0	0	invscb	ques		-1
 eo8	\red;Elixir of Cold	Cold Spell Damage +50% for 60 seconds	1	1	2	0	0	invxyz	hpot		-1
 dr9	Amulet		1	1	2	0	0	invamu	amul		-1
-H1+	\orange;Fascinating Shrine (9 Charges)		1	2	2	0	0	@Fascinating	thng		-1
+H1+	\orange;Fascinating Shrine (9 Charges)		1	2	2	0	0	jbscross	thng		-1
 zkb	\dgreen;Signet of Experience	Right-click: Experience:	1	1	2	0	0	sigil5B	poti		-1
 05-	\red;Pearl of Wisdom	\dgrey;difficulty may yield wondrous rewards!\nages past. Doing so on Destruction\nareas to summon legendary evils from\nHoradric Cube and use it in designated\nCraft a Book of Summoning in the\n\n-- Summoning Uberquests --	1	1	2	0	0	ShinieWhite	thng		-1
 L1+	\orange;Mysterious Shrine (9 Charges)		1	2	2	0	0	jbscross	thng		-1
-||;		\nMax. Level: 5\n\nwithout dying!\ntraps, and kill him afterwards,\nYou need to take down his\nsummon Volrath the vile.\nUse the summon quest skill to	1	2	2	0	0	invjbi	grtz		-1
 x02	Shadow Vortex		1	1	2	0	0	invgmy	arab		6
 33+	\orange;Mystic Orb	\blue;+2 Required Level\n2% Mana Stolen per Hit\n\white;Cube with Any Weapon to Add Bonus	1	1	2	0	0	orb_weap	asaa		-1
 bbb	Lam Esen's Tome		2	2	2	0	0	invbbb	ques		-1
@@ -1850,26 +1844,26 @@ glw	\purple;Flawless Diamond		1	1	2	0	15	invgswd	gemd,gem3		-1
 0g8	\red;Elixir of Love	-25% Vendor Prices for 60 seconds	1	1	2	0	0	invpor	hpot		-1
 r38	\purple;Thur Rune		1	1	2	0	84	r-a-09	rune		-1
 ne4	Amulet		1	1	2	0	0	invamu	amul		-1
-I0+	\orange;Ornate Shrine (10 Charges)		1	2	2	0	0	@Ornate	thng		-1
+I0+	\orange;Ornate Shrine (10 Charges)		1	2	2	0	0	jbscross	thng		-1
 zoh	\red;Energy Pack	Right-click: Mana Restored:	1	1	2	0	0	stoneearth	poti		-1
 vip	Top of the Horadric Staff		1	1	2	0	0	invvip	amul		-1
 &40	\orange;Mystic Orb	\blue;+2 Required Level\n+4 Life after each Kill\n\white;Cube with Any Weapon to Add Bonus	1	1	2	0	0	orb_weap	asaa		-1
 &15	\orange;Mystic Orb	\blue;+2 Required Level\n10% Extra Gold from Monsters\n\white;Cube with Item to Add Bonus	1	1	2	0	0	orb_any	asaa		-1
-J1+	\orange;Sacred Shrine (9 Charges)		1	2	2	0	0	@Sacred	thng		-1
+J1+	\orange;Sacred Shrine (9 Charges)		1	2	2	0	0	jbscross	thng		-1
 &89	\orange;Mystic Orb\nWrathspirit	\blue;+10 Required Level\n+10 Life after each Kill\n+3% to Spell Damage\n1% Chance to cast level 8 Punisher when Struck\n\white;Cube with Any Weapon to Add Bonus	1	1	2	0	0	orb_weap	asaa,asa#		-1
 &a1	\orange;Mystic Orb	\blue;+2 Required Level\n+1% to Buff/Debuff/Cold Skill Duration\n\white;Cube with Ring/Amulet to Add Bonus	1	1	2	0	0	orb_misc	asaa		-1
-I8+	\orange;Ornate Shrine (2 Charges)		1	2	2	0	0	@Ornate	thng		-1
+I8+	\orange;Ornate Shrine (2 Charges)		1	2	2	0	0	jbscross	thng		-1
 a60	The Butcher's Tooth		1	1	2	0	0	invfang	grtz		-1
 &66	\orange;Mystic Orb\nKara's Trinket	\blue;+10 Required Level\n+5% Bonus to Summoned Minion Life\n+5% Bonus to Summoned Minion Attack Rating\n+10% Bonus to Summoned Minion Damage\n3% Faster Cast Rate\n\white;Cube with Ring/Amulet to Add Bonus	1	1	2	0	0	orb_misc	asaa,asa#		-1
-C6+	\orange;Quiet Shrine (4 Charges)		1	2	2	0	0	@Quiet	thng		-1
-N9+	\orange;Magical Shrine (1 Charge)		1	2	2	0	0	@Magical	thng		-1
-B6+	\orange;Abandoned Shrine (4 Charges)		1	2	2	0	0	@Abandoned	thng		-1
+C6+	\orange;Quiet Shrine (4 Charges)		1	2	2	0	0	jbscross	thng		-1
+N9+	\orange;Magical Shrine (1 Charge)		1	2	2	0	0	jbscross	thng		-1
+B6+	\orange;Abandoned Shrine (4 Charges)		1	2	2	0	0	jbscross	thng		-1
 kZ8	\gold;Sunless Crystal Bird	\red;your Six Angel Bag\n\red;Cube this item with	1	2	2	0	0	bird4	thng		-1
 yq2	Six Angel Bag		1	1	2	0	0	newsixangelbag	grtz		-1
 21^	\dgreen;Custom Signet of Learning	Right-click: Free Attribute Points:	1	1	2	0	0	newlearningFTW	poti		-1
-F1+	\orange;Gloomy Shrine (9 Charges)		1	2	2	0	0	@Gloomy	thng		-1
+F1+	\orange;Gloomy Shrine (9 Charges)		1	2	2	0	0	jbscross	thng		-1
 r55	\grey;Great Rune\n\purple;Auhe Rune		1	1	2	0	100	r-d-04	rune		-1
-B3+	\orange;Abandoned Shrine (7 Charges)		1	2	2	0	0	@Abandoned	thng		-1
+B3+	\orange;Abandoned Shrine (7 Charges)		1	2	2	0	0	jbscross	thng		-1
 ey2	\red;Elixir of Experience	+100% Experience for 60 seconds	1	1	2	0	0	invpog	hpot		-1
 14-	\red;Pearl of Wisdom	\dgrey;(See documentation for details)\nReward: class charm upgrade, new learnable skill\n- Completion of five Trials\nRequires:\n\n-- Black Road Challenge --	1	1	2	0	0	ShinieBlue	thng		-1
 &11	\orange;Mystic Orb	\blue;+2 Required Level\nRegenerate Mana 4%\n\white;Cube with Ring/Amulet to Add Bonus	1	1	2	0	0	orb_misc	asaa		-1
@@ -1897,7 +1891,7 @@ wms	Thawing Potion		1	1	2	0	0	invyps	wpot		-1
 zkq	\dgreen;Signet of Learning	Right-click: Free Attribute Points:	1	1	2	0	0	sigil1B	poti		-1
 2x6	\dgreen;Beta Brain		1	1	2	0	0	invbrnz	thng		-1
 q@q	\dgreen;Bonehexer's Sigil		1	1	2	0	0	ring09	thng		-1
-B1+	\orange;Abandoned Shrine (9 Charges)		1	2	2	0	0	@Abandoned	thng		-1
+B1+	\orange;Abandoned Shrine (9 Charges)		1	2	2	0	0	jbscross	thng		-1
 g34	The Golden Bird		1	2	2	0	0	invgbi	ques		-1
 !@5	\dgreen;Evil Eye of the Bane Hunter		1	1	2	0	0	evileye	thng		-1
 r08	\purple;Ral Rune		1	1	2	0	19	invrRal	rune		-1
@@ -1911,24 +1905,23 @@ yo5	\purple;Perfect Rainbow Stone		1	1	2	0	18	og5	gemx,gem4		-1
 mss	Mephisto's Soulstone		1	1	2	0	0	invmss	ques		-1
 T5+	\orange;Cryptic Shrine (5 Charges)		1	2	2	0	0	jbscross	thng		-1
 r11	\purple;Amn Rune		1	1	2	0	25	invrAmn	rune		-1
-N6+	\orange;Magical Shrine (4 Charges)		1	2	2	0	0	@Magical	thng		-1
+N6+	\orange;Magical Shrine (4 Charges)		1	2	2	0	0	jbscross	thng		-1
 nea	Amulet		1	1	2	0	0	invamu	amul		-1
 r45	\purple;Thai Rune		1	1	2	0	100	r-a-16	rune		-1
 x4x	Sunstone of the Gods		1	1	2	0	0	invgmv	grtz		-1
 #1^	\gold;Diablo's Essence		1	1	2	0	120	diabloclonecharm	grtz		-1
-||l	\grey;Cube Reagent\n\orange;Book of the Wise		2	2	2	0	0	superbooffk	thng		-1
 g$b	\purple;Flawed Onyx		1	1	2	0	5	invgsob	gemq,gem1		-1
-H4+	\orange;Fascinating Shrine (6 Charges)		1	2	2	0	0	@Fascinating	thng		-1
+H4+	\orange;Fascinating Shrine (6 Charges)		1	2	2	0	0	jbscross	thng		-1
 pa9	Amulet		1	1	2	0	0	invamu	amul		-1
-#3^	\grey;Cube Reagent\n\orange;Arcane Shards #2		1	1	2	0	0	invfary2	thng		-1
+#3^	\grey;Cube Reagent\n\orange;Arcane Shards		1	1	2	0	0	invfary2	thng		-1
 L4+	\orange;Mysterious Shrine (6 Charges)		1	2	2	0	0	jbscross	thng		-1
 &60	\orange;Mystic Orb	\blue;+2 Required Level\n+10 Life on Striking in Melee\n\white;Cube with Any Weapon to Add Bonus	1	1	2	0	0	orb_weap	asaa		-1
 &33	\orange;Mystic Orb	\blue;+2 Required Level\n2% Mana Stolen per Hit\n\white;Cube with Any Weapon to Add Bonus	1	1	2	0	0	orb_weap	asaa		-1
->.<	\gold;Character Orb\blue;	\orange;items might have interesting effects!\blue;\n\orange;Cubing this charm with different\blue;	2	2	2	0	0	newcharorxb	grtz		-1
+>.<	\gold;Character Orb\blue;	\orange;items might have interesting effects!\blue;\n\orange;Cubing this charm with different\blue;	2	2	2	0	0	zzXz	grtz		-1
 a59	Laser Focus Crystal		1	1	2	0	0	invdss	grtz		-1
 ba7	Amulet		1	1	2	0	0	invamu	amul		-1
 P2+	\orange;Divine Shrine (8 Charges)		1	2	2	0	0	jbscross	thng		-1
-µ09	\orange;Tran Athulua Trophy	Cube with the Sunstone of the Gods...	1	1	2	0	0	kTran	thng		-1
+µ09	\orange;Tran Athulua Trophy	Cube with the Sunstone of the Gods...	1	1	2	0	0	apple	thng		-1
 r37	\purple;Ix Rune		1	1	2	0	81	r-a-08	rune		-1
 9$e	\purple;Perfect Bloodstone		1	1	2	0	18	invgsce	gemp,gem4		-1
 rpl	NO NAME		1	1	2	1	0	invrpl	hpot		-1
@@ -1948,27 +1941,26 @@ ob3	Amulet		1	1	2	0	0	invamu	amul		-1
 &24	\orange;Mystic Orb	\blue;+2 Required Level\nPoison Resist +6%\n\white;Cube with Any Armor to Add Bonus	1	1	2	0	0	orb_armo	asaa		-1
 am6	Amulet		1	1	2	0	0	invamu	amul		-1
 fng	Fang		1	1	2	0	0	invfang	body		-1
-r62	\grey;Secret Rune\n\purple;Ice Rune		1	1	2	0	100	cold-rune	rune		-1
+r62	\grey;Secret Rune\n\purple;Ice Rune		1	1	2	0	120	cold-rune	rune		-1
 yq9	Aerial's Skull		1	1	2	0	0	skullstar	grtz		-1
-u@+	\gold;I Am Rich	\red;wealthy and powerful.\ndestroying them. I can afford this because I am\nBrother Laz and Uldyssian trophies to create,\nThis item does nothing and requires the Kabraxis,	1	1	2	0	0	redgem	grtz		-1
-B8+	\orange;Abandoned Shrine (2 Charges)		1	2	2	0	0	@Abandoned	thng		-1
-||.	\grey;Cube Reagent\n\orange;Blessed Crystal		1	1	2	0	0	red_gemm	thng		-1
+u@+	\gold;I Am Rich	\red;wealthy and powerful.\ndestroying them. I can afford this because I am\nBrother Laz and Duncraig trophies to create,\nThis item does nothing and requires the Vizjun,	1	1	2	0	0	redgem	grtz		-1
+B8+	\orange;Abandoned Shrine (2 Charges)		1	2	2	0	0	jbscross	thng		-1
 @##	\gold;Deity's Bow	\orange; unique recipes to unleash Divine Power\n\orange; This blessed bow might be used for	2	3	2	0	0	newathuluabow	thng		-1
 Kx2	\red;Magic Stone	\orange;Cube with an unknown skull	1	1	2	0	0	magic-rune	thng		-1
-R9+	\orange;Stone Shrine (1 Charge)		1	2	2	0	0	@Stone	thng		-1
+R9+	\orange;Stone Shrine (1 Charge)		1	2	2	0	0	jbscross	thng		-1
 O4+	\orange;Enchanted Shrine (6 Charges)		1	2	2	0	0	jbscross	thng		-1
 gfv	\purple;Flawed Amethyst		1	1	2	0	5	invgsvb	gema,gem1		-1
 cqv	Bolt Quiver		1	3	2	1	0	invcqv	xboq	2	-1
 &54	\orange;Mystic Orb	\blue;+2 Required Level\n1% Reanimate As: Fallen One\n\white;Cube with Any Armor to Add Bonus	1	1	2	0	0	orb_armo	asaa		-1
-Q7+	\orange;tHidden Shrine (3 Charges)		1	2	2	0	0	@Hidden	thng		-1
+Q7+	\orange;tHidden Shrine (3 Charges)		1	2	2	0	0	jbscross	thng		-1
 glr	\purple;Flawless Ruby		1	1	2	0	15	invgsrd	gemr,gem3		-1
-D0+	\orange;Eerie Shrine (10 Charges)		1	2	2	0	0	@Eerie	thng		-1
+D0+	\orange;Eerie Shrine (10 Charges)		1	2	2	0	0	jbscross	thng		-1
 &a2	\orange;Mystic Orb	\blue;+2 Required Level\nPoison Length Reduced by 2%\n\white;Cube with Ring/Amulet to Add Bonus	1	1	2	0	0	orb_misc	asaa		-1
 S2+	\orange;Religious Shrine (8 Charges)		1	2	2	0	0	jbscross	thng		-1
 abu	Do Not Use Ethereal Items Idiot		1	1	2	0	0	invvip	thng		-1
 6oµ	Cube Reagent\n\orange;Oil of Luck		1	1	2	0	0	oil_luck	thng		-1
-D8+	\orange;Eerie Shrine (2 Charges)		1	2	2	0	0	@Eerie	thng		-1
-B9+	\orange;Abandoned Shrine (1 Charge)		1	2	2	0	0	@Abandoned	thng		-1
+D8+	\orange;Eerie Shrine (2 Charges)		1	2	2	0	0	jbscross	thng		-1
+B9+	\orange;Abandoned Shrine (1 Charge)		1	2	2	0	0	jbscross	thng		-1
 ba4	Amulet		1	1	2	0	0	invamu	amul		-1
 obe	Amulet		1	1	2	0	0	invamu	amul		-1
 r39	\purple;Nas Rune		1	1	2	0	87	r-a-10	rune		-1
@@ -1978,13 +1970,13 @@ r52	\grey;Great Rune\n\purple;Ghal Rune		1	1	2	0	100	r-d-05	rune		-1
 t@t	Demonsbane		1	1	2	0	0	invhscr2	grtz		-1
 ey5	\red;Elixir of Strength	+40% Strength for 60 seconds	1	1	2	0	0	invxyz	hpot		-1
 ass	Right Click to learn skill of your choice\nBook of Skill		2	2	2	0	0	invsbk	ques		-1
-µ06	\orange;Duncraig Trophy	Cube with the Demonsbane...	1	1	2	0	0	kDuncraig	thng		-1
+µ06	\orange;Duncraig Trophy	Cube with the Demonsbane...	1	1	2	0	0	apple	thng		-1
 yqx	Spirit Trance Herb		1	1	2	0	0	invhrb	grtz		-1
 dr8	Amulet		1	1	2	0	0	invamu	amul		-1
-R1+	\orange;Stone Shrine (9 Charges)		1	2	2	0	0	@Stone	thng		-1
+R1+	\orange;Stone Shrine (9 Charges)		1	2	2	0	0	jbscross	thng		-1
 ba8	Amulet		1	1	2	0	0	invamu	amul		-1
 &70	\orange;Mystic Orb\nThe Endless Light	\blue;+10 Required Level\n+100 Defense\nTotal Character Defense Plus 3%\n-3% to All Enemy Resistances\n\white;Cube with Ring/Amulet to Add Bonus	1	1	2	0	0	orb_misc	asaa,asa#		-1
-I9+	\orange;Ornate Shrine (1 Charge)		1	2	2	0	0	@Ornate	thng		-1
+I9+	\orange;Ornate Shrine (1 Charge)		1	2	2	0	0	jbscross	thng		-1
 hp5	Super Healing Potion	Regenerates 100% Life in 6 seconds	1	1	2	0	0	invhp5	hpot		-1
 47-	\red;Pearl of Wisdom	\dgrey;certain places to summon ancient evils...\nMeditation Candles. Use the Book in\nthree Victim's Hearts and three\nTo create a Book of Summoning, cube\n\n-- Book of Summoning --	1	1	2	0	0	shinieYellow	thng		-1
 03-	\red;Pearl of Wisdom	\dgrey;you will gain for investing into these attributes.\ndexterity. Each weapon displays the bonus\ndamage if you have higher strength and/or\nAs in the regular game, you do more weapon\n\n-- Damage Bonuses --	1	1	2	0	0	ShinieWhite	thng		-1
@@ -1997,34 +1989,34 @@ ab!	Astrogha's Venom Stinger		1	1	2	0	0	invtail	grtz		-1
 dra	Amulet		1	1	2	0	0	invamu	amul		-1
 r21	\purple;Pul Rune		1	1	2	0	45	invrPul	rune		-1
 P3+	\orange;Divine Shrine (7 Charges)		1	2	2	0	0	jbscross	thng		-1
-D5+	\orange;Eerie Shrine (5 Charges)		1	2	2	0	0	@Eerie	thng		-1
+D5+	\orange;Eerie Shrine (5 Charges)		1	2	2	0	0	jbscross	thng		-1
 glg	\purple;Flawless Emerald		1	1	2	0	15	invgsgd	geme,gem3		-1
-M5+	\orange;Spiritual Shrine (5 Charges)		1	2	2	0	0	@Spiritual	thng		-1
+M5+	\orange;Spiritual Shrine (5 Charges)		1	2	2	0	0	jbscross	thng		-1
 &42	\orange;Mystic Orb	\blue;+2 Required Level\n-1% to Enemy Cold Resistance\n\white;Cube with Item to Add Bonus	1	1	2	0	0	orb_any	asaa		-1
-G4+	\orange;Tainted Shrine (6 Charges)		1	2	2	0	0	@Tainted	thng		-1
+G4+	\orange;Tainted Shrine (6 Charges)		1	2	2	0	0	jbscross	thng		-1
 gcw	\purple;Chipped Diamond		1	1	2	0	1	invgswa	gemd,gem0		-1
-G1+	\orange;Tainted Shrine (9 Charges)		1	2	2	0	0	@Tainted	thng		-1
+G1+	\orange;Tainted Shrine (9 Charges)		1	2	2	0	0	jbscross	thng		-1
 L9+	\orange;Mysterious Shrine (1 Charge)		1	2	2	0	0	jbscross	thng		-1
-!@6	\dgreen;Dogma of Suffering		1	1	2	0	0	zPain	thng		-1
+!@6	\dgreen;Dogma of Suffering		1	1	2	0	0	scroll11	thng		-1
 &43	\orange;Mystic Orb	\blue;+2 Required Level\n-1% to Enemy Lightning Resistance\n\white;Cube with Item to Add Bonus	1	1	2	0	0	orb_any	asaa		-1
 ne3	Amulet		1	1	2	0	0	invamu	amul		-1
 T9+	\orange;Cryptic Shrine (1 Charge)		1	2	2	0	0	jbscross	thng		-1
 49-	\red;Pearl of Wisdom	\dgrey;Destruction difficulty.\nand uniques only drop in\nhardest to find. Sacred sets\nThese powerful items are among the\n\n-- Sacred Uniques and Sets --	1	1	2	0	0	ShinieWhite	thng		-1
-r57	\grey;Secret Rune\n\purple;Fire Rune		1	1	2	0	100	fire-rune	rune		-1
+r57	\grey;Secret Rune\n\purple;Fire Rune		1	1	2	0	120	fire-rune	rune		-1
 1oµ	Cube Reagent\n\orange;Oil of Duplication		1	1	2	0	0	oil_duplication	thng		-1
-#4^	\grey;Cube Reagent\n\orange;Arcane Shards #3		1	1	2	0	0	invfary3	thng		-1
+#4^	\grey;Cube Reagent\n\orange;Arcane Shards		1	1	2	0	0	invfary3	thng		-1
 nee	Amulet		1	1	2	0	0	invamu	amul		-1
 7oµ	Cube Reagent\n\orange;Oil of Jewelcraft		1	1	2	0	0	oil_jewelcraft	thng		-1
 az!	Fool's Gold		1	1	2	0	0	invgldm	grtz		-1
 r18	\purple;Ko Rune		1	1	2	0	39	invrKo	rune		-1
 7wb	Amulet		1	1	2	0	0	invamu	amul		-1
-H6+	\orange;Fascinating Shrine (4 Charges)		1	2	2	0	0	@Fascinating	thng		-1
+H6+	\orange;Fascinating Shrine (4 Charges)		1	2	2	0	0	jbscross	thng		-1
 7lw	Amulet		1	1	2	0	0	invamu	amul		-1
 &80	\orange;Mystic Orb\nSolitude	\blue;+10 Required Level\n+5% Bonus to Buff/Debuff/Cold Skill Duration\n1% Bonus to all Attributes\n1% Chance to cast level 4 Banish when Struck\n+40 Crafting Points\n\white;Cube with Any Armor to Add Bonus	1	1	2	0	0	orb_armo	asaa,asa#		-1
 &01	\orange;Mystic Orb	\blue;+2 Required Level\n+2 to Strength\n\white;Cube with Item to Add Bonus	1	1	2	0	0	orb_any	asaa		-1
 eo9	\red;Elixir of Lightning	Lightning Spell Damage +50% for 60 seconds	1	1	2	0	0	invxyz	hpot		-1
 42-	\red;Pearl of Wisdom	\dgrey;modsbylaz.hugelaser.com\nconsult the information on the website\nchallenges, items and more,\nIf you want to learn about uberlevels,\n\n-- Documentation --	1	1	2	0	0	ShinieWhite	thng		-1
-D1+	\orange;Eerie Shrine (9 Charges)		1	2	2	0	0	@Eerie	thng		-1
+D1+	\orange;Eerie Shrine (9 Charges)		1	2	2	0	0	jbscross	thng		-1
 pa7	Amulet		1	1	2	0	0	invamu	amul		-1
 r22	\purple;Um Rune		1	1	2	0	47	invrUm	rune		-1
 &95	\orange;Mystic Orb\nThe Perfect Sphere	\blue;+10 Required Level\n+1% to Maximum Lightning Resist\n+1% to Maximum Cold Resist\n+1% to Maximum Fire Resist\n\white;Cube with Ring/Amulet to Add Bonus	1	1	2	0	0	orb_misc	asaa,asa#		-1
@@ -2038,7 +2030,7 @@ O1+	\orange;Enchanted Shrine (9 Charges)		1	2	2	0	0	jbscross	thng		-1
 01+	\orange;Mystic Orb	\blue;+2 Required Level\n+2 to Strength\n\white;Cube with Item to Add Bonus	1	1	2	0	0	orb_any	asaa		-1
 P5+	\orange;Divine Shrine (5 Charges)		1	2	2	0	0	jbscross	thng		-1
 24+	\orange;Mystic Orb	\blue;+2 Required Level\nPoison Resist +6%\n\white;Cube with Any Armor to Add Bonus	1	1	2	0	0	orb_armo	asaa		-1
-N8+	\orange;Magical Shrine (2 Charges)		1	2	2	0	0	@Magical	thng		-1
+N8+	\orange;Magical Shrine (2 Charges)		1	2	2	0	0	jbscross	thng		-1
 ktr	Amulet		1	1	2	0	0	invamu	amul		-1
 yo4	\purple;Flawless Rainbow Stone		1	1	2	0	15	og4	gemx,gem3		-1
 53+	\orange;Mystic Orb	\blue;+2 Required Level\nRegenerate Life +5\n\white;Cube with Any Armor to Add Bonus	1	1	2	0	0	orb_armo	asaa		-1
@@ -2053,49 +2045,48 @@ x2x	Sunstone of Ice	\red;Cube with your Sunstone of the Elements!	1	1	2	0	0	invg
 S5+	\orange;Religious Shrine (5 Charges)		1	2	2	0	0	jbscross	thng		-1
 12+	\orange;Mystic Orb	\blue;+2 Required Level\n+2% Bonus to Summoned Minion Damage\n\white;Cube with Item to Add Bonus	1	1	2	0	0	orb_any	asaa		-1
 axf	Amulet		1	1	2	0	0	invamu	amul		-1
-M3+	\orange;Spiritual Shrine (7 Charges)		1	2	2	0	0	@Spiritual	thng		-1
+M3+	\orange;Spiritual Shrine (7 Charges)		1	2	2	0	0	jbscross	thng		-1
 paf	Amulet		1	1	2	0	0	invamu	amul		-1
 r36	\purple;Kur Rune		1	1	2	0	78	r-a-07	rune		-1
 62+	\orange;Mystic Orb	\blue;+2 Required Level\n+2 Energy Factor to Spell Damage\n\white;Cube with Any Weapon to Add Bonus	1	1	2	0	0	orb_weap	asaa		-1
-J9+	\orange;Sacred Shrine (1 Charge)		1	2	2	0	0	@Sacred	thng		-1
+J9+	\orange;Sacred Shrine (1 Charge)		1	2	2	0	0	jbscross	thng		-1
 &76	\orange;Mystic Orb\nIdol of Stars	\blue;+10 Required Level\n+3 to Energy\n+3 to Vitality\n+4 to Dexterity\n+4 to Strength\n\white;Cube with Any Armor to Add Bonus	1	1	2	0	0	orb_armo	asaa,asa#		-1
 7$e	\purple;Perfect Turquoise		1	1	2	0	18	invgste	gemo,gem4		-1
 baa	Amulet		1	1	2	0	0	invamu	amul		-1
 32+	\orange;Mystic Orb	\blue;+2 Required Level\n2% Life Stolen per Hit\n\white;Cube with Any Weapon to Add Bonus	1	1	2	0	0	orb_weap	asaa		-1
 &94	\orange;Mystic Orb\nExplorer's Globe	\blue;+10 Required Level\n(-1 to 2)% Bonus to Energy\n(-1 to 2)% Bonus to Vitality\n(-1 to 2)% Bonus to Dexterity\n(-1 to 2)% Bonus to Strength\n\white;Cube with Ring/Amulet to Add Bonus	1	1	2	0	0	orb_misc	asaa,asa#		-1
-||`	\orange;Broken Crystal		1	1	2	0	0	useless_gemmy	thng		-1
 99-	\red;Pearl of Wisdom	\dgrey;Would you like help?\nIt looks like you are playing Median.\nHi!\n\n-- Cluey the Paperclip --	1	1	2	0	0	ShinieWhite	thng		-1
 33-	\red;Pearl of Wisdom	\dgrey;Location: Act 1 Inner Cloister\nImpossible (7/8)\nSummoning Uberquest\n\n-- Judgement Day --	1	1	2	0	0	shiniePurple	thng		-1
 S3+	\orange;Religious Shrine (7 Charges)		1	2	2	0	0	jbscross	thng		-1
-R8+	\orange;Stone Shrine (2 Charges)		1	2	2	0	0	@Stone	thng		-1
+R8+	\orange;Stone Shrine (2 Charges)		1	2	2	0	0	jbscross	thng		-1
 T3+	\orange;Cryptic Shrine (7 Charges)		1	2	2	0	0	jbscross	thng		-1
-A9+	\orange;Creepy Shrine (1 Charge)		1	2	2	0	0	@Creepy	thng		-1
+A9+	\orange;Creepy Shrine (1 Charge)		1	2	2	0	0	jbscross	thng		-1
 gpr	\purple;Perfect Ruby		1	1	2	0	18	invgsre	gemr,gem4		-1
-B2+	\orange;Abandoned Shrine (8 Charges)		1	2	2	0	0	@Abandoned	thng		-1
+B2+	\orange;Abandoned Shrine (8 Charges)		1	2	2	0	0	jbscross	thng		-1
 03+	\orange;Mystic Orb	\blue;+2 Required Level\n+2 to Energy\n\white;Cube with Item to Add Bonus	1	1	2	0	0	orb_any	asaa		-1
-##/	\orange;Uldyssian's Trophy	Cube with Uldyssian's Sword...	1	1	2	0	0	kUldyssian	thng		-1
+##/	\orange;Uldyssian's Trophy	Cube with Uldyssian's Sword...	1	1	2	0	0	apple	thng		-1
 rps	NO NAME		1	1	2	1	0	invrps	hpot		-1
 g$d	\purple;Flawless Onyx		1	1	2	0	15	invgsod	gemq,gem3		-1
 &47	\orange;Mystic Orb	\blue;+2 Required Level\nRequirements -1%\n\white;Cube with Any Armor to Add Bonus	1	1	2	0	0	orb_armo	asaa		-1
-Q3+	\orange;Hidden Shrine (7 Charges)		1	2	2	0	0	@Hidden	thng		-1
+Q3+	\orange;Hidden Shrine (7 Charges)		1	2	2	0	0	jbscross	thng		-1
 48-	\red;Pearl of Wisdom	\dgrey;they cannot be bought or gambled.\nitems. However,\neven more powerful than the best tier 6\nThe Sacred tier of weapons and armor is\n\n-- Sacred Items --	1	1	2	0	0	ShinieWhite	thng		-1
 8oµ	Cube Reagent\n\orange;Oil of Absolution		1	1	2	0	0	oil_absolution	thng		-1
 mp1	Minor Mana Potion	Mana Regeneration +50% for 10 seconds	1	1	2	0	0	invmp1	mpot		-1
-µ05	\orange;Kingdom of Shadow Trophy	Cube with the Eternal Bone Pile...	1	1	2	0	0	kUreh	thng		-1
+µ05	\orange;Kingdom of Shadow Trophy	Cube with the Eternal Bone Pile...	1	1	2	0	0	apple	thng		-1
 x06	Eye of Divinity		1	1	2	0	0	invgmy	araf		3
 13^	\dgreen;Custom Signet of Learning	Right-click: Free Attribute Points:	1	1	2	0	0	newlearningFTW	poti		-1
 9$d	\purple;Flawless Bloodstone		1	1	2	0	15	invgscd	gemp,gem3		-1
-A8+	\orange;Creepy Shrine (2 Charges)		1	2	2	0	0	@Creepy	thng		-1
+A8+	\orange;Creepy Shrine (2 Charges)		1	2	2	0	0	jbscross	thng		-1
 30+	\orange;Mystic Orb	\blue;+2 Required Level\n1% Uninterruptable Attack\n\white;Cube with Any Armor to Add Bonus	1	1	2	0	0	orb_armo	asaa		-1
 46-	\red;Pearl of Wisdom	\dgrey;bonus recipes are doubled in power.\nHonorific items are blank, but affix\nHonorific item.\nCandle and a Victim's Heart to create an\nCube any magic weapon/armor with a Meditation\n\n-- Honorific Items --	1	1	2	0	0	shinieYellow	thng		-1
 s@s	Assur's Bane		1	1	2	0	0	ring08	kill		-1
 35-	\red;Pearl of Wisdom	\dgrey;Location: Act 3 Arachnid Lair\nEasy (1/8)\nUberlevel\n\n-- Kurast 3000 BA --	1	1	2	0	0	shinieGreen	thng		-1
-E0+	\orange;Weird Shrine (10 Charges)		1	2	2	0	0	@Weird	thng		-1
+E0+	\orange;Weird Shrine (10 Charges)		1	2	2	0	0	jbscross	thng		-1
 #X7	Level Challenge 0		1	2	2	0	0	invjbi	grtz		-1
 2x7	\dgreen;Gamma Brain		1	1	2	0	0	invbrnz	thng		-1
 r53	\grey;Great Rune\n\purple;Qor Rune		1	1	2	0	100	r-d-11	rune		-1
 am3	Amulet		1	1	2	0	0	invamu	amul		-1
-K6+	\orange;Shimmering Shrine (4 Charges)		1	2	2	0	0	@Shimmering	thng		-1
+K6+	\orange;Shimmering Shrine (4 Charges)		1	2	2	0	0	jbscross	thng		-1
 r28	\purple;Lo Rune		1	1	2	0	59	invrLo	rune		-1
 ey9	\red;Elixir of Adrenaline	Cancels Running Skill Timers	1	1	2	0	0	invpotr	hpot		-1
 amf	Amulet		1	1	2	0	0	invamu	amul		-1
@@ -2107,12 +2098,11 @@ qbr	Khalim's Brain		1	1	2	0	0	invbrnz	ques		-1
 z3+	\orange;Mystic Orb	\blue;+2 Required Level\n+1 to Summon Daystar\n\white;Cube with Ring/Amulet to Add Bonus	1	1	2	0	0	orb_misc	asaa		-1
 zk#	\dgreen;Large Signet of Learning	Right-click: Free Attribute Points:	1	1	2	0	0	newlearningsig	poti		-1
 7cs	Amulet		1	1	2	0	0	invamu	amul		-1
-!@7	\dgreen;Dogma of Pain		1	1	2	0	0	zSuffering	thng		-1
+!@7	\dgreen;Dogma of Pain		1	1	2	0	0	scroll11	thng		-1
 P1+	\orange;Divine Shrine (9 Charges)		1	2	2	0	0	jbscross	thng		-1
-D3+	\orange;Eerie Shrine (7 Charges)		1	2	2	0	0	@Eerie	thng		-1
+D3+	\orange;Eerie Shrine (7 Charges)		1	2	2	0	0	jbscross	thng		-1
 2x8	\dgreen;Delta Brain		1	1	2	0	0	invbrnz	thng		-1
-F9+	\orange;Gloomy Shrine (1 Charge)		1	2	2	0	0	@Gloomy	thng		-1
-r97	\red;Unknown Skull		1	1	2	0	0	unknownskull2	thng		-1
+F9+	\orange;Gloomy Shrine (1 Charge)		1	2	2	0	0	jbscross	thng		-1
 43+	\orange;Mystic Orb	\blue;+2 Required Level\n-1% to Enemy Lightning Resistance\n\white;Cube with Item to Add Bonus	1	1	2	0	0	orb_any	asaa		-1
 T6+	\orange;Cryptic Shrine (4 Charges)		1	2	2	0	0	jbscross	thng		-1
 &68	\orange;Mystic Orb\nHeart of Frost	\blue;+10 Required Level\n+5% to Cold Spell Damage\n+3% Bonus to Summoned Minion Damage\nEnhanced Weapon Damage +10%\n\white;Cube with Ring/Amulet to Add Bonus	1	1	2	0	0	orb_misc	asaa,asa#		-1
@@ -2130,42 +2120,42 @@ O0+	\orange;Enchanted Shrine (10 Charges)		1	2	2	0	0	jbscross	thng		-1
 &09	\orange;Mystic Orb	\blue;+2 Required Level\n+1% to Physical/Magic Spell Damage\n\white;Cube with Item to Add Bonus	1	1	2	0	0	orb_any	asaa		-1
 P9+	\orange;Divine Shrine (1 Charge)		1	2	2	0	0	jbscross	thng		-1
 &62	\orange;Mystic Orb	\blue;+2 Required Level\n+2 Energy Factor to Spell Damage\n\white;Cube with Any Weapon to Add Bonus	1	1	2	0	0	orb_weap	asaa		-1
-zen	Median XL - Ultimative v6b\n\red; READ ME 	[CUBE ME WITH A HEALTH POTION]\n\n\orange;Lachdanan in Travincal.\n- Khalims Will now drops from\nthe Claw Viper Temple Level 2\n- Horadric Staff now drops in\n\red;IMPORTANT NOTE\n\n\gold;Ultimative by \grey;MarcoNecroX\n\gold;Median XL by \dgreen;BrotherLaz\n\n\red;Thanks for playing!	1	2	2	0	0	invjbi	woot		-1
+zen	Thanks for playing!\nmodsbylaz.hugelaser.com\nMedian XL - Ultimative v4		1	2	2	0	0	invjbi	woot		-1
 sku	\purple;Skull		1	1	2	0	12	invsku	gemz,gem2		-1
 #X1	\red;Token of Suffering	\orange;Usable for powerful recipes\n\orange;Secret Reagent!	1	1	2	0	0	newsignet1	thng		-1
 &32	\orange;Mystic Orb	\blue;+2 Required Level\n2% Life Stolen per Hit\n\white;Cube with Any Weapon to Add Bonus	1	1	2	0	0	orb_weap	asaa		-1
 ne6	Amulet		1	1	2	0	0	invamu	amul		-1
 &39	\orange;Mystic Orb	\blue;+2 Required Level\n1% Chance of Crushing Blow\n\white;Cube with Any Weapon to Add Bonus	1	1	2	0	0	orb_weap	asaa		-1
 gfb	\purple;Flawed Sapphire		1	1	2	0	5	invgsbb	gems,gem1		-1
-F0+	\orange;Gloomy Shrine (10 Charges)		1	2	2	0	0	@Gloomy	thng		-1
-H8+	\orange;Fascinating Shrine (2 Charges)		1	2	2	0	0	@Fascinating	thng		-1
+F0+	\orange;Gloomy Shrine (10 Charges)		1	2	2	0	0	jbscross	thng		-1
+H8+	\orange;Fascinating Shrine (2 Charges)		1	2	2	0	0	jbscross	thng		-1
 2oµ	Cube Reagent\n\orange;Oil of Disjunction		1	1	2	0	0	oil_disjunction	thng		-1
 &83	\orange;Mystic Orb\nNor Tiraj's Flaming Sphere	\blue;+10 Required Level\nFire Resist +10%\n+5% to Fire Spell Damage\nAdds 25-50 Fire Damage\n1% Chance to cast level 30 Flamefront when Attacked\n\white;Cube with Any Weapon to Add Bonus	1	1	2	0	0	orb_weap	asaa,asa#		-1
 amu	Amulet		1	1	2	0	0	invamu	amul		-1
-F2+	\orange;Gloomy Shrine (8 Charges)		1	2	2	0	0	@Gloomy	thng		-1
+F2+	\orange;Gloomy Shrine (8 Charges)		1	2	2	0	0	jbscross	thng		-1
 Kx5	\red;Ice Stone	\orange;Cube with an unknown skull	1	1	2	0	0	cold-rune	thng		-1
 r48	\purple;Nih Rune		1	1	2	0	100	r-a-01	rune		-1
 gcv	\purple;Chipped Amethyst		1	1	2	0	1	invgsva	gema,gem0		-1
-r60	\grey;Secret Rune\n\purple;Poison Rune		1	1	2	0	100	pois-rune	rune		-1
+r60	\grey;Secret Rune\n\purple;Poison Rune		1	1	2	0	120	pois-rune	rune		-1
 j34	A Jade Figurine		1	2	2	0	0	invjbi	ques		-1
 L2+	\orange;Mysterious Shrine (8 Charges)		1	2	2	0	0	jbscross	thng		-1
 O3+	\orange;Enchanted Shrine (7 Charges)		1	2	2	0	0	jbscross	thng		-1
-K4+	\orange;Shimmering Shrine (6 Charges)		1	2	2	0	0	@Shimmering	thng		-1
+K4+	\orange;Shimmering Shrine (6 Charges)		1	2	2	0	0	jbscross	thng		-1
 20-	\red;Pearl of Wisdom	\dgrey;Location: Act 2 Ancient Tunnels\nEasy (1/8)\nDungeon Uberquest\n\n-- Creature of Flame --	1	1	2	0	0	shinieRed	thng		-1
 dr7	Amulet		1	1	2	0	0	invamu	amul		-1
 ne1	Amulet		1	1	2	0	0	invamu	amul		-1
 &27	\orange;Mystic Orb	\blue;+2 Required Level\nTotal Character Defense Plus 2%\n\white;Cube with Any Armor to Add Bonus	1	1	2	0	0	orb_armo	asaa		-1
-J2+	\orange;Sacred Shrine (8 Charges)		1	2	2	0	0	@Sacred	thng		-1
-C7+	\orange;Quiet Shrine (3 Charges)		1	2	2	0	0	@Quiet	thng		-1
+J2+	\orange;Sacred Shrine (8 Charges)		1	2	2	0	0	jbscross	thng		-1
+C7+	\orange;Quiet Shrine (3 Charges)		1	2	2	0	0	jbscross	thng		-1
 ey8	\red;Elixir of Vitality	+40% Vitality for 60 seconds	1	1	2	0	0	invxyz	hpot		-1
-N4+	\orange;Magical Shrine (6 Charges)		1	2	2	0	0	@Magical	thng		-1
+N4+	\orange;Magical Shrine (6 Charges)		1	2	2	0	0	jbscross	thng		-1
 ##.	\gold;Uldyssian's Sword		1	3	2	0	0	superwhalahoo	grtz		-1
 jaw	Jawbone		1	1	2	0	0	invjaw	body		-1
 hrn	Horn		1	1	2	0	0	invhorn	body		-1
 yo2	\purple;Flawed Rainbow Stone		1	1	2	0	5	og2	gemx,gem1		-1
 ba2	Amulet		1	1	2	0	0	invamu	amul		-1
 63+	\orange;Mystic Orb	\blue;+2 Required Level\nEnhanced Weapon Damage Plus 10%\n\white;Cube with Any Weapon to Add Bonus	1	1	2	0	0	orb_weap	asaa		-1
-B0+	\orange;Abandoned Shrine (10 Charges)		1	2	2	0	0	@Abandoned	thng		-1
+B0+	\orange;Abandoned Shrine (10 Charges)		1	2	2	0	0	jbscross	thng		-1
 &26	\orange;Mystic Orb	\blue;+2 Required Level\n+15% Enhanced Defense\n\white;Cube with Any Armor to Add Bonus	1	1	2	0	0	orb_armo	asaa		-1
 S8+	\orange;Religious Shrine (2 Charges)		1	2	2	0	0	jbscross	thng		-1
 04+	\orange;Mystic Orb	\blue;+2 Required Level\n+2 to Vitality\n\white;Cube with Item to Add Bonus	1	1	2	0	0	orb_any	asaa		-1
@@ -2173,15 +2163,15 @@ S8+	\orange;Religious Shrine (2 Charges)		1	2	2	0	0	jbscross	thng		-1
 &02	\orange;Mystic Orb	\blue;+2 Required Level\n+2 to Dexterity\n\white;Cube with Item to Add Bonus	1	1	2	0	0	orb_any	asaa		-1
 &77	\orange;Mystic Orb\nNagapearl	\blue;+10 Required Level\n10% Better Chance of Getting Magic Items\n40% Extra Gold from Monsters\nStun Attack\n\white;Cube with Any Armor to Add Bonus	1	1	2	0	0	orb_armo	asaa,asa#		-1
 dr6	Amulet		1	1	2	0	0	invamu	amul		-1
-A4+	\orange;Creepy Shrine (6 Charges)		1	2	2	0	0	@Creepy	thng		-1
+A4+	\orange;Creepy Shrine (6 Charges)		1	2	2	0	0	jbscross	thng		-1
 9oµ	Cube Reagent\n\orange;Catalyst of Destruction		1	1	2	0	0	catal3	thng		-1
-I6+	\orange;Ornate Shrine (4 Charges)		1	2	2	0	0	@Ornate	thng		-1
+I6+	\orange;Ornate Shrine (4 Charges)		1	2	2	0	0	jbscross	thng		-1
 S9+	\orange;Religious Shrine (1 Charge)		1	2	2	0	0	jbscross	thng		-1
 r30	\purple;Ber Rune		1	1	2	0	63	invrBer	rune		-1
 r50	\purple;On Rune		1	1	2	0	100	r-a-03	rune		-1
 ibk	Tome of Identify		1	2	2	1	0	invrbk	book		-1
 &67	\orange;Mystic Orb\nMonsterball	\blue;+10 Required Level\n+1 to Summon Shock Beast\n+2% Bonus to Summoned Minion Resistances\n+5% Bonus to Summoned Minion Life\n+5% Bonus to Summoned Minion Damage\n\white;Cube with Ring/Amulet to Add Bonus	1	1	2	0	0	orb_misc	asaa,asa#		-1
-bxt	\orange;Kabraxis Trophy	Cube with the Soul of Kabraxis...	1	1	2	0	0	kKabraxis	thng		-1
+bxt	\orange;Kabraxis Trophy	Cube with the Soul of Kabraxis...	1	1	2	0	0	apple	thng		-1
 gsg	\purple;Emerald		1	1	2	0	12	invgsgc	geme,gem2		-1
 brx	\red;Scroll of Kabraxis	\orange;lord Kabraxis within the Chaos Sanctuary\nto break the shackles that bind the demon\nUse the enchantments of Vizjerei mage Vheran	2	2	2	0	120	braxiscroll	thng		-1
 17-	\red;Pearl of Wisdom	\dgrey;What you may get is quite unpredictable!\nnew item of the same type.\njewel to create a completely random\nCube any item with an Oil of Luck and a\n\n-- Chaos Reroll Recipe --	1	1	2	0	0	shinieYellow	thng		-1
@@ -2193,35 +2183,34 @@ bad	Amulet		1	1	2	0	0	invamu	amul		-1
 &51	\orange;Mystic Orb	\blue;+2 Required Level\n5% Faster Run/Walk\n\white;Cube with Any Armor to Add Bonus	1	1	2	0	0	orb_armo	asaa		-1
 50-	\red;Pearl of Wisdom	\dgrey;but are harder to find and wear.\nHigher tier items have better statistics,\nthe item name.\nThe tier number is displayed next to\nWeapons and armor have 6 tiers.\n\n-- Item Tiers --	1	1	2	0	0	ShinieWhite	thng		-1
 9lw	Amulet		1	1	2	0	0	invamu	amul		-1
-F7+	\orange;Gloomy Shrine (3 Charges)		1	2	2	0	0	@Gloomy	thng		-1
-I7+	\orange;Ornate Shrine (3 Charges)		1	2	2	0	0	@Ornate	thng		-1
+F7+	\orange;Gloomy Shrine (3 Charges)		1	2	2	0	0	jbscross	thng		-1
+I7+	\orange;Ornate Shrine (3 Charges)		1	2	2	0	0	jbscross	thng		-1
 ame	Amulet		1	1	2	0	0	invamu	amul		-1
 46+	\orange;Mystic Orb	\blue;+2 Required Level\nAll Resists +2%\n\white;Cube with Any Armor to Add Bonus	1	1	2	0	0	orb_armo	asaa		-1
 ey3	\red;Elixir of Greed	+150% Magic Find for 60 seconds	1	1	2	0	0	invpoy	hpot		-1
-J0+	\orange;Sacred Shrine (10 Charges)		1	2	2	0	0	@Sacred	thng		-1
-N5+	\orange;Magical Shrine (5 Charges)		1	2	2	0	0	@Magical	thng		-1
+J0+	\orange;Sacred Shrine (10 Charges)		1	2	2	0	0	jbscross	thng		-1
+N5+	\orange;Magical Shrine (5 Charges)		1	2	2	0	0	jbscross	thng		-1
 O9+	\orange;Enchanted Shrine (1 Charge)		1	2	2	0	0	jbscross	thng		-1
-J4+	\orange;Sacred Shrine (6 Charges)		1	2	2	0	0	@Sacred	thng		-1
-D6+	\orange;Eerie Shrine (4 Charges)		1	2	2	0	0	@Eerie	thng		-1
+J4+	\orange;Sacred Shrine (6 Charges)		1	2	2	0	0	jbscross	thng		-1
+D6+	\orange;Eerie Shrine (4 Charges)		1	2	2	0	0	jbscross	thng		-1
 bxa	Soul of Kabraxis		1	1	2	0	120	braxwhorl	grtz		-1
 22-	\red;Pearl of Wisdom	\dgrey;Location: Act 3 Swampy Pit 3\nTricky (3/8)\nDungeon Uberquest\n\n-- Death Projector --	1	1	2	0	0	shinieRed	thng		-1
 P7+	\orange;Divine Shrine (3 Charges)		1	2	2	0	0	jbscross	thng		-1
-Q9+	\orange;Hidden Shrine (1 Charge)		1	2	2	0	0	@Hidden	thng		-1
-||#	\gold;Book of Ultimative		2	2	2	0	0	bookxcharmx	thng		-1
+Q9+	\orange;Hidden Shrine (1 Charge)		1	2	2	0	0	jbscross	thng		-1
 &45	\orange;Mystic Orb	\blue;+2 Required Level\n+25 Crafting Points\n\white;Cube with Ring/Amulet to Add Bonus	1	1	2	0	0	orb_misc	asaa		-1
-C4+	\orange;Quiet Shrine (6 Charges)		1	2	2	0	0	@Quiet	thng		-1
+C4+	\orange;Quiet Shrine (6 Charges)		1	2	2	0	0	jbscross	thng		-1
 x#x	\gold;Sunstone of the Elements	\orange;Cube this Charm with your Upgraded Sunstones!	1	1	2	0	0	newsunstones	grtz		-1
-µ10	\orange;Quov Tsin Trophy	Cube with the Silver Seal of Ureh...	1	1	2	0	0	kTsin	thng		-1
+µ10	\orange;Quov Tsin Trophy	Cube with the Silver Seal of Ureh...	1	1	2	0	0	apple	thng		-1
 x07	Nexus Crystal		1	1	2	0	0	invgmy	arag		1
-!@9	\dgreen;Dogma of Terror		1	1	2	0	0	zTerror	thng		-1
+!@9	\dgreen;Dogma of Terror		1	1	2	0	0	scroll11	thng		-1
 r24	\purple;Ist Rune		1	1	2	0	51	invrIst	rune		-1
 tr2	Cube Reagent\nScroll of Resistance	from Tran Athulua Uberquest!\nSunstone of the Elements\nCube this scroll with the	2	2	2	0	0	invscb	thng		-1
 pa8	Amulet		1	1	2	0	0	invamu	amul		-1
-D9+	\orange;Eerie Shrine (1 Charge)		1	2	2	0	0	@Eerie	thng		-1
-R2+	\orange;Stone Shrine (8 Charges)		1	2	2	0	0	@Stone	thng		-1
+D9+	\orange;Eerie Shrine (1 Charge)		1	2	2	0	0	jbscross	thng		-1
+R2+	\orange;Stone Shrine (8 Charges)		1	2	2	0	0	jbscross	thng		-1
 ob7	Amulet		1	1	2	0	0	invamu	amul		-1
 11^	\dgreen;Custom Signet of Learning	Right-click: Free Attribute Points:	1	1	2	0	0	newlearningFTW	poti		-1
-K1+	\orange;Shimmering Shrine (9 Charges)		1	2	2	0	0	@Shimmering	thng		-1
+K1+	\orange;Shimmering Shrine (9 Charges)		1	2	2	0	0	jbscross	thng		-1
 &82	\orange;Mystic Orb\nVizjun's Ball Bearing	\blue;+10 Required Level\n+50 Maximum Stamina\n+5 to Dexterity\n3% Deadly Strike\n10% Faster Run/Walk\n\white;Cube with Any Weapon to Add Bonus	1	1	2	0	0	orb_weap	asaa,asa#		-1
 12-	\red;Pearl of Wisdom	\dgrey;(See documentation for details)\nrewards on Destruction difficulty!\nKill the four bosses in heroic levels for powerful\n\n-- Heroic Bosses --	1	1	2	0	0	ShinieBlue	thng		-1
 r01	\purple;El Rune		1	1	2	0	11	invrEl	rune		-1
@@ -2229,14 +2218,14 @@ gsb	\purple;Sapphire		1	1	2	0	12	invgsbc	gems,gem2		-1
 60+	\orange;Mystic Orb	\blue;+2 Required Level\n+10 Life on Striking in Melee\n\white;Cube with Any Weapon to Add Bonus	1	1	2	0	0	orb_weap	asaa		-1
 P6+	\orange;Divine Shrine (4 Charges)		1	2	2	0	0	jbscross	thng		-1
 zkd	\dgreen;Greater Signet of Gold	Right-click: Gold in Bank:	1	1	2	0	0	sigil2B	poti		-1
-Q6+	\orange;Hidden Shrine (4 Charges)		1	2	2	0	0	@Hidden	thng		-1
+Q6+	\orange;Hidden Shrine (4 Charges)		1	2	2	0	0	jbscross	thng		-1
 &52	\orange;Mystic Orb	\blue;+2 Required Level\n3% Faster Hit Recovery\n\white;Cube with Any Armor to Add Bonus	1	1	2	0	0	orb_armo	asaa		-1
 r44	\purple;Yul Rune		1	1	2	0	100	r-a-15	rune		-1
 5$a	\purple;Chipped Amber		1	1	2	0	1	invgsaa	geml,gem0		-1
 &a5	\orange;Mystic Orb	\blue;+2 Required Level\n+1 to Summon Bane Monster\n\white;Cube with Ring/Amulet to Add Bonus	1	1	2	0	0	orb_misc	asaa		-1
-µ11	\orange;Astrogha Trophy	Cube with the Astrogha's Venom Stinger...	1	1	2	0	0	kAstrogha	thng		-1
+µ11	\orange;Astrogha Trophy	Cube with the Astrogha's Venom Stinger...	1	1	2	0	0	apple	thng		-1
 r49	\purple;Lai Rune		1	1	2	0	100	r-a-02	rune		-1
-J5+	\orange;Sacred Shrine (5 Charges)		1	2	2	0	0	@Sacred	thng		-1
+J5+	\orange;Sacred Shrine (5 Charges)		1	2	2	0	0	jbscross	thng		-1
 p@p	\dgreen;Fleshcutter's Sigil		1	1	2	0	0	ring07	thng		-1
 s0m	Book of Summoning		1	1	2	0	0	summbook	summ		-1
 #X0	Gem		1	1	2	0	0	cubablediamond	grtz		-1
@@ -2244,12 +2233,11 @@ ne2	Amulet		1	1	2	0	0	invamu	amul		-1
 toa	\dgrey;(Only works in Diablo II 1.13 and up)\n\red;Right-click to reset Stat/Skill Points\nBelladonna Extract		1	1	2	0	0	pot04	ques		-1
 zkc	\dgreen;Signet of Learning	Right-click: Free Attribute Points:	1	1	2	0	0	sigil1B	poti		-1
 &38	\orange;Mystic Orb	\blue;+2 Required Level\nAdds Stun Attack: 0.2 seconds\n\white;Cube with Any Weapon to Add Bonus	1	1	2	0	0	orb_weap	asaa		-1
-G3+	\orange;Tainted Shrine (7 Charges)		1	2	2	0	0	@Tainted	thng		-1
-µ99	NO NAME	Thanks for playing!\n\ninability to read, I've eaten your items.\nReading is hard. As a reward for your\nHello there!\n	1	1	2	0	0	apple	thng		-1
-r61	\grey;Secret Rune\n\purple;Light Rune		1	1	2	0	100	ltng-rune	rune		-1
+G3+	\orange;Tainted Shrine (7 Charges)		1	2	2	0	0	jbscross	thng		-1
+r61	\grey;Secret Rune\n\purple;Light Rune		1	1	2	0	120	ltng-rune	rune		-1
 &17	\orange;Mystic Orb	\blue;+2 Required Level\n3% Bonus to Poison Skill Duration\n\white;Cube with Ring/Amulet to Add Bonus	1	1	2	0	0	orb_misc	asaa		-1
-I2+	\orange;Ornate Shrine (8 Charges)		1	2	2	0	0	@Ornate	thng		-1
-H9+	\orange;Fascinating Shrine (1 Charge)		1	2	2	0	0	@Fascinating	thng		-1
+I2+	\orange;Ornate Shrine (8 Charges)		1	2	2	0	0	jbscross	thng		-1
+H9+	\orange;Fascinating Shrine (1 Charge)		1	2	2	0	0	jbscross	thng		-1
 isc	Scroll of Identify		1	1	2	0	0	invrsc	scro		-1
 42+	\orange;Mystic Orb	\blue;+2 Required Level\n-1% to Enemy Cold Resistance\n\white;Cube with Item to Add Bonus	1	1	2	0	0	orb_any	asaa		-1
 09-	\red;Pearl of Wisdom	\dgrey;with a certain amount of Crafting Points.\nMany recipes require you to wear armor\nto unlock the secrets of the Horadric Cube.\nIt takes the right signs and incantations\n\n-- Crafting Points --	1	1	2	0	0	ShinieWhite	thng		-1
@@ -2257,36 +2245,36 @@ isc	Scroll of Identify		1	1	2	0	0	invrsc	scro		-1
 qhr	Khalim's Heart		1	1	2	0	0	invhrt	ques		-1
 clw	Amulet		1	1	2	0	0	invamu	amul		-1
 r09	\purple;Ort Rune		1	1	2	0	21	invrOrt	rune		-1
-R5+	\orange;Stone Shrine (5 Charges)		1	2	2	0	0	@Stone	thng		-1
+R5+	\orange;Stone Shrine (5 Charges)		1	2	2	0	0	jbscross	thng		-1
 7qr	Amulet		1	1	2	0	0	invamu	amul		-1
-G2+	\orange;Tainted Shrine (8 Charges)		1	2	2	0	0	@Tainted	thng		-1
+G2+	\orange;Tainted Shrine (8 Charges)		1	2	2	0	0	jbscross	thng		-1
 10^	\dgreen;Custom Signet of Learning	Right-click: Free Attribute Points:	1	1	2	0	0	newlearningFTW	poti		-1
 r14	\purple;Dol Rune		1	1	2	0	31	invrDol	rune		-1
 r35	\purple;Lah Rune		1	1	2	0	75	r-a-06	rune		-1
-N3+	\orange;Magical Shrine (7 Charges)		1	2	2	0	0	@Magical	thng		-1
+N3+	\orange;Magical Shrine (7 Charges)		1	2	2	0	0	jbscross	thng		-1
 ne5	Amulet		1	1	2	0	0	invamu	amul		-1
-!@A	\dgreen;Dogma of Destruction		1	1	2	0	0	zDestruction	thng		-1
-A3+	\orange;Creepy Shrine (7 Charges)		1	2	2	0	0	@Creepy	thng		-1
-H0+	\orange;Fascinating Shrine (10 Charges)		1	2	2	0	0	@Fascinating	thng		-1
-Q4+	\orange;Hidden Shrine (6 Charges)		1	2	2	0	0	@Hidden	thng		-1
+!@A	\dgreen;Dogma of Destruction		1	1	2	0	0	scroll11	thng		-1
+A3+	\orange;Creepy Shrine (7 Charges)		1	2	2	0	0	jbscross	thng		-1
+H0+	\orange;Fascinating Shrine (10 Charges)		1	2	2	0	0	jbscross	thng		-1
+Q4+	\orange;Hidden Shrine (6 Charges)		1	2	2	0	0	jbscross	thng		-1
 r16	\purple;Io Rune		1	1	2	0	35	invrIo	rune		-1
-H5+	\orange;Fascinating Shrine (5 Charges)		1	2	2	0	0	@Fascinating	thng		-1
+H5+	\orange;Fascinating Shrine (5 Charges)		1	2	2	0	0	jbscross	thng		-1
 47+	\orange;Mystic Orb	\blue;+2 Required Level\nRequirements -1%\n\white;Cube with Any Armor to Add Bonus	1	1	2	0	0	orb_armo	asaa		-1
 &12	\orange;Mystic Orb	\blue;+2 Required Level\n+2% Bonus to Summoned Minion Damage\n\white;Cube with Item to Add Bonus	1	1	2	0	0	orb_any	asaa		-1
 7$d	\purple;Flawless Turquoise		1	1	2	0	15	invgstd	gemo,gem3		-1
 &84	\orange;Mystic Orb\nThe Demon Core	\blue;+10 Required Level\n+4% to Poison Spell Damage\n+4% to Fire Spell Damage\n1% Chance to cast level 17 Gamma Field when you Kill an Enemy\n1% Chance to cast level 17 Apocalypse when you Kill an Enemy\n\white;Cube with Any Weapon to Add Bonus	1	1	2	0	0	orb_weap	asaa,asa#		-1
 gfw	\purple;Flawed Diamond		1	1	2	0	5	invgswb	gemd,gem1		-1
 neb	Amulet		1	1	2	0	0	invamu	amul		-1
-Q5+	\orange;Hidden Shrine (5 Charges)		1	2	2	0	0	@Hidden	thng		-1
+Q5+	\orange;Hidden Shrine (5 Charges)		1	2	2	0	0	jbscross	thng		-1
 96-	\red;Pearl of Wisdom	\dgrey;are not prepared, level up some more!\n120 and can drop the best items. If you\nultimate challenge. All monsters are level\nTerror difficulty. Destruction awaits, the\nCongratulations! You defeated Baal on\n\n-- Eve of Destruction --	1	1	2	0	0	ShinieWhite	thng		-1
 24-	\red;Pearl of Wisdom	\dgrey;Location: Act 3 Ruined Fane\nVery Hard (5/8)\nDungeon Uberquest\n\n-- Rathma Square --	1	1	2	0	0	shinieRed	thng		-1
 am9	Amulet		1	1	2	0	0	invamu	amul		-1
-C1+	\orange;Quiet Shrine (9 Charges)		1	2	2	0	0	@Quiet	thng		-1
+C1+	\orange;Quiet Shrine (9 Charges)		1	2	2	0	0	jbscross	thng		-1
 36+	\orange;Mystic Orb	\blue;+2 Required Level\n+15% Enhanced Damage\n\white;Cube with Any Weapon to Add Bonus	1	1	2	0	0	orb_weap	asaa		-1
 7ar	Amulet		1	1	2	0	0	invamu	amul		-1
 hp3	Healing Potion	Regenerates 100% Life in 8 seconds	1	1	2	0	0	invhp3	hpot		-1
-M0+	\orange;Spiritual Shrine (10 Charges)		1	2	2	0	0	@Spiritual	thng		-1
-N7+	\orange;Magical Shrine (3 Charges)		1	2	2	0	0	@Magical	thng		-1
+M0+	\orange;Spiritual Shrine (10 Charges)		1	2	2	0	0	jbscross	thng		-1
+N7+	\orange;Magical Shrine (3 Charges)		1	2	2	0	0	jbscross	thng		-1
 key	Key		1	1	2	1	0	invkey	key		-1
 T1+	\orange;Cryptic Shrine (9 Charges)		1	2	2	0	0	jbscross	thng		-1
 gcb	\purple;Chipped Sapphire		1	1	2	0	1	invgsba	gems,gem0		-1
@@ -2299,32 +2287,31 @@ g$a	\purple;Chipped Onyx		1	1	2	0	1	invgsoa	gemq,gem0		-1
 &85	\orange;Mystic Orb\nUldyssian's Spirit	\blue;+10 Required Level\n+2% to Spell Damage\n+25% Damage to Demons\n+5 Energy Factor to Spell Damage\n+5 Strength Factor to Spell Damage\n\white;Cube with Any Weapon to Add Bonus	1	1	2	0	0	orb_weap	asaa,asa#		-1
 &30	\orange;Mystic Orb	\blue;+2 Required Level\n1% Uninterruptable Attack\n\white;Cube with Any Armor to Add Bonus	1	1	2	0	0	orb_armo	asaa		-1
 &36	\orange;Mystic Orb	\blue;+2 Required Level\n+15% Enhanced Damage\n\white;Cube with Any Weapon to Add Bonus	1	1	2	0	0	orb_weap	asaa		-1
-K5+	\orange;Shimmering Shrine (5 Charges)		1	2	2	0	0	@Shimmering	thng		-1
+K5+	\orange;Shimmering Shrine (5 Charges)		1	2	2	0	0	jbscross	thng		-1
 ey1	\red;Elixir of Poison	Poison Spell Damage +50% for 60 seconds	1	1	2	0	0	invxyz	hpot		-1
-E3+	\orange;Weird Shrine (7 Charges)		1	2	2	0	0	@Weird	thng		-1
+E3+	\orange;Weird Shrine (7 Charges)		1	2	2	0	0	jbscross	thng		-1
 rvl	Full Rejuvenation Potion	The Big One!	1	1	2	0	0	invvpl	rpot		-1
 43-	\red;Pearl of Wisdom	\dgrey;See if you can survive!\nmonsters, revealed by their green name.\nThese hidden dungeons house dangerous\n\n-- Heroic Levels --	1	1	2	0	0	ShinieWhite	thng		-1
 #X9	\orange;Gift Box	Enjoy your gifts!\nCube me with a Town Portal	2	2	2	0	0	reagentreward	thng		-1
 &74	\orange;Mystic Orb\nEye of Malic	\blue;+10 Required Level\nAdds 15-30 Cold Damage\nAdds 15-30 Fire Damage\n1% Chance to cast level 14 Frozen Soul on Attack\n1% Chance to cast level 14 Bloodstar on Attack\n\white;Cube with Item to Add Bonus	1	1	2	0	0	orb_any	asaa,asa#		-1
 oba	Amulet		1	1	2	0	0	invamu	amul		-1
 ne8	Amulet		1	1	2	0	0	invamu	amul		-1
-M7+	\orange;Spiritual Shrine (3 Charges)		1	2	2	0	0	@Spiritual	thng		-1
-box	Horadric Cube		2	2	2	0	0	invbox	ques		-1
+M7+	\orange;Spiritual Shrine (3 Charges)		1	2	2	0	0	jbscross	thng		-1
+box	Horadric Cube		2	2	2	0	0	new_horadric	ques		-1
 pa5	Amulet		1	1	2	0	0	invamu	amul		-1
-I1+	\orange;Ornate Shrine (9 Charges)		1	2	2	0	0	@Ornate	thng		-1
-G9+	\orange;Tainted Shrine (1 Charge)		1	2	2	0	0	@Tainted	thng		-1
-G8+	\orange;Tainted Shrine (2 Charges)		1	2	2	0	0	@Tainted	thng		-1
+I1+	\orange;Ornate Shrine (9 Charges)		1	2	2	0	0	jbscross	thng		-1
+G9+	\orange;Tainted Shrine (1 Charge)		1	2	2	0	0	jbscross	thng		-1
+G8+	\orange;Tainted Shrine (2 Charges)		1	2	2	0	0	jbscross	thng		-1
 7$c	\purple;Turquoise		1	1	2	0	12	invgstc	gemo,gem2		-1
-`^#	\gold;Mystic Shard	\red;Required Gambles: 50 (max)\n\n\orange;Chest has been resetted!\nThe recipe won't work if your Trader's\nCube this item with your Trader's Chest!\n	1	1	2	0	0	chrysaor	thng		-1
-A7+	\orange;Creepy Shrine (3 Charges)		1	2	2	0	0	@Creepy	thng		-1
+A7+	\orange;Creepy Shrine (3 Charges)		1	2	2	0	0	jbscross	thng		-1
 &20	\orange;Mystic Orb	\blue;+2 Required Level\n1% Chance to cast level 3 Thunder Hammer when you Kill an Enemy\n\white;Cube with Ring/Amulet to Add Bonus	1	1	2	0	0	orb_misc	asaa		-1
-A1+	\orange;Creepy Shrine (9 Charges)		1	2	2	0	0	@Creepy	thng		-1
-!@8	\dgreen;Dogma of Hatred		1	1	2	0	0	zHatred	thng		-1
+A1+	\orange;Creepy Shrine (9 Charges)		1	2	2	0	0	jbscross	thng		-1
+!@8	\dgreen;Dogma of Hatred		1	1	2	0	0	scroll11	thng		-1
 &37	\orange;Mystic Orb	\blue;+2 Required Level\n+10 to Maximum Damage\n\white;Cube with Any Weapon to Add Bonus	1	1	2	0	0	orb_weap	asaa		-1
 jew	Jewel		1	1	2	0	0	invgswe	jewl		-1
 7tw	Amulet		1	1	2	0	0	invamu	amul		-1
-A2+	\orange;Creepy Shrine (8 Charges)		1	2	2	0	0	@Creepy	thng		-1
-Q0+	\orange;Hidden Shrine (10 Charges)		1	2	2	0	0	@Hidden	thng		-1
+A2+	\orange;Creepy Shrine (8 Charges)		1	2	2	0	0	jbscross	thng		-1
+Q0+	\orange;Hidden Shrine (10 Charges)		1	2	2	0	0	jbscross	thng		-1
 58+	\orange;Mystic Orb	\blue;+2 Required Level\n1% Chance to cast level 6 Crucify on Attack\n\white;Cube with Any Weapon to Add Bonus	1	1	2	0	0	orb_weap	asaa		-1
 07+	\orange;Mystic Orb	\blue;+2 Required Level\n+1% to Lightning Spell Damage\n\white;Cube with Item to Add Bonus	1	1	2	0	0	orb_any	asaa		-1
 &49	\orange;Mystic Orb	\blue;+2 Required Level\n10% Damage Reflected\n\white;Cube with Any Armor to Add Bonus	1	1	2	0	0	orb_armo	asaa		-1
@@ -2334,13 +2321,13 @@ dog	Apple	while being vulnerable to attacks\nRegenerates 100% life in 3 seconds	
 &48	\orange;Mystic Orb	\blue;+2 Required Level\n1% Reanimate As: Skeleton\n\white;Cube with Any Armor to Add Bonus	1	1	2	0	0	orb_armo	asaa		-1
 ba1	Amulet		1	1	2	0	0	invamu	amul		-1
 2x9	\dgreen;Epsilon Brain		1	1	2	0	0	invbrnz	thng		-1
-r58	\grey;Secret Rune\n\purple;Earth Rune		1	1	2	0	100	phys-rune	rune		-1
+r58	\grey;Secret Rune\n\purple;Earth Rune		1	1	2	0	120	phys-rune	rune		-1
 u@v	for an upgrade!\nSee the documentation\nYou're not cool enough!\n\gold;Poser!		1	1	2	0	0	redgem	thng		-1
 S7+	\orange;Religious Shrine (3 Charges)		1	2	2	0	0	jbscross	thng		-1
 gsr	\purple;Ruby		1	1	2	0	12	invgsrc	gemr,gem2		-1
 lok	Crystalline Flame Medallion		1	1	2	0	0	invvip	grtz		-1
 &55	\orange;Mystic Orb	\blue;+2 Required Level\n1% Chance to cast level 1 Teleport when Struck\n\white;Cube with Any Armor to Add Bonus	1	1	2	0	0	orb_armo	asaa		-1
-F5+	\orange;Gloomy Shrine (5 Charges)		1	2	2	0	0	@Gloomy	thng		-1
+F5+	\orange;Gloomy Shrine (5 Charges)		1	2	2	0	0	jbscross	thng		-1
 9$c	\purple;Bloodstone		1	1	2	0	12	invgscc	gemp,gem2		-1
 50+	\orange;Mystic Orb	\blue;+2 Required Level\n3% Faster Block Rate\n\white;Cube with Any Armor to Add Bonus	1	1	2	0	0	orb_armo	asaa		-1
 10-	\red;Pearl of Wisdom	\dgrey;(See documentation for details)\nReward: class charm upgrade, new learnable skill\n- Level 80 or below\nRequires:\n\n-- Ennead Challenge --	1	1	2	0	0	ShinieBlue	thng		-1
@@ -2353,13 +2340,13 @@ pa1	Amulet		1	1	2	0	0	invamu	amul		-1
 30-	\red;Pearl of Wisdom	\dgrey;Location: Act 3 Kurast Causeway\nHard (4/8)\nSummoning Uberquest\n\n-- Akarat --	1	1	2	0	0	shiniePurple	thng		-1
 T7+	\orange;Cryptic Shrine (3 Charges)		1	2	2	0	0	jbscross	thng		-1
 wrb	Amulet		1	1	2	0	0	invamu	amul		-1
-D2+	\orange;Eerie Shrine (8 Charges)		1	2	2	0	0	@Eerie	thng		-1
+D2+	\orange;Eerie Shrine (8 Charges)		1	2	2	0	0	jbscross	thng		-1
 !@1	\dgreen;Evil Eye of the Clawstorm		1	1	2	0	0	evileye	thng		-1
 !@c	\red;Pearl of Wisdom	\dgrey;by any attack!\ncost. It causes you to shatter when struck\nshardspawn should be avoided at all\nThe energy rune left behind by a destroyed\n\n-- Baal --	1	1	2	0	0	ShinieBlue	thng		-1
 tch	Torch		1	2	2	0	0	invtrch	torc		-1
 ama	Amulet		1	1	2	0	0	invamu	amul		-1
 a55	Optical Detector		1	1	2	0	0	inveye	grtz		-1
-K2+	\orange;Shimmering Shrine (8 Charges)		1	2	2	0	0	@Shimmering	thng		-1
+K2+	\orange;Shimmering Shrine (8 Charges)		1	2	2	0	0	jbscross	thng		-1
 5$b	\purple;Flawed Amber		1	1	2	0	5	invgsab	geml,gem1		-1
 ob8	Amulet		1	1	2	0	0	invamu	amul		-1
 dre	Amulet		1	1	2	0	0	invamu	amul		-1
@@ -2367,7 +2354,7 @@ r15	\purple;Hel Rune		1	1	2	0	33	invrHel	rune		-1
 tr1	Horadric Scroll		2	2	2	0	0	invhscr	ques		-1
 12^	\dgreen;Custom Signet of Learning	Right-click: Free Attribute Points:	1	1	2	0	0	newlearningFTW	poti		-1
 ice	Keep it to thaw Anya\nMalah's Potion		1	1	2	0	0	invxyz	ques		-1
-E5+	\orange;Weird Shrine (5 Charges)		1	2	2	0	0	@Weird	thng		-1
+E5+	\orange;Weird Shrine (5 Charges)		1	2	2	0	0	jbscross	thng		-1
 L0+	\orange;Mysterious Shrine (10 Charges)		1	2	2	0	0	jbscross	thng		-1
 19^	\dgreen;Custom Signet of Learning	Right-click: Free Attribute Points:	1	1	2	0	0	newlearningFTW	poti		-1
 48+	\orange;Mystic Orb	\blue;+2 Required Level\n1% Reanimate As: Skeleton\n\white;Cube with Any Armor to Add Bonus	1	1	2	0	0	orb_armo	asaa		-1
@@ -2376,25 +2363,24 @@ ey7	\red;Elixir of Energy	+40% Energy for 60 seconds	1	1	2	0	0	invxyz	hpot		-1
 gfr	\purple;Flawed Ruby		1	1	2	0	5	invgsrb	gemr,gem1		-1
 r46	\purple;Rha Rune		1	1	2	0	100	r-a-17	rune		-1
 zku	\dgreen;Signet of Experience	Right-click: Experience:	1	1	2	0	0	sigil5B	poti		-1
-E7+	\orange;Weird Shrine (3 Charges)		1	2	2	0	0	@Weird	thng		-1
+E7+	\orange;Weird Shrine (3 Charges)		1	2	2	0	0	jbscross	thng		-1
 &63	\orange;Mystic Orb	\blue;+2 Required Level\nEnhanced Weapon Damage Plus 10%\n\white;Cube with Any Weapon to Add Bonus	1	1	2	0	0	orb_weap	asaa		-1
 Kx3	\red;Poison Stone	\orange;Cube with an unknown skull	1	1	2	0	0	pois-rune	thng		-1
 31-	\red;Pearl of Wisdom	\dgrey;Location: Act 5 Nihlathak's Temple\nVery Hard (5/8)\nSummoning Uberquest\n\n-- Lord Aldric Jitan --	1	1	2	0	0	shiniePurple	thng		-1
 18^	\dgreen;Custom Signet of Learning	Right-click: Free Attribute Points:	1	1	2	0	0	newlearningFTW	poti		-1
 #X2	\red;Token of Pain	\orange;Usable for powerful recipes\n\orange;Secret Reagent!	1	1	2	0	0	newsignet2	thng		-1
-#5^	\grey;Cube Reagent\n\orange;Arcane Shards #4		1	1	2	0	0	invfary4	thng		-1
+#5^	\grey;Cube Reagent\n\orange;Arcane Shards		1	1	2	0	0	invfary4	thng		-1
 r34	\purple;Sha Rune		1	1	2	0	72	r-a-05	rune		-1
-M1+	\orange;Spiritual Shrine (9 Charges)		1	2	2	0	0	@Spiritual	thng		-1
+M1+	\orange;Spiritual Shrine (9 Charges)		1	2	2	0	0	jbscross	thng		-1
 13-	\red;Pearl of Wisdom	\dgrey;(See documentation for details)\nReward: sunstone upgrade\n- Successful Priestess kill\n- Level 50-70 or below\nRequires:\n\n-- Level Challenge --	1	1	2	0	0	ShinieBlue	thng		-1
 08^	\dgreen;Custom Signet of Learning	Right-click: Free Attribute Points:	1	1	2	0	0	newlearningFTW	poti		-1
-µ08	\orange;Cathedral of Vanity Trophy	Cube with the Idol of Vanity...	1	1	2	0	0	kCoVan	thng		-1
+µ08	\orange;Cathedral of Vanity Trophy	Cube with the Idol of Vanity...	1	1	2	0	0	apple	thng		-1
 23+	\orange;Mystic Orb	\blue;+2 Required Level\nLightning Resist +6%\n\white;Cube with Any Armor to Add Bonus	1	1	2	0	0	orb_armo	asaa		-1
 r26	\purple;Vex Rune		1	1	2	0	55	invrVex	rune		-1
 0g0	\red;Elixir of Greater Experience	+300% Experience for 60 seconds	1	1	2	0	0	invpov	hpot		-1
 yo1	\purple;Chipped Rainbow Stone		1	1	2	0	1	og1	gemx,gem0		-1
 24^	\dgreen;Custom Signet of Learning	Right-click: Free Attribute Points:	1	1	2	0	0	newlearningFTW	poti		-1
 r06	\purple;Ith Rune		1	1	2	0	15	invrIth	rune		-1
-|\\	The Ancient Repositories		1	1	2	0	0	ancientrepositoriesz	grtz		-1
 03^	\dgreen;Custom Signet of Learning	Right-click: Free Attribute Points:	1	1	2	0	0	newlearningFTW	poti		-1
 &86	\orange;Mystic Orb\nOrb of Annihilation	\blue;+10 Required Level\n2% Bonus to Energy\n+5% to Physical/Magic Spell Damage\n5% Chance to cast level 1 Detonate on Attack\n\white;Cube with Any Weapon to Add Bonus	1	1	2	0	0	orb_weap	asaa,asa#		-1
 11+	\orange;Mystic Orb	\blue;+2 Required Level\nRegenerate Mana 4%\n\white;Cube with Ring/Amulet to Add Bonus	1	1	2	0	0	orb_misc	asaa		-1
@@ -2404,7 +2390,7 @@ drc	Amulet		1	1	2	0	0	invamu	amul		-1
 r33	\purple;Zod Rune		1	1	2	0	69	invrZod	rune		-1
 k@k	The Book of Lies		1	1	2	0	0	invsbk2	grtz		-1
 01-	\red;Pearl of Wisdom	\dgrey;game difficulty, experience gain and drops\nThis emulates a multiplayer game, boosting\nWhere X is a number between 1 and 8\n/players X\nPress Enter and type in the following:\n\n-- Players X --	1	1	2	0	0	ShinieWhite	thng		-1
-G5+	\orange;Tainted Shrine (5 Charges)		1	2	2	0	0	@Tainted	thng		-1
+G5+	\orange;Tainted Shrine (5 Charges)		1	2	2	0	0	jbscross	thng		-1
 dr4	Amulet		1	1	2	0	0	invamu	amul		-1
 tbk	Tome of Town Portal		1	2	2	1	0	invbbk	book		-1
 zke	\dgreen;Greater Signet of Learning	Right-click: Free Attribute Points:	1	1	2	0	0	sigilXL	poti		-1
@@ -2412,8 +2398,8 @@ S6+	\orange;Religious Shrine (4 Charges)		1	2	2	0	0	jbscross	thng		-1
 z4+	\orange;Mystic Orb	\blue;+2 Required Level\n+1 to Summon Shredder\n\white;Cube with Ring/Amulet to Add Bonus	1	1	2	0	0	orb_misc	asaa		-1
 dr3	Amulet		1	1	2	0	0	invamu	amul		-1
 18+	\orange;Mystic Orb	\blue;+2 Required Level\n+1 to Wyrd\n\white;Cube with Ring/Amulet to Add Bonus	1	1	2	0	0	orb_misc	asaa		-1
-G6+	\orange;Tainted Shrine (4 Charges)		1	2	2	0	0	@Tainted	thng		-1
-J3+	\orange;Sacred Shrine (7 Charges)		1	2	2	0	0	@Sacred	thng		-1
+G6+	\orange;Tainted Shrine (4 Charges)		1	2	2	0	0	jbscross	thng		-1
+J3+	\orange;Sacred Shrine (7 Charges)		1	2	2	0	0	jbscross	thng		-1
 x1x	Sunstone of Fire	\red;Cube with your Sunstone of the Elements!	1	1	2	0	0	invgmr	grtz		-1
 #Y^	Creator's Hand\nCongratulations!		2	2	2	0	120	veryowncharm	grtz		-1
 Kx6	\red;Fire Stone	\orange;Cube with an unknown skull	1	1	2	0	0	fire-rune	thng		-1
@@ -2437,30 +2423,30 @@ x0x	Eternal Bone Pile		1	1	2	0	0	invbonr3	grtz		-1
 &35	\orange;Mystic Orb	\blue;+2 Required Level\n25% Bonus to Attack Rating\n\white;Cube with Any Weapon to Add Bonus	1	1	2	0	0	orb_weap	asaa		-1
 r40	\purple;Ath Rune		1	1	2	0	90	r-a-11	rune		-1
 quz	Boom!	Right-click: Free Attribute Points:	1	1	2	0	0	invfary3	poti		-1
-B4+	\orange;Abandoned Shrine (6 Charges)		1	2	2	0	0	@Abandoned	thng		-1
+B4+	\orange;Abandoned Shrine (6 Charges)		1	2	2	0	0	jbscross	thng		-1
 am2	Amulet		1	1	2	0	0	invamu	amul		-1
 mp4	Greater Mana Potion	Mana Regeneration +125% for 7 seconds	1	1	2	0	0	invmp4	mpot		-1
-µ12	\orange;Azmodan Trophy	Cube with the Azmodan's Heart...	1	1	2	0	0	kAzmodan	thng		-1
+µ12	\orange;Azmodan Trophy	Cube with the Azmodan's Heart...	1	1	2	0	0	apple	thng		-1
 hp1	Minor Healing Potion	Regenerates 100% Life in 10 seconds	1	1	2	0	0	invhp1	hpot		-1
 41+	\orange;Mystic Orb	\blue;+2 Required Level\n-1% to Enemy Fire Resistance\n\white;Cube with Item to Add Bonus	1	1	2	0	0	orb_any	asaa		-1
 &75	\orange;Mystic Orb\nApple of Discord	\blue;+10 Required Level\n+20 to Mana\n+20 to Life\n1% Chance to cast level 13 Dire Charm on Attack\n\white;Cube with Item to Add Bonus	1	1	2	0	0	orb_any	asaa,asa#		-1
 bac	Amulet		1	1	2	0	0	invamu	amul		-1
-E6+	\orange;Weird Shrine (4 Charges)		1	2	2	0	0	@Weird	thng		-1
+E6+	\orange;Weird Shrine (4 Charges)		1	2	2	0	0	jbscross	thng		-1
 &05	\orange;Mystic Orb	\blue;+2 Required Level\n+1% to Fire Spell Damage\n\white;Cube with Item to Add Bonus	1	1	2	0	0	orb_any	asaa		-1
 dr2	Amulet		1	1	2	0	0	invamu	amul		-1
 amc	Amulet		1	1	2	0	0	invamu	amul		-1
 zkr	\dgreen;Greater Signet of Experience	Right-click: Experience:	1	1	2	0	0	sigil6B	poti		-1
 pa3	Amulet		1	1	2	0	0	invamu	amul		-1
 ba9	Amulet		1	1	2	0	0	invamu	amul		-1
-Q8+	\orange;Hidden Shrine (2 Charges)		1	2	2	0	0	@Hidden	thng		-1
+Q8+	\orange;Hidden Shrine (2 Charges)		1	2	2	0	0	jbscross	thng		-1
 5$c	\purple;Amber		1	1	2	0	12	invgsac	geml,gem2		-1
 aq!	Silver Seal of Ureh		1	1	2	0	0	invrin	grtz		-1
-Q2+	\orange;Hidden Shrine (8 Charges)		1	2	2	0	0	@Hidden	thng		-1
+Q2+	\orange;Hidden Shrine (8 Charges)		1	2	2	0	0	jbscross	thng		-1
 drd	Amulet		1	1	2	0	0	invamu	amul		-1
-qul	\grey;Cube Reagent\n\orange;Arcane Shards #1		1	1	2	0	0	invfary1	thng		-1
+qul	\grey;Cube Reagent\n\orange;Arcane Shards		1	1	2	0	0	invfary1	thng		-1
 z5+	\orange;Mystic Orb	\blue;+2 Required Level\n+1 to Summon Bane Monster\n\white;Cube with Ring/Amulet to Add Bonus	1	1	2	0	0	orb_misc	asaa		-1
 qin	Ring (Sacred)		1	1	2	0	75	invrin	qrin		-1
-M6+	\orange;Spiritual Shrine (4 Charges)		1	2	2	0	0	@Spiritual	thng		-1
+M6+	\orange;Spiritual Shrine (4 Charges)		1	2	2	0	0	jbscross	thng		-1
 20+	\orange;Mystic Orb	\blue;+2 Required Level\n1% Chance to cast level 3 Thunder Hammer when you Kill an Enemy\n\white;Cube with Ring/Amulet to Add Bonus	1	1	2	0	0	orb_misc	asaa		-1
 P0+	\orange;Divine Shrine (10 Charges)		1	2	2	0	0	jbscross	thng		-1
 r12	\purple;Sol Rune		1	1	2	0	27	invrSol	rune		-1
@@ -2477,30 +2463,28 @@ ob5	Amulet		1	1	2	0	0	invamu	amul		-1
 gld	\gold;Gold		1	1	2	1	0	invgld	gold		-1
 r41	\purple;Kra Rune		1	1	2	0	94	r-a-12	rune		-1
 r51	\grey;Great Rune\n\purple;Taha Rune		1	1	2	0	100	r-d-02	rune		-1
-M9+	\orange;Spiritual Shrine (1 Charge)		1	2	2	0	0	@Spiritual	thng		-1
+M9+	\orange;Spiritual Shrine (1 Charge)		1	2	2	0	0	jbscross	thng		-1
 59+	\orange;Mystic Orb	\blue;+2 Required Level\n+999 to I NEED A LIFE BECAUSE I HAVE 6 SHA'ADS\n\white;Cube with Any Weapon to Add Bonus	1	1	2	0	0	orb_weap	asaa		-1
 05+	\orange;Mystic Orb	\blue;+2 Required Level\n+1% to Fire Spell Damage\n\white;Cube with Item to Add Bonus	1	1	2	0	0	orb_any	asaa		-1
 &14	\orange;Mystic Orb	\blue;+2 Required Level\n+1% Bonus to Summoned Minion Resistances\n\white;Cube with Item to Add Bonus	1	1	2	0	0	orb_any	asaa		-1
 am1	Amulet		1	1	2	0	0	invamu	amul		-1
 9$b	\purple;Flawed Bloodstone		1	1	2	0	5	invgscb	gemp,gem1		-1
 !@2	\dgreen;Evil Eye of the Landmass		1	1	2	0	0	evileye	thng		-1
-Q1+	\orange;Hidden Shrine (9 Charges)		1	2	2	0	0	@Hidden	thng		-1
-µ02	\orange;Legacy of Blood Trophy	Cube with the Legacy of Blood...	1	1	2	0	0	kLegacy	thng		-1
+Q1+	\orange;Hidden Shrine (9 Charges)		1	2	2	0	0	jbscross	thng		-1
+µ02	\orange;Legacy of Blood Trophy	Cube with the Legacy of Blood...	1	1	2	0	0	apple	thng		-1
 r07	\purple;Tal Rune		1	1	2	0	17	invrTal	rune		-1
-R7+	\orange;Stone Shrine (3 Charges)		1	2	2	0	0	@Stone	thng		-1
+R7+	\orange;Stone Shrine (3 Charges)		1	2	2	0	0	jbscross	thng		-1
 &69	\orange;Mystic Orb\nRelic of Yaerius	\blue;+10 Required Level\n+5 to Life after Each Kill\nRegenerate Life +10\n+10 to Maximum Damage\n+15% Damage to Undead\n\white;Cube with Ring/Amulet to Add Bonus	1	1	2	0	0	orb_misc	asaa,asa#		-1
 36-	\red;Pearl of Wisdom	\dgrey;Location: Act 5 Drifter Cavern\nMedium (2/8)\nUberlevel\n\n-- Island of the Sunless Sea --	1	1	2	0	0	shinieGreen	thng		-1
-µ98	NO NAME	Cube with your Class Charm...\nYour Class Charm looks a bit messy!	1	1	2	0	0	apple	thng		-1
 ey6	\red;Elixir of Dexterity	+40% Dexterity for 60 seconds	1	1	2	0	0	invxyz	hpot		-1
 L8+	\orange;Mysterious Shrine (2 Charges)		1	2	2	0	0	jbscross	thng		-1
 S0+	\orange;Religious Shrine (10 Charges)		1	2	2	0	0	jbscross	thng		-1
 L5+	\orange;Mysterious Shrine (5 Charges)		1	2	2	0	0	jbscross	thng		-1
 &58	\orange;Mystic Orb	\blue;+2 Required Level\n1% Chance to cast level 6 Crucify on Attack\n\white;Cube with Any Weapon to Add Bonus	1	1	2	0	0	orb_weap	asaa		-1
 40+	\orange;Mystic Orb	\blue;+2 Required Level\n+4 Life after each Kill\n\white;Cube with Any Weapon to Add Bonus	1	1	2	0	0	orb_weap	asaa		-1
-R3+	\orange;Stone Shrine (7 Charges)		1	2	2	0	0	@Stone	thng		-1
+R3+	\orange;Stone Shrine (7 Charges)		1	2	2	0	0	jbscross	thng		-1
 skl	\purple;Flawless Skull		1	1	2	0	15	invskl	gemz,gem3		-1
-||*	\orange;Book		2	2	2	0	0	bookwastex	thng		-1
-µ07	\orange;Rathma Square Trophy	Cube with the Spirit Trance Herb...	1	1	2	0	0	kRathma	thng		-1
+µ07	\orange;Rathma Square Trophy	Cube with the Spirit Trance Herb...	1	1	2	0	0	apple	thng		-1
 28+	\orange;Mystic Orb	\blue;+2 Required Level\n+4 to Life when Struck\n\white;Cube with Any Armor to Add Bonus	1	1	2	0	0	orb_armo	asaa		-1
 22+	\orange;Mystic Orb	\blue;+2 Required Level\nCold Resist +6%\n\white;Cube with Any Armor to Add Bonus	1	1	2	0	0	orb_armo	asaa		-1
 zkx	\dgreen;Greater Signet of Gold	Right-click: Gold in Bank:	1	1	2	0	0	sigil2B	poti		-1

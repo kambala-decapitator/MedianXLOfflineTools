@@ -1,9 +1,8 @@
 v0.3:
-- get itemtype from armor/weapons/misc.txt
-- finish mass disenchant
-- finish gem/rune upgrade
+- simplify notification text if signets eaten == 500
+- move mass disenchant to a separate dialog and add more options
+- finish gem/rune upgrade and move to a separate dialog
 - finish saving of corpse/merc items
-- add display of special unique item image (col 24 in uniqueitems.txt)
 - increase number of backups with date in file name
 - when reloading character, explicitly reload shared stashes that were modified
 

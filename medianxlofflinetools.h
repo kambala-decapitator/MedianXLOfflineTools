@@ -46,6 +46,7 @@ private slots:
     void switchLanguage(QAction *languageAction);
     void setModified(bool modified);
     void modify() { setModified(true); }
+    void eatSignetsOfLearning(int signetsEaten);
     void networkReplyFinished(QNetworkReply *reply);
 
 #ifdef Q_WS_MACX

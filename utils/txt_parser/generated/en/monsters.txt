@@ -965,7 +965,7 @@
 967	\orange;Horadric Mage\blue;
 968	Horadric Guardian
 969	(                               Death Projector                               )
-970	\orange;Death's Mechanic\blue;
+970	\orange;Death's Mechanic
 971	\gold;(                                 The Butcher                                 )\blue;
 972	Chicken (Critter)
 973	\gold;(                                  King Koth                                  ) 
@@ -1694,18 +1694,18 @@
 1696	Fear Bomb Totem
 1697	Horned God
 1698	\white;Midnight Fairy
-1699	\dgreen;Clawstorm Terror\blue;
-1700	\dgreen;Landmass\blue;\blue;
-1701	\dgreen;Glowing Blob\blue;
-1702	\dgreen;Fairy Witch\blue;
-1703	\dgreen;Bane Hunter\blue;
+1699	\dgreen;Clawstorm Terror
+1700	\dgreen;Landmass
+1701	\dgreen;Glowing Blob
+1702	\dgreen;Fairy Witch
+1703	\dgreen;Bane Hunter
 1704	a startled Witch...
 1705	FLYING POLAR BUFFALO ERROR
-1706	\dgreen;Clawstorm Terror\blue;
-1707	\dgreen;Landmass\blue;\blue;
-1708	\dgreen;Glowing Blob\blue;
-1709	\dgreen;Fairy Witch\blue;
-1710	\dgreen;Bane Hunter\blue;
+1706	\dgreen;Clawstorm Terror
+1707	\dgreen;Landmass
+1708	\dgreen;Glowing Blob
+1709	\dgreen;Fairy Witch
+1710	\dgreen;Bane Hunter
 1711	a startled Witch...
 1712	\yellow;Shardspawn
 1713	\yellow;Trap Rat\blue;
@@ -1754,8 +1754,8 @@
 1756	\orange;Feyr
 1757	\orange;Sunless Reveler
 1758	\orange;Sunless Mutant
-1759	\yellow;Porkchop\blue;
-1760	\yellow;Porkchop\blue;
+1759	\yellow;Porkchop
+1760	\yellow;Porkchop
 1761	\yellow;The Pack
 1762	\yellow;The Pack
 1763	\yellow;Hemoplague\blue;
@@ -1927,10 +1927,10 @@
 1929	\gold;Quest Totem
 1930	\red;(                          Volrath The Vile                          )
 1931	\orange;Vilespawn
-1932	\red;(     Minion of Terror     )\blue;
-1933	\red;(     Minion of Terror     )\blue;
-1934	\red;(     Minion of Terror     )\blue;
-1935	\red;(     Minion of Terror     )\blue;
+1932	\red;(     Minion of Terror     )
+1933	\red;(     Minion of Terror     )
+1934	\red;(     Minion of Terror     )
+1935	\red;(     Minion of Terror     )
 1936	\purple;Ghost of Terror
 1937	Uldyssian's Ghost
 1938	\red;(                         VN_Dragon                         )
@@ -1938,152 +1938,3 @@
 1940	\purple;(                        MarcoNecroX (Secret Boss)                        )
 1941	\orange;Punishment Turret\blue;
 1942	\orange;Punishment Turret\blue;
-1943	\red;Dark Spirit
-1944	Spirit
-1945	\orange;Death's Mechanic\blue;
-1946	TathametDragon
-1947	GodAnu
-1948	BadAnu
-1949	TathMinion
-1950	RiftTrap
-1951	RiftTrap
-1952	RiftTrap
-1953	TathFiend
-1954	TathMinion
-1955	RiftTrap
-1956	BadAnu
-1957	RiftTrap
-1958	TathametDragon
-1959	BadAnu
-1960	PrimeLies
-1961	PrimeSin
-1962	PrimePain
-1963	PrimeAnguish
-1964	PrimeDestruction
-1965	PrimeTerror
-1966	PrimeHatred
-1967	PrimePure
-1968	NeoBarb
-1969	NeoPaladin
-1970	NeoNecro
-1971	NeoSorc
-1972	NeoSin1
-1973	MazeSecretWolf
-1974	MazeSecretSin
-1975	NeoAmazon
-1976	NeoNecroSkel
-1977	NeoNecroKnight
-1978	NeoDruid1
-1979	NeoDruid2
-1980	MazeGiant
-1981	MazeWizard
-1982	MazeDemonWizard
-1983	MazeMinion
-1984	GenAgaliarept
-1985	GenNebiros
-1986	GenSatanachia
-1987	GenSargatanas
-1988	GenLucifuge
-1989	GenFleuretty
-1990	MazeTrapSwarm
-1991	MazeTrapGeneric
-1992	MazeTrapGeneric
-1993	\yellow;The Pack
-1994	Wolf Companion
-1995	Dire Wolf
-1996	MazeTrapGeneric
-1997	MazeTrapGeneric
-1998	MazeTrapGeneric
-1999	MazeTrapGeneric
-2000	MazeTrapGeneric
-2001	MazeTrapGeneric
-2002	MazeTrapGeneric
-2003	MazeTrapGeneric
-2004	MazeTrapGeneric
-2005	MazeTrapGeneric
-2006	MazeTrapGeneric
-2007	MazeTrapGeneric
-2008	MazeTrapGeneric
-2009	MazeTrapGeneric
-2010	DemiSealTotem
-2011	DemiSealTotem
-2012	DemiSealTotem
-2013	DemiSealTotem
-2014	DemiSealTotem
-2015	DemiSealTotem
-2016	HellGeneralTotem
-2017	MazeTrapGeneric
-2018	SecretBabylon
-2019	\orange;Sand Maggot
-2020	\orange;Sand Maggot Egg
-2021	\orange;Sand Maggot Young
-2022	\orange;Sand Maggot Egg
-2023	\orange;Sand Maggot Ghost
-2024	\orange;Sand Snake
-2025	\orange;Sand Maggot Ghost
-2026	\red;Flame\blue;
-2027	\blue;Snow
-2028	\dgreen;Venom\blue;
-2029	\orange;Illusion\blue;
-2030	\yellow;Storm\blue;
-2031	\grey;Stone\blue;
-2032	\gold;(                              Chrysaor                              )
-2033	\orange;Goliath\blue;
-2034	Water Watcher
-2035	\purple;(                          Chrysaor (Secret Boss)                          )
-2036	\gold;Trap
-2037	\orange;Abomination\blue;
-2038	\gold;Trap
-2039	\orange;Zealot Trap
-2040	\orange;Zealot
-2041	\orange;Zealot Nest
-2042	\red;DO NOT DISTURB
-2043	a startled Witch...
-2044	\purple;(                           Startled Witch                           )
-2045	\orange;Zealot Nest
-2046	\orange;Zealot
-2047	\gold;a deadly trap...
-2048	GenLucifuge
-2049	\red;(                          Volrath The Vile                          )
-2050	Trap
-2051	\orange;Celestial Descendant\blue;
-2052	\orange;Ankheg\blue;
-2053	~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2054	\orange;Forest Bugbear\blue;
-2055	\orange;Chimera\blue;
-2056	\orange;Death Servant\blue;
-2057	\orange;Demon Lord\blue;
-2058	\orange;Drowned Beast\blue;
-2059	\orange;Gehreleth\blue;
-2060	\orange;Darkness\blue;
-2061	\orange;Giant Hunters\blue;
-2062	\gold;(                         Valthek, the Vizjerei Sorcerer                         )
-2063	\orange;Bone Golem\blue;
-2064	\orange;Earth Fiend\blue;
-2065	\orange;Iron Giant\blue;
-2066	\orange;Stone Frog\blue;
-2067	\orange;Red-Armed Soldier\blue;
-2068	\orange;Vulture Harpy\blue;
-2069	\orange;Hobgoblin\blue;
-2070	\orange;Lizardking\blue;
-2071	\orange;Lizardman\blue;
-2072	\orange;Dark Ogre\blue;
-2073	\orange;Polar Worm\blue;
-2074	\orange;Skeletal Shadow\blue;
-2075	\orange;Giant Skeleton\blue;
-2076	\orange;Skeleton Priest\blue;
-2077	\orange;Chaos Critter\blue;
-2078	\orange;Wyvern\blue;
-2079	\orange;Thokola\blue;
-2080	\orange;Swampy Reptile\blue;
-2081	\orange;Subterranean Predator\blue;
-2082	\orange;Cursed Warrior\blue;
-2083	\gold;(                Andariel, the Maiden of Anguish                )
-2084	\gold;(                           Duriel, the Lord of Pain                      )
-2085	\gold;(               Dul'Mephistos, the Lord of Hatred               )
-2086	\gold;(                    Al'Diabalos, the Lord of Terror                    )
-2087	\gold;(                    Tor'Baalos, the Lord of Destruction                    )
-2088	\gold;(          Seal of the Gods          )
-2090	\red;Godsman Guard
-2091	\orange;Chimaera Trap
-2092	Fireheart Totem

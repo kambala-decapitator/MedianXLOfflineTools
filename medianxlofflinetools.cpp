@@ -137,7 +137,20 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *pare
     else if (ui.actionLoadLastUsedCharacter->isChecked() && !_recentFilesList.isEmpty())
         loadFile(_recentFilesList.at(0));
     else
+    {
+#ifdef Q_WS_WIN32
+        QSettings settings;
+        settings.beginGroup("recentItems");
+        if (!settings.contains(kLastSavePathKey))
+        {
+            QSettings d2Settings("HKEY_CURRENT_USER\\Software\\Blizzard Entertainment\\Diablo II", QSettings::NativeFormat);
+            QString d2SavePath = d2Settings.value("Save Path").toString();
+            if (!d2SavePath.isEmpty())
+                settings.setValue(kLastSavePathKey, d2SavePath);
+        }
+#endif
         updateWindowTitle();
+    }
 }
 
 
@@ -225,6 +238,21 @@ void MedianXLOfflineTools::setModified(bool modified)
     ui.actionSaveCharacter->setEnabled(modified);
 }
 
+void MedianXLOfflineTools::eatSignetsOfLearning(int signetsEaten)
+{
+    int newSignetsEaten = ui.signetsOfLearningEatenLineEdit->text().toInt() + signetsEaten;
+    ui.signetsOfLearningEatenLineEdit->setText(QString::number(newSignetsEaten));
+    CharacterInfo::instance().basicInfo.statsDynamicData.setProperty("SignetsOfLearningEaten", newSignetsEaten);
+
+    foreach (QSpinBox *spinBox, _spinBoxesStatsMap)
+        spinBox->setMaximum(spinBox->maximum() + signetsEaten);
+
+    ui.freeStatPointsLineEdit->setText(QString::number(ui.freeStatPointsLineEdit->text().toInt() + signetsEaten));
+    QString s = ui.freeStatPointsLineEdit->statusTip();
+    int start = s.indexOf(": ") + 2, end = s.indexOf(","), total = s.mid(start, end - start).toInt();
+    updateMaxCompoundStatusTip(ui.freeStatPointsLineEdit, total + signetsEaten, investedStatPoints());
+}
+
 void MedianXLOfflineTools::loadCharacter()
 {
     QSettings settings;
@@ -232,7 +260,7 @@ void MedianXLOfflineTools::loadCharacter()
     QString lastSavePath = settings.value(kLastSavePathKey).toString();
 
     QString charPath = QFileDialog::getOpenFileName(this, tr("Load Character"), lastSavePath, tr("Diablo 2 Save Files") + QString(" (*%1)").arg(kCharacterExtensionWithDot));
-    if (loadFile(charPath))
+    if (loadFile(QDir::toNativeSeparators(charPath)))
         ui.statusBar->showMessage(tr("Character loaded"), 3000);
 }
 
@@ -798,6 +826,7 @@ void MedianXLOfflineTools::showItems(bool activate /*= true*/)
         connect(_itemsDialog, SIGNAL(cubeDeleted(bool)), ui.actionGiveCube, SLOT(setEnabled(bool)));
         connect(_itemsDialog, SIGNAL(closing(bool)), ui.menuGoToPage, SLOT(setDisabled(bool)));
         connect(_itemsDialog, SIGNAL(itemsChanged(bool)), SLOT(setModified(bool)));
+        connect(_itemsDialog, SIGNAL(signetsOfLearningEaten(int)), SLOT(eatSignetsOfLearning(int)));
         _itemsDialog->show();
 
         if (!activate)
@@ -1995,7 +2024,7 @@ void MedianXLOfflineTools::processPlugyStash(QHash<Enums::ItemStorage::ItemStora
         quint16 itemsOnPage;
         inputDataStream >> itemsOnPage;
         ItemsList plugyItems;
-        ItemParser::parseItemsToBuffer(itemsOnPage, inputDataStream, bytes, tr("Corrupted item detected in %1 on page %4 at (%2,%3)"), &plugyItems);
+        corruptedItems += ItemParser::parseItemsToBuffer(itemsOnPage, inputDataStream, bytes, tr("Corrupted item detected in %1 on page %4 at (%2,%3)"), &plugyItems);
         foreach (ItemInfo *item, plugyItems)
         {
             item->storage = iter.key();
@@ -2231,11 +2260,12 @@ void MedianXLOfflineTools::setStats()
 void MedianXLOfflineTools::updateWindowTitle()
 {
     _charPathLabel->setText(QDir::toNativeSeparators(_charPath));
+    QString title = QString("%1 (%2)").arg(qApp->applicationName(), SkillplanDialog::modVersionReadable());
     // making setWindowFilePath() work correctly
 #ifdef Q_WS_MACX
-    setWindowTitle(_charPath.isEmpty() ? QString() : QString("%1 (%2)").arg(QFileInfo(_charPath).fileName(), SkillplanDialog::modVersionReadable()));
+    setWindowTitle(_charPath.isEmpty() ? SkillplanDialog::modVersionReadable() : QString("%1 (%2)").arg(QFileInfo(_charPath).fileName(), SkillplanDialog::modVersionReadable()));
 #else
-    setWindowTitle(_charPath.isEmpty() ? qApp->applicationName() : QString("%1[*] (%2) %3 %4").arg(QFileInfo(_charPath).fileName(), SkillplanDialog::modVersionReadable(), QChar(0x2014), qApp->applicationName()));
+    setWindowTitle(_charPath.isEmpty() ? title : QString("%1[*] %2 %3").arg(QFileInfo(_charPath).fileName(), QChar(0x2014), title));
 #endif
 }
 

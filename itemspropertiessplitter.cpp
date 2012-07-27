@@ -334,6 +334,7 @@ void ItemsPropertiesSplitter::disenchantAllItems(bool toShards, bool upgradeToCr
     ItemInfo *disenchantedItem = ItemDataBase::loadItemFromFile(toShards ? "arcane_shard" : "signet_of_learning");
     ItemsList &items_ = items ? *items : _allItems;
     quint32 disenchantedItemsNumber = 0;
+    int signetsEaten = 0, signetsEatenTotal = CharacterInfo::instance().basicInfo.statsDynamicData.property("SignetsOfLearningEaten").toInt();
     foreach (ItemInfo *item, items_)
     {
         if ((item->quality == Enums::ItemQuality::Unique && includeUniques) || (item->quality == Enums::ItemQuality::Set && includeSets))
@@ -341,9 +342,17 @@ void ItemsPropertiesSplitter::disenchantAllItems(bool toShards, bool upgradeToCr
             if ((toShards && ItemDataBase::canDisenchantIntoArcaneShards(item)) || (!toShards && ItemDataBase::canDisenchantIntoSignetOfLearning(item)))
             {
                 ++disenchantedItemsNumber;
+                bool shouldDisenchant = true;
                 if (!toShards && eatSignets)
-                    removeItemFromList(item, false);
-                else
+                {
+                    if (signetsEatenTotal + signetsEaten < Enums::CharacterStats::SignetsOfLearningMax)
+                    {
+                        removeItemFromList(item, false);
+                        shouldDisenchant = false;
+                        ++signetsEaten;
+                    }
+                }
+                if (shouldDisenchant)
                     disenchantItemIntoItem(item, disenchantedItem, false);
             }
         }
@@ -407,7 +416,19 @@ void ItemsPropertiesSplitter::disenchantAllItems(bool toShards, bool upgradeToCr
     else
     {
         QString signetsText = tr("%n Signet(s) of Learning", 0, disenchantedItemsNumber);
-        text = (eatSignets ? tr("You've eaten %1") : baseTextFormat).arg(signetsText);
+        QString baseSignetsTextFormat = tr("You've eaten %1", "number of Signets of Learning");
+        if (eatSignets && signetsEaten)
+        {
+            emit signetsOfLearningEaten(signetsEaten);
+
+            if (signetsEaten == disenchantedItemsNumber)
+                text = baseSignetsTextFormat.arg(signetsText);
+            else
+                text = tr("%1 (now you have %2) and received %3").arg(baseSignetsTextFormat.arg(tr("%n Signet(s) of Learning", 0, signetsEaten))).arg(QString::number(Enums::CharacterStats::SignetsOfLearningMax))
+                                                                 .arg(tr("%n Signet(s) of Learning", 0, disenchantedItemsNumber - signetsEaten));
+        }
+        else
+            text = baseTextFormat.arg(signetsText);
     }
 
     delete disenchantedItem;
@@ -493,9 +514,7 @@ ItemInfo *ItemsPropertiesSplitter::disenchantItemIntoItem(ItemInfo *oldItem, Ite
 bool ItemsPropertiesSplitter::storeItemInStorage(ItemInfo *item, int storage)
 {
     bool result = ItemDataBase::storeItemIn(item, static_cast<Enums::ItemStorage::ItemStorageEnum>(storage), ItemsViewerDialog::rowsInStorageAtIndex(storage));
-    if (!result)
-        qDebug() << "failed to store" << ItemDataBase::Items()->operator [](item->itemType).name;
-    else
+    if (result)
         addItemToList(item, false);
     return result;
 }

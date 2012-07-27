@@ -69,6 +69,7 @@ private:
     void emulateShiftAndInvokeMethod(void (PlugyItemsSplitter::*method)(void)) { _isShiftPressed = true; (this->*method)(); _isShiftPressed = false; }
     bool keyEventHasShift(QKeyEvent *keyEvent);
     void setShortcutTextInButtonTooltip(QPushButton *button, const QKeySequence &keySequence);
+    void moveItemsToFirstPages(ItemsList *items, bool toShards);
 };
 
 #endif // PLUGYITEMSSPLITTER_H

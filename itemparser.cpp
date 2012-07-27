@@ -42,11 +42,14 @@ QString ItemParser::parseItemsToBuffer(quint16 itemsTotal, QDataStream &inputDat
 ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &bytes)
 {
     ItemInfo *item = 0;
-    ItemInfo::ParsingStatus status = ItemInfo::Ok;
+    ItemInfo::ParsingStatus status;
     int attempt = 0, searchEndOffset = 0;
     // loop tries maximum 2 times to read past JM in case it's a part of item
     do
     {
+        //int pos = inputDataStream.device()->pos();
+        //qDebug() << pos;
+        //Q_ASSERT(bytes.mid(pos, 2) == kItemHeader);
         inputDataStream.skipRawData(2); // JM
         int itemStartOffset = inputDataStream.device()->pos();
         if (!searchEndOffset)
@@ -146,7 +149,8 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
                     bitReader.skip(16); // no idea what these bits mean
                     break;
                 default:
-                    ERROR_BOX_NO_PARENT(tr("Item '%1' of unknown quality '%2' found!").arg(itemBase.name).arg(item->quality));
+                    qDebug("Item '%s' of unknown quality %d found!", itemBase.name.toUtf8().constData(), item->quality);
+                    //ERROR_BOX_NO_PARENT(tr("Item '%1' of unknown quality '%2' found!").arg(itemBase.name).arg(item->quality));
                     break;
                 }
 
@@ -192,7 +196,7 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
                         hasSetLists[i] = bitReader.readBool(); // should always be false for MXL
 
                 item->props = parseItemProperties(bitReader, &status);
-                if (status == ItemInfo::Failed)
+                if (status != ItemInfo::Ok)
                 {
                     inputDataStream.device()->seek(itemStartOffset - 2); // set to JM - beginning of the item
                     item->props.insert(1, ItemProperty(tr("Error parsing item properties (status == failed), please report!")));
@@ -215,7 +219,7 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
                 if (item->isRW)
                 {
                     item->rwProps = parseItemProperties(bitReader, &status);
-                    if (status == ItemInfo::Failed)
+                    if (status != ItemInfo::Ok)
                     {
                         inputDataStream.device()->seek(itemStartOffset - 2); // set to JM - beginning of the item
                         item->rwProps.insert(1, ItemProperty(tr("Error parsing RW properties (status == failed), please report!")));
@@ -262,12 +266,12 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
             else
                 item->quality = Enums::ItemQuality::Normal;
 
-            if (item->storage != Enums::ItemStorage::NotInStorage && item->location > Enums::ItemLocation::Belt) // plugy uses 6 in shared stash
+            if (item->whereEquipped > 12)
                 throw 4;
-            else if (item->whereEquipped > 12)
-                throw 5;
             else if (item->storage > Enums::ItemStorage::Stash)
-                throw 6;
+                throw 5;
+
+            status = ItemInfo::Ok;
         }
         catch (int exceptionCode)
         {

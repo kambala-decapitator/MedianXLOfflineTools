@@ -41,6 +41,7 @@ signals:
     void itemDeleted();
     void cubeDeleted(bool = true);  // connect directly to QAction's setEnabled() slot
     void itemsChanged(bool = true); // connect directly to main window's setModified() slot
+    void signetsOfLearningEaten(int signets);
 
 protected slots:
     void itemSelected(const QModelIndex &index);

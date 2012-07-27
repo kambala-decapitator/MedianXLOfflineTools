@@ -2,10 +2,11 @@ description	enabled	ladder	min diff	version	op	param	value	class	numinputs	input
 Staff of Kings + Viper amulet -> Horadric Staff	1				28				2	msf	vip						hst																																																																																												0
 Khalim Flail + Khalim Heart + Khalim Eye + Khalim Brain -> Super Khalim Flail	1				28				4	qf1	qhr	qey	qbr				qf2																																																																																												0
 Wirt's Leg + jewel -> Cow Portal	1				28				2	leg	tbk						Cow Portal																																																																																												0
-test recipe				100					1	hpot							set_lab6	120		120																															set_lab9	120		120																										set_lab10	120		120																										0
-test recipe				100					2	hpot,qty=2							set_lab7	120		120																															set_lab8	120		120																											120		120																										0
+test recipe				100					1	hpot							useitem	100			oskill			1020	1	1																																																																																			0
+test recipe				100					3	armo,any	hpot,qty=2							100			oskill			1029	1	1	oskill			1030	1	1	oskill			1031	1	1	oskill			1032	1	1	oskill			1033	1	1																																																											0
+test recipe	0			100					2	armo,any	hpot						useitem				kill-skill			732	50	1																									dcht,uni	120		120																										dcht,uni	120		120																										0
 Kabraxis Recipe pt. 1	1			100					3	isc	k.Z	tsc					brx																																																																																												0
-test recipe				100					1	ring							useitem	120		120	extra-pm				5000	5000																									NewIdolOfRygnar	120		120																										NewRathmasAthame	120		120																										0
+test recipe				100					3	mpot,qty=2	key						w43,uni	95																																																																																											0
 stardragon upgrade decoy	1			100	18	491	1	ama	2	Sacred Sunstone	qum						useitem																																																																																												0
 stardragon upgrade decoy	1			100	18	491	1	ass	2	Shadow Vortex	qum						useitem																																																																																												0
 stardragon upgrade decoy	1			100	18	491	1	bar	2	Worldstone Orb	qum						useitem																																																																																												0
@@ -561,22 +562,22 @@ random modifier recipe: any amulet + rune x3 -> chance at bonus	1			100	18	443		
 random modifier recipe: any ring + rune x3 -> chance at bonus	1			100	18	443			2	ring,any	6oµ						useitem				extra-all	20			10	10	upgraded				1	1																																																																													0
 random modifier recipe: any quiver + rune x3 -> chance at bonus	1			100	18	443			2	misl,any	6oµ						useitem				all-stats%	20			5	5	upgraded				1	1																																																																													0
 random modifier recipe: any jewel + rune x3 -> chance at bonus	1			100	18	443			2	jewl,any	6oµ						useitem				str	20			2	2	dex	20			2	2	enr	20			2	2	vit	20			2	2	upgraded				1	1																																																											0
-jewelcrafting: magic Jewel + Perfect Gem + Tir Rune -> reroll, bling bonus	1				3	183	50		4	jewl,any	7oµ	r03	qul				jew,crf			95	mag%				6	10																									r03																																																										0
-jewelcrafting: magic Jewel + Perfect Gem + Ith Rune -> reroll, resistance bonus	1				3	183	50		4	jewl,any	7oµ	r06	qul				jew,crf			95	res-all				3	5																									r06																																																										0
-jewelcrafting: magic Jewel + Perfect Gem + Ort Rune -> reroll, ease bonus	1				3	183	100		4	jewl,any	7oµ	r09	qul				jew,crf			95	ease				-2	-4																									r09																																																										0
-jewelcrafting: magic Jewel + Perfect Gem + Shael Rune -> reroll, ac bonus	1				3	183	100		4	jewl,any	7oµ	r13	qul				jew,crf			95	ac				21	50																									r13																																																										0
-jewelcrafting: magic Jewel + Perfect Gem + Lum Rune -> reroll, mega exp bonus	1				3	183	150		4	jewl,any	7oµ	r17	qul				jew,crf			95	addxp				1	2																									r17																																																										0
-jewelcrafting: magic Jewel + Perfect Gem + Lem Rune -> reroll, attribute bonus	1				3	183	150		4	jewl,any	7oµ	r20	qul				jew,crf			95	all-stats				3	5																									r20																																																										0
-jewelcrafting: magic Jewel + Perfect Gem + Ist Rune -> reroll, minion life bonus	1				3	183	200		4	jewl,any	7oµ	r24	qul				jew,crf			95	hp-minion				4	6																									r24																																																										0
-jewelcrafting: magic Jewel + Perfect Gem + Ohm Rune -> reroll, damage bonus	1				3	183	200		4	jewl,any	7oµ	r27	qul				jew,crf			95	dmg-max				4	12																									r27																																																										0
-jewelcrafting: magic Jewel + Perfect Gem + Ber Rune -> reroll, vampiric bonus	1				3	183	250		4	jewl,any	7oµ	r30	qul				jew,crf			95	lifesteal				1	2	manasteal				1	2																			r30																																																										0
-jewelcrafting: magic Jewel + Perfect Gem + Zod Rune -> reroll, elemental bonus	1				3	183	250		4	jewl,any	7oµ	r33	qul				jew,crf			95	extra-all				1	3																									r33																																																										0
-jewelcrafting: magic Jewel + Perfect Gem + Kur Rune -> reroll, minion damage bonus	1				3	183	300		4	jewl,any	7oµ	r36	qul				jew,crf			95	dmg-minion				3	6																									r36																																																										0
-jewelcrafting: magic Jewel + Perfect Gem + Nas Rune -> reroll, slow bonus	1				3	183	300		4	jewl,any	7oµ	r39	qul				jew,crf			95	slow-melee				1	1																									r39																																																										0
-jewelcrafting: magic Jewel + Perfect Gem + Vith Rune -> reroll, vampiric bonus	1				3	183	350		4	jewl,any	7oµ	r42	qul				jew,crf			95	res-all-minion				2	4																									r42																																																										0
-jewelcrafting: magic Jewel + Perfect Gem + Thai Rune -> reroll, elemental bonus	1				3	183	350		4	jewl,any	7oµ	r45	qul				jew,crf			95	dmg-min				6	15																									r45																																																										0
-jewelcrafting: magic Jewel + Perfect Gem + Nih Rune -> reroll, consume bonus	1				3	183	500		4	jewl,any	7oµ	r50	qul				jew,crf			95	heal-kill				2	4	mana-kill				2	4																			r50																																																										0
-jewelcrafting: magic Jewel + Perfect Gem + Nih Rune -> reroll, consume bonus	1				3	183	400		4	jewl,any	7oµ	r48	qul				jew,crf			95	heal-melee				2	8	mana-melee				2	8																			r48																																																										0
+jewelcrafting: magic Jewel + Perfect Gem + Tir Rune -> reroll, bling bonus	1				3	183	50		3	jewl,any	7oµ	r03					jew,crf			85	mag%				6	10																																																																																			0
+jewelcrafting: magic Jewel + Perfect Gem + Ith Rune -> reroll, resistance bonus	1				3	183	50		3	jewl,any	7oµ	r06					jew,crf			85	res-all				3	5																																																																																			0
+jewelcrafting: magic Jewel + Perfect Gem + Ort Rune -> reroll, ease bonus	1				3	183	100		3	jewl,any	7oµ	r09					jew,crf			85	ease				-2	-4																																																																																			0
+jewelcrafting: magic Jewel + Perfect Gem + Shael Rune -> reroll, ac bonus	1				3	183	100		3	jewl,any	7oµ	r13					jew,crf			85	ac				21	50																																																																																			0
+jewelcrafting: magic Jewel + Perfect Gem + Lum Rune -> reroll, mega exp bonus	1				3	183	150		3	jewl,any	7oµ	r17					jew,crf			85	addxp				1	2																																																																																			0
+jewelcrafting: magic Jewel + Perfect Gem + Lem Rune -> reroll, attribute bonus	1				3	183	150		3	jewl,any	7oµ	r20					jew,crf			85	all-stats				3	5																																																																																			0
+jewelcrafting: magic Jewel + Perfect Gem + Ist Rune -> reroll, minion life bonus	1				3	183	200		3	jewl,any	7oµ	r24					jew,crf			85	hp-minion				4	6																																																																																			0
+jewelcrafting: magic Jewel + Perfect Gem + Ohm Rune -> reroll, damage bonus	1				3	183	200		3	jewl,any	7oµ	r27					jew,crf			85	dmg-max				4	12																																																																																			0
+jewelcrafting: magic Jewel + Perfect Gem + Ber Rune -> reroll, vampiric bonus	1				3	183	250		3	jewl,any	7oµ	r30					jew,crf			85	lifesteal				1	2	manasteal				1	2																																																																													0
+jewelcrafting: magic Jewel + Perfect Gem + Zod Rune -> reroll, elemental bonus	1				3	183	250		3	jewl,any	7oµ	r33					jew,crf			85	extra-all				1	3																																																																																			0
+jewelcrafting: magic Jewel + Perfect Gem + Kur Rune -> reroll, minion damage bonus	1				3	183	300		3	jewl,any	7oµ	r36					jew,crf			85	dmg-minion				3	6																																																																																			0
+jewelcrafting: magic Jewel + Perfect Gem + Nas Rune -> reroll, slow bonus	1				3	183	300		3	jewl,any	7oµ	r39					jew,crf			85	slow-melee				1	1																																																																																			0
+jewelcrafting: magic Jewel + Perfect Gem + Vith Rune -> reroll, vampiric bonus	1				3	183	350		3	jewl,any	7oµ	r42					jew,crf			85	res-all-minion				2	4																																																																																			0
+jewelcrafting: magic Jewel + Perfect Gem + Thai Rune -> reroll, elemental bonus	1				3	183	350		3	jewl,any	7oµ	r45					jew,crf			85	dmg-min				6	15																																																																																			0
+jewelcrafting: magic Jewel + Perfect Gem + Nih Rune -> reroll, consume bonus	1				3	183	500		3	jewl,any	7oµ	r50					jew,crf			85	heal-kill				2	4	mana-kill				2	4																																																																													0
+jewelcrafting: magic Jewel + Perfect Gem + Nih Rune -> reroll, consume bonus	1				3	183	400		3	jewl,any	7oµ	r48					jew,crf			85	heal-melee				2	8	mana-melee				2	8																																																																													0
 zomghelp recipe: magic weapon + rare amulet + rare ring -> variable ED reroll	1			100	10	12	1		3	weap,mag	amul,mag	ring,mag					usetype,mag			1	dmg%				25	25																																																																																			0
 zomghelp recipe: magic weapon + rare amulet + rare ring -> variable ED reroll	1			100	10	12	2		3	weap,mag	amul,mag	ring,mag					usetype,mag			1	dmg%				27	27																																																																																			0
 zomghelp recipe: magic weapon + rare amulet + rare ring -> variable ED reroll	1			100	10	12	3		3	weap,mag	amul,mag	ring,mag					usetype,mag			1	dmg%				29	29																																																																																			0
@@ -10626,7 +10627,7 @@ RIP	1			100					3	amul,any	9oµ	qum					useitem				rip				1	1																				
 RIP	1			100					3	jew,any	9oµ	qum					useitem				rip				1	1																									9oµ																																																										0
 upgrade dark ring	1			100					6	l@l	m@m	oµo	p@p	q@q	BossKillerRing		UpgradedBossKillerRing	100																																																																																											0
 i am rich				100					3	UniqueDemonsbane	EternalBonePile	Xtalline2					u@v																																																																																												0
-i am richer	1			100					3	bxt	##/	µ14					NewSuperGem	95																																																																																											0
+i am richer				100					3	µ06	µ13	µ14					NewSuperGem	95																																																																																											0
 i am druid	1			100	3	288	1	dru	1	weap,rar							b@b																																																																																												0
 i am druid	1			100	3	288	1	dru	1	armo,rar							b@b																																																																																												0
 i am druid	1			100	3	288	1	dru	1	ring,rar							b@b																																																																																												0
@@ -11476,8 +11477,8 @@ destruction	1			100					78	9oµ							9oµ																																								
 destruction	1			100					79	9oµ							9oµ																																																																																												0
 destruction	1			100					80	9oµ							9oµ																																																																																												0
 KabraxisApple	1			100	16	219	0		2	KabraxisSoul	bxt						useitem			100	blessings-counter				1	1	reanimate	50		1838	1	1	state			10	1	1	item-duped				1	1																																																																	0
-Lottery1	1			100	18	443			2	weap,uni,noe	LegOfBlood						useitem				upgraded				1	1	ignore-ac	5			1	1	item-duped				1	1																																																																							0
-Lottery2	1			100	18	443			2	armo,uni,noe	IdolOfVanity						useitem				upgraded				1	1	hp%	5			5	5	item-duped				1	1																																																																							0
+Lottery1	1			100	18	443			2	weap,uni	LegOfBlood						useitem				upgraded				1	1	ignore-ac	5			1	1	item-duped				1	1																																																																							0
+Lottery2	1			100	18	443			2	armo,uni	IdolOfVanity						useitem				upgraded				1	1	hp%	5			5	5	item-duped				1	1																																																																							0
 Lottery3	1			100	18	443			2	amul,uni	TomeOfTheSpider						useitem				upgraded				1	1	res-all-max	5			5	5	item-duped				1	1																																																																							0
 Lottery4	1			100	18	443			2	ring,uni	HerbalQuintessence						useitem				upgraded				1	1	allskills	5			1	1	item-duped				1	1																																																																							0
 Lottery5	1			100	18	443			2	misl,uni	AzmodansHeart2						useitem				upgraded				1	1	mag%	5			100	100	item-duped				1	1																																																																							0
@@ -11566,7 +11567,7 @@ Oil of Renewal	1			100					2	NewStartingCharm	5oµ						useitem				levelreq				1	
 Oil of Jewelcraft	1			100	15	238	15		2	NewStartingCharm	7oµ						useitem																																		7oµ																																																										0
 Oil of Jewelcraft	1			100					2	NewStartingCharm	7oµ						useitem				levelreq				1	1	xsignet23				1	1	mana-kill				15	15																																																																							0
 Oil of Absolution	1			100	15	241	15		2	NewStartingCharm	8oµ						useitem																																		8oµ																																																										0
-Oil of Absolution	1			100					2	NewStartingCharm	8oµ						useitem				levelreq				1	1	xsignet24				1	1	hp%				1	1																																																																							0
+Oil of Absolution	1			100					2	NewStartingCharm	8oµ						useitem				levelreq				1	1	xsignet24				1	1	heal-kill				5	5																																																																							0
 Catalyst of Learning	1			100	15	242	15		2	NewStartingCharm	0oµ						useitem																																		0oµ																																																										0
 Catalyst of Learning	1			100					2	NewStartingCharm	0oµ						useitem				levelreq				1	1	xsignet25				1	1	dmg-demon				10	10																																																																							0
 Catalyst of Disenchantment	1			100	15	243	15		2	NewStartingCharm	3oµ						useitem																																		3oµ																																																										0
@@ -11643,8 +11644,6 @@ Ohm	1			100	15	408	15		2	NewStartingCharm	r32						useitem																						
 Ohm	1			100					2	NewStartingCharm	r32						useitem				levelreq				1	1	xsignet61				1	1	vit				5	5																																																																							0
 Lo	1			100	15	458	15		2	NewStartingCharm	r28						useitem																																		r28																																																										0
 Lo	1			100					2	NewStartingCharm	r28						useitem				levelreq				3	3	xsignet62				3	3	res-ltng-max				1	1																																																																							0
-Median Statue	1			100	15	459	15		2	NewStartingCharm	||;,uni						useitem																																		||;,uni																																																										0
-Median Statue	1			100					2	NewStartingCharm	||;,uni						useitem				charged			346	20	20	xsignet63				15	15																																																																													0
 Median Statue	1			100	15	459	15		2	NewStartingCharm	zen						useitem																																		zen																																																										0
 Median Statue	1			100					2	NewStartingCharm	zen						useitem				charged			346	20	20	xsignet63				15	15																																																																													0
 Thur	1			100	15	460	15		2	NewStartingCharm	r38						useitem																																		r38																																																										0
@@ -11658,17 +11657,17 @@ Yul	1			100					2	NewStartingCharm	r44						useitem				levelreq				1	1	xsignet67
 On	1			100	15	464	15		2	NewStartingCharm	r50						useitem																																		r50																																																										0
 On	1			100					2	NewStartingCharm	r50						useitem				levelreq				3	3	xsignet68				3	3	red-dmg%				1	1																																																																							0
 Taha	1			100	15	465	15		2	NewStartingCharm	r51						useitem																																		r51																																																										0
-Taha	1			100					2	NewStartingCharm	r51						useitem				levelreq				10	10	xsignet69				15	15	allskills				1	1																																																																							0
+Taha	1			100					2	NewStartingCharm	r51						useitem				levelreq				10	10	xsignet69				15	15	all-skills				1	1																																																																							0
 Ghal	1			100	15	465	15		2	NewStartingCharm	r52						useitem																																		r52																																																										0
-Ghal	1			100					2	NewStartingCharm	r52						useitem				levelreq				10	10	xsignet69				15	15	allskills				1	1																																																																							0
+Ghal	1			100					2	NewStartingCharm	r52						useitem				levelreq				10	10	xsignet69				15	15	all-skills				1	1																																																																							0
 Qor	1			100	15	465	15		2	NewStartingCharm	r53						useitem																																		r53																																																										0
-Qor	1			100					2	NewStartingCharm	r53						useitem				levelreq				10	10	xsignet69				15	15	allskills				1	1																																																																							0
+Qor	1			100					2	NewStartingCharm	r53						useitem				levelreq				10	10	xsignet69				15	15	all-skills				1	1																																																																							0
 Krys	1			100	15	465	15		2	NewStartingCharm	r54						useitem																																		r54																																																										0
-Krys	1			100					2	NewStartingCharm	r54						useitem				levelreq				10	10	xsignet69				15	15	allskills				1	1																																																																							0
+Krys	1			100					2	NewStartingCharm	r54						useitem				levelreq				10	10	xsignet69				15	15	all-skills				1	1																																																																							0
 Auhe	1			100	15	465	15		2	NewStartingCharm	r55						useitem																																		r55																																																										0
-Auhe	1			100					2	NewStartingCharm	r55						useitem				levelreq				10	10	xsignet69				15	15	allskills				1	1																																																																							0
+Auhe	1			100					2	NewStartingCharm	r55						useitem				levelreq				10	10	xsignet69				15	15	all-skills				1	1																																																																							0
 Sha'ad	1			100	15	465	15		2	NewStartingCharm	r56						useitem																																		r56																																																										0
-Sha'ad	1			100					2	NewStartingCharm	r56						useitem				levelreq				10	10	xsignet69				15	15	allskills				1	1																																																																							0
+Sha'ad	1			100					2	NewStartingCharm	r56						useitem				levelreq				10	10	xsignet69				15	15	all-skills				1	1																																																																							0
 Zod	1			100	15	466	15		2	NewStartingCharm	r30						useitem																																		r30																																																										0
 Zod	1			100					2	NewStartingCharm	r30						useitem				levelreq				1	1	xsignet70				1	1	uninterrupt				2	2																																																																							0
 Scroll of Resis 1	0			100	18	443			2	SunstoneOfFire	tr2						useitem				upgraded				1	1	res-all				10	10																																																																													0
@@ -11683,7 +11682,7 @@ Sunstones2	0			100					3	FakeSunstoneOfFire	FakeSunstoneOfIce	FakeSunstoneOfThun
 Sunstones3	1			100					2	x#y	tr2						useitem				res-all				10	10	xsignet69				5	5																																																																													0
 UldyssianApple	1			100	16	219	0		2	UldyssianCharm	##/						useitem			100	blessings-counter				1	1	oskill			346	10	10							item-duped				1	1																																																																	0
 Super Bow Recipe	1			100					7	@##	#X1	#X2	#X3	#X4	#X5	#X6	SuperBowSU	120		120																																																																																									0
-Token Recipe 1	1			100				ass	7	||_	||.	||l	dog	r97	`^#	#X9	#X1																																																																																												0
+Token Recipe 1	1			100				ass	7	ButchersTooth	BookOfAkarat	TomeOfTheSpider	LegOfBlood	SpiritOfDamnation	ZakarumsEar	SixAngelBag	#X1																																																																																												0
 Token Recipe 2	1			100				ama	7	Sacred Sunstone	Shadow Vortex	Worldstone Orb	Caoi Dulra Fruit	Soulstone Shard	Orb of Divinity	Nexus Crystal	#X2																																																																																												0
 Token Recipe 3	1			100				dru	7	!@B	zkw	zky	zkr	zku	zkq	zkx	#X3																																																																																												0
 Token Recipe 4	1			100				bar	7	qum,qty=6	&71						#X4																																																																																												0
@@ -11704,6 +11703,22 @@ disenchant as signet	1			100					2	ct1a,uni	0oµ						zkq																								
 disenchant as signet	1			100					2	ct2a,uni	0oµ						zkq																																		0oµ																																																										0
 disenchant as signet	1			100					2	ct1w,uni	0oµ						zkq																																		0oµ																																																										0
 disenchant as signet	1			100					2	ct2w,uni	0oµ						zkq																																		0oµ																																																										0
+New Level Challenge	0			100					2	zen	hpot						#X8																																																																																												0
+New Level Challenge 2	0			100					3	#X8	tsc,qty=2						New Median Statue																																																																																												0
+LC0 Charm Decoy	0			100	15	461	15	ama	2	mlmxvzmvnjnajnjnjcznjn	hpot																																																																																																		0
+LC0 Charm Decoy	0			100	15	461	15	ass	2	mlmxvzmvnjnajnjnjcznjn	hpot																																																																																																		0
+LC0 Charm Decoy	0			100	15	461	15	bar	2	mlmxvzmvnjnajnjnjcznjn	hpot																																																																																																		0
+LC0 Charm Decoy	0			100	15	461	15	dru	2	mlmxvzmvnjnajnjnjcznjn	hpot																																																																																																		0
+LC0 Charm Decoy	0			100	15	461	15	nec	2	mlmxvzmvnjnajnjnjcznjn	hpot																																																																																																		0
+LC0 Charm Decoy	0			100	15	461	15	pal	2	mlmxvzmvnjnajnjnjcznjn	hpot																																																																																																		0
+LC0 Charm Decoy	0			100	15	461	15	sor	2	mlmxvzmvnjnajnjnjcznjn	hpot																																																																																																		0
+LC0 Charm Decoy	0			100	3	12	2	ama	2	mlmxvzmvnjnajnjnjcznjn	hpot																																																																																																		0
+LC0 Charm Decoy	0			100	3	12	2	ass	2	mlmxvzmvnjnajnjnjcznjn	hpot																																																																																																		0
+LC0 Charm Decoy	0			100	3	12	2	bar	2	mlmxvzmvnjnajnjnjcznjn	hpot																																																																																																		0
+LC0 Charm Decoy	0			100	3	12	2	dru	2	mlmxvzmvnjnajnjnjcznjn	hpot																																																																																																		0
+LC0 Charm Decoy	0			100	3	12	2	nec	2	mlmxvzmvnjnajnjnjcznjn	hpot																																																																																																		0
+LC0 Charm Decoy	0			100	3	12	2	pal	2	mlmxvzmvnjnajnjnjcznjn	hpot																																																																																																		0
+LC0 Charm Decoy	0			100	3	12	2	sor	2	mlmxvzmvnjnajnjnjcznjn	hpot																																																																																																		0
 LC0 Equip	1			100				ama	2	#X9	tsc						15!,uni	100			item-duped				1	1																									608,uni	100			item-duped			1	1																					7@K,uni	100			item-duped			1	1																					0
 LC0 Equip	1			100				ass	2	#X9	tsc						!01,uni	100			item-duped				1	1																									639,uni	100			item-duped			1	1																					606,uni	100			item-duped			1	1																					0
 LC0 Equip	1			100				bar	2	#X9	tsc						36!,uni	100			item-duped				1	1																									1@8,uni	100			item-duped			1	1																					w19,uni	100			item-duped			1	1																					0
@@ -11711,6 +11726,13 @@ LC0 Equip	1			100				dru	2	#X9	tsc						w14,uni	100			item-duped				1	1									
 LC0 Equip	1			100				nec	2	#X9	tsc						w29,uni	100			item-duped				1	1																									644,uni	100			item-duped			1	1																					610,uni	100			item-duped			1	1																					0
 LC0 Equip	1			100				pal	2	#X9	tsc						614,uni	100			item-duped				1	1																									50!,uni	100			item-duped			1	1																					w24,uni	100			item-duped			1	1																					0
 LC0 Equip	1			100				sor	2	#X9	tsc						2@J,uni	100			item-duped				1	1																									!98,uni	100			item-duped			1	1																					638,uni	100			item-duped			1	1																					0
+LC0 Charm	0			100	6	507	31	ama	2	mlmxvzmvnjnajnjnjcznjn	hpot						useitem				xsignet65				15	15	res-all-max				15	15	addxp				15	15	ama				1	1	all-stats%				15	15																																																											0
+LC0 Charm	0			100	6	507	31	ass	2	mlmxvzmvnjnajnjnjcznjn	hpot						useitem				xsignet65				15	15	res-all-max				15	15	addxp				15	15	ass				1	1	hp%				10	10																																																											0
+LC0 Charm	0			100	6	507	31	bar	2	mlmxvzmvnjnajnjnjcznjn	hpot						useitem				xsignet65				15	15	res-all-max				15	15	addxp				15	15	bar				1	1	stance-radius				8	8																																																											0
+LC0 Charm	0			100	6	507	31	dru	2	mlmxvzmvnjnajnjnjcznjn	hpot						useitem				xsignet65				15	15	res-all-max				15	15	addxp				15	15	dru				1	1	ac-global				50	50																																																											0
+LC0 Charm	0			100	6	507	31	nec	2	mlmxvzmvnjnajnjnjcznjn	hpot						useitem				xsignet65				15	15	res-all-max				15	15	addxp				15	15	nec				1	1	move3				50	50																																																											0
+LC0 Charm	0			100	6	507	31	pal	2	mlmxvzmvnjnajnjnjcznjn	hpot						useitem				xsignet65				15	15	res-all-max				15	15	addxp				15	15	pal				1	1	pierce-all				25	25																																																											0
+LC0 Charm	0			100	6	507	31	sor	2	mlmxvzmvnjnajnjnjcznjn	hpot						useitem				xsignet65				15	15	res-all-max				15	15	addxp				15	15	sor				1	1	res-all				35	35																																																											0
 Uptier Custom Signet	1			100					2	02^	zkq						03^																																																																																												0
 Uptier Custom Signet	1			100					2	03^	zkq						04^																																																																																												0
 Uptier Custom Signet	1			100					2	04^	zkq						zk#																																																																																												0
@@ -11803,7 +11825,7 @@ Mass Disenchant Set	1			100					23	ssgl,set,qty=22	0oµ						22^																	
 Mass Disenchant Set	1			100					24	ssgl,set,qty=23	0oµ						23^																																		0oµ																																																										0
 Mass Disenchant Set	1			100					25	ssgl,set,qty=24	0oµ						24^																																		0oµ																																																										0
 Mass Disenchant Set	1			100					26	ssgl,set,qty=25	0oµ						zky																																		0oµ																																																										0
-DIABLOS TOY BOX <3	1			100					2	#2^	dog						ssgl,uni	120		120																															dcht,uni	120		120																										dcht,uni	120		120																										0
+Super Gift Box	1			100					2	#2^	dog						ssgl,uni	120		120																															ssgl,uni	120		120																										ssgl,uni	120		120																										0
 Random UMO roll	1			100					3	asa#,qty=3							asa#																																																																																												0
 Upgrade Shards	1			100					2	qul,qty=2							#3^																																																																																												0
 Upgrade Shards	1			100					3	qul,qty=3							#4^																																																																																												0
@@ -11835,74 +11857,4 @@ Disenchant Shards	1			100	18	276	0		8	dcht,set,qty=7	3oµ						qum															
 Disenchant Shards	1			100	18	276	0		9	dcht,set,qty=8	3oµ						qum																																		#4^																													3oµ																													0
 Disenchant Shards	1			100	18	276	0		10	dcht,set,qty=9	3oµ						qum																																		#5^																													3oµ																													0
 Disenchant Shards	1			100	18	276	0		11	dcht,set,qty=10	3oµ						qum																																		qum																													3oµ																													0
-Trader's Chest Reset	1			100					2	`^`,uni	gemz						`^`,uni	120		120	blessings-counter				1	1																									skc																																																										0
-Trader's Chest Decoy Str	1			100	15	466	49		2	`^`,uni	gemd						useitem				black6				1	1																									gcw																													skc																													0
-Trader's Chest Decoy Dex	1			100	15	466	49		2	`^`,uni	gema						useitem				black6				1	1																									gcv																													skc																													0
-Trader's Chest Decoy Vit	1			100	15	466	49		2	`^`,uni	gemr						useitem				black6				1	1																									gcr																													skc																													0
-Trader's Chest Decoy Enr	1			100	15	466	49		2	`^`,uni	gemt						useitem				black6				1	1																									gcy																													skc																													0
-Trader's Chest Decoy Fire	1			100	15	466	49		2	`^`,uni	gemp						useitem				black6				1	1																									9$a																													skc																													0
-Trader's Chest Decoy Cold	1			100	15	466	49		2	`^`,uni	gemq						useitem				black6				1	1																									g$a																													skc																													0
-Trader's Chest Decoy Ltng	1			100	15	466	49		2	`^`,uni	geml						useitem				black6				1	1																									5$a																													skc																													0
-Trader's Chest Decoy Pois	1			100	15	466	49		2	`^`,uni	gemo						useitem				black6				1	1																									7$a																													skc																													0
-Trader's Chest Str	1			100					2	`^`,uni	gemd						useitem				str				0	4	dex				-3	1	enr				-3	1	vit				-3	1	xsignet70				1	1	gcw																																																										0
-Trader's Chest Dex	1			100					2	`^`,uni	gema						useitem				dex				0	4	str				-3	1	enr				-3	1	vit				-3	1	xsignet70				1	1	gcv																																																										0
-Trader's Chest Vit	1			100					2	`^`,uni	gemr						useitem				vit				0	4	str				-3	1	enr				-3	1	dex				-3	1	xsignet70				1	1	gcr																																																										0
-Trader's Chest Enr	1			100					2	`^`,uni	gemt						useitem				enr				0	4	str				-3	1	dex				-3	1	vit				-3	1	xsignet70				1	1	gcy																																																										0
-Trader's Chest Fire	1			100					2	`^`,uni	gemp						useitem				res-fire				0	4	res-cold				-3	1	res-ltng				-3	1	res-pois				-3	1	xsignet70				1	1	9$a																																																										0
-Trader's Chest Cold	1			100					2	`^`,uni	gemq						useitem				res-cold				0	4	res-fire				-3	1	res-ltng				-3	1	res-pois				-3	1	xsignet70				1	1	g$a																																																										0
-Trader's Chest Ltng	1			100					2	`^`,uni	geml						useitem				res-ltng				0	4	res-cold				-3	1	res-fire				-3	1	res-pois				-3	1	xsignet70				1	1	5$a																																																										0
-Trader's Chest Pois	1			100					2	`^`,uni	gemo						useitem				res-pois				0	4	res-cold				-3	1	res-fire				-3	1	res-ltng				-3	1	xsignet70				1	1	7$a																																																										0
-Downgrade Shards 1	1			100					1	#3^							qul																																		qul																																																										0
-Downgrade Shards 2	1			100					1	#4^							#3^																																		qul																																																										0
-Downgrade Shards 3	1			100					1	#5^							#4^																																		qul																																																										0
-Trophy Carrier	1			100	16	219	0		2	`|#,uni	µ01						useitem				blessings-counter		Aldric Jitan		1	1	res-pois-len				25	25	uninterrupt				21	30	craft-points				201	250	deadly				1	5																																																											
-Trophy Carrier	1			100	16	219	0		2	`|#,uni	µ02						useitem				blessings-counter		LegacyBlood		1	1	dex				21	30	str				21	30	vit				21	30	enr				21	30																																																											
-Trophy Carrier	1			100	16	219	0		2	`|#,uni	µ07						useitem				blessings-counter		Rathma		1	1	att%				101	150	crush				11	20	cheap				11	20	all-stats%				1	5																																																											
-Trophy Carrier	1			100	16	219	0		2	`|#,uni	µ04						useitem				blessings-counter		Akarat		1	1	move3				50	50	lifesteal				6	10	manasteal				6	10	light				1	3																																																											
-Trophy Carrier	1			100	16	219	0		2	`|#,uni	µ05						useitem				blessings-counter		Ureh		1	1	regen-mana				11	15	block3				50	50	move3				50	50	dmg-norm				25	50																																																											
-Trophy Carrier	1			100	16	219	0		2	`|#,uni	µ06						useitem				blessings-counter		Dunc		1	1	dmg-demon				101	150	dmg-undead				101	150	heal-melee				41	50	hp				101	150																																																											
-Trophy Carrier	1			100	16	219	0		2	`|#,uni	µ03						useitem				blessings-counter		Jday		1	1	hp-minion				41	50	dmg-minion				41	50	res-all-minion				11	20	stance-radius				6	10																																																											
-Trophy Carrier	1			100	16	219	0		2	`|#,uni	µ08						useitem				blessings-counter		Cov		1	1	extra-all				21	30	enr-factor				21	30	enr-factor%				1	5	mana%				6	10																																																											
-Trophy Carrier	1			100	16	219	0		2	`|#,uni	µ09						useitem				blessings-counter		Tran		1	1	mag%				41	50	gold%				201	250	str-add				50	50	dex-add				50	50																																																											
-Trophy Carrier	1			100	16	219	0		2	`|#,uni	µ10						useitem				blessings-counter		Quov		1	1	abs-fire				1	5	abs-cold				1	5	abs-ltng				1	5	res-all				15	20																																																											
-Trophy Carrier	1			100	16	219	0		2	`|#,uni	µ11						useitem				blessings-counter		Astro		1	1	allskills				0	1	slow				6	10	openwounds				41	50	res-curse				21	30																																																											
-Trophy Carrier	1			100	16	219	0		2	`|#,uni	µ12						useitem				blessings-counter		Azmo		1	1	skill-dur				41	50	regen				51	100	half-freeze			1	1	1	hp-mana				51	100																																																											
-Trophy Carrier	1			100	16	219	0		2	`|#,uni	µ13						useitem				blessings-counter		Vizjun		1	1	ac-global				41	50	ac				101	500	red-dmg%				1	5	balance3				41	50																																																											
-Trophy Carrier	1			100	16	219	0		2	`|#,uni	µ14						useitem				blessings-counter		Laz		1	1	hp%				6	15	res-all-max				1	2	swing3				50	50	cast3				50	50																																																											
-Trophy Carrier	1			100	16	219	0		2	`|#,uni	bxt						useitem				blessings-counter		Kabraxis		1	1	pierce-fire				1	15	pierce-ltng				1	15	pierce-cold				1	15	pierce-pois				1	15																																																											
-Trophy Carrier	1			100	16	219	0		2	`|#,uni	##/						useitem				blessings-counter		Uldyssian		1	1	dmg-fire				200	300	dmg-ltng				200	300	dmg-cold				200	300	reanimate			774	0	1																																																											
-Unknown Merge	1			100					2	r97	r99						`^#	120		120																																																																																									
-TC Trophy Decoy	1			100	18	426			2	`^`,uni	`^#						µ99																																																																																												
-TC Trophy Decoy	1			100	17	219	0		2	`^`,uni	`^#						µ99																																																																																												
-TC Trophy	1			100	18	423			2	`^`,uni	`^#						useitem				upgraded				1	1	light				-1	-1	allskills				0	2	all-stats				1	25	black6				-1	-1																																																											
-CLEAR MY CC	0			100	17	423	0		2	Sacred Sunstone	µ98						useitem				black1				-1	-1	black2				-1	-1	black3				-1	-1	black4				-1	-1	black5				-1	-1																																																											
-CLEAR MY CC	0			100	17	423	0		2	Shadow Vortex	µ98						useitem				black1				-1	-1	black2				-1	-1	black3				-1	-1	black4				-1	-1	black5				-1	-1																																																											
-CLEAR MY CC	0			100	17	423	0		2	Worldstone Orb	µ98						useitem				black1				-1	-1	black2				-1	-1	black3				-1	-1	black4				-1	-1	black5				-1	-1																																																											
-CLEAR MY CC	0			100	17	423	0		2	Caoi Dulra Fruit	µ98						useitem				black1				-1	-1	black2				-1	-1	black3				-1	-1	black4				-1	-1	black5				-1	-1																																																											
-CLEAR MY CC	0			100	17	423	0		2	Soulstone Shard	µ98						useitem				black1				-1	-1	black2				-1	-1	black3				-1	-1	black4				-1	-1	black5				-1	-1																																																											
-CLEAR MY CC	0			100	17	423	0		2	Orb of Divinity	µ98						useitem				black1				-1	-1	black2				-1	-1	black3				-1	-1	black4				-1	-1	black5				-1	-1																																																											
-CLEAR MY CC	0			100	17	423	0		2	Nexus Crystal	µ98						useitem				black1				-1	-1	black2				-1	-1	black3				-1	-1	black4				-1	-1	black5				-1	-1																																																											
-Cursed->Blessed	1			100					2	||_	r99						||.	120																																																																																											
-Cursed->Wasted	1			100					2	||_	thng						||`	120																																																																																											
-Wasted->Normal	1			100					2	||`	jew						qum																																																																																												
-Blessed->Book	1			100					2	||.	r97						||l																																																																																												
-Blessed->Wasted	1			100					2	||.	thng						||`																																																																																												
-Book->Charmbook	1			100					7	||l	#X1	#X2	#X3	#X4	#X5	#X6	||#																																																																																												
-Book->WastedBook	1			100					2	||l	thng						||*																																																																																												
-Book->WastedBook	1			100					3	||l	thng,qty=2						||*																																																																																												
-Book->WastedBook	1			100					4	||l	thng,qty=3						||*																																																																																												
-Book->WastedBook	1			100					5	||l	thng,qty=4						||*																																																																																												
-Book->WastedBook	1			100					6	||l	thng,qty=5						||*																																																																																												
-Book->WastedBook	1			100					7	||l	thng,qty=6						||*																																																																																												
-Book of MXLU Decoy	1			100	15	192	15		2	BookOfLaz	||#																																																																																																		0
-Another Waste	1			100					2	||#	thng						||*																																																																																												
-Wasted->Eat Everything	1			100					2	||`																																																																																																			
-Book of MXLU	1			100					2	BookOfLaz	||#						useitem				xsignet03				15	15	black7				-1	-1	allskills				2	2	skillcap				1	1	all-stats				25	25																																																											0
-LC0 Charm-Making	1			100					2	zen	hpot						LC0_STATUE																																																																																												
-LC0 DECOY	1			100	17	219	0		2	#X0,uni	dog																																																																																																		0
-LC0 DECOY	1			100	3	12	6		2	#X0,uni	dog																																																																																																		0
-LC0 WORKX	1			100	6	507	49		2	#X0,uni	dog						useitem				blessings-counter				1	1	gold%				201	250	all-stats				6	10	all3				10	10	reanimate-rand			1	1336	1553																																																											0
-random recipe	1			100					1	zky							24^																																		zkq																																																										
-random recipe	1			100					2	zkq,qty=2							02^																																																																																												
-random recipe	1			100					1	zk#							04^																																		zkq																																																										
-random recipe	1			100					2	zk#	zkq						06^																																																																																												
+VN_Dragon	1			100					2	????	??????						useitem				oskill			1111	1	1																																																																																			0

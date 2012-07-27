@@ -34,7 +34,7 @@ struct ItemInfo
     quint8 socketablesNumber, ilvl, quality, variableGraphicIndex;
     int nonMagicType;                     // quality == 1 || quality == 3 (low quality or superior)
     int setOrUniqueId;                    // key to get SetItemInfo or UniqueItemInfo
-    QString inscribedName;                // isPersonalized == true
+    QByteArray inscribedName;                // isPersonalized == true
     int defense;                          // itemBase.genericType == Enums::ItemType::Armor
     int currentDurability, maxDurability; // itemBase.genericType != Enums::ItemTypeGeneric::Misc
     int quantity;                         // itemBase.isStackable == true
@@ -145,8 +145,6 @@ struct ItemBase
     QByteArray imageName;
     QList<QByteArray> types;
     qint8 socketableType, classCode;
-
-//    ItemBase() : imageName(0), typeString(0) {}
 };
 
 struct ItemPropertyTxt
@@ -187,8 +185,6 @@ struct MysticOrb
 {
     QByteArray itemCode;
     quint16 statId, value;
-
-    MysticOrb() : itemCode(0) {}
 };
 
 struct RunewordInfo

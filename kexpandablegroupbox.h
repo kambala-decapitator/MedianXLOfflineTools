@@ -21,8 +21,6 @@
 
 #include <QtGui/QWidget>
 
-class QScrollArea;
-
 /**
     * @short An expandable container with a QComboBox-style API.
     *
@@ -70,105 +68,102 @@ class /*Q_GUI_EXPORT*/ KExpandableGroupBox : public QWidget
     Q_PROPERTY(Qt::Alignment alignment READ alignment WRITE setAlignment)
     Q_PROPERTY(bool animateExpansion READ animateExpansion WRITE setAnimateExpansion)
 
-    public:
-        /**
-         *    Default constructor.
-         *
-         *    @param parent is the parent widget
-         *
-         *    Use setTitle() and setWidget() to set the respective properties.
-         */
-        explicit KExpandableGroupBox(QWidget *parent = 0);
-        /**
-         *    Convinience constructor.
-         *
-         *    @param title is the title of the collaspsible widget
-         *    @param parent is the widget parent widget
-         *
-         *    Use setWidget() to set the widgets contents.
-         */
-        explicit KExpandableGroupBox(const QString& title, QWidget *parent = 0);
-        ~KExpandableGroupBox();
+public:
+       /**
+        *    Default constructor.
+        *
+        *    @param parent is the parent widget
+        *
+        *    Use setTitle() and setWidget() to set the respective properties.
+        */
+    explicit KExpandableGroupBox(QWidget *parent = 0);
+       /**
+        *    Convinience constructor.
+        *
+        *    @param title is the title of the collaspsible widget
+        *    @param parent is the widget parent widget
+        *
+        *    Use setWidget() to set the widgets contents.
+        */
+    explicit KExpandableGroupBox(const QString& title, QWidget *parent = 0);
+    virtual ~KExpandableGroupBox();
 
-        /**
-         * @return the widgets title
-         */
-        QString title() const;
+       /**
+        * @return the widgets title
+        */
+    QString title() const;
 
-        /**
-         * @return widgets wether the widget is expanded or not
-         * @see setExpanded()
-         */
-        bool isExpanded() const;
+       /**
+        * @return widgets wether the widget is expanded or not
+        * @see setExpanded()
+        */
+    bool isExpanded() const;
 
-        /**
-         * @return the alignment of the title label
-         * @see setAlignment()
-         */
-        Qt::Alignment alignment() const;
+       /**
+        * @return the alignment of the title label
+        * @see setAlignment()
+        */
+    Qt::Alignment alignment() const;
 
-        /**
-         * @return the widget contained
-         * @see setWidget()
-         */
-        QWidget* widget() const;
+       /**
+        * @return the widget contained
+        * @see setWidget()
+        */
+    QWidget* widget() const;
 
-        /**
-         * Sets the inner widgets.
-         * @see widget()
-         */
-        void setWidget(QWidget *w);
+       /**
+        * Sets the inner widgets.
+        * @see widget()
+        */
+    void setWidget(QWidget *w);
 
-        /**
-         * Sets the alignment of the title label.
-         * @see alignment()
-         */
-        void setAlignment(Qt::Alignment a);
+       /**
+        * Sets the alignment of the title label.
+        * @see alignment()
+        */
+    void setAlignment(Qt::Alignment a);
 
-        /**
-         * Sets wether or not the expansion of widget() should be animated.
-         * @see animateExpansion()
-         */
-        void setAnimateExpansion(bool animate);
+       /**
+        * Sets wether or not the expansion of widget() should be animated.
+        * @see animateExpansion()
+        */
+    void setAnimateExpansion(bool animate);
 
-        /**
-         * @return wether or not the expansion of widget() should be animated.
-         * The default is true except on embedded platforms.
-         * @see setAnimateExpansion()
-         */
-         bool animateExpansion() const;
+       /**
+        * @return wether or not the expansion of widget() should be animated.
+        * The default is true except on embedded platforms.
+        * @see setAnimateExpansion()
+        */
+        bool animateExpansion() const;
  
-         /** @reimp */
-        QSize minimumSizeHint () const;
+        /** @reimp */
+    QSize minimumSizeHint () const;
 
 
-    public slots:
-        /**
-         * Sets wether the widgets contents is expanded or not
-         * @see isExpanded()
-         */
-        void setExpanded(bool expanded);
+public slots:
+       /**
+        * Sets wether the widgets contents is expanded or not
+        * @see isExpanded()
+        */
+    void setExpanded(bool expanded);
 
-        /**
-         * Sets the collapsible widgets title
-         * @see title()
-         */
-        void setTitle(const QString& title);
+       /**
+        * Sets the collapsible widgets title
+        * @see title()
+        */
+    void setTitle(const QString& title);
 
-    protected:
-        void mouseReleaseEvent(QMouseEvent *ev);
-        void paintEvent(QPaintEvent*);
+protected:
+    void mouseReleaseEvent(QMouseEvent *ev);
+    void paintEvent(QPaintEvent*);
 
-    private slots:
-        void animateExpansion(qreal);
+private slots:
+    void animateExpansion(qreal);
 
-    private:
-        void init();
-        Q_DISABLE_COPY(KExpandableGroupBox)
-        class Private;
-        Private *d;
-
-
+private:
+    void init();
+    class Private;
+    Private *d;
 };
 
 #endif // KEXPANDABLEGROUPBOX_H

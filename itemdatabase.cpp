@@ -427,7 +427,7 @@ QString ItemDataBase::completeItemName(ItemInfo *item, bool shouldUseColor, bool
     }
 
     if (!item->inscribedName.isEmpty())
-        (specialName.isEmpty() || item->isRW ? itemName : specialName).prepend(tr("%1's ", "personalized name").arg(item->inscribedName));
+        (specialName.isEmpty() || item->isRW ? itemName : specialName).prepend(tr("%1's ", "personalized name").arg(item->inscribedName.constData()));
 
     if (shouldUseColor)
     {

@@ -1471,13 +1471,13 @@ Kabraxis Charm				1	1024					KabraxisSoul	1																																0
 Kabraxis Trophy				1						bxt	1		Blank TC	49																													0
 UnknkownSkullX				1						r99	25		Blank TC	25																													0
 Kabraxis Equip Drop			85	2	1024	0	0	0		weap81	4		armo81	1		weap84	6		armo84	3		weap87	14		armo87	7		weap90	6		armo90	3							266	35	1565	1	0
-Kabraxis Drop				-3						Kabraxis Charm	1		Kabraxis Trophy	1		Kabraxis Equip Drop	1																										0
-TC-Fire				1						Kx6	1		Act 5 (H) Unique Bias C	1000		UnknkownSkullX	1																										0
-TC-Cold				1						Kx5	1		Act 5 (H) Unique Bias C	1000		UnknkownSkullX	1																										0
-TC-Pois				1						Kx3	1		Act 5 (H) Unique Bias C	1000		UnknkownSkullX	1																										0
-TC-Magic				1						Kx2	1		Act 5 (H) Unique Bias C	1000		UnknkownSkullX	1																										0
-TC-Phys				1						Kx1	1		Act 5 (H) Unique Bias C	1000		UnknkownSkullX	1																										0
-TC-Ltng				1						Kx4	1		Act 5 (H) Unique Bias C	1000		UnknkownSkullX	1																										0
+Kabraxis Drop				-4						Kabraxis Charm	1		Kabraxis Trophy	1		Kabraxis Equip Drop	1		UnknkownSkullX	1																							0
+TC-Fire				1						Kx6	8		Blank TC	42																													0
+TC-Cold				1						Kx5	8		Blank TC	42																													0
+TC-Pois				1						Kx3	8		Blank TC	42																													0
+TC-Magic				1						Kx2	8		Blank TC	42																													0
+TC-Phys				1						Kx1	8		Blank TC	42																													0
+TC-Ltng				1						Kx4	8		Blank TC	42																													0
 Uldyssian Charm				1	1024					UldyssianCharm	25		Blank TC	25																													0
 Uldyssian Trophy				1						##/	1		Blank TC	49																													0
 Uldyssian Equip Drop			85	2	1024	0	0	0		weap81	4		armo81	1		weap84	6		armo84	3		weap87	14		armo87	7		weap90	6		armo90	3							266	35	1565	1	0
@@ -1499,44 +1499,6 @@ Diablo Charm0				1	1024					Diablo Clone Charm	1																																
 Diablo Giftboxeh				1						#2^	1																																0
 Diablo Dropz		20	85	3	0	1024	0	0		Act 5 (H) Heroic Bias C	1		Act 5 (H) Heroic Bias C	1		Act 5 (H) Heroic Bias C	1																								2	1	0
 Uber Diablo Drops				-3						Diablo Dropz	1		Diablo Giftboxeh	1		Diablo Charm0	1																										0
-I Am Rich Gem				1	1024					NewSuperGem	25		Blank TC	25																													0
-My Own Charm				1	1024					MyOwnCharm	25		Blank TC	25																													0
-MarcoNecroX Secret Boss				-2						Kabraxis Equip Drop	1		My Own Charm	1																													0
-Staff for quest				1	1024					msf	1																																0
-Staff for quest YES!				-1						Staff for quest	1																																0
-BRING FLAIL NAIO				1	1024					qf2	1																																0
-OF COURSE MY LORD				-1						BRING FLAIL NAIO	1																																0
-Trader's Chest is Here				1	1024					TradersChest	1																																0
-Chrysaor Base Drop				-2						Trader's Chest is Here	1		Uldyssian Equip Drop	1																													0
-Witch's Sleep				1	1024					TrophyCarrier	1																																0
-Startled Witch Drop				-2						Witch's Sleep	1		Uldyssian Equip Drop	1																													0
-Secret Chrysaor Equip			85	5	1024	0	0	0		weap81	4		armo81	1		weap84	6		armo84	3		weap87	14		armo87	7		weap90	6		armo90	3							266	35	1565	1	0
-Secret Chrysaor US				1						r97	1																																0
-Secret Chrysaor Drop				-2						Secret Chrysaor US	1		Secret Chrysaor Equip	1																													0
-Maggot (H)				1	1024					BrachyceranReward	1																																
-Maggot Boss SuperDrop				-6						||*	1		||`	1		qum	1		||_	1		Maggot (H)	1		Secret Chrysaor Equip	1																	0
-LC0 Charmxx				1	1024					HEYTHISISLC0CHARM2	1																																0
-LC0 Dropz				-3						LC0 Charmxx	1		dog	1		gld,mul=4096	1																										0
-Labrynth Set Drop A				1		1024				set_lab1	4		Blank TC	1																													0
-Labrynth Set Drop AB				-2						Labrynth Set Drop A	1		Baal (H)	1																													0
-Labrynth Set Drop B				1		1024				set_lab2	4		Blank TC	1																													0
-Labrynth Set Drop BB				-2						Labrynth Set Drop B	1		Baal (H)	1																													0
-Labrynth Set Drop C				1		1024				set_lab3	4		Blank TC	1																													0
-Labrynth Set Drop CB				-2						Labrynth Set Drop C	1		Baal (H)	1																													0
-Labrynth Set Drop D				1		1024				set_lab4	4		Blank TC	1																													0
-Labrynth Set Drop DB				-2						Labrynth Set Drop D	1		Baal (H)	1																													0
-Labrynth Set Drop E				1		1024				set_lab5	4		Blank TC	1																													0
-Labrynth Set Drop EB				-2						Labrynth Set Drop E	1		Baal (H)	1																													0
-Labrynth Set Drop F				1		1024				set_lab6	1		Blank TC	15																													0
-Labrynth Set Drop FB				-2						Labrynth Set Drop F	1		Act 5 (H) Torajian Runes	1																													0
-Labrynth Set Drop G				1		1024				set_lab7	1		Blank TC	15																													0
-Labrynth Set Drop GB				-2						Labrynth Set Drop G	1		Act 5 (H) Torajian Runes	1																													0
-Labrynth Set Drop H				1		1024				set_lab8	1		Blank TC	15																													0
-Labrynth Set Drop HB				-2						Labrynth Set Drop H	1		Act 5 (H) Torajian Runes	1																													0
-Labrynth Set Drop I				1		1024				set_lab9	1		Blank TC	15																													0
-Labrynth Set Drop IB				-2						Labrynth Set Drop I	1		Act 5 (H) Torajian Runes	1																													0
-Labrynth Set Drop J				1		1024				set_lab10	1		Blank TC	15																													0
-Labrynth Set Drop B				-2						Labrynth Set Drop J	1		Act 5 (H) Torajian Runes	1																													0
-Valthek Drop (H)				1	1024					AncientRepositories	1																																0
-Valthek Drop B (H)				1	1024					jew	1																																
-Valthek Charm Drop (H)				-3						Valthek Drop (H)	1		Valthek Drop B (H)	1		Secret Chrysaor Equip	1																										0
+I Am Rich Gem				1	1024					NewSuperGem	25		Blank TC	25																													
+My Own Charm				1	1024					MyOwnCharm	25		Blank TC	25																													
+MarcoNecroX Secret Boss				-3						Kabraxis Equip Drop	1		My Own Charm	1		I Am Rich Gem	1																										
