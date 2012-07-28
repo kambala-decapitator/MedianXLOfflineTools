@@ -424,8 +424,13 @@ void ItemsPropertiesSplitter::disenchantAllItems(bool toShards, bool upgradeToCr
             if (signetsEaten == disenchantedItemsNumber)
                 text = baseSignetsTextFormat.arg(signetsText);
             else
-                text = tr("%1 (now you have %2) and received %3").arg(baseSignetsTextFormat.arg(tr("%n Signet(s) of Learning", 0, signetsEaten))).arg(QString::number(Enums::CharacterStats::SignetsOfLearningMax))
-                                                                 .arg(tr("%n Signet(s) of Learning", 0, disenchantedItemsNumber - signetsEaten));
+            {
+                if (signetsEaten != Enums::CharacterStats::SignetsOfLearningMax)
+                    text = tr("%1 (now you have %2) and received %3").arg(baseSignetsTextFormat.arg(tr("%n Signet(s) of Learning", 0, signetsEaten))).arg(QString::number(Enums::CharacterStats::SignetsOfLearningMax))
+                                                                     .arg(tr("%n Signet(s) of Learning", 0, disenchantedItemsNumber - signetsEaten));
+                else
+                    text = tr("%1 and received %2").arg(baseSignetsTextFormat.arg(tr("%n Signet(s) of Learning", 0, signetsEaten))).arg(disenchantedItemsNumber - signetsEaten);
+            }
         }
         else
             text = baseTextFormat.arg(signetsText);
