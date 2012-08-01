@@ -433,8 +433,8 @@ void MedianXLOfflineTools::saveCharacter()
         outputDataStream << charInfo.mercenary.nameIndex << newMercValue;
     }
 
-    int characterItemsSize = 2;
-    ItemsList characterItems;
+    int characterItemsSize = 2, mercItemsSize = 2, corpseItemsSize = 2;
+    ItemsList characterItems, mercItems, corpseItems;
     QHash<Enums::ItemStorage::ItemStorageEnum, ItemsList > plugyItemsHash;
     foreach (ItemInfo *item, charInfo.items.character)
     {
@@ -444,21 +444,31 @@ void MedianXLOfflineTools::saveCharacter()
             plugyItemsHash[static_cast<Enums::ItemStorage::ItemStorageEnum>(item->storage)] += item;
             break;
         default:
+        {
+            int *pItemsSize;
+            ItemsList *pItems;
             switch (item->location)
             {
-            // TODO: finish
             case Enums::ItemLocation::Merc:
+                pItemsSize = &mercItemsSize;
+                pItems = &mercItems;
                 break;
             case Enums::ItemLocation::Corpse:
+                pItemsSize = &corpseItemsSize;
+                pItems = &corpseItems;
                 break;
             default:
-                characterItems += item;
-                characterItemsSize += 2 + item->bitString.length() / 8; // JM + item bytes
-                foreach (ItemInfo *socketableItem, item->socketablesInfo)
-                    characterItemsSize += 2 + socketableItem->bitString.length() / 8; // JM + item bytes
+                pItemsSize = &characterItemsSize;
+                pItems = &characterItems;
                 break;
             }
+
+            pItems->append(item);
+            *pItemsSize += 2 + item->bitString.length() / 8; // JM + item bytes
+            foreach (ItemInfo *socketableItem, item->socketablesInfo)
+                *pItemsSize += 2 + socketableItem->bitString.length() / 8; // JM + item bytes
             break;
+        }
         }
     }
 
@@ -1328,16 +1338,16 @@ void MedianXLOfflineTools::saveSettings() const
 
 bool compareSkillIndexes(int i, int j)
 {
-    const SkillInfo &iSkill = ItemDataBase::Skills()->operator[](i), &jSkill = ItemDataBase::Skills()->operator[](j);
-    if (iSkill.tab == jSkill.tab)
+    SkillInfo *iSkill = ItemDataBase::Skills()->value(i), *jSkill = ItemDataBase::Skills()->value(j);
+    if (iSkill->tab == jSkill->tab)
     {
-        if (iSkill.col == jSkill.col)
-            return iSkill.row < jSkill.row;
+        if (iSkill->col == jSkill->col)
+            return iSkill->row < jSkill->row;
         else
-            return iSkill.col < jSkill.col;
+            return iSkill->col < jSkill->col;
     }
     else
-        return iSkill.tab < jSkill.tab;
+        return iSkill->tab < jSkill->tab;
 }
 
 void MedianXLOfflineTools::fillMaps()
@@ -1354,13 +1364,13 @@ void MedianXLOfflineTools::fillMaps()
     _lineEditsStatsMap[Enums::CharacterStats::SignetsOfLearningEaten] = ui.signetsOfLearningEatenLineEdit;
     _lineEditsStatsMap[Enums::CharacterStats::SignetsOfSkillEaten] = ui.signetsOfSkillEatenLineEdit;
 
-    const QList<SkillInfo> &skills = *ItemDataBase::Skills();
-    int n = skills.size();
+    QList<SkillInfo *> *skills = ItemDataBase::Skills();
+    int n = skills->size();
     for (int classCode = Enums::ClassName::Amazon; classCode <= Enums::ClassName::Assassin; ++classCode)
     {
         QList<int> skillsIndexes;
         for (int i = 0; i < n; ++i)
-            if (skills.at(i).classCode == classCode)
+            if (skills->at(i)->classCode == classCode)
                 skillsIndexes += i;
         _characterSkillsIndexes[static_cast<Enums::ClassName::ClassNameEnum>(classCode)].first = skillsIndexes;
 
@@ -1688,7 +1698,7 @@ bool MedianXLOfflineTools::processSaveFile()
         if (statCode == Enums::CharacterStats::End)
             break;
 
-        int statLength = ItemDataBase::Properties()->operator[](statCode).saveBits;
+        int statLength = ItemDataBase::Properties()->value(statCode)->saveBits;
         if (!statLength)
         {
             QString modName("Median XL");
@@ -1766,7 +1776,7 @@ bool MedianXLOfflineTools::processSaveFile()
         quint8 skillValue = _saveFileContents.at(skillsOffset + 2 + i);
         skills += skillValue;
         charInfo.basicInfo.skills += skillValue;
-        //qDebug() << skillValue << ItemDataBase::Skills()->operator[](_characterSkillsIndeces[charInfo.basicInfo.classCode].first.at(i)).name;
+        //qDebug() << skillValue << ItemDataBase::Skills()->value(_characterSkillsIndeces[charInfo.basicInfo.classCode].first.at(i)).name;
     }
     skills += charInfo.basicInfo.statsDynamicData.property("FreeSkillPoints").toUInt();
     if (skills > maxPossibleSkills) // check if skills are hacked
@@ -1789,7 +1799,7 @@ bool MedianXLOfflineTools::processSaveFile()
     {
         int skillIndex = skillsIndeces.second.at(i);
         charInfo.basicInfo.skillsReadable += charInfo.basicInfo.skills.at(skillsIndeces.first.indexOf(skillIndex));
-        //qDebug() << charInfo.basicInfo.skillsReadable.last() << ItemDataBase::Skills()->operator[](skillIndex).name;
+        //qDebug() << charInfo.basicInfo.skillsReadable.last() << ItemDataBase::Skills()->value(skillIndex).name;
     }
 
     // items
@@ -1818,9 +1828,21 @@ bool MedianXLOfflineTools::processSaveFile()
     {
         if (item->location == Enums::ItemLocation::Equipped || (item->storage == Enums::ItemStorage::Inventory && ItemDataBase::isUberCharm(item)))
         {
-            avoidValue += item->props.value(avoidKey).value + item->rwProps.value(avoidKey).value;
+            ItemProperty *itemProp = item->props.value(avoidKey), *rwProp = item->rwProps.value(avoidKey);
+            if (itemProp)
+                avoidValue += itemProp->value;
+            if (rwProp)
+                avoidValue += rwProp->value;
+
             foreach (ItemInfo *socketableItem, item->socketablesInfo)
-                avoidValue += socketableItem->props.value(avoidKey).value + socketableItem->rwProps.value(avoidKey).value;
+            {
+                itemProp = socketableItem->props.value(avoidKey);
+                if (itemProp)
+                    avoidValue += itemProp->value;
+                rwProp = socketableItem->rwProps.value(avoidKey);
+                if (rwProp)
+                    avoidValue += rwProp->value;
+            }
         }
     }
     if (avoidValue >= 100)
@@ -2391,14 +2413,14 @@ QByteArray MedianXLOfflineTools::statisticBytes()
             if (clvl != newClvl) // set new level and experience explicitly
             {
                 addStatisticBits(result, Enums::CharacterStats::Level, Enums::CharacterStats::StatCodeLength);
-                addStatisticBits(result, newClvl, ItemDataBase::Properties()->operator[](Enums::CharacterStats::Level).saveBits);
+                addStatisticBits(result, newClvl, ItemDataBase::Properties()->value(Enums::CharacterStats::Level)->saveBits);
                 statsDynamicData.setProperty("Level", newClvl);
 
                 quint32 newExp = experienceTable.at(newClvl - 1);
                 if (newExp) // must not be present for level 1 character
                 {
                     addStatisticBits(result, Enums::CharacterStats::Experience, Enums::CharacterStats::StatCodeLength);
-                    addStatisticBits(result, newExp, ItemDataBase::Properties()->operator[](Enums::CharacterStats::Experience).saveBits);
+                    addStatisticBits(result, newExp, ItemDataBase::Properties()->value(Enums::CharacterStats::Experience)->saveBits);
                 }
                 statsDynamicData.setProperty("Experience", newExp);
 
@@ -2419,7 +2441,7 @@ QByteArray MedianXLOfflineTools::statisticBytes()
         if (value)
         {
             addStatisticBits(result, statCode, Enums::CharacterStats::StatCodeLength);
-            addStatisticBits(result, value, ItemDataBase::Properties()->operator[](statCode).saveBits);
+            addStatisticBits(result, value, ItemDataBase::Properties()->value(statCode)->saveBits);
         }
 
         CharacterInfo::instance().basicInfo.statsDynamicData.setProperty(enumKey, value);
@@ -2467,7 +2489,6 @@ void MedianXLOfflineTools::clearItems(bool sharedStashPathChanged /*= true*/, bo
             break;
         }
 
-        qDeleteAll(item->socketablesInfo);
         delete item;
         itemIterator.remove();
     }

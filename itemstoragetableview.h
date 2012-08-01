@@ -4,7 +4,7 @@
 #include <QTableView>
 
 
-struct ItemInfo;
+class ItemInfo;
 class ItemStorageTableModel;
 
 class QTimer;

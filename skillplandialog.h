@@ -6,7 +6,7 @@
 #include <QDialog>
 
 
-struct ItemInfo;
+class ItemInfo;
 class CharacterInfo;
 
 class SkillplanDialog : public QDialog

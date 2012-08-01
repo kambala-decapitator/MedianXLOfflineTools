@@ -15,17 +15,17 @@ struct ItemProperty
     ItemProperty(int v, int p = 0) : value(v), param(p) {}
     ItemProperty(const QString &text) : displayString(text) {}
 };
-Q_DECLARE_TYPEINFO(ItemProperty, Q_MOVABLE_TYPE);
 
-typedef QMultiMap<int, ItemProperty> PropertiesMultiMap;
-typedef QMap<int, ItemProperty> PropertiesMap;
+typedef QMultiMap<int, ItemProperty *> PropertiesMultiMap;
+typedef QMap<int, ItemProperty *> PropertiesMap;
 
 
-struct ItemInfo;
+class ItemInfo;
 typedef QList<ItemInfo *> ItemsList;
 
-struct ItemInfo
+class ItemInfo
 {
+public:
     bool isQuest, isIdentified, isSocketed, isEar, isStarter, isExtended, isEthereal, isPersonalized, isRW;
     int location, whereEquipped, row, column, storage;
     QByteArray itemType; // key to get ItemBase
@@ -56,11 +56,11 @@ struct ItemInfo
 
     ItemInfo() { init(); }
     ItemInfo(const QString &bits) : bitString(bits) { init(); }
+    ~ItemInfo() { qDeleteAll(props); qDeleteAll(rwProps); qDeleteAll(socketablesInfo); }
 
 private:
     void init() { plugyPage = 0; hasChanged = false; ilvl = 1; variableGraphicIndex = 0; location = row = column = storage = -1; whereEquipped = 0; }
 };
-Q_DECLARE_TYPEINFO(ItemInfo, Q_MOVABLE_TYPE);
 
 
 struct PlugyStashInfo
@@ -82,7 +82,6 @@ struct ItemPropertyDisplay
     ItemPropertyDisplay() {}
     ItemPropertyDisplay(const QString &displayString_, int priority_, int propertyId_) : displayString(displayString_), priority(priority_), propertyId(propertyId_) {}
 };
-Q_DECLARE_TYPEINFO(ItemPropertyDisplay, Q_MOVABLE_TYPE);
 
 
 // character
@@ -170,7 +169,6 @@ struct SkillInfo
     QString name;
     qint8 classCode, tab, row, col;
 };
-Q_DECLARE_TYPEINFO(SkillInfo, Q_MOVABLE_TYPE);
 
 typedef QList<quint8> SkillList;
 
@@ -193,7 +191,7 @@ struct RunewordInfo
     QString name;
 };
 typedef QPair<QByteArray, QByteArray> RunewordKeyPair;
-typedef QMultiHash<RunewordKeyPair, RunewordInfo> RunewordHash;
+typedef QMultiHash<RunewordKeyPair, RunewordInfo *> RunewordHash;
 
 struct SocketableItemInfo
 {

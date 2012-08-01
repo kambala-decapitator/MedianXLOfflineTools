@@ -13,12 +13,12 @@
 
 bool isRWInGear(ItemInfo *item, const QByteArray &rune, const QByteArray &allowedItemType)
 {
-    if (item->isRW && item->location == Enums::ItemLocation::Equipped && ItemParser::itemTypesInheritFromType(ItemDataBase::Items()->operator[](item->itemType).types, allowedItemType))
+    if (item->isRW && item->location == Enums::ItemLocation::Equipped && ItemParser::itemTypesInheritFromType(ItemDataBase::Items()->value(item->itemType)->types, allowedItemType))
     {
         const RunewordHash *const rwHash = ItemDataBase::RW();
         RunewordKeyPair rwKey = qMakePair(rune, QByteArray());
         for (RunewordHash::const_iterator iter = rwHash->find(rwKey); iter != rwHash->end() && iter.key() == rwKey; ++iter)
-            if (ItemParser::itemTypeInheritsFromTypes(allowedItemType, iter.value().allowedItemTypes))
+            if (ItemParser::itemTypeInheritsFromTypes(allowedItemType, iter.value()->allowedItemTypes))
                 return true;
     }
     return false;
@@ -103,12 +103,12 @@ bool isUltimative()
 
 bool isUltimative4()
 {
-    return ItemDataBase::Properties()->operator[](Enums::CharacterStats::Strength).saveBits != 12;
+    return ItemDataBase::Properties()->value(Enums::CharacterStats::Strength)->saveBits != 12;
 }
 
 bool isUltimative5OrLater()
 {
-    return ItemDataBase::Properties()->operator[](Enums::CharacterStats::FreeSkillPoints).saveBits != 8;
+    return ItemDataBase::Properties()->value(Enums::CharacterStats::FreeSkillPoints)->saveBits != 8;
 }
 
 bool isCubeInCharacterItems(ItemInfo *item)
@@ -123,7 +123,7 @@ bool hasChanged(ItemInfo *item)
 
 bool isTiered(ItemInfo *item)
 {
-    return ItemDataBase::Items()->operator[](item->itemType).types.contains("tier");
+    return ItemDataBase::Items()->value(item->itemType)->types.contains("tier");
 }
 
 bool isSacred(ItemInfo *item)

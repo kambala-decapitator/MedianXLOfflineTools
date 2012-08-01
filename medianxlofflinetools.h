@@ -32,7 +32,7 @@ public:
     static const int kStatPointsPerLevel, kSkillPointsPerLevel;
 
     MedianXLOfflineTools(const QString &cmdPath = QString(), QWidget *parent = 0, Qt::WFlags flags = 0);
-    virtual ~MedianXLOfflineTools() { clearItems(); }
+    virtual ~MedianXLOfflineTools() {}
 
 public slots:
     bool loadFile(const QString &charPath);

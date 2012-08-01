@@ -1,5 +1,4 @@
 v0.3:
-- simplify notification text if signets eaten == 500
 - move mass disenchant to a separate dialog and add more options
 - finish gem/rune upgrade and move to a separate dialog
 - finish saving of corpse/merc items

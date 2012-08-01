@@ -132,8 +132,11 @@ macx {
     OTHER_FILES += $$QMAKE_INFO_PLIST
 
     # for Xcode 4.3+
-    MAC_SDK = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk
+    MAC_SDK = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk
     # for earlier versions
+    if (!exists($$MAC_SDK)) {
+        MAC_SDK = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk
+    }
     if (!exists($$MAC_SDK)) {
         MAC_SDK = /Developer/SDKs/MacOSX10.6.sdk
     }
@@ -169,5 +172,5 @@ unix {
     SOURCES += messagecheckbox_p.cpp
 }
 
-release:DEFINES += QT_NO_DEBUG_OUTPUT \
-                   QT_NO_WARNING_OUTPUT
+CONFIG(release, debug|release):DEFINES += QT_NO_DEBUG_OUTPUT \
+                                          QT_NO_WARNING_OUTPUT

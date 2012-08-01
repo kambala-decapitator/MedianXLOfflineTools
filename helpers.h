@@ -34,7 +34,7 @@ bool isUltimative4();
 bool isUltimative5OrLater();
 
 // item conditions for STL algorithms
-struct ItemInfo;
+class ItemInfo;
 bool isCubeInCharacterItems(ItemInfo *item);
 bool hasChanged(ItemInfo *item);
 

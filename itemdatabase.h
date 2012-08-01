@@ -14,16 +14,16 @@ class ItemDataBase
 public:
     static bool createUncompressedTempFile(const QString &compressedFilePath, const QString &errorMessage, QFile *uncompressedFile);
 
-    static QHash<QByteArray, ItemBase> *Items();
+    static QHash<QByteArray, ItemBase *> *Items();
     static QHash<QByteArray, QList<QByteArray> > *ItemTypes();
-    static QHash<uint, ItemPropertyTxt> *Properties();
-    static QHash<uint, SetItemInfo> *Sets();
-    static QList<SkillInfo> *Skills();
-    static QHash<uint, UniqueItemInfo> *Uniques();
-    static QHash<uint, MysticOrb> *MysticOrbs();
+    static QHash<uint, ItemPropertyTxt *> *Properties();
+    static QHash<uint, SetItemInfo *> *Sets();
+    static QList<SkillInfo *> *Skills();
+    static QHash<uint, UniqueItemInfo *> *Uniques();
+    static QHash<uint, MysticOrb *> *MysticOrbs();
     static QHash<uint, QString> *Monsters();
     static RunewordHash *RW();
-    static QHash<QByteArray, SocketableItemInfo> *Socketables();
+    static QHash<QByteArray, SocketableItemInfo *> *Socketables();
     static QStringList *NonMagicItemQualities();
 
     static QStringList completeSetForName(const QString &setName) { return _sets.values(setName); }

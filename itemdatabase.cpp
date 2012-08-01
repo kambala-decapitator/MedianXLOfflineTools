@@ -59,9 +59,9 @@ bool ItemDataBase::createUncompressedTempFile(const QString &compressedFilePath,
     return true;
 }
 
-QHash<QByteArray, ItemBase> *ItemDataBase::Items()
+QHash<QByteArray, ItemBase *> *ItemDataBase::Items()
 {
-    static QHash<QByteArray, ItemBase> allItems;
+    static QHash<QByteArray, ItemBase *> allItems;
     if (allItems.isEmpty())
     {
         QFile f;
@@ -74,18 +74,18 @@ QHash<QByteArray, ItemBase> *ItemDataBase::Items()
             if (data.isEmpty())
                 continue;
 
-            ItemBase item;
-            item.name = QString::fromUtf8(data.at(1));
-            item.spelldesc = QString::fromUtf8(data.at(2)); // currently only misc items have it
-            item.width = data.at(3).toUShort();
-            item.height = data.at(4).toUShort();
-            item.genericType = static_cast<Enums::ItemTypeGeneric::ItemTypeGenericEnum>(data.at(5).toUShort());
-            item.isStackable = data.at(6).toUShort();
-            item.rlvl = data.at(7).toUShort();
-            item.imageName = data.at(8);
-            item.types = data.at(9).split(',');
-            item.socketableType = data.at(10).isEmpty() ? -1 : data.at(10).toShort();
-            item.classCode = data.at(11).toShort();
+            ItemBase *item = new ItemBase;
+            item->name = QString::fromUtf8(data.at(1));
+            item->spelldesc = QString::fromUtf8(data.at(2)); // currently only misc items have it
+            item->width = data.at(3).toUShort();
+            item->height = data.at(4).toUShort();
+            item->genericType = static_cast<Enums::ItemTypeGeneric::ItemTypeGenericEnum>(data.at(5).toUShort());
+            item->isStackable = data.at(6).toUShort();
+            item->rlvl = data.at(7).toUShort();
+            item->imageName = data.at(8);
+            item->types = data.at(9).split(',');
+            item->socketableType = data.at(10).isEmpty() ? -1 : data.at(10).toShort();
+            item->classCode = data.at(11).toShort();
             allItems[data.at(0)] = item;
         }
         f.remove();
@@ -115,9 +115,9 @@ QHash<QByteArray, QList<QByteArray> > *ItemDataBase::ItemTypes()
     return &types;
 }
 
-QHash<uint, ItemPropertyTxt> *ItemDataBase::Properties()
+QHash<uint, ItemPropertyTxt *> *ItemDataBase::Properties()
 {
-    static QHash<uint, ItemPropertyTxt> allProperties;
+    static QHash<uint, ItemPropertyTxt *> allProperties;
     if (allProperties.isEmpty())
     {
         QFile f;
@@ -130,27 +130,27 @@ QHash<uint, ItemPropertyTxt> *ItemDataBase::Properties()
             if (data.isEmpty())
                 continue;
 
-            ItemPropertyTxt item;
-            item.add = data.at(1).toUShort();
-            item.bits = data.at(2).toUShort();
-            item.saveBits = data.at(3).toUShort();
+            ItemPropertyTxt *item = new ItemPropertyTxt;
+            item->add = data.at(1).toUShort();
+            item->bits = data.at(2).toUShort();
+            item->saveBits = data.at(3).toUShort();
             QList<QByteArray> groupIDs = data.at(4).split(',');
             if (!groupIDs.at(0).isEmpty())
                 foreach (const QByteArray &id, groupIDs)
-                    item.groupIDs += id.toUShort();
-            item.descGroupNegative = QString::fromUtf8(data.at(5));
-            item.descGroupPositive = QString::fromUtf8(data.at(6));
-            item.descGroupStringAdd = QString::fromUtf8(data.at(7));
-            item.descNegative = QString::fromUtf8(data.at(8));
-            item.descPositive = QString::fromUtf8(data.at(9));
-            item.descStringAdd = QString::fromUtf8(data.at(10));
-            item.descFunc = data.at(11).toUShort();
-            item.descPriority = data.at(12).toUShort();
-            item.descVal = data.at(13).toUShort();
-            item.descGroupFunc = data.at(14).toUShort();
-            item.descGroupPriority = data.at(15).toUShort();
-            item.descGroupVal = data.at(16).toUShort();
-            item.saveParamBits = data.at(17).toUShort();
+                    item->groupIDs += id.toUShort();
+            item->descGroupNegative = QString::fromUtf8(data.at(5));
+            item->descGroupPositive = QString::fromUtf8(data.at(6));
+            item->descGroupStringAdd = QString::fromUtf8(data.at(7));
+            item->descNegative = QString::fromUtf8(data.at(8));
+            item->descPositive = QString::fromUtf8(data.at(9));
+            item->descStringAdd = QString::fromUtf8(data.at(10));
+            item->descFunc = data.at(11).toUShort();
+            item->descPriority = data.at(12).toUShort();
+            item->descVal = data.at(13).toUShort();
+            item->descGroupFunc = data.at(14).toUShort();
+            item->descGroupPriority = data.at(15).toUShort();
+            item->descGroupVal = data.at(16).toUShort();
+            item->saveParamBits = data.at(17).toUShort();
             allProperties[data.at(0).toUInt()] = item;
         }
         f.remove();
@@ -158,9 +158,9 @@ QHash<uint, ItemPropertyTxt> *ItemDataBase::Properties()
     return &allProperties;
 }
 
-QHash<uint, SetItemInfo> *ItemDataBase::Sets()
+QHash<uint, SetItemInfo *> *ItemDataBase::Sets()
 {
-    static QHash<uint, SetItemInfo> allSets;
+    static QHash<uint, SetItemInfo *> allSets;
     if (allSets.isEmpty())
     {
         QFile f;
@@ -173,23 +173,23 @@ QHash<uint, SetItemInfo> *ItemDataBase::Sets()
             if (data.isEmpty())
                 continue;
 
-            SetItemInfo item;
-            item.itemName = QString::fromUtf8(data.at(1));
-            item.setName = QString::fromUtf8(data.at(2));
+            SetItemInfo *item = new SetItemInfo;
+            item->itemName = QString::fromUtf8(data.at(1));
+            item->setName = QString::fromUtf8(data.at(2));
             allSets[data.at(0).toUInt()] = item;
 
             // do not add duplicate names
-            if (_sets.count(item.setName) < 5)
-                _sets.insert(item.setName, item.itemName);
+            if (_sets.count(item->setName) < 5)
+                _sets.insert(item->setName, item->itemName);
         }
         f.remove();
     }
     return &allSets;
 }
 
-QList<SkillInfo> *ItemDataBase::Skills()
+QList<SkillInfo *> *ItemDataBase::Skills()
 {
-    static QList<SkillInfo> allSkills;
+    static QList<SkillInfo *> allSkills;
     if (allSkills.isEmpty())
     {
         QFile f;
@@ -202,12 +202,12 @@ QList<SkillInfo> *ItemDataBase::Skills()
             if (data.isEmpty())
                 continue;
 
-            SkillInfo item;
-            item.name = QString::fromUtf8(data.at(1));
-            item.classCode = data.at(2).toShort();
-            item.tab = data.at(3).toShort();
-            item.row = data.at(4).toShort();
-            item.col = data.at(5).toShort();
+            SkillInfo *item = new SkillInfo;
+            item->name = QString::fromUtf8(data.at(1));
+            item->classCode = data.at(2).toShort();
+            item->tab = data.at(3).toShort();
+            item->row = data.at(4).toShort();
+            item->col = data.at(5).toShort();
             allSkills.push_back(item);
         }
         f.remove();
@@ -215,9 +215,9 @@ QList<SkillInfo> *ItemDataBase::Skills()
     return &allSkills;
 }
 
-QHash<uint, UniqueItemInfo> *ItemDataBase::Uniques()
+QHash<uint, UniqueItemInfo *> *ItemDataBase::Uniques()
 {
-    static QHash<uint, UniqueItemInfo> allUniques;
+    static QHash<uint, UniqueItemInfo *> allUniques;
     if (allUniques.isEmpty())
     {
         QFile f;
@@ -230,11 +230,11 @@ QHash<uint, UniqueItemInfo> *ItemDataBase::Uniques()
             if (data.isEmpty())
                 continue;
 
-            UniqueItemInfo item;
-            item.name = QString::fromUtf8(data.at(1));
-            item.rlvl = data.at(2).toUShort();
+            UniqueItemInfo *item = new UniqueItemInfo;
+            item->name = QString::fromUtf8(data.at(1));
+            item->rlvl = data.at(2).toUShort();
             if (data.size() > 3)
-                item.imageName = data.at(3);
+                item->imageName = data.at(3);
             allUniques[data.at(0).toUInt()] = item;
         }
         f.remove();
@@ -242,9 +242,9 @@ QHash<uint, UniqueItemInfo> *ItemDataBase::Uniques()
     return &allUniques;
 }
 
-QHash<uint, MysticOrb> *ItemDataBase::MysticOrbs()
+QHash<uint, MysticOrb *> *ItemDataBase::MysticOrbs()
 {
-    static QHash<uint, MysticOrb> allMysticOrbs;
+    static QHash<uint, MysticOrb *> allMysticOrbs;
     if (allMysticOrbs.isEmpty())
     {
         QFile f;
@@ -257,10 +257,10 @@ QHash<uint, MysticOrb> *ItemDataBase::MysticOrbs()
             if (data.isEmpty())
                 continue;
 
-            MysticOrb item;
-            item.itemCode = data.at(1);
-            item.statId = data.at(2).toUShort();
-            item.value = data.at(3).toUShort();
+            MysticOrb *item = new MysticOrb;
+            item->itemCode = data.at(1);
+            item->statId = data.at(2).toUShort();
+            item->value = data.at(3).toUShort();
             allMysticOrbs[data.at(0).toUInt()] = item;
         }
         f.remove();
@@ -305,11 +305,11 @@ RunewordHash *ItemDataBase::RW()
             if (data.isEmpty())
                 continue;
 
-            RunewordInfo item;
-            item.allowedItemTypes.reserve(6);
+            RunewordInfo *item = new RunewordInfo;
+            item->allowedItemTypes.reserve(6);
             for (int i = 0; i < 6; ++i)
-                item.allowedItemTypes << data.at(i);
-            item.name = QString::fromUtf8(data.at(6));
+                item->allowedItemTypes << data.at(i);
+            item->name = QString::fromUtf8(data.at(6));
             allRunewords.insert(qMakePair(data.at(7), data.size() == 9 ? data.at(8) : QByteArray()), item);
         }
         f.remove();
@@ -317,9 +317,9 @@ RunewordHash *ItemDataBase::RW()
     return &allRunewords;
 }
 
-QHash<QByteArray, SocketableItemInfo> *ItemDataBase::Socketables()
+QHash<QByteArray, SocketableItemInfo *> *ItemDataBase::Socketables()
 {
-    static QHash<QByteArray, SocketableItemInfo> allSocketables;
+    static QHash<QByteArray, SocketableItemInfo *> allSocketables;
     if (allSocketables.isEmpty())
     {
         QFile f;
@@ -332,9 +332,9 @@ QHash<QByteArray, SocketableItemInfo> *ItemDataBase::Socketables()
             if (data.isEmpty())
                 continue;
 
-            SocketableItemInfo item;
-            item.name = QString::fromUtf8(data.at(1));
-            item.letter = QString::fromUtf8(data.at(2));
+            SocketableItemInfo *item = new SocketableItemInfo;
+            item->name = QString::fromUtf8(data.at(1));
+            item->letter = QString::fromUtf8(data.at(2));
             for (int i = SocketableItemInfo::Armor, firstCol = 3; i <= SocketableItemInfo::Weapon; ++i)
             {
                 QList<SocketableItemInfo::Properties> props;
@@ -352,7 +352,7 @@ QHash<QByteArray, SocketableItemInfo> *ItemDataBase::Socketables()
                     foreach (const QByteArray &code, codeString.split(','))
                         props += SocketableItemInfo::Properties(code.toInt(), param, value);
                 }
-                item.properties[static_cast<SocketableItemInfo::PropertyType>(i)] = props;
+                item->properties[static_cast<SocketableItemInfo::PropertyType>(i)] = props;
             }
             allSocketables[data.at(0)] = item;
         }
@@ -390,7 +390,7 @@ QList<QByteArray> ItemDataBase::stringArrayOfCurrentLineInFile(QFile &f)
 
 QString ItemDataBase::completeItemName(ItemInfo *item, bool shouldUseColor, bool showQualityText /*= true*/)
 {
-    QString itemName = Items()->value(item->itemType).name, nonMagicalQuality;
+    QString itemName = Items()->value(item->itemType)->name, nonMagicalQuality;
     if (item->quality == Enums::ItemQuality::LowQuality)
         nonMagicalQuality = NonMagicItemQualities()->at(item->nonMagicType);
     else if (item->quality == Enums::ItemQuality::HighQuality)
@@ -408,13 +408,13 @@ QString ItemDataBase::completeItemName(ItemInfo *item, bool shouldUseColor, bool
     QString specialName;
     if (item->quality == Enums::ItemQuality::Set)
     {
-        const SetItemInfo &setItem = Sets()->operator[](item->setOrUniqueId);
-        specialName = setItem.itemName;
+        SetItemInfo *setItem = Sets()->value(item->setOrUniqueId);
+        specialName = setItem->itemName;
         if (!shouldUseColor)
-            specialName += QString(" [%1]").arg(setItem.setName);
+            specialName += QString(" [%1]").arg(setItem->setName);
     }
     else if (item->quality == Enums::ItemQuality::Unique)
-        specialName = Uniques()->value(item->setOrUniqueId).name;
+        specialName = Uniques()->contains(item->setOrUniqueId) ? Uniques()->value(item->setOrUniqueId)->name : "FAIL";
     else if (item->isRW)
         specialName = item->rwName;
 
@@ -486,7 +486,7 @@ QString ItemDataBase::completeItemName(ItemInfo *item, bool shouldUseColor, bool
             else if (item->isRW)
                 itemName.prepend(QString("[%1]%2").arg(tr("runeword"), kHtmlLineBreak));
 
-            QString spelldesc = Items()->value(item->itemType).spelldesc;
+            QString spelldesc = Items()->value(item->itemType)->spelldesc;
             if (!spelldesc.isEmpty())
             {
                 expandMultilineString(&spelldesc);
@@ -596,16 +596,16 @@ bool ItemDataBase::storeItemIn(ItemInfo *item, Enums::ItemStorage::ItemStorageEn
 bool ItemDataBase::canStoreItemAt(quint8 row, quint8 col, const QByteArray &storeItemType, const ItemsList &items, int rowsTotal, int colsTotal /*= 10*/)
 {
     // col is horizontal (x), row is vertical (y)
-    const ItemBase &storeItemBase = ItemDataBase::Items()->operator[](storeItemType);
-    QRect storeItemRect(col, row, storeItemBase.width, storeItemBase.height);
+    ItemBase *storeItemBase = ItemDataBase::Items()->value(storeItemType);
+    QRect storeItemRect(col, row, storeItemBase->width, storeItemBase->height);
     if (storeItemRect.right() >= colsTotal || storeItemRect.bottom() >= rowsTotal) // beyond grid
         return false;
 
     bool ok = true;
     foreach (ItemInfo *item, items)
     {
-        const ItemBase &itemBase = ItemDataBase::Items()->operator[](item->itemType);
-        if (storeItemRect.intersects(QRect(item->column, item->row, itemBase.width, itemBase.height)))
+        ItemBase *itemBase = ItemDataBase::Items()->value(item->itemType);
+        if (storeItemRect.intersects(QRect(item->column, item->row, itemBase->width, itemBase->height)))
         {
             ok = false;
             break;
@@ -616,7 +616,7 @@ bool ItemDataBase::canStoreItemAt(quint8 row, quint8 col, const QByteArray &stor
 
 bool ItemDataBase::isClassCharm(const QByteArray &itemType)
 {
-    foreach (const QByteArray &type, Items()->operator[](itemType).types)
+    foreach (const QByteArray &type, Items()->value(itemType)->types)
         if (type.startsWith("ara"))
             return true;
     return false;
@@ -629,7 +629,7 @@ bool ItemDataBase::isClassCharm(ItemInfo *item)
 
 bool ItemDataBase::isUberCharm(ItemInfo *item)
 {
-    return ItemParser::itemTypesInheritFromType(Items()->operator[](item->itemType).types, "char");
+    return ItemParser::itemTypesInheritFromType(Items()->value(item->itemType)->types, "char");
 }
 
 bool ItemDataBase::isGenericSocketable(ItemInfo *item)
@@ -651,7 +651,7 @@ bool ItemDataBase::canDisenchantIntoArcaneShards(ItemInfo *item)
 bool ItemDataBase::canDisenchantIntoSignetOfLearning(ItemInfo *item)
 {
     // Ultimative prohibits disenchanting TUs into signets
-    return canDisenchant(item) && !(isUltimative() && item->quality == Enums::ItemQuality::Unique && Items()->operator[](item->itemType).genericType != Enums::ItemTypeGeneric::Misc && isTiered(item));
+    return canDisenchant(item) && !(isUltimative() && item->quality == Enums::ItemQuality::Unique && Items()->value(item->itemType)->genericType != Enums::ItemTypeGeneric::Misc && isTiered(item));
 }
 
 bool ItemDataBase::canDisenchant(ItemInfo *item)

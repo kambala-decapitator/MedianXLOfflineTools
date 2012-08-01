@@ -248,11 +248,11 @@ void ItemsPropertiesSplitter::disenchantSelectedItem()
 //        item->isEthereal = false;
 //        ReverseBitWriter::replaceValueInBitString(item->bitString, Enums::ItemOffsets::Ethereal, 0);
 //
-//        if (ItemDataBase::Items()->operator[](item->itemType).genericType == Enums::ItemTypeGeneric::Armor)
+//        if (ItemDataBase::Items()->value(item->itemType).genericType == Enums::ItemTypeGeneric::Armor)
 //        {
 //            // TODO if will bring back: find the correct position for replacement (the defense offset isn't static)
 //            item->defense /= 1.5;
-//            const ItemPropertyTxt &defenceProp = ItemDataBase::Properties()->operator[](Enums::ItemProperties::Defence);
+//            const ItemPropertyTxt &defenceProp = ItemDataBase::Properties()->value(Enums::ItemProperties::Defence);
 //            ReverseBitWriter::replaceValueInBitString(item->bitString, Enums::ItemOffsets::Ethereal, defenceProp.bits, item->defense + defenceProp.add);
 //        }
 //
@@ -425,11 +425,12 @@ void ItemsPropertiesSplitter::disenchantAllItems(bool toShards, bool upgradeToCr
                 text = baseSignetsTextFormat.arg(signetsText);
             else
             {
+                signetsText = tr("%n Signet(s) of Learning", 0, signetsEaten);
                 if (signetsEaten != Enums::CharacterStats::SignetsOfLearningMax)
-                    text = tr("%1 (now you have %2) and received %3").arg(baseSignetsTextFormat.arg(tr("%n Signet(s) of Learning", 0, signetsEaten))).arg(QString::number(Enums::CharacterStats::SignetsOfLearningMax))
+                    text = tr("%1 (now you have %2) and received %3").arg(baseSignetsTextFormat.arg(signetsText)).arg(QString::number(Enums::CharacterStats::SignetsOfLearningMax))
                                                                      .arg(tr("%n Signet(s) of Learning", 0, disenchantedItemsNumber - signetsEaten));
                 else
-                    text = tr("%1 and received %2").arg(baseSignetsTextFormat.arg(tr("%n Signet(s) of Learning", 0, signetsEaten))).arg(disenchantedItemsNumber - signetsEaten);
+                    text = tr("%1 and received %2").arg(baseSignetsTextFormat.arg(signetsText)).arg(disenchantedItemsNumber - signetsEaten);
             }
         }
         else
@@ -591,7 +592,7 @@ void ItemsPropertiesSplitter::createActionsForMysticOrbs(QMenu *parentMenu, bool
 {
     foreach (int moCode, _propertiesWidget->mysticOrbs(isItemMO))
     {
-        QAction *moAction = new QAction((isItemMO ? item->props : item->rwProps).value(moCode).displayString, _itemsView);
+        QAction *moAction = new QAction((isItemMO ? item->props : item->rwProps).value(moCode)->displayString, _itemsView);
         moAction->setProperty("isItemMO", isItemMO);
         moAction->setProperty("moCode", moCode);
         connect(moAction, SIGNAL(triggered()), _propertiesWidget, SLOT(removeMysticOrb()));

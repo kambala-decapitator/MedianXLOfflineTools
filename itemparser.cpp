@@ -125,7 +125,7 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
                 if (bitReader.readBool()) // class info
                     bitReader.skip(11);
 
-                const ItemBase &itemBase = ItemDataBase::Items()->operator[](item->itemType);
+                ItemBase *itemBase = ItemDataBase::Items()->value(item->itemType);
                 switch (item->quality)
                 {
                 case Enums::ItemQuality::Normal:
@@ -149,8 +149,8 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
                     bitReader.skip(16); // no idea what these bits mean
                     break;
                 default:
-                    qDebug("Item '%s' of unknown quality %d found!", itemBase.name.toUtf8().constData(), item->quality);
-                    //ERROR_BOX_NO_PARENT(tr("Item '%1' of unknown quality '%2' found!").arg(itemBase.name).arg(item->quality));
+                    qDebug("Item '%s' of unknown quality %d found!", itemBase->name.toUtf8().constData(), item->quality);
+                    //ERROR_BOX_NO_PARENT(tr("Item '%1' of unknown quality '%2' found!").arg(itemBase->name).arg(item->quality));
                     break;
                 }
 
@@ -169,24 +169,24 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
                 bitReader.skip(); // tome of ID bit
                 if (item->itemType == "ibk" || item->itemType == "tbk")
                     bitReader.skip(5); // some tome bits
-                if (itemBase.genericType == Enums::ItemTypeGeneric::Armor)
+                if (itemBase->genericType == Enums::ItemTypeGeneric::Armor)
                 {
-                    const ItemPropertyTxt &defenceProp = ItemDataBase::Properties()->operator[](Enums::ItemProperties::Defence);
-                    item->defense = bitReader.readNumber(defenceProp.bits) - defenceProp.add;
+                    ItemPropertyTxt *defenceProp = ItemDataBase::Properties()->value(Enums::ItemProperties::Defence);
+                    item->defense = bitReader.readNumber(defenceProp->bits) - defenceProp->add;
                 }
-                if (itemBase.genericType != Enums::ItemTypeGeneric::Misc)
+                if (itemBase->genericType != Enums::ItemTypeGeneric::Misc)
                 {
-                    const ItemPropertyTxt &maxDurabilityProp = ItemDataBase::Properties()->operator[](Enums::ItemProperties::DurabilityMax);
-                    item->maxDurability = bitReader.readNumber(maxDurabilityProp.bits) - maxDurabilityProp.add;
+                    ItemPropertyTxt *maxDurabilityProp = ItemDataBase::Properties()->value(Enums::ItemProperties::DurabilityMax);
+                    item->maxDurability = bitReader.readNumber(maxDurabilityProp->bits) - maxDurabilityProp->add;
                     if (item->maxDurability)
                     {
-                        const ItemPropertyTxt &durabilityProp = ItemDataBase::Properties()->operator[](Enums::ItemProperties::Durability);
-                        item->currentDurability = bitReader.readNumber(durabilityProp.bits) - durabilityProp.add;
+                        ItemPropertyTxt *durabilityProp = ItemDataBase::Properties()->value(Enums::ItemProperties::Durability);
+                        item->currentDurability = bitReader.readNumber(durabilityProp->bits) - durabilityProp->add;
                         if (item->maxDurability < item->currentDurability)
                             item->maxDurability = item->currentDurability;
                     }
                 }
-                item->quantity = itemBase.isStackable ? bitReader.readNumber(9) : -1;
+                item->quantity = itemBase->isStackable ? bitReader.readNumber(9) : -1;
                 if (item->isSocketed)
                     item->socketsNumber = bitReader.readNumber(4);
 
@@ -199,7 +199,7 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
                 if (status != ItemInfo::Ok)
                 {
                     inputDataStream.device()->seek(itemStartOffset - 2); // set to JM - beginning of the item
-                    item->props.insert(1, ItemProperty(tr("Error parsing item properties (status == failed), please report!")));
+                    item->props.insert(1, new ItemProperty(tr("Error parsing item properties (status == failed), please report!")));
                     searchEndOffset = nextItemOffset + 1;
                     continue;
                 }
@@ -209,7 +209,7 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
                 {
                     QString newDesc = ItemDataBase::isUberCharm(item) ? (ItemDataBase::isClassCharm(item) ? tr("Veterans") : tr("Trophy'd"))
                                                                       : tr("Blessed");
-                    blessPropIter.value().displayString = QString("[%1]").arg(newDesc);
+                    blessPropIter.value()->displayString = QString("[%1]").arg(newDesc);
                 }
 
                 //for (int i = 0; i < 5; ++i)
@@ -222,7 +222,7 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
                     if (status != ItemInfo::Ok)
                     {
                         inputDataStream.device()->seek(itemStartOffset - 2); // set to JM - beginning of the item
-                        item->rwProps.insert(1, ItemProperty(tr("Error parsing RW properties (status == failed), please report!")));
+                        item->rwProps.insert(1, new ItemProperty(tr("Error parsing RW properties (status == failed), please report!")));
                         searchEndOffset = nextItemOffset + 1;
                         continue;
                     }
@@ -242,17 +242,17 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
                 {
                     RunewordKeyPair rwKey = qMakePair(rwSocketableTypes.at(0), rwSocketableTypes.size() > 1 ? rwSocketableTypes.at(1) : QByteArray());
                     if (rwKey == qMakePair(QByteArray("r56"), QByteArray("r55"))) // maybe it's 'Eternal'?
-                        item->rwName = ItemDataBase::RW()->value(qMakePair(QByteArray("r51"), QByteArray("r52"))).name;
+                        item->rwName = ItemDataBase::RW()->value(qMakePair(QByteArray("r51"), QByteArray("r52")))->name;
                     else
                     {
                         const RunewordHash *const rwHash = ItemDataBase::RW();
                         RunewordHash::const_iterator iter = rwHash->find(rwKey);
                         for (; iter != rwHash->end() && iter.key() == rwKey; ++iter)
                         {
-                            const RunewordInfo &rwInfo = iter.value();
-                            if (itemTypesInheritFromTypes(itemBase.types, rwInfo.allowedItemTypes))
+                            RunewordInfo *rwInfo = iter.value();
+                            if (itemTypesInheritFromTypes(itemBase->types, rwInfo->allowedItemTypes))
                             {
-                                item->rwName = rwInfo.name;
+                                item->rwName = rwInfo->name;
                                 break;
                             }
                         }
@@ -297,6 +297,7 @@ PropertiesMultiMap ItemParser::parseItemProperties(ReverseBitReader &bitReader, 
     PropertiesMultiMap props;
     while (bitReader.pos() != -1)
     {
+        ItemProperty *propToAdd = 0;
         try
         {
             int id = bitReader.readNumber(Enums::CharacterStats::StatCodeLength);
@@ -306,18 +307,16 @@ PropertiesMultiMap ItemParser::parseItemProperties(ReverseBitReader &bitReader, 
                 return props;
             }
 
-            const ItemPropertyTxt &txtProperty = ItemDataBase::Properties()->operator[](id);
-            ItemProperty propToAdd;
-            propToAdd.param = txtProperty.saveParamBits ? bitReader.readNumber(txtProperty.saveParamBits) : 0;
-            propToAdd.value = bitReader.readNumber(txtProperty.bits) - txtProperty.add;
+            propToAdd = new ItemProperty;
+            ItemPropertyTxt *txtProperty = ItemDataBase::Properties()->value(id);
+            propToAdd->param = txtProperty->saveParamBits ? bitReader.readNumber(txtProperty->saveParamBits) : 0;
+            propToAdd->value = bitReader.readNumber(txtProperty->bits) - txtProperty->add;
             if (id == Enums::ItemProperties::EnhancedDamage)
             {
-                qint16 minEnhDamage = bitReader.readNumber(txtProperty.bits) - txtProperty.add;
-                if (minEnhDamage < propToAdd.value) // it shouldn't possible (they must always be equal), but let's make sure
-                    propToAdd.value = minEnhDamage;
-                propToAdd.displayString = enhancedDamageFormat().arg(propToAdd.value);
-                //if (minEnhDamage != propToAdd.value)
-                //    propToAdd.displayString += " " + QString("[min ED %1 != max ED %2]").arg(minEnhDamage).arg(propToAdd.value);
+                qint16 minEnhDamage = bitReader.readNumber(txtProperty->bits) - txtProperty->add;
+                if (minEnhDamage < propToAdd->value) // it shouldn't possible (they must always be equal), but let's make sure
+                    propToAdd->value = minEnhDamage;
+                propToAdd->displayString = enhancedDamageFormat().arg(propToAdd->value);
             }
 
             // elemental damage
@@ -328,8 +327,8 @@ PropertiesMultiMap ItemParser::parseItemProperties(ReverseBitReader &bitReader, 
                     hasLength = true; // length is present only when min damage is specified
                 else if (id == 52) // +%d magic damage
                 {
-                    QString desc = txtProperty.descPositive;
-                    propToAdd.displayString = desc.replace("%d", "%1").arg(propToAdd.value);
+                    QString desc = txtProperty->descPositive;
+                    propToAdd->displayString = desc.replace("%d", "%1").arg(propToAdd->value);
                 }
                 props.insert(id++, propToAdd);
                 hasMinElementalDamage = true;
@@ -337,30 +336,30 @@ PropertiesMultiMap ItemParser::parseItemProperties(ReverseBitReader &bitReader, 
             if (hasMinElementalDamage)
             {
                 // get max elemental damage
-                const ItemPropertyTxt &maxElementalDamageProp = ItemDataBase::Properties()->operator[](id);
-                propToAdd.value = bitReader.readNumber(maxElementalDamageProp.bits) - maxElementalDamageProp.add;
+                ItemPropertyTxt *maxElementalDamageProp = ItemDataBase::Properties()->value(id);
+                propToAdd->value = bitReader.readNumber(maxElementalDamageProp->bits) - maxElementalDamageProp->add;
 
                 if (id == 53) // +%d magic damage
                 {
-                    QString desc = maxElementalDamageProp.descPositive;
-                    propToAdd.displayString = desc.replace("%d", "%1").arg(propToAdd.value);
+                    QString desc = maxElementalDamageProp->descPositive;
+                    propToAdd->displayString = desc.replace("%d", "%1").arg(propToAdd->value);
                 }
-                props.insert(id, propToAdd);
+                props.insert(id, new ItemProperty(*propToAdd));
 
                 if (hasLength) // cold or poison length
                 {
-                    const ItemPropertyTxt &lengthProp = ItemDataBase::Properties()->operator[](++id);
-                    qint16 length = bitReader.readNumber(lengthProp.bits) - lengthProp.add;
-                    //propToAdd.displayString = QString(" with length of %1 frames (%2 second(s))").arg(length).arg(static_cast<double>(length) / 25.0, 1);
-                    //propToAdd.value = length;
+                    ItemPropertyTxt *lengthProp = ItemDataBase::Properties()->value(++id);
+                    qint16 length = bitReader.readNumber(lengthProp->bits) - lengthProp->add;
+                    //propToAdd->displayString = QString(" with length of %1 frames (%2 second(s))").arg(length).arg(static_cast<double>(length) / 25.0, 1);
+                    //propToAdd->value = length;
                     //props[id] = propToAdd;
 
                     if (id == 59) // poison length
                     {
                         // set correct min/max poison damage
-                        ItemProperty newProp(qRound(props.value(id - 2).value * length / 256.0));
+                        ItemProperty *newProp = new ItemProperty(qRound(props.value(id - 2)->value * length / 256.0));
                         props.replace(id - 1, newProp);
-                        props.replace(id - 2, newProp);
+                        props.replace(id - 2, new ItemProperty(*newProp));
                     }
                 }
 
@@ -368,38 +367,40 @@ PropertiesMultiMap ItemParser::parseItemProperties(ReverseBitReader &bitReader, 
             }
 
             if (id == 83)
-                propToAdd.displayString = tr("+%1 to %2 Skill Levels", "+x to class skills").arg(propToAdd.value).arg(Enums::ClassName::classes().at(propToAdd.param));
+                propToAdd->displayString = tr("+%1 to %2 Skill Levels", "+x to class skills").arg(propToAdd->value).arg(Enums::ClassName::classes().at(propToAdd->param));
             else if (id == 97 || id == 107)
             {
-                const SkillInfo &skill = ItemDataBase::Skills()->at(propToAdd.param);
-                propToAdd.displayString = tr("+%1 to %2", "oskill").arg(propToAdd.value).arg(skill.name);
+                SkillInfo *skill = ItemDataBase::Skills()->at(propToAdd->param);
+                propToAdd->displayString = tr("+%1 to %2", "oskill").arg(propToAdd->value).arg(skill->name);
                 if (id == 107)
-                    propToAdd.displayString += " " + tr("(%1 Only)", "class-specific skill").arg(skill.classCode > -1 ? Enums::ClassName::classes().at(skill.classCode) : "TROLOLOL");
+                    propToAdd->displayString += " " + tr("(%1 Only)", "class-specific skill").arg(skill->classCode > -1 ? Enums::ClassName::classes().at(skill->classCode) : "TROLOLOL");
             }
             else if (id == 204)
             {
-                propToAdd.displayString = tr("Level %1 %2 (%3/%4 Charges)").arg(propToAdd.param & 63).arg(ItemDataBase::Skills()->operator[](propToAdd.param >> 6).name)
-                    .arg(propToAdd.value & 255).arg(propToAdd.value >> 8);
+                propToAdd->displayString = tr("Level %1 %2 (%3/%4 Charges)").arg(propToAdd->param &  63).arg(ItemDataBase::Skills()->value(propToAdd->param >> 6)->name)
+                                                                           .arg(propToAdd->value & 255).arg(propToAdd->value >> 8);
             }
-            else if (txtProperty.descPositive.startsWith('%')) // ctc
+            else if (txtProperty->descPositive.startsWith('%')) // ctc
             {
-                QString desc = txtProperty.descPositive;
+                QString desc = txtProperty->descPositive;
                 for (int i = 0, k = 1; k <= 3 && i < desc.length(); ++i)
                     if (desc.at(i) == '%' && desc.at(i + 1).isLetter())
                         desc[++i] = QString::number(k++).at(0);
-                propToAdd.displayString = desc.replace("%%", "%").arg(propToAdd.value).arg(propToAdd.param & 63).arg(ItemDataBase::Skills()->operator[](propToAdd.param >> 6).name);
+                propToAdd->displayString = desc.replace("%%", "%").arg(propToAdd->value).arg(propToAdd->param & 63).arg(ItemDataBase::Skills()->value(propToAdd->param >> 6)->name);
             }
             else if (ItemDataBase::MysticOrbs()->contains(id))
-                propToAdd.displayString = QString("%1 x '%2'").arg(propToAdd.value).arg(mysticOrbReadableProperty(ItemDataBase::Items()->operator[](ItemDataBase::MysticOrbs()->operator[](id).itemCode).spelldesc));
+                propToAdd->displayString = QString("%1 x '%2'").arg(propToAdd->value).arg(mysticOrbReadableProperty(ItemDataBase::Items()->value(ItemDataBase::MysticOrbs()->value(id)->itemCode)->spelldesc));
 
             props.insert(id, propToAdd);
         }
         catch (int exceptionCode)
         {
+            if (propToAdd)
+                delete propToAdd;
             qDebug("caught exception while parsing item properties: %d", exceptionCode);
             *status = ItemInfo::Corrupted;
             // Requirements txtProperty has the lowest descpriority, so it'll appear at the bottom
-            props.insert(Enums::ItemProperties::Requirements, ItemProperty(tr("Error parsing item properties (exception == %1), please report!").arg(exceptionCode)));
+            props.insert(Enums::ItemProperties::Requirements, new ItemProperty(tr("Error parsing item properties (exception == %1), please report!").arg(exceptionCode)));
             return props;
         }
     }
@@ -441,7 +442,7 @@ bool ItemParser::itemTypeInheritsFromTypes(const QByteArray &itemType, const QLi
 bool ItemParser::itemTypesInheritFromTypes(const QList<QByteArray> &itemTypes, const QList<QByteArray> &allowedItemTypes)
 {
     foreach (const QByteArray &itemType, itemTypes)
-        if (allowedItemTypes.contains(itemType) || itemTypesInheritFromTypes(ItemDataBase::ItemTypes()->operator[](itemType), allowedItemTypes))
+        if (allowedItemTypes.contains(itemType) || itemTypesInheritFromTypes(ItemDataBase::ItemTypes()->value(itemType), allowedItemTypes))
             return true;
     return false;
 }

@@ -60,15 +60,14 @@ QVariant ItemStorageTableModel::data(const QModelIndex &index, int role) const
         ItemInfo *item = itemAtIndex(index);
         if (item)
         {
-            const ItemBase &itemBase = ItemDataBase::Items()->operator[](item->itemType);
-            QString imageName = item->itemType == "jew" ? "invjw" : itemBase.imageName; // quick hack for jewel
+            QString imageName = item->itemType == "jew" ? "invjw" : ItemDataBase::Items()->value(item->itemType)->imageName; // quick hack for jewel
             bool isUniqueImage = false;
             if (item->quality == Enums::ItemQuality::Unique)
             {
-                const UniqueItemInfo &uniqueInfo = ItemDataBase::Uniques()->operator[](item->setOrUniqueId);
-                if (!uniqueInfo.imageName.isEmpty())
+                UniqueItemInfo *uniqueInfo = ItemDataBase::Uniques()->value(item->setOrUniqueId);
+                if (uniqueInfo && !uniqueInfo->imageName.isEmpty())
                 {
-                    imageName = uniqueInfo.imageName;
+                    imageName = uniqueInfo->imageName;
                     isUniqueImage = true;
                 }
             }

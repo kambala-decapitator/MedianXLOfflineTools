@@ -72,14 +72,14 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
             ++iter;
     }
 
-    const ItemBase &itemBase = ItemDataBase::Items()->operator[](item->itemType);
+    ItemBase *itemBase = ItemDataBase::Items()->value(item->itemType);
     ui.socketablesTextEdit->clear();
     if (!item->socketablesInfo.isEmpty())
     {
         QString html;
         foreach (ItemInfo *socketableItem, item->socketablesInfo)
         {
-            PropertiesMap props = ItemDataBase::isGenericSocketable(socketableItem) ? PropertiesDisplayManager::genericSocketableProperties(socketableItem, itemBase.socketableType) : socketableItem->props;
+            PropertiesMap props = ItemDataBase::isGenericSocketable(socketableItem) ? PropertiesDisplayManager::genericSocketableProperties(socketableItem, itemBase->socketableType) : socketableItem->props;
             PropertiesDisplayManager::addProperties(&allProps, props);
             html += ItemDataBase::completeItemName(socketableItem, true) + kHtmlLineBreak + propertiesToHtml(props) + htmlLine;
         }
@@ -88,25 +88,25 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
 
     // create full item description
     QString itemDescription = ItemDataBase::completeItemName(item, true) + kHtmlLineBreak + tr("Item Level: %1").arg(item->ilvl) + kHtmlLineBreak;
-    if (!itemBase.spelldesc.isEmpty())
-        itemDescription += htmlStringFromDiabloColorString(itemBase.spelldesc) + kHtmlLineBreak;
+    if (!itemBase->spelldesc.isEmpty())
+        itemDescription += htmlStringFromDiabloColorString(itemBase->spelldesc) + kHtmlLineBreak;
 
     QString runes;
     foreach (ItemInfo *socketable, item->socketablesInfo)
-        if (ItemDataBase::Items()->operator[](socketable->itemType).types.first() == "rune")
-            runes += ItemDataBase::Socketables()->operator[](socketable->itemType).letter;
+        if (ItemDataBase::Items()->value(socketable->itemType)->types.first() == "rune")
+            runes += ItemDataBase::Socketables()->value(socketable->itemType)->letter;
     if (!runes.isEmpty()) // gem-/jewelwords don't have any letters
         itemDescription += htmlStringFromDiabloColorString(QString("'%1'").arg(runes), ColorsManager::Gold) + kHtmlLineBreak;
 
     quint8 clvl = CharacterInfo::instance().basicInfo.level;
-    if (itemBase.genericType == Enums::ItemTypeGeneric::Armor)
+    ItemProperty *foo = new ItemProperty;
+    if (itemBase->genericType == Enums::ItemTypeGeneric::Armor)
     {
         int baseDef = item->defense, totalDef = baseDef;
-        ItemProperty foo;
-        int ed = allProps.value(Enums::ItemProperties::EnhancedDefence, foo).value + (allProps.value(Enums::ItemProperties::EnhancedDefenceBasedOnClvl, foo).value * clvl) / 32;
+        int ed = allProps.value(Enums::ItemProperties::EnhancedDefence, foo)->value + (allProps.value(Enums::ItemProperties::EnhancedDefenceBasedOnClvl, foo)->value * clvl) / 32;
         if (ed)
             totalDef = (totalDef * (100 + ed)) / 100;
-        totalDef += allProps.value(Enums::ItemProperties::Defence, foo).value + (allProps.value(Enums::ItemProperties::DefenceBasedOnClvl, foo).value * clvl) / 32;
+        totalDef += allProps.value(Enums::ItemProperties::Defence, foo)->value + (allProps.value(Enums::ItemProperties::DefenceBasedOnClvl, foo)->value * clvl) / 32;
         if (totalDef < 0)
             totalDef = 0;
 
@@ -117,10 +117,10 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
             itemDescription += defString.arg(baseDef);
         itemDescription += kHtmlLineBreak;
     }
-    if (itemBase.genericType != Enums::ItemTypeGeneric::Misc && item->maxDurability)
+    if (itemBase->genericType != Enums::ItemTypeGeneric::Misc && item->maxDurability)
     {
         itemDescription += tr("Durability") + ": ";
-        bool isIndestructible = allProps.value(Enums::ItemProperties::Indestructible).value == 1;
+        bool isIndestructible = allProps.value(Enums::ItemProperties::Indestructible, foo)->value == 1;
         if (isIndestructible)
             itemDescription += QString("%1 [").arg(QChar(0x221e)); // infinity
         itemDescription += tr("%1 of %2", "durability").arg(item->currentDurability).arg(item->maxDurability);
@@ -128,12 +128,12 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
             itemDescription += "]";
         itemDescription += kHtmlLineBreak;
     }
-    if (itemBase.isStackable)
+    if (itemBase->isStackable)
         itemDescription += tr("Quantity: %1").arg(item->quantity) + kHtmlLineBreak;
-    if (itemBase.classCode > -1)
+    if (itemBase->classCode > -1)
     {
-        QString text = tr("(%1 Only)", "class-specific item").arg(Enums::ClassName::classes().at(itemBase.classCode));
-        if (itemBase.classCode != CharacterInfo::instance().basicInfo.classCode)
+        QString text = tr("(%1 Only)", "class-specific item").arg(Enums::ClassName::classes().at(itemBase->classCode));
+        if (itemBase->classCode != CharacterInfo::instance().basicInfo.classCode)
             itemDescription += htmlStringFromDiabloColorString(text, ColorsManager::Red);
         else
             itemDescription += text;
@@ -147,32 +147,33 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
         rlvl = 100;
         break;
     case Enums::ItemQuality::Unique:
-        rlvl = ItemDataBase::Uniques()->contains(item->setOrUniqueId) ? ItemDataBase::Uniques()->operator[](item->setOrUniqueId).rlvl : ItemDataBase::Items()->operator[](item->itemType).rlvl;
+        rlvl = ItemDataBase::Uniques()->contains(item->setOrUniqueId) ? ItemDataBase::Uniques()->value(item->setOrUniqueId)->rlvl : ItemDataBase::Items()->value(item->itemType)->rlvl;
         break;
 //  case Enums::ItemQuality::Rare: case Enums::ItemQuality::Crafted: case Enums::ItemQuality::Magic:
         // TODO: [0.4+] add support for affix rlvl
 //      break;
     default:
-        rlvl = itemBase.rlvl;
+        rlvl = itemBase->rlvl;
         break;
     }
     int maxSocketableRlvl = 0;
     foreach (ItemInfo *socketableItem, item->socketablesInfo)
     {
-        int socketableRlvl = ItemDataBase::Items()->operator[](socketableItem->itemType).rlvl;
+        int socketableRlvl = ItemDataBase::Items()->value(socketableItem->itemType)->rlvl;
         if (maxSocketableRlvl < socketableRlvl)
             maxSocketableRlvl = socketableRlvl;
     }
-    int actualRlvl = qMax(rlvl, maxSocketableRlvl) + (allProps.contains(Enums::ItemProperties::RequiredLevel) ? allProps[Enums::ItemProperties::RequiredLevel].value : 0);
+    int actualRlvl = qMax(rlvl, maxSocketableRlvl) + allProps.value(Enums::ItemProperties::RequiredLevel, foo)->value;
+    delete foo;
     if (actualRlvl)
-        itemDescription += htmlStringFromDiabloColorString(tr("Required Level: %1").arg(/*actualRlvl > 555 ? 555 : */actualRlvl), clvl < actualRlvl ? ColorsManager::Red : ColorsManager::White) + kHtmlLineBreak;
+        itemDescription += htmlStringFromDiabloColorString(tr("Required Level: %1").arg(actualRlvl), clvl < actualRlvl ? ColorsManager::Red : ColorsManager::White) + kHtmlLineBreak;
 
     // add '+50% damage to undead' if item type matches
     bool shouldAddDamageToUndeadInTheBottom = false;
-    if (ItemParser::itemTypesInheritFromTypes(itemBase.types, PropertiesDisplayManager::kDamageToUndeadTypes))
+    if (ItemParser::itemTypesInheritFromTypes(itemBase->types, PropertiesDisplayManager::kDamageToUndeadTypes))
     {
         if (allProps.contains(Enums::ItemProperties::DamageToUndead))
-            allProps[Enums::ItemProperties::DamageToUndead].value += 50;
+            allProps[Enums::ItemProperties::DamageToUndead]->value += 50;
         else
             shouldAddDamageToUndeadInTheBottom = true;
     }
@@ -208,7 +209,7 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
     // show existing set items from current set
     if (item->quality == Enums::ItemQuality::Set)
     {
-        const QString &setName = ItemDataBase::Sets()->operator[](item->setOrUniqueId).setName;
+        QString setName = ItemDataBase::Sets()->value(item->setOrUniqueId)->setName;
         itemDescription += kHtmlLineBreak + htmlStringFromDiabloColorString(setName, ColorsManager::Gold);
 
         foreach (const QString &setItemName, ItemDataBase::completeSetForName(setName))
@@ -216,7 +217,7 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
             bool found = false;
             foreach (ItemInfo *anItem, CharacterInfo::instance().items.character)
             {
-                if (anItem->quality == Enums::ItemQuality::Set && ItemDataBase::Sets()->operator[](anItem->setOrUniqueId).itemName == setItemName)
+                if (anItem->quality == Enums::ItemQuality::Set && ItemDataBase::Sets()->value(anItem->setOrUniqueId)->itemName == setItemName)
                 {
                     found = true;
                     break;
@@ -269,7 +270,7 @@ void PropertiesViewerWidget::removeMysticOrb()
     int moCode = action->property("moCode").toInt();
     PropertiesMultiMap *props = &(isItemMo ? _item->props : _item->rwProps);
 
-    int moNumber = props->value(moCode).value; // must be queried before calling removeMysticOrbData()
+    int moNumber = props->value(moCode)->value; // must be queried before calling removeMysticOrbData()
     removeMysticOrbData(moCode, props);
     decreaseRequiredLevel(moNumber, props);
     byteAlignBits();
@@ -281,7 +282,7 @@ void PropertiesViewerWidget::removeMysticOrbsFromProperties(const QSet<int> &mys
     int moNumber = 0;
     foreach (int moCode, mysticOrbs)
     {
-        moNumber += props->value(moCode).value;
+        moNumber += props->value(moCode)->value;
         removeMysticOrbData(moCode, props);
     }
     decreaseRequiredLevel(moNumber, props);
@@ -289,13 +290,13 @@ void PropertiesViewerWidget::removeMysticOrbsFromProperties(const QSet<int> &mys
 
 void PropertiesViewerWidget::removeMysticOrbData(int moCode, PropertiesMultiMap *props)
 {
-    modifyMysticOrbProperty(ItemDataBase::MysticOrbs()->operator[](moCode).statId, totalMysticOrbValue(moCode, props), props);
+    modifyMysticOrbProperty(ItemDataBase::MysticOrbs()->value(moCode)->statId, totalMysticOrbValue(moCode, props), props);
 
     // remove MO data
-    const ItemPropertyTxt &propertyTxt = ItemDataBase::Properties()->operator[](moCode);
+    ItemPropertyTxt *propertyTxt = ItemDataBase::Properties()->value(moCode);
     int valueIndex = indexOfPropertyValue(moCode, props);
     if (valueIndex > -1)
-        _item->bitString.remove(valueIndex, propertyTxt.bits + propertyTxt.saveParamBits + Enums::CharacterStats::StatCodeLength);
+        _item->bitString.remove(valueIndex, propertyTxt->bits + propertyTxt->saveParamBits + Enums::CharacterStats::StatCodeLength);
 
     props->remove(moCode);
 }
@@ -303,21 +304,21 @@ void PropertiesViewerWidget::removeMysticOrbData(int moCode, PropertiesMultiMap 
 int PropertiesViewerWidget::indexOfPropertyValue(int id, PropertiesMultiMap *props)
 {
     bool isMaxEnhDamageProp = id == Enums::ItemProperties::EnhancedDamage;
-    const ItemPropertyTxt &property = ItemDataBase::Properties()->operator[](id);
-    qulonglong value = props->value(id).value + property.add;
+    ItemPropertyTxt *property = ItemDataBase::Properties()->value(id);
+    qulonglong value = props->value(id)->value + property->add;
     if (isMaxEnhDamageProp)
     {
         qulonglong oldValue = value;
-        value <<= property.bits;
+        value <<= property->bits;
         value += oldValue;
     }
 
-    int idIndex = -1, valueIndex = -1, bits = property.bits * (1 + isMaxEnhDamageProp);
+    int idIndex = -1, valueIndex = -1, bits = property->bits * (1 + isMaxEnhDamageProp);
     do
     {
         if ((idIndex = _item->bitString.indexOf(binaryStringFromNumber(id, false, Enums::CharacterStats::StatCodeLength), idIndex + 1)) == -1)
             return -1;
-        valueIndex = idIndex - property.saveParamBits - bits;
+        valueIndex = idIndex - property->saveParamBits - bits;
     } while (_item->bitString.mid(valueIndex, bits).toULongLong(0, 2) != value);
     return valueIndex;
 }
@@ -333,25 +334,25 @@ void PropertiesViewerWidget::modifyMysticOrbProperty(int id, int decrement, Prop
 
     // ED value is stored as a sequence of 2 equal values
     bool isEnhancedDamageProp = id == Enums::ItemProperties::EnhancedDamage;
-    const ItemPropertyTxt &propertyTxt = ItemDataBase::Properties()->operator[](id);
-    int bitsLength = (1 + isEnhancedDamageProp) * propertyTxt.bits;
+    ItemPropertyTxt *propertyTxt = ItemDataBase::Properties()->value(id);
+    int bitsLength = (1 + isEnhancedDamageProp) * propertyTxt->bits;
 
-    ItemProperty prop = props->value(id);
-    prop.value -= decrement;
-    if (prop.value)
+    ItemProperty *prop = props->value(id);
+    prop->value -= decrement;
+    if (prop->value)
     {
-        QString newBits = binaryStringFromNumber(prop.value + propertyTxt.add, false, propertyTxt.bits); // it's not a mistake that I'm not using bitsLength here
+        QString newBits = binaryStringFromNumber(prop->value + propertyTxt->add, false, propertyTxt->bits); // it's not a mistake that I'm not using bitsLength here
         if (isEnhancedDamageProp)
         {
             newBits += newBits;
-            prop.displayString = ItemParser::enhancedDamageFormat().arg(prop.value);
+            prop->displayString = ItemParser::enhancedDamageFormat().arg(prop->value);
         }
         _item->bitString.replace(valueIndex, bitsLength, newBits); // place modified value
         props->replace(id, prop);
     }
     else
     {
-        _item->bitString.remove(valueIndex, bitsLength + propertyTxt.saveParamBits + Enums::CharacterStats::StatCodeLength);
+        _item->bitString.remove(valueIndex, bitsLength + propertyTxt->saveParamBits + Enums::CharacterStats::StatCodeLength);
         props->remove(id);
     }
 }
@@ -359,7 +360,7 @@ void PropertiesViewerWidget::modifyMysticOrbProperty(int id, int decrement, Prop
 int PropertiesViewerWidget::totalMysticOrbValue(int moCode, PropertiesMap *props)
 {
     quint8 multiplier = 1 + isMysticOrbEffectDoubled();
-    return props->value(moCode).value * ItemDataBase::MysticOrbs()->operator[](moCode).value * multiplier;
+    return props->value(moCode)->value * ItemDataBase::MysticOrbs()->value(moCode)->value * multiplier;
 }
 
 void PropertiesViewerWidget::byteAlignBits()
@@ -398,9 +399,9 @@ QString PropertiesViewerWidget::collectMysticOrbsDataFromProps(QSet<int> *moSet,
         foreach (int moCode, *moSet)
         {
             if (isMysticOrbEffectDoubled())
-                props[moCode].displayString += " x 2";
+                props[moCode]->displayString += " x 2";
             // quick & dirty hack with const_cast
-            html += QString("%1 = %2").arg(props[moCode].displayString).arg(totalMysticOrbValue(moCode, const_cast<PropertiesMap *>(&props))) + kHtmlLineBreak;
+            html += QString("%1 = %2").arg(props.value(moCode)->displayString).arg(totalMysticOrbValue(moCode, const_cast<PropertiesMap *>(&props))) + kHtmlLineBreak;
         }
     }
     return html;

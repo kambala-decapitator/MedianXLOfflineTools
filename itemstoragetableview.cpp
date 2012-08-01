@@ -48,9 +48,9 @@ ItemStorageTableModel *ItemStorageTableView::model() const
 
 void ItemStorageTableView::setCellSpanForItem(ItemInfo *item)
 {
-    const ItemBase &itemBase = ItemDataBase::Items()->operator[](item->itemType);
-    if (!(rowSpan(item->row, item->column) == 1 && itemBase.height == 1 && columnSpan(item->row, item->column) == 1 && itemBase.width == 1))
-        setSpan(item->row, item->column, itemBase.height, itemBase.width);
+    ItemBase *itemBase = ItemDataBase::Items()->value(item->itemType);
+    if (!(rowSpan(item->row, item->column) == 1 && itemBase->height == 1 && columnSpan(item->row, item->column) == 1 && itemBase->width == 1))
+        setSpan(item->row, item->column, itemBase->height, itemBase->width);
 }
 
 void ItemStorageTableView::keyPressEvent(QKeyEvent *event)
@@ -150,11 +150,11 @@ QModelIndex ItemStorageTableView::indexForDragDropEvent(QDropEvent *event) const
 void ItemStorageTableView::updateHighlightIndexesForOriginIndex(const QModelIndex &originIndex) const
 {
     ItemStorageTableModel *model_ = model();
-    const ItemBase &dragItemBase = ItemDataBase::Items()->operator[](_draggedItem->itemType);
+    ItemBase *dragitemBase = ItemDataBase::Items()->value(_draggedItem->itemType);
     QModelIndexList highlightIndexes;
     highlightIndexes += originIndex;
-    for (int i = 0; i < dragItemBase.width; ++i)
-        for (int j = 0; j < dragItemBase.height; ++j)
+    for (int i = 0; i < dragitemBase->width; ++i)
+        for (int j = 0; j < dragitemBase->height; ++j)
             if (i || j) // first index is already in the list
             {
                 QModelIndex anIndex = model_->index(originIndex.row() + j, originIndex.column() + i);

@@ -6,7 +6,7 @@
 #include "structs.h"
 
 
-struct ItemInfo;
+class ItemInfo;
 
 class PropertiesViewerWidget : public QWidget
 {
