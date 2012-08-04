@@ -34,6 +34,8 @@ public:
     virtual QPair<bool, bool> updateDisenchantButtonsState(bool includeUniques, bool includeSets, bool toCrystals, ItemsList *items = 0);
     virtual QPair<bool, bool> updateUpgradeButtonsState(ItemsList *items = 0);
 
+    virtual void upgradeGems();
+    virtual void upgradeRunes();
     virtual void disenchantAllItems(bool toShards, bool upgradeToCrystals, bool eatSignets, bool includeUniques, bool includeSets, ItemsList *items = 0);
 
 signals:

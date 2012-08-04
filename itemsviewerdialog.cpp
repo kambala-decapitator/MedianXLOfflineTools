@@ -89,17 +89,13 @@ ItemsViewerDialog::ItemsViewerDialog(const QHash<int, bool> &plugyStashesExisten
 
     _disenchantToShardsButton = new QPushButton(tr("Arcane Shards"), _disenchantBox);
     _upgradeToCrystalsCheckbox = new QCheckBox(tr("Upgrade to Crystals"), _disenchantBox);
-//    _uniquesCheckbox = new QCheckBox(tr("Uniques"), _disenchantBox);
     _uniquesRadioButton = new QRadioButton(tr("Uniques"), _disenchantBox);
     _upgradeToCrystalsCheckbox->setChecked(true);
-//    _uniquesCheckbox->setChecked(true);
 
     _disenchantToSignetButton = new QPushButton(tr("Signets of Learning"), _disenchantBox);
     _eatSignetsCheckbox = new QCheckBox(tr("Eat Signets"), _disenchantBox);
-//    _setsCheckbox = new QCheckBox(tr("Sets"), _disenchantBox);
     _setsRadioButton = new QRadioButton(tr("Sets"), _disenchantBox);
     _eatSignetsCheckbox->setChecked(true);
-//    _setsCheckbox->setChecked(true);
 
     _bothQualitiesRadioButton = new QRadioButton(tr("Both"), _disenchantBox);
     _bothQualitiesRadioButton->setChecked(true);
@@ -128,10 +124,8 @@ ItemsViewerDialog::ItemsViewerDialog(const QHash<int, bool> &plugyStashesExisten
     QGridLayout *disenchantGridLayout = new QGridLayout(box);
     disenchantGridLayout->addWidget(_disenchantToShardsButton, 0, 0);
     disenchantGridLayout->addWidget(_upgradeToCrystalsCheckbox, 1, 0, Qt::AlignCenter);
-//    disenchantGridLayout->addWidget(_uniquesCheckbox, 2, 0, Qt::AlignCenter);
     disenchantGridLayout->addWidget(_disenchantToSignetButton, 0, 1);
     disenchantGridLayout->addWidget(_eatSignetsCheckbox, 1, 1, Qt::AlignCenter);
-//    disenchantGridLayout->addWidget(_setsCheckbox, 2, 1, Qt::AlignCenter);
 
     vboxLayout->addWidget(box);
 
@@ -140,6 +134,9 @@ ItemsViewerDialog::ItemsViewerDialog(const QHash<int, bool> &plugyStashesExisten
     _upgradeGemsButton = new QPushButton(tr("Gems"), _upgradeBox);
     _upgradeRunesButton = new QPushButton(tr("Runes"), _upgradeBox);
     _upgradeBothButton = new QPushButton(tr("Both"), _upgradeBox);
+
+    connect(_upgradeGemsButton, SIGNAL(clicked()), SLOT(upgradeGems()));
+    connect(_upgradeRunesButton, SIGNAL(clicked()), SLOT(upgradeRunes()));
 
     QVBoxLayout *upgradeBoxLayout = new QVBoxLayout(_upgradeBox);
     upgradeBoxLayout->addWidget(_upgradeGemsButton);
@@ -178,6 +175,11 @@ void ItemsViewerDialog::loadSettings()
 ItemsPropertiesSplitter *ItemsViewerDialog::splitterAtIndex(int tabIndex)
 {
     return static_cast<ItemsPropertiesSplitter *>(_tabWidget->widget(tabIndex));
+}
+
+ItemsPropertiesSplitter *ItemsViewerDialog::currentSplitter()
+{
+    return splitterAtIndex(_tabWidget->currentIndex());
 }
 
 void ItemsViewerDialog::saveSettings()
@@ -330,7 +332,7 @@ const QString &ItemsViewerDialog::tabNameAtIndex(int i)
 void ItemsViewerDialog::showItem(ItemInfo *item)
 {
     _tabWidget->setCurrentIndex(tabIndexFromItemStorage(item->storage));
-    splitterAtIndex(_tabWidget->currentIndex())->showItem(item);
+    currentSplitter()->showItem(item);
 }
 
 void ItemsViewerDialog::setCubeTabDisabled(bool disabled)
@@ -366,14 +368,14 @@ void ItemsViewerDialog::updateDisenchantButtonsState()
     bool areUniquesSelected = _uniquesRadioButton->isChecked(), areSetsSelected = _setsRadioButton->isChecked();
     if (_bothQualitiesRadioButton->isChecked())
         areUniquesSelected = areSetsSelected = true;
-    QPair<bool, bool> allowDisenchantButtons = splitterAtIndex(_tabWidget->currentIndex())->updateDisenchantButtonsState(areUniquesSelected, areSetsSelected, _upgradeToCrystalsCheckbox->isChecked());
+    QPair<bool, bool> allowDisenchantButtons = currentSplitter()->updateDisenchantButtonsState(areUniquesSelected, areSetsSelected, _upgradeToCrystalsCheckbox->isChecked());
     _disenchantToShardsButton->setEnabled(allowDisenchantButtons.first);
     _disenchantToSignetButton->setEnabled(allowDisenchantButtons.second);
 }
 
 void ItemsViewerDialog::updateUpgradeButtonsState()
 {
-    QPair<bool, bool> allowUpgradeButtons = splitterAtIndex(_tabWidget->currentIndex())->updateUpgradeButtonsState();
+    QPair<bool, bool> allowUpgradeButtons = currentSplitter()->updateUpgradeButtonsState();
     _upgradeGemsButton->setEnabled(allowUpgradeButtons.first);
     _upgradeRunesButton->setEnabled(allowUpgradeButtons.second);
     _upgradeBothButton->setEnabled(allowUpgradeButtons.first && allowUpgradeButtons.second);
@@ -384,7 +386,7 @@ void ItemsViewerDialog::disenchantAllItems()
     bool toShards = sender() == _disenchantToShardsButton, areUniquesSelected = _uniquesRadioButton->isChecked(), areSetsSelected = _setsRadioButton->isChecked();
     if (_bothQualitiesRadioButton->isChecked())
         areUniquesSelected = areSetsSelected = true;
-    splitterAtIndex(_tabWidget->currentIndex())->disenchantAllItems(toShards, _upgradeToCrystalsCheckbox->isChecked(), _eatSignetsCheckbox->isChecked(), areUniquesSelected, areSetsSelected);
+    currentSplitter()->disenchantAllItems(toShards, _upgradeToCrystalsCheckbox->isChecked(), _eatSignetsCheckbox->isChecked(), areUniquesSelected, areSetsSelected);
     if (toShards || !isUltimative())
     {
         _disenchantToShardsButton->setDisabled(true);
@@ -392,6 +394,16 @@ void ItemsViewerDialog::disenchantAllItems()
     }
     else // TUs may leave after disenchanting to signets in Ultimative
         updateDisenchantButtonsState();
+}
+
+void ItemsViewerDialog::upgradeGems()
+{
+    currentSplitter()->upgradeGems();
+}
+
+void ItemsViewerDialog::upgradeRunes()
+{
+    currentSplitter()->upgradeRunes();
 }
 
 void ItemsViewerDialog::updateBeltItemsCoordinates(bool restore, ItemsList *pBeltItems)

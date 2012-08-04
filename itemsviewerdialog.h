@@ -52,6 +52,7 @@ public:
 
     QTabWidget *tabWidget() { return _tabWidget; }
     ItemsPropertiesSplitter *splitterAtIndex(int tabIndex);
+    ItemsPropertiesSplitter *currentSplitter();
 
 public slots:
     void setCubeTabDisabled(bool disabled);
@@ -74,6 +75,8 @@ private slots:
     void updateUpgradeButtonsState();
 
     void disenchantAllItems();
+    void upgradeGems();
+    void upgradeRunes();
 
 private:
     QTabWidget *_tabWidget;

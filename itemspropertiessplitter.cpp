@@ -46,6 +46,8 @@ void ItemsPropertiesSplitter::itemSelected(const QModelIndex &index)
 {
     ItemInfo *item = _itemsModel->itemAtIndex(index);
     _propertiesWidget->showItem(item);
+//    if (item)
+//        qDebug() << item->itemType << ItemDataBase::Items()->value(item->itemType)->types;
 
     // correctly disable hotkeys
     _itemActions[DisenchantShards]->setEnabled(ItemDataBase::canDisenchantIntoArcaneShards(item));
@@ -124,7 +126,7 @@ QPair<bool, bool> ItemsPropertiesSplitter::updateDisenchantButtonsState(bool inc
 
 QPair<bool, bool> ItemsPropertiesSplitter::updateUpgradeButtonsState(ItemsList *items /*= 0*/)
 {
-    return qMakePair(false, false);
+    return qMakePair(true, true);
 }
 
 void ItemsPropertiesSplitter::updateItems(const ItemsList &newItems)
@@ -289,7 +291,6 @@ void ItemsPropertiesSplitter::performDeleteItem(ItemInfo *item, bool emitSignal 
 {
     // TODO: [0.4] add option to unsocket at first
     removeItemFromList(item, emitSignal);
-    qDeleteAll(item->socketablesInfo);
     delete item;
 }
 
@@ -327,6 +328,70 @@ void ItemsPropertiesSplitter::removeItemFromList(ItemInfo *item, bool emitSignal
 
     if (emitSignal)
         emit itemsChanged();
+}
+
+void ItemsPropertiesSplitter::upgradeGems()
+{
+    // ItemDataBase::Items()->value(item->itemType)->types - first value is gem type, second value is gem grade
+}
+
+void ItemsPropertiesSplitter::upgradeRunes()
+{
+    const quint8 kOnRuneKey = 50;
+    QMultiMap<quint8, ItemInfo *> runesMap;
+    QRegExp runeRE("r(\\d\\d)");
+    foreach (ItemInfo *item, _allItems)
+    {
+        if (runeRE.exactMatch(item->itemType))
+        {
+            quint8 runeKey = runeRE.cap(1).toUShort();
+            if (runeKey < kOnRuneKey) // don't include 'On' rune, Great runes and Ultimative runes
+                runesMap.insertMulti(runeKey, item);
+        }
+    }
+
+    QList<quint8> keys = runesMap.uniqueKeys();
+    for (int i = 0, n = keys.size(); i < n; ++i)
+    {
+        quint8 key = keys.at(i);
+        int sameRunesSize = runesMap.values(key).size(), upgradedRunesSize = sameRunesSize / 2, leftRunesSize = sameRunesSize - upgradedRunesSize * 2;
+        if (upgradedRunesSize)
+        {
+            for (QMultiMap<quint8, ItemInfo *>::iterator iter = runesMap.begin(); sameRunesSize > leftRunesSize && iter != runesMap.end(); ++iter)
+            {
+                if (iter.key() == key)
+                {
+                    ItemInfo *item = iter.value();
+                    removeItemFromList(item, false);
+                    runesMap.remove(key, item);
+                    --sameRunesSize;
+                }
+            }
+
+            quint8 newKey = key + 1;
+            ItemsList newRunes = runesMap.values(newKey);
+            if (!newRunes.isEmpty())
+            {
+                for (int j = 0; j < upgradedRunesSize; ++j)
+                {
+                    ItemInfo *runeCopy = new ItemInfo(*newRunes.first());
+                    storeItemInStorage(runeCopy, runeCopy->storage);
+                    runesMap.insertMulti(newKey, runeCopy);
+                }
+            }
+            else
+            {
+                // TODO: load rune from file
+
+                if (newKey == kOnRuneKey)
+                    break;
+                keys << newKey;
+            }
+        }
+    }
+
+//    emit itemsChanged();
+//    emit itemCountChanged(_allItems.size());
 }
 
 void ItemsPropertiesSplitter::disenchantAllItems(bool toShards, bool upgradeToCrystals, bool eatSignets, bool includeUniques, bool includeSets, ItemsList *items /*= 0*/)
