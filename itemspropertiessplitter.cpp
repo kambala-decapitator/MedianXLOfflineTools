@@ -337,7 +337,7 @@ void ItemsPropertiesSplitter::upgradeGems()
 
 void ItemsPropertiesSplitter::upgradeRunes()
 {
-    const quint8 kOnRuneKey = 50;
+    static const quint8 kOnRuneKey = 50;
     QMultiMap<quint8, ItemInfo *> runesMap;
     QRegExp runeRE("r(\\d\\d)");
     foreach (ItemInfo *item, _allItems)
@@ -351,7 +351,12 @@ void ItemsPropertiesSplitter::upgradeRunes()
     }
 
     QList<quint8> keys = runesMap.uniqueKeys();
-    for (int i = 0, n = keys.size(); i < n; ++i)
+    int n = keys.size();
+    if (!n)
+        return;
+
+    int currentStorage = runesMap.value(keys.at(0))->storage;
+    for (int i = 0; i < n; ++i)
     {
         quint8 key = keys.at(i);
         int sameRunesSize = runesMap.values(key).size(), upgradedRunesSize = sameRunesSize / 2, leftRunesSize = sameRunesSize - upgradedRunesSize * 2;
@@ -370,28 +375,28 @@ void ItemsPropertiesSplitter::upgradeRunes()
 
             quint8 newKey = key + 1;
             ItemsList newRunes = runesMap.values(newKey);
-            if (!newRunes.isEmpty())
+            ItemInfo *rune = newRunes.isEmpty() ? ItemDataBase::loadItemFromFile(QString("runes/r%1").arg(newKey, 2, 10, kZeroChar)) : newRunes.first();
+            for (int j = 0; j < upgradedRunesSize; ++j)
             {
-                for (int j = 0; j < upgradedRunesSize; ++j)
-                {
-                    ItemInfo *runeCopy = new ItemInfo(*newRunes.first());
-                    storeItemInStorage(runeCopy, runeCopy->storage);
-                    runesMap.insertMulti(newKey, runeCopy);
-                }
+                ItemInfo *runeCopy = new ItemInfo(*rune);
+                storeItemInStorage(runeCopy, currentStorage);
+                runesMap.insertMulti(newKey, runeCopy);
             }
-            else
+
+            if (newRunes.isEmpty())
             {
-                // TODO: load rune from file
+                delete rune;
 
                 if (newKey == kOnRuneKey)
                     break;
                 keys << newKey;
+                ++n;
             }
         }
     }
 
-//    emit itemsChanged();
-//    emit itemCountChanged(_allItems.size());
+    emit itemsChanged();
+    emit itemCountChanged(_allItems.size());
 }
 
 void ItemsPropertiesSplitter::disenchantAllItems(bool toShards, bool upgradeToCrystals, bool eatSignets, bool includeUniques, bool includeSets, ItemsList *items /*= 0*/)

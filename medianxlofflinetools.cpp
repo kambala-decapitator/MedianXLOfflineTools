@@ -132,6 +132,7 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *pare
     ui.menuExport->removeAction(ui.actionExportCharacterInfo);
     ui.mainToolBar->removeAction(ui.actionExportCharacterInfo);
 
+//    ui.actionLoadLastUsedCharacter->setChecked(false);
     if (!cmdPath.isEmpty())
         loadFile(cmdPath);
     else if (ui.actionLoadLastUsedCharacter->isChecked() && !_recentFilesList.isEmpty())
