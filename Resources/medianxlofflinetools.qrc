@@ -24,5 +24,54 @@
         <file>data/items/arcane_shard.d2i</file>
         <file>data/items/cube.d2i</file>
         <file>data/items/signet_of_learning.d2i</file>
+        <file>data/items/runes/r02.d2i</file>
+        <file>data/items/runes/r03.d2i</file>
+        <file>data/items/runes/r04.d2i</file>
+        <file>data/items/runes/r05.d2i</file>
+        <file>data/items/runes/r06.d2i</file>
+        <file>data/items/runes/r07.d2i</file>
+        <file>data/items/runes/r08.d2i</file>
+        <file>data/items/runes/r09.d2i</file>
+        <file>data/items/runes/r10.d2i</file>
+        <file>data/items/runes/r11.d2i</file>
+        <file>data/items/runes/r12.d2i</file>
+        <file>data/items/runes/r13.d2i</file>
+        <file>data/items/runes/r14.d2i</file>
+        <file>data/items/runes/r15.d2i</file>
+        <file>data/items/runes/r16.d2i</file>
+        <file>data/items/runes/r17.d2i</file>
+        <file>data/items/runes/r18.d2i</file>
+        <file>data/items/runes/r19.d2i</file>
+        <file>data/items/runes/r20.d2i</file>
+        <file>data/items/runes/r21.d2i</file>
+        <file>data/items/runes/r22.d2i</file>
+        <file>data/items/runes/r23.d2i</file>
+        <file>data/items/runes/r24.d2i</file>
+        <file>data/items/runes/r25.d2i</file>
+        <file>data/items/runes/r26.d2i</file>
+        <file>data/items/runes/r27.d2i</file>
+        <file>data/items/runes/r28.d2i</file>
+        <file>data/items/runes/r29.d2i</file>
+        <file>data/items/runes/r30.d2i</file>
+        <file>data/items/runes/r31.d2i</file>
+        <file>data/items/runes/r32.d2i</file>
+        <file>data/items/runes/r33.d2i</file>
+        <file>data/items/runes/r34.d2i</file>
+        <file>data/items/runes/r35.d2i</file>
+        <file>data/items/runes/r36.d2i</file>
+        <file>data/items/runes/r37.d2i</file>
+        <file>data/items/runes/r38.d2i</file>
+        <file>data/items/runes/r39.d2i</file>
+        <file>data/items/runes/r40.d2i</file>
+        <file>data/items/runes/r41.d2i</file>
+        <file>data/items/runes/r42.d2i</file>
+        <file>data/items/runes/r43.d2i</file>
+        <file>data/items/runes/r44.d2i</file>
+        <file>data/items/runes/r45.d2i</file>
+        <file>data/items/runes/r46.d2i</file>
+        <file>data/items/runes/r47.d2i</file>
+        <file>data/items/runes/r48.d2i</file>
+        <file>data/items/runes/r49.d2i</file>
+        <file>data/items/runes/r50.d2i</file>
     </qresource>
 </RCC>
