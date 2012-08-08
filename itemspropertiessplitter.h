@@ -13,6 +13,8 @@ class PropertiesViewerWidget;
 class QModelIndex;
 class QMenu;
 
+typedef QMultiMap<quint8, ItemInfo *> UpgradableItemsMultiMap;
+
 class ItemsPropertiesSplitter : public QSplitter
 {
     Q_OBJECT
@@ -84,6 +86,7 @@ protected:
     ItemInfo *disenchantItemIntoItem(ItemInfo *oldItem, ItemInfo *newItem, bool emitSignal = true);
     virtual bool isItemInCurrentStorage(ItemInfo *item) const { Q_UNUSED(item); return true; }
     virtual bool storeItemInStorage(ItemInfo *item, int storage);
+    bool upgradeItemsInMap(UpgradableItemsMultiMap &itemsMap, quint8 maxKey, const QString &itemNameFormat);
 
     void createItemActions();
     QAction *separator();

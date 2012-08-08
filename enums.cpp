@@ -109,9 +109,9 @@ namespace Enums
     }
 
 
-    int ItemOffsets::offsetLength(ItemOffsetsEnum offset)
+    int ItemOffsets::offsetLength(int offset)
     {
-        static QHash<ItemOffsetsEnum, int> hash;
+        static QHash<int, int> hash;
         if (hash.isEmpty())
         {
             hash[Ethereal] = 1;
@@ -120,6 +120,7 @@ namespace Enums
             hash[Column] = 4;
             hash[Row] = 4;
             hash[Storage] = 3;
+            hash[Type] = hash[Type + 8] = hash[Type + 16] = 8; // type consists of 3 chars (excluding space)
         }
         return hash.value(offset);
     }

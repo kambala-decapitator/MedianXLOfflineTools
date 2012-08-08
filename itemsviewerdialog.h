@@ -77,6 +77,7 @@ private slots:
     void disenchantAllItems();
     void upgradeGems();
     void upgradeRunes();
+    void upgradeGemsAndRunes() { upgradeGems(); upgradeRunes(); }
 
 private:
     QTabWidget *_tabWidget;

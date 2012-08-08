@@ -205,14 +205,6 @@ void PlugyItemsSplitter::disenchantAllItems(bool toShards, bool upgradeToCrystal
         if ((toShards && !upgradeToCrystals) || !toShards)
         {
             ProgressBarModal progressBar;
-            //progressBar.setRange(0, 0);
-            //progressBar.setTextVisible(false);
-            //progressBar.setWindowTitle(tr("Please wait..."));
-            //progressBar.setWindowFlags(Qt::CustomizeWindowHint | Qt::WindowTitleHint);
-            //progressBar.setWindowModality(Qt::ApplicationModal);
-            //progressBar.adjustSize();
-            //progressBar.setFixedSize(progressBar.size());
-            //progressBar.move(mapToGlobal(QPoint((size().width() - progressBar.size().width()) / 2, (size().height() - progressBar.size().height()) / 2)));
             progressBar.centerInWidget(this);
             progressBar.show();
 
@@ -229,8 +221,8 @@ void PlugyItemsSplitter::disenchantAllItems(bool toShards, bool upgradeToCrystal
 //            A *a = new A;
 //            connect(watcher, SIGNAL(started()), a, SLOT(started()));
 //            connect(watcher, SIGNAL(progressRangeChanged(int, int)), a, SLOT(progressRangeChanged(int, int)));
-//            connect(watcher, SIGNAL(progressTextChanged ( const QString &)), a, SLOT(progressTextChanged ( const QString &)));
-//            connect(watcher, SIGNAL(progressValueChanged ( int)), a, SLOT(progressValueChanged ( int)));
+//            connect(watcher, SIGNAL(progressTextChanged(const QString &)), a, SLOT(progressTextChanged(const QString &)));
+//            connect(watcher, SIGNAL(progressValueChanged(int)), a, SLOT(progressValueChanged(int)));
 //            connect(watcher, SIGNAL(finished()), a, SLOT(finished()));
 //            QFuture<void> f = QtConcurrent::run(this, &PlugyItemsSplitter::moveItemsToFirstPages, items, toShards);
 ////            QFuture<void> f = QtConcurrent::map(*items, &PlugyItemsSplitter::moveItemsToFirstPages);

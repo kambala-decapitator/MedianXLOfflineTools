@@ -320,10 +320,11 @@ public:
         EquipIndex = 0x3D,
         Column = 0x41,
         Row = 0x45,
-        Storage = 0x49
+        Storage = 0x49,
+        Type = 0x4C
     };
 
-    static int offsetLength(ItemOffsetsEnum offset); // modify whenever enum is modified
+    static int offsetLength(int offset); // modify whenever enum is modified
 };
 
 } // namespace Enums

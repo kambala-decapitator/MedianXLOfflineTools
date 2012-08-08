@@ -73,5 +73,53 @@
         <file>data/items/runes/r48.d2i</file>
         <file>data/items/runes/r49.d2i</file>
         <file>data/items/runes/r50.d2i</file>
+        <file>data/items/gems/gema1.d2i</file>
+        <file>data/items/gems/gema2.d2i</file>
+        <file>data/items/gems/gema3.d2i</file>
+        <file>data/items/gems/gema4.d2i</file>
+        <file>data/items/gems/gemd1.d2i</file>
+        <file>data/items/gems/gemd2.d2i</file>
+        <file>data/items/gems/gemd3.d2i</file>
+        <file>data/items/gems/gemd4.d2i</file>
+        <file>data/items/gems/geme1.d2i</file>
+        <file>data/items/gems/geme2.d2i</file>
+        <file>data/items/gems/geme3.d2i</file>
+        <file>data/items/gems/geme4.d2i</file>
+        <file>data/items/gems/geml1.d2i</file>
+        <file>data/items/gems/geml2.d2i</file>
+        <file>data/items/gems/geml3.d2i</file>
+        <file>data/items/gems/geml4.d2i</file>
+        <file>data/items/gems/gemo1.d2i</file>
+        <file>data/items/gems/gemo2.d2i</file>
+        <file>data/items/gems/gemo3.d2i</file>
+        <file>data/items/gems/gemo4.d2i</file>
+        <file>data/items/gems/gemp1.d2i</file>
+        <file>data/items/gems/gemp2.d2i</file>
+        <file>data/items/gems/gemp3.d2i</file>
+        <file>data/items/gems/gemp4.d2i</file>
+        <file>data/items/gems/gemq1.d2i</file>
+        <file>data/items/gems/gemq2.d2i</file>
+        <file>data/items/gems/gemq3.d2i</file>
+        <file>data/items/gems/gemq4.d2i</file>
+        <file>data/items/gems/gemr1.d2i</file>
+        <file>data/items/gems/gemr2.d2i</file>
+        <file>data/items/gems/gemr3.d2i</file>
+        <file>data/items/gems/gemr4.d2i</file>
+        <file>data/items/gems/gems1.d2i</file>
+        <file>data/items/gems/gems2.d2i</file>
+        <file>data/items/gems/gems3.d2i</file>
+        <file>data/items/gems/gems4.d2i</file>
+        <file>data/items/gems/gemt1.d2i</file>
+        <file>data/items/gems/gemt2.d2i</file>
+        <file>data/items/gems/gemt3.d2i</file>
+        <file>data/items/gems/gemt4.d2i</file>
+        <file>data/items/gems/gemx1.d2i</file>
+        <file>data/items/gems/gemx2.d2i</file>
+        <file>data/items/gems/gemx3.d2i</file>
+        <file>data/items/gems/gemx4.d2i</file>
+        <file>data/items/gems/gemz1.d2i</file>
+        <file>data/items/gems/gemz2.d2i</file>
+        <file>data/items/gems/gemz3.d2i</file>
+        <file>data/items/gems/gemz4.d2i</file>
     </qresource>
 </RCC>

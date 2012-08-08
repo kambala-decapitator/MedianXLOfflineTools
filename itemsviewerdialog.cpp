@@ -39,6 +39,7 @@ ItemsViewerDialog::ItemsViewerDialog(const QHash<int, bool> &plugyStashesExisten
     KExpandableGroupBox *expandableBox = new KExpandableGroupBox(tr("Item management"), this);
     expandableBox->setAnimateExpansion(false);
     expandableBox->setWidget(_itemManagementWidget);
+    expandableBox->setExpanded(true);
 
     // main layout
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
@@ -135,8 +136,9 @@ ItemsViewerDialog::ItemsViewerDialog(const QHash<int, bool> &plugyStashesExisten
     _upgradeRunesButton = new QPushButton(tr("Runes"), _upgradeBox);
     _upgradeBothButton = new QPushButton(tr("Both"), _upgradeBox);
 
-    connect(_upgradeGemsButton, SIGNAL(clicked()), SLOT(upgradeGems()));
+    connect(_upgradeGemsButton,  SIGNAL(clicked()), SLOT(upgradeGems()));
     connect(_upgradeRunesButton, SIGNAL(clicked()), SLOT(upgradeRunes()));
+    connect(_upgradeBothButton,  SIGNAL(clicked()), SLOT(upgradeGemsAndRunes()));
 
     QVBoxLayout *upgradeBoxLayout = new QVBoxLayout(_upgradeBox);
     upgradeBoxLayout->addWidget(_upgradeGemsButton);
@@ -156,7 +158,6 @@ ItemsViewerDialog::ItemsViewerDialog(const QHash<int, bool> &plugyStashesExisten
     itemManagementBoxLayout->addStretch();
     itemManagementBoxLayout->addWidget(_upgradeBox);
 
-    // misc
     connect(_tabWidget, SIGNAL(currentChanged(int)), SLOT(tabChanged(int)));
 
     loadSettings();
@@ -307,7 +308,7 @@ void ItemsViewerDialog::updateItems(const QHash<int, bool> &plugyStashesExistenc
     setCubeTabDisabled(!CharacterInfo::instance().items.hasCube());
     for (QHash<int, bool>::const_iterator iter = plugyStashesExistenceHash.constBegin(); iter != plugyStashesExistenceHash.constEnd(); ++iter)
         _tabWidget->setTabEnabled(tabIndexFromItemStorage(iter.key()), iter.value());
-    
+
     updateWindowTitle();
 }
 

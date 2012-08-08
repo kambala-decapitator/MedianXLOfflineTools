@@ -1940,6 +1940,20 @@ bool MedianXLOfflineTools::processSaveFile()
     clearItems(sharedStashPathChanged, hcStashPathChanged);
     charInfo.items.character += itemsBuffer;
 
+    // create all gems
+//    ItemInfo *rune = ItemDataBase::loadItemFromFile("runes/r10");
+//    int p = 5;
+//    foreach (const QByteArray &gemType, QList<QByteArray>() << "gcv" << "gfv" << "gsv" << "gzv" << "gpv" << "gcb" << "gfb" << "gsb" << "glb" << "gpb" << "gcg" << "gfg" << "gsg" << "glg" << "gpg" << "gcr" << "gfr" << "gsr" << "glr" << "gpr" << "gcw" << "gfw" << "gsw" << "glw" << "gpw" << "gcy" << "gfy" << "gsy" << "gly" << "gpy" << "skc" << "skf" << "sku" << "skl" << "skz" << "yo1" << "yo2" << "yo3" << "yo4" << "yo5" << "g$a" << "g$b" << "g$c" << "g$d" << "g$e" << "9$a" << "9$b" << "9$c" << "9$d" << "9$e" << "7$a" << "7$b" << "7$c" << "7$d" << "7$e" << "5$a" << "5$b" << "5$c" << "5$d" << "5$e")
+//    {
+//        ItemInfo *gem = new ItemInfo(*rune);
+//        gem->itemType = gemType;
+//        for (int i = 0; i < 3; ++i)
+//            ReverseBitWriter::replaceValueInBitString(gem->bitString, Enums::ItemOffsets::Type + i*8, gemType.at(i));
+//        if (ItemDataBase::storeItemIn(gem, Enums::ItemStorage::PersonalStash, 10, p++))
+//            charInfo.items.character += gem;
+//    }
+//    delete rune;
+
     return true;
 }
 

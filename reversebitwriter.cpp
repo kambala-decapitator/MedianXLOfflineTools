@@ -4,7 +4,7 @@
 #include <QString>
 
 
-QString &ReverseBitWriter::replaceValueInBitString(QString &bitString, Enums::ItemOffsets::ItemOffsetsEnum offset, int newValue)
+QString &ReverseBitWriter::replaceValueInBitString(QString &bitString, int offset, int newValue)
 {
     int length = Enums::ItemOffsets::offsetLength(offset);
     // 16 is 'JM' offset which is not stored in the bitString
