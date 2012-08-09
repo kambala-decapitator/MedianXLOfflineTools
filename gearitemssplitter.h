@@ -21,6 +21,9 @@ public:
 
     virtual void setItems(const ItemsList &newItems);
 
+protected:
+    virtual void removeItemFromList(ItemInfo *item, bool emitSignal = true);
+
 private slots:
     void changeGear();
 

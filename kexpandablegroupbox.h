@@ -154,8 +154,8 @@ public slots:
     void setTitle(const QString& title);
 
 protected:
-    void mouseReleaseEvent(QMouseEvent *ev);
-    void paintEvent(QPaintEvent*);
+    virtual void mouseReleaseEvent(QMouseEvent *ev);
+    virtual void paintEvent(QPaintEvent*);
 
 private slots:
     void animateExpansion(qreal);

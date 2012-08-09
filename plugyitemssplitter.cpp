@@ -138,16 +138,15 @@ void PlugyItemsSplitter::removeItemFromList(ItemInfo *item, bool emitSignal /*= 
 
 bool PlugyItemsSplitter::storeItemInStorage(ItemInfo *item, int storage)
 {
-    bool result;
     for (quint32 i = 1; i <= _lastNotEmptyPage; ++i)
     {
-        result = ItemDataBase::storeItemIn(item, static_cast<Enums::ItemStorage::ItemStorageEnum>(storage), ItemsViewerDialog::rowsInStorageAtIndex(storage), i);
-        if (result)
-            break;
+        if (ItemDataBase::storeItemIn(item, static_cast<Enums::ItemStorage::ItemStorageEnum>(storage), ItemsViewerDialog::rowsInStorageAtIndex(storage), i))
+        {
+            addItemToList(item, false);
+            return true;
+        }
     }
-    if (result)
-        addItemToList(item, false);
-    return result;
+    return false;
 }
 
 //void PlugyItemsSplitter::moveItemsToFirstPages(ItemsList *items, bool toShards)
@@ -192,7 +191,7 @@ public:
     void centerInWidget(QWidget *w) { move(w->mapToGlobal(QPoint((w->size().width() - size().width()) / 2, (w->size().height() - size().height()) / 2))); }
 
 protected:
-    void closeEvent(QCloseEvent *e) { e->ignore(); }
+    virtual void closeEvent(QCloseEvent *e) { e->ignore(); }
 };
 
 void PlugyItemsSplitter::disenchantAllItems(bool toShards, bool upgradeToCrystals, bool eatSignets, bool includeUniques, bool includeSets, ItemsList *items /*= 0*/)
@@ -230,6 +229,16 @@ void PlugyItemsSplitter::disenchantAllItems(bool toShards, bool upgradeToCrystal
         }
         setItems(_allItems); // update spinbox value and range
     }
+}
+
+void PlugyItemsSplitter::upgradeGems(ItemsList *items)
+{
+    ItemsPropertiesSplitter::upgradeGems(_shouldApplyActionToAllPages ? &_allItems : &_pagedItems);
+}
+
+void PlugyItemsSplitter::upgradeRunes(ItemsList *items)
+{
+    ItemsPropertiesSplitter::upgradeRunes(_shouldApplyActionToAllPages ? &_allItems : &_pagedItems);
 }
 
 bool PlugyItemsSplitter::keyEventHasShift(QKeyEvent *keyEvent)

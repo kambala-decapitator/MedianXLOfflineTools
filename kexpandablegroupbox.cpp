@@ -41,7 +41,7 @@ public:
     virtual ~ClickableLabel() {}
 
 protected:
-    void mouseReleaseEvent( QMouseEvent *e ) { Q_UNUSED( e ); emit clicked(); }
+    virtual void mouseReleaseEvent( QMouseEvent *e ) { Q_UNUSED( e ); emit clicked(); }
 
 signals:
     void clicked();
@@ -56,7 +56,7 @@ public:
     QSize sizeHint() const { return QSize(16, 16); }
 
 protected:
-    void paintEvent(QPaintEvent *event)
+    virtual void paintEvent(QPaintEvent *event)
     {
         Q_UNUSED(event);
         QPainter p(this);

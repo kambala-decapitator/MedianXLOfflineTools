@@ -28,7 +28,7 @@ public slots:
     virtual void reject() { saveSettings(); QDialog::reject(); }
 
 protected:
-    void showEvent(QShowEvent *e);
+    virtual void showEvent(QShowEvent *e);
 
 signals:
     void itemFound(ItemInfo *item);

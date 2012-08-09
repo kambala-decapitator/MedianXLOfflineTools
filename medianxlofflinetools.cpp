@@ -30,6 +30,7 @@
 #include <QTranslator>
 #include <QUrl>
 #include <QTimer>
+#include <QDate>
 
 #include <QNetworkAccessManager>
 #include <QNetworkReply>
@@ -40,10 +41,9 @@
 // additional defines
 
 #ifdef QT_NO_DEBUG
-#define RELEASE_DATE "09.06.2012" // TODO: don't forget to change
+#define RELEASE_DATE "15.08.2012" // TODO: don't forget to change
 #else
 #include <QDebug>
-#include <QDate>
 
 #define RELEASE_DATE QDate::currentDate().toString("dd.MM.yyyy") // :)
 #endif
@@ -56,7 +56,7 @@
 
 // static const
 
-static const QString kLastSavePathKey("lastSavePath"), kBackupExtension("bak"), kReadonlyCss("background-color: rgb(227, 227, 227)");
+static const QString kLastSavePathKey("lastSavePath"), kBackupExtension("bak"), kReadonlyCss("background-color: rgb(227, 227, 227)"), kTimeFormatReadable("yyyyMMdd-hhmmss");
 static const QByteArray kMercHeader("jf");
 
 const QString MedianXLOfflineTools::kCompoundFormat("%1, %2");
@@ -72,13 +72,39 @@ const int MedianXLOfflineTools::kMaxRecentFiles = 10;
 
 // ctor
 
-MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *parent, Qt::WFlags flags) : QMainWindow(parent, flags), _findItemsDialog(0),
+MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *parent, Qt::WFlags flags) : QMainWindow(parent, flags), _findItemsDialog(0), _backupLimitsGroup(new QActionGroup(this)), _backupFormatsGroup(new QActionGroup(this)),
     hackerDetected(tr("1337 hacker detected! Please, play legit.")), //difficulties(QStringList() << tr("Hatred") << tr("Terror") << tr("Destruction")),
     maxValueFormat(tr("Max: %1")), minValueFormat(tr("Min: %1")), investedValueFormat(tr("Invested: %1")),
     kForumThreadHtmlLinks(tr("<a href=\"http://modsbylaz.14.forumer.com/viewtopic.php?t=23147\">Official Median XL Forum thread</a><br>"
                              "<a href=\"http://forum.worldofplayers.ru/showthread.php?t=34489\">Official Russian Median XL Forum thread</a>")), _isLoaded(false)
 {
     ui.setupUi(this);
+
+    ui.actionBackups1->setData(1);
+    ui.actionBackups2->setData(2);
+    ui.actionBackups5->setData(5);
+    ui.actionBackups10->setData(10);
+
+    _backupLimitsGroup->setExclusive(true);
+    _backupLimitsGroup->addAction(ui.actionBackups1);
+    _backupLimitsGroup->addAction(ui.actionBackups2);
+    _backupLimitsGroup->addAction(ui.actionBackups5);
+    _backupLimitsGroup->addAction(ui.actionBackups10);
+    _backupLimitsGroup->addAction(ui.actionBackupsUnlimited);
+
+    ui.actionBackupFormatReadable->setText(tr("<filename>_<%1>", "param is date format expressed in yyyy, MM, hh, etc.").arg(kTimeFormatReadable) + "." + kBackupExtension);
+    ui.actionBackupFormatTimestamp->setText(tr("<filename>_<UNIX timestamp>") + "." + kBackupExtension);
+
+    _backupFormatsGroup->setExclusive(true);
+    _backupFormatsGroup->addAction(ui.actionBackupFormatReadable);
+    _backupFormatsGroup->addAction(ui.actionBackupFormatTimestamp);
+
+    ui.actionFindNext->setShortcut(QKeySequence::FindNext);
+    ui.actionFindPrevious->setShortcut(QKeySequence::FindPrevious);
+
+    // TODO: [0.4] remove when implementing export info
+    ui.menuExport->removeAction(ui.actionExportCharacterInfo);
+    ui.mainToolBar->removeAction(ui.actionExportCharacterInfo);
 
 #ifdef Q_WS_WIN32
     setAppUserModelID(); // is actually used only in Windows 7 and later
@@ -120,19 +146,12 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *pare
 
     if (ui.actionCheckForUpdateOnStart->isChecked())
         checkForUpdate();
-    
-    ui.actionFindNext->setShortcut(QKeySequence::FindNext);
-    ui.actionFindPrevious->setShortcut(QKeySequence::FindPrevious);
 
 #ifdef Q_WS_MACX
     QTimer::singleShot(500, this, SLOT(moveUpdateActionToAppleMenu())); // needs a slight delay to create menu
 #endif
 
-    // TODO: [0.4] remove when implementing export info
-    ui.menuExport->removeAction(ui.actionExportCharacterInfo);
-    ui.mainToolBar->removeAction(ui.actionExportCharacterInfo);
-
-//    ui.actionLoadLastUsedCharacter->setChecked(false);
+//    ui.actionLoadLastUsedCharacter->setChecked(false); // useful if you're lazy to open the Windows registry or Mac OS X preferences
     if (!cmdPath.isEmpty())
         loadFile(cmdPath);
     else if (ui.actionLoadLastUsedCharacter->isChecked() && !_recentFilesList.isEmpty())
@@ -434,9 +453,30 @@ void MedianXLOfflineTools::saveCharacter()
         outputDataStream << charInfo.mercenary.nameIndex << newMercValue;
     }
 
-    int characterItemsSize = 2, mercItemsSize = 2, corpseItemsSize = 2;
-    ItemsList characterItems, mercItems, corpseItems;
-    QHash<Enums::ItemStorage::ItemStorageEnum, ItemsList > plugyItemsHash;
+    // put corpse items on a character
+    ItemsList corpseItems = ItemDataBase::itemsStoredIn(Enums::ItemStorage::NotInStorage, Enums::ItemLocation::Corpse), equippedItems = ItemDataBase::itemsStoredIn(Enums::ItemStorage::NotInStorage, Enums::ItemLocation::Equipped);
+    for (int i = 0; i < corpseItems.size(); ++i)
+    {
+        ItemInfo *item = corpseItems[i];
+        bool found = false;
+        foreach (ItemInfo *equippedItem, equippedItems)
+        {
+            if (equippedItem->whereEquipped == item->whereEquipped)
+            {
+                found = true;
+                break;
+            }
+        }
+        if (!found)
+        {
+            item->location = Enums::ItemLocation::Equipped;
+            corpseItems.removeAt(i--);
+        }
+    }
+
+    int characterItemsSize = 2, mercItemsSize = 0, corpseItemsSize = 0;
+    ItemsList characterItems, mercItems;
+    QHash<Enums::ItemStorage::ItemStorageEnum, ItemsList> plugyItemsHash;
     foreach (ItemInfo *item, charInfo.items.character)
     {
         switch (item->storage)
@@ -453,10 +493,11 @@ void MedianXLOfflineTools::saveCharacter()
             case Enums::ItemLocation::Merc:
                 pItemsSize = &mercItemsSize;
                 pItems = &mercItems;
+                item->location = Enums::ItemLocation::Equipped;
                 break;
             case Enums::ItemLocation::Corpse:
                 pItemsSize = &corpseItemsSize;
-                pItems = &corpseItems;
+                pItems = 0;
                 break;
             default:
                 pItemsSize = &characterItemsSize;
@@ -464,7 +505,8 @@ void MedianXLOfflineTools::saveCharacter()
                 break;
             }
 
-            pItems->append(item);
+            if (pItems)
+                pItems->append(item);
             *pItemsSize += 2 + item->bitString.length() / 8; // JM + item bytes
             foreach (ItemInfo *socketableItem, item->socketablesInfo)
                 *pItemsSize += 2 + socketableItem->bitString.length() / 8; // JM + item bytes
@@ -473,11 +515,35 @@ void MedianXLOfflineTools::saveCharacter()
         }
     }
 
+    // write character items
     tempFileContents.replace(charInfo.itemsOffset, charInfo.itemsEndOffset - charInfo.itemsOffset, QByteArray(characterItemsSize, 0));
     outputDataStream.device()->seek(charInfo.itemsOffset);
     outputDataStream << static_cast<quint16>(characterItems.size());
     ItemParser::writeItems(characterItems, outputDataStream);
 
+    // write corpse items
+    int mercItemsOffset = tempFileContents.lastIndexOf(kMercHeader);
+    outputDataStream.skipRawData(2); // JM
+    if (!corpseItems.isEmpty())
+        outputDataStream.skipRawData(2 + 12 + 2); // number of corpses + unknown corpse data + JM
+    outputDataStream << static_cast<quint16>(corpseItems.size());
+    int pos = outputDataStream.device()->pos();
+    tempFileContents.replace(pos, mercItemsOffset - pos, QByteArray(corpseItemsSize, 0));
+    ItemParser::writeItems(corpseItems, outputDataStream);
+
+    // write merc items
+    Q_ASSERT(tempFileContents.mid(outputDataStream.device()->pos(), 2) == kMercHeader);
+    if (charInfo.mercenary.exists)
+    {
+        outputDataStream.skipRawData(2 + 2); // jf + JM
+        outputDataStream << static_cast<quint16>(mercItems.size());
+        int terminatorOffset = tempFileContents.size() - 3;
+        pos = outputDataStream.device()->pos();
+        tempFileContents.replace(pos, terminatorOffset - pos, QByteArray(mercItemsSize, 0));
+        ItemParser::writeItems(mercItems, outputDataStream);
+    }
+
+    // write file size & checksum
     quint32 fileSize = tempFileContents.size();
     outputDataStream.device()->seek(Enums::Offsets::FileSize);
     outputDataStream << fileSize;
@@ -918,6 +984,11 @@ void MedianXLOfflineTools::backupSettingTriggered(bool checked)
 {
     if (!checked && QUESTION_BOX_YESNO(tr("Are you sure you want to disable automatic backups? Then don't blame me if your character gets corrupted."), QMessageBox::No) == QMessageBox::No)
         ui.actionBackup->setChecked(true);
+    else
+    {
+        ui.menuBackupsLimit->setEnabled(checked);
+        ui.menuBackupNameFormat->setEnabled(checked);
+    }
 }
 
 void MedianXLOfflineTools::associateFiles()
@@ -1287,9 +1358,39 @@ void MedianXLOfflineTools::loadSettings()
     settings.beginGroup("options");
     ui.actionLoadLastUsedCharacter->setChecked(settings.value("loadLastCharacter", true).toBool());
     ui.actionWarnWhenColoredName->setChecked(settings.value("warnWhenColoredName", true).toBool());
-    ui.actionBackup->setChecked(settings.value("makeBackups", true).toBool());
     ui.actionOpenItemsAutomatically->setChecked(settings.value("openItemsAutomatically").toBool());
     ui.actionReloadSharedStashes->setChecked(settings.value("reloadSharedStashes").toBool());
+
+    bool backupsEnabled = settings.value("makeBackups", true).toBool();
+    ui.actionBackup->setChecked(backupsEnabled);
+    ui.menuBackupsLimit->setEnabled(backupsEnabled);
+    ui.menuBackupNameFormat->setEnabled(backupsEnabled);
+
+    (settings.value("backupFormatIsTimestamp").toBool() ? ui.actionBackupFormatTimestamp : ui.actionBackupFormatReadable)->setChecked(true);
+    QVariant backupLimit = settings.value("backupLimit");
+    if (backupLimit.isValid())
+    {
+        switch (backupLimit.toInt())
+        {
+        case 1:
+            ui.actionBackups1->setChecked(true);
+            break;
+        case 2:
+            ui.actionBackups2->setChecked(true);
+            break;
+        case 5:
+            ui.actionBackups5->setChecked(true);
+            break;
+        case 10:
+            ui.actionBackups10->setChecked(true);
+            break;
+        default:
+            ui.actionBackupsUnlimited->setChecked(true);
+            break;
+        }
+    }
+    else
+        ui.actionBackups5->setChecked(true);
 
     settings.beginGroup("autoOpenSharedStashes");
     ui.actionAutoOpenPersonalStash->setChecked(settings.value("personal", true).toBool());
@@ -1316,9 +1417,12 @@ void MedianXLOfflineTools::saveSettings() const
     settings.beginGroup("options");
     settings.setValue("loadLastCharacter", ui.actionLoadLastUsedCharacter->isChecked());
     settings.setValue("warnWhenColoredName", ui.actionWarnWhenColoredName->isChecked());
-    settings.setValue("makeBackups", ui.actionBackup->isChecked());
     settings.setValue("openItemsAutomatically", ui.actionOpenItemsAutomatically->isChecked());
     settings.setValue("reloadSharedStashes", ui.actionReloadSharedStashes->isChecked());
+
+    settings.setValue("makeBackups", ui.actionBackup->isChecked());
+    settings.setValue("backupFormatIsTimestamp", ui.actionBackupFormatTimestamp->isChecked());
+    settings.setValue("backupLimit", _backupLimitsGroup->checkedAction()->data().toInt());
 
     settings.beginGroup("autoOpenSharedStashes");
     settings.setValue("personal", ui.actionAutoOpenPersonalStash->isChecked());
@@ -1871,7 +1975,7 @@ bool MedianXLOfflineTools::processSaveFile()
         // after saving there can actually be only one corpse, but let's be safe
         if (charInfo.basicInfo.corpses > 1)
         {
-            qDebug("more than one corpse found!");
+            qWarning("more than one corpse found!");
             inputDataStream.device()->seek(_saveFileContents.indexOf(kMercHeader));
         }
     }
@@ -2513,8 +2617,17 @@ void MedianXLOfflineTools::backupFile(QFile &file)
 {
     if (ui.actionBackup->isChecked())
     {
-        QFile backupFile(file.fileName() + "." + kBackupExtension);
-        if (backupFile.exists() && !backupFile.remove())
+        if (int backupsLimit = _backupLimitsGroup->checkedAction()->data().toInt())
+        {
+            QFileInfo fi(file.fileName());
+            QDir sourceFileDir(fi.canonicalPath(), QString("%1_*.%2").arg(fi.fileName()).arg(kBackupExtension), QDir::Name | QDir::IgnoreCase, QDir::Files);
+            QStringList previousBackups = sourceFileDir.entryList();
+            while (previousBackups.size() >= backupsLimit)
+                sourceFileDir.remove(previousBackups.takeFirst());
+        }
+
+        QFile backupFile(QString("%1_%2.%3").arg(file.fileName()).arg(ui.actionBackupFormatReadable->isChecked() ? QDateTime::currentDateTimeUtc().toString("yyyyMMdd-hhmmss") : QString::number(QDateTime::currentMSecsSinceEpoch())).arg(kBackupExtension));
+        if (backupFile.exists() && !backupFile.remove()) // it shouldn't actually exist, but let's be safe
             showErrorMessageBoxForFile(tr("Error removing old backup '%1'"), backupFile);
         else
         {

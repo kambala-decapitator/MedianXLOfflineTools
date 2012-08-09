@@ -34,12 +34,22 @@ void GearItemsSplitter::setItems(const ItemsList &newItems)
     _gearItems[MercenaryNameIndex]  = ItemDataBase::itemsStoredIn(Enums::ItemStorage::NotInStorage, Enums::ItemLocation::Merc,     0, &_allItems);
     _gearItems[CorpseNameIndex]     = ItemDataBase::itemsStoredIn(Enums::ItemStorage::NotInStorage, Enums::ItemLocation::Corpse,   0, &_allItems);
 
-    changeButtonText(_button1, MercenaryNameIndex);
-    _button1->setEnabled(CharacterInfo::instance().mercenary.exists);
-    changeButtonText(_button2, CorpseNameIndex);
-    _button2->setDisabled(_gearItems[CorpseNameIndex].isEmpty());
+    // TODO: correctly update buttons state when other character is loaded
+    if (_button1->text().isEmpty())
+    {
+        changeButtonText(_button1, MercenaryNameIndex);
+        _button1->setEnabled(CharacterInfo::instance().mercenary.exists);
+        changeButtonText(_button2, CorpseNameIndex);
+        _button2->setDisabled(_gearItems[CorpseNameIndex].isEmpty());
+    }
 
     updateItemsForCurrentGear();
+}
+
+void GearItemsSplitter::removeItemFromList(ItemInfo *item, bool emitSignal)
+{
+    ItemsPropertiesSplitter::removeItemFromList(item, emitSignal);
+    _gearItems[_currentGearButtonNameIndex].removeOne(item);
 }
 
 void GearItemsSplitter::changeGear()

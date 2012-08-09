@@ -330,102 +330,6 @@ void ItemsPropertiesSplitter::removeItemFromList(ItemInfo *item, bool emitSignal
         emit itemsChanged();
 }
 
-bool ItemsPropertiesSplitter::upgradeItemsInMap(UpgradableItemsMultiMap &itemsMap, quint8 maxKey, const QString &itemNameFormat)
-{
-    QList<quint8> keys = itemsMap.uniqueKeys();
-    if (keys.isEmpty())
-        return false;
-
-    int currentStorage = itemsMap.value(keys.at(0))->storage;
-    for (int i = 0; i < keys.size(); ++i)
-    {
-        quint8 key = keys.at(i);
-        int sameItemsSize = itemsMap.values(key).size(), upgradedItemsSize = sameItemsSize / 2, leftItemsSize = sameItemsSize - upgradedItemsSize * 2;
-        if (upgradedItemsSize)
-        {
-            for (UpgradableItemsMultiMap::iterator iter = itemsMap.begin(); sameItemsSize > leftItemsSize && iter != itemsMap.end();)
-            {
-                if (iter.key() == key)
-                {
-                    removeItemFromList(iter.value(), false);
-                    --sameItemsSize;
-                    iter = itemsMap.erase(iter);
-                }
-                else
-                    ++iter;
-            }
-
-            quint8 newKey = key + 1;
-            ItemsList higherItems = itemsMap.values(newKey);
-            ItemInfo *newItem = higherItems.isEmpty() ? ItemDataBase::loadItemFromFile(itemNameFormat.arg(newKey)) : higherItems.first();
-            for (int j = 0; j < upgradedItemsSize; ++j)
-            {
-                ItemInfo *itemCopy = new ItemInfo(*newItem);
-                storeItemInStorage(itemCopy, currentStorage);
-                itemsMap.insertMulti(newKey, itemCopy);
-            }
-
-            if (higherItems.isEmpty())
-            {
-                delete newItem;
-
-                if (newKey == maxKey)
-                    break;
-                keys << newKey;
-            }
-        }
-    }
-    return true;
-}
-
-void ItemsPropertiesSplitter::upgradeGems()
-{
-    const quint8 kPerfectGrade = 4;
-    const QByteArray kPerfectGradeBytes = QByteArray::number(kPerfectGrade);
-
-    QMultiHash<QByteArray, ItemInfo *> allGems;
-    foreach (ItemInfo *item, _allItems)
-    {
-        QList<QByteArray> types = ItemDataBase::Items()->value(item->itemType)->types;  // first value is gem type, second value is gem grade
-        if (types.at(0).startsWith("gem") && !types.at(1).endsWith(kPerfectGradeBytes)) // exclude prefect gems
-            allGems.insertMulti(types.at(0), item);
-    }
-
-    foreach (const QByteArray &gemType, allGems.uniqueKeys())
-    {
-        UpgradableItemsMultiMap gemsMap;
-        foreach (ItemInfo *gem, allGems.values(gemType))
-            gemsMap.insertMulti(ItemDataBase::Items()->value(gem->itemType)->types.at(1).right(1).toUShort(), gem);
-        upgradeItemsInMap(gemsMap, kPerfectGrade, QString("gems/%1%2").arg(gemType.constData()).arg("%1"));
-    }
-
-    emit itemsChanged();
-    emit itemCountChanged(_allItems.size());
-}
-
-void ItemsPropertiesSplitter::upgradeRunes()
-{
-    const quint8 kOnRuneKey = 50;
-
-    UpgradableItemsMultiMap runesMap;
-    QRegExp runeRE("r(\\d\\d)");
-    foreach (ItemInfo *item, _allItems)
-    {
-        if (runeRE.exactMatch(item->itemType))
-        {
-            quint8 runeKey = runeRE.cap(1).toUShort();
-            if (runeKey < kOnRuneKey) // don't include 'On' rune, Great runes and Ultimative runes
-                runesMap.insertMulti(runeKey, item);
-        }
-    }
-
-    if (upgradeItemsInMap(runesMap, kOnRuneKey, "runes/r%1"))
-    {
-        emit itemsChanged();
-        emit itemCountChanged(_allItems.size());
-    }
-}
-
 void ItemsPropertiesSplitter::disenchantAllItems(bool toShards, bool upgradeToCrystals, bool eatSignets, bool includeUniques, bool includeSets, ItemsList *items /*= 0*/)
 {
     ItemInfo *disenchantedItem = ItemDataBase::loadItemFromFile(toShards ? "arcane_shard" : "signet_of_learning");
@@ -620,6 +524,104 @@ bool ItemsPropertiesSplitter::storeItemInStorage(ItemInfo *item, int storage)
     if (result)
         addItemToList(item, false);
     return result;
+}
+
+bool ItemsPropertiesSplitter::upgradeItemsInMap(UpgradableItemsMultiMap &itemsMap, quint8 maxKey, const QString &itemNameFormat)
+{
+    QList<quint8> keys = itemsMap.uniqueKeys();
+    if (keys.isEmpty())
+        return false;
+
+    int currentStorage = itemsMap.value(keys.at(0))->storage;
+    for (int i = 0; i < keys.size(); ++i)
+    {
+        quint8 key = keys.at(i);
+        int sameItemsSize = itemsMap.values(key).size(), upgradedItemsSize = sameItemsSize / 2, leftItemsSize = sameItemsSize - upgradedItemsSize * 2;
+        if (upgradedItemsSize)
+        {
+            for (UpgradableItemsMultiMap::iterator iter = itemsMap.begin(); sameItemsSize > leftItemsSize && iter != itemsMap.end();)
+            {
+                if (iter.key() == key)
+                {
+                    removeItemFromList(iter.value(), false);
+                    --sameItemsSize;
+                    iter = itemsMap.erase(iter);
+                }
+                else
+                    ++iter;
+            }
+
+            quint8 newKey = key + 1;
+            ItemsList higherItems = itemsMap.values(newKey);
+            ItemInfo *newItem = higherItems.isEmpty() ? ItemDataBase::loadItemFromFile(itemNameFormat.arg(newKey)) : higherItems.first();
+            for (int j = 0; j < upgradedItemsSize; ++j)
+            {
+                ItemInfo *itemCopy = new ItemInfo(*newItem);
+                storeItemInStorage(itemCopy, currentStorage);
+                itemsMap.insertMulti(newKey, itemCopy);
+            }
+
+            if (higherItems.isEmpty())
+            {
+                delete newItem;
+
+                if (newKey == maxKey)
+                    break;
+                keys.insert(i + 1, newKey);
+            }
+        }
+    }
+    return true;
+}
+
+void ItemsPropertiesSplitter::upgradeGems(ItemsList *items /*= 0*/)
+{
+    const quint8 kPerfectGrade = 4;
+    const QByteArray kPerfectGradeBytes = QByteArray::number(kPerfectGrade);
+
+    QMultiHash<QByteArray, ItemInfo *> allGems;
+    ItemsList &items_ = items ? *items : _allItems;
+    foreach (ItemInfo *item, items_)
+    {
+        QList<QByteArray> types = ItemDataBase::Items()->value(item->itemType)->types;  // first value is gem type, second value is gem grade
+        if (types.at(0).startsWith("gem") && !types.at(1).endsWith(kPerfectGradeBytes)) // exclude prefect gems
+            allGems.insertMulti(types.at(0), item);
+    }
+
+    foreach (const QByteArray &gemType, allGems.uniqueKeys())
+    {
+        UpgradableItemsMultiMap gemsMap;
+        foreach (ItemInfo *gem, allGems.values(gemType))
+            gemsMap.insertMulti(ItemDataBase::Items()->value(gem->itemType)->types.at(1).right(1).toUShort(), gem);
+        upgradeItemsInMap(gemsMap, kPerfectGrade, QString("gems/%1%2").arg(gemType.constData()).arg("%1"));
+    }
+
+    emit itemsChanged();
+    emit itemCountChanged(_allItems.size());
+}
+
+void ItemsPropertiesSplitter::upgradeRunes(ItemsList *items /*= 0*/)
+{
+    const quint8 kOnRuneKey = 50;
+
+    UpgradableItemsMultiMap runesMap;
+    QRegExp runeRE("r(\\d\\d)");
+    ItemsList &items_ = items ? *items : _allItems;
+    foreach (ItemInfo *item, items_)
+    {
+        if (runeRE.exactMatch(item->itemType))
+        {
+            quint8 runeKey = runeRE.cap(1).toUShort();
+            if (runeKey < kOnRuneKey) // don't include 'On' rune, Great runes and Ultimative runes
+                runesMap.insertMulti(runeKey, item);
+        }
+    }
+
+    if (upgradeItemsInMap(runesMap, kOnRuneKey, "runes/r%1"))
+    {
+        emit itemsChanged();
+        emit itemCountChanged(_allItems.size());
+    }
 }
 
 void ItemsPropertiesSplitter::createItemActions()

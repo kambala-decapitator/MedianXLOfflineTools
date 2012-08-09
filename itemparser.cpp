@@ -416,7 +416,7 @@ void ItemParser::writeItems(const ItemsList &items, QDataStream &ds)
         ds.writeRawData(kItemHeader.constData(), kItemHeader.size()); // do not write '\0'
 
         QByteArray itemBytes;
-        for (int i = 0; i < item->bitString.length(); i += 8)
+        for (int i = 0, n = item->bitString.length(); i < n; i += 8)
             itemBytes.prepend(item->bitString.mid(i, 8).toShort(0, 2));
         ds.writeRawData(itemBytes.constData(), itemBytes.size()); // do not write '\0'
 

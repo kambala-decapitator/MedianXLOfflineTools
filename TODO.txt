@@ -1,17 +1,15 @@
 v0.3:
-- move mass disenchant to a separate dialog and add more options
-- finish gem/rune upgrade and move to a separate dialog
-- finish saving of corpse/merc items
-- increase number of backups with date in file name
-- when reloading character, explicitly reload shared stashes that were modified
+- add rune downgrading to item context menu
 
 v0.4:
+- move mass disenchant to a separate dialog and add more options
 - creation of plugy stashes and moving items around (finish implementing drag & drop)
 - generate some bbcode/html report about character and/or plugy stashes contents
 - mass disenchant (multiple selection) - maybe
 - export item to bbcode/html
 
 future versions:
+- when reloading character, explicitly reload shared stashes that were modified
 - new data structure for items - QMap with item storage as a key
 - sort stashes
 - affix rlvl (and maybe names - then modify help text) support
@@ -25,6 +23,7 @@ future versions:
 - skills allocation
 - item requirements
 - http://modsbylaz.14.forumer.com/viewtopic.php?p=424505#424505
+- moving/swaping pages, inserting blank page
 
 1.
 # escape command to allow multiple lines in Makefile

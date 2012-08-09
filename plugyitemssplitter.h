@@ -22,6 +22,8 @@ public:
     virtual QPair<bool, bool> updateUpgradeButtonsState(ItemsList *items = 0);
 
     virtual void disenchantAllItems(bool toShards, bool upgradeToCrystals, bool eatSignets, bool includeUniques, bool includeSets, ItemsList *items = 0);
+    virtual void upgradeGems(ItemsList *items = 0);
+    virtual void upgradeRunes(ItemsList *items = 0);
 
 public slots:
     // these 8 are connected to main menu actions
@@ -39,8 +41,8 @@ public slots:
     void setApplyActionToAllPages(bool b) { _shouldApplyActionToAllPages = b; }
 
 protected:
-    void keyPressEvent(QKeyEvent *keyEvent);
-    void keyReleaseEvent(QKeyEvent *keyEvent);
+    virtual void keyPressEvent(QKeyEvent *keyEvent);
+    virtual void keyReleaseEvent(QKeyEvent *keyEvent);
 
     virtual bool isItemInCurrentStorage(ItemInfo *item) const;
     virtual void addItemToList(ItemInfo *item, bool emitSignal = true);

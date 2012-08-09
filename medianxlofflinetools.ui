@@ -116,17 +116,11 @@
      <property name="cornerButtonEnabled">
       <bool>false</bool>
      </property>
-     <attribute name="horizontalHeaderVisible">
-      <bool>true</bool>
-     </attribute>
      <attribute name="horizontalHeaderCascadingSectionResizes">
       <bool>false</bool>
      </attribute>
      <attribute name="horizontalHeaderDefaultSectionSize">
       <number>100</number>
-     </attribute>
-     <attribute name="verticalHeaderVisible">
-      <bool>true</bool>
      </attribute>
      <attribute name="verticalHeaderCascadingSectionResizes">
       <bool>false</bool>
@@ -646,9 +640,29 @@ p, li { white-space: pre-wrap; }
      <addaction name="actionAutoOpenSharedStash"/>
      <addaction name="actionAutoOpenHCShared"/>
     </widget>
+    <widget class="QMenu" name="menuBackupsLimit">
+     <property name="title">
+      <string>Backups limit</string>
+     </property>
+     <addaction name="actionBackups1"/>
+     <addaction name="actionBackups2"/>
+     <addaction name="actionBackups5"/>
+     <addaction name="actionBackups10"/>
+     <addaction name="actionBackupsUnlimited"/>
+    </widget>
+    <widget class="QMenu" name="menuBackupNameFormat">
+     <property name="title">
+      <string>Backup name format</string>
+     </property>
+     <addaction name="actionBackupFormatReadable"/>
+     <addaction name="actionBackupFormatTimestamp"/>
+    </widget>
     <addaction name="actionLoadLastUsedCharacter"/>
     <addaction name="actionWarnWhenColoredName"/>
+    <addaction name="separator"/>
     <addaction name="actionBackup"/>
+    <addaction name="menuBackupsLimit"/>
+    <addaction name="menuBackupNameFormat"/>
     <addaction name="separator"/>
     <addaction name="actionOpenItemsAutomatically"/>
     <addaction name="menuAuto_open_shared_stashes"/>
@@ -1250,6 +1264,62 @@ p, li { white-space: pre-wrap; }
   <action name="actionCheckForUpdate">
    <property name="text">
     <string>Check for Update</string>
+   </property>
+  </action>
+  <action name="actionBackups1">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>1</string>
+   </property>
+  </action>
+  <action name="actionBackups2">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>2</string>
+   </property>
+  </action>
+  <action name="actionBackups5">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>5</string>
+   </property>
+  </action>
+  <action name="actionBackups10">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>10</string>
+   </property>
+  </action>
+  <action name="actionBackupsUnlimited">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Unlimited</string>
+   </property>
+  </action>
+  <action name="actionBackupFormatReadable">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionBackupFormatTimestamp">
+   <property name="checkable">
+    <bool>true</bool>
    </property>
   </action>
  </widget>

@@ -24,14 +24,15 @@
         <file>data/items/arcane_shard.d2i</file>
         <file>data/items/cube.d2i</file>
         <file>data/items/signet_of_learning.d2i</file>
-        <file>data/items/runes/r02.d2i</file>
-        <file>data/items/runes/r03.d2i</file>
-        <file>data/items/runes/r04.d2i</file>
-        <file>data/items/runes/r05.d2i</file>
-        <file>data/items/runes/r06.d2i</file>
-        <file>data/items/runes/r07.d2i</file>
-        <file>data/items/runes/r08.d2i</file>
-        <file>data/items/runes/r09.d2i</file>
+        <file>data/items/runes/r1.d2i</file>
+        <file>data/items/runes/r2.d2i</file>
+        <file>data/items/runes/r3.d2i</file>
+        <file>data/items/runes/r4.d2i</file>
+        <file>data/items/runes/r5.d2i</file>
+        <file>data/items/runes/r6.d2i</file>
+        <file>data/items/runes/r7.d2i</file>
+        <file>data/items/runes/r8.d2i</file>
+        <file>data/items/runes/r9.d2i</file>
         <file>data/items/runes/r10.d2i</file>
         <file>data/items/runes/r11.d2i</file>
         <file>data/items/runes/r12.d2i</file>
