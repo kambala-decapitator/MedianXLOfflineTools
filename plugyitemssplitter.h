@@ -21,7 +21,7 @@ public:
     virtual QPair<bool, bool> updateDisenchantButtonsState(bool includeUniques, bool includeSets, bool toCrystals, ItemsList *items = 0);
     virtual QPair<bool, bool> updateUpgradeButtonsState(ItemsList *items = 0);
 
-    virtual void disenchantAllItems(bool toShards, bool upgradeToCrystals, bool eatSignets, bool includeUniques, bool includeSets, ItemsList *items = 0);
+    virtual void disenchantAllItems(bool toShards, bool upgradeToCrystals, bool eatSignets, bool includeUniques, bool includeSets, ItemsList *pItems = 0);
     virtual void upgradeGems(ItemsList *items = 0);
     virtual void upgradeRunes(ItemsList *items = 0);
 
@@ -71,7 +71,8 @@ private:
     void emulateShiftAndInvokeMethod(void (PlugyItemsSplitter::*method)(void)) { _isShiftPressed = true; (this->*method)(); _isShiftPressed = false; }
     bool keyEventHasShift(QKeyEvent *keyEvent);
     void setShortcutTextInButtonTooltip(QPushButton *button, const QKeySequence &keySequence);
-    void moveItemsToFirstPages(ItemsList *items, bool toShards);
+    ItemsList *itemsForSelectedRange() { return _shouldApplyActionToAllPages ? &_allItems : &_pagedItems; }
+//    void moveItemsToFirstPages(ItemsList *items, bool toShards);
 };
 
 #endif // PLUGYITEMSSPLITTER_H

@@ -194,10 +194,10 @@ protected:
     virtual void closeEvent(QCloseEvent *e) { e->ignore(); }
 };
 
-void PlugyItemsSplitter::disenchantAllItems(bool toShards, bool upgradeToCrystals, bool eatSignets, bool includeUniques, bool includeSets, ItemsList *items /*= 0*/)
+void PlugyItemsSplitter::disenchantAllItems(bool toShards, bool upgradeToCrystals, bool eatSignets, bool includeUniques, bool includeSets, ItemsList *pItems /*= 0*/)
 {
-    items = _shouldApplyActionToAllPages ? &_allItems : &_pagedItems;
-    ItemsPropertiesSplitter::disenchantAllItems(toShards, upgradeToCrystals, eatSignets, includeUniques, includeSets, items);
+    pItems = itemsForSelectedRange();
+    ItemsPropertiesSplitter::disenchantAllItems(toShards, upgradeToCrystals, eatSignets, includeUniques, includeSets, pItems);
     if (_shouldApplyActionToAllPages)
     {
         // move signets/shards to the beginning
@@ -207,7 +207,7 @@ void PlugyItemsSplitter::disenchantAllItems(bool toShards, bool upgradeToCrystal
             progressBar.centerInWidget(this);
             progressBar.show();
 
-            foreach (ItemInfo *item, *items)
+            foreach (ItemInfo *item, *pItems)
             {
                 if ((toShards && isArcaneShard(item)) || (!toShards && isSignetOfLearning(item)))
                 {
@@ -231,14 +231,28 @@ void PlugyItemsSplitter::disenchantAllItems(bool toShards, bool upgradeToCrystal
     }
 }
 
-void PlugyItemsSplitter::upgradeGems(ItemsList *items)
+void PlugyItemsSplitter::upgradeGems(ItemsList *items /*= 0*/)
 {
-    ItemsPropertiesSplitter::upgradeGems(_shouldApplyActionToAllPages ? &_allItems : &_pagedItems);
+    Q_UNUSED(items);
+
+    ProgressBarModal progressBar;
+    progressBar.centerInWidget(this);
+    progressBar.show();
+
+    ItemsPropertiesSplitter::upgradeGems(itemsForSelectedRange());
+    setItems(_allItems); // update spinbox value and range
 }
 
-void PlugyItemsSplitter::upgradeRunes(ItemsList *items)
+void PlugyItemsSplitter::upgradeRunes(ItemsList *items /*= 0*/)
 {
-    ItemsPropertiesSplitter::upgradeRunes(_shouldApplyActionToAllPages ? &_allItems : &_pagedItems);
+    Q_UNUSED(items);
+
+    ProgressBarModal progressBar;
+    progressBar.centerInWidget(this);
+    progressBar.show();
+
+    ItemsPropertiesSplitter::upgradeRunes(itemsForSelectedRange());
+    setItems(_allItems); // update spinbox value and range
 }
 
 bool PlugyItemsSplitter::keyEventHasShift(QKeyEvent *keyEvent)
@@ -264,13 +278,13 @@ void PlugyItemsSplitter::showItem(ItemInfo *item)
 QPair<bool, bool> PlugyItemsSplitter::updateDisenchantButtonsState(bool includeUniques, bool includeSets, bool toCrystals, ItemsList *items /*= 0*/)
 {
     Q_UNUSED(items);
-    return ItemsPropertiesSplitter::updateDisenchantButtonsState(includeUniques, includeSets, toCrystals, _shouldApplyActionToAllPages ? &_allItems : &_pagedItems);
+    return ItemsPropertiesSplitter::updateDisenchantButtonsState(includeUniques, includeSets, toCrystals, itemsForSelectedRange());
 }
 
 QPair<bool, bool> PlugyItemsSplitter::updateUpgradeButtonsState(ItemsList *items /*= 0*/)
 {
     Q_UNUSED(items);
-    return ItemsPropertiesSplitter::updateUpgradeButtonsState(_shouldApplyActionToAllPages ? &_allItems : &_pagedItems);
+    return ItemsPropertiesSplitter::updateUpgradeButtonsState(itemsForSelectedRange());
 }
 
 void PlugyItemsSplitter::setItems(const ItemsList &newItems)

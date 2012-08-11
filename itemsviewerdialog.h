@@ -35,8 +35,8 @@ public:
     };
 
     static const int kCellSize;
-    static const QList<int> kRows; // TODO: [0.4] move to some other place
 
+    static QList<int> &kRows(); // TODO: [0.4] move to some other place
     static int rowsInStorageAtIndex(int storage);
     static int tabIndexFromItemStorage(int storage);
     static const QString &tabNameAtIndex(int i);

@@ -126,6 +126,7 @@ QPair<bool, bool> ItemsPropertiesSplitter::updateDisenchantButtonsState(bool inc
 
 QPair<bool, bool> ItemsPropertiesSplitter::updateUpgradeButtonsState(ItemsList *items /*= 0*/)
 {
+    // TODO: finish
     return qMakePair(true, true);
 }
 
@@ -330,13 +331,13 @@ void ItemsPropertiesSplitter::removeItemFromList(ItemInfo *item, bool emitSignal
         emit itemsChanged();
 }
 
-void ItemsPropertiesSplitter::disenchantAllItems(bool toShards, bool upgradeToCrystals, bool eatSignets, bool includeUniques, bool includeSets, ItemsList *items /*= 0*/)
+void ItemsPropertiesSplitter::disenchantAllItems(bool toShards, bool upgradeToCrystals, bool eatSignets, bool includeUniques, bool includeSets, ItemsList *pItems /*= 0*/)
 {
     ItemInfo *disenchantedItem = ItemDataBase::loadItemFromFile(toShards ? "arcane_shard" : "signet_of_learning");
-    ItemsList &items_ = items ? *items : _allItems;
+    ItemsList &items = pItems ? *pItems : _allItems;
     quint32 disenchantedItemsNumber = 0;
     int signetsEaten = 0, signetsEatenTotal = CharacterInfo::instance().basicInfo.statsDynamicData.property("SignetsOfLearningEaten").toInt();
-    foreach (ItemInfo *item, items_)
+    foreach (ItemInfo *item, items)
     {
         if ((item->quality == Enums::ItemQuality::Unique && includeUniques) || (item->quality == Enums::ItemQuality::Set && includeSets))
         {
@@ -367,7 +368,7 @@ void ItemsPropertiesSplitter::disenchantAllItems(bool toShards, bool upgradeToCr
         {
 
             int shards = 0;
-            foreach (ItemInfo *item, items_)
+            foreach (ItemInfo *item, items)
             {
                 if (isArcaneShard(item))
                     ++shards;
@@ -382,8 +383,8 @@ void ItemsPropertiesSplitter::disenchantAllItems(bool toShards, bool upgradeToCr
             int crystals = shards / kShardsPerCrystal;
             if (crystals)
             {
-                int storage = items_.first()->storage;
-                foreach (ItemInfo *item, items_)
+                int storage = items.first()->storage;
+                foreach (ItemInfo *item, items)
                     if (isArcaneShard(item) || isArcaneShard2(item) || isArcaneShard3(item) || isArcaneShard4(item))
                         performDeleteItem(item, false);
 
@@ -407,7 +408,7 @@ void ItemsPropertiesSplitter::disenchantAllItems(bool toShards, bool upgradeToCr
                 if (shardsLeft)
                     text += QString(" %1 %2").arg(tr("and"), tr("%n Arcane Shard(s)", 0, shardsLeft));
 
-                emit itemCountChanged(items_.size());
+                emit itemCountChanged(items.size());
             }
         }
 
@@ -422,7 +423,7 @@ void ItemsPropertiesSplitter::disenchantAllItems(bool toShards, bool upgradeToCr
         {
             emit signetsOfLearningEaten(signetsEaten);
 
-            if (signetsEaten == disenchantedItemsNumber)
+            if (static_cast<quint32>(signetsEaten) == disenchantedItemsNumber)
                 text = baseSignetsTextFormat.arg(signetsText);
             else
             {
@@ -543,6 +544,7 @@ bool ItemsPropertiesSplitter::upgradeItemsInMap(UpgradableItemsMultiMap &itemsMa
             {
                 if (iter.key() == key)
                 {
+                    qApp->processEvents();
                     removeItemFromList(iter.value(), false);
                     --sameItemsSize;
                     iter = itemsMap.erase(iter);
@@ -556,6 +558,7 @@ bool ItemsPropertiesSplitter::upgradeItemsInMap(UpgradableItemsMultiMap &itemsMa
             ItemInfo *newItem = higherItems.isEmpty() ? ItemDataBase::loadItemFromFile(itemNameFormat.arg(newKey)) : higherItems.first();
             for (int j = 0; j < upgradedItemsSize; ++j)
             {
+                qApp->processEvents();
                 ItemInfo *itemCopy = new ItemInfo(*newItem);
                 storeItemInStorage(itemCopy, currentStorage);
                 itemsMap.insertMulti(newKey, itemCopy);

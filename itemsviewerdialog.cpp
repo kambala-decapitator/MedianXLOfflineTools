@@ -29,7 +29,6 @@
 
 
 const int ItemsViewerDialog::kCellSize = 32;
-const QList<int> ItemsViewerDialog::kRows = QList<int>() << 11 << 6 << 8 << 10 << 10 << 10 << 10;
 
 ItemsViewerDialog::ItemsViewerDialog(const QHash<int, bool> &plugyStashesExistenceHash, QWidget *parent) : QDialog(parent), _tabWidget(new QTabWidget(this)), _itemManagementWidget(new QWidget(this))
 {
@@ -57,7 +56,7 @@ ItemsViewerDialog::ItemsViewerDialog(const QHash<int, bool> &plugyStashesExisten
             splitter = new ItemsPropertiesSplitter(tableView, this);
         else
             splitter = new PlugyItemsSplitter(tableView, this);
-        splitter->setModel(new ItemStorageTableModel(i == InventoryIndex && isUltimative5OrLater() ? 8 : kRows.at(i), i == GearIndex ? 8 : 10, splitter));
+        splitter->setModel(new ItemStorageTableModel(kRows().at(i), i == GearIndex ? 8 : 10, splitter));
         _tabWidget->addTab(splitter, tabNameAtIndex(i));
 
         connect(splitter, SIGNAL(itemCountChanged(int)), SLOT(itemCountChangedInCurrentTab(int)));
@@ -314,7 +313,7 @@ void ItemsViewerDialog::updateItems(const QHash<int, bool> &plugyStashesExistenc
 
 int ItemsViewerDialog::rowsInStorageAtIndex(int storage)
 {
-    return kRows.at(tabIndexFromItemStorage(storage));
+    return kRows().at(tabIndexFromItemStorage(storage));
 }
 
 int ItemsViewerDialog::tabIndexFromItemStorage(int storage)
@@ -410,10 +409,18 @@ void ItemsViewerDialog::upgradeRunes()
 void ItemsViewerDialog::updateBeltItemsCoordinates(bool restore, ItemsList *pBeltItems)
 {
     ItemsList beltItems = pBeltItems ? *pBeltItems : ItemDataBase::itemsStoredIn(Enums::ItemStorage::NotInStorage, Enums::ItemLocation::Belt);
-    int lastRowIndex = kRows.at(GearIndex) - 1;
+    int lastRowIndex = kRows().at(GearIndex) - 1;
     foreach (ItemInfo *item, beltItems)
     {
         item->row = lastRowIndex - item->row;
         item->column += restore ? -2 : 2;
     }
+}
+
+QList<int> &ItemsViewerDialog::kRows()
+{
+    static QList<int> rows;
+    if (rows.isEmpty())
+        rows = QList<int>() << 11 << (isUltimative5OrLater() ? 8 : 6) << 8 << 10 << 10 << 10 << 10;
+    return rows;
 }
