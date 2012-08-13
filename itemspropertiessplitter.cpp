@@ -16,6 +16,8 @@
 #endif
 
 static const int kShardsPerCrystal = 5;
+static const QRegExp runeRegExp("r(\\d\\d)");
+static const quint8 kOnRuneKey = 50;
 
 
 ItemsPropertiesSplitter::ItemsPropertiesSplitter(ItemStorageTableView *itemsView, QWidget *parent /*= 0*/) : QSplitter(Qt::Horizontal, parent), _itemsView(itemsView), _propertiesWidget(new PropertiesViewerWidget(parent))
@@ -198,6 +200,26 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
             actions << actionToAdd;
         }
 
+        if (runeRegExp.exactMatch(item->itemType))
+        {
+            quint8 runeCode = runeRegExp.cap(1).toUShort();
+            if (runeCode > 1 && runeCode <= kOnRuneKey)
+            {
+                QMenu *menuDowngrade = new QMenu(tr("Downgrade to"), _itemsView);
+                while (--runeCode)
+                {
+                    QByteArray runeKey = QString("r%1").arg(runeCode, 2, 10, kZeroChar).toLatin1();
+                    QAction *actionRune = new QAction(QIcon(ResourcePathManager::pathForImageName(ItemDataBase::Items()->value(runeKey)->imageName)),
+                                                      ItemDataBase::Socketables()->value(runeKey)->name.remove("\\purple;"), _itemsView);
+                    actionRune->setData(runeCode);
+                    actionRune->setIconVisibleInMenu(true); // explicitly show icon on Mac OS X
+                    connect(actionRune, SIGNAL(triggered()), SLOT(downgradeSelectedRune()));
+                    menuDowngrade->addAction(actionRune);
+                }
+                actions << menuDowngrade->menuAction();
+            }
+        }
+
         actions << separator() << _itemActions[Delete];
 
         QMenu::exec(actions, _itemsView->mapToGlobal(pos));
@@ -234,6 +256,26 @@ void ItemsPropertiesSplitter::disenchantSelectedItem()
 
     if (newItemStored) // let's be safe
         _itemsView->setCurrentIndex(_itemsModel->index(newItemStored->row, newItemStored->column));
+}
+
+void ItemsPropertiesSplitter::downgradeSelectedRune()
+{
+    QAction *senderAction = qobject_cast<QAction *>(sender());
+    if (!senderAction)
+    {
+        ERROR_BOX("EPIC PHAIL");
+        return;
+    }
+
+    quint8 newRuneCode = senderAction->data().toUInt();
+    ItemInfo *item = selectedItem();
+    item->hasChanged = true;
+    item->itemType = QString("r%1").arg(newRuneCode, 2, 10, kZeroChar).toLatin1();
+    ReverseBitWriter::replaceValueInBitString(item->bitString, Enums::ItemOffsets::Type + 8, item->itemType.at(1));
+    ReverseBitWriter::replaceValueInBitString(item->bitString, Enums::ItemOffsets::Type + 16, item->itemType.at(2));
+
+    _propertiesWidget->showItem(item);
+    emit itemsChanged();
 }
 
 //void ItemsPropertiesSplitter::unsocketItem()
@@ -577,13 +619,13 @@ bool ItemsPropertiesSplitter::upgradeItemsInMap(UpgradableItemsMultiMap &itemsMa
     return true;
 }
 
-void ItemsPropertiesSplitter::upgradeGems(ItemsList *items /*= 0*/)
+void ItemsPropertiesSplitter::upgradeGems(ItemsList *pItems /*= 0*/)
 {
     const quint8 kPerfectGrade = 4;
     const QByteArray kPerfectGradeBytes = QByteArray::number(kPerfectGrade);
 
     QMultiHash<QByteArray, ItemInfo *> allGems;
-    ItemsList &items_ = items ? *items : _allItems;
+    ItemsList &items_ = pItems ? *pItems : _allItems;
     foreach (ItemInfo *item, items_)
     {
         QList<QByteArray> types = ItemDataBase::Items()->value(item->itemType)->types;  // first value is gem type, second value is gem grade
@@ -603,18 +645,15 @@ void ItemsPropertiesSplitter::upgradeGems(ItemsList *items /*= 0*/)
     emit itemCountChanged(_allItems.size());
 }
 
-void ItemsPropertiesSplitter::upgradeRunes(ItemsList *items /*= 0*/)
+void ItemsPropertiesSplitter::upgradeRunes(ItemsList *pItems /*= 0*/)
 {
-    const quint8 kOnRuneKey = 50;
-
     UpgradableItemsMultiMap runesMap;
-    QRegExp runeRE("r(\\d\\d)");
-    ItemsList &items_ = items ? *items : _allItems;
+    ItemsList &items_ = pItems ? *pItems : _allItems;
     foreach (ItemInfo *item, items_)
     {
-        if (runeRE.exactMatch(item->itemType))
+        if (runeRegExp.exactMatch(item->itemType))
         {
-            quint8 runeKey = runeRE.cap(1).toUShort();
+            quint8 runeKey = runeRegExp.cap(1).toUShort();
             if (runeKey < kOnRuneKey) // don't include 'On' rune, Great runes and Ultimative runes
                 runesMap.insertMulti(runeKey, item);
         }
@@ -646,6 +685,7 @@ void ItemsPropertiesSplitter::createItemActions()
     QAction *actionSol = new QAction(QIcon(ResourcePathManager::pathForImageName("sigil1b")), tr("Signet of Learning"), _itemsView);
     actionSol->setShortcut(QKeySequence("Ctrl+D"));
     actionSol->setObjectName("signet");
+    actionSol->setIconVisibleInMenu(true); // explicitly show icon on Mac OS X
     connect(actionSol, SIGNAL(triggered()), SLOT(disenchantSelectedItem()));
     _itemsView->addAction(actionSol);
     _itemActions[DisenchantSignet] = actionSol;
@@ -653,6 +693,7 @@ void ItemsPropertiesSplitter::createItemActions()
     QAction *actionShards = new QAction(QIcon(ResourcePathManager::pathForImageName("invfary4")), tr("Arcane Shards"), _itemsView);
     actionShards->setShortcut(QKeySequence("Alt+D"));
     actionShards->setObjectName("shards");
+    actionShards->setIconVisibleInMenu(true); // explicitly show icon on Mac OS X
     connect(actionShards, SIGNAL(triggered()), SLOT(disenchantSelectedItem()));
     _itemsView->addAction(actionShards);
     _itemActions[DisenchantShards] = actionShards;

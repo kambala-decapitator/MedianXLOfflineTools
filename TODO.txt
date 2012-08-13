@@ -1,5 +1,5 @@
 v0.3:
-- add rune downgrading to item context menu
+- update upgrade buttons state on storage/page change
 
 v0.4:
 - move mass disenchant to a separate dialog and add more options

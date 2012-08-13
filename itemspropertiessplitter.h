@@ -37,8 +37,8 @@ public:
     virtual QPair<bool, bool> updateUpgradeButtonsState(ItemsList *items = 0);
 
     virtual void disenchantAllItems(bool toShards, bool upgradeToCrystals, bool eatSignets, bool includeUniques, bool includeSets, ItemsList *pItems = 0);
-    virtual void upgradeGems(ItemsList *items = 0);
-    virtual void upgradeRunes(ItemsList *items = 0);
+    virtual void upgradeGems(ItemsList *pItems = 0);
+    virtual void upgradeRunes(ItemsList *pItems = 0);
 
 signals:
     void itemCountChanged(int itemCount);
@@ -56,6 +56,7 @@ protected slots:
     void disenchantSelectedItem();
 //    void unsocketItem();
     //void makeNonEthereal();
+    void downgradeSelectedRune();
     void deleteItem();
 
 protected:

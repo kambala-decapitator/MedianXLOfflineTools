@@ -124,9 +124,7 @@ void QD2CharRenamer::createColorMenu()
 
         pix.fill(ColorsManager::colors().at(i));
         QAction *colorAction = new QAction(QIcon(pix), QString("%1 (%2)").arg(ColorsManager::unicodeColorHeader() + ColorsManager::colorCodes().at(i), colorNames.at(i)), this);
-#ifdef Q_WS_MACX
-        colorAction->setIconVisibleInMenu(true); // explicitly show color icons on Mac OS X
-#endif
+        colorAction->setIconVisibleInMenu(true); // explicitly show color icon on Mac OS X
         connect(colorAction, SIGNAL(triggered()), SLOT(insertColor()));
 
         colorMenu->addAction(colorAction);
