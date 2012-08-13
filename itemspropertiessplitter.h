@@ -48,7 +48,7 @@ signals:
     void signetsOfLearningEaten(int signets);
 
 protected slots:
-    void itemSelected(const QModelIndex &index);
+    void itemSelected(const QModelIndex &index, bool display = true);
     void moveItem(const QModelIndex &newIndex, const QModelIndex &oldIndex);
 
     void showContextMenu(const QPoint &pos);

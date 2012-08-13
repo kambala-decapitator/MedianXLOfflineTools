@@ -414,7 +414,7 @@ QString ItemDataBase::completeItemName(ItemInfo *item, bool shouldUseColor, bool
             specialName += QString(" [%1]").arg(setItem->setName);
     }
     else if (item->quality == Enums::ItemQuality::Unique)
-        specialName = Uniques()->contains(item->setOrUniqueId) ? Uniques()->value(item->setOrUniqueId)->name : "FAIL";
+        specialName = Uniques()->contains(item->setOrUniqueId) ? Uniques()->value(item->setOrUniqueId)->name : QString();
     else if (item->isRW)
         specialName = item->rwName;
 
@@ -656,5 +656,5 @@ bool ItemDataBase::canDisenchantIntoSignetOfLearning(ItemInfo *item)
 
 bool ItemDataBase::canDisenchant(ItemInfo *item)
 {
-    return item && item->location != Enums::ItemLocation::Equipped && ((item->quality == Enums::ItemQuality::Set && Sets()->contains(item->setOrUniqueId)) || (item->quality == Enums::ItemQuality::Unique && !isUberCharm(item) && Uniques()->contains(item->setOrUniqueId)));
+    return item && item->location == Enums::ItemLocation::Stored && ((item->quality == Enums::ItemQuality::Set && Sets()->contains(item->setOrUniqueId)) || (item->quality == Enums::ItemQuality::Unique && !isUberCharm(item) && Uniques()->contains(item->setOrUniqueId)));
 }

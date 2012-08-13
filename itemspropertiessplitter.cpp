@@ -44,10 +44,11 @@ void ItemsPropertiesSplitter::setModel(ItemStorageTableModel *model)
     connect(_itemsModel, SIGNAL(itemMoved(const QModelIndex &, const QModelIndex &)), SLOT(moveItem(const QModelIndex &, const QModelIndex &)));
 }
 
-void ItemsPropertiesSplitter::itemSelected(const QModelIndex &index)
+void ItemsPropertiesSplitter::itemSelected(const QModelIndex &index, bool display /*= true*/)
 {
     ItemInfo *item = _itemsModel->itemAtIndex(index);
-    _propertiesWidget->showItem(item);
+    if (display)
+        _propertiesWidget->showItem(item);
 //    if (item)
 //        qDebug() << item->itemType << ItemDataBase::Items()->value(item->itemType)->types;
 
@@ -200,6 +201,7 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
             actions << actionToAdd;
         }
 
+        // downgrade a rune
         if (runeRegExp.exactMatch(item->itemType))
         {
             quint8 runeCode = runeRegExp.cap(1).toUShort();
@@ -218,6 +220,12 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
                 }
                 actions << menuDowngrade->menuAction();
             }
+        }
+
+        // TODO: eat signet (don't forget about custom signets in Ultimative)
+        if (isSignetOfLearning(item))
+        {
+
         }
 
         actions << separator() << _itemActions[Delete];
@@ -255,7 +263,10 @@ void ItemsPropertiesSplitter::disenchantSelectedItem()
     delete newItem;
 
     if (newItemStored) // let's be safe
+    {
         _itemsView->setCurrentIndex(_itemsModel->index(newItemStored->row, newItemStored->column));
+        itemSelected(_itemsView->currentIndex(), false);
+    }
 }
 
 void ItemsPropertiesSplitter::downgradeSelectedRune()
