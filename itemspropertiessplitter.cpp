@@ -222,11 +222,34 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
             }
         }
 
-        // TODO: eat signet (don't forget about custom signets in Ultimative)
+        // eat signet of learning
+        quint8 statsFromSignet = 0;
+        QRegExp customSignetRegExp("(\\d\\d)\\^");
         if (isSignetOfLearning(item))
+            statsFromSignet = 1;
+        else if (customSignetRegExp.exactMatch(item->itemType))
+            statsFromSignet = customSignetRegExp.cap(1).toUShort();
+        else if (item->itemType == "zk#")
+            statsFromSignet = 5;
+        else if (item->itemType == "zke" || item->itemType == "zky")
+            statsFromSignet = 25;
+        if (statsFromSignet)
         {
-
+            QAction *actionEatSignetOfLearning = new QAction(tr("Eat signet (%n free stat(s))", 0, statsFromSignet), _itemsView);
+//            actionEatSignetOfLearning->setShortcut(QKeySequence("Alt+E"));
+            actionEatSignetOfLearning->setData(statsFromSignet);
+            connect(actionEatSignetOfLearning, SIGNAL(triggered()), SLOT(eatSelectedSignet()));
+            actions << actionEatSignetOfLearning;
         }
+
+        // eat signet of skill
+//        if (item->itemType == "!@B")
+//        {
+//            QAction *actionEatSignetOfSkill = new QAction(tr("Eat signet (1 free skill)"), _itemsView);
+////            actionEatSignetOfSkill->setShortcut(QKeySequence("Alt+E"));
+//            connect(actionEatSignetOfSkill, SIGNAL(triggered()), SLOT(eatSelectedSignet()));
+//            actions << actionEatSignetOfSkill;
+//        }
 
         actions << separator() << _itemActions[Delete];
 
@@ -274,7 +297,7 @@ void ItemsPropertiesSplitter::downgradeSelectedRune()
     QAction *senderAction = qobject_cast<QAction *>(sender());
     if (!senderAction)
     {
-        ERROR_BOX("EPIC PHAIL");
+        ERROR_BOX("EPIC PHAIL WHEN DOWNGRADING RUNE");
         return;
     }
 
@@ -287,6 +310,19 @@ void ItemsPropertiesSplitter::downgradeSelectedRune()
 
     _propertiesWidget->showItem(item);
     emit itemsChanged();
+}
+
+void ItemsPropertiesSplitter::eatSelectedSignet()
+{
+    QAction *senderAction = qobject_cast<QAction *>(sender());
+    if (!senderAction)
+    {
+        ERROR_BOX("EPIC PHAIL WHEN EATING SIGNET");
+        return;
+    }
+
+    deleteItem(selectedItem());
+    emit signetsOfLearningEaten(senderAction->data().toUInt());
 }
 
 //void ItemsPropertiesSplitter::unsocketItem()
@@ -316,7 +352,7 @@ void ItemsPropertiesSplitter::downgradeSelectedRune()
 //    }
 //}
 
-void ItemsPropertiesSplitter::deleteItem()
+void ItemsPropertiesSplitter::deleteItemTriggered()
 {
     ItemInfo *item = selectedItem(false);
     if (item && QUESTION_BOX_YESNO(tr("Are you sure you want to delete this item?"), QMessageBox::No) == QMessageBox::Yes)
@@ -326,19 +362,24 @@ void ItemsPropertiesSplitter::deleteItem()
             if (QUESTION_BOX_YESNO(tr("Cube is not empty. Do you really want to delete it?\nNote: items inside will be preserved. You can recover them by getting new Cube."), QMessageBox::No) == QMessageBox::No)
                 return;
 
-        performDeleteItem(item);
-        showFirstItem();
-
-        emit itemCountChanged(_allItems.size());
-        emit itemDeleted();
+        deleteItem(item);
         if (isCube)
             emit cubeDeleted();
-
-        // a hack to make stash modified
-        ItemInfo *someItem = _itemsModel->firstItem();
-        if (someItem)
-            someItem->hasChanged = true;
     }
+}
+
+void ItemsPropertiesSplitter::deleteItem(ItemInfo *item)
+{
+    performDeleteItem(item);
+    showFirstItem();
+
+    emit itemCountChanged(_allItems.size());
+    emit itemDeleted();
+
+    // a hack to make stash modified
+    ItemInfo *someItem = _allItems.first();
+    if (someItem)
+        someItem->hasChanged = true;
 }
 
 void ItemsPropertiesSplitter::performDeleteItem(ItemInfo *item, bool emitSignal /*= true*/)
@@ -730,7 +771,7 @@ void ItemsPropertiesSplitter::createItemActions()
                 QKeySequence::Delete
 #endif
                 );
-    connect(actionDelete, SIGNAL(triggered()), SLOT(deleteItem()));
+    connect(actionDelete, SIGNAL(triggered()), SLOT(deleteItemTriggered()));
     _itemsView->addAction(actionDelete);
     _itemActions[Delete] = actionDelete;
 }

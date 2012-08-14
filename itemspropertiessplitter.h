@@ -57,7 +57,8 @@ protected slots:
 //    void unsocketItem();
     //void makeNonEthereal();
     void downgradeSelectedRune();
-    void deleteItem();
+    void eatSelectedSignet();
+    void deleteItemTriggered();
 
 protected:
     enum ItemAction
@@ -79,6 +80,7 @@ protected:
     ItemsList _allItems;
 
     void updateItems(const ItemsList &newItems);
+    void deleteItem(ItemInfo *item);
     void performDeleteItem(ItemInfo *item, bool emitSignal = true);
     ItemInfo *selectedItem(bool showError = true);
 

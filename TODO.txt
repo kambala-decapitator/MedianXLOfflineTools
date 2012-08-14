@@ -1,6 +1,5 @@
 v0.3:
 - update upgrade buttons state on storage/page change
-- allow eating signets from context menu
 - batch eat signets (add a button)
 
 v0.4:
