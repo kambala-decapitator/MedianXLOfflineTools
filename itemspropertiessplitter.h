@@ -33,8 +33,8 @@ public:
     virtual void showItem(ItemInfo *item);
     void showFirstItem();
 
-    virtual QPair<bool, bool> updateDisenchantButtonsState(bool includeUniques, bool includeSets, bool toCrystals, ItemsList *items = 0);
-    virtual QPair<bool, bool> updateUpgradeButtonsState(ItemsList *items = 0);
+    virtual QPair<bool, bool> updateDisenchantButtonsState(bool includeUniques, bool includeSets, bool toCrystals, ItemsList *pItems = 0);
+    virtual QPair<bool, bool> updateUpgradeButtonsState(ItemsList *pItems = 0);
 
     virtual void disenchantAllItems(bool toShards, bool upgradeToCrystals, bool eatSignets, bool includeUniques, bool includeSets, ItemsList *pItems = 0);
     virtual void upgradeGems(ItemsList *pItems = 0);
@@ -90,6 +90,10 @@ protected:
     virtual bool isItemInCurrentStorage(ItemInfo *item) const { Q_UNUSED(item); return true; }
     virtual bool storeItemInStorage(ItemInfo *item, int storage);
     bool upgradeItemsInMap(UpgradableItemsMultiMap &itemsMap, quint8 maxKey, const QString &itemNameFormat);
+
+    bool canSocketableMapBeUpgraded(const UpgradableItemsMultiMap &socketableMap);
+    QHash<QByteArray, UpgradableItemsMultiMap> getGemsMapsFromItems(const ItemsList &items);
+    UpgradableItemsMultiMap getRunesMapFromItems(const ItemsList &items);
 
     void createItemActions();
     QAction *separator();

@@ -1,9 +1,6 @@
-v0.3:
-- update upgrade buttons state on storage/page change
-- batch eat signets (add a button)
-
 v0.4:
 - move mass disenchant to a separate dialog and add more options
+- batch eat signets (add a button)
 - creation of plugy stashes and moving items around (finish implementing drag & drop)
 - generate some bbcode/html report about character and/or plugy stashes contents
 - mass disenchant (multiple selection) - maybe

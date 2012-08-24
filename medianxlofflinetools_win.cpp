@@ -9,25 +9,24 @@
 
 #define SHELL32_HANDLE GetModuleHandle(L"shell32.dll")
 
+typedef HRESULT (__stdcall *PSCPEAUMID)(PCWSTR); // SetCurrentProcessExplicitAppUserModelID()
 #ifdef WIN_7_OR_LATER
-typedef HRESULT (__stdcall *PSCPEAUMID)(PCWSTR);                                 // SetCurrentProcessExplicitAppUserModelID()
 typedef HRESULT (__stdcall *PSHCIFPN)(PCWSTR, IBindCtx *, const IID &, void **); // SHCreateItemFromParsingName()
 #endif
 
 
-PCWSTR MedianXLOfflineTools::appUserModelID()
+PCWSTR appUserModelID()
 {
-    static const QString progId = FileAssociationManager::progIdForExtension(kCharacterExtensionWithDot);
+    static const QString progId = FileAssociationManager::progIdForExtension(MedianXLOfflineTools::kCharacterExtensionWithDot);
     return progId.utf16();
 }
 
+
 void MedianXLOfflineTools::setAppUserModelID()
 {
-#ifdef WIN_7_OR_LATER
     PSCPEAUMID pSetCurrentProcessExplicitAppUserModelID = (PSCPEAUMID)GetProcAddress(SHELL32_HANDLE, "SetCurrentProcessExplicitAppUserModelID");
     if (pSetCurrentProcessExplicitAppUserModelID)
         pSetCurrentProcessExplicitAppUserModelID(appUserModelID());
-#endif
 }
 
 void MedianXLOfflineTools::syncWindowsTaskbarRecentFiles()
@@ -118,7 +117,6 @@ void MedianXLOfflineTools::removeFromWindowsRecentFiles(const QString &filePath)
         pADL->Release();
     }
 #endif
-
 }
 
 void MedianXLOfflineTools::addToWindowsRecentFiles(const QString &filePath)

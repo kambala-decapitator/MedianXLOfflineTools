@@ -124,7 +124,6 @@ private:
 
     // the following group of methods is Windows 7 specific
 #ifdef Q_WS_WIN32
-    static LPCWSTR appUserModelID();
     void setAppUserModelID();
     void syncWindowsTaskbarRecentFiles();
     void removeFromWindowsRecentFiles(const QString &filePath);
@@ -156,8 +155,8 @@ private:
     bool processSaveFile();
     quint32 checksum(const QByteArray &charByteArray) const;
 
-    inline int totalPossibleStatPoints(int level);
-    inline int totalPossibleSkillPoints();
+    inline int totalPossibleStatPoints(int level) const;
+    inline int totalPossibleSkillPoints() const;
     int investedStatPoints();
     inline void recalculateStatPoints();
 

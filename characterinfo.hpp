@@ -17,6 +17,8 @@ public:
         return obj;
     }
 
+    quint32 valueOfStatistic(Enums::CharacterStats::StatisticEnum stat) const { return basicInfo.statsDynamicData.property(Enums::CharacterStats::statisticNameFromValue(stat)).toUInt(); }
+
     struct CharacterInfoBasic
     {
         QString originalName, newName;

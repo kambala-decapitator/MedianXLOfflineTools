@@ -275,15 +275,15 @@ void PlugyItemsSplitter::showItem(ItemInfo *item)
     }
 }
 
-QPair<bool, bool> PlugyItemsSplitter::updateDisenchantButtonsState(bool includeUniques, bool includeSets, bool toCrystals, ItemsList *items /*= 0*/)
+QPair<bool, bool> PlugyItemsSplitter::updateDisenchantButtonsState(bool includeUniques, bool includeSets, bool toCrystals, ItemsList *pItems /*= 0*/)
 {
-    Q_UNUSED(items);
+    Q_UNUSED(pItems);
     return ItemsPropertiesSplitter::updateDisenchantButtonsState(includeUniques, includeSets, toCrystals, itemsForSelectedRange());
 }
 
-QPair<bool, bool> PlugyItemsSplitter::updateUpgradeButtonsState(ItemsList *items /*= 0*/)
+QPair<bool, bool> PlugyItemsSplitter::updateUpgradeButtonsState(ItemsList *pItems /*= 0*/)
 {
-    Q_UNUSED(items);
+    Q_UNUSED(pItems);
     return ItemsPropertiesSplitter::updateUpgradeButtonsState(itemsForSelectedRange());
 }
 

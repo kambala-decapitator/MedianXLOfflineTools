@@ -399,11 +399,17 @@ void ItemsViewerDialog::disenchantAllItems()
 void ItemsViewerDialog::upgradeGems()
 {
     currentSplitter()->upgradeGems();
+
+    _upgradeGemsButton->setDisabled(true);
+    _upgradeBothButton->setDisabled(true);
 }
 
 void ItemsViewerDialog::upgradeRunes()
 {
     currentSplitter()->upgradeRunes();
+
+    _upgradeRunesButton->setDisabled(true);
+    _upgradeBothButton->setDisabled(true);
 }
 
 void ItemsViewerDialog::updateBeltItemsCoordinates(bool restore, ItemsList *pBeltItems)

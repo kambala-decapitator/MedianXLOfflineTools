@@ -56,7 +56,6 @@ void registerApplication(const QString &extensionWithDot)
     hklmSoftware.setValue(QString("%1/SupportedTypes/%2").arg(registryApplications, extensionWithDot), QString("")); // empty string is intended
     hklmSoftware.endGroup();
 
-#ifdef WIN_VISTA_OR_LATER
     if (QSysInfo::windowsVersion() >= QSysInfo::WV_VISTA)
     {
         QString capabilitiesPath = QString("kambala/%1/Capabilities").arg(qApp->applicationName());
@@ -69,7 +68,6 @@ void registerApplication(const QString &extensionWithDot)
 
         hklmSoftware.setValue("RegisteredApplications/" + qApp->applicationName(), "Software\\" + QDir::toNativeSeparators(capabilitiesPath));
     }
-#endif
 }
 
 bool isRegisteredApplicationOverridenInFileExts(const QString &extensionWithDot, bool removeIfExists)
@@ -135,6 +133,7 @@ void FileAssociationManager::makeApplicationDefaultForExtension(const QString &e
     registerProgID(extensionWithDot);
     registerApplication(extensionWithDot);
 
+    bool hasAssociationChanged = true;
     if (QSysInfo::windowsVersion() < QSysInfo::WV_VISTA)
         isRegisteredApplicationOverridenInFileExts(extensionWithDot, true);
 #ifdef WIN_VISTA_OR_LATER
@@ -142,10 +141,10 @@ void FileAssociationManager::makeApplicationDefaultForExtension(const QString &e
     {
         IApplicationAssociationRegistration *pAAR;
         HRESULT hr = CoCreateInstance(CLSID_ApplicationAssociationRegistration, NULL, CLSCTX_INPROC, IID_PPV_ARGS(&pAAR));
-        if (SUCCEEDED(hr))
+        if ((hasAssociationChanged = SUCCEEDED(hr)))
         {
             hr = pAAR->SetAppAsDefault(qApp->applicationName().utf16(), extensionWithDot.utf16(), AT_FILEEXTENSION);
-            if (SUCCEEDED(hr))
+            if ((hasAssociationChanged = SUCCEEDED(hr)))
                 qDebug("app is default now");
             else
                 ERROR_BOX_NO_PARENT(QString("Error calling SetAppAsDefault(): %1").arg(HRESULT_CODE(hr)));
@@ -157,7 +156,8 @@ void FileAssociationManager::makeApplicationDefaultForExtension(const QString &e
     }
 #endif
 
-    ::SHChangeNotify(SHCNE_ASSOCCHANGED, 0, NULL, NULL);
+    if (hasAssociationChanged)
+        ::SHChangeNotify(SHCNE_ASSOCCHANGED, 0, NULL, NULL);
 }
 
 QString FileAssociationManager::progIdForExtension(const QString &extension)

@@ -14,7 +14,14 @@ QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item)
 {
     bool isClassCharm = ItemDataBase::isClassCharm(item);
 
-    PropertiesMap allProps = item->props;
+    PropertiesMap allProps;
+    PropertiesMap::const_iterator constIter = item->props.constBegin();
+    while (constIter != item->props.constEnd())
+    {
+        allProps[constIter.key()] = new ItemProperty(*constIter.value()); // original values mustn't be modified
+        ++constIter;
+    }
+
     if (item->isRW)
         addProperties(&allProps, item->rwProps);
 
@@ -156,6 +163,8 @@ QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item)
         itemDescription += "\n" + tr("Socketed: (%1), Inserted: (%2)").arg(item->socketsNumber).arg(item->socketablesNumber);
     if (item->isEthereal)
         itemDescription += "\n" + tr("Ethereal (Cannot be Repaired)");
+
+    qDeleteAll(allProps);
     return itemDescription;
 }
 
@@ -259,7 +268,7 @@ QString PropertiesDisplayManager::propertyDisplay(ItemProperty *propDisplay, int
     }
 
     char valueStringSigned[10];
-#ifdef Q_WS_WIN32
+#ifdef Q_CC_MSVC
     sprintf_s
 #else
     sprintf

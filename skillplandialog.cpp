@@ -142,7 +142,7 @@ void SkillplanDialog::constructUrls()
     }
 
     QString url = kBaseUrl.arg(modVersionPlanner()).arg(classCodePlanner).arg(charInfo.basicInfo.level).arg(skillQuests + maxSkillLevelCharms + maxSkillLevelItems, skillStr, minigames, charInfo.basicInfo.newName)
-                          .arg(ui.signetsCheckBox->isChecked() ? charInfo.basicInfo.statsDynamicData.property("SignetsOfSkillEaten").toUInt() : Enums::CharacterStats::SignetsOfSkillMax);
+                          .arg(ui.signetsCheckBox->isChecked() ? charInfo.valueOfStatistic(Enums::CharacterStats::SignetsOfSkillEaten) : Enums::CharacterStats::SignetsOfSkillMax);
     QString linkText = QString("%1 %2 (%3, %4)").arg(tr("Skillplan"), charInfo.basicInfo.newName, Enums::ClassName::classes().at(classCode), modVersionReadable());
     QString htmlText = QString("<a href = \"%1\">%2</a>").arg(url, linkText);
     QString bbcodeText = QString("[url=%1]%2[/url]").arg(url, linkText);

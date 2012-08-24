@@ -41,7 +41,7 @@
 // additional defines
 
 #ifdef QT_NO_DEBUG
-#define RELEASE_DATE "15.08.2012" // TODO: don't forget to change
+#define RELEASE_DATE "25.08.2012" // TODO: don't forget to change
 #else
 #include <QDebug>
 
@@ -711,7 +711,7 @@ void MedianXLOfflineTools::respecStats()
 void MedianXLOfflineTools::respecSkills(bool shouldRespec)
 {
     quint16 skills = CharacterInfo::instance().basicInfo.totalSkillPoints;
-    quint32 freeSkills = CharacterInfo::instance().basicInfo.statsDynamicData.property("FreeSkillPoints").toUInt();
+    quint32 freeSkills = CharacterInfo::instance().valueOfStatistic(Enums::CharacterStats::FreeSkillPoints);
     ui.freeSkillPointsLineEdit->setText(QString::number(shouldRespec ? skills : freeSkills));
     updateMaxCompoundStatusTip(ui.freeSkillPointsLineEdit, skills, shouldRespec ? 0 : skills - freeSkills);
     setModified(true);
@@ -764,7 +764,7 @@ void MedianXLOfflineTools::levelChanged(int newClvl)
         else if (_resurrectionPenalty == ResurrectPenaltyDialog::Skills)
             respecSkills(true);
         else
-            investedSkillPoints = newSkillPoints - CharacterInfo::instance().basicInfo.statsDynamicData.property("FreeSkillPoints").toInt();
+            investedSkillPoints = newSkillPoints - CharacterInfo::instance().valueOfStatistic(Enums::CharacterStats::FreeSkillPoints);
 
         int investedStats = investedStatPoints();
         updateStatusTips(newFreeStats + investedStats, investedStats, newSkillPoints, investedSkillPoints);
@@ -1883,7 +1883,7 @@ bool MedianXLOfflineTools::processSaveFile()
         charInfo.basicInfo.skills += skillValue;
         //qDebug() << skillValue << ItemDataBase::Skills()->value(_characterSkillsIndeces[charInfo.basicInfo.classCode].first.at(i)).name;
     }
-    skills += charInfo.basicInfo.statsDynamicData.property("FreeSkillPoints").toUInt();
+    skills += charInfo.valueOfStatistic(Enums::CharacterStats::FreeSkillPoints);
     if (skills > maxPossibleSkills) // check if skills are hacked
     {
         skills = maxPossibleSkills;
@@ -2080,16 +2080,17 @@ quint32 MedianXLOfflineTools::checksum(const QByteArray &charByteArray) const
     return sum;
 }
 
-inline int MedianXLOfflineTools::totalPossibleStatPoints(int level)
+inline int MedianXLOfflineTools::totalPossibleStatPoints(int level) const
 {
-    return (level - 1) * kStatPointsPerLevel + 5 * CharacterInfo::instance().questsInfo.lamEsensTomeQuestsCompleted() + CharacterInfo::instance().basicInfo.statsDynamicData.property("SignetsOfLearningEaten").toInt();
+    const CharacterInfo &charInfo = CharacterInfo::instance();
+    return (level - 1) * kStatPointsPerLevel + 5 * charInfo.questsInfo.lamEsensTomeQuestsCompleted() + charInfo.valueOfStatistic(Enums::CharacterStats::SignetsOfLearningEaten);
 }
 
-inline int MedianXLOfflineTools::totalPossibleSkillPoints()
+inline int MedianXLOfflineTools::totalPossibleSkillPoints() const
 {
     const CharacterInfo &charInfo = CharacterInfo::instance();
     return (charInfo.basicInfo.level - 1) * kSkillPointsPerLevel + charInfo.questsInfo.denOfEvilQuestsCompleted() + charInfo.questsInfo.radamentQuestsCompleted() + charInfo.questsInfo.izualQuestsCompleted() * 2 +
-        charInfo.basicInfo.statsDynamicData.property("SignetsOfSkillEaten").toInt();
+        charInfo.valueOfStatistic(Enums::CharacterStats::SignetsOfSkillEaten);
 }
 
 int MedianXLOfflineTools::investedStatPoints()
@@ -2277,13 +2278,13 @@ void MedianXLOfflineTools::updateUI()
     ui.levelSpinBox->setMaximum(_oldClvl);
     ui.levelSpinBox->setValue(_oldClvl);
 
-    updateCharacterExperienceProgressbar(charInfo.basicInfo.statsDynamicData.property(Enums::CharacterStats::statisticNameFromValue(Enums::CharacterStats::Experience)).toUInt());
+    updateCharacterExperienceProgressbar(charInfo.valueOfStatistic(Enums::CharacterStats::Experience));
 
     setStats();
     recalculateStatPoints();
 
     int stats = charInfo.basicInfo.totalStatPoints, skills = charInfo.basicInfo.totalSkillPoints;
-    updateStatusTips(stats, stats - CharacterInfo::instance().basicInfo.statsDynamicData.property("FreeStatPoints").toInt(), skills, skills - CharacterInfo::instance().basicInfo.statsDynamicData.property("FreeSkillPoints").toInt());
+    updateStatusTips(stats, stats - charInfo.valueOfStatistic(Enums::CharacterStats::FreeStatPoints), skills, skills - charInfo.valueOfStatistic(Enums::CharacterStats::FreeSkillPoints));
     ui.signetsOfLearningEatenLineEdit->setStatusTip(maxValueFormat.arg(Enums::CharacterStats::SignetsOfLearningMax));
     ui.signetsOfSkillEatenLineEdit->setStatusTip(maxValueFormat.arg(Enums::CharacterStats::SignetsOfSkillMax));
     ui.stashGoldLineEdit->setStatusTip(maxValueFormat.arg(QLocale().toString(Enums::CharacterStats::StashGoldMax)));

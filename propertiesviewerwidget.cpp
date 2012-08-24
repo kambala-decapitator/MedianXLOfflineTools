@@ -47,7 +47,14 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
 
     renderHtml(ui.itemAndMysticOrbsTextEdit, collectMysticOrbsDataFromProps(&_itemMysticOrbs, item->props, item->itemType));
 
-    PropertiesMap allProps = item->props;
+    PropertiesMap allProps;
+    PropertiesMap::const_iterator constIter = item->props.constBegin();
+    while (constIter != item->props.constEnd())
+    {
+        allProps[constIter.key()] = new ItemProperty(*constIter.value()); // original values mustn't be modified
+        ++constIter;
+    }
+
     if (item->isRW)
     {
         renderHtml(ui.rwAndMysticOrbsTextEdit, collectMysticOrbsDataFromProps(&_rwMysticOrbs, item->rwProps, item->itemType));
@@ -79,9 +86,9 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
         QString html;
         foreach (ItemInfo *socketableItem, item->socketablesInfo)
         {
-            PropertiesMap props = ItemDataBase::isGenericSocketable(socketableItem) ? PropertiesDisplayManager::genericSocketableProperties(socketableItem, itemBase->socketableType) : socketableItem->props;
-            PropertiesDisplayManager::addProperties(&allProps, props);
-            html += ItemDataBase::completeItemName(socketableItem, true) + kHtmlLineBreak + propertiesToHtml(props) + htmlLine;
+            PropertiesMap socketableProps = ItemDataBase::isGenericSocketable(socketableItem) ? PropertiesDisplayManager::genericSocketableProperties(socketableItem, itemBase->socketableType) : socketableItem->props;
+            PropertiesDisplayManager::addProperties(&allProps, socketableProps);
+            html += ItemDataBase::completeItemName(socketableItem, true) + kHtmlLineBreak + propertiesToHtml(socketableProps) + htmlLine;
         }
         renderHtml(ui.socketablesTextEdit, html);
     }
@@ -227,6 +234,8 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
         }
     }
 
+    qDeleteAll(allProps);
+
     renderHtml(ui.allTextEdit, itemDescription);
 
     // awkward way to force center align
@@ -339,7 +348,7 @@ void PropertiesViewerWidget::modifyMysticOrbProperty(int id, int decrement, Prop
 
     ItemProperty *prop = props->value(id);
     prop->value -= decrement;
-    if (prop->value)
+    if (prop->value > 0) // this value can become negative if removing 15x ED MO
     {
         QString newBits = binaryStringFromNumber(prop->value + propertyTxt->add, false, propertyTxt->bits); // it's not a mistake that I'm not using bitsLength here
         if (isEnhancedDamageProp)
@@ -398,7 +407,7 @@ QString PropertiesViewerWidget::collectMysticOrbsDataFromProps(QSet<int> *moSet,
         html += htmlLine + kHtmlLineBreak;
         foreach (int moCode, *moSet)
         {
-            if (isMysticOrbEffectDoubled())
+            if (isMysticOrbEffectDoubled() && !props[moCode]->displayString.endsWith(" x 2"))
                 props[moCode]->displayString += " x 2";
             // quick & dirty hack with const_cast
             html += QString("%1 = %2").arg(props.value(moCode)->displayString).arg(totalMysticOrbValue(moCode, const_cast<PropertiesMap *>(&props))) + kHtmlLineBreak;

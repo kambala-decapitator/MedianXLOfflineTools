@@ -15,9 +15,10 @@
 #include <QDebug>
 #endif
 
+
 static const int kShardsPerCrystal = 5;
 static const QRegExp runeRegExp("r(\\d\\d)");
-static const quint8 kOnRuneKey = 50;
+static const quint8 kOnRuneKey = 50, kPerfectGrade = 4;
 
 
 ItemsPropertiesSplitter::ItemsPropertiesSplitter(ItemStorageTableView *itemsView, QWidget *parent /*= 0*/) : QSplitter(Qt::Horizontal, parent), _itemsView(itemsView), _propertiesWidget(new PropertiesViewerWidget(parent))
@@ -50,7 +51,10 @@ void ItemsPropertiesSplitter::itemSelected(const QModelIndex &index, bool displa
     if (display)
         _propertiesWidget->showItem(item);
 //    if (item)
-//        qDebug() << item->itemType << ItemDataBase::Items()->value(item->itemType)->types;
+//    {
+//        ItemBase *base = ItemDataBase::Items()->value(item->itemType);
+//        qDebug() << item->itemType << base->types;
+//    }
 
     // correctly disable hotkeys
     _itemActions[DisenchantShards]->setEnabled(ItemDataBase::canDisenchantIntoArcaneShards(item));
@@ -127,10 +131,25 @@ QPair<bool, bool> ItemsPropertiesSplitter::updateDisenchantButtonsState(bool inc
     return qMakePair(allowShards, allowSignets);
 }
 
-QPair<bool, bool> ItemsPropertiesSplitter::updateUpgradeButtonsState(ItemsList *items /*= 0*/)
+bool ItemsPropertiesSplitter::canSocketableMapBeUpgraded(const UpgradableItemsMultiMap &socketableMap)
 {
-    // TODO: finish
-    return qMakePair(true, true);
+    foreach (quint8 key, socketableMap.uniqueKeys())
+        if (socketableMap.count(key) > 1)
+            return true;
+    return false;
+}
+
+QPair<bool, bool> ItemsPropertiesSplitter::updateUpgradeButtonsState(ItemsList *pItems /*= 0*/)
+{
+    const ItemsList &items = pItems ? *pItems : _allItems;
+
+    bool enableGemsButton = false;
+    QHash<QByteArray, UpgradableItemsMultiMap> gemsMapsHash = getGemsMapsFromItems(items);
+    foreach (const UpgradableItemsMultiMap &gemsMap, gemsMapsHash)
+        if ((enableGemsButton = canSocketableMapBeUpgraded(gemsMap)))
+            break;
+
+    return qMakePair(enableGemsButton, canSocketableMapBeUpgraded(getRunesMapFromItems(items)));
 }
 
 void ItemsPropertiesSplitter::updateItems(const ItemsList &newItems)
@@ -212,7 +231,7 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
                 {
                     QByteArray runeKey = QString("r%1").arg(runeCode, 2, 10, kZeroChar).toLatin1();
                     ItemBase *base = ItemDataBase::Items()->value(runeKey);
-                    QAction *actionRune = new QAction(QIcon(ResourcePathManager::pathForImageName(base->imageName)), QString("(%1) %2").arg(base->rlvl).arg(base->name.remove("\\purple;")), _itemsView);
+                    QAction *actionRune = new QAction(QIcon(ResourcePathManager::pathForImageName(base->imageName)), QString("(%1) %2").arg(base->rlvl).arg(QString(base->name).remove("\\purple;")), _itemsView);
                     actionRune->setData(runeCode);
                     actionRune->setIconVisibleInMenu(true); // explicitly show icon on Mac OS X
                     connect(actionRune, SIGNAL(triggered()), SLOT(downgradeSelectedRune()));
@@ -223,36 +242,28 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
         }
 
         // eat signet of learning
-        quint8 statsFromSignet = 0;
-        QRegExp customSignetRegExp("(\\d\\d)\\^");
-        if (isSignetOfLearning(item))
-            statsFromSignet = 1;
-        else if (customSignetRegExp.exactMatch(item->itemType))
-            statsFromSignet = customSignetRegExp.cap(1).toUShort();
-        else if (item->itemType == "zk#")
-            statsFromSignet = 5;
-        else if (item->itemType == "zke" || item->itemType == "zky")
-            statsFromSignet = 25;
-        if (statsFromSignet)
+        if (CharacterInfo::instance().valueOfStatistic(Enums::CharacterStats::SignetsOfLearningEaten) < Enums::CharacterStats::SignetsOfLearningMax)
         {
-            QAction *actionEatSignetOfLearning = new QAction(tr("Eat signet (%n free stat(s))", 0, statsFromSignet), _itemsView);
-//            actionEatSignetOfLearning->setShortcut(QKeySequence("Alt+E"));
-            actionEatSignetOfLearning->setData(statsFromSignet);
-            connect(actionEatSignetOfLearning, SIGNAL(triggered()), SLOT(eatSelectedSignet()));
-            actions << actionEatSignetOfLearning;
+            quint8 statsFromSignet = 0;
+            QRegExp customSignetRegExp("(\\d\\d)\\^");
+            if (isSignetOfLearning(item))
+                statsFromSignet = 1;
+            else if (customSignetRegExp.exactMatch(item->itemType))
+                statsFromSignet = customSignetRegExp.cap(1).toUShort();
+            else if (item->itemType == "zk#")
+                statsFromSignet = 5;
+            else if (item->itemType == "zke" || item->itemType == "zky")
+                statsFromSignet = 25;
+            if (statsFromSignet)
+            {
+                QAction *actionEatSignetOfLearning = new QAction(tr("Eat signet (%n free stat(s))", 0, statsFromSignet), _itemsView);
+                actionEatSignetOfLearning->setData(statsFromSignet);
+                connect(actionEatSignetOfLearning, SIGNAL(triggered()), SLOT(eatSelectedSignet()));
+                actions << actionEatSignetOfLearning;
+            }
         }
 
-        // eat signet of skill
-//        if (item->itemType == "!@B")
-//        {
-//            QAction *actionEatSignetOfSkill = new QAction(tr("Eat signet (1 free skill)"), _itemsView);
-////            actionEatSignetOfSkill->setShortcut(QKeySequence("Alt+E"));
-//            connect(actionEatSignetOfSkill, SIGNAL(triggered()), SLOT(eatSelectedSignet()));
-//            actions << actionEatSignetOfSkill;
-//        }
-
         actions << separator() << _itemActions[Delete];
-
         QMenu::exec(actions, _itemsView->mapToGlobal(pos));
     }
 }
@@ -321,8 +332,13 @@ void ItemsPropertiesSplitter::eatSelectedSignet()
         return;
     }
 
+    uint signetsToEat = senderAction->data().toUInt(), signetsEaten = CharacterInfo::instance().valueOfStatistic(Enums::CharacterStats::SignetsOfLearningEaten);
+    const int signetsMax = Enums::CharacterStats::SignetsOfLearningMax;
+    if (signetsEaten + signetsToEat > signetsMax)
+        if (QUESTION_BOX_YESNO(tr("You're going to eat %n signet(s), which is beyond the limit (%1) by %2.\nDo you really want to do it?", 0, signetsToEat).arg(signetsMax).arg(signetsEaten + signetsToEat - signetsMax), QMessageBox::No) == QMessageBox::No)
+            return;
     deleteItem(selectedItem());
-    emit signetsOfLearningEaten(senderAction->data().toUInt());
+    emit signetsOfLearningEaten(signetsToEat);
 }
 
 //void ItemsPropertiesSplitter::unsocketItem()
@@ -430,7 +446,7 @@ void ItemsPropertiesSplitter::disenchantAllItems(bool toShards, bool upgradeToCr
     ItemInfo *disenchantedItem = ItemDataBase::loadItemFromFile(toShards ? "arcane_shard" : "signet_of_learning");
     ItemsList &items = pItems ? *pItems : _allItems;
     quint32 disenchantedItemsNumber = 0;
-    int signetsEaten = 0, signetsEatenTotal = CharacterInfo::instance().basicInfo.statsDynamicData.property("SignetsOfLearningEaten").toInt();
+    int signetsEaten = 0, signetsEatenTotal = CharacterInfo::instance().valueOfStatistic(Enums::CharacterStats::SignetsOfLearningEaten);
     foreach (ItemInfo *item, items)
     {
         if ((item->quality == Enums::ItemQuality::Unique && includeUniques) || (item->quality == Enums::ItemQuality::Set && includeSets))
@@ -673,25 +689,9 @@ bool ItemsPropertiesSplitter::upgradeItemsInMap(UpgradableItemsMultiMap &itemsMa
 
 void ItemsPropertiesSplitter::upgradeGems(ItemsList *pItems /*= 0*/)
 {
-    const quint8 kPerfectGrade = 4;
-    const QByteArray kPerfectGradeBytes = QByteArray::number(kPerfectGrade);
-
-    QMultiHash<QByteArray, ItemInfo *> allGems;
-    ItemsList &items_ = pItems ? *pItems : _allItems;
-    foreach (ItemInfo *item, items_)
-    {
-        QList<QByteArray> types = ItemDataBase::Items()->value(item->itemType)->types;  // first value is gem type, second value is gem grade
-        if (types.at(0).startsWith("gem") && !types.at(1).endsWith(kPerfectGradeBytes)) // exclude prefect gems
-            allGems.insertMulti(types.at(0), item);
-    }
-
-    foreach (const QByteArray &gemType, allGems.uniqueKeys())
-    {
-        UpgradableItemsMultiMap gemsMap;
-        foreach (ItemInfo *gem, allGems.values(gemType))
-            gemsMap.insertMulti(ItemDataBase::Items()->value(gem->itemType)->types.at(1).right(1).toUShort(), gem);
-        upgradeItemsInMap(gemsMap, kPerfectGrade, QString("gems/%1%2").arg(gemType.constData()).arg("%1"));
-    }
+    QHash<QByteArray, UpgradableItemsMultiMap> gemsMapsHash = getGemsMapsFromItems(pItems ? *pItems : _allItems);
+    for (QHash<QByteArray, UpgradableItemsMultiMap>::iterator iter = gemsMapsHash.begin(); iter != gemsMapsHash.end(); ++iter)
+        upgradeItemsInMap(iter.value(), kPerfectGrade, QString("gems/%1%2").arg(iter.key().constData()).arg("%1"));
 
     emit itemsChanged();
     emit itemCountChanged(_allItems.size());
@@ -699,9 +699,40 @@ void ItemsPropertiesSplitter::upgradeGems(ItemsList *pItems /*= 0*/)
 
 void ItemsPropertiesSplitter::upgradeRunes(ItemsList *pItems /*= 0*/)
 {
+    if (upgradeItemsInMap(getRunesMapFromItems(pItems ? *pItems : _allItems), kOnRuneKey, "runes/r%1"))
+    {
+        emit itemsChanged();
+        emit itemCountChanged(_allItems.size());
+    }
+}
+
+QHash<QByteArray, UpgradableItemsMultiMap> ItemsPropertiesSplitter::getGemsMapsFromItems(const ItemsList &items)
+{
+    const QByteArray kPerfectGradeBytes = QByteArray::number(kPerfectGrade);
+
+    QMultiHash<QByteArray, ItemInfo *> allGems;
+    foreach (ItemInfo *item, items)
+    {
+        QList<QByteArray> types = ItemDataBase::Items()->value(item->itemType)->types;  // first value is gem type, second value is gem grade
+        if (types.at(0).startsWith("gem") && !types.at(1).endsWith(kPerfectGradeBytes)) // exclude prefect gems
+            allGems.insertMulti(types.at(0), item);
+    }
+
+    QHash<QByteArray, UpgradableItemsMultiMap> gemsMapsHash;
+    foreach (const QByteArray &gemType, allGems.uniqueKeys())
+    {
+        UpgradableItemsMultiMap gemsMap;
+        foreach (ItemInfo *gem, allGems.values(gemType))
+            gemsMap.insertMulti(ItemDataBase::Items()->value(gem->itemType)->types.at(1).right(1).toUShort(), gem);
+        gemsMapsHash[gemType] = gemsMap;
+    }
+    return gemsMapsHash;
+}
+
+UpgradableItemsMultiMap ItemsPropertiesSplitter::getRunesMapFromItems(const ItemsList &items)
+{
     UpgradableItemsMultiMap runesMap;
-    ItemsList &items_ = pItems ? *pItems : _allItems;
-    foreach (ItemInfo *item, items_)
+    foreach (ItemInfo *item, items)
     {
         if (runeRegExp.exactMatch(item->itemType))
         {
@@ -710,12 +741,7 @@ void ItemsPropertiesSplitter::upgradeRunes(ItemsList *pItems /*= 0*/)
                 runesMap.insertMulti(runeKey, item);
         }
     }
-
-    if (upgradeItemsInMap(runesMap, kOnRuneKey, "runes/r%1"))
-    {
-        emit itemsChanged();
-        emit itemCountChanged(_allItems.size());
-    }
+    return runesMap;
 }
 
 void ItemsPropertiesSplitter::createItemActions()

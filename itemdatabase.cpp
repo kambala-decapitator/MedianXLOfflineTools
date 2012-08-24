@@ -656,5 +656,12 @@ bool ItemDataBase::canDisenchantIntoSignetOfLearning(ItemInfo *item)
 
 bool ItemDataBase::canDisenchant(ItemInfo *item)
 {
-    return item && item->location == Enums::ItemLocation::Stored && ((item->quality == Enums::ItemQuality::Set && Sets()->contains(item->setOrUniqueId)) || (item->quality == Enums::ItemQuality::Unique && !isUberCharm(item) && Uniques()->contains(item->setOrUniqueId)));
+    if (item && item->location == Enums::ItemLocation::Stored && (item->quality == Enums::ItemQuality::Set || item->quality == Enums::ItemQuality::Unique))
+    {
+        static const QList<QByteArray> kDisenchantableItemTypes = QList<QByteArray>() << "weap" << "armo" << "amul" << "ring" << "misl" << "jew";
+        QList<QByteArray> itemTypes = Items()->value(item->itemType)->types;
+        // actually, it's possible to use the same condition for Ultimative, but using just one item type is quicker
+        return isUltimative() ? ItemParser::itemTypesInheritFromType(itemTypes, "dcht") : ItemParser::itemTypesInheritFromTypes(itemTypes, kDisenchantableItemTypes);
+    }
+    return false;
 }
