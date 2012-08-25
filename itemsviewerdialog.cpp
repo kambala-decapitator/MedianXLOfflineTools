@@ -33,7 +33,7 @@ const int ItemsViewerDialog::kCellSize = 32;
 ItemsViewerDialog::ItemsViewerDialog(const QHash<int, bool> &plugyStashesExistenceHash, QWidget *parent) : QDialog(parent), _tabWidget(new QTabWidget(this)), _itemManagementWidget(new QWidget(this))
 {
     setAttribute(Qt::WA_DeleteOnClose);
-    setWindowFlags(windowFlags() & ~Qt::WindowContextHelpButtonHint);
+    setWindowFlags(windowFlags() & ~Qt::WindowContextHelpButtonHint | Qt::WindowMinimizeButtonHint | Qt::WindowMaximizeButtonHint);
 
     KExpandableGroupBox *expandableBox = new KExpandableGroupBox(tr("Item management"), this);
     expandableBox->setAnimateExpansion(false);
@@ -68,7 +68,7 @@ ItemsViewerDialog::ItemsViewerDialog(const QHash<int, bool> &plugyStashesExisten
         if (isPlugyStorageIndex(i))
             connect(static_cast<PlugyItemsSplitter *>(splitter), SIGNAL(pageChanged()), SLOT(updateButtonsState()));
     }
-    updateItems(plugyStashesExistenceHash);
+    updateItems(plugyStashesExistenceHash, true);
 
     for (int i = GearIndex; i <= LastIndex; ++i)
     {
@@ -219,11 +219,13 @@ void ItemsViewerDialog::itemCountChangedInCurrentTab(int newCount)
 
 void ItemsViewerDialog::itemCountChangedInTab(int tabIndex, int newCount)
 {
-    QString newTabTitle = isPlugyStorageIndex(tabIndex) ? QString(" (%1/%2)").arg(splitterAtIndex(tabIndex)->itemsModel()->itemCount()).arg(newCount) : QString(" (%1)").arg(newCount);
-    _tabWidget->setTabText(tabIndex, tabNameAtIndex(tabIndex) + newTabTitle);
+    QString newTabTitle = tabNameAtIndex(tabIndex);
+    if (tabIndex == GearIndex)
+        newTabTitle += " - " + static_cast<GearItemsSplitter *>(_tabWidget->widget(tabIndex))->currentGearTitle();
+    _tabWidget->setTabText(tabIndex, newTabTitle + (isPlugyStorageIndex(tabIndex) ? QString(" (%1/%2)").arg(splitterAtIndex(tabIndex)->itemsModel()->itemCount()).arg(newCount) : QString(" (%1)").arg(newCount)));
 }
 
-void ItemsViewerDialog::updateItems(const QHash<int, bool> &plugyStashesExistenceHash)
+void ItemsViewerDialog::updateItems(const QHash<int, bool> &plugyStashesExistenceHash, bool isCreatingTabs)
 {
     _itemsTotal = 0;
     for (int i = GearIndex; i <= LastIndex; ++i)
@@ -297,10 +299,15 @@ void ItemsViewerDialog::updateItems(const QHash<int, bool> &plugyStashesExistenc
             updateBeltItemsCoordinates(false, &beltItems);
             items += beltItems;
         }
-        splitterAtIndex(i)->setItems(items);
-
-        if (!isGearTab) // itemCountChanged() signal is sent from GearItemsSplitter when setItems() is called
+        
+        // itemCountChanged() signal is sent from GearItemsSplitter::setItems() -> updateItemsForCurrentGear()
+        if (isGearTab)
+            static_cast<GearItemsSplitter *>(_tabWidget->widget(i))->setItems(items, isCreatingTabs);
+        else
+        {
+            splitterAtIndex(i)->setItems(items);
             itemCountChangedInTab(i, items.size());
+        }
         _itemsTotal += items.size();
     }
 
@@ -386,6 +393,7 @@ void ItemsViewerDialog::disenchantAllItems()
     bool toShards = sender() == _disenchantToShardsButton, areUniquesSelected = _uniquesRadioButton->isChecked(), areSetsSelected = _setsRadioButton->isChecked();
     if (_bothQualitiesRadioButton->isChecked())
         areUniquesSelected = areSetsSelected = true;
+    // TODO: show dialog with item names and checkboxes
     currentSplitter()->disenchantAllItems(toShards, _upgradeToCrystalsCheckbox->isChecked(), _eatSignetsCheckbox->isChecked(), areUniquesSelected, areSetsSelected);
     if (toShards || !isUltimative())
     {

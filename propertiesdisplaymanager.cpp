@@ -185,7 +185,7 @@ void PropertiesDisplayManager::addProperties(PropertiesMap *mutableProps, const 
             }
         }
         if (!shouldNotAddNewProp)
-            mutableProps->insertMulti(propId, iter.value());
+            mutableProps->insertMulti(propId, new ItemProperty(*iter.value())); // we need a copy
     }
 }
 
@@ -207,8 +207,10 @@ void PropertiesDisplayManager::constructPropertyStrings(const PropertiesMap &pro
 
         QString displayString = prop->displayString.isEmpty() ? propertyDisplay(prop, propId, shouldColor) : prop->displayString;
         if (!displayString.isEmpty())
-            propsDisplayMap.insertMulti(ItemDataBase::Properties()->value(propId)->descPriority,
-            ItemPropertyDisplay(displayString, ItemDataBase::Properties()->value(propId)->descPriority, propId));
+        {
+            quint8 descPriority = ItemDataBase::Properties()->value(propId)->descPriority;
+            propsDisplayMap.insertMulti(descPriority, ItemPropertyDisplay(displayString, descPriority, propId));
+        }
     }
 
     // group properties

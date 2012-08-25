@@ -51,11 +51,13 @@ bool isArcaneShard(ItemInfo *item);
 bool isSignetOfLearning(ItemInfo *item);
 // for Ultimative
 bool isCharacterOrb(const QByteArray &itemType);
-bool isSunstoneOfElements(const QByteArray &itemType);
-bool isCharacterOrbOrSunstoneOfElements(const QByteArray &itemType);
 bool isCharacterOrb(ItemInfo *item);
+bool isSunstoneOfElements(const QByteArray &itemType);
 bool isSunstoneOfElements(ItemInfo *item);
+bool isCharacterOrbOrSunstoneOfElements(const QByteArray &itemType);
 bool isCharacterOrbOrSunstoneOfElements(ItemInfo *item);
+bool isTradersChest(ItemInfo *item);
+bool isTradersChest(const QByteArray &itemType);
 bool isArcaneShard2(ItemInfo *item);
 bool isArcaneShard3(ItemInfo *item);
 bool isArcaneShard4(ItemInfo *item);

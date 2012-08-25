@@ -17,7 +17,7 @@ public:
     SkillplanDialog(QWidget *parent = 0);
     virtual ~SkillplanDialog() {}
 
-    static void loadModVersion();
+    static bool didModVersionChange();
     static const QString &modVersionReadable() { return _modVersionReadable; }
     static const QString &modVersionPlanner()  { return _modVersionPlanner;  }
 

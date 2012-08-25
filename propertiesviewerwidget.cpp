@@ -47,11 +47,11 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
 
     renderHtml(ui.itemAndMysticOrbsTextEdit, collectMysticOrbsDataFromProps(&_itemMysticOrbs, item->props, item->itemType));
 
-    PropertiesMap allProps;
-    PropertiesMap::const_iterator constIter = item->props.constBegin();
+    PropertiesMultiMap allProps;
+    PropertiesMultiMap::const_iterator constIter = item->props.constBegin();
     while (constIter != item->props.constEnd())
     {
-        allProps[constIter.key()] = new ItemProperty(*constIter.value()); // original values mustn't be modified
+        allProps.insertMulti(constIter.key(), new ItemProperty(*constIter.value())); // original values mustn't be modified
         ++constIter;
     }
 
@@ -61,15 +61,22 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
         PropertiesDisplayManager::addProperties(&allProps, item->rwProps);
     }
 
-    bool isClassCharm = ItemDataBase::isClassCharm(item);
-    PropertiesMap::iterator iter = allProps.begin();
+    bool isClassCharm = ItemDataBase::isClassCharm(item), isTradersChest_ = isTradersChest(item);
+    PropertiesMultiMap::iterator iter = allProps.begin();
     while (iter != allProps.end())
     {
         if (ItemDataBase::MysticOrbs()->contains(iter.key()))
         {
+            // !!!: add custom text for charms that use MO codes here
             if (isClassCharm)
             {
                 PropertiesDisplayManager::addChallengeNamesToClassCharm(iter);
+                ++iter;
+            }
+            else if (isTradersChest_)
+            {
+                ItemProperty *prop = iter.value();
+                prop->displayString = QString("[%1]").arg(tr("%1 gems used", "for Trader's Chest").arg(prop->value));
                 ++iter;
             }
             else
@@ -180,7 +187,7 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
     if (ItemParser::itemTypesInheritFromTypes(itemBase->types, PropertiesDisplayManager::kDamageToUndeadTypes))
     {
         if (allProps.contains(Enums::ItemProperties::DamageToUndead))
-            allProps[Enums::ItemProperties::DamageToUndead]->value += 50;
+            allProps.value(Enums::ItemProperties::DamageToUndead)->value += 50;
         else
             shouldAddDamageToUndeadInTheBottom = true;
     }
@@ -393,7 +400,7 @@ QString PropertiesViewerWidget::collectMysticOrbsDataFromProps(QSet<int> *moSet,
     {
         if (ItemDataBase::MysticOrbs()->contains(iter.key()))
         {
-            if (!ItemDataBase::isClassCharm(itemType) && !isCharacterOrbOrSunstoneOfElements(itemType))
+            if (!ItemDataBase::isClassCharm(itemType) && !isCharacterOrbOrSunstoneOfElements(itemType) && !isTradersChest(itemType))
                 moSet->insert(iter.key());
             iter = propsWithoutMO.erase(iter);
         }

@@ -367,7 +367,7 @@ PropertiesMultiMap ItemParser::parseItemProperties(ReverseBitReader &bitReader, 
             }
 
             if (id == 83)
-                propToAdd->displayString = tr("+%1 to %2 Skill Levels", "+x to class skills").arg(propToAdd->value).arg(Enums::ClassName::classes().at(propToAdd->param));
+                propToAdd->displayString = tr("+%1 to %2 Skill Levels", "+x to class skills").arg(propToAdd->value).arg(propToAdd->param < Enums::ClassName::classes().size() ? Enums::ClassName::classes().at(propToAdd->param) : "WTF");
             else if (id == 97 || id == 107)
             {
                 SkillInfo *skill = ItemDataBase::Skills()->at(propToAdd->param);
@@ -380,6 +380,8 @@ PropertiesMultiMap ItemParser::parseItemProperties(ReverseBitReader &bitReader, 
                 propToAdd->displayString = tr("Level %1 %2 (%3/%4 Charges)").arg(propToAdd->param &  63).arg(ItemDataBase::Skills()->value(propToAdd->param >> 6)->name)
                                                                            .arg(propToAdd->value & 255).arg(propToAdd->value >> 8);
             }
+            else if (id == Enums::ItemProperties::ItemDuped)
+                propToAdd->displayString = QString("[%1]").arg(tr("duped"));
             else if (txtProperty->descPositive.startsWith('%')) // ctc
             {
                 QString desc = txtProperty->descPositive;

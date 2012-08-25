@@ -26,7 +26,7 @@ GearItemsSplitter::GearItemsSplitter(ItemStorageTableView *itemsView, QWidget *p
     connect(_button2, SIGNAL(clicked()), SLOT(changeGear()));
 }
 
-void GearItemsSplitter::setItems(const ItemsList &newItems)
+void GearItemsSplitter::setItems(const ItemsList &newItems, bool isCreatingTab /*= false*/)
 {
     _allItems = newItems;
     _gearItems[CharacterNameIndex]  = ItemDataBase::itemsStoredIn(Enums::ItemStorage::NotInStorage, Enums::ItemLocation::Equipped, 0, &_allItems);
@@ -34,13 +34,15 @@ void GearItemsSplitter::setItems(const ItemsList &newItems)
     _gearItems[MercenaryNameIndex]  = ItemDataBase::itemsStoredIn(Enums::ItemStorage::NotInStorage, Enums::ItemLocation::Merc,     0, &_allItems);
     _gearItems[CorpseNameIndex]     = ItemDataBase::itemsStoredIn(Enums::ItemStorage::NotInStorage, Enums::ItemLocation::Corpse,   0, &_allItems);
 
-    // TODO: correctly update buttons state when other character is loaded
-    if (_button1->text().isEmpty())
+    if (isCreatingTab)
     {
-        changeButtonText(_button1, MercenaryNameIndex);
-        _button1->setEnabled(CharacterInfo::instance().mercenary.exists);
-        changeButtonText(_button2, CorpseNameIndex);
-        _button2->setDisabled(_gearItems[CorpseNameIndex].isEmpty());
+        changeButtonText(_button1, _currentGearButtonNameIndex == MercenaryNameIndex ? CharacterNameIndex : MercenaryNameIndex);
+        if (_currentGearButtonNameIndex != MercenaryNameIndex)
+            _button1->setEnabled(CharacterInfo::instance().mercenary.exists);
+
+        changeButtonText(_button2, _currentGearButtonNameIndex == CorpseNameIndex ? CharacterNameIndex : CorpseNameIndex);
+        if (_currentGearButtonNameIndex != CorpseNameIndex)
+            _button2->setDisabled(_gearItems[CorpseNameIndex].isEmpty());
     }
 
     updateItemsForCurrentGear();

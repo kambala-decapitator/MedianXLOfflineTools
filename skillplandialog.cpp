@@ -15,7 +15,7 @@ static const QString kBaseUrl("http://www.authmann.de/d2/mxl/skillpointplanner/?
 QString SkillplanDialog::_modVersionReadable;
 QString SkillplanDialog::_modVersionPlanner;
 
-void SkillplanDialog::loadModVersion()
+bool SkillplanDialog::didModVersionChange()
 {
     QFile f(ResourcePathManager::dataPathForFileName("version.txt"));
     if (f.open(QIODevice::ReadOnly | QIODevice::Text))
@@ -33,10 +33,21 @@ void SkillplanDialog::loadModVersion()
             }
         }
     }
+
     if (_modVersionReadable.isEmpty())
         _modVersionReadable = kDefaultModVersionReadable;
     if (_modVersionPlanner.isEmpty())
         _modVersionPlanner = kDefaultModVersionPlanner;
+
+    QSettings settings;
+    QVariant lastUsedModVersion = settings.value("lastUsedModVersion");
+    if (lastUsedModVersion.toString() != _modVersionReadable)
+    {
+        settings.setValue("lastUsedModVersion", _modVersionReadable);
+        if (lastUsedModVersion.isValid())
+            return true;
+    }
+    return false;
 }
 
 SkillplanDialog::SkillplanDialog(QWidget *parent) : QDialog(parent)

@@ -41,7 +41,7 @@
 // additional defines
 
 #ifdef QT_NO_DEBUG
-#define RELEASE_DATE "25.08.2012" // TODO: don't forget to change
+#define RELEASE_DATE "26.08.2012" // TODO: don't forget to change
 #else
 #include <QDebug>
 
@@ -92,7 +92,7 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *pare
     _backupLimitsGroup->addAction(ui.actionBackups10);
     _backupLimitsGroup->addAction(ui.actionBackupsUnlimited);
 
-    ui.actionBackupFormatReadable->setText(tr("<filename>_<%1>", "param is date format expressed in yyyy, MM, hh, etc.").arg(kTimeFormatReadable) + "." + kBackupExtension);
+    ui.actionBackupFormatReadable ->setText(tr("<filename>_<%1>", "param is date format expressed in yyyy, MM, hh, etc.").arg(kTimeFormatReadable) + "." + kBackupExtension);
     ui.actionBackupFormatTimestamp->setText(tr("<filename>_<UNIX timestamp>") + "." + kBackupExtension);
 
     _backupFormatsGroup->setExclusive(true);
@@ -151,10 +151,9 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *pare
     QTimer::singleShot(500, this, SLOT(moveUpdateActionToAppleMenu())); // needs a slight delay to create menu
 #endif
 
-//    ui.actionLoadLastUsedCharacter->setChecked(false); // useful if you're lazy to open the Windows registry or Mac OS X preferences
     if (!cmdPath.isEmpty())
         loadFile(cmdPath);
-    else if (ui.actionLoadLastUsedCharacter->isChecked() && !_recentFilesList.isEmpty())
+    else if (ui.actionLoadLastUsedCharacter->isChecked() && !_recentFilesList.isEmpty() && !SkillplanDialog::didModVersionChange())
         loadFile(_recentFilesList.at(0));
     else
     {
@@ -206,7 +205,7 @@ bool MedianXLOfflineTools::loadFile(const QString &charPath)
 
         if (_itemsDialog)
         {
-            _itemsDialog->updateItems(getPlugyStashesExistenceHash());
+            _itemsDialog->updateItems(getPlugyStashesExistenceHash(), true);
             _itemsDialog->updateButtonsState();
         }
         if (_itemsDialog || ui.actionOpenItemsAutomatically->isChecked())
@@ -893,6 +892,8 @@ void MedianXLOfflineTools::showItems(bool activate /*= true*/)
 {
     if (_itemsDialog)
     {
+        if (_itemsDialog->isMinimized())
+            _itemsDialog->isMaximized() ? _itemsDialog->showMaximized() : _itemsDialog->showNormal(); // this is not a mistake: window can indeed be minimized and maximized at the same time
         if (activate)
             _itemsDialog->activateWindow();
     }
@@ -967,7 +968,7 @@ void MedianXLOfflineTools::giveCube()
     CharacterInfo::instance().items.character += cube;
 
     if (_itemsDialog)
-        _itemsDialog->updateItems(plugyStashesExistenceHash);
+        _itemsDialog->updateItems(plugyStashesExistenceHash, false);
 
     ui.actionGiveCube->setDisabled(true);
     setModified(true);
@@ -1071,7 +1072,6 @@ void MedianXLOfflineTools::loadData()
     loadExpTable();
     loadMercNames();
     loadBaseStats();
-    SkillplanDialog::loadModVersion();
 }
 
 void MedianXLOfflineTools::loadExpTable()
@@ -2684,6 +2684,7 @@ void MedianXLOfflineTools::checkForUpdateFromUrl(const QUrl &url)
 {
     _qnam = new QNetworkAccessManager;
     connect(_qnam, SIGNAL(finished(QNetworkReply *)), SLOT(networkReplyFinished(QNetworkReply *)));
+    qApp->processEvents(); // prevents from freezing UI
     _qnam->get(QNetworkRequest(url));
 }
 

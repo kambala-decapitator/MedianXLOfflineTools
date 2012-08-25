@@ -279,6 +279,9 @@
     <ClCompile Include="GeneratedFiles\Template\moc_kexpandablegroupbox.cpp">
       <Filter>Generated Files\Template</Filter>
     </ClCompile>
+    <ClCompile Include="kexpandablegroupbox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="helpers.h">
@@ -444,9 +447,6 @@
     </CustomBuild>
     <CustomBuild Include="kexpandablegroupbox.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="kexpandablegroupbox.cpp">
-      <Filter>Source Files</Filter>
     </CustomBuild>
     <CustomBuild Include="GeneratedFiles\Debug\kexpandablegroupbox.moc">
       <Filter>Generated Files\Debug</Filter>

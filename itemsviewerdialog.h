@@ -44,7 +44,7 @@ public:
     explicit ItemsViewerDialog(const QHash<int, bool> &plugyStashesExistenceHash, QWidget *parent = 0);
     virtual ~ItemsViewerDialog() {}
 
-    void updateItems(const QHash<int, bool> &plugyStashesExistenceHash);
+    void updateItems(const QHash<int, bool> &plugyStashesExistenceHash, bool isCreatingTabs);
     void showItem(ItemInfo *item);
 
     void saveSettings();

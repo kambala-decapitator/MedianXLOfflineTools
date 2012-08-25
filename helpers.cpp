@@ -176,19 +176,14 @@ bool isCharacterOrb(const QByteArray &itemType)
     return itemType == ">.<";
 }
 
-bool isSunstoneOfElements(const QByteArray &itemType)
-{
-    return itemType == "x#x";
-}
-
-bool isCharacterOrbOrSunstoneOfElements(const QByteArray &itemType)
-{
-    return isSunstoneOfElements(itemType) || isCharacterOrb(itemType);
-}
-
 bool isCharacterOrb(ItemInfo *item)
 {
     return isCharacterOrb(item->itemType);
+}
+
+bool isSunstoneOfElements(const QByteArray &itemType)
+{
+    return itemType == "x#x";
 }
 
 bool isSunstoneOfElements(ItemInfo *item)
@@ -196,9 +191,24 @@ bool isSunstoneOfElements(ItemInfo *item)
     return isSunstoneOfElements(item->itemType);
 }
 
+bool isCharacterOrbOrSunstoneOfElements(const QByteArray &itemType)
+{
+    return isSunstoneOfElements(itemType) || isCharacterOrb(itemType);
+}
+
 bool isCharacterOrbOrSunstoneOfElements(ItemInfo *item)
 {
     return isCharacterOrbOrSunstoneOfElements(item->itemType);
+}
+
+bool isTradersChest(const QByteArray &itemType)
+{
+    return itemType == "`^`";
+}
+
+bool isTradersChest(ItemInfo *item)
+{
+    return isTradersChest(item->itemType);
 }
 
 bool isArcaneShard2(ItemInfo *item)

@@ -19,7 +19,8 @@ public:
     explicit GearItemsSplitter(ItemStorageTableView *itemsView, QWidget *parent = 0);
     virtual ~GearItemsSplitter() {}
 
-    virtual void setItems(const ItemsList &newItems);
+    virtual void setItems(const ItemsList &newItems, bool isCreatingTab = false);
+    const QString &currentGearTitle() const { return kButtonNames.at(_currentGearButtonNameIndex); }
 
 protected:
     virtual void removeItemFromList(ItemInfo *item, bool emitSignal = true);

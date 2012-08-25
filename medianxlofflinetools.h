@@ -124,6 +124,7 @@ private:
 
     // the following group of methods is Windows 7 specific
 #ifdef Q_WS_WIN32
+    PCWSTR  appUserModelID();
     void setAppUserModelID();
     void syncWindowsTaskbarRecentFiles();
     void removeFromWindowsRecentFiles(const QString &filePath);

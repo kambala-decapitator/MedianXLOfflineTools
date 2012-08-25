@@ -15,12 +15,11 @@ typedef HRESULT (__stdcall *PSHCIFPN)(PCWSTR, IBindCtx *, const IID &, void **);
 #endif
 
 
-PCWSTR appUserModelID()
+PCWSTR MedianXLOfflineTools::appUserModelID()
 {
-    static const QString progId = FileAssociationManager::progIdForExtension(MedianXLOfflineTools::kCharacterExtensionWithDot);
+    static const QString progId = FileAssociationManager::progIdForExtension(kCharacterExtensionWithDot);
     return progId.utf16();
 }
-
 
 void MedianXLOfflineTools::setAppUserModelID()
 {
@@ -127,16 +126,13 @@ void MedianXLOfflineTools::addToWindowsRecentFiles(const QString &filePath)
     if (pSHCreateItemFromParsingName)
     {
         IShellItem *pShellItem;
-        HRESULT hr = pSHCreateItemFromParsingName(nativeFilePath.utf16(), NULL, IID_PPV_ARGS(&pShellItem));
-        if (SUCCEEDED(hr))
+        if (SUCCEEDED(pSHCreateItemFromParsingName(nativeFilePath.utf16(), NULL, IID_PPV_ARGS(&pShellItem))))
         {
             SHARDAPPIDINFO info;
             info.psi = pShellItem;
             info.pszAppID = appUserModelID();
-            SHAddToRecentDocs(SHARD_APPIDINFO, &info);
+            ::SHAddToRecentDocs(SHARD_APPIDINFO, &info);
         }
-        else
-            qDebug("Error calling SHCreateItemFromParsingName(): %d", HRESULT_CODE(hr));
     }
     else
 #endif

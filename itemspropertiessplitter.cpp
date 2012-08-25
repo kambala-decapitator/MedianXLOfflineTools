@@ -50,17 +50,18 @@ void ItemsPropertiesSplitter::itemSelected(const QModelIndex &index, bool displa
     ItemInfo *item = _itemsModel->itemAtIndex(index);
     if (display)
         _propertiesWidget->showItem(item);
-//    if (item)
-//    {
-//        ItemBase *base = ItemDataBase::Items()->value(item->itemType);
-//        qDebug() << item->itemType << base->types;
-//    }
+    // !!!: display info about selected item to console
+    //if (item)
+    //{
+    //    ItemBase *base = ItemDataBase::Items()->value(item->itemType);
+    //    qDebug() << item->itemType << base->types;
+    //}
 
     // correctly disable hotkeys
     _itemActions[DisenchantShards]->setEnabled(ItemDataBase::canDisenchantIntoArcaneShards(item));
     _itemActions[DisenchantSignet]->setEnabled(ItemDataBase::canDisenchantIntoSignetOfLearning(item));
     // in Ultimative, Character Orb and Sunstone of Elements use same stat IDs as MOs, but those can't be removed
-    _itemActions[RemoveMO]->setEnabled(_propertiesWidget->hasMysticOrbs() && !(isUltimative() && isCharacterOrbOrSunstoneOfElements(item)));
+    _itemActions[RemoveMO]->setEnabled(_propertiesWidget->hasMysticOrbs() && !(isUltimative() && isCharacterOrbOrSunstoneOfElements(item) && isTradersChest(item)));
 }
 
 void ItemsPropertiesSplitter::moveItem(const QModelIndex &newIndex, const QModelIndex &oldIndex)
@@ -176,7 +177,7 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
         //menuExport->addActions(QList<QAction *>() << _itemActions[ExportBbCode] << _itemActions[ExportHtml]);
         //actions << menuExport->menuAction() << separator();
 
-        if (_itemActions[DisenchantShards]->isEnabled())
+        if (_itemActions[DisenchantShards]->isEnabled() || _itemActions[DisenchantSignet]->isEnabled())
         {
             QMenu *menuDisenchant = new QMenu(tr("Disenchant into"), _itemsView);
             if (_itemActions[DisenchantSignet]->isEnabled())
