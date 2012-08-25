@@ -35,4 +35,7 @@ void ExperienceIndicatorGroupBox::setCurrentExperience(quint32 exp)
 void ExperienceIndicatorGroupBox::reset()
 {
     _progressBar->reset();
+#ifdef Q_WS_MACX
+    _progressBar->setStatusTip(QString());
+#endif
 }

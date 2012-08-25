@@ -700,7 +700,8 @@ void ItemsPropertiesSplitter::upgradeGems(ItemsList *pItems /*= 0*/)
 
 void ItemsPropertiesSplitter::upgradeRunes(ItemsList *pItems /*= 0*/)
 {
-    if (upgradeItemsInMap(getRunesMapFromItems(pItems ? *pItems : _allItems), kOnRuneKey, "runes/r%1"))
+    UpgradableItemsMultiMap runesMap = getRunesMapFromItems(pItems ? *pItems : _allItems);
+    if (upgradeItemsInMap(runesMap, kOnRuneKey, "runes/r%1"))
     {
         emit itemsChanged();
         emit itemCountChanged(_allItems.size());

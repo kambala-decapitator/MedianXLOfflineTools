@@ -151,9 +151,10 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *pare
     QTimer::singleShot(500, this, SLOT(moveUpdateActionToAppleMenu())); // needs a slight delay to create menu
 #endif
 
+    bool didModVersionChange = SkillplanDialog::didModVersionChange(); // must be called before the following conditions because it should load planner/readable versions
     if (!cmdPath.isEmpty())
         loadFile(cmdPath);
-    else if (ui.actionLoadLastUsedCharacter->isChecked() && !_recentFilesList.isEmpty() && !SkillplanDialog::didModVersionChange())
+    else if (ui.actionLoadLastUsedCharacter->isChecked() && !_recentFilesList.isEmpty() && !didModVersionChange)
         loadFile(_recentFilesList.at(0));
     else
     {
