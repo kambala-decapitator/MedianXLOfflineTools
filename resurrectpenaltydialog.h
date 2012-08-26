@@ -1,10 +1,10 @@
 #ifndef RESURRECTPENALTYDIALOG_H
 #define RESURRECTPENALTYDIALOG_H
 
-#include "ui_resurrectpenaltydialog.h"
-
 #include <QDialog>
 
+
+namespace Ui { class ResurrectPenaltyDialog; }
 
 class ResurrectPenaltyDialog : public QDialog
 {
@@ -12,7 +12,7 @@ class ResurrectPenaltyDialog : public QDialog
 
 public:
     ResurrectPenaltyDialog(QWidget *parent = 0);
-    virtual ~ResurrectPenaltyDialog() {}
+    virtual ~ResurrectPenaltyDialog() { delete ui; }
 
     static const int kLevelPenalty;
     static const double kStatPenalty, kSkillPenalty;
@@ -28,7 +28,7 @@ public:
     ResurrectionPenalty resurrectionPenalty() const;
 
 private:
-    Ui::ResurrectPenaltyDialog ui;
+    Ui::ResurrectPenaltyDialog *ui;
 };
 
 #endif // RESURRECTPENALTYDIALOG_H

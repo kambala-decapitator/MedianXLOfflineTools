@@ -1,12 +1,16 @@
 #ifndef PROPERTIESVIEWERWIDGET_H
 #define PROPERTIESVIEWERWIDGET_H
 
-#include "ui_propertiesviewerwidget.h"
-
 #include "structs.h"
+
+#include <QSet>
 
 
 class ItemInfo;
+
+namespace Ui { class PropertiesViewerWidget; }
+
+class QTextEdit;
 
 class PropertiesViewerWidget : public QWidget
 {
@@ -14,7 +18,7 @@ class PropertiesViewerWidget : public QWidget
 
 public:
     explicit PropertiesViewerWidget(QWidget *parent = 0);
-    virtual ~PropertiesViewerWidget() {}
+    virtual ~PropertiesViewerWidget() { delete ui; }
 
     void showItem(ItemInfo *item);
     void clear() { showItem(0); }
@@ -29,7 +33,7 @@ public slots:
     void removeMysticOrb();
 
 private:
-    Ui::PropertiesViewerWidget ui;
+    Ui::PropertiesViewerWidget *ui;
     ItemInfo *_item;
     QSet<int> _itemMysticOrbs, _rwMysticOrbs;
 

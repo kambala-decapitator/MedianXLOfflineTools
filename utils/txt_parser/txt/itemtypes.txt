@@ -232,3 +232,4 @@ Sacred Bow	Sky Siege			#bow	bow		0	1	rarm	larm	bowq		0	0	0	0		1	0	0	0	0	0	0	0	1	
 Mass Disenchant	for arcane crystals/shards			dcht			0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
 Sacred Group	for learning signets			ssgl			0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
 Unique Mystic orb	cube reagent			asa#			0	0					0	0	0	0			1	0	0	0	0	0	0	0	3		0		0							misc	0
+Mystic Sword	quest			####	mele		1	1	rarm				0	0	0	0		1	0	0	0	0	0	0	0	0	0		0		0							weap	0

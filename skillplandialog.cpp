@@ -1,4 +1,5 @@
-#include "skillplandialog.h"
+#include    "skillplandialog.h"
+#include "ui_skillplandialog.h"
 #include "resourcepathmanager.hpp"
 #include "characterinfo.hpp"
 #include "itemdatabase.h"
@@ -50,20 +51,20 @@ bool SkillplanDialog::didModVersionChange()
     return false;
 }
 
-SkillplanDialog::SkillplanDialog(QWidget *parent) : QDialog(parent)
+SkillplanDialog::SkillplanDialog(QWidget *parent) : QDialog(parent), ui(new Ui::SkillplanDialog)
 {
-    ui.setupUi(this);
+    ui->setupUi(this);
     setWindowModality(Qt::WindowModal);
     setWindowFlags(windowFlags() & ~Qt::WindowContextHelpButtonHint);
 
-    ui.copyHtmlButton->setObjectName("html");
-    ui.copyBbcodeButton->setObjectName("bbcode");
+    ui->copyHtmlButton->setObjectName("html");
+    ui->copyBbcodeButton->setObjectName("bbcode");
 
-    connect(ui.copyHtmlButton,   SIGNAL(clicked()), SLOT(copyLinkWithTags()));
-    connect(ui.copyBbcodeButton, SIGNAL(clicked()), SLOT(copyLinkWithTags()));
-    connect(ui.buttonBox, SIGNAL(helpRequested()), SLOT(showHelp()));
+    connect(ui->copyHtmlButton,   SIGNAL(clicked()), SLOT(copyLinkWithTags()));
+    connect(ui->copyBbcodeButton, SIGNAL(clicked()), SLOT(copyLinkWithTags()));
+    connect(ui->buttonBox, SIGNAL(helpRequested()), SLOT(showHelp()));
 
-    foreach (QCheckBox *checkBox, QList<QCheckBox *>() << ui.skillQuestsCheckBox << ui.charmsCheckBox << ui.minigamesCheckBox << ui.signetsCheckBox << ui.itemsCheckBox)
+    foreach (QCheckBox *checkBox, QList<QCheckBox *>() << ui->skillQuestsCheckBox << ui->charmsCheckBox << ui->minigamesCheckBox << ui->signetsCheckBox << ui->itemsCheckBox)
         connect(checkBox, SIGNAL(clicked()), SLOT(constructUrls()));
 
     loadSettings();
@@ -74,14 +75,14 @@ SkillplanDialog::SkillplanDialog(QWidget *parent) : QDialog(parent)
 
 void SkillplanDialog::copyLinkWithTags()
 {
-    qApp->clipboard()->setText((sender()->objectName() == QLatin1String("html") ? ui.htmlLinkLineEdit : ui.bbcodeLinkLineEdit)->text());
+    qApp->clipboard()->setText((sender()->objectName() == QLatin1String("html") ? ui->htmlLinkLineEdit : ui->bbcodeLinkLineEdit)->text());
 }
 
 void SkillplanDialog::constructUrls()
 {
     const CharacterInfo &charInfo = CharacterInfo::instance();
     QString skillQuests;
-    if (ui.skillQuestsCheckBox->isChecked())
+    if (ui->skillQuestsCheckBox->isChecked())
     {
         QList<QList<bool> > skillQuestsList = QList<QList<bool> >() << charInfo.questsInfo.denOfEvil << charInfo.questsInfo.radament << charInfo.questsInfo.izual;
         foreach (const QList<bool> &list, skillQuestsList)
@@ -93,7 +94,7 @@ void SkillplanDialog::constructUrls()
 
     QString maxSkillLevelCharms;
     ItemInfo *classCharm = itemOr0(charInfo, isClassCharm);
-    if (ui.charmsCheckBox->isChecked())
+    if (ui->charmsCheckBox->isChecked())
     {
         maxSkillLevelCharms = classCharm ? QString("%1%2").arg(classCharm->props.contains(Enums::ClassCharmChallenges::Ennead)).arg(classCharm->props.contains(Enums::ClassCharmChallenges::BlackRoad)) : "00";
         maxSkillLevelCharms += hasItemBoolString(charInfo, isMoonOfSpider);
@@ -105,10 +106,10 @@ void SkillplanDialog::constructUrls()
     else
         maxSkillLevelCharms = "111111";
 
-    QString maxSkillLevelItems = ui.itemsCheckBox->isChecked() ? hasItemBoolString(charInfo, isDrekavacInGear) + hasItemBoolString(charInfo, isVeneficaInGear) : "11";
+    QString maxSkillLevelItems = ui->itemsCheckBox->isChecked() ? hasItemBoolString(charInfo, isDrekavacInGear) + hasItemBoolString(charInfo, isVeneficaInGear) : "11";
 
     QString minigames;
-    if (ui.minigamesCheckBox->isChecked())
+    if (ui->minigamesCheckBox->isChecked())
     {
         // "1" is Windows in Hell - it was removed in Omega, and bonus transferred to the class charm itself
         minigames = !classCharm ? "0000" : QString("%1%2%3%4").arg(classCharm->props.contains(Enums::ClassCharmChallenges::Countess))
@@ -153,14 +154,14 @@ void SkillplanDialog::constructUrls()
     }
 
     QString url = kBaseUrl.arg(modVersionPlanner()).arg(classCodePlanner).arg(charInfo.basicInfo.level).arg(skillQuests + maxSkillLevelCharms + maxSkillLevelItems, skillStr, minigames, charInfo.basicInfo.newName)
-                          .arg(ui.signetsCheckBox->isChecked() ? charInfo.valueOfStatistic(Enums::CharacterStats::SignetsOfSkillEaten) : Enums::CharacterStats::SignetsOfSkillMax);
+                          .arg(ui->signetsCheckBox->isChecked() ? charInfo.valueOfStatistic(Enums::CharacterStats::SignetsOfSkillEaten) : Enums::CharacterStats::SignetsOfSkillMax);
     QString linkText = QString("%1 %2 (%3, %4)").arg(tr("Skillplan"), charInfo.basicInfo.newName, Enums::ClassName::classes().at(classCode), modVersionReadable());
     QString htmlText = QString("<a href = \"%1\">%2</a>").arg(url, linkText);
     QString bbcodeText = QString("[url=%1]%2[/url]").arg(url, linkText);
 
-    ui.linkLabel->setText(htmlText);
-    ui.htmlLinkLineEdit->setText(htmlText);
-    ui.bbcodeLinkLineEdit->setText(bbcodeText);
+    ui->linkLabel->setText(htmlText);
+    ui->htmlLinkLineEdit->setText(htmlText);
+    ui->bbcodeLinkLineEdit->setText(bbcodeText);
 }
 
 void SkillplanDialog::showHelp()
@@ -180,11 +181,11 @@ void SkillplanDialog::loadSettings()
     QSettings settings;
     settings.beginGroup("skillplanDialog");
 
-    ui.skillQuestsCheckBox->setChecked(settings.value("skillQuests").toBool());
-    ui.charmsCheckBox->setChecked(settings.value("charms").toBool());
-    ui.minigamesCheckBox->setChecked(settings.value("minigames").toBool());
-    ui.signetsCheckBox->setChecked(settings.value("signets").toBool());
-    ui.itemsCheckBox->setChecked(settings.value("items").toBool());
+    ui->skillQuestsCheckBox->setChecked(settings.value("skillQuests").toBool());
+    ui->charmsCheckBox->setChecked(settings.value("charms").toBool());
+    ui->minigamesCheckBox->setChecked(settings.value("minigames").toBool());
+    ui->signetsCheckBox->setChecked(settings.value("signets").toBool());
+    ui->itemsCheckBox->setChecked(settings.value("items").toBool());
 
     settings.endGroup();
 }
@@ -194,11 +195,11 @@ void SkillplanDialog::saveSettings()
     QSettings settings;
     settings.beginGroup("skillplanDialog");
 
-    settings.setValue("skillQuests", ui.skillQuestsCheckBox->isChecked());
-    settings.setValue("charms", ui.charmsCheckBox->isChecked());
-    settings.setValue("minigames", ui.minigamesCheckBox->isChecked());
-    settings.setValue("signets", ui.signetsCheckBox->isChecked());
-    settings.setValue("items", ui.itemsCheckBox->isChecked());
+    settings.setValue("skillQuests", ui->skillQuestsCheckBox->isChecked());
+    settings.setValue("charms", ui->charmsCheckBox->isChecked());
+    settings.setValue("minigames", ui->minigamesCheckBox->isChecked());
+    settings.setValue("signets", ui->signetsCheckBox->isChecked());
+    settings.setValue("items", ui->itemsCheckBox->isChecked());
 
     settings.endGroup();
 }

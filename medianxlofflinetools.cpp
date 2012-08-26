@@ -1,4 +1,5 @@
-#include "medianxlofflinetools.h"
+#include    "medianxlofflinetools.h"
+#include "ui_medianxlofflinetools.h"
 #include "colorsmanager.hpp"
 #include "qd2charrenamer.h"
 #include "helpers.h"
@@ -72,39 +73,39 @@ const int MedianXLOfflineTools::kMaxRecentFiles = 10;
 
 // ctor
 
-MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *parent, Qt::WFlags flags) : QMainWindow(parent, flags), _findItemsDialog(0), _backupLimitsGroup(new QActionGroup(this)), _backupFormatsGroup(new QActionGroup(this)),
-    hackerDetected(tr("1337 hacker detected! Please, play legit.")), //difficulties(QStringList() << tr("Hatred") << tr("Terror") << tr("Destruction")),
+MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *parent, Qt::WFlags flags) : QMainWindow(parent, flags), ui(new Ui::MedianXLOfflineToolsClass), _findItemsDialog(0),
+    _backupLimitsGroup(new QActionGroup(this)), _backupFormatsGroup(new QActionGroup(this)), hackerDetected(tr("1337 hacker detected! Please, play legit.")), //difficulties(QStringList() << tr("Hatred") << tr("Terror") << tr("Destruction")),
     maxValueFormat(tr("Max: %1")), minValueFormat(tr("Min: %1")), investedValueFormat(tr("Invested: %1")),
     kForumThreadHtmlLinks(tr("<a href=\"http://modsbylaz.14.forumer.com/viewtopic.php?t=23147\">Official Median XL Forum thread</a><br>"
                              "<a href=\"http://forum.worldofplayers.ru/showthread.php?t=34489\">Official Russian Median XL Forum thread</a>")), _isLoaded(false)
 {
-    ui.setupUi(this);
+    ui->setupUi(this);
 
-    ui.actionBackups1->setData(1);
-    ui.actionBackups2->setData(2);
-    ui.actionBackups5->setData(5);
-    ui.actionBackups10->setData(10);
+    ui->actionBackups1->setData(1);
+    ui->actionBackups2->setData(2);
+    ui->actionBackups5->setData(5);
+    ui->actionBackups10->setData(10);
 
     _backupLimitsGroup->setExclusive(true);
-    _backupLimitsGroup->addAction(ui.actionBackups1);
-    _backupLimitsGroup->addAction(ui.actionBackups2);
-    _backupLimitsGroup->addAction(ui.actionBackups5);
-    _backupLimitsGroup->addAction(ui.actionBackups10);
-    _backupLimitsGroup->addAction(ui.actionBackupsUnlimited);
+    _backupLimitsGroup->addAction(ui->actionBackups1);
+    _backupLimitsGroup->addAction(ui->actionBackups2);
+    _backupLimitsGroup->addAction(ui->actionBackups5);
+    _backupLimitsGroup->addAction(ui->actionBackups10);
+    _backupLimitsGroup->addAction(ui->actionBackupsUnlimited);
 
-    ui.actionBackupFormatReadable ->setText(tr("<filename>_<%1>", "param is date format expressed in yyyy, MM, hh, etc.").arg(kTimeFormatReadable) + "." + kBackupExtension);
-    ui.actionBackupFormatTimestamp->setText(tr("<filename>_<UNIX timestamp>") + "." + kBackupExtension);
+    ui->actionBackupFormatReadable ->setText(tr("<filename>_<%1>", "param is date format expressed in yyyy, MM, hh, etc.").arg(kTimeFormatReadable) + "." + kBackupExtension);
+    ui->actionBackupFormatTimestamp->setText(tr("<filename>_<UNIX timestamp>") + "." + kBackupExtension);
 
     _backupFormatsGroup->setExclusive(true);
-    _backupFormatsGroup->addAction(ui.actionBackupFormatReadable);
-    _backupFormatsGroup->addAction(ui.actionBackupFormatTimestamp);
+    _backupFormatsGroup->addAction(ui->actionBackupFormatReadable);
+    _backupFormatsGroup->addAction(ui->actionBackupFormatTimestamp);
 
-    ui.actionFindNext->setShortcut(QKeySequence::FindNext);
-    ui.actionFindPrevious->setShortcut(QKeySequence::FindPrevious);
+    ui->actionFindNext->setShortcut(QKeySequence::FindNext);
+    ui->actionFindPrevious->setShortcut(QKeySequence::FindPrevious);
 
     // TODO: [0.4] remove when implementing export info
-    ui.menuExport->removeAction(ui.actionExportCharacterInfo);
-    ui.mainToolBar->removeAction(ui.actionExportCharacterInfo);
+    ui->menuExport->removeAction(ui->actionExportCharacterInfo);
+    ui->mainToolBar->removeAction(ui->actionExportCharacterInfo);
 
 #ifdef Q_WS_WIN32
     setAppUserModelID(); // is actually used only in Windows 7 and later
@@ -121,12 +122,12 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *pare
     bool isDefault = FileAssociationManager::isApplicationDefaultForExtension(kCharacterExtensionWithDot);
     if (!isDefault)
     {
-        if (ui.actionCheckFileAssociations->isChecked())
+        if (ui->actionCheckFileAssociations->isChecked())
         {
-            MessageCheckBox box(tr("%1 is not associated with %2 files.\n\nDo you want to do it?").arg(qApp->applicationName(), kCharacterExtensionWithDot), ui.actionCheckFileAssociations->text(), this);
+            MessageCheckBox box(tr("%1 is not associated with %2 files.\n\nDo you want to do it?").arg(qApp->applicationName(), kCharacterExtensionWithDot), ui->actionCheckFileAssociations->text(), this);
             box.setChecked(true);
             int result = box.exec();
-            ui.actionCheckFileAssociations->setChecked(box.isChecked());
+            ui->actionCheckFileAssociations->setChecked(box.isChecked());
             if (result)
             {
                 FileAssociationManager::makeApplicationDefaultForExtension(kCharacterExtensionWithDot);
@@ -144,7 +145,7 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *pare
     syncWindowsTaskbarRecentFiles(); // is actually used only in Windows 7 and later
 #endif
 
-    if (ui.actionCheckForUpdateOnStart->isChecked())
+    if (ui->actionCheckForUpdateOnStart->isChecked())
         checkForUpdate();
 
 #ifdef Q_WS_MACX
@@ -154,7 +155,7 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *pare
     bool didModVersionChange = SkillplanDialog::didModVersionChange(); // must be called before the following conditions because it should load planner/readable versions
     if (!cmdPath.isEmpty())
         loadFile(cmdPath);
-    else if (ui.actionLoadLastUsedCharacter->isChecked() && !_recentFilesList.isEmpty() && !didModVersionChange)
+    else if (ui->actionLoadLastUsedCharacter->isChecked() && !_recentFilesList.isEmpty() && !didModVersionChange)
         loadFile(_recentFilesList.at(0));
     else
     {
@@ -187,8 +188,8 @@ bool MedianXLOfflineTools::loadFile(const QString &charPath)
     }
 
     // don't call slot a lot of times while loading character
-    disconnect(ui.mercTypeComboBox);
-    disconnect(ui.mercNameComboBox);
+    disconnect(ui->mercTypeComboBox);
+    disconnect(ui->mercNameComboBox);
 
     _charPath = charPath;
     bool result;
@@ -201,15 +202,15 @@ bool MedianXLOfflineTools::loadFile(const QString &charPath)
         activateWindow();
 
         // it is here because currentIndexChanged signal is emitted when items are added to the combobox
-        connect(ui.mercTypeComboBox, SIGNAL(currentIndexChanged(int)), SLOT(modify()));
-        connect(ui.mercNameComboBox, SIGNAL(currentIndexChanged(int)), SLOT(modify()));
+        connect(ui->mercTypeComboBox, SIGNAL(currentIndexChanged(int)), SLOT(modify()));
+        connect(ui->mercNameComboBox, SIGNAL(currentIndexChanged(int)), SLOT(modify()));
 
         if (_itemsDialog)
         {
             _itemsDialog->updateItems(getPlugyStashesExistenceHash(), true);
             _itemsDialog->updateButtonsState();
         }
-        if (_itemsDialog || ui.actionOpenItemsAutomatically->isChecked())
+        if (_itemsDialog || ui->actionOpenItemsAutomatically->isChecked())
             showItems();
 
         QSettings settings;
@@ -227,7 +228,7 @@ bool MedianXLOfflineTools::loadFile(const QString &charPath)
 
     setModified(false);
 #ifdef MAKE_FINISHED_CHARACTER
-    ui.actionSaveCharacter->setEnabled(true);
+    ui->actionSaveCharacter->setEnabled(true);
 #endif
 
     if (_findItemsDialog)
@@ -255,22 +256,22 @@ void MedianXLOfflineTools::switchLanguage(QAction *languageAction)
 void MedianXLOfflineTools::setModified(bool modified)
 {
     setWindowModified(modified);
-    ui.actionSaveCharacter->setEnabled(modified);
+    ui->actionSaveCharacter->setEnabled(modified);
 }
 
 void MedianXLOfflineTools::eatSignetsOfLearning(int signetsEaten)
 {
-    int newSignetsEaten = ui.signetsOfLearningEatenLineEdit->text().toInt() + signetsEaten;
-    ui.signetsOfLearningEatenLineEdit->setText(QString::number(newSignetsEaten));
+    int newSignetsEaten = ui->signetsOfLearningEatenLineEdit->text().toInt() + signetsEaten;
+    ui->signetsOfLearningEatenLineEdit->setText(QString::number(newSignetsEaten));
     CharacterInfo::instance().basicInfo.statsDynamicData.setProperty("SignetsOfLearningEaten", newSignetsEaten);
 
     foreach (QSpinBox *spinBox, _spinBoxesStatsMap)
         spinBox->setMaximum(spinBox->maximum() + signetsEaten);
 
-    ui.freeStatPointsLineEdit->setText(QString::number(ui.freeStatPointsLineEdit->text().toInt() + signetsEaten));
-    QString s = ui.freeStatPointsLineEdit->statusTip();
+    ui->freeStatPointsLineEdit->setText(QString::number(ui->freeStatPointsLineEdit->text().toInt() + signetsEaten));
+    QString s = ui->freeStatPointsLineEdit->statusTip();
     int start = s.indexOf(": ") + 2, end = s.indexOf(","), total = s.mid(start, end - start).toInt();
-    updateMaxCompoundStatusTip(ui.freeStatPointsLineEdit, total + signetsEaten, investedStatPoints());
+    updateMaxCompoundStatusTip(ui->freeStatPointsLineEdit, total + signetsEaten, investedStatPoints());
 }
 
 void MedianXLOfflineTools::loadCharacter()
@@ -281,7 +282,7 @@ void MedianXLOfflineTools::loadCharacter()
 
     QString charPath = QFileDialog::getOpenFileName(this, tr("Load Character"), lastSavePath, tr("Diablo 2 Save Files") + QString(" (*%1)").arg(kCharacterExtensionWithDot));
     if (loadFile(QDir::toNativeSeparators(charPath)))
-        ui.statusBar->showMessage(tr("Character loaded"), 3000);
+        ui->statusBar->showMessage(tr("Character loaded"), 3000);
 }
 
 void MedianXLOfflineTools::openRecentFile()
@@ -292,7 +293,7 @@ void MedianXLOfflineTools::openRecentFile()
 void MedianXLOfflineTools::reloadCharacter(bool notify /*= true*/)
 {
     if (loadFile(_charPath) && notify)
-        ui.statusBar->showMessage(tr("Character reloaded"), 3000);
+        ui->statusBar->showMessage(tr("Character reloaded"), 3000);
 }
 
 void MedianXLOfflineTools::saveCharacter()
@@ -300,13 +301,13 @@ void MedianXLOfflineTools::saveCharacter()
     CharacterInfo &charInfo = CharacterInfo::instance();
 #ifdef MAKE_FINISHED_CHARACTER
     charInfo.basicInfo.level = 120;
-    ui.levelSpinBox->setMaximum(120);
-    ui.levelSpinBox->setValue(120);
+    ui->levelSpinBox->setMaximum(120);
+    ui->levelSpinBox->setValue(120);
     charInfo.basicInfo.level = 1;
-    ui.freeSkillPointsLineEdit->setText("134");
-    ui.freeStatPointsLineEdit->setText("1110");
-    ui.signetsOfLearningEatenLineEdit->setText("500");
-    ui.signetsOfSkillEatenLineEdit->setText("3");
+    ui->freeSkillPointsLineEdit->setText("134");
+    ui->freeStatPointsLineEdit->setText("1110");
+    ui->signetsOfLearningEatenLineEdit->setText("500");
+    ui->signetsOfSkillEatenLineEdit->setText("3");
 #endif
 
     QByteArray statsBytes = statisticBytes();
@@ -320,11 +321,11 @@ void MedianXLOfflineTools::saveCharacter()
     charInfo.itemsOffset += diff;
     charInfo.itemsEndOffset += diff;
 
-    if (ui.respecSkillsCheckBox->isChecked())
+    if (ui->respecSkillsCheckBox->isChecked())
         tempFileContents.replace(charInfo.skillsOffset + 2, kSkillsNumber, QByteArray(kSkillsNumber, 0));
 
 #ifndef MAKE_FINISHED_CHARACTER
-    if (ui.activateWaypointsCheckBox->isChecked())
+    if (ui->activateWaypointsCheckBox->isChecked())
 #endif
     {
         QByteArray activatedWaypointsBytes(5, 0xFF); // 40 x '1'
@@ -332,7 +333,7 @@ void MedianXLOfflineTools::saveCharacter()
             tempFileContents.replace(startPos, activatedWaypointsBytes.size(), activatedWaypointsBytes);
     }
 
-    if (ui.convertToSoftcoreCheckBox->isChecked())
+    if (ui->convertToSoftcoreCheckBox->isChecked())
         charInfo.basicInfo.isHardcore = false;
 
 #ifdef MAKE_HC
@@ -354,7 +355,7 @@ void MedianXLOfflineTools::saveCharacter()
     outputDataStream.setByteOrder(QDataStream::LittleEndian);
 
     //quint8 curDiff[difficultiesNumber] = {0, 0, 0};
-    //curDiff[ui.currentDifficultyComboBox->currentIndex()] = 128 + ui.currentActSpinBox->value() - 1; // 10000xxx
+    //curDiff[ui->currentDifficultyComboBox->currentIndex()] = 128 + ui->currentActSpinBox->value() - 1; // 10000xxx
     //outputDataStream.skipRawData(Enums::Offsets::CurrentLocation);
     //for (int i = 0; i < difficultiesNumber; ++i)
     //    outputDataStream << curDiff[i];
@@ -429,26 +430,26 @@ void MedianXLOfflineTools::saveCharacter()
     else
         newName = charInfo.basicInfo.originalName;
 
-    quint8 newClvl = ui.levelSpinBox->value();
+    quint8 newClvl = ui->levelSpinBox->value();
 #ifndef MAKE_FINISHED_CHARACTER
     if (charInfo.basicInfo.level != newClvl)
 #endif
     {
         charInfo.basicInfo.level = newClvl;
-        charInfo.basicInfo.totalSkillPoints = ui.freeSkillPointsLineEdit->text().toUShort();
+        charInfo.basicInfo.totalSkillPoints = ui->freeSkillPointsLineEdit->text().toUShort();
         recalculateStatPoints();
 
         outputDataStream.device()->seek(Enums::Offsets::Level);
         outputDataStream << newClvl;
 
-        ui.levelSpinBox->setMaximum(newClvl);
+        ui->levelSpinBox->setMaximum(newClvl);
     }
 
     if (charInfo.mercenary.exists)
     {
-        quint16 newMercValue = Enums::Mercenary::mercBaseValueFromCode(charInfo.mercenary.code) + ui.mercTypeComboBox->currentIndex();
+        quint16 newMercValue = Enums::Mercenary::mercBaseValueFromCode(charInfo.mercenary.code) + ui->mercTypeComboBox->currentIndex();
         charInfo.mercenary.code = Enums::Mercenary::mercCodeFromValue(newMercValue);
-        charInfo.mercenary.nameIndex = ui.mercNameComboBox->currentIndex();
+        charInfo.mercenary.nameIndex = ui->mercNameComboBox->currentIndex();
         outputDataStream.device()->seek(Enums::Offsets::Mercenary + 4);
         outputDataStream << charInfo.mercenary.nameIndex << newMercValue;
     }
@@ -679,10 +680,10 @@ void MedianXLOfflineTools::statChanged(int newValue)
     {
         *pOldValue = newValue;
 
-        ui.freeStatPointsLineEdit->setText(QString::number(ui.freeStatPointsLineEdit->text().toUInt() - diff));
-        QString s = ui.freeStatPointsLineEdit->statusTip();
+        ui->freeStatPointsLineEdit->setText(QString::number(ui->freeStatPointsLineEdit->text().toUInt() - diff));
+        QString s = ui->freeStatPointsLineEdit->statusTip();
         int start = s.indexOf(": ") + 2, end = s.indexOf(","), total = s.mid(start, end - start).toInt();
-        updateMaxCompoundStatusTip(ui.freeStatPointsLineEdit, total, investedStatPoints());
+        updateMaxCompoundStatusTip(ui->freeStatPointsLineEdit, total, investedStatPoints());
 
         foreach (QSpinBox *spinBox, _spinBoxesStatsMap)
             if (spinBox != senderSpinBox)
@@ -704,7 +705,7 @@ void MedianXLOfflineTools::respecStats()
         int baseStat = _baseStatsMap[CharacterInfo::instance().basicInfo.classCode].statsAtStart.statFromCode(statCode);
         _spinBoxesStatsMap[statCode]->setValue(baseStat);
     }
-    ui.statusBar->clearMessage();
+    ui->statusBar->clearMessage();
     setModified(true);
 }
 
@@ -712,19 +713,19 @@ void MedianXLOfflineTools::respecSkills(bool shouldRespec)
 {
     quint16 skills = CharacterInfo::instance().basicInfo.totalSkillPoints;
     quint32 freeSkills = CharacterInfo::instance().valueOfStatistic(Enums::CharacterStats::FreeSkillPoints);
-    ui.freeSkillPointsLineEdit->setText(QString::number(shouldRespec ? skills : freeSkills));
-    updateMaxCompoundStatusTip(ui.freeSkillPointsLineEdit, skills, shouldRespec ? 0 : skills - freeSkills);
+    ui->freeSkillPointsLineEdit->setText(QString::number(shouldRespec ? skills : freeSkills));
+    updateMaxCompoundStatusTip(ui->freeSkillPointsLineEdit, skills, shouldRespec ? 0 : skills - freeSkills);
     setModified(true);
 }
 
 void MedianXLOfflineTools::rename()
 {
     QString &newName = CharacterInfo::instance().basicInfo.newName;
-    QD2CharRenamer renameWidget(newName, ui.actionWarnWhenColoredName->isChecked(), this);
+    QD2CharRenamer renameWidget(newName, ui->actionWarnWhenColoredName->isChecked(), this);
     if (renameWidget.exec())
     {
         newName = renameWidget.name();
-        QD2CharRenamer::updateNamePreview(ui.charNamePreview, newName);
+        QD2CharRenamer::updateNamePreview(ui->charNamePreview, newName);
         setModified(true);
     }
 }
@@ -738,28 +739,28 @@ void MedianXLOfflineTools::levelChanged(int newClvl)
         updateTableStats(_baseStatsMap[basicInfo.classCode].statsPerLevel, -lvlDiff);
 
         _oldClvl = newClvl;
-        int statsDiff = lvlDiff * kStatPointsPerLevel, newFreeStats = ui.freeStatPointsLineEdit->text().toInt() - statsDiff;
+        int statsDiff = lvlDiff * kStatPointsPerLevel, newFreeStats = ui->freeStatPointsLineEdit->text().toInt() - statsDiff;
         if (newFreeStats < 0)
         {
             respecStats();
-            newFreeStats = ui.freeStatPointsLineEdit->text().toInt() - statsDiff;
+            newFreeStats = ui->freeStatPointsLineEdit->text().toInt() - statsDiff;
         }
-        ui.freeStatPointsLineEdit->setText(QString::number(newFreeStats));
+        ui->freeStatPointsLineEdit->setText(QString::number(newFreeStats));
         foreach (QSpinBox *spinBox, _spinBoxesStatsMap)
             spinBox->setMaximum(spinBox->maximum() - statsDiff);
 
         bool hasLevelChanged = newClvl != basicInfo.level;
         if (_resurrectionPenalty != ResurrectPenaltyDialog::Skills)
         {
-            ui.respecSkillsCheckBox->setChecked(hasLevelChanged);
-            ui.respecSkillsCheckBox->setDisabled(hasLevelChanged);
+            ui->respecSkillsCheckBox->setChecked(hasLevelChanged);
+            ui->respecSkillsCheckBox->setDisabled(hasLevelChanged);
         }
 
         int newSkillPoints = basicInfo.totalSkillPoints, investedSkillPoints = 0;
         if (hasLevelChanged)
         {
             newSkillPoints -= (basicInfo.level - newClvl) * kSkillPointsPerLevel;
-            ui.freeSkillPointsLineEdit->setText(QString::number(newSkillPoints));
+            ui->freeSkillPointsLineEdit->setText(QString::number(newSkillPoints));
         }
         else if (_resurrectionPenalty == ResurrectPenaltyDialog::Skills)
             respecSkills(true);
@@ -783,8 +784,8 @@ void MedianXLOfflineTools::resurrect()
         updateHardcoreUIElements();
         updateCharacterTitle(true);
 
-        ui.levelSpinBox->setMaximum(basicInfo.level);
-        ui.levelSpinBox->setValue(basicInfo.level);
+        ui->levelSpinBox->setMaximum(basicInfo.level);
+        ui->levelSpinBox->setValue(basicInfo.level);
 
         _resurrectionPenalty = dlg.resurrectionPenalty();
         switch (_resurrectionPenalty)
@@ -794,22 +795,22 @@ void MedianXLOfflineTools::resurrect()
             int newLevel = basicInfo.level - ResurrectPenaltyDialog::kLevelPenalty;
             if (newLevel < 1)
                 newLevel = 1;
-            ui.levelSpinBox->setMaximum(newLevel); // setValue() is invoked implicitly
+            ui->levelSpinBox->setMaximum(newLevel); // setValue() is invoked implicitly
 
             break;
         }
         case ResurrectPenaltyDialog::Skills:
         {
-            if (!ui.respecSkillsCheckBox->isChecked())
-                ui.respecSkillsCheckBox->setChecked(true);
-            ui.respecSkillsCheckBox->setDisabled(true);
+            if (!ui->respecSkillsCheckBox->isChecked())
+                ui->respecSkillsCheckBox->setChecked(true);
+            ui->respecSkillsCheckBox->setDisabled(true);
 
-            ushort newSkillPoints = ui.freeSkillPointsLineEdit->text().toUShort();
+            ushort newSkillPoints = ui->freeSkillPointsLineEdit->text().toUShort();
             newSkillPoints -= newSkillPoints * ResurrectPenaltyDialog::kSkillPenalty;
             basicInfo.totalSkillPoints = newSkillPoints;
 
-            ui.freeSkillPointsLineEdit->setText(QString::number(newSkillPoints));
-            updateMaxCompoundStatusTip(ui.freeSkillPointsLineEdit, newSkillPoints, 0);
+            ui->freeSkillPointsLineEdit->setText(QString::number(newSkillPoints));
+            updateMaxCompoundStatusTip(ui->freeSkillPointsLineEdit, newSkillPoints, 0);
 
             break;
         }
@@ -817,12 +818,12 @@ void MedianXLOfflineTools::resurrect()
         {
             respecStats();
 
-            ushort newStatPoints = ui.freeStatPointsLineEdit->text().toUShort(), diff = newStatPoints * ResurrectPenaltyDialog::kStatPenalty;
+            ushort newStatPoints = ui->freeStatPointsLineEdit->text().toUShort(), diff = newStatPoints * ResurrectPenaltyDialog::kStatPenalty;
             newStatPoints -= diff;
             basicInfo.totalStatPoints = newStatPoints;
 
-            ui.freeStatPointsLineEdit->setText(QString::number(newStatPoints));
-            updateMaxCompoundStatusTip(ui.freeStatPointsLineEdit, newStatPoints, 0);
+            ui->freeStatPointsLineEdit->setText(QString::number(newStatPoints));
+            updateMaxCompoundStatusTip(ui->freeStatPointsLineEdit, newStatPoints, 0);
 
             foreach (QSpinBox *spinBox, _spinBoxesStatsMap)
                 spinBox->setMaximum(spinBox->maximum() - diff);
@@ -849,7 +850,7 @@ void MedianXLOfflineTools::convertToSoftcore(bool isSoftcore)
 
 //void MedianXLOfflineTools::currentDifficultyChanged(int newDifficulty)
 //{
-//    quint8 progression = CharacterInfo::instance().basicInfo.titleCode, maxDifficulty = ui.currentDifficultyComboBox->count() - 1, maxAct;
+//    quint8 progression = CharacterInfo::instance().basicInfo.titleCode, maxDifficulty = ui->currentDifficultyComboBox->count() - 1, maxAct;
 //    if (progression == Enums::Progression::Completed - 1 || newDifficulty != maxDifficulty)
 //        maxAct = 5;
 //    else
@@ -862,7 +863,7 @@ void MedianXLOfflineTools::convertToSoftcore(bool isSoftcore)
 //                ++maxAct;
 //        }
 //    }
-//    ui.currentActSpinBox->setMaximum(maxAct);
+//    ui->currentActSpinBox->setMaximum(maxAct);
 //}
 
 void MedianXLOfflineTools::findItem()
@@ -870,8 +871,8 @@ void MedianXLOfflineTools::findItem()
     if (!_findItemsDialog)
     {
         _findItemsDialog = new FindItemsDialog(this);
-        connect(ui.actionFindNext, SIGNAL(triggered()), _findItemsDialog, SLOT(findNext()));
-        connect(ui.actionFindPrevious, SIGNAL(triggered()), _findItemsDialog, SLOT(findPrevious()));
+        connect(ui->actionFindNext, SIGNAL(triggered()), _findItemsDialog, SLOT(findNext()));
+        connect(ui->actionFindPrevious, SIGNAL(triggered()), _findItemsDialog, SLOT(findPrevious()));
         connect(_findItemsDialog, SIGNAL(itemFound(ItemInfo *)), SLOT(showFoundItem(ItemInfo *)));
     }
     _findItemsDialog->show();
@@ -880,8 +881,8 @@ void MedianXLOfflineTools::findItem()
 
 void MedianXLOfflineTools::showFoundItem(ItemInfo *item)
 {
-    ui.actionFindNext->setDisabled(!item);
-    ui.actionFindPrevious->setDisabled(!item);
+    ui->actionFindNext->setDisabled(!item);
+    ui->actionFindPrevious->setDisabled(!item);
     if (item)
     {
         showItems(false);
@@ -902,8 +903,8 @@ void MedianXLOfflineTools::showItems(bool activate /*= true*/)
     {
         _itemsDialog = new ItemsViewerDialog(getPlugyStashesExistenceHash(), this);
         connect(_itemsDialog->tabWidget(), SIGNAL(currentChanged(int)), SLOT(itemStorageTabChanged(int)));
-        connect(_itemsDialog, SIGNAL(cubeDeleted(bool)), ui.actionGiveCube, SLOT(setEnabled(bool)));
-        connect(_itemsDialog, SIGNAL(closing(bool)), ui.menuGoToPage, SLOT(setDisabled(bool)));
+        connect(_itemsDialog, SIGNAL(cubeDeleted(bool)), ui->actionGiveCube, SLOT(setEnabled(bool)));
+        connect(_itemsDialog, SIGNAL(closing(bool)), ui->menuGoToPage, SLOT(setDisabled(bool)));
         connect(_itemsDialog, SIGNAL(itemsChanged(bool)), SLOT(setModified(bool)));
         connect(_itemsDialog, SIGNAL(signetsOfLearningEaten(int)), SLOT(eatSignetsOfLearning(int)));
         _itemsDialog->show();
@@ -919,10 +920,10 @@ void MedianXLOfflineTools::showItems(bool activate /*= true*/)
 void MedianXLOfflineTools::itemStorageTabChanged(int tabIndex)
 {
     bool isPlugyStorage = _itemsDialog->isPlugyStorageIndex(tabIndex);
-    ui.menuGoToPage->setEnabled(isPlugyStorage);
+    ui->menuGoToPage->setEnabled(isPlugyStorage);
 
-    static const QList<QAction *> plugyNavigationActions = QList<QAction *>() << ui.actionPrevious10  << ui.actionPreviousPage << ui.actionNextPage << ui.actionNext10
-                                                                              << ui.actionPrevious100 << ui.actionFirstPage    << ui.actionLastPage << ui.actionNext100;
+    static const QList<QAction *> plugyNavigationActions = QList<QAction *>() << ui->actionPrevious10  << ui->actionPreviousPage << ui->actionNextPage << ui->actionNext10
+                                                                              << ui->actionPrevious100 << ui->actionFirstPage    << ui->actionLastPage << ui->actionNext100;
     foreach (QAction *action, plugyNavigationActions)
         action->disconnect();
 
@@ -971,12 +972,12 @@ void MedianXLOfflineTools::giveCube()
     if (_itemsDialog)
         _itemsDialog->updateItems(plugyStashesExistenceHash, false);
 
-    ui.actionGiveCube->setDisabled(true);
+    ui->actionGiveCube->setDisabled(true);
     setModified(true);
     INFO_BOX(ItemParser::itemStorageAndCoordinatesString(tr("Cube has been stored in %1 at (%2,%3)"), cube));
 }
 
-void MedianXLOfflineTools::getSkillPlan()
+void MedianXLOfflineTools::showSkillPlan()
 {
     SkillplanDialog dlg(this);
     dlg.exec();
@@ -985,11 +986,11 @@ void MedianXLOfflineTools::getSkillPlan()
 void MedianXLOfflineTools::backupSettingTriggered(bool checked)
 {
     if (!checked && QUESTION_BOX_YESNO(tr("Are you sure you want to disable automatic backups? Then don't blame me if your character gets corrupted."), QMessageBox::No) == QMessageBox::No)
-        ui.actionBackup->setChecked(true);
+        ui->actionBackup->setChecked(true);
     else
     {
-        ui.menuBackupsLimit->setEnabled(checked);
-        ui.menuBackupNameFormat->setEnabled(checked);
+        ui->menuBackupsLimit->setEnabled(checked);
+        ui->menuBackupNameFormat->setEnabled(checked);
     }
 }
 
@@ -1150,8 +1151,8 @@ void MedianXLOfflineTools::createLanguageMenu()
     if (!fileNames.isEmpty())
     {
         QMenu *languageMenu = new QMenu(tr("&Language", "Language menu"), this);
-        ui.menuOptions->addSeparator();
-        ui.menuOptions->addMenu(languageMenu);
+        ui->menuOptions->addSeparator();
+        ui->menuOptions->addMenu(languageMenu);
 
         QActionGroup *languageActionGroup = new QActionGroup(this);
         connect(languageActionGroup, SIGNAL(triggered(QAction *)), SLOT(switchLanguage(QAction *)));
@@ -1181,14 +1182,14 @@ void MedianXLOfflineTools::createLanguageMenu()
 
 void MedianXLOfflineTools::createLayout()
 {
-    QList<QWidget *> widgetsToFixSize = QList<QWidget *>() << ui.charNamePreview << ui.classLineEdit << ui.titleLineEdit << ui.freeSkillPointsLineEdit
-                                                           << ui.freeStatPointsLineEdit << ui.signetsOfLearningEatenLineEdit << ui.signetsOfSkillEatenLineEdit << ui.strengthSpinBox << ui.dexteritySpinBox
-                                                           << ui.vitalitySpinBox << ui.energySpinBox << ui.inventoryGoldLineEdit << ui.stashGoldLineEdit << ui.mercLevelLineEdit;
+    QList<QWidget *> widgetsToFixSize = QList<QWidget *>() << ui->charNamePreview << ui->classLineEdit << ui->titleLineEdit << ui->freeSkillPointsLineEdit
+                                                           << ui->freeStatPointsLineEdit << ui->signetsOfLearningEatenLineEdit << ui->signetsOfSkillEatenLineEdit << ui->strengthSpinBox << ui->dexteritySpinBox
+                                                           << ui->vitalitySpinBox << ui->energySpinBox << ui->inventoryGoldLineEdit << ui->stashGoldLineEdit << ui->mercLevelLineEdit;
     foreach (QWidget *w, widgetsToFixSize)
         w->setFixedSize(w->size());
 
-    QList<QLineEdit *> readonlyLineEdits = QList<QLineEdit *>() << ui.freeSkillPointsLineEdit << ui.freeStatPointsLineEdit << ui.signetsOfLearningEatenLineEdit << ui.signetsOfSkillEatenLineEdit
-                                                                << ui.inventoryGoldLineEdit << ui.stashGoldLineEdit << ui.mercLevelLineEdit << ui.classLineEdit;
+    QList<QLineEdit *> readonlyLineEdits = QList<QLineEdit *>() << ui->freeSkillPointsLineEdit << ui->freeStatPointsLineEdit << ui->signetsOfLearningEatenLineEdit << ui->signetsOfSkillEatenLineEdit
+                                                                << ui->inventoryGoldLineEdit << ui->stashGoldLineEdit << ui->mercLevelLineEdit << ui->classLineEdit;
     foreach (QLineEdit *lineEdit, readonlyLineEdits)
         lineEdit->setStyleSheet(kReadonlyCss);
 
@@ -1198,32 +1199,32 @@ void MedianXLOfflineTools::createLayout()
     createQuestsGroupBoxLayout();
 
     QGridLayout *grid = new QGridLayout(centralWidget());
-    grid->addWidget(ui.characterGroupBox, 0, 0);
-    grid->addWidget(ui.mercGroupBox, 1, 0);
-    grid->addWidget(ui.statsGroupBox, 0, 1);
+    grid->addWidget(ui->characterGroupBox, 0, 0);
+    grid->addWidget(ui->mercGroupBox, 1, 0);
+    grid->addWidget(ui->statsGroupBox, 0, 1);
     grid->addWidget(_questsGroupBox, 1, 1);
 
     //QVBoxLayout *vbl = new QVBoxLayout;
-    //vbl->addWidget(ui.characterGroupBox);
+    //vbl->addWidget(ui->characterGroupBox);
     ////vbl->addStretch();
     ////vbl->addWidget(_questsGroupBox);
-    //vbl->addWidget(ui.mercGroupBox);
+    //vbl->addWidget(ui->mercGroupBox);
 
     //QVBoxLayout *vbl1 = new QVBoxLayout;
-    //vbl1->addWidget(ui.statsGroupBox);
+    //vbl1->addWidget(ui->statsGroupBox);
     //vbl1->addWidget(_questsGroupBox);
 
     //QHBoxLayout *mainLayout = new QHBoxLayout(centralWidget());
     //mainLayout->addLayout(vbl);
     //mainLayout->addLayout(vbl1);
-    ////mainLayout->addWidget(ui.statsGroupBox);
+    ////mainLayout->addWidget(ui->statsGroupBox);
 
-    ui.statsTableWidget->verticalHeader()->setDefaultAlignment(Qt::AlignCenter);
-    ui.statsTableWidget->horizontalHeader()->setResizeMode(QHeaderView::Stretch);
-    ui.statsTableWidget->setFixedHeight(ui.statsTableWidget->height());
+    ui->statsTableWidget->verticalHeader()->setDefaultAlignment(Qt::AlignCenter);
+    ui->statsTableWidget->horizontalHeader()->setResizeMode(QHeaderView::Stretch);
+    ui->statsTableWidget->setFixedHeight(ui->statsTableWidget->height());
 
     _charPathLabel = new QLabel(this);
-    ui.statusBar->addPermanentWidget(_charPathLabel);
+    ui->statusBar->addPermanentWidget(_charPathLabel);
 
     // on Mac OS X some UI elements become ugly if main window is set to minimumSize()
 #ifndef Q_WS_MACX
@@ -1235,50 +1236,50 @@ void MedianXLOfflineTools::createCharacterGroupBoxLayout()
 {
     QGridLayout *gridLayout = new QGridLayout;
     gridLayout->addWidget(new QLabel(tr("Name")), 0, 0, Qt::AlignRight);
-    gridLayout->addWidget(ui.charNamePreview, 0, 1);
-    gridLayout->addWidget(ui.renameButton, 0, 2);
+    gridLayout->addWidget(ui->charNamePreview, 0, 1);
+    gridLayout->addWidget(ui->renameButton, 0, 2);
 
     gridLayout->addWidget(new QLabel(tr("Class")), 1, 0, Qt::AlignRight);
-    gridLayout->addWidget(ui.classLineEdit, 1, 1);
+    gridLayout->addWidget(ui->classLineEdit, 1, 1);
     gridLayout->addWidget(new QLabel(tr("Level")), 1, 2, Qt::AlignCenter);
 
     gridLayout->addWidget(new QLabel(tr("Title", "Character title - Slayer/Champion/etc.")), 2, 0, Qt::AlignRight);
-    gridLayout->addWidget(ui.titleLineEdit, 2, 1);
-    gridLayout->addWidget(ui.levelSpinBox, 2, 2);
+    gridLayout->addWidget(ui->titleLineEdit, 2, 1);
+    gridLayout->addWidget(ui->levelSpinBox, 2, 2);
 
     //QHBoxLayout *hbl1 = new QHBoxLayout;
     //hbl1->addWidget(new QLabel(tr("Difficulty")), 0, Qt::AlignRight);
-    //hbl1->addWidget(ui.currentDifficultyComboBox);
+    //hbl1->addWidget(ui->currentDifficultyComboBox);
     //hbl1->addWidget(new QLabel(tr("Act")), 0, Qt::AlignRight);
-    //hbl1->addWidget(ui.currentActSpinBox);
+    //hbl1->addWidget(ui->currentActSpinBox);
 
-    QHBoxLayout *hbl2 = new QHBoxLayout(ui.hardcoreGroupBox);
-    hbl2->addWidget(ui.convertToSoftcoreCheckBox);
+    QHBoxLayout *hbl2 = new QHBoxLayout(ui->hardcoreGroupBox);
+    hbl2->addWidget(ui->convertToSoftcoreCheckBox);
     hbl2->addStretch();
-    hbl2->addWidget(ui.resurrectButton);
+    hbl2->addWidget(ui->resurrectButton);
 
     _expGroupBox = new ExperienceIndicatorGroupBox(this);
 
-    QVBoxLayout *vbl = new QVBoxLayout(ui.characterGroupBox);
+    QVBoxLayout *vbl = new QVBoxLayout(ui->characterGroupBox);
     vbl->addLayout(gridLayout);
     //vbl->addLayout(hbl1);
     vbl->addWidget(_expGroupBox);
-    vbl->addWidget(ui.hardcoreGroupBox);
+    vbl->addWidget(ui->hardcoreGroupBox);
 }
 
 void MedianXLOfflineTools::createMercGroupBoxLayout()
 {
     QHBoxLayout *hbl = new QHBoxLayout;
     hbl->addWidget(new QLabel(tr("Type")));
-    hbl->addWidget(ui.mercTypeComboBox);
+    hbl->addWidget(ui->mercTypeComboBox);
     hbl->addWidget(new QLabel(tr("Level")));
-    hbl->addWidget(ui.mercLevelLineEdit);
+    hbl->addWidget(ui->mercLevelLineEdit);
     hbl->addWidget(new QLabel(tr("Name")));
-    hbl->addWidget(ui.mercNameComboBox);
+    hbl->addWidget(ui->mercNameComboBox);
 
     _mercExpGroupBox = new ExperienceIndicatorGroupBox(this);
 
-    QVBoxLayout *vbl = new QVBoxLayout(ui.mercGroupBox);
+    QVBoxLayout *vbl = new QVBoxLayout(ui->mercGroupBox);
     vbl->addLayout(hbl);
     vbl->addStretch();
     vbl->addWidget(_mercExpGroupBox);
@@ -1286,34 +1287,34 @@ void MedianXLOfflineTools::createMercGroupBoxLayout()
 
 void MedianXLOfflineTools::createStatsGroupBoxLayout()
 {
-    QGridLayout *gridLayout = new QGridLayout(ui.statsGroupBox);
+    QGridLayout *gridLayout = new QGridLayout(ui->statsGroupBox);
     gridLayout->addWidget(new QLabel(tr("Inventory Gold")), 0, 0, Qt::AlignRight);
-    gridLayout->addWidget(ui.inventoryGoldLineEdit, 0, 1);
-    gridLayout->addWidget(ui.activateWaypointsCheckBox, 0, 2);
+    gridLayout->addWidget(ui->inventoryGoldLineEdit, 0, 1);
+    gridLayout->addWidget(ui->activateWaypointsCheckBox, 0, 2);
     gridLayout->addWidget(new QLabel(tr("Stash Gold")), 0, 3, Qt::AlignRight);
-    gridLayout->addWidget(ui.stashGoldLineEdit, 0, 4);
+    gridLayout->addWidget(ui->stashGoldLineEdit, 0, 4);
 
     gridLayout->addWidget(new QLabel(tr("Free Skills")), 1, 0, Qt::AlignRight);
-    gridLayout->addWidget(ui.freeSkillPointsLineEdit, 1, 1);
-    gridLayout->addWidget(ui.respecSkillsCheckBox, 1, 2);
+    gridLayout->addWidget(ui->freeSkillPointsLineEdit, 1, 1);
+    gridLayout->addWidget(ui->respecSkillsCheckBox, 1, 2);
     gridLayout->addWidget(new QLabel(tr("Signets of Skill")), 1, 3, Qt::AlignRight);
-    gridLayout->addWidget(ui.signetsOfSkillEatenLineEdit, 1, 4);
+    gridLayout->addWidget(ui->signetsOfSkillEatenLineEdit, 1, 4);
 
-    gridLayout->addWidget(ui.statsTableWidget, 2, 2, 4, 3, Qt::AlignCenter);
+    gridLayout->addWidget(ui->statsTableWidget, 2, 2, 4, 3, Qt::AlignCenter);
     gridLayout->addWidget(new QLabel(tr("Strength")), 2, 0, Qt::AlignRight);
     gridLayout->addWidget(new QLabel(tr("Dexterity")), 3, 0, Qt::AlignRight);
     gridLayout->addWidget(new QLabel(tr("Vitality")), 4, 0, Qt::AlignRight);
     gridLayout->addWidget(new QLabel(tr("Energy")), 5, 0, Qt::AlignRight);
-    gridLayout->addWidget(ui.strengthSpinBox, 2, 1);
-    gridLayout->addWidget(ui.dexteritySpinBox, 3, 1);
-    gridLayout->addWidget(ui.vitalitySpinBox, 4, 1);
-    gridLayout->addWidget(ui.energySpinBox, 5, 1);
+    gridLayout->addWidget(ui->strengthSpinBox, 2, 1);
+    gridLayout->addWidget(ui->dexteritySpinBox, 3, 1);
+    gridLayout->addWidget(ui->vitalitySpinBox, 4, 1);
+    gridLayout->addWidget(ui->energySpinBox, 5, 1);
 
     gridLayout->addWidget(new QLabel(tr("Free Stats")), 6, 0, Qt::AlignRight);
-    gridLayout->addWidget(ui.freeStatPointsLineEdit, 6, 1);
-    gridLayout->addWidget(ui.respecStatsButton, 6, 2);
+    gridLayout->addWidget(ui->freeStatPointsLineEdit, 6, 1);
+    gridLayout->addWidget(ui->respecStatsButton, 6, 2);
     gridLayout->addWidget(new QLabel(tr("Signets of Learning")), 6, 3, Qt::AlignRight);
-    gridLayout->addWidget(ui.signetsOfLearningEatenLineEdit, 6, 4);
+    gridLayout->addWidget(ui->signetsOfLearningEatenLineEdit, 6, 4);
 }
 
 void MedianXLOfflineTools::createQuestsGroupBoxLayout()
@@ -1357,50 +1358,50 @@ void MedianXLOfflineTools::loadSettings()
     settings.endGroup();
 
     settings.beginGroup("options");
-    ui.actionLoadLastUsedCharacter->setChecked(settings.value("loadLastCharacter", true).toBool());
-    ui.actionWarnWhenColoredName->setChecked(settings.value("warnWhenColoredName", true).toBool());
-    ui.actionOpenItemsAutomatically->setChecked(settings.value("openItemsAutomatically").toBool());
-    ui.actionReloadSharedStashes->setChecked(settings.value("reloadSharedStashes").toBool());
+    ui->actionLoadLastUsedCharacter->setChecked(settings.value("loadLastCharacter", true).toBool());
+    ui->actionWarnWhenColoredName->setChecked(settings.value("warnWhenColoredName", true).toBool());
+    ui->actionOpenItemsAutomatically->setChecked(settings.value("openItemsAutomatically").toBool());
+    ui->actionReloadSharedStashes->setChecked(settings.value("reloadSharedStashes").toBool());
 
     bool backupsEnabled = settings.value("makeBackups", true).toBool();
-    ui.actionBackup->setChecked(backupsEnabled);
-    ui.menuBackupsLimit->setEnabled(backupsEnabled);
-    ui.menuBackupNameFormat->setEnabled(backupsEnabled);
+    ui->actionBackup->setChecked(backupsEnabled);
+    ui->menuBackupsLimit->setEnabled(backupsEnabled);
+    ui->menuBackupNameFormat->setEnabled(backupsEnabled);
 
-    (settings.value("backupFormatIsTimestamp").toBool() ? ui.actionBackupFormatTimestamp : ui.actionBackupFormatReadable)->setChecked(true);
+    (settings.value("backupFormatIsTimestamp").toBool() ? ui->actionBackupFormatTimestamp : ui->actionBackupFormatReadable)->setChecked(true);
     QVariant backupLimit = settings.value("backupLimit");
     if (backupLimit.isValid())
     {
         switch (backupLimit.toInt())
         {
         case 1:
-            ui.actionBackups1->setChecked(true);
+            ui->actionBackups1->setChecked(true);
             break;
         case 2:
-            ui.actionBackups2->setChecked(true);
+            ui->actionBackups2->setChecked(true);
             break;
         case 5:
-            ui.actionBackups5->setChecked(true);
+            ui->actionBackups5->setChecked(true);
             break;
         case 10:
-            ui.actionBackups10->setChecked(true);
+            ui->actionBackups10->setChecked(true);
             break;
         default:
-            ui.actionBackupsUnlimited->setChecked(true);
+            ui->actionBackupsUnlimited->setChecked(true);
             break;
         }
     }
     else
-        ui.actionBackups5->setChecked(true);
+        ui->actionBackups5->setChecked(true);
 
     settings.beginGroup("autoOpenSharedStashes");
-    ui.actionAutoOpenPersonalStash->setChecked(settings.value("personal", true).toBool());
-    ui.actionAutoOpenSharedStash->setChecked(settings.value("shared", true).toBool());
-    ui.actionAutoOpenHCShared->setChecked(settings.value("hcShared", true).toBool());
+    ui->actionAutoOpenPersonalStash->setChecked(settings.value("personal", true).toBool());
+    ui->actionAutoOpenSharedStash->setChecked(settings.value("shared", true).toBool());
+    ui->actionAutoOpenHCShared->setChecked(settings.value("hcShared", true).toBool());
     settings.endGroup();
 
-    ui.actionCheckFileAssociations->setChecked(settings.value("checkAssociations", true).toBool());
-    ui.actionCheckForUpdateOnStart->setChecked(settings.value("checkUpdates", true).toBool());
+    ui->actionCheckFileAssociations->setChecked(settings.value("checkAssociations", true).toBool());
+    ui->actionCheckForUpdateOnStart->setChecked(settings.value("checkUpdates", true).toBool());
 
     settings.endGroup();
 }
@@ -1416,23 +1417,23 @@ void MedianXLOfflineTools::saveSettings() const
     settings.endGroup();
     
     settings.beginGroup("options");
-    settings.setValue("loadLastCharacter", ui.actionLoadLastUsedCharacter->isChecked());
-    settings.setValue("warnWhenColoredName", ui.actionWarnWhenColoredName->isChecked());
-    settings.setValue("openItemsAutomatically", ui.actionOpenItemsAutomatically->isChecked());
-    settings.setValue("reloadSharedStashes", ui.actionReloadSharedStashes->isChecked());
+    settings.setValue("loadLastCharacter", ui->actionLoadLastUsedCharacter->isChecked());
+    settings.setValue("warnWhenColoredName", ui->actionWarnWhenColoredName->isChecked());
+    settings.setValue("openItemsAutomatically", ui->actionOpenItemsAutomatically->isChecked());
+    settings.setValue("reloadSharedStashes", ui->actionReloadSharedStashes->isChecked());
 
-    settings.setValue("makeBackups", ui.actionBackup->isChecked());
-    settings.setValue("backupFormatIsTimestamp", ui.actionBackupFormatTimestamp->isChecked());
+    settings.setValue("makeBackups", ui->actionBackup->isChecked());
+    settings.setValue("backupFormatIsTimestamp", ui->actionBackupFormatTimestamp->isChecked());
     settings.setValue("backupLimit", _backupLimitsGroup->checkedAction()->data().toInt());
 
     settings.beginGroup("autoOpenSharedStashes");
-    settings.setValue("personal", ui.actionAutoOpenPersonalStash->isChecked());
-    settings.setValue("shared", ui.actionAutoOpenSharedStash->isChecked());
-    settings.setValue("hcShared", ui.actionAutoOpenHCShared->isChecked());
+    settings.setValue("personal", ui->actionAutoOpenPersonalStash->isChecked());
+    settings.setValue("shared", ui->actionAutoOpenSharedStash->isChecked());
+    settings.setValue("hcShared", ui->actionAutoOpenHCShared->isChecked());
     settings.endGroup();
 
-    settings.setValue("checkAssociations", ui.actionCheckFileAssociations->isChecked());
-    settings.setValue("checkUpdates", ui.actionCheckForUpdateOnStart->isChecked());
+    settings.setValue("checkAssociations", ui->actionCheckFileAssociations->isChecked());
+    settings.setValue("checkUpdates", ui->actionCheckForUpdateOnStart->isChecked());
 
     settings.endGroup();
 
@@ -1458,17 +1459,17 @@ bool compareSkillIndexes(int i, int j)
 
 void MedianXLOfflineTools::fillMaps()
 {
-    _spinBoxesStatsMap[Enums::CharacterStats::Strength] = ui.strengthSpinBox;
-    _spinBoxesStatsMap[Enums::CharacterStats::Dexterity] = ui.dexteritySpinBox;
-    _spinBoxesStatsMap[Enums::CharacterStats::Vitality] = ui.vitalitySpinBox;
-    _spinBoxesStatsMap[Enums::CharacterStats::Energy] = ui.energySpinBox;
+    _spinBoxesStatsMap[Enums::CharacterStats::Strength] = ui->strengthSpinBox;
+    _spinBoxesStatsMap[Enums::CharacterStats::Dexterity] = ui->dexteritySpinBox;
+    _spinBoxesStatsMap[Enums::CharacterStats::Vitality] = ui->vitalitySpinBox;
+    _spinBoxesStatsMap[Enums::CharacterStats::Energy] = ui->energySpinBox;
 
-    _lineEditsStatsMap[Enums::CharacterStats::FreeStatPoints] = ui.freeStatPointsLineEdit;
-    _lineEditsStatsMap[Enums::CharacterStats::FreeSkillPoints] = ui.freeSkillPointsLineEdit;
-    _lineEditsStatsMap[Enums::CharacterStats::InventoryGold] = ui.inventoryGoldLineEdit;
-    _lineEditsStatsMap[Enums::CharacterStats::StashGold] = ui.stashGoldLineEdit;
-    _lineEditsStatsMap[Enums::CharacterStats::SignetsOfLearningEaten] = ui.signetsOfLearningEatenLineEdit;
-    _lineEditsStatsMap[Enums::CharacterStats::SignetsOfSkillEaten] = ui.signetsOfSkillEatenLineEdit;
+    _lineEditsStatsMap[Enums::CharacterStats::FreeStatPoints] = ui->freeStatPointsLineEdit;
+    _lineEditsStatsMap[Enums::CharacterStats::FreeSkillPoints] = ui->freeSkillPointsLineEdit;
+    _lineEditsStatsMap[Enums::CharacterStats::InventoryGold] = ui->inventoryGoldLineEdit;
+    _lineEditsStatsMap[Enums::CharacterStats::StashGold] = ui->stashGoldLineEdit;
+    _lineEditsStatsMap[Enums::CharacterStats::SignetsOfLearningEaten] = ui->signetsOfLearningEatenLineEdit;
+    _lineEditsStatsMap[Enums::CharacterStats::SignetsOfSkillEaten] = ui->signetsOfSkillEatenLineEdit;
 
     QList<SkillInfo *> *skills = ItemDataBase::Skills();
     int n = skills->size();
@@ -1488,51 +1489,51 @@ void MedianXLOfflineTools::fillMaps()
 void MedianXLOfflineTools::connectSignals()
 {
     // files
-    connect(ui.actionLoadCharacter, SIGNAL(triggered()), SLOT(loadCharacter()));
-    connect(ui.actionReloadCharacter, SIGNAL(triggered()), SLOT(reloadCharacter()));
-    connect(ui.actionSaveCharacter, SIGNAL(triggered()), SLOT(saveCharacter()));
+    connect(ui->actionLoadCharacter, SIGNAL(triggered()), SLOT(loadCharacter()));
+    connect(ui->actionReloadCharacter, SIGNAL(triggered()), SLOT(reloadCharacter()));
+    connect(ui->actionSaveCharacter, SIGNAL(triggered()), SLOT(saveCharacter()));
 
     // edit
-    connect(ui.actionRename, SIGNAL(triggered()), SLOT(rename()));
-    connect(ui.actionFind, SIGNAL(triggered()), SLOT(findItem()));
+    connect(ui->actionRename, SIGNAL(triggered()), SLOT(rename()));
+    connect(ui->actionFind, SIGNAL(triggered()), SLOT(findItem()));
 
     // items
-    connect(ui.actionShowItems, SIGNAL(triggered()), SLOT(showItems()));
-    connect(ui.actionGiveCube, SIGNAL(triggered()), SLOT(giveCube()));
+    connect(ui->actionShowItems, SIGNAL(triggered()), SLOT(showItems()));
+    connect(ui->actionGiveCube, SIGNAL(triggered()), SLOT(giveCube()));
 
     // export
-    connect(ui.actionSkillPlan, SIGNAL(triggered()), SLOT(getSkillPlan()));
+    connect(ui->actionSkillPlan, SIGNAL(triggered()), SLOT(showSkillPlan()));
 
     // options
-    connect(ui.actionBackup, SIGNAL(triggered(bool)), SLOT(backupSettingTriggered(bool)));
-    connect(ui.actionAssociate, SIGNAL(triggered()), SLOT(associateFiles()));
+    connect(ui->actionBackup, SIGNAL(triggered(bool)), SLOT(backupSettingTriggered(bool)));
+    connect(ui->actionAssociate, SIGNAL(triggered()), SLOT(associateFiles()));
 
     // help
-    connect(ui.actionCheckForUpdate, SIGNAL(triggered()), SLOT(checkForUpdate()));
-    connect(ui.actionAbout, SIGNAL(triggered()), SLOT(aboutApp()));
-    connect(ui.actionAboutQt, SIGNAL(triggered()), qApp, SLOT(aboutQt()));
+    connect(ui->actionCheckForUpdate, SIGNAL(triggered()), SLOT(checkForUpdate()));
+    connect(ui->actionAbout, SIGNAL(triggered()), SLOT(aboutApp()));
+    connect(ui->actionAboutQt, SIGNAL(triggered()), qApp, SLOT(aboutQt()));
 
-    connect(ui.levelSpinBox, SIGNAL(valueChanged(int)), SLOT(levelChanged(int)));
+    connect(ui->levelSpinBox, SIGNAL(valueChanged(int)), SLOT(levelChanged(int)));
     foreach (QSpinBox *spinBox, _spinBoxesStatsMap)
         connect(spinBox, SIGNAL(valueChanged(int)), SLOT(statChanged(int)));
 
-    connect(ui.respecStatsButton, SIGNAL(clicked()), SLOT(respecStats()));
-    connect(ui.renameButton, SIGNAL(clicked()), SLOT(rename()));
-    connect(ui.resurrectButton, SIGNAL(clicked()), SLOT(resurrect()));
-    connect(ui.convertToSoftcoreCheckBox, SIGNAL(toggled(bool)), SLOT(convertToSoftcore(bool)));
-    connect(ui.respecSkillsCheckBox, SIGNAL(toggled(bool)), SLOT(respecSkills(bool)));
-    //connect(ui.currentDifficultyComboBox, SIGNAL(currentIndexChanged(int)), SLOT(currentDifficultyChanged(int)));
-    connect(ui.activateWaypointsCheckBox, SIGNAL(clicked()), SLOT(modify()));
+    connect(ui->respecStatsButton, SIGNAL(clicked()), SLOT(respecStats()));
+    connect(ui->renameButton, SIGNAL(clicked()), SLOT(rename()));
+    connect(ui->resurrectButton, SIGNAL(clicked()), SLOT(resurrect()));
+    connect(ui->convertToSoftcoreCheckBox, SIGNAL(toggled(bool)), SLOT(convertToSoftcore(bool)));
+    connect(ui->respecSkillsCheckBox, SIGNAL(toggled(bool)), SLOT(respecSkills(bool)));
+    //connect(ui->currentDifficultyComboBox, SIGNAL(currentIndexChanged(int)), SLOT(currentDifficultyChanged(int)));
+    connect(ui->activateWaypointsCheckBox, SIGNAL(clicked()), SLOT(modify()));
 }
 
 void MedianXLOfflineTools::updateRecentFilesActions()
 {
-    ui.menuRecentCharacters->clear();
+    ui->menuRecentCharacters->clear();
     for (int i = 0; i < _recentFilesList.length(); ++i)
     {
         QString filePath = _recentFilesList.at(i);
         if (QFile::exists(filePath))
-            ui.menuRecentCharacters->addAction(createRecentFileAction(filePath, i + 1));
+            ui->menuRecentCharacters->addAction(createRecentFileAction(filePath, i + 1));
         else
         {
 #ifdef Q_WS_WIN32
@@ -1543,11 +1544,11 @@ void MedianXLOfflineTools::updateRecentFilesActions()
             --i;
         }
     }
-    ui.menuRecentCharacters->setDisabled(_recentFilesList.isEmpty());
+    ui->menuRecentCharacters->setDisabled(_recentFilesList.isEmpty());
 
 #ifdef Q_WS_MACX
     extern void qt_mac_set_dock_menu(QMenu *);
-    qt_mac_set_dock_menu(ui.menuRecentCharacters);
+    qt_mac_set_dock_menu(ui->menuRecentCharacters);
 #endif
 }
 
@@ -2012,12 +2013,12 @@ bool MedianXLOfflineTools::processSaveFile()
 
     QFileInfo charPathFileInfo(_charPath);
     QString canonicalCharPath = charPathFileInfo.canonicalPath();
-    _plugyStashesHash[Enums::ItemStorage::PersonalStash].path = ui.actionAutoOpenPersonalStash->isChecked() ? QString("%1/%2.d2x").arg(canonicalCharPath, charPathFileInfo.baseName()) : QString();
-    _plugyStashesHash[Enums::ItemStorage::SharedStash].path = ui.actionAutoOpenSharedStash->isChecked() ? canonicalCharPath + "/_LOD_SharedStashSave.sss" : QString();
-    _plugyStashesHash[Enums::ItemStorage::HCStash].path = ui.actionAutoOpenHCShared->isChecked() ? canonicalCharPath + "/_LOD_HC_SharedStashSave.sss" : QString();
+    _plugyStashesHash[Enums::ItemStorage::PersonalStash].path = ui->actionAutoOpenPersonalStash->isChecked() ? QString("%1/%2.d2x").arg(canonicalCharPath, charPathFileInfo.baseName()) : QString();
+    _plugyStashesHash[Enums::ItemStorage::SharedStash].path = ui->actionAutoOpenSharedStash->isChecked() ? canonicalCharPath + "/_LOD_SharedStashSave.sss" : QString();
+    _plugyStashesHash[Enums::ItemStorage::HCStash].path = ui->actionAutoOpenHCShared->isChecked() ? canonicalCharPath + "/_LOD_HC_SharedStashSave.sss" : QString();
 
     bool sharedStashPathChanged = oldSharedStashPath != _plugyStashesHash[Enums::ItemStorage::SharedStash].path, hcStashPathChanged = oldHCStashPath != _plugyStashesHash[Enums::ItemStorage::HCStash].path;
-    if (ui.actionReloadSharedStashes->isChecked())
+    if (ui->actionReloadSharedStashes->isChecked())
         sharedStashPathChanged = hcStashPathChanged = true;
     _sharedGold = 0;
     for (QHash<Enums::ItemStorage::ItemStorageEnum, PlugyStashInfo>::iterator iter = _plugyStashesHash.begin(); iter != _plugyStashesHash.end(); ++iter)
@@ -2025,15 +2026,15 @@ bool MedianXLOfflineTools::processSaveFile()
         switch (iter.key())
         {
         case Enums::ItemStorage::PersonalStash:
-            if (!(_plugyStashesHash[iter.key()].exists = ui.actionAutoOpenPersonalStash->isChecked()))
+            if (!(_plugyStashesHash[iter.key()].exists = ui->actionAutoOpenPersonalStash->isChecked()))
                 continue;
             break;
         case Enums::ItemStorage::SharedStash:
-            if (!(_plugyStashesHash[iter.key()].exists = ui.actionAutoOpenSharedStash->isChecked()) || !sharedStashPathChanged)
+            if (!(_plugyStashesHash[iter.key()].exists = ui->actionAutoOpenSharedStash->isChecked()) || !sharedStashPathChanged)
                 continue;
             break;
         case Enums::ItemStorage::HCStash:
-            if (!(_plugyStashesHash[iter.key()].exists = ui.actionAutoOpenHCShared->isChecked()) || !hcStashPathChanged)
+            if (!(_plugyStashesHash[iter.key()].exists = ui->actionAutoOpenHCShared->isChecked()) || !hcStashPathChanged)
                 continue;
             break;
         default:
@@ -2107,7 +2108,7 @@ int MedianXLOfflineTools::investedStatPoints()
 
 void MedianXLOfflineTools::recalculateStatPoints()
 {
-    CharacterInfo::instance().basicInfo.totalStatPoints = investedStatPoints() + ui.freeStatPointsLineEdit->text().toUInt();
+    CharacterInfo::instance().basicInfo.totalStatPoints = investedStatPoints() + ui->freeStatPointsLineEdit->text().toUInt();
 }
 
 void MedianXLOfflineTools::processPlugyStash(QHash<Enums::ItemStorage::ItemStorageEnum, PlugyStashInfo>::iterator &iter, ItemsList *items)
@@ -2188,7 +2189,7 @@ void MedianXLOfflineTools::clearUI()
     _isLoaded = false;
     _resurrectionPenalty = ResurrectPenaltyDialog::Nothing;
 
-    QList<QLineEdit *> lineEdits = QList<QLineEdit *>() << ui.classLineEdit << ui.titleLineEdit << ui.mercLevelLineEdit;
+    QList<QLineEdit *> lineEdits = QList<QLineEdit *>() << ui->classLineEdit << ui->titleLineEdit << ui->mercLevelLineEdit;
     foreach (QLineEdit *lineEdit, lineEdits)
         lineEdit->clear();
     foreach (QLineEdit *lineEdit, _lineEditsStatsMap)
@@ -2196,9 +2197,9 @@ void MedianXLOfflineTools::clearUI()
         lineEdit->clear();
         lineEdit->setStatusTip(QString());
     }
-    ui.charNamePreview->clear();
+    ui->charNamePreview->clear();
 
-    QList<QComboBox *> comboBoxes = QList<QComboBox *>()/* << ui.currentDifficultyComboBox*/ << ui.mercNameComboBox << ui.mercTypeComboBox;
+    QList<QComboBox *> comboBoxes = QList<QComboBox *>()/* << ui->currentDifficultyComboBox*/ << ui->mercNameComboBox << ui->mercTypeComboBox;
     foreach (QComboBox *combobx, comboBoxes)
         combobx->clear();
 
@@ -2208,35 +2209,35 @@ void MedianXLOfflineTools::clearUI()
         spinBox->setValue(0);
         spinBox->setStatusTip(QString());
     }
-    ui.levelSpinBox->setValue(1);
-    //ui.currentActSpinBox->setValue(1);
+    ui->levelSpinBox->setValue(1);
+    //ui->currentActSpinBox->setValue(1);
 
-    QList<QCheckBox *> checkBoxes = QList<QCheckBox *>() << ui.convertToSoftcoreCheckBox << ui.activateWaypointsCheckBox << ui.respecSkillsCheckBox;
+    QList<QCheckBox *> checkBoxes = QList<QCheckBox *>() << ui->convertToSoftcoreCheckBox << ui->activateWaypointsCheckBox << ui->respecSkillsCheckBox;
     foreach (QList<QCheckBox *> questCheckBoxes, _checkboxesQuestsHash.values())
         checkBoxes << questCheckBoxes;
     foreach (QCheckBox *checkbox, checkBoxes)
         checkbox->setChecked(false);
-    ui.respecStatsButton->setChecked(false);
+    ui->respecStatsButton->setChecked(false);
 
-    QList<QGroupBox *> groupBoxes = QList<QGroupBox *>() << ui.characterGroupBox << ui.statsGroupBox << ui.mercGroupBox << _questsGroupBox;
+    QList<QGroupBox *> groupBoxes = QList<QGroupBox *>() << ui->characterGroupBox << ui->statsGroupBox << ui->mercGroupBox << _questsGroupBox;
     foreach (QGroupBox *groupBox, groupBoxes)
         groupBox->setDisabled(true);
 
-    QList<QAction *> actions = QList<QAction *>() << ui.actionReloadCharacter << ui.actionSaveCharacter << ui.actionRespecStats << ui.actionRespecSkills << ui.actionActivateWaypoints << ui.actionRename << ui.actionConvertToSoftcore
-                                                  << ui.actionResurrect << ui.actionFind << ui.actionFindNext << ui.actionFindPrevious << ui.actionShowItems << ui.actionSkillPlan << ui.actionExportCharacterInfo;
+    QList<QAction *> actions = QList<QAction *>() << ui->actionReloadCharacter << ui->actionSaveCharacter << ui->actionRespecStats << ui->actionRespecSkills << ui->actionActivateWaypoints << ui->actionRename << ui->actionConvertToSoftcore
+                                                  << ui->actionResurrect << ui->actionFind << ui->actionFindNext << ui->actionFindPrevious << ui->actionShowItems << ui->actionSkillPlan << ui->actionExportCharacterInfo;
     foreach (QAction *action, actions)
         action->setDisabled(true);
 
-    for (int i = 0; i < ui.statsTableWidget->rowCount(); ++i)
+    for (int i = 0; i < ui->statsTableWidget->rowCount(); ++i)
     {
-        for (int j = 0; j < ui.statsTableWidget->columnCount(); ++j)
+        for (int j = 0; j < ui->statsTableWidget->columnCount(); ++j)
         {
-            QTableWidgetItem *item = ui.statsTableWidget->item(i, j);
+            QTableWidgetItem *item = ui->statsTableWidget->item(i, j);
             if (!item)
             {
                 item = new QTableWidgetItem;
                 item->setTextAlignment(Qt::AlignCenter);
-                ui.statsTableWidget->setItem(i, j, item);
+                ui->statsTableWidget->setItem(i, j, item);
             }
             item->setText(QString());
         }
@@ -2250,34 +2251,34 @@ void MedianXLOfflineTools::updateUI()
 {
     clearUI();
 
-    QList<QAction *> actions = QList<QAction *>() << ui.actionReloadCharacter << ui.actionRespecStats << ui.actionRespecSkills << ui.actionActivateWaypoints
-                                                  << ui.actionRename << ui.actionSkillPlan << ui.actionExportCharacterInfo;
+    QList<QAction *> actions = QList<QAction *>() << ui->actionReloadCharacter << ui->actionRespecStats << ui->actionRespecSkills << ui->actionActivateWaypoints
+                                                  << ui->actionRename << ui->actionSkillPlan << ui->actionExportCharacterInfo;
     foreach (QAction *action, actions)
         action->setEnabled(true);
-    ui.respecSkillsCheckBox->setEnabled(true);
+    ui->respecSkillsCheckBox->setEnabled(true);
 
-    QList<QGroupBox *> groupBoxes = QList<QGroupBox *>() << ui.characterGroupBox << ui.statsGroupBox << _questsGroupBox;
+    QList<QGroupBox *> groupBoxes = QList<QGroupBox *>() << ui->characterGroupBox << ui->statsGroupBox << _questsGroupBox;
     foreach (QGroupBox *groupBox, groupBoxes)
         groupBox->setEnabled(true);
 
     const CharacterInfo &charInfo = CharacterInfo::instance();
-    QD2CharRenamer::updateNamePreview(ui.charNamePreview, charInfo.basicInfo.originalName);
+    QD2CharRenamer::updateNamePreview(ui->charNamePreview, charInfo.basicInfo.originalName);
 
-    ui.hardcoreGroupBox->setEnabled(charInfo.basicInfo.isHardcore);
+    ui->hardcoreGroupBox->setEnabled(charInfo.basicInfo.isHardcore);
     if (charInfo.basicInfo.isHardcore)
         updateHardcoreUIElements();
 
-    ui.classLineEdit->setText(Enums::ClassName::classes().at(charInfo.basicInfo.classCode));
+    ui->classLineEdit->setText(Enums::ClassName::classes().at(charInfo.basicInfo.classCode));
     updateCharacterTitle(charInfo.basicInfo.isHardcore);
 
-    //ui.currentDifficultyComboBox->setEnabled(true);
-    //ui.currentDifficultyComboBox->addItems(difficulties.mid(0, titleAndMaxDifficulty.second + 1));
-    //ui.currentDifficultyComboBox->setCurrentIndex(charInfo.basicInfo.currentDifficulty);
-    //ui.currentActSpinBox->setValue(charInfo.basicInfo.currentAct);
+    //ui->currentDifficultyComboBox->setEnabled(true);
+    //ui->currentDifficultyComboBox->addItems(difficulties.mid(0, titleAndMaxDifficulty.second + 1));
+    //ui->currentDifficultyComboBox->setCurrentIndex(charInfo.basicInfo.currentDifficulty);
+    //ui->currentActSpinBox->setValue(charInfo.basicInfo.currentAct);
 
     _oldClvl = charInfo.basicInfo.level;
-    ui.levelSpinBox->setMaximum(_oldClvl);
-    ui.levelSpinBox->setValue(_oldClvl);
+    ui->levelSpinBox->setMaximum(_oldClvl);
+    ui->levelSpinBox->setValue(_oldClvl);
 
     updateCharacterExperienceProgressbar(charInfo.valueOfStatistic(Enums::CharacterStats::Experience));
 
@@ -2286,23 +2287,23 @@ void MedianXLOfflineTools::updateUI()
 
     int stats = charInfo.basicInfo.totalStatPoints, skills = charInfo.basicInfo.totalSkillPoints;
     updateStatusTips(stats, stats - charInfo.valueOfStatistic(Enums::CharacterStats::FreeStatPoints), skills, skills - charInfo.valueOfStatistic(Enums::CharacterStats::FreeSkillPoints));
-    ui.signetsOfLearningEatenLineEdit->setStatusTip(maxValueFormat.arg(Enums::CharacterStats::SignetsOfLearningMax));
-    ui.signetsOfSkillEatenLineEdit->setStatusTip(maxValueFormat.arg(Enums::CharacterStats::SignetsOfSkillMax));
-    ui.stashGoldLineEdit->setStatusTip(maxValueFormat.arg(QLocale().toString(Enums::CharacterStats::StashGoldMax)));
+    ui->signetsOfLearningEatenLineEdit->setStatusTip(maxValueFormat.arg(Enums::CharacterStats::SignetsOfLearningMax));
+    ui->signetsOfSkillEatenLineEdit->setStatusTip(maxValueFormat.arg(Enums::CharacterStats::SignetsOfSkillMax));
+    ui->stashGoldLineEdit->setStatusTip(maxValueFormat.arg(QLocale().toString(Enums::CharacterStats::StashGoldMax)));
     if (_sharedGold)
-        ui.stashGoldLineEdit->setStatusTip(ui.stashGoldLineEdit->statusTip() + ", " + tr("Shared: %1", "amount of gold in shared stash").arg(QLocale().toString(_sharedGold)));
+        ui->stashGoldLineEdit->setStatusTip(ui->stashGoldLineEdit->statusTip() + ", " + tr("Shared: %1", "amount of gold in shared stash").arg(QLocale().toString(_sharedGold)));
 
     if (charInfo.mercenary.exists)
     {
         int mercTypeIndex;
         QPair<int, int> mercArraySlice = Enums::Mercenary::allowedTypesForMercCode(charInfo.mercenary.code, &mercTypeIndex);
-        ui.mercTypeComboBox->addItems(Enums::Mercenary::types().mid(mercArraySlice.first, mercArraySlice.second));
-        ui.mercTypeComboBox->setCurrentIndex(mercTypeIndex);
+        ui->mercTypeComboBox->addItems(Enums::Mercenary::types().mid(mercArraySlice.first, mercArraySlice.second));
+        ui->mercTypeComboBox->setCurrentIndex(mercTypeIndex);
 
-        ui.mercNameComboBox->addItems(mercNames.at(Enums::Mercenary::mercNamesIndexFromCode(charInfo.mercenary.code)));
-        ui.mercNameComboBox->setCurrentIndex(charInfo.mercenary.nameIndex);
+        ui->mercNameComboBox->addItems(mercNames.at(Enums::Mercenary::mercNamesIndexFromCode(charInfo.mercenary.code)));
+        ui->mercNameComboBox->setCurrentIndex(charInfo.mercenary.nameIndex);
 
-        ui.mercLevelLineEdit->setText(QString::number(charInfo.mercenary.level));
+        ui->mercLevelLineEdit->setText(QString::number(charInfo.mercenary.level));
 
         if ((charInfo.mercenary.level == Enums::CharacterStats::MaxNonHardenedLevel - 1 && charInfo.mercenary.experience < mercExperienceForLevel(Enums::CharacterStats::MaxNonHardenedLevel - 1) + 5) ||
              charInfo.mercenary.level == Enums::CharacterStats::MaxLevel - 1)
@@ -2318,7 +2319,7 @@ void MedianXLOfflineTools::updateUI()
         }
         _mercExpGroupBox->setCurrentExperience(charInfo.mercenary.experience);
 
-        ui.mercGroupBox->setEnabled(true);
+        ui->mercGroupBox->setEnabled(true);
     }
 
     for (int i = 0; i < kDifficultiesNumber; ++i)
@@ -2330,9 +2331,9 @@ void MedianXLOfflineTools::updateUI()
     }
 
     bool hasItems = !charInfo.items.character.isEmpty();
-    ui.actionShowItems->setEnabled(hasItems);
-    ui.actionFind->setEnabled(hasItems);
-    ui.actionGiveCube->setDisabled(CharacterInfo::instance().items.hasCube());
+    ui->actionShowItems->setEnabled(hasItems);
+    ui->actionFind->setEnabled(hasItems);
+    ui->actionGiveCube->setDisabled(CharacterInfo::instance().items.hasCube());
 
     updateWindowTitle();
 
@@ -2342,10 +2343,10 @@ void MedianXLOfflineTools::updateUI()
 void MedianXLOfflineTools::updateHardcoreUIElements()
 {
     bool hadDied = CharacterInfo::instance().basicInfo.hadDied;
-    ui.convertToSoftcoreCheckBox->setDisabled(hadDied);
-    ui.actionConvertToSoftcore->setDisabled(hadDied);
-    ui.resurrectButton->setEnabled(hadDied);
-    ui.actionResurrect->setEnabled(hadDied);
+    ui->convertToSoftcoreCheckBox->setDisabled(hadDied);
+    ui->actionConvertToSoftcore->setDisabled(hadDied);
+    ui->resurrectButton->setEnabled(hadDied);
+    ui->actionResurrect->setEnabled(hadDied);
 }
 
 void MedianXLOfflineTools::updateCharacterTitle(bool isHardcore)
@@ -2357,8 +2358,8 @@ void MedianXLOfflineTools::updateCharacterTitle(bool isHardcore)
     QString newTitle = titleAndMaxDifficulty.first;
     if (basicInfo.isHardcore && basicInfo.hadDied)
         newTitle += QString(" (%1)").arg(tr("DEAD", "HC character is dead"));
-    ui.titleLineEdit->setText(newTitle);
-    ui.titleLineEdit->setStyleSheet(QString("%1; color: %2;").arg(kReadonlyCss, isHardcore ? "red" : "black"));
+    ui->titleLineEdit->setText(newTitle);
+    ui->titleLineEdit->setStyleSheet(QString("%1; color: %2;").arg(kReadonlyCss, isHardcore ? "red" : "black"));
 }
 
 void MedianXLOfflineTools::setStats()
@@ -2383,12 +2384,12 @@ void MedianXLOfflineTools::setStats()
         else if (statCode >= Enums::CharacterStats::Life && statCode <= Enums::CharacterStats::BaseStamina)
         {
             int j = statCode - Enums::CharacterStats::Life, row = j / 2, col = j % 2;
-            QTableWidgetItem *item = ui.statsTableWidget->item(row, col);
+            QTableWidgetItem *item = ui->statsTableWidget->item(row, col);
             if (!item)
             {
                 item = new QTableWidgetItem;
                 item->setTextAlignment(Qt::AlignCenter);
-                ui.statsTableWidget->setItem(row, col, item);
+                ui->statsTableWidget->setItem(row, col, item);
             }
             item->setText(QString::number(value));
         }
@@ -2398,7 +2399,7 @@ void MedianXLOfflineTools::setStats()
         }
     }
 
-    int freeStats = ui.freeStatPointsLineEdit->text().toInt();
+    int freeStats = ui->freeStatPointsLineEdit->text().toInt();
     if (freeStats)
         foreach (QSpinBox *spinBox, _spinBoxesStatsMap)
             spinBox->setMaximum(spinBox->maximum() + freeStats);
@@ -2418,17 +2419,17 @@ void MedianXLOfflineTools::updateWindowTitle()
 
 void MedianXLOfflineTools::updateTableStats(const BaseStats::StatsStep &statsPerStep, int diff, QSpinBox *senderSpinBox /*= 0*/)
 {
-    if (!senderSpinBox || (senderSpinBox && senderSpinBox == ui.vitalitySpinBox))
+    if (!senderSpinBox || (senderSpinBox && senderSpinBox == ui->vitalitySpinBox))
     {
-        updateTableItemStat(ui.statsTableWidget->item(0, 0), diff, statsPerStep.life); // current life
-        updateTableItemStat(ui.statsTableWidget->item(0, 1), diff, statsPerStep.life); // base life
-        updateTableItemStat(ui.statsTableWidget->item(2, 0), diff, statsPerStep.stamina); // current stamina
-        updateTableItemStat(ui.statsTableWidget->item(2, 1), diff, statsPerStep.stamina); // base stamina
+        updateTableItemStat(ui->statsTableWidget->item(0, 0), diff, statsPerStep.life); // current life
+        updateTableItemStat(ui->statsTableWidget->item(0, 1), diff, statsPerStep.life); // base life
+        updateTableItemStat(ui->statsTableWidget->item(2, 0), diff, statsPerStep.stamina); // current stamina
+        updateTableItemStat(ui->statsTableWidget->item(2, 1), diff, statsPerStep.stamina); // base stamina
     }
-    if (!senderSpinBox || (senderSpinBox && senderSpinBox == ui.energySpinBox))
+    if (!senderSpinBox || (senderSpinBox && senderSpinBox == ui->energySpinBox))
     {
-        updateTableItemStat(ui.statsTableWidget->item(1, 0), diff, statsPerStep.mana); // current mana
-        updateTableItemStat(ui.statsTableWidget->item(1, 1), diff, statsPerStep.mana); // base mana
+        updateTableItemStat(ui->statsTableWidget->item(1, 0), diff, statsPerStep.mana); // current mana
+        updateTableItemStat(ui->statsTableWidget->item(1, 1), diff, statsPerStep.mana); // base mana
     }
 }
 
@@ -2449,9 +2450,9 @@ void MedianXLOfflineTools::updateTableItemStat(QTableWidgetItem *item, int diff,
 
 void MedianXLOfflineTools::updateStatusTips(int newStatPoints, int investedStatPoints, int newSkillPoints, int investedSkillPoints)
 {
-    updateMaxCompoundStatusTip(ui.freeStatPointsLineEdit, newStatPoints, investedStatPoints);
-    updateMaxCompoundStatusTip(ui.freeSkillPointsLineEdit, newSkillPoints, investedSkillPoints);
-    ui.inventoryGoldLineEdit->setStatusTip(maxValueFormat.arg(QLocale().toString(_oldClvl * Enums::CharacterStats::InventoryGoldFactor)));
+    updateMaxCompoundStatusTip(ui->freeStatPointsLineEdit, newStatPoints, investedStatPoints);
+    updateMaxCompoundStatusTip(ui->freeSkillPointsLineEdit, newSkillPoints, investedSkillPoints);
+    ui->inventoryGoldLineEdit->setStatusTip(maxValueFormat.arg(QLocale().toString(_oldClvl * Enums::CharacterStats::InventoryGoldFactor)));
 }
 
 void MedianXLOfflineTools::updateCompoundStatusTip(QWidget *widget, const QString &firstString, const QString &secondString)
@@ -2471,8 +2472,8 @@ void MedianXLOfflineTools::updateMaxCompoundStatusTip(QWidget *widget, int maxVa
 
 void MedianXLOfflineTools::updateAssociateAction(bool disable)
 {
-    ui.actionAssociate->setDisabled(disable);
-    ui.actionAssociate->setStatusTip(disable ? tr("Application is default already") : QString());
+    ui->actionAssociate->setDisabled(disable);
+    ui->actionAssociate->setStatusTip(disable ? tr("Application is default already") : QString());
 }
 
 void MedianXLOfflineTools::updateCharacterExperienceProgressbar(quint32 newExperience)
@@ -2508,7 +2509,7 @@ QByteArray MedianXLOfflineTools::statisticBytes()
         else if (statCode >= Enums::CharacterStats::Life && statCode <= Enums::CharacterStats::BaseStamina)
         {
             int j = statCode - Enums::CharacterStats::Life, row = j / 2, col = j % 2;
-            value = static_cast<qulonglong>(ui.statsTableWidget->item(row, col)->text().toDouble()) << 8;
+            value = static_cast<qulonglong>(ui->statsTableWidget->item(row, col)->text().toDouble()) << 8;
         }
         else if (statCode != Enums::CharacterStats::End && statCode != Enums::CharacterStats::Level && statCode != Enums::CharacterStats::Experience)
         {
@@ -2522,7 +2523,7 @@ QByteArray MedianXLOfflineTools::statisticBytes()
 #ifndef MAKE_FINISHED_CHARACTER
             else if (statCode == Enums::CharacterStats::FreeStatPoints)
             {
-                int totalPossibleFreeStats = totalPossibleStatPoints(ui.levelSpinBox->value()) - investedStatPoints();
+                int totalPossibleFreeStats = totalPossibleStatPoints(ui->levelSpinBox->value()) - investedStatPoints();
                 if (value > static_cast<quint32>(totalPossibleFreeStats)) // prevent hacks and shut the compiler up
                 {
                     value = totalPossibleFreeStats;
@@ -2534,7 +2535,7 @@ QByteArray MedianXLOfflineTools::statisticBytes()
         else if (statCode != Enums::CharacterStats::End && isExpAndLevelNotSet) // level or exp
         {
             QObject &statsDynamicData = CharacterInfo::instance().basicInfo.statsDynamicData;
-            quint8 clvl = CharacterInfo::instance().basicInfo.level, newClvl = ui.levelSpinBox->value();
+            quint8 clvl = CharacterInfo::instance().basicInfo.level, newClvl = ui->levelSpinBox->value();
             if (clvl != newClvl) // set new level and experience explicitly
             {
                 addStatisticBits(result, Enums::CharacterStats::Level, Enums::CharacterStats::StatCodeLength);
@@ -2603,11 +2604,11 @@ void MedianXLOfflineTools::clearItems(bool sharedStashPathChanged /*= true*/, bo
         switch (item->storage)
         {
         case Enums::ItemStorage::SharedStash:
-            if ((sharedStashPathChanged || ui.actionAutoOpenSharedStash->isChecked()) && !sharedStashPathChanged)
+            if ((sharedStashPathChanged || ui->actionAutoOpenSharedStash->isChecked()) && !sharedStashPathChanged)
                 continue;
             break;
         case Enums::ItemStorage::HCStash:
-            if ((hcStashPathChanged || ui.actionAutoOpenHCShared->isChecked()) && !hcStashPathChanged)
+            if ((hcStashPathChanged || ui->actionAutoOpenHCShared->isChecked()) && !hcStashPathChanged)
                 continue;
             break;
         default:
@@ -2621,7 +2622,7 @@ void MedianXLOfflineTools::clearItems(bool sharedStashPathChanged /*= true*/, bo
 
 void MedianXLOfflineTools::backupFile(QFile &file)
 {
-    if (ui.actionBackup->isChecked())
+    if (ui->actionBackup->isChecked())
     {
         if (int backupsLimit = _backupLimitsGroup->checkedAction()->data().toInt())
         {
@@ -2632,7 +2633,7 @@ void MedianXLOfflineTools::backupFile(QFile &file)
                 sourceFileDir.remove(previousBackups.takeFirst());
         }
 
-        QFile backupFile(QString("%1_%2.%3").arg(file.fileName()).arg(ui.actionBackupFormatReadable->isChecked() ? QDateTime::currentDateTimeUtc().toString("yyyyMMdd-hhmmss") : QString::number(QDateTime::currentMSecsSinceEpoch())).arg(kBackupExtension));
+        QFile backupFile(QString("%1_%2.%3").arg(file.fileName()).arg(ui->actionBackupFormatReadable->isChecked() ? QDateTime::currentDateTimeUtc().toString("yyyyMMdd-hhmmss") : QString::number(QDateTime::currentMSecsSinceEpoch())).arg(kBackupExtension));
         if (backupFile.exists() && !backupFile.remove()) // it shouldn't actually exist, but let's be safe
             showErrorMessageBoxForFile(tr("Error removing old backup '%1'"), backupFile);
         else

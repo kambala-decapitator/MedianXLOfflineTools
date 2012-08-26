@@ -958,3 +958,6 @@ NoDesc	1	1	1	72		60				42	217	oskill	789	17	21	Apocalypse											boot								
 NoDesc	1	1	1	48		40				19	217	oskill	824	13	21	Meteor Shower											helm							circ					0	0	0
 NoDesc	1	1	1	48		40				19	217	oskill	825	13	21	Countdown											belt												0	0	0
 NoDesc	1	1	1	48		40				19	217	oskill	826	13	21	Ball Lightning											glov												0	0	0
+NoDesc	1	1	1	70		80				50	223	death-skill	30	100	57	Rain of Bombs											tors												0	0	0
+NoDesc	1	1	1	80		90				20	223	att-skill	78	5	7	Javelin Nova											tors												0	0	0
+NoDesc	1	1	1	70		80				50	223	death-skill	399	100	48	Gamma Field											tors												0	0	0

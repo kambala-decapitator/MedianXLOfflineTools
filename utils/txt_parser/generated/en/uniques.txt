@@ -5,2260 +5,2260 @@
 3	Hell Forge Hammer	20	
 4	Khalim's Flail	15	
 5	Khalim's Will	20	
-6	The Boulder	1	
-7	Eye of the Storm	20	
-8	Demonstone Blood	40	
-9	Zakarum Stoning Rock	60	
-10	Farsight Globe	80	
-11	Asheara's Cateye	100	
-12	Dragon's Egg	100	
-13	Heavenstone	100	
-14	\white;not yet implemented - CHEATER	100	
-15	\white;not yet implemented - CHEATER	100	
-16	\white;not yet implemented - CHEATER	100	
-17	\white;not yet implemented - CHEATER	100	
-18	\white;not yet implemented - CHEATER	100	
-19	\white;not yet implemented - CHEATER	100	
-20	\white;not yet implemented - CHEATER	100	
-21	\white;not yet implemented - CHEATER	100	
-22	\white;not yet implemented - CHEATER	100	
-23	\white;not yet implemented - CHEATER	100	
-24	\white;not yet implemented - CHEATER	100	
-25	\white;not yet implemented - CHEATER	100	
-26	\white;not yet implemented - CHEATER	100	
-27	\white;not yet implemented - CHEATER	100	
-28	\white;not yet implemented - CHEATER	100	
-29	\white;not yet implemented - CHEATER	100	
-30	\white;not yet implemented - CHEATER	100	
-31	\white;not yet implemented - CHEATER	100	
-32	\white;not yet implemented - CHEATER	100	
-33	\white;not yet implemented - CHEATER	100	
-34	\white;not yet implemented - CHEATER	100	
-35	\white;not yet implemented - CHEATER	100	
-36	\white;not yet implemented - CHEATER	100	
-37	\white;not yet implemented - CHEATER	100	
-38	\white;not yet implemented - CHEATER	100	
-39	\white;not yet implemented - CHEATER	100	
-40	\white;not yet implemented - CHEATER	100	
-41	\white;not yet implemented - CHEATER	100	
-42	\white;not yet implemented - CHEATER	100	
-43	\white;not yet implemented - CHEATER	100	
-44	\white;not yet implemented - CHEATER	100	
-45	\white;not yet implemented - CHEATER	100	
-46	\white;not yet implemented - CHEATER	100	
-47	\white;not yet implemented - CHEATER	100	
-48	\white;not yet implemented - CHEATER	100	
-49	\white;not yet implemented - CHEATER	100	
-50	\white;not yet implemented - CHEATER	100	
-51	\white;not yet implemented - CHEATER	100	
-52	\white;not yet implemented - CHEATER	100	
-53	\white;not yet implemented - CHEATER	100	
-54	\white;not yet implemented - CHEATER	100	
-55	\white;not yet implemented - CHEATER	100	
-56	\white;not yet implemented - CHEATER	100	
-57	\white;not yet implemented - CHEATER	100	
-58	\white;not yet implemented - CHEATER	100	
-59	\white;not yet implemented - CHEATER	100	
-60	\white;not yet implemented - CHEATER	100	
-61	\white;not yet implemented - CHEATER	100	
-62	\white;not yet implemented - CHEATER	100	
-63	\white;not yet implemented - CHEATER	100	
-64	\white;not yet implemented - CHEATER	100	
-65	\white;not yet implemented - CHEATER	100	
-66	\white;not yet implemented - CHEATER	100	
-67	\white;not yet implemented - CHEATER	100	
-68	\white;not yet implemented - CHEATER	100	
-69	\white;not yet implemented - CHEATER	100	
-70	\white;not yet implemented - CHEATER	100	
-71	\white;not yet implemented - CHEATER	100	
-72	\white;not yet implemented - CHEATER	100	
-73	\white;not yet implemented - CHEATER	100	
-74	\white;not yet implemented - CHEATER	100	
-75	\white;not yet implemented - CHEATER	100	
-76	\white;not yet implemented - CHEATER	100	
-77	\white;not yet implemented - CHEATER	100	
-78	\white;not yet implemented - CHEATER	100	
-79	\white;not yet implemented - CHEATER	100	
-80	\white;not yet implemented - CHEATER	100	
-81	\white;not yet implemented - CHEATER	100	
-82	\white;not yet implemented - CHEATER	100	
-83	\white;not yet implemented - CHEATER	100	
-84	\white;not yet implemented - CHEATER	100	
-85	\white;not yet implemented - CHEATER	100	
-86	\white;not yet implemented - CHEATER	100	
-87	\white;not yet implemented - CHEATER	100	
-88	\white;not yet implemented - CHEATER	100	
-89	\white;not yet implemented - CHEATER	100	
-90	\white;not yet implemented - CHEATER	100	
-91	\white;not yet implemented - CHEATER	100	
-92	\white;not yet implemented - CHEATER	100	
-93	\white;not yet implemented - CHEATER	100	
-94	\white;not yet implemented - CHEATER	100	
-95	\white;not yet implemented - CHEATER	100	
-96	\white;not yet implemented - CHEATER	100	
-97	\white;not yet implemented - CHEATER	100	
-98	\white;not yet implemented - CHEATER	100	
-99	\white;not yet implemented - CHEATER	100	
-100	\white;not yet implemented - CHEATER	100	
-101	\white;not yet implemented - CHEATER	100	
-102	\white;not yet implemented - CHEATER	100	
-103	\white;not yet implemented - CHEATER	100	
-104	\white;not yet implemented - CHEATER	100	
-105	\white;not yet implemented - CHEATER	100	
-106	\white;not yet implemented - CHEATER	100	
-107	\white;not yet implemented - CHEATER	100	
-108	\white;not yet implemented - CHEATER	100	
-109	\white;not yet implemented - CHEATER	100	
-110	\white;not yet implemented - CHEATER	100	
-111	\white;not yet implemented - CHEATER	100	
-112	\white;not yet implemented - CHEATER	100	
-113	\white;not yet implemented - CHEATER	100	
-114	\white;not yet implemented - CHEATER	100	
-115	\white;not yet implemented - CHEATER	100	
-116	\white;not yet implemented - CHEATER	100	
-117	\white;not yet implemented - CHEATER	100	
-118	\white;not yet implemented - CHEATER	100	
-119	\white;not yet implemented - CHEATER	100	
-120	\white;not yet implemented - CHEATER	100	
-121	\white;not yet implemented - CHEATER	100	
-122	\white;not yet implemented - CHEATER	100	
-123	\white;not yet implemented - CHEATER	100	
-124	\white;not yet implemented - CHEATER	100	
-125	\white;not yet implemented - CHEATER	100	
-126	\white;not yet implemented - CHEATER	100	
-127	\white;not yet implemented - CHEATER	100	
-128	\white;not yet implemented - CHEATER	100	
-129	\white;not yet implemented - CHEATER	100	
-130	\white;not yet implemented - CHEATER	100	
-131	\white;not yet implemented - CHEATER	100	
-132	\white;not yet implemented - CHEATER	100	
-133	\white;not yet implemented - CHEATER	100	
-134	\white;not yet implemented - CHEATER	100	
-135	\white;not yet implemented - CHEATER	100	
-136	\white;not yet implemented - CHEATER	100	
-137	\white;not yet implemented - CHEATER	100	
-138	\white;not yet implemented - CHEATER	100	
-139	\white;not yet implemented - CHEATER	100	
-140	\white;not yet implemented - CHEATER	100	
-141	\white;not yet implemented - CHEATER	100	
-142	\white;not yet implemented - CHEATER	100	
-143	\white;not yet implemented - CHEATER	100	
-144	\white;not yet implemented - CHEATER	100	
-145	\white;not yet implemented - CHEATER	100	
-146	\white;not yet implemented - CHEATER	100	
-147	\white;not yet implemented - CHEATER	100	
-148	\white;not yet implemented - CHEATER	100	
-149	\white;not yet implemented - CHEATER	100	
-150	\white;not yet implemented - CHEATER	100	
-151	\white;not yet implemented - CHEATER	100	
-152	\white;not yet implemented - CHEATER	100	
-153	\white;not yet implemented - CHEATER	100	
-154	\white;not yet implemented - CHEATER	100	
-155	\white;not yet implemented - CHEATER	100	
-156	\white;not yet implemented - CHEATER	100	
-157	\white;not yet implemented - CHEATER	100	
-158	\white;not yet implemented - CHEATER	100	
-159	\white;not yet implemented - CHEATER	100	
-160	\white;not yet implemented - CHEATER	100	
-161	\white;not yet implemented - CHEATER	100	
-162	\white;not yet implemented - CHEATER	100	
-163	\white;not yet implemented - CHEATER	100	
-164	\white;not yet implemented - CHEATER	100	
-165	\white;not yet implemented - CHEATER	100	
-166	\white;not yet implemented - CHEATER	100	
-167	\white;not yet implemented - CHEATER	100	
-168	\white;not yet implemented - CHEATER	100	
-169	\white;not yet implemented - CHEATER	100	
-170	\white;not yet implemented - CHEATER	100	
-171	\white;not yet implemented - CHEATER	100	
-172	\white;not yet implemented - CHEATER	100	
-173	\white;not yet implemented - CHEATER	100	
-174	\white;not yet implemented - CHEATER	100	
-175	\white;not yet implemented - CHEATER	100	
-176	Book of Summoning	1	
-177	Horazon's Focus	40	
-178	Optical Detector	60	
-179	Laser Focus Crystal	80	
-180	Azmodan's Heart	555	
-181	Spirit Trance Herb	100	
-182	Idol of Vanity	100	
-183	The Butcher's Tooth	40	
-184	Visions of Akarat	100	akaratbook
-185	Scroll of Kings	555	scrollofkings
-186	Sacred Worldstone Key	555	
-187	Moon of the Spider	100	
-188	Legacy of Blood	100	bloodlegacy
-189	Spirit of Damnation	666	
-190	Hammer of the Taan Judges	40	
-191	Six Angel Bag	666	
-192	Sunless Crystal Bird	666	
-193	Zakarum's Ear	80	
-194	Sunstone of the Gods	100	
-195	Eternal Bone Pile	100	
-196	Sunstone of Fire	666	
-197	Sunstone of Ice	666	
-198	Sunstone of Thunder	666	
-199	Hard Mode Charm	5	
-200	(Amazon Challenge Item)\nSacred Sunstone	90	newclasscharm
-201	(Assassin Challenge Item)\nShadow Vortex	90	newclasscharm
-202	(Barbarian Challenge Item)\nWorldstone Orb	90	newclasscharm
-203	(Druid Challenge Item)\nCaoi Dulra Fruit	90	newclasscharm
-204	(Necromancer Challenge Item)\nSoulstone Shard	90	newclasscharm
-205	(Paladin Challenge Item)\nEye of Divinity	90	newclasscharm
-206	(Sorceress Challenge Item)\nNexus Crystal	90	newclasscharm
-207	Locust Hive	1	
-208	Cindercone	40	
-209	Bucket of Love	80	
-210	Kingsport's Signals	120	
-211	Test Tube	1	
-212	Larzuk's Bandolier	40	
-213	Plague Gland	80	
-214	Hammerspace	120	
-215	Hangman	1	
-216	Felblood	20	
-217	Angel Heart	40	
-218	Athulua's Oracle	60	
-219	The Dreamcatcher	80	
-220	Witchmoon	100	
-221	Death Ward	120	
-222	Ring of Disengagement	1	
-223	Ring of Truth	20	
-224	Empyrean Band	40	
-225	Ripstar	60	
-226	Xorine's Ring	80	
-227	Earth Rouser	100	
-228	Sigil of Tur Dulra	120	
-229	Catechumen	7	
-230	Catechumen	16	
-231	Catechumen	25	
-232	Catechumen	34	
-233	Catechumen	42	
-234	Catechumen	51	
-235	Astreon's Citadel	100	
-236	Queen of Glass	11	
-237	Queen of Glass	20	
-238	Queen of Glass	30	
-239	Queen of Glass	38	
-240	Queen of Glass	47	
-241	Queen of Glass	54	
-242	Torn Flesh of Gods	100	
-243	Vindicatress	8	
-244	Vindicatress	17	
-245	Vindicatress	26	
-246	Vindicatress	36	
-247	Vindicatress	45	
-248	Vindicatress	54	
-249	The Angiris Star	100	
-250	Nymph's Grace	6	
-251	Nymph's Grace	14	
-252	Nymph's Grace	23	
-253	Nymph's Grace	32	
-254	Nymph's Grace	41	
-255	Nymph's Grace	49	
-256	Goatlord	100	
-257	Bathos	6	
-258	Bathos	15	
-259	Bathos	24	
-260	Bathos	33	
-261	Bathos	41	
-262	Bathos	50	
-263	Cloudwhirl	100	
-264	Thunderdome	8	
-265	Thunderdome	16	
-266	Thunderdome	25	
-267	Thunderdome	34	
-268	Thunderdome	43	
-269	Thunderdome	51	
-270	Morlu's Friend	100	
-271	The Sightless Eye	1	
-272	The Sightless Eye	10	
-273	The Sightless Eye	19	
-274	The Sightless Eye	28	
-275	The Sightless Eye	36	
-276	The Sightless Eye	45	
-277	Danmaku	100	
-278	Spirit Teacher's Headdress	10	
-279	Spirit Teacher's Headdress	19	
-280	Spirit Teacher's Headdress	28	
-281	Spirit Teacher's Headdress	37	
-282	Spirit Teacher's Headdress	46	
-283	Spirit Teacher's Headdress	54	
-284	Bul Kathos' Voice	100	
-285	The Lumberjack	3	
-286	The Lumberjack	12	
-287	The Lumberjack	22	
-288	The Lumberjack	31	
-289	The Lumberjack	40	
-290	The Lumberjack	49	
-291	Throatseeker	100	
-292	Wolfpack	6	
-293	Wolfpack	16	
-294	Wolfpack	25	
-295	Wolfpack	34	
-296	Wolfpack	43	
-297	Wolfpack	53	
-298	Kaskara of the Taan	100	
-299	Rockshatter	6	
-300	Rockshatter	15	
-301	Rockshatter	24	
-302	Rockshatter	34	
-303	Rockshatter	43	
-304	Rockshatter	53	
-305	Griefbringer	100	
-306	Ironsleet	7	
-307	Ironsleet	16	
-308	Ironsleet	26	
-309	Ironsleet	35	
-310	Ironsleet	44	
-311	Ironsleet	54	
-312	Pixie Legion	100	
-313	Wisdom's Wrap	12	
-314	Wisdom's Wrap	20	
-315	Wisdom's Wrap	29	
-316	Wisdom's Wrap	38	
-317	Wisdom's Wrap	47	
-318	Wisdom's Wrap	55	
-319	Demonspike Coat	100	
-320	Spellbreaker	1	
-321	Spellbreaker	8	
-322	Spellbreaker	17	
-323	Spellbreaker	26	
-324	Spellbreaker	36	
-325	Spellbreaker	45	
-326	Earthbind	100	
-327	Addertongue	6	
-328	Addertongue	15	
-329	Addertongue	24	
-330	Addertongue	34	
-331	Addertongue	43	
-332	Addertongue	52	
-333	(                                   Fleshdoom                                   )	100	
-334	Skullhammer	5	
-335	Skullhammer	14	
-336	Skullhammer	24	
-337	Skullhammer	33	
-338	Skullhammer	42	
-339	Skullhammer	51	
-340	Steelwoe	100	
-341	The Covenant	6	
-342	The Covenant	16	
-343	The Covenant	25	
-344	The Covenant	34	
-345	The Covenant	43	
-346	The Covenant	52	
-347	Xorine's Cane	100	
-348	Aerin Orbiter	5	
-349	Aerin Orbiter	14	
-350	Aerin Orbiter	22	
-351	Aerin Orbiter	31	
-352	Aerin Orbiter	40	
-353	Aerin Orbiter	48	
-354	Ashaera's Armor	100	
-355	Skull Lord	6	
-356	Skull Lord	15	
-357	Skull Lord	24	
-358	Skull Lord	32	
-359	Skull Lord	41	
-360	Skull Lord	50	
-361	Hivemind	100	
-362	Clawscratch	10	
-363	Clawscratch	19	
-364	Clawscratch	28	
-365	Clawscratch	38	
-366	Clawscratch	47	
-367	Clawscratch	54	
-368	Drow Valor	100	
-369	Arihan's End	11	
-370	Arihan's End	21	
-371	Arihan's End	29	
-372	Arihan's End	39	
-373	Arihan's End	49	
-374	Arihan's End	57	
-375	Mermaid's Song	100	
-376	Leoric's Legion	8	
-377	Leoric's Legion	17	
-378	Leoric's Legion	25	
-379	Leoric's Legion	34	
-380	Leoric's Legion	43	
-381	Leoric's Legion	52	
-382	The Gauntlet	100	
-383	Stillwater	10	
-384	Stillwater	19	
-385	Stillwater	27	
-386	Stillwater	36	
-387	Stillwater	45	
-388	Stillwater	54	
-389	Trollface	100	
-390	The Wailing Wall	5	
-391	The Wailing Wall	14	
-392	The Wailing Wall	23	
-393	The Wailing Wall	31	
-394	The Wailing Wall	40	
-395	The Wailing Wall	49	
-396	Shadowhymn	100	
-397	Fateweaver	5	
-398	Fateweaver	14	
-399	Fateweaver	23	
-400	Fateweaver	33	
-401	Fateweaver	42	
-402	Fateweaver	51	
-403	Talon of Trang-Oul	100	
-404	Auto Da Fe	4	
-405	Auto Da Fe	13	
-406	Auto Da Fe	22	
-407	Auto Da Fe	32	
-408	Auto Da Fe	41	
-409	Auto Da Fe	50	
-410	Mad King's Spine	100	
-411	Talon's Reach	6	
-412	Talon's Reach	16	
-413	Talon's Reach	26	
-414	Talon's Reach	36	
-415	Talon's Reach	47	
-416	Talon's Reach	57	
-417	Wing of the Dragon God	100	
-418	Rabbit's Foot	1	
-419	Rabbit's Foot	8	
-420	Rabbit's Foot	17	
-421	Rabbit's Foot	25	
-422	Rabbit's Foot	34	
-423	Rabbit's Foot	43	
-424	Everchase	100	
-425	Shieldcracker	5	
-426	Shieldcracker	14	
-427	Shieldcracker	23	
-428	Shieldcracker	32	
-429	Shieldcracker	42	
-430	Shieldcracker	51	
-431	Goredrill	100	
-432	Werecat	5	
-433	Werecat	14	
-434	Werecat	23	
-435	Werecat	31	
-436	Werecat	40	
-437	Werecat	50	
-438	Light's Widow	100	
-439	Jackal's Hunger	3	
-440	Jackal's Hunger	12	
-441	Jackal's Hunger	22	
-442	Jackal's Hunger	31	
-443	Jackal's Hunger	40	
-444	Jackal's Hunger	49	
-445	Goreshifter	100	
-446	Raptor Beak	6	
-447	Raptor Beak	15	
-448	Raptor Beak	25	
-449	Raptor Beak	34	
-450	Raptor Beak	44	
-451	Raptor Beak	53	
-452	Plaguemourn	100	
-453	The Breaking Wheel	7	
-454	The Breaking Wheel	16	
-455	The Breaking Wheel	24	
-456	The Breaking Wheel	33	
-457	The Breaking Wheel	42	
-458	The Breaking Wheel	51	
-459	Rota Solaris	100	
-460	Uldyssian's Legion	9	
-461	Uldyssian's Legion	18	
-462	Uldyssian's Legion	27	
-463	Uldyssian's Legion	36	
-464	Uldyssian's Legion	46	
-465	Uldyssian's Legion	55	
-466	Blade of the Jitan	100	
-467	Razordisk	1	
-468	Razordisk	8	
-469	Razordisk	17	
-470	Razordisk	26	
-471	Razordisk	35	
-472	Razordisk	43	
-473	Event Horizon	100	
-474	Golden Fleece	3	
-475	Golden Fleece	12	
-476	Golden Fleece	21	
-477	Golden Fleece	30	
-478	Golden Fleece	38	
-479	Golden Fleece	47	
-480	Uldyssian's Awakening	100	
-481	The Jester	1	
-482	The Jester	9	
-483	The Jester	17	
-484	The Jester	26	
-485	The Jester	35	
-486	The Jester	44	
-487	The Wanderer's Hood	100	
-488	Wedding Dress of the Zann	12	
-489	Wedding Dress of the Zann	21	
-490	Wedding Dress of the Zann	31	
-491	Wedding Dress of the Zann	39	
-492	Wedding Dress of the Zann	48	
-493	Wedding Dress of the Zann	55	
-494	Armor of the Old Religion	100	
-495	Snakehair	5	
-496	Snakehair	14	
-497	Snakehair	23	
-498	Snakehair	31	
-499	Snakehair	40	
-500	Snakehair	49	
-501	Crest of Arnazeus	100	
-502	Hellfeast	5	
-503	Hellfeast	15	
-504	Hellfeast	24	
-505	Hellfeast	33	
-506	Hellfeast	42	
-507	Hellfeast	52	
-508	Noblebane	100	
-509	Lionpaw	4	
-510	Lionpaw	13	
-511	Lionpaw	22	
-512	Lionpaw	31	
-513	Lionpaw	39	
-514	Lionpaw	48	
-515	Toesie Warmer	100	
-516	Featherclaw	5	
-517	Featherclaw	13	
-518	Featherclaw	22	
-519	Featherclaw	31	
-520	Featherclaw	40	
-521	Featherclaw	48	
-522	Deadman's Hand	100	
-523	Albrecht's Revenge	4	
-524	Albrecht's Revenge	13	
-525	Albrecht's Revenge	22	
-526	Albrecht's Revenge	31	
-527	Albrecht's Revenge	39	
-528	Albrecht's Revenge	49	
-529	Hepsheeba's Mantle	100	
-530	The Celestial Crown	4	
-531	The Celestial Crown	13	
-532	The Celestial Crown	22	
-533	The Celestial Crown	30	
-534	The Celestial Crown	39	
-535	The Celestial Crown	48	
-536	Helm of Sprits	100	
-537	Thunderball	6	
-538	Thunderball	16	
-539	Thunderball	25	
-540	Thunderball	34	
-541	Thunderball	43	
-542	Thunderball	52	
-543	Gravetalon	100	
-544	Gold Digger	6	
-545	Gold Digger	15	
-546	Gold Digger	25	
-547	Gold Digger	34	
-548	Gold Digger	44	
-549	Gold Digger	53	
-550	Harpy's Strike	100	
-551	Jared's Fragmentor	2	
-552	Jared's Fragmentor	12	
-553	Jared's Fragmentor	21	
-554	Jared's Fragmentor	31	
-555	Jared's Fragmentor	39	
-556	Jared's Fragmentor	50	
-557	Lavafrost	100	
-558	Gnarled Root	1	
-559	Gnarled Root	9	
-560	Gnarled Root	18	
-561	Gnarled Root	27	
-562	Gnarled Root	37	
-563	Gnarled Root	46	
-564	Branch of a Million Splinters	100	
-565	Soulraider	4	
-566	Soulraider	13	
-567	Soulraider	23	
-568	Soulraider	32	
-569	Soulraider	41	
-570	Soulraider	50	
-571	Ryuuseiu Kyanon	100	
-572	Sagespirit	5	
-573	Sagespirit	14	
-574	Sagespirit	24	
-575	Sagespirit	33	
-576	Sagespirit	42	
-577	Sagespirit	51	
-578	Firestreak	100	
-579	The Allseeing Eye	6	
-580	The Allseeing Eye	14	
-581	The Allseeing Eye	23	
-582	The Allseeing Eye	32	
-583	The Allseeing Eye	41	
-584	The Allseeing Eye	49	
-585	Dark Star	100	
-586	The Barracuda	5	
-587	The Barracuda	15	
-588	The Barracuda	24	
-589	The Barracuda	33	
-590	The Barracuda	42	
-591	The Barracuda	52	
-592	The Needler	100	
-593	Glowskull	10	
-594	Glowskull	19	
-595	Glowskull	28	
-596	Glowskull	37	
-597	Glowskull	46	
-598	Glowskull	54	
-599	Gotterdammerung	100	
-600	Shadowmoon	10	
-601	Shadowmoon	19	
-602	Shadowmoon	28	
-603	Shadowmoon	36	
-604	Shadowmoon	45	
-605	Shadowmoon	54	
-606	Deathforce	100	
-607	Iceflayer	11	
-608	Iceflayer	21	
-609	Iceflayer	30	
-610	Iceflayer	39	
-611	Iceflayer	48	
-612	Iceflayer	57	
-613	Worldstone Shard	100	
-614	The Shanker	1	
-615	The Shanker	8	
-616	The Shanker	18	
-617	The Shanker	27	
-618	The Shanker	36	
-619	The Shanker	45	
-620	Dusk Shard	100	
-621	The Khalim Organ	6	
-622	The Khalim Organ	16	
-623	The Khalim Organ	25	
-624	The Khalim Organ	34	
-625	The Khalim Organ	43	
-626	The Khalim Organ	53	
-627	Rattenfanger	100	
-628	Hellspeak	10	
-629	Hellspeak	19	
-630	Hellspeak	28	
-631	Hellspeak	36	
-632	Hellspeak	45	
-633	Hellspeak	54	
-634	Sinwar	100	
-635	Haareis	10	
-636	Haareis	19	
-637	Haareis	28	
-638	Haareis	37	
-639	Haareis	46	
-640	Haareis	54	
-641	Tennousuuhai	100	
-642	Quov Tsin's Fall	4	
-643	Quov Tsin's Fall	13	
-644	Quov Tsin's Fall	22	
-645	Quov Tsin's Fall	31	
-646	Quov Tsin's Fall	41	
-647	Quov Tsin's Fall	50	
-648	Gryphon's Claw	100	
-649	Anthem De Frost	5	
-650	Anthem De Frost	14	
-651	Anthem De Frost	24	
-652	Anthem De Frost	33	
-653	Anthem De Frost	42	
-654	Anthem De Frost	51	
-655	Moonbender's Wing	100	
-656	Dragonstone	10	
-657	Dragonstone	19	
-658	Dragonstone	29	
-659	Dragonstone	38	
-660	Dragonstone	47	
-661	Dragonstone	54	
-662	Stone of the Skatsim	100	
-663	The Watcher	1	
-664	The Watcher	8	
-665	The Watcher	17	
-666	The Watcher	27	
-667	The Watcher	36	
-668	The Watcher	45	
-669	Habacalva's Firestar	100	
-670	Wildhunt	7	
-671	Wildhunt	15	
-672	Wildhunt	24	
-673	Wildhunt	33	
-674	Wildhunt	42	
-675	Wildhunt	50	
-676	Kethryes' Warband	100	
-677	Finis Terra	5	
-678	Finis Terra	15	
-679	Finis Terra	24	
-680	Finis Terra	33	
-681	Finis Terra	42	
-682	Finis Terra	52	
-683	Bone Gasher	100	
-684	Skyguard	8	
-685	Skyguard	16	
-686	Skyguard	25	
-687	Skyguard	34	
-688	Skyguard	43	
-689	Skyguard	51	
-690	Skythrone	100	
-691	Bonechewer	4	
-692	Bonechewer	13	
-693	Bonechewer	22	
-694	Bonechewer	30	
-695	Bonechewer	39	
-696	Bonechewer	48	
-697	Hellmaw	100	
-698	Fauztin's Visage	7	
-699	Fauztin's Visage	15	
-700	Fauztin's Visage	25	
-701	Fauztin's Visage	33	
-702	Fauztin's Visage	42	
-703	Fauztin's Visage	51	
-704	Icetomb	100	
-705	Ravenflock	11	
-706	Ravenflock	20	
-707	Ravenflock	29	
-708	Ravenflock	38	
-709	Ravenflock	47	
-710	Ravenflock	55	
-711	Lash of the Titans	100	
-712	Frostbringer	7	
-713	Frostbringer	17	
-714	Frostbringer	26	
-715	Frostbringer	35	
-716	Frostbringer	45	
-717	Frostbringer	54	
-718	Fogo Da Sombra	100	
-719	Naiad King	4	
-720	Naiad King	15	
-721	Naiad King	25	
-722	Naiad King	35	
-723	Naiad King	46	
-724	Naiad King	55	
-725	The Scourge of Aranoch	100	
-726	Icebird	4	
-727	Icebird	13	
-728	Icebird	23	
-729	Icebird	32	
-730	Icebird	41	
-731	Icebird	50	
-732	Angler's Hook	100	
-733	Farnham's Flowerpot	6	
-734	Farnham's Flowerpot	14	
-735	Farnham's Flowerpot	23	
-736	Farnham's Flowerpot	32	
-737	Farnham's Flowerpot	41	
-738	Farnham's Flowerpot	49	
-739	Ironhood	100	
-740	Shroud Royal	11	
-741	Shroud Royal	19	
-742	Shroud Royal	28	
-743	Shroud Royal	37	
-744	Shroud Royal	46	
-745	Shroud Royal	54	
-746	Robe of Steel	100	
-747	Serenthia's Disguise	3	
-748	Serenthia's Disguise	12	
-749	Serenthia's Disguise	20	
-750	Serenthia's Disguise	29	
-751	Serenthia's Disguise	38	
-752	Serenthia's Disguise	46	
-753	Cloak of the Vasan Queen	100	
-754	Graven Image	7	
-755	Graven Image	16	
-756	Graven Image	25	
-757	Graven Image	34	
-758	Graven Image	42	
-759	Graven Image	51	
-760	Hero's Fang	100	
-761	Pollice Verso	10	
-762	Pollice Verso	18	
-763	Pollice Verso	27	
-764	Pollice Verso	36	
-765	Pollice Verso	44	
-766	Pollice Verso	52	
-767	Glor-An-Fhaidha's Firebark	100	
-768	Edge of Extinction	11	
-769	Edge of Extinction	20	
-770	Edge of Extinction	29	
-771	Edge of Extinction	38	
-772	Edge of Extinction	48	
-773	Edge of Extinction	55	
-774	Griswold's Revenge	100	
-775	Hellreaper	4	
-776	Hellreaper	14	
-777	Hellreaper	23	
-778	Hellreaper	32	
-779	Hellreaper	41	
-780	Hellreaper	51	
-781	Quietus	100	
-782	Invictus	14	
-783	Invictus	22	
-784	Invictus	31	
-785	Invictus	39	
-786	Invictus	49	
-787	Invictus	57	
-788	Toraja's Champion	100	
-789	Sudis Murale	7	
-790	Sudis Murale	16	
-791	Sudis Murale	25	
-792	Sudis Murale	34	
-793	Sudis Murale	44	
-794	Sudis Murale	53	
-795	Ashenwind	100	
-796	Dubhdroiacht	4	
-797	Dubhdroiacht	14	
-798	Dubhdroiacht	23	
-799	Dubhdroiacht	32	
-800	Dubhdroiacht	42	
-801	Dubhdroiacht	50	
-802	Aerin Nexus	100	
-803	Dies Metus	6	
-804	Dies Metus	15	
-805	Dies Metus	24	
-806	Dies Metus	34	
-807	Dies Metus	43	
-808	Dies Metus	52	
-809	Hand of Naz	100	
-810	Steel Golem	9	
-811	Steel Golem	18	
-812	Steel Golem	27	
-813	Steel Golem	35	
-814	Steel Golem	45	
-815	Steel Golem	52	
-816	Scales of the Serpent	100	
-817	Doomfall	10	
-818	Doomfall	19	
-819	Doomfall	28	
-820	Doomfall	36	
-821	Doomfall	45	
-822	Doomfall	54	
-823	Dragon's Breach	100	
-824	Voidstream	4	
-825	Voidstream	13	
-826	Voidstream	23	
-827	Voidstream	32	
-828	Voidstream	41	
-829	Voidstream	51	
-830	Pagan's Geis	100	
-831	Norrec's Topor	7	
-832	Norrec's Topor	16	
-833	Norrec's Topor	25	
-834	Norrec's Topor	35	
-835	Norrec's Topor	44	
-836	Norrec's Topor	53	
-837	Lex Ferarum	100	
-838	Lanterne Rouge	8	
-839	Lanterne Rouge	16	
-840	Lanterne Rouge	25	
-841	Lanterne Rouge	34	
-842	Lanterne Rouge	43	
-843	Lanterne Rouge	51	
-844	The Prophet's Veil	100	
-845	The Flying Anvil	11	
-846	The Flying Anvil	20	
-847	The Flying Anvil	29	
-848	The Flying Anvil	38	
-849	The Flying Anvil	48	
-850	The Flying Anvil	55	
-851	Hammer of Jholm	100	
-852	The Dao of Xiansai	11	
-853	The Dao of Xiansai	21	
-854	The Dao of Xiansai	29	
-855	The Dao of Xiansai	39	
-856	The Dao of Xiansai	49	
-857	The Dao of Xiansai	57	
-858	Feltongue	100	
-859	Wake of Destruction	9	
-860	Wake of Destruction	18	
-861	Wake of Destruction	27	
-862	Wake of Destruction	36	
-863	Wake of Destruction	44	
-864	Wake of Destruction	52	
-865	Slippers of Yaerius	100	
-866	Blackheart	11	
-867	Blackheart	20	
-868	Blackheart	29	
-869	Blackheart	38	
-870	Blackheart	47	
-871	Blackheart	55	
-872	Dragonspine	100	
-873	King Cobra	10	
-874	King Cobra	19	
-875	King Cobra	28	
-876	King Cobra	37	
-877	King Cobra	47	
-878	King Cobra	54	
-879	The Silent Judge	100	
-880	Gift of the Spiritbeast	12	
-881	Gift of the Spiritbeast	22	
-882	Gift of the Spiritbeast	31	
-883	Gift of the Spiritbeast	42	
-884	Gift of the Spiritbeast	52	
-885	Gift of the Spiritbeast	60	
-886	Peace Warder	100	
-887	Brainhack	1	
-888	Brainhack	9	
-889	Brainhack	19	
-890	Brainhack	28	
-891	Brainhack	37	
-892	Brainhack	46	
-893	Wererat's Bite	100	
-894	Faithshaker	12	
-895	Faithshaker	21	
-896	Faithshaker	30	
-897	Faithshaker	39	
-898	Faithshaker	49	
-899	Faithshaker	56	
-900	Malleus Maleficarum	100	
-901	Leather of Aut	2	
-902	Leather of Aut	11	
-903	Leather of Aut	19	
-904	Leather of Aut	28	
-905	Leather of Aut	37	
-906	Leather of Aut	45	
-907	Wyand's Fervor	100	
-908	Sawfish	4	
-909	Sawfish	13	
-910	Sawfish	22	
-911	Sawfish	32	
-912	Sawfish	41	
-913	Sawfish	50	
-914	The Toecutter	100	
-915	Earth Song	4	
-916	Earth Song	13	
-917	Earth Song	22	
-918	Earth Song	30	
-919	Earth Song	39	
-920	Earth Song	48	
-921	Augur's Pelt	100	
-922	Deadfall	7	
-923	Deadfall	15	
-924	Deadfall	24	
-925	Deadfall	33	
-926	Deadfall	41	
-927	Deadfall	50	
-928	Nor Tiraj's Wisdom	100	
-929	Death Spur	3	
-930	Death Spur	11	
-931	Death Spur	20	
-932	Death Spur	28	
-933	Death Spur	38	
-934	Death Spur	46	
-935	Spirit Walker	100	
-936	Fallentooth	8	
-937	Fallentooth	17	
-938	Fallentooth	28	
-939	Fallentooth	37	
-940	Fallentooth	47	
-941	Fallentooth	54	
-942	Thunder Machine	100	
-943	Toorc's Gift	3	
-944	Toorc's Gift	12	
-945	Toorc's Gift	20	
-946	Toorc's Gift	29	
-947	Toorc's Gift	38	
-948	Toorc's Gift	46	
-949	Hammerfist	100	
-950	Lavadome	4	
-951	Lavadome	13	
-952	Lavadome	22	
-953	Lavadome	30	
-954	Lavadome	39	
-955	Lavadome	48	
-956	Brainburst	100	
-957	Thunderhead	5	
-958	Thunderhead	14	
-959	Thunderhead	23	
-960	Thunderhead	32	
-961	Thunderhead	40	
-962	Thunderhead	49	
-963	Argentek's Tide	100	
-964	Mendeln's Companion	4	
-965	Mendeln's Companion	14	
-966	Mendeln's Companion	24	
-967	Mendeln's Companion	34	
-968	Mendeln's Companion	45	
-969	Mendeln's Companion	55	
-970	Astrogha's Fang	100	
-971	The Crucifier	3	
-972	The Crucifier	13	
-973	The Crucifier	23	
-974	The Crucifier	33	
-975	The Crucifier	44	
-976	The Crucifier	53	
-977	Skylord	100	
-978	Cornucopia	6	
-979	Cornucopia	14	
-980	Cornucopia	23	
-981	Cornucopia	32	
-982	Cornucopia	41	
-983	Cornucopia	49	
-984	Demonhorn	100	
-985	Godhead	2	
-986	Godhead	11	
-987	Godhead	19	
-988	Godhead	28	
-989	Godhead	37	
-990	Godhead	45	
-991	Khalim's Gloriole	100	
-992	Deadly Hunter	1	
-993	Deadly Hunter	11	
-994	Deadly Hunter	20	
-995	Deadly Hunter	30	
-996	Deadly Hunter	39	
-997	Deadly Hunter	48	
-998	Demonstorm	100	
-999	Icehunter's Fang	7	
-1000	Icehunter's Fang	16	
-1001	Icehunter's Fang	26	
-1002	Icehunter's Fang	35	
-1003	Icehunter's Fang	45	
-1004	Icehunter's Fang	54	
-1005	Claw of the Spirit Wolf	100	
-1006	Devil's Flight	1	
-1007	Devil's Flight	9	
-1008	Devil's Flight	18	
-1009	Devil's Flight	27	
-1010	Devil's Flight	36	
-1011	Devil's Flight	46	
-1012	Raindance	100	
-1013	Slimedrool	3	
-1014	Slimedrool	11	
-1015	Slimedrool	20	
-1016	Slimedrool	29	
-1017	Slimedrool	37	
-1018	Slimedrool	47	
-1019	Larzuk's Contraption	100	
-1020	The Nutcracker	1	
-1021	The Nutcracker	10	
-1022	The Nutcracker	19	
-1023	The Nutcracker	28	
-1024	The Nutcracker	37	
-1025	The Nutcracker	46	
-1026	Ghoulhand	100	
-1027	Ennead's Bane	6	
-1028	Ennead's Bane	15	
-1029	Ennead's Bane	24	
-1030	Ennead's Bane	32	
-1031	Ennead's Bane	41	
-1032	Ennead's Bane	51	
-1033	Nor Tiraj's Turinash	100	
-1034	Banner of Duncraig	5	
-1035	Banner of Duncraig	14	
-1036	Banner of Duncraig	23	
-1037	Banner of Duncraig	32	
-1038	Banner of Duncraig	40	
-1039	Banner of Duncraig	49	
-1040	Lightforge	100	
-1041	Bul Kathos' Teaching	13	
-1042	Bul Kathos' Teaching	22	
-1043	Bul Kathos' Teaching	31	
-1044	Bul Kathos' Teaching	41	
-1045	Bul Kathos' Teaching	50	
-1046	Bul Kathos' Teaching	58	
-1047	Skeld's Battlesong	100	
-1048	Acidburn	6	
-1049	Acidburn	15	
-1050	Acidburn	24	
-1051	Acidburn	33	
-1052	Acidburn	43	
-1053	Acidburn	52	
-1054	Frostneedle	100	
-1055	Wrathchild	12	
-1056	Wrathchild	22	
-1057	Wrathchild	31	
-1058	Wrathchild	41	
-1059	Wrathchild	52	
-1060	Wrathchild	60	
-1061	Yaggai's Sagaris	100	
-1062	Nightscape	4	
-1063	Nightscape	13	
-1064	Nightscape	22	
-1065	Nightscape	30	
-1066	Nightscape	39	
-1067	Nightscape	48	
-1068	Bartuc's Curse	100	
-1069	Heartrend	1	
-1070	Heartrend	9	
-1071	Heartrend	18	
-1072	Heartrend	28	
-1073	Heartrend	37	
-1074	Heartrend	46	
-1075	Demonsong	100	
-1076	Wheel of Fortune	4	
-1077	Wheel of Fortune	13	
-1078	Wheel of Fortune	21	
-1079	Wheel of Fortune	30	
-1080	Wheel of Fortune	39	
-1081	Wheel of Fortune	48	
-1082	Chalice of Horrors	100	
-1083	Acidblood	2	
-1084	Acidblood	9	
-1085	Acidblood	18	
-1086	Acidblood	27	
-1087	Acidblood	35	
-1088	Acidblood	45	
-1089	Runeflesh	100	
-1090	Vilehand	1	
-1091	Vilehand	8	
-1092	Vilehand	17	
-1093	Vilehand	26	
-1094	Vilehand	34	
-1095	Vilehand	43	
-1096	Geglash's Dusters	100	
-1097	Wormtongue	3	
-1098	Wormtongue	12	
-1099	Wormtongue	21	
-1100	Wormtongue	29	
-1101	Wormtongue	38	
-1102	Wormtongue	46	
-1103	The Endless Loop	100	
-1104	Runeshatter	3	
-1105	Runeshatter	13	
-1106	Runeshatter	22	
-1107	Runeshatter	31	
-1108	Runeshatter	40	
-1109	Runeshatter	50	
-1110	Razorjack	100	
-1111	Visegrip	6	
-1112	Visegrip	15	
-1113	Visegrip	24	
-1114	Visegrip	33	
-1115	Visegrip	41	
-1116	Visegrip	50	
-1117	Lorekeeper	100	
-1118	Dragon's Blood	8	
-1119	Dragon's Blood	16	
-1120	Dragon's Blood	25	
-1121	Dragon's Blood	34	
-1122	Dragon's Blood	43	
-1123	Dragon's Blood	51	
-1124	Huo Zhi Wang	100	
-1125	Zealot Rush	6	
-1126	Zealot Rush	15	
-1127	Zealot Rush	24	
-1128	Zealot Rush	32	
-1129	Zealot Rush	41	
-1130	Zealot Rush	50	
-1131	Akarat's Trek	100	
-1132	Darkplague	6	
-1133	Darkplague	16	
-1134	Darkplague	25	
-1135	Darkplague	34	
-1136	Darkplague	43	
-1137	Darkplague	52	
-1138	Hand of Karcheus	100	
-1139	Magebane	3	
-1140	Magebane	13	
-1141	Magebane	22	
-1142	Magebane	31	
-1143	Magebane	40	
-1144	Magebane	50	
-1145	Seraph Wing	100	
-1146	The Magister	3	
-1147	The Magister	12	
-1148	The Magister	21	
-1149	The Magister	30	
-1150	The Magister	40	
-1151	The Magister	49	
-1152	Shamanka	100	
-1153	Herr Donner	8	
-1154	Herr Donner	17	
-1155	Herr Donner	26	
-1156	Herr Donner	35	
-1157	Herr Donner	45	
-1158	Herr Donner	54	
-1159	Warwind	100	
-1160	The Black Dame	11	
-1161	The Black Dame	20	
-1162	The Black Dame	30	
-1163	The Black Dame	39	
-1164	The Black Dame	48	
-1165	The Black Dame	57	
-1166	Harp of Vengeance	100	
-1167	Koth's Lesson	5	
-1168	Koth's Lesson	14	
-1169	Koth's Lesson	23	
-1170	Koth's Lesson	33	
-1171	Koth's Lesson	42	
-1172	Koth's Lesson	51	
-1173	Dreamflange	100	
-1174	Mooncurse	10	
-1175	Mooncurse	20	
-1176	Mooncurse	29	
-1177	Mooncurse	38	
-1178	Mooncurse	47	
-1179	Mooncurse	55	
-1180	Storm Cloud	100	
-1181	Terra Indiges	10	
-1182	Terra Indiges	20	
-1183	Terra Indiges	29	
-1184	Terra Indiges	38	
-1185	Terra Indiges	47	
-1186	Terra Indiges	55	
-1187	Celestia's Defense	100	
-1188	Sundial Spire	7	
-1189	Sundial Spire	16	
-1190	Sundial Spire	25	
-1191	Sundial Spire	34	
-1192	Sundial Spire	44	
-1193	Sundial Spire	53	
-1194	Ghost Anchor	100	
-1195	King of the Dreadlands	1	
-1196	King of the Dreadlands	9	
-1197	King of the Dreadlands	20	
-1198	King of the Dreadlands	30	
-1199	King of the Dreadlands	40	
-1200	King of the Dreadlands	50	
-1201	Elite Hacker	100	
-1202	Wasp Sting	7	
-1203	Wasp Sting	17	
-1204	Wasp Sting	26	
-1205	Wasp Sting	35	
-1206	Wasp Sting	44	
-1207	Wasp Sting	53	
-1208	Leathdhiabhala	100	
-1209	Lord of Thorns	11	
-1210	Lord of Thorns	20	
-1211	Lord of Thorns	31	
-1212	Lord of Thorns	41	
-1213	Lord of Thorns	51	
-1214	Lord of Thorns	59	
-1215	Prince of Nothing	100	
-1216	Umbaru's Jinx	7	
-1217	Umbaru's Jinx	16	
-1218	Umbaru's Jinx	24	
-1219	Umbaru's Jinx	33	
-1220	Umbaru's Jinx	42	
-1221	Umbaru's Jinx	50	
-1222	Trang-Oul's Breath	100	
-1223	Bonerattler	7	
-1224	Bonerattler	16	
-1225	Bonerattler	25	
-1226	Bonerattler	35	
-1227	Bonerattler	44	
-1228	Bonerattler	53	
-1229	Death's Bellringer	100	
-1230	The Prospector's Pick	7	
-1231	The Prospector's Pick	16	
-1232	The Prospector's Pick	26	
-1233	The Prospector's Pick	35	
-1234	The Prospector's Pick	44	
-1235	The Prospector's Pick	53	
-1236	Snowhammer	100	
-1237	Zerae's Veil	2	
-1238	Zerae's Veil	10	
-1239	Zerae's Veil	18	
-1240	Zerae's Veil	27	
-1241	Zerae's Veil	36	
-1242	Zerae's Veil	45	
-1243	Crown of the Rakkas	100	
-1244	Magnet Rock	7	
-1245	Magnet Rock	16	
-1246	Magnet Rock	25	
-1247	Magnet Rock	35	
-1248	Magnet Rock	44	
-1249	Magnet Rock	53	
-1250	Lychnus Lyaei	100	
-1251	Na-Krul's Spine	6	
-1252	Na-Krul's Spine	16	
-1253	Na-Krul's Spine	26	
-1254	Na-Krul's Spine	36	
-1255	Na-Krul's Spine	47	
-1256	Na-Krul's Spine	57	
-1257	Frysturgard	100	
-1258	Deathwind	4	
-1259	Deathwind	14	
-1260	Deathwind	23	
-1261	Deathwind	32	
-1262	Deathwind	41	
-1263	Deathwind	51	
-1264	Hand of Rathma	100	
-1265	Oni no Ona	1	
-1266	Oni no Ona	9	
-1267	Oni no Ona	19	
-1268	Oni no Ona	30	
-1269	Oni no Ona	40	
-1270	Oni no Ona	50	
-1271	Warfeast	100	
-1272	Astrogha's Eye	5	
-1273	Astrogha's Eye	14	
-1274	Astrogha's Eye	22	
-1275	Astrogha's Eye	31	
-1276	Astrogha's Eye	40	
-1277	Astrogha's Eye	49	
-1278	Norrec's Targe	100	
-1279	Dragonfire	8	
-1280	Dragonfire	17	
-1281	Dragonfire	25	
-1282	Dragonfire	34	
-1283	Dragonfire	43	
-1284	Dragonfire	52	
-1285	The Tannr Scutum	100	
-1286	Death Pit Stake	10	
-1287	Death Pit Stake	20	
-1288	Death Pit Stake	29	
-1289	Death Pit Stake	38	
-1290	Death Pit Stake	47	
-1291	Death Pit Stake	55	
-1292	Rei Di Gelo	100	
-1293	Shadowstrike	3	
-1294	Shadowstrike	12	
-1295	Shadowstrike	21	
-1296	Shadowstrike	30	
-1297	Shadowstrike	40	
-1298	Shadowstrike	49	
-1299	Phantom Flight	100	
-1300	Iceshell	6	
-1301	Iceshell	15	
-1302	Iceshell	23	
-1303	Iceshell	32	
-1304	Iceshell	42	
-1305	Iceshell	50	
-1306	Arreat's Heart	100	
-1307	Dragon Tail	10	
-1308	Dragon Tail	19	
-1309	Dragon Tail	27	
-1310	Dragon Tail	36	
-1311	Dragon Tail	44	
-1312	Dragon Tail	52	
-1313	The Asteroid Belt	100	
-1314	Albrecht's Heirloom	2	
-1315	Albrecht's Heirloom	11	
-1316	Albrecht's Heirloom	20	
-1317	Albrecht's Heirloom	29	
-1318	Albrecht's Heirloom	37	
-1319	Albrecht's Heirloom	46	
-1320	Trollskull	100	
-1321	The War Cloak	1	
-1322	The War Cloak	9	
-1323	The War Cloak	18	
-1324	The War Cloak	26	
-1325	The War Cloak	35	
-1326	The War Cloak	44	
-1327	Cloak of Flames	100	
-1328	Cane of Juris Khan	1	
-1329	Cane of Juris Khan	9	
-1330	Cane of Juris Khan	19	
-1331	Cane of Juris Khan	29	
-1332	Cane of Juris Khan	39	
-1333	Cane of Juris Khan	50	
-1334	Chillspine	100	
-1335	Thorn Branch	12	
-1336	Thorn Branch	21	
-1337	Thorn Branch	31	
-1338	Thorn Branch	40	
-1339	Thorn Branch	49	
-1340	Thorn Branch	58	
-1341	Fiacla-Gear's Wisdom	100	
-1342	Herald of Skartara	11	
-1343	Herald of Skartara	20	
-1344	Herald of Skartara	30	
-1345	Herald of Skartara	39	
-1346	Herald of Skartara	48	
-1347	Herald of Skartara	57	
-1348	Athulua's Command	100	
-1349	Embershot	11	
-1350	Embershot	20	
-1351	Embershot	30	
-1352	Embershot	39	
-1353	Embershot	48	
-1354	Embershot	57	
-1355	Larzuk's Bombard	100	
-1356	Sharkbaiter	4	
-1357	Sharkbaiter	12	
-1358	Sharkbaiter	21	
-1359	Sharkbaiter	30	
-1360	Sharkbaiter	39	
-1361	Sharkbaiter	47	
-1362	Hratli's Craft	100	
-1363	Oreichalcos	4	
-1364	Oreichalcos	13	
-1365	Oreichalcos	21	
-1366	Oreichalcos	30	
-1367	Oreichalcos	39	
-1368	Oreichalcos	48	
-1369	Hypnodisk	100	
-1370	Wardance	4	
-1371	Wardance	13	
-1372	Wardance	22	
-1373	Wardance	32	
-1374	Wardance	41	
-1375	Wardance	50	
-1376	Infernolash	100	
-1377	Lunarsong	3	
-1378	Lunarsong	12	
-1379	Lunarsong	21	
-1380	Lunarsong	30	
-1381	Lunarsong	40	
-1382	Lunarsong	49	
-1383	Ghostmoon	100	
-1384	Moonwrap	1	
-1385	Moonwrap	8	
-1386	Moonwrap	17	
-1387	Moonwrap	26	
-1388	Moonwrap	35	
-1389	Moonwrap	43	
-1390	Sash of Shadows	100	
-1391	Robe of Leaves	4	
-1392	Robe of Leaves	12	
-1393	Robe of Leaves	21	
-1394	Robe of Leaves	30	
-1395	Robe of Leaves	39	
-1396	Robe of Leaves	47	
-1397	Crystalshroud	100	
-1398	Sunbearer	1	
-1399	Sunbearer	9	
-1400	Sunbearer	18	
-1401	Sunbearer	27	
-1402	Sunbearer	37	
-1403	Sunbearer	46	
-1404	The Celebrant	100	
-1405	Al Nath	2	
-1406	Al Nath	11	
-1407	Al Nath	20	
-1408	Al Nath	30	
-1409	Al Nath	39	
-1410	Al Nath	48	
-1411	Al Nair	100	
-1412	Circuit Breaker	12	
-1413	Circuit Breaker	21	
-1414	Circuit Breaker	30	
-1415	Circuit Breaker	40	
-1416	Circuit Breaker	49	
-1417	Circuit Breaker	57	
-1418	The Atom Splitter	100	
-1419	Bonefiend	6	
-1420	Bonefiend	15	
-1421	Bonefiend	24	
-1422	Bonefiend	33	
-1423	Bonefiend	43	
-1424	Bonefiend	52	
-1425	Moonscythe	100	
-1426	Vipercast	6	
-1427	Vipercast	16	
-1428	Vipercast	25	
-1429	Vipercast	34	
-1430	Vipercast	43	
-1431	Vipercast	53	
-1432	Magma Spitter	100	
-1433	Chargebreaker	12	
-1434	Chargebreaker	21	
-1435	Chargebreaker	30	
-1436	Chargebreaker	39	
-1437	Chargebreaker	47	
-1438	Chargebreaker	56	
-1439	Rozsochac	100	
-1440	Buriza-Do Tsuru	5	
-1441	Buriza-Do Tsuru	15	
-1442	Buriza-Do Tsuru	24	
-1443	Buriza-Do Tsuru	33	
-1444	Buriza-Do Tsuru	42	
-1445	Buriza-Do Tsuru	52	
-1446	Serpent Angel	100	
-1447	The Rift Bow	1	
-1448	The Rift Bow	8	
-1449	The Rift Bow	17	
-1450	The Rift Bow	26	
-1451	The Rift Bow	36	
-1452	The Rift Bow	45	
-1453	Sinewstring	100	
-1454	Icepick	5	
-1455	Icepick	14	
-1456	Icepick	23	
-1457	Icepick	33	
-1458	Icepick	42	
-1459	Icepick	51	
-1460	Emberstorm	100	
-1461	Demoncall	1	
-1462	Demoncall	8	
-1463	Demoncall	17	
-1464	Demoncall	27	
-1465	Demoncall	36	
-1466	Demoncall	45	
-1467	Vizjerei's Folly	100	
-1468	Grim Fang	1	
-1469	Grim Fang	10	
-1470	Grim Fang	19	
-1471	Grim Fang	28	
-1472	Grim Fang	37	
-1473	Grim Fang	46	
-1474	The Xiphos	100	
-1475	Webspinner	8	
-1476	Webspinner	17	
-1477	Webspinner	28	
-1478	Webspinner	37	
-1479	Webspinner	47	
-1480	Webspinner	54	
-1481	Flamelord	100	
-1482	Topspin	3	
-1483	Topspin	11	
-1484	Topspin	20	
-1485	Topspin	29	
-1486	Topspin	37	
-1487	Topspin	47	
-1488	Thinking Cap	100	
-1489	Destroying Angel	2	
-1490	Destroying Angel	11	
-1491	Destroying Angel	20	
-1492	Destroying Angel	29	
-1493	Destroying Angel	37	
-1494	Destroying Angel	46	
-1495	Witch Drum	100	
-1496	Narlant Dream	4	
-1497	Narlant Dream	14	
-1498	Narlant Dream	23	
-1499	Narlant Dream	32	
-1500	Narlant Dream	42	
-1501	Narlant Dream	50	
-1502	The Foculus	100	
-1503	Titan's Burden	11	
-1504	Titan's Burden	20	
-1505	Titan's Burden	29	
-1506	Titan's Burden	38	
-1507	Titan's Burden	47	
-1508	Titan's Burden	55	
-1509	Helepolis	100	
-1510	Warmonger	5	
-1511	Warmonger	14	
-1512	Warmonger	23	
-1513	Warmonger	33	
-1514	Warmonger	42	
-1515	Warmonger	51	
-1516	Gheed's Pigsticker	100	
-1517	Ravenbeak	1	
-1518	Ravenbeak	9	
-1519	Ravenbeak	18	
-1520	Ravenbeak	27	
-1521	Ravenbeak	36	
-1522	Ravenbeak	46	
-1523	Silverstrike	100	
-1524	Fangspear	7	
-1525	Fangspear	16	
-1526	Fangspear	25	
-1527	Fangspear	34	
-1528	Fangspear	44	
-1529	Fangspear	53	
-1530	Darkspite	100	
-1531	Greiz' Slapjack	3	
-1532	Greiz' Slapjack	12	
-1533	Greiz' Slapjack	21	
-1534	Greiz' Slapjack	31	
-1535	Greiz' Slapjack	40	
-1536	Greiz' Slapjack	49	
-1537	Skullbat	100	
-1538	Cloudladder	7	
-1539	Cloudladder	16	
-1540	Cloudladder	24	
-1541	Cloudladder	33	
-1542	Cloudladder	42	
-1543	Cloudladder	51	
-1544	Akarat's Crucifix	100	
-1545	Compass of Souls	11	
-1546	Compass of Souls	20	
-1547	Compass of Souls	30	
-1548	Compass of Souls	41	
-1549	Compass of Souls	51	
-1550	Compass of Souls	59	
-1551	Mente Scura	100	
-1552	Grimspirit	10	
-1553	Grimspirit	19	
-1554	Grimspirit	28	
-1555	Grimspirit	37	
-1556	Grimspirit	46	
-1557	Grimspirit	54	
-1558	Nature's Orphan	100	
-1559	Jitan's Kamon	6	
-1560	Jitan's Kamon	15	
-1561	Jitan's Kamon	23	
-1562	Jitan's Kamon	32	
-1563	Jitan's Kamon	41	
-1564	Jitan's Kamon	49	
-1565	Candlewake	100	
-1566	Flowerspring	6	
-1567	Flowerspring	16	
-1568	Flowerspring	25	
-1569	Flowerspring	34	
-1570	Flowerspring	43	
-1571	Flowerspring	52	
-1572	Sky Sweeper	100	
-1573	Starkiller	9	
-1574	Starkiller	18	
-1575	Starkiller	29	
-1576	Starkiller	38	
-1577	Starkiller	48	
-1578	Starkiller	55	
-1579	Witchbane	100	
-1580	Carmen Arvale	3	
-1581	Carmen Arvale	12	
-1582	Carmen Arvale	21	
-1583	Carmen Arvale	29	
-1584	Carmen Arvale	38	
-1585	Carmen Arvale	47	
-1586	Razorspine	100	
-1587	Grail of Tears	2	
-1588	Grail of Tears	11	
-1589	Grail of Tears	20	
-1590	Grail of Tears	29	
-1591	Grail of Tears	37	
-1592	Grail of Tears	46	
-1593	Bullseye	100	
-1594	The Angiris Pike	11	
-1595	The Angiris Pike	22	
-1596	The Angiris Pike	31	
-1597	The Angiris Pike	41	
-1598	The Angiris Pike	51	
-1599	The Angiris Pike	60	
-1600	Black Sun Spear	100	
-1601	Sterrenvogel	1	
-1602	Sterrenvogel	8	
-1603	Sterrenvogel	17	
-1604	Sterrenvogel	27	
-1605	Sterrenvogel	36	
-1606	Sterrenvogel	45	
-1607	Stormbreaker	100	
-1608	Death Touch	1	
-1609	Death Touch	8	
-1610	Death Touch	18	
-1611	Death Touch	27	
-1612	Death Touch	36	
-1613	Death Touch	45	
-1614	Meshif's Iron Parrot	100	
-1615	Dwaallicht	10	
-1616	Dwaallicht	20	
-1617	Dwaallicht	29	
-1618	Dwaallicht	38	
-1619	Dwaallicht	47	
-1620	Dwaallicht	55	
-1621	Windwall	100	
-1622	Auriel's Halo	8	
-1623	Auriel's Halo	16	
-1624	Auriel's Halo	25	
-1625	Auriel's Halo	34	
-1626	Auriel's Halo	43	
-1627	Auriel's Halo	51	
-1628	Royal Circlet	100	
-1629	Black Sheep Wall	6	
-1630	Black Sheep Wall	15	
-1631	Black Sheep Wall	24	
-1632	Black Sheep Wall	32	
-1633	Black Sheep Wall	41	
-1634	Black Sheep Wall	50	
-1635	Hexward	100	
-1636	The Ivory Tower	7	
-1637	The Ivory Tower	16	
-1638	The Ivory Tower	25	
-1639	The Ivory Tower	34	
-1640	The Ivory Tower	42	
-1641	The Ivory Tower	51	
-1642	Shield of a Thousand Stars	100	
-1643	Corpsefling	12	
-1644	Corpsefling	21	
-1645	Corpsefling	31	
-1646	Corpsefling	40	
-1647	Corpsefling	49	
-1648	Corpsefling	58	
-1649	Nymyr's Shadow	100	
-1650	Sea Summoner	3	
-1651	Sea Summoner	12	
-1652	Sea Summoner	21	
-1653	Sea Summoner	30	
-1654	Sea Summoner	40	
-1655	Sea Summoner	49	
-1656	The Retiarius	100	
-1657	The Overlord	1	
-1658	The Overlord	9	
-1659	The Overlord	19	
-1660	The Overlord	28	
-1661	The Overlord	37	
-1662	The Overlord	46	
-1663	Darkfeast	100	
-1664	Darkflesh	5	
-1665	Darkflesh	14	
-1666	Darkflesh	23	
-1667	Darkflesh	32	
-1668	Darkflesh	40	
-1669	Darkflesh	49	
-1670	Feardrinker	100	
-1671	Bergkaiser	7	
-1672	Bergkaiser	17	
-1673	Bergkaiser	27	
-1674	Bergkaiser	38	
-1675	Bergkaiser	48	
-1676	Bergkaiser	58	
-1677	Dreadarc	100	
-1678	Salamander's Breath	9	
-1679	Salamander's Breath	18	
-1680	Salamander's Breath	29	
-1681	Salamander's Breath	38	
-1682	Salamander's Breath	48	
-1683	Salamander's Breath	55	
-1684	Azgar's Mark	100	
-1685	Fleshmender	3	
-1686	Fleshmender	13	
-1687	Fleshmender	22	
-1688	Fleshmender	31	
-1689	Fleshmender	41	
-1690	Fleshmender	50	
-1691	Felsteel	100	
-1692	The Compensator	1	
-1693	The Compensator	9	
-1694	The Compensator	18	
-1695	The Compensator	27	
-1696	The Compensator	37	
-1697	The Compensator	46	
-1698	Vizharan	100	
-1699	Rainbowcleave	11	
-1700	Rainbowcleave	20	
-1701	Rainbowcleave	29	
-1702	Rainbowcleave	39	
-1703	Rainbowcleave	48	
-1704	Rainbowcleave	55	
-1705	Nimmenjuushin	100	
-1706	Archon's Wrath	5	
-1707	Archon's Wrath	14	
-1708	Archon's Wrath	24	
-1709	Archon's Wrath	33	
-1710	Archon's Wrath	42	
-1711	Archon's Wrath	51	
-1712	Hammer of Ghrab Thaar	100	
-1713	Dreamswayer	7	
-1714	Dreamswayer	17	
-1715	Dreamswayer	26	
-1716	Dreamswayer	35	
-1717	Dreamswayer	44	
-1718	Dreamswayer	54	
-1719	Thunderbane	100	
-1720	Staff of Roses	10	
-1721	Staff of Roses	19	
-1722	Staff of Roses	29	
-1723	Staff of Roses	38	
-1724	Staff of Roses	47	
-1725	Staff of Roses	54	
-1726	Spire of Kehjan	100	
-1727	Lachdanan's Avenger	12	
-1728	Lachdanan's Avenger	21	
-1729	Lachdanan's Avenger	30	
-1730	Lachdanan's Avenger	40	
-1731	Lachdanan's Avenger	49	
-1732	Lachdanan's Avenger	57	
-1733	Aurumvorax	100	
-1734	The Warped Blade	12	
-1735	The Warped Blade	23	
-1736	The Warped Blade	33	
-1737	The Warped Blade	42	
-1738	The Warped Blade	52	
-1739	The Warped Blade	62	
-1740	Starhawk	100	
-1741	Big Bad	3	
-1742	Big Bad	11	
-1743	Big Bad	20	
-1744	Big Bad	29	
-1745	Big Bad	37	
-1746	Big Bad	47	
-1747	Coldhunger	100	
-1748	Spellgrip	2	
-1749	Spellgrip	11	
-1750	Spellgrip	20	
-1751	Spellgrip	30	
-1752	Spellgrip	39	
-1753	Spellgrip	48	
-1754	Al Dhih	100	
-1755	Drake Cigar	3	
-1756	Drake Cigar	12	
-1757	Drake Cigar	21	
-1758	Drake Cigar	31	
-1759	Drake Cigar	40	
-1760	Drake Cigar	49	
-1761	Manastorm	100	
-1762	Shadowchild	4	
-1763	Shadowchild	13	
-1764	Shadowchild	21	
-1765	Shadowchild	30	
-1766	Shadowchild	39	
-1767	Shadowchild	48	
-1768	Demonlure	100	
-1769	Crystalline Flame Medallion	120	
-1770	\white;not yet implemented - CHEATER	555	
-1771	\white;not yet implemented - CHEATER	555	
-1772	\white;not yet implemented - CHEATER	555	
-1773	\white;not yet implemented - CHEATER	555	
-1774	\white;not yet implemented - CHEATER	555	
-1775	\white;not yet implemented - CHEATER	555	
-1776	\white;not yet implemented - CHEATER	555	
-1777	\white;not yet implemented - CHEATER	555	
-1778	\white;not yet implemented - CHEATER	555	
-1779	\white;not yet implemented - CHEATER	555	
-1780	\white;not yet implemented - CHEATER	555	
-1781	\white;not yet implemented - CHEATER	555	
-1782	Moo moo moo Moooo! Moo!\nFool's Gold	100	
-1783	Silver Seal of Ureh	120	
-1784	Astrogha's Venom Stinger	120	
-1785	\white;not yet implemented - CHEATER	100	
-1786	Teganze Pendant	60	
-1787	Klaatu Barada Nikto	120	
-1788	The Idiot Ball	60	
-1789	Seal of the Nephalem Kings	120	
-1790	The Book of Lies	555	
-1791	Ring of the Five	100	Ring08
-1792	Assur's Bane	100	Ring08
-1793	By Robert Marks\nDemonsbane	100	demonsbaneZ
-1794	Cold Fusion Schematics	100	coldfusion
-1795	The Glorious Book of Median	100	bookoflaz
-1796	Beads of the Snake Queen	100	
-1797	Bad Mood Ring	100	
-1798	Lady of Storms	555	
-1799	Evenstar	100	
-1800	Orc Torque Torc	100	
-1801	Phase Crystal	100	
-1802	Bard's Joke	40	
-1803	Cornerstone of the World	100	
-1804	Cornerstone of the World	100	
-1805	Cornerstone of the World	100	
-1806	Cornerstone of the World	100	
-1807	Cornerstone of the World	100	
-1808	Cornerstone of the World	100	
-1809	Cornerstone of the World	100	
-1810	Cornerstone of the World	100	
-1811	Cornerstone of the World	100	
-1812	Cornerstone of the World	100	
-1813	Cornerstone of the World	100	
-1814	Cornerstone of the World	100	
-1815	Cornerstone of the World	100	
-1816	Cornerstone of the World	100	
-1817	Cornerstone of the World	100	
-1818	Cornerstone of the World	100	
-1819	Cornerstone of the World	100	
-1820	Cornerstone of the World	100	
-1821	Cornerstone of the World	100	
-1822	Cornerstone of the World	100	
-1823	Cornerstone of the World	100	
-1824	Cornerstone of the World	100	
-1825	Cornerstone of the World	100	
-1826	Cornerstone of the World	100	
-1827	Cornerstone of the World	100	
-1828	Cornerstone of the World	100	
-1829	Cornerstone of the World	100	
-1830	Cornerstone of the World	100	
-1831	Cornerstone of the World	100	
-1832	Cornerstone of the World	100	
-1833	Cornerstone of the World	100	
-1834	Cornerstone of the World	100	
-1835	Cornerstone of the World	100	
-1836	Cornerstone of the World	100	
-1837	Cornerstone of the World	100	
-1838	Cornerstone of the World	100	
-1839	Cornerstone of the World	100	
-1840	Cornerstone of the World	100	
-1841	Cornerstone of the World	100	
-1842	Cornerstone of the World	100	
-1843	Cornerstone of the World	100	
-1844	Cornerstone of the World	100	
-1845	Cornerstone of the World	100	
-1846	Cornerstone of the World	100	
-1847	Cornerstone of the World	100	
-1848	Cornerstone of the World	100	
-1849	Cornerstone of the World	100	
-1850	Cornerstone of the World	100	
-1851	Cornerstone of the World	100	
-1852	Cornerstone of the World	100	
-1853	Cornerstone of the World	100	
-1854	Cornerstone of the World	100	
-1855	Cornerstone of the World	100	
-1856	Cornerstone of the World	100	
-1857	Cornerstone of the World	100	
-1858	Cornerstone of the World	100	
-1859	Cornerstone of the World	100	
-1860	Cornerstone of the World	100	
-1861	Cornerstone of the World	100	
-1862	Cornerstone of the World	100	
-1863	Cornerstone of the World	100	
-1864	Cornerstone of the World	100	
-1865	Cornerstone of the World	100	
-1866	Cornerstone of the World	100	
-1867	Cornerstone of the World	100	
-1868	Cornerstone of the World	100	
-1869	Cornerstone of the World	100	
-1870	Cornerstone of the World	100	
-1871	Cornerstone of the World	100	
-1872	Cornerstone of the World	100	
-1873	Cornerstone of the World	100	
-1874	Cornerstone of the World	100	
-1875	Cornerstone of the World	100	
-1876	Cornerstone of the World	100	
-1877	Cornerstone of the World	100	
-1878	Cornerstone of the World	100	
-1879	Cornerstone of the World	100	
-1880	Cornerstone of the World	100	
-1881	Cornerstone of the World	100	
-1882	Cornerstone of the World	100	
-1883	Cornerstone of the World	100	
-1884	Cornerstone of the World	100	
-1885	Cornerstone of the World	100	
-1886	Cornerstone of the World	100	
-1887	Cornerstone of the World	100	
-1888	Cornerstone of the World	100	
-1889	Cornerstone of the World	100	
-1890	Cornerstone of the World	100	
-1891	Cornerstone of the World	100	
-1892	Cornerstone of the World	100	
-1893	Cornerstone of the World	100	
-1894	Cornerstone of the World	100	
-1895	Cornerstone of the World	100	
-1896	Cornerstone of the World	100	
-1897	Cornerstone of the World	100	
-1898	Cornerstone of the World	100	
-1899	Cornerstone of the World	100	
-1900	Cornerstone of the World	100	
-1901	Cornerstone of the World	100	
-1902	Cornerstone of the World	100	
-1903	Cornerstone of the World	100	
-1904	Cornerstone of the World	100	
-1905	Cornerstone of the World	100	
-1906	Cornerstone of the World	100	
-1907	Cornerstone of the World	100	
-1908	Cornerstone of the World	100	
-1909	Cornerstone of the World	100	
-1910	Cornerstone of the World	100	
-1911	Cornerstone of the World	100	
-1912	Cornerstone of the World	100	
-1913	Cornerstone of the World	100	
-1914	Cornerstone of the World	100	
-1915	Cornerstone of the World	100	
-1916	Cornerstone of the World	100	
-1917	Cornerstone of the World	100	
-1918	Cornerstone of the World	100	
-1919	Cornerstone of the World	100	
-1920	Cornerstone of the World	100	
-1921	Cornerstone of the World	100	
-1922	Cornerstone of the World	100	
-1923	Cornerstone of the World	100	
-1924	Cornerstone of the World	100	
-1925	Cornerstone of the World	100	
-1926	Cornerstone of the World	100	
-1927	Cornerstone of the World	100	
-1928	Cornerstone of the World	100	
-1929	Cornerstone of the World	100	
-1930	Cornerstone of the World	100	
-1931	Cornerstone of the World	100	
-1932	Cornerstone of the World	100	
-1933	Cornerstone of the World	100	
-1934	Cornerstone of the World	100	
-1935	Cornerstone of the World	100	
-1936	Cornerstone of the World	100	
-1937	Cornerstone of the World	100	
-1938	Cornerstone of the World	100	
-1939	Cornerstone of the World	100	
-1940	Cornerstone of the World	100	
-1941	Cornerstone of the World	100	
-1942	Cornerstone of the World	100	
-1943	Cornerstone of the World	100	
-1944	Cornerstone of the World	100	
-1945	Cornerstone of the World	100	
-1946	Cornerstone of the World	100	
-1947	Cornerstone of the World	100	
-1948	Cornerstone of the World	100	
-1949	Cornerstone of the World	100	
-1950	Cornerstone of the World	100	
-1951	Cornerstone of the World	100	
-1952	Cornerstone of the World	100	
-1953	Cornerstone of the World	100	
-1954	Cornerstone of the World	100	
-1955	Cornerstone of the World	100	
-1956	Cornerstone of the World	100	
-1957	Cornerstone of the World	100	
-1958	Cornerstone of the World	100	
-1959	Cornerstone of the World	100	
-1960	Cornerstone of the World	100	
-1961	Cornerstone of the World	100	
-1962	Cornerstone of the World	100	
-1963	Cornerstone of the World	100	
-1964	Cornerstone of the World	100	
-1965	Cornerstone of the World	100	
-1966	Cornerstone of the World	100	
-1967	Cornerstone of the World	100	
-1968	Cornerstone of the World	100	
-1969	Cornerstone of the World	100	
-1970	Cornerstone of the World	100	
-1971	Cornerstone of the World	100	
-1972	Cornerstone of the World	100	
-1973	Cornerstone of the World	100	
-1974	Cornerstone of the World	100	
-1975	Cornerstone of the World	100	
-1976	Cornerstone of the World	100	
-1977	Cornerstone of the World	100	
-1978	Black Dwarf	120	
-1979	Ouroboros	120	
-1980	Atomus	0	
-1981	QQ	0	
-1982	(Please Dupe and Trade To Everyone)\nToken Imbalanced Beta Item	121	
-1983	Niradyahk	80	
-1984	Self-Referential Unlisted Secret Item	80	
-1985	The Only Item That Will Never Be Duped	80	
-1986	Xepera Xeper Xeperu	120	
-1987	Hanabigami	60	
-1988	The Tranquilizer	60	
-1989	Katamari	30	
-1990	Myokai's Path	30	
-1991	Fren Slairea	30	
-1992	The Seal of Kharos	60	
-1993	Scarab of Death	60	
-1994	\white;not yet implemented - CHEATER	100	
-1995	\white;not yet implemented - CHEATER	100	
-1996	\white;not yet implemented - CHEATER	100	
-1997	\white;not yet implemented - CHEATER	100	
-1998	\white;not yet implemented - CHEATER	100	
-1999	\white;not yet implemented - CHEATER	100	
-2000	\white;not yet implemented - CHEATER	100	
-2001	\white;not yet implemented - CHEATER	100	
-2002	\white;not yet implemented - CHEATER	100	
-2003	\white;not yet implemented - CHEATER	100	
-2004	\white;not yet implemented - CHEATER	100	
-2005	\white;not yet implemented - CHEATER	100	
-2006	\white;not yet implemented - CHEATER	100	
-2007	\white;not yet implemented - CHEATER	100	
-2008	\white;not yet implemented - CHEATER	100	
-2009	\white;not yet implemented - CHEATER	100	
-2010	\white;not yet implemented - CHEATER	100	
-2011	\white;not yet implemented - CHEATER	100	
-2012	\white;not yet implemented - CHEATER	100	
-2013	\white;not yet implemented - CHEATER	100	
-2014	Tobio's Key	100	
-2015	Grand Armor	100	
-2016	Ramcharge	100	
-2017	The Doom Gong of Xiansai	100	
-2018	Wandelkoning	100	
-2019	Vision of the Furies	100	
-2020	Arreat's Snowcap	100	
-2021	Lachdanan's Visage	100	
-2022	Manafire	100	
-2023	Veil of the Tainted Sun	100	
-2024	The Ion Maiden	100	
-2025	The Veil of Magic	100	
-2026	Boneyard Scourge	100	
-2027	Hooves of the Thunderhorse	100	
-2028	Highwayman's Friend	100	
-2029	Canis Venator	100	
-2030	Ogden's Sign	100	
-2031	Pawnstorm	100	
-2032	Beanie Sidhe	100	
-2033	Hijab of the Skymother	100	
-2034	Kharos' Bloodskull	100	
-2035	Clawfeet	100	
-2036	Facebreaker	100	
-2037	The Chained Mail	100	
-2038	Eyes of Septumos	100	
-2039	Breathstealer	100	
-2040	Aiden's Lament	100	
-2041	Angelhost	100	
-2042	Satanskind	100	
-2043	Crown of the Black Rose	555	
-2044	Ylfa Ban	100	
-2045	Windsinger	100	
-2046	Shadowtwin	100	
-2047	Itherael's Splendor	100	
-2048	Headbanger	100	
-2049	Sankekur's Faulds	100	
-2050	Rag Queen	100	
-2051	The Sentinel's Sorrow	100	
-2052	Lamha Na Draoithe	100	
-2053	The Ancients' Legacy	100	
-2054	Goetia Plate	100	
-2055	Shield of Hakan II	100	
-2056	Metalhead	100	
-2057	Rodeo's Tramplers [DISABLED/LEGACY]	666	
-2058	Maggotspawn Shell	100	
-2059	Peacebringer	100	
-2060	Edgewulf's Girdle	100	
-2061	Lifecrusher	100	
-2062	Ironbound Impact Tome	100	invbbb
-2063	PortalKombat	100	
-2064	Peckin's Order	100	
-2065	Stella Matutina	100	
-2066	Barghest's Howl	100	
-2067	Boarfrost	100	
-2068	Dervish of Aranoch	100	
-2069	Stormflyer	100	
-2070	Zharesh Robes	100	
-2071	Dryadbark	100	
-2072	Belly of the Beast	100	
-2073	Blackjade's Legacy	100	
-2074	Tldr	100	
-2075	Baron Sludge's Bonecrusher	100	
-2076	Hellbourne Disciple	100	
-2077	Earthbender	100	
-2078	Idol of Rygnar	100	
-2079	Lionblood Crest	100	
-2080	Siggard's Revenge	100	
-2081	Phoenix Down	100	
-2082	Skin of Kabraxis	100	
-2083	Lilith's Temptation	100	invblt
-2084	The Stillborn	100	
-2085	Haraigami	100	
-2086	Medivh's Cameo	100	
-2087	Vizjun's Commdish	100	
-2088	Cliffhanger	100	
-2089	Scale of Justice	100	
-2090	Panzerkeil	100	
-2091	Lacuni Cowl	100	
-2092	The Flying Saucer	100	
-2093	Asgardsreia	100	
-2094	Wheel of the Seasons	100	
-2095	Yee Naaldlooshii	100	
-2096	Splinter Mail	100	
-2097	Spellbreaker	100	
-2098	The Book of Kalen	100	invbbb
-2099	Maiden Mother Crown	555	
-2100	Fiddlesticks	100	
-2101	Judge's Sin	100	
-2102	Mudpool	100	
-2103	Linarian's Furs	100	
-2104	Gregus Mazi's Nkisi	100	
-2105	The Dragon's Star	100	
-2106	Lavasurge	100	
-2107	Soulhungerer	100	
-2108	Hawking Axe	100	
-2109	Buzzbomb	100	
-2110	 	100	
-2111	Tylwulf's Betrayal	100	
-2112	Abyssus	100	
-2113	Issalfarstafr	100	
-2114	Eko Azarak	100	
-2115	Dreamweaver	100	
-2116	The Prestidigator	100	
-2117	Globus Cruciger	100	
-2118	Greiz' Cheat	100	
-2119	Roflchopper	100	
-2120	Aeterna	100	
-2121	Esubane	100	
-2122	The Cactus	100	
-2123	Weird Sister	100	
-2124	Dark Maiden's Talons	100	
-2125	Mordhau	100	
-2126	Mr. Clubbo	100	
-2127	Gjallarhorn	100	
-2128	Crystal Arch	100	
-2129	Boss Crow	100	
-2130	Whispers of Mirakodus	100	
-2131	Jalal's Soulstealer	100	
-2132	Hwanin's Hwacha	100	
-2133	Helgrotha's Fang	100	
-2134	Doublecross	100	
-2135	Atanna's Key	100	
-2136	Leah's Vision	100	
-2137	Falx Chthon	100	
-2138	Khalim's Punisher	100	
-2139	Doomswath	100	
-2140	Piranha Swarm	100	
-2141	Axekicker	100	
-2142	Qarak's Will	100	
-2143	Moonfang	100	
-2144	Azgar's Nemeton	100	
-2145	The Lyon's Claw	100	
-2146	Dead Lake's Lady	100	
-2147	Elder Law	100	
-2148	Siegehammer of Morgen Keep	100	
-2149	Sword of the White Void	100	
-2150	Cruciatus	100	
-2151	 	100	
-2152	Flintstone Axe	100	
-2153	Chober Chaber	100	
-2154	Kamehameha	100	
-2155	Ratbane	100	
-2156	Faerie Pyre	100	
-2157	Thunder King of Sescheron	100	
-2158	Magelock	100	
-2159	Katar Hero	100	
-2160	Chanunpa	100	
-2161	Plunderbird	100	
-2162	Ghoul Lord	100	
-2163	Al Hazir's Quillholder	100	
-2164	Hwanin's Gungdo	100	
-2165	Vizjuns Scitek	100	
-2166	Black King Bar	100	
-2167	Demacian Justice	100	
-2168	Hammerfall	100	
-2169	Starbreaker	100	
-2170	Hellrain	100	
-2171	Serenthia's Glory	100	
-2172	Cranium Bore	100	
-2173	Nereid's Calliope	100	
-2174	Trollhammaren	100	
-2175	Klonk	100	
-2176	Eosphoros	100	
-2177	Icharion's Dissuader	100	
-2178	The Pride of Caldeum	100	
-2179	Screaming Serpent	100	
-2180	Freakshow	100	
-2181	Mr. Painless	100	
-2182	Chasmstriker	100	
-2183	Mons Meg	100	
-2184	Saber of the Stormsail	100	
-2185	Earth's Burden	100	
-2186	Scepter of Tremain	100	
-2187	Kraken's Cutlass	100	
-2188	Legio Di Manes	100	
-2189	Pitchburner	100	
-2190	Stormhowl	100	
-2191	Snotflinger	100	
-2192	Fjordwind	100	
-2193	Staff of Lady Salene	100	
-2194	Hellforge Edge	100	
-2195	Walfang	100	
-2196	The Belladonna	100	
-2197	Firekeeper	100	
-2198	Void Seeker	100	
-2199	Silambam	100	
-2200	Crushskull's Crusher	100	
-2201	Horned Hunter	100	
-2202	Bucking Bertha	100	
-2203	The Whistling Death	100	
-2204	Starmaiden	100	
-2205	Heartseeker	100	
-2206	Fury of Hellfire	100	
-2207	Stormcaller	100	
-2208	Two-Face Blade	100	
-2209	The Caduceus	100	
-2210	 	100	
-2211	Slavemaster	100	
-2212	Fleshmender	100	
-2213	Brainsplatter	100	
-2214	Firequeen	100	
-2215	Spire of Sarnakyle	100	
-2216	Legion's Name	100	
-2217	Banecat	100	
-2218	Zakarwa's Betrayal	100	
-2219	Zular Khan's Tempest	100	
-2220	Soul Reaver	100	
-2221	Timefather	100	
-2222	Pitlord's Pendulum	100	
-2223	Facemelter	100	
-2224	Bellifortis	100	
-2225	Ord Rekar's Testament	100	
-2226	Wotansvolk	100	
-2227	Bryn Celli Ddu	100	
-2228	Karybdus' Descent	100	
-2229	Rathma's Athame	100	
-2230	Varna's Wraithblade	100	
-2231	In Fero Salva	100	
-2232	Apocalypta	100	
-2233	Dryhten Ealdor	100	
-2234	Kekeke	100	
-2235	Laz' Social Experiment	555	
-2236	Lamen of the Archbishop	100	
-2237	Arkenstone	100	
-2238	Gallowlaugh	120	
-2239	Queen Esu's Consort	100	
-2240	Heartcore	100	
-2241	The Coliseum	100	
-2242	Foramen	100	
-2243	En Taro Idunn	100	
-2244	Jaguar Warrior	100	
-2245	Echo Shard	100	
-2246	Free Tone	100	
-2247	Der Nebelring	120	
-2248	Ras Algethi	100	
-2249	Gatecrasher	100	
-2250	Kriss Talline	555	
-2251	Bag of Tricks	100	
-2252	Lammergeier	100	
-2253	\gold;I Am Rich	0	
-2254	Azmodan's Heart	100	
-2255	Scroll of Kings	60	scrollofkings
-2256	Sacred Worldstone Key	80	
-2257	The Book of Lies	60	
-2258	Maiden Mother Crown	100	
-2259	Crown of the Black Rose	100	
+6	Ring of the Five	100	Ring08
+7	Assur's Bane	100	Ring08
+8	Book of Summoning	1	
+9	\gold;I Am Rich	0	
+10	Optical Detector	60	
+11	Azmodan's Heart	100	
+12	Visions of Akarat	100	akaratbook
+13	Scroll of Kings	60	scrollofkings
+14	Laser Focus Crystal	80	
+15	The Butcher's Tooth	40	
+16	Sacred Worldstone Key	80	
+17	Idol of Vanity	100	
+18	Spirit of Damnation	120	
+19	Spirit of Damnation	666	
+20	Horazon's Focus	40	
+21	Astrogha's Venom Stinger	120	
+22	Legacy of Blood	100	bloodlegacy
+23	Silver Seal of Ureh	120	
+24	Moo moo moo Moooo! Moo!\nFool's Gold	100	
+25	Crystalline Flame Medallion	120	
+26	Crystalline Flame Medallion	120	
+27	\gold;Sunstone of the Elements	50	
+28	(Amazon Challenge Item)\nSacred Sunstone	90	newclasscharm
+29	(Assassin Challenge Item)\nShadow Vortex	90	newclasscharm
+30	(Barbarian Challenge Item)\nWorldstone Orb	90	newclasscharm
+31	(Druid Challenge Item)\nCaoi Dulra Fruit	90	newclasscharm
+32	(Necromancer Challenge Item)\nSoulstone Shard	90	newclasscharm
+33	(Paladin Challenge Item)\nEye of Divinity	90	newclasscharm
+34	(Sorceress Challenge Item)\nNexus Crystal	90	newclasscharm
+35	Eternal Bone Pile	100	
+36	Sunstone of Fire (Upgraded)	50	
+37	Sunstone of Fire	666	
+38	Sunstone of Ice (Upgraded)	50	
+39	Sunstone of Ice	666	
+40	Sunstone of Thunder (Upgraded)	50	
+41	Sunstone of Thunder	666	
+42	Sunstone of the Gods	100	
+43	Sunless Crystal Bird	666	
+44	Six Angel Bag	666	
+45	\gold;Six Angel Bag	60	
+46	Hard Mode Charm	5	
+47	Zakarum's Ear	80	
+48	Moon of the Spider	100	
+49	Spirit Trance Herb	100	
+50	\red;Welcome! Median XL: Ultimative v6b\blue;	0	
+51	Hammer of the Taan Judges	40	
+52	The Book of Lies	60	
+53	By Robert Marks\nDemonsbane	100	demonsbaneZ
+54	Cold Fusion Schematics	100	coldfusion
+55	The Glorious Book of Median	100	bookoflaz
+56	\gold;Uldyssian's Sword	120	
+57	Creator's Hand	120	
+58	Soul of Kabraxis	120	
+59	The Tesseract	100	
+60	Khanduran Royal Pendant	100	
+61	Locket of Dreams	100	
+62	Jerhyn's Tawiz	0	
+63	Grand Armor	100	
+64	Aeterna	100	
+65	Crown of the Black Rose	555	
+66	Sword of the White Void	100	
+67	Wishmaster	0	
+68	Atomus	0	
+69	Siggard's Revenge	100	
+70	Soul Reaver	100	
+71	Noob Loop	0	
+72	Ring of Mourning	100	
+73	Black Hand Sigil	100	
+74	Akarat's Nails	100	
+75	Fury of Hellfire	100	
+76	\gold;Diablo's Essence	120	
+77	(Please Dupe and Trade To Everyone)\nToken Imbalanced Beta Item	121	
+78	Catechumen	7	
+79	Catechumen	16	
+80	Catechumen	25	
+81	Catechumen	34	
+82	Catechumen	42	
+83	Catechumen	51	
+84	Astreon's Citadel	100	
+85	Tobio's Key	100	
+86	The Vanquisher	100	
+87	Queen of Glass	11	
+88	Queen of Glass	20	
+89	Queen of Glass	30	
+90	Queen of Glass	38	
+91	Queen of Glass	47	
+92	Queen of Glass	54	
+93	Torn Flesh of Gods	100	
+94	Khazra Plate	100	
+95	Mercenary Bomb	100	mercbombb
+96	Vindicatress	8	
+97	Vindicatress	17	
+98	Vindicatress	26	
+99	Vindicatress	36	
+100	Vindicatress	45	
+101	Vindicatress	54	
+102	The Angiris Star	100	
+103	The Dragon's Star	100	
+104	Morning Fury	100	
+105	Nymph's Grace	6	
+106	Nymph's Grace	14	
+107	Nymph's Grace	23	
+108	Nymph's Grace	32	
+109	Nymph's Grace	41	
+110	Nymph's Grace	49	
+111	Goatlord	100	
+112	Ramcharge	100	
+113	Forest Defender	100	
+114	Bathos	6	
+115	Bathos	15	
+116	Bathos	24	
+117	Bathos	33	
+118	Bathos	41	
+119	Bathos	50	
+120	Cloudwhirl	100	
+121	The Doom Gong of Xiansai	100	
+122	Soul Harvest	100	
+123	Thunderdome	8	
+124	Thunderdome	16	
+125	Thunderdome	25	
+126	Thunderdome	34	
+127	Thunderdome	43	
+128	Thunderdome	51	
+129	Morlu's Friend	100	
+130	Wandelkoning	100	
+131	Albrecht's Slumber	100	
+132	The Sightless Eye	1	
+133	The Sightless Eye	10	
+134	The Sightless Eye	19	
+135	The Sightless Eye	28	
+136	The Sightless Eye	36	
+137	The Sightless Eye	45	
+138	Danmaku	100	
+139	Vision of the Furies	100	
+140	Disc of Blood	100	
+141	Spirit Teacher's Headdress	10	
+142	Spirit Teacher's Headdress	19	
+143	Spirit Teacher's Headdress	28	
+144	Spirit Teacher's Headdress	37	
+145	Spirit Teacher's Headdress	46	
+146	Spirit Teacher's Headdress	54	
+147	Bul Kathos' Voice	100	
+148	Arreat's Snowcap	100	
+149	Lilith's Legion	100	
+150	The Lumberjack	3	
+151	The Lumberjack	12	
+152	The Lumberjack	22	
+153	The Lumberjack	31	
+154	The Lumberjack	40	
+155	The Lumberjack	49	
+156	Throatseeker	100	
+157	Lavasurge	100	
+158	Frigid Chopper	100	
+159	Wolfpack	6	
+160	Wolfpack	16	
+161	Wolfpack	25	
+162	Wolfpack	34	
+163	Wolfpack	43	
+164	Wolfpack	53	
+165	Kaskara of the Taan	100	
+166	Soulhungerer	100	
+167	Berserrker	100	
+168	Rockshatter	6	
+169	Rockshatter	15	
+170	Rockshatter	24	
+171	Rockshatter	34	
+172	Rockshatter	43	
+173	Rockshatter	53	
+174	Griefbringer	100	
+175	Hawking Axe	100	
+176	Lacerator	100	
+177	Ironsleet	7	
+178	Ironsleet	16	
+179	Ironsleet	26	
+180	Ironsleet	35	
+181	Ironsleet	44	
+182	Ironsleet	54	
+183	Pixie Legion	100	
+184	Buzzbomb	100	
+185	Penumbra	100	
+186	Wisdom's Wrap	12	
+187	Wisdom's Wrap	20	
+188	Wisdom's Wrap	29	
+189	Wisdom's Wrap	38	
+190	Wisdom's Wrap	47	
+191	Wisdom's Wrap	55	
+192	Demonspike Coat	100	
+193	Lachdanan's Visage	100	
+194	Mage's Whirlpool	100	
+195	Spellbreaker	1	
+196	Spellbreaker	8	
+197	Spellbreaker	17	
+198	Spellbreaker	26	
+199	Spellbreaker	36	
+200	Spellbreaker	45	
+201	Earthbind	100	
+202	Addertongue	6	
+203	Addertongue	15	
+204	Addertongue	24	
+205	Addertongue	34	
+206	Addertongue	43	
+207	Addertongue	52	
+208	(                                   Fleshdoom                                   )	100	
+209	Tylwulf's Betrayal	100	
+210	Raging Tempest	100	
+211	Skullhammer	5	
+212	Skullhammer	14	
+213	Skullhammer	24	
+214	Skullhammer	33	
+215	Skullhammer	42	
+216	Skullhammer	51	
+217	Steelwoe	100	
+218	Abyssus	100	
+219	Hellslayer	100	
+220	The Covenant	6	
+221	The Covenant	16	
+222	The Covenant	25	
+223	The Covenant	34	
+224	The Covenant	43	
+225	The Covenant	52	
+226	Xorine's Cane	100	
+227	Issalfarstafr	100	
+228	Ancient Branch	100	
+229	Aerin Orbiter	5	
+230	Aerin Orbiter	14	
+231	Aerin Orbiter	22	
+232	Aerin Orbiter	31	
+233	Aerin Orbiter	40	
+234	Aerin Orbiter	48	
+235	Ashaera's Armor	100	
+236	Manafire	100	
+237	Dementia	100	
+238	Skull Lord	6	
+239	Skull Lord	15	
+240	Skull Lord	24	
+241	Skull Lord	32	
+242	Skull Lord	41	
+243	Skull Lord	50	
+244	Hivemind	100	
+245	Veil of the Tainted Sun	100	
+246	Fauztin's Shadow	100	
+247	Clawscratch	10	
+248	Clawscratch	19	
+249	Clawscratch	28	
+250	Clawscratch	38	
+251	Clawscratch	47	
+252	Clawscratch	54	
+253	Drow Valor	100	
+254	Eko Azarak	100	
+255	Wizardspike	100	
+256	Leoric's Legion	8	
+257	Leoric's Legion	17	
+258	Leoric's Legion	25	
+259	Leoric's Legion	34	
+260	Leoric's Legion	43	
+261	Leoric's Legion	52	
+262	The Gauntlet	100	
+263	The Ion Maiden	100	
+264	Zayl's Temptation	100	
+265	Arihan's End	11	
+266	Arihan's End	21	
+267	Arihan's End	29	
+268	Arihan's End	39	
+269	Arihan's End	49	
+270	Arihan's End	57	
+271	Mermaid's Song	100	
+272	Dreamweaver	100	
+273	Scream of Nature	100	
+274	Auto Da Fe	4	
+275	Auto Da Fe	13	
+276	Auto Da Fe	22	
+277	Auto Da Fe	32	
+278	Auto Da Fe	41	
+279	Auto Da Fe	50	
+280	Mad King's Spine	100	
+281	Globus Cruciger	100	
+282	Napalm Death	100	
+283	Stillwater	10	
+284	Stillwater	19	
+285	Stillwater	27	
+286	Stillwater	36	
+287	Stillwater	45	
+288	Stillwater	54	
+289	Trollface	100	
+290	The Veil of Magic	100	
+291	Trollskull	100	trollskullz
+292	The Wailing Wall	5	
+293	The Wailing Wall	14	
+294	The Wailing Wall	23	
+295	The Wailing Wall	31	
+296	The Wailing Wall	40	
+297	The Wailing Wall	49	
+298	Shadowhymn	100	
+299	Boneyard Scourge	100	
+300	Rainbow Fury	100	
+301	Talon's Reach	6	
+302	Talon's Reach	16	
+303	Talon's Reach	26	
+304	Talon's Reach	36	
+305	Talon's Reach	47	
+306	Talon's Reach	57	
+307	Wing of the Dragon God	100	
+308	Timefather	100	
+309	Reaper's Hand	100	
+310	Fateweaver	5	
+311	Fateweaver	14	
+312	Fateweaver	23	
+313	Fateweaver	33	
+314	Fateweaver	42	
+315	Fateweaver	51	
+316	Talon of Trang-Oul	100	
+317	The Prestidigator	100	
+318	Claws of Frost	100	
+319	Rabbit's Foot	1	
+320	Rabbit's Foot	8	
+321	Rabbit's Foot	17	
+322	Rabbit's Foot	25	
+323	Rabbit's Foot	34	
+324	Rabbit's Foot	43	
+325	Everchase	100	
+326	Hooves of the Thunderhorse	100	
+327	Wizard's Path	100	
+328	Shieldcracker	5	
+329	Shieldcracker	14	
+330	Shieldcracker	23	
+331	Shieldcracker	32	
+332	Shieldcracker	42	
+333	Shieldcracker	51	
+334	Goredrill	100	
+335	Greiz' Cheat	100	
+336	Sky Scorcher	100	
+337	Werecat	5	
+338	Werecat	14	
+339	Werecat	23	
+340	Werecat	31	
+341	Werecat	40	
+342	Werecat	50	
+343	Light's Widow	100	
+344	Highwayman's Friend	100	
+345	Kerrigan's Chest	100	
+346	Jackal's Hunger	3	
+347	Jackal's Hunger	12	
+348	Jackal's Hunger	22	
+349	Jackal's Hunger	31	
+350	Jackal's Hunger	40	
+351	Jackal's Hunger	49	
+352	Goreshifter	100	
+353	Roflchopper	100	
+354	Greil's Urvan	100	
+355	Raptor Beak	6	
+356	Raptor Beak	15	
+357	Raptor Beak	25	
+358	Raptor Beak	34	
+359	Raptor Beak	44	
+360	Raptor Beak	53	
+361	Plaguemourn	100	
+362	Sarandeshi Hellcaller	100	
+363	Holy Avenger	100	
+364	The Breaking Wheel	7	
+365	The Breaking Wheel	16	
+366	The Breaking Wheel	24	
+367	The Breaking Wheel	33	
+368	The Breaking Wheel	42	
+369	The Breaking Wheel	51	
+370	Rota Solaris	100	
+371	Canis Venator	100	
+372	Shaman's Grace	100	
+373	Uldyssian's Legion	9	
+374	Uldyssian's Legion	18	
+375	Uldyssian's Legion	27	
+376	Uldyssian's Legion	36	
+377	Uldyssian's Legion	46	
+378	Uldyssian's Legion	55	
+379	Blade of the Jitan	100	
+380	Esubane	100	
+381	Colliding Fury	100	
+382	Razordisk	1	
+383	Razordisk	8	
+384	Razordisk	17	
+385	Razordisk	26	
+386	Razordisk	35	
+387	Razordisk	43	
+388	Event Horizon	100	
+389	Ogden's Sign	100	
+390	Polar Breath	100	
+391	Golden Fleece	3	
+392	Golden Fleece	12	
+393	Golden Fleece	21	
+394	Golden Fleece	30	
+395	Golden Fleece	38	
+396	Golden Fleece	47	
+397	Uldyssian's Awakening	100	
+398	Pawnstorm	100	
+399	Gathering Storm	100	
+400	The Jester	1	
+401	The Jester	9	
+402	The Jester	17	
+403	The Jester	26	
+404	The Jester	35	
+405	The Jester	44	
+406	The Wanderer's Hood	100	
+407	Beanie Sidhe	100	
+408	Pestilence	100	
+409	Wedding Dress of the Zann	12	
+410	Wedding Dress of the Zann	21	
+411	Wedding Dress of the Zann	31	
+412	Wedding Dress of the Zann	39	
+413	Wedding Dress of the Zann	48	
+414	Wedding Dress of the Zann	55	
+415	Armor of the Old Religion	100	
+416	Hijab of the Skymother	100	
+417	Atanna Khan's Dress	100	
+418	Snakehair	5	
+419	Snakehair	14	
+420	Snakehair	23	
+421	Snakehair	31	
+422	Snakehair	40	
+423	Snakehair	49	
+424	Crest of Arnazeus	100	
+425	Kharos' Bloodskull	100	
+426	Rainbow Maiden	100	
+427	Hellfeast	5	
+428	Hellfeast	15	
+429	Hellfeast	24	
+430	Hellfeast	33	
+431	Hellfeast	42	
+432	Hellfeast	52	
+433	Noblebane	100	
+434	The Cactus	100	
+435	Firebird	100	
+436	Lionpaw	4	
+437	Lionpaw	13	
+438	Lionpaw	22	
+439	Lionpaw	31	
+440	Lionpaw	39	
+441	Lionpaw	48	
+442	Toesie Warmer	100	
+443	Clawfeet	100	
+444	Angel's Wrath	100	
+445	Featherclaw	5	
+446	Featherclaw	13	
+447	Featherclaw	22	
+448	Featherclaw	31	
+449	Featherclaw	40	
+450	Featherclaw	48	
+451	Deadman's Hand	100	
+452	Facebreaker	100	
+453	Conqueror's Mercy	100	
+454	Albrecht's Revenge	4	
+455	Albrecht's Revenge	13	
+456	Albrecht's Revenge	22	
+457	Albrecht's Revenge	31	
+458	Albrecht's Revenge	39	
+459	Albrecht's Revenge	49	
+460	Hepsheeba's Mantle	100	
+461	The Chained Mail	100	
+462	Hide of the Basilisk	100	
+463	The Celestial Crown	4	
+464	The Celestial Crown	13	
+465	The Celestial Crown	22	
+466	The Celestial Crown	30	
+467	The Celestial Crown	39	
+468	The Celestial Crown	48	
+469	Helm of Sprits	100	
+470	Eyes of Septumos	100	
+471	Arcane Protection	100	
+472	Thunderball	6	
+473	Thunderball	16	
+474	Thunderball	25	
+475	Thunderball	34	
+476	Thunderball	43	
+477	Thunderball	52	
+478	Gravetalon	100	
+479	Weird Sister	100	
+480	Tormentor	100	
+481	Gold Digger	6	
+482	Gold Digger	15	
+483	Gold Digger	25	
+484	Gold Digger	34	
+485	Gold Digger	44	
+486	Gold Digger	53	
+487	Harpy's Strike	100	
+488	Dark Maiden's Talons	100	
+489	Killer's Omen	100	
+490	Jared's Fragmentor	2	
+491	Jared's Fragmentor	12	
+492	Jared's Fragmentor	21	
+493	Jared's Fragmentor	31	
+494	Jared's Fragmentor	39	
+495	Jared's Fragmentor	50	
+496	Lavafrost	100	
+497	Mordhau	100	
+498	Eddard's Ice	100	
+499	Gnarled Root	1	
+500	Gnarled Root	9	
+501	Gnarled Root	18	
+502	Gnarled Root	27	
+503	Gnarled Root	37	
+504	Gnarled Root	46	
+505	Branch of a Million Splinters	100	
+506	Mr. Clubbo	100	
+507	Crackrust	100	
+508	Soulraider	4	
+509	Soulraider	13	
+510	Soulraider	23	
+511	Soulraider	32	
+512	Soulraider	41	
+513	Soulraider	50	
+514	Ryuuseiu Kyanon	100	
+515	Gjallarhorn	100	
+516	Vascud Crisis	100	
+517	Sagespirit	5	
+518	Sagespirit	14	
+519	Sagespirit	24	
+520	Sagespirit	33	
+521	Sagespirit	42	
+522	Sagespirit	51	
+523	Firestreak	100	
+524	Crystal Arch	100	
+525	Hunter's Ravage	100	
+526	The Allseeing Eye	6	
+527	The Allseeing Eye	14	
+528	The Allseeing Eye	23	
+529	The Allseeing Eye	32	
+530	The Allseeing Eye	41	
+531	The Allseeing Eye	49	
+532	Dark Star	100	
+533	Breathstealer	100	
+534	Warlock's Brilliance	100	
+535	The Barracuda	5	
+536	The Barracuda	15	
+537	The Barracuda	24	
+538	The Barracuda	33	
+539	The Barracuda	42	
+540	The Barracuda	52	
+541	The Needler	100	
+542	Boss Crow	100	
+543	Dreadful Arch	100	
+544	Glowskull	10	
+545	Glowskull	19	
+546	Glowskull	28	
+547	Glowskull	37	
+548	Glowskull	46	
+549	Glowskull	54	
+550	Gotterdammerung	100	
+551	Aiden's Lament	100	
+552	Sepultura	100	
+553	Shadowmoon	10	
+554	Shadowmoon	19	
+555	Shadowmoon	28	
+556	Shadowmoon	36	
+557	Shadowmoon	45	
+558	Shadowmoon	54	
+559	Deathforce	100	
+560	Angelhost	100	
+561	Sculptor of Pain	100	
+562	Iceflayer	11	
+563	Iceflayer	21	
+564	Iceflayer	30	
+565	Iceflayer	39	
+566	Iceflayer	48	
+567	Iceflayer	57	
+568	Worldstone Shard	100	
+569	Whispers of Mirakodus	100	
+570	Astral Blade	100	
+571	The Shanker	1	
+572	The Shanker	8	
+573	The Shanker	18	
+574	The Shanker	27	
+575	The Shanker	36	
+576	The Shanker	45	
+577	Dusk Shard	100	
+578	Jalal's Soulstealer	100	
+579	Dragonglass Dagger	100	
+580	The Khalim Organ	6	
+581	The Khalim Organ	16	
+582	The Khalim Organ	25	
+583	The Khalim Organ	34	
+584	The Khalim Organ	43	
+585	The Khalim Organ	53	
+586	Rattenfanger	100	
+587	Hwanin's Hwacha	100	
+588	Advent of Hatred	100	
+589	Hellspeak	10	
+590	Hellspeak	19	
+591	Hellspeak	28	
+592	Hellspeak	36	
+593	Hellspeak	45	
+594	Hellspeak	54	
+595	Sinwar	100	
+596	Satanskind	100	
+597	Grim Silhouette	100	
+598	Haareis	10	
+599	Haareis	19	
+600	Haareis	28	
+601	Haareis	37	
+602	Haareis	46	
+603	Haareis	54	
+604	Tennousuuhai	100	
+605	Crown of the Black Rose	100	
+606	Rogue's Miracle	100	
+607	Quov Tsin's Fall	4	
+608	Quov Tsin's Fall	13	
+609	Quov Tsin's Fall	22	
+610	Quov Tsin's Fall	31	
+611	Quov Tsin's Fall	41	
+612	Quov Tsin's Fall	50	
+613	Gryphon's Claw	100	
+614	Helgrotha's Fang	100	
+615	Gonnagal's Dirk	100	
+616	Anthem De Frost	5	
+617	Anthem De Frost	14	
+618	Anthem De Frost	24	
+619	Anthem De Frost	33	
+620	Anthem De Frost	42	
+621	Anthem De Frost	51	
+622	Moonbender's Wing	100	
+623	Doublecross	100	
+624	Bloodslayer	100	
+625	Dragonstone	10	
+626	Dragonstone	19	
+627	Dragonstone	29	
+628	Dragonstone	38	
+629	Dragonstone	47	
+630	Dragonstone	54	
+631	Stone of the Skatsim	100	
+632	Atanna's Key	100	
+633	Holy Wars	100	
+634	The Watcher	1	
+635	The Watcher	8	
+636	The Watcher	17	
+637	The Watcher	27	
+638	The Watcher	36	
+639	The Watcher	45	
+640	Habacalva's Firestar	100	
+641	Leah's Vision	100	
+642	Horadrim's Fist	100	
+643	Wildhunt	7	
+644	Wildhunt	15	
+645	Wildhunt	24	
+646	Wildhunt	33	
+647	Wildhunt	42	
+648	Wildhunt	50	
+649	Kethryes' Warband	100	
+650	Ylfa Ban	100	
+651	Corona Aureola	100	
+652	Finis Terra	5	
+653	Finis Terra	15	
+654	Finis Terra	24	
+655	Finis Terra	33	
+656	Finis Terra	42	
+657	Finis Terra	52	
+658	Bone Gasher	100	
+659	Falx Chthon	100	
+660	Shadowhawk	100	
+661	Skyguard	8	
+662	Skyguard	16	
+663	Skyguard	25	
+664	Skyguard	34	
+665	Skyguard	43	
+666	Skyguard	51	
+667	Skythrone	100	
+668	Windsinger	100	
+669	Sky Spirit	100	
+670	Bonechewer	4	
+671	Bonechewer	13	
+672	Bonechewer	22	
+673	Bonechewer	30	
+674	Bonechewer	39	
+675	Bonechewer	48	
+676	Hellmaw	100	
+677	Shadowtwin	100	
+678	Wolf Teeth	100	
+679	Fauztin's Visage	7	
+680	Fauztin's Visage	15	
+681	Fauztin's Visage	25	
+682	Fauztin's Visage	33	
+683	Fauztin's Visage	42	
+684	Fauztin's Visage	51	
+685	Icetomb	100	
+686	Itherael's Splendor	100	
+687	Segnitia	100	
+688	Ravenflock	11	
+689	Ravenflock	20	
+690	Ravenflock	29	
+691	Ravenflock	38	
+692	Ravenflock	47	
+693	Ravenflock	55	
+694	Lash of the Titans	100	
+695	Khalim's Punisher	100	
+696	Requiem For The Lost Ones	100	
+697	Frostbringer	7	
+698	Frostbringer	17	
+699	Frostbringer	26	
+700	Frostbringer	35	
+701	Frostbringer	45	
+702	Frostbringer	54	
+703	Fogo Da Sombra	100	
+704	Doomswath	100	
+705	Carsomyr	100	
+706	Naiad King	4	
+707	Naiad King	15	
+708	Naiad King	25	
+709	Naiad King	35	
+710	Naiad King	46	
+711	Naiad King	55	
+712	The Scourge of Aranoch	100	
+713	Bryn Celli Ddu	100	
+714	Mage's Pulse	100	flammeen
+715	Icebird	4	
+716	Icebird	13	
+717	Icebird	23	
+718	Icebird	32	
+719	Icebird	41	
+720	Icebird	50	
+721	Angler's Hook	100	
+722	Piranha Swarm	100	
+723	Warshrike	100	
+724	Farnham's Flowerpot	6	
+725	Farnham's Flowerpot	14	
+726	Farnham's Flowerpot	23	
+727	Farnham's Flowerpot	32	
+728	Farnham's Flowerpot	41	
+729	Farnham's Flowerpot	49	
+730	Ironhood	100	
+731	Headbanger	100	
+732	Gehenna	100	
+733	Shroud Royal	11	
+734	Shroud Royal	19	
+735	Shroud Royal	28	
+736	Shroud Royal	37	
+737	Shroud Royal	46	
+738	Shroud Royal	54	
+739	Robe of Steel	100	
+740	Sankekur's Faulds	100	
+741	Vizjerei's Ritual	100	
+742	Serenthia's Disguise	3	
+743	Serenthia's Disguise	12	
+744	Serenthia's Disguise	20	
+745	Serenthia's Disguise	29	
+746	Serenthia's Disguise	38	
+747	Serenthia's Disguise	46	
+748	Cloak of the Vasan Queen	100	
+749	Rag Queen	100	
+750	Wizard's Cloak	100	
+751	Graven Image	7	
+752	Graven Image	16	
+753	Graven Image	25	
+754	Graven Image	34	
+755	Graven Image	42	
+756	Graven Image	51	
+757	Hero's Fang	100	
+758	The Sentinel's Sorrow	100	
+759	Deadmaster	100	
+760	Pollice Verso	10	
+761	Pollice Verso	18	
+762	Pollice Verso	27	
+763	Pollice Verso	36	
+764	Pollice Verso	44	
+765	Pollice Verso	52	
+766	Glor-An-Fhaidha's Firebark	100	
+767	Lamha Na Draoithe	100	
+768	Centuria Insectorum	100	gauntletsuu
+769	Edge of Extinction	11	
+770	Edge of Extinction	20	
+771	Edge of Extinction	29	
+772	Edge of Extinction	38	
+773	Edge of Extinction	48	
+774	Edge of Extinction	55	
+775	Griswold's Revenge	100	
+776	Axekicker	100	
+777	Executioner's Justice	100	
+778	Hellreaper	4	
+779	Hellreaper	14	
+780	Hellreaper	23	
+781	Hellreaper	32	
+782	Hellreaper	41	
+783	Hellreaper	51	
+784	Quietus	100	
+785	Qarak's Will	100	
+786	Durandal the Blazing Sword	100	
+787	Invictus	14	
+788	Invictus	22	
+789	Invictus	31	
+790	Invictus	39	
+791	Invictus	49	
+792	Invictus	57	
+793	Toraja's Champion	100	
+794	The Ancients' Legacy	100	
+795	Satan's Dark Delight	100	
+796	Sudis Murale	7	
+797	Sudis Murale	16	
+798	Sudis Murale	25	
+799	Sudis Murale	34	
+800	Sudis Murale	44	
+801	Sudis Murale	53	
+802	Ashenwind	100	
+803	Moonfang	100	
+804	Night's Embrace	100	
+805	Dubhdroiacht	4	
+806	Dubhdroiacht	14	
+807	Dubhdroiacht	23	
+808	Dubhdroiacht	32	
+809	Dubhdroiacht	42	
+810	Dubhdroiacht	50	
+811	Aerin Nexus	100	
+812	Azgar's Nemeton	100	
+813	Thundercall	100	
+814	Dies Metus	6	
+815	Dies Metus	15	
+816	Dies Metus	24	
+817	Dies Metus	34	
+818	Dies Metus	43	
+819	Dies Metus	52	
+820	Hand of Naz	100	
+821	The Lyon's Claw	100	
+822	Spirit of Light	100	
+823	Steel Golem	9	
+824	Steel Golem	18	
+825	Steel Golem	27	
+826	Steel Golem	35	
+827	Steel Golem	45	
+828	Steel Golem	52	
+829	Scales of the Serpent	100	
+830	Goetia Plate	100	
+831	Strength Beyond Strength	100	
+832	Doomfall	10	
+833	Doomfall	19	
+834	Doomfall	28	
+835	Doomfall	36	
+836	Doomfall	45	
+837	Doomfall	54	
+838	Dragon's Breach	100	
+839	Shield of Hakan II	100	
+840	Ward of Ransim	100	
+841	Voidstream	4	
+842	Voidstream	13	
+843	Voidstream	23	
+844	Voidstream	32	
+845	Voidstream	41	
+846	Voidstream	51	
+847	Pagan's Geis	100	
+848	Dead Lake's Lady	100	
+849	The Redeemer	100	
+850	Norrec's Topor	7	
+851	Norrec's Topor	16	
+852	Norrec's Topor	25	
+853	Norrec's Topor	35	
+854	Norrec's Topor	44	
+855	Norrec's Topor	53	
+856	Lex Ferarum	100	
+857	Elder Law	100	
+858	Nuclear Blast	100	
+859	Lanterne Rouge	8	
+860	Lanterne Rouge	16	
+861	Lanterne Rouge	25	
+862	Lanterne Rouge	34	
+863	Lanterne Rouge	43	
+864	Lanterne Rouge	51	
+865	The Prophet's Veil	100	
+866	Metalhead	100	
+867	Naga's Reign	100	
+868	The Flying Anvil	11	
+869	The Flying Anvil	20	
+870	The Flying Anvil	29	
+871	The Flying Anvil	38	
+872	The Flying Anvil	48	
+873	The Flying Anvil	55	
+874	Hammer of Jholm	100	
+875	Siegehammer of Morgen Keep	100	
+876	The Cranium Basher	100	
+877	The Dao of Xiansai	11	
+878	The Dao of Xiansai	21	
+879	The Dao of Xiansai	29	
+880	The Dao of Xiansai	39	
+881	The Dao of Xiansai	49	
+882	The Dao of Xiansai	57	
+883	Feltongue	100	
+884	Jere Harash's Ghostwing	100	
+885	Neuroblade	100	
+886	Wake of Destruction	9	
+887	Wake of Destruction	18	
+888	Wake of Destruction	27	
+889	Wake of Destruction	36	
+890	Wake of Destruction	44	
+891	Wake of Destruction	52	
+892	Slippers of Yaerius	100	
+893	Rodeo's Tramplers	100	
+894	Knight's Grace	100	greavessu3
+895	Blackheart	11	
+896	Blackheart	20	
+897	Blackheart	29	
+898	Blackheart	38	
+899	Blackheart	47	
+900	Blackheart	55	
+901	Dragonspine	100	
+902	Cruciatus	100	
+903	Vheran's Experiments	100	grimmw
+904	King Cobra	10	
+905	King Cobra	19	
+906	King Cobra	28	
+907	King Cobra	37	
+908	King Cobra	47	
+909	King Cobra	54	
+910	The Silent Judge	100	
+911	Gift of the Spiritbeast	12	
+912	Gift of the Spiritbeast	22	
+913	Gift of the Spiritbeast	31	
+914	Gift of the Spiritbeast	42	
+915	Gift of the Spiritbeast	52	
+916	Gift of the Spiritbeast	60	
+917	Peace Warder	100	
+918	Facemelter	100	
+919	Falcon Swoop	100	
+920	Brainhack	1	
+921	Brainhack	9	
+922	Brainhack	19	
+923	Brainhack	28	
+924	Brainhack	37	
+925	Brainhack	46	
+926	Wererat's Bite	100	
+927	Flintstone Axe	100	
+928	Headsman	100	
+929	Faithshaker	12	
+930	Faithshaker	21	
+931	Faithshaker	30	
+932	Faithshaker	39	
+933	Faithshaker	49	
+934	Faithshaker	56	
+935	Malleus Maleficarum	100	
+936	Chober Chaber	100	
+937	Blackened	100	palhammer
+938	Leather of Aut	2	
+939	Leather of Aut	11	
+940	Leather of Aut	19	
+941	Leather of Aut	28	
+942	Leather of Aut	37	
+943	Leather of Aut	45	
+944	Wyand's Fervor	100	
+945	Maggotspawn Shell	100	
+946	Coat of Darkness	100	
+947	Sawfish	4	
+948	Sawfish	13	
+949	Sawfish	22	
+950	Sawfish	32	
+951	Sawfish	41	
+952	Sawfish	50	
+953	The Toecutter	100	
+954	Kamehameha	100	
+955	Thunderbird	100	
+956	Earth Song	4	
+957	Earth Song	13	
+958	Earth Song	22	
+959	Earth Song	30	
+960	Earth Song	39	
+961	Earth Song	48	
+962	Augur's Pelt	100	
+963	Peacebringer	100	
+964	Wisdom of Scosglen	100	
+965	Deadfall	7	
+966	Deadfall	15	
+967	Deadfall	24	
+968	Deadfall	33	
+969	Deadfall	41	
+970	Deadfall	50	
+971	Nor Tiraj's Wisdom	100	
+972	Edgewulf's Girdle	100	
+973	Black Void	100	
+974	Death Spur	3	
+975	Death Spur	11	
+976	Death Spur	20	
+977	Death Spur	28	
+978	Death Spur	38	
+979	Death Spur	46	
+980	Spirit Walker	100	
+981	Lifecrusher	100	
+982	Titan's Steps	100	
+983	Fallentooth	8	
+984	Fallentooth	17	
+985	Fallentooth	28	
+986	Fallentooth	37	
+987	Fallentooth	47	
+988	Fallentooth	54	
+989	Thunder Machine	100	
+990	Ratbane	100	
+991	Ballista	100	
+992	Toorc's Gift	3	
+993	Toorc's Gift	12	
+994	Toorc's Gift	20	
+995	Toorc's Gift	29	
+996	Toorc's Gift	38	
+997	Toorc's Gift	46	
+998	Hammerfist	100	
+999	Ironbound Impact Tome	100	invbbb
+1000	Gulag's Frenzy	100	
+1001	Lavadome	4	
+1002	Lavadome	13	
+1003	Lavadome	22	
+1004	Lavadome	30	
+1005	Lavadome	39	
+1006	Lavadome	48	
+1007	Brainburst	100	
+1008	PortalKombat	100	
+1009	Cat's Pounce	100	
+1010	Thunderhead	5	
+1011	Thunderhead	14	
+1012	Thunderhead	23	
+1013	Thunderhead	32	
+1014	Thunderhead	40	
+1015	Thunderhead	49	
+1016	Argentek's Tide	100	
+1017	Peckin's Order	100	
+1018	Holy Saviour	100	
+1019	Mendeln's Companion	4	
+1020	Mendeln's Companion	14	
+1021	Mendeln's Companion	24	
+1022	Mendeln's Companion	34	
+1023	Mendeln's Companion	45	
+1024	Mendeln's Companion	55	
+1025	Astrogha's Fang	100	
+1026	Rathma's Athame	100	
+1027	Satan's Void	100	
+1028	The Crucifier	3	
+1029	The Crucifier	13	
+1030	The Crucifier	23	
+1031	The Crucifier	33	
+1032	The Crucifier	44	
+1033	The Crucifier	53	
+1034	Skylord	100	
+1035	In Fero Salva	100	
+1036	Venom Sting	100	
+1037	Cornucopia	6	
+1038	Cornucopia	14	
+1039	Cornucopia	23	
+1040	Cornucopia	32	
+1041	Cornucopia	41	
+1042	Cornucopia	49	
+1043	Demonhorn	100	
+1044	Stella Matutina	100	
+1045	Shaggy Beast	100	
+1046	Godhead	2	
+1047	Godhead	11	
+1048	Godhead	19	
+1049	Godhead	28	
+1050	Godhead	37	
+1051	Godhead	45	
+1052	Khalim's Gloriole	100	
+1053	Barghest's Howl	100	
+1054	Blessed Wrath	100	
+1055	Deadly Hunter	1	
+1056	Deadly Hunter	11	
+1057	Deadly Hunter	20	
+1058	Deadly Hunter	30	
+1059	Deadly Hunter	39	
+1060	Deadly Hunter	48	
+1061	Demonstorm	100	
+1062	Faerie Pyre	100	
+1063	Dear Esther	100	
+1064	Icehunter's Fang	7	
+1065	Icehunter's Fang	16	
+1066	Icehunter's Fang	26	
+1067	Icehunter's Fang	35	
+1068	Icehunter's Fang	45	
+1069	Icehunter's Fang	54	
+1070	Claw of the Spirit Wolf	100	
+1071	Thunder King of Sescheron	100	
+1072	The Might of the Ancients	100	
+1073	Devil's Flight	1	
+1074	Devil's Flight	9	
+1075	Devil's Flight	18	
+1076	Devil's Flight	27	
+1077	Devil's Flight	36	
+1078	Devil's Flight	46	
+1079	Raindance	100	
+1080	Magelock	100	
+1081	Wraith Flight	100	
+1082	Slimedrool	3	
+1083	Slimedrool	11	
+1084	Slimedrool	20	
+1085	Slimedrool	29	
+1086	Slimedrool	37	
+1087	Slimedrool	47	
+1088	Larzuk's Contraption	100	
+1089	Boarfrost	100	
+1090	Bear Grin	100	
+1091	The Nutcracker	1	
+1092	The Nutcracker	10	
+1093	The Nutcracker	19	
+1094	The Nutcracker	28	
+1095	The Nutcracker	37	
+1096	The Nutcracker	46	
+1097	Ghoulhand	100	
+1098	Katar Hero	100	
+1099	Noctule	100	
+1100	Ennead's Bane	6	
+1101	Ennead's Bane	15	
+1102	Ennead's Bane	24	
+1103	Ennead's Bane	32	
+1104	Ennead's Bane	41	
+1105	Ennead's Bane	51	
+1106	Nor Tiraj's Turinash	100	
+1107	Dervish of Aranoch	100	
+1108	Adamantine Guard	100	
+1109	Banner of Duncraig	5	
+1110	Banner of Duncraig	14	
+1111	Banner of Duncraig	23	
+1112	Banner of Duncraig	32	
+1113	Banner of Duncraig	40	
+1114	Banner of Duncraig	49	
+1115	Lightforge	100	
+1116	Stormflyer	100	
+1117	Linarian's Legacy	100	
+1118	Bul Kathos' Teaching	13	
+1119	Bul Kathos' Teaching	22	
+1120	Bul Kathos' Teaching	31	
+1121	Bul Kathos' Teaching	41	
+1122	Bul Kathos' Teaching	50	
+1123	Bul Kathos' Teaching	58	
+1124	Skeld's Battlesong	100	
+1125	Chanunpa	100	
+1126	Leoric's Hand	100	
+1127	Acidburn	6	
+1128	Acidburn	15	
+1129	Acidburn	24	
+1130	Acidburn	33	
+1131	Acidburn	43	
+1132	Acidburn	52	
+1133	Frostneedle	100	
+1134	Plunderbird	100	
+1135	Black Razor	100	
+1136	Wrathchild	12	
+1137	Wrathchild	22	
+1138	Wrathchild	31	
+1139	Wrathchild	41	
+1140	Wrathchild	52	
+1141	Wrathchild	60	
+1142	Yaggai's Sagaris	100	
+1143	Wotansvolk	100	
+1144	The King of Ents	100	labrryss
+1145	Nightscape	4	
+1146	Nightscape	13	
+1147	Nightscape	22	
+1148	Nightscape	30	
+1149	Nightscape	39	
+1150	Nightscape	48	
+1151	Bartuc's Curse	100	
+1152	Zharesh Robes	100	
+1153	Frozen Heart	100	
+1154	Heartrend	1	
+1155	Heartrend	9	
+1156	Heartrend	18	
+1157	Heartrend	28	
+1158	Heartrend	37	
+1159	Heartrend	46	
+1160	Demonsong	100	
+1161	Ghoul Lord	100	
+1162	Sharp Beak	100	
+1163	Wheel of Fortune	4	
+1164	Wheel of Fortune	13	
+1165	Wheel of Fortune	21	
+1166	Wheel of Fortune	30	
+1167	Wheel of Fortune	39	
+1168	Wheel of Fortune	48	
+1169	Chalice of Horrors	100	
+1170	Dryadbark	100	
+1171	Wizard's Wall	100	
+1172	Acidblood	2	
+1173	Acidblood	9	
+1174	Acidblood	18	
+1175	Acidblood	27	
+1176	Acidblood	35	
+1177	Acidblood	45	
+1178	Runeflesh	100	
+1179	Belly of the Beast	100	
+1180	Warrior's Robe	100	
+1181	Vilehand	1	
+1182	Vilehand	8	
+1183	Vilehand	17	
+1184	Vilehand	26	
+1185	Vilehand	34	
+1186	Vilehand	43	
+1187	Geglash's Dusters	100	
+1188	Blackjade's Legacy	100	
+1189	Demonic Touch	100	
+1190	Wormtongue	3	
+1191	Wormtongue	12	
+1192	Wormtongue	21	
+1193	Wormtongue	29	
+1194	Wormtongue	38	
+1195	Wormtongue	46	
+1196	The Endless Loop	100	
+1197	Tldr	100	
+1198	Lunar Eclipse	100	
+1199	Runeshatter	3	
+1200	Runeshatter	13	
+1201	Runeshatter	22	
+1202	Runeshatter	31	
+1203	Runeshatter	40	
+1204	Runeshatter	50	
+1205	Razorjack	100	
+1206	Al Hazir's Quillholder	100	
+1207	Plague Bolter	100	
+1208	Visegrip	6	
+1209	Visegrip	15	
+1210	Visegrip	24	
+1211	Visegrip	33	
+1212	Visegrip	41	
+1213	Visegrip	50	
+1214	Lorekeeper	100	
+1215	Baron Sludge's Bonecrusher	100	
+1216	Blind Anger	100	
+1217	Dragon's Blood	8	
+1218	Dragon's Blood	16	
+1219	Dragon's Blood	25	
+1220	Dragon's Blood	34	
+1221	Dragon's Blood	43	
+1222	Dragon's Blood	51	
+1223	Huo Zhi Wang	100	
+1224	Hellbourne Disciple	100	
+1225	Auriel's Robe	100	
+1226	Zealot Rush	6	
+1227	Zealot Rush	15	
+1228	Zealot Rush	24	
+1229	Zealot Rush	32	
+1230	Zealot Rush	41	
+1231	Zealot Rush	50	
+1232	Akarat's Trek	100	
+1233	Earthbender	100	
+1234	Steel Terror	100	
+1235	Darkplague	6	
+1236	Darkplague	16	
+1237	Darkplague	25	
+1238	Darkplague	34	
+1239	Darkplague	43	
+1240	Darkplague	52	
+1241	Hand of Karcheus	100	
+1242	Hwanin's Gungdo	100	
+1243	Cloud Strife	100	
+1244	Magebane	3	
+1245	Magebane	13	
+1246	Magebane	22	
+1247	Magebane	31	
+1248	Magebane	40	
+1249	Magebane	50	
+1250	Seraph Wing	100	
+1251	Vizjuns Scitek	100	
+1252	Swan Song	100	
+1253	The Magister	3	
+1254	The Magister	12	
+1255	The Magister	21	
+1256	The Magister	30	
+1257	The Magister	40	
+1258	The Magister	49	
+1259	Shamanka	100	
+1260	Black King Bar	100	
+1261	Staff of Shadows	100	
+1262	Herr Donner	8	
+1263	Herr Donner	17	
+1264	Herr Donner	26	
+1265	Herr Donner	35	
+1266	Herr Donner	45	
+1267	Herr Donner	54	
+1268	Warwind	100	
+1269	Demacian Justice	100	
+1270	Excalibur	100	
+1271	The Black Dame	11	
+1272	The Black Dame	20	
+1273	The Black Dame	30	
+1274	The Black Dame	39	
+1275	The Black Dame	48	
+1276	The Black Dame	57	
+1277	Harp of Vengeance	100	
+1278	Hammerfall	100	
+1279	Heart Of The Swarm	100	
+1280	Koth's Lesson	5	
+1281	Koth's Lesson	14	
+1282	Koth's Lesson	23	
+1283	Koth's Lesson	33	
+1284	Koth's Lesson	42	
+1285	Koth's Lesson	51	
+1286	Dreamflange	100	
+1287	Starbreaker	100	
+1288	Gnarled Root	100	
+1289	Mooncurse	10	
+1290	Mooncurse	20	
+1291	Mooncurse	29	
+1292	Mooncurse	38	
+1293	Mooncurse	47	
+1294	Mooncurse	55	
+1295	Storm Cloud	100	
+1296	Hellrain	100	
+1297	Divine Dart	100	
+1298	Terra Indiges	10	
+1299	Terra Indiges	20	
+1300	Terra Indiges	29	
+1301	Terra Indiges	38	
+1302	Terra Indiges	47	
+1303	Terra Indiges	55	
+1304	Celestia's Defense	100	
+1305	Serenthia's Glory	100	
+1306	Panthera's Bite	100	
+1307	Sundial Spire	7	
+1308	Sundial Spire	16	
+1309	Sundial Spire	25	
+1310	Sundial Spire	34	
+1311	Sundial Spire	44	
+1312	Sundial Spire	53	
+1313	Ghost Anchor	100	
+1314	Cranium Bore	100	
+1315	Thono's Tentacle	100	
+1316	King of the Dreadlands	1	
+1317	King of the Dreadlands	9	
+1318	King of the Dreadlands	20	
+1319	King of the Dreadlands	30	
+1320	King of the Dreadlands	40	
+1321	King of the Dreadlands	50	
+1322	Elite Hacker	100	
+1323	Pitlord's Pendulum	100	
+1324	Bovine Cleaver	100	
+1325	Wasp Sting	7	
+1326	Wasp Sting	17	
+1327	Wasp Sting	26	
+1328	Wasp Sting	35	
+1329	Wasp Sting	44	
+1330	Wasp Sting	53	
+1331	Leathdhiabhala	100	
+1332	Nereid's Calliope	100	
+1333	Polar Vortex	100	
+1334	Lord of Thorns	11	
+1335	Lord of Thorns	20	
+1336	Lord of Thorns	31	
+1337	Lord of Thorns	41	
+1338	Lord of Thorns	51	
+1339	Lord of Thorns	59	
+1340	Prince of Nothing	100	
+1341	Karybdus' Descent	100	
+1342	Shadowfiend	100	
+1343	Umbaru's Jinx	7	
+1344	Umbaru's Jinx	16	
+1345	Umbaru's Jinx	24	
+1346	Umbaru's Jinx	33	
+1347	Umbaru's Jinx	42	
+1348	Umbaru's Jinx	50	
+1349	Trang-Oul's Breath	100	
+1350	Idol of Rygnar	100	
+1351	Gematria	100	
+1352	Bonerattler	7	
+1353	Bonerattler	16	
+1354	Bonerattler	25	
+1355	Bonerattler	35	
+1356	Bonerattler	44	
+1357	Bonerattler	53	
+1358	Death's Bellringer	100	
+1359	Trollhammaren	100	
+1360	Spirit Crusher	100	
+1361	The Prospector's Pick	7	
+1362	The Prospector's Pick	16	
+1363	The Prospector's Pick	26	
+1364	The Prospector's Pick	35	
+1365	The Prospector's Pick	44	
+1366	The Prospector's Pick	53	
+1367	Snowhammer	100	
+1368	Klonk	100	
+1369	Heaven's Bite	100	
+1370	Zerae's Veil	2	
+1371	Zerae's Veil	10	
+1372	Zerae's Veil	18	
+1373	Zerae's Veil	27	
+1374	Zerae's Veil	36	
+1375	Zerae's Veil	45	
+1376	Crown of the Rakkas	100	
+1377	Lionblood Crest	100	
+1378	Skull of Lioness	100	
+1379	Magnet Rock	7	
+1380	Magnet Rock	16	
+1381	Magnet Rock	25	
+1382	Magnet Rock	35	
+1383	Magnet Rock	44	
+1384	Magnet Rock	53	
+1385	Lychnus Lyaei	100	
+1386	Eosphoros	100	
+1387	The Golden Sun	100	
+1388	Na-Krul's Spine	6	
+1389	Na-Krul's Spine	16	
+1390	Na-Krul's Spine	26	
+1391	Na-Krul's Spine	36	
+1392	Na-Krul's Spine	47	
+1393	Na-Krul's Spine	57	
+1394	Frysturgard	100	
+1395	Zular Khan's Tempest	100	
+1396	Hovering Dame	100	naginagi
+1397	Deathwind	4	
+1398	Deathwind	14	
+1399	Deathwind	23	
+1400	Deathwind	32	
+1401	Deathwind	41	
+1402	Deathwind	51	
+1403	Hand of Rathma	100	
+1404	Icharion's Dissuader	100	
+1405	The Mangling Sting	100	
+1406	Oni no Ona	1	
+1407	Oni no Ona	9	
+1408	Oni no Ona	19	
+1409	Oni no Ona	30	
+1410	Oni no Ona	40	
+1411	Oni no Ona	50	
+1412	Warfeast	100	
+1413	Bellifortis	100	
+1414	The Butcher's Cleaver	100	
+1415	Astrogha's Eye	5	
+1416	Astrogha's Eye	14	
+1417	Astrogha's Eye	22	
+1418	Astrogha's Eye	31	
+1419	Astrogha's Eye	40	
+1420	Astrogha's Eye	49	
+1421	Norrec's Targe	100	
+1422	Digitron Disk	100	
+1423	Silver Scorpion	100	
+1424	Dragonfire	8	
+1425	Dragonfire	17	
+1426	Dragonfire	25	
+1427	Dragonfire	34	
+1428	Dragonfire	43	
+1429	Dragonfire	52	
+1430	The Tannr Scutum	100	
+1431	Phoenix Down	100	
+1432	Sunbeam	100	
+1433	Death Pit Stake	10	
+1434	Death Pit Stake	20	
+1435	Death Pit Stake	29	
+1436	Death Pit Stake	38	
+1437	Death Pit Stake	47	
+1438	Death Pit Stake	55	
+1439	Rei Di Gelo	100	
+1440	The Pride of Caldeum	100	
+1441	Tonbogiri	100	
+1442	Shadowstrike	3	
+1443	Shadowstrike	12	
+1444	Shadowstrike	21	
+1445	Shadowstrike	30	
+1446	Shadowstrike	40	
+1447	Shadowstrike	49	
+1448	Phantom Flight	100	
+1449	Screaming Serpent	100	
+1450	Spire of Honor	100	
+1451	Dragon Tail	10	
+1452	Dragon Tail	19	
+1453	Dragon Tail	27	
+1454	Dragon Tail	36	
+1455	Dragon Tail	44	
+1456	Dragon Tail	52	
+1457	The Asteroid Belt	100	
+1458	Lilith's Temptation	100	invblt
+1459	Champion of the Truine	100	
+1460	Iceshell	6	
+1461	Iceshell	15	
+1462	Iceshell	23	
+1463	Iceshell	32	
+1464	Iceshell	42	
+1465	Iceshell	50	
+1466	Arreat's Heart	100	
+1467	Skin of Kabraxis	100	
+1468	Wolverine Skin	100	
+1469	Albrecht's Heirloom	2	
+1470	Albrecht's Heirloom	11	
+1471	Albrecht's Heirloom	20	
+1472	Albrecht's Heirloom	29	
+1473	Albrecht's Heirloom	37	
+1474	Albrecht's Heirloom	46	
+1475	Trollskull	100	
+1476	The Stillborn	100	
+1477	Eerie Flash	100	
+1478	The War Cloak	1	
+1479	The War Cloak	9	
+1480	The War Cloak	18	
+1481	The War Cloak	26	
+1482	The War Cloak	35	
+1483	The War Cloak	44	
+1484	Cloak of Flames	100	
+1485	Haraigami	100	
+1486	Screen of Viz-Jaq'Taar	100	
+1487	Cane of Juris Khan	1	
+1488	Cane of Juris Khan	9	
+1489	Cane of Juris Khan	19	
+1490	Cane of Juris Khan	29	
+1491	Cane of Juris Khan	39	
+1492	Cane of Juris Khan	50	
+1493	Chillspine	100	
+1494	Seven Heads of Tathamet	100	
+1495	Prowler's Slash	100	
+1496	Thorn Branch	12	
+1497	Thorn Branch	21	
+1498	Thorn Branch	31	
+1499	Thorn Branch	40	
+1500	Thorn Branch	49	
+1501	Thorn Branch	58	
+1502	Fiacla-Gear's Wisdom	100	
+1503	Mr. Painless	100	
+1504	Wrath of Nature	100	
+1505	Herald of Skartara	11	
+1506	Herald of Skartara	20	
+1507	Herald of Skartara	30	
+1508	Herald of Skartara	39	
+1509	Herald of Skartara	48	
+1510	Herald of Skartara	57	
+1511	Athulua's Command	100	
+1512	Chasmstriker	100	
+1513	Ranger's Path	100	
+1514	Embershot	11	
+1515	Embershot	20	
+1516	Embershot	30	
+1517	Embershot	39	
+1518	Embershot	48	
+1519	Embershot	57	
+1520	Larzuk's Bombard	100	
+1521	Mons Meg	100	
+1522	Demonstring	100	
+1523	Sharkbaiter	4	
+1524	Sharkbaiter	12	
+1525	Sharkbaiter	21	
+1526	Sharkbaiter	30	
+1527	Sharkbaiter	39	
+1528	Sharkbaiter	47	
+1529	Hratli's Craft	100	
+1530	Medivh's Cameo	100	
+1531	Scales of the Drake	100	
+1532	Oreichalcos	4	
+1533	Oreichalcos	13	
+1534	Oreichalcos	21	
+1535	Oreichalcos	30	
+1536	Oreichalcos	39	
+1537	Oreichalcos	48	
+1538	Hypnodisk	100	
+1539	Vizjun's Commdish	100	
+1540	Phoenix Ash	100	
+1541	Wardance	4	
+1542	Wardance	13	
+1543	Wardance	22	
+1544	Wardance	32	
+1545	Wardance	41	
+1546	Wardance	50	
+1547	Infernolash	100	
+1548	Saber of the Stormsail	100	
+1549	Ice Shank	100	
+1550	Lunarsong	3	
+1551	Lunarsong	12	
+1552	Lunarsong	21	
+1553	Lunarsong	30	
+1554	Lunarsong	40	
+1555	Lunarsong	49	
+1556	Ghostmoon	100	
+1557	Earth's Burden	100	
+1558	Mistress of Pain	100	
+1559	Moonwrap	1	
+1560	Moonwrap	8	
+1561	Moonwrap	17	
+1562	Moonwrap	26	
+1563	Moonwrap	35	
+1564	Moonwrap	43	
+1565	Sash of Shadows	100	
+1566	Cliffhanger	100	
+1567	Lightning Enchanted	100	
+1568	Robe of Leaves	4	
+1569	Robe of Leaves	12	
+1570	Robe of Leaves	21	
+1571	Robe of Leaves	30	
+1572	Robe of Leaves	39	
+1573	Robe of Leaves	47	
+1574	Crystalshroud	100	
+1575	Scale of Justice	100	
+1576	Sahuagin Skin	100	
+1577	Sunbearer	1	
+1578	Sunbearer	9	
+1579	Sunbearer	18	
+1580	Sunbearer	27	
+1581	Sunbearer	37	
+1582	Sunbearer	46	
+1583	The Celebrant	100	
+1584	Scepter of Tremain	100	
+1585	Heaven's Light	100	
+1586	Al Nath	2	
+1587	Al Nath	11	
+1588	Al Nath	20	
+1589	Al Nath	30	
+1590	Al Nath	39	
+1591	Al Nath	48	
+1592	Al Nair	100	
+1593	Kraken's Cutlass	100	
+1594	Sherazade	100	
+1595	Circuit Breaker	12	
+1596	Circuit Breaker	21	
+1597	Circuit Breaker	30	
+1598	Circuit Breaker	40	
+1599	Circuit Breaker	49	
+1600	Circuit Breaker	57	
+1601	The Atom Splitter	100	
+1602	Legio Di Manes	100	
+1603	Tentacles of Terror	100	
+1604	Bonefiend	6	
+1605	Bonefiend	15	
+1606	Bonefiend	24	
+1607	Bonefiend	33	
+1608	Bonefiend	43	
+1609	Bonefiend	52	
+1610	Moonscythe	100	
+1611	Freakshow	100	
+1612	Harbinger of Death	100	
+1613	Vipercast	6	
+1614	Vipercast	16	
+1615	Vipercast	25	
+1616	Vipercast	34	
+1617	Vipercast	43	
+1618	Vipercast	53	
+1619	Magma Spitter	100	
+1620	Pitchburner	100	
+1621	Ghoul's Soul	100	
+1622	Chargebreaker	12	
+1623	Chargebreaker	21	
+1624	Chargebreaker	30	
+1625	Chargebreaker	39	
+1626	Chargebreaker	47	
+1627	Chargebreaker	56	
+1628	Rozsochac	100	
+1629	Panzerkeil	100	
+1630	Golden Chariot	100	
+1631	Buriza-Do Tsuru	5	
+1632	Buriza-Do Tsuru	15	
+1633	Buriza-Do Tsuru	24	
+1634	Buriza-Do Tsuru	33	
+1635	Buriza-Do Tsuru	42	
+1636	Buriza-Do Tsuru	52	
+1637	Serpent Angel	100	
+1638	Stormhowl	100	
+1639	Windforce	100	
+1640	The Rift Bow	1	
+1641	The Rift Bow	8	
+1642	The Rift Bow	17	
+1643	The Rift Bow	26	
+1644	The Rift Bow	36	
+1645	The Rift Bow	45	
+1646	Sinewstring	100	
+1647	Snotflinger	100	
+1648	Until You Realise It Sucks	120	
+1649	Icepick	5	
+1650	Icepick	14	
+1651	Icepick	23	
+1652	Icepick	33	
+1653	Icepick	42	
+1654	Icepick	51	
+1655	Emberstorm	100	
+1656	Fjordwind	100	
+1657	Demon's Arch	100	
+1658	Demoncall	1	
+1659	Demoncall	8	
+1660	Demoncall	17	
+1661	Demoncall	27	
+1662	Demoncall	36	
+1663	Demoncall	45	
+1664	Vizjerei's Folly	100	
+1665	Staff of Lady Salene	100	
+1666	Storm Spire	100	
+1667	Grim Fang	1	
+1668	Grim Fang	10	
+1669	Grim Fang	19	
+1670	Grim Fang	28	
+1671	Grim Fang	37	
+1672	Grim Fang	46	
+1673	The Xiphos	100	
+1674	Hellforge Edge	100	
+1675	The Eviscerator	100	
+1676	Webspinner	8	
+1677	Webspinner	17	
+1678	Webspinner	28	
+1679	Webspinner	37	
+1680	Webspinner	47	
+1681	Webspinner	54	
+1682	Flamelord	100	
+1683	Walfang	100	
+1684	Fleshstinger	100	
+1685	Topspin	3	
+1686	Topspin	11	
+1687	Topspin	20	
+1688	Topspin	29	
+1689	Topspin	37	
+1690	Topspin	47	
+1691	Thinking Cap	100	
+1692	Lacuni Cowl	100	
+1693	Goblin's Skull	100	
+1694	Destroying Angel	2	
+1695	Destroying Angel	11	
+1696	Destroying Angel	20	
+1697	Destroying Angel	29	
+1698	Destroying Angel	37	
+1699	Destroying Angel	46	
+1700	Witch Drum	100	
+1701	The Flying Saucer	100	
+1702	Stone Guardian	100	
+1703	Narlant Dream	4	
+1704	Narlant Dream	14	
+1705	Narlant Dream	23	
+1706	Narlant Dream	32	
+1707	Narlant Dream	42	
+1708	Narlant Dream	50	
+1709	The Foculus	100	
+1710	The Belladonna	100	
+1711	Glowing Vertigo	100	
+1712	Titan's Burden	11	
+1713	Titan's Burden	20	
+1714	Titan's Burden	29	
+1715	Titan's Burden	38	
+1716	Titan's Burden	47	
+1717	Titan's Burden	55	
+1718	Helepolis	100	
+1719	Asgardsreia	100	
+1720	Devastator	100	
+1721	Warmonger	5	
+1722	Warmonger	14	
+1723	Warmonger	23	
+1724	Warmonger	33	
+1725	Warmonger	42	
+1726	Warmonger	51	
+1727	Gheed's Pigsticker	100	
+1728	Firekeeper	100	
+1729	Gladiator's Rage	100	
+1730	Ravenbeak	1	
+1731	Ravenbeak	9	
+1732	Ravenbeak	18	
+1733	Ravenbeak	27	
+1734	Ravenbeak	36	
+1735	Ravenbeak	46	
+1736	Silverstrike	100	
+1737	Void Seeker	100	
+1738	Viperfork	100	
+1739	Fangspear	7	
+1740	Fangspear	16	
+1741	Fangspear	25	
+1742	Fangspear	34	
+1743	Fangspear	44	
+1744	Fangspear	53	
+1745	Darkspite	100	
+1746	Silambam	100	
+1747	Divine Mandible	100	
+1748	Greiz' Slapjack	3	
+1749	Greiz' Slapjack	12	
+1750	Greiz' Slapjack	21	
+1751	Greiz' Slapjack	31	
+1752	Greiz' Slapjack	40	
+1753	Greiz' Slapjack	49	
+1754	Skullbat	100	
+1755	Crushskull's Crusher	100	
+1756	The Dark Descent	100	
+1757	Cloudladder	7	
+1758	Cloudladder	16	
+1759	Cloudladder	24	
+1760	Cloudladder	33	
+1761	Cloudladder	42	
+1762	Cloudladder	51	
+1763	Akarat's Crucifix	100	
+1764	Wheel of the Seasons	100	
+1765	Grim Icon	100	
+1766	Compass of Souls	11	
+1767	Compass of Souls	20	
+1768	Compass of Souls	30	
+1769	Compass of Souls	41	
+1770	Compass of Souls	51	
+1771	Compass of Souls	59	
+1772	Mente Scura	100	
+1773	Varna's Wraithblade	100	
+1774	Dark Talon	100	
+1775	Grimspirit	10	
+1776	Grimspirit	19	
+1777	Grimspirit	28	
+1778	Grimspirit	37	
+1779	Grimspirit	46	
+1780	Grimspirit	54	
+1781	Nature's Orphan	100	
+1782	Yee Naaldlooshii	100	
+1783	Ranger's Disguise	100	
+1784	Jitan's Kamon	6	
+1785	Jitan's Kamon	15	
+1786	Jitan's Kamon	23	
+1787	Jitan's Kamon	32	
+1788	Jitan's Kamon	41	
+1789	Jitan's Kamon	49	
+1790	Candlewake	100	
+1791	Splinter Mail	100	
+1792	Mage's Denial	100	
+1793	Flowerspring	6	
+1794	Flowerspring	16	
+1795	Flowerspring	25	
+1796	Flowerspring	34	
+1797	Flowerspring	43	
+1798	Flowerspring	52	
+1799	Sky Sweeper	100	
+1800	Horned Hunter	100	
+1801	Elemental Fury	100	bow_elefury
+1802	Starkiller	9	
+1803	Starkiller	18	
+1804	Starkiller	29	
+1805	Starkiller	38	
+1806	Starkiller	48	
+1807	Starkiller	55	
+1808	Witchbane	100	
+1809	Bucking Bertha	100	
+1810	Black Doom	100	
+1811	Carmen Arvale	3	
+1812	Carmen Arvale	12	
+1813	Carmen Arvale	21	
+1814	Carmen Arvale	29	
+1815	Carmen Arvale	38	
+1816	Carmen Arvale	47	
+1817	Razorspine	100	
+1818	Spellbreaker	100	
+1819	Shedding Skin	100	
+1820	Grail of Tears	2	
+1821	Grail of Tears	11	
+1822	Grail of Tears	20	
+1823	Grail of Tears	29	
+1824	Grail of Tears	37	
+1825	Grail of Tears	46	
+1826	Bullseye	100	
+1827	The Book of Kalen	100	invbbb
+1828	Mark of the Que-Hegan	100	
+1829	The Angiris Pike	11	
+1830	The Angiris Pike	22	
+1831	The Angiris Pike	31	
+1832	The Angiris Pike	41	
+1833	The Angiris Pike	51	
+1834	The Angiris Pike	60	
+1835	Black Sun Spear	100	
+1836	Apocalypta	100	
+1837	Jaguar's Grasp	100	
+1838	Sterrenvogel	1	
+1839	Sterrenvogel	8	
+1840	Sterrenvogel	17	
+1841	Sterrenvogel	27	
+1842	Sterrenvogel	36	
+1843	Sterrenvogel	45	
+1844	Stormbreaker	100	
+1845	The Whistling Death	100	
+1846	Gimmershred	100	
+1847	Death Touch	1	
+1848	Death Touch	8	
+1849	Death Touch	18	
+1850	Death Touch	27	
+1851	Death Touch	36	
+1852	Death Touch	45	
+1853	Meshif's Iron Parrot	100	
+1854	Starmaiden	100	
+1855	Dark Nemesis	100	
+1856	Dwaallicht	10	
+1857	Dwaallicht	20	
+1858	Dwaallicht	29	
+1859	Dwaallicht	38	
+1860	Dwaallicht	47	
+1861	Dwaallicht	55	
+1862	Windwall	100	
+1863	Heartseeker	100	
+1864	Gargoyle's Bite	100	
+1865	Auriel's Halo	8	
+1866	Auriel's Halo	16	
+1867	Auriel's Halo	25	
+1868	Auriel's Halo	34	
+1869	Auriel's Halo	43	
+1870	Auriel's Halo	51	
+1871	Royal Circlet	100	
+1872	Maiden Mother Crown	100	
+1873	Rathma's Phantom	100	
+1874	Black Sheep Wall	6	
+1875	Black Sheep Wall	15	
+1876	Black Sheep Wall	24	
+1877	Black Sheep Wall	32	
+1878	Black Sheep Wall	41	
+1879	Black Sheep Wall	50	
+1880	Hexward	100	
+1881	Fiddlesticks	100	
+1882	Eternal Bodyguard	100	
+1883	The Ivory Tower	7	
+1884	The Ivory Tower	16	
+1885	The Ivory Tower	25	
+1886	The Ivory Tower	34	
+1887	The Ivory Tower	42	
+1888	The Ivory Tower	51	
+1889	Shield of a Thousand Stars	100	
+1890	Judge's Sin	100	
+1891	Mountain King	100	
+1892	Corpsefling	12	
+1893	Corpsefling	21	
+1894	Corpsefling	31	
+1895	Corpsefling	40	
+1896	Corpsefling	49	
+1897	Corpsefling	58	
+1898	Nymyr's Shadow	100	
+1899	Washi Bai Ron	100	
+1900	Phoenix Feather	100	
+1901	Sea Summoner	3	
+1902	Sea Summoner	12	
+1903	Sea Summoner	21	
+1904	Sea Summoner	30	
+1905	Sea Summoner	40	
+1906	Sea Summoner	49	
+1907	The Retiarius	100	
+1908	Stormcaller	100	
+1909	Steel Pillar	100	
+1910	The Overlord	1	
+1911	The Overlord	9	
+1912	The Overlord	19	
+1913	The Overlord	28	
+1914	The Overlord	37	
+1915	The Overlord	46	
+1916	Darkfeast	100	
+1917	Two-Face Blade	100	
+1918	Demon Regalia	100	
+1919	Darkflesh	5	
+1920	Darkflesh	14	
+1921	Darkflesh	23	
+1922	Darkflesh	32	
+1923	Darkflesh	40	
+1924	Darkflesh	49	
+1925	Feardrinker	100	
+1926	Mudpool	100	
+1927	Sentry of Death	100	
+1928	Bergkaiser	7	
+1929	Bergkaiser	17	
+1930	Bergkaiser	27	
+1931	Bergkaiser	38	
+1932	Bergkaiser	48	
+1933	Bergkaiser	58	
+1934	Dreadarc	100	
+1935	Ord Rekar's Testament	100	
+1936	Dragonclaw	100	
+1937	Salamander's Breath	9	
+1938	Salamander's Breath	18	
+1939	Salamander's Breath	29	
+1940	Salamander's Breath	38	
+1941	Salamander's Breath	48	
+1942	Salamander's Breath	55	
+1943	Azgar's Mark	100	
+1944	The Caduceus	100	
+1945	Dragonfly	100	
+1946	Fleshmender	3	
+1947	Fleshmender	13	
+1948	Fleshmender	22	
+1949	Fleshmender	31	
+1950	Fleshmender	41	
+1951	Fleshmender	50	
+1952	Felsteel	100	
+1953	The Compensator	1	
+1954	The Compensator	9	
+1955	The Compensator	18	
+1956	The Compensator	27	
+1957	The Compensator	37	
+1958	The Compensator	46	
+1959	Vizharan	100	
+1960	Slavemaster	100	
+1961	Fury of the Storm	100	
+1962	Rainbowcleave	11	
+1963	Rainbowcleave	20	
+1964	Rainbowcleave	29	
+1965	Rainbowcleave	39	
+1966	Rainbowcleave	48	
+1967	Rainbowcleave	55	
+1968	Nimmenjuushin	100	
+1969	Fleshmender	100	
+1970	Cranebeak	100	
+1971	Archon's Wrath	5	
+1972	Archon's Wrath	14	
+1973	Archon's Wrath	24	
+1974	Archon's Wrath	33	
+1975	Archon's Wrath	42	
+1976	Archon's Wrath	51	
+1977	Hammer of Ghrab Thaar	100	
+1978	Brainsplatter	100	
+1979	Forge Fire	100	
+1980	The Warped Blade	12	
+1981	The Warped Blade	23	
+1982	The Warped Blade	33	
+1983	The Warped Blade	42	
+1984	The Warped Blade	52	
+1985	The Warped Blade	62	
+1986	Starhawk	100	
+1987	Dryhten Ealdor	100	
+1988	Steel Punisher	100	warpbbl
+1989	Dreamswayer	7	
+1990	Dreamswayer	17	
+1991	Dreamswayer	26	
+1992	Dreamswayer	35	
+1993	Dreamswayer	44	
+1994	Dreamswayer	54	
+1995	Thunderbane	100	
+1996	Firequeen	100	
+1997	Chaosphere	100	
+1998	Staff of Roses	10	
+1999	Staff of Roses	19	
+2000	Staff of Roses	29	
+2001	Staff of Roses	38	
+2002	Staff of Roses	47	
+2003	Staff of Roses	54	
+2004	Spire of Kehjan	100	
+2005	Spire of Sarnakyle	100	
+2006	Naj's Puzzler	100	
+2007	Lachdanan's Avenger	12	
+2008	Lachdanan's Avenger	21	
+2009	Lachdanan's Avenger	30	
+2010	Lachdanan's Avenger	40	
+2011	Lachdanan's Avenger	49	
+2012	Lachdanan's Avenger	57	
+2013	Aurumvorax	100	
+2014	Legion's Name	100	
+2015	Eternal Vigil	100	
+2016	Big Bad	3	
+2017	Big Bad	11	
+2018	Big Bad	20	
+2019	Big Bad	29	
+2020	Big Bad	37	
+2021	Big Bad	47	
+2022	Coldhunger	100	
+2023	Linarian's Furs	100	
+2024	Predator's Trophy	100	
+2025	Spellgrip	2	
+2026	Spellgrip	11	
+2027	Spellgrip	20	
+2028	Spellgrip	30	
+2029	Spellgrip	39	
+2030	Spellgrip	48	
+2031	Al Dhih	100	
+2032	Banecat	100	
+2033	Dragonfish	100	
+2034	Drake Cigar	3	
+2035	Drake Cigar	12	
+2036	Drake Cigar	21	
+2037	Drake Cigar	31	
+2038	Drake Cigar	40	
+2039	Drake Cigar	49	
+2040	Manastorm	100	
+2041	Zakarwa's Betrayal	100	
+2042	Heart of Fire	100	
+2043	Shadowchild	4	
+2044	Shadowchild	13	
+2045	Shadowchild	21	
+2046	Shadowchild	30	
+2047	Shadowchild	39	
+2048	Shadowchild	48	
+2049	Demonlure	100	
+2050	Gregus Mazi's Nkisi	100	
+2051	Dark Guardian	100	
+2052	Fren Slairea	30	
+2053	Pandemonium	50	
+2054	Scarab of Death	60	
+2055	Hangman	1	
+2056	Teganze Pendant	60	
+2057	Felblood	20	
+2058	Angel Heart	40	
+2059	Athulua's Oracle	60	
+2060	The Dreamcatcher	80	
+2061	Witchmoon	100	
+2062	Niradyahk	80	
+2063	Lamen of the Archbishop	100	
+2064	Beads of the Snake Queen	100	
+2065	Evenstar	100	
+2066	Vizjerei's Necklace	100	
+2067	Dyers Eve	100	
+2068	In For The Kill	100	
+2069	Death Ward	120	
+2070	Klaatu Barada Nikto	120	
+2071	Black Dwarf	120	
+2072	Gallowlaugh	120	
+2073	Quov Tsin's Talisman	120	superammy
+2074	Locust Hive	1	
+2075	Hanabigami	60	
+2076	Cindercone	40	
+2077	Bucket of Love	80	
+2078	Bag of Tricks	100	
+2079	Arrowsider	100	
+2080	Kingsport's Signals	120	
+2081	Test Tube	1	
+2082	The Tranquilizer	60	
+2083	Larzuk's Bandolier	40	
+2084	Plague Gland	80	
+2085	Lammergeier	100	
+2086	Devil's Dance	100	
+2087	Hammerspace	120	
+2088	Farsight Globe	80	
+2089	Phase Crystal	100	
+2090	Inarius' Rock	100	
+2091	Kekeke	100	
+2092	Xepera Xeper Xeperu	120	
+2093	Eye of the Storm	20	
+2094	The Boulder	1	
+2095	Borgin's Vigil	0	
+2096	Katamari	30	
+2097	Arkenstone	100	
+2098	Zann Esu's Stone	100	
+2099	Demonstone Blood	40	
+2100	Asheara's Cateye	100	
+2101	Suicide Note	100	
+2102	Zakarum Stoning Rock	60	
+2103	Dragon's Egg	100	
+2104	Heavenstone	100	
+2105	Ouroboros	120	
+2106	Der Nebelring	120	
+2107	Sigil of Tur Dulra	120	
+2108	Xorine's Ring	80	
+2109	The Seal of Kharos	60	
+2110	Ring of Disengagement	1	
+2111	Self-Referential Unlisted Secret Item	80	
+2112	The Only Item That Will Never Be Duped	80	
+2113	Bloodbond	50	
+2114	Ring of Truth	20	
+2115	QQ	0	
+2116	Ras Algethi	100	
+2117	Adrenaline Rush	100	
+2118	Empyrean Band	40	
+2119	Seal of the Nephalem Kings	120	
+2120	Bad Mood Ring	100	
+2121	The Idiot Ball	60	
+2122	Myokai's Path	30	
+2123	Ballantine's 1827	100	
+2124	Orc Torque Torc	100	
+2125	Elemental Band	100	
+2126	Witchcraft	100	
+2127	Ripstar	60	
+2128	Earth Rouser	100	
+2129	Cornerstone of the World	100	
+2130	Cornerstone of the World	100	
+2131	Cornerstone of the World	100	
+2132	Cornerstone of the World	100	
+2133	Cornerstone of the World	100	
+2134	Cornerstone of the World	100	
+2135	Cornerstone of the World	100	
+2136	Cornerstone of the World	100	
+2137	Cornerstone of the World	100	
+2138	Cornerstone of the World	100	
+2139	Cornerstone of the World	100	
+2140	Cornerstone of the World	100	
+2141	Cornerstone of the World	100	
+2142	Cornerstone of the World	100	
+2143	Cornerstone of the World	100	
+2144	Cornerstone of the World	100	
+2145	Cornerstone of the World	100	
+2146	Cornerstone of the World	100	
+2147	Cornerstone of the World	100	
+2148	Cornerstone of the World	100	
+2149	Cornerstone of the World	100	
+2150	Cornerstone of the World	100	
+2151	Cornerstone of the World	100	
+2152	Cornerstone of the World	100	
+2153	Cornerstone of the World	100	
+2154	Cornerstone of the World	100	
+2155	Cornerstone of the World	100	
+2156	Cornerstone of the World	100	
+2157	Cornerstone of the World	100	
+2158	Cornerstone of the World	100	
+2159	Cornerstone of the World	100	
+2160	Cornerstone of the World	100	
+2161	Cornerstone of the World	100	
+2162	Cornerstone of the World	100	
+2163	Cornerstone of the World	100	
+2164	Cornerstone of the World	100	
+2165	Cornerstone of the World	100	
+2166	Cornerstone of the World	100	
+2167	Cornerstone of the World	100	
+2168	Cornerstone of the World	100	
+2169	Cornerstone of the World	100	
+2170	Cornerstone of the World	100	
+2171	Cornerstone of the World	100	
+2172	Cornerstone of the World	100	
+2173	Cornerstone of the World	100	
+2174	Cornerstone of the World	100	
+2175	Cornerstone of the World	100	
+2176	Cornerstone of the World	100	
+2177	Cornerstone of the World	100	
+2178	Cornerstone of the World	100	
+2179	Cornerstone of the World	100	
+2180	Cornerstone of the World	100	
+2181	Cornerstone of the World	100	
+2182	Cornerstone of the World	100	
+2183	Cornerstone of the World	100	
+2184	Cornerstone of the World	100	
+2185	Cornerstone of the World	100	
+2186	Cornerstone of the World	100	
+2187	Cornerstone of the World	100	
+2188	Cornerstone of the World	100	
+2189	Cornerstone of the World	100	
+2190	Cornerstone of the World	100	
+2191	Cornerstone of the World	100	
+2192	Cornerstone of the World	100	
+2193	Cornerstone of the World	100	
+2194	Cornerstone of the World	100	
+2195	Cornerstone of the World	100	
+2196	Cornerstone of the World	100	
+2197	Cornerstone of the World	100	
+2198	Cornerstone of the World	100	
+2199	Cornerstone of the World	100	
+2200	Cornerstone of the World	100	
+2201	Cornerstone of the World	100	
+2202	Cornerstone of the World	100	
+2203	Cornerstone of the World	100	
+2204	Cornerstone of the World	100	
+2205	Cornerstone of the World	100	
+2206	Cornerstone of the World	100	
+2207	Cornerstone of the World	100	
+2208	Cornerstone of the World	100	
+2209	Cornerstone of the World	100	
+2210	Cornerstone of the World	100	
+2211	Cornerstone of the World	100	
+2212	Cornerstone of the World	100	
+2213	Cornerstone of the World	100	
+2214	Cornerstone of the World	100	
+2215	Cornerstone of the World	100	
+2216	Cornerstone of the World	100	
+2217	Cornerstone of the World	100	
+2218	Cornerstone of the World	100	
+2219	Cornerstone of the World	100	
+2220	Cornerstone of the World	100	
+2221	Cornerstone of the World	100	
+2222	Cornerstone of the World	100	
+2223	Cornerstone of the World	100	
+2224	Cornerstone of the World	100	
+2225	Cornerstone of the World	100	
+2226	Cornerstone of the World	100	
+2227	Cornerstone of the World	100	
+2228	Cornerstone of the World	100	
+2229	Cornerstone of the World	100	
+2230	Cornerstone of the World	100	
+2231	Cornerstone of the World	100	
+2232	Cornerstone of the World	100	
+2233	Cornerstone of the World	100	
+2234	Cornerstone of the World	100	
+2235	Cornerstone of the World	100	
+2236	Cornerstone of the World	100	
+2237	Cornerstone of the World	100	
+2238	Cornerstone of the World	100	
+2239	Cornerstone of the World	100	
+2240	Cornerstone of the World	100	
+2241	Cornerstone of the World	100	
+2242	Cornerstone of the World	100	
+2243	Cornerstone of the World	100	
+2244	Cornerstone of the World	100	
+2245	Cornerstone of the World	100	
+2246	Cornerstone of the World	100	
+2247	Cornerstone of the World	100	
+2248	Cornerstone of the World	100	
+2249	Cornerstone of the World	100	
+2250	Cornerstone of the World	100	
+2251	Cornerstone of the World	100	
+2252	Cornerstone of the World	100	
+2253	Cornerstone of the World	100	
+2254	Cornerstone of the World	100	
+2255	Cornerstone of the World	100	
+2256	Cornerstone of the World	100	
+2257	Cornerstone of the World	100	
+2258	Cornerstone of the World	100	
+2259	Cornerstone of the World	100	
 2260	Cornerstone of the World	100	
 2261	Cornerstone of the World	100	
 2262	Cornerstone of the World	100	
@@ -2434,224 +2434,55 @@
 2432	Cornerstone of the World	100	
 2433	Cornerstone of the World	100	
 2434	Cornerstone of the World	100	
-2435	Wishmaster	0	
-2436	Ring of Mourning	100	
-2437	Black Hand Sigil	100	
-2438	Akarat's Nails	100	
-2439	The Tesseract	100	
-2440	Khanduran Royal Pendant	100	
-2441	Locket of Dreams	100	
-2442	Noob Loop	0	
-2443	Jerhyn's Tawiz	0	
-2444	Aerial's Skull	0	
-2445	Bloodbond	50	
-2446	Pandemonium	50	
-2447	Crown of the Rakkas	100	
-2448	Borgin's Vigil	0	
-2449	The Gauntlet	100	
-2450	Everchase	100	
-2451	Wedding Dress of the Zann	12	
-2452	Wedding Dress of the Zann	21	
-2453	Wedding Dress of the Zann	31	
-2454	Wedding Dress of the Zann	39	
-2455	Wedding Dress of the Zann	48	
-2456	Wedding Dress of the Zann	55	
-2457	Wyand's Fervor	100	
-2458	Oreichalcos	4	
-2459	Oreichalcos	13	
-2460	Oreichalcos	21	
-2461	Oreichalcos	30	
-2462	Oreichalcos	39	
-2463	Oreichalcos	48	
-2464	Grimspirit	10	
-2465	Grimspirit	19	
-2466	Grimspirit	28	
-2467	Grimspirit	37	
-2468	Grimspirit	46	
-2469	Grimspirit	54	
-2470	Candlewake	100	
-2471	Xepera Xeper Xeperu	120	
-2472	Sarandeshi Hellcaller	100	
-2473	Khazra Plate	100	
-2474	Jere Harash's Ghostwing	100	
-2475	Seven Heads of Tathamet	100	
-2476	Washi Bai Ron	100	
-2477	Crystalline Flame Medallion	120	
-2478	Digitron Disk	100	
-2479	Tentacles of Terror	100	
-2480	Elemental Fury	100	bow_elefury
-2481	Hovering Dame	100	naginagi
-2482	The King of Ents	100	labrryss
-2483	Divine Dart	100	
-2484	Ranger's Path	100	
-2485	Panthera's Bite	100	
-2486	Thono's Tentacle	100	
-2487	Screen of Viz-Jaq'Taar	100	
-2488	Trollskull	100	trollskullz
-2489	Hunter's Ravage	100	
-2490	Dragonfly	100	
-2491	Ghoul's Soul	100	
-2492	Horadrim's Fist	100	
-2493	Noctule	100	
-2494	Dragonfish	100	
-2495	Thunderbird	100	
-2496	Firebird	100	
-2497	Killer's Omen	100	
-2498	Scream of Nature	100	
-2499	Gladiator's Rage	100	
-2500	Berserrker	100	
-2501	The Might of the Ancients	100	
-2502	Colliding Fury	100	
-2503	Leoric's Hand	100	
-2504	Bovine Cleaver	100	
-2505	Falcon Swoop	100	
-2506	The Butcher's Cleaver	100	
-2507	Dragonclaw	100	
-2508	Polar Vortex	100	
-2509	Wrath of Nature	100	
-2510	Mage's Pulse	100	flammeen
-2511	Prowler's Slash	100	
-2512	Reaper's Hand	100	
-2513	Shadowfiend	100	
-2514	Satan's Void	100	
-2515	Dark Talon	100	
-2516	The Mangling Sting	100	
-2517	Advent of Hatred	100	
-2518	Black Doom	100	
-2519	Phoenix Feather	100	
-2520	Fury of the Storm	100	
-2521	Heart of Fire	100	
-2522	Claws of Frost	100	
-2523	Vheran's Experiments	100	grimmw
-2524	Napalm Death	100	
-2525	Spirit of Light	100	
-2526	Morning Fury	100	
-2527	Blackened	100	palhammer
-2528	Venom Sting	100	
-2529	Jaguar's Grasp	100	
-2530	Mistress of Pain	100	
-2531	Glowing Vertigo	100	
-2532	Tormentor	100	
-2533	Holy Wars	100	
-2534	Steel Punisher	100	warpbbl
-2535	Warrior's Robe	100	
-2536	Coat of Darkness	100	
-2537	Shedding Skin	100	
-2538	Scales of the Drake	100	
-2539	Hide of the Basilisk	100	
-2540	Kerrigan's Chest	100	
-2541	Mage's Denial	100	
-2542	Wolverine Skin	100	
-2543	Segnitia	100	
-2544	Auriel's Robe	100	
-2545	Strength Beyond Strength	100	
-2546	Vizjerei's Ritual	100	
-2547	Mercenary Bomb	100	mercbombb
-2548	Pestilence	100	
-2549	Goblin's Skull	100	
-2550	Cat's Pounce	100	
-2551	Gehenna	100	
-2552	Naga's Reign	100	
-2553	Sepultura	100	
-2554	Arcane Protection	100	
-2555	Warlock's Brilliance	100	
-2556	Rathma's Phantom	100	
-2557	Rogue's Miracle	100	
-2558	Gematria	100	
-2559	Polar Breath	100	
-2560	Stone Guardian	100	
-2561	Wizard's Wall	100	
-2562	Linarian's Legacy	100	
-2563	Ward of Ransim	100	
-2564	Rainbow Fury	100	
-2565	Grim Icon	100	
-2566	Lightning Enchanted	100	
-2567	Lunar Eclipse	100	
-2568	Dementia	100	
-2569	Black Void	100	
-2570	Champion of the Truine	100	
-2571	Demonic Touch	100	
-2572	Gulag's Frenzy	100	
-2573	Conqueror's Mercy	100	
-2574	Blind Anger	100	
-2575	Centuria Insectorum	100	gauntletsuu
-2576	Wizard's Path	100	
-2577	Titan's Steps	100	
-2578	Angel's Wrath	100	
-2579	Steel Terror	100	
-2580	Knight's Grace	100	greavessu3
-2581	Skull of Lioness	100	
-2582	Rainbow Maiden	100	
-2583	Corona Aureola	100	
-2584	Devastator	100	
-2585	Disc of Blood	100	
-2586	Golden Chariot	100	
-2587	Silver Scorpion	100	
-2588	Soul Harvest	100	
-2589	Eternal Bodyguard	100	
-2590	Zayl's Temptation	100	
-2591	Gathering Storm	100	
-2592	Shaman's Grace	100	
-2593	Satan's Dark Delight	100	
-2594	Bear Grin	100	
-2595	Wolf Teeth	100	
-2596	Shaggy Beast	100	
-2597	Albrecht's Slumber	100	
-2598	Lilith's Legion	100	
-2599	Predator's Trophy	100	
-2600	Wisdom of Scosglen	100	
-2601	Forest Defender	100	
-2602	Sky Spirit	100	
-2603	Ranger's Disguise	100	
-2604	Eerie Flash	100	
-2605	Dark Guardian	100	
-2606	Sentry of Death	100	
-2607	Blessed Wrath	100	
-2608	Fauztin's Shadow	100	
-2609	Mark of the Que-Hegan	100	
-2610	Phoenix Ash	100	
-2611	Holy Saviour	100	
-2612	The Vanquisher	100	
-2613	Sculptor of Pain	100	
-2614	Wizard's Cloak	100	
-2615	Adamantine Guard	100	
-2616	Frozen Heart	100	
-2617	Mage's Whirlpool	100	
-2618	Atanna Khan's Dress	100	
-2619	Sahuagin Skin	100	
-2620	Mountain King	100	
-2621	Deadmaster	100	
-2622	Grim Silhouette	100	
-2623	Sunbeam	100	
-2624	Quov Tsin's Talisman [DISABLED/LEGACY]	666	superammy
-2625	Dyers Eve	100	
-2626	Vizjerei's Necklace	100	
-2627	In For The Kill	100	
-2628	Adrenaline Rush	100	
-2629	Elemental Band	100	
-2630	Witchcraft	100	
-2631	Ballantine's 1827	100	
-2632	Devil's Dance	100	
-2633	Arrowsider	100	
-2634	Suicide Note	100	
-2635	Zann Esu's Stone	100	
-2636	Inarius' Rock	100	
-2637	Soul of Kabraxis	120	
-2638	\red;Welcome! Median XL: Ultimative v4\blue;	666	
-2639	SuperTestItamz	1	
-2640	\gold;Six Angel Bag	60	
-2641	Spirit of Damnation	120	
-2642	Sunstone of Fire (Upgraded)	50	
-2643	Sunstone of Thunder (Upgraded)	50	
-2644	Sunstone of Ice (Upgraded)	50	
-2645	Sunstone of the Elements	666	
-2646	\gold;Uldyssian's Sword	120	
-2647	\red;Valkyrie's Prime	120	
-2648	\gold;Sunstone of the Elements	50	
-2649	\red;Welcome! Median XL: Ultimative v4\blue;	0	
-2650	Wormhole of Deadly Doom	666	
-2651	\gold;Harkon Crystal	666	
-2652	\gold;Diablo's Essence	120	
-2653	Quov Tsin's Talisman	120	superammy
-2654	Rodeo's Tramplers	100	
-2655	Creator's Hand	120	
+2435	Cornerstone of the World	100	
+2436	Cornerstone of the World	100	
+2437	Cornerstone of the World	100	
+2438	Cornerstone of the World	100	
+2439	Cornerstone of the World	100	
+2440	Cornerstone of the World	100	
+2441	Cornerstone of the World	100	
+2442	Cornerstone of the World	100	
+2443	Cornerstone of the World	100	
+2444	Cornerstone of the World	100	
+2445	Cornerstone of the World	100	
+2446	Cornerstone of the World	100	
+2447	Cornerstone of the World	100	
+2448	Cornerstone of the World	100	
+2449	Cornerstone of the World	100	
+2450	Cornerstone of the World	100	
+2451	Cornerstone of the World	100	
+2452	Cornerstone of the World	100	
+2453	Cornerstone of the World	100	
+2454	Cornerstone of the World	100	
+2455	Cornerstone of the World	100	
+2456	Cornerstone of the World	100	
+2457	Cornerstone of the World	100	
+2458	Cornerstone of the World	100	
+2459	Cornerstone of the World	100	
+2460	Cornerstone of the World	100	
+2461	Cornerstone of the World	100	
+2462	Cornerstone of the World	100	
+2463	Cornerstone of the World	100	
+2464	Cornerstone of the World	100	
+2465	Cornerstone of the World	100	
+2466	Cornerstone of the World	100	
+2467	Cornerstone of the World	100	
+2468	Cornerstone of the World	100	
+2469	Cornerstone of the World	100	
+2470	Cornerstone of the World	100	
+2471	Cornerstone of the World	100	
+2472	Cornerstone of the World	100	
+2473	Cornerstone of the World	100	
+2474	Cornerstone of the World	100	
+2475	Cornerstone of the World	100	
+2476	Cornerstone of the World	100	
+2477	Cornerstone of the World	100	
+2478	Cornerstone of the World	100	
+2479	\red;Valkyrie's Prime	120	
+2480	Trader's Chest	120	
+2481	The Sleep	120	
+2482	\orange;Instructions\n\gold;Level Challenge 0	1	
+2483	\gold;Harkon Crystal	666	
+2484	\gold;Harkon Crystal	1	
+2485	The Ancient Repositories	120	
+2486	Brachyceran's Token	120	

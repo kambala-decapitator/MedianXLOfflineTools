@@ -1,11 +1,9 @@
 #ifndef MEDIANXLOFFLINETOOLS_H
 #define MEDIANXLOFFLINETOOLS_H
 
-#include "ui_medianxlofflinetools.h"
-
 #include "enums.h"
-#include "resurrectpenaltydialog.h"
 #include "structs.h"
+#include "resurrectpenaltydialog.h"
 
 #include <QMainWindow>
 
@@ -13,13 +11,24 @@
 #include <QPointer>
 
 
-class QFile;
-class QNetworkAccessManager;
-class QNetworkReply;
-
 class ItemsViewerDialog;
 class FindItemsDialog;
 class ExperienceIndicatorGroupBox;
+
+namespace Ui { class MedianXLOfflineToolsClass; }
+
+class QSpinBox;
+class QLineEdit;
+class QLabel;
+class QCheckBox;
+class QGroupBox;
+class QActionGroup;
+class QTableWidgetItem;
+
+class QFile;
+
+class QNetworkAccessManager;
+class QNetworkReply;
 
 class MedianXLOfflineTools : public QMainWindow
 {
@@ -32,7 +41,7 @@ public:
     static const int kStatPointsPerLevel, kSkillPointsPerLevel;
 
     MedianXLOfflineTools(const QString &cmdPath = QString(), QWidget *parent = 0, Qt::WFlags flags = 0);
-    virtual ~MedianXLOfflineTools() {}
+    virtual ~MedianXLOfflineTools() { delete ui; }
 
 public slots:
     bool loadFile(const QString &charPath);
@@ -77,7 +86,7 @@ private slots:
     void giveCube();
 
     // export
-    void getSkillPlan();
+    void showSkillPlan();
 
     // options
     void backupSettingTriggered(bool checked);
@@ -89,7 +98,7 @@ private slots:
 
 private:
     // UI
-    Ui::MedianXLOfflineToolsClass ui;
+    Ui::MedianXLOfflineToolsClass *ui;
     QMap<Enums::CharacterStats::StatisticEnum, QSpinBox  *> _spinBoxesStatsMap;
     QMap<Enums::CharacterStats::StatisticEnum, QLineEdit *> _lineEditsStatsMap;
     QLabel *_charPathLabel;

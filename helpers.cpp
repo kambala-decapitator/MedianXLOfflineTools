@@ -3,6 +3,8 @@
 #include "itemdatabase.h"
 #include "itemparser.h"
 
+#include <QTreeWidgetItem>
+
 #include <QString>
 #include <QStack>
 
@@ -86,7 +88,12 @@ QString htmlStringFromDiabloColorString(const QString &name, ColorsManager::Colo
                 reversedLines.append(kHtmlLineBreak);
         }
         if (!reversedLines.isEmpty())
-            colorStringsStack.push(coloredText(reversedLines, index));
+        {
+            QString newText = coloredText(reversedLines, index);
+            if (!i && colorStringsIndeces.at(i).second > 0) // quick fix for '+1 to \red;Ultimative\blue;'
+                newText.prepend(text.left(colorStringsIndeces.at(i).second));
+            colorStringsStack.push(newText);
+        }
     }
 
     // empty stack
@@ -94,6 +101,39 @@ QString htmlStringFromDiabloColorString(const QString &name, ColorsManager::Colo
     while (!colorStringsStack.isEmpty())
         result += colorStringsStack.pop();
     return result;
+}
+
+QList<QTreeWidgetItem *> treeItemsForItems(const ItemsList &items)
+{
+    QList<QTreeWidgetItem *> treeItems;
+    foreach (ItemInfo *item, items)
+    {
+        QString htmlName = ItemDataBase::completeItemName(item, true);
+        QStringList list;
+        QList<QColor> colors;
+
+        QRegExp rx("<font color = \"(.+)\">(.+)</font>");
+        rx.setMinimal(true);
+        int matchIndex = 0;
+        while ((matchIndex = rx.indexIn(htmlName, matchIndex)) != -1)
+        {
+            matchIndex += rx.cap().length();
+            colors.prepend(rx.cap(1));
+            list.prepend(rx.cap(2).replace(kHtmlLineBreak, " ", Qt::CaseInsensitive).trimmed());
+        }
+
+        QTreeWidgetItem *childItem = new QTreeWidgetItem(list);
+        if (item->plugyPage)
+        {
+            static const struct { const char *source; const char *comment; } kPageFormat = QT_TRANSLATE_NOOP3("ItemsTree", "p. %1", "page abbreviation");
+            childItem->setText(0, QString("[%1] %2").arg(qApp->translate("ItemsTree", kPageFormat.source, kPageFormat.comment).arg(item->plugyPage), childItem->text(0)));
+            //childItem->setText(0, QString("[%1] %2").arg(tr("p. %1", "page abbreviation").arg(item->plugyPage), childItem->text(0)));
+        }
+        for (int j = 0; j < list.size(); ++j)
+            childItem->setForeground(j, colors.at(j));
+        treeItems += childItem;
+    }
+    return treeItems;
 }
 
 bool isUltimative()

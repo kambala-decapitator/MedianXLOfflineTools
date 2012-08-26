@@ -1,4 +1,5 @@
-#include "qd2charrenamer.h"
+#include    "qd2charrenamer.h"
+#include "ui_qd2charrenamer.h"
 #include "colorsmanager.hpp"
 #include "helpers.h"
 
@@ -21,21 +22,21 @@ void QD2CharRenamer::updateNamePreview(QTextEdit *previewTextEdit, const QString
 
 // ctor
 
-QD2CharRenamer::QD2CharRenamer(const QString &originalName, bool shouldWarn, QWidget *parent) : QDialog(parent), _originalCharName(originalName), _shouldWarn(shouldWarn),
+QD2CharRenamer::QD2CharRenamer(const QString &originalName, bool shouldWarn, QWidget *parent) : QDialog(parent), ui(new Ui::QD2CharRenamerClass), _originalCharName(originalName), _shouldWarn(shouldWarn),
     colorNames(QStringList() << tr("white") << tr("red") << tr("green") << tr("blue") << tr("gold") << tr("dark gray") << tr("tan") << tr("orange") << tr("yellow") << "foo" << tr("violet"))
 {
-    ui.setupUi(this);
+    ui->setupUi(this);
     setWindowFlags(windowFlags() & ~Qt::WindowContextHelpButtonHint);
     setFixedSize(size());
 
 
     createColorMenu();
-    ui.charNameLineEdit->setMaxLength(kMaxNameLength);
+    ui->charNameLineEdit->setMaxLength(kMaxNameLength);
 
-    connect(ui.charNameLineEdit, SIGNAL(textChanged(const QString &)), SLOT(nameChanged(const QString &)));
-    connect(ui.buttonBox, SIGNAL(accepted()), SLOT(saveName()));
+    connect(ui->charNameLineEdit, SIGNAL(textChanged(const QString &)), SLOT(nameChanged(const QString &)));
+    connect(ui->buttonBox, SIGNAL(accepted()), SLOT(saveName()));
 
-    ui.charNameLineEdit->setText(_originalCharName);
+    ui->charNameLineEdit->setText(_originalCharName);
 }
 
 
@@ -48,7 +49,7 @@ void QD2CharRenamer::saveName()
     for (ushort i = 160; i < 192; ++i)
         goodUpperHalfCodes << i;
 
-    QString newName = ui.charNameLineEdit->text();
+    QString newName = ui->charNameLineEdit->text();
     bool isBadName = newName.startsWith('_') || newName.endsWith('-');
     if (!isBadName)
     {
@@ -66,7 +67,7 @@ void QD2CharRenamer::saveName()
         }
     }
     if (isBadName)
-        ERROR_BOX(ui.charNameLineEdit->toolTip());
+        ERROR_BOX(ui->charNameLineEdit->toolTip());
     else
     {
         bool hasColor = false;
@@ -88,23 +89,23 @@ void QD2CharRenamer::saveName()
 
 void QD2CharRenamer::nameChanged(const QString &newName)
 {
-    ui.buttonBox->button(QDialogButtonBox::Ok)->setEnabled(newName != _originalCharName && newName.length() > 1);
-    updateNamePreview(ui.charNamePreview, ui.charNameLineEdit->text());
-    setWindowTitle(tr("Rename (%1/15)", "param is the number of characters in the name").arg(ui.charNameLineEdit->text().length()));
+    ui->buttonBox->button(QDialogButtonBox::Ok)->setEnabled(newName != _originalCharName && newName.length() > 1);
+    updateNamePreview(ui->charNamePreview, ui->charNameLineEdit->text());
+    setWindowTitle(tr("Rename (%1/15)", "param is the number of characters in the name").arg(ui->charNameLineEdit->text().length()));
 }
 
 void QD2CharRenamer::insertColor()
 {
-    if (ui.charNameLineEdit->text().length() + 3 <= kMaxNameLength)
+    if (ui->charNameLineEdit->text().length() + 3 <= kMaxNameLength)
     {
         QAction *menuItem = qobject_cast<QAction *>(sender());
         QString codeToInsert = menuItem->text().left(3);
         // don't insert white in the beginning because it's a waste of characters
-        if (!(ui.charNameLineEdit->cursorPosition() == 0 && codeToInsert == ColorsManager::unicodeColorHeader() + ColorsManager::colorCodes().at(0)))
-            ui.charNameLineEdit->insert(codeToInsert);
+        if (!(ui->charNameLineEdit->cursorPosition() == 0 && codeToInsert == ColorsManager::unicodeColorHeader() + ColorsManager::colorCodes().at(0)))
+            ui->charNameLineEdit->insert(codeToInsert);
         else
             qApp->beep();
-        ui.charNameLineEdit->setFocus();
+        ui->charNameLineEdit->setFocus();
     }
     else
         qApp->beep();
@@ -115,7 +116,7 @@ void QD2CharRenamer::insertColor()
 
 void QD2CharRenamer::createColorMenu()
 {
-    QMenu *colorMenu = new QMenu(ui.colorButton);
+    QMenu *colorMenu = new QMenu(ui->colorButton);
     QPixmap pix(24, 24);
     for (int i = 0; i < ColorsManager::correctColorsNum(); ++i)
     {
@@ -135,5 +136,5 @@ void QD2CharRenamer::createColorMenu()
 
     for (int i = ColorsManager::correctColorsNum(); i < ColorsManager::colorCodes().size(); ++i)
         colorMenu->addAction(ColorsManager::unicodeColorHeader() + ColorsManager::colorCodes().at(i), this, SLOT(insertColor()));
-    ui.colorButton->setMenu(colorMenu);
+    ui->colorButton->setMenu(colorMenu);
 }

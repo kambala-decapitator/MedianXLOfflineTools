@@ -1,13 +1,15 @@
 #ifndef FINDITEMSWIDGET_H
 #define FINDITEMSWIDGET_H
 
-#include "ui_finditemsdialog.h"
 #include "findresultswidget.h"
 
 #include <QDialog>
 
 
 class ItemInfo;
+
+namespace Ui { class FindItemsDialog; }
+
 class QShowEvent;
 
 class FindItemsDialog : public QDialog
@@ -15,10 +17,10 @@ class FindItemsDialog : public QDialog
     Q_OBJECT
 
 public:
-    Ui::FindItemsDialog ui;
+    Ui::FindItemsDialog *ui;
 
     FindItemsDialog(QWidget *parent = 0);
-    virtual ~FindItemsDialog() {}
+    virtual ~FindItemsDialog() { delete ui; }
 
     void saveSettings();
     void clearResults();

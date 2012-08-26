@@ -378,10 +378,10 @@ PropertiesMultiMap ItemParser::parseItemProperties(ReverseBitReader &bitReader, 
             else if (id == 204)
             {
                 propToAdd->displayString = tr("Level %1 %2 (%3/%4 Charges)").arg(propToAdd->param &  63).arg(ItemDataBase::Skills()->value(propToAdd->param >> 6)->name)
-                                                                           .arg(propToAdd->value & 255).arg(propToAdd->value >> 8);
+                                                                            .arg(propToAdd->value & 255).arg(propToAdd->value >> 8);
             }
             else if (id == Enums::ItemProperties::ItemDuped)
-                propToAdd->displayString = QString("[%1]").arg(tr("duped"));
+                propToAdd->displayString = QString("[%1]").arg(tr("duped flag"));
             else if (txtProperty->descPositive.startsWith('%')) // ctc
             {
                 QString desc = txtProperty->descPositive;

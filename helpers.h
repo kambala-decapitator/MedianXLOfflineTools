@@ -29,12 +29,18 @@ QMetaEnum metaEnumFromName(const char *enumName)
     return metaObject.enumerator(metaObject.indexOfEnumerator(enumName));
 }
 
+// UI
+#include <QList>
+class QTreeWidgetItem;
+class ItemInfo;
+QList<QTreeWidgetItem *> treeItemsForItems(const QList<ItemInfo *> &items);
+
+// check which mod data is used
 bool isUltimative();
 bool isUltimative4();
 bool isUltimative5OrLater();
 
 // item conditions for STL algorithms
-class ItemInfo;
 bool isCubeInCharacterItems(ItemInfo *item);
 bool hasChanged(ItemInfo *item);
 

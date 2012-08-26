@@ -1,13 +1,13 @@
 #ifndef SKILLPLANDIALOG_H
 #define SKILLPLANDIALOG_H
 
-#include "ui_skillplandialog.h"
-
 #include <QDialog>
 
 
 class ItemInfo;
 class CharacterInfo;
+
+namespace Ui { class SkillplanDialog; }
 
 class SkillplanDialog : public QDialog
 {
@@ -15,7 +15,7 @@ class SkillplanDialog : public QDialog
 
 public:
     SkillplanDialog(QWidget *parent = 0);
-    virtual ~SkillplanDialog() {}
+    virtual ~SkillplanDialog() { delete ui; }
 
     static bool didModVersionChange();
     static const QString &modVersionReadable() { return _modVersionReadable; }
@@ -29,7 +29,7 @@ private slots:
     virtual void done(int r);
 
 private:
-    Ui::SkillplanDialog ui;
+    Ui::SkillplanDialog *ui;
 
     static QString _modVersionReadable, _modVersionPlanner;
 

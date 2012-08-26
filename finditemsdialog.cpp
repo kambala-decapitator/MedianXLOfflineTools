@@ -1,4 +1,5 @@
-#include "finditemsdialog.h"
+#include    "finditemsdialog.h"
+#include "ui_finditemsdialog.h"
 #include "itemdatabase.h"
 #include "propertiesdisplaymanager.h"
 #include "structs.h"
@@ -19,30 +20,30 @@
 #endif
 
 
-FindItemsDialog::FindItemsDialog(QWidget *parent) : QDialog(parent), _searchPerformed(false), _searchResultsChanged(false), _resultsWidget(new FindResultsWidget(this)), _lastResultsHeight(-1)
+FindItemsDialog::FindItemsDialog(QWidget *parent) : QDialog(parent), ui(new Ui::FindItemsDialog), _searchPerformed(false), _searchResultsChanged(false), _resultsWidget(new FindResultsWidget(this)), _lastResultsHeight(-1)
 {
-    ui.setupUi(this);
+    ui->setupUi(this);
     setWindowFlags(windowFlags() & ~Qt::WindowContextHelpButtonHint);
     updateWindowTitle();
 
     QGridLayout *checkboxGrid = new QGridLayout;
-    checkboxGrid->addWidget(ui.caseSensitiveCheckBox, 0, 0);
-    checkboxGrid->addWidget(ui.searchPropsCheckBox, 1, 0);
-    checkboxGrid->addWidget(ui.wrapAroundCheckBox, 2, 0);
-    checkboxGrid->addWidget(ui.regexCheckBox, 0, 1);
-    checkboxGrid->addWidget(ui.minimalMatchCheckBox, 1, 1);
-    checkboxGrid->addWidget(ui.multilineMatchCheckBox, 2, 1);
+    checkboxGrid->addWidget(ui->caseSensitiveCheckBox, 0, 0);
+    checkboxGrid->addWidget(ui->searchPropsCheckBox, 1, 0);
+    checkboxGrid->addWidget(ui->wrapAroundCheckBox, 2, 0);
+    checkboxGrid->addWidget(ui->regexCheckBox, 0, 1);
+    checkboxGrid->addWidget(ui->minimalMatchCheckBox, 1, 1);
+    checkboxGrid->addWidget(ui->multilineMatchCheckBox, 2, 1);
 
     QVBoxLayout *vbox = new QVBoxLayout;
-    vbox->addWidget(ui.nextButton);
-    vbox->addWidget(ui.previousButton);
-    vbox->addWidget(ui.searchResultsButton);
+    vbox->addWidget(ui->nextButton);
+    vbox->addWidget(ui->previousButton);
+    vbox->addWidget(ui->searchResultsButton);
     vbox->addStretch();
-    vbox->addWidget(ui.helpButton);
-    vbox->addWidget(ui.closeButton);
+    vbox->addWidget(ui->helpButton);
+    vbox->addWidget(ui->closeButton);
 
     QGridLayout *mainGrid = new QGridLayout;
-    mainGrid->addWidget(ui.searchComboBox, 0, 0, Qt::AlignTop);
+    mainGrid->addWidget(ui->searchComboBox, 0, 0, Qt::AlignTop);
     mainGrid->addLayout(checkboxGrid, 1, 0);
     mainGrid->addLayout(vbox, 0, 1, 2, 1, Qt::AlignRight);
 
@@ -53,17 +54,17 @@ FindItemsDialog::FindItemsDialog(QWidget *parent) : QDialog(parent), _searchPerf
     toggleResults();
     _resultsWidget->hide();
 
-    ui.nextButton->setToolTip(QKeySequence(QKeySequence::FindNext).toString(QKeySequence::NativeText));
-    ui.previousButton->setToolTip(QKeySequence(QKeySequence::FindPrevious).toString(QKeySequence::NativeText));
+    ui->nextButton->setToolTip(QKeySequence(QKeySequence::FindNext).toString(QKeySequence::NativeText));
+    ui->previousButton->setToolTip(QKeySequence(QKeySequence::FindPrevious).toString(QKeySequence::NativeText));
 
-    connect(ui.nextButton, SIGNAL(clicked()), SLOT(findNext()));
-    connect(ui.previousButton, SIGNAL(clicked()), SLOT(findPrevious()));
-    connect(ui.searchResultsButton, SIGNAL(clicked()), SLOT(toggleResults()));
-    connect(ui.helpButton, SIGNAL(clicked()), SLOT(showHelp()));
-    connect(ui.searchComboBox, SIGNAL(editTextChanged(const QString &)), SLOT(searchTextChanged()));
+    connect(ui->nextButton, SIGNAL(clicked()), SLOT(findNext()));
+    connect(ui->previousButton, SIGNAL(clicked()), SLOT(findPrevious()));
+    connect(ui->searchResultsButton, SIGNAL(clicked()), SLOT(toggleResults()));
+    connect(ui->helpButton, SIGNAL(clicked()), SLOT(showHelp()));
+    connect(ui->searchComboBox, SIGNAL(editTextChanged(const QString &)), SLOT(searchTextChanged()));
     connect(_resultsWidget, SIGNAL(showItem(ItemInfo *)), SLOT(updateCurrentIndexForItem(ItemInfo *)));
 
-    QList<QCheckBox *> checkBoxes = QList<QCheckBox *>() << ui.caseSensitiveCheckBox << ui.minimalMatchCheckBox << ui.regexCheckBox << ui.multilineMatchCheckBox << ui.searchPropsCheckBox;
+    QList<QCheckBox *> checkBoxes = QList<QCheckBox *>() << ui->caseSensitiveCheckBox << ui->minimalMatchCheckBox << ui->regexCheckBox << ui->multilineMatchCheckBox << ui->searchPropsCheckBox;
     foreach (QCheckBox *checkBox, checkBoxes)
         connect(checkBox, SIGNAL(toggled(bool)), SLOT(resetSearchStatus()));
 
@@ -87,7 +88,7 @@ void FindItemsDialog::findNext()
         {
             if (_currentIndex + 1 == _searchResult.size())
             {
-                if (ui.wrapAroundCheckBox->isChecked())
+                if (ui->wrapAroundCheckBox->isChecked())
                 {
                     _currentIndex = -1;
                     qApp->beep();
@@ -122,7 +123,7 @@ void FindItemsDialog::findPrevious()
         {
             if (_currentIndex - 1 == -1)
             {
-                if (ui.wrapAroundCheckBox->isChecked())
+                if (ui->wrapAroundCheckBox->isChecked())
                 {
                     _currentIndex = _searchResult.size();
                     qApp->beep();
@@ -157,7 +158,7 @@ void FindItemsDialog::toggleResults()
 
     if (_resultsWidget->isVisible())
     {
-        ui.searchResultsButton->setText(tr("Hide results"));
+        ui->searchResultsButton->setText(tr("Hide results"));
 
         QSize oldSize = size();
         int newHeight = oldSize.height() + (_lastResultsHeight == -1 ? _resultsWidget->sizeHint().height() : _lastResultsHeight);
@@ -177,7 +178,7 @@ void FindItemsDialog::toggleResults()
     }
     else
     {
-        ui.searchResultsButton->setText(tr("Show results"));
+        ui->searchResultsButton->setText(tr("Show results"));
 
         QSize oldSize = size();
         int newHeight = oldSize.height() - _lastResultsHeight;
@@ -248,17 +249,17 @@ void FindItemsDialog::searchTextChanged()
 
 void FindItemsDialog::performSearch()
 {
-    QString searchText = ui.searchComboBox->currentText();
+    QString searchText = ui->searchComboBox->currentText();
     _searchResult.clear();
     foreach (ItemInfo *item, CharacterInfo::instance().items.character)
     {
-        QString itemText = ui.searchPropsCheckBox->isChecked() ? PropertiesDisplayManager::completeItemDescription(item) : ItemDataBase::completeItemName(item, false);
-        Qt::CaseSensitivity cs = static_cast<Qt::CaseSensitivity>(ui.caseSensitiveCheckBox->isChecked());
-        if (ui.regexCheckBox->isChecked())
+        QString itemText = ui->searchPropsCheckBox->isChecked() ? PropertiesDisplayManager::completeItemDescription(item) : ItemDataBase::completeItemName(item, false);
+        Qt::CaseSensitivity cs = static_cast<Qt::CaseSensitivity>(ui->caseSensitiveCheckBox->isChecked());
+        if (ui->regexCheckBox->isChecked())
         {
             QRegExp rx(searchText, cs, QRegExp::RegExp2);
-            rx.setMinimal(ui.minimalMatchCheckBox->isChecked());
-            if (ui.multilineMatchCheckBox->isChecked())
+            rx.setMinimal(ui->minimalMatchCheckBox->isChecked());
+            if (ui->multilineMatchCheckBox->isChecked())
             {
                 int matchIndex = rx.indexIn(itemText);
                 if (matchIndex != -1)
@@ -303,26 +304,26 @@ void FindItemsDialog::performSearch()
     }
 
     _searchPerformed = _searchResultsChanged = true;
-    ui.searchResultsButton->setEnabled(!_searchResult.isEmpty());
+    ui->searchResultsButton->setEnabled(!_searchResult.isEmpty());
     _resultsWidget->updateItems(&_searchResult);
 
     // search text isn't added if a user presses find next/previous button directly
-    if (ui.searchComboBox->findText(searchText) == -1)
+    if (ui->searchComboBox->findText(searchText) == -1)
     {
-        ui.searchComboBox->insertItem(0, searchText);
-        ui.searchComboBox->setCurrentIndex(0);
+        ui->searchComboBox->insertItem(0, searchText);
+        ui->searchComboBox->setCurrentIndex(0);
     }
 
     // move the search string to the top of the last searches list if it is present there and not on the top
-    if (ui.searchComboBox->currentIndex() > 0)
+    if (ui->searchComboBox->currentIndex() > 0)
     {
         QStringList history;
-        for (int i = 0; i < ui.searchComboBox->count(); ++i)
-            history += ui.searchComboBox->itemText(i);
-        history.move(ui.searchComboBox->currentIndex(), 0);
+        for (int i = 0; i < ui->searchComboBox->count(); ++i)
+            history += ui->searchComboBox->itemText(i);
+        history.move(ui->searchComboBox->currentIndex(), 0);
 
-        ui.searchComboBox->clear();
-        ui.searchComboBox->addItems(history);
+        ui->searchComboBox->clear();
+        ui->searchComboBox->addItems(history);
     }
 }
 
@@ -347,32 +348,32 @@ void FindItemsDialog::loadSettings()
     settings.beginGroup("findDialog");
     if (settings.contains("pos"))
         move(settings.value("pos").toPoint());
-    ui.searchComboBox->addItems(settings.value("searchHistory").toStringList());
-    ui.caseSensitiveCheckBox->setChecked(settings.value("caseSensitive").toBool());
-    ui.minimalMatchCheckBox->setChecked(settings.value("regexMinimalMatch").toBool());
-    ui.multilineMatchCheckBox->setChecked(settings.value("regexMultilineMatch").toBool());
-    ui.regexCheckBox->setChecked(settings.value("regex").toBool());
-    ui.searchPropsCheckBox->setChecked(settings.value("searchProps").toBool());
-    ui.wrapAroundCheckBox->setChecked(settings.value("wrapAround", true).toBool());
+    ui->searchComboBox->addItems(settings.value("searchHistory").toStringList());
+    ui->caseSensitiveCheckBox->setChecked(settings.value("caseSensitive").toBool());
+    ui->minimalMatchCheckBox->setChecked(settings.value("regexMinimalMatch").toBool());
+    ui->multilineMatchCheckBox->setChecked(settings.value("regexMultilineMatch").toBool());
+    ui->regexCheckBox->setChecked(settings.value("regex").toBool());
+    ui->searchPropsCheckBox->setChecked(settings.value("searchProps").toBool());
+    ui->wrapAroundCheckBox->setChecked(settings.value("wrapAround", true).toBool());
     settings.endGroup();
 }
 
 void FindItemsDialog::saveSettings()
 {
     QStringList history; // save 10 strings max
-    for (int i = 0; i < ui.searchComboBox->count() && i < 10; ++i)
-        history += ui.searchComboBox->itemText(i);
+    for (int i = 0; i < ui->searchComboBox->count() && i < 10; ++i)
+        history += ui->searchComboBox->itemText(i);
 
     QSettings settings;
     settings.beginGroup("findDialog");
     settings.setValue("pos", pos());
     settings.setValue("searchHistory", history);
-    settings.setValue("caseSensitive", ui.caseSensitiveCheckBox->isChecked());
-    settings.setValue("regexMinimalMatch", ui.minimalMatchCheckBox->isChecked());
-    settings.setValue("regexMultilineMatch", ui.multilineMatchCheckBox->isChecked());
-    settings.setValue("regex", ui.regexCheckBox->isChecked());
-    settings.setValue("searchProps", ui.searchPropsCheckBox->isChecked());
-    settings.setValue("wrapAround", ui.wrapAroundCheckBox->isChecked());
+    settings.setValue("caseSensitive", ui->caseSensitiveCheckBox->isChecked());
+    settings.setValue("regexMinimalMatch", ui->minimalMatchCheckBox->isChecked());
+    settings.setValue("regexMultilineMatch", ui->multilineMatchCheckBox->isChecked());
+    settings.setValue("regex", ui->regexCheckBox->isChecked());
+    settings.setValue("searchProps", ui->searchPropsCheckBox->isChecked());
+    settings.setValue("wrapAround", ui->wrapAroundCheckBox->isChecked());
     settings.endGroup();
 }
 
@@ -396,23 +397,23 @@ void FindItemsDialog::changeItem(bool changeResultsSelection /*= true*/)
 
 void FindItemsDialog::setButtonsDisabled(bool disabled, bool updateResultButton /*= true*/)
 {
-    ui.nextButton->setDisabled(disabled);
-    ui.previousButton->setDisabled(disabled);
+    ui->nextButton->setDisabled(disabled);
+    ui->previousButton->setDisabled(disabled);
     if (updateResultButton)
-        ui.searchResultsButton->setDisabled(disabled);
+        ui->searchResultsButton->setDisabled(disabled);
 }
 
 void FindItemsDialog::resetSearchStatus()
 {
     _searchPerformed = false;
-    setButtonsDisabled(ui.searchComboBox->currentText().isEmpty(), false);
+    setButtonsDisabled(ui->searchComboBox->currentText().isEmpty(), false);
 }
 
 void FindItemsDialog::showEvent(QShowEvent *e)
 {
     Q_UNUSED(e);
 
-    if (ui.searchComboBox->currentIndex() == -1 || ui.searchComboBox->currentText().isEmpty())
-        ui.searchComboBox->setCurrentIndex(0);
-    ui.searchComboBox->lineEdit()->selectAll();
+    if (ui->searchComboBox->currentIndex() == -1 || ui->searchComboBox->currentText().isEmpty())
+        ui->searchComboBox->setCurrentIndex(0);
+    ui->searchComboBox->lineEdit()->selectAll();
 }

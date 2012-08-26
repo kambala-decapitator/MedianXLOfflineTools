@@ -1,4 +1,5 @@
-#include "propertiesviewerwidget.h"
+#include    "propertiesviewerwidget.h"
+#include "ui_propertiesviewerwidget.h"
 #include "itemdatabase.h"
 #include "enums.h"
 #include "helpers.h"
@@ -17,11 +18,11 @@
 static const QString kBaseFormat("<html><body bgcolor=\"black\"><div align=\"center\" style=\"color: #ffffff\">%1</div></body></html>");
 
 
-PropertiesViewerWidget::PropertiesViewerWidget(QWidget *parent) : QWidget(parent), htmlLine(htmlStringFromDiabloColorString("<hr />")), _item(0)
+PropertiesViewerWidget::PropertiesViewerWidget(QWidget *parent) : QWidget(parent), ui(new Ui::PropertiesViewerWidget), htmlLine(htmlStringFromDiabloColorString("<hr />")), _item(0)
 {
-    ui.setupUi(this);
+    ui->setupUi(this);
 
-    ui.tabWidget->setCurrentIndex(0); // set tab icons
+    ui->tabWidget->setCurrentIndex(0); // set tab icons
 }
 
 void PropertiesViewerWidget::showItem(ItemInfo *item)
@@ -29,23 +30,23 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
     _itemMysticOrbs.clear();
     _rwMysticOrbs.clear();
 
-    ui.allTextEdit->clear();
-    ui.tabWidget->setEnabled(item != 0);
+    ui->allTextEdit->clear();
+    ui->tabWidget->setEnabled(item != 0);
 
     if (!(_item = item))
     {
-        ui.itemAndMysticOrbsTextEdit->clear();
-        ui.rwAndMysticOrbsTextEdit->clear();
-        ui.socketablesTextEdit->clear();
+        ui->itemAndMysticOrbsTextEdit->clear();
+        ui->rwAndMysticOrbsTextEdit->clear();
+        ui->socketablesTextEdit->clear();
         return;
     }
 
-    ui.tabWidget->setTabEnabled(0, true);
-    ui.tabWidget->setTabEnabled(1, !item->props.isEmpty());
-    ui.tabWidget->setTabEnabled(2, item->isRW);
-    ui.tabWidget->setTabEnabled(3, !item->socketablesInfo.isEmpty());
+    ui->tabWidget->setTabEnabled(0, true);
+    ui->tabWidget->setTabEnabled(1, !item->props.isEmpty());
+    ui->tabWidget->setTabEnabled(2, item->isRW);
+    ui->tabWidget->setTabEnabled(3, !item->socketablesInfo.isEmpty());
 
-    renderHtml(ui.itemAndMysticOrbsTextEdit, collectMysticOrbsDataFromProps(&_itemMysticOrbs, item->props, item->itemType));
+    renderHtml(ui->itemAndMysticOrbsTextEdit, collectMysticOrbsDataFromProps(&_itemMysticOrbs, item->props, item->itemType));
 
     PropertiesMultiMap allProps;
     PropertiesMultiMap::const_iterator constIter = item->props.constBegin();
@@ -57,7 +58,7 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
 
     if (item->isRW)
     {
-        renderHtml(ui.rwAndMysticOrbsTextEdit, collectMysticOrbsDataFromProps(&_rwMysticOrbs, item->rwProps, item->itemType));
+        renderHtml(ui->rwAndMysticOrbsTextEdit, collectMysticOrbsDataFromProps(&_rwMysticOrbs, item->rwProps, item->itemType));
         PropertiesDisplayManager::addProperties(&allProps, item->rwProps);
     }
 
@@ -87,7 +88,7 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
     }
 
     ItemBase *itemBase = ItemDataBase::Items()->value(item->itemType);
-    ui.socketablesTextEdit->clear();
+    ui->socketablesTextEdit->clear();
     if (!item->socketablesInfo.isEmpty())
     {
         QString html;
@@ -97,7 +98,7 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
             PropertiesDisplayManager::addProperties(&allProps, socketableProps);
             html += ItemDataBase::completeItemName(socketableItem, true) + kHtmlLineBreak + propertiesToHtml(socketableProps) + htmlLine;
         }
-        renderHtml(ui.socketablesTextEdit, html);
+        renderHtml(ui->socketablesTextEdit, html);
     }
 
     // create full item description
@@ -107,8 +108,19 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
 
     QString runes;
     foreach (ItemInfo *socketable, item->socketablesInfo)
+    {
         if (ItemDataBase::Items()->value(socketable->itemType)->types.first() == "rune")
-            runes += ItemDataBase::Socketables()->value(socketable->itemType)->letter;
+        {
+            SocketableItemInfo *sock = ItemDataBase::Socketables()->value(socketable->itemType);
+            if (sock)
+                runes += sock->letter;
+            else
+            {
+                runes += "WTF";
+                qDebug("no socketable found for %s", socketable->itemType.constData());
+            }
+        }
+    }
     if (!runes.isEmpty()) // gem-/jewelwords don't have any letters
         itemDescription += htmlStringFromDiabloColorString(QString("'%1'").arg(runes), ColorsManager::Gold) + kHtmlLineBreak;
 
@@ -243,7 +255,7 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
 
     qDeleteAll(allProps);
 
-    renderHtml(ui.allTextEdit, itemDescription);
+    renderHtml(ui->allTextEdit, itemDescription);
 
     // awkward way to force center align
     QSize originalSize = size();
@@ -260,6 +272,7 @@ QString PropertiesViewerWidget::propertiesToHtml(const PropertiesMap &properties
     while (iter != propsDisplayMap.constBegin())
     {
         --iter;
+        quint8 k = iter.key();
         html += htmlStringFromDiabloColorString(iter.value().displayString, ColorsManager::NoColor) + kHtmlLineBreak;
     }
     return coloredText(html, ColorsManager::Blue);

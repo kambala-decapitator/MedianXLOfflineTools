@@ -11,10 +11,10 @@ Flamespike the Crawler	Flower Prowler	prowler_special	8		6	7	11	fast curse maggo
 Boneash	Blightfire	blightfire_special	9		5	9	0	strong fire	0	0	0	1	0		15	15	15	Act 1 Super C	Act 1 (N) Super C	Act 1 (H) Super C	0
 Radament	Radament	radament	10		7	25	0	curse mana	0	0	0	1	0		30	30	30	Act 2 Super A	Act 2 (N) Super A	Act 2 (H) Super A	0
 Bloodwitch the Wild	Kermit	kermit_special	11		5	6	0	strong fast	4	4	0	1	0		29	29	29	Act 2 Super A	Act 2 (N) Super A	Act 2 (H) Super A	0
-Fangskin	Plaguewrath	plague_special	12		6	29	0	fast multi	7	7	0	1	0		14	14	14	Act 2 Super B	Act 2 (N) Super B	Act 2 (H) Super B	0
+Fangskin	Plaguewrath	plague_special	12		6	29	0	fast multi	7	7	0	1	0		14	14	14	Staff for quest YES!	Staff for quest YES!	Staff for quest YES!	0
 Beetleburst	NewFleshdoom	su_firewizard1	13		5	7	9	strong curse fire	5	5	0	1	0	1	13	13	13	Act 2 Super B	Act 2 (N) Super B	Act 2 (H) Super B	0
 Leatherarm	Doomweaver	su_spideyA	14		7	25	0	curse mana	3	3	0	1	0		25	25	25	Act 2 Super B	Act 2 (N) Super B	Act 2 (H) Super B	0
-Coldworm the Burrower	Warmaggot the Mad	maggotqueen1	15		8	9	0	resist fire	0	0	0	0	0		13	13	13	Act 2 Super B	Act 2 (N) Super B	Act 2 (H) Super B	0
+Coldworm the Burrower	Warmaggot the Mad	lair_boss	15		8	9	0	resist fire	0	0	0	0	0		13	13	13	Act 2 Super B	Act 2 (N) Super B	Maggot Boss SuperDrop	0
 Fire Eye	Deadeye	su_skelmage	16		8	18	0	resist cold	6	6	0	1	0		12	12	12	Act 2 Super B	Act 2 (N) Super B	Act 2 (H) Super B	0
 Dark Elder	Fatal Morgana	fatal_special	17		6	27	27	fast tele	5	5	0	1	0	1	27	27	27	Act 2 Super B	Act 2 (N) Super B	Act 2 (H) Super B	0
 The Summoner	The Summoner	summoner	18		0	0	0		0	0	0	1	0		26	26	26	Summoner	Summoner (N)	Summoner (H)	0
@@ -24,11 +24,11 @@ Web Mage the Burning	Gharbad the Weak	su_goatwarriorA	21		5	7	0	strong curse	8	8
 Witch Doctor Endugu	Deathspit	su_aciddogA	22		6	25	0	fast mana	2	2	0	1	0		20	20	20	Act 3 Super B	Act 3 (N) Super B	Act 3 (H) Super B	0
 Stormtree	The Vizier	su_undeadmage4	23		25	28	0	mana stone	1	1	0	1	0	1	35	35	35	Act 3 Super B	Act 3 (N) Super B	Act 3 (H) Super B	0
 Sarina the Battlemaid	Nightwing the Cold	su_wingedfiend4	24		6	18	0	fast cold	7	7	0	1	0	1	36	36	36	Act 3 Super B	Act 3 (N) Super B	Act 3 (H) Super B	0
-Icehawk Riftwing	Goldblight of the Flame	su_firewizard2	25		7	18	0	curse cold	2	2	0	1	0		21	21	21	Act 3 Super A	Act 3 (N) Super A	Act 3 (H) Super A	0
+Icehawk Riftwing	NewWitchText	l4dwitch	25		7	18	0	curse cold	2	2	0	1	0		21	21	21	Act 3 Super A	Act 3 (N) Super A	Act 3 (H) Super A	0
 Ismail Vilehand	Zhar the Mad	zhar_mage1	26		8	27	0	resist tele	1	1	0	1	0		36	36	36	Act 4 Super A	Act 4 (N) Super A	Act 4 (H) Super A	0
 Geleb Flamefinger	Deathshade Fleshmaul	su_runepriest2	27		18	26	0	cold tele	3	3	0	1	0		37	37	37	Act 4 Super A	Act 4 (N) Super A	Act 4 (H) Super A	0
 Bremm Sparkfist	Gorestone	su_magmademon2	28		6	25	0	fast mana	5	5	0	1	0		22	22	22	Act 4 Super A	Act 4 (N) Super A	Act 4 (H) Super A	0
-Toorc Icefist	Lachdanan	cleric4_special	29		5	7	0	strong curse	4	4	0	1	0		23	23	23	Act 4 Super A	Act 4 (N) Super A	Act 4 (H) Super A	0
+Toorc Icefist	Lachdanan	cleric4_special	29		5	7	0	strong curse	4	4	0	1	0		23	23	23	OF COURSE MY LORD	OF COURSE MY LORD	OF COURSE MY LORD	0
 Wyand Voidfinger	Bilefroth the Pit Master	su_bugbearE	30		7	18	0	curse cold	4	4	0	1	0		38	38	38	Act 4 Super A	Act 4 (N) Super A	Act 4 (H) Super A	0
 Maffer Dragonhand	Bloodmoon Soulfire	su_bigcat4	31		6	8	0	fast resist	4	4	0	1	0		23	23	23	Act 4 Super A	Act 4 (N) Super A	Act 4 (H) Super A	0
 Winged Death	InfernalMachine	tower_special	32		11	0	0	maggot	0	0	0	1	0		24	24	24	Act 3 Super B	Act 3 (N) Super B	Infernal Reward	0

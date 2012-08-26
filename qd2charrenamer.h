@@ -1,10 +1,10 @@
 #ifndef QD2CHARRENAMER_H
 #define QD2CHARRENAMER_H
 
-#include "ui_qd2charrenamer.h"
-
 #include <QDialog>
 
+
+namespace Ui { class QD2CharRenamerClass; }
 
 class QTextEdit;
 
@@ -17,7 +17,7 @@ public:
     static void updateNamePreview(QTextEdit *previewTextEdit, const QString &name);
 
     QD2CharRenamer(const QString &originalName, bool shouldWarn, QWidget *parent = 0);
-    virtual ~QD2CharRenamer() {}
+    virtual ~QD2CharRenamer() { delete ui; }
 
     QString name() const { return _originalCharName; }
 
@@ -27,7 +27,7 @@ private slots:
     void saveName();
 
 private:
-    Ui::QD2CharRenamerClass ui;
+    Ui::QD2CharRenamerClass *ui;
     QString _originalCharName;
     bool _shouldWarn;
     const QStringList colorNames;

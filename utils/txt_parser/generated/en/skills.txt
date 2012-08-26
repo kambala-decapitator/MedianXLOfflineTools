@@ -328,7 +328,7 @@
 326	Batstrike	6	1	1	1
 327	Crucify	6	1	2	1
 328	Queen of Blades	6	1	3	1
-329	Bionetic Blast	6	3	3	1
+329	Summon Dark Spirit	6	3	3	1
 330	Doom	6	1	5	1
 331	Way of the Spider	6	1	1	3
 332	Shadow Refuge	6	1	2	3
@@ -436,9 +436,9 @@
 434	Blood Thorns	3	2	4	1
 435	Scourge	3	3	5	1
 436	Searing Glow	3	1	1	3
-437	Ring of Light	3	1	2	3
+437	Blazing Fury	3	1	2	3
 438	Brimstone	3	1	3	3
-439	Sunstorm	3	1	4	3
+439	Winterstorm	3	1	4	3
 440	Rising Dawn	3	1	5	3
 441	Tainted Blood	3	2	1	3
 442	Symphony of Destruction	3	2	3	3
@@ -533,7 +533,7 @@
 531	Rust Storm	-1	0	0	0
 532		-1	0	0	0
 533	Slayer Bolt	-1	0	0	0
-534		-1	0	0	0
+534	Attack	-1	0	0	0
 535	Spike Nova	-1	0	0	0
 536		-1	0	0	0
 537	Static Trap	-1	0	0	0
@@ -744,7 +744,7 @@
 742		-1	0	0	0
 743		-1	0	0	0
 744		-1	0	0	0
-745		-1	0	0	0
+745	Shatterblade	-1	0	0	0
 746	Blade Barrier	-1	0	0	0
 747	Arcane Fury	-1	0	0	0
 748	Beacon	-1	3	1	3
@@ -1116,3 +1116,42 @@
 1114		-1	0	0	0
 1115		-1	0	0	0
 1116		-1	0	0	0
+1117		-1	0	0	0
+1118	Queen of Blades	-1	1	3	1
+1119		-1	0	0	0
+1120		-1	0	0	0
+1121		-1	0	0	0
+1122		-1	0	0	0
+1123		-1	0	0	0
+1124		-1	0	0	0
+1125		-1	0	0	0
+1126		-1	0	0	0
+1127		-1	0	0	0
+1128		-1	0	0	0
+1129		-1	0	0	0
+1130		-1	0	0	0
+1131		-1	0	0	0
+1132		-1	0	0	0
+1133		-1	0	0	0
+1134		-1	0	0	0
+1135		-1	0	0	0
+1136		-1	0	0	0
+1137		-1	0	0	0
+1138		-1	0	0	0
+1139	Level Challenge 0 Quest Skill	-1	0	0	0
+1140		-1	0	0	0
+1141		-1	0	0	0
+1142		-1	0	0	0
+1143		-1	0	0	0
+1144		-1	0	0	0
+1145		-1	0	0	0
+1146		-1	0	0	0
+1147	Holybolt	-1	0	0	0
+1148	Arcane Blast	-1	0	0	0
+1149	Iron Shield	-1	0	0	0
+1150		-1	0	0	0
+1151		-1	0	0	0
+1152		-1	0	0	0
+1153		-1	0	0	0
+1154		-1	0	0	0
+1155		-1	0	0	0

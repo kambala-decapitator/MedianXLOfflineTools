@@ -9,6 +9,7 @@
 #include "itemparser.h"
 #include "characterinfo.hpp"
 #include "kexpandablegroupbox.h"
+#include "disenchantpreviewdialog.h"
 
 #include <QTabWidget>
 #include <QHBoxLayout>
@@ -393,15 +394,19 @@ void ItemsViewerDialog::disenchantAllItems()
     bool toShards = sender() == _disenchantToShardsButton, areUniquesSelected = _uniquesRadioButton->isChecked(), areSetsSelected = _setsRadioButton->isChecked();
     if (_bothQualitiesRadioButton->isChecked())
         areUniquesSelected = areSetsSelected = true;
-    // TODO: show dialog with item names and checkboxes
-    currentSplitter()->disenchantAllItems(toShards, _upgradeToCrystalsCheckbox->isChecked(), _eatSignetsCheckbox->isChecked(), areUniquesSelected, areSetsSelected);
-    if (toShards || !isUltimative())
+    
+    DisenchantPreviewDialog dialog(CharacterInfo::instance().items.character, this);
+    if (dialog.exec())
     {
-        _disenchantToShardsButton->setDisabled(true);
-        _disenchantToSignetButton->setDisabled(true);
+        currentSplitter()->disenchantAllItems(toShards, _upgradeToCrystalsCheckbox->isChecked(), _eatSignetsCheckbox->isChecked(), areUniquesSelected, areSetsSelected);
+        if (toShards || !isUltimative())
+        {
+            _disenchantToShardsButton->setDisabled(true);
+            _disenchantToSignetButton->setDisabled(true);
+        }
+        else // TUs may leave after disenchanting to signets in Ultimative
+            updateDisenchantButtonsState();
     }
-    else // TUs may leave after disenchanting to signets in Ultimative
-        updateDisenchantButtonsState();
 }
 
 void ItemsViewerDialog::upgradeGems()

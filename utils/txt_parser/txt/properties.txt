@@ -549,3 +549,4 @@ desc_squishyrat	1				1	desc-fatasstriton																											1	1		0
 spiritofdamnationnewXX	1				1	spiritofdamnationnew																											1	1		0
 fuck-you	1				1	fuck_you#																														0
 trololololol	1				1	item_absorbfire				item_absorblight				item_absorbmagic				item_absorbcold																	none	0
+prevent-monster-heal	1				1	nightmare_no_regen																											1	1		0
