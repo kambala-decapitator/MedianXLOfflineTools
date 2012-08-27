@@ -36,7 +36,9 @@ SOURCES += main.cpp \
            experienceindicatorgroupbox.cpp \
            plugyitemssplitter.cpp \
            gearitemssplitter.cpp \
-           kexpandablegroupbox.cpp
+           kexpandablegroupbox.cpp \
+           showselecteditemdelegate.cpp \
+           disenchantpreviewdialog.cpp
 
 HEADERS += medianxlofflinetools.h \
            resurrectpenaltydialog.h \
@@ -70,7 +72,9 @@ HEADERS += medianxlofflinetools.h \
            experienceindicatorgroupbox.h \
            plugyitemssplitter.h \
            gearitemssplitter.h \
-           kexpandablegroupbox.h
+           kexpandablegroupbox.h \
+           showselecteditemdelegate.h \
+           disenchantpreviewdialog.h
 
 FORMS += medianxlofflinetools.ui \
          resurrectpenaltydialog.ui \

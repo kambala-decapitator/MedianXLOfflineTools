@@ -9,7 +9,7 @@ class ItemInfo;
 
 class QTreeWidgetItem;
 
-class ShowSelectedItemInterface : public QObject
+class ShowSelectedItemInterface
 {
 public:
     ShowSelectedItemDelegate *selectItemDelegate;

@@ -1,4 +1,5 @@
-#include "medianxlofflinetools.h"
+#include    "medianxlofflinetools.h"
+#include "ui_medianxlofflinetools.h"
 
 #import "machelpers.h"
 
@@ -11,7 +12,7 @@ void MedianXLOfflineTools::moveUpdateActionToAppleMenu()
     NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
 
     NSMenu *mainMenu = [NSApp mainMenu];
-    NSMenuItem *helpMenuItem = [mainMenu itemWithTitle:NSStringFromQString(ui.menuHelp->title())];
+    NSMenuItem *helpMenuItem = [mainMenu itemWithTitle:NSStringFromQString(ui->menuHelp->title())];
     NSMenu *helpMenu = [helpMenuItem submenu];
     NSMenuItem *checkForUpdateMenuItem = [[helpMenu itemAtIndex:0] retain];
 
