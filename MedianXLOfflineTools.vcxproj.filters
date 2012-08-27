@@ -294,6 +294,18 @@
     <ClCompile Include="GeneratedFiles\Template\moc_disenchantpreviewdialog.cpp">
       <Filter>Generated Files\Template</Filter>
     </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_showselecteditemdelegate.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_showselecteditemdelegate.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Template\moc_showselecteditemdelegate.cpp">
+      <Filter>Generated Files\Template</Filter>
+    </ClCompile>
+    <ClCompile Include="showselecteditemdelegate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="helpers.h">
@@ -358,9 +370,6 @@
     </ClInclude>
     <ClInclude Include="windowsincludes.h">
       <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_disenchantpreviewdialog.h">
-      <Filter>Generated Files</Filter>
     </ClInclude>
     <ClInclude Include="itemnamestreewidget.h">
       <Filter>Header Files</Filter>
@@ -478,8 +487,8 @@
     <CustomBuild Include="disenchantpreviewdialog.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="disenchantpreviewdialog.ui">
-      <Filter>Form Files</Filter>
+    <CustomBuild Include="showselecteditemdelegate.h">
+      <Filter>Header Files</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>

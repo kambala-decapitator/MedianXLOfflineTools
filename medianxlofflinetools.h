@@ -16,7 +16,6 @@ class FindItemsDialog;
 class ExperienceIndicatorGroupBox;
 
 namespace Ui { class MedianXLOfflineToolsClass; }
-
 class QSpinBox;
 class QLineEdit;
 class QLabel;

@@ -9,7 +9,6 @@
 class ItemInfo;
 
 namespace Ui { class FindItemsDialog; }
-
 class QShowEvent;
 
 class FindItemsDialog : public QDialog

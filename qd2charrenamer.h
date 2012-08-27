@@ -5,7 +5,6 @@
 
 
 namespace Ui { class QD2CharRenamerClass; }
-
 class QTextEdit;
 
 class QD2CharRenamer : public QDialog

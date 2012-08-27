@@ -21,8 +21,8 @@
 FindResultsWidget::FindResultsWidget(QWidget *parent) : QWidget(parent), _resultsTreeWidget(new ItemNamesTreeWidget(this))
 {
     QPushButton *expandAllButton = new QPushButton(tr("Expand all"), this), *collapseAllButton = new QPushButton(tr("Collapse all"), this);
-    connect(expandAllButton, SIGNAL(clicked()), _resultsTreeWidget, SLOT(expandAll()));
-    connect(collapseAllButton, SIGNAL(clicked()), _resultsTreeWidget, SLOT(collapseAll()));
+    QObject::connect(expandAllButton, SIGNAL(clicked()), _resultsTreeWidget, SLOT(expandAll()));
+    QObject::connect(collapseAllButton, SIGNAL(clicked()), _resultsTreeWidget, SLOT(collapseAll()));
 
     QHBoxLayout *hboxLayout = new QHBoxLayout;
     hboxLayout->addWidget(expandAllButton);
@@ -35,8 +35,7 @@ FindResultsWidget::FindResultsWidget(QWidget *parent) : QWidget(parent), _result
 
     setMinimumHeight(sizeHint().height());
 
-    _resultsTreeWidget->installEventFilter(this);
-    _resultsTreeWidget->viewport()->installEventFilter(this); // mouse clicks are delivered to viewport rather than to the widget itself
+    selectItemDelegate = new ShowSelectedItemDelegate(_resultsTreeWidget, this);
 }
 
 void FindResultsWidget::updateItems(QList<SearchResultItem> *newItems)
@@ -86,30 +85,8 @@ void FindResultsWidget::selectItem(ItemInfo *item)
     _resultsTreeWidget->setCurrentItem(_resultsTreeWidget->topLevelItem(topItemIndex)->child(_foundItemsMap[topItemIndex].indexOf(item)));
 }
 
-bool FindResultsWidget::eventFilter(QObject *obj, QEvent *event)
+ItemInfo *FindResultsWidget::itemForTreeItem(QTreeWidgetItem *treeItem)
 {
-    bool shouldShowItem = false;
-    if (obj == _resultsTreeWidget)
-    {
-        if (event->type() == QEvent::KeyPress)
-        {
-            QKeyEvent *keyEvent = static_cast<QKeyEvent *>(event);
-            shouldShowItem = keyEvent->key() == Qt::Key_Enter || keyEvent->key() == Qt::Key_Return;
-        }
-    }
-    else if (obj == _resultsTreeWidget->viewport())
-        shouldShowItem = event->type() == QEvent::MouseButtonDblClick;
-
-    if (shouldShowItem)
-    {
-        QTreeWidgetItem *currentItem = _resultsTreeWidget->currentItem(), *parentItem = currentItem->parent();
-        if (parentItem) // this is an item, not a storage name
-        {
-            ItemInfo *item = _foundItemsMap[_resultsTreeWidget->indexOfTopLevelItem(parentItem)].at(parentItem->indexOfChild(currentItem));
-            emit showItem(item);
-            return true;
-        }
-    }
-
-    return QWidget::eventFilter(obj, event);
+    QTreeWidgetItem *parentItem = treeItem->parent(); // parentItem != 0 when this is an item, not a storage name
+    return parentItem ? _foundItemsMap[_resultsTreeWidget->indexOfTopLevelItem(parentItem)].at(parentItem->indexOfChild(treeItem)) : 0;
 }

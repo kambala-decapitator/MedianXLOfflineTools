@@ -62,7 +62,7 @@ FindItemsDialog::FindItemsDialog(QWidget *parent) : QDialog(parent), ui(new Ui::
     connect(ui->searchResultsButton, SIGNAL(clicked()), SLOT(toggleResults()));
     connect(ui->helpButton, SIGNAL(clicked()), SLOT(showHelp()));
     connect(ui->searchComboBox, SIGNAL(editTextChanged(const QString &)), SLOT(searchTextChanged()));
-    connect(_resultsWidget, SIGNAL(showItem(ItemInfo *)), SLOT(updateCurrentIndexForItem(ItemInfo *)));
+    connect(_resultsWidget->selectItemDelegate, SIGNAL(showItem(ItemInfo *)), SLOT(updateCurrentIndexForItem(ItemInfo *)));
 
     QList<QCheckBox *> checkBoxes = QList<QCheckBox *>() << ui->caseSensitiveCheckBox << ui->minimalMatchCheckBox << ui->regexCheckBox << ui->multilineMatchCheckBox << ui->searchPropsCheckBox;
     foreach (QCheckBox *checkBox, checkBoxes)

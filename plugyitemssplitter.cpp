@@ -196,7 +196,7 @@ protected:
 
 void PlugyItemsSplitter::disenchantAllItems(bool toShards, bool upgradeToCrystals, bool eatSignets, bool includeUniques, bool includeSets, ItemsList *pItems /*= 0*/)
 {
-    pItems = itemsForSelectedRange();
+    //pItems = itemsForSelectedRange();
     ItemsPropertiesSplitter::disenchantAllItems(toShards, upgradeToCrystals, eatSignets, includeUniques, includeSets, pItems);
     if (_shouldApplyActionToAllPages)
     {

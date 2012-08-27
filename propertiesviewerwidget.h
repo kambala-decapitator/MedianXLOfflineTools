@@ -9,7 +9,6 @@
 class ItemInfo;
 
 namespace Ui { class PropertiesViewerWidget; }
-
 class QTextEdit;
 
 class PropertiesViewerWidget : public QWidget

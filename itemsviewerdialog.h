@@ -45,7 +45,6 @@ public:
     virtual ~ItemsViewerDialog() {}
 
     void updateItems(const QHash<int, bool> &plugyStashesExistenceHash, bool isCreatingTabs);
-    void showItem(ItemInfo *item);
 
     void saveSettings();
     bool isPlugyStorageIndex(int index) { return index >= PersonalStashIndex && index <= HCStashIndex; }
@@ -57,6 +56,7 @@ public:
 public slots:
     void setCubeTabDisabled(bool disabled);
     virtual void reject();
+    void showItem(ItemInfo *item);
     void updateButtonsState();
 
 signals:

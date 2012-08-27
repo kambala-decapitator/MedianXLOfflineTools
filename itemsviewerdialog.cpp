@@ -333,7 +333,7 @@ const QString &ItemsViewerDialog::tabNameAtIndex(int i)
 {
     // add elements here when adding new tab
     static const QStringList tabNames = QStringList() << tr("Gear") << tr("Inventory") << tr("Cube") << tr("Stash") << tr("Personal Stash") << tr("Shared Stash") << tr("Hardcore Stash");
-    static const QString unknownName = tr("UNKNOWN STORAGE");
+    static const QString unknownName("WTF");
     return i >= 0 && i < tabNames.size() ? tabNames.at(i) : unknownName;
 }
 
@@ -391,14 +391,17 @@ void ItemsViewerDialog::updateUpgradeButtonsState()
 
 void ItemsViewerDialog::disenchantAllItems()
 {
-    bool toShards = sender() == _disenchantToShardsButton, areUniquesSelected = _uniquesRadioButton->isChecked(), areSetsSelected = _setsRadioButton->isChecked();
-    if (_bothQualitiesRadioButton->isChecked())
-        areUniquesSelected = areSetsSelected = true;
-    
-    DisenchantPreviewDialog dialog(CharacterInfo::instance().items.character, this);
+    ItemsPropertiesSplitter *splitter = currentSplitter();
+    DisenchantPreviewDialog dialog(splitter->getItems(), this);
+    connect(dialog.selectItemDelegate, SIGNAL(showItem(ItemInfo *)), SLOT(showItem(ItemInfo *)));
     if (dialog.exec())
     {
-        currentSplitter()->disenchantAllItems(toShards, _upgradeToCrystalsCheckbox->isChecked(), _eatSignetsCheckbox->isChecked(), areUniquesSelected, areSetsSelected);
+        bool toShards = sender() == _disenchantToShardsButton, areUniquesSelected = _uniquesRadioButton->isChecked(), areSetsSelected = _setsRadioButton->isChecked();
+        if (_bothQualitiesRadioButton->isChecked())
+            areUniquesSelected = areSetsSelected = true;
+        ItemsList selectedItems = dialog.selectedItems();
+        currentSplitter()->disenchantAllItems(toShards, _upgradeToCrystalsCheckbox->isChecked(), _eatSignetsCheckbox->isChecked(), areUniquesSelected, areSetsSelected, &selectedItems);
+
         if (toShards || !isUltimative())
         {
             _disenchantToShardsButton->setDisabled(true);

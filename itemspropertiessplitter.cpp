@@ -444,10 +444,9 @@ void ItemsPropertiesSplitter::removeItemFromList(ItemInfo *item, bool emitSignal
 
 void ItemsPropertiesSplitter::disenchantAllItems(bool toShards, bool upgradeToCrystals, bool eatSignets, bool includeUniques, bool includeSets, ItemsList *pItems /*= 0*/)
 {
-    ItemInfo *disenchantedItem = ItemDataBase::loadItemFromFile(toShards ? "arcane_shard" : "signet_of_learning");
     ItemsList &items = pItems ? *pItems : _allItems;
-    quint32 disenchantedItemsNumber = 0;
-    int signetsEaten = 0, signetsEatenTotal = CharacterInfo::instance().valueOfStatistic(Enums::CharacterStats::SignetsOfLearningEaten);
+    quint32 disenchantedItemsNumber = 0, signetsEaten = 0, signetsEatenTotal = CharacterInfo::instance().valueOfStatistic(Enums::CharacterStats::SignetsOfLearningEaten);
+    ItemInfo *disenchantedItem = ItemDataBase::loadItemFromFile(toShards ? "arcane_shard" : "signet_of_learning");
     foreach (ItemInfo *item, items)
     {
         if ((item->quality == Enums::ItemQuality::Unique && includeUniques) || (item->quality == Enums::ItemQuality::Set && includeSets))
