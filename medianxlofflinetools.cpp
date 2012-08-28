@@ -174,6 +174,11 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *pare
     }
 }
 
+MedianXLOfflineTools::~MedianXLOfflineTools()
+{
+    delete ui;
+}
+
 
 // slots
 

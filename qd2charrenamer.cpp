@@ -39,6 +39,11 @@ QD2CharRenamer::QD2CharRenamer(const QString &originalName, bool shouldWarn, QWi
     ui->charNameLineEdit->setText(_originalCharName);
 }
 
+QD2CharRenamer::~QD2CharRenamer()
+{
+    delete ui;
+}
+
 
 // slots
 

@@ -17,7 +17,7 @@ class PropertiesViewerWidget : public QWidget
 
 public:
     explicit PropertiesViewerWidget(QWidget *parent = 0);
-    virtual ~PropertiesViewerWidget() { delete ui; }
+    virtual ~PropertiesViewerWidget();
 
     void showItem(ItemInfo *item);
     void clear() { showItem(0); }

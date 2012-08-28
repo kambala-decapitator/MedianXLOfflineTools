@@ -18,6 +18,11 @@ ResurrectPenaltyDialog::ResurrectPenaltyDialog(QWidget *parent) : QDialog(parent
     ui->buttonBox->setFocus();
 }
 
+ResurrectPenaltyDialog::~ResurrectPenaltyDialog()
+{
+    delete ui;
+}
+
 ResurrectPenaltyDialog::ResurrectionPenalty ResurrectPenaltyDialog::resurrectionPenalty() const
 {
     if (ui->levelsRadioButton->isChecked())

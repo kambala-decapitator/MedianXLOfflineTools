@@ -25,6 +25,11 @@ PropertiesViewerWidget::PropertiesViewerWidget(QWidget *parent) : QWidget(parent
     ui->tabWidget->setCurrentIndex(0); // set tab icons
 }
 
+PropertiesViewerWidget::~PropertiesViewerWidget()
+{
+    delete ui;
+}
+
 void PropertiesViewerWidget::showItem(ItemInfo *item)
 {
     _itemMysticOrbs.clear();
@@ -272,7 +277,6 @@ QString PropertiesViewerWidget::propertiesToHtml(const PropertiesMap &properties
     while (iter != propsDisplayMap.constBegin())
     {
         --iter;
-        quint8 k = iter.key();
         html += htmlStringFromDiabloColorString(iter.value().displayString, ColorsManager::NoColor) + kHtmlLineBreak;
     }
     return coloredText(html, ColorsManager::Blue);

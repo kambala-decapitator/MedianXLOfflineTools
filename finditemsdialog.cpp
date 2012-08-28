@@ -73,6 +73,11 @@ FindItemsDialog::FindItemsDialog(QWidget *parent) : QDialog(parent), ui(new Ui::
     setMaximumHeight(qApp->desktop()->availableGeometry().height() - 50);
 }
 
+FindItemsDialog::~FindItemsDialog()
+{
+    delete ui;
+}
+
 void FindItemsDialog::clearResults()
 {
     _searchResult.clear();

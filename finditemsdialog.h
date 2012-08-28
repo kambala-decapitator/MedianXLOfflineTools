@@ -19,7 +19,7 @@ public:
     Ui::FindItemsDialog *ui;
 
     FindItemsDialog(QWidget *parent = 0);
-    virtual ~FindItemsDialog() { delete ui; }
+    virtual ~FindItemsDialog();
 
     void saveSettings();
     void clearResults();

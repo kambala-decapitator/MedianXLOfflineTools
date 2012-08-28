@@ -73,6 +73,11 @@ SkillplanDialog::SkillplanDialog(QWidget *parent) : QDialog(parent), ui(new Ui::
     setFixedSize(sizeHint());
 }
 
+SkillplanDialog::~SkillplanDialog()
+{
+    delete ui;
+}
+
 void SkillplanDialog::copyLinkWithTags()
 {
     qApp->clipboard()->setText((sender()->objectName() == QLatin1String("html") ? ui->htmlLinkLineEdit : ui->bbcodeLinkLineEdit)->text());
