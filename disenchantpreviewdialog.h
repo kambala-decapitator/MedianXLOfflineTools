@@ -9,6 +9,9 @@
 
 class ItemNamesTreeWidget;
 
+class QLabel;
+class QDialogButtonBox;
+
 class DisenchantPreviewDialog : public QDialog, public ShowSelectedItemInterface
 {
     Q_OBJECT
@@ -24,9 +27,18 @@ public:
 protected:
     bool eventFilter(QObject *obj, QEvent *e);
 
+private slots:
+    void checkboxStateChanged(bool checked);
+
 private:
+    QLabel *_label;
     ItemNamesTreeWidget *_itemsTreeWidget;
+    QDialogButtonBox *_buttonBox;
+
     ItemsList _items;
+    quint32 _selectedItemsCount;
+
+    void updateLabelText();
 };
 
 #endif // DISENCHANTPREVIEWDIALOG_H

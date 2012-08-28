@@ -391,15 +391,21 @@ void ItemsViewerDialog::updateUpgradeButtonsState()
 
 void ItemsViewerDialog::disenchantAllItems()
 {
-    // TODO: filter items right here
+    bool toShards = sender() == _disenchantToShardsButton, areUniquesSelected = _uniquesRadioButton->isChecked(), areSetsSelected = _setsRadioButton->isChecked();
+    if (_bothQualitiesRadioButton->isChecked())
+        areUniquesSelected = areSetsSelected = true;
+
     ItemsPropertiesSplitter *splitter = currentSplitter();
-    DisenchantPreviewDialog dialog(splitter->getItems(), this);
+    ItemsList *items = splitter->getItems(), filteredItems;
+    foreach (ItemInfo *item, *items)
+        if ((item->quality == Enums::ItemQuality::Unique && areUniquesSelected) || (item->quality == Enums::ItemQuality::Set && areSetsSelected))
+            if ((toShards && ItemDataBase::canDisenchantIntoArcaneShards(item)) || (!toShards && ItemDataBase::canDisenchantIntoSignetOfLearning(item)))
+                filteredItems += item;
+
+    DisenchantPreviewDialog dialog(&filteredItems, this);
     connect(dialog.selectItemDelegate, SIGNAL(showItem(ItemInfo *)), SLOT(showItem(ItemInfo *)));
     if (dialog.exec())
     {
-        bool toShards = sender() == _disenchantToShardsButton, areUniquesSelected = _uniquesRadioButton->isChecked(), areSetsSelected = _setsRadioButton->isChecked();
-        if (_bothQualitiesRadioButton->isChecked())
-            areUniquesSelected = areSetsSelected = true;
         ItemsList selectedItems = dialog.selectedItems();
         currentSplitter()->disenchantAllItems(toShards, _upgradeToCrystalsCheckbox->isChecked(), _eatSignetsCheckbox->isChecked(), areUniquesSelected, areSetsSelected, &selectedItems);
 

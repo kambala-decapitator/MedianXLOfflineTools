@@ -207,6 +207,7 @@ void PlugyItemsSplitter::disenchantAllItems(bool toShards, bool upgradeToCrystal
             progressBar.centerInWidget(this);
             progressBar.show();
 
+            // TODO: fix crash
             foreach (ItemInfo *item, *pItems)
             {
                 if ((toShards && isArcaneShard(item)) || (!toShards && isSignetOfLearning(item)))
