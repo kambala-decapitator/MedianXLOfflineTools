@@ -391,6 +391,7 @@ void ItemsViewerDialog::updateUpgradeButtonsState()
 
 void ItemsViewerDialog::disenchantAllItems()
 {
+    // TODO: filter items right here
     ItemsPropertiesSplitter *splitter = currentSplitter();
     DisenchantPreviewDialog dialog(splitter->getItems(), this);
     connect(dialog.selectItemDelegate, SIGNAL(showItem(ItemInfo *)), SLOT(showItem(ItemInfo *)));

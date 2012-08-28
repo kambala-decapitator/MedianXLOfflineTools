@@ -27,7 +27,7 @@ DisenchantPreviewDialog::DisenchantPreviewDialog(ItemsList *items, QWidget *pare
 
     QList<QTreeWidgetItem *> treeItems = treeItemsForItems(_items);
     foreach (QTreeWidgetItem *treeItem, treeItems)
-        treeItem->setText(0, "    " + treeItem->text(0)); // dirty hack to place checkboxes near text
+        treeItem->setText(0, "    " + treeItem->text(0)); // FIXME: dirty hack to place checkboxes near text
     _itemsTreeWidget->addTopLevelItems(treeItems);
     _itemsTreeWidget->setColumnWidth(0, width() / 2);
     _itemsTreeWidget->setRootIsDecorated(false);
@@ -49,8 +49,14 @@ ItemInfo *DisenchantPreviewDialog::itemForTreeItem(QTreeWidgetItem *treeItem)
 
 ItemsList DisenchantPreviewDialog::selectedItems() const
 {
-    // TODO: use selected checkboxes
-    return _items;
+    ItemsList items;
+    for (int i = 0, n = _itemsTreeWidget->topLevelItemCount(); i < n; ++i)
+    {
+        QTreeWidgetItem *treeItem = _itemsTreeWidget->topLevelItem(i);
+        if (qobject_cast<QCheckBox *>(_itemsTreeWidget->itemWidget(treeItem, 0))->isChecked())
+            items += _items.at(i);
+    }
+    return items;
 }
 
 bool DisenchantPreviewDialog::eventFilter(QObject *obj, QEvent *e)

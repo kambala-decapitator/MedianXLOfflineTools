@@ -447,8 +447,9 @@ void ItemsPropertiesSplitter::disenchantAllItems(bool toShards, bool upgradeToCr
     ItemsList &items = pItems ? *pItems : _allItems;
     quint32 disenchantedItemsNumber = 0, signetsEaten = 0, signetsEatenTotal = CharacterInfo::instance().valueOfStatistic(Enums::CharacterStats::SignetsOfLearningEaten);
     ItemInfo *disenchantedItem = ItemDataBase::loadItemFromFile(toShards ? "arcane_shard" : "signet_of_learning");
-    foreach (ItemInfo *item, items)
+    for (int i = 0; i < items.size(); ++i)
     {
+        ItemInfo *item = items.at(i);
         if ((item->quality == Enums::ItemQuality::Unique && includeUniques) || (item->quality == Enums::ItemQuality::Set && includeSets))
         {
             if ((toShards && ItemDataBase::canDisenchantIntoArcaneShards(item)) || (!toShards && ItemDataBase::canDisenchantIntoSignetOfLearning(item)))
@@ -460,12 +461,18 @@ void ItemsPropertiesSplitter::disenchantAllItems(bool toShards, bool upgradeToCr
                     if (signetsEatenTotal + signetsEaten < Enums::CharacterStats::SignetsOfLearningMax)
                     {
                         removeItemFromList(item, false);
+                        items.removeAt(i--);
                         shouldDisenchant = false;
                         ++signetsEaten;
                     }
                 }
                 if (shouldDisenchant)
-                    disenchantItemIntoItem(item, disenchantedItem, false);
+                {
+                    ItemInfo *itemToStore = disenchantItemIntoItem(item, disenchantedItem, false);
+                    items.removeAt(i--);
+                    if (!items.contains(itemToStore))
+                        items.append(itemToStore);
+                }
             }
         }
     }
@@ -476,7 +483,6 @@ void ItemsPropertiesSplitter::disenchantAllItems(bool toShards, bool upgradeToCr
     {
         if (upgradeToCrystals)
         {
-
             int shards = 0;
             foreach (ItemInfo *item, items)
             {
@@ -494,15 +500,23 @@ void ItemsPropertiesSplitter::disenchantAllItems(bool toShards, bool upgradeToCr
             if (crystals)
             {
                 int storage = items.first()->storage;
-                foreach (ItemInfo *item, items)
+                for (int i = 0; i < items.size(); ++i)
+                {
+                    ItemInfo *item = items.at(i);
                     if (isArcaneShard(item) || isArcaneShard2(item) || isArcaneShard3(item) || isArcaneShard4(item))
+                    {
                         performDeleteItem(item, false);
+                        items.removeAt(i--);
+                    }
+                }
 
                 ItemInfo *crystal = ItemDataBase::loadItemFromFile("arcane_crystal");
                 for (int i = 0; i < crystals; ++i)
                 {
                     ItemInfo *crystalCopy = new ItemInfo(*crystal);
                     storeItemInStorage(crystalCopy, storage);
+                    if (!items.contains(crystalCopy))
+                        items.append(crystalCopy);
                 }
                 delete crystal;
 
@@ -511,6 +525,8 @@ void ItemsPropertiesSplitter::disenchantAllItems(bool toShards, bool upgradeToCr
                 {
                     ItemInfo *shard = new ItemInfo(*disenchantedItem);
                     storeItemInStorage(shard, storage);
+                    if (!items.contains(shard))
+                        items.append(shard);
                 }
 
                 QString crystalsText = tr("%n Arcane Crystal(s)", 0, crystals);
