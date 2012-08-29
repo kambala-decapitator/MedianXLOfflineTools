@@ -62,6 +62,25 @@ void ItemsPropertiesSplitter::itemSelected(const QModelIndex &index, bool displa
     _itemActions[DisenchantSignet]->setEnabled(ItemDataBase::canDisenchantIntoSignetOfLearning(item));
     // in Ultimative, Character Orb and Sunstone of Elements use same stat IDs as MOs, but those can't be removed
     _itemActions[RemoveMO]->setEnabled(_propertiesWidget->hasMysticOrbs() && !(isUltimative() && isCharacterOrbOrSunstoneOfElements(item) && isTradersChest(item)));
+
+    // eat signet of learning
+    quint8 statsFromSignet = 0;
+    if (item)
+    {
+        QRegExp customSignetRegExp("(\\d\\d)\\^");
+        if (isSignetOfLearning(item))
+            statsFromSignet = 1;
+        else if (customSignetRegExp.exactMatch(item->itemType))
+            statsFromSignet = customSignetRegExp.cap(1).toUShort();
+        else if (item->itemType == "zk#")
+            statsFromSignet = 5;
+        else if (item->itemType == "zke" || item->itemType == "zky")
+            statsFromSignet = 25;
+    }
+    QAction *eatSignetsAction = _itemActions[EatSignetOfLearning];
+    eatSignetsAction->setData(statsFromSignet);
+    eatSignetsAction->setText(tr("Eat signet [%n free stat(s)]", 0, statsFromSignet));
+    eatSignetsAction->setEnabled(statsFromSignet > 0 && CharacterInfo::instance().valueOfStatistic(Enums::CharacterStats::SignetsOfLearningEaten) < Enums::CharacterStats::SignetsOfLearningMax);
 }
 
 void ItemsPropertiesSplitter::moveItem(const QModelIndex &newIndex, const QModelIndex &oldIndex)
@@ -242,27 +261,8 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
             }
         }
 
-        // eat signet of learning
-        if (CharacterInfo::instance().valueOfStatistic(Enums::CharacterStats::SignetsOfLearningEaten) < Enums::CharacterStats::SignetsOfLearningMax)
-        {
-            quint8 statsFromSignet = 0;
-            QRegExp customSignetRegExp("(\\d\\d)\\^");
-            if (isSignetOfLearning(item))
-                statsFromSignet = 1;
-            else if (customSignetRegExp.exactMatch(item->itemType))
-                statsFromSignet = customSignetRegExp.cap(1).toUShort();
-            else if (item->itemType == "zk#")
-                statsFromSignet = 5;
-            else if (item->itemType == "zke" || item->itemType == "zky")
-                statsFromSignet = 25;
-            if (statsFromSignet)
-            {
-                QAction *actionEatSignetOfLearning = new QAction(tr("Eat signet (%n free stat(s))", 0, statsFromSignet), _itemsView);
-                actionEatSignetOfLearning->setData(statsFromSignet);
-                connect(actionEatSignetOfLearning, SIGNAL(triggered()), SLOT(eatSelectedSignet()));
-                actions << actionEatSignetOfLearning;
-            }
-        }
+        if (_itemActions[EatSignetOfLearning]->isEnabled())
+            actions << _itemActions[EatSignetOfLearning];
 
         actions << separator() << _itemActions[Delete];
         QMenu::exec(actions, _itemsView->mapToGlobal(pos));
@@ -442,7 +442,7 @@ void ItemsPropertiesSplitter::removeItemFromList(ItemInfo *item, bool emitSignal
         emit itemsChanged();
 }
 
-void ItemsPropertiesSplitter::disenchantAllItems(bool toShards, bool upgradeToCrystals, bool eatSignets, bool includeUniques, bool includeSets, ItemsList *pItems /*= 0*/)
+ItemsList ItemsPropertiesSplitter::disenchantAllItems(bool toShards, bool upgradeToCrystals, bool eatSignets, bool includeUniques, bool includeSets, ItemsList *pItems /*= 0*/)
 {
     ItemsList &items = pItems ? *pItems : _allItems, disenchantedItems;
     quint32 disenchantedItemsNumber = items.size(), signetsEaten = 0, signetsEatenTotal = CharacterInfo::instance().valueOfStatistic(Enums::CharacterStats::SignetsOfLearningEaten);
@@ -546,6 +546,7 @@ void ItemsPropertiesSplitter::disenchantAllItems(bool toShards, bool upgradeToCr
     _itemsView->viewport()->update();
 
     INFO_BOX(text);
+    return disenchantedItems;
 }
 
 ItemInfo *ItemsPropertiesSplitter::disenchantItemIntoItem(ItemInfo *oldItem, ItemInfo *newItem, bool emitSignal /*= true*/)
@@ -781,6 +782,12 @@ void ItemsPropertiesSplitter::createItemActions()
     connect(actionRemoveMO, SIGNAL(triggered()), SIGNAL(itemsChanged()));
     _itemsView->addAction(actionRemoveMO);
     _itemActions[RemoveMO] = actionRemoveMO;
+
+    QAction *actionEatSignetOfLearning = new QAction(_itemsView);
+    actionEatSignetOfLearning->setShortcut(QKeySequence("Ctrl+L"));
+    connect(actionEatSignetOfLearning, SIGNAL(triggered()), SLOT(eatSelectedSignet()));
+    _itemsView->addAction(actionEatSignetOfLearning);
+    _itemActions[EatSignetOfLearning] = actionEatSignetOfLearning;
 
     QAction *actionDelete = new QAction(tr("Delete"), _itemsView);
     actionDelete->setShortcut(

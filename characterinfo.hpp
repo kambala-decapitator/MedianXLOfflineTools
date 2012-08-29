@@ -18,6 +18,7 @@ public:
     }
 
     quint32 valueOfStatistic(Enums::CharacterStats::StatisticEnum stat) const { return basicInfo.statsDynamicData.property(Enums::CharacterStats::statisticNameFromValue(stat)).toUInt(); }
+    void setValueForStatisitc(quint32 value, Enums::CharacterStats::StatisticEnum stat) { basicInfo.statsDynamicData.setProperty(Enums::CharacterStats::statisticNameFromValue(stat), value); }
 
     struct CharacterInfoBasic
     {

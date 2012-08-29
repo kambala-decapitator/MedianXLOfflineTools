@@ -268,7 +268,7 @@ void MedianXLOfflineTools::eatSignetsOfLearning(int signetsEaten)
 {
     int newSignetsEaten = ui->signetsOfLearningEatenLineEdit->text().toInt() + signetsEaten;
     ui->signetsOfLearningEatenLineEdit->setText(QString::number(newSignetsEaten));
-    CharacterInfo::instance().basicInfo.statsDynamicData.setProperty("SignetsOfLearningEaten", newSignetsEaten);
+    CharacterInfo::instance().setValueForStatisitc(newSignetsEaten, Enums::CharacterStats::SignetsOfLearningEaten);
 
     foreach (QSpinBox *spinBox, _spinBoxesStatsMap)
         spinBox->setMaximum(spinBox->maximum() + signetsEaten);
@@ -1871,7 +1871,7 @@ bool MedianXLOfflineTools::processSaveFile()
             int baseStat = _baseStatsMap[charInfo.basicInfo.classCode].statsAtStart.statFromCode(statCode);
             charInfo.basicInfo.statsDynamicData.setProperty(statisticMetaEnum.key(i), baseStat);
         }
-        charInfo.basicInfo.statsDynamicData.setProperty("FreeStatPoints", totalPossibleStats);
+        charInfo.setValueForStatisitc(totalPossibleStats, Enums::CharacterStats::FreeStatPoints);
         if (!wasHackWarningShown)
         {
             WARNING_BOX(hackerDetected);
@@ -1894,7 +1894,7 @@ bool MedianXLOfflineTools::processSaveFile()
     if (skills > maxPossibleSkills) // check if skills are hacked
     {
         skills = maxPossibleSkills;
-        charInfo.basicInfo.statsDynamicData.setProperty("FreeSkillPoints", maxPossibleSkills);
+        charInfo.setValueForStatisitc(maxPossibleSkills, Enums::CharacterStats::FreeSkillPoints);
         _saveFileContents.replace(charInfo.skillsOffset + 2, kSkillsNumber, QByteArray(kSkillsNumber, 0));
         if (!wasHackWarningShown)
         {
@@ -2539,13 +2539,13 @@ QByteArray MedianXLOfflineTools::statisticBytes()
         }
         else if (statCode != Enums::CharacterStats::End && isExpAndLevelNotSet) // level or exp
         {
-            QObject &statsDynamicData = CharacterInfo::instance().basicInfo.statsDynamicData;
+            CharacterInfo &charInfo = CharacterInfo::instance();
             quint8 clvl = CharacterInfo::instance().basicInfo.level, newClvl = ui->levelSpinBox->value();
             if (clvl != newClvl) // set new level and experience explicitly
             {
                 addStatisticBits(result, Enums::CharacterStats::Level, Enums::CharacterStats::StatCodeLength);
                 addStatisticBits(result, newClvl, ItemDataBase::Properties()->value(Enums::CharacterStats::Level)->saveBits);
-                statsDynamicData.setProperty("Level", newClvl);
+                charInfo.setValueForStatisitc(newClvl, Enums::CharacterStats::Level);
 
                 quint32 newExp = experienceTable.at(newClvl - 1);
                 if (newExp) // must not be present for level 1 character
@@ -2553,13 +2553,13 @@ QByteArray MedianXLOfflineTools::statisticBytes()
                     addStatisticBits(result, Enums::CharacterStats::Experience, Enums::CharacterStats::StatCodeLength);
                     addStatisticBits(result, newExp, ItemDataBase::Properties()->value(Enums::CharacterStats::Experience)->saveBits);
                 }
-                statsDynamicData.setProperty("Experience", newExp);
+                charInfo.setValueForStatisitc(newExp, Enums::CharacterStats::Experience);
 
                 isExpAndLevelNotSet = false;
                 continue;
             }
             else
-                value = statsDynamicData.property(enumKey).toULongLong();
+                value = charInfo.basicInfo.statsDynamicData.property(enumKey).toULongLong();
         }
         else if (statCode == Enums::CharacterStats::End) // byte align
         {

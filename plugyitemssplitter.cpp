@@ -194,10 +194,10 @@ protected:
     virtual void closeEvent(QCloseEvent *e) { e->ignore(); }
 };
 
-void PlugyItemsSplitter::disenchantAllItems(bool toShards, bool upgradeToCrystals, bool eatSignets, bool includeUniques, bool includeSets, ItemsList *pItems /*= 0*/)
+ItemsList PlugyItemsSplitter::disenchantAllItems(bool toShards, bool upgradeToCrystals, bool eatSignets, bool includeUniques, bool includeSets, ItemsList *pItems /*= 0*/)
 {
     //pItems = itemsForSelectedRange();
-    ItemsPropertiesSplitter::disenchantAllItems(toShards, upgradeToCrystals, eatSignets, includeUniques, includeSets, pItems);
+    ItemsList disenchantedItems = ItemsPropertiesSplitter::disenchantAllItems(toShards, upgradeToCrystals, eatSignets, includeUniques, includeSets, pItems);
     if (_shouldApplyActionToAllPages)
     {
         // move signets/shards to the beginning
@@ -207,8 +207,7 @@ void PlugyItemsSplitter::disenchantAllItems(bool toShards, bool upgradeToCrystal
             progressBar.centerInWidget(this);
             progressBar.show();
 
-            // TODO: fix crash
-            foreach (ItemInfo *item, *pItems)
+            foreach (ItemInfo *item, disenchantedItems)
             {
                 if ((toShards && isArcaneShard(item)) || (!toShards && isSignetOfLearning(item)))
                 {
@@ -230,6 +229,7 @@ void PlugyItemsSplitter::disenchantAllItems(bool toShards, bool upgradeToCrystal
         }
         setItems(_allItems); // update spinbox value and range
     }
+    return disenchantedItems;
 }
 
 void PlugyItemsSplitter::upgradeGems(ItemsList *items /*= 0*/)
