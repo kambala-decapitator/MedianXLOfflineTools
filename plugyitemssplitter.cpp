@@ -174,10 +174,10 @@ bool PlugyItemsSplitter::storeItemInStorage(ItemInfo *item, int storage)
 
 //#include "plugyitemssplitter.moc"
 
-ItemsList PlugyItemsSplitter::disenchantAllItems(bool toShards, bool upgradeToCrystals, bool eatSignets, bool includeUniques, bool includeSets, ItemsList *pItems /*= 0*/)
+ItemsList PlugyItemsSplitter::disenchantAllItems(bool toShards, bool upgradeToCrystals, bool eatSignets, ItemsList *pItems /*= 0*/)
 {
     //pItems = itemsForSelectedRange();
-    ItemsList disenchantedItems = ItemsPropertiesSplitter::disenchantAllItems(toShards, upgradeToCrystals, eatSignets, includeUniques, includeSets, pItems);
+    ItemsList disenchantedItems = ItemsPropertiesSplitter::disenchantAllItems(toShards, upgradeToCrystals, eatSignets, pItems);
     if (_shouldApplyActionToAllPages)
     {
         // move signets/shards to the beginning

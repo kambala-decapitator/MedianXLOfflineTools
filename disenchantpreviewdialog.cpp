@@ -112,6 +112,8 @@ void DisenchantPreviewDialog::saveSettings()
 
 void DisenchantPreviewDialog::showEvent(QShowEvent *e)
 {
+    Q_UNUSED(e);
+
     ProgressBarModal progressBar;
     progressBar.centerInWidget(this);
     progressBar.show();

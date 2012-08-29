@@ -407,7 +407,7 @@ void ItemsViewerDialog::disenchantAllItems()
     if (dialog.exec())
     {
         ItemsList selectedItems = dialog.selectedItems();
-        currentSplitter()->disenchantAllItems(toShards, _upgradeToCrystalsCheckbox->isChecked(), _eatSignetsCheckbox->isChecked(), areUniquesSelected, areSetsSelected, &selectedItems);
+        currentSplitter()->disenchantAllItems(toShards, _upgradeToCrystalsCheckbox->isChecked(), _eatSignetsCheckbox->isChecked(), &selectedItems);
 
         if (toShards || !isUltimative())
         {

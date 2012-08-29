@@ -444,7 +444,7 @@ void ItemsPropertiesSplitter::removeItemFromList(ItemInfo *item, bool emitSignal
         emit itemsChanged();
 }
 
-ItemsList ItemsPropertiesSplitter::disenchantAllItems(bool toShards, bool upgradeToCrystals, bool eatSignets, bool includeUniques, bool includeSets, ItemsList *pItems /*= 0*/)
+ItemsList ItemsPropertiesSplitter::disenchantAllItems(bool toShards, bool upgradeToCrystals, bool eatSignets, ItemsList *pItems /*= 0*/)
 {
     ProgressBarModal progressBar;
     progressBar.centerInWidget(this);
@@ -505,7 +505,7 @@ ItemsList ItemsPropertiesSplitter::disenchantAllItems(bool toShards, bool upgrad
                 }
 
                 ItemInfo *crystal = ItemDataBase::loadItemFromFile("arcane_crystal");
-                for (int i = 0; i < crystals; ++i)
+                for (quint32 i = 0; i < crystals; ++i)
                 {
                     qApp->processEvents();
 

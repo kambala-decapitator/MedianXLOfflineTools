@@ -18,7 +18,7 @@
 static const QString kBaseFormat("<html><body bgcolor=\"black\"><div align=\"center\" style=\"color: #ffffff\">%1</div></body></html>");
 
 
-PropertiesViewerWidget::PropertiesViewerWidget(QWidget *parent) : QWidget(parent), ui(new Ui::PropertiesViewerWidget), htmlLine(htmlStringFromDiabloColorString("<hr />")), _item(0)
+PropertiesViewerWidget::PropertiesViewerWidget(QWidget *parent) : QWidget(parent), htmlLine(htmlStringFromDiabloColorString("<hr />")), ui(new Ui::PropertiesViewerWidget), _item(0)
 {
     ui->setupUi(this);
 
