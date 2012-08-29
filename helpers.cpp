@@ -108,6 +108,7 @@ QList<QTreeWidgetItem *> treeItemsForItems(const ItemsList &items)
     QList<QTreeWidgetItem *> treeItems;
     foreach (ItemInfo *item, items)
     {
+        qApp->processEvents();
         QString htmlName = ItemDataBase::completeItemName(item, true);
         QStringList list;
         QList<QColor> colors;

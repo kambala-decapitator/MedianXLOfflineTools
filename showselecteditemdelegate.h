@@ -29,8 +29,7 @@ public:
     ShowSelectedItemDelegate(QTreeWidget *treeWidget, ShowSelectedItemInterface *selectItemInterface);
     virtual ~ShowSelectedItemDelegate() {}
 
-protected:
-    bool eventFilter(QObject *obj, QEvent *event);
+    virtual bool eventFilter(QObject *obj, QEvent *event);
 
 signals:
     void showItem(ItemInfo *item);

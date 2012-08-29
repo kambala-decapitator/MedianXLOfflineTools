@@ -371,7 +371,10 @@
     <ClInclude Include="windowsincludes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="itemnamestreewidget.h">
+    <ClInclude Include="itemnamestreewidget.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="progressbarmodal.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

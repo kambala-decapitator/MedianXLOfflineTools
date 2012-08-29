@@ -2,7 +2,7 @@
 #include "itemsviewerdialog.h"
 #include "itemparser.h"
 #include "itemdatabase.h"
-#include "itemnamestreewidget.h"
+#include "itemnamestreewidget.hpp"
 
 #include <QGroupBox>
 #include <QKeyEvent>

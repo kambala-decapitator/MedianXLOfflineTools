@@ -2,13 +2,13 @@
 #include "itemstoragetableview.h"
 #include "itemdatabase.h"
 #include "itemsviewerdialog.h"
+#include "progressbarmodal.hpp"
 
 #include <QPushButton>
 #include <QDoubleSpinBox>
 #include <QHBoxLayout>
 #include <QVBoxLayout>
 #include <QKeyEvent>
-#include <QProgressBar>
 
 //#include <QtConcurrentRun>
 //#include <QFuture>
@@ -174,26 +174,6 @@ bool PlugyItemsSplitter::storeItemInStorage(ItemInfo *item, int storage)
 
 //#include "plugyitemssplitter.moc"
 
-class ProgressBarModal : public QProgressBar
-{
-public:
-    ProgressBarModal(QWidget *parent = 0) : QProgressBar(parent)
-    {
-        setRange(0, 0);
-        setTextVisible(false);
-        setWindowTitle(tr("Please wait..."));
-        setWindowFlags(Qt::CustomizeWindowHint | Qt::WindowTitleHint);
-        setWindowModality(Qt::ApplicationModal);
-        adjustSize();
-        setFixedSize(size());
-    }
-
-    void centerInWidget(QWidget *w) { move(w->mapToGlobal(QPoint((w->size().width() - size().width()) / 2, (w->size().height() - size().height()) / 2))); }
-
-protected:
-    virtual void closeEvent(QCloseEvent *e) { e->ignore(); }
-};
-
 ItemsList PlugyItemsSplitter::disenchantAllItems(bool toShards, bool upgradeToCrystals, bool eatSignets, bool includeUniques, bool includeSets, ItemsList *pItems /*= 0*/)
 {
     //pItems = itemsForSelectedRange();
@@ -207,14 +187,19 @@ ItemsList PlugyItemsSplitter::disenchantAllItems(bool toShards, bool upgradeToCr
             progressBar.centerInWidget(this);
             progressBar.show();
 
+            quint32 pageWithNewItems = 0;
             foreach (ItemInfo *item, disenchantedItems)
             {
                 if ((toShards && isArcaneShard(item)) || (!toShards && isSignetOfLearning(item)))
                 {
                     qApp->processEvents();
+
                     storeItemInStorage(item, item->storage);
+                    if (!pageWithNewItems)
+                        pageWithNewItems = item->plugyPage;
                 }
             }
+            INFO_BOX(tr("New items have been stored starting from page %1").arg(pageWithNewItems));
             // TODO: [0.4+] optimize
 //            QFutureWatcher<void> *watcher = new QFutureWatcher<void>;
 //            A *a = new A;

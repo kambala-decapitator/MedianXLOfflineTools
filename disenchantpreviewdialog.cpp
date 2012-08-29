@@ -1,5 +1,6 @@
 #include "disenchantpreviewdialog.h"
-#include "itemnamestreewidget.h"
+#include "itemnamestreewidget.hpp"
+#include "progressbarmodal.hpp"
 
 #include <QLabel>
 #include <QDialogButtonBox>
@@ -8,8 +9,10 @@
 #include <QKeyEvent>
 #include <QPushButton>
 
+#include <QSettings>
 
-DisenchantPreviewDialog::DisenchantPreviewDialog(ItemsList *items, QWidget *parent) : QDialog(parent), _label(new QLabel(this)), _itemsTreeWidget(new ItemNamesTreeWidget(this)), _items(*items)
+
+DisenchantPreviewDialog::DisenchantPreviewDialog(const ItemsList &items, QWidget *parent) : QDialog(parent), _label(new QLabel(this)), _itemsTreeWidget(new ItemNamesTreeWidget(this)), _items(items), _selectedItemsCount(0)
 {
     setWindowFlags(windowFlags() & ~Qt::WindowContextHelpButtonHint);
     setWindowTitle(tr("Disenchant preview"));
@@ -26,24 +29,31 @@ DisenchantPreviewDialog::DisenchantPreviewDialog(ItemsList *items, QWidget *pare
     selectItemDelegate = new ShowSelectedItemDelegate(_itemsTreeWidget, this);
     _itemsTreeWidget->installEventFilter(static_cast<QDialog *>(this)); // to intercept pressing Space
 
-    QList<QTreeWidgetItem *> treeItems = treeItemsForItems(_items);
-    foreach (QTreeWidgetItem *treeItem, treeItems)
-        treeItem->setText(0, "    " + treeItem->text(0)); // FIXME: dirty hack to place checkboxes near text
-    _itemsTreeWidget->addTopLevelItems(treeItems);
-    _itemsTreeWidget->setColumnWidth(0, width() / 2);
-    _itemsTreeWidget->setRootIsDecorated(false);
-    // TODO: load/save settings
-    for (int i = 0, n = _itemsTreeWidget->topLevelItemCount(); i < n; ++i)
-    {
-        QCheckBox *checkBox = new QCheckBox(_itemsTreeWidget);
-        checkBox->setChecked(true);
-        checkBox->setFocusPolicy(Qt::NoFocus);
-        connect(checkBox, SIGNAL(toggled(bool)), SLOT(checkboxStateChanged(bool)));
-        _itemsTreeWidget->setItemWidget(_itemsTreeWidget->topLevelItem(i), 0, checkBox);
-    }
+    //ProgressBarModal progressBar;
+    //progressBar.centerInWidget(this);
+    //progressBar.show();
 
-    _selectedItemsCount = _items.size();
-    updateLabelText();
+    //QList<QTreeWidgetItem *> treeItems = treeItemsForItems(_items);
+    //_itemsTreeWidget->addTopLevelItems(treeItems);
+    //foreach (QTreeWidgetItem *treeItem, treeItems)
+    //{
+    //    qApp->processEvents();
+    //    treeItem->setText(0, "    " + treeItem->text(0)); // FIXME: dirty hack to place checkboxes near text
+
+    //    QCheckBox *checkBox = new QCheckBox(_itemsTreeWidget);
+    //    checkBox->setChecked(true);
+    //    checkBox->setFocusPolicy(Qt::NoFocus);
+    //    connect(checkBox, SIGNAL(toggled(bool)), SLOT(checkboxStateChanged(bool)));
+    //    _itemsTreeWidget->setItemWidget(treeItem, 0, checkBox);
+    //}
+    //_itemsTreeWidget->setRootIsDecorated(false);
+    //_itemsTreeWidget->resizeColumnToContents(0);
+    //_itemsTreeWidget->resizeColumnToContents(1);
+
+    //_selectedItemsCount = _items.size();
+    //updateLabelText();
+
+    loadSettings();
 }
 
 ItemInfo *DisenchantPreviewDialog::itemForTreeItem(QTreeWidgetItem *treeItem)
@@ -84,4 +94,46 @@ void DisenchantPreviewDialog::checkboxStateChanged(bool checked)
 void DisenchantPreviewDialog::updateLabelText()
 {
     _label->setText(tr("Select items to disenchant (%1/%2 selected):").arg(_selectedItemsCount).arg(_items.size()));
+}
+
+void DisenchantPreviewDialog::loadSettings()
+{
+    QSettings settings;
+    settings.beginGroup("disenchantDialog");
+    restoreGeometry(settings.value("geometry").toByteArray());
+}
+
+void DisenchantPreviewDialog::saveSettings()
+{
+    QSettings settings;
+    settings.beginGroup("disenchantDialog");
+    settings.setValue("geometry", saveGeometry());
+}
+
+void DisenchantPreviewDialog::showEvent(QShowEvent *e)
+{
+    ProgressBarModal progressBar;
+    progressBar.centerInWidget(this);
+    progressBar.show();
+
+    QList<QTreeWidgetItem *> treeItems = treeItemsForItems(_items);
+    _itemsTreeWidget->addTopLevelItems(treeItems);
+    foreach (QTreeWidgetItem *treeItem, treeItems)
+    {
+        qApp->processEvents();
+
+        treeItem->setText(0, "    " + treeItem->text(0)); // FIXME: dirty hack to place checkboxes near text
+
+        QCheckBox *checkBox = new QCheckBox(_itemsTreeWidget);
+        checkBox->setChecked(true);
+        checkBox->setFocusPolicy(Qt::NoFocus);
+        connect(checkBox, SIGNAL(toggled(bool)), SLOT(checkboxStateChanged(bool)));
+        _itemsTreeWidget->setItemWidget(treeItem, 0, checkBox);
+    }
+    _itemsTreeWidget->setRootIsDecorated(false);
+    _itemsTreeWidget->resizeColumnToContents(0);
+    _itemsTreeWidget->resizeColumnToContents(1);
+
+    _selectedItemsCount = _items.size();
+    updateLabelText();
 }

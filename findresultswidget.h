@@ -25,12 +25,6 @@ public:
 
     virtual ItemInfo *itemForTreeItem(QTreeWidgetItem *treeItem);
 
-//protected:
-//    bool eventFilter(QObject *obj, QEvent *event);
-
-//signals:
-//    void showItem(ItemInfo *item);
-
 private:
     ItemNamesTreeWidget *_resultsTreeWidget;
     QMap<int, ItemsList> _foundItemsMap;

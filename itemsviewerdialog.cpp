@@ -402,7 +402,7 @@ void ItemsViewerDialog::disenchantAllItems()
             if ((toShards && ItemDataBase::canDisenchantIntoArcaneShards(item)) || (!toShards && ItemDataBase::canDisenchantIntoSignetOfLearning(item)))
                 filteredItems += item;
 
-    DisenchantPreviewDialog dialog(&filteredItems, this);
+    DisenchantPreviewDialog dialog(filteredItems, this);
     connect(dialog.selectItemDelegate, SIGNAL(showItem(ItemInfo *)), SLOT(showItem(ItemInfo *)));
     if (dialog.exec())
     {

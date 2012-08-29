@@ -17,15 +17,19 @@ class DisenchantPreviewDialog : public QDialog, public ShowSelectedItemInterface
     Q_OBJECT
 
 public:
-    DisenchantPreviewDialog(ItemsList *items, QWidget *parent = 0);
+    DisenchantPreviewDialog(const ItemsList &items, QWidget *parent = 0);
     virtual ~DisenchantPreviewDialog() {}
 
-    virtual ItemInfo *itemForTreeItem(QTreeWidgetItem *treeItem);
+    virtual bool eventFilter(QObject *obj, QEvent *e);
 
+    virtual ItemInfo *itemForTreeItem(QTreeWidgetItem *treeItem);
     ItemsList selectedItems() const;
 
+public slots:
+    virtual void done(int r) { saveSettings(); QDialog::done(r); }
+
 protected:
-    bool eventFilter(QObject *obj, QEvent *e);
+    virtual void showEvent(QShowEvent *e);
 
 private slots:
     void checkboxStateChanged(bool checked);
@@ -39,6 +43,8 @@ private:
     quint32 _selectedItemsCount;
 
     void updateLabelText();
+    void loadSettings();
+    void saveSettings();
 };
 
 #endif // DISENCHANTPREVIEWDIALOG_H

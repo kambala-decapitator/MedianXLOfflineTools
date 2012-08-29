@@ -74,7 +74,9 @@ HEADERS += medianxlofflinetools.h \
            gearitemssplitter.h \
            kexpandablegroupbox.h \
            showselecteditemdelegate.h \
-           disenchantpreviewdialog.h
+           disenchantpreviewdialog.h \
+           itemnamestreewidget.hpp \
+           progressbarmodal.hpp
 
 FORMS += medianxlofflinetools.ui \
          resurrectpenaltydialog.ui \

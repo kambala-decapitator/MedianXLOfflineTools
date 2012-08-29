@@ -1,5 +1,5 @@
-#ifndef ITEMNAMESTREEWIDGET_H
-#define ITEMNAMESTREEWIDGET_H
+#ifndef ITEMNAMESTREEWIDGET_HPP
+#define ITEMNAMESTREEWIDGET_HPP
 
 #include <QTreeWidget>
 
@@ -23,4 +23,4 @@ public:
     virtual ~ItemNamesTreeWidget() {}
 };
 
-#endif // ITEMNAMESTREEWIDGET_H
+#endif // ITEMNAMESTREEWIDGET_HPP

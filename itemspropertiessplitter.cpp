@@ -8,6 +8,7 @@
 #include "itemsviewerdialog.h"
 #include "reversebitwriter.h"
 #include "characterinfo.hpp"
+#include "progressbarmodal.hpp"
 
 #include <QMenu>
 
@@ -31,7 +32,7 @@ ItemsPropertiesSplitter::ItemsPropertiesSplitter(ItemStorageTableView *itemsView
     setChildrenCollapsible(false);
     setStretchFactor(1, 5);
 
-    _itemsView->setFocus();
+    //_itemsView->setFocus();
 
     connect(_itemsView, SIGNAL(customContextMenuRequested(const QPoint &)), SLOT(showContextMenu(const QPoint &)));
 }
@@ -106,6 +107,7 @@ void ItemsPropertiesSplitter::showItem(ItemInfo *item)
 
 void ItemsPropertiesSplitter::showFirstItem()
 {
+    _itemsView->setFocus(); // otherwise 
     // sometimes item is selected, but there's no visual selection
     if (_itemsView->selectionModel()->selectedIndexes().isEmpty() || !selectedItem(false))
         showItem(_itemsModel->firstItem());
@@ -261,7 +263,7 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
             }
         }
 
-        if (_itemActions[EatSignetOfLearning]->isEnabled())
+        if (_itemActions[EatSignetOfLearning]->data().toUInt() > 0)
             actions << _itemActions[EatSignetOfLearning];
 
         actions << separator() << _itemActions[Delete];
@@ -444,11 +446,17 @@ void ItemsPropertiesSplitter::removeItemFromList(ItemInfo *item, bool emitSignal
 
 ItemsList ItemsPropertiesSplitter::disenchantAllItems(bool toShards, bool upgradeToCrystals, bool eatSignets, bool includeUniques, bool includeSets, ItemsList *pItems /*= 0*/)
 {
+    ProgressBarModal progressBar;
+    progressBar.centerInWidget(this);
+    progressBar.show();
+
     ItemsList &items = pItems ? *pItems : _allItems, disenchantedItems;
     quint32 disenchantedItemsNumber = items.size(), signetsEaten = 0, signetsEatenTotal = CharacterInfo::instance().valueOfStatistic(Enums::CharacterStats::SignetsOfLearningEaten);
     ItemInfo *disenchantedItem = ItemDataBase::loadItemFromFile(toShards ? "arcane_shard" : "signet_of_learning");
     foreach (ItemInfo *item, items)
     {
+        qApp->processEvents();
+
         bool shouldDisenchant = true;
         if (!toShards && eatSignets)
         {
@@ -472,6 +480,7 @@ ItemsList ItemsPropertiesSplitter::disenchantAllItems(bool toShards, bool upgrad
             quint32 shards = 0;
             foreach (ItemInfo *item, disenchantedItems)
             {
+                qApp->processEvents();
                 if (isArcaneShard(item))
                     ++shards;
                 else if (isArcaneShard2(item))
@@ -487,12 +496,19 @@ ItemsList ItemsPropertiesSplitter::disenchantAllItems(bool toShards, bool upgrad
             {
                 int storage = disenchantedItems.first()->storage;
                 foreach (ItemInfo *item, disenchantedItems)
+                {
                     if (isArcaneShard(item) || isArcaneShard2(item) || isArcaneShard3(item) || isArcaneShard4(item))
+                    {
+                        qApp->processEvents();
                         performDeleteItem(item, false);
+                    }
+                }
 
                 ItemInfo *crystal = ItemDataBase::loadItemFromFile("arcane_crystal");
                 for (int i = 0; i < crystals; ++i)
                 {
+                    qApp->processEvents();
+
                     ItemInfo *crystalCopy = new ItemInfo(*crystal);
                     storeItemInStorage(crystalCopy, storage);
                 }
@@ -501,6 +517,8 @@ ItemsList ItemsPropertiesSplitter::disenchantAllItems(bool toShards, bool upgrad
                 quint8 shardsLeft = shards - crystals * kShardsPerCrystal;
                 for (int i = 0; i < shardsLeft; ++i)
                 {
+                    qApp->processEvents();
+
                     ItemInfo *shard = new ItemInfo(*disenchantedItem);
                     storeItemInStorage(shard, storage);
                 }
@@ -540,6 +558,7 @@ ItemsList ItemsPropertiesSplitter::disenchantAllItems(bool toShards, bool upgrad
         else
             text = baseTextFormat.arg(signetsText);
     }
+    progressBar.hide();
 
     delete disenchantedItem;
     emit itemsChanged();
