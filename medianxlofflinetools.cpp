@@ -1519,10 +1519,10 @@ void MedianXLOfflineTools::connectSignals()
 
     // edit
     connect(ui->actionRename, SIGNAL(triggered()), SLOT(rename()));
-    connect(ui->actionFind, SIGNAL(triggered()), SLOT(findItem()));
 
     // items
     connect(ui->actionShowItems, SIGNAL(triggered()), SLOT(showItems()));
+    connect(ui->actionFind, SIGNAL(triggered()), SLOT(findItem()));
     connect(ui->actionGiveCube, SIGNAL(triggered()), SLOT(giveCube()));
 
     // export
@@ -1547,7 +1547,7 @@ void MedianXLOfflineTools::connectSignals()
     connect(ui->convertToSoftcoreCheckBox, SIGNAL(toggled(bool)), SLOT(convertToSoftcore(bool)));
     connect(ui->respecSkillsCheckBox, SIGNAL(toggled(bool)), SLOT(respecSkills(bool)));
     //connect(ui->currentDifficultyComboBox, SIGNAL(currentIndexChanged(int)), SLOT(currentDifficultyChanged(int)));
-    connect(ui->activateWaypointsCheckBox, SIGNAL(clicked()), SLOT(modify()));
+    connect(ui->activateWaypointsCheckBox, SIGNAL(toggled(bool)), SLOT(modify()));
 }
 
 void MedianXLOfflineTools::updateRecentFilesActions()
