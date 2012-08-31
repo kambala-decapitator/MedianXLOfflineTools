@@ -5,6 +5,7 @@
 #include "enums.h"
 
 #include <QWidget>
+#include <QAction>
 
 
 class ItemsPropertiesSplitter;
@@ -34,14 +35,21 @@ public:
         LastIndex = HCStashIndex
     };
 
+    enum ShowDisenchantPreviewOption
+    {
+        Always = 0,
+        OnlyCurrentPage,
+        Never
+    };
+
     static const int kCellSize;
 
-    static QList<int> &kRows(); // TODO: [0.4] move to some other place
+    static const QList<int> &kRows(); // TODO: [0.4] move to some other place
     static int rowsInStorageAtIndex(int storage);
     static int tabIndexFromItemStorage(int storage);
     static const QString &tabNameAtIndex(int i);
 
-    explicit ItemsViewerDialog(const QHash<int, bool> &plugyStashesExistenceHash, QWidget *parent = 0);
+    explicit ItemsViewerDialog(const QHash<int, bool> &plugyStashesExistenceHash, quint8 showDisenchantPreviewOption, QWidget *parent = 0);
     virtual ~ItemsViewerDialog() {}
 
     void updateItems(const QHash<int, bool> &plugyStashesExistenceHash, bool isCreatingTabs);
@@ -54,10 +62,12 @@ public:
     ItemsPropertiesSplitter *currentSplitter();
 
 public slots:
-    void setCubeTabDisabled(bool disabled);
     virtual void reject();
+
+    void setCubeTabDisabled(bool disabled);
     void showItem(ItemInfo *item);
     void updateButtonsState();
+    void showDisenchantPreviewActionTriggered(QAction *action) { _showDisenchantPreviewOption = static_cast<ShowDisenchantPreviewOption>(action->data().toUInt()); }
 
 signals:
     void cubeDeleted(bool = true);  // connect directly to QAction's setEnabled() slot
@@ -83,6 +93,7 @@ private:
     QTabWidget *_tabWidget;
     quint64 _itemsTotal;
     QWidget *_itemManagementWidget;
+    ShowDisenchantPreviewOption _showDisenchantPreviewOption;
 
     QGroupBox *_disenchantBox;
     QPushButton *_disenchantToShardsButton, *_disenchantToSignetButton;

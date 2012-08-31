@@ -107,7 +107,7 @@ private:
     ExperienceIndicatorGroupBox *_mercExpGroupBox, *_expGroupBox;
     QGroupBox *_questsGroupBox;
     QHash<int, QList<QCheckBox *> > _checkboxesQuestsHash;
-    QActionGroup *_backupLimitsGroup, *_backupFormatsGroup;
+    QActionGroup *_backupLimitsGroup, *_showDisenchantPreviewGroup;
 
     // data
     QString _charPath;

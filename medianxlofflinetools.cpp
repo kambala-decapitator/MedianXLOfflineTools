@@ -42,7 +42,7 @@
 // additional defines
 
 #ifdef QT_NO_DEBUG
-#define RELEASE_DATE "26.08.2012" // TODO: don't forget to change
+#define RELEASE_DATE "01.09.2012" // TODO: don't forget to change
 #else
 #include <QDebug>
 
@@ -74,12 +74,15 @@ const int MedianXLOfflineTools::kMaxRecentFiles = 10;
 // ctor
 
 MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *parent, Qt::WFlags flags) : QMainWindow(parent, flags), ui(new Ui::MedianXLOfflineToolsClass), _findItemsDialog(0),
-    _backupLimitsGroup(new QActionGroup(this)), _backupFormatsGroup(new QActionGroup(this)), hackerDetected(tr("1337 hacker detected! Please, play legit.")), //difficulties(QStringList() << tr("Hatred") << tr("Terror") << tr("Destruction")),
+    _backupLimitsGroup(new QActionGroup(this)), _showDisenchantPreviewGroup(new QActionGroup(this)), hackerDetected(tr("1337 hacker detected! Please, play legit.")), //difficulties(QStringList() << tr("Hatred") << tr("Terror") << tr("Destruction")),
     maxValueFormat(tr("Max: %1")), minValueFormat(tr("Min: %1")), investedValueFormat(tr("Invested: %1")),
     kForumThreadHtmlLinks(tr("<a href=\"http://modsbylaz.14.forumer.com/viewtopic.php?t=23147\">Official Median XL Forum thread</a><br>"
                              "<a href=\"http://forum.worldofplayers.ru/showthread.php?t=34489\">Official Russian Median XL Forum thread</a>")), _isLoaded(false)
 {
     ui->setupUi(this);
+
+    ui->actionFindNext->setShortcut(QKeySequence::FindNext);
+    ui->actionFindPrevious->setShortcut(QKeySequence::FindPrevious);
 
     ui->actionBackups1->setData(1);
     ui->actionBackups2->setData(2);
@@ -96,12 +99,19 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *pare
     ui->actionBackupFormatReadable ->setText(tr("<filename>_<%1>", "param is date format expressed in yyyy, MM, hh, etc.").arg(kTimeFormatReadable) + "." + kBackupExtension);
     ui->actionBackupFormatTimestamp->setText(tr("<filename>_<UNIX timestamp>") + "." + kBackupExtension);
 
-    _backupFormatsGroup->setExclusive(true);
-    _backupFormatsGroup->addAction(ui->actionBackupFormatReadable);
-    _backupFormatsGroup->addAction(ui->actionBackupFormatTimestamp);
+    QActionGroup *backupFormatsGroup = new QActionGroup(this);
+    backupFormatsGroup->setExclusive(true);
+    backupFormatsGroup->addAction(ui->actionBackupFormatReadable);
+    backupFormatsGroup->addAction(ui->actionBackupFormatTimestamp);
 
-    ui->actionFindNext->setShortcut(QKeySequence::FindNext);
-    ui->actionFindPrevious->setShortcut(QKeySequence::FindPrevious);
+    ui->actionPreviewDisenchantAlways->setData(0);
+    ui->actionPreviewDisenchantForSinglePage->setData(1);
+    ui->actionPreviewDisenchantNever->setData(2);
+
+    _showDisenchantPreviewGroup->setExclusive(true);
+    _showDisenchantPreviewGroup->addAction(ui->actionPreviewDisenchantAlways);
+    _showDisenchantPreviewGroup->addAction(ui->actionPreviewDisenchantForSinglePage);
+    _showDisenchantPreviewGroup->addAction(ui->actionPreviewDisenchantNever);
 
     // TODO: [0.4] remove when implementing export info
     ui->menuExport->removeAction(ui->actionExportCharacterInfo);
@@ -906,12 +916,13 @@ void MedianXLOfflineTools::showItems(bool activate /*= true*/)
     }
     else
     {
-        _itemsDialog = new ItemsViewerDialog(getPlugyStashesExistenceHash(), this);
+        _itemsDialog = new ItemsViewerDialog(getPlugyStashesExistenceHash(), _showDisenchantPreviewGroup->checkedAction()->data().toUInt(), this);
         connect(_itemsDialog->tabWidget(), SIGNAL(currentChanged(int)), SLOT(itemStorageTabChanged(int)));
         connect(_itemsDialog, SIGNAL(cubeDeleted(bool)), ui->actionGiveCube, SLOT(setEnabled(bool)));
         connect(_itemsDialog, SIGNAL(closing(bool)), ui->menuGoToPage, SLOT(setDisabled(bool)));
         connect(_itemsDialog, SIGNAL(itemsChanged(bool)), SLOT(setModified(bool)));
         connect(_itemsDialog, SIGNAL(signetsOfLearningEaten(int)), SLOT(eatSignetsOfLearning(int)));
+        connect(_showDisenchantPreviewGroup, SIGNAL(triggered(QAction *)), _itemsDialog, SLOT(showDisenchantPreviewActionTriggered(QAction *)));
         _itemsDialog->show();
 
         if (!activate)
@@ -1030,11 +1041,14 @@ void MedianXLOfflineTools::aboutApp()
         tr("<b>Credits:</b>"
            "<ul>"
              "<li><a href=\"http://modsbylaz.hugelaser.com/\">BrotherLaz</a> for this awesome mod</li>"
+             "<li><a href=\"http://modsbylaz.14.forumer.com/profile.php?mode=viewprofile&u=947\">MarcoNecroX</a> for a hot extension of Median XL called <a href=\"http://modsbylaz.14.forumer.com/viewtopic.php?t=24559\">Ultimative</a></li>"
              "<li><a href=\"http://modsbylaz.14.forumer.com/profile.php?mode=viewprofile&u=33805\">grig</a> for the Perl source of "
                  "<a href=\"http://grig.vlexofree.com/\">Median XL Online Tools</a> and tips</li>"
              "<li><a href=\"http://phrozenkeep.hugelaser.com/index.php?ind=reviews&op=section_view&idev=4\">Phrozen Keep File Guides</a> for tons of useful information on txt sources</li>"
-             "<li><a href=\"http://modsbylaz.14.forumer.com/profile.php?mode=viewprofile&u=44046\">FixeR</a>, <a href=\"http://forum.worldofplayers.ru/member.php?u=84592\">Zelgadiss</a> and "
-                 "<a href=\"http://modsbylaz.14.forumer.com/profile.php?mode=viewprofile&u=44840\">moonra</a> for intensive testing and tips on GUI & functionality</li>"
+             "<li><a href=\"http://modsbylaz.14.forumer.com/profile.php?mode=viewprofile&u=44046\">FixeR</a>, <a href=\"http://forum.worldofplayers.ru/member.php?u=84592\">Zelgadiss</a>, "
+                 "<a href=\"http://modsbylaz.14.forumer.com/profile.php?mode=viewprofile&u=44840\">moonra</a>, <a href=\"http://modsbylaz.14.forumer.com/profile.php?mode=viewprofile&u=205\">Vilius</a>, "
+                 "<a href=\"http://modsbylaz.14.forumer.com/profile.php?mode=viewprofile&u=1283\">Delegus</a>, <a href=\"http://modsbylaz.14.forumer.com/profile.php?mode=viewprofile&u=50438\">aahz</a> and "
+                 "<a href=\"http://modsbylaz.14.forumer.com/profile.php?mode=viewprofile&u=50844\">HerrNieschnell</a> for intensive testing and tips on GUI & functionality</li>"
            "</ul>")
     );
     aboutBox.exec();
@@ -1365,8 +1379,10 @@ void MedianXLOfflineTools::loadSettings()
     settings.beginGroup("options");
     ui->actionLoadLastUsedCharacter->setChecked(settings.value("loadLastCharacter", true).toBool());
     ui->actionWarnWhenColoredName->setChecked(settings.value("warnWhenColoredName", true).toBool());
+
     ui->actionOpenItemsAutomatically->setChecked(settings.value("openItemsAutomatically").toBool());
-    ui->actionReloadSharedStashes->setChecked(settings.value("reloadSharedStashes").toBool());
+    int i = settings.value("showDisenchantPreview", 0).toInt();
+    _showDisenchantPreviewGroup->actions().at(i >= 0 && i < _showDisenchantPreviewGroup->actions().size() ? i : 0)->setChecked(true);
 
     bool backupsEnabled = settings.value("makeBackups", true).toBool();
     ui->actionBackup->setChecked(backupsEnabled);
@@ -1399,6 +1415,7 @@ void MedianXLOfflineTools::loadSettings()
     else
         ui->actionBackups5->setChecked(true);
 
+    ui->actionReloadSharedStashes->setChecked(settings.value("reloadSharedStashes").toBool());
     settings.beginGroup("autoOpenSharedStashes");
     ui->actionAutoOpenPersonalStash->setChecked(settings.value("personal", true).toBool());
     ui->actionAutoOpenSharedStash->setChecked(settings.value("shared", true).toBool());
@@ -1424,13 +1441,15 @@ void MedianXLOfflineTools::saveSettings() const
     settings.beginGroup("options");
     settings.setValue("loadLastCharacter", ui->actionLoadLastUsedCharacter->isChecked());
     settings.setValue("warnWhenColoredName", ui->actionWarnWhenColoredName->isChecked());
+
     settings.setValue("openItemsAutomatically", ui->actionOpenItemsAutomatically->isChecked());
-    settings.setValue("reloadSharedStashes", ui->actionReloadSharedStashes->isChecked());
+    settings.setValue("showDisenchantPreview", _showDisenchantPreviewGroup->checkedAction()->data().toUInt());
 
     settings.setValue("makeBackups", ui->actionBackup->isChecked());
     settings.setValue("backupFormatIsTimestamp", ui->actionBackupFormatTimestamp->isChecked());
     settings.setValue("backupLimit", _backupLimitsGroup->checkedAction()->data().toInt());
 
+    settings.setValue("reloadSharedStashes", ui->actionReloadSharedStashes->isChecked());
     settings.beginGroup("autoOpenSharedStashes");
     settings.setValue("personal", ui->actionAutoOpenPersonalStash->isChecked());
     settings.setValue("shared", ui->actionAutoOpenSharedStash->isChecked());

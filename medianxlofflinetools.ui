@@ -657,6 +657,14 @@ p, li { white-space: pre-wrap; }
      <addaction name="actionBackupFormatReadable"/>
      <addaction name="actionBackupFormatTimestamp"/>
     </widget>
+    <widget class="QMenu" name="menuShow_disenchant_preview_dialog">
+     <property name="title">
+      <string>Show disenchant preview dialog</string>
+     </property>
+     <addaction name="actionPreviewDisenchantAlways"/>
+     <addaction name="actionPreviewDisenchantForSinglePage"/>
+     <addaction name="actionPreviewDisenchantNever"/>
+    </widget>
     <addaction name="actionLoadLastUsedCharacter"/>
     <addaction name="actionWarnWhenColoredName"/>
     <addaction name="separator"/>
@@ -665,6 +673,8 @@ p, li { white-space: pre-wrap; }
     <addaction name="menuBackupNameFormat"/>
     <addaction name="separator"/>
     <addaction name="actionOpenItemsAutomatically"/>
+    <addaction name="menuShow_disenchant_preview_dialog"/>
+    <addaction name="separator"/>
     <addaction name="menuAuto_open_shared_stashes"/>
     <addaction name="actionReloadSharedStashes"/>
     <addaction name="separator"/>
@@ -1320,6 +1330,33 @@ p, li { white-space: pre-wrap; }
   <action name="actionBackupFormatTimestamp">
    <property name="checkable">
     <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionPreviewDisenchantAlways">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Always</string>
+   </property>
+  </action>
+  <action name="actionPreviewDisenchantForSinglePage">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Only for single page</string>
+   </property>
+  </action>
+  <action name="actionPreviewDisenchantNever">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Never</string>
    </property>
   </action>
  </widget>

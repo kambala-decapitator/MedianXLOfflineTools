@@ -31,7 +31,8 @@
 
 const int ItemsViewerDialog::kCellSize = 32;
 
-ItemsViewerDialog::ItemsViewerDialog(const QHash<int, bool> &plugyStashesExistenceHash, QWidget *parent) : QDialog(parent), _tabWidget(new QTabWidget(this)), _itemManagementWidget(new QWidget(this))
+ItemsViewerDialog::ItemsViewerDialog(const QHash<int, bool> &plugyStashesExistenceHash, quint8 showDisenchantPreviewOption, QWidget *parent) : QDialog(parent), _tabWidget(new QTabWidget(this)), _itemManagementWidget(new QWidget(this)),
+    _showDisenchantPreviewOption(static_cast<ShowDisenchantPreviewOption>(showDisenchantPreviewOption))
 {
     setAttribute(Qt::WA_DeleteOnClose);
     setWindowFlags(windowFlags() & ~Qt::WindowContextHelpButtonHint | Qt::WindowMinimizeButtonHint | Qt::WindowMaximizeButtonHint);
@@ -402,11 +403,19 @@ void ItemsViewerDialog::disenchantAllItems()
             if ((toShards && ItemDataBase::canDisenchantIntoArcaneShards(item)) || (!toShards && ItemDataBase::canDisenchantIntoSignetOfLearning(item)))
                 filteredItems += item;
 
-    DisenchantPreviewDialog dialog(filteredItems, this);
-    connect(dialog.selectItemDelegate, SIGNAL(showItem(ItemInfo *)), SLOT(showItem(ItemInfo *)));
-    if (dialog.exec())
+    ItemsList selectedItems;
+    if (_showDisenchantPreviewOption == Always || (_showDisenchantPreviewOption == OnlyCurrentPage && !_applyActionToAllPagesCheckbox->isChecked()))
     {
-        ItemsList selectedItems = dialog.selectedItems();
+        DisenchantPreviewDialog dialog(filteredItems, this);
+        connect(dialog.selectItemDelegate, SIGNAL(showItem(ItemInfo *)), SLOT(showItem(ItemInfo *)));
+        if (dialog.exec())
+            selectedItems = dialog.selectedItems();
+    }
+    else
+        selectedItems = filteredItems;
+
+    if (!selectedItems.isEmpty())
+    {
         currentSplitter()->disenchantAllItems(toShards, _upgradeToCrystalsCheckbox->isChecked(), _eatSignetsCheckbox->isChecked(), &selectedItems);
 
         if (toShards || !isUltimative())
@@ -446,7 +455,7 @@ void ItemsViewerDialog::updateBeltItemsCoordinates(bool restore, ItemsList *pBel
     }
 }
 
-QList<int> &ItemsViewerDialog::kRows()
+const QList<int>& ItemsViewerDialog::kRows()
 {
     static QList<int> rows;
     if (rows.isEmpty())
