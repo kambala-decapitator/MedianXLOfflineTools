@@ -333,15 +333,16 @@ PropertiesMultiMap ItemParser::parseItemProperties(ReverseBitReader &bitReader, 
             if (hasMinElementalDamage)
             {
                 // get max elemental damage
+                ItemProperty *newProp = new ItemProperty;
                 ItemPropertyTxt *maxElementalDamageProp = ItemDataBase::Properties()->value(id);
-                propToAdd->value = bitReader.readNumber(maxElementalDamageProp->bits) - maxElementalDamageProp->add;
+                newProp->value = bitReader.readNumber(maxElementalDamageProp->bits) - maxElementalDamageProp->add;
 
                 if (id == 53) // +%d magic damage
                 {
                     QString desc = maxElementalDamageProp->descPositive;
-                    propToAdd->displayString = desc.replace("%d", "%1").arg(propToAdd->value);
+                    newProp->displayString = desc.replace("%d", "%1").arg(newProp->value);
                 }
-                props.insert(id, new ItemProperty(*propToAdd));
+                props.insert(id, newProp);
 
                 if (hasLength) // cold or poison length
                 {
@@ -354,7 +355,7 @@ PropertiesMultiMap ItemParser::parseItemProperties(ReverseBitReader &bitReader, 
                     if (id == 59) // poison length
                     {
                         // set correct min/max poison damage
-                        ItemProperty *newProp = new ItemProperty(qRound(props.value(id - 2)->value * length / 256.0));
+                        newProp = new ItemProperty(qRound(props.value(id - 2)->value * length / 256.0));
                         props.replace(id - 1, newProp);
                         props.replace(id - 2, new ItemProperty(*newProp));
                     }

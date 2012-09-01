@@ -60,8 +60,10 @@ elvenpet	57		0	1		1	1	1	ElvensongName	1	2	druidicon									0
 companionspet	58		0	1					WolfCompanion		2	barbarianicon									0
 jinnspet	59		0	1		1	1	1	JinnPet	1	2	necromancericon									0
 totemboundspet	60		0	1		1	1	1	TotemPet	1	2	necromancericon									0
-veilkingspet	61		0	1		1	1	1	VKPet	1	2	necromancericon									0
+veilkingspet	61	2	0	1		1	1	1	VKPet	1	2	necromancericon									0
 hornedgodspet	62		0	1		1	1	1	HornedGod	1	2	sorceressicon									0
 midnightfaespet	63		0	1					MidnightFaesPet		2	amazonicon									0
 devilcatspet	64		0	1					DevilCat2		2	sorceressicon									0
 dragonspet	65		0	1					DragonComp2		2	amazonicon									0
+familiarbatspet2	66		0	1		1	1	1	NewAsnPet	1	2	assassinicon									0
+veilkingspet2	67	2	0	1		1	1	1	VKPet	1	2	necromancericon									0

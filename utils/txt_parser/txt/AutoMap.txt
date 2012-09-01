@@ -274,40 +274,96 @@ LevelName	TileName	Style	StartSequence	EndSequence	Type1	Cel1	Type2	Cel2	Type2	C
 1 Crypt	wle	0	0	0	WLE B	33		-1		-1		-1
 1 Crypt	wle	1	0	0	WLE A	32		-1		-1		-1
 1 Crypt	wle	1	1	1	WLE B	33		-1		-1		-1
-1 Barracks	wre	0	1	1	WRE B	31		-1		-1		-1
-1 Barracks	wre	0	0	0	WRE A	30		-1		-1		-1
-1 Barracks	wre	1	1	1	WRE B	31		-1		-1		-1
-1 Barracks	wre	1	0	0	WRE A	30		-1		-1		-1
-1 Barracks	wle	0	1	1	WLE B	33		-1		-1		-1
-1 Barracks	wle	0	0	0	WLE A	32		-1		-1		-1
-1 Barracks	wle	1	1	1	WLE B	33		-1		-1		-1
-1 Barracks	wle	1	0	0	WLE A	32		-1		-1		-1
-1 Barracks	wr	4	-1	-1	WR A	20		-1		-1		-1
-1 Barracks	wl	4	-1	-1	WL A	21		-1		-1		-1
-1 Barracks	wtlr	4	-1	-1	WTLL	24		-1		-1		-1
-1 Barracks	wtll	4	-1	-1	WTLL	24		-1		-1		-1
-1 Barracks	wbr	4	-1	-1	WBR	25		-1		-1		-1
-1 Barracks	wtr	4	-1	-1	WTR	23		-1		-1		-1
-1 Barracks	wbl	4	-1	-1	WBL	22		-1		-1		-1
-1 Barracks	co	4	-1	-1	WBR	25		-1		-1		-1
-1 Barracks	wrd	4	-1	-1	WRD B	27		-1		-1		-1
-1 Barracks	wrd	4	-1	-1	WRD A	26		-1		-1		-1
-1 Barracks	wld	4	-1	-1	WLD B	29		-1		-1		-1
-1 Barracks	wld	4	-1	-1	WLD A	28		-1		-1		-1
-1 Barracks	wrd	5	0	0	WRD B	27		-1		-1		-1
-1 Barracks	wrd	5	1	1	WRD A	26		-1		-1		-1
-1 Barracks	wld	5	1	1	WLD B	29		-1		-1		-1
-1 Barracks	wld	5	0	0	WLD A	28		-1		-1		-1
-1 Barracks	wld	5	2	2	WL A	21		-1		-1		-1
-1 Barracks	wr	5	-1	-1	WR A	20		-1		-1		-1
-1 Barracks	wl	5	-1	-1	WL A	21		-1		-1		-1
-1 Barracks	wtlr	5	-1	-1	WTLL	24		-1		-1		-1
-1 Barracks	wtll	5	-1	-1	WTLL	24		-1		-1		-1
-1 Barracks	wbr	5	-1	-1	WBR	25		-1		-1		-1
-1 Barracks	wtr	5	-1	-1	WTR	23		-1		-1		-1
-1 Barracks	wbl	5	-1	-1	WBL	22		-1		-1		-1
-1 Barracks	co	5	-1	-1	WBR	25		-1		-1		-1
-1 Barracks	wr	7	-1	-1	WR A	20		-1		-1		-1
+1 Crypt	wr	48	-1	-1	WR A	20	WR B	38		-1		-1
+1 Crypt	wl	48	-1	-1	WL A	21	WL B	39		-1		-1
+1 Crypt	wtlr	48	-1	-1	WTLL	24		-1		-1		-1
+1 Crypt	wtll	48	-1	-1	WTLL	24		-1		-1		-1
+1 Crypt	wbr	48	-1	-1	WBR	25		-1		-1		-1
+1 Crypt	wtr	48	-1	-1	WTR	23		-1		-1		-1
+1 Crypt	wbl	48	-1	-1	WBL	22		-1		-1		-1
+1 Crypt	co	48	0	0	WBR	25		-1		-1		-1
+1 Crypt	wrd	48	0	0	WRD B	27		-1		-1		-1
+1 Crypt	wrd	48	1	1	WRD A	26		-1		-1		-1
+1 Crypt	wld	48	1	1	WLD B	29		-1		-1		-1
+1 Crypt	wld	48	0	0	WLD A	28		-1		-1		-1
+1 Crypt	wre	48	0	0	WRE A	30		-1		-1		-1
+1 Crypt	wre	48	1	1	WRE B	31		-1		-1		-1
+1 Crypt	wle	48	1	1	WLE A	32		-1		-1		-1
+1 Crypt	wle	48	0	0	WLE B	33		-1		-1		-1
+1 Crypt	wle	49	0	0	WLE A	32		-1		-1		-1
+1 Crypt	wle	49	1	1	WLE B	33		-1		-1		-1
+1 Crypt	wr	13	-1	-1	WR A	20	WR B	38		-1		-1
+1 Crypt	wl	13	-1	-1	WL A	21	WL B	39		-1		-1
+1 Crypt	wtlr	13	-1	-1	WTLL	24		-1		-1		-1
+1 Crypt	wtll	13	-1	-1	WTLL	24		-1		-1		-1
+1 Crypt	wbr	13	-1	-1	WBR	25		-1		-1		-1
+1 Crypt	wtr	13	-1	-1	WTR	23		-1		-1		-1
+1 Crypt	wbl	13	-1	-1	WBL	22		-1		-1		-1
+1 Crypt	co	13	0	0	WBR	25		-1		-1		-1
+1 Crypt	wrd	13	0	0	WRD B	27		-1		-1		-1
+1 Crypt	wrd	13	1	1	WRD A	26		-1		-1		-1
+1 Crypt	wld	13	1	1	WLD B	29		-1		-1		-1
+1 Crypt	wld	13	0	0	WLD A	28		-1		-1		-1
+1 Crypt	wre	13	0	0	WRE A	30		-1		-1		-1
+1 Crypt	wre	13	1	1	WRE B	31		-1		-1		-1
+1 Crypt	wle	13	1	1	WLE A	32		-1		-1		-1
+1 Crypt	wle	13	0	0	WLE B	33		-1		-1		-1
+1 Crypt	wle	14	0	0	WLE A	32		-1		-1		-1
+1 Crypt	wle	14	1	1	WLE B	33		-1		-1		-1
+1 Crypt	wr	4	-1	-1	WR A	20	WR B	38		-1		-1
+1 Crypt	wl	4	-1	-1	WL A	21	WL B	39		-1		-1
+1 Crypt	wtlr	4	-1	-1	WTLL	24		-1		-1		-1
+1 Crypt	wtll	4	-1	-1	WTLL	24		-1		-1		-1
+1 Crypt	wbr	4	-1	-1	WBR	25		-1		-1		-1
+1 Crypt	wtr	4	-1	-1	WTR	23		-1		-1		-1
+1 Crypt	wbl	4	-1	-1	WBL	22		-1		-1		-1
+1 Crypt	co	4	0	0	WBR	25		-1		-1		-1
+1 Crypt	wrd	4	0	0	WRD B	27		-1		-1		-1
+1 Crypt	wrd	4	1	1	WRD A	26		-1		-1		-1
+1 Crypt	wld	4	1	1	WLD B	29		-1		-1		-1
+1 Crypt	wld	4	0	0	WLD A	28		-1		-1		-1
+1 Crypt	wre	4	0	0	WRE A	30		-1		-1		-1
+1 Crypt	wre	4	1	1	WRE B	31		-1		-1		-1
+1 Crypt	wle	4	1	1	WLE A	32		-1		-1		-1
+1 Crypt	wle	4	0	0	WLE B	33		-1		-1		-1
+1 Crypt	wle	5	0	0	WLE A	32		-1		-1		-1
+1 Crypt	wle	5	1	1	WLE B	33		-1		-1		-1
+1 Crypt	wr	32	-1	-1	WR A	20	WR B	38		-1		-1
+1 Crypt	wl	32	-1	-1	WL A	21	WL B	39		-1		-1
+1 Crypt	wtlr	32	-1	-1	WTLL	24		-1		-1		-1
+1 Crypt	wtll	32	-1	-1	WTLL	24		-1		-1		-1
+1 Crypt	wbr	32	-1	-1	WBR	25		-1		-1		-1
+1 Crypt	wtr	32	-1	-1	WTR	23		-1		-1		-1
+1 Crypt	wbl	32	-1	-1	WBL	22		-1		-1		-1
+1 Crypt	co	32	0	0	WBR	25		-1		-1		-1
+1 Crypt	wrd	32	0	0	WRD B	27		-1		-1		-1
+1 Crypt	wrd	32	1	1	WRD A	26		-1		-1		-1
+1 Crypt	wld	32	1	1	WLD B	29		-1		-1		-1
+1 Crypt	wld	32	0	0	WLD A	28		-1		-1		-1
+1 Crypt	wre	32	0	0	WRE A	30		-1		-1		-1
+1 Crypt	wre	32	1	1	WRE B	31		-1		-1		-1
+1 Crypt	wle	32	1	1	WLE A	32		-1		-1		-1
+1 Crypt	wle	32	0	0	WLE B	33		-1		-1		-1
+1 Crypt	wle	33	0	0	WLE A	32		-1		-1		-1
+1 Crypt	wle	33	1	1	WLE B	33		-1		-1		-1
+1 Crypt	wr	1	-1	-1	WR A	20	WR B	38		-1		-1
+1 Crypt	wl	1	-1	-1	WL A	21	WL B	39		-1		-1
+1 Crypt	wtlr	1	-1	-1	WTLL	24		-1		-1		-1
+1 Crypt	wtll	1	-1	-1	WTLL	24		-1		-1		-1
+1 Crypt	wbr	1	-1	-1	WBR	25		-1		-1		-1
+1 Crypt	wtr	1	-1	-1	WTR	23		-1		-1		-1
+1 Crypt	wbl	1	-1	-1	WBL	22		-1		-1		-1
+1 Crypt	co	1	0	0	WBR	25		-1		-1		-1
+1 Crypt	wrd	1	0	0	WRD B	27		-1		-1		-1
+1 Crypt	wrd	1	1	1	WRD A	26		-1		-1		-1
+1 Crypt	wld	1	1	1	WLD B	29		-1		-1		-1
+1 Crypt	wld	1	0	0	WLD A	28		-1		-1		-1
+1 Crypt	wre	1	0	0	WRE A	30		-1		-1		-1
+1 Crypt	wre	1	1	1	WRE B	31		-1		-1		-1
+1 Crypt	wle	1	1	1	WLE A	32		-1		-1		-1
+1 Crypt	wle	1	0	0	WLE B	33		-1		-1		-1
+1 Crypt	wle	2	0	0	WLE A	32		-1		-1		-1
+1 Crypt	wle	2	1	1	WLE B	33		-1		-1		-1
 1 Barracks	wl	7	-1	-1	WL A	21		-1		-1		-1
 1 Barracks	wtlr	7	-1	-1	WTLL	24		-1		-1		-1
 1 Barracks	wtll	7	-1	-1	WTLL	24		-1		-1		-1
