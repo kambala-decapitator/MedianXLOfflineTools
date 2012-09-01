@@ -48,7 +48,7 @@
 
 [b]Загрузки[/b]:
 [list][*][i][B]Windows[/B][/i] (XP SP 2 и позже; требуется vcredist2010): [url]http://www.mediafire.com/?699eu4v6b58j8c1[/url] (если вам лень нагуглить vcredist2010, то просто положите [URL="http://www.mediafire.com/download.php?9cs9n4vdn30950a"]эти дллки[/URL] возле MedianXLOfflineTools.exe)
-[*][i][B]Mac OS X[/B][/i] (10.5 и позже; универсальное приложение): [url]http://www.mediafire.com/?7005iwln6w6y2k3[/url]
+[*][i][B]Mac OS X[/B][/i] (10.5 и позже; универсальное приложение): [url]http://www.mediafire.com/?52ruf6nd3vta303[/url]
 [*][I][B]Инструменты для перевода[/B][/I] (следуйте инструкциям внутри архива, правда, они на английском): [url]http://www.mediafire.com/?7005iwln6w6y2k3[/url]
 [*]-----
 [*][B][I]Данные мода[/I][/B] (Windows — просто распаковать в папку с экзэшником; Mac OS X — распаковать куда угодно и переместить [B]содержимое папки 'resources/data', а не саму папку 'data'[/B], в 'MedianXLOfflineTools.app/Contents/Resources/data'):

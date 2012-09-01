@@ -45,7 +45,7 @@ I hope I provided enough anti-hack protection for an average user. If you manage
 [*]eating signets from context menu and with a hotkey[/list]
 [b]Downloads[/b]:
 [list][i][b]Windows[/b][/i] (XP SP 2 and later; you need vcredist2010 to be installed): http://www.mediafire.com/?699eu4v6b58j8c1 (if you're too lazy to search for vcredist2010, then place [url=http://www.mediafire.com/download.php?9cs9n4vdn30950a]these dlls[/url] near MedianXLOfflineTools.exe)
-[i][b]Mac OS X[/b][/i] (10.5 and later; universal binary): http://www.mediafire.com/?566paoe0o0ede71
+[i][b]Mac OS X[/b][/i] (10.5 and later; universal binary): http://www.mediafire.com/?52ruf6nd3vta303
 [i][b]Translation toolkit[/b][/i] (follow instructions found inside the archive): http://www.mediafire.com/?7005iwln6w6y2k3
 -----
 [i][b]Mod data[/b][/i] (Windows: unpack in a folder that contains the executable; Mac OS X: unpack somewhere and move [b]the contents of 'resources/data', not the 'data' folder itself[/b], to 'MedianXLOfflineTools.app/Contents/Resources/data'. If you still don't understand what to do on Mac OS X, see bottom of the post.):[list][*][url=http://www.mediafire.com/download.php?t006u85c82wol85]Omega 003[/url]
