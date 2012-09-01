@@ -3,8 +3,11 @@
 
 #include <QTreeWidget>
 
+
 class ItemNamesTreeWidget : public QTreeWidget
 {
+    Q_OBJECT
+
 public:
     ItemNamesTreeWidget(QWidget *parent = 0) : QTreeWidget(parent)
     {

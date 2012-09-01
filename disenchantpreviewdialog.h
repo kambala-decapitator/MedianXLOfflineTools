@@ -11,12 +11,20 @@ class ItemNamesTreeWidget;
 
 class QLabel;
 class QDialogButtonBox;
+class QCheckBox;
 
 class DisenchantPreviewDialog : public QDialog, public ShowSelectedItemInterface
 {
     Q_OBJECT
 
 public:
+    enum CheckAction
+    {
+        Uncheck = 0,
+        Check,
+        Invert
+    };
+
     DisenchantPreviewDialog(const ItemsList &items, QWidget *parent = 0);
     virtual ~DisenchantPreviewDialog() {}
 
@@ -33,6 +41,8 @@ protected:
 
 private slots:
     void checkboxStateChanged(bool checked);
+    void showTreeWidgetContextMenu(const QPoint &pos);
+    void changeSelectedItemsCheckState();
 
 private:
     QLabel *_label;
@@ -43,6 +53,7 @@ private:
     quint32 _selectedItemsCount;
 
     void updateLabelText();
+    QCheckBox *checkboxOfTreeItem(QTreeWidgetItem *treeItem) const;
     void loadSettings();
     void saveSettings();
 };

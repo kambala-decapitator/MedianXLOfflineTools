@@ -82,7 +82,7 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
             else if (isTradersChest_)
             {
                 ItemProperty *prop = iter.value();
-                prop->displayString = QString("[%1]").arg(tr("%1 gems used", "for Trader's Chest").arg(prop->value));
+                prop->displayString = QString("[%1]").arg(tr("%n gem(s) used", "for Trader's Chest", prop->value));
                 ++iter;
             }
             else
@@ -246,7 +246,7 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
         foreach (const QString &setItemName, ItemDataBase::completeSetForName(setName))
         {
             bool found = false;
-            foreach (ItemInfo *anItem, CharacterInfo::instance().items.character)
+            foreach (ItemInfo *anItem, CharacterInfo::instance().items.character) //-V807
             {
                 if (anItem->quality == Enums::ItemQuality::Set && ItemDataBase::Sets()->value(anItem->setOrUniqueId)->itemName == setItemName)
                 {
@@ -378,7 +378,7 @@ void PropertiesViewerWidget::modifyMysticOrbProperty(int id, int decrement, Prop
         if (isEnhancedDamageProp)
         {
             newBits += newBits;
-            prop->displayString = ItemParser::enhancedDamageFormat().arg(prop->value);
+            prop->displayString = ItemParser::kEnhancedDamageFormat().arg(prop->value);
         }
         _item->bitString.replace(valueIndex, bitsLength, newBits); // place modified value
         props->replace(id, prop);

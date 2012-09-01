@@ -543,10 +543,3 @@ innate-fury	1				11	item_thunderfury																									Laz / New procs	Ski
 slow-melee	1				1	item_slow_offweapon																									Laz / Melee slow		min	max	none	0
 anykill-skill	1				11	item_skillonanykill																									Proc Skill on killing something	Skill #	% Chance	Level		0
 evasion	1	new mod			1	passive_evade																									Laz / ZZZ		min	max	none	0
-desc_superbeasty	1	desc only			1	desc-superbeasty																											1	1		0
-desc_fatasstriton	1				1	desc-fatasstriton																											1	1		0
-desc_squishyrat	1				1	desc-fatasstriton																											1	1		0
-spiritofdamnationnewXX	1				1	spiritofdamnationnew																											1	1		0
-fuck-you	1				1	fuck_you#																														0
-trololololol	1				1	item_absorbfire				item_absorblight				item_absorbmagic				item_absorbcold																	none	0
-prevent-monster-heal	1				1	nightmare_no_regen																											1	1		0

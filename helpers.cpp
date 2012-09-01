@@ -75,8 +75,9 @@ QString htmlStringFromDiabloColorString(const QString &name, ColorsManager::Colo
     QStack<QString> colorStringsStack;
     for (int i = 0; i < colorsNumberInString; ++i)
     {
-        int index = colorStringsIndeces.at(i).first;
-        int pos = colorStringsIndeces.at(i).second + ColorsManager::colorStrings().at(index).length(); // skip colorString
+        QPair<int, int> colorStringIndex = colorStringsIndeces.at(i);
+        int index = colorStringIndex.first;
+        int pos = colorStringIndex.second + ColorsManager::colorStrings().at(index).length(); // skip colorString
         QString coloredText_ = text.mid(pos, i != colorsNumberInString - 1 ? colorStringsIndeces.at(i + 1).second - pos : -1);
 
         QStringList lines = coloredText_.split(kHtmlLineBreak);
@@ -90,8 +91,8 @@ QString htmlStringFromDiabloColorString(const QString &name, ColorsManager::Colo
         if (!reversedLines.isEmpty())
         {
             QString newText = coloredText(reversedLines, index);
-            if (!i && colorStringsIndeces.at(i).second > 0) // quick fix for '+1 to \red;Ultimative\blue;'
-                newText.prepend(text.left(colorStringsIndeces.at(i).second));
+            if (!i && colorStringIndex.second > 0) // quick fix for '+1 to \red;Ultimative\blue;'
+                newText.prepend(text.left(colorStringIndex.second));
             colorStringsStack.push(newText);
         }
     }

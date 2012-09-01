@@ -181,7 +181,7 @@ void PropertiesDisplayManager::addProperties(PropertiesMap *mutableProps, const 
             {
                 prop->value += iter.value()->value;
                 if (propId == Enums::ItemProperties::EnhancedDamage)
-                    prop->displayString = ItemParser::enhancedDamageFormat().arg(prop->value);
+                    prop->displayString = ItemParser::kEnhancedDamageFormat().arg(prop->value);
             }
         }
         if (!shouldNotAddNewProp)
@@ -336,7 +336,7 @@ PropertiesMap PropertiesDisplayManager::genericSocketableProperties(ItemInfo *so
         if (prop.code != -1)
             props[prop.code] = new ItemProperty(prop.value, prop.param);
         if (prop.code == Enums::ItemProperties::EnhancedDamage)
-            props[prop.code]->displayString = ItemParser::enhancedDamageFormat().arg(prop.value);
+            props[prop.code]->displayString = ItemParser::kEnhancedDamageFormat().arg(prop.value);
     }
     return props;
 }

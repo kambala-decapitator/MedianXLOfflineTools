@@ -1401,31 +1401,3 @@ seq_yourmine	A1	5			0
 seq_yourmine	A1	6			0
 seq_yourmine	A1	7			0
 seq_yourmine	A1	8			0
-seq_pillarattack	NU	0			0
-seq_pillarattack	NU	1			0
-seq_pillarattack	NU	2			0
-seq_pillarattack	NU	3			0
-seq_pillarattack	NU	4			0
-seq_pillarattack	NU	5			0
-seq_pillarattack	NU	6		4	0
-seq_pillarattack	NU	7			0
-seq_nullattacker	NU	0	4		0
-seq_nullattacker	NU	1	4		0
-seq_nullattacker	NU	2	4	4	0
-seq_aod_ogre	A2	0			0
-seq_aod_ogre	A2	1			0
-seq_aod_ogre	A2	2			0
-seq_aod_ogre	A2	3			0
-seq_aod_ogre	A2	4			0
-seq_aod_ogre	A2	5		1	0
-seq_aod_ogre	A2	6			0
-seq_aod_ogre	A2	7			0
-seq_aod_ogre	A2	8			0
-seq_aod_ogre	A2	9			0
-seq_aod_ogre	A2	10			0
-seq_aod_ogre	A2	11		1	0
-seq_aod_ogre	A2	12			0
-seq_aod_ogre	A2	13		1	0
-seq_aod_ogre	A2	14		1	0
-seq_aod_ogre	A2	15			0
-seq_aod_ogre	A2	16			0

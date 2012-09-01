@@ -256,7 +256,7 @@ void FindItemsDialog::performSearch()
 {
     QString searchText = ui->searchComboBox->currentText();
     _searchResult.clear();
-    foreach (ItemInfo *item, CharacterInfo::instance().items.character)
+    foreach (ItemInfo *item, CharacterInfo::instance().items.character) //-V807
     {
         QString itemText = ui->searchPropsCheckBox->isChecked() ? PropertiesDisplayManager::completeItemDescription(item) : ItemDataBase::completeItemName(item, false);
         Qt::CaseSensitivity cs = static_cast<Qt::CaseSensitivity>(ui->caseSensitiveCheckBox->isChecked());

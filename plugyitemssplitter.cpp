@@ -119,7 +119,7 @@ void PlugyItemsSplitter::keyReleaseEvent(QKeyEvent *keyEvent)
 
 bool PlugyItemsSplitter::isItemInCurrentStorage(ItemInfo *item) const
 {
-    return item->plugyPage == _pageSpinBox->value();
+    return item->plugyPage == static_cast<quint32>(_pageSpinBox->value());
 }
 
 void PlugyItemsSplitter::addItemToList(ItemInfo *item, bool emitSignal /*= true*/)

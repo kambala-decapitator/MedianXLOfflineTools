@@ -2,7 +2,7 @@
 
 As you can guess from the title, it's an almost complete offline analogue of grig's [url=http://grig.vlexofree.com/]Median XL Online Tools[/url], but with nice additions.
 
-Application should be able to load character from any version of Median XL and successfully perform basic operations with it like respeccing. Items processing relies on the mod source files, so it may not be compatible with any chacarcter from different version. This data is softcoded, so when a new mod version is released, there's no need to recompile the application — one just needs to replace the data found in 'resources/data' with the new one, which I will release. Current supported Median XL version is 2012 v005, first supported one — Omega v003.
+Application should be able to load character from any version of Median XL and successfully perform basic operations with it like respeccing. Items processing relies on the mod source files, so it may not be compatible with any chacarcter from different version. This data is softcoded, so when a new mod version is released, usually there's no need to recompile the application — one just needs to replace the data found in 'resources/data' with the new one, which I will release. Current supported Median XL version is 2012 v005, first supported one — Omega v003; current supported version of Ultimative is v6b (v5+ actually), first one — v4.
 
 It's written in C++ using the Qt library (v4.8.2 as of current release), so don't hope to dotnetreflect the source code (and it won't be released for obvious reasons). The app comes with English and Russian localization. If you want to create your own localization (or use items data from another mod version), grab translation toolkit from the Downloads section.
 
@@ -17,7 +17,7 @@ I hope I provided enough anti-hack protection for an average user. If you manage
 [*]resurrect HC character (with penalties ofc)
 [*]change mercenary name
 [*][url=http://modsbylaz.14.forumer.com/viewtopic.php?t=22756]Median Hardened[/url] support
-[*]view items on character, in belt, inventory, Cube, stash and PlugY stashes
+[*]view items on character/mercenary/corpse, in belt, inventory, Cube, stash and PlugY stashes
 [*]in-game-like PlugY navigation (but you can also enter number of desired page directly)
 [*]shared gold display (in status tip for stash gold, displayed if > 0)
 [*]almost complete item description (str/dex requirements, attack speed and affixes are missing)
@@ -37,16 +37,21 @@ I hope I provided enough anti-hack protection for an average user. If you manage
 [*]display properties of unidentified items
 [*]display location of corrupted items
 [*][url=http://modsbylaz.14.forumer.com/viewtopic.php?t=25209]Kehjan Labyrinth + Tathamet vs Anu[/url] support
-[*][url=http://modsbylaz.14.forumer.com/viewtopic.php?t=24559]Median XL Ultimative[/url] support
-[*]display completion status of skill/stat quests[/list]
+[*][url=http://modsbylaz.14.forumer.com/viewtopic.php?t=24559]Median XL Ultimative[/url] support (v4 and v5+)
+[*]display completion status of skill/stat quests
+[*]mass disenchant of uniques/sets with preview (you can select multiple items via Ctrl/Command and Shift and change their checked state via context menu or by pressing spacebar)
+[*]mass upgrade of gems/runes
+[*]rune downgrade (via context menu)
+[*]eating signets from context menu and with a hotkey[/list]
 [b]Downloads[/b]:
-[list][i][b]Windows[/b][/i] (XP SP 2 and later; you need vcredist2010 to be installed): http://www.mediafire.com/?3kd80a2uf8r0553 (if you're too lazy to search for vcredist2010, then place [url=http://www.mediafire.com/download.php?9cs9n4vdn30950a]these dlls[/url] near MedianXLOfflineTools.exe)
-[i][b]Mac OS X[/b][/i] (10.5 and later; universal): http://www.mediafire.com/?566paoe0o0ede71
-[i][b]Translation toolkit[/b][/i] (follow instructions found inside the archive): http://www.mediafire.com/?wv7nbb9ks3ai54v
+[list][i][b]Windows[/b][/i] (XP SP 2 and later; you need vcredist2010 to be installed): http://www.mediafire.com/?699eu4v6b58j8c1 (if you're too lazy to search for vcredist2010, then place [url=http://www.mediafire.com/download.php?9cs9n4vdn30950a]these dlls[/url] near MedianXLOfflineTools.exe)
+[i][b]Mac OS X[/b][/i] (10.5 and later; universal binary): http://www.mediafire.com/?566paoe0o0ede71
+[i][b]Translation toolkit[/b][/i] (follow instructions found inside the archive): http://www.mediafire.com/?7005iwln6w6y2k3
 -----
-[i][b]Mod data[/b][/i] (Windows: unpack in a folder that contains the executable; Mac OS X: unpack somewhere and move [b]the contents of 'resources/data', not the 'data' folder itself[/b], to 'MedianXLOfflineTools.app/Contents/Resources/data'. If you still don't understand what to do on Mac OS X, see bottom of the post.):[list][*][url=http://www.mediafire.com/?5k8v4y0svfpmpbs]Omega 003[/url]
-[*][url=http://www.mediafire.com/?nmdevj85pt24ers]2012 005 + Kehjan Labyrinth + Tathamet vs Anu[/url] (is included with the current binary; find link to the mod in the 'current features' section)
-[*][url=http://www.mediafire.com/?v86kn2kcearscnm]Ultimative 4[/url] (find link to the mod in the 'current features' section)
+[i][b]Mod data[/b][/i] (Windows: unpack in a folder that contains the executable; Mac OS X: unpack somewhere and move [b]the contents of 'resources/data', not the 'data' folder itself[/b], to 'MedianXLOfflineTools.app/Contents/Resources/data'. If you still don't understand what to do on Mac OS X, see bottom of the post.):[list][*][url=http://www.mediafire.com/download.php?t006u85c82wol85]Omega 003[/url]
+[*][url=http://www.mediafire.com/download.php?a5bma6lcza6u7ut]2012 005 + Kehjan Labyrinth + Tathamet vs Anu[/url] (is included with the current binary)
+[*][url=http://www.mediafire.com/download.php?zciwxw2p3k4rdtq]Ultimative 4[/url]
+[*][url=http://www.mediafire.com/download.php?97p17za3bc46ry3]Ultimative 6b[/url] (is included with the current binary; can be used for version 5 and higher)
 [/list][/list]
 
 [b]Screenshots[/b] (click to see in full size):
@@ -61,6 +66,25 @@ I hope I provided enough anti-hack protection for an average user. If you manage
 
 [b]Changelog[/b]:
 
+[i]v0.3 (01.09.2012)[/i]
+[list][+] Ultimative v5+ support
+[+] mass disenchant of uniques/sets with preview (you can select multiple items via Ctrl/Command and Shift and change their checked state via context menu or by pressing spacebar)
+[+] mass upgrade of gems/runes
+[+] rune downgrade (via context menu)
+[+] eating signets from context menu and with a hotkey
+[+] mercenary and corpse items display (you can also delete items and remove MOs from them)
+[+] corpse items are automatically moved to character on saving if possible
+[+] added displaying 'duped' flag if an item has such property (such items can't be disenchanted to Arcane Shards in Ultimative)
+[+] added displaying amount of gems cubed with Ultimative's Trader's Chest
+[+] using default D2 save path on Windows if there's no last saved path
+[+] multiple backups (see Options)
+[+] now application doesn't load last character if mod data has changed between launches
+[f] finally fixed loading items that have item header inside item data
+[f] correctly (un)checking of 'activate wapoints' menu command and keeping it synced with the corresponding checkbox in main window
+[f] some sacred unique hammers and belts can now be disenchanted in Ultimative
+[f] fixed merc experience display when switching characters on Mac OS X;
+[m] added maximize/minimize buttons to items window
+[m] all item images have transparent background now[/list]
 [i]v0.2.2.1 (09.06.2012)[/i]
 [list][+] display completion status of skill/stat quests
 [+] display experience in progress bar for character and mercenary (on Mac OS X amount of experience is displayed in status bar when you hover the mouse on a progress bar)
@@ -118,7 +142,7 @@ I hope I provided enough anti-hack protection for an average user. If you manage
 [f] fixed the program calling you 1337 hacker if you ate 3 Signets of Skill and clicked on one more (v0.1 said that you ate 500 Signets of Skill)
 [f] added a warning when using colors in character name
 [f] fixed ugly stats table size[/list]
-[i]v0.1 (01.08.2011)[/i] [*]initial release
+[i]v0.1 (01.08.2011)[/i]
 [list][+] skills and stats respec
 [+] waypoint activation
 [+] renaming with colors
@@ -137,7 +161,6 @@ I hope I provided enough anti-hack protection for an average user. If you manage
 [b]TODO future versions[/b]:
 [list][*]sort stashes
 [*]affix rlvl (and maybe names — then modify help text) support
-[*]merc items
 [*]nice display of property 'Adds x-y ... damage'
 [*]unsocket items
 [*]show UMO properties
@@ -150,9 +173,10 @@ I hope I provided enough anti-hack protection for an average user. If you manage
 [*]http://modsbylaz.14.forumer.com/viewtopic.php?p=424505#424505[/list]
 [b]Credits[/b]:
 [list][*]BrotherLaz for this awesome mod
+[*]MarcoNecroX for a hot extension of Median XL called Ultimative
 [*]grig for the Perl source of Median XL Online Tools and tips
 [*]Phrozen Keep File Guides for tons of useful information on txt sources
-[*]FixeR, Zelgadiss and moonra for intensive testing and tips on GUI & functionality[/list]
+[*]FixeR, Zelgadiss, moonra, Vilius, Delegus, aahz and HerrNieschnell for intensive testing and tips on GUI & functionality[/list]
 
 
 Q: I don't understand how to copy mod data on Mac OS X!

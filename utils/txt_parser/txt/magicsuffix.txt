@@ -941,7 +941,7 @@ NoDesc	1	1	1	24		20				33	217	oskill	1030	4	15	Devouring Acid											glov				
 NoDesc	1	1	1	24		20				33	217	oskill	1031	4	15	Emerald Prison											glov												0	0	0
 NoDesc	1	1	1	56		46				33	217	oskill	1032	2	8	Time Wave											hamm	mace						pham	pmac				0	0	0
 NoDesc	1	1	1	1		1				33	217	oskill	1033	2	4	Char Slicer Blade											ring												0	0	0
-NoDesc	1	1	1	24		20				24	217	oskill	1037	5	16	Psicrown											circ												0	0	0
+NoDesc	1	1	1	24		20				24	217	oskill	1037	2	6	Psicrown											circ												0	0	0
 NoDesc	1	1	1	72		60				33	217	oskill	1025	14	20	Splitfire											ring												0	0	0
 NoDesc	1	1	1	72		60				33	217	oskill	1027	14	20	New Static Spike											ring												0	0	0
 NoDesc	1	1	1	72		60				33	217	oskill	1029	14	20	Churel											ring												0	0	0
@@ -958,6 +958,3 @@ NoDesc	1	1	1	72		60				42	217	oskill	789	17	21	Apocalypse											boot								
 NoDesc	1	1	1	48		40				19	217	oskill	824	13	21	Meteor Shower											helm							circ					0	0	0
 NoDesc	1	1	1	48		40				19	217	oskill	825	13	21	Countdown											belt												0	0	0
 NoDesc	1	1	1	48		40				19	217	oskill	826	13	21	Ball Lightning											glov												0	0	0
-NoDesc	1	1	1	70		80				50	223	death-skill	30	100	57	Rain of Bombs											tors												0	0	0
-NoDesc	1	1	1	80		90				20	223	att-skill	78	5	7	Javelin Nova											tors												0	0	0
-NoDesc	1	1	1	70		80				50	223	death-skill	399	100	48	Gamma Field											tors												0	0	0

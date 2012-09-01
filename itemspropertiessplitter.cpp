@@ -32,8 +32,6 @@ ItemsPropertiesSplitter::ItemsPropertiesSplitter(ItemStorageTableView *itemsView
     setChildrenCollapsible(false);
     setStretchFactor(1, 5);
 
-    //_itemsView->setFocus();
-
     connect(_itemsView, SIGNAL(customContextMenuRequested(const QPoint &)), SLOT(showContextMenu(const QPoint &)));
 }
 

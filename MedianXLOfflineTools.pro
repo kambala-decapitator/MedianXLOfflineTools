@@ -7,7 +7,9 @@
 TARGET = MedianXLOfflineTools
 TEMPLATE = app
 VERSION = 0.3
+
 QT += network
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets # for Qt 5
 
 
 SOURCES += main.cpp \
@@ -75,8 +77,8 @@ HEADERS += medianxlofflinetools.h \
            kexpandablegroupbox.h \
            showselecteditemdelegate.h \
            disenchantpreviewdialog.h \
-           itemnamestreewidget.hpp \
-           progressbarmodal.hpp
+           progressbarmodal.hpp \
+           itemnamestreewidget.hpp
 
 FORMS += medianxlofflinetools.ui \
          resurrectpenaltydialog.ui \
@@ -102,7 +104,7 @@ win32 {
     HEADERS += windowsincludes.h
 
     LIBS += -lshell32 \ # SHChangeNotify()
-            -lole32 \   # CoCreateInstance() and other COM shit
+            -lole32   \ # CoCreateInstance() and other COM shit
             -luser32    # AllowSetForegroundWindow()
 
     RC_FILE = resources/win/medianxlofflinetools.rc

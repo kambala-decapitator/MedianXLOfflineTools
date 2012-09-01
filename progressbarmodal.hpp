@@ -7,6 +7,8 @@
 
 class ProgressBarModal : public QProgressBar
 {
+    Q_OBJECT
+
 public:
     ProgressBarModal(QWidget *parent = 0) : QProgressBar(parent)
     {

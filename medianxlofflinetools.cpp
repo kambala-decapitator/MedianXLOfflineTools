@@ -44,9 +44,9 @@
 #ifdef QT_NO_DEBUG
 #define RELEASE_DATE "01.09.2012" // TODO: don't forget to change
 #else
-#include <QDebug>
-
 #define RELEASE_DATE QDate::currentDate().toString("dd.MM.yyyy") // :)
+
+#include <QDebug>
 #endif
 
 //#define MAKE_HC

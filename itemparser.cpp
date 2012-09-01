@@ -16,7 +16,7 @@
 const QByteArray ItemParser::kItemHeader("JM");
 const QByteArray ItemParser::kPlugyPageHeader("ST");
 
-const QString &ItemParser::enhancedDamageFormat()
+const QString &ItemParser::kEnhancedDamageFormat()
 {
     static const QString s = tr("+%1% Enhanced Damage");
     return s;
@@ -47,9 +47,6 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
     // loop tries maximum 2 times to read past JM in case it's a part of item
     do
     {
-        //int pos = inputDataStream.device()->pos();
-        //qDebug() << pos;
-        //Q_ASSERT(bytes.mid(pos, 2) == kItemHeader);
         inputDataStream.skipRawData(2); // JM
         int itemStartOffset = inputDataStream.device()->pos();
         if (!searchEndOffset)
@@ -316,7 +313,7 @@ PropertiesMultiMap ItemParser::parseItemProperties(ReverseBitReader &bitReader, 
                 qint16 minEnhDamage = bitReader.readNumber(txtProperty->bits) - txtProperty->add;
                 if (minEnhDamage < propToAdd->value) // it shouldn't possible (they must always be equal), but let's make sure
                     propToAdd->value = minEnhDamage;
-                propToAdd->displayString = enhancedDamageFormat().arg(propToAdd->value);
+                propToAdd->displayString = kEnhancedDamageFormat().arg(propToAdd->value);
             }
 
             // elemental damage

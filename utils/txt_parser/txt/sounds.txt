@@ -4899,17 +4899,3 @@ ghost_effect	4896	taunt\voices1.wav	64	0	0	0	0	1	0	0	4	1	1	0	0	240	0	0	1	1	0	-1	
 call_dragon1	4897	taunt\call_dragon1.wav	255	3	0	0	0	1	0	0	4	1	1	0	0	235	0	0	1	1	0	-1	-1	-1
 call_dragon2	4898	taunt\call_dragon2.wav	255	0	0	0	0	1	0	0	4	1	1	0	0	235	0	0	1	1	0	-1	-1	-1
 call_dragon3	4899	taunt\call_dragon3.wav	255	0	0	0	0	1	0	0	4	1	1	0	0	235	0	0	1	1	0	-1	-1	-1
-kabraxis_attack_1	4900	monster\kabraxis\brax_attack1.wav	235	4	0	0	0	1	0	0	0	1	1	0	0	220	0	0	1	0	0	-1	-1	-1
-kabraxis_attack_2	4901	monster\kabraxis\brax_attack2.wav	235	0	0	0	0	1	0	0	0	1	1	0	0	220	0	0	1	0	0	-1	-1	-1
-kabraxis_attack_3	4902	monster\kabraxis\brax_attack3.wav	235	0	0	0	0	1	0	0	0	1	1	0	0	220	0	0	1	0	0	-1	-1	-1
-kabraxis_attack_4	4903	monster\kabraxis\brax_attack4.wav	235	0	0	0	0	1	0	0	0	1	1	0	0	220	0	0	1	0	0	-1	-1	-1
-kabraxis_gethit_1	4904	monster\kabraxis\brax_gethit1.wav	200	4	0	0	0	1	0	0	0	1	2	0	0	75	0	0	1	0	0	-1	-1	-1
-kabraxis_gethit_2	4905	monster\kabraxis\brax_gethit2.wav	200	0	0	0	0	1	0	0	0	1	2	0	0	75	0	0	1	0	0	-1	-1	-1
-kabraxis_gethit_3	4906	monster\kabraxis\brax_gethit3.wav	200	0	0	0	0	1	0	0	0	1	2	0	0	75	0	0	1	0	0	-1	-1	-1
-kabraxis_gethit_4	4907	monster\kabraxis\brax_gethit4.wav	200	0	0	0	0	1	0	0	0	1	2	0	0	75	0	0	1	0	0	-1	-1	-1
-kabraxis_death_1	4908	monster\kabraxis\brax_death1.wav	255	2	0	0	0	1	0	0	0	1	1	0	0	255	0	0	1	0	0	-1	-1	-1
-kabraxis_death_2	4909	monster\kabraxis\brax_death2.wav	255	0	0	0	0	1	0	0	0	1	1	0	0	255	0	0	1	0	0	-1	-1	-1
-kabraxis_skill_1	4910	monster\kabraxis\brax_skill1.wav	220	2	0	0	0	1	0	0	0	1	1	0	0	250	0	0	1	0	0	-1	-1	-1
-kabraxis_skill_2	4911	monster\kabraxis\brax_skill2.wav	220	0	0	0	0	1	0	0	0	1	1	0	0	250	0	0	1	0	0	-1	-1	-1
-kabraxis_taunt_1	4912	taunt\brax_taunt1.wav	255	2	0	0	0	1	0	0	0	1	1	0	0	250	1	0	1	1	0	-1	-1	-1
-kabraxis_taunt_2	4913	taunt\brax_taunt2.wav	255	0	0	0	0	1	0	0	0	1	1	0	0	250	1	0	1	1	0	-1	-1	-1

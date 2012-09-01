@@ -15,7 +15,7 @@ class ItemParser
 
 public:
     static const QByteArray kItemHeader, kPlugyPageHeader;
-    static const QString &enhancedDamageFormat(); // stupid lupdate
+    static const QString &kEnhancedDamageFormat(); // stupid lupdate
 
     static QString parseItemsToBuffer(quint16 itemsTotal, QDataStream &inputDataStream, const QByteArray &bytes, const QString &corruptedItemFormat, ItemsList *itemsBuffer);
     static ItemInfo *parseItem(QDataStream &inputDataStream, const QByteArray &bytes);

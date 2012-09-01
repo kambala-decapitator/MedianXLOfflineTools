@@ -616,7 +616,7 @@ bool ItemDataBase::canStoreItemAt(quint8 row, quint8 col, const QByteArray &stor
 
 bool ItemDataBase::isClassCharm(const QByteArray &itemType)
 {
-    foreach (const QByteArray &type, Items()->value(itemType)->types)
+    foreach (const QByteArray &type, Items()->value(itemType)->types) //-V807
         if (type.startsWith("ara"))
             return true;
     return false;
