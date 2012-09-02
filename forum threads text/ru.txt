@@ -47,16 +47,16 @@
 [/LIST]
 
 [b]Загрузки[/b]:
-[list][*][i][B]Windows[/B][/i] (XP SP 2 и позже; требуется vcredist2010): [url]http://www.mediafire.com/?699eu4v6b58j8c1[/url] (если вам лень нагуглить vcredist2010, то просто положите [URL="http://www.mediafire.com/download.php?9cs9n4vdn30950a"]эти дллки[/URL] возле MedianXLOfflineTools.exe)
-[*][i][B]Mac OS X[/B][/i] (10.5 и позже; универсальное приложение): [url]http://www.mediafire.com/?52ruf6nd3vta303[/url]
+[list][*][i][B]Windows[/B][/i] (XP SP 2 и позже; требуется vcredist2010): [url]http://www.mediafire.com/download.php?zenu9bd7mm785d4[/url] (если вам лень нагуглить vcredist2010, то просто положите [URL="http://www.mediafire.com/download.php?9cs9n4vdn30950a"]эти дллки[/URL] возле MedianXLOfflineTools.exe)
+[*][i][B]Mac OS X[/B][/i] (10.5 и позже; универсальное приложение): [url]http://www.mediafire.com/download.php?96yu80n8a0hvbnw[/url]
 [*][I][B]Инструменты для перевода[/B][/I] (следуйте инструкциям внутри архива, правда, они на английском): [url]http://www.mediafire.com/?7005iwln6w6y2k3[/url]
 [*]-----
 [*][B][I]Данные мода[/I][/B] (Windows — просто распаковать в папку с экзэшником; Mac OS X — распаковать куда угодно и переместить [B]содержимое папки 'resources/data', а не саму папку 'data'[/B], в 'MedianXLOfflineTools.app/Contents/Resources/data'):
 [LIST]
 [*][url=http://www.mediafire.com/download.php?t006u85c82wol85]Ω (Омега) 003[/url]
 [*][url=http://www.mediafire.com/download.php?a5bma6lcza6u7ut]2012 005 + Лабиринт Кейджан + Тафамет против Ану[/url] (включены в текущий релиз)
-[*][url=http://www.mediafire.com/download.php?zciwxw2p3k4rdtq]Ultimative 4[/url]
-[*][url=http://www.mediafire.com/download.php?97p17za3bc46ry3]Ultimative 6b[/url] (включены в текущий релиз; можно использовать с версией 5 и выше)
+[*][url=http://www.mediafire.com/download.php?y2gxeaizzud38ze]Ultimative 4[/url]
+[*][url=http://www.mediafire.com/download.php?a1q2z47qjfqai5r]Ultimative 6b[/url] (включены в текущий релиз; можно использовать с версией 5 и выше)
 [/LIST][/list]
 
 
@@ -71,6 +71,10 @@
 
 
 [B]История версий:[/B]
+
+[i]v0.3.0.1 (02.09.2012)[/i]
+[list][*][ф] исправлено отображение мин/макс элементального урона
+[*][ф] исправлен один читерный баг[/list]
 
 [i]v0.3 (01.09.2012)[/i]
 [list][*][+] поддержка Ultimative v5+
