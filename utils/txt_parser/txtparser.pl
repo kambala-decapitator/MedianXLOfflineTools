@@ -79,9 +79,7 @@ for (0..scalar @$itemProperties)
 
 sub statIdsFromPropertyStat
 {
-    (my $property, my $getAllStats) = @_;
-    $getAllStats = 1 unless defined $getAllStats;
-
+    my $property = shift;
     my $propsStat = undef;
     # handle special cases
     if ($property =~ /^dmg\-(max|min)$/) { $propsStat = $1."damage" }
@@ -101,15 +99,13 @@ sub statIdsFromPropertyStat
         {
             if ($itemProperties->[$_]->{stat} eq $prop)
             {
-                if ($getAllStats) { push @ids, $_ }
-                else { return $_ }
+                push @ids, $_;
                 last;
             }
         }
     }
     return join(',', @ids);
 }
-sub statIdFromPropertyStat { &statIdsFromPropertyStat($_[0], 0) }
 
 my $uniques = parsetxt("uniqueitems.txt", _autoindex=>"0", iName=>"0", rlvl=>7, image=>23);
 &tblExpandArray($uniques, "iName");
@@ -185,7 +181,7 @@ for my $miscItem (keys %$miscTypes)
         next unless defined $itemProperties->[$_]->{stat} and defined $cubeMo->{moStat};
         if ($itemProperties->[$_]->{stat} =~ /x_signet(\d+)/ and $cubeMo->{moStat} eq $moStat.$1)
         {
-            $mos->{$_}->{statId} = &statIdFromPropertyStat($cubeMo->{prop});
+            $mos->{$_}->{statId} = &statIdsFromPropertyStat($cubeMo->{prop});
             $mos->{$_}->{value} = $cubeMo->{value};
             $mos->{$_}->{code} = $miscItem;
             last;

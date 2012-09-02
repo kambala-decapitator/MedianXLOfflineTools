@@ -182,7 +182,8 @@ struct UniqueItemInfo
 struct MysticOrb
 {
     QByteArray itemCode;
-    quint16 statId, value;
+    QList<quint16> statIds;
+    quint16 value;
 };
 
 struct RunewordInfo

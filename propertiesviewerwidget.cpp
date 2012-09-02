@@ -323,7 +323,9 @@ void PropertiesViewerWidget::removeMysticOrbsFromProperties(const QSet<int> &mys
 
 void PropertiesViewerWidget::removeMysticOrbData(int moCode, PropertiesMultiMap *props)
 {
-    modifyMysticOrbProperty(ItemDataBase::MysticOrbs()->value(moCode)->statId, totalMysticOrbValue(moCode, props), props);
+    int moValue = totalMysticOrbValue(moCode, props);
+    foreach (quint16 statId, ItemDataBase::MysticOrbs()->value(moCode)->statIds) //-V807
+        modifyMysticOrbProperty(statId, moValue, props);
 
     // remove MO data
     ItemPropertyTxt *propertyTxt = ItemDataBase::Properties()->value(moCode);

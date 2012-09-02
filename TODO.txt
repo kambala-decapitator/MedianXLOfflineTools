@@ -1,6 +1,3 @@
-v0.3.0.1:
-- fix removing 'all resists' MO in Ultimative (removes only fire resist now)
-
 v0.4:
 - move mass disenchant to a separate dialog and add more options
 - batch eat signets (add a button)

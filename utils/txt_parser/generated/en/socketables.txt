@@ -22,7 +22,6 @@ r50	\purple;On Rune	On	171		5							171		5							171		5
 gsy	\purple;Topaz		361		3							41		18							485		8						
 gpr	\purple;Perfect Ruby		362		5							39		30							86		10						
 r19	\purple;Fal Rune	Fal	2		10							2		10							2		10						
-r62	\grey;Secret Rune\n\purple;Ice Rune	Cold	54,55,56		50							54,55,56		50							54,55,56		100						
 g$e	\purple;Perfect Onyx		43		20	44		2				164		5							470		10						
 gcy	\purple;Chipped Topaz		361		1							41		6							485		6						
 gsg	\purple;Emerald		74		12							45		18							22		6						
@@ -38,7 +37,6 @@ glr	\purple;Flawless Ruby		362		4							39		24							86		8
 r38	\purple;Thur Rune	Thur	500		50							500		50							500		50						
 r54	\grey;Great Rune\n\purple;Krys Rune	Krys	489		25							489		25							489		100						
 r25	\purple;Gul Rune	Gul	43		30							43		30							43		40						
-r98	\grey;The Ultimate Power\n\red;Kabraxis' Stone	Ultra	16		50							16		50							17		50						
 9$d	\purple;Flawless Bloodstone		39		16	40		1				487		4							444		8						
 r13	\purple;Shael Rune	Shael	0		10							0		10							0		10						
 r53	\grey;Great Rune\n\purple;Qor Rune	Qor	91		-12							91		-12							91		-12						
@@ -48,10 +46,8 @@ r39	\purple;Nas Rune	Nas	444		10							444		10							444		10
 r52	\grey;Great Rune\n\purple;Ghal Rune	Ghal	485		5							485		5							485		15						
 r32	\purple;Cham Rune	Cham	3		10							3		10							3		10						
 r55	\grey;Great Rune\n\purple;Auhe Rune	Auhe	27		5							27		5							27		15						
-r58	\grey;Secret Rune\n\purple;Earth Rune	Earth	21,22		5							21,22		5							21,22		10						
 5$c	\purple;Amber		41		12							363		3							155	800	3						
 gsv	\purple;Amethyst		360		3							440		6							119		30						
-r59	\grey;Secret Rune\n\purple;Magic Rune	Magic	52,53		50							52,53		50							52,53		100						
 gcr	\purple;Chipped Ruby		362		1							39		6							86		2						
 gsr	\purple;Ruby		362		3							39		18							86		6						
 r24	\purple;Ist Rune	Ist	1		10							1		10							1		10						
@@ -80,7 +76,6 @@ r15	\purple;Hel Rune	Hel	377		5							377		5							377		5
 r49	\purple;Lai Rune	Lai	25		5							25		5							25		5						
 r02	\purple;Eld Rune	Eld	119		25							119		25							119		25						
 r08	\purple;Ral Rune	Ral	329		5							329		5							329		5						
-r57	\grey;Secret Rune\n\purple;Fire Rune	Fire	48,49		50							48,49		50							48,49		100						
 gpv	\purple;Perfect Amethyst		360		5							440		10							119		50						
 5$e	\purple;Perfect Amber		41		20	42		2				363		5							155	800	5						
 r51	\grey;Great Rune\n\purple;Taha Rune	Taha	22		20							22		20							22		40						
@@ -92,7 +87,6 @@ gfr	\purple;Flawed Ruby		362		2							39		12							86		4
 r05	\purple;Eth Rune	Eth	22		5							22		5							22		10						
 r17	\purple;Lum Rune	Lum	80		20							80		20							80		20						
 9$b	\purple;Flawed Bloodstone		39		8							487		2							444		4						
-r61	\grey;Secret Rune\n\purple;Light Rune	Light	50,51		50							50,51		50							50,51		100						
 skf	\purple;Flawed Skull		16		9							110		2							17		9						
 yo5	\purple;Perfect Rainbow Stone		183		20							109		10							136		5						
 r07	\purple;Tal Rune	Tal	0,1,2,3		5							0,1,2,3		5							0,1,2,3		5						
@@ -109,7 +103,6 @@ r48	\purple;Nih Rune	Nih	409		10							409		10							409		10
 gpw	\purple;Perfect Diamond		359		5							39,41,43,45		5							329,330,331,332,377		5						
 gpg	\purple;Perfect Emerald		74		20							45		30							22		10						
 gcv	\purple;Chipped Amethyst		360		1							440		2							119		10						
-r60	\grey;Secret Rune\n\purple;Poison Rune	Pois	57,58,59	25	1025							57,58,59	25	1025							57,58,59	25	2050						
 g$b	\purple;Flawed Onyx		43		8							164		2							470		4						
 r35	\purple;Lah Rune	Lah	359,360,361,362		3							359,360,361,362		3							359,360,361,362		3						
 skl	\purple;Flawless Skull		16		13							110		4							17		13						

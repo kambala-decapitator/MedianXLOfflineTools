@@ -155,7 +155,7 @@
 152	FLYING POLAR BUFFALO ERROR
 153	Charsi
 154	Warriv
-155	(                                   Andariel                                   )
+155	Andariel
 156	FLYING POLAR BUFFALO ERROR
 157	FLYING POLAR BUFFALO ERROR
 158	FLYING POLAR BUFFALO ERROR
@@ -210,7 +210,7 @@
 207	Black Raptor Nest
 208	Cloud Stalker Nest
 209	Meshif
-210	(                                    Duriel                                    )
+210	Duriel
 211	Undead Rat Man
 212	Undead Fetish
 213	Undead Flayer
@@ -228,7 +228,7 @@
 225	FLYING POLAR BUFFALO ERROR
 226	Maggot
 227	Mummy Sarcophagus
-228	(                                   Radament                                   )
+228	Radament
 229	FLYING POLAR BUFFALO ERROR
 230	FLYING POLAR BUFFALO ERROR
 231	FLYING POLAR BUFFALO ERROR
@@ -241,21 +241,21 @@
 238	Cantor
 239	Heirophant
 240	Heirophant
-241	(                                   Mephisto                                   )
-242	(                                    Diablo                                    )
+241	Mephisto
+242	Diablo
 243	Deckard Cain
 244	Deckard Cain
 245	Deckard Cain
 246	Swamp Dweller
 247	Bog Creature
 248	Slime Prince
-249	(                                 The Summoner                                 )
+249	The Summoner
 250	Tyrael
 251	Asheara
 252	Hratli
 253	Alkor
 254	Ormus
-255	(                                    Izual                                    )
+255	Izual
 256	Halbu
 257	Water Watcher
 258	River Stalker
@@ -266,7 +266,7 @@
 263	Meshif
 264	Deckard Cain
 265	Flavie
-266	(                                  Blood Raven                                  )
+266	Blood Raven
 267	FLYING POLAR BUFFALO ERROR
 268	FLYING POLAR BUFFALO ERROR
 269	Rogue Scout
@@ -332,7 +332,7 @@
 329	a Trap
 330	Kaelan
 331	FLYING POLAR BUFFALO ERROR
-332	(                                    Diablo                                    )
+332	Diablo
 333	Sucker Nest
 334	Feeder Nest
 335	Blood Hook Nest
@@ -360,7 +360,7 @@
 361	Venom Lord
 362	Necroskeleton
 363	Necromage
-364	(                                   Griswold                                   )
+364	Griswold
 365	Compelling Orb
 366	Tyrael
 367	Dark Wanderer
@@ -397,14 +397,14 @@
 398	Blood Hunter
 399	Slayer
 400	FLYING POLAR BUFFALO ERROR
-401	(                                   The Smith                                   )
+401	The Smith
 402	Trapped Soul
 403	Trapped Soul
 404	Jamella
-405	(                                    Izual                                    )
+405	Izual
 406	Rat Man
 407	Hadriel
-408	(                             Hephasto The Armorer                             )
+408	Hephasto The Armorer
 410	Wake of Fire
 411	Charged Bolt Sentry
 412	Lightning Sentry
@@ -521,7 +521,7 @@
 523	Combatant
 524	Barricade
 525	Barricade
-526	(                                  Nihlathak                                  ) 
+526	Nihlathak
 527	Anya
 528	Evil Demon Hut
 529	Death Mauler
@@ -535,9 +535,9 @@
 537	Talic the Defender
 538	Madawc the Guardian
 539	Korlic the Protector
-540	(                                    Talic                                    )
-541	(                                    Madawc                                    )
-542	(                                    Korlic                                    )
+540	Talic
+541	Madawc
+542	Korlic
 543	Baal
 544	Baal
 545	Baal
@@ -699,11 +699,11 @@
 701	Oblivion Knight
 702	Oblivion Knight
 703	Cadaver
-704	(                                   Mephisto                                   )
-705	(                                    Diablo                                    )
-706	(                                    Izual                                    )
+704	Mephisto
+705	Diablo
+706	Izual
 707	Pandora
-708	(                                    Duriel                                    )
+708	Duriel
 709	Baal
 710	Slayer
 711	Shadow
@@ -947,10 +947,10 @@
 949	\green;Twilight Archon\blue;
 950	\green;Rust Monster\blue;
 951	\green;Moon Panther\blue;
-952	(                                   Andariel                                   )
-953	(                                    Duriel                                    )
-954	(                                   Mephisto                                   )
-955	(                                    Diablo                                    )
+952	Andariel
+953	Duriel
+954	Mephisto
+955	Diablo
 956	\green;Cow Soldier
 957	\green;Cow Honcho
 958	\green;Cow Ninja
@@ -959,16 +959,16 @@
 961	\gold;Death Projector\blue;
 962	Dominator
 963	Twilight Archon
-964	\gold;(                                    Akarat                                    )\blue;
-965	\orange;Follower of Akarat\blue;
-966	\gold;(                                   Tal Rasha                                   )\blue;
-967	\orange;Horadric Mage\blue;
+964	\gold;Akarat
+965	\orange;Follower of Akarat
+966	\gold;Tal Rasha
+967	\orange;Horadric Mage
 968	Horadric Guardian
-969	(                               Death Projector                               )
-970	\orange;Death's Mechanic\blue;
-971	\gold;(                                 The Butcher                                 )\blue;
+969	Death Projector
+970	\orange;Death's Mechanic
+971	\gold;The Butcher
 972	Chicken (Critter)
-973	\gold;(                                  King Koth                                  ) 
+973	\gold;King Koth
 974	\orange;Bear Shaman
 975	Death's Fury Totem
 976	Blood Tide Totem
@@ -990,17 +990,17 @@
 992	Bone Mage
 993	Burning Dead Mage
 994	Horror Mage
-995	(                                   Inarius                                   )
+995	Inarius
 996	Priest Boss
-997	\gold;(                                   Inarius                                   )\blue;
+997	\gold;Inarius
 998	\orange;Nun of Vanity\blue;
 999	\orange;Nun of Vanity\blue;
 1000	\orange;Nun of Vanity\blue;
 1001	CrystalBall
 1002	GlassSkull
 1003	\orange;Overlord
-1004	\gold;(                              Creature of Flame                              )\blue;
-1005	\gold;(                               Horazon's Familiar                               )\blue;
+1004	\gold;Creature of Flame
+1005	\gold;Horazon's Familiar
 1006	\orange;Bone Archer
 1007	\orange;Burning Dead Archer
 1008	\orange;Horror Archer
@@ -1020,20 +1020,20 @@
 1022	\orange;Bone Sorcerer
 1023	\orange;Burning Dead Sorcerer
 1024	\orange;Horror Sorcerer
-1025	\gold;(                              Ennead Necromancer                              )
+1025	\gold;Ennead Necromancer
 1026	Death Machine
 1027	Thunder Bear
 1028	\orange;Evil Force
 1029	\orange;Mage Flayer
-1030	(                                    Malic                                    )
-1031	(                              Malic's Messenger                              )
-1032	\gold;(                            Lucion, Son of Mephisto                            )
+1030	Malic
+1031	Malic's Messenger
+1032	\gold;Lucion, Son of Mephisto
 1033	\orange;Dark Archon
 1034	\orange;Dark Templar
-1035	(                                    Primus                                    )
+1035	Primus
 1036	\orange;Ethereal
 1037	\orange;Lightwell\blue;
-1038	\gold;(                               Zakarum's Avatar                               )
+1038	\gold;Zakarum's Avatar
 1039	Gargoyle Trap
 1040	Ice Elemental
 1041	Champion of the Sun
@@ -1054,8 +1054,8 @@
 1056	\green;Wracked Soul\blue;
 1057	\green;Bloodbrother\blue;
 1058	\green;Stormscourge
-1059	\gold;(                                  Lord Primus                                  )\blue;
-1060	\orange;Gore Crawler\blue;
+1059	\gold;Lord Primus
+1060	\orange;Gore Crawler
 1061	Crystalline King
 1062	Bone Archer
 1063	Burning Dead Archer
@@ -1064,23 +1064,23 @@
 1066	Spirit of Death
 1067	Wolf
 1068	Undead Counselor
-1069	\gold;(                              Lord Aldric Jitan                              )\blue;
-1070	\orange;Rakkis Guardsman\blue;
-1071	\orange;Citizen\blue;
+1069	\gold;Lord Aldric Jitan
+1070	\orange;Rakkis Guardsman
+1071	\orange;Citizen
 1072	Blood Turret
 1073	Oblivion Turret
 1074	\orange;Roach
 1075	\orange;City Guard
-1076	\gold;(                           Juris Khan, King of Ureh                           )\gold;
+1076	\gold;Juris Khan, King of Ureh
 1077	\orange;Ice King\blue;
 1078	Pursuit Breaker
-1079	\orange;Punishment Turret\blue;
+1079	\orange;Punishment Turret
 1080	Fallen Warrior
 1081	Ghost Flame
 1082	Golden Calf
-1083	\gold;(                         Skovos, Priestess of Karcheus                         )\blue;
-1084	\gold;(                        Philios, Priestess of Hefaetrus                        )\blue;
-1085	\gold;(                          Lycander, Priestess of Zerae                          )\blue;
+1083	\gold;Skovos, Priestess of Karcheus\blue;
+1084	\gold;Philios, Priestess of Hefaetrus\blue;
+1085	\gold;Lycander, Priestess of Zerae\blue;
 1086	\orange;Amazon Warrior
 1087	\gold;Avatar of Karcheus
 1088	\orange;Volcanic Shrine
@@ -1090,21 +1090,21 @@
 1092	\orange;Necrobot\blue;
 1093	\orange;Harpylisk
 1094	\orange;Neon Fiend
-1095	\gold;(                                    Alpha                                    )
-1096	\gold;(                                     Beta                                     )
-1097	\gold;(                                    Gamma                                    )
-1098	\gold;(                                    Delta                                    )
-1099	\gold;(                                   Epsilon                                   )
+1095	\gold;Alpha
+1096	\gold;Beta
+1097	\gold;Gamma
+1098	\gold;Delta
+1099	\gold;Epsilon
 1100	FLYING POLAR BUFFALO ERROR
 1101	Initiate/Acolyte
 1102	Shadow Master
 1103	Scourge
 1104	\orange;Ethereal
-1105	\gold;(                               Zakarum's Avatar                               )
+1105	\gold;Zakarum's Avatar
 1106	\gold;Kabraxis
 1107	Treewarden
 1108	Blood Knight
-1109	\gold;(                                    Bartuc                                    )
+1109	\gold;Bartuc
 1110	\orange;Blood Golem
 1111	Fire Elemental
 1112	Betrayer
@@ -1121,7 +1121,7 @@
 1123	\yellow;Shrieker\blue;
 1124	\yellow;Magma Drake\blue;
 1125	\yellow;Dark Vizjerei\blue;
-1126	\yellow;Mind Warrior\blue;
+1126	\yellow;Mind Warrior
 1127	\yellow;Armageddon Knight\blue;
 1128	\yellow;Ghost Phoenix\blue;
 1129	\yellow;Steel Crusher\blue;
@@ -1131,8 +1131,8 @@
 1133	\yellow;Brood Mother\blue;
 1134	\yellow;Corruptor Warlock\blue;
 1135	\yellow;Broodling\blue;
-1136	\yellow;Dark Champion\blue;
-1137	\yellow;Dark Champion\blue;
+1136	\yellow;Dark Champion
+1137	\yellow;Dark Champion
 1138	\yellow;Cruciator\blue;
 1139	\yellow;Deathless\blue;
 1140	\yellow;Horadrim's Curse\blue;
@@ -1148,7 +1148,7 @@
 1150	\yellow;Edyrem\blue;
 1151	\yellow;Thunderling\blue;
 1152	\yellow;Storm Shaman\blue;
-1153	\yellow;Silver Tyrant\blue;
+1153	\yellow;Silver Tyrant
 1154	\yellow;Core Lord\blue;
 1155	\yellow;Son of Lucion\blue;
 1156	\yellow;Fireblood\blue;
@@ -1169,7 +1169,7 @@
 1171	Soul Burner
 1172	Maelstrom Lord
 1173	Obsidian Lord
-1174	\yellow;Dark Librarian\blue;
+1174	\yellow;Dark Librarian
 1175	Scavenger
 1176	\yellow;Nightmare\blue;
 1177	\yellow;Quill Bear\blue;
@@ -1200,7 +1200,7 @@
 1202	\yellow;Brood Swarm\blue;
 1203	\yellow;Cog\blue;
 1204	\yellow;Ice Clan\blue;
-1205	(                       Infernal Contraption                       )
+1205	Infernal Contraption
 1206	\dgrey;Baal (Vision of Destruction)\blue;
 1207	\gold;Vasily
 1208	\gold;Esu
@@ -1214,15 +1214,15 @@
 1216	Sacrifical Lamb
 1217	\orange;Dark Nephalem\blue;
 1218	Uldyssian, Dark Edyrem King
-1219	\gold;(                                   Imperius                                   )
-1220	\gold;(                                   Malthael                                   )\blue;
+1219	\gold;Imperius
+1220	\gold;Malthael\blue;
 1221	Edyrem
 1222	\orange;Dark Nephalem\blue;
-1223	\orange;Punishment Turret\blue;
-1224	\orange;Punishment Turret\blue;
-1225	\orange;Celebrant of the Triune\blue;
-1226	\orange;Morlu\blue;
-1227	\gold;(                                    Lilith                                    )\blue;
+1223	\orange;Punishment Turret
+1224	\orange;Punishment Turret
+1225	\orange;Celebrant of the Triune
+1226	\orange;Morlu
+1227	\gold;Lilith
 1228	Torajian
 1229	Ghost Wolf
 1230	\yellow;Skull Clan\blue;
@@ -1238,25 +1238,25 @@
 1240	\yellow;Iced Soul\blue;
 1241	\yellow;Avalanche\blue;
 1242	\yellow;Horned Leviathan\blue;
-1243	\yellow;Son of Azmodan\blue;
-1244	\yellow;Cloud Lord\blue;
+1243	\yellow;Son of Azmodan
+1244	\yellow;Cloud Lord
 1245	\yellow;Deathfire Bearer\blue;
-1246	\gold;(                               Dark Star Dragon                               )
+1246	\gold;Dark Star Dragon
 1247	\orange;Chimaera Trap
 1248	\orange;Howling Spirit\blue;
 1249	Dark Star Dragon
 1250	Fallen One
-1251	\gold;(                                   Imperius                                   )
+1251	\gold;Imperius
 1252	\yellow;Daystar\gold;
-1253	\gold;(                                   Quov Tsin                                   )\blue;
+1253	\gold;Quov Tsin\blue;
 1254	Spirit of Vengeance
 1255	Vengeful Dead
 1256	\yellow;Peace Warder\blue;
 1257	\yellow;Living Flame\blue;
 1258	\yellow;Shrieker\blue;
 1259	\yellow;Dark Vizjerei\blue;
-1260	\yellow;Mind Warrior\blue;
-1261	\yellow;Ni Va�c3
+1260	\yellow;Mind Warrior
+1261	\yellow;Ni Va
 1262	\yellow;Grizzly Giant\blue;
 1263	\yellow;Steel Crusher\blue;
 1264	\yellow;Dark Horizon\blue;
@@ -1290,7 +1290,7 @@
 1292	\yellow;Grubber
 1293	\yellow;Fetish Sniper\blue;
 1294	\yellow;Fetish Hunter\blue;
-1295	\yellow;Glooper\blue;
+1295	\yellow;Glooper
 1296	\yellow;Ifrit\blue;
 1297	\yellow;Shock Monkey\blue;
 1298	\yellow;Nightmare\blue;
@@ -1302,7 +1302,7 @@
 1304	\yellow;Lament\blue;
 1305	\yellow;Shock Sting\blue;
 1306	\yellow;Storm Shaman\blue;
-1307	\yellow;Ash Troll\blue;
+1307	\yellow;Ash Troll
 1308	\yellow;Bloodfire Rogue\blue;
 1309	\yellow;Alpha Centaur\blue;
 1310	\yellow;Plagued Dead\blue;
@@ -1329,7 +1329,7 @@
 1331	\yellow;Annihilator\blue;
 1332	\yellow;Warforged Shaman\blue;
 1333	\yellow;Stone Hammer Demon\blue;
-1334	\yellow;Cloud Lord\blue;
+1334	\yellow;Cloud Lord
 1335	\yellow;Deathfire Bearer\blue;
 1336	Acid Beast
 1337	Poison Spitter
@@ -1562,15 +1562,15 @@
 1564	\yellow;Shroom\blue;
 1565	Cultist
 1566	\yellow;Heretic\blue;
-1567	\gold;(                                   Astrogha                                   )\blue;
+1567	\gold;Astrogha\blue;
 1568	Spider Statue
 1569	Darkling
 1570	\yellow;Edyrem\gold;
 1571	\yellow;Corruptor Archer\gold;
 1572	Shrine of Extinction
-1573	\gold;(                              Bull Prince Rodeo                               )\blue;
+1573	\gold;Bull Prince Rodeo\blue;
 1574	Living Rock
-1575	\yellow;Ancient Giant\blue;
+1575	\yellow;Ancient Giant
 1576	Raider
 1577	\yellow;Ulfhedinn\blue;
 1578	Asatruar
@@ -1591,7 +1591,7 @@
 1593	\yellow;Cenobite\blue;
 1594	Crusher
 1595	\yellow;Grizzly Giant\blue;
-1596	\gold;(                       Belial, Lord of Lies                       )
+1596	\gold;Belial, Lord of Lies
 1597	\green;Pit Stone\blue;
 1598	\green;Wicked Man\blue;
 1599	\green;Rock Maul Demon\blue;
@@ -1607,35 +1607,35 @@
 1609	\orange;Slain Soul\blue;
 1610	\orange;Slain Soul\blue;
 1611	\orange;Slain Soul\blue;
-1612	(                                    Assur                                    )
+1612	Assur
 1613	\yellow;Silver Construct\blue;
 1614	\green;Henchman\blue;
 1615	\orange;Blood Golem
 1616	\orange;Necrobot\blue;
-1617	\gold;(                                   Malthael                                   )\blue;
+1617	\gold;Malthael\blue;
 1618	Siren
 1619	Edyrem
 1620	Blood Tide Totem
 1621	\orange;Black Hand Totem
-1622	\purple;(                          Brother Laz (Secret Boss)                          )
+1622	\purple;Brother Laz (Secret Boss)
 1623	\orange;Groupie\blue;
-1624	\orange;Magineer\blue;
-1625	\orange;AC-2 Rivet Bot\blue;
-1626	\orange;AC-1 Hammer Bot\blue;
-1627	\orange;RC-2 Heavy Drone\blue;
-1628	\orange;RC-1 Light Drone\blue;
-1629	\gold;(                             Master Control System                             )\blue;
-1630	\orange;Sentinel (Chaingun)\blue;
-1631	\orange;Sentinel (Drones)\blue;
-1632	\orange;Sentinel (Drones)\blue;
+1624	\orange;Magineer\gold;
+1625	\orange;AC-2 Rivet Bot
+1626	\orange;AC-1 Hammer Bot
+1627	\orange;RC-2 Heavy Drone
+1628	\orange;RC-1 Light Drone
+1629	\gold;Master Control System
+1630	\orange;Sentinel (Chaingun)
+1631	\orange;Sentinel (Drones)
+1632	\orange;Sentinel (Drones)
 1633	\orange;Sentinel (Enforcers)
 1634	\orange;Sentinel (Enforcers)
-1635	\orange;Sentinel (Mines)\blue;
-1636	\orange;Sentinel (MIRV)\blue;
-1637	\orange;Sentinel (EMP)\blue;
+1635	\orange;Sentinel (Mines)
+1636	\orange;Sentinel (MIRV)
+1637	\orange;Sentinel (EMP)
 1638	\orange;Energy Shield Totem
-1639	\orange;Sentinel (Chaingun)\blue;
-1640	\orange;Sentinel (Chaingun)\blue;
+1639	\orange;Sentinel (Chaingun)
+1640	\orange;Sentinel (Chaingun)
 1641	\orange;Sentinel (Magineers)
 1642	Leprechaun
 1643	Elfin Spirit
@@ -1646,15 +1646,15 @@
 1648	\yellow;Onyx Knight\gold;
 1649	Devil's Fang Totem
 1650	Wolf Companion
-1651	\gold;(                                    Akarat                                    )\blue;
-1652	\red;Dragon's Egg\blue;
-1653	\red;Dragon's Egg\blue;
-1654	\red;(                                   Baalspawn                                   )
-1655	\red;(                                   Baalspawn                                   )
-1656	\red;Dragon's Egg\blue;
-1657	\red;Dragon's Egg\blue;
-1658	\red;(                                   Baalspawn                                   )
-1659	\red;(                                   Baalspawn                                   )
+1651	\gold;Akarat
+1652	\red;Dragon's Egg
+1653	\red;Dragon's Egg
+1654	\red;Baalspawn
+1655	\red;Baalspawn
+1656	\red;Dragon's Egg
+1657	\red;Dragon's Egg
+1658	\red;Baalspawn
+1659	\red;Baalspawn
 1660	Jinn
 1661	\yellow;Quill Bear\blue;
 1662	\yellow;Frost Raptor\blue;
@@ -1694,18 +1694,18 @@
 1696	Fear Bomb Totem
 1697	Horned God
 1698	\white;Midnight Fairy
-1699	\dgreen;Clawstorm Terror\blue;
-1700	\dgreen;Landmass\blue;\blue;
-1701	\dgreen;Glowing Blob\blue;
-1702	\dgreen;Fairy Witch\blue;
-1703	\dgreen;Bane Hunter\blue;
+1699	\dgreen;Clawstorm Terror
+1700	\dgreen;Landmass
+1701	\dgreen;Glowing Blob
+1702	\dgreen;Fairy Witch
+1703	\dgreen;Bane Hunter
 1704	a startled Witch...
 1705	FLYING POLAR BUFFALO ERROR
-1706	\dgreen;Clawstorm Terror\blue;
-1707	\dgreen;Landmass\blue;\blue;
-1708	\dgreen;Glowing Blob\blue;
-1709	\dgreen;Fairy Witch\blue;
-1710	\dgreen;Bane Hunter\blue;
+1706	\dgreen;Clawstorm Terror
+1707	\dgreen;Landmass
+1708	\dgreen;Glowing Blob
+1709	\dgreen;Fairy Witch
+1710	\dgreen;Bane Hunter
 1711	a startled Witch...
 1712	\yellow;Shardspawn
 1713	\yellow;Trap Rat\blue;
@@ -1740,7 +1740,7 @@
 1742	\yellow;Unseelie Dame\blue;
 1743	Warlock
 1744	Black Cat Familiar
-1745	(                                    Diablo                                    )
+1745	Diablo
 1746	\yellow;Thunderbolt\blue;
 1747	Pig!
 1748	\yellow;Detonator
@@ -1754,14 +1754,14 @@
 1756	\orange;Feyr
 1757	\orange;Sunless Reveler
 1758	\orange;Sunless Mutant
-1759	\yellow;Porkchop\blue;
-1760	\yellow;Porkchop\blue;
+1759	\yellow;Porkchop
+1760	\yellow;Porkchop
 1761	\yellow;The Pack
 1762	\yellow;The Pack
-1763	\yellow;Hemoplague\blue;
-1764	\yellow;Hemoplague\blue;
-1765	\yellow;Hemoplague\blue;
-1766	\yellow;Hemoplague\blue;
+1763	\yellow;Hemoplague
+1764	\yellow;Hemoplague
+1765	\yellow;Hemoplague
+1766	\yellow;Hemoplague
 1767	\dgreen;Psychorb
 1768	\dgreen;Psychorb
 1769	\dgreen;Hephaestian
@@ -1773,23 +1773,23 @@
 1775	CouatlInhibitor
 1776	LandsharkInhibitor
 1777	Rainbow Hunter Inhibitor
-1778	\yellow;Ni Va Inhibitor�c3
+1778	\yellow;Ni Va Inhibitor
 1779	Couatl
 1780	Landshark
 1781	Rainbow Hunter
-1782	\yellow;Ni Va�c3
+1782	\yellow;Ni Va
 1783	Guardian Construct
-1784	\yellow;Sacred Construct\blue;
-1785	\dgrey;Fire Beetle\blue;
-1786	\yellow;Mahasattva\blue;
+1784	\yellow;Sacred Construct
+1785	\dgrey;Fire Beetle
+1786	\yellow;Mahasattva
 1787	Corpse Worm
 1788	Slimer
-1789	\yellow;Glooper\blue;
+1789	\yellow;Glooper
 1790	Sewer Troll
 1791	Dungeon Troll
-1792	\yellow;Ash Troll\blue;
+1792	\yellow;Ash Troll
 1793	Wandering Sarandesh
-1794	\yellow;Fallen Sarandesh\blue;
+1794	\yellow;Fallen Sarandesh
 1795	Flit
 1796	Flit
 1797	\yellow;Core Lord\blue;
@@ -1808,282 +1808,86 @@
 1810	\yellow;Basilisk\blue;
 1811	\yellow;Unseelie Dame\blue;
 1812	\yellow;Detonator
-1813	\yellow;Ash Troll\blue;
-1814	\yellow;Sacred Construct\blue;
-1815	\yellow;Mahasattva\blue;
-1816	\yellow;Fallen Sarandesh\blue;
+1813	\yellow;Ash Troll
+1814	\yellow;Sacred Construct
+1815	\yellow;Mahasattva
+1816	\yellow;Fallen Sarandesh
 1817	Sleeping Cave Snapper
-1818	\yellow;Fetish Rocketeer\blue;
-1819	\yellow;Silverbolt\blue;
+1818	\yellow;Fetish Rocketeer
+1819	\yellow;Silverbolt
 1820	Draconic Emissary
 1821	Blur
-1822	Blur
-1823	\orange;Chimaera Trap
-1824	\blue;Light Elemental\blue;
-1825	\blue;Fire Elemental\blue;
-1826	\blue;Ice Elemental\blue;
-1827	\blue;Earth Elemental\blue;
-1828	\blue;Magic Elemental\blue;
-1829	\gold;Ultra Light\blue;
-1830	\gold;Ultra Fire\blue;
-1831	\gold;Ultra Ice\blue;
-1832	\gold;Ultra Earth\blue;
-1833	\gold;Ultra Magic\blue;
-1834	\dgreen;(                               Pillar of Skulls                               )\blue;
-1835	\dgreen;(                         Kabraxis, the Thief of Hope                         ) \blue;
-1836	\orange;Shadow Self\blue;
-1837	\orange;Hell Rat\blue;
-1838	\dgrey;Ghost of Kabraxis\blue;
-1839	\red;Hello Retard\blue;
-1840	\yellow;Darkwarden\blue;
-1841	\orange;Flying Scimitar
-1842	\gold;Inarius\blue;
-1843	\gold;Bull Prince Rodeo\blue;
-1844	\gold;Imperius\blue;
-1845	\gold;Malthael\blue;
-1846	\gold;Andariel\blue;
-1847	\gold;Juris Khan, King of Ureh\blue;
-1848	\gold;Quov Tsin\blue;
-1849	\gold;Skovos, Priestess of Karcheus\blue;
-1850	\gold;Philios, Priestess of Hefaetrus\blue;
-1851	\gold;Lycander, Priestess of Zerae\blue;
-1852	\gold;Horazon's Familiar\blue;
-1853	\gold;Tal Rasha\blue;
-1854	\gold;Duriel\blue;
-1855	\gold;Lord Primus\blue;
-1856	\gold;Mephisto\blue;
-1857	\gold;Dark Star Dragon\blue;
-1858	\gold;Baal\blue;
-1859	\gold;Malic\blue;
-1860	\gold;Lord Aldric Jitan\blue;
-1861	\gold;The Butcher\blue;
-1862	\gold;Diablo\blue;
-1863	\gold;Death Projector\blue;
-1864	\gold;(                    Athulua, the Amazonian Goddess                    )
-1865	Kethryes' Vermin
-1866	\red;-(               Uldyssian's Memory               )-
-1867	\red;-(               Uldyssian's Memory               )-
-1868	\red;-(               Uldyssian's Memory               )-
-1869	\red;-(               Uldyssian's Memory               )-
-1870	\red;-(               Uldyssian's Memory               )-
-1871	\red;-(               Uldyssian's Memory               )-
-1872	\red;-(               Uldyssian's Memory               )-
-1873	\red;-(               Uldyssian's Memory               )-
-1874	\red;-(               Uldyssian's Memory               )-
-1875	\red;-(               Uldyssian's Memory               )-
-1876	\red;-(               Uldyssian's Memory               )-
-1877	\red;-(               Uldyssian's Memory               )-
-1878	\red;-(               Uldyssian's Memory               )-
-1879	\red;-(               Uldyssian's Memory               )-
-1880	\red;-(               Uldyssian's Memory               )-
-1881	\red;-(               Uldyssian's Memory               )-
-1882	\red;-(               Uldyssian's Memory               )-
-1883	\red;-(               Uldyssian's Memory               )-
-1884	\red;-(               Uldyssian's Memory               )-
-1885	\red;-(               Uldyssian's Memory               )-
-1886	\red;-(               Uldyssian's Memory               )-
-1887	\red;-(               Uldyssian's Memory               )-
-1888	\red;-(               Uldyssian's Memory               )-
-1889	\red;-(               Uldyssian's Memory               )-
-1890	\red;-(               Uldyssian's Memory               )-
-1891	\red;-(               Uldyssian's Memory               )-
-1892	\red;-(               Uldyssian's Memory               )-
-1893	\red;-(               Uldyssian's Memory               )-
-1894	\red;-(               Uldyssian's Memory               )-
-1895	\red;-(               Uldyssian's Memory               )-
-1896	\gold;(                    Uldyssian, Dark Edyrem King                    )
-1897	\red;-(               Uldyssian's Memory               )-
-1898	\red;-(               Uldyssian's Memory               )-
-1899	\red;-(               Uldyssian's Memory               )-
-1900	\red;-(               Uldyssian's Memory               )-
-1901	\red;-(               Uldyssian's Memory               )-
-1902	\red;-(               Uldyssian's Memory               )-
-1903	\red;-(               Uldyssian's Memory               )-
-1904	\red;-(               Uldyssian's Memory               )-
-1905	\red;-(               Uldyssian's Memory               )-
-1906	\red;-(               Uldyssian's Memory               )-
-1907	\red;-(               Uldyssian's Memory               )-
-1908	\red;-(               Uldyssian's Memory               )-
-1909	\red;-(               Uldyssian's Memory               )-
-1910	\red;-(               Uldyssian's Memory               )-
-1911	\red;-(               Uldyssian's Memory               )-
-1912	\red;-(               Uldyssian's Memory               )-
-1913	\red;-(               Uldyssian's Memory               )-
-1914	\red;-(               Uldyssian's Memory               )-
-1915	\red;-(               Uldyssian's Memory               )-
-1916	\red;-(               Uldyssian's Memory               )-
-1917	\red;-(               Uldyssian's Memory               )-
-1918	\red;-(               Uldyssian's Memory               )-
-1919	\red;-(               Uldyssian's Memory               )-
-1920	\red;-(               Uldyssian's Memory               )-
-1921	\red;-(               Uldyssian's Memory               )-
-1922	\red;-(               Uldyssian's Memory               )-
-1923	\red;-(               Uldyssian's Memory               )-
-1924	\red;-(               Uldyssian's Memory               )-
-1925	\red;-(               Uldyssian's Memory               )-
-1926	\red;-(               Uldyssian's Memory               )-
-1927	\red;-(               Uldyssian's Memory               )-
-1928	Uldyssian's Ghost
-1929	\gold;Quest Totem
-1930	\red;(                          Volrath The Vile                          )
-1931	\orange;Vilespawn
-1932	\red;(     Minion of Terror     )\blue;
-1933	\red;(     Minion of Terror     )\blue;
-1934	\red;(     Minion of Terror     )\blue;
-1935	\red;(     Minion of Terror     )\blue;
-1936	\purple;Ghost of Terror
-1937	Uldyssian's Ghost
-1938	\red;(                         VN_Dragon                         )
-1939	Skeleton
-1940	\purple;(                        MarcoNecroX (Secret Boss)                        )
-1941	\orange;Punishment Turret\blue;
-1942	\orange;Punishment Turret\blue;
-1943	\red;Dark Spirit
-1944	Spirit
-1945	\orange;Death's Mechanic\blue;
-1946	TathametDragon
-1947	GodAnu
-1948	BadAnu
-1949	TathMinion
-1950	RiftTrap
-1951	RiftTrap
-1952	RiftTrap
-1953	TathFiend
-1954	TathMinion
-1955	RiftTrap
-1956	BadAnu
-1957	RiftTrap
-1958	TathametDragon
-1959	BadAnu
-1960	PrimeLies
-1961	PrimeSin
-1962	PrimePain
-1963	PrimeAnguish
-1964	PrimeDestruction
-1965	PrimeTerror
-1966	PrimeHatred
-1967	PrimePure
-1968	NeoBarb
-1969	NeoPaladin
-1970	NeoNecro
-1971	NeoSorc
-1972	NeoSin1
-1973	MazeSecretWolf
-1974	MazeSecretSin
-1975	NeoAmazon
-1976	NeoNecroSkel
-1977	NeoNecroKnight
-1978	NeoDruid1
-1979	NeoDruid2
-1980	MazeGiant
-1981	MazeWizard
-1982	MazeDemonWizard
-1983	MazeMinion
-1984	GenAgaliarept
-1985	GenNebiros
-1986	GenSatanachia
-1987	GenSargatanas
-1988	GenLucifuge
-1989	GenFleuretty
-1990	MazeTrapSwarm
-1991	MazeTrapGeneric
-1992	MazeTrapGeneric
-1993	\yellow;The Pack
-1994	Wolf Companion
-1995	Dire Wolf
-1996	MazeTrapGeneric
-1997	MazeTrapGeneric
-1998	MazeTrapGeneric
-1999	MazeTrapGeneric
-2000	MazeTrapGeneric
-2001	MazeTrapGeneric
-2002	MazeTrapGeneric
-2003	MazeTrapGeneric
-2004	MazeTrapGeneric
-2005	MazeTrapGeneric
-2006	MazeTrapGeneric
-2007	MazeTrapGeneric
-2008	MazeTrapGeneric
-2009	MazeTrapGeneric
-2010	DemiSealTotem
-2011	DemiSealTotem
-2012	DemiSealTotem
-2013	DemiSealTotem
-2014	DemiSealTotem
-2015	DemiSealTotem
-2016	HellGeneralTotem
-2017	MazeTrapGeneric
-2018	SecretBabylon
-2019	\orange;Sand Maggot
-2020	\orange;Sand Maggot Egg
-2021	\orange;Sand Maggot Young
-2022	\orange;Sand Maggot Egg
-2023	\orange;Sand Maggot Ghost
-2024	\orange;Sand Snake
-2025	\orange;Sand Maggot Ghost
-2026	\red;Flame\blue;
-2027	\blue;Snow
-2028	\dgreen;Venom\blue;
-2029	\orange;Illusion\blue;
-2030	\yellow;Storm\blue;
-2031	\grey;Stone\blue;
-2032	\gold;(                              Chrysaor                              )
-2033	\orange;Goliath\blue;
-2034	Water Watcher
-2035	\purple;(                          Chrysaor (Secret Boss)                          )
-2036	\gold;Trap
-2037	\orange;Abomination\blue;
-2038	\gold;Trap
-2039	\orange;Zealot Trap
-2040	\orange;Zealot
-2041	\orange;Zealot Nest
-2042	\red;DO NOT DISTURB
-2043	a startled Witch...
-2044	\purple;(                           Startled Witch                           )
-2045	\orange;Zealot Nest
-2046	\orange;Zealot
-2047	\gold;a deadly trap...
-2048	GenLucifuge
-2049	\red;(                          Volrath The Vile                          )
-2050	Trap
-2051	\orange;Celestial Descendant\blue;
-2052	\orange;Ankheg\blue;
-2053	~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2054	\orange;Forest Bugbear\blue;
-2055	\orange;Chimera\blue;
-2056	\orange;Death Servant\blue;
-2057	\orange;Demon Lord\blue;
-2058	\orange;Drowned Beast\blue;
-2059	\orange;Gehreleth\blue;
-2060	\orange;Darkness\blue;
-2061	\orange;Giant Hunters\blue;
-2062	\gold;(                         Valthek, the Vizjerei Sorcerer                         )
-2063	\orange;Bone Golem\blue;
-2064	\orange;Earth Fiend\blue;
-2065	\orange;Iron Giant\blue;
-2066	\orange;Stone Frog\blue;
-2067	\orange;Red-Armed Soldier\blue;
-2068	\orange;Vulture Harpy\blue;
-2069	\orange;Hobgoblin\blue;
-2070	\orange;Lizardking\blue;
-2071	\orange;Lizardman\blue;
-2072	\orange;Dark Ogre\blue;
-2073	\orange;Polar Worm\blue;
-2074	\orange;Skeletal Shadow\blue;
-2075	\orange;Giant Skeleton\blue;
-2076	\orange;Skeleton Priest\blue;
-2077	\orange;Chaos Critter\blue;
-2078	\orange;Wyvern\blue;
-2079	\orange;Thokola\blue;
-2080	\orange;Swampy Reptile\blue;
-2081	\orange;Subterranean Predator\blue;
-2082	\orange;Cursed Warrior\blue;
-2083	\gold;(                Andariel, the Maiden of Anguish                )
-2084	\gold;(                           Duriel, the Lord of Pain                      )
-2085	\gold;(               Dul'Mephistos, the Lord of Hatred               )
-2086	\gold;(                    Al'Diabalos, the Lord of Terror                    )
-2087	\gold;(                    Tor'Baalos, the Lord of Destruction                    )
-2088	\gold;(          Seal of the Gods          )
-2090	\red;Godsman Guard
-2091	\orange;Chimaera Trap
-2092	Fireheart Totem
+1822	\purple;Tathamet, the Prime Evil
+1823	\orange;Anu, the Pure
+1824	\purple;Anu, the Corrupted
+1825	Voidspawn
+1826	the essence of the rift...
+1827	the essence of the rift...
+1828	the essence of the rift...
+1829	Great Voidspawn
+1830	Voidspawn
+1831	the essence of the rift...
+1832	\purple;Anu, the Corrupted
+1833	the essence of the rift...
+1834	\purple;Tathamet, the Prime Evil
+1835	\purple;Anu, the Corrupted
+1836	\orange;Vision of Lies\blue;
+1837	\orange;Vision of Sin\blue;
+1838	\orange;Vision of Pain\blue;
+1839	\orange;Vision of Anguish\blue;
+1840	\orange;Vision of Destruction\blue;
+1841	\orange;Vision of Terror\blue;
+1842	\orange;Vision of Hatred\blue;
+1843	\orange;Vision of Purity\blue;
+1844	\orange;Soul of Wrath
+1845	\orange;Soul of Pride
+1846	\orange;Soul of Greed
+1847	\orange;Soul of Envy
+1848	\orange;Soul of Lust
+1849	\purple;Conri, the King of Wolves
+1850	\purple;Natasha, the Queen of Blades
+1851	\orange;Soul of Vanity
+1852	\yellow;Grim Knight
+1853	\yellow;Dullahan
+1854	\orange;Soul of Sloth
+1855	\orange;Soul of Gluttony
+1856	\orange;Gigas
+1857	\orange;Ammuit Illusionist
+1858	\orange;Vizjerei Sorcerer
+1859	\orange;Ghast
+1860	\gold;Agaliarept
+1861	\gold;Nebiros
+1862	\gold;Satanachia
+1863	\gold;Sargatanas
+1864	\gold;Lucifuge
+1865	\gold;Fleuretty
+1866	\orange;The Whisperer
+1867	a labyrinth trap...
+1868	a labyrinth trap...
+1869	Lobo
+1870	Vorg
+1871	Glasyalabolas
+1872	a labyrinth trap...
+1873	a labyrinth trap...
+1874	a labyrinth trap...
+1875	a labyrinth trap...
+1876	a labyrinth trap...
+1877	a labyrinth trap...
+1878	a labyrinth trap...
+1879	a labyrinth trap...
+1880	a labyrinth trap...
+1881	a labyrinth trap...
+1882	a labyrinth trap...
+1883	a labyrinth trap...
+1884	a labyrinth trap...
+1885	a labyrinth trap...
+1886	\orange;Grimoire Altar
+1887	\orange;Grimoire Altar
+1888	\orange;Grimoire Altar
+1889	\orange;Grimoire Altar
+1890	\orange;Grimoire Altar
+1891	\orange;Grimoire Altar
+1892	\orange;Infernal Beacon
+1893	a labyrinth trap...
+1894	\purple;Babylon the Great
+1895	\gold;Soul of Wolves\blue;
