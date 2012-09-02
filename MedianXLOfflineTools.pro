@@ -6,7 +6,7 @@
 
 TARGET = MedianXLOfflineTools
 TEMPLATE = app
-VERSION = 0.3
+VERSION = 0.3.0.1
 
 QT += network
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets # for Qt 5
