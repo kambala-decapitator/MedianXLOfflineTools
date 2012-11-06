@@ -76,7 +76,7 @@ const int MedianXLOfflineTools::kMaxRecentFiles = 10;
 MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *parent, Qt::WFlags flags) : QMainWindow(parent, flags), ui(new Ui::MedianXLOfflineToolsClass), _findItemsDialog(0),
     _backupLimitsGroup(new QActionGroup(this)), _showDisenchantPreviewGroup(new QActionGroup(this)), hackerDetected(tr("1337 hacker detected! Please, play legit.")), //difficulties(QStringList() << tr("Hatred") << tr("Terror") << tr("Destruction")),
     maxValueFormat(tr("Max: %1")), minValueFormat(tr("Min: %1")), investedValueFormat(tr("Invested: %1")),
-    kForumThreadHtmlLinks(tr("<a href=\"http://modsbylaz.14.forumer.com/viewtopic.php?t=23147\">Official Median XL Forum thread</a><br>"
+    kForumThreadHtmlLinks(tr("<a href=\"http://www.medianxl.com/t83-median-xl-offline-tools\">Official Median XL Forum thread</a><br>"
                              "<a href=\"http://forum.worldofplayers.ru/showthread.php?t=34489\">Official Russian Median XL Forum thread</a>")), _isLoaded(false)
 {
     ui->setupUi(this);
@@ -347,6 +347,14 @@ void MedianXLOfflineTools::saveCharacter()
         for (int startPos = Enums::Offsets::WaypointsData + 2, i = 0; i < kDifficultiesNumber; ++i, startPos += 24)
             tempFileContents.replace(startPos, activatedWaypointsBytes.size(), activatedWaypointsBytes);
     }
+#ifndef MAKE_FINISHED_CHARACTER
+    if (ui->actionDeactivateHallsOfPain->isChecked())
+#endif
+    {
+        // disable only on Destruction
+        int startPos = Enums::Offsets::WaypointsData + 2 + 24*2;
+        tempFileContents[startPos + 4] = tempFileContents.at(startPos + 4) & ~8;
+    }
 
     if (ui->convertToSoftcoreCheckBox->isChecked())
         charInfo.basicInfo.isHardcore = false;
@@ -355,7 +363,7 @@ void MedianXLOfflineTools::saveCharacter()
     charInfo.basicInfo.isHardcore = true;
     charInfo.basicInfo.hadDied = false;
 #endif
-    char statusValue = tempFileContents[Enums::Offsets::Status];
+    char statusValue = tempFileContents.at(Enums::Offsets::Status);
     if (charInfo.basicInfo.hadDied)
         statusValue |= Enums::StatusBits::HadDied;
     else
@@ -420,7 +428,7 @@ void MedianXLOfflineTools::saveCharacter()
         outputDataStream << questComplete;
     }
 #endif
-    
+
 #ifdef ENABLE_PERSONALIZE
     for (int i = 0; i < kDifficultiesNumber; ++i)
     {
@@ -548,7 +556,6 @@ void MedianXLOfflineTools::saveCharacter()
     ItemParser::writeItems(corpseItems, outputDataStream);
 
     // write merc items
-    Q_ASSERT(tempFileContents.mid(outputDataStream.device()->pos(), 2) == kMercHeader);
     if (charInfo.mercenary.exists)
     {
         outputDataStream.skipRawData(2 + 2); // jf + JM
@@ -958,7 +965,7 @@ void MedianXLOfflineTools::giveCube()
     ItemInfo *cube = ItemDataBase::loadItemFromFile("cube");
     if (!cube)
         return;
-    
+
     if (!ItemDataBase::storeItemIn(cube, Enums::ItemStorage::Inventory, ItemsViewerDialog::rowsInStorageAtIndex(Enums::ItemStorage::Inventory)) &&
         !ItemDataBase::storeItemIn(cube, Enums::ItemStorage::Stash,     ItemsViewerDialog::rowsInStorageAtIndex(Enums::ItemStorage::Stash)))
     {
@@ -1023,7 +1030,7 @@ void MedianXLOfflineTools::associateFiles()
 void MedianXLOfflineTools::checkForUpdate()
 {
     _isManuallyCheckingForUpdate = sender() != 0;
-    checkForUpdateFromUrl(QUrl("http://modsbylaz.14.forumer.com/viewforum.php?f=21"));
+    checkForUpdateFromUrl(QUrl("http://www.medianxl.com/f16-median-xl-tools-informations"));
 }
 
 void MedianXLOfflineTools::aboutApp()
@@ -1437,7 +1444,7 @@ void MedianXLOfflineTools::saveSettings() const
     settings.beginGroup("recentItems");
     settings.setValue("recentFiles", _recentFilesList);
     settings.endGroup();
-    
+
     settings.beginGroup("options");
     settings.setValue("loadLastCharacter", ui->actionLoadLastUsedCharacter->isChecked());
     settings.setValue("warnWhenColoredName", ui->actionWarnWhenColoredName->isChecked());
@@ -1519,6 +1526,7 @@ void MedianXLOfflineTools::connectSignals()
 
     // edit
     connect(ui->actionRename, SIGNAL(triggered()), SLOT(rename()));
+    connect(ui->actionDeactivateHallsOfPain, SIGNAL(triggered()), SLOT(modify()));
 
     // items
     connect(ui->actionShowItems, SIGNAL(triggered()), SLOT(showItems()));
@@ -2242,13 +2250,15 @@ void MedianXLOfflineTools::clearUI()
     foreach (QCheckBox *checkbox, checkBoxes)
         checkbox->setChecked(false);
     ui->respecStatsButton->setChecked(false);
+    ui->actionDeactivateHallsOfPain->setChecked(false);
 
     QList<QGroupBox *> groupBoxes = QList<QGroupBox *>() << ui->characterGroupBox << ui->statsGroupBox << ui->mercGroupBox << _questsGroupBox;
     foreach (QGroupBox *groupBox, groupBoxes)
         groupBox->setDisabled(true);
 
-    QList<QAction *> actions = QList<QAction *>() << ui->actionReloadCharacter << ui->actionSaveCharacter << ui->actionRespecStats << ui->actionRespecSkills << ui->actionActivateWaypoints << ui->actionRename << ui->actionConvertToSoftcore
-                                                  << ui->actionResurrect << ui->actionFind << ui->actionFindNext << ui->actionFindPrevious << ui->actionShowItems << ui->actionSkillPlan << ui->actionExportCharacterInfo;
+    QList<QAction *> actions = QList<QAction *>() << ui->actionReloadCharacter << ui->actionSaveCharacter << ui->actionRename << ui->actionRespecStats << ui->actionRespecSkills << ui->actionActivateWaypoints
+                                                  << ui->actionDeactivateHallsOfPain << ui->actionConvertToSoftcore << ui->actionResurrect << ui->actionFind << ui->actionFindNext << ui->actionFindPrevious
+                                                  << ui->actionShowItems << ui->actionSkillPlan << ui->actionExportCharacterInfo;
     foreach (QAction *action, actions)
         action->setDisabled(true);
 
@@ -2275,8 +2285,8 @@ void MedianXLOfflineTools::updateUI()
 {
     clearUI();
 
-    QList<QAction *> actions = QList<QAction *>() << ui->actionReloadCharacter << ui->actionRespecStats << ui->actionRespecSkills << ui->actionActivateWaypoints
-                                                  << ui->actionRename << ui->actionSkillPlan << ui->actionExportCharacterInfo;
+    QList<QAction *> actions = QList<QAction *>() << ui->actionReloadCharacter << ui->actionRename << ui->actionRespecStats << ui->actionRespecSkills << ui->actionActivateWaypoints << ui->actionDeactivateHallsOfPain
+                                                  << ui->actionSkillPlan << ui->actionExportCharacterInfo;
     foreach (QAction *action, actions)
         action->setEnabled(true);
     ui->respecSkillsCheckBox->setEnabled(true);

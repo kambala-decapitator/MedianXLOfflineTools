@@ -234,6 +234,7 @@ public:
         EnhancedDefenceBasedOnClvl,
         TrophyOrBless = 219,
         ItemDuped = 276,
+        MysticOrbsEffectDoubled = 296,
         Avoid1 = 338,
         Avoid2,
         Avoid3,

@@ -444,5 +444,5 @@ QString PropertiesViewerWidget::collectMysticOrbsDataFromProps(QSet<int> *moSet,
 
 bool PropertiesViewerWidget::isMysticOrbEffectDoubled()
 {
-    return _item->quality == Enums::ItemQuality::Crafted || _item->quality == Enums::ItemQuality::Honorific;
+    return _item->props.contains(Enums::ItemProperties::MysticOrbsEffectDoubled) || _item->rwProps.contains(Enums::ItemProperties::MysticOrbsEffectDoubled);
 }

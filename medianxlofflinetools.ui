@@ -384,8 +384,8 @@
       <string notr="true">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Lucida Grande'; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt;&quot;&gt;&lt;br /&gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;&lt;br /&gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="classLineEdit">
@@ -580,7 +580,7 @@ p, li { white-space: pre-wrap; }
      <x>0</x>
      <y>0</y>
      <width>670</width>
-     <height>22</height>
+     <height>21</height>
     </rect>
    </property>
    <property name="nativeMenuBar">
@@ -619,14 +619,31 @@ p, li { white-space: pre-wrap; }
     <property name="title">
      <string>&amp;Edit</string>
     </property>
+    <widget class="QMenu" name="menuHardcore">
+     <property name="title">
+      <string>Hardcore</string>
+     </property>
+     <addaction name="actionConvertToSoftcore"/>
+     <addaction name="actionResurrect"/>
+    </widget>
+    <widget class="QMenu" name="menuWaypoints">
+     <property name="title">
+      <string>Waypoints</string>
+     </property>
+     <addaction name="actionActivateWaypoints"/>
+     <addaction name="actionDeactivateHallsOfPain"/>
+    </widget>
+    <widget class="QMenu" name="menuRespec">
+     <property name="title">
+      <string>Respec</string>
+     </property>
+     <addaction name="actionRespecStats"/>
+     <addaction name="actionRespecSkills"/>
+    </widget>
     <addaction name="actionRename"/>
-    <addaction name="separator"/>
-    <addaction name="actionRespecStats"/>
-    <addaction name="actionRespecSkills"/>
-    <addaction name="actionActivateWaypoints"/>
-    <addaction name="separator"/>
-    <addaction name="actionConvertToSoftcore"/>
-    <addaction name="actionResurrect"/>
+    <addaction name="menuRespec"/>
+    <addaction name="menuWaypoints"/>
+    <addaction name="menuHardcore"/>
    </widget>
    <widget class="QMenu" name="menuOptions">
     <property name="title">
@@ -942,7 +959,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/MedianXLOfflineTools/icons/items.png</normaloff>:/MedianXLOfflineTools/icons/items.png</iconset>
    </property>
    <property name="text">
-    <string>Show items</string>
+    <string>Show Items</string>
    </property>
    <property name="toolTip">
     <string>Show Items</string>
@@ -1357,6 +1374,20 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="text">
     <string>Never</string>
+   </property>
+  </action>
+  <action name="actionDeactivateHallsOfPain">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Deactivate Halls of Pain (Destruction)</string>
+   </property>
+   <property name="statusTip">
+    <string>Useful if you want Anya to open the red portal again</string>
    </property>
   </action>
  </widget>
