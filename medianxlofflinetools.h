@@ -90,6 +90,9 @@ private slots:
     // options
     void backupSettingTriggered(bool checked);
     void associateFiles();
+#ifdef Q_WS_WIN32
+    void showFileAssocaitionUI();
+#endif // Q_WS_WIN32
 
     // help
     void checkForUpdate();
@@ -134,7 +137,6 @@ private:
 #ifdef Q_WS_WIN32
     PCWSTR  appUserModelID();
     void setAppUserModelID();
-    void showFileAssocaitionUI();
 
     void syncWindowsTaskbarRecentFiles();
     void removeFromWindowsRecentFiles(const QString &filePath);

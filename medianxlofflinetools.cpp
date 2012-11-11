@@ -113,13 +113,24 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *pare
     _showDisenchantPreviewGroup->addAction(ui->actionPreviewDisenchantForSinglePage);
     _showDisenchantPreviewGroup->addAction(ui->actionPreviewDisenchantNever);
 
+
     // TODO: [0.4] remove when implementing export info
     ui->menuExport->removeAction(ui->actionExportCharacterInfo);
     ui->mainToolBar->removeAction(ui->actionExportCharacterInfo);
 
 #ifdef Q_WS_WIN32
     setAppUserModelID(); // is actually used only in Windows 7 and later
+
+    if (QSysInfo::windowsVersion() > QSysInfo::WV_WINDOWS7)
+    {
+        delete ui->actionAssociate; ui->actionAssociate = 0;
+        delete ui->actionCheckFileAssociations; ui->actionCheckFileAssociations = 0;
+    }
+    else
 #endif
+    {
+        delete ui->actionOpenFileAssociationUI; ui->actionOpenFileAssociationUI = 0;
+    }
 
     loadData();
     createLanguageMenu();
@@ -130,11 +141,7 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *pare
 
 #if defined(Q_WS_WIN32) || defined(Q_WS_MACX)
 #ifdef Q_WS_WIN32
-    if (QSysInfo::windowsVersion() > QSysInfo::WV_WINDOWS7)
-    {
-        showFileAssocaitionUI();
-    }
-    else
+    if (QSysInfo::windowsVersion() <= QSysInfo::WV_WINDOWS7) // Windows 8 and later mustn't call this code
 #endif
     {
         bool isDefault = FileAssociationManager::isApplicationDefaultForExtension(kCharacterExtensionWithDot);
@@ -1437,7 +1444,8 @@ void MedianXLOfflineTools::loadSettings()
     ui->actionAutoOpenHCShared->setChecked(settings.value("hcShared", true).toBool());
     settings.endGroup();
 
-    ui->actionCheckFileAssociations->setChecked(settings.value("checkAssociations", true).toBool());
+    if (ui->actionCheckFileAssociations)
+        ui->actionCheckFileAssociations->setChecked(settings.value("checkAssociations", true).toBool());
     ui->actionCheckForUpdateOnStart->setChecked(settings.value("checkUpdates", true).toBool());
 
     settings.endGroup();
@@ -1471,7 +1479,8 @@ void MedianXLOfflineTools::saveSettings() const
     settings.setValue("hcShared", ui->actionAutoOpenHCShared->isChecked());
     settings.endGroup();
 
-    settings.setValue("checkAssociations", ui->actionCheckFileAssociations->isChecked());
+    if (ui->actionCheckFileAssociations)
+        settings.setValue("checkAssociations", ui->actionCheckFileAssociations->isChecked());
     settings.setValue("checkUpdates", ui->actionCheckForUpdateOnStart->isChecked());
 
     settings.endGroup();
@@ -1546,7 +1555,12 @@ void MedianXLOfflineTools::connectSignals()
 
     // options
     connect(ui->actionBackup, SIGNAL(triggered(bool)), SLOT(backupSettingTriggered(bool)));
-    connect(ui->actionAssociate, SIGNAL(triggered()), SLOT(associateFiles()));
+    if (ui->actionAssociate)
+        connect(ui->actionAssociate, SIGNAL(triggered()), SLOT(associateFiles()));
+#ifdef Q_WS_WIN32
+    if (ui->actionOpenFileAssociationUI)
+        connect(ui->actionOpenFileAssociationUI, SIGNAL(triggered()), SLOT(showFileAssocaitionUI()));
+#endif
 
     // help
     connect(ui->actionCheckForUpdate, SIGNAL(triggered()), SLOT(checkForUpdate()));

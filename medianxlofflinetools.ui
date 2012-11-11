@@ -697,6 +697,7 @@ p, li { white-space: pre-wrap; }
     <addaction name="separator"/>
     <addaction name="actionCheckFileAssociations"/>
     <addaction name="actionAssociate"/>
+    <addaction name="actionOpenFileAssociationUI"/>
     <addaction name="separator"/>
     <addaction name="actionCheckForUpdateOnStart"/>
    </widget>
@@ -1388,6 +1389,11 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="statusTip">
     <string>Useful if you want Anya to open the red portal again</string>
+   </property>
+  </action>
+  <action name="actionOpenFileAssociationUI">
+   <property name="text">
+    <string>Open file association UI</string>
    </property>
   </action>
  </widget>
