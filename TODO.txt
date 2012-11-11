@@ -1,5 +1,8 @@
+v0.3.0.2:
+- fix removing of +999 to life MO and resists MOs
+- maybe use model/view for disenchant preview
+
 v0.4:
-- fix removing of +999 to life MO
 - move mass disenchant to a separate dialog and add more options
 - batch eat signets (add a button)
 - creation of plugy stashes and moving items around (finish implementing drag & drop)

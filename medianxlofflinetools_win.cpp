@@ -28,6 +28,22 @@ void MedianXLOfflineTools::setAppUserModelID()
         pSetCurrentProcessExplicitAppUserModelID(appUserModelID());
 }
 
+void MedianXLOfflineTools::showFileAssocaitionUI()
+{
+    FileAssociationManager::registerApplicationForExtension(kCharacterExtensionWithDot);
+
+    IApplicationAssociationRegistrationUI *pAARUI;
+    HRESULT hr = CoCreateInstance(CLSID_ApplicationAssociationRegistrationUI, NULL, CLSCTX_INPROC, IID_PPV_ARGS(&pAARUI));
+    if (SUCCEEDED(hr))
+    {
+        if (FAILED(hr = pAARUI->LaunchAdvancedAssociationUI(qApp->applicationName().utf16())))
+            ERROR_BOX(QString("Error calling LaunchAdvancedAssociationUI: %1").arg(HRESULT_CODE(hr)));
+        pAARUI->Release();
+    }
+    else
+        ERROR_BOX(QString("Error calling CoCreateInstance(CLSID_ApplicationAssociationRegistrationUI): %1").arg(HRESULT_CODE(hr)));
+}
+
 void MedianXLOfflineTools::syncWindowsTaskbarRecentFiles()
 {
 #ifdef WIN_7_OR_LATER

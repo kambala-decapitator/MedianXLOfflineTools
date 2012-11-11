@@ -129,24 +129,32 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *pare
     connectSignals();
 
 #if defined(Q_WS_WIN32) || defined(Q_WS_MACX)
-    bool isDefault = FileAssociationManager::isApplicationDefaultForExtension(kCharacterExtensionWithDot);
-    if (!isDefault)
+#ifdef Q_WS_WIN32
+    if (QSysInfo::windowsVersion() > QSysInfo::WV_WINDOWS7)
     {
-        if (ui->actionCheckFileAssociations->isChecked())
+        showFileAssocaitionUI();
+    }
+    else
+#endif
+    {
+        bool isDefault = FileAssociationManager::isApplicationDefaultForExtension(kCharacterExtensionWithDot);
+        if (!isDefault)
         {
-            MessageCheckBox box(tr("%1 is not associated with %2 files.\n\nDo you want to do it?").arg(qApp->applicationName(), kCharacterExtensionWithDot), ui->actionCheckFileAssociations->text(), this);
-            box.setChecked(true);
-            int result = box.exec();
-            ui->actionCheckFileAssociations->setChecked(box.isChecked());
-            if (result)
+            if (ui->actionCheckFileAssociations->isChecked())
             {
-                FileAssociationManager::makeApplicationDefaultForExtension(kCharacterExtensionWithDot);
-                isDefault = true;
+                MessageCheckBox box(tr("%1 is not associated with %2 files.\n\nDo you want to do it?").arg(qApp->applicationName(), kCharacterExtensionWithDot), ui->actionCheckFileAssociations->text(), this);
+                box.setChecked(true);
+                int result = box.exec();
+                ui->actionCheckFileAssociations->setChecked(box.isChecked());
+                if (result)
+                {
+                    FileAssociationManager::makeApplicationDefaultForExtension(kCharacterExtensionWithDot);
+                    isDefault = true;
+                }
             }
         }
+        updateAssociateAction(isDefault);
     }
-
-    updateAssociateAction(isDefault);
 #else
 #warning Add implementation to check file association to e.g. fileassociationmanager_linux.cpp or comment this line
 #endif

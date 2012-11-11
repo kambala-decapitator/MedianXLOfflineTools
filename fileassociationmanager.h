@@ -15,6 +15,7 @@ public:
 
 #ifdef Q_WS_WIN32
     static QString progIdForExtension(const QString &extension);
+    static void registerApplicationForExtension(const QString &extension);
 #endif
 };
 

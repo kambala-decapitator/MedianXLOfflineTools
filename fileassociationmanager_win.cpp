@@ -58,7 +58,7 @@ void registerApplication(const QString &extensionWithDot)
 
     if (QSysInfo::windowsVersion() >= QSysInfo::WV_VISTA)
     {
-        QString capabilitiesPath = QString("kambala/%1/Capabilities").arg(qApp->applicationName());
+        QString capabilitiesPath = QString("%1/%2/Capabilities").arg(qApp->organizationName(), qApp->applicationName());
 
         hklmSoftware.beginGroup(capabilitiesPath);
         hklmSoftware.setValue("ApplicationName", qApp->applicationName());
@@ -130,8 +130,7 @@ bool FileAssociationManager::isApplicationDefaultForExtension(const QString &ext
 void FileAssociationManager::makeApplicationDefaultForExtension(const QString &extension)
 {
     QString extensionWithDot = extensionWithDotFromExtension(extension);
-    registerProgID(extensionWithDot);
-    registerApplication(extensionWithDot);
+    registerApplicationForExtension(extensionWithDot);
 
     bool hasAssociationChanged = true;
     if (QSysInfo::windowsVersion() < QSysInfo::WV_VISTA)
@@ -163,4 +162,11 @@ void FileAssociationManager::makeApplicationDefaultForExtension(const QString &e
 QString FileAssociationManager::progIdForExtension(const QString &extension)
 {
     return qApp->applicationName().remove(' ') + extensionWithDotFromExtension(extension);
+}
+
+void FileAssociationManager::registerApplicationForExtension(const QString &extension)
+{
+    QString extensionWithDot = extensionWithDotFromExtension(extension);
+    registerProgID(extensionWithDot);
+    registerApplication(extensionWithDot);
 }

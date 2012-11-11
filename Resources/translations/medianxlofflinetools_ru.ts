@@ -826,7 +826,7 @@ Note: items inside will be preserved. You can recover them by getting new Cube.<
     <message>
         <location filename="../../medianxlofflinetools.cpp" line="1326"/>
         <source>Energy</source>
-        <translation>Энергиия</translation>
+        <translation>Энергия</translation>
     </message>
     <message>
         <location filename="../../medianxlofflinetools.cpp" line="583"/>

@@ -134,6 +134,8 @@ private:
 #ifdef Q_WS_WIN32
     PCWSTR  appUserModelID();
     void setAppUserModelID();
+    void showFileAssocaitionUI();
+
     void syncWindowsTaskbarRecentFiles();
     void removeFromWindowsRecentFiles(const QString &filePath);
     void addToWindowsRecentFiles(const QString &filePath); // also used by earlier Windows versions
