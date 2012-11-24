@@ -19,20 +19,21 @@ DisenchantPreviewDialog::DisenchantPreviewDialog(const ItemsList &items, QWidget
     setWindowFlags(windowFlags() & ~Qt::WindowContextHelpButtonHint);
     setWindowTitle(tr("Disenchant preview"));
 
+    selectItemDelegate = new ShowSelectedItemDelegate(_itemsTreeWidget, this);
     _buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, Qt::Horizontal, this);
-    QObject::connect(_buttonBox, SIGNAL(accepted()), SLOT(accept()));
-    QObject::connect(_buttonBox, SIGNAL(rejected()), SLOT(reject()));
 
     QVBoxLayout *layout = new QVBoxLayout(this);
     layout->addWidget(_label);
     layout->addWidget(_itemsTreeWidget);
     layout->addWidget(_buttonBox);
 
-    selectItemDelegate = new ShowSelectedItemDelegate(_itemsTreeWidget, this);
     _itemsTreeWidget->installEventFilter(static_cast<QDialog *>(this)); // to intercept pressing Space
     _itemsTreeWidget->setSelectionMode(QAbstractItemView::ExtendedSelection);
     _itemsTreeWidget->setContextMenuPolicy(Qt::CustomContextMenu);
+
     connect(_itemsTreeWidget, SIGNAL(customContextMenuRequested(const QPoint &)), SLOT(showTreeWidgetContextMenu(const QPoint &)));
+    connect(_buttonBox, SIGNAL(accepted()), SLOT(accept()));
+    connect(_buttonBox, SIGNAL(rejected()), SLOT(reject()));
 
     loadSettings();
 }

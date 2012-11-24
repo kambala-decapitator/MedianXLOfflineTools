@@ -1,9 +1,9 @@
 #include "application.h"
 #include "medianxlofflinetools.h"
 
-#if defined(Q_WS_WIN32)
+#if defined(Q_OS_WIN32)
 #include <QTextCodec>
-#elif defined(Q_WS_MACX)
+#elif defined(Q_OS_MAC)
 #include <QTimer>
 #endif
 
@@ -12,13 +12,13 @@ static const QString kAppName("Median XL Offline Tools");
 
 Application::Application(int &argc, char **argv) : QtSingleApplication(kAppName, argc, argv), _mainWindow(0)
 {
-#ifdef Q_WS_WIN32
+#ifdef Q_OS_WIN32
     ::AllowSetForegroundWindow(ASFW_ANY);
 #endif
 
     if (argc > 1)
     {
-#ifdef Q_WS_WIN32
+#ifdef Q_OS_WIN32
         _param = QTextCodec::codecForLocale()->toUnicode(argv[1]); // stupid Windows
 #else
         _param = argv[1];
@@ -30,7 +30,7 @@ Application::Application(int &argc, char **argv) : QtSingleApplication(kAppName,
     setOrganizationName("kambala");
     setApplicationName(kAppName);
     setApplicationVersion("0.3.0.2");
-#ifdef Q_WS_MACX
+#ifdef Q_OS_MAC
     setAttribute(Qt::AA_DontShowIconsInMenus);
 #endif
 }
@@ -44,7 +44,7 @@ Application::~Application()
 
 void Application::init()
 {
-#ifdef Q_WS_MACX
+#ifdef Q_OS_MAC
     _showWindowMacTimer = 0;
     if (_param.isEmpty())
     {
@@ -66,7 +66,7 @@ void Application::createAndShowMainWindow()
     setActivationWindow(_mainWindow);
     connect(this, SIGNAL(messageReceived(const QString &)), SLOT(setParam(const QString &)));
 
-#ifdef Q_WS_MACX
+#ifdef Q_OS_MAC
     disableLionWindowRestoration();
     maybeDeleteTimer();
 #endif

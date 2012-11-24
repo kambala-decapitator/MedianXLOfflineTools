@@ -13,7 +13,7 @@ public:
     static bool isApplicationDefaultForExtension(const QString &extension);
     static void makeApplicationDefaultForExtension(const QString &extension);
 
-#ifdef Q_WS_WIN32
+#ifdef Q_OS_WIN32
     static QString progIdForExtension(const QString &extension);
     static void registerApplicationForExtension(const QString &extension);
 #endif

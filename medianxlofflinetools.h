@@ -57,7 +57,7 @@ private slots:
     void eatSignetsOfLearning(int signetsEaten);
     void networkReplyFinished(QNetworkReply *reply);
 
-#ifdef Q_WS_MACX
+#ifdef Q_OS_MAC
     void moveUpdateActionToAppleMenu();
 #endif
 
@@ -90,9 +90,9 @@ private slots:
     // options
     void backupSettingTriggered(bool checked);
     void associateFiles();
-#ifdef Q_WS_WIN32
+#ifdef Q_OS_WIN32
     void showFileAssocaitionUI();
-#endif // Q_WS_WIN32
+#endif // Q_OS_WIN32
 
     // help
     void checkForUpdate();
@@ -134,7 +134,7 @@ private:
     bool _isManuallyCheckingForUpdate;
 
     // the following group of methods is Windows 7 specific
-#ifdef Q_WS_WIN32
+#ifdef Q_OS_WIN32
     PCWSTR  appUserModelID();
     void setAppUserModelID();
 

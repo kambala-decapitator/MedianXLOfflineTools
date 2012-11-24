@@ -3,9 +3,9 @@
 
 #include <QColor>
 
-#if defined(Q_WS_WIN32)
+#if defined(Q_OS_WIN32)
 #include <Windows.h>
-#elif defined(Q_WS_MACX)
+#elif defined(Q_OS_MAC)
 #include <QTextCodec>
 #endif
 
@@ -28,14 +28,14 @@ public:
         if (unicodeColorHeader.isEmpty())
         {
             const QByteArray &ansiHeader = ansiColorHeader();
-#if defined(Q_WS_WIN32)
+#if defined(Q_OS_WIN32)
             // Blizzard uses ANSI codepage to read save files' names
             int ansiHeaderSizeWithTerminator = ansiHeader.size() + 1;
             LPWSTR unicodeWChar = new WCHAR[ansiHeaderSizeWithTerminator];
             MultiByteToWideChar(CP_ACP, 0, ansiHeader.data(), ansiHeaderSizeWithTerminator, unicodeWChar, ansiHeaderSizeWithTerminator);
             unicodeColorHeader = QString::fromWCharArray(unicodeWChar);
             delete [] unicodeWChar;
-#elif defined(Q_WS_MACX)
+#elif defined(Q_OS_MAC)
             unicodeColorHeader = macTextCodec()->toUnicode(ansiHeader);
 #else
 #warning Make sure to fix next line
@@ -45,11 +45,11 @@ public:
         return unicodeColorHeader;
     }
 
-#ifdef Q_WS_MACX
+#ifdef Q_OS_MAC
     static QTextCodec *macTextCodec() { return QTextCodec::codecForName("MacRoman"); }
 #endif
 
-    
+
     // color data
     enum ColorIndex
     {

@@ -1,6 +1,6 @@
 v0.3.0.2:
 - fix removing of +999 to life MO and resists MOs
-- maybe use model/view for disenchant preview
+- maybe use model/view (or just item delegate) for disenchant preview
 
 v0.4:
 - move mass disenchant to a separate dialog and add more options

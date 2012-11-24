@@ -105,7 +105,7 @@ void ItemsPropertiesSplitter::showItem(ItemInfo *item)
 
 void ItemsPropertiesSplitter::showFirstItem()
 {
-    _itemsView->setFocus(); // otherwise 
+    _itemsView->setFocus(); // otherwise
     // sometimes item is selected, but there's no visual selection
     if (_itemsView->selectionModel()->selectedIndexes().isEmpty() || !selectedItem(false))
         showItem(_itemsModel->firstItem());
@@ -808,7 +808,7 @@ void ItemsPropertiesSplitter::createItemActions()
 
     QAction *actionDelete = new QAction(tr("Delete"), _itemsView);
     actionDelete->setShortcut(
-#ifdef Q_WS_MACX
+#ifdef Q_OS_MAC
                 Qt::Key_Backspace
 #else
                 QKeySequence::Delete

@@ -168,7 +168,7 @@ void FindItemsDialog::toggleResults()
         QSize oldSize = size();
         int newHeight = oldSize.height() + (_lastResultsHeight == -1 ? _resultsWidget->sizeHint().height() : _lastResultsHeight);
         setMinimumHeight(minimumHeight() + _resultsWidget->minimumHeight()
-#ifdef Q_WS_MACX
+#ifdef Q_OS_MAC
                         + 35 // dialog becomes smaller without this for some reason
 #endif
                          );

@@ -39,6 +39,7 @@ QList<QTreeWidgetItem *> treeItemsForItems(const QList<ItemInfo *> &items);
 bool isUltimative();
 bool isUltimative4();
 bool isUltimative5OrLater();
+bool isSigma();
 
 // item conditions for STL algorithms
 bool isCubeInCharacterItems(ItemInfo *item);

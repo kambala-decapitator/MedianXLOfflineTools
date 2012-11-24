@@ -153,6 +153,11 @@ bool isUltimative5OrLater()
     return ItemDataBase::Properties()->value(Enums::CharacterStats::FreeSkillPoints)->saveBits != 8;
 }
 
+bool isSigma()
+{
+    return ItemDataBase::Properties()->value(Enums::CharacterStats::Level)->saveBits != 7;
+}
+
 bool isCubeInCharacterItems(ItemInfo *item)
 {
     return (item->storage == Enums::ItemStorage::Inventory || item->storage == Enums::ItemStorage::Stash) && ItemDataBase::isCube(item);

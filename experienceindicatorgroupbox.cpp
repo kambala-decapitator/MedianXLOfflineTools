@@ -27,7 +27,7 @@ void ExperienceIndicatorGroupBox::setCurrentExperience(quint32 exp)
     _progressBar->setValue(exp);
     _progressBar->setFormat(QString("%v / %1 (%p%)").arg(_progressBar->maximum()));
     // Mac OS X doesn't display text on the progressbar, so let's display it in the statusbar
-#ifdef Q_WS_MACX
+#ifdef Q_OS_MAC
     _progressBar->setStatusTip(_progressBar->text());
 #endif
 }
@@ -35,7 +35,7 @@ void ExperienceIndicatorGroupBox::setCurrentExperience(quint32 exp)
 void ExperienceIndicatorGroupBox::reset()
 {
     _progressBar->reset();
-#ifdef Q_WS_MACX
+#ifdef Q_OS_MAC
     _progressBar->setStatusTip(QString());
 #endif
 }

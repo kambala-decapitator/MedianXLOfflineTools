@@ -54,6 +54,7 @@ private:
 
     void updateLabelText();
     QCheckBox *checkboxOfTreeItem(QTreeWidgetItem *treeItem) const;
+
     void loadSettings();
     void saveSettings();
 };

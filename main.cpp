@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
     LanguageManager &langManager = LanguageManager::instance();
     langManager.currentLocale = QSettings().value(langManager.languageKey, QLocale::system().name().left(2)).toString();
     langManager.setResourcesPath(app.applicationDirPath() +
-#ifdef Q_WS_MACX
+#ifdef Q_OS_MAC
         "/.."
 #endif
         "/resources");

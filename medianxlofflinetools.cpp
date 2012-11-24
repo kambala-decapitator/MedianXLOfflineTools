@@ -51,7 +51,7 @@
 
 //#define MAKE_HC
 //#define ENABLE_PERSONALIZE
-//#define MAKE_FINISHED_CHARACTER
+#define MAKE_FINISHED_CHARACTER
 //#define DISABLE_CRC_CHECK
 
 
@@ -118,7 +118,7 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *pare
     ui->menuExport->removeAction(ui->actionExportCharacterInfo);
     ui->mainToolBar->removeAction(ui->actionExportCharacterInfo);
 
-#ifdef Q_WS_WIN32
+#ifdef Q_OS_WIN32
     setAppUserModelID(); // is actually used only in Windows 7 and later
 
     if (QSysInfo::windowsVersion() > QSysInfo::WV_WINDOWS7)
@@ -139,8 +139,8 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *pare
     fillMaps();
     connectSignals();
 
-#if defined(Q_WS_WIN32) || defined(Q_WS_MACX)
-#ifdef Q_WS_WIN32
+#if defined(Q_OS_WIN32) || defined(Q_OS_MAC)
+#ifdef Q_OS_WIN32
     if (QSysInfo::windowsVersion() <= QSysInfo::WV_WINDOWS7) // Windows 8 and later mustn't call this code
 #endif
     {
@@ -166,14 +166,14 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *pare
 #warning Add implementation to check file association to e.g. fileassociationmanager_linux.cpp or comment this line
 #endif
 
-#ifdef Q_WS_WIN32
+#ifdef Q_OS_WIN32
     syncWindowsTaskbarRecentFiles(); // is actually used only in Windows 7 and later
 #endif
 
     if (ui->actionCheckForUpdateOnStart->isChecked())
         checkForUpdate();
 
-#ifdef Q_WS_MACX
+#ifdef Q_OS_MAC
     QTimer::singleShot(500, this, SLOT(moveUpdateActionToAppleMenu())); // needs a slight delay to create menu
 #endif
 
@@ -184,7 +184,7 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *pare
         loadFile(_recentFilesList.at(0));
     else
     {
-#ifdef Q_WS_WIN32
+#ifdef Q_OS_WIN32
         QSettings settings;
         settings.beginGroup("recentItems");
         if (!settings.contains(kLastSavePathKey))
@@ -457,7 +457,7 @@ void MedianXLOfflineTools::saveCharacter()
     if (hasNameChanged)
     {
         outputDataStream.device()->seek(Enums::Offsets::Name);
-#ifdef Q_WS_MACX
+#ifdef Q_OS_MAC
         QByteArray newNameByteArray = ColorsManager::macTextCodec()->fromUnicode(newName);
 #else
         QByteArray newNameByteArray = newName.toLocal8Bit();
@@ -686,7 +686,7 @@ void MedianXLOfflineTools::saveCharacter()
                 }
 
                 charInfo.basicInfo.originalName = newName;
-#ifdef Q_WS_WIN32
+#ifdef Q_OS_WIN32
                 removeFromWindowsRecentFiles(_recentFilesList.at(0)); // old file doesn't exist any more
 #endif
                 _recentFilesList[0] = saveFileName;
@@ -1034,7 +1034,7 @@ void MedianXLOfflineTools::backupSettingTriggered(bool checked)
 
 void MedianXLOfflineTools::associateFiles()
 {
-#if defined(Q_WS_WIN32) || defined(Q_WS_MACX)
+#if defined(Q_OS_WIN32) || defined(Q_OS_MAC)
     FileAssociationManager::makeApplicationDefaultForExtension(kCharacterExtension);
 #else
 #warning Add implementation to check file association to e.g. fileassociationmanager_linux.cpp or comment this line
@@ -1268,7 +1268,7 @@ void MedianXLOfflineTools::createLayout()
     ui->statusBar->addPermanentWidget(_charPathLabel);
 
     // on Mac OS X some UI elements become ugly if main window is set to minimumSize()
-#ifndef Q_WS_MACX
+#ifndef Q_OS_MAC
     resize(minimumSizeHint());
 #endif
 }
@@ -1557,7 +1557,7 @@ void MedianXLOfflineTools::connectSignals()
     connect(ui->actionBackup, SIGNAL(triggered(bool)), SLOT(backupSettingTriggered(bool)));
     if (ui->actionAssociate)
         connect(ui->actionAssociate, SIGNAL(triggered()), SLOT(associateFiles()));
-#ifdef Q_WS_WIN32
+#ifdef Q_OS_WIN32
     if (ui->actionOpenFileAssociationUI)
         connect(ui->actionOpenFileAssociationUI, SIGNAL(triggered()), SLOT(showFileAssocaitionUI()));
 #endif
@@ -1590,7 +1590,7 @@ void MedianXLOfflineTools::updateRecentFilesActions()
             ui->menuRecentCharacters->addAction(createRecentFileAction(filePath, i + 1));
         else
         {
-#ifdef Q_WS_WIN32
+#ifdef Q_OS_WIN32
             removeFromWindowsRecentFiles(_recentFilesList.takeAt(i));
 #else
             _recentFilesList.removeAt(i);
@@ -1600,7 +1600,7 @@ void MedianXLOfflineTools::updateRecentFilesActions()
     }
     ui->menuRecentCharacters->setDisabled(_recentFilesList.isEmpty());
 
-#ifdef Q_WS_MACX
+#ifdef Q_OS_MAC
     extern void qt_mac_set_dock_menu(QMenu *);
     qt_mac_set_dock_menu(ui->menuRecentCharacters);
 #endif
@@ -1609,7 +1609,7 @@ void MedianXLOfflineTools::updateRecentFilesActions()
 void MedianXLOfflineTools::addToRecentFiles()
 {
     int index = _recentFilesList.indexOf(_charPath);
-#ifdef Q_WS_WIN32
+#ifdef Q_OS_WIN32
     // previous version didn't use native separators
     if (index == -1)
     {
@@ -1625,7 +1625,7 @@ void MedianXLOfflineTools::addToRecentFiles()
     {
         if (_recentFilesList.length() == kMaxRecentFiles)
         {
-#ifdef Q_WS_WIN32
+#ifdef Q_OS_WIN32
             removeFromWindowsRecentFiles(_recentFilesList.takeLast());
 #else
             _recentFilesList.removeLast();
@@ -1633,7 +1633,7 @@ void MedianXLOfflineTools::addToRecentFiles()
         }
         _recentFilesList.prepend(_charPath);
     }
-#ifdef Q_WS_WIN32
+#ifdef Q_OS_WIN32
     addToWindowsRecentFiles(_charPath); // Windows moves file to the top itself if it already exists in the list
 #endif
     updateRecentFilesActions();
@@ -1642,7 +1642,7 @@ void MedianXLOfflineTools::addToRecentFiles()
 QAction *MedianXLOfflineTools::createRecentFileAction(const QString &fileName, int index)
 {
     // don't use numbers on Mac OS X because there're no mnemonics
-#ifdef Q_WS_MACX
+#ifdef Q_OS_MAC
     Q_UNUSED(index);
     QAction *recentFileAction = new QAction(QFileInfo(fileName).fileName(), this);
 #else
@@ -1931,40 +1931,45 @@ bool MedianXLOfflineTools::processSaveFile()
     // skills
     quint16 skills = 0, maxPossibleSkills = totalPossibleSkillPoints();
     charInfo.basicInfo.skills.clear();
-    charInfo.basicInfo.skills.reserve(kSkillsNumber);
-    for (int i = 0; i < kSkillsNumber; ++i)
+    int skillsNumber = isSigma() ? 35 : kSkillsNumber;
+    // TODO: fix for Sigma
+    if (!isSigma())
     {
-        quint8 skillValue = _saveFileContents.at(skillsOffset + 2 + i);
-        skills += skillValue;
-        charInfo.basicInfo.skills += skillValue;
-        //qDebug() << skillValue << ItemDataBase::Skills()->value(_characterSkillsIndeces[charInfo.basicInfo.classCode].first.at(i)).name;
-    }
-    skills += charInfo.valueOfStatistic(Enums::CharacterStats::FreeSkillPoints);
-    if (skills > maxPossibleSkills) // check if skills are hacked
-    {
-        skills = maxPossibleSkills;
-        charInfo.setValueForStatisitc(maxPossibleSkills, Enums::CharacterStats::FreeSkillPoints);
-        _saveFileContents.replace(charInfo.skillsOffset + 2, kSkillsNumber, QByteArray(kSkillsNumber, 0));
-        if (!wasHackWarningShown)
+        charInfo.basicInfo.skills.reserve(skillsNumber);
+        for (int i = 0; i < skillsNumber; ++i)
         {
-            WARNING_BOX(hackerDetected);
-            wasHackWarningShown = true;
+            quint8 skillValue = _saveFileContents.at(skillsOffset + 2 + i);
+            skills += skillValue;
+            charInfo.basicInfo.skills += skillValue;
+            //qDebug() << skillValue << ItemDataBase::Skills()->value(_characterSkillsIndeces[charInfo.basicInfo.classCode].first.at(i)).name;
         }
-    }
-    charInfo.basicInfo.totalSkillPoints = skills;
+        skills += charInfo.valueOfStatistic(Enums::CharacterStats::FreeSkillPoints);
+        if (skills > maxPossibleSkills) // check if skills are hacked
+        {
+            skills = maxPossibleSkills;
+            charInfo.setValueForStatisitc(maxPossibleSkills, Enums::CharacterStats::FreeSkillPoints);
+            _saveFileContents.replace(charInfo.skillsOffset + 2, skillsNumber, QByteArray(skillsNumber, 0));
+            if (!wasHackWarningShown)
+            {
+                WARNING_BOX(hackerDetected);
+                wasHackWarningShown = true;
+            }
+        }
+        charInfo.basicInfo.totalSkillPoints = skills;
 
-    const QPair<QList<int>, QList<int> > &skillsIndeces = _characterSkillsIndexes[charInfo.basicInfo.classCode];
-    charInfo.basicInfo.skillsReadable.clear();
-    charInfo.basicInfo.skillsReadable.reserve(kSkillsNumber);
-    for (int i = 0; i < kSkillsNumber; ++i)
-    {
-        int skillIndex = skillsIndeces.second.at(i);
-        charInfo.basicInfo.skillsReadable += charInfo.basicInfo.skills.at(skillsIndeces.first.indexOf(skillIndex));
-        //qDebug() << charInfo.basicInfo.skillsReadable.last() << ItemDataBase::Skills()->value(skillIndex).name;
+        const QPair<QList<int>, QList<int> > &skillsIndeces = _characterSkillsIndexes[charInfo.basicInfo.classCode];
+        charInfo.basicInfo.skillsReadable.clear();
+        charInfo.basicInfo.skillsReadable.reserve(skillsNumber);
+        for (int i = 0; i < skillsNumber; ++i)
+        {
+            int skillIndex = skillsIndeces.second.at(i);
+            charInfo.basicInfo.skillsReadable += charInfo.basicInfo.skills.at(skillsIndeces.first.indexOf(skillIndex));
+            //qDebug() << charInfo.basicInfo.skillsReadable.last() << ItemDataBase::Skills()->value(skillIndex).name;
+        }
     }
 
     // items
-    inputDataStream.skipRawData(kSkillsNumber + 2);
+    inputDataStream.skipRawData(skillsNumber + 2);
     int charItemsOffset = inputDataStream.device()->pos();
     if (_saveFileContents.mid(charItemsOffset, 2) != ItemParser::kItemHeader)
     {
@@ -2466,7 +2471,7 @@ void MedianXLOfflineTools::updateWindowTitle()
     _charPathLabel->setText(QDir::toNativeSeparators(_charPath));
     QString title = QString("%1 (%2)").arg(qApp->applicationName(), SkillplanDialog::modVersionReadable());
     // making setWindowFilePath() work correctly
-#ifdef Q_WS_MACX
+#ifdef Q_OS_MAC
     setWindowTitle(_charPath.isEmpty() ? SkillplanDialog::modVersionReadable() : QString("%1 (%2)").arg(QFileInfo(_charPath).fileName(), SkillplanDialog::modVersionReadable()));
 #else
     setWindowTitle(_charPath.isEmpty() ? title : QString("%1[*] %2 %3").arg(QFileInfo(_charPath).fileName(), QChar(0x2014), title));

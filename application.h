@@ -21,7 +21,7 @@ public slots:
     void activateWindow();
 
 protected:
-#ifdef Q_WS_MACX
+#ifdef Q_OS_MAC
     bool event(QEvent *ev);
 #endif
 
@@ -32,7 +32,7 @@ private slots:
 private:
     MedianXLOfflineTools *_mainWindow;
     QString _param;
-#ifdef Q_WS_MACX
+#ifdef Q_OS_MAC
     QTimer *_showWindowMacTimer;
 
     void disableLionWindowRestoration();
