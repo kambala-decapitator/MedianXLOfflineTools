@@ -71,4 +71,7 @@ bool isArcaneShard4(ItemInfo *item);
 
 bool compareItemsByPlugyPage(ItemInfo *a, ItemInfo *b);
 
+class QTreeView;
+void customizeItemsTreeView(QTreeView *treeView);
+
 #endif // HELPERS_H

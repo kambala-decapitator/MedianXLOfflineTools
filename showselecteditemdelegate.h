@@ -14,11 +14,11 @@ class ShowSelectedItemInterface
 public:
     ShowSelectedItemDelegate *selectItemDelegate;
 
-    virtual ItemInfo *itemForTreeItem(QTreeWidgetItem *treeItem) = 0;
+    virtual ItemInfo *itemForCurrentTreeItem() = 0;
 };
 
 
-class QTreeWidget;
+class QTreeView;
 class QEvent;
 
 class ShowSelectedItemDelegate : public QObject
@@ -26,7 +26,7 @@ class ShowSelectedItemDelegate : public QObject
     Q_OBJECT
 
 public:
-    ShowSelectedItemDelegate(QTreeWidget *treeWidget, ShowSelectedItemInterface *selectItemInterface);
+    ShowSelectedItemDelegate(QTreeView *treeWidget, ShowSelectedItemInterface *selectItemInterface);
     virtual ~ShowSelectedItemDelegate() {}
 
     virtual bool eventFilter(QObject *obj, QEvent *event);
@@ -35,7 +35,7 @@ signals:
     void showItem(ItemInfo *item);
 
 private:
-    QTreeWidget *_treeWidget;
+    QTreeView *_treeView;
     ShowSelectedItemInterface *_selectItemInterface;
 };
 

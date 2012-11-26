@@ -324,6 +324,9 @@
     <ClCompile Include="GeneratedFiles\Template\moc_progressbarmodal.cpp">
       <Filter>Generated Files\Template</Filter>
     </ClCompile>
+    <ClCompile Include="disenchantpreviewmodel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="helpers.h">
@@ -387,6 +390,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="windowsincludes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="disenchantpreviewmodel.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

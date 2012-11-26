@@ -7,9 +7,12 @@
 #include "structs.h"
 
 
-class ItemNamesTreeWidget;
+class DisenchantPreviewModel;
+class QSortFilterProxyModel;
+class QModelIndex;
 
 class QLabel;
+class QTreeView;
 class QDialogButtonBox;
 class QCheckBox;
 
@@ -30,7 +33,7 @@ public:
 
     virtual bool eventFilter(QObject *obj, QEvent *e);
 
-    virtual ItemInfo *itemForTreeItem(QTreeWidgetItem *treeItem);
+    virtual ItemInfo *itemForCurrentTreeItem();
     ItemsList selectedItems() const;
 
 public slots:
@@ -40,20 +43,18 @@ protected:
     virtual void showEvent(QShowEvent *e);
 
 private slots:
-    void checkboxStateChanged(bool checked);
-    void showTreeWidgetContextMenu(const QPoint &pos);
+    void showTreeViewContextMenu(const QPoint &pos);
     void changeSelectedItemsCheckState();
 
 private:
     QLabel *_label;
-    ItemNamesTreeWidget *_itemsTreeWidget;
+    QTreeView *_itemsTreeView;
     QDialogButtonBox *_buttonBox;
 
-    ItemsList _items;
-    quint32 _selectedItemsCount;
+    DisenchantPreviewModel *_itemsTreeModel;
+    QSortFilterProxyModel *_proxyModel;
 
-    void updateLabelText();
-    QCheckBox *checkboxOfTreeItem(QTreeWidgetItem *treeItem) const;
+    void updateLabelTextAndOkButtonState();
 
     void loadSettings();
     void saveSettings();

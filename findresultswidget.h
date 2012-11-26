@@ -23,7 +23,7 @@ public:
     void updateItems(QList<SearchResultItem> *newItems);
     void selectItem(ItemInfo *item);
 
-    virtual ItemInfo *itemForTreeItem(QTreeWidgetItem *treeItem);
+    virtual ItemInfo *itemForCurrentTreeItem();
 
 private:
     ItemNamesTreeWidget *_resultsTreeWidget;

@@ -4,6 +4,7 @@
 #include "itemparser.h"
 
 #include <QTreeWidgetItem>
+#include <QTreeView>
 
 #include <QString>
 #include <QStack>
@@ -129,7 +130,6 @@ QList<QTreeWidgetItem *> treeItemsForItems(const ItemsList &items)
         {
             static const struct { const char *source; const char *comment; } kPageFormat = QT_TRANSLATE_NOOP3("ItemsTree", "p. %1", "page abbreviation");
             childItem->setText(0, QString("[%1] %2").arg(qApp->translate("ItemsTree", kPageFormat.source, kPageFormat.comment).arg(item->plugyPage), childItem->text(0)));
-            //childItem->setText(0, QString("[%1] %2").arg(tr("p. %1", "page abbreviation").arg(item->plugyPage), childItem->text(0)));
         }
         for (int j = 0; j < list.size(); ++j)
             childItem->setForeground(j, colors.at(j));
@@ -277,4 +277,16 @@ bool isArcaneShard4(ItemInfo *item)
 bool compareItemsByPlugyPage(ItemInfo *a, ItemInfo *b)
 {
     return a->plugyPage < b->plugyPage;
+}
+
+void customizeItemsTreeView(QTreeView *treeView)
+{
+    treeView->setStyleSheet(
+        "QTreeView                { background-color: black; }"
+        "QTreeView::item          { selection-color: red; }"
+        "QTreeView::item:hover    { border: 1px solid #bfcde4; }"
+        "QTreeView::item:selected { border: 1px solid #567dbc; }"
+        );
+    treeView->setEditTriggers(QAbstractItemView::NoEditTriggers);
+    treeView->setDropIndicatorShown(false);
 }

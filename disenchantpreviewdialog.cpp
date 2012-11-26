@@ -1,8 +1,9 @@
 #include "disenchantpreviewdialog.h"
 #include "itemnamestreewidget.hpp"
-#include "progressbarmodal.hpp"
+#include "disenchantpreviewmodel.h"
 
 #include <QLabel>
+#include <QTreeView>
 #include <QDialogButtonBox>
 #include <QVBoxLayout>
 #include <QCheckBox>
@@ -10,54 +11,67 @@
 #include <QPushButton>
 #include <QAction>
 #include <QMenu>
+#include <QHeaderView>
 
 #include <QSettings>
+#include <QSortFilterProxyModel>
+
+#ifndef QT_NO_DEBUG
+#include <QDebug>
+#endif
 
 
-DisenchantPreviewDialog::DisenchantPreviewDialog(const ItemsList &items, QWidget *parent) : QDialog(parent), _label(new QLabel(this)), _itemsTreeWidget(new ItemNamesTreeWidget(this)), _items(items), _selectedItemsCount(0)
+DisenchantPreviewDialog::DisenchantPreviewDialog(const ItemsList &items, QWidget *parent) : QDialog(parent), _label(new QLabel(this)), _itemsTreeView(new QTreeView(this)), _itemsTreeModel(new DisenchantPreviewModel(items, this)), _proxyModel(new QSortFilterProxyModel(this))
 {
     setWindowFlags(windowFlags() & ~Qt::WindowContextHelpButtonHint);
     setWindowTitle(tr("Disenchant preview"));
 
-    selectItemDelegate = new ShowSelectedItemDelegate(_itemsTreeWidget, this);
+    selectItemDelegate = new ShowSelectedItemDelegate(_itemsTreeView, this);
     _buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, Qt::Horizontal, this);
 
     QVBoxLayout *layout = new QVBoxLayout(this);
     layout->addWidget(_label);
-    layout->addWidget(_itemsTreeWidget);
+    layout->addWidget(_itemsTreeView);
     layout->addWidget(_buttonBox);
 
-    _itemsTreeWidget->installEventFilter(static_cast<QDialog *>(this)); // to intercept pressing Space
-    _itemsTreeWidget->setSelectionMode(QAbstractItemView::ExtendedSelection);
-    _itemsTreeWidget->setContextMenuPolicy(Qt::CustomContextMenu);
+    customizeItemsTreeView(_itemsTreeView);
+    _itemsTreeView->setRootIsDecorated(false);
+    _itemsTreeView->setColumnWidth(0, 20);
+    _itemsTreeView->setSelectionMode(QAbstractItemView::ExtendedSelection);
+    _itemsTreeView->installEventFilter(static_cast<QDialog *>(this)); // to intercept pressing Space
+    _itemsTreeView->setContextMenuPolicy(Qt::CustomContextMenu);
 
-    connect(_itemsTreeWidget, SIGNAL(customContextMenuRequested(const QPoint &)), SLOT(showTreeWidgetContextMenu(const QPoint &)));
+    _proxyModel->setSourceModel(_itemsTreeModel);
+    _itemsTreeView->setModel(_proxyModel);
+
+    connect(_itemsTreeView, SIGNAL(customContextMenuRequested(const QPoint &)), SLOT(showTreeViewContextMenu(const QPoint &)));
+    //connect(_itemsTreeView, SIGNAL(clicked(const QModelIndex &)), SLOT(treeViewClicked(const QModelIndex &)));
     connect(_buttonBox, SIGNAL(accepted()), SLOT(accept()));
     connect(_buttonBox, SIGNAL(rejected()), SLOT(reject()));
 
     loadSettings();
 }
 
-ItemInfo *DisenchantPreviewDialog::itemForTreeItem(QTreeWidgetItem *treeItem)
+ItemInfo *DisenchantPreviewDialog::itemForCurrentTreeItem()
 {
-    return _items.at(_itemsTreeWidget->indexOfTopLevelItem(treeItem));
+    return _itemsTreeModel->items().at(_itemsTreeView->currentIndex().row());
 }
 
 ItemsList DisenchantPreviewDialog::selectedItems() const
 {
     ItemsList items;
-    for (int i = 0, n = _itemsTreeWidget->topLevelItemCount(); i < n; ++i)
-    {
-        QTreeWidgetItem *treeItem = _itemsTreeWidget->topLevelItem(i);
-        if (checkboxOfTreeItem(treeItem)->isChecked())
-            items += _items.at(i);
-    }
+    //for (int i = 0, n = _itemsTreeView->topLevelItemCount(); i < n; ++i)
+    //{
+    //    QTreeWidgetItem *treeItem = _itemsTreeView->topLevelItem(i);
+    //    if (checkboxOfTreeItem(treeItem)->isChecked())
+    //        items += _items.at(i);
+    //}
     return items;
 }
 
 bool DisenchantPreviewDialog::eventFilter(QObject *obj, QEvent *e)
 {
-    if (obj == _itemsTreeWidget && e->type() == QEvent::KeyPress && static_cast<QKeyEvent *>(e)->key() == Qt::Key_Space)
+    if (obj == _itemsTreeView && e->type() == QEvent::KeyPress && static_cast<QKeyEvent *>(e)->key() == Qt::Key_Space)
     {
         changeSelectedItemsCheckState();
         return true;
@@ -65,77 +79,69 @@ bool DisenchantPreviewDialog::eventFilter(QObject *obj, QEvent *e)
     return QDialog::eventFilter(obj, e);
 }
 
-void DisenchantPreviewDialog::checkboxStateChanged(bool checked)
+void DisenchantPreviewDialog::showTreeViewContextMenu(const QPoint &pos)
 {
-    checked ? ++_selectedItemsCount : --_selectedItemsCount;
-    _buttonBox->button(QDialogButtonBox::Ok)->setEnabled(_selectedItemsCount > 0);
-    updateLabelText();
-}
-
-void DisenchantPreviewDialog::showTreeWidgetContextMenu(const QPoint &pos)
-{
-    QList<QTreeWidgetItem *> selectedItems = _itemsTreeWidget->selectedItems();
     bool allChecked = true, allUnchecked = true;
-    foreach (QTreeWidgetItem *treeItem, selectedItems)
+    foreach (const QModelIndex &index, _itemsTreeView->selectionModel()->selectedRows())
     {
-        bool isChecked = checkboxOfTreeItem(treeItem)->isChecked();
+        bool isChecked = _proxyModel->data(_proxyModel->index(index.row(), 0), Qt::CheckStateRole).toBool();
         allChecked = allChecked && isChecked;
         allUnchecked = allUnchecked && !isChecked;
+        if (!allChecked && !allUnchecked)
+            break;
     }
 
     QList<QAction *> actions;
     if (!allChecked)
     {
-        QAction *actionCheckSelected = new QAction(tr("Check selected"), _itemsTreeWidget);
+        QAction *actionCheckSelected = new QAction(tr("Check selected"), _itemsTreeView);
         actionCheckSelected->setData(Check);
         connect(actionCheckSelected, SIGNAL(triggered()), SLOT(changeSelectedItemsCheckState()));
         actions << actionCheckSelected;
     }
     if (!allChecked && !allUnchecked)
     {
-        QAction *actionInvertSelected = new QAction(tr("Invert selected"), _itemsTreeWidget);
+        QAction *actionInvertSelected = new QAction(tr("Invert selected"), _itemsTreeView);
         actionInvertSelected->setData(Invert);
         connect(actionInvertSelected, SIGNAL(triggered()), SLOT(changeSelectedItemsCheckState()));
         actions << actionInvertSelected;
     }
     if (!allUnchecked)
     {
-        QAction *actionUncheckSelected = new QAction(tr("Uncheck selected"), _itemsTreeWidget);
+        QAction *actionUncheckSelected = new QAction(tr("Uncheck selected"), _itemsTreeView);
         actionUncheckSelected->setData(Uncheck);
         connect(actionUncheckSelected, SIGNAL(triggered()), SLOT(changeSelectedItemsCheckState()));
         actions << actionUncheckSelected;
     }
 
-    QMenu::exec(actions, mapToGlobal(pos));
+    QMenu::exec(actions, _itemsTreeView->viewport()->mapToGlobal(pos));
 }
 
 void DisenchantPreviewDialog::changeSelectedItemsCheckState()
 {
     CheckAction checkAction;
-    if (QAction *senderAction = qobject_cast<QAction *>(sender()))
+    if (QAction *senderAction = qobject_cast<QAction *>(sender())) // context menu
         checkAction = static_cast<CheckAction>(senderAction->data().toUInt());
     else // space pressed
         checkAction = Invert;
+
     bool newCheckedState = static_cast<bool>(checkAction);
-
-    QList<QTreeWidgetItem *> selectedItems = _itemsTreeWidget->selectedItems();
-    foreach (QTreeWidgetItem *treeItem, selectedItems)
+    foreach (const QModelIndex &index, _itemsTreeView->selectionModel()->selectedRows())
     {
-        QCheckBox *checkbox = checkboxOfTreeItem(treeItem);
+        QModelIndex checkboxIndex = _proxyModel->index(index.row(), 0);
         if (checkAction == Invert)
-            newCheckedState = !checkbox->isChecked();
-        checkbox->setChecked(newCheckedState);
+            newCheckedState = !_proxyModel->data(checkboxIndex, Qt::CheckStateRole).toBool();
+        _proxyModel->setData(checkboxIndex, newCheckedState, Qt::CheckStateRole);
     }
+
+    updateLabelTextAndOkButtonState();
 }
 
-void DisenchantPreviewDialog::updateLabelText()
+void DisenchantPreviewDialog::updateLabelTextAndOkButtonState()
 {
-    _label->setText(tr("Select items to disenchant (%1/%2 selected):").arg(_selectedItemsCount).arg(_items.size()));
-}
-
-QCheckBox *DisenchantPreviewDialog::checkboxOfTreeItem(QTreeWidgetItem *treeItem) const
-{
-    return qobject_cast<QCheckBox *>(_itemsTreeWidget->itemWidget(treeItem, 0));
+    int total = _itemsTreeModel->items().size(), unchecked = _itemsTreeModel->uncheckedItemsCount();
+    _label->setText(tr("Select items to disenchant (%1/%2 selected):").arg(total - unchecked).arg(total));
+    _buttonBox->button(QDialogButtonBox::Ok)->setEnabled(total - unchecked > 0);
 }
 
 void DisenchantPreviewDialog::loadSettings()
@@ -156,28 +162,13 @@ void DisenchantPreviewDialog::showEvent(QShowEvent *e)
 {
     Q_UNUSED(e);
 
-    ProgressBarModal progressBar;
-    progressBar.centerInWidget(this);
-    progressBar.show();
+    for (int i = 0; i < _itemsTreeModel->columnCount(); ++i)
+        _itemsTreeView->resizeColumnToContents(i);
 
-    QList<QTreeWidgetItem *> treeItems = treeItemsForItems(_items);
-    _itemsTreeWidget->addTopLevelItems(treeItems);
-    foreach (QTreeWidgetItem *treeItem, treeItems)
-    {
-        qApp->processEvents();
+    //_itemsTreeView->header()->setSortIndicatorShown(true);
+    _itemsTreeView->header()->setSortIndicator(1, Qt::AscendingOrder);
+    _itemsTreeView->setSortingEnabled(true);
+    //_itemsTreeView->sortByColumn(1);
 
-        treeItem->setText(0, "    " + treeItem->text(0)); // FIXME: dirty hack to place checkboxes near text
-
-        QCheckBox *checkBox = new QCheckBox(_itemsTreeWidget);
-        checkBox->setChecked(true);
-        checkBox->setFocusPolicy(Qt::NoFocus);
-        connect(checkBox, SIGNAL(toggled(bool)), SLOT(checkboxStateChanged(bool)));
-        _itemsTreeWidget->setItemWidget(treeItem, 0, checkBox);
-    }
-    _itemsTreeWidget->setRootIsDecorated(false);
-    _itemsTreeWidget->resizeColumnToContents(0);
-    _itemsTreeWidget->resizeColumnToContents(1);
-
-    _selectedItemsCount = _items.size();
-    updateLabelText();
+    updateLabelTextAndOkButtonState();
 }

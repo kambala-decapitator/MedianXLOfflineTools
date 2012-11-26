@@ -106,6 +106,7 @@
   <ItemGroup>
     <ClCompile Include="application.cpp" />
     <ClCompile Include="disenchantpreviewdialog.cpp" />
+    <ClCompile Include="disenchantpreviewmodel.cpp" />
     <ClCompile Include="experienceindicatorgroupbox.cpp" />
     <ClCompile Include="fileassociationmanager_win.cpp" />
     <ClCompile Include="findresultswidget.cpp" />
@@ -520,6 +521,7 @@
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
       <Command Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DQT_NETWORK_LIB "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include\QtNetwork"</Command>
     </CustomBuild>
+    <ClInclude Include="disenchantpreviewmodel.h" />
     <ClInclude Include="windowsincludes.h" />
     <CustomBuild Include="findresultswidget.h">
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
