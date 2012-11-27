@@ -27,8 +27,8 @@ public:
     virtual int  columnCount(const QModelIndex &parent = QModelIndex()) const { Q_UNUSED(parent); return 5; }
     virtual bool hasChildren(const QModelIndex &parent = QModelIndex()) const { Q_UNUSED(parent); return !parent.isValid(); }
 
-    virtual QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const { return createIndex(row, column); }
-    virtual QModelIndex parent(const QModelIndex &index) const { return QModelIndex(); }
+    virtual QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const { Q_UNUSED(parent); return createIndex(row, column); }
+    virtual QModelIndex parent(const QModelIndex &index) const { Q_UNUSED(index); return QModelIndex(); }
 
     virtual Qt::ItemFlags flags(const QModelIndex &index) const;
     virtual QVariant       data(const QModelIndex &index, int role = Qt::DisplayRole) const;
@@ -41,8 +41,8 @@ public:
     bool isRowChecked(int row) const { return !_uncheckedIndexesSet.contains(row); }
 
 private:
-    int _rows;
     ItemsList _items;
+    int _rows;
     QSet<int> _uncheckedIndexesSet;
 };
 
