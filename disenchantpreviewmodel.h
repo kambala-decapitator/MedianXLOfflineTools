@@ -11,11 +11,20 @@
 class DisenchantPreviewModel : public QAbstractItemModel
 {
 public:
-    DisenchantPreviewModel(const ItemsList &items, QObject *parent = 0);
+    enum
+    {
+        CheckboxColumn = 0,
+        PageColumn,
+        QualityColumn,
+        BaseNameColumn,
+        SpecialNameColumn
+    };
+
+    DisenchantPreviewModel(const ItemsList &items, QObject *parent = 0) : QAbstractItemModel(parent), _items(items), _rows(items.size()) {}
     virtual ~DisenchantPreviewModel() {}
 
     virtual int     rowCount(const QModelIndex &parent = QModelIndex()) const { Q_UNUSED(parent); return _rows; }
-    virtual int  columnCount(const QModelIndex &parent = QModelIndex()) const { Q_UNUSED(parent); return 4; }
+    virtual int  columnCount(const QModelIndex &parent = QModelIndex()) const { Q_UNUSED(parent); return 5; }
     virtual bool hasChildren(const QModelIndex &parent = QModelIndex()) const { Q_UNUSED(parent); return !parent.isValid(); }
 
     virtual QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const { return createIndex(row, column); }
@@ -26,10 +35,10 @@ public:
     virtual QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const;
 
     virtual bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole);
-    //virtual void sort(int column, Qt::SortOrder order /* = Qt::AscendingOrder */);
 
-    const ItemsList &items() const { return _items; }
+    const ItemsList  &items() const { return _items; }
     int uncheckedItemsCount() const { return _uncheckedIndexesSet.size(); }
+    bool isRowChecked(int row) const { return !_uncheckedIndexesSet.contains(row); }
 
 private:
     int _rows;

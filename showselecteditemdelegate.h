@@ -14,7 +14,7 @@ class ShowSelectedItemInterface
 public:
     ShowSelectedItemDelegate *selectItemDelegate;
 
-    virtual ItemInfo *itemForCurrentTreeItem() = 0;
+    virtual ItemInfo *itemForCurrentTreeItem() const = 0;
 };
 
 

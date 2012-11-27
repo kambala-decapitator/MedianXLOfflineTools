@@ -395,6 +395,9 @@
     <ClInclude Include="disenchantpreviewmodel.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="checkboxsortfilterproxymodel.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="TODO.txt" />

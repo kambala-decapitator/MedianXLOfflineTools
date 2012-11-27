@@ -85,7 +85,7 @@ void FindResultsWidget::selectItem(ItemInfo *item)
     _resultsTreeWidget->setCurrentItem(_resultsTreeWidget->topLevelItem(topItemIndex)->child(_foundItemsMap[topItemIndex].indexOf(item)));
 }
 
-ItemInfo *FindResultsWidget::itemForCurrentTreeItem()
+ItemInfo *FindResultsWidget::itemForCurrentTreeItem() const
 {
     QTreeWidgetItem *treeItem = _resultsTreeWidget->currentItem();
     QTreeWidgetItem *parentItem = treeItem->parent(); // parentItem != 0 when this is an item, not a storage name

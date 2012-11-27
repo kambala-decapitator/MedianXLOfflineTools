@@ -406,7 +406,7 @@ void ItemsViewerDialog::disenchantAllItems()
     ItemsList selectedItems;
     if (_showDisenchantPreviewOption == Always || (_showDisenchantPreviewOption == OnlyCurrentPage && !_applyActionToAllPagesCheckbox->isChecked()))
     {
-        DisenchantPreviewDialog dialog(filteredItems, this);
+        DisenchantPreviewDialog dialog(filteredItems, !_applyActionToAllPagesCheckbox->isChecked(), this);
         connect(dialog.selectItemDelegate, SIGNAL(showItem(ItemInfo *)), SLOT(showItem(ItemInfo *)));
         if (dialog.exec())
             selectedItems = dialog.selectedItems();

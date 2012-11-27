@@ -4,7 +4,8 @@
 #include <QKeyEvent>
 
 
-ShowSelectedItemDelegate::ShowSelectedItemDelegate(QTreeView *treeWidget, ShowSelectedItemInterface *selectItemInterface) : QObject(dynamic_cast<QObject *>(selectItemInterface)), _treeView(treeWidget), _selectItemInterface(selectItemInterface)
+ShowSelectedItemDelegate::ShowSelectedItemDelegate(QTreeView *treeWidget, ShowSelectedItemInterface *selectItemInterface) : QObject(dynamic_cast<QObject *>(selectItemInterface)), _treeView(treeWidget),
+    _selectItemInterface(selectItemInterface)
 {
     _treeView->installEventFilter(this);
     _treeView->viewport()->installEventFilter(this); // mouse clicks are delivered to viewport rather than the widget itself

@@ -8,13 +8,13 @@
 
 
 class DisenchantPreviewModel;
-class QSortFilterProxyModel;
-class QModelIndex;
+class CheckboxSortFilterProxyModel;
 
 class QLabel;
 class QTreeView;
 class QDialogButtonBox;
 class QCheckBox;
+class QModelIndex;
 
 class DisenchantPreviewDialog : public QDialog, public ShowSelectedItemInterface
 {
@@ -28,12 +28,13 @@ public:
         Invert
     };
 
-    DisenchantPreviewDialog(const ItemsList &items, QWidget *parent = 0);
+    DisenchantPreviewDialog(const ItemsList &items, bool areItemsFromSamePage, QWidget *parent = 0);
     virtual ~DisenchantPreviewDialog() {}
 
     virtual bool eventFilter(QObject *obj, QEvent *e);
 
-    virtual ItemInfo *itemForCurrentTreeItem();
+    virtual ItemInfo *itemForCurrentTreeItem() const;
+    ItemInfo *itemAtRow(int row) const;
     ItemsList selectedItems() const;
 
 public slots:
@@ -52,7 +53,7 @@ private:
     QDialogButtonBox *_buttonBox;
 
     DisenchantPreviewModel *_itemsTreeModel;
-    QSortFilterProxyModel *_proxyModel;
+    CheckboxSortFilterProxyModel *_proxyModel;
 
     void updateLabelTextAndOkButtonState();
 
