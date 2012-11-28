@@ -48,7 +48,7 @@ QVariant DisenchantPreviewModel::data(const QModelIndex &index, int role /*= Qt:
         break;
     case Qt::CheckStateRole:
         if (index.column() == CheckboxColumn)
-            return isRowChecked(index.row()) ? Qt::Checked : Qt::Unchecked;
+            return _uncheckedIndexesSet.contains(index.row()) ? Qt::Unchecked : Qt::Checked;
         break;
     case Qt::ForegroundRole:
         return index.column() > QualityColumn ? ColorsManager::colors().at(ItemDataBase::colorOfItem(item)) : Qt::white;

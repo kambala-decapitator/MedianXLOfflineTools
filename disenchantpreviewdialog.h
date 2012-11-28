@@ -56,6 +56,8 @@ private:
     CheckboxSortFilterProxyModel *_proxyModel;
 
     void updateLabelTextAndOkButtonState();
+    bool isRowChecked(int row) const;
+    bool isRowChecked(const QModelIndex &index) const;
 
     void loadSettings();
     void saveSettings();

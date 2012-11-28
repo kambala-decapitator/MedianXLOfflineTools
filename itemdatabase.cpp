@@ -660,7 +660,7 @@ bool ItemDataBase::canDisenchant(ItemInfo *item)
 {
     if (item && item->location == Enums::ItemLocation::Stored && (item->quality == Enums::ItemQuality::Set || item->quality == Enums::ItemQuality::Unique))
     {
-        static const QList<QByteArray> kDisenchantableItemTypes = QList<QByteArray>() << "weap" << "armo" << "amul" << "ring" << "misl" << "jew";
+        static const QList<QByteArray> kDisenchantableItemTypes = QList<QByteArray>() << "weap" << "armo" << "amul" << "ring" << "misl" << "jewl";
         QList<QByteArray> itemTypes = Items()->value(item->itemType)->types;
         // actually, it's possible to use the same condition for Ultimative, but using just one item type is quicker
         return isUltimative() ? ItemParser::itemTypesInheritFromType(itemTypes, "dcht") : ItemParser::itemTypesInheritFromTypes(itemTypes, kDisenchantableItemTypes);

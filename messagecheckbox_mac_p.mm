@@ -20,9 +20,10 @@ public:
         [alert setShowsHelp:NO];
         [alert setShowsSuppressionButton:YES];
         [[alert suppressionButton] setTitle:NSStringFromQString(checkboxText)];
+        // first button returns 1000, second one - 1001 etc.
         // dirty hack to remove ampersands from strings
-        [alert addButtonWithTitle:NSStringFromQString(qApp->translate("QDialogButtonBox", "&Yes").remove('&'))]; // returns 1000
-        [alert addButtonWithTitle:NSStringFromQString(qApp->translate("QDialogButtonBox", "&No" ).remove('&'))]; // returns 1001
+         [alert addButtonWithTitle:NSStringFromQString(qApp->translate("QDialogButtonBox", "&Yes").remove('&'))];
+        [[alert addButtonWithTitle:NSStringFromQString(qApp->translate("QDialogButtonBox", "&No" ).remove('&'))] setKeyEquivalent:@"\e"]; // set shortcut to Escape
     }
 
     virtual ~MessageCheckBoxImpl() { [alert release]; }

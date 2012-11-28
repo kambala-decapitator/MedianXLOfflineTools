@@ -36,9 +36,8 @@ public:
 
     virtual bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole);
 
-    const ItemsList  &items() const { return _items; }
-    int uncheckedItemsCount() const { return _uncheckedIndexesSet.size(); }
-    bool isRowChecked(int row) const { return !_uncheckedIndexesSet.contains(row); }
+    const ItemsList  &items()  const { return _items; }
+    int uncheckedItemsCount()  const { return _uncheckedIndexesSet.size(); }
 
 private:
     ItemsList _items;

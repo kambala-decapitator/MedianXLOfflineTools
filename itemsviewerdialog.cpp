@@ -404,12 +404,16 @@ void ItemsViewerDialog::disenchantAllItems()
                 filteredItems += item;
 
     ItemsList selectedItems;
+    bool allItemsDisenchanted = true;
     if (_showDisenchantPreviewOption == Always || (_showDisenchantPreviewOption == OnlyCurrentPage && !_applyActionToAllPagesCheckbox->isChecked()))
     {
         DisenchantPreviewDialog dialog(filteredItems, !_applyActionToAllPagesCheckbox->isChecked(), this);
         connect(dialog.selectItemDelegate, SIGNAL(showItem(ItemInfo *)), SLOT(showItem(ItemInfo *)));
         if (dialog.exec())
+        {
             selectedItems = dialog.selectedItems();
+            allItemsDisenchanted = selectedItems.size() == filteredItems.size();
+        }
     }
     else
         selectedItems = filteredItems;
@@ -418,7 +422,7 @@ void ItemsViewerDialog::disenchantAllItems()
     {
         currentSplitter()->disenchantAllItems(toShards, _upgradeToCrystalsCheckbox->isChecked(), _eatSignetsCheckbox->isChecked(), &selectedItems);
 
-        if (toShards || !isUltimative())
+        if (allItemsDisenchanted && (toShards || !isUltimative()))
         {
             _disenchantToShardsButton->setDisabled(true);
             _disenchantToSignetButton->setDisabled(true);

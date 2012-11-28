@@ -77,7 +77,7 @@ ItemInfo *DisenchantPreviewDialog::itemForCurrentTreeItem() const
 
 ItemInfo *DisenchantPreviewDialog::itemAtRow(int row) const
 {
-    QModelIndex index = _proxyModel->index(row, 0);
+    QModelIndex index = _proxyModel->index(row, 0); // column can be any
     return _itemsTreeModel->items().at(_proxyModel->mapSelectionToSource(QItemSelection(index, index)).indexes().first().row());
 }
 
@@ -85,7 +85,7 @@ ItemsList DisenchantPreviewDialog::selectedItems() const
 {
     ItemsList items;
     for (int i = 0, n = _itemsTreeModel->items().size(); i < n; ++i)
-        if (_itemsTreeModel->isRowChecked(i))
+        if (isRowChecked(i))
             items += itemAtRow(i);
     return items;
 }
@@ -105,7 +105,7 @@ void DisenchantPreviewDialog::showTreeViewContextMenu(const QPoint &pos)
     bool allChecked = true, allUnchecked = true;
     foreach (const QModelIndex &index, _itemsTreeView->selectionModel()->selectedRows())
     {
-        bool isChecked = _proxyModel->data(_proxyModel->index(index.row(), DisenchantPreviewModel::CheckboxColumn), Qt::CheckStateRole).toBool();
+        bool isChecked = isRowChecked(index.row());
         allChecked = allChecked && isChecked;
         allUnchecked = allUnchecked && !isChecked;
         if (!allChecked && !allUnchecked)
@@ -146,13 +146,10 @@ void DisenchantPreviewDialog::changeSelectedItemsCheckState()
     else // space pressed
         checkAction = Invert;
 
-    bool newCheckedState = static_cast<bool>(checkAction);
     foreach (const QModelIndex &index, _itemsTreeView->selectionModel()->selectedRows())
     {
         QModelIndex checkboxIndex = _proxyModel->index(index.row(), DisenchantPreviewModel::CheckboxColumn);
-        if (checkAction == Invert)
-            newCheckedState = !_proxyModel->data(checkboxIndex, Qt::CheckStateRole).toBool();
-        _proxyModel->setData(checkboxIndex, newCheckedState, Qt::CheckStateRole);
+        _proxyModel->setData(checkboxIndex, checkAction == Invert ? !isRowChecked(checkboxIndex) : static_cast<bool>(checkAction), Qt::CheckStateRole);
     }
 
     updateLabelTextAndOkButtonState();
@@ -163,6 +160,16 @@ void DisenchantPreviewDialog::updateLabelTextAndOkButtonState()
     int total = _itemsTreeModel->items().size(), unchecked = _itemsTreeModel->uncheckedItemsCount();
     _label->setText(tr("%1/%2 items selected").arg(total - unchecked).arg(total));
     _buttonBox->button(QDialogButtonBox::Ok)->setEnabled(total - unchecked > 0);
+}
+
+bool DisenchantPreviewDialog::isRowChecked(int row) const
+{
+    return isRowChecked(_proxyModel->index(row, DisenchantPreviewModel::CheckboxColumn));
+}
+
+bool DisenchantPreviewDialog::isRowChecked(const QModelIndex &index) const
+{
+    return _proxyModel->data(index, Qt::CheckStateRole).toBool();
 }
 
 void DisenchantPreviewDialog::loadSettings()
