@@ -3,6 +3,8 @@
 
 #include <QSortFilterProxyModel>
 
+#include "disenchantpreviewmodel.h"
+
 
 class CheckboxSortFilterProxyModel : public QSortFilterProxyModel
 {
@@ -13,9 +15,18 @@ public:
 protected:
     virtual bool lessThan(const QModelIndex &left, const QModelIndex &right) const
     {
-        if (!sortColumn()) // own sorting only for checkboxes column
+        if (sortColumn() == DisenchantPreviewModel::CheckboxColumn) // own sorting only for checkboxes column
             return sourceModel()->data(left, Qt::CheckStateRole).toBool() < sourceModel()->data(right, Qt::CheckStateRole).toBool();
         return QSortFilterProxyModel::lessThan(left, right);
+    }
+
+    virtual bool filterAcceptsRow(int source_row, const QModelIndex &source_parent) const
+    {
+        // use only 'name' columns for filtering
+        QAbstractItemModel *model = sourceModel();
+        QRegExp regexp = filterRegExp();
+        return model->data(model->index(source_row, DisenchantPreviewModel::BaseNameColumn,    source_parent)).toString().contains(regexp) ||
+               model->data(model->index(source_row, DisenchantPreviewModel::SpecialNameColumn, source_parent)).toString().contains(regexp);
     }
 };
 

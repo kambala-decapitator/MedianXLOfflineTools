@@ -13,6 +13,8 @@
 #include <QAction>
 #include <QMenu>
 #include <QHeaderView>
+#include <QHBoxLayout>
+#include <QLineEdit>
 
 #include <QSettings>
 
@@ -30,10 +32,20 @@ DisenchantPreviewDialog::DisenchantPreviewDialog(const ItemsList &items, bool ar
     selectItemDelegate = new ShowSelectedItemDelegate(_itemsTreeView, this);
     _buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, Qt::Horizontal, this);
 
+    QLineEdit *filterLineEdit = new QLineEdit(this);
+    QHBoxLayout *upperHbox = new QHBoxLayout;
+    upperHbox->addWidget(new QLabel(tr("Filter items (wildcards * and ? can be used):"), this));
+    upperHbox->addWidget(filterLineEdit);
+
+    QHBoxLayout *lowerHbox = new QHBoxLayout;
+    lowerHbox->addWidget(_label);
+    lowerHbox->addStretch();
+    lowerHbox->addWidget(_buttonBox);
+
     QVBoxLayout *layout = new QVBoxLayout(this);
-    layout->addWidget(_label);
+    layout->addLayout(upperHbox);
     layout->addWidget(_itemsTreeView);
-    layout->addWidget(_buttonBox);
+    layout->addLayout(lowerHbox);
 
     customizeItemsTreeView(_itemsTreeView);
     _itemsTreeView->header()->setSortIndicator(DisenchantPreviewModel::PageColumn, Qt::AscendingOrder);
@@ -43,6 +55,9 @@ DisenchantPreviewDialog::DisenchantPreviewDialog(const ItemsList &items, bool ar
     _itemsTreeView->setContextMenuPolicy(Qt::CustomContextMenu);
 
     _proxyModel->setSourceModel(_itemsTreeModel);
+    _proxyModel->setSortCaseSensitivity(Qt::CaseInsensitive);
+    _proxyModel->setFilterCaseSensitivity(Qt::CaseInsensitive);
+
     _itemsTreeView->setModel(_proxyModel);
     if (areItemsFromSamePage)
         _itemsTreeView->hideColumn(DisenchantPreviewModel::PageColumn);
@@ -50,6 +65,7 @@ DisenchantPreviewDialog::DisenchantPreviewDialog(const ItemsList &items, bool ar
     connect(_itemsTreeView, SIGNAL(customContextMenuRequested(const QPoint &)), SLOT(showTreeViewContextMenu(const QPoint &)));
     connect(_buttonBox, SIGNAL(accepted()), SLOT(accept()));
     connect(_buttonBox, SIGNAL(rejected()), SLOT(reject()));
+    connect(filterLineEdit, SIGNAL(textChanged(const QString &)), _proxyModel, SLOT(setFilterWildcard(const QString &)));
 
     loadSettings();
 }
@@ -62,8 +78,7 @@ ItemInfo *DisenchantPreviewDialog::itemForCurrentTreeItem() const
 ItemInfo *DisenchantPreviewDialog::itemAtRow(int row) const
 {
     QModelIndex index = _proxyModel->index(row, 0);
-    QItemSelection selection(index, index);
-    return _itemsTreeModel->items().at(_proxyModel->mapSelectionToSource(selection).indexes().first().row());
+    return _itemsTreeModel->items().at(_proxyModel->mapSelectionToSource(QItemSelection(index, index)).indexes().first().row());
 }
 
 ItemsList DisenchantPreviewDialog::selectedItems() const
@@ -146,7 +161,7 @@ void DisenchantPreviewDialog::changeSelectedItemsCheckState()
 void DisenchantPreviewDialog::updateLabelTextAndOkButtonState()
 {
     int total = _itemsTreeModel->items().size(), unchecked = _itemsTreeModel->uncheckedItemsCount();
-    _label->setText(tr("Select items to disenchant (%1/%2 selected):").arg(total - unchecked).arg(total));
+    _label->setText(tr("%1/%2 items selected").arg(total - unchecked).arg(total));
     _buttonBox->button(QDialogButtonBox::Ok)->setEnabled(total - unchecked > 0);
 }
 
