@@ -33,9 +33,11 @@ DisenchantPreviewDialog::DisenchantPreviewDialog(const ItemsList &items, bool ar
     _buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, Qt::Horizontal, this);
 
     QLineEdit *filterLineEdit = new QLineEdit(this);
+    QPushButton *clearButton = new QPushButton(tr("Clear"), this);
     QHBoxLayout *upperHbox = new QHBoxLayout;
     upperHbox->addWidget(new QLabel(tr("Filter items (wildcards * and ? can be used):"), this));
     upperHbox->addWidget(filterLineEdit);
+    upperHbox->addWidget(clearButton);
 
     QHBoxLayout *lowerHbox = new QHBoxLayout;
     lowerHbox->addWidget(_label);
@@ -66,6 +68,7 @@ DisenchantPreviewDialog::DisenchantPreviewDialog(const ItemsList &items, bool ar
     connect(_buttonBox, SIGNAL(accepted()), SLOT(accept()));
     connect(_buttonBox, SIGNAL(rejected()), SLOT(reject()));
     connect(filterLineEdit, SIGNAL(textChanged(const QString &)), _proxyModel, SLOT(setFilterWildcard(const QString &)));
+    connect(clearButton, SIGNAL(clicked()), filterLineEdit, SLOT(clear()));
 
     loadSettings();
 }
