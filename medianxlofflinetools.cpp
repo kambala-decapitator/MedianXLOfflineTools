@@ -51,7 +51,7 @@
 
 //#define MAKE_HC
 //#define ENABLE_PERSONALIZE
-#define MAKE_FINISHED_CHARACTER
+//#define MAKE_FINISHED_CHARACTER
 //#define DISABLE_CRC_CHECK
 
 
@@ -406,7 +406,7 @@ void MedianXLOfflineTools::saveCharacter()
     // enable all acts in all difficulties
     for (int i = 0; i < kDifficultiesNumber; ++i)
     {
-        outputDataStream.device()->seek(Enums::Offsets::QuestsData + i * Enums::Quests::Size); // A1 (0)
+        outputDataStream.device()->seek(Enums::Offsets::QuestsData + i * Enums::Quests::Size); // A1 (0) //-V807
         outputDataStream << one;
         outputDataStream.skipRawData(6);  // Cain (8)
         outputDataStream << one;
@@ -1676,7 +1676,7 @@ bool MedianXLOfflineTools::processSaveFile()
         return false;
     }
 
-    inputDataStream.device()->seek(Enums::Offsets::Checksum);
+    inputDataStream.device()->seek(Enums::Offsets::Checksum); //-V807
     quint32 fileChecksum, computedChecksum = checksum(_saveFileContents);
     inputDataStream >> fileChecksum;
 #ifndef DISABLE_CRC_CHECK
@@ -2496,7 +2496,7 @@ void MedianXLOfflineTools::updateTableStats(const BaseStats::StatsStep &statsPer
 
 void MedianXLOfflineTools::updateTableItemStat(QTableWidgetItem *item, int diff, int statPerPoint)
 {
-    double newValue = item->text().toDouble() + diff * statPerPoint / 4.0;
+    double newValue = item->text().toDouble() + diff * statPerPoint / 4.0; //-V636
     if (newValue > 8191)
         newValue = 8191;
 

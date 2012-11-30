@@ -1,6 +1,5 @@
 v0.3.0.2:
 - fix removing of +999 to life MO and resists MOs
-- maybe use model/view (or just item delegate) for disenchant preview
 
 v0.4:
 - move mass disenchant to a separate dialog and add more options
@@ -26,6 +25,7 @@ future versions:
 - item requirements
 - http://modsbylaz.14.forumer.com/viewtopic.php?p=424505#424505
 - moving/swaping pages, inserting blank page
+- fix multiple colors in one line, e.g. Statue of Ultimative v6b
 
 1.
 # escape command to allow multiple lines in Makefile

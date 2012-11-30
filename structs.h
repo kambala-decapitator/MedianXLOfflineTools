@@ -13,7 +13,7 @@ struct ItemProperty
 
     ItemProperty() : value(0), param(0) {}
     ItemProperty(int v, int p = 0) : value(v), param(p) {}
-    ItemProperty(const QString &text) : displayString(text) {}
+    ItemProperty(const QString &text) : value(0), param(0), displayString(text) {}
 };
 
 typedef QMultiMap<int, ItemProperty *> PropertiesMultiMap;
@@ -79,7 +79,7 @@ struct ItemPropertyDisplay
     QString displayString;
     int priority, propertyId;
 
-    ItemPropertyDisplay() {}
+    ItemPropertyDisplay() : priority(0), propertyId(0) {}
     ItemPropertyDisplay(const QString &displayString_, int priority_, int propertyId_) : displayString(displayString_), priority(priority_), propertyId(propertyId_) {}
 };
 
@@ -123,7 +123,7 @@ struct BaseStats
         StatsStep() {}
         StatsStep(qint32 l, qint32 s, qint32 m) : life(l), stamina(s), mana(m) {}
     } StatsPerLevel, StatsPerPoint;
-    
+
     StatsPerLevel statsPerLevel;
     StatsPerPoint statsPerPoint;
 

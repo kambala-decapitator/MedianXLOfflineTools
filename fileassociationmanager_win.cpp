@@ -84,7 +84,7 @@ bool isRegisteredApplicationOverridenInFileExts(const QString &extensionWithDot,
 
 bool FileAssociationManager::isApplicationDefaultForExtension(const QString &extension)
 {
-    bool isDefault;
+    bool isDefault = true; // don't try to register if something goes wrong
     QString extensionWithDot = extensionWithDotFromExtension(extension);
     if (QSysInfo::windowsVersion() < QSysInfo::WV_VISTA)
     {
@@ -99,8 +99,6 @@ bool FileAssociationManager::isApplicationDefaultForExtension(const QString &ext
 #ifdef WIN_VISTA_OR_LATER
     else
     {
-        isDefault = true; // don't try to register in case of error
-
         IApplicationAssociationRegistration *pAAR;
         HRESULT hr = CoCreateInstance(CLSID_ApplicationAssociationRegistration, NULL, CLSCTX_INPROC, IID_PPV_ARGS(&pAAR));
         if (SUCCEEDED(hr))

@@ -274,7 +274,7 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
         {
             qDebug("caught exception %d while parsing item (%d - %d)", exceptionCode, itemStartOffset, nextItemOffset);
             status = ItemInfo::Corrupted;
-            inputDataStream.device()->seek(itemStartOffset - 2); // set to JM - beginning of the item
+            inputDataStream.device()->seek(itemStartOffset - 2); // set to JM - beginning of the item //-V807
             searchEndOffset = nextItemOffset + 1;
             continue;
         }

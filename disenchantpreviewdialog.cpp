@@ -106,7 +106,7 @@ bool DisenchantPreviewDialog::eventFilter(QObject *obj, QEvent *e)
 void DisenchantPreviewDialog::showTreeViewContextMenu(const QPoint &pos)
 {
     bool allChecked = true, allUnchecked = true;
-    foreach (const QModelIndex &index, _itemsTreeView->selectionModel()->selectedRows())
+    foreach (const QModelIndex &index, _itemsTreeView->selectionModel()->selectedRows()) //-V807
     {
         bool isChecked = isRowChecked(index.row());
         allChecked = allChecked && isChecked;
@@ -149,7 +149,7 @@ void DisenchantPreviewDialog::changeSelectedItemsCheckState()
     else // space pressed
         checkAction = Invert;
 
-    foreach (const QModelIndex &index, _itemsTreeView->selectionModel()->selectedRows())
+    foreach (const QModelIndex &index, _itemsTreeView->selectionModel()->selectedRows()) //-V807
     {
         QModelIndex checkboxIndex = _proxyModel->index(index.row(), DisenchantPreviewModel::CheckboxColumn);
         _proxyModel->setData(checkboxIndex, checkAction == Invert ? !isRowChecked(checkboxIndex) : static_cast<bool>(checkAction), Qt::CheckStateRole);

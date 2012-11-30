@@ -37,9 +37,9 @@ QVariant DisenchantPreviewModel::data(const QModelIndex &index, int role /*= Qt:
             QString completeItemName = ItemDataBase::completeItemName(item, false, false);
             QStringList names = completeItemName.split(kHtmlLineBreak);
             if (index.column() == SpecialNameColumn)
-                return names.at(0);
+                return names.size() < 3 ? names.at(0) : QString("%1 %2").arg(names.at(1), names.at(0));
             else if (names.size() > 1)
-                return names.at(1);
+                return names.last();
             break;
         }
         default:

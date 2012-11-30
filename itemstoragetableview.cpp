@@ -23,10 +23,11 @@ ItemStorageTableView::ItemStorageTableView(QWidget *parent /*= 0*/) : QTableView
     setVerticalScrollMode(QAbstractItemView::ScrollPerPixel);
 
     setGridStyle(Qt::SolidLine);
-    setStyleSheet("QTableView { background-color: black; gridline-color: #808080; }"
-                  "QTableView::item:selected { background-color: transparent; border: 1px solid #d9d9d9; }"
-                  "QTableView::icon:selected { right: 1px; }"
-                 );
+    setStyleSheet(
+        "QTableView                { background-color: black; gridline-color: #808080; }"
+        "QTableView::item:selected { background-color: transparent; border: 1px solid #d9d9d9; }"
+        "QTableView::icon:selected { right: 1px; }"
+        );
 
     // TODO: [0.4] uncomment to allow drag & drop
 //    setDragDropMode(QAbstractItemView::DragDrop);
