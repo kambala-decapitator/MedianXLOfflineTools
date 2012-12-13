@@ -25,6 +25,8 @@ class QActionGroup;
 class QTableWidgetItem;
 
 class QFile;
+class QFileSystemWatcher;
+class QTimer;
 
 class QNetworkAccessManager;
 class QNetworkReply;
@@ -56,6 +58,8 @@ private slots:
     void modify() { setModified(true); }
     void eatSignetsOfLearning(int signetsEaten);
     void networkReplyFinished(QNetworkReply *reply);
+    void fileContentsChanged(const QString &path);
+    void fileChangeTimerFired();
 
 #ifdef Q_OS_MAC
     void moveUpdateActionToAppleMenu();
@@ -132,6 +136,10 @@ private:
     ResurrectPenaltyDialog::ResurrectionPenalty _resurrectionPenalty;
     QNetworkAccessManager *_qnam;
     bool _isManuallyCheckingForUpdate;
+
+    QFileSystemWatcher *_fsWatcher;
+    QTimer *_fileChangeTimer;
+    bool _isFileChangedMessageBoxRunning;
 
     // the following group of methods is Windows 7 specific
 #ifdef Q_OS_WIN32

@@ -1,5 +1,5 @@
 v0.3.0.2:
-- fix removing of +999 to life MO and resists MOs
+- show a message which backups were created (and maybe on loading or when failed loading)
 
 v0.4:
 - move mass disenchant to a separate dialog and add more options

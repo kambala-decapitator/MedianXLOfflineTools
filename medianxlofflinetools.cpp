@@ -32,20 +32,14 @@
 #include <QUrl>
 #include <QTimer>
 #include <QDate>
+#include <QFileSystemWatcher>
 
 #include <QNetworkAccessManager>
 #include <QNetworkReply>
 
 #include <cmath>
 
-
-// additional defines
-
-#ifdef QT_NO_DEBUG
-#define RELEASE_DATE "02.09.2012" // TODO: don't forget to change
-#else
-#define RELEASE_DATE QDate::currentDate().toString("dd.MM.yyyy") // :)
-
+#ifndef QT_NO_DEBUG
 #include <QDebug>
 #endif
 
@@ -77,7 +71,8 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *pare
     _backupLimitsGroup(new QActionGroup(this)), _showDisenchantPreviewGroup(new QActionGroup(this)), hackerDetected(tr("1337 hacker detected! Please, play legit.")), //difficulties(QStringList() << tr("Hatred") << tr("Terror") << tr("Destruction")),
     maxValueFormat(tr("Max: %1")), minValueFormat(tr("Min: %1")), investedValueFormat(tr("Invested: %1")),
     kForumThreadHtmlLinks(tr("<a href=\"http://www.medianxl.com/t83-median-xl-offline-tools\">Official Median XL Forum thread</a><br>"
-                             "<a href=\"http://forum.worldofplayers.ru/showthread.php?t=34489\">Official Russian Median XL Forum thread</a>")), _isLoaded(false)
+                             "<a href=\"http://forum.worldofplayers.ru/showthread.php?t=34489\">Official Russian Median XL Forum thread</a>")),
+    _isLoaded(false), _fsWatcher(new QFileSystemWatcher(this)), _fileChangeTimer(0), _isFileChangedMessageBoxRunning(false)
 {
     ui->setupUi(this);
 
@@ -221,7 +216,9 @@ bool MedianXLOfflineTools::loadFile(const QString &charPath)
     disconnect(ui->mercTypeComboBox);
     disconnect(ui->mercNameComboBox);
 
+    _fsWatcher->removePaths(_fsWatcher->files());
     _charPath = charPath;
+
     bool result;
     if ((result = processSaveFile()))
     {
@@ -587,6 +584,8 @@ void MedianXLOfflineTools::saveCharacter()
     outputDataStream << fileSize;
     outputDataStream << checksum(tempFileContents);
 
+    _fsWatcher->removePaths(_fsWatcher->files());
+
     // save plugy stashes if changed
     for (QHash<Enums::ItemStorage::ItemStorageEnum, PlugyStashInfo>::iterator iter = _plugyStashesHash.begin(); iter != _plugyStashesHash.end(); ++iter)
     {
@@ -685,7 +684,9 @@ void MedianXLOfflineTools::saveCharacter()
                     }
                 }
 
+                _charPath = saveFileName;
                 charInfo.basicInfo.originalName = newName;
+
 #ifdef Q_OS_WIN32
                 removeFromWindowsRecentFiles(_recentFilesList.at(0)); // old file doesn't exist any more
 #endif
@@ -693,7 +694,6 @@ void MedianXLOfflineTools::saveCharacter()
                 updateRecentFilesActions();
             }
 
-            _charPath = saveFileName;
             setModified(false);
             reloadCharacter(false); // update all UI at once by reloading the file
 
@@ -1055,7 +1055,7 @@ void MedianXLOfflineTools::aboutApp()
     aboutBox.setIconPixmap(windowIcon().pixmap(64));
     aboutBox.setTextFormat(Qt::RichText);
     QString appFullName = qApp->applicationName() + " " + qApp->applicationVersion();
-    aboutBox.setText(QString("<b>%1</b>%2").arg(appFullName, kHtmlLineBreak) + tr("Released: %1").arg(RELEASE_DATE));
+    aboutBox.setText(QString("<b>%1</b>%2").arg(appFullName, kHtmlLineBreak) + tr("Released: %1").arg(QLocale(QLocale::C).toDate(QString(__DATE__).simplified(), "MMM d yyyy").toString("dd.MM.yyyy")));
     QString email("decapitator@ukr.net");
     aboutBox.setInformativeText(
         tr("<i>Author:</i> Filipenkov Andrey (<b>kambala</b>)") + QString("%1<i>ICQ:</i> 287764961%1<i>E-mail:</i> <a href=\"mailto:%2?subject=%3\">%2</a>%1%1").arg(kHtmlLineBreak, email, appFullName) +
@@ -1578,6 +1578,8 @@ void MedianXLOfflineTools::connectSignals()
     connect(ui->respecSkillsCheckBox, SIGNAL(toggled(bool)), SLOT(respecSkills(bool)));
     //connect(ui->currentDifficultyComboBox, SIGNAL(currentIndexChanged(int)), SLOT(currentDifficultyChanged(int)));
     connect(ui->activateWaypointsCheckBox, SIGNAL(toggled(bool)), SLOT(modify()));
+
+    connect(_fsWatcher, SIGNAL(fileChanged(const QString &)), SLOT(fileContentsChanged(const QString &)));
 }
 
 void MedianXLOfflineTools::updateRecentFilesActions()
@@ -2105,6 +2107,8 @@ bool MedianXLOfflineTools::processSaveFile()
     clearItems(sharedStashPathChanged, hcStashPathChanged);
     charInfo.items.character += itemsBuffer;
 
+    _fsWatcher->addPath(_charPath);
+
     // create a lot of copies of all gems
 //    int p = 6;
 //    for (int i = 0; i < 100; ++i)
@@ -2241,6 +2245,8 @@ void MedianXLOfflineTools::processPlugyStash(QHash<Enums::ItemStorage::ItemStora
     }
     if (!corruptedItems.isEmpty())
         ERROR_BOX(corruptedItems.trimmed());
+
+    _fsWatcher->addPath(info.path);
 }
 
 void MedianXLOfflineTools::clearUI()
@@ -2503,7 +2509,7 @@ void MedianXLOfflineTools::updateTableItemStat(QTableWidgetItem *item, int diff,
     if (newValue > 0)
     {
         double foo;
-        item->setText(modf(newValue, &foo) > 0.000001 ? QString::number(newValue, 'f', 1) : QString::number(newValue));
+        item->setText(modf(newValue, &foo) > DBL_EPSILON ? QString::number(newValue, 'f', 1) : QString::number(newValue));
     }
     else
         item->setText("0");
@@ -2775,4 +2781,28 @@ void MedianXLOfflineTools::networkReplyFinished(QNetworkReply *reply)
         else if (_isManuallyCheckingForUpdate)
             ERROR_BOX(tr("Error contacting update server"));
     }
+}
+
+void MedianXLOfflineTools::fileContentsChanged(const QString &path)
+{
+    if (_isFileChangedMessageBoxRunning)
+        return;
+
+    if (!_fileChangeTimer)
+    {
+        _fileChangeTimer = new QTimer;
+        _fileChangeTimer->setSingleShot(true);
+        connect(_fileChangeTimer, SIGNAL(timeout()), SLOT(fileChangeTimerFired()));
+    }
+    _fileChangeTimer->start(500);
+}
+
+void MedianXLOfflineTools::fileChangeTimerFired()
+{
+    _isFileChangedMessageBoxRunning = true;
+    if (QUESTION_BOX_YESNO(tr("The character and/or PlugY stashes have been modified externally.\nDo you want to reload them?"), QMessageBox::Yes) == QMessageBox::Yes)
+        reloadCharacter();
+    _isFileChangedMessageBoxRunning = false;
+
+    delete _fileChangeTimer; _fileChangeTimer = 0;
 }
