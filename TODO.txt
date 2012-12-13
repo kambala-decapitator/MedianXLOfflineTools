@@ -1,4 +1,5 @@
 v0.3.0.2:
+- force reloading of shared stashes if they have been modified externally
 - show a message which backups were created (and maybe on loading or when failed loading)
 
 v0.4:

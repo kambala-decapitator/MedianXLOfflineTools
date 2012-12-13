@@ -38,7 +38,7 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>7</string>
+    <string>9</string>
 	<key>LSHasLocalizedDisplayName</key>
 	<false/>
 	<key>NSHumanReadableCopyright</key>

@@ -38,6 +38,7 @@
 #include <QNetworkReply>
 
 #include <cmath>
+#include <cfloat>
 
 #ifndef QT_NO_DEBUG
 #include <QDebug>
