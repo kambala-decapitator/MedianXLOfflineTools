@@ -205,7 +205,7 @@ private:
     QHash<int, bool> getPlugyStashesExistenceHash() const;
     void clearItems(bool sharedStashPathChanged = true, bool hcStashPathChanged = true);
 
-    void backupFile(QFile &file);
+    QString backupFile(QFile &file);
     void showErrorMessageBoxForFile(const QString &message, const QFile &file);
     bool maybeSave();
 

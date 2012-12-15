@@ -6,7 +6,7 @@
 
 TARGET = MedianXLOfflineTools
 TEMPLATE = app
-VERSION = 0.3.0.2
+VERSION = 0.3.1
 
 QT += network
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets # for Qt 5
@@ -144,10 +144,10 @@ macx {
 
     # for Xcode 4.3+
     MAC_SDK = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk
-    # for earlier versions
     if (!exists($$MAC_SDK)) {
         MAC_SDK = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk
     }
+    # for earlier versions
     if (!exists($$MAC_SDK)) {
         MAC_SDK = /Developer/SDKs/MacOSX10.6.sdk
     }

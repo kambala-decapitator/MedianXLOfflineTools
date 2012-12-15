@@ -372,11 +372,11 @@ void ItemsPropertiesSplitter::eatSelectedSignet()
 void ItemsPropertiesSplitter::deleteItemTriggered()
 {
     ItemInfo *item = selectedItem(false);
-    if (item && QUESTION_BOX_YESNO(tr("Are you sure you want to delete this item?"), QMessageBox::No) == QMessageBox::Yes)
+    if (item && QUESTION_BOX_YESNO(tr("Are you sure you want to delete this item?"), QMessageBox::Yes) == QMessageBox::Yes)
     {
         bool isCube = ItemDataBase::isCube(item);
         if (isCube && !ItemDataBase::itemsStoredIn(Enums::ItemStorage::Cube).isEmpty())
-            if (QUESTION_BOX_YESNO(tr("Cube is not empty. Do you really want to delete it?\nNote: items inside will be preserved. You can recover them by getting new Cube."), QMessageBox::No) == QMessageBox::No)
+            if (QUESTION_BOX_YESNO(tr("Cube is not empty. Do you really want to delete it?\nNote: items inside will be preserved. You can recover them by getting new Cube."), QMessageBox::No) == QMessageBox::Yes)
                 return;
 
         deleteItem(item);

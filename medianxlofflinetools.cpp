@@ -491,7 +491,8 @@ void MedianXLOfflineTools::saveCharacter()
     }
 
     // put corpse items on a character
-    ItemsList corpseItems = ItemDataBase::itemsStoredIn(Enums::ItemStorage::NotInStorage, Enums::ItemLocation::Corpse), equippedItems = ItemDataBase::itemsStoredIn(Enums::ItemStorage::NotInStorage, Enums::ItemLocation::Equipped);
+    ItemsList corpseItems = ItemDataBase::itemsStoredIn(Enums::ItemStorage::NotInStorage, Enums::ItemLocation::Corpse),
+            equippedItems = ItemDataBase::itemsStoredIn(Enums::ItemStorage::NotInStorage, Enums::ItemLocation::Equipped);
     for (int i = 0; i < corpseItems.size(); ++i)
     {
         ItemInfo *item = corpseItems[i];
@@ -588,6 +589,7 @@ void MedianXLOfflineTools::saveCharacter()
     _fsWatcher->removePaths(_fsWatcher->files());
 
     // save plugy stashes if changed
+    QStringList backupedFiles;
     for (QHash<Enums::ItemStorage::ItemStorageEnum, PlugyStashInfo>::iterator iter = _plugyStashesHash.begin(); iter != _plugyStashesHash.end(); ++iter)
     {
         const ItemsList &items = plugyItemsHash[iter.key()];
@@ -599,7 +601,7 @@ void MedianXLOfflineTools::saveCharacter()
         if (!inputFile.exists())
             continue;
 
-        backupFile(inputFile);
+        backupedFiles += backupFile(inputFile);
         if (!inputFile.open(QIODevice::WriteOnly))
         {
             showErrorMessageBoxForFile(tr("Error creating file '%1'"), inputFile);
@@ -639,10 +641,10 @@ void MedianXLOfflineTools::saveCharacter()
     if (hasNameChanged)
     {
         QFile oldFile(QString("%1%2.%3").arg(savePath, charInfo.basicInfo.originalName, kCharacterExtension));
-        backupFile(oldFile);
+        backupedFiles += backupFile(oldFile);
     }
     else
-        backupFile(outputFile);
+        backupedFiles += backupFile(outputFile);
 
     if (outputFile.open(QIODevice::WriteOnly))
     {
@@ -650,6 +652,7 @@ void MedianXLOfflineTools::saveCharacter()
         if (bytesWritten == static_cast<int>(fileSize)) // shut the compiler up
         {
             outputFile.flush();
+            outputFile.close(); // without this explicit call QFileSystemWatcher will report the file as modified after the method returns
             _saveFileContents = tempFileContents;
 
             if (hasNameChanged)
@@ -658,11 +661,13 @@ void MedianXLOfflineTools::saveCharacter()
                 bool isOldNameEmpty = QRegExp(QString("[ %1]+").arg(QChar(QChar::Nbsp))).exactMatch(charInfo.basicInfo.originalName);
                 bool hasNonAsciiChars = false;
                 for (int i = 0; i < charInfo.basicInfo.originalName.length(); ++i)
+                {
                     if (charInfo.basicInfo.originalName.at(i).unicode() > 255)
                     {
                         hasNonAsciiChars = true;
                         break;
                     }
+                }
 
                 bool isStrangeName = hasNonAsciiChars || isOldNameEmpty;
                 QDir sourceFileDir(savePath, isStrangeName ? "*" : charInfo.basicInfo.originalName + ".*");
@@ -698,7 +703,10 @@ void MedianXLOfflineTools::saveCharacter()
             setModified(false);
             reloadCharacter(false); // update all UI at once by reloading the file
 
-            INFO_BOX(tr("File '%1' successfully saved!").arg(QDir::toNativeSeparators(saveFileName)));
+            QString text = tr("File '%1' successfully saved!").arg(QDir::toNativeSeparators(saveFileName));
+            if (!backupedFiles.isEmpty())
+                text += kHtmlLineBreak + kHtmlLineBreak + tr("The following backups were created:") + QString("<ul><li>%1</li></ul>").arg(backupedFiles.join("</li><li>"));
+            INFO_BOX(text);
         }
         else
             showErrorMessageBoxForFile(tr("Error writing file '%1'"), outputFile);
@@ -1056,7 +1064,8 @@ void MedianXLOfflineTools::aboutApp()
     aboutBox.setIconPixmap(windowIcon().pixmap(64));
     aboutBox.setTextFormat(Qt::RichText);
     QString appFullName = qApp->applicationName() + " " + qApp->applicationVersion();
-    aboutBox.setText(QString("<b>%1</b>%2").arg(appFullName, kHtmlLineBreak) + tr("Released: %1").arg(QLocale(QLocale::C).toDate(QString(__DATE__).simplified(), "MMM d yyyy").toString("dd.MM.yyyy")));
+    aboutBox.setText(QString("<b>%1</b>%2").arg(appFullName, kHtmlLineBreak) + tr("Compiled on: %1").arg(QLocale(QLocale::C).toDateTime(QString(__TIMESTAMP__).simplified(),
+                                                                                                                                        "ddd MMM d hh:mm:ss yyyy").toString("dd.MM.yyyy hh:mm:ss")));
     QString email("decapitator@ukr.net");
     aboutBox.setInformativeText(
         tr("<i>Author:</i> Filipenkov Andrey (<b>kambala</b>)") + QString("%1<i>ICQ:</i> 287764961%1<i>E-mail:</i> <a href=\"mailto:%2?subject=%3\">%2</a>%1%1").arg(kHtmlLineBreak, email, appFullName) +
@@ -1064,14 +1073,10 @@ void MedianXLOfflineTools::aboutApp()
         tr("<b>Credits:</b>"
            "<ul>"
              "<li><a href=\"http://modsbylaz.hugelaser.com/\">BrotherLaz</a> for this awesome mod</li>"
-             "<li><a href=\"http://modsbylaz.14.forumer.com/profile.php?mode=viewprofile&u=947\">MarcoNecroX</a> for a hot extension of Median XL called <a href=\"http://modsbylaz.14.forumer.com/viewtopic.php?t=24559\">Ultimative</a></li>"
-             "<li><a href=\"http://modsbylaz.14.forumer.com/profile.php?mode=viewprofile&u=33805\">grig</a> for the Perl source of "
-                 "<a href=\"http://grig.vlexofree.com/\">Median XL Online Tools</a> and tips</li>"
+             "<li><a href=\"http://www.medianxl.com/u1\">MarcoNecroX aka SIGMA</a> for a hot extension of Median XL called <b>Ultimative</b></li>"
+             "<li>grig for the Perl source of <a href=\"http://grig.vlexofree.com/\">Median XL Online Tools</a> and tips</li>"
              "<li><a href=\"http://phrozenkeep.hugelaser.com/index.php?ind=reviews&op=section_view&idev=4\">Phrozen Keep File Guides</a> for tons of useful information on txt sources</li>"
-             "<li><a href=\"http://modsbylaz.14.forumer.com/profile.php?mode=viewprofile&u=44046\">FixeR</a>, <a href=\"http://forum.worldofplayers.ru/member.php?u=84592\">Zelgadiss</a>, "
-                 "<a href=\"http://modsbylaz.14.forumer.com/profile.php?mode=viewprofile&u=44840\">moonra</a>, <a href=\"http://modsbylaz.14.forumer.com/profile.php?mode=viewprofile&u=205\">Vilius</a>, "
-                 "<a href=\"http://modsbylaz.14.forumer.com/profile.php?mode=viewprofile&u=1283\">Delegus</a>, <a href=\"http://modsbylaz.14.forumer.com/profile.php?mode=viewprofile&u=50438\">aahz</a> and "
-                 "<a href=\"http://modsbylaz.14.forumer.com/profile.php?mode=viewprofile&u=50844\">HerrNieschnell</a> for intensive testing and tips on GUI & functionality</li>"
+             "<li>FixeR, Zelgadiss, moonra, Vilius, Delegus, aahz and HerrNieschnell for intensive testing and tips on GUI & functionality</li>"
            "</ul>")
     );
     aboutBox.exec();
@@ -1177,7 +1182,8 @@ void MedianXLOfflineTools::loadBaseStats()
             QList<QByteArray> numbers = s.trimmed().split('\t');
             _baseStatsMap[static_cast<Enums::ClassName::ClassNameEnum>(numbers.at(0).toUInt())] = BaseStats
                 (
-                BaseStats::StatsAtStart (numbers.at(1).toInt(), numbers.at(2).toInt(),  numbers.at(4).toInt(), numbers.at(3).toInt(), numbers.at(5).toInt()), // order is correct - energy value comes before vitality in the file
+                // order is correct: energy value comes before vitality in the file
+                BaseStats::StatsAtStart (numbers.at(1).toInt(), numbers.at(2).toInt(),  numbers.at(4).toInt(), numbers.at(3).toInt(), numbers.at(5).toInt()),
                 BaseStats::StatsPerLevel(numbers.at(6).toInt(), numbers.at(7).toInt(),  numbers.at(8).toInt()),
                 BaseStats::StatsPerPoint(numbers.at(9).toInt(), numbers.at(10).toInt(), numbers.at(11).toInt())
                 );
@@ -2115,7 +2121,10 @@ bool MedianXLOfflineTools::processSaveFile()
 //    for (int i = 0; i < 100; ++i)
 //    {
 //        ItemInfo *rune = ItemDataBase::loadItemFromFile("runes/r10");
-//        foreach (const QByteArray &gemType, QList<QByteArray>() << "gcv" << "gfv" << "gsv" << "gzv" << "gpv" << "gcb" << "gfb" << "gsb" << "glb" << "gpb" << "gcg" << "gfg" << "gsg" << "glg" << "gpg" << "gcr" << "gfr" << "gsr" << "glr" << "gpr" << "gcw" << "gfw" << "gsw" << "glw" << "gpw" << "gcy" << "gfy" << "gsy" << "gly" << "gpy" << "skc" << "skf" << "sku" << "skl" << "skz" << "yo1" << "yo2" << "yo3" << "yo4" << "yo5" << "g$a" << "g$b" << "g$c" << "g$d" << "g$e" << "9$a" << "9$b" << "9$c" << "9$d" << "9$e" << "7$a" << "7$b" << "7$c" << "7$d" << "7$e" << "5$a" << "5$b" << "5$c" << "5$d" << "5$e")
+//        foreach (const QByteArray &gemType, QList<QByteArray>() << "gcv" << "gfv" << "gsv" << "gzv" << "gpv" << "gcb" << "gfb" << "gsb" << "glb" << "gpb" << "gcg" << "gfg" << "gsg"
+//                 << "glg" << "gpg" << "gcr" << "gfr" << "gsr" << "glr" << "gpr" << "gcw" << "gfw" << "gsw" << "glw" << "gpw" << "gcy" << "gfy" << "gsy" << "gly" << "gpy" << "skc"
+//                 << "skf" << "sku" << "skl" << "skz" << "yo1" << "yo2" << "yo3" << "yo4" << "yo5" << "g$a" << "g$b" << "g$c" << "g$d" << "g$e" << "9$a" << "9$b" << "9$c" << "9$d"
+//                 << "9$e" << "7$a" << "7$b" << "7$c" << "7$d" << "7$e" << "5$a" << "5$b" << "5$c" << "5$d" << "5$e")
 //        {
 //            ItemInfo *gem = new ItemInfo(*rune);
 //            gem->itemType = gemType;
@@ -2688,7 +2697,7 @@ void MedianXLOfflineTools::clearItems(bool sharedStashPathChanged /*= true*/, bo
     }
 }
 
-void MedianXLOfflineTools::backupFile(QFile &file)
+QString MedianXLOfflineTools::backupFile(QFile &file)
 {
     if (ui->actionBackup->isChecked())
     {
@@ -2701,15 +2710,20 @@ void MedianXLOfflineTools::backupFile(QFile &file)
                 sourceFileDir.remove(previousBackups.takeFirst());
         }
 
-        QFile backupFile(QString("%1_%2.%3").arg(file.fileName()).arg(ui->actionBackupFormatReadable->isChecked() ? QDateTime::currentDateTimeUtc().toString("yyyyMMdd-hhmmss") : QString::number(QDateTime::currentMSecsSinceEpoch())).arg(kBackupExtension));
+        QFile backupFile(QString("%1_%2.%3").arg(file.fileName()).arg(ui->actionBackupFormatReadable->isChecked() ?
+                                                                      QDateTime::currentDateTimeUtc().toString("yyyyMMdd-hhmmss") :
+                                                                      QString::number(QDateTime::currentMSecsSinceEpoch())).arg(kBackupExtension));
         if (backupFile.exists() && !backupFile.remove()) // it shouldn't actually exist, but let's be safe
             showErrorMessageBoxForFile(tr("Error removing old backup '%1'"), backupFile);
         else
         {
-            if (!file.copy(backupFile.fileName()))
+            if (file.copy(backupFile.fileName()))
+                return QFileInfo(backupFile.fileName()).fileName();
+            else
                 showErrorMessageBoxForFile(tr("Error creating backup of '%1'"), file);
         }
     }
+    return QString();
 }
 
 QHash<int, bool> MedianXLOfflineTools::getPlugyStashesExistenceHash() const
