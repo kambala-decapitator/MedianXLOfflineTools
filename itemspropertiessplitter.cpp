@@ -334,7 +334,7 @@ void ItemsPropertiesSplitter::eatSelectedSignet()
     }
 
     uint signetsToEat = senderAction->data().toUInt(), signetsEaten = CharacterInfo::instance().valueOfStatistic(Enums::CharacterStats::SignetsOfLearningEaten);
-    const int signetsMax = Enums::CharacterStats::SignetsOfLearningMax;
+    const uint signetsMax = Enums::CharacterStats::SignetsOfLearningMax;
     if (signetsEaten + signetsToEat > signetsMax)
         if (QUESTION_BOX_YESNO(tr("You're going to eat %n signet(s), which is beyond the limit (%1) by %2.\nDo you really want to do it?", 0, signetsToEat).arg(signetsMax).arg(signetsEaten + signetsToEat - signetsMax), QMessageBox::No) == QMessageBox::No)
             return;

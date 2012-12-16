@@ -10,6 +10,8 @@
 
 class DisenchantPreviewModel : public QAbstractItemModel
 {
+    Q_DECLARE_TR_FUNCTIONS(DisenchantPreviewModel)
+
 public:
     enum
     {
