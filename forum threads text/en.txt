@@ -4,7 +4,7 @@ As you can guess from the title, it's an almost complete offline analogue of gri
 
 Application should be able to load character from any version of Median XL and successfully perform basic operations with it like respeccing. Items processing relies on the mod source files, so it may not be compatible with any chacarcter from different version. This data is softcoded, so when a new mod version is released, usually there's no need to recompile the application — one just needs to replace the data found in 'resources/data' with the new one, which I will release. Current supported Median XL version is 2012 v005, first supported one — Omega v003; current supported version of Ultimative is v6b (v5+ actually), first one — v4.
 
-It's written in C++ using the Qt library (v4.8.2 as of current release), so don't hope to dotnetreflect the source code (and it won't be released for obvious reasons). The app comes with English and Russian localization. If you want to create your own localization (or use items data from another mod version), grab translation toolkit from the Downloads section.
+It's written in C++ using the Qt library (v4.8.4 as of current release), so don't hope to dotnetreflect the source code (and it won't be released for obvious reasons). The app comes with English and Russian localization. If you want to create your own localization (or use items data from another mod version), grab translation toolkit from the Downloads section.
 
 I hope I provided enough anti-hack protection for an average user. If you manage to successfully hack your character and save him using this application, please report it to me so that I could fix the exploit :)
 
@@ -39,14 +39,15 @@ I hope I provided enough anti-hack protection for an average user. If you manage
 [*][url=http://modsbylaz.14.forumer.com/viewtopic.php?t=25209]Kehjan Labyrinth + Tathamet vs Anu[/url] support
 [*][url=http://modsbylaz.14.forumer.com/viewtopic.php?t=24559]Median XL Ultimative[/url] support (v4 and v5+)
 [*]display completion status of skill/stat quests
-[*]mass disenchant of uniques/sets with preview (you can select multiple items via Ctrl/Command and Shift and change their checked state via context menu or by pressing spacebar)
+[*]mass disenchant of uniques/sets with preview (you can select multiple items via Ctrl/Command and Shift, change their checked state via context menu or by pressing spacebar and sort/filter the table)
 [*]mass upgrade of gems/runes
 [*]rune downgrade (via context menu)
-[*]eating signets from context menu and with a hotkey[/list]
+[*]eating signets from context menu and with a hotkey
+[*]deactivating Halls of Pain WP on Destruction[/list]
 [b]Downloads[/b]:
-[list][*][i][b]Windows[/b][/i] (XP SP 2 and later; you need vcredist2010 to be installed): http://www.mediafire.com/download.php?zenu9bd7mm785d4 (if you're too lazy to search for vcredist2010, then place [url=http://www.mediafire.com/download.php?9cs9n4vdn30950a]these dlls[/url] near MedianXLOfflineTools.exe)
-[*][i][b]Mac OS X[/b][/i] (10.5 and later; universal binary): http://www.mediafire.com/download.php?96yu80n8a0hvbnw
-[*][i][b]Translation toolkit[/b][/i] (follow instructions found inside the archive): http://www.mediafire.com/?7005iwln6w6y2k3
+[list][*][i][b]Windows[/b][/i] (XP SP 2 and later; you need vcredist2012 to be installed): http://www.mediafire.com/download.php?d1jf4hzgxgwlh33 (if you're too lazy to search for vcredist2012, then place [url=http://www.mediafire.com/download.php?4uv0lsfa1pd5pi4]these dlls[/url] near MedianXLOfflineTools.exe)
+[*][i][b]Mac OS X[/b][/i] (10.5 and later; universal binary): http://www.mediafire.com/download.php?2hds8hr8hvvjrur
+[*][i][b]Translation toolkit[/b][/i] (follow instructions found inside the archive): http://www.mediafire.com/?4qm9t8ba9w35k9i
 -----
 [*][i][b]Mod data[/b][/i] (Windows: unpack in a folder that contains the executable; Mac OS X: unpack somewhere and move [b]the contents of 'resources/data', not the 'data' folder itself[/b], to 'MedianXLOfflineTools.app/Contents/Resources/data'. If you still don't understand what to do on Mac OS X, see bottom of the post.):[list][*][url=http://www.mediafire.com/download.php?t006u85c82wol85]Omega 003[/url]
 [*][url=http://www.mediafire.com/download.php?a5bma6lcza6u7ut]2012 005 + Kehjan Labyrinth + Tathamet vs Anu[/url] (is included with the current binary)
@@ -66,6 +67,18 @@ I hope I provided enough anti-hack protection for an average user. If you manage
 
 [b]Changelog[/b]:
 
+[i]v0.3.1 (16.12.2012)[/i]
+[list][+] deactivating Halls of Pain WP on Destruction
+[+] monitoring for externally changed files
+[+] displaying which backups were created on successful character save
+[f] file associations in Windows 8 (just showing native dialog)
+[f] jewels now appear in Disenchant Preview dialog
+[f] file association alert on Mac OS X can now be dismissed with Escape
+[f] fixed/removed some dead forum links
+[f] fixed a crash when deleting the only item in a storage
+[m] modified Edit menu
+[m] reworked Disenchant Preview dialog: added more columns, added ability to sort and filter the table, greatly increased its performance, fixed checkboxes on Mac OS X
+[m] when deleting an item default button in the confirmation dialog is Yes[/list]
 [i]v0.3.0.1 (02.09.2012)[/i]
 [list][f] fixed displaying of elemental min/max damage
 [f] fixed one gamebreaking bug that could let you cheat[/list]
