@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 45;
+	objectVersion = 42;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -23,16 +23,18 @@
 		2F84BB742FB68F12BF2E4868 /* propertiesviewerwidget.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 864865BD7CF9B2ED31A33C5D /* propertiesviewerwidget.cpp */; settings = {ATTRIBUTES = (); }; };
 		31A2ABBCCD6D7081905A7B30 /* helpers.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 9DF8BB12FF11D5408ADC7086 /* helpers.cpp */; settings = {ATTRIBUTES = (); }; };
 		3826A0833FCB54E86728C6EF /* QtNetwork.framework in Frameworks & Libraries */ = {isa = PBXBuildFile; fileRef = B6B9970B86A6C219B0869FE9 /* QtNetwork.framework */; };
+		39A54B31C893780908144155 /* disenchantpreviewmodel.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 107D29CC0CECCE30CDDA1156 /* disenchantpreviewmodel.cpp */; settings = {ATTRIBUTES = (); }; };
 		42EB7E5EFE91DD7C2FD6153C /* moc_showselecteditemdelegate.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 28C305BBFC0A7B8D616F872E /* moc_showselecteditemdelegate.cpp */; settings = {ATTRIBUTES = (); }; };
-		48ECC7B68AF89D7A69F8F6C9 /* resources/mac/locversion.plist in Bundle Copy [appresources] */ = {isa = PBXBuildFile; fileRef = EF822A4C15EE49A935268D73 /* resources/mac/locversion.plist */; };
 		501667F26B3C1FF6767A7C12 /* QtGui.framework in Frameworks & Libraries */ = {isa = PBXBuildFile; fileRef = 9B36DA7E32F0304E780E7972 /* QtGui.framework */; };
 		51D4DBF7CB8537BE86EBD055 /* AppKit.framework in Frameworks & Libraries */ = {isa = PBXBuildFile; fileRef = 821416211D63F190AAAD016A /* AppKit.framework */; };
 		5B3C6B882DCA5268848BD564 /* gearitemssplitter.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = BF48C9175F90E3561DC1EA03 /* gearitemssplitter.cpp */; settings = {ATTRIBUTES = (); }; };
 		5E97B4CEB6F000A1E27BC7F2 /* resurrectpenaltydialog.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = C1A9E060AAA12B497C8F3B91 /* resurrectpenaltydialog.cpp */; settings = {ATTRIBUTES = (); }; };
+		6172ABB297CB2D6FB8DFA828 /* moc_progressbarmodal.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 565A26302A3B37D98CE1B88A /* moc_progressbarmodal.cpp */; settings = {ATTRIBUTES = (); }; };
 		6923BAD493D5E5CC54E107C7 /* medianxlofflinetools.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 048D7B835A93D44117D969B1 /* medianxlofflinetools.cpp */; settings = {ATTRIBUTES = (); }; };
 		6C0A46C0CCF6EFD2F169971D /* disenchantpreviewdialog.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 743F6636E5BB911A9D9ECE27 /* disenchantpreviewdialog.cpp */; settings = {ATTRIBUTES = (); }; };
 		6F151A44B306CF0698FDF2F2 /* machelpers.mm in Build Sources */ = {isa = PBXBuildFile; fileRef = D52E77CA3F6809AD244D05A3 /* machelpers.mm */; settings = {ATTRIBUTES = (); }; };
 		73634ECD5C724AE557D52043 /* itemdatabase.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = FFE7684627752FF67C3CD35D /* itemdatabase.cpp */; settings = {ATTRIBUTES = (); }; };
+		746B922666D58ADEA88214BC /* moc_itemnamestreewidget.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 0FC284F8CFD8345E41E45F83 /* moc_itemnamestreewidget.cpp */; settings = {ATTRIBUTES = (); }; };
 		78BB12D12BE8F99B19493879 /* moc_finditemsdialog.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = B9D8BD7BA460F99AD062AF08 /* moc_finditemsdialog.cpp */; settings = {ATTRIBUTES = (); }; };
 		7AD9DDBA85996A831E975A3E /* moc_findresultswidget.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = F118FB0BC619473AC333F7A5 /* moc_findresultswidget.cpp */; settings = {ATTRIBUTES = (); }; };
 		7DBDA13986FB52F629B68C87 /* moc_itemstoragetableview.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = B1555E4249E75628A4999156 /* moc_itemstoragetableview.cpp */; settings = {ATTRIBUTES = (); }; };
@@ -48,7 +50,6 @@
 		A6BF33642D4408F437404357 /* moc_itemsviewerdialog.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = DDCD2B3240AC93BDC1AC2748 /* moc_itemsviewerdialog.cpp */; settings = {ATTRIBUTES = (); }; };
 		A8BA6FFB47BB1BD81D7FBD98 /* itemsviewerdialog.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = BB35BC6199B5362D4DDC4E81 /* itemsviewerdialog.cpp */; settings = {ATTRIBUTES = (); }; };
 		AB191A955E35E32AA265564E /* experienceindicatorgroupbox.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 92D0C0D68926B7F4E8A412F1 /* experienceindicatorgroupbox.cpp */; settings = {ATTRIBUTES = (); }; };
-		AC208D7F15EED104004BE5FA /* Info.plist in Bundle Resources */ = {isa = PBXBuildFile; fileRef = AC208D7E15EED104004BE5FA /* Info.plist */; };
 		B09132059B01BF93ACB07F02 /* moc_enums.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 457C18608DE1E1EB5A10C3F3 /* moc_enums.cpp */; settings = {ATTRIBUTES = (); }; };
 		B0CB039B3B4323FC3D471B59 /* enums.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = E34D230637628A8CD6C3EA30 /* enums.cpp */; settings = {ATTRIBUTES = (); }; };
 		B14AFF375B11F951842C979C /* itemstoragetableview.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 0D597AF1812341262648E491 /* itemstoragetableview.cpp */; settings = {ATTRIBUTES = (); }; };
@@ -79,7 +80,6 @@
 			dstPath = Contents/Resources;
 			dstSubfolderSpec = 1;
 			files = (
-				48ECC7B68AF89D7A69F8F6C9 /* resources/mac/locversion.plist in Bundle Copy [appresources] */,
 			);
 			name = "Bundle Copy [appresources]";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -87,121 +87,125 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0092663B5ABB9A5FDE3A55C2 /* moc_medianxlofflinetools.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_medianxlofflinetools.cpp; sourceTree = "<group>"; };
-		01469DADF73546458529A66D /* showselecteditemdelegate.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = showselecteditemdelegate.cpp; sourceTree = "<group>"; };
-		0313823CCF5B5C4DBAE2A3E8 /* reversebitwriter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = reversebitwriter.h; sourceTree = "<group>"; };
-		03B66D70A47E9FB94741974E /* itemparser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = itemparser.h; sourceTree = "<group>"; };
-		046193EA83F955D427162245 /* findresultswidget.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = findresultswidget.cpp; sourceTree = "<group>"; };
-		048D7B835A93D44117D969B1 /* medianxlofflinetools.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = medianxlofflinetools.cpp; sourceTree = "<group>"; };
-		051D1AB88DDA0AB7FFA6D407 /* ui_resurrectpenaltydialog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ui_resurrectpenaltydialog.h; sourceTree = "<group>"; };
-		080C84CE92E8C74010FF9355 /* qtsingleapplication.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = qtsingleapplication.cpp; path = qtsingleapplication/qtsingleapplication.cpp; sourceTree = "<group>"; };
-		09198D1FF69E14CF80220596 /* itemsviewerdialog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = itemsviewerdialog.h; sourceTree = "<group>"; };
-		0D597AF1812341262648E491 /* itemstoragetableview.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = itemstoragetableview.cpp; sourceTree = "<group>"; };
-		107FCE7A3256D0ECA5761546 /* skillplandialog.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = skillplandialog.cpp; sourceTree = "<group>"; };
-		118FCBAABA162BA17933C789 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		1225D5B7D03A2D0D8E968A94 /* moc_itemspropertiessplitter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_itemspropertiessplitter.cpp; sourceTree = "<group>"; };
-		134C5214854B7E89B70E1B38 /* itemparser.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = itemparser.cpp; sourceTree = "<group>"; };
-		18AC80D4A510EA33B37145C9 /* qd2charrenamer.ui */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = qd2charrenamer.ui; sourceTree = "<group>"; };
-		190B7FBB10DB0B16B5046F23 /* moc_qd2charrenamer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_qd2charrenamer.cpp; sourceTree = "<group>"; };
-		1C8010DBD505B823EDE2746F /* resurrectpenaltydialog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = resurrectpenaltydialog.h; sourceTree = "<group>"; };
-		1DADC0B8E2F6027D2B6D40DD /* structs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = structs.h; sourceTree = "<group>"; };
-		1FFC0525D26B10543C848028 /* gearitemssplitter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gearitemssplitter.h; sourceTree = "<group>"; };
-		21B9F4A381F662CF139EEA33 /* moc_skillplandialog.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_skillplandialog.cpp; sourceTree = "<group>"; };
+		0092663B5ABB9A5FDE3A55C2 /* moc_medianxlofflinetools.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_medianxlofflinetools.cpp; sourceTree = SOURCE_ROOT; };
+		01469DADF73546458529A66D /* showselecteditemdelegate.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = showselecteditemdelegate.cpp; sourceTree = SOURCE_ROOT; };
+		0313823CCF5B5C4DBAE2A3E8 /* reversebitwriter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = reversebitwriter.h; sourceTree = SOURCE_ROOT; };
+		03B66D70A47E9FB94741974E /* itemparser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = itemparser.h; sourceTree = SOURCE_ROOT; };
+		046193EA83F955D427162245 /* findresultswidget.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = findresultswidget.cpp; sourceTree = SOURCE_ROOT; };
+		048D7B835A93D44117D969B1 /* medianxlofflinetools.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = medianxlofflinetools.cpp; sourceTree = SOURCE_ROOT; };
+		051D1AB88DDA0AB7FFA6D407 /* ui_resurrectpenaltydialog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ui_resurrectpenaltydialog.h; sourceTree = SOURCE_ROOT; };
+		080C84CE92E8C74010FF9355 /* qtsingleapplication.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = qtsingleapplication.cpp; path = qtsingleapplication/qtsingleapplication.cpp; sourceTree = SOURCE_ROOT; };
+		09198D1FF69E14CF80220596 /* itemsviewerdialog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = itemsviewerdialog.h; sourceTree = SOURCE_ROOT; };
+		0D597AF1812341262648E491 /* itemstoragetableview.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = itemstoragetableview.cpp; sourceTree = SOURCE_ROOT; };
+		0FC284F8CFD8345E41E45F83 /* moc_itemnamestreewidget.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_itemnamestreewidget.cpp; sourceTree = SOURCE_ROOT; };
+		107D29CC0CECCE30CDDA1156 /* disenchantpreviewmodel.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = disenchantpreviewmodel.cpp; sourceTree = SOURCE_ROOT; };
+		107FCE7A3256D0ECA5761546 /* skillplandialog.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = skillplandialog.cpp; sourceTree = SOURCE_ROOT; };
+		118FCBAABA162BA17933C789 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = SOURCE_ROOT; };
+		1225D5B7D03A2D0D8E968A94 /* moc_itemspropertiessplitter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_itemspropertiessplitter.cpp; sourceTree = SOURCE_ROOT; };
+		134C5214854B7E89B70E1B38 /* itemparser.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = itemparser.cpp; sourceTree = SOURCE_ROOT; };
+		18AC80D4A510EA33B37145C9 /* qd2charrenamer.ui */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = qd2charrenamer.ui; sourceTree = SOURCE_ROOT; };
+		190B7FBB10DB0B16B5046F23 /* moc_qd2charrenamer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_qd2charrenamer.cpp; sourceTree = SOURCE_ROOT; };
+		1C8010DBD505B823EDE2746F /* resurrectpenaltydialog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = resurrectpenaltydialog.h; sourceTree = SOURCE_ROOT; };
+		1DADC0B8E2F6027D2B6D40DD /* structs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = structs.h; sourceTree = SOURCE_ROOT; };
+		1FFC0525D26B10543C848028 /* gearitemssplitter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gearitemssplitter.h; sourceTree = SOURCE_ROOT; };
+		21B9F4A381F662CF139EEA33 /* moc_skillplandialog.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_skillplandialog.cpp; sourceTree = SOURCE_ROOT; };
 		27AE7A480FD6C52FCA80FECD /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = /System/Library/Frameworks/ApplicationServices.framework; sourceTree = "<absolute>"; };
-		28715C4E68DB636B3BED5BB4 /* itemdatabase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = itemdatabase.h; sourceTree = "<group>"; };
-		28C305BBFC0A7B8D616F872E /* moc_showselecteditemdelegate.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_showselecteditemdelegate.cpp; sourceTree = "<group>"; };
-		29E97D19C2DA77D38DADA780 /* finditemsdialog.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = finditemsdialog.cpp; sourceTree = "<group>"; };
-		2B1192F40CE631B10BEFA4B0 /* resourcepathmanager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = resourcepathmanager.hpp; sourceTree = "<group>"; };
-		2F004A54FA510C70CF3BC9FC /* qtlocalpeer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = qtlocalpeer.cpp; path = qtsingleapplication/qtlocalpeer.cpp; sourceTree = "<group>"; };
-		2FABBC66332D6E5F8F3817BE /* moc_gearitemssplitter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_gearitemssplitter.cpp; sourceTree = "<group>"; };
-		32900774B5D2D9CC68EC9667 /* fileassociationmanager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fileassociationmanager.h; sourceTree = "<group>"; };
-		33C0281AE895F6F1D288680C /* itemstoragetablemodel.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = itemstoragetablemodel.cpp; sourceTree = "<group>"; };
-		350C6E0AA06044F2D4BCB10F /* itemstoragetableview.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = itemstoragetableview.h; sourceTree = "<group>"; };
-		35D9C9B4AC80510BCEA863B7 /* reversebitreader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = reversebitreader.cpp; sourceTree = "<group>"; };
-		3B1ED9A220D37E0F2969CFCA /* propertiesdisplaymanager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = propertiesdisplaymanager.h; sourceTree = "<group>"; };
-		3B263EC2B01DF1ACE4B9ED3D /* moc_qtlocalpeer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_qtlocalpeer.cpp; sourceTree = "<group>"; };
-		3E24D015FFE43041FAACA4C4 /* enums.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = enums.h; sourceTree = "<group>"; };
-		4003C8FF31A7868D0AC66678 /* application_mac.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = application_mac.mm; sourceTree = "<group>"; };
-		40EEE5E4BF46D9CE22FED30E /* qd2charrenamer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = qd2charrenamer.h; sourceTree = "<group>"; };
-		4147D111E93FFC38D5F56B3F /* propertiesviewerwidget.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = propertiesviewerwidget.h; sourceTree = "<group>"; };
-		41B5802369A95F860933A1AF /* skillplandialog.ui */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = skillplandialog.ui; sourceTree = "<group>"; };
-		457C18608DE1E1EB5A10C3F3 /* moc_enums.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_enums.cpp; sourceTree = "<group>"; };
-		46C4EE6C0D9C9896D30E815B /* messagecheckbox_mac_p.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = messagecheckbox_mac_p.mm; sourceTree = "<group>"; };
-		49E8EB7DCE7DB4B1C0D953C7 /* showselecteditemdelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = showselecteditemdelegate.h; sourceTree = "<group>"; };
-		4BA9AC9B59C29CEF3E78F18D /* moc_disenchantpreviewdialog.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_disenchantpreviewdialog.cpp; sourceTree = "<group>"; };
-		4D6E68A38295F99B7324EC7C /* medianxlofflinetools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = medianxlofflinetools.h; sourceTree = "<group>"; };
-		52982E277DA45B34D418E1FC /* messagecheckbox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = messagecheckbox.h; sourceTree = "<group>"; };
-		52E6A8B49132AB1956541CCE /* ui_propertiesviewerwidget.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ui_propertiesviewerwidget.h; sourceTree = "<group>"; };
-		54C6FFB76D814CBC6C602AA3 /* reversebitreader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = reversebitreader.h; sourceTree = "<group>"; };
-		57EC01D096611301042E626B /* ui_medianxlofflinetools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ui_medianxlofflinetools.h; sourceTree = "<group>"; };
-		57FE2B1EE658C9D723157766 /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = icon.icns; path = resources/mac/icon.icns; sourceTree = "<group>"; };
-		59D7D03F3F76416088F83910 /* ui_skillplandialog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ui_skillplandialog.h; sourceTree = "<group>"; };
-		5CEEC24EAE9893368C3C470E /* moc_experienceindicatorgroupbox.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_experienceindicatorgroupbox.cpp; sourceTree = "<group>"; };
-		60ED7402D501FE7FA4068D8F /* colorsmanager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = colorsmanager.hpp; sourceTree = "<group>"; };
-		633965930DF94524CA097B37 /* propertiesviewerwidget.ui */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = propertiesviewerwidget.ui; sourceTree = "<group>"; };
-		634F5DF5EB2A403A204DDF3A /* kexpandablegroupbox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = kexpandablegroupbox.h; sourceTree = "<group>"; };
-		6887EB9D0EC054A91A5B9F07 /* moc_resurrectpenaltydialog.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_resurrectpenaltydialog.cpp; sourceTree = "<group>"; };
-		6A445E2B7D179B590C006802 /* itemnamestreewidget.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = itemnamestreewidget.hpp; sourceTree = "<group>"; };
-		6C7D1B14178DC02227AFCC61 /* progressbarmodal.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = progressbarmodal.hpp; sourceTree = "<group>"; };
-		6E0F7A39E6D33F8DCF3A3882 /* moc_itemstoragetablemodel.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_itemstoragetablemodel.cpp; sourceTree = "<group>"; };
-		72DF86E2159493356330232B /* moc_plugyitemssplitter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_plugyitemssplitter.cpp; sourceTree = "<group>"; };
-		73A3D27301B92EEF800C2C64 /* moc_qtsingleapplication.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_qtsingleapplication.cpp; sourceTree = "<group>"; };
-		743F6636E5BB911A9D9ECE27 /* disenchantpreviewdialog.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = disenchantpreviewdialog.cpp; sourceTree = "<group>"; };
-		758F9D37EF8C9E86F2626D40 /* moc_kexpandablegroupbox.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_kexpandablegroupbox.cpp; sourceTree = "<group>"; };
+		28715C4E68DB636B3BED5BB4 /* itemdatabase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = itemdatabase.h; sourceTree = SOURCE_ROOT; };
+		28C305BBFC0A7B8D616F872E /* moc_showselecteditemdelegate.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_showselecteditemdelegate.cpp; sourceTree = SOURCE_ROOT; };
+		29E97D19C2DA77D38DADA780 /* finditemsdialog.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = finditemsdialog.cpp; sourceTree = SOURCE_ROOT; };
+		2B1192F40CE631B10BEFA4B0 /* resourcepathmanager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = resourcepathmanager.hpp; sourceTree = SOURCE_ROOT; };
+		2F004A54FA510C70CF3BC9FC /* qtlocalpeer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = qtlocalpeer.cpp; path = qtsingleapplication/qtlocalpeer.cpp; sourceTree = SOURCE_ROOT; };
+		2FABBC66332D6E5F8F3817BE /* moc_gearitemssplitter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_gearitemssplitter.cpp; sourceTree = SOURCE_ROOT; };
+		32900774B5D2D9CC68EC9667 /* fileassociationmanager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fileassociationmanager.h; sourceTree = SOURCE_ROOT; };
+		33C0281AE895F6F1D288680C /* itemstoragetablemodel.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = itemstoragetablemodel.cpp; sourceTree = SOURCE_ROOT; };
+		350C6E0AA06044F2D4BCB10F /* itemstoragetableview.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = itemstoragetableview.h; sourceTree = SOURCE_ROOT; };
+		35D9C9B4AC80510BCEA863B7 /* reversebitreader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = reversebitreader.cpp; sourceTree = SOURCE_ROOT; };
+		3B1ED9A220D37E0F2969CFCA /* propertiesdisplaymanager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = propertiesdisplaymanager.h; sourceTree = SOURCE_ROOT; };
+		3B263EC2B01DF1ACE4B9ED3D /* moc_qtlocalpeer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_qtlocalpeer.cpp; sourceTree = SOURCE_ROOT; };
+		3E24D015FFE43041FAACA4C4 /* enums.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = enums.h; sourceTree = SOURCE_ROOT; };
+		4003C8FF31A7868D0AC66678 /* application_mac.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = application_mac.mm; sourceTree = SOURCE_ROOT; };
+		40EEE5E4BF46D9CE22FED30E /* qd2charrenamer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = qd2charrenamer.h; sourceTree = SOURCE_ROOT; };
+		4147D111E93FFC38D5F56B3F /* propertiesviewerwidget.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = propertiesviewerwidget.h; sourceTree = SOURCE_ROOT; };
+		41B5802369A95F860933A1AF /* skillplandialog.ui */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = skillplandialog.ui; sourceTree = SOURCE_ROOT; };
+		457C18608DE1E1EB5A10C3F3 /* moc_enums.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_enums.cpp; sourceTree = SOURCE_ROOT; };
+		46C4EE6C0D9C9896D30E815B /* messagecheckbox_mac_p.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = messagecheckbox_mac_p.mm; sourceTree = SOURCE_ROOT; };
+		49E8EB7DCE7DB4B1C0D953C7 /* showselecteditemdelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = showselecteditemdelegate.h; sourceTree = SOURCE_ROOT; };
+		4BA9AC9B59C29CEF3E78F18D /* moc_disenchantpreviewdialog.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_disenchantpreviewdialog.cpp; sourceTree = SOURCE_ROOT; };
+		4D6E68A38295F99B7324EC7C /* medianxlofflinetools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = medianxlofflinetools.h; sourceTree = SOURCE_ROOT; };
+		52982E277DA45B34D418E1FC /* messagecheckbox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = messagecheckbox.h; sourceTree = SOURCE_ROOT; };
+		52E6A8B49132AB1956541CCE /* ui_propertiesviewerwidget.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ui_propertiesviewerwidget.h; sourceTree = SOURCE_ROOT; };
+		54C6FFB76D814CBC6C602AA3 /* reversebitreader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = reversebitreader.h; sourceTree = SOURCE_ROOT; };
+		565A26302A3B37D98CE1B88A /* moc_progressbarmodal.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_progressbarmodal.cpp; sourceTree = SOURCE_ROOT; };
+		57EC01D096611301042E626B /* ui_medianxlofflinetools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ui_medianxlofflinetools.h; sourceTree = SOURCE_ROOT; };
+		57FE2B1EE658C9D723157766 /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = icon.icns; path = resources/mac/icon.icns; sourceTree = SOURCE_ROOT; };
+		59D7D03F3F76416088F83910 /* ui_skillplandialog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ui_skillplandialog.h; sourceTree = SOURCE_ROOT; };
+		5CEEC24EAE9893368C3C470E /* moc_experienceindicatorgroupbox.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_experienceindicatorgroupbox.cpp; sourceTree = SOURCE_ROOT; };
+		60ED7402D501FE7FA4068D8F /* colorsmanager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = colorsmanager.hpp; sourceTree = SOURCE_ROOT; };
+		633965930DF94524CA097B37 /* propertiesviewerwidget.ui */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = propertiesviewerwidget.ui; sourceTree = SOURCE_ROOT; };
+		634F5DF5EB2A403A204DDF3A /* kexpandablegroupbox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = kexpandablegroupbox.h; sourceTree = SOURCE_ROOT; };
+		6887EB9D0EC054A91A5B9F07 /* moc_resurrectpenaltydialog.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_resurrectpenaltydialog.cpp; sourceTree = SOURCE_ROOT; };
+		6A445E2B7D179B590C006802 /* itemnamestreewidget.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = itemnamestreewidget.hpp; sourceTree = SOURCE_ROOT; };
+		6C7D1B14178DC02227AFCC61 /* progressbarmodal.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = progressbarmodal.hpp; sourceTree = SOURCE_ROOT; };
+		6E0F7A39E6D33F8DCF3A3882 /* moc_itemstoragetablemodel.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_itemstoragetablemodel.cpp; sourceTree = SOURCE_ROOT; };
+		72DF86E2159493356330232B /* moc_plugyitemssplitter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_plugyitemssplitter.cpp; sourceTree = SOURCE_ROOT; };
+		73A3D27301B92EEF800C2C64 /* moc_qtsingleapplication.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_qtsingleapplication.cpp; sourceTree = SOURCE_ROOT; };
+		743F6636E5BB911A9D9ECE27 /* disenchantpreviewdialog.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = disenchantpreviewdialog.cpp; sourceTree = SOURCE_ROOT; };
+		758F9D37EF8C9E86F2626D40 /* moc_kexpandablegroupbox.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_kexpandablegroupbox.cpp; sourceTree = SOURCE_ROOT; };
 		7BC2E65A5E699A5E5D834CA2 /* QtCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtCore.framework; path = /Library/Frameworks/QtCore.framework; sourceTree = "<absolute>"; };
-		80E24EE4AED2D78A1531C239 /* fileassociationmanager_mac.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = fileassociationmanager_mac.mm; sourceTree = "<group>"; };
-		815FFBFB0D8FA5D4188616FA /* moc_application.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_application.cpp; sourceTree = "<group>"; };
+		80E24EE4AED2D78A1531C239 /* fileassociationmanager_mac.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = fileassociationmanager_mac.mm; sourceTree = SOURCE_ROOT; };
+		815FFBFB0D8FA5D4188616FA /* moc_application.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_application.cpp; sourceTree = SOURCE_ROOT; };
 		821416211D63F190AAAD016A /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
-		83B1A57E1BE4548405E8A5AD /* itemstoragetablemodel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = itemstoragetablemodel.h; sourceTree = "<group>"; };
-		864865BD7CF9B2ED31A33C5D /* propertiesviewerwidget.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = propertiesviewerwidget.cpp; sourceTree = "<group>"; };
-		8B9D6A21C2B02D0B980A59EC /* ui_qd2charrenamer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ui_qd2charrenamer.h; sourceTree = "<group>"; };
-		8F46D2DA5140DD3AFC4771D9 /* application.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = application.h; sourceTree = "<group>"; };
-		9045BCCC40EE153DECB2F200 /* itemspropertiessplitter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = itemspropertiessplitter.cpp; sourceTree = "<group>"; };
-		919E2048F1A9EF3D864E026A /* finditemsdialog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = finditemsdialog.h; sourceTree = "<group>"; };
-		92D0C0D68926B7F4E8A412F1 /* experienceindicatorgroupbox.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = experienceindicatorgroupbox.cpp; sourceTree = "<group>"; };
-		9496FE6F7644EF9859BB340B /* propertiesdisplaymanager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = propertiesdisplaymanager.cpp; sourceTree = "<group>"; };
-		954D2F14C515B9F2F106008A /* moc_propertiesviewerwidget.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_propertiesviewerwidget.cpp; sourceTree = "<group>"; };
-		99909FF0E3532A0626D2CCDD /* MedianXLOfflineTools.pro */ = {isa = PBXFileReference; lastKnownFileType = text; path = MedianXLOfflineTools.pro; sourceTree = "<group>"; };
+		83B1A57E1BE4548405E8A5AD /* itemstoragetablemodel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = itemstoragetablemodel.h; sourceTree = SOURCE_ROOT; };
+		864865BD7CF9B2ED31A33C5D /* propertiesviewerwidget.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = propertiesviewerwidget.cpp; sourceTree = SOURCE_ROOT; };
+		8B9D6A21C2B02D0B980A59EC /* ui_qd2charrenamer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ui_qd2charrenamer.h; sourceTree = SOURCE_ROOT; };
+		8F46D2DA5140DD3AFC4771D9 /* application.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = application.h; sourceTree = SOURCE_ROOT; };
+		9045BCCC40EE153DECB2F200 /* itemspropertiessplitter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = itemspropertiessplitter.cpp; sourceTree = SOURCE_ROOT; };
+		919E2048F1A9EF3D864E026A /* finditemsdialog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = finditemsdialog.h; sourceTree = SOURCE_ROOT; };
+		92D0C0D68926B7F4E8A412F1 /* experienceindicatorgroupbox.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = experienceindicatorgroupbox.cpp; sourceTree = SOURCE_ROOT; };
+		9496FE6F7644EF9859BB340B /* propertiesdisplaymanager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = propertiesdisplaymanager.cpp; sourceTree = SOURCE_ROOT; };
+		954D2F14C515B9F2F106008A /* moc_propertiesviewerwidget.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_propertiesviewerwidget.cpp; sourceTree = SOURCE_ROOT; };
+		99909FF0E3532A0626D2CCDD /* MedianXLOfflineTools.pro */ = {isa = PBXFileReference; lastKnownFileType = text; path = MedianXLOfflineTools.pro; sourceTree = SOURCE_ROOT; };
 		9B36DA7E32F0304E780E7972 /* QtGui.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtGui.framework; path = /Library/Frameworks/QtGui.framework; sourceTree = "<absolute>"; };
-		9DF8BB12FF11D5408ADC7086 /* helpers.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = helpers.cpp; sourceTree = "<group>"; };
-		AC208D7A15EED048004BE5FA /* MedianXLOfflineTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedianXLOfflineTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		AC208D7E15EED104004BE5FA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Resources/mac/Info.plist; sourceTree = "<group>"; };
-		B05EAF9C7AB2B9E4B8CF867E /* medianxlofflinetools_mac.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = medianxlofflinetools_mac.mm; sourceTree = "<group>"; };
-		B06652142F8E356218335B39 /* qrc_medianxlofflinetools.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = qrc_medianxlofflinetools.cpp; sourceTree = "<group>"; };
-		B1555E4249E75628A4999156 /* moc_itemstoragetableview.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_itemstoragetableview.cpp; sourceTree = "<group>"; };
-		B2165E7FCC7C8894A4BB5866 /* kexpandablegroupbox.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = kexpandablegroupbox.cpp; sourceTree = "<group>"; };
+		9DF8BB12FF11D5408ADC7086 /* helpers.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = helpers.cpp; sourceTree = SOURCE_ROOT; };
+		ACCDE4FF167E74020084316A /* MedianXLOfflineTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedianXLOfflineTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B05EAF9C7AB2B9E4B8CF867E /* medianxlofflinetools_mac.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = medianxlofflinetools_mac.mm; sourceTree = SOURCE_ROOT; };
+		B06652142F8E356218335B39 /* qrc_medianxlofflinetools.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = qrc_medianxlofflinetools.cpp; sourceTree = SOURCE_ROOT; };
+		B1555E4249E75628A4999156 /* moc_itemstoragetableview.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_itemstoragetableview.cpp; sourceTree = SOURCE_ROOT; };
+		B2165E7FCC7C8894A4BB5866 /* kexpandablegroupbox.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = kexpandablegroupbox.cpp; sourceTree = SOURCE_ROOT; };
 		B6B9970B86A6C219B0869FE9 /* QtNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtNetwork.framework; path = /Library/Frameworks/QtNetwork.framework; sourceTree = "<absolute>"; };
-		B9D8BD7BA460F99AD062AF08 /* moc_finditemsdialog.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_finditemsdialog.cpp; sourceTree = "<group>"; };
-		BB20DF6820BBB267DDBC9FB2 /* plugyitemssplitter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = plugyitemssplitter.h; sourceTree = "<group>"; };
-		BB2819382ED1400D8D730443 /* qd2charrenamer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = qd2charrenamer.cpp; sourceTree = "<group>"; };
-		BB35BC6199B5362D4DDC4E81 /* itemsviewerdialog.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = itemsviewerdialog.cpp; sourceTree = "<group>"; };
-		BC42B1EFA42154B0BC04CA57 /* experienceindicatorgroupbox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = experienceindicatorgroupbox.h; sourceTree = "<group>"; };
-		BF48C9175F90E3561DC1EA03 /* gearitemssplitter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = gearitemssplitter.cpp; sourceTree = "<group>"; };
-		C06D1ED2CAED84DCC3F4E76A /* application.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = application.cpp; sourceTree = "<group>"; };
-		C1A9E060AAA12B497C8F3B91 /* resurrectpenaltydialog.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = resurrectpenaltydialog.cpp; sourceTree = "<group>"; };
-		C220A3797A2B91EEFE70F7C0 /* itemspropertiessplitter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = itemspropertiessplitter.h; sourceTree = "<group>"; };
-		C31FB3F0D28516FC4CCC9C75 /* plugyitemssplitter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = plugyitemssplitter.cpp; sourceTree = "<group>"; };
-		C4EE8274D905B75D4D6320C0 /* finditemsdialog.ui */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = finditemsdialog.ui; sourceTree = "<group>"; };
-		D1014A9B1A9E020E8BD0EEA1 /* resurrectpenaltydialog.ui */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = resurrectpenaltydialog.ui; sourceTree = "<group>"; };
-		D52E77CA3F6809AD244D05A3 /* machelpers.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = machelpers.mm; sourceTree = "<group>"; };
-		D62C549A94EF5B37F477C302 /* qtlockedfile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = qtlockedfile.h; path = qtsingleapplication/qtlockedfile.h; sourceTree = "<group>"; };
-		D686E3B3B9F0B6277F808527 /* characterinfo.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = characterinfo.hpp; sourceTree = "<group>"; };
-		DA5503B917227CED52256B8D /* medianxlofflinetools.qrc */ = {isa = PBXFileReference; lastKnownFileType = text; name = medianxlofflinetools.qrc; path = resources/medianxlofflinetools.qrc; sourceTree = "<group>"; };
-		DDCD2B3240AC93BDC1AC2748 /* moc_itemsviewerdialog.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_itemsviewerdialog.cpp; sourceTree = "<group>"; };
-		DE0867D5A1B5D662E894D77C /* helpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = helpers.h; sourceTree = "<group>"; };
-		E0E5871E5CE7B948B7D33DC5 /* ui_finditemsdialog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ui_finditemsdialog.h; sourceTree = "<group>"; };
-		E189C1DC3E06BF6A9D76A6A1 /* qtsingleapplication.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = qtsingleapplication.h; path = qtsingleapplication/qtsingleapplication.h; sourceTree = "<group>"; };
-		E34D230637628A8CD6C3EA30 /* enums.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = enums.cpp; sourceTree = "<group>"; };
-		E3E9AFF10597B81B5BD6D401 /* medianxlofflinetools.ui */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = medianxlofflinetools.ui; sourceTree = "<group>"; };
-		E48142269E1CC2CF9FD343F2 /* findresultswidget.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = findresultswidget.h; sourceTree = "<group>"; };
-		E7AF51C8A9AB40F1B427BD6F /* qtlocalpeer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = qtlocalpeer.h; path = qtsingleapplication/qtlocalpeer.h; sourceTree = "<group>"; };
-		EABC55D3078843605EC937FD /* reversebitwriter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = reversebitwriter.cpp; sourceTree = "<group>"; };
-		EF822A4C15EE49A935268D73 /* resources/mac/locversion.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = resources/mac/locversion.plist; sourceTree = "<group>"; };
-		EFE68327DD1039397A061F7E /* languagemanager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = languagemanager.hpp; sourceTree = "<group>"; };
-		F118FB0BC619473AC333F7A5 /* moc_findresultswidget.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_findresultswidget.cpp; sourceTree = "<group>"; };
-		F4408DF4D4324033BBD4B664 /* skillplandialog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = skillplandialog.h; sourceTree = "<group>"; };
-		F9A2EB36E68097CB257129B9 /* disenchantpreviewdialog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = disenchantpreviewdialog.h; sourceTree = "<group>"; };
-		FFE7684627752FF67C3CD35D /* itemdatabase.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = itemdatabase.cpp; sourceTree = "<group>"; };
+		B9D8BD7BA460F99AD062AF08 /* moc_finditemsdialog.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_finditemsdialog.cpp; sourceTree = SOURCE_ROOT; };
+		BB20DF6820BBB267DDBC9FB2 /* plugyitemssplitter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = plugyitemssplitter.h; sourceTree = SOURCE_ROOT; };
+		BB2819382ED1400D8D730443 /* qd2charrenamer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = qd2charrenamer.cpp; sourceTree = SOURCE_ROOT; };
+		BB35BC6199B5362D4DDC4E81 /* itemsviewerdialog.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = itemsviewerdialog.cpp; sourceTree = SOURCE_ROOT; };
+		BC42B1EFA42154B0BC04CA57 /* experienceindicatorgroupbox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = experienceindicatorgroupbox.h; sourceTree = SOURCE_ROOT; };
+		BF48C9175F90E3561DC1EA03 /* gearitemssplitter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = gearitemssplitter.cpp; sourceTree = SOURCE_ROOT; };
+		C06D1ED2CAED84DCC3F4E76A /* application.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = application.cpp; sourceTree = SOURCE_ROOT; };
+		C0C9DF2C5893BD294BCDB1CA /* disenchantpreviewmodel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = disenchantpreviewmodel.h; sourceTree = SOURCE_ROOT; };
+		C1A9E060AAA12B497C8F3B91 /* resurrectpenaltydialog.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = resurrectpenaltydialog.cpp; sourceTree = SOURCE_ROOT; };
+		C220A3797A2B91EEFE70F7C0 /* itemspropertiessplitter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = itemspropertiessplitter.h; sourceTree = SOURCE_ROOT; };
+		C31FB3F0D28516FC4CCC9C75 /* plugyitemssplitter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = plugyitemssplitter.cpp; sourceTree = SOURCE_ROOT; };
+		C4EE8274D905B75D4D6320C0 /* finditemsdialog.ui */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = finditemsdialog.ui; sourceTree = SOURCE_ROOT; };
+		D1014A9B1A9E020E8BD0EEA1 /* resurrectpenaltydialog.ui */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = resurrectpenaltydialog.ui; sourceTree = SOURCE_ROOT; };
+		D52E77CA3F6809AD244D05A3 /* machelpers.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = machelpers.mm; sourceTree = SOURCE_ROOT; };
+		D62C549A94EF5B37F477C302 /* qtlockedfile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = qtlockedfile.h; path = qtsingleapplication/qtlockedfile.h; sourceTree = SOURCE_ROOT; };
+		D686E3B3B9F0B6277F808527 /* characterinfo.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = characterinfo.hpp; sourceTree = SOURCE_ROOT; };
+		DA5503B917227CED52256B8D /* medianxlofflinetools.qrc */ = {isa = PBXFileReference; lastKnownFileType = text; name = medianxlofflinetools.qrc; path = resources/medianxlofflinetools.qrc; sourceTree = SOURCE_ROOT; };
+		DDCD2B3240AC93BDC1AC2748 /* moc_itemsviewerdialog.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_itemsviewerdialog.cpp; sourceTree = SOURCE_ROOT; };
+		DE0867D5A1B5D662E894D77C /* helpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = helpers.h; sourceTree = SOURCE_ROOT; };
+		E0E5871E5CE7B948B7D33DC5 /* ui_finditemsdialog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ui_finditemsdialog.h; sourceTree = SOURCE_ROOT; };
+		E189C1DC3E06BF6A9D76A6A1 /* qtsingleapplication.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = qtsingleapplication.h; path = qtsingleapplication/qtsingleapplication.h; sourceTree = SOURCE_ROOT; };
+		E1D0C50C10FED3C4FEC68D55 /* checkboxsortfilterproxymodel.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = checkboxsortfilterproxymodel.hpp; sourceTree = SOURCE_ROOT; };
+		E34D230637628A8CD6C3EA30 /* enums.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = enums.cpp; sourceTree = SOURCE_ROOT; };
+		E3E9AFF10597B81B5BD6D401 /* medianxlofflinetools.ui */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = medianxlofflinetools.ui; sourceTree = SOURCE_ROOT; };
+		E48142269E1CC2CF9FD343F2 /* findresultswidget.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = findresultswidget.h; sourceTree = SOURCE_ROOT; };
+		E7AF51C8A9AB40F1B427BD6F /* qtlocalpeer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = qtlocalpeer.h; path = qtsingleapplication/qtlocalpeer.h; sourceTree = SOURCE_ROOT; };
+		EABC55D3078843605EC937FD /* reversebitwriter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = reversebitwriter.cpp; sourceTree = SOURCE_ROOT; };
+		EF822A4C15EE49A935268D73 /* resources/mac/locversion.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = resources/mac/locversion.plist; sourceTree = "<unknown>"; };
+		EFE68327DD1039397A061F7E /* languagemanager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = languagemanager.hpp; sourceTree = SOURCE_ROOT; };
+		F118FB0BC619473AC333F7A5 /* moc_findresultswidget.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_findresultswidget.cpp; sourceTree = SOURCE_ROOT; };
+		F4408DF4D4324033BBD4B664 /* skillplandialog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = skillplandialog.h; sourceTree = SOURCE_ROOT; };
+		F9A2EB36E68097CB257129B9 /* disenchantpreviewdialog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = disenchantpreviewdialog.h; sourceTree = SOURCE_ROOT; };
+		FFE7684627752FF67C3CD35D /* itemdatabase.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = itemdatabase.cpp; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,10 +237,10 @@
 				EEC299C65D5017EB9DD513B0 /* Sources [UIC] */,
 				ED1E82605DD74B483AF3C982 /* External Frameworks and Libraries */,
 				C90923F6A2E654060C34742C /* Source [bundle data] */,
-				AC208D7B15EED048004BE5FA /* Products */,
+				ACCDE500167E74020084316A /* Products */,
 			);
 			name = MedianXLOfflineTools;
-			sourceTree = "<group>";
+			sourceTree = "<Group>";
 		};
 		16A82DA2701971900CCC9274 /* resources */ = {
 			isa = PBXGroup;
@@ -244,7 +248,7 @@
 				DA5503B917227CED52256B8D /* medianxlofflinetools.qrc */,
 			);
 			name = resources;
-			sourceTree = "<group>";
+			sourceTree = "<Group>";
 		};
 		3D7BD5E49998522E444FC917 /* qtsingleapplication */ = {
 			isa = PBXGroup;
@@ -254,7 +258,7 @@
 				E7AF51C8A9AB40F1B427BD6F /* qtlocalpeer.h */,
 			);
 			name = qtsingleapplication;
-			sourceTree = "<group>";
+			sourceTree = "<Group>";
 		};
 		3E4431212F852BE94A75A1A8 /* Sources [Compile] */ = {
 			isa = PBXGroup;
@@ -266,7 +270,7 @@
 				80E24EE4AED2D78A1531C239 /* fileassociationmanager_mac.mm */,
 			);
 			name = "Sources [Compile]";
-			sourceTree = "<group>";
+			sourceTree = "<Group>";
 		};
 		46E892BBB6BB6952967E0561 /* Temporary Sources */ = {
 			isa = PBXGroup;
@@ -292,6 +296,8 @@
 				758F9D37EF8C9E86F2626D40 /* moc_kexpandablegroupbox.cpp */,
 				28C305BBFC0A7B8D616F872E /* moc_showselecteditemdelegate.cpp */,
 				4BA9AC9B59C29CEF3E78F18D /* moc_disenchantpreviewdialog.cpp */,
+				565A26302A3B37D98CE1B88A /* moc_progressbarmodal.cpp */,
+				0FC284F8CFD8345E41E45F83 /* moc_itemnamestreewidget.cpp */,
 				B06652142F8E356218335B39 /* qrc_medianxlofflinetools.cpp */,
 				57EC01D096611301042E626B /* ui_medianxlofflinetools.h */,
 				051D1AB88DDA0AB7FFA6D407 /* ui_resurrectpenaltydialog.h */,
@@ -301,7 +307,7 @@
 				59D7D03F3F76416088F83910 /* ui_skillplandialog.h */,
 			);
 			name = "Temporary Sources";
-			sourceTree = "<group>";
+			sourceTree = "<Group>";
 		};
 		52C235EBF1C9B07808119459 /* Sources [RCC] */ = {
 			isa = PBXGroup;
@@ -309,7 +315,7 @@
 				16A82DA2701971900CCC9274 /* resources */,
 			);
 			name = "Sources [RCC]";
-			sourceTree = "<group>";
+			sourceTree = "<Group>";
 		};
 		7CABE3C80E79AD2B307756D2 /* Sources [qmake] */ = {
 			isa = PBXGroup;
@@ -317,7 +323,7 @@
 				99909FF0E3532A0626D2CCDD /* MedianXLOfflineTools.pro */,
 			);
 			name = "Sources [qmake]";
-			sourceTree = "<group>";
+			sourceTree = "<Group>";
 		};
 		883D7615C4D2DE3FA1218F12 /* Headers */ = {
 			isa = PBXGroup;
@@ -355,11 +361,13 @@
 				634F5DF5EB2A403A204DDF3A /* kexpandablegroupbox.h */,
 				49E8EB7DCE7DB4B1C0D953C7 /* showselecteditemdelegate.h */,
 				F9A2EB36E68097CB257129B9 /* disenchantpreviewdialog.h */,
-				6A445E2B7D179B590C006802 /* itemnamestreewidget.hpp */,
 				6C7D1B14178DC02227AFCC61 /* progressbarmodal.hpp */,
+				6A445E2B7D179B590C006802 /* itemnamestreewidget.hpp */,
+				C0C9DF2C5893BD294BCDB1CA /* disenchantpreviewmodel.h */,
+				E1D0C50C10FED3C4FEC68D55 /* checkboxsortfilterproxymodel.hpp */,
 			);
 			name = Headers;
-			sourceTree = "<group>";
+			sourceTree = "<Group>";
 		};
 		9B7ED392A56F53FF8FAAE397 /* mac */ = {
 			isa = PBXGroup;
@@ -367,12 +375,12 @@
 				57FE2B1EE658C9D723157766 /* icon.icns */,
 			);
 			name = mac;
-			sourceTree = "<group>";
+			sourceTree = "<Group>";
 		};
-		AC208D7B15EED048004BE5FA /* Products */ = {
+		ACCDE500167E74020084316A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AC208D7A15EED048004BE5FA /* MedianXLOfflineTools.app */,
+				ACCDE4FF167E74020084316A /* MedianXLOfflineTools.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -383,16 +391,15 @@
 				9B7ED392A56F53FF8FAAE397 /* mac */,
 			);
 			name = resources;
-			sourceTree = "<group>";
+			sourceTree = "<Group>";
 		};
 		C90923F6A2E654060C34742C /* Source [bundle data] */ = {
 			isa = PBXGroup;
 			children = (
-				AC208D7E15EED104004BE5FA /* Info.plist */,
 				EF822A4C15EE49A935268D73 /* resources/mac/locversion.plist */,
 			);
 			name = "Source [bundle data]";
-			sourceTree = "<group>";
+			sourceTree = "<Group>";
 		};
 		ED1E82605DD74B483AF3C982 /* External Frameworks and Libraries */ = {
 			isa = PBXGroup;
@@ -404,7 +411,7 @@
 				B6B9970B86A6C219B0869FE9 /* QtNetwork.framework */,
 			);
 			name = "External Frameworks and Libraries";
-			sourceTree = "<group>";
+			sourceTree = "<Group>";
 		};
 		EEC299C65D5017EB9DD513B0 /* Sources [UIC] */ = {
 			isa = PBXGroup;
@@ -417,7 +424,7 @@
 				41B5802369A95F860933A1AF /* skillplandialog.ui */,
 			);
 			name = "Sources [UIC]";
-			sourceTree = "<group>";
+			sourceTree = "<Group>";
 		};
 		FB61758D0F0FDA4BA867C3D5 /* Sources */ = {
 			isa = PBXGroup;
@@ -449,10 +456,11 @@
 				B2165E7FCC7C8894A4BB5866 /* kexpandablegroupbox.cpp */,
 				01469DADF73546458529A66D /* showselecteditemdelegate.cpp */,
 				743F6636E5BB911A9D9ECE27 /* disenchantpreviewdialog.cpp */,
+				107D29CC0CECCE30CDDA1156 /* disenchantpreviewmodel.cpp */,
 				B06B937E4E5DB1B571475081 /* resources */,
 			);
 			name = Sources;
-			sourceTree = "<group>";
+			sourceTree = "<Group>";
 		};
 		FFE3DE6C109FE9D692516288 /* qtsingleapplication */ = {
 			isa = PBXGroup;
@@ -461,7 +469,7 @@
 				2F004A54FA510C70CF3BC9FC /* qtlocalpeer.cpp */,
 			);
 			name = qtsingleapplication;
-			sourceTree = "<group>";
+			sourceTree = "<Group>";
 		};
 /* End PBXGroup section */
 
@@ -483,7 +491,7 @@
 			);
 			name = MedianXLOfflineTools;
 			productName = MedianXLOfflineTools;
-			productReference = AC208D7A15EED048004BE5FA /* MedianXLOfflineTools.app */;
+			productReference = ACCDE4FF167E74020084316A /* MedianXLOfflineTools.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -499,7 +507,7 @@
 				en,
 			);
 			mainGroup = 05596AB53D8D521C69802C27 /* MedianXLOfflineTools */;
-			productRefGroup = AC208D7B15EED048004BE5FA /* Products */;
+			productRefGroup = ACCDE500167E74020084316A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -514,7 +522,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				895786EDC000434EFCF2C3A4 /* icon.icns in Bundle Resources */,
-				AC208D7F15EED104004BE5FA /* Info.plist in Bundle Resources */,
 			);
 			name = "Bundle Resources";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -577,6 +584,7 @@
 				27F0846AB4DC5F5A56BD97B8 /* kexpandablegroupbox.cpp in Build Sources */,
 				E0B75008A5B80BB7A901073E /* showselecteditemdelegate.cpp in Build Sources */,
 				6C0A46C0CCF6EFD2F169971D /* disenchantpreviewdialog.cpp in Build Sources */,
+				39A54B31C893780908144155 /* disenchantpreviewmodel.cpp in Build Sources */,
 				DF06D3F49E4DB3ED883545FB /* moc_medianxlofflinetools.cpp in Build Sources */,
 				FB9DFA9EEC4BEBD9F0D80E8F /* moc_resurrectpenaltydialog.cpp in Build Sources */,
 				C351D9D7A092461B00233A33 /* moc_qd2charrenamer.cpp in Build Sources */,
@@ -598,6 +606,8 @@
 				D4ED60B3EBCD72692A3CF40B /* moc_kexpandablegroupbox.cpp in Build Sources */,
 				42EB7E5EFE91DD7C2FD6153C /* moc_showselecteditemdelegate.cpp in Build Sources */,
 				D7C8E3B7909FC2820EE0A1F4 /* moc_disenchantpreviewdialog.cpp in Build Sources */,
+				6172ABB297CB2D6FB8DFA828 /* moc_progressbarmodal.cpp in Build Sources */,
+				746B922666D58ADEA88214BC /* moc_itemnamestreewidget.cpp in Build Sources */,
 				F2FDBFD0C58EBEDFE231A6DF /* qrc_medianxlofflinetools.cpp in Build Sources */,
 				04DE3337E2AE172B5D36AFF7 /* application_mac.mm in Build Sources */,
 				FE066A107C45F32B71C066E8 /* messagecheckbox_mac_p.mm in Build Sources */,
@@ -674,25 +684,23 @@
 		8C7174830A1E4DCBA0332EC1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				MACOSX_DEPLOYMENT_TARGET = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				PRODUCT_NAME = MedianXLOfflineTools;
-				SDKROOT = macosx;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk;
 			};
 			name = Release;
 		};
 		BEC09A62E69C3553534FF35E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				MACOSX_DEPLOYMENT_TARGET = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				PRODUCT_NAME = MedianXLOfflineTools;
-				SDKROOT = macosx;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk;
 			};
 			name = Debug;
 		};
