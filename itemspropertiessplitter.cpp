@@ -393,10 +393,8 @@ void ItemsPropertiesSplitter::deleteItem(ItemInfo *item)
     emit itemCountChanged(_allItems.size());
     emit itemDeleted();
 
-    // a hack to make stash modified
-    ItemInfo *someItem = _allItems.first();
-    if (someItem)
-        someItem->hasChanged = true;
+    if (!_allItems.isEmpty())
+        _allItems.first()->hasChanged = true; // a hack to make stash modified
 }
 
 void ItemsPropertiesSplitter::performDeleteItem(ItemInfo *item, bool emitSignal /*= true*/)

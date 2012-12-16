@@ -593,7 +593,8 @@ void MedianXLOfflineTools::saveCharacter()
     for (QHash<Enums::ItemStorage::ItemStorageEnum, PlugyStashInfo>::iterator iter = _plugyStashesHash.begin(); iter != _plugyStashesHash.end(); ++iter)
     {
         const ItemsList &items = plugyItemsHash[iter.key()];
-        if (std::find_if(items.constBegin(), items.constEnd(), hasChanged) == items.constEnd())
+        // if stash is empty, it must be re-saved anyway
+        if (!items.isEmpty() && std::find_if(items.constBegin(), items.constEnd(), hasChanged) == items.constEnd())
             continue;
 
         PlugyStashInfo &info = iter.value();
@@ -1578,6 +1579,7 @@ void MedianXLOfflineTools::connectSignals()
     foreach (QSpinBox *spinBox, _spinBoxesStatsMap)
         connect(spinBox, SIGNAL(valueChanged(int)), SLOT(statChanged(int)));
 
+    // main window
     connect(ui->respecStatsButton, SIGNAL(clicked()), SLOT(respecStats()));
     connect(ui->renameButton, SIGNAL(clicked()), SLOT(rename()));
     connect(ui->resurrectButton, SIGNAL(clicked()), SLOT(resurrect()));
@@ -1586,7 +1588,8 @@ void MedianXLOfflineTools::connectSignals()
     //connect(ui->currentDifficultyComboBox, SIGNAL(currentIndexChanged(int)), SLOT(currentDifficultyChanged(int)));
     connect(ui->activateWaypointsCheckBox, SIGNAL(toggled(bool)), SLOT(modify()));
 
-    connect(_fsWatcher, SIGNAL(fileChanged(const QString &)), SLOT(fileContentsChanged(const QString &)));
+    // misc
+    connect(_fsWatcher, SIGNAL(fileChanged(const QString &)), SLOT(fileContentsChanged()));
 }
 
 void MedianXLOfflineTools::updateRecentFilesActions()
@@ -2768,7 +2771,7 @@ void MedianXLOfflineTools::checkForUpdateFromUrl(const QUrl &url)
 {
     _qnam = new QNetworkAccessManager;
     connect(_qnam, SIGNAL(finished(QNetworkReply *)), SLOT(networkReplyFinished(QNetworkReply *)));
-    qApp->processEvents(); // prevents from freezing UI
+    qApp->processEvents(); // prevents UI from freezing
     _qnam->get(QNetworkRequest(url));
 }
 
@@ -2798,11 +2801,12 @@ void MedianXLOfflineTools::networkReplyFinished(QNetworkReply *reply)
     }
 }
 
-void MedianXLOfflineTools::fileContentsChanged(const QString &path)
+void MedianXLOfflineTools::fileContentsChanged()
 {
     if (_isFileChangedMessageBoxRunning)
         return;
 
+    // more than 1 file can change at once (.d2s, .d2x, .sss), but the question box must be shown only after the last change is signaled
     if (!_fileChangeTimer)
     {
         _fileChangeTimer = new QTimer;
@@ -2814,9 +2818,17 @@ void MedianXLOfflineTools::fileContentsChanged(const QString &path)
 
 void MedianXLOfflineTools::fileChangeTimerFired()
 {
+    qApp->alert(this, 3000);
+
     _isFileChangedMessageBoxRunning = true;
     if (QUESTION_BOX_YESNO(tr("The character and/or PlugY stashes have been modified externally.\nDo you want to reload them?"), QMessageBox::Yes) == QMessageBox::Yes)
+    {
+        // shared stashes must be reloaded regardless of the setting
+        bool oldStashReloadValue = ui->actionReloadSharedStashes->isChecked();
+        ui->actionReloadSharedStashes->setChecked(true);
         reloadCharacter();
+        ui->actionReloadSharedStashes->setChecked(oldStashReloadValue);
+    }
     _isFileChangedMessageBoxRunning = false;
 
     delete _fileChangeTimer; _fileChangeTimer = 0;

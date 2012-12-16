@@ -58,7 +58,7 @@ private slots:
     void modify() { setModified(true); }
     void eatSignetsOfLearning(int signetsEaten);
     void networkReplyFinished(QNetworkReply *reply);
-    void fileContentsChanged(const QString &path);
+    void fileContentsChanged();
     void fileChangeTimerFired();
 
 #ifdef Q_OS_MAC
