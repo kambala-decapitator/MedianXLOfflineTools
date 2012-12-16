@@ -34,7 +34,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>@SHORT_VERSION@</string>
+	<string>0.3.1</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
@@ -43,7 +43,5 @@
 	<false/>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © kambala 2011-2012</string>
-	<key>test</key>
-	<string>@TYPEINFO@</string>
 </dict>
 </plist>
