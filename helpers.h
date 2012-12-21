@@ -1,6 +1,8 @@
 #ifndef HELPERS_H
 #define HELPERS_H
 
+#define IS_QT5 (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
+
 // message boxes
 #include <QMessageBox>
 #define CUSTOM_BOX(type, message, buttons, defaultButton) QMessageBox::type(this, qApp->applicationName(), message, buttons, defaultButton)

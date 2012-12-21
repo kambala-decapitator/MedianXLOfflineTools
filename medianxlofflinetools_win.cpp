@@ -18,7 +18,7 @@ typedef HRESULT (__stdcall *PSHCIFPN)(PCWSTR, IBindCtx *, const IID &, void **);
 PCWSTR MedianXLOfflineTools::appUserModelID()
 {
     static const QString progId = FileAssociationManager::progIdForExtension(kCharacterExtensionWithDot);
-    return progId.utf16();
+    return WINAPI_STRING_FROM_QSTRING(progId);
 }
 
 void MedianXLOfflineTools::setAppUserModelID()
@@ -36,7 +36,7 @@ void MedianXLOfflineTools::showFileAssocaitionUI()
     HRESULT hr = CoCreateInstance(CLSID_ApplicationAssociationRegistrationUI, NULL, CLSCTX_INPROC, IID_PPV_ARGS(&pAARUI));
     if (SUCCEEDED(hr))
     {
-        if (FAILED(hr = pAARUI->LaunchAdvancedAssociationUI(qApp->applicationName().utf16())))
+        if (FAILED(hr = pAARUI->LaunchAdvancedAssociationUI(WINAPI_STRING_FROM_QSTRING(qApp->applicationName()))))
             ERROR_BOX(QString("Error calling LaunchAdvancedAssociationUI: %1").arg(HRESULT_CODE(hr)));
         pAARUI->Release();
     }
@@ -67,7 +67,7 @@ void MedianXLOfflineTools::syncWindowsTaskbarRecentFiles()
                         {
                             LPWSTR path = NULL;
                             if (SUCCEEDED(hr = pShellItem->GetDisplayName(SIGDN_FILESYSPATH, &path)))
-                                recentFilesForTaskbar.removeOne(QString::fromUtf16(path));
+                                recentFilesForTaskbar.removeOne(QString::fromUtf16(reinterpret_cast<const ushort *>(path)));
 
                             ::CoTaskMemFree(path);
                         }
@@ -107,7 +107,7 @@ void MedianXLOfflineTools::removeFromWindowsRecentFiles(const QString &filePath)
                             LPWSTR path = NULL;
                             if (SUCCEEDED(hr = pShellItem->GetDisplayName(SIGDN_FILESYSPATH, &path)))
                             {
-                                if (!wcscmp(path, QDir::toNativeSeparators(filePath).utf16()))
+                                if (!wcscmp(path, WINAPI_STRING_FROM_QSTRING(QDir::toNativeSeparators(filePath))))
                                 {
                                     IApplicationDestinations *pAD;
                                     if (SUCCEEDED(hr = CoCreateInstance(CLSID_ApplicationDestinations, NULL, CLSCTX_INPROC, IID_PPV_ARGS(&pAD))))
@@ -142,7 +142,7 @@ void MedianXLOfflineTools::addToWindowsRecentFiles(const QString &filePath)
     if (pSHCreateItemFromParsingName)
     {
         IShellItem *pShellItem;
-        if (SUCCEEDED(pSHCreateItemFromParsingName(nativeFilePath.utf16(), NULL, IID_PPV_ARGS(&pShellItem))))
+        if (SUCCEEDED(pSHCreateItemFromParsingName(WINAPI_STRING_FROM_QSTRING(nativeFilePath), NULL, IID_PPV_ARGS(&pShellItem))))
         {
             SHARDAPPIDINFO info;
             info.psi = pShellItem;

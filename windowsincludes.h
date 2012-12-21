@@ -14,4 +14,9 @@
 #  endif // 7
 #endif // Vista
 
+#define WINAPI_STRING_FROM_QSTRING(s) reinterpret_cast<LPCWSTR>(s.utf16())
+
+//class QString;
+//LPCWSTR winApiStringFromQString(const QString &s);
+
 #endif // WINDOWSINCLUDES_H

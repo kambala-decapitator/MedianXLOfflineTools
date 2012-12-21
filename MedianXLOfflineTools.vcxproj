@@ -71,6 +71,7 @@
       <AdditionalLibraryDirectories>$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -390,6 +391,7 @@
     <ClCompile Include="reversebitwriter.cpp" />
     <ClCompile Include="showselecteditemdelegate.cpp" />
     <ClCompile Include="skillplandialog.cpp" />
+    <ClCompile Include="windowsincludes.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="messagecheckbox.h">

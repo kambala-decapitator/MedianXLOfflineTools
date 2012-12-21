@@ -19,7 +19,7 @@
 #ifndef KEXPANDABLEGROUPBOX_H
 #define KEXPANDABLEGROUPBOX_H
 
-#include <QtGui/QWidget>
+#include <QWidget>
 
 /**
     * @short An expandable container with a QComboBox-style API.

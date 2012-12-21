@@ -24,6 +24,7 @@
 #include <QGridLayout>
 #include <QFileDialog>
 #include <QLabel>
+#include <QMimeData>
 
 #include <QSettings>
 #include <QFile>
@@ -68,7 +69,7 @@ const int MedianXLOfflineTools::kMaxRecentFiles = 10;
 
 // ctor
 
-MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *parent, Qt::WFlags flags) : QMainWindow(parent, flags), ui(new Ui::MedianXLOfflineToolsClass), _findItemsDialog(0),
+MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *parent, Qt::WindowFlags flags) : QMainWindow(parent, flags), ui(new Ui::MedianXLOfflineToolsClass), _findItemsDialog(0),
     _backupLimitsGroup(new QActionGroup(this)), _showDisenchantPreviewGroup(new QActionGroup(this)), hackerDetected(tr("1337 hacker detected! Please, play legit.")), //difficulties(QStringList() << tr("Hatred") << tr("Terror") << tr("Destruction")),
     maxValueFormat(tr("Max: %1")), minValueFormat(tr("Min: %1")), investedValueFormat(tr("Invested: %1")),
     kForumThreadHtmlLinks(tr("<a href=\"http://www.medianxl.com/t83-median-xl-offline-tools\">Official Median XL Forum thread</a><br>"
@@ -1269,7 +1270,13 @@ void MedianXLOfflineTools::createLayout()
     ////mainLayout->addWidget(ui->statsGroupBox);
 
     ui->statsTableWidget->verticalHeader()->setDefaultAlignment(Qt::AlignCenter);
-    ui->statsTableWidget->horizontalHeader()->setResizeMode(QHeaderView::Stretch);
+    ui->statsTableWidget->horizontalHeader()->
+#if IS_QT5
+            setSectionResizeMode
+#else
+            setResizeMode
+#endif
+            (QHeaderView::Stretch);
     ui->statsTableWidget->setFixedHeight(ui->statsTableWidget->height());
 
     _charPathLabel = new QLabel(this);

@@ -104,7 +104,7 @@ bool FileAssociationManager::isApplicationDefaultForExtension(const QString &ext
         if (SUCCEEDED(hr))
         {
             BOOL isDefaultBOOL;
-            hr = pAAR->QueryAppIsDefault(extensionWithDot.utf16(), AT_FILEEXTENSION, AL_EFFECTIVE, qApp->applicationName().utf16(), &isDefaultBOOL);
+            hr = pAAR->QueryAppIsDefault(WINAPI_STRING_FROM_QSTRING(extensionWithDot), AT_FILEEXTENSION, AL_EFFECTIVE, WINAPI_STRING_FROM_QSTRING(qApp->applicationName()), &isDefaultBOOL);
             if (HRESULT_CODE(hr) == ERROR_FILE_NOT_FOUND)
             {
                 qDebug("app is not in the registry");
@@ -140,7 +140,7 @@ void FileAssociationManager::makeApplicationDefaultForExtension(const QString &e
         HRESULT hr = CoCreateInstance(CLSID_ApplicationAssociationRegistration, NULL, CLSCTX_INPROC, IID_PPV_ARGS(&pAAR));
         if ((hasAssociationChanged = SUCCEEDED(hr)))
         {
-            hr = pAAR->SetAppAsDefault(qApp->applicationName().utf16(), extensionWithDot.utf16(), AT_FILEEXTENSION);
+            hr = pAAR->SetAppAsDefault(WINAPI_STRING_FROM_QSTRING(qApp->applicationName()), WINAPI_STRING_FROM_QSTRING(extensionWithDot), AT_FILEEXTENSION);
             if ((hasAssociationChanged = SUCCEEDED(hr)))
                 qDebug("app is default now");
             else

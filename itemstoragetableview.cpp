@@ -6,6 +6,10 @@
 #include <QHeaderView>
 #include <QKeyEvent>
 
+#if IS_QT5
+#include <QDrag>
+#endif
+
 #include <QTimer>
 
 #ifndef QT_NO_DEBUG

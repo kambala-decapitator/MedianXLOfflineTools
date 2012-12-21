@@ -19,15 +19,15 @@
 
 #include "kexpandablegroupbox.h"
 
-#include <QtGui/QPainter>
-#include <QtGui/QMouseEvent>
-#include <QtGui/QStyle>
-#include <QtGui/QStyleOption>
-#include <QtGui/QGridLayout>
-#include <QtGui/QVBoxLayout>
-#include <QtGui/QLabel>
-#include <QtGui/QAbstractButton>
-#include <QtCore/QTimeLine>
+#include <QPainter>
+#include <QMouseEvent>
+#include <QStyle>
+#include <QStyleOption>
+#include <QGridLayout>
+#include <QVBoxLayout>
+#include <QLabel>
+#include <QAbstractButton>
+#include <QTimeLine>
 
 /******************************************************************
  * Helper classes

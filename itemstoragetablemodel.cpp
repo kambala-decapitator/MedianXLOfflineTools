@@ -27,7 +27,7 @@ void ItemStorageTableModel::setItems(const ItemsList &newItems)
 QVariant ItemStorageTableModel::data(const QModelIndex &index, int role) const
 {
     if (role == Qt::BackgroundRole) // not in switch because it doesn't depend on item
-        return Qt::black;
+        return QColor(Qt::black);
 
     if (role == Qt::DecorationRole && _highlightIndexes.contains(index))
     {
@@ -103,7 +103,7 @@ QVariant ItemStorageTableModel::data(const QModelIndex &index, int role) const
             case Qt::ToolTipRole:
                 return ItemDataBase::completeItemName(item, false);
             case Qt::ForegroundRole:
-                return Qt::white;
+                return QColor(Qt::white);
             }
         }
     }

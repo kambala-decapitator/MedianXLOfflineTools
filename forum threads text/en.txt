@@ -16,7 +16,7 @@ I hope I provided enough anti-hack protection for an average user. If you manage
 [*]HC -> SC
 [*]resurrect HC character (with penalties ofc)
 [*]change mercenary name
-[*][url=http://modsbylaz.14.forumer.com/viewtopic.php?t=22756]Median Hardened[/url] support
+[*]Median Hardened support
 [*]view items on character/mercenary/corpse, in belt, inventory, Cube, stash and PlugY stashes
 [*]in-game-like PlugY navigation (but you can also enter number of desired page directly)
 [*]shared gold display (in status tip for stash gold, displayed if > 0)
@@ -36,8 +36,8 @@ I hope I provided enough anti-hack protection for an average user. If you manage
 [*]save prompt
 [*]display properties of unidentified items
 [*]display location of corrupted items
-[*][url=http://modsbylaz.14.forumer.com/viewtopic.php?t=25209]Kehjan Labyrinth + Tathamet vs Anu[/url] support
-[*][url=http://modsbylaz.14.forumer.com/viewtopic.php?t=24559]Median XL Ultimative[/url] support (v4 and v5+)
+[*]Kehjan Labyrinth + Tathamet vs Anu support
+[*]Median XL Ultimative support (v4 and v5+)
 [*]display completion status of skill/stat quests
 [*]mass disenchant of uniques/sets with preview (you can select multiple items via Ctrl/Command and Shift, change their checked state via context menu or by pressing spacebar and sort/filter the table)
 [*]mass upgrade of gems/runes

@@ -4,8 +4,6 @@
 #include <QtGlobal>
 
 
-class QString;
-
 class FileAssociationManager
 {
 public:

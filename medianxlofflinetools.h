@@ -41,7 +41,7 @@ public:
     static const int kSkillsNumber, kDifficultiesNumber, kMaxRecentFiles;
     static const int kStatPointsPerLevel, kSkillPointsPerLevel;
 
-    MedianXLOfflineTools(const QString &cmdPath = QString(), QWidget *parent = 0, Qt::WFlags flags = 0);
+    MedianXLOfflineTools(const QString &cmdPath = QString(), QWidget *parent = 0, Qt::WindowFlags flags = 0);
     virtual ~MedianXLOfflineTools();
 
 public slots:

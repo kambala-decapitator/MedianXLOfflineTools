@@ -102,7 +102,8 @@ OTHER_FILES += TODO.txt
 win32 {
     SOURCES += medianxlofflinetools_win.cpp \
                qtsingleapplication/qtlockedfile_win.cpp \
-               fileassociationmanager_win.cpp
+               fileassociationmanager_win.cpp \
+               windowsincludes.cpp
 
     HEADERS += windowsincludes.h
 
