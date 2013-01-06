@@ -391,7 +391,6 @@
     <ClCompile Include="reversebitwriter.cpp" />
     <ClCompile Include="showselecteditemdelegate.cpp" />
     <ClCompile Include="skillplandialog.cpp" />
-    <ClCompile Include="windowsincludes.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="messagecheckbox.h">

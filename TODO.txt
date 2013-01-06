@@ -1,4 +1,5 @@
 v0.4:
+- http://www.prog.org.ru/index.php?topic=23808.msg168469#msg168469
 - move mass disenchant to a separate dialog and add more options
 - batch eat signets (add a button)
 - creation of plugy stashes and moving items around (finish implementing drag & drop)
