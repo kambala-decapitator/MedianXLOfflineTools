@@ -29,7 +29,7 @@ Application::Application(int &argc, char **argv) : QtSingleApplication(kAppName,
 
     setOrganizationName("kambala");
     setApplicationName(kAppName);
-    setApplicationVersion("0.3.1");
+    setApplicationVersion(NVER_STRING);
 #ifdef Q_OS_MAC
     setAttribute(Qt::AA_DontShowIconsInMenus);
 #endif

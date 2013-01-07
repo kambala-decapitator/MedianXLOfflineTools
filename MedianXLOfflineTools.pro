@@ -4,14 +4,30 @@
 #
 #-------------------------------------------------
 
+# basic config
 TARGET = MedianXLOfflineTools
 TEMPLATE = app
-VERSION = 0.3.1
 
 QT += network
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets # for Qt 5
 
+CONFIG(release, debug|release): DEFINES += QT_NO_DEBUG_OUTPUT QT_NO_WARNING_OUTPUT
 
+# app version
+NVER1 = 0
+NVER2 = 4
+NVER3 = 0
+NVER4 = 0
+
+      greaterThan(NVER4, 0): NVER_STRING_LAST = $$sprintf("%1.%2", $$NVER3, $$NVER4)
+else: greaterThan(NVER3, 0): NVER_STRING_LAST = $$sprintf("%1", $$NVER3)
+
+isEmpty(NVER_STRING_LAST): VERSION = $$sprintf("%1.%2", $$NVER1, $$NVER2)
+else                     : VERSION = $$sprintf("%1.%2.%3", $$NVER1, $$NVER2, $$NVER_STRING_LAST)
+
+DEFINES += NVER_STRING=$$sprintf("\"\\\"%1\\\"\"", $$VERSION)
+
+# files
 SOURCES += main.cpp \
            medianxlofflinetools.cpp \
            resurrectpenaltydialog.cpp \
@@ -112,6 +128,11 @@ win32 {
 
     RC_FILE = resources/win/medianxlofflinetools.rc
 
+    DEFINES += NVER1=$$NVER1 \
+               NVER2=$$NVER2 \
+               NVER3=$$NVER3 \
+               NVER4=$$NVER4
+
 #    CONFIG(release, debug|release) {
 #        appresources.path = $$DESTDIR
 #        appresources.files += resources/translations/*.qm
@@ -125,6 +146,7 @@ win32 {
 #        QMAKE_EXTRA_TARGETS += copyfiles
 #    }
 }
+
 macx {
     OBJECTIVE_SOURCES += application_mac.mm \
                          messagecheckbox_mac_p.mm \
@@ -137,10 +159,11 @@ macx {
     LIBS += -framework ApplicationServices \ # LSGetApplicationForInfo()
             -framework AppKit                # NSWindow calls to disable Lion window resoration and NSAlert
 
-    ICON = resources/mac/icon.icns
-    QMAKE_INFO_PLIST = resources/mac/Info.plist
-
+    INFO_PLIST_NAME = Info.plist
+    QMAKE_INFO_PLIST = resources/mac/$$INFO_PLIST_NAME
     OTHER_FILES += $$QMAKE_INFO_PLIST
+
+    ICON = resources/mac/icon.icns
 
     # for Xcode 4.3+
     MAC_SDK = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk
@@ -174,14 +197,9 @@ macx {
     appresources.files += resources/mac/locversion.plist
     appresources.path = Contents/Resources
     QMAKE_BUNDLE_DATA += appresources
-}
-unix {
-    SOURCES += qtsingleapplication/qtlockedfile_unix.cpp
-}
 
-!macx {
-    SOURCES += messagecheckbox_p.cpp
+    QMAKE_PRE_LINK = sed -e \'s/@APP_VERSION@/$$VERSION/\' -i \'\' $${TARGET}.app/Contents/$$INFO_PLIST_NAME
 }
+else: SOURCES += messagecheckbox_p.cpp
 
-CONFIG(release, debug|release):DEFINES += QT_NO_DEBUG_OUTPUT \
-                                          QT_NO_WARNING_OUTPUT
+unix: SOURCES += qtsingleapplication/qtlockedfile_unix.cpp
