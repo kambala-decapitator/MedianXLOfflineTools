@@ -55,8 +55,7 @@ END
 // Version
 //
 
-#define APP_VERSION      0,3,1,0
-#define APP_VERSION_STR "0.3.1.0\0"
+#define APP_VERSION NVER1,NVER2,NVER3,NVER4
 
 VS_VERSION_INFO VERSIONINFO
  FILEVERSION APP_VERSION
@@ -77,12 +76,12 @@ BEGIN
         BEGIN
             VALUE "CompanyName",      "kambala"
             VALUE "FileDescription",  "Median XL Offline Tools"
-            VALUE "FileVersion",      APP_VERSION_STR
+            VALUE "FileVersion",      NVER_STRING
             VALUE "InternalName",     "MedianXLOfflineTools"
-            VALUE "LegalCopyright",   "Copyright (C) kambala 2011-2012"
+            VALUE "LegalCopyright",   "Copyright (C) kambala 2011-2013"
             VALUE "OriginalFilename", "MedianXLOfflineTools.exe"
             VALUE "ProductName",      "Median XL Offline Tools"
-            VALUE "ProductVersion",   APP_VERSION_STR
+            VALUE "ProductVersion",   NVER_STRING
         END
     END
     BLOCK "VarFileInfo"
