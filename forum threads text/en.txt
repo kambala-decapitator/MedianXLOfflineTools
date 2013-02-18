@@ -52,7 +52,7 @@ I hope I provided enough anti-hack protection for an average user. If you manage
 [*][i][b]Mod data[/b][/i] (Windows: unpack in a folder that contains the executable; Mac OS X: unpack somewhere and move [b]the contents of 'resources/data', not the 'data' folder itself[/b], to 'MedianXLOfflineTools.app/Contents/Resources/data'. If you still don't understand what to do on Mac OS X, see bottom of the post.):[list][*][url=http://www.mediafire.com/download.php?t006u85c82wol85]Omega 003[/url]
 [*][url=http://www.mediafire.com/download.php?a5bma6lcza6u7ut]2012 005 + Kehjan Labyrinth + Tathamet vs Anu[/url] (is included with the current binary)
 [*][url=http://www.mediafire.com/download.php?y2gxeaizzud38ze]Ultimative 4[/url]
-[*][url=http://www.mediafire.com/download.php?a1q2z47qjfqai5r]Ultimative 6b[/url] (is included with the current binary; can be used for version 5 and higher)
+[*][url=http://www.mediafire.com/?va8hmmw24gvalw5]Ultimative 6d[/url] (can be used for version 5 and higher)
 [/list][/list]
 
 [b]Screenshots[/b] (click to see in full size):

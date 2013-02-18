@@ -4,7 +4,7 @@
 2	100	12	12	0,1,3	to all Attributes	to all Attributes		to Dexterity	to Dexterity		1	65	1	1	1	1		dexterity
 3	100	12	12	0,1,2	to all Attributes	to all Attributes		to Vitality	to Vitality		1	63	1	1	1	1		vitality
 4			11															statpts
-5			8															newskills
+5			9															newskills
 6			21															hitpoints
 7	150	11	21					to Life	to Life		1	59	1					maxhp
 8			21															mana
@@ -15,9 +15,9 @@
 13			32															experience
 14			25															gold
 15			25															goldbank
-16	161	9						Enhanced Defense	Enhanced Defense		4	74	1					item_armor_percent
-17	161	9						Enhanced Maximum Damage	Enhanced Maximum Damage		3	129	0					item_maxdamage_percent
-18	161	9						Enhanced Minimum Damage	Enhanced Minimum Damage		3	130	0					item_mindamage_percent
+16	673	10						Enhanced Defense	Enhanced Defense		4	74	1					item_armor_percent
+17	673	10						Enhanced Maximum Damage	Enhanced Maximum Damage		3	129	0					item_maxdamage_percent
+18	673	10						Enhanced Minimum Damage	Enhanced Minimum Damage		3	130	0					item_mindamage_percent
 19		10						to Attack Rating	to Attack Rating		1	115	1					tohit
 20	257	9						Decreased Chance of Blocking	Increased Chance of Blocking		2	134	1					toblock
 21	0	11						to Minimum Damage	to Minimum Damage		1	127	1					mindamage
@@ -34,16 +34,16 @@
 34	110	10						Damage Reduced by	Damage Reduced by		3	22	2					normal_damage_reduction
 35	30	10						Magic Damage Reduced by	Magic Damage Reduced by		3	21	2					magic_damage_reduction
 36	100	10						Damage Reduction Decreased by	Damage Reduced by		2	22	2					damageresist
-37	100	9						Magic Resist	Magic Resist		4	41	2					magicresist
-38	100	9						to Maximum Magic Resist	to Maximum Magic Resist		4	46	1					maxmagicresist
-39	100	9		41,43,45	All Resists	All Resists		Fire Resist	Fire Resist		4	36	2	2	4	2		fireresist
-40	100	9		42,44,46	to All Maximum Resistances	to All Maximum Resistances		to Maximum Fire Resist	to Maximum Fire Resist		4	42	1	7	4	1		maxfireresist
-41	100	9		39,43,45	All Resists	All Resists		Lightning Resist	Lightning Resist		4	38	2	2	4	2		lightresist
-42	100	9		40,44,46	to All Maximum Resistances	to All Maximum Resistances		to Maximum Lightning Resist	to Maximum Lightning Resist		4	43	1	7	4	1		maxlightresist
-43	100	9		39,41,45	All Resists	All Resists		Cold Resist	Cold Resist		4	40	2	2	4	2		coldresist
-44	100	9		40,42,46	to All Maximum Resistances	to All Maximum Resistances		to Maximum Cold Resist	to Maximum Cold Resist		4	44	1	7	4	1		maxcoldresist
-45	100	9		39,41,43	All Resists	All Resists		Poison Resist	Poison Resist		4	34	2	2	4	2		poisonresist
-46	100	9		40,42,44	to All Maximum Resistances	to All Maximum Resistances		to Maximum Poison Resist	to Maximum Poison Resist		4	45	1	7	4	1		maxpoisonresist
+37	100	8						Magic Resist	Magic Resist		4	41	2					magicresist
+38	100	8						to Maximum Magic Resist	to Maximum Magic Resist		4	46	1					maxmagicresist
+39	100	8		41,43,45	All Resists	All Resists		Fire Resist	Fire Resist		4	36	2	2	4	2		fireresist
+40	100	8		42,44,46	to All Maximum Resistances	to All Maximum Resistances		to Maximum Fire Resist	to Maximum Fire Resist		4	42	1	7	4	1		maxfireresist
+41	100	8		39,43,45	All Resists	All Resists		Lightning Resist	Lightning Resist		4	38	2	2	4	2		lightresist
+42	100	8		40,44,46	to All Maximum Resistances	to All Maximum Resistances		to Maximum Lightning Resist	to Maximum Lightning Resist		4	43	1	7	4	1		maxlightresist
+43	100	8		39,41,45	All Resists	All Resists		Cold Resist	Cold Resist		4	40	2	2	4	2		coldresist
+44	100	8		40,42,46	to All Maximum Resistances	to All Maximum Resistances		to Maximum Cold Resist	to Maximum Cold Resist		4	44	1	7	4	1		maxcoldresist
+45	100	8		39,41,43	All Resists	All Resists		Poison Resist	Poison Resist		4	34	2	2	4	2		poisonresist
+46	100	8		40,42,44	to All Maximum Resistances	to All Maximum Resistances		to Maximum Poison Resist	to Maximum Poison Resist		4	45	1	7	4	1		maxpoisonresist
 48	0	12						to Minimum Fire Damage	to Minimum Fire Damage		1	102	1					firemindam
 49	0	12						to Maximum Fire Damage	to Maximum Fire Damage		1	101	1					firemaxdam
 50	0	12						to Minimum Lightning Damage	to Minimum Lightning Damage		1	99	1					lightmindam
@@ -70,8 +70,8 @@
 76	100	10		77	Increase Maximum Life and Mana	Increase Maximum Life and Mana		Decrease Maximum Life	Increase Maximum Life		2	58	2	10	2	2		item_maxhp_percent
 77	100	10		76	Increase Maximum Life and Mana	Increase Maximum Life and Mana		Decrease Maximum Mana	Increase Maximum Mana		2	54	2	10	2	2		item_maxmana_percent
 78	0	10						Attacker Takes Damage of	Attacker Takes Damage of		3	13	2					item_attackertakesdamage
-79	75	10						Less Gold from Monsters	Extra Gold from Monsters		2	10	1					item_goldbonus
-80	75	10						Worse Chance of Getting Magic Items	Better Chance of Getting Magic Items		2	8	1					item_magicbonus
+79	75	11						Less Gold from Monsters	Extra Gold from Monsters		2	10	1					item_goldbonus
+80	75	11						Worse Chance of Getting Magic Items	Better Chance of Getting Magic Items		2	8	1					item_magicbonus
 81	0	2						Knockback	Knockback		3	76	0					item_knockback
 82	20	9																item_timeduration
 83	0	4						to Amazon Skill Levels	to Amazon Skill Levels		13	150	1				3	item_addclassskills
@@ -83,12 +83,12 @@
 90	0	24																item_lightcolor
 91	100	10						Requirements	Requirements		4	0	2					item_req_percent
 92		7						Required Level	Required Level		1	2	1					item_levelreq
-93	60	10						Decreased Attack Speed	Increased Attack Speed		2	145	1					item_fasterattackrate
+93	60	9						Decreased Attack Speed	Increased Attack Speed		2	145	1					item_fasterattackrate
 94	64	10						ModitemLevReq	ModitemLevReq		4	58	2					item_levelreqpct
-96	50	10						Slower Run/Walk	Faster Run/Walk		2	148	1					item_fastermovevelocity
+96	50	9						Slower Run/Walk	Faster Run/Walk		2	148	1					item_fastermovevelocity
 97	1	6									28	81					11	item_nonclassskill
 98		1															8	state
-99	50	10						Slower Hit Recovery	Faster Hit Recovery		2	139	1					item_fastergethitrate
+99	50	9						Slower Hit Recovery	Faster Hit Recovery		2	139	1					item_fastergethitrate
 101	0	6																skill_poison_override_length
 102	20	10						Slower Block Rate	Faster Block Rate		2	136	1					item_fasterblockrate
 103	0	1						Ignores Resistances of Undead	Ignores Resistances of Undead		3	150	0					skill_bypass_undead
@@ -115,7 +115,7 @@
 124	128	10						to Attack Rating against Undead	to Attack Rating against Undead		1	106	1					item_undead_tohit
 125	0	1						Throwable	Throwable		3	5	0					item_throwable
 126	0	3						ModitemColdSkills	ModitemColdSkills		1	157	1				3	item_elemskill
-127	0	5						to All Skills	to All Skills		1	158	1					item_allskills
+127	0	4						to All Skills	to All Skills		1	158	1					item_allskills
 128	0	10		367,368		Attacker Takes Elemental Damage of		Attacker Takes Lightning Damage of	Attacker Takes Lightning Damage of		3	14	2	14	3	2		item_attackertakeslightdamage
 131	150	10						Damage Reflected	Damage Reflected		2	13	1					thorns_percent
 134	5	5						Freezes Target	Freezes Target		12	78	2					item_freeze
@@ -158,16 +158,15 @@
 186			8					Skill Points from Books	Skill Points from Books		1	3	1					potion_skill_cap
 187	0	3						Lionheart Spell Blinds Attacker	Lionheart Spell Blinds Attacker		12	22	2					passive_lionheart_addstupidth
 188	0	3						+%d to Javelin and Spear Skills	+%d to Javelin and Spear Skills		14	151					16	item_addskill_tab
-189	0	2						Always Use Unholy Combat Skills	Always Use Unholy Combat Skills		3	62	0					item_killkillkill
-190	0	2																passive_voidarchon_amplify
+189	0	1						\red;Cube with your Idol of Vanity or a Key	\red;Cube with your Idol of Vanity or a Key		3	159	0					spiritofdamnationnew
 191	0	5																x_signet02
 192	0	5																x_signet03
 193	0	5																x_signet04
 194	0	4																item_numsockets
-195	0	7						%d%% Chance to cast level %d %s on Attack	%d%% Chance to cast level %d %s on Attack		15	160					17	item_skillonattack
-196	0	7						%d%% Chance to cast level %d %s when you Kill an Enemy	%d%% Chance to cast level %d %s when you Kill an Enemy		15	160					17	item_skillonkill
-197	0	7						%d%% Chance to cast level %d %s when you Die	%d%% Chance to cast level %d %s when you Die		15	160					17	item_skillondeath
-198	0	7						%d%% Chance to cast level %d %s on Striking	%d%% Chance to cast level %d %s on Striking		15	160					17	item_skillonhit
+195	0	8						%d%% Chance to cast level %d %s on Melee Attack	%d%% Chance to cast level %d %s on Melee Attack		15	160					17	item_skillonattack
+196	0	8						%d%% Chance to cast level %d %s when you Kill an Enemy	%d%% Chance to cast level %d %s when you Kill an Enemy		15	160					17	item_skillonkill
+197	0	8						%d%% Chance to cast level %d %s when you Die	%d%% Chance to cast level %d %s when you Die		15	160					17	item_skillondeath
+198	0	8						%d%% Chance to cast level %d %s on Striking	%d%% Chance to cast level %d %s on Striking		15	160					17	item_skillonhit
 199	0	7						%d%% Chance to cast level %d %s when you Level-Up	%d%% Chance to cast level %d %s when you Level-Up		15	160					17	item_skillonlevelup
 200	0	7						\orange;Mega Impact\white;	\orange;Mega Impact\white;		3	204	0				17	item_megaimpact
 201	0	7						%d%% Chance to cast level %d %s when Struck	%d%% Chance to cast level %d %s when Struck		15	160					17	item_skillongethit
@@ -292,9 +291,9 @@
 335	0	8		333,334,336,358	to All Enemy Resistances	to All Enemy Resistances		to Enemy Cold Resistance	to Enemy Cold Resistance		20	88	1	6	20	1		passive_cold_pierce
 336	0	8		333,334,335,358	to All Enemy Resistances	to All Enemy Resistances		to Enemy Poison Resistance	to Enemy Poison Resistance		20	88	1	6	20	1		passive_pois_pierce
 337	0	8																passive_critical_strike
-338	0	7		339,340	Chance to Avoid Damage	Chance to Avoid Damage		to We Have A Bug Here	to We Have A Bug Here		2	40	1	8	2	1		passive_dodge
-339	0	7		338,340	Chance to Avoid Damage	Chance to Avoid Damage		to We Have A Bug Here	to We Have A Bug Here		2	40	1	8	2	1		passive_avoid
-340	0	7		338,339	Chance to Avoid Damage	Chance to Avoid Damage		to We Have A Bug Here	to We Have A Bug Here		2	40	1	8	2	1		passive_evade
+338	0	8		339,340	Chance to Avoid Damage	Chance to Avoid Damage		to We Have A Bug Here	to We Have A Bug Here		2	40	1	8	2	1		passive_dodge
+339	0	8		338,340	Chance to Avoid Damage	Chance to Avoid Damage		to We Have A Bug Here	to We Have A Bug Here		2	40	1	8	2	1		passive_avoid
+340	0	8		338,339	Chance to Avoid Damage	Chance to Avoid Damage		to We Have A Bug Here	to We Have A Bug Here		2	40	1	8	2	1		passive_evade
 341	0	8																passive_warmth
 342	0	8																passive_mastery_melee_th
 343	0	8			ModitemPeril	ModitemPeril								4	3	0		passive_mastery_melee_dmg
@@ -362,13 +361,13 @@
 414	0	8						Bonus to Energy when using an Apple	Bonus to Energy when using an Apple		2	49	1					skill_paganheart_bonus
 418	0	2						Can Be Upgraded with Black Road Challenge	Can Be Upgraded with Black Road Challenge		3	146	0					item_needschallenged
 419	0	8						\red;May the Light of Dien-Ap-Sten shine upon you!	\red;May the Light of Dien-Ap-Sten shine upon you!		3	2	0					hm_c
-421	0	2						Trial of Fear completed!	Trial of Fear completed!		3	20	0					black_1
-422	0	2						Trial of Greed completed!	Trial of Greed completed!		3	19	0					black_2
-423	0	2						Trial of Knowledge completed!	Trial of Knowledge completed!		3	17	0					black_3
-424	0	2						Trial of Blood completed!	Trial of Blood completed!		3	16	0					black_4
-425	0	2						Trial of Contrition completed!	Trial of Contrition completed!		3	18	0					black_5
-426	0	2						Trial of Ash completed!	Trial of Ash completed!		3	15	0					black_6
-427	0	2						You Slew Kabraxis' Avatar!	You Slew Kabraxis' Avatar!		3	14	0					black_7
+421	2	2						Trial of Fear completed!	Trial of Fear completed!		3	20	0					black_1
+422	2	2						Trial of Greed completed!	Trial of Greed completed!		3	19	0					black_2
+423	2	2						Trial of Knowledge completed!	Trial of Knowledge completed!		3	17	0					black_3
+424	2	2						Trial of Blood completed!	Trial of Blood completed!		3	16	0					black_4
+425	2	2						Trial of Contrition completed!	Trial of Contrition completed!		3	18	0					black_5
+426	2	2						\orange;Well Done!\red;	\yellow;You have reached the gambling limit. Please reset your Trader's Chest!\blue;		3	1	0					black_6
+427	2	2						\orange;Congratulations!\blue;	\red;&gt;&gt; Do not use at level 120 &lt;&lt;\blue;		3	1	0					black_7
 429	0	8						Damage Reduction to Pact of Blood	Damage Reduction to Pact of Blood		4	18	1					passive_rejuv_dr
 430	0	8						to All Skills when using an Apple	to All Skills when using an Apple		1	50	1					skill_paganheart_synergy
 431	50	9						Bonus to Poison Skill Duration	Bonus to Poison Skill Duration		4	149	1					skill_poison_dur
@@ -391,7 +390,7 @@
 463	0	5																x_signet67
 464	0	5																x_signet68
 465	0	5																x_signet69
-466	0	5																x_signet70
+466	0	7																x_signet70
 467	0	10						Damage when using an Apple	Damage when using an Apple		4	49	1					skill_elixirs_synergy
 470	50	9						Bonus to Summoned Minion Damage	Bonus to Summoned Minion Damage		4	75	1					skill_minion_dmg_percent
 471	1	2						Can Be Upgraded with Ennead Challenge	Can Be Upgraded with Ennead Challenge		3	149	0					item_needsupgraded
@@ -402,7 +401,7 @@
 476	0	1						Level 1 Demon Blood Aura when Equipped	Level 1 Demon Blood Aura when Equipped		3	159	0					item_desc_dbaura
 477	1	4						Increased Difficulty	Increased Difficulty		1	158	1					item_desc_hardaura
 478	0	1						\purple;and Reward, cube with a Mana Potion to lower it\nCube with a Healing Potion to Increase Difficulty	\purple;and Reward, cube with a Mana Potion to lower it\nCube with a Healing Potion to Increase Difficulty		3	159	0					item_desc_instructions
-479	0	3						Maximum Skill Level Increased by	Maximum Skill Level Increased by		3	69	2					skill_more
+479	0	4						Maximum Skill Level Increased by	Maximum Skill Level Increased by		3	69	2					skill_more
 480	0	5						to Vitality per Socketed Gem	to Vitality per Socketed Gem		1	75	1					item_skill_paragon
 481	0	5						to Defense per Socketed Rune	to Defense per Socketed Rune		4	74	1					item_skill_runemaster
 482	0	10																item_gem_paragon
@@ -424,4 +423,6 @@
 503	0	10						to Strength	to Strength	(Based on Blessed Life Skill Level)	6	66	1					item_strength_perblessedlife
 504	0	10						to Dexterity	to Dexterity	(Based on Blessed Life Skill Level)	6	62	1					item_dexterity_perblessedlife
 505	0	10						Drain Life	Replenish Life	(Based on Character Level)	6	60	2					item_hpregen_perlevel
-506	0	3						Magic Find Bonus	Magic Find Bonus	(Based on Difficulty Setting)	3	22	0					item_hmc_check
+506	0	1						\red;Superbeast Morph\blue;	\red;Superbeast Morph\blue;		3	159	0					desc-superbeasty
+508	0	1						\red;Treewarden Morph\blue;	\red;Treewarden Morph\blue;		3	159	0					desc-fatasstriton
+509	500	10						\red;&gt;&gt; Do not use at level 120 &lt;&lt;\blue;	\red;&gt;&gt; Do not use at level 120 &lt;&lt;\blue;		3	254	0					fuck_you#

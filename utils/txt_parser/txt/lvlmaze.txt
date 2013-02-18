@@ -1,5 +1,5 @@
 Name	Level	Rooms	Rooms(N)	Rooms(H)	SizeX	SizeY	Merge	Beta
-Act 1 - Cave 1	8	1	1	1	24	24	500	1
+Act 1 - Cave 1	8	1	5	15	24	24	500	1
 Act 1 - Cave 2	9	4	4	4	24	24	500	1
 Act 1 - Cave 3	10	8	8	8	24	24	500	1
 Act 1 - Cave 4	11	8	8	8	24	24	500	1
@@ -17,13 +17,13 @@ Act 1 - Crypt 3 C	23	18	18	18	8	8	500	1
 Act 1 - Crypt 3 D	24	18	18	18	8	8	500	1
 Act 1 - Crypt 3 E	25	6	6	6	8	8	500	1
 Act 1 - Barracks	28	4	4	4	10	14	500	1
-Act 1 - Jail 1	29	6	6	6	12	12	500	1
-Act 1 - Jail 2	30	6	6	6	12	12	500	1
-Act 1 - Jail 3	31	6	6	6	12	12	500	1
-Act 1 - Catacombs 1	34	4	4	4	12	12	500	1
-Act 1 - Catacombs 2	35	4	4	4	12	12	500	1
-Act 1 - Catacombs 3	36	4	4	4	12	12	500	1
-Act 1 - Catacombs 4	37	4	4	4	12	12	500	1
+Act 1 - Jail 1	29	6	16	26	12	12	500	1
+Act 1 - Jail 2	30	6	16	26	12	12	500	1
+Act 1 - Jail 3	31	6	16	26	12	12	500	1
+Act 1 - Catacombs 1	34	10	14	18	12	12	500	1
+Act 1 - Catacombs 2	35	10	14	18	12	12	500	1
+Act 1 - Catacombs 3	36	10	14	18	12	12	500	1
+Act 1 - Catacombs 4	37	10	14	18	12	12	500	1
 Act 2 - Sewer 1	47	6	6	6	12	12	500	0
 Act 2 - Sewer 2	48	12	12	12	12	12	500	0
 Act 2 - Sewer 3	49	14	14	14	12	12	500	0
@@ -38,9 +38,9 @@ Act 2 - Tomb 3 A	58	12	12	12	16	16	500	0
 Act 2 - Tomb 1 Treasure	59	4	4	4	16	16	500	0
 Act 2 - Tomb 2 Treasure	60	6	6	6	16	16	500	0
 Act 2 - Tomb 3 Treasure	61	6	6	6	16	16	500	0
-Act 2 - Lair 1 A	62	18	18	18	10	10	500	0
-Act 2 - Lair 1 B	63	14	14	14	10	10	500	0
-Act 2 - Lair 1 Treasure	64	10	10	10	10	10	500	0
+Act 2 - Lair 1 A	62	70	70	80	10	10	500	0
+Act 2 - Lair 1 B	63	70	70	80	10	10	500	0
+Act 2 - Lair 1 Treasure	64	70	70	80	10	10	500	0
 Act 2 - Sewer 4	65	10	10	10	12	12	500	0
 Act 2 - Tomb Tal 1	66	6	6	6	16	16	500	0
 Act 2 - Tomb Tal 2	67	6	6	6	16	16	500	0
@@ -51,18 +51,18 @@ Act 2 - Tomb Tal 6	71	6	6	6	16	16	500	0
 Act 2 - Tomb Tal 7	72	6	6	6	16	16	500	0
 Act 2 - Arcane	74	61	61	61	12	12	1000	0
 Act 3 - Spider 1	84	4	4	4	16	16	500	0
-Act 3 - Spider 2	85	4	4	4	16	16	500	0
+Act 3 - Spider 2	85	16	16	16	16	16	500	0
 Act 3 - Dungeon 1 A	86	8	8	8	14	14	500	0
 Act 3 - Dungeon 1 B	87	8	8	8	14	14	500	0
 Act 3 - Dungeon 2 A	88	8	8	8	14	14	500	0
 Act 3 - Dungeon 2 B	89	8	8	8	14	14	500	0
 Act 3 - Dungeon 1 Treasure	90	4	4	4	14	14	500	0
 Act 3 - Dungeon 2 Treasure	91	4	4	4	14	14	500	0
-Act 3 - Sewer 1	92	32	32	32	12	12	800	0
-Act 3 - Sewer 2	93	6	6	6	12	12	800	0
+Act 3 - Sewer 1	92	50	50	50	12	12	800	0
+Act 3 - Sewer 2	93	4	4	4	12	12	800	0
 Act 3 - Mephisto 1	100	8	8	8	12	12	500	0
 Act 3 - Mephisto 2	101	24	24	24	12	12	500	0
-Act 4 - Lava 1	107	6	6	6	24	24	500	0
+Act 4 - Lava 1	107	60	60	60	24	24	500	0
 Expansion								
 Act 5 - Ice Caves 1	113	8	8	8	16	16	500	0
 Act 5 - Ice Caves 2	115	8	8	8	16	16	500	0

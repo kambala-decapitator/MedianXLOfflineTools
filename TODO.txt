@@ -1,4 +1,5 @@
 v0.4:
+- ctc Miasma MO removal (doesn't appear)
 - move mass disenchant to a separate dialog and add more options
 - batch eat signets (add a button)
 - creation of plugy stashes and moving items around (finish implementing drag & drop)
