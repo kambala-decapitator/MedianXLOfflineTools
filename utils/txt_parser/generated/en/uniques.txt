@@ -23,7 +23,7 @@
 21	Astrogha's Venom Stinger	120	
 22	Legacy of Blood	100	bloodlegacy
 23	Silver Seal of Ureh	120	
-24	Moo moo moo Moooo! Moo!\nFool's Gold	100	
+24	Moo moo moo Moooo! Moo!\nFool's Gold	666	
 25	Crystalline Flame Medallion	120	
 26	Crystalline Flame Medallion	120	
 27	\gold;Sunstone of the Elements	50	
@@ -49,15 +49,15 @@
 47	Zakarum's Ear	80	
 48	Moon of the Spider	100	
 49	Spirit Trance Herb	100	
-50	\red;Welcome! Median XL: Ultimative v6c\blue;	0	
+50	\red;Welcome! Median XL: Ultimative v7\blue;	0	
 51	Hammer of the Taan Judges	40	
 52	The Book of Lies	60	
 53	By Robert Marks\nDemonsbane	100	demonsbaneZ
 54	Cold Fusion Schematics	100	coldfusion
 55	The Glorious Book of Median	100	bookoflaz
 56	\gold;Uldyssian's Sword	120	
-57	Creator's Hand	120	
-58	Soul of Kabraxis	120	
+57	Creator's Hand	666	
+58	Soul of Kabraxis	666	
 59	The Tesseract	100	
 60	Khanduran Royal Pendant	100	
 61	Locket of Dreams	100	
@@ -731,7 +731,7 @@
 729	Farnham's Flowerpot	49	
 730	Ironhood	100	
 731	Headbanger	100	
-732	Gehenna	100	
+732	Gehenna (Legacy)	666	
 733	Shroud Royal	11	
 734	Shroud Royal	19	
 735	Shroud Royal	28	
@@ -1115,7 +1115,7 @@
 1113	Banner of Duncraig	40	
 1114	Banner of Duncraig	49	
 1115	Lightforge	100	
-1116	Stormflyer	100	
+1116	Stormflyer	666	
 1117	Linarian's Legacy	100	
 1118	Bul Kathos' Teaching	13	
 1119	Bul Kathos' Teaching	22	
@@ -1188,7 +1188,7 @@
 1186	Vilehand	43	
 1187	Geglash's Dusters	100	
 1188	Blackjade's Legacy	100	
-1189	Demonic Touch	100	
+1189	Demonic Touch (Legacy)	666	
 1190	Wormtongue	3	
 1191	Wormtongue	12	
 1192	Wormtongue	21	
@@ -1233,7 +1233,7 @@
 1231	Zealot Rush	50	
 1232	Akarat's Trek	100	
 1233	Earthbender	100	
-1234	Steel Terror	100	
+1234	Steel Terror (Legacy)	666	
 1235	Darkplague	6	
 1236	Darkplague	16	
 1237	Darkplague	25	
@@ -2479,10 +2479,25 @@
 2477	Cornerstone of the World	100	
 2478	Cornerstone of the World	100	
 2479	\red;Valkyrie's Prime	120	
-2480	Trader's Chest	120	
+2480	Trader's Chest	666	
 2481	The Sleep	120	
 2482	\orange;Instructions\n\gold;Level Challenge 0	1	
 2483	\gold;Harkon Crystal	666	
 2484	\gold;Harkon Crystal	1	
 2485	The Ancient Repositories	120	
 2486	Brachyceran's Token	120	
+2487	Moo moo moo Moooo! Moo!\nFool's Gold	100	
+2488	Trader's Chest	120	
+2489	(Secret)\nStorm Blade	120	
+2490	(Secret)\nThe Grizzly	120	
+2491	(Secret)\nEmpyrean Glory	40	
+2492	(Secret)\nBeads of the Snake King	100	
+2493	(Secret)\nJewel of Luck	100	
+2494	Seal of Tathamet	50	
+2495	Gehenna	100	
+2496	Demonic Touch	666	
+2497	Steel Terror	100	
+2498	Soul of Kabraxis	100	
+2499	Demonic Touch	100	
+2500	Linarian's Legacy	100	
+2501	Soulkeeper	120	

@@ -2086,6 +2086,40 @@ bool MedianXLOfflineTools::processSaveFile()
         return false;
     }
 
+    // check for dupes
+    //qDebug() << QFileInfo(_charPath).fileName() << "dupe stats";
+    //ItemsList checkedItems;
+    //for (int i = 0, n = itemsBuffer.size(); i < n - 1; ++i)
+    //{
+    //    ItemInfo *iItem = itemsBuffer.at(i);
+    //    bool alreadyChecked = false;
+    //    foreach (ItemInfo *item, checkedItems)
+    //        if (iItem->guid == item->guid)
+    //        {
+    //            alreadyChecked = true;
+    //            break;
+    //        }
+    //    if (alreadyChecked)
+    //    {
+    //        continue;
+    //    }
+
+    //    if (iItem->isExtended)
+    //    {
+    //        for (int j = i + 1; j < n; ++j)
+    //        {
+    //            ItemInfo *jItem = itemsBuffer.at(j);
+    //            if (jItem->isExtended && iItem->guid == jItem->guid)
+    //            {
+    //                checkedItems += iItem;
+    //                qDebug() << "duped items found: GUID" << iItem->guid << "item type" << iItem->itemType
+    //                         << ItemParser::itemStorageAndCoordinatesString("item1: location %1, row %2, col %3, equipped in %4", iItem)
+    //                         << ItemParser::itemStorageAndCoordinatesString("item2: location %1, row %2, col %3, equipped in %4", jItem);
+    //            }
+    //        }
+    //    }
+    //}
+
     // parse plugy stashes
     QString oldSharedStashPath = _plugyStashesHash[Enums::ItemStorage::SharedStash].path, oldHCStashPath = _plugyStashesHash[Enums::ItemStorage::HCStash].path;
 

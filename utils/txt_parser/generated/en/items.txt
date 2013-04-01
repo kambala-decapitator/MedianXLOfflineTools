@@ -1725,6 +1725,7 @@ r56	\grey;Great Rune\n\purple;Sha'ad Rune		1	1	2	0	100	r-d-12	rune		-1
 r54	\grey;Great Rune\n\purple;Krys Rune		1	1	2	0	100	r-d-07	rune		-1
 qux	Cube Reagent (3/4)\n\orange;Brilliant Arcane Crystal		1	1	2	0	0	orb_misc	thng		-1
 µ14	\orange;Brother Laz Trophy	Cube with the Glorious Book of Median...	1	1	2	0	0	kLazbro	thng		-1
+\\3	\purple;Great Topaz		1	1	2	0	0	invgsye	thng		-1
 ob2	Amulet		1	1	2	0	0	invamu	amul		-1
 34+	\orange;Mystic Orb	\blue;+2 Required Level\n1% Chance to cast level 3 Celerity on Attack\n\white;Cube with Any Weapon to Add Bonus	1	1	2	0	0	orb_weap	asaa		-1
 paa	Amulet		1	1	2	0	0	invamu	amul		-1
@@ -1835,6 +1836,7 @@ pa2	Amulet		1	1	2	0	0	invamu	amul		-1
 bkd	Key to the Cairn Stones		2	2	2	0	0	invscb	ques		-1
 eo8	\red;Elixir of Cold	Cold Spell Damage +50% for 60 seconds	1	1	2	0	0	invxyz	hpot		-1
 dr9	Amulet		1	1	2	0	0	invamu	amul		-1
+\\4	\purple;Great Saphire		1	1	2	0	0	invgsbe	thng		-1
 H1+	\orange;Fascinating Shrine (9 Charges)		1	2	2	0	0	@Fascinating	thng		-1
 zkb	\dgreen;Signet of Experience	Right-click: Experience:	1	1	2	0	0	sigil5B	poti		-1
 05-	\red;Pearl of Wisdom	\dgrey;difficulty may yield wondrous rewards!\nages past. Doing so on Destruction\nareas to summon legendary evils from\nHoradric Cube and use it in designated\nCraft a Book of Summoning in the\n\n-- Summoning Uberquests --	1	1	2	0	0	ShinieWhite	thng		-1
@@ -1853,6 +1855,7 @@ ne4	Amulet		1	1	2	0	0	invamu	amul		-1
 I0+	\orange;Ornate Shrine (10 Charges)		1	2	2	0	0	@Ornate	thng		-1
 zoh	\red;Energy Pack	Right-click: Mana Restored:	1	1	2	0	0	stoneearth	poti		-1
 vip	Top of the Horadric Staff		1	1	2	0	0	invvip	amul		-1
+lawl	Soulkeeper\nCongratulations!		1	1	2	0	0	invnps	grtz		-1
 &40	\orange;Mystic Orb	\blue;+2 Required Level\n+4 Life after each Kill\n\white;Cube with Any Weapon to Add Bonus	1	1	2	0	0	orb_weap	asaa		-1
 &15	\orange;Mystic Orb	\blue;+2 Required Level\n10% Extra Gold from Monsters\n\white;Cube with Item to Add Bonus	1	1	2	0	0	orb_any	asaa		-1
 J1+	\orange;Sacred Shrine (9 Charges)		1	2	2	0	0	@Sacred	thng		-1
@@ -2130,7 +2133,7 @@ O0+	\orange;Enchanted Shrine (10 Charges)		1	2	2	0	0	jbscross	thng		-1
 &09	\orange;Mystic Orb	\blue;+2 Required Level\n+1% to Physical/Magic Spell Damage\n\white;Cube with Item to Add Bonus	1	1	2	0	0	orb_any	asaa		-1
 P9+	\orange;Divine Shrine (1 Charge)		1	2	2	0	0	jbscross	thng		-1
 &62	\orange;Mystic Orb	\blue;+2 Required Level\n+2 Energy Factor to Spell Damage\n\white;Cube with Any Weapon to Add Bonus	1	1	2	0	0	orb_weap	asaa		-1
-zen	Median XL - Ultimative v6d\n\red; READ ME 	[CUBE ME WITH A HEALTH POTION]\n\n\orange;Lachdanan in Travincal.\n- Khalims Will now drops from\nthe Claw Viper Temple Level 2\n- Horadric Staff now drops in\n\red;IMPORTANT NOTE\n\n\gold;Ultimative by \grey;MarcoNecroX\n\gold;Median XL by \dgreen;BrotherLaz\n\n\red;Thanks for playing!	1	2	2	0	0	invjbi	woot		-1
+zen	Median XL - Ultimative v7\n\red; READ ME 	[CUBE ME WITH A HEALTH POTION]\n\n\orange;Lachdanan in Travincal.\n- Khalims Will now drops from\nthe Claw Viper Temple Level 2\n- Horadric Staff now drops in\n\red;IMPORTANT NOTE\n\n\gold;Ultimative by \grey;MarcoNecroX\n\gold;Median XL by \dgreen;BrotherLaz\n\n\red;Thanks for playing!	1	2	2	0	0	invjbi	woot		-1
 sku	\purple;Skull		1	1	2	0	12	invsku	gemz,gem2		-1
 #X1	\red;Token of Suffering	\orange;Usable for powerful recipes\n\orange;Secret Reagent!	1	1	2	0	0	newsignet1	thng		-1
 &32	\orange;Mystic Orb	\blue;+2 Required Level\n2% Life Stolen per Hit\n\white;Cube with Any Weapon to Add Bonus	1	1	2	0	0	orb_weap	asaa		-1
@@ -2203,7 +2206,7 @@ N5+	\orange;Magical Shrine (5 Charges)		1	2	2	0	0	@Magical	thng		-1
 O9+	\orange;Enchanted Shrine (1 Charge)		1	2	2	0	0	jbscross	thng		-1
 J4+	\orange;Sacred Shrine (6 Charges)		1	2	2	0	0	@Sacred	thng		-1
 D6+	\orange;Eerie Shrine (4 Charges)		1	2	2	0	0	@Eerie	thng		-1
-bxa	Soul of Kabraxis		1	1	2	0	120	braxwhorl	grtz		-1
+bxa	Soul of Kabraxis		1	1	2	0	100	braxwhorl	grtz		-1
 22-	\red;Pearl of Wisdom	\dgrey;Location: Act 3 Swampy Pit 3\nTricky (3/8)\nDungeon Uberquest\n\n-- Death Projector --	1	1	2	0	0	shinieRed	thng		-1
 P7+	\orange;Divine Shrine (3 Charges)		1	2	2	0	0	jbscross	thng		-1
 Q9+	\orange;Hidden Shrine (1 Charge)		1	2	2	0	0	@Hidden	thng		-1
@@ -2334,6 +2337,7 @@ dog	Apple	while being vulnerable to attacks\nRegenerates 100% life in 3 seconds	
 &48	\orange;Mystic Orb	\blue;+2 Required Level\n1% Reanimate As: Skeleton\n\white;Cube with Any Armor to Add Bonus	1	1	2	0	0	orb_armo	asaa		-1
 ba1	Amulet		1	1	2	0	0	invamu	amul		-1
 2x9	\dgreen;Epsilon Brain		1	1	2	0	0	invbrnz	thng		-1
+\\1	\purple;Great Rainbow Stone		1	1	2	0	0	og5	thng		-1
 r58	\grey;Secret Rune\n\purple;Earth Rune		1	1	2	0	100	phys-rune	rune		-1
 u@v	for an upgrade!\nSee the documentation\nYou're not cool enough!\n\gold;Poser!		1	1	2	0	0	redgem	thng		-1
 S7+	\orange;Religious Shrine (3 Charges)		1	2	2	0	0	jbscross	thng		-1
@@ -2409,6 +2413,7 @@ dr4	Amulet		1	1	2	0	0	invamu	amul		-1
 tbk	Tome of Town Portal		1	2	2	1	0	invbbk	book		-1
 zke	\dgreen;Greater Signet of Learning	Right-click: Free Attribute Points:	1	1	2	0	0	sigilXL	poti		-1
 S6+	\orange;Religious Shrine (4 Charges)		1	2	2	0	0	jbscross	thng		-1
+\\5	\purple;Great Ruby		1	1	2	0	0	invgsre	thng		-1
 z4+	\orange;Mystic Orb	\blue;+2 Required Level\n+1 to Summon Shredder\n\white;Cube with Ring/Amulet to Add Bonus	1	1	2	0	0	orb_misc	asaa		-1
 dr3	Amulet		1	1	2	0	0	invamu	amul		-1
 18+	\orange;Mystic Orb	\blue;+2 Required Level\n+1 to Wyrd\n\white;Cube with Ring/Amulet to Add Bonus	1	1	2	0	0	orb_misc	asaa		-1
@@ -2496,6 +2501,7 @@ ey6	\red;Elixir of Dexterity	+40% Dexterity for 60 seconds	1	1	2	0	0	invxyz	hpot
 L8+	\orange;Mysterious Shrine (2 Charges)		1	2	2	0	0	jbscross	thng		-1
 S0+	\orange;Religious Shrine (10 Charges)		1	2	2	0	0	jbscross	thng		-1
 L5+	\orange;Mysterious Shrine (5 Charges)		1	2	2	0	0	jbscross	thng		-1
+\\2	\purple;Great Skull		1	1	2	0	0	invskz	thng		-1
 &58	\orange;Mystic Orb	\blue;+2 Required Level\n1% Chance to cast level 6 Crucify on Attack\n\white;Cube with Any Weapon to Add Bonus	1	1	2	0	0	orb_weap	asaa		-1
 40+	\orange;Mystic Orb	\blue;+2 Required Level\n+4 Life after each Kill\n\white;Cube with Any Weapon to Add Bonus	1	1	2	0	0	orb_weap	asaa		-1
 R3+	\orange;Stone Shrine (7 Charges)		1	2	2	0	0	@Stone	thng		-1

@@ -2,8 +2,8 @@ description	enabled	ladder	min diff	version	op	param	value	class	numinputs	input
 Staff of Kings + Viper amulet -> Horadric Staff	1				28				2	msf	vip						hst																																																																																												0
 Khalim Flail + Khalim Heart + Khalim Eye + Khalim Brain -> Super Khalim Flail	1				28				4	qf1	qhr	qey	qbr				qf2																																																																																												0
 Wirt's Leg + jewel -> Cow Portal	1				28				2	leg	tbk						Cow Portal																																																																																												0
-test recipe				100					1	hpot							set_lab6	120		120																															set_lab9	120		120																										set_lab10	120		120																										0
-test recipe				100					2	hpot,qty=2							set_lab7	120		120																															set_lab8	120		120																											120		120																										0
+test recipe				100					1	hpot							\\1	120		120	oskill			1159	1	1																										120		120																											120		120																										0
+test recipe				100					2	hpot,qty=2								120		120																																120		120																											120		120																										0
 Kabraxis Recipe pt. 1	1			100					3	isc	k.Z	tsc					brx																																																																																												0
 test recipe				100					1	ring							useitem	120		120	extra-pm				5000	5000																									NewIdolOfRygnar	120		120																										NewRathmasAthame	120		120																										0
 stardragon upgrade decoy	1			100	18	491	1	ama	2	Sacred Sunstone	qum						useitem																																																																																												0
@@ -8394,30 +8394,30 @@ affix crystal recipe: item + crystal -> add modifier	1			100					2	ring,any	z5+	
 full honorifics	1			100					3	weap,mag	vic	mec					usetype,tmp			100	desc-honorific				1	1	sock			6	6	6																																																																													0
 full honorifics	1			100					3	armo,mag	vic	mec					usetype,tmp			100	desc-honorific				1	1	sock			6	6	6																																																																													0
 shards to container	1								5	qul,qty=5							qum																																																																																												0
-dupe recipe	1			100	18	276	0		3	weap,noe	qum	1oµ					useitem,uns				levelreq				21	21	item-duped				1	1																							levelreq			21	21	item-duped			1	1																																													0
-dupe recipe	1			100	18	276	0		3	armo,noe	qum	1oµ					useitem,uns				levelreq				21	21	item-duped				1	1																							levelreq			21	21	item-duped			1	1																																													0
-dupe recipe	1			100	18	276	0		3	misl,any	qum	1oµ					useitem,uns				levelreq				21	21	item-duped				1	1																							levelreq			21	21	item-duped			1	1																																													0
-dupe recipe	1			100	18	276	0		3	ring,any	qum	1oµ					useitem				levelreq				21	21	item-duped				1	1																							levelreq			21	21	item-duped			1	1																																													0
-dupe recipe	1			100	18	276	0		3	amul,any	qum	1oµ					useitem				levelreq				21	21	item-duped				1	1																							levelreq			21	21	item-duped			1	1																																													0
-dupe 2	1			100					3	jew,mag	qum	1oµ					useitem				item-duped				1	1																													item-duped			1	1																																																		0
-dupe 2	1			100					3	jew,rar	qum	1oµ					useitem				item-duped				1	1																													item-duped			1	1																																																		0
+dupe recipe	0			100	18	276	0		3	weap,noe	qum	1oµ					useitem,uns				levelreq				21	21	item-duped				1	1																							levelreq			21	21	item-duped			1	1																																													0
+dupe recipe	0			100	18	276	0		3	armo,noe	qum	1oµ					useitem,uns				levelreq				21	21	item-duped				1	1																							levelreq			21	21	item-duped			1	1																																													0
+dupe recipe	0			100	18	276	0		3	misl,any	qum	1oµ					useitem,uns				levelreq				21	21	item-duped				1	1																							levelreq			21	21	item-duped			1	1																																													0
+dupe recipe	0			100	18	276	0		3	ring,any	qum	1oµ					useitem				levelreq				21	21	item-duped				1	1																							levelreq			21	21	item-duped			1	1																																													0
+dupe recipe	0			100	18	276	0		3	amul,any	qum	1oµ					useitem				levelreq				21	21	item-duped				1	1																							levelreq			21	21	item-duped			1	1																																													0
+dupe 2	0			100					3	jew,mag	qum	1oµ					useitem				item-duped				1	1																													item-duped			1	1																																																		0
+dupe 2	0			100					3	jew,rar	qum	1oµ					useitem				item-duped				1	1																													item-duped			1	1																																																		0
 dupe 2	0			100					3	jew,crf	qum	1oµ					useitem				item-duped				1	1																													item-duped			1	1																																																		0
-dupe 2	1			100					3	The Boulder	qum	1oµ					useitem				item-duped				1	1																													item-duped			1	1																																																		0
-dupe 2	1			100					3	ThisIsASecretMessage	qum	1oµ					useitem				item-duped				1	1																													item-duped			1	1																																																		0
-dupe 2	1			100					3	Demonstone Blood	qum	1oµ					useitem				item-duped				1	1																													item-duped			1	1																																																		0
-dupe 2	1			100					3	Zakarum Stoning Rock	qum	1oµ					useitem				item-duped				1	1																													item-duped			1	1																																																		0
-dupe 2	1			100					3	Farsight Globe	qum	1oµ					useitem				item-duped				1	1																													item-duped			1	1																																																		0
-dupe 2	1			100					3	Ashaera's Cateye	qum	1oµ					useitem				item-duped				1	1																													item-duped			1	1																																																		0
-dupe 2	1			100					3	Dragon's Egg	qum	1oµ					useitem				item-duped				1	1																													item-duped			1	1																																																		0
-dupe 2	1			100					3	Heavenstone	qum	1oµ					useitem				item-duped				1	1																													item-duped			1	1																																																		0
-dupe 2	1			100					3	Lady of Storms2	qum	1oµ					useitem				item-duped				1	1																													item-duped			1	1																																																		0
-dupe 2	1			100					3	ToaTHRing2	qum	1oµ					useitem				item-duped				1	1																													item-duped			1	1																																																		0
-dupe 2	1			100					3	Bardslore	qum	1oµ					useitem				item-duped				1	1																													item-duped			1	1																																																		0
-dupe 2	1			100					3	Xepera Xeper Xeperu	qum	1oµ					useitem				item-duped				1	1																													item-duped			1	1																																																		0
-dupe 2	1			100					3	Katamari	qum	1oµ					useitem				item-duped				1	1																													item-duped			1	1																																																		0
-dupe 2	1			100					3	New3Kekeke	qum	1oµ					useitem				item-duped				1	1																													item-duped			1	1																																																		0
-dupe 2	1			100					3	Arkenstone	qum	1oµ					useitem				item-duped				1	1																													item-duped			1	1																																																		0
-dupe 2	1			100					3	New5Wishmaster	qum	1oµ					useitem				item-duped				1	1																													item-duped			1	1																																																		0
+dupe 2	0			100					3	The Boulder	qum	1oµ					useitem				item-duped				1	1																													item-duped			1	1																																																		0
+dupe 2	0			100					3	ThisIsASecretMessage	qum	1oµ					useitem				item-duped				1	1																													item-duped			1	1																																																		0
+dupe 2	0			100					3	Demonstone Blood	qum	1oµ					useitem				item-duped				1	1																													item-duped			1	1																																																		0
+dupe 2	0			100					3	Zakarum Stoning Rock	qum	1oµ					useitem				item-duped				1	1																													item-duped			1	1																																																		0
+dupe 2	0			100					3	Farsight Globe	qum	1oµ					useitem				item-duped				1	1																													item-duped			1	1																																																		0
+dupe 2	0			100					3	Ashaera's Cateye	qum	1oµ					useitem				item-duped				1	1																													item-duped			1	1																																																		0
+dupe 2	0			100					3	Dragon's Egg	qum	1oµ					useitem				item-duped				1	1																													item-duped			1	1																																																		0
+dupe 2	0			100					3	Heavenstone	qum	1oµ					useitem				item-duped				1	1																													item-duped			1	1																																																		0
+dupe 2	0			100					3	Lady of Storms2	qum	1oµ					useitem				item-duped				1	1																													item-duped			1	1																																																		0
+dupe 2	0			100					3	ToaTHRing2	qum	1oµ					useitem				item-duped				1	1																													item-duped			1	1																																																		0
+dupe 2	0			100					3	Bardslore	qum	1oµ					useitem				item-duped				1	1																													item-duped			1	1																																																		0
+dupe 2	0			100					3	Xepera Xeper Xeperu	qum	1oµ					useitem				item-duped				1	1																													item-duped			1	1																																																		0
+dupe 2	0			100					3	Katamari	qum	1oµ					useitem				item-duped				1	1																													item-duped			1	1																																																		0
+dupe 2	0			100					3	New3Kekeke	qum	1oµ					useitem				item-duped				1	1																													item-duped			1	1																																																		0
+dupe 2	0			100					3	Arkenstone	qum	1oµ					useitem				item-duped				1	1																													item-duped			1	1																																																		0
+dupe 2	0			100					3	New5Wishmaster	qum	1oµ					useitem				item-duped				1	1																													item-duped			1	1																																																		0
 unique uptier recipe	1			10					3	w23,uni	qum	rune					w43,uni	100																																																																																											0
 unique uptier recipe	1			10					3	614,uni	qum	rune					660,uni	100																																																																																											0
 unique uptier recipe	1			10					3	4@A,uni	qum	rune					5@A,uni	100																																																																																											0
@@ -11475,7 +11475,12 @@ destruction	1			100					77	9oµ							9oµ																																								
 destruction	1			100					78	9oµ							9oµ																																																																																												0
 destruction	1			100					79	9oµ							9oµ																																																																																												0
 destruction	1			100					80	9oµ							9oµ																																																																																												0
-KabraxisApple	1			100	16	219	0		2	KabraxisSoul	bxt						useitem			100	blessings-counter				1	1	reanimate	50		1838	1	1	state			10	1	1	item-duped				1	1																																																																	0
+Nevermind				100					2	KabraxisSoul2							useitem																																																																																												
+Nevermind				100					2	KabraxisSoul2							useitem																																																																																												
+Nevermind				100					2	KabraxisSoul2							useitem																																																																																												
+Nevermind				100					2	KabraxisSoul2							useitem																																																																																												
+KabraxisAll	1			100					6	KabraxisSoul2	\\1	\\2	\\3	\\4	\\5		useitem				levelreq				20	20	res-all-max				0	5	reanimate-rand			5	1824	1828																																																																							
+KabraxisApple	1			100	16	219	0		2	KabraxisSoul2	bxt						useitem			100	blessings-counter				1	1	reanimate-rand			5	1256	1553	state			10	1	1	item-duped				1	1																																																																	0
 Lottery1	1			100	18	443			2	weap,uni,noe	LegOfBlood						useitem				upgraded				1	1	ignore-ac	5			1	1	item-duped				1	1																																																																							0
 Lottery2	1			100	18	443			2	armo,uni,noe	IdolOfVanity						useitem				upgraded				1	1	hp%	5			5	5	item-duped				1	1																																																																							0
 Lottery3	1			100	18	443			2	amul,uni	TomeOfTheSpider						useitem				upgraded				1	1	res-all-max	5			5	5	item-duped				1	1																																																																							0
@@ -11803,7 +11808,7 @@ Mass Disenchant Set	1			100					23	ssgl,set,qty=22	0oµ						22^																	
 Mass Disenchant Set	1			100					24	ssgl,set,qty=23	0oµ						23^																																		0oµ																																																										0
 Mass Disenchant Set	1			100					25	ssgl,set,qty=24	0oµ						24^																																		0oµ																																																										0
 Mass Disenchant Set	1			100					26	ssgl,set,qty=25	0oµ						zky																																		0oµ																																																										0
-DIABLOS TOY BOX <3	1			100					2	#2^	dog						ssgl,uni	120		120																															dcht,uni	120		120																										dcht,uni	120		120																										0
+DIABLOS TOY BOX <3	1			100					2	#2^	dog						dcht,uni	105		105																															dcht,uni	95		95																										dcht,uni	120		120																										0
 Random UMO roll	1			100					3	asa#,qty=3							asa#																																																																																												0
 Upgrade Shards	1			100					2	qul,qty=2							#3^																																																																																												0
 Upgrade Shards	1			100					3	qul,qty=3							#4^																																																																																												0
@@ -11836,6 +11841,7 @@ Disenchant Shards	1			100	18	276	0		9	dcht,set,qty=8	3oµ						qum															
 Disenchant Shards	1			100	18	276	0		10	dcht,set,qty=9	3oµ						qum																																		#5^																													3oµ																													0
 Disenchant Shards	1			100	18	276	0		11	dcht,set,qty=10	3oµ						qum																																		qum																													3oµ																													0
 Trader's Chest Reset	1			100					2	`^`,uni	gemz						`^`,uni	120		120	blessings-counter				1	1																									skc																																																										0
+Trader's Chest For Noobs	1			100	18	443	1		2	`^`,uni							µ99																																		aqv				att-skill		976	100	50																					cqv				hp			-100	-100																					
 Trader's Chest Decoy Str	1			100	15	466	49		2	`^`,uni	gemd						useitem				black6				1	1																									gcw																													skc																													0
 Trader's Chest Decoy Dex	1			100	15	466	49		2	`^`,uni	gema						useitem				black6				1	1																									gcv																													skc																													0
 Trader's Chest Decoy Vit	1			100	15	466	49		2	`^`,uni	gemr						useitem				black6				1	1																									gcr																													skc																													0
@@ -11874,7 +11880,7 @@ Trophy Carrier	1			100	16	219	0		2	`|#,uni	##/						useitem				blessings-counter
 Unknown Merge	1			100					2	r97	r99						`^#	120		120																																																																																									
 TC Trophy Decoy	1			100	18	426			2	`^`,uni	`^#						µ99																																																																																												
 TC Trophy Decoy	1			100	17	219	0		2	`^`,uni	`^#						µ99																																																																																												
-TC Trophy	1			100	18	423			2	`^`,uni	`^#						useitem				upgraded				1	1	light				-1	-1	allskills				0	2	all-stats				1	25	black6				-1	-1																																																											
+TC Trophy	1			100	18	443			2	`^`,uni	`^#						useitem				upgraded				1	1	light				-1	-1	allskills				0	2	all-stats				1	25	black6				-1	-1																																																											
 CLEAR MY CC	0			100	17	423	0		2	Sacred Sunstone	µ98						useitem				black1				-1	-1	black2				-1	-1	black3				-1	-1	black4				-1	-1	black5				-1	-1																																																											
 CLEAR MY CC	0			100	17	423	0		2	Shadow Vortex	µ98						useitem				black1				-1	-1	black2				-1	-1	black3				-1	-1	black4				-1	-1	black5				-1	-1																																																											
 CLEAR MY CC	0			100	17	423	0		2	Worldstone Orb	µ98						useitem				black1				-1	-1	black2				-1	-1	black3				-1	-1	black4				-1	-1	black5				-1	-1																																																											
@@ -11906,3 +11912,67 @@ random recipe	1			100					1	zky							24^																																		zkq
 random recipe	1			100					2	zkq,qty=2							02^																																																																																												
 random recipe	1			100					1	zk#							04^																																		zkq																																																										
 random recipe	1			100					2	zk#	zkq						06^																																																																																												
+New Jewelcraft Recipe	1				3	183	50		4	jewl,any	7oµ	r03	#3^				jew,crf			95	mag%				6	10																									r03																													qul																													0
+New Jewelcraft Recipe	1				3	183	50		4	jewl,any	7oµ	r06	#3^				jew,crf			95	res-all				3	5																									r06																													qul																													0
+New Jewelcraft Recipe	1				3	183	100		4	jewl,any	7oµ	r09	#3^				jew,crf			95	ease				-2	-4																									r09																													qul																													0
+New Jewelcraft Recipe	1				3	183	100		4	jewl,any	7oµ	r13	#3^				jew,crf			95	ac				21	50																									r13																													qul																													0
+New Jewelcraft Recipe	1				3	183	150		4	jewl,any	7oµ	r17	#3^				jew,crf			95	addxp				1	2																									r17																													qul																													0
+New Jewelcraft Recipe	1				3	183	150		4	jewl,any	7oµ	r20	#3^				jew,crf			95	all-stats				3	5																									r20																													qul																													0
+New Jewelcraft Recipe	1				3	183	200		4	jewl,any	7oµ	r24	#3^				jew,crf			95	hp-minion				4	6																									r24																													qul																													0
+New Jewelcraft Recipe	1				3	183	200		4	jewl,any	7oµ	r27	#3^				jew,crf			95	dmg-max				4	12																									r27																													qul																													0
+New Jewelcraft Recipe	1				3	183	250		4	jewl,any	7oµ	r30	#3^				jew,crf			95	lifesteal				1	2	manasteal				1	2																			r30																													qul																													0
+New Jewelcraft Recipe	1				3	183	250		4	jewl,any	7oµ	r33	#3^				jew,crf			95	extra-all				1	3																									r33																													qul																													0
+New Jewelcraft Recipe	1				3	183	300		4	jewl,any	7oµ	r36	#3^				jew,crf			95	dmg-minion				3	6																									r36																													qul																													0
+New Jewelcraft Recipe	1				3	183	300		4	jewl,any	7oµ	r39	#3^				jew,crf			95	slow-melee				1	1																									r39																													qul																													0
+New Jewelcraft Recipe	1				3	183	350		4	jewl,any	7oµ	r42	#3^				jew,crf			95	res-all-minion				2	4																									r42																													qul																													0
+New Jewelcraft Recipe	1				3	183	350		4	jewl,any	7oµ	r45	#3^				jew,crf			95	dmg-min				6	15																									r45																													qul																													0
+New Jewelcraft Recipe	1				3	183	500		4	jewl,any	7oµ	r50	#3^				jew,crf			95	heal-kill				2	4	mana-kill				2	4																			r50																													qul																													0
+New Jewelcraft Recipe	1				3	183	400		4	jewl,any	7oµ	r48	#3^				jew,crf			95	heal-melee				2	8	mana-melee				2	8																			r48																													qul																													0
+New Jewelcraft Recipe	1				3	183	50		4	jewl,any	7oµ	r03	#4^				jew,crf			95	mag%				6	10																									r03																													#3^																													0
+New Jewelcraft Recipe	1				3	183	50		4	jewl,any	7oµ	r06	#4^				jew,crf			95	res-all				3	5																									r06																													#3^																													0
+New Jewelcraft Recipe	1				3	183	100		4	jewl,any	7oµ	r09	#4^				jew,crf			95	ease				-2	-4																									r09																													#3^																													0
+New Jewelcraft Recipe	1				3	183	100		4	jewl,any	7oµ	r13	#4^				jew,crf			95	ac				21	50																									r13																													#3^																													0
+New Jewelcraft Recipe	1				3	183	150		4	jewl,any	7oµ	r17	#4^				jew,crf			95	addxp				1	2																									r17																													#3^																													0
+New Jewelcraft Recipe	1				3	183	150		4	jewl,any	7oµ	r20	#4^				jew,crf			95	all-stats				3	5																									r20																													#3^																													0
+New Jewelcraft Recipe	1				3	183	200		4	jewl,any	7oµ	r24	#4^				jew,crf			95	hp-minion				4	6																									r24																													#3^																													0
+New Jewelcraft Recipe	1				3	183	200		4	jewl,any	7oµ	r27	#4^				jew,crf			95	dmg-max				4	12																									r27																													#3^																													0
+New Jewelcraft Recipe	1				3	183	250		4	jewl,any	7oµ	r30	#4^				jew,crf			95	lifesteal				1	2	manasteal				1	2																			r30																													#3^																													0
+New Jewelcraft Recipe	1				3	183	250		4	jewl,any	7oµ	r33	#4^				jew,crf			95	extra-all				1	3																									r33																													#3^																													0
+New Jewelcraft Recipe	1				3	183	300		4	jewl,any	7oµ	r36	#4^				jew,crf			95	dmg-minion				3	6																									r36																													#3^																													0
+New Jewelcraft Recipe	1				3	183	300		4	jewl,any	7oµ	r39	#4^				jew,crf			95	slow-melee				1	1																									r39																													#3^																													0
+New Jewelcraft Recipe	1				3	183	350		4	jewl,any	7oµ	r42	#4^				jew,crf			95	res-all-minion				2	4																									r42																													#3^																													0
+New Jewelcraft Recipe	1				3	183	350		4	jewl,any	7oµ	r45	#4^				jew,crf			95	dmg-min				6	15																									r45																													#3^																													0
+New Jewelcraft Recipe	1				3	183	500		4	jewl,any	7oµ	r50	#4^				jew,crf			95	heal-kill				2	4	mana-kill				2	4																			r50																													#3^																													0
+New Jewelcraft Recipe	1				3	183	400		4	jewl,any	7oµ	r48	#4^				jew,crf			95	heal-melee				2	8	mana-melee				2	8																			r48																													#3^																													0
+New Jewelcraft Recipe	1				3	183	50		4	jewl,any	7oµ	r03	#5^				jew,crf			95	mag%				6	10																									r03																													#4^																													0
+New Jewelcraft Recipe	1				3	183	50		4	jewl,any	7oµ	r06	#5^				jew,crf			95	res-all				3	5																									r06																													#4^																													0
+New Jewelcraft Recipe	1				3	183	100		4	jewl,any	7oµ	r09	#5^				jew,crf			95	ease				-2	-4																									r09																													#4^																													0
+New Jewelcraft Recipe	1				3	183	100		4	jewl,any	7oµ	r13	#5^				jew,crf			95	ac				21	50																									r13																													#4^																													0
+New Jewelcraft Recipe	1				3	183	150		4	jewl,any	7oµ	r17	#5^				jew,crf			95	addxp				1	2																									r17																													#4^																													0
+New Jewelcraft Recipe	1				3	183	150		4	jewl,any	7oµ	r20	#5^				jew,crf			95	all-stats				3	5																									r20																													#4^																													0
+New Jewelcraft Recipe	1				3	183	200		4	jewl,any	7oµ	r24	#5^				jew,crf			95	hp-minion				4	6																									r24																													#4^																													0
+New Jewelcraft Recipe	1				3	183	200		4	jewl,any	7oµ	r27	#5^				jew,crf			95	dmg-max				4	12																									r27																													#4^																													0
+New Jewelcraft Recipe	1				3	183	250		4	jewl,any	7oµ	r30	#5^				jew,crf			95	lifesteal				1	2	manasteal				1	2																			r30																													#4^																													0
+New Jewelcraft Recipe	1				3	183	250		4	jewl,any	7oµ	r33	#5^				jew,crf			95	extra-all				1	3																									r33																													#4^																													0
+New Jewelcraft Recipe	1				3	183	300		4	jewl,any	7oµ	r36	#5^				jew,crf			95	dmg-minion				3	6																									r36																													#4^																													0
+New Jewelcraft Recipe	1				3	183	300		4	jewl,any	7oµ	r39	#5^				jew,crf			95	slow-melee				1	1																									r39																													#4^																													0
+New Jewelcraft Recipe	1				3	183	350		4	jewl,any	7oµ	r42	#5^				jew,crf			95	res-all-minion				2	4																									r42																													#4^																													0
+New Jewelcraft Recipe	1				3	183	350		4	jewl,any	7oµ	r45	#5^				jew,crf			95	dmg-min				6	15																									r45																													#4^																													0
+New Jewelcraft Recipe	1				3	183	500		4	jewl,any	7oµ	r50	#5^				jew,crf			95	heal-kill				2	4	mana-kill				2	4																			r50																													#4^																													0
+New Jewelcraft Recipe	1				3	183	400		4	jewl,any	7oµ	r48	#5^				jew,crf			95	heal-melee				2	8	mana-melee				2	8																			r48																													#4^																													0
+New Jewelcraft Recipe	1				3	183	50		4	jewl,any	7oµ	r03	qum				jew,crf			95	mag%				6	10																									r03																													#5^																													0
+New Jewelcraft Recipe	1				3	183	50		4	jewl,any	7oµ	r06	qum				jew,crf			95	res-all				3	5																									r06																													#5^																													0
+New Jewelcraft Recipe	1				3	183	100		4	jewl,any	7oµ	r09	qum				jew,crf			95	ease				-2	-4																									r09																													#5^																													0
+New Jewelcraft Recipe	1				3	183	100		4	jewl,any	7oµ	r13	qum				jew,crf			95	ac				21	50																									r13																													#5^																													0
+New Jewelcraft Recipe	1				3	183	150		4	jewl,any	7oµ	r17	qum				jew,crf			95	addxp				1	2																									r17																													#5^																													0
+New Jewelcraft Recipe	1				3	183	150		4	jewl,any	7oµ	r20	qum				jew,crf			95	all-stats				3	5																									r20																													#5^																													0
+New Jewelcraft Recipe	1				3	183	200		4	jewl,any	7oµ	r24	qum				jew,crf			95	hp-minion				4	6																									r24																													#5^																													0
+New Jewelcraft Recipe	1				3	183	200		4	jewl,any	7oµ	r27	qum				jew,crf			95	dmg-max				4	12																									r27																													#5^																													0
+New Jewelcraft Recipe	1				3	183	250		4	jewl,any	7oµ	r30	qum				jew,crf			95	lifesteal				1	2	manasteal				1	2																			r30																													#5^																													0
+New Jewelcraft Recipe	1				3	183	250		4	jewl,any	7oµ	r33	qum				jew,crf			95	extra-all				1	3																									r33																													#5^																													0
+New Jewelcraft Recipe	1				3	183	300		4	jewl,any	7oµ	r36	qum				jew,crf			95	dmg-minion				3	6																									r36																													#5^																													0
+New Jewelcraft Recipe	1				3	183	300		4	jewl,any	7oµ	r39	qum				jew,crf			95	slow-melee				1	1																									r39																													#5^																													0
+New Jewelcraft Recipe	1				3	183	350		4	jewl,any	7oµ	r42	qum				jew,crf			95	res-all-minion				2	4																									r42																													#5^																													0
+New Jewelcraft Recipe	1				3	183	350		4	jewl,any	7oµ	r45	qum				jew,crf			95	dmg-min				6	15																									r45																													#5^																													0
+New Jewelcraft Recipe	1				3	183	500		4	jewl,any	7oµ	r50	qum				jew,crf			95	heal-kill				2	4	mana-kill				2	4																			r50																													#5^																													0
+New Jewelcraft Recipe	1				3	183	400		4	jewl,any	7oµ	r48	qum				jew,crf			95	heal-melee				2	8	mana-melee				2	8																			r48																													#5^																													0

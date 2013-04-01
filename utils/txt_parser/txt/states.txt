@@ -9,13 +9,13 @@ resistmagic	6		HARDCODED																																																								
 playerbody	7		HARDCODED																																																																					0
 resistall	8		NEPHALEM WEAPONS				1				1							1	1	1																									aura_resistall_front	aura_resistall_back				cast_resistall	rainbowkaboom	lightresist												paladin_aura_salvation	object_barrel_explode							0
 amplifydamage	9		AMPLIFY DAMAGE					1																																					curseamplifydamage					curse_hit		damageresist												necromancer_amplifydamage								0
-burnbabyburn	10		KABRAXIS REWARD					1	1																	1	1	1	1																bloodfire							fireresist							105	100	255	0	0	paladin_aura_holyfire	object_barrel_explode							0
+burnbabyburn	10		KABRAXIS REWARD					1	1																	1	1	1	1																battleorders					battleorderscast									105	100	255	0	0	paladin_aura_holyfire	object_barrel_explode							0
 cold	11		HARDCODED											1																																						velocitypercent							90	108	150	215	255	impact_bluemotize_1								0
 inferno	12		HARDCODED		1																																																																			0
 shellshock	13		FORCE SHOUT																					1																					deaf														13	13	64	64	255	ghost_effect	object_barrel_explode							0
 lordjusticar	14		VESSEL OF JUDGMENT																																										zomgwhyme																			paladin_conversion	object_barrel_explode						146	0
 amazonfury	15		MONSTER PALSHIFT																																										whirlwind							velocitypercent												sorceress_firebolt_impact_1	object_barrel_explode							0
-wefoundawitch	16		BLOOD FURY / I AM RICH				1																																						almightstate					almightcast		passive_fire_mastery							55	100	255	128	128	necromancer_reversevampire	object_barrel_explode							0
+wefoundawitch	16		BLOOD FURY / I AM RICH				1																																						shout					shoutstart		passive_fire_mastery							55	100	255	128	128	necromancer_reversevampire	object_barrel_explode							0
 yaaaaaaaaaargh	17		BLOODHATRED						1		1					1																													blindingrage							hpregen							65	100	255	128	128	barbarian_howl_1	object_barrel_explode							0
 skill_move	18		UNKNOWN																																																																					0
 plasmashield	19		BAAL SHARD CURSE																																										bluedotoverhead					bluedotoverhead		magic_damage_reduction							60	0	128	144	255	paladin_aura_resistlightning	object_barrel_explode							0
@@ -88,7 +88,7 @@ nomanaregen	85				1																																																													
 justhit	86	1			1																																																																			0
 ongoing_thunderdome	87		LIGHTNING ARENA																																										cyclonearmor3front	cyclonearmor3back													44	1	64	192	255		object_barrel_explode						146	0
 killed3	88		BREMMTOWN																																										blackmass	mbwabwa					kaboooooooooom	levelchallenge_kill_check							5	1	255	255	255		object_barrel_explode							0
-behindenemylines	89		COLOSSEUM					1																	1																				darkturbofront						darkturbofront	damagepercent							20	1	0	128	255	tentaclehead_death_1	object_barrel_explode							0
+behindenemylines	89		COLOSSEUM					1																	1																				curseamplifydamage						darkturbofront	damagepercent							20	1	0	128	255	tentaclehead_death_1	object_barrel_explode							0
 blue	90													1																																													100	108	150	215	255									0
 red	91																																																										70	100	255	178	64									0
 death_delay	92																																																																							0
@@ -180,12 +180,12 @@ generic_aura	177		VARIOUS								1																																														
 growl_neutral	178	4	MONSTER SUPERBEAST													1																													sanctuaryfront	sanctuaryback	spirit_of_barbs			crashedneonlight		damagepercent							80	73	255	96	255	blackfury_active	object_barrel_explode							0
 aura_itemonly	179		CRANE STANCE				1				1					1																													barb_1							damagepercent												barbarian_warcry_1								0
 amazinggrace	180		AMAZING GRACE				1									1																													amazinggrace							passive_dodge																				0
-slayed	181		SLAYER OVERLAY																																										slayercloud					slayercloud									80	73	255	0	0									0
+slayed	181		SLAYER OVERLAY																																										slayercloud					slayercloud		passive2							80	73	255	0	0									0
 flashblast	182		FLASH GRAPHIC																																										flashfront	flashback													115	108	0	0	255									0
 bloodflashblast	183		BLOODFLASH GRAPHIC																																										bloodflashfront	bloodflashback													115	100	255	0	0									0
 porkulator	184		PORKULATOR			1		1					1																													1								curse_hit														sandmaggot_emerge	object_barrel_explode	1	1747					0
 healingeffect	185		LIFEBLOOD																																										appleongoing					appleheal		hpregen													object_barrel_explode							0
-meslayer	186		DARK KING																																										slayercloud					mooncast		passive2							80	1	255	128	128	sorceress_thunder_cast	object_barrel_explode							0
+meslayer	186		ANCIENT REP																																										battlecommand					battlecommandcast									80	1	255	128	128	sorceress_thunder_cast	object_barrel_explode							0
 elempot	187	6					1																																						potrunning					potactivate	potdeactivate	item_allskills												sorceress_thunder_cast	object_barrel_explode							0
 concpot	188	6					1																																						potrunning					potactivate	potdeactivate	profession_duration_mod												sorceress_thunder_cast	object_barrel_explode							0
 tritonstate	189	3	1.B9 NEW STATE			1	1					1	1			1																										1								mooncast	mooncast	damagepercent							50	1	192	255	192	andariel_rock_1	object_barrel_explode	1	1687					0

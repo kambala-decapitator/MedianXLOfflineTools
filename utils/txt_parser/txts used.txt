@@ -1,0 +1,1 @@
+armor, charstats, cubemain, gems, itemstatcost, itemtypes, misc, monstats, properties, runes, setitems, skilldesc, skills, uniqueitems, weapons

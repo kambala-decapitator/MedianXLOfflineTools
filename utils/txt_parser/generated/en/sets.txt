@@ -64,21 +64,21 @@
 189	Nature's Vigil	Caoi Dulra
 190	Nature's Will	Caoi Dulra
 191	Nature's Wrath	Caoi Dulra
-192	Emerald Growth	Rainbow Warrior
-193	Emerald Sky	Rainbow Warrior
-194	Emerald Cloud	Rainbow Warrior
-195	Emerald Earth	Rainbow Warrior
-196	Emerald Flower	Rainbow Warrior
+192	MREmerald Growth2	Rainbow Warrior
+193	MREmerald Sky2	Rainbow Warrior
+194	MREmerald Cloud2	Rainbow Warrior
+195	MREmerald Earth2	Rainbow Warrior
+196	MREmerald Flower2	Rainbow Warrior
 197	Lone Wolf's Track	Lone Wolf's Path
 198	Lone Wolf's Claws	Lone Wolf's Path
 199	Lone Wolf's Gaze	Lone Wolf's Path
 200	Lone Wolf's Fur	Lone Wolf's Path
 201	Lone Wolf's Maul	Lone Wolf's Path
-202	Scosglen's Legends	Sacred Earth
-203	Scosglen's History	Sacred Earth
-204	Scosglen's Tales	Sacred Earth
-205	Scosglen's Fables	Sacred Earth
-206	Scosglen's Myths	Sacred Earth
+202	MRScosglen's Legends2	Sacred Earth
+203	MRScosglen's History2	Sacred Earth
+204	MRScosglen's Tales2	Sacred Earth
+205	MRScosglen's Fables2	Sacred Earth
+206	MRScosglen's Myths2	Sacred Earth
 207	Rathma's Chase	Rathma's Empire
 208	Rathma's Trap	Rathma's Empire
 209	Rathma's Death Gaze	Rathma's Empire
@@ -119,11 +119,11 @@
 244	Imperius' Aura	Imperius' Edict
 245	Imperius' Radiance	Imperius' Edict
 246	Imperius' Sky Hammer	Imperius' Edict
-247	Warmage's Wake	Warmage's Wrath
-248	Warmage's Conjuration	Warmage's Wrath
-249	Warmage's Breath	Warmage's Wrath
-250	Warmage's Flameshroud	Warmage's Wrath
-251	Warmage's Fireblade	Warmage's Wrath
+247	MRWarmage's Wake2	Warmage's Wrath
+248	MRWarmage's Conjuration2	Warmage's Wrath
+249	MRWarmage's Breath2	Warmage's Wrath
+250	MRWarmage's Flameshroud2	Warmage's Wrath
+251	MRWarmage's Fireblade2	Warmage's Wrath
 252	Zann Esu's Rune Loop	Zann Esu's Secrets
 253	Zann Esu's Mysteries	Zann Esu's Secrets
 254	Zann Esu's Robes	Zann Esu's Secrets
@@ -171,27 +171,3 @@
 296	Apeskull	Testament of the Apes
 297	Apehand	Testament of the Apes
 298	Apefoot	Testament of the Apes
-299	Laz's Chasuble	\orange;[BrotherLaz Tribute Set]\n\gold;Archbishop Lazarus
-300	Laz's Surplice Cap	\orange;[BrotherLaz Tribute Set]\n\gold;Archbishop Lazarus
-301	Laz's Votive Lamp	\orange;[BrotherLaz Tribute Set]\n\gold;Archbishop Lazarus
-303	xarugas' Dominion	\orange;[Community Tribute Set]\n\gold;All Is One
-305	Stealthmaster's Triumph	\orange;[Community Tribute Set]\n\gold;All Is One
-306	Greg's Silent Scream	\orange;[Community Tribute Set]\n\gold;All Is One
-308	\gold;Natasha, the Assassin	\orange;[MarcoNecroX Tribute Set]\n\gold;Cowboys From Hell
-309	\gold;fearless, the Barbarian	\orange;[MarcoNecroX Tribute Set]\n\gold;Cowboys From Hell
-310	\gold;MISSINGNO, the Paladin	\orange;[MarcoNecroX Tribute Set]\n\gold;Cowboys From Hell
-311	\gold;Zoology, the Amazon	\orange;[MarcoNecroX Tribute Set]\n\gold;Cowboys From Hell
-312	\gold;Tanya, the Sorceress	\orange;[MarcoNecroX Tribute Set]\n\gold;Cowboys From Hell
-314	Laz's Lamen	\orange;[BrotherLaz Tribute Set]\n\gold;Archbishop Lazarus
-316	Segolia's Fenrir's Mercy	\orange;[Community Tribute Set]\n\gold;All Is One
-317	rad's Guerrilla Warfare 	\orange;[Community Tribute Set]\n\gold;All Is One
-318	Horazon's Guard	Brotherhood of the Vizjerei
-319	Valthek's Blade	Brotherhood of the Vizjerei
-320	Nor Tiraj's Safeguard	Brotherhood of the Vizjerei
-321	Quov Tsin's Crown	Brotherhood of the Vizjerei
-322	Bartuc's Blood	Brotherhood of the Vizjerei
-323	Zoltun's Gauntlets	Brotherhood of the Horadrim
-324	Radament's Greaves	Brotherhood of the Horadrim
-325	Jered Cain's Diamond	Brotherhood of the Horadrim
-326	Deckard Cain's Gem	Brotherhood of the Horadrim
-327	Tal Rasha's Talisman	Brotherhood of the Horadrim
