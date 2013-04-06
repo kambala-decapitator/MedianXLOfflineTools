@@ -49,7 +49,7 @@
 
 [b]Загрузки[/b]:
 [list][*][i][B]Windows[/B][/i] (XP SP 2 и позже; требуется vcredist2012): [url]http://www.mediafire.com/download.php?d1jf4hzgxgwlh33[/url] (если вам лень нагуглить vcredist2010, то просто положите [URL="http://www.mediafire.com/download.php?4uv0lsfa1pd5pi4"]эти дллки[/URL] возле MedianXLOfflineTools.exe)
-[*][i][B]Mac OS X[/B][/i] (10.5 и позже; универсальное приложение): [url]http://www.mediafire.com/download.php?2hds8hr8hvvjrur[/url]
+[*][i][B]Mac OS X[/B][/i] (10.5 и позже; универсальное приложение): [url]http://www.mediafire.com/download.php?2hds8hr8hvvjrur[/url] (если вы не можете распаковать архив, то используйте [URL="http://www.mediafire.com/?nyaswdajy8idhou"]вот этот[/URL])
 [*][I][B]Инструменты для перевода[/B][/I] (следуйте инструкциям внутри архива, правда, они на английском): [url]http://www.mediafire.com/?4qm9t8ba9w35k9i[/url]
 [*]-----
 [*][B][I]Данные мода[/I][/B] (Windows — просто распаковать в папку с экзэшником; Mac OS X — распаковать куда угодно и переместить [B]содержимое папки 'resources/data', а не саму папку 'data'[/B], в 'MedianXLOfflineTools.app/Contents/Resources/data'):
@@ -57,7 +57,7 @@
 [*][url=http://www.mediafire.com/download.php?t006u85c82wol85]Ω (Омега) 003[/url]
 [*][url=http://www.mediafire.com/download.php?a5bma6lcza6u7ut]2012 005 + Лабиринт Кейджан + Тафамет против Ану[/url] (включены в текущий релиз)
 [*][url=http://www.mediafire.com/download.php?y2gxeaizzud38ze]Ultimative 4[/url]
-[*][url=http://www.mediafire.com/?va8hmmw24gvalw5]Ultimative 6d[/url] (можно использовать с версией 5 и выше)
+[*][url=http://www.mediafire.com/?25h8ikeb994i23j]Ultimative 7[/url] (можно использовать с версией 5 и выше)
 [/LIST][/list]
 
 

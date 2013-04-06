@@ -1,2 +1,2 @@
-readable	Ultimative v6d
+readable	Ultimative v7
 planner	2012005
