@@ -34,7 +34,7 @@ public:
     quint8 socketablesNumber, ilvl, quality, variableGraphicIndex;
     int nonMagicType;                     // quality == 1 || quality == 3 (low quality or superior)
     int setOrUniqueId;                    // key to get SetItemInfo or UniqueItemInfo
-    QByteArray inscribedName;                // isPersonalized == true
+    QByteArray inscribedName;             // isPersonalized == true
     int defense;                          // itemBase.genericType == Enums::ItemType::Armor
     int currentDurability, maxDurability; // itemBase.genericType != Enums::ItemTypeGeneric::Misc
     int quantity;                         // itemBase.isStackable == true
@@ -54,12 +54,14 @@ public:
         Ok
     } status;
 
+    bool shouldDeleteEverything; // set to false in DupeCheckDialog
+
     ItemInfo() { init(); }
     ItemInfo(const QString &bits) : bitString(bits) { init(); }
-    ~ItemInfo() { qDeleteAll(props); qDeleteAll(rwProps); qDeleteAll(socketablesInfo); }
+    ~ItemInfo() { if (shouldDeleteEverything) { qDeleteAll(props); qDeleteAll(rwProps); qDeleteAll(socketablesInfo); } }
 
 private:
-    void init() { plugyPage = 0; hasChanged = false; ilvl = 1; variableGraphicIndex = 0; location = row = column = storage = -1; whereEquipped = 0; }
+    void init() { plugyPage = 0; hasChanged = false; ilvl = 1; variableGraphicIndex = 0; location = row = column = storage = -1; whereEquipped = 0; shouldDeleteEverything = true; }
 };
 
 

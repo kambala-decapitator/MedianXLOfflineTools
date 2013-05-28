@@ -6,6 +6,7 @@ v0.4:
 - generate some bbcode/html report about character and/or plugy stashes contents
 - mass disenchant (multiple selection) - maybe
 - export item to bbcode/html
+- +%d magic damage
 
 future versions:
 - when reloading character, explicitly reload shared stashes that were modified

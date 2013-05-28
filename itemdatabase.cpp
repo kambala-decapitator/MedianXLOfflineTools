@@ -631,7 +631,7 @@ bool ItemDataBase::isClassCharm(ItemInfo *item)
 
 bool ItemDataBase::isUberCharm(ItemInfo *item)
 {
-    return ItemParser::itemTypesInheritFromType(Items()->value(item->itemType)->types, "char");
+    return item->isEar ? false : ItemParser::itemTypesInheritFromType(Items()->value(item->itemType)->types, "char");
 }
 
 bool ItemDataBase::isGenericSocketable(ItemInfo *item)

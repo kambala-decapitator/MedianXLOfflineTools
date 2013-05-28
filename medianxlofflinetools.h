@@ -10,6 +10,8 @@
 #include <QMultiHash>
 #include <QPointer>
 
+#define DUPE_CHECK
+
 
 class ItemsViewerDialog;
 class FindItemsDialog;
@@ -45,7 +47,8 @@ public:
     virtual ~MedianXLOfflineTools();
 
 public slots:
-    bool loadFile(const QString &charPath);
+    bool loadFile(const QString &charPath, bool shouldCheckExtension = true);
+    void loadFileSkipExtensionCheck(const QString &charPath);
 
 protected:
     virtual void closeEvent(QCloseEvent *e);
@@ -70,6 +73,9 @@ private slots:
     void openRecentFile();
     void reloadCharacter(bool notify = true);
     void saveCharacter();
+#ifdef DUPE_CHECK
+    void showDupeCheck();
+#endif
 
     // edit
     void statChanged(int newValue);

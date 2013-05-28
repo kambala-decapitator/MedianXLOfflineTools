@@ -17,6 +17,9 @@
 #include "fileassociationmanager.h"
 #include "messagecheckbox.h"
 #include "experienceindicatorgroupbox.h"
+#ifdef DUPE_CHECK
+#include "dupescandialog.h"
+#endif
 
 #include <QCloseEvent>
 #include <QDropEvent>
@@ -194,6 +197,13 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *pare
 #endif
         updateWindowTitle();
     }
+
+#ifdef DUPE_CHECK
+    QAction *dupeCheckAction = new QAction("Dupe Check", this);
+    dupeCheckAction->setShortcut(QKeySequence("Ctrl+D"));
+    connect(dupeCheckAction, SIGNAL(triggered()), SLOT(showDupeCheck()));
+    ui->menuFile->insertAction(ui->actionSaveCharacter, dupeCheckAction);
+#endif
 }
 
 MedianXLOfflineTools::~MedianXLOfflineTools()
@@ -204,10 +214,10 @@ MedianXLOfflineTools::~MedianXLOfflineTools()
 
 // slots
 
-bool MedianXLOfflineTools::loadFile(const QString &charPath)
+bool MedianXLOfflineTools::loadFile(const QString &charPath, bool shouldCheckExtension)
 {
     bool unsupportedFile = !charPath.endsWith(kCharacterExtensionWithDot);
-    if (charPath.isEmpty() || unsupportedFile || !maybeSave())
+    if (charPath.isEmpty() || shouldCheckExtension && unsupportedFile || !maybeSave())
     {
         if (!charPath.isEmpty() && unsupportedFile)
             ERROR_BOX(tr("'%1' files are not supported", "param is file extension").arg(charPath.right(4)));
@@ -224,11 +234,14 @@ bool MedianXLOfflineTools::loadFile(const QString &charPath)
     bool result;
     if ((result = processSaveFile()))
     {
-        addToRecentFiles();
-        updateUI();
+        if (shouldCheckExtension) // disable UI updates when checking for dupes
+        {
+            addToRecentFiles();
+            updateUI();
 
-        raise();
-        activateWindow();
+            raise();
+            activateWindow();
+        }
 
         // it is here because currentIndexChanged signal is emitted when items are added to the combobox
         connect(ui->mercTypeComboBox, SIGNAL(currentIndexChanged(int)), SLOT(modify()));
@@ -264,6 +277,11 @@ bool MedianXLOfflineTools::loadFile(const QString &charPath)
         _findItemsDialog->clearResults();
 
     return result;
+}
+
+void MedianXLOfflineTools::loadFileSkipExtensionCheck(const QString &charPath)
+{
+    loadFile(charPath, false);
 }
 
 void MedianXLOfflineTools::switchLanguage(QAction *languageAction)
@@ -1701,7 +1719,11 @@ bool MedianXLOfflineTools::processSaveFile()
 #ifndef DISABLE_CRC_CHECK
     if (fileChecksum != computedChecksum)
     {
+#ifndef DUPE_CHECK
         ERROR_BOX(tr("Character checksum doesn't match. Looks like it's corrupted."));
+#else
+        clearItems();
+#endif
         return false;
     }
 #endif
@@ -1720,7 +1742,11 @@ bool MedianXLOfflineTools::processSaveFile()
 
     if (!(status & Enums::StatusBits::IsExpansion))
     {
+#ifndef DUPE_CHECK
         ERROR_BOX(tr("This is not Expansion character."));
+#else
+        clearItems();
+#endif
         return false;
     }
     charInfo.basicInfo.isHardcore = status & Enums::StatusBits::IsHardcore;
@@ -1900,7 +1926,9 @@ bool MedianXLOfflineTools::processSaveFile()
         {
             if (statValue > Enums::CharacterStats::SignetsOfLearningMax + 1 && !wasHackWarningShown)
             {
+#ifndef DUPE_CHECK
                 WARNING_BOX(hackerDetected);
+#endif
                 wasHackWarningShown = true;
             }
             statValue = Enums::CharacterStats::SignetsOfLearningMax;
@@ -1909,7 +1937,9 @@ bool MedianXLOfflineTools::processSaveFile()
         {
             if (statValue > Enums::CharacterStats::SignetsOfSkillMax + 1 && !wasHackWarningShown)
             {
+#ifndef DUPE_CHECK
                 WARNING_BOX(hackerDetected);
+#endif
                 wasHackWarningShown = true;
             }
             statValue = Enums::CharacterStats::SignetsOfSkillMax;
@@ -1942,7 +1972,9 @@ bool MedianXLOfflineTools::processSaveFile()
         charInfo.setValueForStatisitc(totalPossibleStats, Enums::CharacterStats::FreeStatPoints);
         if (!wasHackWarningShown)
         {
+#ifndef DUPE_CHECK
             WARNING_BOX(hackerDetected);
+#endif
             wasHackWarningShown = true;
         }
     }
@@ -1970,7 +2002,9 @@ bool MedianXLOfflineTools::processSaveFile()
             _saveFileContents.replace(charInfo.skillsOffset + 2, skillsNumber, QByteArray(skillsNumber, 0));
             if (!wasHackWarningShown)
             {
+#ifndef DUPE_CHECK
                 WARNING_BOX(hackerDetected);
+#endif
                 wasHackWarningShown = true;
             }
         }
@@ -2035,7 +2069,9 @@ bool MedianXLOfflineTools::processSaveFile()
         QString avoidText = tr("100% avoid is kewl");
         if (avoidValue > 100)
             avoidText += QString(" (%1)").arg(tr("well, you have %1% actually", "avoid").arg(avoidValue));
+#ifndef DUPE_CHECK
         WARNING_BOX(avoidText);
+#endif
     }
 
     // corpse data
@@ -2047,7 +2083,8 @@ bool MedianXLOfflineTools::processSaveFile()
         quint16 corpseItemsTotal;
         inputDataStream >> corpseItemsTotal;
         ItemsList corpseItems;
-        ItemParser::parseItemsToBuffer(corpseItemsTotal, inputDataStream, _saveFileContents.left(_saveFileContents.indexOf(kMercHeader)), tr("Corrupted item detected in %1 in slot %4"), &corpseItems);
+        ItemParser::parseItemsToBuffer(corpseItemsTotal, inputDataStream, _saveFileContents.left(_saveFileContents.indexOf(kMercHeader, inputDataStream.device()->pos())),
+                                       tr("Corrupted item detected in %1 in slot %4"), &corpseItems);
         foreach (ItemInfo *item, corpseItems)
             item->location = Enums::ItemLocation::Corpse;
         itemsBuffer += corpseItems;
@@ -2085,40 +2122,6 @@ bool MedianXLOfflineTools::processSaveFile()
         ERROR_BOX(tr("Save file is not terminated correctly!"));
         return false;
     }
-
-    // check for dupes
-    //qDebug() << QFileInfo(_charPath).fileName() << "dupe stats";
-    //ItemsList checkedItems;
-    //for (int i = 0, n = itemsBuffer.size(); i < n - 1; ++i)
-    //{
-    //    ItemInfo *iItem = itemsBuffer.at(i);
-    //    bool alreadyChecked = false;
-    //    foreach (ItemInfo *item, checkedItems)
-    //        if (iItem->guid == item->guid)
-    //        {
-    //            alreadyChecked = true;
-    //            break;
-    //        }
-    //    if (alreadyChecked)
-    //    {
-    //        continue;
-    //    }
-
-    //    if (iItem->isExtended)
-    //    {
-    //        for (int j = i + 1; j < n; ++j)
-    //        {
-    //            ItemInfo *jItem = itemsBuffer.at(j);
-    //            if (jItem->isExtended && iItem->guid == jItem->guid)
-    //            {
-    //                checkedItems += iItem;
-    //                qDebug() << "duped items found: GUID" << iItem->guid << "item type" << iItem->itemType
-    //                         << ItemParser::itemStorageAndCoordinatesString("item1: location %1, row %2, col %3, equipped in %4", iItem)
-    //                         << ItemParser::itemStorageAndCoordinatesString("item2: location %1, row %2, col %3, equipped in %4", jItem);
-    //            }
-    //        }
-    //    }
-    //}
 
     // parse plugy stashes
     QString oldSharedStashPath = _plugyStashesHash[Enums::ItemStorage::SharedStash].path, oldHCStashPath = _plugyStashesHash[Enums::ItemStorage::HCStash].path;
@@ -2874,3 +2877,20 @@ void MedianXLOfflineTools::fileChangeTimerFired()
 
     delete _fileChangeTimer; _fileChangeTimer = 0;
 }
+
+#ifdef DUPE_CHECK
+void MedianXLOfflineTools::showDupeCheck()
+{
+    if (_itemsDialog)
+        _itemsDialog->close();
+
+    bool isOpenItemsOptionChecked = ui->actionOpenItemsAutomatically->isChecked();
+    ui->actionOpenItemsAutomatically->setChecked(false);
+
+    DupeScanDialog dlg(_charPath, this);
+    connect(&dlg, SIGNAL(loadFile(QString)), SLOT(loadFileSkipExtensionCheck(QString)), Qt::BlockingQueuedConnection);
+    dlg.exec();
+
+    ui->actionOpenItemsAutomatically->setChecked(isOpenItemsOptionChecked);
+}
+#endif

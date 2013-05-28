@@ -261,10 +261,13 @@ public:
     };
 };
 
-class ItemQuality
+class ItemQuality : public QObject
 {
+    Q_OBJECT
+    Q_ENUMS(ItemQualityEnum)
+
 public:
-    enum
+    enum ItemQualityEnum
     {
         LowQuality = 1,
         Normal,
@@ -295,7 +298,7 @@ public:
         HCStash
     };
 
-    static QMetaEnum metaEnum() { return metaEnumFromName<Enums::ItemStorage>("ItemStorageEnum"); }
+    static QMetaEnum metaEnum() { return metaEnumFromName<ItemStorage>("ItemStorageEnum"); }
 };
 
 class ItemLocation

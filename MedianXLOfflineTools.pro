@@ -57,7 +57,8 @@ SOURCES += main.cpp \
            kexpandablegroupbox.cpp \
            showselecteditemdelegate.cpp \
            disenchantpreviewdialog.cpp \
-           disenchantpreviewmodel.cpp
+           disenchantpreviewmodel.cpp \
+           dupescandialog.cpp
 
 HEADERS += medianxlofflinetools.h \
            resurrectpenaltydialog.h \
@@ -97,7 +98,8 @@ HEADERS += medianxlofflinetools.h \
            progressbarmodal.hpp \
            itemnamestreewidget.hpp \
            disenchantpreviewmodel.h \
-           checkboxsortfilterproxymodel.hpp
+           checkboxsortfilterproxymodel.hpp \
+           dupescandialog.h
 
 FORMS += medianxlofflinetools.ui \
          resurrectpenaltydialog.ui \

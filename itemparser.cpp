@@ -28,11 +28,13 @@ QString ItemParser::parseItemsToBuffer(quint16 itemsTotal, QDataStream &inputDat
     QString corruptedItemsString;
     for (quint16 i = 0; i < itemsTotal; ++i)
     {
-        ItemInfo *item = ItemParser::parseItem(inputDataStream, bytes);
-        itemsBuffer->append(item);
+        if (ItemInfo *item = ItemParser::parseItem(inputDataStream, bytes))
+        {
+            itemsBuffer->append(item);
 
-        if (item->status != ItemInfo::Ok)
-            corruptedItemsString += itemStorageAndCoordinatesString(corruptedItemFormat, item) + "\n";
+            if (item->status != ItemInfo::Ok)
+                corruptedItemsString += itemStorageAndCoordinatesString(corruptedItemFormat, item) + "\n";
+        }
     }
     if (itemsBuffer->size() != itemsTotal)
         qDebug("should be %u items, got %d", itemsTotal, itemsBuffer->size());
@@ -107,9 +109,9 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
             }
             item->storage = bitReader.readNumber(3);
 
-            for (int i = 0; i < 3; ++i)
+            for (int i = 0; i < 4; ++i)
                 item->itemType += static_cast<quint8>(bitReader.readNumber(8));
-            bitReader.skip(8); // skip last space (byte 4 at 84-92)
+            item->itemType = item->itemType.trimmed();
 
             if (item->isExtended)
             {
@@ -280,7 +282,7 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
         }
     } while (status != ItemInfo::Ok && ++attempt < 2);
 
-    if ((item->status = status) != ItemInfo::Ok)
+    if (!item || (item->status = status) != ItemInfo::Ok)
     {
         qDebug("current offset %lld", inputDataStream.device()->pos());
         inputDataStream.device()->seek(searchEndOffset - 1);
@@ -368,7 +370,15 @@ PropertiesMultiMap ItemParser::parseItemProperties(ReverseBitReader &bitReader, 
                 propToAdd->displayString = tr("+%1 to %2 Skill Levels", "+x to class skills").arg(propToAdd->value).arg(propToAdd->param < Enums::ClassName::classes().size() ? Enums::ClassName::classes().at(propToAdd->param) : "WTF");
             else if (id == 97 || id == 107)
             {
-                SkillInfo *skill = ItemDataBase::Skills()->at(propToAdd->param);
+                SkillInfo *skill;
+                if (propToAdd->param < ItemDataBase::Skills()->size())
+                    skill = ItemDataBase::Skills()->at(propToAdd->param);
+                else
+                {
+                    skill = new SkillInfo;
+                    skill->name = "REALM-ONLY SKILL";
+                    skill->classCode = -1;
+                }
                 propToAdd->displayString = tr("+%1 to %2", "oskill").arg(propToAdd->value).arg(skill->name);
                 if (id == 107)
                     propToAdd->displayString += " " + tr("(%1 Only)", "class-specific skill").arg(skill->classCode > -1 ? Enums::ClassName::classes().at(skill->classCode) : "TROLOLOL");
