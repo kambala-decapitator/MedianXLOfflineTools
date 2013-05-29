@@ -144,9 +144,6 @@
     <ClCompile Include="GeneratedFiles\Release\moc_finditemsdialog.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
-    <ClCompile Include="GeneratedFiles\Template\moc_finditemsdialog.cpp">
-      <Filter>Generated Files\Template</Filter>
-    </ClCompile>
     <ClCompile Include="finditemsdialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -171,9 +168,6 @@
     <ClCompile Include="GeneratedFiles\Release\moc_findresultswidget.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
-    <ClCompile Include="GeneratedFiles\Template\moc_findresultswidget.cpp">
-      <Filter>Generated Files\Template</Filter>
-    </ClCompile>
     <ClCompile Include="findresultswidget.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -186,9 +180,6 @@
     <ClCompile Include="GeneratedFiles\Release\moc_skillplandialog.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
-    <ClCompile Include="GeneratedFiles\Template\moc_skillplandialog.cpp">
-      <Filter>Generated Files\Template</Filter>
-    </ClCompile>
     <ClCompile Include="application.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -197,9 +188,6 @@
     </ClCompile>
     <ClCompile Include="GeneratedFiles\Release\moc_application.cpp">
       <Filter>Generated Files\Release</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Template\moc_application.cpp">
-      <Filter>Generated Files\Template</Filter>
     </ClCompile>
     <ClCompile Include="medianxlofflinetools_win.cpp">
       <Filter>Source Files</Filter>
@@ -210,9 +198,6 @@
     <ClCompile Include="GeneratedFiles\Release\moc_qtlocalpeer.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
-    <ClCompile Include="GeneratedFiles\Template\moc_qtlocalpeer.cpp">
-      <Filter>Generated Files\Template</Filter>
-    </ClCompile>
     <ClCompile Include="qtsingleapplication\qtsingleapplication.cpp">
       <Filter>qtsingleapplication</Filter>
     </ClCompile>
@@ -221,9 +206,6 @@
     </ClCompile>
     <ClCompile Include="GeneratedFiles\Release\moc_qtsingleapplication.cpp">
       <Filter>Generated Files\Release</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Template\moc_qtsingleapplication.cpp">
-      <Filter>Generated Files\Template</Filter>
     </ClCompile>
     <ClCompile Include="qtsingleapplication\qtlocalpeer.cpp">
       <Filter>qtsingleapplication</Filter>
@@ -240,9 +222,6 @@
     <ClCompile Include="GeneratedFiles\Release\moc_experienceindicatorgroupbox.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
-    <ClCompile Include="GeneratedFiles\Template\moc_experienceindicatorgroupbox.cpp">
-      <Filter>Generated Files\Template</Filter>
-    </ClCompile>
     <ClCompile Include="messagecheckbox_p.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -255,9 +234,6 @@
     <ClCompile Include="GeneratedFiles\Release\moc_plugyitemssplitter.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
-    <ClCompile Include="GeneratedFiles\Template\moc_plugyitemssplitter.cpp">
-      <Filter>Generated Files\Template</Filter>
-    </ClCompile>
     <ClCompile Include="gearitemssplitter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -267,17 +243,11 @@
     <ClCompile Include="GeneratedFiles\Release\moc_gearitemssplitter.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
-    <ClCompile Include="GeneratedFiles\Template\moc_gearitemssplitter.cpp">
-      <Filter>Generated Files\Template</Filter>
-    </ClCompile>
     <ClCompile Include="GeneratedFiles\Debug\moc_kexpandablegroupbox.cpp">
       <Filter>Generated Files\Debug</Filter>
     </ClCompile>
     <ClCompile Include="GeneratedFiles\Release\moc_kexpandablegroupbox.cpp">
       <Filter>Generated Files\Release</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Template\moc_kexpandablegroupbox.cpp">
-      <Filter>Generated Files\Template</Filter>
     </ClCompile>
     <ClCompile Include="kexpandablegroupbox.cpp">
       <Filter>Source Files</Filter>
@@ -291,17 +261,11 @@
     <ClCompile Include="GeneratedFiles\Release\moc_disenchantpreviewdialog.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
-    <ClCompile Include="GeneratedFiles\Template\moc_disenchantpreviewdialog.cpp">
-      <Filter>Generated Files\Template</Filter>
-    </ClCompile>
     <ClCompile Include="GeneratedFiles\Debug\moc_showselecteditemdelegate.cpp">
       <Filter>Generated Files\Debug</Filter>
     </ClCompile>
     <ClCompile Include="GeneratedFiles\Release\moc_showselecteditemdelegate.cpp">
       <Filter>Generated Files\Release</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Template\moc_showselecteditemdelegate.cpp">
-      <Filter>Generated Files\Template</Filter>
     </ClCompile>
     <ClCompile Include="showselecteditemdelegate.cpp">
       <Filter>Source Files</Filter>
@@ -312,17 +276,11 @@
     <ClCompile Include="GeneratedFiles\Release\moc_itemnamestreewidget.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
-    <ClCompile Include="GeneratedFiles\Template\moc_itemnamestreewidget.cpp">
-      <Filter>Generated Files\Template</Filter>
-    </ClCompile>
     <ClCompile Include="GeneratedFiles\Debug\moc_progressbarmodal.cpp">
       <Filter>Generated Files\Debug</Filter>
     </ClCompile>
     <ClCompile Include="GeneratedFiles\Release\moc_progressbarmodal.cpp">
       <Filter>Generated Files\Release</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Template\moc_progressbarmodal.cpp">
-      <Filter>Generated Files\Template</Filter>
     </ClCompile>
     <ClCompile Include="disenchantpreviewmodel.cpp">
       <Filter>Source Files</Filter>
@@ -335,9 +293,6 @@
     </ClCompile>
     <ClCompile Include="GeneratedFiles\Release\moc_dupescandialog.cpp">
       <Filter>Generated Files\Release</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Template\moc_dupescandialog.cpp">
-      <Filter>Generated Files\Template</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -499,9 +454,6 @@
     <CustomBuild Include="GeneratedFiles\Release\messagecheckbox_p.moc">
       <Filter>Generated Files\Release</Filter>
     </CustomBuild>
-    <CustomBuild Include="GeneratedFiles\Template\messagecheckbox_p.moc">
-      <Filter>Generated Files\Template</Filter>
-    </CustomBuild>
     <CustomBuild Include="plugyitemssplitter.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
@@ -516,9 +468,6 @@
     </CustomBuild>
     <CustomBuild Include="GeneratedFiles\Release\kexpandablegroupbox.moc">
       <Filter>Generated Files\Release</Filter>
-    </CustomBuild>
-    <CustomBuild Include="GeneratedFiles\Template\kexpandablegroupbox.moc">
-      <Filter>Generated Files\Template</Filter>
     </CustomBuild>
     <CustomBuild Include="disenchantpreviewdialog.h">
       <Filter>Header Files</Filter>

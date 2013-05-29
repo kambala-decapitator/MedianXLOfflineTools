@@ -8,7 +8,6 @@
 #include <QTextEdit>
 #include <QPushButton>
 #include <QLabel>
-#include <QDialogButtonBox>
 #include <QHBoxLayout>
 #include <QVBoxLayout>
 #include <QFileDialog>
@@ -35,14 +34,13 @@ DupeScanDialog::DupeScanDialog(const QString &currentPath, QWidget *parent) : QD
     hbl->addWidget(_pathLineEdit);
     hbl->addWidget(browseButton);
 
-    QPushButton *scanButton = new QPushButton("Scan!", this);
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok, Qt::Horizontal, this);
+    QPushButton *scanButton = new QPushButton("Scan!", this), *okButton = new QPushButton("OK", this);
     QHBoxLayout *hbl2 = new QHBoxLayout;
     hbl2->addWidget(scanButton);
     hbl2->addWidget(_saveButton);
     hbl2->addWidget(_dontWriteCheckBox);
     hbl2->addWidget(_progressBar);
-    hbl2->addWidget(buttonBox);
+    hbl2->addWidget(okButton);
 
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->addLayout(hbl);
@@ -54,13 +52,14 @@ DupeScanDialog::DupeScanDialog(const QString &currentPath, QWidget *parent) : QD
     _saveButton->setDisabled(true);
     scanButton->setDefault(true);
     _dontWriteCheckBox->setChecked(true);
+    _progressBar->setAlignment(Qt::AlignHCenter | Qt::AlignVCenter);
 
     resize(600, 400);
 
     connect(browseButton, SIGNAL(clicked()), SLOT(selectPath()));
     connect(scanButton,   SIGNAL(clicked()), SLOT(scan()));
     connect(_saveButton,  SIGNAL(clicked()), SLOT(save()));
-    connect(buttonBox, SIGNAL(accepted()), SLOT(accept()));
+    connect(okButton,     SIGNAL(clicked()), SLOT(accept()));
 }
 
 void DupeScanDialog::selectPath()
@@ -83,7 +82,8 @@ void DupeScanDialog::scan()
 
     _logBrowser->clear();
     _logBrowser->setUpdatesEnabled(false);
-    _progressBar->setRange(0, 0);
+    _progressBar->setMinimum(0);
+    _progressBar->setFormat("%v / %m separate files processed");
     _saveButton->setDisabled(true);
 
     QtConcurrent::run(this, &DupeScanDialog::scanCharactersInDir, path);
@@ -93,9 +93,6 @@ void DupeScanDialog::scanFinished()
 {
     _logBrowser->append("That's all Folks!");
     _logBrowser->setUpdatesEnabled(true);
-
-    _progressBar->setMaximum(1);
-    _progressBar->setValue(1);
 
     _saveButton->setEnabled(true);
     qApp->alert(parentWidget());
@@ -123,6 +120,13 @@ void DupeScanDialog::save()
     f.write((selectedFilter == plainTextFilter ? _logBrowser->toPlainText() : _logBrowser->toHtml()).toUtf8());
 }
 
+void DupeScanDialog::updateProgressbarForCrossCheck(int n)
+{
+    _progressBar->setValue(0);
+    _progressBar->setMaximum(n * (n - 1) / 2);
+    _progressBar->setFormat("cross-check %p%");
+}
+
 void DupeScanDialog::logDupedItemsInfo(ItemInfo *item1, ItemInfo *item2)
 {
     appendStringToLog(QString("'%1': GUID 0x%2 (%3), type '%4', quality %5; %6; %7").arg(ItemDataBase::Items()->value(item1->itemType)->name, QString::number(item1->guid, 16)).arg(item1->guid)
@@ -146,8 +150,13 @@ void DupeScanDialog::scanCharactersInDir(const QString &path)
 
     QFileInfoList list = QDir(path).entryInfoList(QDir::Files);
     list.prepend(QFileInfo(_currentCharPath)); // for currently loaded file
+    QMetaObject::invokeMethod(_progressBar, "setMaximum", Q_ARG(int, list.size()));
+
+    int filesProcessed = 0;
     foreach (const QFileInfo &fileInfo, list)
     {
+        ++filesProcessed;
+
         QString fileName = fileInfo.fileName(), header = QString("%1 dupe stats").arg(fileName);
         if (isFirst)
         {
@@ -214,9 +223,14 @@ void DupeScanDialog::scanCharactersInDir(const QString &path)
 
         if (!_dontWriteCheckBox->isChecked() || dupedItemFound)
             appendStringToLog("========================================");
+
+        QMetaObject::invokeMethod(_progressBar, "setValue", Q_ARG(int, filesProcessed));
     }
 
     appendStringToLog("<br/><b>CROSS-CHARACTER CHECK</b><br/>----------------------------------------");
+    QMetaObject::invokeMethod(this, "updateProgressbarForCrossCheck", Q_ARG(int, allItemsHash.size()));
+
+    filesProcessed = 1;
     for (QHash<QString, ItemsList>::const_iterator iter = allItemsHash.constBegin(); iter != allItemsHash.constEnd() - 1; ++iter)
     {
         dupedItemFound = false;
@@ -224,7 +238,7 @@ void DupeScanDialog::scanCharactersInDir(const QString &path)
             appendStringToLog(iter.key());
 
         const ItemsList &iItems = iter.value();
-        for (QHash<QString, ItemsList>::const_iterator jter = iter + 1; jter != allItemsHash.constEnd(); ++jter)
+        for (QHash<QString, ItemsList>::const_iterator jter = iter + 1; jter != allItemsHash.constEnd(); ++jter, ++filesProcessed)
         {
             isFirst = true;
             foreach (ItemInfo *iItem, iItems)
@@ -254,9 +268,11 @@ void DupeScanDialog::scanCharactersInDir(const QString &path)
 
         if (!_dontWriteCheckBox->isChecked() || dupedItemFound)
             appendStringToLog("========================================");
+
+        QMetaObject::invokeMethod(_progressBar, "setValue", Q_ARG(int, filesProcessed));
     }
 
     foreach (const ItemsList &items, allItemsHash)
         qDeleteAll(items);
-    QMetaObject::invokeMethod(this, "scanFinished", Qt::QueuedConnection);
+    QMetaObject::invokeMethod(this, "scanFinished");
 }

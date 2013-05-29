@@ -28,6 +28,7 @@ private slots:
     void scan();
     void scanFinished();
     void save();
+    void updateProgressbarForCrossCheck(int n);
 
 private:
     QString _currentCharPath;
