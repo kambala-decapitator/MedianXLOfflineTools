@@ -7,6 +7,7 @@ v0.4:
 - mass disenchant (multiple selection) - maybe
 - export item to bbcode/html
 - +%d magic damage
+- replenish life - life per second
 
 future versions:
 - when reloading character, explicitly reload shared stashes that were modified

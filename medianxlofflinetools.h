@@ -10,7 +10,7 @@
 #include <QMultiHash>
 #include <QPointer>
 
-#define DUPE_CHECK
+//#define DUPE_CHECK
 
 
 class ItemsViewerDialog;

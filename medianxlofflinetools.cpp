@@ -1083,7 +1083,7 @@ void MedianXLOfflineTools::aboutApp()
     aboutBox.setWindowTitle(tr("About %1").arg(qApp->applicationName()));
     aboutBox.setIconPixmap(windowIcon().pixmap(64));
     aboutBox.setTextFormat(Qt::RichText);
-    QString appFullName = qApp->applicationName() + " " + qApp->applicationVersion();
+    QString appFullName = qApp->applicationName() + " v" + qApp->applicationVersion();
     aboutBox.setText(QString("<b>%1</b>%2").arg(appFullName, kHtmlLineBreak) + tr("Compiled on: %1").arg(QLocale(QLocale::C).toDateTime(QString(__TIMESTAMP__).simplified(),
                                                                                                                                         "ddd MMM d hh:mm:ss yyyy").toString("dd.MM.yyyy hh:mm:ss")));
     QString email("decapitator@ukr.net");
@@ -1231,13 +1231,13 @@ void MedianXLOfflineTools::createLanguageMenu()
         {
             QTranslator translator;
             translator.load(fileName, LanguageManager::instance().translationsPath);
-            QString language = translator.translate("Language", "English", "Your language name");
+
+            QString locale = fileName.mid(fileName.indexOf('_') + 1, 2), language = translator.translate("Language", "English", "Your language name");
             if (language.isEmpty())
                 language = "English";
 
             QAction *action = new QAction(language, this);
             action->setCheckable(true);
-            QString locale = fileName.mid(fileName.indexOf('_') + 1, 2);
             action->setStatusTip(locale);
             languageMenu->addAction(action);
             languageActionGroup->addAction(action);
@@ -1877,9 +1877,16 @@ bool MedianXLOfflineTools::processSaveFile()
         ERROR_BOX(tr("Skills data not found!"));
         return false;
     }
-    charInfo.skillsOffset = skillsOffset;
 
-    int statsSize = skillsOffset - Enums::Offsets::StatsData;
+    // apparently "if" can occur multiple times before items section, so we need the last occurrence before skills data
+    int firstItemOffset = _saveFileContents.indexOf(ItemParser::kItemHeader, skillsOffset);
+    while (skillsOffset != -1 && skillsOffset < firstItemOffset - kSkillsNumber)
+    {
+        charInfo.skillsOffset = skillsOffset;
+        skillsOffset = _saveFileContents.indexOf("if", skillsOffset + 1);
+    }
+
+    int statsSize = charInfo.skillsOffset - Enums::Offsets::StatsData;
     QString statsBitData;
     statsBitData.reserve(statsSize * 8);
     for (int i = 0; i < statsSize; ++i)
@@ -1989,7 +1996,7 @@ bool MedianXLOfflineTools::processSaveFile()
         charInfo.basicInfo.skills.reserve(skillsNumber);
         for (int i = 0; i < skillsNumber; ++i)
         {
-            quint8 skillValue = _saveFileContents.at(skillsOffset + 2 + i);
+            quint8 skillValue = _saveFileContents.at(charInfo.skillsOffset + 2 + i);
             skills += skillValue;
             charInfo.basicInfo.skills += skillValue;
             //qDebug() << skillValue << ItemDataBase::Skills()->value(_characterSkillsIndeces[charInfo.basicInfo.classCode].first.at(i)).name;

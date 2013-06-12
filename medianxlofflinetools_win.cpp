@@ -33,7 +33,7 @@ void MedianXLOfflineTools::showFileAssocaitionUI()
     FileAssociationManager::registerApplicationForExtension(kCharacterExtensionWithDot);
 
     IApplicationAssociationRegistrationUI *pAARUI;
-    HRESULT hr = CoCreateInstance(CLSID_ApplicationAssociationRegistrationUI, NULL, CLSCTX_INPROC, IID_PPV_ARGS(&pAARUI));
+    HRESULT hr = ::CoCreateInstance(CLSID_ApplicationAssociationRegistrationUI, NULL, CLSCTX_INPROC, IID_PPV_ARGS(&pAARUI));
     if (SUCCEEDED(hr))
     {
         if (FAILED(hr = pAARUI->LaunchAdvancedAssociationUI(WINAPI_STRING_FROM_QSTRING(qApp->applicationName()))))
@@ -48,7 +48,7 @@ void MedianXLOfflineTools::syncWindowsTaskbarRecentFiles()
 {
 #ifdef WIN_7_OR_LATER
     IApplicationDocumentLists *pADL;
-    HRESULT hr = CoCreateInstance(CLSID_ApplicationDocumentLists, NULL, CLSCTX_INPROC, IID_PPV_ARGS(&pADL));
+    HRESULT hr = ::CoCreateInstance(CLSID_ApplicationDocumentLists, NULL, CLSCTX_INPROC, IID_PPV_ARGS(&pADL));
     if (SUCCEEDED(hr))
     {
         if (SUCCEEDED(hr = pADL->SetAppID(appUserModelID())))
@@ -88,7 +88,7 @@ void MedianXLOfflineTools::removeFromWindowsRecentFiles(const QString &filePath)
 {
 #ifdef WIN_7_OR_LATER
     IApplicationDocumentLists *pADL;
-    HRESULT hr = CoCreateInstance(CLSID_ApplicationDocumentLists, NULL, CLSCTX_INPROC, IID_PPV_ARGS(&pADL));
+    HRESULT hr = ::CoCreateInstance(CLSID_ApplicationDocumentLists, NULL, CLSCTX_INPROC, IID_PPV_ARGS(&pADL));
     if (SUCCEEDED(hr))
     {
         if (SUCCEEDED(hr = pADL->SetAppID(appUserModelID())))

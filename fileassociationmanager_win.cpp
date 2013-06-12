@@ -100,7 +100,7 @@ bool FileAssociationManager::isApplicationDefaultForExtension(const QString &ext
     else
     {
         IApplicationAssociationRegistration *pAAR;
-        HRESULT hr = CoCreateInstance(CLSID_ApplicationAssociationRegistration, NULL, CLSCTX_INPROC, IID_PPV_ARGS(&pAAR));
+        HRESULT hr = ::CoCreateInstance(CLSID_ApplicationAssociationRegistration, NULL, CLSCTX_INPROC, IID_PPV_ARGS(&pAAR));
         if (SUCCEEDED(hr))
         {
             BOOL isDefaultBOOL;
@@ -137,7 +137,7 @@ void FileAssociationManager::makeApplicationDefaultForExtension(const QString &e
     else
     {
         IApplicationAssociationRegistration *pAAR;
-        HRESULT hr = CoCreateInstance(CLSID_ApplicationAssociationRegistration, NULL, CLSCTX_INPROC, IID_PPV_ARGS(&pAAR));
+        HRESULT hr = ::CoCreateInstance(CLSID_ApplicationAssociationRegistration, NULL, CLSCTX_INPROC, IID_PPV_ARGS(&pAAR));
         if ((hasAssociationChanged = SUCCEEDED(hr)))
         {
             hr = pAAR->SetAppAsDefault(WINAPI_STRING_FROM_QSTRING(qApp->applicationName()), WINAPI_STRING_FROM_QSTRING(extensionWithDot), AT_FILEEXTENSION);
