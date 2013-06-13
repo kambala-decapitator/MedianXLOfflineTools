@@ -1,4 +1,5 @@
 v0.4:
+- sort stashes
 - ctc Miasma MO removal (doesn't appear)
 - move mass disenchant to a separate dialog and add more options
 - batch eat signets (add a button)
@@ -7,12 +8,10 @@ v0.4:
 - mass disenchant (multiple selection) - maybe
 - export item to bbcode/html
 - +%d magic damage
-- replenish life - life per second
 
 future versions:
 - when reloading character, explicitly reload shared stashes that were modified
 - new data structure for items - QMap with item storage as a key
-- sort stashes
 - affix rlvl (and maybe names - then modify help text) support
 - nice display of property 'Adds x-y ... damage'
 - unsocket items

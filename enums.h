@@ -226,6 +226,7 @@ public:
         Defence = 31,
         Durability = 72,
         DurabilityMax,
+        ReplenishLife,
         Requirements = 91,
         RequiredLevel = 92,
         DamageToUndead = 122,
@@ -241,6 +242,7 @@ public:
         MaxSlvlIncrease = 479,
         StrengthBasedOnBlessedLifeSlvl = 503,
         DexterityBasedOnBlessedLifeSlvl,
+        ReplenishLifeBasedOnClvl,
         End = 511
     };
 };

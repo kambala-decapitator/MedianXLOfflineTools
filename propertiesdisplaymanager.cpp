@@ -191,8 +191,6 @@ void PropertiesDisplayManager::addProperties(PropertiesMap *mutableProps, const 
 
 void PropertiesDisplayManager::constructPropertyStrings(const PropertiesMap &properties, QMap<quint8, ItemPropertyDisplay> *outDisplayPropertiesMap, bool shouldColor /*= false*/)
 {
-    Q_UNUSED(shouldColor);
-
     QMap<quint8, ItemPropertyDisplay> propsDisplayMap;
     for (PropertiesMap::const_iterator iter = properties.constBegin(); iter != properties.constEnd(); ++iter)
     {
@@ -208,6 +206,14 @@ void PropertiesDisplayManager::constructPropertyStrings(const PropertiesMap &pro
         QString displayString = prop->displayString.isEmpty() ? propertyDisplay(prop, propId, shouldColor) : prop->displayString;
         if (!displayString.isEmpty())
         {
+            if (propId == Enums::ItemProperties::ReplenishLife || propId == Enums::ItemProperties::ReplenishLifeBasedOnClvl)
+            {
+                double lifePerSec = prop->value / 256.0;
+                if (propId == Enums::ItemProperties::ReplenishLifeBasedOnClvl)
+                    lifePerSec /= 32;
+                displayString += QString(" (%1)").arg(tr("%1 life per second").arg(lifePerSec, 0, 'f', 3));
+            }
+
             quint8 descPriority = ItemDataBase::Properties()->value(propId)->descPriority;
             propsDisplayMap.insertMulti(descPriority, ItemPropertyDisplay(displayString, descPriority, propId));
         }
