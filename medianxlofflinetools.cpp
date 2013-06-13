@@ -217,7 +217,7 @@ MedianXLOfflineTools::~MedianXLOfflineTools()
 bool MedianXLOfflineTools::loadFile(const QString &charPath, bool shouldCheckExtension)
 {
     bool unsupportedFile = !charPath.endsWith(kCharacterExtensionWithDot);
-    if (charPath.isEmpty() || shouldCheckExtension && unsupportedFile || !maybeSave())
+    if (charPath.isEmpty() || (shouldCheckExtension && unsupportedFile) || !maybeSave())
     {
         if (!charPath.isEmpty() && unsupportedFile)
             ERROR_BOX(tr("'%1' files are not supported", "param is file extension").arg(charPath.right(4)));
