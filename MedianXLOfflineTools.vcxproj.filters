@@ -38,11 +38,6 @@
       <Extensions>ts</Extensions>
       <ParseFiles>false</ParseFiles>
     </Filter>
-    <Filter Include="Generated Files\Template">
-      <UniqueIdentifier>{d95fb6d8-c645-4f09-8c14-72b20be332ed}</UniqueIdentifier>
-      <Extensions>cpp;moc</Extensions>
-      <SourceControlFiles>False</SourceControlFiles>
-    </Filter>
     <Filter Include="qtsingleapplication">
       <UniqueIdentifier>{4349ff68-037b-4550-a163-aaf749dbc7e5}</UniqueIdentifier>
     </Filter>
@@ -294,6 +289,9 @@
     <ClCompile Include="GeneratedFiles\Release\moc_dupescandialog.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
+    <ClCompile Include="stashsortingoptionsdialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="helpers.h">
@@ -364,6 +362,12 @@
     </ClInclude>
     <ClInclude Include="checkboxsortfilterproxymodel.hpp">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stashsortingoptionsdialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_stashsortingoptionsdialog.h">
+      <Filter>Generated Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -483,6 +487,9 @@
     </CustomBuild>
     <CustomBuild Include="dupescandialog.h">
       <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="stashsortingoptionsdialog.ui">
+      <Filter>Form Files</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>

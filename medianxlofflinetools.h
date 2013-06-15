@@ -85,7 +85,6 @@ private slots:
     void levelChanged(int newClvl);
     void resurrect();
     void convertToSoftcore(bool isSoftcore);
-    //void currentDifficultyChanged(int newDifficulty);
     void findItem();
     void showFoundItem(ItemInfo *item);
 
@@ -135,7 +134,6 @@ private:
     // consts
     QList<quint32> experienceTable;
     QVector<QStringList> mercNames;
-    //const QStringList difficulties;
     const QString hackerDetected, maxValueFormat, minValueFormat, investedValueFormat, kForumThreadHtmlLinks;
 
     bool _isLoaded;

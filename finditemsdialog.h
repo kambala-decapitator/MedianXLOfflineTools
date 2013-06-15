@@ -16,8 +16,6 @@ class FindItemsDialog : public QDialog
     Q_OBJECT
 
 public:
-    Ui::FindItemsDialog *ui;
-
     FindItemsDialog(QWidget *parent = 0);
     virtual ~FindItemsDialog();
 
@@ -44,6 +42,8 @@ private slots:
     void searchTextChanged();
 
 private:
+    Ui::FindItemsDialog *ui;
+
     QList<SearchResultItem> _searchResult; // item and matched string
     bool _searchPerformed, _searchResultsChanged;
     int _currentIndex;

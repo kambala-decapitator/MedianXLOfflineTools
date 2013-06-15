@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>StashSortingOptionsDialog</class>
+ <widget class="QDialog" name="StashSortingOptionsDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>358</width>
+    <height>198</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Sort options</string>
+  </property>
+  <widget class="QDialogButtonBox" name="buttonBox">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>160</y>
+     <width>156</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="standardButtons">
+    <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="blankPagesLabel">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>100</y>
+     <width>183</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Blank pages between groups of items:</string>
+   </property>
+   <property name="buddy">
+    <cstring>blankPagesSpinBox</cstring>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="blankPagesSpinBox">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>100</y>
+     <width>42</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="maximum">
+    <number>1000</number>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="separateEthCheckBox">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>130</y>
+     <width>138</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Separate ethereal items</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="separateCotwCheckBox">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>130</y>
+     <width>198</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Separate Cornerstones of the World</string>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="initialSortGroupBox">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>20</y>
+     <width>101</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Initially sort by...</string>
+   </property>
+   <widget class="QRadioButton" name="typeRadioButton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>40</y>
+      <width>45</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>type</string>
+    </property>
+    <attribute name="buttonGroup">
+     <string notr="true">buttonGroup</string>
+    </attribute>
+   </widget>
+   <widget class="QRadioButton" name="qualityRadioButton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>55</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>quality</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+    <attribute name="buttonGroup">
+     <string notr="true">buttonGroup</string>
+    </attribute>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="itemQualityOrderingGroupBox">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>20</y>
+     <width>121</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Item quality ordering</string>
+   </property>
+   <widget class="QRadioButton" name="ascQualityRadioButton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>40</y>
+      <width>72</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Ascending</string>
+    </property>
+    <attribute name="buttonGroup">
+     <string notr="true">buttonGroup_2</string>
+    </attribute>
+   </widget>
+   <widget class="QRadioButton" name="descQualityRadioButton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>78</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Descending</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+    <attribute name="buttonGroup">
+     <string notr="true">buttonGroup_2</string>
+    </attribute>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="pageRangeGroupBox">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>20</y>
+     <width>91</width>
+     <height>101</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Page range</string>
+   </property>
+   <widget class="QSpinBox" name="firstPageSpinBox">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>30</y>
+      <width>42</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>1</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="firstLabel">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>25</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>First:</string>
+    </property>
+    <property name="buddy">
+     <cstring>firstPageSpinBox</cstring>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="lastPageSpinBox">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>70</y>
+      <width>42</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>1</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lastLabel">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>70</y>
+      <width>51</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Last:</string>
+    </property>
+    <property name="buddy">
+     <cstring>lastPageSpinBox</cstring>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>typeRadioButton</tabstop>
+  <tabstop>qualityRadioButton</tabstop>
+  <tabstop>ascQualityRadioButton</tabstop>
+  <tabstop>descQualityRadioButton</tabstop>
+  <tabstop>firstPageSpinBox</tabstop>
+  <tabstop>lastPageSpinBox</tabstop>
+  <tabstop>blankPagesSpinBox</tabstop>
+  <tabstop>separateEthCheckBox</tabstop>
+  <tabstop>separateCotwCheckBox</tabstop>
+  <tabstop>buttonBox</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>StashSortingOptionsDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>StashSortingOptionsDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <buttongroups>
+  <buttongroup name="buttonGroup_2"/>
+  <buttongroup name="buttonGroup"/>
+ </buttongroups>
+</ui>

@@ -58,7 +58,8 @@ SOURCES += main.cpp \
            showselecteditemdelegate.cpp \
            disenchantpreviewdialog.cpp \
            disenchantpreviewmodel.cpp \
-           dupescandialog.cpp
+           dupescandialog.cpp \
+           stashsortingoptionsdialog.cpp
 
 HEADERS += medianxlofflinetools.h \
            resurrectpenaltydialog.h \
@@ -99,14 +100,16 @@ HEADERS += medianxlofflinetools.h \
            itemnamestreewidget.hpp \
            disenchantpreviewmodel.h \
            checkboxsortfilterproxymodel.hpp \
-           dupescandialog.h
+           dupescandialog.h \
+           stashsortingoptionsdialog.h
 
 FORMS += medianxlofflinetools.ui \
          resurrectpenaltydialog.ui \
          qd2charrenamer.ui \
          propertiesviewerwidget.ui \
          finditemsdialog.ui \
-         skillplandialog.ui
+         skillplandialog.ui \
+         stashsortingoptionsdialog.ui
 
 RESOURCES += resources/medianxlofflinetools.qrc
 

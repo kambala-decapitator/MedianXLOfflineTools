@@ -73,7 +73,7 @@ const int MedianXLOfflineTools::kMaxRecentFiles = 10;
 // ctor
 
 MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *parent, Qt::WindowFlags flags) : QMainWindow(parent, flags), ui(new Ui::MedianXLOfflineToolsClass), _findItemsDialog(0),
-    _backupLimitsGroup(new QActionGroup(this)), _showDisenchantPreviewGroup(new QActionGroup(this)), hackerDetected(tr("1337 hacker detected! Please, play legit.")), //difficulties(QStringList() << tr("Hatred") << tr("Terror") << tr("Destruction")),
+    _backupLimitsGroup(new QActionGroup(this)), _showDisenchantPreviewGroup(new QActionGroup(this)), hackerDetected(tr("1337 hacker detected! Please, play legit.")),
     maxValueFormat(tr("Max: %1")), minValueFormat(tr("Min: %1")), investedValueFormat(tr("Invested: %1")),
     kForumThreadHtmlLinks(tr("<a href=\"http://www.medianxl.com/t83-median-xl-offline-tools\">Official Median XL Forum thread</a><br>"
                              "<a href=\"http://forum.worldofplayers.ru/showthread.php?t=34489\">Official Russian Median XL Forum thread</a>")),
@@ -250,7 +250,7 @@ bool MedianXLOfflineTools::loadFile(const QString &charPath, bool shouldCheckExt
         if (_itemsDialog)
         {
             _itemsDialog->updateItems(getPlugyStashesExistenceHash(), true);
-            _itemsDialog->updateButtonsState();
+            _itemsDialog->updateItemManagementButtonsState();
         }
         if (_itemsDialog || ui->actionOpenItemsAutomatically->isChecked())
             showItems();
@@ -408,12 +408,6 @@ void MedianXLOfflineTools::saveCharacter()
 
     QDataStream outputDataStream(&tempFileContents, QIODevice::ReadWrite);
     outputDataStream.setByteOrder(QDataStream::LittleEndian);
-
-    //quint8 curDiff[difficultiesNumber] = {0, 0, 0};
-    //curDiff[ui->currentDifficultyComboBox->currentIndex()] = 128 + ui->currentActSpinBox->value() - 1; // 10000xxx
-    //outputDataStream.skipRawData(Enums::Offsets::CurrentLocation);
-    //for (int i = 0; i < difficultiesNumber; ++i)
-    //    outputDataStream << curDiff[i];
 
 #ifdef MAKE_FINISHED_CHARACTER
     outputDataStream.skipRawData(Enums::Offsets::Progression);
@@ -914,24 +908,6 @@ void MedianXLOfflineTools::convertToSoftcore(bool isSoftcore)
     setModified(true);
 }
 
-//void MedianXLOfflineTools::currentDifficultyChanged(int newDifficulty)
-//{
-//    quint8 progression = CharacterInfo::instance().basicInfo.titleCode, maxDifficulty = ui->currentDifficultyComboBox->count() - 1, maxAct;
-//    if (progression == Enums::Progression::Completed - 1 || newDifficulty != maxDifficulty)
-//        maxAct = 5;
-//    else
-//    {
-//        maxAct = 1 + (progression - maxDifficulty) % 4;
-//        if (maxAct == 4)
-//        {
-//            // check if A5 is enabled
-//            if (_saveFileContents.at(Enums::Offsets::QuestsData + newDifficulty * Enums::Quests::Size + Enums::Quests::Act5Offset))
-//                ++maxAct;
-//        }
-//    }
-//    ui->currentActSpinBox->setMaximum(maxAct);
-//}
-
 void MedianXLOfflineTools::findItem()
 {
     if (!_findItemsDialog)
@@ -1272,21 +1248,6 @@ void MedianXLOfflineTools::createLayout()
     grid->addWidget(ui->statsGroupBox, 0, 1);
     grid->addWidget(_questsGroupBox, 1, 1);
 
-    //QVBoxLayout *vbl = new QVBoxLayout;
-    //vbl->addWidget(ui->characterGroupBox);
-    ////vbl->addStretch();
-    ////vbl->addWidget(_questsGroupBox);
-    //vbl->addWidget(ui->mercGroupBox);
-
-    //QVBoxLayout *vbl1 = new QVBoxLayout;
-    //vbl1->addWidget(ui->statsGroupBox);
-    //vbl1->addWidget(_questsGroupBox);
-
-    //QHBoxLayout *mainLayout = new QHBoxLayout(centralWidget());
-    //mainLayout->addLayout(vbl);
-    //mainLayout->addLayout(vbl1);
-    ////mainLayout->addWidget(ui->statsGroupBox);
-
     ui->statsTableWidget->verticalHeader()->setDefaultAlignment(Qt::AlignCenter);
     ui->statsTableWidget->horizontalHeader()->
 #if IS_QT5
@@ -1321,12 +1282,6 @@ void MedianXLOfflineTools::createCharacterGroupBoxLayout()
     gridLayout->addWidget(ui->titleLineEdit, 2, 1);
     gridLayout->addWidget(ui->levelSpinBox, 2, 2);
 
-    //QHBoxLayout *hbl1 = new QHBoxLayout;
-    //hbl1->addWidget(new QLabel(tr("Difficulty")), 0, Qt::AlignRight);
-    //hbl1->addWidget(ui->currentDifficultyComboBox);
-    //hbl1->addWidget(new QLabel(tr("Act")), 0, Qt::AlignRight);
-    //hbl1->addWidget(ui->currentActSpinBox);
-
     QHBoxLayout *hbl2 = new QHBoxLayout(ui->hardcoreGroupBox);
     hbl2->addWidget(ui->convertToSoftcoreCheckBox);
     hbl2->addStretch();
@@ -1336,7 +1291,6 @@ void MedianXLOfflineTools::createCharacterGroupBoxLayout()
 
     QVBoxLayout *vbl = new QVBoxLayout(ui->characterGroupBox);
     vbl->addLayout(gridLayout);
-    //vbl->addLayout(hbl1);
     vbl->addWidget(_expGroupBox);
     vbl->addWidget(ui->hardcoreGroupBox);
 }
@@ -1610,7 +1564,6 @@ void MedianXLOfflineTools::connectSignals()
     connect(ui->resurrectButton, SIGNAL(clicked()), SLOT(resurrect()));
     connect(ui->convertToSoftcoreCheckBox, SIGNAL(toggled(bool)), SLOT(convertToSoftcore(bool)));
     connect(ui->respecSkillsCheckBox, SIGNAL(toggled(bool)), SLOT(respecSkills(bool)));
-    //connect(ui->currentDifficultyComboBox, SIGNAL(currentIndexChanged(int)), SLOT(currentDifficultyChanged(int)));
     connect(ui->activateWaypointsCheckBox, SIGNAL(toggled(bool)), SLOT(modify()));
 
     // misc
@@ -1924,8 +1877,9 @@ bool MedianXLOfflineTools::processSaveFile()
         qint64 statValue = bitReader.readNumber(statLength);
         if (statCode == Enums::CharacterStats::Level && statValue != clvl)
         {
-            ERROR_BOX(tr("Level in statistics (%1) isn't equal the one in header (%2).").arg(statValue).arg(clvl));
-            return false;
+//            ERROR_BOX(tr("Level in statistics (%1) isn't equal the one in header (%2).").arg(statValue).arg(clvl));
+//            return false;
+            statValue = clvl;
         }
         else if (statCode >= Enums::CharacterStats::Life && statCode <= Enums::CharacterStats::BaseStamina)
             statValue >>= 8;
@@ -2328,7 +2282,7 @@ void MedianXLOfflineTools::clearUI()
     }
     ui->charNamePreview->clear();
 
-    QList<QComboBox *> comboBoxes = QList<QComboBox *>()/* << ui->currentDifficultyComboBox*/ << ui->mercNameComboBox << ui->mercTypeComboBox;
+    QList<QComboBox *> comboBoxes = QList<QComboBox *>() << ui->mercNameComboBox << ui->mercTypeComboBox;
     foreach (QComboBox *combobx, comboBoxes)
         combobx->clear();
 
@@ -2339,7 +2293,6 @@ void MedianXLOfflineTools::clearUI()
         spinBox->setStatusTip(QString());
     }
     ui->levelSpinBox->setValue(1);
-    //ui->currentActSpinBox->setValue(1);
 
     QList<QCheckBox *> checkBoxes = QList<QCheckBox *>() << ui->convertToSoftcoreCheckBox << ui->activateWaypointsCheckBox << ui->respecSkillsCheckBox;
     foreach (QList<QCheckBox *> questCheckBoxes, _checkboxesQuestsHash.values())
@@ -2401,11 +2354,6 @@ void MedianXLOfflineTools::updateUI()
 
     ui->classLineEdit->setText(Enums::ClassName::classes().at(charInfo.basicInfo.classCode));
     updateCharacterTitle(charInfo.basicInfo.isHardcore);
-
-    //ui->currentDifficultyComboBox->setEnabled(true);
-    //ui->currentDifficultyComboBox->addItems(difficulties.mid(0, titleAndMaxDifficulty.second + 1));
-    //ui->currentDifficultyComboBox->setCurrentIndex(charInfo.basicInfo.currentDifficulty);
-    //ui->currentActSpinBox->setValue(charInfo.basicInfo.currentAct);
 
     _oldClvl = charInfo.basicInfo.level;
     ui->levelSpinBox->setMaximum(_oldClvl);

@@ -10,6 +10,7 @@
 #include "characterinfo.hpp"
 #include "kexpandablegroupbox.h"
 #include "disenchantpreviewdialog.h"
+#include "stashsortingoptionsdialog.h"
 
 #include <QTabWidget>
 #include <QHBoxLayout>
@@ -68,7 +69,7 @@ ItemsViewerDialog::ItemsViewerDialog(const QHash<int, bool> &plugyStashesExisten
         connect(splitter, SIGNAL(cubeDeleted(bool)), SLOT(setCubeTabDisabled(bool)));
         connect(splitter, SIGNAL(signetsOfLearningEaten(int)), SIGNAL(signetsOfLearningEaten(int)));
         if (isPlugyStorageIndex(i))
-            connect(static_cast<PlugyItemsSplitter *>(splitter), SIGNAL(pageChanged()), SLOT(updateButtonsState()));
+            connect(static_cast<PlugyItemsSplitter *>(splitter), SIGNAL(pageChanged()), SLOT(updateItemManagementButtonsState()));
     }
     updateItems(plugyStashesExistenceHash, true);
 
@@ -83,7 +84,6 @@ ItemsViewerDialog::ItemsViewerDialog(const QHash<int, bool> &plugyStashesExisten
             tableView->setColumnWidth(j, kCellSize);
     }
 
-    // item management groupbox setup
     _itemManagementWidget->setDisabled(true);
 
     // disenchant box setup
@@ -151,11 +151,15 @@ ItemsViewerDialog::ItemsViewerDialog(const QHash<int, bool> &plugyStashesExisten
     _applyActionToAllPagesCheckbox->setChecked(true);
     connect(_applyActionToAllPagesCheckbox, SIGNAL(toggled(bool)), SLOT(applyActionToAllPagesChanged(bool)));
 
+    _sortStashButton = new QPushButton(tr("Sort Stash"), _itemManagementWidget);
+    connect(_sortStashButton, SIGNAL(clicked()), SLOT(sortStash()));
+
     // item management groupbox layout
     QHBoxLayout *itemManagementBoxLayout = new QHBoxLayout(_itemManagementWidget);
     itemManagementBoxLayout->addWidget(_disenchantBox);
     itemManagementBoxLayout->addStretch();
     itemManagementBoxLayout->addWidget(_applyActionToAllPagesCheckbox);
+    itemManagementBoxLayout->addWidget(_sortStashButton);
     itemManagementBoxLayout->addStretch();
     itemManagementBoxLayout->addWidget(_upgradeBox);
 
@@ -184,6 +188,11 @@ ItemsPropertiesSplitter *ItemsViewerDialog::currentSplitter()
     return splitterAtIndex(_tabWidget->currentIndex());
 }
 
+PlugyItemsSplitter *ItemsViewerDialog::currentPlugySplitter()
+{
+    return static_cast<PlugyItemsSplitter *>(_tabWidget->currentWidget());
+}
+
 void ItemsViewerDialog::saveSettings()
 {
     QSettings settings;
@@ -209,8 +218,8 @@ void ItemsViewerDialog::tabChanged(int tabIndex)
     if (tabIndex > GearIndex)
     {
         if (isPlugyStorageIndex(tabIndex))
-            static_cast<PlugyItemsSplitter *>(_tabWidget->currentWidget())->setApplyActionToAllPages(_applyActionToAllPagesCheckbox->isChecked()); // must be explicitly set
-        updateButtonsState();
+            currentPlugySplitter()->setApplyActionToAllPages(_applyActionToAllPagesCheckbox->isChecked()); // must be explicitly set
+        updateItemManagementButtonsState();
     }
 }
 
@@ -362,14 +371,15 @@ void ItemsViewerDialog::decreaseItemCount()
 
 void ItemsViewerDialog::applyActionToAllPagesChanged(bool b)
 {
-    static_cast<PlugyItemsSplitter *>(_tabWidget->currentWidget())->setApplyActionToAllPages(b);
-    updateButtonsState();
+    currentPlugySplitter()->setApplyActionToAllPages(b);
+    updateItemManagementButtonsState();
 }
 
-void ItemsViewerDialog::updateButtonsState()
+void ItemsViewerDialog::updateItemManagementButtonsState()
 {
     updateDisenchantButtonsState();
     updateUpgradeButtonsState();
+    updateSortStashButtonState();
 }
 
 void ItemsViewerDialog::updateDisenchantButtonsState()
@@ -448,6 +458,15 @@ void ItemsViewerDialog::upgradeRunes()
     _upgradeBothButton->setDisabled(true);
 }
 
+void ItemsViewerDialog::sortStash()
+{
+    StashSortingOptionsDialog dlg(this);
+    if (dlg.exec())
+    {
+    }
+    currentPlugySplitter()->sortStash();
+}
+
 void ItemsViewerDialog::updateBeltItemsCoordinates(bool restore, ItemsList *pBeltItems)
 {
     ItemsList beltItems = pBeltItems ? *pBeltItems : ItemDataBase::itemsStoredIn(Enums::ItemStorage::NotInStorage, Enums::ItemLocation::Belt);
@@ -465,4 +484,9 @@ const QList<int>& ItemsViewerDialog::kRows()
     if (rows.isEmpty())
         rows = QList<int>() << 11 << (isUltimative5OrLater() ? 8 : 6) << 8 << 10 << 10 << 10 << 10;
     return rows;
+}
+
+void ItemsViewerDialog::updateSortStashButtonState()
+{
+    _sortStashButton->setEnabled(isPlugyStorageIndex(_tabWidget->currentIndex()));
 }

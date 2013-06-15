@@ -1,5 +1,5 @@
-#ifndef ITEMSVIEWERWIDGET_H
-#define ITEMSVIEWERWIDGET_H
+#ifndef ITEMSVIEWERDIALOG_H
+#define ITEMSVIEWERDIALOG_H
 
 #include "structs.h"
 #include "enums.h"
@@ -9,6 +9,7 @@
 
 
 class ItemsPropertiesSplitter;
+class PlugyItemsSplitter;
 
 class QTabWidget;
 class QCloseEvent;
@@ -60,13 +61,14 @@ public:
     QTabWidget *tabWidget() { return _tabWidget; }
     ItemsPropertiesSplitter *splitterAtIndex(int tabIndex);
     ItemsPropertiesSplitter *currentSplitter();
+    PlugyItemsSplitter *currentPlugySplitter();
 
 public slots:
     virtual void reject();
 
     void setCubeTabDisabled(bool disabled);
     void showItem(ItemInfo *item);
-    void updateButtonsState();
+    void updateItemManagementButtonsState();
     void showDisenchantPreviewActionTriggered(QAction *action) { _showDisenchantPreviewOption = static_cast<ShowDisenchantPreviewOption>(action->data().toUInt()); }
 
 signals:
@@ -88,6 +90,7 @@ private slots:
     void upgradeGems();
     void upgradeRunes();
     void upgradeGemsAndRunes() { upgradeGems(); upgradeRunes(); }
+    void sortStash();
 
 private:
     QTabWidget *_tabWidget;
@@ -96,7 +99,7 @@ private:
     ShowDisenchantPreviewOption _showDisenchantPreviewOption;
 
     QGroupBox *_disenchantBox;
-    QPushButton *_disenchantToShardsButton, *_disenchantToSignetButton;
+    QPushButton *_disenchantToShardsButton, *_disenchantToSignetButton, *_sortStashButton;
     QCheckBox *_upgradeToCrystalsCheckbox, *_eatSignetsCheckbox;
     QRadioButton *_uniquesRadioButton, *_setsRadioButton, *_bothQualitiesRadioButton;
 
@@ -110,6 +113,8 @@ private:
     void itemCountChangedInTab(int tabIndex, int newCount);
     void updateWindowTitle();
     void updateBeltItemsCoordinates(bool restore, ItemsList *pBeltItems);
+
+    void updateSortStashButtonState();
 };
 
-#endif // ITEMSVIEWERWIDGET_H
+#endif // ITEMSVIEWERDIALOG_H

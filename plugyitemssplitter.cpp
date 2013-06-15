@@ -241,6 +241,12 @@ void PlugyItemsSplitter::upgradeRunes(ItemsList *items /*= 0*/)
     setItems(_allItems); // update spinbox value and range
 }
 
+void PlugyItemsSplitter::sortStash()
+{
+
+}
+
+
 bool PlugyItemsSplitter::keyEventHasShift(QKeyEvent *keyEvent)
 {
     return keyEvent->key() == Qt::Key_Shift || keyEvent->modifiers() & Qt::SHIFT;

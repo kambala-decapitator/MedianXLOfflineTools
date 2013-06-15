@@ -18,7 +18,12 @@
 #include <QDir>
 #include <QFile>
 #include <QRegExp>
+
+#if IS_QT5
+#include <QtConcurrent/QtConcurrentRun>
+#else
 #include <QtConcurrentRun>
+#endif
 
 
 DupeScanDialog::DupeScanDialog(const QString &currentPath, QWidget *parent) : QDialog(parent), _currentCharPath(currentPath), _pathLineEdit(new QLineEdit(this)), _logBrowser(new QTextEdit(this)),
