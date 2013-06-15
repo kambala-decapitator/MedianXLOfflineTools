@@ -15,7 +15,7 @@ public:
         setRange(0, 0);
         setTextVisible(false);
         setWindowTitle(tr("Please wait..."));
-        setWindowFlags(Qt::CustomizeWindowHint | Qt::WindowTitleHint);
+        setWindowFlags(Qt::CustomizeWindowHint | Qt::WindowTitleHint | Qt::MSWindowsFixedSizeDialogHint);
         setWindowModality(Qt::ApplicationModal);
         adjustSize();
         setFixedSize(size());

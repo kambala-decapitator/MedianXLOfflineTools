@@ -26,9 +26,8 @@ QD2CharRenamer::QD2CharRenamer(const QString &originalName, bool shouldWarn, QWi
     colorNames(QStringList() << tr("white") << tr("red") << tr("green") << tr("blue") << tr("gold") << tr("dark gray") << tr("tan") << tr("orange") << tr("yellow") << "foo" << tr("violet"))
 {
     ui->setupUi(this);
-    setWindowFlags(windowFlags() & ~Qt::WindowContextHelpButtonHint);
+    setWindowFlags(windowFlags() & ~Qt::WindowContextHelpButtonHint | Qt::MSWindowsFixedSizeDialogHint);
     setFixedSize(size());
-
 
     createColorMenu();
     ui->charNameLineEdit->setMaxLength(kMaxNameLength);

@@ -371,7 +371,8 @@ PropertiesMultiMap ItemParser::parseItemProperties(ReverseBitReader &bitReader, 
             else if (id == 97 || id == 107)
             {
                 SkillInfo *skill;
-                if (propToAdd->param < ItemDataBase::Skills()->size())
+                bool deleteSkill = propToAdd->param >= ItemDataBase::Skills()->size();
+                if (!deleteSkill)
                     skill = ItemDataBase::Skills()->at(propToAdd->param);
                 else
                 {
@@ -382,6 +383,9 @@ PropertiesMultiMap ItemParser::parseItemProperties(ReverseBitReader &bitReader, 
                 propToAdd->displayString = tr("+%1 to %2", "oskill").arg(propToAdd->value).arg(skill->name);
                 if (id == 107)
                     propToAdd->displayString += " " + tr("(%1 Only)", "class-specific skill").arg(skill->classCode > -1 ? Enums::ClassName::classes().at(skill->classCode) : "TROLOLOL");
+
+                if (deleteSkill)
+                    delete skill;
             }
             else if (id == 204)
             {

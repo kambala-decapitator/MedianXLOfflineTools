@@ -9,10 +9,10 @@ const double ResurrectPenaltyDialog::kStatPenalty = 0.04;
 ResurrectPenaltyDialog::ResurrectPenaltyDialog(QWidget *parent) : QDialog(parent), ui(new Ui::ResurrectPenaltyDialog)
 {
     ui->setupUi(this);
-    setWindowFlags(windowFlags() & ~Qt::WindowContextHelpButtonHint);
+    setWindowFlags(windowFlags() & ~Qt::WindowContextHelpButtonHint | Qt::MSWindowsFixedSizeDialogHint);
     setWindowModality(Qt::WindowModal);
 
-    resize(sizeHint());
+    adjustSize();
     setFixedSize(size());
 
     ui->buttonBox->setFocus();

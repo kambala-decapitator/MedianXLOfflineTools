@@ -153,6 +153,7 @@ ItemsViewerDialog::ItemsViewerDialog(const QHash<int, bool> &plugyStashesExisten
 
     _sortStashButton = new QPushButton(tr("Sort Stash"), _itemManagementWidget);
     connect(_sortStashButton, SIGNAL(clicked()), SLOT(sortStash()));
+    _sortStashButton->hide();
 
     // item management groupbox layout
     QHBoxLayout *itemManagementBoxLayout = new QHBoxLayout(_itemManagementWidget);
@@ -463,8 +464,8 @@ void ItemsViewerDialog::sortStash()
     StashSortingOptionsDialog dlg(this);
     if (dlg.exec())
     {
+        currentPlugySplitter()->sortStash();
     }
-    currentPlugySplitter()->sortStash();
 }
 
 void ItemsViewerDialog::updateBeltItemsCoordinates(bool restore, ItemsList *pBeltItems)
@@ -488,5 +489,5 @@ const QList<int>& ItemsViewerDialog::kRows()
 
 void ItemsViewerDialog::updateSortStashButtonState()
 {
-    _sortStashButton->setEnabled(isPlugyStorageIndex(_tabWidget->currentIndex()));
+    _sortStashButton->setVisible(isPlugyStorageIndex(_tabWidget->currentIndex()));
 }

@@ -55,7 +55,7 @@ SkillplanDialog::SkillplanDialog(QWidget *parent) : QDialog(parent), ui(new Ui::
 {
     ui->setupUi(this);
     setWindowModality(Qt::WindowModal);
-    setWindowFlags(windowFlags() & ~Qt::WindowContextHelpButtonHint);
+    setWindowFlags(windowFlags() & ~Qt::WindowContextHelpButtonHint | Qt::MSWindowsFixedSizeDialogHint);
 
     ui->copyHtmlButton->setObjectName("html");
     ui->copyBbcodeButton->setObjectName("bbcode");
@@ -70,7 +70,8 @@ SkillplanDialog::SkillplanDialog(QWidget *parent) : QDialog(parent), ui(new Ui::
     loadSettings();
     constructUrls();
 
-    setFixedSize(sizeHint());
+    adjustSize();
+    setFixedSize(size());
 }
 
 SkillplanDialog::~SkillplanDialog()

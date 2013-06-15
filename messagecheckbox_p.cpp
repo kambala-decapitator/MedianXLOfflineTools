@@ -39,8 +39,10 @@ public:
         connect(buttonBox, SIGNAL(accepted()), SLOT(accept()));
         connect(buttonBox, SIGNAL(rejected()), SLOT(reject()));
 
-        setFixedSize(sizeHint());
-        setWindowFlags(windowFlags() & ~Qt::WindowContextHelpButtonHint);
+        adjustSize();
+        setFixedSize(size());
+
+        setWindowFlags(windowFlags() & ~Qt::WindowContextHelpButtonHint | Qt::MSWindowsFixedSizeDialogHint);
         setWindowTitle(qApp->applicationName());
     }
 
