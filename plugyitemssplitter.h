@@ -25,7 +25,9 @@ public:
     virtual ItemsList disenchantAllItems(bool toShards, bool upgradeToCrystals, bool eatSignets, ItemsList *pItems = 0);
     virtual void upgradeGems(ItemsList *items = 0);
     virtual void upgradeRunes(ItemsList *items = 0);
-    void sortStash();
+    void sortStash(const StashSortOptions &sortOptions);
+
+    quint32 lastNotEmptyPage() const { return _lastNotEmptyPage; }
 
 public slots:
     // these 8 are connected to main menu actions

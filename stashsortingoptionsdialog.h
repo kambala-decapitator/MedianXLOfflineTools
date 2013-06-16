@@ -3,17 +3,26 @@
 
 #include <QDialog>
 
+#include "structs.h"
+
 
 namespace Ui { class StashSortingOptionsDialog; }
 
 class StashSortingOptionsDialog : public QDialog
 {
+    Q_OBJECT
+
 public:
-    StashSortingOptionsDialog(QWidget *parent = 0);
+    StashSortingOptionsDialog(quint32 lastPage, QWidget *parent = 0);
     virtual ~StashSortingOptionsDialog();
+
+    StashSortOptions sortOptions() const;
 
 public slots:
     virtual void accept();
+
+private slots:
+    void showHelp();
 
 private:
     Ui::StashSortingOptionsDialog *ui;

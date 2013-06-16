@@ -21,12 +21,13 @@ public:
     static const QString &modVersionReadable() { return _modVersionReadable; }
     static const QString &modVersionPlanner()  { return _modVersionPlanner;  }
 
+public slots:
+    virtual void done(int r);
+
 private slots:
     void copyLinkWithTags();
     void constructUrls();
     void showHelp();
-
-    virtual void done(int r);
 
 private:
     Ui::SkillplanDialog *ui;

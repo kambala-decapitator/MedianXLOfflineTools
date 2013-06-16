@@ -217,4 +217,19 @@ struct SocketableItemInfo
     QHash<PropertyType, QList<Properties> > properties;
 };
 
+
+// helper
+
+struct StashSortOptions
+{
+    enum
+    {
+        Quality,
+        Type
+    } primarySortKey;
+
+    bool qualityOrderAscending, separateEtherealItems, separateCotw;
+    int firstPage, lastPage, diffQualitiesBlankPages, diffTypesBlankPages;
+};
+
 #endif // STRUCTS_H

@@ -1,0 +1,73 @@
+# default order is the same as on the website, but you can change it to your liking
+# empty lines and text after '#' are ignored
+
+# weapons
+swor # 1h sword
+crsd # crystal sword
+2hsd # 2h sword
+axe  # 1h axe
+2hax # 2h axe
+mace # mace
+hamm # 1h hammer
+ # 2h hammer - NOOOOOOOOOOOOOOOO
+scep # scepter
+jave # javelin
+spea # spear
+scyh # scythe
+knif # dagger
+tkni # throwing knife
+taxe # throwing axe
+staf # staff
+bow  # bow
+xbow # xbow
+# class weapons - INHERIT
+abow,aspe,ajav      # ama
+nagi,h2h            # ass
+baxe,bswd,2hbs,2hbx # baba
+dbow,dstf           # dudu
+nknf,nscy,nstf,nxbw # necro
+pclb,pham,pmac,pspe # pal
+crsd,orb            # soso
+# armor
+tors # body
+helm # helm
+circ # circlet
+bhlm # 1337 helm
+shie # shield
+bshi # 1337 shield
+belt # belt
+glov # gloves
+boot # boots
+# class armor
+azhm,azsd # ama
+ishd      # ass
+basd,phlm # baba
+pelt      # dudu
+head      # necro
+pzhm,ashd # pal
+stor      # soso
+# quivers
+bowq # arrows
+xboq # bolts
+# jewelry
+amul # amulet
+ring # ring
+jewl # jewel
+# cLOD gems
+gemr # ruby
+gems # sapphire
+geme # emerald
+gemt # topaz
+gemd # diamond
+gema # amethyst
+gemz # skull
+# MXL gems
+gemp # bloodstone
+gemq # onyx
+gemo # turquoise
+geml # amber
+# rest
+rune # runes (hardcoded ordering: cLOD - MXL - Great)
+asaa # MOs
+asa\# # UMOs (backslash is intended)
+char # charms

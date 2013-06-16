@@ -3,12 +3,16 @@
 #include "itemdatabase.h"
 #include "itemsviewerdialog.h"
 #include "progressbarmodal.hpp"
+#include "itemstoragetablemodel.h"
+#include "resourcepathmanager.hpp"
 
 #include <QPushButton>
 #include <QDoubleSpinBox>
 #include <QHBoxLayout>
 #include <QVBoxLayout>
 #include <QKeyEvent>
+
+#include <QFile>
 
 //#include <QtConcurrentRun>
 //#include <QFuture>
@@ -25,6 +29,38 @@
 
 
 static const QString kIconPathFormat(":/PlugyArrows/icons/plugy/%1.png");
+
+enum SortItemQuality
+{
+    LowQuality,
+    Normal,
+    Superior,
+    RW,
+    Magic,
+    Honorific,
+    Rare,
+    Crafted,
+    Unique,
+    Set
+};
+
+const QHash<int, int> &itemQualityMapping()
+{
+    static QHash<int, int> m;
+    if (m.isEmpty())
+    {
+        m[Enums::ItemQuality::LowQuality]  = SortItemQuality::LowQuality;
+        m[Enums::ItemQuality::Normal]      = SortItemQuality::Normal;
+        m[Enums::ItemQuality::HighQuality] = SortItemQuality::Superior;
+        m[Enums::ItemQuality::Magic]       = SortItemQuality::Magic;
+        m[Enums::ItemQuality::Honorific]   = SortItemQuality::Honorific;
+        m[Enums::ItemQuality::Rare]        = SortItemQuality::Rare;
+        m[Enums::ItemQuality::Crafted]     = SortItemQuality::Crafted;
+        m[Enums::ItemQuality::Unique]      = SortItemQuality::Unique;
+        m[Enums::ItemQuality::Set]         = SortItemQuality::Set;
+    }
+    return m;
+}
 
 
 PlugyItemsSplitter::PlugyItemsSplitter(ItemStorageTableView *itemsView, QWidget *parent) : ItemsPropertiesSplitter(itemsView, parent), _shouldApplyActionToAllPages(true)
@@ -241,9 +277,43 @@ void PlugyItemsSplitter::upgradeRunes(ItemsList *items /*= 0*/)
     setItems(_allItems); // update spinbox value and range
 }
 
-void PlugyItemsSplitter::sortStash()
+void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
 {
+    QFile f(ResourcePathManager::dataPathForFileName("sort_order.txt"));
+    if (!f.open(QIODevice::ReadOnly | QIODevice::Text))
+    {
+        ERROR_BOX(tr("Sorting order not loaded.") + "\n" + tr("Reason: %1").arg(f.errorString()));
+        return;
+    }
 
+    QList<QByteArray> itemTypesOrder;
+    while (!f.atEnd())
+    {
+        QByteArray line = f.readLine().trimmed();
+        if (line.isEmpty() || line.startsWith('#'))
+            continue;
+        int end = line.indexOf('#');
+        if (line.at(end - 1) == '\\')
+            end = line.indexOf('#', end + 1);
+        itemTypesOrder << line.left(end).trimmed().replace("\\#", "#");
+    }
+
+    //int rows = _itemsModel->rowCount(), columns = _itemsModel->columnCount();
+    // sort by quality
+    QMap<int, ItemsList> itemsByQuality;
+    foreach (ItemInfo *item, _allItems)
+        itemsByQuality[item->isRW ? SortItemQuality::RW : itemQualityMapping()[item->quality]] << item;
+
+    QMap<int, QMap<QByteArray, ItemInfo *> > itemsByQualityType;
+    for (QMap<int, ItemsList>::const_iterator iter = itemsByQuality.constBegin(), endIter = itemsByQuality.constEnd(); iter != endIter; ++iter)
+    {
+        QMap<QByteArray, ItemInfo *> itemsByType;
+        foreach (ItemInfo *item, iter.value())
+            itemsByType[ItemDataBase::Items()->value(item->itemType)->types.first()] = item;
+        itemsByQualityType[iter.key()] = itemsByType;
+    }
+
+    // to sort by tiers, sort by rlvl
 }
 
 

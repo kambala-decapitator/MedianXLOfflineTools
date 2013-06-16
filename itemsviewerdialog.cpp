@@ -30,7 +30,7 @@
 #endif
 
 
-const int ItemsViewerDialog::kCellSize = 32;
+const int ItemsViewerDialog::kCellSize = 32, ItemsViewerDialog::kColumnsDefault = 10;
 
 ItemsViewerDialog::ItemsViewerDialog(const QHash<int, bool> &plugyStashesExistenceHash, quint8 showDisenchantPreviewOption, QWidget *parent) : QDialog(parent), _tabWidget(new QTabWidget(this)), _itemManagementWidget(new QWidget(this)),
     _showDisenchantPreviewOption(static_cast<ShowDisenchantPreviewOption>(showDisenchantPreviewOption))
@@ -59,7 +59,7 @@ ItemsViewerDialog::ItemsViewerDialog(const QHash<int, bool> &plugyStashesExisten
             splitter = new ItemsPropertiesSplitter(tableView, this);
         else
             splitter = new PlugyItemsSplitter(tableView, this);
-        splitter->setModel(new ItemStorageTableModel(kRows().at(i), i == GearIndex ? 8 : 10, splitter));
+        splitter->setModel(new ItemStorageTableModel(kRows().at(i), i == GearIndex ? 8 : kColumnsDefault, splitter));
         _tabWidget->addTab(splitter, tabNameAtIndex(i));
 
         connect(splitter, SIGNAL(itemCountChanged(int)), SLOT(itemCountChangedInCurrentTab(int)));
@@ -330,6 +330,14 @@ void ItemsViewerDialog::updateItems(const QHash<int, bool> &plugyStashesExistenc
     updateWindowTitle();
 }
 
+const QList<int> &ItemsViewerDialog::kRows()
+{
+    static QList<int> rows;
+    if (rows.isEmpty())
+        rows = QList<int>() << 11 << (isUltimative5OrLater() ? 8 : 6) << 8 << 10 << 10 << 10 << 10;
+    return rows;
+}
+
 int ItemsViewerDialog::rowsInStorageAtIndex(int storage)
 {
     return kRows().at(tabIndexFromItemStorage(storage));
@@ -461,11 +469,10 @@ void ItemsViewerDialog::upgradeRunes()
 
 void ItemsViewerDialog::sortStash()
 {
-    StashSortingOptionsDialog dlg(this);
+    PlugyItemsSplitter *plugySplitter = currentPlugySplitter();
+    StashSortingOptionsDialog dlg(plugySplitter->lastNotEmptyPage(), this);
     if (dlg.exec())
-    {
-        currentPlugySplitter()->sortStash();
-    }
+        plugySplitter->sortStash(dlg.sortOptions());
 }
 
 void ItemsViewerDialog::updateBeltItemsCoordinates(bool restore, ItemsList *pBeltItems)
@@ -479,15 +486,9 @@ void ItemsViewerDialog::updateBeltItemsCoordinates(bool restore, ItemsList *pBel
     }
 }
 
-const QList<int>& ItemsViewerDialog::kRows()
-{
-    static QList<int> rows;
-    if (rows.isEmpty())
-        rows = QList<int>() << 11 << (isUltimative5OrLater() ? 8 : 6) << 8 << 10 << 10 << 10 << 10;
-    return rows;
-}
-
 void ItemsViewerDialog::updateSortStashButtonState()
 {
     _sortStashButton->setVisible(isPlugyStorageIndex(_tabWidget->currentIndex()));
+    if (_sortStashButton->isVisible())
+        _sortStashButton->setEnabled(currentSplitter()->itemCount() > 0);
 }

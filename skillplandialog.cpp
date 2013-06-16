@@ -51,6 +51,7 @@ bool SkillplanDialog::didModVersionChange()
     return false;
 }
 
+
 SkillplanDialog::SkillplanDialog(QWidget *parent) : QDialog(parent), ui(new Ui::SkillplanDialog)
 {
     ui->setupUi(this);
@@ -78,6 +79,14 @@ SkillplanDialog::~SkillplanDialog()
 {
     delete ui;
 }
+
+
+void SkillplanDialog::done(int r)
+{
+    saveSettings();
+    QDialog::done(r);
+}
+
 
 void SkillplanDialog::copyLinkWithTags()
 {
@@ -176,11 +185,6 @@ void SkillplanDialog::showHelp()
                 "To copy simple link: right-click the blue-highlighted link and click on the menu command."));
 }
 
-void SkillplanDialog::done(int r)
-{
-    saveSettings();
-    QDialog::done(r);
-}
 
 void SkillplanDialog::loadSettings()
 {

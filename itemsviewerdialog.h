@@ -43,9 +43,9 @@ public:
         Never
     };
 
-    static const int kCellSize;
+    static const int kCellSize, kColumnsDefault;
 
-    static const QList<int> &kRows(); // TODO: [0.4] move to some other place
+    static const QList<int> &kRows();
     static int rowsInStorageAtIndex(int storage);
     static int tabIndexFromItemStorage(int storage);
     static const QString &tabNameAtIndex(int i);

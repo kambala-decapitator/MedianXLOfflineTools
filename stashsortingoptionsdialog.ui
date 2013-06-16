@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>416</width>
-    <height>216</height>
+    <width>360</width>
+    <height>243</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,25 +16,25 @@
   <widget class="QDialogButtonBox" name="buttonBox">
    <property name="geometry">
     <rect>
-     <x>330</x>
-     <y>150</y>
-     <width>75</width>
-     <height>52</height>
+     <x>190</x>
+     <y>210</y>
+     <width>156</width>
+     <height>23</height>
     </rect>
    </property>
    <property name="orientation">
-    <enum>Qt::Vertical</enum>
+    <enum>Qt::Horizontal</enum>
    </property>
    <property name="standardButtons">
-    <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+    <set>QDialogButtonBox::Cancel|QDialogButtonBox::Help</set>
    </property>
   </widget>
   <widget class="QGroupBox" name="primarySortKeyGroupBox">
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>20</y>
-     <width>121</width>
+     <y>10</y>
+     <width>111</width>
      <height>91</height>
     </rect>
    </property>
@@ -86,10 +86,10 @@
   <widget class="QGroupBox" name="itemQualityOrderingGroupBox">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>120</y>
+     <x>130</x>
+     <y>10</y>
      <width>121</width>
-     <height>81</height>
+     <height>91</height>
     </rect>
    </property>
    <property name="title">
@@ -134,8 +134,8 @@
   <widget class="QGroupBox" name="pageRangeGroupBox">
    <property name="geometry">
     <rect>
-     <x>310</x>
-     <y>20</y>
+     <x>260</x>
+     <y>10</y>
      <width>91</width>
      <height>91</height>
     </rect>
@@ -143,7 +143,7 @@
    <property name="title">
     <string>Page range</string>
    </property>
-   <widget class="QSpinBox" name="firstPageSpinBox">
+   <widget class="QDoubleSpinBox" name="firstPageSpinBox">
     <property name="geometry">
      <rect>
       <x>40</x>
@@ -152,8 +152,11 @@
       <height>22</height>
      </rect>
     </property>
+    <property name="decimals">
+     <number>0</number>
+    </property>
     <property name="minimum">
-     <number>1</number>
+     <double>1.000000000000000</double>
     </property>
    </widget>
    <widget class="QLabel" name="firstPageLabel">
@@ -172,7 +175,7 @@
      <cstring>firstPageSpinBox</cstring>
     </property>
    </widget>
-   <widget class="QSpinBox" name="lastPageSpinBox">
+   <widget class="QDoubleSpinBox" name="lastPageSpinBox">
     <property name="geometry">
      <rect>
       <x>40</x>
@@ -181,8 +184,11 @@
       <height>22</height>
      </rect>
     </property>
+    <property name="decimals">
+     <number>0</number>
+    </property>
     <property name="minimum">
-     <number>1</number>
+     <double>1.000000000000000</double>
     </property>
    </widget>
    <widget class="QLabel" name="lastPageLabel">
@@ -205,10 +211,10 @@
   <widget class="QGroupBox" name="additionalNewPageGroupBox">
    <property name="geometry">
     <rect>
-     <x>140</x>
-     <y>120</y>
+     <x>10</x>
+     <y>110</y>
      <width>171</width>
-     <height>81</height>
+     <height>91</height>
     </rect>
    </property>
    <property name="title">
@@ -247,8 +253,8 @@
   <widget class="QGroupBox" name="blankPagesGroupBox">
    <property name="geometry">
     <rect>
-     <x>140</x>
-     <y>20</y>
+     <x>190</x>
+     <y>110</y>
      <width>161</width>
      <height>91</height>
     </rect>
@@ -291,6 +297,9 @@
       <height>22</height>
      </rect>
     </property>
+    <property name="maximum">
+     <number>100</number>
+    </property>
    </widget>
    <widget class="QSpinBox" name="diffTypesSpinBox">
     <property name="geometry">
@@ -300,6 +309,9 @@
       <width>42</width>
       <height>22</height>
      </rect>
+    </property>
+    <property name="maximum">
+     <number>100</number>
     </property>
    </widget>
   </widget>

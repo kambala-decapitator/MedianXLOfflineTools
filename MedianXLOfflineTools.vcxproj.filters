@@ -292,6 +292,12 @@
     <ClCompile Include="stashsortingoptionsdialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_stashsortingoptionsdialog.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_stashsortingoptionsdialog.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="helpers.h">
@@ -361,9 +367,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="checkboxsortfilterproxymodel.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="stashsortingoptionsdialog.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="GeneratedFiles\ui_stashsortingoptionsdialog.h">
@@ -490,6 +493,9 @@
     </CustomBuild>
     <CustomBuild Include="stashsortingoptionsdialog.ui">
       <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="stashsortingoptionsdialog.h">
+      <Filter>Header Files</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>

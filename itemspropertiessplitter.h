@@ -41,6 +41,8 @@ public:
     virtual void upgradeGems(ItemsList *pItems = 0);
     virtual void upgradeRunes(ItemsList *pItems = 0);
 
+    int itemCount() const { return _allItems.size(); }
+
 signals:
     void itemCountChanged(int itemCount);
     void itemDeleted();
