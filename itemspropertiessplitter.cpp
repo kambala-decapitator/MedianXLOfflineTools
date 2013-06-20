@@ -53,7 +53,7 @@ void ItemsPropertiesSplitter::itemSelected(const QModelIndex &index, bool displa
     //if (item)
     //{
     //    ItemBase *base = ItemDataBase::Items()->value(item->itemType);
-    //    qDebug() << item->itemType << base->types;
+    //    qDebug() << item->itemType << base->types << base->imageName;
     //}
 
     // correctly disable hotkeys
@@ -85,8 +85,8 @@ void ItemsPropertiesSplitter::itemSelected(const QModelIndex &index, bool displa
 void ItemsPropertiesSplitter::moveItem(const QModelIndex &newIndex, const QModelIndex &oldIndex)
 {
     ItemInfo *item = _itemsModel->itemAtIndex(newIndex);
-    ReverseBitWriter::replaceValueInBitString(item->bitString, Enums::ItemOffsets::Column, item->column);
-    ReverseBitWriter::replaceValueInBitString(item->bitString, Enums::ItemOffsets::Row,    item->row);
+    ReverseBitWriter::updateItemRow(item);
+    ReverseBitWriter::updateItemColumn(item);
     item->hasChanged = true;
 
     int oldRow = oldIndex.row(), oldCol = oldIndex.column();
@@ -258,6 +258,11 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
             actions << _itemActions[EatSignetOfLearning];
 
         actions << separator() << _itemActions[Delete];
+#ifdef DUMP_INFO_ACTION
+        QAction *dumpInfoAction = new QAction("Dump info", this);
+        connect(dumpInfoAction, SIGNAL(triggered()), SLOT(dumpInfo()));
+        actions << separator() << dumpInfoAction;
+#endif
         QMenu::exec(actions, _itemsView->mapToGlobal(pos));
     }
 }
@@ -355,6 +360,27 @@ void ItemsPropertiesSplitter::deleteItemTriggered()
             emit cubeDeleted();
     }
 }
+
+#ifdef DUMP_INFO_ACTION
+void ItemsPropertiesSplitter::dumpInfo()
+{
+    ItemInfo *item = selectedItem(false);
+    ItemBase *base = ItemDataBase::Items()->value(item->itemType);
+    const char *quality = metaEnumFromName<Enums::ItemQuality>("ItemQualityEnum").valueToKey(item->quality);
+    bool isSetOrUnique = areBothItemsSetOrUnique(item, item);
+#ifndef QT_NO_DEBUG
+    qDebug() << ItemParser::itemStorageAndCoordinatesString("location %1, row %2, col %3, equipped in %4", item) << "quality" << quality << "code" << item->itemType << "types" << base->types << "image" << base->imageName;
+    if (isSetOrUnique)
+        qDebug() << "set/unique ID" << item->setOrUniqueId;
+    qDebug("--------------------");
+#endif
+    QString types;
+    foreach (const QByteArray &type, base->types)
+        types += type + ", ";
+    INFO_BOX(QString("%1\nquality %2, set/unique ID %3\ncode %4, types: %5\nimage %6").arg(ItemParser::itemStorageAndCoordinatesString("location %1, row %2, col %3, equipped in %4", item))
+        .arg(quality).arg(isSetOrUnique ? item->setOrUniqueId : 0).arg(item->itemType.data()).arg(types).arg(base->imageName.data()));
+}
+#endif
 
 void ItemsPropertiesSplitter::deleteItem(ItemInfo *item)
 {
@@ -556,8 +582,8 @@ ItemInfo *ItemsPropertiesSplitter::disenchantItemIntoItem(ItemInfo *oldItem, Ite
     // update bits
     bool isPlugyStorage = newItemCopy->storage == Enums::ItemStorage::PersonalStash || newItemCopy->storage == Enums::ItemStorage::SharedStash || newItemCopy->storage == Enums::ItemStorage::HCStash;
     ReverseBitWriter::replaceValueInBitString(newItemCopy->bitString, Enums::ItemOffsets::Storage, isPlugyStorage ? Enums::ItemStorage::Stash : newItemCopy->storage);
-    ReverseBitWriter::replaceValueInBitString(newItemCopy->bitString, Enums::ItemOffsets::Column,     newItemCopy->column);
-    ReverseBitWriter::replaceValueInBitString(newItemCopy->bitString, Enums::ItemOffsets::Row,        newItemCopy->row);
+    ReverseBitWriter::updateItemRow(newItemCopy);
+    ReverseBitWriter::updateItemColumn(newItemCopy);
 
     performDeleteItem(oldItem, emitSignal);
     addItemToList(newItemCopy, emitSignal);

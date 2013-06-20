@@ -6,6 +6,7 @@
 #include "itemstoragetablemodel.h"
 #include "resourcepathmanager.hpp"
 #include "itemparser.h"
+#include "reversebitwriter.h"
 
 #include <QPushButton>
 #include <QDoubleSpinBox>
@@ -323,18 +324,21 @@ void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
         {
             ItemsList itemBaseTypeItems = itemsByBaseType.take(itemBaseType);
             // add sacred versions
-            for (QHash<QByteArray, ItemsList>::iterator jter = itemsByBaseType.begin(), endJter = itemsByBaseType.end(); jter != endJter; ++jter)
+            for (QHash<QByteArray, ItemsList>::iterator jter = itemsByBaseType.begin(), endJter = itemsByBaseType.end(); jter != endJter; )
             {
                 const ItemsList &items = jter.value();
                 // all items are of the same type, so it's ok to use any of them (let's use first for simplicity)
                 ItemInfo *item = items.first();
                 Enums::ItemTypeGeneric::ItemTypeGenericEnum genericType = kItemsBaseInfo->value(item->itemType)->genericType;
+                bool b = /*itemBaseType == "bhlm" &&*/ item->itemType == "@45" /*isSacred(item) && kItemsBaseInfo->value(item->itemType)->imageName == "invmsk"*/;
                 if ((genericType == Enums::ItemTypeGeneric::Weapon || genericType == Enums::ItemTypeGeneric::Armor) && isSacred(item) && (kItemTypesInfo->value(jter.key()).contains(itemBaseType) || (itemBaseType == "bhlm" && (item->itemType == "@45" || item->itemType == "@46"))))
                 {
                     itemBaseTypeItems << items;
-                    itemsByBaseType.erase(jter);
-                    break; // sacred type can be only one
+                    jter = itemsByBaseType.erase(jter);
+                    //break; // sacred type can be only one
                 }
+                else
+                    ++jter;
             }
 
             if (!itemBaseTypeItems.isEmpty())
@@ -386,6 +390,9 @@ void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
                         item->row = row;
                         item->column = col;
                         item->plugyPage = page;
+
+                        ReverseBitWriter::updateItemRow(item);
+                        ReverseBitWriter::updateItemColumn(item);
 
                         col += baseInfo->width;
                     }

@@ -53,6 +53,7 @@ scrd # crystal sword
 # general armor
 tors # body
 helm # helm
+crow # crown (it has separate type)
 circ # circlet
 bhlm # 1337 helm
 shie # shield

@@ -586,8 +586,8 @@ bool ItemDataBase::storeItemIn(ItemInfo *item, Enums::ItemStorage::ItemStorageEn
                 item->plugyPage = plugyPage;
 
                 ReverseBitWriter::replaceValueInBitString(item->bitString, Enums::ItemOffsets::Storage, storage > Enums::ItemStorage::Stash ? Enums::ItemStorage::Stash : storage);
-                ReverseBitWriter::replaceValueInBitString(item->bitString, Enums::ItemOffsets::Column, item->column);
-                ReverseBitWriter::replaceValueInBitString(item->bitString, Enums::ItemOffsets::Row, item->row);
+                ReverseBitWriter::updateItemRow(item);
+                ReverseBitWriter::updateItemColumn(item);
 
                 return true;
             }

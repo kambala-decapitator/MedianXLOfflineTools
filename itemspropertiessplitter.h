@@ -5,6 +5,10 @@
 
 #include <QSplitter>
 
+#ifndef QT_NO_DEBUG
+#define DUMP_INFO_ACTION
+#endif
+
 
 class ItemStorageTableView;
 class ItemStorageTableModel;
@@ -61,6 +65,10 @@ protected slots:
     void downgradeSelectedRune();
     void eatSelectedSignet();
     void deleteItemTriggered();
+#ifdef DUMP_INFO_ACTION
+    void dumpInfo();
+#endif // DUMP_INFO_ACTION
+
 
 protected:
     enum ItemAction
