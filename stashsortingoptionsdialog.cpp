@@ -44,6 +44,7 @@ StashSortOptions StashSortingOptionsDialog::sortOptions() const
     options.qualityOrderAscending = ui->ascQualityRadioButton->isChecked();
     options.firstPage = ui->firstPageSpinBox->value();
     options.lastPage = ui->lastPageSpinBox->value();
+    options.separateSacredItems = ui->separateSacredsCheckBox->isChecked();
     options.separateEtherealItems = ui->separateEthCheckBox->isChecked();
     options.separateCotw = ui->separateCotwCheckBox->isChecked();
     options.diffQualitiesBlankPages = ui->diffQualitiesSpinBox->value();
@@ -75,6 +76,7 @@ void StashSortingOptionsDialog::createLayout()
     vbl->addWidget(ui->ascQualityRadioButton);
 
     vbl = new QVBoxLayout(ui->additionalNewPageGroupBox);
+    vbl->addWidget(ui->separateSacredsCheckBox);
     vbl->addWidget(ui->separateEthCheckBox);
     vbl->addWidget(ui->separateCotwCheckBox);
 

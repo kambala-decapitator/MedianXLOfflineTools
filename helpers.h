@@ -35,7 +35,15 @@ QMetaEnum metaEnumFromName(const char *enumName)
 #include <QList>
 class QTreeWidgetItem;
 class ItemInfo;
+class QTreeView;
 QList<QTreeWidgetItem *> treeItemsForItems(const QList<ItemInfo *> &items);
+void customizeItemsTreeView(QTreeView *treeView);
+
+bool isTiered(ItemInfo *item);
+bool isTiered(const QList<QByteArray> &itemTypes);
+bool isSacred(ItemInfo *item);
+bool isSacred(const QList<QByteArray> &itemTypes);
+bool areBothItemsSetOrUnique(ItemInfo *a, ItemInfo *b);
 
 // check which mod data is used
 bool isUltimative();
@@ -46,9 +54,6 @@ bool isSigma();
 // item conditions for STL algorithms
 bool isCubeInCharacterItems(ItemInfo *item);
 bool hasChanged(ItemInfo *item);
-
-bool isTiered(ItemInfo *item);
-bool isSacred(ItemInfo *item);
 
 bool isClassCharm(ItemInfo *item);
 bool isCrystallineFlameMedallion(ItemInfo *item);
@@ -71,9 +76,8 @@ bool isArcaneShard2(ItemInfo *item);
 bool isArcaneShard3(ItemInfo *item);
 bool isArcaneShard4(ItemInfo *item);
 
+// sorting predicates
 bool compareItemsByPlugyPage(ItemInfo *a, ItemInfo *b);
-
-class QTreeView;
-void customizeItemsTreeView(QTreeView *treeView);
+bool compareItemsByRlvl(ItemInfo *a, ItemInfo *b);
 
 #endif // HELPERS_H

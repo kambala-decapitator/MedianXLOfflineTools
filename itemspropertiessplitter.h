@@ -58,7 +58,6 @@ protected slots:
     void exportText();
     void disenchantSelectedItem();
 //    void unsocketItem();
-    //void makeNonEthereal();
     void downgradeSelectedRune();
     void eatSelectedSignet();
     void deleteItemTriggered();

@@ -1,5 +1,7 @@
 v0.4:
 - sort stashes
+- cyclic arrow navigation between items
+- send OS info to server
 - ctc Miasma MO removal (doesn't appear)
 - move mass disenchant to a separate dialog and add more options
 - batch eat signets (add a button)

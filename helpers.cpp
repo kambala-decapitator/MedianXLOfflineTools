@@ -138,6 +138,47 @@ QList<QTreeWidgetItem *> treeItemsForItems(const ItemsList &items)
     return treeItems;
 }
 
+void customizeItemsTreeView(QTreeView *treeView)
+{
+    treeView->setStyleSheet(
+        "QTreeView                { background-color: black; }"
+        "QTreeView::item          { selection-color: red; }"
+        "QTreeView::item:hover    { border: 1px solid #bfcde4; }"
+        "QTreeView::item:selected { border: 1px solid #567dbc; }"
+        //"QTreeView::item:hover    { background-color: blue; }"
+        //"QTreeView::item:selected { background-color: rgba(255,0,0,50%); }"
+        );
+    treeView->setEditTriggers(QAbstractItemView::NoEditTriggers);
+    treeView->setDropIndicatorShown(false);
+}
+
+
+bool isTiered(ItemInfo *item)
+{
+    return isTiered(ItemDataBase::Items()->value(item->itemType)->types);
+}
+
+bool isTiered(const QList<QByteArray> &itemTypes)
+{
+    return itemTypes.contains("tier");
+}
+
+bool isSacred(ItemInfo *item)
+{
+    return !isTiered(item);
+}
+
+bool isSacred(const QList<QByteArray> &itemTypes)
+{
+    return !isTiered(itemTypes);
+}
+
+bool areBothItemsSetOrUnique(ItemInfo *a, ItemInfo *b)
+{
+    return (a->quality == Enums::ItemQuality::Unique && b->quality == Enums::ItemQuality::Unique) || (a->quality == Enums::ItemQuality::Set && b->quality == Enums::ItemQuality::Set);
+}
+
+
 bool isUltimative()
 {
     return isUltimative4() || isUltimative5OrLater();
@@ -158,6 +199,7 @@ bool isSigma()
     return ItemDataBase::Properties()->value(Enums::CharacterStats::Level)->saveBits != 7;
 }
 
+
 bool isCubeInCharacterItems(ItemInfo *item)
 {
     return (item->storage == Enums::ItemStorage::Inventory || item->storage == Enums::ItemStorage::Stash) && ItemDataBase::isCube(item);
@@ -168,15 +210,6 @@ bool hasChanged(ItemInfo *item)
     return item->hasChanged;
 }
 
-bool isTiered(ItemInfo *item)
-{
-    return ItemDataBase::Items()->value(item->itemType)->types.contains("tier");
-}
-
-bool isSacred(ItemInfo *item)
-{
-    return !isTiered(item);
-}
 
 bool isClassCharm(ItemInfo *item)
 {
@@ -279,16 +312,10 @@ bool compareItemsByPlugyPage(ItemInfo *a, ItemInfo *b)
     return a->plugyPage < b->plugyPage;
 }
 
-void customizeItemsTreeView(QTreeView *treeView)
+bool compareItemsByRlvl(ItemInfo *a, ItemInfo *b)
 {
-    treeView->setStyleSheet(
-        "QTreeView                { background-color: black; }"
-        "QTreeView::item          { selection-color: red; }"
-        "QTreeView::item:hover    { border: 1px solid #bfcde4; }"
-        "QTreeView::item:selected { border: 1px solid #567dbc; }"
-        //"QTreeView::item:hover    { background-color: blue; }"
-        //"QTreeView::item:selected { background-color: rgba(255,0,0,50%); }"
-        );
-    treeView->setEditTriggers(QAbstractItemView::NoEditTriggers);
-    treeView->setDropIndicatorShown(false);
+    if (areBothItemsSetOrUnique(a, b))
+        if (isSacred(a) && isSacred(b))
+            return a->setOrUniqueId < b->setOrUniqueId;
+    return ItemDataBase::Items()->value(a->itemType)->rlvl < ItemDataBase::Items()->value(b->itemType)->rlvl;
 }

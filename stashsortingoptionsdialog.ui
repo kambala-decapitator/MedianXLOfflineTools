@@ -224,7 +224,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>20</y>
+      <y>40</y>
       <width>91</width>
       <height>17</height>
      </rect>
@@ -237,13 +237,29 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>50</y>
+      <y>60</y>
       <width>151</width>
       <height>17</height>
      </rect>
     </property>
     <property name="text">
      <string>Cornerstones of the World</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="separateSacredsCheckBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>84</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Sacred items</string>
     </property>
     <property name="checked">
      <bool>true</bool>

@@ -211,14 +211,6 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
 //        if (item->isSocketed && item->socketablesNumber)
 //            actions << _itemActions[Unsocket];
 
-        // no need
-        //if (item->isEthereal)
-        //{
-        //    QAction *actionMakeNonEthereal = new QAction(tr("Make Non-Ethereal"), _itemsView);
-        //    connect(actionMakeNonEthereal, SIGNAL(triggered()), SLOT(makeNonEthereal()));
-        //    actions << actionMakeNonEthereal;
-        //}
-
         if (_itemActions[RemoveMO]->isEnabled())
         {
             QAction *actionToAdd = 0;
@@ -346,28 +338,6 @@ void ItemsPropertiesSplitter::eatSelectedSignet()
 //void ItemsPropertiesSplitter::unsocketItem()
 //{
 
-//}
-
-//void ItemsPropertiesSplitter::makeNonEthereal()
-//{
-//    ItemInfo *item = selectedItem();
-//    if (item)
-//    {
-//        item->hasChanged = true;
-//
-//        item->isEthereal = false;
-//        ReverseBitWriter::replaceValueInBitString(item->bitString, Enums::ItemOffsets::Ethereal, 0);
-//
-//        if (ItemDataBase::Items()->value(item->itemType).genericType == Enums::ItemTypeGeneric::Armor)
-//        {
-//            // TODO if will bring back: find the correct position for replacement (the defense offset isn't static)
-//            item->defense /= 1.5;
-//            const ItemPropertyTxt &defenceProp = ItemDataBase::Properties()->value(Enums::ItemProperties::Defence);
-//            ReverseBitWriter::replaceValueInBitString(item->bitString, Enums::ItemOffsets::Ethereal, defenceProp.bits, item->defense + defenceProp.add);
-//        }
-//
-//        _propertiesWidget->displayItemProperties(item);
-//    }
 //}
 
 void ItemsPropertiesSplitter::deleteItemTriggered()
@@ -588,49 +558,6 @@ ItemInfo *ItemsPropertiesSplitter::disenchantItemIntoItem(ItemInfo *oldItem, Ite
     ReverseBitWriter::replaceValueInBitString(newItemCopy->bitString, Enums::ItemOffsets::Storage, isPlugyStorage ? Enums::ItemStorage::Stash : newItemCopy->storage);
     ReverseBitWriter::replaceValueInBitString(newItemCopy->bitString, Enums::ItemOffsets::Column,     newItemCopy->column);
     ReverseBitWriter::replaceValueInBitString(newItemCopy->bitString, Enums::ItemOffsets::Row,        newItemCopy->row);
-//    ReverseBitWriter::replaceValueInBitString(newItemCopy->bitString, Enums::ItemOffsets::EquipIndex, newItemCopy->whereEquipped);
-//    ReverseBitWriter::replaceValueInBitString(newItem->bitString, Enums::ItemOffsets::Location, newItem->location);
-
-    //if (newItem->storage == Enums::ItemStorage::Stash)
-    //{
-    //    // plugy saves last opened page as the stash page, so we should find the correct page
-    //    ItemInfo *plugyItem = 0;
-    //    for (int i = Enums::ItemStorage::PersonalStash; i <= Enums::ItemStorage::HCStash; ++i)
-    //    {
-    //        ItemsList plugyStashItems = ItemParser::itemsStoredIn(i);
-    //        foreach (ItemInfo *plugyStashItem, plugyStashItems)
-    //        {
-    //            if (plugyStashItem->bitString == newItem->bitString)
-    //            {
-    //                plugyItem = plugyStashItem;
-    //                break;
-    //            }
-    //        }
-    //        if (plugyItem)
-    //            break;
-    //    }
-
-    //    if (plugyItem)
-    //    {
-    //        ItemInfo *copy = new ItemInfo(*newItem);
-    //        copy->storage = plugyItem->storage;
-    //        copy->plugyPage = plugyItem->plugyPage;
-
-    //        performDeleteItem(plugyItem, false);
-    //        addItemToList(copy, false);
-    //        //emit storageModified(copy->storage);
-    //    }
-    //}
-    //else if (newItem->storage >= Enums::ItemStorage::PersonalStash && newItem->storage <= Enums::ItemStorage::HCStash)
-    //{
-    //    ItemsList stashItems = ItemParser::itemsStoredIn(Enums::ItemStorage::Stash);
-    //    if (stashItems.indexOf(item) != -1)
-    //    {
-    //        ItemInfo *copy = new ItemInfo(*newItem);
-    //        copy->storage = Enums::ItemStorage::Stash;
-    //        copy->plugyPage = 0;
-    //    }
-    //}
 
     performDeleteItem(oldItem, emitSignal);
     addItemToList(newItemCopy, emitSignal);

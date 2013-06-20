@@ -54,7 +54,7 @@ public:
         Ok
     } status;
 
-    bool shouldDeleteEverything; // set to false in DupeCheckDialog
+    bool shouldDeleteEverything; // is set to false in DupeCheckDialog to prevent crash
 
     ItemInfo() { init(); }
     ItemInfo(const QString &bits) : bitString(bits) { init(); }
@@ -228,7 +228,7 @@ struct StashSortOptions
         Type
     } primarySortKey;
 
-    bool qualityOrderAscending, separateEtherealItems, separateCotw;
+    bool qualityOrderAscending, separateSacredItems, separateEtherealItems, separateCotw;
     int firstPage, lastPage, diffQualitiesBlankPages, diffTypesBlankPages;
 };
 

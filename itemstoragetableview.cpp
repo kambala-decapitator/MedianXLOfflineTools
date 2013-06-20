@@ -60,12 +60,25 @@ void ItemStorageTableView::setCellSpanForItem(ItemInfo *item)
 
 void ItemStorageTableView::keyPressEvent(QKeyEvent *event)
 {
+    //QModelIndex oldIndex = currentIndex();
     QTableView::keyPressEvent(event);
 
     int key = event->key();
+    // TODO: cyclic transition
+    //if (key == Qt::Key_Right)
+    //{
+    //    if (oldIndex == currentIndex())
+    //    {
+    //        setCurrentIndex(model()->index(oldIndex.row() + rowSpan(oldIndex.row(), 0), 0));
+    //    }
+    //}
+
     if (key == Qt::Key_Up || key == Qt::Key_Down || key == Qt::Key_Left || key == Qt::Key_Right || key == Qt::Key_PageUp || key == Qt::Key_PageDown || key == Qt::Key_Home || key == Qt::Key_End)
         selectionModel()->setCurrentIndex(originIndexInRectOfIndex(currentIndex()), QItemSelectionModel::ClearAndSelect);
 }
+
+
+// drag & drop
 
 void ItemStorageTableView::dragEnterEvent(QDragEnterEvent *event)
 {

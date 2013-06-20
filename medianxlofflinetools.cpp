@@ -2784,7 +2784,7 @@ void MedianXLOfflineTools::networkReplyFinished(QNetworkReply *reply)
     }
     else
     {
-        QUrl newUrl("http://forum.worldofplayers.ru/forumdisplay.php?f=935");
+        QUrl newUrl("http://worldofplayers.ru/forums/935/");
         if (newUrl != reply->url())
             checkForUpdateFromUrl(newUrl);
         else if (_isManuallyCheckingForUpdate)

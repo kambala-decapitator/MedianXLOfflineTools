@@ -9,7 +9,7 @@
 #include <QVBoxLayout>
 #include <QLineEdit>
 #include <QDesktopWidget>
-#include <QTextEdit>
+#include <QTextBrowser>
 #include <QDialogButtonBox>
 
 #include <QRegExp>
@@ -20,7 +20,8 @@
 #endif
 
 
-FindItemsDialog::FindItemsDialog(QWidget *parent) : QDialog(parent), ui(new Ui::FindItemsDialog), _searchPerformed(false), _searchResultsChanged(false), _resultsWidget(new FindResultsWidget(this)), _lastResultsHeight(-1)
+FindItemsDialog::FindItemsDialog(QWidget *parent) : QDialog(parent), ui(new Ui::FindItemsDialog), _searchPerformed(false), _searchResultsChanged(false),
+    _resultsWidget(new FindResultsWidget(this)), _lastResultsHeight(-1)
 {
     ui->setupUi(this);
     setWindowFlags(windowFlags() & ~Qt::WindowContextHelpButtonHint);
@@ -194,15 +195,13 @@ void FindItemsDialog::toggleResults()
 
 void FindItemsDialog::showHelp()
 {
-    QDialog dlg;
+    QDialog dlg(parentWidget());
     dlg.setWindowFlags(dlg.windowFlags() & ~Qt::WindowContextHelpButtonHint);
     dlg.setWindowTitle(tr("Search help"));
 
-    QTextEdit *textEdit = new QTextEdit(&dlg);
-    textEdit->setAcceptRichText(true);
-    textEdit->setAlignment(Qt::AlignJustify);
-    textEdit->setReadOnly(true);
-    textEdit->setHtml(tr(
+    QTextBrowser *textBrowser = new QTextBrowser(&dlg);
+    textBrowser->setOpenExternalLinks(true);
+    textBrowser->setHtml(tr(
       "<h3>Item names</h3>"
       "<p>All items except non-magical ones have their quality listed inside [] at the very beginning of item description. Valid values are: magic, rare, unique, set, crafted, honorific.</p>"
       "<p>Runewords and charms are considered a special type of quality, so they have [runeword] and [charm] respectively.</p>"
@@ -215,7 +214,7 @@ void FindItemsDialog::showHelp()
       "<p>Properties appear the same way as they do in the item description view. Diablo color codes are also present here to simplify search for e.g. elite reanimates.</p>"
       "<h3>Regular expressions</h3>"
       "<p>Regular expressions syntax is mostly Perl-compatible, but there're some limitations. "
-      "Refer to the Qt regular expressions description (http://developer.qt.nokia.com/doc/qregexp.html#details) for more information.</p>"
+      "Refer to the <a href=\"http://qt-project.org/doc/qt-4.8/qregexp.html#details\">Qt regular expressions description</a> for more information.</p>"
       "<p>Regular expressions-only checkboxes in the dialog have tooltips on what they mean if it's not clear.</p>"
       "<p>Hint: enter . (period) as a search text to see all your items :)</p>"
       "<h3>Search results</h3>"
@@ -227,7 +226,7 @@ void FindItemsDialog::showHelp()
     connect(buttonBox, SIGNAL(accepted()), &dlg, SLOT(accept()));
 
     QVBoxLayout *vbox = new QVBoxLayout(&dlg);
-    vbox->addWidget(textEdit);
+    vbox->addWidget(textBrowser);
     vbox->addWidget(buttonBox);
 
     dlg.resize(400, 400);
