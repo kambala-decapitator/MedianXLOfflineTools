@@ -2,6 +2,7 @@
 #define STRUCTS_H
 
 #include "enums.h"
+#include "reversebitwriter.h"
 
 
 // internal
@@ -59,6 +60,15 @@ public:
     ItemInfo() { init(); }
     ItemInfo(const QString &bits) : bitString(bits) { init(); }
     ~ItemInfo() { if (shouldDeleteEverything) { qDeleteAll(props); qDeleteAll(rwProps); qDeleteAll(socketablesInfo); } }
+
+    void move(int newRow, int newCol)
+    {
+        row = newRow;
+        column = newCol;
+
+        ReverseBitWriter::updateItemRow(this);
+        ReverseBitWriter::updateItemColumn(this);
+    }
 
 private:
     void init() { plugyPage = 0; hasChanged = false; ilvl = 1; variableGraphicIndex = 0; location = row = column = storage = -1; whereEquipped = 0; shouldDeleteEverything = true; }

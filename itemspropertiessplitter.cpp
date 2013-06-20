@@ -573,8 +573,7 @@ ItemInfo *ItemsPropertiesSplitter::disenchantItemIntoItem(ItemInfo *oldItem, Ite
         return 0;
     }
 
-    newItemCopy->row = oldItem->row;
-    newItemCopy->column = oldItem->column;
+    newItemCopy->move(oldItem->row, oldItem->column);
     newItemCopy->storage = oldItem->storage;
     newItemCopy->whereEquipped = oldItem->whereEquipped;
     newItemCopy->plugyPage = oldItem->plugyPage;
@@ -582,8 +581,6 @@ ItemInfo *ItemsPropertiesSplitter::disenchantItemIntoItem(ItemInfo *oldItem, Ite
     // update bits
     bool isPlugyStorage = newItemCopy->storage == Enums::ItemStorage::PersonalStash || newItemCopy->storage == Enums::ItemStorage::SharedStash || newItemCopy->storage == Enums::ItemStorage::HCStash;
     ReverseBitWriter::replaceValueInBitString(newItemCopy->bitString, Enums::ItemOffsets::Storage, isPlugyStorage ? Enums::ItemStorage::Stash : newItemCopy->storage);
-    ReverseBitWriter::updateItemRow(newItemCopy);
-    ReverseBitWriter::updateItemColumn(newItemCopy);
 
     performDeleteItem(oldItem, emitSignal);
     addItemToList(newItemCopy, emitSignal);

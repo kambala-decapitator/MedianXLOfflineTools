@@ -1,17 +1,16 @@
 #ifndef REVERSEBITWRITER_H
 #define REVERSEBITWRITER_H
 
-#include "structs.h"
-
 
 class QString;
+class ItemInfo;
 
 class ReverseBitWriter
 {
 public:
     static QString &replaceValueInBitString(QString &bitString, int offset, int newValue);
-    static QString &updateItemRow(ItemInfo *item)    { return replaceValueInBitString(item->bitString, Enums::ItemOffsets::Row,    item->row); }
-    static QString &updateItemColumn(ItemInfo *item) { return replaceValueInBitString(item->bitString, Enums::ItemOffsets::Column, item->column); }
+    static QString &updateItemRow(ItemInfo *item);
+    static QString &updateItemColumn(ItemInfo *item);
 };
 
 #endif // REVERSEBITWRITER_H

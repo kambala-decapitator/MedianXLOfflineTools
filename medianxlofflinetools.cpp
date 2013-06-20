@@ -1047,21 +1047,21 @@ void MedianXLOfflineTools::checkForUpdate()
 
 void MedianXLOfflineTools::aboutApp()
 {
+    const QString appFullName = qApp->applicationName() + " v" + qApp->applicationVersion(), email("decapitator@ukr.net");
+
     QMessageBox aboutBox(this);
     aboutBox.setWindowTitle(tr("About %1").arg(qApp->applicationName()));
     aboutBox.setIconPixmap(windowIcon().pixmap(64));
     aboutBox.setTextFormat(Qt::RichText);
-    QString appFullName = qApp->applicationName() + " v" + qApp->applicationVersion();
-    aboutBox.setText(QString("<b>%1</b>%2").arg(appFullName, kHtmlLineBreak) + tr("Compiled on: %1").arg(QLocale(QLocale::C).toDateTime(QString(__TIMESTAMP__).simplified(),
-                                                                                                                                        "ddd MMM d hh:mm:ss yyyy").toString("dd.MM.yyyy hh:mm:ss")));
-    QString email("decapitator@ukr.net");
+    aboutBox.setText(QString("<b>%1</b>%2").arg(appFullName, kHtmlLineBreak) +
+        tr("Compiled on: %1").arg(QLocale(QLocale::C).toDateTime(QString(__TIMESTAMP__).simplified(), "ddd MMM d hh:mm:ss yyyy").toString("dd.MM.yyyy hh:mm:ss")));
     aboutBox.setInformativeText(
         tr("<i>Author:</i> Filipenkov Andrey (<b>kambala</b>)") + QString("%1<i>ICQ:</i> 287764961%1<i>E-mail:</i> <a href=\"mailto:%2?subject=%3\">%2</a>%1%1").arg(kHtmlLineBreak, email, appFullName) +
         kForumThreadHtmlLinks + kHtmlLineBreak + kHtmlLineBreak +
         tr("<b>Credits:</b>"
            "<ul>"
              "<li><a href=\"http://modsbylaz.hugelaser.com/\">BrotherLaz</a> for this awesome mod</li>"
-             "<li><a href=\"http://www.medianxl.com/u1\">MarcoNecroX aka SIGMA</a> for a hot extension of Median XL called <b>Ultimative</b></li>"
+             "<li><a href=\"http://www.medianxl.com/u1\">MarcoNecroX</a> for a hot extension of Median XL called <b>Ultimative</b></li>"
              "<li>grig for the Perl source of <a href=\"http://grig.vlexofree.com/\">Median XL Online Tools</a> and tips</li>"
              "<li><a href=\"http://phrozenkeep.hugelaser.com/index.php?ind=reviews&op=section_view&idev=4\">Phrozen Keep File Guides</a> for tons of useful information on txt sources</li>"
              "<li>FixeR, Zelgadiss, moonra, Vilius, Delegus, aahz and HerrNieschnell for intensive testing and tips on GUI & functionality</li>"

@@ -1,5 +1,6 @@
 v0.4:
 - sort stashes
+- sort items in find results by plugy page
 - cyclic arrow navigation between items
 - send OS info to server
 - ctc Miasma MO removal (doesn't appear)

@@ -324,19 +324,40 @@ void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
         {
             ItemsList itemBaseTypeItems = itemsByBaseType.take(itemBaseType);
             // add sacred versions
-            for (QHash<QByteArray, ItemsList>::iterator jter = itemsByBaseType.begin(), endJter = itemsByBaseType.end(); jter != endJter; )
+            QHash<QByteArray, ItemsList>::iterator jter = itemsByBaseType.begin(), endJter = itemsByBaseType.end();
+            while (jter != endJter)
             {
-                const ItemsList &items = jter.value();
-                // all items are of the same type, so it's ok to use any of them (let's use first for simplicity)
-                ItemInfo *item = items.first();
-                Enums::ItemTypeGeneric::ItemTypeGenericEnum genericType = kItemsBaseInfo->value(item->itemType)->genericType;
-                bool b = /*itemBaseType == "bhlm" &&*/ item->itemType == "@45" /*isSacred(item) && kItemsBaseInfo->value(item->itemType)->imageName == "invmsk"*/;
-                if ((genericType == Enums::ItemTypeGeneric::Weapon || genericType == Enums::ItemTypeGeneric::Armor) && isSacred(item) && (kItemTypesInfo->value(jter.key()).contains(itemBaseType) || (itemBaseType == "bhlm" && (item->itemType == "@45" || item->itemType == "@46"))))
+                ItemsList &items = jter.value();
+                for (int j = 0; j < items.size(); ++j)
                 {
-                    itemBaseTypeItems << items;
-                    jter = itemsByBaseType.erase(jter);
-                    //break; // sacred type can be only one
+                    ItemInfo *item = items.at(j);
+                    bool itemShouldBeAdded = false;
+
+                    Enums::ItemTypeGeneric::ItemTypeGenericEnum genericType = kItemsBaseInfo->value(item->itemType)->genericType;
+                    if ((genericType == Enums::ItemTypeGeneric::Weapon || genericType == Enums::ItemTypeGeneric::Armor) && isSacred(item))
+                    {
+                        static const char *kSacredMaskCode = "@45", *kSacredBoneHelmCode = "@46", *kSacredCrownCode = "@21", *kSacredSpikedShieldCode = "@44", *kSacredBoneShieldCode = "@43";
+                        static const char *kSpecialHelmType = "bhlm", *kCrownType = "crow", *kSpecialShieldType = "bshi";
+
+                        if (item->itemType == kSacredMaskCode || item->itemType == kSacredBoneHelmCode) // mask, bone helm
+                            itemShouldBeAdded = itemBaseType == kSpecialHelmType;
+                        else if (item->itemType == kSacredCrownCode) // crown
+                            itemShouldBeAdded = itemBaseType == kCrownType;
+                        else if (item->itemType == kSacredSpikedShieldCode || item->itemType == kSacredBoneShieldCode) // spiked/bone shield
+                            itemShouldBeAdded = itemBaseType == kSpecialShieldType;
+                        else
+                            itemShouldBeAdded = kItemTypesInfo->value(jter.key()).contains(itemBaseType);
+                    }
+
+                    if (itemShouldBeAdded)
+                    {
+                        itemBaseTypeItems << item;
+                        items.removeAt(j--);
+                    }
                 }
+
+                if (items.isEmpty())
+                    jter = itemsByBaseType.erase(jter);
                 else
                     ++jter;
             }
@@ -367,9 +388,10 @@ void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
                         ItemBase *baseInfo = kItemsBaseInfo->value(item->itemType);
                         if (!previousItem)
                             previousItem = item;
-                        else if ((previousItem->itemType != item->itemType || (areBothItemsSetOrUnique(item, previousItem) && previousItem->setOrUniqueId != item->setOrUniqueId)) && col + baseInfo->width <= columns) // if another tier item fits current row, simulate the opposite
+                        else if ((previousItem->itemType != item->itemType || (areBothItemsSetOrUnique(item, previousItem) && previousItem->setOrUniqueId != item->setOrUniqueId))) // if another tier item fits current row, simulate the opposite
                         {
-                            col = columns;
+                            if (col + baseInfo->width <= columns)
+                                col = columns;
                             previousItem = item;
                         }
                         // fill stash by rows
@@ -387,12 +409,8 @@ void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
                             }
                         }
 
-                        item->row = row;
-                        item->column = col;
+                        item->move(row, col);
                         item->plugyPage = page;
-
-                        ReverseBitWriter::updateItemRow(item);
-                        ReverseBitWriter::updateItemColumn(item);
 
                         col += baseInfo->width;
                     }
