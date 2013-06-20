@@ -77,6 +77,8 @@ private:
     void setShortcutTextInButtonTooltip(QPushButton *button, const QKeySequence &keySequence);
     ItemsList *itemsForSelectedRange() { return _shouldApplyActionToAllPages ? &_allItems : &_pagedItems; }
 //    void moveItemsToFirstPages(ItemsList *items, bool toShards);
+
+    void storeItemsOnPage(const ItemsList &items, quint32 &page, int &row, int &col, bool shouldStartAnotherTypeFromNewRow);
 };
 
 #endif // PLUGYITEMSSPLITTER_H

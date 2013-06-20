@@ -367,13 +367,15 @@ void ItemsPropertiesSplitter::dumpInfo()
     ItemInfo *item = selectedItem(false);
     ItemBase *base = ItemDataBase::Items()->value(item->itemType);
     const char *quality = metaEnumFromName<Enums::ItemQuality>("ItemQualityEnum").valueToKey(item->quality);
-    bool isSetOrUnique = areBothItemsSetOrUnique(item, item);
+    bool isSetOrUnique = areBothItemsSetOrUnique(item, item); // hacky code :)
+
 #ifndef QT_NO_DEBUG
     qDebug() << ItemParser::itemStorageAndCoordinatesString("location %1, row %2, col %3, equipped in %4", item) << "quality" << quality << "code" << item->itemType << "types" << base->types << "image" << base->imageName;
     if (isSetOrUnique)
         qDebug() << "set/unique ID" << item->setOrUniqueId;
     qDebug("--------------------");
 #endif
+
     QString types;
     foreach (const QByteArray &type, base->types)
         types += type + ", ";

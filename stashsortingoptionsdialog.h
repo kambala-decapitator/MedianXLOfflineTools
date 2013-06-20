@@ -22,6 +22,8 @@ public slots:
     virtual void accept();
 
 private slots:
+    void firstPageChanged(double newPage);
+    void lastPageChanged(double newPage);
     void showHelp();
 
 private:

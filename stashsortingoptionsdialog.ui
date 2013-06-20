@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>360</width>
-    <height>243</height>
+    <width>719</width>
+    <height>458</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -331,6 +331,54 @@
     </property>
    </widget>
   </widget>
+  <widget class="QCheckBox" name="checkBox">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>10</y>
+     <width>127</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>New row for each tier</string>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="checkBox_2">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>40</y>
+     <width>163</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>New page for each gem/rune</string>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="checkBox_3">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>70</y>
+     <width>157</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>New row for each gem/rune</string>
+   </property>
+  </widget>
  </widget>
  <tabstops>
   <tabstop>typeRadioButton</tabstop>
@@ -374,6 +422,22 @@
     <hint type="destinationlabel">
      <x>286</x>
      <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_2</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>checkBox_3</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>92</x>
+     <y>302</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>102</x>
+     <y>325</y>
     </hint>
    </hints>
   </connection>

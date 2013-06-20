@@ -1,0 +1,58 @@
+# default order is the same as on the website, but you can change it to your liking
+# empty lines and text after '#' are ignored
+
+# cMXL
+# ama
+127-131 # Bow (Pantheon)
+132-136 # Spear (Celestia's Myth)
+137-141 # Javelin (Vasily's Following)
+142-146 # Blood (Red Vex' Embrace)
+# ass
+152-156 # Combat (The Snake Pit)
+147-151 # Elemental (Witchhunter's Attire)
+157-161 # Throwing (Creed)
+162-166 # Bomb (Vizjun's Devices)
+# baba
+172-176 # Dual Wield (Mount Arreat)
+167-171 # Two-Handed (Gathering of the Tribes)
+177-181 # Throwing (Big Game Hunter)
+182-186 # Shaman (Spirits of the Nephalem)
+# dudu
+197-201 # Elemental (Lone Wolf's Path)
+187-191 # Bow (Caoi Dulra)
+272-276 # Treewarden (Last King of Scosglen)
+267-271 # Trap Rat (Rainbow Warrior)
+# necro
+222-226 # Summoner (Satanic Mantra)
+207-211 # Melee (Rathma's Empire)
+217-221 # Crossbow (Achilios' Wake)
+277-281 # Totemic (The Towerlord)
+# papa
+227-231 # Holy Melee (Cinadide's Craft)
+232-236 # Holy Caster (Hadriel's Lore)
+237-241 # Unholy Melee (Malthael's Sanctuary)
+242-246 # Unholy Caster (Imperius' Edict)
+# soso
+282-286 # Fire (The Warmage)
+252-256 # Cold (Zann Esu's Secrets)
+257-261 # Lightning (Elemental Children)
+262-266 # Poison (Adria's Circle)
+287-291 # Melee (The Mysteries)
+
+# server
+294-298 # Crossbow Set (Testament of the Apes)
+# deprecated (no longer drop)
+192-196 # dudu  - Rainbow Warrior
+202-206 # dudu  - Sacred Earth
+212-216 # necro - Ivory Tower
+247-251 # soso  - Warmage's Wrath
+292-293 # Lazarus' Authority (broken server set)
+
+# Ultimative
+# tribute
+299-301,314         # Necromancer Summoner (Archbishop Lazarus - [BrotherLaz Tribute Set])
+308-312             # Elemental (Cowboys From Hell - [MarcoNecroX Tribute Set])
+303,305-306,316-317 # Fire (All Is One - [Community Tribute Set])
+# Yshari
+318-322 # Yshari Bosses' Set (Brotherhood of the Vizjerei)
+323-327 # Yshari Minions' Set (Brotherhood of the Horadrim)

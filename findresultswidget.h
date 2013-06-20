@@ -25,6 +25,9 @@ public:
 
     virtual ItemInfo *itemForCurrentTreeItem() const;
 
+protected:
+    virtual void resizeEvent(QResizeEvent *e);
+
 private:
     ItemNamesTreeWidget *_resultsTreeWidget;
     QMap<int, ItemsList> _foundItemsMap;

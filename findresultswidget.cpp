@@ -91,3 +91,8 @@ ItemInfo *FindResultsWidget::itemForCurrentTreeItem() const
     QTreeWidgetItem *parentItem = treeItem->parent(); // parentItem != 0 when this is an item, not a storage name
     return parentItem ? _foundItemsMap[_resultsTreeWidget->indexOfTopLevelItem(parentItem)].at(parentItem->indexOfChild(treeItem)) : 0;
 }
+
+void FindResultsWidget::resizeEvent(QResizeEvent *e)
+{
+    _resultsTreeWidget->setColumnWidth(0, _resultsTreeWidget->width() / 2);
+}

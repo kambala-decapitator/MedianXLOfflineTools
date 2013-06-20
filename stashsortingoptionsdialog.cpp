@@ -18,6 +18,7 @@ StashSortingOptionsDialog::StashSortingOptionsDialog(quint32 lastPage, QWidget *
 
     ui->firstPageSpinBox->setMaximum(lastPage);
     ui->lastPageSpinBox->setMaximum(lastPage);
+    ui->lastPageSpinBox->setValue(lastPage);
 
     QStringList qualitiesList = QStringList() << tr("Low Quality") << tr("Normal") << tr("Superior") << tr("RW") << tr("Magic") << tr("Honorific") << tr("Rare") << tr("Crafted") << tr("Unique") << tr("Set");
     ui->ascQualityRadioButton->setToolTip(qualitiesList.join("\n"));
@@ -28,6 +29,8 @@ StashSortingOptionsDialog::StashSortingOptionsDialog(quint32 lastPage, QWidget *
     ui->buttonBox->addButton(tr("Sort"), QDialogButtonBox::AcceptRole);
     ui->buttonBox->button(QDialogButtonBox::Help)->setShortcut(QKeySequence::HelpContents);
 
+    connect(ui->firstPageSpinBox, SIGNAL(valueChanged(double)), SLOT(firstPageChanged(double)));
+    connect(ui->lastPageSpinBox,  SIGNAL(valueChanged(double)), SLOT(lastPageChanged(double)));
     connect(ui->buttonBox, SIGNAL(helpRequested()), SLOT(showHelp()));
 }
 
@@ -57,6 +60,16 @@ void StashSortingOptionsDialog::accept()
 {
     saveSettings();
     QDialog::accept();
+}
+
+void StashSortingOptionsDialog::firstPageChanged(double newPage)
+{
+    ui->lastPageSpinBox->setMinimum(newPage);
+}
+
+void StashSortingOptionsDialog::lastPageChanged(double newPage)
+{
+    ui->firstPageSpinBox->setMaximum(newPage);
 }
 
 void StashSortingOptionsDialog::showHelp()

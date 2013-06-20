@@ -13,6 +13,7 @@
 #include <QHBoxLayout>
 #include <QVBoxLayout>
 #include <QKeyEvent>
+#include <QApplication>
 
 #include <QFile>
 
@@ -34,6 +35,7 @@ static const QString kIconPathFormat(":/PlugyArrows/icons/plugy/%1.png");
 
 enum SortItemQuality
 {
+    Quest,
     LowQuality,
     Normal,
     Superior,
@@ -281,6 +283,7 @@ void PlugyItemsSplitter::upgradeRunes(ItemsList *items /*= 0*/)
 
 void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
 {
+    // load sorting order
     QFile f(ResourcePathManager::dataPathForFileName("sort_order.txt"));
     if (!f.open(QIODevice::ReadOnly | QIODevice::Text))
     {
@@ -294,134 +297,186 @@ void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
         QByteArray line = f.readLine().trimmed();
         if (line.isEmpty() || line.startsWith('#'))
             continue;
+
         int end = line.indexOf('#');
         if (line.at(end - 1) == '\\')
             end = line.indexOf('#', end + 1);
         itemBaseTypesOrder << line.left(end).trimmed().replace("\\#", "#");
     }
+    f.close();
+
+    // load sets' sorting order
+    f.setFileName(ResourcePathManager::dataPathForFileName("sort_order_sets.txt"));
+    if (!f.open(QIODevice::ReadOnly | QIODevice::Text))
+    {
+        ERROR_BOX(tr("Sets' sorting order not loaded from %1").arg(QDir::toNativeSeparators(f.fileName())) + "\n" + tr("Reason: %1").arg(f.errorString()));
+        return;
+    }
+
+    QList<QList<int> > setsOrder;
+    while (!f.atEnd())
+    {
+        QByteArray line = f.readLine().trimmed();
+        if (line.isEmpty() || line.startsWith('#'))
+            continue;
+
+        QList<int> setIds;
+        foreach (const QByteArray &range, line.left(line.indexOf('#')).trimmed().split(','))
+        {
+            QList<QByteArray> minMaxId = range.split('-');
+            int firstId = minMaxId.first().toInt();
+            if (minMaxId.size() == 1)
+                setIds << firstId;
+            else
+                for (int i = firstId, lastId = minMaxId.last().toInt(); i <= lastId; ++i)
+                    setIds << i;
+        }
+        setsOrder << setIds;
+    }
+    f.close();
 
     // sort by quality
     QMap<int, ItemsList> itemsByQuality;
     foreach (ItemInfo *item, _allItems)
-        itemsByQuality[item->isRW ? SortItemQuality::RW : itemQualityMapping()[item->quality]] << item;
+    {
+        int key;
+        if (item->isQuest)
+            key = SortItemQuality::Quest;
+        else if (item->isRW)
+            key = SortItemQuality::RW;
+        else
+            key = itemQualityMapping()[item->quality];
+        itemsByQuality[key] << item;
+    }
 
     const QHash<QByteArray, ItemBase *> *const kItemsBaseInfo = ItemDataBase::Items();
     const QHash<QByteArray, QList<QByteArray> > *const kItemTypesInfo = ItemDataBase::ItemTypes();
-    const int rows = _itemsModel->rowCount(), columns = _itemsModel->columnCount();
+    bool noNewPageInsideGemsAndRunes = true, startEachGemAndRuneFromNewRow = true;
 
     quint32 page = 1;
     QMap<int, ItemsList>::const_iterator    iter = sortOptions.qualityOrderAscending ? itemsByQuality.constBegin() : itemsByQuality.constEnd() - 1;
     QMap<int, ItemsList>::const_iterator endIter = sortOptions.qualityOrderAscending ? itemsByQuality.constEnd()   : itemsByQuality.constBegin() - 1;
     while (iter != endIter)
     {
-        // sort items by base types using the text file (swords, axes, etc.)
-        QHash<QByteArray, ItemsList> itemsByBaseType;
-        foreach (ItemInfo *item, iter.value())
-            itemsByBaseType[kItemsBaseInfo->value(item->itemType)->types.first()] << item;
-
-        int i = 0;
-        foreach (const QByteArray &itemBaseType, itemBaseTypesOrder)
+        int sortQuality = iter.key();
+        if (sortQuality == SortItemQuality::Set)
         {
-            ItemsList itemBaseTypeItems = itemsByBaseType.take(itemBaseType);
-            // add sacred versions
-            QHash<QByteArray, ItemsList>::iterator jter = itemsByBaseType.begin(), endJter = itemsByBaseType.end();
-            while (jter != endJter)
-            {
-                ItemsList &items = jter.value();
-                for (int j = 0; j < items.size(); ++j)
-                {
-                    ItemInfo *item = items.at(j);
-                    bool itemShouldBeAdded = false;
+            // sets use their own ordering
+            QHash<int, ItemsList> setItemsById;
+            foreach (ItemInfo *item, iter.value())
+                setItemsById[item->setOrUniqueId] << item;
 
-                    Enums::ItemTypeGeneric::ItemTypeGenericEnum genericType = kItemsBaseInfo->value(item->itemType)->genericType;
-                    if ((genericType == Enums::ItemTypeGeneric::Weapon || genericType == Enums::ItemTypeGeneric::Armor) && isSacred(item))
+            foreach (const QList<int> &setIds, setsOrder)
+            {
+                ItemsList setItems; // put together all items from one set
+                foreach (int setId, setIds)
+                    setItems << setItemsById.value(setId);
+                if (!setItems.isEmpty())
+                {
+                    int row = 0, col = 0;
+                    storeItemsOnPage(setItems, page, row, col, false);
+                    ++page; // start each set from new page
+                }
+            }
+        }
+        else
+        {
+            // sort items by base types using the text file (swords, axes, etc.)
+            QHash<QByteArray, ItemsList> itemsByBaseType;
+            foreach (ItemInfo *item, iter.value())
+                itemsByBaseType[kItemsBaseInfo->value(item->itemType)->types.first()] << item;
+
+            int baseTypesProcessed = 0;
+            foreach (const QByteArray &itemBaseType, itemBaseTypesOrder)
+            {
+                ItemsList itemBaseTypeItems = itemsByBaseType.take(itemBaseType);
+                // add sacred items or charms
+                QHash<QByteArray, ItemsList>::iterator jter = itemsByBaseType.begin(), endJter = itemsByBaseType.end();
+                while (jter != endJter)
+                {
+                    ItemsList &items = jter.value();
+                    for (int i = 0; i < items.size(); ++i)
                     {
+                        // force correct ordering of some items (they don't 'inherit' from tiered versions)
                         static const char *kSacredMaskCode = "@45", *kSacredBoneHelmCode = "@46", *kSacredCrownCode = "@21", *kSacredSpikedShieldCode = "@44", *kSacredBoneShieldCode = "@43";
                         static const char *kSpecialHelmType = "bhlm", *kCrownType = "crow", *kSpecialShieldType = "bshi";
 
+                        ItemInfo *item = items.at(i);
+                        bool itemShouldBeAdded;
                         if (item->itemType == kSacredMaskCode || item->itemType == kSacredBoneHelmCode) // mask, bone helm
                             itemShouldBeAdded = itemBaseType == kSpecialHelmType;
                         else if (item->itemType == kSacredCrownCode) // crown
                             itemShouldBeAdded = itemBaseType == kCrownType;
                         else if (item->itemType == kSacredSpikedShieldCode || item->itemType == kSacredBoneShieldCode) // spiked/bone shield
                             itemShouldBeAdded = itemBaseType == kSpecialShieldType;
-                        else
+                        else // default filter
                             itemShouldBeAdded = kItemTypesInfo->value(jter.key()).contains(itemBaseType);
-                    }
 
-                    if (itemShouldBeAdded)
-                    {
-                        itemBaseTypeItems << item;
-                        items.removeAt(j--);
-                    }
-                }
-
-                if (items.isEmpty())
-                    jter = itemsByBaseType.erase(jter);
-                else
-                    ++jter;
-            }
-
-            if (!itemBaseTypeItems.isEmpty())
-            {
-                // sort items by types (broad sword, scimitar, etc.). use item names (text before brackets) to determine sub-type.
-                QMap<QString, ItemsList> itemsByType; // using QMap instead of QHash to have determined order
-                foreach (ItemInfo *item, itemBaseTypeItems)
-                {
-                    QString itemName = kItemsBaseInfo->value(item->itemType)->name;
-                    itemsByType[itemName.left(itemName.indexOf('(')).trimmed()] << item;
-                }
-                // sort each group of items by tiers
-                for (QMap<QString, ItemsList>::iterator jter = itemsByType.begin(), endJter = itemsByType.end(); jter != endJter; ++jter)
-                {
-                    ItemsList &items = jter.value();
-                    // to sort by tiers, sort by rlvl. SUs are sorted by ID.
-                    qSort(items.begin(), items.end(), compareItemsByRlvl);
-                }
-                // save new order
-                int row = 0, col = 0;
-                for (QMap<QString, ItemsList>::const_iterator jter = itemsByType.constBegin(), endJter = itemsByType.constEnd(); jter != endJter; ++jter)
-                {
-                    ItemInfo *previousItem = 0; // start each tier from new row
-                    foreach (ItemInfo *item, jter.value())
-                    {
-                        ItemBase *baseInfo = kItemsBaseInfo->value(item->itemType);
-                        if (!previousItem)
-                            previousItem = item;
-                        else if ((previousItem->itemType != item->itemType || (areBothItemsSetOrUnique(item, previousItem) && previousItem->setOrUniqueId != item->setOrUniqueId))) // if another tier item fits current row, simulate the opposite
+                        if (itemShouldBeAdded)
                         {
-                            if (col + baseInfo->width <= columns)
-                                col = columns;
-                            previousItem = item;
+                            itemBaseTypeItems << item;
+                            items.removeAt(i--);
                         }
-                        // fill stash by rows
-                        if (col + baseInfo->width > columns)
-                        {
-                            // switch to new row
-                            row += baseInfo->height;
-                            col = 0;
-
-                            if (row + baseInfo->height > rows)
-                            {
-                                // switch to new page
-                                ++page;
-                                row = 0;
-                            }
-                        }
-
-                        item->move(row, col);
-                        item->plugyPage = page;
-
-                        col += baseInfo->width;
                     }
 
-                    // start new sub-type from new page
-                    ++page;
-                    row = col = 0;
+                    if (items.isEmpty())
+                        jter = itemsByBaseType.erase(jter);
+                    else
+                        ++jter;
                 }
 
-                if (i++ < itemBaseTypesOrder.size() - 1)
-                    page += sortOptions.diffTypesBlankPages;
+                if (!itemBaseTypeItems.isEmpty())
+                {
+                    QMap<QString, ItemsList> sortedItemsByType;
+                    bool isRune = itemBaseType == "rune";
+                    if (isRune)
+                    {
+                        // runes are simply sorted by item code
+                        QMap<QString, ItemsList> runesByType;
+                        foreach (ItemInfo *item, itemBaseTypeItems)
+                            runesByType[item->itemType] << item;
+                        sortedItemsByType = runesByType;
+                    }
+                    else
+                    {
+                        // sort items by types (broad sword, scimitar, etc.). use item names (text before brackets) to determine sub-type.
+                        QMap<QString, ItemsList> itemsByType; // using QMap instead of QHash to have determined order
+                        foreach (ItemInfo *item, itemBaseTypeItems)
+                        {
+                            QString itemName = kItemsBaseInfo->value(item->itemType)->name;
+                            itemsByType[itemName.left(itemName.indexOf('(')).trimmed()] << item;
+                        }
+                        // sort each group of items by tiers
+                        for (QMap<QString, ItemsList>::iterator jter = itemsByType.begin(), endJter = itemsByType.end(); jter != endJter; ++jter)
+                        {
+                            ItemsList &items = jter.value();
+                            // to sort by tiers, sort by rlvl. SUs are sorted by ID.
+                            qSort(items.begin(), items.end(), compareItemsByRlvl);
+                        }
+                        sortedItemsByType = itemsByType;
+                    }
+                    // save new order
+                    bool isGemOrRune = itemBaseType.startsWith("gem") || isRune;
+                    int row = 0, col = 0;
+                    foreach (const ItemsList &items, sortedItemsByType)
+                    {
+                        storeItemsOnPage(items, page, row, col, sortQuality == SortItemQuality::Quest ? false : (isGemOrRune ? startEachGemAndRuneFromNewRow : true));
+                        if (noNewPageInsideGemsAndRunes && isGemOrRune)
+                        {
+
+                        }
+                        else
+                        {
+                            ++page; // start new sub-type from new page
+                            row = col = 0;
+                        }
+                    }
+                    if (noNewPageInsideGemsAndRunes && isGemOrRune)
+                        ++page;
+
+                    if (baseTypesProcessed++ < itemBaseTypesOrder.size() - 1)
+                        page += sortOptions.diffTypesBlankPages;
+                }
             }
         }
 
@@ -482,6 +537,8 @@ void PlugyItemsSplitter::setItems(const ItemsList &newItems)
 
 void PlugyItemsSplitter::updateItemsForCurrentPage(bool pageChanged_ /*= true*/)
 {
+    bool wasPageEnteredManually = qApp->focusWidget() == _pageSpinBox;
+
     quint32 currentPage = static_cast<quint32>(_pageSpinBox->value());
     _pagedItems.clear();
     foreach (ItemInfo *item, _allItems)
@@ -493,6 +550,9 @@ void PlugyItemsSplitter::updateItemsForCurrentPage(bool pageChanged_ /*= true*/)
     {
         emit itemCountChanged(_allItems.size());
         emit pageChanged();
+
+        if (wasPageEnteredManually)
+            _pageSpinBox->setFocus();
     }
 }
 
@@ -522,4 +582,46 @@ void PlugyItemsSplitter::right10Clicked()
 {
     quint32 step = _isShiftPressed ? 100 : 10;
     _pageSpinBox->setValue(qCeil((_pageSpinBox->value() + 1) / step) * step);
+}
+
+void PlugyItemsSplitter::storeItemsOnPage(const ItemsList &items, quint32 &page, int &row, int &col, bool shouldStartAnotherTypeFromNewRow)
+{
+    static const int rows = _itemsModel->rowCount(), columns = _itemsModel->columnCount();
+
+    ItemInfo *previousItem = 0;
+    foreach (ItemInfo *item, items)
+    {
+        ItemBase *baseInfo = ItemDataBase::Items()->value(item->itemType);
+        if (shouldStartAnotherTypeFromNewRow)
+        {
+            if (!previousItem)
+                previousItem = item;
+            else if (previousItem->itemType != item->itemType || (areBothItemsSetOrUnique(item, previousItem) && previousItem->setOrUniqueId != item->setOrUniqueId))
+            {
+                // if another tier item or set piece fits current row, simulate the opposite
+                if (col + baseInfo->width <= columns)
+                    col = columns;
+                previousItem = item;
+            }
+        }
+        // fill stash by rows
+        if (col + baseInfo->width > columns)
+        {
+            // switch to new row
+            row += baseInfo->height;
+            col = 0;
+
+            if (row + baseInfo->height > rows)
+            {
+                // switch to new page
+                ++page;
+                row = 0;
+            }
+        }
+
+        item->move(row, col);
+        item->plugyPage = page;
+
+        col += baseInfo->width;
+    }
 }

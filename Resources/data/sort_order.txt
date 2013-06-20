@@ -9,7 +9,6 @@ axe  # 1h axe
 2hax # 2h axe
 mace # mace
 hamm # 1h hammer
- # 2h hammer - NOOOOOOOOOOOOOOOO
 scep # scepter
 jave # javelin
 spea # spear
@@ -42,7 +41,7 @@ nstf # staff
 nknf # knife
 nxbw # bow
 wand # wand
-# pal
+# papa
 pclb # club
 pmac # mace
 pham # hammer
@@ -74,7 +73,7 @@ phlm # helm
 pelt # helm
 # necro
 head # shield (voodoo)
-# pal
+# papa
 pzhm # helm
 ashd # shield
 # soso
@@ -100,7 +99,8 @@ gemq # onyx
 gemo # turquoise
 geml # amber
 # rest
-rune # runes (hardcoded ordering: cLOD - MXL - Great)
-asaa # MOs
-asa\# # UMOs (backslash is intended)
-char # charms
+rune  # rune (hardcoded ordering: cLOD - MXL - Great - Ultimative)
+asaa  # MO
+asa\# # UMO (backslash is intended)
+char  # charm
+thng  # trophy, shrine, arcane crystal, etc.
