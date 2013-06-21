@@ -53,15 +53,15 @@ const QHash<int, int> &itemQualityMapping()
     static QHash<int, int> m;
     if (m.isEmpty())
     {
-        m[Enums::ItemQuality::LowQuality]  = SortItemQuality::LowQuality;
-        m[Enums::ItemQuality::Normal]      = SortItemQuality::Normal;
-        m[Enums::ItemQuality::HighQuality] = SortItemQuality::Superior;
-        m[Enums::ItemQuality::Magic]       = SortItemQuality::Magic;
-        m[Enums::ItemQuality::Honorific]   = SortItemQuality::Honorific;
-        m[Enums::ItemQuality::Rare]        = SortItemQuality::Rare;
-        m[Enums::ItemQuality::Crafted]     = SortItemQuality::Crafted;
-        m[Enums::ItemQuality::Unique]      = SortItemQuality::Unique;
-        m[Enums::ItemQuality::Set]         = SortItemQuality::Set;
+        m[Enums::ItemQuality::LowQuality]  = LowQuality;
+        m[Enums::ItemQuality::Normal]      = Normal;
+        m[Enums::ItemQuality::HighQuality] = Superior;
+        m[Enums::ItemQuality::Magic]       = Magic;
+        m[Enums::ItemQuality::Honorific]   = Honorific;
+        m[Enums::ItemQuality::Rare]        = Rare;
+        m[Enums::ItemQuality::Crafted]     = Crafted;
+        m[Enums::ItemQuality::Unique]      = Unique;
+        m[Enums::ItemQuality::Set]         = Set;
     }
     return m;
 }
@@ -341,9 +341,9 @@ void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
     {
         int key;
         if (item->isQuest)
-            key = SortItemQuality::Quest;
+            key = Quest;
         else if (item->isRW)
-            key = SortItemQuality::RW;
+            key = RW;
         else
             key = itemQualityMapping()[item->quality];
         itemsByQuality[key] << item;
@@ -359,7 +359,7 @@ void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
     while (iter != endIter)
     {
         int sortQuality = iter.key();
-        if (sortQuality == SortItemQuality::Set)
+        if (sortQuality == Set)
         {
             // sets use their own ordering
             QHash<int, ItemsList> setItemsById;
@@ -460,7 +460,7 @@ void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
                     int row = 0, col = 0;
                     foreach (const ItemsList &items, sortedItemsByType)
                     {
-                        storeItemsOnPage(items, page, row, col, sortQuality == SortItemQuality::Quest ? false : (isGemOrRune ? startEachGemAndRuneFromNewRow : true));
+                        storeItemsOnPage(items, page, row, col, sortQuality == Quest ? false : (isGemOrRune ? startEachGemAndRuneFromNewRow : true));
                         if (noNewPageInsideGemsAndRunes && isGemOrRune)
                         {
 

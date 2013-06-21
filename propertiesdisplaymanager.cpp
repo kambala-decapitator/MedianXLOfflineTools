@@ -210,7 +210,7 @@ void PropertiesDisplayManager::constructPropertyStrings(const PropertiesMap &pro
             {
                 double lifePerSec = prop->value / 256.0;
                 if (propId == Enums::ItemProperties::ReplenishLifeBasedOnClvl)
-                    lifePerSec /= 32;
+                    lifePerSec *= CharacterInfo::instance().basicInfo.level / 32.0;
                 displayString += QString(" (%1)").arg(tr("%1 life per second").arg(lifePerSec, 0, 'f', 3));
             }
 
