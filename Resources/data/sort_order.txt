@@ -85,23 +85,11 @@ xboq # bolts
 amul # amulet
 ring # ring
 jewl # jewel
-# cLOD gems
-gemr # ruby
-gems # sapphire
-geme # emerald
-gemt # topaz
-gemd # diamond
-gema # amethyst
-gemz # skull
-# MXL gems
-gemp # bloodstone
-gemq # onyx
-gemo # turquoise
-geml # amber
-gemx # rainbow
 # rest
+gem.  # gem  (hardcoded ordering: cLOD - MXL)
 rune  # rune (hardcoded ordering: cLOD - MXL - Great - Ultimative)
 asaa  # MO
 asa\# # UMO (backslash is intended)
+ara.  # class charm
 char  # charm
 thng  # trophy, shrine, arcane crystal, etc.

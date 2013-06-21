@@ -232,12 +232,6 @@ struct SocketableItemInfo
 
 struct StashSortOptions
 {
-    enum
-    {
-        Quality,
-        Type
-    } primarySortKey;
-
     bool qualityOrderAscending, separateSacredItems, separateEtherealItems, separateCotw;
     int firstPage, lastPage, diffQualitiesBlankPages, diffTypesBlankPages;
 };

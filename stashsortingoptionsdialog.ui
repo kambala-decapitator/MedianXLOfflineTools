@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>719</width>
-    <height>458</height>
+    <width>439</width>
+    <height>271</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,8 +16,8 @@
   <widget class="QDialogButtonBox" name="buttonBox">
    <property name="geometry">
     <rect>
-     <x>190</x>
-     <y>210</y>
+     <x>270</x>
+     <y>240</y>
      <width>156</width>
      <height>23</height>
     </rect>
@@ -29,64 +29,10 @@
     <set>QDialogButtonBox::Cancel|QDialogButtonBox::Help</set>
    </property>
   </widget>
-  <widget class="QGroupBox" name="primarySortKeyGroupBox">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>10</y>
-     <width>111</width>
-     <height>91</height>
-    </rect>
-   </property>
-   <property name="toolTip">
-    <string>Nonselected option automatically becomes secondary sort key</string>
-   </property>
-   <property name="title">
-    <string>Primary sort key</string>
-   </property>
-   <widget class="QRadioButton" name="typeRadioButton">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>50</y>
-      <width>46</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="toolTip">
-     <string>Item types are ordered just like in the documentation</string>
-    </property>
-    <property name="text">
-     <string>Type</string>
-    </property>
-    <attribute name="buttonGroup">
-     <string notr="true">buttonGroup</string>
-    </attribute>
-   </widget>
-   <widget class="QRadioButton" name="qualityRadioButton">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>20</y>
-      <width>57</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Quality</string>
-    </property>
-    <property name="checked">
-     <bool>true</bool>
-    </property>
-    <attribute name="buttonGroup">
-     <string notr="true">buttonGroup</string>
-    </attribute>
-   </widget>
-  </widget>
   <widget class="QGroupBox" name="itemQualityOrderingGroupBox">
    <property name="geometry">
     <rect>
-     <x>130</x>
+     <x>10</x>
      <y>10</y>
      <width>121</width>
      <height>91</height>
@@ -108,7 +54,7 @@
      <string>Ascending</string>
     </property>
     <attribute name="buttonGroup">
-     <string notr="true">buttonGroup_2</string>
+     <string notr="true">buttonGroup</string>
     </attribute>
    </widget>
    <widget class="QRadioButton" name="descQualityRadioButton">
@@ -127,14 +73,14 @@
      <bool>true</bool>
     </property>
     <attribute name="buttonGroup">
-     <string notr="true">buttonGroup_2</string>
+     <string notr="true">buttonGroup</string>
     </attribute>
    </widget>
   </widget>
   <widget class="QGroupBox" name="pageRangeGroupBox">
    <property name="geometry">
     <rect>
-     <x>260</x>
+     <x>155</x>
      <y>10</y>
      <width>91</width>
      <height>91</height>
@@ -213,8 +159,8 @@
     <rect>
      <x>10</x>
      <y>110</y>
-     <width>171</width>
-     <height>91</height>
+     <width>211</width>
+     <height>121</height>
     </rect>
    </property>
    <property name="title">
@@ -265,12 +211,41 @@
      <bool>true</bool>
     </property>
    </widget>
+   <widget class="QCheckBox" name="similarItemsOnOnePageCheckBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>90</y>
+      <width>197</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Place small similar items on one page</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="Line" name="lineNewPageBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>80</y>
+      <width>191</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
   </widget>
   <widget class="QGroupBox" name="blankPagesGroupBox">
    <property name="geometry">
     <rect>
-     <x>190</x>
-     <y>110</y>
+     <x>270</x>
+     <y>10</y>
      <width>161</width>
      <height>91</height>
     </rect>
@@ -331,64 +306,103 @@
     </property>
    </widget>
   </widget>
-  <widget class="QCheckBox" name="checkBox">
+  <widget class="QGroupBox" name="newRowGroupBox">
    <property name="geometry">
     <rect>
-     <x>360</x>
-     <y>10</y>
-     <width>127</width>
-     <height>17</height>
+     <x>230</x>
+     <y>110</y>
+     <width>201</width>
+     <height>121</height>
     </rect>
    </property>
-   <property name="text">
-    <string>New row for each tier</string>
+   <property name="title">
+    <string>New row for...</string>
    </property>
-   <property name="checked">
-    <bool>true</bool>
-   </property>
-  </widget>
-  <widget class="QCheckBox" name="checkBox_2">
-   <property name="geometry">
-    <rect>
-     <x>360</x>
-     <y>40</y>
-     <width>163</width>
-     <height>17</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>New page for each gem/rune</string>
-   </property>
-   <property name="checked">
-    <bool>true</bool>
-   </property>
-  </widget>
-  <widget class="QCheckBox" name="checkBox_3">
-   <property name="enabled">
-    <bool>false</bool>
-   </property>
-   <property name="geometry">
-    <rect>
-     <x>380</x>
-     <y>70</y>
-     <width>157</width>
-     <height>17</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>New row for each gem/rune</string>
-   </property>
+   <widget class="QCheckBox" name="newRowTierCheckBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>65</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Each tier</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="newRowVisuallyDifferentCheckBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>90</y>
+      <width>183</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Similar but visually different items</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="newRowCotwCheckBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>40</y>
+      <width>95</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Each CotW skill</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="newRowGemCheckBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>60</y>
+      <width>104</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Each gem quality</string>
+    </property>
+   </widget>
+   <widget class="Line" name="lineNewRowBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>80</y>
+      <width>181</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
   </widget>
  </widget>
  <tabstops>
-  <tabstop>typeRadioButton</tabstop>
-  <tabstop>qualityRadioButton</tabstop>
-  <tabstop>ascQualityRadioButton</tabstop>
   <tabstop>descQualityRadioButton</tabstop>
+  <tabstop>ascQualityRadioButton</tabstop>
   <tabstop>firstPageSpinBox</tabstop>
   <tabstop>lastPageSpinBox</tabstop>
-  <tabstop>separateEthCheckBox</tabstop>
+  <tabstop>diffQualitiesSpinBox</tabstop>
+  <tabstop>diffTypesSpinBox</tabstop>
+  <tabstop>separateSacredsCheckBox</tabstop>
   <tabstop>separateCotwCheckBox</tabstop>
+  <tabstop>separateEthCheckBox</tabstop>
+  <tabstop>similarItemsOnOnePageCheckBox</tabstop>
+  <tabstop>newRowTierCheckBox</tabstop>
+  <tabstop>newRowCotwCheckBox</tabstop>
+  <tabstop>newRowGemCheckBox</tabstop>
+  <tabstop>newRowVisuallyDifferentCheckBox</tabstop>
   <tabstop>buttonBox</tabstop>
  </tabstops>
  <resources/>
@@ -426,24 +440,39 @@
    </hints>
   </connection>
   <connection>
-   <sender>checkBox_2</sender>
+   <sender>similarItemsOnOnePageCheckBox</sender>
    <signal>toggled(bool)</signal>
-   <receiver>checkBox_3</receiver>
-   <slot>setDisabled(bool)</slot>
+   <receiver>newRowVisuallyDifferentCheckBox</receiver>
+   <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>92</x>
-     <y>302</y>
+     <x>118</x>
+     <y>208</y>
     </hint>
     <hint type="destinationlabel">
-     <x>102</x>
-     <y>325</y>
+     <x>331</x>
+     <y>208</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>similarItemsOnOnePageCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>separateCotwCheckBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>118</x>
+     <y>208</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>95</x>
+     <y>178</y>
     </hint>
    </hints>
   </connection>
  </connections>
  <buttongroups>
-  <buttongroup name="buttonGroup_2"/>
   <buttongroup name="buttonGroup"/>
  </buttongroups>
 </ui>

@@ -351,7 +351,7 @@ void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
 
     const QHash<QByteArray, ItemBase *> *const kItemsBaseInfo = ItemDataBase::Items();
     const QHash<QByteArray, QList<QByteArray> > *const kItemTypesInfo = ItemDataBase::ItemTypes();
-    bool noNewPageInsideGemsAndRunes = true, startEachGemAndRuneFromNewRow = true;
+    bool noNewPageInsideGemsAndRunes = true, startEachGemAndRuneFromNewRow = true, noNewPageInsideClassCharms = true, startEachClassCharmFromNewRow = true;
 
     quint32 page = 1;
     QMap<int, ItemsList>::const_iterator    iter = sortOptions.qualityOrderAscending ? itemsByQuality.constBegin() : itemsByQuality.constEnd() - 1;
@@ -389,7 +389,24 @@ void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
             int baseTypesProcessed = 0;
             foreach (const QByteArray &itemBaseType, itemBaseTypesOrder)
             {
-                ItemsList itemBaseTypeItems = itemsByBaseType.take(itemBaseType);
+                ItemsList itemBaseTypeItems;
+                if (itemBaseType.contains('.'))
+                {
+                    QRegExp re(itemBaseType);
+                    QHash<QByteArray, ItemsList>::iterator jter = itemsByBaseType.begin(), endJter = itemsByBaseType.end();
+                    while (jter != endJter)
+                    {
+                        if (re.indexIn(jter.key()) != -1)
+                        {
+                            itemBaseTypeItems << jter.value();
+                            jter = itemsByBaseType.erase(jter);
+                        }
+                        else
+                            ++jter;
+                    }
+                }
+                else
+                    itemBaseTypeItems = itemsByBaseType.take(itemBaseType);
                 // add sacred items or charms
                 QHash<QByteArray, ItemsList>::iterator jter = itemsByBaseType.begin(), endJter = itemsByBaseType.end();
                 while (jter != endJter)
@@ -428,10 +445,10 @@ void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
                 if (!itemBaseTypeItems.isEmpty())
                 {
                     QMap<QString, ItemsList> sortedItemsByType;
-                    bool isRune = itemBaseType == "rune";
-                    if (isRune)
+                    bool isRune = itemBaseType == "rune", isClassCharm_ = itemBaseType.startsWith("ara");
+                    if (isRune || isClassCharm_)
                     {
-                        // runes are simply sorted by item code
+                        // runes and class charms are simply sorted by item code
                         QMap<QString, ItemsList> runesByType;
                         foreach (ItemInfo *item, itemBaseTypeItems)
                             runesByType[item->itemType] << item;
@@ -463,7 +480,19 @@ void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
                         storeItemsOnPage(items, page, row, col, sortQuality == Quest ? false : (isGemOrRune ? startEachGemAndRuneFromNewRow : true));
                         if (noNewPageInsideGemsAndRunes && isGemOrRune)
                         {
-
+                            if (startEachGemAndRuneFromNewRow)
+                            {
+                                ++row;
+                                col = 0;
+                            }
+                        }
+                        else if (noNewPageInsideClassCharms && isClassCharm_)
+                        {
+                            if (startEachClassCharmFromNewRow)
+                            {
+                                ++row;
+                                col = 0;
+                            }
                         }
                         else
                         {
@@ -471,7 +500,7 @@ void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
                             row = col = 0;
                         }
                     }
-                    if (noNewPageInsideGemsAndRunes && isGemOrRune)
+                    if ((noNewPageInsideGemsAndRunes && isGemOrRune) || (noNewPageInsideClassCharms && isClassCharm_))
                         ++page;
 
                     if (baseTypesProcessed++ < itemBaseTypesOrder.size() - 1)

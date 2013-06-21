@@ -50,9 +50,9 @@
 
 # Ultimative
 # tribute
-299-301,314         # Necromancer Summoner (Archbishop Lazarus - [BrotherLaz Tribute Set])
-308-312             # Elemental (Cowboys From Hell - [MarcoNecroX Tribute Set])
-303,305-306,316-317 # Fire (All Is One - [Community Tribute Set])
+299-301,314         # Necromancer Summoner (Archbishop Lazarus - [BrotherLaz  Tribute Set])
+308-312             # Elemental            (Cowboys From Hell  - [MarcoNecroX Tribute Set])
+303,305-306,316-317 # Fire                 (All Is One         - [Community   Tribute Set])
 # Yshari
-318-322 # Yshari Bosses' Set (Brotherhood of the Vizjerei)
+318-322 # Yshari Bosses'  Set (Brotherhood of the Vizjerei)
 323-327 # Yshari Minions' Set (Brotherhood of the Horadrim)

@@ -94,5 +94,6 @@ ItemInfo *FindResultsWidget::itemForCurrentTreeItem() const
 
 void FindResultsWidget::resizeEvent(QResizeEvent *e)
 {
+    Q_UNUSED(e);
     _resultsTreeWidget->setColumnWidth(0, _resultsTreeWidget->width() / 2);
 }
