@@ -3,6 +3,7 @@
 
 #import "machelpers.h"
 
+#import <AppKit/NSApplication.h>
 #import <AppKit/NSMenu.h>
 #import <AppKit/NSMenuItem.h>
 

@@ -4,6 +4,8 @@
 #include <QFileOpenEvent>
 #include <QTimer>
 
+#import <AppKit/NSWindowRestoration.h>
+
 
 bool Application::event(QEvent *ev)
 {

@@ -161,6 +161,7 @@ macx {
 
     OBJECTIVE_HEADERS += machelpers.h
 
+
     LIBS += -framework ApplicationServices \ # LSGetApplicationForInfo()
             -framework AppKit                # NSWindow calls to disable Lion window resoration and NSAlert
 
@@ -170,34 +171,48 @@ macx {
 
     ICON = resources/mac/icon.icns
 
-    # for Xcode 4.3+
-    MAC_SDK = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk
-    if (!exists($$MAC_SDK)) {
-        MAC_SDK = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk
-    }
-    # for earlier versions
-    if (!exists($$MAC_SDK)) {
-        MAC_SDK = /Developer/SDKs/MacOSX10.6.sdk
-    }
-    if (!exists($$MAC_SDK)) {
-        MAC_SDK = /Developer/SDKs/MacOSX10.5.sdk
-    }
+    greaterThan(QT_MAJOR_VERSION, 4) {
+        # Qt 5 uses new approach to QMAKE_MAC_SDK. default value is ok.
+        cache()
 
-    # release build is intended to be compiled on 10.6 (or even earlier) for PPC support
-    CONFIG(release, debug|release) {
-        message(release build)
-        MAC_SDK = /Developer/SDKs/MacOSX10.5.sdk
-        CONFIG += x86 ppc
-        QMAKE_MACOSX_DEPLOYMENT_TARGET = 10.5
+        # make dock menu work on Qt5. code from https://qt.gitorious.org/qt/qtmacextras
+        OBJECTIVE_SOURCES += qtmacextras/qmacfunctions.mm \
+                             qtmacextras/qmacfunctions_mac.mm
 
-        appresources.files += resources/translations
-        appresources.files += resources/data
+        OBJECTIVE_HEADERS += qtmacextras/qmacfunctions.h \
+                             qtmacextras/qmacfunctions_p.h \
+                             qtmacextras/qmacextrasglobal.h
     }
+    else {
+        # for Xcode 4.3+
+        MAC_SDK = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk
+        if (!exists($$MAC_SDK)) {
+            MAC_SDK = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk
+        }
+        # for earlier versions
+        if (!exists($$MAC_SDK)) {
+            MAC_SDK = /Developer/SDKs/MacOSX10.6.sdk
+        }
+        if (!exists($$MAC_SDK)) {
+            MAC_SDK = /Developer/SDKs/MacOSX10.5.sdk
+        }
 
-    if (!exists($$MAC_SDK)) {
-        error(Selected Mac OS X SDK does not exist at $$MAC_SDK!)
+        # release build is intended to be compiled on 10.6 (or even earlier) for PPC support
+        CONFIG(release, debug|release) {
+            message(release build)
+            MAC_SDK = /Developer/SDKs/MacOSX10.5.sdk
+            CONFIG += x86 ppc
+            QMAKE_MACOSX_DEPLOYMENT_TARGET = 10.5
+
+            appresources.files += resources/translations
+            appresources.files += resources/data
+        }
+
+        if (!exists($$MAC_SDK)) {
+            error(Selected Mac OS X SDK does not exist at $$MAC_SDK!)
+        }
+        QMAKE_MAC_SDK = $$MAC_SDK
     }
-    QMAKE_MAC_SDK = $$MAC_SDK
 
     appresources.files += resources/mac/locversion.plist
     appresources.path = Contents/Resources

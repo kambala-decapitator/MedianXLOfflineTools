@@ -48,6 +48,10 @@
 #include <QDebug>
 #endif
 
+#if IS_QT5 && defined(Q_OS_MAC)
+#include "qtmacextras/qmacfunctions.h"
+#endif
+
 //#define MAKE_HC
 //#define ENABLE_PERSONALIZE
 //#define MAKE_FINISHED_CHARACTER
@@ -175,7 +179,7 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *pare
 
 #ifdef Q_OS_MAC
     QTimer::singleShot(500, this, SLOT(moveUpdateActionToAppleMenu())); // needs a slight delay to create menu
-#endif
+#endif // Q_OS_MAC
 
     bool didModVersionChange = SkillplanDialog::didModVersionChange(); // must be called before the following conditions because it should load planner/readable versions
     if (!cmdPath.isEmpty())
