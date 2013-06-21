@@ -354,8 +354,8 @@ void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
     bool noNewPageInsideGemsAndRunes = true, startEachGemAndRuneFromNewRow = true, noNewPageInsideClassCharms = true, startEachClassCharmFromNewRow = true;
 
     quint32 page = 1;
-    QMap<int, ItemsList>::const_iterator    iter = sortOptions.qualityOrderAscending ? itemsByQuality.constBegin() : itemsByQuality.constEnd() - 1;
-    QMap<int, ItemsList>::const_iterator endIter = sortOptions.qualityOrderAscending ? itemsByQuality.constEnd()   : itemsByQuality.constBegin() - 1;
+    QMap<int, ItemsList>::const_iterator    iter = sortOptions.isQualityOrderAscending ? itemsByQuality.constBegin() : itemsByQuality.constEnd() - 1;
+    QMap<int, ItemsList>::const_iterator endIter = sortOptions.isQualityOrderAscending ? itemsByQuality.constEnd()   : itemsByQuality.constBegin() - 1;
     while (iter != endIter)
     {
         int sortQuality = iter.key();
@@ -511,7 +511,7 @@ void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
 
         page += sortOptions.diffQualitiesBlankPages;
 
-        sortOptions.qualityOrderAscending ? ++iter : --iter;
+        sortOptions.isQualityOrderAscending ? ++iter : --iter;
     }
 
     setItems(_allItems);

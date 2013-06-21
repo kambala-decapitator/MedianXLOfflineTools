@@ -48,12 +48,17 @@ StashSortingOptionsDialog::~StashSortingOptionsDialog()
 StashSortOptions StashSortingOptionsDialog::sortOptions() const
 {
     StashSortOptions options;
-    options.qualityOrderAscending = ui->ascQualityRadioButton->isChecked();
-    options.firstPage = ui->firstPageSpinBox->value();
-    options.lastPage = ui->lastPageSpinBox->value();
+    options.isQualityOrderAscending = ui->ascQualityRadioButton->isChecked();
     options.separateSacredItems = ui->separateSacredsCheckBox->isChecked();
     options.separateEtherealItems = ui->separateEthCheckBox->isChecked();
     options.separateCotw = ui->separateCotwCheckBox->isChecked();
+    options.placeSimilarItemsOnOnePage = ui->similarItemsOnOnePageCheckBox->isChecked();
+    options.newRowTier = ui->newRowTierCheckBox->isChecked();
+    options.newRowCotw = ui->newRowCotwCheckBox->isChecked();
+    options.newRowGemQuality = ui->newRowGemCheckBox->isChecked();
+    options.newRowVisuallyDifferent = ui->newRowVisuallyDifferentCheckBox->isChecked();
+    options.firstPage = ui->firstPageSpinBox->value();
+    options.lastPage = ui->lastPageSpinBox->value();
     options.diffQualitiesBlankPages = ui->diffQualitiesSpinBox->value();
     options.diffTypesBlankPages = ui->diffTypesSpinBox->value();
     return options;
