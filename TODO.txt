@@ -1,32 +1,33 @@
 v0.4:
-- sort stashes
+- sort plugy stashes
+- place items tightly
+- inserting blank page
 - sort items in find results by plugy page
+- update find results after sorting
 - cyclic arrow navigation between items
 - send OS info to server
 - ctc Miasma MO removal (doesn't appear)
-- move mass disenchant to a separate dialog and add more options
 - batch eat signets (add a button)
+- +%d magic damage
+
+future versions:
+- show UMO properties
+- try unMO UMOs
+- move mass disenchant to a separate dialog and add more options
 - creation of plugy stashes and moving items around (finish implementing drag & drop)
 - generate some bbcode/html report about character and/or plugy stashes contents
 - mass disenchant (multiple selection) - maybe
 - export item to bbcode/html
-- +%d magic damage
-
-future versions:
 - when reloading character, explicitly reload shared stashes that were modified
 - new data structure for items - QMap with item storage as a key
 - affix rlvl (and maybe names - then modify help text) support
 - nice display of property 'Adds x-y ... damage'
 - unsocket items
-- show UMO properties
-- try unMO UMOs
 - calculate correct str/dex bonus based on character stats
 - display actual stat values
-- display skill tree
-- skills allocation
+- display skill tree and skills allocation
 - item requirements
-- http://modsbylaz.14.forumer.com/viewtopic.php?p=424505#424505
-- moving/swaping pages, inserting blank page
+- moving/swaping pages
 - fix multiple colors in one line, e.g. Statue of Ultimative v6b
 
 1.

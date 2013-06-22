@@ -55,6 +55,7 @@ protected:
 
 signals:
     void pageChanged();
+    void stashSorted();
 
 private slots:
     void updateItemsForCurrentPage(bool pageChanged_ = true);
@@ -78,6 +79,7 @@ private:
     ItemsList *itemsForSelectedRange() { return _shouldApplyActionToAllPages ? &_allItems : &_pagedItems; }
 //    void moveItemsToFirstPages(ItemsList *items, bool toShards);
 
+    void showErrorLoadingSortingOrderFile(const QFile &f);
     void storeItemsOnPage(const ItemsList &items, quint32 &page, int &row, int &col, bool shouldStartAnotherTypeFromNewRow);
 };
 

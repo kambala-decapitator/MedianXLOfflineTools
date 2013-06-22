@@ -1,0 +1,10 @@
+# default order is the same as on the website, but you can change it to your liking
+# empty lines and text after '#' are ignored
+
+gem.  # gem  (hardcoded ordering: cLOD - MXL)
+rune  # rune (hardcoded ordering: cLOD - MXL - Great - Ultimative)
+asaa  # MO
+asa\# # UMO (backslash is intended)
+ara.  # class charm
+char  # charm
+thng  # trophy, shrine, arcane crystal, etc.

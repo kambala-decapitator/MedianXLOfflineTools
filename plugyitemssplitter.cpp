@@ -113,6 +113,8 @@ PlugyItemsSplitter::PlugyItemsSplitter(ItemStorageTableView *itemsView, QWidget 
     connect(_leftButton,    SIGNAL(clicked()), SLOT(leftClicked()));
     connect(_rightButton,   SIGNAL(clicked()), SLOT(rightClicked()));
     connect(_right10Button, SIGNAL(clicked()), SLOT(right10Clicked()));
+
+    connect(this, SIGNAL(stashSorted()), SIGNAL(itemsChanged()));
 }
 
 void PlugyItemsSplitter::keyPressEvent(QKeyEvent *keyEvent)
@@ -283,33 +285,29 @@ void PlugyItemsSplitter::upgradeRunes(ItemsList *items /*= 0*/)
 
 void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
 {
-    // load sorting order
-    QFile f(ResourcePathManager::dataPathForFileName("sort_order.txt"));
+    // load gear sorting order
+    QFile f(ResourcePathManager::pathForSortOrderFileName("gear.txt"));
     if (!f.open(QIODevice::ReadOnly | QIODevice::Text))
     {
-        ERROR_BOX(tr("Sorting order not loaded from %1").arg(QDir::toNativeSeparators(f.fileName())) + "\n" + tr("Reason: %1").arg(f.errorString()));
+        showErrorLoadingSortingOrderFile(f);
         return;
     }
 
-    QList<QByteArray> itemBaseTypesOrder;
+    QList<QByteArray> gearBaseTypesOrder;
     while (!f.atEnd())
     {
         QByteArray line = f.readLine().trimmed();
         if (line.isEmpty() || line.startsWith('#'))
             continue;
-
-        int end = line.indexOf('#');
-        if (line.at(end - 1) == '\\')
-            end = line.indexOf('#', end + 1);
-        itemBaseTypesOrder << line.left(end).trimmed().replace("\\#", "#");
+        gearBaseTypesOrder << line.left(line.indexOf('#')).trimmed();
     }
     f.close();
 
     // load sets' sorting order
-    f.setFileName(ResourcePathManager::dataPathForFileName("sort_order_sets.txt"));
+    f.setFileName(ResourcePathManager::pathForSortOrderFileName("sets.txt"));
     if (!f.open(QIODevice::ReadOnly | QIODevice::Text))
     {
-        ERROR_BOX(tr("Sets' sorting order not loaded from %1").arg(QDir::toNativeSeparators(f.fileName())) + "\n" + tr("Reason: %1").arg(f.errorString()));
+        showErrorLoadingSortingOrderFile(f);
         return;
     }
 
@@ -332,6 +330,28 @@ void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
                     setIds << i;
         }
         setsOrder << setIds;
+    }
+    f.close();
+
+    // load misc items sorting order
+    f.setFileName(ResourcePathManager::pathForSortOrderFileName("misc.txt"));
+    if (!f.open(QIODevice::ReadOnly | QIODevice::Text))
+    {
+        showErrorLoadingSortingOrderFile(f);
+        return;
+    }
+
+    QList<QByteArray> miscBaseTypesOrder;
+    while (!f.atEnd())
+    {
+        QByteArray line = f.readLine().trimmed();
+        if (line.isEmpty() || line.startsWith('#'))
+            continue;
+
+        int end = line.indexOf('#');
+        if (line.at(end - 1) == '\\')
+            end = line.indexOf('#', end + 1);
+        miscBaseTypesOrder << line.left(end).trimmed().replace("\\#", "#");
     }
     f.close();
 
@@ -387,7 +407,7 @@ void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
                 itemsByBaseType[kItemsBaseInfo->value(item->itemType)->types.first()] << item;
 
             int baseTypesProcessed = 0;
-            foreach (const QByteArray &itemBaseType, itemBaseTypesOrder)
+            foreach (const QByteArray &itemBaseType, gearBaseTypesOrder)
             {
                 ItemsList itemBaseTypeItems;
                 if (itemBaseType.contains('.'))
@@ -503,7 +523,7 @@ void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
                     if ((noNewPageInsideGemsAndRunes && isGemOrRune) || (noNewPageInsideClassCharms && isClassCharm_))
                         ++page;
 
-                    if (baseTypesProcessed++ < itemBaseTypesOrder.size() - 1)
+                    if (baseTypesProcessed++ < gearBaseTypesOrder.size() - 1)
                         page += sortOptions.diffTypesBlankPages;
                 }
             }
@@ -515,6 +535,7 @@ void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
     }
 
     setItems(_allItems);
+    emit stashSorted();
 }
 
 
@@ -611,6 +632,12 @@ void PlugyItemsSplitter::right10Clicked()
 {
     quint32 step = _isShiftPressed ? 100 : 10;
     _pageSpinBox->setValue(qCeil((_pageSpinBox->value() + 1) / step) * step);
+}
+
+
+void PlugyItemsSplitter::showErrorLoadingSortingOrderFile(const QFile &f)
+{
+    ERROR_BOX(tr("Sorting order not loaded from %1").arg(QDir::toNativeSeparators(f.fileName())) + "\n" + tr("Reason: %1").arg(f.errorString()));
 }
 
 void PlugyItemsSplitter::storeItemsOnPage(const ItemsList &items, quint32 &page, int &row, int &col, bool shouldStartAnotherTypeFromNewRow)

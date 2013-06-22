@@ -49,12 +49,6 @@ void ItemsPropertiesSplitter::itemSelected(const QModelIndex &index, bool displa
     ItemInfo *item = _itemsModel->itemAtIndex(index);
     if (display)
         _propertiesWidget->showItem(item);
-    // !!!: display info about selected item to console
-    //if (item)
-    //{
-    //    ItemBase *base = ItemDataBase::Items()->value(item->itemType);
-    //    qDebug() << item->itemType << base->types << base->imageName;
-    //}
 
     // correctly disable hotkeys
     _itemActions[DisenchantShards]->setEnabled(ItemDataBase::canDisenchantIntoArcaneShards(item));

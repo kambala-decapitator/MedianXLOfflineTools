@@ -354,7 +354,6 @@ void MedianXLOfflineTools::saveCharacter()
     charInfo.basicInfo.level = 120;
     ui->levelSpinBox->setMaximum(120);
     ui->levelSpinBox->setValue(120);
-    charInfo.basicInfo.level = 1;
     ui->freeSkillPointsLineEdit->setText("134");
     ui->freeStatPointsLineEdit->setText("1110");
     ui->signetsOfLearningEatenLineEdit->setText("500");
@@ -512,7 +511,7 @@ void MedianXLOfflineTools::saveCharacter()
             equippedItems = ItemDataBase::itemsStoredIn(Enums::ItemStorage::NotInStorage, Enums::ItemLocation::Equipped);
     for (int i = 0; i < corpseItems.size(); ++i)
     {
-        ItemInfo *item = corpseItems[i];
+        ItemInfo *item = corpseItems.at(i);
         bool found = false;
         foreach (ItemInfo *equippedItem, equippedItems)
         {
