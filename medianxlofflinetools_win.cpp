@@ -177,7 +177,7 @@ void MedianXLOfflineTools::addToWindowsRecentFiles(const QString &filePath)
 }
 
 
-QString MedianXLOfflineTools::getOsInfo()
+QByteArray MedianXLOfflineTools::getOsInfo()
 {
     // credits: http://msdn.microsoft.com/en-us/library/windows/desktop/ms724429(v=vs.85).aspx (Getting the System Version)
     OSVERSIONINFOEX osvi;
@@ -386,5 +386,5 @@ QString MedianXLOfflineTools::getOsInfo()
             os << ", 32-bit";
     }
 
-    return QString::fromStdString(os.str());
+    return os.str().c_str();
 }

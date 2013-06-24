@@ -61,15 +61,14 @@ void Application::init()
 void Application::createAndShowMainWindow()
 {
     _mainWindow = new MedianXLOfflineTools(_param);
-    _mainWindow->show();
-
-    setActivationWindow(_mainWindow);
-    connect(this, SIGNAL(messageReceived(const QString &)), SLOT(setParam(const QString &)));
-
 #ifdef Q_OS_MAC
     disableLionWindowRestoration();
     maybeDeleteTimer();
 #endif
+    _mainWindow->show();
+
+    setActivationWindow(_mainWindow);
+    connect(this, SIGNAL(messageReceived(const QString &)), SLOT(setParam(const QString &)));
 }
 
 void Application::activateWindow()

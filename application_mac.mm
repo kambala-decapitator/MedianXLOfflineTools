@@ -48,7 +48,7 @@ void Application::maybeDeleteTimer()
 void Application::disableLionWindowRestoration()
 {
     NSWindow *window = [reinterpret_cast<NSView *>(_mainWindow->winId()) window];
-    if ([window respondsToSelector:@selector(setRestorationClass:)] && [window respondsToSelector:@selector(setRestorable:)] && [window respondsToSelector:@selector(invalidateRestorableState)])
+    if ([window respondsToSelector:@selector(setRestorationClass:)])
     {
         [window setRestorationClass:nil];
         [window setRestorable:NO];

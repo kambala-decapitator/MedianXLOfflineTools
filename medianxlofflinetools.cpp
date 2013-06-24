@@ -2804,23 +2804,22 @@ void MedianXLOfflineTools::networkReplyCheckForUpdateFinished(QNetworkReply *rep
 
 void MedianXLOfflineTools::sendOsInfo()
 {
-    QString osInfo = getOsInfo();
+    QByteArray osInfo = getOsInfo();
     if (!osInfo.isEmpty())
     {
-        INFO_BOX(osInfo);
+        QNetworkRequest request(QUrl("http://mxl.vn.cz/kambala/stat.php"));
+        request.setHeader(QNetworkRequest::ContentTypeHeader, "text/plain");
+
         _qnamSendOsInfo = new QNetworkAccessManager;
         connect(_qnamSendOsInfo, SIGNAL(finished(QNetworkReply *)), SLOT(networkReplySendOsInfoFinished(QNetworkReply *)));
         qApp->processEvents(); // prevents UI from freezing
-
-        QNetworkRequest request(QUrl("http://mxl.vn.cz/kambala/stat.php"));
-        request.setHeader(QNetworkRequest::ContentTypeHeader, "text/plain");
-        _qnamSendOsInfo->post(request, "hash=" + osInfo.toLatin1());
+        _qnamSendOsInfo->post(request, "hash=" + osInfo);
     }
 }
 
 void MedianXLOfflineTools::networkReplySendOsInfoFinished(QNetworkReply *reply)
 {
-    qDebug("%s", reply->readAll().constData());
+    qDebug("stat.php reply:\n%s", reply->readAll().constData());
     if (!reply->error())
     {
         QSettings settings;

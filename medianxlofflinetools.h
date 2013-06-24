@@ -43,7 +43,7 @@ public:
     static const int kSkillsNumber, kDifficultiesNumber, kMaxRecentFiles;
     static const int kStatPointsPerLevel, kSkillPointsPerLevel;
 
-    static QString getOsInfo(); // defined in platform-specific files
+    static QByteArray getOsInfo(); // defined in platform-specific files
 
     MedianXLOfflineTools(const QString &cmdPath = QString(), QWidget *parent = 0, Qt::WindowFlags flags = 0);
     virtual ~MedianXLOfflineTools();
