@@ -286,7 +286,7 @@ void PlugyItemsSplitter::upgradeRunes(ItemsList *items /*= 0*/)
 void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
 {
     // load gear sorting order
-    QFile f(ResourcePathManager::pathForSortOrderFileName("gear.txt"));
+    QFile f(ResourcePathManager::pathForSortOrderFileName("gear"));
     if (!f.open(QIODevice::ReadOnly | QIODevice::Text))
     {
         showErrorLoadingSortingOrderFile(f);
@@ -304,7 +304,7 @@ void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
     f.close();
 
     // load sets' sorting order
-    f.setFileName(ResourcePathManager::pathForSortOrderFileName("sets.txt"));
+    f.setFileName(ResourcePathManager::pathForSortOrderFileName("sets"));
     if (!f.open(QIODevice::ReadOnly | QIODevice::Text))
     {
         showErrorLoadingSortingOrderFile(f);
@@ -334,7 +334,7 @@ void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
     f.close();
 
     // load misc items sorting order
-    f.setFileName(ResourcePathManager::pathForSortOrderFileName("misc.txt"));
+    f.setFileName(ResourcePathManager::pathForSortOrderFileName("misc"));
     if (!f.open(QIODevice::ReadOnly | QIODevice::Text))
     {
         showErrorLoadingSortingOrderFile(f);
