@@ -43,6 +43,8 @@ public:
     static const int kSkillsNumber, kDifficultiesNumber, kMaxRecentFiles;
     static const int kStatPointsPerLevel, kSkillPointsPerLevel;
 
+    static QString getOsInfo(); // defined in platform-specific files
+
     MedianXLOfflineTools(const QString &cmdPath = QString(), QWidget *parent = 0, Qt::WindowFlags flags = 0);
     virtual ~MedianXLOfflineTools();
 
@@ -60,7 +62,8 @@ private slots:
     void setModified(bool modified);
     void modify() { setModified(true); }
     void eatSignetsOfLearning(int signetsEaten);
-    void networkReplyFinished(QNetworkReply *reply);
+    void networkReplyCheckForUpdateFinished(QNetworkReply *reply);
+    void networkReplySendOsInfoFinished(QNetworkReply *reply);
     void fileContentsChanged();
     void fileChangeTimerFired();
 
@@ -101,7 +104,7 @@ private slots:
     void associateFiles();
 #ifdef Q_OS_WIN32
     void showFileAssocaitionUI();
-#endif // Q_OS_WIN32
+#endif
 
     // help
     void checkForUpdate();
@@ -138,7 +141,7 @@ private:
 
     bool _isLoaded;
     ResurrectPenaltyDialog::ResurrectionPenalty _resurrectionPenalty;
-    QNetworkAccessManager *_qnam;
+    QNetworkAccessManager *_qnamCheckForUpdate, *_qnamSendOsInfo;
     bool _isManuallyCheckingForUpdate;
 
     QFileSystemWatcher *_fsWatcher;
@@ -214,6 +217,7 @@ private:
     bool maybeSave();
 
     void checkForUpdateFromUrl(const QUrl &url);
+    void sendOsInfo();
 };
 
 #endif // MEDIANXLOFFLINETOOLS_H

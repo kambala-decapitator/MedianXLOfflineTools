@@ -167,7 +167,7 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *pare
         updateAssociateAction(isDefault);
     }
 #else
-#warning Add implementation to check file association to e.g. fileassociationmanager_linux.cpp or comment this line
+#warning Add implementation to check file association to e.g. fileassociationmanager_linux.cpp
 #endif
 
 #ifdef Q_OS_WIN32
@@ -176,6 +176,14 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *pare
 
     if (ui->actionCheckForUpdateOnStart->isChecked())
         checkForUpdate();
+
+    QSettings settings;
+#if defined(Q_OS_WIN32) || defined(Q_OS_MAC)
+//    if (!settings.contains("osInfoWasSent"))
+        sendOsInfo();
+#else
+#warning Add implementation to get OS info to e.g. medianxlofflinetools_linux.cpp
+#endif
 
 #ifdef Q_OS_MAC
     QTimer::singleShot(500, this, SLOT(moveUpdateActionToAppleMenu())); // needs a slight delay to create menu
@@ -189,7 +197,6 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *pare
     else
     {
 #ifdef Q_OS_WIN32
-        QSettings settings;
         settings.beginGroup("recentItems");
         if (!settings.contains(kLastSavePathKey))
         {
@@ -1037,7 +1044,7 @@ void MedianXLOfflineTools::associateFiles()
 #if defined(Q_OS_WIN32) || defined(Q_OS_MAC)
     FileAssociationManager::makeApplicationDefaultForExtension(kCharacterExtension);
 #else
-#warning Add implementation to check file association to e.g. fileassociationmanager_linux.cpp or comment this line
+#warning Add implementation to set file association to e.g. fileassociationmanager_linux.cpp
 #endif
     updateAssociateAction(true);
 }
@@ -2763,17 +2770,17 @@ bool MedianXLOfflineTools::maybeSave()
 
 void MedianXLOfflineTools::checkForUpdateFromUrl(const QUrl &url)
 {
-    _qnam = new QNetworkAccessManager;
-    connect(_qnam, SIGNAL(finished(QNetworkReply *)), SLOT(networkReplyFinished(QNetworkReply *)));
+    _qnamCheckForUpdate = new QNetworkAccessManager;
+    connect(_qnamCheckForUpdate, SIGNAL(finished(QNetworkReply *)), SLOT(networkReplyCheckForUpdateFinished(QNetworkReply *)));
     qApp->processEvents(); // prevents UI from freezing
-    _qnam->get(QNetworkRequest(url));
+    _qnamCheckForUpdate->get(QNetworkRequest(url));
 }
 
-void MedianXLOfflineTools::networkReplyFinished(QNetworkReply *reply)
+void MedianXLOfflineTools::networkReplyCheckForUpdateFinished(QNetworkReply *reply)
 {
     QByteArray webpage = reply->readAll();
     reply->deleteLater();
-    _qnam->deleteLater();
+    _qnamCheckForUpdate->deleteLater();
 
     QRegExp rx(QString("%1 v(.+)</a>").arg(qApp->applicationName()));
     rx.setMinimal(true);
@@ -2793,6 +2800,35 @@ void MedianXLOfflineTools::networkReplyFinished(QNetworkReply *reply)
         else if (_isManuallyCheckingForUpdate)
             ERROR_BOX(tr("Error contacting update server"));
     }
+}
+
+void MedianXLOfflineTools::sendOsInfo()
+{
+    QString osInfo = getOsInfo();
+    if (!osInfo.isEmpty())
+    {
+        INFO_BOX(osInfo);
+        _qnamSendOsInfo = new QNetworkAccessManager;
+        connect(_qnamSendOsInfo, SIGNAL(finished(QNetworkReply *)), SLOT(networkReplySendOsInfoFinished(QNetworkReply *)));
+        qApp->processEvents(); // prevents UI from freezing
+
+        QNetworkRequest request(QUrl("http://mxl.vn.cz/kambala/stat.php"));
+        request.setHeader(QNetworkRequest::ContentTypeHeader, "text/plain");
+        _qnamSendOsInfo->post(request, "hash=" + osInfo.toLatin1());
+    }
+}
+
+void MedianXLOfflineTools::networkReplySendOsInfoFinished(QNetworkReply *reply)
+{
+    qDebug("%s", reply->readAll().constData());
+    if (!reply->error())
+    {
+        QSettings settings;
+        settings.setValue("osInfoWasSent", true); // value doesn't matter
+    }
+
+    reply->deleteLater();
+    _qnamSendOsInfo->deleteLater();
 }
 
 void MedianXLOfflineTools::fileContentsChanged()

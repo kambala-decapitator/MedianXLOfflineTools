@@ -7,6 +7,8 @@
 class QDoubleSpinBox;
 class QKeySequence;
 
+class QFile;
+
 class PlugyItemsSplitter : public ItemsPropertiesSplitter
 {
     Q_OBJECT
@@ -79,6 +81,7 @@ private:
     ItemsList *itemsForSelectedRange() { return _shouldApplyActionToAllPages ? &_allItems : &_pagedItems; }
 //    void moveItemsToFirstPages(ItemsList *items, bool toShards);
 
+    void extractItemsForPageRange(ItemsList *outItems, quint32 firstPage, quint32 lastPage);
     void showErrorLoadingSortingOrderFile(const QFile &f);
     void storeItemsOnPage(const ItemsList &items, quint32 &page, int &row, int &col, bool shouldStartAnotherTypeFromNewRow);
 };

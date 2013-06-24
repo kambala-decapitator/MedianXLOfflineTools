@@ -355,9 +355,15 @@ void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
     }
     f.close();
 
+    ItemsList selectedItems;
+    if (sortOptions.firstPage == 1 && sortOptions.lastPage == _lastNotEmptyPage)
+        selectedItems = _allItems;
+    else
+        extractItemsForPageRange(&selectedItems, sortOptions.firstPage, sortOptions.lastPage);
+
     // sort by quality
     QMap<int, ItemsList> itemsByQuality;
-    foreach (ItemInfo *item, _allItems)
+    foreach (ItemInfo *item, selectedItems)
     {
         int key;
         if (item->isQuest)
@@ -591,9 +597,7 @@ void PlugyItemsSplitter::updateItemsForCurrentPage(bool pageChanged_ /*= true*/)
 
     quint32 currentPage = static_cast<quint32>(_pageSpinBox->value());
     _pagedItems.clear();
-    foreach (ItemInfo *item, _allItems)
-        if (item->plugyPage == currentPage)
-            _pagedItems += item;
+    extractItemsForPageRange(&_pagedItems, currentPage, currentPage);
     updateItems(_pagedItems);
 
     if (pageChanged_)
@@ -637,7 +641,7 @@ void PlugyItemsSplitter::right10Clicked()
 
 void PlugyItemsSplitter::showErrorLoadingSortingOrderFile(const QFile &f)
 {
-    ERROR_BOX(tr("Sorting order not loaded from %1").arg(QDir::toNativeSeparators(f.fileName())) + "\n" + tr("Reason: %1").arg(f.errorString()));
+    ERROR_BOX(tr("Sorting order not loaded from %1").arg(QDir::toNativeSeparators(f.fileName())) + "\n" + tr("Reason: %1", "error with file").arg(f.errorString()));
 }
 
 void PlugyItemsSplitter::storeItemsOnPage(const ItemsList &items, quint32 &page, int &row, int &col, bool shouldStartAnotherTypeFromNewRow)
@@ -680,4 +684,11 @@ void PlugyItemsSplitter::storeItemsOnPage(const ItemsList &items, quint32 &page,
 
         col += baseInfo->width;
     }
+}
+
+void PlugyItemsSplitter::extractItemsForPageRange(ItemsList *outItems, quint32 firstPage, quint32 lastPage)
+{
+    foreach (ItemInfo *item, _allItems)
+        if (item->plugyPage >= firstPage && item->plugyPage <= lastPage)
+            outItems->append(item);
 }
