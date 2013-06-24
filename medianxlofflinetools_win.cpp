@@ -7,10 +7,20 @@
 #include <QFileInfo>
 #include <QSettings>
 
-//#include <string>
 #include <sstream>
 
 #define SHELL32_HANDLE GetModuleHandle(L"shell32.dll")
+
+// WinXP toolchain doesn't define consts below
+#ifndef PRODUCT_CORE_N
+#define PRODUCT_CORE_N                              0x00000062
+#endif
+#ifndef PRODUCT_CORE_COUNTRYSPECIFIC
+#define PRODUCT_CORE_COUNTRYSPECIFIC                0x00000063
+#endif
+#ifndef PRODUCT_PROFESSIONAL_WMC
+#define PRODUCT_PROFESSIONAL_WMC                    0x00000067
+#endif
 
 typedef HRESULT (__stdcall *PSCPEAUMID)(PCWSTR); // SetCurrentProcessExplicitAppUserModelID()
 #ifdef WIN_7_OR_LATER
