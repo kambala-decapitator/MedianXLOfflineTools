@@ -61,10 +61,12 @@ public:
     ItemInfo(const QString &bits) : bitString(bits) { init(); }
     ~ItemInfo() { if (shouldDeleteEverything) { qDeleteAll(props); qDeleteAll(rwProps); qDeleteAll(socketablesInfo); } }
 
-    void move(int newRow, int newCol)
+    void move(int newRow, int newCol, quint32 newPage)
     {
         row = newRow;
         column = newCol;
+        plugyPage = newPage;
+        hasChanged = true;
 
         ReverseBitWriter::updateItemRow(this);
         ReverseBitWriter::updateItemColumn(this);
@@ -236,7 +238,7 @@ struct StashSortOptions
     bool separateSacredItems, separateEtherealItems, separateCotw, placeSimilarItemsOnOnePage;
     bool newRowTier, newRowCotw, newRowGemQuality, newRowVisuallyDifferent;
 
-    int firstPage, lastPage;
+    quint32 firstPage, lastPage;
     int diffQualitiesBlankPages, diffTypesBlankPages;
 };
 

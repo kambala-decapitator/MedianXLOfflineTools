@@ -561,6 +561,15 @@ ItemInfo *ItemDataBase::loadItemFromFile(const QString &fileName)
     return item;
 }
 
+ItemsList ItemDataBase::extractItemsFromPageRange(const ItemsList &items, quint32 firstPage, quint32 lastPage)
+{
+    ItemsList extractedItems;
+    foreach (ItemInfo *item, items)
+        if (item->plugyPage >= firstPage && item->plugyPage <= lastPage)
+            extractedItems += item;
+    return extractedItems;
+}
+
 ItemsList ItemDataBase::itemsStoredIn(int storage, int location /*= Enums::ItemLocation::Stored*/, quint32 *pPlugyPage /*= 0*/, ItemsList *allItems /*= 0*/)
 {
     ItemsList items, *characterItems = allItems ? allItems : &CharacterInfo::instance().items.character;
@@ -580,9 +589,8 @@ bool ItemDataBase::storeItemIn(ItemInfo *item, Enums::ItemStorage::ItemStorageEn
         for (quint8 j = 0; j < colsTotal; ++j)
             if (canStoreItemAt(i, j, item->itemType, items, rowsTotal, colsTotal))
             {
-                item->move(i, j);
+                item->move(i, j, plugyPage);
                 item->storage = storage;
-                item->plugyPage = plugyPage;
 
                 ReverseBitWriter::replaceValueInBitString(item->bitString, Enums::ItemOffsets::Storage, storage > Enums::ItemStorage::Stash ? Enums::ItemStorage::Stash : storage);
 

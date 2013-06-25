@@ -435,6 +435,8 @@ void ItemParser::writeItems(const ItemsList &items, QDataStream &ds)
         ds.writeRawData(itemBytes.constData(), itemBytes.size()); // do not write '\0'
 
         writeItems(item->socketablesInfo, ds);
+
+        item->hasChanged = false;
     }
 }
 

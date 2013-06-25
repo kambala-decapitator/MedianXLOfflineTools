@@ -569,10 +569,9 @@ ItemInfo *ItemsPropertiesSplitter::disenchantItemIntoItem(ItemInfo *oldItem, Ite
         return 0;
     }
 
-    newItemCopy->move(oldItem->row, oldItem->column);
+    newItemCopy->move(oldItem->row, oldItem->column, oldItem->plugyPage);
     newItemCopy->storage = oldItem->storage;
     newItemCopy->whereEquipped = oldItem->whereEquipped;
-    newItemCopy->plugyPage = oldItem->plugyPage;
 
     // update bits
     bool isPlugyStorage = newItemCopy->storage == Enums::ItemStorage::PersonalStash || newItemCopy->storage == Enums::ItemStorage::SharedStash || newItemCopy->storage == Enums::ItemStorage::HCStash;

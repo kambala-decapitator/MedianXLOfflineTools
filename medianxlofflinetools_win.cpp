@@ -310,7 +310,7 @@ QByteArray MedianXLOfflineTools::getOsInfo()
                 os << "Windows Storage Server 2003";
             else if (osvi.wSuiteMask & VER_SUITE_WH_SERVER)
                 os << "Windows Home Server";
-            else if(osvi.wProductType == VER_NT_WORKSTATION && si.wProcessorArchitecture == PROCESSOR_ARCHITECTURE_AMD64)
+            else if (osvi.wProductType == VER_NT_WORKSTATION && si.wProcessorArchitecture == PROCESSOR_ARCHITECTURE_AMD64)
                 os << "Windows XP Professional x64 Edition";
             else
                 os << "Windows Server 2003, ";
@@ -318,24 +318,23 @@ QByteArray MedianXLOfflineTools::getOsInfo()
             // Test for the server type.
             if (osvi.wProductType != VER_NT_WORKSTATION)
             {
-                if (si.wProcessorArchitecture == PROCESSOR_ARCHITECTURE_IA64)
+                switch (si.wProcessorArchitecture)
                 {
+                case PROCESSOR_ARCHITECTURE_IA64:
                     if (osvi.wSuiteMask & VER_SUITE_DATACENTER)
                         os << "Datacenter Edition for Itanium-based Systems";
                     else if (osvi.wSuiteMask & VER_SUITE_ENTERPRISE)
                         os << "Enterprise Edition for Itanium-based Systems";
-                }
-                else if (si.wProcessorArchitecture == PROCESSOR_ARCHITECTURE_AMD64)
-                {
+                    break;
+                case PROCESSOR_ARCHITECTURE_AMD64:
                     if (osvi.wSuiteMask & VER_SUITE_DATACENTER)
                         os << "Datacenter x64 Edition";
                     else if (osvi.wSuiteMask & VER_SUITE_ENTERPRISE)
                         os << "Enterprise x64 Edition";
                     else
                         os << "Standard x64 Edition";
-                }
-                else
-                {
+                    break;
+                default:
                     if (osvi.wSuiteMask & VER_SUITE_COMPUTE_SERVER)
                         os << "Compute Cluster Edition";
                     else if (osvi.wSuiteMask & VER_SUITE_DATACENTER)
@@ -346,6 +345,7 @@ QByteArray MedianXLOfflineTools::getOsInfo()
                         os << "Web Edition";
                     else
                         os << "Standard Edition";
+                    break;
                 }
             }
             break;

@@ -355,11 +355,20 @@ void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
     }
     f.close();
 
-    ItemsList selectedItems;
+    // split items
+    ItemsList selectedItems, tailItems;
     if (sortOptions.firstPage == 1 && sortOptions.lastPage == _lastNotEmptyPage)
         selectedItems = _allItems;
     else
-        extractItemsFromPageRange(&selectedItems, sortOptions.firstPage, sortOptions.lastPage);
+    {
+        foreach (ItemInfo *item, _allItems)
+        {
+            if (item->plugyPage >= sortOptions.firstPage && item->plugyPage <= sortOptions.lastPage)
+                selectedItems += item;
+            else if (item->plugyPage > sortOptions.lastPage)
+                tailItems += item;
+        }
+    }
 
     // sort by quality
     QMap<int, ItemsList> itemsByQuality;
@@ -382,7 +391,7 @@ void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
     quint32 page = sortOptions.firstPage;
     QMap<int, ItemsList>::const_iterator    iter = sortOptions.isQualityOrderAscending ? itemsByQuality.constBegin() : itemsByQuality.constEnd() - 1;
     QMap<int, ItemsList>::const_iterator endIter = sortOptions.isQualityOrderAscending ? itemsByQuality.constEnd()   : itemsByQuality.constBegin() - 1;
-    while (iter != endIter)
+    forever
     {
         int sortQuality = iter.key();
         if (sortQuality == Set)
@@ -394,7 +403,8 @@ void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
 
             foreach (const QList<int> &setIds, setsOrder)
             {
-                ItemsList setItems; // put together all items from one set
+                // put together all items from one set
+                ItemsList setItems;
                 foreach (int setId, setIds)
                     setItems << setItemsById.value(setId);
                 if (!setItems.isEmpty())
@@ -402,6 +412,9 @@ void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
                     int row = 0, col = 0;
                     storeItemsOnPage(setItems, page, row, col, false);
                     ++page; // start each set from new page
+
+                    foreach (ItemInfo *item, setItems)
+                        selectedItems.removeOne(item);
                 }
             }
         }
@@ -504,27 +517,18 @@ void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
                     foreach (const ItemsList &items, sortedItemsByType)
                     {
                         storeItemsOnPage(items, page, row, col, sortQuality == Quest ? false : (isGemOrRune ? startEachGemAndRuneFromNewRow : true));
-                        if (noNewPageInsideGemsAndRunes && isGemOrRune)
-                        {
-                            if (startEachGemAndRuneFromNewRow)
-                            {
-                                ++row;
-                                col = 0;
-                            }
-                        }
-                        else if (noNewPageInsideClassCharms && isClassCharm_)
-                        {
-                            if (startEachClassCharmFromNewRow)
-                            {
-                                ++row;
-                                col = 0;
-                            }
-                        }
+
+                        col = 0;
+                        if (startEachGemAndRuneFromNewRow && ((noNewPageInsideGemsAndRunes && isGemOrRune) || (noNewPageInsideClassCharms && isClassCharm_)))
+                            ++row;
                         else
                         {
                             ++page; // start new sub-type from new page
-                            row = col = 0;
+                            row = 0;
                         }
+
+                        foreach (ItemInfo *item, items)
+                            selectedItems.removeOne(item);
                     }
                     if ((noNewPageInsideGemsAndRunes && isGemOrRune) || (noNewPageInsideClassCharms && isClassCharm_))
                         ++page;
@@ -535,12 +539,27 @@ void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
             }
         }
 
-        page += sortOptions.diffQualitiesBlankPages;
-
         sortOptions.isQualityOrderAscending ? ++iter : --iter;
+        if (iter != endIter)
+            page += sortOptions.diffQualitiesBlankPages;
+        else
+            break;
     }
 
-    setItems(_allItems);
+    // sort misc items
+
+    // shift all unprocessed items from last pages
+    if (page > sortOptions.lastPage && !tailItems.isEmpty())
+    {
+        quint32 pageShift = page - sortOptions.lastPage;
+        foreach (ItemInfo *item, tailItems)
+        {
+            item->plugyPage += pageShift;
+            item->hasChanged = true;
+        }
+    }
+
+    setItems(_allItems); // updates last page value and items on current page
     emit stashSorted();
 }
 
@@ -595,9 +614,7 @@ void PlugyItemsSplitter::updateItemsForCurrentPage(bool pageChanged_ /*= true*/)
 {
     bool wasPageEnteredManually = qApp->focusWidget() == _pageSpinBox;
 
-    quint32 currentPage = static_cast<quint32>(_pageSpinBox->value());
-    _pagedItems.clear();
-    extractItemsFromPageRange(&_pagedItems, currentPage, currentPage);
+    _pagedItems = ItemDataBase::extractItemsFromPage(_allItems, static_cast<quint32>(_pageSpinBox->value()));
     updateItems(_pagedItems);
 
     if (pageChanged_)
@@ -679,16 +696,8 @@ void PlugyItemsSplitter::storeItemsOnPage(const ItemsList &items, quint32 &page,
             }
         }
 
-        item->move(row, col);
-        item->plugyPage = page;
+        item->move(row, col, page);
 
         col += baseInfo->width;
     }
-}
-
-void PlugyItemsSplitter::extractItemsFromPageRange(ItemsList *outItems, quint32 firstPage, quint32 lastPage)
-{
-    foreach (ItemInfo *item, _allItems)
-        if (item->plugyPage >= firstPage && item->plugyPage <= lastPage)
-            outItems->append(item);
 }

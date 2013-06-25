@@ -179,7 +179,7 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *pare
 
     QSettings settings;
 #if defined(Q_OS_WIN32) || defined(Q_OS_MAC)
-//    if (!settings.contains("osInfoWasSent"))
+   if (!settings.contains("osInfoWasSent"))
         sendOsInfo();
 #else
 #warning Add implementation to get OS info to e.g. medianxlofflinetools_linux.cpp
@@ -637,7 +637,7 @@ void MedianXLOfflineTools::saveCharacter()
 
         QDataStream plugyFileDataStream(&inputFile);
         plugyFileDataStream.setByteOrder(QDataStream::LittleEndian);
-        plugyFileDataStream.writeRawData(info.header.constData(), info.header.size());
+        plugyFileDataStream.writeRawData(info.header.constData(), info.header.size()); // do not write '\0'
         plugyFileDataStream << info.version;
         if (info.hasGold)
             plugyFileDataStream << info.gold;
@@ -645,13 +645,10 @@ void MedianXLOfflineTools::saveCharacter()
 
         for (quint32 page = 1; page <= info.lastPage; ++page)
         {
-            ItemsList pageItems;
-            foreach (ItemInfo *anItem, items)
-                if (anItem->plugyPage == page)
-                    pageItems += anItem;
-
             plugyFileDataStream.writeRawData(ItemParser::kPlugyPageHeader.constData(), ItemParser::kPlugyPageHeader.size() + 1); // write '\0'
             plugyFileDataStream.writeRawData(ItemParser::kItemHeader.constData(), ItemParser::kItemHeader.size()); // do not write '\0'
+
+            ItemsList pageItems = ItemDataBase::extractItemsFromPage(items, page);
             plugyFileDataStream << static_cast<quint16>(pageItems.size());
             ItemParser::writeItems(pageItems, plugyFileDataStream);
         }
