@@ -359,7 +359,7 @@ void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
     if (sortOptions.firstPage == 1 && sortOptions.lastPage == _lastNotEmptyPage)
         selectedItems = _allItems;
     else
-        extractItemsForPageRange(&selectedItems, sortOptions.firstPage, sortOptions.lastPage);
+        extractItemsFromPageRange(&selectedItems, sortOptions.firstPage, sortOptions.lastPage);
 
     // sort by quality
     QMap<int, ItemsList> itemsByQuality;
@@ -379,7 +379,7 @@ void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
     const QHash<QByteArray, QList<QByteArray> > *const kItemTypesInfo = ItemDataBase::ItemTypes();
     bool noNewPageInsideGemsAndRunes = true, startEachGemAndRuneFromNewRow = true, noNewPageInsideClassCharms = true, startEachClassCharmFromNewRow = true;
 
-    quint32 page = 1;
+    quint32 page = sortOptions.firstPage;
     QMap<int, ItemsList>::const_iterator    iter = sortOptions.isQualityOrderAscending ? itemsByQuality.constBegin() : itemsByQuality.constEnd() - 1;
     QMap<int, ItemsList>::const_iterator endIter = sortOptions.isQualityOrderAscending ? itemsByQuality.constEnd()   : itemsByQuality.constBegin() - 1;
     while (iter != endIter)
@@ -597,7 +597,7 @@ void PlugyItemsSplitter::updateItemsForCurrentPage(bool pageChanged_ /*= true*/)
 
     quint32 currentPage = static_cast<quint32>(_pageSpinBox->value());
     _pagedItems.clear();
-    extractItemsForPageRange(&_pagedItems, currentPage, currentPage);
+    extractItemsFromPageRange(&_pagedItems, currentPage, currentPage);
     updateItems(_pagedItems);
 
     if (pageChanged_)
@@ -686,7 +686,7 @@ void PlugyItemsSplitter::storeItemsOnPage(const ItemsList &items, quint32 &page,
     }
 }
 
-void PlugyItemsSplitter::extractItemsForPageRange(ItemsList *outItems, quint32 firstPage, quint32 lastPage)
+void PlugyItemsSplitter::extractItemsFromPageRange(ItemsList *outItems, quint32 firstPage, quint32 lastPage)
 {
     foreach (ItemInfo *item, _allItems)
         if (item->plugyPage >= firstPage && item->plugyPage <= lastPage)

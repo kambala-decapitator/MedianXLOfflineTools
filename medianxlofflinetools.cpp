@@ -60,7 +60,7 @@
 
 // static const
 
-static const QString kLastSavePathKey("lastSavePath"), kBackupExtension("bak"), kReadonlyCss("background-color: rgb(227, 227, 227)"), kTimeFormatReadable("yyyyMMdd-hhmmss");
+static const QString kLastSavePathKey("lastSavePath"), kBackupExtension("bak"), kReadonlyCss("background-color: rgb(227, 227, 227)"), kTimeFormatReadable("yyyyMMdd-hhmmss"), kMedianXlServer("http://mxl.vn.cz/kambala/");
 static const QByteArray kMercHeader("jf");
 
 const QString MedianXLOfflineTools::kCompoundFormat("%1, %2");
@@ -1052,7 +1052,21 @@ void MedianXLOfflineTools::associateFiles()
 void MedianXLOfflineTools::checkForUpdate()
 {
     _isManuallyCheckingForUpdate = sender() != 0;
-    checkForUpdateFromUrl(QUrl("http://www.medianxl.com/f16-median-xl-tools-informations"));
+
+    _qnamCheckForUpdate = new QNetworkAccessManager;
+    QNetworkReply *reply = _qnamCheckForUpdate->get(QNetworkRequest(QUrl(kMedianXlServer + "mxlot_version.txt")));
+    QEventLoop eventLoop;
+    connect(reply, SIGNAL(finished()), &eventLoop, SLOT(quit()));
+    eventLoop.exec();
+
+    if (!reply->error())
+    {
+        displayInfoAboutServerVersion(reply->readAll().trimmed());
+        reply->deleteLater();
+        _qnamCheckForUpdate->deleteLater();
+    }
+    else
+        checkForUpdateFromForumUrl(QUrl("http://www.medianxl.com/f16-median-xl-tools-informations"));
 }
 
 void MedianXLOfflineTools::aboutApp()
@@ -2768,7 +2782,7 @@ bool MedianXLOfflineTools::maybeSave()
     return true;
 }
 
-void MedianXLOfflineTools::checkForUpdateFromUrl(const QUrl &url)
+void MedianXLOfflineTools::checkForUpdateFromForumUrl(const QUrl &url)
 {
     _qnamCheckForUpdate = new QNetworkAccessManager;
     connect(_qnamCheckForUpdate, SIGNAL(finished(QNetworkReply *)), SLOT(networkReplyCheckForUpdateFinished(QNetworkReply *)));
@@ -2782,24 +2796,26 @@ void MedianXLOfflineTools::networkReplyCheckForUpdateFinished(QNetworkReply *rep
     reply->deleteLater();
     _qnamCheckForUpdate->deleteLater();
 
-    QRegExp rx(QString("%1 v(.+)</a>").arg(qApp->applicationName()));
+    QRegExp rx(QString("%1 v(.+)").arg(qApp->applicationName()));
     rx.setMinimal(true);
     if (rx.indexIn(webpage) != -1)
-    {
-        QString version = rx.cap(1);
-        if (qApp->applicationVersion() < version)
-            INFO_BOX(tr("New version <b>%1</b> is available!").arg(version) + kHtmlLineBreak + kHtmlLineBreak + kForumThreadHtmlLinks);
-        else if (_isManuallyCheckingForUpdate)
-            INFO_BOX(tr("You have the latest version"));
-    }
+        displayInfoAboutServerVersion(rx.cap(1));
     else
     {
         QUrl newUrl("http://worldofplayers.ru/forums/935/");
         if (newUrl != reply->url())
-            checkForUpdateFromUrl(newUrl);
+            checkForUpdateFromForumUrl(newUrl);
         else if (_isManuallyCheckingForUpdate)
             ERROR_BOX(tr("Error contacting update server"));
     }
+}
+
+void MedianXLOfflineTools::displayInfoAboutServerVersion(const QString &version)
+{
+    if (qApp->applicationVersion() < version)
+        INFO_BOX(tr("New version <b>%1</b> is available!").arg(version) + kHtmlLineBreak + kHtmlLineBreak + kForumThreadHtmlLinks);
+    else if (_isManuallyCheckingForUpdate)
+        INFO_BOX(tr("You have the latest version"));
 }
 
 void MedianXLOfflineTools::sendOsInfo()
@@ -2807,8 +2823,8 @@ void MedianXLOfflineTools::sendOsInfo()
     QByteArray osInfo = getOsInfo();
     if (!osInfo.isEmpty())
     {
-        QNetworkRequest request(QUrl("http://mxl.vn.cz/kambala/stat.php"));
-        request.setHeader(QNetworkRequest::ContentTypeHeader, "text/plain");
+        QNetworkRequest request(QUrl(kMedianXlServer + "stat.php"));
+        request.setHeader(QNetworkRequest::ContentTypeHeader, "application/x-www-form-urlencoded");
 
         _qnamSendOsInfo = new QNetworkAccessManager;
         connect(_qnamSendOsInfo, SIGNAL(finished(QNetworkReply *)), SLOT(networkReplySendOsInfoFinished(QNetworkReply *)));
@@ -2819,7 +2835,6 @@ void MedianXLOfflineTools::sendOsInfo()
 
 void MedianXLOfflineTools::networkReplySendOsInfoFinished(QNetworkReply *reply)
 {
-    qDebug("stat.php reply:\n%s", reply->readAll().constData());
     if (!reply->error())
     {
         QSettings settings;

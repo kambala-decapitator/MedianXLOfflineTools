@@ -122,7 +122,6 @@ ItemsViewerDialog::ItemsViewerDialog(const QHash<int, bool> &plugyStashesExisten
     vboxLayout->addWidget(box);
 
     box = new QGroupBox(tr("To:"), this);
-
     QGridLayout *disenchantGridLayout = new QGridLayout(box);
     disenchantGridLayout->addWidget(_disenchantToShardsButton, 0, 0);
     disenchantGridLayout->addWidget(_upgradeToCrystalsCheckbox, 1, 0, Qt::AlignCenter);

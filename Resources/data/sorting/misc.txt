@@ -1,4 +1,4 @@
-# default order is the same as on the website, but you can change it to your liking
+# you can change the order to your liking
 # empty lines and text after '#' are ignored
 
 gem.  # gem  (hardcoded ordering: cLOD - MXL)

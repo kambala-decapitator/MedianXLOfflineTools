@@ -185,7 +185,7 @@ QByteArray MedianXLOfflineTools::getOsInfo()
     osvi.dwOSVersionInfoSize = sizeof(OSVERSIONINFOEX);
     BOOL bOsVersionInfoEx = GetVersionEx((OSVERSIONINFO *)&osvi);
     if (!bOsVersionInfoEx || VER_PLATFORM_WIN32_NT != osvi.dwPlatformId || osvi.dwMajorVersion < 5)
-        return QString();
+        return QByteArray();
 
     // Call GetNativeSystemInfo if supported or GetSystemInfo otherwise
     SYSTEM_INFO si;

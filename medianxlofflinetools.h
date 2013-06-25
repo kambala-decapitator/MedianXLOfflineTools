@@ -216,7 +216,8 @@ private:
     void showErrorMessageBoxForFile(const QString &message, const QFile &file);
     bool maybeSave();
 
-    void checkForUpdateFromUrl(const QUrl &url);
+    void checkForUpdateFromForumUrl(const QUrl &url);
+    void displayInfoAboutServerVersion(const QString &version);
     void sendOsInfo();
 };
 
