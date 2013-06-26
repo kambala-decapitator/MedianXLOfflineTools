@@ -12,6 +12,15 @@ const QList<QByteArray> PropertiesDisplayManager::kDamageToUndeadTypes = QList<Q
 
 QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item)
 {
+    QString ilvlText = "\n" + tr("Item Level: %1").arg(item->ilvl);
+    if (item->isEar)
+    {
+        QString itemDescription = tr("%1's Ear", "param is character name").arg(item->earInfo.name.constData()) + "\n";
+        itemDescription += Enums::ClassName::classes().at(item->earInfo.classCode) + "\n";
+        itemDescription += tr("Level %1").arg(item->earInfo.level);
+        return itemDescription + ilvlText;
+    }
+
     bool isClassCharm = ItemDataBase::isClassCharm(item);
 
     PropertiesMap allProps;
@@ -38,7 +47,7 @@ QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item)
         addProperties(&allProps, ItemDataBase::isGenericSocketable(socketableItem) ? genericSocketableProperties(socketableItem, itemBase->socketableType) : socketableItem->props);
 
     // create full item description
-    QString itemDescription = ItemDataBase::completeItemName(item, false).replace(kHtmlLineBreak, "\n") + "\n" + tr("Item Level: %1").arg(item->ilvl);
+    QString itemDescription = ItemDataBase::completeItemName(item, false).replace(kHtmlLineBreak, "\n") + ilvlText;
     if (!itemBase->spelldesc.isEmpty())
         itemDescription += itemBase->spelldesc + "\n";
 
@@ -48,12 +57,12 @@ QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item)
             runes += ItemDataBase::Socketables()->value(socketable->itemType)->letter;
     if (!runes.isEmpty()) // gem-/jewelwords don't have any letters
         itemDescription += QString("\n'%1'").arg(runes);
-
+    
+    quint8 clvl = CharacterInfo::instance().basicInfo.level;
     ItemProperty *foo = new ItemProperty;
     if (itemBase->genericType == Enums::ItemTypeGeneric::Armor)
     {
         int baseDef = item->defense, totalDef = baseDef;
-        quint8 clvl = CharacterInfo::instance().basicInfo.level;
         int ed = allProps.value(Enums::ItemProperties::EnhancedDefence, foo)->value + (allProps.value(Enums::ItemProperties::EnhancedDefenceBasedOnClvl, foo)->value * clvl) / 32;
         if (ed)
             totalDef = (totalDef * (100 + ed)) / 100;
@@ -66,6 +75,55 @@ QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item)
             itemDescription += QString("%1 (%2)").arg(defString.arg(QString::number(totalDef))).arg(baseDef);
         else
             itemDescription += defString.arg(baseDef);
+    }
+    else if (itemBase->genericType == Enums::ItemTypeGeneric::Weapon)
+    {
+        // TODO: use lambda to calculate damage
+        int ed = allProps.value(Enums::ItemProperties::EnhancedDamage, foo)->value, minDmgProp = allProps.value(Enums::ItemProperties::MinimumDamage, foo)->value;
+        int maxDmgTotal = allProps.value(Enums::ItemProperties::MaximumDamage, foo)->value + (allProps.value(Enums::ItemProperties::MaximumDamageBasedOnClvl, foo)->value * clvl) / 32;
+        QString damageFormat = tr("%1 to %2", "min-max damage");
+
+        if (itemBase->minThrowDmg && itemBase->maxThrowDmg)
+        {
+            int minDmg = itemBase->minThrowDmg, maxDmg = itemBase->maxThrowDmg;
+            if (ed)
+            {
+                minDmg = (minDmg * (100 + ed)) / 100;
+                maxDmg = (maxDmg * (100 + ed)) / 100;
+            }
+            minDmg += minDmgProp;
+            maxDmg += maxDmgTotal;
+
+            itemDescription += QString("%1: %2\n").arg(tr("Throw Damage"), damageFormat.arg(minDmg).arg(maxDmg));
+        }
+
+        if (itemBase->min1hDmg && itemBase->max1hDmg)
+        {
+            int minDmg = itemBase->min1hDmg, maxDmg = itemBase->max1hDmg;
+            if (ed)
+            {
+                minDmg = (minDmg * (100 + ed)) / 100;
+                maxDmg = (maxDmg * (100 + ed)) / 100;
+            }
+            minDmg += minDmgProp;
+            maxDmg += maxDmgTotal;
+            
+            itemDescription += QString("%1: %2\n").arg(tr("One-Hand Damage"), damageFormat.arg(minDmg).arg(maxDmg));
+        }
+
+        if (itemBase->min2hDmg && itemBase->max2hDmg)
+        {
+            int minDmg = itemBase->min2hDmg, maxDmg = itemBase->max2hDmg;
+            if (ed)
+            {
+                minDmg = (minDmg * (100 + ed)) / 100;
+                maxDmg = (maxDmg * (100 + ed)) / 100;
+            }
+            minDmg += minDmgProp;
+            maxDmg += maxDmgTotal;
+            
+            itemDescription += QString("%1: %2\n").arg(tr("Two-Hand Damage"), damageFormat.arg(minDmg).arg(maxDmg));
+        }
     }
     if (itemBase->genericType != Enums::ItemTypeGeneric::Misc && item->maxDurability)
     {
@@ -81,6 +139,25 @@ QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item)
         itemDescription += "\n" + tr("Quantity: %1").arg(item->quantity);
     if (itemBase->classCode > -1)
         itemDescription += "\n" + tr("(%1 Only)", "class-specific item").arg(Enums::ClassName::classes().at(itemBase->classCode));
+
+    // TODO: use lambda to calculate requirements
+    if (itemBase->rdex)
+    {
+        int rdex = itemBase->rdex;
+        if (int requirements = allProps.value(Enums::ItemProperties::Requirements, foo)->value)
+            rdex = (rdex * (100 + requirements)) / 100;
+        if (rdex)
+            itemDescription += tr("Required Dexterity: %1").arg(rdex) + "\n";
+    }
+
+    if (itemBase->rstr)
+    {
+        int rstr = itemBase->rstr;
+        if (int requirements = allProps.value(Enums::ItemProperties::Requirements, foo)->value)
+            rstr = (rstr * (100 + requirements)) / 100;
+        if (rstr)
+            itemDescription += tr("Required Strength: %1").arg(rstr) + "\n";
+    }
 
     int rlvl;
     switch (item->quality)
@@ -102,10 +179,9 @@ QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item)
         if (maxSocketableRlvl < socketableRlvl)
             maxSocketableRlvl = socketableRlvl;
     }
-    int actualRlvl = qMax(rlvl, maxSocketableRlvl) + allProps.value(Enums::ItemProperties::RequiredLevel, foo)->value;
-    delete foo;
-    if (actualRlvl)
+    if (int actualRlvl = qMax(rlvl, maxSocketableRlvl) + allProps.value(Enums::ItemProperties::RequiredLevel, foo)->value)
         itemDescription += "\n" + tr("Required Level: %1").arg(actualRlvl);
+    delete foo;
 
     // add '+50% damage to undead' if item type matches
     bool shouldAddDamageToUndeadInTheBottom = false;

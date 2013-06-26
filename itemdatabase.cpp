@@ -82,10 +82,21 @@ QHash<QByteArray, ItemBase *> *ItemDataBase::Items()
             item->genericType = static_cast<Enums::ItemTypeGeneric::ItemTypeGenericEnum>(data.at(5).toUShort());
             item->isStackable = data.at(6).toUShort();
             item->rlvl = data.at(7).toUShort();
-            item->imageName = data.at(8);
-            item->types = data.at(9).split(',');
-            item->socketableType = data.at(10).isEmpty() ? -1 : data.at(10).toShort();
-            item->classCode = data.at(11).toShort();
+            item->rstr = data.at(8).toUShort();
+            item->rdex = data.at(9).toUShort();
+            item->is1h2h = data.at(10).toUShort();
+            item->is2h = data.at(11).toUShort();
+            item->min1hDmg = data.at(12).toUShort();
+            item->max1hDmg = data.at(13).toUShort();
+            item->min2hDmg = data.at(14).toUShort();
+            item->max2hDmg = data.at(15).toUShort();
+            item->minThrowDmg = data.at(16).toUShort();
+            item->maxThrowDmg = data.at(17).toUShort();
+            item->imageName = data.at(18);
+            item->questId = data.at(19).toUShort();
+            item->types = data.at(20).split(',');
+            item->socketableType = data.at(21).isEmpty() ? -1 : data.at(21).toShort();
+            item->classCode = data.at(22).toShort();
             allItems[data.at(0)] = item;
         }
         f.remove();
@@ -176,6 +187,8 @@ QHash<uint, SetItemInfo *> *ItemDataBase::Sets()
             SetItemInfo *item = new SetItemInfo;
             item->itemName = QString::fromUtf8(data.at(1));
             item->setName = QString::fromUtf8(data.at(2));
+            if (data.size() > 3)
+                item->imageName = data.at(3);
             allSets[data.at(0).toUInt()] = item;
 
             // do not add duplicate names
@@ -250,7 +263,7 @@ QHash<uint, MysticOrb *> *ItemDataBase::MysticOrbs()
         QFile f;
         if (!createUncompressedTempFile(ResourcePathManager::dataPathForFileName("mo.dat"), tr("Mystic Orbs data not loaded."), &f))
             return 0;
-        
+
         while (!f.atEnd())
         {
             QList<QByteArray> data = stringArrayOfCurrentLineInFile(f);

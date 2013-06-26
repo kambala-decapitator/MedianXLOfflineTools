@@ -29,6 +29,11 @@ class ItemInfo
 public:
     bool isQuest, isIdentified, isSocketed, isEar, isStarter, isExtended, isEthereal, isPersonalized, isRW;
     int location, whereEquipped, row, column, storage;
+    struct
+    {
+        quint8 classCode, level;
+        QByteArray name;
+    } earInfo; // isEar == true
     QByteArray itemType; // key to get ItemBase
     // fields below exist if isExtended == true
     quint32 guid;
@@ -154,8 +159,13 @@ struct ItemBase
     quint8 width, height;
     Enums::ItemTypeGeneric::ItemTypeGenericEnum genericType;
     bool isStackable;
-    quint16 rlvl;
+    quint16 rlvl, rstr, rdex;
+    bool is1h2h, is2h;
+    quint16 min1hDmg, max1hDmg;
+    quint16 min2hDmg, max2hDmg;
+    quint16 minThrowDmg, maxThrowDmg;
     QByteArray imageName;
+    quint8 questId; // non-zero value means that it's a quest item
     QList<QByteArray> types;
     qint8 socketableType, classCode;
 };
@@ -173,9 +183,20 @@ struct ItemPropertyTxt
     // 'stat' column isn't needed
 };
 
-struct SetItemInfo
+struct SetOrUniqueItemInfo
+{
+    QByteArray imageName;
+};
+
+struct SetItemInfo : public SetOrUniqueItemInfo
 {
     QString itemName, setName;
+};
+
+struct UniqueItemInfo : public SetOrUniqueItemInfo
+{
+    QString name;
+    quint16 rlvl;
 };
 
 struct SkillInfo
@@ -185,13 +206,6 @@ struct SkillInfo
 };
 
 typedef QList<quint8> SkillList;
-
-struct UniqueItemInfo
-{
-    QString name;
-    quint16 rlvl;
-    QByteArray imageName;
-};
 
 struct MysticOrb
 {

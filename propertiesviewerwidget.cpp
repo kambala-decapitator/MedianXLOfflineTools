@@ -51,6 +51,16 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
     ui->tabWidget->setTabEnabled(2, item->isRW);
     ui->tabWidget->setTabEnabled(3, !item->socketablesInfo.isEmpty());
 
+    QString ilvlText = kHtmlLineBreak + tr("Item Level: %1").arg(item->ilvl);
+    if (item->isEar)
+    {
+        QString itemDescription = tr("%1's Ear", "param is character name").arg(item->earInfo.name.constData()) + kHtmlLineBreak;
+        itemDescription += Enums::ClassName::classes().at(item->earInfo.classCode) + kHtmlLineBreak;
+        itemDescription += tr("Level %1").arg(item->earInfo.level);
+        renderHtml(ui->allTextEdit, itemDescription + ilvlText);
+        return;
+    }
+
     renderHtml(ui->itemAndMysticOrbsTextEdit, collectMysticOrbsDataFromProps(&_itemMysticOrbs, item->props, item->itemType));
 
     PropertiesMultiMap allProps;
@@ -107,7 +117,7 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
     }
 
     // create full item description
-    QString itemDescription = ItemDataBase::completeItemName(item, true) + kHtmlLineBreak + tr("Item Level: %1").arg(item->ilvl) + kHtmlLineBreak;
+    QString itemDescription = ItemDataBase::completeItemName(item, true) + ilvlText + kHtmlLineBreak;
     if (!itemBase->spelldesc.isEmpty())
         itemDescription += htmlStringFromDiabloColorString(itemBase->spelldesc) + kHtmlLineBreak;
 
@@ -129,8 +139,11 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
     if (!runes.isEmpty()) // gem-/jewelwords don't have any letters
         itemDescription += htmlStringFromDiabloColorString(QString("'%1'").arg(runes), ColorsManager::Gold) + kHtmlLineBreak;
 
-    quint8 clvl = CharacterInfo::instance().basicInfo.level;
+    const CharacterInfo &charInfo = CharacterInfo::instance();
+    const CharacterInfo::CharacterInfoBasic &charBasicInfo = charInfo.basicInfo;
+    quint8 clvl = charBasicInfo.level;
     ItemProperty *foo = new ItemProperty;
+
     if (itemBase->genericType == Enums::ItemTypeGeneric::Armor)
     {
         int baseDef = item->defense, totalDef = baseDef;
@@ -148,6 +161,55 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
             itemDescription += defString.arg(baseDef);
         itemDescription += kHtmlLineBreak;
     }
+    else if (itemBase->genericType == Enums::ItemTypeGeneric::Weapon)
+    {
+        // TODO: use lambda to calculate damage
+        int ed = allProps.value(Enums::ItemProperties::EnhancedDamage, foo)->value, minDmgProp = allProps.value(Enums::ItemProperties::MinimumDamage, foo)->value;
+        int maxDmgTotal = allProps.value(Enums::ItemProperties::MaximumDamage, foo)->value + (allProps.value(Enums::ItemProperties::MaximumDamageBasedOnClvl, foo)->value * clvl) / 32;
+        QString damageFormat = tr("%1 to %2", "min-max damage");
+
+        if (itemBase->minThrowDmg && itemBase->maxThrowDmg)
+        {
+            int minDmg = itemBase->minThrowDmg, maxDmg = itemBase->maxThrowDmg;
+            if (ed)
+            {
+                minDmg = (minDmg * (100 + ed)) / 100;
+                maxDmg = (maxDmg * (100 + ed)) / 100;
+            }
+            minDmg += minDmgProp;
+            maxDmg += maxDmgTotal;
+
+            itemDescription += tr("Throw Damage") + ": " + htmlStringFromDiabloColorString(damageFormat.arg(minDmg).arg(maxDmg), ColorsManager::Blue) + kHtmlLineBreak;
+        }
+
+        if (itemBase->min1hDmg && itemBase->max1hDmg)
+        {
+            int minDmg = itemBase->min1hDmg, maxDmg = itemBase->max1hDmg;
+            if (ed)
+            {
+                minDmg = (minDmg * (100 + ed)) / 100;
+                maxDmg = (maxDmg * (100 + ed)) / 100;
+            }
+            minDmg += minDmgProp;
+            maxDmg += maxDmgTotal;
+
+            itemDescription += tr("One-Hand Damage") + ": " + htmlStringFromDiabloColorString(damageFormat.arg(minDmg).arg(maxDmg), ColorsManager::Blue) + kHtmlLineBreak;
+        }
+
+        if (itemBase->min2hDmg && itemBase->max2hDmg)
+        {
+            int minDmg = itemBase->min2hDmg, maxDmg = itemBase->max2hDmg;
+            if (ed)
+            {
+                minDmg = (minDmg * (100 + ed)) / 100;
+                maxDmg = (maxDmg * (100 + ed)) / 100;
+            }
+            minDmg += minDmgProp;
+            maxDmg += maxDmgTotal;
+
+            itemDescription += tr("Two-Hand Damage") + ": " + htmlStringFromDiabloColorString(damageFormat.arg(minDmg).arg(maxDmg), ColorsManager::Blue) + kHtmlLineBreak;
+        }
+    }
     if (itemBase->genericType != Enums::ItemTypeGeneric::Misc && item->maxDurability)
     {
         itemDescription += tr("Durability") + ": ";
@@ -164,11 +226,30 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
     if (itemBase->classCode > -1)
     {
         QString text = tr("(%1 Only)", "class-specific item").arg(Enums::ClassName::classes().at(itemBase->classCode));
-        if (itemBase->classCode != CharacterInfo::instance().basicInfo.classCode)
+        if (itemBase->classCode != charBasicInfo.classCode)
             itemDescription += htmlStringFromDiabloColorString(text, ColorsManager::Red);
         else
             itemDescription += text;
         itemDescription += kHtmlLineBreak;
+    }
+
+    // TODO: use lambda to calculate requirements
+    if (itemBase->rdex)
+    {
+        int rdex = itemBase->rdex;
+        if (int requirements = allProps.value(Enums::ItemProperties::Requirements, foo)->value)
+            rdex = (rdex * (100 + requirements)) / 100;
+        if (rdex)
+            itemDescription += htmlStringFromDiabloColorString(tr("Required Dexterity: %1").arg(rdex), charInfo.valueOfStatistic(Enums::CharacterStats::Dexterity) < rdex ? ColorsManager::Red : ColorsManager::White) + kHtmlLineBreak;
+    }
+
+    if (itemBase->rstr)
+    {
+        int rstr = itemBase->rstr;
+        if (int requirements = allProps.value(Enums::ItemProperties::Requirements, foo)->value)
+            rstr = (rstr * (100 + requirements)) / 100;
+        if (rstr)
+            itemDescription += htmlStringFromDiabloColorString(tr("Required Strength: %1").arg(rstr), charInfo.valueOfStatistic(Enums::CharacterStats::Strength) < rstr ? ColorsManager::Red : ColorsManager::White) + kHtmlLineBreak;
     }
 
     int rlvl;
@@ -194,10 +275,9 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
         if (maxSocketableRlvl < socketableRlvl)
             maxSocketableRlvl = socketableRlvl;
     }
-    int actualRlvl = qMax(rlvl, maxSocketableRlvl) + allProps.value(Enums::ItemProperties::RequiredLevel, foo)->value;
-    delete foo;
-    if (actualRlvl)
+    if (int actualRlvl = qMax(rlvl, maxSocketableRlvl) + allProps.value(Enums::ItemProperties::RequiredLevel, foo)->value)
         itemDescription += htmlStringFromDiabloColorString(tr("Required Level: %1").arg(actualRlvl), clvl < actualRlvl ? ColorsManager::Red : ColorsManager::White) + kHtmlLineBreak;
+    delete foo;
 
     // add '+50% damage to undead' if item type matches
     bool shouldAddDamageToUndeadInTheBottom = false;
@@ -246,7 +326,7 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
         foreach (const QString &setItemName, ItemDataBase::completeSetForName(setName))
         {
             bool found = false;
-            foreach (ItemInfo *anItem, CharacterInfo::instance().items.character) //-V807
+            foreach (ItemInfo *anItem, charInfo.items.character) //-V807
             {
                 if (anItem->quality == Enums::ItemQuality::Set && ItemDataBase::Sets()->value(anItem->setOrUniqueId)->itemName == setItemName)
                 {

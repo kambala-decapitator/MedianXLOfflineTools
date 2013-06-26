@@ -8838,7 +8838,7 @@
 "vv_SandSnake"	"\orange;Sand Snake"
 "StormBlade"	"(Secret)\nStorm Blade"
 "TheGrizzly"	"(Secret)\nThe Grizzly"
-"~Â·Â·Â·"	"Mystic Sword"
+"~···"	"Mystic Sword"
 "GrandEmpyrean"	"(Secret)\nEmpyrean Glory"
 "BeadsOfTheSK2"	"(Secret)\nBeads of the Snake King"
 "LuckyJewel"	"(Secret)\nJewel of Luck"

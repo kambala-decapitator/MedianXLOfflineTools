@@ -1,7 +1,7 @@
-#!/usr/bin/perl
+#!/usr/bin/env perl
 
 # original script copyright (C) grig 2011
-# improvements and modifications for Median XL Offline Tools copyright (C) kambala 2011-2012
+# improvements and modifications for Median XL Offline Tools copyright (C) kambala 2011-2013
 
 use strict;
 use warnings;
@@ -59,7 +59,9 @@ my $descArrayRef = [
     {key => "dgrpstrneg", col => 50, expanded => "descGroupNegative"},
     {key => "dgrpstr2",   col => 51, expanded => "descGroupStringAdd"},
 ];
-my %propertiesHash = ("stat"=>"0", bitsSave=>10, "bits"=>"22", "add"=>"23", "saveParamBits"=>"24", descpriority=>40, descfunc=>41, descval=>42, dgrp=>46, dgrpfunc=>47, dgrpval=>48); $propertiesHash{$_->{key}} = $_->{col} for (@$descArrayRef);
+my %propertiesHash = ("stat"=>"0", bitsSave=>10, "bits"=>"22", "add"=>"23", "saveParamBits"=>"24",
+                      descpriority=>40, descfunc=>41, descval=>42, dgrp=>46, dgrpfunc=>47, dgrpval=>48);
+$propertiesHash{$_->{key}} = $_->{col} for (@$descArrayRef);
 my $itemProperties = parsetxt("itemstatcost.txt", _index=>"1", %propertiesHash);
 &tblExpandArray($itemProperties, $_->{key}, $_->{expanded}) for (@$descArrayRef);
 
@@ -107,10 +109,11 @@ sub statIdsFromPropertyStat
     return join(',', @ids);
 }
 
-my $uniques = parsetxt("uniqueitems.txt", _autoindex=>"0", iName=>"0", rlvl=>7, image=>23);
+my $uniques = parsetxt("uniqueitems.txt", _autoindex=>0, iName=>0, rlvl=>7, image=>23);
 &tblExpandArray($uniques, "iName");
 
-my $sets = parsetxt("setitems.txt",_autoindex=>"0", iIName=>"0", iSName=>"1", '!_lodSet' => {col => 6, val => qr/^old LoD$/});
+my $sets = parsetxt("setitems.txt",_autoindex=>0, iIName=>0, iSName=>1, image=>11,
+                    '!_lodSet' => {col => 6, val => qr/^old LoD$/});
 &tblExpandArray($sets, "iIName", "IName");
 &tblExpandArray($sets, "iSName", "SName");
 
@@ -122,17 +125,24 @@ for my $setElement (@$sets)
     $mxlSets->[$setIndex]->{index} = $oldIndex;
     $mxlSets->[$setIndex]->{IName} = $setElement->{IName};
     $mxlSets->[$setIndex]->{SName} = $setElement->{SName};
+    $mxlSets->[$setIndex]->{image} = $setElement->{image};
     $setIndex++;
 }
 
 my $itemName = 'name';
-my $armorTypes = parsetxt("armor.txt", $itemName=>"0", "#code"=>"18", $nameStr=>19, w=>"29", h=>"30", type=>49, type2=>50, rlvl=>15, image => 35);
-my $weaponTypes = parsetxt("weapons.txt", $itemName=>"0", "#code"=>"3", $nameStr=>5, w=>"41", h=>"42", type=>1, type2=>2, stackable=>43, rlvl=>28, image => 48);
-my $miscTypes = parsetxt("misc.txt", $itemName=>"0", "#code"=>"18", $nameStr=>20, $spellDescStr=>68, w=>"22", h=>"23", type=>37, type2=>38, stackable=>48, rlvl=>8, image => 28);
+my $armorTypes = parsetxt("armor.txt", $itemName=>0, "#code"=>18, $nameStr=>19, w=>29, h=>30, type=>49,
+                          type2=>50, rlvl=>15, image=>35, rstr=>9, rdex=>10);
+my $weaponTypes = parsetxt("weapons.txt", $itemName=>0, "#code"=>3, $nameStr=>5, w=>41, h=>42, type=>1,
+                           type2=>2, stackable=>43, rlvl=>28, rstr=>23, rdex=>24, image=>48, quest=>65,
+                           '1hMinDmg'=>10, '1hMaxDmg'=>11, '2hMinDmg'=>14, '2hMaxDmg'=>15, throwMinDmg=>16, throwMaxDmg=>17,
+                           '1h2h'=>12, '2h'=>13);
+my $miscTypes = parsetxt("misc.txt", $itemName=>0, "#code"=>18, $nameStr=>20, $spellDescStr=>68,
+                         w=>22, h=>23, type=>37, type2=>38, stackable=>48, rlvl=>8, image=>28, quest=>52);
 &tblExpandHash($_, $itemName) for ($armorTypes, $weaponTypes, $miscTypes);
 
-my $skills = parsetxt("skills.txt", _index=>"1", "dbgname"=>"0", "internalName"=>"3", "class"=>"2", "srvmissile"=>"15", "srvmissilea"=>"18", "srvmissileb"=>"19", "srvmissilec"=>"20", "SrcDam"=>"220");
-my $skillsDsc = parsetxt("skilldesc.txt", "#code"=>"0", tab => 1, row => 2, col => 3, "dscname"=>"8");
+my $skills = parsetxt("skills.txt", _index=>"1", "dbgname"=>"0", "internalName"=>"3", "class"=>"2",
+                      "srvmissile"=>"15", "srvmissilea"=>"18", "srvmissileb"=>"19", "srvmissilec"=>"20", "SrcDam"=>"220");
+my $skillsDsc = parsetxt("skilldesc.txt", "#code"=>0, tab => 1, row => 2, col => 3, "dscname"=>8);
 
 my $processedSkills;
 my $index = -1;
@@ -156,23 +166,28 @@ my $monstats = parsetxt("monstats.txt", _autoindex=>"0", $nameStr=>5);
 &tblExpandArray($monstats, $nameStr);
 
 # RW
-my %rwKeysHash = ($itemName => undef, rune1 => 16, rune2 => 17); # this dummy key ($itemName) is used when writing to file
+# dummy key $itemName is used when writing to file
+my %rwKeysHash = ($itemName => undef, rune1 => 16, rune2 => 17);
 $rwKeysHash{"itype$_"} = $_ + 5 for (1..6);
-my $rw = parsetxt("runes.txt", "#_tbl" => 0, '!_enabled' => {col => 2, val => $zeroRe}, '!_rune' => {col => 16, val => qr/^jew$/}, %rwKeysHash);
+my $rw = parsetxt("runes.txt", "#_tbl" => 0, '!_enabled' => {col => 2, val => $zeroRe},
+                  '!_rune' => {col => 16, val => qr/^jew$/}, %rwKeysHash);
 $rw->{'09This'} = {itype1 => 'weap', itype2 => 'armo', rune1 => 'jew'}; # yeah, it's a hack (jewelword)
 &tblExpandHash($rw, $itemName);
 
 # skip lines that don't start with 'xsignet' at col 33 (AH in Excel) and are not for honorific/crafted recipe
 # 'value' field will contain either property value (including oskill level) or chance in ctc
 my $moStat = "xsignet";
-my $cubemain = parsetxt("cubemain.txt", '#_code' => 11, '!_enabled' => {col => 1, val => $zeroRe}, '!_mo' => {col => 33, val => qr/^(?!$moStat)/}, '!_honorific' => {col => 0, val => qr/^honorific/}, prop => 21, value => 25, moStat => 33);
+my $cubemain = parsetxt("cubemain.txt", '#_code' => 11, '!_enabled' => {col => 1, val => $zeroRe},
+                        '!_mo' => {col => 33, val => qr/^(?!$moStat)/},
+                        '!_honorific' => {col => 0, val => qr/^honorific/}, prop => 21, value => 25, moStat => 33);
 
 # MO names and properties
 my $mos; # hashref with keys from ID column of itemstatcost
 for my $miscItem (keys %$miscTypes)
 {
     my $hashRef = $miscTypes->{$miscItem};
-    # no UMO support because there's no simple way to determine if it has been cubed with item (it doesn't have 'x_signet*' stat)
+    # no UMO support because there's no simple way to determine if it has been cubed with item
+    # (it doesn't have 'x_signet*' stat)
     next unless defined $hashRef->{type} and $hashRef->{type} eq 'asaa';
 
     my $cubeMo = $cubemain->{$miscItem};
@@ -224,7 +239,7 @@ if ($locale ne 'en')
 my $prefix = "generated/$locale";
 make_path $prefix;
 
-my $itemTypes = parsetxt("itemtypes.txt", "#code"=>"0", "code0"=>4, "equiv1"=>"5", equiv2 => 6, bodyLoc => 9, "class"=>30);
+my $itemTypes = parsetxt("itemtypes.txt", "#code"=>0, "code0"=>4, "equiv1"=>5, equiv2=>6, bodyLoc=>9, "class"=>30);
 open my $out, ">", "generated/itemtypes.txt";
 print $out "#code\tequiv\n";
 for my $name (keys %$itemTypes)
@@ -238,7 +253,9 @@ for my $name (keys %$itemTypes)
 close $out;
 
 open $out, ">", "$prefix/items.txt";
-print $out "#code\tname\t$spellDescStr\twidth\theight\tgentype\tstackable\trlvl\timage\ttype\tsockettype\tclass\n";
+print $out "#code\tname\t$spellDescStr\twidth\theight\tgentype\tstackable\trlvl\trstr\trdex\t1h2h\t2h\t";
+print $out "1hMinDmg\t1hMaxDmg\t2hMinDmg\t2hMaxDmg\tthrowMinDmg\tthrowMaxDmg\timage\tquest\t";
+print $out "type\tsockettype\tclass\n"; # these columns are treated specially
 my $itemType = 0;
 for my $ref ($armorTypes, $weaponTypes, $miscTypes)
 {
@@ -248,7 +265,16 @@ for my $ref ($armorTypes, $weaponTypes, $miscTypes)
         next unless defined $hashRef->{w};
 
         my $type = $hashRef->{type};
-        printf $out "%s\t%s\t%s\t%d\t%d\t%s\t%d\t%d\t%s\t%s", $itemCode, $hashRef->{$itemName}, ($hashRef->{$spellDescStr} // ''), $hashRef->{w}, $hashRef->{h}, $itemType, ($hashRef->{stackable} // 0), ($hashRef->{rlvl} // 0), $hashRef->{image}, $type;
+        printf $out "%s\t%s\t%s\t%d\t%d\t%s\t%s\t%d\t%d\t%d\t%s\t%s\t", $itemCode, $hashRef->{$itemName},
+            ($hashRef->{$spellDescStr} // ''), $hashRef->{w}, $hashRef->{h}, $itemType,
+            (defined $hashRef->{stackable} and $hashRef->{stackable} > 0 ? $hashRef->{stackable} : ''),
+            ($hashRef->{rlvl} // 0), ($hashRef->{rstr} // 0), ($hashRef->{rdex} // 0),
+            ($hashRef->{'1h2h'} // ''), ($hashRef->{'2h'} // '');
+        printf $out "%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t", ($hashRef->{'1hMinDmg'} // ''), ($hashRef->{'1hMaxDmg'} // ''),
+            ($hashRef->{'2hMinDmg'} // ''), ($hashRef->{'2hMaxDmg'} // ''), ($hashRef->{throwMinDmg} // ''),
+            ($hashRef->{throwMaxDmg} // ''), $hashRef->{image}, ($hashRef->{quest} // '');
+
+        print $out $type;
         print $out ",", $hashRef->{type2} if defined $hashRef->{type2};
         print $out "\t";
 
@@ -273,14 +299,15 @@ print $out "#index\titem\trlvl\timage\n";
 my $count = -1;
 for my $hashRef (@$uniques)
 {
-    printf $out "%d\t%s\t%d\t%s\n", $count, $hashRef->{$realNameField}, $hashRef->{rlvl}, ($hashRef->{image} // '') if defined $hashRef->{$realNameField};
+    printf $out "%d\t%s\t%d\t%s\n", $count, $hashRef->{$realNameField}, $hashRef->{rlvl},
+        ($hashRef->{image} // '') if defined $hashRef->{$realNameField};
     $count++;
 }
 close $out;
 
 open $out, ">", "$prefix/sets.txt";
-print $out "#index\titem\tset\n";
-print $out "$_->{index}\t$_->{IName}\t$_->{SName}\n" for (@$mxlSets);
+print $out "#index\titem\tset\timage\n";
+print $out "$_->{index}\t$_->{IName}\t$_->{SName}\t".($_->{image} // '')."\n" for (@$mxlSets);
 close $out;
 
 $count = -1;
@@ -489,7 +516,8 @@ sub parsetxt
                 }
                 elsif ($key =~ /^\!/)
                 {
-                    $ok = 0 if ((!defined($cols[$structure{$key}])) or (length($cols[$structure{$key}]) == 0));
+                    my $s = $cols[$structure{$key}];
+                    $ok = 0 if (!defined $s) or (length $s == 0);
                     _log ("BAD - !$key");
                 }
             }
@@ -538,25 +566,26 @@ sub parsetxt
                         {
                             $fieldName = $1;
                         }
-                        _log("-> $fieldName<$structure{$key}>: '$cols[$structure{$key}]'\n");
-                        if (defined ($cols[$structure{$key}]) and (length($cols[$structure{$key}])>0))
+                        my $s = $cols[$structure{$key}];
+                        _log("-> $fieldName<$structure{$key}>: '$s'\n");
+                        if (defined $s and length $s > 0)
                         {
                             if (defined $indexValue)
                             {
-                                $parsed->[$indexValue]->{$fieldName} = $cols[$structure{$key}];
-                                _log("\tat $indexValue:1: $fieldName = $cols[$structure{$key}]\n");
+                                $parsed->[$indexValue]->{$fieldName} = $s;
+                                _log("\tat $indexValue:1: $fieldName = $s\n");
                             }
                             else
                             {
                                 if (defined $subHash)
                                 {
-                                    $parsed->{$subHash}->{$fieldName} = $cols[$structure{$key}] if ($addOnce == 0 or ($addOnce > 0 and !defined $parsed->{$subHash}->{$fieldName}));
-                                    _log("\tat $subHash:2: $fieldName = $cols[$structure{$key}]\n");
+                                    $parsed->{$subHash}->{$fieldName} = $s if ($addOnce == 0 or ($addOnce > 0 and !defined $parsed->{$subHash}->{$fieldName}));
+                                    _log("\tat $subHash:2: $fieldName = $s\n");
                                 }
                                 else
                                 {
-                                    $parsed->{$fieldName} = $cols[$structure{$key}];
-                                    _log("\tat $fieldName:3: $cols[$structure{$key}]\n");
+                                    $parsed->{$fieldName} = $s;
+                                    _log("\tat $fieldName:3: $s\n");
                                 }
                             }
                         }

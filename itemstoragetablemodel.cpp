@@ -61,28 +61,31 @@ QVariant ItemStorageTableModel::data(const QModelIndex &index, int role) const
         if (item)
         {
             QString imageName = item->itemType == "jew" ? "invjw" : ItemDataBase::Items()->value(item->itemType)->imageName; // quick hack for jewel
-            bool isUniqueImage = false;
-            if (item->quality == Enums::ItemQuality::Unique)
+            bool isSetOrUniqueImage = false;
+            if (item->quality == Enums::ItemQuality::Unique || item->quality == Enums::ItemQuality::Set)
             {
-                UniqueItemInfo *uniqueInfo = ItemDataBase::Uniques()->value(item->setOrUniqueId);
-                if (uniqueInfo && !uniqueInfo->imageName.isEmpty())
+                SetOrUniqueItemInfo *setOrUniqueInfo = item->quality == Enums::ItemQuality::Set ? static_cast<SetOrUniqueItemInfo *>(ItemDataBase::Sets()->value(item->setOrUniqueId))
+                                                                                                : static_cast<SetOrUniqueItemInfo *>(ItemDataBase::Uniques()->value(item->setOrUniqueId));
+                if (setOrUniqueInfo && !setOrUniqueInfo->imageName.isEmpty())
                 {
-                    imageName = uniqueInfo->imageName;
-                    isUniqueImage = true;
+                    imageName = setOrUniqueInfo->imageName;
+                    isSetOrUniqueImage = true;
                 }
             }
-            if (!isUniqueImage && item->variableGraphicIndex && QRegExp("\\d$").indexIn(imageName) == -1)
-                imageName += QString::number(item->variableGraphicIndex);
+            if (!isSetOrUniqueImage && item->variableGraphicIndex && QRegExp("\\d$").indexIn(imageName) == -1)
+                imageName += QString::number(item->variableGraphicIndex/* > 6 ? 6 : item->variableGraphicIndex*/);
+
             QString imagePath = ResourcePathManager::pathForImageName(imageName);
+            bool doesImageExist = QFile::exists(imagePath);
 
             switch(role)
             {
             case Qt::DisplayRole:
-                if (!QFile::exists(imagePath))
+                if (!doesImageExist)
                     return imageName + ".dc6";
                 break;
             case Qt::DecorationRole:
-                if (QFile::exists(imagePath))
+                if (doesImageExist)
                 {
                     QPixmap pixmap(imagePath);
                     if (item->isEthereal)
@@ -101,7 +104,12 @@ QVariant ItemStorageTableModel::data(const QModelIndex &index, int role) const
                 }
                 break;
             case Qt::ToolTipRole:
-                return ItemDataBase::completeItemName(item, false);
+            {
+                QString tooltip = ItemDataBase::completeItemName(item, false);
+                if (!doesImageExist)
+                    tooltip += QString("%1%2.dc6").arg(kHtmlLineBreak, imageName);
+                return tooltip;
+            }
             case Qt::ForegroundRole:
                 return QColor(Qt::white);
             }

@@ -109,6 +109,24 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
             }
             item->storage = bitReader.readNumber(3);
 
+            if (item->isEar)
+            {
+                item->earInfo.classCode = bitReader.readNumber(3);
+                item->earInfo.level = bitReader.readNumber(7);
+                for (int i = 0; i < 18; ++i)
+                {
+                    if (quint8 c = static_cast<quint8>(bitReader.readNumber(7)))
+                        item->earInfo.name += c;
+                    else
+                        break;
+                }
+                item->earInfo.name = item->earInfo.name.trimmed();
+
+                item->itemType = "ear";
+                status = ItemInfo::Ok;
+                break;
+            }
+
             for (int i = 0; i < 4; ++i)
                 item->itemType += static_cast<quint8>(bitReader.readNumber(8));
             item->itemType = item->itemType.trimmed();

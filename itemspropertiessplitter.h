@@ -66,7 +66,7 @@ protected slots:
     void eatSelectedSignet();
     void deleteItemTriggered();
 #ifdef DUMP_INFO_ACTION
-    void dumpInfo();
+    void dumpInfo(ItemInfo *item = 0);
 #endif // DUMP_INFO_ACTION
 
 

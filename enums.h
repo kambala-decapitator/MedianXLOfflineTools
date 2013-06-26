@@ -233,6 +233,7 @@ public:
         Indestructible = 152,
         DefenceBasedOnClvl = 214,
         EnhancedDefenceBasedOnClvl,
+        MaximumDamageBasedOnClvl = 218,
         TrophyOrBless = 219,
         ItemDuped = 276,
         MysticOrbsEffectDoubled = 296,

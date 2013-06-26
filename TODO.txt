@@ -1,11 +1,10 @@
 v0.4:
 - sort plugy stashes
 - place items tightly
-- inserting blank page
+- inserting blank page(s)
 - sort items in find results by plugy page
 - update find results after sorting
 - cyclic arrow navigation between items
-- send OS info to server
 - ctc Miasma MO removal (doesn't appear)
 - batch eat signets (add a button)
 - +%d magic damage
@@ -25,32 +24,8 @@ future versions:
 - unsocket items
 - calculate correct str/dex bonus based on character stats
 - display actual stat values
+- item requirements (compare with actual stat values)
 - display skill tree and skills allocation
-- item requirements
 - moving/swaping pages
 - fix multiple colors in one line, e.g. Statue of Ultimative v6b
-
-1.
-# escape command to allow multiple lines in Makefile
-defineReplace(mle) {
-    return ( $$1$$escape_expand(\\n\\t) )
-}
-
-QMAKE_POST_LINK += $$mle(echo 1 > $${OUT_PWD}/$(DESTDIR_TARGET)/../file1.txt) # Makefile-only!
-QMAKE_POST_LINK += $$mle(echo 2 > $${OUT_PWD}/$(DESTDIR_TARGET)/../file2.txt)
-QMAKE_POST_LINK += $$mle(echo 3 > $${OUT_PWD}/$(DESTDIR_TARGET)/../file3.txt)
-
-2.
-# copy Qt DLLs
-win32 {
-    defineReplace(mle) {
-        return ( $$1$$escape_expand(\\n\\t) )
-    }
-
-    T="$${OUT_PWD}/$(DESTDIR_TARGET)/../"
-
-    for(ql, QT) {
-        qln="qt$${ql}$${QT_MAJOR_VERSION}.dll"
-        QMAKE_POST_LINK += $$mle(if not exist \"$$T\\$$qln\" copy /y \"$$[QT_INSTALL_BINS]\\$$qln\" \"$$T\")
-    }
-}
+- figure out how to merge item descriptions from propertiesdisplaymanager and propertiesviewerwidget

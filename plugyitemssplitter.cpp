@@ -375,7 +375,7 @@ void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
     foreach (ItemInfo *item, selectedItems)
     {
         int key;
-        if (item->isQuest)
+        if (item->isQuest || ItemDataBase::Items()->value(item->itemType)->questId > 0)
             key = Quest;
         else if (item->isRW)
             key = RW;

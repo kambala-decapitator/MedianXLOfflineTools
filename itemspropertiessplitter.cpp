@@ -356,9 +356,10 @@ void ItemsPropertiesSplitter::deleteItemTriggered()
 }
 
 #ifdef DUMP_INFO_ACTION
-void ItemsPropertiesSplitter::dumpInfo()
+void ItemsPropertiesSplitter::dumpInfo(ItemInfo *item /*= 0*/)
 {
-    ItemInfo *item = selectedItem(false);
+    if (!item)
+        item = selectedItem(false);
     ItemBase *base = ItemDataBase::Items()->value(item->itemType);
     const char *quality = metaEnumFromName<Enums::ItemQuality>("ItemQualityEnum").valueToKey(item->quality);
     bool isSetOrUnique = areBothItemsSetOrUnique(item, item); // hacky code :)
