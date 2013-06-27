@@ -166,8 +166,10 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
         // TODO: use lambda to calculate damage
         int ed = allProps.value(Enums::ItemProperties::EnhancedDamage, foo)->value, minDmgProp = allProps.value(Enums::ItemProperties::MinimumDamage, foo)->value;
         int maxDmgTotal = allProps.value(Enums::ItemProperties::MaximumDamage, foo)->value + (allProps.value(Enums::ItemProperties::MaximumDamageBasedOnClvl, foo)->value * clvl) / 32;
+        ColorsManager::ColorIndex damageColor = ed + minDmgProp + maxDmgTotal > 0 ? ColorsManager::Blue : ColorsManager::White; // blue if any property exists
         QString damageFormat = tr("%1 to %2", "min-max damage");
 
+        // if min == max, then increment max by 1
         if (itemBase->minThrowDmg && itemBase->maxThrowDmg)
         {
             int minDmg = itemBase->minThrowDmg, maxDmg = itemBase->maxThrowDmg;
@@ -179,7 +181,7 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
             minDmg += minDmgProp;
             maxDmg += maxDmgTotal;
 
-            itemDescription += tr("Throw Damage") + ": " + htmlStringFromDiabloColorString(damageFormat.arg(minDmg).arg(maxDmg), ColorsManager::Blue) + kHtmlLineBreak;
+            itemDescription += tr("Throw Damage") + ": " + htmlStringFromDiabloColorString(damageFormat.arg(minDmg).arg(maxDmg + (minDmg == maxDmg)), damageColor) + kHtmlLineBreak;
         }
 
         if (itemBase->min1hDmg && itemBase->max1hDmg)
@@ -193,7 +195,7 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
             minDmg += minDmgProp;
             maxDmg += maxDmgTotal;
 
-            itemDescription += tr("One-Hand Damage") + ": " + htmlStringFromDiabloColorString(damageFormat.arg(minDmg).arg(maxDmg), ColorsManager::Blue) + kHtmlLineBreak;
+            itemDescription += tr("One-Hand Damage") + ": " + htmlStringFromDiabloColorString(damageFormat.arg(minDmg).arg(maxDmg + (minDmg == maxDmg)), damageColor) + kHtmlLineBreak;
         }
 
         if (itemBase->min2hDmg && itemBase->max2hDmg)
@@ -207,7 +209,7 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
             minDmg += minDmgProp;
             maxDmg += maxDmgTotal;
 
-            itemDescription += tr("Two-Hand Damage") + ": " + htmlStringFromDiabloColorString(damageFormat.arg(minDmg).arg(maxDmg), ColorsManager::Blue) + kHtmlLineBreak;
+            itemDescription += tr("Two-Hand Damage") + ": " + htmlStringFromDiabloColorString(damageFormat.arg(minDmg).arg(maxDmg + (minDmg == maxDmg)), damageColor) + kHtmlLineBreak;
         }
     }
     if (itemBase->genericType != Enums::ItemTypeGeneric::Misc && item->maxDurability)
