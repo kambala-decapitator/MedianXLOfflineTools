@@ -1583,7 +1583,7 @@ bpl	NO NAME		1	1	2	1	0	0	0									invbpl		mpot		-1
 b@b	\red;Goodberry	A magical fruit of the Glor-An-Fhaidha...	1	1	2		0	0	0									cherries		hpot		-1
 J8+	\orange;Sacred Shrine (1 Charges)		1	2	2		0	0	0									@Sacred		thng		-1
 9$a	\purple;Chipped Bloodstone		1	1	2		1	0	0									invgsca		gemp,gem0		-1
-C2+	\orange;uiet Shrine (8 Charges)		1	2	2		0	0	0									@Quiet		thng		-1
+C2+	\orange;Quiet Shrine (8 Charges)		1	2	2		0	0	0									@Quiet		thng		-1
 &34	\orange;Mystic Orb	\blue;+2 Required Level\n1% Chance to cast level 3 Celerity on Attack\n\white;Cube with Any Weapon to Add Bonus	1	1	2		0	0	0									orb_weap		asaa		-1
 cm3	WARNING: HACKED ITEM\nGrand Charm		0	0	2		0	0	0									invsst		hpot		-1
 27+	\orange;Mystic Orb	\blue;+2 Required Level\nTotal Character Defense Plus 2%\n\white;Cube with Any Armor to Add Bonus	1	1	2		0	0	0									orb_armo		asaa		-1
@@ -1741,7 +1741,7 @@ obd	Amulet		1	1	2		0	0	0									invamu		amul		-1
 &90	\orange;Mystic Orb\nCrystal of Tears	\blue;+10 Required Level\n-20 to Life\nAdds 5-15 Damage\n\white;Cube with Any Armor to Add Bonus	1	1	2		0	0	0									orb_armo		asaa,asa#		-1
 B7+	\orange;Abandoned Shrine (3 Charges)		1	2	2		0	0	0									@Abandoned		thng		-1
 9tw	Amulet		1	1	2		0	0	0									invamu		amul		-1
-C5+	\orange;fQuiet Shrine (5 Charges)		1	2	2		0	0	0									@Quiet		thng		-1
+C5+	\orange;Quiet Shrine (5 Charges)		1	2	2		0	0	0									@Quiet		thng		-1
 ob1	Amulet		1	1	2		0	0	0									invamu		amul		-1
 N0+	\orange;Magical Shrine (10 Charges)		1	2	2		0	0	0									@Magical		thng		-1
 r59	\grey;Secret Rune\n\purple;Magic Rune		1	1	2		100	0	0									magic-rune		rune		-1
@@ -1784,7 +1784,7 @@ dr1	Amulet		1	1	2		0	0	0									invamu		amul		-1
 M4+	\orange;Spiritual Shrine (6 Charges)		1	2	2		0	0	0									@Spiritual		thng		-1
 hrb	Herb		1	1	2		0	0	0									invhrb		herb		-1
 skf	\purple;Flawed Skull		1	1	2		5	0	0									invskf		gemz,gem1		-1
-D4+	\orange;erie Shrine (6 Charges)		1	2	2		0	0	0									@Eerie		thng		-1
+D4+	\orange;Eerie Shrine (6 Charges)		1	2	2		0	0	0									@Eerie		thng		-1
 |\#	Brachyceran's Token		1	1	2		0	0	0									maggotlairfag		grtz		-1
 I5+	\orange;Ornate Shrine (5 Charges)		1	2	2		0	0	0									@Ornate		thng		-1
 C0+	\orange;Quiet Shrine (10 Charges)		1	2	2		0	0	0									@Quiet		thng		-1
@@ -1963,7 +1963,7 @@ O4+	\orange;Enchanted Shrine (6 Charges)		1	2	2		0	0	0									jbscross		thng		-
 gfv	\purple;Flawed Amethyst		1	1	2		5	0	0									invgsvb		gema,gem1		-1
 cqv	Bolt Quiver		1	3	2	1	0	0	0									invcqv		xboq	2	-1
 &54	\orange;Mystic Orb	\blue;+2 Required Level\n1% Reanimate As: Fallen One\n\white;Cube with Any Armor to Add Bonus	1	1	2		0	0	0									orb_armo		asaa		-1
-Q7+	\orange;tHidden Shrine (3 Charges)		1	2	2		0	0	0									@Hidden		thng		-1
+Q7+	\orange;Hidden Shrine (3 Charges)		1	2	2		0	0	0									@Hidden		thng		-1
 glr	\purple;Flawless Ruby		1	1	2		15	0	0									invgsrd		gemr,gem3		-1
 D0+	\orange;Eerie Shrine (10 Charges)		1	2	2		0	0	0									@Eerie		thng		-1
 &a2	\orange;Mystic Orb	\blue;+2 Required Level\nPoison Length Reduced by 2%\n\white;Cube with Ring/Amulet to Add Bonus	1	1	2		0	0	0									orb_misc		asaa		-1

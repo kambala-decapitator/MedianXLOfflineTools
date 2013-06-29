@@ -32,6 +32,7 @@
 
 
 static const QString kIconPathFormat(":/PlugyArrows/icons/plugy/%1.png");
+static const QByteArray kThngBaseType("thng");
 
 enum SortItemQuality
 {
@@ -115,6 +116,11 @@ PlugyItemsSplitter::PlugyItemsSplitter(ItemStorageTableView *itemsView, QWidget 
     connect(_right10Button, SIGNAL(clicked()), SLOT(right10Clicked()));
 
     connect(this, SIGNAL(stashSorted()), SIGNAL(itemsChanged()));
+}
+
+quint32 PlugyItemsSplitter::currentPage() const
+{
+    return static_cast<quint32>(_pageSpinBox->value());
 }
 
 void PlugyItemsSplitter::keyPressEvent(QKeyEvent *keyEvent)
@@ -342,17 +348,37 @@ void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
         return;
     }
 
-    QList<QByteArray> miscBaseTypesOrder;
+    QList<QByteArray> miscBaseTypesOrder, thngTypesOrder;
+    bool isThngType = false;
     while (!f.atEnd())
     {
-        QByteArray line = f.readLine().trimmed();
+        QByteArray line = f.readLine();
+        bool isLineIndented = line.startsWith('\t');
+        line = line.trimmed();
         if (line.isEmpty() || line.startsWith('#'))
             continue;
 
-        int end = line.indexOf('#');
-        if (line.at(end - 1) == '\\')
+        int end = -1;
+        do 
+        {
             end = line.indexOf('#', end + 1);
-        miscBaseTypesOrder << line.left(end).trimmed().replace("\\#", "#");
+        } while (end != -1 && line.at(end - 1) == '\\');
+
+        QByteArray baseType = line.left(end).trimmed().replace("\\#", "#");
+        if (isThngType)
+        {
+            if (isLineIndented)
+            {
+                thngTypesOrder << baseType;
+                continue;
+            }
+            else
+                isThngType = false;
+        }
+
+        if (baseType == kThngBaseType)
+            isThngType = true;
+        miscBaseTypesOrder << baseType;
     }
     f.close();
 
@@ -385,8 +411,6 @@ void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
         itemsByQuality[key] << item;
     }
 
-    const QHash<QByteArray, ItemBase *> *const kItemsBaseInfo = ItemDataBase::Items();
-    const QHash<QByteArray, QList<QByteArray> > *const kItemTypesInfo = ItemDataBase::ItemTypes();
     bool noNewPageInsideGemsAndRunes = true, startEachGemAndRuneFromNewRow = true, noNewPageInsideClassCharms = true, startEachClassCharmFromNewRow = true;
 
     quint32 page = sortOptions.firstPage;
@@ -410,8 +434,7 @@ void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
                     setItems << setItemsById.value(setId);
                 if (!setItems.isEmpty())
                 {
-                    int row = 0, col = 0;
-                    storeItemsOnPage(setItems, page, row, col, false);
+                    storeItemsOnPage(setItems, false, page);
                     ++page; // start each set from new page
 
                     foreach (ItemInfo *item, setItems)
@@ -422,31 +445,11 @@ void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
         else
         {
             // sort items by base types using the text file (swords, axes, etc.)
-            QHash<QByteArray, ItemsList> itemsByBaseType;
-            foreach (ItemInfo *item, iter.value())
-                itemsByBaseType[kItemsBaseInfo->value(item->itemType)->types.first()] << item;
-
             int baseTypesProcessed = 0;
+            QHash<QByteArray, ItemsList> itemsByBaseType = itemsSortedByBaseType(iter.value());
             foreach (const QByteArray &itemBaseType, gearBaseTypesOrder)
             {
-                ItemsList itemBaseTypeItems;
-                if (itemBaseType.contains('.'))
-                {
-                    QRegExp re(itemBaseType);
-                    QHash<QByteArray, ItemsList>::iterator jter = itemsByBaseType.begin(), endJter = itemsByBaseType.end();
-                    while (jter != endJter)
-                    {
-                        if (re.indexIn(jter.key()) != -1)
-                        {
-                            itemBaseTypeItems << jter.value();
-                            jter = itemsByBaseType.erase(jter);
-                        }
-                        else
-                            ++jter;
-                    }
-                }
-                else
-                    itemBaseTypeItems = itemsByBaseType.take(itemBaseType);
+                ItemsList itemBaseTypeItems = itemsByBaseType.take(itemBaseType);
                 // add sacred items or charms
                 QHash<QByteArray, ItemsList>::iterator jter = itemsByBaseType.begin(), endJter = itemsByBaseType.end();
                 while (jter != endJter)
@@ -467,7 +470,7 @@ void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
                         else if (item->itemType == kSacredSpikedShieldCode || item->itemType == kSacredBoneShieldCode) // spiked/bone shield
                             itemShouldBeAdded = itemBaseType == kSpecialShieldType;
                         else // default filter
-                            itemShouldBeAdded = kItemTypesInfo->value(jter.key()).contains(itemBaseType);
+                            itemShouldBeAdded = ItemDataBase::ItemTypes()->value(jter.key()).contains(itemBaseType);
 
                         if (itemShouldBeAdded)
                         {
@@ -489,10 +492,7 @@ void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
                     if (isRune || isClassCharm_)
                     {
                         // runes and class charms are simply sorted by item code
-                        QMap<QString, ItemsList> runesByType;
-                        foreach (ItemInfo *item, itemBaseTypeItems)
-                            runesByType[item->itemType] << item;
-                        sortedItemsByType = runesByType;
+                        sortedItemsByType = itemsSortedByType<QString>(itemBaseTypeItems);
                     }
                     else
                     {
@@ -500,8 +500,10 @@ void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
                         QMap<QString, ItemsList> itemsByType; // using QMap instead of QHash to have determined order
                         foreach (ItemInfo *item, itemBaseTypeItems)
                         {
-                            QString itemName = kItemsBaseInfo->value(item->itemType)->name;
-                            itemsByType[itemName.left(itemName.indexOf('(')).trimmed()] << item;
+                            QString itemName = ItemDataBase::Items()->value(item->itemType)->name;
+                            itemsByType[itemName.left(itemName.lastIndexOf('(')).trimmed()] << item;
+
+                            selectedItems.removeOne(item);
                         }
                         // sort each group of items by tiers
                         for (QMap<QString, ItemsList>::iterator jter = itemsByType.begin(), endJter = itemsByType.end(); jter != endJter; ++jter)
@@ -517,7 +519,7 @@ void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
                     int row = 0, col = 0;
                     foreach (const ItemsList &items, sortedItemsByType)
                     {
-                        storeItemsOnPage(items, page, row, col, sortQuality == Quest ? false : (isGemOrRune ? startEachGemAndRuneFromNewRow : true));
+                        storeItemsOnPage(items, sortQuality == Quest ? false : (isGemOrRune ? startEachGemAndRuneFromNewRow : true), page, &row, &col);
 
                         col = 0;
                         if (startEachGemAndRuneFromNewRow && ((noNewPageInsideGemsAndRunes && isGemOrRune) || (noNewPageInsideClassCharms && isClassCharm_)))
@@ -527,9 +529,6 @@ void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
                             ++page; // start new sub-type from new page
                             row = 0;
                         }
-
-                        foreach (ItemInfo *item, items)
-                            selectedItems.removeOne(item);
                     }
                     if ((noNewPageInsideGemsAndRunes && isGemOrRune) || (noNewPageInsideClassCharms && isClassCharm_))
                         ++page;
@@ -548,6 +547,40 @@ void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
     }
 
     // sort misc items
+    QHash<QByteArray, ItemsList> itemsByBaseType = itemsSortedByBaseType(selectedItems);
+    foreach (const QByteArray &itemBaseType, miscBaseTypesOrder)
+    {
+        if (itemBaseType != kThngBaseType)
+        {
+            ItemsList itemBaseTypeItems;
+            if (itemBaseType.contains('.'))
+            {
+                QRegExp re(itemBaseType);
+                QHash<QByteArray, ItemsList>::iterator jter = itemsByBaseType.begin(), endJter = itemsByBaseType.end();
+                while (jter != endJter)
+                {
+                    if (re.indexIn(jter.key()) != -1)
+                    {
+                        itemBaseTypeItems << jter.value();
+                        jter = itemsByBaseType.erase(jter);
+                    }
+                    else
+                        ++jter;
+                }
+            }
+            else
+                itemBaseTypeItems = itemsByBaseType.take(itemBaseType);
+        }
+        else
+        {
+
+        }
+    }
+
+    // place everything else
+    int row = 0, col = 0;
+    foreach (const ItemsList &items, itemsSortedByType<QByteArray>(selectedItems))
+        storeItemsOnPage(items, false, page, &row, &col);
 
     // shift all unprocessed items from last pages
     if (page > sortOptions.lastPage && !tailItems.isEmpty())
@@ -567,7 +600,10 @@ void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
 void PlugyItemsSplitter::insertBlankPages(int pages)
 {
     foreach (ItemInfo *item, ItemDataBase::extractItemsFromPageRange(_allItems, currentPage() + 1, _lastNotEmptyPage))
+    {
         item->plugyPage += pages;
+        item->hasChanged = true;
+    }
 
     updateSpinbox();
     emit itemsChanged();
@@ -671,11 +707,13 @@ void PlugyItemsSplitter::showErrorLoadingSortingOrderFile(const QFile &f)
     ERROR_BOX(tr("Sorting order not loaded from %1").arg(QDir::toNativeSeparators(f.fileName())) + "\n" + tr("Reason: %1", "error with file").arg(f.errorString()));
 }
 
-void PlugyItemsSplitter::storeItemsOnPage(const ItemsList &items, quint32 &page, int &row, int &col, bool shouldStartAnotherTypeFromNewRow)
+void PlugyItemsSplitter::storeItemsOnPage(const ItemsList &items, bool shouldStartAnotherTypeFromNewRow, quint32 &page, int *pRow /*= 0*/, int *pCol /*= 0*/)
 {
     static const int rows = _itemsModel->rowCount(), columns = _itemsModel->columnCount();
 
     ItemInfo *previousItem = 0;
+    int rowFoo = 0, colBar = 0;
+    int &row = pRow ? *pRow : rowFoo, &col = pCol ? *pCol : colBar;
     foreach (ItemInfo *item, items)
     {
         ItemBase *baseInfo = ItemDataBase::Items()->value(item->itemType);
@@ -712,7 +750,20 @@ void PlugyItemsSplitter::storeItemsOnPage(const ItemsList &items, quint32 &page,
     }
 }
 
-quint32 PlugyItemsSplitter::currentPage() const
+
+QHash<QByteArray, ItemsList> PlugyItemsSplitter::itemsSortedByBaseType(const ItemsList &items)
 {
-    return static_cast<quint32>(_pageSpinBox->value());
+    QHash<QByteArray, ItemsList> itemsByBaseType;
+    foreach (ItemInfo *item, items)
+        itemsByBaseType[ItemDataBase::Items()->value(item->itemType)->types.first()] << item;
+    return itemsByBaseType;
+}
+
+template<typename K>
+QMap<K, ItemsList> PlugyItemsSplitter::itemsSortedByType(const ItemsList &items)
+{
+    QMap<K, ItemsList> itemsByType;
+    foreach (ItemInfo *item, items)
+        itemsByType[item->itemType] << item;
+    return itemsByType;
 }

@@ -1,0 +1,350 @@
+code	name
+!@1	\dgreen;Evil Eye of the Clawstorm
+!@2	\dgreen;Evil Eye of the Landmass
+!@3	\dgreen;Evil Eye of the Glowing Blob
+!@4	\dgreen;Evil Eye of the Fairy Witch
+!@5	\dgreen;Evil Eye of the Bane Hunter
+!@6	\dgreen;Dogma of Suffering
+!@7	\dgreen;Dogma of Pain
+!@8	\dgreen;Dogma of Hatred
+!@9	\dgreen;Dogma of Terror
+!@A	\dgreen;Dogma of Destruction
+!@c	\red;Pearl of Wisdom
+##/	\orange;Uldyssian's Trophy
+#2^	\orange;Diablo's Toy Box
+#3^	\grey;Cube Reagent\n\orange;Arcane Shards #2
+#4^	\grey;Cube Reagent\n\orange;Arcane Shards #3
+#5^	\grey;Cube Reagent\n\orange;Arcane Shards #4
+#X1	\red;Token of Suffering
+#X2	\red;Token of Pain
+#X3	\red;Token of Hatred
+#X4	\red;Token of Terror
+#X5	\red;Token of Destruction
+#X6	\red;Token of Lies
+#X8	\red;Instructions\nLevel Challenge 0
+#X9	\orange;Gift Box
+@##	\gold;Deity's Bow
+\\1	\purple;Great Rainbow Stone
+\\2	\purple;Great Skull
+\\3	\purple;Great Topaz
+\\4	\purple;Great Saphire
+\\5	\purple;Great Ruby
+`^#	\gold;Mystic Shard
+||#	\gold;Book of Ultimative
+||*	\orange;Book
+||.	\grey;Cube Reagent\n\orange;Blessed Crystal
+||_	\grey;Cube Reagent\n\orange;Cursed Crystal
+||`	\orange;Broken Crystal
+||l	\grey;Cube Reagent\n\orange;Book of the Wise
+µ01	\orange;Lord Aldric Jitan Trophy
+µ02	\orange;Legacy of Blood Trophy
+µ03	\orange;Judgement Day Trophy
+µ04	\orange;Akarat Trophy
+µ05	\orange;Kingdom of Shadow Trophy
+µ06	\orange;Duncraig Trophy
+µ07	\orange;Rathma Square Trophy
+µ08	\orange;Cathedral of Vanity Trophy
+µ09	\orange;Tran Athulua Trophy
+µ10	\orange;Quov Tsin Trophy
+µ11	\orange;Astrogha Trophy
+µ12	\orange;Azmodan Trophy
+µ13	\orange;MCS Trophy
+µ14	\orange;Brother Laz Trophy
+µ98	NO NAME
+µ99	NO NAME
+01-	\red;Pearl of Wisdom
+02-	\red;Pearl of Wisdom
+03-	\red;Pearl of Wisdom
+04-	\red;Pearl of Wisdom
+05-	\red;Pearl of Wisdom
+06-	\red;Pearl of Wisdom
+07-	\red;Pearl of Wisdom
+08-	\red;Pearl of Wisdom
+09-	\red;Pearl of Wisdom
+0oµ	Cube Reagent\n\orange;Catalyst of Learning
+10-	\red;Pearl of Wisdom
+11-	\red;Pearl of Wisdom
+12-	\red;Pearl of Wisdom
+13-	\red;Pearl of Wisdom
+14-	\red;Pearl of Wisdom
+15-	\red;Pearl of Wisdom
+16-	\red;Pearl of Wisdom
+17-	\red;Pearl of Wisdom
+18-	\red;Pearl of Wisdom
+19-	\red;Pearl of Wisdom
+1oµ	Cube Reagent\n\orange;Oil of Duplication
+20-	\red;Pearl of Wisdom
+21-	\red;Pearl of Wisdom
+22-	\red;Pearl of Wisdom
+23-	\red;Pearl of Wisdom
+24-	\red;Pearl of Wisdom
+25-	\red;Pearl of Wisdom
+26-	\red;Pearl of Wisdom
+27-	\red;Pearl of Wisdom
+28-	\red;Pearl of Wisdom
+29-	\red;Pearl of Wisdom
+2oµ	Cube Reagent\n\orange;Oil of Disjunction
+2x5	\dgreen;Alpha Brain
+2x6	\dgreen;Beta Brain
+2x7	\dgreen;Gamma Brain
+2x8	\dgreen;Delta Brain
+2x9	\dgreen;Epsilon Brain
+30-	\red;Pearl of Wisdom
+31-	\red;Pearl of Wisdom
+32-	\red;Pearl of Wisdom
+33-	\red;Pearl of Wisdom
+34-	\red;Pearl of Wisdom
+35-	\red;Pearl of Wisdom
+36-	\red;Pearl of Wisdom
+37-	\red;Pearl of Wisdom
+38-	\red;Pearl of Wisdom
+39-	\red;Pearl of Wisdom
+3oµ	Cube Reagent\n\orange;Catalyst of Disenchantment
+40-	\red;Pearl of Wisdom
+41-	\red;Pearl of Wisdom
+42-	\red;Pearl of Wisdom
+43-	\red;Pearl of Wisdom
+44-	\red;Pearl of Wisdom
+45-	\red;Pearl of Wisdom
+46-	\red;Pearl of Wisdom
+47-	\red;Pearl of Wisdom
+48-	\red;Pearl of Wisdom
+49-	\red;Pearl of Wisdom
+4oµ	Cube Reagent\n\orange;Oil of Enhancement
+50-	\red;Pearl of Wisdom
+5oµ	Cube Reagent\n\orange;Oil of Renewal
+6oµ	Cube Reagent\n\orange;Oil of Luck
+7oµ	Cube Reagent\n\orange;Oil of Jewelcraft
+8oµ	Cube Reagent\n\orange;Oil of Absolution
+96-	\red;Pearl of Wisdom
+98-	\red;Pearl of Wisdom
+99-	\red;Pearl of Wisdom
+9oµ	Cube Reagent\n\orange;Catalyst of Destruction
+A0+	\orange;Creepy Shrine (10 Charges)
+A1+	\orange;Creepy Shrine (9 Charges)
+A2+	\orange;Creepy Shrine (8 Charges)
+A3+	\orange;Creepy Shrine (7 Charges)
+A4+	\orange;Creepy Shrine (6 Charges)
+A5+	\orange;Creepy Shrine (5 Charges)
+A6+	\orange;Creepy Shrine (4 Charges)
+A7+	\orange;Creepy Shrine (3 Charges)
+A8+	\orange;Creepy Shrine (2 Charges)
+A9+	\orange;Creepy Shrine (1 Charge)
+abu	Do Not Use Ethereal Items Idiot
+B0+	\orange;Abandoned Shrine (10 Charges)
+B1+	\orange;Abandoned Shrine (9 Charges)
+B2+	\orange;Abandoned Shrine (8 Charges)
+B3+	\orange;Abandoned Shrine (7 Charges)
+B4+	\orange;Abandoned Shrine (6 Charges)
+B5+	\orange;Abandoned Shrine (5 Charges)
+B6+	\orange;Abandoned Shrine (4 Charges)
+B7+	\orange;Abandoned Shrine (3 Charges)
+B8+	\orange;Abandoned Shrine (2 Charges)
+B9+	\orange;Abandoned Shrine (1 Charge)
+brx	\red;Scroll of Kabraxis
+bxt	\orange;Kabraxis Trophy
+C0+	\orange;Quiet Shrine (10 Charges)
+C1+	\orange;Quiet Shrine (9 Charges)
+C2+	\orange;Quiet Shrine (8 Charges)
+C3+	\orange;Quiet Shrine (7 Charges)
+C4+	\orange;Quiet Shrine (6 Charges)
+C5+	\orange;Quiet Shrine (5 Charges)
+C6+	\orange;Quiet Shrine (4 Charges)
+C7+	\orange;Quiet Shrine (3 Charges)
+C8+	\orange;Quiet Shrine (2 Charges)
+C9+	\orange;Quiet Shrine (1 Charge)
+D0+	\orange;Eerie Shrine (10 Charges)
+D1+	\orange;Eerie Shrine (9 Charges)
+D2+	\orange;Eerie Shrine (8 Charges)
+D3+	\orange;Eerie Shrine (7 Charges)
+D4+	\orange;Eerie Shrine (6 Charges)
+D5+	\orange;Eerie Shrine (5 Charges)
+D6+	\orange;Eerie Shrine (4 Charges)
+D7+	\orange;Eerie Shrine (3 Charges)
+D8+	\orange;Eerie Shrine (2 Charges)
+D9+	\orange;Eerie Shrine (1 Charge)
+E0+	\orange;Weird Shrine (10 Charges)
+E1+	\orange;Weird Shrine (9 Charges)
+E2+	\orange;Weird Shrine (8 Charges)
+E3+	\orange;Weird Shrine (7 Charges)
+E4+	\orange;Weird Shrine (6 Charges)
+E5+	\orange;Weird Shrine (5 Charges)
+E6+	\orange;Weird Shrine (4 Charges)
+E7+	\orange;Weird Shrine (3 Charges)
+E8+	\orange;Weird Shrine (2 Charges)
+E9+	\orange;Weird Shrine (1 Charge)
+F0+	\orange;Gloomy Shrine (10 Charges)
+F1+	\orange;Gloomy Shrine (9 Charges)
+F2+	\orange;Gloomy Shrine (8 Charges)
+F3+	\orange;Gloomy Shrine (7 Charges)
+F4+	\orange;Gloomy Shrine (6 Charges)
+F5+	\orange;Gloomy Shrine (5 Charges)
+F6+	\orange;Gloomy Shrine (4 Charges)
+F7+	\orange;Gloomy Shrine (3 Charges)
+F8+	\orange;Gloomy Shrine (2 Charges)
+F9+	\orange;Gloomy Shrine (1 Charge)
+G0+	\orange;Tainted Shrine (10 Charges)
+G1+	\orange;Tainted Shrine (9 Charges)
+G2+	\orange;Tainted Shrine (8 Charges)
+G3+	\orange;Tainted Shrine (7 Charges)
+G4+	\orange;Tainted Shrine (6 Charges)
+G5+	\orange;Tainted Shrine (5 Charges)
+G6+	\orange;Tainted Shrine (4 Charges)
+G7+	\orange;Tainted Shrine (3 Charges)
+G8+	\orange;Tainted Shrine (2 Charges)
+G9+	\orange;Tainted Shrine (1 Charge)
+H0+	\orange;Fascinating Shrine (10 Charges)
+H1+	\orange;Fascinating Shrine (9 Charges)
+H2+	\orange;Fascinating Shrine (8 Charges)
+H3+	\orange;Fascinating Shrine (7 Charges)
+H4+	\orange;Fascinating Shrine (6 Charges)
+H5+	\orange;Fascinating Shrine (5 Charges)
+H6+	\orange;Fascinating Shrine (4 Charges)
+H7+	\orange;Fascinating Shrine (3 Charges)
+H8+	\orange;Fascinating Shrine (2 Charges)
+H9+	\orange;Fascinating Shrine (1 Charge)
+I0+	\orange;Ornate Shrine (10 Charges)
+I1+	\orange;Ornate Shrine (9 Charges)
+I2+	\orange;Ornate Shrine (8 Charges)
+I3+	\orange;Ornate Shrine (7 Charges)
+I4+	\orange;Ornate Shrine (6 Charges)
+I5+	\orange;Ornate Shrine (5 Charges)
+I6+	\orange;Ornate Shrine (4 Charges)
+I7+	\orange;Ornate Shrine (3 Charges)
+I8+	\orange;Ornate Shrine (2 Charges)
+I9+	\orange;Ornate Shrine (1 Charge)
+J0+	\orange;Sacred Shrine (10 Charges)
+J1+	\orange;Sacred Shrine (9 Charges)
+J2+	\orange;Sacred Shrine (8 Charges)
+J3+	\orange;Sacred Shrine (7 Charges)
+J4+	\orange;Sacred Shrine (6 Charges)
+J5+	\orange;Sacred Shrine (5 Charges)
+J6+	\orange;Sacred Shrine (4 Charges)
+J7+	\orange;Sacred Shrine (3 Charges)
+J8+	\orange;Sacred Shrine (1 Charges)
+J9+	\orange;Sacred Shrine (1 Charge)
+k.Z	\red;Key of Damnation
+K0+	\orange;Shimmering Shrine (10 Charges)
+K1+	\orange;Shimmering Shrine (9 Charges)
+K2+	\orange;Shimmering Shrine (8 Charges)
+K3+	\orange;Shimmering Shrine (7 Charges)
+K4+	\orange;Shimmering Shrine (6 Charges)
+K5+	\orange;Shimmering Shrine (5 Charges)
+K6+	\orange;Shimmering Shrine (4 Charges)
+K7+	\orange;Shimmering Shrine (3 Charges)
+K8+	\orange;Shimmering Shrine (2 Charges)
+K9+	\orange;Shimmering Shrine (1 Charge)
+Kx1	\red;Earth Stone
+Kx2	\red;Magic Stone
+Kx3	\red;Poison Stone
+Kx4	\red;Light Stone
+Kx5	\red;Ice Stone
+Kx6	\red;Fire Stone
+kZ8	\gold;Sunless Crystal Bird
+l@l	\dgreen;Skinrender's Sigil
+L0+	\orange;Mysterious Shrine (10 Charges)
+L1+	\orange;Mysterious Shrine (9 Charges)
+L2+	\orange;Mysterious Shrine (8 Charges)
+L3+	\orange;Mysterious Shrine (7 Charges)
+L4+	\orange;Mysterious Shrine (6 Charges)
+L5+	\orange;Mysterious Shrine (5 Charges)
+L6+	\orange;Mysterious Shrine (4 Charges)
+L7+	\orange;Mysterious Shrine (3 Charges)
+L8+	\orange;Mysterious Shrine (2 Charges)
+L9+	\orange;Mysterious Shrine (1 Charge)
+m@m	\dgreen;Spinecracker's Sigil
+M0+	\orange;Spiritual Shrine (10 Charges)
+M1+	\orange;Spiritual Shrine (9 Charges)
+M2+	\orange;Spiritual Shrine (8 Charges)
+M3+	\orange;Spiritual Shrine (7 Charges)
+M4+	\orange;Spiritual Shrine (6 Charges)
+M5+	\orange;Spiritual Shrine (5 Charges)
+M6+	\orange;Spiritual Shrine (4 Charges)
+M7+	\orange;Spiritual Shrine (3 Charges)
+M8+	\orange;Spiritual Shrine (2 Charges)
+M9+	\orange;Spiritual Shrine (1 Charge)
+mec	Cube Reagent\n\orange;Meditation Candle
+N0+	\orange;Magical Shrine (10 Charges)
+N1+	\orange;Magical Shrine (9 Charges)
+N2+	\orange;Magical Shrine (8 Charges)
+N3+	\orange;Magical Shrine (7 Charges)
+N4+	\orange;Magical Shrine (6 Charges)
+N5+	\orange;Magical Shrine (5 Charges)
+N6+	\orange;Magical Shrine (4 Charges)
+N7+	\orange;Magical Shrine (3 Charges)
+N8+	\orange;Magical Shrine (2 Charges)
+N9+	\orange;Magical Shrine (1 Charge)
+o@o	\dgreen;Eyegouger's Sigil
+O0+	\orange;Enchanted Shrine (10 Charges)
+O1+	\orange;Enchanted Shrine (9 Charges)
+O2+	\orange;Enchanted Shrine (8 Charges)
+O3+	\orange;Enchanted Shrine (7 Charges)
+O4+	\orange;Enchanted Shrine (6 Charges)
+O5+	\orange;Enchanted Shrine (5 Charges)
+O6+	\orange;Enchanted Shrine (4 Charges)
+O7+	\orange;Enchanted Shrine (3 Charges)
+O8+	\orange;Enchanted Shrine (2 Charges)
+O9+	\orange;Enchanted Shrine (1 Charge)
+p@p	\dgreen;Fleshcutter's Sigil
+P0+	\orange;Divine Shrine (10 Charges)
+P1+	\orange;Divine Shrine (9 Charges)
+P2+	\orange;Divine Shrine (8 Charges)
+P3+	\orange;Divine Shrine (7 Charges)
+P4+	\orange;Divine Shrine (6 Charges)
+P5+	\orange;Divine Shrine (5 Charges)
+P6+	\orange;Divine Shrine (4 Charges)
+P7+	\orange;Divine Shrine (3 Charges)
+P8+	\orange;Divine Shrine (2 Charges)
+P9+	\orange;Divine Shrine (1 Charge)
+q@q	\dgreen;Bonehexer's Sigil
+Q0+	\orange;Hidden Shrine (10 Charges)
+Q1+	\orange;Hidden Shrine (9 Charges)
+Q2+	\orange;Hidden Shrine (8 Charges)
+Q3+	\orange;Hidden Shrine (7 Charges)
+Q4+	\orange;Hidden Shrine (6 Charges)
+Q5+	\orange;Hidden Shrine (5 Charges)
+Q6+	\orange;Hidden Shrine (4 Charges)
+Q7+	\orange;Hidden Shrine (3 Charges)
+Q8+	\orange;Hidden Shrine (2 Charges)
+Q9+	\orange;Hidden Shrine (1 Charge)
+qul	\grey;Cube Reagent\n\orange;Arcane Shards #1
+qum	\grey;Cube Reagent\n\orange;Arcane Crystal
+qus	Cube Reagent (1/4)\n\orange;Regular Arcane Crystal
+qut	Cube Reagent (2/4)\n\orange;Glowing Arcane Crystal
+qux	Cube Reagent (3/4)\n\orange;Brilliant Arcane Crystal
+quy	Cube Reagent (4/4)\n\orange;Dazzling Arcane Crystal
+R0+	\orange;Stone Shrine (10 Charges)
+R1+	\orange;Stone Shrine (9 Charges)
+R2+	\orange;Stone Shrine (8 Charges)
+R3+	\orange;Stone Shrine (7 Charges)
+R4+	\orange;Stone Shrine (6 Charges)
+R5+	\orange;Stone Shrine (5 Charges)
+R6+	\orange;Stone Shrine (4 Charges)
+R7+	\orange;Stone Shrine (3 Charges)
+R8+	\orange;Stone Shrine (2 Charges)
+R9+	\orange;Stone Shrine (1 Charge)
+r97	\red;Unknown Skull
+r99	\red;Unknown Skull
+S0+	\orange;Religious Shrine (10 Charges)
+S1+	\orange;Religious Shrine (9 Charges)
+S2+	\orange;Religious Shrine (8 Charges)
+S3+	\orange;Religious Shrine (7 Charges)
+S4+	\orange;Religious Shrine (6 Charges)
+S5+	\orange;Religious Shrine (5 Charges)
+S6+	\orange;Religious Shrine (4 Charges)
+S7+	\orange;Religious Shrine (3 Charges)
+S8+	\orange;Religious Shrine (2 Charges)
+S9+	\orange;Religious Shrine (1 Charge)
+T0+	\orange;Cryptic Shrine (10 Charges)
+T1+	\orange;Cryptic Shrine (9 Charges)
+T2+	\orange;Cryptic Shrine (8 Charges)
+T3+	\orange;Cryptic Shrine (7 Charges)
+T4+	\orange;Cryptic Shrine (6 Charges)
+T5+	\orange;Cryptic Shrine (5 Charges)
+T6+	\orange;Cryptic Shrine (4 Charges)
+T7+	\orange;Cryptic Shrine (3 Charges)
+T8+	\orange;Cryptic Shrine (2 Charges)
+T9+	\orange;Cryptic Shrine (1 Charge)
+tr2	Cube Reagent\nScroll of Resistance
+u@v	for an upgrade!\nSee the documentation\nYou're not cool enough!\n\gold;Poser!
+vic	Cube Reagent\n\orange;Sacrifical Heart

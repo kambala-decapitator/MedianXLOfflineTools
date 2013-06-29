@@ -86,7 +86,11 @@ private:
 //    void moveItemsToFirstPages(ItemsList *items, bool toShards);
 
     void showErrorLoadingSortingOrderFile(const QFile &f);
-    void storeItemsOnPage(const ItemsList &items, quint32 &page, int &row, int &col, bool shouldStartAnotherTypeFromNewRow);
+    void storeItemsOnPage(const ItemsList &items, bool shouldStartAnotherTypeFromNewRow, quint32 &page, int *pRow = 0, int *pCol = 0);
+
+    QHash<QByteArray, ItemsList> itemsSortedByBaseType(const ItemsList &items);
+    template<typename K>
+    QMap<K, ItemsList> itemsSortedByType(const ItemsList &items);
 };
 
 #endif // PLUGYITEMSSPLITTER_H
