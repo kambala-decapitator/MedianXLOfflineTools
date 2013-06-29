@@ -161,7 +161,7 @@ void PlugyItemsSplitter::keyReleaseEvent(QKeyEvent *keyEvent)
 
 bool PlugyItemsSplitter::isItemInCurrentStorage(ItemInfo *item) const
 {
-    return item->plugyPage == static_cast<quint32>(_pageSpinBox->value());
+    return item->plugyPage == currentPage();
 }
 
 void PlugyItemsSplitter::addItemToList(ItemInfo *item, bool emitSignal /*= true*/)
@@ -254,7 +254,7 @@ ItemsList PlugyItemsSplitter::disenchantAllItems(bool toShards, bool upgradeToCr
 ////            QFuture<void> f = QtConcurrent::map(*items, &PlugyItemsSplitter::moveItemsToFirstPages);
 //            watcher->setFuture(f);
         }
-        setItems(_allItems); // update spinbox value and range
+        updateSpinbox();
     }
     return disenchantedItems;
 }
@@ -268,7 +268,7 @@ void PlugyItemsSplitter::upgradeGems(ItemsList *items /*= 0*/)
     progressBar.show();
 
     ItemsPropertiesSplitter::upgradeGems(itemsForSelectedRange());
-    setItems(_allItems); // update spinbox value and range
+    updateSpinbox();
 }
 
 void PlugyItemsSplitter::upgradeRunes(ItemsList *items /*= 0*/)
@@ -280,8 +280,9 @@ void PlugyItemsSplitter::upgradeRunes(ItemsList *items /*= 0*/)
     progressBar.show();
 
     ItemsPropertiesSplitter::upgradeRunes(itemsForSelectedRange());
-    setItems(_allItems); // update spinbox value and range
+    updateSpinbox();
 }
+
 
 void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
 {
@@ -559,8 +560,17 @@ void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
         }
     }
 
-    setItems(_allItems); // updates last page value and items on current page
+    updateSpinbox();
     emit stashSorted();
+}
+
+void PlugyItemsSplitter::insertBlankPages(int pages)
+{
+    foreach (ItemInfo *item, ItemDataBase::extractItemsFromPageRange(_allItems, currentPage() + 1, _lastNotEmptyPage))
+        item->plugyPage += pages;
+
+    updateSpinbox();
+    emit itemsChanged();
 }
 
 
@@ -614,7 +624,7 @@ void PlugyItemsSplitter::updateItemsForCurrentPage(bool pageChanged_ /*= true*/)
 {
     bool wasPageEnteredManually = qApp->focusWidget() == _pageSpinBox;
 
-    _pagedItems = ItemDataBase::extractItemsFromPage(_allItems, static_cast<quint32>(_pageSpinBox->value()));
+    _pagedItems = ItemDataBase::extractItemsFromPage(_allItems, currentPage());
     updateItems(_pagedItems);
 
     if (pageChanged_)
@@ -700,4 +710,9 @@ void PlugyItemsSplitter::storeItemsOnPage(const ItemsList &items, quint32 &page,
 
         col += baseInfo->width;
     }
+}
+
+quint32 PlugyItemsSplitter::currentPage() const
+{
+    return static_cast<quint32>(_pageSpinBox->value());
 }

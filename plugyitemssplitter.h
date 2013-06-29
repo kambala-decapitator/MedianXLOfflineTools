@@ -18,6 +18,7 @@ public:
     virtual ~PlugyItemsSplitter() {}
 
     virtual void setItems(const ItemsList &newItems);
+    void updateSpinbox() { setItems(_allItems); }
     virtual void showItem(ItemInfo *item);
     virtual ItemsList *getItems() { return itemsForSelectedRange(); }
 
@@ -27,9 +28,12 @@ public:
     virtual ItemsList disenchantAllItems(bool toShards, bool upgradeToCrystals, bool eatSignets, ItemsList *pItems = 0);
     virtual void upgradeGems(ItemsList *items = 0);
     virtual void upgradeRunes(ItemsList *items = 0);
+
     void sortStash(const StashSortOptions &sortOptions);
+    void insertBlankPages(int pages);
 
     quint32 lastNotEmptyPage() const { return _lastNotEmptyPage; }
+    quint32 currentPage() const;
 
 public slots:
     // these 8 are connected to main menu actions

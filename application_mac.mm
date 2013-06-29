@@ -4,7 +4,15 @@
 #include <QFileOpenEvent>
 #include <QTimer>
 
+#if MAC_OS_X_VERSION_MAX_ALLOWED < 1070
+@interface NSWindow (RestorationHackForOldSDKs)
+- (void)setRestorationClass:(Class)restorationClass;
+- (void)setRestorable:(BOOL)flag;
+- (void)invalidateRestorableState;
+@end
+#else
 #import <AppKit/NSWindowRestoration.h>
+#endif
 
 
 bool Application::event(QEvent *ev)
@@ -36,14 +44,6 @@ void Application::maybeDeleteTimer()
     }
 }
 
-
-#if MAC_OS_X_VERSION_MAX_ALLOWED < 1070
-@interface NSWindow (RestorationHackForOldSDKs)
-- (void)setRestorationClass:(Class)restorationClass;
-- (void)setRestorable:(BOOL)flag;
-- (void)invalidateRestorableState;
-@end
-#endif
 
 void Application::disableLionWindowRestoration()
 {

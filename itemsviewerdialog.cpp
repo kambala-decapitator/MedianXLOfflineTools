@@ -22,6 +22,7 @@
 #include <QPushButton>
 #include <QCheckBox>
 #include <QRadioButton>
+#include <QInputDialog>
 
 #include <QSettings>
 
@@ -32,21 +33,13 @@
 
 const int ItemsViewerDialog::kCellSize = 32, ItemsViewerDialog::kColumnsDefault = 10;
 
-ItemsViewerDialog::ItemsViewerDialog(const QHash<int, bool> &plugyStashesExistenceHash, quint8 showDisenchantPreviewOption, QWidget *parent) : QDialog(parent), _tabWidget(new QTabWidget(this)), _itemManagementWidget(new QWidget(this)),
+ItemsViewerDialog::ItemsViewerDialog(const QHash<int, bool> &plugyStashesExistenceHash, quint8 showDisenchantPreviewOption, QWidget *parent) : QDialog(parent), _tabWidget(new QTabWidget(this)),
     _showDisenchantPreviewOption(static_cast<ShowDisenchantPreviewOption>(showDisenchantPreviewOption))
 {
     setAttribute(Qt::WA_DeleteOnClose);
-    setWindowFlags(windowFlags() & ~Qt::WindowContextHelpButtonHint | Qt::WindowMinimizeButtonHint | Qt::WindowMaximizeButtonHint);
+    setWindowFlags(Qt::Window);
 
-    KExpandableGroupBox *expandableBox = new KExpandableGroupBox(tr("Item management"), this);
-    expandableBox->setAnimateExpansion(false);
-    expandableBox->setWidget(_itemManagementWidget);
-    expandableBox->setExpanded(true);
-
-    // main layout
-    QVBoxLayout *mainLayout = new QVBoxLayout(this);
-    mainLayout->addWidget(_tabWidget);
-    mainLayout->addWidget(expandableBox);
+    createLayout();
 
     // tabwidget setup
     for (int i = GearIndex; i <= LastIndex; ++i)
@@ -84,7 +77,38 @@ ItemsViewerDialog::ItemsViewerDialog(const QHash<int, bool> &plugyStashesExisten
             tableView->setColumnWidth(j, kCellSize);
     }
 
+    connect(_disenchantToShardsButton, SIGNAL(clicked()), SLOT(disenchantAllItems()));
+    connect(_disenchantToSignetButton, SIGNAL(clicked()), SLOT(disenchantAllItems()));
+
+    connect(       _uniquesRadioButton, SIGNAL(toggled(bool)), SLOT(updateDisenchantButtonsState()));
+    connect(          _setsRadioButton, SIGNAL(toggled(bool)), SLOT(updateDisenchantButtonsState()));
+    connect( _bothQualitiesRadioButton, SIGNAL(toggled(bool)), SLOT(updateDisenchantButtonsState()));
+    connect(_upgradeToCrystalsCheckbox, SIGNAL(toggled(bool)), SLOT(updateDisenchantButtonsState()));
+
+    connect(_upgradeGemsButton,  SIGNAL(clicked()), SLOT(upgradeGems()));
+    connect(_upgradeRunesButton, SIGNAL(clicked()), SLOT(upgradeRunes()));
+    connect(_upgradeBothButton,  SIGNAL(clicked()), SLOT(upgradeGemsAndRunes()));
+
+    connect(_sortStashButton, SIGNAL(clicked()), SLOT(sortStash()));
+    connect(_insertBlankPagesButton, SIGNAL(clicked()), SLOT(insertBlankPages()));
+
+    connect(_applyActionToAllPagesCheckbox, SIGNAL(toggled(bool)), SLOT(applyActionToAllPagesChanged(bool)));
+    connect(_tabWidget, SIGNAL(currentChanged(int)), SLOT(tabChanged(int)));
+
+    _stashBox->setDisabled(true);
     _itemManagementWidget->setDisabled(true);
+
+    loadSettings();
+    _tabWidget->setCurrentIndex(0);
+}
+
+void ItemsViewerDialog::createLayout()
+{
+    _itemManagementWidget = new QWidget(this);
+    KExpandableGroupBox *expandableBox = new KExpandableGroupBox(tr("Item management"), this);
+    expandableBox->setAnimateExpansion(false);
+    expandableBox->setWidget(_itemManagementWidget);
+    expandableBox->setExpanded(true);
 
     // disenchant box setup
     _disenchantBox = new QGroupBox(tr("Mass Disenchant"), _itemManagementWidget);
@@ -110,14 +134,6 @@ ItemsViewerDialog::ItemsViewerDialog(const QHash<int, bool> &plugyStashesExisten
     hlayout->addStretch();
     hlayout->addWidget(_bothQualitiesRadioButton);
 
-    connect(_disenchantToShardsButton, SIGNAL(clicked()), SLOT(disenchantAllItems()));
-    connect(_disenchantToSignetButton, SIGNAL(clicked()), SLOT(disenchantAllItems()));
-
-    connect(       _uniquesRadioButton, SIGNAL(toggled(bool)), SLOT(updateDisenchantButtonsState()));
-    connect(          _setsRadioButton, SIGNAL(toggled(bool)), SLOT(updateDisenchantButtonsState()));
-    connect( _bothQualitiesRadioButton, SIGNAL(toggled(bool)), SLOT(updateDisenchantButtonsState()));
-    connect(_upgradeToCrystalsCheckbox, SIGNAL(toggled(bool)), SLOT(updateDisenchantButtonsState()));
-
     QVBoxLayout *vboxLayout = new QVBoxLayout(_disenchantBox);
     vboxLayout->addWidget(box);
 
@@ -136,38 +152,39 @@ ItemsViewerDialog::ItemsViewerDialog(const QHash<int, bool> &plugyStashesExisten
     _upgradeRunesButton = new QPushButton(tr("Runes"), _upgradeBox);
     _upgradeBothButton = new QPushButton(tr("Both"), _upgradeBox);
 
-    connect(_upgradeGemsButton,  SIGNAL(clicked()), SLOT(upgradeGems()));
-    connect(_upgradeRunesButton, SIGNAL(clicked()), SLOT(upgradeRunes()));
-    connect(_upgradeBothButton,  SIGNAL(clicked()), SLOT(upgradeGemsAndRunes()));
-
-    QVBoxLayout *upgradeBoxLayout = new QVBoxLayout(_upgradeBox);
-    upgradeBoxLayout->addWidget(_upgradeGemsButton);
-    upgradeBoxLayout->addWidget(_upgradeRunesButton);
-    upgradeBoxLayout->addWidget(_upgradeBothButton);
+    vboxLayout = new QVBoxLayout(_upgradeBox);
+    vboxLayout->addWidget(_upgradeGemsButton);
+    vboxLayout->addWidget(_upgradeRunesButton);
+    vboxLayout->addWidget(_upgradeBothButton);
 
     _applyActionToAllPagesCheckbox = new QCheckBox(tr("Apply to all pages"), this);
     _applyActionToAllPagesCheckbox->setToolTip(tr("Either action will be applied to all pages of the current PlugY stash"));
     _applyActionToAllPagesCheckbox->setChecked(true);
-    connect(_applyActionToAllPagesCheckbox, SIGNAL(toggled(bool)), SLOT(applyActionToAllPagesChanged(bool)));
 
-    _sortStashButton = new QPushButton(tr("Sort Stash"), _itemManagementWidget);
-    connect(_sortStashButton, SIGNAL(clicked()), SLOT(sortStash()));
-    _sortStashButton->hide();
+    // stash box setup
+    _stashBox = new QGroupBox(tr("PlugY Stash"), _itemManagementWidget);
+    _sortStashButton = new QPushButton(tr("Sort"), _stashBox);
+    _insertBlankPagesButton = new QPushButton(tr("Insert blank pages"), _stashBox);
+    _insertBlankPagesButton->setToolTip(tr("Inserts blank pages after the current page"));
+
+    vboxLayout = new QVBoxLayout(_stashBox);
+    vboxLayout->addWidget(_sortStashButton);
+    vboxLayout->addWidget(_insertBlankPagesButton);
 
     // item management groupbox layout
     QHBoxLayout *itemManagementBoxLayout = new QHBoxLayout(_itemManagementWidget);
     itemManagementBoxLayout->addWidget(_disenchantBox);
-    itemManagementBoxLayout->addStretch();
     itemManagementBoxLayout->addWidget(_applyActionToAllPagesCheckbox);
-    itemManagementBoxLayout->addWidget(_sortStashButton);
-    itemManagementBoxLayout->addStretch();
     itemManagementBoxLayout->addWidget(_upgradeBox);
+    itemManagementBoxLayout->addStretch();
+    itemManagementBoxLayout->addWidget(_stashBox);
 
-    connect(_tabWidget, SIGNAL(currentChanged(int)), SLOT(tabChanged(int)));
-
-    loadSettings();
-    _tabWidget->setCurrentIndex(0);
+    // main layout
+    vboxLayout = new QVBoxLayout(this);
+    vboxLayout->addWidget(_tabWidget);
+    vboxLayout->addWidget(expandableBox);
 }
+
 
 void ItemsViewerDialog::loadSettings()
 {
@@ -387,7 +404,7 @@ void ItemsViewerDialog::updateItemManagementButtonsState()
 {
     updateDisenchantButtonsState();
     updateUpgradeButtonsState();
-    updateSortStashButtonState();
+    updateStashButtonsState();
 }
 
 void ItemsViewerDialog::updateDisenchantButtonsState()
@@ -406,6 +423,13 @@ void ItemsViewerDialog::updateUpgradeButtonsState()
     _upgradeGemsButton->setEnabled(allowUpgradeButtons.first);
     _upgradeRunesButton->setEnabled(allowUpgradeButtons.second);
     _upgradeBothButton->setEnabled(allowUpgradeButtons.first && allowUpgradeButtons.second);
+}
+
+void ItemsViewerDialog::updateStashButtonsState()
+{
+    _stashBox->setEnabled(isPlugyStorageIndex(_tabWidget->currentIndex()));
+    if (_stashBox->isEnabled())
+        _sortStashButton->setEnabled(currentSplitter()->itemCount() > 0);
 }
 
 void ItemsViewerDialog::disenchantAllItems()
@@ -474,6 +498,22 @@ void ItemsViewerDialog::sortStash()
         plugySplitter->sortStash(dlg.sortOptions());
 }
 
+void ItemsViewerDialog::insertBlankPages()
+{
+    PlugyItemsSplitter *plugySplitter = currentPlugySplitter();
+    if (plugySplitter->currentPage() == plugySplitter->lastNotEmptyPage())
+    {
+        ERROR_BOX(tr("There's no sense in inserting blank pages after the last one."));
+        return;
+    }
+
+    bool ok;
+    int pages = QInputDialog::getInt(this, qApp->applicationName(), tr("Blank pages:"), 1, 1, 1000, 1, &ok);
+    if (ok)
+        plugySplitter->insertBlankPages(pages);
+}
+
+
 void ItemsViewerDialog::updateBeltItemsCoordinates(bool restore, ItemsList *pBeltItems)
 {
     ItemsList beltItems = pBeltItems ? *pBeltItems : ItemDataBase::itemsStoredIn(Enums::ItemStorage::NotInStorage, Enums::ItemLocation::Belt);
@@ -483,11 +523,4 @@ void ItemsViewerDialog::updateBeltItemsCoordinates(bool restore, ItemsList *pBel
         item->row = lastRowIndex - item->row;
         item->column += restore ? -2 : 2;
     }
-}
-
-void ItemsViewerDialog::updateSortStashButtonState()
-{
-    _sortStashButton->setVisible(isPlugyStorageIndex(_tabWidget->currentIndex()));
-    if (_sortStashButton->isVisible())
-        _sortStashButton->setEnabled(currentSplitter()->itemCount() > 0);
 }

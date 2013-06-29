@@ -90,7 +90,9 @@ private slots:
     void upgradeGems();
     void upgradeRunes();
     void upgradeGemsAndRunes() { upgradeGems(); upgradeRunes(); }
+    
     void sortStash();
+    void insertBlankPages();
 
 private:
     QTabWidget *_tabWidget;
@@ -99,7 +101,7 @@ private:
     ShowDisenchantPreviewOption _showDisenchantPreviewOption;
 
     QGroupBox *_disenchantBox;
-    QPushButton *_disenchantToShardsButton, *_disenchantToSignetButton, *_sortStashButton;
+    QPushButton *_disenchantToShardsButton, *_disenchantToSignetButton;
     QCheckBox *_upgradeToCrystalsCheckbox, *_eatSignetsCheckbox;
     QRadioButton *_uniquesRadioButton, *_setsRadioButton, *_bothQualitiesRadioButton;
 
@@ -108,13 +110,17 @@ private:
 
     QCheckBox *_applyActionToAllPagesCheckbox;
 
+    QGroupBox *_stashBox;
+    QPushButton *_sortStashButton, *_insertBlankPagesButton;
+
+    void createLayout();
     void loadSettings();
 
     void itemCountChangedInTab(int tabIndex, int newCount);
     void updateWindowTitle();
     void updateBeltItemsCoordinates(bool restore, ItemsList *pBeltItems);
 
-    void updateSortStashButtonState();
+    void updateStashButtonsState();
 };
 
 #endif // ITEMSVIEWERDIALOG_H

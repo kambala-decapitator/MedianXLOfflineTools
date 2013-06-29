@@ -39,13 +39,8 @@ QByteArray MedianXLOfflineTools::getOsInfo()
     proc.waitForFinished();
     result += proc.readAllStandardOutput().trimmed() + " ";
 
-    // i386
-    proc.start("uname", QStringList() << "-p", QProcess::ReadOnly);
-    proc.waitForFinished();
-    result += proc.readAllStandardOutput().trimmed() + " ";
-
-    // x86_64
-    proc.start("uname", QStringList() << "-m", QProcess::ReadOnly);
+    // x86_64 i386
+    proc.start("uname", QStringList() << "-m" << "-p", QProcess::ReadOnly);
     proc.waitForFinished();
     result += proc.readAllStandardOutput().trimmed();
 
