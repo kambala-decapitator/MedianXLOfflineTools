@@ -67,6 +67,29 @@ const QHash<int, int> &itemQualityMapping()
     return m;
 }
 
+const QHash<QByteArray, QByteArray> &gemTypesOrderMapping()
+{
+    static QHash<QByteArray, QByteArray> m;
+    if (m.isEmpty())
+    {
+        // cLOD
+        m["gemr"] = "00"; // ruby
+        m["gems"] = "01"; // sapphire
+        m["geme"] = "02"; // emerald
+        m["gemt"] = "03"; // topaz
+        m["gemd"] = "04"; // diamond
+        m["gema"] = "05"; // amethyst
+        m["gemz"] = "06"; // skull
+        // MXL
+        m["gemp"] = "10"; // bloodstone
+        m["gemq"] = "11"; // onyx
+        m["gemo"] = "12"; // turquoise
+        m["geml"] = "13"; // amber
+        m["gemx"] = "14"; // rainbow
+    }
+    return m;
+}
+
 
 PlugyItemsSplitter::PlugyItemsSplitter(ItemStorageTableView *itemsView, QWidget *parent) : ItemsPropertiesSplitter(itemsView, parent), _shouldApplyActionToAllPages(true)
 {
@@ -397,17 +420,20 @@ void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
         }
     }
 
+    const QHash<QByteArray, ItemBase *>         *const kItemsBaseInfo = ItemDataBase::Items();
+    const QHash<QByteArray, QList<QByteArray> > *const kItemTypesInfo = ItemDataBase::ItemTypes();
+
     // sort by quality
     QMap<int, ItemsList> itemsByQuality;
     foreach (ItemInfo *item, selectedItems)
     {
         int key;
-        if (item->isQuest || ItemDataBase::Items()->value(item->itemType)->questId > 0)
+        if (item->isQuest || kItemsBaseInfo->value(item->itemType)->questId > 0)
             key = Quest;
         else if (item->isRW)
             key = RW;
         else
-            key = itemQualityMapping()[item->quality];
+            key = itemQualityMapping().value(item->quality);
         itemsByQuality[key] << item;
     }
 
@@ -455,20 +481,25 @@ void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
                     ItemsList &items = jter.value();
                     for (int i = 0; i < items.size(); ++i)
                     {
-                        // force correct ordering of some items (they don't 'inherit' from tiered versions)
-                        static const char *kSacredMaskCode = "@45", *kSacredBoneHelmCode = "@46", *kSacredCrownCode = "@21", *kSacredSpikedShieldCode = "@44", *kSacredBoneShieldCode = "@43";
-                        static const char *kSpecialHelmType = "bhlm", *kCrownType = "crow", *kSpecialShieldType = "bshi";
-
                         ItemInfo *item = items.at(i);
-                        bool itemShouldBeAdded;
-                        if (item->itemType == kSacredMaskCode || item->itemType == kSacredBoneHelmCode) // mask, bone helm
-                            itemShouldBeAdded = itemBaseType == kSpecialHelmType;
-                        else if (item->itemType == kSacredCrownCode) // crown
-                            itemShouldBeAdded = itemBaseType == kCrownType;
-                        else if (item->itemType == kSacredSpikedShieldCode || item->itemType == kSacredBoneShieldCode) // spiked/bone shield
-                            itemShouldBeAdded = itemBaseType == kSpecialShieldType;
-                        else // default filter
-                            itemShouldBeAdded = ItemDataBase::ItemTypes()->value(jter.key()).contains(itemBaseType);
+                        bool itemShouldBeAdded = false;
+
+                        Enums::ItemTypeGeneric::ItemTypeGenericEnum genericType = kItemsBaseInfo->value(item->itemType)->genericType;
+                        if ((genericType == Enums::ItemTypeGeneric::Weapon || genericType == Enums::ItemTypeGeneric::Armor) && isSacred(item))
+                        {
+                            // force correct ordering of some items (they don't 'inherit' from tiered versions)
+                            static const char *kSacredMaskCode = "@45", *kSacredBoneHelmCode = "@46", *kSacredCrownCode = "@21", *kSacredSpikedShieldCode = "@44", *kSacredBoneShieldCode = "@43";
+                            static const char *kSpecialHelmType = "bhlm", *kCrownType = "crow", *kSpecialShieldType = "bshi";
+
+                            if (item->itemType == kSacredMaskCode || item->itemType == kSacredBoneHelmCode) // mask, bone helm
+                                itemShouldBeAdded = itemBaseType == kSpecialHelmType;
+                            else if (item->itemType == kSacredCrownCode) // crown
+                                itemShouldBeAdded = itemBaseType == kCrownType;
+                            else if (item->itemType == kSacredSpikedShieldCode || item->itemType == kSacredBoneShieldCode) // spiked/bone shield
+                                itemShouldBeAdded = itemBaseType == kSpecialShieldType;
+                            else // default filter
+                                itemShouldBeAdded = kItemTypesInfo->value(jter.key()).contains(itemBaseType);
+                        }
 
                         if (itemShouldBeAdded)
                         {
@@ -489,8 +520,17 @@ void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
                     QMap<QString, ItemsList> sortedItemsByType; // using QMap instead of QHash to have determined order
                     foreach (ItemInfo *item, itemBaseTypeItems)
                     {
-                        QString itemName = ItemDataBase::Items()->value(item->itemType)->name;
-                        sortedItemsByType[itemName.left(itemName.lastIndexOf('(')).trimmed()] << item;
+                        ItemBase *baseInfo = kItemsBaseInfo->value(item->itemType);
+                        QString itemName = baseInfo->name, key = itemName.left(itemName.lastIndexOf('(')).trimmed();
+                        if (itemBaseType == "hamm")
+                        {
+                            // both 1h and 2h hammers have same type, so the key must be modified to force correct order
+                            if (baseInfo->is2h)
+                                key.prepend(QString::number(5 - baseInfo->height)); // maul has height 4, and great maul - 3
+                            else
+                                key.prepend("0");
+                        }
+                        sortedItemsByType[key] << item;
 
                         selectedItems.removeOne(item);
                     }
@@ -503,12 +543,9 @@ void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
                     }
 
                     // save new order
-                    int row = 0, col = 0;
                     foreach (const ItemsList &items, sortedItemsByType)
                     {
-                        storeItemsOnPage(items, sortQuality == Quest ? false : true, page, &row, &col);
-
-                        row = col = 0;
+                        storeItemsOnPage(items, sortQuality == Quest ? false : true, page);
                         ++page; // start new sub-type from new page
                     }
 
@@ -559,7 +596,7 @@ void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
                     ItemsList &items = jter.value();
                     for (int i = 0; i < items.size(); ++i)
                     {
-                        if (ItemDataBase::ItemTypes()->value(jter.key()).contains(itemBaseType))
+                        if (kItemTypesInfo->value(jter.key()).contains(itemBaseType))
                         {
                             itemBaseTypeItems << items.at(i);
                             items.removeAt(i--);
@@ -575,8 +612,6 @@ void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
 
             if (!itemBaseTypeItems.isEmpty())
             {
-                bool isGem = itemBaseType.startsWith("gem");
-
                 QMap<QByteArray, ItemsList> sortedItemsByType; // using QMap instead of QHash to have determined order
                 bool isRune = itemBaseType == "rune", isClassCharm_ = itemBaseType.startsWith("ara"), isCharm = ItemDataBase::isUberCharm(itemBaseType), isMO = itemBaseType.startsWith("asa");
                 if (isRune || isClassCharm_ || isCharm)
@@ -585,7 +620,7 @@ void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
                 {
                     // (U)MOs are sorted by image name at first
                     foreach (ItemInfo *item, itemBaseTypeItems)
-                        sortedItemsByType[ItemDataBase::Items()->value(item->itemType)->imageName] << item;
+                        sortedItemsByType[kItemsBaseInfo->value(item->itemType)->imageName] << item;
                     // and then by type
                     for (QMap<QByteArray, ItemsList>::iterator jter = sortedItemsByType.begin(), endJter = sortedItemsByType.end(); jter != endJter; ++jter)
                     {
@@ -595,19 +630,26 @@ void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
                 }
                 else // gems
                 {
-                    qSort(itemBaseTypeItems.begin(), itemBaseTypeItems.end(), compareItemsByRlvl); // to sort gems by quality, sort by rlvl
-                    sortedItemsByType["foo"] = itemBaseTypeItems; // key doesn't matter
+                    // sort gems by type at first using specified order
+                    foreach (ItemInfo *item, itemBaseTypeItems)
+                        sortedItemsByType[gemTypesOrderMapping().value(kItemsBaseInfo->value(item->itemType)->types.first())] << item;
+                    // to sort gems by quality, sort by rlvl
+                    for (QMap<QByteArray, ItemsList>::iterator jter = sortedItemsByType.begin(), endJter = sortedItemsByType.end(); jter != endJter; ++jter)
+                    {
+                        ItemsList &items = jter.value();
+                        qSort(items.begin(), items.end(), compareItemsByRlvl);
+                    }
                 }
 
                 // save new order
+                bool isGemOrRune = itemBaseType.startsWith("gem") || isRune;
                 int row = 0, col = 0;
                 foreach (const ItemsList &items, sortedItemsByType)
                 {
-                    // TODO: fix runes/gems
                     storeItemsOnPage(items, true, page, &row, &col);
 
                     col = 0;
-                    if (startEachGemAndRuneFromNewRow && ((noNewPageInsideGemsAndRunes && isRune) || (noNewPageInsideClassCharms && isClassCharm_)))
+                    if (startEachGemAndRuneFromNewRow && ((noNewPageInsideGemsAndRunes && isGemOrRune) || (noNewPageInsideClassCharms && isClassCharm_)))
                         ++row;
                     else
                     {
@@ -619,7 +661,7 @@ void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
                         selectedItems.removeOne(item);
                 }
                 // gems are stored separately
-                if ((noNewPageInsideGemsAndRunes && (isRune || isGem)) || (noNewPageInsideClassCharms && isClassCharm_))
+                if ((noNewPageInsideGemsAndRunes && isGemOrRune) || (noNewPageInsideClassCharms && isClassCharm_))
                     ++page;
 
                 if (baseTypesProcessed++ < miscBaseTypesOrder.size() - 1)
@@ -770,6 +812,12 @@ void PlugyItemsSplitter::storeItemsOnPage(const ItemsList &items, bool shouldSta
     ItemInfo *previousItem = 0;
     int rowFoo = 0, colBar = 0;
     int &row = pRow ? *pRow : rowFoo, &col = pCol ? *pCol : colBar;
+    if (row >= rows)
+    {
+        row = 0;
+        ++page;
+    }
+
     foreach (ItemInfo *item, items)
     {
         ItemBase *baseInfo = ItemDataBase::Items()->value(item->itemType);
@@ -779,9 +827,8 @@ void PlugyItemsSplitter::storeItemsOnPage(const ItemsList &items, bool shouldSta
                 previousItem = item;
             else if (previousItem->itemType != item->itemType || (areBothItemsSetOrUnique(item, previousItem) && previousItem->setOrUniqueId != item->setOrUniqueId))
             {
-                // if another tier item or set piece fits current row, simulate the opposite
-                if (col + baseInfo->width <= columns)
-                    col = columns;
+                // set wrong column value to switch to new row
+                col = columns;
                 previousItem = item;
             }
         }
@@ -789,7 +836,7 @@ void PlugyItemsSplitter::storeItemsOnPage(const ItemsList &items, bool shouldSta
         if (col + baseInfo->width > columns)
         {
             // switch to new row
-            row += baseInfo->height;
+            row += baseInfo->height; // TODO: use height of first item in previous row
             col = 0;
 
             if (row + baseInfo->height > rows)

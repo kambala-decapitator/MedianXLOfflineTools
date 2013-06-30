@@ -2,21 +2,8 @@
 # empty lines and text after '#' are ignored
 # do NOT change file encoding (it's Latin1 aka ISO 8859-1)
 
-# cLOD gems
-gemr # ruby
-gems # sapphire
-geme # emerald
-gemt # topaz
-gemd # diamond
-gema # amethyst
-gemz # skull
-# MXL gems
-gemp # bloodstone
-gemq # onyx
-gemo # turquoise
-geml # amber
-gemx # rainbow
-
+# types containing . are treated as regular expression
+gem.  # gem  (hardcoded ordering: cLOD - MXL)
 rune  # rune (hardcoded ordering: cLOD - MXL - Great - Ultimative)
 asaa  # MO   (hardcoded ordering: any - armor - ring/amulet - weapon)
 asa\# # UMO (backslash is intended; sorting order same as MO)

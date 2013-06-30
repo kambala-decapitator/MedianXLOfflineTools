@@ -6,7 +6,7 @@ v0.4:
 - cyclic arrow navigation between items
 - batch eat signets (add a button)
 - ctc Miasma MO removal (doesn't appear)
-- +%d magic damage
+- +%d magic damage (Magic Rune)
 
 future versions:
 - show UMO properties

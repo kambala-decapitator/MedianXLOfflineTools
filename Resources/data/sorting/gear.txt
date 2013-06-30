@@ -8,7 +8,7 @@ crsd # crystal sword
 axe  # 1h axe
 2hax # 2h axe
 mace # mace
-hamm # 1h hammer
+hamm # hammers (1h/2h differentiation is done in code)
 scep # scepter
 jave # javelin
 spea # spear
