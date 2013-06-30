@@ -41,6 +41,8 @@ public:
 
     static bool isClassCharm(const QByteArray &itemType);
     static bool isClassCharm(ItemInfo *item);
+    static bool isUberCharm(const QList<QByteArray> &itemBaseTypes);
+    static bool isUberCharm(const QByteArray &itemBaseType);
     static bool isUberCharm(ItemInfo *item);
     static bool isGenericSocketable(ItemInfo *item); // checks if an item is a gem or a rune
     static bool isCube(ItemInfo *item);

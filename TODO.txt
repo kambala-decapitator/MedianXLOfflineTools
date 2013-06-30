@@ -26,5 +26,6 @@ future versions:
 - item requirements (compare with actual stat values)
 - display skill tree and skills allocation
 - moving/swaping pages
+- batch apply MO to item
 - fix multiple colors in one line, e.g. Statue of Ultimative v6b
 - figure out how to merge item descriptions from propertiesdisplaymanager and propertiesviewerwidget

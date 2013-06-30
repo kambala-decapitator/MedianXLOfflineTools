@@ -319,3 +319,8 @@ bool compareItemsByRlvl(ItemInfo *a, ItemInfo *b)
             return a->setOrUniqueId < b->setOrUniqueId;
     return ItemDataBase::Items()->value(a->itemType)->rlvl < ItemDataBase::Items()->value(b->itemType)->rlvl;
 }
+
+bool compareItemsByCode(ItemInfo *a, ItemInfo *b)
+{
+    return a->itemType < b->itemType;
+}

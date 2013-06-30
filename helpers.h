@@ -79,5 +79,6 @@ bool isArcaneShard4(ItemInfo *item);
 // sorting predicates
 bool compareItemsByPlugyPage(ItemInfo *a, ItemInfo *b);
 bool compareItemsByRlvl(ItemInfo *a, ItemInfo *b);
+bool compareItemsByCode(ItemInfo *a, ItemInfo *b);
 
 #endif // HELPERS_H

@@ -411,8 +411,6 @@ void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
         itemsByQuality[key] << item;
     }
 
-    bool noNewPageInsideGemsAndRunes = true, startEachGemAndRuneFromNewRow = true, noNewPageInsideClassCharms = true, startEachClassCharmFromNewRow = true;
-
     quint32 page = sortOptions.firstPage;
     QMap<int, ItemsList>::const_iterator    iter = sortOptions.isQualityOrderAscending ? itemsByQuality.constBegin() : itemsByQuality.constEnd() - 1;
     QMap<int, ItemsList>::const_iterator endIter = sortOptions.isQualityOrderAscending ? itemsByQuality.constEnd()   : itemsByQuality.constBegin() - 1;
@@ -450,7 +448,7 @@ void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
             foreach (const QByteArray &itemBaseType, gearBaseTypesOrder)
             {
                 ItemsList itemBaseTypeItems = itemsByBaseType.take(itemBaseType);
-                // add sacred items or charms
+                // add sacred items
                 QHash<QByteArray, ItemsList>::iterator jter = itemsByBaseType.begin(), endJter = itemsByBaseType.end();
                 while (jter != endJter)
                 {
@@ -487,51 +485,32 @@ void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
 
                 if (!itemBaseTypeItems.isEmpty())
                 {
-                    QMap<QString, ItemsList> sortedItemsByType;
-                    bool isRune = itemBaseType == "rune", isClassCharm_ = itemBaseType.startsWith("ara");
-                    if (isRune || isClassCharm_)
+                    // sort items by types (broad sword, scimitar, etc.). use item names (text before brackets) to determine sub-type.
+                    QMap<QString, ItemsList> sortedItemsByType; // using QMap instead of QHash to have determined order
+                    foreach (ItemInfo *item, itemBaseTypeItems)
                     {
-                        // runes and class charms are simply sorted by item code
-                        sortedItemsByType = itemsSortedByType<QString>(itemBaseTypeItems);
-                    }
-                    else
-                    {
-                        // sort items by types (broad sword, scimitar, etc.). use item names (text before brackets) to determine sub-type.
-                        QMap<QString, ItemsList> itemsByType; // using QMap instead of QHash to have determined order
-                        foreach (ItemInfo *item, itemBaseTypeItems)
-                        {
-                            QString itemName = ItemDataBase::Items()->value(item->itemType)->name;
-                            itemsByType[itemName.left(itemName.lastIndexOf('(')).trimmed()] << item;
+                        QString itemName = ItemDataBase::Items()->value(item->itemType)->name;
+                        sortedItemsByType[itemName.left(itemName.lastIndexOf('(')).trimmed()] << item;
 
-                            selectedItems.removeOne(item);
-                        }
-                        // sort each group of items by tiers
-                        for (QMap<QString, ItemsList>::iterator jter = itemsByType.begin(), endJter = itemsByType.end(); jter != endJter; ++jter)
-                        {
-                            ItemsList &items = jter.value();
-                            // to sort by tiers, sort by rlvl. SUs are sorted by ID.
-                            qSort(items.begin(), items.end(), compareItemsByRlvl);
-                        }
-                        sortedItemsByType = itemsByType;
+                        selectedItems.removeOne(item);
                     }
+                    // sort each group of items by tiers
+                    for (QMap<QString, ItemsList>::iterator jter = sortedItemsByType.begin(), endJter = sortedItemsByType.end(); jter != endJter; ++jter)
+                    {
+                        ItemsList &items = jter.value();
+                        // to sort by tiers, sort by rlvl. SUs are sorted by ID.
+                        qSort(items.begin(), items.end(), compareItemsByRlvl);
+                    }
+
                     // save new order
-                    bool isGemOrRune = itemBaseType.startsWith("gem") || isRune;
                     int row = 0, col = 0;
                     foreach (const ItemsList &items, sortedItemsByType)
                     {
-                        storeItemsOnPage(items, sortQuality == Quest ? false : (isGemOrRune ? startEachGemAndRuneFromNewRow : true), page, &row, &col);
+                        storeItemsOnPage(items, sortQuality == Quest ? false : true, page, &row, &col);
 
-                        col = 0;
-                        if (startEachGemAndRuneFromNewRow && ((noNewPageInsideGemsAndRunes && isGemOrRune) || (noNewPageInsideClassCharms && isClassCharm_)))
-                            ++row;
-                        else
-                        {
-                            ++page; // start new sub-type from new page
-                            row = 0;
-                        }
+                        row = col = 0;
+                        ++page; // start new sub-type from new page
                     }
-                    if ((noNewPageInsideGemsAndRunes && isGemOrRune) || (noNewPageInsideClassCharms && isClassCharm_))
-                        ++page;
 
                     if (baseTypesProcessed++ < gearBaseTypesOrder.size() - 1)
                         page += sortOptions.diffTypesBlankPages;
@@ -547,6 +526,8 @@ void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
     }
 
     // sort misc items
+    bool noNewPageInsideGemsAndRunes = true, startEachGemAndRuneFromNewRow = true, noNewPageInsideClassCharms = true, startEachClassCharmFromNewRow = true;
+    int baseTypesProcessed = 0;
     QHash<QByteArray, ItemsList> itemsByBaseType = itemsSortedByBaseType(selectedItems);
     foreach (const QByteArray &itemBaseType, miscBaseTypesOrder)
     {
@@ -569,15 +550,90 @@ void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
                 }
             }
             else
+            {
                 itemBaseTypeItems = itemsByBaseType.take(itemBaseType);
+                // add 'inherited' items
+                QHash<QByteArray, ItemsList>::iterator jter = itemsByBaseType.begin(), endJter = itemsByBaseType.end();
+                while (jter != endJter)
+                {
+                    ItemsList &items = jter.value();
+                    for (int i = 0; i < items.size(); ++i)
+                    {
+                        if (ItemDataBase::ItemTypes()->value(jter.key()).contains(itemBaseType))
+                        {
+                            itemBaseTypeItems << items.at(i);
+                            items.removeAt(i--);
+                        }
+                    }
+
+                    if (items.isEmpty())
+                        jter = itemsByBaseType.erase(jter);
+                    else
+                        ++jter;
+                }
+            }
+
+            if (!itemBaseTypeItems.isEmpty())
+            {
+                bool isGem = itemBaseType.startsWith("gem");
+
+                QMap<QByteArray, ItemsList> sortedItemsByType; // using QMap instead of QHash to have determined order
+                bool isRune = itemBaseType == "rune", isClassCharm_ = itemBaseType.startsWith("ara"), isCharm = ItemDataBase::isUberCharm(itemBaseType), isMO = itemBaseType.startsWith("asa");
+                if (isRune || isClassCharm_ || isCharm)
+                    sortedItemsByType = itemsSortedByType<QByteArray>(itemBaseTypeItems); // runes and charms are simply sorted by item code
+                else if (isMO)
+                {
+                    // (U)MOs are sorted by image name at first
+                    foreach (ItemInfo *item, itemBaseTypeItems)
+                        sortedItemsByType[ItemDataBase::Items()->value(item->itemType)->imageName] << item;
+                    // and then by type
+                    for (QMap<QByteArray, ItemsList>::iterator jter = sortedItemsByType.begin(), endJter = sortedItemsByType.end(); jter != endJter; ++jter)
+                    {
+                        ItemsList &items = jter.value();
+                        qSort(items.begin(), items.end(), compareItemsByCode);
+                    }
+                }
+                else // gems
+                {
+                    qSort(itemBaseTypeItems.begin(), itemBaseTypeItems.end(), compareItemsByRlvl); // to sort gems by quality, sort by rlvl
+                    sortedItemsByType["foo"] = itemBaseTypeItems; // key doesn't matter
+                }
+
+                // save new order
+                int row = 0, col = 0;
+                foreach (const ItemsList &items, sortedItemsByType)
+                {
+                    // TODO: fix runes/gems
+                    storeItemsOnPage(items, true, page, &row, &col);
+
+                    col = 0;
+                    if (startEachGemAndRuneFromNewRow && ((noNewPageInsideGemsAndRunes && isRune) || (noNewPageInsideClassCharms && isClassCharm_)))
+                        ++row;
+                    else
+                    {
+                        ++page; // start new sub-type from new page
+                        row = 0;
+                    }
+
+                    foreach (ItemInfo *item, items)
+                        selectedItems.removeOne(item);
+                }
+                // gems are stored separately
+                if ((noNewPageInsideGemsAndRunes && (isRune || isGem)) || (noNewPageInsideClassCharms && isClassCharm_))
+                    ++page;
+
+                if (baseTypesProcessed++ < miscBaseTypesOrder.size() - 1)
+                    page += sortOptions.diffTypesBlankPages;
+            }
         }
-        else
+        else // thng
         {
 
         }
     }
 
     // place everything else
+    qDebug() << "items left" << selectedItems.size();
     int row = 0, col = 0;
     foreach (const ItemsList &items, itemsSortedByType<QByteArray>(selectedItems))
         storeItemsOnPage(items, false, page, &row, &col);

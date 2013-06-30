@@ -2,12 +2,25 @@
 # empty lines and text after '#' are ignored
 # do NOT change file encoding (it's Latin1 aka ISO 8859-1)
 
-# types containing . are treated as regular expression
-gem.  # gem  (hardcoded ordering: cLOD - MXL)
+# cLOD gems
+gemr # ruby
+gems # sapphire
+geme # emerald
+gemt # topaz
+gemd # diamond
+gema # amethyst
+gemz # skull
+# MXL gems
+gemp # bloodstone
+gemq # onyx
+gemo # turquoise
+geml # amber
+gemx # rainbow
+
 rune  # rune (hardcoded ordering: cLOD - MXL - Great - Ultimative)
-asaa  # MO
-asa\# # UMO (backslash is intended)
-ara.  # class charm
+asaa  # MO   (hardcoded ordering: any - armor - ring/amulet - weapon)
+asa\# # UMO (backslash is intended; sorting order same as MO)
+ara.  # class charm (regular expression)
 char  # charm
 
 # next comes a special block of items which can be reordered only 'internally',

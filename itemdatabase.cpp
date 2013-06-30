@@ -647,9 +647,19 @@ bool ItemDataBase::isClassCharm(ItemInfo *item)
     return isClassCharm(item->itemType);
 }
 
+bool ItemDataBase::isUberCharm(const QList<QByteArray> &itemBaseTypes)
+{
+    return ItemParser::itemTypesInheritFromType(itemBaseTypes, "char");
+}
+
+bool ItemDataBase::isUberCharm(const QByteArray &itemBaseType)
+{
+    return isUberCharm(QList<QByteArray>() << itemBaseType);
+}
+
 bool ItemDataBase::isUberCharm(ItemInfo *item)
 {
-    return item->isEar ? false : ItemParser::itemTypesInheritFromType(Items()->value(item->itemType)->types, "char");
+    return isUberCharm(Items()->value(item->itemType)->types);
 }
 
 bool ItemDataBase::isGenericSocketable(ItemInfo *item)
