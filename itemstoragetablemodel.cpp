@@ -50,9 +50,6 @@ QVariant ItemStorageTableModel::data(const QModelIndex &index, int role) const
         QPixmap pixmap(32, 32);
         pixmap.fill(color);
         return pixmap;
-//        QPainter p(&pixmap);
-//        p.setOpacity(0.6);
-//        p.end();
     }
 
     if (_dragOriginIndex != index)
@@ -73,7 +70,7 @@ QVariant ItemStorageTableModel::data(const QModelIndex &index, int role) const
                 }
             }
             if (!isSetOrUniqueImage && item->variableGraphicIndex && QRegExp("\\d$").indexIn(imageName) == -1)
-                imageName += QString::number(item->variableGraphicIndex/* > 6 ? 6 : item->variableGraphicIndex*/);
+                imageName += QString::number(item->variableGraphicIndex > 6 ? 6 : item->variableGraphicIndex);
 
             QString imagePath = ResourcePathManager::pathForImageName(imageName);
             bool doesImageExist = QFile::exists(imagePath);

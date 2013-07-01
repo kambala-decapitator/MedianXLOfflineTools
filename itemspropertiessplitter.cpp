@@ -365,7 +365,7 @@ void ItemsPropertiesSplitter::dumpInfo(ItemInfo *item /*= 0*/)
     bool isSetOrUnique = areBothItemsSetOrUnique(item, item); // hacky code :)
 
 #ifndef QT_NO_DEBUG
-    qDebug() << ItemParser::itemStorageAndCoordinatesString("location %1, row %2, col %3, equipped in %4", item) << "quality" << quality << "code" << item->itemType << "types" << base->types << "image" << base->imageName;
+    qDebug() << ItemParser::itemStorageAndCoordinatesString("location %1, row %2, col %3, equipped in %4", item) << "quality" << quality << "code" << item->itemType << "types" << base->types << "image" << base->imageName << "quest ID" << base->questId;
     if (isSetOrUnique)
         qDebug() << "set/unique ID" << item->setOrUniqueId;
     qDebug("--------------------");
@@ -374,8 +374,8 @@ void ItemsPropertiesSplitter::dumpInfo(ItemInfo *item /*= 0*/)
     QString types;
     foreach (const QByteArray &type, base->types)
         types += type + ", ";
-    INFO_BOX(QString("%1\nquality %2, set/unique ID %3\ncode %4, types: %5\nimage %6").arg(ItemParser::itemStorageAndCoordinatesString("location %1, row %2, col %3, equipped in %4", item))
-        .arg(quality).arg(isSetOrUnique ? item->setOrUniqueId : 0).arg(item->itemType.data()).arg(types).arg(base->imageName.data()));
+    INFO_BOX(QString("%1\nquality %2, set/unique ID %3\ncode %4, types: %5\nimage %6, quest ID %7").arg(ItemParser::itemStorageAndCoordinatesString("location %1, row %2, col %3, equipped in %4", item))
+        .arg(quality).arg(isSetOrUnique ? item->setOrUniqueId : 0).arg(item->itemType.data()).arg(types).arg(base->imageName.data()).arg(base->questId));
 }
 #endif
 

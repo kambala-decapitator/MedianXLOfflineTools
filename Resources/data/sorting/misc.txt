@@ -9,24 +9,28 @@ asaa  # MO   (hardcoded ordering: any - armor - ring/amulet - weapon)
 asa\# # UMO (backslash is intended; sorting order same as MO)
 ara.  # class charm (regular expression)
 char  # charm
+poti  # signet, moon symbol, apple
+hpot  # elixir, goodberry, healing potion
+mpot  # mana potion
 
 # next comes a special block of items which can be reordered only 'internally',
 # i.e. you can reorder only types inside the 'thng' block.
 # types inside the block are indented with tab, don't break the indentation please.
 # not all 'thng' items are present in the list: feel free to add more from thng_list.txt file.
 # string is interpreted as a regular expression, just escape # characters with \# (see UMO for exmaple)
-# you can separate multiple regular expressions for one group of items with ,  (see trophy for example)
+# you can separate multiple regular expressions for one group of items with |  (see trophy for example)
 thng
 	!@[1-5]         # evil eye
 	!@[6-9A]        # dogma of ...
 	\#X[1-6]        # token of ... (same names as in dogmas)
-	\\\\[1-5]       # great gem
-	Kx\d,r9\d       # elemental stone, unknown skull
+	\|\|.           # token ingredients (crystals, books)
+	Kx\d|r9\d       # elemental stone, unknown skull
 	[A-Z]\d\+       # shrine
-	µ\d\d,\#\#/,bxt # trophy
-	qul,\#[3-5]\^   # arcane shard
+	µ\d\d|\#\#/|bxt # trophy
+	qul|\#[3-5]\^   # arcane shard
 	qu[^l]          # arcane crystal
 	\doµ            # catalyst/oil
 	2x\d            # robot brain
 	[a-z]@\1        # duncraig sigil
+	\\\\[1-5]       # great gem
 	\d\d\-          # pearl of wisdom

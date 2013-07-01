@@ -616,7 +616,7 @@ void MedianXLOfflineTools::saveCharacter()
     for (QHash<Enums::ItemStorage::ItemStorageEnum, PlugyStashInfo>::iterator iter = _plugyStashesHash.begin(); iter != _plugyStashesHash.end(); ++iter)
     {
         const ItemsList &items = plugyItemsHash[iter.key()];
-        // if stash is empty, it must be re-saved anyway
+        // if stash is empty, it must be re-saved anyway because all items could have been deleted
         if (!items.isEmpty() && std::find_if(items.constBegin(), items.constEnd(), hasChanged) == items.constEnd())
             continue;
 
