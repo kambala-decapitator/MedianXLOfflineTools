@@ -25,7 +25,7 @@ StashSortingOptionsDialog::StashSortingOptionsDialog(quint32 lastPage, QWidget *
     ui->lastPageSpinBox->setMaximum(lastPage);
     ui->lastPageSpinBox->setValue(lastPage);
 
-    QStringList qualitiesList = QStringList() << tr("Low Quality") << tr("Normal") << tr("Superior") << tr("RW") << tr("Magic") << tr("Honorific") << tr("Rare") << tr("Crafted") << tr("Unique") << tr("Set");
+    QStringList qualitiesList = QStringList() << tr("Misc items") << tr("Low Quality") << tr("Normal") << tr("Superior") << tr("RW") << tr("Magic") << tr("Honorific") << tr("Rare") << tr("Crafted") << tr("Unique") << tr("Set");
     ui->ascQualityRadioButton->setToolTip(qualitiesList.join(",\n"));
 
     std::reverse(qualitiesList.begin(), qualitiesList.end());
