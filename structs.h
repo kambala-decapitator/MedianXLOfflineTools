@@ -180,7 +180,7 @@ struct ItemPropertyTxt
     quint8 descFunc, descPriority, descVal;
     quint8 descGroupFunc, descGroupPriority, descGroupVal;
     quint8 saveParamBits;
-    // 'stat' column isn't needed
+    QByteArray stat;
 };
 
 struct SetOrUniqueItemInfo
@@ -248,7 +248,7 @@ struct SocketableItemInfo
 
 struct StashSortOptions
 {
-    bool isQualityOrderAscending;
+    bool isQualityOrderAscending, isEachTypeFromNewPage;
     bool separateSacredItems, separateEtherealItems, separateCotw, placeSimilarItemsOnOnePage;
     bool newRowTier, newRowCotw, newRowGemQuality, newRowVisuallyDifferent;
 

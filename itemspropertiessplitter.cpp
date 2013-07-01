@@ -39,7 +39,7 @@ void ItemsPropertiesSplitter::setModel(ItemStorageTableModel *model)
 {
     _itemsModel = model;
     _itemsView->setModel(model);
-    // TODO: [0.4] change signal to selectionChanged
+    // TODO: [0.5] change signal to selectionChanged
     connect(_itemsView->selectionModel(), SIGNAL(currentChanged(const QModelIndex &, const QModelIndex &)), SLOT(itemSelected(const QModelIndex &)));
     connect(_itemsModel, SIGNAL(itemMoved(const QModelIndex &, const QModelIndex &)), SLOT(moveItem(const QModelIndex &, const QModelIndex &)));
 }
@@ -186,7 +186,7 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
     {
         QList<QAction *> actions;
 
-        // TODO: 0.4
+        // TODO: 0.5
         //QMenu *menuExport = new QMenu(tr("Export as"), _itemsView);
         //menuExport->addActions(QList<QAction *>() << _itemActions[ExportBbCode] << _itemActions[ExportHtml]);
         //actions << menuExport->menuAction() << separator();
@@ -201,7 +201,7 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
             actions << menuDisenchant->menuAction();
         }
 
-        // TODO: 0.4
+        // TODO: 0.5
 //        if (item->isSocketed && item->socketablesNumber)
 //            actions << _itemActions[Unsocket];
 
@@ -393,7 +393,7 @@ void ItemsPropertiesSplitter::deleteItem(ItemInfo *item)
 
 void ItemsPropertiesSplitter::performDeleteItem(ItemInfo *item, bool emitSignal /*= true*/)
 {
-    // TODO: [0.4] add option to unsocket at first
+    // TODO: [0.5] add option to unsocket at first
     removeItemFromList(item, emitSignal);
     delete item;
 }
@@ -732,7 +732,7 @@ void ItemsPropertiesSplitter::createItemActions()
     _itemsView->addAction(actionShards);
     _itemActions[DisenchantShards] = actionShards;
 
-    // TODO: [0.4] unsocket
+    // TODO: [0.5] unsocket
 //    QAction *actionUnsocket = new QAction(tr("Unsocket"), _itemsView);
 //    connect(actionUnsocket, SIGNAL(triggered()), SLOT(unsocketItem()));
 //    _itemsView->addAction(actionUnsocket);

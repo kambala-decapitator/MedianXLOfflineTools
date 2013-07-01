@@ -118,7 +118,7 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *pare
     _showDisenchantPreviewGroup->addAction(ui->actionPreviewDisenchantNever);
 
 
-    // TODO: [0.4] remove when implementing export info
+    // TODO: [0.5] remove when implementing export info
     ui->menuExport->removeAction(ui->actionExportCharacterInfo);
     ui->mainToolBar->removeAction(ui->actionExportCharacterInfo);
 
@@ -1957,7 +1957,7 @@ bool MedianXLOfflineTools::processSaveFile()
     quint16 skills = 0, maxPossibleSkills = totalPossibleSkillPoints();
     charInfo.basicInfo.skills.clear();
     int skillsNumber = isSigma() ? 35 : kSkillsNumber;
-    // TODO: fix for Sigma
+    // TODO: [later] fix for Sigma
     if (!isSigma())
     {
         charInfo.basicInfo.skills.reserve(skillsNumber);

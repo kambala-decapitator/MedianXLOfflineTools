@@ -387,6 +387,22 @@
     </property>
    </widget>
   </widget>
+  <widget class="QCheckBox" name="eachTypeFromNewPageCheckBox">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>240</y>
+     <width>196</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Start each item type from new page</string>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+  </widget>
  </widget>
  <tabstops>
   <tabstop>descQualityRadioButton</tabstop>

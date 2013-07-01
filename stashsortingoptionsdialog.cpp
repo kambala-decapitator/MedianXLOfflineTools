@@ -49,6 +49,7 @@ StashSortOptions StashSortingOptionsDialog::sortOptions() const
 {
     StashSortOptions options;
     options.isQualityOrderAscending = ui->ascQualityRadioButton->isChecked();
+    options.isEachTypeFromNewPage = ui->eachTypeFromNewPageCheckBox->isChecked();
     options.separateSacredItems = ui->separateSacredsCheckBox->isChecked();
     options.separateEtherealItems = ui->separateEthCheckBox->isChecked();
     options.separateCotw = ui->separateCotwCheckBox->isChecked();
@@ -115,19 +116,23 @@ void StashSortingOptionsDialog::createLayout()
     vbl->addWidget(ui->lineNewRowBox);
     vbl->addWidget(ui->newRowVisuallyDifferentCheckBox);
 
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+
     QHBoxLayout *hbl = new QHBoxLayout;
     hbl->addWidget(ui->itemQualityOrderingGroupBox);
     hbl->addWidget(ui->pageRangeGroupBox);
     hbl->addWidget(ui->blankPagesGroupBox);
-
-    QHBoxLayout *hbl1 = new QHBoxLayout;
-    hbl1->addWidget(ui->additionalNewPageGroupBox);
-    hbl1->addWidget(ui->newRowGroupBox);
-
-    QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->addLayout(hbl);
-    mainLayout->addLayout(hbl1);
-    mainLayout->addWidget(ui->buttonBox);
+
+    hbl = new QHBoxLayout;
+    hbl->addWidget(ui->additionalNewPageGroupBox);
+    hbl->addWidget(ui->newRowGroupBox);
+    mainLayout->addLayout(hbl);
+
+    hbl = new QHBoxLayout;
+    hbl->addWidget(ui->eachTypeFromNewPageCheckBox);
+    hbl->addWidget(ui->buttonBox);
+    mainLayout->addLayout(hbl);
 
     adjustSize();
     setFixedSize(size());
@@ -138,6 +143,7 @@ void StashSortingOptionsDialog::loadSettings()
     QSettings settings;
     settings.beginGroup("sortDialog");
     ui->buttonGroup->button(settings.value("qualityOrdering", 0).toInt())->setChecked(true);
+    ui->eachTypeFromNewPageCheckBox->setChecked(settings.value("eachTypeFromNewPage", true).toBool());
 
     settings.beginGroup("blankPages");
     ui->diffQualitiesSpinBox->setValue(settings.value("qualities", 0).toInt());
@@ -166,6 +172,7 @@ void StashSortingOptionsDialog::saveSettings()
     QSettings settings;
     settings.beginGroup("sortDialog");
     settings.setValue("qualityOrdering", ui->buttonGroup->checkedId());
+    settings.setValue("eachTypeFromNewPage", ui->eachTypeFromNewPageCheckBox->isChecked());
 
     settings.beginGroup("blankPages");
     settings.setValue("qualities", ui->diffQualitiesSpinBox->value());

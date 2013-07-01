@@ -221,8 +221,8 @@ public:
         EnhancedDamage,
         MinimumDamage = 21,
         MaximumDamage,
-        MinimumDamageSecondary,
-        MaximumDamageSecondary,
+        MinimumDamageSecondary, // these 2 properties are the
+        MaximumDamageSecondary, // combined 'adds x-y damage'
         Defence = 31,
         Durability = 72,
         DurabilityMax,

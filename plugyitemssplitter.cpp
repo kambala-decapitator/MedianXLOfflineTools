@@ -271,7 +271,7 @@ ItemsList PlugyItemsSplitter::disenchantAllItems(bool toShards, bool upgradeToCr
                 }
             }
             INFO_BOX(tr("New items have been stored starting from page %1").arg(pageWithNewItems));
-            // TODO: [0.4+] optimize
+            // TODO: [0.5+] optimize
 //            QFutureWatcher<void> *watcher = new QFutureWatcher<void>;
 //            A *a = new A;
 //            connect(watcher, SIGNAL(started()), a, SLOT(started()));
@@ -387,7 +387,7 @@ void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
             end = line.indexOf('#', end + 1);
         } while (end != -1 && line.at(end - 1) == '\\');
 
-        QByteArray baseType = line.left(end).trimmed().replace("\\#", "#");
+        QByteArray baseType = line.left(end != -1 ? end : line.length()).trimmed().replace("\\#", "#");
         if (isThngType)
         {
             if (isLineIndented)
@@ -670,7 +670,36 @@ void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
         }
         else // thng
         {
+            ItemsList thngItems = itemsByBaseType.value(itemBaseType);
+            foreach (const QByteArray &thngType, thngTypesOrder)
+            {
+                QRegExp re(thngType);
+                QMap<QByteArray, ItemsList> sortedItemsByType;
+                for (int i = 0; i < thngItems.size(); ++i)
+                {
+                    ItemInfo *item = thngItems.at(i);
+                    if (re.indexIn(item->itemType) != -1)
+                    {
+                        sortedItemsByType[item->itemType] << item;
+                        thngItems.removeAt(i--);
+                    }
+                }
 
+                // save new order
+                int row = 0, col = 0;
+                foreach (const ItemsList &items, sortedItemsByType)
+                {
+                    storeItemsOnPage(items, true, page, &row, &col);
+
+                    row += 2; // TODO: use correct height
+                    col = 0;
+
+                    foreach (ItemInfo *item, items)
+                        selectedItems.removeOne(item);
+                }
+
+                page += 1 + sortOptions.diffTypesBlankPages;
+            }
         }
     }
 

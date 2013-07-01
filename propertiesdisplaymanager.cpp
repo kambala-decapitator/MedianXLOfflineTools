@@ -57,7 +57,7 @@ QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item)
             runes += ItemDataBase::Socketables()->value(socketable->itemType)->letter;
     if (!runes.isEmpty()) // gem-/jewelwords don't have any letters
         itemDescription += QString("\n'%1'").arg(runes);
-    
+
     quint8 clvl = CharacterInfo::instance().basicInfo.level;
     ItemProperty *foo = new ItemProperty;
     if (itemBase->genericType == Enums::ItemTypeGeneric::Armor)
@@ -78,9 +78,11 @@ QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item)
     }
     else if (itemBase->genericType == Enums::ItemTypeGeneric::Weapon)
     {
-        // TODO: use lambda to calculate damage
-        int ed = allProps.value(Enums::ItemProperties::EnhancedDamage, foo)->value, minDmgProp = allProps.value(Enums::ItemProperties::MinimumDamage, foo)->value;
-        int maxDmgTotal = allProps.value(Enums::ItemProperties::MaximumDamage, foo)->value + (allProps.value(Enums::ItemProperties::MaximumDamageBasedOnClvl, foo)->value * clvl) / 32;
+        // TODO: [later] use lambda to calculate damage
+        int ed = allProps.value(Enums::ItemProperties::EnhancedDamage, foo)->value;
+        int minDmgTotal = allProps.value(Enums::ItemProperties::MinimumDamage, foo)->value + allProps.value(Enums::ItemProperties::MinimumDamageSecondary, foo)->value;
+        int maxDmgTotal = allProps.value(Enums::ItemProperties::MaximumDamage, foo)->value + allProps.value(Enums::ItemProperties::MaximumDamageSecondary, foo)->value +
+                          (allProps.value(Enums::ItemProperties::MaximumDamageBasedOnClvl, foo)->value * clvl) / 32;
         QString damageFormat = tr("%1 to %2", "min-max damage");
 
         if (itemBase->minThrowDmg && itemBase->maxThrowDmg)
@@ -91,7 +93,7 @@ QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item)
                 minDmg = (minDmg * (100 + ed)) / 100;
                 maxDmg = (maxDmg * (100 + ed)) / 100;
             }
-            minDmg += minDmgProp;
+            minDmg += minDmgTotal;
             maxDmg += maxDmgTotal;
 
             itemDescription += QString("%1: %2\n").arg(tr("Throw Damage"), damageFormat.arg(minDmg).arg(maxDmg));
@@ -105,9 +107,9 @@ QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item)
                 minDmg = (minDmg * (100 + ed)) / 100;
                 maxDmg = (maxDmg * (100 + ed)) / 100;
             }
-            minDmg += minDmgProp;
+            minDmg += minDmgTotal;
             maxDmg += maxDmgTotal;
-            
+
             itemDescription += QString("%1: %2\n").arg(tr("One-Hand Damage"), damageFormat.arg(minDmg).arg(maxDmg));
         }
 
@@ -119,9 +121,9 @@ QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item)
                 minDmg = (minDmg * (100 + ed)) / 100;
                 maxDmg = (maxDmg * (100 + ed)) / 100;
             }
-            minDmg += minDmgProp;
+            minDmg += minDmgTotal;
             maxDmg += maxDmgTotal;
-            
+
             itemDescription += QString("%1: %2\n").arg(tr("Two-Hand Damage"), damageFormat.arg(minDmg).arg(maxDmg));
         }
     }
@@ -140,24 +142,14 @@ QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item)
     if (itemBase->classCode > -1)
         itemDescription += "\n" + tr("(%1 Only)", "class-specific item").arg(Enums::ClassName::classes().at(itemBase->classCode));
 
-    // TODO: use lambda to calculate requirements
+    // TODO: [later] use lambda to calculate requirements
     if (itemBase->rdex)
-    {
-        int rdex = itemBase->rdex;
-        if (int requirements = allProps.value(Enums::ItemProperties::Requirements, foo)->value)
-            rdex = (rdex * (100 + requirements)) / 100;
-        if (rdex)
+        if (int rdex = itemBase->rdex + (itemBase->rdex * allProps.value(Enums::ItemProperties::Requirements, foo)->value) / 100)
             itemDescription += tr("Required Dexterity: %1").arg(rdex) + "\n";
-    }
 
     if (itemBase->rstr)
-    {
-        int rstr = itemBase->rstr;
-        if (int requirements = allProps.value(Enums::ItemProperties::Requirements, foo)->value)
-            rstr = (rstr * (100 + requirements)) / 100;
-        if (rstr)
+        if (int rstr = itemBase->rstr + (itemBase->rstr * allProps.value(Enums::ItemProperties::Requirements, foo)->value) / 100)
             itemDescription += tr("Required Strength: %1").arg(rstr) + "\n";
-    }
 
     int rlvl;
     switch (item->quality)
@@ -265,23 +257,37 @@ void PropertiesDisplayManager::addProperties(PropertiesMap *mutableProps, const 
     }
 }
 
-void PropertiesDisplayManager::constructPropertyStrings(const PropertiesMap &properties, QMap<quint8, ItemPropertyDisplay> *outDisplayPropertiesMap, bool shouldColor /*= false*/)
+void PropertiesDisplayManager::constructPropertyStrings(const PropertiesMap &properties, QMap<quint8, ItemPropertyDisplay> *outDisplayPropertiesMap, bool shouldColor /*= false*/, ItemInfo *item /*= 0*/)
 {
     QMap<quint8, ItemPropertyDisplay> propsDisplayMap;
     for (PropertiesMap::const_iterator iter = properties.constBegin(); iter != properties.constEnd(); ++iter)
     {
         ItemProperty *prop = iter.value();
         int propId = iter.key();
+
         // don't include secondary_(min/max)damage
-        if ((propId == Enums::ItemProperties::MinimumDamageSecondary && properties.contains(Enums::ItemProperties::MinimumDamage)) ||
-            (propId == Enums::ItemProperties::MaximumDamageSecondary && properties.contains(Enums::ItemProperties::MaximumDamage)))
+        QString hiddenPropertyText;
+        if (!item && ((propId == Enums::ItemProperties::MinimumDamageSecondary && properties.contains(Enums::ItemProperties::MinimumDamage)) ||
+                      (propId == Enums::ItemProperties::MaximumDamageSecondary && properties.contains(Enums::ItemProperties::MaximumDamage))))
         {
             continue;
+        }
+        else if (item)
+        {
+            // if it equals simple (min/max)damage
+            if (propId == Enums::ItemProperties::MinimumDamageSecondary || propId == Enums::ItemProperties::MaximumDamageSecondary)
+            {
+                if (isSecondaryDamageUsed(propId, prop->value, properties, item))
+                    hiddenPropertyText = QString(" [%1]").arg(tr("hidden", "secondary_(min/max)damage property"));
+                else
+                    continue;
+            }
         }
 
         QString displayString = prop->displayString.isEmpty() ? propertyDisplay(prop, propId, shouldColor) : prop->displayString;
         if (!displayString.isEmpty())
         {
+            displayString += hiddenPropertyText;
             if (propId == Enums::ItemProperties::ReplenishLife || propId == Enums::ItemProperties::ReplenishLifeBasedOnClvl)
             {
                 double lifePerSec = prop->value / 256.0;
@@ -332,24 +338,32 @@ void PropertiesDisplayManager::constructPropertyStrings(const PropertiesMap &pro
     *outDisplayPropertiesMap = propsDisplayMap;
 }
 
+bool PropertiesDisplayManager::isSecondaryDamageUsed(int secondaryDamageId, int secondaryDamageValue, const PropertiesMap &allProperties, ItemInfo *item)
+{
+    ItemProperty *foo = new ItemProperty;
+    int damageProperty = secondaryDamageId == Enums::ItemProperties::MaximumDamageSecondary ? Enums::ItemProperties::MaximumDamage : Enums::ItemProperties::MinimumDamage;
+    int damageValue = allProperties.value(damageProperty, foo)->value;
+    if (allProperties != item->rwProps)
+        foreach (ItemInfo *socketableItem, item->socketablesInfo)
+            damageValue -= socketableProperties(socketableItem, ItemDataBase::Items()->value(item->itemType)->socketableType).value(damageProperty, foo)->value;
+    delete foo;
+
+    return damageValue != secondaryDamageValue;
+}
+
 QString PropertiesDisplayManager::propertyDisplay(ItemProperty *propDisplay, int propId, bool shouldColor /*= false*/)
 {
-    Q_UNUSED(shouldColor);
-
     int value = propDisplay->value;
     if (!value)
         return QString();
 
     ItemPropertyTxt *prop = ItemDataBase::Properties()->value(propId);
-    QString description = value < 0 ? prop->descNegative : prop->descPositive, result;
-    if (prop->descStringAdd.contains(tr("Based on", "'based on level' property; translate only if Median XL is translated into your language! (i.e. there's localized data in Resources/data/<language>)")))
-    {
-        const CharacterInfo::CharacterInfoBasic &basicInfo = CharacterInfo::instance().basicInfo;
-        if (propId == Enums::ItemProperties::StrengthBasedOnBlessedLifeSlvl || propId == Enums::ItemProperties::DexterityBasedOnBlessedLifeSlvl)
-            value = basicInfo.classCode == Enums::ClassName::Paladin ? (value * basicInfo.skills.last()) / 32 : 0; // TODO: [0.4+] use ItemDataBase::Skills() to obtain Blessed Life index (649)
-        else // based on clvl
-            value = (value * basicInfo.level) / 32;
-    }
+
+    const CharacterInfo::CharacterInfoBasic &basicInfo = CharacterInfo::instance().basicInfo;
+    if (prop->stat.endsWith("perlevel")) // based on clvl
+        value = (value * basicInfo.level) / 32;
+    else if (prop->stat.endsWith("perblessedlife"))
+        value = basicInfo.classCode == Enums::ClassName::Paladin ? (value * basicInfo.skills.last()) / 32 : 0; // TODO: [0.5+] use ItemDataBase::Skills() to obtain Blessed Life index (649)
 
     char valueStringSigned[10];
 #ifdef Q_CC_MSVC
@@ -359,7 +373,7 @@ QString PropertiesDisplayManager::propertyDisplay(ItemProperty *propDisplay, int
 #endif
     (valueStringSigned, "%+d", value);
 
-
+    QString description = value < 0 ? prop->descNegative : prop->descPositive, result;
     switch (prop->descFunc) // it's described in http://phrozenkeep.hugelaser.com/index.php?ind=reviews&op=entry_view&iden=448 - ItemStatCost.txt tutorial
     {
     case 0:
@@ -406,6 +420,11 @@ QString PropertiesDisplayManager::propertyDisplay(ItemProperty *propDisplay, int
         result = tr("[special case %1, please report] %2 '%3' (id %4)").arg(prop->descFunc).arg(value).arg(description).arg(propId);
     }
     return result;
+}
+
+PropertiesMap PropertiesDisplayManager::socketableProperties(ItemInfo *socketableItem, qint8 socketableType)
+{
+    return ItemDataBase::isGenericSocketable(socketableItem) ? genericSocketableProperties(socketableItem, socketableType) : socketableItem->props;
 }
 
 PropertiesMap PropertiesDisplayManager::genericSocketableProperties(ItemInfo *socketableItem, qint8 socketableType)
