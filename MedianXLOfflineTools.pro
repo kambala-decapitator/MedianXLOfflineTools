@@ -9,9 +9,17 @@ TARGET = MedianXLOfflineTools
 TEMPLATE = app
 
 QT += network
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets # for Qt 5
+greaterThan(QT_MAJOR_VERSION, 4): {
+    DEFINES += IS_QT5
+    IS_QT5 = 1
+    QT += widgets
+}
 
-CONFIG(release, debug|release): DEFINES += QT_NO_DEBUG_OUTPUT QT_NO_WARNING_OUTPUT
+CONFIG(release, debug|release): {
+    IS_RELEASE_BUILD = 1
+    DEFINES += QT_NO_DEBUG_OUTPUT \
+               QT_NO_WARNING_OUTPUT
+}
 
 # app version
 NVER1 = 0
@@ -137,19 +145,6 @@ win32 {
                NVER2=$$NVER2 \
                NVER3=$$NVER3 \
                NVER4=$$NVER4
-
-#    CONFIG(release, debug|release) {
-#        appresources.path = $$DESTDIR
-#        appresources.files += resources/translations/*.qm
-#        appresources.files += resources/data/*
-#        appresources.files -= resources/data/items
-#        INSTALLS += appresources
-
-#        copyfiles.commands += @call xcopy resources\\translations\\*.qm $$DESTDIR\\resources\\translations\\ /Y /S
-#        copyfiles.commands += @call xcopy resources/data/* $$DESTDIR/resources/data/ /Y /S
-#        copyfiles.commands += @call rmdir $$DESTDIR/resources/data/items /S /Q
-#        QMAKE_EXTRA_TARGETS += copyfiles
-#    }
 }
 
 macx {
@@ -171,7 +166,10 @@ macx {
 
     ICON = resources/mac/icon.icns
 
-    greaterThan(QT_MAJOR_VERSION, 4) {
+    CONTENTS_PATH  = $${TARGET}.app/Contents
+    RESOURCES_PATH = $$CONTENTS_PATH/Resources
+
+    !isEmpty(IS_QT5) {
         # Qt 5 uses new approach to QMAKE_MAC_SDK. default value is ok.
         cache()
 
@@ -184,28 +182,28 @@ macx {
                              qtmacextras/qmacextrasglobal.h
     }
     else {
+        SDK_PATH_OLD = /Developer/SDKs
+        SDK_PATH_NEW = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform$$SDK_PATH_OLD
+
         # for Xcode 4.3+
-        MAC_SDK = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk
+        MAC_SDK = $$SDK_PATH_NEW/MacOSX10.8.sdk
         if (!exists($$MAC_SDK)) {
-            MAC_SDK = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk
+            MAC_SDK = $$SDK_PATH_NEW/MacOSX10.7.sdk
         }
         # for earlier versions
         if (!exists($$MAC_SDK)) {
-            MAC_SDK = /Developer/SDKs/MacOSX10.6.sdk
+            MAC_SDK = $$SDK_PATH_OLD/MacOSX10.6.sdk
         }
         if (!exists($$MAC_SDK)) {
-            MAC_SDK = /Developer/SDKs/MacOSX10.5.sdk
+            MAC_SDK = $$SDK_PATH_OLD/MacOSX10.5.sdk
         }
 
         # release build is intended to be compiled on 10.6 (or even earlier) for PPC support
-        CONFIG(release, debug|release) {
+        !isEmpty(IS_RELEASE_BUILD) {
             message(release build)
-            MAC_SDK = /Developer/SDKs/MacOSX10.5.sdk
+            MAC_SDK = $$SDK_PATH_OLD/MacOSX10.5.sdk
             CONFIG += x86 ppc
             QMAKE_MACOSX_DEPLOYMENT_TARGET = 10.5
-
-            appresources.files += resources/translations
-            appresources.files += resources/data
         }
 
         if (!exists($$MAC_SDK)) {
@@ -214,11 +212,27 @@ macx {
         QMAKE_MAC_SDK = $$MAC_SDK
     }
 
+    QMAKE_PRE_LINK = sed -e \'s/@APP_VERSION@/$$VERSION/\' -i \'\' $$CONTENTS_PATH/$$INFO_PLIST_NAME
+    isEmpty(IS_RELEASE_BUILD) {
+        # create symlinks instead of copying in debug mode
+        QMAKE_PRE_LINK += && ln -s $$_PRO_FILE_PWD_/resources/data         $$RESOURCES_PATH/data
+        QMAKE_PRE_LINK += && ln -s $$_PRO_FILE_PWD_/resources/translations $$RESOURCES_PATH/translations
+    }
+    else {
+        QMAKE_POST_LINK = rm -rf $$RESOURCES_PATH/data/items $$RESOURCES_PATH/translations/*.ts # remove unused files
+
+        appresources.files += resources/translations
+        appresources.files += resources/data
+
+#        removefiles.name = Remove unused files from the bundle
+#        removefiles.commands = rm -rf $$RESOURCES_PATH/data/items $$RESOURCES_PATH/translations/*.ts
+#        removefiles.target = removefiles
+#        QMAKE_EXTRA_TARGETS += removefiles
+    }
+
     appresources.files += resources/mac/locversion.plist
     appresources.path = Contents/Resources
     QMAKE_BUNDLE_DATA += appresources
-
-    QMAKE_PRE_LINK = sed -e \'s/@APP_VERSION@/$$VERSION/\' -i \'\' $${TARGET}.app/Contents/$$INFO_PLIST_NAME
 }
 else: SOURCES += messagecheckbox_p.cpp
 

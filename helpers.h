@@ -1,7 +1,10 @@
 #ifndef HELPERS_H
 #define HELPERS_H
 
+// for visual studio
+#ifndef IS_QT5
 #define IS_QT5 (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
+#endif
 
 // message boxes
 #include <QMessageBox>
