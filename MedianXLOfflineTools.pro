@@ -9,6 +9,7 @@ TARGET = MedianXLOfflineTools
 TEMPLATE = app
 
 QT += network
+
 greaterThan(QT_MAJOR_VERSION, 4): {
     DEFINES += IS_QT5
     IS_QT5 = 1
@@ -35,7 +36,7 @@ else                     : VERSION = $$sprintf("%1.%2.%3", $$NVER1, $$NVER2, $$N
 
 DEFINES += NVER_STRING=$$sprintf("\"\\\"%1\\\"\"", $$VERSION)
 
-# files
+# common files
 SOURCES += main.cpp \
            medianxlofflinetools.cpp \
            resurrectpenaltydialog.cpp \
@@ -128,6 +129,7 @@ OTHER_FILES += TODO.txt
 
 # QMAKE_CXXFLAGS += -std=c++11
 
+# platform-specific
 win32 {
     SOURCES += medianxlofflinetools_win.cpp \
                qtsingleapplication/qtlockedfile_win.cpp \
@@ -141,10 +143,12 @@ win32 {
 
     RC_FILE = resources/win/medianxlofflinetools.rc
 
+    # defines for .rc file
     DEFINES += NVER1=$$NVER1 \
                NVER2=$$NVER2 \
                NVER3=$$NVER3 \
                NVER4=$$NVER4
+    isEmpty(IS_RELEASE_BUILD): DEFINES += _DEBUG
 }
 
 macx {
@@ -155,7 +159,6 @@ macx {
                          fileassociationmanager_mac.mm
 
     OBJECTIVE_HEADERS += machelpers.h
-
 
     LIBS += -framework ApplicationServices \ # LSGetApplicationForInfo()
             -framework AppKit                # NSWindow calls to disable Lion window resoration and NSAlert
@@ -200,7 +203,6 @@ macx {
 
         # release build is intended to be compiled on 10.6 (or even earlier) for PPC support
         !isEmpty(IS_RELEASE_BUILD) {
-            message(release build)
             MAC_SDK = $$SDK_PATH_OLD/MacOSX10.5.sdk
             CONFIG += x86 ppc
             QMAKE_MACOSX_DEPLOYMENT_TARGET = 10.5
@@ -219,15 +221,11 @@ macx {
         QMAKE_PRE_LINK += && ln -s $$_PRO_FILE_PWD_/resources/translations $$RESOURCES_PATH/translations
     }
     else {
-        QMAKE_POST_LINK = rm -rf $$RESOURCES_PATH/data/items $$RESOURCES_PATH/translations/*.ts # remove unused files
-
-        appresources.files += resources/translations
         appresources.files += resources/data
+        appresources.files += resources/translations
 
-#        removefiles.name = Remove unused files from the bundle
-#        removefiles.commands = rm -rf $$RESOURCES_PATH/data/items $$RESOURCES_PATH/translations/*.ts
-#        removefiles.target = removefiles
-#        QMAKE_EXTRA_TARGETS += removefiles
+        # remove unused files
+        QMAKE_POST_LINK = rm -rf $$RESOURCES_PATH/data/items $$RESOURCES_PATH/translations/*.ts
     }
 
     appresources.files += resources/mac/locversion.plist

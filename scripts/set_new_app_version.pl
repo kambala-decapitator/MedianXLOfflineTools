@@ -20,4 +20,4 @@ $newDefinesMsvs = $newDefinesMsvs."NVER_STRING=\"$newVersion\";";
 edit_file { s/NVER1=.+";/$newDefinesMsvs/g } "$projName.vcxproj";
 
 # QtCreator's .pro
-edit_file { for my $i (1..$versionComponents) { s/(?<=NVER$i = )\d/$versionNumbers[$i-1]/ } } "$projName.pro";
+edit_file { for my $i (1..$versionComponents) { s/(?<=NVER$i = ).+/$versionNumbers[$i-1]/ } } "$projName.pro";
