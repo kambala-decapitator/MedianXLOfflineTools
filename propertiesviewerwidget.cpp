@@ -246,12 +246,12 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
 
     // TODO: [later] use lambda to calculate requirements
     if (itemBase->rdex)
-        if (int rdex = itemBase->rdex + (itemBase->rdex * allProps.value(Enums::ItemProperties::Requirements, foo)->value) / 100)
+        if (quint16 rdex = itemBase->rdex + (itemBase->rdex * allProps.value(Enums::ItemProperties::Requirements, foo)->value) / 100)
             itemDescription += htmlStringFromDiabloColorString(tr("Required Dexterity: %1").arg(rdex), charInfo.valueOfStatistic(Enums::CharacterStats::Dexterity) < rdex ? ColorsManager::Red : ColorsManager::White)
                                + kHtmlLineBreak;
 
     if (itemBase->rstr)
-        if (int rstr = itemBase->rstr + (itemBase->rstr * allProps.value(Enums::ItemProperties::Requirements, foo)->value) / 100)
+        if (quint16 rstr = itemBase->rstr + (itemBase->rstr * allProps.value(Enums::ItemProperties::Requirements, foo)->value) / 100)
             itemDescription += htmlStringFromDiabloColorString(tr("Required Strength: %1").arg(rstr),  charInfo.valueOfStatistic(Enums::CharacterStats::Strength)  < rstr ? ColorsManager::Red : ColorsManager::White)
                                + kHtmlLineBreak;
 

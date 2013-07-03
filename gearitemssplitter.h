@@ -19,7 +19,10 @@ public:
     explicit GearItemsSplitter(ItemStorageTableView *itemsView, QWidget *parent = 0);
     virtual ~GearItemsSplitter() {}
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Woverloaded-virtual"
     virtual void setItems(const ItemsList &newItems, bool isCreatingTab = false);
+#pragma clang diagnostic pop
     const QString &currentGearTitle() const { return kButtonNames.at(_currentGearButtonNameIndex); }
 
 protected:

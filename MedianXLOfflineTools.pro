@@ -173,7 +173,8 @@ macx {
     RESOURCES_PATH = $$CONTENTS_PATH/Resources
 
     !isEmpty(IS_QT5) {
-        # Qt 5 uses new approach to QMAKE_MAC_SDK. default value is ok.
+        # Qt 5 uses new approach to QMAKE_MAC_SDK, so default value is usually ok
+        QMAKE_MAC_SDK = macosx10.8
         cache()
 
         # make dock menu work on Qt5. code from https://qt.gitorious.org/qt/qtmacextras
@@ -183,6 +184,8 @@ macx {
         OBJECTIVE_HEADERS += qtmacextras/qmacfunctions.h \
                              qtmacextras/qmacfunctions_p.h \
                              qtmacextras/qmacextrasglobal.h
+
+        QT += gui-private # to remove this dependency, compile qtmacextras in a library
     }
     else {
         SDK_PATH_OLD = /Developer/SDKs
