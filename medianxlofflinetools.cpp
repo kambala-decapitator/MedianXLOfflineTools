@@ -35,7 +35,7 @@
 #include <QTranslator>
 #include <QUrl>
 #include <QTimer>
-#include <QDate>
+#include <QDateTime>
 #include <QFileSystemWatcher>
 
 #include <QNetworkAccessManager>

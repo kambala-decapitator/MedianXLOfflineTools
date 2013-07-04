@@ -142,13 +142,33 @@ win32 {
             -luser32    # AllowSetForegroundWindow()
 
     RC_FILE = resources/win/medianxlofflinetools.rc
+    OTHER_FILES += $$RC_FILE
 
-    # defines for .rc file
+    # defines (mostly for .rc file)
     DEFINES += NVER1=$$NVER1 \
                NVER2=$$NVER2 \
                NVER3=$$NVER3 \
-               NVER4=$$NVER4
-    isEmpty(IS_RELEASE_BUILD): DEFINES += _DEBUG
+               NVER4=$$NVER4 \
+               BUILDING_FROM_PRO \ # to set app version in .rc correctly
+               NOMINMAX # disables min/max macros which fixes error with QDateTime
+
+    isEmpty(IS_RELEASE_BUILD) {
+        DEFINES += _DEBUG
+
+        OUT_FOLDER = debug
+    }
+    else {
+        OUT_FOLDER = release
+    }
+
+    # create symbolic link to 'resources' folder in the folder of .exe
+    LINK_DST = $$OUT_PWD/$$OUT_FOLDER/resources
+    !exists($$LINK_DST) {
+        LINK_DST ~= s,/,\\,g
+        LINK_SRC = $$_PRO_FILE_PWD_/resources
+        LINK_SRC ~= s,/,\\,g
+        QMAKE_POST_LINK = mklink /D $$LINK_DST $$LINK_SRC
+    }
 }
 
 macx {
@@ -217,18 +237,18 @@ macx {
         QMAKE_MAC_SDK = $$MAC_SDK
     }
 
-    QMAKE_PRE_LINK = sed -e \'s/@APP_VERSION@/$$VERSION/\' -i \'\' $$CONTENTS_PATH/$$INFO_PLIST_NAME
+    QMAKE_POST_LINK = sed -e \'s/@APP_VERSION@/$$VERSION/\' -i \'\' $$CONTENTS_PATH/$$INFO_PLIST_NAME
     isEmpty(IS_RELEASE_BUILD) {
         # create symlinks instead of copying in debug mode
-        QMAKE_PRE_LINK += && ln -s $$_PRO_FILE_PWD_/resources/data         $$RESOURCES_PATH/data
-        QMAKE_PRE_LINK += && ln -s $$_PRO_FILE_PWD_/resources/translations $$RESOURCES_PATH/translations
+        QMAKE_POST_LINK += && ln -s $$_PRO_FILE_PWD_/resources/data         $$RESOURCES_PATH/data
+        QMAKE_POST_LINK += && ln -s $$_PRO_FILE_PWD_/resources/translations $$RESOURCES_PATH/translations
     }
     else {
         appresources.files += resources/data
         appresources.files += resources/translations
 
         # remove unused files
-        QMAKE_POST_LINK = rm -rf $$RESOURCES_PATH/data/items $$RESOURCES_PATH/translations/*.ts
+        QMAKE_POST_LINK += && rm -rf $$RESOURCES_PATH/data/items $$RESOURCES_PATH/translations/*.ts
     }
 
     appresources.files += resources/mac/locversion.plist

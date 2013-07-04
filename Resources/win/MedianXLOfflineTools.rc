@@ -34,8 +34,13 @@ END
 // Version
 //
 
+// qmake wraps values in quotes correctly itself
+#ifdef BUILDING_FROM_PRO
+#define quote(x) x
+#else
 #define quote2(x) #x
 #define quote(x) quote2(x)
+#endif
 
 #define APP_VERSION     NVER1,NVER2,NVER3,NVER4
 #define APP_VERSION_STR quote(NVER_STRING)
