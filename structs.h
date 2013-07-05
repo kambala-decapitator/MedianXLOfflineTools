@@ -249,7 +249,7 @@ struct SocketableItemInfo
 struct StashSortOptions
 {
     bool isQualityOrderAscending, isEachTypeFromNewPage;
-    bool separateSacredItems, separateEtherealItems, separateCotw, placeSimilarItemsOnOnePage;
+    bool separateSacredItems, separateEtherealItems, separateCotw, placeSmallSimilarItemsOnOnePage;
     bool newRowTier, newRowCotw, newRowGemQuality, newRowVisuallyDifferent;
 
     quint32 firstPage, lastPage;

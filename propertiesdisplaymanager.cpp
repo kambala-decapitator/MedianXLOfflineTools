@@ -277,9 +277,10 @@ void PropertiesDisplayManager::constructPropertyStrings(const PropertiesMap &pro
             // if it equals simple (min/max)damage
             if (propId == Enums::ItemProperties::MinimumDamageSecondary || propId == Enums::ItemProperties::MaximumDamageSecondary)
             {
-                if (isSecondaryDamageUsed(propId, prop->value, properties, item))
+                SecondaryDamageUsage u = secondaryDamageUsage(propId, prop->value, properties, item);
+                if (u == UsedWithPrimary)
                     hiddenPropertyText = QString(" [%1]").arg(tr("hidden", "secondary_(min/max)damage property"));
-                else
+                else if (u == Unused)
                     continue;
             }
         }
@@ -338,7 +339,7 @@ void PropertiesDisplayManager::constructPropertyStrings(const PropertiesMap &pro
     *outDisplayPropertiesMap = propsDisplayMap;
 }
 
-bool PropertiesDisplayManager::isSecondaryDamageUsed(int secondaryDamageId, int secondaryDamageValue, const PropertiesMap &allProperties, ItemInfo *item)
+PropertiesDisplayManager::SecondaryDamageUsage PropertiesDisplayManager::secondaryDamageUsage(int secondaryDamageId, int secondaryDamageValue, const PropertiesMap &allProperties, ItemInfo *item)
 {
     ItemProperty *foo = new ItemProperty;
     int damageProperty = secondaryDamageId == Enums::ItemProperties::MaximumDamageSecondary ? Enums::ItemProperties::MaximumDamage : Enums::ItemProperties::MinimumDamage;
@@ -348,7 +349,10 @@ bool PropertiesDisplayManager::isSecondaryDamageUsed(int secondaryDamageId, int 
             damageValue -= socketableProperties(socketableItem, ItemDataBase::Items()->value(item->itemType)->socketableType).value(damageProperty, foo)->value;
     delete foo;
 
-    return damageValue != secondaryDamageValue;
+    if (damageValue)
+        return damageValue != secondaryDamageValue ? UsedWithPrimary : Unused;
+    else
+        return UsedWithoutPrimary;
 }
 
 QString PropertiesDisplayManager::propertyDisplay(ItemProperty *propDisplay, int propId, bool shouldColor /*= false*/)

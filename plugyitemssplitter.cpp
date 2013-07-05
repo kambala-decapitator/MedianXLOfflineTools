@@ -108,7 +108,7 @@ PlugyItemsSplitter::PlugyItemsSplitter(ItemStorageTableView *itemsView, QWidget 
     _pageSpinBox = new QDoubleSpinBox(this);
     _pageSpinBox->setDecimals(0);
     _pageSpinBox->setPrefix(tr("Page #"));
-    _pageSpinBox->setRange(1, (std::numeric_limits<quint32>::max)());
+    _pageSpinBox->setRange(1, std::numeric_limits<quint32>::max());
     _pageSpinBox->setValue(1);
     _pageSpinBox->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
 
@@ -247,7 +247,6 @@ bool PlugyItemsSplitter::storeItemInStorage(ItemInfo *item, int storage)
 
 ItemsList PlugyItemsSplitter::disenchantAllItems(bool toShards, bool upgradeToCrystals, bool eatSignets, ItemsList *pItems /*= 0*/)
 {
-    //pItems = itemsForSelectedRange();
     ItemsList disenchantedItems = ItemsPropertiesSplitter::disenchantAllItems(toShards, upgradeToCrystals, eatSignets, pItems);
     if (_shouldApplyActionToAllPages)
     {
@@ -382,7 +381,7 @@ void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
             continue;
 
         int end = -1;
-        do 
+        do
         {
             end = line.indexOf('#', end + 1);
         } while (end != -1 && line.at(end - 1) == '\\');
@@ -613,6 +612,7 @@ void PlugyItemsSplitter::sortWearableItems(ItemsList &selectedItems, quint32 &pa
             QHash<QByteArray, ItemsList> itemsByBaseType = itemsSortedByBaseType(iter.value());
             if (sortQuality != Quest)
             {
+                int row = 0, col = 0;
                 foreach (const QByteArray &itemBaseType, gearBaseTypesOrder)
                 {
                     ItemsList itemBaseTypeItems = itemsByBaseType.take(itemBaseType);
@@ -683,15 +683,19 @@ void PlugyItemsSplitter::sortWearableItems(ItemsList &selectedItems, quint32 &pa
                             // to sort by tiers, sort by rlvl. SUs are sorted by ID.
                             qSort(items.begin(), items.end(), compareItemsByRlvl);
                         }
-
+                        
                         // save new order
                         foreach (const ItemsList &items, sortedItemsByType)
                         {
-                            storeItemsOnPage(items, true, page);
-                            ++page; // start new sub-type from new page
+                            storeItemsOnPage(items, sortOptions.newRowTier, page, &row, &col);
+                            if (sortOptions.isEachTypeFromNewPage)
+                            {
+                                ++page;
+                                row = col = 0;
+                            }
                         }
 
-                        if (baseTypesProcessed++ < gearBaseTypesOrder.size() - 1)
+                        if (baseTypesProcessed++ < gearBaseTypesOrder.size() - 1 && sortOptions.isEachTypeFromNewPage)
                             page += sortOptions.diffTypesBlankPages;
                     }
                 }
@@ -707,13 +711,18 @@ void PlugyItemsSplitter::sortWearableItems(ItemsList &selectedItems, quint32 &pa
                 }
 
                 storeItemsOnPage(questItems, false, page);
-                page += 1 + sortOptions.diffTypesBlankPages;
+                if (sortOptions.isEachTypeFromNewPage)
+                    ++page;
             }
         }
 
         sortOptions.isQualityOrderAscending ? ++iter : --iter;
         if (iter != endIter)
+        {
+            if (!sortOptions.isEachTypeFromNewPage)
+                ++page;
             page += sortOptions.diffQualitiesBlankPages;
+        }
         else
             break;
     }

@@ -487,6 +487,54 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>eachTypeFromNewPageCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>diffTypesSpinBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>196</x>
+     <y>247</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>386</x>
+     <y>89</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>eachTypeFromNewPageCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>diffTypesLabel</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>122</x>
+     <y>249</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>303</x>
+     <y>77</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>eachTypeFromNewPageCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>similarItemsOnOnePageCheckBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>64</x>
+     <y>247</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>69</x>
+     <y>213</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <buttongroups>
   <buttongroup name="buttonGroup"/>

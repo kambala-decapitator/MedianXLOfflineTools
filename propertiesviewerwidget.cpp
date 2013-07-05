@@ -167,11 +167,13 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
         int ed = allProps.value(Enums::ItemProperties::EnhancedDamage, foo)->value;
 
         int minDmgTotal = allProps.value(Enums::ItemProperties::MinimumDamage, foo)->value, minDmgSecondary = allProps.value(Enums::ItemProperties::MinimumDamageSecondary, foo)->value;
-        if (PropertiesDisplayManager::isSecondaryDamageUsed(Enums::ItemProperties::MinimumDamageSecondary, minDmgSecondary, allProps, item))
+        PropertiesDisplayManager::SecondaryDamageUsage u = PropertiesDisplayManager::secondaryDamageUsage(Enums::ItemProperties::MinimumDamageSecondary, minDmgSecondary, allProps, item);
+        if (u != PropertiesDisplayManager::Unused)
             minDmgTotal += minDmgSecondary;
 
         int maxDmgTotal = allProps.value(Enums::ItemProperties::MaximumDamage, foo)->value, maxDmgSecondary = allProps.value(Enums::ItemProperties::MaximumDamageSecondary, foo)->value;
-        if (PropertiesDisplayManager::isSecondaryDamageUsed(Enums::ItemProperties::MaximumDamageSecondary, maxDmgSecondary, allProps, item))
+        u = PropertiesDisplayManager::secondaryDamageUsage(Enums::ItemProperties::MaximumDamageSecondary, maxDmgSecondary, allProps, item);
+        if (u != PropertiesDisplayManager::Unused)
             maxDmgTotal += maxDmgSecondary;
         maxDmgTotal += (allProps.value(Enums::ItemProperties::MaximumDamageBasedOnClvl, foo)->value * clvl) / 32;
 
