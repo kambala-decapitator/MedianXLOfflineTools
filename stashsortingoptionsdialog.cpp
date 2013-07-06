@@ -50,11 +50,11 @@ StashSortOptions StashSortingOptionsDialog::sortOptions() const
     StashSortOptions options;
     options.isQualityOrderAscending = ui->ascQualityRadioButton->isChecked();
     options.isEachTypeFromNewPage = ui->eachTypeFromNewPageCheckBox->isChecked();
-    options.placeSmallSimilarItemsOnOnePage = ui->similarItemsOnOnePageCheckBox->isChecked();
-    options.separateEth = ui->separateEthCheckBox->isChecked();
-    options.newRowTier = ui->newRowTierCheckBox->isChecked();
-    options.newRowCotw = ui->newRowCotwCheckBox->isChecked();
-    options.newRowVisuallyDifferent = ui->newRowVisuallyDifferentCheckBox->isChecked();
+    options.shouldPlaceSimilarMiscItemsOnOnePage = ui->similarMiscItemsOnOnePageCheckBox->isChecked();
+    options.shouldSeparateEth = ui->separateEthCheckBox->isChecked();
+    options.isNewRowTier = ui->newRowTierCheckBox->isChecked();
+    options.isNewRowCotw = ui->newRowCotwCheckBox->isChecked();
+    options.isNewRowVisuallyDifferentMisc = ui->newRowVisuallyDifferentMiscCheckBox->isChecked();
     options.firstPage = ui->firstPageSpinBox->value();
     options.lastPage = ui->lastPageSpinBox->value();
     options.diffQualitiesBlankPages = ui->diffQualitiesSpinBox->value();
@@ -71,19 +71,19 @@ void StashSortingOptionsDialog::accept()
 
 void StashSortingOptionsDialog::on_eachTypeFromNewPageCheckBox_toggled(bool isChecked)
 {
-    ui->similarItemsOnOnePageCheckBox->setEnabled(isChecked);
+    ui->similarMiscItemsOnOnePageCheckBox->setEnabled(isChecked);
     ui->newRowTierCheckBox->setEnabled(isChecked);
 
     ui->newRowTierCheckBox->setChecked(isChecked);
     if (!isChecked)
-        ui->similarItemsOnOnePageCheckBox->setChecked(true);
+        ui->similarMiscItemsOnOnePageCheckBox->setChecked(true);
 }
 
-void StashSortingOptionsDialog::on_similarItemsOnOnePageCheckBox_toggled(bool isChecked)
+void StashSortingOptionsDialog::on_similarMiscItemsOnOnePageCheckBox_toggled(bool isChecked)
 {
-    ui->newRowVisuallyDifferentCheckBox->setEnabled(isChecked);
+    ui->newRowVisuallyDifferentMiscCheckBox->setEnabled(isChecked);
     if (!isChecked)
-        ui->newRowVisuallyDifferentCheckBox->setChecked(false);
+        ui->newRowVisuallyDifferentMiscCheckBox->setChecked(false);
 }
 
 void StashSortingOptionsDialog::firstPageChanged(double newPage)
@@ -118,13 +118,13 @@ void StashSortingOptionsDialog::createLayout()
 
     vbl = new QVBoxLayout(ui->separationBox);
     vbl->addWidget(ui->eachTypeFromNewPageCheckBox);
-    vbl->addWidget(ui->similarItemsOnOnePageCheckBox);
+    vbl->addWidget(ui->similarMiscItemsOnOnePageCheckBox);
     vbl->addWidget(ui->separateEthCheckBox);
 
     vbl = new QVBoxLayout(ui->newRowGroupBox);
     vbl->addWidget(ui->newRowTierCheckBox);
     vbl->addWidget(ui->newRowCotwCheckBox);
-    vbl->addWidget(ui->newRowVisuallyDifferentCheckBox);
+    vbl->addWidget(ui->newRowVisuallyDifferentMiscCheckBox);
 
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
 
@@ -156,7 +156,7 @@ void StashSortingOptionsDialog::loadSettings()
     settings.beginGroup("newRow");
     ui->newRowTierCheckBox->setChecked(settings.value("tier", true).toBool());
     ui->newRowCotwCheckBox->setChecked(settings.value("cotw", false).toBool());
-    ui->newRowVisuallyDifferentCheckBox->setChecked(settings.value("visuallyDifferent", false).toBool());
+    ui->newRowVisuallyDifferentMiscCheckBox->setChecked(settings.value("visuallyDifferentMisc", false).toBool());
     settings.endGroup();
 
     settings.beginGroup("blankPages");
@@ -166,7 +166,7 @@ void StashSortingOptionsDialog::loadSettings()
 
     settings.beginGroup("separation");
     ui->eachTypeFromNewPageCheckBox->setChecked(settings.value("eachTypeFromNewPage", true).toBool());
-    ui->similarItemsOnOnePageCheckBox->setChecked(settings.value("similarItemsOnOnePage", true).toBool());
+    ui->similarMiscItemsOnOnePageCheckBox->setChecked(settings.value("similarMiscItemsOnOnePage", true).toBool());
     ui->separateEthCheckBox->setChecked(settings.value("eth", true).toBool());
     settings.endGroup();
 
@@ -182,7 +182,7 @@ void StashSortingOptionsDialog::saveSettings()
     settings.beginGroup("newRow");
     settings.setValue("tier", ui->newRowTierCheckBox->isChecked());
     settings.setValue("cotw", ui->newRowCotwCheckBox->isChecked());
-    settings.setValue("visuallyDifferent", ui->newRowVisuallyDifferentCheckBox->isChecked());
+    settings.setValue("visuallyDifferentMisc", ui->newRowVisuallyDifferentMiscCheckBox->isChecked());
     settings.endGroup();
 
     settings.beginGroup("blankPages");
@@ -192,7 +192,7 @@ void StashSortingOptionsDialog::saveSettings()
 
     settings.beginGroup("separation");
     settings.setValue("eachTypeFromNewPage", ui->eachTypeFromNewPageCheckBox->isChecked());
-    settings.setValue("similarItemsOnOnePage", ui->similarItemsOnOnePageCheckBox->isChecked());
+    settings.setValue("similarMiscItemsOnOnePage", ui->similarMiscItemsOnOnePageCheckBox->isChecked());
     settings.setValue("eth", ui->separateEthCheckBox->isChecked());
     settings.endGroup();
 

@@ -251,6 +251,12 @@ bool isSignetOfLearning(ItemInfo *item)
     return item->itemType == "zkq" || item->itemType == "zkc";
 }
 
+bool isCotw(ItemInfo *item)
+{
+    return item->quality == Enums::ItemQuality::Unique && item->itemType == "jew" && item->props.contains(Enums::ItemProperties::RequiredLevel) && item->props.contains(Enums::ItemProperties::Oskill);
+}
+
+
 bool isCharacterOrb(const QByteArray &itemType)
 {
     return itemType == ">.<";

@@ -89,7 +89,7 @@ private:
     void showErrorLoadingSortingOrderFile(const QFile &f);
     void sortWearableItems(ItemsList &selectedItems, quint32 &page, const StashSortOptions &sortOptions, const QList<QByteArray> &gearBaseTypesOrder, const QList<QList<int> > &setsOrder);
     void sortMiscItems(    ItemsList &selectedItems, quint32 &page, const StashSortOptions &sortOptions, const QList<QByteArray> &miscBaseTypesOrder, const QList<QByteArray> &thngTypesOrder);
-    void storeItemsOnPage(const ItemsList &items, bool shouldStartAnotherTypeFromNewRow, quint32 &page, int *pRow = 0, int *pCol = 0);
+    void storeItemsOnPage(const ItemsList &items, bool shouldStartAnotherTypeFromNewRow, quint32 &page, int *pRow = 0, int *pCol = 0, bool shouldStartAnotherCotwFromNewRow = false);
 
     QHash<QByteArray, ItemsList> itemsSortedByBaseType(const ItemsList &items);
     template<typename K>

@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>580</width>
+    <width>610</width>
     <height>241</height>
    </rect>
   </property>
@@ -16,7 +16,7 @@
   <widget class="QDialogButtonBox" name="buttonBox">
    <property name="geometry">
     <rect>
-     <x>420</x>
+     <x>450</x>
      <y>210</y>
      <width>156</width>
      <height>23</height>
@@ -45,7 +45,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>50</y>
+      <y>60</y>
       <width>91</width>
       <height>20</height>
      </rect>
@@ -61,7 +61,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>20</y>
+      <y>30</y>
       <width>99</width>
       <height>20</height>
      </rect>
@@ -80,7 +80,7 @@
   <widget class="QGroupBox" name="pageRangeGroupBox">
    <property name="geometry">
     <rect>
-     <x>207</x>
+     <x>220</x>
      <y>10</y>
      <width>101</width>
      <height>91</height>
@@ -157,7 +157,7 @@
   <widget class="QGroupBox" name="blankPagesGroupBox">
    <property name="geometry">
     <rect>
-     <x>380</x>
+     <x>410</x>
      <y>10</y>
      <width>191</width>
      <height>91</height>
@@ -224,7 +224,7 @@
     <rect>
      <x>310</x>
      <y>110</y>
-     <width>261</width>
+     <width>291</width>
      <height>91</height>
     </rect>
    </property>
@@ -247,17 +247,17 @@
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QCheckBox" name="newRowVisuallyDifferentCheckBox">
+   <widget class="QCheckBox" name="newRowVisuallyDifferentMiscCheckBox">
     <property name="geometry">
      <rect>
       <x>10</x>
       <y>60</y>
-      <width>241</width>
+      <width>280</width>
       <height>20</height>
      </rect>
     </property>
     <property name="text">
-     <string>Similar but visually different items</string>
+     <string>Similar but visually different 'misc' items</string>
     </property>
    </widget>
    <widget class="QCheckBox" name="newRowCotwCheckBox">
@@ -302,7 +302,7 @@
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QCheckBox" name="similarItemsOnOnePageCheckBox">
+   <widget class="QCheckBox" name="similarMiscItemsOnOnePageCheckBox">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -312,7 +312,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Place small similar items on one page</string>
+     <string>Place similar 'misc' items on one page</string>
     </property>
     <property name="checked">
      <bool>true</bool>
@@ -343,10 +343,10 @@
   <tabstop>lastPageSpinBox</tabstop>
   <tabstop>diffQualitiesSpinBox</tabstop>
   <tabstop>diffTypesSpinBox</tabstop>
-  <tabstop>similarItemsOnOnePageCheckBox</tabstop>
+  <tabstop>similarMiscItemsOnOnePageCheckBox</tabstop>
   <tabstop>newRowTierCheckBox</tabstop>
   <tabstop>newRowCotwCheckBox</tabstop>
-  <tabstop>newRowVisuallyDifferentCheckBox</tabstop>
+  <tabstop>newRowVisuallyDifferentMiscCheckBox</tabstop>
   <tabstop>buttonBox</tabstop>
  </tabstops>
  <resources/>

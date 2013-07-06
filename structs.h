@@ -249,8 +249,8 @@ struct SocketableItemInfo
 struct StashSortOptions
 {
     bool isQualityOrderAscending;
-    bool newRowTier, newRowCotw, newRowVisuallyDifferent;
-    bool isEachTypeFromNewPage, placeSmallSimilarItemsOnOnePage, separateEth;
+    bool isNewRowTier, isNewRowCotw, isNewRowVisuallyDifferentMisc;
+    bool isEachTypeFromNewPage, shouldPlaceSimilarMiscItemsOnOnePage, shouldSeparateEth;
 
     quint32 firstPage, lastPage;
     int diffQualitiesBlankPages, diffTypesBlankPages;

@@ -66,6 +66,7 @@ bool isDrekavacInGear(ItemInfo *item);
 bool isVeneficaInGear(ItemInfo *item);
 bool isArcaneShard(ItemInfo *item);
 bool isSignetOfLearning(ItemInfo *item);
+bool isCotw(ItemInfo *item);
 // for Ultimative
 bool isCharacterOrb(const QByteArray &itemType);
 bool isCharacterOrb(ItemInfo *item);

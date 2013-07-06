@@ -683,13 +683,13 @@ void PlugyItemsSplitter::sortWearableItems(ItemsList &selectedItems, quint32 &pa
                         {
                             ItemsList &items = jter.value();
                             // to sort by tiers, sort by rlvl. SUs are sorted by ID.
-                            qSort(items.begin(), items.end(), sortOptions.separateEth ? compareItemsByRlvlAndEthereality : compareItemsByRlvl);
+                            qSort(items.begin(), items.end(), sortOptions.shouldSeparateEth ? compareItemsByRlvlAndEthereality : compareItemsByRlvl);
                         }
                         
                         // save new order
                         foreach (const ItemsList &items, sortedItemsByType)
                         {
-                            storeItemsOnPage(items, sortOptions.newRowTier, page, &row, &col);
+                            storeItemsOnPage(items, sortOptions.isNewRowTier, page, &row, &col, sortOptions.isNewRowCotw);
                             if (sortOptions.isEachTypeFromNewPage)
                             {
                                 ++page;
@@ -737,8 +737,7 @@ void PlugyItemsSplitter::sortWearableItems(ItemsList &selectedItems, quint32 &pa
 void PlugyItemsSplitter::sortMiscItems(ItemsList &selectedItems, quint32 &page, const StashSortOptions &sortOptions, const QList<QByteArray> &miscBaseTypesOrder, const QList<QByteArray> &thngTypesOrder)
 {
     // sort misc items
-    bool noNewPageInsideGemsAndRunes = true, startEachGemAndRuneFromNewRow = true, noNewPageInsideClassCharms = true, startEachClassCharmFromNewRow = true;
-    int baseTypesProcessed = 0;
+    int baseTypesProcessed = 0, row = 0, col = 0;
     QHash<QByteArray, ItemsList> itemsByBaseType = itemsSortedByBaseType(selectedItems);
     foreach (const QByteArray &itemBaseType, miscBaseTypesOrder)
     {
@@ -816,31 +815,34 @@ void PlugyItemsSplitter::sortMiscItems(ItemsList &selectedItems, quint32 &page, 
                     sortedItemsByType = itemsSortedByType<QByteArray>(itemBaseTypeItems);
 
                 // save new order
-                bool isGemOrRune = itemBaseType.startsWith("gem") || itemBaseType == "rune", isClassCharm_ = itemBaseType.startsWith("ara");
-                int row = 0, col = 0;
+                bool isClassCharm_ = itemBaseType.startsWith("ara"), isVisuallyDifferent = sortOptions.isNewRowVisuallyDifferentMisc || isMO || isClassCharm_;
                 foreach (const ItemsList &items, sortedItemsByType)
                 {
-                    storeItemsOnPage(items, true, page, &row, &col);
+                    storeItemsOnPage(items, isVisuallyDifferent, page, &row, &col);
 
-                    col = 0;
-                    if (startEachGemAndRuneFromNewRow && ((noNewPageInsideGemsAndRunes && isGemOrRune) || (noNewPageInsideClassCharms && isClassCharm_)))
-                        ++row;
+                    if (sortOptions.shouldPlaceSimilarMiscItemsOnOnePage)
+                    {
+                        if (isVisuallyDifferent)
+                        {
+                            row += _maxItemHeightInRow;
+                            col = 0;
+                        }
+                    }
                     else
                     {
-                        ++page; // start new sub-type from new page
-                        row = 0;
+                        ++page;
+                        row = col = 0;
                     }
 
                     foreach (ItemInfo *item, items)
                         selectedItems.removeOne(item);
                 }
-                // gems are stored separately
-                if ((noNewPageInsideGemsAndRunes && isGemOrRune) || (noNewPageInsideClassCharms && isClassCharm_))
-                    ++page;
 
-                if (baseTypesProcessed++ < miscBaseTypesOrder.size() - 1)
+                if (!sortOptions.shouldPlaceSimilarMiscItemsOnOnePage && baseTypesProcessed++ < miscBaseTypesOrder.size() - 1)
                     page += sortOptions.diffTypesBlankPages;
             }
+
+            _maxItemHeightInRow = 0;
         }
         else // thng
         {
@@ -863,16 +865,37 @@ void PlugyItemsSplitter::sortMiscItems(ItemsList &selectedItems, quint32 &page, 
 
                 if (!typeItems.isEmpty())
                 {
+                    bool isEvilEye = thngType == "!@[1-5]", isShrine = thngType == "[A-Z]\\d\\+", isTrophy = thngType == "µ\\d\\d|##/|bxt", isBrain = thngType == "2x\\d";
+                    bool isVisuallyDifferent = sortOptions.isNewRowVisuallyDifferentMisc || isEvilEye || isBrain || (!isUltimative() && (isShrine || isTrophy));
+
+                    if (sortOptions.shouldPlaceSimilarMiscItemsOnOnePage)
+                    {
+                        if (isVisuallyDifferent)
+                        {
+                            row += _maxItemHeightInRow;
+                            col = 0;
+                        }
+                    }
+                    else
+                    {
+                        ++page;
+                        row = col = 0;
+                    }
+
                     qSort(typeItems.begin(), typeItems.end(), compareItemsByCode);
-                    storeItemsOnPage(typeItems, true, page);
-                    page += 1 + sortOptions.diffTypesBlankPages;
+                    storeItemsOnPage(typeItems, isVisuallyDifferent, page, &row, &col);
+
+                    if (!sortOptions.shouldPlaceSimilarMiscItemsOnOnePage && baseTypesProcessed++ < miscBaseTypesOrder.size() - 1)
+                        page += sortOptions.diffTypesBlankPages;
+
+                    _maxItemHeightInRow = 0;
                 }
             }
         }
     }
 }
 
-void PlugyItemsSplitter::storeItemsOnPage(const ItemsList &items, bool shouldStartAnotherTypeFromNewRow, quint32 &page, int *pRow /*= 0*/, int *pCol /*= 0*/)
+void PlugyItemsSplitter::storeItemsOnPage(const ItemsList &items, bool shouldStartAnotherTypeFromNewRow, quint32 &page, int *pRow /*= 0*/, int *pCol /*= 0*/, bool shouldStartAnotherCotwFromNewRow /*= false*/)
 {
     static const int rows = _itemsModel->rowCount(), columns = _itemsModel->columnCount();
 
@@ -887,12 +910,14 @@ void PlugyItemsSplitter::storeItemsOnPage(const ItemsList &items, bool shouldSta
 
     foreach (ItemInfo *item, items)
     {
+        bool isCotwFromNewRow = shouldStartAnotherCotwFromNewRow && isCotw(item);
         ItemBase *baseInfo = ItemDataBase::Items()->value(item->itemType);
-        if (shouldStartAnotherTypeFromNewRow)
+        if (shouldStartAnotherTypeFromNewRow || isCotwFromNewRow)
         {
             if (!previousItem)
                 previousItem = item;
-            else if (previousItem->itemType != item->itemType || (areBothItemsSetOrUnique(item, previousItem) && previousItem->setOrUniqueId != item->setOrUniqueId))
+            else if (previousItem->itemType != item->itemType || (isCotwFromNewRow && item->props.value(Enums::ItemProperties::Oskill)->param != previousItem->props.value(Enums::ItemProperties::Oskill)->param)
+                     || (areBothItemsSetOrUnique(item, previousItem) && previousItem->setOrUniqueId != item->setOrUniqueId))
             {
                 // set wrong column value to switch to new row
                 col = columns;

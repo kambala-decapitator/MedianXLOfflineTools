@@ -171,11 +171,16 @@ void ItemsViewerDialog::createLayout()
     vboxLayout->addWidget(_sortStashButton);
     vboxLayout->addWidget(_insertBlankPagesButton);
 
+    QFrame *vline = new QFrame(_itemManagementWidget);
+    vline->setFrameShape(QFrame::VLine);
+
     // item management groupbox layout
     QHBoxLayout *itemManagementBoxLayout = new QHBoxLayout(_itemManagementWidget);
     itemManagementBoxLayout->addWidget(_disenchantBox);
     itemManagementBoxLayout->addWidget(_applyActionToAllPagesCheckbox);
     itemManagementBoxLayout->addWidget(_upgradeBox);
+    itemManagementBoxLayout->addStretch();
+    itemManagementBoxLayout->addWidget(vline);
     itemManagementBoxLayout->addStretch();
     itemManagementBoxLayout->addWidget(_stashBox);
 

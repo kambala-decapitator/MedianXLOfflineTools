@@ -229,6 +229,8 @@ public:
         ReplenishLife,
         Requirements = 91,
         RequiredLevel = 92,
+        Oskill = 97,
+        ClassOnlySkill = 107,
         DamageToUndead = 122,
         Indestructible = 152,
         DefenceBasedOnClvl = 214,
