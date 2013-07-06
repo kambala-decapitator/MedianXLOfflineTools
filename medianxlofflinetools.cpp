@@ -186,7 +186,7 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *pare
 #endif
 
 #ifdef Q_OS_MAC
-    QTimer::singleShot(500, this, SLOT(moveUpdateActionToAppleMenu())); // needs a slight delay to create menu
+    QTimer::singleShot(2000, this, SLOT(moveUpdateActionToAppleMenu())); // needs a slight delay to create menu
 #endif
 
     bool didModVersionChange = SkillplanDialog::didModVersionChange(); // must be called before the following conditions because it should load planner/readable versions
@@ -2803,7 +2803,7 @@ void MedianXLOfflineTools::networkReplyCheckForUpdateFinished(QNetworkReply *rep
         if (newUrl != reply->url())
             checkForUpdateFromForumUrl(newUrl);
         else if (_isManuallyCheckingForUpdate)
-            ERROR_BOX(tr("Error contacting update server"));
+            ERROR_BOX(tr("Error contacting update server. Please try again later."));
     }
 }
 

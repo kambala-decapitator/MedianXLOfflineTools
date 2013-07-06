@@ -78,6 +78,7 @@ private:
     bool _isShiftPressed;
     ItemsList _pagedItems;
     bool _shouldApplyActionToAllPages;
+    quint8 _maxItemHeightInRow;
 
     void emulateShiftAndInvokeMethod(void (PlugyItemsSplitter::*method)(void)) { _isShiftPressed = true; (this->*method)(); _isShiftPressed = false; }
     bool keyEventHasShift(QKeyEvent *keyEvent);

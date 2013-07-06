@@ -22,8 +22,12 @@ public slots:
     virtual void accept();
 
 private slots:
+    void on_eachTypeFromNewPageCheckBox_toggled(bool isChecked);
+    void on_similarItemsOnOnePageCheckBox_toggled(bool isChecked);
+
     void firstPageChanged(double newPage);
     void lastPageChanged(double newPage);
+
     void showHelp();
 
 private:

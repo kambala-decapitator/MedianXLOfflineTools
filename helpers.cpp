@@ -320,6 +320,14 @@ bool compareItemsByRlvl(ItemInfo *a, ItemInfo *b)
     return ItemDataBase::Items()->value(a->itemType)->rlvl < ItemDataBase::Items()->value(b->itemType)->rlvl;
 }
 
+bool compareItemsByRlvlAndEthereality(ItemInfo *a, ItemInfo *b)
+{
+    bool result = compareItemsByRlvl(a, b);
+    if (a->isEthereal != b->isEthereal)
+        result = result && a->isEthereal < b->isEthereal;
+    return result;
+}
+
 bool compareItemsByCode(ItemInfo *a, ItemInfo *b)
 {
     return a->itemType < b->itemType;

@@ -51,13 +51,10 @@ StashSortOptions StashSortingOptionsDialog::sortOptions() const
     options.isQualityOrderAscending = ui->ascQualityRadioButton->isChecked();
     options.isEachTypeFromNewPage = ui->eachTypeFromNewPageCheckBox->isChecked();
     options.placeSmallSimilarItemsOnOnePage = ui->similarItemsOnOnePageCheckBox->isChecked();
-    options.separateSacredItems = ui->separateSacredsCheckBox->isChecked();
-    options.separateEtherealItems = ui->separateEthCheckBox->isChecked();
-    options.separateCotw = options.placeSmallSimilarItemsOnOnePage && ui->separateCotwCheckBox->isChecked();
+    options.separateEth = ui->separateEthCheckBox->isChecked();
     options.newRowTier = ui->newRowTierCheckBox->isChecked();
     options.newRowCotw = ui->newRowCotwCheckBox->isChecked();
-    options.newRowGemQuality = ui->newRowGemCheckBox->isChecked();
-    options.newRowVisuallyDifferent = options.placeSmallSimilarItemsOnOnePage && ui->newRowVisuallyDifferentCheckBox->isChecked();
+    options.newRowVisuallyDifferent = ui->newRowVisuallyDifferentCheckBox->isChecked();
     options.firstPage = ui->firstPageSpinBox->value();
     options.lastPage = ui->lastPageSpinBox->value();
     options.diffQualitiesBlankPages = ui->diffQualitiesSpinBox->value();
@@ -70,6 +67,23 @@ void StashSortingOptionsDialog::accept()
 {
     saveSettings();
     QDialog::accept();
+}
+
+void StashSortingOptionsDialog::on_eachTypeFromNewPageCheckBox_toggled(bool isChecked)
+{
+    ui->similarItemsOnOnePageCheckBox->setEnabled(isChecked);
+    ui->newRowTierCheckBox->setEnabled(isChecked);
+
+    ui->newRowTierCheckBox->setChecked(isChecked);
+    if (!isChecked)
+        ui->similarItemsOnOnePageCheckBox->setChecked(true);
+}
+
+void StashSortingOptionsDialog::on_similarItemsOnOnePageCheckBox_toggled(bool isChecked)
+{
+    ui->newRowVisuallyDifferentCheckBox->setEnabled(isChecked);
+    if (!isChecked)
+        ui->newRowVisuallyDifferentCheckBox->setChecked(false);
 }
 
 void StashSortingOptionsDialog::firstPageChanged(double newPage)
@@ -102,37 +116,32 @@ void StashSortingOptionsDialog::createLayout()
     fl->addRow(ui->diffQualitiesLabel, ui->diffQualitiesSpinBox);
     fl->addRow(ui->diffTypesLabel, ui->diffTypesSpinBox);
 
-    vbl = new QVBoxLayout(ui->additionalNewPageGroupBox);
-    vbl->addWidget(ui->separateSacredsCheckBox);
-    vbl->addWidget(ui->separateEthCheckBox);
-    vbl->addWidget(ui->separateCotwCheckBox);
-    vbl->addWidget(ui->lineNewPageBox);
+    vbl = new QVBoxLayout(ui->separationBox);
+    vbl->addWidget(ui->eachTypeFromNewPageCheckBox);
     vbl->addWidget(ui->similarItemsOnOnePageCheckBox);
+    vbl->addWidget(ui->separateEthCheckBox);
 
     vbl = new QVBoxLayout(ui->newRowGroupBox);
     vbl->addWidget(ui->newRowTierCheckBox);
     vbl->addWidget(ui->newRowCotwCheckBox);
-    vbl->addWidget(ui->newRowGemCheckBox);
-    vbl->addWidget(ui->lineNewRowBox);
     vbl->addWidget(ui->newRowVisuallyDifferentCheckBox);
 
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
 
     QHBoxLayout *hbl = new QHBoxLayout;
     hbl->addWidget(ui->itemQualityOrderingGroupBox);
+    hbl->addStretch();
     hbl->addWidget(ui->pageRangeGroupBox);
+    hbl->addStretch();
     hbl->addWidget(ui->blankPagesGroupBox);
     mainLayout->addLayout(hbl);
 
     hbl = new QHBoxLayout;
-    hbl->addWidget(ui->additionalNewPageGroupBox);
+    hbl->addWidget(ui->separationBox);
     hbl->addWidget(ui->newRowGroupBox);
     mainLayout->addLayout(hbl);
 
-    hbl = new QHBoxLayout;
-    hbl->addWidget(ui->eachTypeFromNewPageCheckBox);
-    hbl->addWidget(ui->buttonBox);
-    mainLayout->addLayout(hbl);
+    mainLayout->addWidget(ui->buttonBox);
 
     adjustSize();
     setFixedSize(size());
@@ -143,25 +152,22 @@ void StashSortingOptionsDialog::loadSettings()
     QSettings settings;
     settings.beginGroup("sortDialog");
     ui->buttonGroup->button(settings.value("qualityOrdering", 0).toInt())->setChecked(true);
-    ui->eachTypeFromNewPageCheckBox->setChecked(settings.value("eachTypeFromNewPage", true).toBool());
+
+    settings.beginGroup("newRow");
+    ui->newRowTierCheckBox->setChecked(settings.value("tier", true).toBool());
+    ui->newRowCotwCheckBox->setChecked(settings.value("cotw", false).toBool());
+    ui->newRowVisuallyDifferentCheckBox->setChecked(settings.value("visuallyDifferent", false).toBool());
+    settings.endGroup();
 
     settings.beginGroup("blankPages");
     ui->diffQualitiesSpinBox->setValue(settings.value("qualities", 0).toInt());
     ui->diffTypesSpinBox->setValue(settings.value("types", 0).toInt());
     settings.endGroup();
 
-    settings.beginGroup("newPage");
-    ui->separateSacredsCheckBox->setChecked(settings.value("sacred", true).toBool());
-    ui->separateEthCheckBox->setChecked(settings.value("eth", false).toBool());
-    ui->separateCotwCheckBox->setChecked(settings.value("cotw", true).toBool());
+    settings.beginGroup("separation");
+    ui->eachTypeFromNewPageCheckBox->setChecked(settings.value("eachTypeFromNewPage", true).toBool());
     ui->similarItemsOnOnePageCheckBox->setChecked(settings.value("similarItemsOnOnePage", true).toBool());
-    settings.endGroup();
-
-    settings.beginGroup("newRow");
-    ui->newRowTierCheckBox->setChecked(settings.value("tier", true).toBool());
-    ui->newRowCotwCheckBox->setChecked(settings.value("cotw", false).toBool());
-    ui->newRowGemCheckBox->setChecked(settings.value("gem", false).toBool());
-    ui->newRowVisuallyDifferentCheckBox->setChecked(settings.value("visuallyDifferent", false).toBool());
+    ui->separateEthCheckBox->setChecked(settings.value("eth", true).toBool());
     settings.endGroup();
 
     settings.endGroup();
@@ -172,25 +178,22 @@ void StashSortingOptionsDialog::saveSettings()
     QSettings settings;
     settings.beginGroup("sortDialog");
     settings.setValue("qualityOrdering", ui->buttonGroup->checkedId());
-    settings.setValue("eachTypeFromNewPage", ui->eachTypeFromNewPageCheckBox->isChecked());
+
+    settings.beginGroup("newRow");
+    settings.setValue("tier", ui->newRowTierCheckBox->isChecked());
+    settings.setValue("cotw", ui->newRowCotwCheckBox->isChecked());
+    settings.setValue("visuallyDifferent", ui->newRowVisuallyDifferentCheckBox->isChecked());
+    settings.endGroup();
 
     settings.beginGroup("blankPages");
     settings.setValue("qualities", ui->diffQualitiesSpinBox->value());
     settings.setValue("types", ui->diffTypesSpinBox->value());
     settings.endGroup();
 
-    settings.beginGroup("newPage");
-    settings.setValue("sacred", ui->separateSacredsCheckBox->isChecked());
-    settings.setValue("eth", ui->separateEthCheckBox->isChecked());
-    settings.setValue("cotw", ui->separateCotwCheckBox->isChecked());
+    settings.beginGroup("separation");
+    settings.setValue("eachTypeFromNewPage", ui->eachTypeFromNewPageCheckBox->isChecked());
     settings.setValue("similarItemsOnOnePage", ui->similarItemsOnOnePageCheckBox->isChecked());
-    settings.endGroup();
-
-    settings.beginGroup("newRow");
-    settings.setValue("tier", ui->newRowTierCheckBox->isChecked());
-    settings.setValue("cotw", ui->newRowCotwCheckBox->isChecked());
-    settings.setValue("gem", ui->newRowGemCheckBox->isChecked());
-    settings.setValue("visuallyDifferent", ui->newRowVisuallyDifferentCheckBox->isChecked());
+    settings.setValue("eth", ui->separateEthCheckBox->isChecked());
     settings.endGroup();
 
     settings.endGroup();

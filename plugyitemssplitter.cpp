@@ -91,7 +91,7 @@ const QHash<QByteArray, QByteArray> &gemTypesOrderMapping()
 }
 
 
-PlugyItemsSplitter::PlugyItemsSplitter(ItemStorageTableView *itemsView, QWidget *parent) : ItemsPropertiesSplitter(itemsView, parent), _shouldApplyActionToAllPages(true)
+PlugyItemsSplitter::PlugyItemsSplitter(ItemStorageTableView *itemsView, QWidget *parent) : ItemsPropertiesSplitter(itemsView, parent), _shouldApplyActionToAllPages(true), _maxItemHeightInRow(0)
 {
     _left10Button = new QPushButton(this);
     _leftButton = new QPushButton(this);
@@ -612,6 +612,7 @@ void PlugyItemsSplitter::sortWearableItems(ItemsList &selectedItems, quint32 &pa
             QHash<QByteArray, ItemsList> itemsByBaseType = itemsSortedByBaseType(iter.value());
             if (sortQuality != Quest)
             {
+                bool noQualityItems = true;
                 int row = 0, col = 0;
                 foreach (const QByteArray &itemBaseType, gearBaseTypesOrder)
                 {
@@ -658,6 +659,7 @@ void PlugyItemsSplitter::sortWearableItems(ItemsList &selectedItems, quint32 &pa
 
                     if (!itemBaseTypeItems.isEmpty())
                     {
+                        noQualityItems = false;
                         // sort items by types (broad sword, scimitar, etc.). use item names (text before brackets) to determine sub-type.
                         QMap<QString, ItemsList> sortedItemsByType; // using QMap instead of QHash to have determined order
                         foreach (ItemInfo *item, itemBaseTypeItems)
@@ -681,7 +683,7 @@ void PlugyItemsSplitter::sortWearableItems(ItemsList &selectedItems, quint32 &pa
                         {
                             ItemsList &items = jter.value();
                             // to sort by tiers, sort by rlvl. SUs are sorted by ID.
-                            qSort(items.begin(), items.end(), compareItemsByRlvl);
+                            qSort(items.begin(), items.end(), sortOptions.separateEth ? compareItemsByRlvlAndEthereality : compareItemsByRlvl);
                         }
                         
                         // save new order
@@ -691,14 +693,17 @@ void PlugyItemsSplitter::sortWearableItems(ItemsList &selectedItems, quint32 &pa
                             if (sortOptions.isEachTypeFromNewPage)
                             {
                                 ++page;
-                                row = col = 0;
+                                row = col = _maxItemHeightInRow = 0;
                             }
                         }
 
-                        if (baseTypesProcessed++ < gearBaseTypesOrder.size() - 1 && sortOptions.isEachTypeFromNewPage)
+                        if (sortOptions.isEachTypeFromNewPage && baseTypesProcessed++ < gearBaseTypesOrder.size() - 1)
                             page += sortOptions.diffTypesBlankPages;
                     }
                 }
+
+                if (noQualityItems && !sortOptions.isEachTypeFromNewPage)
+                    --page; // don't create empty pages if there're no items of current quality
             }
             else // Quest items
             {
@@ -716,13 +721,14 @@ void PlugyItemsSplitter::sortWearableItems(ItemsList &selectedItems, quint32 &pa
             }
         }
 
+        _maxItemHeightInRow = 0;
+
+        if (!sortOptions.isEachTypeFromNewPage && sortQuality != Set)
+            ++page;
+
         sortOptions.isQualityOrderAscending ? ++iter : --iter;
         if (iter != endIter)
-        {
-            if (!sortOptions.isEachTypeFromNewPage)
-                ++page;
             page += sortOptions.diffQualitiesBlankPages;
-        }
         else
             break;
     }
@@ -894,11 +900,11 @@ void PlugyItemsSplitter::storeItemsOnPage(const ItemsList &items, bool shouldSta
             }
         }
         // fill stash by rows
-        if (col + baseInfo->width > columns)
+        if (col + baseInfo->width > columns || row + baseInfo->height > rows)
         {
             // switch to new row
-            row += baseInfo->height; // TODO: use height of first item in previous row
-            col = 0;
+            row += _maxItemHeightInRow;
+            col = _maxItemHeightInRow = 0;
 
             if (row + baseInfo->height > rows)
             {
@@ -909,8 +915,10 @@ void PlugyItemsSplitter::storeItemsOnPage(const ItemsList &items, bool shouldSta
         }
 
         item->move(row, col, page);
-
         col += baseInfo->width;
+
+        if (_maxItemHeightInRow < baseInfo->height)
+            _maxItemHeightInRow = baseInfo->height;
     }
 }
 

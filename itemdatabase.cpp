@@ -605,7 +605,6 @@ bool ItemDataBase::storeItemIn(ItemInfo *item, Enums::ItemStorage::ItemStorageEn
             {
                 item->move(i, j, plugyPage);
                 item->storage = storage;
-
                 ReverseBitWriter::replaceValueInBitString(item->bitString, Enums::ItemOffsets::Storage, storage > Enums::ItemStorage::Stash ? Enums::ItemStorage::Stash : storage);
 
                 return true;
@@ -622,17 +621,13 @@ bool ItemDataBase::canStoreItemAt(quint8 row, quint8 col, const QByteArray &stor
     if (storeItemRect.right() >= colsTotal || storeItemRect.bottom() >= rowsTotal) // beyond grid
         return false;
 
-    bool ok = true;
     foreach (ItemInfo *item, items)
     {
         ItemBase *itemBase = ItemDataBase::Items()->value(item->itemType);
         if (storeItemRect.intersects(QRect(item->column, item->row, itemBase->width, itemBase->height)))
-        {
-            ok = false;
-            break;
-        }
+            return false;
     }
-    return ok;
+    return true;
 }
 
 bool ItemDataBase::isClassCharm(const QByteArray &itemType)

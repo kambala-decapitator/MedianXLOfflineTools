@@ -1,5 +1,4 @@
 v0.4:
-- Hammer of Jholm: check maximum damage property
 - sort plugy stashes
 - place items tightly
 - sort items in find results by plugy page

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>439</width>
-    <height>271</height>
+    <width>580</width>
+    <height>241</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,8 +16,8 @@
   <widget class="QDialogButtonBox" name="buttonBox">
    <property name="geometry">
     <rect>
-     <x>270</x>
-     <y>240</y>
+     <x>420</x>
+     <y>210</y>
      <width>156</width>
      <height>23</height>
     </rect>
@@ -46,8 +46,8 @@
      <rect>
       <x>10</x>
       <y>50</y>
-      <width>72</width>
-      <height>17</height>
+      <width>91</width>
+      <height>20</height>
      </rect>
     </property>
     <property name="text">
@@ -62,8 +62,8 @@
      <rect>
       <x>10</x>
       <y>20</y>
-      <width>78</width>
-      <height>17</height>
+      <width>99</width>
+      <height>20</height>
      </rect>
     </property>
     <property name="text">
@@ -80,9 +80,9 @@
   <widget class="QGroupBox" name="pageRangeGroupBox">
    <property name="geometry">
     <rect>
-     <x>155</x>
+     <x>207</x>
      <y>10</y>
-     <width>91</width>
+     <width>101</width>
      <height>91</height>
     </rect>
    </property>
@@ -92,7 +92,7 @@
    <widget class="QDoubleSpinBox" name="firstPageSpinBox">
     <property name="geometry">
      <rect>
-      <x>40</x>
+      <x>50</x>
       <y>30</y>
       <width>42</width>
       <height>22</height>
@@ -110,8 +110,8 @@
      <rect>
       <x>10</x>
       <y>30</y>
-      <width>25</width>
-      <height>13</height>
+      <width>32</width>
+      <height>16</height>
      </rect>
     </property>
     <property name="text">
@@ -124,7 +124,7 @@
    <widget class="QDoubleSpinBox" name="lastPageSpinBox">
     <property name="geometry">
      <rect>
-      <x>40</x>
+      <x>50</x>
       <y>60</y>
       <width>42</width>
       <height>22</height>
@@ -142,8 +142,8 @@
      <rect>
       <x>10</x>
       <y>60</y>
-      <width>51</width>
-      <height>13</height>
+      <width>30</width>
+      <height>16</height>
      </rect>
     </property>
     <property name="text">
@@ -154,99 +154,12 @@
     </property>
    </widget>
   </widget>
-  <widget class="QGroupBox" name="additionalNewPageGroupBox">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>110</y>
-     <width>211</width>
-     <height>121</height>
-    </rect>
-   </property>
-   <property name="title">
-    <string>Additional new page for...</string>
-   </property>
-   <widget class="QCheckBox" name="separateEthCheckBox">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>40</y>
-      <width>91</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Ethereal items</string>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="separateCotwCheckBox">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>60</y>
-      <width>151</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Cornerstones of the World</string>
-    </property>
-    <property name="checked">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="separateSacredsCheckBox">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>20</y>
-      <width>84</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Sacred items</string>
-    </property>
-    <property name="checked">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="similarItemsOnOnePageCheckBox">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>90</y>
-      <width>197</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Place small similar items on one page</string>
-    </property>
-    <property name="checked">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="Line" name="lineNewPageBox">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>80</y>
-      <width>191</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
-    </property>
-   </widget>
-  </widget>
   <widget class="QGroupBox" name="blankPagesGroupBox">
    <property name="geometry">
     <rect>
-     <x>270</x>
+     <x>380</x>
      <y>10</y>
-     <width>161</width>
+     <width>191</width>
      <height>91</height>
     </rect>
    </property>
@@ -258,8 +171,8 @@
      <rect>
       <x>10</x>
       <y>30</y>
-      <width>89</width>
-      <height>13</height>
+      <width>118</width>
+      <height>16</height>
      </rect>
     </property>
     <property name="text">
@@ -271,8 +184,8 @@
      <rect>
       <x>10</x>
       <y>60</y>
-      <width>77</width>
-      <height>13</height>
+      <width>98</width>
+      <height>16</height>
      </rect>
     </property>
     <property name="text">
@@ -282,7 +195,7 @@
    <widget class="QSpinBox" name="diffQualitiesSpinBox">
     <property name="geometry">
      <rect>
-      <x>110</x>
+      <x>140</x>
       <y>30</y>
       <width>42</width>
       <height>22</height>
@@ -295,7 +208,7 @@
    <widget class="QSpinBox" name="diffTypesSpinBox">
     <property name="geometry">
      <rect>
-      <x>110</x>
+      <x>140</x>
       <y>60</y>
       <width>42</width>
       <height>22</height>
@@ -309,10 +222,10 @@
   <widget class="QGroupBox" name="newRowGroupBox">
    <property name="geometry">
     <rect>
-     <x>230</x>
+     <x>310</x>
      <y>110</y>
-     <width>201</width>
-     <height>121</height>
+     <width>261</width>
+     <height>91</height>
     </rect>
    </property>
    <property name="title">
@@ -323,8 +236,8 @@
      <rect>
       <x>10</x>
       <y>20</y>
-      <width>65</width>
-      <height>17</height>
+      <width>80</width>
+      <height>20</height>
      </rect>
     </property>
     <property name="text">
@@ -338,9 +251,9 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>90</y>
-      <width>183</width>
-      <height>17</height>
+      <y>60</y>
+      <width>241</width>
+      <height>20</height>
      </rect>
     </property>
     <property name="text">
@@ -352,56 +265,75 @@
      <rect>
       <x>10</x>
       <y>40</y>
-      <width>95</width>
-      <height>17</height>
+      <width>247</width>
+      <height>20</height>
      </rect>
     </property>
     <property name="text">
-     <string>Each CotW skill</string>
+     <string>Each Cornerstone of the World skill</string>
     </property>
    </widget>
-   <widget class="QCheckBox" name="newRowGemCheckBox">
+  </widget>
+  <widget class="QGroupBox" name="separationBox">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>110</y>
+     <width>291</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Separation</string>
+   </property>
+   <widget class="QCheckBox" name="separateEthCheckBox">
     <property name="geometry">
      <rect>
       <x>10</x>
       <y>60</y>
-      <width>104</width>
-      <height>17</height>
+      <width>173</width>
+      <height>20</height>
      </rect>
     </property>
     <property name="text">
-     <string>Each gem quality</string>
+     <string>Separate ethereal items</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
     </property>
    </widget>
-   <widget class="Line" name="lineNewRowBox">
+   <widget class="QCheckBox" name="similarItemsOnOnePageCheckBox">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>40</y>
+      <width>263</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Place small similar items on one page</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="eachTypeFromNewPageCheckBox">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>80</y>
-      <width>181</width>
-      <height>16</height>
+      <y>20</y>
+      <width>250</width>
+      <height>20</height>
      </rect>
     </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
+    <property name="text">
+     <string>Start each item type from new page</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
     </property>
    </widget>
-  </widget>
-  <widget class="QCheckBox" name="eachTypeFromNewPageCheckBox">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>240</y>
-     <width>196</width>
-     <height>17</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Start each item type from new page</string>
-   </property>
-   <property name="checked">
-    <bool>true</bool>
-   </property>
   </widget>
  </widget>
  <tabstops>
@@ -411,13 +343,9 @@
   <tabstop>lastPageSpinBox</tabstop>
   <tabstop>diffQualitiesSpinBox</tabstop>
   <tabstop>diffTypesSpinBox</tabstop>
-  <tabstop>separateSacredsCheckBox</tabstop>
-  <tabstop>separateCotwCheckBox</tabstop>
-  <tabstop>separateEthCheckBox</tabstop>
   <tabstop>similarItemsOnOnePageCheckBox</tabstop>
   <tabstop>newRowTierCheckBox</tabstop>
   <tabstop>newRowCotwCheckBox</tabstop>
-  <tabstop>newRowGemCheckBox</tabstop>
   <tabstop>newRowVisuallyDifferentCheckBox</tabstop>
   <tabstop>buttonBox</tabstop>
  </tabstops>
@@ -430,12 +358,12 @@
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>248</x>
+     <x>380</x>
      <y>254</y>
     </hint>
     <hint type="destinationlabel">
      <x>157</x>
-     <y>274</y>
+     <y>270</y>
     </hint>
    </hints>
   </connection>
@@ -446,44 +374,12 @@
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>316</x>
+     <x>426</x>
      <y>260</y>
     </hint>
     <hint type="destinationlabel">
      <x>286</x>
-     <y>274</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>similarItemsOnOnePageCheckBox</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>newRowVisuallyDifferentCheckBox</receiver>
-   <slot>setEnabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>118</x>
-     <y>208</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>331</x>
-     <y>208</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>similarItemsOnOnePageCheckBox</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>separateCotwCheckBox</receiver>
-   <slot>setEnabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>118</x>
-     <y>208</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>95</x>
-     <y>178</y>
+     <y>270</y>
     </hint>
    </hints>
   </connection>
@@ -498,7 +394,7 @@
      <y>247</y>
     </hint>
     <hint type="destinationlabel">
-     <x>386</x>
+     <x>496</x>
      <y>89</y>
     </hint>
    </hints>
@@ -514,24 +410,8 @@
      <y>249</y>
     </hint>
     <hint type="destinationlabel">
-     <x>303</x>
+     <x>383</x>
      <y>77</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>eachTypeFromNewPageCheckBox</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>similarItemsOnOnePageCheckBox</receiver>
-   <slot>setEnabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>64</x>
-     <y>247</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>69</x>
-     <y>213</y>
     </hint>
    </hints>
   </connection>

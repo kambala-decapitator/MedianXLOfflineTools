@@ -13,7 +13,9 @@ QT += network
 greaterThan(QT_MAJOR_VERSION, 4): {
     DEFINES += IS_QT5
     IS_QT5 = 1
+
     QT += widgets
+    *-clang*: cache()
 }
 
 CONFIG(release, debug|release): {
@@ -194,8 +196,7 @@ macx {
 
     !isEmpty(IS_QT5) {
         # Qt 5 uses new approach to QMAKE_MAC_SDK, so default value is usually ok
-        QMAKE_MAC_SDK = macosx10.8
-        cache()
+#        QMAKE_MAC_SDK = macosx10.8
 
         # make dock menu work on Qt5. code from https://qt.gitorious.org/qt/qtmacextras
         OBJECTIVE_SOURCES += qtmacextras/qmacfunctions.mm \
@@ -237,18 +238,19 @@ macx {
         QMAKE_MAC_SDK = $$MAC_SDK
     }
 
-    QMAKE_POST_LINK = sed -e \'s/@APP_VERSION@/$$VERSION/\' -i \'\' $$CONTENTS_PATH/$$INFO_PLIST_NAME
+    QMAKE_POST_LINK = sed -e \'s/@APP_VERSION@/$$VERSION/\' -i \'\' $$CONTENTS_PATH/$$INFO_PLIST_NAME;
     isEmpty(IS_RELEASE_BUILD) {
         # create symlinks instead of copying in debug mode
-        QMAKE_POST_LINK += && ln -s $$_PRO_FILE_PWD_/resources/data         $$RESOURCES_PATH/data
-        QMAKE_POST_LINK += && ln -s $$_PRO_FILE_PWD_/resources/translations $$RESOURCES_PATH/translations
+        QMAKE_POST_LINK += ! [ -L $$RESOURCES_PATH/data ]         && ln -s $$_PRO_FILE_PWD_/resources/data         $$RESOURCES_PATH/data;
+        QMAKE_POST_LINK += ! [ -L $$RESOURCES_PATH/translations ] && ln -s $$_PRO_FILE_PWD_/resources/translations $$RESOURCES_PATH/translations;
+        QMAKE_POST_LINK += [ $$RESOURCES_PATH/data ]; # cheat make to return success if both symlinks exist
     }
     else {
         appresources.files += resources/data
         appresources.files += resources/translations
 
         # remove unused files
-        QMAKE_POST_LINK += && rm -rf $$RESOURCES_PATH/data/items $$RESOURCES_PATH/translations/*.ts
+        QMAKE_POST_LINK += rm -rf $$RESOURCES_PATH/data/items $$RESOURCES_PATH/translations/*.ts;
     }
 
     appresources.files += resources/mac/locversion.plist
