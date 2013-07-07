@@ -4,7 +4,6 @@ v0.4:
 - cyclic arrow navigation between items
 - batch eat signets (add a button)
 - ctc Miasma MO removal (doesn't appear)
-- +%d magic damage (Magic Rune)
 - write sort help
 
 future versions:

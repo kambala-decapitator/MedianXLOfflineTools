@@ -224,6 +224,8 @@ public:
         MinimumDamageSecondary, // these 2 properties are the
         MaximumDamageSecondary, // combined 'adds x-y damage'
         Defence = 31,
+        MinimumDamageMagic = 52,
+        MaximumDamageMagic = 53,
         Durability = 72,
         DurabilityMax,
         ReplenishLife,

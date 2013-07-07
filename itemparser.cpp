@@ -338,15 +338,12 @@ PropertiesMultiMap ItemParser::parseItemProperties(ReverseBitReader &bitReader, 
 
             // elemental damage
             bool hasLength = false, hasMinElementalDamage = false;
-            if (id == 48 || id == 50 || id == 52 || id == 54 || id == 57) // min elemental damage
+            if (id == 48 || id == 50 || id == Enums::ItemProperties::MinimumDamageMagic || id == 54 || id == 57) // min elemental damage
             {
                 if (id == 54 || id == 57) // cold or poison
                     hasLength = true; // length is present only when min damage is specified
-                else if (id == 52) // +%d magic damage
-                {
-                    QString desc = txtProperty->descPositive;
-                    propToAdd->displayString = desc.replace("%d", "%1").arg(propToAdd->value);
-                }
+                else if (id == Enums::ItemProperties::MinimumDamageMagic)
+                    fixMagicDamageString(propToAdd, txtProperty);
                 props.insert(id++, propToAdd);
                 hasMinElementalDamage = true;
             }
@@ -357,11 +354,8 @@ PropertiesMultiMap ItemParser::parseItemProperties(ReverseBitReader &bitReader, 
                 ItemPropertyTxt *maxElementalDamageProp = ItemDataBase::Properties()->value(id);
                 newProp->value = bitReader.readNumber(maxElementalDamageProp->bits) - maxElementalDamageProp->add;
 
-                if (id == 53) // +%d magic damage
-                {
-                    QString desc = maxElementalDamageProp->descPositive;
-                    newProp->displayString = desc.replace("%d", "%1").arg(newProp->value);
-                }
+                if (id == Enums::ItemProperties::MaximumDamageMagic)
+                    fixMagicDamageString(newProp, maxElementalDamageProp);
                 props.insert(id, newProp);
 
                 if (hasLength) // cold or poison length
@@ -441,6 +435,13 @@ PropertiesMultiMap ItemParser::parseItemProperties(ReverseBitReader &bitReader, 
     *status = ItemInfo::Failed;
     return PropertiesMultiMap();
 }
+
+void ItemParser::fixMagicDamageString(ItemProperty *prop, ItemPropertyTxt *txtProp)
+{
+    QString desc = txtProp->descPositive;
+    prop->displayString = desc.replace("%d", "%1").arg(prop->value);
+}
+
 
 void ItemParser::writeItems(const ItemsList &items, QDataStream &ds)
 {

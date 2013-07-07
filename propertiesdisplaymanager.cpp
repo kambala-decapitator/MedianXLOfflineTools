@@ -439,9 +439,21 @@ PropertiesMap PropertiesDisplayManager::genericSocketableProperties(ItemInfo *so
     foreach (const SocketableItemInfo::Properties &prop, socketableProps)
     {
         if (prop.code != -1)
-            props[prop.code] = new ItemProperty(prop.value, prop.param);
-        if (prop.code == Enums::ItemProperties::EnhancedDamage)
-            props[prop.code]->displayString = ItemParser::kEnhancedDamageFormat().arg(prop.value);
+        {
+            ItemProperty *itemProperty = new ItemProperty(prop.value, prop.param);
+            switch (prop.code)
+            {
+            case Enums::ItemProperties::EnhancedDamage:
+                itemProperty->displayString = ItemParser::kEnhancedDamageFormat().arg(prop.value);
+                break;
+            case Enums::ItemProperties::MinimumDamageMagic: case Enums::ItemProperties::MaximumDamageMagic:
+                ItemParser::fixMagicDamageString(itemProperty, ItemDataBase::Properties()->value(prop.code));
+                break;
+            default:
+                break;
+            }
+            props[prop.code] = itemProperty;
+        }
     }
     return props;
 }
