@@ -45,7 +45,7 @@ private:
     Ui::FindItemsDialog *ui;
 
     QList<SearchResultItem> _searchResult; // item and matched string
-    bool _searchPerformed, _searchResultsChanged;
+    bool _wasSearchPerformed, _searchResultsChanged;
     int _currentIndex;
     FindResultsWidget *_resultsWidget;
     int _lastResultsHeight;

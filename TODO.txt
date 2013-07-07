@@ -1,5 +1,4 @@
 v0.4:
-- sort items in find results by plugy page
 - update find results after sorting
 - batch eat signets (add a button)
 - ctc Miasma MO removal (doesn't appear)

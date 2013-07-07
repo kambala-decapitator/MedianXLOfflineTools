@@ -20,7 +20,13 @@
 #endif
 
 
-FindItemsDialog::FindItemsDialog(QWidget *parent) : QDialog(parent), ui(new Ui::FindItemsDialog), _searchPerformed(false), _searchResultsChanged(false),
+bool compareSearchResultItemsByPlugyPage(const SearchResultItem &a, const SearchResultItem &b)
+{
+    return compareItemsByPlugyPage(a.first, b.first);
+}
+
+
+FindItemsDialog::FindItemsDialog(QWidget *parent) : QDialog(parent), ui(new Ui::FindItemsDialog), _wasSearchPerformed(false), _searchResultsChanged(false),
     _resultsWidget(new FindResultsWidget(this)), _lastResultsHeight(-1)
 {
     ui->setupUi(this);
@@ -88,7 +94,7 @@ void FindItemsDialog::clearResults()
 
 void FindItemsDialog::findNext()
 {
-    if (_searchPerformed)
+    if (_wasSearchPerformed)
     {
         if (!_searchResult.isEmpty())
         {
@@ -105,13 +111,12 @@ void FindItemsDialog::findNext()
                     return;
                 }
             }
+
             ++_currentIndex;
             changeItem();
         }
         else
-        {
             nothingFound();
-        }
     }
     else
     {
@@ -123,7 +128,7 @@ void FindItemsDialog::findNext()
 
 void FindItemsDialog::findPrevious()
 {
-    if (_searchPerformed)
+    if (_wasSearchPerformed)
     {
         if (!_searchResult.isEmpty())
         {
@@ -140,13 +145,12 @@ void FindItemsDialog::findPrevious()
                     return;
                 }
             }
+
             --_currentIndex;
             changeItem();
         }
         else
-        {
             nothingFound();
-        }
     }
     else
     {
@@ -307,8 +311,10 @@ void FindItemsDialog::performSearch()
         }
     }
 
-    _searchPerformed = _searchResultsChanged = true;
+    _wasSearchPerformed = _searchResultsChanged = true;
     ui->searchResultsButton->setEnabled(!_searchResult.isEmpty());
+
+    qSort(_searchResult.begin(), _searchResult.end(), compareSearchResultItemsByPlugyPage);
     _resultsWidget->updateItems(&_searchResult);
 
     // search text isn't added if a user presses find next/previous button directly
@@ -384,7 +390,7 @@ void FindItemsDialog::saveSettings()
 void FindItemsDialog::updateWindowTitle()
 {
     QString title = tr("Find items");
-    if (_searchPerformed)
+    if (_wasSearchPerformed)
         title += QString(" [%1/%2]").arg(_currentIndex + 1).arg(_searchResult.size());
     setWindowTitle(title);
 }
@@ -409,7 +415,7 @@ void FindItemsDialog::setButtonsDisabled(bool disabled, bool updateResultButton 
 
 void FindItemsDialog::resetSearchStatus()
 {
-    _searchPerformed = false;
+    _wasSearchPerformed = false;
     setButtonsDisabled(ui->searchComboBox->currentText().isEmpty(), false);
 }
 
