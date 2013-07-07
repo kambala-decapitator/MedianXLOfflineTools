@@ -76,6 +76,7 @@ signals:
     void closing(bool = true);      // connect directly to QAction's setDisabled() slot
     void itemsChanged(bool = true); // connect directly to QMainWindow's setWindowModified() slot
     void signetsOfLearningEaten(int signets);
+    void stashSorted();
 
 private slots:
     void tabChanged(int tabIndex);

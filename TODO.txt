@@ -1,5 +1,4 @@
 v0.4:
-- update find results after sorting
 - batch eat signets (add a button)
 - ctc Miasma MO removal (doesn't appear)
 - write sort help

@@ -332,6 +332,12 @@ void MedianXLOfflineTools::eatSignetsOfLearning(int signetsEaten)
     updateMaxCompoundStatusTip(ui->freeStatPointsLineEdit, total + signetsEaten, investedStatPoints());
 }
 
+void MedianXLOfflineTools::updateFindResults()
+{
+    if (_findItemsDialog)
+        _findItemsDialog->sortAndUpdateSearchResult();
+}
+
 void MedianXLOfflineTools::loadCharacter()
 {
     QSettings settings;
@@ -736,6 +742,23 @@ void MedianXLOfflineTools::saveCharacter()
         showErrorMessageBoxForFile(tr("Error creating file '%1'"), outputFile);
 }
 
+#ifdef DUPE_CHECK
+void MedianXLOfflineTools::showDupeCheck()
+{
+    if (_itemsDialog)
+        _itemsDialog->close();
+
+    bool isOpenItemsOptionChecked = ui->actionOpenItemsAutomatically->isChecked();
+    ui->actionOpenItemsAutomatically->setChecked(false);
+
+    DupeScanDialog dlg(_charPath, this);
+    connect(&dlg, SIGNAL(loadFile(QString)), SLOT(loadFileSkipExtensionCheck(QString)), Qt::BlockingQueuedConnection);
+    dlg.exec();
+
+    ui->actionOpenItemsAutomatically->setChecked(isOpenItemsOptionChecked);
+}
+#endif
+
 void MedianXLOfflineTools::statChanged(int newValue)
 {
     QSpinBox *senderSpinBox = qobject_cast<QSpinBox *>(sender());
@@ -951,13 +974,15 @@ void MedianXLOfflineTools::showItems(bool activate /*= true*/)
     else
     {
         _itemsDialog = new ItemsViewerDialog(getPlugyStashesExistenceHash(), _showDisenchantPreviewGroup->checkedAction()->data().toUInt(), this);
+        _itemsDialog->show();
+
         connect(_itemsDialog->tabWidget(), SIGNAL(currentChanged(int)), SLOT(itemStorageTabChanged(int)));
         connect(_itemsDialog, SIGNAL(cubeDeleted(bool)), ui->actionGiveCube, SLOT(setEnabled(bool)));
         connect(_itemsDialog, SIGNAL(closing(bool)), ui->menuGoToPage, SLOT(setDisabled(bool)));
         connect(_itemsDialog, SIGNAL(itemsChanged(bool)), SLOT(setModified(bool)));
         connect(_itemsDialog, SIGNAL(signetsOfLearningEaten(int)), SLOT(eatSignetsOfLearning(int)));
+        connect(_itemsDialog, SIGNAL(stashSorted()), SLOT(updateFindResults()));
         connect(_showDisenchantPreviewGroup, SIGNAL(triggered(QAction *)), _itemsDialog, SLOT(showDisenchantPreviewActionTriggered(QAction *)));
-        _itemsDialog->show();
 
         if (!activate)
         {
@@ -2874,20 +2899,3 @@ void MedianXLOfflineTools::fileChangeTimerFired()
 
     delete _fileChangeTimer; _fileChangeTimer = 0;
 }
-
-#ifdef DUPE_CHECK
-void MedianXLOfflineTools::showDupeCheck()
-{
-    if (_itemsDialog)
-        _itemsDialog->close();
-
-    bool isOpenItemsOptionChecked = ui->actionOpenItemsAutomatically->isChecked();
-    ui->actionOpenItemsAutomatically->setChecked(false);
-
-    DupeScanDialog dlg(_charPath, this);
-    connect(&dlg, SIGNAL(loadFile(QString)), SLOT(loadFileSkipExtensionCheck(QString)), Qt::BlockingQueuedConnection);
-    dlg.exec();
-
-    ui->actionOpenItemsAutomatically->setChecked(isOpenItemsOptionChecked);
-}
-#endif

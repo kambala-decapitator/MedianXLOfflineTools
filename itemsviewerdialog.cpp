@@ -61,8 +61,13 @@ ItemsViewerDialog::ItemsViewerDialog(const QHash<int, bool> &plugyStashesExisten
         connect(splitter, SIGNAL(cubeDeleted(bool)), SIGNAL(cubeDeleted(bool)));
         connect(splitter, SIGNAL(cubeDeleted(bool)), SLOT(setCubeTabDisabled(bool)));
         connect(splitter, SIGNAL(signetsOfLearningEaten(int)), SIGNAL(signetsOfLearningEaten(int)));
+
         if (isPlugyStorageIndex(i))
-            connect(static_cast<PlugyItemsSplitter *>(splitter), SIGNAL(pageChanged()), SLOT(updateItemManagementButtonsState()));
+        {
+            PlugyItemsSplitter *plugySplitter = static_cast<PlugyItemsSplitter *>(splitter);
+            connect(plugySplitter, SIGNAL(pageChanged()), SLOT(updateItemManagementButtonsState()));
+            connect(plugySplitter, SIGNAL(stashSorted()), SIGNAL(stashSorted()));
+        }
     }
     updateItems(plugyStashesExistenceHash, true);
 

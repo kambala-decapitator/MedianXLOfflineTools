@@ -92,6 +92,12 @@ void FindItemsDialog::clearResults()
     nothingFound(false);
 }
 
+void FindItemsDialog::sortAndUpdateSearchResult()
+{
+    qSort(_searchResult.begin(), _searchResult.end(), compareSearchResultItemsByPlugyPage);
+    _resultsWidget->updateItems(&_searchResult);
+}
+
 void FindItemsDialog::findNext()
 {
     if (_wasSearchPerformed)
@@ -313,9 +319,7 @@ void FindItemsDialog::performSearch()
 
     _wasSearchPerformed = _searchResultsChanged = true;
     ui->searchResultsButton->setEnabled(!_searchResult.isEmpty());
-
-    qSort(_searchResult.begin(), _searchResult.end(), compareSearchResultItemsByPlugyPage);
-    _resultsWidget->updateItems(&_searchResult);
+    sortAndUpdateSearchResult();
 
     // search text isn't added if a user presses find next/previous button directly
     if (ui->searchComboBox->findText(searchText) == -1)

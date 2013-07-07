@@ -21,6 +21,7 @@ public:
 
     void saveSettings();
     void clearResults();
+    void sortAndUpdateSearchResult();
 
 public slots:
     void resetSearchStatus();

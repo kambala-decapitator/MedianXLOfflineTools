@@ -61,9 +61,13 @@ private slots:
     void switchLanguage(QAction *languageAction);
     void setModified(bool modified);
     void modify() { setModified(true); }
+
     void eatSignetsOfLearning(int signetsEaten);
+    void updateFindResults();
+
     void networkReplyCheckForUpdateFinished(QNetworkReply *reply);
     void networkReplySendOsInfoFinished(QNetworkReply *reply);
+
     void fileContentsChanged();
     void fileChangeTimerFired();
 
