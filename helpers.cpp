@@ -320,18 +320,19 @@ bool compareItemsByPlugyPage(ItemInfo *a, ItemInfo *b)
 
 bool compareItemsByRlvl(ItemInfo *a, ItemInfo *b)
 {
-    if (areBothItemsSetOrUnique(a, b))
-        if (isSacred(a) && isSacred(b))
-            return a->setOrUniqueId < b->setOrUniqueId;
+    if (areBothItemsSetOrUnique(a, b) && isSacred(a) && isSacred(b))
+        return a->setOrUniqueId < b->setOrUniqueId;
     return ItemDataBase::Items()->value(a->itemType)->rlvl < ItemDataBase::Items()->value(b->itemType)->rlvl;
 }
 
 bool compareItemsByRlvlAndEthereality(ItemInfo *a, ItemInfo *b)
 {
-    bool result = compareItemsByRlvl(a, b);
-    if (a->isEthereal != b->isEthereal)
-        result = result && a->isEthereal < b->isEthereal;
-    return result;
+    bool ethCompareResult = a->isEthereal < b->isEthereal;
+    if (areBothItemsSetOrUnique(a, b) && isSacred(a) && isSacred(b))
+        return a->setOrUniqueId == b->setOrUniqueId ? ethCompareResult : a->setOrUniqueId < b->setOrUniqueId;
+
+    quint16 aRlvl = ItemDataBase::Items()->value(a->itemType)->rlvl, bRlvl = ItemDataBase::Items()->value(b->itemType)->rlvl;
+    return aRlvl == bRlvl ? ethCompareResult : aRlvl < bRlvl;
 }
 
 bool compareItemsByCode(ItemInfo *a, ItemInfo *b)

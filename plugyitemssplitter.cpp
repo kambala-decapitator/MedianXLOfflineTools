@@ -432,6 +432,7 @@ void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
     }
 
     // place everything else
+    ++page;
     int row = 0, col = 0;
     foreach (const ItemsList &items, itemsSortedByType<QByteArray>(selectedItems))
         storeItemsOnPage(items, false, page, &row, &col);
@@ -825,7 +826,7 @@ void PlugyItemsSplitter::sortMiscItems(ItemsList &selectedItems, quint32 &page, 
                         if (isVisuallyDifferent)
                         {
                             row += _maxItemHeightInRow;
-                            col = 0;
+                            col = _maxItemHeightInRow = 0;
                         }
                     }
                     else
@@ -865,8 +866,11 @@ void PlugyItemsSplitter::sortMiscItems(ItemsList &selectedItems, quint32 &page, 
 
                 if (!typeItems.isEmpty())
                 {
-                    bool isEvilEye = thngType == "!@[1-5]", isShrine = thngType == "[A-Z]\\d\\+", isTrophy = thngType == "µ\\d\\d|##/|bxt", isBrain = thngType == "2x\\d";
+                    bool isEvilEye = thngType == "!@[1-5]", isShrine = thngType == "[A-Z]\\d\\+", isTrophy = thngType.endsWith("\\d\\d|##/|bxt"), isBrain = thngType == "2x\\d";
                     bool isVisuallyDifferent = sortOptions.isNewRowVisuallyDifferentMisc || isEvilEye || isBrain || (!isUltimative() && (isShrine || isTrophy));
+
+                    qSort(typeItems.begin(), typeItems.end(), compareItemsByCode);
+                    storeItemsOnPage(typeItems, isVisuallyDifferent, page, &row, &col);
 
                     if (sortOptions.shouldPlaceSimilarMiscItemsOnOnePage)
                     {
@@ -881,9 +885,6 @@ void PlugyItemsSplitter::sortMiscItems(ItemsList &selectedItems, quint32 &page, 
                         ++page;
                         row = col = 0;
                     }
-
-                    qSort(typeItems.begin(), typeItems.end(), compareItemsByCode);
-                    storeItemsOnPage(typeItems, isVisuallyDifferent, page, &row, &col);
 
                     if (!sortOptions.shouldPlaceSimilarMiscItemsOnOnePage && baseTypesProcessed++ < miscBaseTypesOrder.size() - 1)
                         page += sortOptions.diffTypesBlankPages;
@@ -928,8 +929,14 @@ void PlugyItemsSplitter::storeItemsOnPage(const ItemsList &items, bool shouldSta
         if (col + baseInfo->width > columns || row + baseInfo->height > rows)
         {
             // switch to new row
-            row += _maxItemHeightInRow;
-            col = _maxItemHeightInRow = 0;
+            col = 0;
+            if (_maxItemHeightInRow)
+            {
+                row += _maxItemHeightInRow;
+                _maxItemHeightInRow = 0;
+            }
+            else
+                row += baseInfo->height;
 
             if (row + baseInfo->height > rows)
             {

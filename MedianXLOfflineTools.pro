@@ -155,11 +155,11 @@ win32 {
                NOMINMAX # disables min/max macros which fixes error with QDateTime
 
     isEmpty(IS_RELEASE_BUILD) {
-        DEFINES += _DEBUG
-
         OUT_FOLDER = debug
     }
     else {
+        DEFINES += _USING_V110_SDK71_ # for WinXP support in MSVS2012
+
         OUT_FOLDER = release
     }
 
