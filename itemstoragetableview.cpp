@@ -17,7 +17,7 @@
 #endif
 
 
-ItemStorageTableView::ItemStorageTableView(QWidget *parent /*= 0*/) : QTableView(parent), _dragLeaveTimer(new QTimer(this)), _draggedItem(0)
+ItemStorageTableView::ItemStorageTableView(QWidget *parent /*= 0*/) : QTableView(parent), /*_dragLeaveTimer(new QTimer(this)),*/ _draggedItem(0)
 {
     setContextMenuPolicy(Qt::CustomContextMenu);
     setEditTriggers(QAbstractItemView::NoEditTriggers);
@@ -42,8 +42,8 @@ ItemStorageTableView::ItemStorageTableView(QWidget *parent /*= 0*/) : QTableView
     horizontalHeader()->hide();
     verticalHeader()->hide();
 
-    _dragLeaveTimer->setInterval(100);
-    connect(_dragLeaveTimer, SIGNAL(timeout()), SLOT(checkIfStillDragging()));
+    //_dragLeaveTimer->setInterval(100);
+    //connect(_dragLeaveTimer, SIGNAL(timeout()), SLOT(checkIfStillDragging()));
 }
 
 ItemStorageTableModel *ItemStorageTableView::model() const
@@ -60,21 +60,35 @@ void ItemStorageTableView::setCellSpanForItem(ItemInfo *item)
 
 void ItemStorageTableView::keyPressEvent(QKeyEvent *event)
 {
-    //QModelIndex oldIndex = currentIndex();
+    QModelIndex oldIndex = currentIndex();
     QTableView::keyPressEvent(event);
 
+    QModelIndex newIndex = currentIndex();
     int key = event->key();
-    // TODO: cyclic transition
-    //if (key == Qt::Key_Right)
-    //{
-    //    if (oldIndex == currentIndex())
-    //    {
-    //        setCurrentIndex(model()->index(oldIndex.row() + rowSpan(oldIndex.row(), 0), 0));
-    //    }
-    //}
+    if (oldIndex == originIndexInRectOfIndex(newIndex))
+    {
+        QAbstractTableModel *model_ = model();
+        switch (key)
+        {
+        case Qt::Key_Up:
+            newIndex = model_->index(model_->rowCount() - 1, oldIndex.column());
+            break;
+        case Qt::Key_Down:
+            newIndex = model_->index(0, oldIndex.column());
+            break;
+        case Qt::Key_Left:
+            newIndex = model_->index(oldIndex.row(), model_->columnCount() - 1);
+            break;
+        case Qt::Key_Right:
+            newIndex = model_->index(oldIndex.row(), 0);
+            break;
+        default:
+            break;
+        }
+    }
 
     if (key == Qt::Key_Up || key == Qt::Key_Down || key == Qt::Key_Left || key == Qt::Key_Right || key == Qt::Key_PageUp || key == Qt::Key_PageDown || key == Qt::Key_Home || key == Qt::Key_End)
-        selectionModel()->setCurrentIndex(originIndexInRectOfIndex(currentIndex()), QItemSelectionModel::ClearAndSelect);
+        selectionModel()->setCurrentIndex(originIndexInRectOfIndex(newIndex), QItemSelectionModel::ClearAndSelect);
 }
 
 
