@@ -402,12 +402,19 @@ void ItemParser::convertParamsInMagicDamageString(ItemProperty *prop, ItemProper
 
 void ItemParser::createDisplayStringForPropertyWithId(int id, ItemProperty *prop)
 {
+#ifdef Q_CC_CLANG
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wsign-compare"
+#endif
     if (id == 83)
         prop->displayString = tr("+%1 to %2 Skill Levels", "+x to class skills").arg(prop->value).arg(prop->param < Enums::ClassName::classes().size() ? Enums::ClassName::classes().at(prop->param) : "WTF");
     else if (id == Enums::ItemProperties::Oskill || id == Enums::ItemProperties::ClassOnlySkill)
     {
         SkillInfo *skill;
         bool deleteSkill = prop->param >= ItemDataBase::Skills()->size();
+#ifdef Q_CC_CLANG
+#pragma clang diagnostic pop
+#endif
         if (!deleteSkill)
             skill = ItemDataBase::Skills()->at(prop->param);
         else

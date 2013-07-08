@@ -9,11 +9,12 @@
 
 struct ItemProperty
 {
-    int value, param; // param == 0 if it doesn't exist
+    int value;
+    quint32 param;// param == 0 if it doesn't exist
     QString displayString; // not empty only for 'custom' descriptions
 
     ItemProperty() : value(0), param(0) {}
-    ItemProperty(int v, int p = 0) : value(v), param(p) {}
+    ItemProperty(int v, quint32 p = 0) : value(v), param(p) {}
     ItemProperty(const QString &text) : value(0), param(0), displayString(text) {}
 };
 
