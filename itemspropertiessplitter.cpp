@@ -53,8 +53,7 @@ void ItemsPropertiesSplitter::itemSelected(const QModelIndex &index, bool displa
     // correctly disable hotkeys
     _itemActions[DisenchantShards]->setEnabled(ItemDataBase::canDisenchantIntoArcaneShards(item));
     _itemActions[DisenchantSignet]->setEnabled(ItemDataBase::canDisenchantIntoSignetOfLearning(item));
-    // in Ultimative, Character Orb and Sunstone of Elements use same stat IDs as MOs, but those can't be removed
-    _itemActions[RemoveMO]->setEnabled(_propertiesWidget->hasMysticOrbs() && !(isUltimative() && isCharacterOrbOrSunstoneOfElements(item) && isTradersChest(item)));
+    _itemActions[RemoveMO]->setEnabled(_propertiesWidget->hasMysticOrbs() && !ItemDataBase::isUberCharm(item));
 
     // eat signet of learning
     quint8 statsFromSignet = 0;

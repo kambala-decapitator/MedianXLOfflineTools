@@ -423,11 +423,13 @@ void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
     if (sortOptions.isQualityOrderAscending)
     {
         sortMiscItems(    selectedItems, page, sortOptions, miscBaseTypesOrder, thngTypesOrder);
+        ++page;
         sortWearableItems(selectedItems, page, sortOptions, gearBaseTypesOrder, setsOrder);
     }
     else
     {
         sortWearableItems(selectedItems, page, sortOptions, gearBaseTypesOrder, setsOrder);
+        ++page;
         sortMiscItems(    selectedItems, page, sortOptions, miscBaseTypesOrder, thngTypesOrder);
     }
 
@@ -590,6 +592,7 @@ void PlugyItemsSplitter::sortWearableItems(ItemsList &selectedItems, quint32 &pa
             foreach (ItemInfo *item, iter.value())
                 setItemsById[item->setOrUniqueId] << item;
 
+            int setsProcessed = 0;
             foreach (const QList<int> &setIds, setsOrder)
             {
                 // put together all items from one set
@@ -599,12 +602,17 @@ void PlugyItemsSplitter::sortWearableItems(ItemsList &selectedItems, quint32 &pa
                 if (!setItems.isEmpty())
                 {
                     storeItemsOnPage(setItems, false, page);
-                    ++page; // start each set from new page
+                    if (setsProcessed < setsOrder.size() - 1)
+                        ++page; // start each set from new page
 
                     foreach (ItemInfo *item, setItems)
                         selectedItems.removeOne(item);
                 }
+                ++setsProcessed;
             }
+
+            if (!sortOptions.isQualityOrderAscending)
+                ++page; // force new page after sets
         }
         else
         {
@@ -724,12 +732,13 @@ void PlugyItemsSplitter::sortWearableItems(ItemsList &selectedItems, quint32 &pa
 
         _maxItemHeightInRow = 0;
 
-        if (!sortOptions.isEachTypeFromNewPage && sortQuality != Set)
-            ++page;
-
         sortOptions.isQualityOrderAscending ? ++iter : --iter;
         if (iter != endIter)
+        {
+            if (!sortOptions.isEachTypeFromNewPage && sortQuality != Set)
+                ++page;
             page += sortOptions.diffQualitiesBlankPages;
+        }
         else
             break;
     }
@@ -816,14 +825,19 @@ void PlugyItemsSplitter::sortMiscItems(ItemsList &selectedItems, quint32 &page, 
                     sortedItemsByType = itemsSortedByType<QByteArray>(itemBaseTypeItems);
 
                 // save new order
-                bool isClassCharm_ = itemBaseType.startsWith("ara"), isVisuallyDifferent = sortOptions.isNewRowVisuallyDifferentMisc || isMO || isClassCharm_;
+                bool isClassCharm_ = itemBaseType.startsWith("ara"), isVisuallySame = isMO || isClassCharm_, isNewRow = sortOptions.isNewRowVisuallyDifferentMisc || isVisuallySame;
+                if (isVisuallySame && !sortOptions.isNewRowVisuallyDifferentMisc)
+                {
+                    ++row;
+                    col = 0;
+                }
                 foreach (const ItemsList &items, sortedItemsByType)
                 {
-                    storeItemsOnPage(items, isVisuallyDifferent, page, &row, &col);
+                    storeItemsOnPage(items, isNewRow, page, &row, &col);
 
                     if (sortOptions.shouldPlaceSimilarMiscItemsOnOnePage)
                     {
-                        if (isVisuallyDifferent)
+                        if (isNewRow)
                         {
                             row += _maxItemHeightInRow;
                             col = _maxItemHeightInRow = 0;
@@ -867,17 +881,22 @@ void PlugyItemsSplitter::sortMiscItems(ItemsList &selectedItems, quint32 &page, 
                 if (!typeItems.isEmpty())
                 {
                     bool isEvilEye = thngType == "!@[1-5]", isShrine = thngType == "[A-Z]\\d\\+", isTrophy = thngType.endsWith("\\d\\d|##/|bxt"), isBrain = thngType == "2x\\d";
-                    bool isVisuallyDifferent = sortOptions.isNewRowVisuallyDifferentMisc || isEvilEye || isBrain || (!isUltimative() && (isShrine || isTrophy));
+                    bool isVisuallySame = isEvilEye || isBrain || (!isUltimative() && (isShrine || isTrophy)), isNewRow = sortOptions.isNewRowVisuallyDifferentMisc || isVisuallySame;
+                    if (isVisuallySame && !sortOptions.isNewRowVisuallyDifferentMisc)
+                    {
+                        ++row;
+                        col = 0;
+                    }
 
                     qSort(typeItems.begin(), typeItems.end(), compareItemsByCode);
-                    storeItemsOnPage(typeItems, isVisuallyDifferent, page, &row, &col);
+                    storeItemsOnPage(typeItems, isNewRow, page, &row, &col);
 
                     if (sortOptions.shouldPlaceSimilarMiscItemsOnOnePage)
                     {
-                        if (isVisuallyDifferent)
+                        if (isNewRow)
                         {
                             row += _maxItemHeightInRow;
-                            col = 0;
+                            col = _maxItemHeightInRow = 0;
                         }
                     }
                     else
@@ -888,8 +907,6 @@ void PlugyItemsSplitter::sortMiscItems(ItemsList &selectedItems, quint32 &page, 
 
                     if (!sortOptions.shouldPlaceSimilarMiscItemsOnOnePage && baseTypesProcessed++ < miscBaseTypesOrder.size() - 1)
                         page += sortOptions.diffTypesBlankPages;
-
-                    _maxItemHeightInRow = 0;
                 }
             }
         }

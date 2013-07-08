@@ -212,6 +212,9 @@ struct MysticOrb
     QByteArray itemCode;
     QList<quint16> statIds;
     quint16 value;
+    quint32 param;
+
+    MysticOrb() : param(0) {}
 };
 
 struct RunewordInfo

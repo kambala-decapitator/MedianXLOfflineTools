@@ -221,7 +221,7 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
                     continue;
                 }
 
-                PropertiesMultiMap::iterator blessPropIter = item->props.find(Enums::ItemProperties::TrophyOrBless);
+                PropertiesMultiMap::iterator blessPropIter = item->props.find(Enums::ItemProperties::TrophyOrBless); // impossible to put inside the condition
                 if (blessPropIter != item->props.end())
                 {
                     QString newDesc = ItemDataBase::isUberCharm(item) ? (ItemDataBase::isClassCharm(item) ? tr("Veterans") : tr("Trophy'd"))
@@ -337,25 +337,22 @@ PropertiesMultiMap ItemParser::parseItemProperties(ReverseBitReader &bitReader, 
             }
 
             // elemental damage
-            bool hasLength = false, hasMinElementalDamage = false;
             if (id == 48 || id == 50 || id == Enums::ItemProperties::MinimumDamageMagic || id == 54 || id == 57) // min elemental damage
             {
+                bool hasLength = false;
                 if (id == 54 || id == 57) // cold or poison
                     hasLength = true; // length is present only when min damage is specified
                 else if (id == Enums::ItemProperties::MinimumDamageMagic)
-                    fixMagicDamageString(propToAdd, txtProperty);
+                    convertParamsInMagicDamageString(propToAdd, txtProperty);
                 props.insert(id++, propToAdd);
-                hasMinElementalDamage = true;
-            }
-            if (hasMinElementalDamage)
-            {
+
                 // get max elemental damage
                 ItemProperty *newProp = new ItemProperty;
                 ItemPropertyTxt *maxElementalDamageProp = ItemDataBase::Properties()->value(id);
                 newProp->value = bitReader.readNumber(maxElementalDamageProp->bits) - maxElementalDamageProp->add;
 
                 if (id == Enums::ItemProperties::MaximumDamageMagic)
-                    fixMagicDamageString(newProp, maxElementalDamageProp);
+                    convertParamsInMagicDamageString(newProp, maxElementalDamageProp);
                 props.insert(id, newProp);
 
                 if (hasLength) // cold or poison length
@@ -378,46 +375,7 @@ PropertiesMultiMap ItemParser::parseItemProperties(ReverseBitReader &bitReader, 
                 continue;
             }
 
-            if (id == 83)
-                propToAdd->displayString = tr("+%1 to %2 Skill Levels", "+x to class skills").arg(propToAdd->value).arg(propToAdd->param < Enums::ClassName::classes().size() ? Enums::ClassName::classes().at(propToAdd->param) : "WTF");
-            else if (id == Enums::ItemProperties::Oskill || id == Enums::ItemProperties::ClassOnlySkill)
-            {
-                SkillInfo *skill;
-                bool deleteSkill = propToAdd->param >= ItemDataBase::Skills()->size();
-                if (!deleteSkill)
-                    skill = ItemDataBase::Skills()->at(propToAdd->param);
-                else
-                {
-                    skill = new SkillInfo;
-                    skill->name = "REALM-ONLY SKILL";
-                    skill->classCode = -1;
-                }
-                propToAdd->displayString = tr("+%1 to %2", "oskill").arg(propToAdd->value).arg(skill->name);
-
-                if (id == Enums::ItemProperties::ClassOnlySkill)
-                    propToAdd->displayString += " " + tr("(%1 Only)", "class-specific skill").arg(skill->classCode > -1 ? Enums::ClassName::classes().at(skill->classCode) : "TROLOLOL");
-
-                if (deleteSkill)
-                    delete skill;
-            }
-            else if (id == 204)
-            {
-                propToAdd->displayString = tr("Level %1 %2 (%3/%4 Charges)").arg(propToAdd->param &  63).arg(ItemDataBase::Skills()->value(propToAdd->param >> 6)->name)
-                                                                            .arg(propToAdd->value & 255).arg(propToAdd->value >> 8);
-            }
-            else if (id == Enums::ItemProperties::ItemDuped)
-                propToAdd->displayString = QString("[%1]").arg(tr("duped flag"));
-            else if (txtProperty->descPositive.startsWith('%')) // ctc
-            {
-                QString desc = txtProperty->descPositive;
-                for (int i = 0, k = 1; k <= 3 && i < desc.length(); ++i)
-                    if (desc.at(i) == '%' && desc.at(i + 1).isLetter())
-                        desc[++i] = QString::number(k++).at(0);
-                propToAdd->displayString = desc.replace("%%", "%").arg(propToAdd->value).arg(propToAdd->param & 63).arg(ItemDataBase::Skills()->value(propToAdd->param >> 6)->name);
-            }
-            else if (ItemDataBase::MysticOrbs()->contains(id))
-                propToAdd->displayString = QString("%1 x '%2'").arg(propToAdd->value).arg(mysticOrbReadableProperty(ItemDataBase::Items()->value(ItemDataBase::MysticOrbs()->value(id)->itemCode)->spelldesc));
-
+            createDisplayStringForPropertyWithId(id, propToAdd);
             props.insert(id, propToAdd);
         }
         catch (int exceptionCode)
@@ -436,10 +394,53 @@ PropertiesMultiMap ItemParser::parseItemProperties(ReverseBitReader &bitReader, 
     return PropertiesMultiMap();
 }
 
-void ItemParser::fixMagicDamageString(ItemProperty *prop, ItemPropertyTxt *txtProp)
+void ItemParser::convertParamsInMagicDamageString(ItemProperty *prop, ItemPropertyTxt *txtProp)
 {
     QString desc = txtProp->descPositive;
     prop->displayString = desc.replace("%d", "%1").arg(prop->value);
+}
+
+void ItemParser::createDisplayStringForPropertyWithId(int id, ItemProperty *prop)
+{
+    if (id == 83)
+        prop->displayString = tr("+%1 to %2 Skill Levels", "+x to class skills").arg(prop->value).arg(prop->param < Enums::ClassName::classes().size() ? Enums::ClassName::classes().at(prop->param) : "WTF");
+    else if (id == Enums::ItemProperties::Oskill || id == Enums::ItemProperties::ClassOnlySkill)
+    {
+        SkillInfo *skill;
+        bool deleteSkill = prop->param >= ItemDataBase::Skills()->size();
+        if (!deleteSkill)
+            skill = ItemDataBase::Skills()->at(prop->param);
+        else
+        {
+            skill = new SkillInfo;
+            skill->name = "REALM-ONLY SKILL";
+            skill->classCode = -1;
+        }
+        prop->displayString = tr("+%1 to %2", "oskill").arg(prop->value).arg(skill->name);
+
+        if (id == Enums::ItemProperties::ClassOnlySkill)
+            prop->displayString += " " + tr("(%1 Only)", "class-specific skill").arg(skill->classCode > -1 ? Enums::ClassName::classes().at(skill->classCode) : "TROLOLOL");
+
+        if (deleteSkill)
+            delete skill;
+    }
+    else if (id == 204)
+    {
+        prop->displayString = tr("Level %1 %2 (%3/%4 Charges)").arg(prop->param &  63).arg(ItemDataBase::Skills()->value(prop->param >> 6)->name)
+            .arg(prop->value & 255).arg(prop->value >> 8);
+    }
+    else if (id == Enums::ItemProperties::ItemDuped)
+        prop->displayString = QString("[%1]").arg(tr("duped flag"));
+    else if (ItemDataBase::Properties()->value(id)->descPositive.startsWith('%')) // ctc
+    {
+        QString desc = ItemDataBase::Properties()->value(id)->descPositive;
+        for (int i = 0, k = 1; k <= 3 && i < desc.length(); ++i)
+            if (desc.at(i) == '%' && desc.at(i + 1).isLetter())
+                desc[++i] = QString::number(k++).at(0);
+        prop->displayString = desc.replace("%%", "%").arg(prop->value).arg(prop->param & 63).arg(ItemDataBase::Skills()->value(prop->param >> 6)->name);
+    }
+    else if (ItemDataBase::MysticOrbs()->contains(id))
+        prop->displayString = QString("%1 x '%2'").arg(prop->value).arg(mysticOrbReadableProperty(ItemDataBase::Items()->value(ItemDataBase::MysticOrbs()->value(id)->itemCode)->spelldesc));
 }
 
 

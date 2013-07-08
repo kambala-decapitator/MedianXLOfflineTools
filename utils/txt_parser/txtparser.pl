@@ -179,26 +179,29 @@ $rw->{'09This'} = {itype1 => 'weap', itype2 => 'armo', rune1 => 'jew'}; # yeah, 
 my $moStat = "xsignet";
 my $cubemain = parsetxt("cubemain.txt", '#_code' => 11, '!_enabled' => {col => 1, val => $zeroRe},
                         '!_mo' => {col => 33, val => qr/^(?!$moStat)/},
-                        '!_honorific' => {col => 0, val => qr/^honorific/}, prop => 21, value => 25, moStat => 33);
+                        '!_honorific' => {col => 0, val => qr/^honorific/}, prop => 21, moStat => 33,
+                        param => 24, minValue => 25, maxValue => 26);
 
 # MO names and properties
 my $mos; # hashref with keys from ID column of itemstatcost
-for my $miscItem (keys %$miscTypes)
+for my $miscItemType (keys %$miscTypes)
 {
-    my $hashRef = $miscTypes->{$miscItem};
+    my $hashRef = $miscTypes->{$miscItemType};
     # no UMO support because there's no simple way to determine if it has been cubed with item
     # (it doesn't have 'x_signet*' stat)
     next unless defined $hashRef->{type} and $hashRef->{type} eq 'asaa';
 
-    my $cubeMo = $cubemain->{$miscItem};
+    my $cubeMo = $cubemain->{$miscItemType};
     for (0..scalar @$itemProperties)
     {
         next unless defined $itemProperties->[$_]->{stat} and defined $cubeMo->{moStat};
         if ($itemProperties->[$_]->{stat} =~ /x_signet(\d+)/ and $cubeMo->{moStat} eq $moStat.$1)
         {
             $mos->{$_}->{statId} = &statIdsFromPropertyStat($cubeMo->{prop});
-            $mos->{$_}->{value} = $cubeMo->{value};
-            $mos->{$_}->{code} = $miscItem;
+            $mos->{$_}->{code} = $miscItemType;
+            $mos->{$_}->{value} = $cubeMo->{minValue};
+            $mos->{$_}->{paramAdd} = $cubeMo->{maxValue} if defined $cubeMo->{param};
+            $mos->{$_}->{paramShift} = $cubeMo->{param};
             last;
         }
     }
@@ -369,7 +372,7 @@ for my $key (keys %$rw)
 close $out;
 
 my @moIds = sort keys %$mos;
-my @moKeys = sort keys %{$mos->{$moIds[0]}};
+my @moKeys = qw/code statId value paramAdd paramShift/;
 open $out, ">", "generated/mo.txt";
 print $out "#id\t".join("\t", @moKeys)."\n";
 for my $id (@moIds)

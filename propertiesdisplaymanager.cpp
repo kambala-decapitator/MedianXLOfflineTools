@@ -447,7 +447,7 @@ PropertiesMap PropertiesDisplayManager::genericSocketableProperties(ItemInfo *so
                 itemProperty->displayString = ItemParser::kEnhancedDamageFormat().arg(prop.value);
                 break;
             case Enums::ItemProperties::MinimumDamageMagic: case Enums::ItemProperties::MaximumDamageMagic:
-                ItemParser::fixMagicDamageString(itemProperty, ItemDataBase::Properties()->value(prop.code));
+                ItemParser::convertParamsInMagicDamageString(itemProperty, ItemDataBase::Properties()->value(prop.code));
                 break;
             default:
                 break;

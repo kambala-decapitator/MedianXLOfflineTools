@@ -61,7 +61,7 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
         return;
     }
 
-    renderHtml(ui->itemAndMysticOrbsTextEdit, collectMysticOrbsDataFromProps(&_itemMysticOrbs, item->props, item->itemType));
+    renderHtml(ui->itemAndMysticOrbsTextEdit, collectMysticOrbsDataFromProps(&_itemMysticOrbs, item->props));
 
     PropertiesMultiMap allProps;
     PropertiesMultiMap::const_iterator constIter = item->props.constBegin();
@@ -73,7 +73,7 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
 
     if (item->isRW)
     {
-        renderHtml(ui->rwAndMysticOrbsTextEdit, collectMysticOrbsDataFromProps(&_rwMysticOrbs, item->rwProps, item->itemType));
+        renderHtml(ui->rwAndMysticOrbsTextEdit, collectMysticOrbsDataFromProps(&_rwMysticOrbs, item->rwProps));
         PropertiesDisplayManager::addProperties(&allProps, item->rwProps);
     }
 
@@ -288,8 +288,8 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
     bool shouldAddDamageToUndeadInTheBottom = false;
     if (ItemParser::itemTypesInheritFromTypes(itemBase->types, PropertiesDisplayManager::kDamageToUndeadTypes))
     {
-        if (allProps.contains(Enums::ItemProperties::DamageToUndead))
-            allProps.value(Enums::ItemProperties::DamageToUndead)->value += 50;
+        if (ItemProperty *damageToUndeadProp = allProps.value(Enums::ItemProperties::DamageToUndead))
+            damageToUndeadProp->value += 50;
         else
             shouldAddDamageToUndeadInTheBottom = true;
     }
@@ -384,14 +384,18 @@ void PropertiesViewerWidget::removeAllMysticOrbs()
 void PropertiesViewerWidget::removeMysticOrb()
 {
     QAction *action = qobject_cast<QAction *>(sender());
-    bool isItemMo = action->property("isItemMO").toBool();
     int moCode = action->property("moCode").toInt();
-    PropertiesMultiMap *props = &(isItemMo ? _item->props : _item->rwProps);
+    PropertiesMultiMap *props = &(action->property("isItemMO").toBool() ? _item->props : _item->rwProps);
 
     int moNumber = props->value(moCode)->value; // must be queried before calling removeMysticOrbData()
     removeMysticOrbData(moCode, props);
     decreaseRequiredLevel(moNumber, props);
     byteAlignBits();
+
+    MysticOrb *mo = ItemDataBase::MysticOrbs()->value(moCode);
+    int id = mo->statIds.first();
+    if (ItemProperty *prop = getProperty(id, mo->param, props))
+        ItemParser::createDisplayStringForPropertyWithId(id, prop); // update displayString for some properties (like ctc)
     updateItem();
 }
 
@@ -409,8 +413,9 @@ void PropertiesViewerWidget::removeMysticOrbsFromProperties(const QSet<int> &mys
 void PropertiesViewerWidget::removeMysticOrbData(int moCode, PropertiesMultiMap *props)
 {
     int moValue = totalMysticOrbValue(moCode, props);
-    foreach (quint16 statId, ItemDataBase::MysticOrbs()->value(moCode)->statIds) //-V807
-        modifyMysticOrbProperty(statId, moValue, props);
+    MysticOrb *mo = ItemDataBase::MysticOrbs()->value(moCode);
+    foreach (quint16 statId, mo->statIds) //-V807
+        modifyMysticOrbProperty(statId, moValue, props, mo->param);
 
     // remove MO data
     ItemPropertyTxt *propertyTxt = ItemDataBase::Properties()->value(moCode);
@@ -418,14 +423,18 @@ void PropertiesViewerWidget::removeMysticOrbData(int moCode, PropertiesMultiMap 
     if (valueIndex > -1)
         _item->bitString.remove(valueIndex, propertyTxt->bits + propertyTxt->saveParamBits + Enums::CharacterStats::StatCodeLength);
 
-    props->remove(moCode);
+    delete props->take(moCode);
 }
 
-int PropertiesViewerWidget::indexOfPropertyValue(int id, PropertiesMultiMap *props)
+int PropertiesViewerWidget::indexOfPropertyValue(int id, const PropertiesMultiMap *const props, quint32 param /*= 0*/) const
 {
+    ItemProperty *prop = getProperty(id, param, props);
+    if (!prop)
+        return -1;
+
     bool isMaxEnhDamageProp = id == Enums::ItemProperties::EnhancedDamage;
     ItemPropertyTxt *property = ItemDataBase::Properties()->value(id);
-    qulonglong value = props->value(id)->value + property->add;
+    qulonglong value = prop->value + property->add;
     if (isMaxEnhDamageProp)
     {
         qulonglong oldValue = value;
@@ -434,30 +443,50 @@ int PropertiesViewerWidget::indexOfPropertyValue(int id, PropertiesMultiMap *pro
     }
 
     int idIndex = -1, valueIndex = -1, bits = property->bits * (1 + isMaxEnhDamageProp);
+    qulonglong valueInString = 0;
+    quint32 paramInString = 0;
     do
     {
         if ((idIndex = _item->bitString.indexOf(binaryStringFromNumber(id, false, Enums::CharacterStats::StatCodeLength), idIndex + 1)) == -1)
             return -1;
-        valueIndex = idIndex - property->saveParamBits - bits;
-    } while (_item->bitString.mid(valueIndex, bits).toULongLong(0, 2) != value);
+
+        int paramIndex = idIndex - property->saveParamBits;
+        valueIndex = paramIndex - bits;
+
+        valueInString = _item->bitString.mid(valueIndex, bits).toULongLong(0, 2);
+        if (param)
+            paramInString = _item->bitString.mid(paramIndex, property->saveParamBits).toUInt(0, 2);
+    } while (valueInString != value || paramInString != param);
     return valueIndex;
 }
 
-void PropertiesViewerWidget::modifyMysticOrbProperty(int id, int decrement, PropertiesMultiMap *props)
+void PropertiesViewerWidget::modifyMysticOrbProperty(int id, int decrement, PropertiesMultiMap *props, quint32 param /*= 0*/)
 {
     if (!decrement)
         return;
 
-    int valueIndex = indexOfPropertyValue(id, props);
-    if (valueIndex <= -1)
-        return;
+    int valueIndex = indexOfPropertyValue(id, props, param);
+    if (valueIndex < 0)
+    {
+        bool fail = true;
+        if (id == Enums::ItemProperties::MaximumDamage)
+        {
+            id = Enums::ItemProperties::MaximumDamageSecondary;
+            fail = (valueIndex = indexOfPropertyValue(id, props, param)) < 0;
+        }
+        if (fail)
+            return;
+    }
 
     // ED value is stored as a sequence of 2 equal values
     bool isEnhancedDamageProp = id == Enums::ItemProperties::EnhancedDamage;
     ItemPropertyTxt *propertyTxt = ItemDataBase::Properties()->value(id);
     int bitsLength = (1 + isEnhancedDamageProp) * propertyTxt->bits;
 
-    ItemProperty *prop = props->value(id);
+    ItemProperty *prop = getProperty(id, param, props);
+    if (!prop) // shouldn't be possible actually
+        ERROR_BOX("WTF property not found. Gonna crash now, sorry...");
+
     prop->value -= decrement;
     if (prop->value > 0) // this value can become negative if removing 15x ED MO
     {
@@ -468,16 +497,29 @@ void PropertiesViewerWidget::modifyMysticOrbProperty(int id, int decrement, Prop
             prop->displayString = ItemParser::kEnhancedDamageFormat().arg(prop->value);
         }
         _item->bitString.replace(valueIndex, bitsLength, newBits); // place modified value
-        props->replace(id, prop);
     }
     else
     {
         _item->bitString.remove(valueIndex, bitsLength + propertyTxt->saveParamBits + Enums::CharacterStats::StatCodeLength);
-        props->remove(id);
+        props->remove(id, prop);
+        delete prop;
     }
 }
 
-int PropertiesViewerWidget::totalMysticOrbValue(int moCode, PropertiesMap *props)
+ItemProperty *PropertiesViewerWidget::getProperty(int id, quint32 param, const PropertiesMultiMap *const props) const
+{
+    // ctc MOs have same id but different params
+    if (param)
+    {
+        foreach (ItemProperty *aProp, props->values(id))
+            if (aProp->param == param)
+                return aProp;
+        return 0;
+    }
+    return props->value(id);
+}
+
+int PropertiesViewerWidget::totalMysticOrbValue(int moCode, PropertiesMap *props) const
 {
     quint8 multiplier = 1 + isMysticOrbEffectDoubled();
     return props->value(moCode)->value * ItemDataBase::MysticOrbs()->value(moCode)->value * multiplier;
@@ -496,7 +538,7 @@ void PropertiesViewerWidget::byteAlignBits()
     }
 }
 
-QString PropertiesViewerWidget::collectMysticOrbsDataFromProps(QSet<int> *moSet, PropertiesMap &props, const QByteArray &itemType)
+QString PropertiesViewerWidget::collectMysticOrbsDataFromProps(QSet<int> *moSet, PropertiesMap &props)
 {
     PropertiesMap propsWithoutMO = props;
     PropertiesMap::iterator iter = propsWithoutMO.begin();
@@ -504,7 +546,7 @@ QString PropertiesViewerWidget::collectMysticOrbsDataFromProps(QSet<int> *moSet,
     {
         if (ItemDataBase::MysticOrbs()->contains(iter.key()))
         {
-            if (!ItemDataBase::isClassCharm(itemType) && !isCharacterOrbOrSunstoneOfElements(itemType) && !isTradersChest(itemType))
+            if (!ItemDataBase::isUberCharm(_item))
                 moSet->insert(iter.key());
             iter = propsWithoutMO.erase(iter);
         }
@@ -518,16 +560,17 @@ QString PropertiesViewerWidget::collectMysticOrbsDataFromProps(QSet<int> *moSet,
         html += htmlLine + kHtmlLineBreak;
         foreach (int moCode, *moSet)
         {
-            if (isMysticOrbEffectDoubled() && !props[moCode]->displayString.endsWith(" x 2"))
-                props[moCode]->displayString += " x 2";
+            QString &displayString = props.value(moCode)->displayString;
+            if (isMysticOrbEffectDoubled() && !displayString.endsWith(" x 2"))
+                displayString += " x 2";
             // quick & dirty hack with const_cast
-            html += QString("%1 = %2").arg(props.value(moCode)->displayString).arg(totalMysticOrbValue(moCode, const_cast<PropertiesMap *>(&props))) + kHtmlLineBreak;
+            html += QString("%1 = %2").arg(displayString).arg(totalMysticOrbValue(moCode, const_cast<PropertiesMap *>(&props))) + kHtmlLineBreak;
         }
     }
     return html;
 }
 
-bool PropertiesViewerWidget::isMysticOrbEffectDoubled()
+bool PropertiesViewerWidget::isMysticOrbEffectDoubled() const
 {
     return _item->props.contains(Enums::ItemProperties::MysticOrbsEffectDoubled) || _item->rwProps.contains(Enums::ItemProperties::MysticOrbsEffectDoubled);
 }

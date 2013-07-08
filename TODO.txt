@@ -1,6 +1,5 @@
 v0.4:
-- batch eat signets (add a button)
-- ctc Miasma MO removal (doesn't appear)
+- separate sacreds sort option
 - write sort help
 
 future versions:
@@ -25,8 +24,7 @@ future versions:
 - fix multiple colors in one line, e.g. Statue of Ultimative v6b
 - figure out how to merge item descriptions from propertiesdisplaymanager and propertiesviewerwidget
 
-Sigma save file structure:
-
+// Sigma save file structure
 struct D2SaveHeaderStrc
 {
    DWORD dwHeaderMagic;                 // 0x000

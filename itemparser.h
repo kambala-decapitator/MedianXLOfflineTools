@@ -20,7 +20,8 @@ public:
     static QString parseItemsToBuffer(quint16 itemsTotal, QDataStream &inputDataStream, const QByteArray &bytes, const QString &corruptedItemFormat, ItemsList *itemsBuffer);
     static ItemInfo *parseItem(QDataStream &inputDataStream, const QByteArray &bytes);
     static PropertiesMultiMap parseItemProperties(ReverseBitReader &bitReader, ItemInfo::ParsingStatus *status);
-    static void fixMagicDamageString(ItemProperty *prop, ItemPropertyTxt *txtProp);
+    static void convertParamsInMagicDamageString(ItemProperty *prop, ItemPropertyTxt *txtProp);
+    static void createDisplayStringForPropertyWithId(int id, ItemProperty *prop);
 
     static bool itemTypesInheritFromType(const QList<QByteArray> &itemTypes, const QByteArray &allowedItemType);
     static bool itemTypeInheritsFromTypes(const QByteArray &itemType, const QList<QByteArray> &allowedItemTypes);

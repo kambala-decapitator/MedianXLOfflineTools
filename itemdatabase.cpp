@@ -185,16 +185,16 @@ QHash<uint, SetItemInfo *> *ItemDataBase::Sets()
             if (data.isEmpty())
                 continue;
 
-            SetItemInfo *item = new SetItemInfo;
-            item->itemName = QString::fromUtf8(data.at(1));
-            item->setName = QString::fromUtf8(data.at(2));
+            SetItemInfo *setItem = new SetItemInfo;
+            setItem->itemName = QString::fromUtf8(data.at(1));
+            setItem->setName = QString::fromUtf8(data.at(2));
             if (data.size() > 3)
-                item->imageName = data.at(3);
-            allSets[data.at(0).toUInt()] = item;
+                setItem->imageName = data.at(3);
+            allSets[data.at(0).toUInt()] = setItem;
 
             // do not add duplicate names
-            if (_sets.count(item->setName) < 5)
-                _sets.insert(item->setName, item->itemName);
+            if (_sets.count(setItem->setName) < 5)
+                _sets.insert(setItem->setName, setItem->itemName);
         }
         f.remove();
     }
@@ -216,13 +216,13 @@ QList<SkillInfo *> *ItemDataBase::Skills()
             if (data.isEmpty())
                 continue;
 
-            SkillInfo *item = new SkillInfo;
-            item->name = QString::fromUtf8(data.at(1));
-            item->classCode = data.at(2).toShort();
-            item->tab = data.at(3).toShort();
-            item->row = data.at(4).toShort();
-            item->col = data.at(5).toShort();
-            allSkills.push_back(item);
+            SkillInfo *skill = new SkillInfo;
+            skill->name = QString::fromUtf8(data.at(1));
+            skill->classCode = data.at(2).toShort();
+            skill->tab = data.at(3).toShort();
+            skill->row = data.at(4).toShort();
+            skill->col = data.at(5).toShort();
+            allSkills.push_back(skill);
         }
         f.remove();
     }
@@ -244,12 +244,12 @@ QHash<uint, UniqueItemInfo *> *ItemDataBase::Uniques()
             if (data.isEmpty())
                 continue;
 
-            UniqueItemInfo *item = new UniqueItemInfo;
-            item->name = QString::fromUtf8(data.at(1));
-            item->rlvl = data.at(2).toUShort();
+            UniqueItemInfo *uniqueItem = new UniqueItemInfo;
+            uniqueItem->name = QString::fromUtf8(data.at(1));
+            uniqueItem->rlvl = data.at(2).toUShort();
             if (data.size() > 3)
-                item->imageName = data.at(3);
-            allUniques[data.at(0).toUInt()] = item;
+                uniqueItem->imageName = data.at(3);
+            allUniques[data.at(0).toUInt()] = uniqueItem;
         }
         f.remove();
     }
@@ -271,13 +271,14 @@ QHash<uint, MysticOrb *> *ItemDataBase::MysticOrbs()
             if (data.isEmpty())
                 continue;
 
-            MysticOrb *item = new MysticOrb;
-            item->itemCode = data.at(1);
-            QList<QByteArray> statIds = data.at(2).split(',');
-            foreach (const QByteArray &statId, statIds)
-                item->statIds << statId.toUShort();
-            item->value = data.at(3).toUShort();
-            allMysticOrbs[data.at(0).toUInt()] = item;
+            MysticOrb *mo = new MysticOrb;
+            mo->itemCode = data.at(1);
+            foreach (const QByteArray &statId, data.at(2).split(','))
+                mo->statIds << statId.toUShort();
+            mo->value = data.at(3).toUShort();
+            if (data.size() > 4)
+                mo->param = data.at(4).toUShort() + (data.at(5).toUShort() << 6);
+            allMysticOrbs[data.at(0).toUInt()] = mo;
         }
         f.remove();
     }
@@ -321,12 +322,12 @@ RunewordHash *ItemDataBase::RW()
             if (data.isEmpty())
                 continue;
 
-            RunewordInfo *item = new RunewordInfo;
-            item->allowedItemTypes.reserve(6);
+            RunewordInfo *rw = new RunewordInfo;
+            rw->allowedItemTypes.reserve(6);
             for (int i = 0; i < 6; ++i)
-                item->allowedItemTypes << data.at(i);
-            item->name = QString::fromUtf8(data.at(6));
-            allRunewords.insert(qMakePair(data.at(7), data.size() == 9 ? data.at(8) : QByteArray()), item);
+                rw->allowedItemTypes << data.at(i);
+            rw->name = QString::fromUtf8(data.at(6));
+            allRunewords.insert(qMakePair(data.at(7), data.size() == 9 ? data.at(8) : QByteArray()), rw);
         }
         f.remove();
     }

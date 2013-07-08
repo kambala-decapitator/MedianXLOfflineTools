@@ -41,15 +41,17 @@ private:
 
     void removeMysticOrbsFromProperties(const QSet<int> &mysticOrbs, PropertiesMultiMap *props);
     void removeMysticOrbData(int moCode, PropertiesMultiMap *props);
-    int indexOfPropertyValue(int id, PropertiesMultiMap *props);
-    void modifyMysticOrbProperty(int id, int decrement, PropertiesMultiMap *props);
-    int totalMysticOrbValue(int moCode, PropertiesMap *props);
+    int indexOfPropertyValue(int id, const PropertiesMultiMap *const props, quint32 param = 0) const;
+    void modifyMysticOrbProperty(int id, int decrement, PropertiesMultiMap *props, quint32 param = 0);
+    ItemProperty *getProperty(int id, quint32 param, const PropertiesMultiMap *const props) const;
+    int totalMysticOrbValue(int moCode, PropertiesMap *props) const;
     void decreaseRequiredLevel(int moNumber, PropertiesMultiMap *props) { modifyMysticOrbProperty(Enums::ItemProperties::RequiredLevel, moNumber * 2, props); }
     void byteAlignBits();
+
     void updateItem() { _item->hasChanged = true; showItem(_item); }
 
-    QString collectMysticOrbsDataFromProps(QSet<int> *moSet, PropertiesMap &props, const QByteArray &itemType);
-    bool isMysticOrbEffectDoubled();
+    QString collectMysticOrbsDataFromProps(QSet<int> *moSet, PropertiesMap &props);
+    bool isMysticOrbEffectDoubled() const;
 };
 
 #endif // PROPERTIESVIEWERWIDGET_H
