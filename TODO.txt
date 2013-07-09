@@ -1,5 +1,4 @@
 v0.4:
-- separate sacreds sort option
 - write sort help
 
 future versions:

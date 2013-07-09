@@ -254,7 +254,7 @@ struct StashSortOptions
 {
     bool isQualityOrderAscending;
     bool isNewRowTier, isNewRowCotw, isNewRowVisuallyDifferentMisc;
-    bool isEachTypeFromNewPage, shouldPlaceSimilarMiscItemsOnOnePage, shouldSeparateEth;
+    bool isEachTypeFromNewPage, shouldPlaceSimilarMiscItemsOnOnePage, shouldSeparateSacred, shouldSeparateEth;
 
     quint32 firstPage, lastPage;
     int diffQualitiesBlankPages, diffTypesBlankPages;

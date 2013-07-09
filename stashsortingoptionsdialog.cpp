@@ -51,6 +51,7 @@ StashSortOptions StashSortingOptionsDialog::sortOptions() const
     options.isQualityOrderAscending = ui->ascQualityRadioButton->isChecked();
     options.isEachTypeFromNewPage = ui->eachTypeFromNewPageCheckBox->isChecked();
     options.shouldPlaceSimilarMiscItemsOnOnePage = ui->similarMiscItemsOnOnePageCheckBox->isChecked();
+    options.shouldSeparateSacred = ui->separateSacredCheckBox->isChecked();
     options.shouldSeparateEth = ui->separateEthCheckBox->isChecked();
     options.isNewRowTier = ui->newRowTierCheckBox->isChecked();
     options.isNewRowCotw = ui->newRowCotwCheckBox->isChecked();
@@ -119,12 +120,17 @@ void StashSortingOptionsDialog::createLayout()
     vbl = new QVBoxLayout(ui->separationBox);
     vbl->addWidget(ui->eachTypeFromNewPageCheckBox);
     vbl->addWidget(ui->similarMiscItemsOnOnePageCheckBox);
+    vbl->addWidget(ui->separateSacredCheckBox);
     vbl->addWidget(ui->separateEthCheckBox);
 
     vbl = new QVBoxLayout(ui->newRowGroupBox);
     vbl->addWidget(ui->newRowTierCheckBox);
     vbl->addWidget(ui->newRowCotwCheckBox);
     vbl->addWidget(ui->newRowVisuallyDifferentMiscCheckBox);
+
+    vbl = new QVBoxLayout;
+    vbl->addWidget(ui->newRowGroupBox);
+    vbl->addWidget(ui->buttonBox);
 
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
 
@@ -138,10 +144,8 @@ void StashSortingOptionsDialog::createLayout()
 
     hbl = new QHBoxLayout;
     hbl->addWidget(ui->separationBox);
-    hbl->addWidget(ui->newRowGroupBox);
+    hbl->addLayout(vbl);
     mainLayout->addLayout(hbl);
-
-    mainLayout->addWidget(ui->buttonBox);
 
     adjustSize();
     setFixedSize(size());
@@ -167,6 +171,7 @@ void StashSortingOptionsDialog::loadSettings()
     settings.beginGroup("separation");
     ui->eachTypeFromNewPageCheckBox->setChecked(settings.value("eachTypeFromNewPage", true).toBool());
     ui->similarMiscItemsOnOnePageCheckBox->setChecked(settings.value("similarMiscItemsOnOnePage", true).toBool());
+    ui->separateSacredCheckBox->setChecked(settings.value("sacred", true).toBool());
     ui->separateEthCheckBox->setChecked(settings.value("eth", true).toBool());
     settings.endGroup();
 
@@ -193,6 +198,7 @@ void StashSortingOptionsDialog::saveSettings()
     settings.beginGroup("separation");
     settings.setValue("eachTypeFromNewPage", ui->eachTypeFromNewPageCheckBox->isChecked());
     settings.setValue("similarMiscItemsOnOnePage", ui->similarMiscItemsOnOnePageCheckBox->isChecked());
+    settings.setValue("sacred", ui->separateSacredCheckBox->isChecked());
     settings.setValue("eth", ui->separateEthCheckBox->isChecked());
     settings.endGroup();
 

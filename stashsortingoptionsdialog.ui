@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>610</width>
+    <width>615</width>
     <height>241</height>
    </rect>
   </property>
@@ -280,7 +280,7 @@
      <x>10</x>
      <y>110</y>
      <width>291</width>
-     <height>91</height>
+     <height>111</height>
     </rect>
    </property>
    <property name="title">
@@ -290,7 +290,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>60</y>
+      <y>80</y>
       <width>173</width>
       <height>20</height>
      </rect>
@@ -329,6 +329,22 @@
     </property>
     <property name="text">
      <string>Start each item type from new page</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="separateSacredCheckBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>60</y>
+      <width>171</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Separate sacred items</string>
     </property>
     <property name="checked">
      <bool>true</bool>
