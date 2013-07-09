@@ -41,6 +41,7 @@ private slots:
 
     void updateCurrentIndexForItem(ItemInfo *item);
     void searchTextChanged();
+    void changeComboboxCaseSensitivity(bool isCaseSensitive);
 
 private:
     Ui::FindItemsDialog *ui;

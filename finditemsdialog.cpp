@@ -11,6 +11,7 @@
 #include <QDesktopWidget>
 #include <QTextBrowser>
 #include <QDialogButtonBox>
+#include <QCompleter>
 
 #include <QRegExp>
 #include <QSettings>
@@ -78,6 +79,8 @@ FindItemsDialog::FindItemsDialog(QWidget *parent) : QDialog(parent), ui(new Ui::
     loadSettings();
     adjustSize();
     setMaximumHeight(qApp->desktop()->availableGeometry().height() - 50);
+
+    connect(ui->caseSensitiveCheckBox, SIGNAL(toggled(bool)), SLOT(changeComboboxCaseSensitivity(bool)));
 }
 
 FindItemsDialog::~FindItemsDialog()
@@ -259,6 +262,11 @@ void FindItemsDialog::searchTextChanged()
 {
     resetSearchStatus();
     updateWindowTitle();
+}
+
+void FindItemsDialog::changeComboboxCaseSensitivity(bool isCaseSensitive)
+{
+    ui->searchComboBox->completer()->setCaseSensitivity(isCaseSensitive ? Qt::CaseSensitive : Qt::CaseInsensitive);
 }
 
 void FindItemsDialog::performSearch()

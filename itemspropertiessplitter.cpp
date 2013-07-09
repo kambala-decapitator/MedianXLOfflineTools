@@ -18,7 +18,7 @@
 
 
 static const int kShardsPerCrystal = 5;
-static const QRegExp runeRegExp("r(\\d\\d)");
+static const QRegExp kRuneRegExp("r(\\d\\d)");
 static const quint8 kOnRuneKey = 50, kPerfectGrade = 4;
 
 
@@ -153,17 +153,17 @@ bool ItemsPropertiesSplitter::canSocketableMapBeUpgraded(const UpgradableItemsMu
     return false;
 }
 
-QPair<bool, bool> ItemsPropertiesSplitter::updateUpgradeButtonsState(ItemsList *pItems /*= 0*/)
+QPair<bool, bool> ItemsPropertiesSplitter::updateUpgradeButtonsState(int reserveRunes, ItemsList *pItems /*= 0*/)
 {
     const ItemsList &items = pItems ? *pItems : _allItems;
 
     bool enableGemsButton = false;
-    QHash<QByteArray, UpgradableItemsMultiMap> gemsMapsHash = getGemsMapsFromItems(items);
+    QHash<QByteArray, UpgradableItemsMultiMap> gemsMapsHash = gemsMapsFromItems(items);
     foreach (const UpgradableItemsMultiMap &gemsMap, gemsMapsHash)
         if ((enableGemsButton = canSocketableMapBeUpgraded(gemsMap)))
             break;
 
-    return qMakePair(enableGemsButton, canSocketableMapBeUpgraded(getRunesMapFromItems(items)));
+    return qMakePair(enableGemsButton, canSocketableMapBeUpgraded(runesMapFromItems(items, reserveRunes)));
 }
 
 void ItemsPropertiesSplitter::updateItems(const ItemsList &newItems)
@@ -227,9 +227,9 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
         }
 
         // downgrade a rune
-        if (runeRegExp.exactMatch(item->itemType))
+        if (kRuneRegExp.exactMatch(item->itemType))
         {
-            quint8 runeCode = runeRegExp.cap(1).toUShort();
+            quint8 runeCode = kRuneRegExp.cap(1).toUShort();
             if (runeCode > 1 && runeCode <= kOnRuneKey)
             {
                 QMenu *menuDowngrade = new QMenu(tr("Downgrade to"), _itemsView);
@@ -643,7 +643,7 @@ bool ItemsPropertiesSplitter::upgradeItemsInMap(UpgradableItemsMultiMap &itemsMa
 
 void ItemsPropertiesSplitter::upgradeGems(ItemsList *pItems /*= 0*/)
 {
-    QHash<QByteArray, UpgradableItemsMultiMap> gemsMapsHash = getGemsMapsFromItems(pItems ? *pItems : _allItems);
+    QHash<QByteArray, UpgradableItemsMultiMap> gemsMapsHash = gemsMapsFromItems(pItems ? *pItems : _allItems);
     for (QHash<QByteArray, UpgradableItemsMultiMap>::iterator iter = gemsMapsHash.begin(); iter != gemsMapsHash.end(); ++iter)
         upgradeItemsInMap(iter.value(), kPerfectGrade, QString("gems/%1%2").arg(iter.key().constData()).arg("%1"));
 
@@ -651,9 +651,9 @@ void ItemsPropertiesSplitter::upgradeGems(ItemsList *pItems /*= 0*/)
     emit itemCountChanged(_allItems.size());
 }
 
-void ItemsPropertiesSplitter::upgradeRunes(ItemsList *pItems /*= 0*/)
+void ItemsPropertiesSplitter::upgradeRunes(int reserveRunes, ItemsList *pItems /*= 0*/)
 {
-    UpgradableItemsMultiMap runesMap = getRunesMapFromItems(pItems ? *pItems : _allItems);
+    UpgradableItemsMultiMap runesMap = runesMapFromItems(pItems ? *pItems : _allItems, reserveRunes);
     if (upgradeItemsInMap(runesMap, kOnRuneKey, "runes/r%1"))
     {
         emit itemsChanged();
@@ -661,14 +661,14 @@ void ItemsPropertiesSplitter::upgradeRunes(ItemsList *pItems /*= 0*/)
     }
 }
 
-QHash<QByteArray, UpgradableItemsMultiMap> ItemsPropertiesSplitter::getGemsMapsFromItems(const ItemsList &items)
+QHash<QByteArray, UpgradableItemsMultiMap> ItemsPropertiesSplitter::gemsMapsFromItems(const ItemsList &items)
 {
     const QByteArray kPerfectGradeBytes = QByteArray::number(kPerfectGrade);
 
     QMultiHash<QByteArray, ItemInfo *> allGems;
     foreach (ItemInfo *item, items)
     {
-        QList<QByteArray> types = ItemDataBase::Items()->value(item->itemType)->types;  // first value is gem type, second value is gem grade
+        QList<QByteArray> types = ItemDataBase::Items()->value(item->itemType)->types;  // first element is gem type, second element is gem grade
         if (types.at(0).startsWith("gem") && !types.at(1).endsWith(kPerfectGradeBytes)) // exclude prefect gems
             allGems.insertMulti(types.at(0), item);
     }
@@ -684,16 +684,23 @@ QHash<QByteArray, UpgradableItemsMultiMap> ItemsPropertiesSplitter::getGemsMapsF
     return gemsMapsHash;
 }
 
-UpgradableItemsMultiMap ItemsPropertiesSplitter::getRunesMapFromItems(const ItemsList &items)
+UpgradableItemsMultiMap ItemsPropertiesSplitter::runesMapFromItems(const ItemsList &items, int reserveRunes)
 {
     UpgradableItemsMultiMap runesMap;
+    QHash<quint8, quint8> reserveHash;
     foreach (ItemInfo *item, items)
     {
-        if (runeRegExp.exactMatch(item->itemType))
+        if (kRuneRegExp.exactMatch(item->itemType))
         {
-            quint8 runeKey = runeRegExp.cap(1).toUShort();
+            quint8 runeKey = kRuneRegExp.cap(1).toUShort();
             if (runeKey < kOnRuneKey) // don't include 'On' rune, Great runes and Ultimative runes
-                runesMap.insertMulti(runeKey, item);
+            {
+                quint8 &reserve = reserveHash[runeKey];
+                if (reserve < reserveRunes)
+                    ++reserve;
+                else
+                    runesMap.insertMulti(runeKey, item);
+            }
         }
     }
     return runesMap;

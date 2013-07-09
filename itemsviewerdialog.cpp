@@ -23,6 +23,8 @@
 #include <QCheckBox>
 #include <QRadioButton>
 #include <QInputDialog>
+#include <QSpinBox>
+#include <QLabel>
 
 #include <QSettings>
 
@@ -120,13 +122,13 @@ void ItemsViewerDialog::createLayout()
 
     _disenchantToShardsButton = new QPushButton(tr("Arcane Shards"), _disenchantBox);
     _upgradeToCrystalsCheckbox = new QCheckBox(tr("Upgrade to Crystals"), _disenchantBox);
-    _uniquesRadioButton = new QRadioButton(tr("Uniques"), _disenchantBox);
     _upgradeToCrystalsCheckbox->setChecked(true);
+    _uniquesRadioButton = new QRadioButton(tr("Uniques"), _disenchantBox);
 
     _disenchantToSignetButton = new QPushButton(tr("Signets of Learning"), _disenchantBox);
     _eatSignetsCheckbox = new QCheckBox(tr("Eat Signets"), _disenchantBox);
-    _setsRadioButton = new QRadioButton(tr("Sets"), _disenchantBox);
     _eatSignetsCheckbox->setChecked(true);
+    _setsRadioButton = new QRadioButton(tr("Sets"), _disenchantBox);
 
     _bothQualitiesRadioButton = new QRadioButton(tr("Both"), _disenchantBox);
     _bothQualitiesRadioButton->setChecked(true);
@@ -155,11 +157,25 @@ void ItemsViewerDialog::createLayout()
     _upgradeBox = new QGroupBox(tr("Upgrade here all:"), _itemManagementWidget);
     _upgradeGemsButton = new QPushButton(tr("Gems"), _upgradeBox);
     _upgradeRunesButton = new QPushButton(tr("Runes"), _upgradeBox);
+    _reserveRunesSpinBox = new QSpinBox(_upgradeBox);
+    _reserveRunesSpinBox->setRange(0, 10);
     _upgradeBothButton = new QPushButton(tr("Both"), _upgradeBox);
+
+    QLabel *reserveRunesLabel = new QLabel(tr("Reserve:"), _upgradeBox);
+    reserveRunesLabel->setToolTip(tr("Minimum number of each rune type to reserve"));
+    reserveRunesLabel->setBuddy(_reserveRunesSpinBox);
+
+    QFrame *runesFrame = new QFrame(_upgradeBox);
+    runesFrame->setFrameShape(QFrame::StyledPanel);
+
+    QGridLayout *runesGridLayout = new QGridLayout(runesFrame);
+    runesGridLayout->addWidget(_upgradeRunesButton, 0, 0, 1, 2);
+    runesGridLayout->addWidget(reserveRunesLabel, 1, 0);
+    runesGridLayout->addWidget(_reserveRunesSpinBox, 1, 1);
 
     vboxLayout = new QVBoxLayout(_upgradeBox);
     vboxLayout->addWidget(_upgradeGemsButton);
-    vboxLayout->addWidget(_upgradeRunesButton);
+    vboxLayout->addWidget(runesFrame);
     vboxLayout->addWidget(_upgradeBothButton);
 
     _applyActionToAllPagesCheckbox = new QCheckBox(tr("Apply to all pages"), this);
@@ -198,6 +214,27 @@ void ItemsViewerDialog::loadSettings()
 
     for (int i = GearIndex; i <= LastIndex; ++i)
         splitterAtIndex(i)->restoreState(settings.value(QString("itemsTab%1_state").arg(i)).toByteArray());
+
+    _reserveRunesSpinBox->setValue(settings.value("reserveRunes").toInt());
+}
+
+void ItemsViewerDialog::saveSettings()
+{
+    QSettings settings;
+    settings.setValue("itemsViewerGeometry", saveGeometry());
+
+    for (int i = GearIndex; i <= LastIndex; ++i)
+        settings.setValue(QString("itemsTab%1_state").arg(i), splitterAtIndex(i)->saveState());
+
+    settings.setValue("reserveRunes", _reserveRunesSpinBox->value());
+}
+
+void ItemsViewerDialog::reject()
+{
+    saveSettings();
+    updateBeltItemsCoordinates(true, 0);
+    emit closing();
+    QDialog::reject();
 }
 
 ItemsPropertiesSplitter *ItemsViewerDialog::splitterAtIndex(int tabIndex)
@@ -213,23 +250,6 @@ ItemsPropertiesSplitter *ItemsViewerDialog::currentSplitter()
 PlugyItemsSplitter *ItemsViewerDialog::currentPlugySplitter()
 {
     return static_cast<PlugyItemsSplitter *>(_tabWidget->currentWidget());
-}
-
-void ItemsViewerDialog::saveSettings()
-{
-    QSettings settings;
-    settings.setValue("itemsViewerGeometry", saveGeometry());
-
-    for (int i = GearIndex; i <= LastIndex; ++i)
-        settings.setValue(QString("itemsTab%1_state").arg(i), splitterAtIndex(i)->saveState());
-}
-
-void ItemsViewerDialog::reject()
-{
-    saveSettings();
-    updateBeltItemsCoordinates(true, 0);
-    emit closing();
-    QDialog::reject();
 }
 
 void ItemsViewerDialog::tabChanged(int tabIndex)
@@ -424,7 +444,7 @@ void ItemsViewerDialog::updateDisenchantButtonsState()
 
 void ItemsViewerDialog::updateUpgradeButtonsState()
 {
-    QPair<bool, bool> allowUpgradeButtons = currentSplitter()->updateUpgradeButtonsState();
+    QPair<bool, bool> allowUpgradeButtons = currentSplitter()->updateUpgradeButtonsState(_reserveRunesSpinBox->value());
     _upgradeGemsButton->setEnabled(allowUpgradeButtons.first);
     _upgradeRunesButton->setEnabled(allowUpgradeButtons.second);
     _upgradeBothButton->setEnabled(allowUpgradeButtons.first && allowUpgradeButtons.second);
@@ -489,7 +509,7 @@ void ItemsViewerDialog::upgradeGems()
 
 void ItemsViewerDialog::upgradeRunes()
 {
-    currentSplitter()->upgradeRunes();
+    currentSplitter()->upgradeRunes(_reserveRunesSpinBox->value());
 
     _upgradeRunesButton->setDisabled(true);
     _upgradeBothButton->setDisabled(true);

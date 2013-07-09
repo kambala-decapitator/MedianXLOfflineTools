@@ -20,14 +20,14 @@ public:
     virtual void setItems(const ItemsList &newItems);
     void updateSpinbox() { setItems(_allItems); }
     virtual void showItem(ItemInfo *item);
-    virtual ItemsList *getItems() { return itemsForSelectedRange(); }
+    virtual ItemsList *getItems() { return allOrCurrentPageItems(); }
 
     virtual QPair<bool, bool> updateDisenchantButtonsState(bool includeUniques, bool includeSets, bool toCrystals, ItemsList *items = 0);
-    virtual QPair<bool, bool> updateUpgradeButtonsState(ItemsList *items = 0);
+    virtual QPair<bool, bool> updateUpgradeButtonsState(int reserveRunes, ItemsList *items = 0);
 
     virtual ItemsList disenchantAllItems(bool toShards, bool upgradeToCrystals, bool eatSignets, ItemsList *pItems = 0);
     virtual void upgradeGems(ItemsList *items = 0);
-    virtual void upgradeRunes(ItemsList *items = 0);
+    virtual void upgradeRunes(int reserveRunes, ItemsList *items = 0);
 
     void sortStash(const StashSortOptions &sortOptions);
     void insertBlankPages(int pages);
@@ -83,7 +83,7 @@ private:
     void emulateShiftAndInvokeMethod(void (PlugyItemsSplitter::*method)(void)) { _isShiftPressed = true; (this->*method)(); _isShiftPressed = false; }
     bool keyEventHasShift(QKeyEvent *keyEvent);
     void setShortcutTextInButtonTooltip(QPushButton *button, const QKeySequence &keySequence);
-    ItemsList *itemsForSelectedRange() { return _shouldApplyActionToAllPages ? &_allItems : &_pagedItems; }
+    ItemsList *allOrCurrentPageItems() { return _shouldApplyActionToAllPages ? &_allItems : &_pagedItems; }
 //    void moveItemsToFirstPages(ItemsList *items, bool toShards);
 
     void showErrorLoadingSortingOrderFile(const QFile &f);

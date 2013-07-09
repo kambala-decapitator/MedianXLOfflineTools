@@ -295,11 +295,11 @@ void PlugyItemsSplitter::upgradeGems(ItemsList *items /*= 0*/)
     progressBar.centerInWidget(this);
     progressBar.show();
 
-    ItemsPropertiesSplitter::upgradeGems(itemsForSelectedRange());
+    ItemsPropertiesSplitter::upgradeGems(allOrCurrentPageItems());
     updateSpinbox();
 }
 
-void PlugyItemsSplitter::upgradeRunes(ItemsList *items /*= 0*/)
+void PlugyItemsSplitter::upgradeRunes(int reserveRunes, ItemsList *items /*= 0*/)
 {
     Q_UNUSED(items);
 
@@ -307,7 +307,7 @@ void PlugyItemsSplitter::upgradeRunes(ItemsList *items /*= 0*/)
     progressBar.centerInWidget(this);
     progressBar.show();
 
-    ItemsPropertiesSplitter::upgradeRunes(itemsForSelectedRange());
+    ItemsPropertiesSplitter::upgradeRunes(reserveRunes, allOrCurrentPageItems());
     updateSpinbox();
 }
 
@@ -490,20 +490,19 @@ void PlugyItemsSplitter::showItem(ItemInfo *item)
 QPair<bool, bool> PlugyItemsSplitter::updateDisenchantButtonsState(bool includeUniques, bool includeSets, bool toCrystals, ItemsList *pItems /*= 0*/)
 {
     Q_UNUSED(pItems);
-    return ItemsPropertiesSplitter::updateDisenchantButtonsState(includeUniques, includeSets, toCrystals, itemsForSelectedRange());
+    return ItemsPropertiesSplitter::updateDisenchantButtonsState(includeUniques, includeSets, toCrystals, allOrCurrentPageItems());
 }
 
-QPair<bool, bool> PlugyItemsSplitter::updateUpgradeButtonsState(ItemsList *pItems /*= 0*/)
+QPair<bool, bool> PlugyItemsSplitter::updateUpgradeButtonsState(int reserveRunes, ItemsList *pItems /*= 0*/)
 {
     Q_UNUSED(pItems);
-    return ItemsPropertiesSplitter::updateUpgradeButtonsState(itemsForSelectedRange());
+    return ItemsPropertiesSplitter::updateUpgradeButtonsState(reserveRunes, allOrCurrentPageItems());
 }
 
 void PlugyItemsSplitter::setItems(const ItemsList &newItems)
 {
     _allItems = newItems;
 
-    // using _allItems.last()->plugyPage would've been easy, but it's not always correct (new items added via app are added to the end)
     ItemsList::const_iterator maxPageIter = std::max_element(_allItems.constBegin(), _allItems.constEnd(), compareItemsByPlugyPage);
     _lastNotEmptyPage = maxPageIter == _allItems.constEnd() ? 0 : (*maxPageIter)->plugyPage;
 

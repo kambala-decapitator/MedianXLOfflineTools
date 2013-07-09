@@ -18,6 +18,7 @@ class QGroupBox;
 class QPushButton;
 class QCheckBox;
 class QRadioButton;
+class QSpinBox;
 
 class ItemsViewerDialog : public QDialog
 {
@@ -108,6 +109,7 @@ private:
 
     QGroupBox *_upgradeBox;
     QPushButton *_upgradeGemsButton, *_upgradeRunesButton, *_upgradeBothButton;
+    QSpinBox *_reserveRunesSpinBox;
 
     QCheckBox *_applyActionToAllPagesCheckbox;
 
