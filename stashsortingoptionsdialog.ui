@@ -164,7 +164,7 @@
     </rect>
    </property>
    <property name="title">
-    <string>Blank pages between...</string>
+    <string>Blank pages between:</string>
    </property>
    <widget class="QLabel" name="diffQualitiesLabel">
     <property name="geometry">
@@ -229,7 +229,7 @@
     </rect>
    </property>
    <property name="title">
-    <string>New row for...</string>
+    <string>New row for:</string>
    </property>
    <widget class="QCheckBox" name="newRowTierCheckBox">
     <property name="geometry">

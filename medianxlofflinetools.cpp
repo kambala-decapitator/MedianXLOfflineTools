@@ -1387,7 +1387,7 @@ void MedianXLOfflineTools::createQuestsGroupBoxLayout()
 {
     _questsGroupBox = new QGroupBox(tr("Quests"), this);
 
-    QList<int> questKeys = QList<int>() << Enums::Quests::DenOfEvil << Enums::Quests::Radament << Enums::Quests::Izual << Enums::Quests::LamEsensTome;
+    QList<int> questKeys = QList<int>() << Enums::Quests::DenOfEvil << Enums::Quests::Radament << Enums::Quests::Izual << Enums::Quests::LamEsensTome << Enums::Quests::GoldenBird;
     foreach (int quest, questKeys)
     {
         QCheckBox *hatredCheckBox = new QCheckBox(tr("Hatred"), _questsGroupBox), *terrorCheckBox = new QCheckBox(tr("Terror"), _questsGroupBox), *destCheckBox = new QCheckBox(tr("Destruction"), _questsGroupBox);
@@ -1395,19 +1395,30 @@ void MedianXLOfflineTools::createQuestsGroupBoxLayout()
         _checkboxesQuestsHash[quest] = QList<QCheckBox *>() << hatredCheckBox << terrorCheckBox << destCheckBox;
     }
 
-    QGridLayout *gridLayout = new QGridLayout(_questsGroupBox);
-    gridLayout->addWidget(new QLabel(tr("Den of Evil")), 0, 0);
-    gridLayout->addWidget(new QLabel(tr("Radament")), 1, 0);
-    gridLayout->addWidget(new QLabel(tr("Izual")), 2, 0);
-    gridLayout->addWidget(new QLabel(tr("Lam Esen's Tome")), 4, 0);
+    QString rewardFormat = tr("Reward: %1", "tooltip for quest label");
 
+    QLabel *doeLabel = new QLabel(tr("Den of Evil")), *radamentLabel = new QLabel(tr("Radament")), *izualLabel = new QLabel(tr("Izual")), *lamEsensTomeLabel = new QLabel(tr("Lam Esen's Tome")), *goldenBirdLabel = new QLabel(tr("Golden Bird"));
+    doeLabel->setStatusTip(rewardFormat.arg(tr("%n free skill point(s)", 0, 1)));
+    radamentLabel->setStatusTip(rewardFormat.arg(tr("%n free skill point(s)", 0, 1)));
+    izualLabel->setStatusTip(rewardFormat.arg(tr("%n free skill point(s)", 0, 2)));
+    lamEsensTomeLabel->setStatusTip(rewardFormat.arg(tr("5 free stat points")));
+    goldenBirdLabel->setStatusTip(rewardFormat.arg(tr("\"+20 to Life\" potion")));
+
+    QGridLayout *gridLayout = new QGridLayout(_questsGroupBox);
+    gridLayout->addWidget(doeLabel, 0, 0);
+    gridLayout->addWidget(radamentLabel, 1, 0);
+    gridLayout->addWidget(izualLabel, 2, 0);
+    gridLayout->addWidget(lamEsensTomeLabel, 4, 0);
+    gridLayout->addWidget(goldenBirdLabel, 5, 0);
+
+    const int lineRow = 3;
     for (int i = 0; i < questKeys.size(); ++i)
         for (int j = 0; j < kDifficultiesNumber; ++j)
-            gridLayout->addWidget(_checkboxesQuestsHash[questKeys.at(i)].at(j), i != 3 ? i : 4, j + 1);
+            gridLayout->addWidget(_checkboxesQuestsHash[questKeys.at(i)].at(j), i < lineRow ? i : i + 1, j + 1);
 
     QFrame *line = new QFrame(_questsGroupBox);
     line->setFrameShape(QFrame::HLine);
-    gridLayout->addWidget(line, 3, 0, 1, 4);
+    gridLayout->addWidget(line, lineRow, 0, 1, 4);
 }
 
 void MedianXLOfflineTools::loadSettings()
@@ -1813,10 +1824,11 @@ bool MedianXLOfflineTools::processSaveFile()
     for (int i = 0; i < kDifficultiesNumber; ++i)
     {
         int baseOffset = Enums::Offsets::QuestsData + i * Enums::Quests::Size;
-        charInfo.questsInfo.denOfEvil += static_cast<bool>(_saveFileContents.at(baseOffset + Enums::Quests::DenOfEvil) & Enums::Quests::IsCompleted);
-        charInfo.questsInfo.radament += static_cast<bool>(_saveFileContents.at(baseOffset + Enums::Quests::Radament) & (Enums::Quests::IsCompleted | Enums::Quests::IsTaskDone));
-        charInfo.questsInfo.lamEsensTome += static_cast<bool>(_saveFileContents.at(baseOffset + Enums::Quests::LamEsensTome) & Enums::Quests::IsCompleted);
-        charInfo.questsInfo.izual += static_cast<bool>(_saveFileContents.at(baseOffset + Enums::Quests::Izual) & Enums::Quests::IsCompleted);
+        charInfo.questsInfo.denOfEvil    += static_cast<bool>(_saveFileContents.at(baseOffset + Enums::Quests::DenOfEvil)    &  Enums::Quests::IsCompleted);
+        charInfo.questsInfo.radament     += static_cast<bool>(_saveFileContents.at(baseOffset + Enums::Quests::Radament)     & (Enums::Quests::IsCompleted | Enums::Quests::IsTaskDone));
+        charInfo.questsInfo.goldenBird   += static_cast<bool>(_saveFileContents.at(baseOffset + Enums::Quests::GoldenBird)   &  Enums::Quests::IsCompleted);
+        charInfo.questsInfo.lamEsensTome += static_cast<bool>(_saveFileContents.at(baseOffset + Enums::Quests::LamEsensTome) &  Enums::Quests::IsCompleted);
+        charInfo.questsInfo.izual        += static_cast<bool>(_saveFileContents.at(baseOffset + Enums::Quests::Izual)        &  Enums::Quests::IsCompleted);
     }
 
     // WP
@@ -2441,10 +2453,11 @@ void MedianXLOfflineTools::updateUI()
 
     for (int i = 0; i < kDifficultiesNumber; ++i)
     {
-        _checkboxesQuestsHash[Enums::Quests::DenOfEvil][i]->setChecked(charInfo.questsInfo.denOfEvil.at(i));
-        _checkboxesQuestsHash[Enums::Quests::Radament][i]->setChecked(charInfo.questsInfo.radament.at(i));
-        _checkboxesQuestsHash[Enums::Quests::Izual][i]->setChecked(charInfo.questsInfo.izual.at(i));
+        _checkboxesQuestsHash[Enums::Quests::DenOfEvil]   [i]->setChecked(charInfo.questsInfo.denOfEvil   .at(i));
+        _checkboxesQuestsHash[Enums::Quests::Radament]    [i]->setChecked(charInfo.questsInfo.radament    .at(i));
+        _checkboxesQuestsHash[Enums::Quests::Izual]       [i]->setChecked(charInfo.questsInfo.izual       .at(i));
         _checkboxesQuestsHash[Enums::Quests::LamEsensTome][i]->setChecked(charInfo.questsInfo.lamEsensTome.at(i));
+        _checkboxesQuestsHash[Enums::Quests::GoldenBird]  [i]->setChecked(charInfo.questsInfo.goldenBird  .at(i));
     }
 
     bool hasItems = !charInfo.items.character.isEmpty();

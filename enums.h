@@ -136,6 +136,7 @@ public:
     {
         DenOfEvil = 0x2,
         Radament = 0x12,
+        GoldenBird = 0x28,
         LamEsensTome = 0x22,
         Izual = 0x32,
         Act5Enabled = 0x38,

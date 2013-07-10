@@ -601,7 +601,9 @@ bool ItemDataBase::storeItemIn(ItemInfo *item, Enums::ItemStorage::ItemStorageEn
 {
     ItemsList items = itemsStoredIn(storage, Enums::ItemLocation::Stored, plugyPage ? &plugyPage : 0);
     for (quint8 i = 0; i < rowsTotal; ++i)
+    {
         for (quint8 j = 0; j < colsTotal; ++j)
+        {
             if (canStoreItemAt(i, j, item->itemType, items, rowsTotal, colsTotal))
             {
                 item->move(i, j, plugyPage);
@@ -610,7 +612,8 @@ bool ItemDataBase::storeItemIn(ItemInfo *item, Enums::ItemStorage::ItemStorageEn
 
                 return true;
             }
-
+        }
+    }
     return false;
 }
 

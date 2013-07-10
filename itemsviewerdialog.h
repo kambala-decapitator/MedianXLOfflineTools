@@ -114,7 +114,7 @@ private:
     QCheckBox *_applyActionToAllPagesCheckbox;
 
     QGroupBox *_stashBox;
-    QPushButton *_sortStashButton, *_insertBlankPagesButton;
+    QPushButton *_sortStashButton, *_insertBlankPagesBeforeButton, *_insertBlankPagesAfterButton;
 
     void createLayout();
     void loadSettings();

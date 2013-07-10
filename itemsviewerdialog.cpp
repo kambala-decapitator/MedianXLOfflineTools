@@ -97,7 +97,8 @@ ItemsViewerDialog::ItemsViewerDialog(const QHash<int, bool> &plugyStashesExisten
     connect(_upgradeBothButton,  SIGNAL(clicked()), SLOT(upgradeGemsAndRunes()));
 
     connect(_sortStashButton, SIGNAL(clicked()), SLOT(sortStash()));
-    connect(_insertBlankPagesButton, SIGNAL(clicked()), SLOT(insertBlankPages()));
+    connect(_insertBlankPagesBeforeButton, SIGNAL(clicked()), SLOT(insertBlankPages()));
+    connect(_insertBlankPagesAfterButton,  SIGNAL(clicked()), SLOT(insertBlankPages()));
 
     connect(_applyActionToAllPagesCheckbox, SIGNAL(toggled(bool)), SLOT(applyActionToAllPagesChanged(bool)));
     connect(_tabWidget, SIGNAL(currentChanged(int)), SLOT(tabChanged(int)));
@@ -159,10 +160,10 @@ void ItemsViewerDialog::createLayout()
     _upgradeRunesButton = new QPushButton(tr("Runes"), _upgradeBox);
     _reserveRunesSpinBox = new QSpinBox(_upgradeBox);
     _reserveRunesSpinBox->setRange(0, 10);
+    _reserveRunesSpinBox->setToolTip(tr("Minimum number of each rune type to reserve"));
     _upgradeBothButton = new QPushButton(tr("Both"), _upgradeBox);
 
     QLabel *reserveRunesLabel = new QLabel(tr("Reserve:"), _upgradeBox);
-    reserveRunesLabel->setToolTip(tr("Minimum number of each rune type to reserve"));
     reserveRunesLabel->setBuddy(_reserveRunesSpinBox);
 
     QFrame *runesFrame = new QFrame(_upgradeBox);
@@ -185,12 +186,17 @@ void ItemsViewerDialog::createLayout()
     // stash box setup
     _stashBox = new QGroupBox(tr("PlugY Stash"), _itemManagementWidget);
     _sortStashButton = new QPushButton(tr("Sort"), _stashBox);
-    _insertBlankPagesButton = new QPushButton(tr("Insert blank pages"), _stashBox);
-    _insertBlankPagesButton->setToolTip(tr("Inserts blank pages after the current page"));
+    QGroupBox *blankPagesBox = new QGroupBox(tr("Inserts blank pages:"), _stashBox);
+    _insertBlankPagesBeforeButton = new QPushButton(tr("Before current"), blankPagesBox);
+    _insertBlankPagesAfterButton  = new QPushButton(tr("After current"),  blankPagesBox);
+
+    vboxLayout = new QVBoxLayout(blankPagesBox);
+    vboxLayout->addWidget(_insertBlankPagesBeforeButton);
+    vboxLayout->addWidget(_insertBlankPagesAfterButton);
 
     vboxLayout = new QVBoxLayout(_stashBox);
     vboxLayout->addWidget(_sortStashButton);
-    vboxLayout->addWidget(_insertBlankPagesButton);
+    vboxLayout->addWidget(blankPagesBox);
 
     // item management groupbox layout
     QHBoxLayout *itemManagementBoxLayout = new QHBoxLayout(_itemManagementWidget);
@@ -525,17 +531,18 @@ void ItemsViewerDialog::sortStash()
 
 void ItemsViewerDialog::insertBlankPages()
 {
+    bool isAfter = sender() == _insertBlankPagesAfterButton;
     PlugyItemsSplitter *plugySplitter = currentPlugySplitter();
-    if (plugySplitter->currentPage() == plugySplitter->lastNotEmptyPage())
+    if (isAfter && plugySplitter->currentPage() == plugySplitter->lastNotEmptyPage())
     {
         ERROR_BOX(tr("There's no sense in inserting blank pages after the last one."));
         return;
     }
 
     bool ok;
-    int pages = QInputDialog::getInt(this, qApp->applicationName(), tr("Blank pages:"), 1, 1, 1000, 1, &ok);
+    int pages = QInputDialog::getInt(this, qApp->applicationName(), isAfter ? tr("Blank pages after current:") : tr("Blank pages before current:"), 1, 1, 1000, 1, &ok);
     if (ok)
-        plugySplitter->insertBlankPages(pages);
+        plugySplitter->insertBlankPages(pages, isAfter);
 }
 
 

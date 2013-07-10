@@ -455,9 +455,9 @@ void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
     emit stashSorted();
 }
 
-void PlugyItemsSplitter::insertBlankPages(int pages)
+void PlugyItemsSplitter::insertBlankPages(int pages, bool isAfter)
 {
-    foreach (ItemInfo *item, ItemDataBase::extractItemsFromPageRange(_allItems, currentPage() + 1, _lastNotEmptyPage))
+    foreach (ItemInfo *item, ItemDataBase::extractItemsFromPageRange(_allItems, currentPage() + isAfter, _lastNotEmptyPage))
     {
         item->plugyPage += pages;
         item->hasChanged = true;
@@ -604,6 +604,7 @@ void PlugyItemsSplitter::sortWearableItems(ItemsList &selectedItems, quint32 &pa
                     storeItemsOnPage(setItems, false, page);
                     if (setsProcessed < setsOrder.size() - 1)
                         ++page; // start each set from new page
+                    _maxItemHeightInRow = 0;
 
                     foreach (ItemInfo *item, setItems)
                         selectedItems.removeOne(item);
@@ -623,6 +624,8 @@ void PlugyItemsSplitter::sortWearableItems(ItemsList &selectedItems, quint32 &pa
                 if (sortOptions.shouldSeparateSacred)
                 {
                     sortWearableQualityItems(selectedItems, page, sortOptions, gearBaseTypesOrder, itemsByBaseType, true);
+                    if (!sortOptions.isEachTypeFromNewPage)
+                        ++page;
                     sortWearableQualityItems(selectedItems, page, sortOptions, gearBaseTypesOrder, itemsByBaseType, false);
                 }
                 else
@@ -939,26 +942,27 @@ void PlugyItemsSplitter::sortMiscItems(ItemsList &selectedItems, quint32 &page, 
 void PlugyItemsSplitter::storeItemsOnPage(const ItemsList &items, bool shouldStartAnotherTypeFromNewRow, quint32 &page, int *pRow /*= 0*/, int *pCol /*= 0*/, bool shouldStartAnotherCotwFromNewRow /*= false*/)
 {
     static const int rows = _itemsModel->rowCount(), columns = _itemsModel->columnCount();
+    static ItemsList pageItems;
+    static bool isFillingPage = false;
 
     ItemInfo *previousItem = 0;
     int rowFoo = 0, colBar = 0;
     int &row = pRow ? *pRow : rowFoo, &col = pCol ? *pCol : colBar;
     if (row >= rows)
     {
-        row = 0;
+        row = col = 0;
         ++page;
     }
 
     foreach (ItemInfo *item, items)
     {
-        bool isCotwFromNewRow = shouldStartAnotherCotwFromNewRow && isCotw(item);
+        bool isCotw_ = isCotw(item), isNewRow = shouldStartAnotherTypeFromNewRow || (shouldStartAnotherCotwFromNewRow && isCotw_);
         ItemBase *baseInfo = ItemDataBase::Items()->value(item->itemType);
-        if (shouldStartAnotherTypeFromNewRow || isCotwFromNewRow)
+        if (isNewRow)
         {
             if (!previousItem)
                 previousItem = item;
-            else if (previousItem->itemType != item->itemType || (isCotwFromNewRow && item->props.value(Enums::ItemProperties::Oskill)->param != previousItem->props.value(Enums::ItemProperties::Oskill)->param)
-                     || (areBothItemsSetOrUnique(item, previousItem) && previousItem->setOrUniqueId != item->setOrUniqueId))
+            else if (previousItem->itemType != item->itemType || (areBothItemsSetOrUnique(item, previousItem) && (!isCotw_ || shouldStartAnotherCotwFromNewRow) && previousItem->setOrUniqueId != item->setOrUniqueId))
             {
                 // set wrong column value to switch to new row
                 col = columns;
@@ -966,28 +970,56 @@ void PlugyItemsSplitter::storeItemsOnPage(const ItemsList &items, bool shouldSta
             }
         }
         // fill stash by rows
-        if (col + baseInfo->width > columns || row + baseInfo->height > rows)
+        if (col + baseInfo->width > columns || row + baseInfo->height > rows || isFillingPage)
         {
             // switch to new row
-            col = 0;
-            if (_maxItemHeightInRow)
+            int oldRow = row;
+            if (!isFillingPage)
             {
-                row += _maxItemHeightInRow;
-                _maxItemHeightInRow = 0;
+                col = 0;
+                if (_maxItemHeightInRow)
+                {
+                    row += _maxItemHeightInRow;
+                    _maxItemHeightInRow = 0;
+                }
+                else
+                    row += baseInfo->height;
             }
-            else
-                row += baseInfo->height;
 
-            if (row + baseInfo->height > rows)
+            if (row + baseInfo->height > rows || isFillingPage)
             {
-                // switch to new page
+                if (!isNewRow)
+                {
+                    // slightly modified version of ItemDataBase::storeItemIn()
+                    isFillingPage = true;
+                    for (quint8 i = oldRow; i < rows; ++i)
+                    {
+                        for (quint8 j = 0; j < columns; ++j)
+                        {
+                            if (ItemDataBase::canStoreItemAt(i, j, item->itemType, pageItems, rows, columns))
+                            {
+                                row = i;
+                                col = j;
+                                goto STORE_ITEM; // goto woo-hoo!
+                            }
+                        }
+                    }
+                }
+
+                // switch to new page if failed to find space
                 ++page;
-                row = 0;
+                row = col = _maxItemHeightInRow = 0;
+                isFillingPage = false;
             }
         }
 
+    STORE_ITEM:
         item->move(row, col, page);
         col += baseInfo->width;
+
+        if (!pageItems.isEmpty() && pageItems.last()->plugyPage < page)
+            pageItems.clear();
+        pageItems += item;
 
         if (_maxItemHeightInRow < baseInfo->height)
             _maxItemHeightInRow = baseInfo->height;

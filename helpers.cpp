@@ -30,7 +30,7 @@ bool isRWInGear(ItemInfo *item, const QByteArray &rune, const QByteArray &allowe
 
 // public
 
-QString binaryStringFromNumber(quint64 number, bool needsInversion, int fieldWidth)
+QString binaryStringFromNumber(quint64 number, bool needsInversion /*= false*/, int fieldWidth /*= 8*/)
 {
     QString binaryString = QString("%1").arg(number, fieldWidth, 2, kZeroChar);
     if (needsInversion)
@@ -253,7 +253,7 @@ bool isSignetOfLearning(ItemInfo *item)
 
 bool isCotw(ItemInfo *item)
 {
-    return item->quality == Enums::ItemQuality::Unique && item->itemType == "jew" && item->props.contains(Enums::ItemProperties::RequiredLevel) && item->props.contains(Enums::ItemProperties::Oskill);
+    return item->quality == Enums::ItemQuality::Unique && item->itemType == "jew" && item->props.size() <= 2 && item->props.contains(Enums::ItemProperties::Oskill);
 }
 
 
@@ -275,16 +275,6 @@ bool isSunstoneOfElements(const QByteArray &itemType)
 bool isSunstoneOfElements(ItemInfo *item)
 {
     return isSunstoneOfElements(item->itemType);
-}
-
-bool isCharacterOrbOrSunstoneOfElements(const QByteArray &itemType)
-{
-    return isSunstoneOfElements(itemType) || isCharacterOrb(itemType);
-}
-
-bool isCharacterOrbOrSunstoneOfElements(ItemInfo *item)
-{
-    return isCharacterOrbOrSunstoneOfElements(item->itemType);
 }
 
 bool isTradersChest(const QByteArray &itemType)

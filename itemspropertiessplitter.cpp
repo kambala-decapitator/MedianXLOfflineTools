@@ -92,9 +92,13 @@ void ItemsPropertiesSplitter::moveItem(const QModelIndex &newIndex, const QModel
 }
 
 void ItemsPropertiesSplitter::showItem(ItemInfo *item)
+
 {
     if (item)
+    {
         _itemsView->setCurrentIndex(_itemsModel->index(item->row, item->column));
+        //dumpInfo(item, false);
+    }
 }
 
 void ItemsPropertiesSplitter::showFirstItem()
@@ -355,7 +359,7 @@ void ItemsPropertiesSplitter::deleteItemTriggered()
 }
 
 #ifdef DUMP_INFO_ACTION
-void ItemsPropertiesSplitter::dumpInfo(ItemInfo *item /*= 0*/)
+void ItemsPropertiesSplitter::dumpInfo(ItemInfo *item /*= 0*/, bool shouldShowMsgBox /*= true*/)
 {
     if (!item)
         item = selectedItem(false);
@@ -370,11 +374,14 @@ void ItemsPropertiesSplitter::dumpInfo(ItemInfo *item /*= 0*/)
     qDebug("--------------------");
 #endif
 
-    QString types;
-    foreach (const QByteArray &type, base->types)
-        types += type + ", ";
-    INFO_BOX(QString("%1\nquality %2, set/unique ID %3\ncode %4, types: %5\nimage %6, quest ID %7").arg(ItemParser::itemStorageAndCoordinatesString("location %1, row %2, col %3, equipped in %4", item))
-        .arg(quality).arg(isSetOrUnique ? item->setOrUniqueId : 0).arg(item->itemType.data()).arg(types).arg(base->imageName.data()).arg(base->questId));
+    if (shouldShowMsgBox)
+    {
+        QString types;
+        foreach (const QByteArray &type, base->types)
+            types += type + ", ";
+        INFO_BOX(QString("%1\nquality %2, set/unique ID %3\ncode %4, types: %5\nimage %6, quest ID %7").arg(ItemParser::itemStorageAndCoordinatesString("location %1, row %2, col %3, equipped in %4", item))
+            .arg(quality).arg(isSetOrUnique ? item->setOrUniqueId : 0).arg(item->itemType.data()).arg(types).arg(base->imageName.data()).arg(base->questId));
+    }
 }
 #endif
 

@@ -30,7 +30,7 @@ public:
     virtual void upgradeRunes(int reserveRunes, ItemsList *items = 0);
 
     void sortStash(const StashSortOptions &sortOptions);
-    void insertBlankPages(int pages);
+    void insertBlankPages(int pages, bool isAfter);
 
     quint32 lastNotEmptyPage() const { return _lastNotEmptyPage; }
     quint32 currentPage() const;

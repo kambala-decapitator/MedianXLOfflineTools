@@ -4,6 +4,11 @@ v0.4:
 future versions:
 - show UMO properties
 - try unMO UMOs
+- calculate correct str/dex bonus based on character stats
+- display actual stat values
+- item requirements (compare with actual stat values)
+- display skill tree and skills allocation
+- upgrade signets (Ultimative)
 - move mass disenchant to a separate dialog and add more options
 - creation of plugy stashes and moving items around (finish implementing drag & drop)
 - generate some bbcode/html report about character and/or plugy stashes contents
@@ -14,10 +19,6 @@ future versions:
 - affix rlvl (and maybe names - then modify help text) support
 - nice display of property 'Adds x-y ... damage'
 - unsocket items
-- calculate correct str/dex bonus based on character stats
-- display actual stat values
-- item requirements (compare with actual stat values)
-- display skill tree and skills allocation
 - moving/swaping pages
 - batch apply MO to item
 - fix multiple colors in one line, e.g. Statue of Ultimative v6b
