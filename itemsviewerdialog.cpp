@@ -99,6 +99,7 @@ ItemsViewerDialog::ItemsViewerDialog(const QHash<int, bool> &plugyStashesExisten
     connect(_sortStashButton, SIGNAL(clicked()), SLOT(sortStash()));
     connect(_insertBlankPagesBeforeButton, SIGNAL(clicked()), SLOT(insertBlankPages()));
     connect(_insertBlankPagesAfterButton,  SIGNAL(clicked()), SLOT(insertBlankPages()));
+    connect(_removeCurrentBlankPage,       SIGNAL(clicked()), SLOT(removeCurrentPage()));
 
     connect(_applyActionToAllPagesCheckbox, SIGNAL(toggled(bool)), SLOT(applyActionToAllPagesChanged(bool)));
     connect(_tabWidget, SIGNAL(currentChanged(int)), SLOT(tabChanged(int)));
@@ -186,13 +187,15 @@ void ItemsViewerDialog::createLayout()
     // stash box setup
     _stashBox = new QGroupBox(tr("PlugY Stash"), _itemManagementWidget);
     _sortStashButton = new QPushButton(tr("Sort"), _stashBox);
-    QGroupBox *blankPagesBox = new QGroupBox(tr("Inserts blank pages:"), _stashBox);
-    _insertBlankPagesBeforeButton = new QPushButton(tr("Before current"), blankPagesBox);
-    _insertBlankPagesAfterButton  = new QPushButton(tr("After current"),  blankPagesBox);
+    QGroupBox *blankPagesBox = new QGroupBox(tr("Blank pages:"), _stashBox);
+    _insertBlankPagesBeforeButton = new QPushButton(tr("Insert before"),  blankPagesBox);
+    _insertBlankPagesAfterButton  = new QPushButton(tr("Insert after"),   blankPagesBox);
+    _removeCurrentBlankPage       = new QPushButton(tr("Remove current"), blankPagesBox);
 
     vboxLayout = new QVBoxLayout(blankPagesBox);
     vboxLayout->addWidget(_insertBlankPagesBeforeButton);
     vboxLayout->addWidget(_insertBlankPagesAfterButton);
+    vboxLayout->addWidget(_removeCurrentBlankPage);
 
     vboxLayout = new QVBoxLayout(_stashBox);
     vboxLayout->addWidget(_sortStashButton);
@@ -260,12 +263,15 @@ PlugyItemsSplitter *ItemsViewerDialog::currentPlugySplitter()
 
 void ItemsViewerDialog::tabChanged(int tabIndex)
 {
+    bool isStorage = tabIndex > GearIndex, isPlugyStash = isPlugyStorageIndex(tabIndex);
+
     splitterAtIndex(tabIndex)->showFirstItem();
-    _itemManagementWidget->setEnabled(tabIndex > GearIndex);
-    _applyActionToAllPagesCheckbox->setEnabled(isPlugyStorageIndex(tabIndex));
-    if (tabIndex > GearIndex)
+    _itemManagementWidget->setEnabled(isStorage);
+    _applyActionToAllPagesCheckbox->setEnabled(isPlugyStash);
+
+    if (isStorage)
     {
-        if (isPlugyStorageIndex(tabIndex))
+        if (isPlugyStash)
             currentPlugySplitter()->setApplyActionToAllPages(_applyActionToAllPagesCheckbox->isChecked()); // must be explicitly set
         updateItemManagementButtonsState();
     }
@@ -438,31 +444,6 @@ void ItemsViewerDialog::updateItemManagementButtonsState()
     updateStashButtonsState();
 }
 
-void ItemsViewerDialog::updateDisenchantButtonsState()
-{
-    bool areUniquesSelected = _uniquesRadioButton->isChecked(), areSetsSelected = _setsRadioButton->isChecked();
-    if (_bothQualitiesRadioButton->isChecked())
-        areUniquesSelected = areSetsSelected = true;
-    QPair<bool, bool> allowDisenchantButtons = currentSplitter()->updateDisenchantButtonsState(areUniquesSelected, areSetsSelected, _upgradeToCrystalsCheckbox->isChecked());
-    _disenchantToShardsButton->setEnabled(allowDisenchantButtons.first);
-    _disenchantToSignetButton->setEnabled(allowDisenchantButtons.second);
-}
-
-void ItemsViewerDialog::updateUpgradeButtonsState()
-{
-    QPair<bool, bool> allowUpgradeButtons = currentSplitter()->updateUpgradeButtonsState(_reserveRunesSpinBox->value());
-    _upgradeGemsButton->setEnabled(allowUpgradeButtons.first);
-    _upgradeRunesButton->setEnabled(allowUpgradeButtons.second);
-    _upgradeBothButton->setEnabled(allowUpgradeButtons.first && allowUpgradeButtons.second);
-}
-
-void ItemsViewerDialog::updateStashButtonsState()
-{
-    _stashBox->setEnabled(isPlugyStorageIndex(_tabWidget->currentIndex()));
-    if (_stashBox->isEnabled())
-        _sortStashButton->setEnabled(currentSplitter()->itemCount() > 0);
-}
-
 void ItemsViewerDialog::disenchantAllItems()
 {
     bool toShards = sender() == _disenchantToShardsButton, areUniquesSelected = _uniquesRadioButton->isChecked(), areSetsSelected = _setsRadioButton->isChecked();
@@ -545,6 +526,12 @@ void ItemsViewerDialog::insertBlankPages()
         plugySplitter->insertBlankPages(pages, isAfter);
 }
 
+void ItemsViewerDialog::removeCurrentPage()
+{
+    currentPlugySplitter()->removeCurrentPage();
+    updateRemoveCurrentBlankPageButtonState();
+}
+
 
 void ItemsViewerDialog::updateBeltItemsCoordinates(bool restore, ItemsList *pBeltItems)
 {
@@ -555,4 +542,37 @@ void ItemsViewerDialog::updateBeltItemsCoordinates(bool restore, ItemsList *pBel
         item->row = lastRowIndex - item->row;
         item->column += restore ? -2 : 2;
     }
+}
+
+void ItemsViewerDialog::updateDisenchantButtonsState()
+{
+    bool areUniquesSelected = _uniquesRadioButton->isChecked(), areSetsSelected = _setsRadioButton->isChecked();
+    if (_bothQualitiesRadioButton->isChecked())
+        areUniquesSelected = areSetsSelected = true;
+    QPair<bool, bool> allowDisenchantButtons = currentSplitter()->updateDisenchantButtonsState(areUniquesSelected, areSetsSelected, _upgradeToCrystalsCheckbox->isChecked());
+    _disenchantToShardsButton->setEnabled(allowDisenchantButtons.first);
+    _disenchantToSignetButton->setEnabled(allowDisenchantButtons.second);
+}
+
+void ItemsViewerDialog::updateUpgradeButtonsState()
+{
+    QPair<bool, bool> allowUpgradeButtons = currentSplitter()->updateUpgradeButtonsState(_reserveRunesSpinBox->value());
+    _upgradeGemsButton->setEnabled(allowUpgradeButtons.first);
+    _upgradeRunesButton->setEnabled(allowUpgradeButtons.second);
+    _upgradeBothButton->setEnabled(allowUpgradeButtons.first && allowUpgradeButtons.second);
+}
+
+void ItemsViewerDialog::updateStashButtonsState()
+{
+    _stashBox->setEnabled(isPlugyStorageIndex(_tabWidget->currentIndex()));
+    if (_stashBox->isEnabled())
+    {
+        _sortStashButton->setEnabled(currentPlugySplitter()->itemCount() > 0);
+        updateRemoveCurrentBlankPageButtonState();
+    }
+}
+
+void ItemsViewerDialog::updateRemoveCurrentBlankPageButtonState()
+{
+    _removeCurrentBlankPage->setEnabled(!currentPlugySplitter()->pageItemCount());
 }

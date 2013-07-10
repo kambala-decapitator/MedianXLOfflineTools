@@ -31,9 +31,11 @@ public:
 
     void sortStash(const StashSortOptions &sortOptions);
     void insertBlankPages(int pages, bool isAfter);
+    void removeCurrentPage();
 
     quint32 lastNotEmptyPage() const { return _lastNotEmptyPage; }
     quint32 currentPage() const;
+    int pageItemCount() const { return _pagedItems.size(); }
 
 public slots:
     // these 8 are connected to main menu actions

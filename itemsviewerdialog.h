@@ -85,8 +85,6 @@ private slots:
     void decreaseItemCount();
 
     void applyActionToAllPagesChanged(bool b);
-    void updateDisenchantButtonsState();
-    void updateUpgradeButtonsState();
 
     void disenchantAllItems();
     void upgradeGems();
@@ -95,6 +93,7 @@ private slots:
     
     void sortStash();
     void insertBlankPages();
+    void removeCurrentPage();
 
 private:
     QTabWidget *_tabWidget;
@@ -114,7 +113,7 @@ private:
     QCheckBox *_applyActionToAllPagesCheckbox;
 
     QGroupBox *_stashBox;
-    QPushButton *_sortStashButton, *_insertBlankPagesBeforeButton, *_insertBlankPagesAfterButton;
+    QPushButton *_sortStashButton, *_insertBlankPagesBeforeButton, *_insertBlankPagesAfterButton, *_removeCurrentBlankPage;
 
     void createLayout();
     void loadSettings();
@@ -123,7 +122,10 @@ private:
     void updateWindowTitle();
     void updateBeltItemsCoordinates(bool restore, ItemsList *pBeltItems);
 
+    void updateDisenchantButtonsState();
+    void updateUpgradeButtonsState();
     void updateStashButtonsState();
+    void updateRemoveCurrentBlankPageButtonState();
 };
 
 #endif // ITEMSVIEWERDIALOG_H

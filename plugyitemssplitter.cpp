@@ -467,6 +467,11 @@ void PlugyItemsSplitter::insertBlankPages(int pages, bool isAfter)
     emit itemsChanged();
 }
 
+void PlugyItemsSplitter::removeCurrentPage()
+{
+    insertBlankPages(-1, true);
+}
+
 
 bool PlugyItemsSplitter::keyEventHasShift(QKeyEvent *keyEvent)
 {
