@@ -298,6 +298,15 @@
     <ClCompile Include="GeneratedFiles\Release\moc_stashsortingoptionsdialog.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
+    <ClCompile Include="helpwindowdisplaymanager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_helpwindowdisplaymanager.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_helpwindowdisplaymanager.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="helpers.h">
@@ -495,6 +504,9 @@
       <Filter>Form Files</Filter>
     </CustomBuild>
     <CustomBuild Include="stashsortingoptionsdialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="helpwindowdisplaymanager.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
   </ItemGroup>

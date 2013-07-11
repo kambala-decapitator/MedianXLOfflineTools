@@ -30,7 +30,7 @@ QPair<QString, quint8> Progression::titleNameAndMaxDifficultyFromValue(quint8 va
 const QStringList &Mercenary::types()
 {
     static const QStringList types = QStringList() << tr("Ranger") << tr("Priestess") << tr("Exemplar") << tr("Shapeshifter") << tr("Fighter Mage")
-                                                    << tr("Necrolyte") << tr("Bloodmage") << tr("Abjurer") << tr("Barbarian");
+                                                   << tr("Necrolyte") << tr("Bloodmage") << tr("Abjurer") << tr("Barbarian");
     return types;
 }
 

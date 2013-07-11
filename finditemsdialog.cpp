@@ -4,13 +4,12 @@
 #include "propertiesdisplaymanager.h"
 #include "structs.h"
 #include "characterinfo.hpp"
+#include "helpwindowdisplaymanager.h"
 
 #include <QGridLayout>
 #include <QVBoxLayout>
-#include <QLineEdit>
 #include <QDesktopWidget>
-#include <QTextBrowser>
-#include <QDialogButtonBox>
+#include <QLineEdit>
 #include <QCompleter>
 
 #include <QRegExp>
@@ -27,8 +26,8 @@ bool compareSearchResultItemsByPlugyPage(const SearchResultItem &a, const Search
 }
 
 
-FindItemsDialog::FindItemsDialog(QWidget *parent) : QDialog(parent), ui(new Ui::FindItemsDialog), _wasSearchPerformed(false), _searchResultsChanged(false),
-    _resultsWidget(new FindResultsWidget(this)), _lastResultsHeight(-1)
+FindItemsDialog::FindItemsDialog(QWidget *parent) : QDialog(parent), ui(new Ui::FindItemsDialog), _resultsWidget(new FindResultsWidget(this)),
+    _wasSearchPerformed(false), _searchResultsChanged(false), _lastResultsHeight(-1)
 {
     ui->setupUi(this);
     setWindowFlags(windowFlags() & ~Qt::WindowContextHelpButtonHint);
@@ -47,8 +46,7 @@ FindItemsDialog::FindItemsDialog(QWidget *parent) : QDialog(parent), ui(new Ui::
     vbox->addWidget(ui->previousButton);
     vbox->addWidget(ui->searchResultsButton);
     vbox->addStretch();
-    vbox->addWidget(ui->helpButton);
-    vbox->addWidget(ui->closeButton);
+    vbox->addWidget(ui->buttonBox);
 
     QGridLayout *mainGrid = new QGridLayout;
     mainGrid->addWidget(ui->searchComboBox, 0, 0, Qt::AlignTop);
@@ -68,7 +66,6 @@ FindItemsDialog::FindItemsDialog(QWidget *parent) : QDialog(parent), ui(new Ui::
     connect(ui->nextButton, SIGNAL(clicked()), SLOT(findNext()));
     connect(ui->previousButton, SIGNAL(clicked()), SLOT(findPrevious()));
     connect(ui->searchResultsButton, SIGNAL(clicked()), SLOT(toggleResults()));
-    connect(ui->helpButton, SIGNAL(clicked()), SLOT(showHelp()));
     connect(ui->searchComboBox, SIGNAL(editTextChanged(const QString &)), SLOT(searchTextChanged()));
     connect(_resultsWidget->selectItemDelegate, SIGNAL(showItem(ItemInfo *)), SLOT(updateCurrentIndexForItem(ItemInfo *)));
 
@@ -76,11 +73,34 @@ FindItemsDialog::FindItemsDialog(QWidget *parent) : QDialog(parent), ui(new Ui::
     foreach (QCheckBox *checkBox, checkBoxes)
         connect(checkBox, SIGNAL(toggled(bool)), SLOT(resetSearchStatus()));
 
+    connect(ui->caseSensitiveCheckBox, SIGNAL(toggled(bool)), SLOT(changeComboboxCaseSensitivity(bool)));
+
     loadSettings();
     adjustSize();
     setMaximumHeight(qApp->desktop()->availableGeometry().height() - 50);
 
-    connect(ui->caseSensitiveCheckBox, SIGNAL(toggled(bool)), SLOT(changeComboboxCaseSensitivity(bool)));
+    _helpDislplayManager = new HelpWindowDisplayManager(this, tr("Search help"),
+        tr(
+        "<h3>Item names</h3>"
+        "<p>All items except non-magical ones have their quality listed inside [] at the very beginning of item description. Valid values are: magic, rare, unique, set, crafted, honorific.</p>"
+        "<p>Runewords and charms are considered a special type of quality, so they have [runeword] and [charm] respectively.</p>"
+        "<p>Ethereal items also have [ethereal] in the end of the item name.</p>"
+        "<p>Set items have complete set name listed inside [] after set item name.</p>"
+        "<p>Personalized items have character name as it appears in game. The exception are items with affixes because affix display isn't supported in the current version of the application.</p>"
+        "<p>To see an example of such an item description, simply hover your mouse upon any item in the items window and look at the tooltip.</p>"
+        "<h3>Item properties</h3>"
+        "<p>If the 'Search in properties' checkbox is checked, then the search is made not only by item name (as explained above), but also in item properties.</p>"
+        "<p>Properties appear the same way as they do in the item description view. Diablo color codes are also present here to simplify search for e.g. elite reanimates.</p>"
+        "<h3>Regular expressions</h3>"
+        "<p>Regular expressions syntax is mostly Perl-compatible, but there're some limitations. "
+        "Refer to the <a href=\"http://qt-project.org/doc/qt-4.8/qregexp.html#details\">Qt regular expressions description</a> for more information.</p>"
+        "<p>Regular expressions-only checkboxes in the dialog have tooltips on what they mean if it's not clear.</p>"
+        "<p>Hint: enter . (period) as a search text to see all your items :)</p>"
+        "<h3>Search results</h3>"
+        "<p>Hovering upon an item in the search results drop-down will display matched line with an actual match highlighted in <b>bold</b>.</p>"
+        "<p>Double-clicking or pressing Return/Enter on an item shows it in the items window.</p>"
+        ));
+    connect(ui->buttonBox, SIGNAL(helpRequested()), _helpDislplayManager, SLOT(showHelp()));
 }
 
 FindItemsDialog::~FindItemsDialog()
@@ -100,6 +120,21 @@ void FindItemsDialog::sortAndUpdateSearchResult()
     qSort(_searchResult.begin(), _searchResult.end(), compareSearchResultItemsByPlugyPage);
     _resultsWidget->updateItems(&_searchResult);
 }
+
+
+void FindItemsDialog::resetSearchStatus()
+{
+    _wasSearchPerformed = false;
+    setButtonsDisabled(ui->searchComboBox->currentText().isEmpty(), false);
+}
+
+void FindItemsDialog::reject()
+{
+    _helpDislplayManager->closeHelp();
+    saveSettings();
+    QDialog::reject();
+}
+
 
 void FindItemsDialog::findNext()
 {
@@ -204,46 +239,6 @@ void FindItemsDialog::toggleResults()
         setMinimumHeight(newHeight);
         resize(oldSize.width(), newHeight);
     }
-}
-
-void FindItemsDialog::showHelp()
-{
-    QDialog dlg(parentWidget());
-    dlg.setWindowFlags(dlg.windowFlags() & ~Qt::WindowContextHelpButtonHint);
-    dlg.setWindowTitle(tr("Search help"));
-
-    QTextBrowser *textBrowser = new QTextBrowser(&dlg);
-    textBrowser->setOpenExternalLinks(true);
-    textBrowser->setHtml(tr(
-      "<h3>Item names</h3>"
-      "<p>All items except non-magical ones have their quality listed inside [] at the very beginning of item description. Valid values are: magic, rare, unique, set, crafted, honorific.</p>"
-      "<p>Runewords and charms are considered a special type of quality, so they have [runeword] and [charm] respectively.</p>"
-      "<p>Ethereal items also have [ethereal] in the end of the item name.</p>"
-      "<p>Set items have complete set name listed inside [] after set item name.</p>"
-      "<p>Personalized items have character name as it appears in game. The exception are items with affixes because affix display isn't supported in the current version of the application.</p>"
-      "<p>To see an example of such an item description, simply hover your mouse upon any item in the items window and look at the tooltip.</p>"
-      "<h3>Item properties</h3>"
-      "<p>If the 'Search in properties' checkbox is checked, then the search is made not only by item name (as explained above), but also in item properties.</p>"
-      "<p>Properties appear the same way as they do in the item description view. Diablo color codes are also present here to simplify search for e.g. elite reanimates.</p>"
-      "<h3>Regular expressions</h3>"
-      "<p>Regular expressions syntax is mostly Perl-compatible, but there're some limitations. "
-      "Refer to the <a href=\"http://qt-project.org/doc/qt-4.8/qregexp.html#details\">Qt regular expressions description</a> for more information.</p>"
-      "<p>Regular expressions-only checkboxes in the dialog have tooltips on what they mean if it's not clear.</p>"
-      "<p>Hint: enter . (period) as a search text to see all your items :)</p>"
-      "<h3>Search results</h3>"
-      "<p>Hovering upon an item in the search results drop-down will display matched line with an actual match highlighted in <b>bold</b>.</p>"
-      "<p>Double-clicking or pressing Return/Enter on an item shows it in the items window.</p>"
-                          ));
-
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok, Qt::Horizontal, &dlg);
-    connect(buttonBox, SIGNAL(accepted()), &dlg, SLOT(accept()));
-
-    QVBoxLayout *vbox = new QVBoxLayout(&dlg);
-    vbox->addWidget(textBrowser);
-    vbox->addWidget(buttonBox);
-
-    dlg.resize(400, 400);
-    dlg.exec();
 }
 
 void FindItemsDialog::updateCurrentIndexForItem(ItemInfo *item)
@@ -425,11 +420,6 @@ void FindItemsDialog::setButtonsDisabled(bool disabled, bool updateResultButton 
         ui->searchResultsButton->setDisabled(disabled);
 }
 
-void FindItemsDialog::resetSearchStatus()
-{
-    _wasSearchPerformed = false;
-    setButtonsDisabled(ui->searchComboBox->currentText().isEmpty(), false);
-}
 
 void FindItemsDialog::showEvent(QShowEvent *e)
 {

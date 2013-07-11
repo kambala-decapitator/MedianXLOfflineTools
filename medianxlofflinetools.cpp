@@ -41,16 +41,17 @@
 #include <QNetworkAccessManager>
 #include <QNetworkReply>
 
-#include <cmath>
-#include <cfloat>
-
 #ifndef QT_NO_DEBUG
 #include <QDebug>
 #endif
 
-#if IS_QT5 && defined(Q_OS_MAC)
+#ifdef Q_OS_MAC
+#if IS_QT5
 #include "qtmacextras/qmacfunctions.h"
-#endif
+#else
+extern void qt_mac_set_dock_menu(QMenu *);
+#endif // IS_QT5
+#endif // Q_OS_MAC
 
 //#define MAKE_HC
 //#define ENABLE_PERSONALIZE
@@ -77,10 +78,10 @@ const int MedianXLOfflineTools::kMaxRecentFiles = 10;
 // ctor
 
 MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *parent, Qt::WindowFlags flags) : QMainWindow(parent, flags), ui(new Ui::MedianXLOfflineToolsClass), _findItemsDialog(0),
-    _backupLimitsGroup(new QActionGroup(this)), _showDisenchantPreviewGroup(new QActionGroup(this)), hackerDetected(tr("1337 hacker detected! Please, play legit.")),
+    _backupLimitsGroup(new QActionGroup(this)), _showDisenchantPreviewGroup(new QActionGroup(this)), kHackerDetected(tr("1337 hacker detected! Please, play legit.")),
     maxValueFormat(tr("Max: %1")), minValueFormat(tr("Min: %1")), investedValueFormat(tr("Invested: %1")),
-    kForumThreadHtmlLinks(tr("<a href=\"http://www.medianxl.com/t83-median-xl-offline-tools\">Official Median XL Forum thread</a><br>"
-                             "<a href=\"http://forum.worldofplayers.ru/showthread.php?t=34489\">Official Russian Median XL Forum thread</a>")),
+    kForumThreadHtmlLinks(QString("<a href=\"http://www.medianxl.com/t83-median-xl-offline-tools\">%1</a><br><a href=\"http://forum.worldofplayers.ru/showthread.php?t=34489\">%2</a>")
+     .arg(tr("Official Median XL Forum thread"), tr("Official Russian Median XL Forum thread"))),
     _isLoaded(false), _fsWatcher(new QFileSystemWatcher(this)), _fileChangeTimer(0), _isFileChangedMessageBoxRunning(false)
 {
     ui->setupUi(this);
@@ -1099,19 +1100,19 @@ void MedianXLOfflineTools::aboutApp()
     aboutBox.setWindowTitle(tr("About %1").arg(qApp->applicationName()));
     aboutBox.setIconPixmap(windowIcon().pixmap(64));
     aboutBox.setTextFormat(Qt::RichText);
-    aboutBox.setText(QString("<b>%1</b>%2").arg(appFullName, kHtmlLineBreak) +
-        tr("Compiled on: %1").arg(QLocale(QLocale::C).toDateTime(QString(__TIMESTAMP__).simplified(), "ddd MMM d hh:mm:ss yyyy").toString("dd.MM.yyyy hh:mm:ss")));
+    aboutBox.setText(QString("<b>%1</b>%2").arg(appFullName, kHtmlLineBreak)
+        + tr("Compiled on: %1").arg(QLocale(QLocale::C).toDateTime(QString(__TIMESTAMP__).simplified(), "ddd MMM d hh:mm:ss yyyy").toString("dd.MM.yyyy hh:mm:ss")));
     aboutBox.setInformativeText(
-        tr("<i>Author:</i> Filipenkov Andrey (<b>kambala</b>)") + QString("%1<i>ICQ:</i> 287764961%1<i>E-mail:</i> <a href=\"mailto:%2?subject=%3\">%2</a>%1%1").arg(kHtmlLineBreak, email, appFullName) +
-        kForumThreadHtmlLinks + kHtmlLineBreak + kHtmlLineBreak +
-        tr("<b>Credits:</b>"
-           "<ul>"
-             "<li><a href=\"http://modsbylaz.hugelaser.com/\">BrotherLaz</a> for this awesome mod</li>"
-             "<li><a href=\"http://www.medianxl.com/u1\">MarcoNecroX</a> for a hot extension of Median XL called <b>Ultimative</b></li>"
-             "<li>grig for the Perl source of <a href=\"http://grig.vlexofree.com/\">Median XL Online Tools</a> and tips</li>"
-             "<li><a href=\"http://phrozenkeep.hugelaser.com/index.php?ind=reviews&op=section_view&idev=4\">Phrozen Keep File Guides</a> for tons of useful information on txt sources</li>"
-             "<li>FixeR, Zelgadiss, moonra, Vilius, Delegus, aahz and HerrNieschnell for intensive testing and tips on GUI & functionality</li>"
-           "</ul>")
+        tr("<i>Author:</i> Filipenkov Andrey (<b>kambala</b>)") + QString("%1<i>ICQ:</i> 287764961%1<i>E-mail:</i> <a href=\"mailto:%2?subject=%3\">%2</a>%1%1").arg(kHtmlLineBreak, email, appFullName)
+        + kForumThreadHtmlLinks + kHtmlLineBreak + kHtmlLineBreak
+        + tr("<b>Credits:</b>"
+             "<ul>"
+               "<li><a href=\"http://modsbylaz.hugelaser.com/\">BrotherLaz</a> for this awesome mod</li>"
+               "<li><a href=\"http://www.medianxl.com/u1\">MarcoNecroX</a> for a hot extension of Median XL called <b>Ultimative</b></li>"
+               "<li>grig for the Perl source of <a href=\"http://grig.vlexofree.com/\">Median XL Online Tools</a> and tips</li>"
+               "<li><a href=\"http://phrozenkeep.hugelaser.com/index.php?ind=reviews&op=section_view&idev=4\">Phrozen Keep File Guides</a> for tons of useful information on txt sources</li>"
+               "<li>FixeR, Zelgadiss, moonra, Vilius, Delegus, aahz HerrNieschnell, Quirinus, RollsRoyce, Aks_kun and gAdlike for intensive testing and tips on GUI & functionality</li>"
+             "</ul>")
     );
     aboutBox.exec();
 }
@@ -1640,7 +1641,6 @@ void MedianXLOfflineTools::updateRecentFilesActions()
     ui->menuRecentCharacters->setDisabled(_recentFilesList.isEmpty());
 
 #ifdef Q_OS_MAC
-    extern void qt_mac_set_dock_menu(QMenu *);
     qt_mac_set_dock_menu(ui->menuRecentCharacters);
 #endif
 }
@@ -1906,7 +1906,7 @@ bool MedianXLOfflineTools::processSaveFile()
 
     int count = 0; // to prevent infinite loop if something goes wrong
     int totalStats = 0;
-    bool wasHackWarningShown = false;
+    bool shouldShowHackWarning = false;
     ReverseBitReader bitReader(statsBitData);
     for (; count < 20; ++count)
     {
@@ -1935,24 +1935,14 @@ bool MedianXLOfflineTools::processSaveFile()
             statValue >>= 8;
         else if (statCode == Enums::CharacterStats::SignetsOfLearningEaten && statValue > Enums::CharacterStats::SignetsOfLearningMax)
         {
-            if (statValue > Enums::CharacterStats::SignetsOfLearningMax + 1 && !wasHackWarningShown)
-            {
-#ifndef DUPE_CHECK
-                WARNING_BOX(hackerDetected);
-#endif
-                wasHackWarningShown = true;
-            }
+            if (statValue > Enums::CharacterStats::SignetsOfLearningMax + 1)
+                shouldShowHackWarning = true;
             statValue = Enums::CharacterStats::SignetsOfLearningMax;
         }
         else if (statCode == Enums::CharacterStats::SignetsOfSkillEaten && statValue > Enums::CharacterStats::SignetsOfSkillMax)
         {
-            if (statValue > Enums::CharacterStats::SignetsOfSkillMax + 1 && !wasHackWarningShown)
-            {
-#ifndef DUPE_CHECK
-                WARNING_BOX(hackerDetected);
-#endif
-                wasHackWarningShown = true;
-            }
+            if (statValue > Enums::CharacterStats::SignetsOfSkillMax + 1)
+                shouldShowHackWarning = true;
             statValue = Enums::CharacterStats::SignetsOfSkillMax;
         }
         else if (statCode >= Enums::CharacterStats::Strength && statCode <= Enums::CharacterStats::Vitality)
@@ -1981,13 +1971,7 @@ bool MedianXLOfflineTools::processSaveFile()
             charInfo.basicInfo.statsDynamicData.setProperty(statisticMetaEnum.key(i), baseStat);
         }
         charInfo.setValueForStatisitc(totalPossibleStats, Enums::CharacterStats::FreeStatPoints);
-        if (!wasHackWarningShown)
-        {
-#ifndef DUPE_CHECK
-            WARNING_BOX(hackerDetected);
-#endif
-            wasHackWarningShown = true;
-        }
+        shouldShowHackWarning = true;
     }
 
     // skills
@@ -2011,13 +1995,7 @@ bool MedianXLOfflineTools::processSaveFile()
             skills = maxPossibleSkills;
             charInfo.setValueForStatisitc(maxPossibleSkills, Enums::CharacterStats::FreeSkillPoints);
             _saveFileContents.replace(charInfo.skillsOffset + 2, skillsNumber, QByteArray(skillsNumber, 0));
-            if (!wasHackWarningShown)
-            {
-#ifndef DUPE_CHECK
-                WARNING_BOX(hackerDetected);
-#endif
-                wasHackWarningShown = true;
-            }
+            shouldShowHackWarning = true;
         }
         charInfo.basicInfo.totalSkillPoints = skills;
 
@@ -2031,6 +2009,11 @@ bool MedianXLOfflineTools::processSaveFile()
             //qDebug() << charInfo.basicInfo.skillsReadable.last() << ItemDataBase::Skills()->value(skillIndex).name;
         }
     }
+
+#ifndef DUPE_CHECK
+    if (shouldShowHackWarning)
+        WARNING_BOX(kHackerDetected);
+#endif
 
     // items
     inputDataStream.skipRawData(skillsNumber + 2);
@@ -2657,7 +2640,7 @@ QByteArray MedianXLOfflineTools::statisticBytes()
                 if (value > static_cast<quint32>(totalPossibleFreeStats)) // prevent hacks and shut the compiler up
                 {
                     value = totalPossibleFreeStats;
-                    WARNING_BOX(hackerDetected);
+                    WARNING_BOX(kHackerDetected);
                 }
             }
 #endif

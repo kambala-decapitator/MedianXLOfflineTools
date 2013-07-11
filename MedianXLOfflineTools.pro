@@ -70,7 +70,8 @@ SOURCES += main.cpp \
            disenchantpreviewdialog.cpp \
            disenchantpreviewmodel.cpp \
            dupescandialog.cpp \
-           stashsortingoptionsdialog.cpp
+           stashsortingoptionsdialog.cpp \
+           helpwindowdisplaymanager.cpp
 
 HEADERS += medianxlofflinetools.h \
            resurrectpenaltydialog.h \
@@ -112,7 +113,8 @@ HEADERS += medianxlofflinetools.h \
            disenchantpreviewmodel.h \
            checkboxsortfilterproxymodel.hpp \
            dupescandialog.h \
-           stashsortingoptionsdialog.h
+           stashsortingoptionsdialog.h \
+           helpwindowdisplaymanager.h
 
 FORMS += medianxlofflinetools.ui \
          resurrectpenaltydialog.ui \
@@ -154,6 +156,13 @@ win32 {
                BUILDING_FROM_PRO \ # to set app version in .rc correctly
                NOMINMAX # disables min/max macros which fixes error with QDateTime
 
+
+    defineReplace(toNativeSeparators) {
+        path = $$1
+        path ~= s,/,\\,g
+        return($$path)
+    }
+
     isEmpty(IS_RELEASE_BUILD) {
         OUT_FOLDER = debug
     }
@@ -165,12 +174,7 @@ win32 {
 
     # create symbolic link to 'resources' folder in the folder of .exe
     LINK_DST = $$OUT_PWD/$$OUT_FOLDER/resources
-    !exists($$LINK_DST) {
-        LINK_DST ~= s,/,\\,g
-        LINK_SRC = $$_PRO_FILE_PWD_/resources
-        LINK_SRC ~= s,/,\\,g
-        QMAKE_POST_LINK = mklink /D $$LINK_DST $$LINK_SRC
-    }
+    !exists($$LINK_DST): QMAKE_POST_LINK = mklink /D $$toNativeSeparators($$LINK_DST) $$toNativeSeparators($$_PRO_FILE_PWD_/resources)
 }
 
 macx {

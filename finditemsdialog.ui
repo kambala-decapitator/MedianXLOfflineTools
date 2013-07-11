@@ -49,7 +49,7 @@
    <property name="geometry">
     <rect>
      <x>21</x>
-     <y>101</y>
+     <y>100</y>
      <width>92</width>
      <height>17</height>
     </rect>
@@ -134,25 +134,6 @@
     </sizepolicy>
    </property>
   </widget>
-  <widget class="QPushButton" name="closeButton">
-   <property name="geometry">
-    <rect>
-     <x>260</x>
-     <y>140</y>
-     <width>75</width>
-     <height>23</height>
-    </rect>
-   </property>
-   <property name="sizePolicy">
-    <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-     <horstretch>0</horstretch>
-     <verstretch>0</verstretch>
-    </sizepolicy>
-   </property>
-   <property name="text">
-    <string>Close</string>
-   </property>
-  </widget>
   <widget class="QPushButton" name="nextButton">
    <property name="enabled">
     <bool>false</bool>
@@ -216,39 +197,26 @@
     <string>Multiline matching</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="helpButton">
+  <widget class="QDialogButtonBox" name="buttonBox">
    <property name="geometry">
     <rect>
      <x>260</x>
      <y>110</y>
      <width>75</width>
-     <height>23</height>
+     <height>52</height>
     </rect>
    </property>
-   <property name="text">
-    <string>Help</string>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <property name="standardButtons">
+    <set>QDialogButtonBox::Close|QDialogButtonBox::Help</set>
    </property>
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
  <connections>
-  <connection>
-   <sender>closeButton</sender>
-   <signal>clicked()</signal>
-   <receiver>FindItemsDialog</receiver>
-   <slot>close()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>407</x>
-     <y>121</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>348</x>
-     <y>116</y>
-    </hint>
-   </hints>
-  </connection>
   <connection>
    <sender>regexCheckBox</sender>
    <signal>toggled(bool)</signal>
@@ -278,6 +246,22 @@
     <hint type="destinationlabel">
      <x>166</x>
      <y>113</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>FindItemsDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>302</x>
+     <y>122</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>25</x>
+     <y>67</y>
     </hint>
    </hints>
   </connection>

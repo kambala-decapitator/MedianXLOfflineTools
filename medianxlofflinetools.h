@@ -141,7 +141,7 @@ private:
     // consts
     QList<quint32> experienceTable;
     QVector<QStringList> mercNames;
-    const QString hackerDetected, maxValueFormat, minValueFormat, investedValueFormat, kForumThreadHtmlLinks;
+    const QString kHackerDetected, maxValueFormat, minValueFormat, investedValueFormat, kForumThreadHtmlLinks;
 
     bool _isLoaded;
     ResurrectPenaltyDialog::ResurrectionPenalty _resurrectionPenalty;

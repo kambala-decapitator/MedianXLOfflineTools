@@ -152,9 +152,9 @@ public:
 };
 
 
-class CharacterStats : public QObject
+class CharacterStats
 {
-    Q_OBJECT
+    Q_GADGET
     Q_ENUMS(StatisticEnum)
 
 public:
@@ -269,9 +269,9 @@ public:
     };
 };
 
-class ItemQuality : public QObject
+class ItemQuality
 {
-    Q_OBJECT
+    Q_GADGET
     Q_ENUMS(ItemQualityEnum)
 
 public:
@@ -289,9 +289,9 @@ public:
     };
 };
 
-class ItemStorage : public QObject
+class ItemStorage
 {
-    Q_OBJECT
+    Q_GADGET
     Q_ENUMS(ItemStorageEnum)
 
 public:

@@ -1,6 +1,7 @@
 #include    "stashsortingoptionsdialog.h"
 #include "ui_stashsortingoptionsdialog.h"
 #include "helpers.h"
+#include "helpwindowdisplaymanager.h"
 
 #include <QHBoxLayout>
 #include <QVBoxLayout>
@@ -36,7 +37,9 @@ StashSortingOptionsDialog::StashSortingOptionsDialog(quint32 lastPage, QWidget *
 
     connect(ui->firstPageSpinBox, SIGNAL(valueChanged(double)), SLOT(firstPageChanged(double)));
     connect(ui->lastPageSpinBox,  SIGNAL(valueChanged(double)), SLOT(lastPageChanged(double)));
-    connect(ui->buttonBox, SIGNAL(helpRequested()), SLOT(showHelp()));
+
+    _helpDislplayManager = new HelpWindowDisplayManager(this, tr("Sort help"), tr("Help text"));
+    connect(ui->buttonBox, SIGNAL(helpRequested()), _helpDislplayManager, SLOT(showHelp()));
 }
 
 StashSortingOptionsDialog::~StashSortingOptionsDialog()
@@ -95,11 +98,6 @@ void StashSortingOptionsDialog::firstPageChanged(double newPage)
 void StashSortingOptionsDialog::lastPageChanged(double newPage)
 {
     ui->firstPageSpinBox->setMaximum(newPage);
-}
-
-void StashSortingOptionsDialog::showHelp()
-{
-    INFO_BOX(tr("help"));
 }
 
 

@@ -11,6 +11,8 @@ class ItemInfo;
 namespace Ui { class FindItemsDialog; }
 class QShowEvent;
 
+class HelpWindowDisplayManager;
+
 class FindItemsDialog : public QDialog
 {
     Q_OBJECT
@@ -25,7 +27,7 @@ public:
 
 public slots:
     void resetSearchStatus();
-    virtual void reject() { saveSettings(); QDialog::reject(); }
+    virtual void reject();
 
 protected:
     virtual void showEvent(QShowEvent *e);
@@ -37,7 +39,6 @@ private slots:
     void findNext();
     void findPrevious();
     void toggleResults();
-    void showHelp();
 
     void updateCurrentIndexForItem(ItemInfo *item);
     void searchTextChanged();
@@ -45,11 +46,12 @@ private slots:
 
 private:
     Ui::FindItemsDialog *ui;
+    FindResultsWidget *_resultsWidget;
+    HelpWindowDisplayManager *_helpDislplayManager;
 
     QList<SearchResultItem> _searchResult; // item and matched string
     bool _wasSearchPerformed, _searchResultsChanged;
     int _currentIndex;
-    FindResultsWidget *_resultsWidget;
     int _lastResultsHeight;
 
     void performSearch();
