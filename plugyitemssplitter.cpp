@@ -632,7 +632,10 @@ void PlugyItemsSplitter::sortWearableItems(ItemsList &selectedItems, quint32 &pa
                 {
                     sortWearableQualityItems(selectedItems, page, sortOptions, gearBaseTypesOrder, itemsByBaseType, true);
                     if (!sortOptions.isEachTypeFromNewPage)
+                    {
                         ++page;
+                        _maxItemHeightInRow = 0;
+                    }
                     sortWearableQualityItems(selectedItems, page, sortOptions, gearBaseTypesOrder, itemsByBaseType, false);
                 }
                 else
