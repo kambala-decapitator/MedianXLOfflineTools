@@ -46,8 +46,7 @@ HelpWindowDisplayManager::~HelpWindowDisplayManager()
 {
     if (_impl)
     {
-        if (_impl->helpWindow)
-            delete _impl->helpWindow;
+        delete _impl->helpWindow;
         delete _impl;
     }
 }

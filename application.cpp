@@ -37,8 +37,7 @@ Application::Application(int &argc, char **argv) : QtSingleApplication(kAppName,
 
 Application::~Application()
 {
-    if (_mainWindow)
-        delete _mainWindow;
+    delete _mainWindow;
 }
 
 

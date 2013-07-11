@@ -74,8 +74,7 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
             }
             ReverseBitReader bitReader(itemBitData);
 
-            if (item)
-                delete item;
+            delete item;
             item = new ItemInfo(bitReader.notReadBits());
             item->isQuest = bitReader.readBool();
             bitReader.skip(3);
@@ -380,8 +379,7 @@ PropertiesMultiMap ItemParser::parseItemProperties(ReverseBitReader &bitReader, 
         }
         catch (int exceptionCode)
         {
-            if (propToAdd)
-                delete propToAdd;
+            delete propToAdd;
             qDebug("caught exception while parsing item properties: %d", exceptionCode);
             *status = ItemInfo::Corrupted;
             // Requirements txtProperty has the lowest descpriority, so it'll appear at the bottom

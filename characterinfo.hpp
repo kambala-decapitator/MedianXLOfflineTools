@@ -57,7 +57,7 @@ public:
     } questsInfo;
 
     struct
-    {
+    { //-V802
         bool exists; // immutable
         quint16 nameIndex;
         Enums::Mercenary::MercenaryEnum code;

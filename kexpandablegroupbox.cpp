@@ -255,7 +255,7 @@ void KExpandableGroupBox::animateExpansion( qreal showAmount )
     if (!d->animateExpansion) {
         d->gridLayout->setRowMinimumHeight( 2, pixels );
 
-        if ( showAmount == 1 ) {
+        if ( qFuzzyCompare(showAmount, 1) ) {
             d->widget->setVisible( true );
         }
     } else {

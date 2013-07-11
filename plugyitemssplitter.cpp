@@ -348,7 +348,7 @@ void PlugyItemsSplitter::sortStash(const StashSortOptions &sortOptions)
             continue;
 
         QList<int> setIds;
-        foreach (const QByteArray &range, line.left(line.indexOf('#')).trimmed().split(','))
+        foreach (const QByteArray &range, line.left(line.indexOf('#')).trimmed().split(',')) //-V807
         {
             QList<QByteArray> minMaxId = range.split('-');
             int firstId = minMaxId.first().toInt();

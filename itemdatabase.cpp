@@ -273,7 +273,7 @@ QHash<uint, MysticOrb *> *ItemDataBase::MysticOrbs()
 
             MysticOrb *mo = new MysticOrb;
             mo->itemCode = data.at(1);
-            foreach (const QByteArray &statId, data.at(2).split(','))
+            foreach (const QByteArray &statId, data.at(2).split(',')) //-V807
                 mo->statIds << statId.toUShort();
             mo->value = data.at(3).toUShort();
             if (data.size() > 4)

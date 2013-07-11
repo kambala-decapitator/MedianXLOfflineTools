@@ -84,7 +84,7 @@ private:
 
 
 struct PlugyStashInfo
-{
+{ //-V802
     QString path;
     bool exists;
     QByteArray header;
@@ -155,7 +155,7 @@ struct BaseStats
 // txt
 
 struct ItemBase
-{
+{ //-V802
     QString name, spelldesc;
     quint8 width, height;
     Enums::ItemTypeGeneric::ItemTypeGenericEnum genericType;

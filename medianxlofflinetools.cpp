@@ -585,7 +585,7 @@ void MedianXLOfflineTools::saveCharacter()
 
     // write character items
     tempFileContents.replace(charInfo.itemsOffset, charInfo.itemsEndOffset - charInfo.itemsOffset, QByteArray(characterItemsSize, 0));
-    outputDataStream.device()->seek(charInfo.itemsOffset);
+    outputDataStream.device()->seek(charInfo.itemsOffset); //-V807
     outputDataStream << static_cast<quint16>(characterItems.size());
     ItemParser::writeItems(characterItems, outputDataStream);
 
