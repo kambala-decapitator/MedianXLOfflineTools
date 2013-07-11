@@ -84,6 +84,9 @@ ItemsViewerDialog::ItemsViewerDialog(const QHash<int, bool> &plugyStashesExisten
             tableView->setColumnWidth(j, kCellSize);
     }
 
+    // quick hack instead of storing ivar
+    connect(static_cast<KExpandableGroupBox *>(layout()->itemAt(layout()->count() - 1)->widget()), SIGNAL(expanded(bool)), SLOT(adjustHeight(bool)));
+
     connect(_disenchantToShardsButton, SIGNAL(clicked()), SLOT(disenchantAllItems()));
     connect(_disenchantToSignetButton, SIGNAL(clicked()), SLOT(disenchantAllItems()));
 
@@ -444,6 +447,16 @@ void ItemsViewerDialog::updateItemManagementButtonsState()
     updateStashButtonsState();
 }
 
+void ItemsViewerDialog::updateDisenchantButtonsState()
+{
+    bool areUniquesSelected = _uniquesRadioButton->isChecked(), areSetsSelected = _setsRadioButton->isChecked();
+    if (_bothQualitiesRadioButton->isChecked())
+        areUniquesSelected = areSetsSelected = true;
+    QPair<bool, bool> allowDisenchantButtons = currentSplitter()->updateDisenchantButtonsState(areUniquesSelected, areSetsSelected, _upgradeToCrystalsCheckbox->isChecked());
+    _disenchantToShardsButton->setEnabled(allowDisenchantButtons.first);
+    _disenchantToSignetButton->setEnabled(allowDisenchantButtons.second);
+}
+
 void ItemsViewerDialog::disenchantAllItems()
 {
     bool toShards = sender() == _disenchantToShardsButton, areUniquesSelected = _uniquesRadioButton->isChecked(), areSetsSelected = _setsRadioButton->isChecked();
@@ -532,6 +545,12 @@ void ItemsViewerDialog::removeCurrentPage()
     updateRemoveCurrentBlankPageButtonState();
 }
 
+void ItemsViewerDialog::adjustHeight(bool isBoxExpanded)
+{
+    int heightDiff = (_itemManagementWidget->height() + 6) * (isBoxExpanded ? 1 : -1);
+    resize(size() + QSize(0, heightDiff));
+}
+
 
 void ItemsViewerDialog::updateBeltItemsCoordinates(bool restore, ItemsList *pBeltItems)
 {
@@ -542,16 +561,6 @@ void ItemsViewerDialog::updateBeltItemsCoordinates(bool restore, ItemsList *pBel
         item->row = lastRowIndex - item->row;
         item->column += restore ? -2 : 2;
     }
-}
-
-void ItemsViewerDialog::updateDisenchantButtonsState()
-{
-    bool areUniquesSelected = _uniquesRadioButton->isChecked(), areSetsSelected = _setsRadioButton->isChecked();
-    if (_bothQualitiesRadioButton->isChecked())
-        areUniquesSelected = areSetsSelected = true;
-    QPair<bool, bool> allowDisenchantButtons = currentSplitter()->updateDisenchantButtonsState(areUniquesSelected, areSetsSelected, _upgradeToCrystalsCheckbox->isChecked());
-    _disenchantToShardsButton->setEnabled(allowDisenchantButtons.first);
-    _disenchantToSignetButton->setEnabled(allowDisenchantButtons.second);
 }
 
 void ItemsViewerDialog::updateUpgradeButtonsState()

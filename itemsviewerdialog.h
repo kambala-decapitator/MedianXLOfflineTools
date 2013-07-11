@@ -85,6 +85,7 @@ private slots:
     void decreaseItemCount();
 
     void applyActionToAllPagesChanged(bool b);
+    void updateDisenchantButtonsState();
 
     void disenchantAllItems();
     void upgradeGems();
@@ -94,6 +95,8 @@ private slots:
     void sortStash();
     void insertBlankPages();
     void removeCurrentPage();
+
+    void adjustHeight(bool isBoxExpanded);
 
 private:
     QTabWidget *_tabWidget;
@@ -122,7 +125,6 @@ private:
     void updateWindowTitle();
     void updateBeltItemsCoordinates(bool restore, ItemsList *pBeltItems);
 
-    void updateDisenchantButtonsState();
     void updateUpgradeButtonsState();
     void updateStashButtonsState();
     void updateRemoveCurrentBlankPageButtonState();

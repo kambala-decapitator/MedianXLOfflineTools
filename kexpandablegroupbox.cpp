@@ -139,10 +139,6 @@ void KExpandableGroupBox::init()
     d->label->setBuddy(d->widget);
     setFocusProxy(d->label);
 
-    //test
-    //d->label->hide();
-    //d->colButton->hide();
-
     d->gridLayout->addWidget(d->colButton, 0, 0);
     d->gridLayout->addWidget(d->label, 0, 1);
 
@@ -228,26 +224,27 @@ void KExpandableGroupBox::setAlignment(Qt::Alignment a)
     d->label->setAlignment(a);
 }
 
-void KExpandableGroupBox::setExpanded(bool expanded)
+void KExpandableGroupBox::setExpanded(bool expanded_)
 {
     if ( !d->widget ) {
         return;
     }
 
     if (!d->animateExpansion) {
-        d->widget->setVisible( expanded );
+        d->widget->setVisible( expanded_ );
 //        if ( !expanded )
 //            d->widget->setVisible( false );
     } else {
-        if ( expanded )
+        if ( expanded_ )
             d->expander->setVisible( true );
-        d->widget->setVisible( expanded );
+        d->widget->setVisible( expanded_ );
     }
 
-    d->colButton->setChecked( expanded );
+    d->colButton->setChecked( expanded_ );
 //    d->timeline->setDirection( expanded ? QTimeLine::Forward
 //                                        : QTimeLine::Backward );
 //    d->timeline->start();
+    emit expanded(expanded_);
 }
 
 void KExpandableGroupBox::animateExpansion( qreal showAmount )
@@ -288,7 +285,7 @@ void KExpandableGroupBox::paintEvent(QPaintEvent *ev)
     QPainter p(this);
     QStyleOption opt;
     int h = 16; //px
-	opt.rect = QRect(0, 0, h, h);
+    opt.rect = QRect(0, 0, h, h);
     opt.palette = palette();
     opt.state = QStyle::State_Children;
     if (d->colButton->isChecked())
@@ -313,7 +310,7 @@ void KExpandableGroupBox::mouseReleaseEvent(QMouseEvent *ev)
 QSize KExpandableGroupBox::minimumSizeHint() const
 {
 //    return QSize(0,16);
-	return QWidget::minimumSizeHint();
+    return QWidget::minimumSizeHint();
 }
 
 #include "kexpandablegroupbox.moc"

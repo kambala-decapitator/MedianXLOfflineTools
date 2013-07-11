@@ -142,16 +142,19 @@ public:
 
 public slots:
        /**
-        * Sets wether the widgets contents is expanded or not
+        * Sets whether the widgets contents is expanded or not
         * @see isExpanded()
         */
-    void setExpanded(bool expanded);
+    void setExpanded(bool expanded_);
 
        /**
         * Sets the collapsible widgets title
         * @see title()
         */
     void setTitle(const QString& title);
+
+signals:
+    void expanded(bool b);
 
 protected:
     virtual void mouseReleaseEvent(QMouseEvent *ev);
