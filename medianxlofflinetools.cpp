@@ -268,13 +268,7 @@ bool MedianXLOfflineTools::loadFile(const QString &charPath, bool shouldCheckExt
             _itemsDialog->updateItemManagementButtonsState();
         }
         if (_itemsDialog || ui->actionOpenItemsAutomatically->isChecked())
-        {
-#ifdef Q_OS_MAC
             QTimer::singleShot(0, this, SLOT(showItems()));
-#else
-            showItems();
-#endif
-        }
 
         QSettings settings;
         settings.beginGroup("recentItems");
@@ -2364,6 +2358,7 @@ void MedianXLOfflineTools::clearUI()
             {
                 item = new QTableWidgetItem;
                 item->setTextAlignment(Qt::AlignCenter);
+                item->setBackground(QColor(227, 227, 227)); // same color as in kReadonlyCss
                 ui->statsTableWidget->setItem(i, j, item);
             }
             item->setText(QString());
@@ -2507,15 +2502,7 @@ void MedianXLOfflineTools::setStats()
         else if (statCode >= Enums::CharacterStats::Life && statCode <= Enums::CharacterStats::BaseStamina)
         {
             int j = statCode - Enums::CharacterStats::Life, row = j / 2, col = j % 2;
-            QTableWidgetItem *item = ui->statsTableWidget->item(row, col);
-            if (!item)
-            {
-                item = new QTableWidgetItem;
-                item->setTextAlignment(Qt::AlignCenter);
-                item->setBackground(QColor(227, 227, 227)); // same color as in kReadonlyCss
-                ui->statsTableWidget->setItem(row, col, item);
-            }
-            item->setText(QString::number(value));
+            ui->statsTableWidget->item(row, col)->setText(QString::number(value));
         }
         else if (statCode != Enums::CharacterStats::End && statCode != Enums::CharacterStats::Level && statCode != Enums::CharacterStats::Experience)
         {

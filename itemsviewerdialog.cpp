@@ -432,6 +432,7 @@ void ItemsViewerDialog::decreaseItemCount()
 {
     --_itemsTotal;
     updateWindowTitle();
+    updateRemoveCurrentBlankPageButtonState();
 }
 
 void ItemsViewerDialog::applyActionToAllPagesChanged(bool b)
