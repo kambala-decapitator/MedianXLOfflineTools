@@ -46,6 +46,9 @@
 #endif
 
 #ifdef Q_OS_MAC
+#include <cfloat>
+#include <cmath>
+
 #if IS_QT5
 #include "qtmacextras/qmacfunctions.h"
 #else
@@ -265,7 +268,13 @@ bool MedianXLOfflineTools::loadFile(const QString &charPath, bool shouldCheckExt
             _itemsDialog->updateItemManagementButtonsState();
         }
         if (_itemsDialog || ui->actionOpenItemsAutomatically->isChecked())
+        {
+#ifdef Q_OS_MAC
+            QTimer::singleShot(0, this, SLOT(showItems()));
+#else
             showItems();
+#endif
+        }
 
         QSettings settings;
         settings.beginGroup("recentItems");
@@ -971,6 +980,7 @@ void MedianXLOfflineTools::showItems(bool activate /*= true*/)
             _itemsDialog->isMaximized() ? _itemsDialog->showMaximized() : _itemsDialog->showNormal(); // this is not a mistake: window can indeed be minimized and maximized at the same time
         if (activate)
             _itemsDialog->activateWindow();
+        _itemsDialog->raise();
     }
     else
     {
@@ -984,12 +994,12 @@ void MedianXLOfflineTools::showItems(bool activate /*= true*/)
         connect(_itemsDialog, SIGNAL(signetsOfLearningEaten(int)), SLOT(eatSignetsOfLearning(int)));
         connect(_itemsDialog, SIGNAL(stashSorted()), SLOT(updateFindResults()));
         connect(_showDisenchantPreviewGroup, SIGNAL(triggered(QAction *)), _itemsDialog, SLOT(showDisenchantPreviewActionTriggered(QAction *)));
+    }
 
-        if (!activate)
-        {
-            _findItemsDialog->activateWindow();
-            _findItemsDialog->raise();
-        }
+    if (!activate)
+    {
+        _findItemsDialog->activateWindow();
+        _findItemsDialog->raise();
     }
 }
 
@@ -2502,6 +2512,7 @@ void MedianXLOfflineTools::setStats()
             {
                 item = new QTableWidgetItem;
                 item->setTextAlignment(Qt::AlignCenter);
+                item->setBackground(QColor(227, 227, 227)); // same color as in kReadonlyCss
                 ui->statsTableWidget->setItem(row, col, item);
             }
             item->setText(QString::number(value));

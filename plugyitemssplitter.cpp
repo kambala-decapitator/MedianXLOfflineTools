@@ -462,6 +462,8 @@ void PlugyItemsSplitter::insertBlankPages(int pages, bool isAfter)
         item->plugyPage += pages;
         item->hasChanged = true;
     }
+    if (!isAfter)
+        _pageSpinBox->setValue(_pageSpinBox->value() + pages); // stay on the same page
 
     updateSpinbox();
     emit itemsChanged();
