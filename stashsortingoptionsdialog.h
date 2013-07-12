@@ -8,8 +8,6 @@
 
 namespace Ui { class StashSortingOptionsDialog; }
 
-class HelpWindowDisplayManager;
-
 class StashSortingOptionsDialog : public QDialog
 {
     Q_OBJECT
@@ -32,7 +30,6 @@ private slots:
 
 private:
     Ui::StashSortingOptionsDialog *ui;
-    HelpWindowDisplayManager *_helpDislplayManager;
 
     void createLayout();
 

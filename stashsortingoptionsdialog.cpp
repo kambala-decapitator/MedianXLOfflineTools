@@ -38,8 +38,8 @@ StashSortingOptionsDialog::StashSortingOptionsDialog(quint32 lastPage, QWidget *
     connect(ui->firstPageSpinBox, SIGNAL(valueChanged(double)), SLOT(firstPageChanged(double)));
     connect(ui->lastPageSpinBox,  SIGNAL(valueChanged(double)), SLOT(lastPageChanged(double)));
 
-    _helpDislplayManager = new HelpWindowDisplayManager(this, tr("Sort help"), tr("Help text"));
-    connect(ui->buttonBox, SIGNAL(helpRequested()), _helpDislplayManager, SLOT(showHelp()));
+    HelpWindowDisplayManager *helpDislplayManager = new HelpWindowDisplayManager(this, tr("Sort help"), tr("Help text"));
+    connect(ui->buttonBox, SIGNAL(helpRequested()), helpDislplayManager, SLOT(showHelp()));
 }
 
 StashSortingOptionsDialog::~StashSortingOptionsDialog()
