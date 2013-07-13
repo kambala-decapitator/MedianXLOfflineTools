@@ -169,6 +169,7 @@ void StashSortingOptionsDialog::createLayout()
     vbl->addWidget(ui->buttonBox);
 
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    mainLayout->setSizeConstraint(QLayout::SetFixedSize);
 
     QHBoxLayout *hbl = new QHBoxLayout;
     hbl->addWidget(ui->itemQualityOrderingGroupBox);
@@ -182,9 +183,6 @@ void StashSortingOptionsDialog::createLayout()
     hbl->addWidget(ui->separationBox);
     hbl->addLayout(vbl);
     mainLayout->addLayout(hbl);
-
-    adjustSize();
-    setFixedSize(size());
 }
 
 void StashSortingOptionsDialog::loadSettings()

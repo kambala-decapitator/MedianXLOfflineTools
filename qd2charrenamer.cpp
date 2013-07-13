@@ -10,13 +10,21 @@
 
 const int QD2CharRenamer::kMaxNameLength = 15;
 
-void QD2CharRenamer::updateNamePreview(QTextEdit *previewTextEdit, const QString &name)
+void QD2CharRenamer::customizeNamePreviewLabel(QLabel *previewLabel)
 {
-    QString htmlName = QString("<html><body bgcolor=\"black\"><font color = \"#ffffff\">%1</font></body></html>").arg(name); // white by default
+    previewLabel->setStyleSheet("QLabel { background-color: black; }");
+    previewLabel->setTextFormat(Qt::RichText);
+    previewLabel->setTextInteractionFlags(Qt::TextSelectableByMouse);
+    previewLabel->setFrameShape(QFrame::StyledPanel);
+}
+
+void QD2CharRenamer::updateNamePreviewLabel(QLabel *previewLabel, const QString &name)
+{
+    QString htmlName = QString("<font color = \"#ffffff\">%1</font>").arg(name); // white by default
     for (int i = 0; i < ColorsManager::correctColorsNum(); i++) // replace color codes with their hex values for HTML
         htmlName.replace(QString("%1%2").arg(ColorsManager::unicodeColorHeader()).arg(ColorsManager::colorCodes().at(i)), QString("</font><font color = \"%1\">").arg(ColorsManager::colors().at(i).name()));
-    previewTextEdit->setHtml(htmlName);
-    previewTextEdit->setStatusTip(name);
+    previewLabel->setText(htmlName);
+    previewLabel->setStatusTip(name);
 }
 
 
@@ -27,8 +35,8 @@ QD2CharRenamer::QD2CharRenamer(const QString &originalName, bool shouldWarn, QWi
 {
     ui->setupUi(this);
     setWindowFlags(windowFlags() & ~Qt::WindowContextHelpButtonHint | Qt::MSWindowsFixedSizeDialogHint);
-    setFixedSize(size());
 
+    customizeNamePreviewLabel(ui->charNamePreviewLabel);
     createColorMenu();
     ui->charNameLineEdit->setMaxLength(kMaxNameLength);
 
@@ -94,7 +102,7 @@ void QD2CharRenamer::saveName()
 void QD2CharRenamer::nameChanged(const QString &newName)
 {
     ui->buttonBox->button(QDialogButtonBox::Ok)->setEnabled(newName != _originalCharName && newName.length() > 1);
-    updateNamePreview(ui->charNamePreview, ui->charNameLineEdit->text());
+    updateNamePreviewLabel(ui->charNamePreviewLabel, ui->charNameLineEdit->text());
     setWindowTitle(tr("Rename (%1/15)", "param is the number of characters in the name").arg(ui->charNameLineEdit->text().length()));
 }
 
@@ -135,7 +143,7 @@ void QD2CharRenamer::createColorMenu()
         colorMenu->addAction(colorAction);
     }
 
-    QAction *infoAction = colorMenu->addAction(tr("\"Dynamic\" colors below"));
+    QAction *infoAction = colorMenu->addAction(tr("'Dynamic' colors below"));
     infoAction->setEnabled(false);
 
     for (int i = ColorsManager::correctColorsNum(); i < ColorsManager::colorCodes().size(); ++i)

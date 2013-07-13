@@ -70,9 +70,6 @@ SkillplanDialog::SkillplanDialog(QWidget *parent) : QDialog(parent), ui(new Ui::
 
     loadSettings();
     constructUrls();
-
-    adjustSize();
-    setFixedSize(size());
 }
 
 SkillplanDialog::~SkillplanDialog()

@@ -14,6 +14,9 @@
    <string>Resurrect</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
+   <property name="sizeConstraint">
+    <enum>QLayout::SetFixedSize</enum>
+   </property>
    <item>
     <widget class="QGroupBox" name="groupBox">
      <property name="title">
@@ -55,8 +58,6 @@
     </widget>
    </item>
   </layout>
-  <zorder>groupBox</zorder>
-  <zorder>buttonBox</zorder>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>

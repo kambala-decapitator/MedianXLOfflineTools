@@ -18,6 +18,9 @@ public:
     MessageCheckBoxImpl(const QString &text, const QString &checkboxText, QWidget *parent = 0) : QDialog(parent), textLabel(new QLabel(text, this)),
         checkBox(new QCheckBox(checkboxText, this)), buttonBox(new QDialogButtonBox(QDialogButtonBox::Yes | QDialogButtonBox::No, Qt::Horizontal, this))
     {
+        setWindowFlags(windowFlags() & ~Qt::WindowContextHelpButtonHint | Qt::MSWindowsFixedSizeDialogHint);
+        setWindowTitle(qApp->applicationName());
+
         QStyle *style_ = style();
         int iconSize = style_->pixelMetric(QStyle::PM_MessageBoxIconSize, 0, this);
         QPixmap iconPixmap = style_->standardIcon(QStyle::SP_MessageBoxWarning, 0, this).pixmap(iconSize, iconSize);
@@ -35,15 +38,10 @@ public:
         QVBoxLayout *layout = new QVBoxLayout(this);
         layout->addLayout(grid);
         layout->addWidget(buttonBox);
+        layout->setSizeConstraint(QLayout::SetFixedSize);
 
         connect(buttonBox, SIGNAL(accepted()), SLOT(accept()));
         connect(buttonBox, SIGNAL(rejected()), SLOT(reject()));
-
-        adjustSize();
-        setFixedSize(size());
-
-        setWindowFlags(windowFlags() & ~Qt::WindowContextHelpButtonHint | Qt::MSWindowsFixedSizeDialogHint);
-        setWindowTitle(qApp->applicationName());
     }
 
     QLabel *textLabel;

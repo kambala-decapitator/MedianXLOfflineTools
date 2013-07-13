@@ -159,13 +159,12 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *pare
             {
                 MessageCheckBox box(tr("%1 is not associated with %2 files.\n\nDo you want to do it?").arg(qApp->applicationName(), kCharacterExtensionWithDot), ui->actionCheckFileAssociations->text(), this);
                 box.setChecked(true);
-                int result = box.exec();
-                ui->actionCheckFileAssociations->setChecked(box.isChecked());
-                if (result)
+                if (int result = box.exec())
                 {
                     FileAssociationManager::makeApplicationDefaultForExtension(kCharacterExtensionWithDot);
                     isDefault = true;
                 }
+                ui->actionCheckFileAssociations->setChecked(box.isChecked());
             }
         }
         updateAssociateAction(isDefault);
@@ -814,7 +813,7 @@ void MedianXLOfflineTools::rename()
     if (renameWidget.exec())
     {
         newName = renameWidget.name();
-        QD2CharRenamer::updateNamePreview(ui->charNamePreview, newName);
+        QD2CharRenamer::updateNamePreviewLabel(ui->charNamePreviewLabel, newName);
         setModified(true);
     }
 }
@@ -1264,7 +1263,7 @@ void MedianXLOfflineTools::createLanguageMenu()
 
 void MedianXLOfflineTools::createLayout()
 {
-    QList<QWidget *> widgetsToFixSize = QList<QWidget *>() << ui->charNamePreview << ui->classLineEdit << ui->titleLineEdit << ui->freeSkillPointsLineEdit
+    QList<QWidget *> widgetsToFixSize = QList<QWidget *>() << ui->charNamePreviewLabel << ui->classLineEdit << ui->titleLineEdit << ui->freeSkillPointsLineEdit
                                                            << ui->freeStatPointsLineEdit << ui->signetsOfLearningEatenLineEdit << ui->signetsOfSkillEatenLineEdit << ui->strengthSpinBox << ui->dexteritySpinBox
                                                            << ui->vitalitySpinBox << ui->energySpinBox << ui->inventoryGoldLineEdit << ui->stashGoldLineEdit << ui->mercLevelLineEdit;
     foreach (QWidget *w, widgetsToFixSize)
@@ -1296,6 +1295,9 @@ void MedianXLOfflineTools::createLayout()
             (QHeaderView::Stretch);
     ui->statsTableWidget->setFixedHeight(ui->statsTableWidget->height());
 
+    QD2CharRenamer::customizeNamePreviewLabel(ui->charNamePreviewLabel);
+    ui->charNamePreviewLabel->clear(); // remove text set in .ui
+
     _charPathLabel = new QLabel(this);
     ui->statusBar->addPermanentWidget(_charPathLabel);
 
@@ -1309,7 +1311,7 @@ void MedianXLOfflineTools::createCharacterGroupBoxLayout()
 {
     QGridLayout *gridLayout = new QGridLayout;
     gridLayout->addWidget(new QLabel(tr("Name")), 0, 0, Qt::AlignRight);
-    gridLayout->addWidget(ui->charNamePreview, 0, 1);
+    gridLayout->addWidget(ui->charNamePreviewLabel, 0, 1);
     gridLayout->addWidget(ui->renameButton, 0, 2);
 
     gridLayout->addWidget(new QLabel(tr("Class")), 1, 0, Qt::AlignRight);
@@ -1816,11 +1818,13 @@ bool MedianXLOfflineTools::processSaveFile()
         inputDataStream >> mercExp;
         charInfo.mercenary.experience = mercExp;
         for (quint8 i = 1; i <= Enums::CharacterStats::MaxLevel; ++i)
+        {
             if (mercExp < mercExperienceForLevel(i))
             {
                 charInfo.mercenary.level = i - 1;
                 break;
             }
+        }
     }
 
     // Quests
@@ -2322,7 +2326,7 @@ void MedianXLOfflineTools::clearUI()
         lineEdit->clear();
         lineEdit->setStatusTip(QString());
     }
-    ui->charNamePreview->clear();
+    ui->charNamePreviewLabel->clear();
 
     QList<QComboBox *> comboBoxes = QList<QComboBox *>() << ui->mercNameComboBox << ui->mercTypeComboBox;
     foreach (QComboBox *combobx, comboBoxes)
@@ -2389,7 +2393,7 @@ void MedianXLOfflineTools::updateUI()
         groupBox->setEnabled(true);
 
     const CharacterInfo &charInfo = CharacterInfo::instance();
-    QD2CharRenamer::updateNamePreview(ui->charNamePreview, charInfo.basicInfo.originalName);
+    QD2CharRenamer::updateNamePreviewLabel(ui->charNamePreviewLabel, charInfo.basicInfo.originalName);
 
     ui->hardcoreGroupBox->setEnabled(charInfo.basicInfo.isHardcore);
     if (charInfo.basicInfo.isHardcore)
