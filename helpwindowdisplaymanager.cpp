@@ -4,13 +4,18 @@
 #include <QTextBrowser>
 #include <QDialogButtonBox>
 #include <QVBoxLayout>
+#include <QDesktopServices>
+
 #include <QPointer>
+#include <QUrl>
 
 
 class HelpWindow : public QWidget
 {
+    Q_OBJECT
+
 public:
-    HelpWindow(const QString &windowTitle, const QString &helpText, QWidget *parent = 0) : QWidget(parent)
+    HelpWindow(const QString &windowTitle, const QString &helpText, QWidget *parent = 0) : QWidget(parent), _textBrowser(new QTextBrowser(this))
     {
         setWindowFlags(Qt::Dialog);
         setWindowFlags(windowFlags() & ~Qt::WindowContextHelpButtonHint);
@@ -18,22 +23,35 @@ public:
         setAttribute(Qt::WA_QuitOnClose, false);
         setWindowTitle(windowTitle);
 
-        QTextBrowser *textBrowser = new QTextBrowser(this);
-        textBrowser->setOpenExternalLinks(true);
-        textBrowser->setHtml(helpText);
+        _textBrowser->setOpenExternalLinks(true);
+        _textBrowser->setHtml(helpText);
+        connect(_textBrowser, SIGNAL(anchorClicked(QUrl)), SLOT(openLocalUrl(QUrl)));
 
         QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Close, Qt::Horizontal, this);
         connect(buttonBox, SIGNAL(rejected()), SLOT(close()));
 
         QVBoxLayout *vbox = new QVBoxLayout(this);
-        vbox->addWidget(textBrowser);
+        vbox->addWidget(_textBrowser);
         vbox->addWidget(buttonBox);
 
         resize(400, 400);
     }
 
     virtual ~HelpWindow() {}
+
+private slots:
+    void openLocalUrl(const QUrl &url)
+    {
+        _textBrowser->setSource(QUrl()); // don't open blank page in the browser
+        if (url.scheme() == QLatin1String("file"))
+            QDesktopServices::openUrl(url);
+    }
+
+private:
+    QTextBrowser *_textBrowser;
 };
+
+#include "helpwindowdisplaymanager.moc"
 
 
 struct HelpWindowDisplayManagerImpl

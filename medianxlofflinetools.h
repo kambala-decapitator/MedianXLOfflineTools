@@ -49,7 +49,7 @@ public:
     virtual ~MedianXLOfflineTools();
 
 public slots:
-    bool loadFile(const QString &charPath, bool shouldCheckExtension = true);
+    bool loadFile(const QString &charPath, bool shouldCheckExtension = true, bool shouldOpenItemsWindow = true);
     void loadFileSkipExtensionCheck(const QString &charPath);
 
 protected:
@@ -78,7 +78,7 @@ private slots:
     // file
     void loadCharacter();
     void openRecentFile();
-    void reloadCharacter(bool notify = true);
+    void reloadCharacter(bool shouldNotify = true);
     void saveCharacter();
 #ifdef DUPE_CHECK
     void showDupeCheck();
@@ -182,8 +182,10 @@ private:
 
     void updateRecentFilesActions();
     void addToRecentFiles();
-    QAction *createRecentFileAction(const QString &fileName, int index);
+    QAction *createRecentFileAction(const QString &filePath, int index);
 
+    void loadSaveFile(const QString &filePath, bool shouldNotify, const QString &statusBarMessage);
+    void loadSaveFile(const QString &filePath) { loadSaveFile(filePath, true, tr("Character loaded")); }
     bool processSaveFile();
     quint32 checksum(const QByteArray &charByteArray) const;
 

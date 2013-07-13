@@ -509,6 +509,12 @@
     <CustomBuild Include="helpwindowdisplaymanager.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
+    <CustomBuild Include="GeneratedFiles\Debug\helpwindowdisplaymanager.moc">
+      <Filter>Generated Files\Debug</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GeneratedFiles\Release\helpwindowdisplaymanager.moc">
+      <Filter>Generated Files\Release</Filter>
+    </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Resources\win\medianxlofflinetools.rc">

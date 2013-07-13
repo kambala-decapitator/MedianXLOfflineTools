@@ -93,13 +93,13 @@ FindItemsDialog::FindItemsDialog(QWidget *parent) : QDialog(parent), ui(new Ui::
         "<p>Properties appear the same way as they do in the item description view. Diablo color codes are also present here to simplify search for e.g. elite reanimates.</p>"
         "<h3>Regular expressions</h3>"
         "<p>Regular expressions syntax is mostly Perl-compatible, but there're some limitations. "
-        "Refer to the <a href=\"http://qt-project.org/doc/qt-4.8/qregexp.html#details\">Qt regular expressions description</a> for more information.</p>"
+        "Refer to the <a href=\"%1\">Qt regular expressions description</a> for more information.</p>"
         "<p>Regular expressions-only checkboxes in the dialog have tooltips on what they mean if it's not clear.</p>"
         "<p>Hint: enter . (period) as a search text to see all your items :)</p>"
         "<h3>Search results</h3>"
         "<p>Hovering upon an item in the search results drop-down will display matched line with an actual match highlighted in <b>bold</b>.</p>"
         "<p>Double-clicking or pressing Return/Enter on an item shows it in the items window.</p>"
-        ));
+        ).arg("http://qt-project.org/doc/qt-4.8/qregexp.html#details"));
     connect(ui->buttonBox, SIGNAL(helpRequested()), _helpDislplayManager, SLOT(showHelp()));
 }
 

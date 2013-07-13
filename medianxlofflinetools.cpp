@@ -229,7 +229,7 @@ MedianXLOfflineTools::~MedianXLOfflineTools()
 
 // slots
 
-bool MedianXLOfflineTools::loadFile(const QString &charPath, bool shouldCheckExtension)
+bool MedianXLOfflineTools::loadFile(const QString &charPath, bool shouldCheckExtension /*= true*/, bool shouldOpenItemsWindow /*= true*/)
 {
     bool unsupportedFile = !charPath.endsWith(kCharacterExtensionWithDot);
     if (charPath.isEmpty() || (shouldCheckExtension && unsupportedFile) || !maybeSave())
@@ -267,7 +267,7 @@ bool MedianXLOfflineTools::loadFile(const QString &charPath, bool shouldCheckExt
             _itemsDialog->updateItems(getPlugyStashesExistenceHash(), true);
             _itemsDialog->updateItemManagementButtonsState();
         }
-        if (_itemsDialog || ui->actionOpenItemsAutomatically->isChecked())
+        if (shouldOpenItemsWindow && (_itemsDialog || ui->actionOpenItemsAutomatically->isChecked()))
             QTimer::singleShot(0, this, SLOT(showItems()));
 
         QSettings settings;
@@ -346,22 +346,17 @@ void MedianXLOfflineTools::loadCharacter()
 {
     QSettings settings;
     settings.beginGroup("recentItems");
-    QString lastSavePath = settings.value(kLastSavePathKey).toString();
-
-    QString charPath = QFileDialog::getOpenFileName(this, tr("Load Character"), lastSavePath, tr("Diablo 2 Save Files") + QString(" (*%1)").arg(kCharacterExtensionWithDot));
-    if (loadFile(QDir::toNativeSeparators(charPath)))
-        ui->statusBar->showMessage(tr("Character loaded"), 3000);
+    loadSaveFile(QDir::toNativeSeparators(QFileDialog::getOpenFileName(this, tr("Load Character"), settings.value(kLastSavePathKey).toString(), tr("Diablo 2 Save Files") + QString(" (*%1)").arg(kCharacterExtensionWithDot))));
 }
 
 void MedianXLOfflineTools::openRecentFile()
 {
-    loadFile(qobject_cast<QAction *>(sender())->statusTip());
+    loadSaveFile(qobject_cast<QAction *>(sender())->statusTip());
 }
 
-void MedianXLOfflineTools::reloadCharacter(bool notify /*= true*/)
+void MedianXLOfflineTools::reloadCharacter(bool shouldNotify /*= true*/)
 {
-    if (loadFile(_charPath) && notify)
-        ui->statusBar->showMessage(tr("Character reloaded"), 3000);
+    loadSaveFile(_charPath, shouldNotify, tr("Character reloaded"));
 }
 
 void MedianXLOfflineTools::saveCharacter()
@@ -732,7 +727,7 @@ void MedianXLOfflineTools::saveCharacter()
             }
 
             setModified(false);
-            reloadCharacter(false); // update all UI at once by reloading the file
+            loadFile(_charPath, true, false); // update all UI at once by reloading the file
 
             QString text = tr("File '%1' successfully saved!").arg(QDir::toNativeSeparators(saveFileName));
             if (!backupedFiles.isEmpty())
@@ -1148,7 +1143,7 @@ void MedianXLOfflineTools::dragEnterEvent(QDragEnterEvent *event)
 
 void MedianXLOfflineTools::dropEvent(QDropEvent *event)
 {
-    loadFile(QDir::toNativeSeparators(event->mimeData()->urls().at(0).toLocalFile()));
+    loadSaveFile(QDir::toNativeSeparators(event->mimeData()->urls().at(0).toLocalFile()));
     event->acceptProposedAction();
 }
 
@@ -1393,11 +1388,15 @@ void MedianXLOfflineTools::createQuestsGroupBoxLayout()
     _questsGroupBox = new QGroupBox(tr("Quests"), this);
 
     QList<int> questKeys = QList<int>() << Enums::Quests::DenOfEvil << Enums::Quests::Radament << Enums::Quests::Izual << Enums::Quests::LamEsensTome << Enums::Quests::GoldenBird;
+    QStringList difficulites = QStringList() << tr("Hatred") << tr("Terror") << tr("Destruction");
     foreach (int quest, questKeys)
     {
-        QCheckBox *hatredCheckBox = new QCheckBox(tr("Hatred"), _questsGroupBox), *terrorCheckBox = new QCheckBox(tr("Terror"), _questsGroupBox), *destCheckBox = new QCheckBox(tr("Destruction"), _questsGroupBox);
-        hatredCheckBox->setDisabled(true); terrorCheckBox->setDisabled(true); destCheckBox->setDisabled(true);
-        _checkboxesQuestsHash[quest] = QList<QCheckBox *>() << hatredCheckBox << terrorCheckBox << destCheckBox;
+        foreach (const QString &difficulty, difficulites)
+        {
+            QCheckBox *checkBox = new QCheckBox(difficulty, _questsGroupBox);
+            checkBox->setDisabled(true);
+            _checkboxesQuestsHash[quest] << checkBox;
+        }
     }
 
     QString rewardFormat = tr("Reward: %1", "tooltip for quest label");
@@ -1407,7 +1406,7 @@ void MedianXLOfflineTools::createQuestsGroupBoxLayout()
     radamentLabel->setStatusTip(rewardFormat.arg(tr("%n free skill point(s)", 0, 1)));
     izualLabel->setStatusTip(rewardFormat.arg(tr("%n free skill point(s)", 0, 2)));
     lamEsensTomeLabel->setStatusTip(rewardFormat.arg(tr("5 free stat points")));
-    goldenBirdLabel->setStatusTip(rewardFormat.arg(tr("\"+20 to Life\" potion")));
+    goldenBirdLabel->setStatusTip(rewardFormat.arg(tr("'+20 to Life' potion")));
 
     QGridLayout *gridLayout = new QGridLayout(_questsGroupBox);
     gridLayout->addWidget(doeLabel, 0, 0);
@@ -1682,18 +1681,24 @@ void MedianXLOfflineTools::addToRecentFiles()
     updateRecentFilesActions();
 }
 
-QAction *MedianXLOfflineTools::createRecentFileAction(const QString &fileName, int index)
+QAction *MedianXLOfflineTools::createRecentFileAction(const QString &filePath, int index)
 {
     // don't use numbers on Mac OS X because there're no mnemonics
 #ifdef Q_OS_MAC
     Q_UNUSED(index);
-    QAction *recentFileAction = new QAction(QFileInfo(fileName).fileName(), this);
+    QAction *recentFileAction = new QAction(QFileInfo(filePath).fileName(), this);
 #else
-    QAction *recentFileAction = new QAction(QString("&%1 %2").arg(index).arg(QFileInfo(fileName).fileName()), this);
+    QAction *recentFileAction = new QAction(QString("&%1 %2").arg(index).arg(QFileInfo(filePath).fileName()), this);
 #endif
-    recentFileAction->setStatusTip(QDir::toNativeSeparators(fileName));
+    recentFileAction->setStatusTip(QDir::toNativeSeparators(filePath));
     connect(recentFileAction, SIGNAL(triggered()), SLOT(openRecentFile()));
     return recentFileAction;
+}
+
+void MedianXLOfflineTools::loadSaveFile(const QString &filePath, bool shouldNotify, const QString &statusBarMessage)
+{
+    if (loadFile(filePath) && shouldNotify)
+        ui->statusBar->showMessage(statusBarMessage, 3000);
 }
 
 bool MedianXLOfflineTools::processSaveFile()
@@ -2519,11 +2524,13 @@ void MedianXLOfflineTools::setStats()
 void MedianXLOfflineTools::updateWindowTitle()
 {
     _charPathLabel->setText(QDir::toNativeSeparators(_charPath));
-    QString title = QString("%1 (%2)").arg(qApp->applicationName(), SkillplanDialog::modVersionReadable());
+
+    QString modVersion = SkillplanDialog::modVersionReadable();
     // making setWindowFilePath() work correctly
 #ifdef Q_OS_MAC
-    setWindowTitle(_charPath.isEmpty() ? SkillplanDialog::modVersionReadable() : QString("%1 (%2)").arg(QFileInfo(_charPath).fileName(), SkillplanDialog::modVersionReadable()));
+    setWindowTitle(_charPath.isEmpty() ? modVersion : QString("%1 (%2)").arg(QFileInfo(_charPath).fileName(), modVersion));
 #else
+    QString title = QString("%1 (%2)").arg(qApp->applicationName(), modVersion);
     setWindowTitle(_charPath.isEmpty() ? title : QString("%1[*] %2 %3").arg(QFileInfo(_charPath).fileName(), QChar(0x2014), title));
 #endif
 }

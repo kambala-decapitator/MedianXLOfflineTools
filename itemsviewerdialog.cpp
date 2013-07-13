@@ -432,7 +432,8 @@ void ItemsViewerDialog::decreaseItemCount()
 {
     --_itemsTotal;
     updateWindowTitle();
-    updateRemoveCurrentBlankPageButtonState();
+    if (isPlugyStorageIndex(_tabWidget->currentIndex()))
+        updateRemoveCurrentBlankPageButtonState();
 }
 
 void ItemsViewerDialog::applyActionToAllPagesChanged(bool b)

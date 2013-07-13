@@ -2,6 +2,7 @@
 #include "ui_stashsortingoptionsdialog.h"
 #include "helpers.h"
 #include "helpwindowdisplaymanager.h"
+#include "resourcepathmanager.hpp"
 
 #include <QHBoxLayout>
 #include <QVBoxLayout>
@@ -9,6 +10,7 @@
 #include <QPushButton>
 
 #include <QSettings>
+#include <QUrl>
 
 
 StashSortingOptionsDialog::StashSortingOptionsDialog(quint32 lastPage, QWidget *parent /*= 0*/) : QDialog(parent), ui(new Ui::StashSortingOptionsDialog)
@@ -38,7 +40,43 @@ StashSortingOptionsDialog::StashSortingOptionsDialog(quint32 lastPage, QWidget *
     connect(ui->firstPageSpinBox, SIGNAL(valueChanged(double)), SLOT(firstPageChanged(double)));
     connect(ui->lastPageSpinBox,  SIGNAL(valueChanged(double)), SLOT(lastPageChanged(double)));
 
-    HelpWindowDisplayManager *helpDislplayManager = new HelpWindowDisplayManager(this, tr("Sort help"), tr("Help text"));
+    QString gearFileName("<b>gear.txt</b>"), miscFileName("<b>misc.txt</b>"), setsFileName("<b>sets.txt</b>");
+    HelpWindowDisplayManager *helpDislplayManager = new HelpWindowDisplayManager(this, tr("Sort help"),
+        tr(
+        "<h2>Item sort order</h2>"
+        "<p>The order is mostly softcoded and can be modified with your favorite text editor. Go to <a href=\"%1\">resources/data/sorting</a> folder and edit any of the 3 files except 'thng_list.txt' (it's just a reference):"
+        "<ul><li>%14: non-set weapons, armor, arrows and jewelry;</li><li>%15: everything else;</li><li>%16: sets, obviously.</li></ul>"
+        "You can change order of the item types, remove item types or even add new ones. All other items not listed in the above files are stored in the very end of a stash.</p>"
+        "<h2>Options</h2>"
+        // item quality ordering
+        "<h3><i>%2</i></h3>"
+        "<p>Set the order of item qualities. Hover mouse pointer over an option to see the order.</p>"
+        // page range
+        "<h3><i>%3</i></h3>"
+        "<p>Sort items only on pages within range. If sorted items occupy more pages than the range, all subsequent pages are shifted.</p>"
+        // blank pages
+        "<h3><i>%4</i></h3>"
+        "<p>Specify amount of blank pages to insert.</p>"
+        // separation
+        "<h3><i>%5</i></h3>"
+        "<ul>"
+        "<li><i>%7:</i> does exactly what the option says :) 'Item type' is a line in config file. Doesn't apply to %16.</li>"
+          "<li><i>%8:</i> 'misc' types are defined in %15. 'Similar' are items of one type.</li>"
+          "<li><i>%9:</i> if checked, all sacred items of each type are stored first, then all tiered items (within one item quality); otherwise, tiered and sacred items are placed together.</li>"
+          "<li><i>%10:</i> if checked, ethereal items are placed in the end of each tier; otherwise, normal and ethereal items are mixed.</li>"
+        "</ul>"
+        // new row
+        "<h3><i>%6</i></h3>"
+        "<ul>"
+          "<li><i>%11:</i> applies only to item types in %14.</li>"
+          "<li><i>%12:</i> 'Cornerstone of the World' is a unique jewel that grants any non-passive character skill.</li>"
+          "<li><i>%13:</i> e.g., Shrines in Ultimative, Charms, Gems, Runes, etc.</li>"
+        "</ul>",
+        "first param is path to sort folder, 14-16 are file names, others are titles of the UI components").arg(QUrl::fromLocalFile(ResourcePathManager::dataPathForFileName("sorting/")).toString())
+        .arg(ui->itemQualityOrderingGroupBox->title(), ui->pageRangeGroupBox->title(), ui->blankPagesGroupBox->title().remove(':'), ui->separationBox->title(), ui->newRowGroupBox->title().remove(':'))
+        .arg(ui->eachTypeFromNewPageCheckBox->text(), ui->similarMiscItemsOnOnePageCheckBox->text(), ui->separateSacredCheckBox->text(), ui->separateEthCheckBox->text())
+        .arg(ui->newRowTierCheckBox->text(), ui->newRowCotwCheckBox->text(), ui->newRowVisuallyDifferentMiscCheckBox->text())
+        .arg(gearFileName, miscFileName, setsFileName));
     connect(ui->buttonBox, SIGNAL(helpRequested()), helpDislplayManager, SLOT(showHelp()));
 }
 
