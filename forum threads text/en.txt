@@ -1,74 +1,83 @@
-[size=1]Just in case, here's the Russian thread: http://forum.worldofplayers.ru/showthread.php?t=34489[/size]
+[size=1]Just in case, here's the Russian thread: http://worldofplayers.ru/threads/34489/[/size]
 
 As you can guess from the title, it's an almost complete offline analogue of grig's [url=http://grig.vlexofree.com/]Median XL Online Tools[/url], but with nice additions.
 
-Application should be able to load character from any version of Median XL and successfully perform basic operations with it like respeccing. Items processing relies on the mod source files, so it may not be compatible with any chacarcter from different version. This data is softcoded, so when a new mod version is released, usually there's no need to recompile the application — one just needs to replace the data found in 'resources/data' with the new one, which I will release. Current supported Median XL version is 2012 v005, first supported one — Omega v003; current supported version of Ultimative is v6b (v5+ actually), first one — v4.
+Application should be able to load character from any version of Median XL and successfully perform basic operations with it like respeccing. Items processing relies on the mod source files, so it may not be compatible with any chacarcter from different version. This data is softcoded, so when a new mod version is released, usually there's no need to recompile the application — one just needs to replace the data found in 'resources/data' with the new one, which I will provide. Currently supported mod versions:
+[list][*]Median XL 2012 v005 (earlier versions may also work, but I don't guarantee it)
+[*]Ultimative v7 (v5+ characters may be compatible)
+[*]Kehjan Labyrinth + Tathamet vs Anu
+[*]Hardened
+[/list]
+The app comes with English and Russian localization. If you want to create your own localization (or use items data from another mod version), grab translation toolkit from the Downloads section.
 
-It's written in C++ using the Qt library (v4.8.4 as of current release), so don't hope to dotnetreflect the source code (and it won't be released for obvious reasons). The app comes with English and Russian localization. If you want to create your own localization (or use items data from another mod version), grab translation toolkit from the Downloads section.
+It's written in C++ using the [url=http://qt-project.org]Qt framework[/url] (v4.8.5 as of current release), so don't hope to dotnetreflect the source code (and it won't be released for obvious reasons).
 
 I hope I provided enough anti-hack protection for an average user. If you manage to successfully hack your character and save him using this application, please report it to me so that I could fix the exploit :)
 
-[b]Current features[/b]:
-[list]
-[*]skills and stats respec
-[*]waypoint activation
-[*]renaming (note: you should place the colorcode [i]in front of[/i] the string you want to colorize)
+[b]Main features[/b]:
+[list][*]Character:
+[list][*]info with some hidden stats
+[*]respeccing
+[*]renaming
 [*]downleveling
-[*]HC -> SC
-[*]resurrect HC character (with penalties ofc)
-[*]change mercenary name
-[*]Median Hardened support
-[*]view items on character/mercenary/corpse, in belt, inventory, Cube, stash and PlugY stashes
-[*]in-game-like PlugY navigation (but you can also enter number of desired page directly)
-[*]shared gold display (in status tip for stash gold, displayed if > 0)
-[*]almost complete item description (str/dex requirements, attack speed and affixes are missing)
-[*]separate description of item properties, RW properties, socketables and mystic orbs
-[*]item search
-[*]recover missing Cube
-[*]disenchant selected item into shards/signet (you can't disenchant gear items)
-[*]remove all or specific mystic orbs from selected item (UMO not supported)
-[*]delete selected item
-[*]load last used character automatically
-[*]display of completed challenges on class charm, if an item was shrine-blessed and if a charm was cubed with trophy
-[*]links for Skillpoint Planner
-[*].d2s file association
-[*]recent files in Windows 7 taskbar / Mac OS X dock icon
-[*]drag'n'drop .d2s files on the application window, application shortcut and on the Windows 7 taskbar / Mac OS X dock icon (Windows 7 note: you can drop files on the taskbar only if application is pinned there or there's a shortcut on the desktop)
-[*]save prompt
-[*]display properties of unidentified items
-[*]display location of corrupted items
-[*]Kehjan Labyrinth + Tathamet vs Anu support
-[*]Median XL Ultimative support (v4 and v5+)
-[*]display completion status of skill/stat quests
-[*]mass disenchant of uniques/sets with preview (you can select multiple items via Ctrl/Command and Shift, change their checked state via context menu or by pressing spacebar and sort/filter the table)
+[*]waypoint activation
+[*]HC resurrection and conversion
+[*]links for [url=http://www.authmann.de/d2/mxl/skillpointplanner/]Skillpoint Planner[/url]
+[/list][*]Items:
+[list][*]viewing all character/PlugY items and their properties (including hidden)
+[*]searching
+[*]sorting PlugY stashes
+[*]mass disenchant of uniques/sets with preview
 [*]mass upgrade of gems/runes
-[*]rune downgrade (via context menu)
-[*]eating signets from context menu and with a hotkey
-[*]deactivating Halls of Pain WP on Destruction
+[*]recovering missing Cube
+[/list][*]Selected item (context menu):
+[list][*]disenchanting into shards/signet
+[*]eating signets
+[*]removing all or specific Mystic Orbs (UMO not supported yet)
+[*]rune downgrading
+[*]deleting
+[/list][*]OS-specific:
+[list][*].d2s file association
+[*]recent files in Windows 7 taskbar / Mac OS X dock icon
+[*]drag'n'drop .d2s files on the application window, application shortcut and on the Windows 7 taskbar / Mac OS X dock icon
+[*]update check
+[*]single instance
+[/list][*]and many others ;)
 [/list]
-[size=18][color=#6666ff]WARNING: by default you can load only characters from cMXL 2012 005 (and earlier) and Kehjan Labyrinth/Tathamet vs Anu. If you want to load Ultimative characters, please refer to the [b]Mod Data[/b] download section.[/color][/size]
+
+[size=18][color=#6666ff]WARNING: by default you can open only characters from Ultimative v7. If you want to open non-Ultimative characters, please refer to the [b]Mod data[/b] download section.[/color][/size]
 
 [b]Downloads[/b]:
-[list]
-[*][i][b]Windows[/b][/i] (XP SP 2 and later; you need vcredist2012 to be installed): http://www.mediafire.com/download.php?d1jf4hzgxgwlh33 (if you're too lazy to search for vcredist2012, then place [url=http://www.mediafire.com/download.php?4uv0lsfa1pd5pi4]these dlls[/url] near MedianXLOfflineTools.exe)
-[*][i][b]Mac OS X[/b][/i] (10.5 and later; universal binary): http://www.mediafire.com/download.php?2hds8hr8hvvjrur (if you can't unpack the archive, e.g. on Snow Leopard, use [url=http://www.mediafire.com/?nyaswdajy8idhou]this one[/url])
-[*][i][b]Translation toolkit[/b][/i] (follow instructions found inside the archive): http://www.mediafire.com/?4qm9t8ba9w35k9i
------
-[*][i][b]Mod Data[/b][/i] (Windows: unpack in a folder that contains the executable; Mac OS X: unpack somewhere and move [b]the contents of 'resources/data', not the 'data' folder itself[/b], to 'MedianXLOfflineTools.app/Contents/Resources/data'. If you still don't understand what to do on Mac OS X, see bottom of the post.):
-[list]
-[*][url=http://www.mediafire.com/download.php?t006u85c82wol85]Omega 003[/url]
-[*][url=http://www.mediafire.com/download.php?a5bma6lcza6u7ut]2012 005 + Kehjan Labyrinth + Tathamet vs Anu[/url] (is included with the current binary)
-[*][url=http://www.mediafire.com/download.php?y2gxeaizzud38ze]Ultimative 4[/url]
-[*][url=http://www.mediafire.com/?25h8ikeb994i23j]Ultimative 7[/url] (can be used for version 5 and higher)
+[list][*][b]Application[/b]:
+[list][*][i]Windows[/i] (XP SP 2 and later): http://www.mediafire.com/download/r2uh8q8z9sev6fu/MedianXLOfflineTools_0.4.7z
+[*][i]Mac OS X[/i] (10.5 and later, universal binary): http://www.mediafire.com/download/gpayc84azcp9x1x/MedianXLOfflineTools_mac_0.4.zip
+[/list][*][b]Mod data[/b] (find installation instructions in Mini-FAQ below; you don't actually need to download these because both archives are included in the application distribution):
+[list][*][i]2012 v005 / Kehjan Labyrinth + Tathamet vs Anu / Hardened:[/i] http://www.mediafire.com/download/4vw6cwztt1zuwlv/2012-005%2Bkehjan%2Btathamet.7z
+[*][i]Ultimative v7:[/i] http://www.mediafire.com/download/ob5x7sss8jdu9b8/ultimative7.7z
+[/list][*][b]Translation toolkit[/b] (follow instructions found inside the archive): http://www.mediafire.com/download/9r21w2nz8r64obq/translation_2012-005_0.4.7z
 [/list]
 
-[/list]
+[b]Mini-FAQ[/b]:
+Q: I can't unrar the distributed archive without errors :(
+A: Use 7zip, Luke.
 
+Q: How to install mod data?
+A: Restart the application after following actions if it's running.
+[list][*]Windows: unpack the archive in a folder that contains MedianXLOfflineTools.exe replacing everything
+[*]Mac OS X: unpack the archive somewhere and...
+[list][*]short answer: move [b]the contents of 'resources/data', not the 'data' folder itself[/b], to 'MedianXLOfflineTools.app/Contents/Resources/data'
+[*]long 'manual' answer: open unpacked folder, open 'resources' folder inside, Select All (Cmd+A), Copy (Cmd+C), locate MedianXLOfflineTools.app, right-click (or Control-click) it, select 'Show package contents', open Contents/Resources/data folder, Paste (Cmd+V) replacing everything
+[*]long 'terminal' answer: open Terminal, cd to where you unpacked mod data (this folder should contain unpacked 'resources' folder) and use the following shell script:
+[code]APP_PATH = "/Applications/MedianXLOfflineTools.app" # place the actual path inside double quotes, it's just an example
+cp -R resources/data/* "${APP_PATH}/Contents/resources/data"[/code]
+[/list][/list]
 [b]Screenshots[/b] (click to see in full size):
-[url=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=main2.png][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_main2.png[/img][/url][url=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=main_mac.png][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_main_mac.png[/img][/url]
-[url=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=items1.png][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_items1.png[/img][/url][url=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=items_plugy1.png][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_items_plugy1.png[/img][/url]
-[url=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=props_all.png][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_props_all.png[/img][/url][url=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=props_item.png][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_props_item.png[/img][/url][url=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=props_rw.png][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_props_rw.png[/img][/url][url=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=props_sockets.png][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_props_sockets.png[/img][/url]
-[url=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=classcharm.png][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_classcharm.png[/img][/url][url=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=item_menu1.png][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_item_menu1.png[/img][/url][url=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=removeMO.png][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_removeMO.png[/img][/url]
+[URL=http://s1125.photobucket.com/user/kambala_decapitator/media/Median%20XL%20Offline%20Tools/main3.png.html][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_main3.png[/IMG][/URL][URL=http://s1125.photobucket.com/user/kambala_decapitator/media/Median%20XL%20Offline%20Tools/main_mac1.png.html][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_main_mac1.png[/IMG][/URL]
+[URL=http://s1125.photobucket.com/user/kambala_decapitator/media/Median%20XL%20Offline%20Tools/items2.png.html][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_items2.png[/IMG][/URL][URL=http://s1125.photobucket.com/user/kambala_decapitator/media/Median%20XL%20Offline%20Tools/items_plugy2.png.html][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_items_plugy2.png[/IMG][/URL]
+[url=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=classcharm.png][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_classcharm.png[/img][/url][url=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=props_all.png][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_props_all.png[/img][/url][url=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=props_item.png][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_props_item.png[/img][/url][url=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=props_rw.png][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_props_rw.png[/img][/url][url=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=props_sockets.png][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_props_sockets.png[/img][/url]
+[URL=http://s1125.photobucket.com/user/kambala_decapitator/media/Median%20XL%20Offline%20Tools/downgrade_rune.png.html][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_downgrade_rune.png[/IMG][/URL][url=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=item_menu1.png][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_item_menu1.png[/img][/url][url=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=removeMO.png][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_removeMO.png[/img][/url][URL=http://s1125.photobucket.com/user/kambala_decapitator/media/Median%20XL%20Offline%20Tools/eat_signet.png.html][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_eat_signet.png[/IMG][/URL]
+[URL=http://s1125.photobucket.com/user/kambala_decapitator/media/Median%20XL%20Offline%20Tools/sort.png.html][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_sort.png[/IMG][/URL][URL=http://s1125.photobucket.com/user/kambala_decapitator/media/Median%20XL%20Offline%20Tools/sort_help.png.html][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_sort_help.png[/IMG][/URL]
+[URL=http://s1125.photobucket.com/user/kambala_decapitator/media/Median%20XL%20Offline%20Tools/disenchant_preview.png.html][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_disenchant_preview.png[/IMG][/URL]
 [url=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=search.png][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_search.png[/img][/url][url=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=search_help.png][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_search_help.png[/img][/url]
 [url=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=skillplan1.png][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_skillplan1.png[/img][/url]
 [url=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=recent_win.png][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_recent_win.png[/img][/url][url=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=recent_mac.png][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_recent_mac.png[/img][/url]
@@ -76,9 +85,37 @@ I hope I provided enough anti-hack protection for an average user. If you manage
 
 [b]Changelog[/b]:
 
+[i]v0.4 (13.07.2013)[/i]
+[list][+] sorting PlugY stashes
+[+] adding to and removing blank pages from PlugY stashes
+[+] rune reservation when upgrading runes
+[+] Golden Bird quest completion status
+[+] weapon damage display
+[+] Strength/Dexterity item requirments display
+[+] Ear info display
+[+] cyclic item navigation with arrows
+[+] Replenish/Drain Life property displays life per second
+[+] sending OS info to MXL server (thanks aahz). And no, I'm not stealing your passwords and credit card numbers.
+[f] final friggin' MO removal fix
+[f] items viewer window has correct height when item management section is folded
+[f] Ear doesn't crash the app
+[f] silently setting correct clvl instead of complaining when clvl in stats doesn't equal 'main' clvl
+[f] focus stays on the page spinbox in items viewer after entering page manually
+[f] custom set item image display
+[f] all jewels display correct image
+[f] Magic Rune displays its properties correctly
+[f] no charms think that they have MOs
+[f] items window appears correctly on top of main window in Mac OS X
+[f] file/product version appear in the properties of Windows .exe
+[m] life/mana/stamina table cells have gray background
+[m] Find dialog's autocomplete honors case-sensitivity option
+[m] both columns in find results occupy equal amount of space when resizing
+[m] messagebox warning about color in name has a checkbox to not show the warning again
+[m] update check uses MXL server first (thanks aahz)
+[m] Help menu has 'Search' item on Mac OS X
+[/list]
 [i]v0.3.1 (16.12.2012)[/i]
-[list]
-[+] deactivating Halls of Pain WP on Destruction
+[list][+] deactivating Halls of Pain WP on Destruction
 [+] monitoring for externally changed files
 [+] displaying which backups were created on successful character save
 [f] file associations in Windows 8 (just showing native dialog)
@@ -88,14 +125,14 @@ I hope I provided enough anti-hack protection for an average user. If you manage
 [f] fixed a crash when deleting the only item in a storage
 [m] modified Edit menu
 [m] reworked Disenchant Preview dialog: added more columns, added ability to sort and filter the table, greatly increased its performance, fixed checkboxes on Mac OS X
-[m] when deleting an item default button in the confirmation dialog is Yes[/list]
+[m] when deleting an item default button in the confirmation dialog is Yes
+[/list]
 [i]v0.3.0.1 (02.09.2012)[/i]
-[list]
-[f] fixed displaying of elemental min/max damage
-[f] fixed one gamebreaking bug that could let you cheat[/list]
+[list][f] fixed displaying of elemental min/max damage
+[f] fixed one gamebreaking bug that could let you cheat
+[/list]
 [i]v0.3 (01.09.2012)[/i]
-[list]
-[+] Ultimative v5+ support
+[list][+] Ultimative v5+ support
 [+] mass disenchant of uniques/sets with preview (you can select multiple items via Ctrl/Command and Shift and change their checked state via context menu or by pressing spacebar)
 [+] mass upgrade of gems/runes
 [+] rune downgrade (via context menu)
@@ -108,30 +145,31 @@ I hope I provided enough anti-hack protection for an average user. If you manage
 [+] multiple backups (see Options)
 [+] now application doesn't load last character if mod data has changed between launches
 [f] finally fixed loading items that have item header inside item data
+[img]http://troll-face.ru/static/mememaker/484-dicaprio-inception.jpg[/img]
 [f] correctly (un)checking of 'activate wapoints' menu command and keeping it synced with the corresponding checkbox in main window
 [f] some sacred unique hammers and belts can now be disenchanted in Ultimative
 [f] fixed merc experience display when switching characters on Mac OS X;
 [m] added maximize/minimize buttons to items window
-[m] all item images have transparent background now[/list]
+[m] all item images have transparent background now
+[/list]
 [i]v0.2.2.1 (09.06.2012)[/i]
-[list]
-[+] display completion status of skill/stat quests
+[list][+] display completion status of skill/stat quests
 [+] display experience in progress bar for character and mercenary (on Mac OS X amount of experience is displayed in status bar when you hover the mouse on a progress bar)
 [+] update checker
 [f] completely fixed skillplan links
-[f] correctly disabling convert to SC menu action after unloading HC character[/list]
+[f] correctly disabling convert to SC menu action after unloading HC character
+[/list]
 [i]v0.2.2 (27.05.2012)[/i]
-[list]
-[+] remove specific mystic orbs
+[list][+] remove specific mystic orbs
 [+] Ultimative support
 [+] Ultimative: resurrecting HC character automatically converts him to SC
 [f] inserted runes are displayed for all items, not just for RW
 [f] deleting items from a plugy stash correctly saves the stash
 [f] app window no longer stays 'modified' if failed to load a character
-[f] skillplan now correctly sets bonuses for generated links[/list]
+[f] skillplan now correctly sets bonuses for generated links
+[/list]
 [i]v0.2.1 (29.03.2012)[/i]
-[list]
-[+] links for Skillpoint Planner
+[list][+] links for Skillpoint Planner
 [+] .d2s file association
 [+] recent files in Windows 7 taskbar / Mac OS X dock icon
 [+] drag'n'drop .d2s files on the application window, application shortcut and on the Windows 7 taskbar / Mac OS X dock icon (Windows 7 note: you can drop files on the taskbar only if application is pinned there or there's a shortcut on the desktop)
@@ -142,10 +180,10 @@ I hope I provided enough anti-hack protection for an average user. If you manage
 [+] display location of corrupted items
 [f] characters with unidentified items are saved correctly now
 [f] correct display of colored names on Mac OS X
-[m] moved recent files to a separate sub-menu in File[/list]
+[m] moved recent files to a separate sub-menu in File
+[/list]
 [i]v0.2.0.1 (24.02.2012)[/i]
-[list]
-[+] display belt items in the gear tab
+[list][+] display belt items in the gear tab
 [f] now items in inventory, cube and non-plugy stash can actually be disenchanted
 [f] plugy navigation sub-menu is correctly disabled after items window is closed
 [f] gear tab has correct number of columns
@@ -153,10 +191,10 @@ I hope I provided enough anti-hack protection for an average user. If you manage
 [m] all item actions in context menu are mapped to shortcuts
 [m] grid color changed to gray;
 [m] removed extra space between grid and plugy navigation
-[-] removed duper message because it's impossible to determine if a jewel was duped legitly (via recipe)[/list]
+[-] removed duper message because it's impossible to determine if a jewel was duped legitly (via recipe)
+[/list]
 [i]v0.2 (22.02.2012)[/i]
-[list]
-[+] view items on character, in inventory, Cube, stash and PlugY stashes
+[list][+] view items on character, in inventory, Cube, stash and PlugY stashes
 [+] in-game-like PlugY navigation (but you can also enter number of desired page directly)
 [+] shared gold display (in status tip for stash gold, displayed if > 0)
 [+] almost complete item description (str/dex requirements, attack speed and affixes are missing)
@@ -173,10 +211,10 @@ I hope I provided enough anti-hack protection for an average user. If you manage
 [f] fixed the program calling you 1337 hacker if you didn't talk to Atma after killing Radament
 [f] fixed the program calling you 1337 hacker if you ate 3 Signets of Skill and clicked on one more (v0.1 said that you ate 500 Signets of Skill)
 [f] added a warning when using colors in character name
-[f] fixed ugly stats table size[/list]
+[f] fixed ugly stats table size
+[/list]
 [i]v0.1 (01.08.2011)[/i]
-[list]
-[+] skills and stats respec
+[list][+] skills and stats respec
 [+] waypoint activation
 [+] renaming with colors
 [+] downleveling
@@ -184,43 +222,28 @@ I hope I provided enough anti-hack protection for an average user. If you manage
 [+] resurrect HC character
 [+] change mercenary name
 [+] [url=http://modsbylaz.14.forumer.com/viewtopic.php?t=22756]Median Hardened[/url] support
-[+] experimental: change mercenary type (seems to be not quite stable)[/list]
-
-[b]TODO next version[/b]:
-[list]
+[+] experimental: change mercenary type (seems to be not quite stable)
+[/list]
+[b]TODO[/b]:
+[list][*]display skill tree
+[*]skills allocation
+[*]show UMO properties
+[*]try unMO UMOs
 [*]export item to bbcode/html
 [*]generate some bbcode/html report about character and/or plugy stashes contents
 [*]moving items around
 [*]creation of plugy stashes
-[/list]
-[b]TODO future versions[/b]:
-[list]
-[*]sort stashes
-[*]affix rlvl (and maybe names — then modify help text) support
+[*]affix rlvl and names
 [*]nice display of property 'Adds x-y ... damage'
 [*]unsocket items
-[*]show UMO properties
-[*]try unMO UMOs
 [*]calculate correct str/dex bonus based on character stats
 [*]display actual stat values
-[*]display skill tree
-[*]skills allocation
-[*]item requirements
-[*]http://modsbylaz.14.forumer.com/viewtopic.php?p=424505#424505
 [/list]
 [b]Credits[/b]:
-[list]
-[*]BrotherLaz for this awesome mod
-[*]MarcoNecroX for a hot extension of Median XL called Ultimative
-[*]grig for the Perl source of Median XL Online Tools and tips
-[*]Phrozen Keep File Guides for tons of useful information on txt sources
-[*]FixeR, Zelgadiss, moonra, Vilius, Delegus, aahz and HerrNieschnell for intensive testing and tips on GUI & functionality
+[list][*][i]BrotherLaz[/i] for this awesome mod
+[*][i]MarcoNecroX[/i] for a hot extension of Median XL called Ultimative
+[*][i]grig[/i] for the Perl source of Median XL Online Tools and tips
+[*][i][url=http://phrozenkeep.hugelaser.com/index.php?ind=reviews&op=section_view&idev=4]Phrozen Keep File Guides[/url][/i] for tons of useful information on txt sources
+[*][i]aahz[/i] for providing space on MXL server
+[*][i]community members[/i] (find full list in the app) for intensive testing and tips on GUI & functionality
 [/list]
-
-Q: I can't unrar the distributed archive without errors :(
-A: Use 7zip.
-
-Q: I don't understand how to copy mod data on Mac OS X!
-A: I've posted detailed instructions [url=http://modsbylaz.14.forumer.com/viewtopic.php?p=426604#426604]here[/url]. If you still don't understand what to do or you're lazy to move files by hand, then open Terminal, cd to where you unpacked mod data (this folder should contain unpacked 'resources' folder) and use the following shell script:
-[code]APP_PATH = "/Applications/MedianXLOfflineTools.app" # place the actual path inside quotes, it's just an example
-cp -R resources/data/* "${APP_PATH}/Contents/resources/data"[/code]

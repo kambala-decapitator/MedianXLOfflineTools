@@ -1,4 +1,5 @@
 future versions:
+- fix bug with russian characters in path on Mac OS X (at least appears in release mode)
 - show UMO properties
 - try unMO UMOs
 - calculate correct str/dex bonus based on character stats

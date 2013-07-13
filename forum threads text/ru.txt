@@ -1,71 +1,105 @@
 [B]Тема на официальном форуме Медиана[/B]: [url]http://www.medianxl.com/t83-median-xl-offline-tools[/url]
 
-Как можно догадаться из названия, это практически полный оффлайн аналог grig'овских [url=http://grig.vlexofree.com/]MXL Online Tools[/url] (они расписаны в теме FAQ), но с некоторыми дополнениями.
+Как можно догадаться из названия, это практически полный оффлайн аналог grig'овских [url=http://grig.vlexofree.com/]MXL Online Tools[/url] (они расписаны в [url=http://worldofplayers.ru/threads/33303/]теме ЧаВо[/url]), но со многими дополнениями.
 
-Приложение должно грузить персонажа из любой версии Median XL и успешно выполнять над ним базовые операции типа сброса атрибутов/навыков. Обработка предметов полагается на исходники мода, а потому может быть несовместима с персонажем из другой версии. Эти данные не зашиты в программу, потому когда выйдет новая версия мода, программу не нужно перекомпилировать — обычно достаточно просто заменить файлы в 'resources/data' новыми, которые я выложу. Текущая поддерживаемая версия Median XL — 2012 v005, первая — Ω (Омега) v003.
+Приложение должно грузить персонажа из любой версии Median XL и успешно выполнять над ним базовые операции типа сброса атрибутов/навыков. Обработка предметов полагается на исходники мода, а потому может быть несовместима с персонажем из другой версии. Эти данные не зашиты в программу, потому когда выйдет новая версия мода, программу не нужно перекомпилировать — обычно достаточно просто заменить файлы в 'resources/data' новыми, которые я выложу. Текущие поддерживаемые версии:
+[list]
+[*]Median XL 2012 v005 (более ранние версии тоже могут работать, но я этого не гарантирую)
+[*]Ultimative v7 (персонажи из v5+ могут быть совместимыми)
+[*]Kehjan Labyrinth + Tathamet vs Anu [Лабиринт Кейджан + Тафамет против Ану]
+[*]Hardened
+[/list]
 
-Приложение написано на C++ с использованием библиотеки Qt (версии 4.8.4 на данный момент), так что можете даже не пытаться дотнетрефлекторнуть исходный код (а он не будет опубликован по очевидным причинам). В приложении есть русская и английская локализации. А если вам хочется сделать перевод на какой-то другой язык (или сгенерировать данные предметов для другой версии мода), то качайте инструменты для перевода из раздела загрузок.
+В приложении есть русская и английская локализации. А если вам хочется сделать перевод на какой-то другой язык (или сгенерировать данные предметов для другой версии мода), то качайте инструменты для перевода из раздела загрузок.
+
+Приложение написано на C++ с использованием [url=http://qt-project.org/]фреймворка Qt[/url] (версии 4.8.5 на данный момент), так что можете даже не пытаться дотнетрефлекторнуть исходный код (а он не будет опубликован по очевидным причинам).
 
 Надеюсь я создал достаточную защиту от хаков для среднестатистического юзера. Но если же вам всё-таки удастся хакнуть персонажа и сохранить его через эту программу, пожалуйста сообщите мне об этом, чтоб я мог закрыть эту дыру :)
 
-[b]Текущие возможности[/b]:
-[LIST]
-[*]сброс навыков и перераспределение атрибутов
-[*]активация телепортов
-[*]переименование
-[*]понижение уровня
-[*]преобразование хардкорного (смертного) персонажа в обычного
-[*]возрождение хардкорного персонажа (со штрафами)
-[*]изменение имени наёмника
-[*]поддержка Median Hardened
-[*]просмотр предметов: одетых на персонажа/наёмника/труп, в поясе, инвентаре, Кубе, сундуке и сундуках PlugY
-[*]PlugY навигация как в игре (но также можно вводить нужную страницу)
-[*]отображение общего золота (в подсказке для золота в сундуке, отображается только если оно там есть)
-[*]практически полное описание предметов (пока что нету требований силы/ловкости, скорости атаки и аффиксов)
-[*]раздельное отображение свойств предмета, свойств РС, вставленных рун/драгоценных камней/самоцветов и мистических сфер
-[*]поиск предметов
-[*]восстановление Куба
-[*]расщепление выбранного предмета на Тайные Осколки или Печать Обучения (но нельзя расщеплять надетые вещи)
-[*]удаление всех мистических сфер из выбранного предмета (уникальные мистические сферы не поддерживаются)
-[*]удаление выбранного предмета
-[*]автозагрузка последнего персонажа
-[*]отображение выполненых испытаний на классовом талисмане, улучшен ли предмет переносной святыней и смешан ли талисман с трофеем
-[*]ссылки для [URL="http://forum.worldofplayers.ru/showthread.php?t=33660"]Планировщика Навыков[/URL]
-[*]ассоциация с .d2s файлами
-[*]последние файлы в панели задач Windows 7 / иконке в доке Mac OS X
-[*]drag'n'drop .d2s файлов на окно программы, ярлык и панель задач Windows 7 / иконку в доке Mac OS X (замечание для Windows 7: бросать файлы на панель задач можно только если приложение закреплено в ней или у вас есть ярлык на рабочем столе)
-[*]предложение сохранения
-[*]отображение свойств неидентифицированых предметов
-[*]отображение местоположения испорченых предметов
-[*]поддержка Лабиринт Кейджан + Тафамет против Ану
-[*]поддержка Median XL Ultimative (версий 4 и 5+)
-[*]отображение завершённости квестов на навыки/атрибуты
-[*]массовое расщепление уников/комплектов с предпросмотром (можно выбирать много предметов с помощью Ctrl/Command и Shift, менять значения чекбоксов с помощью контекстного меню или нажатия на пробел, а также сортировать и фильтровать таблицу)
-[*]массовое улучшение самоцветов/рун
-[*]понижение рун (через контекстное меню)
-[*]«съедание» печатей обучения через контекстное меню и с помощью горячей клавиши
-[*]деактивация телепорта Залы Боли на Разрушении
-[/LIST]
+[b]Основные возможности[/b]:
+[list]
+[*]Персонаж:
+   [list]
+   [*]информация включая некоторые скрытые параметры
+   [*]сброс навыков и перераспределение атрибутов
+   [*]переименование
+   [*]понижение уровня
+   [*]активация телепортов
+   [*]возрождение и преобразование хардкорного (смертного) персонажа
+   [*]ссылки для [URL="http://worldofplayers.ru/threads/33660/"]Планировщика Навыков[/URL]
+   [/list]
+[*]Предметы:
+   [list]
+   [*]просмотр предметов персонажа и в сундуках PlugY и их свойств (включая скрытые)
+   [*]поиск предметов
+   [*]сортировка сундуков PlugY
+   [*]массовое расщепление уников/комплектов с предпросмотром
+   [*]массовое улучшение самоцветов/рун
+   [*]восстановление Куба
+   [/list]
+[*]Выбранный предмет (контекстное меню):
+   [list]
+   [*]расщепление выбранного предмета на Тайные Осколки или Печать Обучения
+   [*]«поедание» Печатей Обучения
+   [*]удаление всех Мистических Сфер (Уникальные Мистические Сферы пока не поддерживаются)
+   [*]понижение рун
+   [*]удаление
+   [/list]
+[*]Функции ОС:
+   [list]
+   [*]ассоциация с .d2s файлами
+   [*]последние файлы в панели задач Windows 7 / иконке в доке Mac OS X
+   [*]drag'n'drop .d2s файлов на окно программы, ярлык и панель задач Windows 7 / иконку в доке Mac OS X
+   [*]проверка обновлений
+   [*]запуск единственной копии
+   [/list]
+[*]и многие другие ;)
+[/list]
+
+[size=4][color=#6666ff]ПРЕДУПРЕЖДЕНИЕ: по умолчанию вы можете открывать только персонажей Ultimative v7. Если вы хотите открывать не-Ultimative персонажей, пожалуйста перейдите в секцию загрузок [b]Данные модов[/b].[/color][/size]
+
+В русские данные мода Ultimative v7 закрался небольшой баг в виде отсутствия перевода вставленных Ultimative-рун, который был обнаружен только после релиза. Если для вас это очень критично, скачайте исправленные данные из секции загрузок [b]Данные модов[/b].
 
 [b]Загрузки[/b]:
-[list][*][i][B]Windows[/B][/i] (XP SP 2 и позже; требуется vcredist2012): [url]http://www.mediafire.com/download.php?d1jf4hzgxgwlh33[/url] (если вам лень нагуглить vcredist2010, то просто положите [URL="http://www.mediafire.com/download.php?4uv0lsfa1pd5pi4"]эти дллки[/URL] возле MedianXLOfflineTools.exe)
-[*][i][B]Mac OS X[/B][/i] (10.5 и позже; универсальное приложение): [url]http://www.mediafire.com/download.php?2hds8hr8hvvjrur[/url] (если вы не можете распаковать архив, то используйте [URL="http://www.mediafire.com/?nyaswdajy8idhou"]вот этот[/URL])
-[*][I][B]Инструменты для перевода[/B][/I] (следуйте инструкциям внутри архива, правда, они на английском): [url]http://www.mediafire.com/?4qm9t8ba9w35k9i[/url]
-[*]-----
-[*][B][I]Данные мода[/I][/B] (Windows — просто распаковать в папку с экзэшником; Mac OS X — распаковать куда угодно и переместить [B]содержимое папки 'resources/data', а не саму папку 'data'[/B], в 'MedianXLOfflineTools.app/Contents/Resources/data'):
-[LIST]
-[*][url=http://www.mediafire.com/download.php?t006u85c82wol85]Ω (Омега) 003[/url]
-[*][url=http://www.mediafire.com/download.php?a5bma6lcza6u7ut]2012 005 + Лабиринт Кейджан + Тафамет против Ану[/url] (включены в текущий релиз)
-[*][url=http://www.mediafire.com/download.php?y2gxeaizzud38ze]Ultimative 4[/url]
-[*][url=http://www.mediafire.com/?25h8ikeb994i23j]Ultimative 7[/url] (можно использовать с версией 5 и выше)
-[/LIST][/list]
+[list]
+[*][b]Приложение[/b]:
+   [list]
+   [*][i]Windows[/i] (XP SP 2 и позже): http://www.mediafire.com/download/r2uh8q8z9sev6fu/MedianXLOfflineTools_0.4.7z
+   [*][i]Mac OS X[/i] (10.5 и позже, универсальное приложение): http://www.mediafire.com/download/gpayc84azcp9x1x/MedianXLOfflineTools_mac_0.4.zip
+   [/list]
+[*][b]Данные модов[/b] (инструкции по установке находятся ниже в Mini-FAQ; вообще вам не нужно загружать эти архивы, потому что они уже включены в архив приложения):
+   [list]
+   [*][i]2012 v005 / Лабиринт Кейджан + Тафамет против Ану / Hardened:[/i] http://www.mediafire.com/download/4vw6cwztt1zuwlv/2012-005%2Bkehjan%2Btathamet.7z
+   [*][i]Ultimative v7:[/i] http://www.mediafire.com/download/ob5x7sss8jdu9b8/ultimative7.7z
+   [/list]
+[*][b]Инструменты для перевода[/b] (следуйте инструкциям внутри архива, правда, они на английском): http://www.mediafire.com/download/9r21w2nz8r64obq/translation_2012-005_0.4.7z
+[/list]
 
+[b]Mini-FAQ[/b]:
+Q: Я не могу распаковать архив без ошибок :(
+A: Используй 7zip, Люк.
+
+Q: Как установить данные мода?
+A: Перезапустите приложение после выполнения нижеуказанных шагов если оно запущено.
+[list]
+[*]Windows: просто распакуйте архив в папку с экзэшником с заменой
+[*]Mac OS X: распакуйте архив куда-нибудь и...
+   [list]
+   [*]краткий ответ: переместите [b]содержимое папки 'resources/data', а не саму папку 'data'[/b], в 'MedianXLOfflineTools.app/Contents/Resources/data'
+   [*]длинный 'ручной' ответ: откройте в распакованную папку, внутри откройте папку 'resources', Выбрать всё (Cmd+A), Копировать (Cmd+C), найдите MedianXLOfflineTools.app, нажмите на него правой кнопкой (или Контрол и левой), выберите «Показать содержимое пакета», откройте папку Contents/Resources/data, Вставить (Cmd+V) с заменой
+   [*]длинный 'терминальный' ответ: откройте Терминал, cd в папку, в которую вы распаковали данные мода (в ней должна находиться папка 'resources') и используйте следующий скрипт:
+   [code]APP_PATH = "/Applications/MedianXLOfflineTools.app" # поместите в кавычки реальный путь, это лишь пример
+cp -R resources/data/* "${APP_PATH}/Contents/resources/data"[/code]
+   [/list]
+[/list]
 
 [B]Скриншоты[/B] (кликните для полноразмерного просмотра):
-[URL=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=main2_ru.png][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_main2_ru.png[/IMG][/URL][URL=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=main_ru_mac.png][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_main_ru_mac.png[/IMG][/URL]
-[URL=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=items1_ru.png][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_items1_ru.png[/IMG][/URL][URL=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=items_plugy1_ru.png][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_items_plugy1_ru.png[/IMG][/URL]
-[URL=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=props_all_ru.png][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_props_all_ru.png[/img][/URL][URL=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=props_item_ru.png][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_props_item_ru.png[/img][/URL][URL=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=props_rw_ru.png][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_props_rw_ru.png[/img][/URL][URL=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=props_sockets_ru.png][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_props_sockets_ru.png[/img][/URL]
-[URL=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=classcharm_ru.png][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_classcharm_ru.png[/img][/URL][URL=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=item_menu1_ru.png][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_item_menu1_ru.png[/IMG][/URL][URL=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=removeMO_ru.png][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_removeMO_ru.png[/IMG][/URL]
+[URL=http://s1125.photobucket.com/user/kambala_decapitator/media/main3_ru.png.html][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/th_main3_ru.png[/IMG][/URL][URL=http://s1125.photobucket.com/user/kambala_decapitator/media/main_ru_mac1.png.html][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/th_main_ru_mac1.png[/IMG][/URL]
+[URL=http://s1125.photobucket.com/user/kambala_decapitator/media/items2_ru.png.html][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/th_items2_ru.png[/IMG][/URL][URL=http://s1125.photobucket.com/user/kambala_decapitator/media/items_plugy2_ru.png.html][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/th_items_plugy2_ru.png[/IMG][/URL]
+[URL=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=classcharm_ru.png][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_classcharm_ru.png[/img][/URL][URL=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=props_all_ru.png][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_props_all_ru.png[/img][/URL][URL=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=props_item_ru.png][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_props_item_ru.png[/img][/URL][URL=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=props_rw_ru.png][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_props_rw_ru.png[/img][/URL][URL=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=props_sockets_ru.png][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_props_sockets_ru.png[/img][/URL]
+[URL=http://s1125.photobucket.com/user/kambala_decapitator/media/downgrade_rune_ru.png.html][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/th_downgrade_rune_ru.png[/IMG][/URL][URL=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=item_menu1_ru.png][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_item_menu1_ru.png[/IMG][/URL][URL=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=removeMO_ru.png][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_removeMO_ru.png[/IMG][/URL][URL=http://s1125.photobucket.com/user/kambala_decapitator/media/eat_signet_ru.png.html][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/th_eat_signet_ru.png[/IMG][/URL]
+[URL=http://s1125.photobucket.com/user/kambala_decapitator/media/sort_ru.png.html][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/th_sort_ru.png[/IMG][/URL][URL=http://s1125.photobucket.com/user/kambala_decapitator/media/sort_help_ru.png.html][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/th_sort_help_ru.png[/IMG][/URL]
+[URL=http://s1125.photobucket.com/user/kambala_decapitator/media/disenchant_preview_ru.png.html][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/th_disenchant_preview_ru.png[/IMG][/URL]
 [URL=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=search_ru_.png][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_search_ru_.png[/IMG][/URL][URL=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=search_help_ru.png][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_search_help_ru.png[/img][/URL]
 [URL=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=skillplan1_ru.png][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_skillplan1_ru.png[/IMG][/URL]
 [URL=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=recent_win.png][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_recent_win.png[/IMG][/URL][URL=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=recent_mac.png][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_recent_mac.png[/IMG][/URL]
@@ -73,8 +107,40 @@
 
 [B]История версий:[/B]
 
+[I]v0.4 (13.07.2013)[/I]
+[list]
+[*][+] сортировка сундуков PlugY
+[*][+] добавление и удаление пустых страниц из сундуков PlugY
+[*][+] сохранение заданного количества рун при их улучшении
+[*][+] состояние квеста Золотая Птица
+[*][+] отображение урона оружия
+[*][+] отображение требований Силы/Ловкости предметов
+[*][+] отображение информации об Ухе
+[*][+] циклическая навигация стрелками по предметам
+[*][+] отображение жизни в секунду для свойства Восстановление Здоровья
+[*][+] отправка информации об ОС на сервер MXL. И нет, я не краду ваши пароли от вконтактика и номера кредиток.
+[*][ф] финальный долбанный фикс удаления МС
+[*][ф] окно отображения предметов имеет правильную высоту при сворачивании секции управления предметами
+[*][ф] Ухо не крашит приложение
+[*][ф] молча устанавливается правильный уровень персонажа вместо сообщения об ошибке когда уровень в статистиках не совпадает с «основным» уровнем
+[*][ф] после ввода страницы руками фокус остается на спинбоксе
+[*][ф] отображение нестандартных изображений комплектов
+[*][ф] все драгоценные камни показывают правильное изображение
+[*][ф] Руна Магии корректно отображает свои свойства
+[*][ф] больше ни один талисман не думает, что у него есть МС
+[*][ф] окно предметов корректно отображается поверх основного окна на Mac OS X
+[*][ф] версия файла/продукта появляется в свойствах экзешника
+[*][и] ячейки таблицы жизни/маны/выносливости имеют серый фон
+[*][и] автодополнение диалога поиска учитывает опцию регистра
+[*][и] обе колонки в результатах поиска занимают поровну места при изменении размеров диалога
+[*][и] диалог предупреждения о цветном имени имеет «галочку» чтобы больше не показываться
+[*][и] проверка обновлений сперва выполняется через сервер MXL
+[*][и] в Mac OS X меню «Справка» имеет стандартный элемент поиска (но почему-то только с английской локализацией…)
+[/list]
+
 [I]v0.3.1 (16.12.2012)[/I]
-[LIST][*][+] деактивация телепорта Залы Боли на Разрушении
+[list]
+[*][+] деактивация телепорта Залы Боли на Разрушении
 [*][+] слежение за изменением открытых файлов извне
 [*][+] отображение созданых резервных копий при успешном сохранении персонажа
 [*][ф] файловые ассоциации в Windows 8 (просто показывается нативный диалог)
@@ -85,14 +151,16 @@
 [*][и] изменено меню Правка
 [*][и] полная переработка диалога массового расщепления: добавлено больше колонок, добавлена возможность сортировать и фильтровать таблицу, сильно увеличена его скорость появления и работы, исправлены чекбоксы в Mac OS X
 [*][и] при удалении предмета кнопкой по умолчанию в подтверждающем диалоге является «Да»
-[/LIST]
+[/list]
 
 [i]v0.3.0.1 (02.09.2012)[/i]
-[list][*][ф] исправлено отображение мин/макс элементального урона
+[list]
+[*][ф] исправлено отображение мин/макс элементального урона
 [*][ф] исправлен один читерный баг[/list]
 
 [i]v0.3 (01.09.2012)[/i]
-[list][*][+] поддержка Ultimative v5+
+[list]
+[*][+] поддержка Ultimative v5+
 [*][+] массовое расщепление уников/комплектов с предпросмотром (можно выбирать много предметов с помощью Ctrl/Command и Shift и менять значения чекбоксов с помощью контекстного меню или нажатия на пробел)
 [*][+] массовое улучшение самоцветов/рун
 [*][+] понижение рун (через контекстное меню)
@@ -104,7 +172,7 @@
 [*][+] использование стандартного пути сохранения персонажей в Windows если отсутствует последний сохранённый путь
 [*][+] множественные резервные копии (см. Настройки)
 [*][+] приложение больше не пытается загрузить последнего персонажа если данные мода изменились между запусками
-[*][ф] наконец-то исправлено чтение предмета при наличии заголовка предмета внутри данных предмета
+[*][ф] наконец-то исправлено чтение предмета при наличии заголовка предмета внутри данных предмета [img]http://troll-face.ru/static/mememaker/484-dicaprio-inception.jpg[/img]
 [*][ф] корректное изменение состояния чекбока «активировать телепорты» и синхронизация с соответствующим чекбоксом в главном окне
 [*][ф] некоторые священные уникальные молоты и пояса теперь можно расщеплять в Ultimative
 [*][ф] исправлено отображение опыта наёмника при переключении персонажей в Mac OS X;
@@ -113,7 +181,8 @@
 [/list]
 
 [i]v0.2.2.1 (09.06.2012)[/i]
-[list][*][+] отображение завершённости квестов на навыки/атрибуты
+[list]
+[*][+] отображение завершённости квестов на навыки/атрибуты
 [*][+] отображение опыта в виде прогресс бара для персонажа и наёмника (на Mac OS X количество опыта отображается в статусной строке при наведении мыши на прогресс бар)
 [*][+] проверка обновлений программы
 [*][ф] окончательное исправление ссылок планировщика навыков
@@ -121,7 +190,8 @@
 [/list]
 
 [i]v0.2.2 (27.05.2012)[/i]
-[list][*][+] удаление выбранных мистических сфер
+[list]
+[*][+] удаление выбранных мистических сфер
 [*][+] поддержка Ultimative
 [*][+] Ultimative: возрождение смертного персонажа автоматически делает его не смертным
 [*][ф] вставленные руны отображаются для всех предметов, а не только для РС
@@ -131,7 +201,8 @@
 [/list]
 
 [I]v0.2.1 (29.03.2012)[/I]
-[LIST][*][+] ссылки для [URL="http://forum.worldofplayers.ru/showthread.php?t=33660"]Планировщика Навыков[/URL]
+[list]
+[*][+] ссылки для [URL="http://forum.worldofplayers.ru/showthread.php?t=33660"]Планировщика Навыков[/URL]
 [*][+] ассоциация с .d2s файлами
 [*][+] последние файлы в панели задач Windows 7 / иконке в доке Mac OS X
 [*][+] drag'n'drop .d2s файлов на окно программы, ярлык и панель задач Windows 7 / иконку в доке Mac OS X (замечание для Windows 7: бросать файлы на панель задач можно только если приложение закреплено в ней или у вас есть ярлык на рабочем столе)
@@ -143,10 +214,11 @@
 [*][ф] персонажи с неидентифицированными вещами теперь сохраняются корректно
 [*][ф] исправлено отображение цветных имён в Mac OS X
 [*][и] последние файлы перемещены в отдельное подменю в Файле
-[/LIST]
+[/list]
 
 [I]v0.2.0.1 (24.02.2012)[/I]
-[LIST][*][+] просмотр предметов в поясе на вкладке экипировки
+[list]
+[*][+] просмотр предметов в поясе на вкладке экипировки
 [*][ф] предметы в инвентаре, кубе и сундуке персонажа теперь действительно расщепляются
 [*][ф] подменю навигации в сундуках PlugY корректно деактивируется при закрытии окна предметов
 [*][ф] убраны лишние столбцы во вкладке экипировки
@@ -155,10 +227,11 @@
 [*][и] цвет сетки изменён с зелёного на серый
 [*][и] убрано лишнее пространство между сеткой и навигацией в сундуках PlugY
 [*][-] убрано сообщение о дюперстве из-за невозможности узнать был ли драгоценный камень честно клонирован (рецептом)
-[/LIST]
+[/list]
 
 [I]v0.2 (22.02.2012)[/I]
-[LIST][*][+] просмотр предметов: одетых, в инвентаре, Кубе, сундуке и сундуках PlugY
+[list]
+[*][+] просмотр предметов: одетых, в инвентаре, Кубе, сундуке и сундуках PlugY
 [*][+] PlugY навигация как в игре (но также можно вводить нужную страницу)
 [*][+] отображение общего золота (в подсказке для золота в сундуке, отображается только если оно там есть)
 [*][+] практически полное описание предметов (пока что нету требований силы/ловкости, скорости атаки и аффиксов)
@@ -175,10 +248,10 @@
 [*][ф] пользователя больше не обзывают кулхацкером если он съел 3 Печати Навыка и попытался съесть ещё одну (в 0.1 отображалось 500 съеденых Печатей)
 [*][ф] добавлено предупреждение при использовании цвета в имени
 [*][ф] исправлен неправильный размер таблицы с жизнью/маной/ловкостью
-[/LIST]
+[/list]
 
 [I]v0.1 (01.08.2011)[/I]
-[LIST]
+[list]
 [*][+] сброс навыков и перераспределение атрибутов
 [*][+] активация телепортов
 [*][+] переименование
@@ -188,11 +261,13 @@
 [*][+] изменение имени наёмника
 [*][+] поддержка [url=http://modsbylaz.14.forumer.com/viewtopic.php?t=22756]Median Hardened[/url]
 [*][э] изменение типа наёмника (не совсем стабильно)
-[/LIST]
+[/list]
 
 [b]Благодарности[/b]:
-[list][*]BrotherLaz'у за этот шикарный мод
-[*]MarcoNecroX'у за клёвое расширение Median XL под названием Ultimative
-[*]grig'у за Перловские исходники его Median XL Online Tools и помощь
-[*][url=http://phrozenkeep.hugelaser.com/index.php?ind=reviews&op=section_view&idev=4]Phrozen Keep Гайдам[/url] за кучу полезной информации по текстовикам
-[*]FixeR'у, Zelgadiss'у, moonra, Vilius'у, Delegus'у, aahz и HerrNieschnell'у за интенсивное тестирование и советы по ГУИ и функциональности[/list]
+[list]
+[*][i]BrotherLaz'у[/i] за этот шикарный мод
+[*][i]MarcoNecroX'у[/i] за клёвое расширение Median XL под названием Ultimative
+[*][i]grig'у[/i] за Перловские исходники его Median XL Online Tools и помощь
+[*][i][url=http://phrozenkeep.hugelaser.com/index.php?ind=reviews&op=section_view&idev=4]Phrozen Keep Гайдам[/url][/i] за кучу полезной информации по текстовикам
+[*][i]aahz[/i] за предоставление места на сервере MXL
+[*][i]участникам обоих форумов[/i] (полный список указан в приложении) за интенсивное тестирование и советы по ГУИ и функциональности[/list]
