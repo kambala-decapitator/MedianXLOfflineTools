@@ -28,7 +28,7 @@ StashSortingOptionsDialog::StashSortingOptionsDialog(quint32 lastPage, QWidget *
     ui->lastPageSpinBox->setMaximum(lastPage);
     ui->lastPageSpinBox->setValue(lastPage);
 
-    QStringList qualitiesList = QStringList() << tr("Misc items") << tr("Low Quality") << tr("Normal") << tr("Superior") << tr("RW") << tr("Magic") << tr("Honorific") << tr("Rare") << tr("Crafted") << tr("Unique") << tr("Set");
+    QStringList qualitiesList = QStringList() << tr("Misc") << tr("Quest") << tr("Low Quality") << tr("Normal") << tr("Superior") << tr("RW") << tr("Magic") << tr("Honorific") << tr("Rare") << tr("Crafted") << tr("Unique") << tr("Set");
     ui->ascQualityRadioButton->setToolTip(qualitiesList.join(",\n"));
 
     std::reverse(qualitiesList.begin(), qualitiesList.end());
@@ -42,11 +42,12 @@ StashSortingOptionsDialog::StashSortingOptionsDialog(quint32 lastPage, QWidget *
 
     QString gearFileName("<b>gear.txt</b>"), miscFileName("<b>misc.txt</b>"), setsFileName("<b>sets.txt</b>");
     HelpWindowDisplayManager *helpDislplayManager = new HelpWindowDisplayManager(this, tr("Sort help"),
+        // last param is %17
         tr(
         "<h2>Item sort order</h2>"
-        "<p>The order is mostly softcoded and can be modified with your favorite text editor. Go to <a href=\"%1\">resources/data/sorting</a> folder and edit any of the 3 files except 'thng_list.txt' (it's just a reference):"
+        "<p>The order is mostly softcoded and can be modified with your favorite text editor. Go to %1 folder and edit any of the 3 files except '%17' (it's just a reference):"
         "<ul><li>%14: non-set weapons, armor, arrows and jewelry;</li><li>%15: everything else;</li><li>%16: sets, obviously.</li></ul>"
-        "You can change order of the item types, remove item types or even add new ones. All other items not listed in the above files are stored in the very end of a stash.</p>"
+        "You can change order of the item types, remove item types or even add new ones. All other items not listed in the above files are stored in the very end of the selected page range.</p>"
         "<h2>Options</h2>"
         // item quality ordering
         "<h3><i>%2</i></h3>"
@@ -69,14 +70,14 @@ StashSortingOptionsDialog::StashSortingOptionsDialog(quint32 lastPage, QWidget *
         "<h3><i>%6</i></h3>"
         "<ul>"
           "<li><i>%11:</i> applies only to item types in %14.</li>"
-          "<li><i>%12:</i> 'Cornerstone of the World' is a unique jewel that grants any non-passive character skill.</li>"
+          "<li><i>%12:</i> 'Cornerstone of the World' is a unique jewel that grants any non-passive character skill as oskill.</li>"
           "<li><i>%13:</i> e.g., Shrines in Ultimative, Charms, Gems, Runes, etc.</li>"
         "</ul>",
-        "first param is path to sort folder, 14-16 are file names, others are titles of the UI components").arg(QUrl::fromLocalFile(ResourcePathManager::dataPathForFileName("sorting/")).toString())
+        "first param is link to sort folder, 14-17 are file names, others are titles of the UI components").arg(QString("<a href=\"%1\">resources/data/sorting</a>").arg(QUrl::fromLocalFile(ResourcePathManager::dataPathForFileName("sorting/")).toString()))
         .arg(ui->itemQualityOrderingGroupBox->title(), ui->pageRangeGroupBox->title(), ui->blankPagesGroupBox->title().remove(':'), ui->separationBox->title(), ui->newRowGroupBox->title().remove(':'))
         .arg(ui->eachTypeFromNewPageCheckBox->text(), ui->similarMiscItemsOnOnePageCheckBox->text(), ui->separateSacredCheckBox->text(), ui->separateEthCheckBox->text())
         .arg(ui->newRowTierCheckBox->text(), ui->newRowCotwCheckBox->text(), ui->newRowVisuallyDifferentMiscCheckBox->text())
-        .arg(gearFileName, miscFileName, setsFileName));
+        .arg(gearFileName, miscFileName, setsFileName, "thng_list.txt"));
     connect(ui->buttonBox, SIGNAL(helpRequested()), helpDislplayManager, SLOT(showHelp()));
 }
 
