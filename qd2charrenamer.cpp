@@ -2,6 +2,7 @@
 #include "ui_qd2charrenamer.h"
 #include "colorsmanager.hpp"
 #include "helpers.h"
+#include "messagecheckbox.h"
 
 #include <QMenu>
 
@@ -30,7 +31,7 @@ void QD2CharRenamer::updateNamePreviewLabel(QLabel *previewLabel, const QString 
 
 // ctor
 
-QD2CharRenamer::QD2CharRenamer(const QString &originalName, bool shouldWarn, QWidget *parent) : QDialog(parent), ui(new Ui::QD2CharRenamerClass), _originalCharName(originalName), _shouldWarn(shouldWarn),
+QD2CharRenamer::QD2CharRenamer(const QString &originalName, bool shouldWarn, QWidget *parent) : QDialog(parent), ui(new Ui::QD2CharRenamerClass), _originalCharName(originalName), _shouldWarnAboutColor(shouldWarn),
     colorNames(QStringList() << tr("white") << tr("red") << tr("green") << tr("blue") << tr("gold") << tr("dark gray") << tr("tan") << tr("orange") << tr("yellow") << "foo" << tr("violet"))
 {
     ui->setupUi(this);
@@ -91,8 +92,14 @@ void QD2CharRenamer::saveName()
                 break;
             }
         }
-        if (hasColor && _shouldWarn && QUESTION_BOX_YESNO(tr("Character with colored name can't join multiplayer games. Are you sure you want to continue?"), QMessageBox::Yes) == QMessageBox::No)
-            return;
+        if (hasColor && _shouldWarnAboutColor)
+        {
+            MessageCheckBox box(tr("Character with colored name can't join multiplayer games.\n\nAre you sure you want to continue?"), tr("Don't show this warning again"), this);
+            box.setChecked(true);
+            if (!box.exec())
+                return;
+            _shouldWarnAboutColor = !box.isChecked();
+        }
 
         _originalCharName = newName;
         accept();

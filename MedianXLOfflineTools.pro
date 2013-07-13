@@ -164,6 +164,8 @@ win32 {
     }
 
     isEmpty(IS_RELEASE_BUILD) {
+        DEFINES += _DEBUG
+
         OUT_FOLDER = debug
     }
     else {

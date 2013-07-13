@@ -19,7 +19,8 @@ public:
     QD2CharRenamer(const QString &originalName, bool shouldWarn, QWidget *parent = 0);
     virtual ~QD2CharRenamer();
 
-    QString name() const { return _originalCharName; }
+    QString name()              const { return _originalCharName; }
+    bool shouldWarnAboutColor() const { return _shouldWarnAboutColor; }
 
 private slots:
     void nameChanged(const QString &newName);
@@ -29,7 +30,7 @@ private slots:
 private:
     Ui::QD2CharRenamerClass *ui;
     QString _originalCharName;
-    bool _shouldWarn;
+    bool _shouldWarnAboutColor;
     const QStringList colorNames;
 
     void createColorMenu();

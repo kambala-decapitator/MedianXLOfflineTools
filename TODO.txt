@@ -1,6 +1,3 @@
-v0.4:
-- write sort help
-
 future versions:
 - show UMO properties
 - try unMO UMOs

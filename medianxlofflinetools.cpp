@@ -159,7 +159,7 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *pare
             {
                 MessageCheckBox box(tr("%1 is not associated with %2 files.\n\nDo you want to do it?").arg(qApp->applicationName(), kCharacterExtensionWithDot), ui->actionCheckFileAssociations->text(), this);
                 box.setChecked(true);
-                if (int result = box.exec())
+                if (box.exec())
                 {
                     FileAssociationManager::makeApplicationDefaultForExtension(kCharacterExtensionWithDot);
                     isDefault = true;
@@ -815,6 +815,8 @@ void MedianXLOfflineTools::rename()
         newName = renameWidget.name();
         QD2CharRenamer::updateNamePreviewLabel(ui->charNamePreviewLabel, newName);
         setModified(true);
+
+        ui->actionWarnWhenColoredName->setChecked(renameWidget.shouldWarnAboutColor());
     }
 }
 
