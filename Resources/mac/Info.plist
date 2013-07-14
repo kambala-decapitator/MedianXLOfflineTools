@@ -19,29 +19,29 @@
 			<true/>
 		</dict>
 	</array>
-	<key>CFBundleExecutable</key>
-	<string>@EXECUTABLE@</string>
-	<key>CFBundleGetInfoString</key>
-	<string>Copyright © kambala 2011-2013</string>
-	<key>CFBundleIconFile</key>
-	<string>@ICON@</string>
-	<key>CFBundleIdentifier</key>
-	<string>com.kambala.@EXECUTABLE@</string>
-	<key>CFBundleInfoDictionaryVersion</key>
-	<string>6.0</string>
 	<key>CFBundleName</key>
 	<string>Median XL Offline Tools</string>
-	<key>CFBundlePackageType</key>
-	<string>APPL</string>
+	<key>CFBundleExecutable</key>
+	<string>@EXECUTABLE@</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.kambala.@EXECUTABLE@</string>
+	<key>CFBundleIconFile</key>
+	<string>@ICON@</string>
 	<key>CFBundleShortVersionString</key>
 	<string>@APP_VERSION@</string>
-	<key>CFBundleSignature</key>
-	<string>????</string>
+	<key>CFBundleGetInfoString</key>
+	<string>@COPYRIGHT@</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>@COPYRIGHT@</string>
 	<key>CFBundleVersion</key>
-	<string>10</string>
+	<string>11</string>
 	<key>LSHasLocalizedDisplayName</key>
 	<false/>
-	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © kambala 2011-2013</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
 </dict>
 </plist>

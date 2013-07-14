@@ -27,7 +27,7 @@ CONFIG(release, debug|release): {
 # app version
 NVER1 = 0
 NVER2 = 4
-NVER3 = 0
+NVER3 = 1
 NVER4 = 0
 
       greaterThan(NVER4, 0): NVER_STRING_LAST = $$sprintf("%1.%2", $$NVER3, $$NVER4)
@@ -244,19 +244,27 @@ macx {
         QMAKE_MAC_SDK = $$MAC_SDK
     }
 
-    QMAKE_POST_LINK = sed -e \'s/@APP_VERSION@/$$VERSION/\' -i \'\' $$CONTENTS_PATH/$$INFO_PLIST_NAME;
+    COPYRIGHT = Copyright © kambala 2011-2013
+    INFO_PLIST_PATH = $$CONTENTS_PATH/$$INFO_PLIST_NAME
+    QMAKE_POST_LINK  = sed -e \'s/@APP_VERSION@/$$VERSION/\' -e \'s/@COPYRIGHT@/$$COPYRIGHT/\' -i \'\' $$INFO_PLIST_PATH;
+
+    PROJECT_DATA = resources/data
+    PROJECT_TR   = resources/translations
+    BUNDLE_DATA  = $$RESOURCES_PATH/data
+    BUNDLE_TR    = $$RESOURCES_PATH/translations
+
     isEmpty(IS_RELEASE_BUILD) {
         # create symlinks instead of copying in debug mode
-        QMAKE_POST_LINK += ! [ -L $$RESOURCES_PATH/data ]         && ln -s $$_PRO_FILE_PWD_/resources/data         $$RESOURCES_PATH/data;
-        QMAKE_POST_LINK += ! [ -L $$RESOURCES_PATH/translations ] && ln -s $$_PRO_FILE_PWD_/resources/translations $$RESOURCES_PATH/translations;
-        QMAKE_POST_LINK += [ $$RESOURCES_PATH/data ]; # cheat make to return success if both symlinks exist
+        QMAKE_POST_LINK += ! [ -L $$BUNDLE_DATA ] && ln -s $$_PRO_FILE_PWD_/$$PROJECT_DATA $$BUNDLE_DATA;
+        QMAKE_POST_LINK += ! [ -L $$BUNDLE_TR ]   && ln -s $$_PRO_FILE_PWD_/$$PROJECT_TR   $$BUNDLE_TR;
+        QMAKE_POST_LINK += [ $$BUNDLE_DATA ]; # cheat make to return success if both symlinks exist
     }
     else {
-        appresources.files += resources/data
-        appresources.files += resources/translations
+        appresources.files += $$PROJECT_DATA
+        appresources.files += $$PROJECT_TR
 
         # remove unused files
-        QMAKE_POST_LINK += rm -rf $$RESOURCES_PATH/data/items $$RESOURCES_PATH/translations/*.ts;
+        QMAKE_POST_LINK += rm -rf $$BUNDLE_DATA/items $$BUNDLE_TR/*.ts;
     }
 
     appresources.files += resources/mac/locversion.plist

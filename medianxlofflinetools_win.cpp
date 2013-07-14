@@ -218,11 +218,12 @@ QByteArray MedianXLOfflineTools::getOsInfo()
             os << "Windows NEW: minor " << osvi.dwMinorVersion << ", product " << osvi.wProductType;
             break;
         }
-        os << " ";
 
         DWORD dwType;
         PGPI pGPI = (PGPI)GetProcAddress(kernel32Handle, "GetProductInfo");
         pGPI(osvi.dwMajorVersion, osvi.dwMinorVersion, 0, 0, &dwType);
+        if (dwType != PRODUCT_CORE)
+            os << " ";
         switch(dwType)
         {
         case PRODUCT_ULTIMATE:
@@ -287,6 +288,8 @@ QByteArray MedianXLOfflineTools::getOsInfo()
             break;
         case PRODUCT_PROFESSIONAL_WMC:
             os << "Professional with Media Center";
+            break;
+        case PRODUCT_CORE: // simple Windows 8, don't add anything
             break;
         case PRODUCT_CORE_N: // Windows 8 N
             os << "N";
