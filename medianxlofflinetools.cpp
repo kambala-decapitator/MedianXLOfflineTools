@@ -121,10 +121,8 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *pare
     _showDisenchantPreviewGroup->addAction(ui->actionPreviewDisenchantForSinglePage);
     _showDisenchantPreviewGroup->addAction(ui->actionPreviewDisenchantNever);
 
+    ui->deactivateHallsOfPainCheckBox->setStatusTip(ui->actionDeactivateHallsOfPain->statusTip());
 
-    // TODO: [0.5] remove when implementing export info
-    ui->menuExport->removeAction(ui->actionExportCharacterInfo);
-    ui->mainToolBar->removeAction(ui->actionExportCharacterInfo);
 
 #ifdef Q_OS_WIN32
     setAppUserModelID(); // is actually used only in Windows 7 and later
@@ -1051,6 +1049,11 @@ void MedianXLOfflineTools::showSkillPlan()
     dlg.exec();
 }
 
+void MedianXLOfflineTools::showAllStats()
+{
+
+}
+
 void MedianXLOfflineTools::backupSettingTriggered(bool checked)
 {
     if (!checked && QUESTION_BOX_YESNO(tr("Are you sure you want to disable automatic backups? Then don't blame me if your character gets corrupted."), QMessageBox::No) == QMessageBox::No)
@@ -1111,6 +1114,7 @@ void MedianXLOfflineTools::aboutApp()
                "<li><a href=\"http://www.medianxl.com/u1\">MarcoNecroX</a> for a hot extension of Median XL called <b>Ultimative</b></li>"
                "<li>grig for the Perl source of <a href=\"http://grig.vlexofree.com/\">Median XL Online Tools</a> and tips</li>"
                "<li><a href=\"http://phrozenkeep.hugelaser.com/index.php?ind=reviews&op=section_view&idev=4\">Phrozen Keep File Guides</a> for tons of useful information on txt sources</li>"
+               "<li><a href=\"http://www.medianxl.com/u152\">aahz</a> for providing space on MXL server</li>"
                "<li>FixeR, Zelgadiss, moonra, Vilius, Delegus, aahz HerrNieschnell, Quirinus, RollsRoyce, Aks_kun and gAdlike for intensive testing and tips on GUI & functionality</li>"
              "</ul>")
     );
@@ -1277,15 +1281,17 @@ void MedianXLOfflineTools::createLayout()
         lineEdit->setStyleSheet(kReadonlyCss);
 
     createCharacterGroupBoxLayout();
+    createWaypointsGroupBoxLayout();
     createMercGroupBoxLayout();
     createStatsGroupBoxLayout();
     createQuestsGroupBoxLayout();
 
     QGridLayout *grid = new QGridLayout(centralWidget());
     grid->addWidget(ui->characterGroupBox, 0, 0);
-    grid->addWidget(ui->mercGroupBox, 1, 0);
+    grid->addWidget(ui->waypointsGroupBox, 1, 0);
+    grid->addWidget(ui->mercGroupBox, 2, 0);
     grid->addWidget(ui->statsGroupBox, 0, 1);
-    grid->addWidget(_questsGroupBox, 1, 1);
+    grid->addWidget(_questsGroupBox, 1, 1, 2, 1);
 
     ui->statsTableWidget->verticalHeader()->setDefaultAlignment(Qt::AlignCenter);
     ui->statsTableWidget->horizontalHeader()->
@@ -1307,6 +1313,7 @@ void MedianXLOfflineTools::createLayout()
 #ifndef Q_OS_MAC
     resize(minimumSizeHint());
 #endif
+    setFixedHeight(height());
 }
 
 void MedianXLOfflineTools::createCharacterGroupBoxLayout()
@@ -1337,6 +1344,13 @@ void MedianXLOfflineTools::createCharacterGroupBoxLayout()
     vbl->addWidget(ui->hardcoreGroupBox);
 }
 
+void MedianXLOfflineTools::createWaypointsGroupBoxLayout()
+{
+    QHBoxLayout *hbl = new QHBoxLayout(ui->waypointsGroupBox);
+    hbl->addWidget(ui->activateWaypointsCheckBox);
+    hbl->addWidget(ui->deactivateHallsOfPainCheckBox);
+}
+
 void MedianXLOfflineTools::createMercGroupBoxLayout()
 {
     QHBoxLayout *hbl = new QHBoxLayout;
@@ -1351,7 +1365,6 @@ void MedianXLOfflineTools::createMercGroupBoxLayout()
 
     QVBoxLayout *vbl = new QVBoxLayout(ui->mercGroupBox);
     vbl->addLayout(hbl);
-    vbl->addStretch();
     vbl->addWidget(_mercExpGroupBox);
 }
 
@@ -1360,7 +1373,7 @@ void MedianXLOfflineTools::createStatsGroupBoxLayout()
     QGridLayout *gridLayout = new QGridLayout(ui->statsGroupBox);
     gridLayout->addWidget(new QLabel(tr("Inventory Gold")), 0, 0, Qt::AlignRight);
     gridLayout->addWidget(ui->inventoryGoldLineEdit, 0, 1);
-    gridLayout->addWidget(ui->activateWaypointsCheckBox, 0, 2);
+    gridLayout->addWidget(ui->showAllStatsButton, 0, 2);
     gridLayout->addWidget(new QLabel(tr("Stash Gold")), 0, 3, Qt::AlignRight);
     gridLayout->addWidget(ui->stashGoldLineEdit, 0, 4);
 
@@ -1616,12 +1629,16 @@ void MedianXLOfflineTools::connectSignals()
         connect(spinBox, SIGNAL(valueChanged(int)), SLOT(statChanged(int)));
 
     // main window
-    connect(ui->respecStatsButton, SIGNAL(clicked()), SLOT(respecStats()));
     connect(ui->renameButton, SIGNAL(clicked()), SLOT(rename()));
     connect(ui->resurrectButton, SIGNAL(clicked()), SLOT(resurrect()));
     connect(ui->convertToSoftcoreCheckBox, SIGNAL(toggled(bool)), SLOT(convertToSoftcore(bool)));
+
+    connect(ui->respecStatsButton, SIGNAL(clicked()), SLOT(respecStats()));
+    connect(ui->showAllStatsButton, SIGNAL(clicked()), SLOT(showAllStats()));
     connect(ui->respecSkillsCheckBox, SIGNAL(toggled(bool)), SLOT(respecSkills(bool)));
-    connect(ui->activateWaypointsCheckBox, SIGNAL(toggled(bool)), SLOT(modify()));
+
+    connect(ui->activateWaypointsCheckBox,     SIGNAL(toggled(bool)), SLOT(modify()));
+    connect(ui->deactivateHallsOfPainCheckBox, SIGNAL(toggled(bool)), SLOT(modify()));
 
     // misc
     connect(_fsWatcher, SIGNAL(fileChanged(const QString &)), SLOT(fileContentsChanged()));
@@ -2342,21 +2359,22 @@ void MedianXLOfflineTools::clearUI()
     }
     ui->levelSpinBox->setValue(1);
 
-    QList<QCheckBox *> checkBoxes = QList<QCheckBox *>() << ui->convertToSoftcoreCheckBox << ui->activateWaypointsCheckBox << ui->respecSkillsCheckBox;
+    QList<QCheckBox *> checkBoxes = QList<QCheckBox *>() << ui->convertToSoftcoreCheckBox << ui->respecSkillsCheckBox << ui->activateWaypointsCheckBox << ui->deactivateHallsOfPainCheckBox;
     foreach (QList<QCheckBox *> questCheckBoxes, _checkboxesQuestsHash.values())
         checkBoxes << questCheckBoxes;
     foreach (QCheckBox *checkbox, checkBoxes)
         checkbox->setChecked(false);
-    ui->respecStatsButton->setChecked(false);
-    ui->actionDeactivateHallsOfPain->setChecked(false);
 
-    QList<QGroupBox *> groupBoxes = QList<QGroupBox *>() << ui->characterGroupBox << ui->statsGroupBox << ui->mercGroupBox << _questsGroupBox;
+    ui->showAllStatsButton->setChecked(false);
+    ui->respecStatsButton->setChecked(false);
+
+    QList<QGroupBox *> groupBoxes = QList<QGroupBox *>() << ui->characterGroupBox << ui->statsGroupBox << ui->waypointsGroupBox << ui->mercGroupBox << _questsGroupBox;
     foreach (QGroupBox *groupBox, groupBoxes)
         groupBox->setDisabled(true);
 
     QList<QAction *> actions = QList<QAction *>() << ui->actionReloadCharacter << ui->actionSaveCharacter << ui->actionRename << ui->actionRespecStats << ui->actionRespecSkills << ui->actionActivateWaypoints
                                                   << ui->actionDeactivateHallsOfPain << ui->actionConvertToSoftcore << ui->actionResurrect << ui->actionFind << ui->actionFindNext << ui->actionFindPrevious
-                                                  << ui->actionShowItems << ui->actionSkillPlan << ui->actionExportCharacterInfo;
+                                                  << ui->actionShowItems << ui->actionSkillPlan << ui->actionShowAllStats;
     foreach (QAction *action, actions)
         action->setDisabled(true);
 
@@ -2385,12 +2403,12 @@ void MedianXLOfflineTools::updateUI()
     clearUI();
 
     QList<QAction *> actions = QList<QAction *>() << ui->actionReloadCharacter << ui->actionRename << ui->actionRespecStats << ui->actionRespecSkills << ui->actionActivateWaypoints << ui->actionDeactivateHallsOfPain
-                                                  << ui->actionSkillPlan << ui->actionExportCharacterInfo;
+                                                  << ui->actionSkillPlan << ui->actionShowAllStats;
     foreach (QAction *action, actions)
         action->setEnabled(true);
     ui->respecSkillsCheckBox->setEnabled(true);
 
-    QList<QGroupBox *> groupBoxes = QList<QGroupBox *>() << ui->characterGroupBox << ui->statsGroupBox << _questsGroupBox;
+    QList<QGroupBox *> groupBoxes = QList<QGroupBox *>() << ui->characterGroupBox << ui->statsGroupBox << ui->waypointsGroupBox << _questsGroupBox;
     foreach (QGroupBox *groupBox, groupBoxes)
         groupBox->setEnabled(true);
 

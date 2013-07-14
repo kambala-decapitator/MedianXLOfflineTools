@@ -1,0 +1,3543 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<!-- begin document head -->
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta name="generator" content="MKPortal" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta content="no-cache" http-equiv="no-cache" />
+  <meta http-equiv="Cache-Control" content="no-cache" />
+  <title>The Phrozen Keep - Knowledge Base - Skills.txt</title>
+  <meta name="description" content="Diablo 2 Modmaking Central" />
+  <meta name="keywords" content="diablo, diablo2, diabloii, diablo3, diabloiii, mods, modmaking, modding, mod tools, phrozen, forum" />
+<link rel="icon" href="favicon.ico" type="image/x-icon" /> 
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <style type="text/css">
+/*
++--------------------------------------------------------------------------
+|   Cascading Style Sheet for MKportal "Forum" Portal Template
+|   ========================================
+|   by Meo aka Luponero [Amedeo de longis]
+|      Don K. Colburn [visiblesoul.net]
+|   Copyright (c) 2004-2007 mkportal.it
+|   http://www.mkportal.it
+|   Email: luponero@mclink.it
++--------------------------------------------------------------------------
+|   > MKPortal
+|   > Written By Amedeo de longis
+|   > Date started: 9.2.2004
++--------------------------------------------------------------------------
+*/
+
+/*=============================
+M
+K  global styles
+P
+=============================*/
+/* IMPORT body */
+body,
+body {
+	/* Text-Sizing with ems: http://www.clagnut.com/blog/348/ */
+	font-family: "Lucida Grande", Verdana, Helvetica, Arial, sans-serif;
+	color: #FFFFFF;
+	background-color: #000000;
+	font-size: 62.5%; /* This sets the default font size to be equivalent to 10px */
+	margin: 0;
+}
+
+body {
+	font-size: 10px;
+	margin:0px; 
+	padding:0px; /* Opera 0 margin */	
+	text-align: center; /* center in IE */ 
+}
+
+/* IMPORT body background (used for SMF) */
+td { padding: 0; }
+
+/* portal wrapper */
+#mkwrapper {
+	text-align:left; /* left-align text in IE */	
+	margin: 0px auto 0px auto;
+}
+
+/* IMPORT logostrip */
+#mklogostrip,
+#importlogostrip {	
+	background-color: #000000;	
+}
+
+/* logostrip */
+#mklogostrip {
+	text-align: left;
+}
+
+/* IMPORT global font formatting */
+table,
+tr,
+td,
+.tdglobal,
+.importfont {
+	font-size: 10px; 
+	color: #FFFFFF;
+	font-family: Verdana, Arial, Helvetica, sans-serif;	
+}
+
+/* global font formatting */
+table,
+tr,
+td,
+.tdglobal {
+	font-size: 10px;	
+}
+
+/* IMPORT main portal table bg (if different than body bg) */
+.tabmain,
+.importmain {	
+	font-size: 10px;	
+}
+
+/* main portal table */
+.tabmain {
+	margin:0px;
+	padding:0px;	
+}
+
+/* images */
+img { 		
+	border: 0px;
+	vertical-align: middle; /* Meo: Added in C1.2 */
+}
+
+/* Onyx - justified body for long texts */
+div.body_just {
+	font-size: 12px;
+	text-align: justify;
+}
+
+/*=============================
+M
+K IMPORT LIGHT BACKGROUND
+P
+=============================*/
+.modulecell,
+.urlo2,
+.tabnews,
+.trattini,
+.trattini3,
+.tablemenu,
+.taburlo,
+.row1 {
+	background-color: #2F2F4F;
+	padding: 0;
+}
+
+/*=============================
+M
+K IMPORT MEDIUM BACKGROUND
+P
+=============================*/
+.navigatore,
+.tdblock,
+.moduleborder,
+.modulex,
+.mkpagecurrent,
+.row2 {
+	background-color: #2F2F4F;
+	padding: 0;
+}
+
+/*=============================
+M
+K IMPORT DARK BACKGROUND
+P
+=============================*/
+.urlo,
+.sottotitolo,
+th {
+	color: #FFFFFF;
+	font-size: 1.1em;
+	font-weight: bold;
+	background-color: #113274;
+	background-image: url('./forum/styles/BlackRock/theme/images/cellpic3.gif');
+	white-space: nowrap;
+	padding: 7px 5px;
+}
+
+/*=============================
+M
+K  border and divider styles
+P
+=============================*/
+/* vertical spacer image used in portal skin */
+/* .vspacer {
+	background-image: url(./mkportal/templates/Forum/images/punto_vert.gif);
+	background-repeat: repeat-y;
+	background-color: transparent;	
+} */
+
+/* IMPORT border-color */
+.tabmain,
+.tablemenu, /* block wrapper, chat button strip */
+.taburlo,
+.urlo2,
+.tabnews,
+.trattini,
+.trattini2,
+.trattini3,
+.mkpagelink,
+.mkpagelinklast,
+.mkpagecurrent,
+.titadmin,
+.importborders {
+	border: 1px solid #000000;	
+}
+	
+.trattini { /*used only in tpl_main.php(deprecated), blog, ad_blocks.php*/
+	border-width: 1px 0 0 0;
+	border-style: dashed;
+}
+
+/* blocks admin */
+.trattini2 {
+	border-width: 0 1px 0 0;
+	border-style: dashed;
+}
+
+.trattini3 { /* used only in blog, quotes, urlobox, calendar*/
+	border-width: 0 0 1px 0;
+	border-style: dashed;
+}
+
+/*=============================
+M
+K  hyperlink styles
+P
+=============================*/
+/* IMPORT global links */
+a:link,
+a:active,
+a.uno:link,
+.importlink {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #00ffff;	
+	text-decoration: none;	
+}
+
+a:visited,
+a.uno:visited,
+.importvisited {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #00ffff;	
+	text-decoration: none;	
+}
+
+a:hover,
+a.uno:hover,
+.importhover {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	text-decoration: underline;
+}
+
+/* a:active {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #496c9f;	
+	text-decoration: none; 	
+} */
+
+/* bold navbar, block, module links */
+a.uno:link {
+	font-size: 10px;
+	font-weight: bold;
+	text-decoration: none
+}
+
+a.uno:visited {	
+	font-size: 10px; 
+	font-weight: bold;
+	text-decoration: none
+}
+
+
+a.uno:hover {
+	font-size: 10px;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+/* Onyx - bigger links for titles in Articles and so on*/
+a.cat_big:link {
+	font-size: 12px;
+	text-decoration: none
+}
+
+a.cat_big:visited {	
+	font-size: 12px; 
+	text-decoration: none
+}
+
+
+a.cat_big:hover {
+	font-size: 12px;
+	text-decoration: underline;
+}
+
+/* block text links */
+/* .tablemenu a:link, a:visited {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #496c9f;	
+	text-decoration: none;	
+}
+
+.tablemenu a:hover {
+	text-decoration: underline;
+}
+
+.tablemenu a:active { 
+	text-decoration: none; 	
+} */
+
+/* global contrasting text and hyperlink color */
+.mktxtcontr,
+a.mktxtcontr:link, 
+a.mktxtcontr:visited {	
+	color: #ffffff;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a.mktxtcontr:hover {
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+/* contrasting text and hyperlink color 2 (admin) */
+.mktxtcontr2,
+a.mktxtcontr2:link, 
+a.mktxtcontr2:visited {
+	color: #0000ff;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a.mktxtcontr2:hover {
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+/*=============================
+M
+K  form styles
+P
+=============================*/
+/* remove margin after closing "form" tag in MSIE */
+form {
+	margin: 0;
+	padding: 0
+}
+
+/* IMPORT form styles */
+input,
+textarea,
+select,
+.bgselect, /* input fields */
+.mkbutton, /* global submit buttons */
+.mkblkinput, /* block input */
+.mkradio, 
+input {
+	color: #333333;
+	font-family: "Lucida Grande", Verdana, Helvetica, sans-serif;
+	font-size: 1.1em;
+	font-weight: normal;
+	padding: 1px;
+	border: 1px solid #A9B8C2;
+	background-color: #FAFAFA;
+}
+
+/* set form padding and margin */
+/*.mkbutton,*/ /* global submit buttons */
+/* textarea,*/
+input,
+select,
+.bgselect, /* input fields */
+.mkblkinput /* block input */
+{
+	margin: 0px;
+	padding: 0px;
+	font-size: 9px;
+	font-weight: normal; /* needed for Mozilla */	
+}
+
+.mkbutton { /* Global submit buttons */
+	padding: 3px;
+}
+
+.mkbbbutton { /* MKP BBcode editor buttons */
+	margin: 0;
+	padding: 0;
+}
+
+/* radio/checkbox buttons - remove background color and border in IE */ 
+/* .mkradio {
+	background-color: transparent;
+	border-width: 0px;
+} */
+
+/* configure blog textarea */
+textarea.mkwrap1 {
+	overflow: auto;
+	/* width: 230px; */
+	width: 100%;
+}
+
+/* edit blog textarea */
+textarea.mkwrap2 {
+	overflow: auto;
+	width: 500px ;
+}
+
+/*=============================
+M
+K  navstrip styles
+P
+=============================*/
+/* top navstrip */
+.navigatore {	
+	vertical-align: bottom;
+	text-align: right;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: 300;
+	font-size: 9px;
+	border: 0;
+}
+
+/*=============================
+M
+K  block styles
+P
+=============================*/
+/* used in functions.php (function main_page) */
+.blocks {
+	padding: 0px;
+}
+
+/* block td cell */
+.tdblock {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	border: 0;
+	margin: 2px;	
+}
+
+/* block title bar */
+.sottotitolo {
+	vertical-align: bottom;	
+	text-align: left;
+	font-size: 11px;
+	font-weight: bold;
+	color:#00ff00; 
+}
+
+/* horizontal spacer between blocks */
+.tdspacer {
+	line-height: 3px;
+}
+
+/*=============================
+M
+K  module global styles
+P
+=============================*/
+/* IMPORT module table headings */
+th.modulex,
+.cattitle {
+
+}
+th.modulex {
+	white-space: nowrap;
+}
+.modulex {
+	border-width: 0 0 0 0;
+}
+/* Reviews description text */
+.modulelite {
+	font-size: 10pt;
+	/* color:#a6bbcd;*/
+}
+
+/* block padding (news, admin) */
+.contents {
+	padding: 10px;
+	font-size: 12px;
+}
+
+/* module pagination links */
+.mkpagelink {
+	padding:1px 3px 1px 3px;
+	font-weight: normal;
+}
+
+.mkpagelinklast {
+	padding:1px 3px 1px 3px;
+	font-weight:normal;
+}
+
+.mkpagecurrent {
+	padding:1px 3px 1px 3px;
+	font-weight:normal;
+}
+
+/* admin cp titles with top border - used in frontend and backend */
+.titadmin {
+	margin: 0px;
+	font-size: 11px;
+	font-weight: bold;
+	border-width: 1px 0 0 0;
+	border-style: dashed;
+}
+/*=============================
+M
+K  shoutbox module styles
+P
+=============================*/
+td.taburlo{	
+	margin:5px;
+	padding:5px;
+	border: 0;	
+}
+	
+/* shouter and date cell */
+.urlo {
+	line-height: 18px;
+	vertical-align: bottom;
+	text-align: left;	
+	font-size: 11px;
+	font-weight: bold;
+	padding: 4px;		 
+}
+
+/* shout cell */
+.urlo2 {
+	padding: 4px;
+	border-width: 0 0 1px 0;
+	border-style: solid;
+	text-align: left;
+	font-size: 11px;
+	font-weight: bold;
+}
+
+/* white shouter text */
+/* .urlocontrast {	
+	color: #ffffff;
+} */
+
+/*=============================
+M
+K  news module styles
+P
+=============================*/
+/* news table with border */
+.tabnews {
+	border-width: 1px;
+	border-style: solid;
+	margin:0px; 
+	padding:10px;
+	font-size: 10px;	
+}
+
+/* news table custom */
+.tabnews1 {
+	border-width: 1px;
+	border-style: solid;
+	border-color: #000;
+	margin:0px; 
+	padding:0px;
+}
+
+/*=============================
+M
+K  font styles
+P
+=============================*/
+/* red error page text */
+.mkerror {	
+	font-size: 12pt;
+	color: #ff0000;
+	font-weight:bold;
+}
+
+/* MKPQuote quotation text */
+/* .mkquote { 		
+	color: #0000ff;	
+} */
+
+/* MKPGallery module ecard, offline page */
+.ecardtitle,
+.offlinetxt {
+	font-size: 10pt; 
+	font-weight: bold;
+	text-align: center;
+}
+/*Onyx - image gallery border - Firefox-compatible*/
+#imgtable1, #imgtable1 td {border: 1px solid #000;}
+
+
+/*=============================
+M
+K  BBcode quote styles
+P
+=============================*/
+.mkquoteball {
+	font-size: 9px; 
+	color: #666666;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	background-color: #ffffff;	
+	padding: 0;	
+}
+
+.mkquotetext {
+	font-size: 10px; 
+	color: #666666;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	background-color: #ffffff;
+	margin: 0;
+	padding: 0;	
+}
+
+table .mkquotetable{				
+	width: auto; /* IE */	
+	text-align: left;
+}
+
+/* Added in C1.2 */
+/* Table background highlight */
+.bghighlight1 {
+	background-color: #EAF8EB;
+}
+/* Table background highlight 2 */
+.bghighlight2 {
+	background-color: #EFCBCB;
+}
+/* mkportal footer copyright - Do not remove, modify or obscure the copyright text */
+.mkcopyright {
+	font-size: 10px;
+}
+.mkcopyright a {
+	text-decoration: none;
+}
+/* Calendar block current day highlighting */
+#mkcaltoday {
+	border:2px;
+	border-style:outset;
+	background-color: #0000ff;
+}
+
+/* Table Cell Alignment ltr/rtl */
+
+/* default is "left" */
+.mkalign1 {
+	text-align: left;
+}
+
+/* default is "right" */
+.mkalign2 {
+	text-align: right;
+}
+
+</style>
+
+<link rel="stylesheet" href="mkportal/modules/rss/files/simplepie.css" type="text/css" media="screen, projector" />
+
+  
+  <script type="text/javascript">
+	mkportalurl = 'http://phrozenkeep.hugelaser.com/';
+	var MKAJAX_IMAGES_PATH = "./mkportal/templates/Forum/images/mkajax/";
+    	var MKAJAX_SITEPATH = "./";
+  </script>
+  <script type="text/javascript" src="./mkportal/templates/Forum/mkp.js"></script>
+  <script type="text/javascript" src="./mkportal/templates/Forum/mkp.ext.ajax.js"></script>
+  
+<script type="text/javascript" src=".//mkportal/blocks/imgmenu/js/mootools.js"></script>
+<script type="text/javascript" src=".//mkportal/blocks/imgmenu/imgmenu.js"></script>
+<link href=".//mkportal/blocks/imgmenu/imgmenu.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+
+<body onload="javascript:GetPos()">
+<a name="top"></a>
+
+<!-- end document head -->
+
+<!-- begin open main table -->
+
+<div id="mkwrapper" style="width: 100%;">
+<table class="tabmain" width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
+
+  <tr>
+    <td width="100%" align="center">
+
+      <table border="0" width="100%" cellpadding="0" cellspacing="0">
+
+<!-- end open main table -->
+
+<!-- begin logostrip -->
+  
+	<tr>
+	  <td id="mklogostrip" width="100%">
+
+     <TABLE border="0" cellpadding="0" cellspacing="0" WIDTH="100%" background="images/pagetop_middle.gif">
+<TR>
+        <TD><img src="images/pagetop_left2.png" height="120" width="500" naturalsizeflag="0" align="bottom"></td>
+	<td align="center" valign="bottom">
+<!-- original header     
+                                <script type="text/javascript">< ! - -
+                                        google_ad_client = "pub-0170085626153842";
+                                        google_ad_width = 468;
+                                        google_ad_height = 60;
+                                        google_ad_format = "468x60_as";
+                                        google_ad_channel ="";
+                                        google_ad_type = "text";
+                                        google_color_border = "2F2F4F";
+                                        google_color_bg = "2F2F4F";
+                                        google_color_link = "2F2F4F";
+                                        google_color_url = "336699";
+                                        google_color_text = "333333";
+                                / / - - ></script>
+                                <script type="text/javascript"
+                                  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+                                </script>//-->
+
+	</td>
+        <TD width="500"><div align="right"><img src="images/pagetop_right2.png" title="... And the heavens shall tremble" width="500" height="120" " naturalsizeflag="0" align="bottom"></div>
+</TR>
+</TABLE>
+
+
+<!-- 10 anniversary header 
+<TABLE border="0" cellpadding="0" cellspacing="0" WIDTH="100%" background="images/pagetop_middle10.gif">
+<TR>
+        <TD><img src="images/pagetop_left10.png" height="120" width="500" naturalsizeflag="0" align="bottom"></td>
+	<td align="center" valign="bottom">
+	</td>
+        <TD width="500"><div align="right"><img src="images/pagetop_right10.png" title="" width="500" height="120" " naturalsizeflag="0" align="bottom"></div>
+</TR>
+</TABLE>
+//-->
+
+          </td>
+	</tr>
+	
+<!-- end logostrip -->
+
+<!-- begin linkbar -->
+
+<!-- end linkbar -->
+
+<!-- begin open portal body -->
+
+	<tr align="center">
+	  <td width="100%">
+	    <table border="0" width="100%" cellspacing="0" cellpadding="0">
+	      <tr>
+
+<!-- end open portal body -->
+
+<script type="text/javascript">
+			
+			window.addEvent('domready', function(){
+				var myMenu = new ImageMenu($$('#imageMenu a'),{openWidth:310, border:2});
+			});
+		</script>  
+
+	      
+<!-- begin left column -->
+
+		<td id="menusx" valign="top">
+		<div id="menucontents" class="mkalign1" style="">
+		<div class="mkalign2"><a href="javascript:ColumnClose('menusx');MemoPos('MKmenusx', '1');"><img src="./mkportal/templates/Forum/images/f2.gif" border="0" alt="" /></a>&nbsp;</div>
+		  <table cellpadding="0" cellspacing="2" border="0" style="width: 140px;">
+		  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Main Menu</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      
+		      		<tr><td width="100%" class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php" title="Home">Home</a>
+<!-- end block link template -->
+</td></tr>
+			
+		      		<tr><td width="100%" class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="./forum/index.php" title="The Phrozen Forums">The Phrozen Forums</a>
+<!-- end block link template -->
+</td></tr>
+			
+		      		<tr><td width="100%" class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?ind=reviews" title="Knowledge Base">Knowledge Base</a>
+<!-- end block link template -->
+</td></tr>
+			
+		      		<tr><td width="100%" class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?ind=gallery" title="Image Gallery">Image Gallery</a>
+<!-- end block link template -->
+</td></tr>
+			
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Forum</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      <tr><td class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?pid=1" title="Terms of Service">Terms of Service</a>
+<!-- end block link template -->
+</td></tr><tr><td class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="./forum/search.php?search_id=newposts" title="New posts">New posts</a>
+<!-- end block link template -->
+</td></tr><tr><td class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="./forum/memberlist.php" title="Users">Users</a>
+<!-- end block link template -->
+</td></tr><tr><td class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="./forum/faq.php" title="Help">Help</a>
+<!-- end block link template -->
+</td></tr>
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Search</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      <tr><td class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="./forum/search.php" title="Forum">Forum</a>
+<!-- end block link template -->
+</td></tr><tr><td class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?ind=gallery&amp;op=search" title="Images">Images</a>
+<!-- end block link template -->
+</td></tr><tr><td class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?ind=reviews&amp;op=search" title="Knowledge Base">Knowledge Base</a>
+<!-- end block link template -->
+</td></tr>
+				<tr>
+				  <td class="tdblock" align="center">
+				    <a href="http://www.google.com/"><img src="http://phrozenkeep.hugelaser.com/mkportal/modules/search/google_logo.png" alt="Google" align="top" /></a><br />
+
+				    <form action="http://www.google.com/search" method="get" target="blank">	    
+				    <input size="12" name="q" class="mkblkinput" /><br />
+				    <input type="hidden" name="hl" />
+				    <input type="submit" name="btnG" value="Search" class="mkbutton" />
+				    </form>
+				  </td>
+				</tr>
+
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Features</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      <tr><td class="blocks"><table style="width: 100%;" border="0" cellspacing="1" cellpadding="0"><tbody><tr><td class="tdblock"> <a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?ind=reviews&op=entry_view&iden=455">History of the Site</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?ind=reviews&op=section_view&idev=9">Humor</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?ind=reviews&op=section_view&idev=10">Interviews</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?ind=reviews&op=section_view&idev=11">Mod Reviews</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?pid=34">Linking To Us</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?pid=28">Unofficial IRC</a></td></tr> </tbody></table></td></tr>
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">File Center</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      <tr><td class="blocks"><table border="0" cellspacing="1" cellpadding="0" width="100%">
+<tbody>
+<tr>
+<td class="tdblock"> <a class="uno" href="/filecenter/dload.php">Main Page</a></td>
+</tr>
+<tr>
+<td class="tdblock"> <a class="uno" href="/filecenter/dload.php?action=search">File Search</a></td>
+</tr>
+<tr>
+<td class="tdblock"> <a class="uno" href="/filecenter/dload.php?action=category&cat_id=113">Hosted Sites</a></td>
+</tr>
+<tr>
+<td class="tdblock"> <a class="uno" href="/filecenter/dload.php?action=category&cat_id=109">Humor</a></td>
+</tr>
+<tr>
+<td class="tdblock"> <a class="uno" href="/filecenter/dload.php?action=category&cat_id=97">Miscellaneous</a></td>
+</tr>
+<tr>
+<td class="tdblock"> <a class="uno" href="/filecenter/dload.php?action=category&cat_id=1">Mod Making Tools</a></td>
+</tr>
+<tr>
+<td class="tdblock"> <a class="uno" href="/filecenter/dload.php?action=category&cat_id=2">Mod Archive</a></td>
+</tr>
+<tr>
+<td class="tdblock"> <a class="uno" href="/filecenter/dload.php?action=category&cat_id=87">Old Forum Dumps</a></td>
+</tr>
+<tr>
+<td class="tdblock"> <a class="uno" href="/filecenter/dload.php?action=category&cat_id=27">Patches</a></td>
+</tr>
+<tr>
+<td class="tdblock"> <a class="uno" href="/filecenter/dload.php?action=category&cat_id=39">Plugins</a></td>
+</tr>
+<tr>
+<td class="tdblock"> <a class="uno" href="/filecenter/dload.php?action=category&cat_id=38">Resources</a></td>
+</tr>
+</tbody>
+</table></td></tr>
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Diablo II Mod Sites</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      <tr><td class="blocks"><table style="width: 100%;" border="0" cellspacing="1" cellpadding="0"><tbody><tr><td class="tdblock"> <a class="uno" href="http://bth.d2mods.com/" target="_blank">Back to Hellfire</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://bfed2.diablomods.ru/" target="_blank">Battle for Elements</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://blackened.d2mods.com" target="_blank">Blackened</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://n.ethz.ch/student/henninav/" target="_blank">d2:elements</a></td></tr> <tr><td class="tdblock">&nbsp;<a class="uno" href="http://d2scrabble.info/" target="_blank">d2scrabble</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://es.d2mods.com" target="_blank">Eastern Sun</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://d2immersion.com/" target="_blank">Immersion</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://modsbylaz.hugelaser.com/" target="_blank">Mods by Laz</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://www.sevenlances.net/" target="_blank">Seven Lances</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://perso.wanadoo.fr/maususatlas/TohXt/Index.html" target="_blank">Time of Heroes</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://www.walhallamod.de/" target="_blank">Walhalla</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://zyel.d2mods.com" target="_blank">Zy-El</a></td></tr></tbody></table></td></tr>
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Modding Resources</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      <tr><td class="blocks"><table style="width: 100%;" border="0" cellspacing="1" cellpadding="0"><tbody><tr><td class="tdblock">&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?pid=32">Diabolic Cartography</a></td></tr> <tr><td class="tdblock">&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?pid=22">Incandescence</a></td></tr> <tr><td class="tdblock">&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?pid=33">Infinitum</a></td></tr> <tr><td class="tdblock">&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?pid=21">Inventharia</a></td></tr> <tr><td class="tdblock">&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?pid=23">Warped Tiles</a></td></tr></tbody></table></td></tr>
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Partner Sites</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      <tr><td class="blocks"><table style="width: 100%;" border="0" cellspacing="1" cellpadding="0"><tbody><tr><td class="tdblock"> <a class="uno" href="http://www.blizzplanet.com/" target="_blank">Blizzplanet</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://www.diablo2.com/" target="_blank">Diablo2.com</a></td></tr><tr><td class="tdblock"> <a class="uno" href="http://www.diablogamer.com/" target="_blank">DiabloGamer.com</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://www.diabloii.net/" target="_blank">Diabloii.net</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://www.diablowiki.com/" target="_blank">DiabloWiki</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://www.hugelaser.com/" target="_blank">Huge Laser</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://www.lurkerlounge.com/" target="_blank">Lurker Lounge</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://modsreloaded.com/" target="_blank">Mods Reloaded</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://www.neoarcadia.com/" target="_blank">Neoarcadia.com</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://www.planetdiablo.com/" target="_blank">PlanetDiablo</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://www.theamazonbasin.com/" target="_blank">The Amazon Basin</a></td></tr><td class="tdblock"> <a class="uno" href="http://ulf-johan.info/" target="_blank">Uffes Projects</a></td></tr></tbody></table></td></tr>
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Credits</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      <tr><td width="100%" class="tdblock">&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?pid=11">Copyrights</a></td></tr>
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+		  </table>
+		</div>
+		<div id="menucloseds" style="display:none">
+		<div class="mkalign2"><a href="javascript:ColumnOpen('menusx');MemoPos('MKmenusx', '0');"><img src="./mkportal/templates/Forum/images/f1.gif" border="0"  alt="" /></a></div>
+		</div>
+		</td>
+
+<!-- end left column -->
+
+<!-- begin column spacer -->
+
+		<td class="vspacer" width="0%">&nbsp;</td>
+
+<!-- end column spacer -->
+
+<!-- begin center column -->
+
+		<td valign="top" class="mkalign1" width="100%">
+
+<div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "pub-3246876018000001";
+/* Phrozen Keep Leaderboard */
+google_ad_slot = "7514462417";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+
+		  <table cellpadding="0" cellspacing="3" border="0" width="100%"> 
+		  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Knowledge Base</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      <tr align="center">
+  <td>
+
+    <script type="text/javascript">
+	  <!--
+	    function selChd(jumpsection) {
+	    var selIdx = jumpsection.selectedIndex;
+		    var newSel = jumpsection.options[selIdx].value;
+	    location.href='index.php?ind=reviews&op=section_view&idev=' + newSel;
+	}
+	    function selChoc(jumpsection) {
+	    var selIdx = jumpsection.selectedIndex;
+		    var newSel = jumpsection.options[selIdx].value;
+	    location.href='index.php?ind=reviews&order=' + newSel;
+	}
+	    function selChoe(jumpsection, idev) {
+	    var selIdx = jumpsection.selectedIndex;
+		    var newSel = jumpsection.options[selIdx].value;
+	    location.href='index.php?ind=reviews&op=section_view&idev=' + idev + '&order=' + newSel;
+	}
+	  //-->
+    </script>
+    
+    <br />
+    <table width="98%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+	<td width="60%" class="mkalign1">
+	<img src="./mkportal/templates/Forum/images/locbar.gif" alt="" /><a href="index.php?ind=reviews">Knowledge Base</a>-&gt;<a href="index.php?ind=reviews&amp;op=section_view&amp;idev=4">File Guides (1.1x)</a>-&gt;<a href="#">Skills.txt</a>
+	</td>
+	<td width="40%" class="modulelite mkalign2">
+	  <a href="index.php?ind=reviews&amp;op=search">[ Search ]</a>
+	</td>
+      </tr>
+    </table>
+    <br />
+    <table width="98%" border="0" cellspacing="1" cellpadding="0" class="moduleborder mkalign1">
+      <tr>
+	<td>
+	  <table width="100%" border="0" cellpadding="0" cellspacing="1" class="modulebg">
+            <tr>
+              <td width="100%" height="25" class="tdblock"> <img class="mkicon" src="./mkportal/templates/Forum/images/arrow.gif" alt="" />Skills.txt</td>
+            </tr>
+            <tr>
+              <td>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td>
+                      <table width="100%" border="0" cellspacing="1" cellpadding="5">
+		      							
+			<tr>
+                            <td class="modulecell mkalign1" width="20%" valign="middle">Title</td>
+                            <td class="modulecell mkalign1" colspan="2" width="80%" style="font-size: 14px;"><b>Skills.txt</b></td>
+			</tr>
+			<tr>
+                            <td class="modulecell mkalign1" width="20%" valign="top">Description</td>
+                            <td class="modulecell mkalign1" colspan="2" width="80%">by Nefarius</td>
+			</tr>
+			
+			
+			
+			
+			
+			
+			
+			<tr>
+                            <td class="modulecell mkalign1" width="20%" valign="top">Sent by</td>
+                            <td class="modulecell mkalign1" colspan="2" width="80%"></td>
+			</tr>
+			<tr>
+				<td colspan="3"><hr /></td>
+			</tr>
+			<tr>
+                            <td colspan="3" class="modulecell mkalign1" style="font-size: 12px;"><div class="body_just"><div style="text-align:center"><span style="font-weight: bold"><span style="font-size: 20px; line-height: normal">SKILLS.TXT FILE GUIDE</span></span>
+<br />
+by Nepharius</div>
+
+<br />
+
+<br />
+Skills.txt, for a long period of time (1.00 until 1.09) was a pretty small file with only a few things to alter (this was mainly limited to the animation used, the parameters passed to the skill and the damage done by the skill), the rest was completely hardcoded. How the skills themselves work is still hardcoded (the skill functions), but all other aspects of their behaviour can now be controlled via skills.txt, including which skills access which functions. The file is vast, by far the largest and most complex in Diablo II, it contains 256 columns, the maximum supported by M$ Excel. The purpose of this fileguide is not to provide a 100% accurate description of each column, as this is impossible (because how some columns are used depends foremost on the skill function accessing them!), it will also not deal with formulae, <a href="http://phrozenkeep.planetdiablo.gamespy.com/forum/kb.php?mode=article&k=371" target="_self" class="postlink">Xeno</a> wrote a comprehensive guide about the formulae used by the D2 parsing engine, and there is no point repeating this here.
+<br />
+
+<br />
+
+<br />
+
+<br />
+<div style="text-align:center"><span style="font-weight: bold"><span style="font-size: 20px; line-height: normal">GENERAL SKILL SETTINGS</span></span></div>
+<br />
+
+<br />
+<span style="font-weight: bold">skill</span>: the ID pointer used to reference this skill within <span style="color: yellow">CharStats.txt</span>, <span style="color: yellow">Missiles.txt</span> and <span style="color: yellow">Monstats.txt</span>, <span style="color: yellow">SkillDesc.txt</span>, it is also used within <span style="color: yellow">Skills.txt</span> itself. This ID pointer can also be used within AutoMagic, Gems, MagicPrefix, MagicSuffix, MonProp, QualityItems, Runes, SetItems, Sets and  UniqueItems.txt, however the parsing mechanism used for those files is bugged, and skill names with a space will more often then not fail to work properly (just because Blizzard can do it that way doesn't mean we can!). I recommended to use the actual ID numbers rather then the ID pointer in those files. <span style="color: red"><span style="font-weight: bold">Warning </span></span><span style="color: #aa7777"><span style="font-style: italic">Never use the same ID pointer twice, all skills but the first will be ignored if they have the same pointer!</span></span>
+
+<br />
+
+<br />
+<span style="font-weight: bold">Id</span>: the actual ID number of the skill, this is what the pointer actually points at, this must be a unique number, the game supports 32767 skills, but you won't be able to use them in conjunction with items, unless you modify <span style="color: yellow">ItemStatCost.txt</span>, encoded stats (chance to cast level xxx yyy on zzz, and charges) can only store IDs up to 1023, no matter what. <span style="color: red"><span style="font-weight: bold">Warning </span></span><span style="color: #aa7777"><span style="font-style: italic">Some IDs are referenced by the code (such as aurae used by bosses), you should thus refrain from randomly moving skills around inside the file unless you know what you're doing.</span></span>
+<br />
+
+<br />
+<span style="font-weight: bold">charclass</span>: to what character class is this skill assigned, this controls mainly from what DC6 icon library the skill icons are picked and by what bonus stat the skill is going to be effected (<span style="font-style: italic">+to all Amazon skills</span> etc).  <span style="color: red"><span style="font-weight: bold">Warning </span></span><span style="color: #aa7777"><span style="font-style: italic">All characters must have the same amount of skills assigned to them, otherwise only the class(es) with the highest amount of skills will be able to enter games (since the game is preparing the save file for each class for xxx skills, thus those with less then xxx skills will be treated as if their save files are corrupted. To solve this problem just add a number of dummy skills to that class (which will not appear on the skill tree or be useable in any way). Leaving this column blank means that the skill has not been assigned to any class.</span></span>
+
+<br />
+
+<br />
+<span style="font-weight: bold">skilldesc</span>: ID pointer from <span style="color: yellow">SkillDesc.txt</span>, this controls all the user interface related aspectes of the skill such as the skill icon used, the text displayed in the skill description and how/if the damage and attack rating is displayed on the character screen. <span style="color: red"><span style="font-weight: bold">Warning </span></span><span style="color: #aa7777"><span style="font-style: italic">Never use two identical entries for the same skill if they are assigned to the same character class, unless of course you enjoy crashing.</span></span>
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+<div style="text-align:center"><span style="font-weight: bold"><span style="font-size: 20px; line-height: normal">SERVER-SIDE SKILL FUNCTIONS</span></span></div>
+<br />
+
+<br />
+<span style="color: #aaaaaa"><span style="font-style: italic">These functions where originally referenced by a hardcoded table during 1.00-1.09, as of 1.10 this function index has been softcoded and can now be modified by editing skills.txt, this is the heart and soul of a skill, almost everything that makes a skill differ from the others is controlled by the functions used. The functions control but are not limited to: whenever the skill can apply a state or not, whenever the calc columns are used, whenever a parameter is referenced by code directly, whenever, and how, a missile is launched and anything else you can think of.</span></span>
+<br />
+
+<br />
+<span style="font-weight: bold">srvstfunc</span>: Server starting function, this controls the server side function executed when you rightclick or shift+leftclick somewhere while the skill is assigned to a button.
+<br />
+
+<br />
+
+<span style="font-weight: bold">srvdofunc</span>: Server finishing function, this controls the server side function executed when the starting function finishes executing, it might either be called repeatedly as long as the mouse button remains down, or it may be called periodically (for skills like paladin auras and blade shield).
+<br />
+
+<br />
+<span style="font-weight: bold">prgstack</span>: Boolean used by charge-up skills, true means the individual charges will stack (Fists of Fire, Claws of Thunder and Blades of Ice), false will make each new charge replace the previous one (Phoenix Strike etc). And indeed, you can make all three charges of Phoenix Strike occur at the same time by setting it to true <img src="images/smiles/icon_wink.gif" alt="icon_wink.gif" border="0" />
+<br />
+
+<br />
+<span style="font-weight: bold">srvprgfunc1</span>: Server side function to execute when releasing (using a finishing move) charge number 1.
+<br />
+
+<br />
+<span style="font-weight: bold">srvprgfunc2</span>: Server side function to execute when releasing (using a finishing move) charge number 2.
+
+<br />
+
+<br />
+<span style="font-weight: bold">srvprgfunc3</span>: Server side function to execute when releasing (using a finishing move) charge number 3.
+<br />
+
+<br />
+<span style="font-weight: bold">prgcalc1</span>: Calculation used by the server side function of charge number 1 (this column is also used by Shock Web and Blade Fury because the skill functions of those skills access it!).
+<br />
+
+<br />
+<span style="font-weight: bold">prgcalc2</span>: Calculation used by the server side function of charge number 2.
+<br />
+
+<br />
+<span style="font-weight: bold">prgcalc3</span>: Calculation used by the server side function of charge number 3.
+<br />
+
+<br />
+<span style="font-weight: bold">prgdam</span>: Related to the heavily hardcoded progressive stats. 1 is to be used in conjunction with PROGRESSIVE_DAMAGE, 2 is to be used in conjunction with PROGRESSIVE_STEAL, 3 is to be used with the unused PROGRESSIVE_OTHER stat and 4 is to be used with PROGRESSIVE_<elemental type> stats. I have yet to do research on this, but adding new progressive stats would involde expanding the list of functions linked to by this field!
+<br />
+
+<br />
+
+<br />
+
+<br />
+<div style="text-align:center"><span style="font-weight: bold"><span style="font-size: 20px; line-height: normal">SERVER-SIDE MISSILE SETTINGS</span></span></div>
+<br />
+
+<br />
+<span style="color: #aaaaaa"><span style="font-style: italic">These columns control the various aspects the missiles launched by this skill server side, that is, this is independant from what the player (client) sees on the screen, thus the client-side missile settings must match this to avoid weird behaviour and stupid questions from users. But you don't have to make the functions match, nothing will happen if they don't, the missile will just not appear, or appear the way it should, on screen.</span></span>
+<br />
+
+<br />
+<span style="font-weight: bold">srvmissile</span>: Primary missile to launch when the server side starting function is executed. This is launched independant of the server side starting function involved (even when no function is execute at all: see fireball and firebolt for example).
+<br />
+
+<br />
+<span style="font-weight: bold">decquant</span>: A boolean that controls whenever this skill will decrease stack or ammunition each time the starting function is executed (this is disabled for strafe, enabling it will make strafe waste as many arrows as you fire).
+
+<br />
+
+<br />
+<span style="font-weight: bold">lob</span>: Another boolean, when enabled the missiles fire will be lobbed (tossed like a grenade). A lobbed missile will vanish (collide with the ground) at the location you clicked with the mouse. <span style="color: red"><span style="font-weight: bold">Warning </span></span><span style="color: #aa7777"><span style="font-style: italic">A lobbed missile only 'appears' to fly in an arc, that is it will still damage everything it would damage if it wasen't lobbed, to make it behave properly the missile being lobbed must be modified (see Missiles.txt fileguide).</span></span>
+<br />
+
+<br />
+<span style="font-weight: bold">srvmissilea</span>: First secondary server-side missile (how and if this is accessed depends on the server side functions used by the skill).
+<br />
+
+<br />
+<span style="font-weight: bold">srvmissileb</span>: Second secondary server-side missile (how and if this is accessed depends on the server side functions used by the skill).
+
+<br />
+
+<br />
+<span style="font-weight: bold">srvmissilec</span>: Third secondary server-side missile (how and if this is accessed depends on the server side functions used by the skill).
+<br />
+
+<br />
+
+<br />
+
+<br />
+<div style="text-align:center"><span style="font-weight: bold"><span style="font-size: 20px; line-height: normal">SERVER CONTROLLED OVERLAYS</span></span></div>
+<br />
+
+<br />
+
+<span style="font-weight: bold">srvoverlay</span>: Overlays are usually controlled by client-side code, however mission-critical overlays are handled by the server-side code. This usually applies to those overlays applied to a targeted units when the server-side finishing function executes. Mission critical overlays are those used by melee attacks, various monster buffs/curses and by Fist of the Heavens (the downward moving missile is actually an overlay). This is an ID pointer from <span style="color: yellow">Overlays.txt</span>. Whenever this is used depends on the server-side finishing function used.
+<br />
+
+<br />
+
+<br />
+
+<br />
+<div style="text-align:center"><span style="font-weight: bold"><span style="font-size: 20px; line-height: normal">AURA / CURSE / BUFF RELATED SETTINGS</span></span></div>
+<br />
+
+<br />
+<span style="color: #aaaaaa"><span style="font-style: italic">These columns don't necessarily have to be used by an aura / curse / buff at all - for example, the game also uses these fields for skills that have some sort of search radius or an <acronym title="Area of Effect">AoE</acronym>.</span></span>
+
+<br />
+
+<br />
+<span style="font-weight: bold">aurafilter</span>: This is a binary filter that controls what type of unit is effected by this skill, a discussion on how aurafilters work can be found <a href="http://phrozenkeep.planetdiablo.gamespy.com/forum/viewtopic.php?t=18470" target="_self" class="postlink">here</a>. Not all aura filters will work properly with all skills, it largely depends how the server side skill functions search for potential targets! This is used by most skills that search for targets.
+<br />
+
+<br />
+<script type="text/javascript" src="js/fi_divexpand.js"></script><div align="center"><script type="text/javascript">codeDivStart()</script>
+<br />
+0001000010110000011 - inner sight, taunt
+<br />
+
+<br />
+0001100010110000011 - slow missiles
+<br />
+
+<br />
+0001010010110000011 - lightning fury, conviction, tornado
+<br />
+
+<br />
+0001000011110000011 - static field
+<br />
+
+<br />
+0000000000000000011 - amplify damage, weaken, iron maiden, life tap, decrepify, lower resist [work on bosses]
+<br />
+0000000000000000010 - dim vision, terror, confuse, attract, grim ward [don't work on bosses]
+<br />
+
+0010010000000000011 - might, prayer, resist fire, thorns, defiance, resist cold, blessed aim, cleansing, resist lightning, concentration, vigor, fanaticism, salvation, defense curse, blood mana
+<br />
+
+<br />
+0001010011110000011 - holy fire, holy shock, hurricane
+<br />
+
+<br />
+1001010001010000011 - holy freeze
+<br />
+
+<br />
+0001110011110000110 - sanctuary
+<br />
+
+<br />
+0001010010110000111 - fist of the heavens
+
+<br />
+
+<br />
+0000001000100000010 - redemption
+<br />
+
+<br />
+1100000000000000000 - battle cry
+<br />
+
+<br />
+0001110000000000011 - cloak of shadows
+<br />
+
+<br />
+0001000001110000011 - mind blast, blade shield
+<br />
+
+<br />
+0001000011100001011 - blades of ice
+<br />
+
+<br />
+0010000000100000011 - spirit of barbs aura, heart of wolverine aura, oak sage aura
+<br />
+</div></div>
+<br />
+
+<br />
+<span style="font-weight: bold">aurastate</span>: The state being applied to the caster (user) of the aura / buff / curse. In the case of enchant this is applied to whatever unit the skill is cast on. This is an ID pointer from <span style="color: yellow">States.txt</span>. <span style="color: red"><span style="font-weight: bold">Warning </span></span><span style="color: #aa7777"><span style="font-style: italic">You shouldn't use the same state on more then one skill if both skills are available to the same character or monster, the game uses an index table to determine which state (and thus which stat changes) are currently active on the unit, a state currently present on a unit cannot be applied to it again while the first state is present, thus two skills using the same state will never be able to apply at the same time. This does not mean they will always prevent stacking, it means that you will experience the strangest of glitches.</span></span>
+
+<br />
+
+<br />
+<span style="font-weight: bold">auratargetstate</span>: The state being applied to the reciever of the aura / buff / curse. This is an ID pointer from <span style="color: yellow">States.txt</span>. <span style="color: red"><span style="font-weight: bold">Warning </span></span><span style="color: #aa7777"><span style="font-style: italic">Never use the same state here as you can never know whenever two skills with the same state will be applied to the same unit, the game uses an index table to determine which state (and thus which stat changes) are currently active on the unit, a state currently present on a unit cannot be applied to it again while the first state is present, thus two skills using the same state will never be able to apply at the same time. This does not mean they will always prevent stacking, it means that you will experience the strangest of glitches.</span></span>
+<br />
+
+<br />
+<span style="font-weight: bold">auralencalc</span>: This field can either contain a calculation or a static value, it controls how long (in frames) the effects of the aura / buff / curse will last. Real auras dont use this, because they are refreshed periodically.
+<br />
+
+<br />
+<span style="font-weight: bold">aurarangecalc</span>: This field can either contain a calculation or a static value, it controls the area of effect (in subtiles) in which the aura / buff / curse will effect other units. Some other types of skills also use this (such as Lightning Fury) to determine the search radius or damage radius of the missiles released by them.
+<br />
+
+<br />
+<span style="font-weight: bold">aurastat1-6</span>: The stats this aura / buff / curse can alter. It contains ID pointers from <span style="color: yellow">ItemStatCost.txt</span>.
+<br />
+
+<br />
+<span style="font-weight: bold">aurastatcalc1-6</span>: The amount to add or subtract from the stat in question. This field is limited to values between -2147483647 and +2147483647. Higher or lower values will roll.
+<br />
+
+<br />
+<span style="font-weight: bold">auraevent1-3</span>: This field specifies what events the aura / curse / buff should react to when this event occurs to the caster (user) of the skill. This is an ID pointer from <span style="color: yellow">Events.txt</span>.
+<br />
+
+<br />
+<span style="font-weight: bold">auraeventfunc1-3</span>: This field specifies the function to execute when the coresponding event occurs (like the above, this refers to the caster of the skill only). A list of event functions can be found <a href="http://phrozenkeep.planetdiablo.gamespy.com/forum/viewtopic.php?p=259558#259558" target="_self" class="postlink">here</a>. <span style="color: red"><span style="font-weight: bold">Warning </span></span><span style="color: #aa7777"><span style="font-style: italic">The majority of these functions will not work properly when called by a skill.</span></span>
+<br />
+
+<br />
+<span style="font-weight: bold">auratgtevent</span>: Not used by vanilla. <span style="color: red"><span style="font-weight: bold">Warning </span></span><span style="color: #aa7777"><span style="font-style: italic">I couldn't get this to work properly in my tests, but as far as I can say, this is the equivalent to the <span style="font-weight: bold">auraevent</span> columns, but for the reciever of the aura.</span></span>
+<br />
+
+<br />
+<span style="font-weight: bold">auratgteventfunc</span>: Not used by vanilla. <span style="color: red"><span style="font-weight: bold">Warning </span></span><span style="color: #aa7777"><span style="font-style: italic">I couldn't get this to work properly in my tests, but as far as I can say, this is the equivalent to the <span style="font-weight: bold">auraeventfunc</span> columns, but for the reciever of the aura.</span></span>
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+<div style="text-align:center"><span style="font-weight: bold"><span style="font-size: 20px; line-height: normal">PASSIVE SKILL SETTINGS</span></span></div>
+<br />
+
+<br />
+<span style="color: #aaaaaa"><span style="font-style: italic">Whenever a skill is a true passive or not depends whenever the <span style="font-weight: bold">Passive</span> boolean is switched to true, otherwise the behaviour of these columns depends on the server side skill functions used, they might function as a secondary passive bonus granted by the skill, as an extension of the <span style="font-weight: bold">Aura / Curse / Buff</span> columns or applied to a summoned creature.</span></span>
+
+<br />
+
+<br />
+<span style="font-weight: bold">passivestate</span>: The state used by the game to assign the stats and events related things granted by this passive to the unit. This is an ID Pointer from <span style="color: yellow">States.txt</span>. <span style="color: red"><span style="font-weight: bold">Warning </span></span><span style="color: #aa7777"><span style="font-style: italic">You shouldn't use the same state on more then one skill if both skills are available to the same character or monster, the game uses an index table to determine which state (and thus which stat changes) are currently active on the unit, a state currently present on a unit cannot be applied to it again while the first state is present, thus two skills using the same state will never be able to apply at the same time. This does not mean they will always prevent stacking, it means that you will experience the strangest of glitches.</span></span>
+<br />
+
+<br />
+<span style="font-weight: bold">passiveitype</span>: This field is used in conjunction with the passive stats used by weapon masteries, they contain an ID pointer to <span style="color: yellow"><span style="font-weight: bold">ItemTypes.txt</span></span> which tells the game what item types will recieve a bonus from the coresponding passive stat. <span style="color: red"><span style="font-weight: bold">Warning </span></span><span style="color: #aa7777"><span style="font-style: italic">This does not work with stats that aren't meant to be part of weapon masteries, forget about it, the only stats this works with are <span style="font-weight: bold">passive_weaponblock</span> and <span style="font-weight: bold">passive_mastery_<type>_<stat></span>, period.</span></span>. Weapon masteries are no hardcoded to the lines in Skills.txt, this has been a die hard rumor.
+
+<br />
+
+<br />
+<span style="font-weight: bold">passivestat1-5</span>: This field tells the game which stats are assigned by this passive skill. This contains an ID pointer from <span style="color: yellow">ItemStatCost.txt</span>.
+<br />
+
+<br />
+<span style="font-weight: bold">passivecalc1-5</span>: This field can either contain a static value or a caltulation telling the game how much to add or subtract from the associated stat.  This field is limited to values between -2147483647 and +2147483647. Higher or lower values will roll.
+<br />
+
+<br />
+<span style="font-weight: bold">passivevent</span>: Not used by vanilla. <span style="color: red"><span style="font-weight: bold">Warning </span></span><span style="color: #aa7777"><span style="font-style: italic">I couldn't get this to work properly in my tests, but as far as I can say, this will control what event this passive will react to.</span></span>
+
+<br />
+
+<br />
+<span style="font-weight: bold">passiveeventfunc</span>: Not used by vanilla. <span style="color: red"><span style="font-weight: bold">Warning </span></span><span style="color: #aa7777"><span style="font-style: italic">I couldn't get this to work properly in my tests, but as far as I can say, this field controls what function to execute if the associated event occurs.</span></span>
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<div style="text-align:center"><span style="font-weight: bold"><span style="font-size: 20px; line-height: normal">SUMMON SETTINGS</span></span></div>
+<br />
+
+<br />
+<span style="color: #aaaaaa"><span style="font-style: italic">Special stats added to a summoned creature are either appended via <span style="font-weight: bold">MonEquip.txt</span>, <span style="font-weight: bold">MonProp.txt</span> or via the <span style="font-weight: bold">aurastat</span> or <span style="font-weight: bold">passivestat</span> columns.</span></span>
+
+<br />
+
+<br />
+<span style="font-weight: bold">summon</span>: This field specifies what creature is summoned by this skill. This is an ID Pointer from <span style="color: yellow">MonStats.txt</span>.
+<br />
+
+<br />
+<span style="font-weight: bold">pettype</span>: This controls what group the summoned creature is placed in. This controls what icon appears, whenever this summon can co-exist with other summons or not (such as there being only 1 golem, rather then one golem of each type), warping behaviour and more. This is an ID Pointer from <span style="color: yellow">PetTypes.txt</span>.
+<br />
+
+<br />
+
+<span style="font-weight: bold">petmax</span>: This field can contain either a static value or a calculation which controlls how many summons of this group a player can have at a time. Leaving it blank means there is no limitation.
+<br />
+
+<br />
+<span style="font-weight: bold">summode</span>: The animation mode that the summoned creature will play when you summon it. Lets say you want to summon a Zombie, and it should look as if the Zombie crawls out of the soil, then you'd set this to S1 (the special animation of the Zombie). Usually you'd use NU (neutral) mode here, because most units won't have animations suitable for this.
+<br />
+
+<br />
+<span style="font-weight: bold">sumskill1-5</span>: These fields control the skills that are assigned to the summoned creature. This doesn't meant the summon will use these skills. This is mostly used to pass a synergy bonus to the summoned creature (such as additional damage for Hydra). Whenever a summon will actively use any of these skills depends on the AI used. You can forget using the Necropet AI, this AI is totally hardcoded and will not use these skills unless the code is modified. The best AI to use is the Shadowmaster AI, be aware that the skills that the summon should use must also be referenced in <span style="font-weight: bold">MonStats.txt</span>. More on how to properly use the Shadowmaster AI can be found <a href="http://phrozenkeep.planetdiablo.gamespy.com/forum/viewtopic.php?t=21049" target="_self" class="postlink">here</a>.
+<br />
+
+<br />
+<span style="font-weight: bold">sumsk1-5calc</span>: These fields can contain either a static value or a calculation that tells the game what sLvl to assign to the coresponding skill assigned to the summoned creature.
+<br />
+
+<br />
+<span style="font-weight: bold">sumumod</span>: This field is pretty neat, it controls what boss modifiers to grant the summoned creature, this means you can make grant your summons properties like Lightning Enchanted or Aura Enchanted (random aura). This column contains ID numbers from <span style="color: yellow">MonUMod.txt</span>. There is only one minor side effect, because the summoned creature doesn't have a special boss seed, the name that is displayed when you hover over it with Unsummon will be <span style="font-style: italic">Mind Maw the Slasher</span>.
+<br />
+
+<br />
+<span style="font-weight: bold">sumoverlay</span>: This field controls what graphical overlay to display when the creature is summoned (this overlay is applied to the summoned creature, not the caster). This is an ID Pointer from <span style="color: yellow">Overlays.txt</span>.
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+<div style="text-align:center"><span style="font-weight: bold"><span style="font-size: 20px; line-height: normal">SOUND and OVERLAY SETTINGS</span></span></div>
+<br />
+
+<br />
+<span style="color: #aaaaaa"><span style="font-style: italic">Quite obviously all columns ending with 'sound' are meant for ID pointers from <span style="font-weight: bold">
+
+<br />
+Sounds.txt</span> whereas those ending with 'overlay' are meant for ID pointers from <span style="font-weight: bold">Overlays.txt</span>.</span></span>
+<br />
+
+<br />
+<span style="font-weight: bold">stsuccessonly</span>: A boolean that controls whenever the assigned sounds and overlays will keep playing even when the casting of the skill is interrupted by an attack landed on the caster. <span style="font-style: italic">Correction by brappy</span>
+<br />
+
+<br />
+
+<span style="font-weight: bold">stsound</span>: This field controls what sound will be played when the starting function of the skill executes, it will play irregardless of the character class using the skill.
+<br />
+
+<br />
+<span style="font-weight: bold">stsoundclass</span>: This field controls what sound will be played when the starting function of the skill executes, it will play <span style="font-weight: bold"><span style="font-style: italic">only</span></span> for the character class this skill is assigned to in the <span style="font-weight: bold">charclass</span> column. This is useful for preventing grunts from one class to be played when another class uses it (this wasen't the case prior to 1.10, so if you gave Bash to lets say a Sorceress, she would play the Barbarian grunt wavs).
+<br />
+
+<br />
+<span style="font-weight: bold">stsounddelay</span>: Boolean of unknown functionality. <span style="color: red"><span style="font-weight: bold">Warning </span></span><span style="color: #aa7777"><span style="font-style: italic">Again, I couldn't see a difference in-game while testing. But I believe this controls whenever the sound should start playing at the moment the starting function <span style="font-weight: bold">beings</span> execution (false) or when the function <span style="font-weight: bold">finishes</span> executing (true).</span></span>
+
+<br />
+
+<br />
+<span style="font-weight: bold">weaponsnd</span>: This boolean controls whenever or not to play the sound associated with the weapon you have equipped when using this skill when the starting function executes.
+<br />
+
+<br />
+<span style="font-weight: bold">dosound</span>: This field controls which sound to play every time the finishing function executes (for a skill like Zeal this would mean every time your Paladin swings at an enemy).
+<br />
+
+<br />
+<span style="font-weight: bold">dosound a</span>: How this and the next field work is depending on which <span style="font-weight: bold">finishing functions</span> are associated with the skill. It ranges from specific sounds to play after the attack, to the sounds associated with summoned creatures.
+
+<br />
+
+<br />
+<span style="font-weight: bold">dosound b</span>: How this and the previous field work is depending on which <span style="font-weight: bold">finishing functions</span> are associated with the skill. It ranges from specific sounds to play after the attack, to the sounds associated with summoned creatures.
+<br />
+
+<br />
+<span style="font-weight: bold">tgtoverlay</span>: This field controls what overlay to associate with the unit targeted by the skill, this overlay is drawn  once the <span style="font-weight: bold">finishing function</span> executes. In the case of Zeal this would mean that the initial swipe will <span style="font-weight: bold">not</span> draw an overlay over the monster you attack, but all following swipes will.
+
+<br />
+
+<br />
+<span style="font-weight: bold">tgtsound</span>: This field controls what sound to play (originating from the targeted unit) once the <span style="font-weight: bold">finishing function</span> associated with the skill executes. In the case of Zeal this would mean that the initial swipe will <span style="font-weight: bold">not</span> play a sound but all following swipes will.
+<br />
+
+<br />
+<span style="font-weight: bold">prgoverlay</span>: How this field is used depends on the skill functions associated with the skill. In the case of charge-up skills, this field contains the first overlay for the charge-up graphics group used by this skill. For other other skills like Hurricane it controls what overlay to display while the skill is active.
+<br />
+
+<br />
+<span style="font-weight: bold">prgsound</span>: Like the previous field, the way this field works varies with the functions used. It can contain the sounds to play for each charge-up or the sounds to play while a skill like Hurricane is active.
+<br />
+
+<br />
+<span style="font-weight: bold">castoverlay</span>: This field controls what overlay to associate with the unit using the skill. This overlay is drawn when the skill is successfully started (the starting function begins to execute - this does not mean the skill succeeds, it only means that the code for the skill starts executing).
+<br />
+
+<br />
+<span style="font-weight: bold">cltoverlaya</span>: Usually this will work like the previous field, but depending on the skill functions used (such as those of the Sorceress' cold armors) this can vary greatly.
+<br />
+
+<br />
+
+<span style="font-weight: bold">cltoverlayb</span>: Usually this will work like <span style="font-weight: bold">castoverlay</span>, but depending on the skill functions used (such as those of the Sorceress' cold armors) this can vary greatly.
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+<div style="text-align:center"><span style="font-weight: bold"><span style="font-size: 20px; line-height: normal">CLIENT-SIDE SKILL FUNCTIONS</span></span></div>
+
+<br />
+
+<br />
+<span style="color: #aaaaaa"><span style="font-style: italic">These functions where originally referenced by a hardcoded table during 1.00-1.09, as of 1.10 this function index has been softcoded and can now be modified by editing skills.txt. The client side functions handle how the skill will appear on the users screen, you should stick with the client/server function pairs Blizzard have used (the skill will otherwise do something completely different from what is shown on screen, which can lead to desync and possibly crashes if the client isn't updated properly in MP games), but feel free to experiment.</span></span>
+<br />
+
+<br />
+<span style="font-weight: bold">cltstfunc</span>: Client starting function, This controls the client side function executed when you rightclick or shift+leftclick somewhere while the skill is assigned to a button.
+<br />
+
+<br />
+<span style="font-weight: bold">cltdofunc</span>: Client finishing function, this controls the client side function executed when the starting function finishes executing, it might either be called repeatedly as long as the mouse button remains down, or it may be called periodically (for skills like paladin auras and blade shield).
+<br />
+
+<br />
+<span style="font-weight: bold">cltprgfunc1</span>: Client side function to execute when releasing (using a finishing move) charge number 1.
+<br />
+
+<br />
+<span style="font-weight: bold">cltprgfunc2</span>: Client side function to execute when releasing (using a finishing move) charge number 2.
+<br />
+
+<br />
+<span style="font-weight: bold">cltprgfunc3</span>: Client side function to execute when releasing (using a finishing move) charge number 3.
+<br />
+
+<br />
+
+<br />
+
+<br />
+<div style="text-align:center"><span style="font-weight: bold"><span style="font-size: 20px; line-height: normal">CLIENT-SIDE MISSILE SETTINGS</span></span></div>
+<br />
+
+<br />
+<span style="color: #aaaaaa"><span style="font-style: italic">These columns control the various aspects the missiles launched by this skill client side, that is, this is independant from what the server-side code does, thus the server-side missile settings must match this to avoid weird behaviour and stupid questions from users. But you don't have to make the functions match, nothing will happen if they don't, the missile will just not appear, or appear the way it should, on screen.</span></span>
+<br />
+
+<br />
+<span style="font-weight: bold">cltmissile</span>: Primary missile to launch when the client side starting function is executed. This is launched independant of the client side starting function involved (even when no function is execute at all: see fireball and firebolt for example).
+<br />
+
+<br />
+<span style="font-weight: bold">cltmissilea</span>: First secondary client-side missile (how and if this is accessed depends on the client side functions used by the skill).
+<br />
+
+<br />
+<span style="font-weight: bold">cltmissileb</span>: Second secondary client-side missile (how and if this is accessed depends on the client side functions used by the skill).
+<br />
+
+<br />
+<span style="font-weight: bold">cltmissilec</span>: Third secondary client-side missile (how and if this is accessed depends on the client side functions used by the skill).
+<br />
+
+<br />
+<span style="font-weight: bold">cltmissiled</span>: Fourth secondary client-side missile (how and if this is accessed depends on the client side functions used by the skill).
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+<div style="text-align:center"><span style="font-weight: bold"><span style="font-size: 20px; line-height: normal">CLIENT-SIDE SKILL CALCULATIONS</span></span></div>
+<br />
+
+<br />
+<span style="font-weight: bold">cltcalc1-3</span>: These fields serve special purposes and are referenced by the client side skill functions, what they do depends entirely on the functions involved. You reference them inside other calculations if you wish or require additional space for a very long formula (but you should make sure the functions used don't actually access these fields first!). They can of course also contain a static value instead of a calculation.
+<br />
+
+<br />
+
+<br />
+
+<br />
+<div style="text-align:center"><span style="font-weight: bold"><span style="font-size: 20px; line-height: normal">MISCELLANEOUS SETTINGS I</span></span></div>
+<br />
+
+<br />
+<span style="font-weight: bold">warp</span>: A boolean of unknown function. <span style="color: red"><span style="font-weight: bold">Warning </span></span><span style="color: #aa7777"><span style="font-style: italic">Set to true only for skills that shift you to another spot, but altering this seams to have no influence on the game at all. Maybe this has to do with MP games and synchronisation, leave it alone to stay on the safe side.</span></span>
+<br />
+
+<br />
+<span style="font-weight: bold">immediate</span>: A boolean that controls whenever an aura will apply immediately after it is assigned to a mouse button or whenever to wait until the first <span style="font-weight: bold">predelay</span> has elapsed. Usually those aurae that grant a bonus to the players stats will be set to true herein, while those that effect monsters (like Conviction) will be set to false.
+<br />
+
+<br />
+<span style="font-weight: bold">enhanceable</span>: A boolean of unknown function. <span style="color: red"><span style="font-weight: bold">Warning </span></span><span style="color: #aa7777"><span style="font-style: italic">This is set to true only for skills that are always sLvl 1, nonetheless this doesn't influence if the skill gains any bonus from items, it seams to do nothing noteable (if it does anything at all).</span></span>
+<br />
+
+<br />
+<span style="font-weight: bold">attackrank</span>: This field is related to how monsters react when the skill in question is used against them. Ever wondered why monsters don't attempt to retaliate if they are hit by a elemental damage aura, this field is what controls the retaliation behaviour. As a rule of thumb, the higher the more likely a monster will retaliate against the attack. 0 will make them ignore it (like they ignore elemental damage auras).
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+<div style="text-align:center"><span style="font-weight: bold"><span style="font-size: 20px; line-height: normal">EQUIPMENT RELATED USAGE RESTRICTIONS</span></span></div>
+<br />
+
+<br />
+
+<span style="font-weight: bold">noammo</span>: This boolean controls whenever the player requires ammunition to use this skill. Use this, in conjunction with <span style="font-weight: bold">decquant</span> to make other missile skills behave like Magic Arrow. Obviously setting this to true means no ammo is required <img src="images/smiles/icon_wink.gif" alt="icon_wink.gif" border="0" />.
+<br />
+
+<br />
+<span style="font-weight: bold">range</span>: This switch field can take one of four values. It controls how the player can launch this skill. First of all, <span style="font-weight: bold">none</span> means it has no restrictions on it, and is a spell (like Fire Ball), <span style="font-weight: bold">rng</span> means this skill is a ranged skill (Javelin skills, Bow/Crossbow skills), <span style="font-weight: bold">h2h</span> means that this is a Hand to Hand combat skill (melee) (Bash, Sacrifice etc), <span style="font-weight: bold">both</span> means that the skill can function as both <span style="font-weight: bold">h2h</span> and <span style="font-weight: bold">rng</span> (like Attack). <span style="color: red"><span style="font-weight: bold">Warning </span></span><span style="color: #aa7777"><span style="font-style: italic">Setting a skill to h2h will not prevent the player from launching it from afar, he can always shift-click!</span></span>
+
+<br />
+
+<br />
+<span style="font-weight: bold">weapsel</span>: This field controls how to access the gear necessary to use this skill. A blank value means it wont handle this skill in a special way (that is, it'll look for the weapon in the <span style="font-weight: bold">Right</span> hand of the player). 1 in this field will make it look for a weapon in the <span style="font-weight: bold">Left</span> hand of the player. 2 in this field means that it can either use the <span style="font-weight: bold">Right</span> or the <span style="font-weight: bold">Left</span> or <span style="font-weight: bold">Both</span> weapons (used by Whirlwind). 3 in this field means that it will always use <span style="font-weight: bold">Both</span> weapons and finally a value of 4 means that the game will not use a weapon, but a piece of armor. Be aware that code 4 is heavily hardcoded and will only work with those skill functions using it in vanilla!
+
+<br />
+
+<br />
+<span style="font-weight: bold">itype1-3</span>: The item type required to use this skill (needed to use this skill, this restriction is imposed on the players right hand). This is a ID pointer from <span style="color: yellow">ItemTypes.txt</span>.
+<br />
+
+<br />
+<span style="font-weight: bold">etype1-2</span>: The item types this skill cannot be used with (even if they are included in the former fields! This restriction is imposed on the players right hand). This is a ID pointer from <span style="color: yellow">ItemTypes.txt</span>. This is why you cannot use Attack with a throwing potion for example (you could before LoD).
+<br />
+
+<br />
+
+<span style="font-weight: bold">itypeb1-3</span>: The item type required to use this skill (needed to use this skill, this restriction is imposed on the players left hand). This is a ID pointer from <span style="color: yellow">ItemTypes.txt</span>.
+<br />
+
+<br />
+<span style="font-weight: bold">etypeb1-2</span>: The item types this skill cannot be used with (even if they are included in the former fields! This restriction is imposed on the players left hand). This is a ID pointer from <span style="color: yellow">ItemTypes.txt</span>. This is why you cannot use Attack with a throwing potion for example (you could before LoD).
+<br />
+
+<br />
+
+<br />
+
+<br />
+<div style="text-align:center"><span style="font-weight: bold"><span style="font-size: 20px; line-height: normal">ANIMATION SETTINGS</span></span></div>
+<br />
+
+<br />
+<span style="font-weight: bold">anim</span>: The animation mode that the game plays when the player uses this skill. The list of animation modes for players can be found within <span style="color: yellow">PlrMode.txt</span>. Setting this to mode SQ will make the player use the associated sequence instead. This also controls whenever the skill is effected by FCR or IAS! In case of a sequence it depends on what animations are used by the sequence. <span style="color: red"><span style="font-weight: bold">Warning </span></span><span style="color: #aa7777"><span style="font-style: italic">Certain modes (like GH) will crash the game as they aren't meant to be used by skills.</span></span>
+<br />
+
+<br />
+<span style="font-weight: bold">seqtrans</span>: <span style="font-style: italic"><span style="color: #aaaaaa">This field apparently doesn't do anything, it probably was meant to control animation mode played before starting the sequence, but is obviously not used (it never was, not even in 1.00 IIRC).</span></span>
+
+<br />
+
+<br />
+<span style="font-weight: bold">monanim</span>: Monsters always use the skill mode that you assign in <span style="color: yellow">MonStats.txt</span>. The only units that access this field are <span style="font-weight: bold">Shadow Masters</span> and <span style="font-weight: bold">Shadow Warriors</span>, because they use Assassin animations. A list of modes can be found within <span style="color: yellow">PlrMode.txt</span> for these two summons. If a value of <span style="font-weight: bold">xx</span> is supplied the Shadow's will look for the sequence assigned inside <span style="color: yellow">MonStats.txt</span> this workaround was put there by Blizzard because monsters are unable to use Player sequences. <span style="font-style: italic">New wording in part on a suggestion by Myhrginoc</span>.
+
+<br />
+
+<br />
+<span style="font-weight: bold">seqnum</span>: This field contains the ID of the player-animation-sequence to play when this skill is used in case the <span style="font-weight: bold">anim</span> column is set to use mode SQ. Unlike monster sequences, player sequences are unfortunately still hardcoded in a table within <span style="color: yellow">D2Common.dll</span>. Below is a list of sequences (the proper characters are needed for each sequence, but some work on more then one class).
+<br />
+
+<br />
+<script type="text/javascript" src="js/fi_divexpand.js"></script><div align="center"><script type="text/javascript">codeDivStart()</script>
+<br />
+
+0 = no sequence (if you use this you'll see half of a casting anim, and then an assertion error)
+<br />
+1 = used by Jab
+<br />
+2 = messed up sequence originally used by Sacrifice (flashes on some weapons)
+<br />
+3 = unused sequence (uses casting anim)
+<br />
+4 = used by Charge
+<br />
+5 = unused sequence (from the times conviction wasen't an aura, the sequence still works on a pally with a sword)
+
+<br />
+6 = used by Inferno
+<br />
+7 = unused sequence (uses casting anim)
+<br />
+8 = used by Impale
+<br />
+9 = messed up sequence originally used by Fend (doesn't work properly)
+<br />
+10 = used by Whirlwind
+<br />
+11 = used by Double Swing
+<br />
+
+12 = similar to 6, used by Lightning skills
+<br />
+13 = used by Leap
+<br />
+14 = used by Leap Attack
+<br />
+15 = used by Double Throw
+<br />
+16 = used by Double-Claw attacks
+<br />
+17 = unused Assassin? sequence
+<br />
+18 = used by Arctic Blast
+<br />
+19 = unused sequence originally used by Dragon Talon
+<br />
+20 = unused Assassin? sequence
+
+<br />
+21 = used by Dragon Flight
+<br />
+22 = unused sequence originally used by Were-transform skills
+<br />
+23 = used by Blade Fury
+<br />
+Sequences >24 but exist in the DLL (the highest confirmed one is 41, but there are likely more).
+<br />
+</div></div>
+<br />
+
+<br />
+<span style="font-weight: bold">seqinput</span>: This controls the interval to wait before looping the sequence (used by recursive skills such as Inferno), setting this to 100 will make the game pause between individual inferno bursts for example. This is most likely in milliseconds and not frames, setting the interval to a too small value however will cause the sequence to skip the trigger frame (on the client-side only however...)!
+
+<br />
+
+<br />
+<span style="font-weight: bold">durability</span>: A boolean of unknown function. <span style="color: red"><span style="font-weight: bold">Warning </span></span><span style="color: #aa7777"><span style="font-style: italic">This doesn't have anything to do with skills that can reduce durability. It's apparently related to skills that use sequences however. No idea what it does, follow the Blizzard approach and just use it with those skill functions they use it with to be safe of unexpected side effects.</span></span>
+<br />
+
+<br />
+<span style="font-weight: bold">UseAttackRate</span>: A boolean of unknown function. <span style="color: red"><span style="font-weight: bold">Warning </span></span><span style="color: #aa7777"><span style="font-style: italic">This is not related to Attack Rating if you wonder. The name suggests that it is related to Attack Rate however (which is the stat increased by IAS) however it seams to have no influence whatsoever in game, most likely a deprecated leftover from alpha D2 times.</span></span>
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+<div style="text-align:center"><span style="font-weight: bold"><span style="font-size: 20px; line-height: normal">TARGETING CONTROLS</span></span></div>
+<br />
+
+<br />
+<span style="color: #aaaaaa"><span style="font-style: italic">While these columns all look straitforward, they usually aren't. What and whenever a skill can target something depends foremost on the skill functions involved, these columns are just a second layer of minor importance, unfortunately.</span></span>
+<br />
+
+<br />
+<span style="font-weight: bold">LineOfSight</span>: This field seams to be a binary flag switch, but only one flag is used by the game, which is 4 (100). It controls whenever or not the skill takes into account the players Line of Sight. That is, if this is set to 4 you cannot cast the skill through walls, but if it is left blank you can. This is easy to test with summoning skills. If for example you'd set this to 0 on a skill like Valkyrie you can summon a valk in a different room, without ever opening the door.
+<br />
+
+<br />
+<span style="font-weight: bold">TargetableOnly</span>: A boolean of unknown function. <span style="color: red"><span style="font-weight: bold">Warning </span></span><span style="color: #aa7777"><span style="font-style: italic">It doesnt do what the name suggests anyhow. Frankly enough it doesn't seam to do anything.</span></span>
+<br />
+
+<br />
+<span style="font-weight: bold">SearchEnemyXY</span>: A boolean of unknown function. <span style="color: red"><span style="font-weight: bold">Warning </span></span><span style="color: #aa7777"><span style="font-style: italic">This usually comes in conjunction with the previous field, likewise it doesnt seam to do anything (noteable at least).</span></span>
+
+<br />
+
+<br />
+<span style="font-weight: bold">SearchEnemyNear</span>: A boolean that controls whenever the skill will  <span><strike> make other people call you a noob in MP games </strike></span> , I mean whenever it should automatically pick its own targets (this works best with the left button (combined with shift obviously - it doesn't need to be an enemy, it can also be a corpse for skills that target corpses), heck the character will even pursues monsters on his own as long as the button is held down!). This worked on all skills I tested it on. Don't abuse this field, it will make D2 even easier then it is, as you won't even need to target anything, just hold the button...
+<br />
+
+<br />
+<span style="font-weight: bold">SearchOpenXY</span>: When set to true, this boolean will make the skill look for an unoccupied subtile (apparently depending on the size settings of the controllermissile created by the skill) as the target for the skill (this is used by skills like Fire Wall, Meteor and Blizzard which create a invisible controller missile), it makes sense because no two units (and missiles ARE units) can occupy the same subtile, so if Fire Wall or a similar skill was to spawn in an occupied subtile the game would either crash OR the skill would never show any effect since the missile is destroyed before it triggers. If no free subtile is found in proximity to the target of the skill, the execution of the skill will fail. <span style="font-style: italic">Confirmed by Brother Laz</span>.
+<br />
+
+<br />
+<span style="font-weight: bold">SelectProc</span>: This field is always to be used in conjunction with the following field. It controls which corpses you can target and has 6 different filter lists. 1 is used by the variants of Corpse Explosion, 2 is used by Raise Skeleton and Raise Skeletal Mage, 3 is used by Revive, 4 is used by Find Potion, 5 is used by Find Item and 6 is used by Grim Ward. I haven't tested if this works on living monsters (such as making a skill that cannot target bosses). <span style="color: red"><span style="font-weight: bold">Warning </span></span><span style="color: #aa7777"><span style="font-style: italic">This does not control whenever a skill can actually be used on the targeted corpses (you cannot make Revive work on boss-corpses etc), but you will be able to highlight them. Not very useful...</span></span>
+<br />
+
+<br />
+<span style="font-weight: bold">TargetCorpse</span>: This boolean controls whenever the skill can be cast on a corpse (it doesn't control whenever the corpse can be selected, it only controls if the skill is cast on the corpse AFTER it is selected, whenever or not it can select the corpse depends on the skill functions and filter list used).
+<br />
+
+<br />
+<span style="font-weight: bold">TargetPet</span>: This boolean controls whenever the skill can be cast on a summon or hireling (it doesn't control whenever the summon or hireling can be selected, it only controls if the skill is cast on the summon or hireling AFTER it is selected, whenever or not it can select the summons or hirelings depends on the skill functions used).
+
+<br />
+
+<br />
+<span style="font-weight: bold">TargetAlly</span>: This boolean controls whenever the skill can be cast on a other players (it doesn't control whenever the another player can be selected, it only controls if the skill is cast on another player AFTER it is selected, whenever or not it can select another player depends on the skill functions used).
+<br />
+
+<br />
+<span style="font-weight: bold">TargetItem</span>: This boolean controls whenever the skill can be cast on items lying on the ground (it doesn't control whenever the item can be selected, it only controls if the skill is cast on the item AFTER it is selected, whenever or not it can select an item depends on the skill functions used).
+<br />
+
+<br />
+<span style="font-weight: bold">TgtPlaceCheck</span>: This boolean is only used by monster resurrection spells. Setting it to false will break those skills (Resurrect and Resurrect2), I don't know what it does other then enabling those skill functions though.
+<br />
+
+<br />
+
+<br />
+
+<br />
+<div style="text-align:center"><span style="font-weight: bold"><span style="font-size: 20px; line-height: normal">MISCELLANEOUS SETTINGS II</span></span></div>
+<br />
+
+<br />
+<span style="font-weight: bold">AttackNoMana</span>: A boolean that controls whenever or not the player should perform a regular attack in-case he runs out of mana while using this skill. <span style="font-style: italic">Correction by Nameless.</span>
+<br />
+
+<br />
+
+<br />
+
+<br />
+<div style="text-align:center"><span style="font-weight: bold"><span style="font-size: 20px; line-height: normal">ITEM-EVENT RELATED SKILL SETTINGS</span></span></div>
+<br />
+
+<br />
+<span style="color: #aaaaaa"><span style="font-style: italic">These columns only influence the behaviour and looks of a skill when it is launched by a Chance-To-Cast event function, they don't effect the skills normal behaviour. I didn't test most of these because I have no idea how exactly I should see the differences as they appear to be minimal, so they are listed as unknown or unclear with my best guess appended.</span></span>
+<br />
+
+<br />
+<span style="font-weight: bold">ItemEffect</span>: Server-side launcher function. This field controls what function is called when this skill is launched by a chance-to-cast modifier. Leaving it blank means no function is called, and the skill isn't cast. You would usually use function 1. But there are at least two others (36 and 151). Function 36 will fire the skill from the target rather then the wielder of the item. <span style="font-style: italic">Additional info supplied by Brother Laz</span>
+
+<br />
+
+<br />
+<span style="font-weight: bold">ItemCltEffect</span>: Client-side launcher function. This is only required if an abnormal launcher function is used in the previous field. Blizzard uses 10 and 96 as equivalents to server-functions 36 and 151.
+<br />
+
+<br />
+<span style="font-weight: bold">ItemTarget</span>: A switch of unclear functionality. <span style="color: red"><span style="font-weight: bold">Warning </span></span><span style="color: #aa7777"><span style="font-style: italic">This seams to be another one of those targeting filters. By default this is blank (0), but for some skills special targeting functions are used. 1 is used by Enchant (which can also be cast on nearby allies), 2 is used by Teleport (which picks a random empty subtile), 3 is used by the corpse explosion variants and probably selects a random corpse and 4 is used by homing missiles (Bone Spirit) and Fist of the Heavens (skills that need an absolute target).</span></span>
+<br />
+
+<br />
+<span style="font-weight: bold">ItemCheckStart</span>: A boolean of unknown function. <span style="color: red"><span style="font-weight: bold">Warning </span></span><span style="color: #aa7777"><span style="font-style: italic">I assume that this is used to prevent collisions between the Hydra and Bone Prison who have this switched to true and occupied subtiles before the starting function is execute.</span></span>
+
+<br />
+
+<br />
+<span style="font-weight: bold">ItemCltCheckStart</span>: A boolean of unknown function. <span style="color: red"><span style="font-weight: bold">Warning </span></span><span style="color: #aa7777"><span style="font-style: italic">This seams to serve a similar purpose to the one assumed for the previous field, seams to tell the game to check if the server-side starting function has executed successfully before calling the client function (used by Corpse Explosion skills, probably to prevent the gore-graphic from showing up even if the skill fails).</span></span>
+<br />
+
+<br />
+<span style="font-weight: bold">ItemCastSound</span>: This controls the sound that is played instead of the regular sound when the skill is launched by an Item Event. This is a ID pointer from <span style="color: yellow">Sounds.txt</span>.
+<br />
+
+<br />
+<span style="font-weight: bold">ItemCastOverlay</span>: This controls the casting overlay displayed instead of the regular overlay when this skill is launched by an Item Event. This is a ID pointer from <span style="color: yellow">Overlays.txt</span>.
+<br />
+
+<br />
+
+<br />
+
+<br />
+<div style="text-align:center"><span style="font-weight: bold"><span style="font-size: 20px; line-height: normal">POINT PLACEMENT and PRE-REQUIREMENT SETTINGS</span></span></div>
+<br />
+
+<br />
+
+<span style="font-weight: bold">skpoints</span>: This field can contain either a static value or a calculation. This controls how many skill points are necessary in order to boost this skill by 1 sLvl.
+<br />
+
+<br />
+<span style="font-weight: bold">reqlevel</span>: The minimum character level required in order to put a point in this skill. To remove the hardcoded level requirement from OSkills you can set this to -6.
+<br />
+
+<br />
+<span style="font-weight: bold">maxlvl</span>: The maximum sLvl this skill can achieve. <span style="color: red"><span style="font-weight: bold">Warning </span></span><span style="color: #aa7777"><span style="font-style: italic">The actual absolute maximum skill level is controlled by the <span style="font-weight: bold">MaxLevel</span> row in <span style="font-weight: bold">Experience.txt</span> and is thus always equal to the maximum cLvl of the class using the skill.</span></span>
+
+<br />
+
+<br />
+<span style="font-weight: bold">reqstr</span>: How much strength the player requires in order to put a point in this skill (first point only). This is functional as it was always, but it isn't displayed on screen.
+<br />
+
+<br />
+<span style="font-weight: bold">reqdex</span>: How much dexterity the player requires in order to put a point in this skill (first point only). This is functional as it was always, but it isn't displayed on screen.
+<br />
+
+<br />
+<span style="font-weight: bold">reqint</span>: How much energy the player requires in order to put a point in this skill (first point only). This is functional as it was always, but it isn't displayed on screen.
+<br />
+
+<br />
+<span style="font-weight: bold">reqvit</span>: How much vitality the player requires in order to put a point in this skill (first point only). This is functional as it was always, but it isn't displayed on screen.
+<br />
+
+<br />
+<span style="font-weight: bold">reqskill1-3</span>: These fields contain the ID Pointers (<span style="font-weight: bold">name</span> column) of the other skills you need in order to put your first point in this skill (aka simply the prerequired skills).
+<br />
+
+<br />
+
+<br />
+
+<br />
+<div style="text-align:center"><span style="font-weight: bold"><span style="font-size: 20px; line-height: normal">STATE RELATED RESTRICTIONS</span></span></div>
+<br />
+
+<br />
+<span style="font-weight: bold">restrict</span>: This switch field controls under what state (shape in case of a druid) this skill can be used. 0 means that it can only be used while in Human form, 1 means that it can be used both under shifted and under Human form and 2 means that it can only be used when in one of the states defined in the three following columns.
+<br />
+
+<br />
+<span style="font-weight: bold">state1-3</span>: This field controls which states this skill is restricted to, in the case <span style="font-weight: bold">restrict</span> is set to 2. This is an ID pointer from <span style="color: yellow">States.txt</span>. 
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+<div style="text-align:center"><span style="font-weight: bold"><span style="font-size: 20px; line-height: normal">SKILL DELAY SETTINGS</span></span></div>
+<br />
+
+<br />
+<span style="font-weight: bold">delay</span>: This field can contain either a static value or a calculation. This controls how many frames the skilldelay state will be applied to the character after using this skill. Among others this also controls which skills will be disable while that state is active. Any skill with a value greater then 0 in this column will be disabled while under the influence of the skilldelay state. When the skill delay is applied depends on the skill used, usually they initialize once the trigger frame of the animation has triggered an event. The delay counter will be reset should the execution of the skill be interrupted by an attack.
+<br />
+
+<br />
+
+<br />
+
+<br />
+<div style="text-align:center"><span style="font-weight: bold"><span style="font-size: 20px; line-height: normal">MISCELLANEOUS SETTINGS III</span></span></div>
+<br />
+
+<br />
+<span style="font-weight: bold">leftskill</span>: A boolean that controls whenever or not you can use this skill will appear on the list of skills you can assign to the left mouse button. <span style="color: red"><span style="font-weight: bold">Warning </span></span><span style="color: #aa7777"><span style="font-style: italic">A bunch of skills (especially all auras) cannot be used on the left mouse button, no matter what you set this to, this is caused by engine limitations, forget about it. You shouldn't put things like curses, summoning and the like in here, it only serves to causes gameplay related annoyance.</span></span>
+<br />
+
+<br />
+
+<span style="font-weight: bold">repeat</span>: A boolean of unclear functionality. <span style="color: red"><span style="font-weight: bold">Warning </span></span><span style="color: #aa7777"><span style="font-style: italic">This boolean is used in conjunction with skills that keep repeating their finishing function for as long as you keep the button pressed (Inferno, Arctic Blast, Blade Fury), however unchecking it doesn't have any influence on the game, the skills work like they did before, so I'm a bit puzzled regarding the real purpose of this field. Set it to true on clones of those three skills, to prevent possible problems.</span></span>
+<br />
+
+<br />
+<span style="font-weight: bold">checkfunc</span>: This field contains a reference to a slot in a function table of a special function to call, but the purpose is still unknown. <span style="color: red"><span style="font-weight: bold">Warning </span></span><span style="color: #aa7777"><span style="font-style: italic">This appears to be a sort of callback function to execute once the main skill functions finish executing. The game uses function 1 for all skills that can use up ammunition (arrows, bolts), 2 is used for throwing (but not the Amazons javelin skills!), 3 is used for Left Hand Throw, 4 is used for Left Hand Swing, 5 is used for the scroll and book skills (these aren't skills at all, what they do is controlled solely by the functions assigned in misc.txt and books.txt) and 6 is used by Double Throw. These are most likely related to updating quantity data in multiplayer games from the looks of this.</span></span> 
+<br />
+
+<br />
+
+<br />
+
+<br />
+<div style="text-align:center"><span style="font-weight: bold"><span style="font-size: 20px; line-height: normal">MANA COST SETTINGS</span></span></div>
+<br />
+
+<br />
+<span style="color: #aaaaaa"><span style="font-style: italic">The following fields control the mana cost of the skill, and how the mana cost is to be applied. In order to not over-complicate the explanations below, here is a formula to calculate mana cost (replace the column names with the values you've put in those columns in Skills.txt, obviously). For effectiveshift value see the table below this section.
+<br />
+
+<br />
+<span style="font-weight: bold">manacost = max((mana+lvlmana*(sLvl-1))*effectiveshift,minmana);</span>
+<br />
+
+<br />
+
+</span></span>
+<br />
+
+<br />
+<span style="font-weight: bold">nocostinstate</span>: A boolean related to the other state-restriction related columns found earlier in the file. This controls whenever or not the skill will require no mana while the player is transformed (shape shifted), this is used to make Werebear and Werewolf cost no mana when the Druid is shape shifted, so he can return to human form without any mana cost.
+<br />
+
+<br />
+<span style="font-weight: bold">usemanaondo</span>: A boolean that controls when the mana pool is diminished, I can't properly explain this but the following example will demonstrate how it works, this field is usually not noteable, but if you set this to true on a skill like Inferno you will only loose mana once you let the button go (even if you cast the Inferno for a whole hour, day, month or year), but once you let the button go and the game finishes executing the functions you get the whole mana cost thrown at you. <span style="color: red"><span style="font-weight: bold">Warning </span></span><span style="color: #aa7777"><span style="font-style: italic">This doesn't always work, sometimes you will not loose any mana, even after you let go of the mouse button, so don't overuse this.</span></span> 
+<br />
+
+<br />
+
+<span style="font-weight: bold">startmana</span>: The minimum amount of mana required to cast this skill. This does not control how much mana the skill uses, but the icon will remain red as long as mana is below this. For example Inferno is not castable by a Sorceress who only has 5 mana. This can be quite nasty, see it as if it was called <span style="font-weight: bold">ReqMana</span>. <img src="images/smiles/icon_wink.gif" alt="icon_wink.gif" border="0" />
+<br />
+
+<br />
+<span style="font-weight: bold">minmana</span>: The mana cost for this skill will never fall below this minimum value. This functions like <span style="font-weight: bold">max(minmana,manacost);</span>, this is useful for skills with decreasing mana cost per sLvl while preventing them from dropping too low.
+<br />
+
+<br />
+<span style="font-weight: bold">manashift</span>: This field controls the precision of the mana cost. Mana Cost is handled in 256ths for extra precision (mana is handled in 256ths by code). Internally this is simply a bitwise shift, but for not making this too complicated see the table below for multiplies and some other values that will aid you in understanding how it works. The mana cost in the example is 1000. To get the proper mana cost just multiply it by the multiplier I've listed below.
+
+<br />
+
+<br />
+<script type="text/javascript" src="js/fi_divexpand.js"></script><div align="center"><script type="text/javascript">codeDivStart()</script>
+<br />
+manashift  precision   multiplier percentage    example mana cost
+<br />
+                        (skills.txt = 1000)
+
+<br />
+-------------------------------------------------------------------
+<br />
+0              1/256 = 0.00390625 (  0.390625%)          3.90625
+
+<br />
+1              2/256 = 0.00781250 (  0.781250%)          7.8125
+
+<br />
+2              4/256 = 0.01562500 (  1.562500%)         15.5625
+
+<br />
+3              8/256 = 0.03125000 (  3.125000%)         31.25
+
+<br />
+4             16/256 = 0.06250000 (  6.250000%)         62.5
+<br />
+
+5             32/256 = 0.12500000 ( 12.500000%)        120
+<br />
+6             64/256 = 0.25000000 ( 25.000000%)        250
+
+<br />
+7            128/256 = 0.50000000 ( 50.000000%)        500
+<br />
+
+8            256/256 = 1.00000000 (100.000000%)       1000
+<br />
+9            512/256 = 2.00000000 (200.000000%)       2000
+
+<br />
+(etc)
+<br />
+</div></div>
+<br />
+
+<br />
+<span style="font-weight: bold">mana</span>: The base mana cost of this skill at sLvl 1.
+<br />
+
+<br />
+<span style="font-weight: bold">lvlmana</span>: The additional mana cost added to the base mana cost with every additional sLvl.
+<br />
+
+<br />
+
+<br />
+
+<br />
+<div style="text-align:center"><span style="font-weight: bold"><span style="font-size: 20px; line-height: normal">MISCELLANEOUS SETTINGS IV</span></span></div>
+<br />
+
+<br />
+<span style="font-weight: bold">interrupt</span>: A boolean that controls whenever the player will stop performing this skill should he get hit in the middle of doing so. <span style="color: red"><span style="font-weight: bold">Warning </span></span><span style="color: #aa7777"><span style="font-style: italic">Since the original release of the game this whole uninterruptable buiseness is bugged beyond belief. You should always set this to true. If the player performs an uninterruptable skill and gets hit, he will indeed complete performing the skill, but it will more often then not fail to do any damage (it's only performed on the client!)</span></span> 
+
+<br />
+
+<br />
+<span style="font-weight: bold">InTown</span>: This boolean controls whenever or not this skill can be used inside a town, damage cannot be dealt inside a town, neither will the skill create any missiles, thus you should only use this with buffs and summoning skills. <span style="color: red"><span style="font-weight: bold">Warning </span></span><span style="color: #aa7777"><span style="font-style: italic">All auras whatsoeever must have this set to true, otherwise you'll experience glitches galore.</span></span> 
+<br />
+
+<br />
+<span style="font-weight: bold">aura</span>: A boolean that controls whenever this skill is an aura. This controls the color-tint of the skill icon and all other aspects unique to aurae. It is required to access the <span style="font-weight: bold">perdelay</span> column.
+<br />
+
+<br />
+<span style="font-weight: bold">periodic</span>: A boolean of similar nature to the previous one. This controls whenever this skill will execute every time the <span style="font-weight: bold">perdelay</span> countdown has elapsed for the time the state assigned to the skill remains active. Currently used by Blade Shield and Thunder Storm, experimenting with this could be interesting.
+<br />
+
+<br />
+<span style="font-weight: bold">perdelay</span>: This field can either contain a static value or a calculation, this controls the interval used by aura and periodic skills. Auras will be applied to other units every time this interval has elapsed. Periodic skills will execute their code every time this interval has elapsed. This is in frames, obviously.
+<br />
+
+<br />
+<span style="font-weight: bold">finishing</span>: A boolean that controls whenever this skill can function as a finishing move for charge-up skills. No, setting this to true on a charge-up skill will <span style="font-style: italic">not</span> work.
+
+<br />
+
+<br />
+<span style="font-weight: bold">passive</span>: A boolean that controls whenever this skill is a passive skill (and thus applies what you've defined in the passive skill at all times). A passive skill will never show up within the left or right skill menus.
+<br />
+
+<br />
+<span style="font-weight: bold">progressive</span>: A boolean that controls whenever this skill is a charge-up skill. Setting this to false on a charge-up skill will break it (the charges will just vanish after it is charged up).
+<br />
+
+<br />
+<span style="font-weight: bold">general</span>: A boolean of unknown functionality. <span style="color: red"><span style="font-weight: bold">Warning </span></span><span style="color: #aa7777"><span style="font-style: italic">This boolean is only enabled for skills that are inherited by characters via <span style="font-weight: bold">CharStats.txt</span>. Altering this doesn't seam to change anything noteable in-game.</span></span> 
+
+<br />
+
+<br />
+<span style="font-weight: bold">scroll</span>: A boolean of unknown functionality. <span style="color: red"><span style="font-weight: bold">Warning </span></span><span style="color: #aa7777"><span style="font-style: italic">This boolean is only enabled for skills that are referenced by <span style="font-weight: bold">Books.txt</span>. Altering this doesn't seam to change anything noteable in-game.</span></span> 
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+<div style="text-align:center"><span style="font-weight: bold"><span style="font-size: 20px; line-height: normal">SERVER-SIDE SKILL CALCULATIONS and PARAMETERS</span></span></div>
+<br />
+
+<br />
+<span style="font-weight: bold">calc1</span> to <span style="font-weight: bold">calc4</span>: These fields control special calculations accessed directly by the server-side skill functions. Their purpose is universal, as their result will be applied to whatever the function is designed to apply it to. Some missile functions will access these fields if the missile is assigned to this skill in <span style="color: yellow">Missiles.txt</span>. This obviously can contain calculations (and static value). If a calculation field isn't used by the skill function you can try everything from throwing your computer out of a window to yelling at the field, it won't change unless you use another skill function <img src="images/smiles/icon_exclaim.gif" alt="icon_exclaim.gif" border="0" />. You can reference unused skill calculation fields inside other calculation fields however to obtain more space for long formulae.
+<br />
+
+<br />
+<span style="font-weight: bold">param1</span> to <span style="font-weight: bold">param8</span>: These fields contain special parameters either passed on directly to the skill function or referenced within calculations inside this and <span style="color: yellow">SkillDesc,txt</span>. Parameters can only contain static values.
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<div style="text-align:center"><span style="font-weight: bold"><span style="font-size: 20px; line-height: normal">MISCELLANEOUS SETTINGS V</span></span></div>
+<br />
+
+<br />
+<span style="font-weight: bold">InGame</span>: A boolean that controls whenever or not the skill is available in-game. Setting this to false will make the skill noexistant in-game.
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+<div style="text-align:center"><span style="font-weight: bold"><span style="font-size: 20px; line-height: normal">ATTACK RATING RELATED SETTINGS</span></span></div>
+
+<br />
+
+<br />
+<span style="color: #aaaaaa"><span style="font-style: italic">The following columns will are used to grant a bonus to attack rating (the stat that determines your chance to hit a target) for that skill (so for aurae and buffs these columns are useless other then for additional parameters to reference in calculations). These columns are <span style="font-weight: bold">bugged</span>, they will not work with missile attacks, that is, the AR bonus is never applied even if it shows on screen. This especially applies to Bow and Crossbow skills. The bonus granted by the column is a percentage, not a static bonus. So if the columns give you 100% extra AR that doubles the AR you have while using the skill, it does not add 100 to it.</span></span>
+<br />
+
+<br />
+<span style="font-weight: bold">ToHit</span>: The base bonus to attack rating granted by this skill at sLvl 1.
+<br />
+
+<br />
+<span style="font-weight: bold">LevToHit</span>: The additional bonus to attack rating added to the base bonus granted by this skill every sLvl after sLvl 1.
+
+<br />
+
+<br />
+<span style="font-weight: bold">ToHitCalc</span>: A field that can either contain a calculation or a static value that determines the bonus to attack rating granted by this skill, when this is not blank (equals 0) the previous two columns are <span style="font-style: italic">ignored</span> by the game.
+<br />
+
+<br />
+
+<br />
+
+<br />
+<div style="text-align:center"><span style="font-weight: bold"><span style="font-size: 20px; line-height: normal">SPECIAL ATTACK SETTINGS</span></span></div>
+
+<br />
+
+<br />
+<span style="color: #aaaaaa"><span style="font-style: italic">The following fields are still pretty cryptic (except <span style="font-weight: bold">HitClass</span>), they are used to apply special events to successful attacks landed by this skill.</span></span>
+<br />
+
+<br />
+<span style="font-weight: bold">ResultFlags</span>: This field is another binary switch, it controls special events that occur as a result of a successful hit landed by the skill. Below are two reference tables showing which skills/missiles use what and also what the individual binary switches do in case I managed to decypher them. To use two switches you add their decimal values together. So to make a switch that has all of them set (111111111111111) you'd add 1+2+4+8+16+32+64+128+256+512+1024+2048+4096+8192+16384 together (equals 32767), or just pump the binary value into the windows calculator and convert to decimal.
+<br />
+
+<br />
+<script type="text/javascript" src="js/fi_divexpand.js"></script><div align="center"><script type="text/javascript">codeDivStart()</script>000000000000100 - used by missiles that get destroyed on collision
+
+<br />
+000000000000101 - telekinesis, diablo run, fire throwing potion missiles
+<br />
+100000000000001 - iron maiden, holy fire, holy freeze, holy shock
+<br />
+000000000001000 - smite, bash, grizzly smite, leap knockback missile, radament holyboly [unused]
+<br />
+000000000001001 - mind blast, hell meteor collision missile
+<br />
+000000000010001 - sanctuary
+<br />
+000000000000001 - rabies, hurricane, siege beast stomp
+<br />
+000000000100000 - blade shield</div></div>
+<br />
+
+<br />
+<script type="text/javascript" src="js/fi_divexpand.js"></script><div align="center"><script type="text/javascript">codeDivStart()</script>000000000000001 = 1 - nothing noteable
+<br />
+000000000000010 = 2 - nothing noteable
+<br />
+000000000000100 = 4 - nothing noteable
+<br />
+000000000001000 = 8 - knock back
+<br />
+000000000010000 = 16 - damage a unit without any collision appearing (aka only the life decreases!), probably ignores defense
+<br />
+000000000100000 = 32 - nothing noteable
+<br />
+
+000000001000000 = 64 - nothing noteable
+<br />
+000000010000000 = 128 - nothing noteable
+<br />
+000000100000000 = 256 - never deal any damage with this attack
+<br />
+000001000000000 = 512 - like 256
+<br />
+000010000000000 = 1024 - nothing noteable
+<br />
+000100000000000 = 2048 - nothing noteable
+<br />
+001000000000000 = 4096 - nothing noteable
+<br />
+010000000000000 = 8192 - nothing noteable
+<br />
+100000000000000 = 16384 - nothing noteable</div></div>
+
+<br />
+
+<br />
+<span style="font-weight: bold">HitFlags</span>: Pretty much unknown, this is another binary switch (that is barely used on skills). <span style="color: red"><span style="font-weight: bold">Warning </span></span><span style="color: #aa7777"><span style="font-style: italic">This is used with those skills that have abnormal ways to deal damage and with missiles that radiate their damage on collision, keep with Blizzard's settings to avoid glitches.</span></span> 
+<br />
+
+<br />
+<script type="text/javascript" src="js/fi_divexpand.js"></script><div align="center"><script type="text/javascript">codeDivStart()</script>10 - telekinesis, rabies, hurricane, missiles that carry damage over to their explosion radius</div></div>
+<br />
+
+<br />
+<span style="font-weight: bold">HitClass</span>: Hit classes control the sounds played when a target is successfully hit by the skill or missile. Below is a table of known hitclasses.
+<br />
+
+<br />
+<script type="text/javascript" src="js/fi_divexpand.js"></script><div align="center"><script type="text/javascript">codeDivStart()</script>2 - throwing axe sound
+<br />
+3 - blade shield sound
+<br />
+6 - javelin collision sound
+<br />
+10 - arrow collision sound
+<br />
+32 - fire scorch sound
+
+<br />
+48 - cold sound
+<br />
+64 - lightning shock sound
+<br />
+80 - poison sound (gas)
+<br />
+96 - stun sound
+<br />
+109 - telekinesis sound
+<br />
+112 - bash sound
+<br />
+141 - attacker takes damage sound
+<br />
+
+157 - sanctuary sound
+<br />
+176 - poison sound (liquid)</div></div>
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+<div style="text-align:center"><span style="font-weight: bold"><span style="font-size: 20px; line-height: normal">MISCELLANEOUS SETTINGS VI</span></span></div>
+<br />
+
+<br />
+<span style="font-weight: bold">Kick</span>: A boolean of unclear purpose. <span style="color: red"><span style="font-weight: bold">Warning </span></span><span style="color: #aa7777"><span style="font-style: italic">Obviously this is set to true on skills that use the kicking animation, but what exactly it controls I can't say, setting it to true on other skills seams to have no influence on the game.</span></span> 
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+<div style="text-align:center"><span style="font-weight: bold"><span style="font-size: 20px; line-height: normal">DAMAGE RELATED SETTINGS</span></span></div>
+
+<br />
+
+<br />
+<span style="color: #aaaaaa"><span style="font-style: italic">The following columns control how this skill will deal damage, note that many skills also use skill calcs for enhanced damage ontop of this. Below is a more or less accurate formula to calculate the damage done by a skill. For the value of effectiveshift see the table at the end of the section.
+<br />
+
+<br />
+<span style="font-weight: bold">damage[type] = ((base_damage*srcdamage/128)+(skill_damage*effectiveshift*(100+synergy)/100))*(100+enhancer_stat)/100</span>
+<br />
+
+<br />
+<span style="font-weight: bold">base_damage</span> is the damage you would do with a normal attack (this is seperated by element, so consider this whole thing is done for each element involved, including physical damage and lifesteal/manasteal) in addition to any bonus added by damage enhancements applied by the skill through calc fields.
+<br />
+
+<br />
+<span style="font-weight: bold">skill_damage</span> is the additional offweapon damage granted by the skill (all sLvl boni included here).
+<br />
+
+<br />
+<span style="font-weight: bold">enhancer_stat</span> is a stat that increases this damage type as a whole (the 'extra fire damage' style stats).
+<br />
+
+<br />
+</span></span>
+<br />
+
+<br />
+
+<span style="font-weight: bold">HitShift</span>: This field controls the precision of the off-weapon damage done by this skill. Damage is handeled in 256ths (life is handled in 256ths by code). Internally this is simply a bitwise shift, but for not making this too complicated see the table below for multiplies and some other values that will aid you in understanding how it works. The damage in the example is 1000. To get the proper damage just multiply it by the multiplier I've listed below.
+<br />
+
+<br />
+<script type="text/javascript" src="js/fi_divexpand.js"></script><div align="center"><script type="text/javascript">codeDivStart()</script>
+<br />
+hitshift  precision   multiplier percentage    example damage
+
+<br />
+                        (skills.txt = 1000)
+<br />
+-------------------------------------------------------------------
+<br />
+0              1/256 = 0.00390625 (  0.390625%)          3.90625
+
+<br />
+1              2/256 = 0.00781250 (  0.781250%)          7.8125
+
+<br />
+2              4/256 = 0.01562500 (  1.562500%)         15.5625
+
+<br />
+3              8/256 = 0.03125000 (  3.125000%)         31.25
+
+<br />
+4             16/256 = 0.06250000 (  6.250000%)         62.5
+<br />
+
+5             32/256 = 0.12500000 ( 12.500000%)        120
+<br />
+6             64/256 = 0.25000000 ( 25.000000%)        250
+
+<br />
+7            128/256 = 0.50000000 ( 50.000000%)        500
+<br />
+
+8            256/256 = 1.00000000 (100.000000%)       1000
+<br />
+9            512/256 = 2.00000000 (200.000000%)       2000
+
+<br />
+(etc)
+<br />
+</div></div>
+<br />
+
+<br />
+<span style="font-weight: bold">SrcDamage</span>: This field controls how much weapon damage to transfer to the skill. Unlike HitShift this allows for a much greater degree of precision as instead of using the value 8 as the base, it uses the value 128 allowing for 127 different settings! Simply remember that 128 equals 100%, 96 equals 75%, 64 equals 50%, 32 equals 25% and so on. So as an example, a character doing 1000-3000 damage with normal attack would do roughlt 515-1547 with a skill having a SrcDamage value of 66. This applies to all types of damage done by the character without the skill (and this also includes lifesteal and manasteal, which are damage types). Each damage type is treated seperatly.
+<br />
+
+<br />
+<span style="font-weight: bold">MinDam</span> and <span style="font-weight: bold">MaxDam</span>: Controls the basic minimum and maximum physical damage dealt by this skill at sLvl 1. <span style="color: red"><span style="font-weight: bold">Warning </span></span><span style="color: #aa7777"><span style="font-style: italic">Whenever the game will use these fields depends on the skill functions used. But almost all of them will do.</span></span> 
+
+<br />
+
+<br />
+<span style="font-weight: bold">MinLevDam1</span> to <span style="font-weight: bold">MinLevDam5</span> and <span style="font-weight: bold">MaxLevDam1</span> to <span style="font-weight: bold">MaxLevDam5</span>: Controls the additional physical damage added to the skills minimum and maximum damage for every additional sLvl. LevDam1 is used for sLvls 2-8, LevDam2 for 9-16, LevDam3 for 17-22, LevDam4 for 23-28 and LevDam5 for sLvls above 28. <span style="color: red"><span style="font-weight: bold">Warning </span></span><span style="color: #aa7777"><span style="font-style: italic">Whenever the game will use these fields depends on the skill functions used. But almost all of them will do.</span></span>.
+
+<br />
+
+<br />
+<span style="font-weight: bold">DmgSymPerCalc</span>: This field controls the synergy bonus (a percentage) added to the physical damage done by the skill (this does not influence physical damage passed over by <span style="font-weight: bold">SrcDamage</span>). This field can contain both calculations and static values.
+<br />
+
+<br />
+<span style="font-weight: bold">EType</span>: Controls the type of elemental damage dealt by this skill (this also controls whenever <span style="font-weight: bold">+to fire skills</span> and similar costum modifiers will effect this skill or not). This is an ID pointer from <span style="color: yellow">ElemTypes.txt</span>.
+
+<br />
+
+<br />
+<span style="font-weight: bold">EMin</span> and <span style="font-weight: bold">EMax</span>: Controls the basic minimum and maximum elemental damage dealt by this skill at sLvl 1. <span style="color: red"><span style="font-weight: bold">Warning </span></span><span style="color: #aa7777"><span style="font-style: italic">Whenever the game will use these fields depends on the skill functions used. But almost all of them will do.</span></span> 
+<br />
+
+<br />
+<span style="font-weight: bold">EMinLev1</span> to <span style="font-weight: bold">EMinLev5</span> and <span style="font-weight: bold">EMaxLevDam1</span> to <span style="font-weight: bold">EMaxLevDam5</span>: Controls the additional elemental damage added to the skills minimum and maximum damage for every additional sLvl. LevDam1 is used for sLvls 2-8, LevDam2 for 9-16, LevDam3 for 17-22, LevDam4 for 23-28 and LevDam5 for sLvls above 28. <span style="color: red"><span style="font-weight: bold">Warning </span></span><span style="color: #aa7777"><span style="font-style: italic">Whenever the game will use these fields depends on the skill functions used. But almost all of them will do.</span></span>.
+
+<br />
+
+<br />
+<span style="font-weight: bold">EDmgSymPerCalc</span>: This field controls the synergy bonus (a percentage) added to the elemental damage done by the skill (this does not influence elemental damage passed over by <span style="font-weight: bold">SrcDamage</span>). This field can contain both calculations and static values.
+<br />
+
+<br />
+<span style="font-weight: bold">ELen</span>: The base duration of the elemental damage used, if this damage type uses duration (<span style="font-weight: bold">stun</span>, <span style="font-weight: bold">pois</span> and <span style="font-weight: bold">burn</span> use duration), this is in frames of course. <span style="font-style: italic">Burn damage is <span style="font-weight: bold">not</span> fire damage</span>. <span style="color: red"><span style="font-weight: bold">Warning </span></span><span style="color: #aa7777"><span style="font-style: italic">Whenever the game will use these fields depends on the skill functions used. But almost all of them will do.</span></span>.
+
+<br />
+
+<br />
+<span style="font-weight: bold">ELevLen1</span> to <span style="font-weight: bold">ELevLen5</span>: Controls the additional duration added to the base duration with every sLvl past sLvl 1. LevLen1 is used for sLvls 2-8, LevLen2 is used for sLvls 9-16 and LevLen3 is used for sLvls above 16. <span style="color: red"><span style="font-weight: bold">Warning </span></span><span style="color: #aa7777"><span style="font-style: italic">Whenever the game will use these fields depends on the skill functions used. But almost all of them will do.</span></span>.
+<br />
+
+<br />
+<span style="font-weight: bold">ELenSymPerCalc</span>: This field controls the synergy bonus (a percentage) added to the duration of the elemental damage done by the skill (this does not influence duration passed over by <span style="font-weight: bold">SrcDamage</span>). This field can contain both calculations and static values.
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+<div style="text-align:center"><span style="font-weight: bold"><span style="font-size: 20px; line-height: normal">AI RELATED SETTINGS</span></span></div>
+<br />
+
+<br />
+<span style="font-weight: bold">aitype</span>: This controls how the skill will be used by <span style="font-weight: bold">Shadow Masters</span> and <span style="font-weight: bold">Shadow Warriors</span>, and in the case of the Act III <span style="font-weight: bold">Iron Wolves</span> this controls how they use the Sorceress cold-armors. See the following topic for <a href="http://phrozenkeep.planetdiablo.gamespy.com/forum/viewtopic.php?t=21049&highlight=shadow+master" target="_self" class="postlink">details</a>.
+
+<br />
+
+<br />
+<span style="font-weight: bold">aibonus</span>: This field increases the probability that a <span style="font-weight: bold">Shadow Master</span> will use this skill. See the following topic for <a href="http://phrozenkeep.planetdiablo.gamespy.com/forum/viewtopic.php?t=21049&highlight=shadow+master" target="_self" class="postlink">details</a>.
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<div style="text-align:center"><span style="font-weight: bold"><span style="font-size: 20px; line-height: normal">ITEM COST RELATED SETTINGS</span></span></div>
+<br />
+
+<br />
+<span style="font-weight: bold">CostMult</span>: This controls by how much the base price of an item is multiplied if this skill is present on it. Keep it below 1024, higher values are ignored by the game.
+<br />
+
+<br />
+<span style="font-weight: bold">CostAdd</span>: This controls the additional amount of gold added to the price of an item for each sLvl of this skill present on the item.</div></td>
+			</tr>
+			<tr>
+				<td colspan="3"><hr /></td>
+			</tr>
+			<tr>
+                            <td class="modulecell mkalign1" width="20%" valign="top">Votes</td>
+                            <td class="modulecell mkalign1" colspan="2" width="80%">Votes: 5 - Average: 5 <img src="./mkportal/templates/Forum/images/spacer.gif" width="115" height="5" alt="" /><br /><img src="./mkportal/templates/Forum/images/scale.gif" width="129" alt="" /><br /><img src="./mkportal/templates/Forum/images/bar-start.gif" height="11" alt="" /><img src="./mkportal/templates/Forum/images/bar.gif" width="119" height="11" alt="" /><img src="./mkportal/templates/Forum/images/bar-end.gif" height="11" alt="" />
+			    </td>
+			</tr>
+
+
+
+			<tr>
+                          <td class="modulecell" colspan="3">
+                            <table width="50%" align="center">
+                              <tr>
+				<td align="center" class="functions" width="200"><a href="index.php?ind=reviews&amp;op=submit_comment&amp;ide=440"><img src="./mkportal/templates/Forum/images/comment.gif" border="0" alt="" /></a></td>
+				<td align="center" class="functions" width="200"><a href="index.php?ind=reviews&amp;op=submit_rate&amp;ide=440"><img src="./mkportal/templates/Forum/images/rate.gif" border="0" alt="" /></a></td>
+                              </tr>
+                              <tr>
+				<td align="center" class="functions" width="200"><a href="index.php?ind=reviews&amp;op=submit_comment&amp;ide=440">Add a Comment</a></td>
+				<td align="center" class="functions" width="200"><a href="index.php?ind=reviews&amp;op=submit_rate&amp;ide=440">Rate</a></td>
+                              </tr>
+                            </table>
+                          </td>
+			</tr>
+
+		<tr>
+		  <td class="tdblock" colspan="3">
+		  Comments
+		  </td>
+		  </tr><tr>
+						  <td colspan="3"><hr /></td>
+		</tr>
+		
+			<tr>
+                          <td class="modulecell" width="5%" valign="top"><a href="./forum/memberlist.php?mode=viewprofile&amp;u=22551" class="uno">Jase</a><br />14 Jan 2011<br /></td>
+			  <td class="modulecell" width="5" valign="middle"></td>
+                          <td class="modulecell" width="75%" valign="middle">The General boolean has added functionality with respec tokens. Having it set to true will make it so that, if the skill is found in charstats.txt, won't be lost upon respeccing. However, it only affects skills that you add yourself to a character in charstats.txt, the usual attack kick unsummon etc aren't affected by this. So, in the case of passive skills that add stuff, putting a general boolen on them is beneficial. </td>
+						  </tr><tr>
+						  <td colspan="3"><hr /></td>
+			</tr>
+			
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+	    </tr>
+	  </table>
+	</td>
+      </tr>
+    </table>
+    
+    <br />
+    <table width="98%" border="0" cellspacing="1" cellpadding="0" align="center" class="moduleborder">
+      <tr>
+	<td>
+	  <table width="100%" border="0" cellpadding="0" cellspacing="2" class="modulebg">
+	    <tr>
+	      <td>
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+		  <tr>
+		    <td>
+		      <table width="100%" border="0" cellspacing="1" cellpadding="5">
+			<tr>
+			  <td class="modulex" colspan="2">
+			    Stat
+			  </td>
+			</tr>
+			<tr>
+			  <td width="40" align="center" class="modulecell"><img src="./mkportal/templates/Forum/images/stats.gif" alt="" /></td>
+			  <td class="modulecell">There are 427 articles in the Database<br />Most Viewed: <a href="index.php?ind=reviews&amp;op=entry_view&amp;iden=455">History of the Phrozen Keep</a><br />Most Rated: <a href="index.php?ind=reviews&amp;op=entry_view&amp;iden=332">Guide: How to get rid of your fellow modmakers</a></td>
+			</tr>
+		      </table>
+		    </td>
+		  </tr>
+		</table>
+	      </td>
+	    </tr>
+	  </table>
+	</td>
+      </tr>
+    </table>
+    <br />
+    <table width="98%" border="0" cellspacing="0" cellpadding="0" align="center">
+      <tr>
+	<td class="modulebg">
+	<div class="mkalign1" style="margin: 4px 0;"></div>
+	</td>
+      </tr>
+    </table>
+
+    <table width="98%" class="moduleborder" border="0" cellspacing="1" cellpadding="1" align="center">
+      <tr>
+	<td class="modulebg">
+	  <table width="100%" border="0" cellspacing="0" cellpadding="4" class="mkalign2">
+	    <tr>
+	      <td class="modulex mkalign1" width="*">
+		Total users browsing the Knowledge Base: 1 (1 Registered Members 0 Guests and 0 Anonymous Members)<br />Visible members are:  <a href="./forum/memberlist.php?mode=viewprofile&amp;u=37948">kambala</a>
+	      </td>
+	    </tr>
+	  </table>
+	</td>
+      </tr>
+    </table>
+
+    <table width="98%" align="center">
+      <tr>
+	<td align="center">
+	<br /><br /><div align="center"><a href="http://www.mkportal.it" target="_blank">MKPReviews</a> &copy;2003-2008 <a href="http://www.mkportal.it" target="_blank">mkportal.it</a></div>
+	</td>
+      </tr>
+    </table>
+  </td>
+</tr>
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+		  </table>
+		</td>
+
+<!-- end center column -->
+		
+<!-- begin column spacer -->
+
+		<td class="vspacer" width="0%">&nbsp;</td>
+
+<!-- end column spacer -->
+
+<!-- begin right column -->
+
+		<td id="menudx" valign="top">
+		<div id="menucontentr" class="mkalign1" style="">
+		<div class="mkalign1">&nbsp;<a href="javascript:ColumnClose('menudx');MemoPos('MKmenudx', '1')"><img src="./mkportal/templates/Forum/images/f1.gif" border="0" alt="" /></a></div>
+		  <table cellpadding="0" cellspacing="2" border="0" style="width: 140px;">
+		  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Personal Menu</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      
+				<tr>
+				  <td width="100%" class="tdblock" align="center">
+				  Welcome kambala
+				  </td>
+				</tr>
+				<tr>
+				  <td width="100%" class="tdblock" align="center">
+				  
+				  </td>
+				</tr>
+				<tr>
+				  <td width="100%" class="tdblock" align="center">
+				  <span class="mktxtcontr">Last Visited:</span>
+				  </td>
+				</tr>
+				<tr>
+				  <td width="100%" align="center" class="tdglobal">
+				  Sunday, 14 July 2013 17:10
+				  </td>
+				</tr>
+				
+				<tr>
+				<td width="100%"  class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="./forum/ucp.php" title="Personal CP">Personal CP</a>
+<!-- end block link template -->
+
+				  </td>
+				</tr>
+				<tr>
+				  <td width="100%" class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="./forum/ucp.php?i=pm&amp;folder=inbox" title="PM (0/0)">PM (0/0)</a>
+<!-- end block link template -->
+
+				  </td>
+				</tr>
+				<tr>
+				  <td width="100%" class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="./forum/ucp.php?mode=logout&amp;sid=467abe71c4ef677d37e513a6acfabe9c" title="Log Out">Log Out</a>
+<!-- end block link template -->
+
+				  </td>
+				</tr>
+     	 	
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Who Is Online?</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      
+				<tr>
+				  <td width="100%">
+				    <table border="0" width="100%" cellpadding="1" cellspacing="1">
+				      <tr>
+					<td class="tdblock">
+					<span class="mktxtcontr">20</span> Users online:
+					</td>
+				      </tr>
+				      <tr>
+					<td class="tdglobal">
+					<b>13</b> &nbsp;Guests<br /><b>0</b> &nbsp;Anonymous<br /><b>7</b> &nbsp;Visible:<br /> <span style="color:#9E8DA7"><strong>Bing [Bot]</strong></span>, <a href="./forum/memberlist.php?mode=viewprofile&amp;u=38448">FIGURE-</a>, <span style="color:#9E8DA7"><strong>Google [Bot]</strong></span>, <span style="color:#9E8DA7"><strong>Google Adsense [Bot]</strong></span>, <a href="./forum/memberlist.php?mode=viewprofile&amp;u=37948">kambala</a>, <a href="./forum/memberlist.php?mode=viewprofile&amp;u=5358" style="color:#FFCC66"><strong>Volf</strong></a>, <span style="color:#9E8DA7"><strong>Yahoo [Bot]</strong></span>
+					</td>
+				      </tr>
+				    </table>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="./forum/viewonline.php" title="Last click">Last click</a>
+<!-- end block link template -->
+
+				  </td>
+				</tr>	
+     	 	
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Recent Discussions</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      
+				<tr>
+				  <td width="100%" class="tdblock">
+				  <a class="uno" href="./forum/viewtopic.php?f=4&amp;t=60891&amp;p=474346#p474346">Re: Adding a Super uni...</a>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdglobal">
+				  by: <a href="./forum/memberlist.php?mode=viewprofile&amp;u=40741">Aught</a><br /> on: Sunday, 14 July 2013 21:24
+				  </td>
+				</tr>
+			
+				<tr>
+				  <td width="100%" class="tdblock">
+				  <a class="uno" href="./forum/viewtopic.php?f=15&amp;t=60898&amp;p=474335#p474335">Assertion Failure</a>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdglobal">
+				  by: <a href="./forum/memberlist.php?mode=viewprofile&amp;u=42540">horizon21</a><br /> on: Sunday, 14 July 2013 19:30
+				  </td>
+				</tr>
+			
+				<tr>
+				  <td width="100%" class="tdblock">
+				  <a class="uno" href="./forum/viewtopic.php?f=58&amp;t=48399&amp;p=403585#p403585">Re: New *.TXT Files fo...</a>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdglobal">
+				  by: <a href="./forum/memberlist.php?mode=viewprofile&amp;u=2685" style="color:#FF9900"><strong>kingpin</strong></a><br /> on: Sunday, 14 July 2013 19:20
+				  </td>
+				</tr>
+			
+				<tr>
+				  <td width="100%" class="tdblock">
+				  <a class="uno" href="./forum/viewtopic.php?f=58&amp;t=60900&amp;p=474345#p474345">Shrines</a>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdglobal">
+				  by: <a href="./forum/memberlist.php?mode=viewprofile&amp;u=2685" style="color:#FF9900"><strong>kingpin</strong></a><br /> on: Sunday, 14 July 2013 19:15
+				  </td>
+				</tr>
+			
+				<tr>
+				  <td width="100%" class="tdblock">
+				  <a class="uno" href="./forum/viewtopic.php?f=4&amp;t=60893&amp;p=474344#p474344">Re: Questions: Bosses,...</a>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdglobal">
+				  by: <a href="./forum/memberlist.php?mode=viewprofile&amp;u=40861">Fogeeno</a><br /> on: Sunday, 14 July 2013 18:26
+				  </td>
+				</tr>
+			
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Site Stats</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      
+				<tr>
+				  <td class="tdblock">
+				  <span class="mktxtcontr">457786</span> Posts:
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdglobal">
+				  56418 Topics
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdglobal">
+				  401368 Replies<br />
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdblock">
+				  <span class="mktxtcontr">338</span> Images:
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdglobal">
+				  Inside the Image Gallery<br />
+				  </td>
+				</tr>				
+				<tr>
+				  <td class="tdblock">
+				  <span class="mktxtcontr">427</span> Articles:
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdglobal">
+				  Inside the Knowledge Base<br />
+				  </td>
+				</tr>				
+				<tr>
+				  <td class="tdblock">
+				  <span class="mktxtcontr">30717</span> Reg. Members:
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdglobal">
+				  Last: <a class="uno" href="./forum/memberlist.php?mode=viewprofile&amp;u=42541">GreySkull</a>
+				  </td>
+				</tr>
+				<!--<tr>
+				  <td class="tdblock">
+				  Browsed Pages:
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdglobal">
+				  <center><img src="./mkportal/templates/Forum/images/led/2.gif" style="border: solid 1px #ffffff;" alt="" /><img src="./mkportal/templates/Forum/images/led/5.gif" style="border: solid 1px #ffffff;" alt="" /><img src="./mkportal/templates/Forum/images/led/6.gif" style="border: solid 1px #ffffff;" alt="" /><img src="./mkportal/templates/Forum/images/led/5.gif" style="border: solid 1px #ffffff;" alt="" /><img src="./mkportal/templates/Forum/images/led/8.gif" style="border: solid 1px #ffffff;" alt="" /><img src="./mkportal/templates/Forum/images/led/3.gif" style="border: solid 1px #ffffff;" alt="" /><img src="./mkportal/templates/Forum/images/led/2.gif" style="border: solid 1px #ffffff;" alt="" /><img src="./mkportal/templates/Forum/images/led/5.gif" style="border: solid 1px #ffffff;" alt="" /></center>
+				  </td>
+				</tr> -->
+
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Calendar</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      
+				<tr>
+				  <td class="tdblock" >
+
+				    <form action="http://phrozenkeep.hugelaser.com/index.php?ind=reviews&amp;op=entry_view&amp;iden=440#cal" name="CalForm" method="post">
+				    <table width="100%" align="center" border="0" cellspacing="1" cellpadding="0">
+				      <tr>
+					<td class="tdglobal" style="text-align:center;" align="center" colspan="7">
+					  <input type="hidden" name="old_y" value="2013" />
+					  <input type="hidden" name="old_y" value="7" />
+					  <select name="m_m" class="bgselect" onchange="document.CalForm.submit();">
+					  
+					  <option value="1"  >Jan</option>
+
+					  <option value="2"  >Feb</option>
+
+					  <option value="3"  >Mar</option>
+
+					  <option value="4"  >Apr</option>
+
+					  <option value="5"  >May</option>
+
+					  <option value="6"  >Jun</option>
+
+					  <option value="7" selected="selected" >Jul</option>
+
+					  <option value="8"  >Aug</option>
+
+					  <option value="9"  >Sep</option>
+
+					  <option value="10"  >Oct</option>
+
+					  <option value="11"  >Nov</option>
+
+					  <option value="12"  >Dec</option>
+
+					  </select>
+					  <select name="y_y" class="bgselect" onchange="document.CalForm.submit();">
+					  
+					  <option value="2010"  >2010</option>
+
+					  <option value="2011"  >2011</option>
+
+					  <option value="2012"  >2012</option>
+
+					  <option value="2013" selected="selected" >2013</option>
+
+					  <option value="2014"  >2014</option>
+
+					  <option value="2015"  >2015</option>
+
+					  <option value="2016"  >2016</option>
+
+					  </select>
+					</td>
+				      </tr>      
+			      
+				      
+				      <tr>
+					<th class="modulex" style="height: 18px; padding: 0px; margin: 0px; border: 0px; font-size: 10px; width: 14%" align="center" valign="middle">Su</th>
+					   
+					<th class="modulex" style="height: 18px; padding: 0px; margin: 0px; border: 0px; font-size: 10px; width: 14%" align="center" valign="middle">Mo</th>
+					   
+					<th class="modulex" style="height: 18px; padding: 0px; margin: 0px; border: 0px; font-size: 10px; width: 14%" align="center" valign="middle">Tu</th>
+					   
+					<th class="modulex" style="height: 18px; padding: 0px; margin: 0px; border: 0px; font-size: 10px; width: 14%" align="center" valign="middle">We</th>
+					   
+					<th class="modulex" style="height: 18px; padding: 0px; margin: 0px; border: 0px; font-size: 10px; width: 14%" align="center" valign="middle">Th</th>
+					   
+					<th class="modulex" style="height: 18px; padding: 0px; margin: 0px; border: 0px; font-size: 10px; width: 14%" align="center" valign="middle">Fr</th>
+					   
+					<th class="modulex" style="height: 18px; padding: 0px; margin: 0px; border: 0px; font-size: 10px; width: 14%" align="center" valign="middle">Sa</th>
+					   				      
+				      
+				      </tr>
+				      <tr>
+				
+					<td class="tdblock" style="height:10px; width:4px; padding: 0px; margin: 0px; border: 0px;"><br /></td>
+					
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">1</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">2</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">3</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">4</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">5</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">6</td>
+				
+				      </tr>
+				      <tr>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">7</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">8</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">9</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">10</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">11</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">12</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">13</td>
+				
+				      </tr>
+				      <tr>
+				
+				      <td class="tdblock" id="mkcaltoday" style="font-size: 10px; height:10px" valign="middle" align="center"><b>14</b></td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">15</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">16</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">17</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">18</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">19</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">20</td>
+				
+				      </tr>
+				      <tr>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">21</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">22</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">23</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">24</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">25</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">26</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">27</td>
+				
+				      </tr>
+				      <tr>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">28</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">29</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">30</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">31</td>
+				
+					<td class="tdblock" style="height:10px; width:4px; padding: 0px; margin: 0px; border: 0px;"><br /></td>
+					
+					<td class="tdblock" style="height:10px; width:4px; padding: 0px; margin: 0px; border: 0px;"><br /></td>
+					
+					<td class="tdblock" style="height:10px; width:4px; padding: 0px; margin: 0px; border: 0px;"><br /></td>
+									      
+				      
+				    </tr>
+				    <tr>
+				      <td class="trattini3" style="font-size: 1px; background: transparent;" colspan="7">&nbsp;</td>
+				    </tr>
+				    
+				    <tr>
+				      <td class="tdglobal" colspan="7">
+				      Today's Birthdays:
+				      </td>
+				    </tr>
+				    <tr>
+				      <td class="modulecell" style="font-size: 10px; font-weight: normal;" colspan="7">
+					<a href="./forum/memberlist.php?mode=viewprofile&amp;u=39266">Prince_Vlad</a> (37)&nbsp;
+				      </td>
+				    </tr>
+							      
+				      							
+				    </table>
+				    </form>
+
+				  </td>
+				</tr>
+
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Random Image</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      
+				<tr>
+				  <td align="center"><img style="cursor: url(./mkportal/templates/Forum/images/mkajax/zoomin.cur), pointer;" src="http://phrozenkeep.hugelaser.com/mkportal/modules/gallery/album/t_a_24.jpg" border="0" alt="Click to enlarge" onclick="ajax_showPop('./index.php?ind=ajax&amp;act=showgal&amp;idp=24', 1);return false" />
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdblock" align="center"><a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?ind=gallery&amp;op=foto_show&amp;ida=24">Circa Apr 2005-4</a><br />
+				  </td>
+				</tr>
+			
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Phrozen Keep Poll</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      
+				<tr>
+				  <td class="tdblock">
+				  <a href="./forum/viewtopic.php?t=55546&amp;view=viewpoll">Which type of Diablo 2 mod do you like best?</a><br /><br />
+				  </td>
+				</tr>
+            
+				<tr>
+				  <td class="tdblock3">
+				  Total Conversion
+				  </td>
+				</tr>
+				<tr>
+				  <td align="left">
+					<div align="left" style="width: 130px; ">
+				  		<img src="./mkportal/templates/Forum/images/bar-start.gif" width="4" height="11" alt="" /><img src="./mkportal/templates/Forum/images/bar.gif" width="68" height="11" alt="" /><img src="./mkportal/templates/Forum/images/bar-end.gif" width="4" height="11" alt="" />
+					</div>56.37%<br /><br />
+		  		</td>
+				</tr>
+
+                
+				<tr>
+				  <td class="tdblock3">
+				  Balance Mod
+				  </td>
+				</tr>
+				<tr>
+				  <td align="left">
+					<div align="left" style="width: 130px; ">
+				  		<img src="./mkportal/templates/Forum/images/bar-start.gif" width="4" height="11" alt="" /><img src="./mkportal/templates/Forum/images/bar.gif" width="18" height="11" alt="" /><img src="./mkportal/templates/Forum/images/bar-end.gif" width="4" height="11" alt="" />
+					</div>14.71%<br /><br />
+		  		</td>
+				</tr>
+
+                
+				<tr>
+				  <td class="tdblock3">
+				  New Features Added
+				  </td>
+				</tr>
+				<tr>
+				  <td align="left">
+					<div align="left" style="width: 130px; ">
+				  		<img src="./mkportal/templates/Forum/images/bar-start.gif" width="4" height="11" alt="" /><img src="./mkportal/templates/Forum/images/bar.gif" width="30" height="11" alt="" /><img src="./mkportal/templates/Forum/images/bar-end.gif" width="4" height="11" alt="" />
+					</div>25.49%<br /><br />
+		  		</td>
+				</tr>
+
+                
+				<tr>
+				  <td class="tdblock3">
+				  Drop Mod
+				  </td>
+				</tr>
+				<tr>
+				  <td align="left">
+					<div align="left" style="width: 130px; ">
+				  		<img src="./mkportal/templates/Forum/images/bar-start.gif" width="4" height="11" alt="" /><img src="./mkportal/templates/Forum/images/bar.gif" width="3" height="11" alt="" /><img src="./mkportal/templates/Forum/images/bar-end.gif" width="4" height="11" alt="" />
+					</div>3.43%<br /><br />
+		  		</td>
+				</tr>
+
+                
+				<tr>
+				  <td class="tdblock">
+				  <span class="mktxtcontr">204</span> Total Voters
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdglobal">
+				  <a href="./forum/viewtopic.php?t=55546&amp;view=viewpoll">View poll...</a>
+				  </td>
+				</tr>
+            
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Random Quote</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      			
+				<tr>
+				</tr>
+				<tr>
+				  <td class="tdglobal">
+				  <i><b>Tears are no proof of innocence.</b></i><br />(<b>Kathryn Podsiadlo</b>)
+				  </td>
+				</tr>			
+				
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+		  </table>
+		</div>
+		<div id="menuclosedr" style="display:none">
+		<div class="mkalign1"><a href="javascript:ColumnOpen('menudx');MemoPos('MKmenudx', '0')"><img src="./mkportal/templates/Forum/images/f2.gif" border="0" alt="" /></a></div>
+		</div>
+		</td>
+		
+<!-- end right column -->
+
+<!-- begin close portal body -->
+
+	      </tr>
+	    </table>
+	  </td>
+	</tr>
+	
+<!-- end close portal body -->
+
+<!-- begin close main table -->
+
+      </table>
+
+    </td>
+  </tr>
+</table>
+</div>
+
+<!-- end close main table -->
+
+<!-- begin footer -->
+<!-- you can add your credits here  -->
+
+<!-- end footer -->
+  <p align="center"></p>
+
+</body>
+</html>
+
+<!-- end footer -->

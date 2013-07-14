@@ -102,6 +102,7 @@ private slots:
 
     // export
     void showSkillPlan();
+    void showAllStats();
 
     // options
     void backupSettingTriggered(bool checked);
@@ -170,6 +171,7 @@ private:
     void createLanguageMenu();
     void createLayout();
     void createCharacterGroupBoxLayout();
+    void createWaypointsGroupBoxLayout();
     void createMercGroupBoxLayout();
     void createStatsGroupBoxLayout();
     void createQuestsGroupBoxLayout();

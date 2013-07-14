@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>670</width>
-    <height>367</height>
+    <width>686</width>
+    <height>390</height>
    </rect>
   </property>
   <property name="acceptDrops">
@@ -29,8 +29,8 @@
      <rect>
       <x>320</x>
       <y>10</y>
-      <width>341</width>
-      <height>281</height>
+      <width>351</width>
+      <height>271</height>
      </rect>
     </property>
     <property name="title">
@@ -216,19 +216,6 @@
       <string>Respec Skills</string>
      </property>
     </widget>
-    <widget class="QCheckBox" name="activateWaypointsCheckBox">
-     <property name="geometry">
-      <rect>
-       <x>80</x>
-       <y>20</y>
-       <width>117</width>
-       <height>17</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Activate Waypoints</string>
-     </property>
-    </widget>
     <widget class="QSpinBox" name="energySpinBox">
      <property name="geometry">
       <rect>
@@ -309,6 +296,19 @@
       <bool>false</bool>
      </property>
     </widget>
+    <widget class="QPushButton" name="showAllStatsButton">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>20</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Show all stats</string>
+     </property>
+    </widget>
    </widget>
    <widget class="QGroupBox" name="characterGroupBox">
     <property name="enabled">
@@ -319,7 +319,7 @@
       <x>20</x>
       <y>10</y>
       <width>291</width>
-      <height>211</height>
+      <height>171</height>
      </rect>
     </property>
     <property name="title">
@@ -423,7 +423,7 @@
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>150</y>
+       <y>110</y>
        <width>275</width>
        <height>47</height>
       </rect>
@@ -482,8 +482,8 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>230</y>
-      <width>259</width>
+      <y>250</y>
+      <width>291</width>
       <height>62</height>
      </rect>
     </property>
@@ -501,7 +501,7 @@
       <rect>
        <x>10</x>
        <y>20</y>
-       <width>69</width>
+       <width>91</width>
        <height>20</height>
       </rect>
      </property>
@@ -512,9 +512,9 @@
     <widget class="QComboBox" name="mercNameComboBox">
      <property name="geometry">
       <rect>
-       <x>180</x>
+       <x>188</x>
        <y>20</y>
-       <width>69</width>
+       <width>91</width>
        <height>20</height>
       </rect>
      </property>
@@ -525,7 +525,7 @@
     <widget class="QLineEdit" name="mercLevelLineEdit">
      <property name="geometry">
       <rect>
-       <x>100</x>
+       <x>130</x>
        <y>20</y>
        <width>40</width>
        <height>20</height>
@@ -536,13 +536,55 @@
      </property>
     </widget>
    </widget>
+   <widget class="QGroupBox" name="waypointsGroupBox">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>190</y>
+      <width>291</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Waypoints</string>
+    </property>
+    <widget class="QCheckBox" name="activateWaypointsCheckBox">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>63</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Activate</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="deactivateHallsOfPainCheckBox">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>20</y>
+       <width>202</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Deactivate Halls of Pain (Destruction)</string>
+     </property>
+    </widget>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>670</width>
+     <width>686</width>
      <height>21</height>
     </rect>
    </property>
@@ -698,7 +740,7 @@
      <string>E&amp;xport</string>
     </property>
     <addaction name="actionSkillPlan"/>
-    <addaction name="actionExportCharacterInfo"/>
+    <addaction name="actionShowAllStats"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuEdit"/>
@@ -734,7 +776,6 @@
    <addaction name="actionFind"/>
    <addaction name="separator"/>
    <addaction name="actionSkillPlan"/>
-   <addaction name="actionExportCharacterInfo"/>
    <addaction name="separator"/>
    <addaction name="actionAbout"/>
   </widget>
@@ -1217,12 +1258,12 @@
     <string>Ctrl+P</string>
    </property>
   </action>
-  <action name="actionExportCharacterInfo">
+  <action name="actionShowAllStats">
    <property name="enabled">
     <bool>false</bool>
    </property>
    <property name="text">
-    <string>Character Info</string>
+    <string>All character stats</string>
    </property>
   </action>
   <action name="actionCheckFileAssociations">
@@ -1392,8 +1433,8 @@
      <y>-1</y>
     </hint>
     <hint type="destinationlabel">
-     <x>512</x>
-     <y>142</y>
+     <x>482</x>
+     <y>131</y>
     </hint>
    </hints>
   </connection>
@@ -1408,8 +1449,8 @@
      <y>-1</y>
     </hint>
     <hint type="destinationlabel">
-     <x>546</x>
-     <y>112</y>
+     <x>92</x>
+     <y>281</y>
     </hint>
    </hints>
   </connection>
@@ -1420,8 +1461,8 @@
    <slot>setChecked(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>512</x>
-     <y>142</y>
+     <x>482</x>
+     <y>131</y>
     </hint>
     <hint type="destinationlabel">
      <x>-1</x>
@@ -1436,8 +1477,8 @@
    <slot>setChecked(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>546</x>
-     <y>112</y>
+     <x>92</x>
+     <y>281</y>
     </hint>
     <hint type="destinationlabel">
      <x>-1</x>
@@ -1457,7 +1498,7 @@
     </hint>
     <hint type="destinationlabel">
      <x>467</x>
-     <y>328</y>
+     <y>317</y>
     </hint>
    </hints>
   </connection>
@@ -1473,7 +1514,7 @@
     </hint>
     <hint type="destinationlabel">
      <x>257</x>
-     <y>262</y>
+     <y>211</y>
     </hint>
    </hints>
   </connection>
@@ -1489,7 +1530,7 @@
     </hint>
     <hint type="destinationlabel">
      <x>99</x>
-     <y>262</y>
+     <y>211</y>
     </hint>
    </hints>
   </connection>
@@ -1501,11 +1542,59 @@
    <hints>
     <hint type="sourcelabel">
      <x>99</x>
-     <y>262</y>
+     <y>211</y>
     </hint>
     <hint type="destinationlabel">
      <x>-1</x>
      <y>-1</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionDeactivateHallsOfPain</sender>
+   <signal>triggered(bool)</signal>
+   <receiver>deactivateHallsOfPainCheckBox</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>200</x>
+     <y>273</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>deactivateHallsOfPainCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>actionDeactivateHallsOfPain</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>200</x>
+     <y>273</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionShowAllStats</sender>
+   <signal>triggered()</signal>
+   <receiver>showAllStatsButton</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>437</x>
+     <y>96</y>
     </hint>
    </hints>
   </connection>
