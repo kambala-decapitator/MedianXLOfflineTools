@@ -322,9 +322,12 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
     if (item->isEthereal)
         itemDescription += htmlStringFromDiabloColorString(qApp->translate("PropertiesDisplayManager", "Ethereal (Cannot be Repaired)"), ColorsManager::Blue) + kHtmlLineBreak;
 
-    // show existing set items from current set
+    // show set properties and existing set items from current set
     if (item->quality == Enums::ItemQuality::Set)
     {
+        if (!item->setProps.isEmpty())
+            itemDescription += propertiesToHtml(item->setProps, ColorsManager::Green);
+
         QString setName = ItemDataBase::Sets()->value(item->setOrUniqueId)->setName;
         itemDescription += kHtmlLineBreak + htmlStringFromDiabloColorString(setName, ColorsManager::Gold);
 
@@ -353,7 +356,7 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
     resize(originalSize);
 }
 
-QString PropertiesViewerWidget::propertiesToHtml(const PropertiesMap &properties)
+QString PropertiesViewerWidget::propertiesToHtml(const PropertiesMap &properties, int textColor /*= ColorsManager::Blue*/)
 {
     QMap<quint8, ItemPropertyDisplay> propsDisplayMap;
     PropertiesDisplayManager::constructPropertyStrings(properties, &propsDisplayMap, true, _item);
@@ -364,7 +367,7 @@ QString PropertiesViewerWidget::propertiesToHtml(const PropertiesMap &properties
         --iter;
         html += htmlStringFromDiabloColorString(iter.value().displayString, ColorsManager::NoColor) + kHtmlLineBreak;
     }
-    return coloredText(html, ColorsManager::Blue);
+    return coloredText(html, textColor);
 }
 
 void PropertiesViewerWidget::renderHtml(QTextEdit *textEdit, const QString &description)

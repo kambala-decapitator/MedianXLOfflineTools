@@ -1724,6 +1724,8 @@ void MedianXLOfflineTools::loadSaveFile(const QString &filePath, bool shouldNoti
 
 bool MedianXLOfflineTools::processSaveFile()
 {
+    using namespace Enums;
+
     QFile inputFile(_charPath);
     if (!inputFile.open(QIODevice::ReadOnly))
     {
@@ -1745,7 +1747,7 @@ bool MedianXLOfflineTools::processSaveFile()
         return false;
     }
 
-    inputDataStream.device()->seek(Enums::Offsets::Checksum); //-V807
+    inputDataStream.device()->seek(Offsets::Checksum); //-V807
     quint32 fileChecksum, computedChecksum = checksum(_saveFileContents);
     inputDataStream >> fileChecksum;
 #ifndef DISABLE_CRC_CHECK
@@ -1761,18 +1763,18 @@ bool MedianXLOfflineTools::processSaveFile()
 #endif
 
     CharacterInfo &charInfo = CharacterInfo::instance();
-    charInfo.basicInfo.originalName = _saveFileContents.constData() + Enums::Offsets::Name;
+    charInfo.basicInfo.originalName = _saveFileContents.constData() + Offsets::Name;
     charInfo.basicInfo.newName = charInfo.basicInfo.originalName.replace(ColorsManager::ansiColorHeader(), ColorsManager::unicodeColorHeader());
 
-    inputDataStream.device()->seek(Enums::Offsets::Status);
+    inputDataStream.device()->seek(Offsets::Status);
     quint8 status, progression, classCode, clvl;
     inputDataStream >> status >> progression;
-    inputDataStream.device()->seek(Enums::Offsets::Class);
+    inputDataStream.device()->seek(Offsets::Class);
     inputDataStream >> classCode;
-    inputDataStream.device()->seek(Enums::Offsets::Level);
+    inputDataStream.device()->seek(Offsets::Level);
     inputDataStream >> clvl;
 
-    if (!(status & Enums::StatusBits::IsExpansion))
+    if (!(status & StatusBits::IsExpansion))
     {
 #ifndef DUPE_CHECK
         ERROR_BOX(tr("This is not Expansion character."));
@@ -1781,62 +1783,62 @@ bool MedianXLOfflineTools::processSaveFile()
 #endif
         return false;
     }
-    charInfo.basicInfo.isHardcore = status & Enums::StatusBits::IsHardcore;
-    charInfo.basicInfo.hadDied = status & Enums::StatusBits::HadDied;
+    charInfo.basicInfo.isHardcore = status & StatusBits::IsHardcore;
+    charInfo.basicInfo.hadDied = status & StatusBits::HadDied;
 
-    if (classCode > Enums::ClassName::Assassin)
+    if (classCode > ClassName::Assassin)
     {
         ERROR_BOX(tr("Wrong class value: got %1").arg(classCode));
         return false;
     }
-    charInfo.basicInfo.classCode = static_cast<Enums::ClassName::ClassNameEnum>(classCode);
+    charInfo.basicInfo.classCode = static_cast<ClassName::ClassNameEnum>(classCode);
 
-    if (progression >= Enums::Progression::Completed)
+    if (progression >= Progression::Completed)
     {
         ERROR_BOX(tr("Wrong progression value: got %1").arg(progression));
         return false;
     }
     charInfo.basicInfo.titleCode = progression;
 
-    if (!clvl || clvl > Enums::CharacterStats::MaxLevel)
+    if (!clvl || clvl > CharacterStats::MaxLevel)
     {
         ERROR_BOX(tr("Wrong level: got %1").arg(clvl));
         return false;
     }
     charInfo.basicInfo.level = clvl;
 
-    //inputDataStream.device()->seek(Enums::Offsets::CurrentLocation);
+    //inputDataStream.device()->seek(Offsets::CurrentLocation);
     //for (int i = 0; i < 3; ++i)
     //{
     //    quint8 difficulty;
     //    inputDataStream >> difficulty;
-    //    if (difficulty & Enums::DifficultyBits::IsActive)
+    //    if (difficulty & DifficultyBits::IsActive)
     //    {
     //        charInfo.basicInfo.currentDifficulty = i;
-    //        charInfo.basicInfo.currentAct = (difficulty & Enums::DifficultyBits::CurrentAct) + 1;
+    //        charInfo.basicInfo.currentAct = (difficulty & DifficultyBits::CurrentAct) + 1;
     //        break;
     //    }
     //}
 
-    inputDataStream.device()->seek(Enums::Offsets::Mercenary);
+    inputDataStream.device()->seek(Offsets::Mercenary);
     quint32 mercID;
     inputDataStream >> mercID;
     if ((charInfo.mercenary.exists = (mercID != 0)))
     {
         quint16 mercName, mercValue;
         inputDataStream >> mercName >> mercValue;
-        if (mercValue > Enums::Mercenary::MaxCode)
+        if (mercValue > Mercenary::MaxCode)
         {
             ERROR_BOX(tr("Wrong mercenary code: got %1").arg(mercValue));
             return false;
         }
-        charInfo.mercenary.code = Enums::Mercenary::mercCodeFromValue(mercValue);
+        charInfo.mercenary.code = Mercenary::mercCodeFromValue(mercValue);
         charInfo.mercenary.nameIndex = mercName;
 
         quint32 mercExp;
         inputDataStream >> mercExp;
         charInfo.mercenary.experience = mercExp;
-        for (quint8 i = 1; i <= Enums::CharacterStats::MaxLevel; ++i)
+        for (quint8 i = 1; i <= CharacterStats::MaxLevel; ++i)
         {
             if (mercExp < mercExperienceForLevel(i))
             {
@@ -1847,7 +1849,7 @@ bool MedianXLOfflineTools::processSaveFile()
     }
 
     // Quests
-    if (_saveFileContents.mid(Enums::Offsets::QuestsHeader, 4) != "Woo!")
+    if (_saveFileContents.mid(Offsets::QuestsHeader, 4) != "Woo!")
     {
         ERROR_BOX(tr("Quests data not found!"));
         return false;
@@ -1855,22 +1857,22 @@ bool MedianXLOfflineTools::processSaveFile()
     charInfo.questsInfo.clear();
     for (int i = 0; i < kDifficultiesNumber; ++i)
     {
-        int baseOffset = Enums::Offsets::QuestsData + i * Enums::Quests::Size;
-        charInfo.questsInfo.denOfEvil    += static_cast<bool>(_saveFileContents.at(baseOffset + Enums::Quests::DenOfEvil)    &  Enums::Quests::IsCompleted);
-        charInfo.questsInfo.radament     += static_cast<bool>(_saveFileContents.at(baseOffset + Enums::Quests::Radament)     & (Enums::Quests::IsCompleted | Enums::Quests::IsTaskDone));
-        charInfo.questsInfo.goldenBird   += static_cast<bool>(_saveFileContents.at(baseOffset + Enums::Quests::GoldenBird)   &  Enums::Quests::IsCompleted);
-        charInfo.questsInfo.lamEsensTome += static_cast<bool>(_saveFileContents.at(baseOffset + Enums::Quests::LamEsensTome) &  Enums::Quests::IsCompleted);
-        charInfo.questsInfo.izual        += static_cast<bool>(_saveFileContents.at(baseOffset + Enums::Quests::Izual)        &  Enums::Quests::IsCompleted);
+        int baseOffset = Offsets::QuestsData + i * Quests::Size;
+        charInfo.questsInfo.denOfEvil    += static_cast<bool>(_saveFileContents.at(baseOffset + Quests::DenOfEvil)    &  Quests::IsCompleted);
+        charInfo.questsInfo.radament     += static_cast<bool>(_saveFileContents.at(baseOffset + Quests::Radament)     & (Quests::IsCompleted | Quests::IsTaskDone));
+        charInfo.questsInfo.goldenBird   += static_cast<bool>(_saveFileContents.at(baseOffset + Quests::GoldenBird)   &  Quests::IsCompleted);
+        charInfo.questsInfo.lamEsensTome += static_cast<bool>(_saveFileContents.at(baseOffset + Quests::LamEsensTome) &  Quests::IsCompleted);
+        charInfo.questsInfo.izual        += static_cast<bool>(_saveFileContents.at(baseOffset + Quests::Izual)        &  Quests::IsCompleted);
     }
 
     // WP
-    if (_saveFileContents.mid(Enums::Offsets::WaypointsHeader, 2) != "WS")
+    if (_saveFileContents.mid(Offsets::WaypointsHeader, 2) != "WS")
     {
         ERROR_BOX(tr("Waypoint data not found!"));
         return false;
     }
 
-    //inputDataStream.device->seek(Enums::Offsets::WaypointsData);
+    //inputDataStream.device->seek(Offsets::WaypointsData);
     //for (int i = 0; i < 3; ++i)
     //{
     //    inputDataStream.skipRawData(2);
@@ -1891,22 +1893,22 @@ bool MedianXLOfflineTools::processSaveFile()
     //}
 
     // NPC
-    if (_saveFileContents.mid(Enums::Offsets::NPCHeader, 2) != "w4")
+    if (_saveFileContents.mid(Offsets::NPCHeader, 2) != "w4")
     {
         ERROR_BOX(tr("NPC data not found!"));
         return false;
     }
 
     // stats
-    if (_saveFileContents.mid(Enums::Offsets::StatsHeader, 2) != "gf")
+    if (_saveFileContents.mid(Offsets::StatsHeader, 2) != "gf")
     {
         ERROR_BOX(tr("Stats data not found!"));
         return false;
     }
-    inputDataStream.device()->seek(Enums::Offsets::StatsData);
+    inputDataStream.device()->seek(Offsets::StatsData);
 
     // find "if" header (skills)
-    int skillsOffset = _saveFileContents.indexOf("if", Enums::Offsets::StatsData);
+    int skillsOffset = _saveFileContents.indexOf("if", Offsets::StatsData);
     if (skillsOffset == -1)
     {
         ERROR_BOX(tr("Skills data not found!"));
@@ -1921,7 +1923,7 @@ bool MedianXLOfflineTools::processSaveFile()
         skillsOffset = _saveFileContents.indexOf("if", skillsOffset + 1);
     }
 
-    int statsSize = charInfo.skillsOffset - Enums::Offsets::StatsData;
+    int statsSize = charInfo.skillsOffset - Offsets::StatsData;
     QString statsBitData;
     statsBitData.reserve(statsSize * 8);
     for (int i = 0; i < statsSize; ++i)
@@ -1932,7 +1934,7 @@ bool MedianXLOfflineTools::processSaveFile()
     }
 
     // clear dynamic values
-    QMetaEnum statisticMetaEnum = Enums::CharacterStats::statisticMetaEnum();
+    QMetaEnum statisticMetaEnum = CharacterStats::statisticMetaEnum();
     for (int i = 0; i < statisticMetaEnum.keyCount(); ++i)
         charInfo.basicInfo.statsDynamicData.setProperty(statisticMetaEnum.key(i), QVariant());
 
@@ -1942,8 +1944,8 @@ bool MedianXLOfflineTools::processSaveFile()
     ReverseBitReader bitReader(statsBitData);
     for (; count < 20; ++count)
     {
-        int statCode = bitReader.readNumber(Enums::CharacterStats::StatCodeLength);
-        if (statCode == Enums::CharacterStats::End)
+        int statCode = bitReader.readNumber(CharacterStats::StatCodeLength);
+        if (statCode == CharacterStats::End)
             break;
 
         int statLength = ItemDataBase::Properties()->value(statCode)->saveBits;
@@ -1957,35 +1959,35 @@ bool MedianXLOfflineTools::processSaveFile()
         }
 
         qint64 statValue = bitReader.readNumber(statLength);
-        if (statCode == Enums::CharacterStats::Level && statValue != clvl)
+        if (statCode == CharacterStats::Level && statValue != clvl)
         {
 //            ERROR_BOX(tr("Level in statistics (%1) isn't equal the one in header (%2).").arg(statValue).arg(clvl));
 //            return false;
             statValue = clvl;
         }
-        else if (statCode >= Enums::CharacterStats::Life && statCode <= Enums::CharacterStats::BaseStamina)
+        else if (statCode >= CharacterStats::Life && statCode <= CharacterStats::BaseStamina)
             statValue >>= 8;
-        else if (statCode == Enums::CharacterStats::SignetsOfLearningEaten && statValue > Enums::CharacterStats::SignetsOfLearningMax)
+        else if (statCode == CharacterStats::SignetsOfLearningEaten && statValue > CharacterStats::SignetsOfLearningMax)
         {
-            if (statValue > Enums::CharacterStats::SignetsOfLearningMax + 1)
+            if (statValue > CharacterStats::SignetsOfLearningMax + 1)
                 shouldShowHackWarning = true;
-            statValue = Enums::CharacterStats::SignetsOfLearningMax;
+            statValue = CharacterStats::SignetsOfLearningMax;
         }
-        else if (statCode == Enums::CharacterStats::SignetsOfSkillEaten && statValue > Enums::CharacterStats::SignetsOfSkillMax)
+        else if (statCode == CharacterStats::SignetsOfSkillEaten && statValue > CharacterStats::SignetsOfSkillMax)
         {
-            if (statValue > Enums::CharacterStats::SignetsOfSkillMax + 1)
+            if (statValue > CharacterStats::SignetsOfSkillMax + 1)
                 shouldShowHackWarning = true;
-            statValue = Enums::CharacterStats::SignetsOfSkillMax;
+            statValue = CharacterStats::SignetsOfSkillMax;
         }
-        else if (statCode >= Enums::CharacterStats::Strength && statCode <= Enums::CharacterStats::Vitality)
+        else if (statCode >= CharacterStats::Strength && statCode <= CharacterStats::Vitality)
         {
-            int baseStat = _baseStatsMap[charInfo.basicInfo.classCode].statsAtStart.statFromCode(static_cast<Enums::CharacterStats::StatisticEnum>(statCode));
+            int baseStat = _baseStatsMap[charInfo.basicInfo.classCode].statsAtStart.statFromCode(static_cast<CharacterStats::StatisticEnum>(statCode));
             totalStats += statValue - baseStat;
         }
-        else if (statCode == Enums::CharacterStats::FreeStatPoints)
+        else if (statCode == CharacterStats::FreeStatPoints)
             totalStats += statValue;
 
-        charInfo.basicInfo.statsDynamicData.setProperty(Enums::CharacterStats::statisticNameFromValue(statCode), statValue);
+        charInfo.basicInfo.statsDynamicData.setProperty(CharacterStats::statisticNameFromValue(statCode), statValue);
     }
     if (count == 20)
     {
@@ -1996,13 +1998,13 @@ bool MedianXLOfflineTools::processSaveFile()
     int totalPossibleStats = totalPossibleStatPoints(charInfo.basicInfo.level);
     if (totalStats > totalPossibleStats) // check if stats are hacked
     {
-        for (int i = Enums::CharacterStats::Strength; i <= Enums::CharacterStats::Vitality; ++i)
+        for (int i = CharacterStats::Strength; i <= CharacterStats::Vitality; ++i)
         {
-            Enums::CharacterStats::StatisticEnum statCode = static_cast<Enums::CharacterStats::StatisticEnum>(i);
+            CharacterStats::StatisticEnum statCode = static_cast<CharacterStats::StatisticEnum>(i);
             int baseStat = _baseStatsMap[charInfo.basicInfo.classCode].statsAtStart.statFromCode(statCode);
             charInfo.basicInfo.statsDynamicData.setProperty(statisticMetaEnum.key(i), baseStat);
         }
-        charInfo.setValueForStatisitc(totalPossibleStats, Enums::CharacterStats::FreeStatPoints);
+        charInfo.setValueForStatisitc(totalPossibleStats, CharacterStats::FreeStatPoints);
         shouldShowHackWarning = true;
     }
 
@@ -2021,11 +2023,11 @@ bool MedianXLOfflineTools::processSaveFile()
             charInfo.basicInfo.skills += skillValue;
             //qDebug() << skillValue << ItemDataBase::Skills()->value(_characterSkillsIndeces[charInfo.basicInfo.classCode].first.at(i)).name;
         }
-        skills += charInfo.valueOfStatistic(Enums::CharacterStats::FreeSkillPoints);
+        skills += charInfo.valueOfStatistic(CharacterStats::FreeSkillPoints);
         if (skills > maxPossibleSkills) // check if skills are hacked
         {
             skills = maxPossibleSkills;
-            charInfo.setValueForStatisitc(maxPossibleSkills, Enums::CharacterStats::FreeSkillPoints);
+            charInfo.setValueForStatisitc(maxPossibleSkills, CharacterStats::FreeSkillPoints);
             _saveFileContents.replace(charInfo.skillsOffset + 2, skillsNumber, QByteArray(skillsNumber, 0));
             shouldShowHackWarning = true;
         }
@@ -2067,38 +2069,29 @@ bool MedianXLOfflineTools::processSaveFile()
     charInfo.itemsEndOffset = inputDataStream.device()->pos();
     qDebug("items end offset %u", charInfo.itemsEndOffset);
 
-    const int avoidKey = Enums::ItemProperties::Avoid1;
-    quint32 avoidValue = 0;
+    const QList<quint16> propKeys = QList<quint16>() << ItemProperties::Strength << ItemProperties::Dexterity << ItemProperties::Vitality << ItemProperties::Energy
+                                                     << ItemProperties::StrengthBonus << ItemProperties::DexterityBonus << ItemProperties::VitalityBonus << ItemProperties::EnergyBonus
+                                                     << ItemProperties::Life << ItemProperties::LifeBonus << ItemProperties::Mana << ItemProperties::ManaBonus
+                                                     << ItemProperties::Stamina << ItemProperties::Avoid1;
+    QMap<quint16, qint32> propValues; // TODO: replace with QHash
     foreach (ItemInfo *item, itemsBuffer)
-    {
-        if (item->location == Enums::ItemLocation::Equipped || (item->storage == Enums::ItemStorage::Inventory && ItemDataBase::isUberCharm(item)))
-        {
-            ItemProperty *itemProp = item->props.value(avoidKey), *rwProp = item->rwProps.value(avoidKey);
-            if (itemProp)
-                avoidValue += itemProp->value;
-            if (rwProp)
-                avoidValue += rwProp->value;
-
-            foreach (ItemInfo *socketableItem, item->socketablesInfo)
-            {
-                itemProp = socketableItem->props.value(avoidKey);
-                if (itemProp)
-                    avoidValue += itemProp->value;
-                rwProp = socketableItem->rwProps.value(avoidKey);
-                if (rwProp)
-                    avoidValue += rwProp->value;
-            }
-        }
-    }
+        if (item->location == ItemLocation::Equipped || (item->storage == ItemStorage::Inventory && ItemDataBase::isUberCharm(item)))
+            foreach (quint16 propKey, propKeys)
+                getValueOfPropertyInItem(propValues[propKey], propKey, item);
+    for (auto iter = propValues.constBegin(); iter != propValues.constEnd(); ++iter)
+        qDebug() << "property" << iter.key() << "value" << iter.value();
+    qint32 strBonus = propValues.value(ItemProperties::StrengthBonus);
+    qDebug() << "strength value is" << charInfo.valueOfStatistic(CharacterStats::Strength) * (strBonus ? strBonus : 1) + propValues.value(ItemProperties::Strength);
+#ifndef DUPE_CHECK
+    qint32 avoidValue = propValues.value(ItemProperties::Avoid1);
     if (avoidValue >= 100)
     {
         QString avoidText = tr("100% avoid is kewl");
         if (avoidValue > 100)
             avoidText += QString(" (%1)").arg(tr("well, you have %1% actually", "avoid").arg(avoidValue));
-#ifndef DUPE_CHECK
         WARNING_BOX(avoidText);
-#endif
     }
+#endif
 
     // corpse data
     inputDataStream.skipRawData(2); // JM
@@ -2112,7 +2105,7 @@ bool MedianXLOfflineTools::processSaveFile()
         ItemParser::parseItemsToBuffer(corpseItemsTotal, inputDataStream, _saveFileContents.left(_saveFileContents.indexOf(kMercHeader, inputDataStream.device()->pos())),
                                        tr("Corrupted item detected in %1 in slot %4"), &corpseItems);
         foreach (ItemInfo *item, corpseItems)
-            item->location = Enums::ItemLocation::Corpse;
+            item->location = ItemLocation::Corpse;
         itemsBuffer += corpseItems;
 
         // after saving there can actually be only one corpse, but let's be safe
@@ -2138,7 +2131,7 @@ bool MedianXLOfflineTools::processSaveFile()
         ItemsList mercItems;
         ItemParser::parseItemsToBuffer(mercItemsTotal, inputDataStream, _saveFileContents.left(_saveFileContents.size() - 3), tr("Corrupted item detected in %1 in slot %4"), &mercItems);
         foreach (ItemInfo *item, mercItems)
-            item->location = Enums::ItemLocation::Merc;
+            item->location = ItemLocation::Merc;
         itemsBuffer += mercItems;
     }
 
@@ -2150,31 +2143,31 @@ bool MedianXLOfflineTools::processSaveFile()
     }
 
     // parse plugy stashes
-    QString oldSharedStashPath = _plugyStashesHash[Enums::ItemStorage::SharedStash].path, oldHCStashPath = _plugyStashesHash[Enums::ItemStorage::HCStash].path;
+    QString oldSharedStashPath = _plugyStashesHash[ItemStorage::SharedStash].path, oldHCStashPath = _plugyStashesHash[ItemStorage::HCStash].path;
 
     QFileInfo charPathFileInfo(_charPath);
     QString canonicalCharPath = charPathFileInfo.canonicalPath();
-    _plugyStashesHash[Enums::ItemStorage::PersonalStash].path = ui->actionAutoOpenPersonalStash->isChecked() ? QString("%1/%2.d2x").arg(canonicalCharPath, charPathFileInfo.baseName()) : QString();
-    _plugyStashesHash[Enums::ItemStorage::SharedStash].path = ui->actionAutoOpenSharedStash->isChecked() ? canonicalCharPath + "/_LOD_SharedStashSave.sss" : QString();
-    _plugyStashesHash[Enums::ItemStorage::HCStash].path = ui->actionAutoOpenHCShared->isChecked() ? canonicalCharPath + "/_LOD_HC_SharedStashSave.sss" : QString();
+    _plugyStashesHash[ItemStorage::PersonalStash].path = ui->actionAutoOpenPersonalStash->isChecked() ? QString("%1/%2.d2x").arg(canonicalCharPath, charPathFileInfo.baseName()) : QString();
+    _plugyStashesHash[ItemStorage::SharedStash].path = ui->actionAutoOpenSharedStash->isChecked() ? canonicalCharPath + "/_LOD_SharedStashSave.sss" : QString();
+    _plugyStashesHash[ItemStorage::HCStash].path = ui->actionAutoOpenHCShared->isChecked() ? canonicalCharPath + "/_LOD_HC_SharedStashSave.sss" : QString();
 
-    bool sharedStashPathChanged = oldSharedStashPath != _plugyStashesHash[Enums::ItemStorage::SharedStash].path, hcStashPathChanged = oldHCStashPath != _plugyStashesHash[Enums::ItemStorage::HCStash].path;
+    bool sharedStashPathChanged = oldSharedStashPath != _plugyStashesHash[ItemStorage::SharedStash].path, hcStashPathChanged = oldHCStashPath != _plugyStashesHash[ItemStorage::HCStash].path;
     if (ui->actionReloadSharedStashes->isChecked())
         sharedStashPathChanged = hcStashPathChanged = true;
     _sharedGold = 0;
-    for (QHash<Enums::ItemStorage::ItemStorageEnum, PlugyStashInfo>::iterator iter = _plugyStashesHash.begin(); iter != _plugyStashesHash.end(); ++iter)
+    for (QHash<ItemStorage::ItemStorageEnum, PlugyStashInfo>::iterator iter = _plugyStashesHash.begin(); iter != _plugyStashesHash.end(); ++iter)
     {
         switch (iter.key())
         {
-        case Enums::ItemStorage::PersonalStash:
+        case ItemStorage::PersonalStash:
             if (!(_plugyStashesHash[iter.key()].exists = ui->actionAutoOpenPersonalStash->isChecked()))
                 continue;
             break;
-        case Enums::ItemStorage::SharedStash:
+        case ItemStorage::SharedStash:
             if (!(_plugyStashesHash[iter.key()].exists = ui->actionAutoOpenSharedStash->isChecked()) || !sharedStashPathChanged)
                 continue;
             break;
-        case Enums::ItemStorage::HCStash:
+        case ItemStorage::HCStash:
             if (!(_plugyStashesHash[iter.key()].exists = ui->actionAutoOpenHCShared->isChecked()) || !hcStashPathChanged)
                 continue;
             break;
@@ -2202,8 +2195,8 @@ bool MedianXLOfflineTools::processSaveFile()
 //            ItemInfo *gem = new ItemInfo(*rune);
 //            gem->itemType = gemType;
 //            for (int i = 0; i < 3; ++i)
-//                ReverseBitWriter::replaceValueInBitString(gem->bitString, Enums::ItemOffsets::Type + i*8, gemType.at(i));
-//            if (ItemDataBase::storeItemIn(gem, Enums::ItemStorage::PersonalStash, 10, p))
+//                ReverseBitWriter::replaceValueInBitString(gem->bitString, ItemOffsets::Type + i*8, gemType.at(i));
+//            if (ItemDataBase::storeItemIn(gem, ItemStorage::PersonalStash, 10, p))
 //                charInfo.items.character += gem;
 //        }
 //        delete rune;
@@ -2255,6 +2248,16 @@ int MedianXLOfflineTools::investedStatPoints()
 void MedianXLOfflineTools::recalculateStatPoints()
 {
     CharacterInfo::instance().basicInfo.totalStatPoints = investedStatPoints() + ui->freeStatPointsLineEdit->text().toUInt();
+}
+
+void MedianXLOfflineTools::getValueOfPropertyInItem(qint32 &outValue, quint16 propKey, ItemInfo *item) const
+{
+    foreach (const PropertiesMultiMap *const props, QList<PropertiesMultiMap *>() << &item->props << &item->rwProps << &item->setProps)
+        if (ItemProperty *itemProp = props->value(propKey))
+            outValue += itemProp->value;
+
+    foreach (ItemInfo *socketableItem, item->socketablesInfo)
+        getValueOfPropertyInItem(outValue, propKey, socketableItem);
 }
 
 void MedianXLOfflineTools::processPlugyStash(QHash<Enums::ItemStorage::ItemStorageEnum, PlugyStashInfo>::iterator &iter, ItemsList *items)

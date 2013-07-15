@@ -21,6 +21,7 @@ public:
 
     void showItem(ItemInfo *item);
     void clear() { showItem(0); }
+
     int mysticOrbsTotal() const { return _itemMysticOrbs.size() + _rwMysticOrbs.size(); }
     bool hasMysticOrbs() const { return mysticOrbsTotal() > 0; }
     const QSet<int> &mysticOrbs(bool isItemMo) const { return isItemMo ? _itemMysticOrbs : _rwMysticOrbs; }
@@ -36,7 +37,7 @@ private:
     ItemInfo *_item;
     QSet<int> _itemMysticOrbs, _rwMysticOrbs;
 
-    QString propertiesToHtml(const PropertiesMap &properties);
+    QString propertiesToHtml(const PropertiesMap &properties, int textColor = ColorsManager::Blue);
     void renderHtml(QTextEdit *textEdit, const QString &description);
 
     void removeMysticOrbsFromProperties(const QSet<int> &mysticOrbs, PropertiesMultiMap *props);

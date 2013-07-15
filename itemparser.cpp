@@ -206,16 +206,17 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
                 if (item->isSocketed)
                     item->socketsNumber = bitReader.readNumber(4);
 
-                bool hasSetLists[5] = {false};
+                const int setListsNumber = 5;
+                bool hasSetLists[setListsNumber] = {false};
                 if (item->quality == Enums::ItemQuality::Set)
-                    for (int i = 0; i < 5; i++)
-                        hasSetLists[i] = bitReader.readBool(); // should always be false for MXL
+                    for (int i = 0; i < setListsNumber; ++i)
+                        hasSetLists[i] = bitReader.readBool();
 
                 item->props = parseItemProperties(bitReader, &status);
                 if (status != ItemInfo::Ok)
                 {
                     inputDataStream.device()->seek(itemStartOffset - 2); // set to JM - beginning of the item
-                    item->props.insert(1, new ItemProperty(tr("Error parsing item properties (status == failed), please report!")));
+                    item->props.insert(0, new ItemProperty(tr("Error parsing item properties (status == failed), please report!")));
                     searchEndOffset = nextItemOffset + 1;
                     continue;
                 }
@@ -228,9 +229,10 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
                     blessPropIter.value()->displayString = QString("[%1]").arg(newDesc);
                 }
 
-                //for (int i = 0; i < 5; ++i)
-                //    if (hasSetLists[i])
-                //        outStream << "set property list #" << i+1 << " should be here\n";
+                if (item->quality == Enums::ItemQuality::Set)
+                    for (int i = 0; i < setListsNumber; ++i)
+                        if (hasSetLists[i])
+                            item->setProps = parseItemProperties(bitReader, &status);
 
                 if (item->isRW)
                 {
@@ -251,7 +253,7 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
                     ItemInfo *socketableInfo = parseItem(inputDataStream, bytes);
                     item->socketablesInfo += socketableInfo;
                     if (item->isRW && i >= item->socketablesNumber - 2) // get the last socket filler to obtain RW name (and previous one to prevent disambiguation)
-                        rwSocketableTypes.prepend(socketableInfo->itemType == "jew" && i != item->socketablesNumber - 1 ? QByteArray() : socketableInfo->itemType);
+                        rwSocketableTypes.prepend(socketableInfo->itemType == ItemDataBase::kJewelType && i != item->socketablesNumber - 1 ? QByteArray() : socketableInfo->itemType);
                 }
 
                 if (!rwSocketableTypes.isEmpty())

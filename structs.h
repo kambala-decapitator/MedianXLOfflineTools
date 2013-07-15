@@ -46,7 +46,7 @@ public:
     int currentDurability, maxDurability; // itemBase.genericType != Enums::ItemTypeGeneric::Misc
     int quantity;                         // itemBase.isStackable == true
     qint8 socketsNumber;                  // isSocketed == true
-    PropertiesMultiMap props, rwProps;
+    PropertiesMultiMap props, rwProps, setProps;
     ItemsList socketablesInfo;            // 0 <= size <= 6
     QString rwName;                       // isRW == true
 

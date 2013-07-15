@@ -138,14 +138,14 @@ private:
     int _oldClvl;
     quint32 _sharedGold;
     QHash<Enums::ItemStorage::ItemStorageEnum, PlugyStashInfo> _plugyStashesHash;
+    ResurrectPenaltyDialog::ResurrectionPenalty _resurrectionPenalty;
+    bool _isLoaded;
 
     // consts
     QList<quint32> experienceTable;
     QVector<QStringList> mercNames;
     const QString kHackerDetected, maxValueFormat, minValueFormat, investedValueFormat, kForumThreadHtmlLinks;
 
-    bool _isLoaded;
-    ResurrectPenaltyDialog::ResurrectionPenalty _resurrectionPenalty;
     QNetworkAccessManager *_qnamCheckForUpdate, *_qnamSendOsInfo;
     bool _isManuallyCheckingForUpdate;
 
@@ -196,12 +196,14 @@ private:
     int investedStatPoints();
     inline void recalculateStatPoints();
 
+    quint32 mercExperienceForLevel(quint8 level) const { return static_cast<quint32>(level * level * (level + 1)); }
+    void getValueOfPropertyInItem(qint32 &outValue, quint16 propKey, ItemInfo *item) const;
+
     void clearUI();
     void updateUI();
     inline void updateHardcoreUIElements();
     void updateCharacterTitle(bool isHardcore);
     void setStats();
-    quint32 mercExperienceForLevel(quint8 level) { return static_cast<quint32>(level * level * (level + 1)); }
 
     inline void updateWindowTitle();
     void updateTableStats(const BaseStats::StatsStep &statsPerStep, int diff, QSpinBox *senderSpinBox = 0);

@@ -16,6 +16,7 @@
 #define CRC_OF_BYTEARRAY(byteArray) qChecksum(byteArray.constData(), byteArray.length())
 
 
+const char *const ItemDataBase::kJewelType = "jew";
 QMultiHash<QString, QString> ItemDataBase::_sets;
 
 bool ItemDataBase::createUncompressedTempFile(const QString &compressedFilePath, const QString &errorMessage, QFile *uncompressedFile)

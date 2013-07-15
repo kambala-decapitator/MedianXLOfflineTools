@@ -253,7 +253,7 @@ bool isSignetOfLearning(ItemInfo *item)
 
 bool isCotw(ItemInfo *item)
 {
-    return item->quality == Enums::ItemQuality::Unique && item->itemType == "jew" && item->props.size() <= 2 && item->props.contains(Enums::ItemProperties::Oskill);
+    return item->quality == Enums::ItemQuality::Unique && item->itemType == ItemDataBase::kJewelType && item->props.size() <= 2 && item->props.contains(Enums::ItemProperties::Oskill);
 }
 
 

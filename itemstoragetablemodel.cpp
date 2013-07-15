@@ -57,7 +57,7 @@ QVariant ItemStorageTableModel::data(const QModelIndex &index, int role) const
         ItemInfo *item = itemAtIndex(index);
         if (item)
         {
-            QString imageName = item->itemType == "jew" ? "invjw" : ItemDataBase::Items()->value(item->itemType)->imageName; // quick hack for jewel
+            QString imageName = item->itemType == ItemDataBase::kJewelType ? "invjw" : ItemDataBase::Items()->value(item->itemType)->imageName; // quick hack for jewel
             bool isSetOrUniqueImage = false;
             if (item->quality == Enums::ItemQuality::Unique || item->quality == Enums::ItemQuality::Set)
             {
@@ -69,7 +69,7 @@ QVariant ItemStorageTableModel::data(const QModelIndex &index, int role) const
                     isSetOrUniqueImage = true;
                 }
             }
-            if (!isSetOrUniqueImage && item->variableGraphicIndex && QRegExp("\\d$").indexIn(imageName) == -1)
+            if (!isSetOrUniqueImage && item->variableGraphicIndex /*&& QRegExp("\\d$").indexIn(imageName) == -1*/)
                 imageName += QString::number(item->variableGraphicIndex > 6 ? 6 : item->variableGraphicIndex);
 
             QString imagePath = ResourcePathManager::pathForImageName(imageName);

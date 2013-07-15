@@ -12,6 +12,7 @@ class ItemDataBase
     Q_DECLARE_TR_FUNCTIONS(ItemDataBase)
 
 public:
+    static const char *const kJewelType;
     static bool createUncompressedTempFile(const QString &compressedFilePath, const QString &errorMessage, QFile *uncompressedFile);
 
     static QHash<QByteArray, ItemBase *> *Items();
