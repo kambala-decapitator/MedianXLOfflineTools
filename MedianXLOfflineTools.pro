@@ -220,33 +220,27 @@ macx {
 
         # for Xcode 4.3+
         MAC_SDK = $$SDK_PATH_NEW/MacOSX10.8.sdk
-        if (!exists($$MAC_SDK)) {
-            MAC_SDK = $$SDK_PATH_NEW/MacOSX10.7.sdk
-        }
+        if (!exists($$MAC_SDK)): MAC_SDK = $$SDK_PATH_NEW/MacOSX10.7.sdk
         # for earlier versions
-        if (!exists($$MAC_SDK)) {
-            MAC_SDK = $$SDK_PATH_OLD/MacOSX10.6.sdk
-        }
-        if (!exists($$MAC_SDK)) {
-            MAC_SDK = $$SDK_PATH_OLD/MacOSX10.5.sdk
-        }
+        if (!exists($$MAC_SDK)): MAC_SDK = $$SDK_PATH_OLD/MacOSX10.6.sdk
+        if (!exists($$MAC_SDK)): MAC_SDK = $$SDK_PATH_OLD/MacOSX10.5.sdk
 
-        # release build is intended to be compiled on 10.6 (or even earlier) for PPC support
+        # release build is intended to be compiled with PPC support
         !isEmpty(IS_RELEASE_BUILD) {
             MAC_SDK = $$SDK_PATH_OLD/MacOSX10.5.sdk
+            if (!exists($$MAC_SDK)): MAC_SDK = /Developer/Xcode3.2.6/SDKs/MacOSX10.5.sdk
+
             CONFIG += x86 ppc
             QMAKE_MACOSX_DEPLOYMENT_TARGET = 10.5
         }
 
-        if (!exists($$MAC_SDK)) {
-            error(Selected Mac OS X SDK does not exist at $$MAC_SDK!)
-        }
+        if (!exists($$MAC_SDK)): error(Selected Mac OS X SDK does not exist at $$MAC_SDK!)
         QMAKE_MAC_SDK = $$MAC_SDK
     }
 
     COPYRIGHT = Copyright © kambala 2011-2013
     INFO_PLIST_PATH = $$CONTENTS_PATH/$$INFO_PLIST_NAME
-    QMAKE_POST_LINK  = sed -e \'s/@APP_VERSION@/$$VERSION/\' -e \'s/@COPYRIGHT@/$$COPYRIGHT/\' -i \'\' $$INFO_PLIST_PATH;
+    QMAKE_POST_LINK = sed -e \'s/@APP_VERSION@/$$VERSION/\' -e \'s/@COPYRIGHT@/$$COPYRIGHT/\' -i \'\' $$INFO_PLIST_PATH;
 
     PROJECT_DATA = resources/data
     PROJECT_TR   = resources/translations
@@ -255,9 +249,8 @@ macx {
 
     isEmpty(IS_RELEASE_BUILD) {
         # create symlinks instead of copying in debug mode
-        QMAKE_POST_LINK += ! [ -L $$BUNDLE_DATA ] && ln -s $$_PRO_FILE_PWD_/$$PROJECT_DATA $$BUNDLE_DATA;
-        QMAKE_POST_LINK += ! [ -L $$BUNDLE_TR ]   && ln -s $$_PRO_FILE_PWD_/$$PROJECT_TR   $$BUNDLE_TR;
-        QMAKE_POST_LINK += [ $$BUNDLE_DATA ]; # cheat make to return success if both symlinks exist
+        QMAKE_POST_LINK += [ -L $$BUNDLE_DATA ] || ln -s $$_PRO_FILE_PWD_/$$PROJECT_DATA $$BUNDLE_DATA;
+        QMAKE_POST_LINK += [ -L $$BUNDLE_TR ]   || ln -s $$_PRO_FILE_PWD_/$$PROJECT_TR   $$BUNDLE_TR;
     }
     else {
         appresources.files += $$PROJECT_DATA

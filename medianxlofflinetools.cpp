@@ -81,11 +81,11 @@ const int MedianXLOfflineTools::kMaxRecentFiles = 10;
 // ctor
 
 MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *parent, Qt::WindowFlags flags) : QMainWindow(parent, flags), ui(new Ui::MedianXLOfflineToolsClass), _findItemsDialog(0),
-    _backupLimitsGroup(new QActionGroup(this)), _showDisenchantPreviewGroup(new QActionGroup(this)), kHackerDetected(tr("1337 hacker detected! Please, play legit.")),
+    _backupLimitsGroup(new QActionGroup(this)), _showDisenchantPreviewGroup(new QActionGroup(this)), _isLoaded(false), kHackerDetected(tr("1337 hacker detected! Please, play legit.")),
     maxValueFormat(tr("Max: %1")), minValueFormat(tr("Min: %1")), investedValueFormat(tr("Invested: %1")),
     kForumThreadHtmlLinks(QString("<a href=\"http://www.medianxl.com/t83-median-xl-offline-tools\">%1</a><br><a href=\"http://forum.worldofplayers.ru/showthread.php?t=34489\">%2</a>")
      .arg(tr("Official Median XL Forum thread"), tr("Official Russian Median XL Forum thread"))),
-    _isLoaded(false), _fsWatcher(new QFileSystemWatcher(this)), _fileChangeTimer(0), _isFileChangedMessageBoxRunning(false)
+    _fsWatcher(new QFileSystemWatcher(this)), _fileChangeTimer(0), _isFileChangedMessageBoxRunning(false)
 {
     ui->setupUi(this);
 
@@ -2150,10 +2150,10 @@ bool MedianXLOfflineTools::processSaveFile()
     QString oldSharedStashPath = _plugyStashesHash[ItemStorage::SharedStash].path, oldHCStashPath = _plugyStashesHash[ItemStorage::HCStash].path;
 
     QFileInfo charPathFileInfo(_charPath);
-    QString canonicalCharPath = charPathFileInfo.canonicalPath();
-    _plugyStashesHash[ItemStorage::PersonalStash].path = ui->actionAutoOpenPersonalStash->isChecked() ? QString("%1/%2.d2x").arg(canonicalCharPath, charPathFileInfo.baseName()) : QString();
-    _plugyStashesHash[ItemStorage::SharedStash].path = ui->actionAutoOpenSharedStash->isChecked() ? canonicalCharPath + "/_LOD_SharedStashSave.sss" : QString();
-    _plugyStashesHash[ItemStorage::HCStash].path = ui->actionAutoOpenHCShared->isChecked() ? canonicalCharPath + "/_LOD_HC_SharedStashSave.sss" : QString();
+    QString charFolderPath = charPathFileInfo.absolutePath();
+    _plugyStashesHash[Enums::ItemStorage::PersonalStash].path = ui->actionAutoOpenPersonalStash->isChecked() ? QString("%1/%2.d2x").arg(charFolderPath, charPathFileInfo.baseName()) : QString();
+    _plugyStashesHash[Enums::ItemStorage::SharedStash].path = ui->actionAutoOpenSharedStash->isChecked() ? charFolderPath + "/_LOD_SharedStashSave.sss" : QString();
+    _plugyStashesHash[Enums::ItemStorage::HCStash].path = ui->actionAutoOpenHCShared->isChecked() ? charFolderPath + "/_LOD_HC_SharedStashSave.sss" : QString();
 
     bool sharedStashPathChanged = oldSharedStashPath != _plugyStashesHash[ItemStorage::SharedStash].path, hcStashPathChanged = oldHCStashPath != _plugyStashesHash[ItemStorage::HCStash].path;
     if (ui->actionReloadSharedStashes->isChecked())
