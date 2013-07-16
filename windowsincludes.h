@@ -14,6 +14,12 @@
 #  endif // 7
 #endif // Vista
 
-#define WINAPI_STRING_FROM_QSTRING(s) reinterpret_cast<LPCWSTR>(s.utf16())
+#if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
+#  define LPWSTR_TO_QSTRING(wstr) QString::fromUtf16(reinterpret_cast<const ushort *>(wstr))
+#  define QSTRING_TO_LPCWSTR(s)   reinterpret_cast<LPCWSTR>(s.utf16())
+#else
+#  define LPWSTR_TO_QSTRING(wstr) QString::fromUtf16(wstr)
+#  define QSTRING_TO_LPCWSTR(s)   s.utf16()
+#endif
 
 #endif // WINDOWSINCLUDES_H

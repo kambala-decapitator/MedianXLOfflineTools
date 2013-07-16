@@ -2069,21 +2069,25 @@ bool MedianXLOfflineTools::processSaveFile()
     charInfo.itemsEndOffset = inputDataStream.device()->pos();
     qDebug("items end offset %u", charInfo.itemsEndOffset);
 
-    const QList<quint16> propKeys = QList<quint16>() << ItemProperties::Strength << ItemProperties::Dexterity << ItemProperties::Vitality << ItemProperties::Energy
-                                                     << ItemProperties::StrengthBonus << ItemProperties::DexterityBonus << ItemProperties::VitalityBonus << ItemProperties::EnergyBonus
-                                                     << ItemProperties::Life << ItemProperties::LifeBonus << ItemProperties::Mana << ItemProperties::ManaBonus
-                                                     << ItemProperties::Stamina << ItemProperties::Avoid1;
-    QMap<quint16, qint32> propValues; // TODO: replace with QHash
+    // TODO: [later] calculate total stat values
+    //const QList<quint16> propKeys = QList<quint16>() << ItemProperties::Strength << ItemProperties::Dexterity << ItemProperties::Vitality << ItemProperties::Energy
+    //                                                 << ItemProperties::StrengthBonus << ItemProperties::DexterityBonus << ItemProperties::VitalityBonus << ItemProperties::EnergyBonus
+    //                                                 << ItemProperties::Life << ItemProperties::LifeBonus << ItemProperties::Mana << ItemProperties::ManaBonus
+    //                                                 << ItemProperties::Stamina << ItemProperties::Avoid1;
+    //QMap<quint16, qint32> propValues; // replace with QHash
+    //foreach (ItemInfo *item, itemsBuffer)
+    //    if (item->location == ItemLocation::Equipped || (item->storage == ItemStorage::Inventory && ItemDataBase::isUberCharm(item)))
+    //        foreach (quint16 propKey, propKeys)
+    //            getValueOfPropertyInItem(propValues[propKey], propKey, item);
+    //for (auto iter = propValues.constBegin(); iter != propValues.constEnd(); ++iter)
+    //    qDebug() << "property" << iter.key() << "value" << iter.value();
+    //qint32 strBonus = propValues.value(ItemProperties::StrengthBonus);
+    //qDebug() << "strength value is" << charInfo.valueOfStatistic(CharacterStats::Strength) * (strBonus ? strBonus : 1) + propValues.value(ItemProperties::Strength);
+#ifndef DUPE_CHECK
+    qint32 avoidValue = 0;//propValues.value(ItemProperties::Avoid1);
     foreach (ItemInfo *item, itemsBuffer)
         if (item->location == ItemLocation::Equipped || (item->storage == ItemStorage::Inventory && ItemDataBase::isUberCharm(item)))
-            foreach (quint16 propKey, propKeys)
-                getValueOfPropertyInItem(propValues[propKey], propKey, item);
-    for (auto iter = propValues.constBegin(); iter != propValues.constEnd(); ++iter)
-        qDebug() << "property" << iter.key() << "value" << iter.value();
-    qint32 strBonus = propValues.value(ItemProperties::StrengthBonus);
-    qDebug() << "strength value is" << charInfo.valueOfStatistic(CharacterStats::Strength) * (strBonus ? strBonus : 1) + propValues.value(ItemProperties::Strength);
-#ifndef DUPE_CHECK
-    qint32 avoidValue = propValues.value(ItemProperties::Avoid1);
+            getValueOfPropertyInItem(avoidValue, ItemProperties::Avoid1, item);
     if (avoidValue >= 100)
     {
         QString avoidText = tr("100% avoid is kewl");
