@@ -1,197 +1,197 @@
-#index	item	set	image
-127	Frost	Pantheon	
-128	Water	Pantheon	
-129	Heaven	Pantheon	
-130	Earth	Pantheon	
-131	Fire	Pantheon	
-132	Celestia's Charge	Celestia's Myth	
-133	Celestia's Ribbon	Celestia's Myth	
-134	Celestia's Glory	Celestia's Myth	
-135	Celestia's Wings	Celestia's Myth	
-136	Celestia's Passion	Celestia's Myth	
-137	Vasily's Moonwalkers	Vasily's Following	
-138	Vasily's Crescent	Vasily's Following	
-139	Vasily's Shepherd Moon	Vasily's Following	
-140	Vasily's Eclipse	Vasily's Following	
-141	Vasily's Falling Star	Vasily's Following	
-142	Red Vex' Sin	Red Vex' Embrace	
-143	Red Vex' Curse	Red Vex' Embrace	
-144	Red Vex' Mantle	Red Vex' Embrace	
-145	Red Vex' Idol	Red Vex' Embrace	
-146	Red Vex' Flayer	Red Vex' Embrace	
-147	Witchhunter's Rope	Witchhunter's Attire	
-148	Witchhunter's Hood	Witchhunter's Attire	
-149	Witchhunter's Faith	Witchhunter's Attire	
-150	Witchhunter's Crucifix	Witchhunter's Attire	
-151	Witchhunter's Fire	Witchhunter's Attire	
-152	Serpent's Tail	The Snake Pit	
-153	Serpent's Coil	The Snake Pit	
-154	Serpent's Tongue	The Snake Pit	
-155	Serpent's Scales	The Snake Pit	
-156	Serpent's Fangs	The Snake Pit	
-157	Tracker's Runeward	Creed	
-158	Tracker's Totem	Creed	
-159	Tracker's Stealth	Creed	
-160	Tracker's Effigy	Creed	
-161	Tracker's Strike	Creed	
-162	Vizjun's Progress	Vizjun's Devices	
-163	Vizjun's Foresight	Vizjun's Devices	
-164	Vizjun's Engine	Vizjun's Devices	
-165	Vizjun's Monitor	Vizjun's Devices	
-166	Vizjun's Science	Vizjun's Devices	
-167	Crane's Reach	Gathering of the Tribes	
-168	Snake's Battle Chant	Gathering of the Tribes	
-169	Wolf's Fang	Gathering of the Tribes	
-170	Bear's Warding	Gathering of the Tribes	
-171	The Coming Storm	Gathering of the Tribes	
-172	Rockslide	Mount Arreat	
-173	Ravine	Mount Arreat	
-174	Avalanche	Mount Arreat	
-175	Snowstorm	Mount Arreat	
-176	Eruption	Mount Arreat	
-177	Hunter's Trackless Step	Big Game Hunter	
-178	Hunter's Trophy	Big Game Hunter	
-179	Hunter's Skin	Big Game Hunter	
-180	Hunter's Camouflage	Big Game Hunter	
-181	Hunter's Claw Fist	Big Game Hunter	
-182	The Defender	Spirits of the Nephalem	
-183	The Protector	Spirits of the Nephalem	
-184	The Guardian	Spirits of the Nephalem	
-185	Destiny	Spirits of the Nephalem	
-186	Sacred Charge	Spirits of the Nephalem	
-187	Nature's Grasp	Caoi Dulra	
-188	Nature's Embrace	Caoi Dulra	
-189	Nature's Vigil	Caoi Dulra	
-190	Nature's Will	Caoi Dulra	
-191	Nature's Wrath	Caoi Dulra	
-192	MREmerald Growth2	Rainbow Warrior	
-193	MREmerald Sky2	Rainbow Warrior	
-194	MREmerald Cloud2	Rainbow Warrior	
-195	MREmerald Earth2	Rainbow Warrior	
-196	MREmerald Flower2	Rainbow Warrior	
-197	Lone Wolf's Track	Lone Wolf's Path	
-198	Lone Wolf's Claws	Lone Wolf's Path	
-199	Lone Wolf's Gaze	Lone Wolf's Path	
-200	Lone Wolf's Fur	Lone Wolf's Path	
-201	Lone Wolf's Maul	Lone Wolf's Path	
-202	MRScosglen's Legends2	Sacred Earth	
-203	MRScosglen's History2	Sacred Earth	
-204	MRScosglen's Tales2	Sacred Earth	
-205	MRScosglen's Fables2	Sacred Earth	
-206	MRScosglen's Myths2	Sacred Earth	
-207	Rathma's Chase	Rathma's Empire	
-208	Rathma's Trap	Rathma's Empire	
-209	Rathma's Death Gaze	Rathma's Empire	
-210	Rathma's Skeleton	Rathma's Empire	
-211	Rathma's Tyranny	Rathma's Empire	
-212	Towerlord's Bombards	Ivory Tower	
-213	Towerlord's Gargoyle	Ivory Tower	
-214	Towerlord's Spire	Ivory Tower	
-215	Towerlord's Bell	Ivory Tower	
-216	Towerlord's Weathervane	Ivory Tower	
-217	Achilios' Stealth	Achilios' Wake	
-218	Achilios' Knuckledusters	Achilios' Wake	
-219	Achilios' Eagle Eye	Achilios' Wake	
-220	Achilios' Refuge	Achilios' Wake	
-221	Achilios' Sledgehammer	Achilios' Wake	
-222	Heaven In Sight	Satanic Mantra	
-223	Till We Have	Satanic Mantra	
-224	Through Death's Veil	Satanic Mantra	
-225	Lend Me Thy Light	Satanic Mantra	
-226	Archangel Dark Angel	Satanic Mantra	
-227	Cinadide's Bender	Cinadide's Craft	
-228	Cinadide's Anvil	Cinadide's Craft	
-229	Cinadide's Bellows	Cinadide's Craft	
-230	Cinadide's Forge	Cinadide's Craft	
-231	Cinadide's Malus	Cinadide's Craft	
-232	Hadriel's Presence	Hadriel's Lore	
-233	Hadriel's Courage	Hadriel's Lore	
-234	Hadriel's Wings	Hadriel's Lore	
-235	Hadriel's Pure Heart	Hadriel's Lore	
-236	Hadriel's Avenger	Hadriel's Lore	
-237	Malthael's Stride	Malthael's Sanctuary	
-238	Malthael's Ward	Malthael's Sanctuary	
-239	Malthael's Crown	Malthael's Sanctuary	
-240	Malthael's Halo	Malthael's Sanctuary	
-241	Malthael's Wrath	Malthael's Sanctuary	
-242	Imperius' Winged Feet	Imperius' Edict	
-243	Imperius' Crusade	Imperius' Edict	
-244	Imperius' Aura	Imperius' Edict	
-245	Imperius' Radiance	Imperius' Edict	
-246	Imperius' Sky Hammer	Imperius' Edict	
-247	MRWarmage's Wake2	Warmage's Wrath	
-248	MRWarmage's Conjuration2	Warmage's Wrath	
-249	MRWarmage's Breath2	Warmage's Wrath	
-250	MRWarmage's Flameshroud2	Warmage's Wrath	
-251	MRWarmage's Fireblade2	Warmage's Wrath	
-252	Zann Esu's Rune Loop	Zann Esu's Secrets	
-253	Zann Esu's Mysteries	Zann Esu's Secrets	
-254	Zann Esu's Robes	Zann Esu's Secrets	
-255	Zann Esu's Binding Circle	Zann Esu's Secrets	
-256	Zann Esu's Charm	Zann Esu's Secrets	
-257	Elemental Trance	Elemental Children	
-258	Elemental Spirit	Elemental Children	
-259	Elemental Clash	Elemental Children	
-260	Elemental Fury	Elemental Children	
-261	Elemental Storm	Elemental Children	
-262	Pentad	Adria's Circle	
-263	Tetrad	Adria's Circle	
-264	Triad	Adria's Circle	
-265	Dyad	Adria's Circle	
-266	Monad	Adria's Circle	
-267	Emerald Growth	Rainbow Warrior	
-268	Emerald Sky	Rainbow Warrior	
-269	Emerald Cloud	Rainbow Warrior	
-270	Emerald Earth	Rainbow Warrior	
-271	Emerald Flower	Rainbow Warrior	
-272	Scosglen's Legends	Last King of Scosglen	
-273	Scosglen's History	Last King of Scosglen	
-274	Scosglen's Tales	Last King of Scosglen	
-275	Scosglen's Fables	Last King of Scosglen	
-276	Scosglen's Myths	Last King of Scosglen	
-277	Tower Push	The Towerlord	
-278	Tower Denial	The Towerlord	
-279	Tower Wall	The Towerlord	
-280	Tower Defense	The Towerlord	
-281	Tower Rush	The Towerlord	
-282	Warmage's Wake	The Warmage	
-283	Warmage's Conjuration	The Warmage	
-284	Warmage's Breath	The Warmage	
-285	Warmage's Flameshroud	The Warmage	
-286	Warmage's Fireblade	The Warmage	
-287	Charge of the Goddess	The Mysteries	
-288	Sacred Circle	The Mysteries	
-289	Pentacle	The Mysteries	
-290	Cauldron	The Mysteries	
-291	Witchblade	The Mysteries	
-292	Lazarus' Summoning Ring	Lazarus' Authority	
-293	Lazarus' Lamen	Lazarus' Authority	
-294	Apeshoot	Testament of the Apes	
-295	Apeskin	Testament of the Apes	
-296	Apeskull	Testament of the Apes	
-297	Apehand	Testament of the Apes	
-298	Apefoot	Testament of the Apes	
-299	Laz's Chasuble	\orange;[BrotherLaz Tribute Set]\n\gold;Archbishop Lazarus	
-300	Laz's Surplice Cap	\orange;[BrotherLaz Tribute Set]\n\gold;Archbishop Lazarus	
-301	Laz's Votive Lamp	\orange;[BrotherLaz Tribute Set]\n\gold;Archbishop Lazarus	
-303	xarugas' Dominion	\orange;[Community Tribute Set]\n\gold;All Is One	
-305	Stealthmaster's Triumph	\orange;[Community Tribute Set]\n\gold;All Is One	
-306	Greg's Silent Scream	\orange;[Community Tribute Set]\n\gold;All Is One	
-308	\gold;Natasha, the Assassin	\orange;[MarcoNecroX Tribute Set]\n\gold;Cowboys From Hell	set_pewpew1
-309	\gold;fearless, the Barbarian	\orange;[MarcoNecroX Tribute Set]\n\gold;Cowboys From Hell	set_pewpew2
-310	\gold;MISSINGNO, the Paladin	\orange;[MarcoNecroX Tribute Set]\n\gold;Cowboys From Hell	set_pewpew3
-311	\gold;Zoology, the Amazon	\orange;[MarcoNecroX Tribute Set]\n\gold;Cowboys From Hell	set_pewpew4
-312	\gold;Tanya, the Sorceress	\orange;[MarcoNecroX Tribute Set]\n\gold;Cowboys From Hell	set_pewpew5
-314	Laz's Lamen	\orange;[BrotherLaz Tribute Set]\n\gold;Archbishop Lazarus	
-316	Segolia's Fenrir's Mercy	\orange;[Community Tribute Set]\n\gold;All Is One	
-317	rad's Guerrilla Warfare 	\orange;[Community Tribute Set]\n\gold;All Is One	
-318	Horazon's Guard	Brotherhood of the Vizjerei	lab_armor
-319	Valthek's Blade	Brotherhood of the Vizjerei	
-320	Nor Tiraj's Safeguard	Brotherhood of the Vizjerei	lab_shield
-321	Quov Tsin's Crown	Brotherhood of the Vizjerei	lab_helm
-322	Bartuc's Blood	Brotherhood of the Vizjerei	lab_belt
-323	Zoltun's Gauntlets	Brotherhood of the Horadrim	lab_gloves
-324	Radament's Greaves	Brotherhood of the Horadrim	lab_boots
-325	Jered Cain's Diamond	Brotherhood of the Horadrim	lab_rn1
-326	Deckard Cain's Gem	Brotherhood of the Horadrim	lab_rn2
-327	Tal Rasha's Talisman	Brotherhood of the Horadrim	lab_amu
+#index	item	set	rlvl	image	prop1	param1	min1	max1	prop2	param2	min2	max2	prop3	param3	min3	max3	prop4	param4	min4	max4	prop5	param5	min5	max5	prop6	param6	min6	max6	prop7	param7	min7	max7	prop8	param8	min8	max8	prop9	param9	min9	max9	prop10	param10	min10	max10
+127	Frost	Pantheon	100																																									
+128	Water	Pantheon	100																																									
+129	Heaven	Pantheon	100																																									
+130	Earth	Pantheon	100																																									
+131	Fire	Pantheon	100																																									
+132	Celestia's Charge	Celestia's Myth	100																																									
+133	Celestia's Ribbon	Celestia's Myth	100																																									
+134	Celestia's Glory	Celestia's Myth	100																																									
+135	Celestia's Wings	Celestia's Myth	100																																									
+136	Celestia's Passion	Celestia's Myth	100																																									
+137	Vasily's Moonwalkers	Vasily's Following	100																																									
+138	Vasily's Crescent	Vasily's Following	100																																									
+139	Vasily's Shepherd Moon	Vasily's Following	100																																									
+140	Vasily's Eclipse	Vasily's Following	100																																									
+141	Vasily's Falling Star	Vasily's Following	100																																									
+142	Red Vex' Sin	Red Vex' Embrace	100																																									
+143	Red Vex' Curse	Red Vex' Embrace	100																																									
+144	Red Vex' Mantle	Red Vex' Embrace	100																																									
+145	Red Vex' Idol	Red Vex' Embrace	100																																									
+146	Red Vex' Flayer	Red Vex' Embrace	100																																									
+147	Witchhunter's Rope	Witchhunter's Attire	100																																									
+148	Witchhunter's Hood	Witchhunter's Attire	100																																									
+149	Witchhunter's Faith	Witchhunter's Attire	100																																									
+150	Witchhunter's Crucifix	Witchhunter's Attire	100																																									
+151	Witchhunter's Fire	Witchhunter's Attire	100																																									
+152	Serpent's Tail	The Snake Pit	100																																									
+153	Serpent's Coil	The Snake Pit	100																																									
+154	Serpent's Tongue	The Snake Pit	100																																									
+155	Serpent's Scales	The Snake Pit	100																																									
+156	Serpent's Fangs	The Snake Pit	100																																									
+157	Tracker's Runeward	Creed	100																																									
+158	Tracker's Totem	Creed	100																																									
+159	Tracker's Stealth	Creed	100																																									
+160	Tracker's Effigy	Creed	100																																									
+161	Tracker's Strike	Creed	100																																									
+162	Vizjun's Progress	Vizjun's Devices	100																																									
+163	Vizjun's Foresight	Vizjun's Devices	100																																									
+164	Vizjun's Engine	Vizjun's Devices	100																																									
+165	Vizjun's Monitor	Vizjun's Devices	100																																									
+166	Vizjun's Science	Vizjun's Devices	100																																									
+167	Crane's Reach	Gathering of the Tribes	100																																									
+168	Snake's Battle Chant	Gathering of the Tribes	100																																									
+169	Wolf's Fang	Gathering of the Tribes	100																																									
+170	Bear's Warding	Gathering of the Tribes	100																																									
+171	The Coming Storm	Gathering of the Tribes	100																																									
+172	Rockslide	Mount Arreat	100																																									
+173	Ravine	Mount Arreat	100																																									
+174	Avalanche	Mount Arreat	100																																									
+175	Snowstorm	Mount Arreat	100																																									
+176	Eruption	Mount Arreat	100																																									
+177	Hunter's Trackless Step	Big Game Hunter	100																																									
+178	Hunter's Trophy	Big Game Hunter	100																																									
+179	Hunter's Skin	Big Game Hunter	100																																									
+180	Hunter's Camouflage	Big Game Hunter	100																																									
+181	Hunter's Claw Fist	Big Game Hunter	100																																									
+182	The Defender	Spirits of the Nephalem	100																																									
+183	The Protector	Spirits of the Nephalem	100																																									
+184	The Guardian	Spirits of the Nephalem	100																																									
+185	Destiny	Spirits of the Nephalem	100																																									
+186	Sacred Charge	Spirits of the Nephalem	100																																									
+187	Nature's Grasp	Caoi Dulra	100																																									
+188	Nature's Embrace	Caoi Dulra	100																																									
+189	Nature's Vigil	Caoi Dulra	100																																									
+190	Nature's Will	Caoi Dulra	100																																									
+191	Nature's Wrath	Caoi Dulra	100																																									
+192	MREmerald Growth2	Rainbow Warrior	100																																									
+193	MREmerald Sky2	Rainbow Warrior	100																																									
+194	MREmerald Cloud2	Rainbow Warrior	100																																									
+195	MREmerald Earth2	Rainbow Warrior	100																																									
+196	MREmerald Flower2	Rainbow Warrior	100																																									
+197	Lone Wolf's Track	Lone Wolf's Path	100																																									
+198	Lone Wolf's Claws	Lone Wolf's Path	100																																									
+199	Lone Wolf's Gaze	Lone Wolf's Path	100																																									
+200	Lone Wolf's Fur	Lone Wolf's Path	100																																									
+201	Lone Wolf's Maul	Lone Wolf's Path	100																																									
+202	MRScosglen's Legends2	Sacred Earth	100																																									
+203	MRScosglen's History2	Sacred Earth	100																																									
+204	MRScosglen's Tales2	Sacred Earth	100																																									
+205	MRScosglen's Fables2	Sacred Earth	100																																									
+206	MRScosglen's Myths2	Sacred Earth	100																																									
+207	Rathma's Chase	Rathma's Empire	100																																									
+208	Rathma's Trap	Rathma's Empire	100																																									
+209	Rathma's Death Gaze	Rathma's Empire	100																																									
+210	Rathma's Skeleton	Rathma's Empire	100																																									
+211	Rathma's Tyranny	Rathma's Empire	100																																									
+212	Towerlord's Bombards	Ivory Tower	100																																									
+213	Towerlord's Gargoyle	Ivory Tower	100																																									
+214	Towerlord's Spire	Ivory Tower	100																																									
+215	Towerlord's Bell	Ivory Tower	100																																									
+216	Towerlord's Weathervane	Ivory Tower	100																																									
+217	Achilios' Stealth	Achilios' Wake	100																																									
+218	Achilios' Knuckledusters	Achilios' Wake	100																																									
+219	Achilios' Eagle Eye	Achilios' Wake	100																																									
+220	Achilios' Refuge	Achilios' Wake	100																																									
+221	Achilios' Sledgehammer	Achilios' Wake	100																																									
+222	Heaven In Sight	Satanic Mantra	100																																									
+223	Till We Have	Satanic Mantra	100																																									
+224	Through Death's Veil	Satanic Mantra	100																																									
+225	Lend Me Thy Light	Satanic Mantra	100																																									
+226	Archangel Dark Angel	Satanic Mantra	100																																									
+227	Cinadide's Bender	Cinadide's Craft	100																																									
+228	Cinadide's Anvil	Cinadide's Craft	100																																									
+229	Cinadide's Bellows	Cinadide's Craft	100																																									
+230	Cinadide's Forge	Cinadide's Craft	100																																									
+231	Cinadide's Malus	Cinadide's Craft	100																																									
+232	Hadriel's Presence	Hadriel's Lore	100																																									
+233	Hadriel's Courage	Hadriel's Lore	100																																									
+234	Hadriel's Wings	Hadriel's Lore	100																																									
+235	Hadriel's Pure Heart	Hadriel's Lore	100																																									
+236	Hadriel's Avenger	Hadriel's Lore	100																																									
+237	Malthael's Stride	Malthael's Sanctuary	100																																									
+238	Malthael's Ward	Malthael's Sanctuary	100																																									
+239	Malthael's Crown	Malthael's Sanctuary	100																																									
+240	Malthael's Halo	Malthael's Sanctuary	100																																									
+241	Malthael's Wrath	Malthael's Sanctuary	100																																									
+242	Imperius' Winged Feet	Imperius' Edict	100																																									
+243	Imperius' Crusade	Imperius' Edict	100																																									
+244	Imperius' Aura	Imperius' Edict	100																																									
+245	Imperius' Radiance	Imperius' Edict	100																																									
+246	Imperius' Sky Hammer	Imperius' Edict	100																																									
+247	MRWarmage's Wake2	Warmage's Wrath	100																																									
+248	MRWarmage's Conjuration2	Warmage's Wrath	100																																									
+249	MRWarmage's Breath2	Warmage's Wrath	100																																									
+250	MRWarmage's Flameshroud2	Warmage's Wrath	100																																									
+251	MRWarmage's Fireblade2	Warmage's Wrath	100																																									
+252	Zann Esu's Rune Loop	Zann Esu's Secrets	100																																									
+253	Zann Esu's Mysteries	Zann Esu's Secrets	100																																									
+254	Zann Esu's Robes	Zann Esu's Secrets	100																																									
+255	Zann Esu's Binding Circle	Zann Esu's Secrets	100																																									
+256	Zann Esu's Charm	Zann Esu's Secrets	100																																									
+257	Elemental Trance	Elemental Children	100																																									
+258	Elemental Spirit	Elemental Children	100																																									
+259	Elemental Clash	Elemental Children	100																																									
+260	Elemental Fury	Elemental Children	100																																									
+261	Elemental Storm	Elemental Children	100																																									
+262	Pentad	Adria's Circle	100																																									
+263	Tetrad	Adria's Circle	100																																									
+264	Triad	Adria's Circle	100																																									
+265	Dyad	Adria's Circle	100																																									
+266	Monad	Adria's Circle	100																																									
+267	Emerald Growth	Rainbow Warrior	100																																									
+268	Emerald Sky	Rainbow Warrior	100																																									
+269	Emerald Cloud	Rainbow Warrior	100																																									
+270	Emerald Earth	Rainbow Warrior	100																																									
+271	Emerald Flower	Rainbow Warrior	100																																									
+272	Scosglen's Legends	Last King of Scosglen	100																																									
+273	Scosglen's History	Last King of Scosglen	100																																									
+274	Scosglen's Tales	Last King of Scosglen	100																																									
+275	Scosglen's Fables	Last King of Scosglen	100																																									
+276	Scosglen's Myths	Last King of Scosglen	100																																									
+277	Tower Push	The Towerlord	100																																									
+278	Tower Denial	The Towerlord	100																																									
+279	Tower Wall	The Towerlord	100																																									
+280	Tower Defense	The Towerlord	100																																									
+281	Tower Rush	The Towerlord	100																																									
+282	Warmage's Wake	The Warmage	100																																									
+283	Warmage's Conjuration	The Warmage	100																																									
+284	Warmage's Breath	The Warmage	100																																									
+285	Warmage's Flameshroud	The Warmage	100																																									
+286	Warmage's Fireblade	The Warmage	100																																									
+287	Charge of the Goddess	The Mysteries	100																																									
+288	Sacred Circle	The Mysteries	100																																									
+289	Pentacle	The Mysteries	100																																									
+290	Cauldron	The Mysteries	100																																									
+291	Witchblade	The Mysteries	100																																									
+292	Lazarus' Summoning Ring	Lazarus' Authority	100																																									
+293	Lazarus' Lamen	Lazarus' Authority	100																																									
+294	Apeshoot	Testament of the Apes	100																																									
+295	Apeskin	Testament of the Apes	100																																									
+296	Apeskull	Testament of the Apes	100																																									
+297	Apehand	Testament of the Apes	100																																									
+298	Apefoot	Testament of the Apes	100																																									
+299	Laz's Chasuble	\orange;[BrotherLaz Tribute Set]\n\gold;Archbishop Lazarus	100																																									
+300	Laz's Surplice Cap	\orange;[BrotherLaz Tribute Set]\n\gold;Archbishop Lazarus	100																																									
+301	Laz's Votive Lamp	\orange;[BrotherLaz Tribute Set]\n\gold;Archbishop Lazarus	100																																									
+303	xarugas' Dominion	\orange;[Community Tribute Set]\n\gold;All Is One	100																																									
+305	Stealthmaster's Triumph	\orange;[Community Tribute Set]\n\gold;All Is One	100																																									
+306	Greg's Silent Scream	\orange;[Community Tribute Set]\n\gold;All Is One	100																																									
+308	\gold;Natasha, the Assassin	\orange;[MarcoNecroX Tribute Set]\n\gold;Cowboys From Hell	100	set_pewpew1									36		10	10					338,339,340		5	5					31		1500	1500												
+309	\gold;fearless, the Barbarian	\orange;[MarcoNecroX Tribute Set]\n\gold;Cowboys From Hell	100	set_pewpew2									39		30	30					48,49		333	666					143		5	5												
+310	\gold;MISSINGNO, the Paladin	\orange;[MarcoNecroX Tribute Set]\n\gold;Cowboys From Hell	100	set_pewpew3									41		30	30					50,51		333	666					145		5	5												
+311	\gold;Zoology, the Amazon	\orange;[MarcoNecroX Tribute Set]\n\gold;Cowboys From Hell	100	set_pewpew4									43		30	30					54,55,56		333	666					149		5	5												
+312	\gold;Tanya, the Sorceress	\orange;[MarcoNecroX Tribute Set]\n\gold;Cowboys From Hell	100	set_pewpew5									45		30	30					52,53		333	666					147		5	5												
+314	Laz's Lamen	\orange;[BrotherLaz Tribute Set]\n\gold;Archbishop Lazarus	100																																									
+316	Segolia's Fenrir's Mercy	\orange;[Community Tribute Set]\n\gold;All Is One	100																																									
+317	rad's Guerrilla Warfare 	\orange;[Community Tribute Set]\n\gold;All Is One	100																																									
+318	Horazon's Guard	Brotherhood of the Vizjerei	120	lab_armor																																								
+319	Valthek's Blade	Brotherhood of the Vizjerei	120																																									
+320	Nor Tiraj's Safeguard	Brotherhood of the Vizjerei	120	lab_shield																																								
+321	Quov Tsin's Crown	Brotherhood of the Vizjerei	120	lab_helm																																								
+322	Bartuc's Blood	Brotherhood of the Vizjerei	120	lab_belt																																								
+323	Zoltun's Gauntlets	Brotherhood of the Horadrim	120	lab_gloves																																								
+324	Radament's Greaves	Brotherhood of the Horadrim	120	lab_boots																																								
+325	Jered Cain's Diamond	Brotherhood of the Horadrim	120	lab_rn1																																								
+326	Deckard Cain's Gem	Brotherhood of the Horadrim	120	lab_rn2																																								
+327	Tal Rasha's Talisman	Brotherhood of the Horadrim	120	lab_amu																																								

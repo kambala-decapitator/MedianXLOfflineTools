@@ -186,18 +186,25 @@ struct ItemPropertyTxt
 
 struct SetOrUniqueItemInfo
 {
+    quint16 rlvl;
     QByteArray imageName;
 };
 
 struct SetItemInfo : public SetOrUniqueItemInfo
 {
     QString itemName, setName;
+    struct SetFixedProperty
+    {
+        QList<quint16> ids;
+        int param, minValue, maxValue;
+        SetFixedProperty() : param(0), minValue(0), maxValue(0) {}
+    };
+    QList<SetFixedProperty> fixedProperties;
 };
 
 struct UniqueItemInfo : public SetOrUniqueItemInfo
 {
     QString name;
-    quint16 rlvl;
 };
 
 struct SkillInfo

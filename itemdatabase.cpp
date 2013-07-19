@@ -189,8 +189,26 @@ QHash<uint, SetItemInfo *> *ItemDataBase::Sets()
             SetItemInfo *setItem = new SetItemInfo;
             setItem->itemName = QString::fromUtf8(data.at(1));
             setItem->setName = QString::fromUtf8(data.at(2));
-            if (data.size() > 3)
-                setItem->imageName = data.at(3);
+            setItem->rlvl = data.at(3).toUShort();
+            if (data.size() > 4)
+            {
+                setItem->imageName = data.at(4);
+                for (int i = 5; i < data.size(); i += 4)
+                {
+                    QByteArray propIds = data.at(i);
+                    if (!propIds.isEmpty())
+                    {
+                        SetItemInfo::SetFixedProperty prop;
+                        foreach (const QByteArray &propId, propIds.split(',')) //-V807
+                            prop.ids << propId.toUShort();
+                        prop.param = data.at(i + 1).toInt();
+                        prop.minValue = data.at(i + 2).toInt();
+                        prop.maxValue = data.at(i + 3).toInt();
+
+                        setItem->fixedProperties << prop;
+                    }
+                }
+            }
             allSets[data.at(0).toUInt()] = setItem;
 
             // do not add duplicate names

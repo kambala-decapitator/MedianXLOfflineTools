@@ -147,10 +147,12 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
     if (itemBase->genericType == Enums::ItemTypeGeneric::Armor)
     {
         int baseDef = item->defense, totalDef = baseDef;
-        int ed = allProps.value(Enums::ItemProperties::EnhancedDefence, foo)->value + (allProps.value(Enums::ItemProperties::EnhancedDefenceBasedOnClvl, foo)->value * clvl) / 32;
+        int ed =    allProps.value(Enums::ItemProperties::EnhancedDefence, foo)->value + (      allProps.value(Enums::ItemProperties::EnhancedDefenceBasedOnClvl, foo)->value * clvl) / 32;
+        ed += item->setProps.value(Enums::ItemProperties::EnhancedDefence, foo)->value + (item->setProps.value(Enums::ItemProperties::EnhancedDefenceBasedOnClvl, foo)->value * clvl) / 32;
         if (ed)
             totalDef = (totalDef * (100 + ed)) / 100;
-        totalDef += allProps.value(Enums::ItemProperties::Defence, foo)->value + (allProps.value(Enums::ItemProperties::DefenceBasedOnClvl, foo)->value * clvl) / 32;
+        totalDef +=       allProps.value(Enums::ItemProperties::Defence, foo)->value + (      allProps.value(Enums::ItemProperties::DefenceBasedOnClvl, foo)->value * clvl) / 32;
+        totalDef += item->setProps.value(Enums::ItemProperties::Defence, foo)->value + (item->setProps.value(Enums::ItemProperties::DefenceBasedOnClvl, foo)->value * clvl) / 32;
         if (totalDef < 0)
             totalDef = 0;
 
@@ -260,11 +262,15 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
     int rlvl;
     switch (item->quality)
     {
-    case Enums::ItemQuality::Set:
-        rlvl = 100;
-        break;
-    case Enums::ItemQuality::Unique:
-        rlvl = ItemDataBase::Uniques()->contains(item->setOrUniqueId) ? ItemDataBase::Uniques()->value(item->setOrUniqueId)->rlvl : ItemDataBase::Items()->value(item->itemType)->rlvl;
+    case Enums::ItemQuality::Set: case Enums::ItemQuality::Unique:
+        {
+            SetOrUniqueItemInfo *info;
+            if (item->quality == Enums::ItemQuality::Set)
+                info = ItemDataBase::Sets()->value(item->setOrUniqueId);
+            else
+                info = ItemDataBase::Uniques()->value(item->setOrUniqueId);
+            rlvl = info ? info->rlvl : itemBase->rlvl;
+        }
         break;
 //  case Enums::ItemQuality::Rare: case Enums::ItemQuality::Crafted: case Enums::ItemQuality::Magic:
         // TODO: [0.5+] add support for affix rlvl
@@ -322,12 +328,17 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
     if (item->isEthereal)
         itemDescription += htmlStringFromDiabloColorString(qApp->translate("PropertiesDisplayManager", "Ethereal (Cannot be Repaired)"), ColorsManager::Blue) + kHtmlLineBreak;
 
-    // show set properties and existing set items from current set
     if (item->quality == Enums::ItemQuality::Set)
     {
+        // set item properties stored in item
         if (!item->setProps.isEmpty())
             itemDescription += propertiesToHtml(item->setProps, ColorsManager::Green);
 
+        // set item properties from txt
+
+        // set properties
+
+        // set item names from current set with correct color
         QString setName = ItemDataBase::Sets()->value(item->setOrUniqueId)->setName;
         itemDescription += kHtmlLineBreak + htmlStringFromDiabloColorString(setName, ColorsManager::Gold);
 

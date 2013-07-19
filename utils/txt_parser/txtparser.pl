@@ -82,6 +82,8 @@ for (0..scalar @$itemProperties)
 sub statIdsFromPropertyStat
 {
     my $property = shift;
+    return undef unless defined $property;
+
     my $propsStat = undef;
     # handle special cases
     if ($property =~ /^dmg\-(max|min)$/) { $propsStat = $1."damage" }
@@ -112,8 +114,26 @@ sub statIdsFromPropertyStat
 my $uniques = parsetxt("uniqueitems.txt", _autoindex=>0, iName=>0, rlvl=>7, image=>23);
 &tblExpandArray($uniques, "iName");
 
-my $sets = parsetxt("setitems.txt",_autoindex=>0, iIName=>0, iSName=>1, image=>11,
-                    '!_lodSet' => {col => 6, val => qr/^old LoD$/});
+# any fixed property in .txt is defined with the following set of columns
+my @fixedPropertyKeys = qw/prop param min max/;
+my $fixedPropertyKeysSize = scalar @fixedPropertyKeys;
+
+my %greenPropertiesHash, my $greenPropertiesSize = 10; # 5 'aprop' with 'a' and 'b' each
+my @greenPropertiesKeys;
+for (my $i = 1; $i <= $greenPropertiesSize; $i++)
+{
+    my $colStart = 57 + $fixedPropertyKeysSize * ($i - 1); # 57 - very first green property column
+    for (0 .. $fixedPropertyKeysSize-1)
+    {
+        my $key = $fixedPropertyKeys[$_].$i;
+        push @greenPropertiesKeys, $key;
+        $greenPropertiesHash{$key} = $colStart + $_
+    }
+}
+# a good way would be to also read 'addfunc' column, but the only set with non-zero addfunc is Tathamet
+# MarcoNecroX set also has 'green' properties, but its addfunc is 0, so they're actually blue
+my $sets = parsetxt("setitems.txt", _autoindex=>0, iIName=>0, iSName=>1, rlvl=>8, image=>11,
+                    %greenPropertiesHash, '!_lodSet' => {col => 6, val => qr/^old LoD$/});
 &tblExpandArray($sets, "iIName", "IName");
 &tblExpandArray($sets, "iSName", "SName");
 
@@ -122,11 +142,22 @@ for my $setElement (@$sets)
 {
     $oldIndex++;
     next unless (defined $setElement->{IName} and defined $setElement->{SName});
+
     $mxlSets->[$setIndex]->{index} = $oldIndex;
     $mxlSets->[$setIndex]->{IName} = $setElement->{IName};
     $mxlSets->[$setIndex]->{SName} = $setElement->{SName};
+    $mxlSets->[$setIndex]->{rlvl}  = $setElement->{rlvl};
     $mxlSets->[$setIndex]->{image} = $setElement->{image};
-    $setIndex++;
+
+    for (my $i = 0; $i < scalar @greenPropertiesKeys; $i++)
+    {
+        my $key = $greenPropertiesKeys[$i];
+        # convert property name to property id(s) in each firt column
+        $mxlSets->[$setIndex]->{$key} = $i % $fixedPropertyKeysSize ? $setElement->{$key}
+                                           : &statIdsFromPropertyStat($setElement->{$key})
+    }
+
+    $setIndex++
 }
 
 my $itemName = 'name';
@@ -309,8 +340,14 @@ for my $hashRef (@$uniques)
 close $out;
 
 open $out, ">", "$prefix/sets.txt";
-print $out "#index\titem\tset\timage\n";
-print $out "$_->{index}\t$_->{IName}\t$_->{SName}\t".($_->{image} // '')."\n" for (@$mxlSets);
+print $out "#index\titem\tset\trlvl\timage\t".join("\t", @greenPropertiesKeys)."\n";
+for my $set (@$mxlSets)
+{
+    printf $out "%d\t%s\t%s\t%d\t%s", $set->{index}, $set->{IName}, $set->{SName},
+        ($set->{rlvl} // 0), ($set->{image} // '');
+    print $out "\t".($set->{$_} // '') for (@greenPropertiesKeys);
+    print $out "\n";
+}
 close $out;
 
 $count = -1;

@@ -1,0 +1,2308 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<!-- begin document head -->
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta name="generator" content="MKPortal" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta content="no-cache" http-equiv="no-cache" />
+  <meta http-equiv="Cache-Control" content="no-cache" />
+  <title>The Phrozen Keep - Knowledge Base - SetItems.txt File Guide</title>
+  <meta name="description" content="Diablo 2 Modmaking Central" />
+  <meta name="keywords" content="diablo, diablo2, diabloii, diablo3, diabloiii, mods, modmaking, modding, mod tools, phrozen, forum" />
+<link rel="icon" href="favicon.ico" type="image/x-icon" /> 
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <style type="text/css">
+/*
++--------------------------------------------------------------------------
+|   Cascading Style Sheet for MKportal "Forum" Portal Template
+|   ========================================
+|   by Meo aka Luponero [Amedeo de longis]
+|      Don K. Colburn [visiblesoul.net]
+|   Copyright (c) 2004-2007 mkportal.it
+|   http://www.mkportal.it
+|   Email: luponero@mclink.it
++--------------------------------------------------------------------------
+|   > MKPortal
+|   > Written By Amedeo de longis
+|   > Date started: 9.2.2004
++--------------------------------------------------------------------------
+*/
+
+/*=============================
+M
+K  global styles
+P
+=============================*/
+/* IMPORT body */
+body,
+body {
+	/* Text-Sizing with ems: http://www.clagnut.com/blog/348/ */
+	font-family: "Lucida Grande", Verdana, Helvetica, Arial, sans-serif;
+	color: #FFFFFF;
+	background-color: #000000;
+	font-size: 62.5%; /* This sets the default font size to be equivalent to 10px */
+	margin: 0;
+}
+
+body {
+	font-size: 10px;
+	margin:0px; 
+	padding:0px; /* Opera 0 margin */	
+	text-align: center; /* center in IE */ 
+}
+
+/* IMPORT body background (used for SMF) */
+td { padding: 0; }
+
+/* portal wrapper */
+#mkwrapper {
+	text-align:left; /* left-align text in IE */	
+	margin: 0px auto 0px auto;
+}
+
+/* IMPORT logostrip */
+#mklogostrip,
+#importlogostrip {	
+	background-color: #000000;	
+}
+
+/* logostrip */
+#mklogostrip {
+	text-align: left;
+}
+
+/* IMPORT global font formatting */
+table,
+tr,
+td,
+.tdglobal,
+.importfont {
+	font-size: 10px; 
+	color: #FFFFFF;
+	font-family: Verdana, Arial, Helvetica, sans-serif;	
+}
+
+/* global font formatting */
+table,
+tr,
+td,
+.tdglobal {
+	font-size: 10px;	
+}
+
+/* IMPORT main portal table bg (if different than body bg) */
+.tabmain,
+.importmain {	
+	font-size: 10px;	
+}
+
+/* main portal table */
+.tabmain {
+	margin:0px;
+	padding:0px;	
+}
+
+/* images */
+img { 		
+	border: 0px;
+	vertical-align: middle; /* Meo: Added in C1.2 */
+}
+
+/* Onyx - justified body for long texts */
+div.body_just {
+	font-size: 12px;
+	text-align: justify;
+}
+
+/*=============================
+M
+K IMPORT LIGHT BACKGROUND
+P
+=============================*/
+.modulecell,
+.urlo2,
+.tabnews,
+.trattini,
+.trattini3,
+.tablemenu,
+.taburlo,
+.row1 {
+	background-color: #2F2F4F;
+	padding: 0;
+}
+
+/*=============================
+M
+K IMPORT MEDIUM BACKGROUND
+P
+=============================*/
+.navigatore,
+.tdblock,
+.moduleborder,
+.modulex,
+.mkpagecurrent,
+.row2 {
+	background-color: #2F2F4F;
+	padding: 0;
+}
+
+/*=============================
+M
+K IMPORT DARK BACKGROUND
+P
+=============================*/
+.urlo,
+.sottotitolo,
+th {
+	color: #FFFFFF;
+	font-size: 1.1em;
+	font-weight: bold;
+	background-color: #113274;
+	background-image: url('./forum/styles/BlackRock/theme/images/cellpic3.gif');
+	white-space: nowrap;
+	padding: 7px 5px;
+}
+
+/*=============================
+M
+K  border and divider styles
+P
+=============================*/
+/* vertical spacer image used in portal skin */
+/* .vspacer {
+	background-image: url(./mkportal/templates/Forum/images/punto_vert.gif);
+	background-repeat: repeat-y;
+	background-color: transparent;	
+} */
+
+/* IMPORT border-color */
+.tabmain,
+.tablemenu, /* block wrapper, chat button strip */
+.taburlo,
+.urlo2,
+.tabnews,
+.trattini,
+.trattini2,
+.trattini3,
+.mkpagelink,
+.mkpagelinklast,
+.mkpagecurrent,
+.titadmin,
+.importborders {
+	border: 1px solid #000000;	
+}
+	
+.trattini { /*used only in tpl_main.php(deprecated), blog, ad_blocks.php*/
+	border-width: 1px 0 0 0;
+	border-style: dashed;
+}
+
+/* blocks admin */
+.trattini2 {
+	border-width: 0 1px 0 0;
+	border-style: dashed;
+}
+
+.trattini3 { /* used only in blog, quotes, urlobox, calendar*/
+	border-width: 0 0 1px 0;
+	border-style: dashed;
+}
+
+/*=============================
+M
+K  hyperlink styles
+P
+=============================*/
+/* IMPORT global links */
+a:link,
+a:active,
+a.uno:link,
+.importlink {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #00ffff;	
+	text-decoration: none;	
+}
+
+a:visited,
+a.uno:visited,
+.importvisited {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #00ffff;	
+	text-decoration: none;	
+}
+
+a:hover,
+a.uno:hover,
+.importhover {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	text-decoration: underline;
+}
+
+/* a:active {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #496c9f;	
+	text-decoration: none; 	
+} */
+
+/* bold navbar, block, module links */
+a.uno:link {
+	font-size: 10px;
+	font-weight: bold;
+	text-decoration: none
+}
+
+a.uno:visited {	
+	font-size: 10px; 
+	font-weight: bold;
+	text-decoration: none
+}
+
+
+a.uno:hover {
+	font-size: 10px;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+/* Onyx - bigger links for titles in Articles and so on*/
+a.cat_big:link {
+	font-size: 12px;
+	text-decoration: none
+}
+
+a.cat_big:visited {	
+	font-size: 12px; 
+	text-decoration: none
+}
+
+
+a.cat_big:hover {
+	font-size: 12px;
+	text-decoration: underline;
+}
+
+/* block text links */
+/* .tablemenu a:link, a:visited {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #496c9f;	
+	text-decoration: none;	
+}
+
+.tablemenu a:hover {
+	text-decoration: underline;
+}
+
+.tablemenu a:active { 
+	text-decoration: none; 	
+} */
+
+/* global contrasting text and hyperlink color */
+.mktxtcontr,
+a.mktxtcontr:link, 
+a.mktxtcontr:visited {	
+	color: #ffffff;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a.mktxtcontr:hover {
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+/* contrasting text and hyperlink color 2 (admin) */
+.mktxtcontr2,
+a.mktxtcontr2:link, 
+a.mktxtcontr2:visited {
+	color: #0000ff;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a.mktxtcontr2:hover {
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+/*=============================
+M
+K  form styles
+P
+=============================*/
+/* remove margin after closing "form" tag in MSIE */
+form {
+	margin: 0;
+	padding: 0
+}
+
+/* IMPORT form styles */
+input,
+textarea,
+select,
+.bgselect, /* input fields */
+.mkbutton, /* global submit buttons */
+.mkblkinput, /* block input */
+.mkradio, 
+input {
+	color: #333333;
+	font-family: "Lucida Grande", Verdana, Helvetica, sans-serif;
+	font-size: 1.1em;
+	font-weight: normal;
+	padding: 1px;
+	border: 1px solid #A9B8C2;
+	background-color: #FAFAFA;
+}
+
+/* set form padding and margin */
+/*.mkbutton,*/ /* global submit buttons */
+/* textarea,*/
+input,
+select,
+.bgselect, /* input fields */
+.mkblkinput /* block input */
+{
+	margin: 0px;
+	padding: 0px;
+	font-size: 9px;
+	font-weight: normal; /* needed for Mozilla */	
+}
+
+.mkbutton { /* Global submit buttons */
+	padding: 3px;
+}
+
+.mkbbbutton { /* MKP BBcode editor buttons */
+	margin: 0;
+	padding: 0;
+}
+
+/* radio/checkbox buttons - remove background color and border in IE */ 
+/* .mkradio {
+	background-color: transparent;
+	border-width: 0px;
+} */
+
+/* configure blog textarea */
+textarea.mkwrap1 {
+	overflow: auto;
+	/* width: 230px; */
+	width: 100%;
+}
+
+/* edit blog textarea */
+textarea.mkwrap2 {
+	overflow: auto;
+	width: 500px ;
+}
+
+/*=============================
+M
+K  navstrip styles
+P
+=============================*/
+/* top navstrip */
+.navigatore {	
+	vertical-align: bottom;
+	text-align: right;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: 300;
+	font-size: 9px;
+	border: 0;
+}
+
+/*=============================
+M
+K  block styles
+P
+=============================*/
+/* used in functions.php (function main_page) */
+.blocks {
+	padding: 0px;
+}
+
+/* block td cell */
+.tdblock {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	border: 0;
+	margin: 2px;	
+}
+
+/* block title bar */
+.sottotitolo {
+	vertical-align: bottom;	
+	text-align: left;
+	font-size: 11px;
+	font-weight: bold;
+	color:#00ff00; 
+}
+
+/* horizontal spacer between blocks */
+.tdspacer {
+	line-height: 3px;
+}
+
+/*=============================
+M
+K  module global styles
+P
+=============================*/
+/* IMPORT module table headings */
+th.modulex,
+.cattitle {
+
+}
+th.modulex {
+	white-space: nowrap;
+}
+.modulex {
+	border-width: 0 0 0 0;
+}
+/* Reviews description text */
+.modulelite {
+	font-size: 10pt;
+	/* color:#a6bbcd;*/
+}
+
+/* block padding (news, admin) */
+.contents {
+	padding: 10px;
+	font-size: 12px;
+}
+
+/* module pagination links */
+.mkpagelink {
+	padding:1px 3px 1px 3px;
+	font-weight: normal;
+}
+
+.mkpagelinklast {
+	padding:1px 3px 1px 3px;
+	font-weight:normal;
+}
+
+.mkpagecurrent {
+	padding:1px 3px 1px 3px;
+	font-weight:normal;
+}
+
+/* admin cp titles with top border - used in frontend and backend */
+.titadmin {
+	margin: 0px;
+	font-size: 11px;
+	font-weight: bold;
+	border-width: 1px 0 0 0;
+	border-style: dashed;
+}
+/*=============================
+M
+K  shoutbox module styles
+P
+=============================*/
+td.taburlo{	
+	margin:5px;
+	padding:5px;
+	border: 0;	
+}
+	
+/* shouter and date cell */
+.urlo {
+	line-height: 18px;
+	vertical-align: bottom;
+	text-align: left;	
+	font-size: 11px;
+	font-weight: bold;
+	padding: 4px;		 
+}
+
+/* shout cell */
+.urlo2 {
+	padding: 4px;
+	border-width: 0 0 1px 0;
+	border-style: solid;
+	text-align: left;
+	font-size: 11px;
+	font-weight: bold;
+}
+
+/* white shouter text */
+/* .urlocontrast {	
+	color: #ffffff;
+} */
+
+/*=============================
+M
+K  news module styles
+P
+=============================*/
+/* news table with border */
+.tabnews {
+	border-width: 1px;
+	border-style: solid;
+	margin:0px; 
+	padding:10px;
+	font-size: 10px;	
+}
+
+/* news table custom */
+.tabnews1 {
+	border-width: 1px;
+	border-style: solid;
+	border-color: #000;
+	margin:0px; 
+	padding:0px;
+}
+
+/*=============================
+M
+K  font styles
+P
+=============================*/
+/* red error page text */
+.mkerror {	
+	font-size: 12pt;
+	color: #ff0000;
+	font-weight:bold;
+}
+
+/* MKPQuote quotation text */
+/* .mkquote { 		
+	color: #0000ff;	
+} */
+
+/* MKPGallery module ecard, offline page */
+.ecardtitle,
+.offlinetxt {
+	font-size: 10pt; 
+	font-weight: bold;
+	text-align: center;
+}
+/*Onyx - image gallery border - Firefox-compatible*/
+#imgtable1, #imgtable1 td {border: 1px solid #000;}
+
+
+/*=============================
+M
+K  BBcode quote styles
+P
+=============================*/
+.mkquoteball {
+	font-size: 9px; 
+	color: #666666;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	background-color: #ffffff;	
+	padding: 0;	
+}
+
+.mkquotetext {
+	font-size: 10px; 
+	color: #666666;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	background-color: #ffffff;
+	margin: 0;
+	padding: 0;	
+}
+
+table .mkquotetable{				
+	width: auto; /* IE */	
+	text-align: left;
+}
+
+/* Added in C1.2 */
+/* Table background highlight */
+.bghighlight1 {
+	background-color: #EAF8EB;
+}
+/* Table background highlight 2 */
+.bghighlight2 {
+	background-color: #EFCBCB;
+}
+/* mkportal footer copyright - Do not remove, modify or obscure the copyright text */
+.mkcopyright {
+	font-size: 10px;
+}
+.mkcopyright a {
+	text-decoration: none;
+}
+/* Calendar block current day highlighting */
+#mkcaltoday {
+	border:2px;
+	border-style:outset;
+	background-color: #0000ff;
+}
+
+/* Table Cell Alignment ltr/rtl */
+
+/* default is "left" */
+.mkalign1 {
+	text-align: left;
+}
+
+/* default is "right" */
+.mkalign2 {
+	text-align: right;
+}
+
+</style>
+
+<link rel="stylesheet" href="mkportal/modules/rss/files/simplepie.css" type="text/css" media="screen, projector" />
+
+  
+  <script type="text/javascript">
+	mkportalurl = 'http://phrozenkeep.hugelaser.com/';
+	var MKAJAX_IMAGES_PATH = "./mkportal/templates/Forum/images/mkajax/";
+    	var MKAJAX_SITEPATH = "./";
+  </script>
+  <script type="text/javascript" src="./mkportal/templates/Forum/mkp.js"></script>
+  <script type="text/javascript" src="./mkportal/templates/Forum/mkp.ext.ajax.js"></script>
+  
+<script type="text/javascript" src=".//mkportal/blocks/imgmenu/js/mootools.js"></script>
+<script type="text/javascript" src=".//mkportal/blocks/imgmenu/imgmenu.js"></script>
+<link href=".//mkportal/blocks/imgmenu/imgmenu.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+
+<body onload="javascript:GetPos()">
+<a name="top"></a>
+
+<!-- end document head -->
+
+<!-- begin open main table -->
+
+<div id="mkwrapper" style="width: 100%;">
+<table class="tabmain" width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
+
+  <tr>
+    <td width="100%" align="center">
+
+      <table border="0" width="100%" cellpadding="0" cellspacing="0">
+
+<!-- end open main table -->
+
+<!-- begin logostrip -->
+  
+	<tr>
+	  <td id="mklogostrip" width="100%">
+
+     <TABLE border="0" cellpadding="0" cellspacing="0" WIDTH="100%" background="images/pagetop_middle.gif">
+<TR>
+        <TD><img src="images/pagetop_left2.png" height="120" width="500" naturalsizeflag="0" align="bottom"></td>
+	<td align="center" valign="bottom">
+<!-- original header     
+                                <script type="text/javascript">< ! - -
+                                        google_ad_client = "pub-0170085626153842";
+                                        google_ad_width = 468;
+                                        google_ad_height = 60;
+                                        google_ad_format = "468x60_as";
+                                        google_ad_channel ="";
+                                        google_ad_type = "text";
+                                        google_color_border = "2F2F4F";
+                                        google_color_bg = "2F2F4F";
+                                        google_color_link = "2F2F4F";
+                                        google_color_url = "336699";
+                                        google_color_text = "333333";
+                                / / - - ></script>
+                                <script type="text/javascript"
+                                  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+                                </script>//-->
+
+	</td>
+        <TD width="500"><div align="right"><img src="images/pagetop_right2.png" title="... And the heavens shall tremble" width="500" height="120" " naturalsizeflag="0" align="bottom"></div>
+</TR>
+</TABLE>
+
+
+<!-- 10 anniversary header 
+<TABLE border="0" cellpadding="0" cellspacing="0" WIDTH="100%" background="images/pagetop_middle10.gif">
+<TR>
+        <TD><img src="images/pagetop_left10.png" height="120" width="500" naturalsizeflag="0" align="bottom"></td>
+	<td align="center" valign="bottom">
+	</td>
+        <TD width="500"><div align="right"><img src="images/pagetop_right10.png" title="" width="500" height="120" " naturalsizeflag="0" align="bottom"></div>
+</TR>
+</TABLE>
+//-->
+
+          </td>
+	</tr>
+	
+<!-- end logostrip -->
+
+<!-- begin linkbar -->
+
+<!-- end linkbar -->
+
+<!-- begin open portal body -->
+
+	<tr align="center">
+	  <td width="100%">
+	    <table border="0" width="100%" cellspacing="0" cellpadding="0">
+	      <tr>
+
+<!-- end open portal body -->
+
+<script type="text/javascript">
+			
+			window.addEvent('domready', function(){
+				var myMenu = new ImageMenu($$('#imageMenu a'),{openWidth:310, border:2});
+			});
+		</script>  
+
+	      
+<!-- begin left column -->
+
+		<td id="menusx" valign="top">
+		<div id="menucontents" class="mkalign1" style="">
+		<div class="mkalign2"><a href="javascript:ColumnClose('menusx');MemoPos('MKmenusx', '1');"><img src="./mkportal/templates/Forum/images/f2.gif" border="0" alt="" /></a>&nbsp;</div>
+		  <table cellpadding="0" cellspacing="2" border="0" style="width: 140px;">
+		  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Main Menu</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      
+		      		<tr><td width="100%" class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php" title="Home">Home</a>
+<!-- end block link template -->
+</td></tr>
+			
+		      		<tr><td width="100%" class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="./forum/index.php" title="The Phrozen Forums">The Phrozen Forums</a>
+<!-- end block link template -->
+</td></tr>
+			
+		      		<tr><td width="100%" class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?ind=reviews" title="Knowledge Base">Knowledge Base</a>
+<!-- end block link template -->
+</td></tr>
+			
+		      		<tr><td width="100%" class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?ind=gallery" title="Image Gallery">Image Gallery</a>
+<!-- end block link template -->
+</td></tr>
+			
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Forum</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      <tr><td class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?pid=1" title="Terms of Service">Terms of Service</a>
+<!-- end block link template -->
+</td></tr><tr><td class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="./forum/search.php?search_id=newposts" title="New posts">New posts</a>
+<!-- end block link template -->
+</td></tr><tr><td class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="./forum/memberlist.php" title="Users">Users</a>
+<!-- end block link template -->
+</td></tr><tr><td class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="./forum/faq.php" title="Help">Help</a>
+<!-- end block link template -->
+</td></tr>
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Search</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      <tr><td class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="./forum/search.php" title="Forum">Forum</a>
+<!-- end block link template -->
+</td></tr><tr><td class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?ind=gallery&amp;op=search" title="Images">Images</a>
+<!-- end block link template -->
+</td></tr><tr><td class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?ind=reviews&amp;op=search" title="Knowledge Base">Knowledge Base</a>
+<!-- end block link template -->
+</td></tr>
+				<tr>
+				  <td class="tdblock" align="center">
+				    <a href="http://www.google.com/"><img src="http://phrozenkeep.hugelaser.com/mkportal/modules/search/google_logo.png" alt="Google" align="top" /></a><br />
+
+				    <form action="http://www.google.com/search" method="get" target="blank">	    
+				    <input size="12" name="q" class="mkblkinput" /><br />
+				    <input type="hidden" name="hl" />
+				    <input type="submit" name="btnG" value="Search" class="mkbutton" />
+				    </form>
+				  </td>
+				</tr>
+
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Features</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      <tr><td class="blocks"><table style="width: 100%;" border="0" cellspacing="1" cellpadding="0"><tbody><tr><td class="tdblock"> <a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?ind=reviews&op=entry_view&iden=455">History of the Site</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?ind=reviews&op=section_view&idev=9">Humor</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?ind=reviews&op=section_view&idev=10">Interviews</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?ind=reviews&op=section_view&idev=11">Mod Reviews</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?pid=34">Linking To Us</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?pid=28">Unofficial IRC</a></td></tr> </tbody></table></td></tr>
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">File Center</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      <tr><td class="blocks"><table border="0" cellspacing="1" cellpadding="0" width="100%">
+<tbody>
+<tr>
+<td class="tdblock"> <a class="uno" href="/filecenter/dload.php">Main Page</a></td>
+</tr>
+<tr>
+<td class="tdblock"> <a class="uno" href="/filecenter/dload.php?action=search">File Search</a></td>
+</tr>
+<tr>
+<td class="tdblock"> <a class="uno" href="/filecenter/dload.php?action=category&cat_id=113">Hosted Sites</a></td>
+</tr>
+<tr>
+<td class="tdblock"> <a class="uno" href="/filecenter/dload.php?action=category&cat_id=109">Humor</a></td>
+</tr>
+<tr>
+<td class="tdblock"> <a class="uno" href="/filecenter/dload.php?action=category&cat_id=97">Miscellaneous</a></td>
+</tr>
+<tr>
+<td class="tdblock"> <a class="uno" href="/filecenter/dload.php?action=category&cat_id=1">Mod Making Tools</a></td>
+</tr>
+<tr>
+<td class="tdblock"> <a class="uno" href="/filecenter/dload.php?action=category&cat_id=2">Mod Archive</a></td>
+</tr>
+<tr>
+<td class="tdblock"> <a class="uno" href="/filecenter/dload.php?action=category&cat_id=87">Old Forum Dumps</a></td>
+</tr>
+<tr>
+<td class="tdblock"> <a class="uno" href="/filecenter/dload.php?action=category&cat_id=27">Patches</a></td>
+</tr>
+<tr>
+<td class="tdblock"> <a class="uno" href="/filecenter/dload.php?action=category&cat_id=39">Plugins</a></td>
+</tr>
+<tr>
+<td class="tdblock"> <a class="uno" href="/filecenter/dload.php?action=category&cat_id=38">Resources</a></td>
+</tr>
+</tbody>
+</table></td></tr>
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Diablo II Mod Sites</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      <tr><td class="blocks"><table style="width: 100%;" border="0" cellspacing="1" cellpadding="0"><tbody><tr><td class="tdblock"> <a class="uno" href="http://bth.d2mods.com/" target="_blank">Back to Hellfire</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://bfed2.diablomods.ru/" target="_blank">Battle for Elements</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://blackened.d2mods.com" target="_blank">Blackened</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://n.ethz.ch/student/henninav/" target="_blank">d2:elements</a></td></tr> <tr><td class="tdblock">&nbsp;<a class="uno" href="http://d2scrabble.info/" target="_blank">d2scrabble</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://es.d2mods.com" target="_blank">Eastern Sun</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://d2immersion.com/" target="_blank">Immersion</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://modsbylaz.hugelaser.com/" target="_blank">Mods by Laz</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://www.sevenlances.net/" target="_blank">Seven Lances</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://perso.wanadoo.fr/maususatlas/TohXt/Index.html" target="_blank">Time of Heroes</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://www.walhallamod.de/" target="_blank">Walhalla</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://zyel.d2mods.com" target="_blank">Zy-El</a></td></tr></tbody></table></td></tr>
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Modding Resources</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      <tr><td class="blocks"><table style="width: 100%;" border="0" cellspacing="1" cellpadding="0"><tbody><tr><td class="tdblock">&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?pid=32">Diabolic Cartography</a></td></tr> <tr><td class="tdblock">&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?pid=22">Incandescence</a></td></tr> <tr><td class="tdblock">&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?pid=33">Infinitum</a></td></tr> <tr><td class="tdblock">&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?pid=21">Inventharia</a></td></tr> <tr><td class="tdblock">&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?pid=23">Warped Tiles</a></td></tr></tbody></table></td></tr>
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Partner Sites</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      <tr><td class="blocks"><table style="width: 100%;" border="0" cellspacing="1" cellpadding="0"><tbody><tr><td class="tdblock"> <a class="uno" href="http://www.blizzplanet.com/" target="_blank">Blizzplanet</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://www.diablo2.com/" target="_blank">Diablo2.com</a></td></tr><tr><td class="tdblock"> <a class="uno" href="http://www.diablogamer.com/" target="_blank">DiabloGamer.com</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://www.diabloii.net/" target="_blank">Diabloii.net</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://www.diablowiki.com/" target="_blank">DiabloWiki</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://www.hugelaser.com/" target="_blank">Huge Laser</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://www.lurkerlounge.com/" target="_blank">Lurker Lounge</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://modsreloaded.com/" target="_blank">Mods Reloaded</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://www.neoarcadia.com/" target="_blank">Neoarcadia.com</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://www.planetdiablo.com/" target="_blank">PlanetDiablo</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://www.theamazonbasin.com/" target="_blank">The Amazon Basin</a></td></tr><td class="tdblock"> <a class="uno" href="http://ulf-johan.info/" target="_blank">Uffes Projects</a></td></tr></tbody></table></td></tr>
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Credits</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      <tr><td width="100%" class="tdblock">&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?pid=11">Copyrights</a></td></tr>
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+		  </table>
+		</div>
+		<div id="menucloseds" style="display:none">
+		<div class="mkalign2"><a href="javascript:ColumnOpen('menusx');MemoPos('MKmenusx', '0');"><img src="./mkportal/templates/Forum/images/f1.gif" border="0"  alt="" /></a></div>
+		</div>
+		</td>
+
+<!-- end left column -->
+
+<!-- begin column spacer -->
+
+		<td class="vspacer" width="0%">&nbsp;</td>
+
+<!-- end column spacer -->
+
+<!-- begin center column -->
+
+		<td valign="top" class="mkalign1" width="100%">
+
+<div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "pub-3246876018000001";
+/* Phrozen Keep Leaderboard */
+google_ad_slot = "7514462417";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+
+		  <table cellpadding="0" cellspacing="3" border="0" width="100%"> 
+		  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Knowledge Base</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      <tr align="center">
+  <td>
+
+    <script type="text/javascript">
+	  <!--
+	    function selChd(jumpsection) {
+	    var selIdx = jumpsection.selectedIndex;
+		    var newSel = jumpsection.options[selIdx].value;
+	    location.href='index.php?ind=reviews&op=section_view&idev=' + newSel;
+	}
+	    function selChoc(jumpsection) {
+	    var selIdx = jumpsection.selectedIndex;
+		    var newSel = jumpsection.options[selIdx].value;
+	    location.href='index.php?ind=reviews&order=' + newSel;
+	}
+	    function selChoe(jumpsection, idev) {
+	    var selIdx = jumpsection.selectedIndex;
+		    var newSel = jumpsection.options[selIdx].value;
+	    location.href='index.php?ind=reviews&op=section_view&idev=' + idev + '&order=' + newSel;
+	}
+	  //-->
+    </script>
+    
+    <br />
+    <table width="98%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+	<td width="60%" class="mkalign1">
+	<img src="./mkportal/templates/Forum/images/locbar.gif" alt="" /><a href="index.php?ind=reviews">Knowledge Base</a>-&gt;<a href="index.php?ind=reviews&amp;op=section_view&amp;idev=4">File Guides (1.1x)</a>-&gt;<a href="#">SetItems.txt File Guide</a>
+	</td>
+	<td width="40%" class="modulelite mkalign2">
+	  <a href="index.php?ind=reviews&amp;op=search">[ Search ]</a>
+	</td>
+      </tr>
+    </table>
+    <br />
+    <table width="98%" border="0" cellspacing="1" cellpadding="0" class="moduleborder mkalign1">
+      <tr>
+	<td>
+	  <table width="100%" border="0" cellpadding="0" cellspacing="1" class="modulebg">
+            <tr>
+              <td width="100%" height="25" class="tdblock"> <img class="mkicon" src="./mkportal/templates/Forum/images/arrow.gif" alt="" />SetItems.txt File Guide</td>
+            </tr>
+            <tr>
+              <td>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td>
+                      <table width="100%" border="0" cellspacing="1" cellpadding="5">
+		      							
+			<tr>
+                            <td class="modulecell mkalign1" width="20%" valign="middle">Title</td>
+                            <td class="modulecell mkalign1" colspan="2" width="80%" style="font-size: 14px;"><b>SetItems.txt File Guide</b></td>
+			</tr>
+			<tr>
+                            <td class="modulecell mkalign1" width="20%" valign="top">Description</td>
+                            <td class="modulecell mkalign1" colspan="2" width="80%">by Alkalund & Char, revised by Myhrginoc</td>
+			</tr>
+			
+			
+			
+			
+			
+			
+			
+			<tr>
+                            <td class="modulecell mkalign1" width="20%" valign="top">Sent by</td>
+                            <td class="modulecell mkalign1" colspan="2" width="80%"></td>
+			</tr>
+			<tr>
+				<td colspan="3"><hr /></td>
+			</tr>
+			<tr>
+                            <td colspan="3" class="modulecell mkalign1" style="font-size: 12px;"><div class="body_just"><span style="font-weight: bold"><span style="color: #bf7fff">index</span></span>: string key to item's name in a .tbl file
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="color: #bf7fff">set</span></span>: string key to the index field in Sets.txt - the set the item is a part of.
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="color: #bf7fff">item</span></span>: base item code of this set item (matches code field in <span style="color: #ffff00">Weapons.txt</span>, <span style="color: #ffff00">Armor.txt</span> or <span style="color: #ffff00">Misc.txt</span> files).
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="color: #aaaaaa">*item</span></span>: name of the base item of this set item (reference only, not loaded into game).
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="color: #bf7fff">Rarity</span></span>: Chance to pick this set item if more then one set item of the same base item exist, this uses the common <span style="color: #00ff00">rarity/total_rarity</span> formula, so if you have two set rings, one with a rarity of 100 the other with a rarity of 1, then the first will drop 100/101 percent of the time (99%) and the other will drop 1/101 percent of the time (1%), rarity can be anything between 0 and 255.
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="color: #bf7fff">lvl</span></span>: The quality level of this set item, monsters, cube recipes, vendors, objects and the like most be at least this level or higher to be able to drop this item, otherwise they would drop a magical item with twice normal durability.
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="color: #bf7fff">lvl req</span></span>: The character level required to use this set item.
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="color: #bf7fff">chrtransform</span></span>: Palette shift to apply to the the DCC component-file and the DC6 flippy-file (whenever or not the color shift will apply is determined by <span style="color: #ffff00">Weapons.txt</span>, <span style="color: #ffff00">Armor.txt</span> or <span style="color: #ffff00">Misc.txt</span>). This is an ID pointer from <span style="color: #ffff00">Colors.txt</span>.
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="color: #bf7fff">invtransform</span></span>: Palette shift to apply to the the DC6 inventory-file (whenever or not the color shift will apply is determined by <span style="color: #ffff00">Weapons.txt</span>, <span style="color: #ffff00">Armor.txt</span> or <span style="color: #ffff00">Misc.txt</span>). This is an ID pointer from <span style="color: #ffff00">Colors.txt</span>.
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="color: #bf7fff">invfile</span></span>: Overrides the invfile and setinvfile specified in <span style="color: #ffff00">Weapons.txt</span>, <span style="color: #ffff00">Armor.txt</span> or <span style="color: #ffff00">Misc.txt</span> for the base item. This field contains the file name of the DC6 inventory graphic (without the .dc6 extension).
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="color: #bf7fff">flippyfile</span></span>: Overrides the flippyfile specified in <span style="color: #ffff00">Weapons.txt</span>, <span style="color: #ffff00">Armor.txt</span> or <span style="color: #ffff00">Misc.txt</span> for the base item. This field contains the file name of the DC6 flippy animation (without the .dc6 extension).
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="color: #bf7fff">dropsound</span></span>: Overrides the dropsound (the sound played when the item hits the ground) specified in <span style="color: #ffff00">Weapons.txt</span>, <span style="color: #ffff00">Armor.txt</span> or <span style="color: #ffff00">Misc.txt</span> for the base item. This field contains an ID pointer from <span style="color: #ffff00">Sounds.txt</span>.
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="color: #bf7fff">dropsfxframe</span></span>: How many frames after the flippy animation starts playing will the associated drop sound start to play. This overrides the values in <span style="color: #ffff00">Weapons.txt</span>, <span style="color: #ffff00">Armor.txt</span> or <span style="color: #ffff00">Misc.txt</span>.
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="color: #bf7fff">usesound</span></span>: Overrides the usesound (the sound played when the item is consumed by the player) specified in <span style="color: #ffff00">Weapons.txt</span>, <span style="color: #ffff00">Armor.txt</span> or <span style="color: #ffff00">Misc.txt</span> for the base item. This field contains an ID pointer from <span style="color: #ffff00">Sounds.txt</span>.
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="color: #bf7fff">cost mult</span></span>: The base item's price is multiplied by this value when sold, repaired or bought from a vendor.
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="color: #bf7fff">cost add</span></span>: After the price has been multiplied, this amount of gold is added to the price on top.
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="color: #bf7fff">add func</span></span>: a property mode field that controls how the variable attributes will appear and be functional on a set item.  See the appendix for further details about this field's effects.
+<br />0 -> no green properties on item (apropxx will appear as a blue attribute on the list instead).
+<br />1 -> green properties (apropxx) depend on which other items from the set are equipped.
+<br />2 -> green properties (apropxx) depend on how many other items from the set are equipped.
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="color: #3f3fff">BLUE ATTRIBUTES</span></span>
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="color: #bf7fff">prop1</span></span> to <span style="font-weight: bold"><span style="color: #bf7fff">prop9</span></span>: An ID pointer of a property from <span style="color: #ffff00">Properties.txt</span>, these columns control each of the nine different fixed (blue) modifiers a set item can grant you at most.
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="color: #bf7fff">par1</span></span> to <span style="font-weight: bold"><span style="color: #bf7fff">par9</span></span>: The parameter passed on to the associated property, this is used to pass skill IDs, state IDs, monster IDs, montype IDs and the like on to the properties that require them, these fields support calculations.
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="color: #bf7fff">min1</span></span> to <span style="font-weight: bold"><span style="color: #bf7fff">min9</span></span>: Minimum value to assign to the associated property.  Certain properties have special interpretations based on stat encoding (e.g. chance-to-cast and charged skills).  See the File Guide for <span style="color: #ffff00">Properties.txt</span> and <span style="color: #ffff00">ItemStatCost.txt</span> for further details.
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="color: #bf7fff">max1</span></span> to <span style="font-weight: bold"><span style="color: #bf7fff">max9</span></span>: Maximum value to assign to the associated property.  Certain properties have special interpretations based on stat encoding (e.g. chance-to-cast and charged skills).  See the File Guide for <span style="color: #ffff00">Properties.txt</span> and <span style="color: #ffff00">ItemStatCost.txt</span> for further details.
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="color: #00ff00">GREEN ATTRIBUTES</span></span>
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="color: #bf7fff">aprop1a,aprop1b</span></span> to <span style="font-weight: bold"><span style="color: #bf7fff">aprop5a,aprop5b</span></span>: An ID pointer of a property from <span style="color: #ffff00">Properties.txt</span>, these columns control each of the five pairs of different variable (green) modifiers a set item can grant you at most.
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="color: #bf7fff">apar1a,apar1b</span></span> to <span style="font-weight: bold"><span style="color: #bf7fff">apar5a,apar5b</span></span>: The parameter passed on to the associated property, this is used to pass skill IDs, state IDs, monster IDs, montype IDs and the like on to the properties that require them, these fields support calculations.
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="color: #bf7fff">amin1a,amin1b</span></span> to <span style="font-weight: bold"><span style="color: #bf7fff">amin5a,amin5b</span></span>: Minimum value to assign to the associated property.  Certain properties have special interpretations based on stat encoding (e.g. chance-to-cast and charged skills).  See the File Guide for <span style="color: #ffff00">Properties.txt</span> and <span style="color: #ffff00">ItemStatCost.txt</span> for further details.
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="color: #bf7fff">amax1a,amax1b</span></span> to <span style="font-weight: bold"><span style="color: #bf7fff">amax5a,amax5b</span></span>: Maximum value to assign to the associated property.  Certain properties have special interpretations based on stat encoding (e.g. chance-to-cast and charged skills).  See the File Guide for <span style="color: #ffff00">Properties.txt</span> and <span style="color: #ffff00">ItemStatCost.txt</span> for further details.
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="color: #aaaaaa">*eol</span></span>: terminator field, not used in game, primary purpose is to keep Microsoft Excel from misbehaving. 
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="color: #cfff00">APPENDIX</span></span>
+<br />
+
+<br />
+Green attributes will appear depending on how many set items are equipped, if the add func field is either 1 or 2.  If the add func field is 1, in addition to how many items, the green attributes are controlled by <i>which</i> other items you have equipped as well.  If a set has X number of items, at most there will be X-1 green attributes on any item.
+<br />
+
+<br />
+If add func = 2, these properties will appear as below.  Many of the "classic" sets in the unmodded game have this configuration.
+<br />aprop1a, aprop1b -> when any second set item is also equipped.
+<br />aprop2a, aprop2b -> when any third set item is also equipped.
+<br />aprop3a, aprop3b -> when any fourth set item is also equipped.
+<br />aprop4a, aprop4b -> when any fifth set item is also equipped.
+<br />aprop5a, aprop5b -> when any sixth set item is also equipped.
+<br />
+
+<br />
+The fun really begins when add func = 1.  Different properties can emerge as different items are equipped in combination from the same set.  The attributes appear for specific item pairs regardless of whether or how many other items from the set are also equipped.  Civerb's Ward (shield) is the one and only example of this configuration in the unmodded game.
+<br />
+<br />If the first item listed in the set definition is equipped, it will get the green property:
+<br />aprop1a, aprop1b -> when the second item listed in the set definition is also equipped.
+<br />aprop2a, aprop2b -> when the third item listed in the set definition is also equipped.
+<br />aprop3a, aprop3b -> when the fourth item listed in the set definition is also equipped.
+<br />aprop4a, aprop4b -> when the fifth item listed in the set definition is also equipped.
+<br />aprop5a, aprop5b -> when the sixth item listed in the set definition is also equipped.
+<br />
+<br />If the second item listed in the set definition is equipped, it will get the green property:
+<br />aprop1a, aprop1b -> when the first item listed in the set definition is also equipped.
+<br />aprop2a, aprop2b -> when the third item listed in the set definition is also equipped.
+<br />aprop3a, aprop3b -> when the fourth item listed in the set definition is also equipped.
+<br />aprop4a, aprop4b -> when the fifth item listed in the set definition is also equipped.
+<br />aprop5a, aprop5b -> when the sixth item listed in the set definition is also equipped.
+<br />
+<br />If the third item listed in the set definition is equipped, it will get the green property:
+<br />aprop1a, aprop1b -> when the first item listed in the set definition is also equipped.
+<br />aprop2a, aprop2b -> when the second item listed in the set definition is also equipped.
+<br />aprop3a, aprop3b -> when the fourth item listed in the set definition is also equipped.
+<br />aprop4a, aprop4b -> when the fifth item listed in the set definition is also equipped.
+<br />aprop5a, aprop5b -> when the sixth item listed in the set definition is also equipped.
+<br />
+<br />If the fourth item listed in the set definition is equipped, it will get the green property:
+<br />aprop1a, aprop1b -> when the first item listed in the set definition is also equipped.
+<br />aprop2a, aprop2b -> when the second item listed in the set definition is also equipped.
+<br />aprop3a, aprop3b -> when the third item listed in the set definition is also equipped.
+<br />aprop4a, aprop4b -> when the fifth item listed in the set definition is also equipped.
+<br />aprop5a, aprop5b -> when the sixth item listed in the set definition is also equipped.
+<br />
+<br />If the fifth item listed in the set definition is equipped, it will get the green property:
+<br />aprop1a, aprop1b -> when the first item listed in the set definition is also equipped.
+<br />aprop2a, aprop2b -> when the second item listed in the set definition is also equipped.
+<br />aprop3a, aprop3b -> when the third item listed in the set definition is also equipped.
+<br />aprop4a, aprop4b -> when the fourth item listed in the set definition is also equipped.
+<br />aprop5a, aprop5b -> when the sixth item listed in the set definition is also equipped.
+<br />
+<br />If the sixth item listed in the set definition is equipped, it will get the green property:
+<br />aprop1a, aprop1b -> when the first item listed in the set definition is also equipped.
+<br />aprop2a, aprop2b -> when the second item listed in the set definition is also equipped.
+<br />aprop3a, aprop3b -> when the third item listed in the set definition is also equipped.
+<br />aprop4a, aprop4b -> when the fourth item listed in the set definition is also equipped.
+<br />aprop5a, aprop5b -> when the fifth item listed in the set definition is also equipped.
+<br /></div></td>
+			</tr>
+			<tr>
+				<td colspan="3"><hr /></td>
+			</tr>
+			<tr>
+                            <td class="modulecell mkalign1" width="20%" valign="top">Votes</td>
+                            <td class="modulecell mkalign1" colspan="2" width="80%">Votes: 1 - Average: 5 <img src="./mkportal/templates/Forum/images/spacer.gif" width="115" height="5" alt="" /><br /><img src="./mkportal/templates/Forum/images/scale.gif" width="129" alt="" /><br /><img src="./mkportal/templates/Forum/images/bar-start.gif" height="11" alt="" /><img src="./mkportal/templates/Forum/images/bar.gif" width="119" height="11" alt="" /><img src="./mkportal/templates/Forum/images/bar-end.gif" height="11" alt="" />
+			    </td>
+			</tr>
+
+
+
+			<tr>
+                          <td class="modulecell" colspan="3">
+                            <table width="50%" align="center">
+                              <tr>
+				<td align="center" class="functions" width="200"><a href="index.php?ind=reviews&amp;op=submit_comment&amp;ide=348"><img src="./mkportal/templates/Forum/images/comment.gif" border="0" alt="" /></a></td>
+				<td align="center" class="functions" width="200"><a href="index.php?ind=reviews&amp;op=submit_rate&amp;ide=348"><img src="./mkportal/templates/Forum/images/rate.gif" border="0" alt="" /></a></td>
+                              </tr>
+                              <tr>
+				<td align="center" class="functions" width="200"><a href="index.php?ind=reviews&amp;op=submit_comment&amp;ide=348">Add a Comment</a></td>
+				<td align="center" class="functions" width="200"><a href="index.php?ind=reviews&amp;op=submit_rate&amp;ide=348">Rate</a></td>
+                              </tr>
+                            </table>
+                          </td>
+			</tr>
+
+		<tr>
+		  <td class="tdblock" colspan="3">
+		  Comments
+		  </td>
+		  </tr><tr>
+						  <td colspan="3"><hr /></td>
+		</tr>
+		
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+	    </tr>
+	  </table>
+	</td>
+      </tr>
+    </table>
+    
+    <br />
+    <table width="98%" border="0" cellspacing="1" cellpadding="0" align="center" class="moduleborder">
+      <tr>
+	<td>
+	  <table width="100%" border="0" cellpadding="0" cellspacing="2" class="modulebg">
+	    <tr>
+	      <td>
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+		  <tr>
+		    <td>
+		      <table width="100%" border="0" cellspacing="1" cellpadding="5">
+			<tr>
+			  <td class="modulex" colspan="2">
+			    Stat
+			  </td>
+			</tr>
+			<tr>
+			  <td width="40" align="center" class="modulecell"><img src="./mkportal/templates/Forum/images/stats.gif" alt="" /></td>
+			  <td class="modulecell">There are 427 articles in the Database<br />Most Viewed: <a href="index.php?ind=reviews&amp;op=entry_view&amp;iden=455">History of the Phrozen Keep</a><br />Most Rated: <a href="index.php?ind=reviews&amp;op=entry_view&amp;iden=332">Guide: How to get rid of your fellow modmakers</a></td>
+			</tr>
+		      </table>
+		    </td>
+		  </tr>
+		</table>
+	      </td>
+	    </tr>
+	  </table>
+	</td>
+      </tr>
+    </table>
+    <br />
+    <table width="98%" border="0" cellspacing="0" cellpadding="0" align="center">
+      <tr>
+	<td class="modulebg">
+	<div class="mkalign1" style="margin: 4px 0;"></div>
+	</td>
+      </tr>
+    </table>
+
+    <table width="98%" class="moduleborder" border="0" cellspacing="1" cellpadding="1" align="center">
+      <tr>
+	<td class="modulebg">
+	  <table width="100%" border="0" cellspacing="0" cellpadding="4" class="mkalign2">
+	    <tr>
+	      <td class="modulex mkalign1" width="*">
+		Total users browsing the Knowledge Base: 2 (1 Registered Members 1 Guests and 0 Anonymous Members)<br />Visible members are:  <a href="./forum/memberlist.php?mode=viewprofile&amp;u=37948">kambala</a>
+	      </td>
+	    </tr>
+	  </table>
+	</td>
+      </tr>
+    </table>
+
+    <table width="98%" align="center">
+      <tr>
+	<td align="center">
+	<br /><br /><div align="center"><a href="http://www.mkportal.it" target="_blank">MKPReviews</a> &copy;2003-2008 <a href="http://www.mkportal.it" target="_blank">mkportal.it</a></div>
+	</td>
+      </tr>
+    </table>
+  </td>
+</tr>
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+		  </table>
+		</td>
+
+<!-- end center column -->
+		
+<!-- begin column spacer -->
+
+		<td class="vspacer" width="0%">&nbsp;</td>
+
+<!-- end column spacer -->
+
+<!-- begin right column -->
+
+		<td id="menudx" valign="top">
+		<div id="menucontentr" class="mkalign1" style="">
+		<div class="mkalign1">&nbsp;<a href="javascript:ColumnClose('menudx');MemoPos('MKmenudx', '1')"><img src="./mkportal/templates/Forum/images/f1.gif" border="0" alt="" /></a></div>
+		  <table cellpadding="0" cellspacing="2" border="0" style="width: 140px;">
+		  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Personal Menu</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      
+				<tr>
+				  <td width="100%" class="tdblock" align="center">
+				  Welcome kambala
+				  </td>
+				</tr>
+				<tr>
+				  <td width="100%" class="tdblock" align="center">
+				  
+				  </td>
+				</tr>
+				<tr>
+				  <td width="100%" class="tdblock" align="center">
+				  <span class="mktxtcontr">Last Visited:</span>
+				  </td>
+				</tr>
+				<tr>
+				  <td width="100%" align="center" class="tdglobal">
+				  Monday, 15 July 2013 19:54
+				  </td>
+				</tr>
+				
+				<tr>
+				<td width="100%"  class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="./forum/ucp.php" title="Personal CP">Personal CP</a>
+<!-- end block link template -->
+
+				  </td>
+				</tr>
+				<tr>
+				  <td width="100%" class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="./forum/ucp.php?i=pm&amp;folder=inbox" title="PM (0/0)">PM (0/0)</a>
+<!-- end block link template -->
+
+				  </td>
+				</tr>
+				<tr>
+				  <td width="100%" class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="./forum/ucp.php?mode=logout&amp;sid=62b74722e422c355aadc121b9c8b44ca" title="Log Out">Log Out</a>
+<!-- end block link template -->
+
+				  </td>
+				</tr>
+     	 	
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Who Is Online?</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      
+				<tr>
+				  <td width="100%">
+				    <table border="0" width="100%" cellpadding="1" cellspacing="1">
+				      <tr>
+					<td class="tdblock">
+					<span class="mktxtcontr">27</span> Users online:
+					</td>
+				      </tr>
+				      <tr>
+					<td class="tdglobal">
+					<b>21</b> &nbsp;Guests<br /><b>0</b> &nbsp;Anonymous<br /><b>6</b> &nbsp;Visible:<br /> <span style="color:#9E8DA7"><strong>Bing [Bot]</strong></span>, <span style="color:#9E8DA7"><strong>Google [Bot]</strong></span>, <span style="color:#9E8DA7"><strong>Google Adsense [Bot]</strong></span>, <a href="./forum/memberlist.php?mode=viewprofile&amp;u=23070">k0r3l1k</a>, <a href="./forum/memberlist.php?mode=viewprofile&amp;u=37948">kambala</a>, <a href="./forum/memberlist.php?mode=viewprofile&amp;u=39338">Xaphan</a>
+					</td>
+				      </tr>
+				    </table>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdblock">
+<!-- begin block link template -->
+		&nbsp;<a class="uno" href="./forum/viewonline.php" title="Last click">Last click</a>
+<!-- end block link template -->
+
+				  </td>
+				</tr>	
+     	 	
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Recent Discussions</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      
+				<tr>
+				  <td width="100%" class="tdblock">
+				  <a class="uno" href="./forum/viewtopic.php?f=8&amp;t=60910&amp;p=474393#p474393">Re: [1.10] Scrolling T...</a>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdglobal">
+				  by: <a href="./forum/memberlist.php?mode=viewprofile&amp;u=2685" style="color:#FF9900"><strong>kingpin</strong></a><br /> on: Wednesday, 17 July 2013 14:11
+				  </td>
+				</tr>
+			
+				<tr>
+				  <td width="100%" class="tdblock">
+				  <a class="uno" href="./forum/viewtopic.php?f=8&amp;t=60910&amp;p=474392#p474392">Re: [1.10] Scrolling T...</a>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdglobal">
+				  by: <a href="./forum/memberlist.php?mode=viewprofile&amp;u=36815">weapon-x</a><br /> on: Wednesday, 17 July 2013 13:34
+				  </td>
+				</tr>
+			
+				<tr>
+				  <td width="100%" class="tdblock">
+				  <a class="uno" href="./forum/viewtopic.php?f=10&amp;t=38269&amp;p=474391#p474391">Re: What mods do you p...</a>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdglobal">
+				  by: <a href="./forum/memberlist.php?mode=viewprofile&amp;u=42543">manjoe</a><br /> on: Wednesday, 17 July 2013 12:16
+				  </td>
+				</tr>
+			
+				<tr>
+				  <td width="100%" class="tdblock">
+				  <a class="uno" href="./forum/viewtopic.php?f=15&amp;t=60849&amp;p=474390#p474390">Re: Gold find fire sor...</a>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdglobal">
+				  by: <a href="./forum/memberlist.php?mode=viewprofile&amp;u=4787">Firesnake</a><br /> on: Wednesday, 17 July 2013 08:04
+				  </td>
+				</tr>
+			
+				<tr>
+				  <td width="100%" class="tdblock">
+				  <a class="uno" href="./forum/viewtopic.php?f=15&amp;t=60849&amp;p=474389#p474389">Re: Gold find fire sor...</a>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdglobal">
+				  by: <a href="./forum/memberlist.php?mode=viewprofile&amp;u=40869">Lucifer666</a><br /> on: Wednesday, 17 July 2013 00:06
+				  </td>
+				</tr>
+			
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Site Stats</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      
+				<tr>
+				  <td class="tdblock">
+				  <span class="mktxtcontr">457833</span> Posts:
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdglobal">
+				  56428 Topics
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdglobal">
+				  401405 Replies<br />
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdblock">
+				  <span class="mktxtcontr">338</span> Images:
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdglobal">
+				  Inside the Image Gallery<br />
+				  </td>
+				</tr>				
+				<tr>
+				  <td class="tdblock">
+				  <span class="mktxtcontr">427</span> Articles:
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdglobal">
+				  Inside the Knowledge Base<br />
+				  </td>
+				</tr>				
+				<tr>
+				  <td class="tdblock">
+				  <span class="mktxtcontr">30719</span> Reg. Members:
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdglobal">
+				  Last: <a class="uno" href="./forum/memberlist.php?mode=viewprofile&amp;u=42543">manjoe</a>
+				  </td>
+				</tr>
+				<!--<tr>
+				  <td class="tdblock">
+				  Browsed Pages:
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdglobal">
+				  <center><img src="./mkportal/templates/Forum/images/led/2.gif" style="border: solid 1px #ffffff;" alt="" /><img src="./mkportal/templates/Forum/images/led/5.gif" style="border: solid 1px #ffffff;" alt="" /><img src="./mkportal/templates/Forum/images/led/7.gif" style="border: solid 1px #ffffff;" alt="" /><img src="./mkportal/templates/Forum/images/led/2.gif" style="border: solid 1px #ffffff;" alt="" /><img src="./mkportal/templates/Forum/images/led/0.gif" style="border: solid 1px #ffffff;" alt="" /><img src="./mkportal/templates/Forum/images/led/7.gif" style="border: solid 1px #ffffff;" alt="" /><img src="./mkportal/templates/Forum/images/led/4.gif" style="border: solid 1px #ffffff;" alt="" /><img src="./mkportal/templates/Forum/images/led/2.gif" style="border: solid 1px #ffffff;" alt="" /></center>
+				  </td>
+				</tr> -->
+
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Calendar</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      
+				<tr>
+				  <td class="tdblock" >
+
+				    <form action="http://phrozenkeep.hugelaser.com/index.php?ind=reviews&amp;op=entry_view&amp;iden=348#cal" name="CalForm" method="post">
+				    <table width="100%" align="center" border="0" cellspacing="1" cellpadding="0">
+				      <tr>
+					<td class="tdglobal" style="text-align:center;" align="center" colspan="7">
+					  <input type="hidden" name="old_y" value="2013" />
+					  <input type="hidden" name="old_y" value="7" />
+					  <select name="m_m" class="bgselect" onchange="document.CalForm.submit();">
+					  
+					  <option value="1"  >Jan</option>
+
+					  <option value="2"  >Feb</option>
+
+					  <option value="3"  >Mar</option>
+
+					  <option value="4"  >Apr</option>
+
+					  <option value="5"  >May</option>
+
+					  <option value="6"  >Jun</option>
+
+					  <option value="7" selected="selected" >Jul</option>
+
+					  <option value="8"  >Aug</option>
+
+					  <option value="9"  >Sep</option>
+
+					  <option value="10"  >Oct</option>
+
+					  <option value="11"  >Nov</option>
+
+					  <option value="12"  >Dec</option>
+
+					  </select>
+					  <select name="y_y" class="bgselect" onchange="document.CalForm.submit();">
+					  
+					  <option value="2010"  >2010</option>
+
+					  <option value="2011"  >2011</option>
+
+					  <option value="2012"  >2012</option>
+
+					  <option value="2013" selected="selected" >2013</option>
+
+					  <option value="2014"  >2014</option>
+
+					  <option value="2015"  >2015</option>
+
+					  <option value="2016"  >2016</option>
+
+					  </select>
+					</td>
+				      </tr>      
+			      
+				      
+				      <tr>
+					<th class="modulex" style="height: 18px; padding: 0px; margin: 0px; border: 0px; font-size: 10px; width: 14%" align="center" valign="middle">Su</th>
+					   
+					<th class="modulex" style="height: 18px; padding: 0px; margin: 0px; border: 0px; font-size: 10px; width: 14%" align="center" valign="middle">Mo</th>
+					   
+					<th class="modulex" style="height: 18px; padding: 0px; margin: 0px; border: 0px; font-size: 10px; width: 14%" align="center" valign="middle">Tu</th>
+					   
+					<th class="modulex" style="height: 18px; padding: 0px; margin: 0px; border: 0px; font-size: 10px; width: 14%" align="center" valign="middle">We</th>
+					   
+					<th class="modulex" style="height: 18px; padding: 0px; margin: 0px; border: 0px; font-size: 10px; width: 14%" align="center" valign="middle">Th</th>
+					   
+					<th class="modulex" style="height: 18px; padding: 0px; margin: 0px; border: 0px; font-size: 10px; width: 14%" align="center" valign="middle">Fr</th>
+					   
+					<th class="modulex" style="height: 18px; padding: 0px; margin: 0px; border: 0px; font-size: 10px; width: 14%" align="center" valign="middle">Sa</th>
+					   				      
+				      
+				      </tr>
+				      <tr>
+				
+					<td class="tdblock" style="height:10px; width:4px; padding: 0px; margin: 0px; border: 0px;"><br /></td>
+					
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">1</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">2</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">3</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">4</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">5</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">6</td>
+				
+				      </tr>
+				      <tr>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">7</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">8</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">9</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">10</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">11</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">12</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">13</td>
+				
+				      </tr>
+				      <tr>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">14</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">15</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">16</td>
+				
+				      <td class="tdblock" id="mkcaltoday" style="font-size: 10px; height:10px" valign="middle" align="center"><b>17</b></td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">18</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">19</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">20</td>
+				
+				      </tr>
+				      <tr>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">21</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">22</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">23</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">24</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">25</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">26</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">27</td>
+				
+				      </tr>
+				      <tr>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">28</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">29</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">30</td>
+				
+				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">31</td>
+				
+					<td class="tdblock" style="height:10px; width:4px; padding: 0px; margin: 0px; border: 0px;"><br /></td>
+					
+					<td class="tdblock" style="height:10px; width:4px; padding: 0px; margin: 0px; border: 0px;"><br /></td>
+					
+					<td class="tdblock" style="height:10px; width:4px; padding: 0px; margin: 0px; border: 0px;"><br /></td>
+									      
+				      
+				    </tr>
+				    <tr>
+				      <td class="trattini3" style="font-size: 1px; background: transparent;" colspan="7">&nbsp;</td>
+				    </tr>
+				    
+				    <tr>
+				      <td class="tdglobal" colspan="7">
+				      Today's Birthdays:
+				      </td>
+				    </tr>
+				    <tr>
+				      <td class="modulecell" style="font-size: 10px; font-weight: normal;" colspan="7">
+					<a href="./forum/memberlist.php?mode=viewprofile&amp;u=38402">gongalov</a> (42)&nbsp;<a href="./forum/memberlist.php?mode=viewprofile&amp;u=39851">Jonas</a> (31)&nbsp;<a href="./forum/memberlist.php?mode=viewprofile&amp;u=39964">mmcx125</a> (18)&nbsp;
+				      </td>
+				    </tr>
+							      
+				      							
+				    </table>
+				    </form>
+
+				  </td>
+				</tr>
+
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Random Image</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      
+				<tr>
+				  <td align="center"><img style="cursor: url(./mkportal/templates/Forum/images/mkajax/zoomin.cur), pointer;" src="http://phrozenkeep.hugelaser.com/mkportal/modules/gallery/album/t_a_59.jpg" border="0" alt="Click to enlarge" onclick="ajax_showPop('./index.php?ind=ajax&amp;act=showgal&amp;idp=59', 1);return false" />
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdblock" align="center"><a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?ind=gallery&amp;op=foto_show&amp;ida=59">D2 Screenshot 031</a><br />
+				  </td>
+				</tr>
+			
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Phrozen Keep Poll</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      
+				<tr>
+				  <td class="tdblock">
+				  <a href="./forum/viewtopic.php?t=55546&amp;view=viewpoll">Which type of Diablo 2 mod do you like best?</a><br /><br />
+				  </td>
+				</tr>
+            
+				<tr>
+				  <td class="tdblock3">
+				  Total Conversion
+				  </td>
+				</tr>
+				<tr>
+				  <td align="left">
+					<div align="left" style="width: 130px; ">
+				  		<img src="./mkportal/templates/Forum/images/bar-start.gif" width="4" height="11" alt="" /><img src="./mkportal/templates/Forum/images/bar.gif" width="68" height="11" alt="" /><img src="./mkportal/templates/Forum/images/bar-end.gif" width="4" height="11" alt="" />
+					</div>56.37%<br /><br />
+		  		</td>
+				</tr>
+
+                
+				<tr>
+				  <td class="tdblock3">
+				  Balance Mod
+				  </td>
+				</tr>
+				<tr>
+				  <td align="left">
+					<div align="left" style="width: 130px; ">
+				  		<img src="./mkportal/templates/Forum/images/bar-start.gif" width="4" height="11" alt="" /><img src="./mkportal/templates/Forum/images/bar.gif" width="18" height="11" alt="" /><img src="./mkportal/templates/Forum/images/bar-end.gif" width="4" height="11" alt="" />
+					</div>14.71%<br /><br />
+		  		</td>
+				</tr>
+
+                
+				<tr>
+				  <td class="tdblock3">
+				  New Features Added
+				  </td>
+				</tr>
+				<tr>
+				  <td align="left">
+					<div align="left" style="width: 130px; ">
+				  		<img src="./mkportal/templates/Forum/images/bar-start.gif" width="4" height="11" alt="" /><img src="./mkportal/templates/Forum/images/bar.gif" width="30" height="11" alt="" /><img src="./mkportal/templates/Forum/images/bar-end.gif" width="4" height="11" alt="" />
+					</div>25.49%<br /><br />
+		  		</td>
+				</tr>
+
+                
+				<tr>
+				  <td class="tdblock3">
+				  Drop Mod
+				  </td>
+				</tr>
+				<tr>
+				  <td align="left">
+					<div align="left" style="width: 130px; ">
+				  		<img src="./mkportal/templates/Forum/images/bar-start.gif" width="4" height="11" alt="" /><img src="./mkportal/templates/Forum/images/bar.gif" width="3" height="11" alt="" /><img src="./mkportal/templates/Forum/images/bar-end.gif" width="4" height="11" alt="" />
+					</div>3.43%<br /><br />
+		  		</td>
+				</tr>
+
+                
+				<tr>
+				  <td class="tdblock">
+				  <span class="mktxtcontr">204</span> Total Voters
+				  </td>
+				</tr>
+				<tr>
+				  <td class="tdglobal">
+				  <a href="./forum/viewtopic.php?t=55546&amp;view=viewpoll">View poll...</a>
+				  </td>
+				</tr>
+            
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+<!-- begin block template -->
+
+		    <tr>
+		      <td class="tablemenu" valign="top">
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+   			  <tr>
+         		    <td>
+          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
+          			<tr>
+				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Random Quote</td>
+         			</tr>
+         		      </table>
+         		    </td>
+			  </tr>
+			  <tr>
+         		    <td width="100%">
+		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
+		 	      			
+				<tr>
+				</tr>
+				<tr>
+				  <td class="tdglobal">
+				  <i><b>When sorrows come, they come not single spies, But in battalions.</b></i><br />(<b>William Shakespeare</b>)
+				  </td>
+				</tr>			
+				
+	         	      </table>
+	  		    </td>
+			  </tr>
+			</table>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td class="tdspacer">&nbsp;</td>
+		    </tr>
+
+<!-- end block template -->
+  
+		  </table>
+		</div>
+		<div id="menuclosedr" style="display:none">
+		<div class="mkalign1"><a href="javascript:ColumnOpen('menudx');MemoPos('MKmenudx', '0')"><img src="./mkportal/templates/Forum/images/f2.gif" border="0" alt="" /></a></div>
+		</div>
+		</td>
+		
+<!-- end right column -->
+
+<!-- begin close portal body -->
+
+	      </tr>
+	    </table>
+	  </td>
+	</tr>
+	
+<!-- end close portal body -->
+
+<!-- begin close main table -->
+
+      </table>
+
+    </td>
+  </tr>
+</table>
+</div>
+
+<!-- end close main table -->
+
+<!-- begin footer -->
+<!-- you can add your credits here  -->
+
+<!-- end footer -->
+  <p align="center"></p>
+
+</body>
+</html>
+
+<!-- end footer -->
