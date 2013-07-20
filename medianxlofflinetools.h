@@ -115,6 +115,9 @@ private slots:
     void checkForUpdate();
     void aboutApp();
 
+    // toolbar actions
+    void showSkillTree();
+
 private:
     // UI
     Ui::MedianXLOfflineToolsClass *ui;
@@ -133,8 +136,8 @@ private:
     QString _charPath;
     QByteArray _saveFileContents;
     int _oldStatValues[4];
-    QMap <Enums::ClassName::ClassNameEnum, BaseStats> _baseStatsMap;
-    QHash<Enums::ClassName::ClassNameEnum, QPair<QList<int>, QList<int> > > _characterSkillsIndexes; // first is save file order, second - visual and planner order
+    QMap<Enums::ClassName::ClassNameEnum, BaseStats> _baseStatsMap;
+    QHash<Enums::ClassName::ClassNameEnum, SkillsOrderPair> _characterSkillsIndexes;
     int _oldClvl;
     quint32 _sharedGold;
     QHash<Enums::ItemStorage::ItemStorageEnum, PlugyStashInfo> _plugyStashesHash;
@@ -197,7 +200,6 @@ private:
     inline void recalculateStatPoints();
 
     quint32 mercExperienceForLevel(quint8 level) const { return static_cast<quint32>(level * level * (level + 1)); }
-    void getValueOfPropertyInItem(qint32 &outValue, quint16 propKey, ItemInfo *item) const;
 
     void clearUI();
     void updateUI();

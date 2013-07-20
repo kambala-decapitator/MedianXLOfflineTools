@@ -9,7 +9,7 @@ bool compressFile(const QFileInfo &fi)
     QFile in(fi.filePath());
     if (!in.open(QIODevice::ReadOnly))
     {
-        qWarning("error opening file '%s'\nreason: %s", fi.canonicalFilePath(), qPrintable(in.errorString()));
+        qWarning("error opening file '%s'\nreason: %s", qPrintable(fi.canonicalFilePath()), qPrintable(in.errorString()));
         return false;
     }
     QByteArray fileData = in.readAll();
@@ -18,7 +18,7 @@ bool compressFile(const QFileInfo &fi)
     QFile out(fi.canonicalPath() + '/' + fi.baseName() + ".dat");
     if (!out.open(QIODevice::WriteOnly))
     {
-        qWarning("error creating file '%s'\nreason: %s", out.fileName(), qPrintable(out.errorString()));
+        qWarning("error creating file '%s'\nreason: %s", qPrintable(out.fileName()), qPrintable(out.errorString()));
         return false;
     }
     QByteArray compressedData = qCompress(fileData);

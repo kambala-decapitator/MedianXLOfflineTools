@@ -72,7 +72,7 @@ QVariant ItemStorageTableModel::data(const QModelIndex &index, int role) const
             if (!isSetOrUniqueImage && item->variableGraphicIndex /*&& QRegExp("\\d$").indexIn(imageName) == -1*/)
                 imageName += QString::number(item->variableGraphicIndex > 6 ? 6 : item->variableGraphicIndex);
 
-            QString imagePath = ResourcePathManager::pathForImageName(imageName);
+            QString imagePath = ResourcePathManager::pathForItemImageName(imageName);
             bool doesImageExist = QFile::exists(imagePath);
 
             switch(role)

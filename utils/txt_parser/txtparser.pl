@@ -16,7 +16,7 @@ sub readTbl
     my $filename = shift;
     open my $tmpfile, "<", "tbl/$locale/${filename}.txt";
     for (<$tmpfile>) { $tbl->{$1} = $2 if /\"(.+?)\"\t\"(.*)\"$/ }
-    close $tmpfile;
+    close $tmpfile
 }
 
 my $realNameField = 'realName';
@@ -30,7 +30,7 @@ sub tblExpandArray
         $_->{$newFieldName} = $tbl->{$_->{$field}} // $_->{$field} if defined $_->{$field};
         next unless defined $_->{$newFieldName};
         $_->{$newFieldName} =~ s/\</&lt;/g;
-        $_->{$newFieldName} =~ s/\>/&gt;/g;
+        $_->{$newFieldName} =~ s/\>/&gt;/g
     }
 }
 
@@ -43,7 +43,7 @@ sub tblExpandHash
         my ($nameKey, $spellDescKey) = ($itemsHash->{$_}->{$nameStr}, $itemsHash->{$_}->{$spellDescStr});
         $nameKey = $_ unless defined $nameKey; # nameKey is defined only for items
         $itemsHash->{$_}->{$field} = $tbl->{$nameKey} // 'NO NAME';
-        $itemsHash->{$_}->{$spellDescStr} = $tbl->{$spellDescKey} if defined $spellDescKey and defined $tbl->{$spellDescKey};
+        $itemsHash->{$_}->{$spellDescStr} = $tbl->{$spellDescKey} if defined $spellDescKey and defined $tbl->{$spellDescKey}
     }
 }
 
@@ -74,9 +74,9 @@ for (0..scalar @$itemProperties)
     for my $otherID (0..scalar @$itemProperties)
     {
         my $otherDesc = $itemProperties->[$otherID]->{descGroupPositive};
-        push(@sameGroupIDs, $otherID) if defined $otherDesc and $otherDesc eq $desc and $otherID != $_;
+        push(@sameGroupIDs, $otherID) if defined $otherDesc and $otherDesc eq $desc and $otherID != $_
     }
-    $itemProperties->[$_]->{descGroupIDs} = join(",", @sameGroupIDs);
+    $itemProperties->[$_]->{descGroupIDs} = join(",", @sameGroupIDs)
 }
 
 sub statIdsFromPropertyStat
@@ -86,12 +86,12 @@ sub statIdsFromPropertyStat
 
     my $propsStat = undef;
     # handle special cases
-    if ($property =~ /^dmg\-(max|min)$/) { $propsStat = $1."damage" }
-    elsif ($property eq "dmg%") { $propsStat = "item_maxdamage_percent" }
+    if    ($property =~ /^dmg\-(max|min)$/) { $propsStat = $1."damage" }
+    elsif ($property eq "dmg%")             { $propsStat = "item_maxdamage_percent" }
     if (defined $propsStat)
     {
         for (0..scalar @$itemProperties) { return $_ if $itemProperties->[$_]->{stat} eq $propsStat };
-        return undef;
+        return undef
     }
 
     my @ids;
@@ -104,11 +104,11 @@ sub statIdsFromPropertyStat
             if ($itemProperties->[$_]->{stat} eq $prop)
             {
                 push @ids, $_;
-                last;
+                last
             }
         }
     }
-    return join(',', @ids);
+    return join(',', @ids)
 }
 
 my $uniques = parsetxt("uniqueitems.txt", _autoindex=>0, iName=>0, rlvl=>7, image=>23);
@@ -130,9 +130,8 @@ for (my $i = 1; $i <= $greenPropertiesSize; $i++)
         $greenPropertiesHash{$key} = $colStart + $_
     }
 }
-# a good way would be to also read 'addfunc' column, but the only set with non-zero addfunc is Tathamet
-# MarcoNecroX set also has 'green' properties, but its addfunc is 0, so they're actually blue
-my $sets = parsetxt("setitems.txt", _autoindex=>0, iIName=>0, iSName=>1, rlvl=>8, image=>11,
+
+my $sets = parsetxt("setitems.txt", _autoindex=>0, iIName=>0, iSName=>1, rlvl=>8, image=>11, addfunc=>20,
                     %greenPropertiesHash, '!_lodSet' => {col => 6, val => qr/^old LoD$/});
 &tblExpandArray($sets, "iIName", "IName");
 &tblExpandArray($sets, "iSName", "SName");
@@ -149,12 +148,16 @@ for my $setElement (@$sets)
     $mxlSets->[$setIndex]->{rlvl}  = $setElement->{rlvl};
     $mxlSets->[$setIndex]->{image} = $setElement->{image};
 
-    for (my $i = 0; $i < scalar @greenPropertiesKeys; $i++)
+    # if addfunc == 0, then properties are embedded in the item
+    if (defined $mxlSets->[$setIndex]->{addfunc} and $mxlSets->[$setIndex]->{addfunc} > 0)
     {
-        my $key = $greenPropertiesKeys[$i];
-        # convert property name to property id(s) in each firt column
-        $mxlSets->[$setIndex]->{$key} = $i % $fixedPropertyKeysSize ? $setElement->{$key}
-                                           : &statIdsFromPropertyStat($setElement->{$key})
+        for (my $i = 0; $i < scalar @greenPropertiesKeys; $i++)
+        {
+            my $key = $greenPropertiesKeys[$i];
+            # convert property name to property id(s) in each firt column
+            $mxlSets->[$setIndex]->{$key} = $i % $fixedPropertyKeysSize ? $setElement->{$key}
+                                               : &statIdsFromPropertyStat($setElement->{$key})
+        }
     }
 
     $setIndex++
@@ -173,7 +176,7 @@ my $miscTypes = parsetxt("misc.txt", $itemName=>0, "#code"=>18, $nameStr=>20, $s
 
 my $skills = parsetxt("skills.txt", _index=>"1", "dbgname"=>"0", "internalName"=>"3", "class"=>"2",
                       "srvmissile"=>"15", "srvmissilea"=>"18", "srvmissileb"=>"19", "srvmissilec"=>"20", "SrcDam"=>"220");
-my $skillsDsc = parsetxt("skilldesc.txt", "#code"=>0, tab => 1, row => 2, col => 3, "dscname"=>8);
+my $skillsDsc = parsetxt("skilldesc.txt", "#code"=>0, tab => 1, row => 2, col => 3, image => 7, dscname=>8);
 
 my $processedSkills;
 my $index = -1;
@@ -185,11 +188,13 @@ foreach my $elem (@$skills)
     $processedSkills->[$index]->{iname1} = $elem->{dbgname};
     $processedSkills->[$index]->{class} = defined $elem->{class} ? $classes{$elem->{class}} : -1;
     next unless defined $elem->{internalName};
+
     my $desc = $skillsDsc->{$elem->{internalName}};
     $processedSkills->[$index]->{iname} = $desc->{dscname} if defined $desc->{dscname};
-    $processedSkills->[$index]->{tab} = $desc->{tab};
-    $processedSkills->[$index]->{row} = $desc->{row};
-    $processedSkills->[$index]->{col} = $desc->{col};
+    $processedSkills->[$index]->{tab}   = $desc->{tab};
+    $processedSkills->[$index]->{row}   = $desc->{row};
+    $processedSkills->[$index]->{col}   = $desc->{col};
+    $processedSkills->[$index]->{image} = $desc->{image}
 }
 &tblExpandArray($processedSkills, "iname", "name");
 
@@ -233,7 +238,7 @@ for my $miscItemType (keys %$miscTypes)
             $mos->{$_}->{value} = $cubeMo->{minValue};
             $mos->{$_}->{paramAdd} = $cubeMo->{maxValue} if defined $cubeMo->{param};
             $mos->{$_}->{paramShift} = $cubeMo->{param};
-            last;
+            last
         }
     }
 }
@@ -248,7 +253,7 @@ for my $subtype (@subtypes)
     for my $i (1..3)
     {
         for my $key (@subtypeKeys) { $gemStatsHash{$subtype.$i.$key} = $firstColumn++ }
-        $firstColumn++; # skip 'max'
+        $firstColumn++ # skip 'max'
     }
 }
 my $gems = parsetxt("gems.txt", $itemName => 0, 'letter' => 1, "#code" => 3, %gemStatsHash);
@@ -263,7 +268,7 @@ if ($locale ne 'en')
         for (keys %$gems)
         {
             my $letter = $gems->{$_}->{letter};
-            $gems->{$_}->{letter} = $letters{$letter} if defined $letter and defined $letters{$letter};
+            $gems->{$_}->{letter} = $letters{$letter} if defined $letter and defined $letters{$letter}
         }
     }
     else { print "inserted runes will stay in English - failed to open tbl/$locale/runes.txt: $!\n" }
@@ -282,7 +287,7 @@ for my $name (keys %$itemTypes)
     next unless defined $hashRef->{equiv1} and defined $hashRef->{code0};
     print $out $hashRef->{code0}, "\t", $hashRef->{equiv1};
     print $out ",", $hashRef->{equiv2} if defined $hashRef->{equiv2};
-    print $out "\n";
+    print $out "\n"
 }
 close $out;
 
@@ -320,11 +325,11 @@ for my $ref ($armorTypes, $weaponTypes, $miscTypes)
                 # to determine item type when parsing socketables (see @subtypes): 0 - shield, 1 - weapon, nothing - armor
                 print $out $itemType if defined $hashRef->{bodyLoc} and $hashRef->{bodyLoc} eq 'rarm';
                 print $out "\t".(defined $hashRef->{class} ? $classes{$hashRef->{class}} : -1)."\n";
-                last;
+                last
             }
         }
     }
-    $itemType++;
+    $itemType++
 }
 close $out;
 
@@ -335,7 +340,7 @@ for my $hashRef (@$uniques)
 {
     printf $out "%d\t%s\t%d\t%s\n", $count, $hashRef->{$realNameField}, $hashRef->{rlvl},
         ($hashRef->{image} // '') if defined $hashRef->{$realNameField};
-    $count++;
+    $count++
 }
 close $out;
 
@@ -346,20 +351,20 @@ for my $set (@$mxlSets)
     printf $out "%d\t%s\t%s\t%d\t%s", $set->{index}, $set->{IName}, $set->{SName},
         ($set->{rlvl} // 0), ($set->{image} // '');
     print $out "\t".($set->{$_} // '') for (@greenPropertiesKeys);
-    print $out "\n";
+    print $out "\n"
 }
 close $out;
 
 $count = -1;
-my @skillKeys = qw/name class tab row col/;
+my @skillKeys = qw/name class tab row col image/;
 open $out, ">", "$prefix/skills.txt";
 print $out "#code\t".join("\t", @skillKeys)."\n";
 for my $hashRef (@$processedSkills)
 {
     $count++;
     print $out $count;
-    print $out "\t".($hashRef->{$_} // ($_ eq 'name' ? '' : 0)) for (@skillKeys);
-    print $out "\n";
+    print $out "\t".($hashRef->{$_} // '') for (@skillKeys);
+    print $out "\n"
 }
 close $out;
 
@@ -368,7 +373,7 @@ for (@$descArrayRef)
 {
     delete $propertiesHash{$_->{key}};
     $propertiesHash{$_->{expanded}} = undef;
-    $propertiesHash{descGroupIDs} = undef;
+    $propertiesHash{descGroupIDs} = undef
 }
 
 my @propKeys = sort keys %propertiesHash;
@@ -384,7 +389,7 @@ for my $hashRef (@$itemProperties)
     # print $out "${count}$s\n";
     print $out $count;
     print $out "\t".($hashRef->{$_} // '') for (@propKeys);
-    print $out "\n";
+    print $out "\n"
 }
 close $out;
 
@@ -394,7 +399,7 @@ $count = -2;
 for (@$monstats)
 {
     print $out "$count\t$_->{$realNameField}\n" if defined $_->{$realNameField};
-    $count++;
+    $count++
 }
 close $out;
 
@@ -404,7 +409,7 @@ print $out "#".join("\t", @rwKeys)."\n";
 for my $key (keys %$rw)
 {
     print $out ($rw->{$key}->{$_} // '')."\t" for (@rwKeys);
-    print $out "\n";
+    print $out "\n"
 }
 close $out;
 
@@ -416,7 +421,7 @@ for my $id (@moIds)
 {
     print $out $id;
     print $out "\t".($mos->{$id}->{$_} // '') for (@moKeys);
-    print $out "\n";
+    print $out "\n"
 }
 close $out;
 
@@ -437,14 +442,14 @@ for my $gemCode (keys %$gems)
             {
                 print $out "\t\t\t";
                 $i += 2; # skip param and value
-                next;
+                next
             }
 
-            $value = &statIdsFromPropertyStat($value);
+            $value = &statIdsFromPropertyStat($value)
         }
-        print $out "\t".($value // '');
+        print $out "\t".($value // '')
     }
-    print $out "\n";
+    print $out "\n"
 }
 close $out;
 
@@ -463,7 +468,7 @@ for my $i (0..scalar @$baseStats)
     print $out $classCode;
     print $out "\t", $baseStats->[$i]->{$_} for (@baseStatsKeys);
     print $out "\n";
-    $classCode++;
+    $classCode++
 }
 close $out;
 

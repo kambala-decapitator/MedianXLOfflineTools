@@ -32,6 +32,8 @@ PropertiesViewerWidget::~PropertiesViewerWidget()
 
 void PropertiesViewerWidget::showItem(ItemInfo *item)
 {
+    using namespace Enums;
+
     _itemMysticOrbs.clear();
     _rwMysticOrbs.clear();
 
@@ -55,7 +57,7 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
     if (item->isEar)
     {
         QString itemDescription = qApp->translate("PropertiesDisplayManager", "%1's Ear", "param is character name").arg(item->earInfo.name.constData()) + kHtmlLineBreak;
-        itemDescription += Enums::ClassName::classes().at(item->earInfo.classCode) + kHtmlLineBreak;
+        itemDescription += ClassName::classes().at(item->earInfo.classCode) + kHtmlLineBreak;
         itemDescription += qApp->translate("PropertiesDisplayManager", "Level %1").arg(item->earInfo.level);
         renderHtml(ui->allTextEdit, itemDescription + ilvlText);
         return;
@@ -144,15 +146,15 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
     quint8 clvl = charBasicInfo.level;
     ItemProperty *foo = new ItemProperty;
 
-    if (itemBase->genericType == Enums::ItemTypeGeneric::Armor)
+    if (itemBase->genericType == ItemTypeGeneric::Armor)
     {
         int baseDef = item->defense, totalDef = baseDef;
-        int ed =    allProps.value(Enums::ItemProperties::EnhancedDefence, foo)->value + (      allProps.value(Enums::ItemProperties::EnhancedDefenceBasedOnClvl, foo)->value * clvl) / 32;
-        ed += item->setProps.value(Enums::ItemProperties::EnhancedDefence, foo)->value + (item->setProps.value(Enums::ItemProperties::EnhancedDefenceBasedOnClvl, foo)->value * clvl) / 32;
+        int ed =    allProps.value(ItemProperties::EnhancedDefence, foo)->value + (      allProps.value(ItemProperties::EnhancedDefenceBasedOnClvl, foo)->value * clvl) / 32;
+        ed += item->setProps.value(ItemProperties::EnhancedDefence, foo)->value + (item->setProps.value(ItemProperties::EnhancedDefenceBasedOnClvl, foo)->value * clvl) / 32;
         if (ed)
             totalDef = (totalDef * (100 + ed)) / 100;
-        totalDef +=       allProps.value(Enums::ItemProperties::Defence, foo)->value + (      allProps.value(Enums::ItemProperties::DefenceBasedOnClvl, foo)->value * clvl) / 32;
-        totalDef += item->setProps.value(Enums::ItemProperties::Defence, foo)->value + (item->setProps.value(Enums::ItemProperties::DefenceBasedOnClvl, foo)->value * clvl) / 32;
+        totalDef +=       allProps.value(ItemProperties::Defence, foo)->value + (      allProps.value(ItemProperties::DefenceBasedOnClvl, foo)->value * clvl) / 32;
+        totalDef += item->setProps.value(ItemProperties::Defence, foo)->value + (item->setProps.value(ItemProperties::DefenceBasedOnClvl, foo)->value * clvl) / 32;
         if (totalDef < 0)
             totalDef = 0;
 
@@ -163,21 +165,21 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
             itemDescription += defString.arg(baseDef);
         itemDescription += kHtmlLineBreak;
     }
-    else if (itemBase->genericType == Enums::ItemTypeGeneric::Weapon)
+    else if (itemBase->genericType == ItemTypeGeneric::Weapon)
     {
         // TODO: [later] use lambda to calculate damage
-        int ed = allProps.value(Enums::ItemProperties::EnhancedDamage, foo)->value;
+        int ed = allProps.value(ItemProperties::EnhancedDamage, foo)->value;
 
-        int minDmgTotal = allProps.value(Enums::ItemProperties::MinimumDamage, foo)->value, minDmgSecondary = allProps.value(Enums::ItemProperties::MinimumDamageSecondary, foo)->value;
-        PropertiesDisplayManager::SecondaryDamageUsage u = PropertiesDisplayManager::secondaryDamageUsage(Enums::ItemProperties::MinimumDamageSecondary, minDmgSecondary, allProps, item);
+        int minDmgTotal = allProps.value(ItemProperties::MinimumDamage, foo)->value, minDmgSecondary = allProps.value(ItemProperties::MinimumDamageSecondary, foo)->value;
+        PropertiesDisplayManager::SecondaryDamageUsage u = PropertiesDisplayManager::secondaryDamageUsage(ItemProperties::MinimumDamageSecondary, minDmgSecondary, allProps, item);
         if (u != PropertiesDisplayManager::Unused)
             minDmgTotal += minDmgSecondary;
 
-        int maxDmgTotal = allProps.value(Enums::ItemProperties::MaximumDamage, foo)->value, maxDmgSecondary = allProps.value(Enums::ItemProperties::MaximumDamageSecondary, foo)->value;
-        u = PropertiesDisplayManager::secondaryDamageUsage(Enums::ItemProperties::MaximumDamageSecondary, maxDmgSecondary, allProps, item);
+        int maxDmgTotal = allProps.value(ItemProperties::MaximumDamage, foo)->value, maxDmgSecondary = allProps.value(ItemProperties::MaximumDamageSecondary, foo)->value;
+        u = PropertiesDisplayManager::secondaryDamageUsage(ItemProperties::MaximumDamageSecondary, maxDmgSecondary, allProps, item);
         if (u != PropertiesDisplayManager::Unused)
             maxDmgTotal += maxDmgSecondary;
-        maxDmgTotal += (allProps.value(Enums::ItemProperties::MaximumDamageBasedOnClvl, foo)->value * clvl) / 32;
+        maxDmgTotal += (allProps.value(ItemProperties::MaximumDamageBasedOnClvl, foo)->value * clvl) / 32;
 
         ColorsManager::ColorIndex damageColor = ed + minDmgTotal + maxDmgTotal > 0 ? ColorsManager::Blue : ColorsManager::White; // blue if any property exists
         QString damageFormat = qApp->translate("PropertiesDisplayManager", "%1 to %2", "min-max damage");
@@ -225,10 +227,10 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
             itemDescription += qApp->translate("PropertiesDisplayManager", "Two-Hand Damage") + ": " + htmlStringFromDiabloColorString(damageFormat.arg(minDmg).arg(maxDmg + (minDmg == maxDmg)), damageColor) + kHtmlLineBreak;
         }
     }
-    if (itemBase->genericType != Enums::ItemTypeGeneric::Misc && item->maxDurability)
+    if (itemBase->genericType != ItemTypeGeneric::Misc && item->maxDurability)
     {
         itemDescription += qApp->translate("PropertiesDisplayManager", "Durability") + ": ";
-        bool isIndestructible = allProps.value(Enums::ItemProperties::Indestructible, foo)->value == 1;
+        bool isIndestructible = allProps.value(ItemProperties::Indestructible, foo)->value == 1;
         if (isIndestructible)
             itemDescription += QString("%1 [").arg(QChar(0x221e)); // infinity
         itemDescription += qApp->translate("PropertiesDisplayManager", "%1 of %2", "durability").arg(item->currentDurability).arg(item->maxDurability);
@@ -240,7 +242,7 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
         itemDescription += qApp->translate("PropertiesDisplayManager", "Quantity: %1").arg(item->quantity) + kHtmlLineBreak;
     if (itemBase->classCode > -1)
     {
-        QString text = qApp->translate("PropertiesDisplayManager", "(%1 Only)", "class-specific item").arg(Enums::ClassName::classes().at(itemBase->classCode));
+        QString text = qApp->translate("PropertiesDisplayManager", "(%1 Only)", "class-specific item").arg(ClassName::classes().at(itemBase->classCode));
         if (itemBase->classCode != charBasicInfo.classCode)
             itemDescription += htmlStringFromDiabloColorString(text, ColorsManager::Red);
         else
@@ -250,29 +252,29 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
 
     // TODO: [later] use lambda to calculate requirements
     if (itemBase->rdex)
-        if (quint16 rdex = itemBase->rdex + (itemBase->rdex * allProps.value(Enums::ItemProperties::Requirements, foo)->value) / 100)
-            itemDescription += htmlStringFromDiabloColorString(qApp->translate("PropertiesDisplayManager", "Required Dexterity: %1").arg(rdex), charInfo.valueOfStatistic(Enums::CharacterStats::Dexterity) < rdex ? ColorsManager::Red : ColorsManager::White)
+        if (quint16 rdex = itemBase->rdex + (itemBase->rdex * allProps.value(ItemProperties::Requirements, foo)->value) / 100)
+            itemDescription += htmlStringFromDiabloColorString(qApp->translate("PropertiesDisplayManager", "Required Dexterity: %1").arg(rdex), charInfo.valueOfStatistic(CharacterStats::Dexterity) < rdex ? ColorsManager::Red : ColorsManager::White)
                                + kHtmlLineBreak;
 
     if (itemBase->rstr)
-        if (quint16 rstr = itemBase->rstr + (itemBase->rstr * allProps.value(Enums::ItemProperties::Requirements, foo)->value) / 100)
-            itemDescription += htmlStringFromDiabloColorString(qApp->translate("PropertiesDisplayManager", "Required Strength: %1").arg(rstr),  charInfo.valueOfStatistic(Enums::CharacterStats::Strength)  < rstr ? ColorsManager::Red : ColorsManager::White)
+        if (quint16 rstr = itemBase->rstr + (itemBase->rstr * allProps.value(ItemProperties::Requirements, foo)->value) / 100)
+            itemDescription += htmlStringFromDiabloColorString(qApp->translate("PropertiesDisplayManager", "Required Strength: %1").arg(rstr),  charInfo.valueOfStatistic(CharacterStats::Strength)  < rstr ? ColorsManager::Red : ColorsManager::White)
                                + kHtmlLineBreak;
 
     int rlvl;
     switch (item->quality)
     {
-    case Enums::ItemQuality::Set: case Enums::ItemQuality::Unique:
+    case ItemQuality::Set: case ItemQuality::Unique:
         {
             SetOrUniqueItemInfo *info;
-            if (item->quality == Enums::ItemQuality::Set)
+            if (item->quality == ItemQuality::Set)
                 info = ItemDataBase::Sets()->value(item->setOrUniqueId);
             else
                 info = ItemDataBase::Uniques()->value(item->setOrUniqueId);
             rlvl = info ? info->rlvl : itemBase->rlvl;
         }
         break;
-//  case Enums::ItemQuality::Rare: case Enums::ItemQuality::Crafted: case Enums::ItemQuality::Magic:
+//  case ItemQuality::Rare: case ItemQuality::Crafted: case ItemQuality::Magic:
         // TODO: [0.5+] add support for affix rlvl
 //      break;
     default:
@@ -286,7 +288,7 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
         if (maxSocketableRlvl < socketableRlvl)
             maxSocketableRlvl = socketableRlvl;
     }
-    if (int actualRlvl = qMax(rlvl, maxSocketableRlvl) + allProps.value(Enums::ItemProperties::RequiredLevel, foo)->value)
+    if (int actualRlvl = qMax(rlvl, maxSocketableRlvl) + allProps.value(ItemProperties::RequiredLevel, foo)->value)
         itemDescription += htmlStringFromDiabloColorString(qApp->translate("PropertiesDisplayManager", "Required Level: %1").arg(actualRlvl), clvl < actualRlvl ? ColorsManager::Red : ColorsManager::White) + kHtmlLineBreak;
     delete foo;
 
@@ -294,7 +296,7 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
     bool shouldAddDamageToUndeadInTheBottom = false;
     if (ItemParser::itemTypesInheritFromTypes(itemBase->types, PropertiesDisplayManager::kDamageToUndeadTypes))
     {
-        if (ItemProperty *damageToUndeadProp = allProps.value(Enums::ItemProperties::DamageToUndead))
+        if (ItemProperty *damageToUndeadProp = allProps.value(ItemProperties::DamageToUndead))
             damageToUndeadProp->value += 50;
         else
             shouldAddDamageToUndeadInTheBottom = true;
@@ -328,15 +330,38 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
     if (item->isEthereal)
         itemDescription += htmlStringFromDiabloColorString(qApp->translate("PropertiesDisplayManager", "Ethereal (Cannot be Repaired)"), ColorsManager::Blue) + kHtmlLineBreak;
 
-    if (item->quality == Enums::ItemQuality::Set)
+    if (item->quality == ItemQuality::Set)
     {
         // set item properties stored in item
         if (!item->setProps.isEmpty())
             itemDescription += propertiesToHtml(item->setProps, ColorsManager::Green);
 
         // set item properties from txt
+        PropertiesMultiMap setFixedProps;
+        foreach (const SetItemInfo::SetFixedProperty &setProp, ItemDataBase::Sets()->value(item->setOrUniqueId)->fixedProperties)
+        {
+            foreach (int propId, setProp.ids)
+            {
+                ItemProperty *prop = new ItemProperty(0, setProp.param);
+                switch (propId)
+                {
+                case ItemProperties::MinimumDamageFire: case ItemProperties::MinimumDamageLightning: case ItemProperties::MinimumDamageMagic: case ItemProperties::MinimumDamageCold:
+                    prop->value = setProp.minValue;
+                    break;
+                default:
+                    prop->value = setProp.maxValue;
+                    break;
+                }
+                if (propId == ItemProperties::MinimumDamageMagic || propId == ItemProperties::MaximumDamageMagic)
+                    ItemParser::convertParamsInMagicDamageString(prop, ItemDataBase::Properties()->value(propId));
+                setFixedProps.insert(propId, prop);
+            }
+        }
+        if (!setFixedProps.isEmpty())
+            itemDescription += propertiesToHtml(setFixedProps, ColorsManager::Green);
+        qDeleteAll(setFixedProps);
 
-        // set properties
+        // TODO: set properties
 
         // set item names from current set with correct color
         QString setName = ItemDataBase::Sets()->value(item->setOrUniqueId)->setName;
@@ -347,7 +372,7 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
             bool found = false;
             foreach (ItemInfo *anItem, charInfo.items.character) //-V807
             {
-                if (anItem->quality == Enums::ItemQuality::Set && ItemDataBase::Sets()->value(anItem->setOrUniqueId)->itemName == setItemName)
+                if (anItem->quality == ItemQuality::Set && ItemDataBase::Sets()->value(anItem->setOrUniqueId)->itemName == setItemName)
                 {
                     found = true;
                     break;

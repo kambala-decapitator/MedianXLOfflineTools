@@ -449,6 +449,16 @@ void ItemsViewerDialog::updateItemManagementButtonsState()
     updateStashButtonsState();
 }
 
+#ifdef Q_OS_MAC
+void ItemsViewerDialog::keyPressEvent(QKeyEvent *e)
+{
+    if (e->modifiers() == Qt::ControlModifier && e->key() == Qt::Key_W)
+        reject();
+    else
+        QDialog::keyPressEvent(e);
+}
+#endif
+
 void ItemsViewerDialog::updateDisenchantButtonsState()
 {
     bool areUniquesSelected = _uniquesRadioButton->isChecked(), areSetsSelected = _setsRadioButton->isChecked();

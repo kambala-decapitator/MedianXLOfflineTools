@@ -72,6 +72,11 @@ public slots:
     void updateItemManagementButtonsState();
     void showDisenchantPreviewActionTriggered(QAction *action) { _showDisenchantPreviewOption = static_cast<ShowDisenchantPreviewOption>(action->data().toUInt()); }
 
+protected:
+#ifdef Q_OS_MAC
+    virtual void keyPressEvent(QKeyEvent *e);
+#endif
+
 signals:
     void cubeDeleted(bool = true);  // connect directly to QAction's setEnabled() slot
     void closing(bool = true);      // connect directly to QAction's setDisabled() slot

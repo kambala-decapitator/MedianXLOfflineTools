@@ -210,10 +210,11 @@ struct UniqueItemInfo : public SetOrUniqueItemInfo
 struct SkillInfo
 {
     QString name;
-    qint8 classCode, tab, row, col;
+    qint8 classCode, tab, row, col, imageId;
 };
 
 typedef QList<quint8> SkillList;
+typedef QPair<QList<int>, QList<int> > SkillsOrderPair; // first is save file order, second - visual and planner order
 
 struct MysticOrb
 {

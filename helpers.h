@@ -42,6 +42,8 @@ class QTreeView;
 QList<QTreeWidgetItem *> treeItemsForItems(const QList<ItemInfo *> &items);
 void customizeItemsTreeView(QTreeView *treeView);
 
+qint32 getValueOfPropertyInItem(ItemInfo *item, quint16 propKey, quint16 param = 0);
+
 bool isTiered(ItemInfo *item);
 bool isTiered(const QList<QByteArray> &itemTypes);
 bool isSacred(ItemInfo *item);

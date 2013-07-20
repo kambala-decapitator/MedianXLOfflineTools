@@ -71,7 +71,8 @@ SOURCES += main.cpp \
            disenchantpreviewmodel.cpp \
            dupescandialog.cpp \
            stashsortingoptionsdialog.cpp \
-           helpwindowdisplaymanager.cpp
+           helpwindowdisplaymanager.cpp \
+           skilltreedialog.cpp
 
 HEADERS += medianxlofflinetools.h \
            resurrectpenaltydialog.h \
@@ -114,7 +115,8 @@ HEADERS += medianxlofflinetools.h \
            checkboxsortfilterproxymodel.hpp \
            dupescandialog.h \
            stashsortingoptionsdialog.h \
-           helpwindowdisplaymanager.h
+           helpwindowdisplaymanager.h \
+           skilltreedialog.h
 
 FORMS += medianxlofflinetools.ui \
          resurrectpenaltydialog.ui \

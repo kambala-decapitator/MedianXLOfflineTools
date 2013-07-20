@@ -238,9 +238,13 @@ QList<SkillInfo *> *ItemDataBase::Skills()
             SkillInfo *skill = new SkillInfo;
             skill->name = QString::fromUtf8(data.at(1));
             skill->classCode = data.at(2).toShort();
-            skill->tab = data.at(3).toShort();
-            skill->row = data.at(4).toShort();
-            skill->col = data.at(5).toShort();
+            if (data.size() > 3)
+            {
+                skill->tab = data.at(3).toShort();
+                skill->row = data.at(4).toShort();
+                skill->col = data.at(5).toShort();
+                skill->imageId = data.at(6).toShort();
+            }
             allSkills.push_back(skill);
         }
         f.remove();
@@ -447,7 +451,7 @@ QString ItemDataBase::completeItemName(ItemInfo *item, bool shouldUseColor, bool
         SetItemInfo *setItem = Sets()->value(item->setOrUniqueId);
         specialName = setItem->itemName;
         if (!shouldUseColor)
-            specialName += QString(" [%1]").arg(setItem->setName);
+            specialName += QString(" [%1]").arg(QString(setItem->setName).replace("\\n", " "));
     }
     else if (item->quality == Enums::ItemQuality::Unique)
         specialName = Uniques()->contains(item->setOrUniqueId) ? Uniques()->value(item->setOrUniqueId)->name : QString();
@@ -689,6 +693,11 @@ bool ItemDataBase::isGenericSocketable(ItemInfo *item)
 bool ItemDataBase::isCube(ItemInfo *item)
 {
     return item->itemType == "box";
+}
+
+bool ItemDataBase::doesItemGrantBonus(ItemInfo *item)
+{
+    return item->location == Enums::ItemLocation::Equipped || (item->storage == Enums::ItemStorage::Inventory && isUberCharm(item));
 }
 
 bool ItemDataBase::canDisenchantIntoArcaneShards(ItemInfo *item)

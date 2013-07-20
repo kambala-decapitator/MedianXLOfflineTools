@@ -585,7 +585,7 @@
      <x>0</x>
      <y>0</y>
      <width>686</width>
-     <height>21</height>
+     <height>22</height>
     </rect>
    </property>
    <property name="nativeMenuBar">
@@ -776,6 +776,7 @@
    <addaction name="actionFind"/>
    <addaction name="separator"/>
    <addaction name="actionSkillPlan"/>
+   <addaction name="actionSkillTree"/>
    <addaction name="separator"/>
    <addaction name="actionAbout"/>
   </widget>
@@ -1398,6 +1399,14 @@
   <action name="actionOpenFileAssociationUI">
    <property name="text">
     <string>Open file association UI</string>
+   </property>
+  </action>
+  <action name="actionSkillTree">
+   <property name="text">
+    <string>Skill Tree</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+T</string>
    </property>
   </action>
  </widget>

@@ -17,6 +17,7 @@
 #include "fileassociationmanager.h"
 #include "messagecheckbox.h"
 #include "experienceindicatorgroupbox.h"
+#include "skilltreedialog.h"
 #ifdef DUPE_CHECK
 #include "dupescandialog.h"
 #endif
@@ -1122,6 +1123,13 @@ void MedianXLOfflineTools::aboutApp()
 }
 
 
+void MedianXLOfflineTools::showSkillTree()
+{
+    SkillTreeDialog dlg(_characterSkillsIndexes.value(CharacterInfo::instance().basicInfo.classCode), this);
+    dlg.exec();
+}
+
+
 // overridden protected methods
 
 void MedianXLOfflineTools::closeEvent(QCloseEvent *e)
@@ -1309,11 +1317,11 @@ void MedianXLOfflineTools::createLayout()
     _charPathLabel = new QLabel(this);
     ui->statusBar->addPermanentWidget(_charPathLabel);
 
-    // on Mac OS X some UI elements become ugly if main window is set to minimumSize()
+    // on Mac OS X height is calculated wrong
 #ifndef Q_OS_MAC
     resize(minimumSizeHint());
-#endif
     setFixedHeight(height());
+#endif
 }
 
 void MedianXLOfflineTools::createCharacterGroupBoxLayout()
@@ -1584,10 +1592,12 @@ void MedianXLOfflineTools::fillMaps()
         for (int i = 0; i < n; ++i)
             if (skills->at(i)->classCode == classCode)
                 skillsIndexes += i;
-        _characterSkillsIndexes[static_cast<Enums::ClassName::ClassNameEnum>(classCode)].first = skillsIndexes;
 
+        SkillsOrderPair pair;
+        pair.first = skillsIndexes;
         qSort(skillsIndexes.begin(), skillsIndexes.end(), compareSkillIndexes);
-        _characterSkillsIndexes[static_cast<Enums::ClassName::ClassNameEnum>(classCode)].second = skillsIndexes;
+        pair.second = skillsIndexes;
+        _characterSkillsIndexes[static_cast<Enums::ClassName::ClassNameEnum>(classCode)] = pair;
     }
 }
 
@@ -1627,6 +1637,9 @@ void MedianXLOfflineTools::connectSignals()
     connect(ui->levelSpinBox, SIGNAL(valueChanged(int)), SLOT(levelChanged(int)));
     foreach (QSpinBox *spinBox, _spinBoxesStatsMap)
         connect(spinBox, SIGNAL(valueChanged(int)), SLOT(statChanged(int)));
+
+    // toolbar
+    connect(ui->actionSkillTree, SIGNAL(triggered()), SLOT(showSkillTree()));
 
     // main window
     connect(ui->renameButton, SIGNAL(clicked()), SLOT(rename()));
@@ -2013,7 +2026,7 @@ bool MedianXLOfflineTools::processSaveFile()
     charInfo.basicInfo.skills.clear();
     int skillsNumber = isSigma() ? 35 : kSkillsNumber;
     // TODO: [later] fix for Sigma
-    if (!isSigma())
+    if (skillsNumber == kSkillsNumber)
     {
         charInfo.basicInfo.skills.reserve(skillsNumber);
         for (int i = 0; i < skillsNumber; ++i)
@@ -2033,14 +2046,14 @@ bool MedianXLOfflineTools::processSaveFile()
         }
         charInfo.basicInfo.totalSkillPoints = skills;
 
-        const QPair<QList<int>, QList<int> > &skillsIndeces = _characterSkillsIndexes[charInfo.basicInfo.classCode];
+        const SkillsOrderPair &skillsIndeces = _characterSkillsIndexes[charInfo.basicInfo.classCode];
         charInfo.basicInfo.skillsReadable.clear();
         charInfo.basicInfo.skillsReadable.reserve(skillsNumber);
         for (int i = 0; i < skillsNumber; ++i)
         {
             int skillIndex = skillsIndeces.second.at(i);
             charInfo.basicInfo.skillsReadable += charInfo.basicInfo.skills.at(skillsIndeces.first.indexOf(skillIndex));
-            //qDebug() << charInfo.basicInfo.skillsReadable.last() << ItemDataBase::Skills()->value(skillIndex).name;
+//            qDebug() << charInfo.basicInfo.skillsReadable.last() << ItemDataBase::Skills()->value(skillIndex)->name;
         }
     }
 
@@ -2078,7 +2091,7 @@ bool MedianXLOfflineTools::processSaveFile()
     //foreach (ItemInfo *item, itemsBuffer)
     //    if (item->location == ItemLocation::Equipped || (item->storage == ItemStorage::Inventory && ItemDataBase::isUberCharm(item)))
     //        foreach (quint16 propKey, propKeys)
-    //            getValueOfPropertyInItem(propValues[propKey], propKey, item);
+    //            propValues[propKey] = getValueOfPropertyInItem(propKey, item);
     //for (auto iter = propValues.constBegin(); iter != propValues.constEnd(); ++iter)
     //    qDebug() << "property" << iter.key() << "value" << iter.value();
     //qint32 strBonus = propValues.value(ItemProperties::StrengthBonus);
@@ -2086,8 +2099,8 @@ bool MedianXLOfflineTools::processSaveFile()
 #ifndef DUPE_CHECK
     qint32 avoidValue = 0;//propValues.value(ItemProperties::Avoid1);
     foreach (ItemInfo *item, itemsBuffer)
-        if (item->location == ItemLocation::Equipped || (item->storage == ItemStorage::Inventory && ItemDataBase::isUberCharm(item)))
-            getValueOfPropertyInItem(avoidValue, ItemProperties::Avoid1, item);
+        if (ItemDataBase::doesItemGrantBonus(item))
+            avoidValue += getValueOfPropertyInItem(item, ItemProperties::Avoid1);
     if (avoidValue >= 100)
     {
         QString avoidText = tr("100% avoid is kewl");
@@ -2254,16 +2267,6 @@ void MedianXLOfflineTools::recalculateStatPoints()
     CharacterInfo::instance().basicInfo.totalStatPoints = investedStatPoints() + ui->freeStatPointsLineEdit->text().toUInt();
 }
 
-void MedianXLOfflineTools::getValueOfPropertyInItem(qint32 &outValue, quint16 propKey, ItemInfo *item) const
-{
-    foreach (const PropertiesMultiMap *const props, QList<PropertiesMultiMap *>() << &item->props << &item->rwProps << &item->setProps)
-        if (ItemProperty *itemProp = props->value(propKey))
-            outValue += itemProp->value;
-
-    foreach (ItemInfo *socketableItem, item->socketablesInfo)
-        getValueOfPropertyInItem(outValue, propKey, socketableItem);
-}
-
 void MedianXLOfflineTools::processPlugyStash(QHash<Enums::ItemStorage::ItemStorageEnum, PlugyStashInfo>::iterator &iter, ItemsList *items)
 {
     PlugyStashInfo &info = iter.value();
@@ -2381,7 +2384,7 @@ void MedianXLOfflineTools::clearUI()
 
     QList<QAction *> actions = QList<QAction *>() << ui->actionReloadCharacter << ui->actionSaveCharacter << ui->actionRename << ui->actionRespecStats << ui->actionRespecSkills << ui->actionActivateWaypoints
                                                   << ui->actionDeactivateHallsOfPain << ui->actionConvertToSoftcore << ui->actionResurrect << ui->actionFind << ui->actionFindNext << ui->actionFindPrevious
-                                                  << ui->actionShowItems << ui->actionSkillPlan << ui->actionShowAllStats;
+                                                  << ui->actionShowItems << ui->actionSkillPlan << ui->actionShowAllStats << ui->actionSkillTree;
     foreach (QAction *action, actions)
         action->setDisabled(true);
 
@@ -2410,7 +2413,7 @@ void MedianXLOfflineTools::updateUI()
     clearUI();
 
     QList<QAction *> actions = QList<QAction *>() << ui->actionReloadCharacter << ui->actionRename << ui->actionRespecStats << ui->actionRespecSkills << ui->actionActivateWaypoints << ui->actionDeactivateHallsOfPain
-                                                  << ui->actionSkillPlan << ui->actionShowAllStats;
+                                                  << ui->actionSkillPlan << ui->actionShowAllStats << ui->actionSkillTree;
     foreach (QAction *action, actions)
         action->setEnabled(true);
     ui->respecSkillsCheckBox->setEnabled(true);

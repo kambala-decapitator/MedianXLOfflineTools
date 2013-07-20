@@ -241,7 +241,7 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
                 {
                     QByteArray runeKey = QString("r%1").arg(runeCode, 2, 10, kZeroChar).toLatin1();
                     ItemBase *base = ItemDataBase::Items()->value(runeKey);
-                    QAction *actionRune = new QAction(QIcon(ResourcePathManager::pathForImageName(base->imageName)), QString("(%1) %2").arg(base->rlvl).arg(QString(base->name).remove("\\purple;")), _itemsView);
+                    QAction *actionRune = new QAction(QIcon(ResourcePathManager::pathForItemImageName(base->imageName)), QString("(%1) %2").arg(base->rlvl).arg(QString(base->name).remove("\\purple;")), _itemsView);
                     actionRune->setData(runeCode);
                     actionRune->setIconVisibleInMenu(true); // explicitly show icon on Mac OS X
                     connect(actionRune, SIGNAL(triggered()), SLOT(downgradeSelectedRune()));
@@ -729,7 +729,7 @@ void ItemsPropertiesSplitter::createItemActions()
     //_itemsView->addAction(actionHtml);
     //_itemActions[ExportHtml] = actionHtml;
 
-    QAction *actionSol = new QAction(QIcon(ResourcePathManager::pathForImageName("sigil1b")), tr("Signet of Learning"), _itemsView);
+    QAction *actionSol = new QAction(QIcon(ResourcePathManager::pathForItemImageName("sigil1b")), tr("Signet of Learning"), _itemsView);
     actionSol->setShortcut(QKeySequence("Ctrl+D"));
     actionSol->setObjectName("signet");
     actionSol->setIconVisibleInMenu(true); // explicitly show icon on Mac OS X
@@ -737,7 +737,7 @@ void ItemsPropertiesSplitter::createItemActions()
     _itemsView->addAction(actionSol);
     _itemActions[DisenchantSignet] = actionSol;
 
-    QAction *actionShards = new QAction(QIcon(ResourcePathManager::pathForImageName("invfary4")), tr("Arcane Shards"), _itemsView);
+    QAction *actionShards = new QAction(QIcon(ResourcePathManager::pathForItemImageName("invfary4")), tr("Arcane Shards"), _itemsView);
     actionShards->setShortcut(QKeySequence("Alt+D"));
     actionShards->setObjectName("shards");
     actionShards->setIconVisibleInMenu(true); // explicitly show icon on Mac OS X

@@ -177,11 +177,11 @@
 303	xarugas' Dominion	\orange;[Community Tribute Set]\n\gold;All Is One	100																																									
 305	Stealthmaster's Triumph	\orange;[Community Tribute Set]\n\gold;All Is One	100																																									
 306	Greg's Silent Scream	\orange;[Community Tribute Set]\n\gold;All Is One	100																																									
-308	\gold;Natasha, the Assassin	\orange;[MarcoNecroX Tribute Set]\n\gold;Cowboys From Hell	100	set_pewpew1									36		10	10					338,339,340		5	5					31		1500	1500												
-309	\gold;fearless, the Barbarian	\orange;[MarcoNecroX Tribute Set]\n\gold;Cowboys From Hell	100	set_pewpew2									39		30	30					48,49		333	666					143		5	5												
-310	\gold;MISSINGNO, the Paladin	\orange;[MarcoNecroX Tribute Set]\n\gold;Cowboys From Hell	100	set_pewpew3									41		30	30					50,51		333	666					145		5	5												
-311	\gold;Zoology, the Amazon	\orange;[MarcoNecroX Tribute Set]\n\gold;Cowboys From Hell	100	set_pewpew4									43		30	30					54,55,56		333	666					149		5	5												
-312	\gold;Tanya, the Sorceress	\orange;[MarcoNecroX Tribute Set]\n\gold;Cowboys From Hell	100	set_pewpew5									45		30	30					52,53		333	666					147		5	5												
+308	\gold;Natasha, the Assassin	\orange;[MarcoNecroX Tribute Set]\n\gold;Cowboys From Hell	100	set_pewpew1																																								
+309	\gold;fearless, the Barbarian	\orange;[MarcoNecroX Tribute Set]\n\gold;Cowboys From Hell	100	set_pewpew2																																								
+310	\gold;MISSINGNO, the Paladin	\orange;[MarcoNecroX Tribute Set]\n\gold;Cowboys From Hell	100	set_pewpew3																																								
+311	\gold;Zoology, the Amazon	\orange;[MarcoNecroX Tribute Set]\n\gold;Cowboys From Hell	100	set_pewpew4																																								
+312	\gold;Tanya, the Sorceress	\orange;[MarcoNecroX Tribute Set]\n\gold;Cowboys From Hell	100	set_pewpew5																																								
 314	Laz's Lamen	\orange;[BrotherLaz Tribute Set]\n\gold;Archbishop Lazarus	100																																									
 316	Segolia's Fenrir's Mercy	\orange;[Community Tribute Set]\n\gold;All Is One	100																																									
 317	rad's Guerrilla Warfare 	\orange;[Community Tribute Set]\n\gold;All Is One	100																																									

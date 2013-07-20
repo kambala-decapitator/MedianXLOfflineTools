@@ -312,14 +312,16 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
 
 PropertiesMultiMap ItemParser::parseItemProperties(ReverseBitReader &bitReader, ItemInfo::ParsingStatus *status)
 {
+    using namespace Enums;
+
     PropertiesMultiMap props;
     while (bitReader.pos() != -1)
     {
         ItemProperty *propToAdd = 0;
         try
         {
-            int id = bitReader.readNumber(Enums::CharacterStats::StatCodeLength);
-            if (id == Enums::ItemProperties::End)
+            int id = bitReader.readNumber(CharacterStats::StatCodeLength);
+            if (id == ItemProperties::End)
             {
                 *status = ItemInfo::Ok;
                 return props;
@@ -329,7 +331,7 @@ PropertiesMultiMap ItemParser::parseItemProperties(ReverseBitReader &bitReader, 
             ItemPropertyTxt *txtProperty = ItemDataBase::Properties()->value(id);
             propToAdd->param = txtProperty->saveParamBits ? bitReader.readNumber(txtProperty->saveParamBits) : 0;
             propToAdd->value = bitReader.readNumber(txtProperty->bits) - txtProperty->add;
-            if (id == Enums::ItemProperties::EnhancedDamage)
+            if (id == ItemProperties::EnhancedDamage)
             {
                 qint16 minEnhDamage = bitReader.readNumber(txtProperty->bits) - txtProperty->add;
                 if (minEnhDamage < propToAdd->value) // it shouldn't possible (they must always be equal), but let's make sure
@@ -338,12 +340,13 @@ PropertiesMultiMap ItemParser::parseItemProperties(ReverseBitReader &bitReader, 
             }
 
             // elemental damage
-            if (id == 48 || id == 50 || id == Enums::ItemProperties::MinimumDamageMagic || id == 54 || id == 57) // min elemental damage
+            if (   id == ItemProperties::MinimumDamageFire || id == ItemProperties::MinimumDamageLightning || id == ItemProperties::MinimumDamageMagic
+                || id == ItemProperties::MinimumDamageCold || id == ItemProperties::MinimumDamagePoison)
             {
                 bool hasLength = false;
-                if (id == 54 || id == 57) // cold or poison
+                if (id == ItemProperties::MinimumDamageCold || id == ItemProperties::MinimumDamagePoison)
                     hasLength = true; // length is present only when min damage is specified
-                else if (id == Enums::ItemProperties::MinimumDamageMagic)
+                else if (id == ItemProperties::MinimumDamageMagic)
                     convertParamsInMagicDamageString(propToAdd, txtProperty);
                 props.insert(id++, propToAdd);
 
@@ -352,7 +355,7 @@ PropertiesMultiMap ItemParser::parseItemProperties(ReverseBitReader &bitReader, 
                 ItemPropertyTxt *maxElementalDamageProp = ItemDataBase::Properties()->value(id);
                 newProp->value = bitReader.readNumber(maxElementalDamageProp->bits) - maxElementalDamageProp->add;
 
-                if (id == Enums::ItemProperties::MaximumDamageMagic)
+                if (id == ItemProperties::MaximumDamageMagic)
                     convertParamsInMagicDamageString(newProp, maxElementalDamageProp);
                 props.insert(id, newProp);
 
@@ -364,7 +367,7 @@ PropertiesMultiMap ItemParser::parseItemProperties(ReverseBitReader &bitReader, 
                     //propToAdd->value = length;
                     //props[id] = propToAdd;
 
-                    if (id == 59) // poison length
+                    if (id == ItemProperties::DurationPoison)
                     {
                         // set correct min/max poison damage
                         newProp = new ItemProperty(qRound(props.value(id - 2)->value * length / 256.0));
@@ -385,7 +388,7 @@ PropertiesMultiMap ItemParser::parseItemProperties(ReverseBitReader &bitReader, 
             qDebug("caught exception while parsing item properties: %d", exceptionCode);
             *status = ItemInfo::Corrupted;
             // Requirements txtProperty has the lowest descpriority, so it'll appear at the bottom
-            props.insert(Enums::ItemProperties::Requirements, new ItemProperty(tr("Error parsing item properties (exception == %1), please report!").arg(exceptionCode)));
+            props.insert(ItemProperties::Requirements, new ItemProperty(tr("Error parsing item properties (exception == %1), please report!").arg(exceptionCode)));
             return props;
         }
     }
@@ -406,7 +409,7 @@ void ItemParser::createDisplayStringForPropertyWithId(int id, ItemProperty *prop
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wsign-compare"
 #endif
-    if (id == 83)
+    if (id == Enums::ItemProperties::ClassSkills)
         prop->displayString = tr("+%1 to %2 Skill Levels", "+x to class skills").arg(prop->value).arg(prop->param < Enums::ClassName::classes().size() ? Enums::ClassName::classes().at(prop->param) : "WTF");
     else if (id == Enums::ItemProperties::Oskill || id == Enums::ItemProperties::ClassOnlySkill)
     {

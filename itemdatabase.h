@@ -48,6 +48,8 @@ public:
     static bool isGenericSocketable(ItemInfo *item); // checks if an item is a gem or a rune
     static bool isCube(ItemInfo *item);
 
+    static bool doesItemGrantBonus(ItemInfo *item);
+
     static bool canDisenchantIntoArcaneShards(ItemInfo *item);
     static bool canDisenchantIntoSignetOfLearning(ItemInfo *item);
 

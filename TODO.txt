@@ -1,9 +1,13 @@
 0.4.1:
 - display all available character stats
-- display skill tree
 - nice display of property 'Adds x-y ... damage'
 - fix multiple colors in one line, e.g. Statue of Ultimative v6b
-- fix bug with russian characters in path on Mac OS X when compiled in VM
+- add skill icons:
+   poison flash
+   stormblast
+   frigid sphere
+   nova charge
+   bladestorm
 
 future versions:
 - show UMO properties
