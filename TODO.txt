@@ -2,12 +2,6 @@
 - display all available character stats
 - nice display of property 'Adds x-y ... damage'
 - fix multiple colors in one line, e.g. Statue of Ultimative v6b
-- add skill icons:
-   poison flash
-   stormblast
-   frigid sphere
-   nova charge
-   bladestorm
 
 future versions:
 - show UMO properties

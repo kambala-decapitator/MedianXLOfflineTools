@@ -1125,8 +1125,8 @@ void MedianXLOfflineTools::aboutApp()
 
 void MedianXLOfflineTools::showSkillTree()
 {
-    SkillTreeDialog dlg(_characterSkillsIndexes.value(CharacterInfo::instance().basicInfo.classCode), this);
-    dlg.exec();
+    SkillTreeDialog *dlg = new SkillTreeDialog(_characterSkillsIndexes.value(CharacterInfo::instance().basicInfo.classCode), this);
+    dlg->show();
 }
 
 

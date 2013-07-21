@@ -307,6 +307,15 @@
     <ClCompile Include="GeneratedFiles\Release\moc_helpwindowdisplaymanager.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
+    <ClCompile Include="skilltreedialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_skilltreedialog.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_skilltreedialog.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="helpers.h">
@@ -514,6 +523,9 @@
     </CustomBuild>
     <CustomBuild Include="GeneratedFiles\Release\helpwindowdisplaymanager.moc">
       <Filter>Generated Files\Release</Filter>
+    </CustomBuild>
+    <CustomBuild Include="skilltreedialog.h">
+      <Filter>Header Files</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
