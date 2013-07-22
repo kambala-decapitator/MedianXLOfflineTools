@@ -603,7 +603,7 @@ QString PropertiesViewerWidget::collectMysticOrbsDataFromProps(QSet<int> *moSet,
             if (isMysticOrbEffectDoubled() && !displayString.endsWith(" x 2"))
                 displayString += " x 2";
             // quick & dirty hack with const_cast
-            html += QString("%1 = %2").arg(displayString).arg(totalMysticOrbValue(moCode, const_cast<PropertiesMap *>(&props))) + kHtmlLineBreak;
+            html += QString("%1 = %2").arg(displayString).arg(totalMysticOrbValue(moCode, &props)) + kHtmlLineBreak;
         }
     }
     return html;
@@ -611,5 +611,5 @@ QString PropertiesViewerWidget::collectMysticOrbsDataFromProps(QSet<int> *moSet,
 
 bool PropertiesViewerWidget::isMysticOrbEffectDoubled() const
 {
-    return _item->props.contains(Enums::ItemProperties::MysticOrbsEffectDoubled) || _item->rwProps.contains(Enums::ItemProperties::MysticOrbsEffectDoubled);
+    return _item->props.contains(Enums::ItemProperties::MysticOrbsEffectDoubled) || _item->rwProps.contains(Enums::ItemProperties::MysticOrbsEffectDoubled) || _item->setProps.contains(Enums::ItemProperties::MysticOrbsEffectDoubled);
 }

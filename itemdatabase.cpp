@@ -298,7 +298,7 @@ QHash<uint, MysticOrb *> *ItemDataBase::MysticOrbs()
             mo->itemCode = data.at(1);
             foreach (const QByteArray &statId, data.at(2).split(',')) //-V807
                 mo->statIds << statId.toUShort();
-            mo->value = data.at(3).toUShort();
+            mo->value = data.at(3).toShort();
             if (data.size() > 4)
                 mo->param = data.at(4).toUShort() + (data.at(5).toUShort() << 6);
             allMysticOrbs[data.at(0).toUInt()] = mo;

@@ -15,10 +15,6 @@ class SkillTreeDialog : public QDialog
 public:
     explicit SkillTreeDialog(const SkillsOrderPair &skillsOrderPair, QWidget *parent = 0);
     virtual ~SkillTreeDialog() {}
-    
-signals:
-    
-public slots:
 
 private:
     QTabWidget *_tabWidget;
