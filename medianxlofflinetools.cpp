@@ -124,6 +124,8 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *pare
 
     ui->deactivateHallsOfPainCheckBox->setStatusTip(ui->actionDeactivateHallsOfPain->statusTip());
 
+    ui->statsTableWidget->setFocusPolicy(Qt::NoFocus);
+
 
 #ifdef Q_OS_WIN32
     setAppUserModelID(); // is actually used only in Windows 7 and later
@@ -454,17 +456,15 @@ void MedianXLOfflineTools::saveCharacter()
 
     // complete skill/stat points quests
     quint16 questComplete = static_cast<quint16>(0) | Enums::Quests::IsCompleted;
+    QList<int> quests = QList<int>() << Enums::Quests::DenOfEvil << Enums::Quests::Radament << Enums::Quests::LamEsensTome << Enums::Quests::GoldenBird << Enums::Quests::Izual;
     for (int i = 0; i < kDifficultiesNumber; ++i)
     {
         int baseOffset = Enums::Offsets::QuestsData + i * Enums::Quests::Size;
-        outputDataStream.device()->seek(baseOffset + Enums::Quests::DenOfEvil);
-        outputDataStream << questComplete;
-        outputDataStream.device()->seek(baseOffset + Enums::Quests::Radament);
-        outputDataStream << questComplete;
-        outputDataStream.device()->seek(baseOffset + Enums::Quests::LamEsensTome);
-        outputDataStream << questComplete;
-        outputDataStream.device()->seek(baseOffset + Enums::Quests::Izual);
-        outputDataStream << questComplete;
+        foreach (int q, quests)
+        {
+            outputDataStream.device()->seek(baseOffset + q);
+            outputDataStream << questComplete;
+        }
     }
 #endif
 

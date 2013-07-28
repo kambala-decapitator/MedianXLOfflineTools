@@ -1,7 +1,8 @@
 0.4.1:
+- legacy sets
+- set full bonuses
 - display all available character stats
-- nice display of property 'Adds x-y ... damage'
-- fix multiple colors in one line, e.g. Statue of Ultimative v6b
+- damage calculation if min/max is present only on socketables (Ahri's claws)
 
 future versions:
 - show UMO properties
@@ -23,6 +24,7 @@ future versions:
 - display actual stat values
 - item requirements (compare with actual stat values)
 - calculate correct str/dex bonus for weapons based on character stats
+- fix multiple colors in one line, e.g. Statue of Ultimative v6b
 
 // Sigma save file structure
 struct D2SaveHeaderStrc

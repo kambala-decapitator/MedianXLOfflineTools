@@ -23,7 +23,7 @@ QString binaryStringFromNumber(quint64 number, bool needsInversion = false, int 
 QString coloredText(const QString &text, int colorIndex);
 
 #include "colorsmanager.hpp"
-QString htmlStringFromDiabloColorString(const QString &name, ColorsManager::ColorIndex defaultColor = ColorsManager::White);
+QString htmlStringFromDiabloColorString(const QString &s, ColorsManager::ColorIndex defaultColor = ColorsManager::White);
 
 // QMetaEnum getter. Moving definition to .cpp causes unresolved external symbols, so don't touch it.
 #include <QMetaEnum>

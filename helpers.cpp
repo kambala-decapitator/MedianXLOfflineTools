@@ -27,6 +27,11 @@ bool isRWInGear(ItemInfo *item, const QByteArray &rune, const QByteArray &allowe
     return false;
 }
 
+bool colorStringsIndecesLessThan(const QPair<int, int> &a, const QPair<int, int> &b)
+{
+    return a.second < b.second;
+}
+
 
 // public
 
@@ -43,14 +48,9 @@ QString coloredText(const QString &text, int colorIndex)
     return QString("<font color = \"%1\">%2</font>").arg(ColorsManager::colors().at(colorIndex).name(), text);
 }
 
-bool colorStringsIndecesLessThan(const QPair<int, int> &a, const QPair<int, int> &b)
+QString htmlStringFromDiabloColorString(const QString &s, ColorsManager::ColorIndex defaultColor /*= ColorsManager::White*/)
 {
-    return a.second < b.second;
-}
-
-QString htmlStringFromDiabloColorString(const QString &name, ColorsManager::ColorIndex defaultColor /*= White*/)
-{
-    QString text = name;
+    QString text = s;
     if (defaultColor != ColorsManager::NoColor)
         text.prepend(ColorsManager::colorStrings().at(defaultColor));
     text.replace("\\n", kHtmlLineBreak).replace("\\grey;", ColorsManager::colorStrings().at(ColorsManager::White));
@@ -66,39 +66,34 @@ QString htmlStringFromDiabloColorString(const QString &name, ColorsManager::Colo
         }
     }
 
-    // sort colorStringsIndeces by position in ascending order
-    qSort(colorStringsIndeces.begin(), colorStringsIndeces.end(), colorStringsIndecesLessThan);
-
     int colorsNumberInString = colorStringsIndeces.size();
     if (!colorsNumberInString)
         return text;
+
+    // sort colorStringsIndeces by position in ascending order
+    qSort(colorStringsIndeces.begin(), colorStringsIndeces.end(), colorStringsIndecesLessThan);
 
     QStack<QString> colorStringsStack;
     for (int i = 0; i < colorsNumberInString; ++i)
     {
         QPair<int, int> colorStringIndex = colorStringsIndeces.at(i);
-        int index = colorStringIndex.first;
-        int pos = colorStringIndex.second + ColorsManager::colorStrings().at(index).length(); // skip colorString
-        QString coloredText_ = text.mid(pos, i != colorsNumberInString - 1 ? colorStringsIndeces.at(i + 1).second - pos : -1);
+        int colorIndex = colorStringIndex.first;
+        int textPos = colorStringIndex.second + ColorsManager::colorStrings().at(colorIndex).length(); // skip colorString
+        QString coloredText_ = text.mid(textPos, i != colorsNumberInString - 1 ? colorStringsIndeces.at(i + 1).second - textPos : -1);
 
         QStringList lines = coloredText_.split(kHtmlLineBreak);
-        QString reversedLines;
-        for (QStringList::const_iterator iter = lines.constEnd() - 1; iter != lines.constBegin() - 1; --iter)
+        std::reverse(lines.begin(), lines.end());
+        QString reversedText = lines.join(kHtmlLineBreak);
+        if (!reversedText.isEmpty())
         {
-            reversedLines.append(*iter);
-            if (iter != lines.constBegin())
-                reversedLines.append(kHtmlLineBreak);
-        }
-        if (!reversedLines.isEmpty())
-        {
-            QString newText = coloredText(reversedLines, index);
+            QString newText = coloredText(reversedText, colorStringsIndeces.at(i).first);
             if (!i && colorStringIndex.second > 0) // quick fix for '+1 to \red;Ultimative\blue;'
                 newText.prepend(text.left(colorStringIndex.second));
             colorStringsStack.push(newText);
         }
     }
 
-    // empty stack
+    // empty the stack
     QString result;
     while (!colorStringsStack.isEmpty())
         result += colorStringsStack.pop();

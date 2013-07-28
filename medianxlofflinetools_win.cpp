@@ -256,20 +256,14 @@ QByteArray MedianXLOfflineTools::getOsInfo()
         case PRODUCT_CLUSTER_SERVER:
             os << "Cluster Server Edition";
             break;
-        case PRODUCT_DATACENTER_SERVER:
+        case PRODUCT_DATACENTER_SERVER: case PRODUCT_DATACENTER_SERVER_CORE: case PRODUCT_DATACENTER_EVALUATION_SERVER: case PRODUCT_DATACENTER_SERVER_CORE_V: case PRODUCT_DATACENTER_SERVER_V:
             os << "Datacenter Edition";
             break;
-        case PRODUCT_DATACENTER_SERVER_CORE:
-            os << "Datacenter Edition (core installation)";
-            break;
-        case PRODUCT_ENTERPRISE_SERVER:
+        case PRODUCT_ENTERPRISE_SERVER: case PRODUCT_ENTERPRISE_SERVER_CORE: case PRODUCT_ENTERPRISE_SERVER_IA64: case PRODUCT_ENTERPRISE_EVALUATION: case PRODUCT_ENTERPRISE_SERVER_CORE_V: case PRODUCT_ENTERPRISE_SERVER_V:
             os << "Enterprise Edition";
             break;
-        case PRODUCT_ENTERPRISE_SERVER_CORE:
-            os << "Enterprise Edition (core installation)";
-            break;
-        case PRODUCT_ENTERPRISE_SERVER_IA64:
-            os << "Enterprise Edition for Itanium-based Systems";
+        case PRODUCT_ENTERPRISE_N: case PRODUCT_ENTERPRISE_N_EVALUATION:
+            os << "Enterprise N";
             break;
         case PRODUCT_SMALLBUSINESS_SERVER:
             os << "Small Business Server";
@@ -277,11 +271,8 @@ QByteArray MedianXLOfflineTools::getOsInfo()
         case PRODUCT_SMALLBUSINESS_SERVER_PREMIUM:
             os << "Small Business Server Premium Edition";
             break;
-        case PRODUCT_STANDARD_SERVER:
+        case PRODUCT_STANDARD_SERVER: case PRODUCT_STANDARD_SERVER_CORE:
             os << "Standard Edition";
-            break;
-        case PRODUCT_STANDARD_SERVER_CORE:
-            os << "Standard Edition (core installation)";
             break;
         case PRODUCT_WEB_SERVER:
             os << "Web Server Edition";

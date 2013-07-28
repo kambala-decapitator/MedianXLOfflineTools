@@ -222,7 +222,7 @@ QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item)
         }
         // weapon properties should be first
         propStrings.move(propStrings.size() - 1, 0);
-        itemDescription += "\n" + propStrings.join("");
+        itemDescription += "\n" + propStrings.join(QString());
     }
 
     if (shouldAddDamageToUndeadInTheBottom)
@@ -259,6 +259,8 @@ void PropertiesDisplayManager::addProperties(PropertiesMap *mutableProps, const 
 
 void PropertiesDisplayManager::constructPropertyStrings(const PropertiesMap &properties, QMap<quint8, ItemPropertyDisplay> *outDisplayPropertiesMap, bool shouldColor /*= false*/, ItemInfo *item /*= 0*/)
 {
+    using namespace Enums;
+
     QMap<quint8, ItemPropertyDisplay> propsDisplayMap;
     for (PropertiesMap::const_iterator iter = properties.constBegin(); iter != properties.constEnd(); ++iter)
     {
@@ -267,15 +269,15 @@ void PropertiesDisplayManager::constructPropertyStrings(const PropertiesMap &pro
 
         // don't include secondary_(min/max)damage
         QString hiddenPropertyText;
-        if (!item && ((propId == Enums::ItemProperties::MinimumDamageSecondary && properties.contains(Enums::ItemProperties::MinimumDamage)) ||
-                      (propId == Enums::ItemProperties::MaximumDamageSecondary && properties.contains(Enums::ItemProperties::MaximumDamage))))
+        if (!item && ((propId == ItemProperties::MinimumDamageSecondary && properties.contains(ItemProperties::MinimumDamage)) ||
+                      (propId == ItemProperties::MaximumDamageSecondary && properties.contains(ItemProperties::MaximumDamage))))
         {
             continue;
         }
         else if (item)
         {
             // if it equals simple (min/max)damage
-            if (propId == Enums::ItemProperties::MinimumDamageSecondary || propId == Enums::ItemProperties::MaximumDamageSecondary)
+            if (propId == ItemProperties::MinimumDamageSecondary || propId == ItemProperties::MaximumDamageSecondary)
             {
                 SecondaryDamageUsage u = secondaryDamageUsage(propId, prop->value, properties, item);
                 if (u == UsedWithPrimary)
@@ -289,16 +291,53 @@ void PropertiesDisplayManager::constructPropertyStrings(const PropertiesMap &pro
         if (!displayString.isEmpty())
         {
             displayString += hiddenPropertyText;
-            if (propId == Enums::ItemProperties::ReplenishLife || propId == Enums::ItemProperties::ReplenishLifeBasedOnClvl)
+            if (propId == ItemProperties::ReplenishLife || propId == ItemProperties::ReplenishLifeBasedOnClvl)
             {
                 double lifePerSec = prop->value / 256.0;
-                if (propId == Enums::ItemProperties::ReplenishLifeBasedOnClvl)
+                if (propId == ItemProperties::ReplenishLifeBasedOnClvl)
                     lifePerSec *= CharacterInfo::instance().basicInfo.level / 32.0;
                 displayString += QString(" (%1)").arg(tr("%1 life per second").arg(lifePerSec, 0, 'f', 3));
             }
 
             quint8 descPriority = ItemDataBase::Properties()->value(propId)->descPriority;
             propsDisplayMap.insertMulti(descPriority, ItemPropertyDisplay(displayString, descPriority, propId));
+        }
+    }
+
+    // merge damage properties to 'adds x-y damage'
+    static QHash<QPair<quint8, quint8>, QString> mergeDamagePropertiesHash;
+    if (mergeDamagePropertiesHash.isEmpty())
+    {
+        QList<quint8> minPropIds = QList<quint8>() << ItemProperties::MinimumDamage << ItemProperties::MinimumDamageSecondary << ItemProperties::MinimumDamageFire << ItemProperties::MinimumDamageLightning
+                                                   << ItemProperties::MinimumDamageMagic << ItemProperties::MinimumDamageCold << ItemProperties::MinimumDamagePoison;
+        QStringList damageStrings = QStringList() << tr("Damage") << tr("Damage") << tr("fire damage") << tr("lightning damage") << tr("magic damage") << tr("cold damage") << tr("poison damage");
+        for (int i = 0; i < minPropIds.size(); ++i)
+            mergeDamagePropertiesHash[qMakePair<quint8, quint8>(minPropIds.at(i), minPropIds.at(i) + 1)] = damageStrings.at(i);
+    }
+    for (QHash<QPair<quint8, quint8>, QString>::const_iterator iter = mergeDamagePropertiesHash.constBegin(); iter != mergeDamagePropertiesHash.constEnd(); ++iter)
+    {
+        const QPair<quint8, quint8> &elementalPropIdPair = iter.key();
+        ItemPropertyDisplay propMin = propsDisplayMap.value(ItemDataBase::Properties()->value(elementalPropIdPair.first)->descPriority), propMax = propsDisplayMap.value(ItemDataBase::Properties()->value(elementalPropIdPair.second)->descPriority);
+        if (propMin.propertyId && propMax.propertyId)
+        {
+            propsDisplayMap.remove(propMin.priority);
+            propsDisplayMap.remove(propMax.priority);
+
+            QRegExp rx("\\d+");
+            rx.indexIn(propMin.displayString);
+            QString minDamage = rx.cap();
+            rx.indexIn(propMax.displayString);
+            QString maxDamage = rx.cap();
+
+            QString displayString;
+            if (minDamage == maxDamage)
+                displayString = QString("+%1 %2").arg(minDamage).arg(iter.value());
+            else
+                displayString = tr("Adds %1-%2 %3").arg(minDamage, maxDamage).arg(iter.value());
+            if (propMin.propertyId == ItemProperties::MinimumDamagePoison)
+                displayString += tr(" over %n second(s)", 0, properties.value(propMin.propertyId)->param / 25);
+
+            propsDisplayMap.insertMulti(propMin.priority, ItemPropertyDisplay(displayString, propMin.priority, propMin.propertyId));
         }
     }
 

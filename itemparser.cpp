@@ -351,13 +351,13 @@ PropertiesMultiMap ItemParser::parseItemProperties(ReverseBitReader &bitReader, 
                 props.insert(id++, propToAdd);
 
                 // get max elemental damage
-                ItemProperty *newProp = new ItemProperty;
-                ItemPropertyTxt *maxElementalDamageProp = ItemDataBase::Properties()->value(id);
-                newProp->value = bitReader.readNumber(maxElementalDamageProp->bits) - maxElementalDamageProp->add;
+                ItemProperty *maxElementalDamageProp = new ItemProperty;
+                ItemPropertyTxt *txtMaxElementalDamageProp = ItemDataBase::Properties()->value(id);
+                maxElementalDamageProp->value = bitReader.readNumber(txtMaxElementalDamageProp->bits) - txtMaxElementalDamageProp->add;
 
                 if (id == ItemProperties::MaximumDamageMagic)
-                    convertParamsInMagicDamageString(newProp, maxElementalDamageProp);
-                props.insert(id, newProp);
+                    convertParamsInMagicDamageString(maxElementalDamageProp, txtMaxElementalDamageProp);
+                props.insert(id, maxElementalDamageProp);
 
                 if (hasLength) // cold or poison length
                 {
@@ -370,9 +370,11 @@ PropertiesMultiMap ItemParser::parseItemProperties(ReverseBitReader &bitReader, 
                     if (id == ItemProperties::DurationPoison)
                     {
                         // set correct min/max poison damage
-                        newProp = new ItemProperty(qRound(props.value(id - 2)->value * length / 256.0));
-                        props.replace(id - 1, newProp);
-                        props.replace(id - 2, new ItemProperty(*newProp));
+                        props.replace(id - 1, new ItemProperty(qRound(maxElementalDamageProp->value * length / 256.0), length));
+                        props.replace(id - 2, new ItemProperty(qRound(             propToAdd->value * length / 256.0), length));
+
+                        delete maxElementalDamageProp;
+                        delete propToAdd;
                     }
                 }
 
