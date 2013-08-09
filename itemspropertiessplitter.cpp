@@ -16,6 +16,11 @@
 #include <QDebug>
 #endif
 
+#ifdef DUMP_INFO_ACTION
+#include <QTextCodec>
+#endif // DUMP_INFO_ACTION
+
+
 
 static const int kShardsPerCrystal = 5;
 static const QRegExp kRuneRegExp("r(\\d\\d)");
@@ -367,12 +372,10 @@ void ItemsPropertiesSplitter::dumpInfo(ItemInfo *item /*= 0*/, bool shouldShowMs
     const char *quality = metaEnumFromName<Enums::ItemQuality>("ItemQualityEnum").valueToKey(item->quality);
     bool isSetOrUnique = areBothItemsSetOrUnique(item, item); // hacky code :)
 
-#ifndef QT_NO_DEBUG
     qDebug() << ItemParser::itemStorageAndCoordinatesString("location %1, row %2, col %3, equipped in %4", item) << "quality" << quality << "code" << item->itemType << "types" << base->types << "image" << base->imageName << "quest ID" << base->questId;
     if (isSetOrUnique)
         qDebug() << "set/unique ID" << item->setOrUniqueId;
     qDebug("--------------------");
-#endif
 
     if (shouldShowMsgBox)
     {
@@ -380,7 +383,7 @@ void ItemsPropertiesSplitter::dumpInfo(ItemInfo *item /*= 0*/, bool shouldShowMs
         foreach (const QByteArray &type, base->types)
             types += type + ", ";
         INFO_BOX(QString("%1\nquality %2, set/unique ID %3\ncode %4, types: %5\nimage %6, quest ID %7").arg(ItemParser::itemStorageAndCoordinatesString("location %1, row %2, col %3, equipped in %4", item))
-            .arg(quality).arg(isSetOrUnique ? item->setOrUniqueId : 0).arg(item->itemType.data()).arg(types).arg(base->imageName.data()).arg(base->questId));
+            .arg(quality).arg(isSetOrUnique ? item->setOrUniqueId : 0).arg(QTextCodec::codecForName("Windows-1252")->toUnicode(item->itemType)).arg(types).arg(base->imageName.constData()).arg(base->questId));
     }
 }
 #endif

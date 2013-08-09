@@ -238,6 +238,9 @@ QByteArray MedianXLOfflineTools::getOsInfo()
         case PRODUCT_HOME_PREMIUM:
             os << "Home Premium Edition";
             break;
+        case PRODUCT_HOME_PREMIUM_N:
+            os << "Home Premium N";
+            break;
         case PRODUCT_HOME_BASIC:
             os << "Home Basic Edition";
             break;
@@ -287,6 +290,9 @@ QByteArray MedianXLOfflineTools::getOsInfo()
             break;
         case PRODUCT_CORE_COUNTRYSPECIFIC:
             os << "China";
+            break;
+        case PRODUCT_CORE_SINGLELANGUAGE:
+            os << "Single Language";
             break;
         default:
             os << "dwType " << dwType;
