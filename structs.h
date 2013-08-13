@@ -192,7 +192,7 @@ struct SetOrUniqueItemInfo
 
 struct SetItemInfo : public SetOrUniqueItemInfo
 {
-    QString itemName, setName;
+    QString itemName, setName, key;
     struct SetFixedProperty
     {
         QList<quint16> ids;

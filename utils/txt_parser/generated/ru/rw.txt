@@ -1,5 +1,5 @@
 #itype1	itype2	itype3	itype4	itype5	itype6	name	rune1	rune2
-bswd	baxe					Снова Ярость	r62	r62	
+bswd	baxe					И Снова Злой	r62	r62	
 weap						Камнеслово!	yo5		
 basd						Хуракан	r44		
 pspe						Божественный Царь	r52		
@@ -47,7 +47,7 @@ aspe						Русалка	r46
 wand						Бешеный	r59	r59	
 azsd						Эос	r54		
 armo						Камнеслово!	gfy		
-tors						Корпорация Чувствуй Себя Хорошо	r57	r57	
+tors						Feel Good Inc.	r57	r57	
 armo						Камнеслово!	gsg		
 phlm						Водзивоб	r53		
 boot						Мегалит	r40		
@@ -128,7 +128,7 @@ weap						Камнеслово!	7$d
 basd						Тропа Войны	r27		
 staf						Сумманус	r19		
 nxbw						Восстание	r59	r59	
-nknf						Ошеломленный Громом	r58	r58	
+nknf						Громом Пораженный	r58	r58	
 orb						Каббала	r36		
 boot						Эпицентр	r06		
 pclb	pmac	pham				Джихад	r05		
@@ -147,7 +147,7 @@ armo						Камнеслово!	glb
 tkni						Мириады	r40		
 nknf						Страдание	r23		
 helm						Повелитель Ужаса	r35		
-dstf						Электрический Черт	r61	r61	
+dstf						Чертов Электрик	r61	r61	
 nagi						Шамо	r16		
 shie	shld					Камнеслово!	5$b		
 dbow						Лесное Свечение	r33		
@@ -157,7 +157,7 @@ circ						Уленшпигель	r38
 pclb	pmac	pham				Такфир	r34		
 armo						Камнеслово!	glg		
 scep						Галдр	r51		
-pzhm						Коробка С Соком	r58	r58	
+pzhm						Сокоробка	r58	r58	
 orb						Головокружение	r22		
 weap						Камнеслово!	5$a		
 phlm						Альгиз	r09		
@@ -219,7 +219,7 @@ tors						Собор	r25
 scrd						Шаула	r52		
 bow						Банши	r03		
 dstf						Самайн	r12		
-glov						Отбросы	r57	r57	
+glov						Riff Raff	r57	r57	
 scrd						Брокен	r24		
 tors						Эраван	r48		
 ishd						Выжженная Земля	r51		
@@ -238,7 +238,7 @@ belt						Дьяус	r50
 nstf						Ладон	r25		
 pclb	pham	pmac				Апокалипсис, Пожалуйста	r57	r57	
 weap						Камнеслово!	gsb		
-head						Часть Бедствий	r59	r59	
+head						Шедевральное Бедствие	r59	r59	
 shie	shld					Камнеслово!	7$c		
 weap						Камнеслово!	gcv		
 shie	shld					Камнеслово!	9$b		
@@ -254,7 +254,7 @@ weap						Камнеслово!	glb
 hamm						Калипсо	r37		
 helm	shld					Шах и Мат	r55	r55	
 azsd						Элои	r42		
-boot						Утес Дувра	r58	r58	
+boot						Утесы Дувра	r58	r58	
 boot						Кратон	r32		
 scep						Путь	r30		
 pspe						Асы	r12		
@@ -345,7 +345,7 @@ azsd						Лев	r35
 pclb	pmac	pham				Интифада	r15		
 belt						Чудо	r15		
 aspe						Титаномахия	r24		
-nscy						Хозяин Разума	r58	r58	
+nscy						Супермоск	r58	r58	
 tors						(Median XL - 6 лет)\nПобеда	r13		
 jave						Набег	r10		
 nscy						Левиафан	r51		
@@ -376,8 +376,8 @@ shld						Гейс	r04
 shie	shld					Камнеслово!	5$d		
 ishd						Орхидея	r55		
 2hbx						Непреднамеренный	r61	r61	
-swor						Решающее Приветствие	r57	r57	
-pelt						Казнить	r60	r60	
+swor						Одобрено Критиками	r57	r57	
+pelt						Казнить Нельзя Помиловать	r60	r60	
 weap						Берит	r42		
 nxbw						Атлантида	r19		
 phlm						Насреддин	r19		
@@ -463,7 +463,7 @@ stor						Венефика	r53
 ashd						Амаймон	r51		
 shie	shld					Камнеслово!	gcr		
 nscy						Лемурия	r20		
-nstf						Размеренный Поток	r57	r57	
+nstf						Однородный Поток	r57	r57	
 weap						Камнеслово!	9$b		
 abow						Манта	r51		
 azhm						Благая Богиня	r19		

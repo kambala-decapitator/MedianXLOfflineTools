@@ -1,5 +1,4 @@
 0.4.1:
-- legacy sets
 - set full bonuses
 - display all available character stats
 - damage calculation if min/max is present only on socketables (Ahri's claws)

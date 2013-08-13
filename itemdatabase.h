@@ -27,7 +27,7 @@ public:
     static QHash<QByteArray, SocketableItemInfo *> *Socketables();
     static QStringList *NonMagicItemQualities();
 
-    static QStringList completeSetForName(const QString &setName) { return _sets.values(setName); }
+    static QStringList completeSetForKey(const QString &setKey) { return _sets.values(setKey); }
     static QString completeItemName(ItemInfo *item, bool shouldUseColor, bool showQualityText = true);
     static QHash<int, ColorsManager::ColorIndex> *itemQualityColorsHash();
     static ColorsManager::ColorIndex colorOfItem(ItemInfo *item);

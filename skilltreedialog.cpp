@@ -28,7 +28,7 @@ public:
     void setSkillImage(const QString &imagePath) { _skillImageLabel->setPixmap(QPixmap(imagePath)); }
     void setSkillPoints(quint8 basePoints, quint8 addPoints)
     {
-        _skillPointsLabel->setText(addPoints ? QString("%1 (%2)").arg(basePoints + addPoints).arg(basePoints) : QString::number(basePoints));
+        _skillPointsLabel->setText(addPoints ? QString("%1 (%2)").arg(basePoints).arg(basePoints + addPoints) : QString::number(basePoints));
         if (!basePoints)
             setDisabled(true);
     }

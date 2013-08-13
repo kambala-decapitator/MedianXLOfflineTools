@@ -3315,7 +3315,7 @@
 "wirt's body"	"Тело Вирта"
 "stash"	"Хранилище"
 "guyq"	"Страдающая Душа"
-"taintedsunaltar"	"Оскверненый Алтарь Солнца"
+"taintedsunaltar"	"Алтарь Испорченного Солнца"
 "Hellforge"	"Адская Кузница"
 "Corpsefire"	"Трупный огонь"
 "fissure"	"Трещина"

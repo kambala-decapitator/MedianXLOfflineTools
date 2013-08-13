@@ -364,10 +364,10 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
         // TODO: set properties
 
         // set item names from current set with correct color
-        QString setName = ItemDataBase::Sets()->value(item->setOrUniqueId)->setName;
-        itemDescription += kHtmlLineBreak + htmlStringFromDiabloColorString(setName, ColorsManager::Gold);
+        SetItemInfo *setItem = ItemDataBase::Sets()->value(item->setOrUniqueId);
+        itemDescription += kHtmlLineBreak + htmlStringFromDiabloColorString(setItem->setName, ColorsManager::Gold);
 
-        foreach (const QString &setItemName, ItemDataBase::completeSetForName(setName))
+        foreach (const QString &setItemName, ItemDataBase::completeSetForKey(setItem->key))
         {
             bool found = false;
             foreach (ItemInfo *anItem, charInfo.items.character) //-V807

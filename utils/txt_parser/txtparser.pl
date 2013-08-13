@@ -142,11 +142,12 @@ for my $setElement (@$sets)
     $oldIndex++;
     next unless (defined $setElement->{IName} and defined $setElement->{SName});
 
-    $mxlSets->[$setIndex]->{index} = $oldIndex;
-    $mxlSets->[$setIndex]->{IName} = $setElement->{IName};
-    $mxlSets->[$setIndex]->{SName} = $setElement->{SName};
-    $mxlSets->[$setIndex]->{rlvl}  = $setElement->{rlvl};
-    $mxlSets->[$setIndex]->{image} = $setElement->{image};
+    $mxlSets->[$setIndex]->{index}  = $oldIndex;
+    $mxlSets->[$setIndex]->{IName}  = $setElement->{IName};
+    $mxlSets->[$setIndex]->{SName}  = $setElement->{SName};
+    $mxlSets->[$setIndex]->{iSName} = $setElement->{iSName};
+    $mxlSets->[$setIndex]->{rlvl}   = $setElement->{rlvl};
+    $mxlSets->[$setIndex]->{image}  = $setElement->{image};
 
     # if addfunc == 0, then properties are embedded in the item
     if (defined $mxlSets->[$setIndex]->{addfunc} and $mxlSets->[$setIndex]->{addfunc} > 0)
@@ -345,11 +346,11 @@ for my $hashRef (@$uniques)
 close $out;
 
 open $out, ">", "$prefix/sets.txt";
-print $out "#index\titem\tset\trlvl\timage\t".join("\t", @greenPropertiesKeys)."\n";
+print $out "#index\titem\tset\tkey\trlvl\timage\t".join("\t", @greenPropertiesKeys)."\n";
 for my $set (@$mxlSets)
 {
-    printf $out "%d\t%s\t%s\t%d\t%s", $set->{index}, $set->{IName}, $set->{SName},
-        ($set->{rlvl} // 0), ($set->{image} // '');
+    printf $out "%d\t%s\t%s\t%s\t%d\t%s", $set->{index}, $set->{IName}, $set->{SName},
+        $set->{iSName}, ($set->{rlvl} // 0), ($set->{image} // '');
     print $out "\t".($set->{$_} // '') for (@greenPropertiesKeys);
     print $out "\n"
 }

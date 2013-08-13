@@ -189,11 +189,12 @@ QHash<uint, SetItemInfo *> *ItemDataBase::Sets()
             SetItemInfo *setItem = new SetItemInfo;
             setItem->itemName = QString::fromUtf8(data.at(1));
             setItem->setName = QString::fromUtf8(data.at(2));
-            setItem->rlvl = data.at(3).toUShort();
-            if (data.size() > 4)
+            setItem->key = data.at(3);
+            setItem->rlvl = data.at(4).toUShort();
+            if (data.size() > 5)
             {
-                setItem->imageName = data.at(4);
-                for (int i = 5; i < data.size(); i += 4)
+                setItem->imageName = data.at(5);
+                for (int i = 6; i < data.size(); i += 4)
                 {
                     QByteArray propIds = data.at(i);
                     if (!propIds.isEmpty())
@@ -211,9 +212,7 @@ QHash<uint, SetItemInfo *> *ItemDataBase::Sets()
             }
             allSets[data.at(0).toUInt()] = setItem;
 
-            // do not add duplicate names
-            if (_sets.count(setItem->setName) < 5)
-                _sets.insert(setItem->setName, setItem->itemName);
+            _sets.insert(setItem->key, setItem->itemName);
         }
         f.remove();
     }
