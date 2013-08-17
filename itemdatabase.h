@@ -4,6 +4,15 @@
 #include "structs.h"
 #include "languagemanager.hpp"
 
+#include <QSet>
+
+
+struct FullSetInfo
+{
+    QSet<QString> itemNames;
+    QList<SetFixedProperty> partialSetProperties;
+    QList<SetFixedProperty> fullSetProperties;
+};
 
 class QFile;
 
@@ -27,7 +36,7 @@ public:
     static QHash<QByteArray, SocketableItemInfo *> *Socketables();
     static QStringList *NonMagicItemQualities();
 
-    static QStringList completeSetForKey(const QString &setKey) { return _sets.values(setKey); }
+    static FullSetInfo fullSetInfoForKey(const QString &setKey) { return _sets.value(setKey); }
     static QString completeItemName(ItemInfo *item, bool shouldUseColor, bool showQualityText = true);
     static QHash<int, ColorsManager::ColorIndex> *itemQualityColorsHash();
     static ColorsManager::ColorIndex colorOfItem(ItemInfo *item);
@@ -54,7 +63,7 @@ public:
     static bool canDisenchantIntoSignetOfLearning(ItemInfo *item);
 
 private:
-    static QMultiHash<QString, QString> _sets;
+    static QHash<QString, FullSetInfo> _sets;
 
     static QList<QByteArray> stringArrayOfCurrentLineInFile(QFile &f);
     static void expandMultilineString(QString *stringToExpand);

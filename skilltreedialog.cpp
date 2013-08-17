@@ -18,13 +18,13 @@ public:
     SkillWidget(QWidget *parent = 0) : QWidget(parent), _skillNameLabel(new QLabel(this)), _skillImageLabel(new QLabel(this)), _skillPointsLabel(new QLabel(this))
     {
         QGridLayout *layout = new QGridLayout(this);
-        layout->addWidget(_skillNameLabel, 0, 0);
-        layout->addWidget(_skillImageLabel, 1, 0, Qt::AlignHCenter);
+        layout->addWidget(_skillNameLabel,   0, 0, Qt::AlignHCenter);
+        layout->addWidget(_skillImageLabel,  1, 0, Qt::AlignHCenter);
         layout->addWidget(_skillPointsLabel, 2, 0, Qt::AlignHCenter);
     }
     virtual ~SkillWidget() {}
 
-    void setSkillName(const QString &name) { _skillNameLabel->setText(name); _skillNameLabel->adjustSize(); }
+    void setSkillName(const QString &name) { _skillNameLabel->setText(name); }
     void setSkillImage(const QString &imagePath) { _skillImageLabel->setPixmap(QPixmap(imagePath)); }
     void setSkillPoints(quint8 basePoints, quint8 addPoints)
     {

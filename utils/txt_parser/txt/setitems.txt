@@ -61,7 +61,7 @@ Arcanna's Sign	Arcanna's Tricks	amu	Amulet	1	126	old LoD	59	15	blac	blac								
 Arcanna's Deathwand	Arcanna's Tricks	wst	War Staff	7	126	old LoD	60	15	blac	blac								5	2500	2																																																																													0
 Arcanna's Head	Arcanna's Tricks	skp	Skull Cap	7	126	old LoD	61	15	blac	blac								5	2500	2																																																																													0
 Arcanna's Flesh	Arcanna's Tricks	ltp	Light Plate	7	126	old LoD	62	15	blac	blac								5	2500	2																																																																													0
-Expansion							63																																																																																										0
+Expansion						old LoD	63																																																																																										0
 Natalya's Totem	Natalya's Odium	xh9	Grim Helm	7	126	old LoD	64	59	dgry	dgry								5	5000																																																																														0
 Natalya's Mark	Natalya's Odium	7qr	Scissors Suwayyah	7	126	old LoD	65	79	dgry	dgry								5	5000																																																																														0
 Natalya's Shadow	Natalya's Odium	ucl	Loricated Mail	7	126	old LoD	66	73	dgry	dgry								5	5000																																																																														0

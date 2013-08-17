@@ -17,7 +17,7 @@
 
 
 const char *const ItemDataBase::kJewelType = "jew";
-QMultiHash<QString, QString> ItemDataBase::_sets;
+QHash<QString, FullSetInfo> ItemDataBase::_sets;
 
 bool ItemDataBase::createUncompressedTempFile(const QString &compressedFilePath, const QString &errorMessage, QFile *uncompressedFile)
 {
@@ -171,13 +171,35 @@ QHash<uint, ItemPropertyTxt *> *ItemDataBase::Properties()
     return &allProperties;
 }
 
+QList<SetFixedProperty> collectSetProperties(const QList<QByteArray> &data, quint16 firstColumn, quint16 lastColumn = 0)
+{
+    QList<SetFixedProperty> result;
+    for (quint16 i = firstColumn, n = lastColumn ? lastColumn : data.size(); i < n; i += 4)
+    {
+        QByteArray propIds = data.at(i);
+        if (!propIds.isEmpty())
+        {
+            SetFixedProperty prop;
+            foreach (const QByteArray &propId, propIds.split(',')) //-V807
+                prop.ids << propId.toUShort();
+            prop.param = data.at(i + 1).toInt();
+            prop.minValue = data.at(i + 2).toInt();
+            prop.maxValue = data.at(i + 3).toInt();
+
+            result << prop;
+        }
+    }
+    return result;
+}
+
 QHash<uint, SetItemInfo *> *ItemDataBase::Sets()
 {
     static QHash<uint, SetItemInfo *> allSets;
     if (allSets.isEmpty())
     {
+        // set items
         QFile f;
-        if (!createUncompressedTempFile(ResourcePathManager::localizedPathForFileName("sets"), tr("Sets data not loaded."), &f))
+        if (!createUncompressedTempFile(ResourcePathManager::localizedPathForFileName("setitems"), tr("Set items data not loaded."), &f))
             return 0;
 
         while (!f.atEnd())
@@ -188,31 +210,33 @@ QHash<uint, SetItemInfo *> *ItemDataBase::Sets()
 
             SetItemInfo *setItem = new SetItemInfo;
             setItem->itemName = QString::fromUtf8(data.at(1));
-            setItem->setName = QString::fromUtf8(data.at(2));
-            setItem->key = data.at(3);
+            setItem->setName  = QString::fromUtf8(data.at(2));
+            setItem->key  = data.at(3);
             setItem->rlvl = data.at(4).toUShort();
             if (data.size() > 5)
             {
                 setItem->imageName = data.at(5);
-                for (int i = 6; i < data.size(); i += 4)
-                {
-                    QByteArray propIds = data.at(i);
-                    if (!propIds.isEmpty())
-                    {
-                        SetItemInfo::SetFixedProperty prop;
-                        foreach (const QByteArray &propId, propIds.split(',')) //-V807
-                            prop.ids << propId.toUShort();
-                        prop.param = data.at(i + 1).toInt();
-                        prop.minValue = data.at(i + 2).toInt();
-                        prop.maxValue = data.at(i + 3).toInt();
-
-                        setItem->fixedProperties << prop;
-                    }
-                }
+                setItem->fixedProperties = collectSetProperties(data, 6);
             }
             allSets[data.at(0).toUInt()] = setItem;
 
-            _sets.insert(setItem->key, setItem->itemName);
+            _sets[setItem->key].itemNames << setItem->itemName;
+        }
+        f.remove();
+
+        // full set bonuses
+        if (!createUncompressedTempFile(ResourcePathManager::dataPathForFileName("sets.dat"), tr("Sets data not loaded."), &f))
+            return 0;
+
+        while (!f.atEnd())
+        {
+            QList<QByteArray> data = stringArrayOfCurrentLineInFile(f);
+            if (data.isEmpty())
+                continue;
+
+            FullSetInfo &info = _sets[data.at(0)];
+            info.partialSetProperties = collectSetProperties(data, 1, 33);
+            info.fullSetProperties = collectSetProperties(data, 33);
         }
         f.remove();
     }

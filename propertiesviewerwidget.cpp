@@ -337,37 +337,50 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
             itemDescription += propertiesToHtml(item->setProps, ColorsManager::Green);
 
         // set item properties from txt
-        PropertiesMultiMap setFixedProps;
-        foreach (const SetItemInfo::SetFixedProperty &setProp, ItemDataBase::Sets()->value(item->setOrUniqueId)->fixedProperties)
-        {
-            foreach (int propId, setProp.ids)
-            {
-                ItemProperty *prop = new ItemProperty(0, setProp.param);
-                switch (propId)
-                {
-                case ItemProperties::MinimumDamageFire: case ItemProperties::MinimumDamageLightning: case ItemProperties::MinimumDamageMagic: case ItemProperties::MinimumDamageCold:
-                    prop->value = setProp.minValue;
-                    break;
-                default:
-                    prop->value = setProp.maxValue;
-                    break;
-                }
-                if (propId == ItemProperties::MinimumDamageMagic || propId == ItemProperties::MaximumDamageMagic)
-                    ItemParser::convertParamsInMagicDamageString(prop, ItemDataBase::Properties()->value(propId));
-                setFixedProps.insert(propId, prop);
-            }
-        }
-        if (!setFixedProps.isEmpty())
-            itemDescription += propertiesToHtml(setFixedProps, ColorsManager::Green);
-        qDeleteAll(setFixedProps);
+        PropertiesMultiMap setItemFixedProps = collectSetFixedProps(ItemDataBase::Sets()->value(item->setOrUniqueId)->fixedProperties);
+        if (!setItemFixedProps.isEmpty())
+            itemDescription += propertiesToHtml(setItemFixedProps, ColorsManager::Green);
+        qDeleteAll(setItemFixedProps);
 
         // TODO: set properties
+        SetItemInfo *setItem = ItemDataBase::Sets()->value(item->setOrUniqueId);
+        const FullSetInfo fullSetInfo = ItemDataBase::fullSetInfoForKey(setItem->key);
+        if (item->location == ItemLocation::Equipped || item->location == ItemLocation::Corpse || item->location == ItemLocation::Merc)
+        {
+            int setItemsOnCharacter = 1;
+            foreach (ItemInfo *anItem, ItemDataBase::itemsStoredIn(item->storage, item->location))
+                if (anItem != item && anItem->quality == ItemQuality::Set && fullSetInfo.itemNames.contains(ItemDataBase::Sets()->value(anItem->setOrUniqueId)->itemName))
+                    ++setItemsOnCharacter;
+            if (setItemsOnCharacter > 1)
+            {
+                PropertiesMultiMap setFixedProps = collectSetFixedProps(fullSetInfo.partialSetProperties, (setItemsOnCharacter - 1) * 2);
+                if (setItemsOnCharacter == fullSetInfo.itemNames.size())
+                {
+                    PropertiesMultiMap fullSetProperties = collectSetFixedProps(fullSetInfo.fullSetProperties);
+                    for (PropertiesMultiMap::const_iterator iter = fullSetProperties.constBegin(); iter != fullSetProperties.constEnd(); ++iter)
+                    {
+                        ItemProperty *prop = iter.value();
+                        if (prop->param)
+                            setFixedProps.insert(iter.key(), prop);
+                        else
+                        {
+                            ItemProperty *existingProp = setFixedProps.value(iter.key());
+                            if (existingProp)
+                                existingProp->value += prop->value;
+                            else
+                                setFixedProps.insert(iter.key(), prop);
+                        }
+                    }
+                }
+                itemDescription += kHtmlLineBreak + propertiesToHtml(setFixedProps, ColorsManager::Gold);
+                qDeleteAll(setFixedProps);
+            }
+        }
 
         // set item names from current set with correct color
-        SetItemInfo *setItem = ItemDataBase::Sets()->value(item->setOrUniqueId);
         itemDescription += kHtmlLineBreak + htmlStringFromDiabloColorString(setItem->setName, ColorsManager::Gold);
 
-        foreach (const QString &setItemName, ItemDataBase::completeSetForKey(setItem->key))
+        foreach (const QString &setItemName, fullSetInfo.itemNames)
         {
             bool found = false;
             foreach (ItemInfo *anItem, charInfo.items.character) //-V807
@@ -612,4 +625,32 @@ QString PropertiesViewerWidget::collectMysticOrbsDataFromProps(QSet<int> *moSet,
 bool PropertiesViewerWidget::isMysticOrbEffectDoubled() const
 {
     return _item->props.contains(Enums::ItemProperties::MysticOrbsEffectDoubled) || _item->rwProps.contains(Enums::ItemProperties::MysticOrbsEffectDoubled) || _item->setProps.contains(Enums::ItemProperties::MysticOrbsEffectDoubled);
+}
+
+PropertiesMultiMap PropertiesViewerWidget::collectSetFixedProps(const QList<SetFixedProperty> &setProps, quint8 propsNumber /*= 0*/)
+{
+    PropertiesMultiMap setFixedProps;
+    for (quint8 i = 0, n = propsNumber ? qMin(propsNumber, static_cast<quint8>(setProps.size())) : setProps.size(); i < n; ++i)
+    {
+        const SetFixedProperty &setProp = setProps.at(i);
+        foreach (int propId, setProp.ids)
+        {
+            ItemProperty *prop = new ItemProperty(0, setProp.param);
+            switch (propId)
+            {
+            case Enums::ItemProperties::MinimumDamageFire: case Enums::ItemProperties::MinimumDamageLightning: case Enums::ItemProperties::MinimumDamageMagic: case Enums::ItemProperties::MinimumDamageCold:
+                prop->value = setProp.minValue;
+                break;
+            default:
+                prop->value = setProp.maxValue;
+                break;
+            }
+            if (propId == Enums::ItemProperties::MinimumDamageMagic || propId == Enums::ItemProperties::MaximumDamageMagic)
+                ItemParser::convertParamsInMagicDamageString(prop, ItemDataBase::Properties()->value(propId));
+            else
+                ItemParser::createDisplayStringForPropertyWithId(propId, prop);
+            setFixedProps.insert(propId, prop);
+        }
+    }
+    return setFixedProps;
 }

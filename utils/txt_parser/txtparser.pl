@@ -49,7 +49,7 @@ sub tblExpandHash
 
 my $zeroRe = qr/^0$/;
 my %propertiesStatsHash; $propertiesStatsHash{"stat".($_ + 1)} = 6 + $_ * 4 for (0..6);
-my $properties = parsetxt("properties.txt", "#code"=>"0", %propertiesStatsHash, '!_enabled' => {col => 1, val => $zeroRe});
+my $properties = parsetxt("properties.txt", "#code"=>"0", param1 => 4, %propertiesStatsHash, '!_enabled' => {col => 1, val => $zeroRe});
 
 my $descArrayRef = [
     {key => "descstrpos", col => 43, expanded => "descPositive"},
@@ -65,7 +65,7 @@ $propertiesHash{$_->{key}} = $_->{col} for (@$descArrayRef);
 my $itemProperties = parsetxt("itemstatcost.txt", _index=>"1", %propertiesHash);
 &tblExpandArray($itemProperties, $_->{key}, $_->{expanded}) for (@$descArrayRef);
 
-# add new field for group properies
+# add new field for group properties
 for (0..scalar @$itemProperties)
 {
     my $desc = $itemProperties->[$_]->{descGroupPositive};
@@ -81,7 +81,7 @@ for (0..scalar @$itemProperties)
 
 sub statIdsFromPropertyStat
 {
-    my $property = shift;
+    (my $property, my $classSkillsParam) = @_;
     return undef unless defined $property;
 
     my $propsStat = undef;
@@ -97,13 +97,14 @@ sub statIdsFromPropertyStat
     my @ids;
     for my $statKey (sort keys %propertiesStatsHash)
     {
-        my $prop = $properties->{$property}->{$statKey};
-        next unless defined $prop;
+        my $stat = $properties->{$property}->{$statKey};
+        next unless defined $stat;
         for (0..scalar @$itemProperties)
         {
-            if ($itemProperties->[$_]->{stat} eq $prop)
+            if ($itemProperties->[$_]->{stat} eq $stat)
             {
                 push @ids, $_;
+                $$classSkillsParam = $properties->{$property}->{param1} if defined $classSkillsParam and $stat eq 'item_addclassskills';
                 last
             }
         }
@@ -118,26 +119,68 @@ my $uniques = parsetxt("uniqueitems.txt", _autoindex=>0, iName=>0, rlvl=>7, imag
 my @fixedPropertyKeys = qw/prop param min max/;
 my $fixedPropertyKeysSize = scalar @fixedPropertyKeys;
 
-my %greenPropertiesHash, my $greenPropertiesSize = 10; # 5 'aprop' with 'a' and 'b' each
-my @greenPropertiesKeys;
-for (my $i = 1; $i <= $greenPropertiesSize; $i++)
+sub getSetFixedPropertiesHash
 {
-    my $colStart = 57 + $fixedPropertyKeysSize * ($i - 1); # 57 - very first green property column
-    for (0 .. $fixedPropertyKeysSize-1)
+    (my $firstColumn, my $propertiesSize, my $hashRef, my $keysRef, my $prependToKey) = @_;
+    $prependToKey = '' unless defined $prependToKey;
+
+    for (my $i = 1; $i <= $propertiesSize; $i++)
     {
-        my $key = $fixedPropertyKeys[$_].$i;
-        push @greenPropertiesKeys, $key;
-        $greenPropertiesHash{$key} = $colStart + $_
+        my $colStart = $firstColumn + $fixedPropertyKeysSize * ($i - 1);
+        for (0 .. $fixedPropertyKeysSize-1)
+        {
+            my $key = $prependToKey.$fixedPropertyKeys[$_].$i;
+            push @$keysRef, $key;
+            $hashRef->{$key} = $colStart + $_
+        }
     }
 }
 
-my $sets = parsetxt("setitems.txt", _autoindex=>0, iIName=>0, iSName=>1, rlvl=>8, image=>11, addfunc=>20,
-                    %greenPropertiesHash, '!_lodSet' => {col => 6, val => qr/^old LoD$/});
-&tblExpandArray($sets, "iIName", "IName");
-&tblExpandArray($sets, "iSName", "SName");
+sub expandSetProperties
+{
+    (my $keysRef, my $dst, my $src) = @_;
+    for (my $i = 0; $i < scalar @$keysRef; $i++)
+    {
+        my $key = $keysRef->[$i];
+        my $convertStatSub = sub {
+            my $param;
+            $dst->{$key} = &statIdsFromPropertyStat(($src // $dst)->{$key}, \$param);
+            $dst->{$keysRef->[$i + 1]} = $param if defined $param # class skills
+        };
+
+        # convert property name to property id(s) in each first column
+        if (defined $src)
+        {
+            if ($i % $fixedPropertyKeysSize)
+            {
+                $dst->{$key} = $src->{$key} unless defined $dst->{$key}
+            }
+            else
+            {
+                &$convertStatSub()
+            }
+        }
+        elsif ($i % $fixedPropertyKeysSize == 0) { &$convertStatSub() }
+    }
+}
+
+my %setsPropertiesHash, my @setsPropertiesKeys;
+&getSetFixedPropertiesHash(6,  8, \%setsPropertiesHash, \@setsPropertiesKeys, 'part_'); # partial bonuses
+&getSetFixedPropertiesHash(38, 8, \%setsPropertiesHash, \@setsPropertiesKeys, 'full_'); # full ones
+
+my $oldSetCond = qr/^old LoD$/;
+my $sets = parsetxt("sets.txt", "#key" => 0, '!_lodSet' => {col => 2, val => $oldSetCond}, %setsPropertiesHash);
+&expandSetProperties(\@setsPropertiesKeys, $sets->{$_}) for (keys %$sets);
+
+my %greenPropertiesHash, my @greenPropertiesKeys;
+&getSetFixedPropertiesHash(57, 10, \%greenPropertiesHash, \@greenPropertiesKeys);
+my $setItems = parsetxt("setitems.txt", _autoindex=>0, iIName=>0, iSName=>1, rlvl=>8, image=>11, addfunc=>20,
+                        %greenPropertiesHash, '!_lodSet' => {col => 6, val => $oldSetCond});
+&tblExpandArray($setItems, "iIName", "IName");
+&tblExpandArray($setItems, "iSName", "SName");
 
 my $mxlSets, my $setIndex = 0, my $oldIndex = -3;
-for my $setElement (@$sets)
+for my $setElement (@$setItems)
 {
     $oldIndex++;
     next unless (defined $setElement->{IName} and defined $setElement->{SName});
@@ -150,16 +193,8 @@ for my $setElement (@$sets)
     $mxlSets->[$setIndex]->{image}  = $setElement->{image};
 
     # if addfunc == 0, then properties are embedded in the item
-    if (defined $mxlSets->[$setIndex]->{addfunc} and $mxlSets->[$setIndex]->{addfunc} > 0)
-    {
-        for (my $i = 0; $i < scalar @greenPropertiesKeys; $i++)
-        {
-            my $key = $greenPropertiesKeys[$i];
-            # convert property name to property id(s) in each firt column
-            $mxlSets->[$setIndex]->{$key} = $i % $fixedPropertyKeysSize ? $setElement->{$key}
-                                               : &statIdsFromPropertyStat($setElement->{$key})
-        }
-    }
+    my $addfunc = $mxlSets->[$setIndex]->{addfunc};
+    &expandSetProperties(\@greenPropertiesKeys, $mxlSets->[$setIndex], $setElement) if (defined $addfunc and $addfunc > 0);
 
     $setIndex++
 }
@@ -345,7 +380,17 @@ for my $hashRef (@$uniques)
 }
 close $out;
 
-open $out, ">", "$prefix/sets.txt";
+open $out, ">", "generated/sets.txt";
+print $out "#index\t".join("\t", @setsPropertiesKeys)."\n";
+for my $setKey (keys %$sets)
+{
+    print $out $setKey;
+    print $out "\t".($sets->{$setKey}->{$_} // '') for (@setsPropertiesKeys);
+    print $out "\n"
+}
+close $out;
+
+open $out, ">", "$prefix/setitems.txt";
 print $out "#index\titem\tset\tkey\trlvl\timage\t".join("\t", @greenPropertiesKeys)."\n";
 for my $set (@$mxlSets)
 {
@@ -479,7 +524,7 @@ close $out;
 # print $out saveStructure($armorTypes, "itemArmors", 80);
 # print $out saveStructure($itemProperties, "itemProps", 80);
 # print $out saveStructure($uniques, "uniques", 80);
-# print $out saveStructure($sets, "sets", 80);
+# print $out saveStructure($setItems, "sets", 80);
 # print $out saveStructure($processedSkills, "skills", 80);
 # print $out saveStructure($properties, "properties", 80);
 # print $out saveStructure($itemTypes, "itemTypes", 80);

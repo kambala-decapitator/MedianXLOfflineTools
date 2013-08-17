@@ -190,15 +190,17 @@ struct SetOrUniqueItemInfo
     QByteArray imageName;
 };
 
+struct SetFixedProperty
+{
+    QList<quint16> ids;
+    int param, minValue, maxValue;
+
+    SetFixedProperty() : param(0), minValue(0), maxValue(0) {}
+};
+
 struct SetItemInfo : public SetOrUniqueItemInfo
 {
     QString itemName, setName, key;
-    struct SetFixedProperty
-    {
-        QList<quint16> ids;
-        int param, minValue, maxValue;
-        SetFixedProperty() : param(0), minValue(0), maxValue(0) {}
-    };
     QList<SetFixedProperty> fixedProperties;
 };
 

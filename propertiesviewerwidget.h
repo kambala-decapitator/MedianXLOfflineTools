@@ -53,6 +53,8 @@ private:
 
     QString collectMysticOrbsDataFromProps(QSet<int> *moSet, PropertiesMap &props);
     bool isMysticOrbEffectDoubled() const;
+
+    PropertiesMultiMap collectSetFixedProps(const QList<SetFixedProperty> &setProps, quint8 propsNumber = 0);
 };
 
 #endif // PROPERTIESVIEWERWIDGET_H

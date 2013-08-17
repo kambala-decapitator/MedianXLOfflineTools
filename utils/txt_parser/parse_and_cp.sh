@@ -4,7 +4,7 @@ cd `dirname $0`
 ./create_translation.sh ru
 
 cd generated
-../CompressFiles itemtypes.txt mo.txt exptable.txt basestats.txt
+../CompressFiles itemtypes.txt mo.txt exptable.txt basestats.txt sets.txt
 mv *.dat ../data
 
 cd ..
