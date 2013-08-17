@@ -1172,28 +1172,25 @@ void MedianXLOfflineTools::loadData()
 
 void MedianXLOfflineTools::loadExpTable()
 {
-    QFile f;
-    if (!ItemDataBase::createUncompressedTempFile(ResourcePathManager::dataPathForFileName("exptable.dat"), tr("Experience table data not loaded."), &f))
+    QByteArray fileData = ItemDataBase::decompressedFileData(ResourcePathManager::dataPathForFileName("exptable.dat"), tr("Experience table data not loaded."));
+    if (fileData.isEmpty())
         return;
 
-    QList<QByteArray> expLines = f.readAll().split('\n');
     experienceTable.reserve(Enums::CharacterStats::MaxLevel);
-    foreach (const QByteArray &numberString, expLines)
+    foreach (const QByteArray &numberString, fileData.split('\n'))
         if (!numberString.isEmpty())
             experienceTable.append(numberString.trimmed().toUInt());
-    f.remove();
 }
 
 void MedianXLOfflineTools::loadMercNames()
 {
-    QFile f;
-    if (!ItemDataBase::createUncompressedTempFile(ResourcePathManager::localizedPathForFileName("mercs"), tr("Mercenary names not loaded."), &f))
+    QByteArray fileData = ItemDataBase::decompressedFileData(ResourcePathManager::localizedPathForFileName("mercs"), tr("Mercenary names not loaded."));
+    if (fileData.isEmpty())
         return;
 
-    QList<QByteArray> mercLines = f.readAll().split('\n');
-    QStringList actNames;
     mercNames.reserve(4);
-    foreach (const QByteArray &mercName, mercLines)
+    QStringList actNames;
+    foreach (const QByteArray &mercName, fileData.split('\n'))
     {
         if (mercName.startsWith("-"))
         {
@@ -1203,13 +1200,12 @@ void MedianXLOfflineTools::loadMercNames()
         else
             actNames += QString::fromUtf8(mercName.trimmed());
     }
-    f.remove();
 }
 
 void MedianXLOfflineTools::loadBaseStats()
 {
-    QFile f;
-    if (!ItemDataBase::createUncompressedTempFile(ResourcePathManager::dataPathForFileName("basestats.dat"), tr("Base stats data not loaded, using predefined one."), &f))
+    QByteArray fileData = ItemDataBase::decompressedFileData(ResourcePathManager::dataPathForFileName("basestats.dat"), tr("Base stats data not loaded, using predefined one."));
+    if (fileData.isEmpty())
     {
         _baseStatsMap[Enums::ClassName::Amazon]      = BaseStats(BaseStats::StatsAtStart(25, 25, 20, 15, 84), BaseStats::StatsPerLevel(100, 40, 60), BaseStats::StatsPerPoint( 8, 8, 18));
         _baseStatsMap[Enums::ClassName::Sorceress]   = BaseStats(BaseStats::StatsAtStart(10, 25, 15, 35, 74), BaseStats::StatsPerLevel(100, 40, 60), BaseStats::StatsPerPoint( 8, 8, 18));
@@ -1221,8 +1217,7 @@ void MedianXLOfflineTools::loadBaseStats()
         return;
     }
 
-    QList<QByteArray> lines = f.readAll().split('\n');
-    foreach (const QByteArray &s, lines)
+    foreach (const QByteArray &s, fileData.split('\n'))
     {
         if (!s.isEmpty() && s.at(0) != '#')
         {
@@ -1236,7 +1231,6 @@ void MedianXLOfflineTools::loadBaseStats()
                 );
         }
     }
-    f.remove();
 }
 
 void MedianXLOfflineTools::createLanguageMenu()

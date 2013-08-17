@@ -6,58 +6,46 @@
 #include "characterinfo.hpp"
 #include "reversebitwriter.h"
 
-#include <QFile>
+#include <QBuffer>
 
 #ifndef QT_NO_DEBUG
 #include <QDebug>
 #endif
 
-#define TOUINT16(byteArray) (static_cast<quint8>(byteArray.at(0)) + (static_cast<quint8>(byteArray.at(1)) << 8))
+#define TO_UINT16(byteArray) (static_cast<quint8>(byteArray.at(0)) + (static_cast<quint8>(byteArray.at(1)) << 8))
 #define CRC_OF_BYTEARRAY(byteArray) qChecksum(byteArray.constData(), byteArray.length())
 
 
 const char *const ItemDataBase::kJewelType = "jew";
 QHash<QString, FullSetInfo> ItemDataBase::_sets;
 
-bool ItemDataBase::createUncompressedTempFile(const QString &compressedFilePath, const QString &errorMessage, QFile *uncompressedFile)
+QByteArray ItemDataBase::decompressedFileData(const QString &compressedFilePath, const QString &errorMessage)
 {
     QFile f(compressedFilePath);
     if (!f.open(QIODevice::ReadOnly))
     {
         ERROR_BOX_NO_PARENT(errorMessage + "\n" + tr("Reason: %1").arg(f.errorString()));
-        return false;
+        return QByteArray();
     }
 
     QByteArray compressedCrcData = f.read(2), originalCrcData = f.read(2);
-    quint16 compressedCrc = TOUINT16(compressedCrcData), originalCrc = TOUINT16(originalCrcData);
+    quint16 compressedCrc = TO_UINT16(compressedCrcData), originalCrc = TO_UINT16(originalCrcData);
     static const QString decompressError(tr("Error decrypting file '%1'"));
     QByteArray compressedDataFile = f.readAll();
     if (CRC_OF_BYTEARRAY(compressedDataFile) != compressedCrc)
     {
         ERROR_BOX_NO_PARENT(decompressError.arg(compressedFilePath));
-        return false;
+        return QByteArray();
     }
 
     QByteArray originalFileData = qUncompress(compressedDataFile);
     if (CRC_OF_BYTEARRAY(originalFileData) != originalCrc)
     {
         ERROR_BOX_NO_PARENT(decompressError.arg(compressedFilePath));
-        return false;
+        return QByteArray();
     }
 
-    uncompressedFile->setFileName(QString("%1/%2_temp.txt").arg(QDir::tempPath(), qApp->applicationName()));
-    uncompressedFile->remove();
-    if (!uncompressedFile->open(QIODevice::ReadWrite))
-    {
-        ERROR_BOX_NO_PARENT(decompressError.arg(compressedFilePath));
-        return false;
-    }
-
-    uncompressedFile->write(originalFileData);
-    uncompressedFile->flush();
-    uncompressedFile->reset();
-
-    return true;
+    return originalFileData;
 }
 
 QHash<QByteArray, ItemBase *> *ItemDataBase::Items()
@@ -65,13 +53,16 @@ QHash<QByteArray, ItemBase *> *ItemDataBase::Items()
     static QHash<QByteArray, ItemBase *> allItems;
     if (allItems.isEmpty())
     {
-        QFile f;
-        if (!createUncompressedTempFile(ResourcePathManager::localizedPathForFileName("items"), tr("Items data not loaded."), &f))
+        QByteArray fileData = decompressedFileData(ResourcePathManager::localizedPathForFileName("items"), tr("Items data not loaded."));
+        if (fileData.isEmpty())
             return 0;
 
-        while (!f.atEnd())
+        QBuffer buf(&fileData);
+        if (!buf.open(QIODevice::ReadOnly))
+            return 0;
+        while (!buf.atEnd())
         {
-            QList<QByteArray> data = stringArrayOfCurrentLineInFile(f);
+            QList<QByteArray> data = stringArrayOfCurrentLineInFile(buf);
             if (data.isEmpty())
                 continue;
 
@@ -100,7 +91,6 @@ QHash<QByteArray, ItemBase *> *ItemDataBase::Items()
             item->classCode = data.at(22).toShort();
             allItems[data.at(0)] = item;
         }
-        f.remove();
     }
     return &allItems;
 }
@@ -110,19 +100,21 @@ QHash<QByteArray, QList<QByteArray> > *ItemDataBase::ItemTypes()
     static QHash<QByteArray, QList<QByteArray> > types;
     if (types.isEmpty())
     {
-        QFile f;
-        if (!createUncompressedTempFile(ResourcePathManager::dataPathForFileName("itemtypes.dat"), tr("Item types data not loaded."), &f))
+        QByteArray fileData = decompressedFileData(ResourcePathManager::dataPathForFileName("itemtypes.dat"), tr("Item types data not loaded."));
+        if (fileData.isEmpty())
             return 0;
 
-        while (!f.atEnd())
+        QBuffer buf(&fileData);
+        if (!buf.open(QIODevice::ReadOnly))
+            return 0;
+        while (!buf.atEnd())
         {
-            QList<QByteArray> data = stringArrayOfCurrentLineInFile(f);
+            QList<QByteArray> data = stringArrayOfCurrentLineInFile(buf);
             if (data.isEmpty())
                 continue;
 
             types[data.at(0)] = data.at(1).split(',');
         }
-        f.remove();
     }
     return &types;
 }
@@ -132,13 +124,16 @@ QHash<uint, ItemPropertyTxt *> *ItemDataBase::Properties()
     static QHash<uint, ItemPropertyTxt *> allProperties;
     if (allProperties.isEmpty())
     {
-        QFile f;
-        if (!createUncompressedTempFile(ResourcePathManager::localizedPathForFileName("props"), tr("Properties data not loaded."), &f))
+        QByteArray fileData = decompressedFileData(ResourcePathManager::localizedPathForFileName("props"), tr("Properties data not loaded."));
+        if (fileData.isEmpty())
             return 0;
 
-        while (!f.atEnd())
+        QBuffer buf(&fileData);
+        if (!buf.open(QIODevice::ReadOnly))
+            return 0;
+        while (!buf.atEnd())
         {
-            QList<QByteArray> data = stringArrayOfCurrentLineInFile(f);
+            QList<QByteArray> data = stringArrayOfCurrentLineInFile(buf);
             if (data.isEmpty())
                 continue;
 
@@ -166,7 +161,6 @@ QHash<uint, ItemPropertyTxt *> *ItemDataBase::Properties()
             prop->stat = data.at(18);
             allProperties[data.at(0).toUInt()] = prop;
         }
-        f.remove();
     }
     return &allProperties;
 }
@@ -198,13 +192,16 @@ QHash<uint, SetItemInfo *> *ItemDataBase::Sets()
     if (allSets.isEmpty())
     {
         // set items
-        QFile f;
-        if (!createUncompressedTempFile(ResourcePathManager::localizedPathForFileName("setitems"), tr("Set items data not loaded."), &f))
+        QByteArray fileData = decompressedFileData(ResourcePathManager::localizedPathForFileName("setitems"), tr("Set items data not loaded."));
+        if (fileData.isEmpty())
             return 0;
 
-        while (!f.atEnd())
+        QBuffer buf(&fileData);
+        if (!buf.open(QIODevice::ReadOnly))
+            return 0;
+        while (!buf.atEnd())
         {
-            QList<QByteArray> data = stringArrayOfCurrentLineInFile(f);
+            QList<QByteArray> data = stringArrayOfCurrentLineInFile(buf);
             if (data.isEmpty())
                 continue;
 
@@ -222,15 +219,19 @@ QHash<uint, SetItemInfo *> *ItemDataBase::Sets()
 
             _sets[setItem->key].itemNames << setItem->itemName;
         }
-        f.remove();
+        buf.close();
 
         // full set bonuses
-        if (!createUncompressedTempFile(ResourcePathManager::dataPathForFileName("sets.dat"), tr("Sets data not loaded."), &f))
+        fileData = decompressedFileData(ResourcePathManager::dataPathForFileName("sets.dat"), tr("Sets data not loaded."));
+        if (fileData.isEmpty())
             return 0;
 
-        while (!f.atEnd())
+        buf.setBuffer(&fileData);
+        if (!buf.open(QIODevice::ReadOnly))
+            return 0;
+        while (!buf.atEnd())
         {
-            QList<QByteArray> data = stringArrayOfCurrentLineInFile(f);
+            QList<QByteArray> data = stringArrayOfCurrentLineInFile(buf);
             if (data.isEmpty())
                 continue;
 
@@ -238,7 +239,6 @@ QHash<uint, SetItemInfo *> *ItemDataBase::Sets()
             info.partialSetProperties = collectSetProperties(data, 1, 33);
             info.fullSetProperties = collectSetProperties(data, 33);
         }
-        f.remove();
     }
     return &allSets;
 }
@@ -248,13 +248,16 @@ QList<SkillInfo *> *ItemDataBase::Skills()
     static QList<SkillInfo *> allSkills;
     if (allSkills.isEmpty())
     {
-        QFile f;
-        if (!createUncompressedTempFile(ResourcePathManager::localizedPathForFileName("skills"), tr("Skills data not loaded."), &f))
+        QByteArray fileData = decompressedFileData(ResourcePathManager::localizedPathForFileName("skills"), tr("Skills data not loaded."));
+        if (fileData.isEmpty())
             return 0;
 
-        while (!f.atEnd())
+        QBuffer buf(&fileData);
+        if (!buf.open(QIODevice::ReadOnly))
+            return 0;
+        while (!buf.atEnd())
         {
-            QList<QByteArray> data = stringArrayOfCurrentLineInFile(f);
+            QList<QByteArray> data = stringArrayOfCurrentLineInFile(buf);
             if (data.isEmpty())
                 continue;
 
@@ -270,7 +273,6 @@ QList<SkillInfo *> *ItemDataBase::Skills()
             }
             allSkills.push_back(skill);
         }
-        f.remove();
     }
     return &allSkills;
 }
@@ -280,13 +282,16 @@ QHash<uint, UniqueItemInfo *> *ItemDataBase::Uniques()
     static QHash<uint, UniqueItemInfo *> allUniques;
     if (allUniques.isEmpty())
     {
-        QFile f;
-        if (!createUncompressedTempFile(ResourcePathManager::localizedPathForFileName("uniques"), tr("Uniques data not loaded."), &f))
+        QByteArray fileData = decompressedFileData(ResourcePathManager::localizedPathForFileName("uniques"), tr("Uniques data not loaded."));
+        if (fileData.isEmpty())
             return 0;
 
-        while (!f.atEnd())
+        QBuffer buf(&fileData);
+        if (!buf.open(QIODevice::ReadOnly))
+            return 0;
+        while (!buf.atEnd())
         {
-            QList<QByteArray> data = stringArrayOfCurrentLineInFile(f);
+            QList<QByteArray> data = stringArrayOfCurrentLineInFile(buf);
             if (data.isEmpty())
                 continue;
 
@@ -297,7 +302,6 @@ QHash<uint, UniqueItemInfo *> *ItemDataBase::Uniques()
                 uniqueItem->imageName = data.at(3);
             allUniques[data.at(0).toUInt()] = uniqueItem;
         }
-        f.remove();
     }
     return &allUniques;
 }
@@ -307,13 +311,16 @@ QHash<uint, MysticOrb *> *ItemDataBase::MysticOrbs()
     static QHash<uint, MysticOrb *> allMysticOrbs;
     if (allMysticOrbs.isEmpty())
     {
-        QFile f;
-        if (!createUncompressedTempFile(ResourcePathManager::dataPathForFileName("mo.dat"), tr("Mystic Orbs data not loaded."), &f))
+        QByteArray fileData = decompressedFileData(ResourcePathManager::dataPathForFileName("mo.dat"), tr("Mystic Orbs data not loaded."));
+        if (fileData.isEmpty())
             return 0;
 
-        while (!f.atEnd())
+        QBuffer buf(&fileData);
+        if (!buf.open(QIODevice::ReadOnly))
+            return 0;
+        while (!buf.atEnd())
         {
-            QList<QByteArray> data = stringArrayOfCurrentLineInFile(f);
+            QList<QByteArray> data = stringArrayOfCurrentLineInFile(buf);
             if (data.isEmpty())
                 continue;
 
@@ -326,7 +333,6 @@ QHash<uint, MysticOrb *> *ItemDataBase::MysticOrbs()
                 mo->param = data.at(4).toUShort() + (data.at(5).toUShort() << 6);
             allMysticOrbs[data.at(0).toUInt()] = mo;
         }
-        f.remove();
     }
     return &allMysticOrbs;
 }
@@ -336,19 +342,21 @@ QHash<uint, QString> *ItemDataBase::Monsters()
     static QHash<uint, QString> allMonsters;
     if (allMonsters.isEmpty())
     {
-        QFile f;
-        if (!createUncompressedTempFile(ResourcePathManager::localizedPathForFileName("monsters"), tr("Monster names not loaded."), &f))
+        QByteArray fileData = decompressedFileData(ResourcePathManager::localizedPathForFileName("monsters"), tr("Monster names not loaded."));
+        if (fileData.isEmpty())
             return 0;
 
-        while (!f.atEnd())
+        QBuffer buf(&fileData);
+        if (!buf.open(QIODevice::ReadOnly))
+            return 0;
+        while (!buf.atEnd())
         {
-            QList<QByteArray> data = stringArrayOfCurrentLineInFile(f);
+            QList<QByteArray> data = stringArrayOfCurrentLineInFile(buf);
             if (data.isEmpty())
                 continue;
 
             allMonsters[data.at(0).toUInt()] = QString::fromUtf8(data.at(1));
         }
-        f.remove();
     }
     return &allMonsters;
 }
@@ -358,13 +366,16 @@ RunewordHash *ItemDataBase::RW()
     static RunewordHash allRunewords;
     if (allRunewords.isEmpty())
     {
-        QFile f;
-        if (!createUncompressedTempFile(ResourcePathManager::localizedPathForFileName("rw"), tr("Runewords data not loaded."), &f))
+        QByteArray fileData = decompressedFileData(ResourcePathManager::localizedPathForFileName("rw"), tr("Runewords data not loaded."));
+        if (fileData.isEmpty())
             return 0;
 
-        while (!f.atEnd())
+        QBuffer buf(&fileData);
+        if (!buf.open(QIODevice::ReadOnly))
+            return 0;
+        while (!buf.atEnd())
         {
-            QList<QByteArray> data = stringArrayOfCurrentLineInFile(f);
+            QList<QByteArray> data = stringArrayOfCurrentLineInFile(buf);
             if (data.isEmpty())
                 continue;
 
@@ -375,7 +386,6 @@ RunewordHash *ItemDataBase::RW()
             rw->name = QString::fromUtf8(data.at(6));
             allRunewords.insert(qMakePair(data.at(7), data.size() == 9 ? data.at(8) : QByteArray()), rw);
         }
-        f.remove();
     }
     return &allRunewords;
 }
@@ -385,13 +395,16 @@ QHash<QByteArray, SocketableItemInfo *> *ItemDataBase::Socketables()
     static QHash<QByteArray, SocketableItemInfo *> allSocketables;
     if (allSocketables.isEmpty())
     {
-        QFile f;
-        if (!createUncompressedTempFile(ResourcePathManager::localizedPathForFileName("socketables"), tr("Socketables data not loaded."), &f))
+        QByteArray fileData = decompressedFileData(ResourcePathManager::localizedPathForFileName("socketables"), tr("Socketables data not loaded."));
+        if (fileData.isEmpty())
             return 0;
 
-        while (!f.atEnd())
+        QBuffer buf(&fileData);
+        if (!buf.open(QIODevice::ReadOnly))
+            return 0;
+        while (!buf.atEnd())
         {
-            QList<QByteArray> data = stringArrayOfCurrentLineInFile(f);
+            QList<QByteArray> data = stringArrayOfCurrentLineInFile(buf);
             if (data.isEmpty())
                 continue;
 
@@ -419,7 +432,6 @@ QHash<QByteArray, SocketableItemInfo *> *ItemDataBase::Socketables()
             }
             allSocketables[data.at(0)] = item;
         }
-        f.remove();
     }
     return &allSocketables;
 }
@@ -429,25 +441,27 @@ QStringList *ItemDataBase::NonMagicItemQualities()
     static QStringList allQualities;
     if (allQualities.isEmpty())
     {
-        QFile f;
-        if (!createUncompressedTempFile(ResourcePathManager::localizedPathForFileName("LowQualityItems"), tr("Non-magic qualities data not loaded."), &f))
+        QByteArray fileData = decompressedFileData(ResourcePathManager::localizedPathForFileName("LowQualityItems"), tr("Non-magic qualities data not loaded."));
+        if (fileData.isEmpty())
             return 0;
 
-        while (!f.atEnd())
+        QBuffer buf(&fileData);
+        if (!buf.open(QIODevice::ReadOnly))
+            return 0;
+        while (!buf.atEnd())
         {
-            QList<QByteArray> data = stringArrayOfCurrentLineInFile(f);
+            QList<QByteArray> data = stringArrayOfCurrentLineInFile(buf);
             if (!data.isEmpty())
                 allQualities << QString::fromUtf8(data.at(0));
         }
-        f.remove();
     }
     return &allQualities;
 }
 
-QList<QByteArray> ItemDataBase::stringArrayOfCurrentLineInFile(QFile &f)
+QList<QByteArray> ItemDataBase::stringArrayOfCurrentLineInFile(QIODevice &d)
 {
-    bool isFirstPos = f.pos() == 0;
-    QByteArray itemString = f.readLine().trimmed();
+    bool isFirstPos = d.pos() == 0;
+    QByteArray itemString = d.readLine().trimmed();
     return itemString.isEmpty() || (isFirstPos && itemString.startsWith('#')) ? QList<QByteArray>() : itemString.split('\t');
 }
 

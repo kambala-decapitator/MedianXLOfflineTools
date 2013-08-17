@@ -22,7 +22,7 @@ class ItemDataBase
 
 public:
     static const char *const kJewelType;
-    static bool createUncompressedTempFile(const QString &compressedFilePath, const QString &errorMessage, QFile *uncompressedFile);
+    static QByteArray decompressedFileData(const QString &compressedFilePath, const QString &errorMessage);
 
     static QHash<QByteArray, ItemBase *> *Items();
     static QHash<QByteArray, QList<QByteArray> > *ItemTypes();
@@ -65,7 +65,7 @@ public:
 private:
     static QHash<QString, FullSetInfo> _sets;
 
-    static QList<QByteArray> stringArrayOfCurrentLineInFile(QFile &f);
+    static QList<QByteArray> stringArrayOfCurrentLineInFile(QIODevice &d);
     static void expandMultilineString(QString *stringToExpand);
 
     static bool canDisenchant(ItemInfo *item);
