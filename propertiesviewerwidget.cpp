@@ -342,7 +342,7 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
             itemDescription += propertiesToHtml(setItemFixedProps, ColorsManager::Green);
         qDeleteAll(setItemFixedProps);
 
-        // TODO: set properties
+        // set properties
         SetItemInfo *setItem = ItemDataBase::Sets()->value(item->setOrUniqueId);
         const FullSetInfo fullSetInfo = ItemDataBase::fullSetInfoForKey(setItem->key);
         if (item->location == ItemLocation::Equipped || item->location == ItemLocation::Corpse || item->location == ItemLocation::Merc)
@@ -353,7 +353,7 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
                     ++setItemsOnCharacter;
             if (setItemsOnCharacter > 1)
             {
-                PropertiesMultiMap setFixedProps = collectSetFixedProps(fullSetInfo.partialSetProperties, (setItemsOnCharacter - 1) * 2);
+                PropertiesMultiMap setFixedProps = collectSetFixedProps(fullSetInfo.partialSetProperties, setItemsOnCharacter - 1);
                 if (setItemsOnCharacter == fullSetInfo.itemNames.size())
                 {
                     PropertiesMultiMap fullSetProperties = collectSetFixedProps(fullSetInfo.fullSetProperties);
