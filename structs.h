@@ -67,15 +67,18 @@ public:
     ItemInfo(const QString &bits) : bitString(bits) { init(); }
     ~ItemInfo() { if (shouldDeleteEverything) { qDeleteAll(props); qDeleteAll(rwProps); qDeleteAll(socketablesInfo); } }
 
-    void move(int newRow, int newCol, quint32 newPage)
+    void move(int newRow, int newCol, quint32 newPage, bool shouldChangeBits = true)
     {
         row = newRow;
         column = newCol;
         plugyPage = newPage;
-        hasChanged = true;
 
-        ReverseBitWriter::updateItemRow(this);
-        ReverseBitWriter::updateItemColumn(this);
+        if (shouldChangeBits)
+        {
+            hasChanged = true;
+            ReverseBitWriter::updateItemRow(this);
+            ReverseBitWriter::updateItemColumn(this);
+        }
     }
 
 private:

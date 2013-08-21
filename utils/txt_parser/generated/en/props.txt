@@ -83,17 +83,17 @@
 90	0	24																item_lightcolor
 91	100	10						Requirements	Requirements		4	0	2					item_req_percent
 92		7						Required Level	Required Level		1	2	1					item_levelreq
-93	60	9						Decreased Attack Speed	Increased Attack Speed		2	145	1					item_fasterattackrate
+93	60	9		96,99,102,105	Decreased Overall Speed	Increased Overall Speed		Decreased Attack Speed	Increased Attack Speed		2	145	1	9	2	1		item_fasterattackrate
 94	64	10						ModitemLevReq	ModitemLevReq		4	58	2					item_levelreqpct
-96	50	9						Slower Run/Walk	Faster Run/Walk		2	148	1					item_fastermovevelocity
+96	50	9		93,99,102,105	Decreased Overall Speed	Increased Overall Speed		Slower Run/Walk	Faster Run/Walk		2	148	1	9	2	1		item_fastermovevelocity
 97	1	6									28	81					11	item_nonclassskill
 98		1															8	state
-99	50	9						Slower Hit Recovery	Faster Hit Recovery		2	139	1					item_fastergethitrate
+99	50	9		93,96,102,105	Decreased Overall Speed	Increased Overall Speed		Slower Hit Recovery	Faster Hit Recovery		2	139	1	9	2	1		item_fastergethitrate
 101	0	6																skill_poison_override_length
-102	20	10						Slower Block Rate	Faster Block Rate		2	136	1					item_fasterblockrate
+102	20	10		93,96,99,105	Decreased Overall Speed	Increased Overall Speed		Slower Block Rate	Faster Block Rate		2	136	1	9	2	1		item_fasterblockrate
 103	0	1						Ignores Resistances of Undead	Ignores Resistances of Undead		3	150	0					skill_bypass_undead
 104	0	1						Ignores Resistances of Demons	Ignores Resistances of Demons		3	150	0					skill_bypass_demons
-105	50	10						Slower Cast Rate	Faster Cast Rate		2	142	1					item_fastercastrate
+105	50	10		93,96,99,102	Decreased Overall Speed	Increased Overall Speed		Slower Cast Rate	Faster Cast Rate		2	142	1	9	2	1		item_fastercastrate
 106	0	1						Ignores Resistances of Beasts	Ignores Resistances of Beasts		3	150	0					skill_bypass_beasts
 107	1	5									27	81					11	item_singleskill
 108	0	1						Slain Monsters Rest in Peace	Slain Monsters Rest in Peace		3	81	0					item_restinpeace
@@ -158,7 +158,7 @@
 186			8					Skill Points from Books	Skill Points from Books		1	3	1					potion_skill_cap
 187	0	3						Lionheart Spell Blinds Attacker	Lionheart Spell Blinds Attacker		12	22	2					passive_lionheart_addstupidth
 188	0	3						+%d to Javelin and Spear Skills	+%d to Javelin and Spear Skills		14	151					16	item_addskill_tab
-189	0	1						\red;Cube with your Idol of Vanity or a Key	\red;Cube with your Idol of Vanity or a Key		3	159	0					spiritofdamnationnew
+189	0	1						\red;Cube with your Idol of Vanity	\red;Cube with your Idol of Vanity		3	159	0					spiritofdamnationnew
 191	0	5																x_signet02
 192	0	5																x_signet03
 193	0	5																x_signet04
@@ -286,10 +286,10 @@
 330	50	8		329,331,332,377	to Spell Damage	to Spell Damage		to Lightning Spell Damage	to Lightning Spell Damage		4	88	1	5	4	1		passive_ltng_mastery
 331	50	8		329,330,332,377	to Spell Damage	to Spell Damage		to Cold Spell Damage	to Cold Spell Damage		4	88	1	5	4	1		passive_cold_mastery
 332	50	8		329,330,331,377	to Spell Damage	to Spell Damage		to Poison Spell Damage	to Poison Spell Damage		4	88	1	5	4	1		passive_pois_mastery
-333	0	8		334,335,336,358	to All Enemy Resistances	to All Enemy Resistances		to Enemy Fire Resistance	to Enemy Fire Resistance		20	88	1	6	20	1		passive_fire_pierce
-334	0	8		333,335,336,358	to All Enemy Resistances	to All Enemy Resistances		to Enemy Lightning Resistance	to Enemy Lightning Resistance		20	88	1	6	20	1		passive_ltng_pierce
-335	0	8		333,334,336,358	to All Enemy Resistances	to All Enemy Resistances		to Enemy Cold Resistance	to Enemy Cold Resistance		20	88	1	6	20	1		passive_cold_pierce
-336	0	8		333,334,335,358	to All Enemy Resistances	to All Enemy Resistances		to Enemy Poison Resistance	to Enemy Poison Resistance		20	88	1	6	20	1		passive_pois_pierce
+333	0	8		334,335,336	to All Enemy Resistances	to All Enemy Resistances		to Enemy Fire Resistance	to Enemy Fire Resistance		20	88	1	6	20	1		passive_fire_pierce
+334	0	8		333,335,336	to All Enemy Resistances	to All Enemy Resistances		to Enemy Lightning Resistance	to Enemy Lightning Resistance		20	88	1	6	20	1		passive_ltng_pierce
+335	0	8		333,334,336	to All Enemy Resistances	to All Enemy Resistances		to Enemy Cold Resistance	to Enemy Cold Resistance		20	88	1	6	20	1		passive_cold_pierce
+336	0	8		333,334,335	to All Enemy Resistances	to All Enemy Resistances		to Enemy Poison Resistance	to Enemy Poison Resistance		20	88	1	6	20	1		passive_pois_pierce
 337	0	8																passive_critical_strike
 338	0	8		339,340	Chance to Avoid Damage	Chance to Avoid Damage		to We Have A Bug Here	to We Have A Bug Here		2	40	1	8	2	1		passive_dodge
 339	0	8		338,340	Chance to Avoid Damage	Chance to Avoid Damage		to We Have A Bug Here	to We Have A Bug Here		2	40	1	8	2	1		passive_avoid
@@ -305,7 +305,7 @@
 349	0	9																passive_summon_resist
 356	0	2																questitemdifficulty
 357	50	9																passive_mag_mastery
-358	0	8		333,334,335,336	to All Enemy Resistances	to All Enemy Resistances								6	20	1		passive_mag_pierce
+358	0	8																passive_mag_pierce
 359	50	9		360,361,362		Bonus to All Attributes		Penalty to Strength	Bonus to Strength		2	74	1	3	2	1		item_strength_percent
 360	50	9		359,361,362		Bonus to All Attributes		Penalty to Dexterity	Bonus to Dexterity		2	74	1	3	2	1		item_dexterity_percent
 361	50	9		359,360,362		Bonus to All Attributes		Penalty to Energy	Bonus to Energy		2	74	1	3	2	1		item_energy_percent
@@ -399,7 +399,7 @@
 474	0	8						Unlocks your Black Road Skill	Unlocks your Black Road Skill		3	113	0					learn_blackroad
 475	0	1						Druid Morph	Druid Morph		3	2	0					item_desc_druidmorph
 476	0	1						Level 1 Demon Blood Aura when Equipped	Level 1 Demon Blood Aura when Equipped		3	159	0					item_desc_dbaura
-477	1	4						Increased Difficulty	Increased Difficulty		1	158	1					item_desc_hardaura
+477	1	4						\red;&gt;&gt; Do not use at level 120 &lt;&lt;\blue;	Increased Difficulty		3	1	0					item_desc_hardaura
 478	0	1						\purple;and Reward, cube with a Mana Potion to lower it\nCube with a Healing Potion to Increase Difficulty	\purple;and Reward, cube with a Mana Potion to lower it\nCube with a Healing Potion to Increase Difficulty		3	159	0					item_desc_instructions
 479	0	4						Maximum Skill Level Increased by	Maximum Skill Level Increased by		3	69	2					skill_more
 480	0	5						to Vitality per Socketed Gem	to Vitality per Socketed Gem		1	75	1					item_skill_paragon
@@ -424,5 +424,5 @@
 504	0	10						to Dexterity	to Dexterity	(Based on Blessed Life Skill Level)	6	62	1					item_dexterity_perblessedlife
 505	0	10						Drain Life	Replenish Life	(Based on Character Level)	6	60	2					item_hpregen_perlevel
 506	0	1						\red;Superbeast Morph\blue;	\red;Superbeast Morph\blue;		3	159	0					desc-superbeasty
-508	0	1						\red;Treewarden Morph\blue;	\red;Treewarden Morph\blue;		3	159	0					desc-fatasstriton
+508	0	1						\red;&gt;&gt; Do not use at level 120 &lt;&lt;\blue;	\red;Treewarden Morph\blue;		3	159	0					desc-fatasstriton
 509	500	10						\red;&gt;&gt; Do not use at level 120 &lt;&lt;\blue;	\red;&gt;&gt; Do not use at level 120 &lt;&lt;\blue;		3	254	0					fuck_you#

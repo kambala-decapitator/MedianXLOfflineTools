@@ -83,8 +83,8 @@ void HelpWindowDisplayManager::showHelp()
     }
     else
     {
-        _impl->helpWindow->activateWindow();
         _impl->helpWindow->raise();
+        _impl->helpWindow->activateWindow();
     }
 }
 

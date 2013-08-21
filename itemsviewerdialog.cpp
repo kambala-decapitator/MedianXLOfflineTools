@@ -301,76 +301,7 @@ void ItemsViewerDialog::updateItems(const QHash<int, bool> &plugyStashesExistenc
         bool isGearTab = i == GearIndex;
         ItemsList items = ItemDataBase::itemsStoredIn(Enums::ItemStorage::metaEnum().value(i), isGearTab ? Enums::ItemLocation::Equipped : Enums::ItemLocation::Stored);
         if (isGearTab)
-        {
-            items += ItemDataBase::itemsStoredIn(Enums::ItemStorage::NotInStorage, Enums::ItemLocation::Merc);
-            items += ItemDataBase::itemsStoredIn(Enums::ItemStorage::NotInStorage, Enums::ItemLocation::Corpse);
-
-            foreach (ItemInfo *item, items)
-            {
-                switch (item->whereEquipped)
-                {
-                case 1: // helm
-                    item->row = 0;
-                    item->column = 3;
-                    break;
-                case 2: // amulet
-                    item->row = 1;
-                    item->column = 5;
-                    break;
-                case 3: // armor
-                    item->row = 2;
-                    item->column = 3;
-                    break;
-                case 4: // right hand (usually weapon)
-                    item->row = 0;
-                    item->column = 0;
-                    break;
-                case 5: // left hand (usually shield)
-                    item->row = 0;
-                    item->column = 6;
-                    break;
-                case 6: // right ring
-                    item->row = 5;
-                    item->column = 2;
-                    break;
-                case 7: // left ring
-                    item->row = 5;
-                    item->column = 5;
-                    break;
-                case 8: // belt
-                    item->row = 5;
-                    item->column = 3;
-                    break;
-                case 9: // boots
-                    item->row = 4;
-                    item->column = 6;
-                    break;
-                case 10: // gloves
-                    item->row = 4;
-                    item->column = 0;
-                    break;
-                case 11: // alt. right hand (usually weapon)
-                    item->row = 7;
-                    item->column = 0;
-                    break;
-                case 12: // alt. left hand (usually shield)
-                    item->row = 7;
-                    item->column = 6;
-                    break;
-                default:
-                    qDebug("item->whereEquipped == %d!!!", item->whereEquipped);
-                    break;
-                }
-            }
-
-            ItemsList beltItems = ItemDataBase::itemsStoredIn(Enums::ItemStorage::NotInStorage, Enums::ItemLocation::Belt);
-            updateBeltItemsCoordinates(false, &beltItems);
-            items += beltItems;
-        }
-        
-        // itemCountChanged() signal is sent from GearItemsSplitter::setItems() -> updateItemsForCurrentGear()
-        if (isGearTab)
-            static_cast<GearItemsSplitter *>(_tabWidget->widget(i))->setItems(items, isCreatingTabs);
+            updateGearItems(0, &items, isCreatingTabs);
         else
         {
             splitterAtIndex(i)->setItems(items);
@@ -386,11 +317,85 @@ void ItemsViewerDialog::updateItems(const QHash<int, bool> &plugyStashesExistenc
     updateWindowTitle();
 }
 
+void ItemsViewerDialog::updateGearItems(ItemsList *pBeltItems /*= 0*/, ItemsList *pEquippedItems /*= 0*/, bool isCreatingTabs /*= false*/)
+{
+    ItemsList itemsFoo, &items = pEquippedItems ? *pEquippedItems : itemsFoo;
+    if (!pEquippedItems)
+        items = ItemDataBase::itemsStoredIn(Enums::ItemStorage::NotInStorage, Enums::ItemLocation::Equipped);
+    items += ItemDataBase::itemsStoredIn(Enums::ItemStorage::NotInStorage, Enums::ItemLocation::Merc);
+    items += ItemDataBase::itemsStoredIn(Enums::ItemStorage::NotInStorage, Enums::ItemLocation::Corpse);
+
+    foreach (ItemInfo *item, items)
+    {
+        switch (item->whereEquipped)
+        {
+        case 1: // helm
+            item->row = 0;
+            item->column = 3;
+            break;
+        case 2: // amulet
+            item->row = 1;
+            item->column = 5;
+            break;
+        case 3: // armor
+            item->row = 2;
+            item->column = 3;
+            break;
+        case 4: // right hand (usually weapon)
+            item->row = 0;
+            item->column = 0;
+            break;
+        case 5: // left hand (usually shield)
+            item->row = 0;
+            item->column = 6;
+            break;
+        case 6: // right ring
+            item->row = 5;
+            item->column = 2;
+            break;
+        case 7: // left ring
+            item->row = 5;
+            item->column = 5;
+            break;
+        case 8: // belt
+            item->row = 5;
+            item->column = 3;
+            break;
+        case 9: // boots
+            item->row = 4;
+            item->column = 6;
+            break;
+        case 10: // gloves
+            item->row = 4;
+            item->column = 0;
+            break;
+        case 11: // alt. right hand (usually weapon)
+            item->row = 7;
+            item->column = 0;
+            break;
+        case 12: // alt. left hand (usually shield)
+            item->row = 7;
+            item->column = 6;
+            break;
+        default:
+            qDebug("item->whereEquipped == %d!!!", item->whereEquipped);
+            break;
+        }
+    }
+
+    ItemsList beltItemsFoo, &beltItems = pBeltItems ? *pBeltItems : beltItemsFoo;
+    if (!pBeltItems)
+        beltItems = ItemDataBase::itemsStoredIn(Enums::ItemStorage::NotInStorage, Enums::ItemLocation::Belt);
+    updateBeltItemsCoordinates(false, &beltItems);
+    items += beltItems;
+
+    // itemCountChanged() signal is sent from GearItemsSplitter::setItems() -> updateItemsForCurrentGear()
+    static_cast<GearItemsSplitter *>(_tabWidget->widget(GearIndex))->setItems(items, isCreatingTabs);
+}
+
 const QList<int> &ItemsViewerDialog::kRows()
 {
-    static QList<int> rows;
-    if (rows.isEmpty())
-        rows = QList<int>() << 11 << (isUltimative5OrLater() ? 8 : 6) << 8 << 10 << 10 << 10 << 10;
+    static QList<int> rows = QList<int>() << 11 << (isUltimative5OrLater() ? 8 : 6) << 8 << 10 << 10 << 10 << 10;
     return rows;
 }
 

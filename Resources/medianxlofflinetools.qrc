@@ -122,5 +122,6 @@
         <file>data/items/gems/gemz2.d2i</file>
         <file>data/items/gems/gemz3.d2i</file>
         <file>data/items/gems/gemz4.d2i</file>
+        <file>data/items/moon_symbol.d2i</file>
     </qresource>
 </RCC>

@@ -38,7 +38,7 @@ private:
 };
 
 
-SkillTreeDialog::SkillTreeDialog(const SkillsOrderPair &skillsOrderPair, QWidget *parent) : QDialog(parent), _tabWidget(new QTabWidget(this))
+SkillTreeDialog::SkillTreeDialog(const QList<int> &skillsVisualOrder, QWidget *parent /*= 0*/) : QDialog(parent), _tabWidget(new QTabWidget(this))
 {
     setWindowFlags(windowFlags() & ~Qt::WindowContextHelpButtonHint | Qt::MSWindowsFixedSizeDialogHint);
     setAttribute(Qt::WA_DeleteOnClose);
@@ -57,7 +57,7 @@ SkillTreeDialog::SkillTreeDialog(const SkillsOrderPair &skillsOrderPair, QWidget
         }
     }
 
-    for (int i = 0, j = 0; i < 3; ++i)
+    for (int i = 0, j = 0, skillsNumber = skillsVisualOrder.size(); i < 3; ++i)
     {
         int tabIndex = i + 1;
         QWidget *tab = new QWidget(this);
@@ -66,19 +66,18 @@ SkillTreeDialog::SkillTreeDialog(const SkillsOrderPair &skillsOrderPair, QWidget
         QGroupBox *uberSkillsBox = 0;
         QGridLayout *grid = new QGridLayout(tab);
         grid->setContentsMargins(QMargins());
-        while (j < skillsOrderPair.second.size())
+        while (j < skillsNumber)
         {
-            int skillIndex = skillsOrderPair.second.at(j);
+            int skillIndex = skillsVisualOrder.at(j);
             SkillInfo *skill = ItemDataBase::Skills()->value(skillIndex);
             if (skill->tab != tabIndex)
                 break;
 
-            // TODO: test calculation correctness
             qint32 baseSkillPoints = charInfo.skillsReadable.at(j), totalSkillPoints = baseSkillPoints ? addSkillPoints : 0;
             foreach (ItemInfo *item, itemsWithBonuses)
             {
                 totalSkillPoints += getValueOfPropertyInItem(item, Enums::ItemProperties::ClassOnlySkill, skillIndex);
-                totalSkillPoints += qMin(3, getValueOfPropertyInItem(item, Enums::ItemProperties::Oskill, skillIndex)); // TODO: check minimum
+                totalSkillPoints += qMin(3, getValueOfPropertyInItem(item, Enums::ItemProperties::Oskill, skillIndex));
             }
 
             SkillWidget *w = new SkillWidget(tab);

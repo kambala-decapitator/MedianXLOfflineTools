@@ -92,19 +92,19 @@ item_lightradius	89			1	5							1				15	51	1024		4	4	8	5																	6	1	1	M
 item_lightcolor	90			1	24							1				155	0	1024		5	0	24	0																														0
 item_req_percent	91			1	8											26	-34	1024		8	100	10	100																	0	4	2	ModStr3h	ModStr3h									0
 item_levelreq	92																	1024		6	20	7																		2	1	1	ModitemRLZOMG	ModitemRLZOMG									0
-item_fasterattackrate	93		1	1	9											1042	156	1024		7	20	9	60												1					145	2	1	ModStr4m	ModitemCursedIAS									0
+item_fasterattackrate	93		1	1	9											1042	156	1024		7	20	9	60												1					145	2	1	ModStr4m	ModitemCursedIAS		9	2	1	DescStringMyAss	DescStringMyAss2			0
 item_levelreqpct	94															1042	-52	1024		7	20	10	64			1			item_levelreq											58	4	2	ModitemLevReq	ModitemLevReq									0
 lastblockframe	95																	1024		6	20																																0
-item_fastermovevelocity	96		1	1	9											4083	156	1024		7	20	9	50																	148	2	1	ModStr4s	ModitemCursedMove									0
+item_fastermovevelocity	96		1	1	9											4083	156	1024		7	20	9	50																	148	2	1	ModStr4s	ModitemCursedMove		9	2	1	DescStringMyAss	DescStringMyAss2			0
 item_nonclassskill	97			1	15	11						1			1	181	327	1024		7	20	6	1	11																81	28												0
 state	98		1		1	8						1				415	64	1024		6	20	1		8																													0
-item_fastergethitrate	99		1	1	9											1065	72	1024		7	20	9	50																	139	2	1	ModStr4p	ModitemCursedFHR									0
+item_fastergethitrate	99		1	1	9											1065	72	1024		7	20	9	50																	139	2	1	ModStr4p	ModitemCursedFHR		9	2	1	DescStringMyAss	DescStringMyAss2			0
 monster_playercount	100																	1024		7	20																																0
 skill_poison_override_length	101				8													1024		6	20	6	0																														0
-item_fasterblockrate	102		1	1	9											1484	72	1024		7	20	10	20																	136	2	1	ModStr4y	ModitemSlowerBlock									0
+item_fasterblockrate	102		1	1	9											1484	72	1024		7	20	10	20																	136	2	1	ModStr4y	ModitemSlowerBlock		9	2	1	DescStringMyAss	DescStringMyAss2			0
 skill_bypass_undead	103				1											202	15505	1024		7	20	1	0																	150	3	0	Moditemiru	Moditemiru									0
 skill_bypass_demons	104				1											202	15505	1024		6	20	1	0																	150	3	0	Moditemird	Moditemird									0
-item_fastercastrate	105		1	1	9											3876	156	1024		7	20	10	50																	142	2	1	ModStr4v	ModitemCursedFCR									0
+item_fastercastrate	105		1	1	9											3876	156	1024		7	20	10	50																	142	2	1	ModStr4v	ModitemCursedFCR		9	2	1	DescStringMyAss	DescStringMyAss2			0
 skill_bypass_beasts	106				1											202	15505	1024		7	20	1	0																	150	3	0	Moditemirb	Moditemirb									0
 item_singleskill	107			1	15	11						1			1	181	256	1024		14	0	5	1	11																81	27												0
 item_restinpeace	108				1							1				1987	0	1024		14	0	1	0												1	kill	29			81	3	0	ModitemSMRIP	ModitemSMRIP									0
@@ -357,7 +357,7 @@ source_unit_id	354				32													1024																																			0
 shortparam1	355				16													1024																																			0
 questitemdifficulty	356																	1024				2	0																														0
 passive_mag_mastery	357			1	12											1211	431	1024		8	0	9	50																														0
-passive_mag_pierce	358			1	9												2812	1024		8	0	8	0																							6	20	1	ModitemResallsk	ModitemResallsk			0
+passive_mag_pierce	358			1	9												2812	1024		8	0	8	0																														0
 item_strength_percent	359	none		1	11											47	20	1024		9	0	9	50			11			strength											74	2	1	Modstrpercent	Modstrpen		3	2	1	ModitemAllpercents				0
 item_dexterity_percent	360	none		1	11											47	20	1024		9	0	9	50			11			dexterity											74	2	1	Moddexpercent	Moddexpen		3	2	1	ModitemAllpercents				0
 item_energy_percent	361	none		1	11											47	20	1024		9	0	9	50			11			energy											74	2	1	Modenrpercent	Modenrpen		3	2	1	ModitemAllpercents				0
@@ -476,7 +476,7 @@ learn_ennead	473	skills.txt		1	12											11	3	1024		8	0	8	0																	1
 learn_blackroad	474	skills.txt		1	12											11	3	1024		8	0	8	0																	113	3	0	ModitemLearnBlackroad	ModitemLearnBlackroad									0
 item_desc_druidmorph	475	desc only		1	12													1024		1	0	1	0																	2	3	0	ModitemDruidString	ModitemDruidString									0
 item_desc_dbaura	476	desc only		1	12													1024		1	0	1	0																	159	3	0	ModitemDBA	ModitemDBA									0
-item_desc_hardaura	477	desc only		1	12													1024		4	1	4	1																	158	1	1	ModitemIncDif	ModitemIncDif									0
+item_desc_hardaura	477	desc only		1	12													1024		4	1	4	1																	1	3	0	ModitemIncDif	DescBlack7									0
 item_desc_instructions	478	desc only		1	12													1024		1	0	1	0																	159	3	0	ModitemJollyRoger	ModitemJollyRoger									0
 skill_more	479	skills.txt		1	12											404	118	1024		3	0	4	0																	69	3	2	ModitemMorSkillz	ModitemMorSkillz									0
 item_skill_paragon	480	itemstatcost.txt		1	12											902	227	1024		5	0	5	0																	75	1	1	ModitemParagon	ModitemParagon									0
@@ -507,5 +507,5 @@ item_dexterity_perblessedlife	504	none		1	6											105	128	1024		6	0	10	0			2
 item_hpregen_perlevel	505	none		1	6											221	136	1024		6	0	10	0			2	5	level	hpregen											60	6	2	ModStr2l	ModStr2w	increaseswithplaylevelX								0
 desc-superbeasty	506	desc only		1	12											8	2	1024		1	0	1	0																	159	3	0	IMAMOTHERFUCKINGMONSTAR	IMAMOTHERFUCKINGMONSTAR									0
 levelchallenge_kill_check	507	skills.txt		1	12													1024																																			0
-desc-fatasstriton	508	desc only		1	12											8	2	1024		1	0	1	0																	159	3	0	1553755050	1553755050									0
+desc-fatasstriton	508	desc only		1	12											8	2	1024		1	0	1	0																	159	3	0	1553755050	DescBlack7									0
 fuck_you#	509			1	16											112	8	1024		6	10	10	500			11			maxhp											254	3	0	FUCKYOUFUCKYOU	FUCKYOUFUCKYOU									0

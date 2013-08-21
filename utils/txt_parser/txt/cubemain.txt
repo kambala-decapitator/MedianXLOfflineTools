@@ -2,8 +2,8 @@ description	enabled	ladder	min diff	version	op	param	value	class	numinputs	input
 Staff of Kings + Viper amulet -> Horadric Staff	1				28				2	msf	vip						hst																																																																																												0
 Khalim Flail + Khalim Heart + Khalim Eye + Khalim Brain -> Super Khalim Flail	1				28				4	qf1	qhr	qey	qbr				qf2																																																																																												0
 Wirt's Leg + jewel -> Cow Portal	1				28				2	leg	tbk						Cow Portal																																																																																												0
-test recipe				100					1	hpot							\\1	120		120	oskill			1159	1	1																										120		120																											120		120																										0
-test recipe				100					2	hpot,qty=2								120		120																																120		120																											120		120																										0
+test recipe				100					1	hpot							CycleOfWisdom	120		120																																																																																									0
+test recipe				100					2	hpot,qty=2							Set_PewPew1	120		120																															Set_PewPew4	120		120																											120		120																										0
 Kabraxis Recipe pt. 1	1			100					3	isc	k.Z	tsc					brx																																																																																												0
 test recipe				100					1	ring							useitem	120		120	extra-pm				5000	5000																									NewIdolOfRygnar	120		120																										NewRathmasAthame	120		120																										0
 stardragon upgrade decoy	1			100	18	491	1	ama	2	Sacred Sunstone	qum						useitem																																																																																												0
@@ -528,13 +528,13 @@ enchant: normal item + gem + tsc + isc -> reroll as magic	1			100					3	aqv,nor	
 enchant: normal item + gem + tsc + isc -> reroll as magic	1			100					3	cqv,nor	4oµ	rune					usetype,mag			100																																																																																									0
 enchant: high quality item + gem + tsc + isc -> reroll as magic	1			100					3	weap,hiq	4oµ	rune					usetype,mag			100																																																																																									0
 enchant: high quality item + gem + tsc + isc -> reroll as magic	1			100					3	armo,hiq	4oµ	rune					usetype,mag			100																																																																																									0
-chaos reroll recipe: any weapon + jewel + hpot + mpot -> reroll	1			100					3	weap	jew	6oµ					usetype			100																																																																																									0
-chaos reroll recipe: any armor + jewel + hpot + mpot -> reroll	1			100					3	armo	jew	6oµ					usetype			100																																																																																									0
-chaos reroll recipe: any ring + jewel + hpot + mpot -> reroll	1			100					3	ring	jew	6oµ					usetype			100																																																																																									0
-chaos reroll recipe: any amulet + jewel + hpot + mpot -> reroll	1			100					3	amul	jew	6oµ					usetype			100																																																																																									0
-chaos reroll recipe: any quiver + jewel + hpot + mpot -> reroll	1			100					3	bowq	jew	6oµ					usetype			100																																																																																									0
-chaos reroll recipe: any quiver + jewel + hpot + mpot -> reroll	1			100					3	xboq	jew	6oµ					usetype			100																																																																																									0
-chaos reroll recipe: any jewel + jewel + hpot + mpot -> reroll	1			100					3	jew	jew	6oµ					usetype			100																																																																																									0
+chaos reroll recipe: any weapon + jewel + hpot + mpot -> reroll	1			100					3	weap	jew	6oµ					usetype			99																																																																																									0
+chaos reroll recipe: any armor + jewel + hpot + mpot -> reroll	1			100					3	armo	jew	6oµ					usetype			99																																																																																									0
+chaos reroll recipe: any ring + jewel + hpot + mpot -> reroll	1			100					3	ring	jew	6oµ					usetype			99																																																																																									0
+chaos reroll recipe: any amulet + jewel + hpot + mpot -> reroll	1			100					3	amul	jew	6oµ					usetype			99																																																																																									0
+chaos reroll recipe: any quiver + jewel + hpot + mpot -> reroll	1			100					3	bowq	jew	6oµ					usetype			99																																																																																									0
+chaos reroll recipe: any quiver + jewel + hpot + mpot -> reroll	1			100					3	xboq	jew	6oµ					usetype			99																																																																																									0
+chaos reroll recipe: any jewel + jewel + hpot + mpot -> reroll	1			100					3	jew	jew	6oµ					usetype			99																																																																																									0
 affix burn recipe: item + any rune + hpot + mpot -> reroll as low quality	1			100					3	weap,any	rune	9oµ					usetype,low			100																															9oµ																																																										0
 affix burn recipe: item + any rune + hpot + mpot -> reroll as low quality	1			100					3	armo,any	rune	9oµ					usetype,low			100																															9oµ																																																										0
 reroll: low quality item + rune -> reroll	1			100					2	weap,low	5oµ						usetype,low			100																																																																																									0
@@ -10648,6 +10648,7 @@ AstroApple	1			100	16	219	0		2	VSTI	µ11						useitem			100	blessings-counter				
 AzmoApple	1			100	16	219	0		2	AzmodansHeart2	µ12						useitem			100	blessings-counter				1	1	hp				150	150	mana				150	150																																																																							0
 VizjunApple	1			100	16	219	0		2	ColdFusionSchematics	µ13						useitem			100	blessings-counter				1	1	str				5	20	dex				5	20	enr				5	20	vit				5	20																																																											0
 LazApple	1			100	16	219	0		2	BookOfLaz	µ14						useitem			100	blessings-counter				1	1	allskills				1	1																																																																													0
+ArihanApple	1			100	16	219	0		2	LucionsSoulstone2	µ15						useitem			100	blessings-counter				1	1	mag%				50	50																																																																													
 dragon challenge 3 decoy (skip if dragon < 11)				100	3	12	121		2	weap,rar,noe	tsc						useitem																																		tsc																																																										0
 dragon challenge 3 decoy (skip if dragon < 11)				100	3	12	121		2	armo,rar,noe	tsc						useitem																																		tsc																																																										0
 dragon challenge 3 decoy (skip if dragon < 11)				100	3	12	121		2	ring,rar	tsc						useitem																																		tsc																																																										0
@@ -11475,12 +11476,12 @@ destruction	1			100					77	9oµ							9oµ																																								
 destruction	1			100					78	9oµ							9oµ																																																																																												0
 destruction	1			100					79	9oµ							9oµ																																																																																												0
 destruction	1			100					80	9oµ							9oµ																																																																																												0
-Nevermind				100					2	KabraxisSoul2							useitem																																																																																												
-Nevermind				100					2	KabraxisSoul2							useitem																																																																																												
-Nevermind				100					2	KabraxisSoul2							useitem																																																																																												
-Nevermind				100					2	KabraxisSoul2							useitem																																																																																												
-KabraxisAll	1			100					6	KabraxisSoul2	\\1	\\2	\\3	\\4	\\5		useitem				levelreq				20	20	res-all-max				0	5	reanimate-rand			5	1824	1828																																																																							
-KabraxisApple	1			100	16	219	0		2	KabraxisSoul2	bxt						useitem			100	blessings-counter				1	1	reanimate-rand			5	1256	1553	state			10	1	1	item-duped				1	1																																																																	0
+Nevermind				100					2	KabraxisSoul3							useitem																																																																																												
+Nevermind				100					2	KabraxisSoul3							useitem																																																																																												
+Nevermind				100					2	KabraxisSoul3							useitem																																																																																												
+Nevermind				100					2	KabraxisSoul3							useitem																																																																																												
+KabraxisAll	1			100					6	KabraxisSoul3	\\1	\\2	\\3	\\4	\\5		useitem				levelreq				20	20	res-all-max				0	5	death-skill			820	50	49																																																																							
+KabraxisApple	1			100	16	219	0		2	KabraxisSoul3	bxt						useitem			100	blessings-counter				1	1	reanimate-rand			2	1256	1553	state			10	1	1	item-duped				1	1																																																																	0
 Lottery1	1			100	18	443			2	weap,uni,noe	LegOfBlood						useitem				upgraded				1	1	ignore-ac	5			1	1	item-duped				1	1																																																																							0
 Lottery2	1			100	18	443			2	armo,uni,noe	IdolOfVanity						useitem				upgraded				1	1	hp%	5			5	5	item-duped				1	1																																																																							0
 Lottery3	1			100	18	443			2	amul,uni	TomeOfTheSpider						useitem				upgraded				1	1	res-all-max	5			5	5	item-duped				1	1																																																																							0
@@ -11491,65 +11492,65 @@ Lottery7	1			100	18	443			2	weap,set	LegOfBlood						useitem				upgraded				1	1	
 Lottery8	1			100	18	443			2	armo,set	IdolOfVanity						useitem				upgraded				1	1	hp%	5			5	5	item-duped				1	1																																																																							0
 DS recipe	1			100	15	192	15		2	VSTI	ScrollOfSummons						useitem																																		ScrollOfSummons																																																										0
 DS recipe	1			100					2	VSTI	ScrollOfSummons						useitem				xsignet03				15	15	oskill			551	1	1																																																																													0
-Amethyst Recipe	1			100	15	184	15		2	NewStartingCharm	gema						useitem																																		gema																																																										0
-Amethyst Recipe	1			100					2	NewStartingCharm	gema						useitem				levelreq				1	1	xsignet01				1	1	dex%				1	1																																																																							0
-Topaz Recipe	1			100	15	191	15		2	NewStartingCharm	gemt						useitem																																		gemt																																																										0
-Topaz Recipe	1			100					2	NewStartingCharm	gemt						useitem				levelreq				1	1	xsignet02				1	1	enr%				1	1																																																																							0
-Sapphire Recipe	1			100	15	192	15		2	NewStartingCharm	gems						useitem																																		gems																																																										0
-Sapphire Recipe	1			100					2	NewStartingCharm	gems						useitem				levelreq				1	1	xsignet03				1	1	skill-dur				5	5																																																																							0
-Emerald Recipe	1			100	15	193	15		2	NewStartingCharm	geme						useitem																																		geme																																																										0
-Emerald Recipe	1			100					2	NewStartingCharm	geme						useitem				levelreq				1	1	xsignet04				1	1	regen				5	5																																																																							0
-Ruby Recipe	1			100	15	202	15		2	NewStartingCharm	gemr						useitem																																		gemr																																																										0
-Ruby Recipe	1			100					2	NewStartingCharm	gemr						useitem				levelreq				1	1	xsignet05				1	1	heal-melee				5	5																																																																							0
-Diamond Recipe	1			100	15	205	15		2	NewStartingCharm	gemd						useitem																																		gemd																																																										0
-Diamond Recipe	1			100					2	NewStartingCharm	gemd						useitem				levelreq				1	1	xsignet06				1	1	str%				1	1																																																																							0
-Skull Recipe	1			100	15	206	15		2	NewStartingCharm	gemz						useitem																																		gemz																																																										0
-Skull Recipe	1			100					2	NewStartingCharm	gemz						useitem				levelreq				1	1	xsignet07				1	1	ac				50	50																																																																							0
-Rainbow Recipe	1			100	15	207	15		2	NewStartingCharm	gemx						useitem																																		gemx																																																										0
-Rainbow Recipe	1			100					2	NewStartingCharm	gemx						useitem				levelreq				1	1	xsignet08				1	1	craft-points				20	20																																																																							0
-Onyx Recipe	1			100	15	213	15		2	NewStartingCharm	gemq						useitem																																		gemq																																																										0
-Onyx Recipe	1			100					2	NewStartingCharm	gemq						useitem				levelreq				1	1	xsignet09				1	1	res-cold				5	5																																																																							0
-Bloodstone Recipe	1			100	15	220	15		2	NewStartingCharm	gemp						useitem																																		gemp																																																										0
-Bloodstone Recipe	1			100					2	NewStartingCharm	gemp						useitem				levelreq				1	1	xsignet10				1	1	res-fire				5	5																																																																							0
-Turquoise Recipe	1			100	15	221	15		2	NewStartingCharm	gemo						useitem																																		gemo																																																										0
-Turquoise Recipe	1			100					2	NewStartingCharm	gemo						useitem				levelreq				1	1	xsignet11				1	1	res-pois				5	5																																																																							0
-Amber Recipe	1			100	15	222	15		2	NewStartingCharm	geml						useitem																																		geml																																																										0
-Amber Recipe	1			100					2	NewStartingCharm	geml						useitem				levelreq				1	1	xsignet12				1	1	res-ltng				5	5																																																																							0
-Gold Signet Recipe	1			100	15	226	15		2	NewStartingCharm	zkw						useitem																																		zkw																																																										0
-Gold Signet Recipe	1			100					2	NewStartingCharm	zkw						useitem				levelreq				1	1	xsignet15				1	1	gold%				25	25																																																																							0
-Exp Signet Recipe	1			100	15	227	15		2	NewStartingCharm	zku						useitem																																		zku																																																										0
-Exp Signet Recipe	1			100					2	NewStartingCharm	zku						useitem				levelreq				1	1	xsignet16				1	1	addxp				2	2																																																																							0
-Learning Signet Recipe	1			100	15	228	15		2	NewStartingCharm	zkq						useitem																																		zkq																																																										0
-Learning Signet Recipe	1			100					2	NewStartingCharm	zkq						useitem				levelreq				1	1	xsignet17				1	1	all-stats				2	2																																																																							0
-Ama Recipe	1			100	16	219	0		2	NewStartingCharm	Sacred Sunstone						useitem				blessings-counter				1	1	ama				1	1																																																																													0
-Asn Recipe	1			100	16	219	0		2	NewStartingCharm	Shadow Vortex						useitem				blessings-counter				1	1	ass				1	1																																																																													0
-Bar Recipe	1			100	16	219	0		2	NewStartingCharm	Worldstone Orb						useitem				blessings-counter				1	1	bar				1	1																																																																													0
-Dru Recipe	1			100	16	219	0		2	NewStartingCharm	Caoi Dulra Fruit						useitem				blessings-counter				1	1	dru				1	1																																																																													0
-Nec Recipe	1			100	16	219	0		2	NewStartingCharm	Soulstone Shard						useitem				blessings-counter				1	1	nec				1	1																																																																													0
-Pal Recipe	1			100	16	219	0		2	NewStartingCharm	Orb of Divinity						useitem				blessings-counter				1	1	pal				1	1																																																																													0
-Sor Recipe	1			100	16	219	0		2	NewStartingCharm	Nexus Crystal						useitem				blessings-counter				1	1	sor				1	1																																																																													0
-Magic Recipe	1			100	15	229	15		2	NewStartingCharm	qum						useitem																																		qum																																																										0
-Magic Recipe	1			100					2	NewStartingCharm	qum						useitem				levelreq				1	1	xsignet18				1	1	mag%				5	5																																																																							0
-Min HPot Recipe	1			100	15	223	15		2	NewStartingCharm	hp1						useitem																																		hp1																																																										0
-Min HPot Recipe	1			100					2	NewStartingCharm	hp1						useitem				levelreq				1	1	xsignet13				1	1	heal-thorns				5	5																																																																							0
-Light Hpot Recipe	1			100	15	223	15		2	NewStartingCharm	hp2						useitem																																		hp2																																																										0
-Light Hpot Recipe	1			100					2	NewStartingCharm	hp2						useitem				levelreq				1	1	xsignet13				1	1	heal-thorns				5	5																																																																							0
-Hpot Recipe	1			100	15	223	15		2	NewStartingCharm	hp3						useitem																																		hp3																																																										0
-Hpot Recipe	1			100					2	NewStartingCharm	hp3						useitem				levelreq				1	1	xsignet13				1	1	heal-thorns				5	5																																																																							0
-Greater Hpot Recipe	1			100	15	223	15		2	NewStartingCharm	hp4						useitem																																		hp4																																																										0
-Greater Hpot Recipe	1			100					2	NewStartingCharm	hp4						useitem				levelreq				1	1	xsignet13				1	1	heal-thorns				5	5																																																																							0
-Super Hpot Recipe	1			100	15	223	15		2	NewStartingCharm	hp5						useitem																																		hp5																																																										0
-Super Hpot Recipe	1			100					2	NewStartingCharm	hp5						useitem				levelreq				1	1	xsignet13				1	1	heal-thorns				5	5																																																																							0
-Min MPot Recipe	1			100	15	224	15		2	NewStartingCharm	mp1						useitem																																		mp1																																																										0
-Min MPot Recipe	1			100					2	NewStartingCharm	mp1						useitem				levelreq				1	1	xsignet14				1	1	mana%				2	2																																																																							0
-Light Mpot Recipe	1			100	15	224	15		2	NewStartingCharm	mp2						useitem																																		mp2																																																										0
-Light Mpot Recipe	1			100					2	NewStartingCharm	mp2						useitem				levelreq				1	1	xsignet14				1	1	mana%				2	2																																																																							0
-Mpot Recipe	1			100	15	224	15		2	NewStartingCharm	mp3						useitem																																		mp3																																																										0
-Mpot Recipe	1			100					2	NewStartingCharm	mp3						useitem				levelreq				1	1	xsignet14				1	1	mana%				2	2																																																																							0
-Greater Mpot Recipe	1			100	15	224	15		2	NewStartingCharm	mp4						useitem																																		mp4																																																										0
-Greater Mpot Recipe	1			100					2	NewStartingCharm	mp4						useitem				levelreq				1	1	xsignet14				1	1	mana%				2	2																																																																							0
-Super Mpot Recipe	1			100	15	224	15		2	NewStartingCharm	mp5						useitem																																		mp5																																																										0
-Super Mpot Recipe	1			100					2	NewStartingCharm	mp5						useitem				levelreq				1	1	xsignet14				1	1	mana%				2	2																																																																							0
+Amethyst Recipe	1			100	15	184	15		2	NewStartingCharm2	gema						useitem																																		gema																																																										0
+Amethyst Recipe	1			100					2	NewStartingCharm2	gema						useitem				levelreq				1	1	xsignet01				1	1	dex%				1	1																																																																							0
+Topaz Recipe	1			100	15	191	15		2	NewStartingCharm2	gemt						useitem																																		gemt																																																										0
+Topaz Recipe	1			100					2	NewStartingCharm2	gemt						useitem				levelreq				1	1	xsignet02				1	1	enr%				1	1																																																																							0
+Sapphire Recipe	1			100	15	192	15		2	NewStartingCharm2	gems						useitem																																		gems																																																										0
+Sapphire Recipe	1			100					2	NewStartingCharm2	gems						useitem				levelreq				1	1	xsignet03				1	1	skill-dur				5	5																																																																							0
+Emerald Recipe	1			100	15	193	15		2	NewStartingCharm2	geme						useitem																																		geme																																																										0
+Emerald Recipe	1			100					2	NewStartingCharm2	geme						useitem				levelreq				1	1	xsignet04				1	1	regen				5	5																																																																							0
+Ruby Recipe	1			100	15	202	15		2	NewStartingCharm2	gemr						useitem																																		gemr																																																										0
+Ruby Recipe	1			100					2	NewStartingCharm2	gemr						useitem				levelreq				1	1	xsignet05				1	1	heal-melee				5	5																																																																							0
+Diamond Recipe	1			100	15	205	15		2	NewStartingCharm2	gemd						useitem																																		gemd																																																										0
+Diamond Recipe	1			100					2	NewStartingCharm2	gemd						useitem				levelreq				1	1	xsignet06				1	1	str%				1	1																																																																							0
+Skull Recipe	1			100	15	206	15		2	NewStartingCharm2	gemz						useitem																																		gemz																																																										0
+Skull Recipe	1			100					2	NewStartingCharm2	gemz						useitem				levelreq				1	1	xsignet07				1	1	ac				50	50																																																																							0
+Rainbow Recipe	1			100	15	207	15		2	NewStartingCharm2	gemx						useitem																																		gemx																																																										0
+Rainbow Recipe	1			100					2	NewStartingCharm2	gemx						useitem				levelreq				1	1	xsignet08				1	1	craft-points				20	20																																																																							0
+Onyx Recipe	1			100	15	213	15		2	NewStartingCharm2	gemq						useitem																																		gemq																																																										0
+Onyx Recipe	1			100					2	NewStartingCharm2	gemq						useitem				levelreq				1	1	xsignet09				1	1	res-cold				5	5																																																																							0
+Bloodstone Recipe	1			100	15	220	15		2	NewStartingCharm2	gemp						useitem																																		gemp																																																										0
+Bloodstone Recipe	1			100					2	NewStartingCharm2	gemp						useitem				levelreq				1	1	xsignet10				1	1	res-fire				5	5																																																																							0
+Turquoise Recipe	1			100	15	221	15		2	NewStartingCharm2	gemo						useitem																																		gemo																																																										0
+Turquoise Recipe	1			100					2	NewStartingCharm2	gemo						useitem				levelreq				1	1	xsignet11				1	1	res-pois				5	5																																																																							0
+Amber Recipe	1			100	15	222	15		2	NewStartingCharm2	geml						useitem																																		geml																																																										0
+Amber Recipe	1			100					2	NewStartingCharm2	geml						useitem				levelreq				1	1	xsignet12				1	1	res-ltng				5	5																																																																							0
+Gold Signet Recipe	1			100	15	226	15		2	NewStartingCharm2	zkw						useitem																																		zkw																																																										0
+Gold Signet Recipe	1			100					2	NewStartingCharm2	zkw						useitem				levelreq				1	1	xsignet15				1	1	gold%				25	25																																																																							0
+Exp Signet Recipe	1			100	15	227	15		2	NewStartingCharm2	zku						useitem																																		zku																																																										0
+Exp Signet Recipe	1			100					2	NewStartingCharm2	zku						useitem				levelreq				1	1	xsignet16				1	1	addxp				2	2																																																																							0
+Learning Signet Recipe	1			100	15	228	15		2	NewStartingCharm2	zkq						useitem																																		zkq																																																										0
+Learning Signet Recipe	1			100					2	NewStartingCharm2	zkq						useitem				levelreq				1	1	xsignet17				1	1	all-stats				2	2																																																																							0
+Ama Recipe	1			100	16	219	0		2	NewStartingCharm2	Sacred Sunstone						useitem				blessings-counter				1	1	ama				1	1																																																																													0
+Asn Recipe	1			100	16	219	0		2	NewStartingCharm2	Shadow Vortex						useitem				blessings-counter				1	1	ass				1	1																																																																													0
+Bar Recipe	1			100	16	219	0		2	NewStartingCharm2	Worldstone Orb						useitem				blessings-counter				1	1	bar				1	1																																																																													0
+Dru Recipe	1			100	16	219	0		2	NewStartingCharm2	Caoi Dulra Fruit						useitem				blessings-counter				1	1	dru				1	1																																																																													0
+Nec Recipe	1			100	16	219	0		2	NewStartingCharm2	Soulstone Shard						useitem				blessings-counter				1	1	nec				1	1																																																																													0
+Pal Recipe	1			100	16	219	0		2	NewStartingCharm2	Orb of Divinity						useitem				blessings-counter				1	1	pal				1	1																																																																													0
+Sor Recipe	1			100	16	219	0		2	NewStartingCharm2	Nexus Crystal						useitem				blessings-counter				1	1	sor				1	1																																																																													0
+Magic Recipe	1			100	15	229	15		2	NewStartingCharm2	qum						useitem																																		qum																																																										0
+Magic Recipe	1			100					2	NewStartingCharm2	qum						useitem				levelreq				1	1	xsignet18				1	1	mag%				5	5																																																																							0
+Min HPot Recipe	1			100	15	223	15		2	NewStartingCharm2	hp1						useitem																																		hp1																																																										0
+Min HPot Recipe	1			100					2	NewStartingCharm2	hp1						useitem				levelreq				1	1	xsignet13				1	1	heal-thorns				5	5																																																																							0
+Light Hpot Recipe	1			100	15	223	15		2	NewStartingCharm2	hp2						useitem																																		hp2																																																										0
+Light Hpot Recipe	1			100					2	NewStartingCharm2	hp2						useitem				levelreq				1	1	xsignet13				1	1	heal-thorns				5	5																																																																							0
+Hpot Recipe	1			100	15	223	15		2	NewStartingCharm2	hp3						useitem																																		hp3																																																										0
+Hpot Recipe	1			100					2	NewStartingCharm2	hp3						useitem				levelreq				1	1	xsignet13				1	1	heal-thorns				5	5																																																																							0
+Greater Hpot Recipe	1			100	15	223	15		2	NewStartingCharm2	hp4						useitem																																		hp4																																																										0
+Greater Hpot Recipe	1			100					2	NewStartingCharm2	hp4						useitem				levelreq				1	1	xsignet13				1	1	heal-thorns				5	5																																																																							0
+Super Hpot Recipe	1			100	15	223	15		2	NewStartingCharm2	hp5						useitem																																		hp5																																																										0
+Super Hpot Recipe	1			100					2	NewStartingCharm2	hp5						useitem				levelreq				1	1	xsignet13				1	1	heal-thorns				5	5																																																																							0
+Min MPot Recipe	1			100	15	224	15		2	NewStartingCharm2	mp1						useitem																																		mp1																																																										0
+Min MPot Recipe	1			100					2	NewStartingCharm2	mp1						useitem				levelreq				1	1	xsignet14				1	1	mana%				2	2																																																																							0
+Light Mpot Recipe	1			100	15	224	15		2	NewStartingCharm2	mp2						useitem																																		mp2																																																										0
+Light Mpot Recipe	1			100					2	NewStartingCharm2	mp2						useitem				levelreq				1	1	xsignet14				1	1	mana%				2	2																																																																							0
+Mpot Recipe	1			100	15	224	15		2	NewStartingCharm2	mp3						useitem																																		mp3																																																										0
+Mpot Recipe	1			100					2	NewStartingCharm2	mp3						useitem				levelreq				1	1	xsignet14				1	1	mana%				2	2																																																																							0
+Greater Mpot Recipe	1			100	15	224	15		2	NewStartingCharm2	mp4						useitem																																		mp4																																																										0
+Greater Mpot Recipe	1			100					2	NewStartingCharm2	mp4						useitem				levelreq				1	1	xsignet14				1	1	mana%				2	2																																																																							0
+Super Mpot Recipe	1			100	15	224	15		2	NewStartingCharm2	mp5						useitem																																		mp5																																																										0
+Super Mpot Recipe	1			100					2	NewStartingCharm2	mp5						useitem				levelreq				1	1	xsignet14				1	1	mana%				2	2																																																																							0
 r57	1			100					2	r99	Kx6						r57																																																																																												0
 r58	1			100					2	r99	Kx1						r58																																																																																												0
 r59	1			100					2	r99	Kx2						r59																																																																																												0
@@ -11560,122 +11561,122 @@ r98	1			100					7	r57	r58	r59	r60	r61	r62	r99	r98																															
 Shard Recipe	0			100					3	qul	key	hpot					qum																																		qum																													qum																													0
 Crystal recipe	0			100					3	qum	key	hpot					qum																																		qum																													qum																													0
 Kabraxis Recipe pt. 1	1			100					2	NewSpiritOfDamnation	key						k.Z																																																																																												0
-Oil of Luck	1			100	15	234	15		2	NewStartingCharm	6oµ						useitem																																		6oµ																																																										0
-Oil of Luck	1			100					2	NewStartingCharm	6oµ						useitem				levelreq				1	1	xsignet19				1	1	pierce-pois				1	1																																																																							0
-Oil of Disjunction	1			100	15	235	15		2	NewStartingCharm	2oµ						useitem																																		2oµ																																																										0
-Oil of Disjunction	1			100					2	NewStartingCharm	2oµ						useitem				levelreq				1	1	xsignet20				1	1	pierce-ltng				1	1																																																																							0
-Oil of Enhancement	1			100	15	236	15		2	NewStartingCharm	4oµ						useitem																																		4oµ																																																										0
-Oil of Enhancement	1			100					2	NewStartingCharm	4oµ						useitem				levelreq				1	1	xsignet21				1	1	pierce-cold				1	1																																																																							0
-Oil of Renewal	1			100	15	237	15		2	NewStartingCharm	5oµ						useitem																																		5oµ																																																										0
-Oil of Renewal	1			100					2	NewStartingCharm	5oµ						useitem				levelreq				1	1	xsignet22				1	1	pierce-fire				1	1																																																																							0
-Oil of Jewelcraft	1			100	15	238	15		2	NewStartingCharm	7oµ						useitem																																		7oµ																																																										0
-Oil of Jewelcraft	1			100					2	NewStartingCharm	7oµ						useitem				levelreq				1	1	xsignet23				1	1	mana-kill				15	15																																																																							0
-Oil of Absolution	1			100	15	241	15		2	NewStartingCharm	8oµ						useitem																																		8oµ																																																										0
-Oil of Absolution	1			100					2	NewStartingCharm	8oµ						useitem				levelreq				1	1	xsignet24				1	1	hp%				1	1																																																																							0
-Catalyst of Learning	1			100	15	242	15		2	NewStartingCharm	0oµ						useitem																																		0oµ																																																										0
-Catalyst of Learning	1			100					2	NewStartingCharm	0oµ						useitem				levelreq				1	1	xsignet25				1	1	dmg-demon				10	10																																																																							0
-Catalyst of Disenchantment	1			100	15	243	15		2	NewStartingCharm	3oµ						useitem																																		3oµ																																																										0
-Catalyst of Disenchantment	1			100					2	NewStartingCharm	3oµ						useitem				levelreq				1	1	xsignet26				1	1	dmg-undead				10	10																																																																							0
-Apple	1			100	15	244	15		2	NewStartingCharm	dog						useitem																																		dog																																																										0
-Apple	1			100					2	NewStartingCharm	dog						useitem				levelreq				1	1	xsignet27				1	1	lifesteal				2	2																																																																							0
-Town Portal Book	1			100	15	245	15		2	NewStartingCharm	tbk						useitem																																		tbk																																																										0
-Town Portal Book	1			100					2	NewStartingCharm	tbk						useitem				levelreq				1	1	xsignet28				1	1	mana				20	20																																																																							0
-Identify Book	1			100	15	246	15		2	NewStartingCharm	ibk						useitem																																		ibk																																																										0
-Identify Book	1			100					2	NewStartingCharm	ibk						useitem				levelreq				1	1	xsignet29				1	1	hp				10	10																																																																							0
-Town Portal Scroll	1			100	15	249	15		2	NewStartingCharm	tsc						useitem																																		tsc																																																										0
-Town Portal Scroll	1			100					2	NewStartingCharm	tsc						useitem				levelreq				1	1	xsignet30				1	1	regen-mana				5	5																																																																							0
-Identify Scroll	1			100	15	251	15		2	NewStartingCharm	isc						useitem																																		isk																																																										0
-Identify Scroll	1			100					2	NewStartingCharm	isc						useitem				levelreq				1	1	xsignet31				1	1	reanimate			760	1	1																																																																							0
-Skeleton Key	1			100	15	255	15		2	NewStartingCharm	key						useitem																																		key																																																										0
-Skeleton Key	1			100					2	NewStartingCharm	key						useitem				levelreq				1	1	xsignet32				1	1	att				50	50																																																																							0
-Elixir of Greed	1			100	15	256	15		2	NewStartingCharm	ey3						useitem																																		ey3																																																										0
-Elixir of Greed	1			100					2	NewStartingCharm	ey3						useitem				levelreq				1	1	xsignet33				1	1	crush				1	1																																																																							0
-Elixir of Experience	1			100	15	257	15		2	NewStartingCharm	ey2						useitem																																		ey2																																																										0
-Elixir of Experience	1			100					2	NewStartingCharm	ey2						useitem				levelreq				1	1	xsignet34				1	1	openwounds				3	3																																																																							0
-El	1			100	15	258	15		2	NewStartingCharm	r01						useitem																																		r01																																																										0
-El	1			100					2	NewStartingCharm	r01						useitem				levelreq				1	1	xsignet35				1	1	light				1	1																																																																							0
-Eld	1			100	15	263	15		2	NewStartingCharm	r02						useitem																																		r02																																																										0
-Eld	1			100					2	NewStartingCharm	r02						useitem				levelreq				1	1	xsignet36				1	1	att%				10	10																																																																							0
-Tir	1			100	15	264	15		2	NewStartingCharm	r40						useitem																																		r40																																																										0
-Tir	1			100					2	NewStartingCharm	r40						useitem				levelreq				1	1	xsignet37				1	1	balance3				3	3																																																																							0
-Nef	1			100	15	285	15		2	NewStartingCharm	r04						useitem																																		r04																																																										0
-Nef	1			100					2	NewStartingCharm	r04						useitem				levelreq				1	1	xsignet38				1	1	poison-dur				5	5																																																																							0
-Eth	1			100	15	286	15		2	NewStartingCharm	r05						useitem																																		r05																																																										0
-Eth	1			100					2	NewStartingCharm	r05						useitem				levelreq				1	1	xsignet39				1	1	dmg-global				5	5																																																																							0
-Ith	1			100	15	287	15		2	NewStartingCharm	r06						useitem																																		r06																																																										0
-Ith	1			100					2	NewStartingCharm	r06						useitem				levelreq				1	1	xsignet40				1	1	ac-global				5	5																																																																							0
-Tal	1			100	15	294	15		2	NewStartingCharm	r37						useitem																																		r37																																																										0
-Tal	1			100					2	NewStartingCharm	r37						useitem				levelreq				1	1	xsignet41				1	1	cast3				3	3																																																																							0
-Ral	1			100	15	297	15		2	NewStartingCharm	r08						useitem																																		r08																																																										0
-Ral	1			100					2	NewStartingCharm	r08						useitem				levelreq				1	1	xsignet42				1	1	extra-fire				2	2																																																																							0
-Ort	1			100	15	298	15		2	NewStartingCharm	r09						useitem																																		r09																																																										0
-Ort	1			100					2	NewStartingCharm	r09						useitem				levelreq				1	1	xsignet43				1	1	extra-ltng				2	2																																																																							0
-Thul	1			100	15	304	15		2	NewStartingCharm	r10						useitem																																		r10																																																										0
-Thul	1			100					2	NewStartingCharm	r10						useitem				levelreq				1	1	xsignet44				1	1	extra-cold				2	2																																																																							0
-Amn	1			100	15	309	15		2	NewStartingCharm	r11						useitem																																		r11																																																										0
-Amn	1			100					2	NewStartingCharm	r11						useitem				levelreq				1	1	xsignet45				1	1	thorns%				15	15																																																																							0
-Sol	1			100	15	310	15		2	NewStartingCharm	r12						useitem																																		r12																																																										0
-Sol	1			100					2	NewStartingCharm	r12						useitem				levelreq				1	1	xsignet46				1	1	extra-pois				2	2																																																																							0
-Shael	1			100	15	311	15		2	NewStartingCharm	r13						useitem																																		r13																																																										0
-Shael	1			100					2	NewStartingCharm	r13						useitem				levelreq				1	1	xsignet47				1	1	str				5	5																																																																							0
-Dol	1			100	15	312	15		2	NewStartingCharm	r47						useitem																																		r47																																																										0
-Dol	1			100					2	NewStartingCharm	r47						useitem				levelreq				1	1	xsignet48				1	1	abs-ltng				1	1																																																																							0
-Hel	1			100	15	313	15		2	NewStartingCharm	r15						useitem																																		r15																																																										0
-Hel	1			100					2	NewStartingCharm	r15						useitem				levelreq				1	1	xsignet49				1	1	extra-pm				2	2																																																																							0
-Io	1			100	15	314	15		2	NewStartingCharm	r48						useitem																																		r48																																																										0
-Io	1			100					2	NewStartingCharm	r48						useitem				levelreq				1	1	xsignet50				1	1	abs-cold				1	1																																																																							0
-Lum	1			100	15	369	15		2	NewStartingCharm	r49						useitem																																		r49																																																										0
-Lum	1			100					2	NewStartingCharm	r49						useitem				levelreq				1	1	xsignet51				1	1	abs-fire				1	1																																																																							0
-Ko	1			100	15	370	15		2	NewStartingCharm	r36						useitem																																		r36																																																										0
-Ko	1			100					2	NewStartingCharm	r36						useitem				levelreq				1	1	xsignet52				1	1	move3				5	5																																																																							0
-Fal	1			100	15	382	15		2	NewStartingCharm	r19						useitem																																		r19																																																										0
-Fal	1			100					2	NewStartingCharm	r19						useitem				levelreq				1	1	xsignet53				1	1	dex				5	5																																																																							0
-Lem	1			100	15	383	15		2	NewStartingCharm	r43						useitem																																		r43																																																										0
-Lem	1			100					2	NewStartingCharm	r43						useitem				levelreq				1	1	xsignet54				1	1	block3				3	3																																																																							0
-Pul	1			100	15	393	15		2	NewStartingCharm	r21						useitem																																		r21																																																										0
-Pul	1			100					2	NewStartingCharm	r21						useitem				levelreq				3	3	xsignet55				3	3	res-fire-max				1	1																																																																							0
-Um	1			100	15	397	15		2	NewStartingCharm	r34						useitem																																		r34																																																										0
-Um	1			100					2	NewStartingCharm	r34						useitem				levelreq				1	1	xsignet56				1	1	swing3				3	3																																																																							0
-Mal	1			100	15	398	15		2	NewStartingCharm	r23						useitem																																		r23																																																										0
-Mal	1			100					2	NewStartingCharm	r23						useitem				levelreq				3	3	xsignet57				3	3	res-pois-max				1	1																																																																							0
-Ist	1			100	15	400	15		2	NewStartingCharm	r24						useitem																																		r24																																																										0
-Ist	1			100					2	NewStartingCharm	r24						useitem				levelreq				1	1	xsignet58				1	1	enr				5	5																																																																							0
-Gul	1			100	15	401	15		2	NewStartingCharm	r25						useitem																																		r25																																																										0
-Gul	1			100					2	NewStartingCharm	r25						useitem				levelreq				3	3	xsignet59				3	3	res-cold-max				1	1																																																																							0
-Vex	1			100	15	403	15		2	NewStartingCharm	r26						useitem																																		r26																																																										0
-Vex	1			100					2	NewStartingCharm	r26						useitem				levelreq				1	1	xsignet60				1	1	att-damage				10	10																																																																							0
-Ohm	1			100	15	408	15		2	NewStartingCharm	r32						useitem																																		r32																																																										0
-Ohm	1			100					2	NewStartingCharm	r32						useitem				levelreq				1	1	xsignet61				1	1	vit				5	5																																																																							0
-Lo	1			100	15	458	15		2	NewStartingCharm	r28						useitem																																		r28																																																										0
-Lo	1			100					2	NewStartingCharm	r28						useitem				levelreq				3	3	xsignet62				3	3	res-ltng-max				1	1																																																																							0
-Median Statue	1			100	15	459	15		2	NewStartingCharm	||;,uni						useitem																																		||;,uni																																																										0
-Median Statue	1			100					2	NewStartingCharm	||;,uni						useitem				charged			346	20	20	xsignet63				15	15																																																																													0
-Median Statue	1			100	15	459	15		2	NewStartingCharm	zen						useitem																																		zen																																																										0
-Median Statue	1			100					2	NewStartingCharm	zen						useitem				charged			346	20	20	xsignet63				15	15																																																																													0
-Thur	1			100	15	460	15		2	NewStartingCharm	r38						useitem																																		r38																																																										0
-Thur	1			100					2	NewStartingCharm	r38						useitem				levelreq				1	1	xsignet64				1	1	att%-minion				20	20																																																																							0
-Nas	1			100	15	461	15		2	NewStartingCharm	r39						useitem																																		r39																																																										0
-Nas	1			100					2	NewStartingCharm	r39						useitem				levelreq				1	1	xsignet65				1	1	hp-minion				2	2																																																																							0
-Kra	1			100	15	462	15		2	NewStartingCharm	r41						useitem																																		r41																																																										0
-Kra	1			100					2	NewStartingCharm	r41						useitem				levelreq				1	1	xsignet66				1	1	res-all-minion				1	1																																																																							0
-Yul	1			100	15	463	15		2	NewStartingCharm	r44						useitem																																		r44																																																										0
-Yul	1			100					2	NewStartingCharm	r44						useitem				levelreq				1	1	xsignet67				1	1	dmg-minion				2	2																																																																							0
-On	1			100	15	464	15		2	NewStartingCharm	r50						useitem																																		r50																																																										0
-On	1			100					2	NewStartingCharm	r50						useitem				levelreq				3	3	xsignet68				3	3	red-dmg%				1	1																																																																							0
-Taha	1			100	15	465	15		2	NewStartingCharm	r51						useitem																																		r51																																																										0
-Taha	1			100					2	NewStartingCharm	r51						useitem				levelreq				10	10	xsignet69				15	15	allskills				1	1																																																																							0
-Ghal	1			100	15	465	15		2	NewStartingCharm	r52						useitem																																		r52																																																										0
-Ghal	1			100					2	NewStartingCharm	r52						useitem				levelreq				10	10	xsignet69				15	15	allskills				1	1																																																																							0
-Qor	1			100	15	465	15		2	NewStartingCharm	r53						useitem																																		r53																																																										0
-Qor	1			100					2	NewStartingCharm	r53						useitem				levelreq				10	10	xsignet69				15	15	allskills				1	1																																																																							0
-Krys	1			100	15	465	15		2	NewStartingCharm	r54						useitem																																		r54																																																										0
-Krys	1			100					2	NewStartingCharm	r54						useitem				levelreq				10	10	xsignet69				15	15	allskills				1	1																																																																							0
-Auhe	1			100	15	465	15		2	NewStartingCharm	r55						useitem																																		r55																																																										0
-Auhe	1			100					2	NewStartingCharm	r55						useitem				levelreq				10	10	xsignet69				15	15	allskills				1	1																																																																							0
-Sha'ad	1			100	15	465	15		2	NewStartingCharm	r56						useitem																																		r56																																																										0
-Sha'ad	1			100					2	NewStartingCharm	r56						useitem				levelreq				10	10	xsignet69				15	15	allskills				1	1																																																																							0
-Zod	1			100	15	466	15		2	NewStartingCharm	r30						useitem																																		r30																																																										0
-Zod	1			100					2	NewStartingCharm	r30						useitem				levelreq				1	1	xsignet70				1	1	uninterrupt				2	2																																																																							0
+Oil of Luck	1			100	15	234	15		2	NewStartingCharm2	6oµ						useitem																																		6oµ																																																										0
+Oil of Luck	1			100					2	NewStartingCharm2	6oµ						useitem				levelreq				1	1	xsignet19				1	1	pierce-pois				1	1																																																																							0
+Oil of Disjunction	1			100	15	235	15		2	NewStartingCharm2	2oµ						useitem																																		2oµ																																																										0
+Oil of Disjunction	1			100					2	NewStartingCharm2	2oµ						useitem				levelreq				1	1	xsignet20				1	1	pierce-ltng				1	1																																																																							0
+Oil of Enhancement	1			100	15	236	15		2	NewStartingCharm2	4oµ						useitem																																		4oµ																																																										0
+Oil of Enhancement	1			100					2	NewStartingCharm2	4oµ						useitem				levelreq				1	1	xsignet21				1	1	pierce-cold				1	1																																																																							0
+Oil of Renewal	1			100	15	237	15		2	NewStartingCharm2	5oµ						useitem																																		5oµ																																																										0
+Oil of Renewal	1			100					2	NewStartingCharm2	5oµ						useitem				levelreq				1	1	xsignet22				1	1	pierce-fire				1	1																																																																							0
+Oil of Jewelcraft	1			100	15	238	15		2	NewStartingCharm2	7oµ						useitem																																		7oµ																																																										0
+Oil of Jewelcraft	1			100					2	NewStartingCharm2	7oµ						useitem				levelreq				1	1	xsignet23				1	1	mana-kill				15	15																																																																							0
+Oil of Absolution	1			100	15	241	15		2	NewStartingCharm2	8oµ						useitem																																		8oµ																																																										0
+Oil of Absolution	1			100					2	NewStartingCharm2	8oµ						useitem				levelreq				1	1	xsignet24				1	1	hp%				1	1																																																																							0
+Catalyst of Learning	1			100	15	242	15		2	NewStartingCharm2	0oµ						useitem																																		0oµ																																																										0
+Catalyst of Learning	1			100					2	NewStartingCharm2	0oµ						useitem				levelreq				1	1	xsignet25				1	1	dmg-demon				10	10																																																																							0
+Catalyst of Disenchantment	1			100	15	243	15		2	NewStartingCharm2	3oµ						useitem																																		3oµ																																																										0
+Catalyst of Disenchantment	1			100					2	NewStartingCharm2	3oµ						useitem				levelreq				1	1	xsignet26				1	1	dmg-undead				10	10																																																																							0
+Apple	1			100	15	244	15		2	NewStartingCharm2	dog						useitem																																		dog																																																										0
+Apple	1			100					2	NewStartingCharm2	dog						useitem				levelreq				1	1	xsignet27				1	1	lifesteal				2	2																																																																							0
+Town Portal Book	1			100	15	245	15		2	NewStartingCharm2	tbk						useitem																																		tbk																																																										0
+Town Portal Book	1			100					2	NewStartingCharm2	tbk						useitem				levelreq				1	1	xsignet28				1	1	mana				20	20																																																																							0
+Identify Book	1			100	15	246	15		2	NewStartingCharm2	ibk						useitem																																		ibk																																																										0
+Identify Book	1			100					2	NewStartingCharm2	ibk						useitem				levelreq				1	1	xsignet29				1	1	hp				10	10																																																																							0
+Town Portal Scroll	1			100	15	249	15		2	NewStartingCharm2	tsc						useitem																																		tsc																																																										0
+Town Portal Scroll	1			100					2	NewStartingCharm2	tsc						useitem				levelreq				1	1	xsignet30				1	1	regen-mana				5	5																																																																							0
+Identify Scroll	1			100	15	251	15		2	NewStartingCharm2	isc						useitem																																		isk																																																										0
+Identify Scroll	1			100					2	NewStartingCharm2	isc						useitem				levelreq				1	1	xsignet31				1	1	reanimate			760	1	1																																																																							0
+Skeleton Key	1			100	15	255	15		2	NewStartingCharm2	key						useitem																																		key																																																										0
+Skeleton Key	1			100					2	NewStartingCharm2	key						useitem				levelreq				1	1	xsignet32				1	1	att				50	50																																																																							0
+Elixir of Greed	1			100	15	256	15		2	NewStartingCharm2	ey3						useitem																																		ey3																																																										0
+Elixir of Greed	1			100					2	NewStartingCharm2	ey3						useitem				levelreq				1	1	xsignet33				1	1	crush				1	1																																																																							0
+Elixir of Experience	1			100	15	257	15		2	NewStartingCharm2	ey2						useitem																																		ey2																																																										0
+Elixir of Experience	1			100					2	NewStartingCharm2	ey2						useitem				levelreq				1	1	xsignet34				1	1	openwounds				3	3																																																																							0
+El	1			100	15	258	15		2	NewStartingCharm2	r01						useitem																																		r01																																																										0
+El	1			100					2	NewStartingCharm2	r01						useitem				levelreq				1	1	xsignet35				1	1	light				1	1																																																																							0
+Eld	1			100	15	263	15		2	NewStartingCharm2	r02						useitem																																		r02																																																										0
+Eld	1			100					2	NewStartingCharm2	r02						useitem				levelreq				1	1	xsignet36				1	1	att%				10	10																																																																							0
+Tir	1			100	15	264	15		2	NewStartingCharm2	r40						useitem																																		r40																																																										0
+Tir	1			100					2	NewStartingCharm2	r40						useitem				levelreq				1	1	xsignet37				1	1	balance3				3	3																																																																							0
+Nef	1			100	15	285	15		2	NewStartingCharm2	r04						useitem																																		r04																																																										0
+Nef	1			100					2	NewStartingCharm2	r04						useitem				levelreq				1	1	xsignet38				1	1	poison-dur				5	5																																																																							0
+Eth	1			100	15	286	15		2	NewStartingCharm2	r05						useitem																																		r05																																																										0
+Eth	1			100					2	NewStartingCharm2	r05						useitem				levelreq				1	1	xsignet39				1	1	dmg-global				5	5																																																																							0
+Ith	1			100	15	287	15		2	NewStartingCharm2	r06						useitem																																		r06																																																										0
+Ith	1			100					2	NewStartingCharm2	r06						useitem				levelreq				1	1	xsignet40				1	1	ac-global				5	5																																																																							0
+Tal	1			100	15	294	15		2	NewStartingCharm2	r37						useitem																																		r37																																																										0
+Tal	1			100					2	NewStartingCharm2	r37						useitem				levelreq				1	1	xsignet41				1	1	cast3				3	3																																																																							0
+Ral	1			100	15	297	15		2	NewStartingCharm2	r08						useitem																																		r08																																																										0
+Ral	1			100					2	NewStartingCharm2	r08						useitem				levelreq				1	1	xsignet42				1	1	extra-fire				2	2																																																																							0
+Ort	1			100	15	298	15		2	NewStartingCharm2	r09						useitem																																		r09																																																										0
+Ort	1			100					2	NewStartingCharm2	r09						useitem				levelreq				1	1	xsignet43				1	1	extra-ltng				2	2																																																																							0
+Thul	1			100	15	304	15		2	NewStartingCharm2	r10						useitem																																		r10																																																										0
+Thul	1			100					2	NewStartingCharm2	r10						useitem				levelreq				1	1	xsignet44				1	1	extra-cold				2	2																																																																							0
+Amn	1			100	15	309	15		2	NewStartingCharm2	r11						useitem																																		r11																																																										0
+Amn	1			100					2	NewStartingCharm2	r11						useitem				levelreq				1	1	xsignet45				1	1	thorns%				15	15																																																																							0
+Sol	1			100	15	310	15		2	NewStartingCharm2	r12						useitem																																		r12																																																										0
+Sol	1			100					2	NewStartingCharm2	r12						useitem				levelreq				1	1	xsignet46				1	1	extra-pois				2	2																																																																							0
+Shael	1			100	15	311	15		2	NewStartingCharm2	r13						useitem																																		r13																																																										0
+Shael	1			100					2	NewStartingCharm2	r13						useitem				levelreq				1	1	xsignet47				1	1	str				5	5																																																																							0
+Dol	1			100	15	312	15		2	NewStartingCharm2	r47						useitem																																		r47																																																										0
+Dol	1			100					2	NewStartingCharm2	r47						useitem				levelreq				1	1	xsignet48				1	1	abs-ltng				1	1																																																																							0
+Hel	1			100	15	313	15		2	NewStartingCharm2	r15						useitem																																		r15																																																										0
+Hel	1			100					2	NewStartingCharm2	r15						useitem				levelreq				1	1	xsignet49				1	1	extra-pm				2	2																																																																							0
+Io	1			100	15	314	15		2	NewStartingCharm2	r48						useitem																																		r48																																																										0
+Io	1			100					2	NewStartingCharm2	r48						useitem				levelreq				1	1	xsignet50				1	1	abs-cold				1	1																																																																							0
+Lum	1			100	15	369	15		2	NewStartingCharm2	r49						useitem																																		r49																																																										0
+Lum	1			100					2	NewStartingCharm2	r49						useitem				levelreq				1	1	xsignet51				1	1	abs-fire				1	1																																																																							0
+Ko	1			100	15	370	15		2	NewStartingCharm2	r36						useitem																																		r36																																																										0
+Ko	1			100					2	NewStartingCharm2	r36						useitem				levelreq				1	1	xsignet52				1	1	move3				5	5																																																																							0
+Fal	1			100	15	382	15		2	NewStartingCharm2	r19						useitem																																		r19																																																										0
+Fal	1			100					2	NewStartingCharm2	r19						useitem				levelreq				1	1	xsignet53				1	1	dex				5	5																																																																							0
+Lem	1			100	15	383	15		2	NewStartingCharm2	r43						useitem																																		r43																																																										0
+Lem	1			100					2	NewStartingCharm2	r43						useitem				levelreq				1	1	xsignet54				1	1	block3				3	3																																																																							0
+Pul	1			100	15	393	15		2	NewStartingCharm2	r21						useitem																																		r21																																																										0
+Pul	1			100					2	NewStartingCharm2	r21						useitem				levelreq				3	3	xsignet55				3	3	res-fire-max				1	1																																																																							0
+Um	1			100	15	397	15		2	NewStartingCharm2	r34						useitem																																		r34																																																										0
+Um	1			100					2	NewStartingCharm2	r34						useitem				levelreq				1	1	xsignet56				1	1	swing3				3	3																																																																							0
+Mal	1			100	15	398	15		2	NewStartingCharm2	r23						useitem																																		r23																																																										0
+Mal	1			100					2	NewStartingCharm2	r23						useitem				levelreq				3	3	xsignet57				3	3	res-pois-max				1	1																																																																							0
+Ist	1			100	15	400	15		2	NewStartingCharm2	r24						useitem																																		r24																																																										0
+Ist	1			100					2	NewStartingCharm2	r24						useitem				levelreq				1	1	xsignet58				1	1	enr				5	5																																																																							0
+Gul	1			100	15	401	15		2	NewStartingCharm2	r25						useitem																																		r25																																																										0
+Gul	1			100					2	NewStartingCharm2	r25						useitem				levelreq				3	3	xsignet59				3	3	res-cold-max				1	1																																																																							0
+Vex	1			100	15	403	15		2	NewStartingCharm2	r26						useitem																																		r26																																																										0
+Vex	1			100					2	NewStartingCharm2	r26						useitem				levelreq				1	1	xsignet60				1	1	att-damage				10	10																																																																							0
+Ohm	1			100	15	408	15		2	NewStartingCharm2	r32						useitem																																		r32																																																										0
+Ohm	1			100					2	NewStartingCharm2	r32						useitem				levelreq				1	1	xsignet61				1	1	vit				5	5																																																																							0
+Lo	1			100	15	458	15		2	NewStartingCharm2	r28						useitem																																		r28																																																										0
+Lo	1			100					2	NewStartingCharm2	r28						useitem				levelreq				3	3	xsignet62				3	3	res-ltng-max				1	1																																																																							0
+Median Statue	1			100	15	459	15		2	NewStartingCharm2	||;,uni						useitem																																		||;,uni																																																										0
+Median Statue	1			100					2	NewStartingCharm2	||;,uni						useitem				charged			346	20	20	xsignet63				15	15																																																																													0
+Median Statue	1			100	15	459	15		2	NewStartingCharm2	zen						useitem																																		zen																																																										0
+Median Statue	1			100					2	NewStartingCharm2	zen						useitem				charged			346	20	20	xsignet63				15	15																																																																													0
+Thur	1			100	15	460	15		2	NewStartingCharm2	r38						useitem																																		r38																																																										0
+Thur	1			100					2	NewStartingCharm2	r38						useitem				levelreq				1	1	xsignet64				1	1	att%-minion				20	20																																																																							0
+Nas	1			100	15	461	15		2	NewStartingCharm2	r39						useitem																																		r39																																																										0
+Nas	1			100					2	NewStartingCharm2	r39						useitem				levelreq				1	1	xsignet65				1	1	hp-minion				2	2																																																																							0
+Kra	1			100	15	462	15		2	NewStartingCharm2	r41						useitem																																		r41																																																										0
+Kra	1			100					2	NewStartingCharm2	r41						useitem				levelreq				1	1	xsignet66				1	1	res-all-minion				1	1																																																																							0
+Yul	1			100	15	463	15		2	NewStartingCharm2	r44						useitem																																		r44																																																										0
+Yul	1			100					2	NewStartingCharm2	r44						useitem				levelreq				1	1	xsignet67				1	1	dmg-minion				2	2																																																																							0
+On	1			100	15	464	15		2	NewStartingCharm2	r50						useitem																																		r50																																																										0
+On	1			100					2	NewStartingCharm2	r50						useitem				levelreq				3	3	xsignet68				3	3	red-dmg%				1	1																																																																							0
+Taha	1			100	15	465	15		2	NewStartingCharm2	r51						useitem																																		r51																																																										0
+Taha	1			100					2	NewStartingCharm2	r51						useitem				levelreq				10	10	xsignet69				15	15	allskills				1	1																																																																							0
+Ghal	1			100	15	465	15		2	NewStartingCharm2	r52						useitem																																		r52																																																										0
+Ghal	1			100					2	NewStartingCharm2	r52						useitem				levelreq				10	10	xsignet69				15	15	allskills				1	1																																																																							0
+Qor	1			100	15	465	15		2	NewStartingCharm2	r53						useitem																																		r53																																																										0
+Qor	1			100					2	NewStartingCharm2	r53						useitem				levelreq				10	10	xsignet69				15	15	allskills				1	1																																																																							0
+Krys	1			100	15	465	15		2	NewStartingCharm2	r54						useitem																																		r54																																																										0
+Krys	1			100					2	NewStartingCharm2	r54						useitem				levelreq				10	10	xsignet69				15	15	allskills				1	1																																																																							0
+Auhe	1			100	15	465	15		2	NewStartingCharm2	r55						useitem																																		r55																																																										0
+Auhe	1			100					2	NewStartingCharm2	r55						useitem				levelreq				10	10	xsignet69				15	15	allskills				1	1																																																																							0
+Sha'ad	1			100	15	465	15		2	NewStartingCharm2	r56						useitem																																		r56																																																										0
+Sha'ad	1			100					2	NewStartingCharm2	r56						useitem				levelreq				10	10	xsignet69				15	15	allskills				1	1																																																																							0
+Zod	1			100	15	466	15		2	NewStartingCharm2	r30						useitem																																		r30																																																										0
+Zod	1			100					2	NewStartingCharm2	r30						useitem				levelreq				1	1	xsignet70				1	1	uninterrupt				2	2																																																																							0
 Scroll of Resis 1	0			100	18	443			2	SunstoneOfFire	tr2						useitem				upgraded				1	1	res-all				10	10																																																																													0
 Scroll of Resis 2	0			100	18	443			2	SunstoneOfThunder	tr2						useitem				upgraded				1	1	res-all				10	10																																																																													0
 Scroll of Resis 3	0			100	18	443			2	SunstoneOfIce	tr2						useitem				upgraded				1	1	res-all				10	10																																																																													0

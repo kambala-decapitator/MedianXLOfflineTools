@@ -30,7 +30,7 @@ public:
             const QByteArray &ansiHeader = ansiColorHeader();
 #if defined(Q_OS_WIN32)
             // Blizzard uses ANSI codepage to read save files' names
-            int ansiHeaderSizeWithTerminator = ansiHeader.size() + 1;
+            int ansiHeaderSizeWithTerminator = ansiHeader.length() + 1;
             LPWSTR unicodeWChar = new WCHAR[ansiHeaderSizeWithTerminator];
             MultiByteToWideChar(CP_ACP, 0, ansiHeader.data(), ansiHeaderSizeWithTerminator, unicodeWChar, ansiHeaderSizeWithTerminator);
             unicodeColorHeader = QString::fromWCharArray(unicodeWChar);

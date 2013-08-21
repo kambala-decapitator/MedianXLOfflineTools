@@ -35,6 +35,7 @@ sub tblExpandArray
 }
 
 my ($nameStr, $spellDescStr) = qw/namestr spelldescstr/;
+my $itemWithoutName = $tbl->{dummy};
 sub tblExpandHash
 {
     (my $itemsHash, my $field) = @_;
@@ -42,7 +43,8 @@ sub tblExpandHash
     {
         my ($nameKey, $spellDescKey) = ($itemsHash->{$_}->{$nameStr}, $itemsHash->{$_}->{$spellDescStr});
         $nameKey = $_ unless defined $nameKey; # nameKey is defined only for items
-        $itemsHash->{$_}->{$field} = $tbl->{$nameKey} // 'NO NAME';
+        $itemsHash->{$_}->{$field} = $tbl->{$nameKey} // $itemWithoutName;
+        print "'$nameKey' not found in tbl\n" if $itemsHash->{$_}->{$field} eq $itemWithoutName;
         $itemsHash->{$_}->{$spellDescStr} = $tbl->{$spellDescKey} if defined $spellDescKey and defined $tbl->{$spellDescKey}
     }
 }
@@ -180,21 +182,19 @@ my $setItems = parsetxt("setitems.txt", _autoindex=>0, iIName=>0, iSName=>1, rlv
 &tblExpandArray($setItems, "iSName", "SName");
 
 my $mxlSets, my $setIndex = 0, my $oldIndex = -3;
-for my $setElement (@$setItems)
+my @setFields = qw/IName SName iSName rlvl image/;
+for my $setItem (@$setItems)
 {
     $oldIndex++;
-    next unless (defined $setElement->{IName} and defined $setElement->{SName});
+    next unless (defined $setItem->{IName} and defined $setItem->{SName});
 
-    $mxlSets->[$setIndex]->{index}  = $oldIndex;
-    $mxlSets->[$setIndex]->{IName}  = $setElement->{IName};
-    $mxlSets->[$setIndex]->{SName}  = $setElement->{SName};
-    $mxlSets->[$setIndex]->{iSName} = $setElement->{iSName};
-    $mxlSets->[$setIndex]->{rlvl}   = $setElement->{rlvl};
-    $mxlSets->[$setIndex]->{image}  = $setElement->{image};
+    $mxlSets->[$setIndex]->{index} = $oldIndex;
+    my $newSetItem = $mxlSets->[$setIndex];
+    $newSetItem->{$_} = $setItem->{$_} for (@setFields);
 
     # if addfunc == 0, then properties are embedded in the item
-    my $addfunc = $mxlSets->[$setIndex]->{addfunc};
-    &expandSetProperties(\@greenPropertiesKeys, $mxlSets->[$setIndex], $setElement) if (defined $addfunc and $addfunc > 0);
+    my $addfunc = $setItem->{addfunc};
+    &expandSetProperties(\@greenPropertiesKeys, $newSetItem, $setItem) if defined $addfunc and $addfunc > 0;
 
     $setIndex++
 }

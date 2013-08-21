@@ -67,6 +67,7 @@ extern void qt_mac_set_dock_menu(QMenu *);
 
 static const QString kLastSavePathKey("lastSavePath"), kBackupExtension("bak"), kReadonlyCss("background-color: rgb(227, 227, 227)"), kTimeFormatReadable("yyyyMMdd-hhmmss"), kMedianXlServer("http://mxl.vn.cz/kambala/");
 static const QByteArray kMercHeader("jf");
+static const int kMoonSymbolSaveIndex = 28;
 
 const QString MedianXLOfflineTools::kCompoundFormat("%1, %2");
 const QString MedianXLOfflineTools::kCharacterExtension("d2s");
@@ -487,7 +488,7 @@ void MedianXLOfflineTools::saveCharacter()
         QByteArray newNameByteArray = newName.toLocal8Bit();
 #endif
         newNameByteArray += QByteArray(QD2CharRenamer::kMaxNameLength + 1 - newName.length(), '\0'); // add trailing nulls
-        outputDataStream.writeRawData(newNameByteArray.constData(), newNameByteArray.length());
+        writeByteArrayDataWithoutNull(outputDataStream, newNameByteArray);
     }
     else
         newName = charInfo.basicInfo.originalName;
@@ -543,12 +544,9 @@ void MedianXLOfflineTools::saveCharacter()
     QHash<Enums::ItemStorage::ItemStorageEnum, ItemsList> plugyItemsHash;
     foreach (ItemInfo *item, charInfo.items.character)
     {
-        switch (item->storage)
-        {
-        case Enums::ItemStorage::PersonalStash: case Enums::ItemStorage::SharedStash: case Enums::ItemStorage::HCStash:
+        if (item->storage >= Enums::ItemStorage::PersonalStash)
             plugyItemsHash[static_cast<Enums::ItemStorage::ItemStorageEnum>(item->storage)] += item;
-            break;
-        default:
+        else
         {
             int *pItemsSize;
             ItemsList *pItems;
@@ -574,8 +572,6 @@ void MedianXLOfflineTools::saveCharacter()
             *pItemsSize += 2 + item->bitString.length() / 8; // JM + item bytes
             foreach (ItemInfo *socketableItem, item->socketablesInfo)
                 *pItemsSize += 2 + socketableItem->bitString.length() / 8; // JM + item bytes
-            break;
-        }
         }
     }
 
@@ -598,7 +594,9 @@ void MedianXLOfflineTools::saveCharacter()
     // write merc items
     if (charInfo.mercenary.exists)
     {
-        outputDataStream.skipRawData(2 + 2); // jf + JM
+        writeByteArrayDataWithoutNull(outputDataStream, kMercHeader);
+        writeByteArrayDataWithoutNull(outputDataStream, ItemParser::kItemHeader);
+        //outputDataStream.skipRawData(2 + 2); // jf + JM
         outputDataStream << static_cast<quint16>(mercItems.size());
         int terminatorOffset = tempFileContents.size() - 3;
         pos = outputDataStream.device()->pos();
@@ -640,7 +638,7 @@ void MedianXLOfflineTools::saveCharacter()
 
         QDataStream plugyFileDataStream(&inputFile);
         plugyFileDataStream.setByteOrder(QDataStream::LittleEndian);
-        plugyFileDataStream.writeRawData(info.header.constData(), info.header.size()); // do not write '\0'
+        writeByteArrayDataWithoutNull(outputDataStream, info.header);
         plugyFileDataStream << info.version;
         if (info.hasGold)
             plugyFileDataStream << info.gold;
@@ -648,8 +646,9 @@ void MedianXLOfflineTools::saveCharacter()
 
         for (quint32 page = 1; page <= info.lastPage; ++page)
         {
-            plugyFileDataStream.writeRawData(ItemParser::kPlugyPageHeader.constData(), ItemParser::kPlugyPageHeader.size() + 1); // write '\0'
-            plugyFileDataStream.writeRawData(ItemParser::kItemHeader.constData(), ItemParser::kItemHeader.size()); // do not write '\0'
+            plugyFileDataStream << ItemParser::kPlugyPageHeader.constData(); // write '\0'
+            plugyFileDataStream.writeRawData(ItemParser::kItemHeader.constData(), ItemParser::kItemHeader.length()); // do not write '\0'
+            writeByteArrayDataWithoutNull(outputDataStream, ItemParser::kItemHeader);
 
             ItemsList pageItems = ItemDataBase::extractItemsFromPage(items, page);
             plugyFileDataStream << static_cast<quint16>(pageItems.size());
@@ -967,9 +966,9 @@ void MedianXLOfflineTools::showItems(bool activate /*= true*/)
     {
         if (_itemsDialog->isMinimized())
             _itemsDialog->isMaximized() ? _itemsDialog->showMaximized() : _itemsDialog->showNormal(); // this is not a mistake: window can indeed be minimized and maximized at the same time
+        _itemsDialog->raise();
         if (activate)
             _itemsDialog->activateWindow();
-        _itemsDialog->raise();
     }
     else
     {
@@ -987,8 +986,8 @@ void MedianXLOfflineTools::showItems(bool activate /*= true*/)
 
     if (!activate)
     {
-        _findItemsDialog->activateWindow();
         _findItemsDialog->raise();
+        _findItemsDialog->activateWindow();
     }
 }
 
@@ -1015,9 +1014,6 @@ void MedianXLOfflineTools::itemStorageTabChanged(int tabIndex)
 void MedianXLOfflineTools::giveCube()
 {
     ItemInfo *cube = ItemDataBase::loadItemFromFile("cube");
-    if (!cube)
-        return;
-
     if (!ItemDataBase::storeItemIn(cube, Enums::ItemStorage::Inventory, ItemsViewerDialog::rowsInStorageAtIndex(Enums::ItemStorage::Inventory)) &&
         !ItemDataBase::storeItemIn(cube, Enums::ItemStorage::Stash,     ItemsViewerDialog::rowsInStorageAtIndex(Enums::ItemStorage::Stash)))
     {
@@ -1042,6 +1038,45 @@ void MedianXLOfflineTools::giveCube()
     ui->actionGiveCube->setDisabled(true);
     setModified(true);
     INFO_BOX(ItemParser::itemStorageAndCoordinatesString(tr("Cube has been stored in %1 at (%2,%3)"), cube));
+}
+
+void MedianXLOfflineTools::fillBeltWithMoonCookies()
+{
+    const int kMaxBeltItems = 16;
+    Enums::ItemStorage::ItemStorageEnum storage = Enums::ItemStorage::NotInStorage;
+    Enums::ItemLocation::ItemLocationEnum location = Enums::ItemLocation::Belt;
+
+    ItemsList beltItems = ItemDataBase::itemsStoredIn(storage, location);
+    if (int newMoonSymbols = kMaxBeltItems - beltItems.size())
+    {
+        if (_itemsDialog)
+            _itemsDialog->updateBeltItemsCoordinates(true, &beltItems);
+
+        ItemInfo *moonSymbolTemplate = ItemDataBase::loadItemFromFile("moon_symbol");
+        for (int i = 0; i < newMoonSymbols; ++i)
+        {
+            ItemInfo *moonSymbol = new ItemInfo(*moonSymbolTemplate);
+            if (ItemDataBase::storeItemIn(moonSymbol, storage, ItemParser::kBeltMaxRows, location, &beltItems, 0, ItemParser::kBeltMaxColumns, false))
+            {
+                int displayColumn = moonSymbol->column;
+                moonSymbol->column += moonSymbol->row * ItemParser::kBeltMaxRows;
+                ReverseBitWriter::updateItemColumn(moonSymbol);
+                moonSymbol->column = displayColumn;
+
+                CharacterInfo::instance().items.character += moonSymbol;
+                beltItems += moonSymbol;
+            }
+        }
+        delete moonSymbolTemplate;
+
+        if (_itemsDialog)
+        {
+            _itemsDialog->updateGearItems(&beltItems);
+            _itemsDialog->totalItemsIncreasedBy(newMoonSymbols);
+        }
+
+        setModified(true);
+    }
 }
 
 void MedianXLOfflineTools::showSkillPlan()
@@ -1125,8 +1160,16 @@ void MedianXLOfflineTools::aboutApp()
 
 void MedianXLOfflineTools::showSkillTree()
 {
-    SkillTreeDialog *dlg = new SkillTreeDialog(_characterSkillsIndexes.value(CharacterInfo::instance().basicInfo.classCode), this);
-    dlg->show();
+    if (_skillTreeDialog)
+    {
+        _skillTreeDialog->raise();
+        _skillTreeDialog->activateWindow();
+    }
+    else
+    {
+        _skillTreeDialog = new SkillTreeDialog(_characterSkillsIndexes.value(CharacterInfo::instance().basicInfo.classCode).second, this);
+        _skillTreeDialog->show();
+    }
 }
 
 
@@ -1610,6 +1653,7 @@ void MedianXLOfflineTools::connectSignals()
     connect(ui->actionShowItems, SIGNAL(triggered()), SLOT(showItems()));
     connect(ui->actionFind, SIGNAL(triggered()), SLOT(findItem()));
     connect(ui->actionGiveCube, SIGNAL(triggered()), SLOT(giveCube()));
+    connect(ui->actionFillBeltWithMoonCookies, SIGNAL(triggered()), SLOT(fillBeltWithMoonCookies()));
 
     // export
     connect(ui->actionSkillPlan, SIGNAL(triggered()), SLOT(showSkillPlan()));
@@ -1814,19 +1858,6 @@ bool MedianXLOfflineTools::processSaveFile()
     }
     charInfo.basicInfo.level = clvl;
 
-    //inputDataStream.device()->seek(Offsets::CurrentLocation);
-    //for (int i = 0; i < 3; ++i)
-    //{
-    //    quint8 difficulty;
-    //    inputDataStream >> difficulty;
-    //    if (difficulty & DifficultyBits::IsActive)
-    //    {
-    //        charInfo.basicInfo.currentDifficulty = i;
-    //        charInfo.basicInfo.currentAct = (difficulty & DifficultyBits::CurrentAct) + 1;
-    //        break;
-    //    }
-    //}
-
     inputDataStream.device()->seek(Offsets::Mercenary);
     quint32 mercID;
     inputDataStream >> mercID;
@@ -1967,11 +1998,7 @@ bool MedianXLOfflineTools::processSaveFile()
 
         qint64 statValue = bitReader.readNumber(statLength);
         if (statCode == CharacterStats::Level && statValue != clvl)
-        {
-//            ERROR_BOX(tr("Level in statistics (%1) isn't equal the one in header (%2).").arg(statValue).arg(clvl));
-//            return false;
             statValue = clvl;
-        }
         else if (statCode >= CharacterStats::Life && statCode <= CharacterStats::BaseStamina)
             statValue >>= 8;
         else if (statCode == CharacterStats::SignetsOfLearningEaten && statValue > CharacterStats::SignetsOfLearningMax)
@@ -2028,7 +2055,7 @@ bool MedianXLOfflineTools::processSaveFile()
             quint8 skillValue = _saveFileContents.at(charInfo.skillsOffset + 2 + i);
             skills += skillValue;
             charInfo.basicInfo.skills += skillValue;
-            //qDebug() << skillValue << ItemDataBase::Skills()->value(_characterSkillsIndeces[charInfo.basicInfo.classCode].first.at(i)).name;
+            //qDebug() << i << skillValue << ItemDataBase::Skills()->at(_characterSkillsIndexes[charInfo.basicInfo.classCode].first.at(i))->name;
         }
         skills += charInfo.valueOfStatistic(CharacterStats::FreeSkillPoints);
         if (skills > maxPossibleSkills) // check if skills are hacked
@@ -2047,7 +2074,7 @@ bool MedianXLOfflineTools::processSaveFile()
         {
             int skillIndex = skillsIndeces.second.at(i);
             charInfo.basicInfo.skillsReadable += charInfo.basicInfo.skills.at(skillsIndeces.first.indexOf(skillIndex));
-//            qDebug() << charInfo.basicInfo.skillsReadable.last() << ItemDataBase::Skills()->value(skillIndex)->name;
+            //qDebug() << charInfo.basicInfo.skillsReadable.last() << ItemDataBase::Skills()->value(skillIndex)->name;
         }
     }
 
@@ -2226,7 +2253,7 @@ quint32 MedianXLOfflineTools::checksum(const QByteArray &charByteArray) const
         sum <<= 1;
         sum += mostSignificantByte;
         sum &= 0xFFFFFFFF;
-        if (i < 12 || i > 15) // bytes 12-15 - file checksum
+        if (i < Enums::Offsets::Checksum || i >= Enums::Offsets::Checksum + 4) // bytes 12-15 - file checksum
             sum += static_cast<quint8>(charByteArray.at(i));
     }
     return sum;
@@ -2485,6 +2512,7 @@ void MedianXLOfflineTools::updateUI()
     ui->actionShowItems->setEnabled(hasItems);
     ui->actionFind->setEnabled(hasItems);
     ui->actionGiveCube->setDisabled(CharacterInfo::instance().items.hasCube());
+    ui->actionFillBeltWithMoonCookies->setEnabled(charInfo.basicInfo.classCode == Enums::ClassName::Sorceress && charInfo.basicInfo.skillsReadable.at(kMoonSymbolSaveIndex) > 0);
 
     updateWindowTitle();
 

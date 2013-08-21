@@ -16,6 +16,9 @@
 const QByteArray ItemParser::kItemHeader("JM");
 const QByteArray ItemParser::kPlugyPageHeader("ST");
 
+const int ItemParser::kBeltMaxRows = 4;
+const int ItemParser::kBeltMaxColumns = 4;
+
 const QString &ItemParser::kEnhancedDamageFormat()
 {
     static const QString s = tr("+%1% Enhanced Damage");
@@ -101,10 +104,10 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
             item->whereEquipped = bitReader.readNumber(4);
             item->column = bitReader.readNumber(4);
             item->row = bitReader.readNumber(4);
-            if (item->location == 2) // belt
+            if (item->location == Enums::ItemLocation::Belt)
             {
-                item->row = item->column / 4;
-                item->column %= 4;
+                item->row = item->column / kBeltMaxRows;
+                item->column %= kBeltMaxColumns;
             }
             item->storage = bitReader.readNumber(3);
 
@@ -138,7 +141,9 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
                 item->quality = bitReader.readNumber(4);
                 if (bitReader.readBool())
                     item->variableGraphicIndex = bitReader.readNumber(3) + 1;
-                if (bitReader.readBool()) // class info
+                // entry in the appropriate affix table (were a 0 value indicate none)
+                // is used for autoprefix and magic/rare/crafted/probably honorific items
+                if (bitReader.readBool()) // autoprefix
                     bitReader.skip(11);
 
                 ItemBase *itemBase = ItemDataBase::Items()->value(item->itemType);
@@ -166,7 +171,6 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
                     break;
                 default:
                     qDebug("Item '%s' of unknown quality %d found!", itemBase->name.toUtf8().constData(), item->quality);
-                    //ERROR_BOX_NO_PARENT(tr("Item '%1' of unknown quality '%2' found!").arg(itemBase->name).arg(item->quality));
                     break;
                 }
 
@@ -206,10 +210,10 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
                 if (item->isSocketed)
                     item->socketsNumber = bitReader.readNumber(4);
 
-                const int setListsNumber = 5;
-                bool hasSetLists[setListsNumber] = {false};
+                const int kSetListsNumber = 5;
+                bool hasSetLists[kSetListsNumber] = {false};
                 if (item->quality == Enums::ItemQuality::Set)
-                    for (int i = 0; i < setListsNumber; ++i)
+                    for (int i = 0; i < kSetListsNumber; ++i)
                         hasSetLists[i] = bitReader.readBool();
 
                 item->props = parseItemProperties(bitReader, &status);
@@ -230,7 +234,7 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
                 }
 
                 if (item->quality == Enums::ItemQuality::Set)
-                    for (int i = 0; i < setListsNumber; ++i)
+                    for (int i = 0; i < kSetListsNumber; ++i)
                         if (hasSetLists[i])
                             item->setProps = parseItemProperties(bitReader, &status);
 
@@ -460,12 +464,12 @@ void ItemParser::writeItems(const ItemsList &items, QDataStream &ds)
 {
     foreach (ItemInfo *item, items)
     {
-        ds.writeRawData(kItemHeader.constData(), kItemHeader.size()); // do not write '\0'
+        writeByteArrayDataWithoutNull(ds, kItemHeader);
 
         QByteArray itemBytes;
         for (int i = 0, n = item->bitString.length(); i < n; i += 8)
             itemBytes.prepend(item->bitString.mid(i, 8).toShort(0, 2));
-        ds.writeRawData(itemBytes.constData(), itemBytes.size()); // do not write '\0'
+        writeByteArrayDataWithoutNull(ds, itemBytes);
 
         writeItems(item->socketablesInfo, ds);
 

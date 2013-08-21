@@ -170,18 +170,17 @@ QList<SetFixedProperty> collectSetProperties(const QList<QByteArray> &data, quin
     QList<SetFixedProperty> result;
     for (quint16 i = firstColumn, n = lastColumn ? lastColumn : data.size(); i < n; i += 4)
     {
+        SetFixedProperty prop;
         QByteArray propIds = data.at(i);
         if (!propIds.isEmpty())
         {
-            SetFixedProperty prop;
             foreach (const QByteArray &propId, propIds.split(',')) //-V807
                 prop.ids << propId.toUShort();
             prop.param = data.at(i + 1).toInt();
             prop.minValue = data.at(i + 2).toInt();
             prop.maxValue = data.at(i + 3).toInt();
-
-            result << prop;
         }
+        result << prop;
     }
     return result;
 }
@@ -657,18 +656,26 @@ ItemsList ItemDataBase::itemsStoredIn(int storage, int location /*= Enums::ItemL
     return items;
 }
 
-bool ItemDataBase::storeItemIn(ItemInfo *item, Enums::ItemStorage::ItemStorageEnum storage, quint8 rowsTotal, quint32 plugyPage /*= 0*/, quint8 colsTotal /*= 10*/)
+bool ItemDataBase::storeItemIn(ItemInfo *item, Enums::ItemStorage::ItemStorageEnum storage, quint8 rowsTotal, quint32 plugyPage /*= 0*/, quint8 colsTotal /*= 10*/, bool shouldChangeCoordinatesBits /*= true*/)
 {
-    ItemsList items = itemsStoredIn(storage, Enums::ItemLocation::Stored, plugyPage ? &plugyPage : 0);
+    return storeItemIn(item, storage, rowsTotal, Enums::ItemLocation::Stored, 0, plugyPage, colsTotal, shouldChangeCoordinatesBits);
+}
+
+bool ItemDataBase::storeItemIn(ItemInfo *item, Enums::ItemStorage::ItemStorageEnum storage, quint8 rowsTotal, Enums::ItemLocation::ItemLocationEnum location, ItemsList *pItems /*= 0*/, quint32 plugyPage /*= 0*/, quint8 colsTotal /*= 10*/, bool shouldChangeCoordinatesBits /*= true*/)
+{
+    ItemsList items = pItems ? *pItems : itemsStoredIn(storage, location, plugyPage ? &plugyPage : 0);
     for (quint8 i = 0; i < rowsTotal; ++i)
     {
         for (quint8 j = 0; j < colsTotal; ++j)
         {
             if (canStoreItemAt(i, j, item->itemType, items, rowsTotal, colsTotal))
             {
-                item->move(i, j, plugyPage);
+                item->move(i, j, plugyPage, shouldChangeCoordinatesBits);
                 item->storage = storage;
+                item->location = location;
+
                 ReverseBitWriter::replaceValueInBitString(item->bitString, Enums::ItemOffsets::Storage, storage > Enums::ItemStorage::Stash ? Enums::ItemStorage::Stash : storage);
+                ReverseBitWriter::replaceValueInBitString(item->bitString, Enums::ItemOffsets::Location, location);
 
                 return true;
             }

@@ -1,5 +1,7 @@
 [size=1]Just in case, here's the Russian thread: http://worldofplayers.ru/threads/34489/[/size]
 
+[size=18][color=#6666ff]This is [b][u]NOT[/u][/b] a cheating tool![/color][/size]
+
 As you can guess from the title, it's an almost complete offline analogue of grig's [url=http://grig.vlexofree.com/]Median XL Online Tools[/url], but with nice additions.
 
 Application should be able to load character from any version of Median XL and successfully perform basic operations with it like respeccing. Items processing relies on the mod source files, so it may not be compatible with any chacarcter from different version. This data is softcoded, so when a new mod version is released, usually there's no need to recompile the application — one just needs to replace the data found in 'resources/data' with the new one, which I will provide. Currently supported mod versions:
@@ -53,7 +55,7 @@ I hope I provided enough anti-hack protection for an average user. If you manage
 [*][i]Mac OS X[/i] (10.5 and later, universal binary): http://www.mediafire.com/download/gpayc84azcp9x1x/MedianXLOfflineTools_mac_0.4.zip
 [/list][*][b]Mod data[/b] (find installation instructions in Mini-FAQ below; you don't actually need to download these because both archives are included in the application distribution):
 [list][*][i]2012 v005 / Kehjan Labyrinth + Tathamet vs Anu / Hardened:[/i] http://www.mediafire.com/download/4vw6cwztt1zuwlv/2012-005%2Bkehjan%2Btathamet.7z
-[*][i]Ultimative v7:[/i] http://www.mediafire.com/download/ob5x7sss8jdu9b8/ultimative7.7z
+[*][i]Ultimative X:[/i] http://www.mediafire.com/download/kwglx6s9lzpuo91/ultimativeX.7z
 [/list][*][b]Translation toolkit[/b] (follow instructions found inside the archive): http://www.mediafire.com/download/9r21w2nz8r64obq/translation_2012-005_0.4.7z
 [/list]
 

@@ -162,6 +162,11 @@ qint32 getValueOfPropertyInItem(ItemInfo *item, quint16 propKey, quint16 param /
     return result;
 }
 
+void writeByteArrayDataWithoutNull(QDataStream &ds, const QByteArray &ba)
+{
+    ds.writeRawData(ba.constData(), ba.length());
+}
+
 
 bool isTiered(ItemInfo *item)
 {

@@ -353,23 +353,26 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
                     ++setItemsOnCharacter;
             if (setItemsOnCharacter > 1)
             {
-                PropertiesMultiMap setFixedProps = collectSetFixedProps(fullSetInfo.partialSetProperties, setItemsOnCharacter - 1);
+                PropertiesMultiMap setFixedProps = collectSetFixedProps(fullSetInfo.partialSetProperties, (setItemsOnCharacter - 1) * 2);
                 if (setItemsOnCharacter == fullSetInfo.itemNames.size())
                 {
                     PropertiesMultiMap fullSetProperties = collectSetFixedProps(fullSetInfo.fullSetProperties);
                     for (PropertiesMultiMap::const_iterator iter = fullSetProperties.constBegin(); iter != fullSetProperties.constEnd(); ++iter)
                     {
+                        bool shouldAdd = true;
                         ItemProperty *prop = iter.value();
-                        if (prop->param)
-                            setFixedProps.insert(iter.key(), prop);
-                        else
+                        foreach (ItemProperty *existingProp, setFixedProps.values(iter.key()))
                         {
-                            ItemProperty *existingProp = setFixedProps.value(iter.key());
-                            if (existingProp)
+                            if (prop->param == existingProp->param)
+                            {
                                 existingProp->value += prop->value;
-                            else
-                                setFixedProps.insert(iter.key(), prop);
+                                ItemParser::createDisplayStringForPropertyWithId(iter.key(), existingProp);
+                                shouldAdd = false;
+                                break;
+                            }
                         }
+                        if (shouldAdd)
+                            setFixedProps.insert(iter.key(), prop);
                     }
                 }
                 itemDescription += kHtmlLineBreak + propertiesToHtml(setFixedProps, ColorsManager::Gold);

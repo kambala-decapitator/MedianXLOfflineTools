@@ -585,7 +585,7 @@
      <x>0</x>
      <y>0</y>
      <width>686</width>
-     <height>22</height>
+     <height>21</height>
     </rect>
    </property>
    <property name="nativeMenuBar">
@@ -734,6 +734,7 @@
     <addaction name="actionFindPrevious"/>
     <addaction name="separator"/>
     <addaction name="actionGiveCube"/>
+    <addaction name="actionFillBeltWithMoonCookies"/>
    </widget>
    <widget class="QMenu" name="menuExport">
     <property name="title">
@@ -1407,6 +1408,17 @@
    </property>
    <property name="shortcut">
     <string>Ctrl+T</string>
+   </property>
+  </action>
+  <action name="actionFillBeltWithMoonCookies">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Fill belt with moon cookies</string>
+   </property>
+   <property name="statusTip">
+    <string>Fills sorceress's belt with Moon Symbols if the skill is available</string>
    </property>
   </action>
  </widget>

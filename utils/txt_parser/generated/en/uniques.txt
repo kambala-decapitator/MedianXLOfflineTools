@@ -49,7 +49,7 @@
 47	Zakarum's Ear	80	
 48	Moon of the Spider	100	
 49	Spirit Trance Herb	100	
-50	\red;Welcome! Median XL: Ultimative v7\blue;	0	
+50	\red;Welcome! Median XL: Ultimative X\blue;	666	
 51	Hammer of the Taan Judges	40	
 52	The Book of Lies	60	
 53	By Robert Marks\nDemonsbane	100	demonsbaneZ
@@ -2497,7 +2497,85 @@
 2495	Gehenna	100	
 2496	Demonic Touch	666	
 2497	Steel Terror	100	
-2498	Soul of Kabraxis	100	
+2498	Soul of Kabraxis	666	
 2499	Demonic Touch	100	
 2500	Linarian's Legacy	100	
 2501	Soulkeeper	120	
+2502	Soul of Kabraxis	100	
+2503	\red;Welcome! Median XL: Ultimative X\blue;	0	
+2504	Lucion's Soulstone	666	
+2505	Tome of Possession	666	
+2506	Cycle of Power	60	
+2507	Cycle of Power	60	
+2508	Cycle of Power	60	
+2509	Cycle of Power	60	
+2510	Cycle of Power	70	
+2511	Cycle of Power	70	
+2512	Cycle of Power	70	
+2513	Cycle of Power	70	
+2514	Cycle of Power	80	
+2515	Cycle of Power	80	
+2516	Cycle of Power	80	
+2517	Cycle of Power	80	
+2518	Cycle of Greed	20	
+2519	Cycle of Greed	30	
+2520	Cycle of Greed	40	
+2521	Cycle of Luck	60	
+2522	Cycle of Luck	70	
+2523	Cycle of Luck	80	
+2524	Cycle of Speed	30	
+2525	Cycle of Speed	40	
+2526	Cycle of Speed	50	
+2527	Cycle of Miracles	80	
+2528	Cycle of Miracles	90	
+2529	Cycle of Miracles	100	
+2530	Cycle of Wisdom	120	
+2531	Cycle of Wisdom	120	
+2532	Cycle of Wisdom	120	
+2533	Cycle of Wisdom	120	
+2534	Cycle of Wisdom	120	
+2535	Cycle of Wisdom	120	
+2536	Cycle of Wisdom	120	
+2537	Cycle of Lust	120	
+2538	--------------------------------------------	0	
+2539	Cycle of Power	60	
+2540	Cycle of Power	60	
+2541	Cycle of Power	60	
+2542	Cycle of Power	60	
+2543	Cycle of Power	70	
+2544	Cycle of Power	70	
+2545	Cycle of Power	70	
+2546	Cycle of Power	70	
+2547	Cycle of Power	80	
+2548	Cycle of Power	80	
+2549	Cycle of Power	80	
+2550	Cycle of Power	80	
+2551	Cycle of Greed	20	
+2552	Cycle of Greed	30	
+2553	Cycle of Greed	40	
+2554	Cycle of Luck	60	
+2555	Cycle of Luck	70	
+2556	Cycle of Luck	80	
+2557	Cycle of Speed	30	
+2558	Cycle of Speed	40	
+2559	Cycle of Speed	50	
+2560	Cycle of Miracles	80	
+2561	Cycle of Miracles	90	
+2562	Cycle of Miracles	100	
+2563	Cycle of Wisdom	120	
+2564	Cycle of Wisdom	120	
+2565	Cycle of Wisdom	120	
+2566	Cycle of Wisdom	120	
+2567	Cycle of Wisdom	120	
+2568	Cycle of Wisdom	120	
+2569	Cycle of Wisdom	120	
+2570	Cycle of Lust	120	
+2571	Cycle of Wealth	90	
+2572	Cycle of Wealth	100	
+2573	Cycle of Wealth	110	
+2574	Cycle of Strength	60	
+2575	Cycle of Strength	70	
+2576	Cycle of Strength	80	
+2577	Diamond Cycle	120	
+2578	Re-Equip When You Die\nTome of Possession	120	
+2579	Lucion's Soulstone	120	

@@ -16,6 +16,7 @@
 class ItemsViewerDialog;
 class FindItemsDialog;
 class ExperienceIndicatorGroupBox;
+class SkillTreeDialog;
 
 namespace Ui { class MedianXLOfflineToolsClass; }
 class QSpinBox;
@@ -99,6 +100,7 @@ private slots:
     void showItems(bool activate = true);
     void itemStorageTabChanged(int tabIndex);
     void giveCube();
+    void fillBeltWithMoonCookies();
 
     // export
     void showSkillPlan();
@@ -131,6 +133,7 @@ private:
     QGroupBox *_questsGroupBox;
     QHash<int, QList<QCheckBox *> > _checkboxesQuestsHash;
     QActionGroup *_backupLimitsGroup, *_showDisenchantPreviewGroup;
+    QPointer<SkillTreeDialog> _skillTreeDialog;
 
     // data
     QString _charPath;

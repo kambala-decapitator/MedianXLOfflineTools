@@ -55,6 +55,9 @@ public:
     virtual ~ItemsViewerDialog() {}
 
     void updateItems(const QHash<int, bool> &plugyStashesExistenceHash, bool isCreatingTabs);
+    void updateBeltItemsCoordinates(bool restore, ItemsList *pBeltItems);
+    void updateGearItems(ItemsList *pBeltItems = 0, ItemsList *pEquippedItems = 0, bool isCreatingTabs = false);
+    void totalItemsIncreasedBy(int n) { _itemsTotal += n; updateWindowTitle(); }
 
     void saveSettings();
     bool isPlugyStorageIndex(int index) { return index >= PersonalStashIndex && index <= HCStashIndex; }
@@ -128,7 +131,6 @@ private:
 
     void itemCountChangedInTab(int tabIndex, int newCount);
     void updateWindowTitle();
-    void updateBeltItemsCoordinates(bool restore, ItemsList *pBeltItems);
 
     void updateUpgradeButtonsState();
     void updateStashButtonsState();

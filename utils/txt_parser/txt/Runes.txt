@@ -3176,7 +3176,7 @@ MarcoNecroX_41	MarcoNecroX_41	1	ama helm	socks:4		azhm									4	r59	r59	r59	r59
 MarcoNecroX_42	MarcoNecroX_42	1	ama shield	socks:6		azsd									6	r58	r58	r58	r58	r58	r58	ac%		300	350	ama		0	2	dmg-norm		100	200	heal-hit		1	1	swing3		40	40	block		1	1	att%		150	150	0
 MarcoNecroX_43	MarcoNecroX_43	1	asn shield	socks:6		ishd									6	r59	r59	r59	r59	r59	r59	ac%		300	350	ass		0	2	heal-hit		1	1	extra-pm		25	25	block		1	1	block3		40	40	dmg-mag		333	333	0
 MarcoNecroX_44	MarcoNecroX_44	1	barb helm	socks:4		phlm									4	r61	r61	r61	r61			ac%		300	350	bar		0	1	res-ltng-max		15	15	dmg-ltng		333	666	abs-ltng		10	10	vit%		30	30	dmg-norm		25	75	0
-MarcoNecroX_45	MarcoNecroX_45	1	barb shield	socks:6		basd									6	r60	r60	r60	r60	r60	r60	ac%		300	350	bar		0	2	pierce-pois		50	50	block		1	1	att%		250	250	extra-pois		20	20	res-pois-max		5	5	0
+MarcoNecroX_45	MarcoNecroX_45	1	barb shield	socks:4		basd									6	r60	r60	r60	r60			ac%		300	350	bar		0	2	pierce-pois		50	50	block		1	1	att%		250	250	extra-pois		20	20	res-pois-max		5	5	0
 MarcoNecroX_46	MarcoNecroX_46	1	druid helm	socks:4		pelt									4	r60	r60	r60	r60			ac%		300	350	dru		0	2	extra-pois		50	50	block		1	1	ease		-50	-50	str%		40	40	str		100	100	0
 MarcoNecroX_47	MarcoNecroX_47	1	nec shield	socks:4		head									4	r59	r59	r59	r59			ac%		300	350	nec		0	1	extra-pm		50	70	heal-kill		100	120	hp-minion		50	75	cast3		30	50	ignore-ac		1	1	0
 MarcoNecroX_48	MarcoNecroX_48	1	pala helm	socks:4		pzhm									4	r58	r58	r58	r58			ac%		300	350	pal		0	1	dmg-norm		150	250	red-dmg%		10	10	lifesteal		10	20	swing3		25	25	res-all		20	25	0

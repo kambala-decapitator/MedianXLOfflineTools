@@ -216,11 +216,11 @@
 213	Undead Flayer
 214	Undead Soul Killer
 215	Undead Stygian Doll
-216	FLYING POLAR BUFFALO ERROR
-217	FLYING POLAR BUFFALO ERROR
-218	FLYING POLAR BUFFALO ERROR
-219	FLYING POLAR BUFFALO ERROR
-220	FLYING POLAR BUFFALO ERROR
+216	\gold;Seal of Frost
+217	\gold;Seal of Hell
+218	\gold;Seal of Wizardry
+219	\gold;Seal of Stone
+220	\gold;Seal of Electrum
 221	FLYING POLAR BUFFALO ERROR
 222	FLYING POLAR BUFFALO ERROR
 223	FLYING POLAR BUFFALO ERROR
@@ -339,6 +339,10 @@
 336	Blood Wing Nest
 337	Guard
 338	FLYING POLAR BUFFALO ERROR
+339	Kabraxis' Prison
+340	Kabraxis' Prison
+341	Kabraxis' Prison
+342	Kabraxis' Prison
 343	FLYING POLAR BUFFALO ERROR
 344	Council Member
 345	Council Member
@@ -1958,7 +1962,7 @@
 1960	PrimeLies
 1961	PrimeSin
 1962	PrimePain
-1963	PrimeAnguish
+1963	Juris Khan, King of Ureh
 1964	PrimeDestruction
 1965	PrimeTerror
 1966	PrimeHatred
@@ -2087,3 +2091,16 @@
 2090	\red;Godsman Guard
 2091	\orange;Chimaera Trap
 2092	Fireheart Totem
+2093	\red;Godsman Guard
+2094	\orange;Slain Soul\blue;
+2095	\gold;(               MarcoNecroX (Secret Boss)               )
+2096	\gold;(               MarcoNecroX (Secret Boss)               )
+2098	\gold;(                  Arihan, High Priest of the Triune                  )
+2099	\gold;(                              Vaca Loca, King of Meat                              )
+2100	\orange;Deathbat
+2101	\gold;Primus' Messenger
+2102	\orange;Chimaera Trap
+2103	\orange;Temple Spire
+2104	\orange;Primal Clay
+2105	\orange;Impaler Archon
+2106	\orange;Kraken Guard
