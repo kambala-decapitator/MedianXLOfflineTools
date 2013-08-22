@@ -59,6 +59,7 @@ public:
     static bool isCube(ItemInfo *item);
 
     static bool doesItemGrantBonus(ItemInfo *item);
+    static bool isCtcProperty(int propId) { return Properties()->value(propId)->descPositive.startsWith('%'); }
 
     static bool canDisenchantIntoArcaneShards(ItemInfo *item);
     static bool canDisenchantIntoSignetOfLearning(ItemInfo *item);

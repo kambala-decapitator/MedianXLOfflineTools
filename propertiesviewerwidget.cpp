@@ -16,6 +16,7 @@
 
 
 static const QString kBaseFormat("<html><body bgcolor=\"black\"><div align=\"center\" style=\"color: #ffffff\">%1</div></body></html>");
+static const char *kTranslationContext = "PropertiesDisplayManager";
 
 
 PropertiesViewerWidget::PropertiesViewerWidget(QWidget *parent) : QWidget(parent), htmlLine(htmlStringFromDiabloColorString("<hr />")), ui(new Ui::PropertiesViewerWidget), _item(0)
@@ -53,12 +54,12 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
     ui->tabWidget->setTabEnabled(2, item->isRW);
     ui->tabWidget->setTabEnabled(3, !item->socketablesInfo.isEmpty());
 
-    QString ilvlText = kHtmlLineBreak + qApp->translate("PropertiesDisplayManager", "Item Level: %1").arg(item->ilvl);
+    QString ilvlText = kHtmlLineBreak + qApp->translate(kTranslationContext, "Item Level: %1").arg(item->ilvl);
     if (item->isEar)
     {
-        QString itemDescription = qApp->translate("PropertiesDisplayManager", "%1's Ear", "param is character name").arg(item->earInfo.name.constData()) + kHtmlLineBreak;
+        QString itemDescription = qApp->translate(kTranslationContext, "%1's Ear", "param is character name").arg(item->earInfo.name.constData()) + kHtmlLineBreak;
         itemDescription += ClassName::classes().at(item->earInfo.classCode) + kHtmlLineBreak;
-        itemDescription += qApp->translate("PropertiesDisplayManager", "Level %1").arg(item->earInfo.level);
+        itemDescription += qApp->translate(kTranslationContext, "Level %1").arg(item->earInfo.level);
         renderHtml(ui->allTextEdit, itemDescription + ilvlText);
         return;
     }
@@ -158,7 +159,7 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
         if (totalDef < 0)
             totalDef = 0;
 
-        QString defString = qApp->translate("PropertiesDisplayManager", "Defense: %1");
+        QString defString = qApp->translate(kTranslationContext, "Defense: %1");
         if (baseDef != totalDef)
             itemDescription += defString.arg(htmlStringFromDiabloColorString(QString::number(totalDef), ColorsManager::Blue)) + QString(" (%1)").arg(baseDef);
         else
@@ -182,7 +183,7 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
         maxDmgTotal += (allProps.value(ItemProperties::MaximumDamageBasedOnClvl, foo)->value * clvl) / 32;
 
         ColorsManager::ColorIndex damageColor = ed + minDmgTotal + maxDmgTotal > 0 ? ColorsManager::Blue : ColorsManager::White; // blue if any property exists
-        QString damageFormat = qApp->translate("PropertiesDisplayManager", "%1 to %2", "min-max damage");
+        QString damageFormat = qApp->translate(kTranslationContext, "%1 to %2", "min-max damage");
 
         // if min == max, then increment max by 1
         if (itemBase->minThrowDmg && itemBase->maxThrowDmg)
@@ -196,7 +197,7 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
             minDmg += minDmgTotal;
             maxDmg += maxDmgTotal;
 
-            itemDescription += qApp->translate("PropertiesDisplayManager", "Throw Damage") + ": " + htmlStringFromDiabloColorString(damageFormat.arg(minDmg).arg(maxDmg + (minDmg == maxDmg)), damageColor) + kHtmlLineBreak;
+            itemDescription += qApp->translate(kTranslationContext, "Throw Damage") + ": " + htmlStringFromDiabloColorString(damageFormat.arg(minDmg).arg(maxDmg + (minDmg == maxDmg)), damageColor) + kHtmlLineBreak;
         }
 
         if (itemBase->min1hDmg && itemBase->max1hDmg)
@@ -210,7 +211,7 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
             minDmg += minDmgTotal;
             maxDmg += maxDmgTotal;
 
-            itemDescription += qApp->translate("PropertiesDisplayManager", "One-Hand Damage") + ": " + htmlStringFromDiabloColorString(damageFormat.arg(minDmg).arg(maxDmg + (minDmg == maxDmg)), damageColor) + kHtmlLineBreak;
+            itemDescription += qApp->translate(kTranslationContext, "One-Hand Damage") + ": " + htmlStringFromDiabloColorString(damageFormat.arg(minDmg).arg(maxDmg + (minDmg == maxDmg)), damageColor) + kHtmlLineBreak;
         }
 
         if (itemBase->min2hDmg && itemBase->max2hDmg)
@@ -224,25 +225,25 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
             minDmg += minDmgTotal;
             maxDmg += maxDmgTotal;
 
-            itemDescription += qApp->translate("PropertiesDisplayManager", "Two-Hand Damage") + ": " + htmlStringFromDiabloColorString(damageFormat.arg(minDmg).arg(maxDmg + (minDmg == maxDmg)), damageColor) + kHtmlLineBreak;
+            itemDescription += qApp->translate(kTranslationContext, "Two-Hand Damage") + ": " + htmlStringFromDiabloColorString(damageFormat.arg(minDmg).arg(maxDmg + (minDmg == maxDmg)), damageColor) + kHtmlLineBreak;
         }
     }
     if (itemBase->genericType != ItemTypeGeneric::Misc && item->maxDurability)
     {
-        itemDescription += qApp->translate("PropertiesDisplayManager", "Durability") + ": ";
+        itemDescription += qApp->translate(kTranslationContext, "Durability") + ": ";
         bool isIndestructible = allProps.value(ItemProperties::Indestructible, foo)->value == 1;
         if (isIndestructible)
             itemDescription += QString("%1 [").arg(QChar(0x221e)); // infinity
-        itemDescription += qApp->translate("PropertiesDisplayManager", "%1 of %2", "durability").arg(item->currentDurability).arg(item->maxDurability);
+        itemDescription += qApp->translate(kTranslationContext, "%1 of %2", "durability").arg(item->currentDurability).arg(item->maxDurability);
         if (isIndestructible)
             itemDescription += "]";
         itemDescription += kHtmlLineBreak;
     }
     if (itemBase->isStackable)
-        itemDescription += qApp->translate("PropertiesDisplayManager", "Quantity: %1").arg(item->quantity) + kHtmlLineBreak;
+        itemDescription += qApp->translate(kTranslationContext, "Quantity: %1").arg(item->quantity) + kHtmlLineBreak;
     if (itemBase->classCode > -1)
     {
-        QString text = qApp->translate("PropertiesDisplayManager", "(%1 Only)", "class-specific item").arg(ClassName::classes().at(itemBase->classCode));
+        QString text = qApp->translate(kTranslationContext, "(%1 Only)", "class-specific item").arg(ClassName::classes().at(itemBase->classCode));
         if (itemBase->classCode != charBasicInfo.classCode)
             itemDescription += htmlStringFromDiabloColorString(text, ColorsManager::Red);
         else
@@ -253,12 +254,12 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
     // TODO: [later] use lambda to calculate requirements
     if (itemBase->rdex)
         if (quint16 rdex = itemBase->rdex + (itemBase->rdex * allProps.value(ItemProperties::Requirements, foo)->value) / 100)
-            itemDescription += htmlStringFromDiabloColorString(qApp->translate("PropertiesDisplayManager", "Required Dexterity: %1").arg(rdex), charInfo.valueOfStatistic(CharacterStats::Dexterity) < rdex ? ColorsManager::Red : ColorsManager::White)
+            itemDescription += htmlStringFromDiabloColorString(qApp->translate(kTranslationContext, "Required Dexterity: %1").arg(rdex), charInfo.valueOfStatistic(CharacterStats::Dexterity) < rdex ? ColorsManager::Red : ColorsManager::White)
                                + kHtmlLineBreak;
 
     if (itemBase->rstr)
         if (quint16 rstr = itemBase->rstr + (itemBase->rstr * allProps.value(ItemProperties::Requirements, foo)->value) / 100)
-            itemDescription += htmlStringFromDiabloColorString(qApp->translate("PropertiesDisplayManager", "Required Strength: %1").arg(rstr),  charInfo.valueOfStatistic(CharacterStats::Strength)  < rstr ? ColorsManager::Red : ColorsManager::White)
+            itemDescription += htmlStringFromDiabloColorString(qApp->translate(kTranslationContext, "Required Strength: %1").arg(rstr),  charInfo.valueOfStatistic(CharacterStats::Strength)  < rstr ? ColorsManager::Red : ColorsManager::White)
                                + kHtmlLineBreak;
 
     int rlvl;
@@ -289,7 +290,7 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
             maxSocketableRlvl = socketableRlvl;
     }
     if (int actualRlvl = qMax(rlvl, maxSocketableRlvl) + allProps.value(ItemProperties::RequiredLevel, foo)->value)
-        itemDescription += htmlStringFromDiabloColorString(qApp->translate("PropertiesDisplayManager", "Required Level: %1").arg(actualRlvl), clvl < actualRlvl ? ColorsManager::Red : ColorsManager::White) + kHtmlLineBreak;
+        itemDescription += htmlStringFromDiabloColorString(qApp->translate(kTranslationContext, "Required Level: %1").arg(actualRlvl), clvl < actualRlvl ? ColorsManager::Red : ColorsManager::White) + kHtmlLineBreak;
     delete foo;
 
     // add '+50% damage to undead' if item type matches
@@ -305,12 +306,12 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
     if (!allProps.isEmpty())
     {
         if (!item->isIdentified)
-            itemDescription += htmlStringFromDiabloColorString(qApp->translate("PropertiesDisplayManager", "[Unidentified]"), ColorsManager::Red) + kHtmlLineBreak;
+            itemDescription += htmlStringFromDiabloColorString(qApp->translate(kTranslationContext, "[Unidentified]"), ColorsManager::Red) + kHtmlLineBreak;
         itemDescription += propertiesToHtml(allProps);
     }
     else if (ItemDataBase::isGenericSocketable(item))
     {
-        static const QStringList gearNames = QStringList() << qApp->translate("PropertiesDisplayManager", "Armor") << qApp->translate("PropertiesDisplayManager", "Shield") << qApp->translate("PropertiesDisplayManager", "Weapon");
+        static const QStringList gearNames = QStringList() << qApp->translate(kTranslationContext, "Armor") << qApp->translate(kTranslationContext, "Shield") << qApp->translate(kTranslationContext, "Weapon");
         QStringList propStrings;
         for (qint8 socketableType = SocketableItemInfo::Armor; socketableType <= SocketableItemInfo::Weapon; ++socketableType)
         {
@@ -324,36 +325,40 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
     }
 
     if (shouldAddDamageToUndeadInTheBottom)
-        itemDescription += htmlStringFromDiabloColorString(qApp->translate("PropertiesDisplayManager", "+50% Damage to Undead"), ColorsManager::Blue) + kHtmlLineBreak;
+        itemDescription += htmlStringFromDiabloColorString(qApp->translate(kTranslationContext, "+50% Damage to Undead"), ColorsManager::Blue) + kHtmlLineBreak;
     if (item->isSocketed)
-        itemDescription += htmlStringFromDiabloColorString(qApp->translate("PropertiesDisplayManager", "Socketed: (%1), Inserted: (%2)").arg(item->socketsNumber).arg(item->socketablesNumber), ColorsManager::Blue) + kHtmlLineBreak;
+        itemDescription += htmlStringFromDiabloColorString(qApp->translate(kTranslationContext, "Socketed: (%1), Inserted: (%2)").arg(item->socketsNumber).arg(item->socketablesNumber), ColorsManager::Blue) + kHtmlLineBreak;
     if (item->isEthereal)
-        itemDescription += htmlStringFromDiabloColorString(qApp->translate("PropertiesDisplayManager", "Ethereal (Cannot be Repaired)"), ColorsManager::Blue) + kHtmlLineBreak;
+        itemDescription += htmlStringFromDiabloColorString(qApp->translate(kTranslationContext, "Ethereal (Cannot be Repaired)"), ColorsManager::Blue) + kHtmlLineBreak;
 
     if (item->quality == ItemQuality::Set)
     {
-        // set item properties stored in item
-        if (!item->setProps.isEmpty())
-            itemDescription += propertiesToHtml(item->setProps, ColorsManager::Green);
-
-        // set item properties from txt
-        PropertiesMultiMap setItemFixedProps = collectSetFixedProps(ItemDataBase::Sets()->value(item->setOrUniqueId)->fixedProperties);
-        if (!setItemFixedProps.isEmpty())
-            itemDescription += propertiesToHtml(setItemFixedProps, ColorsManager::Green);
-        qDeleteAll(setItemFixedProps);
-
-        // set properties
         SetItemInfo *setItem = ItemDataBase::Sets()->value(item->setOrUniqueId);
         const FullSetInfo fullSetInfo = ItemDataBase::fullSetInfoForKey(setItem->key);
+
         if (item->location == ItemLocation::Equipped || item->location == ItemLocation::Corpse || item->location == ItemLocation::Merc)
         {
-            int setItemsOnCharacter = 1;
+            // set item properties stored in item (seems that they're not needed)
+            //if (!item->setProps.isEmpty())
+            //    itemDescription += propertiesToHtml(item->setProps, ColorsManager::Green);
+
+            // count equipped set items
+            quint8 setItemsOnCharacter = 1;
             foreach (ItemInfo *anItem, ItemDataBase::itemsStoredIn(item->storage, item->location))
                 if (anItem != item && anItem->quality == ItemQuality::Set && fullSetInfo.itemNames.contains(ItemDataBase::Sets()->value(anItem->setOrUniqueId)->itemName))
                     ++setItemsOnCharacter;
+            
             if (setItemsOnCharacter > 1)
             {
-                PropertiesMultiMap setFixedProps = collectSetFixedProps(fullSetInfo.partialSetProperties, (setItemsOnCharacter - 1) * 2);
+                quint8 partialPropsNumber = (setItemsOnCharacter - 1) * 2;
+                // set item properties from txt
+                PropertiesMultiMap setItemFixedProps = collectSetFixedProps(ItemDataBase::Sets()->value(item->setOrUniqueId)->fixedProperties, partialPropsNumber);
+                if (!setItemFixedProps.isEmpty())
+                    itemDescription += propertiesToHtml(setItemFixedProps, ColorsManager::Green);
+                qDeleteAll(setItemFixedProps);
+
+                // set properties
+                PropertiesMultiMap setFixedProps = collectSetFixedProps(fullSetInfo.partialSetProperties, partialPropsNumber);
                 if (setItemsOnCharacter == fullSetInfo.itemNames.size())
                 {
                     PropertiesMultiMap fullSetProperties = collectSetFixedProps(fullSetInfo.fullSetProperties);
@@ -639,14 +644,22 @@ PropertiesMultiMap PropertiesViewerWidget::collectSetFixedProps(const QList<SetF
         foreach (int propId, setProp.ids)
         {
             ItemProperty *prop = new ItemProperty(0, setProp.param);
-            switch (propId)
+            if (ItemDataBase::isCtcProperty(propId))
             {
-            case Enums::ItemProperties::MinimumDamageFire: case Enums::ItemProperties::MinimumDamageLightning: case Enums::ItemProperties::MinimumDamageMagic: case Enums::ItemProperties::MinimumDamageCold:
                 prop->value = setProp.minValue;
-                break;
-            default:
-                prop->value = setProp.maxValue;
-                break;
+                prop->param = (setProp.param << 6) + setProp.maxValue;
+            }
+            else
+            {
+                switch (propId)
+                {
+                case Enums::ItemProperties::MinimumDamageFire: case Enums::ItemProperties::MinimumDamageLightning: case Enums::ItemProperties::MinimumDamageMagic: case Enums::ItemProperties::MinimumDamageCold:
+                    prop->value = setProp.minValue;
+                    break;
+                default:
+                    prop->value = setProp.maxValue;
+                    break;
+                }
             }
             if (propId == Enums::ItemProperties::MinimumDamageMagic || propId == Enums::ItemProperties::MaximumDamageMagic)
                 ItemParser::convertParamsInMagicDamageString(prop, ItemDataBase::Properties()->value(propId));

@@ -417,7 +417,7 @@ QString PropertiesDisplayManager::propertyDisplay(ItemProperty *propDisplay, int
     (valueStringSigned, "%+d", value);
 
     QString description = value < 0 ? prop->descNegative : prop->descPositive, result;
-    switch (prop->descFunc) // it's described in http://phrozenkeep.hugelaser.com/index.php?ind=reviews&op=entry_view&iden=448 - ItemStatCost.txt tutorial
+    switch (prop->descFunc) // it's described in http://d2mods.info/index.php?ind=reviews&op=entry_view&iden=448 - ItemStatCost.txt tutorial
     {
     case 0:
         break;
@@ -452,11 +452,11 @@ QString PropertiesDisplayManager::propertyDisplay(ItemProperty *propDisplay, int
         result = QString("%1% %2").arg(-value).arg(description); // 1 or 2
         break;
     case 23: // reanimate
-        {
-            const QString &monsterName = ItemDataBase::Monsters()->value(propDisplay->param);
-            result = QString("%1% %2 %3").arg(value).arg(description).arg(shouldColor ? htmlStringFromDiabloColorString(monsterName, ColorsManager::Blue) : monsterName);
-            break;
-        }
+    {
+        const QString &monsterName = ItemDataBase::Monsters()->value(propDisplay->param);
+        result = QString("%1% %2 %3").arg(value).arg(description).arg(shouldColor ? htmlStringFromDiabloColorString(monsterName, ColorsManager::NoColor) : monsterName);
+        break;
+    }
     // 9, 10, 14, 16-19 - absent
     // everything else is constructed in ItemParser (mostly in parseItemProperties()), i.e. has displayString
     default:

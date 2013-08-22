@@ -261,6 +261,7 @@ public:
         DamageToUndead = 122,
         AllSkills = 127,
         Indestructible = 152,
+        ChargedSkill = 204,
         DefenceBasedOnClvl = 214,
         EnhancedDefenceBasedOnClvl,
         MaximumDamageBasedOnClvl = 218,

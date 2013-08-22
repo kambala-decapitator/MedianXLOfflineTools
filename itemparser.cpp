@@ -440,14 +440,11 @@ void ItemParser::createDisplayStringForPropertyWithId(int id, ItemProperty *prop
         if (deleteSkill)
             delete skill;
     }
-    else if (id == 204)
-    {
-        prop->displayString = tr("Level %1 %2 (%3/%4 Charges)").arg(prop->param &  63).arg(ItemDataBase::Skills()->value(prop->param >> 6)->name)
-            .arg(prop->value & 255).arg(prop->value >> 8);
-    }
+    else if (id == Enums::ItemProperties::ChargedSkill)
+        prop->displayString = tr("Level %1 %2 (%3/%4 Charges)").arg(prop->param & 63).arg(ItemDataBase::Skills()->value(prop->param >> 6)->name).arg(prop->value & 255).arg(prop->value >> 8);
     else if (id == Enums::ItemProperties::ItemDuped)
         prop->displayString = QString("[%1]").arg(tr("duped flag"));
-    else if (ItemDataBase::Properties()->value(id)->descPositive.startsWith('%')) // ctc
+    else if (ItemDataBase::isCtcProperty(id))
     {
         QString desc = ItemDataBase::Properties()->value(id)->descPositive;
         for (int i = 0, k = 1; k <= 3 && i < desc.length(); ++i)
