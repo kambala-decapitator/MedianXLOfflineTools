@@ -15,7 +15,7 @@
 #endif
 
 
-static const QString kBaseFormat("<html><body bgcolor=\"black\"><div align=\"center\" style=\"color: white\">%1</div></body></html>");
+static const QString kBaseFormat("<html><body bgcolor=\"black\" align=\"center\" style=\"color: white\">%1</body></html>");
 static const char *kTranslationContext = "PropertiesDisplayManager";
 
 
@@ -115,6 +115,9 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
             PropertiesMap socketableProps = PropertiesDisplayManager::socketableProperties(socketableItem, itemBase->socketableType);
             PropertiesDisplayManager::addProperties(&allProps, socketableProps);
             html += ItemDataBase::completeItemName(socketableItem, true) + kHtmlLineBreak + propertiesToHtml(socketableProps) + htmlLine;
+
+            if (socketableProps != socketableItem->props)
+                qDeleteAll(socketableProps);
         }
         renderHtml(ui->socketablesTextEdit, html);
     }
@@ -348,19 +351,18 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
                 if (anItem != item && anItem->quality == ItemQuality::Set && fullSetInfo.itemNames.contains(ItemDataBase::Sets()->value(anItem->setOrUniqueId)->itemName))
                     ++setItemsOnCharacter;
             
-            if (setItemsOnCharacter > 1)
+            if (quint8 partialPropsNumber = (setItemsOnCharacter - 1) * 2)
             {
-                quint8 partialPropsNumber = (setItemsOnCharacter - 1) * 2;
                 // set item properties from txt
-                PropertiesMultiMap setItemFixedProps = collectSetFixedProps(ItemDataBase::Sets()->value(item->setOrUniqueId)->fixedProperties, partialPropsNumber);
+                PropertiesMultiMap setItemFixedProps = PropertiesDisplayManager::collectSetFixedProps(setItem->fixedProperties, partialPropsNumber);
                 if (!setItemFixedProps.isEmpty())
                     itemDescription += propertiesToHtml(setItemFixedProps, ColorsManager::Green);
                 qDeleteAll(setItemFixedProps);
 
-                // set properties
-                PropertiesMultiMap setFixedProps = collectSetFixedProps(fullSetInfo.partialSetProperties, partialPropsNumber);
+                // set properties from txt
+                PropertiesMultiMap setFixedProps = PropertiesDisplayManager::collectSetFixedProps(fullSetInfo.partialSetProperties, partialPropsNumber);
                 if (setItemsOnCharacter == fullSetInfo.itemNames.size())
-                    PropertiesDisplayManager::addProperties(&setFixedProps, collectSetFixedProps(fullSetInfo.fullSetProperties));
+                    PropertiesDisplayManager::addTemporaryPropertiesAndDelete(&setFixedProps, PropertiesDisplayManager::collectSetFixedProps(fullSetInfo.fullSetProperties));
                 itemDescription += kHtmlLineBreak + propertiesToHtml(setFixedProps, ColorsManager::Gold);
                 qDeleteAll(setFixedProps);
             }
@@ -605,40 +607,4 @@ QString PropertiesViewerWidget::collectMysticOrbsDataFromProps(QSet<int> *moSet,
 bool PropertiesViewerWidget::isMysticOrbEffectDoubled() const
 {
     return _item->props.contains(Enums::ItemProperties::MysticOrbsEffectDoubled) || _item->rwProps.contains(Enums::ItemProperties::MysticOrbsEffectDoubled);// || _item->setProps.contains(Enums::ItemProperties::MysticOrbsEffectDoubled);
-}
-
-PropertiesMultiMap PropertiesViewerWidget::collectSetFixedProps(const QList<SetFixedProperty> &setProps, quint8 propsNumber /*= 0*/)
-{
-    PropertiesMultiMap setFixedProps;
-    for (quint8 i = 0, n = propsNumber ? qMin(propsNumber, static_cast<quint8>(setProps.size())) : setProps.size(); i < n; ++i)
-    {
-        const SetFixedProperty &setProp = setProps.at(i);
-        foreach (int propId, setProp.ids)
-        {
-            ItemProperty *prop = new ItemProperty(0, setProp.param);
-            if (ItemDataBase::isCtcProperty(propId))
-            {
-                prop->value = setProp.minValue;
-                prop->param = (setProp.param << 6) + setProp.maxValue;
-            }
-            else
-            {
-                switch (propId)
-                {
-                case Enums::ItemProperties::MinimumDamageFire: case Enums::ItemProperties::MinimumDamageLightning: case Enums::ItemProperties::MinimumDamageMagic: case Enums::ItemProperties::MinimumDamageCold:
-                    prop->value = setProp.minValue;
-                    break;
-                default:
-                    prop->value = setProp.maxValue;
-                    break;
-                }
-            }
-            if (propId == Enums::ItemProperties::MinimumDamageMagic || propId == Enums::ItemProperties::MaximumDamageMagic)
-                ItemParser::convertParamsInMagicDamageString(prop, ItemDataBase::Properties()->value(propId));
-            else
-                ItemParser::createDisplayStringForPropertyWithId(propId, prop);
-            setFixedProps.insert(propId, prop);
-        }
-    }
-    return setFixedProps;
 }

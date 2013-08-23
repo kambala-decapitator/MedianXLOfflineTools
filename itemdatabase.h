@@ -36,7 +36,7 @@ public:
     static QHash<QByteArray, SocketableItemInfo *> *Socketables();
     static QStringList *NonMagicItemQualities();
 
-    static FullSetInfo fullSetInfoForKey(const QString &setKey) { return _sets.value(setKey); }
+    static FullSetInfo fullSetInfoForKey(const QByteArray &setKey) { return _sets.value(setKey); }
     static QString completeItemName(ItemInfo *item, bool shouldUseColor, bool showQualityText = true);
     static QHash<int, ColorsManager::ColorIndex> *itemQualityColorsHash();
     static ColorsManager::ColorIndex colorOfItem(ItemInfo *item);
@@ -65,7 +65,7 @@ public:
     static bool canDisenchantIntoSignetOfLearning(ItemInfo *item);
 
 private:
-    static QHash<QString, FullSetInfo> _sets;
+    static QHash<QByteArray, FullSetInfo> _sets;
 
     static QList<QByteArray> stringArrayOfCurrentLineInFile(QIODevice &d);
     static void expandMultilineString(QString *stringToExpand);

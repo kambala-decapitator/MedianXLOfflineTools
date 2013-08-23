@@ -17,7 +17,7 @@
 
 
 const char *const ItemDataBase::kJewelType = "jew";
-QHash<QString, FullSetInfo> ItemDataBase::_sets;
+QHash<QByteArray, FullSetInfo> ItemDataBase::_sets;
 
 QByteArray ItemDataBase::decompressedFileData(const QString &compressedFilePath, const QString &errorMessage)
 {

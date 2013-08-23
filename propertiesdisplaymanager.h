@@ -20,6 +20,7 @@ public:
 
     static QString completeItemDescription(ItemInfo *item); // this is an ugly copy-paste from properties viewer, but I didn't find a better way; currently used for search
     static void addProperties(PropertiesMap *mutableProps, const PropertiesMap &propsToAdd, const QSet<int> *pIgnorePropIds = 0);
+    static void addTemporaryPropertiesAndDelete(PropertiesMap *mutableProps, const PropertiesMap &tempPropsToAdd, const QSet<int> *pIgnorePropIds = 0);
     // currently shouldColor is used for reanimates' names only
     static void constructPropertyStrings(const PropertiesMap &properties, QMap<quint8, ItemPropertyDisplay> *outDisplayPropertiesMap, bool shouldColor = false, ItemInfo *item = 0);
     static SecondaryDamageUsage secondaryDamageUsage(int secondaryDamageId, int secondaryDamageValue, const PropertiesMap &allProperties, ItemInfo *item);
@@ -30,6 +31,7 @@ public:
     static PropertiesMap genericSocketableProperties(ItemInfo *socketableItem, qint8 socketableType);
 
     static void addChallengeNamesToClassCharm(PropertiesMap::iterator &iter);
+    static PropertiesMultiMap collectSetFixedProps(const QList<SetFixedProperty> &setProps, quint8 propsNumber = 0);
 
     static const QList<QByteArray> kDamageToUndeadTypes;
 };

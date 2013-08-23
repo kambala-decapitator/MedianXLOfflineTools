@@ -203,7 +203,8 @@ struct SetFixedProperty
 
 struct SetItemInfo : public SetOrUniqueItemInfo
 {
-    QString itemName, setName, key;
+    QString itemName, setName;
+    QByteArray key;
     QList<SetFixedProperty> fixedProperties;
 };
 

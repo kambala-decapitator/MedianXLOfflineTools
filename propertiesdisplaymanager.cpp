@@ -7,7 +7,7 @@
 #include <QDebug>
 #endif
 
-#define SHOW_PROPERTY_ID
+//#define SHOW_PROPERTY_ID
 
 
 const QList<QByteArray> PropertiesDisplayManager::kDamageToUndeadTypes = QList<QByteArray>() << "mace" << "hamm" << "staf" << "scep" << "club" << "wand";
@@ -46,7 +46,12 @@ QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item)
 
     ItemBase *itemBase = ItemDataBase::Items()->value(item->itemType);
     foreach (ItemInfo *socketableItem, item->socketablesInfo)
-        addProperties(&allProps, ItemDataBase::isGenericSocketable(socketableItem) ? genericSocketableProperties(socketableItem, itemBase->socketableType) : socketableItem->props);
+    {
+        PropertiesMap socketableProps = socketableProperties(socketableItem, itemBase->socketableType);
+        addProperties(&allProps, socketableProps);
+        if (socketableProps != socketableItem->props)
+            qDeleteAll(socketableProps);
+    }
 
     // create full item description
     QString itemDescription = ItemDataBase::completeItemName(item, false).replace(kHtmlLineBreak, "\n") + ilvlText;
@@ -267,6 +272,12 @@ void PropertiesDisplayManager::addProperties(PropertiesMap *mutableProps, const 
     }
 }
 
+void PropertiesDisplayManager::addTemporaryPropertiesAndDelete(PropertiesMap *mutableProps, const PropertiesMap &tempPropsToAdd, const QSet<int> *pIgnorePropIds /*= 0*/)
+{
+    addProperties(mutableProps, tempPropsToAdd, pIgnorePropIds);
+    qDeleteAll(tempPropsToAdd);
+}
+
 void PropertiesDisplayManager::constructPropertyStrings(const PropertiesMap &properties, QMap<quint8, ItemPropertyDisplay> *outDisplayPropertiesMap, bool shouldColor /*= false*/, ItemInfo *item /*= 0*/)
 {
     using namespace Enums;
@@ -475,6 +486,24 @@ QString PropertiesDisplayManager::propertyDisplay(ItemProperty *propDisplay, int
     return result;
 }
 
+QString PropertiesDisplayManager::propertiesToHtml(const PropertiesMap &properties, ItemInfo *item /*= 0*/, int textColor /*= ColorsManager::Blue*/)
+{
+    QMap<quint8, ItemPropertyDisplay> propsDisplayMap;
+    constructPropertyStrings(properties, &propsDisplayMap, true, item);
+
+    QString html;
+    QMap<quint8, ItemPropertyDisplay>::const_iterator iter = propsDisplayMap.constEnd();
+    while (iter != propsDisplayMap.constBegin())
+    {
+        --iter;
+#ifdef SHOW_PROPERTY_ID
+        html += QString("[%1] ").arg(iter.value().propertyId);
+#endif
+        html += htmlStringFromDiabloColorString(iter.value().displayString, ColorsManager::NoColor) + kHtmlLineBreak;
+    }
+    return coloredText(html, textColor);
+}
+
 PropertiesMap PropertiesDisplayManager::socketableProperties(ItemInfo *socketableItem, qint8 socketableType)
 {
     return ItemDataBase::isGenericSocketable(socketableItem) ? genericSocketableProperties(socketableItem, socketableType) : socketableItem->props;
@@ -534,20 +563,38 @@ void PropertiesDisplayManager::addChallengeNamesToClassCharm(PropertiesMap::iter
     desc = QString("[%1]").arg(desc);
 }
 
-QString PropertiesDisplayManager::propertiesToHtml(const PropertiesMap &properties, ItemInfo *item /*= 0*/, int textColor /*= ColorsManager::Blue*/)
+PropertiesMultiMap PropertiesDisplayManager::collectSetFixedProps(const QList<SetFixedProperty> &setProps, quint8 propsNumber /*= 0*/)
 {
-    QMap<quint8, ItemPropertyDisplay> propsDisplayMap;
-    constructPropertyStrings(properties, &propsDisplayMap, true, item);
-
-    QString html;
-    QMap<quint8, ItemPropertyDisplay>::const_iterator iter = propsDisplayMap.constEnd();
-    while (iter != propsDisplayMap.constBegin())
+    PropertiesMultiMap setFixedProps;
+    for (quint8 i = 0, n = propsNumber ? qMin(propsNumber, static_cast<quint8>(setProps.size())) : setProps.size(); i < n; ++i)
     {
-        --iter;
-#ifdef SHOW_PROPERTY_ID
-        html += QString("[%1] ").arg(iter.value().propertyId);
-#endif
-        html += htmlStringFromDiabloColorString(iter.value().displayString, ColorsManager::NoColor) + kHtmlLineBreak;
+        const SetFixedProperty &setProp = setProps.at(i);
+        foreach (int propId, setProp.ids)
+        {
+            ItemProperty *prop = new ItemProperty(0, setProp.param);
+            if (ItemDataBase::isCtcProperty(propId))
+            {
+                prop->value = setProp.minValue;
+                prop->param = (setProp.param << 6) + setProp.maxValue;
+            }
+            else
+            {
+                switch (propId)
+                {
+                case Enums::ItemProperties::MinimumDamageFire: case Enums::ItemProperties::MinimumDamageLightning: case Enums::ItemProperties::MinimumDamageMagic: case Enums::ItemProperties::MinimumDamageCold:
+                    prop->value = setProp.minValue;
+                    break;
+                default:
+                    prop->value = setProp.maxValue;
+                    break;
+                }
+            }
+            if (propId == Enums::ItemProperties::MinimumDamageMagic || propId == Enums::ItemProperties::MaximumDamageMagic)
+                ItemParser::convertParamsInMagicDamageString(prop, ItemDataBase::Properties()->value(propId));
+            else
+                ItemParser::createDisplayStringForPropertyWithId(propId, prop);
+            setFixedProps.insert(propId, prop);
+        }
     }
-    return coloredText(html, textColor);
+    return setFixedProps;
 }
