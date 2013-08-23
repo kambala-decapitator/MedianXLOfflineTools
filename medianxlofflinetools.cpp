@@ -18,6 +18,7 @@
 #include "messagecheckbox.h"
 #include "experienceindicatorgroupbox.h"
 #include "skilltreedialog.h"
+#include "propertiesdisplaymanager.h"
 #ifdef DUPE_CHECK
 #include "dupescandialog.h"
 #endif
@@ -29,6 +30,7 @@
 #include <QFileDialog>
 #include <QLabel>
 #include <QMimeData>
+#include <QTextEdit>
 
 #include <QSettings>
 #include <QFile>
@@ -1087,7 +1089,25 @@ void MedianXLOfflineTools::showSkillPlan()
 
 void MedianXLOfflineTools::showAllStats()
 {
+    const QSet<int> kIgnoreProps = QSet<int>() << 16 << 17 << 75 << 91 << 92 << 152 << 219 << 243 << 263 << 276 << 296 << 299 << 300 << 418 << 419 << 421 << 422 << 423 << 424 << 425 << 427 << 442 << 443 << 473 << 474 << 491;
 
+    PropertiesMap allProps;
+    foreach (ItemInfo *item, CharacterInfo::instance().items.character)
+    {
+        if (ItemDataBase::doesItemGrantBonus(item))
+        {
+            PropertiesDisplayManager::addProperties(&allProps, item->props, &kIgnoreProps);
+            PropertiesDisplayManager::addProperties(&allProps, item->rwProps, &kIgnoreProps);
+
+            ItemBase *itemBase = ItemDataBase::Items()->value(item->itemType);
+            foreach (ItemInfo *socketableItem, item->socketablesInfo)
+                PropertiesDisplayManager::addProperties(&allProps, PropertiesDisplayManager::socketableProperties(socketableItem, itemBase->socketableType), &kIgnoreProps);
+        }
+    }
+
+    QTextEdit *textEdit = new QTextEdit(QString("<html><body bgcolor=\"black\">%1</body></html>").arg(PropertiesDisplayManager::propertiesToHtml(allProps, 0, ColorsManager::White)));
+    textEdit->setReadOnly(true);
+    textEdit->show();
 }
 
 void MedianXLOfflineTools::backupSettingTriggered(bool checked)
@@ -2110,7 +2130,7 @@ bool MedianXLOfflineTools::processSaveFile()
     //                                                 << ItemProperties::Stamina << ItemProperties::Avoid1;
     //QMap<quint16, qint32> propValues; // replace with QHash
     //foreach (ItemInfo *item, itemsBuffer)
-    //    if (item->location == ItemLocation::Equipped || (item->storage == ItemStorage::Inventory && ItemDataBase::isUberCharm(item)))
+    //    if (ItemDataBase::doesItemGrantBonus(item))
     //        foreach (quint16 propKey, propKeys)
     //            propValues[propKey] = getValueOfPropertyInItem(propKey, item);
     //for (auto iter = propValues.constBegin(); iter != propValues.constEnd(); ++iter)

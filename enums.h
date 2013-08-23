@@ -265,7 +265,7 @@ public:
         DefenceBasedOnClvl = 214,
         EnhancedDefenceBasedOnClvl,
         MaximumDamageBasedOnClvl = 218,
-        TrophyOrBless = 219,
+        Trophy_ShrineBless_ClassCharmVeterans = 219,
         ItemDuped = 276,
         MysticOrbsEffectDoubled = 296,
         Avoid1 = 338,

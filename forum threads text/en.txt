@@ -6,7 +6,7 @@ As you can guess from the title, it's an almost complete offline analogue of gri
 
 Application should be able to load character from any version of Median XL and successfully perform basic operations with it like respeccing. Items processing relies on the mod source files, so it may not be compatible with any chacarcter from different version. This data is softcoded, so when a new mod version is released, usually there's no need to recompile the application — one just needs to replace the data found in 'resources/data' with the new one, which I will provide. Currently supported mod versions:
 [list][*]Median XL 2012 v005 (earlier versions may also work, but I don't guarantee it)
-[*]Ultimative v7 (v5+ characters may be compatible)
+[*]Ultimative X (v5+ characters should be compatible)
 [*]Kehjan Labyrinth + Tathamet vs Anu
 [*]Hardened
 [/list]
@@ -47,7 +47,7 @@ I hope I provided enough anti-hack protection for an average user. If you manage
 [/list][*]and many others ;)
 [/list]
 
-[size=18][color=#6666ff]WARNING: by default you can open only characters from Ultimative v7. If you want to open non-Ultimative characters, please refer to the [b]Mod data[/b] download section.[/color][/size]
+[size=18][color=#6666ff]WARNING: by default you can open only characters from [b]Ultimative v7[/b]. If you want to open characters from other mods/mod versions, please refer to the [b]Mod data[/b] download section.[/color][/size]
 
 [b]Downloads[/b]:
 [list][*][b]Application[/b]:
@@ -245,7 +245,7 @@ cp -R resources/data/* "${APP_PATH}/Contents/resources/data"[/code]
 [list][*][i]BrotherLaz[/i] for this awesome mod
 [*][i]MarcoNecroX[/i] for a hot extension of Median XL called Ultimative
 [*][i]grig[/i] for the Perl source of Median XL Online Tools and tips
-[*][i][url=http://phrozenkeep.hugelaser.com/index.php?ind=reviews&op=section_view&idev=4]Phrozen Keep File Guides[/url][/i] for tons of useful information on txt sources
+[*][i][url=http://d2mods.info/index.php?ind=reviews&op=section_view&idev=4]Phrozen Keep File Guides[/url][/i] for tons of useful information on txt sources
 [*][i]aahz[/i] for providing space on MXL server
 [*][i]community members[/i] (find full list in the app) for intensive testing and tips on GUI & functionality
 [/list]

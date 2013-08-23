@@ -7,6 +7,8 @@
 #include <QDebug>
 #endif
 
+#define SHOW_PROPERTY_ID
+
 
 const QList<QByteArray> PropertiesDisplayManager::kDamageToUndeadTypes = QList<QByteArray>() << "mace" << "hamm" << "staf" << "scep" << "club" << "wand";
 
@@ -236,24 +238,32 @@ QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item)
     return itemDescription;
 }
 
-void PropertiesDisplayManager::addProperties(PropertiesMap *mutableProps, const PropertiesMap &propsToAdd)
+void PropertiesDisplayManager::addProperties(PropertiesMap *mutableProps, const PropertiesMap &propsToAdd, const QSet<int> *pIgnorePropIds /*= 0*/)
 {
     for (PropertiesMultiMap::const_iterator iter = propsToAdd.constBegin(); iter != propsToAdd.constEnd(); ++iter)
     {
         int propId = iter.key();
-        bool shouldNotAddNewProp;
-        if ((shouldNotAddNewProp = mutableProps->contains(propId)))
+        if (pIgnorePropIds && pIgnorePropIds->contains(propId))
+            continue;
+
+        ItemProperty *prop = iter.value();
+        bool shouldAddNewProp = true;
+        foreach (ItemProperty *existingProp, mutableProps->values(iter.key()))
         {
-            ItemProperty *prop = (*mutableProps)[propId];
-            if ((shouldNotAddNewProp = (prop->param == iter.value()->param)))
+            if (existingProp->param == prop->param)
             {
-                prop->value += iter.value()->value;
+                existingProp->value += prop->value;
                 if (propId == Enums::ItemProperties::EnhancedDamage)
-                    prop->displayString = ItemParser::kEnhancedDamageFormat().arg(prop->value);
+                    existingProp->displayString = ItemParser::kEnhancedDamageFormat().arg(existingProp->value);
+                else
+                    ItemParser::createDisplayStringForPropertyWithId(propId, existingProp);
+
+                shouldAddNewProp = false;
+                break;
             }
         }
-        if (!shouldNotAddNewProp)
-            mutableProps->insertMulti(propId, new ItemProperty(*iter.value())); // we need a copy
+        if (shouldAddNewProp)
+            mutableProps->insertMulti(propId, new ItemProperty(*prop)); // we need a copy
     }
 }
 
@@ -506,7 +516,7 @@ void PropertiesDisplayManager::addChallengeNamesToClassCharm(PropertiesMap::iter
         desc = tr("They have Windows in Hell");
         break;
     case Enums::ClassCharmChallenges::MirrorMirror:
-        desc = tr("Mirror Mirror");
+        desc = tr("Mirror Mirror (legacy)");
         break;
     case Enums::ClassCharmChallenges::Countess:
         desc = tr("Countess");
@@ -522,4 +532,22 @@ void PropertiesDisplayManager::addChallengeNamesToClassCharm(PropertiesMap::iter
         break;
     }
     desc = QString("[%1]").arg(desc);
+}
+
+QString PropertiesDisplayManager::propertiesToHtml(const PropertiesMap &properties, ItemInfo *item /*= 0*/, int textColor /*= ColorsManager::Blue*/)
+{
+    QMap<quint8, ItemPropertyDisplay> propsDisplayMap;
+    constructPropertyStrings(properties, &propsDisplayMap, true, item);
+
+    QString html;
+    QMap<quint8, ItemPropertyDisplay>::const_iterator iter = propsDisplayMap.constEnd();
+    while (iter != propsDisplayMap.constBegin())
+    {
+        --iter;
+#ifdef SHOW_PROPERTY_ID
+        html += QString("[%1] ").arg(iter.value().propertyId);
+#endif
+        html += htmlStringFromDiabloColorString(iter.value().displayString, ColorsManager::NoColor) + kHtmlLineBreak;
+    }
+    return coloredText(html, textColor);
 }

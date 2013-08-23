@@ -151,7 +151,7 @@ void customizeItemsTreeView(QTreeView *treeView)
 qint32 getValueOfPropertyInItem(ItemInfo *item, quint16 propKey, quint16 param /*= 0*/)
 {
     qint32 result = 0;
-    foreach (const PropertiesMultiMap *const props, QList<PropertiesMultiMap *>() << &item->props << &item->rwProps << &item->setProps)
+    foreach (const PropertiesMultiMap *const props, QList<PropertiesMultiMap *>() << &item->props << &item->rwProps/* << &item->setProps*/)
         foreach (ItemProperty *itemProp, props->values(propKey))
             if (itemProp->param == param)
                 result += itemProp->value;

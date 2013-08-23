@@ -741,7 +741,8 @@ bool ItemDataBase::isCube(ItemInfo *item)
 
 bool ItemDataBase::doesItemGrantBonus(ItemInfo *item)
 {
-    return item->location == Enums::ItemLocation::Equipped || (item->storage == Enums::ItemStorage::Inventory && isUberCharm(item));
+    // ignore alt. hand
+    return (item->location == Enums::ItemLocation::Equipped && item->whereEquipped < 11) || (item->storage == Enums::ItemStorage::Inventory && isUberCharm(item));
 }
 
 bool ItemDataBase::canDisenchantIntoArcaneShards(ItemInfo *item)

@@ -15,11 +15,11 @@
 #endif
 
 
-static const QString kBaseFormat("<html><body bgcolor=\"black\"><div align=\"center\" style=\"color: #ffffff\">%1</div></body></html>");
+static const QString kBaseFormat("<html><body bgcolor=\"black\"><div align=\"center\" style=\"color: white\">%1</div></body></html>");
 static const char *kTranslationContext = "PropertiesDisplayManager";
 
 
-PropertiesViewerWidget::PropertiesViewerWidget(QWidget *parent) : QWidget(parent), htmlLine(htmlStringFromDiabloColorString("<hr />")), ui(new Ui::PropertiesViewerWidget), _item(0)
+PropertiesViewerWidget::PropertiesViewerWidget(QWidget *parent) : QWidget(parent), htmlLine("<hr />"), ui(new Ui::PropertiesViewerWidget), _item(0)
 {
     ui->setupUi(this);
 
@@ -151,11 +151,11 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
     {
         int baseDef = item->defense, totalDef = baseDef;
         int ed =    allProps.value(ItemProperties::EnhancedDefence, foo)->value + (      allProps.value(ItemProperties::EnhancedDefenceBasedOnClvl, foo)->value * clvl) / 32;
-        ed += item->setProps.value(ItemProperties::EnhancedDefence, foo)->value + (item->setProps.value(ItemProperties::EnhancedDefenceBasedOnClvl, foo)->value * clvl) / 32;
+        //ed += item->setProps.value(ItemProperties::EnhancedDefence, foo)->value + (item->setProps.value(ItemProperties::EnhancedDefenceBasedOnClvl, foo)->value * clvl) / 32;
         if (ed)
             totalDef = (totalDef * (100 + ed)) / 100;
         totalDef +=       allProps.value(ItemProperties::Defence, foo)->value + (      allProps.value(ItemProperties::DefenceBasedOnClvl, foo)->value * clvl) / 32;
-        totalDef += item->setProps.value(ItemProperties::Defence, foo)->value + (item->setProps.value(ItemProperties::DefenceBasedOnClvl, foo)->value * clvl) / 32;
+        //totalDef += item->setProps.value(ItemProperties::Defence, foo)->value + (item->setProps.value(ItemProperties::DefenceBasedOnClvl, foo)->value * clvl) / 32;
         if (totalDef < 0)
             totalDef = 0;
 
@@ -360,26 +360,7 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
                 // set properties
                 PropertiesMultiMap setFixedProps = collectSetFixedProps(fullSetInfo.partialSetProperties, partialPropsNumber);
                 if (setItemsOnCharacter == fullSetInfo.itemNames.size())
-                {
-                    PropertiesMultiMap fullSetProperties = collectSetFixedProps(fullSetInfo.fullSetProperties);
-                    for (PropertiesMultiMap::const_iterator iter = fullSetProperties.constBegin(); iter != fullSetProperties.constEnd(); ++iter)
-                    {
-                        bool shouldAdd = true;
-                        ItemProperty *prop = iter.value();
-                        foreach (ItemProperty *existingProp, setFixedProps.values(iter.key()))
-                        {
-                            if (prop->param == existingProp->param)
-                            {
-                                existingProp->value += prop->value;
-                                ItemParser::createDisplayStringForPropertyWithId(iter.key(), existingProp);
-                                shouldAdd = false;
-                                break;
-                            }
-                        }
-                        if (shouldAdd)
-                            setFixedProps.insert(iter.key(), prop);
-                    }
-                }
+                    PropertiesDisplayManager::addProperties(&setFixedProps, collectSetFixedProps(fullSetInfo.fullSetProperties));
                 itemDescription += kHtmlLineBreak + propertiesToHtml(setFixedProps, ColorsManager::Gold);
                 qDeleteAll(setFixedProps);
             }
@@ -415,16 +396,7 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
 
 QString PropertiesViewerWidget::propertiesToHtml(const PropertiesMap &properties, int textColor /*= ColorsManager::Blue*/)
 {
-    QMap<quint8, ItemPropertyDisplay> propsDisplayMap;
-    PropertiesDisplayManager::constructPropertyStrings(properties, &propsDisplayMap, true, _item);
-    QString html;
-    QMap<quint8, ItemPropertyDisplay>::const_iterator iter = propsDisplayMap.constEnd();
-    while (iter != propsDisplayMap.constBegin())
-    {
-        --iter;
-        html += htmlStringFromDiabloColorString(iter.value().displayString, ColorsManager::NoColor) + kHtmlLineBreak;
-    }
-    return coloredText(html, textColor);
+    return PropertiesDisplayManager::propertiesToHtml(properties, _item, textColor);
 }
 
 void PropertiesViewerWidget::renderHtml(QTextEdit *textEdit, const QString &description)
@@ -632,7 +604,7 @@ QString PropertiesViewerWidget::collectMysticOrbsDataFromProps(QSet<int> *moSet,
 
 bool PropertiesViewerWidget::isMysticOrbEffectDoubled() const
 {
-    return _item->props.contains(Enums::ItemProperties::MysticOrbsEffectDoubled) || _item->rwProps.contains(Enums::ItemProperties::MysticOrbsEffectDoubled) || _item->setProps.contains(Enums::ItemProperties::MysticOrbsEffectDoubled);
+    return _item->props.contains(Enums::ItemProperties::MysticOrbsEffectDoubled) || _item->rwProps.contains(Enums::ItemProperties::MysticOrbsEffectDoubled);// || _item->setProps.contains(Enums::ItemProperties::MysticOrbsEffectDoubled);
 }
 
 PropertiesMultiMap PropertiesViewerWidget::collectSetFixedProps(const QList<SetFixedProperty> &setProps, quint8 propsNumber /*= 0*/)
