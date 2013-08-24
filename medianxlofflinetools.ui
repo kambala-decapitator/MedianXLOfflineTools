@@ -1267,6 +1267,9 @@
    <property name="text">
     <string>All character stats</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+A</string>
+   </property>
   </action>
   <action name="actionCheckFileAssociations">
    <property name="checkable">

@@ -140,8 +140,6 @@ void customizeItemsTreeView(QTreeView *treeView)
         "QTreeView::item          { selection-color: red; }"
         "QTreeView::item:hover    { border: 1px solid #bfcde4; }"
         "QTreeView::item:selected { border: 1px solid #567dbc; }"
-        //"QTreeView::item:hover    { background-color: blue; }"
-        //"QTreeView::item:selected { background-color: rgba(255,0,0,50%); }"
         );
     treeView->setEditTriggers(QAbstractItemView::NoEditTriggers);
     treeView->setDropIndicatorShown(false);

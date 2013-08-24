@@ -69,7 +69,7 @@ extern void qt_mac_set_dock_menu(QMenu *);
 
 static const QString kLastSavePathKey("lastSavePath"), kBackupExtension("bak"), kReadonlyCss("background-color: rgb(227, 227, 227)"), kTimeFormatReadable("yyyyMMdd-hhmmss"), kMedianXlServer("http://mxl.vn.cz/kambala/");
 static const QByteArray kMercHeader("jf");
-static const int kMoonSymbolSaveIndex = 28;
+static const int kMoonSymbolSkillSaveIndex = 28;
 
 const QString MedianXLOfflineTools::kCompoundFormat("%1, %2");
 const QString MedianXLOfflineTools::kCharacterExtension("d2s");
@@ -79,7 +79,7 @@ const int MedianXLOfflineTools::kSkillsNumber = 30;
 const int MedianXLOfflineTools::kDifficultiesNumber = 3;
 const int MedianXLOfflineTools::kStatPointsPerLevel = 5;
 const int MedianXLOfflineTools::kSkillPointsPerLevel = 1;
-const int MedianXLOfflineTools::kMaxRecentFiles = 10;
+const int MedianXLOfflineTools::kMaxRecentFiles = 15;
 
 
 // ctor
@@ -87,8 +87,7 @@ const int MedianXLOfflineTools::kMaxRecentFiles = 10;
 MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *parent, Qt::WindowFlags flags) : QMainWindow(parent, flags), ui(new Ui::MedianXLOfflineToolsClass), _findItemsDialog(0),
     _backupLimitsGroup(new QActionGroup(this)), _showDisenchantPreviewGroup(new QActionGroup(this)), _isLoaded(false), kHackerDetected(tr("1337 hacker detected! Please, play legit.")),
     maxValueFormat(tr("Max: %1")), minValueFormat(tr("Min: %1")), investedValueFormat(tr("Invested: %1")),
-    kForumThreadHtmlLinks(QString("<a href=\"http://www.medianxl.com/t83-median-xl-offline-tools\">%1</a><br><a href=\"http://forum.worldofplayers.ru/showthread.php?t=34489\">%2</a>")
-     .arg(tr("Official Median XL Forum thread"), tr("Official Russian Median XL Forum thread"))),
+    kForumThreadHtmlLinks(QString("<a href=\"http://www.medianxl.com/t83-median-xl-offline-tools\">%1</a><br><a href=\"http://worldofplayers.ru/threads/34489/\">%2</a>").arg(tr("Official Median XL Forum thread"), tr("Official Russian Median XL Forum thread"))),
     _fsWatcher(new QFileSystemWatcher(this)), _fileChangeTimer(0), _isFileChangedMessageBoxRunning(false)
 {
     ui->setupUi(this);
@@ -2561,7 +2560,7 @@ void MedianXLOfflineTools::updateUI()
     ui->actionShowItems->setEnabled(hasItems);
     ui->actionFind->setEnabled(hasItems);
     ui->actionGiveCube->setDisabled(CharacterInfo::instance().items.hasCube());
-    ui->actionFillBeltWithMoonCookies->setEnabled(charInfo.basicInfo.classCode == Enums::ClassName::Sorceress && charInfo.basicInfo.skillsReadable.at(kMoonSymbolSaveIndex) > 0);
+    ui->actionFillBeltWithMoonCookies->setEnabled(charInfo.basicInfo.classCode == Enums::ClassName::Sorceress && charInfo.basicInfo.skillsReadable.at(kMoonSymbolSkillSaveIndex) > 0);
 
     updateWindowTitle();
 

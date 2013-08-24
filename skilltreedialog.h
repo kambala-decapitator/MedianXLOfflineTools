@@ -16,8 +16,13 @@ public:
     explicit SkillTreeDialog(const QList<int> &skillsVisualOrder, QWidget *parent = 0);
     virtual ~SkillTreeDialog() {}
 
+public slots:
+    virtual void reject();
+
 private:
     QTabWidget *_tabWidget;
+
+    qint32 getValueOfPropertyInSetProperties(const QList<SetFixedProperty> &setProps, quint16 propKey, quint8 propsNumber = 0, quint16 param = 0);
 };
 
 #endif // SKILLTREEDIALOG_H
