@@ -17,15 +17,23 @@ class SkillWidget : public QWidget
 public:
     SkillWidget(QWidget *parent = 0) : QWidget(parent), _skillNameLabel(new QLabel(this)), _skillImageLabel(new QLabel(this)), _skillPointsLabel(new QLabel(this))
     {
-        QGridLayout *layout = new QGridLayout(this);
-        layout->addWidget(_skillNameLabel,   0, 0, Qt::AlignHCenter);
-        layout->addWidget(_skillImageLabel,  1, 0, Qt::AlignHCenter);
-        layout->addWidget(_skillPointsLabel, 2, 0, Qt::AlignHCenter);
+        QVBoxLayout *layout = new QVBoxLayout(this);
+        layout->addWidget(_skillNameLabel,   0, Qt::AlignHCenter);
+        layout->addWidget(_skillImageLabel,  0, Qt::AlignHCenter);
+        layout->addWidget(_skillPointsLabel, 0, Qt::AlignHCenter);
     }
     virtual ~SkillWidget() {}
 
     void setSkillName(const QString &name) { _skillNameLabel->setText(name); }
-    void setSkillImage(const QString &imagePath) { _skillImageLabel->setPixmap(QPixmap(imagePath)); }
+
+    void setSkillImageForClassWithId(int classCode, int imageId)
+    {
+        QString path = ResourcePathManager::pathForSkillImage(classCode, imageId);
+        if (!QFile::exists(path))
+            path = ResourcePathManager::pathForSkillImage(classCode, --imageId);
+        _skillImageLabel->setPixmap(QPixmap(path));
+    }
+
     void setSkillPoints(quint8 basePoints, quint8 addPoints)
     {
         _skillPointsLabel->setText(addPoints ? QString("%1 (%2)").arg(basePoints).arg(basePoints + addPoints) : QString::number(basePoints));
@@ -63,9 +71,10 @@ SkillTreeDialog::SkillTreeDialog(const QList<int> &skillsVisualOrder, QWidget *p
         QWidget *tab = new QWidget(this);
         _tabWidget->addTab(tab, tr("Skill Tab %1").arg(tabIndex));
 
-        QGroupBox *uberSkillsBox = 0;
         QGridLayout *grid = new QGridLayout(tab);
         grid->setContentsMargins(QMargins());
+
+        QGroupBox *uberSkillsBox = 0;
         while (j < skillsNumber)
         {
             int skillIndex = skillsVisualOrder.at(j);
@@ -82,7 +91,7 @@ SkillTreeDialog::SkillTreeDialog(const QList<int> &skillsVisualOrder, QWidget *p
 
             SkillWidget *w = new SkillWidget(tab);
             w->setSkillName(skill->name);
-            w->setSkillImage(ResourcePathManager::pathForSkillImage(charInfo.classCode, skill->imageId));
+            w->setSkillImageForClassWithId(charInfo.classCode, skill->imageId);
             w->setSkillPoints(baseSkillPoints, totalSkillPoints);
 
             if (i == 2 && skill->col == 3) // no idea why uberskills have column 3
