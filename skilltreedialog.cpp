@@ -55,7 +55,6 @@ private:
 SkillTreeDialog::SkillTreeDialog(const QList<int> &skillsVisualOrder, QWidget *parent /*= 0*/) : QDialog(parent), _tabWidget(new QTabWidget(this))
 {
     setWindowFlags(windowFlags() & ~Qt::WindowContextHelpButtonHint | Qt::MSWindowsFixedSizeDialogHint);
-    setAttribute(Qt::WA_DeleteOnClose);
     setWindowTitle(tr("Skill tree"));
 
     const CharacterInfo::CharacterInfoBasic &charInfo = CharacterInfo::instance().basicInfo;

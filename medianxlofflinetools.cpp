@@ -18,7 +18,7 @@
 #include "messagecheckbox.h"
 #include "experienceindicatorgroupbox.h"
 #include "skilltreedialog.h"
-#include "propertiesdisplaymanager.h"
+#include "allstatsdialog.h"
 #ifdef DUPE_CHECK
 #include "dupescandialog.h"
 #endif
@@ -67,7 +67,7 @@ extern void qt_mac_set_dock_menu(QMenu *);
 
 // static const
 
-static const QString kLastSavePathKey("lastSavePath"), kBackupExtension("bak"), kReadonlyCss("background-color: rgb(227, 227, 227)"), kTimeFormatReadable("yyyyMMdd-hhmmss"), kMedianXlServer("http://mxl.vn.cz/kambala/");
+static const QString kLastSavePathKey("lastSavePath"), kBackupExtension("bak"), kReadonlyCss("QLineEdit { background-color: rgb(227, 227, 227) }"), kTimeFormatReadable("yyyyMMdd-hhmmss"), kMedianXlServer("http://mxl.vn.cz/kambala/");
 static const QByteArray kMercHeader("jf");
 static const int kMoonSymbolSkillSaveIndex = 28;
 
@@ -1088,54 +1088,8 @@ void MedianXLOfflineTools::showSkillPlan()
 
 void MedianXLOfflineTools::showAllStats()
 {
-    // fuck consts and enums!
-    const QSet<int> kIgnoreProps = QSet<int>() << 16 << 17 << 75 << 91 << 92 << 152 << 219 << 243 << 263 << 276 << 296 << 299 << 300 << 418 << 419 << 421 << 422 << 423 << 424 << 425 << 427 << 442 << 443 << 473 << 474 << 491;
-
-    PropertiesMap allProps;
-    QMultiHash<QByteArray, int> setItemsHash;
-    foreach (ItemInfo *item, CharacterInfo::instance().items.character)
-    {
-        if (ItemDataBase::doesItemGrantBonus(item))
-        {
-            PropertiesDisplayManager::addProperties(&allProps, item->props,   &kIgnoreProps);
-            PropertiesDisplayManager::addProperties(&allProps, item->rwProps, &kIgnoreProps);
-
-            ItemBase *itemBase = ItemDataBase::Items()->value(item->itemType);
-            foreach (ItemInfo *socketableItem, item->socketablesInfo)
-            {
-                PropertiesMap socketableProps = PropertiesDisplayManager::socketableProperties(socketableItem, itemBase->socketableType);
-                PropertiesDisplayManager::addProperties(&allProps, socketableProps, &kIgnoreProps);
-                if (socketableProps != socketableItem->props)
-                    qDeleteAll(socketableProps);
-            }
-
-            if (item->quality == Enums::ItemQuality::Set)
-                setItemsHash.insert(ItemDataBase::Sets()->value(item->setOrUniqueId)->key, item->setOrUniqueId);
-        }
-    }
-
-    foreach (const QByteArray &setKey, setItemsHash.uniqueKeys())
-    {
-        QList<int> setItemIds = setItemsHash.values(setKey);
-        if (quint8 partialPropsNumber = (setItemIds.size() - 1) * 2)
-        {
-            foreach (int setId, setItemIds)
-                PropertiesDisplayManager::addTemporaryPropertiesAndDelete(&allProps, PropertiesDisplayManager::collectSetFixedProps(ItemDataBase::Sets()->value(setId)->fixedProperties, partialPropsNumber), &kIgnoreProps);
-
-            const FullSetInfo fullSetInfo = ItemDataBase::fullSetInfoForKey(setKey);
-            PropertiesDisplayManager::addTemporaryPropertiesAndDelete(&allProps, PropertiesDisplayManager::collectSetFixedProps(fullSetInfo.partialSetProperties, partialPropsNumber), &kIgnoreProps);
-
-            if (setItemIds.size() == fullSetInfo.itemNames.size())
-                PropertiesDisplayManager::addTemporaryPropertiesAndDelete(&allProps, PropertiesDisplayManager::collectSetFixedProps(fullSetInfo.fullSetProperties), &kIgnoreProps);
-        }
-    }
-
-    QTextEdit *textEdit = new QTextEdit(QString("<html><body bgcolor=\"black\" align=\"center\">%1<></body></html>").arg(PropertiesDisplayManager::propertiesToHtml(allProps, 0, ColorsManager::Blue)));
-    textEdit->setAttribute(Qt::WA_DeleteOnClose);
-    textEdit->setReadOnly(true);
-    textEdit->show();
-
-    qDeleteAll(allProps);
+    AllStatsDialog dlg(this);
+    dlg.exec();
 }
 
 void MedianXLOfflineTools::backupSettingTriggered(bool checked)
@@ -1208,16 +1162,8 @@ void MedianXLOfflineTools::aboutApp()
 
 void MedianXLOfflineTools::showSkillTree()
 {
-    if (_skillTreeDialog)
-    {
-        _skillTreeDialog->raise();
-        _skillTreeDialog->activateWindow();
-    }
-    else
-    {
-        _skillTreeDialog = new SkillTreeDialog(_characterSkillsIndexes.value(CharacterInfo::instance().basicInfo.classCode).second, this);
-        _skillTreeDialog->show();
-    }
+    SkillTreeDialog dlg(_characterSkillsIndexes.value(CharacterInfo::instance().basicInfo.classCode).second, this);
+    dlg.exec();
 }
 
 
