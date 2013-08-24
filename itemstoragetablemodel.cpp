@@ -57,20 +57,26 @@ QVariant ItemStorageTableModel::data(const QModelIndex &index, int role) const
         ItemInfo *item = itemAtIndex(index);
         if (item)
         {
-            QString imageName = item->itemType == ItemDataBase::kJewelType ? "invjw" : ItemDataBase::Items()->value(item->itemType)->imageName; // quick hack for jewel
-            bool isSetOrUniqueImage = false;
+            ItemBase *baseInfo = ItemDataBase::Items()->value(item->itemType);
+            QString imageName;
             if (item->quality == Enums::ItemQuality::Unique || item->quality == Enums::ItemQuality::Set)
             {
-                SetOrUniqueItemInfo *setOrUniqueInfo = item->quality == Enums::ItemQuality::Set ? static_cast<SetOrUniqueItemInfo *>(ItemDataBase::Sets()->value(item->setOrUniqueId))
+                SetOrUniqueItemInfo *setOrUniqueInfo = item->quality == Enums::ItemQuality::Set ? static_cast<SetOrUniqueItemInfo *>(ItemDataBase::Sets()   ->value(item->setOrUniqueId))
                                                                                                 : static_cast<SetOrUniqueItemInfo *>(ItemDataBase::Uniques()->value(item->setOrUniqueId));
                 if (setOrUniqueInfo && !setOrUniqueInfo->imageName.isEmpty())
-                {
                     imageName = setOrUniqueInfo->imageName;
-                    isSetOrUniqueImage = true;
-                }
             }
-            if (!isSetOrUniqueImage && item->variableGraphicIndex /*&& QRegExp("\\d$").indexIn(imageName) == -1*/)
-                imageName += QString::number(item->variableGraphicIndex > 6 ? 6 : item->variableGraphicIndex);
+            if (imageName.isEmpty())
+            {
+                if (item->variableGraphicIndex)
+                {
+                    int i = item->variableGraphicIndex - 1;
+                    const QList<QByteArray> &variableImageNames = ItemDataBase::ItemTypes()->value(baseInfo->types.at(0)).variableImageNames;
+                    imageName = i < variableImageNames.size() ? variableImageNames.at(i) : variableImageNames.last();
+                }
+                else
+                    imageName = baseInfo->imageName;
+            }
 
             QString imagePath = ResourcePathManager::pathForItemImageName(imageName);
             bool doesImageExist = QFile::exists(imagePath);

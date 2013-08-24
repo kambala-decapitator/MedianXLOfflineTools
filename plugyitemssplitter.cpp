@@ -714,7 +714,7 @@ void PlugyItemsSplitter::sortWearableQualityItems(ItemsList &selectedItems, quin
                         else if (item->itemType == kSacredSpikedShieldCode || item->itemType == kSacredBoneShieldCode) // spiked/bone shield
                             itemShouldBeAdded = itemBaseType == kSpecialShieldType;
                         else // default filter
-                            itemShouldBeAdded = ItemDataBase::ItemTypes()->value(jter.key()).contains(itemBaseType);
+                            itemShouldBeAdded = ItemDataBase::ItemTypes()->value(jter.key()).baseItemTypes.contains(itemBaseType);
                     }
 
                     if (itemShouldBeAdded)
@@ -815,7 +815,7 @@ void PlugyItemsSplitter::sortMiscItems(ItemsList &selectedItems, quint32 &page, 
                     ItemsList &items = jter.value();
                     for (int i = 0; i < items.size(); ++i)
                     {
-                        if (ItemDataBase::ItemTypes()->value(jter.key()).contains(itemBaseType))
+                        if (ItemDataBase::ItemTypes()->value(jter.key()).baseItemTypes.contains(itemBaseType))
                         {
                             itemBaseTypeItems << items.at(i);
                             items.removeAt(i--);

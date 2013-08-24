@@ -372,7 +372,7 @@ void ItemsPropertiesSplitter::dumpInfo(ItemInfo *item /*= 0*/, bool shouldShowMs
     const char *quality = metaEnumFromName<Enums::ItemQuality>("ItemQualityEnum").valueToKey(item->quality);
     bool isSetOrUnique = areBothItemsSetOrUnique(item, item); // hacky code :)
 
-    qDebug() << ItemParser::itemStorageAndCoordinatesString("location %1, row %2, col %3, equipped in %4", item) << "quality" << quality << "code" << item->itemType << "types" << base->types << "image" << base->imageName << "quest ID" << base->questId;
+    qDebug() << ItemParser::itemStorageAndCoordinatesString("location %1, row %2, col %3, equipped in %4", item) << "quality" << quality << "code" << item->itemType << "types" << base->types << "image" << base->imageName << "vargfx" << item->variableGraphicIndex << "quest ID" << base->questId;
     if (isSetOrUnique)
         qDebug() << "set/unique ID" << item->setOrUniqueId;
     qDebug("--------------------");
@@ -382,8 +382,8 @@ void ItemsPropertiesSplitter::dumpInfo(ItemInfo *item /*= 0*/, bool shouldShowMs
         QString types;
         foreach (const QByteArray &type, base->types)
             types += type + ", ";
-        INFO_BOX(QString("%1\nquality %2, set/unique ID %3\ncode %4, types: %5\nimage %6, quest ID %7").arg(ItemParser::itemStorageAndCoordinatesString("location %1, row %2, col %3, equipped in %4", item))
-            .arg(quality).arg(isSetOrUnique ? item->setOrUniqueId : 0).arg(QTextCodec::codecForName("Windows-1252")->toUnicode(item->itemType)).arg(types).arg(base->imageName.constData()).arg(base->questId));
+        INFO_BOX(QString("%1\nquality %2, set/unique ID %3\ncode %4, types: %5\nimage %6, vargfx %7, quest ID %8").arg(ItemParser::itemStorageAndCoordinatesString("location %1, row %2, col %3, equipped in %4", item))
+            .arg(quality).arg(isSetOrUnique ? item->setOrUniqueId : 0).arg(QTextCodec::codecForName("Windows-1252")->toUnicode(item->itemType)).arg(types).arg(base->imageName.constData()).arg(item->variableGraphicIndex).arg(base->questId));
     }
 }
 #endif

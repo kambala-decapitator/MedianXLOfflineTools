@@ -95,9 +95,9 @@ QHash<QByteArray, ItemBase *> *ItemDataBase::Items()
     return &allItems;
 }
 
-QHash<QByteArray, QList<QByteArray> > *ItemDataBase::ItemTypes()
+QHash<QByteArray, ItemType> * ItemDataBase::ItemTypes()
 {
-    static QHash<QByteArray, QList<QByteArray> > types;
+    static QHash<QByteArray, ItemType> types;
     if (types.isEmpty())
     {
         QByteArray fileData = decompressedFileData(ResourcePathManager::dataPathForFileName("itemtypes.dat"), tr("Item types data not loaded."));
@@ -113,7 +113,11 @@ QHash<QByteArray, QList<QByteArray> > *ItemDataBase::ItemTypes()
             if (data.isEmpty())
                 continue;
 
-            types[data.at(0)] = data.at(1).split(',');
+            ItemType type;
+            type.baseItemTypes = data.at(1).split(',');
+            if (data.size() > 2)
+                type.variableImageNames = data.at(2).split(',');
+            types[data.at(0)] = type;
         }
     }
     return &types;
@@ -497,7 +501,7 @@ QString ItemDataBase::completeItemName(ItemInfo *item, bool shouldUseColor, bool
     if (isUberCharm(item))
     {
         // choose the longest name
-        if (specialName.length() > itemName.length())
+        if (specialName.length() >= itemName.length())
             itemName = specialName;
         specialName.clear();
     }

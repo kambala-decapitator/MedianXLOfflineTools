@@ -314,16 +314,26 @@ if ($locale ne 'en')
 my $prefix = "generated/$locale";
 make_path $prefix;
 
-my $itemTypes = parsetxt("itemtypes.txt", "#code"=>0, "code0"=>4, "equiv1"=>5, equiv2=>6, bodyLoc=>9, "class"=>30);
+my %invgfx; $invgfx{"invgfx$_"} = 31 + $_ for (1..6);
+my @invgfxKeys = sort keys %invgfx;
+my $itemTypes = parsetxt("itemtypes.txt", "#code"=>0, code0=>4, equiv1=>5, equiv2=>6, bodyLoc=>9, class=>30, %invgfx);
 open my $out, ">", "generated/itemtypes.txt";
-print $out "#code\tequiv\n";
+print $out "#code\tequiv\tvarImages\n";
 for my $name (keys %$itemTypes)
 {
     my $hashRef = $itemTypes->{$name};
     next unless defined $hashRef->{equiv1} and defined $hashRef->{code0};
     print $out $hashRef->{code0}, "\t", $hashRef->{equiv1};
     print $out ",", $hashRef->{equiv2} if defined $hashRef->{equiv2};
-    print $out "\n"
+
+    my @varImages;
+    for (@invgfxKeys)
+    {
+        my $varImage = $hashRef->{$_};
+        last unless defined $varImage;
+        push @varImages, $varImage;
+    }
+    print $out "\t", join(",", @varImages), "\n"
 }
 close $out;
 

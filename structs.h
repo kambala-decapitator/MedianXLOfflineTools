@@ -174,6 +174,11 @@ struct ItemBase
     qint8 socketableType, classCode;
 };
 
+struct ItemType
+{
+    QList<QByteArray> baseItemTypes, variableImageNames;
+};
+
 struct ItemPropertyTxt
 {
     quint16 add;
