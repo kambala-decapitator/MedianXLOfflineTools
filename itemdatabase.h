@@ -57,6 +57,7 @@ public:
     static bool isUberCharm(ItemInfo *item);
     static bool isGenericSocketable(ItemInfo *item); // checks if an item is a gem or a rune
     static bool isCube(ItemInfo *item);
+    static bool isTomeWithScrolls(ItemInfo *item);
 
     static bool doesItemGrantBonus(ItemInfo *item);
     static bool isCtcProperty(int propId) { return Properties()->value(propId)->descPositive.startsWith('%'); }

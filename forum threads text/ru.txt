@@ -6,7 +6,7 @@
 
 Приложение должно грузить персонажа из любой версии Median XL и успешно выполнять над ним базовые операции типа сброса атрибутов/навыков. Обработка предметов полагается на исходники мода, а потому может быть несовместима с персонажем из другой версии. Эти данные не зашиты в программу, потому когда выйдет новая версия мода, программу не нужно перекомпилировать — обычно достаточно просто заменить файлы в 'resources/data' новыми, которые я выложу. Текущие поддерживаемые версии:
 [list]
-[*]Median XL 2012 v005 (более ранние версии тоже могут работать, но я этого не гарантирую)
+[*]Median XL 2012 v005 (более ранние версии тоже должны работать)
 [*]Ultimative X (персонажи из v5+ должны быть совместимыми)
 [*]Kehjan Labyrinth + Tathamet vs Anu [Лабиринт Кейджан + Тафамет против Ану]
 [*]Hardened
@@ -58,31 +58,28 @@
 [*]и многие другие ;)
 [/list]
 
-[size=4][color=#6666ff]ПРЕДУПРЕЖДЕНИЕ: по умолчанию вы можете открывать только персонажей [b]Ultimative v7[/b]. Если вы хотите открывать персонажей из других модов или версий, пожалуйста перейдите в секцию загрузок [b]Данные модов[/b].[/color][/size]
-
-В русские данные мода Ultimative v7 закрался небольшой баг в виде отсутствия перевода вставленных Ultimative-рун, который был обнаружен только после релиза. Если для вас это очень критично, скачайте исправленные данные из секции загрузок [b]Данные модов[/b].
+[size=4][color=#6666ff]ПРЕДУПРЕЖДЕНИЕ: по умолчанию вы можете открывать только персонажей [b]Ultimative X[/b]. Если вы хотите открывать персонажей из других модов или версий, пожалуйста перейдите в секцию загрузок [b]Данные модов[/b].[/color][/size]
 
 [b]Загрузки[/b]:
 [list]
 [*][b]Приложение[/b]:
    [list]
-   [*][i]Windows[/i] (XP SP 2 и позже): http://www.mediafire.com/download/r2uh8q8z9sev6fu/MedianXLOfflineTools_0.4.7z
-   [*][i]Mac OS X[/i] (10.5 и позже, универсальное приложение): http://www.mediafire.com/download/gpayc84azcp9x1x/MedianXLOfflineTools_mac_0.4.zip
+   [*][i]Windows[/i] (XP SP 2 и позже): http://www.mediafire.com/?tvxd0ap74v8n4rx
+   [*][i]Mac OS X[/i] (10.5 и позже, универсальное приложение): http://www.mediafire.com/?204dinaagn5xrct
    [/list]
 [*][b]Данные модов[/b] (инструкции по установке находятся ниже в Mini-FAQ; вообще вам не нужно загружать эти архивы, потому что они уже включены в архив приложения):
    [list]
-   [*][i]2012 v005 / Лабиринт Кейджан + Тафамет против Ану / Hardened:[/i] http://www.mediafire.com/download/4vw6cwztt1zuwlv/2012-005%2Bkehjan%2Btathamet.7z
-   [*][i]Ultimative X:[/i] http://www.mediafire.com/download/kwglx6s9lzpuo91/ultimativeX.7z
+   [*][i]2012 v005 / Лабиринт Кейджан + Тафамет против Ану / Hardened:[/i] http://www.mediafire.com/?4vkkq8jskza2btg
+   [*][i]Ultimative X:[/i] http://www.mediafire.com/?nxivimf01ha6u2z
    [/list]
-[*][b]Инструменты для перевода[/b] (следуйте инструкциям внутри архива, правда, они на английском): http://www.mediafire.com/download/9r21w2nz8r64obq/translation_2012-005_0.4.7z
 [/list]
 
 [b]Mini-FAQ[/b]:
-Q: Я не могу распаковать архив без ошибок :(
-A: Используй 7zip, Люк.
+В: Я не могу распаковать архив без ошибок :(
+О: Используй 7zip, Люк.
 
-Q: Как установить данные мода?
-A: Перезапустите приложение после выполнения нижеуказанных шагов если оно запущено.
+В: Как установить данные мода?
+О: Перезапустите приложение после выполнения нижеуказанных шагов если оно запущено.
 [list]
 [*]Windows: просто распакуйте архив в папку с экзэшником с заменой
 [*]Mac OS X: распакуйте архив куда-нибудь и...
@@ -95,8 +92,14 @@ cp -R resources/data/* "${APP_PATH}/Contents/resources/data"[/code]
    [/list]
 [/list]
 
+В: Я сломал персонажа и/или сундук PlugY и ни игра, ни данное приложение не могут его загрузить. Как я могу его восстановить из резервной копии?
+О: Пройдите в папку сохранений и поищите файл(ы) <персонаж>.<d2s или d2x>_<дата>.bak и удалите всё справа от d2s или d2x. Если вы хотите восстановить общий сундук, то он называется _LOD<_HC для смертных (хардкорных)>_SharedStashSave.sss_<дата>.bak и удалите всё справа от sss.
+Если вы не видите расширение файла:
+[list][*]Проводник Windows: Параметры/Свойства Папки - Вид - Прокрутите в самый низ - Снимите галочку со «Скрывать расширения...» - OK
+[*]Mac OS X Finder: Настройки - Последняя вкладка (Дополнения) - Показывать расширения для всех типов файлов[/list]
+
 [B]Скриншоты[/B] (кликните для полноразмерного просмотра):
-[URL=http://s1125.photobucket.com/user/kambala_decapitator/media/main3_ru.png.html][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/th_main3_ru.png[/IMG][/URL][URL=http://s1125.photobucket.com/user/kambala_decapitator/media/main_ru_mac1.png.html][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/th_main_ru_mac1.png[/IMG][/URL]
+[URL=http://s1125.photobucket.com/user/kambala_decapitator/media/Median%20XL%20Offline%20Tools/main_ru4.png.html][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_main_ru4.png[/IMG][/URL][URL=http://s1125.photobucket.com/user/kambala_decapitator/media/Median%20XL%20Offline%20Tools/main_ru_mac2.png.html][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_main_ru_mac2.png[/IMG][/URL]
 [URL=http://s1125.photobucket.com/user/kambala_decapitator/media/items2_ru.png.html][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/th_items2_ru.png[/IMG][/URL][URL=http://s1125.photobucket.com/user/kambala_decapitator/media/items_plugy2_ru.png.html][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/th_items_plugy2_ru.png[/IMG][/URL]
 [URL=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=classcharm_ru.png][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_classcharm_ru.png[/img][/URL][URL=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=props_all_ru.png][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_props_all_ru.png[/img][/URL][URL=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=props_item_ru.png][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_props_item_ru.png[/img][/URL][URL=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=props_rw_ru.png][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_props_rw_ru.png[/img][/URL][URL=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=props_sockets_ru.png][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_props_sockets_ru.png[/img][/URL]
 [URL=http://s1125.photobucket.com/user/kambala_decapitator/media/downgrade_rune_ru.png.html][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/th_downgrade_rune_ru.png[/IMG][/URL][URL=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=item_menu1_ru.png][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_item_menu1_ru.png[/IMG][/URL][URL=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=removeMO_ru.png][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_removeMO_ru.png[/IMG][/URL][URL=http://s1125.photobucket.com/user/kambala_decapitator/media/eat_signet_ru.png.html][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/th_eat_signet_ru.png[/IMG][/URL]
@@ -104,10 +107,28 @@ cp -R resources/data/* "${APP_PATH}/Contents/resources/data"[/code]
 [URL=http://s1125.photobucket.com/user/kambala_decapitator/media/disenchant_preview_ru.png.html][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/th_disenchant_preview_ru.png[/IMG][/URL]
 [URL=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=search_ru_.png][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_search_ru_.png[/IMG][/URL][URL=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=search_help_ru.png][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_search_help_ru.png[/img][/URL]
 [URL=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=skillplan1_ru.png][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_skillplan1_ru.png[/IMG][/URL]
+[URL=http://s1125.photobucket.com/user/kambala_decapitator/media/Median%20XL%20Offline%20Tools/skill_tree_ru.png.html][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_skill_tree_ru.png[/IMG][/URL][URL=http://s1125.photobucket.com/user/kambala_decapitator/media/Median%20XL%20Offline%20Tools/all_stats_ru.png.html][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_all_stats_ru.png[/IMG][/URL]
 [URL=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=recent_win.png][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_recent_win.png[/IMG][/URL][URL=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=recent_mac.png][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_recent_mac.png[/IMG][/URL]
 
 
 [B]История версий:[/B]
+
+[I]v0.4.1 (25.08.2013)[/I]
+[list]
+[*][+] отдельная рамка для управления телепортами
+[*][+] отображение всех характеристик персонажа (типа расширенной информации PlugY)
+[*][+] отображение бонусов комплектов
+[*][+] отображение древа навыков (нередактируемое)
+[*][+] совмещено отображение мин/макс урона (Добавляет x-y урона...)
+[*][+] отображение длительности урона ядом
+[*][+] добавлена возможность заполнения пояса колдуньи Лунными Символами
+[*][ф] исправлена загрузка личного сундука на Mac OS X при наличии нелатинских символов в пути
+[*][ф] вещи из комплектов отображают правильный требуемый уровень
+[*][ф] исправлено удаление МС -к Требованиям
+[*][ф] вещи из обновлённых комплектов определяются правильно (например Радужный Воин)
+[*][и] высота главного окна неизменяема на Windows
+[*][и] количество последних файлов увеличено до 15
+[/list]
 
 [I]v0.4 (13.07.2013)[/I]
 [list]
@@ -272,4 +293,5 @@ cp -R resources/data/* "${APP_PATH}/Contents/resources/data"[/code]
 [*][i]grig'у[/i] за Перловские исходники его Median XL Online Tools и помощь
 [*][i][url=http://d2mods.info/index.php?ind=reviews&op=section_view&idev=4]Phrozen Keep Гайдам[/url][/i] за кучу полезной информации по текстовикам
 [*][i]aahz[/i] за предоставление места на сервере MXL
+[*][i]whist'у[/i] за помощь с магией текстовиков и внутренностями D2
 [*][i]участникам обоих форумов[/i] (полный список указан в приложении) за интенсивное тестирование и советы по ГУИ и функциональности[/list]

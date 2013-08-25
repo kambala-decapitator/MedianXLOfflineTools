@@ -187,7 +187,7 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
                     }
                 }
                 bitReader.skip(); // tome of ID bit
-                if (item->itemType == "ibk" || item->itemType == "tbk")
+                if (ItemDataBase::isTomeWithScrolls(item))
                     bitReader.skip(5); // some tome bits
                 if (itemBase->genericType == Enums::ItemTypeGeneric::Armor)
                 {

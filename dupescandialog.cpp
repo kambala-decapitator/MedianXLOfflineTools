@@ -134,8 +134,8 @@ void DupeScanDialog::updateProgressbarForCrossCheck(int n)
 
 void DupeScanDialog::logDupedItemsInfo(ItemInfo *item1, ItemInfo *item2)
 {
-    appendStringToLog(QString("'%1': GUID 0x%2 (%3), type '%4', quality %5; %6; %7").arg(ItemDataBase::Items()->value(item1->itemType)->name, QString::number(item1->guid, 16)).arg(item1->guid)
-                      .arg(item1->itemType.constData()).arg(metaEnumFromName<Enums::ItemQuality>("ItemQualityEnum").valueToKey(item1->quality))
+    appendStringToLog(QString("<b>%1</b>: GUID 0x%2 (%3), type '%4', quality <b>%5</b>; %6; %7").arg(ItemDataBase::Items()->value(item1->itemType)->name)
+                      .arg(item1->guid, 0, 16).arg(item1->guid).arg(item1->itemType.constData()).arg(metaEnumFromName<Enums::ItemQuality>("ItemQualityEnum").valueToKey(item1->quality))
                       .arg(ItemParser::itemStorageAndCoordinatesString("<font color=blue>ITEM1</font>: location %1, row %2, col %3, equipped in %4", item1))
                       .arg(ItemParser::itemStorageAndCoordinatesString("<font color=blue>ITEM2</font>: location %1, row %2, col %3, equipped in %4", item2)));
 }
@@ -147,7 +147,7 @@ void DupeScanDialog::appendStringToLog(const QString &s)
 
 void DupeScanDialog::scanCharactersInDir(const QString &path)
 {
-    appendStringToLog("<b>SEPARATE CHARACTER CHECK</b><br/>----------------------------------------");
+    appendStringToLog("<h3>SEPARATE CHARACTER CHECK</h3>----------------------------------------");
 
     QHash<QString, ItemsList> allItemsHash;
     bool isFirst = true, dupedItemFound;
@@ -184,22 +184,22 @@ void DupeScanDialog::scanCharactersInDir(const QString &path)
         for (int i = 0; i < itemsAndSocketables.size() - 1; ++i)
         {
             ItemInfo *iItem = itemsAndSocketables.at(i);
-            itemsAndSocketables << iItem->socketablesInfo;
-
-            bool alreadyChecked = false;
-            foreach (ItemInfo *item, checkedItems)
+            if (iItem->isExtended && shouldCheckItem(iItem))
             {
-                if (iItem->guid == item->guid)
+                itemsAndSocketables << iItem->socketablesInfo;
+
+                bool alreadyChecked = false;
+                foreach (ItemInfo *item, checkedItems)
                 {
-                    alreadyChecked = true;
-                    break;
+                    if (iItem->guid == item->guid)
+                    {
+                        alreadyChecked = true;
+                        break;
+                    }
                 }
-            }
-            if (alreadyChecked)
-                continue;
+                if (alreadyChecked)
+                    continue;
 
-            if (iItem->isExtended)
-            {
                 for (int j = i + 1; j < itemsAndSocketables.size(); ++j)
                 {
                     ItemInfo *jItem = itemsAndSocketables.at(j);
@@ -232,7 +232,7 @@ void DupeScanDialog::scanCharactersInDir(const QString &path)
         QMetaObject::invokeMethod(_progressBar, "setValue", Q_ARG(int, filesProcessed));
     }
 
-    appendStringToLog("<br/><b>CROSS-CHARACTER CHECK</b><br/>----------------------------------------");
+    appendStringToLog("<br /><h3>CROSS-CHARACTER CHECK</h3>----------------------------------------");
     QMetaObject::invokeMethod(this, "updateProgressbarForCrossCheck", Q_ARG(int, allItemsHash.size()));
 
     filesProcessed = 1;
@@ -248,7 +248,7 @@ void DupeScanDialog::scanCharactersInDir(const QString &path)
             isFirst = true;
             foreach (ItemInfo *iItem, iItems)
             {
-                if (iItem->isExtended)
+                if (iItem->isExtended && shouldCheckItem(iItem))
                 {
                     foreach (ItemInfo *jItem, jter.value())
                     {
@@ -280,4 +280,10 @@ void DupeScanDialog::scanCharactersInDir(const QString &path)
     foreach (const ItemsList &items, allItemsHash)
         qDeleteAll(items);
     QMetaObject::invokeMethod(this, "scanFinished");
+}
+
+bool DupeScanDialog::shouldCheckItem(ItemInfo *item)
+{
+    // ignore tomes, keys and non-magical quivers
+    return !(ItemDataBase::isTomeWithScrolls(item) || item->itemType == "key" || ((item->itemType == "aqv" || item->itemType == "cqv") && item->quality < Enums::ItemQuality::Magic));
 }
