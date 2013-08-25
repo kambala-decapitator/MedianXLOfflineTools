@@ -585,7 +585,7 @@
      <x>0</x>
      <y>0</y>
      <width>686</width>
-     <height>21</height>
+     <height>22</height>
     </rect>
    </property>
    <property name="nativeMenuBar">
@@ -1406,6 +1406,9 @@
    </property>
   </action>
   <action name="actionSkillTree">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>Skill Tree</string>
    </property>
