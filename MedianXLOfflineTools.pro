@@ -72,7 +72,8 @@ SOURCES += main.cpp \
            dupescandialog.cpp \
            stashsortingoptionsdialog.cpp \
            helpwindowdisplaymanager.cpp \
-           skilltreedialog.cpp
+           skilltreedialog.cpp \
+           allstatsdialog.cpp
 
 HEADERS += medianxlofflinetools.h \
            resurrectpenaltydialog.h \
@@ -116,7 +117,8 @@ HEADERS += medianxlofflinetools.h \
            dupescandialog.h \
            stashsortingoptionsdialog.h \
            helpwindowdisplaymanager.h \
-           skilltreedialog.h
+           skilltreedialog.h \
+           allstatsdialog.h
 
 FORMS += medianxlofflinetools.ui \
          resurrectpenaltydialog.ui \
@@ -124,7 +126,8 @@ FORMS += medianxlofflinetools.ui \
          propertiesviewerwidget.ui \
          finditemsdialog.ui \
          skillplandialog.ui \
-         stashsortingoptionsdialog.ui
+         stashsortingoptionsdialog.ui \
+         allstatsdialog.ui
 
 RESOURCES += resources/medianxlofflinetools.qrc
 

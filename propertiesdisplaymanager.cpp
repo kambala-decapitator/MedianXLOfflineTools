@@ -542,10 +542,10 @@ void PropertiesDisplayManager::addChallengeNamesToClassCharm(PropertiesMap::iter
     switch (iter.key())
     {
     case Enums::ClassCharmChallenges::WindowsInHell:
-        desc = tr("They have Windows in Hell");
+        desc = tr("They have Windows in Hell (legacy)");
         break;
     case Enums::ClassCharmChallenges::MirrorMirror:
-        desc = tr("Mirror Mirror (legacy)");
+        desc = tr("Mirror Mirror");
         break;
     case Enums::ClassCharmChallenges::Countess:
         desc = tr("Countess");

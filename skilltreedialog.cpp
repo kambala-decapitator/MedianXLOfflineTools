@@ -62,7 +62,7 @@ SkillTreeDialog::SkillTreeDialog(const QList<int> &skillsVisualOrder, QWidget *p
     ItemsList itemsWithBonuses;
     QMultiHash<QByteArray, int> setItemsHash;
 
-    foreach (ItemInfo *item, CharacterInfo::instance().items.character)
+    foreach (ItemInfo *item, CharacterInfo::instance().items.character) //-V807
     {
         if (ItemDataBase::doesItemGrantBonus(item))
         {
@@ -103,7 +103,7 @@ SkillTreeDialog::SkillTreeDialog(const QList<int> &skillsVisualOrder, QWidget *p
     {
         int tabIndex = i + 1;
         QWidget *tab = new QWidget(this);
-        _tabWidget->addTab(tab, tr("Skill Tab %1").arg(tabIndex));
+        _tabWidget->addTab(tab, tr("Tab %1").arg(tabIndex));
 
         QGridLayout *grid = new QGridLayout(tab);
         grid->setContentsMargins(QMargins());

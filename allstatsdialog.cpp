@@ -29,7 +29,7 @@ AllStatsDialog::AllStatsDialog(QWidget *parent /*= 0*/) : QDialog(parent), ui(ne
 
     PropertiesMap allProps;
     QMultiHash<QByteArray, int> setItemsHash;
-    foreach (ItemInfo *item, CharacterInfo::instance().items.character)
+    foreach (ItemInfo *item, CharacterInfo::instance().items.character) //-V807
     {
         if (ItemDataBase::doesItemGrantBonus(item))
         {

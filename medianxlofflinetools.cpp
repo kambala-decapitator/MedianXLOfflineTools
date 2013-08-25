@@ -1153,6 +1153,7 @@ void MedianXLOfflineTools::aboutApp()
                "<li>grig for the Perl source of <a href=\"http://grig.vlexofree.com/\">Median XL Online Tools</a> and tips</li>"
                "<li><a href=\"http://d2mods.info/index.php?ind=reviews&op=section_view&idev=4\">Phrozen Keep File Guides</a> for tons of useful information on txt sources</li>"
                "<li><a href=\"http://www.medianxl.com/u152\">aahz</a> for providing space on MXL server</li>"
+               "<li><a href=\"http://www.medianxl.com/u5\">whist</a> for helping with txt magic and D2 internals</li>"
                "<li>FixeR, Zelgadiss, moonra, Vilius, Delegus, aahz HerrNieschnell, Quirinus, RollsRoyce, Aks_kun and gAdlike for intensive testing and tips on GUI & functionality</li>"
              "</ul>")
     );
