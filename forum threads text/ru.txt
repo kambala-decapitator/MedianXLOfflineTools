@@ -64,8 +64,8 @@
 [list]
 [*][b]Приложение[/b]:
    [list]
-   [*][i]Windows[/i] (XP SP 2 и позже): http://www.mediafire.com/?tvxd0ap74v8n4rx
-   [*][i]Mac OS X[/i] (10.5 и позже, универсальное приложение): http://www.mediafire.com/?204dinaagn5xrct
+   [*][i]Windows[/i] (XP SP 2 и позже): http://www.mediafire.com/?dp72kmkmo83tuph
+   [*][i]Mac OS X[/i] (10.5 и позже, универсальное приложение): http://www.mediafire.com/?qst3josrf9dpzap
    [/list]
 [*][b]Данные модов[/b] (инструкции по установке находятся ниже в Mini-FAQ; вообще вам не нужно загружать эти архивы, потому что они уже включены в архив приложения):
    [list]
@@ -112,6 +112,11 @@ cp -R resources/data/* "${APP_PATH}/Contents/resources/data"[/code]
 
 
 [B]История версий:[/B]
+
+[I]v0.4.1.1 (26.08.2013)[/I]
+[list]
+[*][ф] исправлена опечатка в коде, которая поломала сохранение сундуков PlugY
+[/list]
 
 [I]v0.4.1 (25.08.2013)[/I]
 [list]
