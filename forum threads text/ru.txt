@@ -64,8 +64,8 @@
 [list]
 [*][b]Приложение[/b]:
    [list]
-   [*][i]Windows[/i] (XP SP 2 и позже): http://www.mediafire.com/?dp72kmkmo83tuph
-   [*][i]Mac OS X[/i] (10.5 и позже, универсальное приложение): http://www.mediafire.com/?qst3josrf9dpzap
+   [*][i]Windows[/i] (XP SP 2 и позже): http://www.mediafire.com/?kbnt6oiz7fx86gq
+   [*][i]Mac OS X[/i] (10.5 и позже, универсальное приложение): http://www.mediafire.com/?257vzggw2c8dra3
    [/list]
 [*][b]Данные модов[/b] (инструкции по установке находятся ниже в Mini-FAQ; вообще вам не нужно загружать эти архивы, потому что они уже включены в архив приложения):
    [list]

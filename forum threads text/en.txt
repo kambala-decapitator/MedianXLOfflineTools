@@ -51,8 +51,8 @@ I hope I provided enough anti-hack protection for an average user. If you manage
 
 [b]Downloads[/b]:
 [list][*][b]Application[/b]:
-[list][*][i]Windows[/i] (XP SP 2 and later): http://www.mediafire.com/?dp72kmkmo83tuph
-[*][i]Mac OS X[/i] (10.5 and later, universal binary): http://www.mediafire.com/?qst3josrf9dpzap
+[list][*][i]Windows[/i] (XP SP 2 and later): http://www.mediafire.com/?kbnt6oiz7fx86gq
+[*][i]Mac OS X[/i] (10.5 and later, universal binary): http://www.mediafire.com/?257vzggw2c8dra3
 [/list][*][b]Mod data[/b] (find installation instructions in Mini-FAQ below; you don't actually need to download these because both archives are included in the application distribution):
 [list][*][i]2012 v005 / Kehjan Labyrinth + Tathamet vs Anu / Hardened:[/i] http://www.mediafire.com/?4vkkq8jskza2btg
 [*][i]Ultimative X:[/i] http://www.mediafire.com/?nxivimf01ha6u2z
