@@ -647,7 +647,7 @@ void MedianXLOfflineTools::saveCharacter()
 
         for (quint32 page = 1; page <= info.lastPage; ++page)
         {
-            plugyFileDataStream << ItemParser::kPlugyPageHeader.constData(); // write '\0'
+            plugyFileDataStream.writeRawData(ItemParser::kPlugyPageHeader.constData(), ItemParser::kPlugyPageHeader.length() + 1); // write '\0'
             writeByteArrayDataWithoutNull(plugyFileDataStream, ItemParser::kItemHeader);
 
             ItemsList pageItems = ItemDataBase::extractItemsFromPage(items, page);
