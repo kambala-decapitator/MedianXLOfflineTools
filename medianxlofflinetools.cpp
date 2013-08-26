@@ -639,7 +639,7 @@ void MedianXLOfflineTools::saveCharacter()
 
         QDataStream plugyFileDataStream(&inputFile);
         plugyFileDataStream.setByteOrder(QDataStream::LittleEndian);
-        writeByteArrayDataWithoutNull(outputDataStream, info.header);
+        writeByteArrayDataWithoutNull(plugyFileDataStream, info.header);
         plugyFileDataStream << info.version;
         if (info.hasGold)
             plugyFileDataStream << info.gold;
@@ -648,8 +648,7 @@ void MedianXLOfflineTools::saveCharacter()
         for (quint32 page = 1; page <= info.lastPage; ++page)
         {
             plugyFileDataStream << ItemParser::kPlugyPageHeader.constData(); // write '\0'
-            plugyFileDataStream.writeRawData(ItemParser::kItemHeader.constData(), ItemParser::kItemHeader.length()); // do not write '\0'
-            writeByteArrayDataWithoutNull(outputDataStream, ItemParser::kItemHeader);
+            writeByteArrayDataWithoutNull(plugyFileDataStream, ItemParser::kItemHeader);
 
             ItemsList pageItems = ItemDataBase::extractItemsFromPage(items, page);
             plugyFileDataStream << static_cast<quint16>(pageItems.size());
