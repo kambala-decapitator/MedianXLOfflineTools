@@ -41,7 +41,7 @@ StashSortingOptionsDialog::StashSortingOptionsDialog(quint32 lastPage, QWidget *
     connect(ui->lastPageSpinBox,  SIGNAL(valueChanged(double)), SLOT(lastPageChanged(double)));
 
     QString gearFileName("<b>gear.txt</b>"), miscFileName("<b>misc.txt</b>"), setsFileName("<b>sets.txt</b>");
-    HelpWindowDisplayManager *helpDislplayManager = new HelpWindowDisplayManager(this, tr("Sort help"),
+    HelpWindowDisplayManager *helpDislplayManager = new HelpWindowDisplayManager(tr("Sort help"),
         // last param is %17
         tr(
         "<h2>Item sort order</h2>"
@@ -77,7 +77,7 @@ StashSortingOptionsDialog::StashSortingOptionsDialog(quint32 lastPage, QWidget *
         .arg(ui->itemQualityOrderingGroupBox->title(), ui->pageRangeGroupBox->title(), ui->blankPagesGroupBox->title().remove(':'), ui->separationBox->title(), ui->newRowGroupBox->title().remove(':'))
         .arg(ui->eachTypeFromNewPageCheckBox->text(), ui->similarMiscItemsOnOnePageCheckBox->text(), ui->separateSacredCheckBox->text(), ui->separateEthCheckBox->text())
         .arg(ui->newRowTierCheckBox->text(), ui->newRowCotwCheckBox->text(), ui->newRowVisuallyDifferentMiscCheckBox->text())
-        .arg(gearFileName, miscFileName, setsFileName, "thng_list.txt"));
+        .arg(gearFileName, miscFileName, setsFileName, "thng_list.txt"), this);
     connect(ui->buttonBox, SIGNAL(helpRequested()), helpDislplayManager, SLOT(showHelp()));
 }
 

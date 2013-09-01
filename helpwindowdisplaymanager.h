@@ -10,7 +10,7 @@ class HelpWindowDisplayManager : public QObject
     Q_OBJECT
 
 public:
-    HelpWindowDisplayManager(QObject *parent, const QString &windowTitle, const QString &helpText) : QObject(parent), _helpWindowTitle(windowTitle), _helpWindowText(helpText), _impl(0) {}
+    HelpWindowDisplayManager(const QString &windowTitle, const QString &helpText, QObject *parent = 0) : QObject(parent), _helpWindowTitle(windowTitle), _helpWindowText(helpText), _impl(0) {}
     virtual ~HelpWindowDisplayManager();
 
 public slots:
