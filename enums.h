@@ -358,6 +358,7 @@ public:
     enum ItemOffsetsEnum
     {
         Ethereal = 0x26,
+        IsPersonalized = 0x28,
         Location = 0x3A,
         EquipIndex = 0x3D,
         Column = 0x41,

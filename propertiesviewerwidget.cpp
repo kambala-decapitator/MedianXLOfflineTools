@@ -411,7 +411,7 @@ void PropertiesViewerWidget::removeAllMysticOrbs()
     removeMysticOrbsFromProperties(_itemMysticOrbs, &_item->props);
     removeMysticOrbsFromProperties(_rwMysticOrbs, &_item->rwProps);
 
-    byteAlignBits();
+    ReverseBitWriter::byteAlignBits(_item->bitString);
     updateItem();
 }
 
@@ -424,7 +424,7 @@ void PropertiesViewerWidget::removeMysticOrb()
     int moNumber = props->value(moCode)->value; // must be queried before calling removeMysticOrbData()
     removeMysticOrbData(moCode, props);
     decreaseRequiredLevel(moNumber, props);
-    byteAlignBits();
+    ReverseBitWriter::byteAlignBits(_item->bitString);
 
     MysticOrb *mo = ItemDataBase::MysticOrbs()->value(moCode);
     int id = mo->statIds.first();
@@ -557,19 +557,6 @@ int PropertiesViewerWidget::totalMysticOrbValue(int moCode, PropertiesMap *props
 {
     quint8 multiplier = 1 + isMysticOrbEffectDoubled();
     return props->value(moCode)->value * ItemDataBase::MysticOrbs()->value(moCode)->value * multiplier;
-}
-
-void PropertiesViewerWidget::byteAlignBits()
-{
-    int extraBits = _item->bitString.length() % 8;
-    if (extraBits)
-    {
-        int zerosBeforeFirst1 = _item->bitString.indexOf('1'), zerosToAppend = 8 - extraBits;
-        if (zerosBeforeFirst1 + zerosToAppend < 8)
-            _item->bitString.prepend(QString(zerosToAppend, kZeroChar));
-        else
-            _item->bitString.remove(0, extraBits);
-    }
 }
 
 QString PropertiesViewerWidget::collectMysticOrbsDataFromProps(QSet<int> *moSet, PropertiesMap &props)

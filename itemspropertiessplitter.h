@@ -64,6 +64,8 @@ protected slots:
 //    void unsocketItem();
     void downgradeSelectedRune();
     void eatSelectedSignet();
+    void depersonalize();
+    void   personalize();
     void deleteItemTriggered();
 #ifdef DUMP_INFO_ACTION
     void dumpInfo(ItemInfo *item = 0, bool shouldShowMsgBox = true);
@@ -107,7 +109,7 @@ protected:
     UpgradableItemsMultiMap runesMapFromItems(const ItemsList &items, int reserveRunes);
 
     void createItemActions();
-    QAction *separator();
+    QAction *separatorAction();
     void createActionsForMysticOrbs(QMenu *parentMenu, bool isItemMO, ItemInfo *item);
 };
 

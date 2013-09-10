@@ -220,10 +220,10 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
             {
                 QMenu *menuMO = new QMenu(_itemsView);
                 _itemActions[RemoveMO]->setText(tr("All"));
-                menuMO->addActions(QList<QAction *>() << _itemActions[RemoveMO] << separator());
+                menuMO->addActions(QList<QAction *>() << _itemActions[RemoveMO] << separatorAction());
 
                 createActionsForMysticOrbs(menuMO, true, item);
-                menuMO->addAction(separator());
+                menuMO->addAction(separatorAction());
                 createActionsForMysticOrbs(menuMO, false, item);
 
                 actionToAdd = menuMO->menuAction();
@@ -259,11 +259,24 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
         if (_itemActions[EatSignetOfLearning]->data().toUInt() > 0)
             actions << _itemActions[EatSignetOfLearning];
 
-        actions << separator() << _itemActions[Delete];
+        if (item->isPersonalized)
+        {
+            QAction *depersonalizeAction = new QAction(tr("Depersonalize"), this);
+            connect(depersonalizeAction, SIGNAL(triggered()), SLOT(depersonalize()));
+            actions << depersonalizeAction;
+        }
+        else if (item->isExtended) // allow personalization of any item
+        {
+            QAction *personalizeAction = new QAction(tr("Personalize"), this);
+            connect(personalizeAction, SIGNAL(triggered()), SLOT(personalize()));
+            actions << personalizeAction;
+        }
+
+        actions << separatorAction() << _itemActions[Delete];
 #ifdef DUMP_INFO_ACTION
         QAction *dumpInfoAction = new QAction("Dump info", this);
         connect(dumpInfoAction, SIGNAL(triggered()), SLOT(dumpInfo()));
-        actions << separator() << dumpInfoAction;
+        actions << separatorAction() << dumpInfoAction;
 #endif
         QMenu::exec(actions, _itemsView->mapToGlobal(pos));
     }
@@ -340,6 +353,29 @@ void ItemsPropertiesSplitter::eatSelectedSignet()
             return;
     deleteItem(selectedItem());
     emit signetsOfLearningEaten(signetsToEat);
+}
+
+void ItemsPropertiesSplitter::depersonalize()
+{
+    ItemInfo *item = selectedItem();
+
+    ReverseBitWriter::replaceValueInBitString(item->bitString, Enums::ItemOffsets::IsPersonalized, 0);
+    item->isPersonalized = false;
+
+    ReverseBitWriter::remove(item->bitString, item->inscribedNameOffset, (item->inscribedName.length() + 1) * ItemParser::kInscribedNameCharacterLength); // also remove trailing \0
+    item->inscribedName.clear();
+
+    ReverseBitWriter::byteAlignBits(item->bitString);
+    item->hasChanged = true;
+
+    _propertiesWidget->showItem(item);
+    emit itemsChanged();
+}
+
+void ItemsPropertiesSplitter::personalize()
+{
+    ItemInfo *item = selectedItem();
+
 }
 
 //void ItemsPropertiesSplitter::unsocketItem()
@@ -780,7 +816,7 @@ void ItemsPropertiesSplitter::createItemActions()
     _itemActions[Delete] = actionDelete;
 }
 
-QAction *ItemsPropertiesSplitter::separator()
+QAction *ItemsPropertiesSplitter::separatorAction()
 {
     QAction *sep = new QAction(_itemsView);
     sep->setSeparator(true);

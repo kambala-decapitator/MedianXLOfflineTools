@@ -13,6 +13,8 @@ public:
     qint64 readNumber(int length, bool *ok = 0);
 
     int pos() const { return _bitString.length() - _pos; }
+    int absolutePos() const { return _pos; }
+
     int setPos(int newPos);
     void skip(int length = 1);
 

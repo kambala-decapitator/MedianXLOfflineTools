@@ -62,6 +62,7 @@ public:
     } status;
 
     bool shouldDeleteEverything; // is set to false in DupeCheckDialog to prevent crash
+    quint16 inscribedNameOffset;
 
     ItemInfo() { init(); }
     ItemInfo(const QString &bits) : bitString(bits) { init(); }

@@ -18,6 +18,7 @@ const QByteArray ItemParser::kPlugyPageHeader("ST");
 
 const int ItemParser::kBeltMaxRows = 4;
 const int ItemParser::kBeltMaxColumns = 4;
+const int ItemParser::kInscribedNameCharacterLength = 7;
 
 const QString &ItemParser::kEnhancedDamageFormat()
 {
@@ -176,19 +177,23 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
 
                 if (item->isRW)
                     bitReader.skip(16); // RW code - don't know how to use it
+
+                item->inscribedNameOffset = bitReader.pos();
                 if (item->isPersonalized)
                 {
                     for (int i = 0; i < 16; ++i)
                     {
-                        quint8 c = static_cast<quint8>(bitReader.readNumber(7));
+                        quint8 c = static_cast<quint8>(bitReader.readNumber(kInscribedNameCharacterLength));
                         if (!c)
                             break;
                         item->inscribedName += c;
                     }
                 }
+
                 bitReader.skip(); // tome of ID bit
                 if (ItemDataBase::isTomeWithScrolls(item))
                     bitReader.skip(5); // some tome bits
+
                 if (itemBase->genericType == Enums::ItemTypeGeneric::Armor)
                 {
                     ItemPropertyTxt *defenceProp = ItemDataBase::Properties()->value(Enums::ItemProperties::Defence);
@@ -206,6 +211,7 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
                             item->maxDurability = item->currentDurability;
                     }
                 }
+
                 item->quantity = itemBase->isStackable ? bitReader.readNumber(9) : -1;
                 if (item->isSocketed)
                     item->socketsNumber = bitReader.readNumber(4);

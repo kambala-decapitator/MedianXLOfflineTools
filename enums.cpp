@@ -111,17 +111,19 @@ int Mercenary::mercNamesIndexFromCode(MercenaryEnum code)
 
 int ItemOffsets::offsetLength(int offset)
 {
-    static QHash<int, int> hash;
-    if (hash.isEmpty())
+    switch (offset)
     {
-        hash[Ethereal] = 1;
-        hash[Location] = 3;
-        hash[EquipIndex] = 4;
-        hash[Column] = 4;
-        hash[Row] = 4;
-        hash[Storage] = 3;
-        hash[Type] = hash[Type + 8] = hash[Type + 16] = 8; // type consists of 3 chars (excluding space)
+    case Ethereal: case IsPersonalized:
+        return 1;
+    case Location: case Storage:
+        return 3;
+    case EquipIndex: case Column: case Row:
+        return 4;
+    case Type: case (Type + 8): case (Type + 16): // type consists of 3 chars (excluding space)
+        return 8;
+    default:
+        qWarning("offset length not set for offset %d!", offset);
+        return 0;
     }
-    return hash.value(offset);
 }
 }
