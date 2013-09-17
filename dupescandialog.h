@@ -41,7 +41,9 @@ private:
     void logDupedItemsInfo(ItemInfo *item1, ItemInfo *item2);
     void appendStringToLog(const QString &s);
     void scanCharactersInDir(const QString &path);
+
     bool shouldCheckItem(ItemInfo *item);
+    bool areItemsSame(ItemInfo *a, ItemInfo *b);
 };
 
 #endif // DUPESCANDIALOG_H

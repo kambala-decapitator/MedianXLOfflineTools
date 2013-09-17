@@ -203,7 +203,7 @@ void DupeScanDialog::scanCharactersInDir(const QString &path)
                 for (int j = i + 1; j < itemsAndSocketables.size(); ++j)
                 {
                     ItemInfo *jItem = itemsAndSocketables.at(j);
-                    if (jItem->isExtended && iItem->guid == jItem->guid)
+                    if (areItemsSame(jItem, iItem))
                     {
                         checkedItems += iItem;
                         if (!dupedItemFound && _dontWriteCheckBox->isChecked())
@@ -252,7 +252,7 @@ void DupeScanDialog::scanCharactersInDir(const QString &path)
                 {
                     foreach (ItemInfo *jItem, jter.value())
                     {
-                        if (jItem->isExtended && iItem->guid == jItem->guid)
+                        if (areItemsSame(jItem, iItem))
                         {
                             if (!dupedItemFound && _dontWriteCheckBox->isChecked())
                             {
@@ -286,4 +286,9 @@ bool DupeScanDialog::shouldCheckItem(ItemInfo *item)
 {
     // ignore tomes, keys and non-magical quivers
     return !(ItemDataBase::isTomeWithScrolls(item) || item->itemType == "key" || ((item->itemType == "aqv" || item->itemType == "cqv") && item->quality < Enums::ItemQuality::Magic));
+}
+
+bool DupeScanDialog::areItemsSame(ItemInfo *a, ItemInfo *b)
+{
+    return a->isExtended && a->guid == b->guid && a->itemType == b->itemType;
 }
