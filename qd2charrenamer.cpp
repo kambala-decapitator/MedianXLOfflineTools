@@ -23,7 +23,7 @@ void QD2CharRenamer::updateNamePreviewLabel(QLabel *previewLabel, const QString 
 {
     QString htmlName = QString("<font color = \"#ffffff\">%1</font>").arg(name); // white by default
     for (int i = 0; i < ColorsManager::correctColorsNum(); i++) // replace color codes with their hex values for HTML
-        htmlName.replace(QString("%1%2").arg(ColorsManager::unicodeColorHeader()).arg(ColorsManager::colorCodes().at(i)), QString("</font><font color = \"%1\">").arg(ColorsManager::colors().at(i).name()));
+        htmlName.replace(ColorsManager::unicodeColorHeader() + ColorsManager::colorCodes().at(i), QString("</font><font color = \"%1\">").arg(ColorsManager::colors().at(i).name()));
     previewLabel->setText(htmlName);
     previewLabel->setStatusTip(name);
 }
@@ -31,14 +31,24 @@ void QD2CharRenamer::updateNamePreviewLabel(QLabel *previewLabel, const QString 
 
 // ctor
 
-QD2CharRenamer::QD2CharRenamer(const QString &originalName, bool shouldWarn, QWidget *parent) : QDialog(parent), ui(new Ui::QD2CharRenamerClass), _originalCharName(originalName), _shouldWarnAboutColor(shouldWarn),
+QD2CharRenamer::QD2CharRenamer(const QString &originalName, bool shouldWarn, QWidget *parent /*= 0*/, bool areColorsAllowed /*= true*/) : QDialog(parent), ui(new Ui::QD2CharRenamerClass),
+    _originalCharName(originalName), _shouldWarnAboutColor(shouldWarn), _areColorsAllowed(areColorsAllowed),
     colorNames(QStringList() << tr("white") << tr("red") << tr("green") << tr("blue") << tr("gold") << tr("dark gray") << tr("tan") << tr("orange") << tr("yellow") << "foo" << tr("violet"))
 {
     ui->setupUi(this);
     setWindowFlags(windowFlags() & ~Qt::WindowContextHelpButtonHint | Qt::MSWindowsFixedSizeDialogHint);
 
-    customizeNamePreviewLabel(ui->charNamePreviewLabel);
-    createColorMenu();
+    if (areColorsAllowed)
+    {
+        customizeNamePreviewLabel(ui->charNamePreviewLabel);
+        createColorMenu();
+    }
+    else
+    {
+        ui->charNamePreviewLabel->hide();
+        ui->colorButton->hide();
+        adjustSize();
+    }
     ui->charNameLineEdit->setMaxLength(kMaxNameLength);
 
     connect(ui->charNameLineEdit, SIGNAL(textChanged(const QString &)), SLOT(nameChanged(const QString &)));
@@ -108,8 +118,9 @@ void QD2CharRenamer::saveName()
 
 void QD2CharRenamer::nameChanged(const QString &newName)
 {
-    ui->buttonBox->button(QDialogButtonBox::Ok)->setEnabled(newName != _originalCharName && newName.length() > 1);
-    updateNamePreviewLabel(ui->charNamePreviewLabel, ui->charNameLineEdit->text());
+    ui->buttonBox->button(QDialogButtonBox::Ok)->setEnabled((!_areColorsAllowed || newName != _originalCharName) && newName.length() > 1);
+    if (_areColorsAllowed)
+        updateNamePreviewLabel(ui->charNamePreviewLabel, ui->charNameLineEdit->text());
     setWindowTitle(tr("Rename (%1/15)", "param is the number of characters in the name").arg(ui->charNameLineEdit->text().length()));
 }
 

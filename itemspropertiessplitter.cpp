@@ -9,6 +9,7 @@
 #include "reversebitwriter.h"
 #include "characterinfo.hpp"
 #include "progressbarmodal.hpp"
+#include "qd2charrenamer.h"
 
 #include <QMenu>
 
@@ -270,6 +271,11 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
             QAction *personalizeAction = new QAction(tr("Personalize"), this);
             connect(personalizeAction, SIGNAL(triggered()), SLOT(personalize()));
             actions << personalizeAction;
+
+            personalizeAction = new QAction(tr("Personalize with name..."), this);
+            personalizeAction->setObjectName("setName");
+            connect(personalizeAction, SIGNAL(triggered()), SLOT(personalize()));
+            actions << personalizeAction;
         }
 
         actions << separatorAction() << _itemActions[Delete];
@@ -375,7 +381,18 @@ void ItemsPropertiesSplitter::depersonalize()
 void ItemsPropertiesSplitter::personalize()
 {
     ItemInfo *item = selectedItem();
+    QString personalizationName = CharacterInfo::instance().basicInfo.originalName;
+    // remove all colors
+    for (int i = 0; i < ColorsManager::colorCodes().size(); ++i)
+        personalizationName.remove(ColorsManager::unicodeColorHeader() + ColorsManager::colorCodes().at(i));
 
+    if (sender()->objectName() == "setName") // set arbitrary name
+    {
+        QD2CharRenamer renameWidget(personalizationName, false, this, false);
+        if (!renameWidget.exec())
+            return;
+        personalizationName = renameWidget.name();
+    }
 }
 
 //void ItemsPropertiesSplitter::unsocketItem()
