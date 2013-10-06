@@ -22,6 +22,8 @@ public:
     QString name()              const { return _originalCharName; }
     bool shouldWarnAboutColor() const { return _shouldWarnAboutColor; }
 
+    void setLineToolTip(const QString &toolTip);
+
 private slots:
     void nameChanged(const QString &newName);
     void insertColor();

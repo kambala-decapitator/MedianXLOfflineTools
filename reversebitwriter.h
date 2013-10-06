@@ -13,10 +13,11 @@ public:
     static QString &updateItemColumn(ItemInfo *item);
 
     static QString &remove(QString &bitString, int offset, int length);
+    static QString &insert(QString &bitString, int offsetWithoutJM, const QString &bitStringToInsert);
     static QString &byteAlignBits(QString &bitString);
 
 private:
-    static int startOffset(const QString &bitString, int offsetWithoutJM, int length, bool isItemHeaderSkilled = true);
+    static int startOffset(const QString &bitString, int offsetWithoutJM, int length, bool isItemHeaderSkipped = true);
 };
 
 #endif // REVERSEBITWRITER_H

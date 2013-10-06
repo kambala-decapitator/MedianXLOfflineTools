@@ -63,17 +63,25 @@ QD2CharRenamer::~QD2CharRenamer()
 }
 
 
+// public methods
+
+void QD2CharRenamer::setLineToolTip(const QString &toolTip)
+{
+    ui->charNameLineEdit->setToolTip(toolTip);
+}
+
+
 // slots
 
 void QD2CharRenamer::saveName()
 {
-    QString badSymbols = "?*<>.|:\"/\\";
+    QString badSymbols = _areColorsAllowed ? "?*<>.|:\"/\\" : QString();
     QList<ushort> goodUpperHalfCodes = QList<ushort>() << 145 << 146;
     for (ushort i = 160; i < 192; ++i)
         goodUpperHalfCodes << i;
 
     QString newName = ui->charNameLineEdit->text();
-    bool isBadName = newName.startsWith('_') || newName.endsWith('-');
+    bool isBadName = _areColorsAllowed ? (newName.startsWith('_') || newName.endsWith('-')) : false;
     if (!isBadName)
     {
         QString nameToCheck = newName;
@@ -94,12 +102,15 @@ void QD2CharRenamer::saveName()
     else
     {
         bool hasColor = false;
-        for (int i = 0; i < ColorsManager::colorCodes().size(); ++i)
+        if (_areColorsAllowed)
         {
-            if (newName.contains(ColorsManager::unicodeColorHeader() + ColorsManager::colorCodes().at(i)))
+            for (int i = 0; i < ColorsManager::colorCodes().size(); ++i)
             {
-                hasColor = true;
-                break;
+                if (newName.contains(ColorsManager::unicodeColorHeader() + ColorsManager::colorCodes().at(i)))
+                {
+                    hasColor = true;
+                    break;
+                }
             }
         }
         if (hasColor && _shouldWarnAboutColor)

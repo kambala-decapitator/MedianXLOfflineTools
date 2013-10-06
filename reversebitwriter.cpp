@@ -26,6 +26,11 @@ QString &ReverseBitWriter::remove(QString &bitString, int offsetWithoutJM, int l
     return bitString.remove(startOffset(bitString, offsetWithoutJM, length, false) - 1, length);
 }
 
+QString &ReverseBitWriter::insert(QString &bitString, int offsetWithoutJM, const QString &bitStringToInsert)
+{
+    return bitString.insert(startOffset(bitString, offsetWithoutJM, 0, false), bitStringToInsert);
+}
+
 QString &ReverseBitWriter::byteAlignBits(QString &bitString)
 {
     const int kBitsInByte = 8;
@@ -42,8 +47,8 @@ QString &ReverseBitWriter::byteAlignBits(QString &bitString)
 }
 
 
-int ReverseBitWriter::startOffset(const QString &bitString, int offset, int length, bool isItemHeaderSkilled/* = true*/)
+int ReverseBitWriter::startOffset(const QString &bitString, int offset, int length, bool isItemHeaderSkipped/* = true*/)
 {
     // 16 is 'JM' offset which is not stored in the bitString
-    return bitString.length() - (offset - 16 * isItemHeaderSkilled) - length;
+    return bitString.length() - (offset - 16 * isItemHeaderSkipped) - length;
 }

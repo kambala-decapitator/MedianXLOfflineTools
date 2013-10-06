@@ -389,10 +389,27 @@ void ItemsPropertiesSplitter::personalize()
     if (sender()->objectName() == "setName") // set arbitrary name
     {
         QD2CharRenamer renameWidget(personalizationName, false, this, false);
+        renameWidget.setLineToolTip(tr("Colors don't work in personalized name"));
         if (!renameWidget.exec())
             return;
         personalizationName = renameWidget.name();
     }
+
+    ReverseBitWriter::replaceValueInBitString(item->bitString, Enums::ItemOffsets::IsPersonalized, 1);
+    item->isPersonalized = true;
+
+    item->inscribedName = personalizationName.toLatin1();
+    const char *personalizationNameCstr = item->inscribedName.constData();
+    QString personalizationNameBitString;
+    for (quint8 i = 0; i < personalizationName.length() + 1; ++i) // trailing \0 must also be written
+        personalizationNameBitString.prepend(binaryStringFromNumber(personalizationNameCstr[i], false, ItemParser::kInscribedNameCharacterLength));
+    ReverseBitWriter::insert(item->bitString, item->inscribedNameOffset, personalizationNameBitString);
+
+    ReverseBitWriter::byteAlignBits(item->bitString);
+    item->hasChanged = true;
+
+    _propertiesWidget->showItem(item);
+    emit itemsChanged();
 }
 
 //void ItemsPropertiesSplitter::unsocketItem()

@@ -570,9 +570,9 @@ void MedianXLOfflineTools::saveCharacter()
 
             if (pItems)
                 pItems->append(item);
-            *pItemsSize += 2 + item->bitString.length() / 8; // JM + item bytes
+            *pItemsSize += ItemParser::kItemHeader.length() + item->bitString.length() / 8;
             foreach (ItemInfo *socketableItem, item->socketablesInfo)
-                *pItemsSize += 2 + socketableItem->bitString.length() / 8; // JM + item bytes
+                *pItemsSize += ItemParser::kItemHeader.length() + socketableItem->bitString.length() / 8;
         }
     }
 
@@ -584,9 +584,9 @@ void MedianXLOfflineTools::saveCharacter()
 
     // write corpse items
     int mercItemsOffset = tempFileContents.lastIndexOf(kMercHeader);
-    outputDataStream.skipRawData(2); // JM
+    outputDataStream.skipRawData(ItemParser::kItemHeader.length());
     if (!corpseItems.isEmpty())
-        outputDataStream.skipRawData(2 + 12 + 2); // number of corpses + unknown corpse data + JM
+        outputDataStream.skipRawData(2 + 12 + ItemParser::kItemHeader.length()); // number of corpses + unknown corpse data + JM
     outputDataStream << static_cast<quint16>(corpseItems.size());
     int pos = outputDataStream.device()->pos();
     tempFileContents.replace(pos, mercItemsOffset - pos, QByteArray(corpseItemsSize, 0));
@@ -597,7 +597,6 @@ void MedianXLOfflineTools::saveCharacter()
     {
         writeByteArrayDataWithoutNull(outputDataStream, kMercHeader);
         writeByteArrayDataWithoutNull(outputDataStream, ItemParser::kItemHeader);
-        //outputDataStream.skipRawData(2 + 2); // jf + JM
         outputDataStream << static_cast<quint16>(mercItems.size());
         int terminatorOffset = tempFileContents.size() - 3;
         pos = outputDataStream.device()->pos();
