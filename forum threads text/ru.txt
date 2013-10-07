@@ -64,8 +64,8 @@
 [list]
 [*][b]Приложение[/b]:
    [list]
-   [*][i]Windows[/i] (XP SP 2 и позже): http://www.mediafire.com/?kbnt6oiz7fx86gq
-   [*][i]Mac OS X[/i] (10.5 и позже, универсальное приложение): http://www.mediafire.com/?257vzggw2c8dra3
+   [*][i]Windows[/i] (XP SP 2 и позже): http://www.mediafire.com/?wxzbhpur7l94hyq
+   [*][i]Mac OS X[/i] (10.5 и позже, универсальное приложение): http://www.mediafire.com/?7534vpld6fu2a6i
    [/list]
 [*][b]Данные модов[/b] (инструкции по установке находятся ниже в Mini-FAQ; вообще вам не нужно загружать эти архивы, потому что они уже включены в архив приложения):
    [list]
@@ -112,6 +112,11 @@ cp -R resources/data/* "${APP_PATH}/Contents/resources/data"[/code]
 
 
 [B]История версий:[/B]
+
+[I]v0.4.1.2 (07.10.2013)[/I]
+[list]
+[*][+] добавлена возможность давать/убирать произвольные имена предметам (т.н. «персонализация»)
+[/list]
 
 [I]v0.4.1.1 (26.08.2013)[/I]
 [list]
