@@ -242,7 +242,10 @@ QByteArray MedianXLOfflineTools::getOsInfo()
         switch(dwType)
         {
         case PRODUCT_ULTIMATE:
-            os << "Ultimate Edition";
+            os << "Ultimate";
+            break;
+        case PRODUCT_ULTIMATE_N:
+            os << "Ultimate N";
             break;
         case PRODUCT_PROFESSIONAL:
             os << "Professional";
@@ -251,34 +254,34 @@ QByteArray MedianXLOfflineTools::getOsInfo()
             os << "Professional N";
             break;
         case PRODUCT_HOME_PREMIUM:
-            os << "Home Premium Edition";
+            os << "Home Premium";
             break;
         case PRODUCT_HOME_PREMIUM_N:
             os << "Home Premium N";
             break;
         case PRODUCT_HOME_BASIC:
-            os << "Home Basic Edition";
+            os << "Home Basic";
             break;
         case PRODUCT_ENTERPRISE:
-            os << "Enterprise Edition";
+            os << "Enterprise";
             break;
         case PRODUCT_BUSINESS:
-            os << "Business Edition";
+            os << "Business";
             break;
         case PRODUCT_STARTER:
-            os << "Starter Edition";
+            os << "Starter";
             break;
         case PRODUCT_STARTER_N:
-            os << "Starter N Edition";
+            os << "Starter N";
             break;
         case PRODUCT_CLUSTER_SERVER:
-            os << "Cluster Server Edition";
+            os << "Cluster Server";
             break;
         case PRODUCT_DATACENTER_SERVER: case PRODUCT_DATACENTER_SERVER_CORE: case PRODUCT_DATACENTER_EVALUATION_SERVER: case PRODUCT_DATACENTER_SERVER_CORE_V: case PRODUCT_DATACENTER_SERVER_V:
-            os << "Datacenter Edition";
+            os << "Datacenter";
             break;
         case PRODUCT_ENTERPRISE_SERVER: case PRODUCT_ENTERPRISE_SERVER_CORE: case PRODUCT_ENTERPRISE_SERVER_IA64: case PRODUCT_ENTERPRISE_EVALUATION: case PRODUCT_ENTERPRISE_SERVER_CORE_V: case PRODUCT_ENTERPRISE_SERVER_V:
-            os << "Enterprise Edition";
+            os << "Enterprise";
             break;
         case PRODUCT_ENTERPRISE_N: case PRODUCT_ENTERPRISE_N_EVALUATION:
             os << "Enterprise N";
@@ -287,13 +290,13 @@ QByteArray MedianXLOfflineTools::getOsInfo()
             os << "Small Business Server";
             break;
         case PRODUCT_SMALLBUSINESS_SERVER_PREMIUM:
-            os << "Small Business Server Premium Edition";
+            os << "Small Business Server Premium";
             break;
         case PRODUCT_STANDARD_SERVER: case PRODUCT_STANDARD_SERVER_CORE:
-            os << "Standard Edition";
+            os << "Standard";
             break;
         case PRODUCT_WEB_SERVER:
-            os << "Web Server Edition";
+            os << "Web Server";
             break;
         case PRODUCT_PROFESSIONAL_WMC:
             os << "Professional with Media Center";
@@ -326,7 +329,7 @@ QByteArray MedianXLOfflineTools::getOsInfo()
             else if (osvi.wSuiteMask & VER_SUITE_WH_SERVER)
                 os << "Windows Home Server";
             else if (osvi.wProductType == VER_NT_WORKSTATION && si.wProcessorArchitecture == PROCESSOR_ARCHITECTURE_AMD64)
-                os << "Windows XP Professional x64 Edition";
+                os << "Windows XP Professional x64";
             else
                 os << "Windows Server 2003, ";
 
@@ -337,35 +340,35 @@ QByteArray MedianXLOfflineTools::getOsInfo()
                 {
                 case PROCESSOR_ARCHITECTURE_IA64:
                     if (osvi.wSuiteMask & VER_SUITE_DATACENTER)
-                        os << "Datacenter Edition for Itanium-based Systems";
+                        os << "Datacenter for Itanium-based Systems";
                     else if (osvi.wSuiteMask & VER_SUITE_ENTERPRISE)
-                        os << "Enterprise Edition for Itanium-based Systems";
+                        os << "Enterprise for Itanium-based Systems";
                     break;
                 case PROCESSOR_ARCHITECTURE_AMD64:
                     if (osvi.wSuiteMask & VER_SUITE_DATACENTER)
-                        os << "Datacenter x64 Edition";
+                        os << "Datacenter x64";
                     else if (osvi.wSuiteMask & VER_SUITE_ENTERPRISE)
-                        os << "Enterprise x64 Edition";
+                        os << "Enterprise x64";
                     else
-                        os << "Standard x64 Edition";
+                        os << "Standard x64";
                     break;
                 default:
                     if (osvi.wSuiteMask & VER_SUITE_COMPUTE_SERVER)
-                        os << "Compute Cluster Edition";
+                        os << "Compute Cluster";
                     else if (osvi.wSuiteMask & VER_SUITE_DATACENTER)
-                        os << "Datacenter Edition";
+                        os << "Datacenter";
                     else if (osvi.wSuiteMask & VER_SUITE_ENTERPRISE)
-                        os << "Enterprise Edition";
+                        os << "Enterprise";
                     else if (osvi.wSuiteMask & VER_SUITE_BLADE)
-                        os << "Web Edition";
+                        os << "Web";
                     else
-                        os << "Standard Edition";
+                        os << "Standard";
                     break;
                 }
             }
             break;
         case 1:
-            os << "Windows XP " << (osvi.wSuiteMask & VER_SUITE_PERSONAL ? "Home Edition" : "Professional");
+            os << "Windows XP " << (osvi.wSuiteMask & VER_SUITE_PERSONAL ? "Home" : "Professional");
             break;
         case 0:
             os << "Windows 2000 ";
