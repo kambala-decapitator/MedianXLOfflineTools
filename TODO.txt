@@ -1,4 +1,5 @@
 future versions:
+- character planner
 - use column from txt that controls standard item name appearance (iirc only in misc.txt)
 - show UMO properties
 - try unMO UMOs
