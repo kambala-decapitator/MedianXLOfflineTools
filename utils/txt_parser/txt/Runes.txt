@@ -48,7 +48,7 @@ Judas	Judas	1	Zero socketables	47		scep									Um	r22						enr%		5	5	dmg-mon%	1
 Path	Path	1	Zero socketables	63		scep									Ber	r30						ama		2	3	gethit-skill	699	15	18	extra-fire		31	40	extra-pm		31	40	ease		-20	-20	addxp		11	15	enr-factor%		11	15	0
 Gabriel	Gabriel	1	Zero socketables	90		scep									Ath	r40						swingcast3		30	30	dmg%		201	250	att-skill	579	25	22	extra-ltng		31	40	dmg-max		201	300	pal		3	5	str-vit-regen		100	100	0
 Durga	Durga	1	Zero socketables	115		scep									Lai	r49						ama		3	4	dmg-minion		100	100	extra-fire		41	50	cast3		40	40	heal-kill		51	100	blood-elem		21	25	howl-thorns		11	15	0
-Galdr	Galdr	1	Zero socketables	120		scep									Taha	r51						oskill	562	11	19	desc-lockout		1	1	state	126	1	1	extra-pierce-fico		25	25	pal		3	5	extra-fico		6	25	block		1	1	0
+Galdr	Galdr	1	Zero socketables	120		scep									Taha	r51						oskill	1193	11	19	desc-lockout		1	1	state	126	1	1	extra-pierce-fico		25	25	pal		3	5	extra-fico		6	25	block		1	1	0
 Aegina	Aegina	1	Zero socketables	25		aspe									Amn	r11						thorns%		-25	-25	dmg%		51	100	dmg-cold	25	1	100	oskill	571	1	4	manasteal		31	40	wirts		21	25	att-skill	702	5	3	0
 Sankara	Sankara	1	Zero socketables	72		aspe									Sha	r34						swing3		30	30	dmg%		151	200	dmg-max		101	200	ac-global		31	50	heal-kill		101	150	kill-skill	814	5	9	att-skill	330	5	58	0
 Rusalka	Rusalka	1	Zero socketables	110		aspe									Rha	r46						dmg%		301	350	dmg-min		301	500	att-skill	1002	50	16	oskill	405	1	12	kill-skill	387	50	57	extra-cop		61	80	all-stats		51	100	0
@@ -127,7 +127,7 @@ Orisha	Orisha	1	Zero socketables	115		pspe									Nih	r48						oskill	58	3	15	e
 Rex Deus	Rex Deus	1	Zero socketables	120		pspe									Ghal	r52						dmg%		301	350	heal-thorns		51	100	dmg-max		301	400	dmg-demon		500	500	heal-kill		101	150	all-stats		50	50					0
 Circe	Circe	1	Zero socketables	25		orb									Amn	r11						thorns%		-25	-25	enr%		11	15	oskill	96	1	1	pagan2		1	1	extra-pois		11	15	extra-ltng		11	15					0
 Ker	Ker	1	Zero socketables	75		orb									Lem	r20						addxp		3	3	oskill	403	1	4	oskill	57	1	4	death-skill	828	100	43	extra-cold		21	25	extra-pois		21	25	mana%		21	30	0
-Kabbalah	Kabbalah	1	Zero socketables	98		orb									Kur	r36						move3		-15	-15	enr%		20	20	sor		3	3	oskill	437	6	16	extra-fire		31	40	block		1	1	addxp		6	10	0
+Kabbalah	Kabbalah	1	Zero socketables	98		orb									Kur	r36						move3		-15	-15	enr%		20	20	sor		3	3	oskill	593	6	16	extra-fire		31	40	block		1	1	addxp		6	10	0
 Hestia	Hestia	1	Zero socketables	115		orb									On	r50						oskill	388	1	3	sor		3	4	extra-fire/lvl	24	24	24	res-fire		100	100	mag%		21	40	abs-fire%		20	20	nofreeze		1	1	0
 Kallisti	Kallisti	1	Zero socketables	120		orb									Taha	r51						howl-thorns		11	15	oskill	397	1	6	extra-pois		41	50	sor		4	5	cast3		40	40	all-thorns	75	500	500	pierce-pois		11	15	0
 Inanna	Inanna	1	Zero socketables	27		scrd									Sol	r12						extra-pois		-5	-5	dmg%		41	80	res-all		21	25	slow		25	25	uninterrupt		11	20	heal-melee		41	50					0
@@ -283,7 +283,7 @@ Judas	Judas	1	One socketable	47		scep									Um	jew	r22					enr%		5	5	dmg-mon%	
 Path	Path	1	One socketable	63		scep									Ber	jew	r30					ama		2	3	gethit-skill	699	15	18	extra-fire		31	40	extra-pm		31	40	ease		-20	-20	addxp		11	15	enr-factor%		11	15	0
 Gabriel	Gabriel	1	One socketable	90		scep									Ath	jew	r40					swingcast3		30	30	dmg%		201	250	att-skill	579	25	22	extra-ltng		31	40	dmg-max		201	300	pal		3	5	str-vit-regen		100	100	0
 Durga	Durga	1	One socketable	115		scep									Lai	jew	r49					ama		3	4	dmg-minion		100	100	extra-fire		41	50	cast3		40	40	heal-kill		51	100	blood-elem		21	25	howl-thorns		11	15	0
-Galdr	Galdr	1	One socketable	120		scep									Taha	jew	r51					oskill	562	11	19	desc-lockout		1	1	state	126	1	1	extra-pierce-fico		25	25	pal		3	5	extra-fico		6	25	block		1	1	0
+Galdr	Galdr	1	One socketable	120		scep									Taha	jew	r51					oskill	1193	11	19	desc-lockout		1	1	state	126	1	1	extra-pierce-fico		25	25	pal		3	5	extra-fico		6	25	block		1	1	0
 Aegina	Aegina	1	One socketable	25		aspe									Amn	jew	r11					thorns%		-25	-25	dmg%		51	100	dmg-cold	25	1	100	oskill	571	1	4	manasteal		31	40	wirts		21	25	att-skill	702	5	3	0
 Sankara	Sankara	1	One socketable	72		aspe									Sha	jew	r34					swing3		30	30	dmg%		151	200	dmg-max		101	200	ac-global		31	50	heal-kill		101	150	kill-skill	814	5	9	att-skill	330	5	58	0
 Rusalka	Rusalka	1	One socketable	110		aspe									Rha	jew	r46					dmg%		301	350	dmg-min		301	500	att-skill	1002	50	16	oskill	405	1	12	kill-skill	387	50	57	extra-cop		61	80	all-stats		51	100	0
@@ -362,7 +362,7 @@ Orisha	Orisha	1	One socketable	115		pspe									Nih	jew	r48					oskill	58	3	15	
 Rex Deus	Rex Deus	1	One socketable	120		pspe									Ghal	jew	r52					dmg%		301	350	heal-thorns		51	100	dmg-max		301	400	dmg-demon		500	500	heal-kill		101	150	all-stats		50	50					0
 Circe	Circe	1	One socketable	25		orb									Amn	jew	r11					thorns%		-25	-25	enr%		11	15	oskill	96	1	1	pagan2		1	1	extra-pois		11	15	extra-ltng		11	15					0
 Ker	Ker	1	One socketable	75		orb									Lem	jew	r20					addxp		3	3	oskill	403	1	4	oskill	57	1	4	death-skill	828	100	43	extra-cold		21	25	extra-pois		21	25	mana%		21	30	0
-Kabbalah	Kabbalah	1	One socketable	98		orb									Kur	jew	r36					move3		-15	-15	enr%		20	20	sor		3	3	oskill	437	6	16	extra-fire		31	40	block		1	1	addxp		6	10	0
+Kabbalah	Kabbalah	1	One socketable	98		orb									Kur	jew	r36					move3		-15	-15	enr%		20	20	sor		3	3	oskill	593	6	16	extra-fire		31	40	block		1	1	addxp		6	10	0
 Hestia	Hestia	1	One socketable	115		orb									On	jew	r50					oskill	388	1	3	sor		3	4	extra-fire/lvl	24	24	24	res-fire		100	100	mag%		21	40	abs-fire%		20	20	nofreeze		1	1	0
 Kallisti	Kallisti	1	One socketable	120		orb									Taha	jew	r51					howl-thorns		11	15	oskill	397	1	6	extra-pois		41	50	sor		4	5	cast3		40	40	all-thorns	75	500	500	pierce-pois		11	15	0
 Inanna	Inanna	1	One socketable	27		scrd									Sol	jew	r12					extra-pois		-5	-5	dmg%		41	80	res-all		21	25	slow		25	25	uninterrupt		11	20	heal-melee		41	50					0
@@ -518,7 +518,7 @@ Judas	Judas	1	Two socketables	47		scep									Um	jew	jew	r22				enr%		5	5	dmg-m
 Path	Path	1	Two socketables	63		scep									Ber	jew	jew	r30				ama		2	3	gethit-skill	699	15	18	extra-fire		31	40	extra-pm		31	40	ease		-20	-20	addxp		11	15	enr-factor%		11	15	0
 Gabriel	Gabriel	1	Two socketables	90		scep									Ath	jew	jew	r40				swingcast3		30	30	dmg%		201	250	att-skill	579	25	22	extra-ltng		31	40	dmg-max		201	300	pal		3	5	str-vit-regen		100	100	0
 Durga	Durga	1	Two socketables	115		scep									Lai	jew	jew	r49				ama		3	4	dmg-minion		100	100	extra-fire		41	50	cast3		40	40	heal-kill		51	100	blood-elem		21	25	howl-thorns		11	15	0
-Galdr	Galdr	1	Two socketables	120		scep									Taha	jew	jew	r51				oskill	562	11	19	desc-lockout		1	1	state	126	1	1	extra-pierce-fico		25	25	pal		3	5	extra-fico		6	25	block		1	1	0
+Galdr	Galdr	1	Two socketables	120		scep									Taha	jew	jew	r51				oskill	1193	11	19	desc-lockout		1	1	state	126	1	1	extra-pierce-fico		25	25	pal		3	5	extra-fico		6	25	block		1	1	0
 Aegina	Aegina	1	Two socketables	25		aspe									Amn	jew	jew	r11				thorns%		-25	-25	dmg%		51	100	dmg-cold	25	1	100	oskill	571	1	4	manasteal		31	40	wirts		21	25	att-skill	702	5	3	0
 Sankara	Sankara	1	Two socketables	72		aspe									Sha	jew	jew	r34				swing3		30	30	dmg%		151	200	dmg-max		101	200	ac-global		31	50	heal-kill		101	150	kill-skill	814	5	9	att-skill	330	5	58	0
 Rusalka	Rusalka	1	Two socketables	110		aspe									Rha	jew	jew	r46				dmg%		301	350	dmg-min		301	500	att-skill	1002	50	16	oskill	405	1	12	kill-skill	387	50	57	extra-cop		61	80	all-stats		51	100	0
@@ -597,7 +597,7 @@ Orisha	Orisha	1	Two socketables	115		pspe									Nih	jew	jew	r48				oskill	58	3
 Rex Deus	Rex Deus	1	Two socketables	120		pspe									Ghal	jew	jew	r52				dmg%		301	350	heal-thorns		51	100	dmg-max		301	400	dmg-demon		500	500	heal-kill		101	150	all-stats		50	50					0
 Circe	Circe	1	Two socketables	25		orb									Amn	jew	jew	r11				thorns%		-25	-25	enr%		11	15	oskill	96	1	1	pagan2		1	1	extra-pois		11	15	extra-ltng		11	15					0
 Ker	Ker	1	Two socketables	75		orb									Lem	jew	jew	r20				addxp		3	3	oskill	403	1	4	oskill	57	1	4	death-skill	828	100	43	extra-cold		21	25	extra-pois		21	25	mana%		21	30	0
-Kabbalah	Kabbalah	1	Two socketables	98		orb									Kur	jew	jew	r36				move3		-15	-15	enr%		20	20	sor		3	3	oskill	437	6	16	extra-fire		31	40	block		1	1	addxp		6	10	0
+Kabbalah	Kabbalah	1	Two socketables	98		orb									Kur	jew	jew	r36				move3		-15	-15	enr%		20	20	sor		3	3	oskill	593	6	16	extra-fire		31	40	block		1	1	addxp		6	10	0
 Hestia	Hestia	1	Two socketables	115		orb									On	jew	jew	r50				oskill	388	1	3	sor		3	4	extra-fire/lvl	24	24	24	res-fire		100	100	mag%		21	40	abs-fire%		20	20	nofreeze		1	1	0
 Kallisti	Kallisti	1	Two socketables	120		orb									Taha	jew	jew	r51				howl-thorns		11	15	oskill	397	1	6	extra-pois		41	50	sor		4	5	cast3		40	40	all-thorns	75	500	500	pierce-pois		11	15	0
 Inanna	Inanna	1	Two socketables	27		scrd									Sol	jew	jew	r12				extra-pois		-5	-5	dmg%		41	80	res-all		21	25	slow		25	25	uninterrupt		11	20	heal-melee		41	50					0
@@ -753,7 +753,7 @@ Judas	Judas	1	Three socketables	47		scep									Um	jew	jew	jew	r22			enr%		5	5	
 Path	Path	1	Three socketables	63		scep									Ber	jew	jew	jew	r30			ama		2	3	gethit-skill	699	15	18	extra-fire		31	40	extra-pm		31	40	ease		-20	-20	addxp		11	15	enr-factor%		11	15	0
 Gabriel	Gabriel	1	Three socketables	90		scep									Ath	jew	jew	jew	r40			swingcast3		30	30	dmg%		201	250	att-skill	579	25	22	extra-ltng		31	40	dmg-max		201	300	pal		3	5	str-vit-regen		100	100	0
 Durga	Durga	1	Three socketables	115		scep									Lai	jew	jew	jew	r49			ama		3	4	dmg-minion		100	100	extra-fire		41	50	cast3		40	40	heal-kill		51	100	blood-elem		21	25	howl-thorns		11	15	0
-Galdr	Galdr	1	Three socketables	120		scep									Taha	jew	jew	jew	r51			oskill	562	11	19	desc-lockout		1	1	state	126	1	1	extra-pierce-fico		25	25	pal		3	5	extra-fico		6	25	block		1	1	0
+Galdr	Galdr	1	Three socketables	120		scep									Taha	jew	jew	jew	r51			oskill	1193	11	19	desc-lockout		1	1	state	126	1	1	extra-pierce-fico		25	25	pal		3	5	extra-fico		6	25	block		1	1	0
 Aegina	Aegina	1	Three socketables	25		aspe									Amn	jew	jew	jew	r11			thorns%		-25	-25	dmg%		51	100	dmg-cold	25	1	100	oskill	571	1	4	manasteal		31	40	wirts		21	25	att-skill	702	5	3	0
 Sankara	Sankara	1	Three socketables	72		aspe									Sha	jew	jew	jew	r34			swing3		30	30	dmg%		151	200	dmg-max		101	200	ac-global		31	50	heal-kill		101	150	kill-skill	814	5	9	att-skill	330	5	58	0
 Rusalka	Rusalka	1	Three socketables	110		aspe									Rha	jew	jew	jew	r46			dmg%		301	350	dmg-min		301	500	att-skill	1002	50	16	oskill	405	1	12	kill-skill	387	50	57	extra-cop		61	80	all-stats		51	100	0
@@ -832,7 +832,7 @@ Orisha	Orisha	1	Three socketables	115		pspe									Nih	jew	jew	jew	r48			oskill
 Rex Deus	Rex Deus	1	Three socketables	120		pspe									Ghal	jew	jew	jew	r52			dmg%		301	350	heal-thorns		51	100	dmg-max		301	400	dmg-demon		500	500	heal-kill		101	150	all-stats		50	50					0
 Circe	Circe	1	Three socketables	25		orb									Amn	jew	jew	jew	r11			thorns%		-25	-25	enr%		11	15	oskill	96	1	1	pagan2		1	1	extra-pois		11	15	extra-ltng		11	15					0
 Ker	Ker	1	Three socketables	75		orb									Lem	jew	jew	jew	r20			addxp		3	3	oskill	403	1	4	oskill	57	1	4	death-skill	828	100	43	extra-cold		21	25	extra-pois		21	25	mana%		21	30	0
-Kabbalah	Kabbalah	1	Three socketables	98		orb									Kur	jew	jew	jew	r36			move3		-15	-15	enr%		20	20	sor		3	3	oskill	437	6	16	extra-fire		31	40	block		1	1	addxp		6	10	0
+Kabbalah	Kabbalah	1	Three socketables	98		orb									Kur	jew	jew	jew	r36			move3		-15	-15	enr%		20	20	sor		3	3	oskill	593	6	16	extra-fire		31	40	block		1	1	addxp		6	10	0
 Hestia	Hestia	1	Three socketables	115		orb									On	jew	jew	jew	r50			oskill	388	1	3	sor		3	4	extra-fire/lvl	24	24	24	res-fire		100	100	mag%		21	40	abs-fire%		20	20	nofreeze		1	1	0
 Kallisti	Kallisti	1	Three socketables	120		orb									Taha	jew	jew	jew	r51			howl-thorns		11	15	oskill	397	1	6	extra-pois		41	50	sor		4	5	cast3		40	40	all-thorns	75	500	500	pierce-pois		11	15	0
 Inanna	Inanna	1	Three socketables	27		scrd									Sol	jew	jew	jew	r12			extra-pois		-5	-5	dmg%		41	80	res-all		21	25	slow		25	25	uninterrupt		11	20	heal-melee		41	50					0
@@ -988,7 +988,7 @@ Judas	Judas	1	Four socketables	47		scep									Um	jew	jew	jew	jew	r22		enr%		5	
 Path	Path	1	Four socketables	63		scep									Ber	jew	jew	jew	jew	r30		ama		2	3	gethit-skill	699	15	18	extra-fire		31	40	extra-pm		31	40	ease		-20	-20	addxp		11	15	enr-factor%		11	15	0
 Gabriel	Gabriel	1	Four socketables	90		scep									Ath	jew	jew	jew	jew	r40		swingcast3		30	30	dmg%		201	250	att-skill	579	25	22	extra-ltng		31	40	dmg-max		201	300	pal		3	5	str-vit-regen		100	100	0
 Durga	Durga	1	Four socketables	115		scep									Lai	jew	jew	jew	jew	r49		ama		3	4	dmg-minion		100	100	extra-fire		41	50	cast3		40	40	heal-kill		51	100	blood-elem		21	25	howl-thorns		11	15	0
-Galdr	Galdr	1	Four socketables	120		scep									Taha	jew	jew	jew	jew	r51		oskill	562	11	19	desc-lockout		1	1	state	126	1	1	extra-pierce-fico		25	25	pal		3	5	extra-fico		6	25	block		1	1	0
+Galdr	Galdr	1	Four socketables	120		scep									Taha	jew	jew	jew	jew	r51		oskill	1193	11	19	desc-lockout		1	1	state	126	1	1	extra-pierce-fico		25	25	pal		3	5	extra-fico		6	25	block		1	1	0
 Aegina	Aegina	1	Four socketables	25		aspe									Amn	jew	jew	jew	jew	r11		thorns%		-25	-25	dmg%		51	100	dmg-cold	25	1	100	oskill	571	1	4	manasteal		31	40	wirts		21	25	att-skill	702	5	3	0
 Sankara	Sankara	1	Four socketables	72		aspe									Sha	jew	jew	jew	jew	r34		swing3		30	30	dmg%		151	200	dmg-max		101	200	ac-global		31	50	heal-kill		101	150	kill-skill	814	5	9	att-skill	330	5	58	0
 Rusalka	Rusalka	1	Four socketables	110		aspe									Rha	jew	jew	jew	jew	r46		dmg%		301	350	dmg-min		301	500	att-skill	1002	50	16	oskill	405	1	12	kill-skill	387	50	57	extra-cop		61	80	all-stats		51	100	0
@@ -1067,7 +1067,7 @@ Orisha	Orisha	1	Four socketables	115		pspe									Nih	jew	jew	jew	jew	r48		oski
 Rex Deus	Rex Deus	1	Four socketables	120		pspe									Ghal	jew	jew	jew	jew	r52		dmg%		301	350	heal-thorns		51	100	dmg-max		301	400	dmg-demon		500	500	heal-kill		101	150	all-stats		50	50					0
 Circe	Circe	1	Four socketables	25		orb									Amn	jew	jew	jew	jew	r11		thorns%		-25	-25	enr%		11	15	oskill	96	1	1	pagan2		1	1	extra-pois		11	15	extra-ltng		11	15					0
 Ker	Ker	1	Four socketables	75		orb									Lem	jew	jew	jew	jew	r20		addxp		3	3	oskill	403	1	4	oskill	57	1	4	death-skill	828	100	43	extra-cold		21	25	extra-pois		21	25	mana%		21	30	0
-Kabbalah	Kabbalah	1	Four socketables	98		orb									Kur	jew	jew	jew	jew	r36		move3		-15	-15	enr%		20	20	sor		3	3	oskill	437	6	16	extra-fire		31	40	block		1	1	addxp		6	10	0
+Kabbalah	Kabbalah	1	Four socketables	98		orb									Kur	jew	jew	jew	jew	r36		move3		-15	-15	enr%		20	20	sor		3	3	oskill	593	6	16	extra-fire		31	40	block		1	1	addxp		6	10	0
 Hestia	Hestia	1	Four socketables	115		orb									On	jew	jew	jew	jew	r50		oskill	388	1	3	sor		3	4	extra-fire/lvl	24	24	24	res-fire		100	100	mag%		21	40	abs-fire%		20	20	nofreeze		1	1	0
 Kallisti	Kallisti	1	Four socketables	120		orb									Taha	jew	jew	jew	jew	r51		howl-thorns		11	15	oskill	397	1	6	extra-pois		41	50	sor		4	5	cast3		40	40	all-thorns	75	500	500	pierce-pois		11	15	0
 Inanna	Inanna	1	Four socketables	27		scrd									Sol	jew	jew	jew	jew	r12		extra-pois		-5	-5	dmg%		41	80	res-all		21	25	slow		25	25	uninterrupt		11	20	heal-melee		41	50					0
@@ -1223,7 +1223,7 @@ Judas	Judas	1	Five socketables	47		scep									Um	jew	jew	jew	jew	jew	r22	enr%	
 Path	Path	1	Five socketables	63		scep									Ber	jew	jew	jew	jew	jew	r30	ama		2	3	gethit-skill	699	15	18	extra-fire		31	40	extra-pm		31	40	ease		-20	-20	addxp		11	15	enr-factor%		11	15	0
 Gabriel	Gabriel	1	Five socketables	90		scep									Ath	jew	jew	jew	jew	jew	r40	swingcast3		30	30	dmg%		201	250	att-skill	579	25	22	extra-ltng		31	40	dmg-max		201	300	pal		3	5	str-vit-regen		100	100	0
 Durga	Durga	1	Five socketables	115		scep									Lai	jew	jew	jew	jew	jew	r49	ama		3	4	dmg-minion		100	100	extra-fire		41	50	cast3		40	40	heal-kill		51	100	blood-elem		21	25	howl-thorns		11	15	0
-Galdr	Galdr	1	Five socketables	120		scep									Taha	jew	jew	jew	jew	jew	r51	oskill	562	11	19	desc-lockout		1	1	state	126	1	1	extra-pierce-fico		25	25	pal		3	5	extra-fico		6	25	block		1	1	0
+Galdr	Galdr	1	Five socketables	120		scep									Taha	jew	jew	jew	jew	jew	r51	oskill	1193	11	19	desc-lockout		1	1	state	126	1	1	extra-pierce-fico		25	25	pal		3	5	extra-fico		6	25	block		1	1	0
 Aegina	Aegina	1	Five socketables	25		aspe									Amn	jew	jew	jew	jew	jew	r11	thorns%		-25	-25	dmg%		51	100	dmg-cold	25	1	100	oskill	571	1	4	manasteal		31	40	wirts		21	25	att-skill	702	5	3	0
 Sankara	Sankara	1	Five socketables	72		aspe									Sha	jew	jew	jew	jew	jew	r34	swing3		30	30	dmg%		151	200	dmg-max		101	200	ac-global		31	50	heal-kill		101	150	kill-skill	814	5	9	att-skill	330	5	58	0
 Rusalka	Rusalka	1	Five socketables	110		aspe									Rha	jew	jew	jew	jew	jew	r46	dmg%		301	350	dmg-min		301	500	att-skill	1002	50	16	oskill	405	1	12	kill-skill	387	50	57	extra-cop		61	80	all-stats		51	100	0
@@ -1302,7 +1302,7 @@ Orisha	Orisha	1	Five socketables	115		pspe									Nih	jew	jew	jew	jew	jew	r48	o
 Rex Deus	Rex Deus	1	Five socketables	120		pspe									Ghal	jew	jew	jew	jew	jew	r52	dmg%		301	350	heal-thorns		51	100	dmg-max		301	400	dmg-demon		500	500	heal-kill		101	150	all-stats		50	50					0
 Circe	Circe	1	Five socketables	25		orb									Amn	jew	jew	jew	jew	jew	r11	thorns%		-25	-25	enr%		11	15	oskill	96	1	1	pagan2		1	1	extra-pois		11	15	extra-ltng		11	15					0
 Ker	Ker	1	Five socketables	75		orb									Lem	jew	jew	jew	jew	jew	r20	addxp		3	3	oskill	403	1	4	oskill	57	1	4	death-skill	828	100	43	extra-cold		21	25	extra-pois		21	25	mana%		21	30	0
-Kabbalah	Kabbalah	1	Five socketables	98		orb									Kur	jew	jew	jew	jew	jew	r36	move3		-15	-15	enr%		20	20	sor		3	3	oskill	437	6	16	extra-fire		31	40	block		1	1	addxp		6	10	0
+Kabbalah	Kabbalah	1	Five socketables	98		orb									Kur	jew	jew	jew	jew	jew	r36	move3		-15	-15	enr%		20	20	sor		3	3	oskill	593	6	16	extra-fire		31	40	block		1	1	addxp		6	10	0
 Hestia	Hestia	1	Five socketables	115		orb									On	jew	jew	jew	jew	jew	r50	oskill	388	1	3	sor		3	4	extra-fire/lvl	24	24	24	res-fire		100	100	mag%		21	40	abs-fire%		20	20	nofreeze		1	1	0
 Kallisti	Kallisti	1	Five socketables	120		orb									Taha	jew	jew	jew	jew	jew	r51	howl-thorns		11	15	oskill	397	1	6	extra-pois		41	50	sor		4	5	cast3		40	40	all-thorns	75	500	500	pierce-pois		11	15	0
 Inanna	Inanna	1	Five socketables	27		scrd									Sol	jew	jew	jew	jew	jew	r12	extra-pois		-5	-5	dmg%		41	80	res-all		21	25	slow		25	25	uninterrupt		11	20	heal-melee		41	50					0
@@ -3136,7 +3136,7 @@ MarcoNecroX_1	MarcoNecroX_1	1	weapon	socks:6		weap						nscy	taxe	aspe	Phys	r58	
 MarcoNecroX_2	MarcoNecroX_2	1	bow	socks:6		bow						dbow			Cold	r62	r62	r62	r62	r62	r62	dmg%		350	350	allskills		0	2	hit-skill	387	1	23	pierce-cold		50	50	dmg-cold		500	1000	heal-hit		1	1	kill-skill	903	10	16	0
 MarcoNecroX_3	MarcoNecroX_3	1	xbow	socks:6		xbow									Ltng	r61	r61	r61	r61	r61	r61	dmg%		350	350	allskills		0	2	hit-skill	462	1	19	extra-ltng		60	70	pierce-ltng		30	30	res-ltng		100	100	dmg-ltng		1000	1500	0
 MarcoNecroX_4	MarcoNecroX_4	1	sword	socks:6		swor									Fire	r57	r57	r57	r57	r57	r57	dmg%		300	350	allskills		0	2	oskill	431	15	15	att-skill	336	25	36	extra-fire		50	75	pierce-fire		100	100	dmg-fire		1000	1000	0
-MarcoNecroX_5	MarcoNecroX_5	1	axes	socks:6		axe						taxe			Magic	r59	r59	r59	r59	r59	r59	dmg%		300	350	allskills		0	2	hit-skill	436	5	29	extra-pm		60	60	dmg-norm		250	300	dmg-mag		500	600	swing3		66	66	0
+MarcoNecroX_5	MarcoNecroX_5	1	axes	socks:6		axe						taxe			Magic	r59	r59	r59	r59	r59	r59	dmg%		300	350	allskills		0	2	hit-skill	681	5	29	extra-pm		60	60	dmg-norm		250	300	dmg-mag		500	600	swing3		66	66	0
 MarcoNecroX_6	MarcoNecroX_6	1	spears	socks:6		spea						pspe			Pois	r60	r60	r60	r60	r60	r60	dmg%		300	350	allskills		0	2	oskill	965	5	9	pierce-pois		100	100	dmg-norm		300	400	oskill	316	13	16	res-pois-max		15	15	0
 MarcoNecroX_7	MarcoNecroX_7	1	scythes	socks:6		scyh									6	r60	r60	r60	r60	r60	r60	dmg%		300	350	allskills		0	2	oskill	979	23	31	extra-pois		50	70	pierce-pois		50	50	kill-skill	139	10	35	heal-kill		150	200	0
 MarcoNecroX_8	MarcoNecroX_8	1	daggers	socks:3		knif						tkni			3	r62	r62	r62				dmg%		300	350	allskills		0	1	att-skill	825	10	23	dmg-cold		600	700	pierce-cold		33	33	lifesteal		20	25	res-cold-max		10	10	0
@@ -3150,7 +3150,7 @@ MarcoNecroX_15	MarcoNecroX_15	1	throwing axe	socks:6		taxe									6	r58	r58	r58
 MarcoNecroX_16	MarcoNecroX_16	1	amabow	socks:6		abow									6	r57	r57	r57	r57	r57	r57	dmg%		300	350	ama		0	2	damage-skill	302	3	16	kill-skill	451	25	36	pierce-fire		50	50	dmg-fire		666	666	abs-fire		10	10	0
 MarcoNecroX_17	MarcoNecroX_17	1	amajav	socks:3		ajav									3	r57	r57	r57				dmg%		300	350	ama		0	1	hit-skill	154	1	26	heal-kill		100	100	pierce-fire		75	75	extra-fire		50	50	res-fire-max		15	15	0
 MarcoNecroX_18	MarcoNecroX_18	1	amasp	socks:6		aspe									6	r58	r58	r58	r58	r58	r58	dmg%		300	350	ama		0	3	kill-skill	78	10	12	dmg-norm		500	700	lifesteal		20	30	red-dmg%		10	10	att%		250	250	0
-MarcoNecroX_19	MarcoNecroX_19	1	asnclaw	socks:3		h2h									3	r59	r59	r59				dmg%		300	350	ass		0	2	kill-skill	440	10	36	extra-pm		50	50	dmg-mag		333	666	heal-hit		3	3	slow		30	30	0
+MarcoNecroX_19	MarcoNecroX_19	1	asnclaw	socks:3		h2h									3	r59	r59	r59				dmg%		300	350	ass		0	2	kill-skill	480	10	36	extra-pm		50	50	dmg-mag		333	666	heal-hit		3	3	slow		30	30	0
 MarcoNecroX_20	MarcoNecroX_20	1	asnnagi	socks:6		nagi									6	r59	r59	r59	r59	r59	r59	dmg%		300	350	ass		0	7	kill-skill	388	2	22	dmg-norm		500	750	extra-pm		100	100	swing3		66	66	heal-kill		50	75	0
 MarcoNecroX_21	MarcoNecroX_21	1	barb weap	socks:6		bswd	baxe								6	r62	r62	r62	r62	r62	r62	dmg%		300	350	bar		0	1	att-skill	458	20	42	extra-cold		50	50	pierce-cold		25	25	dmg-cold		100	1100	res-cold		80	80	0
 MarcoNecroX_22	MarcoNecroX_22	1	barb 2h	socks:6		2hbx									6	r61	r61	r61	r61	r61	r61	dmg%		300	350	bar		0	3	kill-skill	461	50	36	pierce-ltng		100	100	dmg-ltng		333	666	dmg-norm		400	800	lifesteal		25	30	0
@@ -3159,7 +3159,7 @@ MarcoNecroX_24	MarcoNecroX_24	1	drustaff	socks:4		dstf									4	r61	r61	r61	r61
 MarcoNecroX_25	MarcoNecroX_25	1	necroscythe	socks:6		nscy									6	r58	r58	r58	r58	r58	r58	dmg%		300	350	nec		0	4	gethit-skill	1012	5	16	hit-skill	542	30	30	dmg-norm		500	750	ignore-ac		1	1	heal-hit		1	1	0
 MarcoNecroX_26	MarcoNecroX_26	1	necdagger	socks:3		nknf									3	r58	r58	r58				dmg%		300	350	nec		0	1	hit-skill	1017	40	3	hp%		15	15	state	231	1	1	swing3		50	50	dmg-norm		150	250	0
 MarcoNecroX_27	MarcoNecroX_27	1	necwand	socks:2		wand									2	r59	r59					cast3		20	20	nec		0	3	oskill	399	12	23	extra-all		30	50	res-all-minion		25	25	hp-minion		100	100	dmg-minion		200	200	0
-MarcoNecroX_28	MarcoNecroX_28	1	necstaff	socks:6		nstf									6	r57	r57	r57	r57	r57	r57	cast3		50	50	nec		0	11	oskill	438	31	36	extra-pm		50	60	enr%		30	40	enr-factor%		20	20	heal-kill		250	250	0
+MarcoNecroX_28	MarcoNecroX_28	1	necstaff	socks:6		nstf									6	r57	r57	r57	r57	r57	r57	cast3		50	50	nec		0	11	oskill	682	31	36	extra-pm		50	60	enr%		30	40	enr-factor%		20	20	heal-kill		250	250	0
 MarcoNecroX_29	MarcoNecroX_29	1	necxbw	socks:6		nxbw									6	r59	r59	r59	r59	r59	r59	dmg%		300	350	nec		0	2	hit-skill	503	1	17	dmg-mag		333	666	dmg-norm		333	666	swing3		30	30	hp%		15	15	0
 MarcoNecroX_30	MarcoNecroX_30	1	pal spear	socks:6		pspe									6	r60	r60	r60	r60	r60	r60	dmg%		300	350	pal		0	4	att-skill	338	10	22	att-skill	339	10	22	res-pois		75	75	extra-all		50	50	balance3		60	60	0
 MarcoNecroX_31	MarcoNecroX_31	1	pal blunt	socks:6		pclb	pham	pmac							6	r57	r57	r57	r57	r57	r57	dmg%		300	350	pal		0	2	kill-skill	824	2	36	pierce-fire		50	50	dmg-fire		666	666	res-fire-max		15	15	dmg-norm		250	750	0

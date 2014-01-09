@@ -2917,7 +2917,7 @@
 "56+"	"\blue;+2 Required Level\n1% Chance to cast level 4 Spike Nova on Attack\n\white;Cube with Any Weapon to Add Bonus"
 "57+"	"\blue;+2 Required Level\n1% Chance to cast level 3 Miasma on Attack\n\white;Cube with Any Weapon to Add Bonus"
 "58+"	"\blue;+2 Required Level\n1% Chance to cast level 6 Crucify on Attack\n\white;Cube with Any Weapon to Add Bonus"
-"59+"	"\blue;+2 Required Level\n+999 to I NEED A LIFE BECAUSE I HAVE 6 SHA'ADS\n\white;Cube with Any Weapon to Add Bonus"
+"59+"	"\blue;+2 Required Level\nLuck Trial\n\white;Cube with Any Weapon to Add Bonus"
 "60+"	"\blue;+2 Required Level\n+10 Life on Striking in Melee\n\white;Cube with Any Weapon to Add Bonus"
 "61+"	"\blue;+2 Required Level\n+10 Mana on Striking in Melee\n\white;Cube with Any Weapon to Add Bonus"
 "62+"	"\blue;+2 Required Level\n+2 Energy Factor to Spell Damage\n\white;Cube with Any Weapon to Add Bonus"
@@ -4326,3 +4326,4 @@
 "#3^"	"\grey;Cube Reagent\n\orange;Arcane Shards #2"
 "#4^"	"\grey;Cube Reagent\n\orange;Arcane Shards #3"
 "#5^"	"\grey;Cube Reagent\n\orange;Arcane Shards #4"
+"DescICantFindIt"	"Converts %d%% Physical Damage to Fire Damage"

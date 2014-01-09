@@ -1,10 +1,10 @@
 index	version	enabled	ladder	rarity	nolimit	lvl	lvl req	code	*type	*Laz / comment	*uber	*TXTtoHTML_ordering	* Laz1	* Laz2	* Laz3	* Laz4	carry1	cost mult	cost add	chrtransform	invtransform	flippyfile	invfile	dropsound	dropsfxframe	usesound	prop1	par1	min1	max1	prop2	par2	min2	max2	prop3	par3	min3	max3	prop4	par4	min4	max4	prop5	par5	min5	max5	prop6	par6	min6	max6	prop7	par7	min7	max7	prop8	par8	min8	max8	prop9	par9	min9	max9	prop10	par10	min10	max10	prop11	par11	min11	max11	prop12	par12	min12	max12	*eol
-Amulet of the Viper	MN	1		1				vip	00 - Quest Item	Quest Item		ZZZ	ZZZ					5	5000	lgry	lgry						res-pois		50	50	all-stats		10	10	addxp		5	5	light		2	2																																	0
-Staff of Kings		1		1				msf	01 - Quest Item	Quest Item		ZZZ	ZZZ					5	5000	dgry	dgry						extra-all		10	10	allskills		1	1	cast3		15	15	res-all		25	25																																	0
-Horadric Staff		1		1			15	hst	02 - Quest Item	Quest Item		ZZZ	ZZZ					5	5000	lgld	lgld						extra-all		10	10	allskills		1	1	cast3		15	15	res-all		25	25	res-pois		50	50	all-stats		10	10	addxp		5	5	light		2	2	charged	1002	20	1	cheap		5	5									0
-Hell Forge Hammer		1		1			20	hfh	03 - Quest Item	Quest Item		ZZZ	ZZZ					5	5000	cred	cred						dmg%		50	50	dmg-max		15	15	dmg-stun		25	25	res-fire		40	40	kill-skill	518	50	2																													0
-KhalimFlail		1		1			15	qf1	04 - Quest Item	Quest Item		ZZZ	ZZZ					5	5000	dgry	dgry						dmg%		50	50	heal-kill		5	5	swing3		20	20	att%		75	75																																	0
-SuperKhalimFlail		1		1			20	qf2	05 - Quest Item	Quest Item		ZZZ	ZZZ					5	5000	lgld	lgld						dmg%		50	50	heal-kill		5	5	swing3		20	20	att%		150	150	hp%-mp%		20	20	charged	311	66	6	vit%		15	15	enr%		15	15	dmg-max		40	40													0
+Amulet of the Viper	MN	1		1				vip	TOGGLE REALM	0		ZZZ	ZZZ					5	5000	lgry	lgry						res-pois		50	50	all-stats		10	10	addxp		5	5	light		2	2	item-duped		1	1																													0
+Staff of Kings		1		1				msf	01 - Quest Item	Quest Item		ZZZ	ZZZ					5	5000	dgry	dgry						extra-all		10	10	allskills		1	1	cast3		15	15	res-all		25	25	item-duped		1	1																													0
+Horadric Staff		1		1			15	hst	02 - Quest Item	Quest Item		ZZZ	ZZZ					5	5000	lgld	lgld						extra-all		10	10	allskills		1	1	cast3		15	15	res-all		25	25	res-pois		50	50	all-stats		10	10	addxp		5	5	light		2	2	charged	1002	20	1	cheap		5	5	item-duped		1	1					0
+Hell Forge Hammer		1		1			20	hfh	03 - Quest Item	Quest Item		ZZZ	ZZZ					5	5000	cred	cred						dmg%		50	50	dmg-max		15	15	dmg-stun		25	25	res-fire		40	40	kill-skill	518	50	2	item-duped		1	1																									0
+KhalimFlail		1		1			15	qf1	04 - Quest Item	Quest Item		ZZZ	ZZZ					5	5000	dgry	dgry						dmg%		50	50	heal-kill		5	5	swing3		20	20	att%		75	75	item-duped		1	1																													0
+SuperKhalimFlail		1		1			20	qf2	05 - Quest Item	Quest Item		ZZZ	ZZZ					5	5000	lgld	lgld						dmg%		50	50	heal-kill		5	5	swing3		20	20	att%		150	150	hp%-mp%		20	20	charged	311	66	6	vit%		15	15	enr%		15	15	dmg-max		40	40	item-duped		1	1									0
 BossKillerRing		1		5	1	1	100	r@r	06 - Quest Item	Quest Item		9996a	9996a					5	5000				Ring08				dmg-norm		25	50	dmg-undead		50	50	ac		-250	-250	hp%		5	5	light		2	2																													0
 UpgradedBossKillerRing		1		5	1	1	100	s@s	07 - Quest Item	Quest Item		9996b	9996b					5	5000	blac	blac		Ring08				oskill	876	1	1	allskills		1	1	dmg-norm		25	50	dmg-undead		150	150	hp%		10	10	light		2	2	mana%		10	10																					0
 ScrollOfSummons		1		1	1	1	1	s0m	08 - Quest Item	Quest Item		ZZZ	ZZZ					5	5000								oskill	551	1	1																																													0
@@ -55,28 +55,28 @@ TheBookOfLies2		1		1	1	1	60	k@k	1 - Charm z2	Uber Reward		ZZ	ZZ				1	5	5000	cred
 UniqueDemonsbane		1		1	1	1	100	t@t	1 - Charm z3	Uber Reward		ZZ	ZZ				1	5	5000	oran	oran		demonsbaneZ				ama		0	2	ass		0	2	bar		0	2	dru		0	2	nec		0	2	pal		0	2	sor		0	2	regen		50	50																	0
 ColdFusionSchematics		1		1	1	1	100	w@w	1 - Charm z4	Uber Reward		ZZ	ZZ				1	5	5000	lblu	lblu		coldfusion				hit-skill	542	5	10	str		11	50	dex		11	50	enr		11	50	vit		11	50	death-skill	564	100	59																									0
 BookOfLaz		1		1	1	1	100	x@x	1 - Charm z5	Uber Reward		ZZ	ZZ				1	5	5000	blac	blac		bookoflaz	swallowyoursoul		swallowyoursoul	dmg-norm		50	50	gold%		201	250	allskills		1	1	dmg-demon		51	75	res-all		11	15	reanimate	1623	0	5																									0
-UldyssianCharm		1		1	1	1	120	##.	1 - Charm z6	Uber Reward	NEW	ZZZ	ZZZ				1	5	5000								gethit-skill	248	5	1	allskills		1	1	res-all		10	30	charged	876	100	1	reanimate	1928	1	1																													0
+UldyssianCharm		1		1	1	666	666	##.	1 - Charm z6	Uber Reward	NEW	ZZZ	ZZZ				1	5	5000								gethit-skill	248	5	1	allskills		1	1	res-all		10	30	charged	876	100	1	reanimate	1928	1	1																													0
 MyOwnCharm		1		1	1	1	666	#Y^	1 - Charm z7	Uber Reward	NEW	ZZZ	ZZZ				1	5	5000					call_doyourbidding		call_doyourbidding	anykill-skill	62	1	20	damage-skill	54	1	5	allskills		0	1	pierce-fire		0	10	move3		25	25	pierce-ltng		0	10	pierce-pois		0	10	pierce-cold		0	10																	0
 KabraxisSoul		1		1	1	200	666	bxa	1 - Charm z8	Uber Reward	NEW	ZZZ	ZZZ				1	5	5000					kabraxis_death_1		kabraxis_death_1	allskills		0	1	res-cold-max		0	5	reanimate	1824	0	1	reanimate	1825	0	1	reanimate	1826	0	1	reanimate	1827	0	1	reanimate	1828	0	1	res-fire-max		0	5	res-ltng-max		0	5	res-pois-max		0	5									0
-TheTesseract				1	1	120	100	amu	2 - Amulet (Sacred) a	Realm Reserved		ZZZ	ZZZ					5	5000								extra-fire		1	50	extra-cold		1	50	extra-ltng		1	50	extra-pois		1	50	pierce-fire		1	40	pierce-cold		1	40	pierce-ltng		1	40	pierce-pois		1	40	allskills		2	2	cast3		25	25									0
-KhanduranRoyalPendant				1	1	120	100	amu	2 - Amulet (Sacred) b	Realm Reserved		ZZZ	ZZZ					5	5000								skillcap		1	1	charged	616	25	5	block		1	1																																					0
-LocketOfDreams				1	1	120	100	amu	2 - Amulet (Sacred) c	Realm Reserved		ZZZ	ZZZ					5	5000								allskills		2	2	pot-rate		41	50	vit		100	100	gold%		450	450	light		2	2	heal-thorns		151	200																									0
-JerhynsTawiz				10	1	1	0	amu	2 - Amulet (Sacred) d	Realm Reserved		ZZZ	ZZZ					5	5000								addxp		20	20	dmg-demon		21	25	regen		100	100																																					0
-NewGrandArmor				4	1	120	100	@15	2 - Ancient Armor (Sacred)	Realm Reserved		ZZZ	ZZZ					5	5000	dred	dred						sock		6	6	ac%		301	350	dmg-global		100	100	hp%		11	15	hp		500	500	regen		401	500	red-dmg		100	100	red-dmg%		10	10	red-mag		10	10	ease		500	500									0
-NewAeterna				4	1	120	100	05@	2 - Broad Sword (Sacred)	Realm Reserved		ZZ	ZZ					5	5000	blac	blac						sock		6	6	str-add		51	51	dmg%		300	350	dmg-mag		2000	2500	swing3		100	100	innate-grace	84	5	1	att-skill	340	5	25	ease		-50	-50	att-damage		50	50													0
-New2BlackRoseCrown				4	1	120	555	@70	2 - Diadem (Sacred)	Realm Reserved		ZZ	ZZ					5	5000	dpur	dpur			blackfury_active		blackfury_active	sock		4	4	ac		-500	-500	enr-factor		-25	-25	ass		1	3	nec		1	3	skill-dur		30	30	skill-rand	2	401	425	skill-rand	2	326	350	balance3		40	40	heal-kill		41	50	hp-minion		41	50					0
-NewWhiteVoid				4	1	120	100	13@	2 - Great Sword (Sacred)	Realm Reserved		ZZ	ZZ					5	5000	lgry	lgry						sock		6	6	str-add		76	76	dmg%		251	300	dmg-mag		1500	2500	dmg-max		401	500	crush		11	15	noheal		1	1	dmg-global		101	150	mana-melee		100	100	reanimate	926	50	50									0
-New5Wishmaster				50	1	1	0	jew	2 - Jewel a	Realm Reserved		ZZZ	ZZZ					5	5000								mag%		20	20	att-skill	116	2	1																																									0
-Atomus				1	1	120	0	jew	2 - Jewel b	Realm Reserved		ZZZ	ZZZ				1	5	5000								allskills		1	1	all-stats		50	50	att-skill	762	1	23	addxp		50	50	craft-points		250	250																													0
-NewSiggardsRevenge				4	1	120	100	7@N	2 - Parma (Sacred)	Realm Reserved		ZZZ	ZZZ					5	5000	blac	blac						sock		4	4	ac%		201	250	block		2	2	dex		150	150	str		-50	-50	att%		101	150	reanimate	1378	10	10	dmg-demon		301	350	indestruct		1	1	demon-heal		101	150	crush		20	20					0
-NewSoulReaver				4	1	120	100	!14	2 - Raptor Scythe (Sacred)	Realm Reserved		ZZZ	ZZZ					5	5000	blac	blac						sock		6	6	str-add		102	102	dmg%		301	350	nec		4	4	dmg-global		151	200	manasteal		21	25	lifesteal		21	25	heal-melee		250	250	mana-melee		500	500	reanimate	632	50	50	innate-impact	146	25	1					0
-TheNoobLoop				10	1	1	0	rin	2 - Ring (Sacred) a	Realm Reserved		Z	Z					5	5000								str		11	15	dex		11	15	dmg-norm		10	20	addxp		5	5																																	0
-RingOfMourning				1	1	120	100	rin	2 - Ring (Sacred) b	Realm Reserved		ZZZ	ZZZ					5	5000								vit		-100	-100	dex		200	200	regen-mana		11	15	balance3		25	25																																	0
-BlackHandSigil				1	1	120	100	rin	2 - Ring (Sacred) c	Realm Reserved		ZZZ	ZZZ					5	5000								kill-skill	330	3	62	dmg-pois	200	2048	2048	dmg-norm		50	100	light		-5	-5																																	0
-AkaratsNails				1	1	120	100	rin	2 - Ring (Sacred) d	Realm Reserved		ZZZ	ZZZ					5	5000								regen		-250	-250	dmg-global		150	150	crush		15	15	openwounds		10	10	att-skill	500	10	2																													0
-NewFuryHell				4	1	120	100	7@F	2 - Trebuchet (Sacred)	Realm Reserved		ZZZ	ZZZ					5	5000	lred	lred						sock		6	6	str-add		76	76	dmg%		301	350	dmg-fire		1500	2000	extra-fire		101	150	pierce-fire		31	40	hit-skill	311	1	30	res-fire-max		5	5	abs-fire		100	100	reanimate	1592	2	2									0
-Diablo Clone Charm				1	1	1	120	#1^	2 - Uber Reward	Realm Reserved		ZZZ	ZZZ				1	5	5000								hp%		1	5	skill-rand	2	301	475	dmg-fire		200	300	reanimate	1935	0	1	move3		20	20																													0
-TokenRing				1	1	120	121	rin	3 - Ring (Sacred)	Disabled		ZZZ	ZZZ					5	5000								reanimate	1222	100	100	crush		100	100	all-stats		1000	1000	allskills		10	10																																	0
+TheTesseract		0		1	1	120	100	amu	2 - Amulet (Sacred) a	Realm Reserved		ZZZ	ZZZ					5	5000								extra-fire		1	50	extra-cold		1	50	extra-ltng		1	50	extra-pois		1	50	pierce-fire		1	40	pierce-cold		1	40	pierce-ltng		1	40	pierce-pois		1	40	allskills		2	2	cast3		25	25									0
+KhanduranRoyalPendant		0		1	1	120	100	amu	2 - Amulet (Sacred) b	Realm Reserved		ZZZ	ZZZ					5	5000								skillcap		1	1	charged	616	25	5	block		1	1																																					0
+LocketOfDreams		0		1	1	120	100	amu	2 - Amulet (Sacred) c	Realm Reserved		ZZZ	ZZZ					5	5000								allskills		2	2	pot-rate		41	50	vit		100	100	gold%		450	450	light		2	2	heal-thorns		151	200																									0
+JerhynsTawiz		0		10	1	1	0	amu	2 - Amulet (Sacred) d	Realm Reserved		ZZZ	ZZZ					5	5000								addxp		20	20	dmg-demon		21	25	regen		100	100																																					0
+NewGrandArmor		0		4	1	120	100	@15	2 - Ancient Armor (Sacred)	Realm Reserved		ZZZ	ZZZ					5	5000	dred	dred						sock		6	6	ac%		301	350	dmg-global		100	100	hp%		11	15	hp		500	500	regen		401	500	red-dmg		100	100	red-dmg%		10	10	red-mag		10	10	ease		500	500									0
+NewAeterna		0		4	1	120	100	05@	2 - Broad Sword (Sacred)	Realm Reserved		ZZ	ZZ					5	5000	blac	blac						sock		6	6	str-add		51	51	dmg%		300	350	dmg-mag		2000	2500	swing3		100	100	innate-grace	84	5	1	att-skill	340	5	25	ease		-50	-50	att-damage		50	50													0
+New2BlackRoseCrown		0		4	1	120	555	@70	2 - Diadem (Sacred)	Realm Reserved		ZZ	ZZ					5	5000	dpur	dpur			blackfury_active		blackfury_active	sock		4	4	ac		-500	-500	enr-factor		-25	-25	ass		1	3	nec		1	3	skill-dur		30	30	skill-rand	2	401	425	skill-rand	2	326	350	balance3		40	40	heal-kill		41	50	hp-minion		41	50					0
+NewWhiteVoid		0		1	1	120	100	13@	2 - Great Sword (Sacred)	Realm Reserved		ZZ	ZZ					5	5000	lgry	lgry						sock		6	6	str-add		76	76	dmg%		251	300	dmg-mag		1500	2500	dmg-max		401	500	crush		11	15	noheal		1	1	dmg-global		101	150	mana-melee		100	100	reanimate	926	50	50	ease		777	777					0
+New5Wishmaster		0		50	1	1	0	jew	2 - Jewel a	Realm Reserved		ZZZ	ZZZ					5	5000								mag%		20	20	att-skill	116	2	1																																									0
+Atomus		0		1	1	120	0	jew	2 - Jewel b	Realm Reserved		ZZZ	ZZZ				1	5	5000								allskills		1	1	all-stats		50	50	att-skill	762	1	23	addxp		50	50	craft-points		250	250																													0
+NewSiggardsRevenge		0		4	1	120	100	7@N	2 - Parma (Sacred)	Realm Reserved		ZZZ	ZZZ					5	5000	blac	blac						sock		4	4	ac%		201	250	block		2	2	dex		150	150	str		-50	-50	att%		101	150	reanimate	1378	10	10	dmg-demon		301	350	indestruct		1	1	demon-heal		101	150	crush		20	20					0
+NewSoulReaver		0		4	1	120	100	!14	2 - Raptor Scythe (Sacred)	Realm Reserved		ZZZ	ZZZ					5	5000	blac	blac						sock		6	6	str-add		102	102	dmg%		301	350	nec		4	4	dmg-global		151	200	manasteal		21	25	lifesteal		21	25	heal-melee		250	250	mana-melee		500	500	reanimate	632	50	50	innate-impact	146	25	1					0
+TheNoobLoop		0		10	1	1	0	rin	2 - Ring (Sacred) a	Realm Reserved		Z	Z					5	5000								str		11	15	dex		11	15	dmg-norm		10	20	addxp		5	5																																	0
+RingOfMourning		0		1	1	120	100	rin	2 - Ring (Sacred) b	Realm Reserved		ZZZ	ZZZ					5	5000								vit		-100	-100	dex		200	200	regen-mana		11	15	balance3		25	25																																	0
+BlackHandSigil		0		1	1	120	100	rin	2 - Ring (Sacred) c	Realm Reserved		ZZZ	ZZZ					5	5000								kill-skill	330	3	62	dmg-pois	200	2048	2048	dmg-norm		50	100	light		-5	-5																																	0
+AkaratsNails		0		1	1	120	100	rin	2 - Ring (Sacred) d	Realm Reserved		ZZZ	ZZZ					5	5000								regen		-250	-250	dmg-global		150	150	crush		15	15	openwounds		10	10	att-skill	500	10	2																													0
+NewFuryHell		0		4	1	120	100	7@F	2 - Trebuchet (Sacred)	Realm Reserved		ZZZ	ZZZ					5	5000	lred	lred						sock		6	6	str-add		76	76	dmg%		301	350	dmg-fire		1500	2000	extra-fire		101	150	pierce-fire		31	40	hit-skill	311	1	30	res-fire-max		5	5	abs-fire		100	100	reanimate	1592	2	2									0
+Diablo Clone Charm		0		1	1	1	120	#1^	2 - Uber Reward	Realm Reserved		ZZZ	ZZZ				1	5	5000								light		-3	-3	str		-5	5	dex		-5	5	vit		-5	5	enr		-5	5	lifesteal		3	5	manasteal		3	5	allskills		0	1																	0
+TokenRing		0		1	1	120	121	rin	3 - Ring (Sacred)	Disabled		ZZZ	ZZZ					5	5000								reanimate	1222	100	100	crush		100	100	all-stats		1000	1000	allskills		10	10																																	0
 Catechumen		1		10	1	12	7	w23	Aerin Shield (Grade 1)	Tiered Unique		Z	Z					5	5000	lgld	lgld						sock		2	2	ac%		21	50	dmg-undead		31	50	dmg-min		16	25	dmg-max		31	50	ease		-11	-15	res-fire		13	15	res-cold		13	15	res-ltng		13	15	res-pois		16	25	reanimate	927	3	5	att-skill	451	5	6	0
 Catechumen		1		10	1	27	16	w43	Aerin Shield (Grade 2)	Tiered Unique		Z	Z					5	5000	lgld	lgld						sock		2	2	ac%		51	80	dmg-undead		51	70	dmg-min		26	35	dmg-max		51	70	ease		-16	-20	res-fire		16	18	res-cold		16	18	res-ltng		16	18	res-pois		26	35	reanimate	927	6	8	att-skill	451	7	12	0
 Catechumen		1		10	1	41	25	w63	Aerin Shield (Grade 3)	Tiered Unique		Z	Z					5	5000	lgld	lgld						sock		2	2	ac%		81	110	dmg-undead		71	90	dmg-min		36	45	dmg-max		71	90	ease		-21	-25	res-fire		19	21	res-cold		19	21	res-ltng		19	21	res-pois		36	45	reanimate	927	9	11	att-skill	451	9	18	0
@@ -157,7 +157,7 @@ The Lumberjack		1		10	1	64	40	387	Axe (Grade 5)	Tiered Unique		Z	Z					5	5000	dg
 The Lumberjack		1		10	1	78	49	455	Axe (Grade 6)	Tiered Unique		Z	Z					5	5000	dgrn	dgrn						sock		6	6	str-add		51	51	dmg%		131	150	dmg-max		171	200	crush		18	20	dmg-undead		171	200	swing3		30	30	ac		131	150	levelup-skill	647	100	13	dru		3	3									0
 Throatseeker		1		10	1	120	100	16@	Axe (Sacred(1))	Sacred(1) Unique		16	16					5	5000	cred	cred						sock		6	6	str-add		51	51	dmg%		201	250	heal-kill		61	100	lifesteal		19	25	hp		500	500	swing3		30	30	att-skill	777	10	16	dmg-norm		50	150	slow		21	25									0
 New2Lavasurge		1		4	1	120	100	16@	Axe (Sacred(2))	Sacred(2) Unique		16	16					5	5000	oran	oran						sock		6	6	str-add		51	51	dmg%		251	300	dmg-norm		100	200	balance3		-50	-50	uninterrupt		11	15	hit-skill	833	100	20	dmg-ac		-200	-200	dmg-fire		500	1000	regen		201	250									0
-AxeSU3		1		1	1	120	100	16@	Axe (Sacred(3))	Sacred(3) Unique	NEW	16	16					5	5000	cgld	cgld						sock		6	6	str-add		51	51	dmg%		201	250	extra-cold		30	50	pierce-cold		21	25	allskills		1	2	reanimate	2027	3	5	oskill	390	17	23	mana%		21	25	cast3		25	25	dex		20	30	vit		20	30	0
+AxeSU3		1		1	1	120	100	16@	Axe (Sacred(3))	Sacred(3) Unique	NEW	16	16					5	5000	dgld	dgld						sock		6	6	str-add		51	51	dmg%		201	250	extra-cold		30	50	pierce-cold		21	25	allskills		1	2	reanimate	2027	3	5	oskill	390	17	23	mana%		21	25	cast3		25	25	dex		20	30	vit		20	30	0
 Wolfpack		1		10	1	9	6	7@5	Backsword (Grade 1)	Tiered Unique		Z	Z					5	5000	dred	dred						sock		1	1	str-add		76	76	dmg%		21	50	dmg-max		41	70	swing3		5	5	crush		3	5	reanimate	1229	11	15	hp-minion		11	15	lifesteal		3	5	str		11	15	vit		11	15					0
 Wolfpack		1		10	1	24	16	8@5	Backsword (Grade 2)	Tiered Unique		Z	Z					5	5000	dred	dred						sock		2	2	str-add		76	76	dmg%		51	80	dmg-max		71	100	swing3		10	10	crush		6	8	reanimate	1229	16	20	hp-minion		16	20	lifesteal		6	8	str		16	20	vit		16	20					0
 Wolfpack		1		10	1	39	25	9@5	Backsword (Grade 3)	Tiered Unique		Z	Z					5	5000	dred	dred						sock		2	2	str-add		76	76	dmg%		81	110	dmg-max		101	130	swing3		15	15	crush		9	11	reanimate	1229	21	25	hp-minion		21	25	lifesteal		9	11	str		21	25	vit		21	25					0
@@ -184,7 +184,7 @@ Ironsleet		1		10	1	70	44	420	Balanced Knife (Grade 5)	Tiered Unique		Z	Z					5	5
 Ironsleet		1		10	1	85	54	488	Balanced Knife (Grade 6)	Tiered Unique		Z	Z					5	5000	dgry	dgry						sock		2	2	dex-add	51	51	51	dmg%		241	280	dmg-max		206	240	hit-skill	806	10	13	stamsteal		24	27	levelup-skill	805	100	62	res-cold		46	50	reduce-ac		27	30													0
 Pixie Legion		1		10	1	120	100	49@	Balanced Knife (Sacred(1))	Sacred(1) Unique		53	53					5	5000	oran	oran						sock		2	2	dex-add	51	51	51	dmg%		201	300	kill-skill	628	100	48	poison-dur		31	50	att%		101	150	gold%		301	500	res-pois		31	40	res-curse		75	75	move3		20	20	stamdrain		50	50					0
 NewBuzzbomb		1		4	1	120	100	49@	Balanced Knife (Sacred(2))	Sacred(2) Unique		53	53					5	5000	dgry	dgry						sock		2	2	dex-add	51	51	51	dmg%		251	300	hit-skill	453	5	40	extra-fire		41	50	ass		4	4	swing3		25	25	enr		50	50	dex		50	50	howl		7	7	move3		50	50					0
-BalancedKnifeSU3		1		1	1	120	100	49@	Balanced Knife (Sacred(3))	Sacred(3) Unique	NEW	53	53					5	5000	cgld	cgld						sock		2	2	dex-add		51	51	dmg%		301	350	hit-skill	745	20	13	reanimate	2033	1	2	dmg-max		151	200	heal-hit		1	1	att%		101	150	pierce-all		11	20	dmg-cold		666	999	move3		45	45	ass		1	2	0
+BalancedKnifeSU3		1		1	1	120	100	49@	Balanced Knife (Sacred(3))	Sacred(3) Unique	NEW	53	53					5	5000	dgld	dgld						sock		2	2	dex-add		51	51	dmg%		301	350	hit-skill	745	20	13	reanimate	2033	1	2	dmg-max		151	200	heal-hit		1	1	att%		101	150	pierce-all		11	20	dmg-cold		666	999	move3		45	45	ass		1	2	0
 Wisdom's Wrap		1		10	1	19	12	4@I	Banded Plate (Grade 1)	Tiered Unique		Z	Z					5	5000	dred	dred						sock		2	2	extra-fire		16	20	regen-mana		11	15	slow-thorns		3	5	res-fire		21	30	ease		-6	-10	charged	401	25	3	light		-1	-1	sor		1	1													0
 Wisdom's Wrap		1		10	1	33	20	5@I	Banded Plate (Grade 2)	Tiered Unique		Z	Z					5	5000	dred	dred						sock		3	3	extra-fire		21	25	regen-mana		16	20	slow-thorns		6	8	res-fire		31	40	ease		-11	-15	charged	401	30	6	light		-1	-1	sor		1	2													0
 Wisdom's Wrap		1		10	1	48	29	6@I	Banded Plate (Grade 3)	Tiered Unique		Z	Z					5	5000	dred	dred						sock		4	4	extra-fire		26	30	regen-mana		21	25	slow-thorns		9	11	res-fire		41	50	ease		-16	-20	charged	401	35	9	light		-2	-2	sor		1	2													0
@@ -317,7 +317,7 @@ Fateweaver		1		10	1	66	42	l28	Bone Wand (Grade 5)	Tiered Unique		Z	Z					5	5000	
 Fateweaver		1		10	1	81	51	l32	Bone Wand (Grade 6)	Tiered Unique		Z	Z					5	5000	blac	dpur						sock		2	2	dex-add	25	25	25	maxminions		6	6	cast3		35	35	slow-thorns		18	20	mana%		18	20	gethit-skill	998	30	36	death-skill	387	100	42																	0
 Talon of Trang-Oul		1		10	1	120	100	71@	Bone Wand (Sacred(1))	Sacred(1) Unique		113	113					5	5000	dgrn	dgrn						sock		2	2	dex-add	25	25	25	nec		2	4	oskill	400	7	18	dmg-minion		31	40	att%-minion		101	150	res-pois		41	50	res-cold		41	50	avoidance		10	10	reanimate	904	10	10	reanimate	905	10	10	oskill	516	23	27	0
 New2Prestidigator		1		4	1	120	100	71@	Bone Wand (Sacred(2))	Sacred(2) Unique		113	113					5	5000	oran	oran						sock		2	2	dex-add	25	25	25	nec		2	2	oskill	386	11	14	oskill	462	11	14	extra-fire		31	40	extra-ltng		31	40	enr%		21	25	cheap		5	5	ease		-50	-50									0
-BoneWandSU3		1		1	1	120	100	71@	Bone Wand (Sacred(3))	Sacred(3) Unique	NEW	113	113					5	5000	cgld	cgld						sock		2	2	dex-add	25	25	25	reanimate	825	15	15	pierce-cold		50	50	extra-cold		50	100	res-cold-max		15	15	nec		2	3	red-dmg%		5	5	enr%		20	25	enr-factor		75	75	hp-minion		50	75	extra-totems		1	1	0
+BoneWandSU3		1		1	1	120	100	71@	Bone Wand (Sacred(3))	Sacred(3) Unique	NEW	113	113					5	5000	dgld	dgld						sock		2	2	dex-add	25	25	25	reanimate	825	15	15	pierce-cold		50	50	extra-cold		50	100	res-cold-max		15	15	nec		2	3	red-dmg%		5	5	enr%		20	25	enr-factor		75	75	hp-minion		50	75	extra-totems		1	1	0
 Rabbit's Foot		1		10	1	1	1	637	Boots (Grade 1)	Tiered Unique		Z	Z					5	5000	lgry	lgry						sock		1	1	uninterrupt		4	5	move3		15	15	stam		101	150	gold%		101	150	mag%		16	25																									0
 Rabbit's Foot		1		10	1	13	8	683	Boots (Grade 2)	Tiered Unique		Z	Z					5	5000	lgry	lgry						sock		2	2	uninterrupt		6	7	move3		20	20	stam		151	200	gold%		151	200	mag%		26	35																									0
 Rabbit's Foot		1		10	1	28	17	729	Boots (Grade 3)	Tiered Unique		Z	Z					5	5000	lgry	lgry						sock		2	2	uninterrupt		8	9	move3		25	25	stam		201	250	gold%		201	250	mag%		36	45																									0
@@ -388,7 +388,7 @@ Razordisk		1		10	1	43	26	759	Buckler (Grade 4)	Tiered Unique		Z	Z					5	5000	lre
 Razordisk		1		10	1	58	35	805	Buckler (Grade 5)	Tiered Unique		Z	Z					5	5000	lred	lred						sock		4	4	dmg/lvl	44	44	44	openwounds		31	35	dmg-ac		-141	-170	str		15	17																													0
 Razordisk		1		10	1	72	43	851	Buckler (Grade 6)	Tiered Unique		Z	Z					5	5000	lred	lred						sock		4	4	dmg/lvl	48	48	48	openwounds		36	40	dmg-ac		-171	-200	str		18	20																													0
 Event Horizon		1		10	1	120	100	@22	Buckler (Sacred(1))	Sacred(1) Unique		154	154					5	5000	blac	blac						sock		4	4	ac%		101	150	red-dmg%		5	5	damage-skill	710	1	24	abs-fire		21	25	abs-cold		21	25	abs-ltng		21	25	move3		20	20	stam		500	500													0
-NewOgdensSign		1		4	1	120	100	@22	Buckler (Sacred(2))	Sacred(2) Unique		154	154					5	5000	oran	oran						sock		4	4	ac%		201	250	all-stats		20	20	reanimate	765	25	25	mag%		75	75	levelup-skill	440	100	59	dmg-demon		100	100	ease		-40	-40	enr-factor		-20	-20	extra-pm		51	75									0
+NewOgdensSign		1		4	1	120	100	@22	Buckler (Sacred(2))	Sacred(2) Unique		154	154					5	5000	oran	oran						sock		4	4	ac%		201	250	all-stats		20	20	reanimate	765	25	25	mag%		75	75	levelup-skill	455	100	59	dmg-demon		100	100	ease		-40	-40	enr-factor		-20	-20	extra-pm		51	75									0
 BucklerSU3		1		1	1	120	100	@22	Buckler (Sacred(3))	Sacred(3) Unique	NEW	154	154					5	5000	cblu	cblu						sock		4	4					hit-skill	798	1	1	pierce-cold		50	50	dmg-cold		999	999	res-cold-max		5	5	res-cold		50	50	enr		50	150	ease		-50	-50	mana%		20	20	extra-cold		40	60	block		1	1	0
 Golden Fleece		1		10	1	5	3	22!	Bull Shield (Grade 1)	Tiered Unique		Z	Z					5	5000	lgld	lgld						sock		1	1	ac%		21	50	gethitr-skill	492	25	2	str		11	15	hp%		3	5	res-ltng		11	15	mag%		21	30	dmg-global		31	50	bar		1	1													0
 Golden Fleece		1		10	1	19	12	23!	Bull Shield (Grade 2)	Tiered Unique		Z	Z					5	5000	lgld	lgld						sock		2	2	ac%		51	80	gethitr-skill	492	30	4	str		16	20	hp%		6	8	res-ltng		16	20	mag%		31	40	dmg-global		51	70	bar		1	2													0
@@ -470,7 +470,7 @@ The Celestial Crown		1		10	1	65	39	k17	Circlet (Grade 5)	Tiered Unique		Z	Z					
 The Celestial Crown		1		10	1	81	48	k21	Circlet (Grade 6)	Tiered Unique		Z	Z					5	5000	lgld	lgld						sock		4	4	res-pois		66	75	enr		27	30	dex		27	30	att-skill	819	1	22	dmg-undead		46	50																									0
 Helm of Sprits		1		10	1	120	100	@67	Circlet (Sacred(1))	Sacred(1) Unique		148	148					5	5000	dgld	dgld						sock		4	4	heal-melee		51	60	mana-melee		51	60	enr		41	50	vit		41	50	regen		11	15	att-skill	1002	5	27																					0
 NewEyesOfSeptumos		1		4	1	120	100	@67	Circlet (Sacred(2))	Sacred(2) Unique		148	148					5	5000	dblu	dblu						sock		4	4	ac		301	500	extra-fire		1	77	extra-cold		1	77	extra-ltng		1	77	extra-pois		1	77	extra-pm		1	77	mana		777	777	hp		-77	-77	light		-4	-4									0
-CircletSU3		1		1	1	120	100	@67	Circlet (Sacred(3))	Sacred(3) Unique	NEW	148	148					5	5000	cgld	cgld						sock		4	4	hp-minion		30	50	dmg-minion		30	50	res-all-minion		15	25	allskills		1	2	ease		-50	-50	ac		500	500	enr		40	50	vit		40	50	all-stats%		5	10									0
+CircletSU3		1		1	1	120	100	@67	Circlet (Sacred(3))	Sacred(3) Unique	NEW	148	148					5	5000	dgld	dgld						sock		4	4	hp-minion		30	50	dmg-minion		30	50	res-all-minion		15	25	allskills		1	2	ease		-50	-50	ac		500	500	enr		40	50	vit		40	50	all-stats%		5	10									0
 Thunderball		1		10	1	10	6	j13	Clasped Orb (Grade 1)	Tiered Unique		Z	Z					5	5000	dgry	dgry						sock		1	1	dex-add	51	51	51	sor		1	1	extra-ltng		11	15	enr-factor%		3	5	nc-syn		21	50	getatt-skill	807	3	2	enr		11	15	res-ltng		21	25													0
 Thunderball		1		10	1	25	16	j30	Clasped Orb (Grade 2)	Tiered Unique		Z	Z					5	5000	dgry	dgry						sock		2	2	dex-add	51	51	51	sor		1	1	extra-ltng		16	20	enr-factor%		6	8	nc-syn		51	80	getatt-skill	807	4	5	enr		16	20	res-ltng		26	30													0
 Thunderball		1		10	1	39	25	j47	Clasped Orb (Grade 3)	Tiered Unique		Z	Z					5	5000	dgry	dgry						sock		2	2	dex-add	51	51	51	sor		1	2	extra-ltng		21	25	enr-factor%		9	11	nc-syn		81	110	getatt-skill	807	5	8	enr		21	25	res-ltng		31	35													0
@@ -542,7 +542,7 @@ The Barracuda		1		10	1	66	42	l69	Crossbow (Grade 5)	Tiered Unique		Z	Z					5	500
 The Barracuda		1		10	1	82	52	l73	Crossbow (Grade 6)	Tiered Unique		Z	Z					5	5000	dblu	dblu						sock		6	6	str-add		51	51	dmg%		181	210	dmg-max		66	75	kill-skill	600	9	18	blood-phys		66	75	swing3		30	30	crush		18	20																	0
 The Needler		1		10	1	120	100	77@	Crossbow (Sacred(1))	Sacred(1) Unique		70	70					5	5000	dyel	dyel						sock		6	6	str-add		51	51	dmg%		251	300	openwounds		31	50	hit-skill	492	20	2	hit-skill	492	10	1	crush		21	25	swing3		100	100	gethitr-skill	535	10	6	dmg-demon		200	200									0
 NewBossCrow		1		4	1	120	100	77@	Crossbow (Sacred(2))	Sacred(2) Unique		70	70					5	5000	dblu	dblu						sock		6	6	str-add		51	51	dmg%		101	150	hit-skill	330	3	56	att%		201	250	dmg-cold	250	100	250	ease		-33	-33	swing3		100	100	dmg-max		100	100													0
-CrossbowSU3		1		1	1	120	100	77@	Crossbow (Sacred(3))	Sacred(3) Unique	NEW	070a	070a					5	5000	cgld	cgld						sock		6	6	str-add		51	51	dmg%		251	300	kill-skill	931	5	7	ama		1	3	dru		1	3	swing3		50	50	dmg-fire		500	500	dmg-cold		500	500	dmg-ltng		500	500	pierce-fcl		31	40	heal-kill		101	150	0
+CrossbowSU3		1		1	1	120	100	77@	Crossbow (Sacred(3))	Sacred(3) Unique	NEW	070a	070a					5	5000	dgld	dgld						sock		6	6	str-add		51	51	dmg%		251	300	kill-skill	931	5	7	ama		1	3	dru		1	3	swing3		50	50	dmg-fire		500	500	dmg-cold		500	500	dmg-ltng		500	500	pierce-fcl		31	40	heal-kill		101	150	0
 Glowskull		1		10	1	17	10	620	Crown (Grade 1)	Tiered Unique		Z	Z					5	5000	lgrn	cgrn						sock		1	1	ac%		31	60	res-pois		16	25	poison-dur		11	15	ac-global		7	10	dur%		21	25	uninterrupt		3	5	att-skill	29	1	2	pierce-pois		3	5													0
 Glowskull		1		10	1	32	19	666	Crown (Grade 2)	Tiered Unique		Z	Z					5	5000	lgrn	cgrn						sock		2	2	ac%		61	90	res-pois		26	35	poison-dur		16	20	ac-global		11	14	dur%		26	30	uninterrupt		6	8	att-skill	29	1	4	pierce-pois		6	8													0
 Glowskull		1		10	1	46	28	712	Crown (Grade 3)	Tiered Unique		Z	Z					5	5000	lgrn	cgrn						sock		3	3	ac%		91	120	res-pois		36	45	poison-dur		21	25	ac-global		15	18	dur%		31	35	uninterrupt		9	11	att-skill	29	1	6	pierce-pois		9	11													0
@@ -695,7 +695,7 @@ RavenFlockZ		1		10	1	75	47	400	Flail (Grade 5)	Tiered Unique		Z	Z					5	5000	bla
 RavenFlockZ		1		10	1	87	55	468	Flail (Grade 6)	Tiered Unique		Z	Z					5	5000	blac	blac						sock		6	6	str-add	51	51	51	dmg%		191	220	dur%		-46	-50	all-stats		36	40	openwounds		36	40	swing3		40	40	att-skill	330	8	30																	0
 Lash of the Titans		1		10	1	120	100	29@	Flail (Sacred(1))	Sacred(1) Unique		29	29					5	5000	lred	lred						sock		6	6	str-add	51	51	51	dmg%		201	250	dmg-norm		50	125	swing3		20	20	slow		11	15	allskills		2	2	str		101	150	ac-global		11	15	reanimate	823	11	15	reanimate	825	11	15	reanimate	824	11	15	0
 NewKhalimsPunisher		1		4	1	120	100	29@	Flail (Sacred(2))	Sacred(2) Unique		29	29					5	5000	lgld	lgld						sock		6	6	str-add	51	51	51	dmg%		301	350	heal-kill		100	100	swing3		40	40	att%		250	250	hp%-mp%		20	20	att-skill	311	2	59	vit%		21	30	enr%		21	30	dmg-max		301	400	dmg-demon		201	250	0
-FlailSU3		1		1	1	120	100	29@	Flail (Sacred(3))	Sacred(3) Unique	NEW	029a	029a					5	5000	cgld	cgld						sock		6	6	str-add		51	51	dmg%		201	250	oskill	370	13	16	allskills		1	2	gethit-skill	209	15	20	dmg-norm		200	500	rip	1	1	1	slow-thorns		25	25	swing3		25	25	all-stats%		10	15	dmg-global		31	50	0
+FlailSU3		1		1	1	120	100	29@	Flail (Sacred(3))	Sacred(3) Unique	NEW	029a	029a					5	5000	dgld	dgld						sock		6	6	str-add		51	51	dmg%		201	250	oskill	370	13	16	allskills		1	2	gethit-skill	209	15	20	dmg-norm		200	500	rip	1	1	1	slow-thorns		25	25	swing3		25	25	all-stats%		10	15	dmg-global		31	50	0
 Frostbringer		1		10	1	11	7	111	Flamberge (Grade 1)	Tiered Unique		Z	Z					5	5000	cblu	cblu						sock		2	2	str-add		76	76	dmg%		31	60	dmg-max		31	50	att-skill	104	25	5	extra-cold		11	15	res-cold		21	25	uninterrupt		3	5	allskills		1	1													0
 Frostbringer		1		10	1	26	17	179	Flamberge (Grade 2)	Tiered Unique		Z	Z					5	5000	cblu	cblu						sock		3	3	str-add		76	76	dmg%		61	90	dmg-max		51	70	att-skill	104	30	10	extra-cold		16	20	res-cold		26	30	uninterrupt		6	8	allskills		1	1													0
 Frostbringer		1		10	1	41	26	247	Flamberge (Grade 3)	Tiered Unique		Z	Z					5	5000	cblu	cblu						sock		4	4	str-add		76	76	dmg%		91	120	dmg-max		71	90	att-skill	104	35	15	extra-cold		21	25	res-cold		31	35	uninterrupt		9	11	allskills		1	2													0
@@ -838,7 +838,7 @@ Doomfall		1		10	1	61	36	764	Gothic Shield (Grade 4)	Tiered Unique		Z	Z					5	500
 Doomfall		1		10	1	76	45	810	Gothic Shield (Grade 5)	Tiered Unique		Z	Z					5	5000	blac	blac						sock		4	4	ac%		161	190	str		56	65	block3		25	25	dmg-global		41	45	getatt-skill	459	4	21	pierce-cold		15	17	slow-thorns		12	13																	0
 Doomfall		1		10	1	90	54	856	Gothic Shield (Grade 6)	Tiered Unique		Z	Z					5	5000	blac	blac						sock		4	4	ac%		191	220	str		66	75	block3		30	30	dmg-global		46	50	getatt-skill	459	4	25	pierce-cold		18	20	slow-thorns		14	15																	0
 Dragon's Breach		1		10	1	120	100	@27	Gothic Shield (Sacred(1))	Sacred(1) Unique		159	159					5	5000	lred	lred						sock		4	4	ac%		251	300	block		1	1	att-skill	699	10	17	extra-fire		31	40	block3		50	50	str%		21	25	enr%		21	25	getatt-skill	789	10	26	allskills		1	1	vit%		-6	-10					0
-ShieldHakan		1		4	1	120	100	@27	Gothic Shield (Sacred(2))	Sacred(2) Unique		159	159					5	5000	lyel	lyel						sock		4	4	block3		75	75	red-dmg%		5	5	uninterrupt		20	20	att-skill	436	5	34	allskills		1	1	hp		500	500	light		2	2	gold%		500	500													0
+ShieldHakan		1		4	1	120	100	@27	Gothic Shield (Sacred(2))	Sacred(2) Unique		159	159					5	5000	lyel	lyel						sock		4	4	block3		75	75	red-dmg%		5	5	uninterrupt		20	20	att-skill	681	5	34	allskills		1	1	hp		500	500	light		2	2	gold%		500	500													0
 GothicShieldSU3		1		1	1	120	100	@27	Gothic Shield (Sacred(3))	Sacred(3) Unique	NEW	159	159					5	5000	blac	blac						sock		4	4	ac%		301	350					dmg-norm		100	150	regen		250	250	move3		30	30	att		250	250	str%		25	25	heal-kill		30	60	ac		300	300									0
 Voidstream		1		10	1	6	4	130	Grand Scepter (Grade 1)	Tiered Unique		Z	Z					5	5000	dpur	dpur						sock		1	1	dex-add	51	51	51	extra-ltng		11	15	extra-pm		11	15	pal		1	1	cast3		5	5	regen-mana		21	25	slow-thorns		3	5	red-dmg		3	5													0
 Voidstream		1		10	1	21	13	198	Grand Scepter (Grade 2)	Tiered Unique		Z	Z					5	5000	dpur	dpur						sock		2	2	dex-add	51	51	51	extra-ltng		16	20	extra-pm		16	20	pal		1	2	cast3		10	10	regen-mana		26	30	slow-thorns		6	8	red-dmg		6	8													0
@@ -848,7 +848,7 @@ Voidstream		1		10	1	65	41	402	Grand Scepter (Grade 5)	Tiered Unique		Z	Z					5	5
 Voidstream		1		10	1	80	51	470	Grand Scepter (Grade 6)	Tiered Unique		Z	Z					5	5000	dpur	dpur						sock		3	3	dex-add	51	51	51	extra-ltng		36	40	extra-pm		36	40	pal		2	4	cast3		30	30	regen-mana		46	50	slow-thorns		18	20	red-dmg		18	20													0
 Pagan's Geis		1		10	1	120	100	31@	Grand Scepter (Sacred(1))	Sacred(1) Unique		34	34					5	5000	dyel	dred						sock		3	3	dex-add	51	51	51	aura	284	40	40	desc-drainaura		1	1	ama		2	4	cast3		50	50	extra-fire		41	50	extra-pm		41	50	mm-syn		2	4	oskill	839	1	7	enr-factor		101	150	enr%		21	25	0
 NewLakesLady		1		4	1	120	100	31@	Grand Scepter (Sacred(2))	Sacred(2) Unique		34	34					5	5000	dgry	dgry						sock		3	3	dex-add	51	51	51	extra-pm		41	50	extra-ltng		41	50	dex%		21	25	enr%		21	25	enr-factor		100	100	str-factor		100	100	block3		50	50	str%		21	25	pal		4	4	regen-mana		25	25	0
-GrandScepterSU3		1		1	1	120	100	31@	Grand Scepter (Sacred(3))	Sacred(3) Unique	NEW	034a	034a					5	5000	cgld	cgld						sock		3	3	dex-add		51	51	cast3		25	25	heal-kill		50	75	ama		3	4	extra-fire		40	60	pierce-fire		21	25	enr-factor%		15	15	enr		51	60	gold%		250	250	anykill-skill	311	5	36	reanimate	58	4	8	0
+GrandScepterSU3		1		1	1	120	100	31@	Grand Scepter (Sacred(3))	Sacred(3) Unique	NEW	034a	034a					5	5000	dgld	dgld						sock		3	3	dex-add		51	51	cast3		25	25	heal-kill		50	75	ama		3	4	extra-fire		40	60	pierce-fire		21	25	enr-factor%		15	15	enr		51	60	gold%		250	250	anykill-skill	311	5	36	reanimate	58	4	8	0
 Norrec's Topor		1		10	1	11	7	122	Great Axe (Grade 1)	Tiered Unique		Z	Z					5	5000	blac	blac						sock		2	2	str-add		76	76	dmg%		41	80	dmg-max		51	80	reanimate	734	3	5	red-dmg		3	5	regen		21	30	str		16	25	att-damage		11	15	pierce-fire		11	15	extra-fire		11	15					0
 Norrec's Topor		1		10	1	26	16	190	Great Axe (Grade 2)	Tiered Unique		Z	Z					5	5000	blac	blac						sock		3	3	str-add		76	76	dmg%		81	120	dmg-max		81	110	reanimate	734	6	8	red-dmg		6	8	regen		31	40	str		26	35	att-damage		16	20	pierce-fire		16	20	extra-fire		16	20					0
 Norrec's Topor		1		10	1	40	25	258	Great Axe (Grade 3)	Tiered Unique		Z	Z					5	5000	blac	blac						sock		4	4	str-add		76	76	dmg%		121	160	dmg-max		111	140	reanimate	734	9	11	red-dmg		9	11	regen		41	50	str		36	45	att-damage		21	25	pierce-fire		21	25	extra-fire		21	25					0
@@ -875,7 +875,7 @@ The Flying Anvil		1		10	1	75	48	l48	Great Maul (Grade 5)	Tiered Unique		Z	Z					
 The Flying Anvil		1		10	1	87	55	l51	Great Maul (Grade 6)	Tiered Unique		Z	Z					5	5000	oran	oran						sock		6	6	str-add		76	76	dmg%		216	250	craft-points		131	150	att-skill	453	30	19	dmg-stun		36	40	ac-global		36	40	str		66	75																	0
 Hammer of Jholm		1		10	1	120	100	75@	Great Maul (Sacred(1))	Sacred(1) Unique		32	32					5	5000	lgry	lgry						sock		6	6	str-add		76	76	dmg%		251	300	dmg-max		301	400	hit-skill	540	20	12	dmg-ltng		1	3333	ease		15	15	dmg-stun		125	125	str		100	100	vit		100	100	pal		4	5					0
 NewSiegehammer		1		4	1	120	100	75@	Great Maul (Sacred(2))	Sacred(2) Unique		32	32					5	5000	dgry	dred						sock		6	6	str-add		76	76	crush		50	50	dmg-demon		500	500	dmg-norm		200	500	demon-heal		400	400	hp		666	666	oskill	28	4	6																	0
-GreatMaulSU3		1		1	1	120	100	75@	Great Maul (Sacred(3))	Sacred(3) Unique	NEW	032a	032a					5	5000	cgld	cgld						sock		6	6	str-add		76	76	dmg%		301	350	dmg-max		1000	2000	pal		4	5	heal-hit		2	3	oskill	325	13	16	kill-skill	498	20	15	hp		401	500	pierce-pois		21	25	swing3		25	25	red-dmg%		15	15	0
+GreatMaulSU3		1		1	1	120	100	75@	Great Maul (Sacred(3))	Sacred(3) Unique	NEW	032a	032a					5	5000	dgld	dgld						sock		6	6	str-add		76	76	dmg%		301	350	dmg-max		1000	2000	pal		4	5	heal-hit		2	3	oskill	325	13	16	kill-skill	498	20	15	hp		401	500	pierce-pois		21	25	swing3		25	25	red-dmg%		15	15	0
 The Dao of Xiansai		1		10	1	17	11	112	Great Sword (Grade 1)	Tiered Unique		Z	Z					5	5000	oran	oran						sock		2	2	str-add		76	76	dmg%		31	60	dmg-max		21	50	swing3		15	15	balance3		15	15	addxp		3	5	ac		101	150	att%		51	75	allskills		1	1									0
 The Dao of Xiansai		1		10	1	33	21	180	Great Sword (Grade 2)	Tiered Unique		Z	Z					5	5000	oran	oran						sock		3	3	str-add		76	76	dmg%		61	90	dmg-max		51	80	swing3		20	20	balance3		20	20	addxp		6	8	ac		151	200	att%		76	100	allskills		1	2									0
 The Dao of Xiansai		1		10	1	47	29	248	Great Sword (Grade 3)	Tiered Unique		Z	Z					5	5000	oran	oran						sock		4	4	str-add		76	76	dmg%		91	120	dmg-max		81	110	swing3		25	25	balance3		25	25	addxp		9	11	ac		201	250	att%		101	125	allskills		1	2									0
@@ -1043,7 +1043,7 @@ Cornucopia		1		10	1	53	32	w77	Horned Helm (Grade 4)	Tiered Unique		Z	Z					5	500
 Cornucopia		1		10	1	68	41	w97	Horned Helm (Grade 5)	Tiered Unique		Z	Z					5	5000	lyel	lyel						sock		3	3	ac%		111	130	gold%		251	300	mag%		61	70	cheap		15	17	regen		111	130																									0
 Cornucopia		1		10	1	82	49	e27	Horned Helm (Grade 6)	Tiered Unique		Z	Z					5	5000	lyel	lyel						sock		4	4	ac%		131	150	gold%		301	350	mag%		71	80	cheap		18	20	regen		131	150																									0
 Demonhorn		1		10	1	120	100	@54	Horned Helm (Sacred(1))	Sacred(1) Unique		193	193					5	5000	cred	cred						sock		4	4	ac%		201	250	str		41	50	vit		41	50	kill-skill	29	1	13	red-dmg		31	40	regen		11	15	oskill	1003	1	4	dmg-demon		41	50													0
-NewTrumpetsLoad		1		4	1	120	100	@54	Horned Helm (Sacred(2))	Sacred(2) Unique		193	193					5	5000	dyel	dyel						sock		4	4	ac%		251	300	att-skill	964	5	15	dmg-stun		31	50	reanimate	1190	5	5	hit-skill	436	1	3	str%		5	5	vit%		5	5	light		2	2													0
+NewTrumpetsLoad		1		4	1	120	100	@54	Horned Helm (Sacred(2))	Sacred(2) Unique		193	193					5	5000	dyel	dyel						sock		4	4	ac%		251	300	att-skill	964	5	15	dmg-stun		31	50	reanimate	1190	5	5	hit-skill	681	1	3	str%		5	5	vit%		5	5	light		2	2													0
 HornedHelmSU3		1		1	1	120	100	@54	Horned Helm (Sacred(3))	Sacred(3) Unique	NEW	193	193					5	5000	dgrn	dgrn						sock		4	4	ac%		251	300	oskill	757	16	23	res-all-minion		15	15	att%-minion		50	50	dmg-minion		-30	-30	hp-minion		100	100	allskills		1	2	move3		30	30	regen		50	50	light		2	3					0
 Godhead		1		10	1	4	2	43!	Hundsgugel (Grade 1)	Tiered Unique		Z	Z					5	5000	lyel	lyel						sock		2	2	ac%		31	50	dmg-demon		31	50	str		11	15	crush		5	5	uninterrupt		3	5	regen		3	5	howl		5	6																	0
 Godhead		1		10	1	18	11	44!	Hundsgugel (Grade 2)	Tiered Unique		Z	Z					5	5000	lyel	lyel						sock		2	2	ac%		51	70	dmg-demon		51	70	str		16	20	crush		6	6	uninterrupt		6	8	regen		6	8	howl		7	8																	0
@@ -1062,7 +1062,7 @@ Deadly Hunter		1		10	1	61	39	433	Hunter's Bow (Grade 5)	Tiered Unique		Z	Z					5
 Deadly Hunter		1		10	1	75	48	501	Hunter's Bow (Grade 6)	Tiered Unique		Z	Z					5	5000	oran	oran						sock		6	6	dex-add	51	51	51	dmg%		171	200	dmg-min		36	40	dmg-max		41	45	dex		36	40	dmg-undead		351	400	kill-skill	525	30	37	move3		35	35													0
 Demonstorm		1		10	1	120	100	62@	Hunter's Bow (Sacred(1))	Sacred(1) Unique		62	62					5	5000	cred	cred						sock		6	6	dex-add	51	51	51	dmg%		151	200	dmg-norm		150	250	kill-skill	816	33	54	extra-fire		31	50	att%		151	200	ease		-25	-25	dmg-demon		150	150	dex		51	60	crush		21	25	regen		25	25	0
 NewFairyPyre		1		4	1	120	100	62@	Hunter's Bow (Sacred(2))	Sacred(2) Unique		62	62					5	5000	lgrn	dgrn						sock		6	6	dex-add	51	51	51	dmg%		251	300	dmg-norm		250	500	dmg-ac		-500	-500	slow		15	15	kill-skill	518	10	59	pierce-fire		25	25	res-fire		40	40	dex		100	100	oskill	1018	4	6					0
-HuntersBowSU3		1		1	1	120	100	62@	Hunter's Bow (Sacred(3))	Sacred(3) Unique	NEW	62	62					5	5000	cgld	cgld						sock		6	6	dex-add		51	51	dmg%		201	250	hit-skill	492	50	50	crush		1	50	slow		1	50	dmg-max		1	1000	swing3		50	50	heal-kill		1	100	red-dmg%		1	10	dex		1	100	res-all		1	50	0
+HuntersBowSU3		1		1	1	120	100	62@	Hunter's Bow (Sacred(3))	Sacred(3) Unique	NEW	62	62					5	5000	dgld	dgld						sock		6	6	dex-add		51	51	dmg%		201	250	hit-skill	492	50	50	crush		1	50	slow		1	50	dmg-max		1	1000	swing3		50	50	heal-kill		1	100	red-dmg%		1	10	dex		1	100	res-all		1	50	0
 Icehunter's Fang		1		10	1	11	7	5@6	Ida (Grade 1)	Tiered Unique		Z	Z					5	5000	lblu	lblu						sock		2	2	str-add		76	76	dmg%		31	60	cold-min		11	25	cold-max		26	45	cold-len		31	50	res-cold		21	30	att-skill	530	3	2	att-skill	104	10	4	att-skill	828	5	3	dex		11	25					0
 Icehunter's Fang		1		10	1	25	16	6@6	Ida (Grade 2)	Tiered Unique		Z	Z					5	5000	lblu	lblu						sock		3	3	str-add		76	76	dmg%		61	90	cold-min		26	50	cold-max		46	90	cold-len		51	70	res-cold		31	40	att-skill	530	4	5	att-skill	104	13	8	att-skill	828	7	6	dex		26	40					0
 Icehunter's Fang		1		10	1	40	26	7@6	Ida (Grade 3)	Tiered Unique		Z	Z					5	5000	lblu	lblu						sock		4	4	str-add		76	76	dmg%		91	120	cold-min		51	100	cold-max		91	180	cold-len		71	90	res-cold		41	50	att-skill	530	5	8	att-skill	104	16	12	att-skill	828	9	9	dex		41	55					0
@@ -1251,7 +1251,7 @@ Magebane		1		10	1	64	40	434	Long Bow (Grade 5)	Tiered Unique		Z	Z					5	5000	dpu
 Magebane		1		10	1	78	50	502	Long Bow (Grade 6)	Tiered Unique		Z	Z					5	5000	dpur	dpur						sock		6	6	dex-add	51	51	51	dmg%		131	150	res-fcl		36	40	pierce-fcl		22	25	mana-hit		31	35	allskills		2	4	enr		-36	-40	dmg-fire		400	400	dmg-cold	50	400	400	dmg-ltng	50	400	400					0
 Seraph Wing		1		10	1	120	100	63@	Long Bow (Sacred(1))	Sacred(1) Unique		63	63					5	5000	lgry	lgry						sock		6	6	dex-add	51	51	51	dmg%		201	250	dmg-max		151	200	res-all		51	60	swing3		35	35	move3		25	25	dmg-undead		151	200	kill-skill	530	50	19	light		2	2	dmg-demon		151	200	res-all-max		5	5	0
 Vizjuns Scitek		1		4	1	120	100	63@	Long Bow (Sacred(2))	Sacred(2) Unique		63	63					5	5000	cblu	cblu						sock		6	6	dex-add	51	51	51	dmg%		251	300	hit-skill	209	5	40	pierce-cold		25	25	dmg-norm		100	200	swing3		30	30	move3		50	50	att%		150	150	dmg-ltng		500	1500	dmg-cold	100	500	1500	crush		5	5	0
-LongBowSU3		1		1	1	120	100	63@	Long Bow (Sacred(3))	Sacred(3) Unique	NEW	63	63					5	5000	cgld	cgld						sock		6	6	dex-add		51	51	dmg%		251	300	allskills		5	7	dmg-norm		300	600	deadly		10	10	dex		51	100	str		51	100	hp%		11	15	balance3		25	25	uninterrupt		21	30	pierce-pois		51	75	0
+LongBowSU3		1		1	1	120	100	63@	Long Bow (Sacred(3))	Sacred(3) Unique	NEW	63	63					5	5000	dgld	dgld						sock		6	6	dex-add		51	51	dmg%		251	300	allskills		5	7	dmg-norm		300	600	deadly		10	10	dex		51	100	str		51	100	hp%		11	15	balance3		25	25	uninterrupt		21	30	pierce-pois		51	75	0
 The Magister		1		10	1	4	3	152	Long Staff (Grade 1)	Tiered Unique		Z	Z					5	5000	lyel	lyel						sock		2	2	dex-add	25	25	25	extra-ltng		21	25	oskill	807	1	4	allskills		1	1	extra-fire		21	25	oskill	789	1	4	res-fire		16	25	res-ltng		16	25	ac-global		11	15									0
 The Magister		1		10	1	19	12	220	Long Staff (Grade 2)	Tiered Unique		Z	Z					5	5000	lyel	lyel						sock		2	2	dex-add	25	25	25	extra-ltng		26	30	oskill	807	5	8	allskills		1	2	extra-fire		26	30	oskill	789	5	8	res-fire		26	35	res-ltng		26	35	ac-global		16	20									0
 The Magister		1		10	1	33	21	288	Long Staff (Grade 3)	Tiered Unique		Z	Z					5	5000	lyel	lyel						sock		3	3	dex-add	25	25	25	extra-ltng		31	35	oskill	807	9	12	allskills		2	3	extra-fire		31	35	oskill	789	9	12	res-fire		36	45	res-ltng		36	45	ac-global		21	25									0
@@ -1593,7 +1593,7 @@ Al Nath2		1		10	1	62	39	373	Scimitar (Grade 5)	Tiered Unique		Z	Z					5	5000	lbl
 Al Nath2		1		10	1	76	48	441	Scimitar (Grade 6)	Tiered Unique		Z	Z					5	5000	lblu	lblu						sock		3	3	str-add		51	51	dmg%		181	210	swing3		30	30	dex%		18	20	slow		18	20	fire-min		241	480	fire-max		481	960	att%		71	80													0
 Al Nair		1		10	1	120	100	02@	Scimitar (Sacred(1))	Sacred(1) Unique		2	2					5	5000	cred	cred						sock		3	3	str-add		51	51	dmg%		201	250	extra-fire		31	40	cast3		60	60	swing3		60	60	balance3		60	60	ease		-40	-40	kill-skill	809	50	18													0
 NewKrakensCutlass		1		4	1	120	100	02@	Scimitar (Sacred(2))	Sacred(2) Unique		2	2					5	5000	dblu	dblu						sock		3	3	str-add		51	51	dmg%		251	300	oskill	1012	7	12	slow		15	15	dmg-global		50	50	dmg-max		101	150	gold%		500	500	att-skill	784	5	3	howl		2	2	move3		50	50	dex		50	50	0
-ScimitarSU3		1		1	1	120	100	02@	Scimitar (Sacred(3))	Sacred(3) Unique	NEW	2	2					5	5000	lblu	lblu						sock		3	3	str-add		51	51	dmg%		251	300	pierce-pois		30	50	extra-pois		30	50	dmg-pois	50	 1024	 2048	pal		2	3	move3		35	35	hit-skill	263	2	60	reanimate	2028	0	1	red-dmg%		5	5	block		1	1	0
+ScimitarSU3		1		1	1	120	100	02@	Scimitar (Sacred(3))	Sacred(3) Unique	NEW	2	2					5	5000	lblu	lblu						sock		3	3	str-add		51	51	dmg%		251	300	pierce-pois		30	50	extra-pois		30	50	dmg-pois	50	1024	2048	pal		2	3	move3		35	35	hit-skill	263	2	60	reanimate	2028	0	1	red-dmg%		5	5	block		1	1	0
 Circuitbreaker		1		10	1	18	12	j26	Scissors Katar (Grade 1)	Tiered Unique		Z	Z					5	5000	dgry	lgry						sock		1	1	dex-add	76	76	76	dmg%		41	80	dmg-mon%	63	50	50	desc-breaker		50	50	ltng-min		1	1	ltng-max		21	50	res-ltng		21	30	swing3		15	15	balance3		5	5	att-skill	807	15	4	oskill	840	1	2	0
 Circuitbreaker		1		10	1	33	21	j43	Scissors Katar (Grade 2)	Tiered Unique		Z	Z					5	5000	dgry	lgry						sock		2	2	dex-add	76	76	76	dmg%		81	120	dmg-mon%	63	100	100	desc-breaker		100	100	ltng-min		1	1	ltng-max		51	100	res-ltng		31	40	swing3		20	20	balance3		10	10	att-skill	807	17	8	oskill	840	3	4	0
 Circuitbreaker		1		10	1	48	30	j60	Scissors Katar (Grade 3)	Tiered Unique		Z	Z					5	5000	dgry	lgry						sock		2	2	dex-add	76	76	76	dmg%		121	160	dmg-mon%	63	150	150	desc-breaker		150	150	ltng-min		1	1	ltng-max		101	200	res-ltng		41	50	swing3		25	25	balance3		15	15	att-skill	807	19	12	oskill	840	5	6	0
@@ -1665,7 +1665,7 @@ Demoncall		1		10	1	56	36	423	Short Staff (Grade 5)	Tiered Unique		Z	Z					5	5000
 Demoncall		1		10	1	71	45	491	Short Staff (Grade 6)	Tiered Unique		Z	Z					5	5000	oran	oran						sock		3	3	dex-add	25	25	25	cast3		30	30	oskill	809	22	25	enr-factor		131	150	allskills		2	4	res-fire		36	40	res-pois		36	40																	0
 Vizjerei's Folly		1		10	1	120	100	52@	Short Staff (Sacred(1))	Sacred(1) Unique		56	56					5	5000	blac	dred						sock		3	3	dex-add	25	25	25	enr-factor		51	100	pierce-fcl		31	40	res-all-max		-75	-75	mana		500	500	allskills		5	6	damage-skill	29	1	4																	0
 NewStaffOfLadySalene		1		4	1	120	100	52@	Short Staff (Sacred(2))	Sacred(2) Unique		56	56					5	5000	dblu	dblu						sock		6	6	dex-add	25	25	25	reanimate	877	25	25	extra-pois		71	100	oskill	763	4	7	slow-thorns		33	33	allskills		10	12	extra-cold		41	50	gethitr-skill	707	5	39	no-ac		-100	-100	dmg-to-mana		25	25					0
-ShortStaffSU3		1		1	1	120	100	52@	Short Staff (Sacred(3))	Sacred(3) Unique	NEW	56	56					5	5000	cgld	cgld						sock		3	3	dex-add		25	25	sor		9	12	pierce-fire		1	75	pierce-cold		1	75	pierce-ltng		1	75	pierce-pois		1	75	enr-factor%		10	10	mana		500	500	cast3		25	25	extra-all		1	20	hp		101	200	0
+ShortStaffSU3		1		1	1	120	100	52@	Short Staff (Sacred(3))	Sacred(3) Unique	NEW	56	56					5	5000	dgld	dgld						sock		3	3	dex-add		25	25	sor		9	12	pierce-fire		1	75	pierce-cold		1	75	pierce-ltng		1	75	pierce-pois		1	75	enr-factor%		10	10	mana		500	500	cast3		25	25	extra-all		1	20	hp		101	200	0
 Grim Fang		1		10	1	1	1	100	Short Sword (Grade 1)	Tiered Unique		Z	Z					5	5000	dgry	dgry						sock		1	1	str-add		51	51	dmg%		31	50	res-pois		11	15	str		2	5	lifesteal		3	5	att-damage		3	5																					0
 Grim Fang		1		10	1	15	10	168	Short Sword (Grade 2)	Tiered Unique		Z	Z					5	5000	dgry	dgry						sock		2	2	str-add		51	51	dmg%		51	70	res-pois		16	20	str		6	9	lifesteal		6	8	att-damage		6	8																					0
 Grim Fang		1		10	1	30	19	236	Short Sword (Grade 3)	Tiered Unique		Z	Z					5	5000	dgry	dgry						sock		2	2	str-add		51	51	dmg%		71	90	res-pois		21	25	str		10	13	lifesteal		9	11	att-damage		9	11																					0
@@ -1699,7 +1699,7 @@ Destroying Angel		1		10	1	33	20	714	Small Shield (Grade 3)	Tiered Unique		Z	Z			
 Destroying Angel		1		10	1	48	29	760	Small Shield (Grade 4)	Tiered Unique		Z	Z					5	5000	dgrn	dgrn						sock		3	3	ac%		81	100	extra-pois		26	30	dmg-pois	128	256	384	res-pois		36	40	howl-thorns		10	11																									0
 Destroying Angel		1		10	1	62	37	806	Small Shield (Grade 5)	Tiered Unique		Z	Z					5	5000	dgrn	dgrn						sock		4	4	ac%		101	120	extra-pois		31	35	dmg-pois	128	512	768	res-pois		41	45	howl-thorns		12	13																									0
 Destroying Angel		1		10	1	77	46	852	Small Shield (Grade 6)	Tiered Unique		Z	Z					5	5000	dgrn	dgrn						sock		4	4	ac%		121	140	extra-pois		36	40	dmg-pois	128	1024	1536	res-pois		46	50	howl-thorns		14	15																									0
-Witch Drum		1		10	1	120	100	@23	Small Shield (Sacred(1))	Sacred(1) Unique		155	155					5	5000	dgld	dgld						sock		4	4	ac%		101	150	cast3		50	50	extra-all		31	40	ease		-31	-40	skill-dur		36	40	enr-factor%		20	20	res-all		11	15																	0
+Witch Drum		1		10	1	120	100	@23	Small Shield (Sacred(1))	Sacred(1) Unique		155	155					5	5000	dgld	dgld						sock		4	4	ac%		101	150	cast3		50	50	extra-all		31	40	ease		-31	-40	skill-dur		31	40	enr-factor%		20	20	res-all		11	15																	0
 NewFlyingSaucer		1		4	1	120	100	@23	Small Shield (Sacred(2))	Sacred(2) Unique		155	155					5	5000	dgry	dgry						sock		6	6	ac%		201	250	move3		150	150	hit-skill	209	2	41	pierce-cold		31	40	pierce-ltng		31	40	kill-skill	680	10	38	block		1	1	red-dmg%		5	5													0
 SmallShieldSU3		1		1	1	120	100	@23	Small Shield (Sacred(3))	Sacred(3) Unique	NEW	155	155					5	5000	dyel	dyel						sock		4	4	ac%		151	200	hp%		10	10	hp-minion		50	50	dmg-minion		50	50	res-all-minion		25	25	allskills		1	2	mana		300	500	ac-global		25	50	str		25	50	cast3		30	30	light		1	2	0
 Narlant Dream		1		10	1	7	4	j12	Smoked Sphere (Grade 1)	Tiered Unique		Z	Z					5	5000	dgry	dgry						sock		1	1	dex-add	51	51	51	cast3		10	10	mana%		3	5	sor		1	1	slow-thorns		3	5	gethit-skill	712	1	3	ac-hth		21	50																	0
@@ -1904,11 +1904,11 @@ Sea Summoner		1		10	1	4	3	138	Trident (Grade 1)	Tiered Unique		Z	Z					5	5000	lb
 Sea Summoner		1		10	1	19	12	206	Trident (Grade 2)	Tiered Unique		Z	Z					5	5000	lblu	lblu						sock		3	3	dex-add	76	76	76	dmg%		71	100	cold-min		36	70	cold-max		51	100	cold-len		21	30	att-skill	781	6	4	slow		6	8	ac-global		16	20	regen		26	35	dex		26	35					0
 Sea Summoner		1		10	1	34	21	274	Trident (Grade 3)	Tiered Unique		Z	Z					5	5000	lblu	lblu						sock		4	4	dex-add	76	76	76	dmg%		101	130	cold-min		71	140	cold-max		101	200	cold-len		31	40	att-skill	781	7	6	slow		9	11	ac-global		21	25	regen		36	45	dex		36	45					0
 Sea Summoner		1		10	1	48	30	342	Trident (Grade 4)	Tiered Unique		Z	Z					5	5000	lblu	lblu						sock		4	4	dex-add	76	76	76	dmg%		131	160	cold-min		141	280	cold-max		201	400	cold-len		41	50	att-skill	781	8	8	slow		12	14	ac-global		26	30	regen		46	55	dex		46	55					0
-Sea Summoner		1		10	1	63	40	410	Trident (Grade 5)	Tiered Unique		Z	Z					5	5000	lblu	lblu						sock		5	5	dex-add	76	76	76	dmg%		161	190	cold-min		281	560	cold-max		401	800	cold-len		51	60	att-skill	781	9	10	slow		15	17	ac-global		31	35	regen		56	65	dex		56	65					0
+Sea Summoner		1		10	1	63	40	410	Trident (Grade 5)	Tiered Unique		Z	Z					5	5000	lblu	stop						sock		5	5	dex-add	76	76	76	dmg%		161	190	cold-min		281	560	cold-max		401	800	cold-len		51	60	att-skill	781	9	10	slow		15	17	ac-global		31	35	regen		56	65	dex		56	65					0
 Sea Summoner		1		10	1	77	49	478	Trident (Grade 6)	Tiered Unique		Z	Z					5	5000	lblu	lblu						sock		6	6	dex-add	76	76	76	dmg%		191	220	cold-min		561	1120	cold-max		801	1600	cold-len		61	70	att-skill	781	10	12	slow		18	20	ac-global		36	40	regen		66	75	dex		66	75					0
 The Retiarius		1		10	1	120	100	39@	Trident (Sacred(1))	Sacred(1) Unique		42	42					5	5000	dyel	dyel						sock		6	6	dex-add	76	76	76	dmg%		301	350	dmg-norm		301	500	slow		25	25	ac-global		31	40	pal		3	5	red-dmg%		15	15	att-skill	496	10	9	crush		21	25	str%		21	30	vit%		21	30	0
 NewStormcaller		1		4	1	120	100	39@	Trident (Sacred(2))	Sacred(2) Unique		42	42					5	5000	lblu	lblu						sock		6	6	dex-add	76	76	76	dmg%		251	300	strbonusblue	24	24	24	dmg-norm		200	500	att-skill	461	25	23	att-skill	980	10	8	pierce-ltng		31	40	slow		15	15	res-ltng-max		-50	-50	dmg-stun		100	100					0
-TridentSU3		1		1	1	120	100	39@	Trident (Sacred(3))	Sacred(3) Unique	NEW	42	42					5	5000	cgld	cgld						sock		6	6	dex-add		102	102	dmg%		251	300	att-skill	468	25	36	pierce-pois		41	50	reanimate	1627	1	5	dmg-mag		333	666	swing3		60	60	allskills		1	2	att%		101	150	ac		201	300	res-pois		41	50	0
+TridentSU3		1		1	1	120	100	39@	Trident (Sacred(3))	Sacred(3) Unique	NEW	42	42					5	5000	dgld	dgld						sock		6	6	dex-add		102	102	dmg%		251	300	att-skill	468	25	36	pierce-pois		41	50	reanimate	1627	1	5	dmg-mag		333	666	swing3		60	60	allskills		1	2	att%		101	150	ac		201	300	res-pois		41	50	0
 The Overlord		1		10	1	1	1	107	Two-Handed Sword (Grade 1)	Tiered Unique		Z	Z					5	5000	dgrn	dgrn						sock		2	2	str-add		76	76	dmg%		21	40	att-skill	29	1	1	slow		7	10	str%		2	5	uninterrupt		21	25	openwounds		21	25																	0
 The Overlord		1		10	1	15	9	175	Two-Handed Sword (Grade 2)	Tiered Unique		Z	Z					5	5000	dgrn	dgrn						sock		2	2	str-add		76	76	dmg%		41	60	att-skill	29	1	2	slow		11	14	str%		6	9	uninterrupt		26	30	openwounds		26	30																	0
 The Overlord		1		10	1	29	19	243	Two-Handed Sword (Grade 3)	Tiered Unique		Z	Z					5	5000	dgrn	dgrn						sock		3	3	str-add		76	76	dmg%		61	80	att-skill	29	1	3	slow		15	18	str%		10	13	uninterrupt		31	35	openwounds		31	35																	0
@@ -2069,7 +2069,7 @@ Evenstar2		1		1	1	120	100	amu	ZZ - Amulet  (Sacred) n	ZA		9995c	9995c					5	5000
 2AmmySU3		1		1	1	120	100	amu	ZZ - Amulet  (Sacred) p	ZA	NEW	9995j	9995j					5	5000								hit-skill	542	5	5	dmg-norm		25	50	lifesteal		5	5	allskills		2	3	res-all		10	10	red-dmg%		5	5																									0
 4AmmySU3		1		1	1	120	100	amu	ZZ - Amulet  (Sacred) q	ZA	NEW	9995k	9995k					5	5000								move3		50	50	ama		0	4	ass		0	4	bar		0	4	dru		0	4	nec		0	4	sor		0	4	pal		0	4	allskills		0	1	swing3		0	50	cast3		0	50	balance3		0	50	0
 Death Ward		1		50	1	120	120	amu	ZZ - Amulet  (Sacred) r	ZA		9995u	9995u					5	5000								sock		1	1	res-pois		41	50	res-curse		21	25	heal-thorns		41	50	light		2	2	allskills		2	2	dmg-norm		25	100																					0
-Klaatu Barada Nikto		1		20	1	120	120	amu	ZZ - Amulet  (Sacred) s	ZA		9995v	9995v					5	5000	dgrn	dgrn						dmg-mon%	63	50	50	desc-breaker		50	50	res-pois		41	50	charged	470	5	16	allskills		2	2	swing3		25	25	dmg-ltng		1	1500	dmg-pois	150	3072	3072	dmg-stun		15	15	att-skill	153	25	20	res-ltng		41	50					0
+Klaatu Barada Nikto		1		20	1	120	120	amu	ZZ - Amulet  (Sacred) s	ZA		9995v	9995v					5	5000	dgrn	dgrn						dmg-mon%	63	50	50	desc-breaker		50	50	res-pois		41	50	oskill	470	11	16	allskills		2	2	swing3		25	25	dmg-ltng		1	1500	dmg-pois	150	3072	3072	dmg-stun		15	15	att-skill	153	25	20	res-ltng		41	50					0
 Black Dwarf		1		25	1	120	120	amu	ZZ - Amulet  (Sacred) u	ZA		9995w	9995w					5	5000								extra-cold		31	40	balance3		15	15	oskill	680	21	29	extra-ltng		31	40	pierce-cold		21	30	pierce-ltng		21	30	ac-global		21	25	allskills		2	2	light		-5	-5	cast3		20	20									0
 New3Gallowlaugh		1		2	1	120	120	amu	ZZ - Amulet  (Sacred) v	ZA		9995y	9995y					5	5000	blac	blac						oskill	407	1	1	poison-dur		100	100	dmg-norm		25	50	allskills		1	1	res-pois-len		50	50																													0
 1AmmySU32		1		1	1	120	120	amu	ZZ - Amulet  (Sacred) w	ZA	NEW	9995z	9995z					5	5000				superammy				pierce-all		35	35																																													0
@@ -2128,207 +2128,207 @@ Torque Torc2		1		1	1	120	100	rin	ZZ - Ring (Sacred) t	ZR		9996e	9996e					5	5000
 3RingSU3		1		1	1	120	100	rin	ZZ - Ring (Sacred) v	ZR	NEW	9996ec	9996ec					5	5000								allskills		1	1	extra-all		20	30	move3		25	25	cast3		25	25	ac-global		15	20	mana%		5	5																									0
 RipstarX		1		50	1	60	60	rin	ZZ - Ring (Sacred) w	ZR		Z	Z					5	5000								sock		1	1	dmg/lvl	32	32	32	openwounds		31	50	heal-melee		11	20																																	0
 EarthRouserX		1		50	1	100	100	rin	ZZ - Ring (Sacred) x	ZR		Z	Z					5	5000								sock		1	1	kill-skill	612	2	7	str%		6	10	crush		3	5	dmg-global		25	25																													0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (D) Cotw 2142	ZZ - Curare		ZZZZ	ZZZZ					5	5000								oskill	601	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (D) Cotw a1	ZZ - Light and Shadow		ZZZZ	ZZZZ					5	5000								oskill	448	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (D) Cotw a2	ZZ - Shamanic Trance		ZZZZ	ZZZZ					5	5000								oskill	609	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (D) Cotw a3	ZZ - Laserblade		ZZZZ	ZZZZ					5	5000								oskill	348	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (D) Cotw a4	ZZ - Lioness		ZZZZ	ZZZZ					5	5000								oskill	319	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (D) Cotw a5	ZZ - Living Flame		ZZZZ	ZZZZ					5	5000								oskill	452	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (D) Cotw a6	ZZ - Moon Queen		ZZZZ	ZZZZ					5	5000								oskill	307	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (D) Cotw a7	ZZ - Mountain King		ZZZZ	ZZZZ					5	5000								oskill	370	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (D) Cotw a8	ZZ - Paragon		ZZZZ	ZZZZ					5	5000								oskill	602	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (D) Cotw a9	ZZ - Plague		ZZZZ	ZZZZ					5	5000								oskill	618	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (D) Cotw a88	ZZ - Perfect Being		ZZZZ	ZZZZ					5	5000								oskill	350	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (D) Cotw aa	ZZ - Ice Queen		ZZZZ	ZZZZ					5	5000								oskill	456	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (D) Cotw aaa	ZZ - Runemaster		ZZZZ	ZZZZ					5	5000								oskill	608	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (D) Cotw ab	ZZ - Spirit Guide		ZZZZ	ZZZZ					5	5000								oskill	369	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (D) Cotw ac	ZZ - Superbeast		ZZZZ	ZZZZ					5	5000								oskill	617	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (D) Cotw ac2	ZZ - Elfin Arrows		ZZZZ	ZZZZ					5	5000								oskill	384	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (D) Cotw ac222	ZZ - Force of Nature		ZZZZ	ZZZZ					5	5000								oskill	610	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (D) Cotw ac2223	ZZ - Embalming		ZZZZ	ZZZZ					5	5000								oskill	422	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (D) Cotw ad	ZZ - Talons Hold		ZZZZ	ZZZZ					5	5000								oskill	412	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (D) Cotw ae	ZZ - Vengeful Power		ZZZZ	ZZZZ					5	5000								oskill	466	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (D) Cotw af	ZZ - Warp Armor		ZZZZ	ZZZZ					5	5000								oskill	464	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (D) Cotw ag	ZZ - Ancient Blood		ZZZZ	ZZZZ					5	5000								oskill	367	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (D) Cotw ah	ZZ - Amatoxin		ZZZZ	ZZZZ					5	5000								oskill	979	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (D) Cotw ai	ZZ - Way of the Spider		ZZZZ	ZZZZ					5	5000								oskill	331	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (D) Cotw aj	ZZ - Witch Blood		ZZZZ	ZZZZ					5	5000								oskill	620	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (D) Cotw ak	ZZ - Wings of Wrath		ZZZZ	ZZZZ					5	5000								oskill	325	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (D) Cotw akk	ZZ - Call Angel King Safe		ZZZZ	ZZZZ					5	5000								oskill	897	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (D) Cotw al	ZZ - Dragonlore		ZZZZ	ZZZZ					5	5000								oskill	305	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (D) Cotw am	ZZ - FamineX		ZZZZ	ZZZZ					5	5000								oskill	410	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (D) Cotw an	ZZ - Dragonfire		ZZZZ	ZZZZ					5	5000								oskill	418	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (D) Cotw ao	ZZ - Dark King		ZZZZ	ZZZZ					5	5000								oskill	445	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (D) Cotw ap	ZZ - Way of the Phoenix		ZZZZ	ZZZZ					5	5000								oskill	335	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (D) Cotw aq	ZZ - Way of the Gryphon		ZZZZ	ZZZZ					5	5000								oskill	605	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (D) Cotw ar	ZZ - Greater Manifestations		ZZZZ	ZZZZ					5	5000								oskill	364	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (D) Cotw as	ZZ - Bane Hunter		ZZZZ	ZZZZ					5	5000								oskill	621	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (D) Cotw at	ZZ - Balance		ZZZZ	ZZZZ					5	5000								oskill	323	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (D) Cotw au	ZZ - Bacchanalia		ZZZZ	ZZZZ					5	5000								oskill	315	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (D) Cotw av	ZZ - Death Ward		ZZZZ	ZZZZ					5	5000								oskill	615	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (D) Cotw aw	ZZ - Defensive Harmony		ZZZZ	ZZZZ					5	5000								oskill	321	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 0	ZZ - Squall Gust		ZZZZ	ZZZZ					5	5000								oskill	899	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 0a	ZZ - Summon Fallen		ZZZZ	ZZZZ					5	5000								oskill	812	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 0b	ZZ - Patriot Sentry		ZZZZ	ZZZZ					5	5000								oskill	885	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 0c	ZZ - Wrath		ZZZZ	ZZZZ					5	5000								oskill	76	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 0d	ZZ - Spirit of Vengeance		ZZZZ	ZZZZ					5	5000								oskill	603	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 0e	ZZ - Exploding Totem		ZZZZ	ZZZZ					5	5000								oskill	1022	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 0f	ZZ - Bloody Mary		ZZZZ	ZZZZ					5	5000								oskill	672	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 0g	ZZ - Rain of Bombs		ZZZZ	ZZZZ					5	5000								oskill	30	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 0h	ZZ - Rune of Ice		ZZZZ	ZZZZ					5	5000								oskill	1008	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 0i	ZZ - Doom Serpents		ZZZZ	ZZZZ					5	5000								oskill	701	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 0j	ZZ - Spiral Dance		ZZZZ	ZZZZ					5	5000								oskill	1011	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 0k	ZZ - Vanquish		ZZZZ	ZZZZ					5	5000								oskill	698	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 0l	ZZ - Meteor Shower		ZZZZ	ZZZZ					5	5000								oskill	824	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 0m	ZZ - Summon Shock Beast		ZZZZ	ZZZZ					5	5000								oskill	761	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 0n	ZZ - Dominate		ZZZZ	ZZZZ					5	5000								oskill	1016	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 0o	ZZ - Summon Sinner		ZZZZ	ZZZZ					5	5000								oskill	870	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 0p	ZZ - SMG		ZZZZ	ZZZZ					5	5000								oskill	977	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 0q	ZZ - BFG83K		ZZZZ	ZZZZ					5	5000								oskill	976	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 0r	ZZ - Summon Sirens		ZZZZ	ZZZZ					5	5000								oskill	905	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 0s	ZZ - Disintegrate		ZZZZ	ZZZZ					5	5000								oskill	1005	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 0t	ZZ - Ice Bolt Nova		ZZZZ	ZZZZ					5	5000								oskill	798	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 0u	ZZ - Sunspear		ZZZZ	ZZZZ					5	5000								oskill	693	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 0v	ZZ - Ancients Hand		ZZZZ	ZZZZ					5	5000								oskill	892	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 0w	ZZ - Beacon		ZZZZ	ZZZZ					5	5000								oskill	604	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 0x	ZZ - Dinferno		ZZZZ	ZZZZ					5	5000								oskill	1004	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 0y	ZZ - Venomous Spirit		ZZZZ	ZZZZ					5	5000								oskill	1002	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 0z	ZZ - Punisher		ZZZZ	ZZZZ					5	5000								oskill	263	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 00a	ZZ - Seal of Fire		ZZZZ	ZZZZ					5	5000								oskill	134	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 00b	ZZ - Exorcism		ZZZZ	ZZZZ					5	5000								oskill	637	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 00c	ZZ - Searing Orb		ZZZZ	ZZZZ					5	5000								oskill	1000	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 00d	ZZ - Clobber		ZZZZ	ZZZZ					5	5000								oskill	904	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 00e	ZZ - Charm		ZZZZ	ZZZZ					5	5000								oskill	1018	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 00f	ZZ - Other Shackles of Ice		ZZZZ	ZZZZ					5	5000								oskill	571	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 00g	ZZ - Typhoon		ZZZZ	ZZZZ					5	5000								oskill	898	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 00h	ZZ - Call Necrobot		ZZZZ	ZZZZ					5	5000								oskill	896	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 00i	ZZ - Time Strike		ZZZZ	ZZZZ					5	5000								oskill	691	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 00j	ZZ - Other Raven Flight		ZZZZ	ZZZZ					5	5000								oskill	569	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 00k	ZZ - Bloodstar		ZZZZ	ZZZZ					5	5000								oskill	833	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 00l	ZZ - Deathstrike		ZZZZ	ZZZZ					5	5000								oskill	17	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 00m	ZZ - Dark Power		ZZZZ	ZZZZ					5	5000								oskill	687	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 00n	ZZ - Rathmas Chosen		ZZZZ	ZZZZ					5	5000								oskill	614	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 00o	ZZ - Ravage		ZZZZ	ZZZZ					5	5000								oskill	886	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 00p	ZZ - Death Coil		ZZZZ	ZZZZ					5	5000								oskill	694	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 00q	ZZ - Totembound Guardian		ZZZZ	ZZZZ					5	5000								oskill	83	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 00r	ZZ - Apocalypse		ZZZZ	ZZZZ					5	5000								oskill	789	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 00s	ZZ - Titan Strike		ZZZZ	ZZZZ					5	5000								oskill	8	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 00t	ZZ - Guard Tower		ZZZZ	ZZZZ					5	5000								oskill	972	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 00u	ZZ - Summon Overlord		ZZZZ	ZZZZ					5	5000								oskill	670	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 00v	ZZ - ATMG Sentry		ZZZZ	ZZZZ					5	5000								oskill	884	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 00w	ZZ - Scatter Shot		ZZZZ	ZZZZ					5	5000								oskill	642	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 00x	ZZ - Dead Wall Totem		ZZZZ	ZZZZ					5	5000								oskill	797	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 00y	ZZ - Cautious Strike		ZZZZ	ZZZZ					5	5000								oskill	690	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 00z	ZZ - Summon Thunder Bear		ZZZZ	ZZZZ					5	5000								oskill	757	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 000a	ZZ - Conquest		ZZZZ	ZZZZ					5	5000								oskill	688	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 000b	ZZ - Countdown		ZZZZ	ZZZZ					5	5000								oskill	825	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 000c	ZZ - Rune of Fire		ZZZZ	ZZZZ					5	5000								oskill	809	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 000d	ZZ - Summon Jinn		ZZZZ	ZZZZ					5	5000								oskill	613	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 1	ZZ - Immolation Bomb		ZZZZ	ZZZZ					5	5000								oskill	154	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 1a	ZZ - Other Demonic Speed		ZZZZ	ZZZZ					5	5000								oskill	565	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 1b	ZZ - Death Blossom		ZZZZ	ZZZZ					5	5000								oskill	20	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 1c	ZZ - Other Fire Cascade		ZZZZ	ZZZZ					5	5000								oskill	566	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 1d	ZZ - Supernova		ZZZZ	ZZZZ					5	5000								oskill	680	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 1e	ZZ - Elemental Totem		ZZZZ	ZZZZ					5	5000								oskill	58	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 1f	ZZ - Other Pandemonium		ZZZZ	ZZZZ					5	5000								oskill	567	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 1g	ZZ - Other Possess		ZZZZ	ZZZZ					5	5000								oskill	568	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 1h	ZZ - Kraken Stance		ZZZZ	ZZZZ					5	5000								oskill	607	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 1i	ZZ - Summon Shredder		ZZZZ	ZZZZ					5	5000								oskill	792	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 1j	ZZ - Guided Chain		ZZZZ	ZZZZ					5	5000								oskill	635	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 1k	ZZ - Other Typhoon Sentry		ZZZZ	ZZZZ					5	5000								oskill	572	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 1l	ZZ - Devils Fang Totem		ZZZZ	ZZZZ					5	5000								oskill	967	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 1m	ZZ - Overpower		ZZZZ	ZZZZ					5	5000								oskill	643	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 1n	ZZ - Elemental Rain		ZZZZ	ZZZZ					5	5000								oskill	820	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 1o	ZZ - Diseased Cattle		ZZZZ	ZZZZ					5	5000								oskill	139	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 1p	ZZ - Pagan Heart		ZZZZ	ZZZZ					5	5000								oskill	673	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 1q	ZZ - DisinUber		ZZZZ	ZZZZ					5	5000								oskill	1001	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 1r	ZZ - Player Dynamite		ZZZZ	ZZZZ					5	5000								oskill	882	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 1s	ZZ - Electrobolt Spell		ZZZZ	ZZZZ					5	5000								oskill	481	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 1t	ZZ - Player Chickens		ZZZZ	ZZZZ					5	5000								oskill	889	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 1u	ZZ - Path of Flames		ZZZZ	ZZZZ					5	5000								oskill	983	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 1v	ZZ - WhiteZombie		ZZZZ	ZZZZ					5	5000								oskill	616	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 1w	ZZ - Phase Bomb		ZZZZ	ZZZZ					5	5000								oskill	624	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 1x	ZZ - Holy Trap		ZZZZ	ZZZZ					5	5000								oskill	21	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 1y	ZZ - Phalanx		ZZZZ	ZZZZ					5	5000								oskill	634	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 1z	ZZ - Static Ward		ZZZZ	ZZZZ					5	5000								oskill	906	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 2	ZZ - Arrow Swarm		ZZZZ	ZZZZ					5	5000								oskill	903	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 3	ZZ - Jitans Gate		ZZZZ	ZZZZ					5	5000								oskill	829	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 4	ZZ - Unholy Armor		ZZZZ	ZZZZ					5	5000								oskill	29	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 5	ZZ - Lapidate		ZZZZ	ZZZZ					5	5000								oskill	901	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 6	ZZ - Ice Lance		ZZZZ	ZZZZ					5	5000								oskill	104	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 7	ZZ - Tantrum		ZZZZ	ZZZZ					5	5000								oskill	890	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 8	ZZ - Inner Fire		ZZZZ	ZZZZ					5	5000								oskill	1003	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 9	ZZ - Tremor		ZZZZ	ZZZZ					5	5000								oskill	612	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 9a	ZZ - Summon Bane Monster		ZZZZ	ZZZZ					5	5000								oskill	793	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 9b	ZZ - Summon Avalanche		ZZZZ	ZZZZ					5	5000								oskill	871	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 9c	ZZ - Blade Barrier		ZZZZ	ZZZZ					5	5000								oskill	746	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 9d	ZZ - Blood Flash		ZZZZ	ZZZZ					5	5000								oskill	777	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 9e	ZZ - Blood Fury		ZZZZ	ZZZZ					5	5000								oskill	839	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 9f	ZZ - Mana Coil		ZZZZ	ZZZZ					5	5000								oskill	706	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 9g	ZZ - Thorn Field		ZZZZ	ZZZZ					5	5000								oskill	888	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 9h	ZZ - Pyroclastic Flow		ZZZZ	ZZZZ					5	5000								oskill	766	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 9i	ZZ - Rune of Mana		ZZZZ	ZZZZ					5	5000								oskill	873	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 9j	ZZ - Rock Shock		ZZZZ	ZZZZ					5	5000								oskill	28	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 9k	ZZ - Lightning Shield		ZZZZ	ZZZZ					5	5000								oskill	669	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 9l	ZZ - Lightning Wall		ZZZZ	ZZZZ					5	5000								oskill	999	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 9m	ZZ - Shadow Avatar		ZZZZ	ZZZZ					5	5000								oskill	828	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 9n	ZZ - Shadow Blade		ZZZZ	ZZZZ					5	5000								oskill	695	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 9o	ZZ - Other Banish		ZZZZ	ZZZZ					5	5000								oskill	563	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 9p	ZZ - Faerie Fire		ZZZZ	ZZZZ					5	5000								oskill	611	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 9q	ZZ - Cold Fear		ZZZZ	ZZZZ					5	5000								oskill	997	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 9r	ZZ - Other Avatar		ZZZZ	ZZZZ					5	5000								oskill	562	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 9s	ZZ - Cone of Cold		ZZZZ	ZZZZ					5	5000								oskill	883	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 9t	ZZ - Frozen Crown		ZZZZ	ZZZZ					5	5000								oskill	703	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 9u	ZZ - OHMAN		ZZZZ	ZZZZ					5	5000								oskill	24	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 9v	ZZ - Nova Bomb		ZZZZ	ZZZZ					5	5000								oskill	153	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 9w	ZZ - Fear Bomb Totem		ZZZZ	ZZZZ					5	5000								oskill	22	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 9x	ZZ - Nightmare		ZZZZ	ZZZZ					5	5000								oskill	697	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 9y	ZZ - Feral Strike		ZZZZ	ZZZZ					5	5000								oskill	887	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 9z	ZZ - Squall Wave		ZZZZ	ZZZZ					5	5000								oskill	902	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 91	ZZ - Hawk Talons		ZZZZ	ZZZZ					5	5000								oskill	1010	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 92	ZZ - Vortex		ZZZZ	ZZZZ					5	5000								oskill	705	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 93	ZZ - Liche Totem		ZZZZ	ZZZZ					5	5000								oskill	671	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 94	ZZ - Greater Charm		ZZZZ	ZZZZ					5	5000								oskill	822	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 95	ZZ - Gorefest		ZZZZ	ZZZZ					5	5000								oskill	891	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 96	ZZ - Hamstring		ZZZZ	ZZZZ					5	5000								oskill	689	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 97	ZZ - Lightning Arena		ZZZZ	ZZZZ					5	5000								oskill	236	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 98	ZZ - Glacial Nova		ZZZZ	ZZZZ					5	5000								oskill	702	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 99	ZZ - Whirlpool		ZZZZ	ZZZZ					5	5000								oskill	1012	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 991	ZZ - Hailstorm		ZZZZ	ZZZZ					5	5000								oskill	119	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 992	ZZ - Summon Rats		ZZZZ	ZZZZ					5	5000								oskill	959	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 993	ZZ - Gamma Field		ZZZZ	ZZZZ					5	5000								oskill	120	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 994	ZZ - Frozen Soul		ZZZZ	ZZZZ					5	5000								oskill	998	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 995	ZZ - Summon Glowing Fungus		ZZZZ	ZZZZ					5	5000								oskill	872	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 996	ZZ - Wraith Arrow		ZZZZ	ZZZZ					5	5000								oskill	969	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 997	ZZ - Summon Daystar		ZZZZ	ZZZZ					5	5000								oskill	791	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 998	ZZ - Black Lotus Strike		ZZZZ	ZZZZ					5	5000								oskill	19	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw 999	ZZ - Summon Darklings		ZZZZ	ZZZZ					5	5000								oskill	1021	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw a	ZZ - Ball Lightning		ZZZZ	ZZZZ					5	5000								oskill	826	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw b	ZZ - Flash Charm		ZZZZ	ZZZZ					5	5000								oskill	823	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw c	ZZ - Bloodspeakers Mark		ZZZZ	ZZZZ					5	5000								oskill	666	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw d	ZZ - Mana Tide Totem		ZZZZ	ZZZZ					5	5000								oskill	57	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw e	ZZ - Flash		ZZZZ	ZZZZ					5	5000								oskill	807	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw f	ZZ - Mark of the Wild		ZZZZ	ZZZZ					5	5000								oskill	1013	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw g	ZZ - Body of the Savior		ZZZZ	ZZZZ					5	5000								oskill	984	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw h	ZZ - Medusa		ZZZZ	ZZZZ					5	5000								oskill	900	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw i	ZZ - Wyrd		ZZZZ	ZZZZ					5	5000								oskill	802	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw j	ZZ - Soulshatter		ZZZZ	ZZZZ					5	5000								oskill	18	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw k	ZZ - Call Blood Golem		ZZZZ	ZZZZ					5	5000								oskill	895	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw l	ZZ - Call Henchman		ZZZZ	ZZZZ					5	5000								oskill	894	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw m	ZZ - Fire Star		ZZZZ	ZZZZ					5	5000								oskill	632	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw n	ZZ - Call Leprechaun		ZZZZ	ZZZZ					5	5000								oskill	1014	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw o	ZZ - Slow		ZZZZ	ZZZZ					5	5000								oskill	619	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw p	ZZ - Mon Spike Ripple		ZZZZ	ZZZZ					5	5000								oskill	800	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw q	ZZ - Silver Streak		ZZZZ	ZZZZ					5	5000								oskill	636	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw r	ZZ - Cataclysm		ZZZZ	ZZZZ					5	5000								oskill	699	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw s	ZZ - Fire Fountain		ZZZZ	ZZZZ					5	5000								oskill	111	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw t	ZZ - Shock Flower		ZZZZ	ZZZZ					5	5000								oskill	840	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw u	ZZ - Champions of the Sun		ZZZZ	ZZZZ					5	5000								oskill	668	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw v	ZZ - Firebolt Nova		ZZZZ	ZZZZ					5	5000								oskill	142	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw w	ZZ - Cherub Strike		ZZZZ	ZZZZ					5	5000								oskill	676	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw x	ZZ - Other Blast Wave		ZZZZ	ZZZZ					5	5000								oskill	564	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw y	ZZ - Other Raven Heart		ZZZZ	ZZZZ					5	5000								oskill	570	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld				1	1	120	100	jew	ZZZ - (R) Cotw z	ZZ - Golden Calf		ZZZZ	ZZZZ					5	5000								oskill	652	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw 2142	ZZ - Curare		ZZZZ	ZZZZ					5	5000								oskill	601	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw a1	ZZ - Light and Shadow		ZZZZ	ZZZZ					5	5000								oskill	448	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw a2	ZZ - Shamanic Trance		ZZZZ	ZZZZ					5	5000								oskill	609	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw a3	ZZ - Laserblade		ZZZZ	ZZZZ					5	5000								oskill	348	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw a4	ZZ - Lioness		ZZZZ	ZZZZ					5	5000								oskill	319	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw a5	ZZ - Living Flame		ZZZZ	ZZZZ					5	5000								oskill	452	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw a6	ZZ - Moon Queen		ZZZZ	ZZZZ					5	5000								oskill	307	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw a7	ZZ - Mountain King		ZZZZ	ZZZZ					5	5000								oskill	370	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw a8	ZZ - Paragon		ZZZZ	ZZZZ					5	5000								oskill	602	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw a9	ZZ - Plague		ZZZZ	ZZZZ					5	5000								oskill	618	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw a88	ZZ - Perfect Being		ZZZZ	ZZZZ					5	5000								oskill	350	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw aa	ZZ - Ice Queen		ZZZZ	ZZZZ					5	5000								oskill	456	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw aaa	ZZ - Runemaster		ZZZZ	ZZZZ					5	5000								oskill	608	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw ab	ZZ - Spirit Guide		ZZZZ	ZZZZ					5	5000								oskill	369	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw ac	ZZ - Superbeast		ZZZZ	ZZZZ					5	5000								oskill	617	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw ac2	ZZ - Elfin Arrows		ZZZZ	ZZZZ					5	5000								oskill	384	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw ac222	ZZ - Force of Nature		ZZZZ	ZZZZ					5	5000								oskill	610	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw ac2223	ZZ - Embalming		ZZZZ	ZZZZ					5	5000								oskill	422	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw ad	ZZ - Talons Hold		ZZZZ	ZZZZ					5	5000								oskill	412	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw ae	ZZ - Vengeful Power		ZZZZ	ZZZZ					5	5000								oskill	466	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw af	ZZ - Warp Armor		ZZZZ	ZZZZ					5	5000								oskill	464	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw ag	ZZ - Ancient Blood		ZZZZ	ZZZZ					5	5000								oskill	367	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw ah	ZZ - Amatoxin		ZZZZ	ZZZZ					5	5000								oskill	979	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw ai	ZZ - Way of the Spider		ZZZZ	ZZZZ					5	5000								oskill	331	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw aj	ZZ - Witch Blood		ZZZZ	ZZZZ					5	5000								oskill	620	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw ak	ZZ - Wings of Wrath		ZZZZ	ZZZZ					5	5000								oskill	325	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw akk	ZZ - Call Angel King Safe		ZZZZ	ZZZZ					5	5000								oskill	897	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw al	ZZ - Dragonlore		ZZZZ	ZZZZ					5	5000								oskill	305	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw am	ZZ - FamineX		ZZZZ	ZZZZ					5	5000								oskill	410	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw an	ZZ - Dragonfire		ZZZZ	ZZZZ					5	5000								oskill	418	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw ao	ZZ - Dark King		ZZZZ	ZZZZ					5	5000								oskill	445	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw ap	ZZ - Way of the Phoenix		ZZZZ	ZZZZ					5	5000								oskill	335	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw aq	ZZ - Way of the Gryphon		ZZZZ	ZZZZ					5	5000								oskill	605	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw ar	ZZ - Greater Manifestations		ZZZZ	ZZZZ					5	5000								oskill	364	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw as	ZZ - Bane Hunter		ZZZZ	ZZZZ					5	5000								oskill	621	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw at	ZZ - Balance		ZZZZ	ZZZZ					5	5000								oskill	323	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw au	ZZ - Bacchanalia		ZZZZ	ZZZZ					5	5000								oskill	315	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw av	ZZ - Death Ward		ZZZZ	ZZZZ					5	5000								oskill	615	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw aw	ZZ - Defensive Harmony		ZZZZ	ZZZZ					5	5000								oskill	321	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0	ZZ - Squall Gust		ZZZZ	ZZZZ					5	5000								oskill	899	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0a	ZZ - Summon Fallen		ZZZZ	ZZZZ					5	5000								oskill	812	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0b	ZZ - Patriot Sentry		ZZZZ	ZZZZ					5	5000								oskill	885	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0c	ZZ - Wrath		ZZZZ	ZZZZ					5	5000								oskill	76	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0d	ZZ - Spirit of Vengeance		ZZZZ	ZZZZ					5	5000								oskill	603	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0e	ZZ - Exploding Totem		ZZZZ	ZZZZ					5	5000								oskill	1022	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0f	ZZ - Bloody Mary		ZZZZ	ZZZZ					5	5000								oskill	672	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0g	ZZ - Rain of Bombs		ZZZZ	ZZZZ					5	5000								oskill	30	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0h	ZZ - Rune of Ice		ZZZZ	ZZZZ					5	5000								oskill	1008	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0i	ZZ - Doom Serpents		ZZZZ	ZZZZ					5	5000								oskill	701	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0j	ZZ - Spiral Dance		ZZZZ	ZZZZ					5	5000								oskill	1011	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0k	ZZ - Vanquish		ZZZZ	ZZZZ					5	5000								oskill	698	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0l	ZZ - Meteor Shower		ZZZZ	ZZZZ					5	5000								oskill	824	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0m	ZZ - Summon Shock Beast		ZZZZ	ZZZZ					5	5000								oskill	761	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0n	ZZ - Dominate		ZZZZ	ZZZZ					5	5000								oskill	1016	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0o	ZZ - Summon Sinner		ZZZZ	ZZZZ					5	5000								oskill	870	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0p	ZZ - SMG		ZZZZ	ZZZZ					5	5000								oskill	977	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0q	ZZ - BFG83K		ZZZZ	ZZZZ					5	5000								oskill	976	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0r	ZZ - Summon Sirens		ZZZZ	ZZZZ					5	5000								oskill	905	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0s	ZZ - Disintegrate		ZZZZ	ZZZZ					5	5000								oskill	1005	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0t	ZZ - Ice Bolt Nova		ZZZZ	ZZZZ					5	5000								oskill	798	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0u	ZZ - Sunspear		ZZZZ	ZZZZ					5	5000								oskill	693	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0v	ZZ - Ancients Hand		ZZZZ	ZZZZ					5	5000								oskill	892	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0w	ZZ - Beacon		ZZZZ	ZZZZ					5	5000								oskill	604	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0x	ZZ - Dinferno		ZZZZ	ZZZZ					5	5000								oskill	1004	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0y	ZZ - Venomous Spirit		ZZZZ	ZZZZ					5	5000								oskill	1002	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0z	ZZ - Punisher		ZZZZ	ZZZZ					5	5000								oskill	263	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00a	ZZ - Seal of Fire		ZZZZ	ZZZZ					5	5000								oskill	134	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00b	ZZ - Exorcism		ZZZZ	ZZZZ					5	5000								oskill	637	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00c	ZZ - Searing Orb		ZZZZ	ZZZZ					5	5000								oskill	1000	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00d	ZZ - Clobber		ZZZZ	ZZZZ					5	5000								oskill	904	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00e	ZZ - Charm		ZZZZ	ZZZZ					5	5000								oskill	1018	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00f	ZZ - Other Shackles of Ice		ZZZZ	ZZZZ					5	5000								oskill	571	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00g	ZZ - Typhoon		ZZZZ	ZZZZ					5	5000								oskill	898	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00h	ZZ - Call Necrobot		ZZZZ	ZZZZ					5	5000								oskill	896	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00i	ZZ - Time Strike		ZZZZ	ZZZZ					5	5000								oskill	691	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00j	ZZ - Other Raven Flight		ZZZZ	ZZZZ					5	5000								oskill	569	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00k	ZZ - Bloodstar		ZZZZ	ZZZZ					5	5000								oskill	833	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00l	ZZ - Deathstrike		ZZZZ	ZZZZ					5	5000								oskill	17	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00m	ZZ - Dark Power		ZZZZ	ZZZZ					5	5000								oskill	687	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00n	ZZ - Rathmas Chosen		ZZZZ	ZZZZ					5	5000								oskill	614	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00o	ZZ - Ravage		ZZZZ	ZZZZ					5	5000								oskill	886	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00p	ZZ - Death Coil		ZZZZ	ZZZZ					5	5000								oskill	694	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00q	ZZ - Totembound Guardian		ZZZZ	ZZZZ					5	5000								oskill	83	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00r	ZZ - Apocalypse		ZZZZ	ZZZZ					5	5000								oskill	789	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00s	ZZ - Titan Strike		ZZZZ	ZZZZ					5	5000								oskill	8	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00t	ZZ - Guard Tower		ZZZZ	ZZZZ					5	5000								oskill	972	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00u	ZZ - Summon Overlord		ZZZZ	ZZZZ					5	5000								oskill	670	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00v	ZZ - ATMG Sentry		ZZZZ	ZZZZ					5	5000								oskill	884	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00w	ZZ - Scatter Shot		ZZZZ	ZZZZ					5	5000								oskill	642	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00x	ZZ - Dead Wall Totem		ZZZZ	ZZZZ					5	5000								oskill	797	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00y	ZZ - Cautious Strike		ZZZZ	ZZZZ					5	5000								oskill	690	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00z	ZZ - Summon Thunder Bear		ZZZZ	ZZZZ					5	5000								oskill	757	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 000a	ZZ - Conquest		ZZZZ	ZZZZ					5	5000								oskill	688	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 000b	ZZ - Countdown		ZZZZ	ZZZZ					5	5000								oskill	825	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 000c	ZZ - Rune of Fire		ZZZZ	ZZZZ					5	5000								oskill	809	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 000d	ZZ - Summon Jinn		ZZZZ	ZZZZ					5	5000								oskill	613	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1	ZZ - Immolation Bomb		ZZZZ	ZZZZ					5	5000								oskill	154	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1a	ZZ - Other Demonic Speed		ZZZZ	ZZZZ					5	5000								oskill	565	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1b	ZZ - Death Blossom		ZZZZ	ZZZZ					5	5000								oskill	20	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1c	ZZ - Other Fire Cascade		ZZZZ	ZZZZ					5	5000								oskill	566	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1d	ZZ - Supernova		ZZZZ	ZZZZ					5	5000								oskill	680	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1e	ZZ - Elemental Totem		ZZZZ	ZZZZ					5	5000								oskill	58	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1f	ZZ - Other Pandemonium		ZZZZ	ZZZZ					5	5000								oskill	567	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1g	ZZ - Other Possess		ZZZZ	ZZZZ					5	5000								oskill	568	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1h	ZZ - Kraken Stance		ZZZZ	ZZZZ					5	5000								oskill	607	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1i	ZZ - Summon Shredder		ZZZZ	ZZZZ					5	5000								oskill	792	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1j	ZZ - Guided Chain		ZZZZ	ZZZZ					5	5000								oskill	635	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1k	ZZ - Other Typhoon Sentry		ZZZZ	ZZZZ					5	5000								oskill	572	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1l	ZZ - Devils Fang Totem		ZZZZ	ZZZZ					5	5000								oskill	967	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1m	ZZ - Overpower		ZZZZ	ZZZZ					5	5000								oskill	643	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1n	ZZ - Elemental Rain		ZZZZ	ZZZZ					5	5000								oskill	820	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1o	ZZ - Diseased Cattle		ZZZZ	ZZZZ					5	5000								oskill	139	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1p	ZZ - Pagan Heart		ZZZZ	ZZZZ					5	5000								oskill	673	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1q	ZZ - DisinUber		ZZZZ	ZZZZ					5	5000								oskill	1001	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1r	ZZ - Player Dynamite		ZZZZ	ZZZZ					5	5000								oskill	882	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1s	ZZ - Electrobolt Spell		ZZZZ	ZZZZ					5	5000								oskill	481	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1t	ZZ - Player Chickens		ZZZZ	ZZZZ					5	5000								oskill	889	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1u	ZZ - Path of Flames		ZZZZ	ZZZZ					5	5000								oskill	983	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1v	ZZ - WhiteZombie		ZZZZ	ZZZZ					5	5000								oskill	616	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1w	ZZ - Phase Bomb		ZZZZ	ZZZZ					5	5000								oskill	624	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1x	ZZ - Holy Trap		ZZZZ	ZZZZ					5	5000								oskill	21	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1y	ZZ - Phalanx		ZZZZ	ZZZZ					5	5000								oskill	634	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1z	ZZ - Static Ward		ZZZZ	ZZZZ					5	5000								oskill	906	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 2	ZZ - Arrow Swarm		ZZZZ	ZZZZ					5	5000								oskill	903	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 3	ZZ - Jitans Gate		ZZZZ	ZZZZ					5	5000								oskill	829	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 4	ZZ - Unholy Armor		ZZZZ	ZZZZ					5	5000								oskill	29	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 5	ZZ - Lapidate		ZZZZ	ZZZZ					5	5000								oskill	901	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 6	ZZ - Ice Lance		ZZZZ	ZZZZ					5	5000								oskill	104	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 7	ZZ - Tantrum		ZZZZ	ZZZZ					5	5000								oskill	890	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 8	ZZ - Inner Fire		ZZZZ	ZZZZ					5	5000								oskill	1003	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9	ZZ - Tremor		ZZZZ	ZZZZ					5	5000								oskill	612	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9a	ZZ - Summon Bane Monster		ZZZZ	ZZZZ					5	5000								oskill	793	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9b	ZZ - Summon Avalanche		ZZZZ	ZZZZ					5	5000								oskill	871	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9c	ZZ - Blade Barrier		ZZZZ	ZZZZ					5	5000								oskill	746	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9d	ZZ - Blood Flash		ZZZZ	ZZZZ					5	5000								oskill	777	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9e	ZZ - Blood Fury		ZZZZ	ZZZZ					5	5000								oskill	839	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9f	ZZ - Mana Coil		ZZZZ	ZZZZ					5	5000								oskill	706	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9g	ZZ - Thorn Field		ZZZZ	ZZZZ					5	5000								oskill	888	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9h	ZZ - Pyroclastic Flow		ZZZZ	ZZZZ					5	5000								oskill	766	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9i	ZZ - Rune of Mana		ZZZZ	ZZZZ					5	5000								oskill	873	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9j	ZZ - Rock Shock		ZZZZ	ZZZZ					5	5000								oskill	28	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9k	ZZ - Lightning Shield		ZZZZ	ZZZZ					5	5000								oskill	669	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9l	ZZ - Lightning Wall		ZZZZ	ZZZZ					5	5000								oskill	999	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9m	ZZ - Shadow Avatar		ZZZZ	ZZZZ					5	5000								oskill	828	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9n	ZZ - Shadow Blade		ZZZZ	ZZZZ					5	5000								oskill	695	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9o	ZZ - Other Banish		ZZZZ	ZZZZ					5	5000								oskill	563	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	666	666	jew	ZZZ - (R) Cotw 9p	ZZ - Faerie Fire		ZZZZ	ZZZZ					5	5000								oskill	611	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9q	ZZ - Cold Fear		ZZZZ	ZZZZ					5	5000								oskill	997	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9r	ZZ - Other Avatar		ZZZZ	ZZZZ					5	5000								oskill	562	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9s	ZZ - Cone of Cold		ZZZZ	ZZZZ					5	5000								oskill	883	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9t	ZZ - Frozen Crown		ZZZZ	ZZZZ					5	5000								oskill	703	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9u	ZZ - OHMAN		ZZZZ	ZZZZ					5	5000								oskill	24	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9v	ZZ - Nova Bomb		ZZZZ	ZZZZ					5	5000								oskill	153	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9w	ZZ - Fear Bomb Totem		ZZZZ	ZZZZ					5	5000								oskill	22	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9x	ZZ - Nightmare		ZZZZ	ZZZZ					5	5000								oskill	697	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9y	ZZ - Feral Strike		ZZZZ	ZZZZ					5	5000								oskill	887	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9z	ZZ - Squall Wave		ZZZZ	ZZZZ					5	5000								oskill	902	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 91	ZZ - Hawk Talons		ZZZZ	ZZZZ					5	5000								oskill	1010	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 92	ZZ - Vortex		ZZZZ	ZZZZ					5	5000								oskill	705	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 93	ZZ - Liche Totem		ZZZZ	ZZZZ					5	5000								oskill	671	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 94	ZZ - Greater Charm		ZZZZ	ZZZZ					5	5000								oskill	822	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 95	ZZ - Gorefest		ZZZZ	ZZZZ					5	5000								oskill	891	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 96	ZZ - Hamstring		ZZZZ	ZZZZ					5	5000								oskill	689	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 97	ZZ - Lightning Arena		ZZZZ	ZZZZ					5	5000								oskill	236	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 98	ZZ - Glacial Nova		ZZZZ	ZZZZ					5	5000								oskill	702	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 99	ZZ - Whirlpool		ZZZZ	ZZZZ					5	5000								oskill	1012	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 991	ZZ - Hailstorm		ZZZZ	ZZZZ					5	5000								oskill	119	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 992	ZZ - Summon Rats		ZZZZ	ZZZZ					5	5000								oskill	959	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 993	ZZ - Gamma Field		ZZZZ	ZZZZ					5	5000								oskill	120	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 994	ZZ - Frozen Soul		ZZZZ	ZZZZ					5	5000								oskill	998	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 995	ZZ - Summon Glowing Fungus		ZZZZ	ZZZZ					5	5000								oskill	872	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 996	ZZ - Wraith Arrow		ZZZZ	ZZZZ					5	5000								oskill	969	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 997	ZZ - Summon Daystar		ZZZZ	ZZZZ					5	5000								oskill	791	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 998	ZZ - Black Lotus Strike		ZZZZ	ZZZZ					5	5000								oskill	19	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 999	ZZ - Summon Darklings		ZZZZ	ZZZZ					5	5000								oskill	1021	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw a	ZZ - Ball Lightning		ZZZZ	ZZZZ					5	5000								oskill	826	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw b	ZZ - Flash Charm		ZZZZ	ZZZZ					5	5000								oskill	823	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw c	ZZ - Bloodspeakers Mark		ZZZZ	ZZZZ					5	5000								oskill	666	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw d	ZZ - Mana Tide Totem		ZZZZ	ZZZZ					5	5000								oskill	57	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw e	ZZ - Flash		ZZZZ	ZZZZ					5	5000								oskill	807	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw f	ZZ - Mark of the Wild		ZZZZ	ZZZZ					5	5000								oskill	1013	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw g	ZZ - Body of the Savior		ZZZZ	ZZZZ					5	5000								oskill	984	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw h	ZZ - Medusa		ZZZZ	ZZZZ					5	5000								oskill	900	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw i	ZZ - Wyrd		ZZZZ	ZZZZ					5	5000								oskill	802	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw j	ZZ - Soulshatter		ZZZZ	ZZZZ					5	5000								oskill	18	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw k	ZZ - Call Blood Golem		ZZZZ	ZZZZ					5	5000								oskill	895	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw l	ZZ - Call Henchman		ZZZZ	ZZZZ					5	5000								oskill	894	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw m	ZZ - Fire Star		ZZZZ	ZZZZ					5	5000								oskill	632	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw n	ZZ - Call Leprechaun		ZZZZ	ZZZZ					5	5000								oskill	1014	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw o	ZZ - Slow		ZZZZ	ZZZZ					5	5000								oskill	619	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw p	ZZ - Mon Spike Ripple		ZZZZ	ZZZZ					5	5000								oskill	800	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw q	ZZ - Silver Streak		ZZZZ	ZZZZ					5	5000								oskill	636	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw r	ZZ - Cataclysm		ZZZZ	ZZZZ					5	5000								oskill	699	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw s	ZZ - Fire Fountain		ZZZZ	ZZZZ					5	5000								oskill	111	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw t	ZZ - Shock Flower		ZZZZ	ZZZZ					5	5000								oskill	840	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw u	ZZ - Champions of the Sun		ZZZZ	ZZZZ					5	5000								oskill	668	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw v	ZZ - Firebolt Nova		ZZZZ	ZZZZ					5	5000								oskill	142	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw w	ZZ - Cherub Strike		ZZZZ	ZZZZ					5	5000								oskill	676	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw x	ZZ - Other Blast Wave		ZZZZ	ZZZZ					5	5000								oskill	564	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw y	ZZ - Other Raven Heart		ZZZZ	ZZZZ					5	5000								oskill	570	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw z	ZZ - Golden Calf		ZZZZ	ZZZZ					5	5000								oskill	652	1	1	levelreq		10	10																																									0
 Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 0a	ZZ - Pounce		ZZZZ	ZZZZ					5	5000								oskill	318	1	1	levelreq		10	10																																									0
 Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 0b	ZZ - Guardian Spirit		ZZZZ	ZZZZ					5	5000								oskill	361	1	1	levelreq		10	10																																									0
 Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 0c	ZZ - Electrofield Sentry		ZZZZ	ZZZZ					5	5000								oskill	338	1	1	levelreq		10	10																																									0
@@ -2342,7 +2342,7 @@ Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 0j	ZZ - Buckshot		ZZ
 Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 0k	ZZ - Doom		ZZZZ	ZZZZ					5	5000								oskill	330	1	1	levelreq		10	10																																									0
 Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 0l	ZZ - Broadside		ZZZZ	ZZZZ					5	5000								oskill	345	1	1	levelreq		10	10																																									0
 Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 0m	ZZ - Elvensong		ZZZZ	ZZZZ					5	5000								oskill	397	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 0n	ZZ - Pillar of Faith		ZZZZ	ZZZZ					5	5000								oskill	439	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 0n	ZZ - Demonrend		ZZZZ	ZZZZ					5	5000								oskill	439	1	1	levelreq		10	10																																									0
 Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 0o	ZZ - Blood Thorns		ZZZZ	ZZZZ					5	5000								oskill	434	1	1	levelreq		10	10																																									0
 Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 0p	ZZ - Egg Trap		ZZZZ	ZZZZ					5	5000								oskill	378	1	1	levelreq		10	10																																									0
 Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 0q	ZZ - Deaths Fury Totem		ZZZZ	ZZZZ					5	5000								oskill	416	1	1	levelreq		10	10																																									0
@@ -2370,7 +2370,7 @@ Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 012	ZZ - Rain of Fir
 Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 013	ZZ - Screaming Eagle		ZZZZ	ZZZZ					5	5000								oskill	374	1	1	levelreq		10	10																																									0
 Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 014	ZZ - Nova Charge		ZZZZ	ZZZZ					5	5000								oskill	465	1	1	levelreq		10	10																																									0
 Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 015	ZZ - Overkill		ZZZZ	ZZZZ					5	5000								oskill	375	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 016	ZZ - Searing Light		ZZZZ	ZZZZ					5	5000								oskill	436	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - Cotw REALM	ZZ - Searing Light		ZZZZ	ZZZZ					5	5000								oskill	681	1	1	levelreq		10	10																																									0
 Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 017	ZZ - Cold Blood		ZZZZ	ZZZZ					5	5000								oskill	457	1	1	levelreq		10	10																																									0
 Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 018	ZZ - Enfilade		ZZZZ	ZZZZ					5	5000								oskill	309	1	1	levelreq		10	10																																									0
 Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 019	ZZ - Seismic Charge		ZZZZ	ZZZZ					5	5000								oskill	337	1	1	levelreq		10	10																																									0
@@ -2384,7 +2384,7 @@ Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 026	ZZ - Shadow Refu
 Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 027	ZZ - Rocket Bolt		ZZZZ	ZZZZ					5	5000								oskill	417	1	1	levelreq		10	10																																									0
 Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 028	ZZ - PsionicSkill		ZZZZ	ZZZZ					5	5000								oskill	349	1	1	levelreq		10	10																																									0
 Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 029	ZZ - Moonstrike		ZZZZ	ZZZZ					5	5000								oskill	471	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 030	ZZ - Rising Dawn		ZZZZ	ZZZZ					5	5000								oskill	440	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - Cotw 030	ZZ - (R) Rising Dawn		ZZZZ	ZZZZ					5	5000								oskill	480	1	1	levelreq		10	10																																									0
 Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 031	ZZ - Shower of Rocks		ZZZZ	ZZZZ					5	5000								oskill	354	1	1	levelreq		10	10																																									0
 Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 032	ZZ - Scourge		ZZZZ	ZZZZ					5	5000								oskill	435	1	1	levelreq		10	10																																									0
 Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 033	ZZ - Lava Pit		ZZZZ	ZZZZ					5	5000								oskill	311	1	1	levelreq		10	10																																									0
@@ -2392,7 +2392,7 @@ Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 034	ZZ - Shuriken Fl
 Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 035	ZZ - Fireheart Totem		ZZZZ	ZZZZ					5	5000								oskill	423	1	1	levelreq		10	10																																									0
 Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 036	ZZ - Cascade		ZZZZ	ZZZZ					5	5000								oskill	382	1	1	levelreq		10	10																																									0
 Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 037	ZZ - Sacrifices		ZZZZ	ZZZZ					5	5000								oskill	407	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 038	ZZ - Ring of Light		ZZZZ	ZZZZ					5	5000								oskill	437	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 038	ZZ - Dragonshout		ZZZZ	ZZZZ					5	5000								oskill	437	1	1	levelreq		10	10																																									0
 Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 039	ZZ - Slayer		ZZZZ	ZZZZ					5	5000								oskill	444	1	1	levelreq		10	10																																									0
 Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 1a	ZZ - Maelstrom MkIV		ZZZZ	ZZZZ					5	5000								oskill	344	1	1	levelreq		10	10																																									0
 Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 1b	ZZ - Blink		ZZZZ	ZZZZ					5	5000								oskill	346	1	1	levelreq		10	10																																									0
@@ -2467,7 +2467,7 @@ Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 3n	ZZ - Idol2Scosgle
 Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 3o	ZZ - Trap Rat Form		ZZZZ	ZZZZ					5	5000								oskill	376	1	1	levelreq		10	10																																									0
 Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 3p	ZZ - Hammerstrike		ZZZZ	ZZZZ					5	5000								oskill	427	1	1	levelreq		10	10																																									0
 Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 3q	ZZ - Wychwind		ZZZZ	ZZZZ					5	5000								oskill	343	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 3r	ZZ - Holy Trap Advanced		ZZZZ	ZZZZ					5	5000								oskill	438	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - Cotw 3r	ZZ - (R) Holy Trap Advanced		ZZZZ	ZZZZ					5	5000								oskill	682	1	1	levelreq		10	10																																									0
 Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 3s	ZZ - Abyss		ZZZZ	ZZZZ					5	5000								oskill	459	1	1	levelreq		10	10																																									0
 Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 3t	ZZ - Twin Fang Strike		ZZZZ	ZZZZ					5	5000								oskill	334	1	1	levelreq		10	10																																									0
 Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 3u	ZZ - Aerials Disaster		ZZZZ	ZZZZ					5	5000								oskill	351	1	1	levelreq		10	10																																									0
@@ -2488,68 +2488,68 @@ AncientRepositories		1		1	1	120	120	|\\	ZZZZZ - New F	Valthek							1	5	5000				
 BrachyceranReward		1		1	1	120	120	|\#	ZZZZZ - New g	Brachyceran							1	5	5000								regen		100	250	res-pois		26	50	move3		11	15	ass		0	1	ama		0	1	dru		0	1	bar		0	1	sor		0	1	pal		0	1	nec		0	1	stam		100	100					0
 FLSG2		1		1	1	1	100	az!	1 - Charm p	Uber Reward		ZZ	ZZ				1	5	5000								gold%		-75	-75	ac-global		11	15	reanimate-rand	3	1256	1553	str		31	50	dex		31	50	enr		31	50	vit		31	50	str		-12	-41	dex		-12	-41	enr		-12	-41	vit		-12	-41	mag%		31	40	0
 TradersChest2		1		1	1	120	120	`^`	ZZZZZ - NEW a	Uber Reward							1	10	100000								light		1	1																																													0
-StormBlade				1	1	120	120	!07	nagi	realm								10	5000	blac	blac						dmg%		251	300	avoidance		10	10	pierce-flp		100	100	innate-skill	760	100	1	dex-add	102	102	102	hp		500	500	swing3		50	50	heal-hit		1	5	oskill	1157	3	9	light		-5	-5	kill-skill	78	5	13	mag%		41	50	0
-TheGrizzly				1	1	120	120	!5!	warp blade	realm								10	5000	blac	blac						oskill	431	21	30	oskill	432	21	30	oskill	433	21	30	oskill	434	21	30	pierce-fico		50	50	dex-add		76	76	dmg%		301	350	dmg-norm		1	1000	extra-fico		51	100	innate-skill	760	100	1	state	161	1	1	desc_superbeasty		1	1	0
-GrandEmpyrean				1	1	40	40	rin		realm								5	5000								sock		1	1	hp%-mp%		20	20	all-stats%		11	15	kill-skill	340	2	13	gold%		101	200																													0
-BeadsOfTheSK2				1	1	120	100	amu		realm								5	5000								str		51	100	dex		51	100	dmg-max		100	100	heal-hit		1	1	ac-global		101	150	crush		6	10	kill-skill	564	1	15																					0
-LuckyJewel				1	1	120	100	jew		realm								5	5000								mag%		100	100	levelreq		10	10																																									0
-SealOfTathamet				1		10	50	amu									1	5	5000								oskill	1159	1	1	hp		100	100	str		11	15	dex		11	15																																	0
+StormBlade		0		1	1	120	120	!07	nagi	realm								10	5000	blac	blac						dmg%		251	300	avoidance		10	10	pierce-flp		100	100	innate-skill	760	100	1	dex-add	102	102	102	hp		500	500	swing3		50	50	heal-hit		1	5	oskill	1157	3	9	light		-5	-5	kill-skill	78	5	13	mag%		41	50	0
+TheGrizzly		0		1	1	120	120	!5!	warp blade	realm								10	5000	blac	blac						oskill	431	21	30	oskill	432	21	30	oskill	433	21	30	oskill	434	21	30	pierce-fico		50	50	dex-add		76	76	dmg%		301	350	dmg-norm		1	1000	extra-fico		51	100	innate-skill	760	100	1	state	161	1	1	desc_superbeasty		1	1	0
+GrandEmpyrean		0		1	1	40	40	rin		realm								5	5000								sock		1	1	hp%-mp%		20	20	all-stats%		11	15	kill-skill	340	2	13	gold%		101	200																													0
+BeadsOfTheSK2		0		1	1	120	100	amu		realm								5	5000								str		51	100	dex		51	100	dmg-max		100	100	heal-hit		1	1	ac-global		101	150	crush		6	10	kill-skill	564	1	15																					0
+LuckyJewel		0		1	1	120	100	jew		realm								5	5000								mag%		100	100	levelreq		10	10																																									0
+SealOfTathamet		0		1		10	50	amu									1	5	5000								oskill	1159	1	1	hp		100	100	str		11	15	dex		11	15																																	0
 FullHelmSU3_2		1		1	1	120	100	@19	Full Helm (Sacred(3))	Sacred(3) Unique	NEW	145	145					5	5000	cred	cred						sock		4	4	ac%		251	300	allskills		1	1	kill-skill	145	5	21	pierce-fire		10	25	extra-fire		25	40	res-fire-max		5	5	dmg-fire		666	666	move3		-50	-50	oskill	983	16	32									0
 LeatherGlovesSU3_2		1			1	500	666	@33	Leather Gloves (Sacred(3))	Sacred(3) Unique	NEW	167	167					5	5000	whit	whit						sock		4	4	reanimate	1863	1	1	hit-skill	699	0	16	ac		666	666	res-all		15	20	red-dmg%		10	10	ease		-50	-50	dmg-norm		25	50	move3		30	30													0
 LightPlatedBootsSU3_2		1		1	1	120	100	@41	Light Plated Boots (Sacred(3))	Sacred(3) Unique	NEW	175	175					5	5000	dgld	dgld						sock		4	4	ac%		251	300	death-skill	486	100	23	kill-skill	950	1	13	dmg-max		100	150	lifesteal		10	10	manasteal		10	10	all-stats%		10	10	ease		-20	-20	move3		30	30									0
 KabraxisSoul2		1		1	1	666	666	bxa	1 - Charm z8	Uber Reward	NEW	ZZZ	ZZZ				1	5	5000					kabraxis_death_1		kabraxis_death_1	allskills		1	1																																													0
 LeatherGlovesSU3_3		1		1	1	120	100	@33	Leather Gloves (Sacred(3))	Sacred(3) Unique	NEW	167	167					5	5000	whit	whit						sock		4	4	reanimate	1863	1	1	hit-skill	699	1	16	ac		666	666	res-all		15	20	red-dmg%		5	5	ease		100	100	dmg-norm		25	50	move3		30	30													0
 KiteShieldSU3_2		1		1	1	120	100	@25	Kite Shield (Sacred(3))	Sacred(3) Unique	NEW	157	157					5	5000	dgld	dgld						sock		4	4	ac%		251	300	heal-hit		2	2	block3		25	25	dmg-norm		25	50	ac-global		25	50	res-all-max		0	2	cheap		10	10	swing3		25	25	light		-1	-5	red-dmg		100	100					0
-Soulkeep		1		1	1	120	120	lawl									1	5	5000								strbonusblue		25	25	light		-5	-5	hp%-mp%		6	10	innate-fury	147	50	2																																	0
+Soulkeep		1		1	1	666	666	lawl									1	5	5000								strbonusblue		25	25	light		-5	-5	hp%-mp%		6	10	innate-fury	147	50	2																																	0
 KabraxisSoul3		1		1	1	1	100	bxa	1 - Charm z8	Uber Reward	NEW	ZZZ	ZZZ				1	5	5000					kabraxis_death_1		kabraxis_death_1	allskills		1	1																																													0
 NewStartingCharm2		1		1	1	1	0	>.<	1 - Charm y	Uber Reward	NEW	ZZ	ZZ				1	5	5000								desc-difficulty	-1	-1	-1	aura	1134	1	1																																									0
 LucionsSoulstone		1		1	1	1	666	\\8		Uber Reward		ZZ	ZZ				1	5	5000								craft-points		50	50	slow		10	10	pal		2	5	extra-totems		1	1	dmg-max		50	50	cheap		50	50																									0
 BookOfTriune		1		1	1	1	666	\\7									1	5	5000								hp		13	13	res-fire		3	3	str		-4	-4	ac		-7	-7	oskill	763	2	2																													0
-CycleOfPower		1		1	1	120	60	cm1										2	3000								str		1	20																																													0
-CycleOfPower		1		1	1	120	60	cm1										2	3000								dex		1	20																																													0
-CycleOfPower		1		1	1	120	60	cm1										2	3000								vit		1	20																																													0
-CycleOfPower		1		1	1	120	60	cm1										2	3000								enr		1	20																																													0
-CycleOfPower		1		1	1	120	70	cm2										3	4000								str		5	35	str%		1	5																																									0
-CycleOfPower		1		1	1	120	70	cm2										3	4000								dex		5	35	dex%		1	5																																									0
-CycleOfPower		1		1	1	120	70	cm2										3	4000								vit		5	35	vit%		1	5																																									0
-CycleOfPower		1		1	1	120	70	cm2										3	4000								enr		5	35	enr%		1	5																																									0
-CycleOfPower		1		1	1	120	80	cm3										4	5000								str		15	40	str%		1	10																																									0
-CycleOfPower		1		1	1	120	80	cm3										4	5000								dex		15	40	dex%		1	10																																									0
-CycleOfPower		1		1	1	120	80	cm3										4	5000								vit		15	40	vit%		1	10																																									0
-CycleOfPower		1		1	1	120	80	cm3										4	5000								enr		15	40	enr%		1	10																																									0
-CycleOfGreed		1		1	1	120	20	cm1										1	5								gold%		-50	150																																													0
-CycleOfGreed		1		1	1	120	30	cm2										1	5								gold%		-100	250																																													0
-CycleOfGreed		1		1	1	120	40	cm3										1	5								gold%		-200	500																																													0
-CycleOfLuck		1		1	1	120	60	cm1										5	10000								mag%		-15	35																																													0
-CycleOfLuck		1		1	1	120	70	cm2										5	10000								mag%		-30	65																																													0
-CycleOfLuck		1		1	1	120	80	cm3										5	10000								mag%		-50	100																																													0
-CycleOfSpeed		1		1	1	120	30	cm1										2	3000								all3		1	8																																													0
-CycleOfSpeed		1		1	1	120	40	cm2										2	3000								all3		9	17																																													0
-CycleOfSpeed		1		1	1	120	50	cm3										2	3000								all3		18	30																																													0
-CycleOfMiracles		1		1	1	120	80	cm1										5	15								extra-fire		1	15	extra-cold		1	15	extra-pois		1	15	extra-ltng		1	15																																	0
-CycleOfMiracles		1		1	1	120	90	cm2										5	15								pierce-fire		1	10	pierce-cold		1	10	pierce-pois		1	10	pierce-ltng		1	10																																	0
-CycleOfMiracles		1		1	1	120	100	cm3										5	15								res-fire		11	20	res-fire-max		0	1	res-cold		11	20	res-cold-max		0	1	res-ltng		11	20	res-ltng-max		0	1	res-pois		11	20	res-pois-max		0	1																	0
-CycleOfWisdom		1		1	1	120	120	cm2										10	10000								ama		1	1	all-stats		-5	0																																									0
-CycleOfWisdom		1		1	1	120	120	cm2										10	10000								ass		1	1	all-stats		-5	0																																									0
-CycleOfWisdom		1		1	1	120	120	cm2										10	10000								bar		1	1	all-stats		-5	0																																									0
-CycleOfWisdom		1		1	1	120	120	cm2										10	10000								dru		1	1	all-stats		-5	0																																									0
-CycleOfWisdom		1		1	1	120	120	cm2										10	10000								nec		1	1	all-stats		-5	0																																									0
-CycleOfWisdom		1		1	1	120	120	cm2										10	10000								sor		1	1	all-stats		-5	0																																									0
-CycleOfWisdom		1		1	1	120	120	cm2										10	10000								pal		1	1	all-stats		-5	0																																									0
-CycleOfLust		1		1	1	120	120	cm3										0	1								light		-5	-5																																													0
+CycleOfPower		0		1	1	120	666	cm1										2	3000								str		1	20																																													0
+CycleOfPower		0		1	1	120	666	cm1										2	3000								dex		1	20																																													0
+CycleOfPower		0		1	1	120	666	cm1										2	3000								vit		1	20																																													0
+CycleOfPower		0		1	1	120	666	cm1										2	3000								enr		1	20																																													0
+CycleOfPower		0		1	1	120	666	cm2										3	4000								str		5	35	str%		1	5																																									0
+CycleOfPower		0		1	1	120	666	cm2										3	4000								dex		5	35	dex%		1	5																																									0
+CycleOfPower		0		1	1	120	666	cm2										3	4000								vit		5	35	vit%		1	5																																									0
+CycleOfPower		0		1	1	120	666	cm2										3	4000								enr		5	35	enr%		1	5																																									0
+CycleOfPower		0		1	1	120	666	cm3										4	5000								str		15	40	str%		1	10																																									0
+CycleOfPower		0		1	1	120	666	cm3										4	5000								dex		15	40	dex%		1	10																																									0
+CycleOfPower		0		1	1	120	666	cm3										4	5000								vit		15	40	vit%		1	10																																									0
+CycleOfPower		0		1	1	120	666	cm3										4	5000								enr		15	40	enr%		1	10																																									0
+CycleOfGreed		0		1	1	120	666	cm1										1	5								gold%		-50	150																																													0
+CycleOfGreed		0		1	1	120	666	cm2										1	5								gold%		-100	250																																													0
+CycleOfGreed		0		1	1	120	666	cm3										1	5								gold%		-200	500																																													0
+CycleOfLuck		0		1	1	120	666	cm1										5	10000								mag%		-15	35																																													0
+CycleOfLuck		0		1	1	120	666	cm2										5	10000								mag%		-30	65																																													0
+CycleOfLuck		0		1	1	120	666	cm3										5	10000								mag%		-50	100																																													0
+CycleOfSpeed		0		1	1	120	666	cm1										2	3000								all3		1	8																																													0
+CycleOfSpeed		0		1	1	120	666	cm2										2	3000								all3		9	17																																													0
+CycleOfSpeed		0		1	1	120	666	cm3										2	3000								all3		18	30																																													0
+CycleOfMiracles		0		1	1	120	666	cm1										5	15								extra-fire		1	15	extra-cold		1	15	extra-pois		1	15	extra-ltng		1	15																																	0
+CycleOfMiracles		0		1	1	120	666	cm2										5	15								pierce-fire		1	10	pierce-cold		1	10	pierce-pois		1	10	pierce-ltng		1	10																																	0
+CycleOfMiracles		0		1	1	120	666	cm3										5	15								res-fire		11	20	res-fire-max		0	1	res-cold		11	20	res-cold-max		0	1	res-ltng		11	20	res-ltng-max		0	1	res-pois		11	20	res-pois-max		0	1																	0
+CycleOfWisdom		0		1	1	120	666	cm2										10	10000								ama		1	1	all-stats		-5	0																																									0
+CycleOfWisdom		0		1	1	120	666	cm2										10	10000								ass		1	1	all-stats		-5	0																																									0
+CycleOfWisdom		0		1	1	120	666	cm2										10	10000								bar		1	1	all-stats		-5	0																																									0
+CycleOfWisdom		0		1	1	120	666	cm2										10	10000								dru		1	1	all-stats		-5	0																																									0
+CycleOfWisdom		0		1	1	120	666	cm2										10	10000								nec		1	1	all-stats		-5	0																																									0
+CycleOfWisdom		0		1	1	120	666	cm2										10	10000								sor		1	1	all-stats		-5	0																																									0
+CycleOfWisdom		0		1	1	120	666	cm2										10	10000								pal		1	1	all-stats		-5	0																																									0
+CycleOfLust		0		1	1	120	666	cm3										0	1								light		-5	-5																																													0
 --------------------------------------------																																																																											0
 CycleOfPower0		1		1	1	120	60	cm1										2	3000								str		1	15																																													0
-CycleOfPower0		1		1	1	120	60	cm1										2	3000								dex		1	15																																													0
-CycleOfPower0		1		1	1	120	60	cm1										2	3000								vit		1	15																																													0
-CycleOfPower0		1		1	1	120	60	cm1										2	3000								enr		1	15																																													0
+CycleOfPower01		1		1	1	120	60	cm1										2	3000								dex		1	15																																													0
+CycleOfPower02		1		1	1	120	60	cm1										2	3000								vit		1	15																																													0
+CycleOfPower03		1		1	1	120	60	cm1										2	3000								enr		1	15																																													0
 CycleOfPower1		1		1	1	120	70	cm2										3	4000								str		5	20	str%		1	5																																									0
-CycleOfPower1		1		1	1	120	70	cm2										3	4000								dex		5	20	dex%		1	5																																									0
-CycleOfPower1		1		1	1	120	70	cm2										3	4000								vit		5	20	vit%		1	5																																									0
-CycleOfPower1		1		1	1	120	70	cm2										3	4000								enr		5	20	enr%		1	5																																									0
+CycleOfPower11		1		1	1	120	70	cm2										3	4000								dex		5	20	dex%		1	5																																									0
+CycleOfPower12		1		1	1	120	70	cm2										3	4000								vit		5	20	vit%		1	5																																									0
+CycleOfPower13		1		1	1	120	70	cm2										3	4000								enr		5	20	enr%		1	5																																									0
 CycleOfPower2		1		1	1	120	80	cm3										4	5000								str		10	25	str%		1	10																																									0
-CycleOfPower2		1		1	1	120	80	cm3										4	5000								dex		10	25	dex%		1	10																																									0
-CycleOfPower2		1		1	1	120	80	cm3										4	5000								vit		10	25	vit%		1	10																																									0
-CycleOfPower2		1		1	1	120	80	cm3										4	5000								enr		10	25	enr%		1	10																																									0
+CycleOfPower21		1		1	1	120	80	cm3										4	5000								dex		10	25	dex%		1	10																																									0
+CycleOfPower22		1		1	1	120	80	cm3										4	5000								vit		10	25	vit%		1	10																																									0
+CycleOfPower23		1		1	1	120	80	cm3										4	5000								enr		10	25	enr%		1	10																																									0
 CycleOfGreed0		1		1	1	120	20	cm1										1	5								gold%		-10	50																																													0
 CycleOfGreed1		1		1	1	120	30	cm2										1	5								gold%		-30	150																																													0
 CycleOfGreed2		1		1	1	120	40	cm3										1	5								gold%		-100	300																																													0
@@ -2562,20 +2562,43 @@ CycleOfSpeed2		1		1	1	120	50	cm3										2	3000								all3		1	25														
 CycleOfMiracles0		1		1	1	120	80	cm1										5	15								extra-fire		1	5	extra-cold		1	5	extra-pois		1	5	extra-ltng		1	5																																	0
 CycleOfMiracles1		1		1	1	120	90	cm2										5	15								pierce-fire		1	6	pierce-cold		1	6	pierce-pois		1	6	pierce-ltng		1	6																																	0
 CycleOfMiracles2		1		1	1	120	100	cm3										5	15								res-fire		5	20	res-fire-max		-1	2	res-cold		5	20	res-cold-max		-1	2	res-ltng		5	20	res-ltng-max		-1	2	res-pois		5	20	res-pois-max		-1	2																	0
-CycleOfWisdom0		1		1	1	120	120	cm2										10	10000								ama		1	1	all-stats		-5	0																																									0
-CycleOfWisdom0		1		1	1	120	120	cm2										10	10000								ass		1	1	all-stats		-5	0																																									0
-CycleOfWisdom0		1		1	1	120	120	cm2										10	10000								bar		1	1	all-stats		-5	0																																									0
-CycleOfWisdom0		1		1	1	120	120	cm2										10	10000								dru		1	1	all-stats		-5	0																																									0
-CycleOfWisdom0		1		1	1	120	120	cm2										10	10000								nec		1	1	all-stats		-5	0																																									0
-CycleOfWisdom0		1		1	1	120	120	cm2										10	10000								sor		1	1	all-stats		-5	0																																									0
-CycleOfWisdom0		1		1	1	120	120	cm2										10	10000								pal		1	1	all-stats		-5	0																																									0
+CycleOfWisdom0		1		1	1	120	120	cm2									1	10	10000								ama		1	1	all-stats		-5	0																																									0
+CycleOfWisdom1		1		1	1	120	120	cm2									1	10	10000								ass		1	1	all-stats		-5	0																																									0
+CycleOfWisdom2		1		1	1	120	120	cm2									1	10	10000								bar		1	1	all-stats		-5	0																																									0
+CycleOfWisdom3		1		1	1	120	120	cm2									1	10	10000								dru		1	1	all-stats		-5	0																																									0
+CycleOfWisdom4		1		1	1	120	120	cm2									1	10	10000								nec		1	1	all-stats		-5	0																																									0
+CycleOfWisdom5		1		1	1	120	120	cm2									1	10	10000								sor		1	1	all-stats		-5	0																																									0
+CycleOfWisdom6		1		1	1	120	120	cm2									1	10	10000								pal		1	1	all-stats		-5	0																																									0
 CycleOfLust0		1		1	1	120	120	cm3										0	1								light		-1	-5																																													0
 CycleOfWealth0		1		1	1	120	90	cm1										5	3000								hp		-10	30	mana		-10	30																																									0
 CycleOfWealth1		1		1	1	120	100	cm2										5	3000								hp		-20	50	hp%		0	3	mana		-20	50	mana%		0	3																																	0
 CycleOfWealth2		1		1	1	120	110	cm3										5	3000								hp		-50	100	hp%		0	5	mana		-50	100	mana%		0	5																																	0
-CycleOfAggression0		1		1	1	120	60	cm1										2	1000								uninterrupt		1	5	att%		25	50	dmg-norm		1	5																																					
-CycleOfAggression1		1		1	1	120	70	cm2										2	1000								uninterrupt		1	12	att%		51	150	dmg-norm		6	12																																					
-CycleOfAggression2		1		1	1	120	80	cm3										2	1000								uninterrupt		1	20	att%		151	250	dmg-norm		5	20																																					
-CycleOfGold		1		1	1	120	120	\\6									1	5	50000								allskills		1	1	all-stats		10	10	hp%		5	5	mana%		5	5																																	
+CycleOfAggression0		1		1	1	120	666	cm1										2	1000								uninterrupt		1	5	att%		25	50	dmg-norm		1	5																																					0
+CycleOfAggression1		1		1	1	120	666	cm2										2	1000								uninterrupt		1	12	att%		51	150	dmg-norm		6	12																																					0
+CycleOfAggression2		1		1	1	120	666	cm3										2	1000								uninterrupt		1	20	att%		151	250	dmg-norm		5	20																																					0
+CycleOfGold		1		1	1	120	120	\\6									1	5	50000								allskills		1	1	all-stats		10	10	hp%		5	5	mana%		5	5																																	0
 BookOfTriune2		1		1	1	1	120	\\7									1	5	5000								hp		13	13	res-fire		3	3	str		-2	-4	ac		-1	-7	oskill	763	2	2	aura	1178	1	1																									0
 LucionsSoulstone2		1		1	1	1	120	\\8		Uber Reward		ZZ	ZZ				1	5	5000								craft-points		50	50	slow		10	10	pal		2	5	extra-totems		1	1	dmg-max		50	50	cheap		50	50																									0
+CycleOfAggression01		1		1	1	120	60	cm1										2	1000								uninterrupt		1	2	att%		10	20	dmg-norm		1	5																																					0
+CycleOfAggression11		1		1	1	120	70	cm2										2	1000								uninterrupt		1	5	att%		25	50	dmg-norm		3	8																																					0
+CycleOfAggression21		1		1	1	120	80	cm3										2	1000								uninterrupt		1	10	att%		50	100	dmg-norm		6	12																																					0
+Soulkeep2		1		1	1	120	120	lawl									1	5	5000								strbonusblue		25	25	light		-5	-5	hp%-mp%		6	10	innate-fury	147	50	2																																	0
+Cornerstone of the Roflworld		0		1	1	120	100	jew										5	5000								oskill	1024	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew										5	5000								oskill	1025	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew										5	5000								oskill	1026	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew										5	5000								oskill	1027	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew										5	5000								oskill	1028	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew										5	5000								oskill	1029	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew										5	5000								oskill	1030	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew										5	5000								oskill	1031	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew										5	5000								oskill	1032	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew										5	5000								oskill	1033	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew										5	5000								oskill	1037	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew										5	5000								oskill	1158	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		1		1	1	120	100	jew										5	5000								oskill	436	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		1		1	1	120	100	jew										5	5000								oskill	438	1	1	levelreq		10	10																																									0
+UldyssianCharm2		1		1	1	120	120	##.		Uber Reward	NEW	ZZZ	ZZZ				1	5	5000								gethit-skill	248	5	1	allskills		0	1	res-all		11	30	charged	876	100	1																																	0
+BossSummonerRing		1		1	1	1	0	vor1										5	5000				invrinquest				xsignet01		1	1																																													0
+UpgradedBossSummonerRing		1		1	1	1	120	vor2										5	5000	blac	blac		invrinquest				oskill	1182	1	1	light		6	15	all-stats		26	50	hp		200	200	mana		200	200																													0
+RathmasSupremacy		1		1	1	666	666	voXX									1	5	5000	blac	blac						light		5	10																																													
+RathmasSupremacy2		1		1	1	120	120	voXX									1	5	5000	blac	blac						light		5	10																																													

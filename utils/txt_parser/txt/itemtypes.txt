@@ -25,13 +25,13 @@ Scroll				scro	misc		0	0					0	0	0	0			1	0	0	1	0	0	0	0	3		0		0							misc	0
 Not Used							0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
 Scepter				scep	rod		1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	2		0		0							weap	0
 Wand				wand	rod		1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	2		0	nec	0							weap	0
-Staff				staf	rod		1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	2		0		0							weap	0
+Staff				staf	rod	sbox	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	2		0		0							weap	0
 Bow				bow	miss		0	1	rarm	larm	bowq		0	0	0	0		1	0	0	0	0	6	6	6	1	3		0		0							weap	0
-Axe				axe	mele		1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	3		0		0							weap	0
-Club				club	blun		1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	3		0		0							weap	0
+Axe				axe	mele	dbox	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	3		0		0							weap	0
+Club				club	blun	dbox	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	3		0		0							weap	0
 Sword				swor	mele		1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	3		0		0							weap	0
 Hammer				hamm	blun		1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	3		0		0							weap	0
-Knife				knif	mele		1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	3		0		0							weap	0
+Knife				knif	mele	dbox	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	3		0		0							weap	0
 Spear				spea	mele		1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	3		0		0							weap	0
 Polearm				pole	mele		1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	3		0		0							weap	0
 Crossbow				xbow	miss		1	1	rarm	larm	xboq		0	0	0	0		1	0	0	0	0	6	6	6	0	3		0		0							weap	0
@@ -60,12 +60,12 @@ Blunt				blun	mele		0	0					0	0	0	0		1	0	0	0	0	0	0	0	0	3		0		0								0
 Expansion																																							0
 Jewel				jewl	sock	dcht	0	0					0	0	0	0	1	1	0	0	1	0	0	0	0	0	3		0		6	invjw1	invjw2	invjw3	invjw4	invjw5	invjw6	misc	0
 Class Specific				clas			0	0					0	0	0	0		1	0	0	0	0	0	0	0	0	3		0		0								0
-Amazon Item				amaz	clas		0	0					0	0	0	0		1	0	0	0	0	0	0	0	0	2		0	ama	0								0
-Barbarian Item				barb	clas		0	0					0	0	0	0		1	0	0	0	0	0	0	0	0	2		0	bar	0								0
+Amazon Item				amaz	clas	fbox	0	0					0	0	0	0		1	0	0	0	0	0	0	0	0	2		0	ama	0								0
+Barbarian Item				barb	clas	fbox	0	0					0	0	0	0		1	0	0	0	0	0	0	0	0	2		0	bar	0								0
 Necromancer Item				necr	clas		0	0					0	0	0	0		1	0	0	0	0	0	0	0	0	2		0	nec	0								0
 Paladin Item				pala	clas		0	0					0	0	0	0		1	0	0	0	0	0	0	0	0	2		0	pal	0								0
-Sorceress Item				sorc	clas		0	0					0	0	0	0		1	0	0	0	0	0	0	0	0	2		0	sor	0								0
-Assassin Item				assn	clas		0	0					0	0	0	0		1	0	0	0	0	0	0	0	0	2		0	ass	0								0
+Sorceress Item				sorc	clas	sbox	0	0					0	0	0	0		1	0	0	0	0	0	0	0	0	2		0	sor	0								0
+Assassin Item				assn	clas	fbox	0	0					0	0	0	0		1	0	0	0	0	0	0	0	0	2		0	ass	0								0
 Druid Item				drui	clas		0	0					0	0	0	0		1	0	0	0	0	0	0	0	0	2		0	dru	0								0
 Hand to Hand				h2h	mele	assn	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	2		0	ass	0							weap	0
 Orb				orb	mele	sorc	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	2		0	sor	0							weap	0
@@ -166,39 +166,39 @@ Amazon Helm				azhm	helm		1	1	head	head			0	0	0	0		1	0	0	0	0	6	6	6	0	2		1	ama	0	
 Amazon Helm (Sacred)				szhm	azhm	ct1a	1	1	head	head			0	0	0	0		1	0	0	0	0	4	4	4	0	2		1	ama	0							armo	0
 Amazon Shield				azsd	shie		1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	2		1	ama	0							armo	0
 Amazon Shield (Sacred)				sasz	azsd	ct1a	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	2		1	ama	0							armo	0
-Assassin Naginata				nagi	mele		1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	2		0	ass	0							weap	0
+Assassin Naginata				nagi	mele	assn	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	2		0	ass	0							weap	0
 Assassin Naginata (Sacred)				snag	nagi	ct2w	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	2		0	ass	0							weap	0
 Assassin Shield				ishd	shie		1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	2		1	ass	0							armo	0
 Assassin Shield (Sacred)				sisd	ishd	ct1a	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	2		1	ass	0							armo	0
-Barbarian Axe				baxe	axe		1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	2		0	bar	0							weap	0
+Barbarian Axe				baxe	axe	barb	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	2		0	bar	0							weap	0
 Barbarian Axe (Sacred)				sbax	baxe	ct1w	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	2		0	bar	0							weap	0
-Barbarian Shield				basd	shie		1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	2		1	bar	0							armo	0
+Barbarian Shield				basd	shie	barb	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	2		1	bar	0							armo	0
 Barbarian Shield (Sacred)				saba	basd	ct1a	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	2		1	bar	0							armo	0
-Barbarian Sword				bswd	swor		1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	2		0	bar	0							weap	0
+Barbarian Sword				bswd	swor	barb	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	2		0	bar	0							weap	0
 Barbarian Sword (Sacred)				sbsd	bswd	ct1w	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	2		0	bar	0							weap	0
-Druid Bow				dbow	bow		0	1	rarm	larm	bowq		0	0	0	0		1	0	0	0	0	6	6	6	1	2		0	dru	0							weap	0
+Druid Bow				dbow	bow	dbox	0	1	rarm	larm	bowq		0	0	0	0		1	0	0	0	0	6	6	6	1	2		0	dru	0							weap	0
 Druid Bow (Sacred)				sdbw	dbow	ct2w	0	1	rarm	larm	bowq		0	0	0	0		1	0	0	0	0	6	6	6	1	2		0	dru	0							weap	0
-Druid Staff				dstf	staf		1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	2		0	dru	0							weap	0
+Druid Staff				dstf	staf	dbox	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	2		0	dru	0							weap	0
 Druid Staff (Sacred)				sdst	dstf	ct2w	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	2		0	dru	0							weap	0
-Necromancer Knife				nknf	knif		1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	2		0	nec	0							weap	0
+Necromancer Knife				nknf	knif	nbox	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	2		0	nec	0							weap	0
 Necromancer Knife (Sacred)				snkf	nknf	ct1w	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	2		0	nec	0							weap	0
-Necromancer Scythe				nscy	scyh		1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	2		0	nec	0							weap	0
+Necromancer Scythe				nscy	scyh	nbox	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	2		0	nec	0							weap	0
 Necromancer Scythe (Sacred)				snsy	nscy	ct2w	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	2		0	nec	0							weap	0
-Necromancer Staff				nstf	staf		1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	2		0	nec	0							weap	0
+Necromancer Staff				nstf	staf	nbox	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	2		0	nec	0							weap	0
 Necromancer Staff (Sacred)				snst	nstf	ct2w	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	2		0	nec	0							weap	0
-Necromancer Xbow				nxbw	xbow		1	1	rarm	larm	xboq		0	0	0	0		1	0	0	0	0	6	6	6	0	2		0	nec	0							weap	0
+Necromancer Xbow				nxbw	xbow	nbox	1	1	rarm	larm	xboq		0	0	0	0		1	0	0	0	0	6	6	6	0	2		0	nec	0							weap	0
 Necromancer Xbow (Sacred)				snxb	nxbw	ct2w	1	1	rarm	larm	xboq		0	0	0	0		1	0	0	0	0	6	6	6	0	2		0	nec	0							weap	0
-Paladin Club				pclb	club		1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	2		0	pal	0							weap	0
+Paladin Club				pclb	club	pbox	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	2		0	pal	0							weap	0
 Paladin Club (Sacred)				spcb	pclb	ct1w	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	2		0	pal	0							weap	0
-Paladin Hammer				pham	hamm		1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	2		0	pal	0							weap	0
+Paladin Hammer				pham	hamm	pbox	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	2		0	pal	0							weap	0
 Paladin Hammer (Sacred)				sphm	pham	ct2w	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	2		0	pal	0							weap	0
 Paladin Helm				pzhm	helm		1	1	head	head			0	0	0	0		1	0	0	0	0	4	4	4	0	2		1	pal	0							armo	0
 Paladin Helm (Sacred)				sphz	pzhm	ct1a	1	1	head	head			0	0	0	0		1	0	0	0	0	4	4	4	0	2		1	pal	0							armo	0
-Paladin Mace				pmac	mace		1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	2		0	pal	0							weap	0
+Paladin Mace				pmac	mace	pbox	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	2		0	pal	0							weap	0
 Paladin Mace (Sacred)				spmc	pmac	ct1w	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	2		0	pal	0							weap	0
-Paladin Spear				pspe	spea		1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	2		0	pal	0							weap	0
+Paladin Spear				pspe	spea	pbox	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	2		0	pal	0							weap	0
 Paladin Spear (Sacred)				spsp	pspe	ct2w	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	2		0	pal	0							weap	0
-Sorceress Crystal Sword				scrd	mele		1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	3		0	sor	0							weap	0
+Sorceress Crystal Sword				scrd	mele	sbox	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	3		0	sor	0							weap	0
 Sorceress Crystal Sword (Sacred)				sscd	scrd	ct1w	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	3		0	sor	0							weap	0
 Sorceress Torso				stor	tors		1	1	tors	tors			0	0	0	0		1	0	0	0	0	6	6	6	0	2		1	sor	0							armo	0
 Sorceress Torso (Sacred)				sstr	stor	ct2a	1	1	tors	tors			0	0	0	0		1	0	0	0	0	6	6	6	0	2		1	sor	0							armo	0
@@ -233,3 +233,12 @@ Mass Disenchant	for arcane crystals/shards			dcht			0	0					0	0	0	0			0	0	0	0	0	
 Sacred Group	for learning signets			ssgl			0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
 Unique Mystic orb	cube reagent			asa#			0	0					0	0	0	0			1	0	0	0	0	0	0	0	3		0		0							misc	0
 Mystic Sword	quest			####	mele		1	1	rarm				0	0	0	0		1	0	0	0	0	0	0	0	0	0		0		0							weap	0
+Druid Gift Box				dbox	fbox		0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
+Necro Gift Box				nbox	fbox		0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
+Pala Gift Box				pbox	fbox		0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
+Sorc Gift Box				sbox	fbox		0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
+Elemental Rune				xrun	sock	gem	0	0					0	0	0	0			1	0	1	0	0	0	0	0	3		0		0							misc	0
+SpecialBox				fbox			0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
+PhysicalBox				phbx			0	0					0	0	0	0	1	1	0	0	0	0	0	0	0	0	3		0		0								0
+Portable Shrine				prsh	thng		0	0					0	0	0	0			1	0	0	0	0	0	0	0	3		0		0							misc	0
+Active Shrine (10 Charges)				sh10	prsh		0	0					0	0	0	0			1	0	0	0	0	0	0	0	3		0		0							misc	0

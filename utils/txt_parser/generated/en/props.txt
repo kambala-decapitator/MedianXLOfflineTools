@@ -367,7 +367,7 @@
 424	2	2						Trial of Blood completed!	Trial of Blood completed!		3	16	0					black_4
 425	2	2						Trial of Contrition completed!	Trial of Contrition completed!		3	18	0					black_5
 426	2	2						\orange;Well Done!\red;	\yellow;You have reached the gambling limit. Please reset your Trader's Chest!\blue;		3	1	0					black_6
-427	2	2						\orange;Congratulations!\blue;	\red;&gt;&gt; Do not use at level 120 &lt;&lt;\blue;		3	1	0					black_7
+427	2	2						\orange;Congratulations!\blue;	\red;&gt;&gt; UNEQUIP THIS ITEM BEFORE REACHING LEVEL 120 &lt;&lt;\blue;		3	1	0					black_7
 429	0	8						Damage Reduction to Pact of Blood	Damage Reduction to Pact of Blood		4	18	1					passive_rejuv_dr
 430	0	8						to All Skills when using an Apple	to All Skills when using an Apple		1	50	1					skill_paganheart_synergy
 431	50	9						Bonus to Poison Skill Duration	Bonus to Poison Skill Duration		4	149	1					skill_poison_dur
@@ -399,7 +399,7 @@
 474	0	8						Unlocks your Black Road Skill	Unlocks your Black Road Skill		3	113	0					learn_blackroad
 475	0	1						Druid Morph	Druid Morph		3	2	0					item_desc_druidmorph
 476	0	1						Level 1 Demon Blood Aura when Equipped	Level 1 Demon Blood Aura when Equipped		3	159	0					item_desc_dbaura
-477	1	4						\red;&gt;&gt; Do not use at level 120 &lt;&lt;\blue;	Increased Difficulty		3	1	0					item_desc_hardaura
+477	1	4						\red;&gt;&gt; UNEQUIP THIS ITEM BEFORE REACHING LEVEL 120 &lt;&lt;\blue;	Increased Difficulty		3	1	0					item_desc_hardaura
 478	0	1						\purple;and Reward, cube with a Mana Potion to lower it\nCube with a Healing Potion to Increase Difficulty	\purple;and Reward, cube with a Mana Potion to lower it\nCube with a Healing Potion to Increase Difficulty		3	159	0					item_desc_instructions
 479	0	4						Maximum Skill Level Increased by	Maximum Skill Level Increased by		3	69	2					skill_more
 480	0	5						to Vitality per Socketed Gem	to Vitality per Socketed Gem		1	75	1					item_skill_paragon
@@ -424,5 +424,5 @@
 504	0	10						to Dexterity	to Dexterity	(Based on Blessed Life Skill Level)	6	62	1					item_dexterity_perblessedlife
 505	0	10						Drain Life	Replenish Life	(Based on Character Level)	6	60	2					item_hpregen_perlevel
 506	0	1						\red;Superbeast Morph\blue;	\red;Superbeast Morph\blue;		3	159	0					desc-superbeasty
-508	0	1						\red;&gt;&gt; Do not use at level 120 &lt;&lt;\blue;	\red;Treewarden Morph\blue;		3	159	0					desc-fatasstriton
+508	0	1						\red;&gt;&gt; UNEQUIP THIS ITEM BEFORE REACHING LEVEL 120 &lt;&lt;\blue;	\red;Treewarden Morph\blue;		3	159	0					desc-fatasstriton
 509	500	10						\red;&gt;&gt; Do not use at level 120 &lt;&lt;\blue;	\red;&gt;&gt; Do not use at level 120 &lt;&lt;\blue;		3	254	0					fuck_you#

@@ -1146,7 +1146,7 @@ void MedianXLOfflineTools::aboutApp()
         + kForumThreadHtmlLinks + kHtmlLineBreak + kHtmlLineBreak
         + tr("<b>Credits:</b>"
              "<ul>"
-               "<li><a href=\"http://modsbylaz.hugelaser.com/\">BrotherLaz</a> for this awesome mod</li>"
+               "<li><a href=\"http://modsbylaz.vn.cz/\">BrotherLaz</a> for this awesome mod</li>"
                "<li><a href=\"http://www.medianxl.com/u1\">MarcoNecroX</a> for a hot extension of Median XL called <b>Ultimative</b></li>"
                "<li>grig for the Perl source of <a href=\"http://grig.vlexofree.com/\">Median XL Online Tools</a> and tips</li>"
                "<li><a href=\"http://d2mods.info/index.php?ind=reviews&op=section_view&idev=4\">Phrozen Keep File Guides</a> for tons of useful information on txt sources</li>"

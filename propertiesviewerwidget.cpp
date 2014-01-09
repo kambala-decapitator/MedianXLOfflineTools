@@ -130,7 +130,8 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
     QString runes;
     foreach (ItemInfo *socketable, item->socketablesInfo)
     {
-        if (ItemDataBase::Items()->value(socketable->itemType)->types.first() == "rune")
+        QList<QByteArray> baseTypes = ItemDataBase::Items()->value(socketable->itemType)->types;
+        if (baseTypes.first() == "rune" || baseTypes.last() == "xrun")
         {
             SocketableItemInfo *sock = ItemDataBase::Socketables()->value(socketable->itemType);
             if (sock)

@@ -1291,7 +1291,7 @@
 1289	\yellow;Black Death\blue;
 1290	\yellow;Wraithlord\blue;
 1291	\yellow;Trouper\blue;
-1292	\yellow;Grubber
+1292	\yellow;Grubber \blue;
 1293	\yellow;Fetish Sniper\blue;
 1294	\yellow;Fetish Hunter\blue;
 1295	\yellow;Glooper\blue;
@@ -1773,7 +1773,7 @@
 1771	\dgrey;Nightmare
 1772	Flit
 1773	Cave Snapper
-1774	\yellow;Grubber
+1774	\yellow;Grubber \blue;
 1775	CouatlInhibitor
 1776	LandsharkInhibitor
 1777	Rainbow Hunter Inhibitor
@@ -1937,7 +1937,7 @@
 1935	\red;(     Minion of Terror     )\blue;
 1936	\purple;Ghost of Terror
 1937	Uldyssian's Ghost
-1938	\red;(                         VN_Dragon                         )
+1938	VN_Dragon1
 1939	Skeleton
 1940	\purple;(                        MarcoNecroX (Secret Boss)                        )
 1941	\orange;Punishment Turret\blue;
@@ -2104,3 +2104,37 @@
 2104	\orange;Primal Clay
 2105	\orange;Impaler Archon
 2106	\orange;Kraken Guard
+2107	Tiefling
+2108	Dragon Oath
+2109	\orange;The Void (trap)
+2110	\orange;The Void (trap)
+2111	\orange;The Void (trap)
+2112	\orange;The Void (trap)
+2113	\gold;(                   Mendeln, Apprentice of Rathma                   )
+2114	\gold;(                  Rathma, disciple of Trag'Oul                  )
+2115	\gold;(          Soul of Greed          )
+2116	\gold;(          Soul of Envy          )
+2117	\gold;(          Soul of Lust          )
+2118	\gold;(          Soul of Gluttony          )
+2119	\gold;(          Soul of Wrath          )
+2120	\gold;(          Soul of Sloth          )
+2121	RiftTrap
+2122	\orange;Skeletal Warrior
+2123	\orange;Skeletal Warrior
+2124	\orange;Shadow Warrior
+2125	Slayer
+2126	RiftTrap
+2127	\orange;Slave of Envy
+2128	\orange;Tomb Guard
+2129	RiftTrap
+2130	RiftTrap
+2131	\gold;(          Soul of Pride          )
+2132	RiftTrap
+2133	\red;Peacekeeper Trap
+2134	\gold;(          Soul of Pride          )
+2135	\orange;Darkness
+2136	RiftTrap
+2137	\orange;Darkness
+2138	\orange;Eternal Ghost
+2139	RiftTrap
+2140	RiftTrap
