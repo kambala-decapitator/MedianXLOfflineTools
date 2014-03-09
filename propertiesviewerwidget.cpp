@@ -154,12 +154,9 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
     if (itemBase->genericType == ItemTypeGeneric::Armor)
     {
         int baseDef = item->defense, totalDef = baseDef;
-        int ed =    allProps.value(ItemProperties::EnhancedDefence, foo)->value + (      allProps.value(ItemProperties::EnhancedDefenceBasedOnClvl, foo)->value * clvl) / 32;
-        //ed += item->setProps.value(ItemProperties::EnhancedDefence, foo)->value + (item->setProps.value(ItemProperties::EnhancedDefenceBasedOnClvl, foo)->value * clvl) / 32;
-        if (ed)
+        if (int ed = allProps.value(ItemProperties::EnhancedDefence, foo)->value + (allProps.value(ItemProperties::EnhancedDefenceBasedOnClvl, foo)->value * clvl) / 32)
             totalDef = (totalDef * (100 + ed)) / 100;
-        totalDef +=       allProps.value(ItemProperties::Defence, foo)->value + (      allProps.value(ItemProperties::DefenceBasedOnClvl, foo)->value * clvl) / 32;
-        //totalDef += item->setProps.value(ItemProperties::Defence, foo)->value + (item->setProps.value(ItemProperties::DefenceBasedOnClvl, foo)->value * clvl) / 32;
+        totalDef += allProps.value(ItemProperties::Defence, foo)->value + (allProps.value(ItemProperties::DefenceBasedOnClvl, foo)->value * clvl) / 32;
         if (totalDef < 0)
             totalDef = 0;
 
@@ -174,7 +171,6 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
     {
         // TODO: [later] use lambda to calculate damage
         int ed = allProps.value(ItemProperties::EnhancedDamage, foo)->value;
-
         int minDmgTotal = allProps.value(ItemProperties::MinimumDamage, foo)->value, minDmgSecondary = allProps.value(ItemProperties::MinimumDamageSecondary, foo)->value;
         PropertiesDisplayManager::SecondaryDamageUsage u = PropertiesDisplayManager::secondaryDamageUsage(ItemProperties::MinimumDamageSecondary, minDmgSecondary, allProps, item);
         if (u != PropertiesDisplayManager::Unused)
@@ -193,6 +189,11 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
         if (itemBase->minThrowDmg && itemBase->maxThrowDmg)
         {
             int minDmg = itemBase->minThrowDmg, maxDmg = itemBase->maxThrowDmg;
+            if (item->isEthereal)
+            {
+                minDmg *= 1.5;
+                maxDmg *= 1.5;
+            }
             if (ed)
             {
                 minDmg = (minDmg * (100 + ed)) / 100;
@@ -207,6 +208,11 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
         if (itemBase->min1hDmg && itemBase->max1hDmg)
         {
             int minDmg = itemBase->min1hDmg, maxDmg = itemBase->max1hDmg;
+            if (item->isEthereal)
+            {
+                minDmg *= 1.5;
+                maxDmg *= 1.5;
+            }
             if (ed)
             {
                 minDmg = (minDmg * (100 + ed)) / 100;
@@ -221,6 +227,11 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
         if (itemBase->min2hDmg && itemBase->max2hDmg)
         {
             int minDmg = itemBase->min2hDmg, maxDmg = itemBase->max2hDmg;
+            if (item->isEthereal)
+            {
+                minDmg *= 1.5;
+                maxDmg *= 1.5;
+            }
             if (ed)
             {
                 minDmg = (minDmg * (100 + ed)) / 100;

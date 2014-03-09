@@ -1,10 +1,11 @@
 0.4.1.3:
 - eth dmg/def
-- remove reanimate as MO
-- saving first plugy page (on the forum)
+- remove reanimate as MO / ed mo
+- saving first plugy page (on the forum) http://www.medianxl.com/t83p260-median-xl-offline-tools-v0412#77406
 - disable disenchanting quest items in Ultimative
-- personalize in game and edit (stats may change)
+- personalize in game and edit (stats may change), check Cube
 - update skill icons
+- add scripts/explanation how to disable loading last used character http://www.medianxl.com/t83p300-median-xl-offline-tools-v0412#106906
 
 future versions:
 - character planner

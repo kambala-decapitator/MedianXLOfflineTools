@@ -70,8 +70,7 @@ QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item)
     if (itemBase->genericType == Enums::ItemTypeGeneric::Armor)
     {
         int baseDef = item->defense, totalDef = baseDef;
-        int ed = allProps.value(Enums::ItemProperties::EnhancedDefence, foo)->value + (allProps.value(Enums::ItemProperties::EnhancedDefenceBasedOnClvl, foo)->value * clvl) / 32;
-        if (ed)
+        if (int ed = allProps.value(Enums::ItemProperties::EnhancedDefence, foo)->value + (allProps.value(Enums::ItemProperties::EnhancedDefenceBasedOnClvl, foo)->value * clvl) / 32)
             totalDef = (totalDef * (100 + ed)) / 100;
         totalDef += allProps.value(Enums::ItemProperties::Defence, foo)->value + (allProps.value(Enums::ItemProperties::DefenceBasedOnClvl, foo)->value * clvl) / 32;
         if (totalDef < 0)
@@ -89,12 +88,17 @@ QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item)
         int ed = allProps.value(Enums::ItemProperties::EnhancedDamage, foo)->value;
         int minDmgTotal = allProps.value(Enums::ItemProperties::MinimumDamage, foo)->value + allProps.value(Enums::ItemProperties::MinimumDamageSecondary, foo)->value;
         int maxDmgTotal = allProps.value(Enums::ItemProperties::MaximumDamage, foo)->value + allProps.value(Enums::ItemProperties::MaximumDamageSecondary, foo)->value +
-                          (allProps.value(Enums::ItemProperties::MaximumDamageBasedOnClvl, foo)->value * clvl) / 32;
+                         (allProps.value(Enums::ItemProperties::MaximumDamageBasedOnClvl, foo)->value * clvl) / 32;
         QString damageFormat = tr("%1 to %2", "min-max damage");
 
         if (itemBase->minThrowDmg && itemBase->maxThrowDmg)
         {
             int minDmg = itemBase->minThrowDmg, maxDmg = itemBase->maxThrowDmg;
+            if (item->isEthereal)
+            {
+                minDmg *= 1.5;
+                maxDmg *= 1.5;
+            }
             if (ed)
             {
                 minDmg = (minDmg * (100 + ed)) / 100;
@@ -109,6 +113,11 @@ QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item)
         if (itemBase->min1hDmg && itemBase->max1hDmg)
         {
             int minDmg = itemBase->min1hDmg, maxDmg = itemBase->max1hDmg;
+            if (item->isEthereal)
+            {
+                minDmg *= 1.5;
+                maxDmg *= 1.5;
+            }
             if (ed)
             {
                 minDmg = (minDmg * (100 + ed)) / 100;
@@ -123,6 +132,11 @@ QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item)
         if (itemBase->min2hDmg && itemBase->max2hDmg)
         {
             int minDmg = itemBase->min2hDmg, maxDmg = itemBase->max2hDmg;
+            if (item->isEthereal)
+            {
+                minDmg *= 1.5;
+                maxDmg *= 1.5;
+            }
             if (ed)
             {
                 minDmg = (minDmg * (100 + ed)) / 100;
