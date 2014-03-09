@@ -247,6 +247,9 @@ QByteArray MedianXLOfflineTools::getOsInfo()
         case PRODUCT_ULTIMATE_N:
             os << "Ultimate N";
             break;
+        case PRODUCT_ULTIMATE_E:
+            os << "Ultimate E";
+            break;
         case PRODUCT_PROFESSIONAL:
             os << "Professional";
             break;
@@ -311,6 +314,9 @@ QByteArray MedianXLOfflineTools::getOsInfo()
             break;
         case PRODUCT_CORE_SINGLELANGUAGE:
             os << "Single Language";
+            break;
+        case PRODUCT_EMBEDDED:
+            os << "Embedded";
             break;
         default:
             os << "dwType " << dwType;
