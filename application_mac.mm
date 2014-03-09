@@ -4,7 +4,7 @@
 #include <QFileOpenEvent>
 #include <QTimer>
 
-#if MAC_OS_X_VERSION_MAX_ALLOWED < 1070
+#if MAC_OS_X_VERSION_MAX_ALLOWED < MAC_OS_X_VERSION_10_7
 @interface NSWindow (RestorationHackForOldSDKs)
 - (void)setRestorationClass:(Class)restorationClass;
 - (void)setRestorable:(BOOL)flag;
@@ -50,7 +50,7 @@ void Application::disableLionWindowRestoration()
     NSWindow *window = [reinterpret_cast<NSView *>(_mainWindow->winId()) window];
     if ([window respondsToSelector:@selector(setRestorationClass:)])
     {
-        [window setRestorationClass:nil];
+        [window setRestorationClass:Nil];
         [window setRestorable:NO];
         [window invalidateRestorableState];
     }
