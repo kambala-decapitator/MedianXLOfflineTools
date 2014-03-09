@@ -1,12 +1,12 @@
 #!/usr/bin/env perl
 
 # original script copyright (C) grig 2011
-# improvements and modifications for Median XL Offline Tools copyright (C) kambala 2011-2013
+# improvements and modifications for Median XL Offline Tools copyright (C) kambala 2011-2014
 
 use strict;
 use warnings;
 use File::Path qw/make_path/;
-# use Data::Dumper;
+use Data::Dumper;
 
 my $locale = $ARGV[0] // 'en', my $tbl;
 &readTbl($_) for ('string', 'expansionstring', 'patchstring'); # do not change order of the files!
@@ -274,6 +274,8 @@ for my $miscItemType (keys %$miscTypes)
             $mos->{$_}->{value} = $cubeMo->{minValue};
             $mos->{$_}->{paramAdd} = $cubeMo->{maxValue} if defined $cubeMo->{param};
             $mos->{$_}->{paramShift} = $cubeMo->{param};
+            # not used in the program, just to simplify reading mo.txt
+            $mos->{$_}->{text} = $mos->{$_}->{statId} == 97 ? "oskill" : $itemProperties->[$mos->{$_}->{statId}]->{descPositive};
             last
         }
     }
@@ -470,7 +472,7 @@ for my $key (keys %$rw)
 close $out;
 
 my @moIds = sort keys %$mos;
-my @moKeys = qw/code statId value paramAdd paramShift/;
+my @moKeys = qw/code statId value paramAdd paramShift text/;
 open $out, ">", "generated/mo.txt";
 print $out "#id\t".join("\t", @moKeys)."\n";
 for my $id (@moIds)

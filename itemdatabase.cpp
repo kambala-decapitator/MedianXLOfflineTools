@@ -333,7 +333,10 @@ QHash<uint, MysticOrb *> *ItemDataBase::MysticOrbs()
                 mo->statIds << statId.toUShort();
             mo->value = data.at(3).toShort();
             if (data.size() > 4)
-                mo->param = data.at(4).toUShort() + (data.at(5).toUShort() << 6);
+            {
+                quint16 param = data.at(5).toUShort();
+                mo->param = isCtcProperty(mo->statIds.at(0)) ? (data.at(4).toUShort() + (param << 6)) : param;
+            }
             allMysticOrbs[data.at(0).toUInt()] = mo;
         }
     }

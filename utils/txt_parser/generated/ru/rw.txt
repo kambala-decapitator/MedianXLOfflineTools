@@ -1,567 +1,567 @@
 #itype1	itype2	itype3	itype4	itype5	itype6	name	rune1	rune2
-tors						Сердце Дракона	r41		
-dstf						Самайн	r12		
-nknf						Зэйд	r36		
-armo						Камнеслово!	9$a		
-tors						Единство	r52		
+orb						Цирцея	r11		
+weap						Камнеслово!	g$e		
+weap						Триединство	r53		
+armo						Камнеслово!	gpy		
+boot						Мегалит	r40		
+staf						Сумманус	r19		
+weap						Камнеслово!	g$c		
+head						Дракон	r51		
+scep						Йокулмордер	r36		
+glov						Дрекавац	r51		
+pelt						Натха	r28		
+shie	shld					Камнеслово!	gcw		
+helm						Мухомор	r55		
+staf						Aes Dana	r36		
+armo						Камнеслово!	gpv		
+swor						Минное Поле	r57	r57	
+xbow						Оптоволокно	r61	r61	
+circ						Wintermute	r53		
+azsd						Элои	r42		
+taxe						Драконье Семя	r58	r58	
+stor						Тщеславие	r47		
+staf						Эльф	r44		
 weap						Камнеслово!	gfw		
+bow						Никта	r26		
+weap						Камнеслово!	gsr		
+shie	shld					Камнеслово!	9$c		
+stor						Оракул	r40		
+xbow						Питон	r16		
+pclb	pmac	pham				Джихад	r05		
+mace						Арахнофилия	r60	r60	
+dbow						Таркек	r38		
+armo						Камнеслово!	7$d		
+weap						Камнеслово!	5$d		
 h2h						Град	r48		
-helm						Алхимия	r26		
-dstf						Линкос	r29		
-2hbx						Вольфсангель	r56		
-scrd						Грация	r36		
-staf						Эрилаз	r51		
+shie	shld					Камнеслово!	glw		
+armo						Камнеслово!	gcy		
+bswd	baxe					Лахму	r49		
+weap						Рассвет	r01		
+weap						Камнеслово!	gcv		
+weap						Акула	r07		
+shie	shld					Камнеслово!	5$b		
+staf						Господи, помилуй	r51	r51	
+scyh						Зерно Конфликта	r49		
 shie	shld					Камнеслово!	glg		
-weap						Камнеслово!	gpv		
-shie	shld					Камнеслово!	gpy		
-stor						Черный Древень	r11		
-weap						Камнеслово!	skc		
-aspe						Исчезновение	r51		
-tkni						Патриот	r02		
-tkni						Наяда	r49		
-h2h						Джокер	r55		
-azsd						Никс	r48		
+pelt						Эгипан	r09		
+swor						Урада	r46		
+circ						Сфинкс	r11		
+armo						Камнеслово!	gsb		
+armo						Камнеслово!	gsw		
 wand						Semhazai	r51		
 glov						Икар	r49		
-weap						Камнеслово!	gsv		
-armo						Камнеслово!	9$c		
-bow						Баланс	r22		
-tors						Священный Свет	r06		
-armo						Камнеслово!	yo2		
-tors						Телема	r19		
-nstf						Али	r38		
-nknf						Рух	r51		
-bow						Дыхание Мертвеца	r62	r62	
-glov						Айвас	r33		
-scrd						Темный Исход	r62	r62	
-boot						Вне Закона	r14		
-shie	shld					Камнеслово!	gfw		
-tkni						Мириады	r40		
-abow						Сисейлия	r56		
-orb						Каббала	r36		
-glov						Воздаяние	r57	r57	
-shie	shld					Камнеслово!	gpb		
-scyh						Атлакамани	r37		
-armo						Камнеслово!	7$a		
-armo						Камнеслово!	9$e		
-weap						Камнеслово!	gpy		
-shie	shld					Камнеслово!	gpv		
-bow						Тифаон	r52		
-stor						Курандера	r29		
-weap						Энио	r14		
-helm						Ра	r17		
-helm	shld					Шах и Мат	r55	r55	
-h2h						Совершенство	r59	r59	
-pzhm						Поход	r37		
-orb						Гестия	r50		
-tkni						Летающая Змея	r10		
-weap						Камнеслово!	skf		
-shie	shld					Камнеслово!	skc		
-armo						Камнеслово!	glg		
-armo						Камнеслово!	gfy		
-dbow						Раудна	r51		
-nagi						Кровавый Танцор	r59	r59	
-dstf						Локсиан	r52		
-tors						Мираж	r33		
-shie	shld					Камнеслово!	7$e		
-staf						Хадад	r11		
-armo						Камнеслово!	gpy		
-armo						Камнеслово!	gcw		
-shld						Гейс	r04		
-armo						Камнеслово!	gpg		
-pclb	pmac	pham				Орифламма	r51		
-armo						Камнеслово!	gsy		
-armo						Камнеслово!	glw		
-shie	shld					Камнеслово!	gsy		
-shie	shld					Камнеслово!	gcw		
-circ						Благословение Ратмы	r62	r62	
-ashd						Мироносица	r55		
-weap						Камнеслово!	9$d		
-dstf						Лаадан	r37		
-pelt						Нигра	r56		
-wand						Связанный насмерть	r39		
-tkni						Квант	r30		
-shie	shld					Камнеслово!	yo2		
-mace						Демхе	r33		
-bswd	baxe					Овен	r10		
-nscy						Лемурия	r20		
-glov						Иблис	r04		
-shie	shld					Камнеслово!	gsb		
-boot						Эпицентр	r06		
-tors						(Median XL - 6 лет)\nПобеда	r13		
-weap	armo					Секретный Бонус Драгоценного Камня!	jew		
-weap						Камнеслово!	5$d		
-armo						Камнеслово!	gfr		
-shie	shld					Камнеслово!	gfy		
-abow						Столкновение Миров	r43		
-shie	shld					Камнеслово!	g$c		
-nscy						Черная Кошка	r02		
-head						Куимбанда	r47		
-armo						Камнеслово!	7$d		
-azsd						Элои	r42		
-phlm						Альгиз	r09		
-weap						Адрамелех	r54		
-pspe						Асы	r12		
-bswd	baxe					Скарн	r40		
-ishd						Дар Аль-Харб	r37		
-xbow						Участь	r41		
-tors						Мятежник	r01		
-azsd						Эос	r54		
-weap						Камнеслово!	g$e		
-aspe						Русалка	r46		
-taxe						Фенек	r20		
-armo						Камнеслово!	g$c		
-pclb	pmac	pham				Такфир	r34		
-circ						Уленшпигель	r38		
-pelt						Благодать Природы	r60	r60	
-armo						Камнеслово!	gsr		
-dstf						Германубис	r56		
-boot						Гинфакси	r22		
-phlm						Насреддин	r19		
-shie	shld					Камнеслово!	gcr		
-tkni						Мертвая Звезда	r60	r60	
-basd						Хуракан	r44		
-tors						Палиак	r10		
-shie	shld					Камнеслово!	7$a		
-scep						Погибель	r17		
-tkni						Даджаль	r20		
-h2h						Судья	r27		
-dbow						Амфибия	r62	r62	
-shie	shld					Камнеслово!	g$d		
-pclb	pmac	pham				Интифада	r15		
-h2h						Коронзон	r34		
-aspe						Санкара	r34		
-abow						Манта	r51		
-armo						Камнеслово!	5$c		
-phlm						Водзивоб	r53		
-basd						Тонатиу	r55		
-nknf						Лоа	r05		
-taxe						Драконье Семя	r58	r58	
-glov	boot					Жулик	r54	r54	
-shie	shld					Камнеслово!	5$c		
-pelt						Эгипан	r09		
-pzhm						Сурья	r46		
-nxbw						Тигель	r46		
-weap						Камнеслово!	9$b		
-mace						Арахнофилия	r60	r60	
-nknf						Порез	r58	r58	
-shie	shld					Камнеслово!	5$a		
-head						Куб	r16		
-taxe						Раптор	r40		
-stor						Кассильда	r54		
-wand						Нгози	r41		
-shie	shld					Камнеслово!	gfb		
-shie	shld					Камнеслово!	sku		
-ashd						Асмодей	r14		
-boot						Кратон	r32		
-head						Извращенный Разум	r59	r59	
-armo						Камнеслово!	g$d		
-scyh						Зерно Конфликта	r49		
-tors						Пластины Адского Огня	r57	r57	
-weap						Камнеслово!	yo5		
-shld						Аватар	r53		
-weap						Камнеслово!	5$c		
-belt						Пульсей Де-Нура	r34		
-ajav						Призрак	r56		
-taxe						Гепард	r02		
-azsd						Эдда	r15		
-stor						Тщеславие	r47		
-2hbx						Солдат Света	r61	r61	
-stor						Кундалини	r12		
-tkni						Бурлеск	r51		
-azhm						Камбион	r36		
-pelt						Сильф	r52		
-belt						Ахриман	r52		
-nscy						Ивентайд	r36		
-orb						Керы	r20		
-xbow						Аработ	r45		
-tors						Спасибо всем!\nMedian 2005-2012\nВечность	r51	r52	
-helm						Повелитель Ужаса	r35		
-weap						Пустота	r28		
-shie	shld					Камнеслово!	g$e		
-ajav						Тришула	r34		
-jave						Хастин	r55		
-nstf						Эвринома	r17		
-circ						Индиго	r56		
-shie	shld					Камнеслово!	gsv		
-taxe						Кадьяк	r55		
-nxbw						Сила Мысли	r59	r59	
-staf						Господи, помилуй	r51	r51	
-abow						Эрида	r37		
-weap						Камнеслово!	gcw		
-azhm						Шахидка	r56		
-armo						Камнеслово!	gsg		
-weap						Камнеслово!	9$a		
-basd						Рукавица	r39		
-azhm						Стата Матер	r16		
-pspe						Покровитель Хадриэля	r60	r60	
-ishd						Ямба	r23		
-ashd						Световая Шахта	r57	r57	
-abow						Ледокол	r29		
-armo						Камнеслово!	9$b		
-bow						Никта	r26		
-azhm						Маска Орлиного Рога	r59	r59	
-shie	shld					Камнеслово!	gsr		
-bswd	baxe					Лахму	r49		
-azhm						Благая Богиня	r19		
-aspe						Блеск	r58	r58	
-ashd						Святой Грааль	r28		
-scep						Путь	r30		
-shie	shld					Камнеслово!	yo4		
-weap						Камнеслово!	5$b		
-stor						Оракул	r40		
-xbow						Циклоп	r29		
-pclb	pmac	pham				Брахман	r39		
-basd						Дом Бездна	r52		
-helm						Вершина	r01		
-tors						\red;Наследие Наташи\blue;	r98	r98	
-belt						Радуга	r05		
-glov						Милость	r13		
-shie	shld					Камнеслово!	skz		
-weap						Камнеслово!	gfy		
-shie	shld					Камнеслово!	yo1		
-ajav						Сталактит	r52		
-pspe						Ягуар	r55		
-nscy						Хтон	r29		
-boot						Мегалит	r40		
-azsd						Лев	r35		
-dstf						Ложбан	r45		
-nscy						Инти	r41		
-pzhm						Боевая Ярость	r58	r58	
-armo						Камнеслово!	gcr		
-swor						Минное Поле	r57	r57	
-weap						Камнеслово!	glg		
-bswd	baxe					Анак	r41		
-shie	shld					Камнеслово!	9$b		
-bswd	baxe					Гильгамеш	r55		
-armo						Камнеслово!	yo3		
-pspe						Решеф	r32		
-weap						Камнеслово!	g$d		
-azsd						Сердце Сковос	r58	r58	
-wand						Криптия	r55		
-bswd	baxe					Савитар	r37		
-staf						Сумманус	r19		
-armo						Камнеслово!	gzv		
-aspe						Фрейбаг	r56		
-helm						Мухомор	r55		
-armo						Камнеслово!	5$d		
-scrd						Взмах Звезд	r55		
-xbow						Оптоволокно	r61	r61	
-circ						Сфинкс	r11		
-axe						Саблезубый	r48		
-scep						Галдр	r51		
-shie	shld					Камнеслово!	gcg		
-nscy						Мантра	r13		
-dbow						Цернуннос	r44		
-boot						Ветровой Гонец	r58	r58	
-armo						Камнеслово!	gfv		
-shie	shld					Камнеслово!	7$d		
-weap						Камнеслово!	7$e		
-orb						Хелгрота	r60	r60	
-shld						Богиня	r30		
-armo						Камнеслово!	gcy		
-nscy						Зиинч	r56		
-weap						Камнеслово!	gfv		
-bswd	baxe					Громовержец	r32		
-weap						Камнеслово!	gsr		
-armo						Камнеслово!	gpw		
-orb						Цирцея	r11		
-shie	shld					Камнеслово!	gfr		
-weap						Камнеслово!	gpb		
-shie	shld					Камнеслово!	gcy		
-shie	shld					Камнеслово!	g$b		
-head						Колдун	r25		
-armo						Камнеслово!	gfb		
-basd						Энмеркар	r17		
-shld						Фараон	r12		
-weap						Камнеслово!	g$a		
-tkni						Тау	r55		
-shld						Покровитель Халима	r60	r60	
-weap						Рассвет	r01		
-scep						Йокулмордер	r36		
 staf						Эхнатон	r27		
-scep						Пророчество	r06		
-weap						Камнеслово!	skl		
-weap						Камнеслово!	gsw		
-shie	shld					Камнеслово!	9$d		
-pelt						Роща	r45		
-ashd						Зогар	r33		
-armo						Камнеслово!	gfw		
-weap						Камнеслово!	9$c		
-dbow						Панихида	r56		
-weap						Камнеслово!	g$c		
-shie	shld					Камнеслово!	7$b		
-helm						Пушечное Ядро	r08		
-azsd						Эа	r52		
-circ						Wintermute	r53		
-weap						Камнеслово!	gpg		
-shie	shld					Камнеслово!	gpr		
-belt						Нерон	r55		
-belt						Плавка	r23		
-scrd						Инанна	r12		
-armo						Камнеслово!	skl		
-h2h						Карабосс	r15		
+belt						Пульсей Де-Нура	r34		
 phlm						Шоковая Сила	r61	r61	
-orb						Прекраснейшей	r51		
-axe						Прикосновение Мидаса	r59	r59	
+dstf						Германубис	r56		
+tkni						Мертвая Звезда	r60	r60	
+weap						Камнеслово!	skf		
+weap						Адрамелех	r54		
+shie	shld					Камнеслово!	skz		
+nxbw						Тигель	r46		
+armo						Камнеслово!	5$a		
+wand						Упырь	r20		
+ishd						Лигея	r28		
+shie	shld					Камнеслово!	7$e		
+bswd	baxe					Анак	r41		
+armo						Камнеслово!	9$e		
+tkni						Патриот	r02		
 aspe						Титаномахия	r24		
-armo						Камнеслово!	7$e		
-glov						Гул	r16		
-xbow						Надгробие	r55		
 weap						Камнеслово!	glr		
-scrd						Шаула	r52		
-ishd						Теневые Шаги	r59	r59	
-nstf						Ладон	r25		
-glov						Буран	r54		
-stor						Венефика	r53		
-pspe						Нехуштан	r27		
-ashd						Асклепейон	r46		
-nxbw						Рея	r56		
+basd						Тонатиу	r55		
+xbow						Участь	r41		
+armo						Камнеслово!	9$b		
+dbow						Лесное Свечение	r33		
+pzhm						Малакбел	r53		
+weap						Камнеслово!	gpv		
+shie	shld					Камнеслово!	glr		
+scep						Галдр	r51		
+scyh						Эндор	r31		
+ashd						Мироносица	r55		
+ashd						Святой Грааль	r28		
+armo						Камнеслово!	5$e		
+armo						Камнеслово!	skl		
+tors						Мираж	r33		
+armo						Камнеслово!	gfb		
+scep						Погибель	r17		
+orb						Саурон	r55		
+shie	shld					Камнеслово!	gpr		
+tors						Эраван	r48		
+abow						Аспект	r13		
+weap						Камнеслово!	gcb		
+bow						Звездная Пыль	r55		
+weap						Камнеслово!	gsw		
+weap						Камнеслово!	gsv		
+stor						Астарта	r34		
 ishd						Выжженная Земля	r51		
+weap						Азраэль	r21		
+shie	shld					Камнеслово!	g$e		
+tors						Собор	r25		
+azhm						Аматэрасу	r24		
+weap						Камнеслово!	9$b		
+bswd	baxe					Скарн	r40		
+ishd						Теневые Шаги	r59	r59	
+ishd						Раав	r19		
+abow						Манта	r51		
+pspe						Божественный Царь	r52		
+nscy						Мантра	r13		
+weap						Камнеслово!	g$a		
+weap						Камнеслово!	5$a		
+armo						Камнеслово!	gpw		
+shld						Гейс	r04		
+tkni						Тау	r55		
+boot						Исполин	r48		
+ashd						Асмодей	r14		
+shie	shld					Камнеслово!	7$b		
 nstf						Стикс	r56		
-shie	shld					Камнеслово!	glb		
-staf						Эльф	r44		
-shie	shld					Камнеслово!	gfv		
-aspe						Аегина	r11		
-weap						Камнеслово!	gfr		
-weap						Камнеслово!	gfg		
-armo						Камнеслово!	gfg		
+armo						Камнеслово!	gzv		
+shie	shld					Камнеслово!	gfb		
+orb						Хелгрота	r60	r60	
+pelt						Роща	r45		
+shie	shld					Камнеслово!	gpw		
+nscy						Глаз Бартука	r58	r58	
+xbow						Таммуз	r04		
+pelt						Ли-Нежа	r18		
+h2h						Коронзон	r34		
+tors						Телема	r19		
+shie	shld					Камнеслово!	7$c		
+belt						Радуга	r05		
+pelt						Норма	r38		
+h2h						Совершенство	r59	r59	
+staf						Рука Мороза	r62	r62	
+weap						Камнеслово!	7$a		
+wand						Нгози	r41		
+shie	shld					Камнеслово!	gsv		
+aspe						Блеск	r58	r58	
+armo						Камнеслово!	9$d		
+nstf						Дагда	r49		
+boot						Ветровой Гонец	r58	r58	
+nscy						Левиафан	r51		
+armo						Камнеслово!	gfr		
+stor						Курандера	r29		
+shie	shld					Камнеслово!	gly		
+armo						Камнеслово!	glg		
+h2h						Бунт	r22		
 weap						Камнеслово!	5$e		
 spea						Бессимптомный	r60	r60	
-weap						Камнеслово!	g$b		
-dstf						Авгур	r20		
-dbow						Лесное Свечение	r33		
-pspe						Божественный Царь	r52		
-armo						Камнеслово!	7$c		
-dstf						Флюгер Фиакла-Гира	r61	r61	
-shie	shld					Камнеслово!	gfg		
-armo						Камнеслово!	yo1		
+xbow						Циклоп	r29		
+weap						Камнеслово!	7$d		
+shie	shld					Камнеслово!	skc		
+wand						Роковой Страж	r59	r59	
+weap						Энио	r14		
+xbow						Надгробие	r55		
+armo						Камнеслово!	gsv		
+bswd	baxe					Эссус	r22		
+armo						Камнеслово!	g$c		
+jave						Хастата	r20		
+armo						Камнеслово!	5$d		
 knif						Королевская Кровь	r26		
-weap						Камнеслово!	yo4		
-h2h						Ноема	r52		
-staf						Aes Dana	r36		
-pclb	pmac	pham				Щит и Друг	r55		
-weap						Камнеслово!	glb		
-armo						Камнеслово!	gsw		
-glov						Кали	r21		
-staf						Рука Мороза	r62	r62	
-shie	shld					Камнеслово!	5$e		
-taxe						Громовое Облако	r51		
-weap						Акула	r07		
-h2h						Изверг	r17		
-weap						Камнеслово!	7$b		
-armo						Камнеслово!	g$e		
-azhm						Единорог	r52		
-xbow						Тартар	r44		
-nxbw						Джинн	r08		
-xbow						Таммуз	r04		
-shld						Кочевник	r20		
-shie	shld					Камнеслово!	glw		
-nagi						Онивака	r56		
-head						Lorelei	r38		
-weap						Камнеслово!	gcb		
-spea						Мирмидонец	r29		
-knif						Крыса	r37		
-hamm						Нейрогенезис	r61	r61	
-bswd	baxe					Кахлесс	r51		
-staf						Лесальф	r30		
-weap						Камнеслово!	gcv		
-armo						Камнеслово!	skz		
-pelt						Норма	r38		
-nxbw						Эфир	r31		
-glov						Скальд	r41		
-dbow						Рысь	r27		
-belt						Дьяус	r50		
-shie	shld					Камнеслово!	gpg		
-armo						Камнеслово!	glr		
-stor						Деметра	r23		
-nscy						Глаз Бартука	r58	r58	
+tors						(Median XL - 6 лет)\nПобеда	r13		
+h2h						Карабосс	r15		
+h2h						Анархия	r46		
+ashd						Асклепейон	r46		
+belt						Лисра	r57	r57	
+nknf						Мкодос	r56		
+shie	shld					Камнеслово!	yo4		
+armo						Камнеслово!	g$a		
+scep						Дурга	r49		
+tkni						Квант	r30		
+azhm						Камбион	r36		
+jave						Ядовитая Плоть	r60	r60	
+armo						Камнеслово!	gsg		
+weap						Камнеслово!	7$c		
+boot						Вне Закона	r14		
+nxbw						Атлантида	r19		
+ajav						Призрак	r56		
+azsd						Эос	r54		
 shld						Дервезе	r56		
+shie	shld					Камнеслово!	gsb		
+head						Куимбанда	r47		
+stor						Кундалини	r12		
+scep						Отступничество	r56		
+armo						Камнеслово!	yo2		
+pclb	pmac	pham				Щит и Друг	r55		
+orb						Керы	r20		
+2hbx						Вольфсангель	r56		
+weap						Камнеслово!	5$c		
+scep						Габриэль	r40		
+stor						Черный Древень	r11		
+pzhm						Rotundjere	r54		
+shie	shld					Камнеслово!	gpv		
+bow						Баланс	r22		
+staf						Зодиак	r55		
+phlm						Водзивоб	r53		
+tkni						Даджаль	r20		
+nxbw						Сила Мысли	r59	r59	
+basd						Благословение Триендиства	r60	r60	
+phlm						Сагарматха	r36		
+weap						Камнеслово!	skz		
+weap						Камнеслово!	9$d		
+helm						Вершина	r01		
+basd						Хуракан	r44		
+shie	shld					Камнеслово!	gcb		
+pzhm						Раб	r25		
+weap						Геенна	r47		
+armo						Камнеслово!	skf		
+belt						Перемирие	r42		
+abow						Сисейлия	r56		
+tors						\red;Наследие Наташи\blue;	r98	r98	
+ishd						Дар Аль-Харб	r37		
+weap						Камнеслово!	gzv		
+weap						Камнеслово!	glg		
+bow						Проклятье	r48		
 scep						Вестник Орис	r59	r59	
-wand						Упырь	r20		
-pzhm						Малакбел	r53		
+armo						Камнеслово!	gcw		
+shie	shld					Камнеслово!	gpb		
+nagi						Иерогамия	r46		
+bswd	baxe					Кахлесс	r51		
+wand						Связанный насмерть	r39		
+glov						Скальд	r41		
+nknf						Рух	r51		
+shie	shld					Камнеслово!	gsg		
+glov	boot					Жулик	r54	r54	
+shie	shld					Камнеслово!	5$e		
+weap						Камнеслово!	gly		
+armo						Камнеслово!	7$e		
+dstf						Авгур	r20		
+pspe						Асы	r12		
+armo						Камнеслово!	skz		
+jave						Турнир	r40		
+shld						Фараон	r12		
+weap						Камнеслово!	7$b		
+tors						Палиак	r10		
+bow						Рой	r30		
+scrd						Брокен	r24		
+armo						Камнеслово!	9$c		
+armo						Камнеслово!	gcr		
+taxe						Фенек	r20		
+pspe						Покровитель Хадриэля	r60	r60	
+wand						Коан	r09		
+weap						Камнеслово!	gcy		
 nagi						Шесть Тонкостей	r52		
 armo						Камнеслово!	sku		
-nxbw						Кронос	r51		
-weap						Камнеслово!	gpw		
-azhm						Зигфрид	r31		
-knif						Ледышка Малика	r62	r62	
-boot						Быстрина	r56		
-axe						Инстинкт	r27		
-nknf						Мкодос	r56		
-scrd						Кхани	r50		
-ashd						Амаймон	r51		
-pclb	pmac	pham				Ламмасу	r25		
-stor						Комефо	r50		
-basd						Тропа Войны	r27		
-bswd	baxe					Эссус	r22		
-glov						Дрекавац	r51		
-armo						Камнеслово!	yo4		
-armo						Камнеслово!	g$a		
-head						Дракон	r51		
-staf						Мир Мистики	r04		
-weap						Камнеслово!	gsg		
-shie	shld					Камнеслово!	gcb		
-abow						Корсар	r15		
-armo						Камнеслово!	gsb		
-weap						Камнеслово!	7$c		
-armo						Камнеслово!	g$b		
-shie	shld					Камнеслово!	9$a		
-scep						Габриэль	r40		
-armo						Камнеслово!	skf		
-tors						Эраван	r48		
-bow						Ударная Волна	r12		
-head						Нагуаль	r36		
-shie	shld					Камнеслово!	5$b		
-armo						Камнеслово!	gly		
-h2h						Анархия	r46		
-dstf						Океан	r05		
-weap						Камнеслово!	7$a		
-ishd						Раав	r19		
-weap						Камнеслово!	yo2		
-shie	shld					Камнеслово!	gcv		
-shld						Кодо	r40		
-xbow						Питон	r16		
-weap						Забвение	r35		
-bswd	baxe					Хан	r43		
-shie	shld					Камнеслово!	yo5		
-azhm						Аматэрасу	r24		
-wand						Роковой Страж	r59	r59	
-phlm						Фоукс	r33		
-armo						Камнеслово!	glb		
-bow						Фантом	r39		
-head						Гекатомба	r55		
-bow						Звездная Пыль	r55		
-nscy						Левиафан	r51		
-phlm						Сагарматха	r36		
-ishd						Лигея	r28		
-tors						Пигмалион	r52	r52	
-orb						Саурон	r55		
-weap						Камнеслово!	gpr		
-armo						Камнеслово!	gpr		
-nstf						Дагда	r49		
-weap						Триединство	r53		
-scep						Иуда	r22		
-nstf						Ксазакс	r57	r57	
-shie	shld					Камнеслово!	gsg		
-nagi						Хаттак	r08		
-weap						Камнеслово!	gzv		
-pzhm						Rotundjere	r54		
-weap						Камнеслово!	gcr		
-ishd						Африт	r13		
-scep						Отступничество	r56		
-nstf						Святая Компания	r52		
-belt						Чудо	r15		
-bow						Проклятье	r48		
-staf						Зодиак	r55		
-pzhm						Илматар	r10		
-ishd						Орхидея	r55		
-pelt						Натха	r28		
-armo						Камнеслово!	gcv		
-weap						Камнеслово!	5$a		
-azhm						Лоэнгрин	r42		
-phlm						Грейзен	r54		
-weap						Камнеслово!	gcy		
-weap						Камнеслово!	skz		
-armo						Камнеслово!	5$b		
-jave						Хастур	r51		
-h2h						Шедим	r02		
-bow						Амок	r09		
-pspe						Такийя	r40		
-armo						Камнеслово!	5$a		
-boot						Исполин	r48		
 armo						Камнеслово!	gcg		
-weap						Камнеслово!	gfb		
-weap						Камнеслово!	gcg		
-shie	shld					Камнеслово!	9$c		
-abow						Пик Арназеуса	r57	r57	
-armo						Камнеслово!	gsv		
-circ						Лилия	r31		
-scyh						Солярион	r60	r60	
-armo						Камнеслово!	5$e		
-scep						Дурга	r49		
-armo						Камнеслово!	gpb		
-dbow						Таркек	r38		
-helm						Громовая Шляпа	r61	r61	
-orb						Гравастар	r29		
-shie	shld					Камнеслово!	gly		
-nknf						Страдание	r23		
-shie	shld					Камнеслово!	gzv		
-pspe						Ориша	r48		
-nagi						Шамо	r16		
-tors						Тонкие Тела	r55		
-armo						Камнеслово!	gpv		
-belt						Перемирие	r42		
-shie	shld					Камнеслово!	gpw		
-bow						Банши	r03		
-shie	shld					Камнеслово!	glr		
-bswd	baxe					Эльдруин	r62	r62	
-tors						Собор	r25		
-shie	shld					Камнеслово!	yo3		
-h2h						Бунт	r22		
-pclb	pham	pmac				Суд	r57	r57	
-jave						Спешка	r30		
-hamm						Калипсо	r37		
-shie	shld					Камнеслово!	g$a		
-swor						Урада	r46		
-nknf						Джинкс	r13		
-shie	shld					Камнеслово!	gsw		
-jave						Набег	r10		
-weap						Камнеслово!	gsb		
-scrd						Брокен	r24		
-weap						Камнеслово!	7$d		
-weap						Геенна	r47		
-weap						Камнеслово!	gsy		
-phlm						Культ Предков	r43		
-shie	shld					Камнеслово!	skl		
-shie	shld					Камнеслово!	7$c		
-scyh						Эндор	r31		
-pclb	pmac	pham				Джихад	r05		
-ajav						Стрекоза	r26		
-weap						Раздробленный Камень	r58	r58	
+armo						Камнеслово!	7$c		
+shie	shld					Камнеслово!	yo5		
 shld						Стена Огня	r50		
-jave						Турнир	r40		
-belt						Лисра	r57	r57	
-shie	shld					Камнеслово!	5$d		
-orb						Головокружение	r22		
-jave						Ядовитая Плоть	r60	r60	
-armo						Камнеслово!	gcb		
-shie	shld					Камнеслово!	skf		
-taxe						Маниту	r30		
-weap						Камнеслово!	gly		
-bow						Шершень	r17		
-pelt						Ли-Нежа	r18		
-armo						Камнеслово!	yo5		
-helm						Котел	r44		
-armo						Камнеслово!	skc		
-shie	shld					Камнеслово!	9$e		
-ajav						Шрам	r16		
-abow						Аспект	r13		
-stor						Астарта	r34		
-ajav						Устройство Аскари	r57	r57	
-weap						Азраэль	r21		
-basd						Благословение Триендиства	r60	r60	
-nstf						Глубинная Вода	r06		
-nagi						Иерогамия	r46		
-weap						Архангел	r53	r53	
-bswd	baxe					Гараник	r33		
-phlm						Экам	r27		
+nscy						Хтон	r29		
+dstf						Ложбан	r45		
+scrd						Грация	r36		
+bswd	baxe					Гильгамеш	r55		
+taxe						Громовое Облако	r51		
+nstf						Эвринома	r17		
+armo						Камнеслово!	gfw		
+head						Нагуаль	r36		
+pspe						Ориша	r48		
+boot						Быстрина	r56		
+nxbw						Джинн	r08		
+shie	shld					Камнеслово!	gfw		
+nxbw						Кронос	r51		
+bow						Тифаон	r52		
+azhm						Благая Богиня	r19		
+nstf						Святая Компания	r52		
+knif						Крыса	r37		
 ajav						Херфьотур	r41		
-dbow						Павлин	r13		
-pclb	pmac	pham				Кваоар	r29		
-weap						Камнеслово!	glw		
-pzhm						Раб	r25		
-helm						Эйдолон	r51		
-weap						Камнеслово!	yo3		
-jave						Хастата	r20		
-weap						Камнеслово!	9$e		
-nxbw						Атлантида	r19		
-weap						Камнеслово!	sku		
-weap						Камнеслово!	yo1		
+armo						Камнеслово!	gcb		
+azsd						Лев	r35		
+pclb	pham	pmac				Суд	r57	r57	
+shld						Богиня	r30		
 stor						Космическое Помешательство	r61	r61	
+shld						Кодо	r40		
+nagi						Онивака	r56		
+ashd						Световая Шахта	r57	r57	
+boot						Эпицентр	r06		
+dbow						Цернуннос	r44		
+h2h						Изверг	r17		
+h2h						Джокер	r55		
+pelt						Нигра	r56		
+armo						Камнеслово!	glw		
+basd						Энмеркар	r17		
+hamm						Калипсо	r37		
+ishd						Африт	r13		
+glov						Гул	r16		
+armo						Камнеслово!	glr		
+shie	shld					Камнеслово!	g$d		
+bow						Фантом	r39		
+orb						Гравастар	r29		
+pspe						Ягуар	r55		
+scrd						Темный Исход	r62	r62	
+scep						Иуда	r22		
+pelt						Сильф	r52		
+scrd						Шаула	r52		
+belt						Чудо	r15		
+belt						Плавка	r23		
+abow						Эрида	r37		
+jave						Набег	r10		
+weap						Камнеслово!	5$b		
+shie	shld					Камнеслово!	yo1		
+azhm						Стата Матер	r16		
+shie	shld					Камнеслово!	gfg		
+phlm						Альгиз	r09		
+pspe						Решеф	r32		
+phlm						Фоукс	r33		
+dbow						Амфибия	r62	r62	
+bswd	baxe					Громовержец	r32		
+azhm						Шахидка	r56		
+weap						Камнеслово!	gcw		
+shie	shld					Камнеслово!	gfv		
 boot						Хибагон	r53		
+axe						Прикосновение Мидаса	r59	r59	
+aspe						Исчезновение	r51		
+ajav						Сталактит	r52		
+circ						Индиго	r56		
+shie	shld					Камнеслово!	gcv		
+glov						Воздаяние	r57	r57	
+armo						Камнеслово!	gsr		
+shie	shld					Камнеслово!	gpy		
+tkni						Бурлеск	r51		
+armo						Камнеслово!	gsy		
+pclb	pmac	pham				Интифада	r15		
+tkni						Наяда	r49		
+weap						Камнеслово!	g$b		
+orb						Головокружение	r22		
+weap						Камнеслово!	gfv		
+shie	shld					Камнеслово!	yo2		
+shie	shld					Камнеслово!	g$c		
+xbow						Аработ	r45		
+ajav						Тришула	r34		
+hamm						Нейрогенезис	r61	r61	
+head						Колдун	r25		
+belt						Нерон	r55		
+head						Куб	r16		
+nknf						Страдание	r23		
+dbow						Рысь	r27		
+belt						Дьяус	r50		
+weap						Камнеслово!	9$a		
+weap						Забвение	r35		
+weap						Камнеслово!	9$e		
+dbow						Раудна	r51		
+weap						Камнеслово!	sku		
+abow						Столкновение Миров	r43		
+weap						Камнеслово!	skc		
+jave						Спешка	r30		
+weap						Камнеслово!	gpy		
+head						Гекатомба	r55		
+shld						Кочевник	r20		
+axe						Инстинкт	r27		
+weap						Камнеслово!	9$c		
+boot						Кратон	r32		
+bow						Шершень	r17		
+nknf						Порез	r58	r58	
+pclb	pmac	pham				Такфир	r34		
+weap						Камнеслово!	gcr		
+jave						Хастин	r55		
+nscy						Черная Кошка	r02		
+pzhm						Илматар	r10		
+spea						Мирмидонец	r29		
+ishd						Орхидея	r55		
+head						Lorelei	r38		
+armo						Камнеслово!	gpr		
+orb						Гестия	r50		
+weap						Камнеслово!	gsg		
+shie	shld					Камнеслово!	9$e		
+weap						Камнеслово!	g$d		
+weap	armo					Секретный Бонус Драгоценного Камня!	jew		
+knif						Ледышка Малика	r62	r62	
+shie	shld					Камнеслово!	skl		
+weap						Камнеслово!	gpr		
+nstf						Глубинная Вода	r06		
+dstf						Океан	r05		
+armo						Камнеслово!	g$b		
+bswd	baxe					Эльдруин	r62	r62	
+pclb	pmac	pham				Брахман	r39		
+stor						Комефо	r50		
+shie	shld					Камнеслово!	7$a		
+helm						Пушечное Ядро	r08		
+weap						Камнеслово!	gcg		
+azhm						Единорог	r52		
+bow						Ударная Волна	r12		
+scyh						Солярион	r60	r60	
+shie	shld					Камнеслово!	5$c		
+aspe						Санкара	r34		
+nscy						Зиинч	r56		
+shie	shld					Камнеслово!	gsr		
+nknf						Зэйд	r36		
+h2h						Шедим	r02		
+taxe						Гепард	r02		
+armo						Камнеслово!	gpg		
+shld						Покровитель Халима	r60	r60	
+phlm						Грейзен	r54		
+abow						Пик Арназеуса	r57	r57	
+scep						Пророчество	r06		
+helm						Ра	r17		
+shie	shld					Камнеслово!	9$a		
+shie	shld					Камнеслово!	gfy		
+glov						Айвас	r33		
+azhm						Маска Орлиного Рога	r59	r59	
+shie	shld					Камнеслово!	gfr		
+ishd						Ямба	r23		
+staf						Мир Мистики	r04		
+phlm						Насреддин	r19		
+shie	shld					Камнеслово!	gcy		
+shie	shld					Камнеслово!	g$b		
+weap						Камнеслово!	yo4		
+wand						Криптия	r55		
+bow						Амок	r09		
+dstf						Самайн	r12		
+tkni						Летающая Змея	r10		
+weap						Камнеслово!	7$e		
+armo						Камнеслово!	gfv		
+armo						Камнеслово!	gpb		
+armo						Камнеслово!	gly		
+ajav						Устройство Аскари	r57	r57	
+dbow						Панихида	r56		
+2hbx						Солдат Света	r61	r61	
+helm						Эйдолон	r51		
+boot						Гинфакси	r22		
+axe						Саблезубый	r48		
+circ						Лилия	r31		
+tors						Священный Свет	r06		
+armo						Камнеслово!	5$b		
 armo						Камнеслово!	7$b		
+taxe						Маниту	r30		
+nstf						Ксазакс	r57	r57	
+glov						Иблис	r04		
+ashd						Зогар	r33		
+scep						Путь	r30		
+shie	shld					Камнеслово!	7$d		
+azhm						Лоэнгрин	r42		
+shie	shld					Камнеслово!	sku		
+weap						Камнеслово!	yo5		
+pzhm						Сурья	r46		
+ajav						Шрам	r16		
+shie	shld					Камнеслово!	5$d		
+dstf						Локсиан	r52		
+tors						Единство	r52		
+nxbw						Рея	r56		
+shie	shld					Камнеслово!	gsy		
+shie	shld					Камнеслово!	gsw		
+scrd						Взмах Звезд	r55		
+nknf						Лоа	r05		
+nscy						Инти	r41		
+weap						Архангел	r53	r53	
+scrd						Кхани	r50		
+weap						Камнеслово!	gsb		
+bswd	baxe					Савитар	r37		
+weap						Камнеслово!	yo2		
+pzhm						Поход	r37		
+shie	shld					Камнеслово!	yo3		
+helm						Повелитель Ужаса	r35		
+azsd						Эа	r52		
+weap						Камнеслово!	yo3		
+staf						Эрилаз	r51		
+armo						Камнеслово!	yo4		
+pspe						Такийя	r40		
+armo						Камнеслово!	yo1		
+nknf						Джинкс	r13		
+weap						Камнеслово!	gpw		
+weap						Камнеслово!	skl		
+dbow						Павлин	r13		
+bow						Дыхание Мертвеца	r62	r62	
+orb						Каббала	r36		
+dstf						Линкос	r29		
+nagi						Хаттак	r08		
+azhm						Зигфрид	r31		
+h2h						Ноема	r52		
+scrd						Инанна	r12		
+nstf						Ладон	r25		
+dstf						Флюгер Фиакла-Гира	r61	r61	
+head						Извращенный Разум	r59	r59	
+nagi						Кровавый Танцор	r59	r59	
+taxe						Раптор	r40		
+helm						Громовая Шляпа	r61	r61	
+azsd						Эдда	r15		
+armo						Камнеслово!	g$e		
+tors						Тонкие Тела	r55		
+circ						Благословение Ратмы	r62	r62	
+helm	shld					Шах и Мат	r55	r55	
+phlm						Культ Предков	r43		
+weap						Камнеслово!	gfg		
+ajav						Стрекоза	r26		
+xbow						Тартар	r44		
+bswd	baxe					Хан	r43		
 weap						Берит	r42		
-wand						Коан	r09		
-armo						Камнеслово!	9$d		
-bow						Рой	r30		
+pzhm						Боевая Ярость	r58	r58	
+h2h						Судья	r27		
+nstf						Али	r38		
+glov						Буран	r54		
+tors						Пластины Адского Огня	r57	r57	
+orb						Прекраснейшей	r51		
+stor						Венефика	r53		
+taxe						Кадьяк	r55		
+azsd						Сердце Сковос	r58	r58	
+weap						Камнеслово!	yo1		
+belt						Ахриман	r52		
+mace						Демхе	r33		
+circ						Уленшпигель	r38		
+shie	shld					Камнеслово!	9$b		
+dstf						Лаадан	r37		
+abow						Корсар	r15		
+weap						Пустота	r28		
+bswd	baxe					Гараник	r33		
+shie	shld					Камнеслово!	gzv		
+basd						Тропа Войны	r27		
+armo						Камнеслово!	skc		
+tkni						Мириады	r40		
+scyh						Атлакамани	r37		
+nagi						Шамо	r16		
+staf						Хадад	r11		
+stor						Кассильда	r54		
+pclb	pmac	pham				Кваоар	r29		
+tors						Пигмалион	r52	r52	
+nscy						Ивентайд	r36		
+armo						Камнеслово!	gfy		
+armo						Камнеслово!	7$a		
+weap						Камнеслово!	gpb		
+nxbw						Эфир	r31		
+armo						Камнеслово!	gcv		
+phlm						Экам	r27		
+staf						Лесальф	r30		
+shld						Аватар	r53		
+aspe						Русалка	r46		
+pspe						Нехуштан	r27		
+ashd						Амаймон	r51		
+shie	shld					Камнеслово!	5$a		
+tors						Мятежник	r01		
+shie	shld					Камнеслово!	gcr		
+aspe						Аегина	r11		
+shie	shld					Камнеслово!	g$a		
+armo						Камнеслово!	gfg		
+shie	shld					Камнеслово!	9$d		
+helm						Алхимия	r26		
+armo						Камнеслово!	g$d		
+glov						Милость	r13		
+weap						Камнеслово!	glb		
+pclb	pmac	pham				Ламмасу	r25		
+weap						Камнеслово!	gfr		
+basd						Дом Бездна	r52		
+armo						Камнеслово!	glb		
+stor						Деметра	r23		
+nscy						Лемурия	r20		
+armo						Камнеслово!	yo5		
+weap						Раздробленный Камень	r58	r58	
+pclb	pmac	pham				Орифламма	r51		
+pelt						Благодать Природы	r60	r60	
+shie	shld					Камнеслово!	gcg		
+helm						Котел	r44		
+armo						Камнеслово!	9$a		
+bow						Банши	r03		
+azsd						Никс	r48		
+weap						Камнеслово!	gfy		
+shie	shld					Камнеслово!	skf		
+shie	shld					Камнеслово!	gpg		
+bswd	baxe					Овен	r10		
+weap						Камнеслово!	gsy		
+weap						Камнеслово!	gpg		
+basd						Рукавица	r39		
+aspe						Фрейбаг	r56		
+weap						Камнеслово!	glw		
+armo						Камнеслово!	yo3		
+jave						Хастур	r51		
+tors						Спасибо всем!\nMedian 2005-2012\nВечность	r51	r52	
+glov						Кали	r21		
+weap						Камнеслово!	gfb		
+armo						Камнеслово!	5$c		
+shie	shld					Камнеслово!	glb		
+abow						Ледокол	r29		
+tors						Сердце Дракона	r41		

@@ -43,6 +43,7 @@ QList<QTreeWidgetItem *> treeItemsForItems(const QList<ItemInfo *> &items);
 void customizeItemsTreeView(QTreeView *treeView);
 
 qint32 getValueOfPropertyInItem(ItemInfo *item, quint16 propKey, quint16 param = 0);
+void writeByteArrayDataWithNull(QDataStream &ds, const QByteArray &ba);
 void writeByteArrayDataWithoutNull(QDataStream &ds, const QByteArray &ba);
 
 bool isTiered(ItemInfo *item);

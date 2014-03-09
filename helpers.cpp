@@ -160,6 +160,11 @@ qint32 getValueOfPropertyInItem(ItemInfo *item, quint16 propKey, quint16 param /
     return result;
 }
 
+void writeByteArrayDataWithNull(QDataStream &ds, const QByteArray &ba)
+{
+    ds.writeRawData(ba.constData(), ba.length() + 1);
+}
+
 void writeByteArrayDataWithoutNull(QDataStream &ds, const QByteArray &ba)
 {
     ds.writeRawData(ba.constData(), ba.length());
