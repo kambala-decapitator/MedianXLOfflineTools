@@ -3132,54 +3132,54 @@ Hastin	Hastin	1	X	120		jave									Auhe	jew	jew	jew	r55			dmg%		251	300	dmg-nor
 Hastin	Hastin	1	X	120		jave									Auhe	jew	jew	jew	jew	r55		dmg%		251	300	dmg-norm		150	300	crush		21	25	kill-skill	59	5	8	all-stats		31	40	red-dmg%		5	5	ama		2	2	0
 Hastin	Hastin	1	X	120		jave									Auhe	jew	jew	jew	jew	jew	r55	dmg%		251	300	dmg-norm		150	300	crush		21	25	kill-skill	59	5	8	all-stats		31	40	red-dmg%		5	5	ama		2	2	0
 ThanksEveryone	ThanksEveryone	1	Bye	120		tors									El	r51	r52	r53	r54	r55	r56	dmg%		201	250	allskills		4	4	oskill	1004	1	1	heal-hit		2	2	uninterrupt		25	25	addxp		50	50					0
-MarcoNecroX_1	MarcoNecroX_1	1	weapon	socks:6		weap						nscy	taxe	aspe	Phys	r58	r58	r58	r58	r58	r58	dmg%		350	350	allskills		0	2	uninterrupt		50	50	dmg-norm		250	350	att-skill	500	20	12	lifesteal		20	20	swing3		50	50	0
-MarcoNecroX_2	MarcoNecroX_2	1	bow	socks:6		bow						dbow			Cold	r62	r62	r62	r62	r62	r62	dmg%		350	350	allskills		0	2	hit-skill	387	1	23	pierce-cold		50	50	dmg-cold		500	1000	heal-hit		1	1	kill-skill	903	10	16	0
-MarcoNecroX_3	MarcoNecroX_3	1	xbow	socks:6		xbow									Ltng	r61	r61	r61	r61	r61	r61	dmg%		350	350	allskills		0	2	hit-skill	462	1	19	extra-ltng		60	70	pierce-ltng		30	30	res-ltng		100	100	dmg-ltng		1000	1500	0
-MarcoNecroX_4	MarcoNecroX_4	1	sword	socks:6		swor									Fire	r57	r57	r57	r57	r57	r57	dmg%		300	350	allskills		0	2	oskill	431	15	15	att-skill	336	25	36	extra-fire		50	75	pierce-fire		100	100	dmg-fire		1000	1000	0
-MarcoNecroX_5	MarcoNecroX_5	1	axes	socks:6		axe						taxe			Magic	r59	r59	r59	r59	r59	r59	dmg%		300	350	allskills		0	2	hit-skill	681	5	29	extra-pm		60	60	dmg-norm		250	300	dmg-mag		500	600	swing3		66	66	0
-MarcoNecroX_6	MarcoNecroX_6	1	spears	socks:6		spea						pspe			Pois	r60	r60	r60	r60	r60	r60	dmg%		300	350	allskills		0	2	oskill	965	5	9	pierce-pois		100	100	dmg-norm		300	400	oskill	316	13	16	res-pois-max		15	15	0
-MarcoNecroX_7	MarcoNecroX_7	1	scythes	socks:6		scyh									6	r60	r60	r60	r60	r60	r60	dmg%		300	350	allskills		0	2	oskill	979	23	31	extra-pois		50	70	pierce-pois		50	50	kill-skill	139	10	35	heal-kill		150	200	0
-MarcoNecroX_8	MarcoNecroX_8	1	daggers	socks:3		knif						tkni			3	r62	r62	r62				dmg%		300	350	allskills		0	1	att-skill	825	10	23	dmg-cold		600	700	pierce-cold		33	33	lifesteal		20	25	res-cold-max		10	10	0
-MarcoNecroX_9	MarcoNecroX_9	1	maces	socks:6		mace									6	r60	r60	r60	r60	r60	r60	dmg%		300	350	allskills		0	3	att-skill	469	15	36	pierce-pois		50	50	res-pois-max		30	30	res-pois		200	200	dmg-norm		250	350	0
-MarcoNecroX_10	MarcoNecroX_10	1	hammers	socks:6		hamm									6	r61	r61	r61	r61	r61	r61	dmg%		300	350	allskills		0	4	hit-skill	443	2	38	pierce-ltng		30	30	extra-ltng		40	50	res-ltng-max		15	15	dmg-ltng		600	1200	0
-MarcoNecroX_11	MarcoNecroX_11	1	staves	socks:6		staf									6	r62	r62	r62	r62	r62	r62	move3		40	40	allskills		0	10	oskill	457	13	16	extra-all		25	50	cast3		50	50	heal-kill		150	200	pierce-cold		50	50	0
-MarcoNecroX_12	MarcoNecroX_12	1	sceptres	socks:6		scep									6	r59	r59	r59	r59	r59	r59	cast3		50	50	allskills		0	4	oskill	314	23	46	extra-pm		50	70	ac		1000	1000	red-dmg%		15	15	enr%		30	30	0
-MarcoNecroX_13	MarcoNecroX_13	1	javelin	socks:4		jave									4	r60	r60	r60	r60			dmg%		300	350	allskills		0	2	oskill	310	12	16	hit-skill	467	2	31	extra-pois		50	50	heal-kill		100	150	swing3		25	25	0
-MarcoNecroX_14	MarcoNecroX_14	1	throwing knife	socks:2		tkni									2	r60	r60					dmg%		300	350	allskills		0	1	hit-skill	695	10	21	pierce-pois		30	30	kill-skill	341	25	25	heal-hit		2	2	dmg-norm		150	200	0
-MarcoNecroX_15	MarcoNecroX_15	1	throwing axe	socks:6		taxe									6	r58	r58	r58	r58	r58	r58	dmg%		300	350	allskills		0	2	hit-skill	374	1	23	dmg-norm		150	250	heal-hit		1	1	red-dmg%		15	15	reanimate	1652	5	5	0
-MarcoNecroX_16	MarcoNecroX_16	1	amabow	socks:6		abow									6	r57	r57	r57	r57	r57	r57	dmg%		300	350	ama		0	2	damage-skill	302	3	16	kill-skill	451	25	36	pierce-fire		50	50	dmg-fire		666	666	abs-fire		10	10	0
-MarcoNecroX_17	MarcoNecroX_17	1	amajav	socks:3		ajav									3	r57	r57	r57				dmg%		300	350	ama		0	1	hit-skill	154	1	26	heal-kill		100	100	pierce-fire		75	75	extra-fire		50	50	res-fire-max		15	15	0
-MarcoNecroX_18	MarcoNecroX_18	1	amasp	socks:6		aspe									6	r58	r58	r58	r58	r58	r58	dmg%		300	350	ama		0	3	kill-skill	78	10	12	dmg-norm		500	700	lifesteal		20	30	red-dmg%		10	10	att%		250	250	0
-MarcoNecroX_19	MarcoNecroX_19	1	asnclaw	socks:3		h2h									3	r59	r59	r59				dmg%		300	350	ass		0	2	kill-skill	480	10	36	extra-pm		50	50	dmg-mag		333	666	heal-hit		3	3	slow		30	30	0
-MarcoNecroX_20	MarcoNecroX_20	1	asnnagi	socks:6		nagi									6	r59	r59	r59	r59	r59	r59	dmg%		300	350	ass		0	7	kill-skill	388	2	22	dmg-norm		500	750	extra-pm		100	100	swing3		66	66	heal-kill		50	75	0
-MarcoNecroX_21	MarcoNecroX_21	1	barb weap	socks:6		bswd	baxe								6	r62	r62	r62	r62	r62	r62	dmg%		300	350	bar		0	1	att-skill	458	20	42	extra-cold		50	50	pierce-cold		25	25	dmg-cold		100	1100	res-cold		80	80	0
-MarcoNecroX_22	MarcoNecroX_22	1	barb 2h	socks:6		2hbx									6	r61	r61	r61	r61	r61	r61	dmg%		300	350	bar		0	3	kill-skill	461	50	36	pierce-ltng		100	100	dmg-ltng		333	666	dmg-norm		400	800	lifesteal		25	30	0
-MarcoNecroX_23	MarcoNecroX_23	1	druid bow	socks:6		dbow									6	r62	r62	r62	r62	r62	r62	dmg%		300	350	dru		0	2	kill-skill	508	10	36	hit-skill	806	15	15	dmg-cold		1000	1200	heal-hit		1	1	dmg-norm		250	350	0
-MarcoNecroX_24	MarcoNecroX_24	1	drustaff	socks:4		dstf									4	r61	r61	r61	r61			cast3		50	50	dru		0	12	oskill	463	23	26	extra-ltng		50	80	enr-factor		150	250	pierce-ltng		50	50	enr%		30	30	0
-MarcoNecroX_25	MarcoNecroX_25	1	necroscythe	socks:6		nscy									6	r58	r58	r58	r58	r58	r58	dmg%		300	350	nec		0	4	gethit-skill	1012	5	16	hit-skill	542	30	30	dmg-norm		500	750	ignore-ac		1	1	heal-hit		1	1	0
-MarcoNecroX_26	MarcoNecroX_26	1	necdagger	socks:3		nknf									3	r58	r58	r58				dmg%		300	350	nec		0	1	hit-skill	1017	40	3	hp%		15	15	state	231	1	1	swing3		50	50	dmg-norm		150	250	0
-MarcoNecroX_27	MarcoNecroX_27	1	necwand	socks:2		wand									2	r59	r59					cast3		20	20	nec		0	3	oskill	399	12	23	extra-all		30	50	res-all-minion		25	25	hp-minion		100	100	dmg-minion		200	200	0
-MarcoNecroX_28	MarcoNecroX_28	1	necstaff	socks:6		nstf									6	r57	r57	r57	r57	r57	r57	cast3		50	50	nec		0	11	oskill	682	31	36	extra-pm		50	60	enr%		30	40	enr-factor%		20	20	heal-kill		250	250	0
-MarcoNecroX_29	MarcoNecroX_29	1	necxbw	socks:6		nxbw									6	r59	r59	r59	r59	r59	r59	dmg%		300	350	nec		0	2	hit-skill	503	1	17	dmg-mag		333	666	dmg-norm		333	666	swing3		30	30	hp%		15	15	0
-MarcoNecroX_30	MarcoNecroX_30	1	pal spear	socks:6		pspe									6	r60	r60	r60	r60	r60	r60	dmg%		300	350	pal		0	4	att-skill	338	10	22	att-skill	339	10	22	res-pois		75	75	extra-all		50	50	balance3		60	60	0
-MarcoNecroX_31	MarcoNecroX_31	1	pal blunt	socks:6		pclb	pham	pmac							6	r57	r57	r57	r57	r57	r57	dmg%		300	350	pal		0	2	kill-skill	824	2	36	pierce-fire		50	50	dmg-fire		666	666	res-fire-max		15	15	dmg-norm		250	750	0
-MarcoNecroX_32	MarcoNecroX_32	1	sorc orb	socks:3		orb									3	r60	r60	r60				cast3		50	50	sor		0	2	pierce-pois		100	100	hp%		20	20	block		1	1	extra-pois		30	30	enr%		25	25	0
-MarcoNecroX_33	MarcoNecroX_33	1	sorc blade	socks:6		scrd									6	r62	r62	r62	r62	r62	r62	dmg%		300	350	sor		0	4	att-skill	119	5	23	dmg-norm		250	500	lifesteal		30	35	dmg-cold		1111	2222	pierce-cold		100	100	0
-MarcoNecroX_34	MarcoNecroX_34	1	body armor	socks:6		tors									6	r57	r57	r57	r57	r57	r57	ac%		300	350	allskills		0	2	oskill	367	3	14	damage-skill	346	5	5	ac		1000	1000	red-dmg%		10	10	dmg-fire		666	666	0
-MarcoNecroX_35	MarcoNecroX_35	1	helm	socks:4		helm						phlm			4	r61	r61	r61	r61			ac%		300	350	allskills		0	1	res-ltng-max		10	10	extra-ltng		35	35	pierce-ltng		35	35	abs-ltng		5	5	dmg-ltng		333	333	0
-MarcoNecroX_36	MarcoNecroX_36	1	circlet	socks:4		circ									4	r62	r62	r62	r62			oskill	870	16	28	allskills		0	3	res-all-minion		50	50	dmg-minion		50	50	hp-minion		50	50	abs-cold		10	10	res-cold		40	40	0
-MarcoNecroX_37	MarcoNecroX_37	1	shield	socks:4		shld									4	r60	r60	r60	r60			ac%		300	350	allskills		0	2	block		2	2	res-pois-max		10	10	heal-kill		50	50	block3		40	40	ac-global		50	50	0
-MarcoNecroX_38	MarcoNecroX_38	1	belt	socks:2		belt									2	r57	r57					ac%		300	350	allskills		0	1	dmg-fire		333	666	res-fire-max		5	5	abs-fire		5	5	pierce-fire		25	25	move3		30	30	0
-MarcoNecroX_39	MarcoNecroX_39	1	gloves	socks:4		glov									4	r57	r57	r57	r57			ac%		300	350	allskills		0	1	damage-skill	388	1	3	res-fire-max		10	10	res-fire		50	50	extra-fire		40	50	red-dmg%		5	5	0
-MarcoNecroX_40	MarcoNecroX_40	1	boot	socks:4		boot									4	r58	r58	r58	r58			ac%		300	350	allskills		0	1	gethit-skill	624	5	17	dmg-norm		100	200	att%		250	250	swing3		35	35	lifesteal		10	15	0
-MarcoNecroX_41	MarcoNecroX_41	1	ama helm	socks:4		azhm									4	r59	r59	r59	r59			ac%		300	350	ama		0	1	extra-pm		40	50	dmg-mag		100	200	all-stats		30	50	block		1	1	heal-kill		30	50	0
-MarcoNecroX_42	MarcoNecroX_42	1	ama shield	socks:6		azsd									6	r58	r58	r58	r58	r58	r58	ac%		300	350	ama		0	2	dmg-norm		100	200	heal-hit		1	1	swing3		40	40	block		1	1	att%		150	150	0
-MarcoNecroX_43	MarcoNecroX_43	1	asn shield	socks:6		ishd									6	r59	r59	r59	r59	r59	r59	ac%		300	350	ass		0	2	heal-hit		1	1	extra-pm		25	25	block		1	1	block3		40	40	dmg-mag		333	333	0
-MarcoNecroX_44	MarcoNecroX_44	1	barb helm	socks:4		phlm									4	r61	r61	r61	r61			ac%		300	350	bar		0	1	res-ltng-max		15	15	dmg-ltng		333	666	abs-ltng		10	10	vit%		30	30	dmg-norm		25	75	0
-MarcoNecroX_45	MarcoNecroX_45	1	barb shield	socks:4		basd									6	r60	r60	r60	r60			ac%		300	350	bar		0	2	pierce-pois		50	50	block		1	1	att%		250	250	extra-pois		20	20	res-pois-max		5	5	0
-MarcoNecroX_46	MarcoNecroX_46	1	druid helm	socks:4		pelt									4	r60	r60	r60	r60			ac%		300	350	dru		0	2	extra-pois		50	50	block		1	1	ease		-50	-50	str%		40	40	str		100	100	0
-MarcoNecroX_47	MarcoNecroX_47	1	nec shield	socks:4		head									4	r59	r59	r59	r59			ac%		300	350	nec		0	1	extra-pm		50	70	heal-kill		100	120	hp-minion		50	75	cast3		30	50	ignore-ac		1	1	0
-MarcoNecroX_48	MarcoNecroX_48	1	pala helm	socks:4		pzhm									4	r58	r58	r58	r58			ac%		300	350	pal		0	1	dmg-norm		150	250	red-dmg%		10	10	lifesteal		10	20	swing3		25	25	res-all		20	25	0
-MarcoNecroX_49	MarcoNecroX_49	1	pala shield	socks:4		ashd									4	r57	r57	r57	r57			ac%		300	350	pal		0	2	block		1	1	block3		30	30	avoidance		5	5	extra-fire		30	40	pierce-fire		25	25	0
-MarcoNecroX_50	MarcoNecroX_50	1	sorc armor	socks:6		stor									6	r61	r61	r61	r61	r61	r61	ac%		300	350	sor		0	3	ac		1000	1000	dmg-ltng		1000	1000	extra-ltng		50	60	abs-ltng		15	15	all-stats%		30	30	0
+Shattered Stone	Shattered Stone	1	weapon	socks:6		weap						nscy	taxe	aspe	Phys	r58	r58	r58	r58	r58	r58	dmg%		350	350	allskills		0	2	uninterrupt		50	50	dmg-norm		250	350	att-skill	500	20	12	lifesteal		20	20	swing3		50	50	0
+Dead Mans Breath	Dead Mans Breath	1	bow	socks:6		bow						dbow			Cold	r62	r62	r62	r62	r62	r62	dmg%		350	350	allskills		0	2	hit-skill	387	1	23	pierce-cold		50	50	dmg-cold		500	1000	heal-hit		1	1	kill-skill	903	10	16	0
+Faseroptic	Faseroptic	1	xbow	socks:6		xbow									Ltng	r61	r61	r61	r61	r61	r61	dmg%		350	350	allskills		0	2	hit-skill	462	1	19	extra-ltng		60	70	pierce-ltng		30	30	res-ltng		100	100	dmg-ltng		1000	1500	0
+RWMinefield	RWMinefield	1	sword	socks:6		swor									Fire	r57	r57	r57	r57	r57	r57	dmg%		300	350	allskills		0	2	oskill	431	15	15	att-skill	336	25	36	extra-fire		50	75	pierce-fire		100	100	dmg-fire		1000	1000	0
+Midas Touch	Midas Touch	1	axes	socks:6		axe						taxe			Magic	r59	r59	r59	r59	r59	r59	dmg%		300	350	allskills		0	2	hit-skill	681	5	29	extra-pm		60	60	dmg-norm		250	300	dmg-mag		500	600	swing3		66	66	0
+Asymptomatic	Asymptomatic	1	spears	socks:6		spea						pspe			Pois	r60	r60	r60	r60	r60	r60	dmg%		300	350	allskills		0	2	oskill	965	5	9	pierce-pois		100	100	dmg-norm		300	400	oskill	316	13	16	res-pois-max		15	15	0
+Solarion	Solarion	1	scythes	socks:6		scyh									6	r60	r60	r60	r60	r60	r60	dmg%		300	350	allskills		0	2	oskill	979	23	31	extra-pois		50	70	pierce-pois		50	50	kill-skill	139	10	35	heal-kill		150	200	0
+Malicicle	Malicicle	1	daggers	socks:3		knif						tkni			3	r62	r62	r62				dmg%		300	350	allskills		0	1	att-skill	825	10	23	dmg-cold		600	700	pierce-cold		33	33	lifesteal		20	25	res-cold-max		10	10	0
+Arachnophilia	Arachnophilia	1	maces	socks:6		mace									6	r60	r60	r60	r60	r60	r60	dmg%		300	350	allskills		0	3	att-skill	469	15	36	pierce-pois		50	50	res-pois-max		30	30	res-pois		200	200	dmg-norm		250	350	0
+Neurogenesis	Neurogenesis	1	hammers	socks:6		hamm									6	r61	r61	r61	r61	r61	r61	dmg%		300	350	allskills		0	4	hit-skill	443	2	38	pierce-ltng		30	30	extra-ltng		40	50	res-ltng-max		15	15	dmg-ltng		600	1200	0
+FrostHand	FrostHand	1	staves	socks:6		staf									6	r62	r62	r62	r62	r62	r62	move3		40	40	allskills		0	10	oskill	457	13	16	extra-all		25	50	cast3		50	50	heal-kill		150	200	pierce-cold		50	50	0
+Oris Herald	Oris Herald	1	sceptres	socks:6		scep									6	r59	r59	r59	r59	r59	r59	cast3		50	50	allskills		0	4	oskill	314	23	46	extra-pm		50	70	ac		1000	1000	red-dmg%		15	15	enr%		30	30	0
+Fleshbane	Fleshbane	1	javelin	socks:4		jave									4	r60	r60	r60	r60			dmg%		300	350	allskills		0	2	oskill	310	12	16	hit-skill	467	2	31	extra-pois		50	50	heal-kill		100	150	swing3		25	25	0
+Dead Star	Dead Star	1	throwing knife	socks:2		tkni									2	r60	r60					dmg%		300	350	allskills		0	1	hit-skill	695	10	21	pierce-pois		30	30	kill-skill	341	25	25	heal-hit		2	2	dmg-norm		150	200	0
+Dragon Seed	Dragon Seed	1	throwing axe	socks:6		taxe									6	r58	r58	r58	r58	r58	r58	dmg%		300	350	allskills		0	2	hit-skill	374	1	23	dmg-norm		150	250	heal-hit		1	1	red-dmg%		15	15	reanimate	1652	5	5	0
+Arnazeus Pinnacle	Arnazeus Pinnacle	1	amabow	socks:6		abow									6	r57	r57	r57	r57	r57	r57	dmg%		300	350	ama		0	2	damage-skill	302	3	16	kill-skill	451	25	36	pierce-fire		50	50	dmg-fire		666	666	abs-fire		10	10	0
+Askari Device	Askari Device	1	amajav	socks:3		ajav									3	r57	r57	r57				dmg%		300	350	ama		0	1	hit-skill	154	1	26	heal-kill		100	100	pierce-fire		75	75	extra-fire		50	50	res-fire-max		15	15	0
+RWFlame	RWFlame	1	amasp	socks:6		aspe									6	r58	r58	r58	r58	r58	r58	dmg%		300	350	ama		0	3	kill-skill	78	10	12	dmg-norm		500	700	lifesteal		20	30	red-dmg%		10	10	att%		250	250	0
+Perfection	Perfection	1	asnclaw	socks:3		h2h									3	r59	r59	r59				dmg%		300	350	ass		0	2	kill-skill	480	10	36	extra-pm		50	50	dmg-mag		333	666	heal-hit		3	3	slow		30	30	0
+Blooddancer	Blooddancer	1	asnnagi	socks:6		nagi									6	r59	r59	r59	r59	r59	r59	dmg%		300	350	ass		0	7	kill-skill	388	2	22	dmg-norm		500	750	extra-pm		100	100	swing3		66	66	heal-kill		50	75	0
+Eldruin	Eldruin	1	barb weap	socks:6		bswd	baxe								6	r62	r62	r62	r62	r62	r62	dmg%		300	350	bar		0	1	att-skill	458	20	42	extra-cold		50	50	pierce-cold		25	25	dmg-cold		100	1100	res-cold		80	80	0
+LightSoldier	LightSoldier	1	barb 2h	socks:6		2hbx									6	r61	r61	r61	r61	r61	r61	dmg%		300	350	bar		0	3	kill-skill	461	50	36	pierce-ltng		100	100	dmg-ltng		333	666	dmg-norm		400	800	lifesteal		25	30	0
+Amphibian	Amphibian	1	druid bow	socks:6		dbow									6	r62	r62	r62	r62	r62	r62	dmg%		300	350	dru		0	2	kill-skill	508	10	36	hit-skill	806	15	15	dmg-cold		1000	1200	heal-hit		1	1	dmg-norm		250	350	0
+FiaclaGears	FiaclaGears	1	drustaff	socks:4		dstf									4	r61	r61	r61	r61			cast3		50	50	dru		0	12	oskill	463	23	26	extra-ltng		50	80	enr-factor		150	250	pierce-ltng		50	50	enr%		30	30	0
+Bartucs Eye	Bartucs Eye	1	necroscythe	socks:6		nscy									6	r58	r58	r58	r58	r58	r58	dmg%		300	350	nec		0	4	gethit-skill	1012	5	16	hit-skill	542	30	30	dmg-norm		500	750	ignore-ac		1	1	heal-hit		1	1	0
+RWCut	RWCut	1	necdagger	socks:3		nknf									3	r58	r58	r58				dmg%		300	350	nec		0	1	hit-skill	1017	40	3	hp%		15	15	state	231	1	1	swing3		50	50	dmg-norm		150	250	0
+Doomguard	Doomguard	1	necwand	socks:2		wand									2	r59	r59					cast3		20	20	nec		0	3	oskill	399	12	23	extra-all		30	50	res-all-minion		25	25	hp-minion		100	100	dmg-minion		200	200	0
+Xazax	Xazax	1	necstaff	socks:6		nstf									6	r57	r57	r57	r57	r57	r57	cast3		50	50	nec		0	11	oskill	682	31	36	extra-pm		50	60	enr%		30	40	enr-factor%		20	20	heal-kill		250	250	0
+ForceMind	ForceMind	1	necxbw	socks:6		nxbw									6	r59	r59	r59	r59	r59	r59	dmg%		300	350	nec		0	2	hit-skill	503	1	17	dmg-mag		333	666	dmg-norm		333	666	swing3		30	30	hp%		15	15	0
+Hadriels Protector	Hadriels Protector	1	pal spear	socks:6		pspe									6	r60	r60	r60	r60	r60	r60	dmg%		300	350	pal		0	4	att-skill	338	10	22	att-skill	339	10	22	res-pois		75	75	extra-all		50	50	balance3		60	60	0
+Judgement	Judgement	1	pal blunt	socks:6		pclb	pham	pmac							6	r57	r57	r57	r57	r57	r57	dmg%		300	350	pal		0	2	kill-skill	824	2	36	pierce-fire		50	50	dmg-fire		666	666	res-fire-max		15	15	dmg-norm		250	750	0
+Helgrotha	Helgrotha	1	sorc orb	socks:3		orb									3	r60	r60	r60				cast3		50	50	sor		0	2	pierce-pois		100	100	hp%		20	20	block		1	1	extra-pois		30	30	enr%		25	25	0
+Dark Exile	Dark Exile	1	sorc blade	socks:6		scrd									6	r62	r62	r62	r62	r62	r62	dmg%		300	350	sor		0	4	att-skill	119	5	23	dmg-norm		250	500	lifesteal		30	35	dmg-cold		1111	2222	pierce-cold		100	100	0
+Hellfire Plate	Hellfire Plate	1	body armor	socks:6		tors									6	r57	r57	r57	r57	r57	r57	ac%		300	350	allskills		0	2	oskill	367	3	14	damage-skill	346	5	5	ac		1000	1000	red-dmg%		10	10	dmg-fire		666	666	0
+Thundercap	Thundercap	1	helm	socks:4		helm						phlm			4	r61	r61	r61	r61			ac%		300	350	allskills		0	1	res-ltng-max		10	10	extra-ltng		35	35	pierce-ltng		35	35	abs-ltng		5	5	dmg-ltng		333	333	0
+Rathmas Blessing	Rathmas Blessing	1	circlet	socks:4		circ									4	r62	r62	r62	r62			oskill	870	16	28	allskills		0	3	res-all-minion		50	50	dmg-minion		50	50	hp-minion		50	50	abs-cold		10	10	res-cold		40	40	0
+Khalims Protector	Khalims Protector	1	shield	socks:4		shld									4	r60	r60	r60	r60			ac%		300	350	allskills		0	2	block		2	2	res-pois-max		10	10	heal-kill		50	50	block3		40	40	ac-global		50	50	0
+Lysra	Lysra	1	belt	socks:2		belt									2	r57	r57					ac%		300	350	allskills		0	1	dmg-fire		333	666	res-fire-max		5	5	abs-fire		5	5	pierce-fire		25	25	move3		30	30	0
+Retribution	Retribution	1	gloves	socks:4		glov									4	r57	r57	r57	r57			ac%		300	350	allskills		0	1	damage-skill	388	1	3	res-fire-max		10	10	res-fire		50	50	extra-fire		40	50	red-dmg%		5	5	0
+Wind Runner	Wind Runner	1	boot	socks:4		boot									4	r58	r58	r58	r58			ac%		300	350	allskills		0	1	gethit-skill	624	5	17	dmg-norm		100	200	att%		250	250	swing3		35	35	lifesteal		10	15	0
+Eaglehorn Mask	Eaglehorn Mask	1	ama helm	socks:4		azhm									4	r59	r59	r59	r59			ac%		300	350	ama		0	1	extra-pm		40	50	dmg-mag		100	200	all-stats		30	50	block		1	1	heal-kill		30	50	0
+SkovosHeart	SkovosHeart	1	ama shield	socks:6		azsd									6	r58	r58	r58	r58	r58	r58	ac%		300	350	ama		0	2	dmg-norm		100	200	heal-hit		1	1	swing3		40	40	block		1	1	att%		150	150	0
+Shadowsteps	Shadowsteps	1	asn shield	socks:6		ishd									6	r59	r59	r59	r59	r59	r59	ac%		300	350	ass		0	2	heal-hit		1	1	extra-pm		25	25	block		1	1	block3		40	40	dmg-mag		333	333	0
+Force Shock	Force Shock	1	barb helm	socks:4		phlm									4	r61	r61	r61	r61			ac%		300	350	bar		0	1	res-ltng-max		15	15	dmg-ltng		333	666	abs-ltng		10	10	vit%		30	30	dmg-norm		25	75	0
+Triunes Blessing	Triunes Blessing	1	barb shield	socks:4		basd									6	r60	r60	r60	r60			ac%		300	350	bar		0	2	pierce-pois		50	50	block		1	1	att%		250	250	extra-pois		20	20	res-pois-max		5	5	0
+Natures Grace	Natures Grace	1	druid helm	socks:4		pelt									4	r60	r60	r60	r60			ac%		300	350	dru		0	2	extra-pois		50	50	block		1	1	ease		-50	-50	str%		40	40	str		100	100	0
+Twisted Mind	Twisted Mind	1	nec shield	socks:4		head									4	r59	r59	r59	r59			ac%		300	350	nec		0	1	extra-pm		50	70	heal-kill		100	120	hp-minion		50	75	cast3		30	50	ignore-ac		1	1	0
+Battle Rage	Battle Rage	1	pala helm	socks:4		pzhm									4	r58	r58	r58	r58			ac%		300	350	pal		0	1	dmg-norm		150	250	red-dmg%		10	10	lifesteal		10	20	swing3		25	25	res-all		20	25	0
+Lightwell	Lightwell	1	pala shield	socks:4		ashd									4	r57	r57	r57	r57			ac%		300	350	pal		0	2	block		1	1	block3		30	30	avoidance		5	5	extra-fire		30	40	pierce-fire		25	25	0
+Space Dementia	Space Dementia	1	sorc armor	socks:6		stor									6	r61	r61	r61	r61	r61	r61	ac%		300	350	sor		3	6	ac		1000	1000	dmg-ltng		1000	1000	extra-ltng		50	60	abs-ltng		15	15	all-stats%		30	30	0
 ThanksLaz	ThanksLaz	1	armor	total:247/41		tors									El	r98	r98	r98	r98	r98	r98	allskills		0	4	ac%		350	350	pierce-all		1	50	red-dmg%		1	20	oskill	1049	1	1	res-all-max		0	5	move3		50	50	0

@@ -54,10 +54,10 @@ Qor	Куор
 Krys	Крис
 Auhe	Аухе
 Shaad	Шаад
-Fire	Огонь
-Earth	Земля
-Magic	Магия
-Pois	Йад
-Light	Молния
-Cold	Холод
-Ultra	Ультра
+Fi	Ого
+Ea	Зем
+Ma	Маг
+Po	Йад
+Li	Мол
+Co	Хол
+Xis	Ксис

@@ -67,10 +67,11 @@
    [*][i]Windows[/i] (XP SP 2 и позже): http://www.mediafire.com/?wxzbhpur7l94hyq
    [*][i]Mac OS X[/i] (10.5 и позже, универсальное приложение): http://www.mediafire.com/?7534vpld6fu2a6i
    [/list]
-[*][b]Данные модов[/b] (инструкции по установке находятся ниже в Mini-FAQ; вообще вам не нужно загружать эти архивы, потому что они уже включены в архив приложения):
+[*][b]Данные модов[/b] (инструкции по установке находятся ниже в Mini-FAQ):
    [list]
    [*][i]2012 v005 / Лабиринт Кейджан + Тафамет против Ану / Hardened:[/i] http://www.mediafire.com/?4vkkq8jskza2btg
-   [*][i]Ultimative X:[/i] http://www.mediafire.com/?nxivimf01ha6u2z
+   [*][i]Ultimative XIII:[/i] https://www.mediafire.com/?1i259s8is5a4390
+   [*][i]Ultimative XIVb:[/i] https://www.mediafire.com/?bb3rkb4bkb4zi93
    [/list]
 [/list]
 
@@ -292,7 +293,7 @@ cp -R resources/data/* "${APP_PATH}/Contents/resources/data"[/code]
 [*][+] преобразование хардкорного (смертного) персонажа в обычного
 [*][+] возрождение хардкорного персонажа (со штрафами)
 [*][+] изменение имени наёмника
-[*][+] поддержка [url=http://modsbylaz.14.forumer.com/viewtopic.php?t=22756]Median Hardened[/url]
+[*][+] поддержка [url=http://www.medianxl.com/t1229-median-xl-hardened]Median Hardened[/url]
 [*][э] изменение типа наёмника (не совсем стабильно)
 [/list]
 

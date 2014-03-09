@@ -25,7 +25,7 @@ Scroll				scro	misc		0	0					0	0	0	0			1	0	0	1	0	0	0	0	3		0		0							misc	0
 Not Used							0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
 Scepter				scep	rod		1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	2		0		0							weap	0
 Wand				wand	rod		1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	2		0	nec	0							weap	0
-Staff				staf	rod	sbox	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	2		0		0							weap	0
+Staff				staf	rod		1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	2		0		0							weap	0
 Bow				bow	miss		0	1	rarm	larm	bowq		0	0	0	0		1	0	0	0	0	6	6	6	1	3		0		0							weap	0
 Axe				axe	mele	dbox	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	3		0		0							weap	0
 Club				club	blun	dbox	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	3		0		0							weap	0
@@ -237,8 +237,18 @@ Druid Gift Box				dbox	fbox		0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
 Necro Gift Box				nbox	fbox		0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
 Pala Gift Box				pbox	fbox		0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
 Sorc Gift Box				sbox	fbox		0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
-Elemental Rune				xrun	sock	gem	0	0					0	0	0	0			1	0	1	0	0	0	0	0	3		0		0							misc	0
+Elemental Rune				xrun	rune	gem	0	0					0	0	0	0			1	0	1	0	0	0	0	0	3		0		0							misc	0
 SpecialBox				fbox			0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
 PhysicalBox				phbx			0	0					0	0	0	0	1	1	0	0	0	0	0	0	0	0	3		0		0								0
 Portable Shrine				prsh	thng		0	0					0	0	0	0			1	0	0	0	0	0	0	0	3		0		0							misc	0
 Active Shrine (10 Charges)				sh10	prsh		0	0					0	0	0	0			1	0	0	0	0	0	0	0	3		0		0							misc	0
+Mystic Sword	quest			####	mele		0	1	rarm				0	0	0	0		1	0	0	0	0	0	0	0	0	0		0		0								0
+Yshari Ring				###1	ring		0	1	rrin	lrin			0	0	0	0		1	0	0	0	0	0	0	0	0	0		0		2	lab_rn1	lab_rn2						0
+Yshari Amulet				###2	amul		0	1	neck	neck			0	0	0	0		1	0	0	0	0	0	0	0	0	0		0		0								0
+Yshari Shield				###4	qshi		0	1	rarm	larm			0	0	0	0		1	0	0	0	0	0	0	0	0	0		0		0								0
+Yshari Armor				###3	qtor		0	1	tors	tors			0	0	0	0		1	0	0	0	0	0	0	0	0	0		0		0								0
+Yshari Boots				###8	qbot		0	1	feet	feet			0	0	0	0		1	0	0	0	0	0	0	0	0	0		0		0								0
+Yshari Gloves				###7	qglv		0	1	glov	glov			0	0	0	0		1	0	0	0	0	0	0	0	0	0		0		0								0
+Yshari Belt				###6	qblt		0	1	belt	belt			0	0	0	0		1	0	0	0	0	0	0	0	0	0		0		0								0
+Yshari Helm				###5	qhlm		0	1	head	head			0	0	0	0		1	0	0	0	0	0	0	0	0	0		0		0								0
+Shrine Container				shco	thng		0	0					0	0	0	0	1	1	0	0	0	0	0	0	0	0	3		0		0								0

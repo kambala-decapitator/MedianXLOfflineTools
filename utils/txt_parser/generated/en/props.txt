@@ -82,7 +82,7 @@
 89	5	8						to Light Radius	to Light Radius		1	6	1					item_lightradius
 90	0	24																item_lightcolor
 91	100	10						Requirements	Requirements		4	0	2					item_req_percent
-92		7						Required Level	Required Level		1	2	1					item_levelreq
+92		7						Required Level	Required Level		1	1	1					item_levelreq
 93	60	9		96,99,102,105	Decreased Overall Speed	Increased Overall Speed		Decreased Attack Speed	Increased Attack Speed		2	145	1	9	2	1		item_fasterattackrate
 94	64	10						ModitemLevReq	ModitemLevReq		4	58	2					item_levelreqpct
 96	50	9		93,99,102,105	Decreased Overall Speed	Increased Overall Speed		Slower Run/Walk	Faster Run/Walk		2	148	1	9	2	1		item_fastermovevelocity
@@ -168,11 +168,11 @@
 197	0	8						%d%% Chance to cast level %d %s when you Die	%d%% Chance to cast level %d %s when you Die		15	160					17	item_skillondeath
 198	0	8						%d%% Chance to cast level %d %s on Striking	%d%% Chance to cast level %d %s on Striking		15	160					17	item_skillonhit
 199	0	7						%d%% Chance to cast level %d %s when you Level-Up	%d%% Chance to cast level %d %s when you Level-Up		15	160					17	item_skillonlevelup
-200	0	7						\orange;Mega Impact\white;	\orange;Mega Impact\white;		3	204	0				17	item_megaimpact
+200	0	7						\orange;Mega Impact\white;	\orange;Mega Impact\white;		3	237	0				17	item_megaimpact
 201	0	7						%d%% Chance to cast level %d %s when Struck	%d%% Chance to cast level %d %s when Struck		15	160					17	item_skillongethit
 202	0	5																x_signet05
 203	0	10						Enhanced Weapon Damage	Enhanced Weapon Damage	(Based on Character Level)	8	60	2					item_totaldamage_perlevel
-204	0	16						(%d/%d Charges)	(%d/%d Charges)		24	1					16	item_charged_skill
+204	0	16						(%d/%d Charges)	(%d/%d Charges)		24	3					16	item_charged_skill
 205	0	5																x_signet06
 206	0	5																x_signet07
 207	0	5																x_signet08
@@ -219,20 +219,20 @@
 249	0	5																x_signet30
 250	0	10																item_totembound
 251	0	5																x_signet31
-252	0	6						Repairs %d Durability per Second	Repairs %d Durability per Second		11	1	0					item_replenish_durability
-253	0	6						Replenishes Quantity	Replenishes Quantity		3	2	0					item_replenish_quantity
+252	0	6						Repairs %d Durability per Second	Repairs %d Durability per Second		11	2	0					item_replenish_durability
+253	0	6						Replenishes Quantity	Replenishes Quantity		3	3	0					item_replenish_quantity
 254	0	8						Increased Stack Size	Increased Stack Size		3	4	0					item_extra_stack
 255	0	5																x_signet32
 256	0	5																x_signet33
 257	0	5																x_signet34
 258	0	5																x_signet35
 259	0	2						Drains 2% Life per Second	Drains 2% Life per Second		3	49	0					item_drain_aura
-260	0	7						\orange;Thunderfury\white;	\orange;Thunderfury\white;		3	204	0				17	item_thunderfury
+260	0	7						\orange;Thunderfury\white;	\orange;Thunderfury\white;		3	238	0				17	item_thunderfury
 261	0	5						Extra Totems	Extra Totems		1	150	1					new_totem_syn
 263	0	5																x_signet36
 264	0	5																x_signet37
 265	0	3																item_has_toraja
-266	0	7						Area Effect Attack	Area Effect Attack		3	140	0				17	item_warp_blue
+266	0	7						\orange;Area Effect Attack\white;	\orange;Area Effect Attack\white;		3	140	0				17	item_warp_blue
 267	0	5						Enhanced Stance Radius	Enhanced Stance Radius		1	198	1					item_stance_radius
 270	0	3																item_has_edyrem
 271	0	2						Random Resistance Bonus	Random Resistance Bonus		3	49	0					item_randomres_aura
@@ -241,7 +241,7 @@
 274	0	8						Hive Adds 33% of Poison Spell Damage Items to Vitality	Hive Adds 33% of Poison Spell Damage Items to Vitality		3	4	0					item_poison_set
 275	0	9						Enhanced Damage vs. Necrobots	Enhanced Damage vs. Necrobots		2	2	1					item_desc_breaker
 276	0	1																item_hasbeenduped
-277	0	7						\orange;Area Effect Damage\white;	\orange;Area Effect Damage\white;		3	204	0				17	item_warpskillonattack
+277	0	7						\orange;Area Effect Attack\white;	\orange;Area Effect Attack\white;		3	238	0				17	item_warpskillonattack
 278	50	9						Strength Factor to Spell Damage	Strength Factor to Spell Damage		1	198	1					str_factor
 279	0	8						Lion Stance Damage Bonus	Lion Stance Damage Bonus		2	114	2					lion_stance_syn
 280	0	10																greathunt_buff
@@ -260,7 +260,7 @@
 293	0	1						Doubled Terror Strike Duration	Doubled Terror Strike Duration		3	26	0					skill_arcanestrike_synergy
 294	0	5																x_signet41
 295	0	9						Mana on Striking in Melee	Mana on Striking in Melee		1	20	1					item_manaonstrikingmelee
-296	0	1						\dgreen;Orb Effects Applied to this Item are Doubled\blue;	\dgreen;Orb Effects Applied to this Item are Doubled\blue;		3	210	0					item_is_honorific
+296	0	1						\dgreen;Orb Effects Applied to this Item are Doubled\blue;	\dgreen;Orb Effects Applied to this Item are Doubled\blue;		3	230	0					item_is_honorific
 297	0	5																x_signet42
 298	0	5																x_signet43
 299	0	10						\grey;Current Strength Damage Bonus:	\grey;Current Strength Damage Bonus:		2	240	2					strength_bonus_wpn
@@ -318,7 +318,7 @@
 368	0	10		128,367		Attacker Takes Elemental Damage of		Attacker Takes Fire Damage of	Attacker Takes Fire Damage of		3	14	2	14	3	2		item_attackertakesfiredamage
 369	0	5																x_signet51
 370	0	5																x_signet52
-371	0	7						\orange;Amazing Grace\white;	\orange;Amazing Grace\white;		3	204	0				17	item_amazinggrace
+371	0	7						\orange;Amazing Grace\white;	\orange;Amazing Grace\white;		3	235	0				17	item_amazinggrace
 372	0	1						Level 5 Venomous Aura when Equipped	Level 5 Venomous Aura when Equipped		3	159	0					item_desc_acidblood
 373	0	1						Worship the Crack Monkeys!	Worship the Crack Monkeys!		3	2	0					item_desc_deathmarch
 374	0	1						+300% Enhanced Damage vs. the Zakarum	+300% Enhanced Damage vs. the Zakarum		3	2	0					item_desc_judas
@@ -376,7 +376,7 @@
 440	0	8						Mana when Struck by an Enemy	Mana when Struck by an Enemy		1	13	1					item_manawhenstruck
 441	5	6		445	to All Maximum Minions	to All Maximum Minions		to Maximum Necromancer Minions	to Maximum Necromancer Minions		1	79	1	11	1	1		passive_aura_addmax
 442	0	10						Current Strength Damage Bonus:	Current Strength Damage Bonus:		2	130	2					str_bonus_blue
-443	0	8						Already upgraded!	Already upgraded!		3	149	0					item_upgraded
+443	0	8						\green;Already upgraded!	\green;Already upgraded!		3	229	0					item_upgraded
 444	50	9						Penalty to Summoned Minion Life	Bonus to Summoned Minion Life		4	75	1					skill_minion_hp_percent
 445	0	6		441	to All Maximum Minions	to All Maximum Minions		to Maximum Barbarian Minions	to Maximum Barbarian Minions		1	66	1	11	1	1		skill_ancientspirits_synergy
 446	0	8						Damage to Protector Spirit Bloodlust	Damage to Protector Spirit Bloodlust		4	75	1					skill_shamanspath_synergy
@@ -397,7 +397,7 @@
 472	0	8																item_upgraded2
 473	0	8						Unlocks your Ennead Skill	Unlocks your Ennead Skill		3	114	0					learn_ennead
 474	0	8						Unlocks your Black Road Skill	Unlocks your Black Road Skill		3	113	0					learn_blackroad
-475	0	1						Druid Morph	Druid Morph		3	2	0					item_desc_druidmorph
+475	0	1						\red;Druid Morph\blue;	\red;Druid Morph\blue;		3	234	0					item_desc_druidmorph
 476	0	1						Level 1 Demon Blood Aura when Equipped	Level 1 Demon Blood Aura when Equipped		3	159	0					item_desc_dbaura
 477	1	4						\red;&gt;&gt; UNEQUIP THIS ITEM BEFORE REACHING LEVEL 120 &lt;&lt;\blue;	Increased Difficulty		3	1	0					item_desc_hardaura
 478	0	1						\purple;and Reward, cube with a Mana Potion to lower it\nCube with a Healing Potion to Increase Difficulty	\purple;and Reward, cube with a Mana Potion to lower it\nCube with a Healing Potion to Increase Difficulty		3	159	0					item_desc_instructions
@@ -415,14 +415,15 @@
 491	0	3						I Killed A Dragon and All I Got Was This Lousy Charm	I Killed A Dragon and All I Got Was This Lousy Charm		3	1	0					item_has_stardragon
 492	50	8						Reduced Healing Rate from Apples	Increased Healing Rate from Apples		4	31	1					item_faster_potions
 493	50	8						Slows Ranged Attacker by	Slows Ranged Attacker by		2	74	2					skill_slowrangedthorns
-495	0	1						Sorceress Morph	Sorceress Morph		3	2	0					item_desc_sorciemorph
+495	0	1						\red;Sorceress Morph\blue;	\red;Sorceress Morph\blue;		3	234	0					item_desc_sorciemorph
 496	0	9						Crushing Blow to Darklings	Crushing Blow to Darklings		2	86	1					tree_synergy
 498	0	9						Bonus to Fire Elemental Damage if Summoned during Pact of Blood	Bonus to Fire Elemental Damage if Summoned during Pact of Blood		2	14	1					item_cots_when_pact
 499	0	10						to Energy	to Energy	(Based on Character Level)	6	60	1					item_energy_perlevel
 500	100	8						Bonus to Summoned Minion Attack Rating	Bonus to Summoned Minion Attack Rating		2	106	1					item_minion_attack
+501	23	10						\black;1- \white;Shrines: 0 \black;	\white;Shrines: 		3	55	2					shrine_counter
 503	0	10						to Strength	to Strength	(Based on Blessed Life Skill Level)	6	66	1					item_strength_perblessedlife
 504	0	10						to Dexterity	to Dexterity	(Based on Blessed Life Skill Level)	6	62	1					item_dexterity_perblessedlife
 505	0	10						Drain Life	Replenish Life	(Based on Character Level)	6	60	2					item_hpregen_perlevel
-506	0	1						\red;Superbeast Morph\blue;	\red;Superbeast Morph\blue;		3	159	0					desc-superbeasty
-508	0	1						\red;&gt;&gt; UNEQUIP THIS ITEM BEFORE REACHING LEVEL 120 &lt;&lt;\blue;	\red;Treewarden Morph\blue;		3	159	0					desc-fatasstriton
-509	500	10						\red;&gt;&gt; Do not use at level 120 &lt;&lt;\blue;	\red;&gt;&gt; Do not use at level 120 &lt;&lt;\blue;		3	254	0					fuck_you#
+506	0	1						\red;Superbeast Morph\blue;	\red;Superbeast Morph\blue;		3	234	0					desc-superbeasty
+508	0	1						\red;&gt;&gt; UNEQUIP THIS ITEM BEFORE REACHING LEVEL 120 &lt;&lt;\blue;	\red;Treewarden Morph\blue;		3	234	0					desc-fatasstriton
+509	500	10						\red;&gt;&gt; Do not use at level 120 &lt;&lt;\blue;	\red;&gt;&gt; Do not use at level 120 &lt;&lt;\blue;		3	250	0					fuck_you#

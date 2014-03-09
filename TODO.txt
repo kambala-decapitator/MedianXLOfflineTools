@@ -1,3 +1,11 @@
+0.4.1.3:
+- eth dmg/def
+- remove reanimate as MO
+- saving first plugy page (on the forum)
+- disable disenchanting quest items in Ultimative
+- personalize in game and edit (stats may change)
+- update skill icons
+
 future versions:
 - character planner
 - use column from txt that controls standard item name appearance (iirc only in misc.txt)

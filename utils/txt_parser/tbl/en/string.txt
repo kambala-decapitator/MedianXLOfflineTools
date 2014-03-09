@@ -8871,3 +8871,8 @@
 "voi5"	"\purple;Scroll of Gluttony"
 "voi6"	"\purple;Scroll of Lust"
 "StayChilled"	"\red;Peacekeeper Trap"
+"UldyssianTG"	"\gold;Tomb Guard"
+"DescTombGuard"	"guards the entrance to next stage"
+"Pride1"	"\gold;(          Soul of Pride          )"
+"Pride2"	"\gold;(          Soul of Pride          )"
+"Pride3"	"\gold;(          Soul of Pride          )"

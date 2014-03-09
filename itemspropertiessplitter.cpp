@@ -19,8 +19,7 @@
 
 #ifdef DUMP_INFO_ACTION
 #include <QTextCodec>
-#endif // DUMP_INFO_ACTION
-
+#endif
 
 
 static const int kShardsPerCrystal = 5;
@@ -98,7 +97,6 @@ void ItemsPropertiesSplitter::moveItem(const QModelIndex &newIndex, const QModel
 }
 
 void ItemsPropertiesSplitter::showItem(ItemInfo *item)
-
 {
     if (item)
     {

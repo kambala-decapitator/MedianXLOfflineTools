@@ -176,7 +176,7 @@
 301	Исполненный По Обету Светоч Лаза	\orange;[Комплект-Посвящение BrotherLaz'у]\n\gold;Архиепископ Лазарус	Set_Lazbro	100																																									
 303	Владычество xarugas'а	\orange;[Комплект-Посвящение Сообществу]\n\gold;Все Как Один	Set_xaru	100																																									
 305	Триумф Stealthmaster'а	\orange;[Комплект-Посвящение Сообществу]\n\gold;Все Как Один	Set_xaru	100																																									
-306	Безмолвный Крик Greg'а	\orange;[Комплект-Посвящение Сообществу]\n\gold;Все Как Один	Set_xaru	100																																									
+306	Greg's Silent Scream [LEGACY]	NO SET	NO SET	666																																									
 308	\gold;Наташа, Ассассин	\orange;[Комплект-Посвящение MarcoNecroX'у]\n\gold;Ковбои Из Ада	Set_PewPew	100	set_pewpew1																																								
 309	\gold;Бесстрашный, Варвар	\orange;[Комплект-Посвящение MarcoNecroX'у]\n\gold;Ковбои Из Ада	Set_PewPew	100	set_pewpew2																																								
 310	\gold;Несуществующий, Паладин	\orange;[Комплект-Посвящение MarcoNecroX'у]\n\gold;Ковбои Из Ада	Set_PewPew	100	set_pewpew3																																								
@@ -195,3 +195,4 @@
 325	Алмаз Джереда Каина	Братство Хорадримов	Set_labrynth2	120	lab_rn1																																								
 326	Самоцвет Декарда Каина	Братство Хорадримов	Set_labrynth2	120	lab_rn2																																								
 327	Талисман Тал Раши	Братство Хорадримов	Set_labrynth2	120	lab_amu																																								
+328	Безмолвный Крик Greg'а	\orange;[Комплект-Посвящение Сообществу]\n\gold;Все Как Один	Set_xaru	100																																									

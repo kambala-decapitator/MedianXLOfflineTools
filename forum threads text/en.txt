@@ -53,9 +53,10 @@ I hope I provided enough anti-hack protection for an average user. If you manage
 [list][*][b]Application[/b]:
 [list][*][i]Windows[/i] (XP SP 2 and later): http://www.mediafire.com/?wxzbhpur7l94hyq
 [*][i]Mac OS X[/i] (10.5 and later, universal binary): http://www.mediafire.com/?7534vpld6fu2a6i
-[/list][*][b]Mod data[/b] (find installation instructions in Mini-FAQ below; you don't actually need to download these because both archives are included in the application distribution):
+[/list][*][b]Mod data[/b] (find installation instructions in Mini-FAQ below):
 [list][*][i]2012 v005 / Kehjan Labyrinth + Tathamet vs Anu / Hardened:[/i] http://www.mediafire.com/?4vkkq8jskza2btg
-[*][i]Ultimative X:[/i] http://www.mediafire.com/?nxivimf01ha6u2z
+[*][i]Ultimative XIII:[/i] https://www.mediafire.com/?1i259s8is5a4390
+[*][i]Ultimative XIVb:[/i] https://www.mediafire.com/?bb3rkb4bkb4zi93
 [/list][/list]
 
 [b]Mini-FAQ[/b]:
@@ -72,7 +73,6 @@ A: Restart the application after following actions if it's running.
 [code]APP_PATH = "/Applications/MedianXLOfflineTools.app" # place the actual path inside double quotes, it's just an example
 cp -R resources/data/* "${APP_PATH}/Contents/resources/data"[/code]
 [/list][/list]
-
 Q: I've fcked up my character and/or PlugY stash and neither the game nor this application can load it. How can I restore it from backup?
 A: Go to the save folder and look for file(s) called <chararcter>.<d2s or d2x>_<date>.bak and delete everything on the right up to d2s or d2x. If it's the shared stash you want to restore, then it's called _LOD<_HC for hardcore>_SharedStashSave.sss_<date>.bak and delete everything on the right up to sss.
 If you can't see file extension:
@@ -250,7 +250,7 @@ If you can't see file extension:
 [+] HC -> SC
 [+] resurrect HC character
 [+] change mercenary name
-[+] [url=http://modsbylaz.14.forumer.com/viewtopic.php?t=22756]Median Hardened[/url] support
+[+] [url=http://www.medianxl.com/t1229-median-xl-hardened]Median Hardened[/url] support
 [+] experimental: change mercenary type (seems to be not quite stable)
 [/list]
 [b]TODO[/b]:

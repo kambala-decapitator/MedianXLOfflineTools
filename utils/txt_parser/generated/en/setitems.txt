@@ -176,7 +176,7 @@
 301	Laz's Votive Lamp	\orange;[BrotherLaz Tribute Set]\n\gold;Archbishop Lazarus	Set_Lazbro	100																																									
 303	xarugas' Dominion	\orange;[Community Tribute Set]\n\gold;All Is One	Set_xaru	100																																									
 305	Stealthmaster's Triumph	\orange;[Community Tribute Set]\n\gold;All Is One	Set_xaru	100																																									
-306	Greg's Silent Scream	\orange;[Community Tribute Set]\n\gold;All Is One	Set_xaru	100																																									
+306	Greg's Silent Scream [LEGACY]	NO SET	NO SET	666																																									
 308	\gold;Natasha, the Assassin	\orange;[MarcoNecroX Tribute Set]\n\gold;Cowboys From Hell	Set_PewPew	100	set_pewpew1																																								
 309	\gold;fearless, the Barbarian	\orange;[MarcoNecroX Tribute Set]\n\gold;Cowboys From Hell	Set_PewPew	100	set_pewpew2																																								
 310	\gold;MISSINGNO, the Paladin	\orange;[MarcoNecroX Tribute Set]\n\gold;Cowboys From Hell	Set_PewPew	100	set_pewpew3																																								
@@ -195,3 +195,4 @@
 325	Jered Cain's Diamond	Brotherhood of the Horadrim	Set_labrynth2	120	lab_rn1																																								
 326	Deckard Cain's Gem	Brotherhood of the Horadrim	Set_labrynth2	120	lab_rn2																																								
 327	Tal Rasha's Talisman	Brotherhood of the Horadrim	Set_labrynth2	120	lab_amu																																								
+328	Greg's Silent Scream	\orange;[Community Tribute Set]\n\gold;All Is One	Set_xaru	100																																									

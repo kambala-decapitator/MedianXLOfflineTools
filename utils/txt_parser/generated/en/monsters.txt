@@ -215,7 +215,7 @@
 212	Undead Fetish
 213	Undead Flayer
 214	Undead Soul Killer
-215	Undead Stygian Doll
+215	\orange;Magineer\gold;
 216	\gold;Seal of Frost
 217	\gold;Seal of Hell
 218	\gold;Seal of Wizardry
@@ -1865,68 +1865,68 @@
 1863	\gold;Death Projector\blue;
 1864	\gold;(                    Athulua, the Amazonian Goddess                    )
 1865	Kethryes' Vermin
-1866	\red;-(               Uldyssian's Memory               )-
-1867	\red;-(               Uldyssian's Memory               )-
-1868	\red;-(               Uldyssian's Memory               )-
-1869	\red;-(               Uldyssian's Memory               )-
-1870	\red;-(               Uldyssian's Memory               )-
-1871	\red;-(               Uldyssian's Memory               )-
-1872	\red;-(               Uldyssian's Memory               )-
-1873	\red;-(               Uldyssian's Memory               )-
-1874	\red;-(               Uldyssian's Memory               )-
-1875	\red;-(               Uldyssian's Memory               )-
-1876	\red;-(               Uldyssian's Memory               )-
-1877	\red;-(               Uldyssian's Memory               )-
-1878	\red;-(               Uldyssian's Memory               )-
-1879	\red;-(               Uldyssian's Memory               )-
-1880	\red;-(               Uldyssian's Memory               )-
-1881	\red;-(               Uldyssian's Memory               )-
-1882	\red;-(               Uldyssian's Memory               )-
-1883	\red;-(               Uldyssian's Memory               )-
-1884	\red;-(               Uldyssian's Memory               )-
-1885	\red;-(               Uldyssian's Memory               )-
-1886	\red;-(               Uldyssian's Memory               )-
-1887	\red;-(               Uldyssian's Memory               )-
-1888	\red;-(               Uldyssian's Memory               )-
-1889	\red;-(               Uldyssian's Memory               )-
-1890	\red;-(               Uldyssian's Memory               )-
-1891	\red;-(               Uldyssian's Memory               )-
-1892	\red;-(               Uldyssian's Memory               )-
-1893	\red;-(               Uldyssian's Memory               )-
-1894	\red;-(               Uldyssian's Memory               )-
-1895	\red;-(               Uldyssian's Memory               )-
-1896	\gold;(                    Uldyssian, Dark Edyrem King                    )
-1897	\red;-(               Uldyssian's Memory               )-
-1898	\red;-(               Uldyssian's Memory               )-
-1899	\red;-(               Uldyssian's Memory               )-
-1900	\red;-(               Uldyssian's Memory               )-
-1901	\red;-(               Uldyssian's Memory               )-
-1902	\red;-(               Uldyssian's Memory               )-
-1903	\red;-(               Uldyssian's Memory               )-
-1904	\red;-(               Uldyssian's Memory               )-
-1905	\red;-(               Uldyssian's Memory               )-
-1906	\red;-(               Uldyssian's Memory               )-
-1907	\red;-(               Uldyssian's Memory               )-
-1908	\red;-(               Uldyssian's Memory               )-
-1909	\red;-(               Uldyssian's Memory               )-
-1910	\red;-(               Uldyssian's Memory               )-
-1911	\red;-(               Uldyssian's Memory               )-
-1912	\red;-(               Uldyssian's Memory               )-
-1913	\red;-(               Uldyssian's Memory               )-
-1914	\red;-(               Uldyssian's Memory               )-
-1915	\red;-(               Uldyssian's Memory               )-
-1916	\red;-(               Uldyssian's Memory               )-
-1917	\red;-(               Uldyssian's Memory               )-
-1918	\red;-(               Uldyssian's Memory               )-
-1919	\red;-(               Uldyssian's Memory               )-
-1920	\red;-(               Uldyssian's Memory               )-
-1921	\red;-(               Uldyssian's Memory               )-
-1922	\red;-(               Uldyssian's Memory               )-
-1923	\red;-(               Uldyssian's Memory               )-
-1924	\red;-(               Uldyssian's Memory               )-
-1925	\red;-(               Uldyssian's Memory               )-
-1926	\red;-(               Uldyssian's Memory               )-
-1927	\red;-(               Uldyssian's Memory               )-
+1866	\gold;Disguised Edyrem
+1867	\gold;Disguised Edyrem
+1868	\gold;Disguised Edyrem
+1869	\gold;Disguised Edyrem
+1870	\gold;Disguised Edyrem
+1871	\gold;Disguised Edyrem
+1872	\gold;Disguised Edyrem
+1873	\gold;Disguised Edyrem
+1874	\gold;Disguised Edyrem
+1875	\gold;Disguised Edyrem
+1876	\gold;Disguised Edyrem
+1877	\gold;Disguised Edyrem
+1878	\gold;Disguised Edyrem
+1879	\gold;Disguised Edyrem
+1880	\gold;Disguised Edyrem
+1881	\gold;Disguised Edyrem
+1882	\gold;Disguised Edyrem
+1883	\gold;Disguised Edyrem
+1884	\gold;Disguised Edyrem
+1885	\gold;Disguised Edyrem
+1886	\gold;Disguised Edyrem
+1887	\gold;Disguised Edyrem
+1888	\gold;Fire Edyrem
+1889	\gold;Storm Edyrem
+1890	\gold;Frost Edyrem
+1891	\gold;Prime Edyrem
+1892	\gold;Prime Edyrem
+1893	\gold;Prime Edyrem
+1894	\gold;Prime Edyrem
+1895	\gold;Prime Edyrem
+1896	\gold;(             Uldyssian, Dark Edyrem King              )
+1897	\gold;Disguised Edyrem
+1898	\gold;Disguised Edyrem
+1899	\gold;Disguised Edyrem
+1900	\gold;Disguised Edyrem
+1901	\gold;Disguised Edyrem
+1902	\gold;Disguised Edyrem
+1903	\gold;Disguised Edyrem
+1904	\gold;Disguised Edyrem
+1905	\gold;Disguised Edyrem
+1906	\gold;Disguised Edyrem
+1907	\gold;Disguised Edyrem
+1908	\gold;Disguised Edyrem
+1909	\gold;Disguised Edyrem
+1910	\gold;Disguised Edyrem
+1911	\gold;Disguised Edyrem
+1912	\gold;Disguised Edyrem
+1913	\gold;Disguised Edyrem
+1914	\gold;Disguised Edyrem
+1915	\gold;Disguised Edyrem
+1916	\gold;Disguised Edyrem
+1917	\gold;Disguised Edyrem
+1918	\gold;Disguised Edyrem
+1919	\gold;Disguised Edyrem
+1920	\gold;Disguised Edyrem
+1921	\gold;Disguised Edyrem
+1922	\gold;Disguised Edyrem
+1923	\gold;Disguised Edyrem
+1924	\gold;Disguised Edyrem
+1925	\gold;Disguised Edyrem
+1926	\gold;Disguised Edyrem
+1927	\gold;Disguised Edyrem
 1928	Uldyssian's Ghost
 1929	\gold;Quest Totem
 1930	\red;(                          Volrath The Vile                          )
@@ -2118,23 +2118,54 @@
 2118	\gold;(          Soul of Gluttony          )
 2119	\gold;(          Soul of Wrath          )
 2120	\gold;(          Soul of Sloth          )
-2121	RiftTrap
+2121	\orange;The Void (trap)
 2122	\orange;Skeletal Warrior
 2123	\orange;Skeletal Warrior
 2124	\orange;Shadow Warrior
 2125	Slayer
-2126	RiftTrap
+2126	\orange;The Void (trap)
 2127	\orange;Slave of Envy
 2128	\orange;Tomb Guard
-2129	RiftTrap
-2130	RiftTrap
+2129	\orange;The Void (trap)
+2130	\orange;The Void (trap)
 2131	\gold;(          Soul of Pride          )
-2132	RiftTrap
+2132	\orange;The Void (trap)
 2133	\red;Peacekeeper Trap
 2134	\gold;(          Soul of Pride          )
-2135	\orange;Darkness
-2136	RiftTrap
-2137	\orange;Darkness
+2135	\orange;Darkspawn
+2136	\orange;The Void (trap)
+2137	\orange;Darkspawn
 2138	\orange;Eternal Ghost
-2139	RiftTrap
-2140	RiftTrap
+2139	\orange;The Void (trap)
+2140	\orange;The Void (trap)
+2141	\gold;Disguised Edyrem
+2142	RiftTrap
+2143	RiftTrap
+2144	\gold;(                                   Epsilon                                   )
+2145	\orange;Necrobot\blue;
+2146	FLYING POLAR BUFFALO ERROR
+2147	\gold;Tomb Guard
+2148	\gold;Tomb Guard
+2149	\gold;Tomb Guard
+2150	\gold;Tomb Guard
+2151	\gold;Disguised Edyrem
+2152	\gold;Disguised Edyrem
+2153	\gold;Disguised Edyrem
+2154	\gold;Disguised Edyrem
+2155	\gold;Disguised Edyrem
+2156	\gold;Disguised Edyrem
+2157	\gold;Disguised Edyrem
+2158	\gold;Disguised Edyrem
+2159	\gold;Disguised Edyrem
+2160	\gold;Disguised Edyrem
+2161	\gold;Disguised Edyrem
+2162	\gold;Disguised Edyrem
+2163	\gold;Disguised Edyrem
+2164	\gold;Prime Edyrem
+2165	\yellow;Edyrem\blue;
+2166	\orange;Temple Spire
+2167	\gold;Disguised Edyrem
+2168	\gold;(                   Mendeln, Apprentice of Rathma                   )
+2169	\gold;(                  Rathma, disciple of Trag'Oul                  )
+2170	\gold;(                   Mendeln, Apprentice of Rathma                   )
+2171	\gold;(                  Rathma, disciple of Trag'Oul                  )

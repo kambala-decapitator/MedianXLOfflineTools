@@ -219,12 +219,12 @@ Skullhammer		1		10	1	81	51	461	Battle Axe (Grade 6)	Tiered Unique		Z	Z					5	500
 Steelwoe		1		10	1	120	100	22@	Battle Axe (Sacred(1))	Sacred(1) Unique		22	22					5	5000	dgry	dgry						sock		6	6	str-add		76	76	dmg%		101	150	dmg-norm		50	100	att-skill	263	10	22	all-stats		50	50	kill-skill	525	25	43	mana-melee		201	250	att%		201	250	slow		11	15									0
 NewAbyssus		1		4	1	120	100	22@	Battle Axe (Sacred(2))	Sacred(2) Unique		22	22					5	5000	blac	blac						sock		6	6	str-add		76	76	dmg%		251	300	dmg-norm		200	400	move3		-30	-30	att-skill	710	2	55	red-dmg		50	50	kill-skill	66	25	3	ac		500	500													0
 BattleAxeSU3		1		1	1	120	100	22@	Battle Axe (Sacred(3))	Sacred(3) Unique	NEW	22	22					5	5000	blac	blac						sock		6	6	str-add		76	76	dmg%		301	350	kill-skill	535	20	17	heal-hit		0	1	swing3		25	25	res-all		21	30	bar		2	3	dru		2	3	red-dmg%		10	10	dmg-max		600	800	mag%		75	100	0
-The Covenant5		1		10	1	10	6	154	Battle Staff (Grade 1)	Tiered Unique		Z	Z					5	5000	lgld	lyel						sock		2	2	dex-add	25	25	25	pal		1	1	extra-fire		21	30	extra-pm		21	30	craft-points		21	50	cast3		15	15	move3		15	15	regen		21	50	regen		3	5									0
-The Covenant5		1		10	1	25	16	222	Battle Staff (Grade 2)	Tiered Unique		Z	Z					5	5000	lgld	lyel						sock		2	2	dex-add	25	25	25	pal		1	2	extra-fire		31	40	extra-pm		31	40	craft-points		51	80	cast3		20	20	move3		20	20	regen		51	80	regen		6	8									0
-The Covenant5		1		10	1	39	25	290	Battle Staff (Grade 3)	Tiered Unique		Z	Z					5	5000	lgld	lyel						sock		3	3	dex-add	25	25	25	pal		2	3	extra-fire		41	50	extra-pm		41	50	craft-points		81	110	cast3		25	25	move3		25	25	regen		81	110	regen		9	11									0
-The Covenant5		1		10	1	54	34	358	Battle Staff (Grade 4)	Tiered Unique		Z	Z					5	5000	lgld	lyel						sock		3	3	dex-add	25	25	25	pal		2	4	extra-fire		51	60	extra-pm		51	60	craft-points		111	140	cast3		30	30	move3		30	30	regen		111	140	regen		12	14									0
-The Covenant5		1		10	1	68	43	426	Battle Staff (Grade 5)	Tiered Unique		Z	Z					5	5000	lgld	lyel						sock		4	4	dex-add	25	25	25	pal		3	5	extra-fire		61	70	extra-pm		61	70	craft-points		141	170	cast3		35	35	move3		35	35	regen		141	170	regen		15	17									0
-The Covenant5		1		10	1	83	52	494	Battle Staff (Grade 6)	Tiered Unique		Z	Z					5	5000	lgld	lyel						sock		4	4	dex-add	25	25	25	pal		3	6	extra-fire		71	80	extra-pm		71	80	craft-points		171	200	cast3		40	40	move3		40	40	regen		171	200	regen		18	20									0
+The Covenant5		1		10	1	10	6	154	Battle Staff (Grade 1)	Tiered Unique		Z	Z					5	5000	lgld	lyel						sock		2	2	dex-add	25	25	25	pal		1	1	extra-fire		21	30	extra-pm		21	30	craft-points		21	50	cast3		15	15	move3		15	15	regen		24	55													0
+The Covenant5		1		10	1	25	16	222	Battle Staff (Grade 2)	Tiered Unique		Z	Z					5	5000	lgld	lyel						sock		2	2	dex-add	25	25	25	pal		1	2	extra-fire		31	40	extra-pm		31	40	craft-points		51	80	cast3		20	20	move3		20	20	regen		57	88													0
+The Covenant5		1		10	1	39	25	290	Battle Staff (Grade 3)	Tiered Unique		Z	Z					5	5000	lgld	lyel						sock		3	3	dex-add	25	25	25	pal		2	3	extra-fire		41	50	extra-pm		41	50	craft-points		81	110	cast3		25	25	move3		25	25	regen		90	121													0
+The Covenant5		1		10	1	54	34	358	Battle Staff (Grade 4)	Tiered Unique		Z	Z					5	5000	lgld	lyel						sock		3	3	dex-add	25	25	25	pal		2	4	extra-fire		51	60	extra-pm		51	60	craft-points		111	140	cast3		30	30	move3		30	30	regen		123	154													0
+The Covenant5		1		10	1	68	43	426	Battle Staff (Grade 5)	Tiered Unique		Z	Z					5	5000	lgld	lyel						sock		4	4	dex-add	25	25	25	pal		3	5	extra-fire		61	70	extra-pm		61	70	craft-points		141	170	cast3		35	35	move3		35	35	regen		156	187													0
+The Covenant5		1		10	1	83	52	494	Battle Staff (Grade 6)	Tiered Unique		Z	Z					5	5000	lgld	lyel						sock		4	4	dex-add	25	25	25	pal		3	6	extra-fire		71	80	extra-pm		71	80	craft-points		171	200	cast3		40	40	move3		40	40	regen		189	220													0
 Xorine's Cane		1		10	1	120	100	55@	Battle Staff (Sacred(1))	Sacred(1) Unique		59	59					5	5000	dgry	dgry						sock		4	4	dex-add	25	25	25	enr-factor		101	150	extra-all		51	60	oskill	424	5	12	allskills		6	8	dmg-mag		250	1000	res-all		-15	-15	cast3		60	60	red-dmg%		15	15									0
 New2Issalfstafr		1		4	1	120	100	55@	Battle Staff (Sacred(2))	Sacred(2) Unique		59	59					5	5000	cblu	cblu						sock		6	6	dex-add	25	25	25	sor		6	8	freeze-thorns		2	2	dru		6	8	extra-cold		101	150	oskill	883	12	17	res-cold		250	250	skill-dur		200	200	oskill	1018	7	14	hp-minion		101	150	oskill	702	4	7	0
 BattleStaffSU3		1		1	1	120	100	55@	Battle Staff (Sacred(3))	Sacred(3) Unique	NEW	59	59					5	5000	cgrn	cgrn						sock		4	4	dex-add		25	25	sor		7	9	enr-factor		100	150	heal-kill		201	250	cast3		40	40	balance3		25	25	skill	472	16	23	mag%		51	75	hp%		11	15	red-dmg%		-15	-15	extra-all		41	50	0
@@ -532,7 +532,7 @@ The Allseeing Eye		1		10	1	53	32	k14	Coronet (Grade 4)	Tiered Unique		Z	Z					5	
 The Allseeing Eye		1		10	1	68	41	k18	Coronet (Grade 5)	Tiered Unique		Z	Z					5	5000	oran	oran						sock		3	3	att%		111	130	dex%		12	13	swing3		15	15	damage-skill	346	1	15	ac		111	130																									0
 The Allseeing Eye		1		10	1	82	49	k22	Coronet (Grade 6)	Tiered Unique		Z	Z					5	5000	oran	oran						sock		4	4	att%		131	150	dex%		14	15	swing3		15	15	damage-skill	346	1	18	ac		131	150																									0
 Dark Star		1		10	1	120	100	@68	Coronet (Sacred(1))	Sacred(1) Unique		149	149					5	5000	oran	oran						sock		4	4	ass		2	2	pierce-fire		21	25	pierce-pois		21	25	red-mag		31	40	move3		25	25	dex		31	40	enr		31	40	death-skill	798	100	34	pierce-cold		21	25									0
-New2Breathstealer		1		4	1	120	100	@68	Coronet (Sacred(2))	Sacred(2) Unique		149	149					5	5000	blac	blac						sock		4	4	ac		401	500	str		-50	-50	enr		100	100	ease		-50	-50	heal-kill		151	200	allskills		1	1	extra-all		31	40	cast3		25	25	oskill	694	12	16	vit		50	50	hit-skill	895	50	20	0
+New2Breathstealer		1		4	1	200	666	@68	Coronet (Sacred(2))	Sacred(2) Unique		149	149					5	5000	blac	blac						sock		4	4	ac		401	500	str		-50	-50	enr		100	100	ease		-50	-50	heal-kill		151	200	allskills		1	1	extra-all		31	40	cast3		25	25	oskill	694	12	16	vit		50	50	hit-skill	895	5	20	0
 CoronetSU3		1		1	1	120	100	@68	Coronet (Sacred(3))	Sacred(3) Unique	NEW	149	149					5	5000	whit	whit						sock		4	4	mag%		100	100	extra-all		25	30	hp%		5	5	red-dmg%		10	10	res-all		21	25	allskills		0	1	allskills		0	1	allskills		0	1	mana%		15	15	mana		333	333					0
 The Barracuda		1		10	1	8	5	l53	Crossbow (Grade 1)	Tiered Unique		Z	Z					5	5000	dblu	dblu						sock		2	2	str-add		51	51	dmg%		31	60	dmg-max		16	25	kill-skill	600	4	3	blood-phys		16	25	swing3		5	5	crush		3	5																	0
 The Barracuda		1		10	1	23	15	l57	Crossbow (Grade 2)	Tiered Unique		Z	Z					5	5000	dblu	dblu						sock		3	3	str-add		51	51	dmg%		61	90	dmg-max		26	35	kill-skill	600	5	6	blood-phys		26	35	swing3		10	10	crush		6	8																	0
@@ -776,7 +776,7 @@ The Edge of Ext		1		10	1	75	48	395	Giant Axe (Grade 5)	Tiered Unique		Z	Z					5	
 The Edge of Ext		1		10	1	87	55	463	Giant Axe (Grade 6)	Tiered Unique		Z	Z					5	5000	dgrn	dgrn						sock		6	6	str-add		76	76	dmg%		241	280	kill-skill	120	30	36	res-pois		71	80	pierce-pois		36	40	slow-thorns-r		18	20	dmg-undead		131	150	reanimate	751	18	20	dru		3	5									0
 Griswold's Revenge		1		10	1	120	100	24@	Giant Axe (Sacred(1))	Sacred(1) Unique		24	24					5	5000	oran	oran						sock		6	6	str-add		76	76	dmg%		251	300	dmg-max		501	1000	att-skill	531	15	9	str%		31	50	ease		200	200	craft-points		201	250	swing3		50	50	fire-min		301	500	fire-max		2001	3000	kill-skill	518	25	18	0
 New2Axekicker		1		4	1	120	100	24@	Giant Axe (Sacred(2))	Sacred(2) Unique		24	24					5	5000	blac	blac						sock		6	6	str-add		76	76	dmg%		251	300	dmg-norm		400	600	dru		2	2	crush		11	15	str%		21	25	att-skill	964	33	4	dmg-global		200	200	slow		20	20	heal-kill		100	100					0
-GiantAxeSU3		1		1	1	120	100	24@	Giant Axe (Sacred(3))	Sacred(3) Unique	NEW	024a	024a					5	5000	cred	cred						sock		6	6	str-add		76	76	dmg%		301	350	dmg-norm		600	1000	swing3		100	100	pierce-fire		21	30	pierce-cold		21	30	pierce-ltng		21	30	att%		100	150	heal-melee		150	150	global-ac		90	100	hp%		20	20	0
+GiantAxeSU3		1		1	1	120	100	24@	Giant Axe (Sacred(3))	Sacred(3) Unique	NEW	024a	024a					5	5000	cred	cred						sock		6	6	str-add		76	76	dmg%		301	350	dmg-norm		600	1000	swing3		100	100	pierce-fire		21	30	pierce-cold		21	30	pierce-ltng		21	30	att%		100	150	heal-melee		150	150	ac-global		90	100	hp%		20	20	0
 Hellreaper		1		10	1	7	4	109	Giant Sword (Grade 1)	Tiered Unique		Z	Z					5	5000	dred	dred						sock		2	2	str-add		76	76	dmg%		31	60	lifesteal		3	5	att-skill	694	3	2	hp%		3	5	ac		21	50	swing3		5	5	dmg-global		16	25													0
 Hellreaper		1		10	1	22	14	177	Giant Sword (Grade 2)	Tiered Unique		Z	Z					5	5000	dred	dred						sock		2	2	str-add		76	76	dmg%		61	90	lifesteal		6	8	att-skill	694	3	4	hp%		6	8	ac		51	80	swing3		10	10	dmg-global		26	35													0
 Hellreaper		1		10	1	36	23	245	Giant Sword (Grade 3)	Tiered Unique		Z	Z					5	5000	dred	dred						sock		3	3	str-add		76	76	dmg%		91	120	lifesteal		9	11	att-skill	694	4	6	hp%		9	11	ac		81	110	swing3		15	15	dmg-global		36	45													0
@@ -1115,8 +1115,8 @@ Banner of Duncraig		1		10	1	53	32	762	Kite Shield (Grade 4)	Tiered Unique		Z	Z		
 Banner of Duncraig		1		10	1	67	40	808	Kite Shield (Grade 5)	Tiered Unique		Z	Z					5	5000	dgrn	dgrn						sock		4	4	ac%		151	180	res-cold		56	65	att-skill	600	4	9	res-ltng		56	65	str		37	43	dex		37	43	att-skill	804	4	9																	0
 Banner of Duncraig		1		10	1	82	49	854	Kite Shield (Grade 6)	Tiered Unique		Z	Z					5	5000	dgrn	dgrn						sock		4	4	ac%		181	210	res-cold		66	75	att-skill	600	4	11	res-ltng		66	75	str		44	50	dex		44	50	att-skill	804	4	11																	0
 Lightforge		1		10	1	120	100	@25	Kite Shield (Sacred(1))	Sacred(1) Unique		157	157					5	5000	lyel	lyel						sock		4	4	ac%		201	250	att-skill	52	5	6	holyarmor-vel		26	30	all-stats		31	40	res-all		21	25	light		4	4	dmg-fire		200	250	demon-heal		31	40	pal		1	1	dmg-fire		250	1000					0
-NewStormflyer		1		4	1	555	666	@25	Kite Shield (Sacred(2))	Sacred(2) Unique		157	157					5	5000	lyel	lyel						sock		6	6	ac%		201	250	move3		100	100	block		1	1	dmg-to-mana		250	250	att-skill	461	50	25	extra-ltng		31	40	dmg-ltng		1	2500	enr%		31	40	dex%		11	15	abs-ltng%		15	15					0
-KiteShieldSU3		1		1	1	120	100	@25	Kite Shield (Sacred(3))	Sacred(3) Unique	NEW	157	157					5	5000	dgld	dgld						sock		4	4	ac%		251	300	reanimate	1855	1	1	block3		25	25	dmg-norm		25	50	ac-global		25	50	res-all-max		0	2	cheap		10	10	swing3		25	25	light		-1	-5	red-dmg		100	100					0
+NewStormflyer		1		4	1	120	100	@25	Kite Shield (Sacred(2))	Sacred(2) Unique		157	157					5	5000	lyel	lyel						sock		6	6	ac%		201	250	move3		100	100	block		1	1	dmg-to-mana		250	250	att-skill	461	50	25	extra-ltng		31	40	dmg-ltng		1	2500	enr%		31	40	dex%		11	15	abs-ltng%		15	15					0
+KiteShieldSU3		1		1	1	555	666	@25	Kite Shield (Sacred(3))	Sacred(3) Unique	NEW	157	157					5	5000	dgld	dgld						sock		4	4	ac%		251	300	reanimate	1855	1	1	block3		25	25	dmg-norm		25	50	ac-global		25	50	res-all-max		0	2	cheap		10	10	swing3		25	25	light		-1	-5	red-dmg		100	100					0
 Bul Kathos' Teaching		1		10	1	19	13	1@8	Kriegsmesser (Grade 1)	Tiered Unique		Z	Z					5	5000	dred	dred						sock		2	2	str-add		76	76	dmg%		41	70	dmg/lvl	56	56	56	bar		1	1	dmg-demon		41	80	hp		101	150	ac-global		3	5	heal-melee		6	10	att-skill	779	5	4	oskill	1003	1	2					0
 Bul Kathos' Teaching		1		10	1	34	22	2@8	Kriegsmesser (Grade 2)	Tiered Unique		Z	Z					5	5000	dred	dred						sock		3	3	str-add		76	76	dmg%		71	100	dmg/lvl	64	64	64	bar		1	1	dmg-demon		81	120	hp		151	200	ac-global		6	8	heal-melee		11	15	att-skill	779	6	6	oskill	1003	3	4					0
 Bul Kathos' Teaching		1		10	1	49	31	3@8	Kriegsmesser (Grade 3)	Tiered Unique		Z	Z					5	5000	dred	dred						sock		4	4	str-add		76	76	dmg%		101	130	dmg/lvl	72	72	72	bar		1	2	dmg-demon		121	160	hp		201	250	ac-global		9	11	heal-melee		16	20	att-skill	779	7	8	oskill	1003	5	6					0
@@ -1440,7 +1440,7 @@ Death Pit Stake		1		10	1	74	47	413	Pike (Grade 5)	Tiered Unique		Z	Z					5	5000	
 Death Pit Stake		1		10	1	86	55	481	Pike (Grade 6)	Tiered Unique		Z	Z					5	5000	cgrn	cgrn						sock		6	6	dex-add	76	76	76	dmg%		261	300	pois-min		1024	2048	pois-max		2048	4096	pois-len		200	200	extra-pois		46	50	att-skill	469	40	24	res-pois-len		46	50	ease		-36	-40	pal		2	4	swing3		40	40	0
 Rei Di Gelo		1		10	1	120	100	42@	Pike (Sacred(1))	Sacred(1) Unique		45	45					5	5000	cblu	cblu						sock		6	6	dex-add	76	76	76	dmg%		301	350	dmg-norm		400	600	cold-thorns	50	1000	1000	extra-cold/lvl	24			abs-cold%		11	15	swing3		-50	-50	crush		50	50	allskills		3	5	freeze		2	4	res-cold		100	100	0
 NewPrideOfCaldeum		1		4	1	120	100	42@	Pike (Sacred(2))	Sacred(2) Unique		45	45					5	5000	dgld	dgld						sock		6	6	dex-add	76	76	76	dmg%		301	350	strbonusblue		25	25	dmg-norm		300	600	swing3		50	50	oskill	815	4	6	str%		25	25	dex%		25	25	allskills		6	8	mag%		100	100	kill-skill	817	15	5	0
-PikeSU3		1		1	1	120	100	42@	Pike (Sacred(3))	Sacred(3) Unique	NEW	45	45					5	5000	oran	oran						sock		6	6	dex-add		102	102	dmg%		301	350	pal		3	4	rep-dur		11	20	crush		41	50	dmg-elem-max		301	500	death-skill	dmg-elem-max	100	36	mag%		51	75	ignore-ac		1	1	fade		1	1	howl-thorns		6	10	0
+PikeSU3		1		1	1	120	100	42@	Pike (Sacred(3))	Sacred(3) Unique	NEW	45	45					5	5000	oran	oran						sock		6	6	dex-add		102	102	dmg%		301	350	pal		3	4	rep-dur		11	20	crush		41	50	dmg-elem-max		301	500	death-skill	501	100	36	mag%		51	75	ignore-ac		1	1	fade		1	1	howl-thorns		6	10	0
 Shadowstrike		1		10	1	4	3	133	Pilum (Grade 1)	Tiered Unique		Z	Z					5	5000	blac	blac						sock		1	1	dex-add	51	51	51	dmg%		41	70	dmg-max		16	25	all-stats		3	5	res-fire		21	25	res-cold		21	25	kill-skill	263	15	5	levelup-skill	687	100	11													0
 Shadowstrike		1		10	1	19	12	201	Pilum (Grade 2)	Tiered Unique		Z	Z					5	5000	blac	blac						sock		2	2	dex-add	51	51	51	dmg%		71	100	dmg-max		26	35	all-stats		6	8	res-fire		26	30	res-cold		26	30	kill-skill	263	20	11	levelup-skill	687	100	19													0
 Shadowstrike		1		10	1	34	21	269	Pilum (Grade 3)	Tiered Unique		Z	Z					5	5000	blac	blac						sock		2	2	dex-add	51	51	51	dmg%		101	130	dmg-max		36	45	all-stats		9	11	res-fire		31	35	res-cold		31	35	kill-skill	263	25	17	levelup-skill	687	100	27													0
@@ -1904,7 +1904,7 @@ Sea Summoner		1		10	1	4	3	138	Trident (Grade 1)	Tiered Unique		Z	Z					5	5000	lb
 Sea Summoner		1		10	1	19	12	206	Trident (Grade 2)	Tiered Unique		Z	Z					5	5000	lblu	lblu						sock		3	3	dex-add	76	76	76	dmg%		71	100	cold-min		36	70	cold-max		51	100	cold-len		21	30	att-skill	781	6	4	slow		6	8	ac-global		16	20	regen		26	35	dex		26	35					0
 Sea Summoner		1		10	1	34	21	274	Trident (Grade 3)	Tiered Unique		Z	Z					5	5000	lblu	lblu						sock		4	4	dex-add	76	76	76	dmg%		101	130	cold-min		71	140	cold-max		101	200	cold-len		31	40	att-skill	781	7	6	slow		9	11	ac-global		21	25	regen		36	45	dex		36	45					0
 Sea Summoner		1		10	1	48	30	342	Trident (Grade 4)	Tiered Unique		Z	Z					5	5000	lblu	lblu						sock		4	4	dex-add	76	76	76	dmg%		131	160	cold-min		141	280	cold-max		201	400	cold-len		41	50	att-skill	781	8	8	slow		12	14	ac-global		26	30	regen		46	55	dex		46	55					0
-Sea Summoner		1		10	1	63	40	410	Trident (Grade 5)	Tiered Unique		Z	Z					5	5000	lblu	stop						sock		5	5	dex-add	76	76	76	dmg%		161	190	cold-min		281	560	cold-max		401	800	cold-len		51	60	att-skill	781	9	10	slow		15	17	ac-global		31	35	regen		56	65	dex		56	65					0
+Sea Summoner		1		10	1	63	40	410	Trident (Grade 5)	Tiered Unique		Z	Z					5	5000	lblu	lblu						sock		5	5	dex-add	76	76	76	dmg%		161	190	cold-min		281	560	cold-max		401	800	cold-len		51	60	att-skill	781	9	10	slow		15	17	ac-global		31	35	regen		56	65	dex		56	65					0
 Sea Summoner		1		10	1	77	49	478	Trident (Grade 6)	Tiered Unique		Z	Z					5	5000	lblu	lblu						sock		6	6	dex-add	76	76	76	dmg%		191	220	cold-min		561	1120	cold-max		801	1600	cold-len		61	70	att-skill	781	10	12	slow		18	20	ac-global		36	40	regen		66	75	dex		66	75					0
 The Retiarius		1		10	1	120	100	39@	Trident (Sacred(1))	Sacred(1) Unique		42	42					5	5000	dyel	dyel						sock		6	6	dex-add	76	76	76	dmg%		301	350	dmg-norm		301	500	slow		25	25	ac-global		31	40	pal		3	5	red-dmg%		15	15	att-skill	496	10	9	crush		21	25	str%		21	30	vit%		21	30	0
 NewStormcaller		1		4	1	120	100	39@	Trident (Sacred(2))	Sacred(2) Unique		42	42					5	5000	lblu	lblu						sock		6	6	dex-add	76	76	76	dmg%		251	300	strbonusblue	24	24	24	dmg-norm		200	500	att-skill	461	25	23	att-skill	980	10	8	pierce-ltng		31	40	slow		15	15	res-ltng-max		-50	-50	dmg-stun		100	100					0
@@ -2128,359 +2128,359 @@ Torque Torc2		1		1	1	120	100	rin	ZZ - Ring (Sacred) t	ZR		9996e	9996e					5	5000
 3RingSU3		1		1	1	120	100	rin	ZZ - Ring (Sacred) v	ZR	NEW	9996ec	9996ec					5	5000								allskills		1	1	extra-all		20	30	move3		25	25	cast3		25	25	ac-global		15	20	mana%		5	5																									0
 RipstarX		1		50	1	60	60	rin	ZZ - Ring (Sacred) w	ZR		Z	Z					5	5000								sock		1	1	dmg/lvl	32	32	32	openwounds		31	50	heal-melee		11	20																																	0
 EarthRouserX		1		50	1	100	100	rin	ZZ - Ring (Sacred) x	ZR		Z	Z					5	5000								sock		1	1	kill-skill	612	2	7	str%		6	10	crush		3	5	dmg-global		25	25																													0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw 2142	ZZ - Curare		ZZZZ	ZZZZ					5	5000								oskill	601	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw a1	ZZ - Light and Shadow		ZZZZ	ZZZZ					5	5000								oskill	448	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw a2	ZZ - Shamanic Trance		ZZZZ	ZZZZ					5	5000								oskill	609	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw a3	ZZ - Laserblade		ZZZZ	ZZZZ					5	5000								oskill	348	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw a4	ZZ - Lioness		ZZZZ	ZZZZ					5	5000								oskill	319	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw a5	ZZ - Living Flame		ZZZZ	ZZZZ					5	5000								oskill	452	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw a6	ZZ - Moon Queen		ZZZZ	ZZZZ					5	5000								oskill	307	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw a7	ZZ - Mountain King		ZZZZ	ZZZZ					5	5000								oskill	370	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw a8	ZZ - Paragon		ZZZZ	ZZZZ					5	5000								oskill	602	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw a9	ZZ - Plague		ZZZZ	ZZZZ					5	5000								oskill	618	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw a88	ZZ - Perfect Being		ZZZZ	ZZZZ					5	5000								oskill	350	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw aa	ZZ - Ice Queen		ZZZZ	ZZZZ					5	5000								oskill	456	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw aaa	ZZ - Runemaster		ZZZZ	ZZZZ					5	5000								oskill	608	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw ab	ZZ - Spirit Guide		ZZZZ	ZZZZ					5	5000								oskill	369	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw ac	ZZ - Superbeast		ZZZZ	ZZZZ					5	5000								oskill	617	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw ac2	ZZ - Elfin Arrows		ZZZZ	ZZZZ					5	5000								oskill	384	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw ac222	ZZ - Force of Nature		ZZZZ	ZZZZ					5	5000								oskill	610	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw ac2223	ZZ - Embalming		ZZZZ	ZZZZ					5	5000								oskill	422	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw ad	ZZ - Talons Hold		ZZZZ	ZZZZ					5	5000								oskill	412	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw ae	ZZ - Vengeful Power		ZZZZ	ZZZZ					5	5000								oskill	466	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw af	ZZ - Warp Armor		ZZZZ	ZZZZ					5	5000								oskill	464	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw ag	ZZ - Ancient Blood		ZZZZ	ZZZZ					5	5000								oskill	367	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw ah	ZZ - Amatoxin		ZZZZ	ZZZZ					5	5000								oskill	979	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw ai	ZZ - Way of the Spider		ZZZZ	ZZZZ					5	5000								oskill	331	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw aj	ZZ - Witch Blood		ZZZZ	ZZZZ					5	5000								oskill	620	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw ak	ZZ - Wings of Wrath		ZZZZ	ZZZZ					5	5000								oskill	325	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw akk	ZZ - Call Angel King Safe		ZZZZ	ZZZZ					5	5000								oskill	897	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw al	ZZ - Dragonlore		ZZZZ	ZZZZ					5	5000								oskill	305	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw am	ZZ - FamineX		ZZZZ	ZZZZ					5	5000								oskill	410	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw an	ZZ - Dragonfire		ZZZZ	ZZZZ					5	5000								oskill	418	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw ao	ZZ - Dark King		ZZZZ	ZZZZ					5	5000								oskill	445	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw ap	ZZ - Way of the Phoenix		ZZZZ	ZZZZ					5	5000								oskill	335	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw aq	ZZ - Way of the Gryphon		ZZZZ	ZZZZ					5	5000								oskill	605	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw ar	ZZ - Greater Manifestations		ZZZZ	ZZZZ					5	5000								oskill	364	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw as	ZZ - Bane Hunter		ZZZZ	ZZZZ					5	5000								oskill	621	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw at	ZZ - Balance		ZZZZ	ZZZZ					5	5000								oskill	323	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw au	ZZ - Bacchanalia		ZZZZ	ZZZZ					5	5000								oskill	315	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw av	ZZ - Death Ward		ZZZZ	ZZZZ					5	5000								oskill	615	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw aw	ZZ - Defensive Harmony		ZZZZ	ZZZZ					5	5000								oskill	321	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0	ZZ - Squall Gust		ZZZZ	ZZZZ					5	5000								oskill	899	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0a	ZZ - Summon Fallen		ZZZZ	ZZZZ					5	5000								oskill	812	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0b	ZZ - Patriot Sentry		ZZZZ	ZZZZ					5	5000								oskill	885	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0c	ZZ - Wrath		ZZZZ	ZZZZ					5	5000								oskill	76	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0d	ZZ - Spirit of Vengeance		ZZZZ	ZZZZ					5	5000								oskill	603	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0e	ZZ - Exploding Totem		ZZZZ	ZZZZ					5	5000								oskill	1022	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0f	ZZ - Bloody Mary		ZZZZ	ZZZZ					5	5000								oskill	672	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0g	ZZ - Rain of Bombs		ZZZZ	ZZZZ					5	5000								oskill	30	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0h	ZZ - Rune of Ice		ZZZZ	ZZZZ					5	5000								oskill	1008	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0i	ZZ - Doom Serpents		ZZZZ	ZZZZ					5	5000								oskill	701	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0j	ZZ - Spiral Dance		ZZZZ	ZZZZ					5	5000								oskill	1011	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0k	ZZ - Vanquish		ZZZZ	ZZZZ					5	5000								oskill	698	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0l	ZZ - Meteor Shower		ZZZZ	ZZZZ					5	5000								oskill	824	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0m	ZZ - Summon Shock Beast		ZZZZ	ZZZZ					5	5000								oskill	761	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0n	ZZ - Dominate		ZZZZ	ZZZZ					5	5000								oskill	1016	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0o	ZZ - Summon Sinner		ZZZZ	ZZZZ					5	5000								oskill	870	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0p	ZZ - SMG		ZZZZ	ZZZZ					5	5000								oskill	977	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0q	ZZ - BFG83K		ZZZZ	ZZZZ					5	5000								oskill	976	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0r	ZZ - Summon Sirens		ZZZZ	ZZZZ					5	5000								oskill	905	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0s	ZZ - Disintegrate		ZZZZ	ZZZZ					5	5000								oskill	1005	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0t	ZZ - Ice Bolt Nova		ZZZZ	ZZZZ					5	5000								oskill	798	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0u	ZZ - Sunspear		ZZZZ	ZZZZ					5	5000								oskill	693	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0v	ZZ - Ancients Hand		ZZZZ	ZZZZ					5	5000								oskill	892	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0w	ZZ - Beacon		ZZZZ	ZZZZ					5	5000								oskill	604	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0x	ZZ - Dinferno		ZZZZ	ZZZZ					5	5000								oskill	1004	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0y	ZZ - Venomous Spirit		ZZZZ	ZZZZ					5	5000								oskill	1002	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0z	ZZ - Punisher		ZZZZ	ZZZZ					5	5000								oskill	263	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00a	ZZ - Seal of Fire		ZZZZ	ZZZZ					5	5000								oskill	134	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00b	ZZ - Exorcism		ZZZZ	ZZZZ					5	5000								oskill	637	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00c	ZZ - Searing Orb		ZZZZ	ZZZZ					5	5000								oskill	1000	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00d	ZZ - Clobber		ZZZZ	ZZZZ					5	5000								oskill	904	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00e	ZZ - Charm		ZZZZ	ZZZZ					5	5000								oskill	1018	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00f	ZZ - Other Shackles of Ice		ZZZZ	ZZZZ					5	5000								oskill	571	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00g	ZZ - Typhoon		ZZZZ	ZZZZ					5	5000								oskill	898	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00h	ZZ - Call Necrobot		ZZZZ	ZZZZ					5	5000								oskill	896	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00i	ZZ - Time Strike		ZZZZ	ZZZZ					5	5000								oskill	691	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00j	ZZ - Other Raven Flight		ZZZZ	ZZZZ					5	5000								oskill	569	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00k	ZZ - Bloodstar		ZZZZ	ZZZZ					5	5000								oskill	833	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00l	ZZ - Deathstrike		ZZZZ	ZZZZ					5	5000								oskill	17	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00m	ZZ - Dark Power		ZZZZ	ZZZZ					5	5000								oskill	687	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00n	ZZ - Rathmas Chosen		ZZZZ	ZZZZ					5	5000								oskill	614	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00o	ZZ - Ravage		ZZZZ	ZZZZ					5	5000								oskill	886	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00p	ZZ - Death Coil		ZZZZ	ZZZZ					5	5000								oskill	694	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00q	ZZ - Totembound Guardian		ZZZZ	ZZZZ					5	5000								oskill	83	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00r	ZZ - Apocalypse		ZZZZ	ZZZZ					5	5000								oskill	789	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00s	ZZ - Titan Strike		ZZZZ	ZZZZ					5	5000								oskill	8	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00t	ZZ - Guard Tower		ZZZZ	ZZZZ					5	5000								oskill	972	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00u	ZZ - Summon Overlord		ZZZZ	ZZZZ					5	5000								oskill	670	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00v	ZZ - ATMG Sentry		ZZZZ	ZZZZ					5	5000								oskill	884	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00w	ZZ - Scatter Shot		ZZZZ	ZZZZ					5	5000								oskill	642	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00x	ZZ - Dead Wall Totem		ZZZZ	ZZZZ					5	5000								oskill	797	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00y	ZZ - Cautious Strike		ZZZZ	ZZZZ					5	5000								oskill	690	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00z	ZZ - Summon Thunder Bear		ZZZZ	ZZZZ					5	5000								oskill	757	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 000a	ZZ - Conquest		ZZZZ	ZZZZ					5	5000								oskill	688	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 000b	ZZ - Countdown		ZZZZ	ZZZZ					5	5000								oskill	825	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 000c	ZZ - Rune of Fire		ZZZZ	ZZZZ					5	5000								oskill	809	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 000d	ZZ - Summon Jinn		ZZZZ	ZZZZ					5	5000								oskill	613	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1	ZZ - Immolation Bomb		ZZZZ	ZZZZ					5	5000								oskill	154	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1a	ZZ - Other Demonic Speed		ZZZZ	ZZZZ					5	5000								oskill	565	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1b	ZZ - Death Blossom		ZZZZ	ZZZZ					5	5000								oskill	20	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1c	ZZ - Other Fire Cascade		ZZZZ	ZZZZ					5	5000								oskill	566	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1d	ZZ - Supernova		ZZZZ	ZZZZ					5	5000								oskill	680	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1e	ZZ - Elemental Totem		ZZZZ	ZZZZ					5	5000								oskill	58	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1f	ZZ - Other Pandemonium		ZZZZ	ZZZZ					5	5000								oskill	567	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1g	ZZ - Other Possess		ZZZZ	ZZZZ					5	5000								oskill	568	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1h	ZZ - Kraken Stance		ZZZZ	ZZZZ					5	5000								oskill	607	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1i	ZZ - Summon Shredder		ZZZZ	ZZZZ					5	5000								oskill	792	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1j	ZZ - Guided Chain		ZZZZ	ZZZZ					5	5000								oskill	635	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1k	ZZ - Other Typhoon Sentry		ZZZZ	ZZZZ					5	5000								oskill	572	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1l	ZZ - Devils Fang Totem		ZZZZ	ZZZZ					5	5000								oskill	967	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1m	ZZ - Overpower		ZZZZ	ZZZZ					5	5000								oskill	643	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1n	ZZ - Elemental Rain		ZZZZ	ZZZZ					5	5000								oskill	820	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1o	ZZ - Diseased Cattle		ZZZZ	ZZZZ					5	5000								oskill	139	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1p	ZZ - Pagan Heart		ZZZZ	ZZZZ					5	5000								oskill	673	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1q	ZZ - DisinUber		ZZZZ	ZZZZ					5	5000								oskill	1001	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1r	ZZ - Player Dynamite		ZZZZ	ZZZZ					5	5000								oskill	882	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1s	ZZ - Electrobolt Spell		ZZZZ	ZZZZ					5	5000								oskill	481	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1t	ZZ - Player Chickens		ZZZZ	ZZZZ					5	5000								oskill	889	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1u	ZZ - Path of Flames		ZZZZ	ZZZZ					5	5000								oskill	983	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1v	ZZ - WhiteZombie		ZZZZ	ZZZZ					5	5000								oskill	616	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1w	ZZ - Phase Bomb		ZZZZ	ZZZZ					5	5000								oskill	624	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1x	ZZ - Holy Trap		ZZZZ	ZZZZ					5	5000								oskill	21	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1y	ZZ - Phalanx		ZZZZ	ZZZZ					5	5000								oskill	634	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1z	ZZ - Static Ward		ZZZZ	ZZZZ					5	5000								oskill	906	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 2	ZZ - Arrow Swarm		ZZZZ	ZZZZ					5	5000								oskill	903	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 3	ZZ - Jitans Gate		ZZZZ	ZZZZ					5	5000								oskill	829	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 4	ZZ - Unholy Armor		ZZZZ	ZZZZ					5	5000								oskill	29	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 5	ZZ - Lapidate		ZZZZ	ZZZZ					5	5000								oskill	901	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 6	ZZ - Ice Lance		ZZZZ	ZZZZ					5	5000								oskill	104	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 7	ZZ - Tantrum		ZZZZ	ZZZZ					5	5000								oskill	890	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 8	ZZ - Inner Fire		ZZZZ	ZZZZ					5	5000								oskill	1003	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9	ZZ - Tremor		ZZZZ	ZZZZ					5	5000								oskill	612	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9a	ZZ - Summon Bane Monster		ZZZZ	ZZZZ					5	5000								oskill	793	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9b	ZZ - Summon Avalanche		ZZZZ	ZZZZ					5	5000								oskill	871	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9c	ZZ - Blade Barrier		ZZZZ	ZZZZ					5	5000								oskill	746	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9d	ZZ - Blood Flash		ZZZZ	ZZZZ					5	5000								oskill	777	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9e	ZZ - Blood Fury		ZZZZ	ZZZZ					5	5000								oskill	839	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9f	ZZ - Mana Coil		ZZZZ	ZZZZ					5	5000								oskill	706	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9g	ZZ - Thorn Field		ZZZZ	ZZZZ					5	5000								oskill	888	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9h	ZZ - Pyroclastic Flow		ZZZZ	ZZZZ					5	5000								oskill	766	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9i	ZZ - Rune of Mana		ZZZZ	ZZZZ					5	5000								oskill	873	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9j	ZZ - Rock Shock		ZZZZ	ZZZZ					5	5000								oskill	28	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9k	ZZ - Lightning Shield		ZZZZ	ZZZZ					5	5000								oskill	669	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9l	ZZ - Lightning Wall		ZZZZ	ZZZZ					5	5000								oskill	999	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9m	ZZ - Shadow Avatar		ZZZZ	ZZZZ					5	5000								oskill	828	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9n	ZZ - Shadow Blade		ZZZZ	ZZZZ					5	5000								oskill	695	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9o	ZZ - Other Banish		ZZZZ	ZZZZ					5	5000								oskill	563	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	666	666	jew	ZZZ - (R) Cotw 9p	ZZ - Faerie Fire		ZZZZ	ZZZZ					5	5000								oskill	611	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9q	ZZ - Cold Fear		ZZZZ	ZZZZ					5	5000								oskill	997	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9r	ZZ - Other Avatar		ZZZZ	ZZZZ					5	5000								oskill	562	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9s	ZZ - Cone of Cold		ZZZZ	ZZZZ					5	5000								oskill	883	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9t	ZZ - Frozen Crown		ZZZZ	ZZZZ					5	5000								oskill	703	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9u	ZZ - OHMAN		ZZZZ	ZZZZ					5	5000								oskill	24	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9v	ZZ - Nova Bomb		ZZZZ	ZZZZ					5	5000								oskill	153	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9w	ZZ - Fear Bomb Totem		ZZZZ	ZZZZ					5	5000								oskill	22	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9x	ZZ - Nightmare		ZZZZ	ZZZZ					5	5000								oskill	697	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9y	ZZ - Feral Strike		ZZZZ	ZZZZ					5	5000								oskill	887	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9z	ZZ - Squall Wave		ZZZZ	ZZZZ					5	5000								oskill	902	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 91	ZZ - Hawk Talons		ZZZZ	ZZZZ					5	5000								oskill	1010	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 92	ZZ - Vortex		ZZZZ	ZZZZ					5	5000								oskill	705	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 93	ZZ - Liche Totem		ZZZZ	ZZZZ					5	5000								oskill	671	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 94	ZZ - Greater Charm		ZZZZ	ZZZZ					5	5000								oskill	822	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 95	ZZ - Gorefest		ZZZZ	ZZZZ					5	5000								oskill	891	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 96	ZZ - Hamstring		ZZZZ	ZZZZ					5	5000								oskill	689	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 97	ZZ - Lightning Arena		ZZZZ	ZZZZ					5	5000								oskill	236	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 98	ZZ - Glacial Nova		ZZZZ	ZZZZ					5	5000								oskill	702	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 99	ZZ - Whirlpool		ZZZZ	ZZZZ					5	5000								oskill	1012	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 991	ZZ - Hailstorm		ZZZZ	ZZZZ					5	5000								oskill	119	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 992	ZZ - Summon Rats		ZZZZ	ZZZZ					5	5000								oskill	959	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 993	ZZ - Gamma Field		ZZZZ	ZZZZ					5	5000								oskill	120	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 994	ZZ - Frozen Soul		ZZZZ	ZZZZ					5	5000								oskill	998	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 995	ZZ - Summon Glowing Fungus		ZZZZ	ZZZZ					5	5000								oskill	872	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 996	ZZ - Wraith Arrow		ZZZZ	ZZZZ					5	5000								oskill	969	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 997	ZZ - Summon Daystar		ZZZZ	ZZZZ					5	5000								oskill	791	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 998	ZZ - Black Lotus Strike		ZZZZ	ZZZZ					5	5000								oskill	19	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 999	ZZ - Summon Darklings		ZZZZ	ZZZZ					5	5000								oskill	1021	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw a	ZZ - Ball Lightning		ZZZZ	ZZZZ					5	5000								oskill	826	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw b	ZZ - Flash Charm		ZZZZ	ZZZZ					5	5000								oskill	823	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw c	ZZ - Bloodspeakers Mark		ZZZZ	ZZZZ					5	5000								oskill	666	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw d	ZZ - Mana Tide Totem		ZZZZ	ZZZZ					5	5000								oskill	57	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw e	ZZ - Flash		ZZZZ	ZZZZ					5	5000								oskill	807	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw f	ZZ - Mark of the Wild		ZZZZ	ZZZZ					5	5000								oskill	1013	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw g	ZZ - Body of the Savior		ZZZZ	ZZZZ					5	5000								oskill	984	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw h	ZZ - Medusa		ZZZZ	ZZZZ					5	5000								oskill	900	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw i	ZZ - Wyrd		ZZZZ	ZZZZ					5	5000								oskill	802	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw j	ZZ - Soulshatter		ZZZZ	ZZZZ					5	5000								oskill	18	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw k	ZZ - Call Blood Golem		ZZZZ	ZZZZ					5	5000								oskill	895	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw l	ZZ - Call Henchman		ZZZZ	ZZZZ					5	5000								oskill	894	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw m	ZZ - Fire Star		ZZZZ	ZZZZ					5	5000								oskill	632	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw n	ZZ - Call Leprechaun		ZZZZ	ZZZZ					5	5000								oskill	1014	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw o	ZZ - Slow		ZZZZ	ZZZZ					5	5000								oskill	619	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw p	ZZ - Mon Spike Ripple		ZZZZ	ZZZZ					5	5000								oskill	800	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw q	ZZ - Silver Streak		ZZZZ	ZZZZ					5	5000								oskill	636	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw r	ZZ - Cataclysm		ZZZZ	ZZZZ					5	5000								oskill	699	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw s	ZZ - Fire Fountain		ZZZZ	ZZZZ					5	5000								oskill	111	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw t	ZZ - Shock Flower		ZZZZ	ZZZZ					5	5000								oskill	840	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw u	ZZ - Champions of the Sun		ZZZZ	ZZZZ					5	5000								oskill	668	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw v	ZZ - Firebolt Nova		ZZZZ	ZZZZ					5	5000								oskill	142	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw w	ZZ - Cherub Strike		ZZZZ	ZZZZ					5	5000								oskill	676	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw x	ZZ - Other Blast Wave		ZZZZ	ZZZZ					5	5000								oskill	564	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw y	ZZ - Other Raven Heart		ZZZZ	ZZZZ					5	5000								oskill	570	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw z	ZZ - Golden Calf		ZZZZ	ZZZZ					5	5000								oskill	652	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 0a	ZZ - Pounce		ZZZZ	ZZZZ					5	5000								oskill	318	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 0b	ZZ - Guardian Spirit		ZZZZ	ZZZZ					5	5000								oskill	361	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 0c	ZZ - Electrofield Sentry		ZZZZ	ZZZZ					5	5000								oskill	338	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 0d	ZZ - Pagan Rites		ZZZZ	ZZZZ					5	5000								oskill	388	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 0e	ZZ - Great Hunt		ZZZZ	ZZZZ					5	5000								oskill	320	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 0f	ZZ - Takedown		ZZZZ	ZZZZ					5	5000								oskill	316	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 0g	ZZ - ParasiteSkill		ZZZZ	ZZZZ					5	5000								oskill	408	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 0h	ZZ - Tainted Blood		ZZZZ	ZZZZ					5	5000								oskill	441	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 0i	ZZ - Merkabah		ZZZZ	ZZZZ					5	5000								oskill	428	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 0j	ZZ - Buckshot		ZZZZ	ZZZZ					5	5000								oskill	411	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 0k	ZZ - Doom		ZZZZ	ZZZZ					5	5000								oskill	330	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 0l	ZZ - Broadside		ZZZZ	ZZZZ					5	5000								oskill	345	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 0m	ZZ - Elvensong		ZZZZ	ZZZZ					5	5000								oskill	397	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 0n	ZZ - Demonrend		ZZZZ	ZZZZ					5	5000								oskill	439	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 0o	ZZ - Blood Thorns		ZZZZ	ZZZZ					5	5000								oskill	434	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 0p	ZZ - Egg Trap		ZZZZ	ZZZZ					5	5000								oskill	378	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 0q	ZZ - Deaths Fury Totem		ZZZZ	ZZZZ					5	5000								oskill	416	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 0r	ZZ - Seismic Field		ZZZZ	ZZZZ					5	5000								oskill	340	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 0s	ZZ - Mana Sweep		ZZZZ	ZZZZ					5	5000								oskill	474	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 0t	ZZ - Phalanx New		ZZZZ	ZZZZ					5	5000								oskill	303	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 0u	ZZ - Better Bloodstorm		ZZZZ	ZZZZ					5	5000								oskill	313	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 0v	ZZ - Stampede		ZZZZ	ZZZZ					5	5000								oskill	372	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 0w	ZZ - Forked Lightning Sor		ZZZZ	ZZZZ					5	5000								oskill	461	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 0x	ZZ - Dragon Shot		ZZZZ	ZZZZ					5	5000								oskill	419	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 0y	ZZ - Magic Missiles		ZZZZ	ZZZZ					5	5000								oskill	314	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 0z	ZZ - Stormblast		ZZZZ	ZZZZ					5	5000								oskill	355	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 001	ZZ - Flamefront		ZZZZ	ZZZZ					5	5000								oskill	451	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 002	ZZ - Poison Flash		ZZZZ	ZZZZ					5	5000								oskill	396	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 003	ZZ - Plague Avatar		ZZZZ	ZZZZ					5	5000								oskill	398	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 004	ZZ - Frigid Sphere		ZZZZ	ZZZZ					5	5000								oskill	458	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 005	ZZ - Mythal		ZZZZ	ZZZZ					5	5000								oskill	399	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 006	ZZ - Blood Hatred		ZZZZ	ZZZZ					5	5000								oskill	352	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 007	ZZ - Eagle Stance		ZZZZ	ZZZZ					5	5000								oskill	360	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 008	ZZ - Prowl		ZZZZ	ZZZZ					5	5000								oskill	317	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 009	ZZ - Fairy Ring		ZZZZ	ZZZZ					5	5000								oskill	310	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 010	ZZ - Defender Spirit		ZZZZ	ZZZZ					5	5000								oskill	362	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 011	ZZ - Scorpion Blade		ZZZZ	ZZZZ					5	5000								oskill	341	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 012	ZZ - Rain of Fire		ZZZZ	ZZZZ					5	5000								oskill	389	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 013	ZZ - Screaming Eagle		ZZZZ	ZZZZ					5	5000								oskill	374	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 014	ZZ - Nova Charge		ZZZZ	ZZZZ					5	5000								oskill	465	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 015	ZZ - Overkill		ZZZZ	ZZZZ					5	5000								oskill	375	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - Cotw REALM	ZZ - Searing Light		ZZZZ	ZZZZ					5	5000								oskill	681	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 017	ZZ - Cold Blood		ZZZZ	ZZZZ					5	5000								oskill	457	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 018	ZZ - Enfilade		ZZZZ	ZZZZ					5	5000								oskill	309	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 019	ZZ - Seismic Charge		ZZZZ	ZZZZ					5	5000								oskill	337	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 020	ZZ - Queen of Blades		ZZZZ	ZZZZ					5	5000								oskill	328	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 021	ZZ - Rapture		ZZZZ	ZZZZ					5	5000								oskill	447	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 022	ZZ - Treewarden Form		ZZZZ	ZZZZ					5	5000								oskill	391	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 023	ZZ - Circle of Life		ZZZZ	ZZZZ					5	5000								oskill	393	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 024	ZZ - Ferocity		ZZZZ	ZZZZ					5	5000								oskill	379	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 025	ZZ - Fireball Sentry		ZZZZ	ZZZZ					5	5000								oskill	339	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 026	ZZ - Shadow Refuge		ZZZZ	ZZZZ					5	5000								oskill	332	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 027	ZZ - Rocket Bolt		ZZZZ	ZZZZ					5	5000								oskill	417	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 028	ZZ - PsionicSkill		ZZZZ	ZZZZ					5	5000								oskill	349	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 029	ZZ - Moonstrike		ZZZZ	ZZZZ					5	5000								oskill	471	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - Cotw 030	ZZ - (R) Rising Dawn		ZZZZ	ZZZZ					5	5000								oskill	480	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 031	ZZ - Shower of Rocks		ZZZZ	ZZZZ					5	5000								oskill	354	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 032	ZZ - Scourge		ZZZZ	ZZZZ					5	5000								oskill	435	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 033	ZZ - Lava Pit		ZZZZ	ZZZZ					5	5000								oskill	311	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 034	ZZ - Shuriken Flurry		ZZZZ	ZZZZ					5	5000								oskill	347	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 035	ZZ - Fireheart Totem		ZZZZ	ZZZZ					5	5000								oskill	423	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 036	ZZ - Cascade		ZZZZ	ZZZZ					5	5000								oskill	382	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 037	ZZ - Sacrifices		ZZZZ	ZZZZ					5	5000								oskill	407	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 038	ZZ - Dragonshout		ZZZZ	ZZZZ					5	5000								oskill	437	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 039	ZZ - Slayer		ZZZZ	ZZZZ					5	5000								oskill	444	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 1a	ZZ - Maelstrom MkIV		ZZZZ	ZZZZ					5	5000								oskill	344	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 1b	ZZ - Blink		ZZZZ	ZZZZ					5	5000								oskill	346	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 1c	ZZ - Storm Crows		ZZZZ	ZZZZ					5	5000								oskill	342	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 1c2	ZZ - Summon Rampagor		ZZZZ	ZZZZ					5	5000								oskill	402	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 1d	ZZ - Blindside		ZZZZ	ZZZZ					5	5000								oskill	381	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 1e	ZZ - Spirit Walk		ZZZZ	ZZZZ					5	5000								oskill	365	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 1f	ZZ - Stormeye Totem		ZZZZ	ZZZZ					5	5000								oskill	425	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 1g	ZZ - Spore Shot		ZZZZ	ZZZZ					5	5000								oskill	383	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 1h	ZZ - Bladestorm		ZZZZ	ZZZZ					5	5000								oskill	475	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 1i	ZZ - Fortress		ZZZZ	ZZZZ					5	5000								oskill	368	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 1j	ZZ - Summon Acid Devils		ZZZZ	ZZZZ					5	5000								oskill	400	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 1k	ZZ - Lorenado		ZZZZ	ZZZZ					5	5000								oskill	467	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 1l	ZZ - Freezing Gale		ZZZZ	ZZZZ					5	5000								oskill	390	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 1m	ZZ - Blackstorm		ZZZZ	ZZZZ					5	5000								oskill	442	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 1n	ZZ - Summon Blood Elementals		ZZZZ	ZZZZ					5	5000								oskill	322	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 1o	ZZ - Black Sleep		ZZZZ	ZZZZ					5	5000								oskill	432	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 1p	ZZ - Howling Totem		ZZZZ	ZZZZ					5	5000								oskill	420	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 1q	ZZ - Frostclaw Totem		ZZZZ	ZZZZ					5	5000								oskill	421	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 1r	ZZ - Lion Stance		ZZZZ	ZZZZ					5	5000								oskill	357	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 1s	ZZ - Ecstatic Frenzy		ZZZZ	ZZZZ					5	5000								oskill	324	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 1t	ZZ - Lionheart		ZZZZ	ZZZZ					5	5000								oskill	429	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 1u	ZZ - Wildfire		ZZZZ	ZZZZ					5	5000								oskill	394	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 1u2	ZZ - Summon Shadows		ZZZZ	ZZZZ					5	5000								oskill	401	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 1v	ZZ - Summon Lamia		ZZZZ	ZZZZ					5	5000								oskill	403	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 1w	ZZ - Massacre		ZZZZ	ZZZZ					5	5000								oskill	409	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 1x	ZZ - Ghost Arrow		ZZZZ	ZZZZ					5	5000								oskill	301	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 1y	ZZ - Flamestrike		ZZZZ	ZZZZ					5	5000								oskill	453	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 1z	ZZ - Hymn		ZZZZ	ZZZZ					5	5000								oskill	450	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 2a	ZZ - SorcFamiliar		ZZZZ	ZZZZ					5	5000								oskill	472	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 2b	ZZ - Bionetic Slam		ZZZZ	ZZZZ					5	5000								oskill	329	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 2b2	ZZ - Nova Shot		ZZZZ	ZZZZ					5	5000								oskill	385	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 2b3	ZZ - Colosseum		ZZZZ	ZZZZ					5	5000								oskill	430	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 2c	ZZ - Snake Stance		ZZZZ	ZZZZ					5	5000								oskill	358	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 2d	ZZ - Miasma		ZZZZ	ZZZZ					5	5000								oskill	468	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 2e	ZZ - Mind Flay		ZZZZ	ZZZZ					5	5000								oskill	443	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 2f	ZZ - Quill Storm		ZZZZ	ZZZZ					5	5000								oskill	377	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 2g	ZZ - Carpet of Spiders		ZZZZ	ZZZZ					5	5000								oskill	469	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 2h	ZZ - Bend the Shadows		ZZZZ	ZZZZ					5	5000								oskill	414	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 2i	ZZ - Summon Veil King		ZZZZ	ZZZZ					5	5000								oskill	404	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 2j	ZZ - Rebound		ZZZZ	ZZZZ					5	5000								oskill	373	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 2k	ZZ - Summon Void Archon		ZZZZ	ZZZZ					5	5000								oskill	405	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 2l	ZZ - Moonbeam		ZZZZ	ZZZZ					5	5000								oskill	306	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 2m	ZZ - Bear Stance		ZZZZ	ZZZZ					5	5000								oskill	359	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 2n	ZZ - Bear Claw		ZZZZ	ZZZZ					5	5000								oskill	371	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 2o	ZZ - Firedance		ZZZZ	ZZZZ					5	5000								oskill	455	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 2p	ZZ - Lemures		ZZZZ	ZZZZ					5	5000								oskill	433	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 2q	ZZ - Batstrike		ZZZZ	ZZZZ					5	5000								oskill	326	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 2r	ZZ - Swarm		ZZZZ	ZZZZ					5	5000								oskill	470	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 2s	ZZ - Barrier Strike		ZZZZ	ZZZZ					5	5000								oskill	333	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 2t	ZZ - Landmine		ZZZZ	ZZZZ					5	5000								oskill	336	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 2u	ZZ - Barrage		ZZZZ	ZZZZ					5	5000								oskill	302	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 2v	ZZ - Bane		ZZZZ	ZZZZ					5	5000								oskill	424	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 2w	ZZ - Angel of Death		ZZZZ	ZZZZ					5	5000								oskill	406	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 2x	ZZ - Wyrmshot		ZZZZ	ZZZZ					5	5000								oskill	304	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 2y	ZZ - Balefire		ZZZZ	ZZZZ					5	5000								oskill	312	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 2z	ZZ - Tempest		ZZZZ	ZZZZ					5	5000								oskill	463	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 3a	ZZ - Wolf Stance		ZZZZ	ZZZZ					5	5000								oskill	356	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 3b	ZZ - Wolf Companion		ZZZZ	ZZZZ					5	5000								oskill	366	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 3c	ZZ - Thorn Wall		ZZZZ	ZZZZ					5	5000								oskill	380	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 3d	ZZ - Widowmaker		ZZZZ	ZZZZ					5	5000								oskill	413	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 3e	ZZ - Crucify		ZZZZ	ZZZZ					5	5000								oskill	327	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 3f	ZZ - Judgement		ZZZZ	ZZZZ					5	5000								oskill	446	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 3g	ZZ - Thunder Slam		ZZZZ	ZZZZ					5	5000								oskill	353	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 3h	ZZ - Thunderstone		ZZZZ	ZZZZ					5	5000								oskill	462	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 3i	ZZ - Arcane Torrent		ZZZZ	ZZZZ					5	5000								oskill	473	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 3j	ZZ - Ricochet		ZZZZ	ZZZZ					5	5000								oskill	308	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 3k	ZZ - Arcane Strike		ZZZZ	ZZZZ					5	5000								oskill	431	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 3l	ZZ - Retaliate		ZZZZ	ZZZZ					5	5000								oskill	426	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 3m	ZZ - Deathlord		ZZZZ	ZZZZ					5	5000								oskill	415	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 3n	ZZ - Idol2Scosglen		ZZZZ	ZZZZ					5	5000								oskill	395	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 3o	ZZ - Trap Rat Form		ZZZZ	ZZZZ					5	5000								oskill	376	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 3p	ZZ - Hammerstrike		ZZZZ	ZZZZ					5	5000								oskill	427	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 3q	ZZ - Wychwind		ZZZZ	ZZZZ					5	5000								oskill	343	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - Cotw 3r	ZZ - (R) Holy Trap Advanced		ZZZZ	ZZZZ					5	5000								oskill	682	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 3s	ZZ - Abyss		ZZZZ	ZZZZ					5	5000								oskill	459	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 3t	ZZ - Twin Fang Strike		ZZZZ	ZZZZ					5	5000								oskill	334	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 3u	ZZ - Aerials Disaster		ZZZZ	ZZZZ					5	5000								oskill	351	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 3u2	ZZ - Ice Elemental		ZZZZ	ZZZZ					5	5000								oskill	460	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 3v	ZZ - Protector Spirit		ZZZZ	ZZZZ					5	5000								oskill	363	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 3w	ZZ - Pyroblast		ZZZZ	ZZZZ					5	5000								oskill	454	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 3x	ZZ - Elemental		ZZZZ	ZZZZ					5	5000								oskill	386	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 3y	ZZ - Pummel		ZZZZ	ZZZZ					5	5000								oskill	392	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 3z	ZZ - Hunting Banshee		ZZZZ	ZZZZ					5	5000								oskill	387	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 3333333	ZZ - Holy Armor		ZZZZ	ZZZZ					5	5000								oskill	449	1	1	levelreq		10	10																																									0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw 2142	ZZ - Curare		ZZZZ	ZZZZ					5	5000								oskill	601	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw a1	ZZ - Light and Shadow		ZZZZ	ZZZZ					5	5000								oskill	448	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw a2	ZZ - Shamanic Trance		ZZZZ	ZZZZ					5	5000								oskill	609	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw a3	ZZ - Laserblade		ZZZZ	ZZZZ					5	5000								oskill	348	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw a4	ZZ - Lioness		ZZZZ	ZZZZ					5	5000								oskill	319	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw a5	ZZ - Living Flame		ZZZZ	ZZZZ					5	5000								oskill	452	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw a6	ZZ - Moon Queen		ZZZZ	ZZZZ					5	5000								oskill	307	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw a7	ZZ - Mountain King		ZZZZ	ZZZZ					5	5000								oskill	370	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw a8	ZZ - Paragon		ZZZZ	ZZZZ					5	5000								oskill	602	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw a9	ZZ - Plague		ZZZZ	ZZZZ					5	5000								oskill	618	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw a88	ZZ - Perfect Being		ZZZZ	ZZZZ					5	5000								oskill	350	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw aa	ZZ - Ice Queen		ZZZZ	ZZZZ					5	5000								oskill	456	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw aaa	ZZ - Runemaster		ZZZZ	ZZZZ					5	5000								oskill	608	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw ab	ZZ - Spirit Guide		ZZZZ	ZZZZ					5	5000								oskill	369	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw ac	ZZ - Superbeast		ZZZZ	ZZZZ					5	5000								oskill	617	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw ac2	ZZ - Elfin Arrows		ZZZZ	ZZZZ					5	5000								oskill	384	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw ac222	ZZ - Force of Nature		ZZZZ	ZZZZ					5	5000								oskill	610	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw ac2223	ZZ - Embalming		ZZZZ	ZZZZ					5	5000								oskill	422	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw ad	ZZ - Talons Hold		ZZZZ	ZZZZ					5	5000								oskill	412	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw ae	ZZ - Vengeful Power		ZZZZ	ZZZZ					5	5000								oskill	466	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw af	ZZ - Warp Armor		ZZZZ	ZZZZ					5	5000								oskill	464	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw ag	ZZ - Ancient Blood		ZZZZ	ZZZZ					5	5000								oskill	367	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw ah	ZZ - Amatoxin		ZZZZ	ZZZZ					5	5000								oskill	979	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw ai	ZZ - Way of the Spider		ZZZZ	ZZZZ					5	5000								oskill	331	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw aj	ZZ - Witch Blood		ZZZZ	ZZZZ					5	5000								oskill	620	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw ak	ZZ - Wings of Wrath		ZZZZ	ZZZZ					5	5000								oskill	325	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw akk	ZZ - Call Angel King Safe		ZZZZ	ZZZZ					5	5000								oskill	897	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw al	ZZ - Dragonlore		ZZZZ	ZZZZ					5	5000								oskill	305	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw am	ZZ - FamineX		ZZZZ	ZZZZ					5	5000								oskill	410	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw an	ZZ - Dragonfire		ZZZZ	ZZZZ					5	5000								oskill	418	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw ao	ZZ - Dark King		ZZZZ	ZZZZ					5	5000								oskill	445	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw ap	ZZ - Way of the Phoenix		ZZZZ	ZZZZ					5	5000								oskill	335	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw aq	ZZ - Way of the Gryphon		ZZZZ	ZZZZ					5	5000								oskill	605	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw ar	ZZ - Greater Manifestations		ZZZZ	ZZZZ					5	5000								oskill	364	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw as	ZZ - Bane Hunter		ZZZZ	ZZZZ					5	5000								oskill	621	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw at	ZZ - Balance		ZZZZ	ZZZZ					5	5000								oskill	323	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw au	ZZ - Bacchanalia		ZZZZ	ZZZZ					5	5000								oskill	315	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw av	ZZ - Death Ward		ZZZZ	ZZZZ					5	5000								oskill	615	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (D) Cotw aw	ZZ - Defensive Harmony		ZZZZ	ZZZZ					5	5000								oskill	321	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0	ZZ - Squall Gust		ZZZZ	ZZZZ					5	5000								oskill	899	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0a	ZZ - Summon Fallen		ZZZZ	ZZZZ					5	5000								oskill	812	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0b	ZZ - Patriot Sentry		ZZZZ	ZZZZ					5	5000								oskill	885	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0c	ZZ - Wrath		ZZZZ	ZZZZ					5	5000								oskill	76	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0d	ZZ - Spirit of Vengeance		ZZZZ	ZZZZ					5	5000								oskill	603	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0e	ZZ - Exploding Totem		ZZZZ	ZZZZ					5	5000								oskill	1022	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0f	ZZ - Bloody Mary		ZZZZ	ZZZZ					5	5000								oskill	672	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0g	ZZ - Rain of Bombs		ZZZZ	ZZZZ					5	5000								oskill	30	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0h	ZZ - Rune of Ice		ZZZZ	ZZZZ					5	5000								oskill	1008	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0i	ZZ - Doom Serpents		ZZZZ	ZZZZ					5	5000								oskill	701	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0j	ZZ - Spiral Dance		ZZZZ	ZZZZ					5	5000								oskill	1011	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0k	ZZ - Vanquish		ZZZZ	ZZZZ					5	5000								oskill	698	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0l	ZZ - Meteor Shower		ZZZZ	ZZZZ					5	5000								oskill	824	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0m	ZZ - Summon Shock Beast		ZZZZ	ZZZZ					5	5000								oskill	761	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0n	ZZ - Dominate		ZZZZ	ZZZZ					5	5000								oskill	1016	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0o	ZZ - Summon Sinner		ZZZZ	ZZZZ					5	5000								oskill	870	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0p	ZZ - SMG		ZZZZ	ZZZZ					5	5000								oskill	977	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0q	ZZ - BFG83K		ZZZZ	ZZZZ					5	5000								oskill	976	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0r	ZZ - Summon Sirens		ZZZZ	ZZZZ					5	5000								oskill	905	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0s	ZZ - Disintegrate		ZZZZ	ZZZZ					5	5000								oskill	1005	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0t	ZZ - Ice Bolt Nova		ZZZZ	ZZZZ					5	5000								oskill	798	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0u	ZZ - Sunspear		ZZZZ	ZZZZ					5	5000								oskill	693	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0v	ZZ - Ancients Hand		ZZZZ	ZZZZ					5	5000								oskill	892	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0w	ZZ - Beacon		ZZZZ	ZZZZ					5	5000								oskill	604	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0x	ZZ - Dinferno		ZZZZ	ZZZZ					5	5000								oskill	1004	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0y	ZZ - Venomous Spirit		ZZZZ	ZZZZ					5	5000								oskill	1002	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 0z	ZZ - Punisher		ZZZZ	ZZZZ					5	5000								oskill	263	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00a	ZZ - Seal of Fire		ZZZZ	ZZZZ					5	5000								oskill	134	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00b	ZZ - Exorcism		ZZZZ	ZZZZ					5	5000								oskill	637	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00c	ZZ - Searing Orb		ZZZZ	ZZZZ					5	5000								oskill	1000	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00d	ZZ - Clobber		ZZZZ	ZZZZ					5	5000								oskill	904	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00e	ZZ - Charm		ZZZZ	ZZZZ					5	5000								oskill	1018	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00f	ZZ - Other Shackles of Ice		ZZZZ	ZZZZ					5	5000								oskill	571	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00g	ZZ - Typhoon		ZZZZ	ZZZZ					5	5000								oskill	898	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00h	ZZ - Call Necrobot		ZZZZ	ZZZZ					5	5000								oskill	896	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00i	ZZ - Time Strike		ZZZZ	ZZZZ					5	5000								oskill	691	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00j	ZZ - Other Raven Flight		ZZZZ	ZZZZ					5	5000								oskill	569	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00k	ZZ - Bloodstar		ZZZZ	ZZZZ					5	5000								oskill	833	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00l	ZZ - Deathstrike		ZZZZ	ZZZZ					5	5000								oskill	17	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00m	ZZ - Dark Power		ZZZZ	ZZZZ					5	5000								oskill	687	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00n	ZZ - Rathmas Chosen		ZZZZ	ZZZZ					5	5000								oskill	614	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00o	ZZ - Ravage		ZZZZ	ZZZZ					5	5000								oskill	886	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00p	ZZ - Death Coil		ZZZZ	ZZZZ					5	5000								oskill	694	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00q	ZZ - Totembound Guardian		ZZZZ	ZZZZ					5	5000								oskill	83	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00r	ZZ - Apocalypse		ZZZZ	ZZZZ					5	5000								oskill	789	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00s	ZZ - Titan Strike		ZZZZ	ZZZZ					5	5000								oskill	8	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00t	ZZ - Guard Tower		ZZZZ	ZZZZ					5	5000								oskill	972	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00u	ZZ - Summon Overlord		ZZZZ	ZZZZ					5	5000								oskill	670	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00v	ZZ - ATMG Sentry		ZZZZ	ZZZZ					5	5000								oskill	884	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00w	ZZ - Scatter Shot		ZZZZ	ZZZZ					5	5000								oskill	642	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00x	ZZ - Dead Wall Totem		ZZZZ	ZZZZ					5	5000								oskill	797	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00y	ZZ - Cautious Strike		ZZZZ	ZZZZ					5	5000								oskill	690	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 00z	ZZ - Summon Thunder Bear		ZZZZ	ZZZZ					5	5000								oskill	757	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 000a	ZZ - Conquest		ZZZZ	ZZZZ					5	5000								oskill	688	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 000b	ZZ - Countdown		ZZZZ	ZZZZ					5	5000								oskill	825	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 000c	ZZ - Rune of Fire		ZZZZ	ZZZZ					5	5000								oskill	809	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 000d	ZZ - Summon Jinn		ZZZZ	ZZZZ					5	5000								oskill	613	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1	ZZ - Immolation Bomb		ZZZZ	ZZZZ					5	5000								oskill	154	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1a	ZZ - Other Demonic Speed		ZZZZ	ZZZZ					5	5000								oskill	565	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1b	ZZ - Death Blossom		ZZZZ	ZZZZ					5	5000								oskill	20	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1c	ZZ - Other Fire Cascade		ZZZZ	ZZZZ					5	5000								oskill	566	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1d	ZZ - Supernova		ZZZZ	ZZZZ					5	5000								oskill	680	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1e	ZZ - Elemental Totem		ZZZZ	ZZZZ					5	5000								oskill	58	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1f	ZZ - Other Pandemonium		ZZZZ	ZZZZ					5	5000								oskill	567	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1g	ZZ - Other Possess		ZZZZ	ZZZZ					5	5000								oskill	568	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1h	ZZ - Kraken Stance		ZZZZ	ZZZZ					5	5000								oskill	607	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1i	ZZ - Summon Shredder		ZZZZ	ZZZZ					5	5000								oskill	792	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1j	ZZ - Guided Chain		ZZZZ	ZZZZ					5	5000								oskill	635	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1k	ZZ - Other Typhoon Sentry		ZZZZ	ZZZZ					5	5000								oskill	572	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1l	ZZ - Devils Fang Totem		ZZZZ	ZZZZ					5	5000								oskill	967	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1m	ZZ - Overpower		ZZZZ	ZZZZ					5	5000								oskill	643	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1n	ZZ - Elemental Rain		ZZZZ	ZZZZ					5	5000								oskill	820	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1o	ZZ - Diseased Cattle		ZZZZ	ZZZZ					5	5000								oskill	139	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1p	ZZ - Pagan Heart		ZZZZ	ZZZZ					5	5000								oskill	673	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1q	ZZ - DisinUber		ZZZZ	ZZZZ					5	5000								oskill	1001	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1r	ZZ - Player Dynamite		ZZZZ	ZZZZ					5	5000								oskill	882	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1s	ZZ - Electrobolt Spell		ZZZZ	ZZZZ					5	5000								oskill	481	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1t	ZZ - Player Chickens		ZZZZ	ZZZZ					5	5000								oskill	889	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1u	ZZ - Path of Flames		ZZZZ	ZZZZ					5	5000								oskill	983	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1v	ZZ - WhiteZombie		ZZZZ	ZZZZ					5	5000								oskill	616	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1w	ZZ - Phase Bomb		ZZZZ	ZZZZ					5	5000								oskill	624	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1x	ZZ - Holy Trap		ZZZZ	ZZZZ					5	5000								oskill	21	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1y	ZZ - Phalanx		ZZZZ	ZZZZ					5	5000								oskill	634	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 1z	ZZ - Static Ward		ZZZZ	ZZZZ					5	5000								oskill	906	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 2	ZZ - Arrow Swarm		ZZZZ	ZZZZ					5	5000								oskill	903	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 3	ZZ - Jitans Gate		ZZZZ	ZZZZ					5	5000								oskill	829	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 4	ZZ - Unholy Armor		ZZZZ	ZZZZ					5	5000								oskill	29	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 5	ZZ - Lapidate		ZZZZ	ZZZZ					5	5000								oskill	901	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 6	ZZ - Ice Lance		ZZZZ	ZZZZ					5	5000								oskill	104	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 7	ZZ - Tantrum		ZZZZ	ZZZZ					5	5000								oskill	890	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 8	ZZ - Inner Fire		ZZZZ	ZZZZ					5	5000								oskill	1003	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9	ZZ - Tremor		ZZZZ	ZZZZ					5	5000								oskill	612	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9a	ZZ - Summon Bane Monster		ZZZZ	ZZZZ					5	5000								oskill	793	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9b	ZZ - Summon Avalanche		ZZZZ	ZZZZ					5	5000								oskill	871	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9c	ZZ - Blade Barrier		ZZZZ	ZZZZ					5	5000								oskill	746	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9d	ZZ - Blood Flash		ZZZZ	ZZZZ					5	5000								oskill	777	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9e	ZZ - Blood Fury		ZZZZ	ZZZZ					5	5000								oskill	839	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9f	ZZ - Mana Coil		ZZZZ	ZZZZ					5	5000								oskill	706	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9g	ZZ - Thorn Field		ZZZZ	ZZZZ					5	5000								oskill	888	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9h	ZZ - Pyroclastic Flow		ZZZZ	ZZZZ					5	5000								oskill	766	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9i	ZZ - Rune of Mana		ZZZZ	ZZZZ					5	5000								oskill	873	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9j	ZZ - Rock Shock		ZZZZ	ZZZZ					5	5000								oskill	28	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9k	ZZ - Lightning Shield		ZZZZ	ZZZZ					5	5000								oskill	669	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9l	ZZ - Lightning Wall		ZZZZ	ZZZZ					5	5000								oskill	999	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9m	ZZ - Shadow Avatar		ZZZZ	ZZZZ					5	5000								oskill	828	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9n	ZZ - Shadow Blade		ZZZZ	ZZZZ					5	5000								oskill	695	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9o	ZZ - Other Banish		ZZZZ	ZZZZ					5	5000								oskill	563	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	666	666	jew	ZZZ - (R) Cotw 9p	ZZ - Faerie Fire		ZZZZ	ZZZZ					5	5000								oskill	611	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9q	ZZ - Cold Fear		ZZZZ	ZZZZ					5	5000								oskill	997	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9r	ZZ - Other Avatar		ZZZZ	ZZZZ					5	5000								oskill	562	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9s	ZZ - Cone of Cold		ZZZZ	ZZZZ					5	5000								oskill	883	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9t	ZZ - Frozen Crown		ZZZZ	ZZZZ					5	5000								oskill	703	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9u	ZZ - OHMAN		ZZZZ	ZZZZ					5	5000								oskill	24	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9v	ZZ - Nova Bomb		ZZZZ	ZZZZ					5	5000								oskill	153	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9w	ZZ - Fear Bomb Totem		ZZZZ	ZZZZ					5	5000								oskill	22	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9x	ZZ - Nightmare		ZZZZ	ZZZZ					5	5000								oskill	697	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9y	ZZ - Feral Strike		ZZZZ	ZZZZ					5	5000								oskill	887	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 9z	ZZ - Squall Wave		ZZZZ	ZZZZ					5	5000								oskill	902	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 91	ZZ - Hawk Talons		ZZZZ	ZZZZ					5	5000								oskill	1010	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 92	ZZ - Vortex		ZZZZ	ZZZZ					5	5000								oskill	705	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 93	ZZ - Liche Totem		ZZZZ	ZZZZ					5	5000								oskill	671	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 94	ZZ - Greater Charm		ZZZZ	ZZZZ					5	5000								oskill	822	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 95	ZZ - Gorefest		ZZZZ	ZZZZ					5	5000								oskill	891	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 96	ZZ - Hamstring		ZZZZ	ZZZZ					5	5000								oskill	689	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 97	ZZ - Lightning Arena		ZZZZ	ZZZZ					5	5000								oskill	236	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 98	ZZ - Glacial Nova		ZZZZ	ZZZZ					5	5000								oskill	702	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 99	ZZ - Whirlpool		ZZZZ	ZZZZ					5	5000								oskill	1012	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 991	ZZ - Hailstorm		ZZZZ	ZZZZ					5	5000								oskill	119	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 992	ZZ - Summon Rats		ZZZZ	ZZZZ					5	5000								oskill	959	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 993	ZZ - Gamma Field		ZZZZ	ZZZZ					5	5000								oskill	120	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 994	ZZ - Frozen Soul		ZZZZ	ZZZZ					5	5000								oskill	998	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 995	ZZ - Summon Glowing Fungus		ZZZZ	ZZZZ					5	5000								oskill	872	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 996	ZZ - Wraith Arrow		ZZZZ	ZZZZ					5	5000								oskill	969	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 997	ZZ - Summon Daystar		ZZZZ	ZZZZ					5	5000								oskill	791	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 998	ZZ - Black Lotus Strike		ZZZZ	ZZZZ					5	5000								oskill	19	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw 999	ZZ - Summon Darklings		ZZZZ	ZZZZ					5	5000								oskill	1021	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw a	ZZ - Ball Lightning		ZZZZ	ZZZZ					5	5000								oskill	826	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw b	ZZ - Flash Charm		ZZZZ	ZZZZ					5	5000								oskill	823	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw c	ZZ - Bloodspeakers Mark		ZZZZ	ZZZZ					5	5000								oskill	666	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw d	ZZ - Mana Tide Totem		ZZZZ	ZZZZ					5	5000								oskill	57	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw e	ZZ - Flash		ZZZZ	ZZZZ					5	5000								oskill	807	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw f	ZZ - Mark of the Wild		ZZZZ	ZZZZ					5	5000								oskill	1013	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw g	ZZ - Body of the Savior		ZZZZ	ZZZZ					5	5000								oskill	984	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw h	ZZ - Medusa		ZZZZ	ZZZZ					5	5000								oskill	900	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw i	ZZ - Wyrd		ZZZZ	ZZZZ					5	5000								oskill	802	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw j	ZZ - Soulshatter		ZZZZ	ZZZZ					5	5000								oskill	18	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw k	ZZ - Call Blood Golem		ZZZZ	ZZZZ					5	5000								oskill	895	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw l	ZZ - Call Henchman		ZZZZ	ZZZZ					5	5000								oskill	894	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw m	ZZ - Fire Star		ZZZZ	ZZZZ					5	5000								oskill	632	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw n	ZZ - Call Leprechaun		ZZZZ	ZZZZ					5	5000								oskill	1014	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw o	ZZ - Slow		ZZZZ	ZZZZ					5	5000								oskill	619	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw p	ZZ - Mon Spike Ripple		ZZZZ	ZZZZ					5	5000								oskill	800	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw q	ZZ - Silver Streak		ZZZZ	ZZZZ					5	5000								oskill	636	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw r	ZZ - Cataclysm		ZZZZ	ZZZZ					5	5000								oskill	699	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw s	ZZ - Fire Fountain		ZZZZ	ZZZZ					5	5000								oskill	111	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw t	ZZ - Shock Flower		ZZZZ	ZZZZ					5	5000								oskill	840	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw u	ZZ - Champions of the Sun		ZZZZ	ZZZZ					5	5000								oskill	668	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw v	ZZ - Firebolt Nova		ZZZZ	ZZZZ					5	5000								oskill	142	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw w	ZZ - Cherub Strike		ZZZZ	ZZZZ					5	5000								oskill	676	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw x	ZZ - Other Blast Wave		ZZZZ	ZZZZ					5	5000								oskill	564	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw y	ZZ - Other Raven Heart		ZZZZ	ZZZZ					5	5000								oskill	570	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - (R) Cotw z	ZZ - Golden Calf		ZZZZ	ZZZZ					5	5000								oskill	652	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 0a	ZZ - Pounce		ZZZZ	ZZZZ					5	5000								oskill	318	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 0b	ZZ - Guardian Spirit		ZZZZ	ZZZZ					5	5000								oskill	361	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 0c	ZZ - Electrofield Sentry		ZZZZ	ZZZZ					5	5000								oskill	338	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 0d	ZZ - Pagan Rites		ZZZZ	ZZZZ					5	5000								oskill	388	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 0e	ZZ - Great Hunt		ZZZZ	ZZZZ					5	5000								oskill	320	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 0f	ZZ - Takedown		ZZZZ	ZZZZ					5	5000								oskill	316	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 0g	ZZ - ParasiteSkill		ZZZZ	ZZZZ					5	5000								oskill	408	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 0h	ZZ - Tainted Blood		ZZZZ	ZZZZ					5	5000								oskill	441	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 0i	ZZ - Merkabah		ZZZZ	ZZZZ					5	5000								oskill	428	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 0j	ZZ - Buckshot		ZZZZ	ZZZZ					5	5000								oskill	411	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 0k	ZZ - Doom		ZZZZ	ZZZZ					5	5000								oskill	330	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 0l	ZZ - Broadside		ZZZZ	ZZZZ					5	5000								oskill	345	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 0m	ZZ - Elvensong		ZZZZ	ZZZZ					5	5000								oskill	397	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 0n	ZZ - Demonrend		ZZZZ	ZZZZ					5	5000								oskill	439	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 0o	ZZ - Blood Thorns		ZZZZ	ZZZZ					5	5000								oskill	434	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 0p	ZZ - Egg Trap		ZZZZ	ZZZZ					5	5000								oskill	378	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 0q	ZZ - Deaths Fury Totem		ZZZZ	ZZZZ					5	5000								oskill	416	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 0r	ZZ - Seismic Field		ZZZZ	ZZZZ					5	5000								oskill	340	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 0s	ZZ - Mana Sweep		ZZZZ	ZZZZ					5	5000								oskill	474	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 0t	ZZ - Phalanx New		ZZZZ	ZZZZ					5	5000								oskill	303	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 0u	ZZ - Better Bloodstorm		ZZZZ	ZZZZ					5	5000								oskill	313	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 0v	ZZ - Stampede		ZZZZ	ZZZZ					5	5000								oskill	372	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 0w	ZZ - Forked Lightning Sor		ZZZZ	ZZZZ					5	5000								oskill	461	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 0x	ZZ - Dragon Shot		ZZZZ	ZZZZ					5	5000								oskill	419	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 0y	ZZ - Magic Missiles		ZZZZ	ZZZZ					5	5000								oskill	314	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 0z	ZZ - Stormblast		ZZZZ	ZZZZ					5	5000								oskill	355	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 001	ZZ - Flamefront		ZZZZ	ZZZZ					5	5000								oskill	451	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 002	ZZ - Poison Flash		ZZZZ	ZZZZ					5	5000								oskill	396	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 003	ZZ - Plague Avatar		ZZZZ	ZZZZ					5	5000								oskill	398	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 004	ZZ - Frigid Sphere		ZZZZ	ZZZZ					5	5000								oskill	458	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 005	ZZ - Mythal		ZZZZ	ZZZZ					5	5000								oskill	399	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 006	ZZ - Blood Hatred		ZZZZ	ZZZZ					5	5000								oskill	352	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 007	ZZ - Eagle Stance		ZZZZ	ZZZZ					5	5000								oskill	360	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 008	ZZ - Prowl		ZZZZ	ZZZZ					5	5000								oskill	317	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 009	ZZ - Fairy Ring		ZZZZ	ZZZZ					5	5000								oskill	310	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 010	ZZ - Defender Spirit		ZZZZ	ZZZZ					5	5000								oskill	362	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 011	ZZ - Scorpion Blade		ZZZZ	ZZZZ					5	5000								oskill	341	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 012	ZZ - Rain of Fire		ZZZZ	ZZZZ					5	5000								oskill	389	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 013	ZZ - Screaming Eagle		ZZZZ	ZZZZ					5	5000								oskill	374	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 014	ZZ - Nova Charge		ZZZZ	ZZZZ					5	5000								oskill	465	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 015	ZZ - Overkill		ZZZZ	ZZZZ					5	5000								oskill	375	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - Cotw REALM	ZZ - Searing Light		ZZZZ	ZZZZ					5	5000								oskill	681	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 017	ZZ - Cold Blood		ZZZZ	ZZZZ					5	5000								oskill	457	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 018	ZZ - Enfilade		ZZZZ	ZZZZ					5	5000								oskill	309	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 019	ZZ - Seismic Charge		ZZZZ	ZZZZ					5	5000								oskill	337	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 020	ZZ - Queen of Blades		ZZZZ	ZZZZ					5	5000								oskill	328	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 021	ZZ - Rapture		ZZZZ	ZZZZ					5	5000								oskill	447	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 022	ZZ - Treewarden Form		ZZZZ	ZZZZ					5	5000								oskill	391	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 023	ZZ - Circle of Life		ZZZZ	ZZZZ					5	5000								oskill	393	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 024	ZZ - Ferocity		ZZZZ	ZZZZ					5	5000								oskill	379	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 025	ZZ - Fireball Sentry		ZZZZ	ZZZZ					5	5000								oskill	339	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 026	ZZ - Shadow Refuge		ZZZZ	ZZZZ					5	5000								oskill	332	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 027	ZZ - Rocket Bolt		ZZZZ	ZZZZ					5	5000								oskill	417	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 028	ZZ - PsionicSkill		ZZZZ	ZZZZ					5	5000								oskill	349	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 029	ZZ - Moonstrike		ZZZZ	ZZZZ					5	5000								oskill	471	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - Cotw 030	ZZ - (R) Rising Dawn		ZZZZ	ZZZZ					5	5000								oskill	480	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 031	ZZ - Shower of Rocks		ZZZZ	ZZZZ					5	5000								oskill	354	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 032	ZZ - Scourge		ZZZZ	ZZZZ					5	5000								oskill	435	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 033	ZZ - Lava Pit		ZZZZ	ZZZZ					5	5000								oskill	311	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 034	ZZ - Shuriken Flurry		ZZZZ	ZZZZ					5	5000								oskill	347	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 035	ZZ - Fireheart Totem		ZZZZ	ZZZZ					5	5000								oskill	423	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 036	ZZ - Cascade		ZZZZ	ZZZZ					5	5000								oskill	382	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 037	ZZ - Sacrifices		ZZZZ	ZZZZ					5	5000								oskill	407	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 038	ZZ - Dragonshout		ZZZZ	ZZZZ					5	5000								oskill	437	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 039	ZZ - Slayer		ZZZZ	ZZZZ					5	5000								oskill	444	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 1a	ZZ - Maelstrom MkIV		ZZZZ	ZZZZ					5	5000								oskill	344	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 1b	ZZ - Blink		ZZZZ	ZZZZ					5	5000								oskill	346	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 1c	ZZ - Storm Crows		ZZZZ	ZZZZ					5	5000								oskill	342	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 1c2	ZZ - Summon Rampagor		ZZZZ	ZZZZ					5	5000								oskill	402	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 1d	ZZ - Blindside		ZZZZ	ZZZZ					5	5000								oskill	381	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 1e	ZZ - Spirit Walk		ZZZZ	ZZZZ					5	5000								oskill	365	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 1f	ZZ - Stormeye Totem		ZZZZ	ZZZZ					5	5000								oskill	425	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 1g	ZZ - Spore Shot		ZZZZ	ZZZZ					5	5000								oskill	383	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 1h	ZZ - Bladestorm		ZZZZ	ZZZZ					5	5000								oskill	475	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 1i	ZZ - Fortress		ZZZZ	ZZZZ					5	5000								oskill	368	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 1j	ZZ - Summon Acid Devils		ZZZZ	ZZZZ					5	5000								oskill	400	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 1k	ZZ - Lorenado		ZZZZ	ZZZZ					5	5000								oskill	467	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 1l	ZZ - Freezing Gale		ZZZZ	ZZZZ					5	5000								oskill	390	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 1m	ZZ - Blackstorm		ZZZZ	ZZZZ					5	5000								oskill	442	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 1n	ZZ - Summon Blood Elementals		ZZZZ	ZZZZ					5	5000								oskill	322	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 1o	ZZ - Black Sleep		ZZZZ	ZZZZ					5	5000								oskill	432	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 1p	ZZ - Howling Totem		ZZZZ	ZZZZ					5	5000								oskill	420	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 1q	ZZ - Frostclaw Totem		ZZZZ	ZZZZ					5	5000								oskill	421	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 1r	ZZ - Lion Stance		ZZZZ	ZZZZ					5	5000								oskill	357	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 1s	ZZ - Ecstatic Frenzy		ZZZZ	ZZZZ					5	5000								oskill	324	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 1t	ZZ - Lionheart		ZZZZ	ZZZZ					5	5000								oskill	429	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 1u	ZZ - Wildfire		ZZZZ	ZZZZ					5	5000								oskill	394	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 1u2	ZZ - Summon Shadows		ZZZZ	ZZZZ					5	5000								oskill	401	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 1v	ZZ - Summon Lamia		ZZZZ	ZZZZ					5	5000								oskill	403	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 1w	ZZ - Massacre		ZZZZ	ZZZZ					5	5000								oskill	409	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 1x	ZZ - Ghost Arrow		ZZZZ	ZZZZ					5	5000								oskill	301	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 1y	ZZ - Flamestrike		ZZZZ	ZZZZ					5	5000								oskill	453	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 1z	ZZ - Hymn		ZZZZ	ZZZZ					5	5000								oskill	450	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 2a	ZZ - SorcFamiliar		ZZZZ	ZZZZ					5	5000								oskill	472	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 2b	ZZ - Bionetic Slam		ZZZZ	ZZZZ					5	5000								oskill	329	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 2b2	ZZ - Nova Shot		ZZZZ	ZZZZ					5	5000								oskill	385	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 2b3	ZZ - Colosseum		ZZZZ	ZZZZ					5	5000								oskill	430	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 2c	ZZ - Snake Stance		ZZZZ	ZZZZ					5	5000								oskill	358	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 2d	ZZ - Miasma		ZZZZ	ZZZZ					5	5000								oskill	468	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 2e	ZZ - Mind Flay		ZZZZ	ZZZZ					5	5000								oskill	443	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 2f	ZZ - Quill Storm		ZZZZ	ZZZZ					5	5000								oskill	377	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 2g	ZZ - Carpet of Spiders		ZZZZ	ZZZZ					5	5000								oskill	469	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 2h	ZZ - Bend the Shadows		ZZZZ	ZZZZ					5	5000								oskill	414	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 2i	ZZ - Summon Veil King		ZZZZ	ZZZZ					5	5000								oskill	404	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 2j	ZZ - Rebound		ZZZZ	ZZZZ					5	5000								oskill	373	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 2k	ZZ - Summon Void Archon		ZZZZ	ZZZZ					5	5000								oskill	405	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 2l	ZZ - Moonbeam		ZZZZ	ZZZZ					5	5000								oskill	306	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 2m	ZZ - Bear Stance		ZZZZ	ZZZZ					5	5000								oskill	359	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 2n	ZZ - Bear Claw		ZZZZ	ZZZZ					5	5000								oskill	371	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 2o	ZZ - Firedance		ZZZZ	ZZZZ					5	5000								oskill	455	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 2p	ZZ - Lemures		ZZZZ	ZZZZ					5	5000								oskill	433	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 2q	ZZ - Batstrike		ZZZZ	ZZZZ					5	5000								oskill	326	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 2r	ZZ - Swarm		ZZZZ	ZZZZ					5	5000								oskill	470	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 2s	ZZ - Barrier Strike		ZZZZ	ZZZZ					5	5000								oskill	333	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 2t	ZZ - Landmine		ZZZZ	ZZZZ					5	5000								oskill	336	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 2u	ZZ - Barrage		ZZZZ	ZZZZ					5	5000								oskill	302	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 2v	ZZ - Bane		ZZZZ	ZZZZ					5	5000								oskill	424	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 2w	ZZ - Angel of Death		ZZZZ	ZZZZ					5	5000								oskill	406	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 2x	ZZ - Wyrmshot		ZZZZ	ZZZZ					5	5000								oskill	304	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 2y	ZZ - Balefire		ZZZZ	ZZZZ					5	5000								oskill	312	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 2z	ZZ - Tempest		ZZZZ	ZZZZ					5	5000								oskill	463	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 3a	ZZ - Wolf Stance		ZZZZ	ZZZZ					5	5000								oskill	356	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 3b	ZZ - Wolf Companion		ZZZZ	ZZZZ					5	5000								oskill	366	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 3c	ZZ - Thorn Wall		ZZZZ	ZZZZ					5	5000								oskill	380	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 3d	ZZ - Widowmaker		ZZZZ	ZZZZ					5	5000								oskill	413	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 3e	ZZ - Crucify		ZZZZ	ZZZZ					5	5000								oskill	327	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 3f	ZZ - Judgement		ZZZZ	ZZZZ					5	5000								oskill	446	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 3g	ZZ - Thunder Slam		ZZZZ	ZZZZ					5	5000								oskill	353	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 3h	ZZ - Thunderstone		ZZZZ	ZZZZ					5	5000								oskill	462	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 3i	ZZ - Arcane Torrent		ZZZZ	ZZZZ					5	5000								oskill	473	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 3j	ZZ - Ricochet		ZZZZ	ZZZZ					5	5000								oskill	308	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 3k	ZZ - Arcane Strike		ZZZZ	ZZZZ					5	5000								oskill	431	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 3l	ZZ - Retaliate		ZZZZ	ZZZZ					5	5000								oskill	426	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 3m	ZZ - Deathlord		ZZZZ	ZZZZ					5	5000								oskill	415	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 3n	ZZ - Idol2Scosglen		ZZZZ	ZZZZ					5	5000								oskill	395	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 3o	ZZ - Trap Rat Form		ZZZZ	ZZZZ					5	5000								oskill	376	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 3p	ZZ - Hammerstrike		ZZZZ	ZZZZ					5	5000								oskill	427	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 3q	ZZ - Wychwind		ZZZZ	ZZZZ					5	5000								oskill	343	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew	ZZZ - Cotw 3r	ZZ - (R) Holy Trap Advanced		ZZZZ	ZZZZ					5	5000								oskill	682	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 3s	ZZ - Abyss		ZZZZ	ZZZZ					5	5000								oskill	459	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 3t	ZZ - Twin Fang Strike		ZZZZ	ZZZZ					5	5000								oskill	334	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 3u	ZZ - Aerials Disaster		ZZZZ	ZZZZ					5	5000								oskill	351	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 3u2	ZZ - Ice Elemental		ZZZZ	ZZZZ					5	5000								oskill	460	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 3v	ZZ - Protector Spirit		ZZZZ	ZZZZ					5	5000								oskill	363	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 3w	ZZ - Pyroblast		ZZZZ	ZZZZ					5	5000								oskill	454	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 3x	ZZ - Elemental		ZZZZ	ZZZZ					5	5000								oskill	386	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 3y	ZZ - Pummel		ZZZZ	ZZZZ					5	5000								oskill	392	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 3z	ZZ - Hunting Banshee		ZZZZ	ZZZZ					5	5000								oskill	387	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew	ZZZ - Cotw 3333333	ZZ - Holy Armor		ZZZZ	ZZZZ					5	5000								oskill	449	1	1	levelreq		10	10	blessings-counter		10	10																																					0
 SuperBowSU		1		1	1	120	120	v#X	ZZZZ - Special	Valkyre's Prime		ZZZZZ	ZZZZZ					10	100000								dex-add	102	102	102	str-add	102	102	102	death-skill	163	100	1	dmg%		200	200	dmg-norm		400	1000	kill-skill	587	15	15	oskill	1088	10	10	dmg-fire		111	666	dmg-cold		111	666	dmg-ltng		111	666	dmg-mag		111	666	allskills		1	1	0
 TradersChest		1		1	1	666	666	`^`	ZZZZZ - NEW a	Uber Reward							1	10	100000								light		1	1																																													0
-TrophyCarrier		1		1	1	120	120	`|#	ZZZZZ - NEW b	Uber Reward							1	5	5000								xsignet01		1	1																																													0
+TrophyCarrier		1		1	1	666	666	`|#	ZZZZZ - NEW b	Uber Reward							1	5	5000								xsignet01		1	1																																													0
 LC0_STATUE		1		1	1	1	1	||;	ZZZZZ - NEW c	Level Challenge 0							1	0	0								oskill	1139	1	1																																													0
 HEYTHISISLC0CHARM		1		1	1	1	666	#X0	ZZZZZ - New d	LC0							1	1	1								xsignet01		1	1																																													0
 HEYTHISISLC0CHARM2		1		1	1	1	1	#X0	ZZZZZ - New e	LC0							1	1	1								xsignet01		1	1																																													0
@@ -2583,22 +2583,25 @@ CycleOfAggression01		1		1	1	120	60	cm1										2	1000								uninterrupt		1	2	a
 CycleOfAggression11		1		1	1	120	70	cm2										2	1000								uninterrupt		1	5	att%		25	50	dmg-norm		3	8																																					0
 CycleOfAggression21		1		1	1	120	80	cm3										2	1000								uninterrupt		1	10	att%		50	100	dmg-norm		6	12																																					0
 Soulkeep2		1		1	1	120	120	lawl									1	5	5000								strbonusblue		25	25	light		-5	-5	hp%-mp%		6	10	innate-fury	147	50	2																																	0
-Cornerstone of the Roflworld		0		1	1	120	100	jew										5	5000								oskill	1024	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew										5	5000								oskill	1025	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew										5	5000								oskill	1026	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew										5	5000								oskill	1027	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew										5	5000								oskill	1028	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew										5	5000								oskill	1029	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew										5	5000								oskill	1030	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew										5	5000								oskill	1031	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew										5	5000								oskill	1032	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew										5	5000								oskill	1033	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew										5	5000								oskill	1037	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		0		1	1	120	100	jew										5	5000								oskill	1158	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew										5	5000								oskill	436	1	1	levelreq		10	10																																									0
-Cornerstone of the Roflworld		1		1	1	120	100	jew										5	5000								oskill	438	1	1	levelreq		10	10																																									0
-UldyssianCharm2		1		1	1	120	120	##.		Uber Reward	NEW	ZZZ	ZZZ				1	5	5000								gethit-skill	248	5	1	allskills		0	1	res-all		11	30	charged	876	100	1																																	0
+Cornerstone of the Roflworld		0		1	1	120	100	jew										5	5000								oskill	1024	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew										5	5000								oskill	1025	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew										5	5000								oskill	1026	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew										5	5000								oskill	1027	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew										5	5000								oskill	1028	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew										5	5000								oskill	1029	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew										5	5000								oskill	1030	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew										5	5000								oskill	1031	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew										5	5000								oskill	1032	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew										5	5000								oskill	1033	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew										5	5000								oskill	1037	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		0		1	1	120	100	jew										5	5000								oskill	1158	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew										5	5000								oskill	436	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+Cornerstone of the Roflworld		1		1	1	120	100	jew										5	5000								oskill	438	1	1	levelreq		10	10	blessings-counter		10	10																																					0
+UldyssianCharm2		1		1	1	666	666	##.		Uber Reward	NEW	ZZZ	ZZZ				1	5	5000								gethit-skill	248	5	1	allskills		0	1	res-all		11	30	charged	876	100	1																																	0
 BossSummonerRing		1		1	1	1	0	vor1										5	5000				invrinquest				xsignet01		1	1																																													0
 UpgradedBossSummonerRing		1		1	1	1	120	vor2										5	5000	blac	blac		invrinquest				oskill	1182	1	1	light		6	15	all-stats		26	50	hp		200	200	mana		200	200																													0
-RathmasSupremacy		1		1	1	666	666	voXX									1	5	5000	blac	blac						light		5	10																																													
-RathmasSupremacy2		1		1	1	120	120	voXX									1	5	5000	blac	blac						light		5	10																																													
+RathmasSupremacy		1		1	1	666	666	voXX									1	5	5000	blac	blac						light		5	10																																													0
+RathmasSupremacy2		1		1	1	120	120	voXX									1	5	5000	blac	blac						light		5	10																																													0
+New2Breathstealer2		1		4	1	120	100	@68	Coronet (Sacred(2))	Sacred(2) Unique		149	149					5	5000	blac	blac						sock		4	4	ac		401	500	str		-50	-50	enr		100	100	ease		-50	-50	heal-kill		151	200	allskills		1	1	extra-all		31	40	cast3		25	25	oskill	694	12	16	vit		50	50	hit-skill	895	5	20	0
+TrophyCarrier2		1		1	1	120	100	`|#	ZZZZZ - NEW b	Uber Reward							1	5	5000								xsignet01		1	1																																													0
+UldyssianCharm3		1		1	1	120	120	##.		Uber Reward	NEW	ZZZ	ZZZ				1	5	5000								gethit-skill	248	5	1	allskills		0	2	res-all		11	30	charged	876	100	1																																	0

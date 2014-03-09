@@ -532,7 +532,7 @@
 530	The Allseeing Eye	41	
 531	The Allseeing Eye	49	
 532	Dark Star	100	
-533	Breathstealer	100	
+533	Breathstealer [legacy]	666	
 534	Warlock's Brilliance	100	
 535	The Barracuda	5	
 536	The Barracuda	15	
@@ -1115,8 +1115,8 @@
 1113	Banner of Duncraig	40	
 1114	Banner of Duncraig	49	
 1115	Lightforge	100	
-1116	Stormflyer	666	
-1117	Linarian's Legacy	100	
+1116	Stormflyer	100	
+1117	Linarian's Legacy	666	
 1118	Bul Kathos' Teaching	13	
 1119	Bul Kathos' Teaching	22	
 1120	Bul Kathos' Teaching	31	
@@ -2480,7 +2480,7 @@
 2478	Cornerstone of the World	100	
 2479	\red;Valkyrie's Prime	120	
 2480	Trader's Chest	666	
-2481	The Sleep	120	
+2481	The Sleep	666	
 2482	\orange;Instructions\n\gold;Level Challenge 0	1	
 2483	\gold;Harkon Crystal	666	
 2484	\gold;Harkon Crystal	1	
@@ -2502,7 +2502,7 @@
 2500	Linarian's Legacy	100	
 2501	Soulkeeper	666	
 2502	Soul of Kabraxis	100	
-2503	\red;Welcome! Median XL: Ultimative XIII\blue;	0	
+2503	\red;Welcome! Median XL: Ultimative XIVb\blue;	0	
 2504	Lucion's Soulstone	666	
 2505	Tome of Possession	666	
 2506	Cycle of Power	666	
@@ -2597,8 +2597,11 @@
 2595	Cornerstone of the World	100	
 2596	Cornerstone of the World	100	
 2597	Cornerstone of the World	100	
-2598	\gold;Uldyssian's Sword	120	
+2598	\gold;Uldyssian's Sword	666	
 2599	\gold;Ring of Pride	0	invrinquest
 2600	Quest Ring\nSigil of the 7 Deadly Sins	120	invrinquest
 2601	Rathma's Supremacy	666	
 2602	Rathma's Supremacy	120	
+2603	Breathstealer	100	
+2604	The Sleep	100	
+2605	\gold;Uldyssian's Sword	120	

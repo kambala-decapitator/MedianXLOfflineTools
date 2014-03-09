@@ -680,6 +680,7 @@ sub parsetxt
                             {
                                 if (defined $subHash)
                                 {
+                                    $subHash = $1 if $subHash =~ /^\"(.+)\"$/; # stupid Excel may add double-quotes
                                     $parsed->{$subHash}->{$fieldName} = $s if ($addOnce == 0 or ($addOnce > 0 and !defined $parsed->{$subHash}->{$fieldName}));
                                     _log("\tat $subHash:2: $fieldName = $s\n");
                                 }
