@@ -14,12 +14,15 @@ void MedianXLOfflineTools::moveUpdateActionToAppleMenu()
 {
     NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
 
-    NSMenu *mainMenu = [NSApp mainMenu], *helpMenu = [[mainMenu itemWithTitle:NSStringFromQString(ui->menuHelp->title())] submenu];
-    NSMenuItem *checkForUpdateMenuItem = [[helpMenu itemAtIndex:0] retain];
+    QString helpMenuTitle = ui->menuHelp->title();
+#if IS_QT5
+    helpMenuTitle = helpMenuTitle.remove('&');
+#endif
 
+    NSMenu *mainMenu = [NSApp mainMenu], *helpMenu = [[mainMenu itemWithTitle:NSStringFromQString(helpMenuTitle)] submenu];
+    NSMenuItem *checkForUpdateMenuItem = [[[helpMenu itemAtIndex:0] retain] autorelease];
     [helpMenu removeItem:checkForUpdateMenuItem];
     [[[mainMenu itemAtIndex:0] submenu] insertItem:checkForUpdateMenuItem atIndex:3];
-    [checkForUpdateMenuItem release];
 
     [pool release];
 }

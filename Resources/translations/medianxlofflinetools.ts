@@ -294,83 +294,83 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../itemdatabase.cpp" line="348"/>
+        <location filename="../../itemdatabase.cpp" line="351"/>
         <source>Monster names not loaded.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../itemdatabase.cpp" line="372"/>
+        <location filename="../../itemdatabase.cpp" line="375"/>
         <source>Runewords data not loaded.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../itemdatabase.cpp" line="401"/>
+        <location filename="../../itemdatabase.cpp" line="404"/>
         <source>Socketables data not loaded.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../itemdatabase.cpp" line="447"/>
+        <location filename="../../itemdatabase.cpp" line="450"/>
         <source>Non-magic qualities data not loaded.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../itemdatabase.cpp" line="510"/>
+        <location filename="../../itemdatabase.cpp" line="513"/>
         <source>%1&apos;s </source>
         <comment>personalized name</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../itemdatabase.cpp" line="544"/>
+        <location filename="../../itemdatabase.cpp" line="547"/>
         <source>magic</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../itemdatabase.cpp" line="547"/>
+        <location filename="../../itemdatabase.cpp" line="550"/>
         <source>set</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../itemdatabase.cpp" line="550"/>
+        <location filename="../../itemdatabase.cpp" line="553"/>
         <source>rare</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../itemdatabase.cpp" line="553"/>
+        <location filename="../../itemdatabase.cpp" line="556"/>
         <source>charm</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../itemdatabase.cpp" line="553"/>
+        <location filename="../../itemdatabase.cpp" line="556"/>
         <source>unique</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../itemdatabase.cpp" line="556"/>
+        <location filename="../../itemdatabase.cpp" line="559"/>
         <source>crafted</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../itemdatabase.cpp" line="559"/>
+        <location filename="../../itemdatabase.cpp" line="562"/>
         <source>honorific</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../itemdatabase.cpp" line="567"/>
+        <location filename="../../itemdatabase.cpp" line="570"/>
         <source>runeword</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../itemdatabase.cpp" line="579"/>
+        <location filename="../../itemdatabase.cpp" line="582"/>
         <source>ethereal</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../itemdatabase.cpp" line="638"/>
+        <location filename="../../itemdatabase.cpp" line="641"/>
         <source>Error loading &apos;%1&apos;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../itemdatabase.cpp" line="638"/>
+        <location filename="../../itemdatabase.cpp" line="641"/>
         <source>Reason: %1</source>
         <comment>error with file</comment>
         <translation type="unfinished"></translation>
@@ -468,59 +468,59 @@
 <context>
     <name>ItemsPropertiesSplitter</name>
     <message>
-        <location filename="../../itemspropertiessplitter.cpp" line="813"/>
+        <location filename="../../itemspropertiessplitter.cpp" line="811"/>
         <source>Arcane Shards</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../itemspropertiessplitter.cpp" line="805"/>
+        <location filename="../../itemspropertiessplitter.cpp" line="803"/>
         <source>Signet of Learning</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../../itemspropertiessplitter.cpp" line="80"/>
+        <location filename="../../itemspropertiessplitter.cpp" line="79"/>
         <source>Eat signet [%n free stat(s)]</source>
         <translation type="unfinished">
             <numerusform></numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../../itemspropertiessplitter.cpp" line="205"/>
+        <location filename="../../itemspropertiessplitter.cpp" line="203"/>
         <source>Disenchant into</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../itemspropertiessplitter.cpp" line="223"/>
+        <location filename="../../itemspropertiessplitter.cpp" line="221"/>
         <source>All</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../itemspropertiessplitter.cpp" line="235"/>
+        <location filename="../../itemspropertiessplitter.cpp" line="233"/>
         <source>Remove Mystic Orbs</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../itemspropertiessplitter.cpp" line="245"/>
+        <location filename="../../itemspropertiessplitter.cpp" line="243"/>
         <source>Downgrade to</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../itemspropertiessplitter.cpp" line="265"/>
+        <location filename="../../itemspropertiessplitter.cpp" line="263"/>
         <source>Depersonalize</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../itemspropertiessplitter.cpp" line="271"/>
+        <location filename="../../itemspropertiessplitter.cpp" line="269"/>
         <source>Personalize</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../itemspropertiessplitter.cpp" line="275"/>
+        <location filename="../../itemspropertiessplitter.cpp" line="273"/>
         <source>Personalize with name...</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../../itemspropertiessplitter.cpp" line="358"/>
+        <location filename="../../itemspropertiessplitter.cpp" line="356"/>
         <source>You&apos;re going to eat %n signet(s), which is beyond the limit (%1) by %2.
 Do you really want to do it?</source>
         <translation type="unfinished">
@@ -528,73 +528,73 @@ Do you really want to do it?</source>
         </translation>
     </message>
     <message>
-        <location filename="../../itemspropertiessplitter.cpp" line="392"/>
+        <location filename="../../itemspropertiessplitter.cpp" line="390"/>
         <source>Colors don&apos;t work in personalized name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../itemspropertiessplitter.cpp" line="544"/>
+        <location filename="../../itemspropertiessplitter.cpp" line="542"/>
         <source>You&apos;ve received %1</source>
         <comment>number of Arcane Crystals, Arcane Shards, or Signets of Learning</comment>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../../itemspropertiessplitter.cpp" line="595"/>
+        <location filename="../../itemspropertiessplitter.cpp" line="593"/>
         <source>%n Arcane Crystal(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../../itemspropertiessplitter.cpp" line="598"/>
+        <location filename="../../itemspropertiessplitter.cpp" line="596"/>
         <source>and</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../../itemspropertiessplitter.cpp" line="598"/>
-        <location filename="../../itemspropertiessplitter.cpp" line="605"/>
+        <location filename="../../itemspropertiessplitter.cpp" line="596"/>
+        <location filename="../../itemspropertiessplitter.cpp" line="603"/>
         <source>%n Arcane Shard(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../../itemspropertiessplitter.cpp" line="609"/>
-        <location filename="../../itemspropertiessplitter.cpp" line="619"/>
-        <location filename="../../itemspropertiessplitter.cpp" line="622"/>
+        <location filename="../../itemspropertiessplitter.cpp" line="607"/>
+        <location filename="../../itemspropertiessplitter.cpp" line="617"/>
+        <location filename="../../itemspropertiessplitter.cpp" line="620"/>
         <source>%n Signet(s) of Learning</source>
         <translation type="unfinished">
             <numerusform></numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../../itemspropertiessplitter.cpp" line="610"/>
+        <location filename="../../itemspropertiessplitter.cpp" line="608"/>
         <source>You&apos;ve eaten %1</source>
         <comment>number of Signets of Learning</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../itemspropertiessplitter.cpp" line="621"/>
+        <location filename="../../itemspropertiessplitter.cpp" line="619"/>
         <source>%1 (now you have %2) and received %3</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../itemspropertiessplitter.cpp" line="624"/>
+        <location filename="../../itemspropertiessplitter.cpp" line="622"/>
         <source>%1 and received %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../itemspropertiessplitter.cpp" line="840"/>
+        <location filename="../../itemspropertiessplitter.cpp" line="838"/>
         <source>Delete</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../itemspropertiessplitter.cpp" line="423"/>
+        <location filename="../../itemspropertiessplitter.cpp" line="421"/>
         <source>Are you sure you want to delete this item?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../itemspropertiessplitter.cpp" line="427"/>
+        <location filename="../../itemspropertiessplitter.cpp" line="425"/>
         <source>Cube is not empty. Do you really want to delete it?
 Note: items inside will be preserved. You can recover them by getting new Cube.</source>
         <translation type="unfinished"></translation>
@@ -791,7 +791,7 @@ Note: items inside will be preserved. You can recover them by getting new Cube.<
 <context>
     <name>Language</name>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1292"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1288"/>
         <source>English</source>
         <comment>Your language name</comment>
         <translation type="unfinished"></translation>
@@ -800,32 +800,32 @@ Note: items inside will be preserved. You can recover them by getting new Cube.<
 <context>
     <name>MedianXLOfflineTools</name>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="88"/>
+        <location filename="../../medianxlofflinetools.cpp" line="84"/>
         <source>1337 hacker detected! Please, play legit.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="89"/>
+        <location filename="../../medianxlofflinetools.cpp" line="85"/>
         <source>Max: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="89"/>
+        <location filename="../../medianxlofflinetools.cpp" line="85"/>
         <source>Min: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="89"/>
+        <location filename="../../medianxlofflinetools.cpp" line="85"/>
         <source>Invested: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="314"/>
+        <location filename="../../medianxlofflinetools.cpp" line="310"/>
         <source>Language will be changed next time you run the application</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="351"/>
+        <location filename="../../medianxlofflinetools.cpp" line="347"/>
         <source>Load Character</source>
         <translation type="unfinished"></translation>
     </message>
@@ -835,488 +835,488 @@ Note: items inside will be preserved. You can recover them by getting new Cube.<
         <translation type="unfinished"></translation>
     </message>
     <message id="true">
-        <location filename="../../medianxlofflinetools.cpp" line="361"/>
+        <location filename="../../medianxlofflinetools.cpp" line="357"/>
         <location filename="../../qd2charrenamer.cpp" line="36"/>
         <source>Character reloaded</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="728"/>
+        <location filename="../../medianxlofflinetools.cpp" line="724"/>
         <source>File &apos;%1&apos; successfully saved!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1139"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1135"/>
         <source>About %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1145"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1141"/>
         <source>&lt;i&gt;Author:&lt;/i&gt; Filipenkov Andrey (&lt;b&gt;kambala&lt;/b&gt;)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1278"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1274"/>
         <source>&amp;Language</source>
         <comment>Language menu</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1360"/>
-        <location filename="../../medianxlofflinetools.cpp" line="1399"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1356"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1395"/>
         <source>Name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1364"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1360"/>
         <source>Class</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1366"/>
-        <location filename="../../medianxlofflinetools.cpp" line="1397"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1362"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1393"/>
         <source>Level</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1368"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1364"/>
         <source>Title</source>
         <comment>Character title - Slayer/Champion/etc.</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1395"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1391"/>
         <source>Type</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1412"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1408"/>
         <source>Inventory Gold</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1415"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1411"/>
         <source>Stash Gold</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1425"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1421"/>
         <source>Strength</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1426"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1422"/>
         <source>Dexterity</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1427"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1423"/>
         <source>Vitality</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1428"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1424"/>
         <source>Energy</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="632"/>
-        <location filename="../../medianxlofflinetools.cpp" line="737"/>
+        <location filename="../../medianxlofflinetools.cpp" line="628"/>
+        <location filename="../../medianxlofflinetools.cpp" line="733"/>
         <source>Error creating file &apos;%1&apos;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="163"/>
+        <location filename="../../medianxlofflinetools.cpp" line="159"/>
         <source>%1 is not associated with %2 files.
 
 Do you want to do it?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="2643"/>
+        <location filename="../../medianxlofflinetools.cpp" line="2639"/>
         <source>Application is default already</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="240"/>
+        <location filename="../../medianxlofflinetools.cpp" line="236"/>
         <source>&apos;%1&apos; files are not supported</source>
         <comment>param is file extension</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="90"/>
+        <location filename="../../medianxlofflinetools.cpp" line="86"/>
         <source>Official Median XL Forum thread</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="90"/>
+        <location filename="../../medianxlofflinetools.cpp" line="86"/>
         <source>Official Russian Median XL Forum thread</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="110"/>
+        <location filename="../../medianxlofflinetools.cpp" line="106"/>
         <source>&lt;filename&gt;_&lt;%1&gt;</source>
         <comment>param is date format expressed in yyyy, MM, hh, etc.</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="111"/>
+        <location filename="../../medianxlofflinetools.cpp" line="107"/>
         <source>&lt;filename&gt;_&lt;UNIX timestamp&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="351"/>
+        <location filename="../../medianxlofflinetools.cpp" line="347"/>
         <source>Diablo 2 Save Files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="706"/>
+        <location filename="../../medianxlofflinetools.cpp" line="702"/>
         <source>Error removing file &apos;%1&apos;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="711"/>
+        <location filename="../../medianxlofflinetools.cpp" line="707"/>
         <source>Error renaming file &apos;%1&apos;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="734"/>
+        <location filename="../../medianxlofflinetools.cpp" line="730"/>
         <source>Error writing file &apos;%1&apos;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1019"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1015"/>
         <source>You have no free space in inventory and stash to store the Cube</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1039"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1035"/>
         <source>Cube has been stored in %1 at (%2,%3)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1095"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1091"/>
         <source>Are you sure you want to disable automatic backups? Then don&apos;t blame me if your character gets corrupted.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1211"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1143"/>
+        <source>&lt;b&gt;Credits:&lt;/b&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;http://modsbylaz.vn.cz/&quot;&gt;BrotherLaz&lt;/a&gt; for this awesome mod&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://www.medianxl.com/u1&quot;&gt;MarcoNecroX&lt;/a&gt; for a hot extension of Median XL called &lt;b&gt;Ultimative&lt;/b&gt;&lt;/li&gt;&lt;li&gt;grig for the Perl source of &lt;a href=&quot;http://grig.vlexofree.com/&quot;&gt;Median XL Online Tools&lt;/a&gt; and tips&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://d2mods.info/index.php?ind=reviews&amp;op=section_view&amp;idev=4&quot;&gt;Phrozen Keep File Guides&lt;/a&gt; for tons of useful information on txt sources&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://www.medianxl.com/u152&quot;&gt;aahz&lt;/a&gt; for providing space on MXL server&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://www.medianxl.com/u5&quot;&gt;whist&lt;/a&gt; for helping with txt magic and D2 internals&lt;/li&gt;&lt;li&gt;FixeR, Zelgadiss, moonra, Vilius, Delegus, aahz HerrNieschnell, Quirinus, RollsRoyce, Aks_kun and gAdlike for intensive testing and tips on GUI &amp; functionality&lt;/li&gt;&lt;/ul&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../medianxlofflinetools.cpp" line="1207"/>
         <source>Experience table data not loaded.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1223"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1219"/>
         <source>Mercenary names not loaded.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1243"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1239"/>
         <source>Base stats data not loaded, using predefined one.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1418"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1414"/>
         <source>Free Skills</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1421"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1417"/>
         <source>Signets of Skill</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1434"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1430"/>
         <source>Free Stats</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1437"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1433"/>
         <source>Signets of Learning</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1443"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1439"/>
         <source>Quests</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1446"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1442"/>
         <source>Hatred</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1446"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1442"/>
         <source>Terror</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1446"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1442"/>
         <source>Destruction</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1457"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1453"/>
         <source>Reward: %1</source>
         <comment>tooltip for quest label</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1459"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1455"/>
         <source>Den of Evil</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1459"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1455"/>
         <source>Radament</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1459"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1455"/>
         <source>Izual</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1459"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1455"/>
         <source>Lam Esen&apos;s Tome</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1459"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1455"/>
         <source>Golden Bird</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../../medianxlofflinetools.cpp" line="1460"/>
-        <location filename="../../medianxlofflinetools.cpp" line="1461"/>
-        <location filename="../../medianxlofflinetools.cpp" line="1462"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1456"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1457"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1458"/>
         <source>%n free skill point(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1463"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1459"/>
         <source>5 free stat points</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1464"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1460"/>
         <source>&apos;+20 to Life&apos; potion</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1776"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1772"/>
         <source>Error opening file &apos;%1&apos;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1790"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1786"/>
         <source>Wrong file signature: should be 0x%1, got 0x%2.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1801"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1797"/>
         <source>Character checksum doesn&apos;t match. Looks like it&apos;s corrupted.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1824"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1820"/>
         <source>This is not Expansion character.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1835"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1831"/>
         <source>Wrong class value: got %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1842"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1838"/>
         <source>Wrong progression value: got %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1849"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1845"/>
         <source>Wrong level: got %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1863"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1859"/>
         <source>Wrong mercenary code: got %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1885"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1881"/>
         <source>Quests data not found!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1902"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1898"/>
         <source>Waypoint data not found!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1929"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1925"/>
         <source>NPC data not found!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1936"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1932"/>
         <source>Stats data not found!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1945"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1941"/>
         <source>Skills data not found!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="2021"/>
+        <location filename="../../medianxlofflinetools.cpp" line="2017"/>
         <source>Stats data is corrupted!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="2084"/>
+        <location filename="../../medianxlofflinetools.cpp" line="2080"/>
         <source>Items data not found!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="2093"/>
+        <location filename="../../medianxlofflinetools.cpp" line="2089"/>
         <source>Corrupted item detected in %1 at (%2,%3)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="2153"/>
+        <location filename="../../medianxlofflinetools.cpp" line="2149"/>
         <source>Mercenary items section not found!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="2172"/>
+        <location filename="../../medianxlofflinetools.cpp" line="2168"/>
         <source>Save file is not terminated correctly!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="2836"/>
+        <location filename="../../medianxlofflinetools.cpp" line="2832"/>
         <source>Character has been modified.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="2837"/>
+        <location filename="../../medianxlofflinetools.cpp" line="2833"/>
         <source>Do you want to save your changes?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="2881"/>
+        <location filename="../../medianxlofflinetools.cpp" line="2877"/>
         <source>Error contacting update server. Please try again later.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="2888"/>
+        <location filename="../../medianxlofflinetools.cpp" line="2884"/>
         <source>New version &lt;b&gt;%1&lt;/b&gt; is available!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="2890"/>
+        <location filename="../../medianxlofflinetools.cpp" line="2886"/>
         <source>You have the latest version</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="2940"/>
+        <location filename="../../medianxlofflinetools.cpp" line="2936"/>
         <source>The character and/or PlugY stashes have been modified externally.
 Do you want to reload them?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="2120"/>
+        <location filename="../../medianxlofflinetools.cpp" line="2116"/>
         <source>100% avoid is kewl</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="730"/>
+        <location filename="../../medianxlofflinetools.cpp" line="726"/>
         <source>The following backups were created:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1143"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1139"/>
         <source>Compiled on: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1147"/>
-        <source>&lt;b&gt;Credits:&lt;/b&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;http://modsbylaz.hugelaser.com/&quot;&gt;BrotherLaz&lt;/a&gt; for this awesome mod&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://www.medianxl.com/u1&quot;&gt;MarcoNecroX&lt;/a&gt; for a hot extension of Median XL called &lt;b&gt;Ultimative&lt;/b&gt;&lt;/li&gt;&lt;li&gt;grig for the Perl source of &lt;a href=&quot;http://grig.vlexofree.com/&quot;&gt;Median XL Online Tools&lt;/a&gt; and tips&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://d2mods.info/index.php?ind=reviews&amp;op=section_view&amp;idev=4&quot;&gt;Phrozen Keep File Guides&lt;/a&gt; for tons of useful information on txt sources&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://www.medianxl.com/u152&quot;&gt;aahz&lt;/a&gt; for providing space on MXL server&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://www.medianxl.com/u5&quot;&gt;whist&lt;/a&gt; for helping with txt magic and D2 internals&lt;/li&gt;&lt;li&gt;FixeR, Zelgadiss, moonra, Vilius, Delegus, aahz HerrNieschnell, Quirinus, RollsRoyce, Aks_kun and gAdlike for intensive testing and tips on GUI &amp; functionality&lt;/li&gt;&lt;/ul&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../medianxlofflinetools.cpp" line="1988"/>
+        <location filename="../../medianxlofflinetools.cpp" line="1984"/>
         <source>Unknown statistic code found: %1. This is not %2 character.</source>
         <comment>second param is mod name</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="2122"/>
+        <location filename="../../medianxlofflinetools.cpp" line="2118"/>
         <source>well, you have %1% actually</source>
         <comment>avoid</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="2137"/>
-        <location filename="../../medianxlofflinetools.cpp" line="2163"/>
+        <location filename="../../medianxlofflinetools.cpp" line="2133"/>
+        <location filename="../../medianxlofflinetools.cpp" line="2159"/>
         <source>Corrupted item detected in %1 in slot %4</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="2292"/>
+        <location filename="../../medianxlofflinetools.cpp" line="2288"/>
         <source>Error opening PlugY stash &apos;%1&apos;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="2310"/>
+        <location filename="../../medianxlofflinetools.cpp" line="2306"/>
         <source>PlugY stash &apos;%1&apos; has wrong header</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="2331"/>
+        <location filename="../../medianxlofflinetools.cpp" line="2327"/>
         <source>Page %1 of &apos;%2&apos; has wrong PlugY header</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="2337"/>
+        <location filename="../../medianxlofflinetools.cpp" line="2333"/>
         <source>Page %1 of &apos;%2&apos; has wrong item header</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="2345"/>
+        <location filename="../../medianxlofflinetools.cpp" line="2341"/>
         <source>Corrupted item detected in %1 on page %4 at (%2,%3)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="2464"/>
+        <location filename="../../medianxlofflinetools.cpp" line="2460"/>
         <source>Shared: %1</source>
         <comment>amount of gold in shared stash</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="2532"/>
+        <location filename="../../medianxlofflinetools.cpp" line="2528"/>
         <source>DEAD</source>
         <comment>HC character is dead</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="2746"/>
+        <location filename="../../medianxlofflinetools.cpp" line="2742"/>
         <source>Stats string is not byte aligned!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="2807"/>
+        <location filename="../../medianxlofflinetools.cpp" line="2803"/>
         <source>Error removing old backup &apos;%1&apos;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="2813"/>
+        <location filename="../../medianxlofflinetools.cpp" line="2809"/>
         <source>Error creating backup of &apos;%1&apos;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../medianxlofflinetools.cpp" line="2829"/>
+        <location filename="../../medianxlofflinetools.cpp" line="2825"/>
         <source>Reason: %1</source>
         <comment>error with file</comment>
         <translation type="unfinished"></translation>
@@ -1968,193 +1968,193 @@ Do you want to reload them?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../propertiesdisplaymanager.cpp" line="80"/>
+        <location filename="../../propertiesdisplaymanager.cpp" line="79"/>
         <source>Defense: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../propertiesdisplaymanager.cpp" line="93"/>
+        <location filename="../../propertiesdisplaymanager.cpp" line="92"/>
         <source>%1 to %2</source>
         <comment>min-max damage</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../propertiesdisplaymanager.cpp" line="106"/>
+        <location filename="../../propertiesdisplaymanager.cpp" line="110"/>
         <source>Throw Damage</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../propertiesdisplaymanager.cpp" line="120"/>
+        <location filename="../../propertiesdisplaymanager.cpp" line="129"/>
         <source>One-Hand Damage</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../propertiesdisplaymanager.cpp" line="134"/>
+        <location filename="../../propertiesdisplaymanager.cpp" line="148"/>
         <source>Two-Hand Damage</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../propertiesdisplaymanager.cpp" line="139"/>
+        <location filename="../../propertiesdisplaymanager.cpp" line="153"/>
         <source>Durability</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../propertiesdisplaymanager.cpp" line="143"/>
+        <location filename="../../propertiesdisplaymanager.cpp" line="157"/>
         <source>%1 of %2</source>
         <comment>durability</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../propertiesdisplaymanager.cpp" line="148"/>
+        <location filename="../../propertiesdisplaymanager.cpp" line="162"/>
         <source>Quantity: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../propertiesdisplaymanager.cpp" line="150"/>
+        <location filename="../../propertiesdisplaymanager.cpp" line="164"/>
         <source>(%1 Only)</source>
         <comment>class-specific item</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../propertiesdisplaymanager.cpp" line="155"/>
+        <location filename="../../propertiesdisplaymanager.cpp" line="169"/>
         <source>Required Dexterity: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../propertiesdisplaymanager.cpp" line="159"/>
+        <location filename="../../propertiesdisplaymanager.cpp" line="173"/>
         <source>Required Strength: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../propertiesdisplaymanager.cpp" line="182"/>
+        <location filename="../../propertiesdisplaymanager.cpp" line="196"/>
         <source>Required Level: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../propertiesdisplaymanager.cpp" line="198"/>
+        <location filename="../../propertiesdisplaymanager.cpp" line="212"/>
         <source>[Unidentified]</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../propertiesdisplaymanager.cpp" line="211"/>
+        <location filename="../../propertiesdisplaymanager.cpp" line="225"/>
         <source>Armor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../propertiesdisplaymanager.cpp" line="211"/>
+        <location filename="../../propertiesdisplaymanager.cpp" line="225"/>
         <source>Shield</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../propertiesdisplaymanager.cpp" line="211"/>
+        <location filename="../../propertiesdisplaymanager.cpp" line="225"/>
         <source>Weapon</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../propertiesdisplaymanager.cpp" line="236"/>
+        <location filename="../../propertiesdisplaymanager.cpp" line="250"/>
         <source>+50% Damage to Undead</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../propertiesdisplaymanager.cpp" line="238"/>
+        <location filename="../../propertiesdisplaymanager.cpp" line="252"/>
         <source>Socketed: (%1), Inserted: (%2)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../propertiesdisplaymanager.cpp" line="240"/>
+        <location filename="../../propertiesdisplaymanager.cpp" line="254"/>
         <source>Ethereal (Cannot be Repaired)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../propertiesdisplaymanager.cpp" line="305"/>
+        <location filename="../../propertiesdisplaymanager.cpp" line="319"/>
         <source>hidden</source>
         <comment>secondary_(min/max)damage property</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../propertiesdisplaymanager.cpp" line="320"/>
+        <location filename="../../propertiesdisplaymanager.cpp" line="334"/>
         <source>%1 life per second</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../propertiesdisplaymanager.cpp" line="334"/>
+        <location filename="../../propertiesdisplaymanager.cpp" line="348"/>
         <source>Damage</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../propertiesdisplaymanager.cpp" line="334"/>
+        <location filename="../../propertiesdisplaymanager.cpp" line="348"/>
         <source>fire damage</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../propertiesdisplaymanager.cpp" line="334"/>
+        <location filename="../../propertiesdisplaymanager.cpp" line="348"/>
         <source>lightning damage</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../propertiesdisplaymanager.cpp" line="334"/>
+        <location filename="../../propertiesdisplaymanager.cpp" line="348"/>
         <source>magic damage</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../propertiesdisplaymanager.cpp" line="334"/>
+        <location filename="../../propertiesdisplaymanager.cpp" line="348"/>
         <source>cold damage</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../propertiesdisplaymanager.cpp" line="334"/>
+        <location filename="../../propertiesdisplaymanager.cpp" line="348"/>
         <source>poison damage</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../propertiesdisplaymanager.cpp" line="357"/>
+        <location filename="../../propertiesdisplaymanager.cpp" line="371"/>
         <source>Adds %1-%2 %3</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../../propertiesdisplaymanager.cpp" line="359"/>
+        <location filename="../../propertiesdisplaymanager.cpp" line="373"/>
         <source> over %n second(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../../propertiesdisplaymanager.cpp" line="467"/>
+        <location filename="../../propertiesdisplaymanager.cpp" line="481"/>
         <source>Repairs 1 Durability in %1 Seconds</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../propertiesdisplaymanager.cpp" line="484"/>
+        <location filename="../../propertiesdisplaymanager.cpp" line="498"/>
         <source>[special case %1, please report] %2 &apos;%3&apos; (id %4)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../propertiesdisplaymanager.cpp" line="545"/>
+        <location filename="../../propertiesdisplaymanager.cpp" line="559"/>
         <source>They have Windows in Hell (legacy)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../propertiesdisplaymanager.cpp" line="548"/>
+        <location filename="../../propertiesdisplaymanager.cpp" line="562"/>
         <source>Mirror Mirror</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../propertiesdisplaymanager.cpp" line="551"/>
+        <location filename="../../propertiesdisplaymanager.cpp" line="565"/>
         <source>Countess</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../propertiesdisplaymanager.cpp" line="554"/>
+        <location filename="../../propertiesdisplaymanager.cpp" line="568"/>
         <source>Level Challenge 2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../propertiesdisplaymanager.cpp" line="557"/>
+        <location filename="../../propertiesdisplaymanager.cpp" line="571"/>
         <source>Crowned</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../propertiesdisplaymanager.cpp" line="560"/>
+        <location filename="../../propertiesdisplaymanager.cpp" line="574"/>
         <source>Challenge with id %1 found, please report!</source>
         <translation type="unfinished"></translation>
     </message>

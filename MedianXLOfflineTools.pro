@@ -28,7 +28,7 @@ CONFIG(release, debug|release): {
 NVER1 = 0
 NVER2 = 4
 NVER3 = 1
-NVER4 = 2
+NVER4 = 3
 
       greaterThan(NVER4, 0): NVER_STRING_LAST = $$sprintf("%1.%2", $$NVER3, $$NVER4)
 else: greaterThan(NVER3, 0): NVER_STRING_LAST = $$sprintf("%1", $$NVER3)
@@ -99,6 +99,7 @@ HEADERS += medianxlofflinetools.h \
            characterinfo.hpp \
            skillplandialog.h \
            application.h \
+           qtsingleapplication/QtSingleApplication \
            qtsingleapplication/qtsingleapplication.h \
            qtsingleapplication/qtlockedfile.h \
            qtsingleapplication/qtlocalpeer.h \
@@ -206,44 +207,26 @@ macx {
     RESOURCES_PATH = $$CONTENTS_PATH/Resources
 
     !isEmpty(IS_QT5) {
-        # Qt 5 uses new approach to QMAKE_MAC_SDK, so default value is usually ok
-#        QMAKE_MAC_SDK = macosx10.8
-
-        # make dock menu work on Qt5. code from https://qt.gitorious.org/qt/qtmacextras
-        OBJECTIVE_SOURCES += qtmacextras/qmacfunctions.mm \
-                             qtmacextras/qmacfunctions_mac.mm
-
-        OBJECTIVE_HEADERS += qtmacextras/qmacfunctions.h \
-                             qtmacextras/qmacfunctions_p.h \
-                             qtmacextras/qmacextrasglobal.h
-
-        QT += gui-private # to remove this dependency, compile qtmacextras in a library
+        QMAKE_MAC_SDK = macosx
     }
     else {
-        SDK_PATH_OLD = /Developer/SDKs
-        SDK_PATH_NEW = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform$$SDK_PATH_OLD
-
-        # for Xcode 4.3+
-        MAC_SDK = $$SDK_PATH_NEW/MacOSX10.8.sdk
-        if (!exists($$MAC_SDK)): MAC_SDK = $$SDK_PATH_NEW/MacOSX10.7.sdk
-        # for earlier versions
-        if (!exists($$MAC_SDK)): MAC_SDK = $$SDK_PATH_OLD/MacOSX10.6.sdk
-        if (!exists($$MAC_SDK)): MAC_SDK = $$SDK_PATH_OLD/MacOSX10.5.sdk
-
-        # release build is intended to be compiled with PPC support
-        !isEmpty(IS_RELEASE_BUILD) {
-            MAC_SDK = $$SDK_PATH_OLD/MacOSX10.5.sdk
-            if (!exists($$MAC_SDK)): MAC_SDK = /Developer/Xcode3.2.6/SDKs/MacOSX10.5.sdk
-
-            CONFIG += x86 ppc
-            QMAKE_MACOSX_DEPLOYMENT_TARGET = 10.5
+        clang {
+#            QMAKE_MAC_SDK = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk
         }
+        else {
+            # release build is intended to be compiled with PPC support
+            !isEmpty(IS_RELEASE_BUILD) {
+                MAC_SDK = /Developer/SDKs/MacOSX10.5.sdk
+                if (!exists($$MAC_SDK)): MAC_SDK = /Developer/Xcode3.2.6/SDKs/MacOSX10.5.sdk
+                QMAKE_MAC_SDK = $$MAC_SDK
 
-        if (!exists($$MAC_SDK)): error(Selected Mac OS X SDK does not exist at $$MAC_SDK!)
-        QMAKE_MAC_SDK = $$MAC_SDK
+                CONFIG += x86 ppc
+                QMAKE_MACOSX_DEPLOYMENT_TARGET = 10.5
+            }
+        }
     }
 
-    COPYRIGHT = Copyright © kambala 2011-2013
+    COPYRIGHT = Copyright © kambala 2011-2014
     INFO_PLIST_PATH = $$CONTENTS_PATH/$$INFO_PLIST_NAME
     QMAKE_POST_LINK = sed -e \'s/@APP_VERSION@/$$VERSION/\' -e \'s/@COPYRIGHT@/$$COPYRIGHT/\' -i \'\' $$INFO_PLIST_PATH;
 

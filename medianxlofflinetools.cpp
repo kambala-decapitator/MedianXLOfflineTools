@@ -52,11 +52,7 @@
 #include <cfloat>
 #include <cmath>
 
-#if IS_QT5
-#include "qtmacextras/qmacfunctions.h"
-#else
 extern void qt_mac_set_dock_menu(QMenu *);
-#endif // IS_QT5
 #endif // Q_OS_MAC
 
 //#define MAKE_HC

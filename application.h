@@ -1,7 +1,7 @@
 #ifndef APPLICATION_H
 #define APPLICATION_H
 
-#include "qtsingleapplication/qtsingleapplication.h"
+#include "qtsingleapplication/QtSingleApplication"
 
 
 class MedianXLOfflineTools;
