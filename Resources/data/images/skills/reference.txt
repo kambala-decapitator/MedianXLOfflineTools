@@ -5,3 +5,5 @@
 4 - Barbarian
 5 - Druid
 6 - Assassin
+
+file names must be even numbers
