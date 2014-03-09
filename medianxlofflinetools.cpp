@@ -634,7 +634,7 @@ void MedianXLOfflineTools::saveCharacter()
         }
 
         ItemsList::const_iterator maxPageIter = std::max_element(items.constBegin(), items.constEnd(), compareItemsByPlugyPage);
-        info.lastPage = maxPageIter == items.constEnd() ? 0 : (*maxPageIter)->plugyPage;
+        info.lastPage = maxPageIter == items.constEnd() ? 1 : (*maxPageIter)->plugyPage;
 
         QDataStream plugyFileDataStream(&inputFile);
         plugyFileDataStream.setByteOrder(QDataStream::LittleEndian);
