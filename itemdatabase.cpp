@@ -759,14 +759,14 @@ bool ItemDataBase::doesItemGrantBonus(ItemInfo *item)
 
 bool ItemDataBase::canDisenchantIntoArcaneShards(ItemInfo *item)
 {
-    // Ultimative prohibits disenchanting TUs from the Gift Box into shards
-    return canDisenchant(item) && !(isUltimative() && item->props.contains(Enums::ItemProperties::ItemDuped));
+    // Ultimative prohibits disenchanting TUs from the Gift Box and quest items into shards
+    return canDisenchant(item) && !(isUltimative() && item->props.contains(Enums::ItemProperties::ItemDuped) && Items()->value(item->itemType)->questId > 0);
 }
 
 bool ItemDataBase::canDisenchantIntoSignetOfLearning(ItemInfo *item)
 {
     // Ultimative prohibits disenchanting TUs into signets
-    return canDisenchant(item) && !(isUltimative() && item->quality == Enums::ItemQuality::Unique && Items()->value(item->itemType)->genericType != Enums::ItemTypeGeneric::Misc && isTiered(item));
+    return canDisenchantIntoArcaneShards(item) && !(isUltimative() && item->quality == Enums::ItemQuality::Unique && Items()->value(item->itemType)->genericType != Enums::ItemTypeGeneric::Misc && isTiered(item));
 }
 
 bool ItemDataBase::canDisenchant(ItemInfo *item)
