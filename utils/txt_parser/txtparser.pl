@@ -442,9 +442,6 @@ for my $hashRef (@$itemProperties)
 {
     $count++;
     next unless defined $hashRef->{bits} or defined $hashRef->{bitsSave};
-    # my $s;
-    # $s .= "\t".($hashRef->{$_} // '') for (@propKeys);
-    # print $out "${count}$s\n";
     print $out $count;
     print $out "\t".($hashRef->{$_} // '') for (@propKeys);
     print $out "\n"

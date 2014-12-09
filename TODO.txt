@@ -1,4 +1,8 @@
+- app crashes when trying to load characters from program files
+
 future versions:
+- list of completed ubers
+- list of found SU/sets
 - equip item
 - character planner
 - use column from txt that controls standard item name appearance (iirc only in misc.txt)

@@ -64,14 +64,13 @@ extern void qt_mac_set_dock_menu(QMenu *);
 // static const
 
 static const QString kLastSavePathKey("lastSavePath"), kBackupExtension("bak"), kReadonlyCss("QLineEdit { background-color: rgb(227, 227, 227) }"), kTimeFormatReadable("yyyyMMdd-hhmmss"), kMedianXlServer("http://mxl.vn.cz/kambala/");
-static const QByteArray kMercHeader("jf");
+static const QByteArray kMercHeader("jf"), kSkillsHeader("if");
 static const int kMoonSymbolSkillSaveIndex = 28;
 
 const QString MedianXLOfflineTools::kCompoundFormat("%1, %2");
 const QString MedianXLOfflineTools::kCharacterExtension("d2s");
 const QString MedianXLOfflineTools::kCharacterExtensionWithDot("." + kCharacterExtension);
 const quint32 MedianXLOfflineTools::kFileSignature = 0xAA55AA55;
-const int MedianXLOfflineTools::kSkillsNumber = 30;
 const int MedianXLOfflineTools::kDifficultiesNumber = 3;
 const int MedianXLOfflineTools::kStatPointsPerLevel = 5;
 const int MedianXLOfflineTools::kSkillPointsPerLevel = 1;
@@ -382,7 +381,10 @@ void MedianXLOfflineTools::saveCharacter()
     charInfo.itemsEndOffset += diff;
 
     if (ui->respecSkillsCheckBox->isChecked())
-        tempFileContents.replace(charInfo.skillsOffset + 2, kSkillsNumber, QByteArray(kSkillsNumber, 0));
+    {
+        int skills = charInfo.itemsOffset - ItemParser::kItemHeader.length() - charInfo.skillsOffset - kSkillsHeader.length();
+        tempFileContents.replace(charInfo.skillsOffset + kSkillsHeader.length(), skills, QByteArray(skills, 0));
+    }
 
 #ifndef MAKE_FINISHED_CHARACTER
     if (ui->activateWaypointsCheckBox->isChecked())
@@ -1116,12 +1118,12 @@ void MedianXLOfflineTools::checkForUpdate()
     QEventLoop eventLoop;
     connect(reply, SIGNAL(finished()), &eventLoop, SLOT(quit()));
     eventLoop.exec();
+    _qnamCheckForUpdate->deleteLater();
 
     if (!reply->error())
     {
         displayInfoAboutServerVersion(reply->readAll().trimmed());
         reply->deleteLater();
-        _qnamCheckForUpdate->deleteLater();
     }
     else
         checkForUpdateFromForumUrl(QUrl("http://www.medianxl.com/f16-median-xl-tools-informations"));
@@ -1935,7 +1937,7 @@ bool MedianXLOfflineTools::processSaveFile()
     inputDataStream.device()->seek(Offsets::StatsData);
 
     // find "if" header (skills)
-    int skillsOffset = _saveFileContents.indexOf("if", Offsets::StatsData);
+    int skillsOffset = _saveFileContents.indexOf(kSkillsHeader, Offsets::StatsData);
     if (skillsOffset == -1)
     {
         ERROR_BOX(tr("Skills data not found!"));
@@ -1944,10 +1946,10 @@ bool MedianXLOfflineTools::processSaveFile()
 
     // apparently "if" can occur multiple times before items section, so we need the last occurrence before skills data
     int firstItemOffset = _saveFileContents.indexOf(ItemParser::kItemHeader, skillsOffset);
-    while (skillsOffset != -1 && skillsOffset < firstItemOffset - kSkillsNumber)
+    while (skillsOffset != -1 && skillsOffset < firstItemOffset)
     {
         charInfo.skillsOffset = skillsOffset;
-        skillsOffset = _saveFileContents.indexOf("if", skillsOffset + 1);
+        skillsOffset = _saveFileContents.indexOf(kSkillsHeader, skillsOffset + 1);
     }
 
     int statsSize = charInfo.skillsOffset - Offsets::StatsData;
@@ -2034,37 +2036,37 @@ bool MedianXLOfflineTools::processSaveFile()
     // skills
     quint16 skills = 0, maxPossibleSkills = totalPossibleSkillPoints();
     charInfo.basicInfo.skills.clear();
-    int skillsNumber = isSigma() ? 35 : kSkillsNumber;
-    // TODO: [later] fix for Sigma
-    if (skillsNumber == kSkillsNumber)
-    {
-        charInfo.basicInfo.skills.reserve(skillsNumber);
-        for (int i = 0; i < skillsNumber; ++i)
-        {
-            quint8 skillValue = _saveFileContents.at(charInfo.skillsOffset + 2 + i);
-            skills += skillValue;
-            charInfo.basicInfo.skills += skillValue;
-            //qDebug() << i << skillValue << ItemDataBase::Skills()->at(_characterSkillsIndexes[charInfo.basicInfo.classCode].first.at(i))->name;
-        }
-        skills += charInfo.valueOfStatistic(CharacterStats::FreeSkillPoints);
-        if (skills > maxPossibleSkills) // check if skills are hacked
-        {
-            skills = maxPossibleSkills;
-            charInfo.setValueForStatisitc(maxPossibleSkills, CharacterStats::FreeSkillPoints);
-            _saveFileContents.replace(charInfo.skillsOffset + 2, skillsNumber, QByteArray(skillsNumber, 0));
-            shouldShowHackWarning = true;
-        }
-        charInfo.basicInfo.totalSkillPoints = skills;
+    int skillsNumber = firstItemOffset - charInfo.skillsOffset - kSkillsHeader.length();
+    charInfo.basicInfo.skills.reserve(skillsNumber);
 
-        const SkillsOrderPair &skillsIndeces = _characterSkillsIndexes[charInfo.basicInfo.classCode];
-        charInfo.basicInfo.skillsReadable.clear();
-        charInfo.basicInfo.skillsReadable.reserve(skillsNumber);
-        for (int i = 0; i < skillsNumber; ++i)
-        {
-            int skillIndex = skillsIndeces.second.at(i);
-            charInfo.basicInfo.skillsReadable += charInfo.basicInfo.skills.at(skillsIndeces.first.indexOf(skillIndex));
-            //qDebug() << charInfo.basicInfo.skillsReadable.last() << ItemDataBase::Skills()->value(skillIndex)->name;
-        }
+    inputDataStream.skipRawData(kSkillsHeader.length());
+    int firstSkillOffset = charInfo.skillsOffset + kSkillsHeader.length();
+    for (int i = 0; i < skillsNumber; ++i)
+    {
+        quint8 skillValue;
+        inputDataStream >> skillValue;
+        skills += skillValue;
+        charInfo.basicInfo.skills += skillValue;
+        //qDebug() << i << skillValue << ItemDataBase::Skills()->at(_characterSkillsIndexes[charInfo.basicInfo.classCode].first.at(i))->name;
+    }
+    skills += charInfo.valueOfStatistic(CharacterStats::FreeSkillPoints);
+    if (skills > maxPossibleSkills) // check if skills are hacked
+    {
+        skills = maxPossibleSkills;
+        charInfo.setValueForStatisitc(maxPossibleSkills, CharacterStats::FreeSkillPoints);
+        _saveFileContents.replace(firstSkillOffset, skillsNumber, QByteArray(skillsNumber, 0));
+        shouldShowHackWarning = true;
+    }
+    charInfo.basicInfo.totalSkillPoints = skills;
+
+    const SkillsOrderPair &skillsIndeces = _characterSkillsIndexes[charInfo.basicInfo.classCode];
+    charInfo.basicInfo.skillsReadable.clear();
+    charInfo.basicInfo.skillsReadable.reserve(skillsNumber);
+    for (int i = 0; i < skillsNumber; ++i)
+    {
+        int skillIndex = skillsIndeces.second.at(i);
+        charInfo.basicInfo.skillsReadable += charInfo.basicInfo.skills.at(skillsIndeces.first.indexOf(skillIndex));
+        //qDebug() << charInfo.basicInfo.skillsReadable.last() << ItemDataBase::Skills()->value(skillIndex)->name;
     }
 
 #ifndef DUPE_CHECK
@@ -2073,15 +2075,14 @@ bool MedianXLOfflineTools::processSaveFile()
 #endif
 
     // items
-    inputDataStream.skipRawData(skillsNumber + 2);
     int charItemsOffset = inputDataStream.device()->pos();
-    if (_saveFileContents.mid(charItemsOffset, 2) != ItemParser::kItemHeader)
+    if (_saveFileContents.mid(charItemsOffset, ItemParser::kItemHeader.length()) != ItemParser::kItemHeader)
     {
         ERROR_BOX(tr("Items data not found!"));
         return false;
     }
-    charInfo.itemsOffset = charItemsOffset + 2;
-    inputDataStream.skipRawData(2); // pointing to the beginning of item data
+    charInfo.itemsOffset = charItemsOffset + ItemParser::kItemHeader.length();
+    inputDataStream.skipRawData(ItemParser::kItemHeader.length()); // pointing to the beginning of item data
 
     quint16 charItemsTotal;
     inputDataStream >> charItemsTotal;
@@ -2121,11 +2122,11 @@ bool MedianXLOfflineTools::processSaveFile()
 #endif
 
     // corpse data
-    inputDataStream.skipRawData(2); // JM
+    inputDataStream.skipRawData(ItemParser::kItemHeader.length()); // JM
     inputDataStream >> charInfo.basicInfo.corpses;
     if (charInfo.basicInfo.corpses)
     {
-        inputDataStream.skipRawData(12 + 2); // some unknown corpse data + JM
+        inputDataStream.skipRawData(12 + ItemParser::kItemHeader.length()); // some unknown corpse data + JM
         quint16 corpseItemsTotal;
         inputDataStream >> corpseItemsTotal;
         ItemsList corpseItems;
@@ -2144,15 +2145,15 @@ bool MedianXLOfflineTools::processSaveFile()
     }
 
     // merc
-    if (_saveFileContents.mid(inputDataStream.device()->pos(), 2) != kMercHeader)
+    if (_saveFileContents.mid(inputDataStream.device()->pos(), kMercHeader.length()) != kMercHeader)
     {
         ERROR_BOX(tr("Mercenary items section not found!"));
         return false;
     }
-    inputDataStream.skipRawData(2);
+    inputDataStream.skipRawData(kMercHeader.length());
     if (charInfo.mercenary.exists)
     {
-        inputDataStream.skipRawData(2); // JM
+        inputDataStream.skipRawData(ItemParser::kItemHeader.length()); // JM
         quint16 mercItemsTotal;
         inputDataStream >> mercItemsTotal;
         ItemsList mercItems;
