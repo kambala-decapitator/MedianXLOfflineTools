@@ -276,6 +276,7 @@ public:
         EnergyBonus,
         VitalityBonus,
         MaxSlvlIncrease = 479,
+        ShrineVesselCounter = 501,
         StrengthBasedOnBlessedLifeSlvl = 503,
         DexterityBasedOnBlessedLifeSlvl,
         ReplenishLifeBasedOnClvl,

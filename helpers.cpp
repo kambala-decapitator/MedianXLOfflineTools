@@ -320,6 +320,11 @@ bool isArcaneShard4(ItemInfo *item)
     return item->itemType == "#5^";
 }
 
+bool isShrineVessel(ItemInfo *item)
+{
+    return ItemDataBase::Items()->value(item->itemType)->types.contains("shco");
+}
+
 
 bool compareItemsByPlugyPage(ItemInfo *a, ItemInfo *b)
 {

@@ -1,4 +1,5 @@
-- app crashes when trying to load characters from program files
+- collect shrines into vessels
+- app crashes when trying to load characters from program files (minor)
 
 future versions:
 - list of completed ubers

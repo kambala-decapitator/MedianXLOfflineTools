@@ -64,6 +64,8 @@ protected slots:
 //    void unsocketItem();
     void downgradeSelectedRune();
     void eatSelectedSignet();
+    void collectShrinesToVessel();
+    void extractShrinesFromVessel();
     void depersonalize();
     void   personalize();
     void deleteItemTriggered();

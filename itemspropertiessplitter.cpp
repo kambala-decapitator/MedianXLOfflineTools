@@ -12,6 +12,7 @@
 #include "qd2charrenamer.h"
 
 #include <QMenu>
+#include <QInputDialog>
 
 #ifndef QT_NO_DEBUG
 #include <QDebug>
@@ -258,6 +259,32 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
         if (_itemActions[EatSignetOfLearning]->data().toUInt() > 0)
             actions << _itemActions[EatSignetOfLearning];
 
+        if (isShrineVessel(item))
+        {
+            QAction *collectAction = new QAction(tr("Collect Shrines"), this);
+            connect(collectAction, SIGNAL(triggered()), SLOT(collectShrinesToVessel()));
+            actions << collectAction;
+
+            ItemProperty *prop = item->props.value(Enums::ItemProperties::ShrineVesselCounter);
+            if (prop->value > 0)
+            {
+                QAction *extractAction = new QAction(tr("Extract all Shrines"), this);
+                connect(extractAction, SIGNAL(triggered()), SLOT(extractShrinesFromVessel()));
+                actions << extractAction;
+
+                if (prop->value > 1)
+                {
+                    extractAction = new QAction(tr("Extract Shrines..."), this);
+                    extractAction->setObjectName("input");
+                    connect(extractAction, SIGNAL(triggered()), SLOT(extractShrinesFromVessel()));
+                    actions << extractAction;
+                }
+                else
+                    extractAction->setText(tr("Extract the only Shrine"));
+            }
+            actions << separatorAction();
+        }
+
         if (item->isPersonalized)
         {
             QAction *depersonalizeAction = new QAction(tr("Depersonalize"), this);
@@ -357,6 +384,23 @@ void ItemsPropertiesSplitter::eatSelectedSignet()
             return;
     deleteItem(selectedItem());
     emit signetsOfLearningEaten(signetsToEat);
+}
+
+void ItemsPropertiesSplitter::collectShrinesToVessel()
+{
+
+}
+
+void ItemsPropertiesSplitter::extractShrinesFromVessel()
+{
+    int n = selectedItem()->props.value(Enums::ItemProperties::ShrineVesselCounter)->value;
+    if (sender()->objectName() == "input")
+    {
+        bool ok;
+        n = QInputDialog::getInt(this, tr("Shrine Vessel"), tr("Extract Shrines (1-%1)").arg(n), 1, 1, n, 1, &ok);
+        if (!ok)
+            return;
+    }
 }
 
 void ItemsPropertiesSplitter::depersonalize()

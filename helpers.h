@@ -81,6 +81,7 @@ bool isTradersChest(const QByteArray &itemType);
 bool isArcaneShard2(ItemInfo *item);
 bool isArcaneShard3(ItemInfo *item);
 bool isArcaneShard4(ItemInfo *item);
+bool isShrineVessel(ItemInfo *item);
 
 // sorting predicates
 bool compareItemsByPlugyPage(ItemInfo *a, ItemInfo *b);
