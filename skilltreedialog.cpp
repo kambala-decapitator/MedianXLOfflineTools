@@ -52,7 +52,7 @@ private:
 };
 
 
-SkillTreeDialog::SkillTreeDialog(const QList<int> &skillsVisualOrder, QWidget *parent /*= 0*/) : QDialog(parent), _tabWidget(new QTabWidget(this))
+SkillTreeDialog::SkillTreeDialog(QWidget *parent /*= 0*/) : QDialog(parent), _tabWidget(new QTabWidget(this))
 {
     setWindowFlags(windowFlags() & ~Qt::WindowContextHelpButtonHint | Qt::MSWindowsFixedSizeDialogHint);
     setWindowTitle(tr("Skill tree"));
@@ -99,6 +99,7 @@ SkillTreeDialog::SkillTreeDialog(const QList<int> &skillsVisualOrder, QWidget *p
         }
     }
 
+    const QList<int> skillsVisualOrder = Enums::Skills::currentCharacterSkillsIndexes().second;
     for (int i = 0, j = 0, skillsNumber = skillsVisualOrder.size(); i < 3; ++i)
     {
         int tabIndex = i + 1;

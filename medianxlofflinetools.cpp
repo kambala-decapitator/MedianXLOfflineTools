@@ -65,7 +65,6 @@ extern void qt_mac_set_dock_menu(QMenu *);
 
 static const QString kLastSavePathKey("lastSavePath"), kBackupExtension("bak"), kReadonlyCss("QLineEdit { background-color: rgb(227, 227, 227) }"), kTimeFormatReadable("yyyyMMdd-hhmmss"), kMedianXlServer("http://mxl.vn.cz/kambala/");
 static const QByteArray kMercHeader("jf"), kSkillsHeader("if");
-static const int kMoonSymbolSkillSaveIndex = 28;
 
 const QString MedianXLOfflineTools::kCompoundFormat("%1, %2");
 const QString MedianXLOfflineTools::kCharacterExtension("d2s");
@@ -1159,7 +1158,7 @@ void MedianXLOfflineTools::aboutApp()
 
 void MedianXLOfflineTools::showSkillTree()
 {
-    SkillTreeDialog dlg(_characterSkillsIndexes.value(CharacterInfo::instance().basicInfo.classCode).second, this);
+    SkillTreeDialog dlg(this);
     dlg.exec();
 }
 
@@ -1584,20 +1583,6 @@ void MedianXLOfflineTools::saveSettings() const
         _itemsDialog->saveSettings();
 }
 
-bool compareSkillIndexes(int i, int j)
-{
-    SkillInfo *iSkill = ItemDataBase::Skills()->value(i), *jSkill = ItemDataBase::Skills()->value(j);
-    if (iSkill->tab == jSkill->tab)
-    {
-        if (iSkill->col == jSkill->col)
-            return iSkill->row < jSkill->row;
-        else
-            return iSkill->col < jSkill->col;
-    }
-    else
-        return iSkill->tab < jSkill->tab;
-}
-
 void MedianXLOfflineTools::fillMaps()
 {
     _spinBoxesStatsMap[Enums::CharacterStats::Strength] = ui->strengthSpinBox;
@@ -1611,22 +1596,6 @@ void MedianXLOfflineTools::fillMaps()
     _lineEditsStatsMap[Enums::CharacterStats::StashGold] = ui->stashGoldLineEdit;
     _lineEditsStatsMap[Enums::CharacterStats::SignetsOfLearningEaten] = ui->signetsOfLearningEatenLineEdit;
     _lineEditsStatsMap[Enums::CharacterStats::SignetsOfSkillEaten] = ui->signetsOfSkillEatenLineEdit;
-
-    QList<SkillInfo *> *skills = ItemDataBase::Skills();
-    int n = skills->size();
-    for (int classCode = Enums::ClassName::Amazon; classCode <= Enums::ClassName::Assassin; ++classCode)
-    {
-        QList<int> skillsIndexes;
-        for (int i = 0; i < n; ++i)
-            if (skills->at(i)->classCode == classCode)
-                skillsIndexes += i;
-
-        SkillsOrderPair pair;
-        pair.first = skillsIndexes;
-        qSort(skillsIndexes.begin(), skillsIndexes.end(), compareSkillIndexes);
-        pair.second = skillsIndexes;
-        _characterSkillsIndexes[static_cast<Enums::ClassName::ClassNameEnum>(classCode)] = pair;
-    }
 }
 
 void MedianXLOfflineTools::connectSignals()
@@ -2041,13 +2010,14 @@ bool MedianXLOfflineTools::processSaveFile()
 
     inputDataStream.skipRawData(kSkillsHeader.length());
     int firstSkillOffset = charInfo.skillsOffset + kSkillsHeader.length();
+    const Enums::Skills::SkillsOrderPair skillsIndexes = Enums::Skills::currentCharacterSkillsIndexes();
     for (int i = 0; i < skillsNumber; ++i)
     {
         quint8 skillValue;
         inputDataStream >> skillValue;
         skills += skillValue;
         charInfo.basicInfo.skills += skillValue;
-        //qDebug() << i << skillValue << ItemDataBase::Skills()->at(_characterSkillsIndexes[charInfo.basicInfo.classCode].first.at(i))->name;
+        //qDebug() << i << skillValue << ItemDataBase::Skills()->at(skillsIndexes.first.at(i))->name;
     }
     skills += charInfo.valueOfStatistic(CharacterStats::FreeSkillPoints);
     if (skills > maxPossibleSkills) // check if skills are hacked
@@ -2059,12 +2029,11 @@ bool MedianXLOfflineTools::processSaveFile()
     }
     charInfo.basicInfo.totalSkillPoints = skills;
 
-    const SkillsOrderPair &skillsIndeces = _characterSkillsIndexes[charInfo.basicInfo.classCode];
     charInfo.basicInfo.skillsReadable.clear();
     charInfo.basicInfo.skillsReadable.reserve(skillsNumber);
-    for (int i = 0; i < skillsIndeces.second.size(); ++i)
+    for (int i = 0; i < skillsIndexes.second.size(); ++i)
     {
-        int skillIndex = skillsIndeces.second.at(i), skillReadableIndex = skillsIndeces.first.indexOf(skillIndex);
+        int skillIndex = skillsIndexes.second.at(i), skillReadableIndex = skillsIndexes.first.indexOf(skillIndex);
         charInfo.basicInfo.skillsReadable += skillReadableIndex >= 0 && skillReadableIndex < charInfo.basicInfo.skills.size() ? charInfo.basicInfo.skills.at(skillReadableIndex) : 0;
         //qDebug() << charInfo.basicInfo.skillsReadable.last() << ItemDataBase::Skills()->value(skillIndex)->name;
     }
@@ -2502,7 +2471,7 @@ void MedianXLOfflineTools::updateUI()
     ui->actionShowItems->setEnabled(hasItems);
     ui->actionFind->setEnabled(hasItems);
     ui->actionGiveCube->setDisabled(CharacterInfo::instance().items.hasCube());
-    ui->actionFillBeltWithMoonCookies->setEnabled(charInfo.basicInfo.classCode == Enums::ClassName::Sorceress && charInfo.basicInfo.skills.at(_characterSkillsIndexes.value(charInfo.basicInfo.classCode).first.indexOf(594)) > 0);
+    ui->actionFillBeltWithMoonCookies->setEnabled(charInfo.basicInfo.classCode == Enums::ClassName::Sorceress && charInfo.basicInfo.skills.at(Enums::Skills::currentCharacterSkillsIndexes().first.indexOf(Enums::Skills::MoonSymbol)) > 0);
 
     updateWindowTitle();
 

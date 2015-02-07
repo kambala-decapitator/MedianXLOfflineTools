@@ -95,7 +95,7 @@ QHash<QByteArray, ItemBase *> *ItemDataBase::Items()
     return &allItems;
 }
 
-QHash<QByteArray, ItemType> * ItemDataBase::ItemTypes()
+QHash<QByteArray, ItemType> *ItemDataBase::ItemTypes()
 {
     static QHash<QByteArray, ItemType> types;
     if (types.isEmpty())

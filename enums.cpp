@@ -1,6 +1,6 @@
 #include "enums.h"
-
-#include <QHash>
+#include "itemdatabase.h"
+#include "characterinfo.hpp"
 
 
 namespace Enums
@@ -126,4 +126,46 @@ int ItemOffsets::offsetLength(int offset)
         return 0;
     }
 }
+
+
+bool compareSkillIndexes(int i, int j)
+{
+    SkillInfo *iSkill = ItemDataBase::Skills()->value(i), *jSkill = ItemDataBase::Skills()->value(j);
+    if (iSkill->tab == jSkill->tab)
+    {
+        if (iSkill->col == jSkill->col)
+            return iSkill->row < jSkill->row;
+        else
+            return iSkill->col < jSkill->col;
+    }
+    else
+        return iSkill->tab < jSkill->tab;
+}
+
+const QHash<ClassName::ClassNameEnum, Skills::SkillsOrderPair> &Skills::characterSkillsIndexes()
+{
+    static QHash<ClassName::ClassNameEnum, Skills::SkillsOrderPair> hash;
+    if (hash.isEmpty())
+    {
+        QList<SkillInfo *> *skills = ItemDataBase::Skills();
+        int n = skills->size();
+        for (int classCode = ClassName::Amazon; classCode <= ClassName::Assassin; ++classCode)
+        {
+            QList<int> skillsIndexes;
+            for (int i = 0; i < n; ++i)
+                if (skills->at(i)->classCode == classCode)
+                    skillsIndexes += i;
+
+            SkillsOrderPair pair;
+            pair.first = skillsIndexes;
+            qSort(skillsIndexes.begin(), skillsIndexes.end(), compareSkillIndexes);
+            pair.second = skillsIndexes;
+            hash[static_cast<ClassName::ClassNameEnum>(classCode)] = pair;
+        }
+    }
+    return hash;
+}
+
+Skills::SkillsOrderPair Skills::currentCharacterSkillsIndexes() { return characterSkillsIndexes().value(CharacterInfo::instance().basicInfo.classCode); }
+
 }

@@ -441,7 +441,7 @@ QString PropertiesDisplayManager::propertyDisplay(ItemProperty *propDisplay, int
     if (prop->stat.endsWith("perlevel")) // based on clvl
         value = (value * basicInfo.level) / 32;
     else if (prop->stat.endsWith("perblessedlife"))
-        value = basicInfo.classCode == Enums::ClassName::Paladin ? (value * basicInfo.skills.last()) / 32 : 0; // TODO: [0.5+] use ItemDataBase::Skills() to obtain Blessed Life index (649)
+        value = basicInfo.classCode == Enums::ClassName::Paladin ? (value * basicInfo.skills.at(Enums::Skills::currentCharacterSkillsIndexes().first.indexOf(Enums::Skills::BlessedLife))) / 32 : 0;
 
     char valueStringSigned[10];
 #ifdef Q_CC_MSVC

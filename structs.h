@@ -226,7 +226,6 @@ struct SkillInfo
 };
 
 typedef QList<quint8> SkillList;
-typedef QPair<QList<int>, QList<int> > SkillsOrderPair; // first is save file order, second - visual and planner order
 
 struct MysticOrb
 {

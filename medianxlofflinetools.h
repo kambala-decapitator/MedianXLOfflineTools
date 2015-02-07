@@ -138,7 +138,6 @@ private:
     QByteArray _saveFileContents;
     int _oldStatValues[4];
     QMap<Enums::ClassName::ClassNameEnum, BaseStats> _baseStatsMap;
-    QHash<Enums::ClassName::ClassNameEnum, SkillsOrderPair> _characterSkillsIndexes;
     int _oldClvl;
     quint32 _sharedGold;
     QHash<Enums::ItemStorage::ItemStorageEnum, PlugyStashInfo> _plugyStashesHash;

@@ -4,7 +4,7 @@
 #include "helpers.h"
 
 #include <QCoreApplication>
-
+#include <QHash>
 
 namespace Enums
 {
@@ -368,6 +368,20 @@ public:
     };
 
     static int offsetLength(int offset); // modify whenever enum is modified
+};
+
+class Skills
+{
+public:
+    enum
+    {
+        MoonSymbol = 594,
+        BlessedLife = 649
+    };
+
+    typedef QPair<QList<int>, QList<int> > SkillsOrderPair; // first is save file order, second - visual and planner order
+    static const QHash<ClassName::ClassNameEnum, SkillsOrderPair> &characterSkillsIndexes();
+    static SkillsOrderPair currentCharacterSkillsIndexes();
 };
 
 } // namespace Enums
