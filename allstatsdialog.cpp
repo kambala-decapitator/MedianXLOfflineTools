@@ -96,7 +96,7 @@ void AllStatsDialog::searchTextChanged(const QString &text)
             _searchTimer->setSingleShot(true);
             connect(_searchTimer, SIGNAL(timeout()), SLOT(highlightSearchText()));
         }
-        _searchTimer->start(1000);
+        _searchTimer->start(qApp->keyboardInputInterval());
     }
 }
 
