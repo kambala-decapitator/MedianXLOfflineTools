@@ -146,12 +146,7 @@ ac%/lvl	1				17	item_armorpercent_perlevel																									AC% per Playe
 hp/lvl	1				17	item_hp_perlevel																									HP per Player Level	(32nds)			none	0
 mana/lvl	1				17	item_mana_perlevel																									Mana per Player Level	(32nds)			none	0
 dmg/lvl	1				17	item_maxdamage_perlevel																									Max Damage per Player Level	(32nds)			none	0
-dmg%/lvl	1				17	item_maxdamage_percent_perlevel																									Max Damage % per Player Level	(32nds)			none	0
 att%/lvl	1				17	item_tohitpercent_perlevel																									Attack% per Player Level	(32nds)			none	0
-dmg-cold/lvl	1				17	item_cold_damagemax_perlevel																									Max Cold Damage per Player Level	(32nds)			none	0
-dmg-fire/lvl	1				17	item_fire_damagemax_perlevel																									Max Fire Damage per Player Level	(32nds)			none	0
-dmg-ltng/lvl	1				17	item_ltng_damagemax_perlevel																									Max Lightning Dmg per Player Level	(32nds)			none	0
-dmg-pois/lvl	1				17	item_pois_damagemax_perlevel																									Max Poison Dmg per Player Level	(32nds)			none	0
 res-cold/lvl	1				17	item_resist_cold_perlevel																									Resist Cold% per Player Level	(32nds)			none	0
 res-fire/lvl	1				17	item_resist_fire_perlevel																									Resist Fire% per Player Level	(32nds)			none	0
 res-ltng/lvl	1				17	item_resist_ltng_perlevel																									Resist Lightning% per Player Level	(32nds)			none	0
@@ -160,7 +155,6 @@ gold%/lvl	1				17	item_find_gold_perlevel																									+% Gold Droppe
 mag%/lvl	1				17	item_find_magic_perlevel																									+% Magical per Player Lvl	(32nds)			none	0
 crush/lvl	1				17	item_crushingblow_perlevel																									+% Chance of Crushing Blow per Player Level	(32nds)			none	0
 wounds/lvl	1				17	item_openwounds_perlevel																									+% Chance of Open Wounds per Player Level	(32nds)			none	0
-deadly/lvl	1				17	item_deadlystrike_perlevel																									+% Chance of Deadly Strike per Player Level	(32nds)			none	0
 rep-dur	1				17	item_replenish_durability																									regenerates durability	speed (see note)			regenerates 1 durability point per 100/lvl seconds	0
 rep-quant	1				17	item_replenish_quantity																									regenerates quantity	speed (see note)			regenerates 1 quantity per 100/lvl seconds	0
 stack	1				1	item_extra_stack																									Increased stack size		min count	max count	none	0
@@ -177,43 +171,6 @@ abs-thrust																															Absorb Thrusting Damage		min amt	max am
 abs-slash%																															Absorb Slashing Damage %		min %	max %	random amount from min to max is assigned to item	0
 abs-crush%																															Absorb Crushing Damage %		min %	max %	random amount from min to max is assigned to item	0
 abs-thrust%																															Absorb Thrusting Damage %		min %	max %	random amount from min to max is assigned to item	0
-ac/time	1				18	item_armor_bytime																									"AC / time increment (0=day, 1=dusk, 2=night, 3=dawn)"	center period	min	max	"max at center period, min at opposite period, linear progression"	0
-ac%/time	1				18	item_armorpercent_bytime																									AC% / time increment (8 periods)	center period	min	max	"max at center period, min at opposite period, linear progression"	0
-hp/time	1				18	item_hp_bytime																									HP / time increment	center period	min	max	"max at center period, min at opposite period, linear progression"	0
-mana/time	1				18	item_mana_bytime																									Mana / time increment	center period	min	max	"max at center period, min at opposite period, linear progression"	0
-dmg/time	1				18	item_maxdamage_bytime																									Max Damage / time increment	center period	min	max	"max at center period, min at opposite period, linear progression"	0
-dmg%/time	1				18	item_maxdamage_percent_bytime																									Max Damage % / time increment	center period	min	max	"max at center period, min at opposite period, linear progression"	0
-str/time	1				18	item_strength_bytime																									Strength / time increment	center period	min	max	"max at center period, min at opposite period, linear progression"	0
-dex/time	1				18	item_dexterity_bytime																									Dexterity / time increment	center period	min	max	"max at center period, min at opposite period, linear progression"	0
-enr/time	1				18	item_energy_bytime																									Energy / time increment	center period	min	max	"max at center period, min at opposite period, linear progression"	0
-vit/time	1				18	item_vitality_bytime																									Vitality / time increment	center period	min	max	"max at center period, min at opposite period, linear progression"	0
-att/time	1				18	item_tohit_bytime																									To hit / time increment	center period	min	max	"max at center period, min at opposite period, linear progression"	0
-att%/time	1				18	item_tohitpercent_bytime																									To Hit % / time increment	center period	min	max	"max at center period, min at opposite period, linear progression"	0
-dmg-cold/time	1				18	item_cold_damagemax_bytime																									Cold Damage Max / time inc.	center period	min	max	"max at center period, min at opposite period, linear progression"	0
-dmg-fire/time	1				18	item_fire_damagemax_bytime																									Fire Damage Max / time inc.	center period	min	max	"max at center period, min at opposite period, linear progression"	0
-dmg-ltng/time	1				18	item_ltng_damagemax_bytime																									Lightning Damage Max / time inc.	center period	min	max	"max at center period, min at opposite period, linear progression"	0
-dmg-pois/time	1				18	item_pois_damagemax_bytime																									Poison Damage Max / time inc.	center period	min	max	"max at center period, min at opposite period, linear progression"	0
-res-cold/time	1				18	item_resist_cold_bytime																									Resist Cold / time inc.	center period	min	max	"max at center period, min at opposite period, linear progression"	0
-res-fire/time	1				18	item_resist_fire_bytime																									Resist Fire / time inc.	center period	min	max	"max at center period, min at opposite period, linear progression"	0
-res-ltng/time	1				18	item_resist_ltng_bytime																									Resist Lightning / time inc	center period	min	max	"max at center period, min at opposite period, linear progression"	0
-res-pois/time	1				18	item_resist_pois_bytime																									Resist Poison / time inc	center period	min	max	"max at center period, min at opposite period, linear progression"	0
-abs-cold/time	1				18	item_absorb_cold_bytime																									Absorb Cold / time inc.	center period	min	max	"max at center period, min at opposite period, linear progression"	0
-abs-fire/time	1				18	item_absorb_fire_bytime																									Absorb Fire / time inc.	center period	min	max	"max at center period, min at opposite period, linear progression"	0
-abs-ltng/time	1				18	item_absorb_ltng_bytime																									Absorb Lightning / time inc.	center period	min	max	"max at center period, min at opposite period, linear progression"	0
-abs-pois/time	1				18	item_absorb_pois_bytime																									Absorb Poison / time inc.	center period	min	max	"max at center period, min at opposite period, linear progression"	0
-gold%/time	1				18	item_find_gold_bytime																									Find Gold Amt % / time inc.	center period	min	max	"max at center period, min at opposite period, linear progression"	0
-mag%/time	1				18	item_find_magic_bytime																									Find Magic % / time inc.	center period	min	max	"max at center period, min at opposite period, linear progression"	0
-regen-stam/time	1				18	item_regenstamina_bytime																									% / time inc.	center period	min	max	"max at center period, min at opposite period, linear progression"	0
-stam/time	1				18	item_stamina_bytime																									Stamina / time inc.	center period	min	max	"max at center period, min at opposite period, linear progression"	0
-dmg-dem/time	1				18	item_damage_demon_bytime																									Damage to Demons % / time inc.	center period	min	max	"max at center period, min at opposite period, linear progression"	0
-dmg-und/time	1				18	item_damage_undead_bytime																									Damage to Undead % / time inc.	center period	min	max	"max at center period, min at opposite period, linear progression"	0
-att-dem/time	1				18	item_tohit_demon_bytime																									To Hit Demons % / time inc.	center period	min	max	"max at center period, min at opposite period, linear progression"	0
-att-und/time	1				18	item_tohit_undead_bytime																									To Hit Undead % / time inc.	center period	min	max	"max at center period, min at opposite period, linear progression"	0
-crush/time	1				18	item_crushingblow_bytime																									% chance of Crushing Blow / time inc.	center period	min	max	"max at center period, min at opposite period, linear progression"	0
-wounds/time	1				18	item_openwounds_bytime																									+% chance of Open Wounds / time inc.	center period	min	max	"max at center period, min at opposite period, linear progression"	0
-kick/time	1				18	item_kick_damage_bytime																									Kick Damage / time inc.	center period	min	max	"max at center period, min at opposite period, linear progression"	0
-deadly/time	1				18	item_deadlystrike_bytime																									+% chance of Deadly Strike / time inc.	center period	min	max	"max at center period, min at opposite period, linear progression"	0
-gems%/time																															+% chance of finding Gems / time inc.	center period	min	max	"max at center period, min at opposite period, linear progression"	0
 pierce-fire	1				1	passive_fire_pierce																									Negates % of Enemy Cold Resistance		min	max	none	0
 pierce-ltng	1				1	passive_ltng_pierce																									Negates % of Enemy Fire Resistance		min	max	none	0
 pierce-cold	1				1	passive_cold_pierce																									Negates % of Enemy Lightning Resistance		min	max	none	0
@@ -272,9 +229,7 @@ cold-thorns	1	new mod			1	item_attackertakescolddamage																									L
 fire-thorns	1	new mod			1	item_attackertakesfiredamage																									Laz / Elemental thorns		min	max	none	0
 hp%-mp%	1	new mod (combo)			1	item_maxhp_percent			3	item_maxmana_percent																					Laz / Combination affix		min	max	none	0
 lc-targets	1	skills.txt			1	game_craftpoints																									Laz / Interacts with skills.txt		min	max	none	0
-dc-synergy	1	skills.txt			1	item_deathcoil_synergy																									Laz / Interacts with skills.txt		1	1	none	0
 vanquish-elem	1	skills.txt			1	passive_vanquish_addelem																									Laz / Interacts with skills.txt		min	max	none	0
-maxtotems	1	skills.txt			1	passive_totems_addmax																									Laz / Interacts with skills.txt		min Frames	max Frames	"savebits of 5, very low cap"	0
 blood-phys	1	skills.txt			1	passive_bloodlust_dmgpct																									Laz / Interacts with skills.txt		min	max	none	0
 blood-elem	1	skills.txt			1	passive_bloodlust_elempct																									Laz / Interacts with skills.txt		min	max	none	0
 holyarmor-vel	1	skills.txt			1	passive_holyarmor_addmove																									Laz / Interacts with skills.txt		min	max	none	0
@@ -299,12 +254,9 @@ extra-cold/lvl	1	new mod			17	passive_cold_mastery_perlevel																					
 extra-pois/lvl	1	new mod			17	passive_pois_mastery_perlevel																									Laz / Mastery per level	(32nds)			none	0
 life-pot	1	misc.txt			1	skill_bloodymary_bonus																									Laz / Interacts with misc.txt		1	1	none	0
 mana-pot	1	misc.txt			1	skill_paganheart_bonus																									Laz / Interacts with misc.txt		1	1	none	0
-desc-cascade	1	desc only			1	item_desc_cascade																									Laz / String for javelins		1	1	desc string for built-in cascade attack	0
-desc-barrage	1	desc only			1	item_desc_barrage																									Laz / String for throwing weapons		1	1	desc string for built-in barrage attack	0
 desc-ataura	1	desc only			1	item_desc_acidblood																									Laz / String for Rampage		1	1	desc string for wolf morph on rampage	0
 desc-death	1	desc only			1	item_desc_deathmarch																									Laz / String for Death March		1	1	desc string for death march	0
 desc-judas	1	desc only			1	item_desc_judas																									Laz / String for Judas		1	1	none	0
-desc-omgwtf	1	desc only			1	item_desc_omgwtf																									Laz / Get a life!		1	1	secret runeword bonus	0
 all3	1	new mod (combo)			1	item_fastermovevelocity			3	item_fastergethitrate			3	item_fasterblockrate			3	item_fastercastrate			3	item_fasterattackrate									Laz / Combination affix		min	max	none	0
 swingcast3	1	new mod (combo)			1	item_fastercastrate			3	item_fasterattackrate																					Laz / Combination affix		min	max	none	0
 res-fireltng	1	new mod (combo)			1	fireresist			3	lightresist																					Laz / Combination affix		min	max	none	0
@@ -347,7 +299,6 @@ heal-thorns	1	new mod			1	item_healwhenstruck																									Laz / Life
 att-damage	1	new mod			1	item_targettakesdamage																									Laz / Active thorns damage		min	max	none	0
 stamsteal	1	new mod			1	stamdrainmindam																									Laz / Stamina leech		min	max	none	0
 desc-sorc	1	desc only			1	item_desc_sorciemorph																									Laz / String for Ensi		1	1	desc string for sorceress morph on ensi	0
-darkling-crush	1	skills.txt			1	item_darklings_crushingblow																									Laz / Interacts with skills.txt		min	max	none	0
 cots-pact	1	skills.txt			1	item_cots_when_pact																									Laz / Interacts with skills.txt		min	max	none	0
 res-all-group	1	skills.txt			1	minion_resist_all			3	fireresist			3	lightresist			3	coldresist			3	poisonresist									Laz / Combination affix		min	max	none	0
 pot-rate	1	misc.txt			1	item_faster_potions																									Laz / Interacts with misc.txt		min	max	none	0
@@ -357,7 +308,6 @@ dex/bl	1	none			17	item_dexterity_perblessedlife																									Laz / V
 regen/lvl	1	none			17	item_hpregen_perlevel																									Laz / Life regen per level	(32nds)			none	0
 abs-fcl%	1	none			1	item_absorbfire_percent			3	item_absorblight_percent			3	item_absorbcold_percent																	Laz / Combination affix		min	max	none	0
 extra-ficop	1	new mod (combo)			1	passive_fire_mastery			3	passive_cold_mastery			3	passive_pois_mastery																	Laz / EDM%		min	max	also affects elem affixes?	0
-hmc-checker	1	skills.txt			1	item_hmc_check																									Laz / Interacts with skills.txt		min	max	none	0
 wtf	1	skills.txt			1	hm_c																									Laz / Interacts with skills.txt		min	max	none	0
 pierce-all	1	new mod (combo)			1	passive_fire_pierce			3	passive_ltng_pierce			3	passive_cold_pierce			3	passive_pois_pierce													Laz / Combination affix		min	max	none	0
 pierce-flp	1	new mod (combo)			1	passive_fire_pierce			3	passive_ltng_pierce			3	passive_pois_pierce																	Laz / Combination affix		min	max	none	0
@@ -370,7 +320,6 @@ black6	1	cubemain.txt			1	black_6																									Laz / Black Road chall
 black7	1	cubemain.txt			1	black_7																									Laz / Black Road challenge		1	1	none	0
 needs-lced	1	cubemain.txt			1	item_needschallenged																									Laz / Interacts with cubemain.txt		1 or -1	1 or -1	none	0
 lh-stupidity	1				1	passive_lionheart_addstupidth																									Laz / Interacts with skills.txt		min	max	none	0
-unholy-perma	1				1	item_killkillkill																									Laz / Interacts with skills.txt		min	max	none	0
 pierce-fcl	1	new mod (combo)			1	passive_fire_pierce			3	passive_ltng_pierce			3	passive_cold_pierce																	Laz / Combination affix		min	max	none	0
 dmg-global/lvl	1				17	item_totaldamage_perlevel																									Laz / Damagepercent per level	(32nds)			none	0
 pierce-fl	1	new mod (combo)			1	passive_fire_pierce			3	passive_ltng_pierce																					Laz / Combination affix		min	max	none	0
@@ -404,28 +353,21 @@ lohengrin	1	new mod (combo)			1	item_fasterattackrate			3	item_undeaddamage_perc
 shamans-syn	1	skills.txt			1	skill_shamanspath_synergy																									Laz / Interacts with skills.txt		min	max	none	0
 moon-syn	1	skills.txt			1	moonstrike_synergy																									Laz / Interacts with skills.txt		min	max	none	0
 hex-syn	1	skills.txt			1	hex_dur_syn																									Laz / Interacts with skills.txt		min	max	none	0
-dark-crush-vit%	1	skills.txt			1	item_darklings_crushingblow			3	item_vitality_percent																					Laz / Interacts with skills.txt		min	max	none	0
 strvit	1	new mod (combo)			1	strength			3	vitality																					Laz / Combination affix		min	max	none	0
 shadows-attsyn	1	skills.txt			1	item_shadows_corpsesynergy																									Laz / Interacts with skills.txt		min	max	none	0
-lns-synergy	1	skills.txt			1	skill_lns_effect																									Laz / Interacts with skills.txt		min	max	none	0
 void-synergy	1	skills.txt			1	skill_voidarchon_fire																									Laz / Interacts with skills.txt		min	max	none	0
 heal-melee	1	new mod			1	skill_healonstrikingmelee																									Laz / Life on striking		min	max	none	0
-strbonus	1				17	item_str_bonus																									AC per Player Level	(32nds)			none	0
-dexbonus	1				17	item_dex_bonus																									AC per Player Level	(32nds)			none	0
 desc-honorific	1	desc only			1	item_is_honorific																									Laz / String for special class		1	1	desc string for special item class	0
 pierce-fico	1	new mod (combo)			1	passive_fire_pierce			3	passive_cold_pierce																					Laz / Combination affix		min	max	none	0
 mana-melee	1	new mod			1	item_manaonstrikingmelee																									Laz / Life on striking		min	max	none	0
-upgrades-left	1	tracker			1	upgrades_left																									Laz / Interacts with cubemain.txt		min	max	none	0
 arc-synergy	1	skills.txt			1	skill_arcanestrike_synergy																									Laz / Interacts with skills.txt		min	max	none	0
 cinadides	1	desc + stat			1	passive_state_lockout			3	item_cannotbefrozen																					Laz / String for Evanescence		1	1	desc string for Evanescence	0
-starfire-syn	1	skills.txt			1	skill_starfire_synergy																									Laz / Interacts with skills.txt		min	max	none	0
 retrib-syn	1	skills.txt			1	skill_justkilledsomeone																									Laz / Interacts with skills.txt		min	max	none	0
 hexdmg-syn	1	skills.txt			1	passive_hex_adddmg																									Laz / Interacts with skills.txt		min	max	none	0
 lamia-reanimate	1	skills.txt			1	skill_lamia_rean																									Laz / Interacts with skills.txt		min	max	none	0
 druid-enhanced	1	skills.txt			1	skill_druid_enhanced																									Laz / Interacts with skills.txt		min	max	none	0
 howl-and-thorns	1				1	item_howl			3	item_howlthorns																					Laz / Combination affix		min	max	none	0
 whine-harder	1	automagic.txt			1	moonstrike_synergy																									Laz / Whaa whaa whaa		min	max	none	0
-desc-count	1	desc only			1	item_desc_statue																									Laz / String for oscar		1	1	desc string for built-in cascade attack	0
 res-fcl	1				1	fireresist			3	lightresist			3	coldresist																	Laz / Combination affix		min	max	none	0
 damage-skill	1				11	item_skillondamaged																									Laz / New procs	Skill #	% Chance	Level		0
 getatt-skill	1				11	item_skillongetmeleed																									Laz / New procs	Skill #	% Chance	Level		0
@@ -448,7 +390,6 @@ has-toraja	1	tracker			1	item_has_toraja																									Laz / Interacts
 str-add	1				1	strength_bonus_wpn																													none	0
 dex-add	1				1	dexterity_bonus_wpn																													none	0
 desc-drainaura	1	desc only			1	item_drain_aura																									Laz / String for drain aura		1	1	none	0
-dex-add-fake	1				1	dexterity_bonus_wpn			3	item_dual_wield																									none	0
 xsignet01	1	cubemain.txt			1	x_signet01																									Laz / MC counter		min	max	none	0
 xsignet02	1	cubemain.txt			1	x_signet02																									Laz / MC counter		min	max	none	0
 xsignet03	1	cubemain.txt			1	x_signet03																									Laz / MC counter		min	max	none	0
@@ -528,7 +469,6 @@ mag-min	1				1	magicmindam																													none	0
 mag-max	1				1	magicmaxdam																													none	0
 enrmove3	1				1	item_fastermovevelocity			3	energy																									none	0
 maxallpets	1	skills.txt			1	passive_aura_addmax			3	skill_ancientspirits_synergy																					Laz / Interacts with skills.txt		min	max	none	0
-cant-touch-this	1	cubemain.txt			1	mchammer_count																									Laz / MC counter		min	max	none	0
 blessings-counter	1	cubemain.txt			1	blessings_counter																									Laz / MC counter		min	max	none	0
 mon-buff	1				1	item_fasterattackrate			3	item_cannotbefrozen			3	passive_fire_mastery			3	passive_ltng_mastery			3	passive_cold_mastery			3	passive_pois_mastery			3	passive_pm_mastery					none	0
 extra-totems	1	skills.txt			1	new_totem_syn																									Laz / Interacts with skills.txt		min Frames	max Frames	"savebits of 5, very low cap"	0
@@ -552,3 +492,6 @@ trololololol	1				1	item_absorbfire				item_absorblight				item_absorbmagic				i
 prevent-monster-heal	1				1	nightmare_no_regen																											1	1		0
 boxrandom	1				1	resonance_buff																														0
 shrinecount	1				1	shrine_counter																														0
+vessel-dmg	1				1	skill_light_mastery																														0
+vessel-tgt	1				1	skill_shadow_mastery																														0
+pierce-lipo	1	new mod (combo)			1	passive_ltng_pierce			3	passive_pois_pierce																					Laz / Combination affix		min	max	none	0

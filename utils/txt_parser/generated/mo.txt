@@ -1,71 +1,71 @@
 #id	code	statId	value	paramAdd	paramShift	text
-184	01+	0	2			to Strength
-191	02+	2	2			to Dexterity
-192	03+	1	2			to Energy
-193	04+	3	2			to Vitality
+184	&01	0	2			to Strength
+191	&02	2	2			to Dexterity
+192	&03	1	2			to Energy
+193	&04	3	2			to Vitality
 202	05+	329	1			to Fire Spell Damage
-205	06+	331	1			to Cold Spell Damage
+205	&06	331	1			to Cold Spell Damage
 206	&07	330	1			to Lightning Spell Damage
 207	08+	332	1			to Poison Spell Damage
-213	&09	377	1			to Physical/Magic Spell Damage
+213	09+	377	1			to Physical/Magic Spell Damage
 220	&10	34	2			Damage Reduced by
-221	11+	27	4			Regenerate Mana
+221	&11	27	4			Regenerate Mana
 222	&12	470	2			Bonus to Summoned Minion Damage
-223	13+	444	2			Bonus to Summoned Minion Life
+223	&13	444	2			Bonus to Summoned Minion Life
 224	&14	487	1			Bonus to Summoned Minion Resistances
-226	15+	79	10			Extra Gold from Monsters
+226	&15	79	10			Extra Gold from Monsters
 227	16+	80	2			Better Chance of Getting Magic Items
-228	17+	431	3			Bonus to Poison Skill Duration
-229	&18	97	1	1	802	oskill
-234	19+	31	25			Defense
-235	20+	196	1	3	540	%d%% Chance to cast level %d %s when you Kill an Enemy
-236	21+	39	6			Fire Resist
+228	&17	431	3			Bonus to Poison Skill Duration
+229	18+	97	1	1	802	oskill
+234	&19	31	25			Defense
+235	&20	196	1	3	540	%d%% Chance to cast level %d %s when you Kill an Enemy
+236	&21	39	6			Fire Resist
 237	22+	43	6			Cold Resist
 238	&23	41	6			Lightning Resist
 241	24+	45	6			Poison Resist
 242	25+	109	2			Curse Length Reduction
-243	&26	16	15			Enhanced Defense
+243	26+	16	15			Enhanced Defense
 244	&27	171	2			Total Character Defense Plus
 245	28+	439	4			Life when Struck by an Enemy
-246	&29	440	6			Mana when Struck by an Enemy
+246	29+	440	6			Mana when Struck by an Enemy
 249	30+	164	1			Chance of Uninterruptable Attack
-251	31+	85	1			to Experience Gained
+251	&31	85	1			to Experience Gained
 255	&32	60	2			Life stolen per Hit
 256	&33	62	2			Mana stolen per Hit
 257	34+	195	1	3	496	%d%% Chance to cast level %d %s on Melee Attack
 258	&35	119	25			Bonus to Attack Rating
 263	36+	17	15			Enhanced Maximum Damage
-264	&37	22	10			to Maximum Damage
+264	37+	22	10			to Maximum Damage
 285	&38	66	5			Stun Attack
-286	&39	136	1			Chance of Crushing Blow
-287	&40	86	4			Life after each Kill
-294	&41	333	1			to Enemy Fire Resistance
-297	42+	335	1			to Enemy Cold Resistance
-298	43+	334	1			to Enemy Lightning Resistance
-304	44+	336	1			to Enemy Poison Resistance
+286	39+	136	1			Chance of Crushing Blow
+287	40+	86	4			Life after each Kill
+294	41+	333	1			to Enemy Fire Resistance
+297	&42	335	1			to Enemy Cold Resistance
+298	&43	334	1			to Enemy Lightning Resistance
+304	&44	336	1			to Enemy Poison Resistance
 309	45+	183	25			Crafting Points
-310	46+	39,41,43,45	2			Fire Resist
-311	47+	91	-1			Requirements
-312	&48	155	1	1	760	Reanimate as:
+310	&46	39,41,43,45	2			Fire Resist
+311	&47	91	-1			Requirements
+312	48+	155	1	1	760	Reanimate as:
 313	&49	131	10			Damage Reflected
 314	50+	102	3			Faster Block Rate
-369	51+	96	5			Faster Run/Walk
+369	&51	96	5			Faster Run/Walk
 370	&52	99	3			Faster Hit Recovery
 382	&53	74	5			Replenish Life
-383	&54	155	1	1	765	Reanimate as:
+383	54+	155	1	1	765	Reanimate as:
 393	55+	201	1	1	54	%d%% Chance to cast level %d %s when Struck
-397	56+	195	1	4	779	%d%% Chance to cast level %d %s on Melee Attack
+397	&56	195	1	4	779	%d%% Chance to cast level %d %s on Melee Attack
 398	57+	195	1	3	468	%d%% Chance to cast level %d %s on Melee Attack
 400	&58	195	1	6	500	%d%% Chance to cast level %d %s on Melee Attack
 401	&59	296	1			\dgreen;Orb Effects Applied to this Item are Doubled\blue;
 403	60+	210	10			Life on Striking in Melee
-408	61+	295	10			Mana on Striking in Melee
-458	&62	485	2			Energy Factor to Spell Damage
+408	&61	295	10			Mana on Striking in Melee
+458	62+	485	2			Energy Factor to Spell Damage
 459	&63	25	10			Enhanced Weapon Damage
-460	&64	105	3			Faster Cast Rate
-461	65+	93	3			Increased Attack Speed
-462	z1+	409	1			Bonus to Buff/Debuff/Cold Skill Duration
-463	z2+	110	2			Poison Length Reduced by
-464	&a3	97	1	1	791	oskill
-465	&a4	97	1	1	792	oskill
-466	z5+	97	1	1	793	oskill
+460	64+	105	3			Faster Cast Rate
+461	&65	93	3			Increased Attack Speed
+462	&a1	409	1			Bonus to Buff/Debuff/Cold Skill Duration
+463	&a2	110	2			Poison Length Reduced by
+464	z3+	97	1	1	791	oskill
+465	z4+	97	1	1	792	oskill
+466	&a5	97	1	1	793	oskill

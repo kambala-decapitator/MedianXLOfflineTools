@@ -154,8 +154,8 @@
 182	100	9						Total Character Defense = 0	Total Character Defense = 0		3	10	0					armor_override_percent
 183	100	11						Crafting Points	Crafting Points		1	175	1					game_craftpoints
 184	0	5																x_signet01
-185			12					Attribute Points from Books	Attribute Points from Books		1	3	1					potion_stat_cap
-186			8					Skill Points from Books	Skill Points from Books		1	3	1					potion_skill_cap
+185			12					Stat Signets Used:	Stat Signets Used:		3	3	2					potion_stat_cap
+186			8					Skill Signets Used:	Skill Signets Used:		3	3	2					potion_skill_cap
 187	0	3						Lionheart Spell Blinds Attacker	Lionheart Spell Blinds Attacker		12	22	2					passive_lionheart_addstupidth
 188	0	3						+%d to Javelin and Spear Skills	+%d to Javelin and Spear Skills		14	151					16	item_addskill_tab
 189	0	1						\red;Cube with your Idol of Vanity	\red;Cube with your Idol of Vanity		3	159	0					spiritofdamnationnew
@@ -232,7 +232,7 @@
 263	0	5																x_signet36
 264	0	5																x_signet37
 265	0	3																item_has_toraja
-266	0	7						\orange;Area Effect Attack\white;	\orange;Area Effect Attack\white;		3	140	0				17	item_warp_blue
+266	0	7						\orange;Area Effect Attack\white;	\orange;Area Effect Attack\white;		3	238	0				17	item_warp_blue
 267	0	5						Enhanced Stance Radius	Enhanced Stance Radius		1	198	1					item_stance_radius
 270	0	3																item_has_edyrem
 271	0	2						Random Resistance Bonus	Random Resistance Bonus		3	49	0					item_randomres_aura
@@ -279,8 +279,8 @@
 313	0	5																x_signet49
 314	0	5																x_signet50
 315	0	8																firelength
-316	0	8																burningmin
-317	0	8																burningmax
+316	0	8						&gt; Main &lt;	&gt; Main &lt;		3	55	0					burningmin
+317	0	8						&gt; Offense &lt;	&gt; Offense &lt;		3	55	0					burningmax
 324	0	6																item_extra_charges
 329	50	8		330,331,332,377	to Spell Damage	to Spell Damage		to Fire Spell Damage	to Fire Spell Damage		4	88	1	5	4	1		passive_fire_mastery
 330	50	8		329,331,332,377	to Spell Damage	to Spell Damage		to Lightning Spell Damage	to Lightning Spell Damage		4	88	1	5	4	1		passive_ltng_mastery
@@ -291,9 +291,9 @@
 335	0	8		333,334,336	to All Enemy Resistances	to All Enemy Resistances		to Enemy Cold Resistance	to Enemy Cold Resistance		20	88	1	6	20	1		passive_cold_pierce
 336	0	8		333,334,335	to All Enemy Resistances	to All Enemy Resistances		to Enemy Poison Resistance	to Enemy Poison Resistance		20	88	1	6	20	1		passive_pois_pierce
 337	0	8																passive_critical_strike
-338	0	8		339,340	Chance to Avoid Damage	Chance to Avoid Damage		to We Have A Bug Here	to We Have A Bug Here		2	40	1	8	2	1		passive_dodge
-339	0	8		338,340	Chance to Avoid Damage	Chance to Avoid Damage		to We Have A Bug Here	to We Have A Bug Here		2	40	1	8	2	1		passive_avoid
-340	0	8		338,339	Chance to Avoid Damage	Chance to Avoid Damage		to We Have A Bug Here	to We Have A Bug Here		2	40	1	8	2	1		passive_evade
+338	0	8		339,340	Chance to Avoid Damage	Chance to Avoid Damage		Avoid Damage	Avoid Damage		2	40	1	8	2	1		passive_dodge
+339	0	8		338,340	Chance to Avoid Damage	Chance to Avoid Damage		Avoid Damage	Avoid Damage		2	40	1	8	2	1		passive_avoid
+340	0	8		338,339	Chance to Avoid Damage	Chance to Avoid Damage		Avoid Damage	Avoid Damage		2	40	1	8	2	1		passive_evade
 341	0	8																passive_warmth
 342	0	8																passive_mastery_melee_th
 343	0	8			ModitemPeril	ModitemPeril								4	3	0		passive_mastery_melee_dmg
@@ -359,13 +359,13 @@
 412	0	10																resonance_buff
 413	0	8						Bonus to Vitality when using an Apple	Bonus to Vitality when using an Apple		2	50	1					skill_bloodymary_bonus
 414	0	8						Bonus to Energy when using an Apple	Bonus to Energy when using an Apple		2	49	1					skill_paganheart_bonus
-418	0	2						Can Be Upgraded with Black Road Challenge	Can Be Upgraded with Black Road Challenge		3	146	0					item_needschallenged
-419	0	8						\red;May the Light of Dien-Ap-Sten shine upon you!	\red;May the Light of Dien-Ap-Sten shine upon you!		3	2	0					hm_c
-421	2	2						Trial of Fear completed!	Trial of Fear completed!		3	20	0					black_1
-422	2	2						Trial of Greed completed!	Trial of Greed completed!		3	19	0					black_2
-423	2	2						Trial of Knowledge completed!	Trial of Knowledge completed!		3	17	0					black_3
-424	2	2						Trial of Blood completed!	Trial of Blood completed!		3	16	0					black_4
-425	2	2						Trial of Contrition completed!	Trial of Contrition completed!		3	18	0					black_5
+418	0	2						\orange;Can Be Upgraded with Black Road Challenge	\orange;Can Be Upgraded with Black Road Challenge		3	225	0					item_needschallenged
+419	0	8						\red;May the Light of Dien-Ap-Sten shine upon you!\blue;	\red;May the Light of Dien-Ap-Sten shine upon you!\blue;		3	2	0					hm_c
+421	2	2		422,423,424,425		\orange;All trials completed!		\orange;Trial of Fear completed!	\orange;Trial of Fear completed!		3	228	0	12	3	0		black_1
+422	2	2		421,423,424,425		\orange;All trials completed!		\orange;Trial of Greed completed!	\orange;Trial of Greed completed!		3	227	0	12	3	0		black_2
+423	2	2		421,422,424,425		\orange;All trials completed!		\orange;Trial of Knowledge completed!	\orange;Trial of Knowledge completed!		3	225	0	12	3	0		black_3
+424	2	2		421,422,423,425		\orange;All trials completed!		\orange;Trial of Blood completed!	\orange;Trial of Blood completed!		3	224	0	12	3	0		black_4
+425	2	2		421,422,423,424		\orange;All trials completed!		\orange;Trial of Contrition completed!	\orange;Trial of Contrition completed!		3	226	0	12	3	0		black_5
 426	2	2						\orange;Well Done!\red;	\yellow;You have reached the gambling limit. Please reset your Trader's Chest!\blue;		3	1	0					black_6
 427	2	2						\orange;Congratulations!\blue;	\red;&gt;&gt; UNEQUIP THIS ITEM BEFORE REACHING LEVEL 120 &lt;&lt;\blue;		3	1	0					black_7
 429	0	8						Damage Reduction to Pact of Blood	Damage Reduction to Pact of Blood		4	18	1					passive_rejuv_dr
@@ -392,11 +392,13 @@
 465	0	5																x_signet69
 466	0	7																x_signet70
 467	0	10						Damage when using an Apple	Damage when using an Apple		4	49	1					skill_elixirs_synergy
+468	0	8						Damage to Paladin Vessels	Damage to Paladin Vessels		2	137	1					skill_light_mastery
+469	0	8						Extra Targets to Paladin Vessels	Extra Targets to Paladin Vessels		1	138	1					skill_shadow_mastery
 470	50	9						Bonus to Summoned Minion Damage	Bonus to Summoned Minion Damage		4	75	1					skill_minion_dmg_percent
-471	1	2						Can Be Upgraded with Ennead Challenge	Can Be Upgraded with Ennead Challenge		3	149	0					item_needsupgraded
+471	1	2						\orange;Can Be Upgraded with Ennead Challenge	\orange;Can Be Upgraded with Ennead Challenge		3	149	0					item_needsupgraded
 472	0	8																item_upgraded2
-473	0	8						Unlocks your Ennead Skill	Unlocks your Ennead Skill		3	114	0					learn_ennead
-474	0	8						Unlocks your Black Road Skill	Unlocks your Black Road Skill		3	113	0					learn_blackroad
+473	0	8						\green;Unlocks your Ennead Skill	\green;Unlocks your Ennead Skill		3	230	0					learn_ennead
+474	0	8						\green;Unlocks your Black Road Skill	\green;Unlocks your Black Road Skill		3	230	0					learn_blackroad
 475	0	1						\red;Druid Morph\blue;	\red;Druid Morph\blue;		3	234	0					item_desc_druidmorph
 476	0	1						Level 1 Demon Blood Aura when Equipped	Level 1 Demon Blood Aura when Equipped		3	159	0					item_desc_dbaura
 477	1	4						\red;&gt;&gt; UNEQUIP THIS ITEM BEFORE REACHING LEVEL 120 &lt;&lt;\blue;	Increased Difficulty		3	1	0					item_desc_hardaura
@@ -412,14 +414,14 @@
 488	50	9						Bonus to Energy Factor	Bonus to Energy Factor		4	157	1					enr_factor_percent
 489	0	10						Target Takes Additional Damage of	Target Takes Additional Damage of		3	13	2					item_targettakesdamage
 490	0	1						Spells Cost Life instead of Mana	Spells Cost Life instead of Mana		3	157	0					item_desc_lifecostspells
-491	0	3						I Killed A Dragon and All I Got Was This Lousy Charm	I Killed A Dragon and All I Got Was This Lousy Charm		3	1	0					item_has_stardragon
+491	0	3						\red;I Killed A Dragon and All I Got Was This Lousy Charm\blue;	\red;I Killed A Dragon and All I Got Was This Lousy Charm\blue;		3	1	0					item_has_stardragon
 492	50	8						Reduced Healing Rate from Apples	Increased Healing Rate from Apples		4	31	1					item_faster_potions
 493	50	8						Slows Ranged Attacker by	Slows Ranged Attacker by		2	74	2					skill_slowrangedthorns
 495	0	1						\red;Sorceress Morph\blue;	\red;Sorceress Morph\blue;		3	234	0					item_desc_sorciemorph
 496	0	9						Crushing Blow to Darklings	Crushing Blow to Darklings		2	86	1					tree_synergy
 498	0	9						Bonus to Fire Elemental Damage if Summoned during Pact of Blood	Bonus to Fire Elemental Damage if Summoned during Pact of Blood		2	14	1					item_cots_when_pact
 499	0	10						to Energy	to Energy	(Based on Character Level)	6	60	1					item_energy_perlevel
-500	100	8						Bonus to Summoned Minion Attack Rating	Bonus to Summoned Minion Attack Rating		2	106	1					item_minion_attack
+500	100	8						Bonus to Summoned Minion Attack Rating	Bonus to Summoned Minion Attack Rating		4	106	1					item_minion_attack
 501	23	10						\black;1- \white;Shrines: 0 \black;	\white;Shrines: 		3	55	2					shrine_counter
 503	0	10						to Strength	to Strength	(Based on Blessed Life Skill Level)	6	66	1					item_strength_perblessedlife
 504	0	10						to Dexterity	to Dexterity	(Based on Blessed Life Skill Level)	6	62	1					item_dexterity_perblessedlife

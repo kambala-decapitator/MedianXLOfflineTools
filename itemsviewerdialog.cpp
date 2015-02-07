@@ -169,6 +169,7 @@ void ItemsViewerDialog::createLayout()
 
     QLabel *reserveRunesLabel = new QLabel(tr("Reserve:"), _upgradeBox);
     reserveRunesLabel->setBuddy(_reserveRunesSpinBox);
+    reserveRunesLabel->setToolTip(_reserveRunesSpinBox->toolTip());
 
     QFrame *runesFrame = new QFrame(_upgradeBox);
     runesFrame->setFrameShape(QFrame::StyledPanel);

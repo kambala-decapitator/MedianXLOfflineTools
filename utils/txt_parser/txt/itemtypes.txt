@@ -23,7 +23,7 @@ Gem				gem	sock		0	0					0	0	0	0			1	0	1	0	0	0	0	0	3		0		0							misc	0
 Torch				torc	misc		0	1					0	0	0	0			1	0	0	0	0	0	0	0	3		0		0							misc	0
 Scroll				scro	misc		0	0					0	0	0	0			1	0	0	1	0	0	0	0	3		0		0							misc	0
 Not Used							0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
-Scepter				scep	rod		1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	2		0		0							weap	0
+Scepter				scep	rod	mace	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	2		0		0							weap	0
 Wand				wand	rod		1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	2		0	nec	0							weap	0
 Staff				staf	rod		1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	2		0		0							weap	0
 Bow				bow	miss		0	1	rarm	larm	bowq		0	0	0	0		1	0	0	0	0	6	6	6	1	3		0		0							weap	0
@@ -232,7 +232,7 @@ Sacred Bow	Sky Siege			#bow	bow		0	1	rarm	larm	bowq		0	0	0	0		1	0	0	0	0	0	0	0	1	
 Mass Disenchant	for arcane crystals/shards			dcht			0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
 Sacred Group	for learning signets			ssgl			0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
 Unique Mystic orb	cube reagent			asa#			0	0					0	0	0	0			1	0	0	0	0	0	0	0	3		0		0							misc	0
-Mystic Sword	quest			####	mele		1	1	rarm				0	0	0	0		1	0	0	0	0	0	0	0	0	0		0		0							weap	0
+Mystic Sword	quest			####	mele		0	1	rarm				0	0	0	0		1	0	0	0	0	0	0	0	0	0		0		0							weap	0
 Druid Gift Box				dbox	fbox		0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
 Necro Gift Box				nbox	fbox		0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
 Pala Gift Box				pbox	fbox		0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0

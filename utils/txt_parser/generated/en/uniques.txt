@@ -35,12 +35,12 @@
 33	(Paladin Challenge Item)\nEye of Divinity	90	newclasscharm
 34	(Sorceress Challenge Item)\nNexus Crystal	90	newclasscharm
 35	Eternal Bone Pile	100	
-36	Sunstone of Fire (Upgraded)	50	
-37	Sunstone of Fire	666	
-38	Sunstone of Ice (Upgraded)	50	
-39	Sunstone of Ice	666	
-40	Sunstone of Thunder (Upgraded)	50	
-41	Sunstone of Thunder	666	
+36	Sunstone of Fire (Upgraded)	666	
+37	Sunstone of Fire	0	
+38	Sunstone of Ice (Upgraded)	666	
+39	Sunstone of Ice	0	
+40	Sunstone of Thunder (Upgraded)	666	
+41	Sunstone of Thunder	0	
 42	Sunstone of the Gods	100	
 43	Sunless Crystal Bird	666	
 44	Six Angel Bag	666	
@@ -49,7 +49,7 @@
 47	Zakarum's Ear	80	
 48	Moon of the Spider	100	
 49	Spirit Trance Herb	100	
-50	\red;Welcome! Median XL: Ultimative XII\blue;	666	
+50	\red;Welcome! Median XL: Ultimative XVc\blue;	666	
 51	Hammer of the Taan Judges	40	
 52	The Book of Lies	60	
 53	By Robert Marks\nDemonsbane	100	demonsbaneZ
@@ -1458,7 +1458,7 @@
 1456	Dragon Tail	52	
 1457	The Asteroid Belt	100	
 1458	Lilith's Temptation	100	invblt
-1459	Champion of the Truine	100	
+1459	Champion of the Triune	100	
 1460	Iceshell	6	
 1461	Iceshell	15	
 1462	Iceshell	23	
@@ -2128,356 +2128,356 @@
 2126	Witchcraft	100	
 2127	Ripstar	60	
 2128	Earth Rouser	100	
-2129	Cornerstone of the World	100	
-2130	Cornerstone of the World	100	
-2131	Cornerstone of the World	100	
-2132	Cornerstone of the World	100	
-2133	Cornerstone of the World	100	
-2134	Cornerstone of the World	100	
-2135	Cornerstone of the World	100	
-2136	Cornerstone of the World	100	
-2137	Cornerstone of the World	100	
-2138	Cornerstone of the World	100	
-2139	Cornerstone of the World	100	
-2140	Cornerstone of the World	100	
-2141	Cornerstone of the World	100	
-2142	Cornerstone of the World	100	
-2143	Cornerstone of the World	100	
-2144	Cornerstone of the World	100	
-2145	Cornerstone of the World	100	
-2146	Cornerstone of the World	100	
-2147	Cornerstone of the World	100	
-2148	Cornerstone of the World	100	
-2149	Cornerstone of the World	100	
-2150	Cornerstone of the World	100	
-2151	Cornerstone of the World	100	
-2152	Cornerstone of the World	100	
-2153	Cornerstone of the World	100	
-2154	Cornerstone of the World	100	
-2155	Cornerstone of the World	100	
-2156	Cornerstone of the World	100	
-2157	Cornerstone of the World	100	
-2158	Cornerstone of the World	100	
-2159	Cornerstone of the World	100	
-2160	Cornerstone of the World	100	
-2161	Cornerstone of the World	100	
-2162	Cornerstone of the World	100	
-2163	Cornerstone of the World	100	
-2164	Cornerstone of the World	100	
-2165	Cornerstone of the World	100	
-2166	Cornerstone of the World	100	
-2167	Cornerstone of the World	100	
-2168	Cornerstone of the World	100	
-2169	Cornerstone of the World	100	
-2170	Cornerstone of the World	100	
-2171	Cornerstone of the World	100	
-2172	Cornerstone of the World	100	
-2173	Cornerstone of the World	100	
-2174	Cornerstone of the World	100	
-2175	Cornerstone of the World	100	
-2176	Cornerstone of the World	100	
-2177	Cornerstone of the World	100	
-2178	Cornerstone of the World	100	
-2179	Cornerstone of the World	100	
-2180	Cornerstone of the World	100	
-2181	Cornerstone of the World	100	
-2182	Cornerstone of the World	100	
-2183	Cornerstone of the World	100	
-2184	Cornerstone of the World	100	
-2185	Cornerstone of the World	100	
-2186	Cornerstone of the World	100	
-2187	Cornerstone of the World	100	
-2188	Cornerstone of the World	100	
-2189	Cornerstone of the World	100	
-2190	Cornerstone of the World	100	
-2191	Cornerstone of the World	100	
-2192	Cornerstone of the World	100	
-2193	Cornerstone of the World	100	
-2194	Cornerstone of the World	100	
-2195	Cornerstone of the World	100	
-2196	Cornerstone of the World	100	
-2197	Cornerstone of the World	100	
-2198	Cornerstone of the World	100	
-2199	Cornerstone of the World	100	
-2200	Cornerstone of the World	100	
-2201	Cornerstone of the World	100	
-2202	Cornerstone of the World	100	
-2203	Cornerstone of the World	100	
-2204	Cornerstone of the World	100	
-2205	Cornerstone of the World	100	
-2206	Cornerstone of the World	100	
-2207	Cornerstone of the World	100	
-2208	Cornerstone of the World	100	
-2209	Cornerstone of the World	100	
-2210	Cornerstone of the World	100	
-2211	Cornerstone of the World	100	
-2212	Cornerstone of the World	100	
-2213	Cornerstone of the World	100	
-2214	Cornerstone of the World	100	
-2215	Cornerstone of the World	100	
-2216	Cornerstone of the World	100	
-2217	Cornerstone of the World	100	
-2218	Cornerstone of the World	100	
-2219	Cornerstone of the World	100	
-2220	Cornerstone of the World	100	
-2221	Cornerstone of the World	100	
-2222	Cornerstone of the World	100	
-2223	Cornerstone of the World	100	
-2224	Cornerstone of the World	100	
-2225	Cornerstone of the World	100	
-2226	Cornerstone of the World	100	
-2227	Cornerstone of the World	100	
-2228	Cornerstone of the World	100	
-2229	Cornerstone of the World	100	
-2230	Cornerstone of the World	100	
-2231	Cornerstone of the World	100	
-2232	Cornerstone of the World	100	
-2233	Cornerstone of the World	100	
-2234	Cornerstone of the World	100	
-2235	Cornerstone of the World	100	
-2236	Cornerstone of the World	100	
-2237	Cornerstone of the World	100	
-2238	Cornerstone of the World	100	
-2239	Cornerstone of the World	100	
-2240	Cornerstone of the World	100	
-2241	Cornerstone of the World	100	
-2242	Cornerstone of the World	100	
-2243	Cornerstone of the World	100	
-2244	Cornerstone of the World	100	
-2245	Cornerstone of the World	100	
-2246	Cornerstone of the World	100	
-2247	Cornerstone of the World	100	
-2248	Cornerstone of the World	100	
-2249	Cornerstone of the World	100	
-2250	Cornerstone of the World	100	
-2251	Cornerstone of the World	100	
-2252	Cornerstone of the World	100	
-2253	Cornerstone of the World	100	
-2254	Cornerstone of the World	100	
-2255	Cornerstone of the World	100	
-2256	Cornerstone of the World	100	
-2257	Cornerstone of the World	100	
-2258	Cornerstone of the World	100	
-2259	Cornerstone of the World	100	
-2260	Cornerstone of the World	100	
-2261	Cornerstone of the World	100	
-2262	Cornerstone of the World	100	
-2263	Cornerstone of the World	100	
-2264	Cornerstone of the World	100	
-2265	Cornerstone of the World	100	
-2266	Cornerstone of the World	100	
-2267	Cornerstone of the World	100	
-2268	Cornerstone of the World	100	
-2269	Cornerstone of the World	100	
-2270	Cornerstone of the World	100	
-2271	Cornerstone of the World	100	
-2272	Cornerstone of the World	100	
-2273	Cornerstone of the World	100	
-2274	Cornerstone of the World	100	
-2275	Cornerstone of the World	666	
-2276	Cornerstone of the World	100	
-2277	Cornerstone of the World	100	
-2278	Cornerstone of the World	100	
-2279	Cornerstone of the World	100	
-2280	Cornerstone of the World	100	
-2281	Cornerstone of the World	100	
-2282	Cornerstone of the World	100	
-2283	Cornerstone of the World	100	
-2284	Cornerstone of the World	100	
-2285	Cornerstone of the World	100	
-2286	Cornerstone of the World	100	
-2287	Cornerstone of the World	100	
-2288	Cornerstone of the World	100	
-2289	Cornerstone of the World	100	
-2290	Cornerstone of the World	100	
-2291	Cornerstone of the World	100	
-2292	Cornerstone of the World	100	
-2293	Cornerstone of the World	100	
-2294	Cornerstone of the World	100	
-2295	Cornerstone of the World	100	
-2296	Cornerstone of the World	100	
-2297	Cornerstone of the World	100	
-2298	Cornerstone of the World	100	
-2299	Cornerstone of the World	100	
-2300	Cornerstone of the World	100	
-2301	Cornerstone of the World	100	
-2302	Cornerstone of the World	100	
-2303	Cornerstone of the World	100	
-2304	Cornerstone of the World	100	
-2305	Cornerstone of the World	100	
-2306	Cornerstone of the World	100	
-2307	Cornerstone of the World	100	
-2308	Cornerstone of the World	100	
-2309	Cornerstone of the World	100	
-2310	Cornerstone of the World	100	
-2311	Cornerstone of the World	100	
-2312	Cornerstone of the World	100	
-2313	Cornerstone of the World	100	
-2314	Cornerstone of the World	100	
-2315	Cornerstone of the World	100	
-2316	Cornerstone of the World	100	
-2317	Cornerstone of the World	100	
-2318	Cornerstone of the World	100	
-2319	Cornerstone of the World	100	
-2320	Cornerstone of the World	100	
-2321	Cornerstone of the World	100	
-2322	Cornerstone of the World	100	
-2323	Cornerstone of the World	100	
-2324	Cornerstone of the World	100	
-2325	Cornerstone of the World	100	
-2326	Cornerstone of the World	100	
-2327	Cornerstone of the World	100	
-2328	Cornerstone of the World	100	
-2329	Cornerstone of the World	100	
-2330	Cornerstone of the World	100	
-2331	Cornerstone of the World	100	
-2332	Cornerstone of the World	100	
-2333	Cornerstone of the World	100	
-2334	Cornerstone of the World	100	
-2335	Cornerstone of the World	100	
-2336	Cornerstone of the World	100	
-2337	Cornerstone of the World	100	
-2338	Cornerstone of the World	100	
-2339	Cornerstone of the World	100	
-2340	Cornerstone of the World	100	
-2341	Cornerstone of the World	100	
-2342	Cornerstone of the World	100	
-2343	Cornerstone of the World	100	
-2344	Cornerstone of the World	100	
-2345	Cornerstone of the World	100	
-2346	Cornerstone of the World	100	
-2347	Cornerstone of the World	100	
-2348	Cornerstone of the World	100	
-2349	Cornerstone of the World	100	
-2350	Cornerstone of the World	100	
-2351	Cornerstone of the World	100	
-2352	Cornerstone of the World	100	
-2353	Cornerstone of the World	100	
-2354	Cornerstone of the World	100	
-2355	Cornerstone of the World	100	
-2356	Cornerstone of the World	100	
-2357	Cornerstone of the World	100	
-2358	Cornerstone of the World	100	
-2359	Cornerstone of the World	100	
-2360	Cornerstone of the World	100	
-2361	Cornerstone of the World	100	
-2362	Cornerstone of the World	100	
-2363	Cornerstone of the World	100	
-2364	Cornerstone of the World	100	
-2365	Cornerstone of the World	100	
-2366	Cornerstone of the World	100	
-2367	Cornerstone of the World	100	
-2368	Cornerstone of the World	100	
-2369	Cornerstone of the World	100	
-2370	Cornerstone of the World	100	
-2371	Cornerstone of the World	100	
-2372	Cornerstone of the World	100	
-2373	Cornerstone of the World	100	
-2374	Cornerstone of the World	100	
-2375	Cornerstone of the World	100	
-2376	Cornerstone of the World	100	
-2377	Cornerstone of the World	100	
-2378	Cornerstone of the World	100	
-2379	Cornerstone of the World	100	
-2380	Cornerstone of the World	100	
-2381	Cornerstone of the World	100	
-2382	Cornerstone of the World	100	
-2383	Cornerstone of the World	100	
-2384	Cornerstone of the World	100	
-2385	Cornerstone of the World	100	
-2386	Cornerstone of the World	100	
-2387	Cornerstone of the World	100	
-2388	Cornerstone of the World	100	
-2389	Cornerstone of the World	100	
-2390	Cornerstone of the World	100	
-2391	Cornerstone of the World	100	
-2392	Cornerstone of the World	100	
-2393	Cornerstone of the World	100	
-2394	Cornerstone of the World	100	
-2395	Cornerstone of the World	100	
-2396	Cornerstone of the World	100	
-2397	Cornerstone of the World	100	
-2398	Cornerstone of the World	100	
-2399	Cornerstone of the World	100	
-2400	Cornerstone of the World	100	
-2401	Cornerstone of the World	100	
-2402	Cornerstone of the World	100	
-2403	Cornerstone of the World	100	
-2404	Cornerstone of the World	100	
-2405	Cornerstone of the World	100	
-2406	Cornerstone of the World	100	
-2407	Cornerstone of the World	100	
-2408	Cornerstone of the World	100	
-2409	Cornerstone of the World	100	
-2410	Cornerstone of the World	100	
-2411	Cornerstone of the World	100	
-2412	Cornerstone of the World	100	
-2413	Cornerstone of the World	100	
-2414	Cornerstone of the World	100	
-2415	Cornerstone of the World	100	
-2416	Cornerstone of the World	100	
-2417	Cornerstone of the World	100	
-2418	Cornerstone of the World	100	
-2419	Cornerstone of the World	100	
-2420	Cornerstone of the World	100	
-2421	Cornerstone of the World	100	
-2422	Cornerstone of the World	100	
-2423	Cornerstone of the World	100	
-2424	Cornerstone of the World	100	
-2425	Cornerstone of the World	100	
-2426	Cornerstone of the World	100	
-2427	Cornerstone of the World	100	
-2428	Cornerstone of the World	100	
-2429	Cornerstone of the World	100	
-2430	Cornerstone of the World	100	
-2431	Cornerstone of the World	100	
-2432	Cornerstone of the World	100	
-2433	Cornerstone of the World	100	
-2434	Cornerstone of the World	100	
-2435	Cornerstone of the World	100	
-2436	Cornerstone of the World	100	
-2437	Cornerstone of the World	100	
-2438	Cornerstone of the World	100	
-2439	Cornerstone of the World	100	
-2440	Cornerstone of the World	100	
-2441	Cornerstone of the World	100	
-2442	Cornerstone of the World	100	
-2443	Cornerstone of the World	100	
-2444	Cornerstone of the World	100	
-2445	Cornerstone of the World	100	
-2446	Cornerstone of the World	100	
-2447	Cornerstone of the World	100	
-2448	Cornerstone of the World	100	
-2449	Cornerstone of the World	100	
-2450	Cornerstone of the World	100	
-2451	Cornerstone of the World	100	
-2452	Cornerstone of the World	100	
-2453	Cornerstone of the World	100	
-2454	Cornerstone of the World	100	
-2455	Cornerstone of the World	100	
-2456	Cornerstone of the World	100	
-2457	Cornerstone of the World	100	
-2458	Cornerstone of the World	100	
-2459	Cornerstone of the World	100	
-2460	Cornerstone of the World	100	
-2461	Cornerstone of the World	100	
-2462	Cornerstone of the World	100	
-2463	Cornerstone of the World	100	
-2464	Cornerstone of the World	100	
-2465	Cornerstone of the World	100	
-2466	Cornerstone of the World	100	
-2467	Cornerstone of the World	100	
-2468	Cornerstone of the World	100	
-2469	Cornerstone of the World	100	
-2470	Cornerstone of the World	100	
-2471	Cornerstone of the World	100	
-2472	Cornerstone of the World	100	
-2473	Cornerstone of the World	100	
-2474	Cornerstone of the World	100	
-2475	Cornerstone of the World	100	
-2476	Cornerstone of the World	100	
-2477	Cornerstone of the World	100	
-2478	Cornerstone of the World	100	
+2129	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2130	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2131	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2132	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2133	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2134	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2135	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2136	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2137	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2138	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2139	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2140	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2141	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2142	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2143	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2144	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2145	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2146	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2147	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2148	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2149	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2150	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2151	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2152	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2153	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2154	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2155	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2156	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2157	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2158	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2159	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2160	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2161	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2162	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2163	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2164	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2165	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2166	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2167	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2168	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2169	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2170	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2171	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2172	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2173	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2174	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2175	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2176	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2177	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2178	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2179	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2180	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2181	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2182	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2183	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2184	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2185	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2186	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2187	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2188	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2189	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2190	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2191	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2192	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2193	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2194	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2195	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2196	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2197	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2198	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2199	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2200	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2201	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2202	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2203	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2204	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2205	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2206	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2207	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2208	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2209	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2210	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2211	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2212	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2213	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2214	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2215	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2216	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2217	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2218	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2219	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2220	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2221	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2222	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2223	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2224	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2225	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2226	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2227	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2228	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2229	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2230	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2231	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2232	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2233	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2234	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2235	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2236	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2237	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2238	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2239	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2240	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2241	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2242	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2243	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2244	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2245	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2246	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2247	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2248	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2249	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2250	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2251	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2252	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2253	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2254	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2255	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2256	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2257	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2258	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2259	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2260	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2261	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2262	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2263	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2264	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2265	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2266	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2267	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2268	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2269	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2270	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2271	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2272	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2273	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2274	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2275	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	666	
+2276	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2277	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2278	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2279	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2280	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2281	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2282	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2283	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2284	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2285	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2286	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2287	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2288	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2289	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2290	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2291	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2292	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2293	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2294	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2295	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2296	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2297	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2298	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2299	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2300	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2301	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2302	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2303	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2304	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2305	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2306	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2307	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2308	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2309	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2310	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2311	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2312	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2313	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2314	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2315	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2316	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2317	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2318	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2319	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2320	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2321	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2322	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2323	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2324	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2325	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2326	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2327	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2328	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2329	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2330	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2331	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2332	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2333	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2334	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2335	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2336	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2337	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2338	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2339	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2340	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2341	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2342	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2343	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2344	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2345	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2346	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2347	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2348	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2349	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2350	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2351	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2352	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2353	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2354	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2355	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2356	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2357	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2358	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2359	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2360	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2361	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2362	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2363	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2364	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2365	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2366	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2367	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2368	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2369	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2370	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2371	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2372	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2373	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2374	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2375	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2376	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2377	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2378	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2379	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2380	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2381	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2382	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2383	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2384	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2385	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2386	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2387	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2388	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2389	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2390	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2391	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2392	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2393	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2394	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2395	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2396	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2397	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2398	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2399	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2400	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2401	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2402	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2403	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2404	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2405	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2406	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2407	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2408	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2409	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2410	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2411	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2412	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2413	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2414	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2415	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2416	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2417	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2418	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2419	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2420	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2421	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2422	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2423	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2424	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2425	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2426	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2427	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2428	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2429	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2430	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2431	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2432	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2433	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2434	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2435	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2436	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2437	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2438	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2439	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2440	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2441	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2442	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2443	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2444	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2445	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2446	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2447	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2448	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2449	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2450	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2451	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2452	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2453	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2454	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2455	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2456	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2457	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2458	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2459	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2460	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2461	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2462	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2463	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2464	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2465	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2466	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2467	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2468	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2469	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2470	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2471	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2472	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2473	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2474	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2475	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2476	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2477	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2478	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
 2479	\red;Valkyrie's Prime	120	
 2480	Trader's Chest	666	
 2481	The Sleep	666	
@@ -2502,7 +2502,7 @@
 2500	Linarian's Legacy	100	
 2501	Soulkeeper	666	
 2502	Soul of Kabraxis	100	
-2503	\red;Welcome! Median XL: Ultimative XIVb\blue;	0	
+2503	\red;Welcome! Median XL: Ultimative XVc\blue;	0	
 2504	Lucion's Soulstone	666	
 2505	Tome of Possession	666	
 2506	Cycle of Power	666	
@@ -2563,12 +2563,12 @@
 2561	Cycle of Miracles	90	
 2562	Cycle of Miracles	100	
 2563	Cycle of Wisdom	120	
-2564	CycleOfWisdom1	120	
-2565	CycleOfWisdom2	120	
-2566	CycleOfWisdom3	120	
-2567	CycleOfWisdom4	120	
-2568	CycleOfWisdom5	120	
-2569	CycleOfWisdom6	120	
+2564	Cycle of Wisdom	120	
+2565	Cycle of Wisdom	120	
+2566	Cycle of Wisdom	120	
+2567	Cycle of Wisdom	120	
+2568	Cycle of Wisdom	120	
+2569	Cycle of Wisdom	120	
 2570	Cycle of Lust	120	
 2571	Cycle of Wealth	90	
 2572	Cycle of Wealth	100	
@@ -2583,20 +2583,20 @@
 2581	Cycle of Strength	70	
 2582	Cycle of Strength	80	
 2583	Soulkeeper	120	
-2584	Cornerstone of the World	100	
-2585	Cornerstone of the World	100	
-2586	Cornerstone of the World	100	
-2587	Cornerstone of the World	100	
-2588	Cornerstone of the World	100	
-2589	Cornerstone of the World	100	
-2590	Cornerstone of the World	100	
-2591	Cornerstone of the World	100	
-2592	Cornerstone of the World	100	
-2593	Cornerstone of the World	100	
-2594	Cornerstone of the World	100	
-2595	Cornerstone of the World	100	
-2596	Cornerstone of the World	100	
-2597	Cornerstone of the World	100	
+2584	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2585	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2586	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2587	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2588	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2589	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2590	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2591	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2592	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2593	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2594	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2595	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2596	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2597	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
 2598	\gold;Uldyssian's Sword	666	
 2599	\gold;Ring of Pride	0	invrinquest
 2600	Quest Ring\nSigil of the 7 Deadly Sins	120	invrinquest
@@ -2605,3 +2605,48 @@
 2603	Breathstealer	100	
 2604	The Sleep	100	
 2605	\gold;Uldyssian's Sword	120	
+2606	Modders Blessing1	60	cuscross
+2607	Modders Blessing2	60	cuscross
+2608	Modders Blessing3	60	cuscross
+2609	Modders Blessing Ama	60	cuscross
+2610	Modders Blessing Ass	60	cuscross
+2611	Modders Blessing Bar	60	cuscross
+2612	Modders Blessing Dru	60	cuscross
+2613	Modders Blessing Nec	60	cuscross
+2614	Modders Blessing Pal	60	cuscross
+2615	Modders Blessing Sor	60	cuscross
+2616	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2617	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2618	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2619	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2620	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2621	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2622	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2623	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2624	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2625	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2626	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2627	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2628	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2629	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2630	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2631	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2632	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2633	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2634	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2635	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2636	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2637	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2638	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2639	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2640	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2641	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2642	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2643	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2644	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2645	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2646	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2647	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2648	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2649	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2650	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	

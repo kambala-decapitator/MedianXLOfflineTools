@@ -196,3 +196,33 @@
 326	Deckard Cain's Gem	Brotherhood of the Horadrim	Set_labrynth2	120	lab_rn2																																								
 327	Tal Rasha's Talisman	Brotherhood of the Horadrim	Set_labrynth2	120	lab_amu																																								
 328	Greg's Silent Scream	\orange;[Community Tribute Set]\n\gold;All Is One	Set_xaru	100																																									
+329	Yaerius' Mediation	MSSelathiel Archives	MSSelathiel Archives	100																																									
+330	Yaerius' Alembic	MSSelathiel Archives	MSSelathiel Archives	100																																									
+331	Yaerius' Untruth	MSSelathiel Archives	MSSelathiel Archives	100																																									
+332	Yaerius' Simulacrum	MSSelathiel Archives	MSSelathiel Archives	100																																									
+333	Yaerius' Xyston	MSSelathiel Archives	MSSelathiel Archives	100																																									
+334	Zerae's Blessing	MSZeraes Divinity	MSZeraes Divinity	100																																									
+335	Zerae's Refinement	MSZeraes Divinity	MSZeraes Divinity	100																																									
+336	Zerae's Vindication	MSZeraes Divinity	MSZeraes Divinity	100																																									
+337	Zerae's Redemption	MSZeraes Divinity	MSZeraes Divinity	100																																									
+338	Zerae's Holy Wrath	MSZeraes Divinity	MSZeraes Divinity	100																																									
+339	Marchosias' Hatred	Marchosias' Essence	MREssence	100																																									
+340	Marchosias' Might	Marchosias' Essence	MREssence	100																																									
+341	Marchosias' Evil Grin	Marchosias' Essence	MREssence	100																																									
+342	Marchosias' Deception	Marchosias' Essence	MREssence	100																																									
+343	Marchosias' Anger	Marchosias' Essence	MREssence	100																																									
+344	Steppe Sleeper	MSTundra Walker	MSTundra Walker	100																																									
+345	Ancient Bronze	MSTundra Walker	MSTundra Walker	100																																									
+346	Snow Silver	MSTundra Walker	MSTundra Walker	100																																									
+347	Grey Ranger	MSTundra Walker	MSTundra Walker	100																																									
+348	Vale Hunter	MSTundra Walker	MSTundra Walker	100																																									
+349	Lirian Moon	Celestial Orchard	MSOrchard	100																																									
+350	The Trickster	Celestial Orchard	MSOrchard	100																																									
+351	Giyua's Sacrum	Celestial Orchard	MSOrchard	100																																									
+352	The Dragon Grave	Celestial Orchard	MSOrchard	100																																									
+353	Skull of the Prophet	Celestial Orchard	MSOrchard	100																																									
+354	Quantum Bevel	MSUniversalLaw	MSUniversalLaw	100																																									
+355	Dead Lens	MSUniversalLaw	MSUniversalLaw	100	invbshu																																								
+356	World Line	MSUniversalLaw	MSUniversalLaw	100																																									
+357	Hypersurface	MSUniversalLaw	MSUniversalLaw	100																																									
+358	Killing Vector	MSUniversalLaw	MSUniversalLaw	100	invaxfu																																								

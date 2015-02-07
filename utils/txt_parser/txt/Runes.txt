@@ -3131,7 +3131,7 @@ Hastin	Hastin	1	X	120		jave									Auhe	jew	jew	r55				dmg%		251	300	dmg-norm		
 Hastin	Hastin	1	X	120		jave									Auhe	jew	jew	jew	r55			dmg%		251	300	dmg-norm		150	300	crush		21	25	kill-skill	59	5	8	all-stats		31	40	red-dmg%		5	5	ama		2	2	0
 Hastin	Hastin	1	X	120		jave									Auhe	jew	jew	jew	jew	r55		dmg%		251	300	dmg-norm		150	300	crush		21	25	kill-skill	59	5	8	all-stats		31	40	red-dmg%		5	5	ama		2	2	0
 Hastin	Hastin	1	X	120		jave									Auhe	jew	jew	jew	jew	jew	r55	dmg%		251	300	dmg-norm		150	300	crush		21	25	kill-skill	59	5	8	all-stats		31	40	red-dmg%		5	5	ama		2	2	0
-ThanksEveryone	ThanksEveryone	1	Bye	120		tors									El	r51	r52	r53	r54	r55	r56	dmg%		201	250	allskills		4	4	oskill	1004	1	1	heal-hit		2	2	uninterrupt		25	25	addxp		50	50					0
+ThanksEveryone	ThanksEveryone	1	Bye	120		tors									El	r51	r52	r53	r54	r55	r56	ac%		301	350	allskills		4	4	oskill	1004	1	1	heal-hit		2	2	uninterrupt		25	25	addxp		50	50					0
 Shattered Stone	Shattered Stone	1	weapon	socks:6		weap						nscy	taxe	aspe	Phys	r58	r58	r58	r58	r58	r58	dmg%		350	350	allskills		0	2	uninterrupt		50	50	dmg-norm		250	350	att-skill	500	20	12	lifesteal		20	20	swing3		50	50	0
 Dead Mans Breath	Dead Mans Breath	1	bow	socks:6		bow						dbow			Cold	r62	r62	r62	r62	r62	r62	dmg%		350	350	allskills		0	2	hit-skill	387	1	23	pierce-cold		50	50	dmg-cold		500	1000	heal-hit		1	1	kill-skill	903	10	16	0
 Faseroptic	Faseroptic	1	xbow	socks:6		xbow									Ltng	r61	r61	r61	r61	r61	r61	dmg%		350	350	allskills		0	2	hit-skill	462	1	19	extra-ltng		60	70	pierce-ltng		30	30	res-ltng		100	100	dmg-ltng		1000	1500	0
@@ -3182,4 +3182,4 @@ Twisted Mind	Twisted Mind	1	nec shield	socks:4		head									4	r59	r59	r59	r59		
 Battle Rage	Battle Rage	1	pala helm	socks:4		pzhm									4	r58	r58	r58	r58			ac%		300	350	pal		0	1	dmg-norm		150	250	red-dmg%		10	10	lifesteal		10	20	swing3		25	25	res-all		20	25	0
 Lightwell	Lightwell	1	pala shield	socks:4		ashd									4	r57	r57	r57	r57			ac%		300	350	pal		0	2	block		1	1	block3		30	30	avoidance		5	5	extra-fire		30	40	pierce-fire		25	25	0
 Space Dementia	Space Dementia	1	sorc armor	socks:6		stor									6	r61	r61	r61	r61	r61	r61	ac%		300	350	sor		3	6	ac		1000	1000	dmg-ltng		1000	1000	extra-ltng		50	60	abs-ltng		15	15	all-stats%		30	30	0
-ThanksLaz	ThanksLaz	1	armor	total:247/41		tors									El	r98	r98	r98	r98	r98	r98	allskills		0	4	ac%		350	350	pierce-all		1	50	red-dmg%		1	20	oskill	1049	1	1	res-all-max		0	5	move3		50	50	0
+ThanksLaz	ThanksLaz	1	armor	total:247/41		tors									El	r98	r98	r98	r98	r98	r98	allskills		1	4	ac%		301	350	pierce-all		5	50	red-dmg%		5	20	oskill	1049	1	1	res-all-max		0	5	move3		50	50	0

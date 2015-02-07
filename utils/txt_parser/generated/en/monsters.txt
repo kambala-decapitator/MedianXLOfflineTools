@@ -1,7 +1,7 @@
 #index	name
--1	Rathma Priest
-0	Exploitable
-1	Bone Warrior
+-1	\orange;Seraph
+0	Rathma Priest
+1	Rathma Priest
 2	Burning Dead
 3	Horror
 4	Zombie
@@ -29,7 +29,7 @@
 26	Wailing Beast
 27	Gargantuan Beast
 28	Sand Raider
-29	Marauder
+29	\orange;Savage Wolf
 30	Invader
 31	Infidel
 32	Assailant
@@ -1250,7 +1250,7 @@
 1248	\orange;Howling Spirit\blue;
 1249	Dark Star Dragon
 1250	Fallen One
-1251	\gold;(                                   Imperius                                   )
+1251	\gold;Imperius\blue;
 1252	\yellow;Daystar\gold;
 1253	\gold;(                                   Quov Tsin                                   )\blue;
 1254	Spirit of Vengeance
@@ -1760,8 +1760,8 @@
 1758	\orange;Sunless Mutant
 1759	\yellow;Porkchop\blue;
 1760	\yellow;Porkchop\blue;
-1761	\yellow;The Pack
-1762	\yellow;The Pack
+1761	\yellow;The Pack\gold;
+1762	\yellow;The Pack\gold;
 1763	\yellow;Hemoplague\blue;
 1764	\yellow;Hemoplague\blue;
 1765	\yellow;Hemoplague\blue;
@@ -1863,9 +1863,9 @@
 1861	\gold;The Butcher\blue;
 1862	\gold;Diablo\blue;
 1863	\gold;Death Projector\blue;
-1864	\gold;(                    Athulua, the Amazonian Goddess                    )
+1864	MXLUBER1_1x
 1865	Kethryes' Vermin
-1866	\gold;Disguised Edyrem
+1866	\gold;(             Uldyssian, Dark Edyrem King              )
 1867	\gold;Disguised Edyrem
 1868	\gold;Disguised Edyrem
 1869	\gold;Disguised Edyrem
@@ -1925,10 +1925,10 @@
 1923	\gold;Disguised Edyrem
 1924	\gold;Disguised Edyrem
 1925	\gold;Disguised Edyrem
-1926	\gold;Disguised Edyrem
+1926	\orange;Necrobot\gold;
 1927	\gold;Disguised Edyrem
 1928	Uldyssian's Ghost
-1929	\gold;Quest Totem
+1929	\orange;Pirate of the Twin Seas
 1930	\red;(                          Volrath The Vile                          )
 1931	\orange;Vilespawn
 1932	\red;(     Minion of Terror     )\blue;
@@ -1992,7 +1992,7 @@
 1990	MazeTrapSwarm
 1991	MazeTrapGeneric
 1992	MazeTrapGeneric
-1993	\yellow;The Pack
+1993	\yellow;The Pack\gold;
 1994	Wolf Companion
 1995	Dire Wolf
 1996	MazeTrapGeneric
@@ -2031,28 +2031,27 @@
 2029	\orange;Illusion\blue;
 2030	\yellow;Storm\blue;
 2031	\grey;Stone\blue;
-2032	\gold;(                              Chrysaor                              )
+2032	\gold;(                              Terul                              )
 2033	\orange;Goliath\blue;
 2034	Water Watcher
-2035	\purple;(                          Chrysaor (Secret Boss)                          )
+2035	\purple;(                       Zorun Tzin (Secret Boss)                       )
 2036	\gold;Trap
 2037	\orange;Abomination\blue;
 2038	\gold;Trap
 2039	\orange;Zealot Trap
 2040	\orange;Zealot
 2041	\orange;Zealot Nest
-2042	\red;DO NOT DISTURB
+2042	\white;Lost Traveler
 2043	a startled Witch...
-2044	\purple;(                           Startled Witch                           )
+2044	\gold;(                           Startled Witch                           )
 2045	\orange;Zealot Nest
 2046	\orange;Zealot
 2047	\gold;a deadly trap...
-2048	GenLucifuge
+2048	\gold;(                                    Brachyceran                                    )
 2049	\red;(                          Volrath The Vile                          )
 2050	Trap
 2051	\orange;Celestial Descendant\blue;
 2052	\orange;Ankheg\blue;
-2053	~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 2054	\orange;Forest Bugbear\blue;
 2055	\orange;Chimera\blue;
 2056	\orange;Death Servant\blue;
@@ -2169,3 +2168,15 @@
 2169	\gold;(                  Rathma, disciple of Trag'Oul                  )
 2170	\gold;(                   Mendeln, Apprentice of Rathma                   )
 2171	\gold;(                  Rathma, disciple of Trag'Oul                  )
+2172	Veil King
+2173	Hoplite
+2174	FLYING POLAR BUFFALO ERROR
+2175	FLYING POLAR BUFFALO ERROR
+2176	FLYING POLAR BUFFALO ERROR
+2177	FLYING POLAR BUFFALO ERROR
+2178	Ratfink
+2179	\orange;Pirate of the Twin Seas
+2180	\gold;(               Athulua, the Amazonian Goddess               )
+2181	Blade Spirit
+2182	\gold;Disguised Edyrem
+2183	Sewer Rat

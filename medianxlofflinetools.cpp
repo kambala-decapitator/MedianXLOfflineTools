@@ -2062,10 +2062,10 @@ bool MedianXLOfflineTools::processSaveFile()
     const SkillsOrderPair &skillsIndeces = _characterSkillsIndexes[charInfo.basicInfo.classCode];
     charInfo.basicInfo.skillsReadable.clear();
     charInfo.basicInfo.skillsReadable.reserve(skillsNumber);
-    for (int i = 0; i < skillsNumber; ++i)
+    for (int i = 0; i < skillsIndeces.second.size(); ++i)
     {
-        int skillIndex = skillsIndeces.second.at(i);
-        charInfo.basicInfo.skillsReadable += charInfo.basicInfo.skills.at(skillsIndeces.first.indexOf(skillIndex));
+        int skillIndex = skillsIndeces.second.at(i), skillReadableIndex = skillsIndeces.first.indexOf(skillIndex);
+        charInfo.basicInfo.skillsReadable += skillReadableIndex >= 0 && skillReadableIndex < charInfo.basicInfo.skills.size() ? charInfo.basicInfo.skills.at(skillReadableIndex) : 0;
         //qDebug() << charInfo.basicInfo.skillsReadable.last() << ItemDataBase::Skills()->value(skillIndex)->name;
     }
 
@@ -2502,7 +2502,7 @@ void MedianXLOfflineTools::updateUI()
     ui->actionShowItems->setEnabled(hasItems);
     ui->actionFind->setEnabled(hasItems);
     ui->actionGiveCube->setDisabled(CharacterInfo::instance().items.hasCube());
-    ui->actionFillBeltWithMoonCookies->setEnabled(charInfo.basicInfo.classCode == Enums::ClassName::Sorceress && charInfo.basicInfo.skillsReadable.at(kMoonSymbolSkillSaveIndex) > 0);
+    ui->actionFillBeltWithMoonCookies->setEnabled(charInfo.basicInfo.classCode == Enums::ClassName::Sorceress && charInfo.basicInfo.skills.at(_characterSkillsIndexes.value(charInfo.basicInfo.classCode).first.indexOf(594)) > 0);
 
     updateWindowTitle();
 

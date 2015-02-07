@@ -2,9 +2,18 @@ description	enabled	ladder	min diff	version	op	param	value	class	numinputs	input
 Staff of Kings + Viper amulet -> Horadric Staff	1				28				2	msf	vip						hst																																																																																												0
 Khalim Flail + Khalim Heart + Khalim Eye + Khalim Brain -> Super Khalim Flail	1				28				4	qf1	qhr	qey	qbr				qf2																																																																																												0
 Wirt's Leg + jewel -> Cow Portal	1				28				2	leg	tbk						Cow Portal																																																																																												0
-test recipe				100					1	hpot							ring	120		120	thorns%			999	999																											120		120																											120		120																										0
-test recipe				100					3	"hpot,qty=3"							EmpyreanBandX	120		120																															MRTracker's Totem	120		120																										MRTracker's Strike	120		120																										0
-test recipe				100					2	"hpot,qty=2"							EmpyreanBandX	120		120	aura			1156	1	1																									MRTracker's Stealth	120		120																										New3LazLamen	120		120																										0
+test recipe				100					1	hpot							MSApeshoot	120		120																															MSApeskin	120		120																										MSApefoot	120		120																										0
+test recipe				100					2	weap							MSApeskin	120		120																																120		120																											120		120																										0
+test recipe				100					2	"hpot,qty=2"							MSApeskull	120		120																															MSApehand	120		120																											120		120																										0
+i can unsocket all h4h4				100					1	armo							"useitem,rem"																																																																																												0
+test recipe: all charms				100					1	mpot							Modders Blessing1	120		120	oskill			1221	1	1	oskill			876	1	1	abs-fcl%				10	10	dmg-max				50	50	slow				10	10	Modders Blessing2	120		120	ac-global			60	60	all-stats%			40	40	oskill		773	1	1	reanimate		1623	5	5	crush			25	25	Modders Blessing3	120		120	dmg			50	50	reanimate		1398	4	4	reanimate		1266	2	2	enr-factor			80	80	dmg-demon			75	75	0
+test recipe: amazon				100				ama	2	"mpot,qty=2"							Modders Blessing Ama	120		120	str				150	150																									mnx1																													mnx2																													0
+test recipe: assassin				100				ass	2	"mpot,qty=2"							Modders Blessing Ass	120		120	str				150	150																									mnx1																													mnx2																													0
+test recipe: druid				100				dru	2	"mpot,qty=2"							Modders Blessing Dru	120		120	str				150	150	swing3				50	50	cast3				50	50	hp%				15	15	res-all-max				2	2	mnx1																													mnx2																													0
+test recipe: barbarian				100				bar	2	"mpot,qty=2"							Modders Blessing Bar	120		120	str				150	150																									mnx1																													mnx2																													0
+test recipe: paladin				100				pal	2	"mpot,qty=2"							Modders Blessing Pal	120		120	str				150	150																									mnx1																													mnx2																													0
+test recipe: necromancer				100				nec	2	"mpot,qty=2"							Modders Blessing Nec	120		120	str				150	150																									mnx1																													mnx2																													0
+test recipe: sorceress				100				sor	2	"mpot,qty=2"							Modders Blessing Ama	120		120	str				150	150																									mnx1																													mnx2																													0
 stardragon upgrade decoy	1			100	18	491	1	ama	2	Sacred Sunstone	qum						useitem																																																																																												0
 stardragon upgrade decoy	1			100	18	491	1	ass	2	Shadow Vortex	qum						useitem																																																																																												0
 stardragon upgrade decoy	1			100	18	491	1	bar	2	Worldstone Orb	qum						useitem																																																																																												0
@@ -51,15 +60,21 @@ class skill challenge recipe: enhance item	1			100				dru	2	Caoi Dulra Fruit	"je
 class skill challenge recipe: enhance item	1			100				nec	2	Soulstone Shard	"jewl,any"						useitem				nec				2	2	learn-ennead				1	1	dmg-minion				40	40	needs-upgraded			-1	-1	-1	res-pois-len				33	33																																																											0
 class skill challenge recipe: enhance item	1			100				pal	2	Orb of Divinity	"jewl,any"						useitem				pal				2	2	learn-ennead				1	1	ac-global				20	20	needs-upgraded			-1	-1	-1	res-pois-len				33	33																																																											0
 class skill challenge recipe: enhance item	1			100				sor	2	Nexus Crystal	"jewl,any"						useitem				sor				2	2	learn-ennead				1	1	extra-all				25	25	needs-upgraded			-1	-1	-1	res-pois-len				33	33																																																											0
-level challenge 1 decoy : return item (skip if upgraded =/= 1)	1			100	18	472	1		3	SunstoneOfFire	isc	tsc					useitem																																																																																												0
-level challenge 2 decoy : return item (skip if upgraded =/= 1)	1			100	18	472	1		3	SunstoneOfIce	isc	tsc					useitem																																																																																												0
-level challenge 3 decoy : return item (skip if upgraded =/= 1)	1			100	18	472	1		3	SunstoneOfThunder	isc	tsc					useitem																																																																																												0
-level challenge 1 decoy (skip if level < 21)	1			100	3	12	71		3	SunstoneOfFire	isc	tsc					useitem																																																																																												0
-level challenge 2 decoy (skip if level < 16)	1			100	3	12	61		3	SunstoneOfIce	isc	tsc					useitem																																																																																												0
-level challenge 3 decoy (skip if level < 11)	1			100	3	12	51		3	SunstoneOfThunder	isc	tsc					useitem																																																																																												0
-level challenge 1 (if var = 2)	1			100	6	507	2		3	SunstoneOfFire	isc	tsc					FakeSunstoneOfFire																																																																																												0
-level challenge 2 (if var = 3)	1			100	6	507	3		3	SunstoneOfIce	isc	tsc					FakeSunstoneOfIce																																																																																												0
-level challenge 3 (if var = 4)	1			100	6	507	4		3	SunstoneOfThunder	isc	tsc					FakeSunstoneOfThunder																																																																																												0
+level challenge 1 decoy : return item (skip if upgraded =/= 1)	0			100	18	472	1		3	x#y	SunstoneOfFire						useitem																																																																																												0
+level challenge 2 decoy : return item (skip if upgraded =/= 1)	0			100	18	472	1		3	x#y	SunstoneOfIce						useitem																																																																																												0
+level challenge 3 decoy : return item (skip if upgraded =/= 1)	0			100	18	472	1		3	x#y	SunstoneOfThunder						useitem																																																																																												0
+level challenge 1 (if var = 2)	0			100	6	507	2		3	SunstoneOfFire	isc	tsc					FakeSunstoneOfFire																																																																																												0
+level challenge 2 (if var = 3)	0			100	6	507	3		3	SunstoneOfIce	isc	tsc					FakeSunstoneOfIce																																																																																												0
+level challenge 3 (if var = 4)	0			100	6	507	4		3	SunstoneOfThunder	isc	tsc					FakeSunstoneOfThunder																																																																																												0
+level challenge 1 decoy (skip if level < 21)	1			100	3	12	71		3	x#y	SunstoneOfFire						useitem																																		SunstoneOfFire																																																										0
+level challenge 2 decoy (skip if level < 16)	1			100	3	12	61		3	x#y	SunstoneOfIce						useitem																																		SunstoneOfIce																																																										0
+level challenge 3 decoy (skip if level < 11)	1			100	3	12	51		3	x#y	SunstoneOfThunder						useitem																																		SunstoneOfThunder																																																										0
+Ice Recipe	1			100	15	459	15		2	x#y	SunstoneOfIce						useitem																																		SunstoneOfIce																																																										0
+Ice Recipe	1			100	6	507	3		2	x#y	SunstoneOfIce						useitem				xsignet63				15	15	allskills				2	2	pierce-cold				10	10	ac				10	10																																																																	0
+Fire Recipe	1			100	15	460	15		2	x#y	SunstoneOfFire						useitem																																		SunstoneOfFire																																																										0
+Fire Recipe	1			100	6	507	2		2	x#y	SunstoneOfFire						useitem				xsignet64				15	15	res-all				20	20	pierce-fire				10	10	ac				10	10																																																																	0
+Thunder Recipe	1			100	15	461	15		2	x#y	SunstoneOfThunder						useitem																																		SunstoneOfThunder																																																										0
+Thunder Recipe	1			100	6	507	4		2	x#y	SunstoneOfThunder						useitem				xsignet65				15	15	all-stats%				15	15	pierce-ltng				10	10	all3				20	20	ac				10	10																																																											0
 black road challenge 5 (if var_blackroad = 9)	1			100	6	428	9	ama	1	Sacred Sunstone							useitem				black5				1	1																																																																																			0
 black road challenge 4 (if var = 8 & var_2 = 1000)	1			100	6	507	1008	ama	1	Sacred Sunstone							useitem				black4				1	1																																																																																			0
 black road challenge 3 decoy (skip if level < 101)	1			100	3	12	121	ama	6	Sacred Sunstone	2x5	2x6	2x7	2x8	2x9		useitem																																																																																												0
@@ -8216,7 +8231,7 @@ Honorific Ten Pin Striker	1			100	15	296	1		2	"weap,noe"	&88						useitem				lev
 Honorific Wrathspirit	1			100	15	296	1		2	"weap,noe"	&89						useitem				levelreq				10	10	heal-kill				20	20	extra-all				6	6	gethit-skill			263	2	8																																																																	0
 Honorific Crystal of Tears	1			100	15	296	1		2	"armo,noe"	&90						useitem				levelreq				10	10	dmg-norm				10	30	hp				-40	-40																																																																							0
 Honorific Essence of Itherael	1			100	15	296	1		2	"armo,noe"	&91						useitem				levelreq				10	10	ac-global				10	10	dmg-global				30	30																																																																							0
-Honorific Periapt of Life	1			100	15	296	1		2	"armo,noe"	&92						useitem				levelreq				10	10	vit%				4	4	regen				100	100	regen				8	8																																																																	0
+Honorific Periapt of Life	1			100	15	296	1		2	"armo,noe"	&92						useitem				levelreq				10	10	vit%				4	4	regen				200	200																																																																							0
 Honorific Lodestone	1			100	15	296	1		2	"armo,noe"	&93						useitem				levelreq				10	10	ease				20	20	extra-all				8	8																																																																							0
 Honorific Explorers Globe	1			100	15	296	1		2	"ring,any"	&94						useitem				levelreq				10	10	all-stats%				0	6	all-stats%				-2	-2																																																																							0
 Honorific Explorers Globe	1			100	15	296	1		2	"amul,any"	&94						useitem				levelreq				10	10	all-stats%				0	6	all-stats%				-2	-2																																																																							0
@@ -8232,6 +8247,7 @@ Eye of Malic	1			100					2	"weap,noe"	&74						useitem				levelreq				10	10	att-
 Eye of Malic	1			100					2	"armo,noe"	&74						useitem				levelreq				10	10	att-skill			833	1	14	att-skill			998	1	14	dmg-fire				15	30	dmg-cold				15	30																																																											0
 Eye of Malic	1			100					2	"ring,any"	&74						useitem				levelreq				10	10	att-skill			833	1	14	att-skill			998	1	14	dmg-fire				15	30	dmg-cold				15	30																																																											0
 Eye of Malic	1			100					2	"amul,any"	&74						useitem				levelreq				10	10	att-skill			833	1	14	att-skill			998	1	14	dmg-fire				15	30	dmg-cold				15	30																																																											0
+Eye of Malic	1			100					2	"misl,any"	&74						useitem				levelreq				10	10	att-skill			833	1	14	att-skill			998	1	14	dmg-fire				15	30	dmg-cold				15	30																																																											0
 Farnham's Lost Marble	1			100					2	"weap,noe"	&72						useitem				levelreq				10	10	heal-melee				10	10	mana-melee				10	10	aura			296	1	1	desc-drunk				1	1																																																											0
 Farnham's Lost Marble	1			100					2	"armo,noe"	&72						useitem				levelreq				10	10	heal-melee				10	10	mana-melee				10	10	aura			296	1	1	desc-drunk				1	1																																																											0
 Farnham's Lost Marble	1			100					2	"ring,any"	&72						useitem				levelreq				10	10	heal-melee				10	10	mana-melee				10	10	aura			296	1	1	desc-drunk				1	1																																																											0
@@ -8272,7 +8288,7 @@ Ten Pin Striker	1			100					2	"weap,noe"	&88						useitem				levelreq				10	10	a
 Wrathspirit	1			100					2	"weap,noe"	&89						useitem				levelreq				10	10	heal-kill				10	10	extra-all				3	3	gethit-skill			263	1	8																																																																	0
 Crystal of Tears	1			100					2	"armo,noe"	&90						useitem				levelreq				10	10	dmg-norm				5	15	hp				-20	-20																																																																							0
 Essence of Itherael	1			100					2	"armo,noe"	&91						useitem				levelreq				10	10	ac-global				5	5	dmg-global				15	15																																																																							0
-Periapt of Life	1			100					2	"armo,noe"	&92						useitem				levelreq				10	10	vit%				2	2	regen				50	50	regen				4	4																																																																	0
+Periapt of Life	1			100					2	"armo,noe"	&92						useitem				levelreq				10	10	vit%				2	2	regen				100	100																																																																							0
 Lodestone	1			100					2	"armo,noe"	&93						useitem				levelreq				10	10	ease				10	10	extra-all				4	4																																																																							0
 Explorers Globe	1			100					2	"ring,any"	&94						useitem				levelreq				10	10	all-stats%				0	3	all-stats%				-1	-1																																																																							0
 Explorers Globe	1			100					2	"amul,any"	&94						useitem				levelreq				10	10	all-stats%				0	3	all-stats%				-1	-1																																																																							0
@@ -11475,11 +11491,7 @@ destruction	1			100					77	9oµ							9oµ																																								
 destruction	1			100					78	9oµ							9oµ																																																																																												0
 destruction	1			100					79	9oµ							9oµ																																																																																												0
 destruction	1			100					80	9oµ							9oµ																																																																																												0
-Nevermind				100					2	KabraxisSoul3							useitem																																																																																												0
-Nevermind				100					2	KabraxisSoul3							useitem																																																																																												0
-Nevermind				100					2	KabraxisSoul3							useitem																																																																																												0
-Nevermind				100					2	KabraxisSoul3							useitem																																																																																												0
-KabraxisAll	1			100					6	KabraxisSoul3	\\1	\\2	\\3	\\4	\\5		useitem				levelreq				20	20	res-all-max				0	5	death-skill			820	50	49																																																																							0
+KabraxisAll	1			100	18	92	0		6	KabraxisSoul3	\\1	\\2	\\3	\\4	\\5		useitem				levelreq				20	20	res-fire-max				0	5	res-pois-max				0	5	res-cold-max				0	5	res-ltng-max				0	5																																																											0
 KabraxisApple	1			100	16	219	0		2	KabraxisSoul3	bxt						useitem			100	blessings-counter				1	1	reanimate-rand			2	1256	1553	state			10	1	1	item-duped				1	1																																																																	0
 Lottery1	1			100	18	443			2	"weap,uni,noe"	LegOfBlood						useitem				upgraded				1	1	ignore-ac	3			1	1	item-duped				1	1																																																																							0
 Lottery2	1			100	18	443			2	"armo,uni,noe"	IdolOfVanity						useitem				upgraded				1	1	hp%	3			5	5	item-duped				1	1																																																																							0
@@ -11489,8 +11501,8 @@ Lottery5	1			100	18	443			2	"misl,uni"	AzmodansHeart2						useitem				upgraded		
 Lottery6	1			100					2	"jew,uni"	SunstoneOfTheGods						useitem				upgraded				1	1	res-all	3			10	10	item-duped				1	1																																																																							0
 Lottery7	1			100	18	443			2	"weap,set"	LegOfBlood						useitem				upgraded				1	1	ignore-ac	3			1	1	item-duped				1	1																																																																							0
 Lottery8	1			100	18	443			2	"armo,set"	IdolOfVanity						useitem				upgraded				1	1	hp%	3			5	5	item-duped				1	1																																																																							0
-DS recipe	1			100	15	192	15		2	VSTI	ScrollOfSummons						useitem																																		ScrollOfSummons																																																										0
-DS recipe	1			100					2	VSTI	ScrollOfSummons						useitem				xsignet03				15	15	oskill			551	1	1																																																																													0
+DS recipe	1			100	15	192	15		2	TheBookOfLies2	ScrollOfSummons						useitem																																		ScrollOfSummons																																																										0
+DS recipe	1			100					2	TheBookOfLies2	ScrollOfSummons						useitem				xsignet03				15	15	oskill			551	1	1																																																																													0
 Amethyst Recipe	1			100	15	184	15		2	NewStartingCharm2	gema						useitem																																		gema																																																										0
 Amethyst Recipe	1			100					2	NewStartingCharm2	gema						useitem				levelreq				1	1	xsignet01				1	1	dex%				1	1																																																																							0
 Topaz Recipe	1			100	15	191	15		2	NewStartingCharm2	gemt						useitem																																		gemt																																																										0
@@ -11683,7 +11695,6 @@ Good Guy Greg Fix	1			100					2	SixAngelBag	SunlessCrystalBird						NewSixAngelB
 Charm Merge 2	1			100					2	IdolOfVanity	SpiritOfDamnation						IdolOfVanity				upgraded				1	1	gethit-skill			580	1	20																																																																													0
 Good Guy Greg Fix 2	1			100	18	443			2	IdolOfVanity	NewSpiritOfDamnation						useitem				upgraded				1	1	gethit-skill			580	1	20																																																																													0
 Sunstones1	1			100	15	465	15		2	x#y	tr2						useitem																																		tr2																																																										0
-Sunstones2	0			100					3	FakeSunstoneOfFire	FakeSunstoneOfIce	FakeSunstoneOfThunder					SunstoneOfTheElements																																																																																												0
 Sunstones3	1			100					2	x#y	tr2						useitem				res-all				10	10	xsignet69				5	5																																																																													0
 UldyssianApple	1			100	16	219	0		2	UldyssianCharm3	##/						useitem			100	blessings-counter				1	1	deadly				1	5							item-duped				1	1																																																																	0
 Super Bow Recipe	1			100					7	@##	#X1	#X2	#X3	#X4	#X5	#X6	SuperBowSU	120		120																																																																																									0
@@ -11694,12 +11705,6 @@ Token Recipe 4	1			100				bar	7	"qum,qty=6"	&71						#X4																								
 Token Recipe 5	1			100				nec	7	r56	r55	r54	r53	r52	r51	hpot	#X5																																																																																												0
 Token Recipe 6	1			100				sor	7	r57	r58	r59	r60	r61	r62	r98	#X6																																																																																												0
 Bonus Recipe	1			100	16	219	0		2	"bow,uni"	@##						useitem				ignore-ac	25		1	1	1	blessings-counter				1	1																																																																													0
-Ice Recipe	1			100	15	459	15		2	x#y	FakeSunstoneOfIce						useitem																																		FakeSunstoneOfIce																																																										0
-Ice Recipe	1			100					2	x#y	FakeSunstoneOfIce						useitem				xsignet63				15	15	allskills				2	2	pierce-cold				10	10	ac				10	10																																																																	0
-Fire Recipe	1			100	15	460	15		2	x#y	FakeSunstoneOfFire						useitem																																		FakeSunstoneOfFire																																																										0
-Fire Recipe	1			100					2	x#y	FakeSunstoneOfFire						useitem				xsignet64				15	15	res-all				20	20	pierce-fire				10	10	ac				10	10																																																																	0
-Thunder Recipe	1			100	15	461	15		2	x#y	FakeSunstoneOfThunder						useitem																																		FakeSunstoneOfThunder																																																										0
-Thunder Recipe	1			100					2	x#y	FakeSunstoneOfThunder						useitem				xsignet65				15	15	all-stats%				15	15	pierce-ltng				10	10	all3				20	20	ac				10	10																																																											0
 Greater Exp Sig	1			100					3	"zku,qty=3"							zkr																																																																																												0
 Greater Stat Sig	1			100					5	"zkq,qty=5"							zk#																																																																																												0
 Greater Gold Sig	1			100					3	"zkw,qty=3"							zkx																																																																																												0
@@ -11833,7 +11838,7 @@ Disenchant Shards	1			100	18	276	0		9	"dcht,set,qty=8"	3oµ						qum													
 Disenchant Shards	1			100	18	276	0		10	"dcht,set,qty=9"	3oµ						qum																																		#5^																													3oµ																													0
 Disenchant Shards	1			100	18	276	0		11	"dcht,set,qty=10"	3oµ						qum																																		qum																													3oµ																													0
 Trader's Chest Reset	1			100					2	"`^`,uni"	gemz						"`^`,uni"	120		120	blessings-counter				1	1																									skc																																																										0
-Trader's Chest For Noobs	1			100	18	443	1		2	"`^`,uni"							µ99																																		aqv				att-skill		976	100	50																					cqv				hp			-100	-100																					0
+Trader's Chest For Noobs	1			100	18	443	1		2	"`^`,uni"							µ99																																		aqv																													cqv				hp			-100	-100																					0
 Trader's Chest Decoy Str	1			100	15	466	49		2	"`^`,uni"	gemd						useitem				black6				1	1																									gcw																													skc																													0
 Trader's Chest Decoy Dex	1			100	15	466	49		2	"`^`,uni"	gema						useitem				black6				1	1																									gcv																													skc																													0
 Trader's Chest Decoy Vit	1			100	15	466	49		2	"`^`,uni"	gemr						useitem				black6				1	1																									gcr																													skc																													0
@@ -11861,7 +11866,7 @@ Trophy Carrier	1			100	16	219	0		2	"`|#,uni"	µ05						useitem				blessings-count
 Trophy Carrier	1			100	16	219	0		2	"`|#,uni"	µ06						useitem				blessings-counter		Dunc		1	1	dmg-demon				101	150	dmg-undead				101	150	heal-melee				41	50	hp				101	150																																																											0
 Trophy Carrier	1			100	16	219	0		2	"`|#,uni"	µ03						useitem				blessings-counter		Jday		1	1	hp-minion				41	50	dmg-minion				41	50	res-all-minion				11	20	stance-radius				6	10																																																											0
 Trophy Carrier	1			100	16	219	0		2	"`|#,uni"	µ08						useitem				blessings-counter		Cov		1	1	extra-all				21	30	enr-factor				21	30	enr-factor%				1	5	mana%				6	10																																																											0
-Trophy Carrier	1			100	16	219	0		2	"`|#,uni"	µ09						useitem				blessings-counter		Tran		1	1	mag%				41	50	gold%				201	250	str-add				50	50	dex-add				50	50																																																											0
+Trophy Carrier	1			100	16	219	0		2	"`|#,uni"	µ09						useitem				blessings-counter		Tran		1	1	mag%				41	50	gold%				201	250	dmg-mag				200	200	red-dmg				50	50																																																											0
 Trophy Carrier	1			100	16	219	0		2	"`|#,uni"	µ10						useitem				blessings-counter		Quov		1	1	abs-fire				1	5	abs-cold				1	5	abs-ltng				1	5	res-all				15	20																																																											0
 Trophy Carrier	1			100	16	219	0		2	"`|#,uni"	µ11						useitem				blessings-counter		Astro		1	1	allskills				0	1	slow				6	10	openwounds				41	50	res-curse				21	30																																																											0
 Trophy Carrier	1			100	16	219	0		2	"`|#,uni"	µ12						useitem				blessings-counter		Azmo		1	1	skill-dur				41	50	regen				51	100	half-freeze			1	1	1	hp-mana				51	100																																																											0
@@ -11974,39 +11979,39 @@ Special Absolution	1				18	412	1		2	#X91	8oµ						MRFrost	115			item-duped				1	
 Special Absolution	1				18	412	2		2	#X91	8oµ						MRWater	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	3		2	#X91	8oµ						MRHeaven	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	4		2	#X91	8oµ						MREarth	115			item-duped				1	1	sock				1	1																																																																													0
-Special Absolution	1				18	412	5		2	#X91	8oµ						dog	115							1	1	sock				1	1																																																																													0
+Special Absolution	1				18	412	5		2	#X91	8oµ						AltarofInk	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	6		2	#X91	8oµ						MRCelestia's Charge	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	7		2	#X91	8oµ						MRCelestia's Ribbon	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	8		2	#X91	8oµ						MRCelestia's Glory	115			item-duped				1	1	sock				1	1																																																																													0
-Special Absolution	1				18	412	9		2	#X91	8oµ						dog	115			item-duped				1	1	sock				1	1																																																																													0
+Special Absolution	1				18	412	9		2	#X91	8oµ						AltarofMercy	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	10		2	#X91	8oµ						MRCelestia's Passion	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	11		2	#X91	8oµ						MRVasily's Moonwalkers	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	12		2	#X91	8oµ						MRVasily's Crescent	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	13		2	#X91	8oµ						MRVasily's Shepherd Moon	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	14		2	#X91	8oµ						MRVasily's Eclipse	115			item-duped				1	1	sock				1	1																																																																													0
-Special Absolution	1				18	412	15		2	#X91	8oµ						dog	115			item-duped				1	1	sock				1	1																																																																													0
+Special Absolution	1				18	412	15		2	#X91	8oµ						AltarofFate	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	16		2	#X91	8oµ						MRRed Vex' Sin	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	17		2	#X91	8oµ						MRRed Vex' Curse	115			item-duped				1	1	sock				1	1																																																																													0
-Special Absolution	1				18	412	18		2	#X91	8oµ						dog	115			item-duped				1	1	sock				1	1																																																																													0
+Special Absolution	1				18	412	18		2	#X91	8oµ						AltarofScripture	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	19		2	#X91	8oµ						MRRed Vex' Idol	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	20		2	#X91	8oµ						MRRed Vex' Flayer	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	21		2	#X91	8oµ						MRWitchhunter's Rope	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	22		2	#X91	8oµ						MRWitchhunter's Hood	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	23		2	#X91	8oµ						MRWitchhunter's Faith	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	24		2	#X91	8oµ						MRWitchhunter's Crucifix	115			item-duped				1	1	sock				1	1																																																																													0
-Special Absolution	1				18	412	25		2	#X91	8oµ						dog	115			item-duped				1	1	sock				1	1																																																																													0
+Special Absolution	1				18	412	25		2	#X91	8oµ						ZeraesBlessing	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	26		2	#X91	8oµ						MRSerpent's Tail	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	27		2	#X91	8oµ						MRSerpent's Coil	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	28		2	#X91	8oµ						MRSerpent's Tongue	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	29		2	#X91	8oµ						MRSerpent's Scales	115			item-duped				1	1	sock				1	1																																																																													0
-Special Absolution	1				18	412	30		2	#X91	8oµ						dog	115			item-duped				1	1	sock				1	1																																																																													0
-Special Absolution	1				18	412	31		2	#X91	8oµ						dog	115			item-duped				1	1	sock				1	1																																																																													0
+Special Absolution	1				18	412	30		2	#X91	8oµ						ZeraesRefinement	115			item-duped				1	1	sock				1	1																																																																													0
+Special Absolution	1				18	412	31		2	#X91	8oµ						ZeraesVindication	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	32		2	#X91	8oµ						MRTracker's Totem	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	33		2	#X91	8oµ						MRTracker's Stealth	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	34		2	#X91	8oµ						MRTracker's Effigy	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	35		2	#X91	8oµ						MRTracker's Strike	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	36		2	#X91	8oµ						MRVizjun's Progress	115			item-duped				1	1	sock				1	1																																																																													0
-Special Absolution	1				18	412	37		2	#X91	8oµ						dog	115			item-duped				1	1	sock				1	1																																																																													0
+Special Absolution	1				18	412	37		2	#X91	8oµ						ZeraesRedemption	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	38		2	#X91	8oµ						MRVizjun's Engine	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	39		2	#X91	8oµ						MRVizjun's Monitor	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	40		2	#X91	8oµ						MRVizjun's Science	115			item-duped				1	1	sock				1	1																																																																													0
@@ -12014,18 +12019,18 @@ Special Absolution	1				18	412	41		2	#X91	8oµ						MRCrane's Reach	115			item-du
 Special Absolution	1				18	412	42		2	#X91	8oµ						MRSnake's Battle Chant	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	43		2	#X91	8oµ						MRWolf's Fang	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	44		2	#X91	8oµ						MRBear's Warding	115			item-duped				1	1	sock				1	1																																																																													0
-Special Absolution	1				18	412	45		2	#X91	8oµ						dog	115			item-duped				1	1	sock				1	1																																																																													0
+Special Absolution	1				18	412	45		2	#X91	8oµ						MarchosiasHatred	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	46		2	#X91	8oµ						MRRockslide	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	47		2	#X91	8oµ						MRRavine	115			item-duped				1	1	sock				1	1																																																																													0
-Special Absolution	1				18	412	48		2	#X91	8oµ						dog	115			item-duped				1	1	sock				1	1																																																																													0
+Special Absolution	1				18	412	48		2	#X91	8oµ						MarchosiasMight	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	49		2	#X91	8oµ						MRSnowstorm	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	50		2	#X91	8oµ						MREruption	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	51		2	#X91	8oµ						MRHunter's Trackless Step	115			item-duped				1	1	sock				1	1																																																																													0
-Special Absolution	1				18	412	52		2	#X91	8oµ						dog	115			item-duped				1	1	sock				1	1																																																																													0
+Special Absolution	1				18	412	52		2	#X91	8oµ						MarchosiasEvilGrin	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	53		2	#X91	8oµ						MRHunter's Skin	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	54		2	#X91	8oµ						MRHunter's Camouflage	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	55		2	#X91	8oµ						MRHunter's Claw Fist	115			item-duped				1	1	sock				1	1																																																																													0
-Special Absolution	1				18	412	56		2	#X91	8oµ						dog	115			item-duped				1	1	sock				1	1																																																																													0
+Special Absolution	1				18	412	56		2	#X91	8oµ						MarchosiasDeception	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	57		2	#X91	8oµ						MRThe Protector	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	58		2	#X91	8oµ						MRThe Guardian	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	59		2	#X91	8oµ						MRDestiny	115			item-duped				1	1	sock				1	1																																																																													0
@@ -12034,19 +12039,19 @@ Special Absolution	1				18	412	61		2	#X91	8oµ						MRNature's Grasp	115			item-d
 Special Absolution	1				18	412	62		2	#X91	8oµ						MRNature's Embrace	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	63		2	#X91	8oµ						MRNature's Vigil	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	64		2	#X91	8oµ						MRNature's Will	115			item-duped				1	1	sock				1	1																																																																													0
-Special Absolution	1				18	412	65		2	#X91	8oµ						dog	115			item-duped				1	1	sock				1	1																																																																													0
+Special Absolution	1				18	412	65		2	#X91	8oµ						TWSteppeSleeper	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	66		2	#X91	8oµ						MRLone Wolf's Track	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	67		2	#X91	8oµ						MRLone Wolf's Claws	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	68		2	#X91	8oµ						MRLone Wolf's Gaze	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	69		2	#X91	8oµ						MRLone Wolf's Fur	115			item-duped				1	1	sock				1	1																																																																													0
-Special Absolution	1				18	412	70		2	#X91	8oµ						dog	115			item-duped				1	1	sock				1	1																																																																													0
+Special Absolution	1				18	412	70		2	#X91	8oµ						TWAncientBronze	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	71		2	#X91	8oµ						MRRathma's Chase	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	72		2	#X91	8oµ						MRRathma's Trap	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	73		2	#X91	8oµ						MRRathma's Death Gaze	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	74		2	#X91	8oµ						MRRathma's Skeleton	115			item-duped				1	1	sock				1	1																																																																													0
-Special Absolution	1				18	412	75		2	#X91	8oµ						dog	115			item-duped				1	1	sock				1	1																																																																													0
+Special Absolution	1				18	412	75		2	#X91	8oµ						TWGreyRanger	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	76		2	#X91	8oµ						MRAchilios' Stealth	115			item-duped				1	1	sock				1	1																																																																													0
-Special Absolution	1				18	412	77		2	#X91	8oµ						dog	115			item-duped				1	1	sock				1	1																																																																													0
+Special Absolution	1				18	412	77		2	#X91	8oµ						TWValeHunter	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	78		2	#X91	8oµ						MRAchilios' Eagle Eye	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	79		2	#X91	8oµ						MRAchilios' Refuge	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	80		2	#X91	8oµ						MRAchilios' Sledgehammer	115			item-duped				1	1	sock				1	1																																																																													0
@@ -12054,41 +12059,41 @@ Special Absolution	1				18	412	81		2	#X91	8oµ						MRHeaven In Sight	115			item-
 Special Absolution	1				18	412	82		2	#X91	8oµ						MRTill We Have	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	83		2	#X91	8oµ						MRThrough Death's Veil	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	84		2	#X91	8oµ						MRLend Me Thy Light	115			item-duped				1	1	sock				1	1																																																																													0
-Special Absolution	1				18	412	85		2	#X91	8oµ						dog	115			item-duped				1	1	sock				1	1																																																																													0
+Special Absolution	1				18	412	85		2	#X91	8oµ						MRLirianMoon	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	86		2	#X91	8oµ						MRCinadide's Bender	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	87		2	#X91	8oµ						MRCinadide's Anvil	115			item-duped				1	1	sock				1	1																																																																													0
-Special Absolution	1				18	412	88		2	#X91	8oµ						dog	115			item-duped				1	1	sock				1	1																																																																													0
+Special Absolution	1				18	412	88		2	#X91	8oµ						MRTrickster	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	89		2	#X91	8oµ						MRCinadide's Forge	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	90		2	#X91	8oµ						MRCinadide's Malus	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	91		2	#X91	8oµ						MRHadriel's Presence	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	92		2	#X91	8oµ						MRHadriel's Courage	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	93		2	#X91	8oµ						MRHadriel's Wings	115			item-duped				1	1	sock				1	1																																																																													0
-Special Absolution	1				18	412	94		2	#X91	8oµ						dog	115			item-duped				1	1	sock				1	1																																																																													0
+Special Absolution	1				18	412	94		2	#X91	8oµ						MRGiyuaSacrum	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	95		2	#X91	8oµ						MRHadriel's Avenger	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	96		2	#X91	8oµ						MRMalthael's Stride	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	97		2	#X91	8oµ						MRMalthael's Ward	115			item-duped				1	1	sock				1	1																																																																													0
-Special Absolution	1				18	412	98		2	#X91	8oµ						dog	115			item-duped				1	1	sock				1	1																																																																													0
+Special Absolution	1				18	412	98		2	#X91	8oµ						MRDragonGrave	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	99		2	#X91	8oµ						MRMalthael's Halo	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	100		2	#X91	8oµ						MRMalthael's Wrath	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	101		2	#X91	8oµ						MRImperius' Winged Feet	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	102		2	#X91	8oµ						MRImperius' Crusade	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	103		2	#X91	8oµ						MRImperius' Aura	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	104		2	#X91	8oµ						MRImperius' Radiance	115			item-duped				1	1	sock				1	1																																																																													0
-Special Absolution	1				18	412	105		2	#X91	8oµ						dog	115			item-duped				1	1	sock				1	1																																																																													0
+Special Absolution	1				18	412	105		2	#X91	8oµ						MSQuantumBevel	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	106		2	#X91	8oµ						MRZann Esu's Mysteries	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	107		2	#X91	8oµ						MRZann Esu's Robes	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	108		2	#X91	8oµ						MRZann Esu's Binding Circle	115			item-duped				1	1	sock				1	1																																																																													0
-Special Absolution	1				18	412	109		2	#X91	8oµ						dog	115			item-duped				1	1	sock				1	1																																																																													0
+Special Absolution	1				18	412	109		2	#X91	8oµ						MSDeadLens	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	110		2	#X91	8oµ						MRElemental Trance	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	111		2	#X91	8oµ						MRElemental Spirit	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	112		2	#X91	8oµ						MRElemental Clash	115			item-duped				1	1	sock				1	1																																																																													0
-Special Absolution	1				18	412	113		2	#X91	8oµ						dog	115			item-duped				1	1	sock				1	1																																																																													0
+Special Absolution	1				18	412	113		2	#X91	8oµ						MSWorldLine	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	114		2	#X91	8oµ						MRElemental Storm	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	115		2	#X91	8oµ						MRPentad	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	116		2	#X91	8oµ						MRTetrad	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	117		2	#X91	8oµ						MRTriad	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	118		2	#X91	8oµ						MRDyad	115			item-duped				1	1	sock				1	1																																																																													0
-Special Absolution	1				18	412	119		2	#X91	8oµ						dog	115			item-duped				1	1	sock				1	1																																																																													0
+Special Absolution	1				18	412	119		2	#X91	8oµ						MSKillingVector	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	120		2	#X91	8oµ						MREmerald Growth	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	121		2	#X91	8oµ						MREmerald Sky	115			item-duped				1	1	sock				1	1																																																																													0
 Special Absolution	1				18	412	122		2	#X91	8oµ						MREmerald Cloud	115			item-duped				1	1	sock				1	1																																																																													0
