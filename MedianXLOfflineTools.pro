@@ -27,8 +27,8 @@ CONFIG(release, debug|release): {
 # app version
 NVER1 = 0
 NVER2 = 4
-NVER3 = 1
-NVER4 = 3
+NVER3 = 2
+NVER4 = 0
 
       greaterThan(NVER4, 0): NVER_STRING_LAST = $$sprintf("%1.%2", $$NVER3, $$NVER4)
 else: greaterThan(NVER3, 0): NVER_STRING_LAST = $$sprintf("%1", $$NVER3)
@@ -226,7 +226,7 @@ macx {
         }
     }
 
-    COPYRIGHT = Copyright © kambala 2011-2014
+    COPYRIGHT = Copyright © kambala 2011-2015
     INFO_PLIST_PATH = $$CONTENTS_PATH/$$INFO_PLIST_NAME
     QMAKE_POST_LINK = sed -e \'s/@APP_VERSION@/$$VERSION/\' -e \'s/@COPYRIGHT@/$$COPYRIGHT/\' -i \'\' $$INFO_PLIST_PATH;
 
