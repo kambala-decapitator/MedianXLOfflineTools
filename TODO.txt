@@ -1,4 +1,3 @@
-- collect shrines into vessels
 - app crashes when trying to load characters from program files (minor)
 
 future versions:
