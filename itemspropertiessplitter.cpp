@@ -388,7 +388,36 @@ void ItemsPropertiesSplitter::eatSelectedSignet()
 
 void ItemsPropertiesSplitter::collectShrinesToVessel()
 {
+    ItemInfo *vesselItem = selectedItem();
+    QByteArray shrineType = QByteArray::fromRawData(vesselItem->itemType.constData(), vesselItem->itemType.length() - 1);
+    int shrines = 0;
+    foreach (ItemInfo *item, _allItems)
+    {
+        if (item->itemType == shrineType)
+        {
+            ++shrines;
+            performDeleteItem(item, false);
+        }
+    }
 
+    if (shrines)
+    {
+        ItemProperty *vesselProp = vesselItem->props.value(Enums::ItemProperties::ShrineVesselCounter);
+        if (vesselProp->value < 0)
+            vesselProp->value = 0;
+        vesselProp->value += shrines;
+
+        ItemPropertyTxt *txtProp = ItemDataBase::Properties()->value(Enums::ItemProperties::ShrineVesselCounter);
+        ReverseBitWriter::replaceValueInBitString(vesselItem->bitString, vesselProp->bitStringOffset, vesselProp->value + txtProp->add, txtProp->bits);
+
+        vesselItem->hasChanged = true;
+        _propertiesWidget->showItem(vesselItem);
+        emit itemsChanged();
+
+        INFO_BOX(tr("%n Shrine(s) inserted in the Vessel", 0, shrines));
+    }
+    else
+        INFO_BOX(tr("No Shrines of selected type found"));
 }
 
 void ItemsPropertiesSplitter::extractShrinesFromVessel()
