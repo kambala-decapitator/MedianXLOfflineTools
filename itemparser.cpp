@@ -338,6 +338,8 @@ PropertiesMultiMap ItemParser::parseItemProperties(ReverseBitReader &bitReader, 
             }
 
             propToAdd = new ItemProperty;
+            propToAdd->bitStringOffset = bitReader.pos() + 16; // include 'JM' bit length
+
             ItemPropertyTxt *txtProperty = ItemDataBase::Properties()->value(id);
             propToAdd->param = txtProperty->saveParamBits ? bitReader.readNumber(txtProperty->saveParamBits) : 0;
             propToAdd->value = bitReader.readNumber(txtProperty->bits) - txtProperty->add;
@@ -362,6 +364,8 @@ PropertiesMultiMap ItemParser::parseItemProperties(ReverseBitReader &bitReader, 
 
                 // get max elemental damage
                 ItemProperty *maxElementalDamageProp = new ItemProperty;
+                maxElementalDamageProp->bitStringOffset = bitReader.pos() + 16; // include 'JM' bit length
+
                 ItemPropertyTxt *txtMaxElementalDamageProp = ItemDataBase::Properties()->value(id);
                 maxElementalDamageProp->value = bitReader.readNumber(txtMaxElementalDamageProp->bits) - txtMaxElementalDamageProp->add;
 

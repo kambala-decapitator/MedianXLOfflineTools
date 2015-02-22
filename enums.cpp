@@ -119,7 +119,7 @@ int ItemOffsets::offsetLength(int offset)
         return 3;
     case EquipIndex: case Column: case Row:
         return 4;
-    case Type: case (Type + 8): case (Type + 16): // type consists of 3 chars (excluding space)
+    case Type: case (Type + 8): case (Type + 16): case (Type + 24): // type consists of 4 chars (last one is usually space)
         return 8;
     default:
         qWarning("offset length not set for offset %d!", offset);

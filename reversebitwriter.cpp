@@ -5,9 +5,10 @@
 #include <QString>
 
 
-QString &ReverseBitWriter::replaceValueInBitString(QString &bitString, int offset, int newValue)
+QString &ReverseBitWriter::replaceValueInBitString(QString &bitString, int offset, int newValue, int length /*= -1*/)
 {
-    int length = Enums::ItemOffsets::offsetLength(offset);
+    if (length == -1)
+        length = Enums::ItemOffsets::offsetLength(offset);
     return bitString.replace(startOffset(bitString, offset, length), length, binaryStringFromNumber(newValue, false, length));
 }
 

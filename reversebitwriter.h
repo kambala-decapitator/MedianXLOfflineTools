@@ -8,7 +8,7 @@ class ItemInfo;
 class ReverseBitWriter
 {
 public:
-    static QString &replaceValueInBitString(QString &bitString, int offset, int newValue);
+    static QString &replaceValueInBitString(QString &bitString, int offset, int newValue, int length = -1);
     static QString &updateItemRow(ItemInfo *item);
     static QString &updateItemColumn(ItemInfo *item);
 

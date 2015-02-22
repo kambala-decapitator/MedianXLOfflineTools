@@ -9,13 +9,13 @@
 
 struct ItemProperty
 {
-    int value;
-    quint32 param;// param == 0 if it doesn't exist
+    int bitStringOffset, value;
+    quint32 param; // param == 0 if it doesn't exist
     QString displayString; // not empty only for 'custom' descriptions
 
-    ItemProperty() : value(0), param(0) {}
-    ItemProperty(int v, quint32 p = 0) : value(v), param(p) {}
-    ItemProperty(const QString &text) : value(0), param(0), displayString(text) {}
+    ItemProperty() : bitStringOffset(0), value(0), param(0) {}
+    ItemProperty(int v, quint32 p = 0) : bitStringOffset(0), value(v), param(p) {}
+    ItemProperty(const QString &text) : bitStringOffset(0), value(0), param(0), displayString(text) {}
 };
 
 typedef QMultiMap<int, ItemProperty *> PropertiesMultiMap;

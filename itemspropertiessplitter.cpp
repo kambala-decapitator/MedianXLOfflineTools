@@ -393,7 +393,9 @@ void ItemsPropertiesSplitter::collectShrinesToVessel()
 
 void ItemsPropertiesSplitter::extractShrinesFromVessel()
 {
-    int n = selectedItem()->props.value(Enums::ItemProperties::ShrineVesselCounter)->value;
+    ItemInfo *vesselItem = selectedItem();
+    ItemProperty *vesselProp = vesselItem->props.value(Enums::ItemProperties::ShrineVesselCounter);
+    int n = vesselProp->value;
     if (sender()->objectName() == "input")
     {
         bool ok;
@@ -401,6 +403,46 @@ void ItemsPropertiesSplitter::extractShrinesFromVessel()
         if (!ok)
             return;
     }
+
+    ItemInfo *shrine = ItemDataBase::loadItemFromFile("shrine");
+    if (shrine->itemType.at(0) != vesselItem->itemType.at(0))
+    {
+        shrine->itemType = QByteArray(vesselItem->itemType.constData(), vesselItem->itemType.length() - 1); // e.g. B0+S => B0+
+        ReverseBitWriter::replaceValueInBitString(shrine->bitString, Enums::ItemOffsets::Type, shrine->itemType.at(0)); // shrines differ only by the first type letter
+    }
+
+    bool notEnoughSpace = false;
+    int stored = 0;
+    for (; stored < n; ++stored)
+    {
+        ItemInfo *shrineCopy = new ItemInfo(*shrine);
+        if (!storeItemInStorage(shrineCopy, vesselItem->storage))
+        {
+            notEnoughSpace = true;
+            delete shrineCopy;
+            break;
+        }
+        _itemsView->setCellSpanForItem(shrineCopy);
+    }
+    delete shrine;
+
+    if (!stored)
+    {
+        ERROR_BOX(tr("No free space for Shrines in current storage"));
+        return;
+    }
+
+    if (!(vesselProp->value -= stored))
+        vesselProp->value = -1; // with value 0 no text is displayed
+    ItemPropertyTxt *txtProp = ItemDataBase::Properties()->value(Enums::ItemProperties::ShrineVesselCounter);
+    ReverseBitWriter::replaceValueInBitString(vesselItem->bitString, vesselProp->bitStringOffset, vesselProp->value + txtProp->add, txtProp->bits);
+
+    vesselItem->hasChanged = true;
+    _propertiesWidget->showItem(vesselItem);
+    emit itemsChanged();
+
+    if (notEnoughSpace)
+        ERROR_BOX(tr("Not enough space to store %1 Shrines in current storage, extracted only %2 pieces").arg(n, stored));
 }
 
 void ItemsPropertiesSplitter::depersonalize()
