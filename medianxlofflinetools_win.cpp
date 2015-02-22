@@ -36,6 +36,27 @@
 #ifndef PRODUCT_CORE_SINGLELANGUAGE
 #define PRODUCT_CORE_SINGLELANGUAGE                 0x00000064
 #endif
+#ifndef PRODUCT_EMBEDDED_AUTOMOTIVE
+#define PRODUCT_EMBEDDED_AUTOMOTIVE                 0x00000055
+#endif
+#ifndef PRODUCT_EMBEDDED_INDUSTRY_A
+#define PRODUCT_EMBEDDED_INDUSTRY_A                 0x00000056
+#endif
+#ifndef PRODUCT_EMBEDDED_A
+#define PRODUCT_EMBEDDED_A                          0x00000058
+#endif
+#ifndef PRODUCT_EMBEDDED_INDUSTRY
+#define PRODUCT_EMBEDDED_INDUSTRY                   0x00000059
+#endif
+#ifndef PRODUCT_EMBEDDED_E
+#define PRODUCT_EMBEDDED_E                          0x0000005A
+#endif
+#ifndef PRODUCT_EMBEDDED_INDUSTRY_E
+#define PRODUCT_EMBEDDED_INDUSTRY_E                 0x0000005B
+#endif
+#ifndef PRODUCT_EMBEDDED_INDUSTRY_A_E
+#define PRODUCT_EMBEDDED_INDUSTRY_A_E               0x0000005C
+#endif
 
 typedef HRESULT (__stdcall *PSCPEAUMID)(PCWSTR); // SetCurrentProcessExplicitAppUserModelID()
 #ifdef WIN_7_OR_LATER
@@ -315,8 +336,11 @@ QByteArray MedianXLOfflineTools::getOsInfo()
         case PRODUCT_CORE_SINGLELANGUAGE:
             os << "Single Language";
             break;
-        case PRODUCT_EMBEDDED:
+        case PRODUCT_EMBEDDED: case PRODUCT_EMBEDDED_A: case PRODUCT_EMBEDDED_E: case PRODUCT_EMBEDDED_AUTOMOTIVE: case PRODUCT_EMBEDDED_INDUSTRY: case PRODUCT_EMBEDDED_INDUSTRY_A: case PRODUCT_EMBEDDED_INDUSTRY_E: case PRODUCT_EMBEDDED_INDUSTRY_A_E:
             os << "Embedded";
+            break;
+        case PRODUCT_HYPERV:
+            os << "Microsoft Hyper-V Server";
             break;
         default:
             os << "dwType " << dwType;
