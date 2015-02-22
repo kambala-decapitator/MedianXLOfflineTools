@@ -478,17 +478,19 @@ int PropertiesViewerWidget::indexOfPropertyValue(int id, const PropertiesMultiMa
     if (!prop)
         return -1;
 
-    bool isMaxEnhDamageProp = id == Enums::ItemProperties::EnhancedDamage;
     ItemPropertyTxt *property = ItemDataBase::Properties()->value(id);
     qulonglong value = prop->value + property->add;
-    if (isMaxEnhDamageProp)
+    int bits = property->bits;
+    if (id == Enums::ItemProperties::EnhancedDamage)
     {
         qulonglong oldValue = value;
         value <<= property->bits;
         value += oldValue;
+
+        bits *= 2;
     }
 
-    int idIndex = -1, valueIndex = -1, bits = property->bits * (1 + isMaxEnhDamageProp);
+    int idIndex = -1, valueIndex = -1;
     qulonglong valueInString = 0;
     quint32 paramInString = 0;
     do

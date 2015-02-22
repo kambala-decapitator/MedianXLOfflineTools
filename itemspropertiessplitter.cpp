@@ -361,8 +361,8 @@ void ItemsPropertiesSplitter::downgradeSelectedRune()
     ItemInfo *item = selectedItem();
     item->hasChanged = true;
     item->itemType = QString("r%1").arg(newRuneCode, 2, 10, kZeroChar).toLatin1();
-    ReverseBitWriter::replaceValueInBitString(item->bitString, Enums::ItemOffsets::Type + 8, item->itemType.at(1));
-    ReverseBitWriter::replaceValueInBitString(item->bitString, Enums::ItemOffsets::Type + 16, item->itemType.at(2));
+    for (int i = 1; i <= 2; ++i)
+        ReverseBitWriter::replaceValueInBitString(item->bitString, Enums::ItemOffsets::Type + i*8, item->itemType.at(i));
 
     _propertiesWidget->showItem(item);
     emit itemsChanged();

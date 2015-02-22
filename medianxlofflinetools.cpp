@@ -2031,9 +2031,9 @@ bool MedianXLOfflineTools::processSaveFile()
 
     charInfo.basicInfo.skillsReadable.clear();
     charInfo.basicInfo.skillsReadable.reserve(skillsNumber);
-    for (int i = 0; i < skillsIndexes.second.size(); ++i)
+    foreach (int skillIndex, skillsIndexes.second)
     {
-        int skillIndex = skillsIndexes.second.at(i), skillReadableIndex = skillsIndexes.first.indexOf(skillIndex);
+        int skillReadableIndex = skillsIndexes.first.indexOf(skillIndex);
         charInfo.basicInfo.skillsReadable += skillReadableIndex >= 0 && skillReadableIndex < charInfo.basicInfo.skills.size() ? charInfo.basicInfo.skills.at(skillReadableIndex) : 0;
         //qDebug() << charInfo.basicInfo.skillsReadable.last() << ItemDataBase::Skills()->value(skillIndex)->name;
     }
