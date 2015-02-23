@@ -35,6 +35,7 @@ I hope I provided enough anti-hack protection for an average user. If you manage
 [*]removing all or specific Mystic Orbs (UMO not supported yet)
 [*]rune downgrading
 [*]deleting
+[*]collect/extract Shrines to/from Shrine Vessel (Ultimative only)
 [/list][*]OS-specific:
 [list][*].d2s file association
 [*]recent files in Windows 7 taskbar / Mac OS X dock icon
@@ -44,14 +45,15 @@ I hope I provided enough anti-hack protection for an average user. If you manage
 [/list][*]and many others ;)
 [/list][/spoiler]
 
-[size=18][color=#6666ff]WARNING: by default you can open only characters from [b]Ultimative XIVb[/b]. If you want to open characters from other mods/mod versions, please refer to the [b]Mod data[/b] download section.[/color][/size]
+[size=18][color=#6666ff]WARNING: by default you can open only characters from [b]Ultimative XVc[/b]. If you want to open characters from other mods/mod versions, please refer to the [b]Mod data[/b] download section.[/color][/size]
 
 [b]Downloads[/b]:
 [list][*][b]Application[/b]:
-[list][*][i]Windows[/i] (XP SP 2 and later): https://www.mediafire.com/?1lbc73jyvlx0b3l
-[*][i]Mac OS X[/i] (10.5 and later, universal binary): https://www.mediafire.com/?4vfbgpojyb9e0a9
+[list][*][i]Windows[/i] (XP SP 2 and later): https://www.mediafire.com/?4h81u9400s9sk1s
+[*][i]Mac OS X[/i] (10.5 and later, universal binary): https://www.mediafire.com/?4xx63rdh3say02u
 [/list][*][b]Mod data[/b] (find installation instructions in Mini-FAQ below; you don't actually need to download these because both archives are included in the application distribution):
 [list][*][i]2012 v005 / Kehjan Labyrinth + Tathamet vs Anu / Hardened:[/i] http://www.mediafire.com/?4vkkq8jskza2btg
+[*][i]Ultimative XVc:[/i] https://www.mediafire.com/?do5byd95vbh2qp7
 [*][i]Ultimative XIVb:[/i] https://www.mediafire.com/?lhdj51e1ac3661f
 [/list][/list]
 
@@ -91,14 +93,18 @@ A: Probably the character you had loaded last time became broken. To make the ap
 
 [b]Changelog[/b]:
 
-[i]v0.4.1.3 (09.03.2014)[/i]
+[i]v0.4.2 (23.02.2015)[/i]
+[list][+] Ultimative XV support (support for arbitrary character skill number actually)
+[+] Shrine Vessel management (collect/extract Shrines)
+[/list][spoiler="older versions"][i]v0.4.1.3 (09.03.2014)[/i]
 [list][f] fixed displaying Ultimative rune letters in an item
 [f] fixed damage calculation of ethereal weapons
 [f] fixed removing oskill/reanimate MOs (hopefully for the last time)
 [f] fixed duping last opened shared stash plugy page to personal stash
 [f] disabled disenchanting quest items in Ultimative
 [f] updated skill icons
-[/list][spoiler="older versions"][i]v0.4.1.2 (07.10.2013)[/i]
+[/list]
+[i]v0.4.1.2 (07.10.2013)[/i]
 [list][+] added ability to (de)personalize items with arbitrary names
 [/list]
 [i]v0.4.1.1 (26.08.2013)[/i]
@@ -259,8 +265,7 @@ A: Probably the character you had loaded last time became broken. To make the ap
 [+] experimental: change mercenary type (seems to be not quite stable)
 [/list]
 [b]TODO[/b]:
-[list][*]display skill tree
-[*]skills allocation
+[list][*]skills allocation
 [*]show UMO properties
 [*]try unMO UMOs
 [*]export item to bbcode/html
@@ -270,8 +275,6 @@ A: Probably the character you had loaded last time became broken. To make the ap
 [*]affix rlvl and names
 [*]nice display of property 'Adds x-y ... damage'
 [*]unsocket items
-[*]calculate correct str/dex bonus based on character stats
-[*]display actual stat values
 [/list][/spoiler]
 
 
