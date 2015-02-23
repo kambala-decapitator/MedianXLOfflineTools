@@ -38,9 +38,9 @@ public:
 
     void setSkillPoints(quint8 basePoints, quint8 addPoints)
     {
-        bool isUltimative_ = isUltimative();
-        quint8 actualBasePoints  = qMin(basePoints,                                  static_cast<quint8>(isUltimative_ ? Enums::CharacterStats::MaxNonHardenedLevel : Enums::CharacterStats::MaxLevel));
-        quint8 actualTotalPoints = qMin(static_cast<quint8>(basePoints + addPoints), static_cast<quint8>(isUltimative_ ? Enums::CharacterStats::MaxNonHardenedLevel : Enums::CharacterStats::MaxLevel));
+        quint8 maxClvl = static_cast<quint8>(isUltimative() ? Enums::CharacterStats::MaxNonHardenedLevel : Enums::CharacterStats::MaxLevel);
+        quint8 actualBasePoints  = qMin(maxClvl, basePoints);
+        quint8 actualTotalPoints = qMin(maxClvl, static_cast<quint8>(basePoints + addPoints));
 
         _skillPointsLabel->setText(addPoints ? QString("%1 (%2)").arg(actualBasePoints).arg(actualTotalPoints) : QString::number(actualBasePoints));
         if (!basePoints)
@@ -129,7 +129,7 @@ SkillTreeDialog::SkillTreeDialog(QWidget *parent /*= 0*/) : QDialog(parent), _ta
             w->setSkillImageForClassWithId(charInfo.classCode, skill->imageId);
             w->setSkillPoints(baseSkillPoints, totalSkillPoints);
 
-            if (i == 2 && skill->col == 3) // no idea why uberskills have column 3
+            if (skillsNumber == 30 && i == 2 && skill->col == 3) // Ultimative XV has 35 skills and different uberskills tab layout
             {
                 if (!uberSkillsBox)
                 {
