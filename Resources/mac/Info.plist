@@ -34,7 +34,7 @@
 	<key>NSHumanReadableCopyright</key>
 	<string>@COPYRIGHT@</string>
 	<key>CFBundleVersion</key>
-	<string>15</string>
+	<string>16</string>
 	<key>LSHasLocalizedDisplayName</key>
 	<false/>
 	<key>CFBundleInfoDictionaryVersion</key>

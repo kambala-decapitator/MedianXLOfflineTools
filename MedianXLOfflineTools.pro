@@ -28,7 +28,7 @@ CONFIG(release, debug|release): {
 NVER1 = 0
 NVER2 = 4
 NVER3 = 2
-NVER4 = 0
+NVER4 = 1
 
       greaterThan(NVER4, 0): NVER_STRING_LAST = $$sprintf("%1.%2", $$NVER3, $$NVER4)
 else: greaterThan(NVER3, 0): NVER_STRING_LAST = $$sprintf("%1", $$NVER3)
