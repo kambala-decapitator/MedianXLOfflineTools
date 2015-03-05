@@ -6,7 +6,7 @@ As you can guess from the title, it's an almost complete offline analogue of gri
 
 Application should be able to load character from any version of Median XL and successfully perform basic operations with it like respeccing. Items processing relies on the mod source files, so it may not be compatible with any chacarcter from different version. This data is softcoded, so when a new mod version is released, usually there's no need to recompile the application — one just needs to replace the data found in 'resources/data' with the new one, which I will provide. Currently supported mod versions:
 [list][*]Median XL 2012 v005 (earlier versions should also work)
-[*]Ultimative XIVb (v5+ characters should be compatible)
+[*]Ultimative XVc (v5+ characters should be compatible)
 [*]Kehjan Labyrinth + Tathamet vs Anu
 [*]Hardened
 [/list]
@@ -49,8 +49,8 @@ I hope I provided enough anti-hack protection for an average user. If you manage
 
 [b]Downloads[/b]:
 [list][*][b]Application[/b]:
-[list][*][i]Windows[/i] (XP SP 2 and later): https://www.mediafire.com/?4h81u9400s9sk1s
-[*][i]Mac OS X[/i] (10.5 and later, universal binary): https://www.mediafire.com/?4xx63rdh3say02u
+[list][*][i]Windows[/i] (XP SP 2 and later): https://www.mediafire.com/?k47a3kbzd8444db
+[*][i]Mac OS X[/i] (10.5 and later, universal binary): https://www.mediafire.com/?qrdhz7cxdcju384
 [/list][*][b]Mod data[/b] (find installation instructions in Mini-FAQ below; you don't actually need to download these because both archives are included in the application distribution):
 [list][*][i]2012 v005 / Kehjan Labyrinth + Tathamet vs Anu / Hardened:[/i] http://www.mediafire.com/?4vkkq8jskza2btg
 [*][i]Ultimative XVc:[/i] https://www.mediafire.com/?do5byd95vbh2qp7
@@ -93,10 +93,13 @@ A: Probably the character you had loaded last time became broken. To make the ap
 
 [b]Changelog[/b]:
 
-[i]v0.4.2 (23.02.2015)[/i]
+[i]v0.4.2.1 (06.03.2015)[/i]
+[list][f] one must never forget De Morgan's laws
+[/list][spoiler="older versions"][i]v0.4.2 (23.02.2015)[/i]
 [list][+] Ultimative XV support (support for arbitrary character skill number actually)
 [+] Shrine Vessel management (collect/extract Shrines)
-[/list][spoiler="older versions"][i]v0.4.1.3 (09.03.2014)[/i]
+[/list]
+[i]v0.4.1.3 (09.03.2014)[/i]
 [list][f] fixed displaying Ultimative rune letters in an item
 [f] fixed damage calculation of ethereal weapons
 [f] fixed removing oskill/reanimate MOs (hopefully for the last time)
