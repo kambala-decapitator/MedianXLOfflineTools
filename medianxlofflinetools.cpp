@@ -1949,10 +1949,14 @@ bool MedianXLOfflineTools::processSaveFile()
         int statLength = ItemDataBase::Properties()->value(statCode)->saveBits;
         if (!statLength)
         {
+#ifdef DUPE_CHECK
+            qDebug("failing char: %s", qPrintable(QFileInfo(_charPath).fileName()));
+#else
             QString modName("Median XL");
             if (isUltimative())
                 modName += QString(" Ultimative v%1").arg(isUltimative4() ? "4" : "5+");
             ERROR_BOX(tr("Unknown statistic code found: %1. This is not %2 character.", "second param is mod name").arg(statCode).arg(modName));
+#endif
             return false;
         }
 

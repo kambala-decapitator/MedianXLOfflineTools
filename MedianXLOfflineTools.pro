@@ -211,7 +211,7 @@ macx {
     }
     else {
         clang {
-#            QMAKE_MAC_SDK = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk
+            QMAKE_MAC_SDK = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk
         }
         else {
             # release build is intended to be compiled with PPC support

@@ -163,6 +163,7 @@ void DupeScanDialog::scanCharactersInDir(const QString &path)
         ++filesProcessed;
 
         QString fileName = fileInfo.fileName(), header = QString("%1 dupe stats").arg(fileName);
+        qDebug("%s", qPrintable(fileName));
         if (isFirst)
         {
             header += " (currently loaded)";
