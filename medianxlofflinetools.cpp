@@ -743,9 +743,9 @@ void MedianXLOfflineTools::showDupeCheck()
     bool isOpenItemsOptionChecked = ui->actionOpenItemsAutomatically->isChecked();
     ui->actionOpenItemsAutomatically->setChecked(false);
 
-    DupeScanDialog dlg(_charPath, this);
-    connect(&dlg, SIGNAL(loadFile(QString)), SLOT(loadFileSkipExtensionCheck(QString)), Qt::BlockingQueuedConnection);
-    dlg.exec();
+    _dupeScanDialog = new DupeScanDialog(_charPath, this);
+    connect(_dupeScanDialog, SIGNAL(loadFile(QString)), SLOT(loadFileSkipExtensionCheck(QString)), Qt::BlockingQueuedConnection);
+    _dupeScanDialog->exec();
 
     ui->actionOpenItemsAutomatically->setChecked(isOpenItemsOptionChecked);
 }
@@ -1754,7 +1754,7 @@ bool MedianXLOfflineTools::processSaveFile()
     inputDataStream >> signature;
     if (signature != kFileSignature)
     {
-        ERROR_BOX(tr("Wrong file signature: should be 0x%1, got 0x%2.").arg(kFileSignature, 0, 16).arg(signature, 0, 16));
+        showLoadingError(tr("Wrong file signature: should be 0x%1, got 0x%2.").arg(kFileSignature, 0, 16).arg(signature, 0, 16));
         return false;
     }
 
@@ -1764,11 +1764,7 @@ bool MedianXLOfflineTools::processSaveFile()
 #ifndef DISABLE_CRC_CHECK
     if (fileChecksum != computedChecksum)
     {
-#ifndef DUPE_CHECK
-        ERROR_BOX(tr("Character checksum doesn't match. Looks like it's corrupted."));
-#else
-        clearItems();
-#endif
+        showLoadingError(tr("Character checksum doesn't match. Looks like it's corrupted."));
         return false;
     }
 #endif
@@ -1787,11 +1783,7 @@ bool MedianXLOfflineTools::processSaveFile()
 
     if (!(status & StatusBits::IsExpansion))
     {
-#ifndef DUPE_CHECK
-        ERROR_BOX(tr("This is not Expansion character."));
-#else
-        clearItems();
-#endif
+        showLoadingError(tr("This is not Expansion character."));
         return false;
     }
     charInfo.basicInfo.isHardcore = status & StatusBits::IsHardcore;
@@ -1799,21 +1791,21 @@ bool MedianXLOfflineTools::processSaveFile()
 
     if (classCode > ClassName::Assassin)
     {
-        ERROR_BOX(tr("Wrong class value: got %1").arg(classCode));
+        showLoadingError(tr("Wrong class value: got %1").arg(classCode));
         return false;
     }
     charInfo.basicInfo.classCode = static_cast<ClassName::ClassNameEnum>(classCode);
 
     if (progression >= Progression::Completed)
     {
-        ERROR_BOX(tr("Wrong progression value: got %1").arg(progression));
+        showLoadingError(tr("Wrong progression value: got %1").arg(progression));
         return false;
     }
     charInfo.basicInfo.titleCode = progression;
 
     if (!clvl || clvl > CharacterStats::MaxLevel)
     {
-        ERROR_BOX(tr("Wrong level: got %1").arg(clvl));
+        showLoadingError(tr("Wrong level: got %1").arg(clvl));
         return false;
     }
     charInfo.basicInfo.level = clvl;
@@ -1827,7 +1819,7 @@ bool MedianXLOfflineTools::processSaveFile()
         inputDataStream >> mercName >> mercValue;
         if (mercValue > Mercenary::MaxCode)
         {
-            ERROR_BOX(tr("Wrong mercenary code: got %1").arg(mercValue));
+            showLoadingError(tr("Wrong mercenary code: got %1").arg(mercValue));
             return false;
         }
         charInfo.mercenary.code = Mercenary::mercCodeFromValue(mercValue);
@@ -1849,7 +1841,7 @@ bool MedianXLOfflineTools::processSaveFile()
     // Quests
     if (_saveFileContents.mid(Offsets::QuestsHeader, 4) != "Woo!")
     {
-        ERROR_BOX(tr("Quests data not found!"));
+        showLoadingError(tr("Quests data not found!"));
         return false;
     }
     charInfo.questsInfo.clear();
@@ -1866,7 +1858,7 @@ bool MedianXLOfflineTools::processSaveFile()
     // WP
     if (_saveFileContents.mid(Offsets::WaypointsHeader, 2) != "WS")
     {
-        ERROR_BOX(tr("Waypoint data not found!"));
+        showLoadingError(tr("Waypoint data not found!"));
         return false;
     }
 
@@ -1893,14 +1885,14 @@ bool MedianXLOfflineTools::processSaveFile()
     // NPC
     if (_saveFileContents.mid(Offsets::NPCHeader, 2) != "w4")
     {
-        ERROR_BOX(tr("NPC data not found!"));
+        showLoadingError(tr("NPC data not found!"));
         return false;
     }
 
     // stats
     if (_saveFileContents.mid(Offsets::StatsHeader, 2) != "gf")
     {
-        ERROR_BOX(tr("Stats data not found!"));
+        showLoadingError(tr("Stats data not found!"));
         return false;
     }
     inputDataStream.device()->seek(Offsets::StatsData);
@@ -1909,7 +1901,7 @@ bool MedianXLOfflineTools::processSaveFile()
     int skillsOffset = _saveFileContents.indexOf(kSkillsHeader, Offsets::StatsData);
     if (skillsOffset == -1)
     {
-        ERROR_BOX(tr("Skills data not found!"));
+        showLoadingError(tr("Skills data not found!"));
         return false;
     }
 
@@ -1949,14 +1941,10 @@ bool MedianXLOfflineTools::processSaveFile()
         int statLength = ItemDataBase::Properties()->value(statCode)->saveBits;
         if (!statLength)
         {
-#ifdef DUPE_CHECK
-            qDebug("failing char: %s", qPrintable(QFileInfo(_charPath).fileName()));
-#else
             QString modName("Median XL");
             if (isUltimative())
                 modName += QString(" Ultimative v%1").arg(isUltimative4() ? "4" : "5+");
-            ERROR_BOX(tr("Unknown statistic code found: %1. This is not %2 character.", "second param is mod name").arg(statCode).arg(modName));
-#endif
+            showLoadingError(tr("Unknown statistic code found: %1. This is not %2 character.", "second param is mod name").arg(statCode).arg(modName));
             return false;
         }
 
@@ -1989,7 +1977,7 @@ bool MedianXLOfflineTools::processSaveFile()
     }
     if (count == 20)
     {
-        ERROR_BOX(tr("Stats data is corrupted!"));
+        showLoadingError(tr("Stats data is corrupted!"));
         return false;
     }
 
@@ -2042,16 +2030,14 @@ bool MedianXLOfflineTools::processSaveFile()
         //qDebug() << charInfo.basicInfo.skillsReadable.last() << ItemDataBase::Skills()->value(skillIndex)->name;
     }
 
-#ifndef DUPE_CHECK
     if (shouldShowHackWarning)
-        WARNING_BOX(kHackerDetected);
-#endif
+        showLoadingError(kHackerDetected);
 
     // items
     int charItemsOffset = inputDataStream.device()->pos();
     if (_saveFileContents.mid(charItemsOffset, ItemParser::kItemHeader.length()) != ItemParser::kItemHeader)
     {
-        ERROR_BOX(tr("Items data not found!"));
+        showLoadingError(tr("Items data not found!"));
         return false;
     }
     charInfo.itemsOffset = charItemsOffset + ItemParser::kItemHeader.length();
@@ -2080,7 +2066,7 @@ bool MedianXLOfflineTools::processSaveFile()
     //    qDebug() << "property" << iter.key() << "value" << iter.value();
     //qint32 strBonus = propValues.value(ItemProperties::StrengthBonus);
     //qDebug() << "strength value is" << charInfo.valueOfStatistic(CharacterStats::Strength) * (strBonus ? strBonus : 1) + propValues.value(ItemProperties::Strength);
-#ifndef DUPE_CHECK
+
     qint32 avoidValue = 0;//propValues.value(ItemProperties::Avoid1);
     foreach (ItemInfo *item, itemsBuffer)
         if (ItemDataBase::doesItemGrantBonus(item))
@@ -2090,9 +2076,8 @@ bool MedianXLOfflineTools::processSaveFile()
         QString avoidText = tr("100% avoid is kewl");
         if (avoidValue > 100)
             avoidText += QString(" (%1)").arg(tr("well, you have %1% actually", "avoid").arg(avoidValue));
-        WARNING_BOX(avoidText);
+        showLoadingError(avoidText, true);
     }
-#endif
 
     // corpse data
     inputDataStream.skipRawData(ItemParser::kItemHeader.length()); // JM
@@ -2120,7 +2105,7 @@ bool MedianXLOfflineTools::processSaveFile()
     // merc
     if (_saveFileContents.mid(inputDataStream.device()->pos(), kMercHeader.length()) != kMercHeader)
     {
-        ERROR_BOX(tr("Mercenary items section not found!"));
+        showLoadingError(tr("Mercenary items section not found!"));
         return false;
     }
     inputDataStream.skipRawData(kMercHeader.length());
@@ -2139,7 +2124,7 @@ bool MedianXLOfflineTools::processSaveFile()
     // end
     if (_saveFileContents.mid(inputDataStream.device()->pos(), 2) != "kf" || _saveFileContents.at(_saveFileContents.size() - 1) != 0)
     {
-        ERROR_BOX(tr("Save file is not terminated correctly!"));
+        showLoadingError(tr("Save file is not terminated correctly!"));
         return false;
     }
 
@@ -2205,6 +2190,25 @@ bool MedianXLOfflineTools::processSaveFile()
 //    }
 
     return true;
+}
+
+void MedianXLOfflineTools::showLoadingError(const QString &error, bool warn)
+{
+#ifdef DUPE_CHECK
+        if (_dupeScanDialog)
+        {
+            if (!warn)
+                clearItems();
+            _dupeScanDialog->logLoadingError(error, warn);
+        }
+        else
+#endif
+        {
+            if (warn)
+                WARNING_BOX(error);
+            else
+                ERROR_BOX(error);
+        }
 }
 
 quint32 MedianXLOfflineTools::checksum(const QByteArray &charByteArray) const

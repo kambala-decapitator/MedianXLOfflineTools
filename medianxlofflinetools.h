@@ -14,6 +14,9 @@
 class ItemsViewerDialog;
 class FindItemsDialog;
 class ExperienceIndicatorGroupBox;
+#ifdef DUPE_CHECK
+class DupeScanDialog;
+#endif
 
 namespace Ui { class MedianXLOfflineToolsClass; }
 class QSpinBox;
@@ -130,6 +133,9 @@ private:
     QGroupBox *_questsGroupBox;
     QHash<int, QList<QCheckBox *> > _checkboxesQuestsHash;
     QActionGroup *_backupLimitsGroup, *_showDisenchantPreviewGroup;
+#ifdef DUPE_CHECK
+    QPointer<DupeScanDialog> _dupeScanDialog;
+#endif
 
     // data
     QString _charPath;
@@ -190,6 +196,7 @@ private:
     void loadSaveFile(const QString &filePath, bool shouldNotify, const QString &statusBarMessage);
     void loadSaveFile(const QString &filePath) { loadSaveFile(filePath, true, tr("Character loaded")); }
     bool processSaveFile();
+    void showLoadingError(const QString &error, bool warn = false);
     quint32 checksum(const QByteArray &charByteArray) const;
 
     inline int totalPossibleStatPoints(int level) const;

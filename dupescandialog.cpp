@@ -150,11 +150,12 @@ void DupeScanDialog::scanCharactersInDir(const QString &path)
     appendStringToLog("<h3>SEPARATE CHARACTER CHECK</h3>----------------------------------------");
 
     QHash<QString, ItemsList> allItemsHash;
-    bool isFirst = true, dupedItemFound;
+    bool isFirst, dupedItemFound;
     QString pathWithSlashes = QDir::fromNativeSeparators(_currentCharPath);
 
     QFileInfoList list = QDir(path).entryInfoList(QDir::Files);
-    list.prepend(QFileInfo(_currentCharPath)); // for currently loaded file
+    if ((isFirst = !_currentCharPath.isEmpty()))
+        list.prepend(QFileInfo(_currentCharPath)); // for currently loaded file
     QMetaObject::invokeMethod(_progressBar, "setMaximum", Q_ARG(int, list.size()));
 
     int filesProcessed = 0;
@@ -163,7 +164,7 @@ void DupeScanDialog::scanCharactersInDir(const QString &path)
         ++filesProcessed;
 
         QString fileName = fileInfo.fileName(), header = QString("%1 dupe stats").arg(fileName);
-        qDebug("%s", qPrintable(fileName));
+        qDebug("loading %s", qPrintable(fileName));
         if (isFirst)
         {
             header += " (currently loaded)";
@@ -177,8 +178,12 @@ void DupeScanDialog::scanCharactersInDir(const QString &path)
 
             emit loadFile(path);
         }
-        if (!_dontWriteCheckBox->isChecked())
+        if (!_dontWriteCheckBox->isChecked() || !_loadingMessage.isEmpty())
+        {
             appendStringToLog(header + "\n");
+            if (!_loadingMessage.isEmpty())
+                appendStringToLog(_loadingMessage);
+        }
 
         dupedItemFound = false;
         ItemsList itemsAndSocketables = CharacterInfo::instance().items.character, checkedItems;
@@ -227,9 +232,10 @@ void DupeScanDialog::scanCharactersInDir(const QString &path)
         }
         allItemsHash[fileName] = itemsCopy;
 
-        if (!_dontWriteCheckBox->isChecked() || dupedItemFound)
+        if (!_dontWriteCheckBox->isChecked() || dupedItemFound || !_loadingMessage.isEmpty())
             appendStringToLog("========================================");
 
+        _loadingMessage.clear();
         QMetaObject::invokeMethod(_progressBar, "setValue", Q_ARG(int, filesProcessed));
     }
 
@@ -237,14 +243,14 @@ void DupeScanDialog::scanCharactersInDir(const QString &path)
     QMetaObject::invokeMethod(this, "updateProgressbarForCrossCheck", Q_ARG(int, allItemsHash.size()));
 
     filesProcessed = 1;
-    for (QHash<QString, ItemsList>::const_iterator iter = allItemsHash.constBegin(); iter != allItemsHash.constEnd() - 1; ++iter)
+    for (QHash<QString, ItemsList>::const_iterator iter = allItemsHash.constBegin(), end = allItemsHash.constEnd(); iter != end - 1; ++iter)
     {
         dupedItemFound = false;
         if (!_dontWriteCheckBox->isChecked())
             appendStringToLog(iter.key());
 
         const ItemsList &iItems = iter.value();
-        for (QHash<QString, ItemsList>::const_iterator jter = iter + 1; jter != allItemsHash.constEnd(); ++jter, ++filesProcessed)
+        for (QHash<QString, ItemsList>::const_iterator jter = iter + 1; jter != end; ++jter, ++filesProcessed)
         {
             isFirst = true;
             foreach (ItemInfo *iItem, iItems)

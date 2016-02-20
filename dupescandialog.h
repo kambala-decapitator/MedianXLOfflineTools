@@ -20,6 +20,8 @@ public:
     DupeScanDialog(const QString &currentPath = QString(), QWidget *parent = 0);
     virtual ~DupeScanDialog() {}
 
+    void logLoadingError(const QString &error, bool warn) { _loadingMessage = QString("<font color=%1>%2</font>").arg(warn ? "yellow" : "red", error); }
+
 signals:
     void loadFile(const QString &file);
 
@@ -31,7 +33,7 @@ private slots:
     void updateProgressbarForCrossCheck(int n);
 
 private:
-    QString _currentCharPath;
+    QString _currentCharPath, _loadingMessage;
     QLineEdit *_pathLineEdit;
     QTextEdit *_logBrowser;
     QPushButton *_saveButton;
