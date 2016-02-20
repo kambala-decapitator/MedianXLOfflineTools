@@ -8,8 +8,10 @@
 int main(int argc, char *argv[])
 {
     Application app(argc, argv);
+#ifndef DUPE_CHECK
     if (app.isRunning())
         return 0;
+#endif
 
     LanguageManager &langManager = LanguageManager::instance();
     langManager.currentLocale = QSettings().value(langManager.languageKey, QLocale::system().name().left(2)).toString();
