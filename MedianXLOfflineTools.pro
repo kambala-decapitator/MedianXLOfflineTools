@@ -8,6 +8,8 @@
 TARGET = MedianXLOfflineTools
 TEMPLATE = app
 
+#DEFINES += DUPE_CHECK
+
 QT += network
 
 greaterThan(QT_MAJOR_VERSION, 4): {
