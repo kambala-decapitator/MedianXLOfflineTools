@@ -19,15 +19,94 @@
 #include <QFile>
 #include <QRegExp>
 
+#ifndef QT_NO_DEBUG
+#include <QDebug>
+#endif
+
 #if IS_QT5
 #include <QtConcurrent/QtConcurrentRun>
+#include <QtConcurrent/QtConcurrentMap>
 #else
 #include <QtConcurrentRun>
+#include <QtConcurrentMap>
 #endif
 
 
-DupeScanDialog::DupeScanDialog(const QString &currentPath, QWidget *parent) : QDialog(parent), _currentCharPath(currentPath), _pathLineEdit(new QLineEdit(this)), _logBrowser(new QTextEdit(this)),
-    _saveButton(new QPushButton("Save...", this)), _dontWriteCheckBox(new QCheckBox("Don't write empty results", this)), _progressBar(new QProgressBar(this))
+bool shouldCheckItem(ItemInfo *item)
+{
+    // ignore tomes, keys and non-magical quivers
+    return !(ItemDataBase::isTomeWithScrolls(item) || item->itemType == "key" || ((item->itemType == "aqv" || item->itemType == "cqv") && item->quality < Enums::ItemQuality::Magic));
+}
+
+bool areItemsSame(ItemInfo *a, ItemInfo *b)
+{
+    return a->isExtended && a->guid == b->guid && a->itemType == b->itemType;
+}
+
+QString logDupedItemsInfo(ItemInfo *item1, ItemInfo *item2)
+{
+    return QString("<b>%1</b>: GUID 0x%2 (%3), type '%4', quality <b>%5</b>; %6; %7").arg(ItemDataBase::Items()->value(item1->itemType)->name)
+            .arg(item1->guid, 0, 16).arg(item1->guid).arg(item1->itemType.constData()).arg(metaEnumFromName<Enums::ItemQuality>("ItemQualityEnum").valueToKey(item1->quality))
+            .arg(ItemParser::itemStorageAndCoordinatesString("<font color=blue>ITEM1</font>: location %1, row %2, col %3, equipped in %4", item1))
+            .arg(ItemParser::itemStorageAndCoordinatesString("<font color=blue>ITEM2</font>: location %1, row %2, col %3, equipped in %4", item2));
+}
+
+
+struct CrossCompareTask
+{
+    bool skipEmptyResults;
+    ItemsHashIterator frontBegin, backBegin, end;
+    CrossCompareTask(bool skip, ItemsHashIterator endIter) : skipEmptyResults(skip), end(endIter) {}
+};
+
+QString crossCompareItems(const CrossCompareTask &task)
+{
+    bool isFirst, dupedItemFound;
+    QString result;
+    foreach (ItemsHashIterator iter, QList<ItemsHashIterator>() << task.frontBegin << task.backBegin)
+    {
+        dupedItemFound = false;
+        if (!task.skipEmptyResults)
+            result += "<br>" + iter.key();
+
+        const ItemsList &iItems = iter.value();
+        for (ItemsHashIterator jter = iter + 1; jter != task.end; ++jter)
+        {
+            isFirst = true;
+            foreach (ItemInfo *iItem, iItems)
+            {
+                if (iItem->isExtended && shouldCheckItem(iItem))
+                {
+                    foreach (ItemInfo *jItem, jter.value())
+                    {
+                        if (areItemsSame(jItem, iItem))
+                        {
+                            if (!dupedItemFound && task.skipEmptyResults)
+                            {
+                                result += iter.key();
+                                dupedItemFound = true;
+                            }
+                            if (isFirst)
+                            {
+                                result += "<br><br>" + jter.key() + ":";
+                                isFirst = false;
+                            }
+                            result += "<br>" + logDupedItemsInfo(iItem, jItem);
+                        }
+                    }
+                }
+            }
+        }
+
+        if (!task.skipEmptyResults || dupedItemFound)
+            result += "<br>========================================";
+    }
+    return result;
+}
+
+
+DupeScanDialog::DupeScanDialog(const QString &currentPath, QWidget *parent) : QDialog(parent), _currentCharPath(currentPath), _pathLineEdit(new QLineEdit(this)),
+    _logBrowser(new QTextEdit(this)), _saveButton(new QPushButton("Save...", this)), _skipEmptyCheckBox(new QCheckBox("Skip empty results", this)), _progressBar(new QProgressBar(this))
 {
     setWindowFlags(windowFlags() & ~Qt::WindowContextHelpButtonHint);
     setWindowTitle("Dupe Scanner");
@@ -43,7 +122,7 @@ DupeScanDialog::DupeScanDialog(const QString &currentPath, QWidget *parent) : QD
     QHBoxLayout *hbl2 = new QHBoxLayout;
     hbl2->addWidget(scanButton);
     hbl2->addWidget(_saveButton);
-    hbl2->addWidget(_dontWriteCheckBox);
+    hbl2->addWidget(_skipEmptyCheckBox);
     hbl2->addWidget(_progressBar);
     hbl2->addWidget(okButton);
 
@@ -56,7 +135,7 @@ DupeScanDialog::DupeScanDialog(const QString &currentPath, QWidget *parent) : QD
     _logBrowser->setReadOnly(true);
     _saveButton->setDisabled(true);
     scanButton->setDefault(true);
-    _dontWriteCheckBox->setChecked(true);
+    _skipEmptyCheckBox->setChecked(true);
     _progressBar->setAlignment(Qt::AlignHCenter | Qt::AlignVCenter);
 
     resize(600, 400);
@@ -65,6 +144,26 @@ DupeScanDialog::DupeScanDialog(const QString &currentPath, QWidget *parent) : QD
     connect(scanButton,   SIGNAL(clicked()), SLOT(scan()));
     connect(_saveButton,  SIGNAL(clicked()), SLOT(save()));
     connect(okButton,     SIGNAL(clicked()), SLOT(accept()));
+
+    connect(&_futureWatcher, SIGNAL(progressRangeChanged(int,int)), _progressBar, SLOT(setRange(int,int)));
+    connect(&_futureWatcher, SIGNAL(progressValueChanged(int)), _progressBar, SLOT(setValue(int)));
+    connect(&_futureWatcher, SIGNAL(resultReadyAt(int)), SLOT(crossCheckResultReady(int)));
+    connect(&_futureWatcher, SIGNAL(finished()), SLOT(scanFinished()));
+}
+
+DupeScanDialog::~DupeScanDialog()
+{
+    foreach (const ItemsList &items, _allItemsHash)
+        qDeleteAll(items);
+}
+
+void DupeScanDialog::done(int r)
+{
+    _futureWatcher.cancel();
+    _futureWatcher.waitForFinished();
+
+    parentWidget()->setUpdatesEnabled(true);
+    QDialog::done(r);
 }
 
 void DupeScanDialog::selectPath()
@@ -91,12 +190,21 @@ void DupeScanDialog::scan()
     _progressBar->setFormat("%v / %m separate files processed");
     _saveButton->setDisabled(true);
 
+    parentWidget()->setUpdatesEnabled(false);
+
+    _timeCounter.start();
     QtConcurrent::run(this, &DupeScanDialog::scanCharactersInDir, path);
 }
 
 void DupeScanDialog::scanFinished()
 {
-    _logBrowser->append("That's all Folks!");
+    foreach (const ItemsList &items, _allItemsHash)
+        qDeleteAll(items);
+    _allItemsHash.clear();
+
+    parentWidget()->setUpdatesEnabled(true);
+
+    _logBrowser->append(QString("<font color=black>processing took %1 seconds in total</font>").arg(_timeCounter.elapsed() / 1000));
     _logBrowser->setUpdatesEnabled(true);
 
     _saveButton->setEnabled(true);
@@ -106,7 +214,8 @@ void DupeScanDialog::scanFinished()
 void DupeScanDialog::save()
 {
     QString plainTextFilter = "plain text (*.txt)", htmlTextFilter = "HTML (*.html)";
-    QString selectedFilter, fileName = QFileDialog::getSaveFileName(this, "Save dupe report", QFileInfo(_currentCharPath).canonicalPath() + "/MXLOT dupe stats", plainTextFilter + ";;" + htmlTextFilter, &selectedFilter);
+    QString selectedFilter, fileName = QFileDialog::getSaveFileName(this, "Save dupe report", QFileInfo(_currentCharPath).canonicalPath() + "/MXLOT dupe stats",
+                                                                    plainTextFilter + ";;" + htmlTextFilter, &selectedFilter);
     if (fileName.isEmpty())
         return;
 
@@ -117,27 +226,17 @@ void DupeScanDialog::save()
     if (!fileName.endsWith(extension))
         fileName += extension;
     QFile f(fileName);
-    if (!f.open(QIODevice::WriteOnly))
-    {
+    if (f.open(QIODevice::WriteOnly))
+        f.write((selectedFilter == plainTextFilter ? _logBrowser->toPlainText() : _logBrowser->toHtml()).toUtf8());
+    else
         ERROR_BOX("failed to save file");
-        return;
-    }
-    f.write((selectedFilter == plainTextFilter ? _logBrowser->toPlainText() : _logBrowser->toHtml()).toUtf8());
 }
 
-void DupeScanDialog::updateProgressbarForCrossCheck(int n)
+void DupeScanDialog::crossCheckResultReady(int i)
 {
-    _progressBar->setValue(0);
-    _progressBar->setMaximum(n * (n - 1) / 2);
-    _progressBar->setFormat("cross-check %p%");
-}
-
-void DupeScanDialog::logDupedItemsInfo(ItemInfo *item1, ItemInfo *item2)
-{
-    appendStringToLog(QString("<b>%1</b>: GUID 0x%2 (%3), type '%4', quality <b>%5</b>; %6; %7").arg(ItemDataBase::Items()->value(item1->itemType)->name)
-                      .arg(item1->guid, 0, 16).arg(item1->guid).arg(item1->itemType.constData()).arg(metaEnumFromName<Enums::ItemQuality>("ItemQualityEnum").valueToKey(item1->quality))
-                      .arg(ItemParser::itemStorageAndCoordinatesString("<font color=blue>ITEM1</font>: location %1, row %2, col %3, equipped in %4", item1))
-                      .arg(ItemParser::itemStorageAndCoordinatesString("<font color=blue>ITEM2</font>: location %1, row %2, col %3, equipped in %4", item2)));
+    QString result = _futureWatcher.future().resultAt(i);
+    if (!result.isEmpty())
+        appendStringToLog(result);
 }
 
 void DupeScanDialog::appendStringToLog(const QString &s)
@@ -149,7 +248,6 @@ void DupeScanDialog::scanCharactersInDir(const QString &path)
 {
     appendStringToLog("<h3>SEPARATE CHARACTER CHECK</h3>----------------------------------------");
 
-    QHash<QString, ItemsList> allItemsHash;
     bool isFirst, dupedItemFound;
     QString pathWithSlashes = QDir::fromNativeSeparators(_currentCharPath);
 
@@ -178,7 +276,7 @@ void DupeScanDialog::scanCharactersInDir(const QString &path)
 
             emit loadFile(path);
         }
-        if (!_dontWriteCheckBox->isChecked() || !_loadingMessage.isEmpty())
+        if (!_skipEmptyCheckBox->isChecked() || !_loadingMessage.isEmpty())
         {
             appendStringToLog(header + "\n");
             if (!_loadingMessage.isEmpty())
@@ -212,7 +310,7 @@ void DupeScanDialog::scanCharactersInDir(const QString &path)
                     if (areItemsSame(jItem, iItem))
                     {
                         checkedItems += iItem;
-                        if (!dupedItemFound && _dontWriteCheckBox->isChecked())
+                        if (!dupedItemFound && _skipEmptyCheckBox->isChecked())
                         {
                             appendStringToLog(header + "\n");
                             dupedItemFound = true;
@@ -230,72 +328,29 @@ void DupeScanDialog::scanCharactersInDir(const QString &path)
             itemCopy->shouldDeleteEverything = false; // because it's a shallow copy
             itemsCopy += itemCopy;
         }
-        allItemsHash[fileName] = itemsCopy;
+        _allItemsHash[fileName] = itemsCopy;
 
-        if (!_dontWriteCheckBox->isChecked() || dupedItemFound || !_loadingMessage.isEmpty())
+        if (!_skipEmptyCheckBox->isChecked() || dupedItemFound || !_loadingMessage.isEmpty())
             appendStringToLog("========================================");
 
         _loadingMessage.clear();
         QMetaObject::invokeMethod(_progressBar, "setValue", Q_ARG(int, filesProcessed));
     }
 
-    appendStringToLog("<br /><h3>CROSS-CHARACTER CHECK</h3>----------------------------------------");
-    QMetaObject::invokeMethod(this, "updateProgressbarForCrossCheck", Q_ARG(int, allItemsHash.size()));
+    appendStringToLog(QString("loading files & separate processing took %1 seconds<br><h3>CROSS-CHARACTER CHECK</h3>----------------------------------------").arg(_timeCounter.elapsed() / 1000));
+    _progressBar->setFormat("cross-check %p%");
 
-    filesProcessed = 1;
-    for (QHash<QString, ItemsList>::const_iterator iter = allItemsHash.constBegin(), end = allItemsHash.constEnd(); iter != end - 1; ++iter)
+    QList<CrossCompareTask> tasks;
+    CrossCompareTask task(_skipEmptyCheckBox->isChecked(), _allItemsHash.constEnd());
+    ItemsHashIterator begin = _allItemsHash.constBegin();
+    for (int i = 0, n = _allItemsHash.size() / 2 + _allItemsHash.size() % 2; i < n; ++i)
     {
-        dupedItemFound = false;
-        if (!_dontWriteCheckBox->isChecked())
-            appendStringToLog(iter.key());
+        task.frontBegin = begin + i;
 
-        const ItemsList &iItems = iter.value();
-        for (QHash<QString, ItemsList>::const_iterator jter = iter + 1; jter != end; ++jter, ++filesProcessed)
-        {
-            isFirst = true;
-            foreach (ItemInfo *iItem, iItems)
-            {
-                if (iItem->isExtended && shouldCheckItem(iItem))
-                {
-                    foreach (ItemInfo *jItem, jter.value())
-                    {
-                        if (areItemsSame(jItem, iItem))
-                        {
-                            if (!dupedItemFound && _dontWriteCheckBox->isChecked())
-                            {
-                                appendStringToLog(iter.key());
-                                dupedItemFound = true;
-                            }
-                            if (isFirst)
-                            {
-                                QMetaObject::invokeMethod(_logBrowser, "insertPlainText", Q_ARG(QString, "\n\n" + jter.key() + ":"));
-                                isFirst = false;
-                            }
-                            logDupedItemsInfo(iItem, jItem);
-                        }
-                    }
-                }
-            }
-        }
+        ItemsHashIterator beginFromEndIter = task.end - 1 - i;
+        task.backBegin = beginFromEndIter != task.frontBegin ? beginFromEndIter : task.end - 1;
 
-        if (!_dontWriteCheckBox->isChecked() || dupedItemFound)
-            appendStringToLog("========================================");
-
-        QMetaObject::invokeMethod(_progressBar, "setValue", Q_ARG(int, filesProcessed));
+        tasks << task;
     }
-
-    foreach (const ItemsList &items, allItemsHash)
-        qDeleteAll(items);
-    QMetaObject::invokeMethod(this, "scanFinished");
-}
-
-bool DupeScanDialog::shouldCheckItem(ItemInfo *item)
-{
-    // ignore tomes, keys and non-magical quivers
-    return !(ItemDataBase::isTomeWithScrolls(item) || item->itemType == "key" || ((item->itemType == "aqv" || item->itemType == "cqv") && item->quality < Enums::ItemQuality::Magic));
-}
-
-bool DupeScanDialog::areItemsSame(ItemInfo *a, ItemInfo *b)
-{
-    return a->isExtended && a->guid == b->guid && a->itemType == b->itemType;
+    _futureWatcher.setFuture(QtConcurrent::mapped(tasks, crossCompareItems));
 }

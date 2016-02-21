@@ -2,7 +2,9 @@
 #define DUPESCANDIALOG_H
 
 #include <QDialog>
-
+#include <QFutureWatcher>
+#include <QTime>
+#include "structs.h"
 
 class QLineEdit;
 class QTextEdit;
@@ -10,7 +12,8 @@ class QPushButton;
 class QCheckBox;
 class QProgressBar;
 
-class ItemInfo;
+typedef QHash<QString, ItemsList> ItemsHash;
+typedef ItemsHash::const_iterator ItemsHashIterator;
 
 class DupeScanDialog : public QDialog
 {
@@ -18,9 +21,12 @@ class DupeScanDialog : public QDialog
 
 public:
     DupeScanDialog(const QString &currentPath = QString(), QWidget *parent = 0);
-    virtual ~DupeScanDialog() {}
+    virtual ~DupeScanDialog();
 
     void logLoadingError(const QString &error, bool warn) { _loadingMessage = QString("<font color=%1>%2</font>").arg(warn ? "yellow" : "red", error); }
+
+public slots:
+    void done(int r);
 
 signals:
     void loadFile(const QString &file);
@@ -30,22 +36,22 @@ private slots:
     void scan();
     void scanFinished();
     void save();
-    void updateProgressbarForCrossCheck(int n);
+    void crossCheckResultReady(int i);
 
 private:
     QString _currentCharPath, _loadingMessage;
+    ItemsHash _allItemsHash;
+    QFutureWatcher<QString> _futureWatcher;
+    QTime _timeCounter;
+
     QLineEdit *_pathLineEdit;
     QTextEdit *_logBrowser;
     QPushButton *_saveButton;
-    QCheckBox *_dontWriteCheckBox;
+    QCheckBox *_skipEmptyCheckBox;
     QProgressBar *_progressBar;
 
-    void logDupedItemsInfo(ItemInfo *item1, ItemInfo *item2);
     void appendStringToLog(const QString &s);
     void scanCharactersInDir(const QString &path);
-
-    bool shouldCheckItem(ItemInfo *item);
-    bool areItemsSame(ItemInfo *a, ItemInfo *b);
 };
 
 #endif // DUPESCANDIALOG_H
