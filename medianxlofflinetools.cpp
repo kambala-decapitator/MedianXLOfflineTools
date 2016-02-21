@@ -48,12 +48,12 @@
 #include <QDebug>
 #endif
 
-#ifdef Q_OS_MAC
 #include <cfloat>
 #include <cmath>
 
+#ifdef Q_OS_MAC
 extern void qt_mac_set_dock_menu(QMenu *);
-#endif // Q_OS_MAC
+#endif
 
 //#define MAKE_HC
 //#define ENABLE_PERSONALIZE

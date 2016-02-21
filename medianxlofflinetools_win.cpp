@@ -85,6 +85,7 @@ void MedianXLOfflineTools::showFileAssocaitionUI()
 {
     FileAssociationManager::registerApplicationForExtension(kCharacterExtensionWithDot);
 
+#ifdef WIN_VISTA_OR_LATER
     IApplicationAssociationRegistrationUI *pAARUI;
     HRESULT hr = ::CoCreateInstance(CLSID_ApplicationAssociationRegistrationUI, NULL, CLSCTX_INPROC, IID_PPV_ARGS(&pAARUI));
     if (SUCCEEDED(hr))
@@ -95,6 +96,7 @@ void MedianXLOfflineTools::showFileAssocaitionUI()
     }
     else
         ERROR_BOX(QString("Error calling CoCreateInstance(CLSID_ApplicationAssociationRegistrationUI): %1").arg(HRESULT_CODE(hr)));
+#endif
 }
 
 
@@ -185,6 +187,8 @@ void MedianXLOfflineTools::removeFromWindowsRecentFiles(const QString &filePath)
 
         pADL->Release();
     }
+#else
+    Q_UNUSED(filePath);
 #endif
 }
 

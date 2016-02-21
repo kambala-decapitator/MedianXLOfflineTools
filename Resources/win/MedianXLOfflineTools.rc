@@ -35,7 +35,7 @@ END
 //
 
 // qmake wraps values in quotes correctly itself
-#ifdef BUILDING_FROM_PRO
+#if defined(BUILDING_FROM_PRO) && !defined(IS_QT5)
 #define quote(x) x
 #else
 #define quote2(x) #x

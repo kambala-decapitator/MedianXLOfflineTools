@@ -4,7 +4,7 @@
 #include <Shlobj.h>
 #include <sdkddkver.h>
 
-#if defined(NTDDI_VISTA) || defined(_WIN32_WINNT_VISTA)
+#if NTDDI_VERSION >= NTDDI_VISTA
 #  define WIN_VISTA_OR_LATER
 #  include <Shobjidl.h>
 

@@ -173,18 +173,19 @@ win32 {
 
     isEmpty(IS_RELEASE_BUILD) {
         DEFINES += _DEBUG
-
         OUT_FOLDER = debug
+
+        # create symbolic link to 'resources' folder in the folder of .exe
+        LINK_DST = $$OUT_PWD/$$OUT_FOLDER/resources
+        !exists($$LINK_DST) {
+            QMAKE_POST_LINK = mklink /D $$toNativeSeparators($$LINK_DST) $$toNativeSeparators($$_PRO_FILE_PWD_/resources)
+            QMAKE_POST_LINK += if %errorlevel%==9009 echo "mklink doesn't exist"
+        }
     }
     else {
         DEFINES += _USING_V110_SDK71_ # for WinXP support in MSVS2012
-
         OUT_FOLDER = release
     }
-
-    # create symbolic link to 'resources' folder in the folder of .exe
-    LINK_DST = $$OUT_PWD/$$OUT_FOLDER/resources
-    !exists($$LINK_DST): QMAKE_POST_LINK = mklink /D $$toNativeSeparators($$LINK_DST) $$toNativeSeparators($$_PRO_FILE_PWD_/resources)
 }
 
 macx {
