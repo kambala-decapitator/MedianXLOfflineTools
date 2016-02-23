@@ -81,9 +81,7 @@ private slots:
     void openRecentFile();
     void reloadCharacter(bool shouldNotify = true);
     void saveCharacter();
-#ifdef DUPE_CHECK
     void showDupeCheck();
-#endif
 
     // edit
     void statChanged(int newValue);

@@ -19,9 +19,7 @@
 #include "experienceindicatorgroupbox.h"
 #include "skilltreedialog.h"
 #include "allstatsdialog.h"
-#ifdef DUPE_CHECK
 #include "dupescandialog.h"
-#endif
 
 #include <QCloseEvent>
 #include <QDropEvent>
@@ -734,7 +732,6 @@ void MedianXLOfflineTools::saveCharacter()
         showErrorMessageBoxForFile(tr("Error creating file '%1'"), outputFile);
 }
 
-#ifdef DUPE_CHECK
 void MedianXLOfflineTools::showDupeCheck()
 {
     if (_itemsDialog)
@@ -749,7 +746,6 @@ void MedianXLOfflineTools::showDupeCheck()
 
     ui->actionOpenItemsAutomatically->setChecked(isOpenItemsOptionChecked);
 }
-#endif
 
 void MedianXLOfflineTools::statChanged(int newValue)
 {
