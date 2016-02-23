@@ -24,8 +24,10 @@ Application::Application(int &argc, char **argv) : QtSingleApplication(kAppName,
         _param = argv[1];
 #endif
     }
-    if (sendMessage(_param))
-        return;
+#ifndef DUPE_CHECK
+	if (sendMessage(_param))
+		return;
+#endif
 
     setOrganizationName("kambala");
     setApplicationName(kAppName);
@@ -66,8 +68,10 @@ void Application::createAndShowMainWindow()
 #endif
     _mainWindow->show();
 
+#ifndef DUPE_CHECK
     setActivationWindow(_mainWindow);
     connect(this, SIGNAL(messageReceived(const QString &)), SLOT(setParam(const QString &)));
+#endif
 }
 
 void Application::activateWindow()
