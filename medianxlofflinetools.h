@@ -14,9 +14,7 @@
 class ItemsViewerDialog;
 class FindItemsDialog;
 class ExperienceIndicatorGroupBox;
-#ifdef DUPE_CHECK
 class DupeScanDialog;
-#endif
 
 namespace Ui { class MedianXLOfflineToolsClass; }
 class QSpinBox;
@@ -131,9 +129,7 @@ private:
     QGroupBox *_questsGroupBox;
     QHash<int, QList<QCheckBox *> > _checkboxesQuestsHash;
     QActionGroup *_backupLimitsGroup, *_showDisenchantPreviewGroup;
-#ifdef DUPE_CHECK
     QPointer<DupeScanDialog> _dupeScanDialog;
-#endif
 
     // data
     QString _charPath;
