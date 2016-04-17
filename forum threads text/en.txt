@@ -1,63 +1,58 @@
-[size=1]Just in case, here's the Russian thread: http://worldofplayers.ru/threads/34489/[/size]
+[size=6]Just in case, here's the Russian thread: http://worldofplayers.ru/threads/34489/[/size]
 
 [size=18][color=#6666ff]This is [b][u]NOT[/u][/b] a cheating tool![/color][/size]
 
 As you can guess from the title, it's an almost complete offline analogue of grig's [url=http://grig.vlexofree.com/]Median XL Online Tools[/url], but with nice additions.
 
-Application should be able to load character from any version of Median XL and successfully perform basic operations with it like respeccing. Items processing relies on the mod source files, so it may not be compatible with any chacarcter from different version. This data is softcoded, so when a new mod version is released, usually there's no need to recompile the application — one just needs to replace the data found in 'resources/data' with the new one, which I will provide. Currently supported mod versions:
+Application should be able to load character from any version of Median XL and successfully perform basic operations with it like respeccing. Items processing relies on the mod source files, so it may not be compatible with any chacarcter from different version. This data is softcoded, so when a new mod version is released, usually there's no need to recompile the application - one just needs to replace the data found in 'resources/data' with the new one, which I will provide. Currently supported mod versions:
 [list][*]Median XL 2012 v005 (earlier versions should also work)
-[*]Ultimative XVc (v5+ characters should be compatible)
+[*]Ultimative XVI (v5+ characters should be compatible)
 [*]Kehjan Labyrinth + Tathamet vs Anu
-[*]Hardened
-[/list]
+[*]Hardened[/list]
 It's written in C++ using the [url=http://qt-project.org]Qt framework[/url] (v4.8.5 as of current release), so don't hope to dotnetreflect the source code (and it won't be released for obvious reasons).
 
 I hope I provided enough anti-hack protection for an average user. If you manage to successfully hack your character and save him using this application, please report it to me so that I could fix the exploit :)
 
-[spoiler="Main features"][list][*]Character:
+[b]Main features:[/b]
+[spoil][list][*]Character:
 [list][*]info with some hidden stats
 [*]respeccing
 [*]renaming
 [*]downleveling
 [*]waypoint activation
 [*]HC resurrection and conversion
-[*]links for [url=http://www.authmann.de/d2/mxl/skillpointplanner/]Skillpoint Planner[/url]
-[/list][*]Items:
+[*]links for [url=http://www.authmann.de/d2/mxl/skillpointplanner/]Skillpoint Planner[/url][/list][*]Items:
 [list][*]viewing all character/PlugY items and their properties (including hidden)
 [*]searching
 [*]sorting PlugY stashes
 [*]mass disenchant of uniques/sets with preview
 [*]mass upgrade of gems/runes
-[*]recovering missing Cube
-[/list][*]Selected item (context menu):
+[*]recovering missing Cube[/list][*]Selected item (context menu):
 [list][*]disenchanting into shards/signet
 [*]eating signets
 [*]removing all or specific Mystic Orbs (UMO not supported yet)
 [*]rune downgrading
 [*]deleting
-[*]collect/extract Shrines to/from Shrine Vessel (Ultimative only)
-[/list][*]OS-specific:
+[*]collect/extract Shrines to/from Shrine Vessel (Ultimative only)[/list][*]OS-specific:
 [list][*].d2s file association
 [*]recent files in Windows 7 taskbar / Mac OS X dock icon
 [*]drag'n'drop .d2s files on the application window, application shortcut and on the Windows 7 taskbar / Mac OS X dock icon
 [*]update check
-[*]single instance
-[/list][*]and many others ;)
-[/list][/spoiler]
+[*]single instance[/list][*]and many others ;)[/list][/spoil]
 
 [size=18][color=#6666ff]WARNING: by default you can open only characters from [b]Ultimative XVc[/b]. If you want to open characters from other mods/mod versions, please refer to the [b]Mod data[/b] download section.[/color][/size]
 
 [b]Downloads[/b]:
 [list][*][b]Application[/b]:
 [list][*][i]Windows[/i] (XP SP 2 and later): https://www.mediafire.com/?k47a3kbzd8444db
-[*][i]Mac OS X[/i] (10.5 and later, universal binary): https://www.mediafire.com/?qrdhz7cxdcju384
-[/list][*][b]Mod data[/b] (find installation instructions in Mini-FAQ below; you don't actually need to download these because both archives are included in the application distribution):
-[list][*][i]2012 v005 / Kehjan Labyrinth + Tathamet vs Anu / Hardened:[/i] http://www.mediafire.com/?4vkkq8jskza2btg
+[*][i]Mac OS X[/i] (10.5 and later, universal binary): https://www.mediafire.com/?qrdhz7cxdcju384[/list][*][b]Mod data[/b] (find installation instructions in Mini-FAQ below; XVI is NOT included in the application distribution):
+[list][*][i]Ultimative XVI:[/i] http://www.mediafire.com/download/ffdkkzz7be694f2/ultimativeXVI.zip
+[*][i]2012 v005 / Kehjan Labyrinth + Tathamet vs Anu / Hardened:[/i] http://www.mediafire.com/?4vkkq8jskza2btg
 [*][i]Ultimative XVc:[/i] https://www.mediafire.com/?do5byd95vbh2qp7
-[*][i]Ultimative XIVb:[/i] https://www.mediafire.com/?lhdj51e1ac3661f
-[/list][/list]
+[*][i]Ultimative XIVb:[/i] https://www.mediafire.com/?lhdj51e1ac3661f[/list][/list]
 
-[spoiler="Mini-FAQ"]Q: I can't unrar the distributed archive without errors :(
+[b]Mini-FAQ:[/b]
+[spoil]Q: I can't unrar the distributed archive without errors :(
 A: Use 7zip, Luke.
 
 Q: How to install mod data?
@@ -68,34 +63,36 @@ A: Restart the application after following actions if it's running.
 [*]long 'manual' answer: open unpacked folder, open 'resources' folder inside, Select All (Cmd+A), Copy (Cmd+C), locate MedianXLOfflineTools.app, right-click (or Control-click) it, select 'Show package contents', open Contents/Resources/data folder, Paste (Cmd+V) replacing everything
 [*]long 'terminal' answer: open Terminal, cd to where you unpacked mod data (this folder should contain unpacked 'resources' folder) and use the following shell script:
 [code]APP_PATH = "/Applications/MedianXLOfflineTools.app" # place the actual path inside double quotes, it's just an example
-cp -R resources/data/* "${APP_PATH}/Contents/resources/data"[/code]
-[/list][/list]
+cp -R resources/data/* "${APP_PATH}/Contents/resources/data"[/code][/list][/list]
 Q: I've fcked up my character and/or PlugY stash and neither the game nor this application can load it. How can I restore it from backup?
 A: Go to the save folder and look for file(s) called <chararcter>.<d2s or d2x>_<date>.bak and delete everything on the right up to d2s or d2x. If it's the shared stash you want to restore, then it's called _LOD<_HC for hardcore>_SharedStashSave.sss_<date>.bak and delete everything on the right up to sss.
 If you can't see file extension:
 [list][*]Windows Explorer: Folder Options - View - Scroll to the bottom - Uncheck 'Hide extensions...' - OK
 [*]Mac OS X Finder: Preferences - Last tab (Advanced or similar name) - Show all file name extensions[/list]
 Q: Application doesn't open; in the list of processes it appears just for a second and/or crash report is displayed.
-A: Probably the character you had loaded last time became broken. To make the application work again, simply double-click 'disable_auto_load' file (on Windows you also have to press 'Yes' after this): it disables loading last used character. If you want to enable this option again, open Options menu in the application and select the option.[/spoiler]
+A: Probably the character you had loaded last time became broken. To make the application work again, simply double-click 'disable_auto_load' file (on Windows you also have to press 'Yes' after this): it disables loading last used character. If you want to enable this option again, open Options menu in the application and select the option.[/spoil]
 
-[spoiler="Screenshots"]click to see in full size
-[URL=http://s1125.photobucket.com/user/kambala_decapitator/media/Median%20XL%20Offline%20Tools/main4.png.html][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_main4.png[/IMG][/URL][URL=http://s1125.photobucket.com/user/kambala_decapitator/media/Median%20XL%20Offline%20Tools/main_mac2.png.html][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_main_mac2.png[/IMG][/URL]
-[URL=http://s1125.photobucket.com/user/kambala_decapitator/media/Median%20XL%20Offline%20Tools/items2.png.html][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_items2.png[/IMG][/URL][URL=http://s1125.photobucket.com/user/kambala_decapitator/media/Median%20XL%20Offline%20Tools/items_plugy2.png.html][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_items_plugy2.png[/IMG][/URL]
+[b]Screenshots:[/b]
+[spoil]click to see in full size
+[url=http://s1125.photobucket.com/user/kambala_decapitator/media/Median%20XL%20Offline%20Tools/main4.png.html][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_main4.png[/img][/url][url=http://s1125.photobucket.com/user/kambala_decapitator/media/Median%20XL%20Offline%20Tools/main_mac2.png.html][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_main_mac2.png[/img][/url]
+[url=http://s1125.photobucket.com/user/kambala_decapitator/media/Median%20XL%20Offline%20Tools/items2.png.html][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_items2.png[/img][/url][url=http://s1125.photobucket.com/user/kambala_decapitator/media/Median%20XL%20Offline%20Tools/items_plugy2.png.html][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_items_plugy2.png[/img][/url]
 [url=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=classcharm.png][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_classcharm.png[/img][/url][url=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=props_all.png][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_props_all.png[/img][/url][url=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=props_item.png][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_props_item.png[/img][/url][url=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=props_rw.png][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_props_rw.png[/img][/url][url=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=props_sockets.png][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_props_sockets.png[/img][/url]
-[URL=http://s1125.photobucket.com/user/kambala_decapitator/media/Median%20XL%20Offline%20Tools/downgrade_rune.png.html][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_downgrade_rune.png[/IMG][/URL][url=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=item_menu1.png][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_item_menu1.png[/img][/url][url=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=removeMO.png][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_removeMO.png[/img][/url][URL=http://s1125.photobucket.com/user/kambala_decapitator/media/Median%20XL%20Offline%20Tools/eat_signet.png.html][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_eat_signet.png[/IMG][/URL]
-[URL=http://s1125.photobucket.com/user/kambala_decapitator/media/Median%20XL%20Offline%20Tools/sort.png.html][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_sort.png[/IMG][/URL][URL=http://s1125.photobucket.com/user/kambala_decapitator/media/Median%20XL%20Offline%20Tools/sort_help.png.html][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_sort_help.png[/IMG][/URL]
-[URL=http://s1125.photobucket.com/user/kambala_decapitator/media/Median%20XL%20Offline%20Tools/disenchant_preview.png.html][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_disenchant_preview.png[/IMG][/URL]
+[url=http://s1125.photobucket.com/user/kambala_decapitator/media/Median%20XL%20Offline%20Tools/downgrade_rune.png.html][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_downgrade_rune.png[/img][/url][url=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=item_menu1.png][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_item_menu1.png[/img][/url][url=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=removeMO.png][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_removeMO.png[/img][/url][url=http://s1125.photobucket.com/user/kambala_decapitator/media/Median%20XL%20Offline%20Tools/eat_signet.png.html][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_eat_signet.png[/img][/url]
+[url=http://s1125.photobucket.com/user/kambala_decapitator/media/Median%20XL%20Offline%20Tools/sort.png.html][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_sort.png[/img][/url][url=http://s1125.photobucket.com/user/kambala_decapitator/media/Median%20XL%20Offline%20Tools/sort_help.png.html][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_sort_help.png[/img][/url]
+[url=http://s1125.photobucket.com/user/kambala_decapitator/media/Median%20XL%20Offline%20Tools/disenchant_preview.png.html][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_disenchant_preview.png[/img][/url]
 [url=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=search.png][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_search.png[/img][/url][url=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=search_help.png][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_search_help.png[/img][/url]
 [url=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=skillplan1.png][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_skillplan1.png[/img][/url]
-[URL=http://s1125.photobucket.com/user/kambala_decapitator/media/Median%20XL%20Offline%20Tools/skill_tree.png.html][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_skill_tree.png[/IMG][/URL][URL=http://s1125.photobucket.com/user/kambala_decapitator/media/Median%20XL%20Offline%20Tools/all_stats.png.html][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_all_stats.png[/IMG][/URL]
-[url=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=recent_win.png][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_recent_win.png[/img][/url][url=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=recent_mac.png][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_recent_mac.png[/img][/url][/spoiler]
+[url=http://s1125.photobucket.com/user/kambala_decapitator/media/Median%20XL%20Offline%20Tools/skill_tree.png.html][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_skill_tree.png[/img][/url][url=http://s1125.photobucket.com/user/kambala_decapitator/media/Median%20XL%20Offline%20Tools/all_stats.png.html][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_all_stats.png[/img][/url]
+[url=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=recent_win.png][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_recent_win.png[/img][/url][url=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=recent_mac.png][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_recent_mac.png[/img][/url][/spoil]
 
 
 [b]Changelog[/b]:
 
 [i]v0.4.2.1 (06.03.2015)[/i]
 [list][f] one must never forget De Morgan's laws
-[/list][spoiler="older versions"][i]v0.4.2 (23.02.2015)[/i]
+[/list]
+Older versions:
+[spoil][i]v0.4.2 (23.02.2015)[/i]
 [list][+] Ultimative XV support (support for arbitrary character skill number actually)
 [+] Shrine Vessel management (collect/extract Shrines)
 [/list]
@@ -277,9 +274,7 @@ A: Probably the character you had loaded last time became broken. To make the ap
 [*]creation of plugy stashes
 [*]affix rlvl and names
 [*]nice display of property 'Adds x-y ... damage'
-[*]unsocket items
-[/list][/spoiler]
-
+[*]unsocket items[/list][/spoil]
 
 [b]Credits[/b]:
 [list][*][i]BrotherLaz[/i] for this awesome mod
@@ -288,5 +283,4 @@ A: Probably the character you had loaded last time became broken. To make the ap
 [*][i][url=http://d2mods.info/index.php?ind=reviews&op=section_view&idev=4]Phrozen Keep File Guides[/url][/i] for tons of useful information on txt sources
 [*][i]aahz[/i] for providing space on MXL server
 [*][i]whist[/i] for helping with txt magic and D2 internals
-[*][i]community members[/i] (find full list in the app) for intensive testing and tips on GUI & functionality
-[/list]
+[*][i]community members[/i] (find full list in the app) for intensive testing and tips on GUI & functionality[/list]

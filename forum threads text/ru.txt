@@ -1,4 +1,4 @@
-[B]Тема на официальном форуме Медиана[/B]: [URL]http://www.medianxl.com/t83-median-xl-offline-tools[/URL]
+[B]Тема на официальном форуме Медиана[/B]: [URL]http://forum.median-xl.com/viewtopic.php?f=40&t=342[/URL]
 
 [SIZE=4][COLOR=#6666ff]Это [B][U]НЕ[/U][/B] читерская программа![/COLOR][/SIZE]
 
@@ -7,7 +7,7 @@
 Приложение должно грузить персонажа из любой версии Median XL и успешно выполнять над ним базовые операции типа сброса атрибутов/навыков. Обработка предметов полагается на исходники мода, а потому может быть несовместима с персонажем из другой версии. Эти данные не зашиты в программу, потому когда выйдет новая версия мода, программу не нужно перекомпилировать — обычно достаточно просто заменить файлы в 'resources/data' новыми, которые я выложу. Текущие поддерживаемые версии:
 [LIST]
 [*]Median XL 2012 v005 (более ранние версии тоже должны работать)
-[*]Ultimative XVc (персонажи из v5+ должны быть совместимыми)
+[*]Ultimative XVI (персонажи из v5+ должны быть совместимыми)
 [*]Kehjan Labyrinth + Tathamet vs Anu [Лабиринт Кейджан + Тафамет против Ану]
 [*]Hardened
 [/LIST]
@@ -65,8 +65,9 @@
  [*][I]Windows[/I] (XP SP 2 и позже): [URL]https://www.mediafire.com/?k47a3kbzd8444db[/URL]
  [*][I]Mac OS X[/I] (10.5 и позже, универсальное приложение): [URL]https://www.mediafire.com/?qrdhz7cxdcju384[/URL]
 [/LIST]
-[*][B]Данные модов[/B] (инструкции по установке находятся ниже в Mini-FAQ; вообще, вам не нужно загружать эти архивы, потому что они уже включены в архив приложения):
+[*][B]Данные модов[/B] (инструкции по установке находятся ниже в Mini-FAQ; данные XVI НЕ включены в архив приложения):
 [LIST]
+ [*][i]Ultimative XVI:[/i] [URL]http://www.mediafire.com/download/ffdkkzz7be694f2/ultimativeXVI.zip[/URL]
  [*][I]2012 v005 / Лабиринт Кейджан + Тафамет против Ану / Hardened:[/I] [URL]http://www.mediafire.com/?4vkkq8jskza2btg[/URL]
  [*][i]Ultimative XVc:[/i] [URL]https://www.mediafire.com/?do5byd95vbh2qp7[/URL]
  [*][I]Ultimative XIVb:[/I] [URL]https://www.mediafire.com/?lhdj51e1ac3661f[/URL]
