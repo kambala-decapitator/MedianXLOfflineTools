@@ -1,7 +1,7 @@
 #!/usr/bin/env perl
 
 # original script copyright (C) grig 2011
-# improvements and modifications for Median XL Offline Tools copyright (C) kambala 2011-2015
+# improvements and modifications for Median XL Offline Tools copyright (C) kambala 2011-2016
 
 use strict;
 use warnings;
@@ -114,7 +114,7 @@ sub statIdsFromPropertyStat
     return join(',', @ids)
 }
 
-my $uniques = parsetxt("uniqueitems.txt", _autoindex=>0, iName=>0, rlvl=>7, image=>23);
+my $uniques = parsetxt("uniqueitems.txt", _autoindex=>0, iName=>0, rlvl=>7, image=>24);
 &tblExpandArray($uniques, "iName");
 
 # any fixed property in .txt is defined with the following set of columns
@@ -239,12 +239,18 @@ my $monstats = parsetxt("monstats.txt", _autoindex=>"0", $nameStr=>5);
 
 # RW
 # dummy key $itemName is used when writing to file
-my %rwKeysHash = ($itemName => undef, rune1 => 16, rune2 => 17);
-$rwKeysHash{"itype$_"} = $_ + 5 for (1..6);
-my $rw = parsetxt("runes.txt", "#_tbl" => 0, '!_enabled' => {col => 2, val => $zeroRe},
+my %rwKeysHash = ($itemName => undef, itype1 => 1, rune1 => 16, rune2 => 17);
+$rwKeysHash{"itype$_"} = $_ + 5 for (2..6);
+my $rw = parsetxt("runes.txt", _autoindex => 0, tbl => 0, '!_enabled' => {col => 3, val => $zeroRe},
                   '!_rune' => {col => 16, val => qr/^jew$/}, %rwKeysHash);
-$rw->{'09This'} = {itype1 => 'weap', itype2 => 'armo', rune1 => 'jew'}; # yeah, it's a hack (jewelword)
-&tblExpandHash($rw, $itemName);
+push(@$rw, {tbl => '09This', itype1 => 'weap', itype2 => 'armo', rune1 => 'jew'}); # yeah, it's a hack (jewelword)
+# fake hash to collect names from tbl
+my $fakeRwHash;
+foreach my $elem (@$rw)
+{
+    $fakeRwHash->{$elem->{tbl}} = {} if defined $elem
+}
+&tblExpandHash($fakeRwHash, $itemName);
 
 # skip lines that don't start with 'xsignet' at col 33 (AH in Excel) and are not for honorific/crafted recipe
 # 'value' field will contain either property value (including oskill level) or chance in ctc
@@ -461,9 +467,14 @@ close $out;
 my @rwKeys = sort keys %rwKeysHash;
 open $out, ">", "$prefix/rw.txt";
 print $out "#".join("\t", @rwKeys)."\n";
-for my $key (keys %$rw)
+foreach my $elem (@$rw)
 {
-    print $out ($rw->{$key}->{$_} // '')."\t" for (@rwKeys);
+    next unless defined $elem;
+    for (@rwKeys)
+    {
+        my $s = $_ eq $itemName ? $fakeRwHash->{$elem->{tbl}}->{$itemName} : $elem->{$_};
+        print $out ($s // '')."\t"
+    }
     print $out "\n"
 }
 close $out;

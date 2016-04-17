@@ -1,567 +1,717 @@
 #itype1	itype2	itype3	itype4	itype5	itype6	name	rune1	rune2
-weap						Gemword!	gsv		
-glov						Mercy	r13		
-weap						Gemword!	gsr		
-tors						Dragonheart	r41		
-shld						Nomad	r20		
-head						Wyrm	r51		
-armo						Gemword!	gcw		
-shie	shld					Gemword!	9$a		
-shie	shld					Gemword!	glg		
-pelt						Aegipan	r09		
-tkni						Dajjal	r20		
-tors						Cathedral	r25		
-weap						Gemword!	gsg		
-weap						Gemword!	gpg		
+weap						Dawn	r01		
+weap						Shark	r07		
+weap						Enyo	r14		
+weap						Azrael	r21		
+weap						Void	r28		
+weap						Oblivion	r35		
+weap						Berith	r42		
+weap						Gehenna	r47		
+weap						Triune	r53		
+bow						Banshee	r03		
+bow						Shockwave	r12		
+bow						Balance	r22		
+bow						Hive	r30		
+bow						Phantom	r39		
+bow						Curse	r48		
+bow						Typhaon	r52		
+xbow						Thammuz	r04		
+xbow						Python	r16		
+xbow						Cyclops	r29		
+xbow						Tartarus	r44		
+xbow						Araboth	r45		
+knif						King's Blood	r26		
+scyh						Endor	r31		
+swor						Urada	r46		
+axe						Sabertooth	r48		
+scyh						Seed of Conflict	r49		
+spea						Myrmidon	r29		
+mace						Demhe	r33		
+hamm						Calypso	r37		
+staf						Pax Mystica	r04		
+staf						Hadad	r11		
+staf						Summanus	r19		
+staf						Akhenaten	r27		
+staf						Aes Dana	r36		
+staf						Elverfolk	r44		
+staf						Erilaz	r51		
+scep						Prophecy	r06		
+scep						Bane	r17		
+scep						Judas	r22		
+scep						Path	r30		
+scep						Gabriel	r40		
+scep						Durga	r49		
+scep						Galdr	r51		
+aspe						Aegina	r11		
+aspe						Sankara	r34		
+aspe						Rusalka	r46		
+aspe						Evanescence	r51		
+ajav						Scar	r16		
+ajav						Dragonfly	r26		
+ajav						Trishula	r34		
+ajav						Stalactite	r52		
+abow						Corsair	r15		
+abow						Ice Breaker	r29		
+abow						Colliding Worlds	r43		
+abow						Manta	r51		
+h2h						Shedim	r02		
+h2h						Fiend	r17		
+h2h						Judge	r27		
+h2h						Choronzon	r34		
+h2h						Anarchy	r46		
+h2h						Hail	r48		
+h2h						Nahemah	r52		
+nagi						Khattak	r08		
+nagi						Hieros Gamos	r46		
+nagi						Lataif-as-Sitta	r52		
+bswd	baxe					Ram	r10		
+bswd	baxe					Essus	r22		
+bswd	baxe					Thunderbird	r32		
+bswd	baxe					Savitr	r37		
+bswd	baxe					Khan	r43		
+bswd	baxe					Lahmu	r49		
+bswd	baxe					Kahless	r51		
+dbow						Peacock	r13		
+dbow						Lynx	r27		
+dbow						Sylvanshine	r33		
+dbow						Cernunnos	r44		
+dbow						Raudna	r51		
+dstf						Ocean	r05		
+dstf						Samhain	r12		
+dstf						Augur	r20		
+dstf						Lincos	r29		
+dstf						Laadan	r37		
+dstf						Lojban	r45		
+dstf						Loxian	r52		
+nscy						Black Cat	r02		
+nscy						Mantra	r13		
+nscy						Chthon	r29		
+nscy						Inti	r41		
+nscy						Leviathan	r51		
+nknf						Loa	r05		
+nknf						Jinx	r13		
+nknf						Misery	r23		
+nknf						Seid	r36		
+nknf						Roc	r51		
+nstf						Deep Water	r06		
+nstf						Ladon	r25		
+nstf						Hali	r38		
+nstf						Dagda	r49		
+nstf						Santa Compana	r52		
+wand						Koan	r09		
+wand						Ghoul	r20		
+wand						Dead Ringer	r39		
+wand						Ngozi	r41		
+wand						Semhazai	r51		
+nxbw						Genie	r08		
+nxbw						Atlantis	r19		
+nxbw						Aether	r31		
+nxbw						Crucible	r46		
+nxbw						Kronos	r51		
+pclb	pmac	pham				Jihad	r05		
+pclb	pmac	pham				Intifada	r15		
+pclb	pmac	pham				Lammasu	r25		
+pclb	pmac	pham				Brahman	r39		
+pclb	pmac	pham				Oriflamme	r51		
+pspe						Ensi	r12		
+pspe						Nehushtan	r27		
+pspe						Taqiyya	r40		
+pspe						Orisha	r48		
+pspe						Rex Deus	r52		
+orb						Circe	r11		
+orb						Ker	r20		
+orb						Kabbalah	r36		
+orb						Hestia	r50		
+orb						Kallisti	r51		
+scrd						Inanna	r12		
+scrd						Grace	r36		
+scrd						Khany	r50		
+scrd						Shaula	r52		
+tors						Rebel	r01		
+tors						Lumen Arcana	r06		
 tors						(Median XL - 6 years)\nVictory	r13		
 tors						Thelema	r19		
-scep						Gabriel	r40		
-weap						Gemword!	gsb		
-azhm						StataMater	r16		
-armo						Gemword!	gsw		
-shld						Khalim's Protector	r60	r60	
-weap						Enyo	r14		
-mace						Demhe	r33		
-shie	shld					Gemword!	7$c		
-shie	shld					Gemword!	gcw		
-phlm						Wodziwob	r53		
-belt						Pulsa Dinura	r34		
-staf						Ljosalf	r30		
-belt						Nero	r55		
-ashd						Myrrhbearer	r55		
-spea						Myrmidon	r29		
-nknf						Mkodos	r56		
-stor						Oracle	r40		
-tkni						Burlesque	r51		
-azsd						Eos	r54		
-shie	shld					Gemword!	9$e		
-armo						Gemword!	gpv		
-ishd						Scorched Earth	r51		
-dstf						Hermanubis	r56		
-shie	shld					Gemword!	gpg		
-h2h						Choronzon	r34		
-glov						Kali	r21		
-armo						Gemword!	gfg		
-shie	shld					Gemword!	5$b		
-head						Nahual	r36		
-shie	shld					Gemword!	gpy		
-shie	shld					Gemword!	gsw		
-armo						Gemword!	gcg		
-weap						Gemword!	g$e		
-stor						Curandera	r29		
-azsd						Eloi	r42		
-ishd						Orchid	r55		
-armo						Gemword!	gcv		
-glov						Icarus	r49		
-tors						Pygmalion	r52	r52	
-boot						Hibagon	r53		
-aspe						Aegina	r11		
-weap						Gehenna	r47		
-bow						Banshee	r03		
-stor						Demeter	r23		
-jave						Raid	r10		
-scep						Oris' Herald	r59	r59	
-taxe						Raptor	r40		
-weap						Gemword!	yo4		
-shld						Geas	r04		
-hamm						Calypso	r37		
-nxbw						Genie	r08		
-armo						Gemword!	gsb		
-pelt						Grove	r45		
-shie	shld					Gemword!	9$d		
-helm						Ra	r17		
-nstf						Ladon	r25		
-knif						Rattus	r37		
-ajav						Specter	r56		
-weap						Gemword!	gsy		
-pelt						Nigra	r56		
-shld						Derweze	r56		
-h2h						Fiend	r17		
-staf						Erilaz	r51		
-head						Cube	r16		
-azsd						Edda	r15		
-nscy						Inti	r41		
-pzhm						Battle Rage	r58	r58	
-bswd	baxe					El'druin	r62	r62	
-shie	shld					Gemword!	5$d		
-head						Hecatomb	r55		
-shie	shld					Gemword!	7$b		
-shld						Pharaoh	r12		
-tkni						Naiad	r49		
-knif						Malicicle	r62	r62	
-armo						Gemword!	5$a		
-shie	shld					Gemword!	yo4		
-armo						Gemword!	glg		
-shie	shld					Gemword!	gfg		
-armo						Gemword!	gpg		
-shie	shld					Gemword!	gcy		
-weap						Gemword!	skc		
-hamm						Neurogenesis	r61	r61	
-armo						Gemword!	7$e		
-wand						Ngozi	r41		
-circ						Indigo	r56		
-basd						Gauntlet	r39		
-pclb	pmac	pham				Skilt en Vriend	r55		
-tors						Hellfire Plate	r57	r57	
-weap						Gemword!	gcb		
-bswd	baxe					Khan	r43		
-axe						Midas' Touch	r59	r59	
-armo						Gemword!	yo3		
-glov						Drekavac	r51		
-shie	shld					Gemword!	5$a		
-armo						Gemword!	gpr		
-head						Quimbanda	r47		
-scep						Judas	r22		
-shie	shld					Gemword!	7$e		
-stor						Kundalini	r12		
-azhm						Bona Dea	r19		
-wand						Dead Ringer	r39		
-boot						Wind Runner	r58	r58	
-azsd						Heart of Skovos	r58	r58	
-dstf						Lojban	r45		
-armo						Gemword!	gfb		
-armo						Gemword!	9$e		
-pclb	pmac	pham				Quaoar	r29		
-weap						Gemword!	5$e		
-glov						Snowsquall	r54		
-h2h						Judge	r27		
-basd						Tonatiuh	r55		
-shie	shld					Gemword!	7$d		
-armo						Gemword!	yo2		
-aspe						Freybug	r56		
-jave						Hastata	r20		
-tors						Linga Sharira	r55		
-circ						Rathma's Blessing	r62	r62	
-ishd						Afrit	r13		
-armo						Gemword!	gpb		
-azhm						Unicorn	r52		
-pelt						Norma	r38		
-ishd						Rahab	r19		
-scyh						Solarion	r60	r60	
-weap						Gemword!	yo3		
-scyh						Atlacamani	r37		
-xbow						Tynged	r41		
-orb						Gravastar	r29		
-helm						Cannonball	r08		
-stor						Astarte	r34		
-weap						Gemword!	gfv		
-helm						Summit	r01		
-h2h						Joker	r55		
-weap	armo					Secret Jewel Bonus!	jew		
-ashd						Asclepion	r46		
-phlm						Morthwyrtha	r43		
-dbow						Amphibian	r62	r62	
-nknf						Roc	r51		
-pspe						Ensi	r12		
-ashd						Zohar	r33		
-nknf						Misery	r23		
-weap						Gemword!	gfb		
-pclb	pmac	pham				Intifada	r15		
-belt						Dyaus Pita	r50		
-nscy						Bartuc's Eye	r58	r58	
-weap						Gemword!	5$d		
-armo						Gemword!	yo4		
-pspe						Jaguar	r55		
-belt						Fuse	r23		
-shie	shld					Gemword!	gfv		
-weap						Triune	r53		
-phlm						Fawkes	r33		
-head						Twisted Mind	r59	r59	
-orb						Kallisti	r51		
-abow						Arnazeus Pinnacle	r57	r57	
-armo						Gemword!	gcy		
-dstf						Loxian	r52		
-dstf						Laadan	r37		
-xbow						Faseroptic	r61	r61	
-tors						Unity	r52		
-weap						Shattered Stone	r58	r58	
-boot						Riptide	r56		
-aspe						Flame	r58	r58	
-armo						Gemword!	gsy		
-swor						Minefield	r57	r57	
-shie	shld					Gemword!	glr		
-shie	shld					Gemword!	skz		
-ajav						Askari Device	r57	r57	
-nagi						Hieros Gamos	r46		
-boot						Outlaw	r14		
-h2h						Anarchy	r46		
-scrd						Shaula	r52		
-pclb	pmac	pham				Lammasu	r25		
-shie	shld					Gemword!	gsv		
-bswd	baxe					Thunderbird	r32		
-shie	shld					Gemword!	yo1		
-wand						Semhazai	r51		
-pelt						Nature's Grace	r60	r60	
-tkni						Myriad	r40		
-jave						Fleshbane	r60	r60	
-armo						Gemword!	gsr		
-staf						Kyrie	r51	r51	
-shie	shld					Gemword!	gcr		
-shie	shld					Gemword!	5$c		
-weap						Void	r28		
-weap						Gemword!	gpv		
-basd						Triune's Blessing	r60	r60	
-weap						Gemword!	g$d		
-belt						Truce	r42		
-weap						Gemword!	5$c		
-h2h						Riot	r22		
-nagi						Shamo	r16		
-scep						Durga	r49		
-weap						Shark	r07		
-nscy						Leviathan	r51		
-bow						Typhaon	r52		
-dstf						Ocean	r05		
-circ						Sphinx	r11		
-weap						Gemword!	gcv		
-circ						Wintermute	r53		
-jave						Haste	r30		
-boot						Megalith	r40		
-taxe						Fennec	r20		
-nscy						Lemuria	r20		
-armo						Gemword!	5$c		
-armo						Gemword!	glb		
-pelt						Slyph	r52		
-tkni						Chrysopelea	r10		
-weap						Gemword!	g$a		
-head						Lorelei	r38		
-nknf						Cut	r58	r58	
-pspe						Taqiyya	r40		
-xbow						Tartarus	r44		
-2hbx						Wolfsangel	r56		
-wand						Krypteia	r55		
-nxbw						Crucible	r46		
-scep						Jokulmorder	r36		
-orb						Sauron	r55		
-shie	shld					Gemword!	gcg		
-bswd	baxe					Savitr	r37		
-circ						Lily	r31		
-armo						Gemword!	7$b		
-nknf						Jinx	r13		
-staf						Elverfolk	r44		
-xbow						Tombstone	r55		
-abow						Cecaelia	r56		
-shld						Avatar	r53		
-taxe						Manitou	r30		
-aspe						Rusalka	r46		
-ashd						Lightwell	r57	r57	
-shie	shld					Gemword!	g$d		
-bow						Dead Man's Breath	r62	r62	
-armo						Gemword!	7$c		
-helm						Dreadlord	r35		
-shie	shld					Gemword!	gcv		
-nknf						Loa	r05		
-dstf						Lincos	r29		
-ashd						Amaymon	r51		
-boot						Craton	r32		
-armo						Gemword!	yo1		
-azsd						Nix	r48		
-weap						Gemword!	9$b		
-dstf						Fiacla-Gear's Weathervane	r61	r61	
-scrd						Brocken	r24		
-staf						Pax Mystica	r04		
-weap						Gemword!	7$e		
-axe						Instinct	r27		
-boot						Ginfaxi	r22		
-stor						Space Dementia	r61	r61	
-shie	shld					Gemword!	g$c		
-shie	shld					Gemword!	g$e		
-armo						Gemword!	g$d		
-nstf						Santa Compana	r52		
-belt						Rainbow	r05		
-weap						Gemword!	gpy		
-mace						Arachnophilia	r60	r60	
-scyh						Seed of Conflict	r49		
-armo						Gemword!	5$e		
-pspe						Nehushtan	r27		
-orb						Helgrotha	r60	r60	
-tors						Rebel	r01		
-nscy						Chthon	r29		
-basd						Huracan	r44		
-azhm						Cambion	r36		
-shld						Kodo	r40		
-weap						Gemword!	skl		
-nscy						Eventide	r36		
-nstf						Deep Water	r06		
-shie	shld					Gemword!	gsr		
-abow						Aspect	r13		
-bswd	baxe					Gilgamesh	r55		
-dbow						Tarqeq	r38		
-shie	shld					Gemword!	g$b		
-h2h						Nahemah	r52		
-bow						Amok	r09		
-basd						E-Engur-A	r52		
-bow						Nyx	r26		
-knif						King's Blood	r26		
-pspe						Hadriel's Protector	r60	r60	
-bswd	baxe					Gharaniq	r33		
-pclb	pmac	pham				Oriflamme	r51		
-armo						Gemword!	sku		
-armo						Gemword!	5$d		
-dbow						Sylvanshine	r33		
-helm						Alchemy	r26		
-weap						Gemword!	9$c		
-phlm						Sagarmatha	r36		
-glov						Brawl	r16		
-armo						Gemword!	9$c		
-weap						Gemword!	glb		
-stor						Comaetho	r50		
-armo						Gemword!	skz		
-shie	shld					Gemword!	gpv		
-tors						Lumen Arcana	r06		
-orb						Kabbalah	r36		
-dbow						Lynx	r27		
-phlm						Force Shock	r61	r61	
-taxe						Thundercloud	r51		
-armo						Gemword!	g$b		
-jave						Hastin	r55		
-weap						Gemword!	gly		
-xbow						Thammuz	r04		
-weap						Gemword!	7$c		
-weap						Berith	r42		
-weap						Gemword!	gpr		
-helm	shld					Checkmate	r55	r55	
-armo						Gemword!	9$b		
-weap						Gemword!	skf		
-shie	shld					Gemword!	gfw		
-nagi						Khattak	r08		
-shie	shld					Gemword!	skf		
-pzhm						Rotundjere	r54		
-weap						Gemword!	gfy		
-basd						Warpath	r27		
-shie	shld					Gemword!	sku		
-jave						Hastilude	r40		
-phlm						Greisen	r54		
-wand						Ghoul	r20		
-armo						Gemword!	glw		
-scrd						Grace	r36		
-azhm						Amaterasu	r24		
-bow						Balance	r22		
-pspe						Orisha	r48		
-boot						Nephilim	r48		
-nknf						Seid	r36		
-weap						Gemword!	7$b		
-bswd	baxe					Ram	r10		
-shie	shld					Gemword!	yo5		
-armo						Gemword!	gcb		
-shld						Goddess	r30		
-swor						Urada	r46		
-ajav						Stalactite	r52		
-tkni						Quantum	r30		
-circ						Eulenspiegel	r38		
-weap						Gemword!	yo5		
-armo						Gemword!	skc		
-2hbx						Soldier of Light	r61	r61	
-tors						Thanks everyone!\nMedian 2005-2012\nEternal	r51	r52	
-spea						Asymptomatic	r60	r60	
-shie	shld					Gemword!	gsg		
-bow						Shockwave	r12		
-tors						Erawan	r48		
-armo						Gemword!	glr		
-nscy						Black Cat	r02		
-phlm						Algiz	r09		
-bswd	baxe					Skarn	r40		
-xbow						Python	r16		
-glov	boot					Knave	r54	r54	
-shie	shld					Gemword!	gzv		
-wand						Koan	r09		
-nxbw						Rhea	r56		
-nagi						Blooddancer	r59	r59	
-armo						Gemword!	gpy		
-pzhm						Malakbel	r53		
-nxbw						Force of Mind	r59	r59	
-bswd	baxe					Anak	r41		
-axe						Sabertooth	r48		
-pzhm						Ilmatar	r10		
-dbow						Cernunnos	r44		
-armo						Gemword!	gly		
-nstf						Hali	r38		
+tors						Cathedral	r25		
 tors						Mirage	r33		
-pzhm						Hierodule	r25		
-ajav						Trishula	r34		
-shie	shld					Gemword!	9$c		
-nstf						Eurynome	r17		
-scep						Bane	r17		
-glov						Iblis	r04		
-belt						Lysra	r57	r57	
-orb						Hestia	r50		
-scep						Prophecy	r06		
-shie	shld					Gemword!	gsy		
-shie	shld					Gemword!	skl		
-bswd	baxe					Lahmu	r49		
-ajav						Scar	r16		
-shld						Wall of Fire	r50		
-shie	shld					Gemword!	gfr		
-staf						Aes Dana	r36		
-pelt						Nezha	r18		
-weap						Archangel	r53	r53	
-ashd						Asmodai	r14		
-armo						Gemword!	skf		
-abow						Eris	r37		
-weap						Gemword!	gfw		
-armo						Gemword!	gsg		
-weap						Gemword!	gpb		
-bswd	baxe					Kahless	r51		
-azsd						Lion	r35		
-weap						Gemword!	gcr		
-boot						Epicenter	r06		
-pclb	pmac	pham				Brahman	r39		
-scrd						Inanna	r12		
-bow						Stardust	r55		
-abow						Ice Breaker	r29		
-scrd						Dark Exile	r62	r62	
-azhm						Siegfried	r31		
-pelt						Natha	r28		
-dbow						Raudna	r51		
-weap						Gemword!	gsw		
-aspe						Evanescence	r51		
-weap						Gemword!	glw		
-nscy						Mantra	r13		
-shie	shld					Gemword!	yo3		
-weap						Gemword!	gpw		
-weap						Gemword!	skz		
-xbow						Araboth	r45		
-glov						Skald	r41		
-weap						Gemword!	gfr		
-armo						Gemword!	gzv		
-armo						Gemword!	gcr		
-weap						Dawn	r01		
-nxbw						Kronos	r51		
-shie	shld					Gemword!	7$a		
-armo						Gemword!	gfr		
-helm						Thundercap	r61	r61	
-weap						Gemword!	5$b		
-weap						Gemword!	yo1		
-pclb	pmac	pham				Jihad	r05		
-glov						Aiwass	r33		
-glov						Retribution	r57	r57	
-azhm						Shaheeda	r56		
-helm						Amanita	r55		
-nxbw						Atlantis	r19		
-shie	shld					Gemword!	gcb		
-weap						Gemword!	yo2		
-weap						Azrael	r21		
-staf						Summanus	r19		
-aspe						Sankara	r34		
-staf						Hand of Frost	r62	r62	
-taxe						Dragon Seed	r58	r58	
-shie	shld					Gemword!	5$e		
-nagi						Oniwaka	r56		
-shie	shld					Gemword!	gly		
-staf						Zodiac	r55		
-armo						Gemword!	gpw		
-pspe						Rex Deus	r52		
-weap						Gemword!	glr		
-pspe						Resheph	r32		
-weap						Gemword!	sku		
-scep						Galdr	r51		
-bow						Hornet	r17		
-armo						Gemword!	g$e		
-ajav						Dragonfly	r26		
-armo						Gemword!	yo5		
-bswd	baxe					Essus	r22		
-stor						Vanity	r47		
+tors						Dragonheart	r41		
+tors						Erawan	r48		
+tors						Unity	r52		
+helm						Summit	r01		
+helm						Cannonball	r08		
+helm						Ra	r17		
+helm						Alchemy	r26		
+helm						Dreadlord	r35		
 helm						Cauldron	r44		
-weap						Adramelech	r54		
-h2h						Perfection	r59	r59	
-armo						Gemword!	5$b		
-scrd						Khany	r50		
-belt						Ahriman	r52		
-ishd						Iambe	r23		
-weap						Gemword!	9$a		
-orb						Ker	r20		
-basd						Enmerkar	r17		
-nstf						Xazax	r57	r57	
-armo						Gemword!	gfw		
-nstf						Dagda	r49		
-armo						Gemword!	7$d		
-weap						Gemword!	gzv		
-weap						Gemword!	glg		
-shie	shld					Gemword!	gfy		
-armo						Gemword!	g$c		
-belt						Prodigy	r15		
-taxe						Cheetah	r02		
-dbow						Peacock	r13		
-shie	shld					Gemword!	gpw		
-tkni						Patriot	r02		
-armo						Gemword!	g$a		
-weap						Gemword!	g$b		
-ajav						Herfjotur	r41		
-scep						Apostasy	r56		
-pzhm						Surya	r46		
-azsd						Ea	r52		
-azhm						Lohengrin	r42		
-abow						Corsair	r15		
-nscy						Tzeentch	r56		
-shie	shld					Gemword!	gfb		
-scep						Path	r30		
-scrd						Sway of the Stars	r55		
-weap						Gemword!	7$a		
-h2h						Shedim	r02		
-tors						\red;Natasha's Legacy\blue;	r98	r98	
-ishd						Ligeia	r28		
-weap						Gemword!	9$e		
-weap						Oblivion	r35		
-phlm						Ekam	r27		
-dstf						Samhain	r12		
-phlm						Nasrudin	r19		
-shie	shld					Gemword!	glb		
-aspe						Titanomachia	r24		
-stor						Cassilda	r54		
-ishd						Shadowsteps	r59	r59	
-orb						Vertigo	r22		
-azhm						Eaglehorn Mask	r59	r59	
-dbow						Dirge	r56		
-abow						Colliding Worlds	r43		
-staf						Hadad	r11		
-dstf						Augur	r20		
-nxbw						Aether	r31		
-h2h						Carabosse	r15		
-pclb	pmac	pham				Takfir	r34		
-tkni						Tau	r55		
-shie	shld					Gemword!	gsb		
 helm						Eidolon	r51		
-weap						Gemword!	gcg		
-armo						Gemword!	9$d		
-orb						Circe	r11		
-armo						Gemword!	7$a		
-h2h						Hail	r48		
-stor						Venefica	r53		
-nagi						Lataif-as-Sitta	r52		
-armo						Gemword!	gfy		
-pclb	pham	pmac				Judgement	r57	r57	
-scyh						Endor	r31		
-weap						Gemword!	gfg		
-weap						Gemword!	gcw		
-bow						Hive	r30		
-shie	shld					Gemword!	9$b		
-shie	shld					Gemword!	skc		
-taxe						Kodiak	r55		
-weap						Gemword!	g$c		
-ashd						Sangreal	r28		
-shie	shld					Gemword!	gpb		
-tkni						Dead Star	r60	r60	
-weap						Gemword!	9$d		
-stor						Lyrannikin	r11		
-shie	shld					Gemword!	g$a		
+circ						Sphinx	r11		
+circ						Lily	r31		
+circ						Eulenspiegel	r38		
+circ						Wintermute	r53		
+shld						Geas	r04		
+shld						Pharaoh	r12		
+shld						Nomad	r20		
+shld						Goddess	r30		
+shld						Kodo	r40		
+shld						Wall of Fire	r50		
+shld						Avatar	r53		
+glov						Iblis	r04		
+glov						Mercy	r13		
+glov						Kali	r21		
+glov						Aiwass	r33		
+glov						Skald	r41		
+glov						Icarus	r49		
+glov						Drekavac	r51		
+belt						Rainbow	r05		
+belt						Prodigy	r15		
+belt						Fuse	r23		
+belt						Pulsa Dinura	r34		
+belt						Truce	r42		
+belt						Dyaus Pita	r50		
+belt						Ahriman	r52		
+boot						Epicenter	r06		
+boot						Outlaw	r14		
+boot						Ginfaxi	r22		
+boot						Craton	r32		
+boot						Megalith	r40		
+boot						Nephilim	r48		
+boot						Hibagon	r53		
+azhm						StataMater	r16		
+azhm						Amaterasu	r24		
+azhm						Siegfried	r31		
+azhm						Lohengrin	r42		
+azhm						Unicorn	r52		
+azsd						Edda	r15		
+azsd						Lion	r35		
+azsd						Eloi	r42		
+azsd						Nix	r48		
+azsd						Ea	r52		
+ishd						Afrit	r13		
+ishd						Rahab	r19		
+ishd						Ligeia	r28		
 ishd						Dar-Al-Harb	r37		
-shie	shld					Gemword!	gpr		
-xbow						Cyclops	r29		
-bow						Phantom	r39		
-shie	shld					Gemword!	glw		
-nstf						Styx	r56		
+ishd						Scorched Earth	r51		
+phlm						Algiz	r09		
+phlm						Nasrudin	r19		
+phlm						Sagarmatha	r36		
+phlm						Morthwyrtha	r43		
+phlm						Wodziwob	r53		
+basd						Enmerkar	r17		
+basd						Warpath	r27		
+basd						Gauntlet	r39		
+basd						Huracan	r44		
+basd						E-Engur-A	r52		
+pelt						Nezha	r18		
+pelt						Natha	r28		
+pelt						Norma	r38		
+pelt						Grove	r45		
+pelt						Slyph	r52		
+head						Cube	r16		
 head						Warlock	r25		
-armo						Gemword!	gfv		
-weap						Gemword!	5$a		
-weap						Gemword!	7$d		
-tors						Paaliaq	r10		
-wand						Doomguard	r59	r59	
-staf						Akhenaten	r27		
-armo						Gemword!	skl		
-weap						Gemword!	gcy		
-shie	shld					Gemword!	yo2		
-armo						Gemword!	9$a		
-abow						Manta	r51		
-armo						Gemword!	gsv		
-bow						Curse	r48		
+head						Nahual	r36		
+head						Quimbanda	r47		
+head						Wyrm	r51		
+pzhm						Ilmatar	r10		
+pzhm						Hierodule	r25		
 pzhm						Crusade	r37		
+pzhm						Surya	r46		
+pzhm						Malakbel	r53		
+ashd						Asmodai	r14		
+ashd						Sangreal	r28		
+ashd						Zohar	r33		
+ashd						Asclepion	r46		
+ashd						Amaymon	r51		
+stor						Demeter	r23		
+stor						Curandera	r29		
+stor						Astarte	r34		
+stor						Oracle	r40		
+stor						Vanity	r47		
+stor						Comaetho	r50		
+stor						Venefica	r53		
+weap						Gemword!	5$a		
+weap						Gemword!	5$b		
+weap						Gemword!	5$c		
+weap						Gemword!	5$d		
+weap						Gemword!	5$e		
+weap						Gemword!	7$a		
+weap						Gemword!	7$b		
+weap						Gemword!	7$c		
+weap						Gemword!	7$d		
+weap						Gemword!	7$e		
+weap						Gemword!	9$a		
+weap						Gemword!	9$b		
+weap						Gemword!	9$c		
+weap						Gemword!	9$d		
+weap						Gemword!	9$e		
+weap						Gemword!	g$a		
+weap						Gemword!	g$b		
+weap						Gemword!	g$c		
+weap						Gemword!	g$d		
+weap						Gemword!	g$e		
+weap						Gemword!	gcb		
+weap						Gemword!	gcg		
+weap						Gemword!	gcr		
+weap						Gemword!	gcv		
+weap						Gemword!	gcw		
+weap						Gemword!	gcy		
+weap						Gemword!	gfb		
+weap						Gemword!	gfg		
+weap						Gemword!	gfr		
+weap						Gemword!	gfv		
+weap						Gemword!	gfw		
+weap						Gemword!	gfy		
+weap						Gemword!	glb		
+weap						Gemword!	glg		
+weap						Gemword!	glr		
+weap						Gemword!	glw		
+weap						Gemword!	gly		
+weap						Gemword!	gpb		
+weap						Gemword!	gpg		
+weap						Gemword!	gpr		
+weap						Gemword!	gpv		
+weap						Gemword!	gpw		
+weap						Gemword!	gpy		
+weap						Gemword!	gsb		
+weap						Gemword!	gsg		
+weap						Gemword!	gsr		
+weap						Gemword!	gsv		
+weap						Gemword!	gsw		
+weap						Gemword!	gsy		
+weap						Gemword!	gzv		
+weap						Gemword!	skc		
+weap						Gemword!	skf		
+weap						Gemword!	skl		
+weap						Gemword!	sku		
+weap						Gemword!	skz		
+weap						Gemword!	yo1		
+weap						Gemword!	yo2		
+weap						Gemword!	yo3		
+weap						Gemword!	yo4		
+weap						Gemword!	yo5		
+armo						Gemword!	5$a		
+armo						Gemword!	5$b		
+armo						Gemword!	5$c		
+armo						Gemword!	5$d		
+armo						Gemword!	5$e		
+armo						Gemword!	7$a		
+armo						Gemword!	7$b		
+armo						Gemword!	7$c		
+armo						Gemword!	7$d		
+armo						Gemword!	7$e		
+armo						Gemword!	9$a		
+armo						Gemword!	9$b		
+armo						Gemword!	9$c		
+armo						Gemword!	9$d		
+armo						Gemword!	9$e		
+armo						Gemword!	g$a		
+armo						Gemword!	g$b		
+armo						Gemword!	g$c		
+armo						Gemword!	g$d		
+armo						Gemword!	g$e		
+armo						Gemword!	gcb		
+armo						Gemword!	gcg		
+armo						Gemword!	gcr		
+armo						Gemword!	gcv		
+armo						Gemword!	gcw		
+armo						Gemword!	gcy		
+armo						Gemword!	gfb		
+armo						Gemword!	gfg		
+armo						Gemword!	gfr		
+armo						Gemword!	gfv		
+armo						Gemword!	gfw		
+armo						Gemword!	gfy		
+armo						Gemword!	glb		
+armo						Gemword!	glg		
+armo						Gemword!	glr		
+armo						Gemword!	glw		
+armo						Gemword!	gly		
+armo						Gemword!	gpb		
+armo						Gemword!	gpg		
+armo						Gemword!	gpr		
+armo						Gemword!	gpv		
+armo						Gemword!	gpw		
+armo						Gemword!	gpy		
+armo						Gemword!	gsb		
+armo						Gemword!	gsg		
+armo						Gemword!	gsr		
+armo						Gemword!	gsv		
+armo						Gemword!	gsw		
+armo						Gemword!	gsy		
+armo						Gemword!	gzv		
+armo						Gemword!	skc		
+armo						Gemword!	skf		
+armo						Gemword!	skl		
+armo						Gemword!	sku		
+armo						Gemword!	skz		
+armo						Gemword!	yo1		
+armo						Gemword!	yo2		
+armo						Gemword!	yo3		
+armo						Gemword!	yo4		
+armo						Gemword!	yo5		
+shie	shld					Gemword!	5$a		
+shie	shld					Gemword!	5$b		
+shie	shld					Gemword!	5$c		
+shie	shld					Gemword!	5$d		
+shie	shld					Gemword!	5$e		
+shie	shld					Gemword!	7$a		
+shie	shld					Gemword!	7$b		
+shie	shld					Gemword!	7$c		
+shie	shld					Gemword!	7$d		
+shie	shld					Gemword!	7$e		
+shie	shld					Gemword!	9$a		
+shie	shld					Gemword!	9$b		
+shie	shld					Gemword!	9$c		
+shie	shld					Gemword!	9$d		
+shie	shld					Gemword!	9$e		
+shie	shld					Gemword!	g$a		
+shie	shld					Gemword!	g$b		
+shie	shld					Gemword!	g$c		
+shie	shld					Gemword!	g$d		
+shie	shld					Gemword!	g$e		
+shie	shld					Gemword!	gcb		
+shie	shld					Gemword!	gcg		
+shie	shld					Gemword!	gcr		
+shie	shld					Gemword!	gcv		
+shie	shld					Gemword!	gcw		
+shie	shld					Gemword!	gcy		
+shie	shld					Gemword!	gfb		
+shie	shld					Gemword!	gfg		
+shie	shld					Gemword!	gfr		
+shie	shld					Gemword!	gfv		
+shie	shld					Gemword!	gfw		
+shie	shld					Gemword!	gfy		
+shie	shld					Gemword!	glb		
+shie	shld					Gemword!	glg		
+shie	shld					Gemword!	glr		
+shie	shld					Gemword!	glw		
+shie	shld					Gemword!	gly		
+shie	shld					Gemword!	gpb		
+shie	shld					Gemword!	gpg		
+shie	shld					Gemword!	gpr		
+shie	shld					Gemword!	gpv		
+shie	shld					Gemword!	gpw		
+shie	shld					Gemword!	gpy		
+shie	shld					Gemword!	gsb		
+shie	shld					Gemword!	gsg		
+shie	shld					Gemword!	gsr		
+shie	shld					Gemword!	gsv		
+shie	shld					Gemword!	gsw		
+shie	shld					Gemword!	gsy		
+shie	shld					Gemword!	gzv		
+shie	shld					Gemword!	skc		
+shie	shld					Gemword!	skf		
+shie	shld					Gemword!	skl		
+shie	shld					Gemword!	sku		
+shie	shld					Gemword!	skz		
+shie	shld					Gemword!	yo1		
+shie	shld					Gemword!	yo2		
+shie	shld					Gemword!	yo3		
+shie	shld					Gemword!	yo4		
+shie	shld					Gemword!	yo5		
+nagi						Shamo	r16		
+bow						Amok	r09		
+bswd	baxe					Gharaniq	r33		
+phlm						Fawkes	r33		
+azhm						Bona Dea	r19		
+ishd						Iambe	r23		
+pelt						Aegipan	r09		
+bswd	baxe					Anak	r41		
+tors						Paaliaq	r10		
+stor						Lyrannikin	r11		
+bow						Hornet	r17		
+glov						Brawl	r16		
+head						Lorelei	r38		
+scyh						Atlacamani	r37		
+pclb	pmac	pham				Takfir	r34		
+stor						Cassilda	r54		
+azsd						Eos	r54		
+weap						Adramelech	r54		
+pzhm						Rotundjere	r54		
+phlm						Greisen	r54		
+glov						Snowsquall	r54		
+head						Hecatomb	r55		
+pspe						Jaguar	r55		
+ashd						Myrrhbearer	r55		
+helm						Amanita	r55		
+tors						Linga Sharira	r55		
+belt						Nero	r55		
+ishd						Orchid	r55		
+staf						Zodiac	r55		
+bow						Stardust	r55		
+h2h						Joker	r55		
+bswd	baxe					Gilgamesh	r55		
+pclb	pmac	pham				Skilt en Vriend	r55		
+wand						Krypteia	r55		
+scrd						Sway of the Stars	r55		
+orb						Sauron	r55		
+xbow						Tombstone	r55		
+nknf						Mkodos	r56		
+2hbx						Wolfsangel	r56		
+circ						Indigo	r56		
+shld						Derweze	r56		
+boot						Riptide	r56		
+azhm						Shaheeda	r56		
+dbow						Dirge	r56		
+pelt						Nigra	r56		
+dstf						Hermanubis	r56		
+aspe						Freybug	r56		
+abow						Cecaelia	r56		
+ajav						Specter	r56		
+nagi						Oniwaka	r56		
+nscy						Tzeentch	r56		
+scep						Apostasy	r56		
+nxbw						Rhea	r56		
+bow						Nyx	r26		
+staf						Ljosalf	r30		
+scep						Jokulmorder	r36		
+xbow						Tynged	r41		
+bswd	baxe					Skarn	r40		
+abow						Eris	r37		
+aspe						Titanomachia	r24		
+ajav						Herfjotur	r41		
+pclb	pmac	pham				Quaoar	r29		
+nscy						Eventide	r36		
+orb						Vertigo	r22		
+dbow						Tarqeq	r38		
+nstf						Eurynome	r17		
+h2h						Riot	r22		
+pspe						Resheph	r32		
+orb						Gravastar	r29		
+scrd						Brocken	r24		
+stor						Kundalini	r12		
+azhm						Cambion	r36		
+h2h						Carabosse	r15		
+nstf						Styx	r56		
+staf						Kyrie	r51	r51	
+tors						Pygmalion	r52	r52	
+weap						Archangel	r53	r53	
+glov	boot					Knave	r54	r54	
+helm	shld					Checkmate	r55	r55	
+taxe						Kodiak	r55		
+basd						Tonatiuh	r55		
+tkni						Tau	r55		
+tkni						Patriot	r02		
+taxe						Fennec	r20		
+tkni						Quantum	r30		
+taxe						Raptor	r40		
+nscy						Lemuria	r20		
+abow						Aspect	r13		
+phlm						Ekam	r27		
+knif						Rattus	r37		
+axe						Instinct	r27		
+taxe						Thundercloud	r51		
+taxe						Cheetah	r02		
+tkni						Chrysopelea	r10		
+tkni						Dajjal	r20		
+taxe						Manitou	r30		
+tkni						Myriad	r40		
+tkni						Naiad	r49		
+tkni						Burlesque	r51		
+jave						Raid	r10		
+jave						Hastata	r20		
+jave						Haste	r30		
+jave						Hastilude	r40		
 jave						Hastur	r51		
+jave						Hastin	r55		
+tors						Thanks everyone!\nMedian 2005-2012\nEternal	r51	r52	
+weap						Shattered Stone	r58	r58	
+bow						Dead Man's Breath	r62	r62	
+xbow						Faseroptic	r61	r61	
+swor						Minefield	r57	r57	
+axe						Midas' Touch	r59	r59	
+spea						Asymptomatic	r60	r60	
+scyh						Solarion	r60	r60	
+knif						Malicicle	r62	r62	
+mace						Arachnophilia	r60	r60	
+hamm						Neurogenesis	r61	r61	
+staf						Hand of Frost	r62	r62	
+scep						Oris' Herald	r59	r59	
+jave						Fleshbane	r60	r60	
+tkni						Dead Star	r60	r60	
+taxe						Dragon Seed	r58	r58	
+abow						Arnazeus Pinnacle	r57	r57	
+ajav						Askari Device	r57	r57	
+aspe						Flame	r58	r58	
+h2h						Perfection	r59	r59	
+nagi						Blooddancer	r59	r59	
+bswd	baxe					El'druin	r62	r62	
+2hbx						Soldier of Light	r61	r61	
+dbow						Amphibian	r62	r62	
+dstf						Fiacla-Gear's Weathervane	r61	r61	
+nscy						Bartuc's Eye	r58	r58	
+nknf						Cut	r58	r58	
+wand						Doomguard	r59	r59	
+nstf						Xazax	r57	r57	
+nxbw						Force of Mind	r59	r59	
+pspe						Hadriel's Protector	r60	r60	
+pclb	pham	pmac				Judgement	r57	r57	
+orb						Helgrotha	r60	r60	
+scrd						Dark Exile	r62	r62	
+tors						Hellfire Plate	r57	r57	
+helm						Thundercap	r61	r61	
+circ						Rathma's Blessing	r62	r62	
+shld						Khalim's Protector	r60	r60	
+belt						Lysra	r57	r57	
+glov						Retribution	r57	r57	
+boot						Wind Runner	r58	r58	
+azhm						Eaglehorn Mask	r59	r59	
+azsd						Heart of Skovos	r58	r58	
+ishd						Shadowsteps	r59	r59	
+phlm						Force Shock	r61	r61	
+basd						Triune's Blessing	r60	r60	
+pelt						Nature's Grace	r60	r60	
+head						Twisted Mind	r59	r59	
+pzhm						Battle Rage	r58	r58	
+ashd						Lightwell	r57	r57	
+stor						Space Dementia	r61	r61	
+tors						\red;Natasha's Legacy\blue;	r98	r98	
+tors						Rebel	r01	r98	
+tors						Lumen Arcana	r06	r98	
+tors						(Median XL - 6 years)\nVictory	r13	r98	
+tors						Thelema	r19	r98	
+tors						Cathedral	r25	r98	
+tors						Mirage	r33	r98	
+helm						Summit	r01	r98	
+helm						Cannonball	r08	r98	
+helm						Ra	r17	r98	
+helm						Alchemy	r26	r98	
+circ						Sphinx	r11	r98	
+circ						Lily	r31	r98	
+shld						Geas	r04	r98	
+shld						Pharaoh	r12	r98	
+shld						Nomad	r20	r98	
+shld						Goddess	r30	r98	
+glov						Iblis	r04	r98	
+glov						Mercy	r13	r98	
+glov						Kali	r21	r98	
+glov						Aiwass	r33	r98	
+belt						Rainbow	r05	r98	
+belt						Prodigy	r15	r98	
+belt						Fuse	r23	r98	
+boot						Epicenter	r06	r98	
+boot						Outlaw	r14	r98	
+boot						Ginfaxi	r22	r98	
+boot						Craton	r32	r98	
+azhm						StataMater	r16	r98	
+azhm						Amaterasu	r24	r98	
+azhm						Siegfried	r31	r98	
+azsd						Edda	r15	r98	
+ishd						Afrit	r13	r98	
+ishd						Rahab	r19	r98	
+ishd						Ligeia	r28	r98	
+phlm						Algiz	r09	r98	
+phlm						Nasrudin	r19	r98	
+basd						Enmerkar	r17	r98	
+basd						Warpath	r27	r98	
+pelt						Nezha	r18	r98	
+pelt						Natha	r28	r98	
+head						Cube	r16	r98	
+head						Warlock	r25	r98	
+pzhm						Ilmatar	r10	r98	
+pzhm						Hierodule	r25	r98	
+ashd						Asmodai	r14	r98	
+ashd						Sangreal	r28	r98	
+ashd						Zohar	r33	r98	
+stor						Demeter	r23	r98	
+stor						Curandera	r29	r98	
+phlm						Fawkes	r33	r98	
+azhm						Bona Dea	r19	r98	
+ishd						Iambe	r23	r98	
+pelt						Aegipan	r09	r98	
+tors						Paaliaq	r10	r98	
+stor						Lyrannikin	r11	r98	
+glov						Brawl	r16	r98	
+stor						Kundalini	r12	r98	
+phlm						Ekam	r27	r98	
+weap						Dawn	r01	r98	
+weap						Shark	r07	r98	
+weap						Enyo	r14	r98	
+weap						Azrael	r21	r98	
+weap						Void	r28	r98	
+bow						Banshee	r03	r98	
+bow						Shockwave	r12	r98	
+bow						Balance	r22	r98	
+bow						Hive	r30	r98	
+xbow						Thammuz	r04	r98	
+xbow						Python	r16	r98	
+xbow						Cyclops	r29	r98	
+knif						King's Blood	r26	r98	
+scyh						Endor	r31	r98	
+spea						Myrmidon	r29	r98	
+mace						Demhe	r33	r98	
+staf						Pax Mystica	r04	r98	
+staf						Hadad	r11	r98	
+staf						Summanus	r19	r98	
+staf						Akhenaten	r27	r98	
+scep						Prophecy	r06	r98	
+scep						Bane	r17	r98	
+scep						Judas	r22	r98	
+scep						Path	r30	r98	
+aspe						Aegina	r11	r98	
+ajav						Scar	r16	r98	
+ajav						Dragonfly	r26	r98	
+abow						Corsair	r15	r98	
+abow						Ice Breaker	r29	r98	
+h2h						Shedim	r02	r98	
+h2h						Fiend	r17	r98	
+h2h						Judge	r27	r98	
+nagi						Khattak	r08	r98	
+bswd	baxe					Ram	r10	r98	
+bswd	baxe					Essus	r22	r98	
+bswd	baxe					Thunderbird	r32	r98	
+dbow						Peacock	r13	r98	
+dbow						Lynx	r27	r98	
+dbow						Sylvanshine	r33	r98	
+dstf						Ocean	r05	r98	
+dstf						Samhain	r12	r98	
+dstf						Augur	r20	r98	
+dstf						Lincos	r29	r98	
+nscy						Black Cat	r02	r98	
+nscy						Mantra	r13	r98	
+nscy						Chthon	r29	r98	
+nknf						Loa	r05	r98	
+nknf						Jinx	r13	r98	
+nknf						Misery	r23	r98	
+nstf						Deep Water	r06	r98	
+nstf						Ladon	r25	r98	
+wand						Koan	r09	r98	
+wand						Ghoul	r20	r98	
+nxbw						Genie	r08	r98	
+nxbw						Atlantis	r19	r98	
+nxbw						Aether	r31	r98	
+pclb	pmac	pham				Jihad	r05	r98	
+pclb	pmac	pham				Intifada	r15	r98	
+pclb	pmac	pham				Lammasu	r25	r98	
+pspe						Nehushtan	r27	r98	
+orb						Circe	r11	r98	
+orb						Ker	r20	r98	
+scrd						Inanna	r12	r98	
+nagi						Shamo	r16	r98	
+bow						Amok	r09	r98	
+bswd	baxe					Gharaniq	r33	r98	
+bow						Hornet	r17	r98	
+bow						Nyx	r26	r98	
+staf						Ljosalf	r30	r98	
+aspe						Titanomachia	r24	r98	
+pclb	pmac	pham				Quaoar	r29	r98	
+orb						Vertigo	r22	r98	
+nstf						Eurynome	r17	r98	
+h2h						Riot	r22	r98	
+pspe						Resheph	r32	r98	
+orb						Gravastar	r29	r98	
+scrd						Brocken	r24	r98	
+h2h						Carabosse	r15	r98	
+tkni						Patriot	r02	r98	
+taxe						Fennec	r20	r98	
+tkni						Quantum	r30	r98	
+nscy						Lemuria	r20	r98	
+abow						Aspect	r13	r98	
+axe						Instinct	r27	r98	
+taxe						Cheetah	r02	r98	
+tkni						Chrysopelea	r10	r98	
+tkni						Dajjal	r20	r98	
+taxe						Manitou	r30	r98	
+jave						Raid	r10	r98	
+jave						Hastata	r20	r98	
+jave						Haste	r30	r98	
+pspe						Ensi	r12	r98	
+weap	armo					Secret Jewel Bonus!	jew		

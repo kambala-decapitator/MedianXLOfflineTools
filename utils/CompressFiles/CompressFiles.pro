@@ -6,6 +6,7 @@
 
 TEMPLATE = app
 TARGET = CompressFiles
+DESTDIR = ../txt_parser
 
 QT += core
 QT -= gui

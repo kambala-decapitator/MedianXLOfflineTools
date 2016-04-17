@@ -427,19 +427,19 @@
 425	Stormeye Totem	2	1	5	1	48
 426	Retaliate	3	1	1	1	0
 427	Hammerstrike	3	1	2	1	70
-428	Merkabah	3	1	3	1	72
-429	Lionheart	3	1	4	1	6
+428	Plague	3	1	3	1	56
+429	Dragonheart	3	1	4	1	98
 430	Colosseum	3	1	5	1	80
 431	Terror Strike	3	2	1	1	10
 432	Black Sleep	3	2	3	1	60
 433	Lemures	3	2	2	1	14
 434	Blood Thorns	3	2	4	1	16
 435	Scourge	3	2	5	2	64
-436	Dragon Oath	3	1	1	3	68
-437	Dragonshout	3	1	2	3	66
-438	Burnout	3	1	3	3	74
-439	Demonrend	3	1	4	3	86
-440	Deva King	3	1	5	3	78
+436	Solar Flare	3	1	1	3	100
+437	Drakemaw	3	1	2	3	74
+438	Frozen Breath	3	1	3	3	66
+439	Dragon Wyrms	3	1	5	3	86
+440	Incarnation	3	1	4	3	78
 441	Tainted Blood	3	2	1	3	30
 442	Symphony of Destruction	3	2	3	3	84
 443	Mind Flay	3	2	2	3	32
@@ -617,7 +617,7 @@
 615	Death Ward	2	3	5	3	66
 616	Resurrect	3	3	5	3	52
 617	Superbeast	3	3	5	1	54
-618	Plague	3	3	5	2	56
+618	Dragonknight	3	3	5	2	68
 619	Chronofield	1	3	5	1	12
 620	Witch Blood	1	3	5	2	26
 621	Baneblade	1	3	5	3	114
@@ -980,7 +980,7 @@
 978	Earthquake	-1	0	0	0	0
 979	Amatoxin	-1	0	0	0	0
 980	Stormblast	-1	1	5	1	30
-981	Lionheart	-1	1	4	1	6
+981	Dragonheart	-1	1	4	1	98
 982	Spiral Dance	-1	0	0	0	0
 983	Path of Flames	-1	0	0	0	0
 984	Body of the Savior	-1	0	0	0	0
@@ -1289,9 +1289,9 @@
 1287		-1				
 1288		-1				
 1289		-1				
-1290	Arrow	-1	0	0	0	0
+1290		-1				
 1291		-1				
-1292	Phase Bomb	-1	3	5	3	68
+1292		-1				
 1293		-1				
 1294		-1				
 1295		-1				
@@ -1299,3 +1299,10 @@
 1297		-1				
 1298		-1				
 1299		-1				
+1300		-1				
+1301		-1				
+1302		-1				
+1303		-1				
+1304		-1				
+1305		-1				
+1306		-1				

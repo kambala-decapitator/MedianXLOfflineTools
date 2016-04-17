@@ -495,3 +495,5 @@ shrinecount	1				1	shrine_counter																														0
 vessel-dmg	1				1	skill_light_mastery																														0
 vessel-tgt	1				1	skill_shadow_mastery																														0
 pierce-lipo	1	new mod (combo)			1	passive_ltng_pierce			3	passive_pois_pierce																					Laz / Combination affix		min	max	none	0
+desc-suchbalance	1				1	tree_synergy																														
+extra-ficom	1	new mod (combo)			1	passive_fire_mastery			3	passive_cold_mastery			3	passive_pm_mastery																	Laz / EDM%		min	max	also affects elem affixes?	0

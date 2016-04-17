@@ -66,7 +66,7 @@
 72	150	10																durability
 73	90	10																maxdurability
 74	500	15						Drain Life	Replenish Life		1	56	2					hpregen
-75	100	10						Decrease Maximum Durability	Increase Maximum Durability		2	3	2					item_maxdurability_percent
+75	100	10						Decrease Maximum Durability	Increase Maximum Durability		2	4	2					item_maxdurability_percent
 76	100	10		77	Increase Maximum Life and Mana	Increase Maximum Life and Mana		Decrease Maximum Life	Increase Maximum Life		2	58	2	10	2	2		item_maxhp_percent
 77	100	10		76	Increase Maximum Life and Mana	Increase Maximum Life and Mana		Decrease Maximum Mana	Increase Maximum Mana		2	54	2	10	2	2		item_maxmana_percent
 78	0	10						Attacker Takes Damage of	Attacker Takes Damage of		3	13	2					item_attackertakesdamage
@@ -81,8 +81,8 @@
 88	0	10																item_doubleherbduration
 89	5	8						to Light Radius	to Light Radius		1	6	1					item_lightradius
 90	0	24																item_lightcolor
-91	100	10						Requirements	Requirements		4	0	2					item_req_percent
-92		7						Required Level	Required Level		1	1	1					item_levelreq
+91	100	10						Requirements	Requirements		4	1	2					item_req_percent
+92		7						Required Level	Required Level		1	2	1					item_levelreq
 93	60	9		96,99,102,105	Decreased Overall Speed	Increased Overall Speed		Decreased Attack Speed	Increased Attack Speed		2	145	1	9	2	1		item_fasterattackrate
 94	64	10						ModitemLevReq	ModitemLevReq		4	58	2					item_levelreqpct
 96	50	9		93,99,102,105	Decreased Overall Speed	Increased Overall Speed		Slower Run/Walk	Faster Run/Walk		2	148	1	9	2	1		item_fastermovevelocity
@@ -154,9 +154,9 @@
 182	100	9						Total Character Defense = 0	Total Character Defense = 0		3	10	0					armor_override_percent
 183	100	11						Crafting Points	Crafting Points		1	175	1					game_craftpoints
 184	0	5																x_signet01
-185			12					Stat Signets Used:	Stat Signets Used:		3	3	2					potion_stat_cap
-186			8					Skill Signets Used:	Skill Signets Used:		3	3	2					potion_skill_cap
-187	0	3						Lionheart Spell Blinds Attacker	Lionheart Spell Blinds Attacker		12	22	2					passive_lionheart_addstupidth
+185			12					Stat Signets Used:	Stat Signets Used:		3	4	2					potion_stat_cap
+186			8					Skill Signets Used:	Skill Signets Used:		3	4	2					potion_skill_cap
+187	0	3						Dragonheart Spell Blinds Attacker	Dragonheart Spell Blinds Attacker		12	22	2					passive_lionheart_addstupidth
 188	0	3						+%d to Javelin and Spear Skills	+%d to Javelin and Spear Skills		14	151					16	item_addskill_tab
 189	0	1						\red;Cube with your Idol of Vanity	\red;Cube with your Idol of Vanity		3	159	0					spiritofdamnationnew
 191	0	5																x_signet02
@@ -172,7 +172,7 @@
 201	0	7						%d%% Chance to cast level %d %s when Struck	%d%% Chance to cast level %d %s when Struck		15	160					17	item_skillongethit
 202	0	5																x_signet05
 203	0	10						Enhanced Weapon Damage	Enhanced Weapon Damage	(Based on Character Level)	8	60	2					item_totaldamage_perlevel
-204	0	16						(%d/%d Charges)	(%d/%d Charges)		24	3					16	item_charged_skill
+204	0	16						(%d/%d Charges)	(%d/%d Charges)		24	4					16	item_charged_skill
 205	0	5																x_signet06
 206	0	5																x_signet07
 207	0	5																x_signet08
@@ -219,9 +219,9 @@
 249	0	5																x_signet30
 250	0	10																item_totembound
 251	0	5																x_signet31
-252	0	6						Repairs %d Durability per Second	Repairs %d Durability per Second		11	2	0					item_replenish_durability
-253	0	6						Replenishes Quantity	Replenishes Quantity		3	3	0					item_replenish_quantity
-254	0	8						Increased Stack Size	Increased Stack Size		3	4	0					item_extra_stack
+252	0	6						Repairs %d Durability per Second	Repairs %d Durability per Second		11	3	0					item_replenish_durability
+253	0	6						Replenishes Quantity	Replenishes Quantity		3	4	0					item_replenish_quantity
+254	0	8						Increased Stack Size	Increased Stack Size		3	5	0					item_extra_stack
 255	0	5																x_signet32
 256	0	5																x_signet33
 257	0	5																x_signet34
@@ -238,8 +238,8 @@
 271	0	2						Random Resistance Bonus	Random Resistance Bonus		3	49	0					item_randomres_aura
 272	0	2						Random Walk/Run Speed	Random Walk/Run Speed		3	49	0					item_randomspeed_aura
 273	25	7																item_crushthorns
-274	0	8						Hive Adds 33% of Poison Spell Damage Items to Vitality	Hive Adds 33% of Poison Spell Damage Items to Vitality		3	4	0					item_poison_set
-275	0	9						Enhanced Damage vs. Necrobots	Enhanced Damage vs. Necrobots		2	2	1					item_desc_breaker
+274	0	8						Hive Adds 33% of Poison Spell Damage Items to Vitality	Hive Adds 33% of Poison Spell Damage Items to Vitality		3	5	0					item_poison_set
+275	0	9						Enhanced Damage vs. Necrobots	Enhanced Damage vs. Necrobots		2	3	1					item_desc_breaker
 276	0	1																item_hasbeenduped
 277	0	7						\orange;Area Effect Attack\white;	\orange;Area Effect Attack\white;		3	238	0				17	item_warpskillonattack
 278	50	9						Strength Factor to Spell Damage	Strength Factor to Spell Damage		1	198	1					str_factor
@@ -320,8 +320,8 @@
 370	0	5																x_signet52
 371	0	7						\orange;Amazing Grace\white;	\orange;Amazing Grace\white;		3	235	0				17	item_amazinggrace
 372	0	1						Level 5 Venomous Aura when Equipped	Level 5 Venomous Aura when Equipped		3	159	0					item_desc_acidblood
-373	0	1						Worship the Crack Monkeys!	Worship the Crack Monkeys!		3	2	0					item_desc_deathmarch
-374	0	1						+300% Enhanced Damage vs. the Zakarum	+300% Enhanced Damage vs. the Zakarum		3	2	0					item_desc_judas
+373	0	1						Worship the Crack Monkeys!	Worship the Crack Monkeys!		3	3	0					item_desc_deathmarch
+374	0	1						+300% Enhanced Damage vs. the Zakarum	+300% Enhanced Damage vs. the Zakarum		3	3	0					item_desc_judas
 375	0	2						Cannot Be Cubed	Cannot Be Cubed		3	180	0					item_lc_tgt_max
 376	50	8						Slows Melee Target by	Slows Melee Target by		2	77	2					item_slow_offweapon
 377	50	9		329,330,331,332		to Spell Damage		to Physical/Magic Spell Damage	to Physical/Magic Spell Damage		4	88	1	5	4	1		passive_pm_mastery
@@ -360,14 +360,14 @@
 413	0	8						Bonus to Vitality when using an Apple	Bonus to Vitality when using an Apple		2	50	1					skill_bloodymary_bonus
 414	0	8						Bonus to Energy when using an Apple	Bonus to Energy when using an Apple		2	49	1					skill_paganheart_bonus
 418	0	2						\orange;Can Be Upgraded with Black Road Challenge	\orange;Can Be Upgraded with Black Road Challenge		3	225	0					item_needschallenged
-419	0	8						\red;May the Light of Dien-Ap-Sten shine upon you!\blue;	\red;May the Light of Dien-Ap-Sten shine upon you!\blue;		3	2	0					hm_c
+419	0	8						\red;May the Light of Dien-Ap-Sten shine upon you!\blue;	\red;May the Light of Dien-Ap-Sten shine upon you!\blue;		3	3	0					hm_c
 421	2	2		422,423,424,425		\orange;All trials completed!		\orange;Trial of Fear completed!	\orange;Trial of Fear completed!		3	228	0	12	3	0		black_1
 422	2	2		421,423,424,425		\orange;All trials completed!		\orange;Trial of Greed completed!	\orange;Trial of Greed completed!		3	227	0	12	3	0		black_2
 423	2	2		421,422,424,425		\orange;All trials completed!		\orange;Trial of Knowledge completed!	\orange;Trial of Knowledge completed!		3	225	0	12	3	0		black_3
 424	2	2		421,422,423,425		\orange;All trials completed!		\orange;Trial of Blood completed!	\orange;Trial of Blood completed!		3	224	0	12	3	0		black_4
 425	2	2		421,422,423,424		\orange;All trials completed!		\orange;Trial of Contrition completed!	\orange;Trial of Contrition completed!		3	226	0	12	3	0		black_5
-426	2	2						\orange;Well Done!\red;	\yellow;You have reached the gambling limit. Please reset your Trader's Chest!\blue;		3	1	0					black_6
-427	2	2						\orange;Congratulations!\blue;	\red;&gt;&gt; UNEQUIP THIS ITEM BEFORE REACHING LEVEL 120 &lt;&lt;\blue;		3	1	0					black_7
+426	2	2						\orange;Well Done!\red;	\yellow;You have reached the gambling limit. Please reset your Trader's Chest!\blue;		3	2	0					black_6
+427	2	2						\orange;Congratulations!\blue;	\red;&gt;&gt; UNEQUIP THIS ITEM BEFORE REACHING LEVEL 120 &lt;&lt;\blue;		3	2	0					black_7
 429	0	8						Damage Reduction to Pact of Blood	Damage Reduction to Pact of Blood		4	18	1					passive_rejuv_dr
 430	0	8						to All Skills when using an Apple	to All Skills when using an Apple		1	50	1					skill_paganheart_synergy
 431	50	9						Bonus to Poison Skill Duration	Bonus to Poison Skill Duration		4	149	1					skill_poison_dur
@@ -401,7 +401,7 @@
 474	0	8						\green;Unlocks your Black Road Skill	\green;Unlocks your Black Road Skill		3	230	0					learn_blackroad
 475	0	1						\red;Druid Morph\blue;	\red;Druid Morph\blue;		3	234	0					item_desc_druidmorph
 476	0	1						Level 1 Demon Blood Aura when Equipped	Level 1 Demon Blood Aura when Equipped		3	159	0					item_desc_dbaura
-477	1	4						\red;&gt;&gt; UNEQUIP THIS ITEM BEFORE REACHING LEVEL 120 &lt;&lt;\blue;	Increased Difficulty		3	1	0					item_desc_hardaura
+477	1	4						\red;&gt;&gt; UNEQUIP THIS ITEM BEFORE REACHING LEVEL 120 &lt;&lt;\blue;	Increased Difficulty		3	2	0					item_desc_hardaura
 478	0	1						\purple;and Reward, cube with a Mana Potion to lower it\nCube with a Healing Potion to Increase Difficulty	\purple;and Reward, cube with a Mana Potion to lower it\nCube with a Healing Potion to Increase Difficulty		3	159	0					item_desc_instructions
 479	0	4						Maximum Skill Level Increased by	Maximum Skill Level Increased by		3	69	2					skill_more
 480	0	5						to Vitality per Socketed Gem	to Vitality per Socketed Gem		1	75	1					item_skill_paragon
@@ -414,11 +414,11 @@
 488	50	9						Bonus to Energy Factor	Bonus to Energy Factor		4	157	1					enr_factor_percent
 489	0	10						Target Takes Additional Damage of	Target Takes Additional Damage of		3	13	2					item_targettakesdamage
 490	0	1						Spells Cost Life instead of Mana	Spells Cost Life instead of Mana		3	157	0					item_desc_lifecostspells
-491	0	3						\red;I Killed A Dragon and All I Got Was This Lousy Charm\blue;	\red;I Killed A Dragon and All I Got Was This Lousy Charm\blue;		3	1	0					item_has_stardragon
+491	0	3						\red;I Killed A Dragon and All I Got Was This Lousy Charm\blue;	\red;I Killed A Dragon and All I Got Was This Lousy Charm\blue;		3	2	0					item_has_stardragon
 492	50	8						Reduced Healing Rate from Apples	Increased Healing Rate from Apples		4	31	1					item_faster_potions
 493	50	8						Slows Ranged Attacker by	Slows Ranged Attacker by		2	74	2					skill_slowrangedthorns
 495	0	1						\red;Sorceress Morph\blue;	\red;Sorceress Morph\blue;		3	234	0					item_desc_sorciemorph
-496	0	9						Crushing Blow to Darklings	Crushing Blow to Darklings		2	86	1					tree_synergy
+496	1	9						\orange;Such Voracity, Balance for Destruction\blue;	\orange;Such Voracity, Balance for Destruction\blue;		3	0	0					tree_synergy
 498	0	9						Bonus to Fire Elemental Damage if Summoned during Pact of Blood	Bonus to Fire Elemental Damage if Summoned during Pact of Blood		2	14	1					item_cots_when_pact
 499	0	10						to Energy	to Energy	(Based on Character Level)	6	60	1					item_energy_perlevel
 500	100	8						Bonus to Summoned Minion Attack Rating	Bonus to Summoned Minion Attack Rating		4	106	1					item_minion_attack

@@ -1986,7 +1986,7 @@
 1984	GenAgaliarept
 1985	GenNebiros
 1986	GenSatanachia
-1987	GenSargatanas
+1987	\yellow;Edyrem\blue;
 1988	GenLucifuge
 1989	GenFleuretty
 1990	MazeTrapSwarm
@@ -2110,7 +2110,7 @@
 2111	\orange;The Void (trap)
 2112	\orange;The Void (trap)
 2113	\gold;(                   Mendeln, Apprentice of Rathma                   )
-2114	\gold;(                  Rathma, disciple of Trag'Oul                  )
+2114	\gold;(                  Rathma, Disciple of Trag'Oul                  )
 2115	\gold;(          Soul of Greed          )
 2116	\gold;(          Soul of Envy          )
 2117	\gold;(          Soul of Lust          )
@@ -2165,18 +2165,25 @@
 2166	\orange;Temple Spire
 2167	\gold;Disguised Edyrem
 2168	\gold;(                   Mendeln, Apprentice of Rathma                   )
-2169	\gold;(                  Rathma, disciple of Trag'Oul                  )
+2169	\gold;(                  Rathma, Disciple of Trag'Oul                  )
 2170	\gold;(                   Mendeln, Apprentice of Rathma                   )
-2171	\gold;(                  Rathma, disciple of Trag'Oul                  )
+2171	\gold;(                  Rathma, Disciple of Trag'Oul                  )
 2172	Veil King
 2173	Hoplite
 2174	FLYING POLAR BUFFALO ERROR
 2175	FLYING POLAR BUFFALO ERROR
 2176	FLYING POLAR BUFFALO ERROR
 2177	FLYING POLAR BUFFALO ERROR
-2178	Ratfink
-2179	\orange;Pirate of the Twin Seas
-2180	\gold;(               Athulua, the Amazonian Goddess               )
-2181	Blade Spirit
-2182	\gold;Disguised Edyrem
-2183	Sewer Rat
+2178	Nephalem Statue
+2179	Nephalem Statue
+2180	Nephalem Statue
+2181	Nephalem Statue
+2182	Nephalem Statue
+2183	Nephalem Statue
+2184	Nephalem Statue
+2192	Ratfink
+2193	\orange;Pirate of the Twin Seas
+2194	\gold;(               Athulua, the Amazonian Goddess               )
+2202	Blade Spirit
+2203	\gold;Disguised Edyrem
+2204	Sewer Rat

@@ -55,4 +55,5 @@ int main(int argc, char *argv[])
         else
             compressFile(fi);
     }
+    return 0;
 }

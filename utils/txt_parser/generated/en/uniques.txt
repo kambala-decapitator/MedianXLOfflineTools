@@ -49,7 +49,7 @@
 47	Zakarum's Ear	80	
 48	Moon of the Spider	100	
 49	Spirit Trance Herb	100	
-50	\red;Welcome! Median XL: Ultimative XVc\blue;	666	
+50	\red;Welcome! Median XL: Ultimative XVI\blue;	666	
 51	Hammer of the Taan Judges	40	
 52	The Book of Lies	60	
 53	By Robert Marks\nDemonsbane	100	demonsbaneZ
@@ -686,7 +686,7 @@
 684	Fauztin's Visage	51	
 685	Icetomb	100	
 686	Itherael's Splendor	100	
-687	Segnitia	100	
+687	Segnitia	666	
 688	Ravenflock	11	
 689	Ravenflock	20	
 690	Ravenflock	29	
@@ -1007,7 +1007,7 @@
 1005	Lavadome	39	
 1006	Lavadome	48	
 1007	Brainburst	100	
-1008	PortalKombat	100	
+1008	Portal Kombat	100	
 1009	Cat's Pounce	100	
 1010	Thunderhead	5	
 1011	Thunderhead	14	
@@ -2488,21 +2488,21 @@
 2486	Brachyceran's Token	120	
 2487	Moo moo moo Moooo! Moo!\nFool's Gold	100	
 2488	Trader's Chest	120	
-2489	(Secret)\nStorm Blade	120	
-2490	(Secret)\nThe Grizzly	120	
-2491	(Secret)\nEmpyrean Glory	40	
-2492	(Secret)\nBeads of the Snake King	100	
-2493	(Secret)\nJewel of Luck	100	
+2489	- Go fuck yourself - Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself	1337	
+2490	- Go fuck yourself - Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself	1337	
+2491	- Go fuck yourself - Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself	1337	
+2492	- Go fuck yourself - Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself	1337	
+2493	- Go fuck yourself - Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself -- Go fuck yourself	1337	
 2494	Seal of Tathamet	50	
-2495	Gehenna	100	
+2495	Gehenna	666	
 2496	Demonic Touch	666	
 2497	Steel Terror	100	
 2498	Soul of Kabraxis	666	
-2499	Demonic Touch	100	
+2499	Demonic Touch	666	
 2500	Linarian's Legacy	100	
 2501	Soulkeeper	666	
 2502	Soul of Kabraxis	100	
-2503	\red;Welcome! Median XL: Ultimative XVc\blue;	0	
+2503	\red;Welcome! Median XL: Ultimative XVI\blue;	666	
 2504	Lucion's Soulstone	666	
 2505	Tome of Possession	666	
 2506	Cycle of Power	666	
@@ -2650,3 +2650,12 @@
 2648	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
 2649	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
 2650	\red;(Can't be Unsocketed)\n\gold;Cornerstone of the World	100	
+2651	(Secret)\nStorm Blade	121	
+2652	(Secret)\nThe Grizzly	121	
+2653	(Secret)\nEmpyrean Glory	50	
+2654	(Secret)\nBeads of the Snake King	121	
+2655	(Secret)\nJewel of Luck	121	
+2656	(Secret)\nThe Point of No Return	121	invhst
+2657	Reapers	100	
+2658	Demonic Touch	100	
+2659	Segnitia	100	
