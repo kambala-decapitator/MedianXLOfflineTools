@@ -44,9 +44,9 @@ I hope I provided enough anti-hack protection for an average user. If you manage
 
 [b]Downloads[/b]:
 [list][*][b]Application[/b]:
-[list][*][i]Windows[/i] (XP SP 2 and later): https://www.mediafire.com/?k47a3kbzd8444db
-[*][i]Mac OS X[/i] (10.5 and later, universal binary): https://www.mediafire.com/?qrdhz7cxdcju384[/list][*][b]Mod data[/b] (find installation instructions in Mini-FAQ below; XVI is NOT included in the application distribution):
-[list][*][i]Ultimative XVI:[/i] http://www.mediafire.com/download/ffdkkzz7be694f2/ultimativeXVI.zip
+[list][*][i]Windows[/i] (XP SP 2 and later): https://www.mediafire.com/?k47a3kbzd8444db ([URL=https://mega.nz/#!gEAAiKIT!km0jQypTGqwxNUyZY573nphNmKvFdEpGD3j9W9cl7WQ]mirror[/URL])
+[*][i]Mac OS X[/i] (10.5 and later, universal binary): https://www.mediafire.com/?qrdhz7cxdcju384 ([URL=https://mega.nz/#!5MhmXAKQ!cnAKGjEoTAOVSNroy9qEzinxctYWyWorPtSTUjbobUE]mirror[/URL])[/list][*][b]Mod data[/b] (find installation instructions in Mini-FAQ below; XVI is NOT included in the application distribution):
+[list][*][i]Ultimative XVI:[/i] http://www.mediafire.com/download/ffdkkzz7be694f2/ultimativeXVI.zip ([URL=https://mega.nz/#!MIZW3QiB!ExgVwIBOghIlLbld2TyNHLnIafKpY0KURJC_VgyKUYY]mirror[/URL])
 [*][i]2012 v005 / Kehjan Labyrinth + Tathamet vs Anu / Hardened:[/i] http://www.mediafire.com/?4vkkq8jskza2btg
 [*][i]Ultimative XVc:[/i] https://www.mediafire.com/?do5byd95vbh2qp7
 [*][i]Ultimative XIVb:[/i] https://www.mediafire.com/?lhdj51e1ac3661f[/list][/list]
