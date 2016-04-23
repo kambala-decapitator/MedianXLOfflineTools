@@ -586,6 +586,8 @@ void PlugyItemsSplitter::sortWearableItems(ItemsList &selectedItems, quint32 &pa
             key = itemQualityMapping().value(item->quality);
         itemsByQuality[key] << item;
     }
+    if (itemsByQuality.isEmpty())
+        return;
 
     QMap<int, ItemsList>::const_iterator    iter = sortOptions.isQualityOrderAscending ? itemsByQuality.constBegin() : itemsByQuality.constEnd() - 1;
     QMap<int, ItemsList>::const_iterator endIter = sortOptions.isQualityOrderAscending ? itemsByQuality.constEnd()   : itemsByQuality.constBegin() - 1;
