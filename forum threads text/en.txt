@@ -40,12 +40,12 @@ I hope I provided enough anti-hack protection for an average user. If you manage
 [*]update check
 [*]single instance[/list][*]and many others ;)[/list][/spoil]
 
-[size=18][color=#6666ff]WARNING: by default you can open only characters from [b]Ultimative XVc[/b]. If you want to open characters from other mods/mod versions, please refer to the [b]Mod data[/b] download section.[/color][/size]
+[size=18][color=#6666ff]WARNING: by default you can open only characters from [b]Ultimative XVI[/b]. If you want to open characters from other mods/mod versions, please refer to the [b]Mod data[/b] download section.[/color][/size]
 
 [b]Downloads[/b]:
 [list][*][b]Application[/b]:
-[list][*][i]Windows[/i] (XP SP 2 and later): https://www.mediafire.com/?k47a3kbzd8444db ([URL=https://mega.nz/#!gEAAiKIT!km0jQypTGqwxNUyZY573nphNmKvFdEpGD3j9W9cl7WQ]mirror[/URL])
-[*][i]Mac OS X[/i] (10.5 and later, universal binary): https://www.mediafire.com/?qrdhz7cxdcju384 ([URL=https://mega.nz/#!5MhmXAKQ!cnAKGjEoTAOVSNroy9qEzinxctYWyWorPtSTUjbobUE]mirror[/URL])[/list][*][b]Mod data[/b] (find installation instructions in Mini-FAQ below; XVI is NOT included in the application distribution):
+[list][*][i]Windows[/i] (XP SP 2 and later): http://www.mediafire.com/download/k47a3kbzd8444db/MedianXLOfflineTools_0.4.2.1.7z
+[*][i]Mac OS X[/i] (10.5 and later, universal binary): http://www.mediafire.com/download/e8pg1xqnjex4vm8/MedianXLOfflineTools_mac_0.4.2.1.tbz[/list][*][b]Mod data[/b] (find installation instructions in Mini-FAQ below):
 [list][*][i]Ultimative XVI:[/i] http://www.mediafire.com/download/ffdkkzz7be694f2/ultimativeXVI.zip ([URL=https://mega.nz/#!MIZW3QiB!ExgVwIBOghIlLbld2TyNHLnIafKpY0KURJC_VgyKUYY]mirror[/URL])
 [*][i]2012 v005 / Kehjan Labyrinth + Tathamet vs Anu / Hardened:[/i] http://www.mediafire.com/?4vkkq8jskza2btg
 [*][i]Ultimative XVc:[/i] https://www.mediafire.com/?do5byd95vbh2qp7

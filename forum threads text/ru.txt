@@ -58,16 +58,16 @@
 [/LIST]
 [/spoiler]
 
-[SIZE=4][COLOR=#6666ff]ПРЕДУПРЕЖДЕНИЕ: по умолчанию вы можете открывать только персонажей [B]Ultimative XVc[/B]. Если вы хотите открывать персонажей из других модов или версий, пожалуйста перейдите в секцию загрузок [B]Данные модов[/B].[/COLOR][/SIZE]
+[SIZE=4][COLOR=#6666ff]ПРЕДУПРЕЖДЕНИЕ: по умолчанию вы можете открывать только персонажей [B]Ultimative XVI[/B]. Если вы хотите открывать персонажей из других модов или версий, пожалуйста перейдите в секцию загрузок [B]Данные модов[/B].[/COLOR][/SIZE]
 
 [B]Загрузки[/B]:
 [LIST]
 [*][B]Приложение[/B]:
 [LIST]
-[*][I]Windows[/I] (XP SP 2 и позже): [URL]https://www.mediafire.com/?k47a3kbzd8444db[/URL] ([URL=https://mega.nz/#!gEAAiKIT!km0jQypTGqwxNUyZY573nphNmKvFdEpGD3j9W9cl7WQ]зеркало[/URL])
-[*][I]Mac OS X[/I] (10.5 и позже, универсальное приложение): [URL]https://www.mediafire.com/?qrdhz7cxdcju384[/URL] ([URL=https://mega.nz/#!5MhmXAKQ!cnAKGjEoTAOVSNroy9qEzinxctYWyWorPtSTUjbobUE]зеркало[/URL])
+[*][I]Windows[/I] (XP SP 2 и позже): [URL]http://www.mediafire.com/download/k47a3kbzd8444db/MedianXLOfflineTools_0.4.2.1.7z[/URL]
+[*][I]Mac OS X[/I] (10.5 и позже, универсальное приложение): [URL]http://www.mediafire.com/download/e8pg1xqnjex4vm8/MedianXLOfflineTools_mac_0.4.2.1.tbz[/URL]
 [/LIST]
-[*][B]Данные модов[/B] (инструкции по установке находятся ниже в Mini-FAQ; данные XVI НЕ включены в архив приложения):
+[*][B]Данные модов[/B] (инструкции по установке находятся ниже в Mini-FAQ):
 [LIST]
 [*][I]Ultimative XVI:[/I] [URL]http://www.mediafire.com/download/ffdkkzz7be694f2/ultimativeXVI.zip[/URL] ([URL=https://mega.nz/#!MIZW3QiB!ExgVwIBOghIlLbld2TyNHLnIafKpY0KURJC_VgyKUYY]зеркало[/URL])
 [*][I]2012 v005 / Лабиринт Кейджан + Тафамет против Ану / Hardened:[/I] [URL]http://www.mediafire.com/?4vkkq8jskza2btg[/URL]
