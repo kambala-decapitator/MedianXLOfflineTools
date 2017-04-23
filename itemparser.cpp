@@ -27,12 +27,12 @@ const QString &ItemParser::kEnhancedDamageFormat()
 }
 
 
-QString ItemParser::parseItemsToBuffer(quint16 itemsTotal, QDataStream &inputDataStream, const QByteArray &bytes, const QString &corruptedItemFormat, ItemsList *itemsBuffer)
+QString ItemParser::parseItemsToBuffer(quint16 itemsTotal, QDataStream &inputDataStream, const QByteArray &bytes, const QString &corruptedItemFormat, ItemsList *itemsBuffer, bool isPlugyStash /*= false*/)
 {
     QString corruptedItemsString;
     for (quint16 i = 0; i < itemsTotal; ++i)
     {
-        if (ItemInfo *item = ItemParser::parseItem(inputDataStream, bytes))
+        if (ItemInfo *item = ItemParser::parseItem(inputDataStream, bytes, isPlugyStash && i == itemsTotal - 1))
         {
             itemsBuffer->append(item);
 
@@ -45,7 +45,7 @@ QString ItemParser::parseItemsToBuffer(quint16 itemsTotal, QDataStream &inputDat
     return corruptedItemsString;
 }
 
-ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &bytes)
+ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &bytes, bool isLastItemOnPlugyPage /*= false*/)
 {
     ItemInfo *item = 0;
     ItemInfo::ParsingStatus status;
@@ -60,8 +60,8 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
         int nextItemOffset = bytes.indexOf(kItemHeader, searchEndOffset);
         if (nextItemOffset == -1)
             nextItemOffset = bytes.size();
-        else if (bytes.mid(nextItemOffset - 3, 2) == kPlugyPageHeader) // for plugy stashes
-            nextItemOffset -= 3;
+        else if (isLastItemOnPlugyPage)
+            nextItemOffset = bytes.lastIndexOf(kPlugyPageHeader, nextItemOffset);
         int itemSize = nextItemOffset - itemStartOffset;
         if (itemSize <= 0)
             break;
@@ -142,7 +142,7 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
                 item->quality = bitReader.readNumber(4);
                 if (bitReader.readBool())
                     item->variableGraphicIndex = bitReader.readNumber(3) + 1;
-                // entry in the appropriate affix table (were a 0 value indicate none)
+                // entry in the appropriate affix table (where a 0 value indicates none)
                 // is used for autoprefix and magic/rare/crafted/probably honorific items
                 if (bitReader.readBool()) // autoprefix
                     bitReader.skip(11);

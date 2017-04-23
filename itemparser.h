@@ -18,8 +18,8 @@ public:
     static const int kBeltMaxRows, kBeltMaxColumns, kInscribedNameCharacterLength;
     static const QString &kEnhancedDamageFormat(); // stupid lupdate
 
-    static QString parseItemsToBuffer(quint16 itemsTotal, QDataStream &inputDataStream, const QByteArray &bytes, const QString &corruptedItemFormat, ItemsList *itemsBuffer);
-    static ItemInfo *parseItem(QDataStream &inputDataStream, const QByteArray &bytes);
+    static QString parseItemsToBuffer(quint16 itemsTotal, QDataStream &inputDataStream, const QByteArray &bytes, const QString &corruptedItemFormat, ItemsList *itemsBuffer, bool isPlugyStash = false);
+    static ItemInfo *parseItem(QDataStream &inputDataStream, const QByteArray &bytes, bool isLastItemOnPlugyPage = false);
     static PropertiesMultiMap parseItemProperties(ReverseBitReader &bitReader, ItemInfo::ParsingStatus *status);
     static void convertParamsInMagicDamageString(ItemProperty *prop, ItemPropertyTxt *txtProp);
     static void createDisplayStringForPropertyWithId(int id, ItemProperty *prop);
