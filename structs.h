@@ -95,6 +95,7 @@ struct PlugyStashInfo
     quint8 version;
     bool hasGold;
     quint32 gold, lastPage;
+    QList<QPair<quint32, QByteArray> > pagesMetadata; // PlugY v11: flags + name
 };
 
 

@@ -629,7 +629,15 @@ void MedianXLOfflineTools::saveCharacter()
         }
 
         ItemsList::const_iterator maxPageIter = std::max_element(items.constBegin(), items.constEnd(), compareItemsByPlugyPage);
-        info.lastPage = maxPageIter == items.constEnd() ? 1 : (*maxPageIter)->plugyPage;
+        quint32 lastItemsPage = maxPageIter == items.constEnd() ? 1 : (*maxPageIter)->plugyPage;
+        bool hasMetadata = !info.pagesMetadata.isEmpty();
+        if (hasMetadata)
+        {
+            if (info.lastPage < lastItemsPage)
+                info.lastPage = lastItemsPage;
+        }
+        else
+            info.lastPage = lastItemsPage;
 
         QDataStream plugyFileDataStream(&inputFile);
         plugyFileDataStream.setByteOrder(QDataStream::LittleEndian);
@@ -641,7 +649,15 @@ void MedianXLOfflineTools::saveCharacter()
 
         for (quint32 page = 1; page <= info.lastPage; ++page)
         {
-            writeByteArrayDataWithNull(plugyFileDataStream, ItemParser::kPlugyPageHeader);
+            writeByteArrayDataWithoutNull(plugyFileDataStream, ItemParser::kPlugyPageHeader);
+            if (hasMetadata)
+            {
+                int i = page - 1;
+                QPair<quint32, QByteArray> metadata = i < info.pagesMetadata.length() ? info.pagesMetadata.at(i) : qMakePair(static_cast<quint32>(0), QByteArray());
+                plugyFileDataStream << metadata.first;
+                writeByteArrayDataWithoutNull(plugyFileDataStream, metadata.second);
+            }
+            plugyFileDataStream << static_cast<quint8>(0);
             writeByteArrayDataWithoutNull(plugyFileDataStream, ItemParser::kItemHeader);
 
             ItemsList pageItems = ItemDataBase::extractItemsFromPage(items, page);
@@ -2310,15 +2326,19 @@ void MedianXLOfflineTools::processPlugyStash(QHash<Enums::ItemStorage::ItemStora
             quint32 pageFlags;
             inputDataStream >> pageFlags;
 
+            QByteArray pageName;
             int strStart = inputDataStream.device()->pos(), strLength = bytes.indexOf('\0', strStart) - strStart;
             if (strLength)
             {
-                char *pageName = new char [strLength + 1];
-                inputDataStream.readRawData(pageName, strLength);
-                pageName[strLength] = '\0';
-                qDebug("page %u is named '%s'", page, pageName);
-                delete [] pageName;
+                char *pageNameStr = new char [strLength + 1];
+                inputDataStream.readRawData(pageNameStr, strLength);
+                pageNameStr[strLength] = '\0';
+                pageName = QByteArray(pageNameStr);
+                qDebug("page %u is named '%s'", page, pageNameStr);
+                delete [] pageNameStr;
             }
+
+            info.pagesMetadata << qMakePair(pageFlags, pageName);
         }
         inputDataStream.skipRawData(1); // \0
 
