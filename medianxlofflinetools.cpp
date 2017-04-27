@@ -2298,23 +2298,14 @@ void MedianXLOfflineTools::processPlugyStash(QHash<Enums::ItemStorage::ItemStora
     {
         if (bytes.mid(inputDataStream.device()->pos(), 2) != ItemParser::kPlugyPageHeader)
         {
-            qWarning() << "page" << page << "has wrong PlugY header";
-//            ERROR_BOX(tr("Page %1 of '%2' has wrong PlugY header").arg(page).arg(QFileInfo(info.path).fileName()));
+            ERROR_BOX(tr("Page %1 of '%2' has wrong PlugY header").arg(page).arg(QFileInfo(info.path).fileName()));
             return;
         }
         inputDataStream.skipRawData(2);
 
         // PlugY v11 adds flags (DWORD) and optional page name
         // https://github.com/ChaosMarc/PlugY/blob/master/PlugY/InfinityStash.cpp#L258
-        int afterPageHeaderPos = inputDataStream.device()->pos(), itemHeaderPos = bytes.indexOf(ItemParser::kItemHeader, afterPageHeaderPos);
-        if (itemHeaderPos == -1)
-        {
-            ERROR_BOX(tr("Page %1 of '%2' has wrong item header").arg(page).arg(QFileInfo(info.path).fileName()));
-            return;
-        }
-
-        int bytesInBetween = itemHeaderPos - afterPageHeaderPos;
-        if (bytesInBetween > 1)
+        if (bytes.mid(inputDataStream.device()->pos() + 1, 2) != ItemParser::kItemHeader)
         {
             quint32 pageFlags;
             inputDataStream >> pageFlags;
@@ -2323,12 +2314,20 @@ void MedianXLOfflineTools::processPlugyStash(QHash<Enums::ItemStorage::ItemStora
             if (strLength)
             {
                 char *pageName = new char [strLength + 1];
-                inputDataStream.readRawData(pageName, strLength + 1);
+                inputDataStream.readRawData(pageName, strLength);
+                pageName[strLength] = '\0';
                 qDebug("page %u is named '%s'", page, pageName);
                 delete [] pageName;
             }
         }
-        inputDataStream.device()->seek(itemHeaderPos + 2);
+        inputDataStream.skipRawData(1); // \0
+
+        if (bytes.mid(inputDataStream.device()->pos(), 2) != ItemParser::kItemHeader)
+        {
+            ERROR_BOX(tr("Page %1 of '%2' has wrong item header").arg(page).arg(QFileInfo(info.path).fileName()));
+            return;
+        }
+        inputDataStream.skipRawData(2);
 
         quint16 itemsOnPage;
         inputDataStream >> itemsOnPage;
