@@ -42,8 +42,6 @@ public:
     static const int kSkillsNumber, kDifficultiesNumber, kMaxRecentFiles;
     static const int kStatPointsPerLevel, kSkillPointsPerLevel;
 
-    static QByteArray getOsInfo(); // defined in platform-specific files
-
     MedianXLOfflineTools(const QString &cmdPath = QString(), QWidget *parent = 0, Qt::WindowFlags flags = 0);
     virtual ~MedianXLOfflineTools();
 
@@ -65,7 +63,6 @@ private slots:
     void updateFindResults();
 
     void networkReplyCheckForUpdateFinished(QNetworkReply *reply);
-    void networkReplySendOsInfoFinished(QNetworkReply *reply);
 
     void fileContentsChanged();
     void fileChangeTimerFired();
@@ -147,7 +144,7 @@ private:
     QVector<QStringList> mercNames;
     const QString kHackerDetected, maxValueFormat, minValueFormat, investedValueFormat, kForumThreadHtmlLinks;
 
-    QNetworkAccessManager *_qnamCheckForUpdate, *_qnamSendOsInfo;
+    QNetworkAccessManager *_qnamCheckForUpdate;
     bool _isManuallyCheckingForUpdate;
 
     QFileSystemWatcher *_fsWatcher;
@@ -229,7 +226,6 @@ private:
 
     void checkForUpdateFromForumUrl(const QUrl &url);
     void displayInfoAboutServerVersion(const QString &version);
-    void sendOsInfo();
 };
 
 #endif // MEDIANXLOFFLINETOOLS_H

@@ -175,14 +175,6 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *pare
     if (ui->actionCheckForUpdateOnStart->isChecked())
         checkForUpdate();
 
-    QSettings settings;
-#if defined(Q_OS_WIN32) || defined(Q_OS_MAC)
-   if (!settings.contains("osInfoWasSent"))
-        sendOsInfo();
-#else
-#warning Add implementation to get OS info to e.g. medianxlofflinetools_linux.cpp
-#endif
-
 #ifdef Q_OS_MAC
     QTimer::singleShot(2000, this, SLOT(moveUpdateActionToAppleMenu())); // needs a slight delay to create menu
 #endif
@@ -195,6 +187,7 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *pare
     else
     {
 #ifdef Q_OS_WIN32
+        QSettings settings;
         settings.beginGroup("recentItems");
         if (!settings.contains(kLastSavePathKey))
         {
@@ -2899,33 +2892,6 @@ void MedianXLOfflineTools::displayInfoAboutServerVersion(const QString &version)
         INFO_BOX(tr("New version <b>%1</b> is available!").arg(version) + kHtmlLineBreak + kHtmlLineBreak + kForumThreadHtmlLinks);
     else if (_isManuallyCheckingForUpdate)
         INFO_BOX(tr("You have the latest version"));
-}
-
-void MedianXLOfflineTools::sendOsInfo()
-{
-    QByteArray osInfo = getOsInfo();
-    if (!osInfo.isEmpty())
-    {
-        QNetworkRequest request(QUrl(kMedianXlServer + "stat.php"));
-        request.setHeader(QNetworkRequest::ContentTypeHeader, "application/x-www-form-urlencoded");
-
-        _qnamSendOsInfo = new QNetworkAccessManager;
-        connect(_qnamSendOsInfo, SIGNAL(finished(QNetworkReply *)), SLOT(networkReplySendOsInfoFinished(QNetworkReply *)));
-        qApp->processEvents(); // prevents UI from freezing
-        _qnamSendOsInfo->post(request, "hash=" + osInfo);
-    }
-}
-
-void MedianXLOfflineTools::networkReplySendOsInfoFinished(QNetworkReply *reply)
-{
-    if (!reply->error())
-    {
-        QSettings settings;
-        settings.setValue("osInfoWasSent", true); // value doesn't matter
-    }
-
-    reply->deleteLater();
-    _qnamSendOsInfo->deleteLater();
 }
 
 void MedianXLOfflineTools::fileContentsChanged()

@@ -35,26 +35,3 @@ void MedianXLOfflineTools::moveUpdateActionToAppleMenu()
 
     [pool release];
 }
-
-
-QByteArray MedianXLOfflineTools::getOsInfo()
-{
-    QProcess proc;
-
-    // Mac OS X
-    proc.start("sw_vers", QStringList() << "-productName", QProcess::ReadOnly);
-    proc.waitForFinished();
-    QByteArray result = proc.readAllStandardOutput().trimmed() + " ";
-
-    // 10.8.4
-    proc.start("sw_vers", QStringList() << "-productVersion", QProcess::ReadOnly);
-    proc.waitForFinished();
-    result += proc.readAllStandardOutput().trimmed() + " ";
-
-    // x86_64 i386
-    proc.start("uname", QStringList() << "-m" << "-p", QProcess::ReadOnly);
-    proc.waitForFinished();
-    result += proc.readAllStandardOutput().trimmed();
-
-    return result;
-}
