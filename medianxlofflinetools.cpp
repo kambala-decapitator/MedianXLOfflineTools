@@ -79,7 +79,7 @@ const int MedianXLOfflineTools::kMaxRecentFiles = 15;
 MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *parent, Qt::WindowFlags flags) : QMainWindow(parent, flags), ui(new Ui::MedianXLOfflineToolsClass), _findItemsDialog(0),
     _backupLimitsGroup(new QActionGroup(this)), _showDisenchantPreviewGroup(new QActionGroup(this)), _isLoaded(false), kHackerDetected(tr("1337 hacker detected! Please, play legit.")),
     maxValueFormat(tr("Max: %1")), minValueFormat(tr("Min: %1")), investedValueFormat(tr("Invested: %1")),
-    kForumThreadHtmlLinks(QString("<a href=\"http://www.medianxl.com/t83-median-xl-offline-tools\">%1</a><br><a href=\"http://worldofplayers.ru/threads/34489/\">%2</a>").arg(tr("Official Median XL Forum thread"), tr("Official Russian Median XL Forum thread"))),
+    kForumThreadHtmlLinks(QString("<a href=\"http://forum.median-xl.com/viewtopic.php?f=40&t=342\">%1</a><br><a href=\"http://worldofplayers.ru/threads/34489/\">%2</a>").arg(tr("Official Median XL Forum thread"), tr("Official Russian Median XL Forum thread"))),
     _fsWatcher(new QFileSystemWatcher(this)), _fileChangeTimer(0), _isFileChangedMessageBoxRunning(false)
 {
     ui->setupUi(this);
@@ -1130,12 +1130,12 @@ void MedianXLOfflineTools::checkForUpdate()
         reply->deleteLater();
     }
     else
-        checkForUpdateFromForumUrl(QUrl("http://www.medianxl.com/f16-median-xl-tools-informations"));
+        checkForUpdateFromForumUrl(QUrl("http://forum.median-xl.com/viewforum.php?f=40"));
 }
 
 void MedianXLOfflineTools::aboutApp()
 {
-    const QString appFullName = qApp->applicationName() + " v" + qApp->applicationVersion(), email("decapitator@ukr.net");
+    const QString appFullName = qApp->applicationName() + " v" + qApp->applicationVersion(), email("decapitator@ukr.net"), baseUserUrl("http://forum.median-xl.com/memberlist.php?mode=viewprofile&u");
 
     QMessageBox aboutBox(this);
     aboutBox.setWindowTitle(tr("About %1").arg(qApp->applicationName()));
@@ -1144,18 +1144,23 @@ void MedianXLOfflineTools::aboutApp()
     aboutBox.setText(QString("<b>%1</b>%2").arg(appFullName, kHtmlLineBreak)
         + tr("Compiled on: %1").arg(QLocale(QLocale::C).toDateTime(QString(__TIMESTAMP__).simplified(), "ddd MMM d hh:mm:ss yyyy").toString("dd.MM.yyyy hh:mm:ss")));
     aboutBox.setInformativeText(
-        tr("<i>Author:</i> Filipenkov Andrey (<b>kambala</b>)") + QString("%1<i>ICQ:</i> 287764961%1<i>E-mail:</i> <a href=\"mailto:%2?subject=%3\">%2</a>%1%1").arg(kHtmlLineBreak, email, appFullName)
+        tr("<b>Author:</b> Filipenkov Andrey aka <a href=\"%1=531\">kambala</a>", "arg is base URL").arg(baseUserUrl)
+        + QString(
+            "<ul>"
+              "<li>Telegram: <a href=\"http://telegram.me/kambala_decapitator\">@kambala_decapitator</a></li>"
+              "<li>E-mail: <a href=\"mailto:%1?subject=%2\">%1</a></li>"
+            "</ul>").arg(email, appFullName)
         + kForumThreadHtmlLinks + kHtmlLineBreak + kHtmlLineBreak
         + tr("<b>Credits:</b>"
              "<ul>"
                "<li><a href=\"http://modsbylaz.vn.cz/\">BrotherLaz</a> for this awesome mod</li>"
-               "<li><a href=\"http://www.medianxl.com/u1\">MarcoNecroX</a> for a hot extension of Median XL called <b>Ultimative</b></li>"
+               "<li><a href=\"%1=2\">MarcoNecroX</a> for a hot extension of Median XL called <b>Ultimative</b></li>"
                "<li>grig for the Perl source of <a href=\"http://grig.vlexofree.com/\">Median XL Online Tools</a> and tips</li>"
                "<li><a href=\"http://d2mods.info/index.php?ind=reviews&op=section_view&idev=4\">Phrozen Keep File Guides</a> for tons of useful information on txt sources</li>"
-               "<li><a href=\"http://www.medianxl.com/u152\">aahz</a> for providing space on MXL server</li>"
-               "<li><a href=\"http://www.medianxl.com/u5\">whist</a> for helping with txt magic and D2 internals</li>"
-               "<li>FixeR, Zelgadiss, moonra, Vilius, Delegus, aahz HerrNieschnell, Quirinus, RollsRoyce, Aks_kun and gAdlike for intensive testing and tips on GUI & functionality</li>"
-             "</ul>")
+               "<li><a href=\"%1=59\">aahz</a> for providing space on MXL server</li>"
+               "<li><a href=\"%1=64\">whist</a> for helping with txt magic and D2 internals</li>"
+               "<li>FixeR, Zelgadiss, moonra, Vilius, Delegus, aahz, HerrNieschnell, Quirinus, RollsRoyce, Aks_kun, Unremarkable and gAdlike for help, intensive testing and tips on GUI & functionality</li>"
+             "</ul>", "arg is base URL").arg(baseUserUrl)
     );
     aboutBox.exec();
 }
