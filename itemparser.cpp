@@ -61,7 +61,11 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
         if (nextItemOffset == -1)
             nextItemOffset = bytes.size();
         else if (isLastItemOnPlugyPage)
-            nextItemOffset = bytes.lastIndexOf(kPlugyPageHeader, nextItemOffset);
+        {
+            int possibleNextOffset = bytes.lastIndexOf(kPlugyPageHeader, nextItemOffset);
+            if (itemStartOffset < possibleNextOffset) // handle last page
+                nextItemOffset = possibleNextOffset;
+        }
         int itemSize = nextItemOffset - itemStartOffset;
         if (itemSize <= 0)
             break;
@@ -260,7 +264,7 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
                 QList<QByteArray> rwSocketableTypes;
                 for (int i = 0; i < item->socketablesNumber; ++i)
                 {
-                    ItemInfo *socketableInfo = parseItem(inputDataStream, bytes);
+                    ItemInfo *socketableInfo = parseItem(inputDataStream, bytes, isLastItemOnPlugyPage);
                     item->socketablesInfo += socketableInfo;
                     if (item->isRW && i >= item->socketablesNumber - 2) // get the last socket filler to obtain RW name (and previous one to prevent disambiguation)
                         rwSocketableTypes.prepend(socketableInfo->itemType == ItemDataBase::kJewelType && i != item->socketablesNumber - 1 ? QByteArray() : socketableInfo->itemType);

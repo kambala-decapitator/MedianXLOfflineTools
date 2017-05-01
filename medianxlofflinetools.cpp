@@ -2142,6 +2142,7 @@ bool MedianXLOfflineTools::processSaveFile()
 
     // parse plugy stashes
     QString oldSharedStashPath = _plugyStashesHash[ItemStorage::SharedStash].path, oldHCStashPath = _plugyStashesHash[ItemStorage::HCStash].path;
+    _plugyStashesHash.clear();
 
     QFileInfo charPathFileInfo(_charPath);
     QString charFolderPath = charPathFileInfo.absolutePath();
