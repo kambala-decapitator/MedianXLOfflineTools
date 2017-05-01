@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MedianXLOfflineTools", "MedianXLOfflineTools.vcxproj", "{404B1184-74CB-4E14-84B1-ACD5F06D3A67}"
 EndProject
 Global
@@ -18,7 +20,7 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
+		Qt5Version = 4.8.7
 		QtVersion = $(DefaultQtVersion)
-		Qt5Version = $(DefaultQtVersion)
 	EndGlobalSection
 EndGlobal

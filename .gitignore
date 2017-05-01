@@ -38,5 +38,6 @@ moc_*
 qrc_*
 ui_*
 *.o
+*.VC.*
 
 utils/txt_parser/CompressFiles*
