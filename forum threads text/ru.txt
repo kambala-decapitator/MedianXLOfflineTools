@@ -12,7 +12,7 @@
 [*]Hardened
 [/LIST]
 
-Приложение написано на C++ с использованием [URL='http://qt-project.org/']фреймворка Qt[/URL] (версии 4.8.5 на данный момент), так что можете даже не пытаться дотнетрефлекторнуть исходный код (а он не будет опубликован по очевидным причинам).
+Приложение написано на C++ с использованием [URL='https://www.qt.io']фреймворка Qt[/URL] (версии 4.8.5 на данный момент), так что можете даже не пытаться дотнетрефлекторнуть исходный код (а он не будет опубликован по очевидным причинам).
 
 Надеюсь я создал достаточную защиту от хаков для среднестатистического юзера. Но если же вам всё-таки удастся хакнуть персонажа и сохранить его через эту программу, пожалуйста сообщите мне об этом, чтоб я мог закрыть эту дыру :)
 
@@ -64,12 +64,12 @@
 [LIST]
 [*][B]Приложение[/B]:
 [LIST]
-[*][I]Windows[/I] (XP SP 2 и позже): [URL]http://www.mediafire.com/download/k47a3kbzd8444db/MedianXLOfflineTools_0.4.2.1.7z[/URL]
-[*][I]Mac OS X[/I] (10.5 и позже, универсальное приложение): [URL]http://www.mediafire.com/download/e8pg1xqnjex4vm8/MedianXLOfflineTools_mac_0.4.2.1.tbz[/URL]
+[*][I]Windows[/I] (XP SP3 и позже): [URL]http://www.mediafire.com/file/ddhu2bqt1h4g19g/MedianXLOfflineTools_0.4.3.7z[/URL] (если не запускается, установите MSVC++ 2015 Redistributable [URL=https://www.microsoft.com/en-us/download/details.aspx?id=52685]vc_redist.x86.exe[/URL])
+[*][I]Mac OS X[/I] (10.5 и позже, универсальное приложение): [URL]http://www.mediafire.com/file/6hrm6la5iixjna5/MedianXLOfflineTools_mac_0.4.3.tbz[/URL]
 [/LIST]
 [*][B]Данные модов[/B] (инструкции по установке находятся ниже в Mini-FAQ):
 [LIST]
-[*][I]Ultimative XVI:[/I] [URL]http://www.mediafire.com/download/ffdkkzz7be694f2/ultimativeXVI.zip[/URL] ([URL=https://mega.nz/#!MIZW3QiB!ExgVwIBOghIlLbld2TyNHLnIafKpY0KURJC_VgyKUYY]зеркало[/URL])
+[*][I]Ultimative XVI:[/I] [URL]http://www.mediafire.com/file/5ipow09n3lfd39d/ultimativeXVI.7z[/URL]
 [*][I]2012 v005 / Лабиринт Кейджан + Тафамет против Ану / Hardened:[/I] [URL]http://www.mediafire.com/?4vkkq8jskza2btg[/URL]
 [*][I]Ultimative XVc:[/I] [URL]https://www.mediafire.com/?do5byd95vbh2qp7[/URL]
 [*][I]Ultimative XIVb:[/I] [URL]https://www.mediafire.com/?lhdj51e1ac3661f[/URL]
@@ -118,12 +118,17 @@ cp -R resources/data/* "${APP_PATH}/Contents/resources/data"[/code]
 
 [B]История версий:[/B]
 
+[I]v0.4.3 (02.05.2017)[/I]
+[LIST]
+[*][+] поддержка PlugY v11
+[/LIST]
+
+[spoiler="предыдущие версии"]
 [I]v0.4.2.1 (06.03.2015)[/I]
 [LIST]
 [*][ф] нельзя забывать законы де Моргана
 [/LIST]
 
-[spoiler="предыдущие версии"]
 [I]v0.4.2 (23.02.2015)[/I]
 [LIST]
 [*][+] поддержка Ultimative XV (поддержка любого количества навыков персонажей)

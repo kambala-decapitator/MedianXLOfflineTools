@@ -9,7 +9,7 @@ Application should be able to load character from any version of Median XL and s
 [*]Ultimative XVI (v5+ characters should be compatible)
 [*]Kehjan Labyrinth + Tathamet vs Anu
 [*]Hardened[/list]
-It's written in C++ using the [url=http://qt-project.org]Qt framework[/url] (v4.8.5 as of current release), so don't hope to dotnetreflect the source code (and it won't be released for obvious reasons).
+It's written in C++ using the [url=https://www.qt.io]Qt framework[/url] (v4.8.5 as of current release), so don't hope to dotnetreflect the source code (and it won't be released for obvious reasons).
 
 I hope I provided enough anti-hack protection for an average user. If you manage to successfully hack your character and save him using this application, please report it to me so that I could fix the exploit :)
 
@@ -44,9 +44,9 @@ I hope I provided enough anti-hack protection for an average user. If you manage
 
 [b]Downloads[/b]:
 [list][*][b]Application[/b]:
-[list][*][i]Windows[/i] (XP SP 2 and later): http://www.mediafire.com/download/k47a3kbzd8444db/MedianXLOfflineTools_0.4.2.1.7z
-[*][i]Mac OS X[/i] (10.5 and later, universal binary): http://www.mediafire.com/download/e8pg1xqnjex4vm8/MedianXLOfflineTools_mac_0.4.2.1.tbz[/list][*][b]Mod data[/b] (find installation instructions in Mini-FAQ below):
-[list][*][i]Ultimative XVI:[/i] http://www.mediafire.com/download/ffdkkzz7be694f2/ultimativeXVI.zip ([URL=https://mega.nz/#!MIZW3QiB!ExgVwIBOghIlLbld2TyNHLnIafKpY0KURJC_VgyKUYY]mirror[/URL])
+[list][*][i]Windows[/i] (XP SP3 and later): http://www.mediafire.com/file/ddhu2bqt1h4g19g/MedianXLOfflineTools_0.4.3.7z (if it doesn't launch, install MSVC++ 2015 Redistributable [URL=https://www.microsoft.com/en-us/download/details.aspx?id=52685]vc_redist.x86.exe[/URL])
+[*][i]Mac OS X[/i] (10.5 and later, universal binary): http://www.mediafire.com/file/6hrm6la5iixjna5/MedianXLOfflineTools_mac_0.4.3.tbz[/list][*][b]Mod data[/b] (find installation instructions in Mini-FAQ below):
+[list][*][i]Ultimative XVI:[/i] http://www.mediafire.com/file/5ipow09n3lfd39d/ultimativeXVI.7z
 [*][i]2012 v005 / Kehjan Labyrinth + Tathamet vs Anu / Hardened:[/i] http://www.mediafire.com/?4vkkq8jskza2btg
 [*][i]Ultimative XVc:[/i] https://www.mediafire.com/?do5byd95vbh2qp7
 [*][i]Ultimative XIVb:[/i] https://www.mediafire.com/?lhdj51e1ac3661f[/list][/list]
@@ -88,11 +88,14 @@ A: Probably the character you had loaded last time became broken. To make the ap
 
 [b]Changelog[/b]:
 
-[i]v0.4.2.1 (06.03.2015)[/i]
-[list][f] one must never forget De Morgan's laws
+[i]v0.4.3 (02.05.2017)[/i]
+[list][+] PlugY v11 support
 [/list]
 Older versions:
-[spoil][i]v0.4.2 (23.02.2015)[/i]
+[spoil][i]v0.4.2.1 (06.03.2015)[/i]
+[list][f] one must never forget De Morgan's laws
+[/list]
+[i]v0.4.2 (23.02.2015)[/i]
 [list][+] Ultimative XV support (support for arbitrary character skill number actually)
 [+] Shrine Vessel management (collect/extract Shrines)
 [/list]
