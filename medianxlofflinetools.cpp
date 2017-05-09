@@ -1126,8 +1126,8 @@ void MedianXLOfflineTools::checkForUpdate()
 
     if (!reply->error())
     {
-        displayInfoAboutServerVersion(reply->readAll().trimmed());
         reply->deleteLater();
+        displayInfoAboutServerVersion(reply->readAll().trimmed());
     }
     else
         checkForUpdateFromForumUrl(QUrl("http://forum.median-xl.com/viewforum.php?f=40"));
