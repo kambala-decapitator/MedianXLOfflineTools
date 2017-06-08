@@ -1,7 +1,7 @@
 #!/usr/bin/env perl
 
 # original script copyright (C) grig 2011
-# improvements and modifications for Median XL Offline Tools copyright (C) kambala 2011-2016
+# improvements and modifications for Median XL Offline Tools copyright (C) kambala 2011-2017
 
 use strict;
 use warnings;
@@ -50,8 +50,8 @@ sub tblExpandHash
 }
 
 my $zeroRe = qr/^0$/;
-my %propertiesStatsHash; $propertiesStatsHash{"stat".($_ + 1)} = 6 + $_ * 4 for (0..6);
-my $properties = parsetxt("properties.txt", "#code"=>"0", param1 => 4, %propertiesStatsHash, '!_enabled' => {col => 1, val => $zeroRe});
+my %propertiesStatsHash; $propertiesStatsHash{"stat".($_ + 1)} = 7 + $_ * 4 for (0..6);
+my $properties = parsetxt("properties.txt", "#code"=>"0", param1 => 5, %propertiesStatsHash, '!_enabled' => {col => 1, val => $zeroRe});
 
 my $descArrayRef = [
     {key => "descstrpos", col => 43, expanded => "descPositive"},
@@ -114,7 +114,7 @@ sub statIdsFromPropertyStat
     return join(',', @ids)
 }
 
-my $uniques = parsetxt("uniqueitems.txt", _autoindex=>0, iName=>0, rlvl=>7, image=>24);
+my $uniques = parsetxt("uniqueitems.txt", _autoindex=>0, iName=>0, rlvl=>5, image=>64);
 &tblExpandArray($uniques, "iName");
 
 # any fixed property in .txt is defined with the following set of columns
@@ -239,10 +239,10 @@ my $monstats = parsetxt("monstats.txt", _autoindex=>"0", $nameStr=>5);
 
 # RW
 # dummy key $itemName is used when writing to file
-my %rwKeysHash = ($itemName => undef, itype1 => 1, rune1 => 16, rune2 => 17);
+my %rwKeysHash = ($itemName => undef, itype1 => 3, rune1 => 12, rune2 => 13);
 $rwKeysHash{"itype$_"} = $_ + 5 for (2..6);
-my $rw = parsetxt("runes.txt", _autoindex => 0, tbl => 0, '!_enabled' => {col => 3, val => $zeroRe},
-                  '!_rune' => {col => 16, val => qr/^jew$/}, %rwKeysHash);
+my $rw = parsetxt("runes.txt", _autoindex => 0, tbl => 0, '!_enabled' => {col => 1, val => $zeroRe},
+                  '!_rune' => {col => 12, val => qr/^jew$/}, %rwKeysHash);
 push(@$rw, {tbl => '09This', itype1 => 'weap', itype2 => 'armo', rune1 => 'jew'}); # yeah, it's a hack (jewelword)
 # fake hash to collect names from tbl
 my $fakeRwHash;
@@ -252,13 +252,13 @@ foreach my $elem (@$rw)
 }
 &tblExpandHash($fakeRwHash, $itemName);
 
-# skip lines that don't start with 'xsignet' at col 33 (AH in Excel) and are not for honorific/crafted recipe
+# skip lines that don't start with 'xsignet' at col 34 (AI in Excel) and are not for honorific/decoy recipe
 # 'value' field will contain either property value (including oskill level) or chance in ctc
 my $moStat = "xsignet";
-my $cubemain = parsetxt("cubemain.txt", '#_code' => 11, '!_enabled' => {col => 1, val => $zeroRe},
-                        '!_mo' => {col => 33, val => qr/^(?!$moStat)/},
-                        '!_honorific' => {col => 0, val => qr/^honorific/}, prop => 21, moStat => 33,
-                        param => 24, minValue => 25, maxValue => 26);
+my $cubemain = parsetxt("cubemain.txt", '#_code' => 12, '!_enabled' => {col => 1, val => $zeroRe},
+                        '!_mo' => {col => 34, val => qr/^(?!$moStat)/},
+                        '!_honorific' => {col => 0, val => qr/^Mystic Orbs\:/}, prop => 22, moStat => 34,
+                        param => 25, minValue => 26, maxValue => 27);
 
 # MO names and properties
 my $mos; # hashref with keys from ID column of itemstatcost
