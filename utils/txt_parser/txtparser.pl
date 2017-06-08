@@ -103,7 +103,8 @@ sub statIdsFromPropertyStat
         next unless defined $stat;
         for (0..scalar @$itemProperties)
         {
-            if ($itemProperties->[$_]->{stat} eq $stat)
+            my $propStat = $itemProperties->[$_]->{stat};
+            if (defined $propStat and $propStat eq $stat)
             {
                 push @ids, $_;
                 $$classSkillsParam = $properties->{$property}->{param1} if defined $classSkillsParam and $stat eq 'item_addclassskills';
@@ -392,8 +393,9 @@ print $out "#index\titem\trlvl\timage\n";
 my $count = -1;
 for my $hashRef (@$uniques)
 {
-    printf $out "%d\t%s\t%d\t%s\n", $count, $hashRef->{$realNameField}, $hashRef->{rlvl},
-        ($hashRef->{image} // '') if defined $hashRef->{$realNameField};
+    my $realName = $hashRef->{$realNameField};
+    printf $out "%d\t%s\t%d\t%s\n", $count, ($realName // ''), ($hashRef->{rlvl} // 0),
+        ($hashRef->{image} // '') if defined $realName;
     $count++
 }
 close $out;
@@ -678,7 +680,7 @@ sub parsetxt
                             $fieldName = $1;
                         }
                         my $s = $cols[$structure{$key}];
-                        _log("-> $fieldName<$structure{$key}>: '$s'\n");
+                        # _log("-> $fieldName<$structure{$key}>: '$s'\n");
                         if (defined $s and length $s > 0)
                         {
                             if (defined $indexValue)
