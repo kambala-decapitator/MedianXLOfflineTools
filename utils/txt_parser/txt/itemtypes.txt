@@ -9,9 +9,9 @@ Crossbow Quiver				xboq	misl		0	1	rarm	larm		xbow	0	1	0	1		1	0	0	0	0	0	0	0	0	3		
 Player Body Part				play	misc		0	0					0	0	0	0			1	1	0	0	0	0	0	0	3		0		0							misc	0
 Herb				herb	misc		0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0							misc	0
 Potion				poti	misc		0	0					0	0	0	0			1	0	0	1	0	0	0	0	3		0		0							misc	0
-Ring				ring	misc	dcht	0	1	rrin	lrin			0	0	0	0	1	1	0	0	0	0	0	0	0	0	3		1		5	invrin1	invrin2	invrin3	invrin4	invrin5		misc	0
+Ring				ring	riam	dcht	0	1	rrin	lrin			0	0	0	0	1	1	0	0	0	0	0	0	0	0	3		1		5	invrin1	invrin2	invrin3	invrin4	invrin5		misc	0
 Elixir				elix	misc		0	0					0	0	0	0			0	0	0	1	0	0	0	0	3		0		0							misc	0
-Amulet				amul	misc	hlm1	0	1	neck	neck			0	0	0	0	1	1	0	0	0	0	0	0	0	0	3		1		3	invamu1	invamu2	invamu3				misc	0
+Amulet				amul	riam	hlm1	0	1	neck	neck			0	0	0	0	1	1	0	0	0	0	0	0	0	0	3		1		3	invamu1	invamu2	invamu3				misc	0
 Charm				char	misc		0	0					0	0	0	0			0	1	0	0	0	0	0	0	3		0		3	invch1	invch4	invch7				misc	0
 Not Used							0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
 Boots				boot	armo	hlm1	1	1	feet	feet			0	0	0	0		1	0	0	0	0	4	4	4	0	3		1		0							armo	0
@@ -44,18 +44,18 @@ Key				key	misc		0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0							misc	0
 Throwing Knife				tkni	comb	knif	1	1	rarm	larm			1	1	1	1		1	0	0	0	0	6	6	6	0	3		0		0							misc	0
 Throwing Axe				taxe	comb	axe	1	1	rarm	larm			1	1	1	1		1	0	0	0	0	6	6	6	0	3		0		0							misc	0
 Javelin				jave	comb	spea	1	1	rarm	larm			1	1	1	1		1	0	0	0	0	6	6	6	0	3		0		0							misc	0
-Weapon				weap	dcht		0	0					0	0	0	0		1	0	0	0	0	0	0	0	1	3		0		0								0
+Weapon				weap	myor		0	0					0	0	0	0		1	0	0	0	0	0	0	0	1	3		0		0								0
 Melee Weapon				mele	weap		0	0					0	0	0	0		1	0	0	0	0	0	0	0	1	3		0		0								0
 Missile Weapon				miss	weap		0	0					0	0	0	0		1	0	0	0	0	0	0	0	0	3		0		0								0
 Thrown Weapon				thro	weap		0	0					1	0	0	0		1	0	0	0	0	0	0	0	0	3		0		0								0
 Combo Weapon				comb	mele	thro	0	0					1	0	0	0		1	0	0	0	0	0	0	0	0	3		0		0								0
-Any Armor				armo	dcht		0	0					0	0	0	0		1	0	0	0	0	0	0	0	1	3		0		0								0
+Any Armor				armo	myor		0	0					0	0	0	0		1	0	0	0	0	0	0	0	1	3		0		0								0
 Any Shield				shld	armo	seco	0	0					0	0	0	0		1	0	0	0	0	0	0	0	0	3		0		0								0
 Miscellaneous				misc			0	0					0	0	0	0		1	0	0	0	0	0	0	0	0	3		0		0								0
 Socket Filler				sock	misc		0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
 Second Hand				seco			0	0					0	0	0	0		1	0	0	0	0	0	0	0	0	3		0		0								0
 Staves And Rods				rod	blun		0	0					0	0	0	0		1	0	0	0	0	0	0	0	0	3		0		0								0
-Missile				misl	misc	dcht	0	0					0	0	0	0			0	0	0	0	1	1	1	0	3		0		0								0
+Missile				misl	misc	myor	0	0					0	0	0	0			0	0	0	0	1	1	1	0	3		0		0								0
 Blunt				blun	mele		0	0					0	0	0	0		1	0	0	0	0	0	0	0	0	3		0		0								0
 Expansion																																							0
 Jewel				jewl	sock	dcht	0	0					0	0	0	0	1	1	0	0	1	0	0	0	0	0	3		0		6	invjw1	invjw2	invjw3	invjw4	invjw5	invjw6	misc	0
@@ -224,15 +224,16 @@ Amber				geml	gem		0	0					0	0	0	0			1	0	1	0	0	0	0	0	3		0		0							misc	0
 Mega Ring				kill	misc		0	1	rrin	lrin			0	0	0	0	1	1	0	0	0	0	0	0	0	0	3		1		5	invrin1	invrin2	invrin3	invrin4	invrin5		misc	0
 New Helm				helm	armo	hlm1	1	1	head	head			0	0	0	0		1	0	0	0	0	6	6	6	0	3		1		0							armo	0
 Tier (1-6)	shard shatter			tier			0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
-Craft Sacred Minor (Armor)	shrine craft/bless			ct1a	ssgl		0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
-Craft Sacred Major (Armor)	shrine craft/bless			ct2a	ssgl		0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
-Craft Sacred Minor (Weapon)	shrine craft/bless			ct1w	ssgl		0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
-Craft Sacred Major (Weapon)	shrine craft/bless			ct2w	ssgl		0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
+Craft Sacred Minor (Armor)	shrine craft/bless			ct1a	ssgl	ct1x	0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
+Craft Sacred Major (Armor)	shrine craft/bless			ct2a	ssgl	ct2x	0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
+Craft Sacred Minor (Weapon)	shrine craft/bless			ct1w	ssgl	ct1x	0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
+Craft Sacred Major (Weapon)	shrine craft/bless			ct2w	ssgl	ct2x	0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
+Craft Sacred Minor	shrine craft/bless			ct1x	ssgl		0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
+Craft Sacred Major	shrine craft/bless			ct2x	ssgl		0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
 Sacred Bow	Sky Siege			#bow	bow		0	1	rarm	larm	bowq		0	0	0	0		1	0	0	0	0	0	0	0	1	2		0		0							weap	0
 Mass Disenchant	for arcane crystals/shards			dcht			0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
 Sacred Group	for learning signets			ssgl			0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
 Unique Mystic orb	cube reagent			asa#			0	0					0	0	0	0			1	0	0	0	0	0	0	0	3		0		0							misc	0
-Mystic Sword	quest			####	mele		0	1	rarm				0	0	0	0		1	0	0	0	0	0	0	0	0	0		0		0							weap	0
 Druid Gift Box				dbox	fbox		0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
 Necro Gift Box				nbox	fbox		0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
 Pala Gift Box				pbox	fbox		0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
@@ -242,7 +243,7 @@ SpecialBox				fbox			0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
 PhysicalBox				phbx			0	0					0	0	0	0	1	1	0	0	0	0	0	0	0	0	3		0		0								0
 Portable Shrine				prsh	thng		0	0					0	0	0	0			1	0	0	0	0	0	0	0	3		0		0							misc	0
 Active Shrine (10 Charges)				sh10	prsh		0	0					0	0	0	0			1	0	0	0	0	0	0	0	3		0		0							misc	0
-Mystic Sword	quest			####	mele		0	1	rarm				0	0	0	0		1	0	0	0	0	0	0	0	0	0		0		0								0
+Mystic Sword	quest			####	mele		0	1	rarm				0	0	0	0		1	0	0	0	0	0	0	0	0	0		0		0							weap	0
 Yshari Ring				###1	ring		0	1	rrin	lrin			0	0	0	0		1	0	0	0	0	0	0	0	0	0		0		2	lab_rn1	lab_rn2						0
 Yshari Amulet				###2	amul		0	1	neck	neck			0	0	0	0		1	0	0	0	0	0	0	0	0	0		0		0								0
 Yshari Shield				###4	qshi		0	1	rarm	larm			0	0	0	0		1	0	0	0	0	0	0	0	0	0		0		0								0
@@ -252,3 +253,5 @@ Yshari Gloves				###7	qglv		0	1	glov	glov			0	0	0	0		1	0	0	0	0	0	0	0	0	0		0		0		
 Yshari Belt				###6	qblt		0	1	belt	belt			0	0	0	0		1	0	0	0	0	0	0	0	0	0		0		0								0
 Yshari Helm				###5	qhlm		0	1	head	head			0	0	0	0		1	0	0	0	0	0	0	0	0	0		0		0								0
 Shrine Container				shco	thng		0	0					0	0	0	0	1	1	0	0	0	0	0	0	0	0	3		0		0								0
+Mystic Orbable				myor	dcht		0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
+Rings and Amulets				riam	misc	myor	0	0					0	0	0	0		1	0	0	0	0	0	0	0	0	3		0		0								0
