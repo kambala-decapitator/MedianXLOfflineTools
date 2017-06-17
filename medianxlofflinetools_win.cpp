@@ -9,53 +9,6 @@
 
 #define SHELL32_HANDLE GetModuleHandle(L"shell32.dll")
 
-// WinXP toolchain doesn't define consts below
-#ifndef PRODUCT_CORE_N
-#define PRODUCT_CORE_N                              0x00000062
-#endif
-#ifndef PRODUCT_CORE_COUNTRYSPECIFIC
-#define PRODUCT_CORE_COUNTRYSPECIFIC                0x00000063
-#endif
-#ifndef PRODUCT_PROFESSIONAL_WMC
-#define PRODUCT_PROFESSIONAL_WMC                    0x00000067
-#endif
-#ifndef PRODUCT_CORE
-#define PRODUCT_CORE                                0x00000065
-#endif
-#ifndef PRODUCT_DATACENTER_EVALUATION_SERVER
-#define PRODUCT_DATACENTER_EVALUATION_SERVER        0x00000050
-#endif
-#ifndef PRODUCT_ENTERPRISE_EVALUATION
-#define PRODUCT_ENTERPRISE_EVALUATION               0x00000048
-#endif
-#ifndef PRODUCT_ENTERPRISE_N_EVALUATION
-#define PRODUCT_ENTERPRISE_N_EVALUATION             0x00000054
-#endif
-#ifndef PRODUCT_CORE_SINGLELANGUAGE
-#define PRODUCT_CORE_SINGLELANGUAGE                 0x00000064
-#endif
-#ifndef PRODUCT_EMBEDDED_AUTOMOTIVE
-#define PRODUCT_EMBEDDED_AUTOMOTIVE                 0x00000055
-#endif
-#ifndef PRODUCT_EMBEDDED_INDUSTRY_A
-#define PRODUCT_EMBEDDED_INDUSTRY_A                 0x00000056
-#endif
-#ifndef PRODUCT_EMBEDDED_A
-#define PRODUCT_EMBEDDED_A                          0x00000058
-#endif
-#ifndef PRODUCT_EMBEDDED_INDUSTRY
-#define PRODUCT_EMBEDDED_INDUSTRY                   0x00000059
-#endif
-#ifndef PRODUCT_EMBEDDED_E
-#define PRODUCT_EMBEDDED_E                          0x0000005A
-#endif
-#ifndef PRODUCT_EMBEDDED_INDUSTRY_E
-#define PRODUCT_EMBEDDED_INDUSTRY_E                 0x0000005B
-#endif
-#ifndef PRODUCT_EMBEDDED_INDUSTRY_A_E
-#define PRODUCT_EMBEDDED_INDUSTRY_A_E               0x0000005C
-#endif
-
 typedef HRESULT (__stdcall *PSCPEAUMID)(PCWSTR); // SetCurrentProcessExplicitAppUserModelID()
 #ifdef WIN_7_OR_LATER
 typedef HRESULT (__stdcall *PSHCIFPN)(PCWSTR, IBindCtx *, const IID &, void **); // SHCreateItemFromParsingName()
