@@ -6,10 +6,11 @@
 
 Приложение должно грузить персонажа из любой версии Median XL и успешно выполнять над ним базовые операции типа сброса атрибутов/навыков. Обработка предметов полагается на исходники мода, а потому может быть несовместима с персонажем из другой версии. Эти данные не зашиты в программу, потому когда выйдет новая версия мода, программу не нужно перекомпилировать — обычно достаточно просто заменить файлы в 'resources/data' новыми, которые я выложу. Текущие поддерживаемые версии:
 [LIST]
-[*]Median XL 2012 v005 (более ранние версии тоже должны работать)
+[*]Median XL 2017.003
 [*]Ultimative XVI (персонажи из v5+ должны быть совместимыми)
 [*]Kehjan Labyrinth + Tathamet vs Anu [Лабиринт Кейджан + Тафамет против Ану]
 [*]Hardened
+[*]Median XL 2012 v005 (более ранние версии тоже должны работать)
 [/LIST]
 
 Приложение написано на C++ с использованием [URL='https://www.qt.io']фреймворка Qt[/URL] (версии 4.8.5 на данный момент), так что можете даже не пытаться дотнетрефлекторнуть исходный код (а он не будет опубликован по очевидным причинам).
@@ -58,21 +59,20 @@
 [/LIST]
 [/spoiler]
 
-[SIZE=4][COLOR=#6666ff]ПРЕДУПРЕЖДЕНИЕ: по умолчанию вы можете открывать только персонажей [B]Ultimative XVI[/B]. Если вы хотите открывать персонажей из других модов или версий, пожалуйста перейдите в секцию загрузок [B]Данные модов[/B].[/COLOR][/SIZE]
+[SIZE=4][COLOR=#6666ff]ПРЕДУПРЕЖДЕНИЕ: по умолчанию вы можете открывать только персонажей [B]Median XL 2017.003[/B]. Если вы хотите открывать персонажей из других модов или версий, пожалуйста перейдите в секцию загрузок [B]Данные модов[/B].[/COLOR][/SIZE]
 
 [B]Загрузки[/B]:
 [LIST]
 [*][B]Приложение[/B]:
 [LIST]
-[*][I]Windows[/I] (XP SP3 и позже): [URL]http://www.mediafire.com/file/ddhu2bqt1h4g19g/MedianXLOfflineTools_0.4.3.7z[/URL] (если не запускается, установите MSVC++ 2015 Redistributable [URL=https://www.microsoft.com/en-us/download/details.aspx?id=52685]vc_redist.x86.exe[/URL])
-[*][I]Mac OS X[/I] (10.5 и позже, универсальное приложение): [URL]http://www.mediafire.com/file/6hrm6la5iixjna5/MedianXLOfflineTools_mac_0.4.3.tbz[/URL]
+[*][I]Windows[/I] (XP SP3 и позже): [URL]https://www.mediafire.com/?bf55oj2yk7nvho5[/URL] (если не запускается, установите MSVC++ 2015 Redistributable [FONT=Courier New]vc_redist.x[B]86[/B].exe[/FONT] с [URL=https://www.mediafire.com/?84qc8d5dy3cd9f6]Mediafire[/URL] или с [URL=https://www.microsoft.com/en-us/download/details.aspx?id=52685]сайта Microsoft[/URL])
+[*][I]Mac OS X[/I] (10.5 и позже, универсальное приложение): [URL]http://www.mediafire.com/file/ozmekiq326auq81/MedianXLOfflineTools_mac_0.4.4.tbz[/URL]
 [/LIST]
 [*][B]Данные модов[/B] (инструкции по установке находятся ниже в Mini-FAQ):
 [LIST]
+[*][I]2017.003:[/I] [URL]http://www.mediafire.com/file/kx42aa84catexta/2017-003.zip[/URL]
 [*][I]Ultimative XVI:[/I] [URL]http://www.mediafire.com/file/5ipow09n3lfd39d/ultimativeXVI.7z[/URL]
 [*][I]2012 v005 / Лабиринт Кейджан + Тафамет против Ану / Hardened:[/I] [URL]http://www.mediafire.com/?4vkkq8jskza2btg[/URL]
-[*][I]Ultimative XVc:[/I] [URL]https://www.mediafire.com/?do5byd95vbh2qp7[/URL]
-[*][I]Ultimative XIVb:[/I] [URL]https://www.mediafire.com/?lhdj51e1ac3661f[/URL]
 [/LIST]
 [/LIST]
 
@@ -118,12 +118,18 @@ cp -R resources/data/* "${APP_PATH}/Contents/resources/data"[/code]
 
 [B]История версий:[/B]
 
+[I]v0.4.4 (28.06.2017)[/I]
+[LIST]
+[*][+] поддержка Median XL 2017
+[*][ф] исправлен вылет программы при закрытии диалога обновления в Windows
+[/LIST]
+
+[spoiler="предыдущие версии"]
 [I]v0.4.3 (02.05.2017)[/I]
 [LIST]
 [*][+] поддержка PlugY v11
 [/LIST]
 
-[spoiler="предыдущие версии"]
 [I]v0.4.2.1 (06.03.2015)[/I]
 [LIST]
 [*][ф] нельзя забывать законы де Моргана

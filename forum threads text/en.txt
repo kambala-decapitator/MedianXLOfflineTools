@@ -5,10 +5,11 @@
 As you can guess from the title, it's an almost complete offline analogue of grig's [url=http://grig.vlexofree.com/]Median XL Online Tools[/url], but with nice additions.
 
 Application should be able to load character from any version of Median XL and successfully perform basic operations with it like respeccing. Items processing relies on the mod source files, so it may not be compatible with any chacarcter from different version. This data is softcoded, so when a new mod version is released, usually there's no need to recompile the application - one just needs to replace the data found in 'resources/data' with the new one, which I will provide. Currently supported mod versions:
-[list][*]Median XL 2012 v005 (earlier versions should also work)
+[list][*]Median XL 2017.003
 [*]Ultimative XVI (v5+ characters should be compatible)
 [*]Kehjan Labyrinth + Tathamet vs Anu
-[*]Hardened[/list]
+[*]Hardened
+[*]Median XL 2012 v005 (earlier versions should also work)[/list]
 It's written in C++ using the [url=https://www.qt.io]Qt framework[/url] (v4.8.5 as of current release), so don't hope to dotnetreflect the source code (and it won't be released for obvious reasons).
 
 I hope I provided enough anti-hack protection for an average user. If you manage to successfully hack your character and save him using this application, please report it to me so that I could fix the exploit :)
@@ -40,16 +41,15 @@ I hope I provided enough anti-hack protection for an average user. If you manage
 [*]update check
 [*]single instance[/list][*]and many others ;)[/list][/spoil]
 
-[size=18][color=#6666ff]WARNING: by default you can open only characters from [b]Ultimative XVI[/b]. If you want to open characters from other mods/mod versions, please refer to the [b]Mod data[/b] download section.[/color][/size]
+[size=18][color=#6666ff]WARNING: by default you can open only characters from [b]Median XL 2017.003[/b]. If you want to open characters from other mods/mod versions, please refer to the [b]Mod data[/b] download section.[/color][/size]
 
 [b]Downloads[/b]:
 [list][*][b]Application[/b]:
-[list][*][i]Windows[/i] (XP SP3 and later): http://www.mediafire.com/file/ddhu2bqt1h4g19g/MedianXLOfflineTools_0.4.3.7z (if it doesn't launch, install MSVC++ 2015 Redistributable [URL=https://www.microsoft.com/en-us/download/details.aspx?id=52685]vc_redist.x86.exe[/URL])
-[*][i]Mac OS X[/i] (10.5 and later, universal binary): http://www.mediafire.com/file/6hrm6la5iixjna5/MedianXLOfflineTools_mac_0.4.3.tbz[/list][*][b]Mod data[/b] (find installation instructions in Mini-FAQ below):
-[list][*][i]Ultimative XVI:[/i] http://www.mediafire.com/file/5ipow09n3lfd39d/ultimativeXVI.7z
-[*][i]2012 v005 / Kehjan Labyrinth + Tathamet vs Anu / Hardened:[/i] http://www.mediafire.com/?4vkkq8jskza2btg
-[*][i]Ultimative XVc:[/i] https://www.mediafire.com/?do5byd95vbh2qp7
-[*][i]Ultimative XIVb:[/i] https://www.mediafire.com/?lhdj51e1ac3661f[/list][/list]
+[list][*][i]Windows[/i] (XP SP3 and later): https://www.mediafire.com/?bf55oj2yk7nvho5 (if it doesn't launch, install MSVC++ 2015 Redistributable vc_redist.x[c]86[/c].exe from [url=https://www.mediafire.com/?84qc8d5dy3cd9f6]Mediafire[/url] or from [url=https://www.microsoft.com/en-us/download/details.aspx?id=52685]Microsoft's website[/url])
+[*][i]Mac OS X[/i] (10.5 and later, universal binary): http://www.mediafire.com/file/ozmekiq326auq81/MedianXLOfflineTools_mac_0.4.4.tbz[/list][*][b]Mod data[/b] (find installation instructions in Mini-FAQ below):
+[list][*][i]2017.003:[/i] http://www.mediafire.com/file/kx42aa84catexta/2017-003.zip
+[*][i]Ultimative XVI:[/i] http://www.mediafire.com/file/5ipow09n3lfd39d/ultimativeXVI.7z
+[*][i]2012 v005 / Kehjan Labyrinth + Tathamet vs Anu / Hardened:[/i] http://www.mediafire.com/?4vkkq8jskza2btg[/list][/list]
 
 [b]Mini-FAQ:[/b]
 [spoil]Q: I can't unrar the distributed archive without errors :(
@@ -88,11 +88,15 @@ A: Probably the character you had loaded last time became broken. To make the ap
 
 [b]Changelog[/b]:
 
-[i]v0.4.3 (02.05.2017)[/i]
-[list][+] PlugY v11 support
+[i]v0.4.4 (28.06.2017)[/i]
+[list][+] Median XL 2017 support
+[f] fixed crash after closing update dialog on Windows
 [/list]
 Older versions:
-[spoil][i]v0.4.2.1 (06.03.2015)[/i]
+[spoil][i]v0.4.3 (02.05.2017)[/i]
+[list][+] PlugY v11 support
+[/list]
+[i]v0.4.2.1 (06.03.2015)[/i]
 [list][f] one must never forget De Morgan's laws
 [/list]
 [i]v0.4.2 (23.02.2015)[/i]
