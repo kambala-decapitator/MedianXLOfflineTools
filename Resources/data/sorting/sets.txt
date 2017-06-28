@@ -49,10 +49,18 @@
 292-293 # Lazarus' Authority (broken server set)
 
 # Ultimative
-# tribute
-299-301,314         # Necromancer Summoner (Archbishop Lazarus - [BrotherLaz  Tribute Set])
-308-312             # Elemental            (Cowboys From Hell  - [MarcoNecroX Tribute Set])
-303,305-306,316-317 # Fire                 (All Is One         - [Community   Tribute Set])
+# former tribute
+299-301,314         # Archbishop Lazarus
+308-312             # Henchmen Trophies
+303,305,316-317,328 # Curse of the Zakarum
 # Yshari
 318-322 # Yshari Bosses'  Set (Brotherhood of the Vizjerei)
 323-327 # Yshari Minions' Set (Brotherhood of the Horadrim)
+
+# 2017
+329-333 # papa  - Yaerius' Grey Omen
+334-338 # ama   - Zerae's Divinity
+339-343 # dudu  - Marchosias' Essence
+344-348 # baba  - Tundra Walker
+349-353 # necro - Celestial Orchard
+354-358 # ass   - Universal Law

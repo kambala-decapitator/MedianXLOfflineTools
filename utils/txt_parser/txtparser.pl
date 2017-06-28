@@ -172,18 +172,24 @@ my %setsPropertiesHash, my @setsPropertiesKeys;
 &getSetFixedPropertiesHash(38, 8, \%setsPropertiesHash, \@setsPropertiesKeys, 'full_'); # full ones
 
 my $oldSetCond = qr/^old LoD$/;
-my $sets = parsetxt("sets.txt", "#key" => 0, '!_lodSet' => {col => 2, val => $oldSetCond}, %setsPropertiesHash);
+my $sets = parsetxt("sets.txt", "#key" => 0, tbl => 1, '!_lodSet' => {col => 2, val => $oldSetCond}, %setsPropertiesHash);
 &expandSetProperties(\@setsPropertiesKeys, $sets->{$_}) for (keys %$sets);
 
 my %greenPropertiesHash, my @greenPropertiesKeys;
 &getSetFixedPropertiesHash(57, 10, \%greenPropertiesHash, \@greenPropertiesKeys);
-my $setItems = parsetxt("setitems.txt", _autoindex=>0, iIName=>0, iSName=>1, rlvl=>8, image=>11, addfunc=>20,
+my $setItems = parsetxt("setitems.txt", _autoindex=>0, iIName=>0, setKey=>1, rlvl=>8, image=>11, addfunc=>20,
                         %greenPropertiesHash, '!_lodSet' => {col => 6, val => $oldSetCond});
 &tblExpandArray($setItems, "iIName", "IName");
-&tblExpandArray($setItems, "iSName", "SName");
+
+my $setTblKey = 'setTblKey';
+for (@$setItems)
+{
+    $_->{$setTblKey} = $sets->{$_->{setKey}}->{tbl} if defined $_->{setKey};
+}
+&tblExpandArray($setItems, $setTblKey, "SName");
 
 my $mxlSets, my $setIndex = 0, my $oldIndex = -3;
-my @setFields = qw/IName SName iSName rlvl image/;
+my @setFields = qw/IName SName setKey rlvl image/;
 for my $setItem (@$setItems)
 {
     $oldIndex++;
@@ -416,7 +422,7 @@ print $out "#index\titem\tset\tkey\trlvl\timage\t".join("\t", @greenPropertiesKe
 for my $set (@$mxlSets)
 {
     printf $out "%d\t%s\t%s\t%s\t%d\t%s", $set->{index}, $set->{IName}, $set->{SName},
-        $set->{iSName}, ($set->{rlvl} // 0), ($set->{image} // '');
+        $set->{setKey}, ($set->{rlvl} // 0), ($set->{image} // '');
     print $out "\t".($set->{$_} // '') for (@greenPropertiesKeys);
     print $out "\n"
 }

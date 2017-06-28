@@ -235,7 +235,7 @@ QHash<uint, SetItemInfo *> *ItemDataBase::Sets()
         while (!buf.atEnd())
         {
             QList<QByteArray> data = stringArrayOfCurrentLineInFile(buf);
-            if (data.isEmpty())
+            if (data.size() < 2)
                 continue;
 
             FullSetInfo &info = _sets[data.at(0)];
