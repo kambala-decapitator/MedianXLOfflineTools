@@ -20,13 +20,13 @@ xbow						Питон	r16
 xbow						Циклоп	r29		
 xbow						Тартар	r44		
 xbow						Аработ	r45		
-knif						Королевская Кровь	r26		
+knif			tkni			Королевская Кровь	r26		
 scyh						Эндор	r31		
 swor						Урада	r46		
 axe						Саблезубый	r48		
 scyh						Зерно Конфликта	r49		
 spea						Мирмидонец	r29		
-mace						Демхе	r33		
+mace			hamm			Демхе	r33		
 hamm						Калипсо	r37		
 staf						Мир Мистики	r04		
 staf						Хадад	r11		
@@ -47,7 +47,7 @@ aspe						Санкара	r34
 aspe						Русалка	r46		
 aspe						Исчезновение	r51		
 ajav						Шрам	r16		
-ajav						Стрекоза	r26		
+ajav						Светлячок	r26		
 ajav						Тришула	r34		
 ajav						Сталактит	r52		
 abow						Корсар	r15		
@@ -64,13 +64,13 @@ h2h						Ноема	r52
 nagi						Хаттак	r08		
 nagi						Иерогамия	r46		
 nagi						Шесть Тонкостей	r52		
-bswd	baxe					Овен	r10		
-bswd	baxe					Эссус	r22		
-bswd	baxe					Громовержец	r32		
-bswd	baxe					Савитар	r37		
-bswd	baxe					Хан	r43		
-bswd	baxe					Лахму	r49		
-bswd	baxe					Кахлесс	r51		
+bswd						Овен	r10		
+bswd						Эссус	r22		
+bswd						Громовержец	r32		
+bswd						Савитар	r37		
+bswd						Хан	r43		
+bswd						Лахму	r49		
+bswd						Кахлесс	r51		
 dbow						Павлин	r13		
 dbow						Рысь	r27		
 dbow						Лесное Свечение	r33		
@@ -108,11 +108,11 @@ nxbw						Атлантида	r19
 nxbw						Эфир	r31		
 nxbw						Тигель	r46		
 nxbw						Кронос	r51		
-pclb	pmac	pham				Джихад	r05		
-pclb	pmac	pham				Интифада	r15		
-pclb	pmac	pham				Ламмасу	r25		
-pclb	pmac	pham				Брахман	r39		
-pclb	pmac	pham				Орифламма	r51		
+pclb						Джихад	r05		
+pclb						Интифада	r15		
+pclb						Ламмасу	r25		
+pclb						Брахман	r39		
+pclb						Орифламма	r51		
 pspe						Асы	r12		
 pspe						Нехуштан	r27		
 pspe						Такийя	r40		
@@ -141,7 +141,7 @@ helm						Пушечное Ядро	r08
 helm						Ра	r17		
 helm						Алхимия	r26		
 helm						Повелитель Ужаса	r35		
-helm						Котел	r44		
+helm						Болотные Брызги	r44		
 helm						Эйдолон	r51		
 circ						Сфинкс	r11		
 circ						Лилия	r31		
@@ -227,201 +227,21 @@ stor						Оракул	r40
 stor						Тщеславие	r47		
 stor						Комефо	r50		
 stor						Венефика	r53		
-weap						Камнеслово!	5$a		
-weap						Камнеслово!	5$b		
-weap						Камнеслово!	5$c		
-weap						Камнеслово!	5$d		
-weap						Камнеслово!	5$e		
-weap						Камнеслово!	7$a		
-weap						Камнеслово!	7$b		
-weap						Камнеслово!	7$c		
-weap						Камнеслово!	7$d		
-weap						Камнеслово!	7$e		
-weap						Камнеслово!	9$a		
-weap						Камнеслово!	9$b		
-weap						Камнеслово!	9$c		
-weap						Камнеслово!	9$d		
-weap						Камнеслово!	9$e		
-weap						Камнеслово!	g$a		
-weap						Камнеслово!	g$b		
-weap						Камнеслово!	g$c		
-weap						Камнеслово!	g$d		
-weap						Камнеслово!	g$e		
-weap						Камнеслово!	gcb		
-weap						Камнеслово!	gcg		
-weap						Камнеслово!	gcr		
-weap						Камнеслово!	gcv		
-weap						Камнеслово!	gcw		
-weap						Камнеслово!	gcy		
-weap						Камнеслово!	gfb		
-weap						Камнеслово!	gfg		
-weap						Камнеслово!	gfr		
-weap						Камнеслово!	gfv		
-weap						Камнеслово!	gfw		
-weap						Камнеслово!	gfy		
-weap						Камнеслово!	glb		
-weap						Камнеслово!	glg		
-weap						Камнеслово!	glr		
-weap						Камнеслово!	glw		
-weap						Камнеслово!	gly		
-weap						Камнеслово!	gpb		
-weap						Камнеслово!	gpg		
-weap						Камнеслово!	gpr		
-weap						Камнеслово!	gpv		
-weap						Камнеслово!	gpw		
-weap						Камнеслово!	gpy		
-weap						Камнеслово!	gsb		
-weap						Камнеслово!	gsg		
-weap						Камнеслово!	gsr		
-weap						Камнеслово!	gsv		
-weap						Камнеслово!	gsw		
-weap						Камнеслово!	gsy		
-weap						Камнеслово!	gzv		
-weap						Камнеслово!	skc		
-weap						Камнеслово!	skf		
-weap						Камнеслово!	skl		
-weap						Камнеслово!	sku		
-weap						Камнеслово!	skz		
-weap						Камнеслово!	yo1		
-weap						Камнеслово!	yo2		
-weap						Камнеслово!	yo3		
-weap						Камнеслово!	yo4		
-weap						Камнеслово!	yo5		
-armo						Камнеслово!	5$a		
-armo						Камнеслово!	5$b		
-armo						Камнеслово!	5$c		
-armo						Камнеслово!	5$d		
-armo						Камнеслово!	5$e		
-armo						Камнеслово!	7$a		
-armo						Камнеслово!	7$b		
-armo						Камнеслово!	7$c		
-armo						Камнеслово!	7$d		
-armo						Камнеслово!	7$e		
-armo						Камнеслово!	9$a		
-armo						Камнеслово!	9$b		
-armo						Камнеслово!	9$c		
-armo						Камнеслово!	9$d		
-armo						Камнеслово!	9$e		
-armo						Камнеслово!	g$a		
-armo						Камнеслово!	g$b		
-armo						Камнеслово!	g$c		
-armo						Камнеслово!	g$d		
-armo						Камнеслово!	g$e		
-armo						Камнеслово!	gcb		
-armo						Камнеслово!	gcg		
-armo						Камнеслово!	gcr		
-armo						Камнеслово!	gcv		
-armo						Камнеслово!	gcw		
-armo						Камнеслово!	gcy		
-armo						Камнеслово!	gfb		
-armo						Камнеслово!	gfg		
-armo						Камнеслово!	gfr		
-armo						Камнеслово!	gfv		
-armo						Камнеслово!	gfw		
-armo						Камнеслово!	gfy		
-armo						Камнеслово!	glb		
-armo						Камнеслово!	glg		
-armo						Камнеслово!	glr		
-armo						Камнеслово!	glw		
-armo						Камнеслово!	gly		
-armo						Камнеслово!	gpb		
-armo						Камнеслово!	gpg		
-armo						Камнеслово!	gpr		
-armo						Камнеслово!	gpv		
-armo						Камнеслово!	gpw		
-armo						Камнеслово!	gpy		
-armo						Камнеслово!	gsb		
-armo						Камнеслово!	gsg		
-armo						Камнеслово!	gsr		
-armo						Камнеслово!	gsv		
-armo						Камнеслово!	gsw		
-armo						Камнеслово!	gsy		
-armo						Камнеслово!	gzv		
-armo						Камнеслово!	skc		
-armo						Камнеслово!	skf		
-armo						Камнеслово!	skl		
-armo						Камнеслово!	sku		
-armo						Камнеслово!	skz		
-armo						Камнеслово!	yo1		
-armo						Камнеслово!	yo2		
-armo						Камнеслово!	yo3		
-armo						Камнеслово!	yo4		
-armo						Камнеслово!	yo5		
-shie	shld					Камнеслово!	5$a		
-shie	shld					Камнеслово!	5$b		
-shie	shld					Камнеслово!	5$c		
-shie	shld					Камнеслово!	5$d		
-shie	shld					Камнеслово!	5$e		
-shie	shld					Камнеслово!	7$a		
-shie	shld					Камнеслово!	7$b		
-shie	shld					Камнеслово!	7$c		
-shie	shld					Камнеслово!	7$d		
-shie	shld					Камнеслово!	7$e		
-shie	shld					Камнеслово!	9$a		
-shie	shld					Камнеслово!	9$b		
-shie	shld					Камнеслово!	9$c		
-shie	shld					Камнеслово!	9$d		
-shie	shld					Камнеслово!	9$e		
-shie	shld					Камнеслово!	g$a		
-shie	shld					Камнеслово!	g$b		
-shie	shld					Камнеслово!	g$c		
-shie	shld					Камнеслово!	g$d		
-shie	shld					Камнеслово!	g$e		
-shie	shld					Камнеслово!	gcb		
-shie	shld					Камнеслово!	gcg		
-shie	shld					Камнеслово!	gcr		
-shie	shld					Камнеслово!	gcv		
-shie	shld					Камнеслово!	gcw		
-shie	shld					Камнеслово!	gcy		
-shie	shld					Камнеслово!	gfb		
-shie	shld					Камнеслово!	gfg		
-shie	shld					Камнеслово!	gfr		
-shie	shld					Камнеслово!	gfv		
-shie	shld					Камнеслово!	gfw		
-shie	shld					Камнеслово!	gfy		
-shie	shld					Камнеслово!	glb		
-shie	shld					Камнеслово!	glg		
-shie	shld					Камнеслово!	glr		
-shie	shld					Камнеслово!	glw		
-shie	shld					Камнеслово!	gly		
-shie	shld					Камнеслово!	gpb		
-shie	shld					Камнеслово!	gpg		
-shie	shld					Камнеслово!	gpr		
-shie	shld					Камнеслово!	gpv		
-shie	shld					Камнеслово!	gpw		
-shie	shld					Камнеслово!	gpy		
-shie	shld					Камнеслово!	gsb		
-shie	shld					Камнеслово!	gsg		
-shie	shld					Камнеслово!	gsr		
-shie	shld					Камнеслово!	gsv		
-shie	shld					Камнеслово!	gsw		
-shie	shld					Камнеслово!	gsy		
-shie	shld					Камнеслово!	gzv		
-shie	shld					Камнеслово!	skc		
-shie	shld					Камнеслово!	skf		
-shie	shld					Камнеслово!	skl		
-shie	shld					Камнеслово!	sku		
-shie	shld					Камнеслово!	skz		
-shie	shld					Камнеслово!	yo1		
-shie	shld					Камнеслово!	yo2		
-shie	shld					Камнеслово!	yo3		
-shie	shld					Камнеслово!	yo4		
-shie	shld					Камнеслово!	yo5		
 nagi						Шамо	r16		
 bow						Амок	r09		
-bswd	baxe					Гараник	r33		
+bswd						Гараник	r33		
 phlm						Фоукс	r33		
 azhm						Благая Богиня	r19		
 ishd						Ямба	r23		
 pelt						Эгипан	r09		
-bswd	baxe					Анак	r41		
+bswd						Анак	r41		
 tors						Палиак	r10		
 stor						Черный Древень	r11		
 bow						Шершень	r17		
 glov						Гул	r16		
 head						Lorelei	r38		
 scyh						Атлакамани	r37		
-pclb	pmac	pham				Такфир	r34		
+pclb						Такфир	r34		
 stor						Кассильда	r54		
 azsd						Эос	r54		
 weap						Адрамелех	r54		
@@ -438,8 +258,8 @@ ishd						Орхидея	r55
 staf						Зодиак	r55		
 bow						Звездная Пыль	r55		
 h2h						Джокер	r55		
-bswd	baxe					Гильгамеш	r55		
-pclb	pmac	pham				Щит и Друг	r55		
+bswd						Гильгамеш	r55		
+pclb						Щит и Друг	r55		
 wand						Криптия	r55		
 scrd						Взмах Звезд	r55		
 orb						Саурон	r55		
@@ -464,11 +284,11 @@ bow						Никта	r26
 staf						Лесальф	r30		
 scep						Йокулмордер	r36		
 xbow						Участь	r41		
-bswd	baxe					Скарн	r40		
+bswd						Скарн	r40		
 abow						Эрида	r37		
 aspe						Титаномахия	r24		
 ajav						Херфьотур	r41		
-pclb	pmac	pham				Кваоар	r29		
+pclb						Кваоар	r29		
 nscy						Ивентайд	r36		
 orb						Головокружение	r22		
 dbow						Таркек	r38		
@@ -484,8 +304,8 @@ nstf						Стикс	r56
 staf						Господи, помилуй	r51	r51	
 tors						Пигмалион	r52	r52	
 weap						Архангел	r53	r53	
-glov	boot					Жулик	r54	r54	
-helm	shld					Шах и Мат	r55	r55	
+glov						Жулик	r54	r54	
+helm						Шах и Мат	r55	r55	
 taxe						Кадьяк	r55		
 basd						Тонатиу	r55		
 tkni						Тау	r55		
@@ -496,7 +316,7 @@ taxe						Раптор	r40
 nscy						Лемурия	r20		
 abow						Аспект	r13		
 phlm						Экам	r27		
-knif						Крыса	r37		
+knif			tkni	nknf		Крыса	r37		
 axe						Инстинкт	r27		
 taxe						Громовое Облако	r51		
 taxe						Гепард	r02		
@@ -513,14 +333,14 @@ jave						Турнир	r40
 jave						Хастур	r51		
 jave						Хастин	r55		
 tors						Спасибо всем!\nMedian 2005-2012\nВечность	r51	r52	
-weap						Раздробленный Камень	r58	r58	
-bow						Дыхание Мертвеца	r62	r62	
+weap			nscy	taxe	aspe	Раздробленный Камень	r58	r58	
+bow			dbow			Дыхание Мертвеца	r62	r62	
 xbow						Оптоволокно	r61	r61	
 swor						Минное Поле	r57	r57	
-axe						Прикосновение Мидаса	r59	r59	
-spea						Бессимптомный	r60	r60	
+axe			taxe			Прикосновение Мидаса	r59	r59	
+spea			pspe			Бессимптомный	r60	r60	
 scyh						Солярион	r60	r60	
-knif						Ледышка Малика	r62	r62	
+knif			tkni			Ледышка Малика	r62	r62	
 mace						Арахнофилия	r60	r60	
 hamm						Нейрогенезис	r61	r61	
 staf						Рука Мороза	r62	r62	
@@ -533,7 +353,7 @@ ajav						Устройство Аскари	r57	r57
 aspe						Блеск	r58	r58	
 h2h						Совершенство	r59	r59	
 nagi						Кровавый Танцор	r59	r59	
-bswd	baxe					Эльдруин	r62	r62	
+bswd						Эльдруин	r62	r62	
 2hbx						Солдат Света	r61	r61	
 dbow						Амфибия	r62	r62	
 dstf						Флюгер Фиакла-Гира	r61	r61	
@@ -543,11 +363,11 @@ wand						Роковой Страж	r59	r59
 nstf						Ксазакс	r57	r57	
 nxbw						Сила Мысли	r59	r59	
 pspe						Покровитель Хадриэля	r60	r60	
-pclb	pham	pmac				Суд	r57	r57	
+pclb						Суд	r57	r57	
 orb						Хелгрота	r60	r60	
 scrd						Темный Исход	r62	r62	
 tors						Пластины Адского Огня	r57	r57	
-helm						Громовая Шляпа	r61	r61	
+helm			phlm			Громовая Шляпа	r61	r61	
 circ						Благословение Ратмы	r62	r62	
 shld						Покровитель Халима	r60	r60	
 belt						Лисра	r57	r57	
@@ -634,10 +454,10 @@ bow						Рой	r30	r98
 xbow						Таммуз	r04	r98	
 xbow						Питон	r16	r98	
 xbow						Циклоп	r29	r98	
-knif						Королевская Кровь	r26	r98	
+knif			tkni			Королевская Кровь	r26	r98	
 scyh						Эндор	r31	r98	
 spea						Мирмидонец	r29	r98	
-mace						Демхе	r33	r98	
+mace			hamm			Демхе	r33	r98	
 staf						Мир Мистики	r04	r98	
 staf						Хадад	r11	r98	
 staf						Сумманус	r19	r98	
@@ -648,16 +468,16 @@ scep						Иуда	r22	r98
 scep						Путь	r30	r98	
 aspe						Аегина	r11	r98	
 ajav						Шрам	r16	r98	
-ajav						Стрекоза	r26	r98	
+ajav						Светлячок	r26	r98	
 abow						Корсар	r15	r98	
 abow						Ледокол	r29	r98	
 h2h						Шедим	r02	r98	
 h2h						Изверг	r17	r98	
 h2h						Судья	r27	r98	
 nagi						Хаттак	r08	r98	
-bswd	baxe					Овен	r10	r98	
-bswd	baxe					Эссус	r22	r98	
-bswd	baxe					Громовержец	r32	r98	
+bswd						Овен	r10	r98	
+bswd						Эссус	r22	r98	
+bswd						Громовержец	r32	r98	
 dbow						Павлин	r13	r98	
 dbow						Рысь	r27	r98	
 dbow						Лесное Свечение	r33	r98	
@@ -678,21 +498,21 @@ wand						Упырь	r20	r98
 nxbw						Джинн	r08	r98	
 nxbw						Атлантида	r19	r98	
 nxbw						Эфир	r31	r98	
-pclb	pmac	pham				Джихад	r05	r98	
-pclb	pmac	pham				Интифада	r15	r98	
-pclb	pmac	pham				Ламмасу	r25	r98	
+pclb						Джихад	r05	r98	
+pclb						Интифада	r15	r98	
+pclb						Ламмасу	r25	r98	
 pspe						Нехуштан	r27	r98	
 orb						Цирцея	r11	r98	
 orb						Керы	r20	r98	
 scrd						Инанна	r12	r98	
 nagi						Шамо	r16	r98	
 bow						Амок	r09	r98	
-bswd	baxe					Гараник	r33	r98	
+bswd						Гараник	r33	r98	
 bow						Шершень	r17	r98	
 bow						Никта	r26	r98	
 staf						Лесальф	r30	r98	
 aspe						Титаномахия	r24	r98	
-pclb	pmac	pham				Кваоар	r29	r98	
+pclb						Кваоар	r29	r98	
 orb						Головокружение	r22	r98	
 nstf						Эвринома	r17	r98	
 h2h						Бунт	r22	r98	
@@ -714,4 +534,10 @@ jave						Набег	r10	r98
 jave						Хастата	r20	r98	
 jave						Спешка	r30	r98	
 pspe						Асы	r12	r98	
+xbow						(Секрет)\nВерховентсво	r57	r61	
+staf						(Секрет)\nПолзание	r60	r59	
+scyh						(Секрет)\nSouthern Trendkill	r58	r62	
+spea						(Секрет)\nМирные Продажи	r61	r57	
+scep						(Секрет)\nЧерный Пес	r59	r58	
+tors						(Секрет)\nЛонгвью	r62	r60	
 weap	armo					Секретный Бонус Драгоценного Камня!	jew		

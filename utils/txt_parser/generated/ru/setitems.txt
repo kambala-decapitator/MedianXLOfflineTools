@@ -171,20 +171,19 @@
 296	Обезьяний Череп	Завещание Обезьян	MSTestament of the Apes	100																																									
 297	Обезьянья Рука	Завещание Обезьян	MSTestament of the Apes	100																																									
 298	Обезьянья Нога	Завещание Обезьян	MSTestament of the Apes	100																																									
-299	Риза Лаза	\orange;[Комплект-Посвящение BrotherLaz'у]\n\gold;Архиепископ Лазарус	Set_Lazbro	100																																									
-300	Стихарьская Шапка Лаза	\orange;[Комплект-Посвящение BrotherLaz'у]\n\gold;Архиепископ Лазарус	Set_Lazbro	100																																									
-301	Исполненный По Обету Светоч Лаза	\orange;[Комплект-Посвящение BrotherLaz'у]\n\gold;Архиепископ Лазарус	Set_Lazbro	100																																									
-303	Владычество xarugas'а	\orange;[Комплект-Посвящение Сообществу]\n\gold;Все Как Один	Set_xaru	100																																									
-305	Триумф Stealthmaster'а	\orange;[Комплект-Посвящение Сообществу]\n\gold;Все Как Один	Set_xaru	100																																									
-306	Greg's Silent Scream [LEGACY]	NO SET	NO SET	666																																									
-308	\gold;Наташа, Ассассин	\orange;[Комплект-Посвящение MarcoNecroX'у]\n\gold;Ковбои Из Ада	Set_PewPew	100	set_pewpew1																																								
-309	\gold;Бесстрашный, Варвар	\orange;[Комплект-Посвящение MarcoNecroX'у]\n\gold;Ковбои Из Ада	Set_PewPew	100	set_pewpew2																																								
-310	\gold;Несуществующий, Паладин	\orange;[Комплект-Посвящение MarcoNecroX'у]\n\gold;Ковбои Из Ада	Set_PewPew	100	set_pewpew3																																								
-311	\gold;Зоология, Амазонка	\orange;[Комплект-Посвящение MarcoNecroX'у]\n\gold;Ковбои Из Ада	Set_PewPew	100	set_pewpew4																																								
-312	\gold;Таня, Колдунья	\orange;[Комплект-Посвящение MarcoNecroX'у]\n\gold;Ковбои Из Ада	Set_PewPew	100	set_pewpew5																																								
-314	Ламен Лаза	\orange;[Комплект-Посвящение BrotherLaz'у]\n\gold;Архиепископ Лазарус	Set_Lazbro	100																																									
-316	Фенрирово Милосердие Segolia	\orange;[Комплект-Посвящение Сообществу]\n\gold;Все Как Один	Set_xaru	100																																									
-317	Партизанская Борьба rad82	\orange;[Комплект-Посвящение Сообществу]\n\gold;Все Как Один	Set_xaru	100																																									
+299	Риза Лазаря	Архиепископ Лазарь	Set_Lazbro	100																																									
+300	Стихарьская Шапка Лазаря	Архиепископ Лазарь	Set_Lazbro	100																																									
+301	Исполненный По Обету Светоч Лазаря	Архиепископ Лазарь	Set_Lazbro	100																																									
+303	Величесво Измаила	Проклятие Закарума	Set_xaru	100																																									
+305	Вероломство Ваянда	Проклятие Закарума	Set_xaru	100																																									
+308	Кожа Желчелея Распорядителя	Трофеи Прихвостней	Set_PewPew	100	set_pewpew1																																								
+309	Рога Черного Черепа	Трофеи Прихвостней	Set_PewPew	100	set_pewpew2																																								
+310	Хребет Облака Обречения	Трофеи Прихвостней	Set_PewPew	100	set_pewpew3																																								
+311	Когти Звездного Глаза	Трофеи Прихвостней	Set_PewPew	100	set_pewpew4																																								
+312	Чешуя Кожаного Клыка	Трофеи Прихвостней	Set_PewPew	100	set_pewpew5																																								
+314	Ламен Лазаря	Архиепископ Лазарь	Set_Lazbro	100																																									
+316	Безумие Маффера	Проклятие Закарума	Set_xaru	100																																									
+317	Возмездие Бремма	Проклятие Закарума	Set_xaru	100																																									
 318	Страж Хоразона	Братство Визжири	Set_labrynth	120	lab_armor																																								
 319	Клинок Валтека	Братство Визжири	Set_labrynth	120																																									
 320	Конвой Нор Тиража	Братство Визжири	Set_labrynth	120	lab_shield																																								
@@ -195,34 +194,34 @@
 325	Алмаз Джереда Каина	Братство Хорадримов	Set_labrynth2	120	lab_rn1																																								
 326	Самоцвет Декарда Каина	Братство Хорадримов	Set_labrynth2	120	lab_rn2																																								
 327	Талисман Тал Раши	Братство Хорадримов	Set_labrynth2	120	lab_amu																																								
-328	Безмолвный Крик Greg'а	\orange;[Комплект-Посвящение Сообществу]\n\gold;Все Как Один	Set_xaru	100																																									
-329	Медитация Яэриуса	MSSelathiel Archives	MSSelathiel Archives	100																																									
-330	Перегонный Куб Яэриуса	MSSelathiel Archives	MSSelathiel Archives	100																																									
-331	Ложь Яэриуса	MSSelathiel Archives	MSSelathiel Archives	100																																									
-332	Подобие Яэриуса	MSSelathiel Archives	MSSelathiel Archives	100																																									
-333	Копье Яэриуса	MSSelathiel Archives	MSSelathiel Archives	100																																									
-334	Благословение Зере	MSZeraes Divinity	MSZeraes Divinity	100																																									
-335	Очищение Зере	MSZeraes Divinity	MSZeraes Divinity	100																																									
-336	Защита Зере	MSZeraes Divinity	MSZeraes Divinity	100																																									
-337	Искупление Зере	MSZeraes Divinity	MSZeraes Divinity	100																																									
-338	Святой Гнев Зере	MSZeraes Divinity	MSZeraes Divinity	100																																									
+328	Жадность Джелеба	Проклятие Закарума	Set_xaru	100																																									
+329	Медитация Яэриуса	Серое Предзнаменование Яэриуса	MSSelathiel Archives	100																																									
+330	Перегонный Куб Яэриуса	Серое Предзнаменование Яэриуса	MSSelathiel Archives	100																																									
+331	Ложь Яэриуса	Серое Предзнаменование Яэриуса	MSSelathiel Archives	100																																									
+332	Подобие Яэриуса	Серое Предзнаменование Яэриуса	MSSelathiel Archives	100																																									
+333	Копье Яэриуса	Серое Предзнаменование Яэриуса	MSSelathiel Archives	100																																									
+334	Благословение Зере	Божественность Зере	MSZeraes Divinity	100																																									
+335	Очищение Зере	Божественность Зере	MSZeraes Divinity	100																																									
+336	Защита Зере	Божественность Зере	MSZeraes Divinity	100																																									
+337	Искупление Зере	Божественность Зере	MSZeraes Divinity	100																																									
+338	Святой Гнев Зере	Божественность Зере	MSZeraes Divinity	100																																									
 339	Ненависть Маркосиаса	Сущность Маркосиаса	MREssence	100																																									
 340	Сила Маркосиаса	Сущность Маркосиаса	MREssence	100																																									
 341	Зловещий Оскал Маркосиаса	Сущность Маркосиаса	MREssence	100																																									
 342	Обман Маркосиаса	Сущность Маркосиаса	MREssence	100																																									
 343	Гнев Маркосиаса	Сущность Маркосиаса	MREssence	100																																									
-344	Степная Соня	MSTundra Walker	MSTundra Walker	100																																									
-345	Древняя Бронза	MSTundra Walker	MSTundra Walker	100																																									
-346	Серебрянный Снег	MSTundra Walker	MSTundra Walker	100																																									
-347	Серый Рейнджер	MSTundra Walker	MSTundra Walker	100																																									
-348	Долинный Охотник	MSTundra Walker	MSTundra Walker	100																																									
+344	Степная Соня	Тундровый Бродяга	MSTundra Walker	100																																									
+345	Древняя Бронза	Тундровый Бродяга	MSTundra Walker	100																																									
+346	Серебрянный Снег	Тундровый Бродяга	MSTundra Walker	100																																									
+347	Серый Рейнджер	Тундровый Бродяга	MSTundra Walker	100																																									
+348	Долинный Охотник	Тундровый Бродяга	MSTundra Walker	100																																									
 349	Луна Лириан	Небесный Сад	MSOrchard	100																																									
 350	Обманщик	Небесный Сад	MSOrchard	100																																									
 351	Крестец Гиюа	Небесный Сад	MSOrchard	100																																									
 352	Могила Дракона	Небесный Сад	MSOrchard	100																																									
 353	Череп Пророка	Небесный Сад	MSOrchard	100																																									
-354	Скошенная Доля	MSUniversalLaw	MSUniversalLaw	100																																									
-355	Мертвая Линза	MSUniversalLaw	MSUniversalLaw	100	invbshu																																								
-356	Мировая Линия	MSUniversalLaw	MSUniversalLaw	100																																									
-357	Гиперповерхность	MSUniversalLaw	MSUniversalLaw	100																																									
-358	Убивающий Вектор	MSUniversalLaw	MSUniversalLaw	100	invaxfu																																								
+354	Скошенная Доля	Универсальный Закон	MSUniversalLaw	100																																									
+355	Мертвая Линза	Универсальный Закон	MSUniversalLaw	100	invbshu																																								
+356	Мировая Линия	Универсальный Закон	MSUniversalLaw	100																																									
+357	Гиперповерхность	Универсальный Закон	MSUniversalLaw	100																																									
+358	Убивающий Вектор	Универсальный Закон	MSUniversalLaw	100	invaxfu																																								

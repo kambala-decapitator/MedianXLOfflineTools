@@ -171,20 +171,19 @@
 296	Apeskull	Testament of the Apes	MSTestament of the Apes	100																																									
 297	Apehand	Testament of the Apes	MSTestament of the Apes	100																																									
 298	Apefoot	Testament of the Apes	MSTestament of the Apes	100																																									
-299	Laz's Chasuble	\orange;[BrotherLaz Tribute Set]\n\gold;Archbishop Lazarus	Set_Lazbro	100																																									
-300	Laz's Surplice Cap	\orange;[BrotherLaz Tribute Set]\n\gold;Archbishop Lazarus	Set_Lazbro	100																																									
-301	Laz's Votive Lamp	\orange;[BrotherLaz Tribute Set]\n\gold;Archbishop Lazarus	Set_Lazbro	100																																									
-303	xarugas' Dominion	\orange;[Community Tribute Set]\n\gold;All Is One	Set_xaru	100																																									
-305	Stealthmaster's Triumph	\orange;[Community Tribute Set]\n\gold;All Is One	Set_xaru	100																																									
-306	Greg's Silent Scream [LEGACY]	NO SET	NO SET	666																																									
-308	\gold;Natasha, the Assassin	\orange;[MarcoNecroX Tribute Set]\n\gold;Cowboys From Hell	Set_PewPew	100	set_pewpew1																																								
-309	\gold;fearless, the Barbarian	\orange;[MarcoNecroX Tribute Set]\n\gold;Cowboys From Hell	Set_PewPew	100	set_pewpew2																																								
-310	\gold;MISSINGNO, the Paladin	\orange;[MarcoNecroX Tribute Set]\n\gold;Cowboys From Hell	Set_PewPew	100	set_pewpew3																																								
-311	\gold;Zoology, the Amazon	\orange;[MarcoNecroX Tribute Set]\n\gold;Cowboys From Hell	Set_PewPew	100	set_pewpew4																																								
-312	\gold;Tanya, the Sorceress	\orange;[MarcoNecroX Tribute Set]\n\gold;Cowboys From Hell	Set_PewPew	100	set_pewpew5																																								
-314	Laz's Lamen	\orange;[BrotherLaz Tribute Set]\n\gold;Archbishop Lazarus	Set_Lazbro	100																																									
-316	Segolia's Fenrir's Mercy	\orange;[Community Tribute Set]\n\gold;All Is One	Set_xaru	100																																									
-317	rad's Guerrilla Warfare 	\orange;[Community Tribute Set]\n\gold;All Is One	Set_xaru	100																																									
+299	Lazarus' Chasuble	Archbishop Lazarus	Set_Lazbro	100																																									
+300	Lazarus' Surplice Cap	Archbishop Lazarus	Set_Lazbro	100																																									
+301	Lazarus' Votive Lamp	Archbishop Lazarus	Set_Lazbro	100																																									
+303	Ismail's Majesty	Curse of the Zakarum	Set_xaru	100																																									
+305	Wyand's Perfidy	Curse of the Zakarum	Set_xaru	100																																									
+308	Bilefroth Skin	Henchmen Trophies	Set_PewPew	100	set_pewpew1																																								
+309	Blackskull's Horns	Henchmen Trophies	Set_PewPew	100	set_pewpew2																																								
+310	Doomcloud Spine	Henchmen Trophies	Set_PewPew	100	set_pewpew3																																								
+311	Stareye's Claws	Henchmen Trophies	Set_PewPew	100	set_pewpew4																																								
+312	Fangskin Scales	Henchmen Trophies	Set_PewPew	100	set_pewpew5																																								
+314	Lazarus' Lamen	Archbishop Lazarus	Set_Lazbro	100																																									
+316	Maffer's Frenzy	Curse of the Zakarum	Set_xaru	100																																									
+317	Bremm's Retribution	Curse of the Zakarum	Set_xaru	100																																									
 318	Horazon's Guard	Brotherhood of the Vizjerei	Set_labrynth	120	lab_armor																																								
 319	Valthek's Blade	Brotherhood of the Vizjerei	Set_labrynth	120																																									
 320	Nor Tiraj's Safeguard	Brotherhood of the Vizjerei	Set_labrynth	120	lab_shield																																								
@@ -195,34 +194,34 @@
 325	Jered Cain's Diamond	Brotherhood of the Horadrim	Set_labrynth2	120	lab_rn1																																								
 326	Deckard Cain's Gem	Brotherhood of the Horadrim	Set_labrynth2	120	lab_rn2																																								
 327	Tal Rasha's Talisman	Brotherhood of the Horadrim	Set_labrynth2	120	lab_amu																																								
-328	Greg's Silent Scream	\orange;[Community Tribute Set]\n\gold;All Is One	Set_xaru	100																																									
-329	Yaerius' Mediation	MSSelathiel Archives	MSSelathiel Archives	100																																									
-330	Yaerius' Alembic	MSSelathiel Archives	MSSelathiel Archives	100																																									
-331	Yaerius' Untruth	MSSelathiel Archives	MSSelathiel Archives	100																																									
-332	Yaerius' Simulacrum	MSSelathiel Archives	MSSelathiel Archives	100																																									
-333	Yaerius' Xyston	MSSelathiel Archives	MSSelathiel Archives	100																																									
-334	Zerae's Blessing	MSZeraes Divinity	MSZeraes Divinity	100																																									
-335	Zerae's Refinement	MSZeraes Divinity	MSZeraes Divinity	100																																									
-336	Zerae's Vindication	MSZeraes Divinity	MSZeraes Divinity	100																																									
-337	Zerae's Redemption	MSZeraes Divinity	MSZeraes Divinity	100																																									
-338	Zerae's Holy Wrath	MSZeraes Divinity	MSZeraes Divinity	100																																									
+328	Geleb's Greed	Curse of the Zakarum	Set_xaru	100																																									
+329	Yaerius' Mediation	Yaerius' Grey Omen	MSSelathiel Archives	100																																									
+330	Yaerius' Alembic	Yaerius' Grey Omen	MSSelathiel Archives	100																																									
+331	Yaerius' Untruth	Yaerius' Grey Omen	MSSelathiel Archives	100																																									
+332	Yaerius' Simulacrum	Yaerius' Grey Omen	MSSelathiel Archives	100																																									
+333	Yaerius' Xyston	Yaerius' Grey Omen	MSSelathiel Archives	100																																									
+334	Zerae's Blessing	Zerae's Divinity	MSZeraes Divinity	100																																									
+335	Zerae's Refinement	Zerae's Divinity	MSZeraes Divinity	100																																									
+336	Zerae's Vindication	Zerae's Divinity	MSZeraes Divinity	100																																									
+337	Zerae's Redemption	Zerae's Divinity	MSZeraes Divinity	100																																									
+338	Zerae's Holy Wrath	Zerae's Divinity	MSZeraes Divinity	100																																									
 339	Marchosias' Hatred	Marchosias' Essence	MREssence	100																																									
 340	Marchosias' Might	Marchosias' Essence	MREssence	100																																									
 341	Marchosias' Evil Grin	Marchosias' Essence	MREssence	100																																									
 342	Marchosias' Deception	Marchosias' Essence	MREssence	100																																									
 343	Marchosias' Anger	Marchosias' Essence	MREssence	100																																									
-344	Steppe Sleeper	MSTundra Walker	MSTundra Walker	100																																									
-345	Ancient Bronze	MSTundra Walker	MSTundra Walker	100																																									
-346	Snow Silver	MSTundra Walker	MSTundra Walker	100																																									
-347	Grey Ranger	MSTundra Walker	MSTundra Walker	100																																									
-348	Vale Hunter	MSTundra Walker	MSTundra Walker	100																																									
+344	Steppe Sleeper	Tundra Walker	MSTundra Walker	100																																									
+345	Ancient Bronze	Tundra Walker	MSTundra Walker	100																																									
+346	Snow Silver	Tundra Walker	MSTundra Walker	100																																									
+347	Grey Ranger	Tundra Walker	MSTundra Walker	100																																									
+348	Vale Hunter	Tundra Walker	MSTundra Walker	100																																									
 349	Lirian Moon	Celestial Orchard	MSOrchard	100																																									
 350	The Trickster	Celestial Orchard	MSOrchard	100																																									
 351	Giyua's Sacrum	Celestial Orchard	MSOrchard	100																																									
 352	The Dragon Grave	Celestial Orchard	MSOrchard	100																																									
 353	Skull of the Prophet	Celestial Orchard	MSOrchard	100																																									
-354	Quantum Bevel	MSUniversalLaw	MSUniversalLaw	100																																									
-355	Dead Lens	MSUniversalLaw	MSUniversalLaw	100	invbshu																																								
-356	World Line	MSUniversalLaw	MSUniversalLaw	100																																									
-357	Hypersurface	MSUniversalLaw	MSUniversalLaw	100																																									
-358	Killing Vector	MSUniversalLaw	MSUniversalLaw	100	invaxfu																																								
+354	Quantum Bevel	Universal Law	MSUniversalLaw	100																																									
+355	Dead Lens	Universal Law	MSUniversalLaw	100	invbshu																																								
+356	World Line	Universal Law	MSUniversalLaw	100																																									
+357	Hypersurface	Universal Law	MSUniversalLaw	100																																									
+358	Killing Vector	Universal Law	MSUniversalLaw	100	invaxfu																																								

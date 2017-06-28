@@ -370,7 +370,7 @@
 367	Dark Wanderer
 368	a Trap
 369	FLYING POLAR BUFFALO ERROR
-370	Lightning Spire
+370	Glacial Spire
 371	Fire Tower
 372	Slinger
 373	Spear Cat
@@ -423,7 +423,7 @@
 421	Dire Wolf
 422	Spirit of Barbs
 423	Heart of Wolverine
-424	Oak Sage
+424	Nephalem Spirit
 425	Plague Poppy
 426	Cycle of Life
 427	Vine Creature
@@ -1000,7 +1000,7 @@
 998	\orange;Nun of Vanity\blue;
 999	\orange;Nun of Vanity\blue;
 1000	\orange;Nun of Vanity\blue;
-1001	CrystalBall
+1001	(                                 Crystal Ball                                 )
 1002	GlassSkull
 1003	\orange;Overlord
 1004	\gold;(                              Creature of Flame                              )\blue;
@@ -1621,7 +1621,7 @@
 1619	Edyrem
 1620	Blood Tide Totem
 1621	\orange;Black Hand Totem
-1622	\purple;(                          Brother Laz (Secret Boss)                          )
+1622	\gold;(                            Archbishop Lazarus                            )
 1623	\orange;Groupie\blue;
 1624	\orange;Magineer\blue;
 1625	\orange;AC-2 Rivet Bot\blue;
@@ -1929,8 +1929,8 @@
 1927	\gold;Disguised Edyrem
 1928	Uldyssian's Ghost
 1929	\orange;Pirate of the Twin Seas
-1930	\red;(                          Volrath The Vile                          )
-1931	\orange;Vilespawn
+1930	MarcoNecroXyyyy
+1931	MarcoNecroXyyyyy
 1932	\red;(     Minion of Terror     )\blue;
 1933	\red;(     Minion of Terror     )\blue;
 1934	\red;(     Minion of Terror     )\blue;
@@ -1961,7 +1961,7 @@
 1959	BadAnu
 1960	PrimeLies
 1961	PrimeSin
-1962	PrimePain
+1962	Imperius
 1963	Juris Khan, King of Ureh
 1964	PrimeDestruction
 1965	PrimeTerror
@@ -2025,16 +2025,16 @@
 2023	\orange;Sand Maggot Ghost
 2024	\orange;Sand Snake
 2025	\orange;Sand Maggot Ghost
-2026	\red;Flame\blue;
-2027	\blue;Snow
-2028	\dgreen;Venom\blue;
+2026	\orange;Flame\blue;
+2027	\orange;Snow
+2028	\orange;Venom\blue;
 2029	\orange;Illusion\blue;
-2030	\yellow;Storm\blue;
-2031	\grey;Stone\blue;
+2030	\orange;Storm\blue;
+2031	\orange;Stone\blue;
 2032	\gold;(                              Terul                              )
 2033	\orange;Goliath\blue;
 2034	Water Watcher
-2035	\purple;(                       Zorun Tzin (Secret Boss)                       )
+2035	\purple;(                           Zorun Tzin                          )
 2036	\gold;Trap
 2037	\orange;Abomination\blue;
 2038	\gold;Trap
@@ -2047,7 +2047,7 @@
 2045	\orange;Zealot Nest
 2046	\orange;Zealot
 2047	\gold;a deadly trap...
-2048	\gold;(                                    Brachyceran                                    )
+2048	\gold;(                                    Xazax                                    )
 2049	\red;(                          Volrath The Vile                          )
 2050	Trap
 2051	\orange;Celestial Descendant\blue;
@@ -2187,3 +2187,149 @@
 2202	Blade Spirit
 2203	\gold;Disguised Edyrem
 2204	Sewer Rat
+2205	Cultist
+2206	Crystal Lord
+2207	Skeleton Archer
+2208	Returned Archer
+2209	\yellow;Daystar\blue;
+2210	Crystal Witch
+2211	\yellow;Corruptor Archer\blue;
+2212	Soul Spider
+2213	\orange;Celebrant of the Triune\blue;
+2214	\orange;Morlu\blue;
+2215	\orange;Snow
+2216	\orange;Goliath\blue;
+2217	\dgreen;Landmass\blue;\blue;
+2218	\orange;Howling Spirit\blue;
+2219	Hungry Dead
+2220	Bone Archer
+2221	Burning Dead Archer
+2222	Horror Archer
+2223	Silver Titan
+2224	\orange;Groupie\blue;
+2225	\yellow;Bloodfire Rogue\blue;
+2226	\yellow;Iced Soul\blue;
+2227	\yellow;Hemoplague\blue;
+2228	Crimson Templar
+2229	\orange;Citizen\blue;
+2230	\yellow;Silverbolt\blue;
+2231	Protector
+2232	Sasquatch
+2233	Bronze Titan
+2234	Gold Titan
+2235	\orange;Abomination\blue;
+2236	Steel Lord
+2237	Blood Marquis
+2238	Stone Clan
+2239	\dgreen;Clawstorm Terror\blue;
+2240	\dgreen;Glowing Blob\blue;
+2241	\dgreen;Fairy Witch\blue;
+2242	\dgreen;Bane Hunter\blue;
+2243	\gold;(                                   Tal Rasha                                   )\blue;
+2244	\orange;Stone\blue;
+2245	Balrog
+2246	\green;Wracked Soul\blue;
+2247	\green;Bloodbrother\blue;
+2248	Darkling
+2249	Moon Panther
+2250	\yellow;Void Archon\blue;
+2251	Fire Clan
+2252	\dgrey;Fire Beetle\blue;
+2253	\yellow;Mahasattva\blue;
+2254	\yellow;Shrieker\blue;
+2255	\green;Venom Fiend\blue;
+2256	Frozen Lord
+2257	Sleeping Cave Snapper
+2258	\orange;Death's Mechanic\blue;
+2259	Returned
+2260	Prowler Priestess
+2261	\yellow;Edyrem\blue;
+2262	Bone Sorcerer
+2263	Burning Dead Sorcerer
+2264	Horror Sorcerer
+2265	\red;(     Minion of Terror     )\blue;
+2266	\yellow;Black Death\blue;
+2267	Skeleton
+2268	\orange;Punishment Turret\blue;
+2269	Veil Terror
+2270	\orange;Storm\blue;
+2271	Obsidian Lord
+2272	\orange;Illusion\blue;
+2273	Asatruar
+2274	Undead Vulture
+2275	Death Watcher
+2276	\yellow;Serafiend\blue;
+2277	Sinner
+2278	\yellow;Tree of Life\blue;
+2279	Ratfink
+2280	\orange;Slain Soul\blue;
+2281	\orange;Slain Soul\blue;
+2282	\orange;Slain Soul\blue;
+2283	\orange;Slain Soul\blue;
+2284	\orange;Slain Soul\blue;
+2285	Knight of War
+2286	Knight of Pestilence
+2287	Knight of Famine
+2288	Fallen One
+2289	\yellow;Cog\blue;
+2290	Armored Titan
+2291	\yellow;Onyx Knight\blue;
+2292	Poison Spitter
+2293	Wraith
+2294	Gloom
+2295	Templar
+2296	\yellow;Deathfire Bearer\blue;
+2297	Infernal Lord
+2298	\yellow;Dirge\blue;
+2299	\yellow;Living Flame\blue;
+2300	\yellow;Avalanche\blue;
+2301	\yellow;Black Ice Demon\blue;
+2302	\yellow;Trap Rat\blue;
+2303	\orange;Magineer\blue;
+2304	\orange;AC-2 Rivet Bot\blue;
+2305	\orange;AC-1 Hammer Bot\blue;
+2306	\orange;RC-2 Heavy Drone\blue;
+2307	\orange;RC-1 Light Drone\blue;
+2308	Succubus
+2309	Dark Magistrate
+2310	Jungle Rat
+2311	\green;Henchman\blue;
+2312	\orange;Venom\blue;
+2313	Balrog
+2314	\yellow;Porkchop\blue;
+2315	Warlock
+2316	\yellow;Knight of Death\blue;
+2317	\yellow;Fireblood\blue;
+2318	Soul Warrior
+2319	Blood Warrior
+2320	\yellow;Que-Hegan\blue;
+2321	Magma Demon
+2322	Dark Huntress
+2323	Zombie
+2324	Soul Flayer
+2325	\orange;Dark Nephalem\blue;
+2326	Acid Beast
+2327	Defiler
+2328	Ghost Wolf
+2329	Dark Templar
+2330	Condemned
+2331	Moon Knight
+2332	Stone Clan
+2333	Razor Sting
+2334	\yellow;Bonegrinder\blue;
+2335	\dgrey;Baal (Vision of Destruction)\blue;
+2336	Evil Spirit
+2337	Ice Prince
+2338	Hell Stone
+2339	\yellow;Stone Hammer Demon\blue;
+2340	\orange;Necrobot\blue;
+2341	Fallen Wolf Rider
+2342	Crusher
+2343	\orange;Ice King\blue;
+2344	Banshee
+2345	\yellow;Black Cat\blue;
+2346	Familiar
+2347	Night Clan
+2348	\yellow;The Pack\gold;
+2349	\orange;Citizen\blue;
+2350	\orange;Penitent
