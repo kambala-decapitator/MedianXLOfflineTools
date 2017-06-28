@@ -396,7 +396,7 @@ void ItemsViewerDialog::updateGearItems(ItemsList *pBeltItems /*= 0*/, ItemsList
 
 const QList<int> &ItemsViewerDialog::kRows()
 {
-    static QList<int> rows = QList<int>() << 11 << (isUltimative5OrLater() ? 8 : 6) << 8 << 10 << 10 << 10 << 10;
+    static QList<int> rows = QList<int>() << 11 << (isUltimative5OrLater() || is2017() ? 8 : 6) << 8 << 10 << 10 << 10 << 10;
     return rows;
 }
 

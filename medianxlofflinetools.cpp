@@ -1953,7 +1953,7 @@ bool MedianXLOfflineTools::processSaveFile()
         {
             QString modName("Median XL");
             if (isUltimative())
-                modName += QString(" Ultimative v%1").arg(isUltimative4() ? "4" : "5+");
+                modName += is2017() ? " 2017" : QString(" Ultimative v%1").arg(isUltimative4() ? "4" : "5+");
             showLoadingError(tr("Unknown statistic code found: %1. This is not %2 character.", "second param is mod name").arg(statCode).arg(modName));
             return false;
         }

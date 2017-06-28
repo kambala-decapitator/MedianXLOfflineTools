@@ -56,6 +56,7 @@ bool areBothItemsSetOrUnique(ItemInfo *a, ItemInfo *b);
 bool isUltimative();
 bool isUltimative4();
 bool isUltimative5OrLater();
+bool is2017();
 bool isSigma();
 
 // item conditions for STL algorithms

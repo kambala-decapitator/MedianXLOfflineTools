@@ -199,7 +199,7 @@ bool areBothItemsSetOrUnique(ItemInfo *a, ItemInfo *b)
 
 bool isUltimative()
 {
-    return isUltimative4() || isUltimative5OrLater();
+    return isUltimative4() || isUltimative5OrLater() || is2017();
 }
 
 bool isUltimative4()
@@ -210,6 +210,11 @@ bool isUltimative4()
 bool isUltimative5OrLater()
 {
     return ItemDataBase::Properties()->value(Enums::CharacterStats::FreeSkillPoints)->saveBits != 8;
+}
+
+bool is2017()
+{
+    return ItemDataBase::Properties()->value(Enums::ItemProperties::Defence)->saveBits != 15;
 }
 
 bool isSigma()
