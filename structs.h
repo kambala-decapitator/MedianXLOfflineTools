@@ -234,6 +234,7 @@ struct MysticOrb
     QList<quint16> statIds;
     qint16 value;
     quint32 param;
+    quint8 rlvl;
 
     MysticOrb() : param(0) {}
 };

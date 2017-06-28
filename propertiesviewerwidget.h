@@ -46,7 +46,7 @@ private:
     void modifyMysticOrbProperty(int id, int decrement, PropertiesMultiMap *props, quint32 param = 0);
     ItemProperty *getProperty(int id, quint32 param, const PropertiesMultiMap *const props) const;
     int totalMysticOrbValue(int moCode, PropertiesMap *props) const;
-    void decreaseRequiredLevel(int moNumber, PropertiesMultiMap *props) { modifyMysticOrbProperty(Enums::ItemProperties::RequiredLevel, moNumber * 2, props); }
+    void decreaseRequiredLevel(int decrement, PropertiesMultiMap *props);
 
     void updateItem() { _item->hasChanged = true; showItem(_item); }
 

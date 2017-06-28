@@ -433,12 +433,12 @@ void PropertiesViewerWidget::removeMysticOrb()
     int moCode = action->property("moCode").toInt();
     PropertiesMultiMap *props = &(action->property("isItemMO").toBool() ? _item->props : _item->rwProps);
 
+    MysticOrb *mo = ItemDataBase::MysticOrbs()->value(moCode);
     int moNumber = props->value(moCode)->value; // must be queried before calling removeMysticOrbData()
     removeMysticOrbData(moCode, props);
-    decreaseRequiredLevel(moNumber, props);
+    decreaseRequiredLevel(moNumber * mo->rlvl, props);
     ReverseBitWriter::byteAlignBits(_item->bitString);
 
-    MysticOrb *mo = ItemDataBase::MysticOrbs()->value(moCode);
     int id = mo->statIds.first();
     if (ItemProperty *prop = getProperty(id, mo->param, props))
         ItemParser::createDisplayStringForPropertyWithId(id, prop); // update displayString for some properties (like ctc)
@@ -447,13 +447,13 @@ void PropertiesViewerWidget::removeMysticOrb()
 
 void PropertiesViewerWidget::removeMysticOrbsFromProperties(const QSet<int> &mysticOrbs, PropertiesMultiMap *props)
 {
-    int moNumber = 0;
+    int rlvlDecrease = 0;
     foreach (int moCode, mysticOrbs)
     {
-        moNumber += props->value(moCode)->value;
+        rlvlDecrease += props->value(moCode)->value * ItemDataBase::MysticOrbs()->value(moCode)->rlvl;
         removeMysticOrbData(moCode, props);
     }
-    decreaseRequiredLevel(moNumber, props);
+    decreaseRequiredLevel(rlvlDecrease, props);
 }
 
 void PropertiesViewerWidget::removeMysticOrbData(int moCode, PropertiesMultiMap *props)
@@ -571,6 +571,11 @@ int PropertiesViewerWidget::totalMysticOrbValue(int moCode, PropertiesMap *props
 {
     quint8 multiplier = 1 + isMysticOrbEffectDoubled();
     return props->value(moCode)->value * ItemDataBase::MysticOrbs()->value(moCode)->value * multiplier;
+}
+
+void PropertiesViewerWidget::decreaseRequiredLevel(int decrement, PropertiesMultiMap *props)
+{
+    modifyMysticOrbProperty(Enums::ItemProperties::RequiredLevel, decrement, props);
 }
 
 QString PropertiesViewerWidget::collectMysticOrbsDataFromProps(QSet<int> *moSet, PropertiesMap &props)

@@ -332,11 +332,11 @@ QHash<uint, MysticOrb *> *ItemDataBase::MysticOrbs()
             foreach (const QByteArray &statId, data.at(2).split(',')) //-V807
                 mo->statIds << statId.toUShort();
             mo->value = data.at(3).toShort();
-            if (data.size() > 4)
-            {
-                quint16 param = data.at(5).toUShort();
-                mo->param = isCtcProperty(mo->statIds.at(0)) ? (data.at(4).toUShort() + (param << 6)) : param;
-            }
+            mo->rlvl = data.size() > 7 ? data.at(6).toUShort() : 2; // before MXL 2017 it has always been 2
+
+            quint16 param = data.at(5).toUShort();
+            mo->param = isCtcProperty(mo->statIds.at(0)) ? (data.at(4).toUShort() + (param << 6)) : param;
+
             allMysticOrbs[data.at(0).toUInt()] = mo;
         }
     }

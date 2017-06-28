@@ -258,8 +258,8 @@ foreach my $elem (@$rw)
 my $moStat = "xsignet";
 my $cubemain = parsetxt("cubemain.txt", '#_code' => 12, '!_enabled' => {col => 1, val => $zeroRe},
                         '!_mo' => {col => 34, val => qr/^(?!$moStat)/},
-                        '!_honorific' => {col => 0, val => qr/^Mystic Orbs\:/}, prop => 22, moStat => 34,
-                        param => 25, minValue => 26, maxValue => 27);
+                        '!_honorific' => {col => 0, val => qr/^Mystic Orbs\:/}, prop => 22,
+                        param => 25, minValue => 26, maxValue => 27, rlvl => 32, moStat => 34);
 
 # MO names and properties
 my $mos; # hashref with keys from ID column of itemstatcost
@@ -281,6 +281,7 @@ for my $miscItemType (keys %$miscTypes)
             $mos->{$_}->{value} = $cubeMo->{minValue};
             $mos->{$_}->{paramAdd} = $cubeMo->{maxValue} if defined $cubeMo->{param};
             $mos->{$_}->{paramShift} = $cubeMo->{param};
+            $mos->{$_}->{rlvl} = $cubeMo->{rlvl};
             # not used in the program, just to simplify reading mo.txt
             $mos->{$_}->{text} = $mos->{$_}->{statId} == 97 ? "oskill" : $itemProperties->[$mos->{$_}->{statId}]->{descPositive};
             last
@@ -482,7 +483,7 @@ foreach my $elem (@$rw)
 close $out;
 
 my @moIds = sort keys %$mos;
-my @moKeys = qw/code statId value paramAdd paramShift text/;
+my @moKeys = qw/code statId value paramAdd paramShift rlvl text/;
 open $out, ">", "generated/mo.txt";
 print $out "#id\t".join("\t", @moKeys)."\n";
 for my $id (@moIds)
