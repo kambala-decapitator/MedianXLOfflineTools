@@ -164,7 +164,7 @@ Avatar	1	Zero socketables	shld									r53						ease		45	45	ac%		172	200	death-s
 Iblis	1	Zero socketables	glov									r04						poison-dur		1	5	abs-fire%		5	5	extra-fire		8	10	enr%		10	10	light		5	5									Iblis		0
 Mercy	1	Zero socketables	glov									r13						str		1	10	att-skill	90	5	14	vit%		11	15	ac		26	26	dmg-max		6	8									Mercy		0
 Kali	1	Zero socketables	glov									r21						res-fire		1	1	kill-skill	518	33	6	allskills		2	2	ac		-214	-214	res-fire-max		10	10	charged	568	124	2					Kali		0
-Aiwass	1	Zero socketables	glov									r33						slow-thorns		-5	-5	shadows-attsyn		1	1	nec		2	2	ac		93	93	charged	873	78	4	str%		11	20	dmg-minion		21	25	Aiwass		0
+Aiwass	1	Zero socketables	glov									r33						slow-thorns		-5	-5	shadows-attsyn		0	0	nec		2	2	ac		93	93	charged	873	78	4	str%		11	20	dmg-minion		21	25	Aiwass		0
 Skald	1	Zero socketables	glov									r41						res-all-minion		11	15	charged	96	33	3	charged	570	33	3	ac%		115	143	cast3		20	20	manasteal		14	18	att-skill	998	40	6	Skald		0
 Icarus	1	Zero socketables	glov									r49						move3		80	80	ac%		144	171	vit		75	75	enr		75	75	res-fire		-20	-20	death-skill	824	100	62					Icarus		0
 Drekavac	1	Zero socketables	glov									r51						dmg-max		18	23	skillcap		1	1	dmg-cold		25	50	cold-thorns	75	101	150	mag%		11	20	allskills		1	1	swingcast3		45	45	Drekavac		0
@@ -399,7 +399,7 @@ Avatar	1	One socketable	shld									jew	r53					ease		45	45	ac%		172	200	death-
 Iblis	1	One socketable	glov									jew	r04					poison-dur		1	5	abs-fire%		5	5	extra-fire		8	10	enr%		10	10	light		5	5									Iblis		0
 Mercy	1	One socketable	glov									jew	r13					str		1	10	att-skill	90	5	14	vit%		11	15	ac		26	26	dmg-max		6	8									Mercy		0
 Kali	1	One socketable	glov									jew	r21					res-fire		1	1	kill-skill	518	33	6	allskills		2	2	ac		-214	-214	res-fire-max		10	10	charged	568	124	2					Kali		0
-Aiwass	1	One socketable	glov									jew	r33					slow-thorns		-5	-5	shadows-attsyn		1	1	nec		2	2	ac		93	93	charged	873	78	4	str%		11	20	dmg-minion		21	25	Aiwass		0
+Aiwass	1	One socketable	glov									jew	r33					slow-thorns		-5	-5	shadows-attsyn		0	0	nec		2	2	ac		93	93	charged	873	78	4	str%		11	20	dmg-minion		21	25	Aiwass		0
 Skald	1	One socketable	glov									jew	r41					res-all-minion		11	15	charged	96	33	3	charged	570	33	3	ac%		115	143	cast3		20	20	manasteal		14	18	att-skill	998	40	6	Skald		0
 Icarus	1	One socketable	glov									jew	r49					move3		80	80	ac%		144	171	vit		75	75	enr		75	75	res-fire		-20	-20	death-skill	824	100	62					Icarus		0
 Drekavac	1	One socketable	glov									jew	r51					dmg-max		18	23	skillcap		1	1	dmg-cold		25	50	cold-thorns	75	101	150	mag%		11	20	allskills		1	1	swingcast3		45	45	Drekavac		0
@@ -634,7 +634,7 @@ Avatar	1	Two socketables	shld									jew	jew	r53				ease		45	45	ac%		172	200	de
 Iblis	1	Two socketables	glov									jew	jew	r04				poison-dur		1	5	abs-fire%		5	5	extra-fire		8	10	enr%		10	10	light		5	5									Iblis		0
 Mercy	1	Two socketables	glov									jew	jew	r13				str		1	10	att-skill	90	5	14	vit%		11	15	ac		26	26	dmg-max		6	8									Mercy		0
 Kali	1	Two socketables	glov									jew	jew	r21				res-fire		1	1	kill-skill	518	33	6	allskills		2	2	ac		-214	-214	res-fire-max		10	10	charged	568	124	2					Kali		0
-Aiwass	1	Two socketables	glov									jew	jew	r33				slow-thorns		-5	-5	shadows-attsyn		1	1	nec		2	2	ac		93	93	charged	873	78	4	str%		11	20	dmg-minion		21	25	Aiwass		0
+Aiwass	1	Two socketables	glov									jew	jew	r33				slow-thorns		-5	-5	shadows-attsyn		0	0	nec		2	2	ac		93	93	charged	873	78	4	str%		11	20	dmg-minion		21	25	Aiwass		0
 Skald	1	Two socketables	glov									jew	jew	r41				res-all-minion		11	15	charged	96	33	3	charged	570	33	3	ac%		115	143	cast3		20	20	manasteal		14	18	att-skill	998	40	6	Skald		0
 Icarus	1	Two socketables	glov									jew	jew	r49				move3		80	80	ac%		144	171	vit		75	75	enr		75	75	res-fire		-20	-20	death-skill	824	100	62					Icarus		0
 Drekavac	1	Two socketables	glov									jew	jew	r51				dmg-max		18	23	skillcap		1	1	dmg-cold		25	50	cold-thorns	75	101	150	mag%		11	20	allskills		1	1	swingcast3		45	45	Drekavac		0
@@ -869,7 +869,7 @@ Avatar	1	Three socketables	shld									jew	jew	jew	r53			ease		45	45	ac%		172	2
 Iblis	1	Three socketables	glov									jew	jew	jew	r04			poison-dur		1	5	abs-fire%		5	5	extra-fire		8	10	enr%		10	10	light		5	5									Iblis		0
 Mercy	1	Three socketables	glov									jew	jew	jew	r13			str		1	10	att-skill	90	5	14	vit%		11	15	ac		26	26	dmg-max		6	8									Mercy		0
 Kali	1	Three socketables	glov									jew	jew	jew	r21			res-fire		1	1	kill-skill	518	33	6	allskills		2	2	ac		-214	-214	res-fire-max		10	10	charged	568	124	2					Kali		0
-Aiwass	1	Three socketables	glov									jew	jew	jew	r33			slow-thorns		-5	-5	shadows-attsyn		1	1	nec		2	2	ac		93	93	charged	873	78	4	str%		11	20	dmg-minion		21	25	Aiwass		0
+Aiwass	1	Three socketables	glov									jew	jew	jew	r33			slow-thorns		-5	-5	shadows-attsyn		0	0	nec		2	2	ac		93	93	charged	873	78	4	str%		11	20	dmg-minion		21	25	Aiwass		0
 Skald	1	Three socketables	glov									jew	jew	jew	r41			res-all-minion		11	15	charged	96	33	3	charged	570	33	3	ac%		115	143	cast3		20	20	manasteal		14	18	att-skill	998	40	6	Skald		0
 Icarus	1	Three socketables	glov									jew	jew	jew	r49			move3		80	80	ac%		144	171	vit		75	75	enr		75	75	res-fire		-20	-20	death-skill	824	100	62					Icarus		0
 Drekavac	1	Three socketables	glov									jew	jew	jew	r51			dmg-max		18	23	skillcap		1	1	dmg-cold		25	50	cold-thorns	75	101	150	mag%		11	20	allskills		1	1	swingcast3		45	45	Drekavac		0
@@ -1104,7 +1104,7 @@ Avatar	1	Four socketables	shld									jew	jew	jew	jew	r53		ease		45	45	ac%		172
 Iblis	1	Four socketables	glov									jew	jew	jew	jew	r04		poison-dur		1	5	abs-fire%		5	5	extra-fire		8	10	enr%		10	10	light		5	5									Iblis		0
 Mercy	1	Four socketables	glov									jew	jew	jew	jew	r13		str		1	10	att-skill	90	5	14	vit%		11	15	ac		26	26	dmg-max		6	8									Mercy		0
 Kali	1	Four socketables	glov									jew	jew	jew	jew	r21		res-fire		1	1	kill-skill	518	33	6	allskills		2	2	ac		-214	-214	res-fire-max		10	10	charged	568	124	2					Kali		0
-Aiwass	1	Four socketables	glov									jew	jew	jew	jew	r33		slow-thorns		-5	-5	shadows-attsyn		1	1	nec		2	2	ac		93	93	charged	873	78	4	str%		11	20	dmg-minion		21	25	Aiwass		0
+Aiwass	1	Four socketables	glov									jew	jew	jew	jew	r33		slow-thorns		-5	-5	shadows-attsyn		0	0	nec		2	2	ac		93	93	charged	873	78	4	str%		11	20	dmg-minion		21	25	Aiwass		0
 Skald	1	Four socketables	glov									jew	jew	jew	jew	r41		res-all-minion		11	15	charged	96	33	3	charged	570	33	3	ac%		115	143	cast3		20	20	manasteal		14	18	att-skill	998	40	6	Skald		0
 Icarus	1	Four socketables	glov									jew	jew	jew	jew	r49		move3		80	80	ac%		144	171	vit		75	75	enr		75	75	res-fire		-20	-20	death-skill	824	100	62					Icarus		0
 Drekavac	1	Four socketables	glov									jew	jew	jew	jew	r51		dmg-max		18	23	skillcap		1	1	dmg-cold		25	50	cold-thorns	75	101	150	mag%		11	20	allskills		1	1	swingcast3		45	45	Drekavac		0
@@ -1339,7 +1339,7 @@ Avatar	1	Five socketables	shld									jew	jew	jew	jew	jew	r53	ease		45	45	ac%		
 Iblis	1	Five socketables	glov									jew	jew	jew	jew	jew	r04	poison-dur		1	5	abs-fire%		5	5	extra-fire		8	10	enr%		10	10	light		5	5									Iblis		0
 Mercy	1	Five socketables	glov									jew	jew	jew	jew	jew	r13	str		1	10	att-skill	90	5	14	vit%		11	15	ac		26	26	dmg-max		6	8									Mercy		0
 Kali	1	Five socketables	glov									jew	jew	jew	jew	jew	r21	res-fire		1	1	kill-skill	518	33	6	allskills		2	2	ac		-214	-214	res-fire-max		10	10	charged	568	124	2					Kali		0
-Aiwass	1	Five socketables	glov									jew	jew	jew	jew	jew	r33	slow-thorns		-5	-5	shadows-attsyn		1	1	nec		2	2	ac		93	93	charged	873	78	4	str%		11	20	dmg-minion		21	25	Aiwass		0
+Aiwass	1	Five socketables	glov									jew	jew	jew	jew	jew	r33	slow-thorns		-5	-5	shadows-attsyn		0	0	nec		2	2	ac		93	93	charged	873	78	4	str%		11	20	dmg-minion		21	25	Aiwass		0
 Skald	1	Five socketables	glov									jew	jew	jew	jew	jew	r41	res-all-minion		11	15	charged	96	33	3	charged	570	33	3	ac%		115	143	cast3		20	20	manasteal		14	18	att-skill	998	40	6	Skald		0
 Icarus	1	Five socketables	glov									jew	jew	jew	jew	jew	r49	move3		80	80	ac%		144	171	vit		75	75	enr		75	75	res-fire		-20	-20	death-skill	824	100	62					Icarus		0
 Drekavac	1	Five socketables	glov									jew	jew	jew	jew	jew	r51	dmg-max		18	23	skillcap		1	1	dmg-cold		25	50	cold-thorns	75	101	150	mag%		11	20	allskills		1	1	swingcast3		45	45	Drekavac		0
@@ -1551,7 +1551,7 @@ Tynged	1	new runeword	xbow									r41						hit-skill	330	1	16	crush		11	13	ease
 Skarn	1	X	bswd	baxe								r40						dmg%		115	143	oskill	972	26	34	res-fire		41	50	res-pois		41	50	red-dmg%		10	10	att-skill	901	25	13	crush		17	17	Skarn		0
 Eris	1	new runeword	abow									r37						dmg%		58	86	hit-skill	712	1	6	oskill	1016	21	26	swing3		40	40	red-dmg%		5	5	heal-hit		3	3	charged	1018	100	16	Eris		0
 Titanomachia	1	new runeword	aspe									r24						dmg%		58	86	dmg-max		26	38	att-skill	980	33	7	dmg-ltng		1	125	str		50	50	red-dmg%		5	5	dmg-stun		50	50	Titanomachia		0
-Herfjotur	1	new runeword	ajav									r41						dmg%		115	143	dmg-max		13	25	oskill	968	8	13	kill-skill	619	5	12	reanimate	1400	8	8	slow		25	25	hit-skill	803	20	5	Herfjotur		0
+Herfjotur	1	new runeword	ajav									r41						dmg%		115	143	dmg-max		13	25	oskill	968	8	13	kill-skill	619	5	1	reanimate	1400	8	8	slow		25	25	hit-skill	803	20	5	Herfjotur		0
 Quaoar	1	new runeword	pclb	pmac	pham							r29						dmg%		104	114	dmg-norm		7	13	att-skill	982	5	27	nofreeze		1	1	heal-hit		5	5	hp%		15	15					Quaoar		0
 Eventide	1	new runeword	nscy									r36						dmg%		115	143	dmg-elem	75	63	188	att-skill	964	50	5	light		-2	-2	red-dmg%		-25	-25	state	74	1	1	crush		11	13	Eventide		0
 Vertigo	1	new runeword	orb									r22						damage-skill	54	5	1	sor		2	2	cast3		50	50	extra-ltng		11	15	extra-cold		11	15	att-skill	54	100	1	dmg-to-mana		25	25	Vertigo		0
@@ -1610,7 +1610,7 @@ Tynged	1	new runeword	xbow									jew	r41					hit-skill	330	1	16	crush		11	13	e
 Skarn	1	X	bswd	baxe								jew	r40					dmg%		115	143	oskill	972	26	34	res-fire		41	50	res-pois		41	50	red-dmg%		10	10	att-skill	901	25	13	crush		17	17	Skarn		0
 Eris	1	new runeword	abow									jew	r37					dmg%		58	86	hit-skill	712	1	6	oskill	1016	21	26	swing3		40	40	red-dmg%		5	5	heal-hit		3	3	charged	1018	100	16	Eris		0
 Titanomachia	1	new runeword	aspe									jew	r24					dmg%		58	86	dmg-max		26	38	att-skill	980	33	7	dmg-ltng		1	125	str		50	50	red-dmg%		5	5	dmg-stun		50	50	Titanomachia		0
-Herfjotur	1	new runeword	ajav									jew	r41					dmg%		115	143	dmg-max		13	25	oskill	968	8	13	kill-skill	619	5	12	reanimate	1400	8	8	slow		25	25	hit-skill	803	20	5	Herfjotur		0
+Herfjotur	1	new runeword	ajav									jew	r41					dmg%		115	143	dmg-max		13	25	oskill	968	8	13	kill-skill	619	5	1	reanimate	1400	8	8	slow		25	25	hit-skill	803	20	5	Herfjotur		0
 Quaoar	1	new runeword	pclb	pmac	pham							jew	r29					dmg%		104	114	dmg-norm		7	13	att-skill	982	5	27	nofreeze		1	1	heal-hit		5	5	hp%		15	15					Quaoar		0
 Eventide	1	new runeword	nscy									jew	r36					dmg%		115	143	dmg-elem	75	63	188	att-skill	964	50	5	light		-2	-2	red-dmg%		-25	-25	state	74	1	1	crush		11	13	Eventide		0
 Vertigo	1	new runeword	orb									jew	r22					damage-skill	54	5	1	sor		2	2	cast3		50	50	extra-ltng		11	15	extra-cold		11	15	att-skill	54	100	1	dmg-to-mana		25	25	Vertigo		0
@@ -1669,7 +1669,7 @@ Tynged	1	new runeword	xbow									jew	jew	r41				hit-skill	330	1	16	crush		11	1
 Skarn	1	X	bswd	baxe								jew	jew	r40				dmg%		115	143	oskill	972	26	34	res-fire		41	50	res-pois		41	50	red-dmg%		10	10	att-skill	901	25	13	crush		17	17	Skarn		0
 Eris	1	new runeword	abow									jew	jew	r37				dmg%		58	86	hit-skill	712	1	6	oskill	1016	21	26	swing3		40	40	red-dmg%		5	5	heal-hit		3	3	charged	1018	100	16	Eris		0
 Titanomachia	1	new runeword	aspe									jew	jew	r24				dmg%		58	86	dmg-max		26	38	att-skill	980	33	7	dmg-ltng		1	125	str		50	50	red-dmg%		5	5	dmg-stun		50	50	Titanomachia		0
-Herfjotur	1	new runeword	ajav									jew	jew	r41				dmg%		115	143	dmg-max		13	25	oskill	968	8	13	kill-skill	619	5	12	reanimate	1400	8	8	slow		25	25	hit-skill	803	20	5	Herfjotur		0
+Herfjotur	1	new runeword	ajav									jew	jew	r41				dmg%		115	143	dmg-max		13	25	oskill	968	8	13	kill-skill	619	5	1	reanimate	1400	8	8	slow		25	25	hit-skill	803	20	5	Herfjotur		0
 Quaoar	1	new runeword	pclb	pmac	pham							jew	jew	r29				dmg%		104	114	dmg-norm		7	13	att-skill	982	5	27	nofreeze		1	1	heal-hit		5	5	hp%		15	15					Quaoar		0
 Eventide	1	new runeword	nscy									jew	jew	r36				dmg%		115	143	dmg-elem	75	63	188	att-skill	964	50	5	light		-2	-2	red-dmg%		-25	-25	state	74	1	1	crush		11	13	Eventide		0
 Vertigo	1	new runeword	orb									jew	jew	r22				damage-skill	54	5	1	sor		2	2	cast3		50	50	extra-ltng		11	15	extra-cold		11	15	att-skill	54	100	1	dmg-to-mana		25	25	Vertigo		0
@@ -1728,7 +1728,7 @@ Tynged	1	new runeword	xbow									jew	jew	jew	r41			hit-skill	330	1	16	crush		1
 Skarn	1	X	bswd	baxe								jew	jew	jew	r40			dmg%		115	143	oskill	972	26	34	res-fire		41	50	res-pois		41	50	red-dmg%		10	10	att-skill	901	25	13	crush		17	17	Skarn		0
 Eris	1	new runeword	abow									jew	jew	jew	r37			dmg%		58	86	hit-skill	712	1	6	oskill	1016	21	26	swing3		40	40	red-dmg%		5	5	heal-hit		3	3	charged	1018	100	16	Eris		0
 Titanomachia	1	new runeword	aspe									jew	jew	jew	r24			dmg%		58	86	dmg-max		26	38	att-skill	980	33	7	dmg-ltng		1	125	str		50	50	red-dmg%		5	5	dmg-stun		50	50	Titanomachia		0
-Herfjotur	1	new runeword	ajav									jew	jew	jew	r41			dmg%		115	143	dmg-max		13	25	oskill	968	8	13	kill-skill	619	5	12	reanimate	1400	8	8	slow		25	25	hit-skill	803	20	5	Herfjotur		0
+Herfjotur	1	new runeword	ajav									jew	jew	jew	r41			dmg%		115	143	dmg-max		13	25	oskill	968	8	13	kill-skill	619	5	1	reanimate	1400	8	8	slow		25	25	hit-skill	803	20	5	Herfjotur		0
 Quaoar	1	new runeword	pclb	pmac	pham							jew	jew	jew	r29			dmg%		104	114	dmg-norm		7	13	att-skill	982	5	27	nofreeze		1	1	heal-hit		5	5	hp%		15	15					Quaoar		0
 Eventide	1	new runeword	nscy									jew	jew	jew	r36			dmg%		115	143	dmg-elem	75	63	188	att-skill	964	50	5	light		-2	-2	red-dmg%		-25	-25	state	74	1	1	crush		11	13	Eventide		0
 Vertigo	1	new runeword	orb									jew	jew	jew	r22			damage-skill	54	5	1	sor		2	2	cast3		50	50	extra-ltng		11	15	extra-cold		11	15	att-skill	54	100	1	dmg-to-mana		25	25	Vertigo		0
@@ -1787,7 +1787,7 @@ Tynged	1	new runeword	xbow									jew	jew	jew	jew	r41		hit-skill	330	1	16	crush
 Skarn	1	X	bswd	baxe								jew	jew	jew	jew	r40		dmg%		115	143	oskill	972	26	34	res-fire		41	50	res-pois		41	50	red-dmg%		10	10	att-skill	901	25	13	crush		17	17	Skarn		0
 Eris	1	new runeword	abow									jew	jew	jew	jew	r37		dmg%		58	86	hit-skill	712	1	6	oskill	1016	21	26	swing3		40	40	red-dmg%		5	5	heal-hit		3	3	charged	1018	100	16	Eris		0
 Titanomachia	1	new runeword	aspe									jew	jew	jew	jew	r24		dmg%		58	86	dmg-max		26	38	att-skill	980	33	7	dmg-ltng		1	125	str		50	50	red-dmg%		5	5	dmg-stun		50	50	Titanomachia		0
-Herfjotur	1	new runeword	ajav									jew	jew	jew	jew	r41		dmg%		115	143	dmg-max		13	25	oskill	968	8	13	kill-skill	619	5	12	reanimate	1400	8	8	slow		25	25	hit-skill	803	20	5	Herfjotur		0
+Herfjotur	1	new runeword	ajav									jew	jew	jew	jew	r41		dmg%		115	143	dmg-max		13	25	oskill	968	8	13	kill-skill	619	5	1	reanimate	1400	8	8	slow		25	25	hit-skill	803	20	5	Herfjotur		0
 Quaoar	1	new runeword	pclb	pmac	pham							jew	jew	jew	jew	r29		dmg%		104	114	dmg-norm		7	13	att-skill	982	5	27	nofreeze		1	1	heal-hit		5	5	hp%		15	15					Quaoar		0
 Eventide	1	new runeword	nscy									jew	jew	jew	jew	r36		dmg%		115	143	dmg-elem	75	63	188	att-skill	964	50	5	light		-2	-2	red-dmg%		-25	-25	state	74	1	1	crush		11	13	Eventide		0
 Vertigo	1	new runeword	orb									jew	jew	jew	jew	r22		damage-skill	54	5	1	sor		2	2	cast3		50	50	extra-ltng		11	15	extra-cold		11	15	att-skill	54	100	1	dmg-to-mana		25	25	Vertigo		0
@@ -1846,7 +1846,7 @@ Tynged	1	new runeword	xbow									jew	jew	jew	jew	jew	r41	hit-skill	330	1	16	cr
 Skarn	1	X	bswd	baxe								jew	jew	jew	jew	jew	r40	dmg%		115	143	oskill	972	26	34	res-fire		41	50	res-pois		41	50	red-dmg%		10	10	att-skill	901	25	13	crush		17	17	Skarn		0
 Eris	1	new runeword	abow									jew	jew	jew	jew	jew	r37	dmg%		58	86	hit-skill	712	1	6	oskill	1016	21	26	swing3		40	40	red-dmg%		5	5	heal-hit		3	3	charged	1018	100	16	Eris		0
 Titanomachia	1	new runeword	aspe									jew	jew	jew	jew	jew	r24	dmg%		58	86	dmg-max		26	38	att-skill	980	33	7	dmg-ltng		1	125	str		50	50	red-dmg%		5	5	dmg-stun		50	50	Titanomachia		0
-Herfjotur	1	new runeword	ajav									jew	jew	jew	jew	jew	r41	dmg%		115	143	dmg-max		13	25	oskill	968	8	13	kill-skill	619	5	12	reanimate	1400	8	8	slow		25	25	hit-skill	803	20	5	Herfjotur		0
+Herfjotur	1	new runeword	ajav									jew	jew	jew	jew	jew	r41	dmg%		115	143	dmg-max		13	25	oskill	968	8	13	kill-skill	619	5	1	reanimate	1400	8	8	slow		25	25	hit-skill	803	20	5	Herfjotur		0
 Quaoar	1	new runeword	pclb	pmac	pham							jew	jew	jew	jew	jew	r29	dmg%		104	114	dmg-norm		7	13	att-skill	982	5	27	nofreeze		1	1	heal-hit		5	5	hp%		15	15					Quaoar		0
 Eventide	1	new runeword	nscy									jew	jew	jew	jew	jew	r36	dmg%		115	143	dmg-elem	75	63	188	att-skill	964	50	5	light		-2	-2	red-dmg%		-25	-25	state	74	1	1	crush		11	13	Eventide		0
 Vertigo	1	new runeword	orb									jew	jew	jew	jew	jew	r22	damage-skill	54	5	1	sor		2	2	cast3		50	50	extra-ltng		11	15	extra-cold		11	15	att-skill	54	100	1	dmg-to-mana		25	25	Vertigo		0
@@ -2052,7 +2052,7 @@ Hastin	1	X	jave									jew	jew	jew	r55			dmg%		144	171	dmg-norm		38	75	crush		1
 Hastin	1	X	jave									jew	jew	jew	jew	r55		dmg%		144	171	dmg-norm		38	75	crush		11	13	kill-skill	59	5	8	all-stats		31	40	red-dmg%		5	5	ama		2	2	Hastin		0
 Hastin	1	X	jave									jew	jew	jew	jew	jew	r55	dmg%		144	171	dmg-norm		38	75	crush		11	13	kill-skill	59	5	8	all-stats		31	40	red-dmg%		5	5	ama		2	2	Hastin		0
 ThanksEveryone	1	Bye	tors									r51	r52	r53	r54	r55	r56	ac%		172	200	allskills		4	4	oskill	1004	1	1	heal-hit		2	2	uninterrupt		25	25	addxp		50	50					ThanksEveryone		0
-Shattered Stone	1	weapon	weap						nscy	taxe	aspe	r58	r58	r58	r58	r58	r58	dmg%		200	200	allskills		0	2	uninterrupt		50	50	dmg-norm		63	88	att-skill	500	20	12	lifesteal		20	20	swing3		50	50	Shattered Stone		0
+Shattered Stone	1	weapon	weap						nscy	taxe	aspe	r58	r58	r58	r58	r58	r58	dmg%		200	200	allskills		0	2	uninterrupt		50	50	dmg-norm		63	88	att-skill	500	25	36	lifesteal		20	20	indestruct		1	1	Shattered Stone		0
 Dead Mans Breath	1	bow	bow						dbow			r62	r62	r62	r62	r62	r62	dmg%		200	200	allskills		0	2	hit-skill	387	1	23	pierce-cold		50	50	dmg-cold		125	250	heal-hit		1	1	kill-skill	903	10	16	Dead Mans Breath		0
 Faseroptic	1	xbow	xbow									r61	r61	r61	r61	r61	r61	dmg%		200	200	allskills		0	2	hit-skill	462	1	19	extra-ltng		30	35	pierce-ltng		18	18	res-ltng		100	100	dmg-ltng		250	375	Faseroptic		0
 RWMinefield	1	sword	swor									r57	r57	r57	r57	r57	r57	dmg%		171	200	allskills		0	2	oskill	431	15	15	att-skill	336	25	36	extra-fire		25	38	pierce-fire		60	60	dmg-fire		250	250	RWMinefield		0
@@ -2088,7 +2088,7 @@ Dark Exile	1	sorc blade	scrd									r62	r62	r62	r62	r62	r62	dmg%		171	200	sor		
 Hellfire Plate	1	body armor	tors									r57	r57	r57	r57	r57	r57	ac%		171	200	allskills		0	2	oskill	367	3	14	damage-skill	346	5	5	ac		1000	1000	red-dmg%		10	10	dmg-fire		167	167	Hellfire Plate		0
 Thundercap	1	helm	helm						phlm			r61	r61	r61	r61			ac%		171	200	allskills		0	1	res-ltng-max		10	10	extra-ltng		18	18	pierce-ltng		21	21	abs-ltng		5	5	dmg-ltng		84	84	Thundercap		0
 Rathmas Blessing	1	circlet	circ									r62	r62	r62	r62			oskill	870	16	28	allskills		0	3	res-all-minion		50	50	dmg-minion		50	50	hp-minion		50	50	abs-cold		10	10	res-cold		40	40	Rathmas Blessing		0
-Khalims Protector	1	shield	shld									r60	r60	r60	r60			ac%		171	200	allskills		0	2	block		2	2	res-pois-max		10	10	heal-kill		50	50	block3		40	40	ac-global		50	50	Khalims Protector		0
+Khalims Protector	1	shield	shld						basd			r60	r60	r60	r60			ac%		171	200	allskills		0	2	block		2	2	res-pois-max		10	10	heal-kill		50	50	block3		40	40	ac-global		50	50	Khalims Protector		0
 Lysra	1	belt	belt									r57	r57					ac%		171	200	allskills		0	1	dmg-fire		84	167	res-fire-max		5	5	abs-fire		5	5	pierce-fire		15	15	move3		30	30	Lysra		0
 Retribution	1	gloves	glov									r57	r57	r57	r57			ac%		171	200	allskills		0	1	damage-skill	388	1	3	res-fire-max		10	10	res-fire		50	50	extra-fire		20	25	red-dmg%		5	5	Retribution		0
 Wind Runner	1	boot	boot									r58	r58	r58	r58			ac%		171	200	allskills		0	1	gethit-skill	624	5	17	dmg-norm		25	50	att%		250	250	swing3		35	35	lifesteal		10	15	Wind Runner		0
@@ -2122,7 +2122,7 @@ Goddess	1	new XVI	shld									r30	r98					uninterrupt		66	66	nofreeze		1	1	ac		
 Iblis	1	new XVI	glov									r04	r98					poison-dur		41	50	abs-fire%		10	10	extra-fire		33	38	enr%		25	35	light		10	10									Iblis		0
 Mercy	1	new XVI	glov									r13	r98					str		151	200	att-skill	90	10	18	vit%		11	15	ac		26	26	dmg-max		50	63									Mercy		0
 Kali	1	new XVI	glov									r21	r98					res-fire		91	91	kill-skill	518	33	33	allskills		2	2	ac		-314	-314	res-fire-max		15	15	charged	568	124	7					Kali		0
-Aiwass	1	new XVI	glov									r33	r98					slow-thorns		-5	-5	shadows-attsyn		1	1	nec		3	3	ac		293	293	charged	873	78	12	str%		21	35	dmg-minion		44	50	Aiwass		0
+Aiwass	1	new XVI	glov									r33	r98					slow-thorns		-5	-5	shadows-attsyn		0	0	nec		3	3	ac		293	293	charged	873	78	12	str%		21	35	dmg-minion		44	50	Aiwass		0
 Rainbow	1	new XVI	belt									r05	r98					res-all		31	40	extra-all		13	13	mag%		83	83	light		7	7													Rainbow		0
 Prodigy	1	new XVI	belt									r15	r98					extra-pm		-3	-3	extra-fire		13	43	extra-ltng		13	43	mana-kill		31	60	regen-mana		51	90	cast3		40	40	att%		100	100	Prodigy		0
 Fuse	1	new XVI	belt									r23	r98					res-pois		-30	-30	ac%		143	171	gethit-skill	79	25	28	res-fire		75	100	extra-fire/lvl	12	12	12	charged	564	40	5	dmg-fire		76	226	Fuse		0
@@ -2180,7 +2180,7 @@ Goddess	1	new XVI	shld									jew	r30	r98				uninterrupt		66	66	nofreeze		1	1	a
 Iblis	1	new XVI	glov									jew	r04	r98				poison-dur		41	50	abs-fire%		10	10	extra-fire		33	38	enr%		25	35	light		10	10									Iblis		0
 Mercy	1	new XVI	glov									jew	r13	r98				str		151	200	att-skill	90	10	18	vit%		11	15	ac		26	26	dmg-max		50	63									Mercy		0
 Kali	1	new XVI	glov									jew	r21	r98				res-fire		91	91	kill-skill	518	33	33	allskills		2	2	ac		-314	-314	res-fire-max		15	15	charged	568	124	7					Kali		0
-Aiwass	1	new XVI	glov									jew	r33	r98				slow-thorns		-5	-5	shadows-attsyn		1	1	nec		3	3	ac		293	293	charged	873	78	12	str%		21	35	dmg-minion		44	50	Aiwass		0
+Aiwass	1	new XVI	glov									jew	r33	r98				slow-thorns		-5	-5	shadows-attsyn		0	0	nec		3	3	ac		293	293	charged	873	78	12	str%		21	35	dmg-minion		44	50	Aiwass		0
 Rainbow	1	new XVI	belt									jew	r05	r98				res-all		31	40	extra-all		13	13	mag%		83	83	light		7	7													Rainbow		0
 Prodigy	1	new XVI	belt									jew	r15	r98				extra-pm		-3	-3	extra-fire		13	43	extra-ltng		13	43	mana-kill		31	60	regen-mana		51	90	cast3		40	40	att%		100	100	Prodigy		0
 Fuse	1	new XVI	belt									jew	r23	r98				res-pois		-30	-30	ac%		143	171	gethit-skill	79	25	28	res-fire		75	100	extra-fire/lvl	12	12	12	charged	564	40	5	dmg-fire		76	226	Fuse		0
@@ -2238,7 +2238,7 @@ Goddess	1	new XVI	shld									jew	jew	r30	r98			uninterrupt		66	66	nofreeze		1	
 Iblis	1	new XVI	glov									jew	jew	r04	r98			poison-dur		41	50	abs-fire%		10	10	extra-fire		33	38	enr%		25	35	light		10	10									Iblis		0
 Mercy	1	new XVI	glov									jew	jew	r13	r98			str		151	200	att-skill	90	10	18	vit%		11	15	ac		26	26	dmg-max		50	63									Mercy		0
 Kali	1	new XVI	glov									jew	jew	r21	r98			res-fire		91	91	kill-skill	518	33	33	allskills		2	2	ac		-314	-314	res-fire-max		15	15	charged	568	124	7					Kali		0
-Aiwass	1	new XVI	glov									jew	jew	r33	r98			slow-thorns		-5	-5	shadows-attsyn		1	1	nec		3	3	ac		293	293	charged	873	78	12	str%		21	35	dmg-minion		44	50	Aiwass		0
+Aiwass	1	new XVI	glov									jew	jew	r33	r98			slow-thorns		-5	-5	shadows-attsyn		0	0	nec		3	3	ac		293	293	charged	873	78	12	str%		21	35	dmg-minion		44	50	Aiwass		0
 Rainbow	1	new XVI	belt									jew	jew	r05	r98			res-all		31	40	extra-all		13	13	mag%		83	83	light		7	7													Rainbow		0
 Prodigy	1	new XVI	belt									jew	jew	r15	r98			extra-pm		-3	-3	extra-fire		13	43	extra-ltng		13	43	mana-kill		31	60	regen-mana		51	90	cast3		40	40	att%		100	100	Prodigy		0
 Fuse	1	new XVI	belt									jew	jew	r23	r98			res-pois		-30	-30	ac%		143	171	gethit-skill	79	25	28	res-fire		75	100	extra-fire/lvl	12	12	12	charged	564	40	5	dmg-fire		76	226	Fuse		0
@@ -2296,7 +2296,7 @@ Goddess	1	new XVI	shld									jew	jew	jew	r30	r98		uninterrupt		66	66	nofreeze	
 Iblis	1	new XVI	glov									jew	jew	jew	r04	r98		poison-dur		41	50	abs-fire%		10	10	extra-fire		33	38	enr%		25	35	light		10	10									Iblis		0
 Mercy	1	new XVI	glov									jew	jew	jew	r13	r98		str		151	200	att-skill	90	10	18	vit%		11	15	ac		26	26	dmg-max		50	63									Mercy		0
 Kali	1	new XVI	glov									jew	jew	jew	r21	r98		res-fire		91	91	kill-skill	518	33	33	allskills		2	2	ac		-314	-314	res-fire-max		15	15	charged	568	124	7					Kali		0
-Aiwass	1	new XVI	glov									jew	jew	jew	r33	r98		slow-thorns		-5	-5	shadows-attsyn		1	1	nec		3	3	ac		293	293	charged	873	78	12	str%		21	35	dmg-minion		44	50	Aiwass		0
+Aiwass	1	new XVI	glov									jew	jew	jew	r33	r98		slow-thorns		-5	-5	shadows-attsyn		0	0	nec		3	3	ac		293	293	charged	873	78	12	str%		21	35	dmg-minion		44	50	Aiwass		0
 Rainbow	1	new XVI	belt									jew	jew	jew	r05	r98		res-all		31	40	extra-all		13	13	mag%		83	83	light		7	7													Rainbow		0
 Prodigy	1	new XVI	belt									jew	jew	jew	r15	r98		extra-pm		-3	-3	extra-fire		13	43	extra-ltng		13	43	mana-kill		31	60	regen-mana		51	90	cast3		40	40	att%		100	100	Prodigy		0
 Fuse	1	new XVI	belt									jew	jew	jew	r23	r98		res-pois		-30	-30	ac%		143	171	gethit-skill	79	25	28	res-fire		75	100	extra-fire/lvl	12	12	12	charged	564	40	5	dmg-fire		76	226	Fuse		0
@@ -2354,7 +2354,7 @@ Goddess	1	new XVI	shld									jew	jew	jew	jew	r30	r98	uninterrupt		66	66	nofree
 Iblis	1	new XVI	glov									jew	jew	jew	jew	r04	r98	poison-dur		41	50	abs-fire%		10	10	extra-fire		33	38	enr%		25	35	light		10	10									Iblis		0
 Mercy	1	new XVI	glov									jew	jew	jew	jew	r13	r98	str		151	200	att-skill	90	10	18	vit%		11	15	ac		26	26	dmg-max		50	63									Mercy		0
 Kali	1	new XVI	glov									jew	jew	jew	jew	r21	r98	res-fire		91	91	kill-skill	518	33	33	allskills		2	2	ac		-314	-314	res-fire-max		15	15	charged	568	124	7					Kali		0
-Aiwass	1	new XVI	glov									jew	jew	jew	jew	r33	r98	slow-thorns		-5	-5	shadows-attsyn		1	1	nec		3	3	ac		293	293	charged	873	78	12	str%		21	35	dmg-minion		44	50	Aiwass		0
+Aiwass	1	new XVI	glov									jew	jew	jew	jew	r33	r98	slow-thorns		-5	-5	shadows-attsyn		0	0	nec		3	3	ac		293	293	charged	873	78	12	str%		21	35	dmg-minion		44	50	Aiwass		0
 Rainbow	1	new XVI	belt									jew	jew	jew	jew	r05	r98	res-all		31	40	extra-all		13	13	mag%		83	83	light		7	7													Rainbow		0
 Prodigy	1	new XVI	belt									jew	jew	jew	jew	r15	r98	extra-pm		-3	-3	extra-fire		13	43	extra-ltng		13	43	mana-kill		31	60	regen-mana		51	90	cast3		40	40	att%		100	100	Prodigy		0
 Fuse	1	new XVI	belt									jew	jew	jew	jew	r23	r98	res-pois		-30	-30	ac%		143	171	gethit-skill	79	25	28	res-fire		75	100	extra-fire/lvl	12	12	12	charged	564	40	5	dmg-fire		76	226	Fuse		0
@@ -2853,9 +2853,9 @@ Raid	1		jave									jew	jew	jew	jew	r10	r98	dmg%		144	171	ignore-ac		1	1	mana-k
 Hastata	1		jave									jew	jew	jew	jew	r20	r98	dmg%		144	171	hit-skill	101	2	9	dmg-max		167	167	dex		51	60	pierce-fire		25	30	att%		201	250	heal-kill		101	125	Hastata		0
 HasteZ	1		jave									jew	jew	jew	jew	r30	r98	dmg%		172	285	dmg-norm		63	125	block3		75	75	balance3		30	30	kill-skill	496	5	45	regen		123	123	skill-dur		40	40	HasteZ		0
 Ensi	1	oops!	pspe									jew	jew	jew	jew	r12	r98	extra-pois		-3	-3	dmg%		172	200	att-skill	699	60	57	swing3		100	100	dmg-fire		250	375	stupidity		2	3					Ensi		0
-Supremacy	1		xbow									r57	r61	r59	r60	r58	r62	dmg%		115	143	oskill	1088	3	8	dmg-max		1	125	lifesteal		11	16	heal-kill		21	30	red-dmg%		5	5	all-stats%		11	20	Supremacy	1	0
-Creep	1		staf									r60	r59	r57	r62	r61	r58	state	97	1	1	desc-sorc		1	1	cast3		50	50	extra-all		21	25	allskills		6	10	res-all-max		1	5					Creep	1	0
-Trendkill	1		scyh									r58	r62	r61	r59	r57	r60	reanimate-rand	25	1256	1553	oskill	479	36	42	att%		201	250	pierce-fcl		13	18	stance-radius		6	11	move3		-20	-20	ease		-50	-50	Trendkill	1	0
-PeaceSells	1		spea									r61	r57	r60	r58	r62	r59	dmg/lvl	20	20	20	desc-drunk		1	1	aura	296	5	5	swing3		100	100	crush		50	50	avoidance		10	10	hit-skill	541	5	4	PeaceSells	1	0
-BlackDog	1		scep									r59	r58	r62	r61	r60	r57	dmg-norm		250	500	oskill	18	9	18	block		1	1	slow		21	30	str		-100	-100	aura	493	1	1	death-skill	501	100	38	BlackDog	1	0
-Longview	1		tors									r62	r60	r58	r57	r59	r61	ac		-500	-500	oskill	1158	21	27	pierce-pois		30	30	dmg-norm		7	7	ease		-100	-100	all-stats		51	100	slow-melee		50	50	Longview	1	0
+Supremacy	1		xbow									r57	r61	r59	r60	r58	r62	dmg%		115	143	oskill	1088	3	8	dmg-max		1	125	lifesteal		11	16	heal-kill		21	30	red-dmg%		5	5	all-stats%		11	20	Supremacy		0
+Creep	1		staf									r60	r59	r57	r62	r61	r58	state	97	1	1	desc-sorc		1	1	cast3		50	50	extra-all		21	25	allskills		6	10	res-all-max		1	5					Creep		0
+Trendkill	1		scyh									r58	r62	r61	r59	r57	r60	reanimate-rand	25	1256	1553	oskill	479	36	42	att%		201	250	pierce-fcl		13	18	stance-radius		6	11	move3		-20	-20	ease		-50	-50	Trendkill		0
+PeaceSells	1		spea									r61	r57	r60	r58	r62	r59	dmg/lvl	20	20	20	desc-drunk		1	1	aura	296	5	5	swing3		100	100	crush		50	50	avoidance		10	10	hit-skill	541	5	4	PeaceSells		0
+BlackDog	1		scep									r59	r58	r62	r61	r60	r57	dmg-norm		250	500	oskill	18	9	18	block		1	1	slow		21	30	str		-100	-100	aura	493	1	1	death-skill	501	100	38	BlackDog		0
+Longview	1		tors									r62	r60	r58	r57	r59	r61	ac		-500	-500	oskill	1158	21	27	pierce-pois		30	30	dmg-norm		7	7	ease		-100	-100	all-stats		51	100	slow-melee		50	50	Longview		0

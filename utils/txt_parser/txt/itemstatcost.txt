@@ -244,8 +244,8 @@ x_signet24	241	c		1	12											7	2	1024		5	0	5	0																														
 x_signet25	242	c		1	12											7	2	1024		5	0	5	0																														0
 x_signet26	243	c		1	12											7	2	1024		5	0	5	0																														0
 x_signet27	244	c		1	12											7	2	1024		5	0	5	0																														0
-x_signet28	245	FREE STAT		1	12											7	2	1024		5	0	5	0																														0
-x_signet29	246	FREE STAT		1	12											7	2	1024		5	0	5	0																														0
+ffront_proj	245	Sorc Only		1	9											1006	251	1024		2	0	2	1																	238	3	0	ModitemHabacalva	ModItemDefiler									0
+firedance_mod	246	Sorc Only		1	9											1006	251	1024		2	0	2	1																	238	3	0	ModItemGaleona	ModItemGreenwalker									0
 item_crushingblow_perlevel	247			1	6											107	512	1024		6	0	10	0			2	5	level	item_crushingblow						1					86	7	1	ModStr5c	ModStr5c	increaseswithplaylevelX								0
 item_openwounds_perlevel	248			1	6											91	64	1024		6	0	10	0			2	5	level	item_openwounds						1					82	7	1	ModStr3m	ModStr3m	increaseswithplaylevelX								0
 x_signet30	249	c		1	12											7	2	1024		5	0	5	0																														0
@@ -256,7 +256,7 @@ item_replenish_quantity	253			1	5											53	128	1024		5	0	6	0																
 item_extra_stack	254			1												50	5	1024		8	0	8	0																	5	3	0	ModStre9i	ModStre9i									0
 x_signet32	255	c		1	12											7	2	1024		5	0	5	0																														0
 x_signet33	256	c		1	12											7	2	1024		5	0	5	0																														0
-x_signet34	257	FREE STAT		1	12											7	2	1024		5	0	5	0																														0
+vessel_mod	257	Pal Only		1	9											1006	251	1024		2	0	2	1																	238	3	0	ModItemAdjudicator	ModItemDefiler									0
 x_signet35	258	c		1	12											7	2	1024		5	0	5	0																														0
 item_drain_aura	259	desc only		1	12											4	1	1024		2	0	2	0																	49	3	0	ModitemDrainAura	ModitemDrainAura									0
 item_thunderfury	260	NEW OMG		1	7	17						1			2	95	128	1024		21	0	7	0	17											1	domeleeattack	20	domissileattack	20	238	3	0	ModitemThunderfury	ModitemThunderfury									0
@@ -395,7 +395,7 @@ passive_acidtrance_synergy	392	skills.txt		1	12											252	80	1024		1	0	2	0		
 x_signet55	393	FREE STAT		1	12											7	2	1024		5	0	5	0																														0
 passive_shadows_addelem	394	skills.txt		1	12													1024		1	0	8	0																														0
 passive_vindicate_adddmg	395	skills.txt		1	12													1024																																			0
-passive_vindicate_dmgeffect	396	technical - not suited for affixes		1	12													1024																																			0
+passive_vindicate_dmgeffect	396	FREE STAT		1	12													1024																																			0
 x_signet56	397	FREE STAT		1	12											7	2	1024		5	0	5	0																														0
 x_signet57	398	yshari set		1	12											7	2	1024		5	0	5	0																														0
 passive_wrath_synergy	399	skills.txt		1	12											256	67	1024		1	0	8	0																	148	4	1	ModitemSearingSyn	ModitemSearingSyn									0
@@ -414,7 +414,7 @@ skill_vindicate_effect	411	technical - not suited for affixes		1	12													
 resonance_buff	412	resonance buff		1	12											8	2	1024		10	0	10	0																														0
 skill_bloodymary_bonus	413	sorc familiar		1	12											17	3	1024		8	0	8	0																	50	2	1	ModitemMary	ModitemMary									0
 skill_paganheart_bonus	414	FREE STAT		1	12											17	3	1024		8	0	8	0																	49	2	1	ModitemPagan	ModitemPagan									0
-vindicate_maxhp	415	technical - not suited for affixes		1	12													1024																																			0
+vindicate_maxhp	415	FREE STAT		1	12													1024																																			0
 passive6	416	states.txt		1	12													1024																																			0
 shadowfiends_pierce_buff	417	FREE STAT		1	12													1024																																			0
 item_needschallenged	418	cubemain.txt		1	12											4	1	1024		2	0	2	0																	225	3	0	ModitemNeedsLCed	ModitemNeedsLCed									0
@@ -461,13 +461,13 @@ x_signet62	458	c		1	12											7	2	1024		5	0	5	0																														
 x_signet63	459	c		1	12											7	2	1024		5	0	5	0																														0
 x_signet64	460	c		1	12											7	2	1024		5	0	5	0																														0
 x_signet65	461	c		1	12											7	2	1024		5	0	5	0																														0
-x_signet66	462	FREE STAT		1	12											7	2	1024		5	0	5	0																														0
+skill_voj_mastery	462	skills.txt		1	12													1024				8	0																	137	4	1	ModitemVoJDmgSyn	ModitemVoJDmgSyn									0
 x_signet67	463	FREE STAT		1	12											7	2	1024		5	0	5	0																														0
-x_signet68	464	FREE STAT		1	12											7	2	1024		5	0	5	0																														0
+skill_scorpion_blades	464	m17		1	12											59	50	1024		9	1	9	1																	130	1	1	ModItemScorpionBlades	ModItemScorpionBlades									0
 x_signet69	465	sunstone merge		1	12											7	2	1024		5	0	5	0																														0
 x_signet70	466	trader's chest		1	12											7	2	1024		5	0	7	0																														0
 skill_elixirs_synergy	467	misc.txt		1	12											17	3	1024		10	0	10	0																	49	4	1	ModitemElix	ModitemElix									0
-skill_light_mastery	468	skills.txt		1	12													1024				8	0																	137	2	1	ModitemVDmgSyn	ModitemVDmgSyn									0
+skill_light_mastery	468	skills.txt		1	12													1024				8	0																	137	4	1	ModitemVDmgSyn	ModitemVDmgSyn									0
 skill_shadow_mastery	469	skills.txt		1	12													1024				8	0																	138	1	1	ModitemVTgtSyn	ModitemVTgtSyn									0
 skill_minion_dmg_percent	470	skills.txt		1	12											55	41	1024		9	50	9	50																	75	4	1	ModitemDmgMinBonus	ModitemDmgMinBonus									0
 item_needsupgraded	471	cubemain.txt		1	12											4	1	1024		2	1	2	1																	149	3	0	ModitemNeedsUpgraded	ModitemNeedsUpgraded									0
@@ -507,5 +507,5 @@ item_dexterity_perblessedlife	504	none		1	6											53	64	1024		6	0	10	0			2	5
 item_hpregen_perlevel	505	none		1	6											111	68	1024		6	0	10	0			2	5	level	hpregen											60	6	2	ModStr2l	ModStr2w	increaseswithplaylevelX								0
 desc-superbeasty	506	desc only		1	12											4	1	1024		1	0	1	0																	234	3	0	IMAMOTHERFUCKINGMONSTAR	IMAMOTHERFUCKINGMONSTAR									0
 levelchallenge_kill_check	507	skills.txt		1	12											1	1	1024																																			0
-desc-fatasstriton	508	desc only		1	12											4	1	1024		1	0	1	0																	234	3	0	1553755050	DescBlack7									0
+desc-fatasstriton	508	desc only		1	12											4	1	1024		1	0	1	0																	234	3	0	ModItemTreewarden	DescBlack7									0
 fuck_you#	509			1	16											56	4	1024		6	10	10	500			11			maxhp											250	3	0	FUCKYOUFUCKYOU	FUCKYOUFUCKYOU									0

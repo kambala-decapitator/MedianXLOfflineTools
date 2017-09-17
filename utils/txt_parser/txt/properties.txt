@@ -356,7 +356,6 @@ desc-honorific	1	desc only				1	item_is_honorific																									Laz / 
 pierce-fico	1	new mod (combo)				1	passive_fire_pierce			3	passive_cold_pierce																					Laz / Combination affix		min	max	none	0
 mana-melee	1	new mod				1	item_manaonstrikingmelee																									Laz / Life on striking		min	max	none	0
 arc-synergy	1	skills.txt				1	skill_arcanestrike_synergy																									Laz / Interacts with skills.txt		min	max	none	0
-cinadides	1	desc + stat				1	passive_state_lockout			3	item_cannotbefrozen																					Laz / String for Evanescence		1	1	desc string for Evanescence	0
 retrib-syn	1	skills.txt				1	skill_justkilledsomeone																									Laz / Interacts with skills.txt		min	max	none	0
 hexdmg-syn	1	skills.txt				1	passive_hex_adddmg																									Laz / Interacts with skills.txt		min	max	none	0
 lamia-reanimate	1	skills.txt				1	skill_lamia_rean																									Laz / Interacts with skills.txt		min	max	none	0
@@ -486,9 +485,15 @@ trololololol	1					1	item_absorbfire				item_absorblight				item_absorbmagic				
 prevent-monster-heal	1					1	nightmare_no_regen																											1	1		0
 boxrandom	1					1	resonance_buff																														0
 shrinecount	1					1	shrine_counter																														0
-vessel-dmg	1					1	skill_light_mastery																														0
+vessel-dmg	1					1	skill_light_mastery			3	skill_voj_mastery																					Combo affix		min	max	none	0
 vessel-tgt	1					1	skill_shadow_mastery																														0
 pierce-lipo	1	new mod (combo)				1	passive_ltng_pierce			3	passive_pois_pierce																					Laz / Combination affix		min	max	none	0
-desc-suchbalance	1					1	tree_synergy																														
+desc-suchbalance	1					1	tree_synergy																														0
 extra-ficom	1	new mod (combo)				1	passive_fire_mastery			3	passive_cold_mastery			3	passive_pm_mastery																	Laz / EDM%		min	max	also affects elem affixes?	0
 dmg-div	1					1	damage_divisor																														0
+assassin-blades	1	skills.txt				1	skill_scorpion_blades																									Laz / Interacts with skills.txt		min	max	none	0
+soulstealer-avall	1					15	item_healafterkill			16	passive_dodge			16	passive_avoid			16	passive_evade																		0
+baal-buff	1					15	item_fasterattackrate			16	item_slow			16	item_fastermovevelocity																						0
+ffront-proj	1	skills.txt				1	ffront_proj																											-1	3	"Sorc Only, Used Twice"	0
+firedance-mod	1	skills.txt				1	firedance_mod																											-1	3	"Sorc Only, Used Twice"	0
+vessel-mod	1	skills.txt				1	vessel_mod																											-1	3	"Pal Only, Reusable"	0

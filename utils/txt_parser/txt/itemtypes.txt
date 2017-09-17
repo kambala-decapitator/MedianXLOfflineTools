@@ -224,14 +224,16 @@ Amber				geml	gem		0	0					0	0	0	0			1	0	1	0	0	0	0	0	3		0		0							misc	0
 Mega Ring				kill	misc		0	1	rrin	lrin			0	0	0	0	1	1	0	0	0	0	0	0	0	0	3		1		5	invrin1	invrin2	invrin3	invrin4	invrin5		misc	0
 New Helm				helm	armo	hlm1	1	1	head	head			0	0	0	0		1	0	0	0	0	6	6	6	0	3		1		0							armo	0
 Tier (1-6)	shard shatter			tier			0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
-Craft Sacred Minor (Armor)	shrine craft/bless			ct1a	ssgl	ct1x	0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
-Craft Sacred Major (Armor)	shrine craft/bless			ct2a	ssgl	ct2x	0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
-Craft Sacred Minor (Weapon)	shrine craft/bless			ct1w	ssgl	ct1x	0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
-Craft Sacred Major (Weapon)	shrine craft/bless			ct2w	ssgl	ct2x	0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
+Craft Sacred Minor (Armor)	shrine craft/bless			ct1a	sarm	ct1x	0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
+Craft Sacred Major (Armor)	shrine craft/bless			ct2a	sarm	ct2x	0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
+Craft Sacred Minor (Weapon)	shrine craft/bless			ct1w	swea	ct1x	0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
+Craft Sacred Major (Weapon)	shrine craft/bless			ct2w	swea	ct2x	0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
 Craft Sacred Minor	shrine craft/bless			ct1x	ssgl		0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
 Craft Sacred Major	shrine craft/bless			ct2x	ssgl		0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
 Sacred Bow	Sky Siege			#bow	bow		0	1	rarm	larm	bowq		0	0	0	0		1	0	0	0	0	0	0	0	1	2		0		0							weap	0
 Mass Disenchant	for arcane crystals/shards			dcht			0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
+Sacred Armor	tcex			sarm	ssgl		0	0					0	0	0	0			0	0	0	0	0	0	0	1	3		0		0								0
+Sacred Weapon	tcex			swea	ssgl		0	0					0	0	0	0			0	0	0	0	0	0	0	1	3		0		0								0
 Sacred Group	for learning signets			ssgl			0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
 Unique Mystic orb	cube reagent			asa#			0	0					0	0	0	0			1	0	0	0	0	0	0	0	3		0		0							misc	0
 Druid Gift Box				dbox	fbox		0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
@@ -242,7 +244,7 @@ Elemental Rune				xrun	rune	gem	0	0					0	0	0	0			1	0	1	0	0	0	0	0	3		0		0							
 SpecialBox				fbox			0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
 PhysicalBox				phbx			0	0					0	0	0	0	1	1	0	0	0	0	0	0	0	0	3		0		0								0
 Portable Shrine				prsh	thng		0	0					0	0	0	0			1	0	0	0	0	0	0	0	3		0		0							misc	0
-Active Shrine (10 Charges)				sh10	prsh		0	0					0	0	0	0			1	0	0	0	0	0	0	0	3		0		0							misc	0
+Active Shrine (10 Charges)				flsh	prsh		0	0					0	0	0	0			1	0	0	0	0	0	0	0	3		0		0							misc	0
 Mystic Sword	quest			####	mele		0	1	rarm				0	0	0	0		1	0	0	0	0	0	0	0	0	0		0		0							weap	0
 Yshari Ring				###1	ring		0	1	rrin	lrin			0	0	0	0		1	0	0	0	0	0	0	0	0	0		0		2	lab_rn1	lab_rn2						0
 Yshari Amulet				###2	amul		0	1	neck	neck			0	0	0	0		1	0	0	0	0	0	0	0	0	0		0		0								0

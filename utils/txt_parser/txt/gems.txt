@@ -7,7 +7,7 @@ Perfect Amethyst		17	gpv	3	att%		50	50	hp/paragon	32	32	32					dex%		5	5	hp/para
 Chipped Saphire		5	gcb	3	mana-kill		2	2	hp/paragon	32	32	32					skill-dur		1	1	hp/paragon	32	32	32					res-cold		6	6	hp/paragon	32	32	32				0
 Flawed Saphire		5	gfb	3	mana-kill		4	4	hp/paragon	32	32	32					skill-dur		2	2	hp/paragon	32	32	32					res-cold		12	12	hp/paragon	32	32	32				0
 Saphire		5	gsb	3	mana-kill		6	6	hp/paragon	32	32	32					skill-dur		3	3	hp/paragon	32	32	32					res-cold		18	18	hp/paragon	32	32	32				0
-Flwless Saphire		5	glb	3	mana-kill		8	8	hp/paragon	32	32	32					skill-dur		4	4	hp/paragon	32	32	32					res-cold		24	24	hp/paragon	32	32	32				0
+Flawless Saphire		5	glb	3	mana-kill		8	8	hp/paragon	32	32	32					skill-dur		4	4	hp/paragon	32	32	32					res-cold		24	24	hp/paragon	32	32	32				0
 Perfect Saphire		6	gpb	3	mana-kill		10	10	hp/paragon	32	32	32					skill-dur		5	5	hp/paragon	32	32	32					res-cold		30	30	hp/paragon	32	32	32				0
 Chipped Emerald		11	gcg	3	dmg-max		1	1	hp/paragon	32	32	32					regen		4	4	hp/paragon	32	32	32					res-pois		6	6	hp/paragon	32	32	32				0
 Flawed Emerald		11	gfg	3	dmg-max		2	2	hp/paragon	32	32	32					regen		8	8	hp/paragon	32	32	32					res-pois		12	12	hp/paragon	32	32	32				0
@@ -116,10 +116,10 @@ Perfect Amber		19	5$e	3	reanimate	800	5	5	hp/paragon	32	32	32					res-ltng		20	2
 Krys Rune	Krys	18	r54	2	att-damage		100	100	ac/runemaster	32	32	32					att-damage		25	25	ac/runemaster	32	32	32					att-damage		25	25	ac/runemaster	32	32	32				0
 Auhe Rune	Auhe	18	r55	2	deadly		5	5	ac/runemaster	32	32	32					deadly		3	3	ac/runemaster	32	32	32					deadly		3	3	ac/runemaster	32	32	32				0
 Sha'ad Rune	Shaad	18	r56	2	dmg%		20	20	ac/runemaster	32	32	32					ac%		20	20	ac/runemaster	32	32	32					ac%		20	20	ac/runemaster	32	32	32				0
-Fire Rune	Fi	9	r57	3	dmg-fire		25	50	ac/runemaster	32	32	32	item-duped		0	0	dmg-fire		13	25	ac/runemaster	32	32	32	item-duped		0	0	dmg-fire		13	25	ac/runemaster	32	32	32	item-duped		0	0
+Fire Rune	Fi	9	r57	3	dmg-fire		50	100	ac/runemaster	32	32	32	item-duped		0	0	dmg-fire		13	25	ac/runemaster	32	32	32	item-duped		0	0	dmg-fire		13	25	ac/runemaster	32	32	32	item-duped		0	0
 Phys Rune	Ea	1	r58	3	dmg-norm		5	10	ac/runemaster	32	32	32	item-duped		0	0	dmg-norm		3	5	ac/runemaster	32	32	32	item-duped		0	0	dmg-norm		3	5	ac/runemaster	32	32	32	item-duped		0	0
-Magic Rune	Ma	19	r59	3	dmg-mag		25	50	ac/runemaster	32	32	32	item-duped		0	0	dmg-mag		13	25	ac/runemaster	32	32	32	item-duped		0	0	dmg-mag		13	25	ac/runemaster	32	32	32	item-duped		0	0
-Pois Rune	Po	12	r60	3	dmg-pois	25	1025	2050	ac/runemaster	32	32	32	item-duped		0	0	dmg-pois	25	512	1025	ac/runemaster	32	32	32	item-duped		0	0	dmg-pois	25	512	1025	ac/runemaster	32	32	32	item-duped		0	0
-Ltng Rune	Li	14	r61	3	dmg-ltng		25	50	ac/runemaster	32	32	32	item-duped		0	0	dmg-ltng		13	25	ac/runemaster	32	32	32	item-duped		0	0	dmg-ltng		13	25	ac/runemaster	32	32	32	item-duped		0	0
-Cold Rune	Co	6	r62	3	dmg-cold		25	50	ac/runemaster	32	32	32	item-duped		0	0	dmg-cold		13	25	ac/runemaster	32	32	32	item-duped		0	0	dmg-cold		13	25	ac/runemaster	32	32	32	item-duped		0	0
+Magic Rune	Ma	19	r59	3	dmg-mag		50	100	ac/runemaster	32	32	32	item-duped		0	0	dmg-mag		13	25	ac/runemaster	32	32	32	item-duped		0	0	dmg-mag		13	25	ac/runemaster	32	32	32	item-duped		0	0
+Pois Rune	Po	12	r60	3	dmg-pois	25	2048	2560	ac/runemaster	32	32	32	item-duped		0	0	dmg-pois	25	512	1025	ac/runemaster	32	32	32	item-duped		0	0	dmg-pois	25	512	1025	ac/runemaster	32	32	32	item-duped		0	0
+Ltng Rune	Li	14	r61	3	dmg-ltng		50	100	ac/runemaster	32	32	32	item-duped		0	0	dmg-ltng		13	25	ac/runemaster	32	32	32	item-duped		0	0	dmg-ltng		13	25	ac/runemaster	32	32	32	item-duped		0	0
+Cold Rune	Co	6	r62	3	dmg-cold		50	100	ac/runemaster	32	32	32	item-duped		0	0	dmg-cold		13	25	ac/runemaster	32	32	32	item-duped		0	0	dmg-cold		13	25	ac/runemaster	32	32	32	item-duped		0	0
 Ultra Rune	Xis	3	r98	3	dmg%		30	30	ac/runemaster	32	32	32	blessings-counter		10	10	ac%		30	30	ac/runemaster	32	32	32	blessings-counter		10	10	ac%		30	30	ac/runemaster	32	32	32	blessings-counter		10	10

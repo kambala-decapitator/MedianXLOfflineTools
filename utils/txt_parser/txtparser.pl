@@ -207,10 +207,10 @@ for my $setItem (@$setItems)
 }
 
 my $itemName = 'name';
-my $armorTypes = parsetxt("armor.txt", $itemName=>0, "#code"=>18, $nameStr=>19, w=>29, h=>30, type=>49,
-                          type2=>50, rlvl=>15, image=>35, rstr=>9, rdex=>10);
-my $weaponTypes = parsetxt("weapons.txt", $itemName=>0, "#code"=>3, $nameStr=>5, w=>41, h=>42, type=>1,
-                           type2=>2, stackable=>43, rlvl=>28, rstr=>23, rdex=>24, image=>48, quest=>65,
+my $armorTypes = parsetxt("armor.txt", $itemName=>1, "#code"=>0, $nameStr=>21, w=>31, h=>32, type=>2,
+                          type2=>3, rlvl=>18, image=>37, rstr=>11, rdex=>12);
+my $weaponTypes = parsetxt("weapons.txt", $itemName=>1, "#code"=>0, $nameStr=>5, w=>41, h=>42, type=>2,
+                           type2=>3, stackable=>43, rlvl=>28, rstr=>23, rdex=>24, image=>48, quest=>65,
                            '1hMinDmg'=>10, '1hMaxDmg'=>11, '2hMinDmg'=>14, '2hMaxDmg'=>15, throwMinDmg=>16, throwMaxDmg=>17,
                            '1h2h'=>12, '2h'=>13);
 my $miscTypes = parsetxt("misc.txt", $itemName=>0, "#code"=>18, $nameStr=>20, $spellDescStr=>68,
@@ -218,7 +218,7 @@ my $miscTypes = parsetxt("misc.txt", $itemName=>0, "#code"=>18, $nameStr=>20, $s
 &tblExpandHash($_, $itemName) for ($armorTypes, $weaponTypes, $miscTypes);
 
 my $skills = parsetxt("skills.txt", _index=>"1", "dbgname"=>"0", "internalName"=>"3", "class"=>"2",
-                      "srvmissile"=>"15", "srvmissilea"=>"18", "srvmissileb"=>"19", "srvmissilec"=>"20", "SrcDam"=>"220");
+                      "srvmissile"=>"7", "srvmissilea"=>"10", "srvmissileb"=>"11", "srvmissilec"=>"12", "SrcDam"=>"220");
 my $skillsDsc = parsetxt("skilldesc.txt", "#code"=>0, tab => 1, row => 2, col => 3, image => 7, dscname=>8);
 
 my $processedSkills;
