@@ -229,7 +229,7 @@ foreach my $elem (@$skills)
     $index++;
 
     $processedSkills->[$index]->{iname1} = $elem->{dbgname};
-    $processedSkills->[$index]->{class} = defined $elem->{class} ? $classes{$elem->{class}} : -1;
+    $processedSkills->[$index]->{class} = (defined $elem->{class} and defined $classes{$elem->{class}}) ? $classes{$elem->{class}} : -1;
     next unless defined $elem->{internalName};
 
     my $desc = $skillsDsc->{$elem->{internalName}};
