@@ -114,7 +114,7 @@ Genie	1	Zero socketables	nxbw									r08						extra-fire		-3	-3	oskill	301	1	1	
 Atlantis	1	Zero socketables	nxbw									r19						dex		30	30	kill-skill	473	25	6	str		20	20	dmg%		58	86	mana%		21	25	dmg-global		11	15	gold%		51	75	Atlantis		0
 Aether	1	Zero socketables	nxbw									r31						dmg%		72	100	manasteal		11	14	avoidance		10	10	ignore-ac		1	1	str%		21	25	kill-skill	563	25	17					Aether		0
 Crucible	1	Zero socketables	nxbw									r46						dmg%		115	143	kill-skill	389	25	30	dmg-fire		125	375	dmg-undead		150	150	charged	766	20	25	res-fire		31	60	gethit-skill	564	5	19	Crucible		0
-Kronos	1	Zero socketables	nxbw									r51						dmg%		172	200	kill-skill	542	100	17	kill-skill	683	50	15	dmg-max		128	165	str%		31	40	crush-vit%		11	13	oskill	619	1	1	Kronos		0
+Kronos	1	Zero socketables	nxbw									r51						dmg%		172	200	kill-skill	542	100	17	kill-skill	683	50	15	dmg-max		128	165	str%		31	40	crush-vit%		11	13	oskill	758	1	1	Kronos		0
 Jihad	1	Zero socketables	pclb	pmac	pham							r05						dmg-max		1	3	dmg%		24	46	uninterrupt		11	20	dmg-demon		200	200	kill-skill	37	15	11	pal		1	1	swing3		15	15	Jihad		0
 Intifada	1	Zero socketables	pclb	pmac	pham							r15						extra-pm		-3	-3	dmg%		87	114	att-skill	595	25	8	no-ac		-100	-100	crush		11	13	dmg-minion		31	50	hp-minion		-21	-25	Intifada		0
 Lammasu	1	Zero socketables	pclb	pmac	pham							r25						res-cold		1	10	dmg-stun		125	125	extra-all		11	15	slow		25	25	swing3		40	40	pal		1	2	res-all-minion		25	25	Lammasu		0
@@ -132,7 +132,7 @@ Hestia	1	Zero socketables	orb									r50						oskill	388	1	3	sor		3	4	extra-fir
 Kallisti	1	Zero socketables	orb									r51						howl-thorns		11	15	oskill	397	1	6	extra-pois		21	25	sor		4	5	cast3		40	40	all-thorns	75	500	500	pierce-pois		7	9	Kallisti		0
 Inanna	1	Zero socketables	scrd									r12						extra-pois		-3	-3	dmg%		24	46	res-all		21	25	slow		25	25	uninterrupt		11	20	heal-melee		41	50					Inanna		0
 Grace	1	Zero socketables	scrd									r36						dmg%		115	143	block3		30	30	swing3		45	45	avoidance		10	10	dmg-min		13	25	sor		1	2	unity		21	40	Grace		0
-Khany	1	Zero socketables	scrd									r50						dmg%		115	143	dmg/lvl	16	16	16	att-skill	347	5	29	extra-all		16	20	oskill	355	8	17	sor		1	2	swingcast3		50	50	Khany		0
+Khany	1	Zero socketables	scrd									r50						dmg%		115	143	dmg/lvl	16	16	16	att-skill	347	5	29	extra-all		16	20	dmg-ltng		1	750	sor		1	2	swingcast3		50	50	Khany		0
 Shaula	1	Zero socketables	scrd									r52						enr-factor		35	35	att-skill	473	15	29	dmg-norm		38	63	mana%		50	50	slow		33	33	dmg%		144	171	reanimate	1561	21	25	Shaula		0
 Rebel	1	Zero socketables	tors									r01						res-all		16	20	ac%		12	23	dmg-global		6	10	str		20	20	dex		20	20	vit		-10	-10	enr		-10	-10	Rebel		0
 LumenArcana	1	Zero socketables	tors									r06						ac%		18	35	light		2	2	allskills		1	1	pierce-fire		3	8	pierce-cold		3	8	pierce-ltng		3	8	pierce-pois		3	8	Lumen Arcana		0
@@ -143,7 +143,7 @@ Mirage	1	Zero socketables	tors									r33						slow-thorns		11	15	red-dmg		31	4
 Dragonheart	1	Zero socketables	tors									r41						res-all-minion		-5	-5	allskills		2	2	swing3		50	50	ac%/lvl	64	64	64	hp		500	500	charged	777	20	15					Dragonheart		0
 Erawan	1	Zero socketables	tors									r48						ac%		144	171	red-dmg%		11	15	move3		-10	-10	ac-global		11	20	crush		5	5	str%		25	25	vit%		25	25	Erawan		0
 Unity	1	Zero socketables	tors									r52						enr-factor		20	20	unity		75	75	balance		50	50	dex		-25	-25	allskills		1	1	res-all		51	60	ac%		144	171	Unity		0
-Summit	1	Zero socketables	helm									r01						light		-1	-1	gold%		76	100	ease		-15	-15	cheap		6	10													Summit		0
+Summit	1	Zero socketables	helm									r01						light		-1	-1	gold%		76	100	ease		-15	-15	cheap		5	5													Summit		0
 Cannonball	1	Zero socketables	helm									r08						extra-fire		1	3	move3		40	40	stam		101	150	crush		3	3	att-skill	496	1	6	charged	564	5	5					Cannonball		0
 Ra	1	Zero socketables	helm									r17						allskills		1	1	move3		-10	-10	gold%		26	50	howl-thorns		11	15	pierce-fire		6	10	pierce-pois		6	10	cast3		25	25	Ra		0
 Alchemy	1	Zero socketables	helm									r26						regen		21	25	hp-minion		21	30	regen		21	25	ac%		58	86	block3		25	25	swing3		25	25					Alchemy		0
@@ -169,7 +169,7 @@ Skald	1	Zero socketables	glov									r41						res-all-minion		11	15	charged	96	
 Icarus	1	Zero socketables	glov									r49						move3		80	80	ac%		144	171	vit		75	75	enr		75	75	res-fire		-20	-20	death-skill	824	100	62					Icarus		0
 Drekavac	1	Zero socketables	glov									r51						dmg-max		18	23	skillcap		1	1	dmg-cold		25	50	cold-thorns	75	101	150	mag%		11	20	allskills		1	1	swingcast3		45	45	Drekavac		0
 Rainbow	1	Zero socketables	belt									r05						res-all		11	15	extra-all		3	3	mag%		6	8	light		2	2													Rainbow		0
-Prodigy	1	Zero socketables	belt									r15						extra-pm		-3	-3	extra-fire		6	8	extra-ltng		6	8	mana-kill		21	30	regen-mana		21	40	cast3		20	20	att%		100	100	Prodigy		0
+Prodigy	1	Zero socketables	belt									r15						extra-pm		-3	-3	extra-fire		6	8	extra-ltng		6	8	mana-kill		31	45	regen-mana		11	20	cast3		20	20	att%		100	100	Prodigy		0
 Fuse	1	Zero socketables	belt									r23						res-pois		-30	-30	ac%		58	86	gethit-skill	79	25	14	res-fire		31	50	extra-fire/lvl	4	4	4	charged	564	20	5	dmg-fire		5	24	Fuse		0
 Pulsa Dinura	1	Zero socketables	belt									r34						pal		1	1	ac%		87	114	att-skill	563	2	6	heal-kill		31	50	dmg-fire		13	38	wrath-synergy		21	40	swingcast3		15	15	Pulsa Dinura		0
 Truce	1	Zero socketables	belt									r42						ac%		172	200	red-dmg%		10	10	swingcast3		-5	-5	slow-thorns		5	5	dmg-stun		25	25									Truce		0
@@ -179,7 +179,7 @@ Epicenter	1	Zero socketables	boot									r06						ac%		4	15	crush/lvl	2	2	2	dea
 Outlaw	1	Zero socketables	boot									r14						ac%		30	57	shadows-max		2	2	enr		11	15	ac		-1	-1	howl-thorns		5	5									Outlaw		0
 Ginfaxi	1	Zero socketables	boot									r22						enr%		-5	-5	oskill	689	1	4	ac%		30	57	slow-thorns		5	5	str		16	20	ac-global		11	15					Ginfaxi		0
 Craton	1	Zero socketables	boot									r32						vit		-10	-10	ac-global		31	40	uninterrupt		11	20	att-skill	595	5	7	crush		3	3	all-stats		21	25	red-dmg		16	20	Craton		0
-Megalith	1	Zero socketables	boot									r40						ac%		115	143	regen-mana		50	50	cast3		25	25	str		41	50	red-dmg%		5	5	allskills		1	1	charged	57	15	8	Megalith		0
+Megalith	1	Zero socketables	boot									r40						ac%		115	143	cast3		25	25	str		41	50	red-dmg%		5	5	allskills		1	1	regen-mana		30	30					Megalith		0
 Nephilim	1	Zero socketables	boot									r48						ac%		144	171	str%		21	25	vit%		21	25	ac		150	150	death-skill	518	100	51	strvit		50	50					Nephilim		0
 Hibagon	1	Zero socketables	boot									r53						ease		-3	-3	ac%		172	200	reanimate	2233	5	5	reanimate	2234	5	5	reanimate	2223	5	5	res-all		31	40	allskills		1	1	Hibagon		0
 StataMater	1	Zero socketables	azhm									r16						dex%		6	10	oskill	566	1	7	enr%		11	15	res-fire		100	100	pierce-fire		5	5	red-dmg		11	15	gold%		51	75	StataMater		0
@@ -224,7 +224,7 @@ Surya	1	Zero socketables	pzhm									r46						ac%		115	143	oskill	698	1	12	gold
 Malakbel	1	Zero socketables	pzhm									r53						ease		-13	-13	reanimate	2335	2	2	res-fire		100	100	pal		2	2	cast3		10	10	extra-fire/lvl	8	8	8	death-skill	501	100	41	Malakbel		0
 Asmodai	1	Zero socketables	ashd									r14						mana-kill		11	20	heal-kill		11	20	gold%		16	16	dmg-min		3	5	kill-skill	839	5	4	skill-dur		21	25					Asmodai		0
 Sangreal	1	Zero socketables	ashd									r28						res-ltng		-30	-30	ac		33	33	desc-dbaura		1	1	aura	297	1	1	swing3		25	25	balance3		25	25	block		-10	-10	Sangreal		0
-Zohar	1	Zero socketables	ashd									r33						slow-thorns		20	20	oskill	676	1	7	ac%		87	114	dmg-max		38	50	cheap		11	15	swing3		20	20	avoidance		6	10	Zohar		0
+Zohar	1	Zero socketables	ashd									r33						slow-thorns		20	20	oskill	676	1	7	ac%		87	114	dmg-max		38	50	cheap		5	5	swing3		20	20	avoidance		6	10	Zohar		0
 Asclepion	1	Zero socketables	ashd									r46						oskill	358	26	34	swingcast3		15	15	block3		30	30	regen/lvl	48	48	48	pal		1	2	res-all		25	25	res-pois		75	75	Asclepion		0
 Amaymon	1	Zero socketables	ashd									r51						dmg-max		46	58	slow		10	10	oskill	420	4	13	dmg-minion		41	50	hp-minion		51	75	res-all		100	100	reanimate	1052	25	25	Amaymon		0
 Demeter	1	Zero socketables	stor									r23						ac%		58	86	res-pois		20	20	oskill	67	12	15	pierce-pois		16	20	sor		2	2	red-dmg		11	20					Demeter		0
@@ -349,7 +349,7 @@ Genie	1	One socketable	nxbw									jew	r08					extra-fire		-3	-3	oskill	301	1	1
 Atlantis	1	One socketable	nxbw									jew	r19					dex		30	30	kill-skill	473	25	6	str		20	20	dmg%		58	86	mana%		21	25	dmg-global		11	15	gold%		51	75	Atlantis		0
 Aether	1	One socketable	nxbw									jew	r31					dmg%		72	100	manasteal		11	14	avoidance		10	10	ignore-ac		1	1	str%		21	25	kill-skill	563	25	17					Aether		0
 Crucible	1	One socketable	nxbw									jew	r46					dmg%		115	143	kill-skill	389	25	30	dmg-fire		125	375	dmg-undead		150	150	charged	766	20	25	res-fire		31	60	gethit-skill	564	5	19	Crucible		0
-Kronos	1	One socketable	nxbw									jew	r51					dmg%		172	200	kill-skill	542	100	17	kill-skill	683	50	15	dmg-max		128	165	str%		31	40	crush-vit%		11	13	oskill	619	1	1	Kronos		0
+Kronos	1	One socketable	nxbw									jew	r51					dmg%		172	200	kill-skill	542	100	17	kill-skill	683	50	15	dmg-max		128	165	str%		31	40	crush-vit%		11	13	oskill	758	1	1	Kronos		0
 Jihad	1	One socketable	pclb	pmac	pham							jew	r05					dmg-max		1	3	dmg%		24	46	uninterrupt		11	20	dmg-demon		200	200	kill-skill	37	15	11	pal		1	1	swing3		15	15	Jihad		0
 Intifada	1	One socketable	pclb	pmac	pham							jew	r15					extra-pm		-3	-3	dmg%		87	114	att-skill	595	25	8	no-ac		-100	-100	crush		11	13	dmg-minion		31	50	hp-minion		-21	-25	Intifada		0
 Lammasu	1	One socketable	pclb	pmac	pham							jew	r25					res-cold		1	10	dmg-stun		125	125	extra-all		11	15	slow		25	25	swing3		40	40	pal		1	2	res-all-minion		25	25	Lammasu		0
@@ -367,7 +367,7 @@ Hestia	1	One socketable	orb									jew	r50					oskill	388	1	3	sor		3	4	extra-fi
 Kallisti	1	One socketable	orb									jew	r51					howl-thorns		11	15	oskill	397	1	6	extra-pois		21	25	sor		4	5	cast3		40	40	all-thorns	75	500	500	pierce-pois		7	9	Kallisti		0
 Inanna	1	One socketable	scrd									jew	r12					extra-pois		-3	-3	dmg%		24	46	res-all		21	25	slow		25	25	uninterrupt		11	20	heal-melee		41	50					Inanna		0
 Grace	1	One socketable	scrd									jew	r36					dmg%		115	143	block3		30	30	swing3		45	45	avoidance		10	10	dmg-min		13	25	sor		1	2	unity		21	40	Grace		0
-Khany	1	One socketable	scrd									jew	r50					dmg%		115	143	dmg/lvl	16	16	16	att-skill	347	5	29	extra-all		16	20	oskill	355	8	17	sor		1	2	swingcast3		50	50	Khany		0
+Khany	1	One socketable	scrd									jew	r50					dmg%		115	143	dmg/lvl	16	16	16	att-skill	347	5	29	extra-all		16	20	dmg-ltng		1	750	sor		1	2	swingcast3		50	50	Khany		0
 Shaula	1	One socketable	scrd									jew	r52					enr-factor		35	35	att-skill	473	15	29	dmg-norm		38	63	mana%		50	50	slow		33	33	dmg%		144	171	reanimate	1561	21	25	Shaula		0
 Rebel	1	One socketable	tors									jew	r01					res-all		16	20	ac%		12	23	dmg-global		6	10	str		20	20	dex		20	20	vit		-10	-10	enr		-10	-10	Rebel		0
 LumenArcana	1	One socketable	tors									jew	r06					ac%		18	35	light		2	2	allskills		1	1	pierce-fire		3	8	pierce-cold		3	8	pierce-ltng		3	8	pierce-pois		3	8	Lumen Arcana		0
@@ -378,7 +378,7 @@ Mirage	1	One socketable	tors									jew	r33					slow-thorns		11	15	red-dmg		31	
 Dragonheart	1	One socketable	tors									jew	r41					res-all-minion		-5	-5	allskills		2	2	swing3		50	50	ac%/lvl	64	64	64	hp		500	500	charged	777	20	15					Dragonheart		0
 Erawan	1	One socketable	tors									jew	r48					ac%		144	171	red-dmg%		11	15	move3		-10	-10	ac-global		11	20	crush		5	5	str%		25	25	vit%		25	25	Erawan		0
 Unity	1	One socketable	tors									jew	r52					enr-factor		20	20	unity		75	75	balance		50	50	dex		-25	-25	allskills		1	1	res-all		51	60	ac%		144	171	Unity		0
-Summit	1	One socketable	helm									jew	r01					light		-1	-1	gold%		76	100	ease		-15	-15	cheap		6	10													Summit		0
+Summit	1	One socketable	helm									jew	r01					light		-1	-1	gold%		76	100	ease		-15	-15	cheap		5	5													Summit		0
 Cannonball	1	One socketable	helm									jew	r08					extra-fire		1	3	move3		40	40	stam		101	150	crush		3	3	att-skill	496	1	6	charged	564	5	5					Cannonball		0
 Ra	1	One socketable	helm									jew	r17					allskills		1	1	move3		-10	-10	gold%		26	50	howl-thorns		11	15	pierce-fire		6	10	pierce-pois		6	10	cast3		25	25	Ra		0
 Alchemy	1	One socketable	helm									jew	r26					regen		21	25	hp-minion		21	30	regen		21	25	ac%		58	86	block3		25	25	swing3		25	25					Alchemy		0
@@ -404,7 +404,7 @@ Skald	1	One socketable	glov									jew	r41					res-all-minion		11	15	charged	96
 Icarus	1	One socketable	glov									jew	r49					move3		80	80	ac%		144	171	vit		75	75	enr		75	75	res-fire		-20	-20	death-skill	824	100	62					Icarus		0
 Drekavac	1	One socketable	glov									jew	r51					dmg-max		18	23	skillcap		1	1	dmg-cold		25	50	cold-thorns	75	101	150	mag%		11	20	allskills		1	1	swingcast3		45	45	Drekavac		0
 Rainbow	1	One socketable	belt									jew	r05					res-all		11	15	extra-all		3	3	mag%		6	8	light		2	2													Rainbow		0
-Prodigy	1	One socketable	belt									jew	r15					extra-pm		-3	-3	extra-fire		6	8	extra-ltng		6	8	mana-kill		21	30	regen-mana		21	40	cast3		20	20	att%		100	100	Prodigy		0
+Prodigy	1	One socketable	belt									jew	r15					extra-pm		-3	-3	extra-fire		6	8	extra-ltng		6	8	mana-kill		31	45	regen-mana		11	20	cast3		20	20	att%		100	100	Prodigy		0
 Fuse	1	One socketable	belt									jew	r23					res-pois		-30	-30	ac%		58	86	gethit-skill	79	25	14	res-fire		31	50	extra-fire/lvl	4	4	4	charged	564	20	5	dmg-fire		5	24	Fuse		0
 Pulsa Dinura	1	One socketable	belt									jew	r34					pal		1	1	ac%		87	114	att-skill	563	2	6	heal-kill		31	50	dmg-fire		13	38	wrath-synergy		21	40	swingcast3		15	15	Pulsa Dinura		0
 Truce	1	One socketable	belt									jew	r42					ac%		172	200	red-dmg%		10	10	swingcast3		-5	-5	slow-thorns		5	5	dmg-stun		25	25									Truce		0
@@ -414,7 +414,7 @@ Epicenter	1	One socketable	boot									jew	r06					ac%		4	15	crush/lvl	2	2	2	de
 Outlaw	1	One socketable	boot									jew	r14					ac%		30	57	shadows-max		2	2	enr		11	15	ac		-1	-1	howl-thorns		5	5									Outlaw		0
 Ginfaxi	1	One socketable	boot									jew	r22					enr%		-5	-5	oskill	689	1	4	ac%		30	57	slow-thorns		5	5	str		16	20	ac-global		11	15					Ginfaxi		0
 Craton	1	One socketable	boot									jew	r32					vit		-10	-10	ac-global		31	40	uninterrupt		11	20	att-skill	595	5	7	crush		3	3	all-stats		21	25	red-dmg		16	20	Craton		0
-Megalith	1	One socketable	boot									jew	r40					ac%		115	143	regen-mana		50	50	cast3		25	25	str		41	50	red-dmg%		5	5	allskills		1	1	charged	57	15	8	Megalith		0
+Megalith	1	One socketable	boot									jew	r40					ac%		115	143	cast3		25	25	str		41	50	red-dmg%		5	5	allskills		1	1	regen-mana		30	30					Megalith		0
 Nephilim	1	One socketable	boot									jew	r48					ac%		144	171	str%		21	25	vit%		21	25	ac		150	150	death-skill	518	100	51	strvit		50	50					Nephilim		0
 Hibagon	1	One socketable	boot									jew	r53					ease		-3	-3	ac%		172	200	reanimate	2233	5	5	reanimate	2234	5	5	reanimate	2223	5	5	res-all		31	40	allskills		1	1	Hibagon		0
 StataMater	1	One socketable	azhm									jew	r16					dex%		6	10	oskill	566	1	7	enr%		11	15	res-fire		100	100	pierce-fire		5	5	red-dmg		11	15	gold%		51	75	StataMater		0
@@ -459,7 +459,7 @@ Surya	1	One socketable	pzhm									jew	r46					ac%		115	143	oskill	698	1	12	gol
 Malakbel	1	One socketable	pzhm									jew	r53					ease		-13	-13	reanimate	2335	2	2	res-fire		100	100	pal		2	2	cast3		10	10	extra-fire/lvl	8	8	8	death-skill	501	100	41	Malakbel		0
 Asmodai	1	One socketable	ashd									jew	r14					mana-kill		11	20	heal-kill		11	20	gold%		16	16	dmg-min		3	5	kill-skill	839	5	4	skill-dur		21	25					Asmodai		0
 Sangreal	1	One socketable	ashd									jew	r28					res-ltng		-30	-30	ac		33	33	desc-dbaura		1	1	aura	297	1	1	swing3		25	25	balance3		25	25	block		-10	-10	Sangreal		0
-Zohar	1	One socketable	ashd									jew	r33					slow-thorns		20	20	oskill	676	1	7	ac%		87	114	dmg-max		38	50	cheap		11	15	swing3		20	20	avoidance		6	10	Zohar		0
+Zohar	1	One socketable	ashd									jew	r33					slow-thorns		20	20	oskill	676	1	7	ac%		87	114	dmg-max		38	50	cheap		5	5	swing3		20	20	avoidance		6	10	Zohar		0
 Asclepion	1	One socketable	ashd									jew	r46					oskill	358	26	34	swingcast3		15	15	block3		30	30	regen/lvl	48	48	48	pal		1	2	res-all		25	25	res-pois		75	75	Asclepion		0
 Amaymon	1	One socketable	ashd									jew	r51					dmg-max		46	58	slow		10	10	oskill	420	4	13	dmg-minion		41	50	hp-minion		51	75	res-all		100	100	reanimate	1052	25	25	Amaymon		0
 Demeter	1	One socketable	stor									jew	r23					ac%		58	86	res-pois		20	20	oskill	67	12	15	pierce-pois		16	20	sor		2	2	red-dmg		11	20					Demeter		0
@@ -584,7 +584,7 @@ Genie	1	Two socketables	nxbw									jew	jew	r08				extra-fire		-3	-3	oskill	301
 Atlantis	1	Two socketables	nxbw									jew	jew	r19				dex		30	30	kill-skill	473	25	6	str		20	20	dmg%		58	86	mana%		21	25	dmg-global		11	15	gold%		51	75	Atlantis		0
 Aether	1	Two socketables	nxbw									jew	jew	r31				dmg%		72	100	manasteal		11	14	avoidance		10	10	ignore-ac		1	1	str%		21	25	kill-skill	563	25	17					Aether		0
 Crucible	1	Two socketables	nxbw									jew	jew	r46				dmg%		115	143	kill-skill	389	25	30	dmg-fire		125	375	dmg-undead		150	150	charged	766	20	25	res-fire		31	60	gethit-skill	564	5	19	Crucible		0
-Kronos	1	Two socketables	nxbw									jew	jew	r51				dmg%		172	200	kill-skill	542	100	17	kill-skill	683	50	15	dmg-max		128	165	str%		31	40	crush-vit%		11	13	oskill	619	1	1	Kronos		0
+Kronos	1	Two socketables	nxbw									jew	jew	r51				dmg%		172	200	kill-skill	542	100	17	kill-skill	683	50	15	dmg-max		128	165	str%		31	40	crush-vit%		11	13	oskill	758	1	1	Kronos		0
 Jihad	1	Two socketables	pclb	pmac	pham							jew	jew	r05				dmg-max		1	3	dmg%		24	46	uninterrupt		11	20	dmg-demon		200	200	kill-skill	37	15	11	pal		1	1	swing3		15	15	Jihad		0
 Intifada	1	Two socketables	pclb	pmac	pham							jew	jew	r15				extra-pm		-3	-3	dmg%		87	114	att-skill	595	25	8	no-ac		-100	-100	crush		11	13	dmg-minion		31	50	hp-minion		-21	-25	Intifada		0
 Lammasu	1	Two socketables	pclb	pmac	pham							jew	jew	r25				res-cold		1	10	dmg-stun		125	125	extra-all		11	15	slow		25	25	swing3		40	40	pal		1	2	res-all-minion		25	25	Lammasu		0
@@ -602,7 +602,7 @@ Hestia	1	Two socketables	orb									jew	jew	r50				oskill	388	1	3	sor		3	4	extr
 Kallisti	1	Two socketables	orb									jew	jew	r51				howl-thorns		11	15	oskill	397	1	6	extra-pois		21	25	sor		4	5	cast3		40	40	all-thorns	75	500	500	pierce-pois		7	9	Kallisti		0
 Inanna	1	Two socketables	scrd									jew	jew	r12				extra-pois		-3	-3	dmg%		24	46	res-all		21	25	slow		25	25	uninterrupt		11	20	heal-melee		41	50					Inanna		0
 Grace	1	Two socketables	scrd									jew	jew	r36				dmg%		115	143	block3		30	30	swing3		45	45	avoidance		10	10	dmg-min		13	25	sor		1	2	unity		21	40	Grace		0
-Khany	1	Two socketables	scrd									jew	jew	r50				dmg%		115	143	dmg/lvl	16	16	16	att-skill	347	5	29	extra-all		16	20	oskill	355	8	17	sor		1	2	swingcast3		50	50	Khany		0
+Khany	1	Two socketables	scrd									jew	jew	r50				dmg%		115	143	dmg/lvl	16	16	16	att-skill	347	5	29	extra-all		16	20	dmg-ltng		1	750	sor		1	2	swingcast3		50	50	Khany		0
 Shaula	1	Two socketables	scrd									jew	jew	r52				enr-factor		35	35	att-skill	473	15	29	dmg-norm		38	63	mana%		50	50	slow		33	33	dmg%		144	171	reanimate	1561	21	25	Shaula		0
 Rebel	1	Two socketables	tors									jew	jew	r01				res-all		16	20	ac%		12	23	dmg-global		6	10	str		20	20	dex		20	20	vit		-10	-10	enr		-10	-10	Rebel		0
 LumenArcana	1	Two socketables	tors									jew	jew	r06				ac%		18	35	light		2	2	allskills		1	1	pierce-fire		3	8	pierce-cold		3	8	pierce-ltng		3	8	pierce-pois		3	8	Lumen Arcana		0
@@ -613,7 +613,7 @@ Mirage	1	Two socketables	tors									jew	jew	r33				slow-thorns		11	15	red-dmg	
 Dragonheart	1	Two socketables	tors									jew	jew	r41				res-all-minion		-5	-5	allskills		2	2	swing3		50	50	ac%/lvl	64	64	64	hp		500	500	charged	777	20	15					Dragonheart		0
 Erawan	1	Two socketables	tors									jew	jew	r48				ac%		144	171	red-dmg%		11	15	move3		-10	-10	ac-global		11	20	crush		5	5	str%		25	25	vit%		25	25	Erawan		0
 Unity	1	Two socketables	tors									jew	jew	r52				enr-factor		20	20	unity		75	75	balance		50	50	dex		-25	-25	allskills		1	1	res-all		51	60	ac%		144	171	Unity		0
-Summit	1	Two socketables	helm									jew	jew	r01				light		-1	-1	gold%		76	100	ease		-15	-15	cheap		6	10													Summit		0
+Summit	1	Two socketables	helm									jew	jew	r01				light		-1	-1	gold%		76	100	ease		-15	-15	cheap		5	5													Summit		0
 Cannonball	1	Two socketables	helm									jew	jew	r08				extra-fire		1	3	move3		40	40	stam		101	150	crush		3	3	att-skill	496	1	6	charged	564	5	5					Cannonball		0
 Ra	1	Two socketables	helm									jew	jew	r17				allskills		1	1	move3		-10	-10	gold%		26	50	howl-thorns		11	15	pierce-fire		6	10	pierce-pois		6	10	cast3		25	25	Ra		0
 Alchemy	1	Two socketables	helm									jew	jew	r26				regen		21	25	hp-minion		21	30	regen		21	25	ac%		58	86	block3		25	25	swing3		25	25					Alchemy		0
@@ -639,7 +639,7 @@ Skald	1	Two socketables	glov									jew	jew	r41				res-all-minion		11	15	charge
 Icarus	1	Two socketables	glov									jew	jew	r49				move3		80	80	ac%		144	171	vit		75	75	enr		75	75	res-fire		-20	-20	death-skill	824	100	62					Icarus		0
 Drekavac	1	Two socketables	glov									jew	jew	r51				dmg-max		18	23	skillcap		1	1	dmg-cold		25	50	cold-thorns	75	101	150	mag%		11	20	allskills		1	1	swingcast3		45	45	Drekavac		0
 Rainbow	1	Two socketables	belt									jew	jew	r05				res-all		11	15	extra-all		3	3	mag%		6	8	light		2	2													Rainbow		0
-Prodigy	1	Two socketables	belt									jew	jew	r15				extra-pm		-3	-3	extra-fire		6	8	extra-ltng		6	8	mana-kill		21	30	regen-mana		21	40	cast3		20	20	att%		100	100	Prodigy		0
+Prodigy	1	Two socketables	belt									jew	jew	r15				extra-pm		-3	-3	extra-fire		6	8	extra-ltng		6	8	mana-kill		31	45	regen-mana		11	20	cast3		20	20	att%		100	100	Prodigy		0
 Fuse	1	Two socketables	belt									jew	jew	r23				res-pois		-30	-30	ac%		58	86	gethit-skill	79	25	14	res-fire		31	50	extra-fire/lvl	4	4	4	charged	564	20	5	dmg-fire		5	24	Fuse		0
 Pulsa Dinura	1	Two socketables	belt									jew	jew	r34				pal		1	1	ac%		87	114	att-skill	563	2	6	heal-kill		31	50	dmg-fire		13	38	wrath-synergy		21	40	swingcast3		15	15	Pulsa Dinura		0
 Truce	1	Two socketables	belt									jew	jew	r42				ac%		172	200	red-dmg%		10	10	swingcast3		-5	-5	slow-thorns		5	5	dmg-stun		25	25									Truce		0
@@ -649,7 +649,7 @@ Epicenter	1	Two socketables	boot									jew	jew	r06				ac%		4	15	crush/lvl	2	2	
 Outlaw	1	Two socketables	boot									jew	jew	r14				ac%		30	57	shadows-max		2	2	enr		11	15	ac		-1	-1	howl-thorns		5	5									Outlaw		0
 Ginfaxi	1	Two socketables	boot									jew	jew	r22				enr%		-5	-5	oskill	689	1	4	ac%		30	57	slow-thorns		5	5	str		16	20	ac-global		11	15					Ginfaxi		0
 Craton	1	Two socketables	boot									jew	jew	r32				vit		-10	-10	ac-global		31	40	uninterrupt		11	20	att-skill	595	5	7	crush		3	3	all-stats		21	25	red-dmg		16	20	Craton		0
-Megalith	1	Two socketables	boot									jew	jew	r40				ac%		115	143	regen-mana		50	50	cast3		25	25	str		41	50	red-dmg%		5	5	allskills		1	1	charged	57	15	8	Megalith		0
+Megalith	1	Two socketables	boot									jew	jew	r40				ac%		115	143	cast3		25	25	str		41	50	red-dmg%		5	5	allskills		1	1	regen-mana		30	30					Megalith		0
 Nephilim	1	Two socketables	boot									jew	jew	r48				ac%		144	171	str%		21	25	vit%		21	25	ac		150	150	death-skill	518	100	51	strvit		50	50					Nephilim		0
 Hibagon	1	Two socketables	boot									jew	jew	r53				ease		-3	-3	ac%		172	200	reanimate	2233	5	5	reanimate	2234	5	5	reanimate	2223	5	5	res-all		31	40	allskills		1	1	Hibagon		0
 StataMater	1	Two socketables	azhm									jew	jew	r16				dex%		6	10	oskill	566	1	7	enr%		11	15	res-fire		100	100	pierce-fire		5	5	red-dmg		11	15	gold%		51	75	StataMater		0
@@ -694,7 +694,7 @@ Surya	1	Two socketables	pzhm									jew	jew	r46				ac%		115	143	oskill	698	1	12
 Malakbel	1	Two socketables	pzhm									jew	jew	r53				ease		-13	-13	reanimate	2335	2	2	res-fire		100	100	pal		2	2	cast3		10	10	extra-fire/lvl	8	8	8	death-skill	501	100	41	Malakbel		0
 Asmodai	1	Two socketables	ashd									jew	jew	r14				mana-kill		11	20	heal-kill		11	20	gold%		16	16	dmg-min		3	5	kill-skill	839	5	4	skill-dur		21	25					Asmodai		0
 Sangreal	1	Two socketables	ashd									jew	jew	r28				res-ltng		-30	-30	ac		33	33	desc-dbaura		1	1	aura	297	1	1	swing3		25	25	balance3		25	25	block		-10	-10	Sangreal		0
-Zohar	1	Two socketables	ashd									jew	jew	r33				slow-thorns		20	20	oskill	676	1	7	ac%		87	114	dmg-max		38	50	cheap		11	15	swing3		20	20	avoidance		6	10	Zohar		0
+Zohar	1	Two socketables	ashd									jew	jew	r33				slow-thorns		20	20	oskill	676	1	7	ac%		87	114	dmg-max		38	50	cheap		5	5	swing3		20	20	avoidance		6	10	Zohar		0
 Asclepion	1	Two socketables	ashd									jew	jew	r46				oskill	358	26	34	swingcast3		15	15	block3		30	30	regen/lvl	48	48	48	pal		1	2	res-all		25	25	res-pois		75	75	Asclepion		0
 Amaymon	1	Two socketables	ashd									jew	jew	r51				dmg-max		46	58	slow		10	10	oskill	420	4	13	dmg-minion		41	50	hp-minion		51	75	res-all		100	100	reanimate	1052	25	25	Amaymon		0
 Demeter	1	Two socketables	stor									jew	jew	r23				ac%		58	86	res-pois		20	20	oskill	67	12	15	pierce-pois		16	20	sor		2	2	red-dmg		11	20					Demeter		0
@@ -819,7 +819,7 @@ Genie	1	Three socketables	nxbw									jew	jew	jew	r08			extra-fire		-3	-3	oskil
 Atlantis	1	Three socketables	nxbw									jew	jew	jew	r19			dex		30	30	kill-skill	473	25	6	str		20	20	dmg%		58	86	mana%		21	25	dmg-global		11	15	gold%		51	75	Atlantis		0
 Aether	1	Three socketables	nxbw									jew	jew	jew	r31			dmg%		72	100	manasteal		11	14	avoidance		10	10	ignore-ac		1	1	str%		21	25	kill-skill	563	25	17					Aether		0
 Crucible	1	Three socketables	nxbw									jew	jew	jew	r46			dmg%		115	143	kill-skill	389	25	30	dmg-fire		125	375	dmg-undead		150	150	charged	766	20	25	res-fire		31	60	gethit-skill	564	5	19	Crucible		0
-Kronos	1	Three socketables	nxbw									jew	jew	jew	r51			dmg%		172	200	kill-skill	542	100	17	kill-skill	683	50	15	dmg-max		128	165	str%		31	40	crush-vit%		11	13	oskill	619	1	1	Kronos		0
+Kronos	1	Three socketables	nxbw									jew	jew	jew	r51			dmg%		172	200	kill-skill	542	100	17	kill-skill	683	50	15	dmg-max		128	165	str%		31	40	crush-vit%		11	13	oskill	758	1	1	Kronos		0
 Jihad	1	Three socketables	pclb	pmac	pham							jew	jew	jew	r05			dmg-max		1	3	dmg%		24	46	uninterrupt		11	20	dmg-demon		200	200	kill-skill	37	15	11	pal		1	1	swing3		15	15	Jihad		0
 Intifada	1	Three socketables	pclb	pmac	pham							jew	jew	jew	r15			extra-pm		-3	-3	dmg%		87	114	att-skill	595	25	8	no-ac		-100	-100	crush		11	13	dmg-minion		31	50	hp-minion		-21	-25	Intifada		0
 Lammasu	1	Three socketables	pclb	pmac	pham							jew	jew	jew	r25			res-cold		1	10	dmg-stun		125	125	extra-all		11	15	slow		25	25	swing3		40	40	pal		1	2	res-all-minion		25	25	Lammasu		0
@@ -837,7 +837,7 @@ Hestia	1	Three socketables	orb									jew	jew	jew	r50			oskill	388	1	3	sor		3	4
 Kallisti	1	Three socketables	orb									jew	jew	jew	r51			howl-thorns		11	15	oskill	397	1	6	extra-pois		21	25	sor		4	5	cast3		40	40	all-thorns	75	500	500	pierce-pois		7	9	Kallisti		0
 Inanna	1	Three socketables	scrd									jew	jew	jew	r12			extra-pois		-3	-3	dmg%		24	46	res-all		21	25	slow		25	25	uninterrupt		11	20	heal-melee		41	50					Inanna		0
 Grace	1	Three socketables	scrd									jew	jew	jew	r36			dmg%		115	143	block3		30	30	swing3		45	45	avoidance		10	10	dmg-min		13	25	sor		1	2	unity		21	40	Grace		0
-Khany	1	Three socketables	scrd									jew	jew	jew	r50			dmg%		115	143	dmg/lvl	16	16	16	att-skill	347	5	29	extra-all		16	20	oskill	355	8	17	sor		1	2	swingcast3		50	50	Khany		0
+Khany	1	Three socketables	scrd									jew	jew	jew	r50			dmg%		115	143	dmg/lvl	16	16	16	att-skill	347	5	29	extra-all		16	20	dmg-ltng		1	750	sor		1	2	swingcast3		50	50	Khany		0
 Shaula	1	Three socketables	scrd									jew	jew	jew	r52			enr-factor		35	35	att-skill	473	15	29	dmg-norm		38	63	mana%		50	50	slow		33	33	dmg%		144	171	reanimate	1561	21	25	Shaula		0
 Rebel	1	Three socketables	tors									jew	jew	jew	r01			res-all		16	20	ac%		12	23	dmg-global		6	10	str		20	20	dex		20	20	vit		-10	-10	enr		-10	-10	Rebel		0
 LumenArcana	1	Three socketables	tors									jew	jew	jew	r06			ac%		18	35	light		2	2	allskills		1	1	pierce-fire		3	8	pierce-cold		3	8	pierce-ltng		3	8	pierce-pois		3	8	Lumen Arcana		0
@@ -848,7 +848,7 @@ Mirage	1	Three socketables	tors									jew	jew	jew	r33			slow-thorns		11	15	red
 Dragonheart	1	Three socketables	tors									jew	jew	jew	r41			res-all-minion		-5	-5	allskills		2	2	swing3		50	50	ac%/lvl	64	64	64	hp		500	500	charged	777	20	15					Dragonheart		0
 Erawan	1	Three socketables	tors									jew	jew	jew	r48			ac%		144	171	red-dmg%		11	15	move3		-10	-10	ac-global		11	20	crush		5	5	str%		25	25	vit%		25	25	Erawan		0
 Unity	1	Three socketables	tors									jew	jew	jew	r52			enr-factor		20	20	unity		75	75	balance		50	50	dex		-25	-25	allskills		1	1	res-all		51	60	ac%		144	171	Unity		0
-Summit	1	Three socketables	helm									jew	jew	jew	r01			light		-1	-1	gold%		76	100	ease		-15	-15	cheap		6	10													Summit		0
+Summit	1	Three socketables	helm									jew	jew	jew	r01			light		-1	-1	gold%		76	100	ease		-15	-15	cheap		5	5													Summit		0
 Cannonball	1	Three socketables	helm									jew	jew	jew	r08			extra-fire		1	3	move3		40	40	stam		101	150	crush		3	3	att-skill	496	1	6	charged	564	5	5					Cannonball		0
 Ra	1	Three socketables	helm									jew	jew	jew	r17			allskills		1	1	move3		-10	-10	gold%		26	50	howl-thorns		11	15	pierce-fire		6	10	pierce-pois		6	10	cast3		25	25	Ra		0
 Alchemy	1	Three socketables	helm									jew	jew	jew	r26			regen		21	25	hp-minion		21	30	regen		21	25	ac%		58	86	block3		25	25	swing3		25	25					Alchemy		0
@@ -874,7 +874,7 @@ Skald	1	Three socketables	glov									jew	jew	jew	r41			res-all-minion		11	15	c
 Icarus	1	Three socketables	glov									jew	jew	jew	r49			move3		80	80	ac%		144	171	vit		75	75	enr		75	75	res-fire		-20	-20	death-skill	824	100	62					Icarus		0
 Drekavac	1	Three socketables	glov									jew	jew	jew	r51			dmg-max		18	23	skillcap		1	1	dmg-cold		25	50	cold-thorns	75	101	150	mag%		11	20	allskills		1	1	swingcast3		45	45	Drekavac		0
 Rainbow	1	Three socketables	belt									jew	jew	jew	r05			res-all		11	15	extra-all		3	3	mag%		6	8	light		2	2													Rainbow		0
-Prodigy	1	Three socketables	belt									jew	jew	jew	r15			extra-pm		-3	-3	extra-fire		6	8	extra-ltng		6	8	mana-kill		21	30	regen-mana		21	40	cast3		20	20	att%		100	100	Prodigy		0
+Prodigy	1	Three socketables	belt									jew	jew	jew	r15			extra-pm		-3	-3	extra-fire		6	8	extra-ltng		6	8	mana-kill		31	45	regen-mana		11	20	cast3		20	20	att%		100	100	Prodigy		0
 Fuse	1	Three socketables	belt									jew	jew	jew	r23			res-pois		-30	-30	ac%		58	86	gethit-skill	79	25	14	res-fire		31	50	extra-fire/lvl	4	4	4	charged	564	20	5	dmg-fire		5	24	Fuse		0
 Pulsa Dinura	1	Three socketables	belt									jew	jew	jew	r34			pal		1	1	ac%		87	114	att-skill	563	2	6	heal-kill		31	50	dmg-fire		13	38	wrath-synergy		21	40	swingcast3		15	15	Pulsa Dinura		0
 Truce	1	Three socketables	belt									jew	jew	jew	r42			ac%		172	200	red-dmg%		10	10	swingcast3		-5	-5	slow-thorns		5	5	dmg-stun		25	25									Truce		0
@@ -884,7 +884,7 @@ Epicenter	1	Three socketables	boot									jew	jew	jew	r06			ac%		4	15	crush/lvl
 Outlaw	1	Three socketables	boot									jew	jew	jew	r14			ac%		30	57	shadows-max		2	2	enr		11	15	ac		-1	-1	howl-thorns		5	5									Outlaw		0
 Ginfaxi	1	Three socketables	boot									jew	jew	jew	r22			enr%		-5	-5	oskill	689	1	4	ac%		30	57	slow-thorns		5	5	str		16	20	ac-global		11	15					Ginfaxi		0
 Craton	1	Three socketables	boot									jew	jew	jew	r32			vit		-10	-10	ac-global		31	40	uninterrupt		11	20	att-skill	595	5	7	crush		3	3	all-stats		21	25	red-dmg		16	20	Craton		0
-Megalith	1	Three socketables	boot									jew	jew	jew	r40			ac%		115	143	regen-mana		50	50	cast3		25	25	str		41	50	red-dmg%		5	5	allskills		1	1	charged	57	15	8	Megalith		0
+Megalith	1	Three socketables	boot									jew	jew	jew	r40			ac%		115	143	cast3		25	25	str		41	50	red-dmg%		5	5	allskills		1	1	regen-mana		30	30					Megalith		0
 Nephilim	1	Three socketables	boot									jew	jew	jew	r48			ac%		144	171	str%		21	25	vit%		21	25	ac		150	150	death-skill	518	100	51	strvit		50	50					Nephilim		0
 Hibagon	1	Three socketables	boot									jew	jew	jew	r53			ease		-3	-3	ac%		172	200	reanimate	2233	5	5	reanimate	2234	5	5	reanimate	2223	5	5	res-all		31	40	allskills		1	1	Hibagon		0
 StataMater	1	Three socketables	azhm									jew	jew	jew	r16			dex%		6	10	oskill	566	1	7	enr%		11	15	res-fire		100	100	pierce-fire		5	5	red-dmg		11	15	gold%		51	75	StataMater		0
@@ -929,7 +929,7 @@ Surya	1	Three socketables	pzhm									jew	jew	jew	r46			ac%		115	143	oskill	698
 Malakbel	1	Three socketables	pzhm									jew	jew	jew	r53			ease		-13	-13	reanimate	2335	2	2	res-fire		100	100	pal		2	2	cast3		10	10	extra-fire/lvl	8	8	8	death-skill	501	100	41	Malakbel		0
 Asmodai	1	Three socketables	ashd									jew	jew	jew	r14			mana-kill		11	20	heal-kill		11	20	gold%		16	16	dmg-min		3	5	kill-skill	839	5	4	skill-dur		21	25					Asmodai		0
 Sangreal	1	Three socketables	ashd									jew	jew	jew	r28			res-ltng		-30	-30	ac		33	33	desc-dbaura		1	1	aura	297	1	1	swing3		25	25	balance3		25	25	block		-10	-10	Sangreal		0
-Zohar	1	Three socketables	ashd									jew	jew	jew	r33			slow-thorns		20	20	oskill	676	1	7	ac%		87	114	dmg-max		38	50	cheap		11	15	swing3		20	20	avoidance		6	10	Zohar		0
+Zohar	1	Three socketables	ashd									jew	jew	jew	r33			slow-thorns		20	20	oskill	676	1	7	ac%		87	114	dmg-max		38	50	cheap		5	5	swing3		20	20	avoidance		6	10	Zohar		0
 Asclepion	1	Three socketables	ashd									jew	jew	jew	r46			oskill	358	26	34	swingcast3		15	15	block3		30	30	regen/lvl	48	48	48	pal		1	2	res-all		25	25	res-pois		75	75	Asclepion		0
 Amaymon	1	Three socketables	ashd									jew	jew	jew	r51			dmg-max		46	58	slow		10	10	oskill	420	4	13	dmg-minion		41	50	hp-minion		51	75	res-all		100	100	reanimate	1052	25	25	Amaymon		0
 Demeter	1	Three socketables	stor									jew	jew	jew	r23			ac%		58	86	res-pois		20	20	oskill	67	12	15	pierce-pois		16	20	sor		2	2	red-dmg		11	20					Demeter		0
@@ -1054,7 +1054,7 @@ Genie	1	Four socketables	nxbw									jew	jew	jew	jew	r08		extra-fire		-3	-3	osk
 Atlantis	1	Four socketables	nxbw									jew	jew	jew	jew	r19		dex		30	30	kill-skill	473	25	6	str		20	20	dmg%		58	86	mana%		21	25	dmg-global		11	15	gold%		51	75	Atlantis		0
 Aether	1	Four socketables	nxbw									jew	jew	jew	jew	r31		dmg%		72	100	manasteal		11	14	avoidance		10	10	ignore-ac		1	1	str%		21	25	kill-skill	563	25	17					Aether		0
 Crucible	1	Four socketables	nxbw									jew	jew	jew	jew	r46		dmg%		115	143	kill-skill	389	25	30	dmg-fire		125	375	dmg-undead		150	150	charged	766	20	25	res-fire		31	60	gethit-skill	564	5	19	Crucible		0
-Kronos	1	Four socketables	nxbw									jew	jew	jew	jew	r51		dmg%		172	200	kill-skill	542	100	17	kill-skill	683	50	15	dmg-max		128	165	str%		31	40	crush-vit%		11	13	oskill	619	1	1	Kronos		0
+Kronos	1	Four socketables	nxbw									jew	jew	jew	jew	r51		dmg%		172	200	kill-skill	542	100	17	kill-skill	683	50	15	dmg-max		128	165	str%		31	40	crush-vit%		11	13	oskill	758	1	1	Kronos		0
 Jihad	1	Four socketables	pclb	pmac	pham							jew	jew	jew	jew	r05		dmg-max		1	3	dmg%		24	46	uninterrupt		11	20	dmg-demon		200	200	kill-skill	37	15	11	pal		1	1	swing3		15	15	Jihad		0
 Intifada	1	Four socketables	pclb	pmac	pham							jew	jew	jew	jew	r15		extra-pm		-3	-3	dmg%		87	114	att-skill	595	25	8	no-ac		-100	-100	crush		11	13	dmg-minion		31	50	hp-minion		-21	-25	Intifada		0
 Lammasu	1	Four socketables	pclb	pmac	pham							jew	jew	jew	jew	r25		res-cold		1	10	dmg-stun		125	125	extra-all		11	15	slow		25	25	swing3		40	40	pal		1	2	res-all-minion		25	25	Lammasu		0
@@ -1072,7 +1072,7 @@ Hestia	1	Four socketables	orb									jew	jew	jew	jew	r50		oskill	388	1	3	sor		3
 Kallisti	1	Four socketables	orb									jew	jew	jew	jew	r51		howl-thorns		11	15	oskill	397	1	6	extra-pois		21	25	sor		4	5	cast3		40	40	all-thorns	75	500	500	pierce-pois		7	9	Kallisti		0
 Inanna	1	Four socketables	scrd									jew	jew	jew	jew	r12		extra-pois		-3	-3	dmg%		24	46	res-all		21	25	slow		25	25	uninterrupt		11	20	heal-melee		41	50					Inanna		0
 Grace	1	Four socketables	scrd									jew	jew	jew	jew	r36		dmg%		115	143	block3		30	30	swing3		45	45	avoidance		10	10	dmg-min		13	25	sor		1	2	unity		21	40	Grace		0
-Khany	1	Four socketables	scrd									jew	jew	jew	jew	r50		dmg%		115	143	dmg/lvl	16	16	16	att-skill	347	5	29	extra-all		16	20	oskill	355	8	17	sor		1	2	swingcast3		50	50	Khany		0
+Khany	1	Four socketables	scrd									jew	jew	jew	jew	r50		dmg%		115	143	dmg/lvl	16	16	16	att-skill	347	5	29	extra-all		16	20	dmg-ltng		1	750	sor		1	2	swingcast3		50	50	Khany		0
 Shaula	1	Four socketables	scrd									jew	jew	jew	jew	r52		enr-factor		35	35	att-skill	473	15	29	dmg-norm		38	63	mana%		50	50	slow		33	33	dmg%		144	171	reanimate	1561	21	25	Shaula		0
 Rebel	1	Four socketables	tors									jew	jew	jew	jew	r01		res-all		16	20	ac%		12	23	dmg-global		6	10	str		20	20	dex		20	20	vit		-10	-10	enr		-10	-10	Rebel		0
 LumenArcana	1	Four socketables	tors									jew	jew	jew	jew	r06		ac%		18	35	light		2	2	allskills		1	1	pierce-fire		3	8	pierce-cold		3	8	pierce-ltng		3	8	pierce-pois		3	8	Lumen Arcana		0
@@ -1083,7 +1083,7 @@ Mirage	1	Four socketables	tors									jew	jew	jew	jew	r33		slow-thorns		11	15	r
 Dragonheart	1	Four socketables	tors									jew	jew	jew	jew	r41		res-all-minion		-5	-5	allskills		2	2	swing3		50	50	ac%/lvl	64	64	64	hp		500	500	charged	777	20	15					Dragonheart		0
 Erawan	1	Four socketables	tors									jew	jew	jew	jew	r48		ac%		144	171	red-dmg%		11	15	move3		-10	-10	ac-global		11	20	crush		5	5	str%		25	25	vit%		25	25	Erawan		0
 Unity	1	Four socketables	tors									jew	jew	jew	jew	r52		enr-factor		20	20	unity		75	75	balance		50	50	dex		-25	-25	allskills		1	1	res-all		51	60	ac%		144	171	Unity		0
-Summit	1	Four socketables	helm									jew	jew	jew	jew	r01		light		-1	-1	gold%		76	100	ease		-15	-15	cheap		6	10													Summit		0
+Summit	1	Four socketables	helm									jew	jew	jew	jew	r01		light		-1	-1	gold%		76	100	ease		-15	-15	cheap		5	5													Summit		0
 Cannonball	1	Four socketables	helm									jew	jew	jew	jew	r08		extra-fire		1	3	move3		40	40	stam		101	150	crush		3	3	att-skill	496	1	6	charged	564	5	5					Cannonball		0
 Ra	1	Four socketables	helm									jew	jew	jew	jew	r17		allskills		1	1	move3		-10	-10	gold%		26	50	howl-thorns		11	15	pierce-fire		6	10	pierce-pois		6	10	cast3		25	25	Ra		0
 Alchemy	1	Four socketables	helm									jew	jew	jew	jew	r26		regen		21	25	hp-minion		21	30	regen		21	25	ac%		58	86	block3		25	25	swing3		25	25					Alchemy		0
@@ -1109,7 +1109,7 @@ Skald	1	Four socketables	glov									jew	jew	jew	jew	r41		res-all-minion		11	15
 Icarus	1	Four socketables	glov									jew	jew	jew	jew	r49		move3		80	80	ac%		144	171	vit		75	75	enr		75	75	res-fire		-20	-20	death-skill	824	100	62					Icarus		0
 Drekavac	1	Four socketables	glov									jew	jew	jew	jew	r51		dmg-max		18	23	skillcap		1	1	dmg-cold		25	50	cold-thorns	75	101	150	mag%		11	20	allskills		1	1	swingcast3		45	45	Drekavac		0
 Rainbow	1	Four socketables	belt									jew	jew	jew	jew	r05		res-all		11	15	extra-all		3	3	mag%		6	8	light		2	2													Rainbow		0
-Prodigy	1	Four socketables	belt									jew	jew	jew	jew	r15		extra-pm		-3	-3	extra-fire		6	8	extra-ltng		6	8	mana-kill		21	30	regen-mana		21	40	cast3		20	20	att%		100	100	Prodigy		0
+Prodigy	1	Four socketables	belt									jew	jew	jew	jew	r15		extra-pm		-3	-3	extra-fire		6	8	extra-ltng		6	8	mana-kill		31	45	regen-mana		11	20	cast3		20	20	att%		100	100	Prodigy		0
 Fuse	1	Four socketables	belt									jew	jew	jew	jew	r23		res-pois		-30	-30	ac%		58	86	gethit-skill	79	25	14	res-fire		31	50	extra-fire/lvl	4	4	4	charged	564	20	5	dmg-fire		5	24	Fuse		0
 Pulsa Dinura	1	Four socketables	belt									jew	jew	jew	jew	r34		pal		1	1	ac%		87	114	att-skill	563	2	6	heal-kill		31	50	dmg-fire		13	38	wrath-synergy		21	40	swingcast3		15	15	Pulsa Dinura		0
 Truce	1	Four socketables	belt									jew	jew	jew	jew	r42		ac%		172	200	red-dmg%		10	10	swingcast3		-5	-5	slow-thorns		5	5	dmg-stun		25	25									Truce		0
@@ -1119,7 +1119,7 @@ Epicenter	1	Four socketables	boot									jew	jew	jew	jew	r06		ac%		4	15	crush/l
 Outlaw	1	Four socketables	boot									jew	jew	jew	jew	r14		ac%		30	57	shadows-max		2	2	enr		11	15	ac		-1	-1	howl-thorns		5	5									Outlaw		0
 Ginfaxi	1	Four socketables	boot									jew	jew	jew	jew	r22		enr%		-5	-5	oskill	689	1	4	ac%		30	57	slow-thorns		5	5	str		16	20	ac-global		11	15					Ginfaxi		0
 Craton	1	Four socketables	boot									jew	jew	jew	jew	r32		vit		-10	-10	ac-global		31	40	uninterrupt		11	20	att-skill	595	5	7	crush		3	3	all-stats		21	25	red-dmg		16	20	Craton		0
-Megalith	1	Four socketables	boot									jew	jew	jew	jew	r40		ac%		115	143	regen-mana		50	50	cast3		25	25	str		41	50	red-dmg%		5	5	allskills		1	1	charged	57	15	8	Megalith		0
+Megalith	1	Four socketables	boot									jew	jew	jew	jew	r40		ac%		115	143	cast3		25	25	str		41	50	red-dmg%		5	5	allskills		1	1	regen-mana		30	30					Megalith		0
 Nephilim	1	Four socketables	boot									jew	jew	jew	jew	r48		ac%		144	171	str%		21	25	vit%		21	25	ac		150	150	death-skill	518	100	51	strvit		50	50					Nephilim		0
 Hibagon	1	Four socketables	boot									jew	jew	jew	jew	r53		ease		-3	-3	ac%		172	200	reanimate	2233	5	5	reanimate	2234	5	5	reanimate	2223	5	5	res-all		31	40	allskills		1	1	Hibagon		0
 StataMater	1	Four socketables	azhm									jew	jew	jew	jew	r16		dex%		6	10	oskill	566	1	7	enr%		11	15	res-fire		100	100	pierce-fire		5	5	red-dmg		11	15	gold%		51	75	StataMater		0
@@ -1164,7 +1164,7 @@ Surya	1	Four socketables	pzhm									jew	jew	jew	jew	r46		ac%		115	143	oskill	6
 Malakbel	1	Four socketables	pzhm									jew	jew	jew	jew	r53		ease		-13	-13	reanimate	2335	2	2	res-fire		100	100	pal		2	2	cast3		10	10	extra-fire/lvl	8	8	8	death-skill	501	100	41	Malakbel		0
 Asmodai	1	Four socketables	ashd									jew	jew	jew	jew	r14		mana-kill		11	20	heal-kill		11	20	gold%		16	16	dmg-min		3	5	kill-skill	839	5	4	skill-dur		21	25					Asmodai		0
 Sangreal	1	Four socketables	ashd									jew	jew	jew	jew	r28		res-ltng		-30	-30	ac		33	33	desc-dbaura		1	1	aura	297	1	1	swing3		25	25	balance3		25	25	block		-10	-10	Sangreal		0
-Zohar	1	Four socketables	ashd									jew	jew	jew	jew	r33		slow-thorns		20	20	oskill	676	1	7	ac%		87	114	dmg-max		38	50	cheap		11	15	swing3		20	20	avoidance		6	10	Zohar		0
+Zohar	1	Four socketables	ashd									jew	jew	jew	jew	r33		slow-thorns		20	20	oskill	676	1	7	ac%		87	114	dmg-max		38	50	cheap		5	5	swing3		20	20	avoidance		6	10	Zohar		0
 Asclepion	1	Four socketables	ashd									jew	jew	jew	jew	r46		oskill	358	26	34	swingcast3		15	15	block3		30	30	regen/lvl	48	48	48	pal		1	2	res-all		25	25	res-pois		75	75	Asclepion		0
 Amaymon	1	Four socketables	ashd									jew	jew	jew	jew	r51		dmg-max		46	58	slow		10	10	oskill	420	4	13	dmg-minion		41	50	hp-minion		51	75	res-all		100	100	reanimate	1052	25	25	Amaymon		0
 Demeter	1	Four socketables	stor									jew	jew	jew	jew	r23		ac%		58	86	res-pois		20	20	oskill	67	12	15	pierce-pois		16	20	sor		2	2	red-dmg		11	20					Demeter		0
@@ -1289,7 +1289,7 @@ Genie	1	Five socketables	nxbw									jew	jew	jew	jew	jew	r08	extra-fire		-3	-3	
 Atlantis	1	Five socketables	nxbw									jew	jew	jew	jew	jew	r19	dex		30	30	kill-skill	473	25	6	str		20	20	dmg%		58	86	mana%		21	25	dmg-global		11	15	gold%		51	75	Atlantis		0
 Aether	1	Five socketables	nxbw									jew	jew	jew	jew	jew	r31	dmg%		72	100	manasteal		11	14	avoidance		10	10	ignore-ac		1	1	str%		21	25	kill-skill	563	25	17					Aether		0
 Crucible	1	Five socketables	nxbw									jew	jew	jew	jew	jew	r46	dmg%		115	143	kill-skill	389	25	30	dmg-fire		125	375	dmg-undead		150	150	charged	766	20	25	res-fire		31	60	gethit-skill	564	5	19	Crucible		0
-Kronos	1	Five socketables	nxbw									jew	jew	jew	jew	jew	r51	dmg%		172	200	kill-skill	542	100	17	kill-skill	683	50	15	dmg-max		128	165	str%		31	40	crush-vit%		11	13	oskill	619	1	1	Kronos		0
+Kronos	1	Five socketables	nxbw									jew	jew	jew	jew	jew	r51	dmg%		172	200	kill-skill	542	100	17	kill-skill	683	50	15	dmg-max		128	165	str%		31	40	crush-vit%		11	13	oskill	758	1	1	Kronos		0
 Jihad	1	Five socketables	pclb	pmac	pham							jew	jew	jew	jew	jew	r05	dmg-max		1	3	dmg%		24	46	uninterrupt		11	20	dmg-demon		200	200	kill-skill	37	15	11	pal		1	1	swing3		15	15	Jihad		0
 Intifada	1	Five socketables	pclb	pmac	pham							jew	jew	jew	jew	jew	r15	extra-pm		-3	-3	dmg%		87	114	att-skill	595	25	8	no-ac		-100	-100	crush		11	13	dmg-minion		31	50	hp-minion		-21	-25	Intifada		0
 Lammasu	1	Five socketables	pclb	pmac	pham							jew	jew	jew	jew	jew	r25	res-cold		1	10	dmg-stun		125	125	extra-all		11	15	slow		25	25	swing3		40	40	pal		1	2	res-all-minion		25	25	Lammasu		0
@@ -1307,7 +1307,7 @@ Hestia	1	Five socketables	orb									jew	jew	jew	jew	jew	r50	oskill	388	1	3	sor
 Kallisti	1	Five socketables	orb									jew	jew	jew	jew	jew	r51	howl-thorns		11	15	oskill	397	1	6	extra-pois		21	25	sor		4	5	cast3		40	40	all-thorns	75	500	500	pierce-pois		7	9	Kallisti		0
 Inanna	1	Five socketables	scrd									jew	jew	jew	jew	jew	r12	extra-pois		-3	-3	dmg%		24	46	res-all		21	25	slow		25	25	uninterrupt		11	20	heal-melee		41	50					Inanna		0
 Grace	1	Five socketables	scrd									jew	jew	jew	jew	jew	r36	dmg%		115	143	block3		30	30	swing3		45	45	avoidance		10	10	dmg-min		13	25	sor		1	2	unity		21	40	Grace		0
-Khany	1	Five socketables	scrd									jew	jew	jew	jew	jew	r50	dmg%		115	143	dmg/lvl	16	16	16	att-skill	347	5	29	extra-all		16	20	oskill	355	8	17	sor		1	2	swingcast3		50	50	Khany		0
+Khany	1	Five socketables	scrd									jew	jew	jew	jew	jew	r50	dmg%		115	143	dmg/lvl	16	16	16	att-skill	347	5	29	extra-all		16	20	dmg-ltng		1	750	sor		1	2	swingcast3		50	50	Khany		0
 Shaula	1	Five socketables	scrd									jew	jew	jew	jew	jew	r52	enr-factor		35	35	att-skill	473	15	29	dmg-norm		38	63	mana%		50	50	slow		33	33	dmg%		144	171	reanimate	1561	21	25	Shaula		0
 Rebel	1	Five socketables	tors									jew	jew	jew	jew	jew	r01	res-all		16	20	ac%		12	23	dmg-global		6	10	str		20	20	dex		20	20	vit		-10	-10	enr		-10	-10	Rebel		0
 LumenArcana	1	Five socketables	tors									jew	jew	jew	jew	jew	r06	ac%		18	35	light		2	2	allskills		1	1	pierce-fire		3	8	pierce-cold		3	8	pierce-ltng		3	8	pierce-pois		3	8	Lumen Arcana		0
@@ -1318,7 +1318,7 @@ Mirage	1	Five socketables	tors									jew	jew	jew	jew	jew	r33	slow-thorns		11	1
 Dragonheart	1	Five socketables	tors									jew	jew	jew	jew	jew	r41	res-all-minion		-5	-5	allskills		2	2	swing3		50	50	ac%/lvl	64	64	64	hp		500	500	charged	777	20	15					Dragonheart		0
 Erawan	1	Five socketables	tors									jew	jew	jew	jew	jew	r48	ac%		144	171	red-dmg%		11	15	move3		-10	-10	ac-global		11	20	crush		5	5	str%		25	25	vit%		25	25	Erawan		0
 Unity	1	Five socketables	tors									jew	jew	jew	jew	jew	r52	enr-factor		20	20	unity		75	75	balance		50	50	dex		-25	-25	allskills		1	1	res-all		51	60	ac%		144	171	Unity		0
-Summit	1	Five socketables	helm									jew	jew	jew	jew	jew	r01	light		-1	-1	gold%		76	100	ease		-15	-15	cheap		6	10													Summit		0
+Summit	1	Five socketables	helm									jew	jew	jew	jew	jew	r01	light		-1	-1	gold%		76	100	ease		-15	-15	cheap		5	5													Summit		0
 Cannonball	1	Five socketables	helm									jew	jew	jew	jew	jew	r08	extra-fire		1	3	move3		40	40	stam		101	150	crush		3	3	att-skill	496	1	6	charged	564	5	5					Cannonball		0
 Ra	1	Five socketables	helm									jew	jew	jew	jew	jew	r17	allskills		1	1	move3		-10	-10	gold%		26	50	howl-thorns		11	15	pierce-fire		6	10	pierce-pois		6	10	cast3		25	25	Ra		0
 Alchemy	1	Five socketables	helm									jew	jew	jew	jew	jew	r26	regen		21	25	hp-minion		21	30	regen		21	25	ac%		58	86	block3		25	25	swing3		25	25					Alchemy		0
@@ -1344,7 +1344,7 @@ Skald	1	Five socketables	glov									jew	jew	jew	jew	jew	r41	res-all-minion		11
 Icarus	1	Five socketables	glov									jew	jew	jew	jew	jew	r49	move3		80	80	ac%		144	171	vit		75	75	enr		75	75	res-fire		-20	-20	death-skill	824	100	62					Icarus		0
 Drekavac	1	Five socketables	glov									jew	jew	jew	jew	jew	r51	dmg-max		18	23	skillcap		1	1	dmg-cold		25	50	cold-thorns	75	101	150	mag%		11	20	allskills		1	1	swingcast3		45	45	Drekavac		0
 Rainbow	1	Five socketables	belt									jew	jew	jew	jew	jew	r05	res-all		11	15	extra-all		3	3	mag%		6	8	light		2	2													Rainbow		0
-Prodigy	1	Five socketables	belt									jew	jew	jew	jew	jew	r15	extra-pm		-3	-3	extra-fire		6	8	extra-ltng		6	8	mana-kill		21	30	regen-mana		21	40	cast3		20	20	att%		100	100	Prodigy		0
+Prodigy	1	Five socketables	belt									jew	jew	jew	jew	jew	r15	extra-pm		-3	-3	extra-fire		6	8	extra-ltng		6	8	mana-kill		31	45	regen-mana		11	20	cast3		20	20	att%		100	100	Prodigy		0
 Fuse	1	Five socketables	belt									jew	jew	jew	jew	jew	r23	res-pois		-30	-30	ac%		58	86	gethit-skill	79	25	14	res-fire		31	50	extra-fire/lvl	4	4	4	charged	564	20	5	dmg-fire		5	24	Fuse		0
 Pulsa Dinura	1	Five socketables	belt									jew	jew	jew	jew	jew	r34	pal		1	1	ac%		87	114	att-skill	563	2	6	heal-kill		31	50	dmg-fire		13	38	wrath-synergy		21	40	swingcast3		15	15	Pulsa Dinura		0
 Truce	1	Five socketables	belt									jew	jew	jew	jew	jew	r42	ac%		172	200	red-dmg%		10	10	swingcast3		-5	-5	slow-thorns		5	5	dmg-stun		25	25									Truce		0
@@ -1354,7 +1354,7 @@ Epicenter	1	Five socketables	boot									jew	jew	jew	jew	jew	r06	ac%		4	15	crus
 Outlaw	1	Five socketables	boot									jew	jew	jew	jew	jew	r14	ac%		30	57	shadows-max		2	2	enr		11	15	ac		-1	-1	howl-thorns		5	5									Outlaw		0
 Ginfaxi	1	Five socketables	boot									jew	jew	jew	jew	jew	r22	enr%		-5	-5	oskill	689	1	4	ac%		30	57	slow-thorns		5	5	str		16	20	ac-global		11	15					Ginfaxi		0
 Craton	1	Five socketables	boot									jew	jew	jew	jew	jew	r32	vit		-10	-10	ac-global		31	40	uninterrupt		11	20	att-skill	595	5	7	crush		3	3	all-stats		21	25	red-dmg		16	20	Craton		0
-Megalith	1	Five socketables	boot									jew	jew	jew	jew	jew	r40	ac%		115	143	regen-mana		50	50	cast3		25	25	str		41	50	red-dmg%		5	5	allskills		1	1	charged	57	15	8	Megalith		0
+Megalith	1	Five socketables	boot									jew	jew	jew	jew	jew	r40	ac%		115	143	cast3		25	25	str		41	50	red-dmg%		5	5	allskills		1	1	regen-mana		30	30					Megalith		0
 Nephilim	1	Five socketables	boot									jew	jew	jew	jew	jew	r48	ac%		144	171	str%		21	25	vit%		21	25	ac		150	150	death-skill	518	100	51	strvit		50	50					Nephilim		0
 Hibagon	1	Five socketables	boot									jew	jew	jew	jew	jew	r53	ease		-3	-3	ac%		172	200	reanimate	2233	5	5	reanimate	2234	5	5	reanimate	2223	5	5	res-all		31	40	allskills		1	1	Hibagon		0
 StataMater	1	Five socketables	azhm									jew	jew	jew	jew	jew	r16	dex%		6	10	oskill	566	1	7	enr%		11	15	res-fire		100	100	pierce-fire		5	5	red-dmg		11	15	gold%		51	75	StataMater		0
@@ -1399,7 +1399,7 @@ Surya	1	Five socketables	pzhm									jew	jew	jew	jew	jew	r46	ac%		115	143	oskil
 Malakbel	1	Five socketables	pzhm									jew	jew	jew	jew	jew	r53	ease		-13	-13	reanimate	2335	2	2	res-fire		100	100	pal		2	2	cast3		10	10	extra-fire/lvl	8	8	8	death-skill	501	100	41	Malakbel		0
 Asmodai	1	Five socketables	ashd									jew	jew	jew	jew	jew	r14	mana-kill		11	20	heal-kill		11	20	gold%		16	16	dmg-min		3	5	kill-skill	839	5	4	skill-dur		21	25					Asmodai		0
 Sangreal	1	Five socketables	ashd									jew	jew	jew	jew	jew	r28	res-ltng		-30	-30	ac		33	33	desc-dbaura		1	1	aura	297	1	1	swing3		25	25	balance3		25	25	block		-10	-10	Sangreal		0
-Zohar	1	Five socketables	ashd									jew	jew	jew	jew	jew	r33	slow-thorns		20	20	oskill	676	1	7	ac%		87	114	dmg-max		38	50	cheap		11	15	swing3		20	20	avoidance		6	10	Zohar		0
+Zohar	1	Five socketables	ashd									jew	jew	jew	jew	jew	r33	slow-thorns		20	20	oskill	676	1	7	ac%		87	114	dmg-max		38	50	cheap		5	5	swing3		20	20	avoidance		6	10	Zohar		0
 Asclepion	1	Five socketables	ashd									jew	jew	jew	jew	jew	r46	oskill	358	26	34	swingcast3		15	15	block3		30	30	regen/lvl	48	48	48	pal		1	2	res-all		25	25	res-pois		75	75	Asclepion		0
 Amaymon	1	Five socketables	ashd									jew	jew	jew	jew	jew	r51	dmg-max		46	58	slow		10	10	oskill	420	4	13	dmg-minion		41	50	hp-minion		51	75	res-all		100	100	reanimate	1052	25	25	Amaymon		0
 Demeter	1	Five socketables	stor									jew	jew	jew	jew	jew	r23	ac%		58	86	res-pois		20	20	oskill	67	12	15	pierce-pois		16	20	sor		2	2	red-dmg		11	20					Demeter		0
@@ -1551,7 +1551,7 @@ Tynged	1	new runeword	xbow									r41						hit-skill	330	1	16	crush		11	13	ease
 Skarn	1	X	bswd	baxe								r40						dmg%		115	143	oskill	972	26	34	res-fire		41	50	res-pois		41	50	red-dmg%		10	10	att-skill	901	25	13	crush		17	17	Skarn		0
 Eris	1	new runeword	abow									r37						dmg%		58	86	hit-skill	712	1	6	oskill	1016	21	26	swing3		40	40	red-dmg%		5	5	heal-hit		3	3	charged	1018	100	16	Eris		0
 Titanomachia	1	new runeword	aspe									r24						dmg%		58	86	dmg-max		26	38	att-skill	980	33	7	dmg-ltng		1	125	str		50	50	red-dmg%		5	5	dmg-stun		50	50	Titanomachia		0
-Herfjotur	1	new runeword	ajav									r41						dmg%		115	143	dmg-max		13	25	oskill	968	8	13	kill-skill	619	5	1	reanimate	1400	8	8	slow		25	25	hit-skill	803	20	5	Herfjotur		0
+Herfjotur	1	new runeword	ajav									r41						dmg%		115	143	dmg-max		13	25	oskill	968	8	13	kill-skill	758	5	1	reanimate	1400	8	8	slow		25	25	hit-skill	803	20	5	Herfjotur		0
 Quaoar	1	new runeword	pclb	pmac	pham							r29						dmg%		104	114	dmg-norm		7	13	att-skill	982	5	27	nofreeze		1	1	heal-hit		5	5	hp%		15	15					Quaoar		0
 Eventide	1	new runeword	nscy									r36						dmg%		115	143	dmg-elem	75	63	188	att-skill	964	50	5	light		-2	-2	red-dmg%		-25	-25	state	74	1	1	crush		11	13	Eventide		0
 Vertigo	1	new runeword	orb									r22						damage-skill	54	5	1	sor		2	2	cast3		50	50	extra-ltng		11	15	extra-cold		11	15	att-skill	54	100	1	dmg-to-mana		25	25	Vertigo		0
@@ -1610,7 +1610,7 @@ Tynged	1	new runeword	xbow									jew	r41					hit-skill	330	1	16	crush		11	13	e
 Skarn	1	X	bswd	baxe								jew	r40					dmg%		115	143	oskill	972	26	34	res-fire		41	50	res-pois		41	50	red-dmg%		10	10	att-skill	901	25	13	crush		17	17	Skarn		0
 Eris	1	new runeword	abow									jew	r37					dmg%		58	86	hit-skill	712	1	6	oskill	1016	21	26	swing3		40	40	red-dmg%		5	5	heal-hit		3	3	charged	1018	100	16	Eris		0
 Titanomachia	1	new runeword	aspe									jew	r24					dmg%		58	86	dmg-max		26	38	att-skill	980	33	7	dmg-ltng		1	125	str		50	50	red-dmg%		5	5	dmg-stun		50	50	Titanomachia		0
-Herfjotur	1	new runeword	ajav									jew	r41					dmg%		115	143	dmg-max		13	25	oskill	968	8	13	kill-skill	619	5	1	reanimate	1400	8	8	slow		25	25	hit-skill	803	20	5	Herfjotur		0
+Herfjotur	1	new runeword	ajav									jew	r41					dmg%		115	143	dmg-max		13	25	oskill	968	8	13	kill-skill	758	5	1	reanimate	1400	8	8	slow		25	25	hit-skill	803	20	5	Herfjotur		0
 Quaoar	1	new runeword	pclb	pmac	pham							jew	r29					dmg%		104	114	dmg-norm		7	13	att-skill	982	5	27	nofreeze		1	1	heal-hit		5	5	hp%		15	15					Quaoar		0
 Eventide	1	new runeword	nscy									jew	r36					dmg%		115	143	dmg-elem	75	63	188	att-skill	964	50	5	light		-2	-2	red-dmg%		-25	-25	state	74	1	1	crush		11	13	Eventide		0
 Vertigo	1	new runeword	orb									jew	r22					damage-skill	54	5	1	sor		2	2	cast3		50	50	extra-ltng		11	15	extra-cold		11	15	att-skill	54	100	1	dmg-to-mana		25	25	Vertigo		0
@@ -1669,7 +1669,7 @@ Tynged	1	new runeword	xbow									jew	jew	r41				hit-skill	330	1	16	crush		11	1
 Skarn	1	X	bswd	baxe								jew	jew	r40				dmg%		115	143	oskill	972	26	34	res-fire		41	50	res-pois		41	50	red-dmg%		10	10	att-skill	901	25	13	crush		17	17	Skarn		0
 Eris	1	new runeword	abow									jew	jew	r37				dmg%		58	86	hit-skill	712	1	6	oskill	1016	21	26	swing3		40	40	red-dmg%		5	5	heal-hit		3	3	charged	1018	100	16	Eris		0
 Titanomachia	1	new runeword	aspe									jew	jew	r24				dmg%		58	86	dmg-max		26	38	att-skill	980	33	7	dmg-ltng		1	125	str		50	50	red-dmg%		5	5	dmg-stun		50	50	Titanomachia		0
-Herfjotur	1	new runeword	ajav									jew	jew	r41				dmg%		115	143	dmg-max		13	25	oskill	968	8	13	kill-skill	619	5	1	reanimate	1400	8	8	slow		25	25	hit-skill	803	20	5	Herfjotur		0
+Herfjotur	1	new runeword	ajav									jew	jew	r41				dmg%		115	143	dmg-max		13	25	oskill	968	8	13	kill-skill	758	5	1	reanimate	1400	8	8	slow		25	25	hit-skill	803	20	5	Herfjotur		0
 Quaoar	1	new runeword	pclb	pmac	pham							jew	jew	r29				dmg%		104	114	dmg-norm		7	13	att-skill	982	5	27	nofreeze		1	1	heal-hit		5	5	hp%		15	15					Quaoar		0
 Eventide	1	new runeword	nscy									jew	jew	r36				dmg%		115	143	dmg-elem	75	63	188	att-skill	964	50	5	light		-2	-2	red-dmg%		-25	-25	state	74	1	1	crush		11	13	Eventide		0
 Vertigo	1	new runeword	orb									jew	jew	r22				damage-skill	54	5	1	sor		2	2	cast3		50	50	extra-ltng		11	15	extra-cold		11	15	att-skill	54	100	1	dmg-to-mana		25	25	Vertigo		0
@@ -1728,7 +1728,7 @@ Tynged	1	new runeword	xbow									jew	jew	jew	r41			hit-skill	330	1	16	crush		1
 Skarn	1	X	bswd	baxe								jew	jew	jew	r40			dmg%		115	143	oskill	972	26	34	res-fire		41	50	res-pois		41	50	red-dmg%		10	10	att-skill	901	25	13	crush		17	17	Skarn		0
 Eris	1	new runeword	abow									jew	jew	jew	r37			dmg%		58	86	hit-skill	712	1	6	oskill	1016	21	26	swing3		40	40	red-dmg%		5	5	heal-hit		3	3	charged	1018	100	16	Eris		0
 Titanomachia	1	new runeword	aspe									jew	jew	jew	r24			dmg%		58	86	dmg-max		26	38	att-skill	980	33	7	dmg-ltng		1	125	str		50	50	red-dmg%		5	5	dmg-stun		50	50	Titanomachia		0
-Herfjotur	1	new runeword	ajav									jew	jew	jew	r41			dmg%		115	143	dmg-max		13	25	oskill	968	8	13	kill-skill	619	5	1	reanimate	1400	8	8	slow		25	25	hit-skill	803	20	5	Herfjotur		0
+Herfjotur	1	new runeword	ajav									jew	jew	jew	r41			dmg%		115	143	dmg-max		13	25	oskill	968	8	13	kill-skill	758	5	1	reanimate	1400	8	8	slow		25	25	hit-skill	803	20	5	Herfjotur		0
 Quaoar	1	new runeword	pclb	pmac	pham							jew	jew	jew	r29			dmg%		104	114	dmg-norm		7	13	att-skill	982	5	27	nofreeze		1	1	heal-hit		5	5	hp%		15	15					Quaoar		0
 Eventide	1	new runeword	nscy									jew	jew	jew	r36			dmg%		115	143	dmg-elem	75	63	188	att-skill	964	50	5	light		-2	-2	red-dmg%		-25	-25	state	74	1	1	crush		11	13	Eventide		0
 Vertigo	1	new runeword	orb									jew	jew	jew	r22			damage-skill	54	5	1	sor		2	2	cast3		50	50	extra-ltng		11	15	extra-cold		11	15	att-skill	54	100	1	dmg-to-mana		25	25	Vertigo		0
@@ -1787,7 +1787,7 @@ Tynged	1	new runeword	xbow									jew	jew	jew	jew	r41		hit-skill	330	1	16	crush
 Skarn	1	X	bswd	baxe								jew	jew	jew	jew	r40		dmg%		115	143	oskill	972	26	34	res-fire		41	50	res-pois		41	50	red-dmg%		10	10	att-skill	901	25	13	crush		17	17	Skarn		0
 Eris	1	new runeword	abow									jew	jew	jew	jew	r37		dmg%		58	86	hit-skill	712	1	6	oskill	1016	21	26	swing3		40	40	red-dmg%		5	5	heal-hit		3	3	charged	1018	100	16	Eris		0
 Titanomachia	1	new runeword	aspe									jew	jew	jew	jew	r24		dmg%		58	86	dmg-max		26	38	att-skill	980	33	7	dmg-ltng		1	125	str		50	50	red-dmg%		5	5	dmg-stun		50	50	Titanomachia		0
-Herfjotur	1	new runeword	ajav									jew	jew	jew	jew	r41		dmg%		115	143	dmg-max		13	25	oskill	968	8	13	kill-skill	619	5	1	reanimate	1400	8	8	slow		25	25	hit-skill	803	20	5	Herfjotur		0
+Herfjotur	1	new runeword	ajav									jew	jew	jew	jew	r41		dmg%		115	143	dmg-max		13	25	oskill	968	8	13	kill-skill	758	5	1	reanimate	1400	8	8	slow		25	25	hit-skill	803	20	5	Herfjotur		0
 Quaoar	1	new runeword	pclb	pmac	pham							jew	jew	jew	jew	r29		dmg%		104	114	dmg-norm		7	13	att-skill	982	5	27	nofreeze		1	1	heal-hit		5	5	hp%		15	15					Quaoar		0
 Eventide	1	new runeword	nscy									jew	jew	jew	jew	r36		dmg%		115	143	dmg-elem	75	63	188	att-skill	964	50	5	light		-2	-2	red-dmg%		-25	-25	state	74	1	1	crush		11	13	Eventide		0
 Vertigo	1	new runeword	orb									jew	jew	jew	jew	r22		damage-skill	54	5	1	sor		2	2	cast3		50	50	extra-ltng		11	15	extra-cold		11	15	att-skill	54	100	1	dmg-to-mana		25	25	Vertigo		0
@@ -1846,7 +1846,7 @@ Tynged	1	new runeword	xbow									jew	jew	jew	jew	jew	r41	hit-skill	330	1	16	cr
 Skarn	1	X	bswd	baxe								jew	jew	jew	jew	jew	r40	dmg%		115	143	oskill	972	26	34	res-fire		41	50	res-pois		41	50	red-dmg%		10	10	att-skill	901	25	13	crush		17	17	Skarn		0
 Eris	1	new runeword	abow									jew	jew	jew	jew	jew	r37	dmg%		58	86	hit-skill	712	1	6	oskill	1016	21	26	swing3		40	40	red-dmg%		5	5	heal-hit		3	3	charged	1018	100	16	Eris		0
 Titanomachia	1	new runeword	aspe									jew	jew	jew	jew	jew	r24	dmg%		58	86	dmg-max		26	38	att-skill	980	33	7	dmg-ltng		1	125	str		50	50	red-dmg%		5	5	dmg-stun		50	50	Titanomachia		0
-Herfjotur	1	new runeword	ajav									jew	jew	jew	jew	jew	r41	dmg%		115	143	dmg-max		13	25	oskill	968	8	13	kill-skill	619	5	1	reanimate	1400	8	8	slow		25	25	hit-skill	803	20	5	Herfjotur		0
+Herfjotur	1	new runeword	ajav									jew	jew	jew	jew	jew	r41	dmg%		115	143	dmg-max		13	25	oskill	968	8	13	kill-skill	758	5	1	reanimate	1400	8	8	slow		25	25	hit-skill	803	20	5	Herfjotur		0
 Quaoar	1	new runeword	pclb	pmac	pham							jew	jew	jew	jew	jew	r29	dmg%		104	114	dmg-norm		7	13	att-skill	982	5	27	nofreeze		1	1	heal-hit		5	5	hp%		15	15					Quaoar		0
 Eventide	1	new runeword	nscy									jew	jew	jew	jew	jew	r36	dmg%		115	143	dmg-elem	75	63	188	att-skill	964	50	5	light		-2	-2	red-dmg%		-25	-25	state	74	1	1	crush		11	13	Eventide		0
 Vertigo	1	new runeword	orb									jew	jew	jew	jew	jew	r22	damage-skill	54	5	1	sor		2	2	cast3		50	50	extra-ltng		11	15	extra-cold		11	15	att-skill	54	100	1	dmg-to-mana		25	25	Vertigo		0
@@ -2085,7 +2085,7 @@ Hadriels Protector	1	pal spear	pspe									r60	r60	r60	r60	r60	r60	dmg%		171	20
 Judgement	1	pal blunt	pclb	pham	pmac							r57	r57	r57	r57	r57	r57	dmg%		171	200	pal		0	2	kill-skill	824	2	36	pierce-fire		30	30	dmg-fire		167	167	res-fire-max		15	15	dmg-norm		63	188	Judgement		0
 Helgrotha	1	sorc orb	orb									r60	r60	r60				cast3		50	50	sor		0	2	pierce-pois		60	60	hp%		20	20	block		1	1	extra-pois		15	15	enr%		25	25	Helgrotha		0
 Dark Exile	1	sorc blade	scrd									r62	r62	r62	r62	r62	r62	dmg%		171	200	sor		0	4	att-skill	63	5	23	dmg-norm		63	125	lifesteal		30	35	dmg-cold		278	556	pierce-cold		60	60	Dark Exile		0
-Hellfire Plate	1	body armor	tors									r57	r57	r57	r57	r57	r57	ac%		171	200	allskills		0	2	oskill	367	3	14	damage-skill	346	5	5	ac		1000	1000	red-dmg%		10	10	dmg-fire		167	167	Hellfire Plate		0
+Hellfire Plate	1	body armor	tors									r57	r57	r57	r57	r57	r57	ac%		171	200	allskills		0	2	oskill	367	3	14	hit-skill	346	1	5	ac		1000	1000	red-dmg%		10	10	dmg-fire		167	167	Hellfire Plate		0
 Thundercap	1	helm	helm						phlm			r61	r61	r61	r61			ac%		171	200	allskills		0	1	res-ltng-max		10	10	extra-ltng		18	18	pierce-ltng		21	21	abs-ltng		5	5	dmg-ltng		84	84	Thundercap		0
 Rathmas Blessing	1	circlet	circ									r62	r62	r62	r62			oskill	870	16	28	allskills		0	3	res-all-minion		50	50	dmg-minion		50	50	hp-minion		50	50	abs-cold		10	10	res-cold		40	40	Rathmas Blessing		0
 Khalims Protector	1	shield	shld						basd			r60	r60	r60	r60			ac%		171	200	allskills		0	2	block		2	2	res-pois-max		10	10	heal-kill		50	50	block3		40	40	ac-global		50	50	Khalims Protector		0
@@ -2109,7 +2109,7 @@ Celebration	1	new XVI	tors									r13	r98					str		-10	-10	all-stats		41	60	mag
 Thelema	1	new XVI	tors									r19	r98					enr		120	150	mana-thorns		201	250	ac%		172	200	allskills		4	4	cast3		55	55	dex		90	90	vit		60	60	Thelema		0
 Cathedral	1	new XVI	tors									r25	r98					res-cold		-30	-30	extra-pois		45	55	ac%		190	190	poison-dur		151	200	ac		2420	2420	charged	398	50	40	regen/lvl	64	64	64	Cathedral		0
 Mirage	1	new XVI	tors									r33	r98					slow-thorns		21	30	red-dmg		80	100	move3		75	75	swingcast3		50	50	allskills		2	2	res-all		77	77	fade		1	1	Mirage		0
-Summit	1	new XVI	helm									r01	r98					light		-1	-1	gold%		500	500	ease		-100	-100	cheap		40	40													Summit		0
+Summit	1	new XVI	helm									r01	r98					light		-1	-1	gold%		500	500	ease		-100	-100	cheap		13	13													Summit		0
 Cannonball	1	new XVI	helm									r08	r98					extra-fire		33	48	move3		70	70	stam		101	150	crush		6	8	att-skill	496	10	6	charged	564	30	5					Cannonball		0
 Ra	1	new XVI	helm									r17	r98					allskills		1	1	move3		-10	-10	gold%		76	100	howl-thorns		21	25	pierce-fire		25	36	pierce-pois		25	36	cast3		60	60	Ra		0
 Alchemy	1	new XVI	helm									r26	r98					regen		80	100	hp-minion		51	70	regen		80	100	ac%		200	200	block3		100	100	swing3		50	50					Alchemy		0
@@ -2124,7 +2124,7 @@ Mercy	1	new XVI	glov									r13	r98					str		151	200	att-skill	90	10	18	vit%		1
 Kali	1	new XVI	glov									r21	r98					res-fire		91	91	kill-skill	518	33	33	allskills		2	2	ac		-314	-314	res-fire-max		15	15	charged	568	124	7					Kali		0
 Aiwass	1	new XVI	glov									r33	r98					slow-thorns		-5	-5	shadows-attsyn		0	0	nec		3	3	ac		293	293	charged	873	78	12	str%		21	35	dmg-minion		44	50	Aiwass		0
 Rainbow	1	new XVI	belt									r05	r98					res-all		31	40	extra-all		13	13	mag%		83	83	light		7	7													Rainbow		0
-Prodigy	1	new XVI	belt									r15	r98					extra-pm		-3	-3	extra-fire		13	43	extra-ltng		13	43	mana-kill		31	60	regen-mana		51	90	cast3		40	40	att%		100	100	Prodigy		0
+Prodigy	1	new XVI	belt									r15	r98					extra-pm		-3	-3	extra-fire		13	43	extra-ltng		13	43	mana-kill		51	60	regen-mana		31	40	cast3		40	40	att%		100	100	Prodigy		0
 Fuse	1	new XVI	belt									r23	r98					res-pois		-30	-30	ac%		143	171	gethit-skill	79	25	28	res-fire		75	100	extra-fire/lvl	12	12	12	charged	564	40	5	dmg-fire		76	226	Fuse		0
 Epicenter	1	new XVI	boot									r06	r98					ac%		163	191	crush/lvl	4	4	4	death-skill	612	100	33	hp%		31	40													Epicenter		0
 Outlaw	1	new XVI	boot									r14	r98					ac%		200	200	shadows-max		5	5	enr		250	300	ac		-1	-1	howl-thorns		10	10									Outlaw		0
@@ -2149,7 +2149,7 @@ Ilmatar	1	new XVI	pzhm									r10	r98					extra-ltng		30	30	att-skill	999	25	35
 Hierodule	1	new XVI	pzhm									r25	r98					res-cold		-30	-30	state	97	1	1	desc-sorc		1	1	pal		3	3	cast3		60	60	extra-ltng		15	15	extra-pm		30	45	Hierodule		0
 Asmodai	1	new XVI	ashd									r14	r98					mana-kill		41	50	heal-kill		41	50	gold%		50	50	dmg-min		113	125	kill-skill	839	5	16	skill-dur		21	25					Asmodai		0
 Sangreal	1	new XVI	ashd									r28	r98					res-ltng		-30	-30	ac		5033	5033	desc-dbaura		1	1	aura	297	1	1	swing3		125	25	balance3		125	25	block		1	1	Sangreal		0
-Zohar	1	new XVI	ashd									r33	r98					slow-thorns		20	20	oskill	676	14	21	ac%		200	200	dmg-max		100	125	cheap		21	25	swing3		50	50	avoidance		10	15	Zohar		0
+Zohar	1	new XVI	ashd									r33	r98					slow-thorns		20	20	oskill	676	14	21	ac%		200	200	dmg-max		100	125	cheap		10	10	swing3		50	50	avoidance		10	15	Zohar		0
 Demeter	1	new XVI	stor									r23	r98					ac%		172	200	res-pois		70	70	oskill	67	25	29	pierce-pois		31	42	sor		4	4	red-dmg		31	50					Demeter		0
 Curandera	1	new XVI	stor									r29	r98					ac%		200	200	sor		3	4	regen/lvl	102	102	102	red-dmg%		40	45	res-all		41	60									Curandera		0
 Fawkes	1	new XVI	phlm									r33	r98					oskill	882	26	32	extra-fire/lvl	32	32	32	allskills		2	3	cast3		50	50	enr		150	150	heal-kill		61	90	att-skill	386	25	38	Fawkes		0
@@ -2167,7 +2167,7 @@ Celebration	1	new XVI	tors									jew	r13	r98				str		-10	-10	all-stats		41	60	
 Thelema	1	new XVI	tors									jew	r19	r98				enr		120	150	mana-thorns		201	250	ac%		172	200	allskills		4	4	cast3		55	55	dex		90	90	vit		60	60	Thelema		0
 Cathedral	1	new XVI	tors									jew	r25	r98				res-cold		-30	-30	extra-pois		45	55	ac%		190	190	poison-dur		151	200	ac		2420	2420	charged	398	50	40	regen/lvl	64	64	64	Cathedral		0
 Mirage	1	new XVI	tors									jew	r33	r98				slow-thorns		21	30	red-dmg		80	100	move3		75	75	swingcast3		50	50	allskills		2	2	res-all		77	77	fade		1	1	Mirage		0
-Summit	1	new XVI	helm									jew	r01	r98				light		-1	-1	gold%		500	500	ease		-100	-100	cheap		40	40													Summit		0
+Summit	1	new XVI	helm									jew	r01	r98				light		-1	-1	gold%		500	500	ease		-100	-100	cheap		13	13													Summit		0
 Cannonball	1	new XVI	helm									jew	r08	r98				extra-fire		33	48	move3		70	70	stam		101	150	crush		6	8	att-skill	496	10	6	charged	564	30	5					Cannonball		0
 Ra	1	new XVI	helm									jew	r17	r98				allskills		1	1	move3		-10	-10	gold%		76	100	howl-thorns		21	25	pierce-fire		25	36	pierce-pois		25	36	cast3		60	60	Ra		0
 Alchemy	1	new XVI	helm									jew	r26	r98				regen		80	100	hp-minion		51	70	regen		80	100	ac%		200	200	block3		100	100	swing3		50	50					Alchemy		0
@@ -2182,7 +2182,7 @@ Mercy	1	new XVI	glov									jew	r13	r98				str		151	200	att-skill	90	10	18	vit%
 Kali	1	new XVI	glov									jew	r21	r98				res-fire		91	91	kill-skill	518	33	33	allskills		2	2	ac		-314	-314	res-fire-max		15	15	charged	568	124	7					Kali		0
 Aiwass	1	new XVI	glov									jew	r33	r98				slow-thorns		-5	-5	shadows-attsyn		0	0	nec		3	3	ac		293	293	charged	873	78	12	str%		21	35	dmg-minion		44	50	Aiwass		0
 Rainbow	1	new XVI	belt									jew	r05	r98				res-all		31	40	extra-all		13	13	mag%		83	83	light		7	7													Rainbow		0
-Prodigy	1	new XVI	belt									jew	r15	r98				extra-pm		-3	-3	extra-fire		13	43	extra-ltng		13	43	mana-kill		31	60	regen-mana		51	90	cast3		40	40	att%		100	100	Prodigy		0
+Prodigy	1	new XVI	belt									jew	r15	r98				extra-pm		-3	-3	extra-fire		13	43	extra-ltng		13	43	mana-kill		51	60	regen-mana		31	40	cast3		40	40	att%		100	100	Prodigy		0
 Fuse	1	new XVI	belt									jew	r23	r98				res-pois		-30	-30	ac%		143	171	gethit-skill	79	25	28	res-fire		75	100	extra-fire/lvl	12	12	12	charged	564	40	5	dmg-fire		76	226	Fuse		0
 Epicenter	1	new XVI	boot									jew	r06	r98				ac%		163	191	crush/lvl	4	4	4	death-skill	612	100	33	hp%		31	40													Epicenter		0
 Outlaw	1	new XVI	boot									jew	r14	r98				ac%		200	200	shadows-max		5	5	enr		250	300	ac		-1	-1	howl-thorns		10	10									Outlaw		0
@@ -2207,7 +2207,7 @@ Ilmatar	1	new XVI	pzhm									jew	r10	r98				extra-ltng		30	30	att-skill	999	25
 Hierodule	1	new XVI	pzhm									jew	r25	r98				res-cold		-30	-30	state	97	1	1	desc-sorc		1	1	pal		3	3	cast3		60	60	extra-ltng		15	15	extra-pm		30	45	Hierodule		0
 Asmodai	1	new XVI	ashd									jew	r14	r98				mana-kill		41	50	heal-kill		41	50	gold%		50	50	dmg-min		113	125	kill-skill	839	5	16	skill-dur		21	25					Asmodai		0
 Sangreal	1	new XVI	ashd									jew	r28	r98				res-ltng		-30	-30	ac		5033	5033	desc-dbaura		1	1	aura	297	1	1	swing3		125	25	balance3		125	25	block		1	1	Sangreal		0
-Zohar	1	new XVI	ashd									jew	r33	r98				slow-thorns		20	20	oskill	676	14	21	ac%		200	200	dmg-max		100	125	cheap		21	25	swing3		50	50	avoidance		10	15	Zohar		0
+Zohar	1	new XVI	ashd									jew	r33	r98				slow-thorns		20	20	oskill	676	14	21	ac%		200	200	dmg-max		100	125	cheap		10	10	swing3		50	50	avoidance		10	15	Zohar		0
 Demeter	1	new XVI	stor									jew	r23	r98				ac%		172	200	res-pois		70	70	oskill	67	25	29	pierce-pois		31	42	sor		4	4	red-dmg		31	50					Demeter		0
 Curandera	1	new XVI	stor									jew	r29	r98				ac%		200	200	sor		3	4	regen/lvl	102	102	102	red-dmg%		40	45	res-all		41	60									Curandera		0
 Fawkes	1	new XVI	phlm									jew	r33	r98				oskill	882	26	32	extra-fire/lvl	32	32	32	allskills		2	3	cast3		50	50	enr		150	150	heal-kill		61	90	att-skill	386	25	38	Fawkes		0
@@ -2225,7 +2225,7 @@ Celebration	1	new XVI	tors									jew	jew	r13	r98			str		-10	-10	all-stats		41	
 Thelema	1	new XVI	tors									jew	jew	r19	r98			enr		120	150	mana-thorns		201	250	ac%		172	200	allskills		4	4	cast3		55	55	dex		90	90	vit		60	60	Thelema		0
 Cathedral	1	new XVI	tors									jew	jew	r25	r98			res-cold		-30	-30	extra-pois		45	55	ac%		190	190	poison-dur		151	200	ac		2420	2420	charged	398	50	40	regen/lvl	64	64	64	Cathedral		0
 Mirage	1	new XVI	tors									jew	jew	r33	r98			slow-thorns		21	30	red-dmg		80	100	move3		75	75	swingcast3		50	50	allskills		2	2	res-all		77	77	fade		1	1	Mirage		0
-Summit	1	new XVI	helm									jew	jew	r01	r98			light		-1	-1	gold%		500	500	ease		-100	-100	cheap		40	40													Summit		0
+Summit	1	new XVI	helm									jew	jew	r01	r98			light		-1	-1	gold%		500	500	ease		-100	-100	cheap		13	13													Summit		0
 Cannonball	1	new XVI	helm									jew	jew	r08	r98			extra-fire		33	48	move3		70	70	stam		101	150	crush		6	8	att-skill	496	10	6	charged	564	30	5					Cannonball		0
 Ra	1	new XVI	helm									jew	jew	r17	r98			allskills		1	1	move3		-10	-10	gold%		76	100	howl-thorns		21	25	pierce-fire		25	36	pierce-pois		25	36	cast3		60	60	Ra		0
 Alchemy	1	new XVI	helm									jew	jew	r26	r98			regen		80	100	hp-minion		51	70	regen		80	100	ac%		200	200	block3		100	100	swing3		50	50					Alchemy		0
@@ -2240,7 +2240,7 @@ Mercy	1	new XVI	glov									jew	jew	r13	r98			str		151	200	att-skill	90	10	18	v
 Kali	1	new XVI	glov									jew	jew	r21	r98			res-fire		91	91	kill-skill	518	33	33	allskills		2	2	ac		-314	-314	res-fire-max		15	15	charged	568	124	7					Kali		0
 Aiwass	1	new XVI	glov									jew	jew	r33	r98			slow-thorns		-5	-5	shadows-attsyn		0	0	nec		3	3	ac		293	293	charged	873	78	12	str%		21	35	dmg-minion		44	50	Aiwass		0
 Rainbow	1	new XVI	belt									jew	jew	r05	r98			res-all		31	40	extra-all		13	13	mag%		83	83	light		7	7													Rainbow		0
-Prodigy	1	new XVI	belt									jew	jew	r15	r98			extra-pm		-3	-3	extra-fire		13	43	extra-ltng		13	43	mana-kill		31	60	regen-mana		51	90	cast3		40	40	att%		100	100	Prodigy		0
+Prodigy	1	new XVI	belt									jew	jew	r15	r98			extra-pm		-3	-3	extra-fire		13	43	extra-ltng		13	43	mana-kill		51	60	regen-mana		31	40	cast3		40	40	att%		100	100	Prodigy		0
 Fuse	1	new XVI	belt									jew	jew	r23	r98			res-pois		-30	-30	ac%		143	171	gethit-skill	79	25	28	res-fire		75	100	extra-fire/lvl	12	12	12	charged	564	40	5	dmg-fire		76	226	Fuse		0
 Epicenter	1	new XVI	boot									jew	jew	r06	r98			ac%		163	191	crush/lvl	4	4	4	death-skill	612	100	33	hp%		31	40													Epicenter		0
 Outlaw	1	new XVI	boot									jew	jew	r14	r98			ac%		200	200	shadows-max		5	5	enr		250	300	ac		-1	-1	howl-thorns		10	10									Outlaw		0
@@ -2265,7 +2265,7 @@ Ilmatar	1	new XVI	pzhm									jew	jew	r10	r98			extra-ltng		30	30	att-skill	999
 Hierodule	1	new XVI	pzhm									jew	jew	r25	r98			res-cold		-30	-30	state	97	1	1	desc-sorc		1	1	pal		3	3	cast3		60	60	extra-ltng		15	15	extra-pm		30	45	Hierodule		0
 Asmodai	1	new XVI	ashd									jew	jew	r14	r98			mana-kill		41	50	heal-kill		41	50	gold%		50	50	dmg-min		113	125	kill-skill	839	5	16	skill-dur		21	25					Asmodai		0
 Sangreal	1	new XVI	ashd									jew	jew	r28	r98			res-ltng		-30	-30	ac		5033	5033	desc-dbaura		1	1	aura	297	1	1	swing3		125	25	balance3		125	25	block		1	1	Sangreal		0
-Zohar	1	new XVI	ashd									jew	jew	r33	r98			slow-thorns		20	20	oskill	676	14	21	ac%		200	200	dmg-max		100	125	cheap		21	25	swing3		50	50	avoidance		10	15	Zohar		0
+Zohar	1	new XVI	ashd									jew	jew	r33	r98			slow-thorns		20	20	oskill	676	14	21	ac%		200	200	dmg-max		100	125	cheap		10	10	swing3		50	50	avoidance		10	15	Zohar		0
 Demeter	1	new XVI	stor									jew	jew	r23	r98			ac%		172	200	res-pois		70	70	oskill	67	25	29	pierce-pois		31	42	sor		4	4	red-dmg		31	50					Demeter		0
 Curandera	1	new XVI	stor									jew	jew	r29	r98			ac%		200	200	sor		3	4	regen/lvl	102	102	102	red-dmg%		40	45	res-all		41	60									Curandera		0
 Fawkes	1	new XVI	phlm									jew	jew	r33	r98			oskill	882	26	32	extra-fire/lvl	32	32	32	allskills		2	3	cast3		50	50	enr		150	150	heal-kill		61	90	att-skill	386	25	38	Fawkes		0
@@ -2283,7 +2283,7 @@ Celebration	1	new XVI	tors									jew	jew	jew	r13	r98		str		-10	-10	all-stats		
 Thelema	1	new XVI	tors									jew	jew	jew	r19	r98		enr		120	150	mana-thorns		201	250	ac%		172	200	allskills		4	4	cast3		55	55	dex		90	90	vit		60	60	Thelema		0
 Cathedral	1	new XVI	tors									jew	jew	jew	r25	r98		res-cold		-30	-30	extra-pois		45	55	ac%		190	190	poison-dur		151	200	ac		2420	2420	charged	398	50	40	regen/lvl	64	64	64	Cathedral		0
 Mirage	1	new XVI	tors									jew	jew	jew	r33	r98		slow-thorns		21	30	red-dmg		80	100	move3		75	75	swingcast3		50	50	allskills		2	2	res-all		77	77	fade		1	1	Mirage		0
-Summit	1	new XVI	helm									jew	jew	jew	r01	r98		light		-1	-1	gold%		500	500	ease		-100	-100	cheap		40	40													Summit		0
+Summit	1	new XVI	helm									jew	jew	jew	r01	r98		light		-1	-1	gold%		500	500	ease		-100	-100	cheap		13	13													Summit		0
 Cannonball	1	new XVI	helm									jew	jew	jew	r08	r98		extra-fire		33	48	move3		70	70	stam		101	150	crush		6	8	att-skill	496	10	6	charged	564	30	5					Cannonball		0
 Ra	1	new XVI	helm									jew	jew	jew	r17	r98		allskills		1	1	move3		-10	-10	gold%		76	100	howl-thorns		21	25	pierce-fire		25	36	pierce-pois		25	36	cast3		60	60	Ra		0
 Alchemy	1	new XVI	helm									jew	jew	jew	r26	r98		regen		80	100	hp-minion		51	70	regen		80	100	ac%		200	200	block3		100	100	swing3		50	50					Alchemy		0
@@ -2298,7 +2298,7 @@ Mercy	1	new XVI	glov									jew	jew	jew	r13	r98		str		151	200	att-skill	90	10	1
 Kali	1	new XVI	glov									jew	jew	jew	r21	r98		res-fire		91	91	kill-skill	518	33	33	allskills		2	2	ac		-314	-314	res-fire-max		15	15	charged	568	124	7					Kali		0
 Aiwass	1	new XVI	glov									jew	jew	jew	r33	r98		slow-thorns		-5	-5	shadows-attsyn		0	0	nec		3	3	ac		293	293	charged	873	78	12	str%		21	35	dmg-minion		44	50	Aiwass		0
 Rainbow	1	new XVI	belt									jew	jew	jew	r05	r98		res-all		31	40	extra-all		13	13	mag%		83	83	light		7	7													Rainbow		0
-Prodigy	1	new XVI	belt									jew	jew	jew	r15	r98		extra-pm		-3	-3	extra-fire		13	43	extra-ltng		13	43	mana-kill		31	60	regen-mana		51	90	cast3		40	40	att%		100	100	Prodigy		0
+Prodigy	1	new XVI	belt									jew	jew	jew	r15	r98		extra-pm		-3	-3	extra-fire		13	43	extra-ltng		13	43	mana-kill		51	60	regen-mana		31	40	cast3		40	40	att%		100	100	Prodigy		0
 Fuse	1	new XVI	belt									jew	jew	jew	r23	r98		res-pois		-30	-30	ac%		143	171	gethit-skill	79	25	28	res-fire		75	100	extra-fire/lvl	12	12	12	charged	564	40	5	dmg-fire		76	226	Fuse		0
 Epicenter	1	new XVI	boot									jew	jew	jew	r06	r98		ac%		163	191	crush/lvl	4	4	4	death-skill	612	100	33	hp%		31	40													Epicenter		0
 Outlaw	1	new XVI	boot									jew	jew	jew	r14	r98		ac%		200	200	shadows-max		5	5	enr		250	300	ac		-1	-1	howl-thorns		10	10									Outlaw		0
@@ -2323,7 +2323,7 @@ Ilmatar	1	new XVI	pzhm									jew	jew	jew	r10	r98		extra-ltng		30	30	att-skill	
 Hierodule	1	new XVI	pzhm									jew	jew	jew	r25	r98		res-cold		-30	-30	state	97	1	1	desc-sorc		1	1	pal		3	3	cast3		60	60	extra-ltng		15	15	extra-pm		30	45	Hierodule		0
 Asmodai	1	new XVI	ashd									jew	jew	jew	r14	r98		mana-kill		41	50	heal-kill		41	50	gold%		50	50	dmg-min		113	125	kill-skill	839	5	16	skill-dur		21	25					Asmodai		0
 Sangreal	1	new XVI	ashd									jew	jew	jew	r28	r98		res-ltng		-30	-30	ac		5033	5033	desc-dbaura		1	1	aura	297	1	1	swing3		125	25	balance3		125	25	block		1	1	Sangreal		0
-Zohar	1	new XVI	ashd									jew	jew	jew	r33	r98		slow-thorns		20	20	oskill	676	14	21	ac%		200	200	dmg-max		100	125	cheap		21	25	swing3		50	50	avoidance		10	15	Zohar		0
+Zohar	1	new XVI	ashd									jew	jew	jew	r33	r98		slow-thorns		20	20	oskill	676	14	21	ac%		200	200	dmg-max		100	125	cheap		10	10	swing3		50	50	avoidance		10	15	Zohar		0
 Demeter	1	new XVI	stor									jew	jew	jew	r23	r98		ac%		172	200	res-pois		70	70	oskill	67	25	29	pierce-pois		31	42	sor		4	4	red-dmg		31	50					Demeter		0
 Curandera	1	new XVI	stor									jew	jew	jew	r29	r98		ac%		200	200	sor		3	4	regen/lvl	102	102	102	red-dmg%		40	45	res-all		41	60									Curandera		0
 Fawkes	1	new XVI	phlm									jew	jew	jew	r33	r98		oskill	882	26	32	extra-fire/lvl	32	32	32	allskills		2	3	cast3		50	50	enr		150	150	heal-kill		61	90	att-skill	386	25	38	Fawkes		0
@@ -2341,7 +2341,7 @@ Celebration	1	new XVI	tors									jew	jew	jew	jew	r13	r98	str		-10	-10	all-stat
 Thelema	1	new XVI	tors									jew	jew	jew	jew	r19	r98	enr		120	150	mana-thorns		201	250	ac%		172	200	allskills		4	4	cast3		55	55	dex		90	90	vit		60	60	Thelema		0
 Cathedral	1	new XVI	tors									jew	jew	jew	jew	r25	r98	res-cold		-30	-30	extra-pois		45	55	ac%		190	190	poison-dur		151	200	ac		2420	2420	charged	398	50	40	regen/lvl	64	64	64	Cathedral		0
 Mirage	1	new XVI	tors									jew	jew	jew	jew	r33	r98	slow-thorns		21	30	red-dmg		80	100	move3		75	75	swingcast3		50	50	allskills		2	2	res-all		77	77	fade		1	1	Mirage		0
-Summit	1	new XVI	helm									jew	jew	jew	jew	r01	r98	light		-1	-1	gold%		500	500	ease		-100	-100	cheap		40	40													Summit		0
+Summit	1	new XVI	helm									jew	jew	jew	jew	r01	r98	light		-1	-1	gold%		500	500	ease		-100	-100	cheap		13	13													Summit		0
 Cannonball	1	new XVI	helm									jew	jew	jew	jew	r08	r98	extra-fire		33	48	move3		70	70	stam		101	150	crush		6	8	att-skill	496	10	6	charged	564	30	5					Cannonball		0
 Ra	1	new XVI	helm									jew	jew	jew	jew	r17	r98	allskills		1	1	move3		-10	-10	gold%		76	100	howl-thorns		21	25	pierce-fire		25	36	pierce-pois		25	36	cast3		60	60	Ra		0
 Alchemy	1	new XVI	helm									jew	jew	jew	jew	r26	r98	regen		80	100	hp-minion		51	70	regen		80	100	ac%		200	200	block3		100	100	swing3		50	50					Alchemy		0
@@ -2356,7 +2356,7 @@ Mercy	1	new XVI	glov									jew	jew	jew	jew	r13	r98	str		151	200	att-skill	90	1
 Kali	1	new XVI	glov									jew	jew	jew	jew	r21	r98	res-fire		91	91	kill-skill	518	33	33	allskills		2	2	ac		-314	-314	res-fire-max		15	15	charged	568	124	7					Kali		0
 Aiwass	1	new XVI	glov									jew	jew	jew	jew	r33	r98	slow-thorns		-5	-5	shadows-attsyn		0	0	nec		3	3	ac		293	293	charged	873	78	12	str%		21	35	dmg-minion		44	50	Aiwass		0
 Rainbow	1	new XVI	belt									jew	jew	jew	jew	r05	r98	res-all		31	40	extra-all		13	13	mag%		83	83	light		7	7													Rainbow		0
-Prodigy	1	new XVI	belt									jew	jew	jew	jew	r15	r98	extra-pm		-3	-3	extra-fire		13	43	extra-ltng		13	43	mana-kill		31	60	regen-mana		51	90	cast3		40	40	att%		100	100	Prodigy		0
+Prodigy	1	new XVI	belt									jew	jew	jew	jew	r15	r98	extra-pm		-3	-3	extra-fire		13	43	extra-ltng		13	43	mana-kill		51	60	regen-mana		31	40	cast3		40	40	att%		100	100	Prodigy		0
 Fuse	1	new XVI	belt									jew	jew	jew	jew	r23	r98	res-pois		-30	-30	ac%		143	171	gethit-skill	79	25	28	res-fire		75	100	extra-fire/lvl	12	12	12	charged	564	40	5	dmg-fire		76	226	Fuse		0
 Epicenter	1	new XVI	boot									jew	jew	jew	jew	r06	r98	ac%		163	191	crush/lvl	4	4	4	death-skill	612	100	33	hp%		31	40													Epicenter		0
 Outlaw	1	new XVI	boot									jew	jew	jew	jew	r14	r98	ac%		200	200	shadows-max		5	5	enr		250	300	ac		-1	-1	howl-thorns		10	10									Outlaw		0
@@ -2381,7 +2381,7 @@ Ilmatar	1	new XVI	pzhm									jew	jew	jew	jew	r10	r98	extra-ltng		30	30	att-ski
 Hierodule	1	new XVI	pzhm									jew	jew	jew	jew	r25	r98	res-cold		-30	-30	state	97	1	1	desc-sorc		1	1	pal		3	3	cast3		60	60	extra-ltng		15	15	extra-pm		30	45	Hierodule		0
 Asmodai	1	new XVI	ashd									jew	jew	jew	jew	r14	r98	mana-kill		41	50	heal-kill		41	50	gold%		50	50	dmg-min		113	125	kill-skill	839	5	16	skill-dur		21	25					Asmodai		0
 Sangreal	1	new XVI	ashd									jew	jew	jew	jew	r28	r98	res-ltng		-30	-30	ac		5033	5033	desc-dbaura		1	1	aura	297	1	1	swing3		125	25	balance3		125	25	block		1	1	Sangreal		0
-Zohar	1	new XVI	ashd									jew	jew	jew	jew	r33	r98	slow-thorns		20	20	oskill	676	14	21	ac%		200	200	dmg-max		100	125	cheap		21	25	swing3		50	50	avoidance		10	15	Zohar		0
+Zohar	1	new XVI	ashd									jew	jew	jew	jew	r33	r98	slow-thorns		20	20	oskill	676	14	21	ac%		200	200	dmg-max		100	125	cheap		10	10	swing3		50	50	avoidance		10	15	Zohar		0
 Demeter	1	new XVI	stor									jew	jew	jew	jew	r23	r98	ac%		172	200	res-pois		70	70	oskill	67	25	29	pierce-pois		31	42	sor		4	4	red-dmg		31	50					Demeter		0
 Curandera	1	new XVI	stor									jew	jew	jew	jew	r29	r98	ac%		200	200	sor		3	4	regen/lvl	102	102	102	red-dmg%		40	45	res-all		41	60									Curandera		0
 Fawkes	1	new XVI	phlm									jew	jew	jew	jew	r33	r98	oskill	882	26	32	extra-fire/lvl	32	32	32	allskills		2	3	cast3		50	50	enr		150	150	heal-kill		61	90	att-skill	386	25	38	Fawkes		0

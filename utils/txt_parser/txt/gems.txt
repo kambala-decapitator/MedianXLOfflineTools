@@ -114,7 +114,7 @@ Amber		19	5$c	3	reanimate	800	3	3	hp/paragon	32	32	32					res-ltng		12	12	hp/par
 Flawless Amber		19	5$d	3	reanimate	800	4	4	hp/paragon	32	32	32					res-ltng		16	16	res-ltng-max		1	1	hp/paragon	32	32	32	slow-thorns		4	4	hp/paragon	32	32	32				0
 Perfect Amber		19	5$e	3	reanimate	800	5	5	hp/paragon	32	32	32					res-ltng		20	20	res-ltng-max		2	2	hp/paragon	32	32	32	slow-thorns		5	5	hp/paragon	32	32	32				0
 Krys Rune	Krys	18	r54	2	att-damage		100	100	ac/runemaster	32	32	32					att-damage		25	25	ac/runemaster	32	32	32					att-damage		25	25	ac/runemaster	32	32	32				0
-Auhe Rune	Auhe	18	r55	2	deadly		5	5	ac/runemaster	32	32	32					deadly		3	3	ac/runemaster	32	32	32					deadly		3	3	ac/runemaster	32	32	32				0
+Auhe Rune	Auhe	18	r55	2	deadly		3	3	ac/runemaster	32	32	32					deadly		2	2	ac/runemaster	32	32	32					deadly		2	2	ac/runemaster	32	32	32				0
 Sha'ad Rune	Shaad	18	r56	2	dmg%		20	20	ac/runemaster	32	32	32					ac%		20	20	ac/runemaster	32	32	32					ac%		20	20	ac/runemaster	32	32	32				0
 Fire Rune	Fi	9	r57	3	dmg-fire		50	100	ac/runemaster	32	32	32	item-duped		0	0	dmg-fire		13	25	ac/runemaster	32	32	32	item-duped		0	0	dmg-fire		13	25	ac/runemaster	32	32	32	item-duped		0	0
 Phys Rune	Ea	1	r58	3	dmg-norm		5	10	ac/runemaster	32	32	32	item-duped		0	0	dmg-norm		3	5	ac/runemaster	32	32	32	item-duped		0	0	dmg-norm		3	5	ac/runemaster	32	32	32	item-duped		0	0

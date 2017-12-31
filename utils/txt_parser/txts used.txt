@@ -1,3 +1,4 @@
 armor, charstats, cubemain, experience, gems, itemstatcost, itemtypes, misc, monstats, properties, runes, sets, setitems, skilldesc, skills, uniqueitems, weapons
 
 setitems: "* Laz / comments" column mustn't be empty
+sets:     "* Laz / status"   column mustn't be empty
