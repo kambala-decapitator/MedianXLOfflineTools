@@ -259,13 +259,13 @@ foreach my $elem (@$rw)
 }
 &tblExpandHash($fakeRwHash, $itemName);
 
-# skip lines that don't start with 'xsignet' at col 34 (AI in Excel) and are not for honorific/decoy recipe
+# skip lines that don't start with 'xsignet' at col 29 (AD in Excel) and are not for honorific/decoy recipe
 # 'value' field will contain either property value (including oskill level) or chance in ctc
 my $moStat = "xsignet";
-my $cubemain = parsetxt("cubemain.txt", '#_code' => 12, '!_enabled' => {col => 1, val => $zeroRe},
-                        '!_mo' => {col => 34, val => qr/^(?!$moStat)/},
-                        '!_honorific' => {col => 0, val => qr/^Mystic Orbs\:/}, prop => 22,
-                        param => 25, minValue => 26, maxValue => 27, rlvl => 32, moStat => 34);
+my $cubemain = parsetxt("cubemain.txt", '#_code' => 9, '!_enabled' => {col => 1, val => $zeroRe},
+                        '!_mo' => {col => 29, val => qr/^(?!$moStat)/},
+                        '!_honorific' => {col => 0, val => qr/^Mystic Orbs\:/}, prop => 19,
+                        param => 21, minValue => 22, maxValue => 23, rlvl => 27, moStat => 29);
 
 # MO names and properties
 my $mos; # hashref with keys from ID column of itemstatcost

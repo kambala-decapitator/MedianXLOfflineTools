@@ -7,7 +7,7 @@
 5	Khalim's Will	20	
 6	Ring of the Five	100	Ring08
 7	Assur's Bane	100	Ring08
-8	Book of Summoning	1	
+8	Book of Summoning	666	
 9	\gold;I Am Rich	0	
 10	Optical Detector	60	
 11	Azmodan's Heart	100	
@@ -193,7 +193,7 @@
 191	Addertongue	34	
 192	Addertongue	43	
 193	Addertongue	52	
-194	(                                   Fleshdoom                                   )	100	
+194	Fleshdoom	100	
 195	Tylwulf's Betrayal	100	
 196	Raging Tempest	100	
 197	Skullhammer	5	
@@ -1672,7 +1672,7 @@
 1670	Topspin	47	
 1671	Thinking Cap	100	
 1672	Lacuni Cowl	100	
-1673	Goblin's Skull	100	
+1673	Skull of Viz-Jaq'taar	100	
 1674	Destroying Angel	2	
 1675	Destroying Angel	11	
 1676	Destroying Angel	20	
@@ -2459,7 +2459,7 @@
 2457	Cycle of Wealth	90	
 2458	Cycle of Wealth	100	
 2459	Cycle of Wealth	110	
-2460	Diamond Cycle	120	
+2460	Golden Cycle	120	
 2461	Re-Equip When You Die\nTome of Possession	120	
 2462	Lucion's Soulstone	120	
 2463	Cycle of Strength	60	
@@ -2533,3 +2533,17 @@
 2531	Reapers	100	
 2532	Demonic Touch	100	
 2533	Segnitia	100	
+2534	Habacalva's Legacy	100	
+2535	Galeona's Lash	100	
+2536	Greenwalker's Charge	100	
+2537	The Defiler	100	
+2538	Adjudicator	100	
+2539	Mind Rake	100	
+2540	Demon Key	0	
+2541	Edyrem Key	0	
+2542	Warmonger	100	
+2543	Athulua's Wrath	100	bow_elefury
+2544	Natalya's Deception	33	invqltz
+2545	Legion	100	
+2546	Eternal Vigil	100	
+2547	\orange;Cherry	0	

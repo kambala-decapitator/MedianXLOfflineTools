@@ -32,13 +32,13 @@
 256	33+	62	5			4	Mana stolen per Hit
 258	35+	119	50			4	Bonus to Attack Rating
 263	36+	17	15			4	Enhanced Maximum Damage
-264	37+	22	4			4	to Maximum Damage
-285	38+	141	2			4	Deadly Strike
+264	37+	22	6			4	to Maximum Damage
+285	38+	141	1			4	Deadly Strike
 286	39+	136	1			4	Chance of Crushing Blow
 287	40+	86	10			4	Life after each Kill
 310	46+	39,41,43,45	3			4	Fire Resist
 311	47+	91	-4			4	Requirements
-312	48+	155	2	2	760	4	Reanimate as:
+312	48+	155	2	2	1384	4	Reanimate as:
 314	50+	102	6			4	Faster Block Rate
 369	51+	96	6			4	Faster Run/Walk
 370	52+	99	6			4	Faster Hit Recovery

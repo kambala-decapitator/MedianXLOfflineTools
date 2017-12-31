@@ -67,7 +67,7 @@
 65	Bloodbath	-1	0	0	0	20
 66	Amplify Damage	-1	1	1	2	0
 67	Gamma Field	-1	0	0	0	44
-68		-1				
+68	Hunt for Lilith	-1	0	0	0	230
 69		-1				
 70	Raise Skeleton	-1	3	1	3	8
 71	Dim Vision	-1	1	2	1	10
@@ -255,13 +255,13 @@
 253		-1				
 254		-1				
 255		-1				
-256		-1				
+256	Punisher	-1	0	0	0	69
 257		-1				
 258		-1				
 259		-1				
 260		-1				
 261		-1				
-262		-1				
+262	Into The Void	-1	0	0	0	231
 263	Punisher	-1	0	0	0	69
 264		-1				
 265		-1				
@@ -289,7 +289,7 @@
 287		-1				
 288	Frigid Sphere	-1	1	1	3	10
 289	Abyss	-1	1	4	3	16
-290	Conviction	-1	0	0	0	56
+290		-1				
 291		-1				
 292		-1				
 293		-1				
@@ -400,7 +400,7 @@
 398	Plague Avatar	5	2	3	2	44
 399	Mythal	5	2	4	2	108
 400	Acid Fiends	5	2	5	2	48
-401	Skeletal Flayers	2	1	1	3	86
+401	Skeletal Flayer	2	1	1	3	86
 402	Rampagor	2	1	2	3	88
 403	Lamia	2	1	3	3	90
 404	Veil King	2	1	4	3	92
@@ -483,7 +483,7 @@
 481	Electrobolt	-1	0	0	0	111
 482	Flash	-1	0	0	0	62
 483		-1				
-484		-1				
+484	Pac-Man Morph	-1	0	0	0	233
 485	Respawner	-1	0	0	0	0
 486	Respawner	-1	0	0	0	0
 487	Respawner	-1	0	0	0	0
@@ -519,8 +519,8 @@
 517		-1				
 518	Fire Splash	-1	0	0	0	0
 519		-1				
-520		-1				
-521		-1				
+520	Hunt for Lilith	-1	0	0	0	230
+521	Hunt for Lilith	-1	0	0	0	230
 522		-1				
 523		-1				
 524		-1				
@@ -590,7 +590,7 @@
 588	Spellbind	0	3	1	1	50
 589	Vampiric Icon	6	3	1	1	58
 590	Immortal	4	3	1	1	74
-591	Goodberry	5	3	1	1	74
+591	Symbiosis	5	3	1	3	74
 592	Black Mass	2	3	1	1	52
 593	Divine Apparition	3	3	1	1	62
 594	Symbol of Esu	1	3	1	1	92
@@ -624,8 +624,8 @@
 622		-1				
 623		-1				
 624	Phase Bomb	6	3	5	3	68
-625		-1				
-626	Lifeblood	-1	0	0	0	115
+625	Time Strike	-1	0	0	0	74
+626		-1				
 627		-1				
 628	Scorpion Blade	-1	1	1	2	30
 629	Shadowstorm	-1	0	0	0	0
@@ -754,10 +754,10 @@
 752		-1				
 753		-1				
 754	Thunder Wave	-1	0	0	0	0
-755		-1				
+755	Thunder Wave	-1	0	0	0	0
 756	Moon Queen	-1	1	4	2	60
 757	Summon Thunder Bear	-1	0	0	0	155
-758		-1				
+758	Timefield	-1	0	0	0	212
 759		-1				
 760	Warp Crash	-1	0	0	0	0
 761	Summon Shock Beast	-1	0	0	0	213
@@ -842,7 +842,7 @@
 840	Shock Flower	-1	0	0	0	188
 841		-1				
 842		-1				
-843	Superbeast	-1	3	5	1	54
+843		-1				
 844		-1				
 845		-1				
 846		-1				
@@ -859,11 +859,11 @@
 857		-1				
 858		-1				
 859	Spiral Dance	-1	0	0	0	93
-860	Singularity	-1	2	4	2	56
+860		-1				
 861		-1				
 862	Punisher Barrage	-1	0	0	0	0
 863		-1				
-864	Punisher Barrage	-1	0	0	0	0
+864		-1				
 865	Flamestrike	-1	1	3	1	4
 866	Fire Cannonade	-1	0	0	0	0
 867		-1				
@@ -877,8 +877,8 @@
 875		-1				
 876	Purify	-1	0	0	0	10
 877	Powder Keg	-1	0	0	0	208
-878	Attack	-1	0	0	0	3
-879	Lifeshield	5	3	1	3	76
+878		-1				
+879	Lifeshield	5	3	1	1	76
 880	Broadside	-1	1	5	2	38
 881	Crane Stance	-1	0	0	0	99
 882	Powder Keg	-1	0	0	0	208
@@ -929,8 +929,8 @@
 927	Blast Wave	-1	0	0	0	96
 928	Venomous Spirit	-1	0	0	0	94
 929		-1				
-930	\red;Arrowside\blue;	-1	0	0	0	0
-931	\red;Arrowside\blue;	-1	0	0	0	0
+930	Arrowside	-1	0	0	0	0
+931	Arrowside	-1	0	0	0	0
 932	Superbeast	-1	3	5	1	54
 933		-1				
 934		-1				
@@ -938,9 +938,9 @@
 936	Singularity	-1	2	4	2	56
 937	Attack	-1	0	0	0	3
 938		-1				
-939		-1				
+939	Respawner	-1	0	0	0	0
 940		-1				
-941	Attack	-1	0	0	0	3
+941		-1				
 942		-1				
 943		-1				
 944		-1				
@@ -965,11 +965,11 @@
 963	Disintegrate	-1	0	0	0	132
 964	Earthquake	-1	0	0	0	0
 965	Wild and Free	-1	2	1	3	48
-966	Tremor	-1	3	5	3	56
+966		-1				
 967	Devil's Fang Totem	-1	0	0	0	82
 968	Maelstrom	-1	0	0	0	67
 969	Wraith Arrow	-1	0	0	0	77
-970		-1				
+970	Carnage	-1	2	1	2	84
 971		-1				
 972	Guard Tower	-1	0	0	0	37
 973	Earthquake	-1	0	0	0	0
@@ -995,7 +995,7 @@
 993	Shower of Rocks	-1	1	5	2	6
 994	Blindside	-1	0	0	0	0
 995		-1				
-996	Sky Siege	-1	0	0	0	223
+996		-1				
 997	Cold Fear	-1	0	0	0	56
 998	Frozen Soul	-1	0	0	0	63
 999	Lightning Wall	-1	0	0	0	39
@@ -1014,7 +1014,7 @@
 1012	Whirlpool	-1	0	0	0	124
 1013	Mark of the Wild	-1	0	0	0	11
 1014	Call Leprechaun	-1	0	0	0	110
-1015	Thrill of the Hunt	-1	0	0	0	0
+1015		-1				
 1016	Dominate	-1	0	0	0	147
 1017	Quill Spike	-1	0	0	0	0
 1018	Charm	-1	0	0	0	32
@@ -1036,7 +1036,7 @@
 1034		-1				
 1035	Nephalem Spirit	4	3	5	1	76
 1036		-1				
-1037	Psicrown	-1	0	0	0	149
+1037	Hellgate	-1	0	0	0	24
 1038		-1				
 1039		-1				
 1040		-1				
@@ -1044,12 +1044,12 @@
 1042		-1				
 1043		-1				
 1044		-1				
-1045		-1				
+1045	Dark Portal	-1	0	0	0	227
 1046		-1				
 1047	Wyrmshot	-1	0	0	0	0
 1048		-1				
-1049	\red;Ultimative\blue;	-1	0	0	0	0
-1050	Punisher Barrage	-1	0	0	0	0
+1049	Devil's Omen	-1	0	0	0	0
+1050		-1				
 1051		-1				
 1052	Summon Veil Kings	-1	0	0	0	205
 1053	Trinity Beam	-1	0	0	0	0
@@ -1138,11 +1138,11 @@
 1136	Death Shards	2	2	2	3	70
 1137		-1				
 1138		-1				
-1139	Level Challenge 0 Quest Skill	-1	0	0	0	24
+1139		-1				
 1140		-1				
 1141		-1				
 1142		-1				
-1143		-1				
+1143	Death Shards	-1	2	2	3	70
 1144		-1				
 1145		-1				
 1146		-1				
@@ -1158,7 +1158,7 @@
 1156	Demon Blood	-1	0	0	0	0
 1157	Pounce	-1	0	0	0	28
 1158	Liche Form	-1	0	0	0	136
-1159	Darker Summoning	-1	0	0	0	29
+1159		-1				
 1160		-1				
 1161		-1				
 1162		-1				
@@ -1181,7 +1181,7 @@
 1179		-1				
 1180		-1				
 1181		-1				
-1182	Mage Rage	-1	0	0	0	30
+1182	Scream of Trag'Oul	-1	0	0	0	30
 1183		-1				
 1184		-1				
 1185		-1				
@@ -1207,7 +1207,7 @@
 1205		-1				
 1206		-1				
 1207		-1				
-1208	Ring of Light	-1	0	0	0	43
+1208		-1				
 1209		-1				
 1210		-1				
 1211		-1				
@@ -1217,7 +1217,7 @@
 1215	Inner Fire	-1	0	0	0	66
 1216		-1				
 1217		-1				
-1218	Liche Form	-1	0	0	0	136
+1218		-1				
 1219		-1				
 1220		-1				
 1221	Teleport	-1	0	0	0	31
@@ -1227,7 +1227,7 @@
 1225		-1				
 1226		-1				
 1227		-1				
-1228	Razor Spines	-1	0	0	0	119
+1228		-1				
 1229		-1				
 1230		-1				
 1231		-1				
@@ -1251,7 +1251,7 @@
 1249	Hammer of Zerae	0	2	3	2	80
 1250	Asterism	0	2	4	2	82
 1251	Magnetic Field	0	2	5	2	84
-1252	Obliteration	6	3	1	3	98
+1252	Prismatic Cloak	6	3	1	3	98
 1253	Noctule	6	1	5	1	100
 1254	Shadow Dancer	6	1	4	1	104
 1255	Backstab	6	1	1	3	102
@@ -1281,7 +1281,7 @@
 1279	Blade Spirits	1	2	4	3	126
 1280	Antimass	1	2	5	2	122
 1281		-1				
-1282	Inner Fire	-1	0	0	0	66
+1282		-1				
 1283		-1				
 1284	Bladestorm	-1	0	0	0	95
 1285		-1				
@@ -1367,3 +1367,20 @@
 1365	Divine Apparition	-1	3	1	1	62
 1366	Superbeast	-1	3	5	1	54
 1367		-1				
+1368		-1				
+1369		-1				
+1370		-1				
+1371	Move Only	-1	0	0	0	226
+1372	Singularity	-1	2	4	2	56
+1373	Stormcall	-1	2	2	2	78
+1374	Cold Fear	-1	0	0	0	56
+1375	Unshield Aura	-1	0	0	0	0
+1376	Unshield Aura	-1	0	0	0	0
+1377		-1				
+1378		-1				
+1379		-1				
+1380		-1				
+1381		-1				
+1382	Magnetic Field	-1	2	5	2	84
+1383	Lava Pit	-1	2	5	1	68
+1384	Lava Pit	-1	2	5	1	68

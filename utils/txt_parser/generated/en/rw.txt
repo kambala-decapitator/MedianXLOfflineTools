@@ -175,7 +175,7 @@ boot						Craton	r32
 boot						Megalith	r40		
 boot						Nephilim	r48		
 boot						Hibagon	r53		
-azhm						StataMater	r16		
+azhm						Stata Mater	r16		
 azhm						Amaterasu	r24		
 azhm						Siegfried	r31		
 azhm						Lohengrin	r42		
@@ -369,7 +369,7 @@ scrd						Dark Exile	r62	r62
 tors						Hellfire Plate	r57	r57	
 helm			phlm			Thundercap	r61	r61	
 circ						Rathma's Blessing	r62	r62	
-shld						Khalim's Protector	r60	r60	
+shld			basd			Khalim's Protector	r60	r60	
 belt						Lysra	r57	r57	
 glov						Retribution	r57	r57	
 boot						Wind Runner	r58	r58	
@@ -411,7 +411,7 @@ boot						Epicenter	r06	r98
 boot						Outlaw	r14	r98	
 boot						Ginfaxi	r22	r98	
 boot						Craton	r32	r98	
-azhm						StataMater	r16	r98	
+azhm						Stata Mater	r16	r98	
 azhm						Amaterasu	r24	r98	
 azhm						Siegfried	r31	r98	
 azsd						Edda	r15	r98	
