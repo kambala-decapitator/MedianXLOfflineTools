@@ -3,6 +3,10 @@
 
 #include "qtsingleapplication/QtSingleApplication"
 
+#ifdef Q_OS_MAC
+#include <QPointer>
+#endif
+
 
 class MedianXLOfflineTools;
 class QTimer;
@@ -33,10 +37,9 @@ private:
     MedianXLOfflineTools *_mainWindow;
     QString _param;
 #ifdef Q_OS_MAC
-    QTimer *_showWindowMacTimer;
+    QPointer<QTimer> _showWindowMacTimer;
 
     void disableLionWindowRestoration();
-    void maybeDeleteTimer();
 #endif
 };
 

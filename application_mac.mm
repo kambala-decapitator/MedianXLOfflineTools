@@ -23,7 +23,7 @@ bool Application::event(QEvent *ev)
         if (!_mainWindow)
         {
             _showWindowMacTimer->stop();
-            maybeDeleteTimer();
+            delete _showWindowMacTimer;
 
             createAndShowMainWindow();
         }
@@ -32,16 +32,6 @@ bool Application::event(QEvent *ev)
         return true;
     }
     return QtSingleApplication::event(ev);
-}
-
-
-void Application::maybeDeleteTimer()
-{
-    if (_showWindowMacTimer)
-    {
-        delete _showWindowMacTimer;
-        _showWindowMacTimer = 0;
-    }
 }
 
 

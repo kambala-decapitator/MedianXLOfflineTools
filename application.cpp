@@ -64,7 +64,7 @@ void Application::createAndShowMainWindow()
     _mainWindow = new MedianXLOfflineTools(_param);
 #ifdef Q_OS_MAC
     disableLionWindowRestoration();
-    maybeDeleteTimer();
+    delete _showWindowMacTimer;
 #endif
     _mainWindow->show();
 
