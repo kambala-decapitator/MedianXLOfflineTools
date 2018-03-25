@@ -20,7 +20,7 @@ class DupeScanDialog : public QDialog
     Q_OBJECT
 
 public:
-    DupeScanDialog(const QString &currentPath = QString(), QWidget *parent = 0);
+    DupeScanDialog(const QString &currentPath = QString(), bool isDumpItemsMode = false, QWidget *parent = 0);
     virtual ~DupeScanDialog();
 
     void logLoadingError(const QString &error, bool warn) { _loadingMessage = QString("<font color=%1>%2</font>").arg(warn ? "yellow" : "red", error); }
@@ -40,8 +40,9 @@ private slots:
 
 private:
     QString _currentCharPath, _loadingMessage;
+    bool _isDumpItemsMode;
     ItemsHash _allItemsHash;
-    QFutureWatcher<QString> _futureWatcher;
+    QFutureWatcher<QString> *_futureWatcher;
     QTime _timeCounter;
 
     QLineEdit *_pathLineEdit;

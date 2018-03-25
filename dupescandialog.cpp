@@ -43,10 +43,15 @@ bool areItemsSame(ItemInfo *a, ItemInfo *b)
     return a->isExtended && a->guid == b->guid && a->itemType == b->itemType;
 }
 
-QString logDupedItemsInfo(ItemInfo *item1, ItemInfo *item2)
+QString itemString(ItemInfo *item)
 {
-    return QString("<b>%1</b>: GUID 0x%2 (%3), type '%4', quality <b>%5</b>; %6; %7").arg(ItemDataBase::Items()->value(item1->itemType)->name)
-            .arg(item1->guid, 0, 16).arg(item1->guid).arg(item1->itemType.constData()).arg(metaEnumFromName<Enums::ItemQuality>("ItemQualityEnum").valueToKey(item1->quality))
+    return QString("<b>%1</b>: GUID 0x%2 (%3), type '%4', quality <b>%5</b>").arg(ItemDataBase::Items()->value(item->itemType)->name)
+            .arg(item->guid, 0, 16).arg(item->guid).arg(item->itemType.constData()).arg(metaEnumFromName<Enums::ItemQuality>("ItemQualityEnum").valueToKey(item->quality));
+}
+
+QString dupedItemsStr(ItemInfo *item1, ItemInfo *item2)
+{
+    return itemString(item1) + QString("; %6; %7")
             .arg(ItemParser::itemStorageAndCoordinatesString("<font color=blue>ITEM1</font>: location %1, row %2, col %3, equipped in %4", item1))
             .arg(ItemParser::itemStorageAndCoordinatesString("<font color=blue>ITEM2</font>: location %1, row %2, col %3, equipped in %4", item2));
 }
@@ -91,7 +96,7 @@ QString crossCompareItems(const CrossCompareTask &task)
                                 result += "<br><br>" + jter.key() + ":";
                                 isFirst = false;
                             }
-                            result += "<br>" + logDupedItemsInfo(iItem, jItem);
+                            result += "<br>" + dupedItemsStr(iItem, jItem);
                         }
                     }
                 }
@@ -105,11 +110,11 @@ QString crossCompareItems(const CrossCompareTask &task)
 }
 
 
-DupeScanDialog::DupeScanDialog(const QString &currentPath, QWidget *parent) : QDialog(parent), _currentCharPath(currentPath), _pathLineEdit(new QLineEdit(this)),
-    _logBrowser(new QTextEdit(this)), _saveButton(new QPushButton("Save...", this)), _skipEmptyCheckBox(new QCheckBox("Skip empty results", this)), _progressBar(new QProgressBar(this))
+DupeScanDialog::DupeScanDialog(const QString &currentPath, bool isDumpItemsMode, QWidget *parent) : QDialog(parent), _currentCharPath(currentPath), _isDumpItemsMode(isDumpItemsMode), _futureWatcher(0),
+    _pathLineEdit(new QLineEdit(this)), _logBrowser(new QTextEdit(this)), _saveButton(new QPushButton("Save...", this)), _skipEmptyCheckBox(new QCheckBox("Skip empty results", this)), _progressBar(new QProgressBar(this))
 {
     setWindowFlags(windowFlags() & ~Qt::WindowContextHelpButtonHint);
-    setWindowTitle("Dupe Scanner");
+    setWindowTitle(isDumpItemsMode ? "Dump Items" : "Dupe Scanner");
 
     QLabel *label = new QLabel("Characters path:", this);
     QPushButton *browseButton = new QPushButton("Browse...", this);
@@ -145,10 +150,14 @@ DupeScanDialog::DupeScanDialog(const QString &currentPath, QWidget *parent) : QD
     connect(_saveButton,  SIGNAL(clicked()), SLOT(save()));
     connect(okButton,     SIGNAL(clicked()), SLOT(accept()));
 
-    connect(&_futureWatcher, SIGNAL(progressRangeChanged(int,int)), _progressBar, SLOT(setRange(int,int)));
-    connect(&_futureWatcher, SIGNAL(progressValueChanged(int)), _progressBar, SLOT(setValue(int)));
-    connect(&_futureWatcher, SIGNAL(resultReadyAt(int)), SLOT(crossCheckResultReady(int)));
-    connect(&_futureWatcher, SIGNAL(finished()), SLOT(scanFinished()));
+    if (!isDumpItemsMode)
+    {
+        _futureWatcher = new QFutureWatcher<QString>;
+        connect(_futureWatcher, SIGNAL(progressRangeChanged(int,int)), _progressBar, SLOT(setRange(int,int)));
+        connect(_futureWatcher, SIGNAL(progressValueChanged(int)), _progressBar, SLOT(setValue(int)));
+        connect(_futureWatcher, SIGNAL(resultReadyAt(int)), SLOT(crossCheckResultReady(int)));
+        connect(_futureWatcher, SIGNAL(finished()), SLOT(scanFinished()));
+    }
 }
 
 DupeScanDialog::~DupeScanDialog()
@@ -159,8 +168,11 @@ DupeScanDialog::~DupeScanDialog()
 
 void DupeScanDialog::done(int r)
 {
-    _futureWatcher.cancel();
-    _futureWatcher.waitForFinished();
+    if (_futureWatcher)
+    {
+        _futureWatcher->cancel();
+        _futureWatcher->waitForFinished();
+    }
 
     parentWidget()->setUpdatesEnabled(true);
     QDialog::done(r);
@@ -198,13 +210,16 @@ void DupeScanDialog::scan()
 
 void DupeScanDialog::scanFinished()
 {
-    foreach (const ItemsList &items, _allItemsHash)
-        qDeleteAll(items);
-    _allItemsHash.clear();
+    if (!_isDumpItemsMode)
+    {
+        foreach (const ItemsList &items, _allItemsHash)
+            qDeleteAll(items);
+        _allItemsHash.clear();
+
+        _logBrowser->append(QString("<font color=black>processing took %1 seconds in total</font>").arg(_timeCounter.elapsed() / 1000));
+    }
 
     parentWidget()->setUpdatesEnabled(true);
-
-    _logBrowser->append(QString("<font color=black>processing took %1 seconds in total</font>").arg(_timeCounter.elapsed() / 1000));
     _logBrowser->setUpdatesEnabled(true);
 
     _saveButton->setEnabled(true);
@@ -234,7 +249,7 @@ void DupeScanDialog::save()
 
 void DupeScanDialog::crossCheckResultReady(int i)
 {
-    QString result = _futureWatcher.future().resultAt(i);
+    QString result = _futureWatcher->future().resultAt(i);
     if (!result.isEmpty())
         appendStringToLog(result);
 }
@@ -246,7 +261,8 @@ void DupeScanDialog::appendStringToLog(const QString &s)
 
 void DupeScanDialog::scanCharactersInDir(const QString &path)
 {
-    appendStringToLog("<h3>SEPARATE CHARACTER CHECK</h3>----------------------------------------");
+    if (!_isDumpItemsMode)
+        appendStringToLog("<h3>SEPARATE CHARACTER CHECK</h3>----------------------------------------");
 
     bool isFirst, dupedItemFound;
     QString pathWithSlashes = QDir::fromNativeSeparators(_currentCharPath);
@@ -261,7 +277,7 @@ void DupeScanDialog::scanCharactersInDir(const QString &path)
     {
         ++filesProcessed;
 
-        QString fileName = fileInfo.fileName(), header = QString("%1 dupe stats").arg(fileName);
+        QString fileName = fileInfo.fileName(), header = fileName + (_isDumpItemsMode ? " items" : " dupe stats");
         qDebug("loading %s", qPrintable(fileName));
         if (isFirst)
         {
@@ -284,51 +300,60 @@ void DupeScanDialog::scanCharactersInDir(const QString &path)
         }
 
         dupedItemFound = false;
-        ItemsList itemsAndSocketables = CharacterInfo::instance().items.character, checkedItems;
-        for (int i = 0; i < itemsAndSocketables.size() - 1; ++i)
+        if (_isDumpItemsMode)
         {
-            ItemInfo *iItem = itemsAndSocketables.at(i);
-            if (iItem->isExtended && shouldCheckItem(iItem))
+            foreach (ItemInfo *item, CharacterInfo::instance().items.character)
+                if (shouldCheckItem(item))
+                    appendStringToLog(itemString(item));
+        }
+        else
+        {
+            ItemsList itemsAndSocketables = CharacterInfo::instance().items.character, checkedItems;
+            for (int i = 0; i < itemsAndSocketables.size() - 1; ++i)
             {
-                itemsAndSocketables << iItem->socketablesInfo;
-
-                bool alreadyChecked = false;
-                foreach (ItemInfo *item, checkedItems)
+                ItemInfo *iItem = itemsAndSocketables.at(i);
+                if (iItem->isExtended && shouldCheckItem(iItem))
                 {
-                    if (iItem->guid == item->guid)
-                    {
-                        alreadyChecked = true;
-                        break;
-                    }
-                }
-                if (alreadyChecked)
-                    continue;
+                    itemsAndSocketables << iItem->socketablesInfo;
 
-                for (int j = i + 1; j < itemsAndSocketables.size(); ++j)
-                {
-                    ItemInfo *jItem = itemsAndSocketables.at(j);
-                    if (areItemsSame(jItem, iItem))
+                    bool alreadyChecked = false;
+                    foreach (ItemInfo *item, checkedItems)
                     {
-                        checkedItems += iItem;
-                        if (!dupedItemFound && _skipEmptyCheckBox->isChecked())
+                        if (iItem->guid == item->guid)
                         {
-                            appendStringToLog(header + "\n");
-                            dupedItemFound = true;
+                            alreadyChecked = true;
+                            break;
                         }
-                        logDupedItemsInfo(iItem, jItem);
+                    }
+                    if (alreadyChecked)
+                        continue;
+
+                    for (int j = i + 1; j < itemsAndSocketables.size(); ++j)
+                    {
+                        ItemInfo *jItem = itemsAndSocketables.at(j);
+                        if (areItemsSame(jItem, iItem))
+                        {
+                            checkedItems += iItem;
+                            if (!dupedItemFound && _skipEmptyCheckBox->isChecked())
+                            {
+                                appendStringToLog(header + "\n");
+                                dupedItemFound = true;
+                            }
+                            appendStringToLog(dupedItemsStr(iItem, jItem));
+                        }
                     }
                 }
             }
-        }
 
-        ItemsList itemsCopy;
-        foreach (ItemInfo *item, itemsAndSocketables)
-        {
-            ItemInfo *itemCopy = new ItemInfo(*item);
-            itemCopy->shouldDeleteEverything = false; // because it's a shallow copy
-            itemsCopy += itemCopy;
+            ItemsList itemsCopy;
+            foreach (ItemInfo *item, itemsAndSocketables)
+            {
+                ItemInfo *itemCopy = new ItemInfo(*item);
+                itemCopy->shouldDeleteEverything = false; // because it's a shallow copy
+                itemsCopy += itemCopy;
+            }
+            _allItemsHash[fileName] = itemsCopy;
         }
-        _allItemsHash[fileName] = itemsCopy;
 
         if (!_skipEmptyCheckBox->isChecked() || dupedItemFound || !_loadingMessage.isEmpty())
             appendStringToLog("========================================");
@@ -337,7 +362,14 @@ void DupeScanDialog::scanCharactersInDir(const QString &path)
         QMetaObject::invokeMethod(_progressBar, "setValue", Q_ARG(int, filesProcessed));
     }
 
-    appendStringToLog(QString("loading files & separate processing took %1 seconds<br><h3>CROSS-CHARACTER CHECK</h3>----------------------------------------").arg(_timeCounter.elapsed() / 1000));
+    appendStringToLog(QString("loading files & separate processing took %1 seconds").arg(_timeCounter.elapsed() / 1000));
+    if (_isDumpItemsMode)
+    {
+        scanFinished();
+        return;
+    }
+
+    appendStringToLog("<br><h3>CROSS-CHARACTER CHECK</h3>----------------------------------------");
     _progressBar->setFormat("cross-check %p%");
 
     QList<CrossCompareTask> tasks;
@@ -352,5 +384,5 @@ void DupeScanDialog::scanCharactersInDir(const QString &path)
 
         tasks << task;
     }
-    _futureWatcher.setFuture(QtConcurrent::mapped(tasks, crossCompareItems));
+    _futureWatcher->setFuture(QtConcurrent::mapped(tasks, crossCompareItems));
 }

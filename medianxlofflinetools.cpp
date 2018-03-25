@@ -205,6 +205,12 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *pare
     dupeCheckAction->setShortcut(QKeySequence("Ctrl+D"));
     connect(dupeCheckAction, SIGNAL(triggered()), SLOT(showDupeCheck()));
     ui->menuFile->insertAction(ui->actionSaveCharacter, dupeCheckAction);
+
+    QAction *dumpItemsAction = new QAction("Dump Items", this);
+    dumpItemsAction->setShortcut(QKeySequence("Ctrl+Alt+D"));
+    dumpItemsAction->setData(true);
+    connect(dumpItemsAction, SIGNAL(triggered()), SLOT(showDupeCheck()));
+    ui->menuFile->insertAction(ui->actionSaveCharacter, dumpItemsAction);
 #endif
 }
 
@@ -749,7 +755,7 @@ void MedianXLOfflineTools::showDupeCheck()
     bool isOpenItemsOptionChecked = ui->actionOpenItemsAutomatically->isChecked();
     ui->actionOpenItemsAutomatically->setChecked(false);
 
-    _dupeScanDialog = new DupeScanDialog(_charPath, this);
+    _dupeScanDialog = new DupeScanDialog(_charPath, static_cast<QAction *>(sender())->data().toBool(), this);
     connect(_dupeScanDialog, SIGNAL(loadFile(QString)), SLOT(loadFileSkipExtensionCheck(QString)), Qt::BlockingQueuedConnection);
     _dupeScanDialog->exec();
 
