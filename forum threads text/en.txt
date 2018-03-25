@@ -5,7 +5,7 @@
 As you can guess from the title, it's an almost complete offline analogue of grig's [url=http://grig.vlexofree.com/]Median XL Online Tools[/url], but with nice additions.
 
 Application should be able to load character from any version of Median XL and successfully perform basic operations with it like respeccing. Items processing relies on the mod source files, so it may not be compatible with any chacarcter from different version. This data is softcoded, so when a new mod version is released, usually there's no need to recompile the application - one just needs to replace the data found in 'resources/data' with the new one, which I will provide. Currently supported mod versions:
-[list][*]Median XL 2017.003
+[list][*]Median XL 2017 1.2
 [*]Ultimative XVI (v5+ characters should be compatible)
 [*]Kehjan Labyrinth + Tathamet vs Anu
 [*]Hardened
@@ -47,7 +47,7 @@ I hope I provided enough anti-hack protection for an average user. If you manage
 [list][*][b]Application[/b]:
 [list][*][i]Windows[/i] (XP SP3 and later): https://www.mediafire.com/?bf55oj2yk7nvho5 (if it doesn't launch, install MSVC++ 2015 Redistributable vc_redist.x[c]86[/c].exe from [url=https://www.mediafire.com/?84qc8d5dy3cd9f6]Mediafire[/url] or from [url=https://www.microsoft.com/en-us/download/details.aspx?id=52685]Microsoft's website[/url])
 [*][i]Mac OS X[/i] (10.5 and later, universal binary): http://www.mediafire.com/file/ozmekiq326auq81/MedianXLOfflineTools_mac_0.4.4.tbz[/list][*][b]Mod data[/b] (find installation instructions in Mini-FAQ below):
-[list][*][i]2017.003:[/i] http://www.mediafire.com/file/kx42aa84catexta/2017-003.zip
+[list][*][i]2017 1.2:[/i] http://www.mediafire.com/file/1dfw6f38pjo7era/2017-1.2.zip
 [*][i]Ultimative XVI:[/i] http://www.mediafire.com/file/5ipow09n3lfd39d/ultimativeXVI.7z
 [*][i]2012 v005 / Kehjan Labyrinth + Tathamet vs Anu / Hardened:[/i] http://www.mediafire.com/?4vkkq8jskza2btg[/list][/list]
 
