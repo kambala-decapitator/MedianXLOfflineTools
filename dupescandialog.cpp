@@ -51,6 +51,13 @@ QString dupedItemsStr(ItemInfo *item1, ItemInfo *item2)
             .arg(ItemParser::itemStorageAndCoordinatesString("<font color=blue>ITEM2</font>: location %1, row %2, col %3, equipped in %4", item2));
 }
 
+void addItemName(ItemInfo *item, QString &itemsStr)
+{
+    static QRegExp runeRegex("r(\\d\\d)");
+    if ((item->isExtended && shouldCheckItem(item)) || (runeRegex.indexIn(item->itemType) != -1 && runeRegex.cap(1).toInt() > 50)) // also save Great/Elemental runes
+        itemsStr += ItemDataBase::completeItemName(item, false, false).replace(kHtmlLineBreak, QLatin1String("|")) + "\n";
+}
+
 
 struct CrossCompareTask
 {
@@ -195,12 +202,15 @@ void DupeScanDialog::scan()
     }
 
     _logBrowser->clear();
-    _logBrowser->setUpdatesEnabled(false);
     _progressBar->setMinimum(0);
     _progressBar->setFormat("%v / %m separate files processed");
     _saveButton->setDisabled(true);
 
-    parentWidget()->setUpdatesEnabled(false);
+    if (!_isDumpItemsMode)
+    {
+        _logBrowser->setUpdatesEnabled(false);
+        parentWidget()->setUpdatesEnabled(false);
+    }
 
     _timeCounter.start();
     QtConcurrent::run(this, &DupeScanDialog::scanCharactersInDir, path);
@@ -215,12 +225,11 @@ void DupeScanDialog::scanFinished_()
         _allItemsHash.clear();
 
         _logBrowser->append(QString("<font color=black>processing took %1 seconds in total</font>").arg(_timeCounter.elapsed() / 1000));
+        _logBrowser->setUpdatesEnabled(true);
+        parentWidget()->setUpdatesEnabled(true);
     }
 
-    parentWidget()->setUpdatesEnabled(true);
-    _logBrowser->setUpdatesEnabled(true);
     _saveButton->setEnabled(true);
-
     emit scanFinished();
 }
 
@@ -264,7 +273,6 @@ void DupeScanDialog::scanCharactersInDir(const QString &path)
 
     bool isFirst, dupedItemFound;
     QString pathWithSlashes = QDir::fromNativeSeparators(_currentCharPath);
-    QRegExp runeRegex("r(\\d\\d)");
 
     QFileInfoList list = QDir(path).entryInfoList(QDir::Files);
     if ((isFirst = !_currentCharPath.isEmpty()))
@@ -308,8 +316,11 @@ void DupeScanDialog::scanCharactersInDir(const QString &path)
         {
             QString itemsStr;
             foreach (ItemInfo *item, CharacterInfo::instance().items.character)
-                if ((item->isExtended && shouldCheckItem(item)) || (runeRegex.indexIn(item->itemType) != -1 && runeRegex.cap(1).toInt() > 50)) // also save Great/Elemental runes
-                    itemsStr += ItemDataBase::completeItemName(item, false, false).replace(kHtmlLineBreak, QLatin1String("|")) + "\n";
+            {
+                addItemName(item, itemsStr);
+                foreach (ItemInfo *socketableItem, item->socketablesInfo)
+                    addItemName(socketableItem, itemsStr);
+            }
 
             QFile f(fileInfo.absoluteFilePath() + ".txt");
             if (f.open(QIODevice::WriteOnly))
