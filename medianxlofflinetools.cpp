@@ -335,6 +335,15 @@ void MedianXLOfflineTools::updateFindResults()
         _findItemsDialog->sortAndUpdateSearchResult();
 }
 
+void MedianXLOfflineTools::dupeScanFinished()
+{
+    _saveFileContents.clear();
+    _charPath.clear();
+    clearUI();
+    updateWindowTitle();
+    qApp->alert(this);
+}
+
 void MedianXLOfflineTools::loadCharacter()
 {
     QSettings settings;
@@ -757,6 +766,7 @@ void MedianXLOfflineTools::showDupeCheck()
 
     _dupeScanDialog = new DupeScanDialog(_charPath, static_cast<QAction *>(sender())->data().toBool(), this);
     connect(_dupeScanDialog, SIGNAL(loadFile(QString)), SLOT(loadFileSkipExtensionCheck(QString)), Qt::BlockingQueuedConnection);
+    connect(_dupeScanDialog, SIGNAL(scanFinished()), SLOT(dupeScanFinished()));
     _dupeScanDialog->exec();
 
     ui->actionOpenItemsAutomatically->setChecked(isOpenItemsOptionChecked);
@@ -2144,40 +2154,48 @@ bool MedianXLOfflineTools::processSaveFile()
         return false;
     }
 
-    // parse plugy stashes
-    QString oldSharedStashPath = _plugyStashesHash[ItemStorage::SharedStash].path, oldHCStashPath = _plugyStashesHash[ItemStorage::HCStash].path;
-    _plugyStashesHash.clear();
-
-    QFileInfo charPathFileInfo(_charPath);
-    QString charFolderPath = charPathFileInfo.absolutePath();
-    _plugyStashesHash[Enums::ItemStorage::PersonalStash].path = ui->actionAutoOpenPersonalStash->isChecked() ? QString("%1/%2.d2x").arg(charFolderPath, charPathFileInfo.baseName()) : QString();
-    _plugyStashesHash[Enums::ItemStorage::SharedStash].path = ui->actionAutoOpenSharedStash->isChecked() ? charFolderPath + "/_LOD_SharedStashSave.sss" : QString();
-    _plugyStashesHash[Enums::ItemStorage::HCStash].path = ui->actionAutoOpenHCShared->isChecked() ? charFolderPath + "/_LOD_HC_SharedStashSave.sss" : QString();
-
-    bool sharedStashPathChanged = oldSharedStashPath != _plugyStashesHash[ItemStorage::SharedStash].path, hcStashPathChanged = oldHCStashPath != _plugyStashesHash[ItemStorage::HCStash].path;
-    if (ui->actionReloadSharedStashes->isChecked())
-        sharedStashPathChanged = hcStashPathChanged = true;
-    _sharedGold = 0;
-    for (QHash<ItemStorage::ItemStorageEnum, PlugyStashInfo>::iterator iter = _plugyStashesHash.begin(); iter != _plugyStashesHash.end(); ++iter)
+    bool sharedStashPathChanged = true, hcStashPathChanged = true;
+#ifdef DUPE_CHECK
+    if (!_dupeScanDialog)
+#endif
     {
-        switch (iter.key())
+        // parse plugy stashes
+        QString oldSharedStashPath = _plugyStashesHash[ItemStorage::SharedStash].path, oldHCStashPath = _plugyStashesHash[ItemStorage::HCStash].path;
+        _plugyStashesHash.clear();
+
+        QFileInfo charPathFileInfo(_charPath);
+        QString charFolderPath = charPathFileInfo.absolutePath();
+        _plugyStashesHash[Enums::ItemStorage::PersonalStash].path = ui->actionAutoOpenPersonalStash->isChecked() ? QString("%1/%2.d2x").arg(charFolderPath, charPathFileInfo.baseName()) : QString();
+        _plugyStashesHash[Enums::ItemStorage::SharedStash].path = ui->actionAutoOpenSharedStash->isChecked() ? charFolderPath + "/_LOD_SharedStashSave.sss" : QString();
+        _plugyStashesHash[Enums::ItemStorage::HCStash].path = ui->actionAutoOpenHCShared->isChecked() ? charFolderPath + "/_LOD_HC_SharedStashSave.sss" : QString();
+        if (!ui->actionReloadSharedStashes->isChecked())
         {
-        case ItemStorage::PersonalStash:
-            if (!(_plugyStashesHash[iter.key()].exists = ui->actionAutoOpenPersonalStash->isChecked()))
-                continue;
-            break;
-        case ItemStorage::SharedStash:
-            if (!(_plugyStashesHash[iter.key()].exists = ui->actionAutoOpenSharedStash->isChecked()) || !sharedStashPathChanged)
-                continue;
-            break;
-        case ItemStorage::HCStash:
-            if (!(_plugyStashesHash[iter.key()].exists = ui->actionAutoOpenHCShared->isChecked()) || !hcStashPathChanged)
-                continue;
-            break;
-        default:
-            break;
+            sharedStashPathChanged = oldSharedStashPath != _plugyStashesHash[ItemStorage::SharedStash].path;
+                hcStashPathChanged =     oldHCStashPath != _plugyStashesHash[ItemStorage::HCStash].path;
         }
-        processPlugyStash(iter, &itemsBuffer);
+
+        _sharedGold = 0;
+        for (QHash<ItemStorage::ItemStorageEnum, PlugyStashInfo>::iterator iter = _plugyStashesHash.begin(); iter != _plugyStashesHash.end(); ++iter)
+        {
+            switch (iter.key())
+            {
+            case ItemStorage::PersonalStash:
+                if (!(_plugyStashesHash[iter.key()].exists = ui->actionAutoOpenPersonalStash->isChecked()))
+                    continue;
+                break;
+            case ItemStorage::SharedStash:
+                if (!(_plugyStashesHash[iter.key()].exists = ui->actionAutoOpenSharedStash->isChecked()) || !sharedStashPathChanged)
+                    continue;
+                break;
+            case ItemStorage::HCStash:
+                if (!(_plugyStashesHash[iter.key()].exists = ui->actionAutoOpenHCShared->isChecked()) || !hcStashPathChanged)
+                    continue;
+                break;
+            default:
+                break;
+            }
+            processPlugyStash(iter, &itemsBuffer);
+        }
     }
 
     clearItems(sharedStashPathChanged, hcStashPathChanged);

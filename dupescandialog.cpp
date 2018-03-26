@@ -43,15 +43,10 @@ bool areItemsSame(ItemInfo *a, ItemInfo *b)
     return a->isExtended && a->guid == b->guid && a->itemType == b->itemType;
 }
 
-QString itemString(ItemInfo *item)
-{
-    return QString("<b>%1</b>: GUID 0x%2 (%3), type '%4', quality <b>%5</b>").arg(ItemDataBase::Items()->value(item->itemType)->name)
-            .arg(item->guid, 0, 16).arg(item->guid).arg(item->itemType.constData()).arg(metaEnumFromName<Enums::ItemQuality>("ItemQualityEnum").valueToKey(item->quality));
-}
-
 QString dupedItemsStr(ItemInfo *item1, ItemInfo *item2)
 {
-    return itemString(item1) + QString("; %6; %7")
+    return QString("<b>%1</b>: GUID 0x%2 (%3), type '%4', quality <b>%5</b>; %6; %7").arg(ItemDataBase::Items()->value(item1->itemType)->name)
+            .arg(item1->guid, 0, 16).arg(item1->guid).arg(item1->itemType.constData()).arg(metaEnumFromName<Enums::ItemQuality>("ItemQualityEnum").valueToKey(item1->quality))
             .arg(ItemParser::itemStorageAndCoordinatesString("<font color=blue>ITEM1</font>: location %1, row %2, col %3, equipped in %4", item1))
             .arg(ItemParser::itemStorageAndCoordinatesString("<font color=blue>ITEM2</font>: location %1, row %2, col %3, equipped in %4", item2));
 }
@@ -127,7 +122,6 @@ DupeScanDialog::DupeScanDialog(const QString &currentPath, bool isDumpItemsMode,
     QHBoxLayout *hbl2 = new QHBoxLayout;
     hbl2->addWidget(scanButton);
     hbl2->addWidget(_saveButton);
-    hbl2->addWidget(_skipEmptyCheckBox);
     hbl2->addWidget(_progressBar);
     hbl2->addWidget(okButton);
 
@@ -140,7 +134,6 @@ DupeScanDialog::DupeScanDialog(const QString &currentPath, bool isDumpItemsMode,
     _logBrowser->setReadOnly(true);
     _saveButton->setDisabled(true);
     scanButton->setDefault(true);
-    _skipEmptyCheckBox->setChecked(true);
     _progressBar->setAlignment(Qt::AlignHCenter | Qt::AlignVCenter);
 
     resize(600, 400);
@@ -152,12 +145,17 @@ DupeScanDialog::DupeScanDialog(const QString &currentPath, bool isDumpItemsMode,
 
     if (!isDumpItemsMode)
     {
+        hbl2->insertWidget(2, _skipEmptyCheckBox);
+        _skipEmptyCheckBox->setChecked(true);
+
         _futureWatcher = new QFutureWatcher<QString>;
         connect(_futureWatcher, SIGNAL(progressRangeChanged(int,int)), _progressBar, SLOT(setRange(int,int)));
         connect(_futureWatcher, SIGNAL(progressValueChanged(int)), _progressBar, SLOT(setValue(int)));
         connect(_futureWatcher, SIGNAL(resultReadyAt(int)), SLOT(crossCheckResultReady(int)));
-        connect(_futureWatcher, SIGNAL(finished()), SLOT(scanFinished()));
+        connect(_futureWatcher, SIGNAL(finished()), SLOT(scanFinished_()));
     }
+    else
+        _skipEmptyCheckBox->hide();
 }
 
 DupeScanDialog::~DupeScanDialog()
@@ -208,7 +206,7 @@ void DupeScanDialog::scan()
     QtConcurrent::run(this, &DupeScanDialog::scanCharactersInDir, path);
 }
 
-void DupeScanDialog::scanFinished()
+void DupeScanDialog::scanFinished_()
 {
     if (!_isDumpItemsMode)
     {
@@ -221,9 +219,9 @@ void DupeScanDialog::scanFinished()
 
     parentWidget()->setUpdatesEnabled(true);
     _logBrowser->setUpdatesEnabled(true);
-
     _saveButton->setEnabled(true);
-    qApp->alert(parentWidget());
+
+    emit scanFinished();
 }
 
 void DupeScanDialog::save()
@@ -266,6 +264,7 @@ void DupeScanDialog::scanCharactersInDir(const QString &path)
 
     bool isFirst, dupedItemFound;
     QString pathWithSlashes = QDir::fromNativeSeparators(_currentCharPath);
+    QRegExp runeRegex("r(\\d\\d)");
 
     QFileInfoList list = QDir(path).entryInfoList(QDir::Files);
     if ((isFirst = !_currentCharPath.isEmpty()))
@@ -277,7 +276,7 @@ void DupeScanDialog::scanCharactersInDir(const QString &path)
     {
         ++filesProcessed;
 
-        QString fileName = fileInfo.fileName(), header = fileName + (_isDumpItemsMode ? " items" : " dupe stats");
+        QString fileName = fileInfo.fileName(), header = _isDumpItemsMode ? ("processing " + fileName) : (fileName + " dupe stats");
         qDebug("loading %s", qPrintable(fileName));
         if (isFirst)
         {
@@ -288,13 +287,18 @@ void DupeScanDialog::scanCharactersInDir(const QString &path)
         {
             QString path = fileInfo.canonicalFilePath();
             if (path == pathWithSlashes || (!fileInfo.suffix().isEmpty() && fileInfo.suffix() != "d2s"))
+            {
+                QMetaObject::invokeMethod(_progressBar, "setValue", Q_ARG(int, filesProcessed));
                 continue;
+            }
 
             emit loadFile(path);
         }
         if (!_skipEmptyCheckBox->isChecked() || !_loadingMessage.isEmpty())
         {
-            appendStringToLog(header + "\n");
+            appendStringToLog(header);
+            if (!_isDumpItemsMode)
+                appendStringToLog("\n");
             if (!_loadingMessage.isEmpty())
                 appendStringToLog(_loadingMessage);
         }
@@ -302,9 +306,16 @@ void DupeScanDialog::scanCharactersInDir(const QString &path)
         dupedItemFound = false;
         if (_isDumpItemsMode)
         {
+            QString itemsStr;
             foreach (ItemInfo *item, CharacterInfo::instance().items.character)
-                if (shouldCheckItem(item))
-                    appendStringToLog(itemString(item));
+                if ((item->isExtended && shouldCheckItem(item)) || (runeRegex.indexIn(item->itemType) != -1 && runeRegex.cap(1).toInt() > 50)) // also save Great/Elemental runes
+                    itemsStr += ItemDataBase::completeItemName(item, false, false).replace(kHtmlLineBreak, QLatin1String("|")) + "\n";
+
+            QFile f(fileInfo.absoluteFilePath() + ".txt");
+            if (f.open(QIODevice::WriteOnly))
+                f.write(itemsStr.toUtf8());
+            else
+                appendStringToLog(QString("error writing %1: %2").arg(f.fileName(), f.errorString()));
         }
         else
         {
@@ -355,7 +366,7 @@ void DupeScanDialog::scanCharactersInDir(const QString &path)
             _allItemsHash[fileName] = itemsCopy;
         }
 
-        if (!_skipEmptyCheckBox->isChecked() || dupedItemFound || !_loadingMessage.isEmpty())
+        if (!_isDumpItemsMode && (!_skipEmptyCheckBox->isChecked() || dupedItemFound || !_loadingMessage.isEmpty()))
             appendStringToLog("========================================");
 
         _loadingMessage.clear();
@@ -365,7 +376,7 @@ void DupeScanDialog::scanCharactersInDir(const QString &path)
     appendStringToLog(QString("loading files & separate processing took %1 seconds").arg(_timeCounter.elapsed() / 1000));
     if (_isDumpItemsMode)
     {
-        scanFinished();
+        scanFinished_();
         return;
     }
 

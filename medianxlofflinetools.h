@@ -61,6 +61,7 @@ private slots:
 
     void eatSignetsOfLearning(int signetsEaten);
     void updateFindResults();
+    void dupeScanFinished();
 
     void networkReplyCheckForUpdateFinished(QNetworkReply *reply);
 

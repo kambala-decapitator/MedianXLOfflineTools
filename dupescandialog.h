@@ -30,11 +30,12 @@ public slots:
 
 signals:
     void loadFile(const QString &file);
+    void scanFinished();
 
 private slots:
     void selectPath();
     void scan();
-    void scanFinished();
+    void scanFinished_();
     void save();
     void crossCheckResultReady(int i);
 
