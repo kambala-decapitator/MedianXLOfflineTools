@@ -178,8 +178,8 @@ win32 {
         # create symbolic link to 'resources' folder in the folder of .exe
         LINK_DST = $$OUT_PWD/$$OUT_FOLDER/resources
         !exists($$LINK_DST) {
-            QMAKE_POST_LINK = mklink /D $$toNativeSeparators($$LINK_DST) $$toNativeSeparators($$_PRO_FILE_PWD_/resources)
-            QMAKE_POST_LINK += if %errorlevel%==9009 echo "mklink doesn't exist"
+            QMAKE_POST_LINK = mklink /D \"$$toNativeSeparators($$LINK_DST)\" \"$$toNativeSeparators($$_PRO_FILE_PWD_/resources)\"
+            QMAKE_POST_LINK += & if %errorlevel%==9009 echo "mklink doesn't exist"
         }
     }
     else {
