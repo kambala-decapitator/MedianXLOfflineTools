@@ -25,6 +25,7 @@ CONFIG(release, debug|release): {
     DEFINES += QT_NO_DEBUG_OUTPUT \
                QT_NO_WARNING_OUTPUT
 }
+else: DEFINES += DUPE_CHECK
 
 # app version
 NVER1 = 0
