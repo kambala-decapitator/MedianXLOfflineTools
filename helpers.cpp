@@ -19,8 +19,7 @@ bool isRWInGear(ItemInfo *item, const QByteArray &rune, const QByteArray &allowe
     if (item->isRW && item->location == Enums::ItemLocation::Equipped && ItemParser::itemTypesInheritFromType(ItemDataBase::Items()->value(item->itemType)->types, allowedItemType))
     {
         const RunewordHash *const rwHash = ItemDataBase::RW();
-        RunewordKeyPair rwKey = qMakePair(rune, QByteArray());
-        for (RunewordHash::const_iterator iter = rwHash->find(rwKey); iter != rwHash->end() && iter.key() == rwKey; ++iter)
+        for (RunewordHash::const_iterator iter = rwHash->find(rune); iter != rwHash->end() && iter.key() == rune; ++iter)
             if (ItemParser::itemTypeInheritsFromTypes(allowedItemType, iter.value()->allowedItemTypes))
                 return true;
     }

@@ -246,11 +246,15 @@ my $monstats = parsetxt("monstats.txt", _autoindex=>"0", $nameStr=>5);
 
 # RW
 # dummy key $itemName is used when writing to file
-my %rwKeysHash = ($itemName => undef, itype1 => 3, rune1 => 12, rune2 => 13);
-$rwKeysHash{"itype$_"} = $_ + 5 for (2..6);
+my %rwKeysHash = ($itemName => undef);
+for (1..6) {
+    $rwKeysHash{"allowedType$_"} = $_ + 2;
+    $rwKeysHash{"rune$_"} = $_ + 11
+}
+$rwKeysHash{"disallowedType$_"} = $_ + 8 for (1..3);
 my $rw = parsetxt("runes.txt", _autoindex => 0, tbl => 0, '!_enabled' => {col => 1, val => $zeroRe},
                   '!_rune' => {col => 12, val => qr/^jew$/}, %rwKeysHash);
-push(@$rw, {tbl => '09This', itype1 => 'weap', itype2 => 'armo', rune1 => 'jew'}); # yeah, it's a hack (jewelword)
+push(@$rw, {tbl => '09This', allowedType1 => 'weap', allowedType2 => 'armo', rune1 => 'jew'}); # yeah, it's a hack (jewelword)
 # fake hash to collect names from tbl
 my $fakeRwHash;
 foreach my $elem (@$rw)

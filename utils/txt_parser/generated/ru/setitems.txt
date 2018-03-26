@@ -74,11 +74,11 @@
 199	Взор Одинокого Волка	Путь Одинокого Волка	MSLone Wolf's Path	100																																									
 200	Мех Одинокого Волка	Путь Одинокого Волка	MSLone Wolf's Path	100																																									
 201	Булава Одинокого Волка	Путь Одинокого Волка	MSLone Wolf's Path	100																																									
-202	MRScosglen's Legends2	Sacred Earth	MSSacred Earth	100																																									
-203	MRScosglen's History2	Sacred Earth	MSSacred Earth	100																																									
-204	MRScosglen's Tales2	Sacred Earth	MSSacred Earth	100																																									
-205	MRScosglen's Fables2	Sacred Earth	MSSacred Earth	100																																									
-206	MRScosglen's Myths2	Sacred Earth	MSSacred Earth	100																																									
+202	MRScosglen's Legends2	Священная Земля	MSSacred Earth	100																																									
+203	MRScosglen's History2	Священная Земля	MSSacred Earth	100																																									
+204	MRScosglen's Tales2	Священная Земля	MSSacred Earth	100																																									
+205	MRScosglen's Fables2	Священная Земля	MSSacred Earth	100																																									
+206	MRScosglen's Myths2	Священная Земля	MSSacred Earth	100																																									
 207	Погоня Ратмы	Империя Ратмы	MSRathma's Empire	100																																									
 208	Ловушка Ратмы	Империя Ратмы	MSRathma's Empire	100																																									
 209	Смертельный Взор Ратмы	Империя Ратмы	MSRathma's Empire	100																																									

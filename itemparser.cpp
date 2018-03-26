@@ -261,39 +261,33 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
                 }
 
                 // parse all socketables
-                QList<QByteArray> rwSocketableTypes;
+                QByteArray rwKey;
                 for (int i = 0; i < item->socketablesNumber; ++i)
                 {
                     ItemInfo *socketableInfo = parseItem(inputDataStream, bytes, isLastItemOnPlugyPage);
                     item->socketablesInfo += socketableInfo;
-                    if (item->isRW && i >= item->socketablesNumber - 2) // get the last socket filler to obtain RW name (and previous one to prevent disambiguation)
-                        rwSocketableTypes.prepend(socketableInfo->itemType == ItemDataBase::kJewelType && i != item->socketablesNumber - 1 ? QByteArray() : socketableInfo->itemType);
+                    if (item->isRW && socketableInfo->itemType != ItemDataBase::kJewelType)
+                        rwKey += socketableInfo->itemType;
                 }
 
-                if (!rwSocketableTypes.isEmpty())
+                if (!rwKey.isEmpty())
                 {
-                    RunewordKeyPair rwKey = qMakePair(rwSocketableTypes.at(0), rwSocketableTypes.size() > 1 ? rwSocketableTypes.at(1) : QByteArray());
-                    if (rwKey == qMakePair(QByteArray("r56"), QByteArray("r55"))) // maybe it's 'Eternal'?
-                        item->rwName = ItemDataBase::RW()->value(qMakePair(QByteArray("r51"), QByteArray("r52")))->name;
-                    else
+                    const RunewordHash *const rwHash = ItemDataBase::RW();
+                    RunewordHash::const_iterator iter = rwHash->find(rwKey);
+                    for (; iter != rwHash->end() && iter.key() == rwKey; ++iter)
                     {
-                        const RunewordHash *const rwHash = ItemDataBase::RW();
-                        RunewordHash::const_iterator iter = rwHash->find(rwKey);
-                        for (; iter != rwHash->end() && iter.key() == rwKey; ++iter)
+                        RunewordInfo *rwInfo = iter.value();
+                        if (itemTypesInheritFromTypes(itemBase->types, rwInfo->allowedItemTypes))
                         {
-                            RunewordInfo *rwInfo = iter.value();
-                            if (itemTypesInheritFromTypes(itemBase->types, rwInfo->allowedItemTypes))
-                            {
-                                item->rwName = rwInfo->name;
-                                break;
-                            }
+                            item->rwName = rwInfo->name;
+                            break;
                         }
-                        if (iter == rwHash->end())
-                            item->rwName = tr("Unknown RW, please report!");
                     }
+                    if (iter == rwHash->end())
+                        item->rwName = tr("Unknown RW, please report!");
                 }
-                else if (item->isRW)
-                    item->rwName = tr("Unknown RW (no socketables detected), please report!");
+                else if (item->isRW) // jewelword
+                    item->rwName = ItemDataBase::RW()->value(ItemDataBase::kJewelType)->name;
             }
             else
                 item->quality = Enums::ItemQuality::Normal;
@@ -350,7 +344,7 @@ PropertiesMultiMap ItemParser::parseItemProperties(ReverseBitReader &bitReader, 
             if (id == ItemProperties::EnhancedDamage)
             {
                 qint16 minEnhDamage = bitReader.readNumber(txtProperty->bits) - txtProperty->add;
-                if (minEnhDamage < propToAdd->value) // it shouldn't possible (they must always be equal), but let's make sure
+                if (minEnhDamage < propToAdd->value) // it shouldn't be possible (they must always be equal), but let's make sure
                     propToAdd->value = minEnhDamage;
                 propToAdd->displayString = kEnhancedDamageFormat().arg(propToAdd->value);
             }

@@ -386,11 +386,20 @@ RunewordHash *ItemDataBase::RW()
                 continue;
 
             RunewordInfo *rw = new RunewordInfo;
+            int column = 0;
+
             rw->allowedItemTypes.reserve(6);
-            for (int i = 0; i < 6; ++i)
-                rw->allowedItemTypes << data.at(i);
-            rw->name = QString::fromUtf8(data.at(6));
-            allRunewords.insert(qMakePair(data.at(7), data.size() == 9 ? data.at(8) : QByteArray()), rw);
+            for (; column < 6; ++column)
+                rw->allowedItemTypes << data.at(column);
+            rw->disallowedItemTypes.reserve(3);
+            for (int j = 0; j < 3; ++j)
+                rw->disallowedItemTypes << data.at(column++);
+            rw->name = QString::fromUtf8(data.at(column++));
+
+            QByteArray key;
+            foreach (const QByteArray &rune, data.mid(column))
+                key += rune;
+            allRunewords.insert(key, rw);
         }
     }
     return &allRunewords;

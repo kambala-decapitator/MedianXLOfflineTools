@@ -1,543 +1,543 @@
-#itype1	itype2	itype3	itype4	itype5	itype6	name	rune1	rune2
-weap						Рассвет	r01		
-weap						Акула	r07		
-weap						Энио	r14		
-weap						Азраэль	r21		
-weap						Пустота	r28		
-weap						Забвение	r35		
-weap						Берит	r42		
-weap						Геенна	r47		
-weap						Триединство	r53		
-bow						Банши	r03		
-bow						Ударная Волна	r12		
-bow						Баланс	r22		
-bow						Рой	r30		
-bow						Фантом	r39		
-bow						Проклятье	r48		
-bow						Тифаон	r52		
-xbow						Таммуз	r04		
-xbow						Питон	r16		
-xbow						Циклоп	r29		
-xbow						Тартар	r44		
-xbow						Аработ	r45		
-knif			tkni			Королевская Кровь	r26		
-scyh						Эндор	r31		
-swor						Урада	r46		
-axe						Саблезубый	r48		
-scyh						Зерно Конфликта	r49		
-spea						Мирмидонец	r29		
-mace			hamm			Демхе	r33		
-hamm						Калипсо	r37		
-staf						Мир Мистики	r04		
-staf						Хадад	r11		
-staf						Сумманус	r19		
-staf						Эхнатон	r27		
-staf						Aes Dana	r36		
-staf						Эльф	r44		
-staf						Эрилаз	r51		
-scep						Пророчество	r06		
-scep						Погибель	r17		
-scep						Иуда	r22		
-scep						Путь	r30		
-scep						Габриэль	r40		
-scep						Дурга	r49		
-scep						Галдр	r51		
-aspe						Аегина	r11		
-aspe						Санкара	r34		
-aspe						Русалка	r46		
-aspe						Исчезновение	r51		
-ajav						Шрам	r16		
-ajav						Светлячок	r26		
-ajav						Тришула	r34		
-ajav						Сталактит	r52		
-abow						Корсар	r15		
-abow						Ледокол	r29		
-abow						Столкновение Миров	r43		
-abow						Манта	r51		
-h2h						Шедим	r02		
-h2h						Демон	r17		
-h2h						Судья	r27		
-h2h						Коронзон	r34		
-h2h						Анархия	r46		
-h2h						Град	r48		
-h2h						Ноема	r52		
-nagi						Хаттак	r08		
-nagi						Иерогамия	r46		
-nagi						Шесть Тонкостей	r52		
-bswd						Овен	r10		
-bswd						Эссус	r22		
-bswd						Громовержец	r32		
-bswd						Савитар	r37		
-bswd						Хан	r43		
-bswd						Лахму	r49		
-bswd						Кахлесс	r51		
-dbow						Павлин	r13		
-dbow						Рысь	r27		
-dbow						Лесное Свечение	r33		
-dbow						Цернуннос	r44		
-dbow						Раудна	r51		
-dstf						Океан	r05		
-dstf						Самайн	r12		
-dstf						Авгур	r20		
-dstf						Линкос	r29		
-dstf						Лаадан	r37		
-dstf						Ложбан	r45		
-dstf						Локсиан	r52		
-nscy						Черная Кошка	r02		
-nscy						Мантра	r13		
-nscy						Хтон	r29		
-nscy						Инти	r41		
-nscy						Левиафан	r51		
-nknf						Лоа	r05		
-nknf						Джинкс	r13		
-nknf						Страдание	r23		
-nknf						Зэйд	r36		
-nknf						Рух	r51		
-nstf						Глубинная Вода	r06		
-nstf						Ладон	r25		
-nstf						Али	r38		
-nstf						Дагда	r49		
-nstf						Святая Компания	r52		
-wand						Коан	r09		
-wand						Упырь	r20		
-wand						Связанный насмерть	r39		
-wand						Нгози	r41		
-wand						Semhazai	r51		
-nxbw						Джинн	r08		
-nxbw						Атлантида	r19		
-nxbw						Эфир	r31		
-nxbw						Тигель	r46		
-nxbw						Кронос	r51		
-pclb						Джихад	r05		
-pclb						Интифада	r15		
-pclb						Ламмасу	r25		
-pclb						Брахман	r39		
-pclb						Орифламма	r51		
-pspe						Асы	r12		
-pspe						Нехуштан	r27		
-pspe						Такийя	r40		
-pspe						Ориша	r48		
-pspe						Божественный Царь	r52		
-orb						Цирцея	r11		
-orb						Керы	r20		
-orb						Каббала	r36		
-orb						Гестия	r50		
-orb						Прекраснейшей	r51		
-scrd						Инанна	r12		
-scrd						Грация	r36		
-scrd						Кхани	r50		
-scrd						Шаула	r52		
-tors						Мятежник	r01		
-tors						Священный Свет	r06		
-tors						(Median XL - 6 лет)\nПобеда	r13		
-tors						Телема	r19		
-tors						Собор	r25		
-tors						Мираж	r33		
-tors						Сердце Дракона	r41		
-tors						Эраван	r48		
-tors						Единство	r52		
-helm						Вершина	r01		
-helm						Пушечное Ядро	r08		
-helm						Ра	r17		
-helm						Алхимия	r26		
-helm						Повелитель Ужаса	r35		
-helm						Болотные Брызги	r44		
-helm						Эйдолон	r51		
-circ						Сфинкс	r11		
-circ						Лилия	r31		
-circ						Уленшпигель	r38		
-circ						Wintermute	r53		
-shld						Гейс	r04		
-shld						Фараон	r12		
-shld						Кочевник	r20		
-shld						Богиня	r30		
-shld						Кодо	r40		
-shld						Стена Огня	r50		
-shld						Аватар	r53		
-glov						Иблис	r04		
-glov						Милость	r13		
-glov						Кали	r21		
-glov						Айвас	r33		
-glov						Скальд	r41		
-glov						Икар	r49		
-glov						Дрекавац	r51		
-belt						Радужный	r05		
-belt						Чудо	r15		
-belt						Плавка	r23		
-belt						Пульсей Де-Нура	r34		
-belt						Перемирие	r42		
-belt						Дьяус	r50		
-belt						Ахриман	r52		
-boot						Эпицентр	r06		
-boot						Вне Закона	r14		
-boot						Гинфакси	r22		
-boot						Кратон	r32		
-boot						Мегалит	r40		
-boot						Исполин	r48		
-boot						Хибагон	r53		
-azhm						Стата Матер	r16		
-azhm						Аматэрасу	r24		
-azhm						Зигфрид	r31		
-azhm						Лоэнгрин	r42		
-azhm						Единорог	r52		
-azsd						Эдда	r15		
-azsd						Лев	r35		
-azsd						Элои	r42		
-azsd						Никс	r48		
-azsd						Эа	r52		
-ishd						Африт	r13		
-ishd						Раав	r19		
-ishd						Лигея	r28		
-ishd						Дар Аль-Харб	r37		
-ishd						Выжженная Земля	r51		
-phlm						Альгиз	r09		
-phlm						Насреддин	r19		
-phlm						Сагарматха	r36		
-phlm						Культ Предков	r43		
-phlm						Водзивоб	r53		
-basd						Энмеркар	r17		
-basd						Тропа Войны	r27		
-basd						Рукавица	r39		
-basd						Хуракан	r44		
-basd						Дом Бездна	r52		
-pelt						Ли-Нежа	r18		
-pelt						Натха	r28		
-pelt						Норма	r38		
-pelt						Роща	r45		
-pelt						Сильф	r52		
-head						Куб	r16		
-head						Колдун	r25		
-head						Нагуаль	r36		
-head						Куимбанда	r47		
-head						Дракон	r51		
-pzhm						Илматар	r10		
-pzhm						Раб	r25		
-pzhm						Поход	r37		
-pzhm						Сурья	r46		
-pzhm						Малакбел	r53		
-ashd						Асмодей	r14		
-ashd						Святой Грааль	r28		
-ashd						Зогар	r33		
-ashd						Асклепейон	r46		
-ashd						Амаймон	r51		
-stor						Деметра	r23		
-stor						Курандера	r29		
-stor						Астарта	r34		
-stor						Оракул	r40		
-stor						Тщеславие	r47		
-stor						Комефо	r50		
-stor						Венефика	r53		
-nagi						Шамо	r16		
-bow						Амок	r09		
-bswd						Гараник	r33		
-phlm						Фоукс	r33		
-azhm						Благая Богиня	r19		
-ishd						Ямба	r23		
-pelt						Эгипан	r09		
-bswd						Анак	r41		
-tors						Палиак	r10		
-stor						Черный Древень	r11		
-bow						Шершень	r17		
-glov						Гул	r16		
-head						Lorelei	r38		
-scyh						Атлакамани	r37		
-pclb						Такфир	r34		
-stor						Кассильда	r54		
-azsd						Эос	r54		
-weap						Адрамелех	r54		
-pzhm						Rotundjere	r54		
-phlm						Грейзен	r54		
-glov						Буран	r54		
-head						Гекатомба	r55		
-pspe						Ягуар	r55		
-ashd						Мироносица	r55		
-helm						Мухомор	r55		
-tors						Тонкие Тела	r55		
-belt						Нерон	r55		
-ishd						Орхидея	r55		
-staf						Зодиак	r55		
-bow						Звездная Пыль	r55		
-h2h						Джокер	r55		
-bswd						Гильгамеш	r55		
-pclb						Щит и Друг	r55		
-wand						Криптия	r55		
-scrd						Взмах Звезд	r55		
-orb						Саурон	r55		
-xbow						Надгробие	r55		
-nknf						Мкодос	r56		
-2hbx						Вольфсангель	r56		
-circ						Индиго	r56		
-shld						Дервезе	r56		
-boot						Быстрина	r56		
-azhm						Шахидка	r56		
-dbow						Панихида	r56		
-pelt						Нигра	r56		
-dstf						Германубис	r56		
-aspe						Фрейбаг	r56		
-abow						Сисейлия	r56		
-ajav						Призрак	r56		
-nagi						Онивака	r56		
-nscy						Зиинч	r56		
-scep						Отступничество	r56		
-nxbw						Рея	r56		
-bow						Никта	r26		
-staf						Лесальф	r30		
-scep						Йокулмордер	r36		
-xbow						Участь	r41		
-bswd						Скарн	r40		
-abow						Эрида	r37		
-aspe						Титаномахия	r24		
-ajav						Херфьотур	r41		
-pclb						Кваоар	r29		
-nscy						Ивентайд	r36		
-orb						Головокружение	r22		
-dbow						Таркек	r38		
-nstf						Эвринома	r17		
-h2h						Бунт	r22		
-pspe						Решеф	r32		
-orb						Гравастар	r29		
-scrd						Брокен	r24		
-stor						Кундалини	r12		
-azhm						Камбион	r36		
-h2h						Карабосс	r15		
-nstf						Стикс	r56		
-staf						Господи, помилуй	r51	r51	
-tors						Пигмалион	r52	r52	
-weap						Архангел	r53	r53	
-glov						Жулик	r54	r54	
-helm						Шах и Мат	r55	r55	
-taxe						Кадьяк	r55		
-basd						Тонатиу	r55		
-tkni						Тау	r55		
-tkni						Патриот	r02		
-taxe						Фенек	r20		
-tkni						Квант	r30		
-taxe						Раптор	r40		
-nscy						Лемурия	r20		
-abow						Аспект	r13		
-phlm						Экам	r27		
-knif			tkni	nknf		Крыса	r37		
-axe						Инстинкт	r27		
-taxe						Громовое Облако	r51		
-taxe						Гепард	r02		
-tkni						Летающая Змея	r10		
-tkni						Даджаль	r20		
-taxe						Маниту	r30		
-tkni						Мириады	r40		
-tkni						Наяда	r49		
-tkni						Бурлеск	r51		
-jave						Набег	r10		
-jave						Хастата	r20		
-jave						Спешка	r30		
-jave						Турнир	r40		
-jave						Хастур	r51		
-jave						Хастин	r55		
-tors						Спасибо всем!\nMedian 2005-2012\nВечность	r51	r52	
-weap			nscy	taxe	aspe	Раздробленный Камень	r58	r58	
-bow			dbow			Дыхание Мертвеца	r62	r62	
-xbow						Оптоволокно	r61	r61	
-swor						Минное Поле	r57	r57	
-axe			taxe			Прикосновение Мидаса	r59	r59	
-spea			pspe			Бессимптомный	r60	r60	
-scyh						Солярион	r60	r60	
-knif			tkni			Ледышка Малика	r62	r62	
-mace						Арахнофилия	r60	r60	
-hamm						Нейрогенезис	r61	r61	
-staf						Рука Мороза	r62	r62	
-scep						Вестник Орис	r59	r59	
-jave						Ядовитая Плоть	r60	r60	
-tkni						Мертвая Звезда	r60	r60	
-taxe						Драконье Семя	r58	r58	
-abow						Пик Арназеуса	r57	r57	
-ajav						Устройство Аскари	r57	r57	
-aspe						Блеск	r58	r58	
-h2h						Совершенство	r59	r59	
-nagi						Кровавый Танцор	r59	r59	
-bswd						Эльдруин	r62	r62	
-2hbx						Солдат Света	r61	r61	
-dbow						Амфибия	r62	r62	
-dstf						Флюгер Фиакла-Гира	r61	r61	
-nscy						Глаз Бартука	r58	r58	
-nknf						Порез	r58	r58	
-wand						Роковой Страж	r59	r59	
-nstf						Ксазакс	r57	r57	
-nxbw						Сила Мысли	r59	r59	
-pspe						Покровитель Хадриэля	r60	r60	
-pclb						Суд	r57	r57	
-orb						Хелгрота	r60	r60	
-scrd						Темный Исход	r62	r62	
-tors						Пластины Адского Огня	r57	r57	
-helm			phlm			Громовая Шляпа	r61	r61	
-circ						Благословение Ратмы	r62	r62	
-shld			basd			Покровитель Халима	r60	r60	
-belt						Лисра	r57	r57	
-glov						Воздаяние	r57	r57	
-boot						Ветровой Гонец	r58	r58	
-azhm						Маска Орлиного Рога	r59	r59	
-azsd						Сердце Сковос	r58	r58	
-ishd						Теневые Шаги	r59	r59	
-phlm						Шоковая Сила	r61	r61	
-basd						Благословение Триендиства	r60	r60	
-pelt						Благодать Природы	r60	r60	
-head						Извращенный Разум	r59	r59	
-pzhm						Боевая Ярость	r58	r58	
-ashd						Световая Шахта	r57	r57	
-stor						Космическое Помешательство	r61	r61	
-tors						\red;Наследие Наташи\blue;	r98	r98	
-tors						Мятежник	r01	r98	
-tors						Священный Свет	r06	r98	
-tors						(Median XL - 6 лет)\nПобеда	r13	r98	
-tors						Телема	r19	r98	
-tors						Собор	r25	r98	
-tors						Мираж	r33	r98	
-helm						Вершина	r01	r98	
-helm						Пушечное Ядро	r08	r98	
-helm						Ра	r17	r98	
-helm						Алхимия	r26	r98	
-circ						Сфинкс	r11	r98	
-circ						Лилия	r31	r98	
-shld						Гейс	r04	r98	
-shld						Фараон	r12	r98	
-shld						Кочевник	r20	r98	
-shld						Богиня	r30	r98	
-glov						Иблис	r04	r98	
-glov						Милость	r13	r98	
-glov						Кали	r21	r98	
-glov						Айвас	r33	r98	
-belt						Радужный	r05	r98	
-belt						Чудо	r15	r98	
-belt						Плавка	r23	r98	
-boot						Эпицентр	r06	r98	
-boot						Вне Закона	r14	r98	
-boot						Гинфакси	r22	r98	
-boot						Кратон	r32	r98	
-azhm						Стата Матер	r16	r98	
-azhm						Аматэрасу	r24	r98	
-azhm						Зигфрид	r31	r98	
-azsd						Эдда	r15	r98	
-ishd						Африт	r13	r98	
-ishd						Раав	r19	r98	
-ishd						Лигея	r28	r98	
-phlm						Альгиз	r09	r98	
-phlm						Насреддин	r19	r98	
-basd						Энмеркар	r17	r98	
-basd						Тропа Войны	r27	r98	
-pelt						Ли-Нежа	r18	r98	
-pelt						Натха	r28	r98	
-head						Куб	r16	r98	
-head						Колдун	r25	r98	
-pzhm						Илматар	r10	r98	
-pzhm						Раб	r25	r98	
-ashd						Асмодей	r14	r98	
-ashd						Святой Грааль	r28	r98	
-ashd						Зогар	r33	r98	
-stor						Деметра	r23	r98	
-stor						Курандера	r29	r98	
-phlm						Фоукс	r33	r98	
-azhm						Благая Богиня	r19	r98	
-ishd						Ямба	r23	r98	
-pelt						Эгипан	r09	r98	
-tors						Палиак	r10	r98	
-stor						Черный Древень	r11	r98	
-glov						Гул	r16	r98	
-stor						Кундалини	r12	r98	
-phlm						Экам	r27	r98	
-weap						Рассвет	r01	r98	
-weap						Акула	r07	r98	
-weap						Энио	r14	r98	
-weap						Азраэль	r21	r98	
-weap						Пустота	r28	r98	
-bow						Банши	r03	r98	
-bow						Ударная Волна	r12	r98	
-bow						Баланс	r22	r98	
-bow						Рой	r30	r98	
-xbow						Таммуз	r04	r98	
-xbow						Питон	r16	r98	
-xbow						Циклоп	r29	r98	
-knif			tkni			Королевская Кровь	r26	r98	
-scyh						Эндор	r31	r98	
-spea						Мирмидонец	r29	r98	
-mace			hamm			Демхе	r33	r98	
-staf						Мир Мистики	r04	r98	
-staf						Хадад	r11	r98	
-staf						Сумманус	r19	r98	
-staf						Эхнатон	r27	r98	
-scep						Пророчество	r06	r98	
-scep						Погибель	r17	r98	
-scep						Иуда	r22	r98	
-scep						Путь	r30	r98	
-aspe						Аегина	r11	r98	
-ajav						Шрам	r16	r98	
-ajav						Светлячок	r26	r98	
-abow						Корсар	r15	r98	
-abow						Ледокол	r29	r98	
-h2h						Шедим	r02	r98	
-h2h						Демон	r17	r98	
-h2h						Судья	r27	r98	
-nagi						Хаттак	r08	r98	
-bswd						Овен	r10	r98	
-bswd						Эссус	r22	r98	
-bswd						Громовержец	r32	r98	
-dbow						Павлин	r13	r98	
-dbow						Рысь	r27	r98	
-dbow						Лесное Свечение	r33	r98	
-dstf						Океан	r05	r98	
-dstf						Самайн	r12	r98	
-dstf						Авгур	r20	r98	
-dstf						Линкос	r29	r98	
-nscy						Черная Кошка	r02	r98	
-nscy						Мантра	r13	r98	
-nscy						Хтон	r29	r98	
-nknf						Лоа	r05	r98	
-nknf						Джинкс	r13	r98	
-nknf						Страдание	r23	r98	
-nstf						Глубинная Вода	r06	r98	
-nstf						Ладон	r25	r98	
-wand						Коан	r09	r98	
-wand						Упырь	r20	r98	
-nxbw						Джинн	r08	r98	
-nxbw						Атлантида	r19	r98	
-nxbw						Эфир	r31	r98	
-pclb						Джихад	r05	r98	
-pclb						Интифада	r15	r98	
-pclb						Ламмасу	r25	r98	
-pspe						Нехуштан	r27	r98	
-orb						Цирцея	r11	r98	
-orb						Керы	r20	r98	
-scrd						Инанна	r12	r98	
-nagi						Шамо	r16	r98	
-bow						Амок	r09	r98	
-bswd						Гараник	r33	r98	
-bow						Шершень	r17	r98	
-bow						Никта	r26	r98	
-staf						Лесальф	r30	r98	
-aspe						Титаномахия	r24	r98	
-pclb						Кваоар	r29	r98	
-orb						Головокружение	r22	r98	
-nstf						Эвринома	r17	r98	
-h2h						Бунт	r22	r98	
-pspe						Решеф	r32	r98	
-orb						Гравастар	r29	r98	
-scrd						Брокен	r24	r98	
-h2h						Карабосс	r15	r98	
-tkni						Патриот	r02	r98	
-taxe						Фенек	r20	r98	
-tkni						Квант	r30	r98	
-nscy						Лемурия	r20	r98	
-abow						Аспект	r13	r98	
-axe						Инстинкт	r27	r98	
-taxe						Гепард	r02	r98	
-tkni						Летающая Змея	r10	r98	
-tkni						Даджаль	r20	r98	
-taxe						Маниту	r30	r98	
-jave						Набег	r10	r98	
-jave						Хастата	r20	r98	
-jave						Спешка	r30	r98	
-pspe						Асы	r12	r98	
-xbow						(Секрет)\nВерховентсво	r57	r61	
-staf						(Секрет)\nПолзание	r60	r59	
-scyh						(Секрет)\nSouthern Trendkill	r58	r62	
-spea						(Секрет)\nМирные Продажи	r61	r57	
-scep						(Секрет)\nЧерный Пес	r59	r58	
-tors						(Секрет)\nЛонгвью	r62	r60	
-weap	armo					Секретный Бонус Драгоценного Камня!	jew		
+#allowedType1	allowedType2	allowedType3	allowedType4	allowedType5	allowedType6	disallowedType1	disallowedType2	disallowedType3	name	rune1	rune2	rune3	rune4	rune5	rune6
+weap									Рассвет	r01						
+weap									Акула	r07						
+weap									Энио	r14						
+weap									Азраэль	r21						
+weap									Пустота	r28						
+weap									Забвение	r35						
+weap									Берит	r42						
+weap									Геенна	r47						
+weap									Триединство	r53						
+bow									Банши	r03						
+bow									Ударная Волна	r12						
+bow									Баланс	r22						
+bow									Рой	r30						
+bow									Фантом	r39						
+bow									Проклятье	r48						
+bow									Тифаон	r52						
+xbow									Таммуз	r04						
+xbow									Питон	r16						
+xbow									Циклоп	r29						
+xbow									Тартар	r44						
+xbow									Аработ	r45						
+knif						tkni			Королевская Кровь	r26						
+scyh									Эндор	r31						
+swor									Урада	r46						
+axe									Саблезубый	r48						
+scyh									Зерно Конфликта	r49						
+spea									Мирмидонец	r29						
+mace						hamm			Демхе	r33						
+hamm									Калипсо	r37						
+staf									Мир Мистики	r04						
+staf									Хадад	r11						
+staf									Сумманус	r19						
+staf									Эхнатон	r27						
+staf									Aes Dana	r36						
+staf									Эльф	r44						
+staf									Эрилаз	r51						
+scep									Пророчество	r06						
+scep									Погибель	r17						
+scep									Иуда	r22						
+scep									Путь	r30						
+scep									Габриэль	r40						
+scep									Дурга	r49						
+scep									Галдр	r51						
+aspe									Аегина	r11						
+aspe									Санкара	r34						
+aspe									Русалка	r46						
+aspe									Исчезновение	r51						
+ajav									Шрам	r16						
+ajav									Светлячок	r26						
+ajav									Тришула	r34						
+ajav									Сталактит	r52						
+abow									Корсар	r15						
+abow									Ледокол	r29						
+abow									Столкновение Миров	r43						
+abow									Манта	r51						
+h2h									Шедим	r02						
+h2h									Демон	r17						
+h2h									Судья	r27						
+h2h									Коронзон	r34						
+h2h									Анархия	r46						
+h2h									Град	r48						
+h2h									Ноема	r52						
+nagi									Хаттак	r08						
+nagi									Иерогамия	r46						
+nagi									Шесть Тонкостей	r52						
+bswd	baxe								Овен	r10						
+bswd	baxe								Эссус	r22						
+bswd	baxe								Громовержец	r32						
+bswd	baxe								Савитар	r37						
+bswd	baxe								Хан	r43						
+bswd	baxe								Лахму	r49						
+bswd	baxe								Кахлесс	r51						
+dbow									Павлин	r13						
+dbow									Рысь	r27						
+dbow									Лесное Свечение	r33						
+dbow									Цернуннос	r44						
+dbow									Раудна	r51						
+dstf									Океан	r05						
+dstf									Самайн	r12						
+dstf									Авгур	r20						
+dstf									Линкос	r29						
+dstf									Лаадан	r37						
+dstf									Ложбан	r45						
+dstf									Локсиан	r52						
+nscy									Черная Кошка	r02						
+nscy									Мантра	r13						
+nscy									Хтон	r29						
+nscy									Инти	r41						
+nscy									Левиафан	r51						
+nknf									Лоа	r05						
+nknf									Джинкс	r13						
+nknf									Страдание	r23						
+nknf									Зэйд	r36						
+nknf									Рух	r51						
+nstf									Глубинная Вода	r06						
+nstf									Ладон	r25						
+nstf									Али	r38						
+nstf									Дагда	r49						
+nstf									Святая Компания	r52						
+wand									Коан	r09						
+wand									Упырь	r20						
+wand									Связанный насмерть	r39						
+wand									Нгози	r41						
+wand									Semhazai	r51						
+nxbw									Джинн	r08						
+nxbw									Атлантида	r19						
+nxbw									Эфир	r31						
+nxbw									Тигель	r46						
+nxbw									Кронос	r51						
+pclb	pmac	pham							Джихад	r05						
+pclb	pmac	pham							Интифада	r15						
+pclb	pmac	pham							Ламмасу	r25						
+pclb	pmac	pham							Брахман	r39						
+pclb	pmac	pham							Орифламма	r51						
+pspe									Асы	r12						
+pspe									Нехуштан	r27						
+pspe									Такийя	r40						
+pspe									Ориша	r48						
+pspe									Божественный Царь	r52						
+orb									Цирцея	r11						
+orb									Керы	r20						
+orb									Каббала	r36						
+orb									Гестия	r50						
+orb									Прекраснейшей	r51						
+scrd									Инанна	r12						
+scrd									Грация	r36						
+scrd									Хани	r50						
+scrd									Шаула	r52						
+tors									Мятежник	r01						
+tors									Священный Свет	r06						
+tors									(Median XL - 6 лет)\nПобеда	r13						
+tors									Телема	r19						
+tors									Собор	r25						
+tors									Мираж	r33						
+tors									Сердце Дракона	r41						
+tors									Эраван	r48						
+tors									Единство	r52						
+helm									Вершина	r01						
+helm									Пушечное Ядро	r08						
+helm									Ра	r17						
+helm									Алхимия	r26						
+helm									Повелитель Ужаса	r35						
+helm									Болотные Брызги	r44						
+helm									Эйдолон	r51						
+circ									Сфинкс	r11						
+circ									Лилия	r31						
+circ									Уленшпигель	r38						
+circ									Wintermute	r53						
+shld									Гейс	r04						
+shld									Фараон	r12						
+shld									Кочевник	r20						
+shld									Богиня	r30						
+shld									Кодо	r40						
+shld									Стена Огня	r50						
+shld									Аватар	r53						
+glov									Иблис	r04						
+glov									Милость	r13						
+glov									Кали	r21						
+glov									Айвас	r33						
+glov									Скальд	r41						
+glov									Икар	r49						
+glov									Дрекавац	r51						
+belt									Радужный	r05						
+belt									Чудо	r15						
+belt									Плавка	r23						
+belt									Пульсей Де-Нура	r34						
+belt									Перемирие	r42						
+belt									Дьяус	r50						
+belt									Ахриман	r52						
+boot									Эпицентр	r06						
+boot									Вне Закона	r14						
+boot									Гинфакси	r22						
+boot									Кратон	r32						
+boot									Мегалит	r40						
+boot									Исполин	r48						
+boot									Хибагон	r53						
+azhm									Стата Матер	r16						
+azhm									Аматэрасу	r24						
+azhm									Зигфрид	r31						
+azhm									Лоэнгрин	r42						
+azhm									Единорог	r52						
+azsd									Эдда	r15						
+azsd									Лев	r35						
+azsd									Элои	r42						
+azsd									Никс	r48						
+azsd									Эа	r52						
+ishd									Африт	r13						
+ishd									Раав	r19						
+ishd									Лигея	r28						
+ishd									Дар Аль-Харб	r37						
+ishd									Выжженная Земля	r51						
+phlm									Альгиз	r09						
+phlm									Насреддин	r19						
+phlm									Сагарматха	r36						
+phlm									Культ Предков	r43						
+phlm									Водзивоб	r53						
+basd									Энмеркар	r17						
+basd									Тропа Войны	r27						
+basd									Рукавица	r39						
+basd									Хуракан	r44						
+basd									Дом Бездна	r52						
+pelt									Ли-Нежа	r18						
+pelt									Натха	r28						
+pelt									Норма	r38						
+pelt									Роща	r45						
+pelt									Сильф	r52						
+head									Куб	r16						
+head									Колдун	r25						
+head									Нагуаль	r36						
+head									Куимбанда	r47						
+head									Дракон	r51						
+pzhm									Илматар	r10						
+pzhm									Раб	r25						
+pzhm									Поход	r37						
+pzhm									Сурья	r46						
+pzhm									Малакбел	r53						
+ashd									Асмодей	r14						
+ashd									Святой Грааль	r28						
+ashd									Зогар	r33						
+ashd									Асклепейон	r46						
+ashd									Амаймон	r51						
+stor									Деметра	r23						
+stor									Курандера	r29						
+stor									Астарта	r34						
+stor									Оракул	r40						
+stor									Тщеславие	r47						
+stor									Комефо	r50						
+stor									Венефика	r53						
+nagi									Шамо	r16						
+bow									Амок	r09						
+bswd	baxe								Гараник	r33						
+phlm									Фоукс	r33						
+azhm									Благая Богиня	r19						
+ishd									Ямба	r23						
+pelt									Эгипан	r09						
+bswd	baxe								Анак	r41						
+tors									Палиак	r10						
+stor									Черный Древень	r11						
+bow									Шершень	r17						
+glov									Гул	r16						
+head									Лорелей	r38						
+scyh									Атлакамани	r37						
+pclb	pmac	pham							Такфир	r34						
+stor									Кассильда	r54						
+azsd									Эос	r54						
+weap									Адрамелех	r54						
+pzhm									Rotundjere	r54						
+phlm									Грейзен	r54						
+glov									Буран	r54						
+head									Гекатомба	r55						
+pspe									Ягуар	r55						
+ashd									Мироносица	r55						
+helm									Мухомор	r55						
+tors									Тонкие Тела	r55						
+belt									Нерон	r55						
+ishd									Орхидея	r55						
+staf									Зодиак	r55						
+bow									Звездная Пыль	r55						
+h2h									Джокер	r55						
+bswd	baxe								Гильгамеш	r55						
+pclb	pmac	pham							Щит и Друг	r55						
+wand									Криптия	r55						
+scrd									Взмах Звезд	r55						
+orb									Саурон	r55						
+xbow									Надгробие	r55						
+nknf									Мкодос	r56						
+2hbx									Вольфсангель	r56						
+circ									Индиго	r56						
+shld									Дервезе	r56						
+boot									Быстрина	r56						
+azhm									Шахидка	r56						
+dbow									Панихида	r56						
+pelt									Нигра	r56						
+dstf									Германубис	r56						
+aspe									Фрейбаг	r56						
+abow									Сисейлия	r56						
+ajav									Призрак	r56						
+nagi									Онивака	r56						
+nscy									Зиинч	r56						
+scep									Отступничество	r56						
+nxbw									Рея	r56						
+bow									Никта	r26						
+staf									Лесальф	r30						
+scep									Йокулмордер	r36						
+xbow									Участь	r41						
+bswd	baxe								Скарн	r40						
+abow									Эрида	r37						
+aspe									Титаномахия	r24						
+ajav									Херфьотур	r41						
+pclb	pmac	pham							Кваоар	r29						
+nscy									Ивентайд	r36						
+orb									Головокружение	r22						
+dbow									Таркек	r38						
+nstf									Эвринома	r17						
+h2h									Бунт	r22						
+pspe									Решеф	r32						
+orb									Гравастар	r29						
+scrd									Брокен	r24						
+stor									Кундалини	r12						
+azhm									Камбион	r36						
+h2h									Карабосс	r15						
+nstf									Стикс	r56						
+staf									Господи, помилуй	r51	r51					
+tors									Пигмалион	r52	r52					
+weap									Архангел	r53	r53					
+glov	boot								Жулик	r54	r54					
+helm	shld								Шах и Мат	r55	r55					
+taxe									Кадьяк	r55						
+basd									Тонатиу	r55						
+tkni									Тау	r55						
+tkni									Патриот	r02						
+taxe									Фенек	r20						
+tkni									Квант	r30						
+taxe									Раптор	r40						
+nscy									Лемурия	r20						
+abow									Аспект	r13						
+phlm									Экам	r27						
+knif						tkni	nknf		Крыса	r37						
+axe									Инстинкт	r27						
+taxe									Громовое Облако	r51						
+taxe									Гепард	r02						
+tkni									Летающая Змея	r10						
+tkni									Даджаль	r20						
+taxe									Маниту	r30						
+tkni									Мириады	r40						
+tkni									Наяда	r49						
+tkni									Бурлеск	r51						
+jave									Набег	r10						
+jave									Хастата	r20						
+jave									Спешка	r30						
+jave									Турнир	r40						
+jave									Хастур	r51						
+jave									Хастин	r55						
+tors									Спасибо всем!\nMedian 2005-2012\nВечность	r51	r52	r53	r54	r55	r56	
+weap						nscy	taxe	aspe	Раздробленный Камень	r58	r58	r58	r58	r58	r58	
+bow						dbow			Дыхание Мертвеца	r62	r62	r62	r62	r62	r62	
+xbow									Оптоволокно	r61	r61	r61	r61	r61	r61	
+swor									Минное Поле	r57	r57	r57	r57	r57	r57	
+axe						taxe			Прикосновение Мидаса	r59	r59	r59	r59	r59	r59	
+spea						pspe			Бессимптомный	r60	r60	r60	r60	r60	r60	
+scyh									Солярион	r60	r60	r60	r60	r60	r60	
+knif						tkni			Ледышка Малика	r62	r62	r62				
+mace									Арахнофилия	r60	r60	r60	r60	r60	r60	
+hamm									Нейрогенезис	r61	r61	r61	r61	r61	r61	
+staf									Рука Мороза	r62	r62	r62	r62	r62	r62	
+scep									Вестник Орис	r59	r59	r59	r59	r59	r59	
+jave									Ядовитая Плоть	r60	r60	r60	r60			
+tkni									Мертвая Звезда	r60	r60					
+taxe									Драконье Семя	r58	r58	r58	r58	r58	r58	
+abow									Пик Арназеуса	r57	r57	r57	r57	r57	r57	
+ajav									Устройство Аскари	r57	r57	r57				
+aspe									Блеск	r58	r58	r58	r58	r58	r58	
+h2h									Совершенство	r59	r59	r59				
+nagi									Кровавый Танцор	r59	r59	r59	r59	r59	r59	
+bswd	baxe								Эльдруин	r62	r62	r62	r62	r62	r62	
+2hbx									Солдат Света	r61	r61	r61	r61	r61	r61	
+dbow									Амфибия	r62	r62	r62	r62	r62	r62	
+dstf									Флюгер Фиакла-Гира	r61	r61	r61	r61			
+nscy									Глаз Бартука	r58	r58	r58	r58	r58	r58	
+nknf									Порез	r58	r58	r58				
+wand									Роковой Страж	r59	r59					
+nstf									Ксазакс	r57	r57	r57	r57	r57	r57	
+nxbw									Сила Мысли	r59	r59	r59	r59	r59	r59	
+pspe									Покровитель Хадриэля	r60	r60	r60	r60	r60	r60	
+pclb	pham	pmac							Суд	r57	r57	r57	r57	r57	r57	
+orb									Хелгрота	r60	r60	r60				
+scrd									Темный Исход	r62	r62	r62	r62	r62	r62	
+tors									Пластины Адского Огня	r57	r57	r57	r57	r57	r57	
+helm						phlm			Громовая Шляпа	r61	r61	r61	r61			
+circ									Благословение Ратмы	r62	r62	r62	r62			
+shld						basd			Покровитель Халима	r60	r60	r60	r60			
+belt									Лисра	r57	r57					
+glov									Воздаяние	r57	r57	r57	r57			
+boot									Ветровой Гонец	r58	r58	r58	r58			
+azhm									Маска Орлиного Рога	r59	r59	r59	r59			
+azsd									Сердце Сковос	r58	r58	r58	r58	r58	r58	
+ishd									Теневые Шаги	r59	r59	r59	r59	r59	r59	
+phlm									Шоковая Сила	r61	r61	r61	r61			
+basd									Благословение Триендиства	r60	r60	r60	r60			
+pelt									Благодать Природы	r60	r60	r60	r60			
+head									Извращенный Разум	r59	r59	r59	r59			
+pzhm									Боевая Ярость	r58	r58	r58	r58			
+ashd									Световая Шахта	r57	r57	r57	r57			
+stor									Космическое Помешательство	r61	r61	r61	r61	r61	r61	
+tors									\red;Наследие Наташи\blue;	r98	r98	r98	r98	r98	r98	
+tors									Мятежник	r01	r98					
+tors									Священный Свет	r06	r98					
+tors									(Median XL - 6 лет)\nПобеда	r13	r98					
+tors									Телема	r19	r98					
+tors									Собор	r25	r98					
+tors									Мираж	r33	r98					
+helm									Вершина	r01	r98					
+helm									Пушечное Ядро	r08	r98					
+helm									Ра	r17	r98					
+helm									Алхимия	r26	r98					
+circ									Сфинкс	r11	r98					
+circ									Лилия	r31	r98					
+shld									Гейс	r04	r98					
+shld									Фараон	r12	r98					
+shld									Кочевник	r20	r98					
+shld									Богиня	r30	r98					
+glov									Иблис	r04	r98					
+glov									Милость	r13	r98					
+glov									Кали	r21	r98					
+glov									Айвас	r33	r98					
+belt									Радужный	r05	r98					
+belt									Чудо	r15	r98					
+belt									Плавка	r23	r98					
+boot									Эпицентр	r06	r98					
+boot									Вне Закона	r14	r98					
+boot									Гинфакси	r22	r98					
+boot									Кратон	r32	r98					
+azhm									Стата Матер	r16	r98					
+azhm									Аматэрасу	r24	r98					
+azhm									Зигфрид	r31	r98					
+azsd									Эдда	r15	r98					
+ishd									Африт	r13	r98					
+ishd									Раав	r19	r98					
+ishd									Лигея	r28	r98					
+phlm									Альгиз	r09	r98					
+phlm									Насреддин	r19	r98					
+basd									Энмеркар	r17	r98					
+basd									Тропа Войны	r27	r98					
+pelt									Ли-Нежа	r18	r98					
+pelt									Натха	r28	r98					
+head									Куб	r16	r98					
+head									Колдун	r25	r98					
+pzhm									Илматар	r10	r98					
+pzhm									Раб	r25	r98					
+ashd									Асмодей	r14	r98					
+ashd									Святой Грааль	r28	r98					
+ashd									Зогар	r33	r98					
+stor									Деметра	r23	r98					
+stor									Курандера	r29	r98					
+phlm									Фоукс	r33	r98					
+azhm									Благая Богиня	r19	r98					
+ishd									Ямба	r23	r98					
+pelt									Эгипан	r09	r98					
+tors									Палиак	r10	r98					
+stor									Черный Древень	r11	r98					
+glov									Гул	r16	r98					
+stor									Кундалини	r12	r98					
+phlm									Экам	r27	r98					
+weap									Рассвет	r01	r98					
+weap									Акула	r07	r98					
+weap									Энио	r14	r98					
+weap									Азраэль	r21	r98					
+weap									Пустота	r28	r98					
+bow									Банши	r03	r98					
+bow									Ударная Волна	r12	r98					
+bow									Баланс	r22	r98					
+bow									Рой	r30	r98					
+xbow									Таммуз	r04	r98					
+xbow									Питон	r16	r98					
+xbow									Циклоп	r29	r98					
+knif						tkni			Королевская Кровь	r26	r98					
+scyh									Эндор	r31	r98					
+spea									Мирмидонец	r29	r98					
+mace						hamm			Демхе	r33	r98					
+staf									Мир Мистики	r04	r98					
+staf									Хадад	r11	r98					
+staf									Сумманус	r19	r98					
+staf									Эхнатон	r27	r98					
+scep									Пророчество	r06	r98					
+scep									Погибель	r17	r98					
+scep									Иуда	r22	r98					
+scep									Путь	r30	r98					
+aspe									Аегина	r11	r98					
+ajav									Шрам	r16	r98					
+ajav									Светлячок	r26	r98					
+abow									Корсар	r15	r98					
+abow									Ледокол	r29	r98					
+h2h									Шедим	r02	r98					
+h2h									Демон	r17	r98					
+h2h									Судья	r27	r98					
+nagi									Хаттак	r08	r98					
+bswd	baxe								Овен	r10	r98					
+bswd	baxe								Эссус	r22	r98					
+bswd	baxe								Громовержец	r32	r98					
+dbow									Павлин	r13	r98					
+dbow									Рысь	r27	r98					
+dbow									Лесное Свечение	r33	r98					
+dstf									Океан	r05	r98					
+dstf									Самайн	r12	r98					
+dstf									Авгур	r20	r98					
+dstf									Линкос	r29	r98					
+nscy									Черная Кошка	r02	r98					
+nscy									Мантра	r13	r98					
+nscy									Хтон	r29	r98					
+nknf									Лоа	r05	r98					
+nknf									Джинкс	r13	r98					
+nknf									Страдание	r23	r98					
+nstf									Глубинная Вода	r06	r98					
+nstf									Ладон	r25	r98					
+wand									Коан	r09	r98					
+wand									Упырь	r20	r98					
+nxbw									Джинн	r08	r98					
+nxbw									Атлантида	r19	r98					
+nxbw									Эфир	r31	r98					
+pclb	pmac	pham							Джихад	r05	r98					
+pclb	pmac	pham							Интифада	r15	r98					
+pclb	pmac	pham							Ламмасу	r25	r98					
+pspe									Нехуштан	r27	r98					
+orb									Цирцея	r11	r98					
+orb									Керы	r20	r98					
+scrd									Инанна	r12	r98					
+nagi									Шамо	r16	r98					
+bow									Амок	r09	r98					
+bswd	baxe								Гараник	r33	r98					
+bow									Шершень	r17	r98					
+bow									Никта	r26	r98					
+staf									Лесальф	r30	r98					
+aspe									Титаномахия	r24	r98					
+pclb	pmac	pham							Кваоар	r29	r98					
+orb									Головокружение	r22	r98					
+nstf									Эвринома	r17	r98					
+h2h									Бунт	r22	r98					
+pspe									Решеф	r32	r98					
+orb									Гравастар	r29	r98					
+scrd									Брокен	r24	r98					
+h2h									Карабосс	r15	r98					
+tkni									Патриот	r02	r98					
+taxe									Фенек	r20	r98					
+tkni									Квант	r30	r98					
+nscy									Лемурия	r20	r98					
+abow									Аспект	r13	r98					
+axe									Инстинкт	r27	r98					
+taxe									Гепард	r02	r98					
+tkni									Летающая Змея	r10	r98					
+tkni									Даджаль	r20	r98					
+taxe									Маниту	r30	r98					
+jave									Набег	r10	r98					
+jave									Хастата	r20	r98					
+jave									Спешка	r30	r98					
+pspe									Асы	r12	r98					
+xbow									(Секрет)\nВерховентсво	r57	r61	r59	r60	r58	r62	
+staf									(Секрет)\nПолзание	r60	r59	r57	r62	r61	r58	
+scyh									(Секрет)\nSouthern Trendkill	r58	r62	r61	r59	r57	r60	
+spea									(Секрет)\nМирные Продажи	r61	r57	r60	r58	r62	r59	
+scep									(Секрет)\nЧерный Пес	r59	r58	r62	r61	r60	r57	
+tors									(Секрет)\nЛонгвью	r62	r60	r58	r57	r59	r61	
+weap	armo								Секретный Бонус Драгоценного Камня!	jew						
