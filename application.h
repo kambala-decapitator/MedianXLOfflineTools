@@ -2,13 +2,13 @@
 #define APPLICATION_H
 
 #include "qtsingleapplication/QtSingleApplication"
+#include "medianxlofflinetools.h"
 
 #ifdef Q_OS_MAC
 #include <QPointer>
 #endif
 
 
-class MedianXLOfflineTools;
 class QTimer;
 
 class Application : public QtSingleApplication
@@ -36,6 +36,7 @@ private slots:
 private:
     MedianXLOfflineTools *_mainWindow;
     QString _param;
+    LaunchMode _launchMode;
 #ifdef Q_OS_MAC
     QPointer<QTimer> _showWindowMacTimer;
 

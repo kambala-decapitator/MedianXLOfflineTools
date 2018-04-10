@@ -18,6 +18,7 @@
 #include <QDir>
 #include <QFile>
 #include <QRegExp>
+#include <QTimer>
 
 #ifndef QT_NO_DEBUG
 #include <QDebug>
@@ -137,7 +138,11 @@ DupeScanDialog::DupeScanDialog(const QString &currentPath, bool isDumpItemsMode,
     mainLayout->addWidget(_logBrowser);
     mainLayout->addLayout(hbl2);
 
-    _pathLineEdit->setText(QDir::toNativeSeparators(QFileInfo(currentPath).canonicalPath()));
+    QStringList args = qApp->arguments();
+    _isAutoLaunched = args.size() == 3;
+    QString path = _isAutoLaunched ? args.last() : QFileInfo(currentPath).canonicalPath();
+    _pathLineEdit->setText(QDir::toNativeSeparators(path));
+
     _logBrowser->setReadOnly(true);
     _saveButton->setDisabled(true);
     scanButton->setDefault(true);
@@ -163,6 +168,9 @@ DupeScanDialog::DupeScanDialog(const QString &currentPath, bool isDumpItemsMode,
     }
     else
         _skipEmptyCheckBox->hide();
+
+    if (_isAutoLaunched)
+        QTimer::singleShot(0, this, SLOT(scan()));
 }
 
 DupeScanDialog::~DupeScanDialog()
@@ -230,13 +238,21 @@ void DupeScanDialog::scanFinished_()
     }
 
     _saveButton->setEnabled(true);
-    emit scanFinished();
+
+    if (_isAutoLaunched)
+    {
+        if (!_isDumpItemsMode && !saveLog(baseDupeScanLogFileName() + QString("_%1.txt").arg(QDateTime::currentMSecsSinceEpoch())))
+            qDebug("couldn't save log file");
+        qApp->quit();
+    }
+    else
+        emit scanFinished();
 }
 
 void DupeScanDialog::save()
 {
     QString plainTextFilter = "plain text (*.txt)", htmlTextFilter = "HTML (*.html)";
-    QString selectedFilter, fileName = QFileDialog::getSaveFileName(this, "Save dupe report", QFileInfo(_currentCharPath).canonicalPath() + "/MXLOT dupe stats",
+    QString selectedFilter, fileName = QFileDialog::getSaveFileName(this, "Save dupe report", baseDupeScanLogFileName(),
                                                                     plainTextFilter + ";;" + htmlTextFilter, &selectedFilter);
     if (fileName.isEmpty())
         return;
@@ -248,9 +264,7 @@ void DupeScanDialog::save()
     if (!fileName.endsWith(extension))
         fileName += extension;
     QFile f(fileName);
-    if (f.open(QIODevice::WriteOnly))
-        f.write((selectedFilter == plainTextFilter ? _logBrowser->toPlainText() : _logBrowser->toHtml()).toUtf8());
-    else
+    if (!saveLog(fileName, selectedFilter == plainTextFilter))
         ERROR_BOX("failed to save file");
 }
 
@@ -407,4 +421,18 @@ void DupeScanDialog::scanCharactersInDir(const QString &path)
         tasks << task;
     }
     _futureWatcher->setFuture(QtConcurrent::mapped(tasks, crossCompareItems));
+}
+
+bool DupeScanDialog::saveLog(const QString &fileName, bool isPlainText)
+{
+    QFile f(fileName);
+    if (!f.open(QIODevice::WriteOnly))
+        return false;
+    f.write((isPlainText ? _logBrowser->toPlainText() : _logBrowser->toHtml()).toUtf8());
+    return true;
+}
+
+QString DupeScanDialog::baseDupeScanLogFileName()
+{
+    return _pathLineEdit->text() + "/MXLOT dupe stats";
 }

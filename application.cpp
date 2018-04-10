@@ -1,5 +1,4 @@
 #include "application.h"
-#include "medianxlofflinetools.h"
 
 #if defined(Q_OS_WIN32)
 #include <QTextCodec>
@@ -10,7 +9,7 @@
 static const QString kAppName("Median XL Offline Tools");
 
 
-Application::Application(int &argc, char **argv) : QtSingleApplication(kAppName, argc, argv), _mainWindow(0)
+Application::Application(int &argc, char **argv) : QtSingleApplication(kAppName, argc, argv), _mainWindow(0), _launchMode(LaunchModeNormal)
 {
 #ifdef Q_OS_WIN32
     ::AllowSetForegroundWindow(ASFW_ANY);
@@ -18,6 +17,16 @@ Application::Application(int &argc, char **argv) : QtSingleApplication(kAppName,
 
     if (argc > 1)
     {
+#ifdef DUPE_CHECK
+        if (argc == 3)
+        {
+            if (!strcmp(argv[1], "-dupeScan"))
+                _launchMode = LaunchModeDupeScan;
+            else if (!strcmp(argv[1], "-dumpItems"))
+                _launchMode = LaunchModeDumpItems;
+        }
+        else
+#endif
 #ifdef Q_OS_WIN32
         _param = QTextCodec::codecForLocale()->toUnicode(argv[1]); // stupid Windows
 #else
@@ -61,7 +70,7 @@ void Application::init()
 
 void Application::createAndShowMainWindow()
 {
-    _mainWindow = new MedianXLOfflineTools(_param);
+    _mainWindow = new MedianXLOfflineTools(_param, _launchMode);
 #ifdef Q_OS_MAC
     disableLionWindowRestoration();
     delete _showWindowMacTimer;

@@ -32,6 +32,13 @@ class QTimer;
 class QNetworkAccessManager;
 class QNetworkReply;
 
+enum LaunchMode
+{
+    LaunchModeNormal,
+    LaunchModeDupeScan,
+    LaunchModeDumpItems
+};
+
 class MedianXLOfflineTools : public QMainWindow
 {
     Q_OBJECT
@@ -42,7 +49,7 @@ public:
     static const int kSkillsNumber, kDifficultiesNumber, kMaxRecentFiles;
     static const int kStatPointsPerLevel, kSkillPointsPerLevel;
 
-    MedianXLOfflineTools(const QString &cmdPath = QString(), QWidget *parent = 0, Qt::WindowFlags flags = 0);
+    MedianXLOfflineTools(const QString &cmdPath, LaunchMode launchMode, QWidget *parent = 0, Qt::WindowFlags flags = 0);
     virtual ~MedianXLOfflineTools();
 
 public slots:

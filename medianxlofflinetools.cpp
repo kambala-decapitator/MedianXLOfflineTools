@@ -76,7 +76,7 @@ const int MedianXLOfflineTools::kMaxRecentFiles = 15;
 
 // ctor
 
-MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *parent, Qt::WindowFlags flags) : QMainWindow(parent, flags), ui(new Ui::MedianXLOfflineToolsClass), _findItemsDialog(0),
+MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, LaunchMode launchMode, QWidget *parent, Qt::WindowFlags flags) : QMainWindow(parent, flags), ui(new Ui::MedianXLOfflineToolsClass), _findItemsDialog(0),
     _backupLimitsGroup(new QActionGroup(this)), _showDisenchantPreviewGroup(new QActionGroup(this)), _isLoaded(false), kHackerDetected(tr("1337 hacker detected! Please, play legit.")),
     maxValueFormat(tr("Max: %1")), minValueFormat(tr("Min: %1")), investedValueFormat(tr("Invested: %1")),
     kForumThreadHtmlLinks(QString("<a href=\"http://forum.median-xl.com/viewtopic.php?f=40&t=342\">%1</a><br><a href=\"http://worldofplayers.ru/threads/34489/\">%2</a>").arg(tr("Official Median XL Forum thread"), tr("Official Russian Median XL Forum thread"))),
@@ -179,6 +179,7 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *pare
     QTimer::singleShot(2000, this, SLOT(moveUpdateActionToAppleMenu())); // needs a slight delay to create menu
 #endif
 
+#ifndef DUPE_CHECK
     bool didModVersionChange = SkillplanDialog::didModVersionChange(); // must be called before the following conditions because it should load planner/readable versions
     if (!cmdPath.isEmpty())
         loadFile(cmdPath);
@@ -199,8 +200,7 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *pare
 #endif
         updateWindowTitle();
     }
-
-#ifdef DUPE_CHECK
+#else
     QAction *dupeCheckAction = new QAction("Dupe Check", this);
     dupeCheckAction->setShortcut(QKeySequence("Ctrl+D"));
     connect(dupeCheckAction, SIGNAL(triggered()), SLOT(showDupeCheck()));
@@ -211,6 +211,9 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, QWidget *pare
     dumpItemsAction->setData(true);
     connect(dumpItemsAction, SIGNAL(triggered()), SLOT(showDupeCheck()));
     ui->menuFile->insertAction(ui->actionSaveCharacter, dumpItemsAction);
+
+    if (launchMode != LaunchModeNormal)
+        QTimer::singleShot(0, launchMode == LaunchModeDumpItems ? dumpItemsAction : dupeCheckAction, SLOT(trigger()));
 #endif
 }
 

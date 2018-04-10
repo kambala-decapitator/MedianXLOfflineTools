@@ -45,6 +45,7 @@ private:
     ItemsHash _allItemsHash;
     QFutureWatcher<QString> *_futureWatcher;
     QTime _timeCounter;
+    bool _isAutoLaunched;
 
     QLineEdit *_pathLineEdit;
     QTextEdit *_logBrowser;
@@ -54,6 +55,8 @@ private:
 
     void appendStringToLog(const QString &s);
     void scanCharactersInDir(const QString &path);
+    bool saveLog(const QString &fileName, bool isPlainText = true);
+    QString baseDupeScanLogFileName();
 };
 
 #endif // DUPESCANDIALOG_H
