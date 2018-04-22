@@ -2683,7 +2683,7 @@ void MedianXLOfflineTools::updateAssociateAction(bool disable)
 
 void MedianXLOfflineTools::updateCharacterExperienceProgressbar(quint32 newExperience)
 {
-    if ((_oldClvl == Enums::CharacterStats::MaxNonHardenedLevel && newExperience < experienceTable.at(Enums::CharacterStats::MaxNonHardenedLevel - 1) + 5) || _oldClvl == Enums::CharacterStats::MaxLevel)
+    if ((!is2017() && _oldClvl == Enums::CharacterStats::MaxNonHardenedLevel && newExperience < experienceTable.at(Enums::CharacterStats::MaxNonHardenedLevel - 1) + 5) || _oldClvl == Enums::CharacterStats::MaxLevel)
     {
         // display levels 120 and 126 as 100% of progressbar
         _expGroupBox->setPreviousLevelExperience(experienceTable.at(_oldClvl - 2));
