@@ -654,7 +654,7 @@ void MedianXLOfflineTools::saveCharacter()
         plugyFileDataStream.setByteOrder(QDataStream::LittleEndian);
         writeByteArrayDataWithoutNull(plugyFileDataStream, info.header);
         plugyFileDataStream << info.version;
-        if (info.hasGold)
+        if (iter.key() == Enums::ItemStorage::PersonalStash || info.sharedStashHasGold())
             plugyFileDataStream << info.gold;
         plugyFileDataStream << info.lastPage;
 
@@ -2310,7 +2310,8 @@ void MedianXLOfflineTools::processPlugyStash(QHash<Enums::ItemStorage::ItemStora
 
     QByteArray header;
     const int headerSize = 5;
-    if (iter.key() == Enums::ItemStorage::PersonalStash)
+    Enums::ItemStorage::ItemStorageEnum plugyStorage = iter.key();
+    if (plugyStorage == Enums::ItemStorage::PersonalStash)
         header = QByteArray("CSTM0");
     else
     {
@@ -2329,9 +2330,10 @@ void MedianXLOfflineTools::processPlugyStash(QHash<Enums::ItemStorage::ItemStora
     inputDataStream.skipRawData(headerSize);
 
     inputDataStream >> info.version;
-    if ((info.hasGold = (bytes.mid(headerSize + 1 + 4, 2) != ItemParser::kPlugyPageHeader)))
+    // in personal stash it's not really gold, simply 4 zeros: https://github.com/ChaosMarc/PlugY/blob/master/PlugY/ExtendedSaveFile.cpp#L152
+    if (plugyStorage == Enums::ItemStorage::PersonalStash || info.sharedStashHasGold())
         inputDataStream >> info.gold;
-    if (iter.key() == Enums::ItemStorage::SharedStash)
+    if (plugyStorage == Enums::ItemStorage::SharedStash)
         _sharedGold = info.gold;
 
     QString corruptedItems;
@@ -2381,7 +2383,7 @@ void MedianXLOfflineTools::processPlugyStash(QHash<Enums::ItemStorage::ItemStora
         corruptedItems += ItemParser::parseItemsToBuffer(itemsOnPage, inputDataStream, bytes, tr("Corrupted item detected in %1 on page %4 at (%2,%3)"), &plugyItems, true);
         foreach (ItemInfo *item, plugyItems)
         {
-            item->storage = iter.key();
+            item->storage = plugyStorage;
             item->plugyPage = page;
         }
         items->append(plugyItems);

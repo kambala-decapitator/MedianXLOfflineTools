@@ -93,9 +93,11 @@ struct PlugyStashInfo
     bool exists;
     QByteArray header;
     quint8 version;
-    bool hasGold;
     quint32 gold, lastPage;
     QList<QPair<quint32, QByteArray> > pagesMetadata; // PlugY v11: flags + name
+
+    PlugyStashInfo() : gold(0) {}
+    bool sharedStashHasGold() const { return version == '2'; }
 };
 
 
