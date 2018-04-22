@@ -1,19 +1,19 @@
-[B]Тема на официальном форуме Медиана[/B]: [URL]http://forum.median-xl.com/viewtopic.php?f=40&t=342[/URL]
+[B]Тема на официальном форуме Медиана[/B]: https://forum.median-xl.com/viewtopic.php?f=40&t=342
 
-[SIZE=4][COLOR=#6666ff]Это [B][U]НЕ[/U][/B] читерская программа![/COLOR][/SIZE]
+[SIZE=4][COLOR=#6666ff]Это [B][U]НЕ[/U][/B] читерская программа и только для [B][U]Одиночной Игры[/U][/B]![/COLOR][/SIZE]
 
 Как можно догадаться из названия, это практически полный оффлайн аналог grig'овских [URL='http://grig.vlexofree.com/']MXL Online Tools[/URL] (они расписаны в [URL='http://worldofplayers.ru/threads/33303/']теме ЧаВо[/URL]), но со многими дополнениями.
 
 Приложение должно грузить персонажа из любой версии Median XL и успешно выполнять над ним базовые операции типа сброса атрибутов/навыков. Обработка предметов полагается на исходники мода, а потому может быть несовместима с персонажем из другой версии. Эти данные не зашиты в программу, потому когда выйдет новая версия мода, программу не нужно перекомпилировать — обычно достаточно просто заменить файлы в 'resources/data' новыми, которые я выложу. Текущие поддерживаемые версии:
 [LIST]
-[*]Median XL 2017 1.2
+[*]Median XL 2017 1.3
 [*]Ultimative XVI (персонажи из v5+ должны быть совместимыми)
 [*]Kehjan Labyrinth + Tathamet vs Anu [Лабиринт Кейджан + Тафамет против Ану]
 [*]Hardened
 [*]Median XL 2012 v005 (более ранние версии тоже должны работать)
 [/LIST]
 
-Приложение написано на C++ с использованием [URL='https://www.qt.io']фреймворка Qt[/URL] (версии 4.8.5 на данный момент), так что можете даже не пытаться дотнетрефлекторнуть исходный код (а он не будет опубликован по очевидным причинам).
+Приложение написано на C++ с использованием [URL='https://www.qt.io']фреймворка Qt[/URL] (версии 4.8.7 на данный момент), так что можете даже не пытаться дотнетрефлекторнуть исходный код (а он не будет опубликован по очевидным причинам).
 
 Надеюсь я создал достаточную защиту от хаков для среднестатистического юзера. Но если же вам всё-таки удастся хакнуть персонажа и сохранить его через эту программу, пожалуйста сообщите мне об этом, чтоб я мог закрыть эту дыру :)
 
@@ -59,20 +59,21 @@
 [/LIST]
 [/spoiler]
 
-[SIZE=4][COLOR=#6666ff]ПРЕДУПРЕЖДЕНИЕ: по умолчанию вы можете открывать только персонажей [B]Median XL 2017.003[/B]. Если вы хотите открывать персонажей из других модов или версий, пожалуйста перейдите в секцию загрузок [B]Данные модов[/B].[/COLOR][/SIZE]
+[SIZE=4][COLOR=#6666ff]ПРЕДУПРЕЖДЕНИЕ: по умолчанию вы можете открывать только персонажей [B]Median XL 2017[/B]. Если вы хотите открывать персонажей из других модов или версий, пожалуйста перейдите в секцию загрузок [B]Данные модов[/B].[/COLOR][/SIZE]
 
 [B]Загрузки[/B]:
 [LIST]
 [*][B]Приложение[/B]:
 [LIST]
-[*][I]Windows[/I] (XP SP3 и позже): [URL]https://www.mediafire.com/?bf55oj2yk7nvho5[/URL] (если не запускается, установите MSVC++ 2015 Redistributable [FONT=Courier New]vc_redist.x[B]86[/B].exe[/FONT] с [URL=https://www.mediafire.com/?84qc8d5dy3cd9f6]Mediafire[/URL] или с [URL=https://www.microsoft.com/en-us/download/details.aspx?id=52685]сайта Microsoft[/URL])
-[*][I]Mac OS X[/I] (10.5 и позже, универсальное приложение): [URL]http://www.mediafire.com/file/ozmekiq326auq81/MedianXLOfflineTools_mac_0.4.4.tbz[/URL]
+[*][I]Windows[/I] (XP SP3 и позже): http://mxl.vn.cz/kambala/MedianXLOfflineTools_0.4.5.7z (если не запускается, установите MSVC++ 2015 Redistributable [FONT=Courier New]vc_redist.x[B]86[/B].exe[/FONT] с [URL='https://www.mediafire.com/?84qc8d5dy3cd9f6']Mediafire[/URL] или с [URL='https://www.microsoft.com/en-us/download/details.aspx?id=52685']сайта Microsoft[/URL])
+[*][I]macOS[/I] (10.9 и позже, Intel 64bit, рекомендуемая версия для современных ОС): http://mxl.vn.cz/kambala/MedianXLOfflineTools_mac_0.4.5.tbz
+[*][I]старые Mac OS X[/I] (10.5 и позже, 32bit универсальное приложение, не будет запускаться начиная с macOS 10.14): http://mxl.vn.cz/kambala/MedianXLOfflineTools_mac_universal_32bit_0.4.5.tbz
 [/LIST]
 [*][B]Данные модов[/B] (инструкции по установке находятся ниже в Mini-FAQ):
 [LIST]
-[*][I]2017 1.2:[/I] [URL]http://www.mediafire.com/file/1dfw6f38pjo7era/2017-1.2.zip[/URL]
-[*][I]Ultimative XVI:[/I] [URL]http://www.mediafire.com/file/5ipow09n3lfd39d/ultimativeXVI.7z[/URL]
-[*][I]2012 v005 / Лабиринт Кейджан + Тафамет против Ану / Hardened:[/I] [URL]http://www.mediafire.com/?4vkkq8jskza2btg[/URL]
+[*][I]2017 1.2:[/I] http://mxl.vn.cz/kambala/2017-1.2.zip
+[*][I]Ultimative XVI:[/I] http://mxl.vn.cz/kambala/ultimativeXVI.7z
+[*][I]2012 v005 / Лабиринт Кейджан + Тафамет против Ану / Hardened:[/I] http://mxl.vn.cz/kambala/2012-005+kehjan+tathamet.7z
 [/LIST]
 [/LIST]
 
@@ -118,13 +119,21 @@ cp -R resources/data/* "${APP_PATH}/Contents/resources/data"[/code]
 
 [B]История версий:[/B]
 
+[I]v0.4.5 (22.04.2018)[/I]
+[LIST]
+[*][ф] исправлено сохранение общего сундука когда в нем нет золота
+[*][ф] исправлено определение многорунных РС
+[*][ф] исправлена загрузка данных мода, отличных от версии 2017
+[*][ф] исправлено отображение древа навыков Амазонки
+[/LIST]
+
+[spoiler="предыдущие версии"]
 [I]v0.4.4 (28.06.2017)[/I]
 [LIST]
 [*][+] поддержка Median XL 2017
 [*][ф] исправлен вылет программы при закрытии диалога обновления в Windows
 [/LIST]
 
-[spoiler="предыдущие версии"]
 [I]v0.4.3 (02.05.2017)[/I]
 [LIST]
 [*][+] поддержка PlugY v11
@@ -341,7 +350,7 @@ cp -R resources/data/* "${APP_PATH}/Contents/resources/data"[/code]
 [*][I]BrotherLaz'у[/I] за этот шикарный мод
 [*][I]MarcoNecroX'у[/I] за клёвое расширение Median XL под названием Ultimative
 [*][I]grig'у[/I] за Перловские исходники его Median XL Online Tools и помощь
-[*][I][URL='http://d2mods.info/index.php?ind=reviews&op=section_view&idev=4']Phrozen Keep Гайдам[/URL][/I] за кучу полезной информации по текстовикам
+[*][I][URL='https://d2mods.info/index.php?ind=reviews&op=section_view&idev=4']Phrozen Keep Гайдам[/URL][/I] за кучу полезной информации по текстовикам
 [*][I]aahz[/I] за предоставление места на сервере MXL
 [*][I]whist'у[/I] за помощь с магией текстовиков и внутренностями D2
 [*][I]участникам обоих форумов[/I] (полный список указан в приложении) за интенсивное тестирование и советы по ГУИ и функциональности
