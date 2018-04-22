@@ -11,7 +11,7 @@
 
 // TODO: check current mod version
 static const QString kDefaultModVersionReadable("2012 v005"), kDefaultModVersionPlanner("2012005");
-static const QString kBaseUrl("http://www.authmann.de/d2/mxl/skillpointplanner/?v=%1&class=%2&lvl=%3&bonus=%4&skills=%5&mg=%6&sos=%8&name=%7");
+static const QString kBaseUrl("https://www.authmann.de/d2/mxl/skillpointplanner/?v=%1&class=%2&lvl=%3&bonus=%4&skills=%5&mg=%6&sos=%8&name=%7");
 
 QString SkillplanDialog::_modVersionReadable;
 QString SkillplanDialog::_modVersionPlanner;

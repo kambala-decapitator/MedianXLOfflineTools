@@ -452,7 +452,7 @@ QString PropertiesDisplayManager::propertyDisplay(ItemProperty *propDisplay, int
     (valueStringSigned, "%+d", value);
 
     QString description = value < 0 ? prop->descNegative : prop->descPositive, result;
-    switch (prop->descFunc) // it's described in http://d2mods.info/index.php?ind=reviews&op=entry_view&iden=448 - ItemStatCost.txt tutorial
+    switch (prop->descFunc) // it's described in https://d2mods.info/index.php?ind=reviews&op=entry_view&iden=448 - ItemStatCost.txt tutorial
     {
     case 0:
         break;

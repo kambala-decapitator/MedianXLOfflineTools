@@ -99,7 +99,7 @@ FindItemsDialog::FindItemsDialog(QWidget *parent) : QDialog(parent), ui(new Ui::
         "<h3>Search results</h3>"
         "<p>Hovering upon an item in the search results drop-down will display matched line with an actual match highlighted in <b>bold</b>.</p>"
         "<p>Double-clicking or pressing Return/Enter on an item shows it in the items window.</p>"
-        ).arg("http://qt-project.org/doc/qt-4.8/qregexp.html#details"), this);
+        ).arg("https://doc.qt.io/archives/qt-4.8/qregexp.html#details"), this);
     connect(ui->buttonBox, SIGNAL(helpRequested()), _helpDislplayManager, SLOT(showHelp()));
 }
 

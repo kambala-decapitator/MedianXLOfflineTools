@@ -79,7 +79,7 @@ const int MedianXLOfflineTools::kMaxRecentFiles = 15;
 MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, LaunchMode launchMode, QWidget *parent, Qt::WindowFlags flags) : QMainWindow(parent, flags), ui(new Ui::MedianXLOfflineToolsClass), _findItemsDialog(0),
     _backupLimitsGroup(new QActionGroup(this)), _showDisenchantPreviewGroup(new QActionGroup(this)), _isLoaded(false), kHackerDetected(tr("1337 hacker detected! Please, play legit.")),
     maxValueFormat(tr("Max: %1")), minValueFormat(tr("Min: %1")), investedValueFormat(tr("Invested: %1")),
-    kForumThreadHtmlLinks(QString("<a href=\"http://forum.median-xl.com/viewtopic.php?f=40&t=342\">%1</a><br><a href=\"http://worldofplayers.ru/threads/34489/\">%2</a>").arg(tr("Official Median XL Forum thread"), tr("Official Russian Median XL Forum thread"))),
+    kForumThreadHtmlLinks(QString("<a href=\"https://forum.median-xl.com/viewtopic.php?f=40&t=342\">%1</a><br><a href=\"http://worldofplayers.ru/threads/34489/\">%2</a>").arg(tr("Official Median XL Forum thread"), tr("Official Russian Median XL Forum thread"))),
     _fsWatcher(new QFileSystemWatcher(this)), _fileChangeTimer(0), _isFileChangedMessageBoxRunning(false)
 {
     ui->setupUi(this);
@@ -1149,12 +1149,12 @@ void MedianXLOfflineTools::checkForUpdate()
         displayInfoAboutServerVersion(reply->readAll().trimmed());
     }
     else
-        checkForUpdateFromForumUrl(QUrl("http://forum.median-xl.com/viewforum.php?f=40"));
+        checkForUpdateFromForumUrl(QUrl("https://forum.median-xl.com/viewforum.php?f=40"));
 }
 
 void MedianXLOfflineTools::aboutApp()
 {
-    const QString appFullName = qApp->applicationName() + " v" + qApp->applicationVersion(), email("decapitator@ukr.net"), baseUserUrl("http://forum.median-xl.com/memberlist.php?mode=viewprofile&u");
+    const QString appFullName = qApp->applicationName() + " v" + qApp->applicationVersion(), email("decapitator@ukr.net"), baseUserUrl("https://forum.median-xl.com/memberlist.php?mode=viewprofile&u");
 
     QMessageBox aboutBox(this);
     aboutBox.setWindowTitle(tr("About %1").arg(qApp->applicationName()));
@@ -1166,7 +1166,7 @@ void MedianXLOfflineTools::aboutApp()
         tr("<b>Author:</b> Filipenkov Andrey aka <a href=\"%1=531\">kambala</a>", "arg is base URL").arg(baseUserUrl)
         + QString(
             "<ul>"
-              "<li>Telegram: <a href=\"http://telegram.me/kambala_decapitator\">@kambala_decapitator</a></li>"
+              "<li>Telegram: <a href=\"https://telegram.me/kambala_decapitator\">@kambala_decapitator</a></li>"
               "<li>E-mail: <a href=\"mailto:%1?subject=%2\">%1</a></li>"
             "</ul>").arg(email, appFullName)
         + kForumThreadHtmlLinks + kHtmlLineBreak + kHtmlLineBreak
@@ -1174,8 +1174,8 @@ void MedianXLOfflineTools::aboutApp()
              "<ul>"
                "<li><a href=\"http://modsbylaz.vn.cz/\">BrotherLaz</a> for this awesome mod</li>"
                "<li><a href=\"%1=2\">MarcoNecroX</a> for a hot extension of Median XL called <b>Ultimative</b></li>"
-               "<li>grig for the Perl source of <a href=\"http://grig.vlexofree.com/\">Median XL Online Tools</a> and tips</li>"
-               "<li><a href=\"http://d2mods.info/index.php?ind=reviews&op=section_view&idev=4\">Phrozen Keep File Guides</a> for tons of useful information on txt sources</li>"
+               "<li>grig for the Perl source of <a href=\"https://grig.vlexofree.com/\">Median XL Online Tools</a> and tips</li>"
+               "<li><a href=\"https://d2mods.info/index.php?ind=reviews&op=section_view&idev=4\">Phrozen Keep File Guides</a> for tons of useful information on txt sources</li>"
                "<li><a href=\"%1=59\">aahz</a> for providing space on MXL server</li>"
                "<li><a href=\"%1=64\">whist</a> for helping with txt magic and D2 internals</li>"
                "<li>FixeR, Zelgadiss, moonra, Vilius, Delegus, aahz, HerrNieschnell, Quirinus, RollsRoyce, Aks_kun, Unremarkable and gAdlike for help, intensive testing and tips on GUI & functionality</li>"
