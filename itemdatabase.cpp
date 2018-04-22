@@ -391,9 +391,6 @@ RunewordHash *ItemDataBase::RW()
             rw->allowedItemTypes.reserve(6);
             for (; column < 6; ++column)
                 rw->allowedItemTypes << data.at(column);
-            rw->disallowedItemTypes.reserve(3);
-            for (int j = 0; j < 3; ++j)
-                rw->disallowedItemTypes << data.at(column++);
             rw->name = QString::fromUtf8(data.at(column++));
 
             QByteArray key;

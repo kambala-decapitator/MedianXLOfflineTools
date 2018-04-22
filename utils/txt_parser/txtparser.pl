@@ -1,7 +1,7 @@
 #!/usr/bin/env perl
 
 # original script copyright (C) grig 2011
-# improvements and modifications for Median XL Offline Tools copyright (C) kambala 2011-2017
+# improvements and modifications for Median XL Offline Tools copyright (C) kambala 2011-2018
 
 use strict;
 use warnings;
@@ -251,7 +251,7 @@ for (1..6) {
     $rwKeysHash{"allowedType$_"} = $_ + 2;
     $rwKeysHash{"rune$_"} = $_ + 11
 }
-$rwKeysHash{"disallowedType$_"} = $_ + 8 for (1..3);
+# $rwKeysHash{"disallowedType$_"} = $_ + 8 for (1..3);
 my $rw = parsetxt("runes.txt", _autoindex => 0, tbl => 0, '!_enabled' => {col => 1, val => $zeroRe},
                   '!_rune' => {col => 12, val => qr/^jew$/}, %rwKeysHash);
 push(@$rw, {tbl => '09This', allowedType1 => 'weap', allowedType2 => 'armo', rune1 => 'jew'}); # yeah, it's a hack (jewelword)
@@ -338,8 +338,8 @@ my %invgfx; $invgfx{"invgfx$_"} = 31 + $_ for (1..6);
 my @invgfxKeys = sort keys %invgfx;
 my $itemTypes = parsetxt("itemtypes.txt", "#code"=>0, code0=>4, equiv1=>5, equiv2=>6, bodyLoc=>9, class=>30, %invgfx);
 open my $out, ">", "generated/itemtypes.txt";
-print $out "#code\tequiv\tvarImages\n";
-for my $name (keys %$itemTypes)
+print $out "#code\tequiv\tvarImages\tname\n";
+for my $name (sort keys %$itemTypes)
 {
     my $hashRef = $itemTypes->{$name};
     next unless defined $hashRef->{equiv1} and defined $hashRef->{code0};
@@ -353,7 +353,7 @@ for my $name (keys %$itemTypes)
         last unless defined $varImage;
         push @varImages, $varImage;
     }
-    print $out "\t", join(",", @varImages), "\n"
+    print $out "\t", join(",", @varImages), "\t$name\n"
 }
 close $out;
 
@@ -364,7 +364,7 @@ print $out "type\tsockettype\tclass\n"; # these columns are treated specially
 my $itemType = 0;
 for my $ref ($armorTypes, $weaponTypes, $miscTypes)
 {
-    for my $itemCode (keys %$ref)
+    for my $itemCode (sort keys %$ref)
     {
         my $hashRef = $ref->{$itemCode};
         next unless defined $hashRef->{w};
@@ -413,7 +413,7 @@ close $out;
 
 open $out, ">", "generated/sets.txt";
 print $out "#index\t".join("\t", @setsPropertiesKeys)."\n";
-for my $setKey (keys %$sets)
+for my $setKey (sort keys %$sets)
 {
     print $out $setKey;
     print $out "\t".($sets->{$setKey}->{$_} // '') for (@setsPropertiesKeys);
@@ -507,7 +507,7 @@ close $out;
 my @gemKeys = sort keys %gemStatsHash;
 open $out, ">", "$prefix/socketables.txt";
 print $out "#code\t$itemName\tletter\t".join("\t", @gemKeys)."\n";
-for my $gemCode (keys %$gems)
+for my $gemCode (sort keys %$gems)
 {
     next if length $gemCode == 0; # skip 'Expansion'
     my $hashRef = $gems->{$gemCode};

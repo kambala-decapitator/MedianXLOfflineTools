@@ -241,7 +241,7 @@ struct MysticOrb
 
 struct RunewordInfo
 {
-    QList<QByteArray> allowedItemTypes, disallowedItemTypes;
+    QList<QByteArray> allowedItemTypes;
     QString name;
 };
 typedef QMultiHash<QByteArray, RunewordInfo *> RunewordHash;

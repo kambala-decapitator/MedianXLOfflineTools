@@ -1,239 +1,239 @@
-#code	equiv	varImages
-play	misc	
-sock	misc	
-qxbw	xbow,ct2w	
-s2ha	2hax,ct2w	
-spmc	pmac,ct1w	
-qamu	amul	invamu1,invamu2,invamu3
-2hbs	bswd,2hsd	
-xbow	miss	
-hpot	poti	
-azsd	shie	
-elix	misc	
-lcha	char	invch3,invch6,invch9
-scrd	mele,sbox	
-scyh	pole	
-bshi	shie	
-gem	sock	
-gems	gem	
-s2hb	2hbs,ct2w	
-gemz	gem	
-rod	blun	
-knif	mele,dbox	
-###6	qblt	
-arae	char	
-amaz	clas,fbox	
-qrin	ring	invrin1,invrin2,invrin3,invrin4,invrin5
-pole	mele	
-qmac	mace,ct1w	
-h2h2	h2h	
-qcrn	qbhe	
-crsd	swor	
-snxb	nxbw,ct2w	
-dbow	bow,dbox	
-armo	myor	
-mcha	char	invch2,invch5,invch8
-arac	char	
-grtz	char	
-qabw	abow,ct2w	
-gemo	gem	
-barb	clas,fbox	
-swea	ssgl	
-saba	basd,ct1a	
-weap	myor	
-gold	misc	
-sscd	scrd,ct1w	
-qspe	spea,ct2w	
-###7	qglv	
-sbsd	bswd,ct1w	
-pspe	spea,pbox	
-summ	char	
-jewl	sock,dcht	invjw1,invjw2,invjw3,invjw4,invjw5,invjw6
-sdst	dstf,ct2w	
-s2hx	2hbx,ct2w	
-myor	dcht	
-ct1x	ssgl	
-qcic	circ,ct1a	
-gep2	gep1	
-snag	nagi,ct2w	
-thro	weap	
-gem2	gem	
-qbow	bow,ct2w	
-axe	mele,dbox	
-###4	qshi	
-taxe	comb,axe	
-gem0	gem	
-sstr	stor,ct2a	
-dstf	staf,dbox	
-mxbq	xboq	
-nknf	knif,nbox	
-herb	misc	
-qaqv	qmsl	
-h2h	mele,assn	
-pala	clas	
-###1	ring	lab_rn1,lab_rn2
-crow	helm	
-staf	rod	
-gem1	gem	
-necr	clas	
-xrun	rune,gem	
-qstf	staf,ct2w	
-book	misc	
-ashd	shie,pala	
-sbax	baxe,ct1w	
-gemp	gem	
-bhlm	helm	
-qbhe	qhlm	
-qtor	tors,ct2a	
-araf	char	
-tpot	thro	
-qcqv	qmsl	
-gem4	gem	
-jave	comb,spea	
-wpot	poti	
-araa	char	
-qknf	knif,ct1w	
-mele	weap	
-dbox	fbox	
-aspe	spea,amaz	
-2hax	axe	
-qscy	scyh,ct2w	
-scep	rod,mace	
-###2	amul	
-gep4	gep3	
-qaxe	axe,ct1w	
-#bow	bow	
-pzhm	helm	
-abow	bow,amaz	
-gemd	gem	
-nbox	fbox	
-torc	misc	
-arab	char	
-qbon	qshi	
-ajav	jave,amaz	
-###5	qhlm	
-pclb	club,pbox	
-qscp	scep,ct1w	
-prsh	thng	
-qshi	shie,ct1a	
-amul	riam,hlm1	invamu1,invamu2,invamu3
-nscy	scyh,nbox	
-sbox	fbox	
-helm	armo,hlm1	
-qorb	orb,ct1w	
-sarm	ssgl	
-geml	gem	
-xboq	misl	
-sphz	pzhm,ct1a	
-boot	armo,hlm1	
-geme	gem	
-body	misc	
-qham	hamm	
-key	misc	
-qjvn	jave,ct1w	
-drui	clas	
-tkni	comb,knif	
-spsp	pspe,ct2w	
-arad	char	
-circ	helm	
-2hbx	baxe,2hax	
-blun	mele	
-arag	char	
-qswd	swor,ct1w	
-ring	riam,dcht	invrin1,invrin2,invrin3,invrin4,invrin5
-bow	miss	
-qtkn	tkni,ct1w	
-gema	gem	
-qajv	ajav,ct1w	
-qphm	phlm,ct1a	
-shie	shld	
-gemr	gem	
-snsy	nscy,ct2w	
-qhlm	helm,ct1a	
-ct2x	ssgl	
-riam	misc,myor	
-swor	mele	
-apot	poti	
-qh2h	h2h,ct1w	
-spcb	pclb,ct1w	
-qcrs	crsd,ct1w	
-qmsl	misl	
-hamm	blun	
-shld	armo,seco	
-belt	armo,hlm1	
-bswd	swor,barb	
-nxbw	xbow,nbox	
-bowq	misl	
-qclb	club,ct1w	
-gem3	gem	
-qblt	belt,ct1a	
-pmac	mace,pbox	
-qtax	taxe,ct1w	
-stor	tors	
-kill	misc	invrin1,invrin2,invrin3,invrin4,invrin5
-tors	armo	
-s2hd	2hsd,ct2w	
-sisd	ishd,ct1a	
-ishd	shie	
-woot	ques	
-snkf	nknf,ct1w	
-mpot	poti	
-gemq	gem	
-gemx	gem	
-azhm	helm	
-nstf	staf,nbox	
-sphm	pham,ct2w	
-miss	weap	
-wand	rod	
-glov	armo,hlm1	
-flsh	prsh	
-rpot	hpot,mpot	
-ct1a	sarm,ct1x	
-sasz	azsd,ct1a	
-sorc	clas,sbox	
-club	blun,dbox	
-qwnd	wand,ct1w	
-2hsd	swor	
-scro	misc	
-poti	misc	
-ct2w	swea,ct2x	
-phlm	helm,barb	
-###3	qtor	
-pelt	helm,drui	
-snst	nstf,ct2w	
-szhm	azhm,ct1a	
-qglv	glov,ct1a	
-spea	mele	
-tcur	amul	invamu1,invamu2,invamu3
-rune	sock	
-char	misc	invch1,invch4,invch7
-gep3	gep2	
-pham	hamm,pbox	
-qaur	ashd,ct1a	
-spot	poti	
-hlm1	dcht	
-orb	mele,sorc	
-pbox	fbox	
-qbot	boot,ct1a	
-ct1w	swea,ct1x	
-comb	mele,thro	
-ct2a	sarm,ct2x	
-assn	clas,fbox	
-sdbw	dbow,ct2w	
-###8	qbot	
-mace	blun	
-basd	shie,barb	
-qasp	aspe,ct2w	
-baxe	axe,barb	
-mboq	bowq	
-####	mele	
-qhed	head,ct1a	
-qplt	pelt,ct1a	
-scha	char	invch1,invch4,invch7
-shco	thng	
-nagi	mele,assn	
-cloa	tors,assn	
-qpol	pole,ct2w	
-head	shie,necr	
-misl	misc,myor	
-gemt	gem	
+#code	equiv	varImages	name
+2hax	axe		2h axe
+s2ha	2hax,ct2w		2h axe (Sacred)
+2hbx	baxe,2hax		2h barb axe
+s2hx	2hbx,ct2w		2h barb axe (Sacred)
+2hbs	bswd,2hsd		2h barb sword
+s2hb	2hbs,ct2w		2h barb sword (Sacred)
+2hsd	swor		2h sword
+s2hd	2hsd,ct2w		2h sword (Sacred)
+flsh	prsh		Active Shrine (10 Charges)
+abow	bow,amaz		Amazon Bow
+qabw	abow,ct2w		Amazon Bow (Sacred)
+azhm	helm		Amazon Helm
+szhm	azhm,ct1a		Amazon Helm (Sacred)
+amaz	clas,fbox		Amazon Item
+ajav	jave,amaz		Amazon Javelin
+qajv	ajav,ct1w		Amazon Javelin (Sacred)
+azsd	shie		Amazon Shield
+sasz	azsd,ct1a		Amazon Shield (Sacred)
+aspe	spea,amaz		Amazon Spear
+qasp	aspe,ct2w		Amazon Spear (Sacred)
+geml	gem		Amber
+gema	gem		Amethyst
+amul	riam,hlm1	invamu1,invamu2,invamu3	Amulet
+qamu	amul	invamu1,invamu2,invamu3	Amulet (Sacred)
+apot	poti		Antidote Potion
+armo	myor		Any Armor
+shld	armo,seco		Any Shield
+tors	armo		Armor
+qtor	tors,ct2a		Armor (Sacred)
+assn	clas,fbox		Assassin Item
+nagi	mele,assn		Assassin Naginata
+snag	nagi,ct2w		Assassin Naginata (Sacred)
+ishd	shie		Assassin Shield
+sisd	ishd,ct1a		Assassin Shield (Sacred)
+ashd	shie,pala		Auric Shields
+qaur	ashd,ct1a		Auric Shields (Sacred)
+axe	mele,dbox		Axe
+qaxe	axe,ct1w		Axe (Sacred)
+baxe	axe,barb		Barbarian Axe
+sbax	baxe,ct1w		Barbarian Axe (Sacred)
+barb	clas,fbox		Barbarian Item
+basd	shie,barb		Barbarian Shield
+saba	basd,ct1a		Barbarian Shield (Sacred)
+bswd	swor,barb		Barbarian Sword
+sbsd	bswd,ct1w		Barbarian Sword (Sacred)
+belt	armo,hlm1		Belt
+qblt	belt,ct1a		Belt (Sacred)
+gemp	gem		Bloodstone
+blun	mele		Blunt
+body	misc		Body Part
+book	misc		Book
+boot	armo,hlm1		Boots
+qbot	boot,ct1a		Boots (Sacred)
+bow	miss		Bow
+qbow	bow,ct2w		Bow (Sacred)
+bowq	misl		Bow Quiver
+qaqv	qmsl		Bow Quiver (Sacred)
+araa	char		Challenge Charm 1
+arab	char		Challenge Charm 2
+arac	char		Challenge Charm 3
+arad	char		Challenge Charm 4
+arae	char		Challenge Charm 5
+araf	char		Challenge Charm 6
+arag	char		Challenge Charm 7
+char	misc	invch1,invch4,invch7	Charm
+gem0	gem		Chipped Gem
+circ	helm		Circlet
+qcic	circ,ct1a		Circlet (Sacred)
+cloa	tors,assn		Cloak
+club	blun,dbox		Club
+qclb	club,ct1w		Club (Sacred)
+comb	mele,thro		Combo Weapon
+ct2x	ssgl		Craft Sacred Major
+ct2a	sarm,ct2x		Craft Sacred Major (Armor)
+ct2w	swea,ct2x		Craft Sacred Major (Weapon)
+ct1x	ssgl		Craft Sacred Minor
+ct1a	sarm,ct1x		Craft Sacred Minor (Armor)
+ct1w	swea,ct1x		Craft Sacred Minor (Weapon)
+xbow	miss		Crossbow
+qxbw	xbow,ct2w		Crossbow (Sacred)
+xboq	misl		Crossbow Quiver
+qcqv	qmsl		Crossbow Quiver (Sacred)
+crow	helm		Crown
+qcrn	qbhe		Crown (Sacred)
+crsd	swor		Crystal Sword
+qcrs	crsd,ct1w		Crystal Sword (Sacred)
+gemd	gem		Diamond
+dbow	bow,dbox		Druid Bow
+sdbw	dbow,ct2w		Druid Bow (Sacred)
+dbox	fbox		Druid Gift Box
+drui	clas		Druid Item
+dstf	staf,dbox		Druid Staff
+sdst	dstf,ct2w		Druid Staff (Sacred)
+xrun	rune,gem		Elemental Rune
+elix	misc		Elixir
+geme	gem		Emerald
+gem1	gem		Flawed Gem
+gem3	gem		Flawless Gem
+gem	sock		Gem
+gep2	gep1		Gem Pile 2
+gep3	gep2		Gem Pile 3
+gep4	gep3		Gem Pile 4
+glov	armo,hlm1		Gloves
+qglv	glov,ct1a		Gloves (Sacred)
+gold	misc		Gold
+hamm	blun		Hammer
+qham	hamm		Hammer (Sacred)
+h2h	mele,assn		Hand to Hand
+qh2h	h2h,ct1w		Hand to Hand (Sacred)
+h2h2	h2h		Hand to Hand 2
+hpot	poti		Healing Potion
+hlm1	dcht		Helm
+qhlm	helm,ct1a		Helm (Sacred)
+herb	misc		Herb
+jave	comb,spea		Javelin
+qjvn	jave,ct1w		Javelin (Sacred)
+jewl	sock,dcht	invjw1,invjw2,invjw3,invjw4,invjw5,invjw6	Jewel
+key	misc		Key
+knif	mele,dbox		Knife
+qknf	knif,ct1w		Knife (Sacred)
+lcha	char	invch3,invch6,invch9	Large Charm
+mace	blun		Mace
+qmac	mace,ct1w		Mace (Sacred)
+mboq	bowq		Magic Bow Quiv
+mxbq	xboq		Magic Xbow Quiv
+mpot	poti		Mana Potion
+mcha	char	invch2,invch5,invch8	Medium Charm
+kill	misc	invrin1,invrin2,invrin3,invrin4,invrin5	Mega Ring
+mele	weap		Melee Weapon
+misl	misc,myor		Missile
+qmsl	misl		Missile (Sacred)
+tpot	thro		Missile Potion
+miss	weap		Missile Weapon
+myor	dcht		Mystic Orbable
+####	mele		Mystic Sword
+nbox	fbox		Necro Gift Box
+necr	clas		Necromancer Item
+nknf	knif,nbox		Necromancer Knife
+snkf	nknf,ct1w		Necromancer Knife (Sacred)
+nscy	scyh,nbox		Necromancer Scythe
+snsy	nscy,ct2w		Necromancer Scythe (Sacred)
+nstf	staf,nbox		Necromancer Staff
+snst	nstf,ct2w		Necromancer Staff (Sacred)
+nxbw	xbow,nbox		Necromancer Xbow
+snxb	nxbw,ct2w		Necromancer Xbow (Sacred)
+helm	armo,hlm1		New Helm
+gemq	gem		Onyx
+orb	mele,sorc		Orb
+qorb	orb,ct1w		Orb (Sacred)
+pbox	fbox		Pala Gift Box
+pclb	club,pbox		Paladin Club
+spcb	pclb,ct1w		Paladin Club (Sacred)
+pham	hamm,pbox		Paladin Hammer
+sphm	pham,ct2w		Paladin Hammer (Sacred)
+pzhm	helm		Paladin Helm
+sphz	pzhm,ct1a		Paladin Helm (Sacred)
+pala	clas		Paladin Item
+pmac	mace,pbox		Paladin Mace
+spmc	pmac,ct1w		Paladin Mace (Sacred)
+pspe	spea,pbox		Paladin Spear
+spsp	pspe,ct2w		Paladin Spear (Sacred)
+pelt	helm,drui		Pelt
+qplt	pelt,ct1a		Pelt (Sacred)
+gem4	gem		Perfect Gem
+play	misc		Player Body Part
+pole	mele		Polearm
+qpol	pole,ct2w		Polearm (Sacred)
+prsh	thng		Portable Shrine
+poti	misc		Potion
+phlm	helm,barb		Primal Helm
+qphm	phlm,ct1a		Primal Helm (Sacred)
+gemx	gem		Rainbow Gem
+rpot	hpot,mpot		Rejuv Potion
+grtz	char		Reward Charm
+ring	riam,dcht	invrin1,invrin2,invrin3,invrin4,invrin5	Ring
+qrin	ring	invrin1,invrin2,invrin3,invrin4,invrin5	Ring (Sacred)
+riam	misc,myor		Rings and Amulets
+gemr	gem		Ruby
+rune	sock		Rune
+sarm	ssgl		Sacred Armor
+#bow	bow		Sacred Bow
+swea	ssgl		Sacred Weapon
+gems	gem		Sapphire
+scep	rod,mace		Scepter
+qscp	scep,ct1w		Scepter (Sacred)
+scro	misc		Scroll
+summ	char		Scroll of Summoning
+scyh	pole		Scythe
+qscy	scyh,ct2w		Scythe (Sacred)
+shie	shld		Shield
+qshi	shie,ct1a		Shield (Sacred)
+shco	thng		Shrine Container
+gemz	gem		Skull
+scha	char	invch1,invch4,invch7	Small Charm
+sock	misc		Socket Filler
+sbox	fbox		Sorc Gift Box
+scrd	mele,sbox		Sorceress Crystal Sword
+sscd	scrd,ct1w		Sorceress Crystal Sword (Sacred)
+sorc	clas,sbox		Sorceress Item
+stor	tors		Sorceress Torso
+sstr	stor,ct2a		Sorceress Torso (Sacred)
+spea	mele		Spear
+qspe	spea,ct2w		Spear (Sacred)
+bhlm	helm		Special Helm
+qbhe	qhlm		Special Helm (Sacred)
+bshi	shie		Special Shield
+qbon	qshi		Special Shield (Sacred)
+staf	rod		Staff
+qstf	staf,ct2w		Staff (Sacred)
+spot	poti		Stamina Potion
+gem2	gem		Standard Gem
+rod	blun		Staves And Rods
+swor	mele		Sword
+qswd	swor,ct1w		Sword (Sacred)
+woot	ques		Thanks For Playing
+wpot	poti		Thawing Potion
+taxe	comb,axe		Throwing Axe
+qtax	taxe,ct1w		Throwing Axe (Sacred)
+tkni	comb,knif		Throwing Knife
+qtkn	tkni,ct1w		Throwing Knife (Sacred)
+thro	weap		Thrown Weapon
+gemt	gem		Topaz
+torc	misc		Torch
+tcur	amul	invamu1,invamu2,invamu3	Trigger Curse Item
+gemo	gem		Turqoise
+head	shie,necr		Voodoo Heads
+qhed	head,ct1a		Voodoo Heads (Sacred)
+wand	rod		Wand
+qwnd	wand,ct1w		Wand (Sacred)
+weap	myor		Weapon
+###2	amul		Yshari Amulet
+###3	qtor		Yshari Armor
+###6	qblt		Yshari Belt
+###8	qbot		Yshari Boots
+###7	qglv		Yshari Gloves
+###5	qhlm		Yshari Helm
+###1	ring	lab_rn1,lab_rn2	Yshari Ring
+###4	qshi		Yshari Shield
