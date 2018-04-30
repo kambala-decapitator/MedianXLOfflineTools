@@ -2,10 +2,10 @@ description	enabled	* type	op	param	value	class	numinputs	input 1	input 2	input 
 Staff of Kings + Viper amulet -> Horadric Staff	1	Quests	28				2	msf	vip						hst																																																																																										0
 Khalim Flail + Khalim Heart + Khalim Eye + Khalim Brain -> Super Khalim Flail	1	Quests	28				4	qf1	qhr	qey	qbr				qf2																																																																																										0
 Wirt's Leg + jewel -> Cow Portal	1	Cow Level	28				2	leg	tbk						Cow Portal																																																																																										0
-test recipe		Test Recipe					1	hpot							toa	120		120																											120		120																											120		120																											100		0
+test recipe		Test Recipe					1	hpot							EmpyreanBandZ	120		120																											120		120																											120		120																											100		0
 test recipe		Test Recipe					2	"hpot,qty=2"							MRHadriel's Courage	120		120																										MRHadriel's Pure Heart	120		120																											120		120																											100		0
-test recipe		Test Recipe					1	rin							useitem				oskill		1224	1	1	oskill		1366	1	1	oskill		484	1	1	oskill		1037	1	1						MSApehand	120		120																											120		120																											100		0
-test recipe: all charms		Test Recipe					1	mpot							Modders Blessing1	120		120	regen-mana			220	220	learn-ennead			1	1						learn-blackroad			1	1																																																																	100		0
+test recipe		Test Recipe					1	rin							useitem				skillcap			10	10	allskills			20	1	oskill		484	1	1	oskill		1037	1	1						MSApehand	120		120																											120		120																											100		0
+test recipe: all charms		Test Recipe					1	mpot							Modders Blessing1	120		120	res-cold			100	100																																																																																100		0
 test recipe: amazon		Test Recipe				ama	2	"mpot,qty=2"							Modders Blessing Ama	120		120	str			150	150																					mnx1																													mnx2																														100		0
 test recipe: assassin		Test Recipe				ass	2	"mpot,qty=2"							Modders Blessing Ass	120		120	str			150	150																					mnx1																													mnx2																														100		0
 test recipe: druid		Test Recipe				dru	2	"mpot,qty=2"							Modders Blessing Dru	120		120	str			150	150	swing3			50	50	cast3			50	50	hp%			15	15	res-all-max			2	2	mnx1																													mnx2																														100		0
@@ -5214,7 +5214,7 @@ Reroll Sacred Uniques	1	Enchanting Crystal Reroll	16	219	0		2	"ct2a,uni"	voDX			
 Reroll Sacred Uniques	1	Enchanting Crystal Reroll	16	219	0		2	"ct1w,uni"	voDX						"usetype,uni"	120		120	blessings-counter			1	1																																																																																100		0
 Reroll Sacred Uniques	1	Enchanting Crystal Reroll	16	219	0		2	"ct2w,uni"	voDX						"usetype,uni"	120		120	blessings-counter			1	1																																																																																100		0
 rathma decoy	1	UQ - The Void	18	270	1		1	RathmasSupremacy2							useitem																																																																																								100		0
-rathma upgrade	1	UQ - The Void	6	507	250		1	RathmasSupremacy2							useitem				allskills			1	2	oskill		1221	3	7	has-edyrem			1	1																																																																						100		0
+rathma upgrade	1	UQ - The Void	6	507	250		1	RathmasSupremacy2							useitem				allskills			1	2	oskill		1221	3	7	has-edyrem			1	1																																																																					2	100		0
 Vessel Creation	1	SC - Vessels					2	A0+	7oµ						A0+S				shrinecount			2	2																																																																																		0
 Vessel Creation	1	SC - Vessels					2	B0+	7oµ						B0+S				shrinecount			2	2																																																																																		0
 Vessel Creation	1	SC - Vessels					2	C0+	7oµ						C0+S				shrinecount			2	2																																																																																		0
@@ -5946,3 +5946,11 @@ Arcane Cluster Add x2	1	Arcane Shards					3	asx	"qum,qty=2"						useitem				shri
 Arcane Cluster Add x3	1	Arcane Shards					4	asx	"qum,qty=3"						useitem				shrinecount			3	3																																																																																		0
 Arcane Cluster Add x4	1	Arcane Shards					5	asx	"qum,qty=4"						useitem				shrinecount			4	4																																																																																		0
 Arcane Cluster Add x5	1	Arcane Shards					6	asx	"qum,qty=5"						useitem				shrinecount			5	5																																																																																		0
+Sam Lore Swap 1	1	Samael					1	ktax							ktbx	120		120																																																																																					100		0
+Sam Lore Swap 2	1	Samael					1	ktbx							ktcx	120		120																																																																																					100		0
+Sam Lore Swap 3	1	Samael					1	ktcx							ktdx	120		120																																																																																					100		0
+Sam Lore Swap 4	1	Samael					1	ktdx							ktex	120		120																																																																																					100		0
+Sam Lore Swap 5	1	Samael					1	ktex							ktfx	120		120																																																																																					100		0
+Sam Lore Swap 5	1	Samael					6	ktfx	BookOfLaz	UldyssianCharm3	UpgradedBossSummonerRing	UpgradedBossKillerRing	`^#		ktgx	120		120																																																																																					100		0
+Sam Open	1	Samael					8	ktgx	"zky,qty=4"	r51	r52	r53			ktgx	120		120																										Sam Key	120		120																																																								100		0
+EmpyPawn	1	Bugfix					1	EmpyreanBandX							EmpyreanBandZ	99		99																																																																																					100		0

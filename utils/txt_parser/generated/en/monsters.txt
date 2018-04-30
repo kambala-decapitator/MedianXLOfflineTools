@@ -2220,3 +2220,6 @@
 2439	\yellow;Brood Swarm\blue;
 2440	\yellow;Cog\blue;
 2441	\yellow;Ice Clan\blue;
+2442	\gold;          Samael, Herald of the End          
+2443	Pain Worm
+2444	\gold;          Samael, Herald of the End          

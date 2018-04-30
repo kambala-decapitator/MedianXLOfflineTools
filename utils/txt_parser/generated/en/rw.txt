@@ -26,7 +26,7 @@ swor						Urada	r46
 axe						Sabertooth	r48						
 scyh						Seed of Conflict	r49						
 spea						Myrmidon	r29						
-mace						Demhe	r33						
+mace	scep					Demhe	r33						
 hamm						Calypso	r37						
 staf						Pax Mystica	r04						
 staf						Hadad	r11						
@@ -457,7 +457,7 @@ xbow						Cyclops	r29	r98
 knif						King's Blood	r26	r98					
 scyh						Endor	r31	r98					
 spea						Myrmidon	r29	r98					
-mace						Demhe	r33	r98					
+mace	scep					Demhe	r33	r98					
 staf						Pax Mystica	r04	r98					
 staf						Hadad	r11	r98					
 staf						Summanus	r19	r98					

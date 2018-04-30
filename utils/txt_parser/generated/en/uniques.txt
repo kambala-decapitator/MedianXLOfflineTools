@@ -9,18 +9,18 @@
 7	Assur's Bane	100	Ring08
 8	Book of Summoning	666	
 9	\gold;I Am Rich	0	
-10	Optical Detector	60	
+10	Optical Detector	120	
 11	Azmodan's Heart	100	
 12	Visions of Akarat	100	akaratbook
 13	Scroll of Kings	60	scrollofkings
 14	Laser Focus Crystal	80	
 15	The Butcher's Tooth	40	
 16	Sacred Worldstone Key	80	
-17	Idol of Vanity	100	
+17	Idol of Vanity	120	
 18	Spirit of Damnation	120	
 19	Horazon's Focus	40	
 20	Astrogha's Venom Stinger	120	
-21	Legacy of Blood	100	bloodlegacy
+21	Legacy of Blood	120	bloodlegacy
 22	Silver Seal of Ureh	120	
 23	Crystalline Flame Medallion	120	
 24	Crystalline Flame Medallion	120	
@@ -40,7 +40,7 @@
 38	\gold;Six Angel Bag	60	
 39	Hard Mode Charm	5	
 40	Zakarum's Ear	80	
-41	Moon of the Spider	100	
+41	Moon of the Spider	120	
 42	Spirit Trance Herb	100	
 43	Hammer of the Taan Judges	40	
 44	The Book of Lies	60	
@@ -53,7 +53,7 @@
 51	Jerhyn's Tawiz	0	
 52	Grand Armor	100	
 53	Aeterna	100	
-54	Sword of the White Void	100	
+54	Sword of the White Void	666	
 55	Wishmaster	0	
 56	Atomus	0	
 57	Siggard's Revenge	100	
@@ -1700,12 +1700,12 @@
 1698	Helepolis	100	
 1699	Asgardsreia	100	
 1700	Devastator	100	
-1701	Warmonger	5	
-1702	Warmonger	14	
-1703	Warmonger	23	
-1704	Warmonger	33	
-1705	Warmonger	42	
-1706	Warmonger	51	
+1701	The Aggressor	5	
+1702	The Aggressor	14	
+1703	The Aggressor	23	
+1704	The Aggressor	33	
+1705	The Aggressor	42	
+1706	The Aggressor	51	
 1707	Gheed's Pigsticker	100	
 1708	Firekeeper	100	
 1709	Gladiator's Rage	100	
@@ -2097,7 +2097,7 @@
 2095	QQ	0	
 2096	Ras Algethi	100	
 2097	Adrenaline Rush	100	
-2098	Empyrean Band	40	
+2098	Empyrean Band	666	
 2099	Seal of the Nephalem Kings	120	
 2100	Bad Mood Ring	100	
 2101	The Idiot Ball	60	
@@ -2547,3 +2547,10 @@
 2545	Legion	100	
 2546	Eternal Vigil	100	
 2547	\orange;Cherry	0	
+2548	Maleficence	121	
+2549	Desolation	121	
+2550	Despondence	121	
+2551	Vial of Elder Blood	121	
+2552	Celestial Sigil	121	invamu
+2553	Dimensional Key	0	
+2554	Empyrean Band	40	

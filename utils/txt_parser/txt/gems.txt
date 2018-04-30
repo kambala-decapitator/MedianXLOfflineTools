@@ -4,11 +4,11 @@ Flawed Amethyst		18	gfv	3	att%		20	20	hp/paragon	32	32	32					dex%		2	2	hp/parag
 Amethyst		18	gsv	3	att%		30	30	hp/paragon	32	32	32					dex%		3	3	hp/paragon	32	32	32					mana-thorns		6	6	hp/paragon	32	32	32				0
 Flawless Amethyst		18	gzv	3	att%		40	40	hp/paragon	32	32	32					dex%		4	4	hp/paragon	32	32	32					mana-thorns		8	8	hp/paragon	32	32	32				0
 Perfect Amethyst		17	gpv	3	att%		50	50	hp/paragon	32	32	32					dex%		5	5	hp/paragon	32	32	32					mana-thorns		10	10	hp/paragon	32	32	32				0
-Chipped Saphire		5	gcb	3	mana-kill		2	2	hp/paragon	32	32	32					skill-dur		1	1	hp/paragon	32	32	32					res-cold		6	6	hp/paragon	32	32	32				0
-Flawed Saphire		5	gfb	3	mana-kill		4	4	hp/paragon	32	32	32					skill-dur		2	2	hp/paragon	32	32	32					res-cold		12	12	hp/paragon	32	32	32				0
-Saphire		5	gsb	3	mana-kill		6	6	hp/paragon	32	32	32					skill-dur		3	3	hp/paragon	32	32	32					res-cold		18	18	hp/paragon	32	32	32				0
-Flawless Saphire		5	glb	3	mana-kill		8	8	hp/paragon	32	32	32					skill-dur		4	4	hp/paragon	32	32	32					res-cold		24	24	hp/paragon	32	32	32				0
-Perfect Saphire		6	gpb	3	mana-kill		10	10	hp/paragon	32	32	32					skill-dur		5	5	hp/paragon	32	32	32					res-cold		30	30	hp/paragon	32	32	32				0
+Chipped Saphire		5	gcb	3	mana-kill		3	3	hp/paragon	32	32	32					skill-dur		1	1	hp/paragon	32	32	32					res-cold		6	6	hp/paragon	32	32	32				0
+Flawed Saphire		5	gfb	3	mana-kill		6	6	hp/paragon	32	32	32					skill-dur		2	2	hp/paragon	32	32	32					res-cold		12	12	hp/paragon	32	32	32				0
+Saphire		5	gsb	3	mana-kill		9	9	hp/paragon	32	32	32					skill-dur		3	3	hp/paragon	32	32	32					res-cold		18	18	hp/paragon	32	32	32				0
+Flawless Saphire		5	glb	3	mana-kill		12	12	hp/paragon	32	32	32					skill-dur		4	4	hp/paragon	32	32	32					res-cold		24	24	hp/paragon	32	32	32				0
+Perfect Saphire		6	gpb	3	mana-kill		15	15	hp/paragon	32	32	32					skill-dur		5	5	hp/paragon	32	32	32					res-cold		30	30	hp/paragon	32	32	32				0
 Chipped Emerald		11	gcg	3	dmg-max		1	1	hp/paragon	32	32	32					regen		4	4	hp/paragon	32	32	32					res-pois		6	6	hp/paragon	32	32	32				0
 Flawed Emerald		11	gfg	3	dmg-max		2	2	hp/paragon	32	32	32					regen		8	8	hp/paragon	32	32	32					res-pois		12	12	hp/paragon	32	32	32				0
 Emerald		11	gsg	3	dmg-max		3	3	hp/paragon	32	32	32					regen		12	12	hp/paragon	32	32	32					res-pois		18	18	hp/paragon	32	32	32				0

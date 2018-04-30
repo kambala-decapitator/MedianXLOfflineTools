@@ -497,4 +497,4 @@ baal-buff	1					15	item_fasterattackrate			16	item_slow			16	item_fastermovevelo
 ffront-proj	1	skills.txt				1	ffront_proj																											-1	3	x2	0
 firedance-mod	1	skills.txt				1	firedance_mod																											-1	3	x2	0
 vessel-mod	1	skills.txt				1	vessel_mod																											-1	3	x2	0
-si-1	1	skills.txt				1	si_1																											-1	3	x1	0
+si-1	1	skills.txt				1	si_1																											-1	3	x2	0

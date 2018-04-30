@@ -178,11 +178,15 @@ qrin	ring	invrin1,invrin2,invrin3,invrin4,invrin5	Ring (Sacred)
 riam	misc,myor		Rings and Amulets
 gemr	gem		Ruby
 rune	sock		Rune
+xxx4	misc		SAmu
+xxx2	bow		SBow
+xxx3	mele		SStaff
+xxx1	mele		SSword
 sarm	ssgl		Sacred Armor
 #bow	bow		Sacred Bow
 swea	ssgl		Sacred Weapon
 gems	gem		Sapphire
-scep	rod,mace		Scepter
+scep	rod		Scepter
 qscp	scep,ct1w		Scepter (Sacred)
 scro	misc		Scroll
 summ	char		Scroll of Summoning

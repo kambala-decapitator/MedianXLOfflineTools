@@ -994,7 +994,7 @@
 "ModitemdamPoissk"	"to Poison Spell Damage"
 "Moditemskondeath"	"%d%% Chance to cast level %d %s when you Die"
 "ModitemskonLevel"	"%d%% Chance to cast level %d %s when you Level-Up"
-"ModitemskonKill"	"%d%% Chance to cast level %d %s when you Kill an Enemy"
+"ModitemskonKill"	"%d%% Chance to cast level %d %s on Kill"
 "Skillname224"	"Werewolf"
 "Skillsd224"	"transform into a werewolf"
 "Skillld224"	"transform into a werewolf"

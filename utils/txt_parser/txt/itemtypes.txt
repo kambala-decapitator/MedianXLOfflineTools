@@ -23,7 +23,7 @@ Gem				gem	sock		0	0					0	0	0	0			1	0	1	0	0	0	0	0	3		0		0							misc	0
 Torch				torc	misc		0	1					0	0	0	0			1	0	0	0	0	0	0	0	3		0		0							misc	0
 Scroll				scro	misc		0	0					0	0	0	0			1	0	0	1	0	0	0	0	3		0		0							misc	0
 Not Used							0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
-Scepter				scep	rod	mace	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	2		0		0							weap	0
+Scepter				scep	rod		1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	2		0		0							weap	0
 Wand				wand	rod		1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	2		0	nec	0							weap	0
 Staff				staf	rod		1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	2		0		0							weap	0
 Bow				bow	miss		0	1	rarm	larm	bowq		0	0	0	0		1	0	0	0	0	6	6	6	1	3		0		0							weap	0
@@ -257,3 +257,7 @@ Yshari Helm				###5	qhlm		0	1	head	head			0	0	0	0		1	0	0	0	0	0	0	0	0	0		0		0				
 Shrine Container				shco	thng		0	0					0	0	0	0	1	1	0	0	0	0	0	0	0	0	3		0		0								0
 Mystic Orbable				myor	dcht		0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
 Rings and Amulets				riam	misc	myor	0	0					0	0	0	0		1	0	0	0	0	0	0	0	0	3		0		0								0
+SSword	quest			xxx1	mele		0	1	rarm				0	0	0	0		1	0	0	0	0	0	0	0	0	0		0		0							weap	0
+SBow	quest			xxx2	bow		0	1	rarm	larm	bowq		0	0	0	0		1	0	0	0	0	0	0	0	0	0		0		0							weap	0
+SStaff	quest			xxx3	mele		0	1	rarm	larm			0	0	0	0		1	0	0	0	0	0	0	0	0	0		0		0							weap	0
+SAmu	quest			xxx4	misc		0	1	neck	neck			0	0	0	0		1	0	0	0	0	1	1	1	0	0		0		0								0

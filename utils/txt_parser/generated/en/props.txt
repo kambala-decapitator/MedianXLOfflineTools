@@ -147,11 +147,11 @@
 160	0	10																item_throw_maxdamage
 161	10	6						Unusual Missile Speed	Unusual Missile Speed		3	77	1					skill_handofathena
 164	20	8						Chance of Uninterruptable Attack	Chance of Uninterruptable Attack		2	20	1					skill_concentration
-171	0	10						Total Character Defense Plus	Total Character Defense Plus		2	20	2					skill_armor_percent
+171	0	10						Total Character Defense plus	Total Character Defense plus		2	20	2					skill_armor_percent
 179		10															10	attack_vs_montype
 180		10															10	damage_vs_montype
 181		3																fade
-182	100	9						Total Character Defense = 0	Total Character Defense = 0		3	10	0					armor_override_percent
+182	100	9						Total Defense = 0	Total Defense = 0		3	10	0					armor_override_percent
 183	100	11						Crafting Points	Crafting Points		1	175	1					game_craftpoints
 184	0	5																x_signet01
 185			12					Stat Signets Used:	Stat Signets Used:		3	4	2					potion_stat_cap
@@ -164,7 +164,7 @@
 193	0	5																x_signet04
 194	0	4																item_numsockets
 195	0	8						%d%% Chance to cast level %d %s on Melee Attack	%d%% Chance to cast level %d %s on Melee Attack		15	160					17	item_skillonattack
-196	0	8						%d%% Chance to cast level %d %s when you Kill an Enemy	%d%% Chance to cast level %d %s when you Kill an Enemy		15	160					17	item_skillonkill
+196	0	8						%d%% Chance to cast level %d %s on Kill	%d%% Chance to cast level %d %s on Kill		15	160					17	item_skillonkill
 197	0	8						%d%% Chance to cast level %d %s when you Die	%d%% Chance to cast level %d %s when you Die		15	160					17	item_skillondeath
 198	0	8						%d%% Chance to cast level %d %s on Striking	%d%% Chance to cast level %d %s on Striking		15	160					17	item_skillonhit
 199	0	7						%d%% Chance to cast level %d %s when you Level-Up	%d%% Chance to cast level %d %s when you Level-Up		15	160					17	item_skillonlevelup
@@ -319,7 +319,7 @@
 369	0	5																x_signet51
 370	0	5																x_signet52
 371	0	7						\orange;Amazing Grace\white;	\orange;Amazing Grace\white;		3	235	0				17	item_amazinggrace
-372	0	1						Level 5 Venomous Aura when Equipped	Level 5 Venomous Aura when Equipped		3	159	0					item_desc_acidblood
+372	0	1						Level 5 Venomous Aura	Level 5 Venomous Aura		3	159	0					item_desc_acidblood
 373	0	1						Worship the Crack Monkeys!	Worship the Crack Monkeys!		3	3	0					item_desc_deathmarch
 374	0	1						+300% Enhanced Damage vs. the Zakarum	+300% Enhanced Damage vs. the Zakarum		3	3	0					item_desc_judas
 375	0	2						Cannot Be Cubed	Cannot Be Cubed		3	180	0					item_lc_tgt_max
@@ -367,7 +367,7 @@
 424	2	2		421,422,423,425		\orange;All trials completed!		\orange;Trial of Blood completed!	\orange;Trial of Blood completed!		3	224	0	12	3	0		black_4
 425	2	2		421,422,423,424		\orange;All trials completed!		\orange;Trial of Contrition completed!	\orange;Trial of Contrition completed!		3	226	0	12	3	0		black_5
 426	2	2						\orange;Well Done!\red;	\yellow;You have reached the gambling limit. Please reset your Trader's Chest!\blue;		3	2	0					black_6
-427	2	2						\orange;Congratulations!\blue;	\red;&gt;&gt; UNEQUIP THIS ITEM BEFORE REACHING LEVEL 120 &lt;&lt;\blue;		3	2	0					black_7
+427	2	2						\orange;Congratulations!\blue;	Adds 9999-9999 Magic Damage		3	2	0					black_7
 429	0	8						Damage Reduction to Pact of Blood	Damage Reduction to Pact of Blood		4	18	1					passive_rejuv_dr
 430	0	8						to All Skills when using an Apple	to All Skills when using an Apple		1	50	1					skill_paganheart_synergy
 431	50	9						Bonus to Poison Skill Duration	Bonus to Poison Skill Duration		4	149	1					skill_poison_dur
@@ -400,9 +400,9 @@
 473	0	8						\green;Unlocks your Ennead Skill	\green;Unlocks your Ennead Skill		3	230	0					learn_ennead
 474	0	8						\green;Unlocks your Black Road Skill	\green;Unlocks your Black Road Skill		3	230	0					learn_blackroad
 475	0	1						\red;Druid Morph\blue;	\red;Druid Morph\blue;		3	234	0					item_desc_druidmorph
-476	0	1						Level 1 Demon Blood Aura when Equipped	Level 1 Demon Blood Aura when Equipped		3	159	0					item_desc_dbaura
-477	1	4						\red;&gt;&gt; UNEQUIP THIS ITEM BEFORE REACHING LEVEL 120 &lt;&lt;\blue;	Increased Difficulty		3	2	0					item_desc_hardaura
-478	0	1						\purple;and Reward, cube with a Mana Potion to lower it\nCube with a Healing Potion to Increase Difficulty	\purple;and Reward, cube with a Mana Potion to lower it\nCube with a Healing Potion to Increase Difficulty		3	159	0					item_desc_instructions
+476	0	1						Level 1 Demon Blood Aura	Level 1 Demon Blood Aura		3	159	0					item_desc_dbaura
+477	1	4						Adds 9999-9999 Magic Damage	Nearby enemies lose 10% magic and elemental resistances		3	104	0					item_desc_hardaura
+478	0	1						Socketed (1)\nLevel 20 Warp Field Aura	Socketed (1)\nLevel 20 Warp Field Aura		3	1	0					item_desc_instructions
 479	0	4						Maximum Skill Level Increased by	Maximum Skill Level Increased by		3	69	2					skill_more
 480	0	5						to Vitality per Socketed Gem	to Vitality per Socketed Gem		1	75	1					item_skill_paragon
 481	0	5						to Defense per Socketed Rune	to Defense per Socketed Rune		4	74	1					item_skill_runemaster
@@ -427,5 +427,5 @@
 504	0	10						to Dexterity	to Dexterity	(Based on Blessed Life Skill Level)	6	62	1					item_dexterity_perblessedlife
 505	0	10						Drain Life	Replenish Life	(Based on Character Level)	6	60	2					item_hpregen_perlevel
 506	0	1						\red;Superbeast Morph\blue;	\red;Superbeast Morph\blue;		3	234	0					desc-superbeasty
-508	0	1						\red;&gt;&gt; UNEQUIP THIS ITEM BEFORE REACHING LEVEL 120 &lt;&lt;\blue;	\red;Treewarden Morph\blue;		3	234	0					desc-fatasstriton
+508	0	1						Adds 9999-9999 Magic Damage	\red;Treewarden Morph\blue;		3	234	0					desc-fatasstriton
 509	500	10						\red;&gt;&gt; Do not use at level 120 &lt;&lt;\blue;	\red;&gt;&gt; Do not use at level 120 &lt;&lt;\blue;		3	250	0					fuck_you#

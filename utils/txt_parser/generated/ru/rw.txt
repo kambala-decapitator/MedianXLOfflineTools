@@ -26,7 +26,7 @@ swor						Урада	r46
 axe						Саблезубый	r48						
 scyh						Зерно Конфликта	r49						
 spea						Мирмидонец	r29						
-mace						Демхе	r33						
+mace	scep					Демхе	r33						
 hamm						Калипсо	r37						
 staf						Мир Мистики	r04						
 staf						Хадад	r11						
@@ -457,7 +457,7 @@ xbow						Циклоп	r29	r98
 knif						Королевская Кровь	r26	r98					
 scyh						Эндор	r31	r98					
 spea						Мирмидонец	r29	r98					
-mace						Демхе	r33	r98					
+mace	scep					Демхе	r33	r98					
 staf						Мир Мистики	r04	r98					
 staf						Хадад	r11	r98					
 staf						Сумманус	r19	r98					

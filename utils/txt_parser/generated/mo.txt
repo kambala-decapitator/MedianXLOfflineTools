@@ -25,7 +25,7 @@
 241	24+	45	10			4	Poison Resist
 242	25+	109	4			4	Curse Length Reduction
 243	26+	16	15			4	Enhanced Defense
-244	27+	171	4			4	Total Character Defense Plus
+244	27+	171	4			4	Total Character Defense plus
 249	30+	164	2			4	Chance of Uninterruptable Attack
 251	31+	85	2			4	to Experience Gained
 255	32+	60	4			4	Life stolen per Hit
