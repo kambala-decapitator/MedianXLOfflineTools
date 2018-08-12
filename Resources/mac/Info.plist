@@ -21,8 +21,6 @@
 	</array>
 	<key>CFBundleExecutable</key>
 	<string>@EXECUTABLE@</string>
-	<key>CFBundleGetInfoString</key>
-	<string>@COPYRIGHT@</string>
 	<key>CFBundleIconFile</key>
 	<string>@ICON@</string>
 	<key>CFBundleIdentifier</key>

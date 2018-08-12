@@ -1,3 +1,4 @@
+- rlvl doesn't check socketables? (CotW)
 - remove non-2017 support
 - proper support of level 120+
 - app crashes when trying to load characters from program files (only when game is installed there?)
