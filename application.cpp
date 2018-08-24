@@ -18,7 +18,7 @@ Application::Application(int &argc, char **argv) : QtSingleApplication(kAppName,
     if (argc > 1)
     {
 #ifdef DUPE_CHECK
-        if (argc == 3)
+        if (argc >= 3)
         {
             if (!strcmp(argv[1], "-dupeScan"))
                 _launchMode = LaunchModeDupeScan;

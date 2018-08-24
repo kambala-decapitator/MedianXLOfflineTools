@@ -52,13 +52,6 @@ QString dupedItemsStr(ItemInfo *item1, ItemInfo *item2)
             .arg(ItemParser::itemStorageAndCoordinatesString("<font color=blue>ITEM2</font>: location %1, row %2, col %3, equipped in %4", item2));
 }
 
-void addItemName(ItemInfo *item, QString &itemsStr)
-{
-    static QRegExp runeRegex("r(\\d\\d)");
-    if ((item->isExtended && shouldCheckItem(item)) || (runeRegex.indexIn(item->itemType) != -1 && runeRegex.cap(1).toInt() > 50)) // also save Great/Elemental runes
-        itemsStr += ItemDataBase::completeItemName(item, false, false).replace(kHtmlLineBreak, QLatin1String("|")) + "\n";
-}
-
 
 struct CrossCompareTask
 {
@@ -113,7 +106,7 @@ QString crossCompareItems(const CrossCompareTask &task)
 }
 
 
-DupeScanDialog::DupeScanDialog(const QString &currentPath, bool isDumpItemsMode, QWidget *parent) : QDialog(parent), _currentCharPath(currentPath), _isDumpItemsMode(isDumpItemsMode), _futureWatcher(0),
+DupeScanDialog::DupeScanDialog(const QString &currentPath, bool isDumpItemsMode, QWidget *parent) : QDialog(parent), _currentCharPath(currentPath), _isDumpItemsMode(isDumpItemsMode), _futureWatcher(0), _isVerbose(false),
     _pathLineEdit(new QLineEdit(this)), _logBrowser(new QTextEdit(this)), _saveButton(new QPushButton("Save...", this)), _skipEmptyCheckBox(new QCheckBox("Skip empty results", this)), _progressBar(new QProgressBar(this))
 {
     setWindowFlags(windowFlags() & ~Qt::WindowContextHelpButtonHint);
@@ -139,7 +132,9 @@ DupeScanDialog::DupeScanDialog(const QString &currentPath, bool isDumpItemsMode,
     mainLayout->addLayout(hbl2);
 
     QStringList args = qApp->arguments();
-    _isAutoLaunched = args.size() == 3;
+    _isAutoLaunched = args.size() >= 3;
+    if (args.size() == 4)
+        _isVerbose = args.at(2).startsWith(QLatin1String("-v"));
     QString path = _isAutoLaunched ? args.last() : QFileInfo(currentPath).canonicalPath();
     _pathLineEdit->setText(QDir::toNativeSeparators(path));
 
@@ -288,7 +283,8 @@ void DupeScanDialog::scanCharactersInDir(const QString &path)
     bool isFirst, dupedItemFound;
     QString pathWithSlashes = QDir::fromNativeSeparators(_currentCharPath);
 
-    QFileInfoList list = QDir(path).entryInfoList(QDir::Files);
+    QFileInfo fi(path);
+    QFileInfoList list = fi.isDir() ? QDir(path).entryInfoList(QDir::Files) : QFileInfoList() << fi;
     if ((isFirst = !_currentCharPath.isEmpty()))
         list.prepend(QFileInfo(_currentCharPath)); // for currently loaded file
     QMetaObject::invokeMethod(_progressBar, "setMaximum", Q_ARG(int, list.size()));
@@ -401,7 +397,7 @@ void DupeScanDialog::scanCharactersInDir(const QString &path)
     appendStringToLog(QString("loading files & separate processing took %1 seconds").arg(_timeCounter.elapsed() / 1000));
     if (_isDumpItemsMode)
     {
-        scanFinished_();
+        QMetaObject::invokeMethod(this, "scanFinished_");
         return;
     }
 
@@ -435,4 +431,16 @@ bool DupeScanDialog::saveLog(const QString &fileName, bool isPlainText)
 QString DupeScanDialog::baseDupeScanLogFileName()
 {
     return _pathLineEdit->text() + "/MXLOT dupe stats";
+}
+
+void DupeScanDialog::addItemName(ItemInfo *item, QString &itemsStr)
+{
+    static QRegExp runeRegex("r(\\d\\d)");
+    if ((item->isExtended && shouldCheckItem(item)) || (runeRegex.indexIn(item->itemType) != -1 && runeRegex.cap(1).toInt() > 50)) // also save Great/Elemental runes
+    {
+        itemsStr += ItemDataBase::completeItemName(item, false, false).replace(kHtmlLineBreak, QLatin1String("|"));
+        if (_isVerbose)
+            itemsStr += ItemParser::itemStorageAndCoordinatesString(" [location %1, row %2, col %3, equipped in %4]", item);
+        itemsStr += "\n";
+    }
 }
