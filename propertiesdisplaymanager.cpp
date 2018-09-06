@@ -14,7 +14,7 @@ const QList<QByteArray> PropertiesDisplayManager::kDamageToUndeadTypes = QList<Q
 
 QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item)
 {
-    QString ilvlText = "\n" + tr("Item Level: %1").arg(item->ilvl);
+    QString ilvlText = "\n" + tr("Item Level: %1").arg(item->ilvl) + "\n";
     if (item->isEar)
     {
         QString itemDescription = tr("%1's Ear", "param is character name").arg(item->earInfo.name.constData()) + "\n";
@@ -166,11 +166,11 @@ QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item)
     // TODO: [later] use lambda to calculate requirements
     if (itemBase->rdex)
         if (int rdex = itemBase->rdex + (itemBase->rdex * allProps.value(Enums::ItemProperties::Requirements, foo)->value) / 100)
-            itemDescription += tr("Required Dexterity: %1").arg(rdex) + "\n";
+            itemDescription += "\n" + tr("Required Dexterity: %1").arg(rdex);
 
     if (itemBase->rstr)
         if (int rstr = itemBase->rstr + (itemBase->rstr * allProps.value(Enums::ItemProperties::Requirements, foo)->value) / 100)
-            itemDescription += tr("Required Strength: %1").arg(rstr) + "\n";
+            itemDescription += "\n" + tr("Required Strength: %1").arg(rstr);
 
     int rlvl;
     switch (item->quality)

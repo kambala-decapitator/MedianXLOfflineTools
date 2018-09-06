@@ -342,6 +342,9 @@ public:
 
 class ItemLocation
 {
+    Q_GADGET
+    Q_ENUMS(ItemLocationEnum)
+
 public:
     enum ItemLocationEnum
     {

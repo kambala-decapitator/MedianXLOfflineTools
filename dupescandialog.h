@@ -11,6 +11,7 @@ class QTextEdit;
 class QPushButton;
 class QCheckBox;
 class QProgressBar;
+class QXmlStreamWriter;
 
 typedef QHash<QString, ItemsList> ItemsHash;
 typedef ItemsHash::const_iterator ItemsHashIterator;
@@ -57,7 +58,7 @@ private:
     void scanCharactersInDir(const QString &path);
     bool saveLog(const QString &fileName, bool isPlainText = true);
     QString baseDupeScanLogFileName();
-    void addItemName(ItemInfo *item, QString &itemsStr);
+    bool addItemInfoToXml(ItemInfo *item, bool isSocketable, QXmlStreamWriter &xml);
 };
 
 #endif // DUPESCANDIALOG_H

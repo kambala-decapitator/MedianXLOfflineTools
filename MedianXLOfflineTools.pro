@@ -8,7 +8,7 @@
 TARGET = MedianXLOfflineTools
 TEMPLATE = app
 
-#DEFINES += DUPE_CHECK
+#DUPE_CHECK = 1
 
 QT += network
 
@@ -25,7 +25,12 @@ CONFIG(release, debug|release): {
     DEFINES += QT_NO_DEBUG_OUTPUT \
                QT_NO_WARNING_OUTPUT
 }
-else: DEFINES += DUPE_CHECK
+else: DUPE_CHECK = 1
+
+!isEmpty(DUPE_CHECK): {
+    DEFINES += DUPE_CHECK
+    QT += xml
+}
 
 # app version
 NVER1 = 0

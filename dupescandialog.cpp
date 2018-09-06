@@ -3,6 +3,7 @@
 #include "itemparser.h"
 #include "itemdatabase.h"
 #include "enums.h"
+#include "propertiesdisplaymanager.h"
 
 #include <QLineEdit>
 #include <QTextEdit>
@@ -19,6 +20,8 @@
 #include <QFile>
 #include <QRegExp>
 #include <QTimer>
+
+#include <QXmlStreamWriter>
 
 #ifndef QT_NO_DEBUG
 #include <QDebug>
@@ -324,19 +327,33 @@ void DupeScanDialog::scanCharactersInDir(const QString &path)
         dupedItemFound = false;
         if (_isDumpItemsMode)
         {
-            QString itemsStr;
-            foreach (ItemInfo *item, CharacterInfo::instance().items.character)
+            QString filePath = fileInfo.absoluteFilePath();
+            QFile xmlFile(filePath + ".xml");
+            if (!xmlFile.open(QIODevice::WriteOnly))
             {
-                addItemName(item, itemsStr);
-                foreach (ItemInfo *socketableItem, item->socketablesInfo)
-                    addItemName(socketableItem, itemsStr);
+                appendStringToLog(QString("error writing %1: %2").arg(xmlFile.fileName(), xmlFile.errorString()));
+                goto CHARACTER_END;
             }
 
-            QFile f(fileInfo.absoluteFilePath() + ".txt");
-            if (f.open(QIODevice::WriteOnly))
-                f.write(itemsStr.toUtf8());
-            else
-                appendStringToLog(QString("error writing %1: %2").arg(f.fileName(), f.errorString()));
+            QXmlStreamWriter xml(&xmlFile);
+            xml.setAutoFormatting(true);
+            xml.writeStartDocument();
+            foreach (ItemInfo *item, CharacterInfo::instance().items.character)
+            {
+                if (!addItemInfoToXml(item, false, xml))
+                    continue;
+
+                if (!item->socketablesInfo.isEmpty())
+                    xml.writeStartElement(QLatin1String("socketables"));
+                foreach (ItemInfo *socketableItem, item->socketablesInfo)
+                {
+                    addItemInfoToXml(socketableItem, true, xml);
+                    xml.writeEndElement(); // socketableItem
+                }
+                xml.writeEndElement(); // socketables
+                xml.writeEndElement(); // item
+            }
+            xml.writeEndDocument();
         }
         else
         {
@@ -387,6 +404,7 @@ void DupeScanDialog::scanCharactersInDir(const QString &path)
             _allItemsHash[fileName] = itemsCopy;
         }
 
+CHARACTER_END:
         if (!_isDumpItemsMode && (!_skipEmptyCheckBox->isChecked() || dupedItemFound || !_loadingMessage.isEmpty()))
             appendStringToLog("========================================");
 
@@ -433,14 +451,35 @@ QString DupeScanDialog::baseDupeScanLogFileName()
     return _pathLineEdit->text() + "/MXLOT dupe stats";
 }
 
-void DupeScanDialog::addItemName(ItemInfo *item, QString &itemsStr)
+bool DupeScanDialog::addItemInfoToXml(ItemInfo *item, bool isSocketable, QXmlStreamWriter &xml)
 {
     static QRegExp runeRegex("r(\\d\\d)");
-    if ((item->isExtended && shouldCheckItem(item)) || (runeRegex.indexIn(item->itemType) != -1 && runeRegex.cap(1).toInt() > 50)) // also save Great/Elemental runes
+    if (!(isSocketable || (item->isExtended && shouldCheckItem(item)) || (runeRegex.indexIn(item->itemType) != -1 && runeRegex.cap(1).toInt() > 50))) // also save Great/Elemental runes
+        return false;
+
+    xml.writeStartElement(QLatin1String("item"));
+
+    xml.writeStartElement(QLatin1String("name"));
+    QStringList nameList = ItemDataBase::completeItemName(item, false, false).split(kHtmlLineBreak);
+    if (nameList.size() > 1)
+        xml.writeAttribute(QLatin1String("special"), nameList.first());
+    xml.writeCharacters(nameList.last());
+    xml.writeEndElement(); // name
+
+    xml.writeTextElement(QLatin1String("ilvl"), QString::number(item->ilvl));
+    xml.writeTextElement(QLatin1String("type"), item->itemType.constData());
+    xml.writeTextElement(QLatin1String("quality"), metaEnumFromName<Enums::ItemQuality>("ItemQualityEnum").valueToKey(item->quality));
+    if (!isSocketable)
     {
-        itemsStr += ItemDataBase::completeItemName(item, false, false).replace(kHtmlLineBreak, QLatin1String("|"));
-        if (_isVerbose)
-            itemsStr += ItemParser::itemStorageAndCoordinatesString(" [location %1, row %2, col %3, equipped in %4]", item);
-        itemsStr += "\n";
+        xml.writeTextElement(QLatin1String("socketsNumber"), QString::number(item->socketsNumber));
+        xml.writeTextElement(QLatin1String("socketablesNumber"), QString::number(item->socketablesNumber));
+        xml.writeTextElement(QLatin1String("isEthereal"), QString::number(item->isEthereal));
+        xml.writeTextElement(QLatin1String("isRW"), QString::number(item->isRW));
+        xml.writeTextElement(QLatin1String("placement"), QString("location %1, ").arg(metaEnumFromName<Enums::ItemLocation>("ItemLocationEnum").valueToKey(item->location)) + ItemParser::itemStorageAndCoordinatesString("storage %1, row %2, col %3, equipped in %4", item));
     }
+
+    QString desc = PropertiesDisplayManager::completeItemDescription(item);
+    xml.writeTextElement(QLatin1String("completeDescription"), desc.replace(QLatin1String("\n\n"), QLatin1String("\n")).trimmed());
+
+    return true;
 }
