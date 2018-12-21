@@ -2164,8 +2164,6 @@ bool MedianXLOfflineTools::processSaveFile()
     {
         // parse plugy stashes
         QString oldSharedStashPath = _plugyStashesHash[ItemStorage::SharedStash].path, oldHCStashPath = _plugyStashesHash[ItemStorage::HCStash].path;
-        _plugyStashesHash.clear();
-
         QFileInfo charPathFileInfo(_charPath);
         QString charFolderPath = charPathFileInfo.absolutePath();
         _plugyStashesHash[Enums::ItemStorage::PersonalStash].path = ui->actionAutoOpenPersonalStash->isChecked() ? QString("%1/%2.d2x").arg(charFolderPath, charPathFileInfo.baseName()) : QString();
@@ -2336,6 +2334,7 @@ void MedianXLOfflineTools::processPlugyStash(QHash<Enums::ItemStorage::ItemStora
     if (plugyStorage == Enums::ItemStorage::SharedStash)
         _sharedGold = info.gold;
 
+    info.pagesMetadata.clear();
     QString corruptedItems;
     inputDataStream >> info.lastPage;
     for (quint32 page = 1; page <= info.lastPage; ++page)
