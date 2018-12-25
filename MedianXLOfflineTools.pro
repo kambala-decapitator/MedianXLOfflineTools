@@ -230,6 +230,7 @@ macx {
                 QMAKE_MAC_SDK = $$MAC_SDK
 
                 CONFIG += x86 ppc
+                CONFIG -= x86_64
                 QMAKE_MACOSX_DEPLOYMENT_TARGET = 10.5
             }
         }
