@@ -30,6 +30,8 @@ else: DUPE_CHECK = 1
 !isEmpty(DUPE_CHECK): {
     DEFINES += DUPE_CHECK
     QT += xml
+    SOURCES += dupescandialog.cpp
+    HEADERS += dupescandialog.h
 }
 
 # app version
@@ -77,7 +79,6 @@ SOURCES += main.cpp \
            showselecteditemdelegate.cpp \
            disenchantpreviewdialog.cpp \
            disenchantpreviewmodel.cpp \
-           dupescandialog.cpp \
            stashsortingoptionsdialog.cpp \
            helpwindowdisplaymanager.cpp \
            skilltreedialog.cpp \
@@ -123,7 +124,6 @@ HEADERS += medianxlofflinetools.h \
            itemnamestreewidget.hpp \
            disenchantpreviewmodel.h \
            checkboxsortfilterproxymodel.hpp \
-           dupescandialog.h \
            stashsortingoptionsdialog.h \
            helpwindowdisplaymanager.h \
            skilltreedialog.h \

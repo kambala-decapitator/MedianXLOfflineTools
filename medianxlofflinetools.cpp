@@ -759,6 +759,7 @@ void MedianXLOfflineTools::saveCharacter()
         showErrorMessageBoxForFile(tr("Error creating file '%1'"), outputFile);
 }
 
+#ifdef DUPE_CHECK
 void MedianXLOfflineTools::showDupeCheck()
 {
     if (_itemsDialog)
@@ -774,6 +775,7 @@ void MedianXLOfflineTools::showDupeCheck()
 
     ui->actionOpenItemsAutomatically->setChecked(isOpenItemsOptionChecked);
 }
+#endif
 
 void MedianXLOfflineTools::statChanged(int newValue)
 {
