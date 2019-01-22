@@ -38,7 +38,7 @@ public:
 
     void setSkillPoints(quint8 basePoints, quint8 addPoints)
     {
-        quint8 maxClvl = static_cast<quint8>(isUltimative4() || isUltimative5OrLater() ? Enums::CharacterStats::MaxNonHardenedLevel : Enums::CharacterStats::MaxLevel);
+        quint8 maxClvl = Enums::CharacterStats::MaxLevel;
         quint8 actualBasePoints  = qMin(maxClvl, basePoints);
         quint8 actualTotalPoints = qMin(maxClvl, static_cast<quint8>(basePoints + addPoints));
 

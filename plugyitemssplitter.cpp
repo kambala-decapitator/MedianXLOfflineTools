@@ -918,8 +918,8 @@ void PlugyItemsSplitter::sortMiscItems(ItemsList &selectedItems, quint32 &page, 
 
                 if (!typeItems.isEmpty())
                 {
-                    bool isEvilEye = thngType == "!@[1-5]", isShrine = thngType == "[A-Z]\\d\\+", isTrophy = thngType.endsWith("\\d\\d|##/|bxt"), isBrain = thngType == "2x\\d";
-                    bool isVisuallySame = isEvilEye || isBrain || (!isUltimative() && (isShrine || isTrophy)), isNewRow = sortOptions.isNewRowVisuallyDifferentMisc || isVisuallySame;
+                    bool isEvilEye = thngType == "!@[1-5]", isBrain = thngType == "2x\\d";
+                    bool isVisuallySame = isEvilEye || isBrain, isNewRow = sortOptions.isNewRowVisuallyDifferentMisc || isVisuallySame;
                     if (isVisuallySame && !sortOptions.isNewRowVisuallyDifferentMisc)
                     {
                         ++row;

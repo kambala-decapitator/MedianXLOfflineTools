@@ -196,32 +196,6 @@ bool areBothItemsSetOrUnique(ItemInfo *a, ItemInfo *b)
 }
 
 
-bool isUltimative()
-{
-    return isUltimative4() || isUltimative5OrLater() || is2017();
-}
-
-bool isUltimative4()
-{
-    return ItemDataBase::Properties()->value(Enums::CharacterStats::Strength)->saveBits != 12;
-}
-
-bool isUltimative5OrLater()
-{
-    return ItemDataBase::Properties()->value(Enums::CharacterStats::FreeSkillPoints)->saveBits != 8;
-}
-
-bool is2017()
-{
-    return ItemDataBase::Properties()->value(Enums::ItemProperties::Defence)->saveBits != 15;
-}
-
-bool isSigma()
-{
-    return ItemDataBase::Properties()->value(Enums::CharacterStats::Level)->saveBits != 7;
-}
-
-
 bool isCubeInCharacterItems(ItemInfo *item)
 {
     return (item->storage == Enums::ItemStorage::Inventory || item->storage == Enums::ItemStorage::Stash) && ItemDataBase::isCube(item);

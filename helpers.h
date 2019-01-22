@@ -52,13 +52,6 @@ bool isSacred(ItemInfo *item);
 bool isSacred(const QList<QByteArray> &itemTypes);
 bool areBothItemsSetOrUnique(ItemInfo *a, ItemInfo *b);
 
-// check which mod data is used
-bool isUltimative();
-bool isUltimative4();
-bool isUltimative5OrLater();
-bool is2017();
-bool isSigma();
-
 // item conditions for STL algorithms
 bool isCubeInCharacterItems(ItemInfo *item);
 bool hasChanged(ItemInfo *item);

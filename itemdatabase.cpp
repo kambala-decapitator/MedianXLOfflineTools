@@ -768,24 +768,22 @@ bool ItemDataBase::doesItemGrantBonus(ItemInfo *item)
 
 bool ItemDataBase::canDisenchantIntoArcaneShards(ItemInfo *item)
 {
-    // Ultimative prohibits disenchanting TUs from the Gift Box and quest items into shards
-    return canDisenchant(item) && !(isUltimative() && (item->props.contains(Enums::ItemProperties::ItemDuped) || Items()->value(item->itemType)->questId > 0));
+    // prohibit disenchanting TUs from the Gift Box (Griswold) and quest items into shards
+    return canDisenchant(item) && !(item->props.contains(Enums::ItemProperties::ItemDuped) || Items()->value(item->itemType)->questId > 0);
 }
 
 bool ItemDataBase::canDisenchantIntoSignetOfLearning(ItemInfo *item)
 {
-    // Ultimative prohibits disenchanting TUs into signets
-    return canDisenchantIntoArcaneShards(item) && !(isUltimative() && item->quality == Enums::ItemQuality::Unique && Items()->value(item->itemType)->genericType != Enums::ItemTypeGeneric::Misc && isTiered(item));
+    // prohibit disenchanting TUs into signets
+    return canDisenchantIntoArcaneShards(item) && !(item->quality == Enums::ItemQuality::Unique && Items()->value(item->itemType)->genericType != Enums::ItemTypeGeneric::Misc && isTiered(item));
 }
 
 bool ItemDataBase::canDisenchant(ItemInfo *item)
 {
     if (item && item->location == Enums::ItemLocation::Stored && (item->quality == Enums::ItemQuality::Set || item->quality == Enums::ItemQuality::Unique))
     {
-        static const QList<QByteArray> kDisenchantableItemTypes = QList<QByteArray>() << "weap" << "armo" << "amul" << "ring" << "misl" << "jewl";
         QList<QByteArray> itemTypes = Items()->value(item->itemType)->types;
-        // actually, it's possible to use the same condition for Ultimative, but using just one item type is quicker
-        return isUltimative() ? ItemParser::itemTypesInheritFromType(itemTypes, "dcht") : ItemParser::itemTypesInheritFromTypes(itemTypes, kDisenchantableItemTypes);
+        return ItemParser::itemTypesInheritFromType(itemTypes, "dcht");
     }
     return false;
 }

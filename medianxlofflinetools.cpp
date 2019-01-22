@@ -946,11 +946,8 @@ void MedianXLOfflineTools::resurrect()
             break;
         }
 
-        // for Ultimative, don't allow resurrected characters stay on hardcore
-        if (isUltimative())
+        // don't allow resurrected characters stay on hardcore
             convertToSoftcore(true);
-        else
-            setModified(true);
     }
 }
 
@@ -1974,9 +1971,7 @@ bool MedianXLOfflineTools::processSaveFile()
         int statLength = ItemDataBase::Properties()->value(statCode)->saveBits;
         if (!statLength)
         {
-            QString modName("Median XL");
-            if (isUltimative())
-                modName += is2017() ? " 2017" : QString(" Ultimative v%1").arg(isUltimative4() ? "4" : "5+");
+            QString modName("Median XL Sigma");
             showLoadingError(tr("Unknown statistic code found: %1. This is not %2 character.", "second param is mod name").arg(statCode).arg(modName));
             return false;
         }
@@ -2516,8 +2511,7 @@ void MedianXLOfflineTools::updateUI()
 
         ui->mercLevelLineEdit->setText(QString::number(charInfo.mercenary.level));
 
-        if ((charInfo.mercenary.level == Enums::CharacterStats::MaxNonHardenedLevel - 1 && charInfo.mercenary.experience < mercExperienceForLevel(Enums::CharacterStats::MaxNonHardenedLevel - 1) + 5) ||
-             charInfo.mercenary.level == Enums::CharacterStats::MaxLevel - 1)
+        if (charInfo.mercenary.level == Enums::CharacterStats::MaxLevel - 1 && charInfo.mercenary.experience < mercExperienceForLevel(Enums::CharacterStats::MaxLevel - 1) + 5)
         {
             // display levels 119 and 125 as 100% of progressbar
             _mercExpGroupBox->setPreviousLevelExperience(mercExperienceForLevel(charInfo.mercenary.level - 1));
@@ -2686,7 +2680,7 @@ void MedianXLOfflineTools::updateAssociateAction(bool disable)
 
 void MedianXLOfflineTools::updateCharacterExperienceProgressbar(quint32 newExperience)
 {
-    if ((!is2017() && _oldClvl == Enums::CharacterStats::MaxNonHardenedLevel && newExperience < experienceTable.at(Enums::CharacterStats::MaxNonHardenedLevel - 1) + 5) || _oldClvl == Enums::CharacterStats::MaxLevel)
+    if (_oldClvl == Enums::CharacterStats::MaxLevel)
     {
         // display levels 120 and 126 as 100% of progressbar
         _expGroupBox->setPreviousLevelExperience(experienceTable.at(_oldClvl - 2));
