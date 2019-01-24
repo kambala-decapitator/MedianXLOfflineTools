@@ -163,7 +163,7 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
                     bitReader.skip(22); // prefix & suffix
                     break;
                 case Enums::ItemQuality::Set: case Enums::ItemQuality::Unique:
-                    item->setOrUniqueId = bitReader.readNumber(12);
+                    item->setOrUniqueId = bitReader.readNumber(15);
                     break;
                 case Enums::ItemQuality::Rare: case Enums::ItemQuality::Crafted:
                     bitReader.skip(16); // first & second names
@@ -339,7 +339,7 @@ PropertiesMultiMap ItemParser::parseItemProperties(ReverseBitReader &bitReader, 
             propToAdd->bitStringOffset = bitReader.pos() + 16; // include 'JM' bit length
 
             ItemPropertyTxt *txtProperty = ItemDataBase::Properties()->value(id);
-            propToAdd->param = txtProperty->saveParamBits ? bitReader.readNumber(txtProperty->saveParamBits) : 0;
+            propToAdd->param = txtProperty->paramBits ? bitReader.readNumber(txtProperty->paramBits) : 0;
             propToAdd->value = bitReader.readNumber(txtProperty->bits) - txtProperty->add;
             if (id == ItemProperties::EnhancedDamage)
             {

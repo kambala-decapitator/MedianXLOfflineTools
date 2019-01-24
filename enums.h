@@ -23,13 +23,13 @@ public:
         Level = 0x2B,
         CurrentLocation = 0xA8,
         Mercenary = 0xB3,
-        QuestsHeader = 0x14F,
-        QuestsData = 0x159,
-        WaypointsHeader = 0x279,
-        WaypointsData = 0x281,
-        NPCHeader = 0x2CA,
-        StatsHeader = 0x2FD,
-        StatsData = 0x2FF
+        QuestsHeader = 0x165,
+        QuestsData = 0x16F,
+        WaypointsHeader = 0x28F,
+        WaypointsData = 0x297,
+        NPCHeader = 0x2E0,
+        StatsHeader = 0x313,
+        StatsData = 0x315
     };
 };
 
@@ -176,6 +176,7 @@ public:
         Experience,
         InventoryGold,
         StashGold,
+        Achievements = 88,
         SignetsOfLearningEaten = 185,
         SignetsOfSkillEaten,
         End = 511
@@ -184,13 +185,12 @@ public:
     enum
     {
         StatCodeLength = 9,
-        // Median XL and Ultimative have max level of 120, while Median Hardened (it's abandoned, but nevertheless) - 126
-        MaxLevel = 126,
-        MaxNonHardenedLevel = 120,
+        MaxLevel = 150,
         InventoryGoldFactor = 10000,
         StashGoldMax = 2500000,
-        SignetsOfLearningMax = 500,
-        SignetsOfSkillMax = 3
+        SignetsOfLearningMax = 400,
+        SignetsOfSkillMax = 3,
+        AchievementsCount = 10
     };
 
     static QMetaEnum statisticMetaEnum() { return metaEnumFromName<CharacterStats>("StatisticEnum"); }

@@ -144,25 +144,26 @@ QHash<uint, ItemPropertyTxt *> *ItemDataBase::Properties()
             ItemPropertyTxt *prop = new ItemPropertyTxt;
             prop->add = data.at(1).toUShort();
             prop->bits = data.at(2).toUShort();
-            prop->saveBits = data.at(3).toUShort();
-            QList<QByteArray> groupIDs = data.at(4).split(',');
+            prop->paramBitsSave = data.at(3).toUShort();
+            prop->bitsSave = data.at(4).toUShort();
+            QList<QByteArray> groupIDs = data.at(5).split(',');
             if (!groupIDs.at(0).isEmpty())
                 foreach (const QByteArray &id, groupIDs)
                     prop->groupIDs += id.toUShort();
-            prop->descGroupNegative = QString::fromUtf8(data.at(5));
-            prop->descGroupPositive = QString::fromUtf8(data.at(6));
-            prop->descGroupStringAdd = QString::fromUtf8(data.at(7));
-            prop->descNegative = QString::fromUtf8(data.at(8));
-            prop->descPositive = QString::fromUtf8(data.at(9));
-            prop->descStringAdd = QString::fromUtf8(data.at(10));
-            prop->descFunc = data.at(11).toUShort();
-            prop->descPriority = data.at(12).toUShort();
-            prop->descVal = data.at(13).toUShort();
-            prop->descGroupFunc = data.at(14).toUShort();
-            prop->descGroupPriority = data.at(15).toUShort();
-            prop->descGroupVal = data.at(16).toUShort();
-            prop->saveParamBits = data.at(17).toUShort();
-            prop->stat = data.at(18);
+            prop->descGroupNegative = QString::fromUtf8(data.at(6));
+            prop->descGroupPositive = QString::fromUtf8(data.at(7));
+            prop->descGroupStringAdd = QString::fromUtf8(data.at(8));
+            prop->descNegative = QString::fromUtf8(data.at(9));
+            prop->descPositive = QString::fromUtf8(data.at(10));
+            prop->descStringAdd = QString::fromUtf8(data.at(11));
+            prop->descFunc = data.at(12).toUShort();
+            prop->descPriority = data.at(13).toUShort();
+            prop->descVal = data.at(14).toUShort();
+            prop->descGroupFunc = data.at(15).toUShort();
+            prop->descGroupPriority = data.at(16).toUShort();
+            prop->descGroupVal = data.at(17).toUShort();
+            prop->paramBits = data.at(18).toUShort();
+            prop->stat = data.at(19);
             allProperties[data.at(0).toUInt()] = prop;
         }
     }
@@ -364,7 +365,7 @@ QHash<uint, QString> *ItemDataBase::Monsters()
             if (data.isEmpty())
                 continue;
 
-            allMonsters[data.at(0).toUInt()] = QString::fromUtf8(data.at(1));
+            allMonsters[data.at(0).toUInt()] = data.size() > 1 ? QString::fromUtf8(data.at(1)) : QString();
         }
     }
     return &allMonsters;

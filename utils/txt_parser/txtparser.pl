@@ -1,7 +1,7 @@
 #!/usr/bin/env perl
 
 # original script copyright (C) grig 2011
-# improvements and modifications for Median XL Offline Tools copyright (C) kambala 2011-2018
+# improvements and modifications for Median XL Offline Tools copyright (C) kambala 2011-2019
 
 use strict;
 use warnings;
@@ -51,18 +51,18 @@ sub tblExpandHash
 
 my $zeroRe = qr/^0$/;
 my %propertiesStatsHash; $propertiesStatsHash{"stat".($_ + 1)} = 7 + $_ * 4 for (0..6);
-my $properties = parsetxt("properties.txt", "#code"=>"0", param1 => 5, %propertiesStatsHash, '!_enabled' => {col => 1, val => $zeroRe});
+my $properties = parsetxt("properties.txt", "#code"=>"0", param1 => 5, %propertiesStatsHash);
 
 my $descArrayRef = [
-    {key => "descstrpos", col => 43, expanded => "descPositive"},
-    {key => "descstrneg", col => 44, expanded => "descNegative"},
-    {key => "descstr2",   col => 45, expanded => "descStringAdd"},
-    {key => "dgrpstrpos", col => 49, expanded => "descGroupPositive"},
-    {key => "dgrpstrneg", col => 50, expanded => "descGroupNegative"},
-    {key => "dgrpstr2",   col => 51, expanded => "descGroupStringAdd"},
+    {key => "descstrpos", col => 18, expanded => "descPositive"},
+    {key => "descstrneg", col => 19, expanded => "descNegative"},
+    {key => "descstr2",   col => 20, expanded => "descStringAdd"},
+    {key => "dgrpstrpos", col => 50, expanded => "descGroupPositive"},
+    {key => "dgrpstrneg", col => 51, expanded => "descGroupNegative"},
+    {key => "dgrpstr2",   col => 52, expanded => "descGroupStringAdd"},
 ];
-my %propertiesHash = ("stat"=>"0", bitsSave=>10, "bits"=>"22", "add"=>"23", "saveParamBits"=>"24",
-                      descpriority=>40, descfunc=>41, descval=>42, dgrp=>46, dgrpfunc=>47, dgrpval=>48);
+my %propertiesHash = ("stat"=>"0", bitsSave=>32, bitsParamSave=>33, "bits"=>"5", "add"=>"6", "saveParamBits"=>"7",
+                      descpriority=>15, descfunc=>16, descval=>17, dgrp=>47, dgrpfunc=>48, dgrpval=>49);
 $propertiesHash{$_->{key}} = $_->{col} for (@$descArrayRef);
 my $itemProperties = parsetxt("itemstatcost.txt", _index=>"1", %propertiesHash);
 &tblExpandArray($itemProperties, $_->{key}, $_->{expanded}) for (@$descArrayRef);
@@ -209,17 +209,17 @@ for my $setItem (@$setItems)
 my $itemName = 'name';
 my $armorTypes = parsetxt("armor.txt", $itemName=>1, "#code"=>0, $nameStr=>21, w=>31, h=>32, type=>2,
                           type2=>3, rlvl=>18, image=>37, rstr=>11, rdex=>12);
-my $weaponTypes = parsetxt("weapons.txt", $itemName=>1, "#code"=>0, $nameStr=>5, w=>41, h=>42, type=>2,
-                           type2=>3, stackable=>43, rlvl=>28, rstr=>23, rdex=>24, image=>48, quest=>65,
-                           '1hMinDmg'=>10, '1hMaxDmg'=>11, '2hMinDmg'=>14, '2hMaxDmg'=>15, throwMinDmg=>16, throwMaxDmg=>17,
-                           '1h2h'=>12, '2h'=>13);
-my $miscTypes = parsetxt("misc.txt", $itemName=>0, "#code"=>18, $nameStr=>20, $spellDescStr=>68,
-                         w=>22, h=>23, type=>37, type2=>38, stackable=>48, rlvl=>8, image=>28, quest=>52);
+my $weaponTypes = parsetxt("weapons.txt", $itemName=>1, "#code"=>0, $nameStr=>5, w=>43, h=>44, type=>2,
+                           type2=>3, stackable=>45, rlvl=>30, rstr=>25, rdex=>26, image=>50, quest=>67,
+                           '1hMinDmg'=>12, '1hMaxDmg'=>13, '2hMinDmg'=>16, '2hMaxDmg'=>17, throwMinDmg=>18, throwMaxDmg=>19,
+                           '1h2h'=>14, '2h'=>15);
+my $miscTypes = parsetxt("misc.txt", $itemName=>0, "#code"=>5, $nameStr=>7, $spellDescStr=>68,
+                         w=>24, h=>25, type=>8, type2=>9, stackable=>48, rlvl=>13, image=>30, quest=>52);
 &tblExpandHash($_, $itemName) for ($armorTypes, $weaponTypes, $miscTypes);
 
 my $skills = parsetxt("skills.txt", _index=>"1", "dbgname"=>"0", "internalName"=>"3", "class"=>"2",
-                      "srvmissile"=>"7", "srvmissilea"=>"10", "srvmissileb"=>"11", "srvmissilec"=>"12", "SrcDam"=>"220");
-my $skillsDsc = parsetxt("skilldesc.txt", "#code"=>0, tab => 1, row => 2, col => 3, image => 7, dscname=>8);
+                      "srvmissile"=>"7", "srvmissilea"=>"10", "srvmissileb"=>"11", "srvmissilec"=>"12");
+my $skillsDsc = parsetxt("skilldesc.txt", "#code"=>0, tab => 1, row => 2, col => 3, image => 8, dscname=>9);
 
 my $processedSkills;
 my $index = -1;
@@ -334,9 +334,9 @@ if ($locale ne 'en')
 my $prefix = "generated/$locale";
 make_path $prefix;
 
-my %invgfx; $invgfx{"invgfx$_"} = 31 + $_ for (1..6);
+my %invgfx; $invgfx{"invgfx$_"} = 33 + $_ for (1..6);
 my @invgfxKeys = sort keys %invgfx;
-my $itemTypes = parsetxt("itemtypes.txt", "#code"=>0, code0=>4, equiv1=>5, equiv2=>6, bodyLoc=>9, class=>30, %invgfx);
+my $itemTypes = parsetxt("itemtypes.txt", "#code"=>0, code0=>1, equiv1=>7, equiv2=>8, bodyLoc=>11, class=>32, %invgfx);
 open my $out, ">", "generated/itemtypes.txt";
 print $out "#code\tequiv\tvarImages\tname\n";
 for my $name (sort keys %$itemTypes)

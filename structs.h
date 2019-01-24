@@ -186,13 +186,13 @@ struct ItemType
 struct ItemPropertyTxt
 {
     quint16 add;
-    quint8 bits, saveBits; // saveBits != 0 only for properties from Enums::CharacterStats::StatisticEnum
+    quint8 bits, paramBits;
+    quint8 bitsSave, paramBitsSave; // saveBits != 0 only for properties from Enums::CharacterStats::StatisticEnum
     QList<quint16> groupIDs;
     QString descGroupNegative, descGroupPositive, descGroupStringAdd;
     QString descNegative, descPositive, descStringAdd;
     quint8 descFunc, descPriority, descVal;
     quint8 descGroupFunc, descGroupPriority, descGroupVal;
-    quint8 saveParamBits;
     QByteArray stat;
 };
 

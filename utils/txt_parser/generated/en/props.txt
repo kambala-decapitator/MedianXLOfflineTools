@@ -1,431 +1,407 @@
-#code	add	bits	bitsSave	descGroupIDs	descGroupNegative	descGroupPositive	descGroupStringAdd	descNegative	descPositive	descStringAdd	descfunc	descpriority	descval	dgrp	dgrpfunc	dgrpval	saveParamBits	stat
-0	100	13	13	1,2,3	to all Attributes	to all Attributes		to Strength	to Strength		1	67	1	1	1	1		strength
-1	100	13	13	0,2,3	to all Attributes	to all Attributes		to Energy	to Energy		1	61	1	1	1	1		energy
-2	100	13	13	0,1,3	to all Attributes	to all Attributes		to Dexterity	to Dexterity		1	65	1	1	1	1		dexterity
-3	100	13	13	0,1,2	to all Attributes	to all Attributes		to Vitality	to Vitality		1	63	1	1	1	1		vitality
-4			11															statpts
-5			9															newskills
-6			21															hitpoints
-7	150	11	21					to Life	to Life		1	59	1					maxhp
-8			21															mana
-9	150	11	21					to Mana	to Mana		1	55	1					maxmana
-10			21															stamina
-11	150	10	21					Maximum Stamina	Maximum Stamina		1	51	1					maxstamina
-12			7															level
-13			32															experience
-14			25															gold
-15			25															goldbank
-16	823	10						Enhanced Defense	Enhanced Defense		4	74	1					item_armor_percent
-17	823	10						Enhanced Maximum Damage	Enhanced Maximum Damage		3	129	0					item_maxdamage_percent
-18	823	10						Enhanced Minimum Damage	Enhanced Minimum Damage		3	130	0					item_mindamage_percent
-19		10						to Attack Rating	to Attack Rating		1	115	1					tohit
-20	257	9						Decreased Chance of Blocking	Increased Chance of Blocking		2	134	1					toblock
-21	0	11						to Minimum Damage	to Minimum Damage		1	127	1					mindamage
-22	0	11						to Maximum Damage	to Maximum Damage		1	126	1					maxdamage
-23	0	11						to Minimum Damage	to Minimum Damage		1	124	1					secondary_mindamage
-24	0	11						to Maximum Damage	to Maximum Damage		1	123	1					secondary_maxdamage
-25	50	9						Reduced Weapon Damage	Enhanced Weapon Damage		4	80	2					damagepercent
-26	0	10																manarecovery
-27	0	8						Regenerate Mana	Regenerate Mana		4	52	2					manarecoverybonus
-28	0	10						Heal Stamina Plus	Heal Stamina Plus		2	48	2					staminarecoverybonus
-31	500	16						Defense	Defense		1	71	1					armorclass
-32	250	11						Defense vs. Missile	Defense vs. Missile		1	69	1					armorclass_vs_missile
-33	0	10						Defense vs. Melee	Defense vs. Melee		1	70	1					armorclass_vs_hth
-34	110	10						Damage Reduced by	Damage Reduced by		3	22	2					normal_damage_reduction
-35	30	10						Magic Damage Reduced by	Magic Damage Reduced by		3	21	2					magic_damage_reduction
-36	100	10						Damage Reduction Decreased by	Damage Reduced by		2	22	2					damageresist
-37	100	8						Magic Resist	Magic Resist		4	41	2					magicresist
-38	100	8						to Maximum Magic Resist	to Maximum Magic Resist		4	46	1					maxmagicresist
-39	100	8		41,43,45	All Resists	All Resists		Fire Resist	Fire Resist		4	36	2	2	4	2		fireresist
-40	100	8		42,44,46	to All Maximum Resistances	to All Maximum Resistances		to Maximum Fire Resist	to Maximum Fire Resist		4	42	1	7	4	1		maxfireresist
-41	100	8		39,43,45	All Resists	All Resists		Lightning Resist	Lightning Resist		4	38	2	2	4	2		lightresist
-42	100	8		40,44,46	to All Maximum Resistances	to All Maximum Resistances		to Maximum Lightning Resist	to Maximum Lightning Resist		4	43	1	7	4	1		maxlightresist
-43	100	8		39,41,45	All Resists	All Resists		Cold Resist	Cold Resist		4	40	2	2	4	2		coldresist
-44	100	8		40,42,46	to All Maximum Resistances	to All Maximum Resistances		to Maximum Cold Resist	to Maximum Cold Resist		4	44	1	7	4	1		maxcoldresist
-45	100	8		39,41,43	All Resists	All Resists		Poison Resist	Poison Resist		4	34	2	2	4	2		poisonresist
-46	100	8		40,42,44	to All Maximum Resistances	to All Maximum Resistances		to Maximum Poison Resist	to Maximum Poison Resist		4	45	1	7	4	1		maxpoisonresist
-48	0	12						to Minimum Fire Damage	to Minimum Fire Damage		1	102	1					firemindam
-49	0	12						to Maximum Fire Damage	to Maximum Fire Damage		1	101	1					firemaxdam
-50	0	12						to Minimum Lightning Damage	to Minimum Lightning Damage		1	99	1					lightmindam
-51	0	12						to Maximum Lightning Damage	to Maximum Lightning Damage		1	98	1					lightmaxdam
-52	0	12						+%d magic damage	+%d magic damage		1	104	1					magicmindam
-53	0	12						+%d magic damage	+%d magic damage		1	103	1					magicmaxdam
-54	0	12						to Minimum Cold Damage	to Minimum Cold Damage		1	96	1					coldmindam
-55	0	12						to Maximum Cold Damage	to Maximum Cold Damage		1	95	1					coldmaxdam
-56	0	10																coldlength
-57	0	14						to Minimum Poison Damage	to Minimum Poison Damage		1	92	1					poisonmindam
-58	0	14						to Maximum Poison Damage	to Maximum Poison Damage		1	91	1					poisonmaxdam
-59	0	12																poisonlength
-60	0	10						Life stolen per Hit	Life stolen per Hit		2	88	1					lifedrainmindam
-62	0	10						Mana stolen per Hit	Mana stolen per Hit		2	89	1					manadrainmindam
-64	0	10						Stamina stolen per Hit	Stamina stolen per Hit		2	90	1					stamdrainmindam
-66	0	10						Stun Attack	Stun Attack		3	88	0					stunlength
-67	20	10																velocitypercent
-68	20	10																attackrate
-71	100	8																value
-72	150	10																durability
-73	90	10																maxdurability
-74	500	15						Drain Life	Replenish Life		1	56	2					hpregen
-75	100	10						Decrease Maximum Durability	Increase Maximum Durability		2	4	2					item_maxdurability_percent
-76	100	10		77	Increase Maximum Life and Mana	Increase Maximum Life and Mana		Decrease Maximum Life	Increase Maximum Life		2	58	2	10	2	2		item_maxhp_percent
-77	100	10		76	Increase Maximum Life and Mana	Increase Maximum Life and Mana		Decrease Maximum Mana	Increase Maximum Mana		2	54	2	10	2	2		item_maxmana_percent
-78	0	10						Attacker Takes Damage of	Attacker Takes Damage of		3	13	2					item_attackertakesdamage
-79	75	11						Less Gold from Monsters	Extra Gold from Monsters		2	10	1					item_goldbonus
-80	75	11						Worse Chance of Getting Magic Items	Better Chance of Getting Magic Items		2	8	1					item_magicbonus
-81	0	2						Knockback	Knockback		3	76	0					item_knockback
-82	20	9																item_timeduration
-83	0	4						to Amazon Skill Levels	to Amazon Skill Levels		13	150	1				3	item_addclassskills
-85	25	8						to Experience Gained	to Experience Gained		4	11	1					item_addexperience
-86	0	10						Life after each Kill	Life after each Kill		1	16	1					item_healafterkill
-87	45	10						Reduces all Vendor Prices	Reduces all Vendor Prices		2	8	2					item_reducedprices
-88	0	10																item_doubleherbduration
-89	5	8						to Light Radius	to Light Radius		1	6	1					item_lightradius
-90	0	24																item_lightcolor
-91	100	10						Requirements	Requirements		4	1	2					item_req_percent
-92		7						Required Level	Required Level		1	2	1					item_levelreq
-93	60	9		96,99,102,105	Decreased Overall Speed	Increased Overall Speed		Decreased Attack Speed	Increased Attack Speed		2	145	1	9	2	1		item_fasterattackrate
-94	64	10						ModitemLevReq	ModitemLevReq		4	58	2					item_levelreqpct
-96	50	9		93,99,102,105	Decreased Overall Speed	Increased Overall Speed		Slower Run/Walk	Faster Run/Walk		2	148	1	9	2	1		item_fastermovevelocity
-97	1	7									28	81					11	item_nonclassskill
-98		1															8	state
-99	50	9		93,96,102,105	Decreased Overall Speed	Increased Overall Speed		Slower Hit Recovery	Faster Hit Recovery		2	139	1	9	2	1		item_fastergethitrate
-101	0	6																skill_poison_override_length
-102	20	10		93,96,99,105	Decreased Overall Speed	Increased Overall Speed		Slower Block Rate	Faster Block Rate		2	136	1	9	2	1		item_fasterblockrate
-103	0	1						Ignores Resistances of Undead	Ignores Resistances of Undead		3	150	0					skill_bypass_undead
-104	0	1						Ignores Resistances of Demons	Ignores Resistances of Demons		3	150	0					skill_bypass_demons
-105	50	10		93,96,99,102	Decreased Overall Speed	Increased Overall Speed		Slower Cast Rate	Faster Cast Rate		2	142	1	9	2	1		item_fastercastrate
-106	0	1						Ignores Resistances of Beasts	Ignores Resistances of Beasts		3	150	0					skill_bypass_beasts
-107	1	5									27	81					11	item_singleskill
-108	0	1						Slain Monsters Rest in Peace	Slain Monsters Rest in Peace		3	81	0					item_restinpeace
-109	20	8						Curse Length Reduction	Curse Length Reduction		2	5	1					curse_resistance
-110	20	8						Poison Length Reduced by	Poison Length Reduced by		2	11	2					item_poisonlengthresist
-111	100	10						Damage	Damage		1	122	2					item_normaldamage
-112	25	7						Hit Causes Monster to Flee	Hit Causes Monster to Flee		5	79	2					item_howl
-113	50	8						Hit Blinds Target	Hit Blinds Target		12	80	2					item_stupidity
-114	0	10						Damage Taken Goes To Mana	Damage Taken Goes To Mana		2	11	1					item_damagetomana
-115	0	1						Ignore Target's Defense	Ignore Target's Defense		3	119	0					item_ignoretargetac
-116	0	7						Target Defense	Target Defense		20	118	1					item_fractionaltargetac
-117	0	1						Prevent Monster Heal	Prevent Monster Heal		3	81	0					item_preventheal
-118	0	1						Half Freeze Duration	Half Freeze Duration		3	19	0					item_halffreezeduration
-119	20	10						Bonus to Attack Rating	Bonus to Attack Rating		2	117	1					item_tohit_percent
-120	500	10						to Monster Defense per Hit	to Monster Defense per Hit		1	75	1					item_damagetargetac
-121	20	10						Damage to Demons	Damage to Demons		4	112	1					item_demondamage_percent
-122	20	10						Damage to Undead	Damage to Undead		4	108	1					item_undeaddamage_percent
-123	128	10						to Attack Rating against Demons	to Attack Rating against Demons		1	110	1					item_demon_tohit
-124	128	10						to Attack Rating against Undead	to Attack Rating against Undead		1	106	1					item_undead_tohit
-125	0	1						Throwable	Throwable		3	5	0					item_throwable
-126	0	3						ModitemColdSkills	ModitemColdSkills		1	157	1				3	item_elemskill
-127	0	5						to All Skills	to All Skills		1	158	1					item_allskills
-128	0	10		367,368		Attacker Takes Elemental Damage of		Attacker Takes Lightning Damage of	Attacker Takes Lightning Damage of		3	14	2	14	3	2		item_attackertakeslightdamage
-131	150	10						Damage Reflected	Damage Reflected		2	13	1					thorns_percent
-134	5	5						Freezes Target	Freezes Target		12	78	2					item_freeze
-135	0	8						Chance of Open Wounds	Chance of Open Wounds		2	83	1					item_openwounds
-136	0	8						Chance of Crushing Blow	Chance of Crushing Blow		2	87	1					item_crushingblow
-137	0	10						Kick Damage	Kick Damage		1	121	1					item_kickdamage
-138	0	10						Mana after each Kill	Mana after each Kill		1	16	1					item_manaafterkill
-139	0	10						Life after each Demon Kill	Life after each Demon Kill		1	15	1					item_healafterdemonkill
-140	0	10																item_extrablood
-141	0	8						Deadly Strike	Deadly Strike		2	85	1					item_deadlystrike
-142	0	10						Fire Absorb	Fire Absorb		2	23	2					item_absorbfire_percent
-143	0	10						Fire Absorb	Fire Absorb		1	27	1					item_absorbfire
-144	0	10						Lightning Absorb	Lightning Absorb		2	24	2					item_absorblight_percent
-145	0	10						Lightning Absorb	Lightning Absorb		1	29	1					item_absorblight
-146	0	10						Magic Absorb	Magic Absorb		2	26	2					item_absorbmagic_percent
-147	0	10						Magic Absorb	Magic Absorb		1	33	1					item_absorbmagic
-148	0	10						Cold Absorb	Cold Absorb		2	25	2					item_absorbcold_percent
-149	0	10						Cold Absorb	Cold Absorb		1	31	1					item_absorbcold
-150	50	8						Slows Target by	Slows Target by		2	77	2					item_slow
-151	1	7															11	item_aura
-152		1						Indestructible	Indestructible		3	160	0					item_indesctructible
-153		1						Cannot Be Frozen	Cannot Be Frozen		3	20	0					item_cannotbefrozen
-154	50	8						Slower Stamina Drain	Slower Stamina Drain		2	49	1					item_staminadrainpct
-155	0	7						Reanimate as:	Reanimate as:		23	17	1				12	item_reanimate
-156	0	10						Piercing Attack	Piercing Attack		2	132	1					item_pierce
-157	0	7						Fires Magic Arrows	Fires Magic Arrows		3	131	0					item_magicarrow
-158	0	7						Fires Explosive Arrows or Bolts	Fires Explosive Arrows or Bolts		3	133	0					item_explosivearrow
-159	0	10																item_throw_mindamage
-160	0	10																item_throw_maxdamage
-161	10	6						Unusual Missile Speed	Unusual Missile Speed		3	77	1					skill_handofathena
-164	20	8						Chance of Uninterruptable Attack	Chance of Uninterruptable Attack		2	20	1					skill_concentration
-171	0	10						Total Character Defense plus	Total Character Defense plus		2	20	2					skill_armor_percent
-179		10															10	attack_vs_montype
-180		10															10	damage_vs_montype
-181		3																fade
-182	100	9						Total Defense = 0	Total Defense = 0		3	10	0					armor_override_percent
-183	100	11						Crafting Points	Crafting Points		1	175	1					game_craftpoints
-184	0	5																x_signet01
-185			12					Stat Signets Used:	Stat Signets Used:		3	4	2					potion_stat_cap
-186			8					Skill Signets Used:	Skill Signets Used:		3	4	2					potion_skill_cap
-187	0	3						Dragonheart Spell Blinds Attacker	Dragonheart Spell Blinds Attacker		12	22	2					passive_lionheart_addstupidth
-188	0	3						+%d to Javelin and Spear Skills	+%d to Javelin and Spear Skills		14	151					16	item_addskill_tab
-189	0	16																damage_divisor
-191	0	5																x_signet02
-192	0	5																x_signet03
-193	0	5																x_signet04
-194	0	4																item_numsockets
-195	0	8						%d%% Chance to cast level %d %s on Melee Attack	%d%% Chance to cast level %d %s on Melee Attack		15	160					17	item_skillonattack
-196	0	8						%d%% Chance to cast level %d %s on Kill	%d%% Chance to cast level %d %s on Kill		15	160					17	item_skillonkill
-197	0	8						%d%% Chance to cast level %d %s when you Die	%d%% Chance to cast level %d %s when you Die		15	160					17	item_skillondeath
-198	0	8						%d%% Chance to cast level %d %s on Striking	%d%% Chance to cast level %d %s on Striking		15	160					17	item_skillonhit
-199	0	7						%d%% Chance to cast level %d %s when you Level-Up	%d%% Chance to cast level %d %s when you Level-Up		15	160					17	item_skillonlevelup
-200	0	7						\orange;Mega Impact\white;	\orange;Mega Impact\white;		3	237	0				17	item_megaimpact
-201	0	7						%d%% Chance to cast level %d %s when Struck	%d%% Chance to cast level %d %s when Struck		15	160					17	item_skillongethit
-202	0	5																x_signet05
-203	0	10						Enhanced Weapon Damage	Enhanced Weapon Damage	(Based on Character Level)	8	60	2					item_totaldamage_perlevel
-204	0	16						(%d/%d Charges)	(%d/%d Charges)		24	4					16	item_charged_skill
-205	0	5																x_signet06
-206	0	5																x_signet07
-207	0	5																x_signet08
-208	0	9						Life on Striking	Life on Striking		1	22	1					item_healonstriking
-209	0	9						Mana on Striking	Mana on Striking		1	20	1					item_manaonstriking
-210	0	9						Life on Attack	Life on Attack		1	22	1					skill_healonstrikingmelee
-211	0	8						Miasma Effect Duration: +2 seconds	Miasma Effect Duration: +2 seconds		3	19	0					hex_dur_syn
-213	0	5																x_signet09
-214	0	10						Defense	Defense	(Based on Character Level)	6	72	1					item_armor_perlevel
-215	0	10						Enhanced Defense	Enhanced Defense	(Based on Character Level)	8	73	1					item_armorpercent_perlevel
-216	0	10						to Life	to Life	(Based on Character Level)	6	57	1					item_hp_perlevel
-217	0	10						to Mana	to Mana	(Based on Character Level)	6	53	1					item_mana_perlevel
-218	0	10						to Maximum Damage	to Maximum Damage	(Based on Character Level)	6	125	1					item_maxdamage_perlevel
-219	0	5																blessings_counter
-220	0	5																x_signet10
-221	0	5																x_signet11
-222	0	5																x_signet12
-223	0	5																x_signet13
-224	0	5																x_signet14
-225	0	10						Bonus to Attack Rating	Bonus to Attack Rating	(Based on Character Level)	7	116	1					item_tohitpercent_perlevel
-226	0	5																x_signet15
-227	0	5																x_signet16
-228	0	5																x_signet17
-229	0	5																x_signet18
-230	0	10						Cold Resist	Cold Resist	(Based on Character Level)	7	39	2					item_resist_cold_perlevel
-231	0	10						Fire Resist	Fire Resist	(Based on Character Level)	7	35	2					item_resist_fire_perlevel
-232	0	10						Lightning Resist	Lightning Resist	(Based on Character Level)	7	37	2					item_resist_ltng_perlevel
-233	0	10						Poison Resist	Poison Resist	(Based on Character Level)	7	33	2					item_resist_pois_perlevel
-234	0	5																x_signet19
-235	0	5																x_signet20
-236	0	5																x_signet21
-237	0	5																x_signet22
-238	0	5																x_signet23
-239	0	10						Extra Gold from Monsters	Extra Gold from Monsters	(Based on Character Level)	7	9	1					item_find_gold_perlevel
-240	0	10						Better Chance of Getting Magic Items	Better Chance of Getting Magic Items	(Based on Character Level)	7	7	1					item_find_magic_perlevel
-241	0	5																x_signet24
-242	0	5																x_signet25
-243	0	5																x_signet26
-244	0	5																x_signet27
-245	1	2						\orange;Parasite Gains 12 Additional Targets\blue;	\orange;Flamefront Has Twice as Many Firebolts\blue;		3	237	0					ffront_proj
-246	1	2						\orange;Idol of Scosglen Has no Cooldown\blue;	\orange;Firedance Grants 1% Deadly Strike Per Base Level\blue;		3	237	0					firedance_mod
-247	0	10						Chance of Crushing Blow	Chance of Crushing Blow	(Based on Character Level)	7	86	1					item_crushingblow_perlevel
-248	0	10						Chance of Open Wounds	Chance of Open Wounds	(Based on Character Level)	7	82	1					item_openwounds_perlevel
-249	0	5																x_signet30
-250	0	10																item_totembound
-251	0	5																x_signet31
-252	0	6						Repairs %d Durability per Second	Repairs %d Durability per Second		11	3	0					item_replenish_durability
-253	0	6						Replenishes Quantity	Replenishes Quantity		3	4	0					item_replenish_quantity
-254	0	8						Increased Stack Size	Increased Stack Size		3	5	0					item_extra_stack
-255	0	5																x_signet32
-256	0	5																x_signet33
-257	1	2						\orange;Parasite Gains 12 Additional Targets\blue;	\orange;Unholy: Blood Thorns Deal 40% More Total Damage\nDevotionless: +200% Increased Vessel Damage\nHoly: Plague Deals Double Damage\blue;		3	237	0					vessel_mod
-258	0	5																x_signet35
-259	0	2						Drains 2% Life per Second	Drains 2% Life per Second		3	49	0					item_drain_aura
-260	0	7						\orange;Thunderfury\white;	\orange;Thunderfury\white;		3	238	0				17	item_thunderfury
-261	0	5						Extra Totems	Extra Totems		1	150	1					new_totem_syn
-263	0	5																x_signet36
-264	0	5																x_signet37
-265	0	3																item_has_toraja
-266	0	7						\orange;Area Effect Attack\white;	\orange;Area Effect Attack\white;		3	238	0				17	item_warp_blue
-267	0	5						Enhanced Stance Radius	Enhanced Stance Radius		1	198	1					item_stance_radius
-270	0	3																item_has_edyrem
-271	0	2						Random Resistance Bonus	Random Resistance Bonus		3	49	0					item_randomres_aura
-272	0	2						Random Walk/Run Speed	Random Walk/Run Speed		3	49	0					item_randomspeed_aura
-273	25	7																item_crushthorns
-274	0	8						Hive Adds 33% of Poison Spell Damage Items to Vitality	Hive Adds 33% of Poison Spell Damage Items to Vitality		3	5	0					item_poison_set
-275	0	9						Enhanced Damage vs. Necrobots	Enhanced Damage vs. Necrobots		2	3	1					item_desc_breaker
-276	0	1																item_hasbeenduped
-277	0	7						\orange;Area Effect Attack\white;	\orange;Area Effect Attack\white;		3	238	0				17	item_warpskillonattack
-278	50	9						Strength Factor to Spell Damage	Strength Factor to Spell Damage		1	198	1					str_factor
-279	0	8						Lion Stance Damage Bonus	Lion Stance Damage Bonus		2	114	2					lion_stance_syn
-280	0	10																greathunt_buff
-281	0	8						Nova Charge Scatter Increased by	Nova Charge Scatter Increased by		2	104	2					item_supernova_synergy
-282	0	7						%d%% Chance to cast level %d %s when you Take Damage	%d%% Chance to cast level %d %s when you Take Damage		15	160					17	item_skillondamaged
-283	0	7						%d%% Chance to cast level %d %s when Attacked	%d%% Chance to cast level %d %s when Attacked		15	160					17	item_skillongetmeleed
-284	0	7						%d%% Chance to cast level %d %s when Struck by a Missile	%d%% Chance to cast level %d %s when Struck by a Missile		15	160					17	item_skillongetmissilehit
-285	0	5																x_signet38
-286	0	5																x_signet39
-287	0	5																x_signet40
-288	1	2						\orange;Orb Effects Applied to this Item are Quadrupled	\orange;Blood Hatred does not cost you life		3	237	0					si_1
-289	0	2						Hunting Banshee/Elemental Missiles	Hunting Banshee/Elemental Missiles		1	125	1					skill_druid_enhanced
-290	0	8						Lamia Reanimate Targets as: Rathma Priest	Lamia Reanimate Targets as: Rathma Priest		2	120	1					skill_lamia_rean
-291	0	8						Retribute Fire Resist Penalty Increased by	Retribute Fire Resist Penalty Increased by		2	101	2					skill_justkilledsomeone
-292	0	7						%d%% Chance to cast level %d %s when your Enemy is Slain	%d%% Chance to cast level %d %s when your Enemy is Slain		15	159					17	item_skillonanykill
-293	0	1						Doubled Terror Strike Duration	Doubled Terror Strike Duration		3	26	0					skill_arcanestrike_synergy
-294	0	5																x_signet41
-295	0	9						Mana on Attack	Mana on Attack		1	20	1					item_manaonstrikingmelee
-296	0	1						\dgreen;Orb Effects Applied to this Item are Doubled\blue;	\dgreen;Orb Effects Applied to this Item are Doubled\blue;		3	230	0					item_is_honorific
-297	0	5																x_signet42
-298	0	5																x_signet43
-299	0	10						\grey;Current Strength Damage Bonus:	\grey;Current Strength Damage Bonus:		2	240	2					strength_bonus_wpn
-300	0	10						\grey;Current Dexterity Damage Bonus:	\grey;Current Dexterity Damage Bonus:		2	239	2					dexterity_bonus_wpn
-301	0	1						Shadows Spawn Corpses on Striking 5%	Shadows Spawn Corpses on Striking 5%		3	133	0					item_shadows_corpsesynergy
-303	0	12						Fire Damage to Void Archon	Fire Damage to Void Archon		1	48	1					skill_voidarchon_fire
-304	0	5																x_signet44
-305	50	10						to Enemy Cold Resistance	to Enemy Cold Resistance		20	88	1					item_pierce_cold
-306	50	10						to Enemy Fire Resistance	to Enemy Fire Resistance		20	88	1					item_pierce_fire
-307	50	10						to Enemy Lightning Resistance	to Enemy Lightning Resistance		20	88	1					item_pierce_ltng
-308	50	10						to Enemy Poison Resistance	to Enemy Poison Resistance		20	88	1					item_pierce_pois
-309	0	5																x_signet45
-310	0	5																x_signet46
-311	0	5																x_signet47
-312	0	5																x_signet48
-313	0	10																darkportal
-314	0	5																x_signet50
-315	0	8																firelength
-316	0	8						&gt; Main &lt;	&gt; Main &lt;		3	55	0					burningmin
-317	0	8						&gt; Offense &lt;	&gt; Offense &lt;		3	55	0					burningmax
-324	0	6																item_extra_charges
-329	50	8		330,331,332,377	to Spell Damage	to Spell Damage		to Fire Spell Damage	to Fire Spell Damage		4	88	1	5	4	1		passive_fire_mastery
-330	50	8		329,331,332,377	to Spell Damage	to Spell Damage		to Lightning Spell Damage	to Lightning Spell Damage		4	88	1	5	4	1		passive_ltng_mastery
-331	50	8		329,330,332,377	to Spell Damage	to Spell Damage		to Cold Spell Damage	to Cold Spell Damage		4	88	1	5	4	1		passive_cold_mastery
-332	50	8		329,330,331,377	to Spell Damage	to Spell Damage		to Poison Spell Damage	to Poison Spell Damage		4	88	1	5	4	1		passive_pois_mastery
-333	0	8		334,335,336	to All Enemy Resistances	to All Enemy Resistances		to Enemy Fire Resistance	to Enemy Fire Resistance		20	88	1	6	20	1		passive_fire_pierce
-334	0	8		333,335,336	to All Enemy Resistances	to All Enemy Resistances		to Enemy Lightning Resistance	to Enemy Lightning Resistance		20	88	1	6	20	1		passive_ltng_pierce
-335	0	8		333,334,336	to All Enemy Resistances	to All Enemy Resistances		to Enemy Cold Resistance	to Enemy Cold Resistance		20	88	1	6	20	1		passive_cold_pierce
-336	0	8		333,334,335	to All Enemy Resistances	to All Enemy Resistances		to Enemy Poison Resistance	to Enemy Poison Resistance		20	88	1	6	20	1		passive_pois_pierce
-337	0	8																passive_critical_strike
-338	0	8		339,340	Chance to Avoid Damage	Chance to Avoid Damage		Avoid Damage	Avoid Damage		2	40	1	8	2	1		passive_dodge
-339	0	8		338,340	Chance to Avoid Damage	Chance to Avoid Damage		Avoid Damage	Avoid Damage		2	40	1	8	2	1		passive_avoid
-340	0	8		338,339	Chance to Avoid Damage	Chance to Avoid Damage		Avoid Damage	Avoid Damage		2	40	1	8	2	1		passive_evade
-341	0	8																passive_warmth
-342	0	8																passive_mastery_melee_th
-343	0	8			ModitemPeril	ModitemPeril								4	3	0		passive_mastery_melee_dmg
-344	0	8																passive_mastery_melee_crit
-345	0	8																passive_mastery_throw_th
-346	0	8																passive_mastery_throw_dmg
-347	0	8																passive_mastery_throw_crit
-348	0	8																passive_weaponblock
-349	0	9																passive_summon_resist
-356	0	2																questitemdifficulty
-357	50	9																passive_mag_mastery
-358	0	8																passive_mag_pierce
-359	50	9		360,361,362		Bonus to All Attributes		Penalty to Strength	Bonus to Strength		2	74	1	3	2	1		item_strength_percent
-360	50	9		359,361,362		Bonus to All Attributes		Penalty to Dexterity	Bonus to Dexterity		2	74	1	3	2	1		item_dexterity_percent
-361	50	9		359,360,362		Bonus to All Attributes		Penalty to Energy	Bonus to Energy		2	74	1	3	2	1		item_energy_percent
-362	50	9		359,360,361		Bonus to All Attributes		Penalty to Vitality	Bonus to Vitality		2	74	1	3	2	1		item_vitality_percent
-363	50	8						Slows Attacker by	Slows Attacker by		2	12	2					item_slowthorns
-364	25	7						Attacker Flees after Striking	Attacker Flees after Striking		2	79	2					item_howlthorns
-365	5	5						Freezes attacker	Freezes attacker		12	78	2					item_freezethorns
-366	50	8						Blinds Attacker	Blinds Attacker		12	80	2					item_stupiditythorns
-367	0	10		128,368		Attacker Takes Elemental Damage of		Attacker Takes Cold Damage of	Attacker Takes Cold Damage of		3	14	2	14	3	2		item_attackertakescolddamage
-368	0	10		128,367		Attacker Takes Elemental Damage of		Attacker Takes Fire Damage of	Attacker Takes Fire Damage of		3	14	2	14	3	2		item_attackertakesfiredamage
-369	0	5																x_signet51
-370	0	5																x_signet52
-371	0	7						\orange;Amazing Grace\white;	\orange;Amazing Grace\white;		3	235	0				17	item_amazinggrace
-372	0	1						Level 5 Venomous Aura	Level 5 Venomous Aura		3	159	0					item_desc_acidblood
-373	0	1						Worship the Crack Monkeys!	Worship the Crack Monkeys!		3	3	0					item_desc_deathmarch
-374	0	1						+300% Enhanced Damage vs. the Zakarum	+300% Enhanced Damage vs. the Zakarum		3	3	0					item_desc_judas
-375	0	2						Cannot Be Cubed	Cannot Be Cubed		3	180	0					item_lc_tgt_max
-376	50	8						Slows Melee Target by	Slows Melee Target by		2	77	2					item_slow_offweapon
-377	50	9		329,330,331,332		to Spell Damage		to Physical/Magic Spell Damage	to Physical/Magic Spell Damage		4	88	1	5	4	1		passive_pm_mastery
-378	0	8						Bonus Elemental Damage to Vanquish	Bonus Elemental Damage to Vanquish		4	150	1					passive_vanquish_addelem
-379	0	5						!! THIS ITEM IS BROKEN IN THE NEW PATCH !!	!! THIS ITEM IS BROKEN IN THE NEW PATCH !!		3	150	0					deathlord_penalty
-380	0	8						Bonus Damage to Bloodlust	Bonus Damage to Bloodlust		4	149	1					passive_bloodlust_dmgpct
-381	0	8						Bonus Elemental Damage to Bloodlust	Bonus Elemental Damage to Bloodlust		4	149	1					passive_bloodlust_elempct
-382	0	5																x_signet53
-383	0	5																x_signet54
-384	0	8						Velocity Bonus to Sacred Armor	Velocity Bonus to Sacred Armor		2	150	1					passive_holyarmor_addmove
-385	0	2						Only Allows the Use of Melee, Summoning and Buff/Debuff Skills	Only Allows the Use of Melee, Summoning and Buff/Debuff Skills		3	10	0					passive_state_lockout
-386	0	8																witchberry_lifeheal
-387	0	8						Bonus Damage to Mark of the Wild	Bonus Damage to Mark of the Wild		4	149	1					passive_motw_dmgpct
-388	0	8						Bonus Elemental Damage to Mark of the Wild	Bonus Elemental Damage to Mark of the Wild		4	149	1					passive_motw_elempct
-389	0	10						Duration Bonus to Mark of the Wild	Duration Bonus to Mark of the Wild		2	122	1					passive_motw_duration
-390	0	5						Extra Flayer Minions	Extra Flayer Minions		1	150	1					passive_shadows_addmax
-391	0	10						Bonus to Miasma Haunt Duration	Bonus to Miasma Haunt Duration		2	94	1					passive_hex_adddmg
-392	0	2						Doubled Venomous Aura Effect	Doubled Venomous Aura Effect		3	150	0					passive_acidtrance_synergy
-393	0	5																x_signet55
-394	0	8																passive_shadows_addelem
-397	0	5																x_signet56
-398	0	5																x_signet57
-399	0	8						to Searing Glow Dazzle Duration	to Searing Glow Dazzle Duration		4	148	1					passive_wrath_synergy
-400	0	5																x_signet58
-401	0	5																x_signet59
-402	0	8						Extra Magic Missiles Bolts	Extra Magic Missiles Bolts		1	149	1					passive_missiles_missiles
-403	0	5																x_signet60
-404	0	10						to Fire Spell Damage	to Fire Spell Damage	(Based on Character Level)	7	88	1					passive_fire_mastery_perlevel
-405	0	10						to Lightning Spell Damage	to Lightning Spell Damage	(Based on Character Level)	7	88	1					passive_ltng_mastery_perlevel
-406	0	10						to Cold Spell Damage	to Cold Spell Damage	(Based on Character Level)	7	88	1					passive_cold_mastery_perlevel
-407	0	10						to Poison Spell Damage	to Poison Spell Damage	(Based on Character Level)	7	88	1					passive_pois_mastery_perlevel
-408	0	5																x_signet61
-409	50	8						Bonus to Buff/Debuff/Cold Skill Duration	Bonus to Buff/Debuff/Cold Skill Duration		2	125	1					profession_duration_mod
-410	0	8																skill_hex_effect
-412	0	10																resonance_buff
-413	0	8						Bonus to Vitality when using an Apple	Bonus to Vitality when using an Apple		2	50	1					skill_bloodymary_bonus
-414	0	8						Bonus to Energy when using an Apple	Bonus to Energy when using an Apple		2	49	1					skill_paganheart_bonus
-418	0	2						\orange;Can Be Upgraded with Black Road Challenge	\orange;Can Be Upgraded with Black Road Challenge		3	225	0					item_needschallenged
-419	0	8						\red;May the Light of Dien-Ap-Sten shine upon you!\blue;	\red;May the Light of Dien-Ap-Sten shine upon you!\blue;		3	3	0					hm_c
-421	2	2		422,423,424,425		\orange;All trials completed!		\orange;Trial of Fear completed!	\orange;Trial of Fear completed!		3	228	0	12	3	0		black_1
-422	2	2		421,423,424,425		\orange;All trials completed!		\orange;Trial of Greed completed!	\orange;Trial of Greed completed!		3	227	0	12	3	0		black_2
-423	2	2		421,422,424,425		\orange;All trials completed!		\orange;Trial of Knowledge completed!	\orange;Trial of Knowledge completed!		3	225	0	12	3	0		black_3
-424	2	2		421,422,423,425		\orange;All trials completed!		\orange;Trial of Blood completed!	\orange;Trial of Blood completed!		3	224	0	12	3	0		black_4
-425	2	2		421,422,423,424		\orange;All trials completed!		\orange;Trial of Contrition completed!	\orange;Trial of Contrition completed!		3	226	0	12	3	0		black_5
-426	2	2						\orange;Well Done!\red;	\yellow;You have reached the gambling limit. Please reset your Trader's Chest!\blue;		3	2	0					black_6
-427	2	2						\orange;Congratulations!\blue;	Adds 9999-9999 Magic Damage		3	2	0					black_7
-429	0	8						Damage Reduction to Pact of Blood	Damage Reduction to Pact of Blood		4	18	1					passive_rejuv_dr
-430	0	8						to All Skills when using an Apple	to All Skills when using an Apple		1	50	1					skill_paganheart_synergy
-431	50	9						Bonus to Poison Skill Duration	Bonus to Poison Skill Duration		4	149	1					skill_poison_dur
-432	0	10						Defense vs. Missile	Defense vs. Missile	(Based on Character Level)	6	88	1					item_acvsmiss_perlevel
-439	0	8						Life when Struck by an Enemy	Life when Struck by an Enemy		1	14	1					item_healwhenstruck
-440	0	8						Mana when Struck by an Enemy	Mana when Struck by an Enemy		1	13	1					item_manawhenstruck
-441	5	6		445	to All Maximum Minions	to All Maximum Minions		to Maximum Necromancer Minions	to Maximum Necromancer Minions		1	79	1	11	1	1		passive_aura_addmax
-442	0	10						Current Strength Damage Bonus:	Current Strength Damage Bonus:		2	130	2					str_bonus_blue
-443	0	8						\green;Already upgraded!	\green;Already upgraded!		3	229	0					item_upgraded
-444	50	9						Penalty to Summoned Minion Life	Bonus to Summoned Minion Life		4	75	1					skill_minion_hp_percent
-445	0	6		441	to All Maximum Minions	to All Maximum Minions		to Maximum Barbarian Minions	to Maximum Barbarian Minions		1	66	1	11	1	1		skill_ancientspirits_synergy
-446	0	8						Damage to Protector Spirit Bloodlust	Damage to Protector Spirit Bloodlust		4	75	1					skill_shamanspath_synergy
-449	0	8						Enhanced Damage to Moonstrike	Enhanced Damage to Moonstrike		4	33	1					moonstrike_synergy
-450	0	10						to Strength	to Strength	(Based on Lioness Skill Level)	6	57	1					item_str_perlioness
-458	0	5																x_signet62
-459	0	5																x_signet63
-460	0	5																x_signet64
-461	0	5																x_signet65
-462	0	8						Damage to Vessel of Justice	Damage to Vessel of Justice		4	137	1					skill_voj_mastery
-463	0	5																x_signet67
-464	1	9						\orange;Bow Devotion: Ecstatic Frenzy does not Reduce your Defense	Scorpion Blade Projectiles		3	238	0					skill_scorpion_blades
-465	0	5																x_signet69
-466	0	7																x_signet70
-467	0	10						Damage when using an Apple	Damage when using an Apple		4	49	1					skill_elixirs_synergy
-468	0	8						Damage to Vessel of Retribution	Damage to Vessel of Retribution		4	137	1					skill_light_mastery
-469	0	8						Extra Targets to Paladin Vessels	Extra Targets to Paladin Vessels		1	138	1					skill_shadow_mastery
-470	50	9						Bonus to Summoned Minion Damage	Bonus to Summoned Minion Damage		4	75	1					skill_minion_dmg_percent
-471	1	2						\orange;Can Be Upgraded with Ennead Challenge	\orange;Can Be Upgraded with Ennead Challenge		3	149	0					item_needsupgraded
-472	0	8																item_upgraded2
-473	0	8						\green;Unlocks your Ennead Skill	\green;Unlocks your Ennead Skill		3	230	0					learn_ennead
-474	0	8						\green;Unlocks your Black Road Skill	\green;Unlocks your Black Road Skill		3	230	0					learn_blackroad
-475	0	1						\red;Druid Morph\blue;	\red;Druid Morph\blue;		3	234	0					item_desc_druidmorph
-476	0	1						Level 1 Demon Blood Aura	Level 1 Demon Blood Aura		3	159	0					item_desc_dbaura
-477	1	4						Adds 9999-9999 Magic Damage	Nearby enemies lose 10% magic and elemental resistances		3	104	0					item_desc_hardaura
-478	0	1						Socketed (1)\nLevel 20 Warp Field Aura	Socketed (1)\nLevel 20 Warp Field Aura		3	1	0					item_desc_instructions
-479	0	4						Maximum Skill Level Increased by	Maximum Skill Level Increased by		3	69	2					skill_more
-480	0	5						to Vitality per Socketed Gem	to Vitality per Socketed Gem		1	75	1					item_skill_paragon
-481	0	5						to Defense per Socketed Rune	to Defense per Socketed Rune		4	74	1					item_skill_runemaster
-482	0	10																item_gem_paragon
-483	0	10																item_rune_runemaster
-484	0	1						\red;This one goes to eleven	\red;This one goes to eleven		3	157	0					item_desc_spinaltap
-485	50	9						Energy Factor to Spell Damage	Energy Factor to Spell Damage		1	195	1					enr_factor
-487	25	9						Bonus to Summoned Minion Resistances	Bonus to Summoned Minion Resistances		4	75	1					minion_resist_all
-488	50	9						Bonus to Energy Factor	Bonus to Energy Factor		4	157	1					enr_factor_percent
-489	0	10						Target Takes Additional Damage of	Target Takes Additional Damage of		3	13	2					item_targettakesdamage
-490	0	1						Spells Cost Life instead of Mana	Spells Cost Life instead of Mana		3	157	0					item_desc_lifecostspells
-491	0	3						\red;I Killed A Dragon and All I Got Was This Lousy Charm\blue;	\red;I Killed A Dragon and All I Got Was This Lousy Charm\blue;		3	2	0					item_has_stardragon
-492	50	8						Reduced Healing Rate from Apples	Increased Healing Rate from Apples		4	31	1					item_faster_potions
-493	50	8						Slows Ranged Attacker by	Slows Ranged Attacker by		2	74	2					skill_slowrangedthorns
-495	0	1						\red;Sorceress Morph\blue;	\red;Sorceress Morph\blue;		3	234	0					item_desc_sorciemorph
-496	1	9						\orange;Such Voracity, Balance for Destruction\blue;	\orange;Such Voracity, Balance for Destruction\blue;		3	0	0					tree_synergy
-498	0	9						Bonus to Fire Elemental Damage if Summoned during Pact of Blood	Bonus to Fire Elemental Damage if Summoned during Pact of Blood		2	14	1					item_cots_when_pact
-499	0	10						to Energy	to Energy	(Based on Character Level)	6	60	1					item_energy_perlevel
-500	100	8						Bonus to Summoned Minion Attack Rating	Bonus to Summoned Minion Attack Rating		4	106	1					item_minion_attack
-501	23	10						\white;Arcane Crystals: 	\white;Quantity:		3	55	2					shrine_counter
-503	0	10						to Strength	to Strength	(Based on Blessed Life Skill Level)	6	66	1					item_strength_perblessedlife
-504	0	10						to Dexterity	to Dexterity	(Based on Blessed Life Skill Level)	6	62	1					item_dexterity_perblessedlife
-505	0	10						Drain Life	Replenish Life	(Based on Character Level)	6	60	2					item_hpregen_perlevel
-506	0	1						\red;Superbeast Morph\blue;	\red;Superbeast Morph\blue;		3	234	0					desc-superbeasty
-508	0	1						Adds 9999-9999 Magic Damage	\red;Treewarden Morph\blue;		3	234	0					desc-fatasstriton
-509	500	10						\red;&gt;&gt; Do not use at level 120 &lt;&lt;\blue;	\red;&gt;&gt; Do not use at level 120 &lt;&lt;\blue;		3	250	0					fuck_you#
+#code	add	bits	bitsParamSave	bitsSave	descGroupIDs	descGroupNegative	descGroupPositive	descGroupStringAdd	descNegative	descPositive	descStringAdd	descfunc	descpriority	descval	dgrp	dgrpfunc	dgrpval	saveParamBits	stat
+0	100	13		13	1,2,3	to all Attributes	to all Attributes		to Strength	to Strength		1	72	1	1	1	1		strength
+1	100	13		13	0,2,3	to all Attributes	to all Attributes		to Energy	to Energy		1	66	1	1	1	1		energy
+2	100	13		13	0,1,3	to all Attributes	to all Attributes		to Dexterity	to Dexterity		1	70	1	1	1	1		dexterity
+3	100	13		13	0,1,2	to all Attributes	to all Attributes		to Vitality	to Vitality		1	68	1	1	1	1		vitality
+4				11															statpts
+5				9															newskills
+6				21															hitpoints
+7	150	11		21					to Life	to Life		1	64	1					maxhp
+8				21															mana
+9	150	11		21					to Mana	to Mana		1	60	1					maxmana
+10				21															stamina
+11	150	10		21					Maximum Stamina	Maximum Stamina		1	56	1					maxstamina
+12				8															level
+13				32															experience
+14				25															gold
+15				25															goldbank
+16	823	10							Enhanced Defense	Enhanced Defense		4	79	1					item_armor_percent
+17	823	10							Enhanced Maximum Damage	Enhanced Maximum Damage		3	134	0					item_maxdamage_percent
+18	823	10							Enhanced Minimum Damage	Enhanced Minimum Damage		3	135	0					item_mindamage_percent
+19		10							to Attack Rating	to Attack Rating		1	120	1					tohit
+20	257	9							Base Block Chance	Base Block Chance		2	139	1					toblock
+21	0	11							to Minimum Damage	to Minimum Damage		1	132	1					mindamage
+22	0	11							to Maximum Damage	to Maximum Damage		1	131	1					maxdamage
+23	0	11							to Minimum Damage	to Minimum Damage		1	129	1					secondary_mindamage
+24	0	11							to Maximum Damage	to Maximum Damage		1	128	1					secondary_maxdamage
+25	50	10							Reduced Weapon Damage	Enhanced Weapon Damage		4	85	2					damagepercent
+26	0	10																	manarecovery
+27	100	9							Regenerate Mana	Regenerate Mana		4	57	2					manarecoverybonus
+28	0	10							Heal Stamina Plus	Heal Stamina Plus		2	53	2					staminarecoverybonus
+31	500	16							Defense	Defense		1	76	1					armorclass
+32	250	12							Defense vs. Missile	Defense vs. Missile		1	74	1					armorclass_vs_missile
+33	0	12							Defense vs. Melee	Defense vs. Melee		1	75	1					armorclass_vs_hth
+34	110	10							Physical Damage Reduced by	Physical Damage Reduced by		3	27	2					normal_damage_reduction
+35	30	10							Elemental/Magic Damage Reduced by	Elemental/Magic Damage Reduced by		3	26	2					magic_damage_reduction
+36	100	10							Physical Resist	Physical Resist		2	27	2					damageresist
+37	100	8							Magic Resist	Magic Resist		4	46	2					magicresist
+38	100	8							Maximum Magic Resist	Maximum Magic Resist		4	51	1					maxmagicresist
+39	100	8			41,43,45	Elemental Resists	Elemental Resists		Fire Resist	Fire Resist		4	41	2	2	4	2		fireresist
+40	100	8			42,44,46	Maximum Elemental Resists	Maximum Elemental Resists		Maximum Fire Resist	Maximum Fire Resist		4	47	2	7	4	2		maxfireresist
+41	100	8			39,43,45	Elemental Resists	Elemental Resists		Lightning Resist	Lightning Resist		4	43	2	2	4	2		lightresist
+42	100	8			40,44,46	Maximum Elemental Resists	Maximum Elemental Resists		Maximum Lightning Resist	Maximum Lightning Resist		4	47	2	7	4	2		maxlightresist
+43	100	8			39,41,45	Elemental Resists	Elemental Resists		Cold Resist	Cold Resist		4	45	2	2	4	2		coldresist
+44	100	8			40,42,46	Maximum Elemental Resists	Maximum Elemental Resists		Maximum Cold Resist	Maximum Cold Resist		4	47	2	7	4	2		maxcoldresist
+45	100	8			39,41,43	Elemental Resists	Elemental Resists		Poison Resist	Poison Resist		4	39	2	2	4	2		poisonresist
+46	100	8			40,42,44	Maximum Elemental Resists	Maximum Elemental Resists		Maximum Poison Resist	Maximum Poison Resist		4	47	2	7	4	2		maxpoisonresist
+48	0	12							to Minimum Fire Damage	to Minimum Fire Damage		1	107	1					firemindam
+49	0	12							to Maximum Fire Damage	to Maximum Fire Damage		1	106	1					firemaxdam
+50	0	12							to Minimum Lightning Damage	to Minimum Lightning Damage		1	104	1					lightmindam
+51	0	12							to Maximum Lightning Damage	to Maximum Lightning Damage		1	103	1					lightmaxdam
+52	0	12							+%d magic damage	+%d magic damage		1	109	1					magicmindam
+53	0	12							+%d magic damage	+%d magic damage		1	108	1					magicmaxdam
+54	0	12							to Minimum Cold Damage	to Minimum Cold Damage		1	101	1					coldmindam
+55	0	12							to Maximum Cold Damage	to Maximum Cold Damage		1	100	1					coldmaxdam
+56	0	10																	coldlength
+57	0	14							to Minimum Poison Damage	to Minimum Poison Damage		1	99	1					poisonmindam
+58	0	14							to Maximum Poison Damage	to Maximum Poison Damage		1	98	1					poisonmaxdam
+59	0	12																	poisonlength
+60	0	10							Life stolen per Hit	Life stolen per Hit		2	93	1					lifedrainmindam
+62	0	10							Mana stolen per Hit	Mana stolen per Hit		2	94	1					manadrainmindam
+64	0	10							Stamina stolen per Hit	Stamina stolen per Hit		2	95	1					stamdrainmindam
+66	0	10							Stun Attack	Stun Attack		3	93	0					stunlength
+67	20	10																	velocitypercent
+68	20	10																	attackrate
+71	100	8																	value
+72	150	10																	durability
+73	90	10																	maxdurability
+74	1000	15							Life Regenerated per Second	Life Regenerated per Second		32	61	1					hpregen
+75	100	10							Durability	Durability		2	9	2					item_maxdurability_percent
+76	100	10			77	Increase Maximum Life and Mana	Increase Maximum Life and Mana		Decrease Maximum Life	Maximum Life		2	63	2	10	2	2		item_maxhp_percent
+77	100	10			76	Increase Maximum Life and Mana	Increase Maximum Life and Mana		Maximum Mana	Maximum Mana		2	59	2	10	2	2		item_maxmana_percent
+78	0	10							Attacker Takes Damage of	Attacker Takes Damage of		3	18	2					item_attackertakesdamage
+79	100	9							Gold Find	Gold Find		2	15	1					item_goldbonus
+80	100	9							Magic Find	Magic Find		2	13	1					item_magicbonus
+81	0	2							Knockback	Knockback		3	81	0					item_knockback
+82	20	9																	item_timeduration
+83	0	4							to Amazon Skill Levels	to Amazon Skill Levels		13	155	1				3	item_addclassskills
+85	25	8							to Experience Gained	to Experience Gained		4	16	1					item_addexperience
+86	0	10							Life after each Kill	Life after each Kill		1	21	1					item_healafterkill
+87	45	10							to All Vendor Prices	to All Vendor Prices		20	13	1					item_reducedprices
+88	0	32	16	32														16	achievement_counts
+89	5	8							to Light Radius	to Light Radius		1	11	1					item_lightradius
+90	0	24																	item_lightcolor
+91	100	10							Requirements	Requirements		4	8	2					item_req_percent
+92		8							Required Level	Required Level		1	7	1					item_levelreq
+93	60	9			99,102,105	Combat Speeds	Combat Speeds		Attack Speed	Attack Speed		2	150	1	9	2	1		item_fasterattackrate
+94	64	10							ModitemLevReq	ModitemLevReq		4	63	2					item_levelreqpct
+96	50	9							Movement Speed	Movement Speed		2	147	1					item_fastermovevelocity
+97	1	7										28	86					11	item_nonclassskill
+98		1																11	state
+99	50	9			93,102,105	Combat Speeds	Combat Speeds		Hit Recovery	Hit Recovery		2	144	1	9	2	1		item_fastergethitrate
+101	0	6																	skill_poison_override_length
+102	20	10			93,99,105	Combat Speeds	Combat Speeds		Slower Block Rate	Block Speed		2	141	1	9	2	1		item_fasterblockrate
+103	0	1							Ignores Resistances of Undead	Ignores Resistances of Undead		3	155	0					skill_bypass_undead
+104	0	1							Ignores Resistances of Demons	Ignores Resistances of Demons		3	155	0					skill_bypass_demons
+105	50	10			93,99,102	Combat Speeds	Combat Speeds		Cast Speed	Cast Speed		2	153	1	9	2	1		item_fastercastrate
+106	0	1							Ignores Resistances of Beasts	Ignores Resistances of Beasts		3	155	0					skill_bypass_beasts
+107	1	5										27	86					11	item_singleskill
+108	0	1							Slain Monsters Rest in Peace	Slain Monsters Rest in Peace		3	86	0					item_restinpeace
+109	20	8							Curse Length Reduction	Curse Length Reduction		2	10	1					curse_resistance
+110	20	8							Poison Length Reduced by	Poison Length Reduced by		2	16	2					item_poisonlengthresist
+111	100	10							Damage	Damage		1	127	2					item_normaldamage
+112	25	7							Hit Causes Monster to Flee	Hit Causes Monster to Flee		5	84	2					item_howl
+113	50	8							Hit Blinds Target	Hit Blinds Target		12	85	2					item_stupidity
+114	0	10							Damage Taken Goes To Mana	Damage Taken Goes To Mana		2	16	1					item_damagetomana
+115	0	1							Ignore Target's Defense	Ignore Target's Defense		3	124	0					item_ignoretargetac
+116	0	7							Target Defense	Target Defense		20	123	1					item_fractionaltargetac
+117	0	1							Prevent Monster Heal	Prevent Monster Heal		3	86	0					item_preventheal
+118	0	1							Half Freeze Duration	Half Freeze Duration		3	24	0					item_halffreezeduration
+119	20	10							Bonus to Attack Rating	Bonus to Attack Rating		2	122	1					item_tohit_percent
+120	500	10							to Monster Defense per Hit	to Monster Defense per Hit		1	80	1					item_damagetargetac
+121	100	11							Damage to Demons	Damage to Demons		4	117	1					item_demondamage_percent
+122	100	11							Damage to Undead	Damage to Undead		4	113	1					item_undeaddamage_percent
+123	128	10							to Attack Rating against Demons	to Attack Rating against Demons		1	115	1					item_demon_tohit
+124	128	10							to Attack Rating against Undead	to Attack Rating against Undead		1	111	1					item_undead_tohit
+125	0	1							Throwable	Throwable		3	10	0					item_throwable
+126	0	3							ModitemColdSkills	ModitemColdSkills		1	162	1				3	item_elemskill
+127	0	5							to All Skills	to All Skills		1	163	1					item_allskills
+128	0	10			367,368		Attacker Takes Elemental Damage of		Attacker Takes Lightning Damage of	Attacker Takes Lightning Damage of		3	19	2	14	3	2		item_attackertakeslightdamage
+131	150	10							Damage Reflected	Damage Reflected		2	18	1					thorns_percent
+134	5	5							Freezes Target	Freezes Target		12	83	2					item_freeze
+135	0	8							Chance of Open Wounds	Chance of Open Wounds		2	88	1					item_openwounds
+136	0	8							Chance of Crushing Blow	Chance of Crushing Blow		2	92	1					item_crushingblow
+137	0	10							Kick Damage	Kick Damage		1	126	1					item_kickdamage
+138	0	10							Mana after each Kill	Mana after each Kill		1	21	1					item_manaafterkill
+139	0	10							Life after each Demon Kill	Life after each Demon Kill		1	20	1					item_healafterdemonkill
+140	0	10																	item_extrablood
+141	0	8							Deadly Strike	Deadly Strike		2	90	1					item_deadlystrike
+142	0	10							Fire Absorb	Fire Absorb		2	28	2					item_absorbfire_percent
+143	0	10							Fire Absorb	Fire Absorb		1	32	1					item_absorbfire
+144	0	10							Lightning Absorb	Lightning Absorb		2	29	2					item_absorblight_percent
+145	0	10							Lightning Absorb	Lightning Absorb		1	34	1					item_absorblight
+146	0	10							Magic Absorb	Magic Absorb		2	31	2					item_absorbmagic_percent
+147	0	10							Magic Absorb	Magic Absorb		1	38	1					item_absorbmagic
+148	0	10							Cold Absorb	Cold Absorb		2	30	2					item_absorbcold_percent
+149	0	10							Cold Absorb	Cold Absorb		1	36	1					item_absorbcold
+150	50	8							Slow Target	Slow Target		2	82	2					item_slow
+151	1	7																11	item_aura
+152		1							Indestructible	Indestructible		3	165	0					item_indesctructible
+153		1							Cannot Be Frozen	Cannot Be Frozen		3	25	0					item_cannotbefrozen
+154	50	8							Slower Stamina Drain	Slower Stamina Drain		2	54	1					item_staminadrainpct
+155	0	7							Reanimate as:	Reanimate as:		23	22	1				12	item_reanimate
+156	0	10																	item_pierce
+157	0	7							Fires Magic Arrows	Fires Magic Arrows		3	136	0					item_magicarrow
+158	0	7							Fires Explosive Arrows or Bolts	Fires Explosive Arrows or Bolts		3	138	0					item_explosivearrow
+159	0	10																	item_throw_mindamage
+160	0	10																	item_throw_maxdamage
+161	10	6							Unusual Missile Speed	Unusual Missile Speed		3	82	1					skill_handofathena
+164	20	8							Chance of Uninterruptable Attack	Chance of Uninterruptable Attack		2	25	1					skill_concentration
+171	0	10							Total Character Defense	Total Character Defense		2	25	2					skill_armor_percent
+179		10																10	attack_vs_montype
+180		10																10	damage_vs_montype
+181		3																	fade
+182	100	9							Total Defense = 0	Total Defense = 0		3	15	0					armor_override_percent
+183	0	5																	item_dyes_color
+184	0	5																	x_signet01
+185				12					Stat Signets Used:	Stat Signets Used:		3	9	2					potion_stat_cap
+186				8					Skill Signets Used:	Skill Signets Used:		3	9	2					potion_skill_cap
+187	0	3							Dragonheart Spell Blinds Attacker	Dragonheart Spell Blinds Attacker		12	27	2					passive_lionheart_addstupidth
+188	0	3							+%d to Javelin and Spear Skills	+%d to Javelin and Spear Skills		14	156					16	item_addskill_tab
+189	0	16																	damage_divisor
+191	0	5																	x_signet02
+192	0	5																	x_signet03
+193	0	5																	x_signet04
+194	0	4																	item_numsockets
+195	0	8							%d%% Chance to cast level %d %s on Melee Attack	%d%% Chance to cast level %d %s on Melee Attack		15	165					17	item_skillonattack
+196	0	8							%d%% Chance to cast level %d %s on Kill	%d%% Chance to cast level %d %s on Kill		15	165					17	item_skillonkill
+197	0	8							%d%% Chance to cast level %d %s when you Die	%d%% Chance to cast level %d %s when you Die		15	165					17	item_skillondeath
+198	0	8							%d%% Chance to cast level %d %s on Striking	%d%% Chance to cast level %d %s on Striking		15	165					17	item_skillonhit
+199	0	7							%d%% Chance to cast level %d %s when you Level-Up	%d%% Chance to cast level %d %s when you Level-Up		15	165					17	item_skillonlevelup
+200	0	7							\orange;Mega Impact\white;	\orange;Mega Impact\white;		3	247	0				17	item_megaimpact
+201	0	7							%d%% Chance to cast level %d %s when Struck	%d%% Chance to cast level %d %s when Struck		15	165					17	item_skillongethit
+202	0	5																	x_signet05
+203	0	10							Enhanced Weapon Damage	Enhanced Weapon Damage	(Based on Character Level)	8	65	2					item_totaldamage_perlevel
+204	0	16							(%d/%d Charges)	(%d/%d Charges)		24	9					16	item_charged_skill
+205	0	5																	x_signet06
+206	0	5																	x_signet07
+207	0	5																	x_signet08
+208	0	9							Life on Striking	Life on Striking		1	27	1					item_healonstriking
+209	0	9							Mana on Striking	Mana on Striking		1	25	1					item_manaonstriking
+210	0	9							Life on Attack	Life on Attack		1	27	1					skill_healonstrikingmelee
+211	0	8							Miasma Effect Duration: +2 seconds	Miasma Effect Duration: +2 seconds		3	24	0					hex_dur_syn
+213	0	5																	x_signet09
+214	0	10							Defense	Defense	(Based on Character Level)	6	77	1					item_armor_perlevel
+215	0	10							Enhanced Defense	Enhanced Defense	(Based on Character Level)	8	78	1					item_armorpercent_perlevel
+216	0	10							to Life	to Life	(Based on Character Level)	6	62	1					item_hp_perlevel
+217	0	10							to Mana	to Mana	(Based on Character Level)	6	58	1					item_mana_perlevel
+218	0	10							to Maximum Damage	to Maximum Damage	(Based on Character Level)	6	130	1					item_maxdamage_perlevel
+219	0	5																	blessings_counter
+220	0	5																	x_signet10
+221	0	5																	x_signet11
+222	0	5																	x_signet12
+223	0	5																	x_signet13
+224	0	5																	x_signet14
+225	0	10							Bonus to Attack Rating	Bonus to Attack Rating	(Based on Character Level)	7	121	1					item_tohitpercent_perlevel
+226	0	5																	x_signet15
+227	0	5																	x_signet16
+228	0	5																	x_signet17
+229	0	5																	x_signet18
+230	0	10							Cold Resist	Cold Resist	(Based on Character Level)	7	44	2					item_resist_cold_perlevel
+231	0	10							Fire Resist	Fire Resist	(Based on Character Level)	7	40	2					item_resist_fire_perlevel
+232	0	10							Lightning Resist	Lightning Resist	(Based on Character Level)	7	42	2					item_resist_ltng_perlevel
+233	0	10							Poison Resist	Poison Resist	(Based on Character Level)	7	38	2					item_resist_pois_perlevel
+234	0	5																	x_signet19
+235	0	5																	x_signet20
+236	0	5																	x_signet21
+237	0	5																	x_signet22
+238	0	5																	x_signet23
+239	0	10							Gold Find	Gold Find	(Based on Character Level)	7	14	1					item_find_gold_perlevel
+240	0	10							Magic Find	Magic Find	(Based on Character Level)	7	12	1					item_find_magic_perlevel
+241	0	5																	x_signet24
+242	0	5																	x_signet25
+243	0	5																	x_signet26
+244	0	5																	x_signet27
+245	1	2							\orange;Parasite Gains 12 Additional Targets\blue;	\orange;Flamefront Has Twice as Many Firebolts\blue;		3	245	0					ffront_proj
+246	1	2							\orange;Idol of Scosglen Has no Cooldown\blue;	\orange;Firedance Grants 1% Deadly Strike Per Base Level\blue;		3	245	0					firedance_mod
+247	0	10							Chance of Crushing Blow	Chance of Crushing Blow	(Based on Character Level)	7	91	1					item_crushingblow_perlevel
+248	0	10							Chance of Open Wounds	Chance of Open Wounds	(Based on Character Level)	7	87	1					item_openwounds_perlevel
+249	0	5																	x_signet30
+250	0	10																	item_totembound
+251	0	5																	x_signet31
+252	0	6							Repairs %d Durability per Second	Repairs %d Durability per Second		11	8	0					item_replenish_durability
+253	0	6							Replenishes Quantity	Replenishes Quantity		3	9	0					item_replenish_quantity
+254	0	8							Increased Stack Size	Increased Stack Size		3	10	0					item_extra_stack
+255	0	5																	x_signet32
+256	0	5																	x_signet33
+257	1	2							\orange;Parasite Gains 12 Additional Targets\blue;	\orange;Neutrality: Vessel Damage Bonus from Passives is Doubled\nUnholy: Blood Thorns Deal 40% More Total Damage\nHoly: Plague Deals 150% More Total Damage\blue;		3	245	0					vessel_mod
+258	0	5																	x_signet35
+259	0	2							Drains 1% Life per Second	Drains 1% Life per Second		3	54	0					item_drain_aura
+260	0	7							\orange;Thunderfury\white;	\orange;Thunderfury\white;		3	248	0				17	item_thunderfury
+261	0	5							Extra Totems	Extra Totems		1	155	1					new_totem_syn
+263	0	5																	x_signet36
+264	0	5																	x_signet37
+266	0	7							\orange;Area Effect Attack\white;	\orange;Area Effect Attack\white;		3	248	0				17	item_warp_blue
+267	0	5							Enhanced Stance Radius	Enhanced Stance Radius		1	203	1					item_stance_radius
+270	0	3																	item_has_edyrem
+273	25	7																	item_crushthorns
+274	0	8							Hive Adds 33% of Poison Spell Damage Items to Vitality	Hive Adds 33% of Poison Spell Damage Items to Vitality		3	10	0					item_poison_set
+275	0	9							Enhanced Damage vs. Necrobots	Enhanced Damage vs. Necrobots		2	8	1					item_desc_breaker
+276	0	1							\dgrey;Cannot be Disenchanted\blue;	\dgrey;Cannot be Disenchanted\blue;		3	4	0					item_nodcht
+277	0	7							\orange;Area Effect Attack\white;	\orange;Area Effect Attack\white;		3	248	0				17	item_warpskillonattack
+278	200	10							Strength Factor to Spell Damage	Strength Factor to Spell Damage		1	203	1					str_factor
+279	0	9							Lion Stance Damage Bonus	Lion Stance Damage Bonus		2	119	2					lion_stance_syn
+280	0	10																	greathunt_buff
+281	0	8							Nova Charge Scatter Increased by	Nova Charge Scatter Increased by		2	109	2					item_supernova_synergy
+282	0	7							%d%% Chance to cast level %d %s when you Take Damage	%d%% Chance to cast level %d %s when you Take Damage		15	165					17	item_skillondamaged
+283	0	7							%d%% Chance to cast level %d %s when Attacked	%d%% Chance to cast level %d %s when Attacked		15	165					17	item_skillongetmeleed
+284	0	7							%d%% Chance to cast level %d %s when Struck by a Missile	%d%% Chance to cast level %d %s when Struck by a Missile		15	165					17	item_skillongetmissilehit
+285	0	5																	x_signet38
+286	0	5																	x_signet39
+287	0	5																	x_signet40
+288	1	2							\orange;Orb Effects Applied to this Item are Quadrupled	\orange;Blood Hatred does not cost you life		3	245	0					si_1
+291	0	8							Retribute Fire Resist Penalty Increased by	Retribute Fire Resist Penalty Increased by		2	106	2					skill_justkilledsomeone
+292	0	7							%d%% Chance to cast level %d %s on Death Blow	%d%% Chance to cast level %d %s on Death Blow		15	164					17	item_skillonanykill
+293	0	1							Doubled Terror Strike Duration	Doubled Terror Strike Duration		3	31	0					skill_arcanestrike_synergy
+294	0	5																	runeword_level
+295	200	9							Mana on Attack	Mana on Attack		1	25	1					item_manaonstrikingmelee
+296	0	1							\dgreen;Orb Effects Applied to this Item are Doubled\blue;	\dgreen;Orb Effects Applied to this Item are Doubled\blue;		3	239	0					item_is_honorific
+297	1	2																	W_M
+298	0	5																	tp_lock
+299	0	10							\grey;Current Strength Damage Bonus:	\grey;Current Strength Damage Bonus:		2	251	2					strength_bonus_wpn
+300	0	10							\grey;Current Dexterity Damage Bonus:	\grey;Current Dexterity Damage Bonus:		2	250	2					dexterity_bonus_wpn
+301	0	1							Shadows Spawn Corpses on Striking 5%	Shadows Spawn Corpses on Striking 5%		3	138	0					item_shadows_corpsesynergy
+303	0	12							Fire Damage to Void Archon	Fire Damage to Void Archon		1	53	1					skill_voidarchon_fire
+304	24	7											246						statX_1
+305	500	10							to Enemy Cold Resistance	to Enemy Cold Resistance		20	93	1					item_pierce_cold
+306	500	10							to Enemy Fire Resistance	to Enemy Fire Resistance		20	93	1					item_pierce_fire
+307	500	10							to Enemy Lightning Resistance	to Enemy Lightning Resistance		20	93	1					item_pierce_ltng
+308	500	10							to Enemy Poison Resistance	to Enemy Poison Resistance		20	93	1					item_pierce_pois
+309	2048	12							ModitemJitanCooldown	%s Cooldown Reduced by %.1g	ModitemSecondDual	33	131	2				17	skill_cooldown_reduce
+310	0	5																	x_signet46
+311	0	5																	x_signet47
+312	0	5																	x_signet48
+313	0	10																	darkportal
+314	0	5																	x_signet50
+315	0	8																	firelength
+316	0	8										3		0					burningmin
+317	0	8										3		0					burningmax
+324	0	6																	item_extra_charges
+329	100	9			330,331,332,357	to Spell Damage	to Spell Damage		to Fire Spell Damage	to Fire Spell Damage		4	93	1	5	4	1		passive_fire_mastery
+330	100	9			329,331,332,357	to Spell Damage	to Spell Damage		to Lightning Spell Damage	to Lightning Spell Damage		4	93	1	5	4	1		passive_ltng_mastery
+331	100	9			329,330,332,357	to Spell Damage	to Spell Damage		to Cold Spell Damage	to Cold Spell Damage		4	93	1	5	4	1		passive_cold_mastery
+332	100	9			329,330,331,357	to Spell Damage	to Spell Damage		to Poison Spell Damage	to Poison Spell Damage		4	93	1	5	4	1		passive_pois_mastery
+333	0	8			334,335,336	to Enemy Elemental Resistances	to Enemy Elemental Resistances		to Enemy Fire Resistance	to Enemy Fire Resistance		20	93	1	6	20	1		passive_fire_pierce
+334	0	8			333,335,336	to Enemy Elemental Resistances	to Enemy Elemental Resistances		to Enemy Lightning Resistance	to Enemy Lightning Resistance		20	93	1	6	20	1		passive_ltng_pierce
+335	0	8			333,334,336	to Enemy Elemental Resistances	to Enemy Elemental Resistances		to Enemy Cold Resistance	to Enemy Cold Resistance		20	93	1	6	20	1		passive_cold_pierce
+336	0	8			333,334,335	to Enemy Elemental Resistances	to Enemy Elemental Resistances		to Enemy Poison Resistance	to Enemy Poison Resistance		20	93	1	6	20	1		passive_pois_pierce
+337	0	8																	passive_critical_strike
+338	0	8			339,340	Chance to Avoid Damage	Chance to Avoid Damage		Avoid Damage	Avoid Damage		2	45	1	8	2	1		passive_dodge
+339	0	8			338,340	Chance to Avoid Damage	Chance to Avoid Damage		Avoid Damage	Avoid Damage		2	45	1	8	2	1		passive_avoid
+340	0	8			338,339	Chance to Avoid Damage	Chance to Avoid Damage		Avoid Damage	Avoid Damage		2	45	1	8	2	1		passive_evade
+341	0	8																	passive_warmth
+342	0	8																	passive_mastery_melee_th
+343	0	8				ModitemPeril	ModitemPeril								4	3	0		passive_mastery_melee_dmg
+344	0	8																	passive_mastery_melee_crit
+345	0	8																	passive_mastery_throw_th
+346	0	8																	passive_mastery_throw_dmg
+347	0	8																	passive_mastery_throw_crit
+348	0	8																	passive_weaponblock
+349	0	9																	passive_summon_resist
+356	0	2																	questitemdifficulty
+357	100	9			329,330,331,332	to Spell Damage	to Spell Damage		to Physical/Magic Spell Damage	to Physical/Magic Spell Damage		4	93	1	5	4	1		passive_pm_mastery
+358	0	8																	passive_mag_pierce
+359	50	9			360,361,362		to All Attributes		to Strength	to Strength		2	79	1	3	2	1		item_strength_percent
+360	50	9			359,361,362		to All Attributes		to Dexterity	to Dexterity		2	79	1	3	2	1		item_dexterity_percent
+361	50	9			359,360,362		to All Attributes		to Energy	to Energy		2	79	1	3	2	1		item_energy_percent
+362	50	9			359,360,361		to All Attributes		to Vitality	to Vitality		2	79	1	3	2	1		item_vitality_percent
+363	50	8							Slows Attacker by	Slows Attacker by		2	17	2					item_slowthorns
+364	25	7							Attacker Flees after Striking	Attacker Flees after Striking		2	84	2					item_howlthorns
+365	5	5							Freezes attacker	Freezes attacker		12	83	2					item_freezethorns
+366	50	8							Blinds Attacker	Blinds Attacker		12	85	2					item_stupiditythorns
+367	0	10			128,368		Attacker Takes Elemental Damage of		Attacker Takes Cold Damage of	Attacker Takes Cold Damage of		3	19	2	14	3	2		item_attackertakescolddamage
+368	0	10			128,367		Attacker Takes Elemental Damage of		Attacker Takes Fire Damage of	Attacker Takes Fire Damage of		3	19	2	14	3	2		item_attackertakesfiredamage
+369	0	5																	x_signet51
+370	0	5																	x_signet52
+371	0	7							\orange;Amazing Grace\white;	\orange;Amazing Grace\white;		3	247	0				17	item_amazinggrace
+372	0	1							\dgrey;Cannot be Unsocketed\blue;	\dgrey;Cannot be Unsocketed\blue;		3	4	0					item_nounsock
+373	300	9																	passive_phys_pierce
+375	0	15										31	246	0				15	desc_top
+376	50	8							Slows Melee Target by	Slows Melee Target by		2	82	2					item_slow_offweapon
+377	0	15										31	3	0				15	desc_bottom
+378	24	7											246						statX_2
+379	0	5										3		0					deathlord_penalty
+380	0	8							Bonus Damage to Bloodlust	Bonus Damage to Bloodlust		4	154	1					passive_bloodlust_dmgpct
+381	0	8							Bonus Elemental Damage to Bloodlust	Bonus Elemental Damage to Bloodlust		4	154	1					passive_bloodlust_elempct
+382	0	5																	x_signet53
+383	1001	14																12	special_syn1
+384	0	8							Movement Speed to Sacred Armor	Movement Speed to Sacred Armor		2	155	1					passive_holyarmor_addmove
+386	0	8																	witchberry_lifeheal
+387	0	8							Bonus Damage to Mark of the Wild	Bonus Damage to Mark of the Wild		4	154	1					passive_motw_dmgpct
+388	0	8							Bonus Elemental Damage to Mark of the Wild	Bonus Elemental Damage to Mark of the Wild		4	154	1					passive_motw_elempct
+389	0	10							Duration Bonus to Mark of the Wild	Duration Bonus to Mark of the Wild		2	127	1					passive_motw_duration
+390	0	5							Extra Flayer Minions	Extra Flayer Minions		1	155	1					passive_shadows_addmax
+391	0	10							Bonus to Miasma Haunt Duration	Bonus to Miasma Haunt Duration		2	97	1					passive_hex_adddmg
+393	1001	14																12	special_syn2
+394	0	8																	passive_shadows_addelem
+398	0	5																	yshari_enable
+399	0	8							to Searing Glow Dazzle Duration	to Searing Glow Dazzle Duration		4	153	1					passive_wrath_synergy
+403	0	5																	x_signet60
+404	0	10							to Fire Spell Damage	to Fire Spell Damage	(Based on Character Level)	7	93	1					passive_fire_mastery_perlevel
+405	0	10							to Lightning Spell Damage	to Lightning Spell Damage	(Based on Character Level)	7	93	1					passive_ltng_mastery_perlevel
+406	0	10							to Cold Spell Damage	to Cold Spell Damage	(Based on Character Level)	7	93	1					passive_cold_mastery_perlevel
+407	0	10							to Poison Spell Damage	to Poison Spell Damage	(Based on Character Level)	7	93	1					passive_pois_mastery_perlevel
+408	0	5																	x_signet61
+409	50	8							Bonus to Buff/Debuff/Cold Skill Duration	Bonus to Buff/Debuff/Cold Skill Duration		2	130	1					profession_duration_mod
+412	0	10																	resonance_buff
+413	0	8							Bonus to Vitality when using an Apple	Bonus to Vitality when using an Apple		2	55	1					skill_bloodymary_bonus
+414	50	9							Bonus to Summoned Edyrem Life	Bonus to Summoned Edyrem Life		4	133	1					skill_edyrem_hp_percent
+417	0	16																5	ele_divisor
+418	0	2							\orange;Can Be Upgraded with Black Road Challenge	\orange;Can Be Upgraded with Black Road Challenge		3	230	0					item_needschallenged
+430	0	8							to All Skills when using an Apple	to All Skills when using an Apple		1	55	1					skill_paganheart_synergy
+431	50	9							Bonus to Poison Skill Duration	Bonus to Poison Skill Duration		4	154	1					skill_poison_dur
+439	0	8							Life when Struck by an Enemy	Life when Struck by an Enemy		1	19	1					item_healwhenstruck
+440	0	8							Mana when Struck by an Enemy	Mana when Struck by an Enemy		1	18	1					item_manawhenstruck
+441	5	6			445	to All Maximum Minions	to All Maximum Minions		to Maximum Necromancer Minions	to Maximum Necromancer Minions		1	84	1	11	1	1		passive_aura_addmax
+442	0	10							Additional Strength Damage Bonus:	Additional Strength Damage Bonus:		2	135	2					str_bonus_blue
+443	0	8							\green;Already upgraded!	\green;Already upgraded!		3	249	0					item_upgraded
+444	50	9							Penalty to Summoned Minion Life	to Summoned Minion Life		4	80	1					skill_minion_hp_percent
+445	0	6			441	to All Maximum Minions	to All Maximum Minions		to Maximum Barbarian Minions	to Maximum Barbarian Minions		1	73	1	11	1	1		skill_ancientspirits_synergy
+446	0	8							Damage to Protector Spirit Bloodlust	Damage to Protector Spirit Bloodlust		4	80	1					skill_shamanspath_synergy
+449	0	8							Enhanced Damage to Moonstrike	Enhanced Damage to Moonstrike		4	38	1					moonstrike_synergy
+452	1	5																	cube_upgrade_1
+453	1	5																	cube_upgrade_2
+454	1	5																	cube_upgrade_3
+455	1	5																	cube_upgrade_4
+457	0	10																	enabler
+458	0	5																	x_signet62
+459	0	5																	x_signet63
+460	0	5																	x_signet64
+461	0	5																	x_signet65
+462	0	8							Damage to Vessel of Justice	Damage to Vessel of Justice		4	142	1					skill_voj_mastery
+463	0	5																	item_class_spec
+464	1	9							\orange;Bow Devotion: Ecstatic Frenzy does not Reduce your Defense	Scorpion Blade Projectiles		3	245	0					skill_scorpion_blades
+465	0	8																	skill_totem_damage
+466	0	7							Essence Slots:	Essence Slots:		3	10	2					trader_chest
+467	0	10							Damage when using an Apple	Damage when using an Apple		4	54	1					skill_elixirs_synergy
+468	0	8							Damage to Vessel of Retribution	Damage to Vessel of Retribution		4	142	1					skill_light_mastery
+469	0	8							Extra Targets to Paladin Vessels	Extra Targets to Paladin Vessels		1	143	1					skill_shadow_mastery
+470	50	9							to Summoned Minion Damage	to Summoned Minion Damage		4	80	1					skill_minion_dmg_percent
+473	0	8							\green;Unlocks your Ennead Skill	\green;Unlocks your Ennead Skill		3	239	0					learn_ennead
+474	0	8							\green;Unlocks your Black Road Skill	\green;Unlocks your Black Road Skill		3	239	0					learn_blackroad
+475	0	1							\red;Druid Morph\blue;	\red;Druid Morph\blue;		3	240	0					item_desc_druidmorph
+477	1	4							Adds 9000-9000 Magic Damage	Nearby enemies lose 10% magic and elemental resistances		3	109	0					item_desc_hardaura
+478	0	1							Socketed (1)\nLevel 20 Warp Field Aura	Socketed (1)\nLevel 20 Warp Field Aura		3	6	0					item_desc_instructions
+479	0	4							Maximum Skill Level Increased by	Maximum Skill Level Increased by		3	74	2					skill_more
+480	0	5							to Vitality per Socketed Gem	to Vitality per Socketed Gem		1	80	1					item_skill_paragon
+481	0	5							to Defense per Socketed Rune	to Defense per Socketed Rune		4	79	1					item_skill_runemaster
+482	0	10																	item_gem_paragon
+483	0	10																	item_rune_runemaster
+485	200	10							Energy Factor to Spell Damage	Energy Factor to Spell Damage		1	200	1					enr_factor
+487	25	9							to Summoned Minion Resistances	to Summoned Minion Resistances		4	80	1					minion_resist_all
+488	50	9							Bonus to Energy Factor	Bonus to Energy Factor		4	162	1					enr_factor_percent
+489	0	10							Target Takes Additional Damage of	Target Takes Additional Damage of		3	18	2					item_targettakesdamage
+492	50	8							Reduced Healing Rate from Apples	Increased Healing Rate from Apples		4	36	1					item_faster_potions
+493	50	8							Slows Ranged Attacker by	Slows Ranged Attacker by		2	79	2					skill_slowrangedthorns
+495	24	7											246						statX_3
+496	1	9							\orange;Such Voracity, Balance for Destruction\blue;	\orange;Such Voracity, Balance for Destruction\blue;		3	5	0					tree_synergy
+498	0	9							Bonus to Fire Elemental Damage if Summoned during Pact of Blood	Bonus to Fire Elemental Damage if Summoned during Pact of Blood		2	19	1					item_cots_when_pact
+499	0	10							to Energy	to Energy	(Based on Character Level)	6	65	1					item_energy_perlevel
+500	100	8							to Summoned Minion Attack Rating	to Summoned Minion Attack Rating		4	111	1					item_minion_attack
+501	23	10							\grey;Arcane Crystals: 	\grey;Quantity:		3	60	2					shrine_counter
+503	0	10							to Strength	to Strength	(Based on Blessed Life Skill Level)	6	71	1					item_strength_perblessedlife
+504	0	10							to Dexterity	to Dexterity	(Based on Blessed Life Skill Level)	6	67	1					item_dexterity_perblessedlife
+505	0	10							Life Regenerated per Second (Based on Character Level)	Life Regenerated per Second (Based on Character Level)		32	65	1					item_hpregen_perlevel
+506	0	1							\red;Superbeast Morph\blue;	\red;Superbeast Morph\blue;		3	240	0					desc-superbeasty
+508	100	9																	eq_gr
+509	100	9																	eq_grw

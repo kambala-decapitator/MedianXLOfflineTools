@@ -26,7 +26,7 @@
 24	OHMAN	-1	0	0	0	197
 25		-1				
 26		-1				
-27	Spin to Win	-1	0	0	0	174
+27	Whirlwind	-1	0	0	0	174
 28	Rock Shock	-1	0	0	0	172
 29	Unholy Armor	-1	0	0	0	108
 30	Rain of Bombs	-1	0	0	0	45
@@ -34,7 +34,7 @@
 32	Deathstrike	-1	0	0	0	61
 33		-1				
 34	Superbeast	-1	0	0	0	0
-35		-1				
+35	Bloodlust	-1	0	0	0	19
 36	Fire Bolt	-1	1	1	2	0
 37	Rain of Bombs	-1	0	0	0	45
 38	Charged Bolt	-1	2	1	2	4
@@ -67,7 +67,7 @@
 65	Bloodbath	-1	0	0	0	20
 66	Amplify Damage	-1	1	1	2	0
 67	Gamma Field	-1	0	0	0	44
-68	Hunt for Lilith	-1	0	0	0	230
+68		-1				
 69		-1				
 70	Raise Skeleton	-1	3	1	3	8
 71	Dim Vision	-1	1	2	1	10
@@ -81,17 +81,17 @@
 79	Immolation Bomb	-1	0	0	0	65
 80	Raise Skeletal Mage	-1	3	3	3	28
 81	Poison Flash	-1	2	1	2	70
-82		-1				
+82	Boneyard	-1	2	3	1	116
 83	Totembound Guardian	-1	0	0	0	158
 84		-1				
 85		-1				
 86		-1				
 87	Decrepify	-1	1	5	3	42
 88	Bone Prison	-1	2	5	3	44
-89	APF-10 'Maelstrom' MkV	-1	1	3	2	36
+89	APF-20 'Maelstrom' MkI	-1	1	3	2	36
 90	Punisher	-1	0	0	0	69
 91	Lower Resist	-1	1	6	2	50
-92		-1				
+92	Veil King Plague Grasp	-1	0	0	0	0
 93		-1				
 94		-1				
 95	Revive	-1	3	6	3	58
@@ -128,7 +128,7 @@
 126	Bash	-1	1	1	2	0
 127	Twin Fang Strike	-1	1	3	1	92
 128	Twin Fang Strike	-1	1	3	1	92
-129	Force Wall	-1	0	0	0	22
+129	Frog Prince	-1	0	0	0	0
 130	Frog Prince	-1	0	0	0	0
 131	Vindicate	-1	0	0	0	17
 132	Leap	-1	1	2	1	12
@@ -218,7 +218,7 @@
 216		-1				
 217	Scroll of Identify	-1	0	0	0	2
 218	Tome of Identify	-1	0	0	0	2
-219	Scroll of Townportal	-1	0	0	0	6
+219		-1				
 220	Tome of Townportal	-1	0	0	0	6
 221		-1				
 222		-1				
@@ -247,7 +247,7 @@
 245		-1				
 246		-1				
 247		-1				
-248	Uldyssian's Time Freeze	-1	0	0	0	0
+248	Time Freeze	-1	0	0	0	0
 249		-1				
 250	Pestilence	2	2	5	1	122
 251		-1				
@@ -261,7 +261,7 @@
 259		-1				
 260		-1				
 261		-1				
-262	Into The Void	-1	0	0	0	231
+262	Funeral Pyre	-1	2	1	1	118
 263	Punisher	-1	0	0	0	69
 264		-1				
 265		-1				
@@ -343,7 +343,7 @@
 341	Scorpion Blade	6	1	1	2	30
 342	Storm Crows	6	1	2	2	32
 343	Wychwind	6	1	4	2	34
-344	APF-10 'Maelstrom' MkV	6	1	3	2	36
+344	APF-20 'Maelstrom' MkI	6	1	3	2	36
 345	Broadside	6	1	5	2	38
 346	Blink	6	2	1	1	40
 347	Shuriken Flurry	6	2	1	2	42
@@ -410,7 +410,7 @@
 408	Parasite	2	2	2	2	98
 409	Carnage	2	2	1	2	84
 410	Famine	2	2	3	2	72
-411	Beyond the Veil	-1	0	0	0	232
+411		-1				
 412	Talon's Hold	2	1	5	2	24
 413	Widowmaker	2	2	5	3	26
 414	Bend the Shadows	2	1	3	2	58
@@ -464,7 +464,7 @@
 462	Thunderstone	1	1	2	2	22
 463	Tempest	1	1	3	2	90
 464	Warp Armor	1	1	4	2	66
-465	Nova Charge	1	1	5	2	73
+465	Nova Charge	1	1	5	2	72
 466	Vengeful Power	1	2	2	1	112
 467	Lorenado	1	2	1	1	88
 468	Miasma	1	2	3	1	108
@@ -483,7 +483,7 @@
 481	Electrobolt	-1	0	0	0	111
 482	Flash	-1	0	0	0	62
 483		-1				
-484	Pac-Man Morph	-1	0	0	0	233
+484		-1				
 485	Respawner	-1	0	0	0	0
 486	Respawner	-1	0	0	0	0
 487	Respawner	-1	0	0	0	0
@@ -519,8 +519,8 @@
 517		-1				
 518	Fire Splash	-1	0	0	0	0
 519		-1				
-520	Hunt for Lilith	-1	0	0	0	230
-521	Hunt for Lilith	-1	0	0	0	230
+520		-1				
+521		-1				
 522		-1				
 523		-1				
 524		-1				
@@ -553,8 +553,8 @@
 551	Dark Summoning	-1	0	0	0	1
 552		-1				
 553		-1				
-554		-1				
-555		-1				
+554	Gift of Inner Fire	-1	0	0	0	0
+555	Frozen Orb	-1	3	6	1	56
 556		-1				
 557		-1				
 558	Time Strike	-1	0	0	0	74
@@ -675,10 +675,10 @@
 673		-1				
 674		-1				
 675		-1				
-676	Cherub Strike	-1	0	0	0	190
+676	Cherubim	-1	0	0	0	190
 677		-1				
 678		-1				
-679		-1				
+679	Thunder Hammer Nova	-1	0	0	0	0
 680	Supernova	-1	0	0	0	38
 681	Searing Glow	-1	0	0	0	170
 682	Brimstone	-1	0	0	0	41
@@ -703,7 +703,7 @@
 701	Ice Whirl	-1	0	0	0	196
 702	Glacial Nova	-1	0	0	0	36
 703	Frozen Crown	-1	0	0	0	85
-704	Lightning Cascade	-1	0	0	0	116
+704	Lightning Streak	-1	0	0	0	116
 705	Vortex	-1	0	0	0	76
 706	Mana Coil	-1	0	0	0	68
 707	Death Blossom	-1	0	0	0	58
@@ -762,7 +762,7 @@
 760	Warp Crash	-1	0	0	0	0
 761	Summon Shock Beast	-1	0	0	0	213
 762	Beacon	-1	3	5	1	60
-763	Dire Charm	-1	0	0	0	165
+763	Demonic Charm	-1	0	0	0	165
 764		-1				
 765		-1				
 766	Pyroclastic Flow	-1	0	0	0	150
@@ -787,13 +787,13 @@
 785		-1				
 786		-1				
 787		-1				
-788		-1				
+788	Vizjerei Rage	-1	0	0	0	0
 789	Apocalypse	-1	0	0	0	33
 790	Balance	-1	2	3	3	44
 791	Summon Daystar	-1	0	0	0	210
 792	Summon Shredder	-1	0	0	0	215
 793	Summon Bane Monster	-1	0	0	0	207
-794		-1				
+794	Superbeast	-1	3	5	1	54
 795		-1				
 796	Sacrifices	-1	1	2	2	40
 797	Dead Wall Totem	-1	0	0	0	80
@@ -812,7 +812,7 @@
 810		-1				
 811	Death Star	-1	0	0	0	0
 812	Summon Fallen	-1	0	0	0	176
-813		-1				
+813	Bolt	-1	0	0	0	0
 814	Lifeblood	-1	0	0	0	115
 815	Elfin Weapons	-1	2	4	3	16
 816	Trinity Nova	-1	0	0	0	220
@@ -836,7 +836,7 @@
 834	Glacial Nova	-1	0	0	0	36
 835	Countdown	-1	0	0	0	163
 836	Trinity Beam	-1	0	0	0	0
-837		-1				
+837	Trinity Beam	-1	0	0	0	0
 838		-1				
 839	Blood Fury	-1	0	0	0	162
 840	Shock Flower	-1	0	0	0	188
@@ -862,7 +862,7 @@
 860		-1				
 861		-1				
 862	Punisher Barrage	-1	0	0	0	0
-863		-1				
+863	Punisher Barrage	-1	0	0	0	0
 864		-1				
 865	Flamestrike	-1	1	3	1	4
 866	Fire Cannonade	-1	0	0	0	0
@@ -896,7 +896,7 @@
 894	Call Henchman	-1	0	0	0	217
 895	Call Blood Golem	-1	0	0	0	216
 896	Call Necrobot	-1	0	0	0	218
-897		-1				
+897	Rotting Flesh	-1	2	2	1	114
 898	Cyclone	-1	0	0	0	222
 899	Squall Gust	-1	0	0	0	154
 900	Medusa	-1	0	0	0	117
@@ -937,13 +937,13 @@
 935		-1				
 936	Singularity	-1	2	4	2	56
 937	Attack	-1	0	0	0	3
-938		-1				
+938	Charged Strike	-1	0	0	0	247
 939	Respawner	-1	0	0	0	0
 940		-1				
 941		-1				
 942		-1				
-943		-1				
-944	Cold Fear	-1	0	0	0	56
+943	Blizzard	-1	3	5	1	46
+944		-1				
 945		-1				
 946		-1				
 947		-1				
@@ -959,7 +959,7 @@
 957	Punisher Barrage	-1	0	0	0	0
 958		-1				
 959	Call Scavengers	-1	0	0	0	209
-960		-1				
+960	Blade Spirits	-1	2	4	3	126
 961		-1				
 962	Deathstrike	-1	0	0	0	61
 963	Disintegrate	-1	0	0	0	132
@@ -1018,7 +1018,7 @@
 1016	Dominate	-1	0	0	0	147
 1017	Quill Spike	-1	0	0	0	0
 1018	Charm	-1	0	0	0	32
-1019	Lava Pit	-1	2	5	1	68
+1019		-1				
 1020		-1				
 1021	Summon Darklings	-1	0	0	0	145
 1022	Exploding Totem	-1	0	0	0	48
@@ -1044,7 +1044,7 @@
 1042		-1				
 1043		-1				
 1044		-1				
-1045	Dark Portal	-1	0	0	0	227
+1045		-1				
 1046	Hellgate	-1	0	0	0	24
 1047	Wyrmshot	-1	0	0	0	0
 1048		-1				
@@ -1137,11 +1137,11 @@
 1135		-1				
 1136	Death Shards	2	2	2	3	70
 1137		-1				
-1138		-1				
+1138	Death Shards	-1	2	2	3	70
 1139		-1				
 1140		-1				
 1141		-1				
-1142		-1				
+1142	Death Shards	-1	2	2	3	70
 1143	Death Shards	-1	2	2	3	70
 1144		-1				
 1145		-1				
@@ -1214,7 +1214,7 @@
 1212		-1				
 1213		-1				
 1214		-1				
-1215	Inner Fire	-1	0	0	0	66
+1215	Tantrum	-1	0	0	0	177
 1216		-1				
 1217		-1				
 1218		-1				
@@ -1299,13 +1299,13 @@
 1297		-1				
 1298		-1				
 1299		-1				
-1300		-1				
+1300	Rising Dawn	-1	0	0	0	91
 1301		-1				
 1302		-1				
 1303		-1				
 1304		-1				
 1305		-1				
-1306		-1				
+1306	Black Lotus Strike	-1	0	0	0	51
 1307	Black Lotus Strike	-1	0	0	0	51
 1308	Death Blossom	-1	0	0	0	58
 1309	Wrath	-1	0	0	0	78
@@ -1397,3 +1397,82 @@
 1395		-1				
 1396	Voidstar	-1	0	0	0	197
 1397	Ice Bolt Nova	-1	0	0	0	195
+1398	Town Portal	-1	0	0	0	6
+1399		-1				
+1400	Mana Shield	-1	0	0	0	22
+1401	Noctule	-1	0	0	0	234
+1402	Demon Blood	-1	0	0	0	0
+1403	Phalanx	-1	1	3	1	4
+1404	Noctule	-1	0	0	0	234
+1405	Fire Bolt Nova	-1	0	0	0	219
+1406	Earthquake	-1	0	0	0	0
+1407	Phalanx	-1	1	3	1	4
+1408	Noctule	-1	0	0	0	234
+1409	Earthquake	-1	0	0	0	0
+1410	Earthquake	-1	0	0	0	0
+1411		-1				
+1412	Respawner	-1	0	0	0	0
+1413	Earthquake	-1	0	0	0	0
+1414	Harbinger	-1	0	0	0	197
+1415	Fire Bolt Nova	-1	0	0	0	219
+1416	\tan;Homing Nova Shot	-1	0	0	0	235
+1417		-1				
+1418	\tan;Rapid Wyrmshot	-1	0	0	0	236
+1419	Carnage	-1	0	0	0	237
+1420		-1				
+1421		-1				
+1422		-1				
+1423		-1				
+1424		-1				
+1425		-1				
+1426		-1				
+1427		-1				
+1428		-1				
+1429		-1				
+1430	Arcane Swarm	-1	0	0	0	126
+1431		-1				
+1432	Barrage	-1	0	0	0	238
+1433	Parasite	-1	0	0	0	239
+1434		-1				
+1435		-1				
+1436		-1				
+1437		-1				
+1438		-1				
+1439		-1				
+1440		-1				
+1441	Lex Talionis	-1	0	0	0	244
+1442		-1				
+1443	Ravenous Flames	-1	0	0	0	245
+1444		-1				
+1445		-1				
+1446		-1				
+1447		-1				
+1448		-1				
+1449		-1				
+1450		-1				
+1451	War Cry	-1	0	0	0	246
+1452		-1				
+1453	\tan;Bear Claw Nova	-1	0	0	0	240
+1454		-1				
+1455	\tan;Ranged Blood Thorns	-1	0	0	0	241
+1456	Scepter Mastery	-1	0	0	0	0
+1457	APF-20 'Maelstrom' MkI	-1	0	0	0	243
+1458		-1				
+1459		-1				
+1460		-1				
+1461		-1				
+1462		-1				
+1463		-1				
+1464	Charged Strike	-1	0	0	0	247
+1465		-1				
+1466		-1				
+1467		-1				
+1468		-1				
+1469		-1				
+1470		-1				
+1471		-1				
+1472		-1				
+1473		-1				
+1474		-1				
+1475		-1				
+1476		-1				

@@ -1,227 +1,205 @@
 #index	item	set	key	rlvl	image	prop1	param1	min1	max1	prop2	param2	min2	max2	prop3	param3	min3	max3	prop4	param4	min4	max4	prop5	param5	min5	max5	prop6	param6	min6	max6	prop7	param7	min7	max7	prop8	param8	min8	max8	prop9	param9	min9	max9	prop10	param10	min10	max10
-127	Мороз	Пантеон	MSPantheon	100																																									
-128	Вода	Пантеон	MSPantheon	100																																									
-129	Рай	Пантеон	MSPantheon	100																																									
-130	Земля	Пантеон	MSPantheon	100																																									
-131	Огонь	Пантеон	MSPantheon	100																																									
-132	Забота Селестии	Миф Селестии	MSCelestia's Myth	100																																									
-133	Тесьма Селестии	Миф Селестии	MSCelestia's Myth	100																																									
-134	Слава Селестии	Миф Селестии	MSCelestia's Myth	100																																									
-135	Крылья Селестии	Миф Селестии	MSCelestia's Myth	100																																									
-136	Страсть Селестии	Миф Селестии	MSCelestia's Myth	100																																									
-137	Лунная Прогулка Василия	Последователи Василия	MSVasily's Following	100																																									
-138	Полумесяц Василия	Последователи Василия	MSVasily's Following	100																																									
-139	Луна Василия	Последователи Василия	MSVasily's Following	100																																									
-140	Затмение Василия	Последователи Василия	MSVasily's Following	100																																									
-141	Падающая Звезда Василия	Последователи Василия	MSVasily's Following	100																																									
-142	Грех Ред Векса	Объятия Ред Векса	MSRed Vex' Embrace	100																																									
-143	Проклятие Ред Векса	Объятия Ред Векса	MSRed Vex' Embrace	100																																									
-144	Накидка Ред Векса	Объятия Ред Векса	MSRed Vex' Embrace	100																																									
-145	Идол Ред Векса	Объятия Ред Векса	MSRed Vex' Embrace	100																																									
-146	Живодер Ред Векса	Объятия Ред Векса	MSRed Vex' Embrace	100																																									
-147	Трос Охотницы на Ведьм	Облачение Охотницы на Ведьм	MSWitchhunter's Attire	100																																									
-148	Капюшон Охотницы на Ведьм	Облачение Охотницы на Ведьм	MSWitchhunter's Attire	100																																									
-149	Вера Охотницы на Ведьм	Облачение Охотницы на Ведьм	MSWitchhunter's Attire	100																																									
-150	Распятие Охотницы на Ведьм	Облачение Охотницы на Ведьм	MSWitchhunter's Attire	100																																									
-151	Огонь Охотницы на Ведьм	Облачение Охотницы на Ведьм	MSWitchhunter's Attire	100																																									
-152	Змеиный Хвост	Змеиная Яма	MSThe Snake Pit	100																																									
-153	Змеиное Кольцо	Змеиная Яма	MSThe Snake Pit	100																																									
-154	Змеиный Язык	Змеиная Яма	MSThe Snake Pit	100																																									
-155	Змеиная Чешуя	Змеиная Яма	MSThe Snake Pit	100																																									
-156	Змеиные Клыки	Змеиная Яма	MSThe Snake Pit	100																																									
-157	Рунная Опека Сыщика	Кредо	MSCreed	100																																									
-158	Тотем Сыщика	Кредо	MSCreed	100																																									
-159	Хитрость Сыщика	Кредо	MSCreed	100																																									
-160	Изображение Сыщика	Кредо	MSCreed	100																																									
-161	Удар Сыщика	Кредо	MSCreed	100																																									
-162	Прогресс Виз-Джуна	Приборы Виз-Джуна	MSVizjun's Devices	100																																									
-163	Предусмотрение Виз-Джуна	Приборы Виз-Джуна	MSVizjun's Devices	100																																									
-164	Двигатель Виз-Джуна	Приборы Виз-Джуна	MSVizjun's Devices	100																																									
-165	Монитор Виз-Джуна	Приборы Виз-Джуна	MSVizjun's Devices	100																																									
-166	Наука Виз-Джуна	Приборы Виз-Джуна	MSVizjun's Devices	100																																									
-167	Журавлиный Размах	Собрание Племен	MSGathering of the Tribes	100																																									
-168	Змеиная Боевая Песнь	Собрание Племен	MSGathering of the Tribes	100																																									
-169	Волчий Клык	Собрание Племен	MSGathering of the Tribes	100																																									
-170	Медвежье Заключение	Собрание Племен	MSGathering of the Tribes	100																																									
-171	Надвигающаяся Буря	Собрание Племен	MSGathering of the Tribes	100																																									
-172	Обвал	Гора Арреат	MSMount Arreat	100																																									
-173	Ущелье	Гора Арреат	MSMount Arreat	100																																									
-174	Лавина	Гора Арреат	MSMount Arreat	100																																									
-175	Буран	Гора Арреат	MSMount Arreat	100																																									
-176	Извержение	Гора Арреат	MSMount Arreat	100																																									
-177	Бесследный Шаг Охотника	Охотник на Крупную Дичь	MSBig Game Hunter	100																																									
-178	Трофей Охотника	Охотник на Крупную Дичь	MSBig Game Hunter	100																																									
-179	Кожа Охотника	Охотник на Крупную Дичь	MSBig Game Hunter	100																																									
-180	Маскировка Охотника	Охотник на Крупную Дичь	MSBig Game Hunter	100																																									
-181	Когтистый Кулак Охотника	Охотник на Крупную Дичь	MSBig Game Hunter	100																																									
-182	Защитник	Духи Нефалема	MSSpirits of the Nephalem	100																																									
-183	Покровитель	Духи Нефалема	MSSpirits of the Nephalem	100																																									
-184	Страж	Духи Нефалема	MSSpirits of the Nephalem	100																																									
-185	Участь	Духи Нефалема	MSSpirits of the Nephalem	100																																									
-186	Священная Забота	Духи Нефалема	MSSpirits of the Nephalem	100																																									
-187	Хватка Природы	Каои Дулра	MSCaoi Dulra	100																																									
-188	Объятия Природы	Каои Дулра	MSCaoi Dulra	100																																									
-189	Опека Природы	Каои Дулра	MSCaoi Dulra	100																																									
-190	Воля Природы	Каои Дулра	MSCaoi Dulra	100																																									
-191	Гнев Природы	Каои Дулра	MSCaoi Dulra	100																																									
-192	MREmerald Growth2	Радужный Воин	MSRainbow Warrior	100																																									
-193	MREmerald Sky2	Радужный Воин	MSRainbow Warrior	100																																									
-194	MREmerald Cloud2	Радужный Воин	MSRainbow Warrior	100																																									
-195	MREmerald Earth2	Радужный Воин	MSRainbow Warrior	100																																									
-196	MREmerald Flower2	Радужный Воин	MSRainbow Warrior	100																																									
-197	След Одинокого Волка	Путь Одинокого Волка	MSLone Wolf's Path	100																																									
-198	Когти Одинокого Волка	Путь Одинокого Волка	MSLone Wolf's Path	100																																									
-199	Взор Одинокого Волка	Путь Одинокого Волка	MSLone Wolf's Path	100																																									
-200	Мех Одинокого Волка	Путь Одинокого Волка	MSLone Wolf's Path	100																																									
-201	Булава Одинокого Волка	Путь Одинокого Волка	MSLone Wolf's Path	100																																									
-202	MRScosglen's Legends2	Священная Земля	MSSacred Earth	100																																									
-203	MRScosglen's History2	Священная Земля	MSSacred Earth	100																																									
-204	MRScosglen's Tales2	Священная Земля	MSSacred Earth	100																																									
-205	MRScosglen's Fables2	Священная Земля	MSSacred Earth	100																																									
-206	MRScosglen's Myths2	Священная Земля	MSSacred Earth	100																																									
-207	Погоня Ратмы	Империя Ратмы	MSRathma's Empire	100																																									
-208	Ловушка Ратмы	Империя Ратмы	MSRathma's Empire	100																																									
-209	Смертельный Взор Ратмы	Империя Ратмы	MSRathma's Empire	100																																									
-210	Скелет Ратмы	Империя Ратмы	MSRathma's Empire	100																																									
-211	Тирания Ратмы	Империя Ратмы	MSRathma's Empire	100																																									
-212	Towerlord's Bombards	Башня из Слоновой Кости	MSIvory Tower	100																																									
-213	Towerlord's Gargoyle	Башня из Слоновой Кости	MSIvory Tower	100																																									
-214	Towerlord's Spire	Башня из Слоновой Кости	MSIvory Tower	100																																									
-215	Towerlord's Bell	Башня из Слоновой Кости	MSIvory Tower	100																																									
-216	Towerlord's Weathervane	Башня из Слоновой Кости	MSIvory Tower	100																																									
-217	Хитрость Ахилиоса	Пробуждение Ахилиоса	MSAchilios' Wake	100																																									
-218	Кастеты Ахилиоса	Пробуждение Ахилиоса	MSAchilios' Wake	100																																									
-219	Орлиный Глаз Ахилиоса	Пробуждение Ахилиоса	MSAchilios' Wake	100																																									
-220	Убежище Ахилиоса	Пробуждение Ахилиоса	MSAchilios' Wake	100																																									
-221	Кувалда Ахилиоса	Пробуждение Ахилиоса	MSAchilios' Wake	100																																									
-222	Видим Небеса	Сатанинская Мантра	MSSatanic Mantra	100																																									
-223	Пока Мы	Сатанинская Мантра	MSSatanic Mantra	100																																									
-224	Сквозь Пелену Смерти	Сатанинская Мантра	MSSatanic Mantra	100																																									
-225	Пошли Мне Луч Твоего Света	Сатанинская Мантра	MSSatanic Mantra	100																																									
-226	Архангел Ангел Тьмы	Сатанинская Мантра	MSSatanic Mantra	100																																									
-227	Клещи Цинадида	Ремесло Цинадида	MSCinadide's Craft	100																																									
-228	Наковальня Цинадида	Ремесло Цинадида	MSCinadide's Craft	100																																									
-229	Мехи Цинадида	Ремесло Цинадида	MSCinadide's Craft	100																																									
-230	Кузница Цинадида	Ремесло Цинадида	MSCinadide's Craft	100																																									
-231	Малус Цинадида	Ремесло Цинадида	MSCinadide's Craft	100																																									
-232	Присутствие Хадриэля	Знания Хадриэля	MSHadriel's Lore	100																																									
-233	Отвага Хадриэля	Знания Хадриэля	MSHadriel's Lore	100																																									
-234	Крылья Хадриэля	Знания Хадриэля	MSHadriel's Lore	100																																									
-235	Чистое Сердце Хадриэля	Знания Хадриэля	MSHadriel's Lore	100																																									
-236	Мститель Хадриэля	Знания Хадриэля	MSHadriel's Lore	100																																									
-237	Поступь Малтаэля	Святилище Малтаэля	MSMalthael's Sanctuary	100																																									
-238	Опека Малтаэля	Святилище Малтаэля	MSMalthael's Sanctuary	100																																									
-239	Корона Малтаэля	Святилище Малтаэля	MSMalthael's Sanctuary	100																																									
-240	Ореол Малтаэля	Святилище Малтаэля	MSMalthael's Sanctuary	100																																									
-241	Гнев Малтаэля	Святилище Малтаэля	MSMalthael's Sanctuary	100																																									
-242	Крылатые Сандалии Империуса	Указ Империуса	MSImperius' Edict	100																																									
-243	Поход Империуса	Указ Империуса	MSImperius' Edict	100																																									
-244	Аура Империуса	Указ Империуса	MSImperius' Edict	100																																									
-245	Сияние Империуса	Указ Империуса	MSImperius' Edict	100																																									
-246	Небесный Молот Империуса	Указ Империуса	MSImperius' Edict	100																																									
-247	MRWarmage's Wake2	Гнев Боевого Мага	MSWarmage's Wrath	100																																									
-248	MRWarmage's Conjuration2	Гнев Боевого Мага	MSWarmage's Wrath	100																																									
-249	MRWarmage's Breath2	Гнев Боевого Мага	MSWarmage's Wrath	100																																									
-250	MRWarmage's Flameshroud2	Гнев Боевого Мага	MSWarmage's Wrath	100																																									
-251	MRWarmage's Fireblade2	Гнев Боевого Мага	MSWarmage's Wrath	100																																									
-252	Рунная Петля Занн Эзу	Секреты Занн Эзу	MSZann Esu's Secrets	100																																									
-253	Тайны Занн Эзу	Секреты Занн Эзу	MSZann Esu's Secrets	100																																									
-254	Мантия Занн Эзу	Секреты Занн Эзу	MSZann Esu's Secrets	100																																									
-255	Скрепляющий Обруч Занн Эзу	Секреты Занн Эзу	MSZann Esu's Secrets	100																																									
-256	Очарование Занн Эзу	Секреты Занн Эзу	MSZann Esu's Secrets	100																																									
-257	Транс Стихий	Дети Стихий	MSEdyrem's Children	100																																									
-258	Дух Стихий	Дети Стихий	MSEdyrem's Children	100																																									
-259	Битва Стихий	Дети Стихий	MSEdyrem's Children	100																																									
-260	Ярость Стихий	Дети Стихий	MSEdyrem's Children	100																																									
-261	Буря Стихий	Дети Стихий	MSEdyrem's Children	100																																									
-262	Пентада	Обруч Адрии	MSAdria's Circle	100																																									
-263	Тетрада	Обруч Адрии	MSAdria's Circle	100																																									
-264	Триада	Обруч Адрии	MSAdria's Circle	100																																									
-265	Диада	Обруч Адрии	MSAdria's Circle	100																																									
-266	Монада	Обруч Адрии	MSAdria's Circle	100																																									
-267	Изумрудный Рост	Радужный Воин	MSRainbow Warrior2	100																																									
-268	Изумрудное Небо	Радужный Воин	MSRainbow Warrior2	100																																									
-269	Изумрудное Облако	Радужный Воин	MSRainbow Warrior2	100																																									
-270	Изумрудная Земля	Радужный Воин	MSRainbow Warrior2	100																																									
-271	Изумрудный Цветок	Радужный Воин	MSRainbow Warrior2	100																																									
-272	Легенды Скосглена	Последний Король Скосглена	MSLastKing	100																																									
-273	История Скосглена	Последний Король Скосглена	MSLastKing	100																																									
-274	Сказки Скосглена	Последний Король Скосглена	MSLastKing	100																																									
-275	Басни Скосглена	Последний Король Скосглена	MSLastKing	100																																									
-276	Мифы Скосглена	Последний Король Скосглена	MSLastKing	100																																									
-277	Натиск Башни	Лорд Башни	MSTowerlord	100																																									
-278	Отказ Башни	Лорд Башни	MSTowerlord	100																																									
-279	Стена Башни	Лорд Башни	MSTowerlord	100																																									
-280	Защита Башни	Лорд Башни	MSTowerlord	100																																									
-281	Бросок Башни	Лорд Башни	MSTowerlord	100																																									
-282	Пробуждение Боевого Мага	Боевой Маг	MSWarmage2	100																																									
-283	Чары Боевого Мага	Боевой Маг	MSWarmage2	100																																									
-284	Дыхание Боевого Мага	Боевой Маг	MSWarmage2	100																																									
-285	Пламенный Саван Боевого Мага	Боевой Маг	MSWarmage2	100																																									
-286	Огненный Клинок Боевого Мага	Боевой Маг	MSWarmage2	100																																									
-287	Опека Богини	Тайны	MSThe Mysteries	100																																									
-288	Священный Обруч	Тайны	MSThe Mysteries	100																																									
-289	Пентакль	Тайны	MSThe Mysteries	100																																									
-290	Котел	Тайны	MSThe Mysteries	100																																									
-291	Клинок Ведьмы	Тайны	MSThe Mysteries	100																																									
-292	Кольцо Призыва Лазаруса	Власть Лазаруса	MSLazarus' Authority	100																																									
-293	Ламен Лазаруса	Власть Лазаруса	MSLazarus' Authority	100																																									
-294	Обезьяний Выстрел	Завещание Обезьян	MSTestament of the Apes	100																																									
-295	Обезьянья Шкура	Завещание Обезьян	MSTestament of the Apes	100																																									
-296	Обезьяний Череп	Завещание Обезьян	MSTestament of the Apes	100																																									
-297	Обезьянья Рука	Завещание Обезьян	MSTestament of the Apes	100																																									
-298	Обезьянья Нога	Завещание Обезьян	MSTestament of the Apes	100																																									
-299	Риза Лазаря	Архиепископ Лазарь	Set_Lazbro	100																																									
-300	Стихарьская Шапка Лазаря	Архиепископ Лазарь	Set_Lazbro	100																																									
-301	Исполненный По Обету Светоч Лазаря	Архиепископ Лазарь	Set_Lazbro	100																																									
-303	Величесво Измаила	Проклятие Закарума	Set_xaru	100																																									
-305	Вероломство Ваянда	Проклятие Закарума	Set_xaru	100																																									
-308	Кожа Желчелея Распорядителя	Трофеи Прихвостней	Set_PewPew	100	set_pewpew1																																								
-309	Рога Черного Черепа	Трофеи Прихвостней	Set_PewPew	100	set_pewpew2																																								
-310	Хребет Облака Обречения	Трофеи Прихвостней	Set_PewPew	100	set_pewpew3																																								
-311	Когти Звездного Глаза	Трофеи Прихвостней	Set_PewPew	100	set_pewpew4																																								
-312	Чешуя Кожаного Клыка	Трофеи Прихвостней	Set_PewPew	100	set_pewpew5																																								
-314	Ламен Лазаря	Архиепископ Лазарь	Set_Lazbro	100																																									
-316	Безумие Маффера	Проклятие Закарума	Set_xaru	100																																									
-317	Возмездие Бремма	Проклятие Закарума	Set_xaru	100																																									
-318	Страж Хоразона	Братство Визжири	Set_labrynth	120	lab_armor																																								
-319	Клинок Вальтека	Братство Визжири	Set_labrynth	120																																									
-320	Конвой Нор Тиража	Братство Визжири	Set_labrynth	120	lab_shield																																								
-321	Корона Куов Цина	Братство Визжири	Set_labrynth	120	lab_helm																																								
-322	Кровь Бартука	Братство Визжири	Set_labrynth	120	lab_belt																																								
-323	Рукавицы Золтана	Братство Хорадримов	Set_labrynth2	120	lab_gloves																																								
-324	Наголенники Радамента	Братство Хорадримов	Set_labrynth2	120	lab_boots																																								
-325	Алмаз Джереда Каина	Братство Хорадримов	Set_labrynth2	120	lab_rn1																																								
-326	Самоцвет Декарда Каина	Братство Хорадримов	Set_labrynth2	120	lab_rn2																																								
-327	Талисман Тал Раши	Братство Хорадримов	Set_labrynth2	120	lab_amu																																								
-328	Жадность Джелеба	Проклятие Закарума	Set_xaru	100																																									
-329	Медитация Яэриуса	Серое Предзнаменование Яэриуса	MSSelathiel Archives	100																																									
-330	Перегонный Куб Яэриуса	Серое Предзнаменование Яэриуса	MSSelathiel Archives	100																																									
-331	Ложь Яэриуса	Серое Предзнаменование Яэриуса	MSSelathiel Archives	100																																									
-332	Подобие Яэриуса	Серое Предзнаменование Яэриуса	MSSelathiel Archives	100																																									
-333	Копье Яэриуса	Серое Предзнаменование Яэриуса	MSSelathiel Archives	100																																									
-334	Благословение Зере	Божественность Зере	MSZeraes Divinity	100																																									
-335	Очищение Зере	Божественность Зере	MSZeraes Divinity	100																																									
-336	Защита Зере	Божественность Зере	MSZeraes Divinity	100																																									
-337	Искупление Зере	Божественность Зере	MSZeraes Divinity	100																																									
-338	Святой Гнев Зере	Божественность Зере	MSZeraes Divinity	100																																									
-339	Ненависть Маркосиаса	Сущность Маркосиаса	MREssence	100																																									
-340	Сила Маркосиаса	Сущность Маркосиаса	MREssence	100																																									
-341	Зловещий Оскал Маркосиаса	Сущность Маркосиаса	MREssence	100																																									
-342	Обман Маркосиаса	Сущность Маркосиаса	MREssence	100																																									
-343	Гнев Маркосиаса	Сущность Маркосиаса	MREssence	100																																									
-344	Степная Соня	Тундровый Бродяга	MSTundra Walker	100																																									
-345	Древняя Бронза	Тундровый Бродяга	MSTundra Walker	100																																									
-346	Серебрянный Снег	Тундровый Бродяга	MSTundra Walker	100																																									
-347	Серый Рейнджер	Тундровый Бродяга	MSTundra Walker	100																																									
-348	Долинный Охотник	Тундровый Бродяга	MSTundra Walker	100																																									
-349	Луна Лириан	Небесный Сад	MSOrchard	100																																									
-350	Обманщик	Небесный Сад	MSOrchard	100																																									
-351	Крестец Гиюа	Небесный Сад	MSOrchard	100																																									
-352	Могила Дракона	Небесный Сад	MSOrchard	100																																									
-353	Череп Пророка	Небесный Сад	MSOrchard	100																																									
-354	Скошенная Доля	Универсальный Закон	MSUniversalLaw	100																																									
-355	Мертвая Линза	Универсальный Закон	MSUniversalLaw	100	invbshu																																								
-356	Мировая Линия	Универсальный Закон	MSUniversalLaw	100																																									
-357	Гиперповерхность	Универсальный Закон	MSUniversalLaw	100																																									
-358	Убивающий Вектор	Универсальный Закон	MSUniversalLaw	100	invaxfu																																								
+127	Frost	Pantheon	MSPantheon	100																																									
+128	Water	Pantheon	MSPantheon	100																																									
+129	Heaven	Pantheon	MSPantheon	100																																									
+130	Earth	Pantheon	MSPantheon	100																																									
+131	Fire	Pantheon	MSPantheon	100																																									
+132	Celestia's Charge	Celestia's Myth	MSCelestia's Myth	100																																									
+133	Celestia's Ribbon	Celestia's Myth	MSCelestia's Myth	100																																									
+134	Celestia's Glory	Celestia's Myth	MSCelestia's Myth	100																																									
+135	Celestia's Wings	Celestia's Myth	MSCelestia's Myth	100																																									
+136	Celestia's Passion	Celestia's Myth	MSCelestia's Myth	100																																									
+137	Vasily's Moonwalkers	Vasily's Following	MSVasily's Following	100																																									
+138	Vasily's Crescent	Vasily's Following	MSVasily's Following	100																																									
+139	Vasily's Shepherd Moon	Vasily's Following	MSVasily's Following	100																																									
+140	Vasily's Eclipse	Vasily's Following	MSVasily's Following	100																																									
+141	Vasily's Falling Star	Vasily's Following	MSVasily's Following	100																																									
+142	Red Vex' Sin	Red Vex' Embrace	MSRed Vex' Embrace	100																																									
+143	Red Vex' Curse	Red Vex' Embrace	MSRed Vex' Embrace	100																																									
+144	Red Vex' Mantle	Red Vex' Embrace	MSRed Vex' Embrace	100																																									
+145	Red Vex' Idol	Red Vex' Embrace	MSRed Vex' Embrace	100																																									
+146	Red Vex' Flayer	Red Vex' Embrace	MSRed Vex' Embrace	100																																									
+147	Witchhunter's Rope	Witchhunter's Attire	MSWitchhunter's Attire	100																																									
+148	Witchhunter's Hood	Witchhunter's Attire	MSWitchhunter's Attire	100																																									
+149	Witchhunter's Faith	Witchhunter's Attire	MSWitchhunter's Attire	100																																									
+150	Witchhunter's Crucifix	Witchhunter's Attire	MSWitchhunter's Attire	100																																									
+151	Witchhunter's Fire	Witchhunter's Attire	MSWitchhunter's Attire	100																																									
+152	Serpent's Tail	The Snake Pit	MSThe Snake Pit	100																																									
+153	Serpent's Coil	The Snake Pit	MSThe Snake Pit	100																																									
+154	Serpent's Tongue	The Snake Pit	MSThe Snake Pit	100																																									
+155	Serpent's Scales	The Snake Pit	MSThe Snake Pit	100																																									
+156	Serpent's Fangs	The Snake Pit	MSThe Snake Pit	100																																									
+157	Tracker's Runeward	Creed	MSCreed	100																																									
+158	Tracker's Totem	Creed	MSCreed	100																																									
+159	Tracker's Stealth	Creed	MSCreed	100																																									
+160	Tracker's Effigy	Creed	MSCreed	100																																									
+161	Tracker's Strike	Creed	MSCreed	100																																									
+162	Vizjun's Progress	Vizjun's Devices	MSVizjun's Devices	100																																									
+163	Vizjun's Foresight	Vizjun's Devices	MSVizjun's Devices	100																																									
+164	Vizjun's Engine	Vizjun's Devices	MSVizjun's Devices	100																																									
+165	Vizjun's Monitor	Vizjun's Devices	MSVizjun's Devices	100																																									
+166	Vizjun's Science	Vizjun's Devices	MSVizjun's Devices	100																																									
+167	Crane's Reach	Gathering of the Tribes	MSGathering of the Tribes	100																																									
+168	Snake's Battle Chant	Gathering of the Tribes	MSGathering of the Tribes	100																																									
+169	Wolf's Fang	Gathering of the Tribes	MSGathering of the Tribes	100																																									
+170	Bear's Warding	Gathering of the Tribes	MSGathering of the Tribes	100																																									
+171	The Coming Storm	Gathering of the Tribes	MSGathering of the Tribes	100																																									
+172	Rockslide	Mount Arreat	MSMount Arreat	100																																									
+173	Ravine	Mount Arreat	MSMount Arreat	100																																									
+174	Avalanche	Mount Arreat	MSMount Arreat	100																																									
+175	Snowstorm	Mount Arreat	MSMount Arreat	100																																									
+176	Eruption	Mount Arreat	MSMount Arreat	100																																									
+177	Hunter's Trackless Step	Big Game Hunter	MSBig Game Hunter	100																																									
+178	Hunter's Trophy	Big Game Hunter	MSBig Game Hunter	100																																									
+179	Hunter's Skin	Big Game Hunter	MSBig Game Hunter	100																																									
+180	Hunter's Camouflage	Big Game Hunter	MSBig Game Hunter	100																																									
+181	Hunter's Claw Fist	Big Game Hunter	MSBig Game Hunter	100																																									
+182	The Defender	Spirits of the Nephalem	MSSpirits of the Nephalem	100																																									
+183	The Protector	Spirits of the Nephalem	MSSpirits of the Nephalem	100																																									
+184	The Guardian	Spirits of the Nephalem	MSSpirits of the Nephalem	100																																									
+185	Destiny	Spirits of the Nephalem	MSSpirits of the Nephalem	100																																									
+186	Sacred Charge	Spirits of the Nephalem	MSSpirits of the Nephalem	100																																									
+187	Nature's Grasp	Caoi Dulra	MSCaoi Dulra	100																																									
+188	Nature's Embrace	Caoi Dulra	MSCaoi Dulra	100																																									
+189	Nature's Vigil	Caoi Dulra	MSCaoi Dulra	100																																									
+190	Nature's Will	Caoi Dulra	MSCaoi Dulra	100																																									
+191	Nature's Wrath	Caoi Dulra	MSCaoi Dulra	100																																									
+192	Lone Wolf's Track	Lone Wolf's Path	MSLone Wolf's Path	100																																									
+193	Lone Wolf's Claws	Lone Wolf's Path	MSLone Wolf's Path	100																																									
+194	Lone Wolf's Gaze	Lone Wolf's Path	MSLone Wolf's Path	100																																									
+195	Lone Wolf's Fur	Lone Wolf's Path	MSLone Wolf's Path	100																																									
+196	Lone Wolf's Maul	Lone Wolf's Path	MSLone Wolf's Path	100																																									
+197	Rathma's Chase	Rathma's Empire	MSRathma's Empire	100																																									
+198	Rathma's Trap	Rathma's Empire	MSRathma's Empire	100																																									
+199	Rathma's Death Gaze	Rathma's Empire	MSRathma's Empire	100																																									
+200	Rathma's Skeleton	Rathma's Empire	MSRathma's Empire	100																																									
+201	Rathma's Tyranny	Rathma's Empire	MSRathma's Empire	100																																									
+202	Achilios' Stealth	Achilios' Wake	MSAchilios' Wake	100																																									
+203	Achilios' Knuckledusters	Achilios' Wake	MSAchilios' Wake	100																																									
+204	Achilios' Eagle Eye	Achilios' Wake	MSAchilios' Wake	100																																									
+205	Achilios' Refuge	Achilios' Wake	MSAchilios' Wake	100																																									
+206	Achilios' Sledgehammer	Achilios' Wake	MSAchilios' Wake	100																																									
+207	Heaven In Sight	Satanic Mantra	MSSatanic Mantra	100																																									
+208	Till We Have	Satanic Mantra	MSSatanic Mantra	100																																									
+209	Through Death's Veil	Satanic Mantra	MSSatanic Mantra	100																																									
+210	Lend Me Thy Light	Satanic Mantra	MSSatanic Mantra	100																																									
+211	Archangel Dark Angel	Satanic Mantra	MSSatanic Mantra	100																																									
+212	Cinadide's Bender	Cinadide's Craft	MSCinadide's Craft	100																																									
+213	Cinadide's Anvil	Cinadide's Craft	MSCinadide's Craft	100																																									
+214	Cinadide's Bellows	Cinadide's Craft	MSCinadide's Craft	100																																									
+215	Cinadide's Forge	Cinadide's Craft	MSCinadide's Craft	100																																									
+216	Cinadide's Malus	Cinadide's Craft	MSCinadide's Craft	100																																									
+217	Hadriel's Presence	Hadriel's Lore	MSHadriel's Lore	100																																									
+218	Hadriel's Courage	Hadriel's Lore	MSHadriel's Lore	100																																									
+219	Hadriel's Wings	Hadriel's Lore	MSHadriel's Lore	100																																									
+220	Hadriel's Pure Heart	Hadriel's Lore	MSHadriel's Lore	100																																									
+221	Hadriel's Avenger	Hadriel's Lore	MSHadriel's Lore	100																																									
+222	Malthael's Stride	Malthael's Sanctuary	MSMalthael's Sanctuary	100																																									
+223	Malthael's Ward	Malthael's Sanctuary	MSMalthael's Sanctuary	100																																									
+224	Malthael's Crown	Malthael's Sanctuary	MSMalthael's Sanctuary	100																																									
+225	Malthael's Halo	Malthael's Sanctuary	MSMalthael's Sanctuary	100																																									
+226	Malthael's Wrath	Malthael's Sanctuary	MSMalthael's Sanctuary	100																																									
+227	Imperius' Winged Feet	Imperius' Edict	MSImperius' Edict	100																																									
+228	Imperius' Crusade	Imperius' Edict	MSImperius' Edict	100																																									
+229	Imperius' Aura	Imperius' Edict	MSImperius' Edict	100																																									
+230	Imperius' Radiance	Imperius' Edict	MSImperius' Edict	100																																									
+231	Imperius' Sky Hammer	Imperius' Edict	MSImperius' Edict	100																																									
+232	Zann Esu's Rune Loop	Zann Esu's Secrets	MSZann Esu's Secrets	100																																									
+233	Zann Esu's Mysteries	Zann Esu's Secrets	MSZann Esu's Secrets	100																																									
+234	Zann Esu's Robes	Zann Esu's Secrets	MSZann Esu's Secrets	100																																									
+235	Zann Esu's Binding Circle	Zann Esu's Secrets	MSZann Esu's Secrets	100																																									
+236	Zann Esu's Charm	Zann Esu's Secrets	MSZann Esu's Secrets	100																																									
+237	Elemental Trance	Elemental Children	MSEdyrem's Children	100																																									
+238	Elemental Spirit	Elemental Children	MSEdyrem's Children	100																																									
+239	Elemental Clash	Elemental Children	MSEdyrem's Children	100																																									
+240	Elemental Fury	Elemental Children	MSEdyrem's Children	100																																									
+241	Elemental Storm	Elemental Children	MSEdyrem's Children	100																																									
+242	Pentad	Adria's Circle	MSAdria's Circle	100																																									
+243	Tetrad	Adria's Circle	MSAdria's Circle	100																																									
+244	Triad	Adria's Circle	MSAdria's Circle	100																																									
+245	Dyad	Adria's Circle	MSAdria's Circle	100																																									
+246	Monad	Adria's Circle	MSAdria's Circle	100																																									
+247	Emerald Growth	Rainbow Warrior	MSRainbow Warrior2	100																																									
+248	Emerald Sky	Rainbow Warrior	MSRainbow Warrior2	100																																									
+249	Emerald Cloud	Rainbow Warrior	MSRainbow Warrior2	100																																									
+250	Emerald Earth	Rainbow Warrior	MSRainbow Warrior2	100																																									
+251	Emerald Flower	Rainbow Warrior	MSRainbow Warrior2	100																																									
+252	Scosglen's Legends	Last King of Scosglen	MSLastKing	100																																									
+253	Scosglen's History	Last King of Scosglen	MSLastKing	100																																									
+254	Scosglen's Tales	Last King of Scosglen	MSLastKing	100																																									
+255	Scosglen's Fables	Last King of Scosglen	MSLastKing	100																																									
+256	Scosglen's Myths	Last King of Scosglen	MSLastKing	100																																									
+257	Tower Push	The Towerlord	MSTowerlord	100																																									
+258	Tower Denial	The Towerlord	MSTowerlord	100																																									
+259	Tower Wall	The Towerlord	MSTowerlord	100																																									
+260	Tower Defense	The Towerlord	MSTowerlord	100																																									
+261	Tower Rush	The Towerlord	MSTowerlord	100																																									
+262	Warmage's Wake	The Warmage	MSWarmage2	100																																									
+263	Warmage's Conjuration	The Warmage	MSWarmage2	100																																									
+264	Warmage's Breath	The Warmage	MSWarmage2	100																																									
+265	Warmage's Flameshroud	The Warmage	MSWarmage2	100																																									
+266	Warmage's Fireblade	The Warmage	MSWarmage2	100																																									
+267	Charge of the Goddess	The Mysteries	MSThe Mysteries	100																																									
+268	Sacred Circle	The Mysteries	MSThe Mysteries	100																																									
+269	Pentacle	The Mysteries	MSThe Mysteries	100																																									
+270	Cauldron	The Mysteries	MSThe Mysteries	100																																									
+271	Witchblade	The Mysteries	MSThe Mysteries	100																																									
+272	Apeshoot	Testament of the Apes	MSTestament of the Apes	100																																									
+273	Apeskin	Testament of the Apes	MSTestament of the Apes	100																																									
+274	Apeskull	Testament of the Apes	MSTestament of the Apes	100																																									
+275	Apehand	Testament of the Apes	MSTestament of the Apes	100																																									
+276	Apefoot	Testament of the Apes	MSTestament of the Apes	100																																									
+277	Lazarus' Chasuble	Archbishop Lazarus	Set_Lazbro	100																																									
+278	Lazarus' Surplice Cap	Archbishop Lazarus	Set_Lazbro	100																																									
+279	Lazarus' Votive Lamp	Archbishop Lazarus	Set_Lazbro	100																																									
+280	Ismail's Majesty	Curse of the Zakarum	Set_xaru	100																																									
+281	Wyand's Perfidy	Curse of the Zakarum	Set_xaru	100																																									
+282	Bilefroth Skin	Henchmen Trophies	Set_PewPew	100	set_pewpew1																																								
+283	Blackskull's Horns	Henchmen Trophies	Set_PewPew	100	set_pewpew2																																								
+284	Doomcloud Spine	Henchmen Trophies	Set_PewPew	100	set_pewpew3																																								
+285	Stareye's Claws	Henchmen Trophies	Set_PewPew	100	set_pewpew4																																								
+286	Fangskin Scales	Henchmen Trophies	Set_PewPew	100	set_pewpew5																																								
+287	Lazarus' Lamen	Archbishop Lazarus	Set_Lazbro	100																																									
+288	Maffer's Frenzy	Curse of the Zakarum	Set_xaru	100																																									
+289	Bremm's Retribution	Curse of the Zakarum	Set_xaru	100																																									
+290	Horazon's Guard	Brotherhood of the Vizjerei	Set_labrynth	115	lab_armor																																								
+291	Valthek's Blade	Brotherhood of the Vizjerei	Set_labrynth	115																																									
+292	Nor Tiraj's Safeguard	Brotherhood of the Vizjerei	Set_labrynth	115	lab_shield																																								
+293	Quov Tsin's Crown	Brotherhood of the Vizjerei	Set_labrynth	115	lab_helm																																								
+294	Bartuc's Blood	Brotherhood of the Vizjerei	Set_labrynth	115	lab_belt																																								
+295	Zoltun's Gauntlets	Brotherhood of the Horadrim	Set_labrynth2	115	lab_gloves																																								
+296	Radament's Greaves	Brotherhood of the Horadrim	Set_labrynth2	115	lab_boots																																								
+297	Jered Cain's Diamond	Brotherhood of the Horadrim	Set_labrynth2	115	lab_rn1																																								
+298	Deckard Cain's Gem	Brotherhood of the Horadrim	Set_labrynth2	115	lab_rn2																																								
+299	Tal Rasha's Talisman	Brotherhood of the Horadrim	Set_labrynth2	115	lab_amu																																								
+300	Geleb's Greed	Curse of the Zakarum	Set_xaru	100																																									
+301	Yaerius' Mediation	Yaerius' Grey Omen	MSSelathiel Archives	100																																									
+302	Yaerius' Alembic	Yaerius' Grey Omen	MSSelathiel Archives	100																																									
+303	Yaerius' Untruth	Yaerius' Grey Omen	MSSelathiel Archives	100																																									
+304	Yaerius' Simulacrum	Yaerius' Grey Omen	MSSelathiel Archives	100																																									
+305	Yaerius' Xyston	Yaerius' Grey Omen	MSSelathiel Archives	100																																									
+306	Zerae's Blessing	Zerae's Divinity	MSZeraes Divinity	100																																									
+307	Zerae's Refinement	Zerae's Divinity	MSZeraes Divinity	100																																									
+308	Zerae's Vindication	Zerae's Divinity	MSZeraes Divinity	100																																									
+309	Zerae's Redemption	Zerae's Divinity	MSZeraes Divinity	100																																									
+310	Zerae's Holy Wrath	Zerae's Divinity	MSZeraes Divinity	100																																									
+311	Marchosias' Hatred	Marchosias' Essence	MREssence	100																																									
+312	Marchosias' Might	Marchosias' Essence	MREssence	100																																									
+313	Marchosias' Evil Grin	Marchosias' Essence	MREssence	100																																									
+314	Marchosias' Deception	Marchosias' Essence	MREssence	100																																									
+315	Marchosias' Anger	Marchosias' Essence	MREssence	100																																									
+316	Steppe Sleeper	Tundra Walker	MSTundra Walker	100																																									
+317	Ancient Bronze	Tundra Walker	MSTundra Walker	100																																									
+318	Snow Silver	Tundra Walker	MSTundra Walker	100																																									
+319	Grey Ranger	Tundra Walker	MSTundra Walker	100																																									
+320	Vale Hunter	Tundra Walker	MSTundra Walker	100																																									
+321	Lirian Moon	Celestial Orchard	MSOrchard	100																																									
+322	The Trickster	Celestial Orchard	MSOrchard	100																																									
+323	Giyua's Sacrum	Celestial Orchard	MSOrchard	100																																									
+324	The Dragon Grave	Celestial Orchard	MSOrchard	100																																									
+325	Femur of the Prophet	Celestial Orchard	MSOrchard	100																																									
+326	Quantum Bevel	Universal Law	MSUniversalLaw	100																																									
+327	Dead Lens	Universal Law	MSUniversalLaw	100	invbshu																																								
+328	World Line	Universal Law	MSUniversalLaw	100																																									
+329	Hypersurface	Universal Law	MSUniversalLaw	100																																									
+330	Killing Vector	Universal Law	MSUniversalLaw	100	invaxfu																																								

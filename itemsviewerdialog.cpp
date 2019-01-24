@@ -33,7 +33,7 @@
 #endif
 
 
-const int ItemsViewerDialog::kCellSize = 32, ItemsViewerDialog::kColumnsDefault = 10;
+const int ItemsViewerDialog::kCellSize = 32, ItemsViewerDialog::kColumnsDefault = 15;
 
 ItemsViewerDialog::ItemsViewerDialog(const QHash<int, bool> &plugyStashesExistenceHash, quint8 showDisenchantPreviewOption, QWidget *parent) : QDialog(parent), _tabWidget(new QTabWidget(this)),
     _showDisenchantPreviewOption(static_cast<ShowDisenchantPreviewOption>(showDisenchantPreviewOption))
@@ -396,7 +396,7 @@ void ItemsViewerDialog::updateGearItems(ItemsList *pBeltItems /*= 0*/, ItemsList
 
 const QList<int> &ItemsViewerDialog::kRows()
 {
-    static QList<int> rows = QList<int>() << 11 << 8 << 8 << 10 << 10 << 10 << 10;
+    static QList<int> rows = QList<int>() << 11 << 10 << 16 << 16 << 16 << 16 << 16;
     return rows;
 }
 

@@ -64,164 +64,142 @@
 189	Nature's Vigil	Caoi Dulra	MSCaoi Dulra	100																																									
 190	Nature's Will	Caoi Dulra	MSCaoi Dulra	100																																									
 191	Nature's Wrath	Caoi Dulra	MSCaoi Dulra	100																																									
-192	MREmerald Growth2	Rainbow Warrior	MSRainbow Warrior	100																																									
-193	MREmerald Sky2	Rainbow Warrior	MSRainbow Warrior	100																																									
-194	MREmerald Cloud2	Rainbow Warrior	MSRainbow Warrior	100																																									
-195	MREmerald Earth2	Rainbow Warrior	MSRainbow Warrior	100																																									
-196	MREmerald Flower2	Rainbow Warrior	MSRainbow Warrior	100																																									
-197	Lone Wolf's Track	Lone Wolf's Path	MSLone Wolf's Path	100																																									
-198	Lone Wolf's Claws	Lone Wolf's Path	MSLone Wolf's Path	100																																									
-199	Lone Wolf's Gaze	Lone Wolf's Path	MSLone Wolf's Path	100																																									
-200	Lone Wolf's Fur	Lone Wolf's Path	MSLone Wolf's Path	100																																									
-201	Lone Wolf's Maul	Lone Wolf's Path	MSLone Wolf's Path	100																																									
-202	MRScosglen's Legends2	Sacred Earth	MSSacred Earth	100																																									
-203	MRScosglen's History2	Sacred Earth	MSSacred Earth	100																																									
-204	MRScosglen's Tales2	Sacred Earth	MSSacred Earth	100																																									
-205	MRScosglen's Fables2	Sacred Earth	MSSacred Earth	100																																									
-206	MRScosglen's Myths2	Sacred Earth	MSSacred Earth	100																																									
-207	Rathma's Chase	Rathma's Empire	MSRathma's Empire	100																																									
-208	Rathma's Trap	Rathma's Empire	MSRathma's Empire	100																																									
-209	Rathma's Death Gaze	Rathma's Empire	MSRathma's Empire	100																																									
-210	Rathma's Skeleton	Rathma's Empire	MSRathma's Empire	100																																									
-211	Rathma's Tyranny	Rathma's Empire	MSRathma's Empire	100																																									
-212	Towerlord's Bombards	Ivory Tower	MSIvory Tower	100																																									
-213	Towerlord's Gargoyle	Ivory Tower	MSIvory Tower	100																																									
-214	Towerlord's Spire	Ivory Tower	MSIvory Tower	100																																									
-215	Towerlord's Bell	Ivory Tower	MSIvory Tower	100																																									
-216	Towerlord's Weathervane	Ivory Tower	MSIvory Tower	100																																									
-217	Achilios' Stealth	Achilios' Wake	MSAchilios' Wake	100																																									
-218	Achilios' Knuckledusters	Achilios' Wake	MSAchilios' Wake	100																																									
-219	Achilios' Eagle Eye	Achilios' Wake	MSAchilios' Wake	100																																									
-220	Achilios' Refuge	Achilios' Wake	MSAchilios' Wake	100																																									
-221	Achilios' Sledgehammer	Achilios' Wake	MSAchilios' Wake	100																																									
-222	Heaven In Sight	Satanic Mantra	MSSatanic Mantra	100																																									
-223	Till We Have	Satanic Mantra	MSSatanic Mantra	100																																									
-224	Through Death's Veil	Satanic Mantra	MSSatanic Mantra	100																																									
-225	Lend Me Thy Light	Satanic Mantra	MSSatanic Mantra	100																																									
-226	Archangel Dark Angel	Satanic Mantra	MSSatanic Mantra	100																																									
-227	Cinadide's Bender	Cinadide's Craft	MSCinadide's Craft	100																																									
-228	Cinadide's Anvil	Cinadide's Craft	MSCinadide's Craft	100																																									
-229	Cinadide's Bellows	Cinadide's Craft	MSCinadide's Craft	100																																									
-230	Cinadide's Forge	Cinadide's Craft	MSCinadide's Craft	100																																									
-231	Cinadide's Malus	Cinadide's Craft	MSCinadide's Craft	100																																									
-232	Hadriel's Presence	Hadriel's Lore	MSHadriel's Lore	100																																									
-233	Hadriel's Courage	Hadriel's Lore	MSHadriel's Lore	100																																									
-234	Hadriel's Wings	Hadriel's Lore	MSHadriel's Lore	100																																									
-235	Hadriel's Pure Heart	Hadriel's Lore	MSHadriel's Lore	100																																									
-236	Hadriel's Avenger	Hadriel's Lore	MSHadriel's Lore	100																																									
-237	Malthael's Stride	Malthael's Sanctuary	MSMalthael's Sanctuary	100																																									
-238	Malthael's Ward	Malthael's Sanctuary	MSMalthael's Sanctuary	100																																									
-239	Malthael's Crown	Malthael's Sanctuary	MSMalthael's Sanctuary	100																																									
-240	Malthael's Halo	Malthael's Sanctuary	MSMalthael's Sanctuary	100																																									
-241	Malthael's Wrath	Malthael's Sanctuary	MSMalthael's Sanctuary	100																																									
-242	Imperius' Winged Feet	Imperius' Edict	MSImperius' Edict	100																																									
-243	Imperius' Crusade	Imperius' Edict	MSImperius' Edict	100																																									
-244	Imperius' Aura	Imperius' Edict	MSImperius' Edict	100																																									
-245	Imperius' Radiance	Imperius' Edict	MSImperius' Edict	100																																									
-246	Imperius' Sky Hammer	Imperius' Edict	MSImperius' Edict	100																																									
-247	MRWarmage's Wake2	Warmage's Wrath	MSWarmage's Wrath	100																																									
-248	MRWarmage's Conjuration2	Warmage's Wrath	MSWarmage's Wrath	100																																									
-249	MRWarmage's Breath2	Warmage's Wrath	MSWarmage's Wrath	100																																									
-250	MRWarmage's Flameshroud2	Warmage's Wrath	MSWarmage's Wrath	100																																									
-251	MRWarmage's Fireblade2	Warmage's Wrath	MSWarmage's Wrath	100																																									
-252	Zann Esu's Rune Loop	Zann Esu's Secrets	MSZann Esu's Secrets	100																																									
-253	Zann Esu's Mysteries	Zann Esu's Secrets	MSZann Esu's Secrets	100																																									
-254	Zann Esu's Robes	Zann Esu's Secrets	MSZann Esu's Secrets	100																																									
-255	Zann Esu's Binding Circle	Zann Esu's Secrets	MSZann Esu's Secrets	100																																									
-256	Zann Esu's Charm	Zann Esu's Secrets	MSZann Esu's Secrets	100																																									
-257	Elemental Trance	Elemental Children	MSEdyrem's Children	100																																									
-258	Elemental Spirit	Elemental Children	MSEdyrem's Children	100																																									
-259	Elemental Clash	Elemental Children	MSEdyrem's Children	100																																									
-260	Elemental Fury	Elemental Children	MSEdyrem's Children	100																																									
-261	Elemental Storm	Elemental Children	MSEdyrem's Children	100																																									
-262	Pentad	Adria's Circle	MSAdria's Circle	100																																									
-263	Tetrad	Adria's Circle	MSAdria's Circle	100																																									
-264	Triad	Adria's Circle	MSAdria's Circle	100																																									
-265	Dyad	Adria's Circle	MSAdria's Circle	100																																									
-266	Monad	Adria's Circle	MSAdria's Circle	100																																									
-267	Emerald Growth	Rainbow Warrior	MSRainbow Warrior2	100																																									
-268	Emerald Sky	Rainbow Warrior	MSRainbow Warrior2	100																																									
-269	Emerald Cloud	Rainbow Warrior	MSRainbow Warrior2	100																																									
-270	Emerald Earth	Rainbow Warrior	MSRainbow Warrior2	100																																									
-271	Emerald Flower	Rainbow Warrior	MSRainbow Warrior2	100																																									
-272	Scosglen's Legends	Last King of Scosglen	MSLastKing	100																																									
-273	Scosglen's History	Last King of Scosglen	MSLastKing	100																																									
-274	Scosglen's Tales	Last King of Scosglen	MSLastKing	100																																									
-275	Scosglen's Fables	Last King of Scosglen	MSLastKing	100																																									
-276	Scosglen's Myths	Last King of Scosglen	MSLastKing	100																																									
-277	Tower Push	The Towerlord	MSTowerlord	100																																									
-278	Tower Denial	The Towerlord	MSTowerlord	100																																									
-279	Tower Wall	The Towerlord	MSTowerlord	100																																									
-280	Tower Defense	The Towerlord	MSTowerlord	100																																									
-281	Tower Rush	The Towerlord	MSTowerlord	100																																									
-282	Warmage's Wake	The Warmage	MSWarmage2	100																																									
-283	Warmage's Conjuration	The Warmage	MSWarmage2	100																																									
-284	Warmage's Breath	The Warmage	MSWarmage2	100																																									
-285	Warmage's Flameshroud	The Warmage	MSWarmage2	100																																									
-286	Warmage's Fireblade	The Warmage	MSWarmage2	100																																									
-287	Charge of the Goddess	The Mysteries	MSThe Mysteries	100																																									
-288	Sacred Circle	The Mysteries	MSThe Mysteries	100																																									
-289	Pentacle	The Mysteries	MSThe Mysteries	100																																									
-290	Cauldron	The Mysteries	MSThe Mysteries	100																																									
-291	Witchblade	The Mysteries	MSThe Mysteries	100																																									
-292	Lazarus' Summoning Ring	Lazarus' Authority	MSLazarus' Authority	100																																									
-293	Lazarus' Lamen	Lazarus' Authority	MSLazarus' Authority	100																																									
-294	Apeshoot	Testament of the Apes	MSTestament of the Apes	100																																									
-295	Apeskin	Testament of the Apes	MSTestament of the Apes	100																																									
-296	Apeskull	Testament of the Apes	MSTestament of the Apes	100																																									
-297	Apehand	Testament of the Apes	MSTestament of the Apes	100																																									
-298	Apefoot	Testament of the Apes	MSTestament of the Apes	100																																									
-299	Lazarus' Chasuble	Archbishop Lazarus	Set_Lazbro	100																																									
-300	Lazarus' Surplice Cap	Archbishop Lazarus	Set_Lazbro	100																																									
-301	Lazarus' Votive Lamp	Archbishop Lazarus	Set_Lazbro	100																																									
-303	Ismail's Majesty	Curse of the Zakarum	Set_xaru	100																																									
-305	Wyand's Perfidy	Curse of the Zakarum	Set_xaru	100																																									
-308	Bilefroth Skin	Henchmen Trophies	Set_PewPew	100	set_pewpew1																																								
-309	Blackskull's Horns	Henchmen Trophies	Set_PewPew	100	set_pewpew2																																								
-310	Doomcloud Spine	Henchmen Trophies	Set_PewPew	100	set_pewpew3																																								
-311	Stareye's Claws	Henchmen Trophies	Set_PewPew	100	set_pewpew4																																								
-312	Fangskin Scales	Henchmen Trophies	Set_PewPew	100	set_pewpew5																																								
-314	Lazarus' Lamen	Archbishop Lazarus	Set_Lazbro	100																																									
-316	Maffer's Frenzy	Curse of the Zakarum	Set_xaru	100																																									
-317	Bremm's Retribution	Curse of the Zakarum	Set_xaru	100																																									
-318	Horazon's Guard	Brotherhood of the Vizjerei	Set_labrynth	120	lab_armor																																								
-319	Valthek's Blade	Brotherhood of the Vizjerei	Set_labrynth	120																																									
-320	Nor Tiraj's Safeguard	Brotherhood of the Vizjerei	Set_labrynth	120	lab_shield																																								
-321	Quov Tsin's Crown	Brotherhood of the Vizjerei	Set_labrynth	120	lab_helm																																								
-322	Bartuc's Blood	Brotherhood of the Vizjerei	Set_labrynth	120	lab_belt																																								
-323	Zoltun's Gauntlets	Brotherhood of the Horadrim	Set_labrynth2	120	lab_gloves																																								
-324	Radament's Greaves	Brotherhood of the Horadrim	Set_labrynth2	120	lab_boots																																								
-325	Jered Cain's Diamond	Brotherhood of the Horadrim	Set_labrynth2	120	lab_rn1																																								
-326	Deckard Cain's Gem	Brotherhood of the Horadrim	Set_labrynth2	120	lab_rn2																																								
-327	Tal Rasha's Talisman	Brotherhood of the Horadrim	Set_labrynth2	120	lab_amu																																								
-328	Geleb's Greed	Curse of the Zakarum	Set_xaru	100																																									
-329	Yaerius' Mediation	Yaerius' Grey Omen	MSSelathiel Archives	100																																									
-330	Yaerius' Alembic	Yaerius' Grey Omen	MSSelathiel Archives	100																																									
-331	Yaerius' Untruth	Yaerius' Grey Omen	MSSelathiel Archives	100																																									
-332	Yaerius' Simulacrum	Yaerius' Grey Omen	MSSelathiel Archives	100																																									
-333	Yaerius' Xyston	Yaerius' Grey Omen	MSSelathiel Archives	100																																									
-334	Zerae's Blessing	Zerae's Divinity	MSZeraes Divinity	100																																									
-335	Zerae's Refinement	Zerae's Divinity	MSZeraes Divinity	100																																									
-336	Zerae's Vindication	Zerae's Divinity	MSZeraes Divinity	100																																									
-337	Zerae's Redemption	Zerae's Divinity	MSZeraes Divinity	100																																									
-338	Zerae's Holy Wrath	Zerae's Divinity	MSZeraes Divinity	100																																									
-339	Marchosias' Hatred	Marchosias' Essence	MREssence	100																																									
-340	Marchosias' Might	Marchosias' Essence	MREssence	100																																									
-341	Marchosias' Evil Grin	Marchosias' Essence	MREssence	100																																									
-342	Marchosias' Deception	Marchosias' Essence	MREssence	100																																									
-343	Marchosias' Anger	Marchosias' Essence	MREssence	100																																									
-344	Steppe Sleeper	Tundra Walker	MSTundra Walker	100																																									
-345	Ancient Bronze	Tundra Walker	MSTundra Walker	100																																									
-346	Snow Silver	Tundra Walker	MSTundra Walker	100																																									
-347	Grey Ranger	Tundra Walker	MSTundra Walker	100																																									
-348	Vale Hunter	Tundra Walker	MSTundra Walker	100																																									
-349	Lirian Moon	Celestial Orchard	MSOrchard	100																																									
-350	The Trickster	Celestial Orchard	MSOrchard	100																																									
-351	Giyua's Sacrum	Celestial Orchard	MSOrchard	100																																									
-352	The Dragon Grave	Celestial Orchard	MSOrchard	100																																									
-353	Skull of the Prophet	Celestial Orchard	MSOrchard	100																																									
-354	Quantum Bevel	Universal Law	MSUniversalLaw	100																																									
-355	Dead Lens	Universal Law	MSUniversalLaw	100	invbshu																																								
-356	World Line	Universal Law	MSUniversalLaw	100																																									
-357	Hypersurface	Universal Law	MSUniversalLaw	100																																									
-358	Killing Vector	Universal Law	MSUniversalLaw	100	invaxfu																																								
+192	Lone Wolf's Track	Lone Wolf's Path	MSLone Wolf's Path	100																																									
+193	Lone Wolf's Claws	Lone Wolf's Path	MSLone Wolf's Path	100																																									
+194	Lone Wolf's Gaze	Lone Wolf's Path	MSLone Wolf's Path	100																																									
+195	Lone Wolf's Fur	Lone Wolf's Path	MSLone Wolf's Path	100																																									
+196	Lone Wolf's Maul	Lone Wolf's Path	MSLone Wolf's Path	100																																									
+197	Rathma's Chase	Rathma's Empire	MSRathma's Empire	100																																									
+198	Rathma's Trap	Rathma's Empire	MSRathma's Empire	100																																									
+199	Rathma's Death Gaze	Rathma's Empire	MSRathma's Empire	100																																									
+200	Rathma's Skeleton	Rathma's Empire	MSRathma's Empire	100																																									
+201	Rathma's Tyranny	Rathma's Empire	MSRathma's Empire	100																																									
+202	Achilios' Stealth	Achilios' Wake	MSAchilios' Wake	100																																									
+203	Achilios' Knuckledusters	Achilios' Wake	MSAchilios' Wake	100																																									
+204	Achilios' Eagle Eye	Achilios' Wake	MSAchilios' Wake	100																																									
+205	Achilios' Refuge	Achilios' Wake	MSAchilios' Wake	100																																									
+206	Achilios' Sledgehammer	Achilios' Wake	MSAchilios' Wake	100																																									
+207	Heaven In Sight	Satanic Mantra	MSSatanic Mantra	100																																									
+208	Till We Have	Satanic Mantra	MSSatanic Mantra	100																																									
+209	Through Death's Veil	Satanic Mantra	MSSatanic Mantra	100																																									
+210	Lend Me Thy Light	Satanic Mantra	MSSatanic Mantra	100																																									
+211	Archangel Dark Angel	Satanic Mantra	MSSatanic Mantra	100																																									
+212	Cinadide's Bender	Cinadide's Craft	MSCinadide's Craft	100																																									
+213	Cinadide's Anvil	Cinadide's Craft	MSCinadide's Craft	100																																									
+214	Cinadide's Bellows	Cinadide's Craft	MSCinadide's Craft	100																																									
+215	Cinadide's Forge	Cinadide's Craft	MSCinadide's Craft	100																																									
+216	Cinadide's Malus	Cinadide's Craft	MSCinadide's Craft	100																																									
+217	Hadriel's Presence	Hadriel's Lore	MSHadriel's Lore	100																																									
+218	Hadriel's Courage	Hadriel's Lore	MSHadriel's Lore	100																																									
+219	Hadriel's Wings	Hadriel's Lore	MSHadriel's Lore	100																																									
+220	Hadriel's Pure Heart	Hadriel's Lore	MSHadriel's Lore	100																																									
+221	Hadriel's Avenger	Hadriel's Lore	MSHadriel's Lore	100																																									
+222	Malthael's Stride	Malthael's Sanctuary	MSMalthael's Sanctuary	100																																									
+223	Malthael's Ward	Malthael's Sanctuary	MSMalthael's Sanctuary	100																																									
+224	Malthael's Crown	Malthael's Sanctuary	MSMalthael's Sanctuary	100																																									
+225	Malthael's Halo	Malthael's Sanctuary	MSMalthael's Sanctuary	100																																									
+226	Malthael's Wrath	Malthael's Sanctuary	MSMalthael's Sanctuary	100																																									
+227	Imperius' Winged Feet	Imperius' Edict	MSImperius' Edict	100																																									
+228	Imperius' Crusade	Imperius' Edict	MSImperius' Edict	100																																									
+229	Imperius' Aura	Imperius' Edict	MSImperius' Edict	100																																									
+230	Imperius' Radiance	Imperius' Edict	MSImperius' Edict	100																																									
+231	Imperius' Sky Hammer	Imperius' Edict	MSImperius' Edict	100																																									
+232	Zann Esu's Rune Loop	Zann Esu's Secrets	MSZann Esu's Secrets	100																																									
+233	Zann Esu's Mysteries	Zann Esu's Secrets	MSZann Esu's Secrets	100																																									
+234	Zann Esu's Robes	Zann Esu's Secrets	MSZann Esu's Secrets	100																																									
+235	Zann Esu's Binding Circle	Zann Esu's Secrets	MSZann Esu's Secrets	100																																									
+236	Zann Esu's Charm	Zann Esu's Secrets	MSZann Esu's Secrets	100																																									
+237	Elemental Trance	Elemental Children	MSEdyrem's Children	100																																									
+238	Elemental Spirit	Elemental Children	MSEdyrem's Children	100																																									
+239	Elemental Clash	Elemental Children	MSEdyrem's Children	100																																									
+240	Elemental Fury	Elemental Children	MSEdyrem's Children	100																																									
+241	Elemental Storm	Elemental Children	MSEdyrem's Children	100																																									
+242	Pentad	Adria's Circle	MSAdria's Circle	100																																									
+243	Tetrad	Adria's Circle	MSAdria's Circle	100																																									
+244	Triad	Adria's Circle	MSAdria's Circle	100																																									
+245	Dyad	Adria's Circle	MSAdria's Circle	100																																									
+246	Monad	Adria's Circle	MSAdria's Circle	100																																									
+247	Emerald Growth	Rainbow Warrior	MSRainbow Warrior2	100																																									
+248	Emerald Sky	Rainbow Warrior	MSRainbow Warrior2	100																																									
+249	Emerald Cloud	Rainbow Warrior	MSRainbow Warrior2	100																																									
+250	Emerald Earth	Rainbow Warrior	MSRainbow Warrior2	100																																									
+251	Emerald Flower	Rainbow Warrior	MSRainbow Warrior2	100																																									
+252	Scosglen's Legends	Last King of Scosglen	MSLastKing	100																																									
+253	Scosglen's History	Last King of Scosglen	MSLastKing	100																																									
+254	Scosglen's Tales	Last King of Scosglen	MSLastKing	100																																									
+255	Scosglen's Fables	Last King of Scosglen	MSLastKing	100																																									
+256	Scosglen's Myths	Last King of Scosglen	MSLastKing	100																																									
+257	Tower Push	The Towerlord	MSTowerlord	100																																									
+258	Tower Denial	The Towerlord	MSTowerlord	100																																									
+259	Tower Wall	The Towerlord	MSTowerlord	100																																									
+260	Tower Defense	The Towerlord	MSTowerlord	100																																									
+261	Tower Rush	The Towerlord	MSTowerlord	100																																									
+262	Warmage's Wake	The Warmage	MSWarmage2	100																																									
+263	Warmage's Conjuration	The Warmage	MSWarmage2	100																																									
+264	Warmage's Breath	The Warmage	MSWarmage2	100																																									
+265	Warmage's Flameshroud	The Warmage	MSWarmage2	100																																									
+266	Warmage's Fireblade	The Warmage	MSWarmage2	100																																									
+267	Charge of the Goddess	The Mysteries	MSThe Mysteries	100																																									
+268	Sacred Circle	The Mysteries	MSThe Mysteries	100																																									
+269	Pentacle	The Mysteries	MSThe Mysteries	100																																									
+270	Cauldron	The Mysteries	MSThe Mysteries	100																																									
+271	Witchblade	The Mysteries	MSThe Mysteries	100																																									
+272	Apeshoot	Testament of the Apes	MSTestament of the Apes	100																																									
+273	Apeskin	Testament of the Apes	MSTestament of the Apes	100																																									
+274	Apeskull	Testament of the Apes	MSTestament of the Apes	100																																									
+275	Apehand	Testament of the Apes	MSTestament of the Apes	100																																									
+276	Apefoot	Testament of the Apes	MSTestament of the Apes	100																																									
+277	Lazarus' Chasuble	Archbishop Lazarus	Set_Lazbro	100																																									
+278	Lazarus' Surplice Cap	Archbishop Lazarus	Set_Lazbro	100																																									
+279	Lazarus' Votive Lamp	Archbishop Lazarus	Set_Lazbro	100																																									
+280	Ismail's Majesty	Curse of the Zakarum	Set_xaru	100																																									
+281	Wyand's Perfidy	Curse of the Zakarum	Set_xaru	100																																									
+282	Bilefroth Skin	Henchmen Trophies	Set_PewPew	100	set_pewpew1																																								
+283	Blackskull's Horns	Henchmen Trophies	Set_PewPew	100	set_pewpew2																																								
+284	Doomcloud Spine	Henchmen Trophies	Set_PewPew	100	set_pewpew3																																								
+285	Stareye's Claws	Henchmen Trophies	Set_PewPew	100	set_pewpew4																																								
+286	Fangskin Scales	Henchmen Trophies	Set_PewPew	100	set_pewpew5																																								
+287	Lazarus' Lamen	Archbishop Lazarus	Set_Lazbro	100																																									
+288	Maffer's Frenzy	Curse of the Zakarum	Set_xaru	100																																									
+289	Bremm's Retribution	Curse of the Zakarum	Set_xaru	100																																									
+290	Horazon's Guard	Brotherhood of the Vizjerei	Set_labrynth	115	lab_armor																																								
+291	Valthek's Blade	Brotherhood of the Vizjerei	Set_labrynth	115																																									
+292	Nor Tiraj's Safeguard	Brotherhood of the Vizjerei	Set_labrynth	115	lab_shield																																								
+293	Quov Tsin's Crown	Brotherhood of the Vizjerei	Set_labrynth	115	lab_helm																																								
+294	Bartuc's Blood	Brotherhood of the Vizjerei	Set_labrynth	115	lab_belt																																								
+295	Zoltun's Gauntlets	Brotherhood of the Horadrim	Set_labrynth2	115	lab_gloves																																								
+296	Radament's Greaves	Brotherhood of the Horadrim	Set_labrynth2	115	lab_boots																																								
+297	Jered Cain's Diamond	Brotherhood of the Horadrim	Set_labrynth2	115	lab_rn1																																								
+298	Deckard Cain's Gem	Brotherhood of the Horadrim	Set_labrynth2	115	lab_rn2																																								
+299	Tal Rasha's Talisman	Brotherhood of the Horadrim	Set_labrynth2	115	lab_amu																																								
+300	Geleb's Greed	Curse of the Zakarum	Set_xaru	100																																									
+301	Yaerius' Mediation	Yaerius' Grey Omen	MSSelathiel Archives	100																																									
+302	Yaerius' Alembic	Yaerius' Grey Omen	MSSelathiel Archives	100																																									
+303	Yaerius' Untruth	Yaerius' Grey Omen	MSSelathiel Archives	100																																									
+304	Yaerius' Simulacrum	Yaerius' Grey Omen	MSSelathiel Archives	100																																									
+305	Yaerius' Xyston	Yaerius' Grey Omen	MSSelathiel Archives	100																																									
+306	Zerae's Blessing	Zerae's Divinity	MSZeraes Divinity	100																																									
+307	Zerae's Refinement	Zerae's Divinity	MSZeraes Divinity	100																																									
+308	Zerae's Vindication	Zerae's Divinity	MSZeraes Divinity	100																																									
+309	Zerae's Redemption	Zerae's Divinity	MSZeraes Divinity	100																																									
+310	Zerae's Holy Wrath	Zerae's Divinity	MSZeraes Divinity	100																																									
+311	Marchosias' Hatred	Marchosias' Essence	MREssence	100																																									
+312	Marchosias' Might	Marchosias' Essence	MREssence	100																																									
+313	Marchosias' Evil Grin	Marchosias' Essence	MREssence	100																																									
+314	Marchosias' Deception	Marchosias' Essence	MREssence	100																																									
+315	Marchosias' Anger	Marchosias' Essence	MREssence	100																																									
+316	Steppe Sleeper	Tundra Walker	MSTundra Walker	100																																									
+317	Ancient Bronze	Tundra Walker	MSTundra Walker	100																																									
+318	Snow Silver	Tundra Walker	MSTundra Walker	100																																									
+319	Grey Ranger	Tundra Walker	MSTundra Walker	100																																									
+320	Vale Hunter	Tundra Walker	MSTundra Walker	100																																									
+321	Lirian Moon	Celestial Orchard	MSOrchard	100																																									
+322	The Trickster	Celestial Orchard	MSOrchard	100																																									
+323	Giyua's Sacrum	Celestial Orchard	MSOrchard	100																																									
+324	The Dragon Grave	Celestial Orchard	MSOrchard	100																																									
+325	Femur of the Prophet	Celestial Orchard	MSOrchard	100																																									
+326	Quantum Bevel	Universal Law	MSUniversalLaw	100																																									
+327	Dead Lens	Universal Law	MSUniversalLaw	100	invbshu																																								
+328	World Line	Universal Law	MSUniversalLaw	100																																									
+329	Hypersurface	Universal Law	MSUniversalLaw	100																																									
+330	Killing Vector	Universal Law	MSUniversalLaw	100	invaxfu																																								

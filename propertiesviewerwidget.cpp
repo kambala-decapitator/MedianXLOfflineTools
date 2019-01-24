@@ -467,7 +467,7 @@ void PropertiesViewerWidget::removeMysticOrbData(int moCode, PropertiesMultiMap 
     ItemPropertyTxt *propertyTxt = ItemDataBase::Properties()->value(moCode);
     int valueIndex = indexOfPropertyValue(moCode, props);
     if (valueIndex > -1)
-        _item->bitString.remove(valueIndex, propertyTxt->bits + propertyTxt->saveParamBits + Enums::CharacterStats::StatCodeLength);
+        _item->bitString.remove(valueIndex, propertyTxt->bits + propertyTxt->paramBits + Enums::CharacterStats::StatCodeLength);
 
     delete props->take(moCode);
 }
@@ -498,12 +498,12 @@ int PropertiesViewerWidget::indexOfPropertyValue(int id, const PropertiesMultiMa
         if ((idIndex = _item->bitString.indexOf(binaryStringFromNumber(id, false, Enums::CharacterStats::StatCodeLength), idIndex + 1)) == -1)
             return -1;
 
-        int paramIndex = idIndex - property->saveParamBits;
+        int paramIndex = idIndex - property->paramBits;
         valueIndex = paramIndex - bits;
 
         valueInString = _item->bitString.mid(valueIndex, bits).toULongLong(0, 2);
         if (param)
-            paramInString = _item->bitString.mid(paramIndex, property->saveParamBits).toUInt(0, 2);
+            paramInString = _item->bitString.mid(paramIndex, property->paramBits).toUInt(0, 2);
     } while (valueInString != value || paramInString != param);
     return valueIndex;
 }
@@ -548,7 +548,7 @@ void PropertiesViewerWidget::modifyMysticOrbProperty(int id, int decrement, Prop
     }
     else
     {
-        _item->bitString.remove(valueIndex, bitsLength + propertyTxt->saveParamBits + Enums::CharacterStats::StatCodeLength);
+        _item->bitString.remove(valueIndex, bitsLength + propertyTxt->paramBits + Enums::CharacterStats::StatCodeLength);
         props->remove(id, prop);
         delete prop;
     }

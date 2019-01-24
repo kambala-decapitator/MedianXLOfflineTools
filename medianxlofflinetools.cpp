@@ -947,7 +947,7 @@ void MedianXLOfflineTools::resurrect()
         }
 
         // don't allow resurrected characters stay on hardcore
-            convertToSoftcore(true);
+        convertToSoftcore(true);
     }
 }
 
@@ -1959,22 +1959,27 @@ bool MedianXLOfflineTools::processSaveFile()
         charInfo.basicInfo.statsDynamicData.setProperty(statisticMetaEnum.key(i), QVariant());
 
     int count = 0; // to prevent infinite loop if something goes wrong
+    const int maxTries = 50;
     int totalStats = 0;
     bool shouldShowHackWarning = false;
     ReverseBitReader bitReader(statsBitData);
-    for (; count < 20; ++count)
+    for (; count < maxTries; ++count)
     {
         int statCode = bitReader.readNumber(CharacterStats::StatCodeLength);
         if (statCode == CharacterStats::End)
             break;
 
-        int statLength = ItemDataBase::Properties()->value(statCode)->saveBits;
+        ItemPropertyTxt *txtProp = ItemDataBase::Properties()->value(statCode);
+        int statLength = txtProp->bitsSave;
         if (!statLength)
         {
             QString modName("Median XL Sigma");
             showLoadingError(tr("Unknown statistic code found: %1. This is not %2 character.", "second param is mod name").arg(statCode).arg(modName));
             return false;
         }
+
+        if (txtProp->paramBitsSave)
+            bitReader.readNumber(txtProp->paramBitsSave);
 
         qint64 statValue = bitReader.readNumber(statLength);
         if (statCode == CharacterStats::Level && statValue != clvl)
@@ -2003,7 +2008,7 @@ bool MedianXLOfflineTools::processSaveFile()
 
         charInfo.basicInfo.statsDynamicData.setProperty(CharacterStats::statisticNameFromValue(statCode), statValue);
     }
-    if (count == 20)
+    if (count == maxTries)
     {
         showLoadingError(tr("Stats data is corrupted!"));
         return false;
@@ -2593,7 +2598,7 @@ void MedianXLOfflineTools::setStats()
             int j = statCode - Enums::CharacterStats::Life, row = j / 2, col = j % 2;
             ui->statsTableWidget->item(row, col)->setText(QString::number(value));
         }
-        else if (statCode != Enums::CharacterStats::End && statCode != Enums::CharacterStats::Level && statCode != Enums::CharacterStats::Experience)
+        else if (statCode != Enums::CharacterStats::End && statCode != Enums::CharacterStats::Level && statCode != Enums::CharacterStats::Experience && statCode != Enums::CharacterStats::Achievements)
         {
             _lineEditsStatsMap[statCode]->setText(QString::number(value));
         }
@@ -2741,14 +2746,14 @@ QByteArray MedianXLOfflineTools::statisticBytes()
             if (clvl != newClvl) // set new level and experience explicitly
             {
                 addStatisticBits(result, Enums::CharacterStats::Level, Enums::CharacterStats::StatCodeLength);
-                addStatisticBits(result, newClvl, ItemDataBase::Properties()->value(Enums::CharacterStats::Level)->saveBits);
+                addStatisticBits(result, newClvl, ItemDataBase::Properties()->value(Enums::CharacterStats::Level)->bitsSave);
                 charInfo.setValueForStatisitc(newClvl, Enums::CharacterStats::Level);
 
                 quint32 newExp = experienceTable.at(newClvl - 1);
                 if (newExp) // must not be present for level 1 character
                 {
                     addStatisticBits(result, Enums::CharacterStats::Experience, Enums::CharacterStats::StatCodeLength);
-                    addStatisticBits(result, newExp, ItemDataBase::Properties()->value(Enums::CharacterStats::Experience)->saveBits);
+                    addStatisticBits(result, newExp, ItemDataBase::Properties()->value(Enums::CharacterStats::Experience)->bitsSave);
                 }
                 charInfo.setValueForStatisitc(newExp, Enums::CharacterStats::Experience);
 
@@ -2769,7 +2774,7 @@ QByteArray MedianXLOfflineTools::statisticBytes()
         if (value)
         {
             addStatisticBits(result, statCode, Enums::CharacterStats::StatCodeLength);
-            addStatisticBits(result, value, ItemDataBase::Properties()->value(statCode)->saveBits);
+            addStatisticBits(result, value, ItemDataBase::Properties()->value(statCode)->bitsSave);
         }
 
         CharacterInfo::instance().basicInfo.statsDynamicData.setProperty(enumKey, value);

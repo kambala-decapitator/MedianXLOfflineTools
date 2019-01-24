@@ -54,8 +54,8 @@ boot	armo,hlm1		Boots
 qbot	boot,ct1a		Boots (Sacred)
 bow	miss		Bow
 qbow	bow,ct2w		Bow (Sacred)
-bowq	misl		Bow Quiver
-qaqv	qmsl		Bow Quiver (Sacred)
+bowq	misl,riam		Bow Quiver
+qaqv	qmsl,riam		Bow Quiver (Sacred)
 araa	char		Challenge Charm 1
 arab	char		Challenge Charm 2
 arac	char		Challenge Charm 3
@@ -79,8 +79,8 @@ ct1a	sarm,ct1x		Craft Sacred Minor (Armor)
 ct1w	swea,ct1x		Craft Sacred Minor (Weapon)
 xbow	miss		Crossbow
 qxbw	xbow,ct2w		Crossbow (Sacred)
-xboq	misl		Crossbow Quiver
-qcqv	qmsl		Crossbow Quiver (Sacred)
+xboq	misl,riam		Crossbow Quiver
+qcqv	qmsl,riam		Crossbow Quiver (Sacred)
 crow	helm		Crown
 qcrn	qbhe		Crown (Sacred)
 crsd	swor		Crystal Sword
@@ -113,6 +113,7 @@ hpot	poti		Healing Potion
 hlm1	dcht		Helm
 qhlm	helm,ct1a		Helm (Sacred)
 herb	misc		Herb
+horm	hamm		Horadric Malus
 jave	comb,spea		Javelin
 qjvn	jave,ct1w		Javelin (Sacred)
 jewl	sock,dcht	invjw1,invjw2,invjw3,invjw4,invjw5,invjw6	Jewel
@@ -120,12 +121,14 @@ key	misc		Key
 knif	mele,dbox		Knife
 qknf	knif,ct1w		Knife (Sacred)
 lcha	char	invch3,invch6,invch9	Large Charm
+cyc3	cycl	invch3,invch6,invch9	Large Cycle
 mace	blun		Mace
 qmac	mace,ct1w		Mace (Sacred)
 mboq	bowq		Magic Bow Quiv
 mxbq	xboq		Magic Xbow Quiv
 mpot	poti		Mana Potion
 mcha	char	invch2,invch5,invch8	Medium Charm
+cyc2	cycl	invch2,invch5,invch8	Medium Cycle
 kill	misc	invrin1,invrin2,invrin3,invrin4,invrin5	Mega Ring
 mele	weap		Melee Weapon
 misl	misc,myor		Missile
@@ -184,6 +187,7 @@ xxx3	mele		SStaff
 xxx1	mele		SSword
 sarm	ssgl		Sacred Armor
 #bow	bow		Sacred Bow
+ssgl	sign		Sacred Group
 swea	ssgl		Sacred Weapon
 gems	gem		Sapphire
 scep	rod		Scepter
@@ -197,6 +201,7 @@ qshi	shie,ct1a		Shield (Sacred)
 shco	thng		Shrine Container
 gemz	gem		Skull
 scha	char	invch1,invch4,invch7	Small Charm
+cyc1	cycl	invch1,invch4,invch7	Small Cycle
 sock	misc		Socket Filler
 sbox	fbox		Sorc Gift Box
 scrd	mele,sbox		Sorceress Crystal Sword
@@ -233,6 +238,7 @@ qhed	head,ct1a		Voodoo Heads (Sacred)
 wand	rod		Wand
 qwnd	wand,ct1w		Wand (Sacred)
 weap	myor		Weapon
+wrtl	mace		Wirts Leg
 ###2	amul		Yshari Amulet
 ###3	qtor		Yshari Armor
 ###6	qblt		Yshari Belt

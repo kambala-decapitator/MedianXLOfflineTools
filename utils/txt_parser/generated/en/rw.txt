@@ -383,7 +383,7 @@ head						Twisted Mind	r59	r59	r59	r59
 pzhm						Battle Rage	r58	r58	r58	r58			
 ashd						Lightwell	r57	r57	r57	r57			
 stor						Space Dementia	r61	r61	r61	r61	r61	r61	
-tors						\red;Natasha's Legacy\blue;	r98	r98	r98	r98	r98	r98	
+tors						Natasha's Legacy	r98	r98	r98	r98	r98	r98	
 tors						Rebel	r01	r98					
 tors						Lumen Arcana	r06	r98					
 tors						(Median XL - 6 years)\nVictory	r13	r98					
@@ -534,10 +534,4 @@ jave						Raid	r10	r98
 jave						Hastata	r20	r98					
 jave						Haste	r30	r98					
 pspe						Ensi	r12	r98					
-xbow						(Secret)\nSupremacy	r57	r61	r59	r60	r58	r62	
-staf						(Secret)\nThe Creep	r60	r59	r57	r62	r61	r58	
-scyh						(Secret)\nSouthern Trendkill	r58	r62	r61	r59	r57	r60	
-spea						(Secret)\nPeace Sells	r61	r57	r60	r58	r62	r59	
-scep						(Secret)\nBlack Dog	r59	r58	r62	r61	r60	r57	
-tors						(Secret)\nLongview	r62	r60	r58	r57	r59	r61	
 weap	armo					Secret Jewel Bonus!	jew						

@@ -1,352 +1,352 @@
 #index	name
--1	\orange;Серафим
-0	Священник Ратмы
-1	Священник Ратмы
-2	Горящий Труп
-3	Ужас
-4	Зомби
-5	Голодный Труп
-6	Упырь
-7	Утопленник
-8	Разносчик чумы
-9	Огорченный
-10	Порченый
-11	Урод
-12	Обезображенный
-13	Проклятый
-14	Нечистый аорон
-15	Кровавый орел
-16	Черный хищник
-17	Облачный охотник
-18	Падший
-19	Вторженец
-20	Осквернитель
-21	Бич
-22	Бич
-23	Скотина
-24	Йети
-25	Дробилка
-26	Породистый зверь
-27	Зверь гаргантюа
-28	Песчаный рейдер
-29	\orange;Дикий Волк
-30	Вторженец
-31	Язычник
-32	Противник
-33	ПРЕВЕД МЕДВЕД
-34	ПРЕВЕД МЕДВЕД
-35	ПРЕВЕД МЕДВЕД
-36	ПРЕВЕД МЕДВЕД
-37	Призрак
-38	Видение
-39	Призрак
-40	Явление
-41	Темная форма
-42	Темный охотник
-43	Подлый охотник
-44	Темный Охотник
-45	Черный бродяга
-46	Охотник за плотью
-47	Зверь дюн
-48	Скалистый жилец
-49	Охотник Джунглей
-50	Роковая обезьяна
-51	Стражник Храма
-52	Лунный Клан
-53	Ночной Клан
-54	Кровавый Клан
-55	Адский Клан
-56	Клан Смерти
-57	Падший Шаман
-58	Шаман-Захватчик
-59	Шаман-Осквернитель
-60	Шаман Бедствия
-61	Шаман Бедствия
-62	Шипованная Крыса
-63	Шипастый Дьявол
-64	Колючий Зверь
-65	Острый Хребет
-66	Колючка
-67	Песчаный Магот
-68	Скалистый червь
-69	Пожиратель
-70	Гигантская минога
-71	Убийца мира
-72	Могильная гадюка
-73	Когтистая гадюка
-74	Саламандра
-75	Шахтная гадюка
-76	Змеемаг
-77	Песчаный прыгун
-78	Пещерный прятальщик
-79	Осквернитель могил
-80	Древесный прятальщик
-81	Скалистый прятальщик
-82	Охотница
-83	Саблезубый кот
-84	Ночной Тигр
-85	Адская Кошка
-86	Чесотка
-87	Черная саранча
-88	Чумной жук
-89	Адский рой
-90	Навозный солдат
-91	Песочный воин
-92	Скарабей
-93	Стальной скарабей
-94	Костяной скарабей
-95	Сушеный труп
-96	Разлагающийся
-97	Забальзамированный
-98	Хорошо сохранившийся
-99	Труп
-100	Пустозвон
-101	Охранник
-102	Разгадыватель
-103	Античный хорадрим
+-1	Seraph
+0	Rathma Priest
+1	Rathma Priest
+2	Burning Dead
+3	Horror
+4	Zombie
+5	Hungry Dead
+6	Ghoul
+7	Drowned Carcass
+8	Plague Bearer
+9	Afflicted
+10	Tainted
+11	Misshapen
+12	Disfigured
+13	Damned
+14	Foul Crow
+15	Blood Hawk
+16	Black Raptor
+17	Cloud Stalker
+18	Fallen One
+19	Invader
+20	Defiler
+21	Scourge
+22	Scourge
+23	Brute
+24	Yeti
+25	Crusher
+26	Wailing Beast
+27	Gargantuan Beast
+28	Sand Raider
+29	Savage Wolf
+30	Invader
+31	Infidel
+32	Assailant
+33	FLYING POLAR BUFFALO ERROR
+34	FLYING POLAR BUFFALO ERROR
+35	FLYING POLAR BUFFALO ERROR
+36	FLYING POLAR BUFFALO ERROR
+37	Ghost
+38	Wraith
+39	Specter
+40	Apparition
+41	Dark Shape
+42	Dark Hunter
+43	Vile Hunter
+44	Dark Stalker
+45	Black Rogue
+46	Flesh Hunter
+47	Dune Beast
+48	Rock Dweller
+49	Jungle Hunter
+50	Doom Ape
+51	Temple Guard
+52	Moon Clan
+53	Night Clan
+54	Blood Clan
+55	Hell Clan
+56	Death Clan
+57	Fallen Shaman
+58	Invader Shaman
+59	Defiler Shaman
+60	Scourge Shaman
+61	Scourge Shaman
+62	Quill Rat
+63	Spike Fiend
+64	Thorn Beast
+65	Razor Spine
+66	Bush Barb
+67	Sand Maggot
+68	Rock Worm
+69	Devourer
+70	Giant Lamprey
+71	Blood Maggot
+72	Tomb Viper
+73	Claw Viper
+74	Salamander
+75	Pit Viper
+76	Serpent Magus
+77	Sand Leaper
+78	Cave Leaper
+79	Tomb Creeper
+80	Tree Lurker
+81	Cliff Lurker
+82	Huntress
+83	Saber Cat
+84	Night Tiger
+85	Hell Cat
+86	Itchies
+87	Black Locusts
+88	Plague Bugs
+89	Hell Swarm
+90	Dung Soldier
+91	Death Beetle
+92	Scarab
+93	Steel Scarab
+94	Bone Scarab
+95	Dried Corpse
+96	Decayed
+97	Embalmed
+98	Preserved Dead
+99	Cadaver
+100	Hollow One
+101	Guardian
+102	Unraveler
+103	Horadrim Ancient
 104	Разгадыватель
-105	ПРЕВЕД МЕДВЕД
-106	ПРЕВЕД МЕДВЕД
-107	ПРЕВЕД МЕДВЕД
-108	ПРЕВЕД МЕДВЕД
-109	Падальщик
-110	Падальщик - нежить
-111	Адский канюк
-112	Крылатый кошмар
-113	Сосун
-114	Паразит
-115	Кровавый крюк
-116	Кровавое крыло
-117	Сумеречник
-118	Болотный призрак
-119	Горящая душа
-120	Черная душа
-121	Паук
-122	Песчаный рыболов
-123	Ядовитый прядильщик
-124	Огненный паук
-125	Паук - маг
-126	Колючая громадина
-127	Ежевичная громадина
-128	Молотильщик
-129	Шипастый кулак
-130	Повелитель вампиров
-131	Повелитель ночи
-132	Повелитель тьмы
-133	Повелитель крови
-134	Изгнанный
-135	Пустынное крыло
-136	Демон
-137	Мышь мрака
-138	Вор крови
-139	Темный черт
-140	Охотник Джунглей
-141	Древесный Охотник
-142	Дьявол Джунглей
-143	Кровавый Охотник
-144	Убийца
-145	Декард Каин
-146	Гид
-147	Акара
-148	ПРЕВЕД МЕДВЕД
-149	Кашия
-150	ПРЕВЕД МЕДВЕД
-151	ПРЕВЕД МЕДВЕД
-152	ПРЕВЕД МЕДВЕД
-153	Чарси
-154	Варрив
-155	          Андариэль          
-156	ПРЕВЕД МЕДВЕД
-157	ПРЕВЕД МЕДВЕД
-158	ПРЕВЕД МЕДВЕД
-159	Темный Рейнджер
-160	Подлый Лучник
-161	Темный Лучник
-162	Черный Лучник
-163	Лучник Плоти
-164	Темная Копейщица
-165	Подлый Улан
-166	Темный улан
-167	Черный улан
-168	Плотный улан
-169	Скелет-Лучник
-170	Возвращенный Лучник
-171	Костяной Лучник
-172	Пылающий Мертвец-Лучник
-173	Лучник Ужаса
-174	Варрив
-175	Атма
-176	Дрогнан
-177	Фара
-178	ПРЕВЕД МЕДВЕД
-179	Молодой песчаный маггот
-180	Молодой скалистый червь
-181	Молодой пожиратель
-182	Молодая гигантская минога
-183	Молодой убийца мира
-184	ПРЕВЕД МЕДВЕД
-185	Скучающий
-186	Кровавое пузо
+105	FLYING POLAR BUFFALO ERROR
+106	FLYING POLAR BUFFALO ERROR
+107	FLYING POLAR BUFFALO ERROR
+108	FLYING POLAR BUFFALO ERROR
+109	Carrion Bird
+110	Undead Scavenger
+111	Hell Buzzard
+112	Winged Nightmare
+113	Sucker
+114	Feeder
+115	Blood Hook
+116	Blood Wing
+117	Gloam
+118	Swamp Ghost
+119	Burning Soul
+120	Black Soul
+121	Arach
+122	Sand Fisher
+123	Poison Spinner
+124	Flame Spider
+125	Spider Magus
+126	Thorned Hulk
+127	Bramble Hulk
+128	Thrasher
+129	Spikefist
+130	Ghoul Lord
+131	Night Lord
+132	Dark Lord
+133	Blood Lord
+134	The Banished
+135	Desert Wing
+136	Fiend
+137	Gloombat
+138	Blood Diver
+139	Dark Familiar
+140	Jungle Hunter
+141	Tree Hunter
+142	Jungle Devil
+143	Blood Hunter
+144	Slayer
+145	Deckard Cain
+146	Gheed
+147	Akara
+148	FLYING POLAR BUFFALO ERROR
+149	Kashya
+150	FLYING POLAR BUFFALO ERROR
+151	FLYING POLAR BUFFALO ERROR
+152	FLYING POLAR BUFFALO ERROR
+153	Charsi
+154	Warriv
+155	Andariel
+156	FLYING POLAR BUFFALO ERROR
+157	FLYING POLAR BUFFALO ERROR
+158	FLYING POLAR BUFFALO ERROR
+159	Dark Ranger
+160	Vile Archer
+161	Dark Archer
+162	Black Archer
+163	Flesh Archer
+164	Dark Spearwoman
+165	Vile Lancer
+166	Dark Lancer
+167	Black Lancer
+168	Flesh Lancer
+169	Skeleton Archer
+170	Returned Archer
+171	Bone Archer
+172	Burning Dead Archer
+173	Horror Archer
+174	Warriv
+175	Atma
+176	Drognan
+177	Fara
+178	FLYING POLAR BUFFALO ERROR
+179	Sand Maggot Young
+180	Rock Worm Young
+181	Devourer Young
+182	Giant Lamprey Young
+183	Blood Maggot Young
+184	FLYING POLAR BUFFALO ERROR
+185	Blunderbore
+186	Gorebelly
 187	Мучитель
-188	Урдар
-189	Яйцо песчаного маггота
-190	Яйцо скалистого червя
-191	Яйцо пожирателя
-192	Яйцо гигантской миноги
-193	Яйцо убийцы мира
-194	ПРЕВЕД МЕДВЕД
-195	ПРЕВЕД МЕДВЕД
-196	ПРЕВЕД МЕДВЕД
-197	Грейз
-198	Элзикс
-199	Геглаш
-200	Джерин
-201	Лисандер
-202	ПРЕВЕД МЕДВЕД
-203	ПРЕВЕД МЕДВЕД
-204	ПРЕВЕД МЕДВЕД
-205	Гнездо нечистого ворона
-206	Гнездо кровавого орла
-207	Гнездо черного хищника
-208	Гнездо облачного охотника
-209	Мешиф
-210	          Дуриэль          
-211	Человекокрыса - нежить
-212	Идол - нежить
-213	Живодер - нежить
-214	Убийца душ - нежить
-215	\orange;Магинер\gold;
-216	\gold;Печать Мороза
-217	\gold;Печать Ада
-218	\gold;Печать Чародейства
-219	\gold;Печать Камня
-220	\gold;Печать Золота-Серебра
-221	ПРЕВЕД МЕДВЕД
-222	ПРЕВЕД МЕДВЕД
-223	ПРЕВЕД МЕДВЕД
-224	ПРЕВЕД МЕДВЕД
-225	ПРЕВЕД МЕДВЕД
-226	Маггот
+188	Urdar
+189	Sand Maggot Egg
+190	Rock Worm Egg
+191	Devourer Egg
+192	Giant Lamprey Egg
+193	Blood Maggot Egg
+194	FLYING POLAR BUFFALO ERROR
+195	FLYING POLAR BUFFALO ERROR
+196	FLYING POLAR BUFFALO ERROR
+197	Greiz
+198	Elzix
+199	Geglash
+200	Jerhyn
+201	Lysander
+202	FLYING POLAR BUFFALO ERROR
+203	FLYING POLAR BUFFALO ERROR
+204	FLYING POLAR BUFFALO ERROR
+205	Foul Crow Nest
+206	Blood Hawk Nest
+207	Black Raptor Nest
+208	Cloud Stalker Nest
+209	Meshif
+210	Duriel
+211	Undead Rat Man
+212	Undead Fetish
+213	Undead Flayer
+214	Undead Soul Killer
+215	Magineer
+216	Seal of Frost
+217	Seal of Hell
+218	Seal of Wizardry
+219	Seal of Stone
+220	Seal of Electrum
+221	FLYING POLAR BUFFALO ERROR
+222	FLYING POLAR BUFFALO ERROR
+223	FLYING POLAR BUFFALO ERROR
+224	FLYING POLAR BUFFALO ERROR
+225	FLYING POLAR BUFFALO ERROR
+226	Maggot
 227	Саркофаг с Мумией
-228	          Радамент          
-229	ПРЕВЕД МЕДВЕД
-230	ПРЕВЕД МЕДВЕД
-231	ПРЕВЕД МЕДВЕД
-232	ПРЕВЕД МЕДВЕД
-233	Летающий Ятаган
-234	Закарумит
-235	Верящий
-236	Фанатик
-237	Могильщик
-238	Кантор
-239	Хейрофант
-240	Хейрофант
-241	          Мефисто          
-242	          Диабло          
-243	Декард Каин
-244	Декард Каин
-245	Декард Каин
-246	Обитатель болот
-247	Болотное существо
-248	Илистый принц
-249	          Призыватель          
-250	Тираэль
-251	Ашеара
-252	Хратли
-253	Алкор
-254	Ормус
-255	          Изуал          
-256	Халбу
-257	Водный Часовой
-258	Речной Охотник
-259	Стигийский Часовой
-260	Водный Часовой
-261	Речной Охотник
-262	Стигийский Часовой
-263	Мешиф
-264	Декард Каин
-265	Флави
-266	          Кровавый Ворон          
-267	ПРЕВЕД МЕДВЕД
-268	ПРЕВЕД МЕДВЕД
-269	Бродяга - разведчик
-270	ПРЕВЕД МЕДВЕД
-271	ПРЕВЕД МЕДВЕД
-272	Горгулья-ловушка
-273	Возвращенный Маг
-274	Костяной Маг
-275	Маг Горящий Мертвец
-276	Маг Ужаса
-277	Шаман Охотник Джунглей
-278	Шаман Древесный Охотник
-279	Шаман Дьявол Джунглей
-280	Шаман Кровавый Охотник
-281	Шаман Убийца
+228	Radament
+229	FLYING POLAR BUFFALO ERROR
+230	FLYING POLAR BUFFALO ERROR
+231	FLYING POLAR BUFFALO ERROR
+232	FLYING POLAR BUFFALO ERROR
+233	Flying Scimitar
+234	Zakarumite
+235	Faithful
+236	Zealot
+237	Sexton
+238	Cantor
+239	Heirophant
+240	Heirophant
+241	Mephisto
+242	Diablo
+243	Deckard Cain
+244	Deckard Cain
+245	Deckard Cain
+246	Swamp Dweller
+247	Bog Creature
+248	Slime Prince
+249	The Summoner
+250	Tyrael
+251	Asheara
+252	Hratli
+253	Alkor
+254	Ormus
+255	Izual
+256	Halbu
+257	Water Watcher
+258	River Stalker
+259	Stygian Watcher
+260	Water Watcher
+261	River Stalker
+262	Stygian Watcher
+263	Meshif
+264	Deckard Cain
+265	Flavie
+266	Blood Raven
+267	FLYING POLAR BUFFALO ERROR
+268	FLYING POLAR BUFFALO ERROR
+269	Rogue Scout
+270	FLYING POLAR BUFFALO ERROR
+271	FLYING POLAR BUFFALO ERROR
+272	Gargoyle Trap
+273	Returned Mage
+274	Bone Mage
+275	Burning Dead Mage
+276	Horror Mage
+277	Jungle Hunter Shaman
+278	Tree Hunter Shaman
+279	Jungle Devil Shaman
+280	Blood Hunter Shaman
+281	Slayer Shaman
 282	Larva
-283	Королева песчаных магготов
-284	Королева скалистых червей
-285	Королева пожирателей
-286	Королева гигантских миног
-287	Королева убийц мира
-288	Глиняный голем
-289	Кровяной голем
-290	Железный голем
-291	Огненный голем
-292	ПРЕВЕД МЕДВЕД
-293	ПРЕВЕД МЕДВЕД
-294	Ночной Мародер
-295	ПРЕВЕД МЕДВЕД
-296	Наталья
-297	Породитель плоти
-298	Стигийская ведьма
-299	Гротеск
-300	Зверь плоти
-301	Стигийский пес
-302	Гротесковый вирм
-303	Насылатель рока
-304	Ограничитель
-305	Насылатель бури
-306	Толстяк
-307	Некрофил
-308	Демон обжора
-309	Рыцарь Рока
-310	Рыцарь пропасти
-311	Рыцарь забвения
-312	Шипованный медведь
-313	Шипастый гигант
-314	Шипастое животное
-315	Зверь - бритва
-316	Колючий гигант
-317	ПРЕВЕД МЕДВЕД
-318	Попугай (на Мясо)
-319	ПРЕВЕД МЕДВЕД
-320	ПРЕВЕД МЕДВЕД
-321	ПРЕВЕД МЕДВЕД
-322	ПРЕВЕД МЕДВЕД
-323	ПРЕВЕД МЕДВЕД
-324	ПРЕВЕД МЕДВЕД
+283	Sand Maggot Queen
+284	Rock Worm Queen
+285	Devourer Queen
+286	Giant Lamprey Queen
+287	Blood Maggot Queen
+288	Clay Golem
+289	Blood Golem
+290	Iron Golem
+291	Fire Golem
+292	FLYING POLAR BUFFALO ERROR
+293	FLYING POLAR BUFFALO ERROR
+294	Night Marauder
+295	FLYING POLAR BUFFALO ERROR
+296	Natalya
+297	Flesh Spawner
+298	Stygian Hag
+299	Grotesque
+300	Flesh Beast
+301	Stygian Dog
+302	Grotesque Wyrm
+303	Doom Caster
+304	Strangler
+305	Storm Caster
+306	Corpulent
+307	Corpse Spitter
+308	Maw Fiend
+309	Doom Knight
+310	Abyss Knight
+311	Oblivion Knight
+312	Quill Bear
+313	Spike Giant
+314	Thorn Brute
+315	Razor Beast
+316	Barbed Giant
+317	FLYING POLAR BUFFALO ERROR
+318	Parrot (Critter)
+319	FLYING POLAR BUFFALO ERROR
+320	FLYING POLAR BUFFALO ERROR
+321	FLYING POLAR BUFFALO ERROR
+322	FLYING POLAR BUFFALO ERROR
+323	FLYING POLAR BUFFALO ERROR
+324	FLYING POLAR BUFFALO ERROR
 325	Ловушка
 326	Ловушка
 327	Ловушка
 328	Ловушка
 329	Ловушка
-330	Каэлан
-331	ПРЕВЕД МЕДВЕД
-332	          Диабло          
-333	Гнездо сосуна
-334	Гнездо кормильца
-335	Гнездо кровавого крюка
-336	Гнездо кровавого крыла
+330	Kaelan
+331	FLYING POLAR BUFFALO ERROR
+332	Diablo
+333	Sucker Nest
+334	Feeder Nest
+335	Blood Hook Nest
+336	Blood Wing Nest
 337	Guard
-338	ПРЕВЕД МЕДВЕД
-339	Тюрьма Кабраксиса
-340	Тюрьма Кабраксиса
-341	Тюрьма Кабраксиса
-342	Тюрьма Кабраксиса
-343	ПРЕВЕД МЕДВЕД
-344	Член совета
-345	Член совета
-346	Член совета
+338	FLYING POLAR BUFFALO ERROR
+339	Kabraxis' Prison
+340	Kabraxis' Prison
+341	Kabraxis' Prison
+342	Kabraxis' Prison
+343	FLYING POLAR BUFFALO ERROR
+344	Council Member
+345	Council Member
+346	Council Member
 347	Башня
 348	Башня
 349	Башня
@@ -354,210 +354,210 @@
 351	Гидра
 352	Гидра
 353	Ловушка
-354	ПРЕВЕД МЕДВЕД
+354	FLYING POLAR BUFFALO ERROR
 355	Приманка
-356	Валькирия
-357	ПРЕВЕД МЕДВЕД
-358	Железный Волк
-359	Балрог
-360	Лорд шахт
-361	Ядовитый повелитель
-362	Некроскелет
-363	Некромаг
-364	          Гризвольд          
+356	Valkyrie
+357	FLYING POLAR BUFFALO ERROR
+358	Iron Wolf
+359	Balrog
+360	Pit Lord
+361	Venom Lord
+362	Necroskeleton
+363	Necromage
+364	Griswold
 365	Неразрушимая Сфера
-366	Тираэль
-367	Темный странник
+366	Tyrael
+367	Dark Wanderer
 368	Ловушка
-369	ПРЕВЕД МЕДВЕД
-370	Ледяной Шпиль
-371	Огненная башня
-372	Метатель
-373	Копейный кот
-374	Ночной метатель
-375	Адский метатель
-376	ПРЕВЕД МЕДВЕД
-377	ПРЕВЕД МЕДВЕД
-378	Костяной Маг
-379	Костяной Маг
-380	Костяной Маг
-381	Костяной Маг
-382	Маг Горящий Мертвец
-383	Маг Горящий Мертвец
-384	Маг Горящий Мертвец
-385	Маг Горящий Мертвец
-386	Маг Ужаса
-387	Маг Ужаса
-388	Маг Ужаса
-389	Маг Ужаса
-390	Коровий Ад
-391	Цветное Стекло
-392	Цветное Стекло
-393	Копейный кот
-394	Ночной метатель
-395	Охотник Джунглей
-396	Древесный Охотник
-397	Дьявол Джунглей
-398	Кровавый Охотник
-399	Убийца
-400	ПРЕВЕД МЕДВЕД
-401	          Кузнец          
-402	Плененная душа
-403	Плененная душа
-404	Джамелла
-405	          Изуал          
-406	Человекокрыса
-407	Хадриэль
-408	          Оружейник Гефасто          
-410	Поступь Разрушения
-411	Часовой-заряженная стрела
-412	Часовой-молния
-413	Часовой-лезвие
-414	Животное
-415	Адский часовой
-416	Часовой смерти
-417	Воин тени
-418	Мастер тени
-419	Ворон
-420	Дух волка
-421	Адский волк
-422	Дух шипов
-423	Сердце росомахи
-424	Дух Нефалема
-425	Лоза чумы
-426	Цикл жизни
-427	Лоза-существо
-428	Гризли
-429	Орел
-430	Волк
+369	FLYING POLAR BUFFALO ERROR
+370	Glacial Spire
+371	Fire Tower
+372	Slinger
+373	Spear Cat
+374	Night Slinger
+375	Hell Slinger
+376	FLYING POLAR BUFFALO ERROR
+377	FLYING POLAR BUFFALO ERROR
+378	Bone Mage
+379	Bone Mage
+380	Bone Mage
+381	Bone Mage
+382	Burning Dead Mage
+383	Burning Dead Mage
+384	Burning Dead Mage
+385	Burning Dead Mage
+386	Horror Mage
+387	Horror Mage
+388	Horror Mage
+389	Horror Mage
+390	Hell Bovine
+391	Stained Glass Window
+392	Stained Glass Window
+393	Spear Cat
+394	Night Slinger
+395	Jungle Hunter
+396	Tree Hunter
+397	Jungle Devil
+398	Blood Hunter
+399	Slayer
+400	FLYING POLAR BUFFALO ERROR
+401	The Smith
+402	Trapped Soul
+403	Trapped Soul
+404	Jamella
+405	Izual
+406	Rat Man
+407	Hadriel
+408	Hephasto The Armorer
+410	Wake of Fire
+411	Charged Bolt Sentry
+412	Lightning Sentry
+413	Blade Sentinel
+414	Pet
+415	Inferno Sentry
+416	Death Sentry
+417	Shadow Warrior
+418	Shadow Master
+419	Raven
+420	Spirit Wolf
+421	Dire Wolf
+422	Spirit of Barbs
+423	Heart of Wolverine
+424	Nephalem Spirit
+425	Plague Poppy
+426	Cycle of Life
+427	Vine Creature
+428	Grizzly
+429	Eagle
+430	Wolf
 431	Bear
-432	Забаррикадированная дверь
-433	Забаррикадированная дверь
+432	Barricaded Door
+433	Barricaded Door
 434	Дверь Тюрьмы
-435	Забаррикадированная башня
-436	Гнилой ходок
-437	Реанимированная орда
-438	Крадущийся труп
-439	Нечестивый труп
-440	Оскверненный воин
-441	Зверь осады
-442	Дробящий зверь
-443	Несущий кровь
-444	Кровавый носильщик
-445	Демонический конь
-446	Снежный бродяга
-447	Омерзительный
-448	Холодная пена
-449	Мерзлая бездна
-450	Падший волчий наездник
-451	Волчий наездник резчик
-452	Чертовский волчий наездник
-453	Ржавая Ярость
-454	Ржавая Ярость
-455	Ржавая Ярость
-456	Ржавая Ярость
-457	Ржавая Ярость
-458	Ржавая Ярость
-459	Ржавая Ярость
-460	Ржавая Ярость
-461	Порабощенный фанатик
-462	Убийца берсерков
-463	Вепрь, пожравший лед
-464	Вепрь, пожравший огонь
-465	Взбешенное порождение ада
-466	Взбешенное порождение льда
-467	Безумное порождение ада
-468	Безумное порождение льда
-469	Суккуб
-470	Злобная искусительница
-471	Стигийская шлюха
-472	Адская искусительница
-473	Кровавая искусительница
-474	Сирена
-475	Злобная ведьма
-476	Стигийская ярость
-477	Кровавая ведьма
-478	Адская ведьма
-479	Надсмотрщик
-480	Хлестатель
-481	Сюзерен
-482	Кровавый босс
-483	Адский хлыст
-484	Демонический портал
-485	Демонический портал
-486	Демонический портал
-487	Демонический портал
-488	Демонический портал
-489	Демонический портал
-490	Демонический портал
-491	Демонический портал
-492	Демонический черт
-493	Демонический плут
-494	Демонический гремлин
-495	Демонический ловкач
-496	Демонический эльф
-497	Катапульта
-498	Катапульта
-499	Катапульта
-500	Катапульта
-501	Холодный ползун
-502	Холодный террор
-503	Холодный бич
-504	Холодный ужас
-505	Холодный ожог
-506	Владыка луны
-507	Владыка ночи
-508	Кровавый лорд
-509	Владыка ада
-510	Владыка смерти
-511	Ларзук
-512	Аня
-513	Малах
-514	Нихлатак
-515	Куал-Кехк
-516	Катапульта
-517	Катапульта
-518	Катапульта
-519	Катапульта
-520	Декард Каин
-521	Тираэль
-522	Воин
-523	Воин
-524	Препятствие
-525	Препятствие
-526	          Нихлатак          
-527	Аня
-528	Лачуга дьявольского демона
-529	Мучитель смерти
-530	Драчун смерти
-531	Рубака смерти
-532	Берсерк смерти
-533	Бригадир смерти
-534	Пленник варвара
-535	Страж
-536	Страж
+435	Barricaded Tower
+436	Rot Walker
+437	Reanimated Horde
+438	Prowling Dead
+439	Unholy Corpse
+440	Defiled Warrior
+441	Siege Beast
+442	Crush Beast
+443	Blood Bringer
+444	Gore Bearer
+445	Demon Steed
+446	Snow Drifter
+447	Abominable
+448	Chilled Froth
+449	Frozen Abyss
+450	Fallen Wolfrider
+451	Carver Wolfrider
+452	Devilkin Wolfrider
+453	Rust Fury
+454	Rust Fury
+455	Rust Fury
+456	Rust Fury
+457	Rust Fury
+458	Rust Fury
+459	Rust Fury
+460	Rust Fury
+461	Fanatic Enslaved
+462	Berserker Slayer
+463	Consumed Ice Boar
+464	Consumed Fire Boar
+465	Frenzied Hell Spawn
+466	Frenzied Ice Spawn
+467	Insane Hell Spawn
+468	Insane Ice Spawn
+469	Succubus
+470	Vile Temptress
+471	Stygian Harlot
+472	Hell Temptress
+473	Blood Temptress
+474	Siren
+475	Vile Witch
+476	Stygian Fury
+477	Blood Witch
+478	Hell Witch
+479	Overseer
+480	Lasher
+481	Overlord
+482	Blood Boss
+483	Hell Whip
+484	Demon Portal
+485	Demon Portal
+486	Demon Portal
+487	Demon Portal
+488	Demon Portal
+489	Demon Portal
+490	Demon Portal
+491	Demon Portal
+492	Demon Imp
+493	Demon Rascal
+494	Demon Gremlin
+495	Demon Trickster
+496	Demon Sprite
+497	Catapult
+498	Catapult
+499	Catapult
+500	Catapult
+501	Frozen Creeper
+502	Frozen Terror
+503	Frozen Scourge
+504	Frozen Horror
+505	Frozen Scorch
+506	Moon Lord
+507	Night Lord
+508	Blood Lord
+509	Hell Lord
+510	Death Lord
+511	Larzuk
+512	Anya
+513	Malah
+514	Nihlathak
+515	Qual-Kehk
+516	Catapult
+517	Catapult
+518	Catapult
+519	Catapult
+520	Deckard Cain
+521	Tyrael
+522	Combatant
+523	Combatant
+524	Barricade
+525	Barricade
+526	Nihlathak
+527	Anya
+528	Evil Demon Hut
+529	Death Mauler
+530	Death Brawler
+531	Death Slasher
+532	Death Berserker
+533	Death Brigadier
+534	Barbarian Captive
+535	Guard
+536	Guard
 537	Талик Защитник
 538	Мадавк Страж
 539	Корлик Покровитель
-540	          Талик          
-541	          Мадавк          
-542	          Корлик          
-543	Баал
-544	Баал
-545	Баал
-546	Оскверняющий останки
-547	Ужасный осквернитель
-548	Вонючий осквернитель
-549	Тошнотворный осквернитель
-550	Рядовой осквернитель
-551	Червь боли
-552	Червь пыток
-553	Червь агонии
-554	Червь угрозы
-555	Червь страданий
+540	Talic
+541	Madawc
+542	Korlic
+543	Baal
+544	Baal
+545	Baal
+546	Putrid Defiler
+547	Wretched Defiler
+548	Fetid Defiler
+549	Rancid Defiler
+550	Rank Defiler
+551	Pain Worm
+552	Torment Worm
+553	Agony Worm
+554	Menace Worm
+555	Anguish Worm
 556	Bunny
-557	Член совета
-558	Ядовитый повелитель
+557	Council Member
+558	Venom Lord
 559	Баал
 560	Act 5 Hireling 1hs
 561	Act 5 Hireling 2hs
@@ -574,1652 +574,1659 @@
 572	Миньон Разрушения
 573	Миньон Разрушения
 574	Worldstone Effect
-575	Пылающий Мертвец-Лучник
-576	Костяной Лучник
-577	Пылающий Мертвец-Лучник
-578	Возвращенный Лучник
-579	Лучник Ужаса
-580	Огорченный
-581	Порченый
-582	Урод
-583	Обезображенный
-584	Проклятый
-585	Лунный Клан
-586	Ночной Клан
-587	Адский Клан
-588	Кровавый Клан
-589	Клан Смерти
-590	Нечистый аорон
-591	Кровавый орел
-592	Черный хищник
-593	Облачный охотник
-594	Когтистая гадюка
-595	Шахтная гадюка
-596	Саламандра
-597	Могильная гадюка
-598	Змеемаг
-599	Мародер
-600	Язычник
-601	Песчаный рейдер
-602	Вторженец
-603	Противник
-604	Мучитель смерти
-605	Шипованная Крыса
-606	Шипастый Дьявол
-607	Острый Хребет
-608	Падальщик
-609	Колючая громадина
-610	Метатель
-611	Метатель
-612	Метатель
-613	Подлый Лучник
-614	Темный Лучник
-615	Подлый Улан
-616	Темный улан
-617	Черный улан
-618	Скучающий
+575	Burning Dead Archer
+576	Bone Archer
+577	Burning Dead Archer
+578	Returned Archer
+579	Horror Archer
+580	Afflicted
+581	Tainted
+582	Misshapen
+583	Disfigured
+584	Damned
+585	Moon Clan
+586	Night Clan
+587	Hell Clan
+588	Blood Clan
+589	Death Clan
+590	Foul Crow
+591	Blood Hawk
+592	Black Raptor
+593	Cloud Stalker
+594	Claw Viper
+595	Pit Viper
+596	Salamander
+597	Tomb Viper
+598	Serpent Magus
+599	Marauder
+600	Infidel
+601	Sand Raider
+602	Invader
+603	Assailant
+604	Death Mauler
+605	Quill Rat
+606	Spike Fiend
+607	Razor Spine
+608	Carrion Bird
+609	Thorned Hulk
+610	Slinger
+611	Slinger
+612	Slinger
+613	Vile Archer
+614	Dark Archer
+615	Vile Lancer
+616	Dark Lancer
+617	Black Lancer
+618	Blunderbore
 619	Мучитель
-620	Возвращенный Маг
-621	Маг Горящий Мертвец
-622	Возвращенный Маг
-623	Маг Ужаса
-624	Костяной Маг
-625	Маг Ужаса
-626	Маг Ужаса
-627	Охотница
-628	Саблезубый кот
-629	Пещерный прятальщик
-630	Осквернитель могил
-631	Призрак
-632	Видение
-633	Призрак
-634	Суккуб
-635	Адская искусительница
-636	Сирена
-637	Адская ведьма
-638	Злобная ведьма
-639	Сумеречник
-640	Черная душа
-641	Горящая душа
-642	Скульптор
-643	Дьяволоподобный
-644	Темный
-645	Шаман скульптор
-646	Дьявольский шаман
-647	Темный шаман
-648	Костяной Воин
-649	Вернувшийся
-650	Мышь мрака
-651	Демон
-652	Владыка луны
-653	Владыка ада
-654	Скарабей
-655	Стальной скарабей
-656	Живодер
-657	Стигийская кукла
-658	Убийца душ
-659	Живодер
-660	Стигийская кукла
-661	Убийца душ
-662	Живодер - шаман
-663	Стигийская кукла - шаман
-664	Шаман - убийца душ
-665	Стражник Храма
-666	Стражник Храма
-667	Охранник
-668	Разгадыватель
-669	Античный хорадрим
-670	Античный хорадрим
-671	Фанатик
-672	Фанатик
-673	Хейрофант
-674	Хейрофант
-675	Гротеск
-676	Породитель плоти
-677	Гротесковый вирм
-678	Зверь плоти
-679	Убийца мира
-680	Молодой убийца мира
-681	Яйцо убийцы мира
-682	Убийца
-683	Порождение ада
-684	Великое порождение ада
-685	Паук
-686	Балрог
-687	Лорд шахт
-688	Демонический черт
-689	Демонический ловкач
-690	Стигийская кукла - нежить
-691	Убийца душ - нежить
-692	Ограничитель
-693	Насылатель бури
-694	Демон обжора
-695	Повелитель крови
-696	Повелитель вампиров
-697	Повелитель тьмы
-698	Нечестивый труп
-699	Рыцарь Рока
-700	Рыцарь Рока
-701	Рыцарь забвения
-702	Рыцарь забвения
-703	Труп
-704	          Мефисто          
-705	          Диабло          
-706	          Изуал          
+620	Returned Mage
+621	Burning Dead Mage
+622	Returned Mage
+623	Horror Mage
+624	Bone Mage
+625	Horror Mage
+626	Horror Mage
+627	Huntress
+628	Saber Cat
+629	Cave Leaper
+630	Tomb Creeper
+631	Ghost
+632	Wraith
+633	Specter
+634	Succubus
+635	Hell Temptress
+636	Siren
+637	Hell Witch
+638	Vile Witch
+639	Gloam
+640	Black Soul
+641	Burning Soul
+642	Carver
+643	Devilkin
+644	Dark One
+645	Carver Shaman
+646	Devilkin Shaman
+647	Dark Shaman
+648	Bone Warrior
+649	Returned
+650	Gloombat
+651	Fiend
+652	Moon Lord
+653	Hell Lord
+654	Scarab
+655	Steel Scarab
+656	Flayer
+657	Stygian Doll
+658	Soul Killer
+659	Flayer
+660	Stygian Doll
+661	Soul Killer
+662	Flayer Shaman
+663	Stygian Doll Shaman
+664	Soul Killer Shaman
+665	Temple Guard
+666	Temple Guard
+667	Guardian
+668	Unraveler
+669	Horadrim Ancient
+670	Horadrim Ancient
+671	Zealot
+672	Zealot
+673	Heirophant
+674	Heirophant
+675	Grotesque
+676	Flesh Spawner
+677	Grotesque Wyrm
+678	Flesh Beast
+679	Blood Maggot
+680	Blood Maggot Young
+681	Blood Maggot Egg
+682	Slayer
+683	Hell Spawn
+684	Greater Hell Spawn
+685	Arach
+686	Balrog
+687	Pit Lord
+688	Demon Imp
+689	Demon Trickster
+690	Undead Stygian Doll
+691	Undead Soul Killer
+692	Strangler
+693	Storm Caster
+694	Maw Fiend
+695	Blood Lord
+696	Ghoul Lord
+697	Dark Lord
+698	Unholy Corpse
+699	Doom Knight
+700	Doom Knight
+701	Oblivion Knight
+702	Oblivion Knight
+703	Cadaver
+704	Mephisto
+705	Diablo
+706	Izual
 707	Pandora
-708	          Дуриэль          
-709	Баал
-710	Убийца
-712	Кислотный Зверь
-713	Плюющий Ядом
-714	Зверь Ямы
-715	Зверь Хаоса
-716	Брюхо Лавы
-717	Песчаный рейдер
-718	Мародер
-719	Вторженец
-720	Противник
-721	Вторженец
-722	Черепная Обезьяна
-723	Черный Бабуин
-724	Темный Гиббон
-725	Обезьяна-Горгулья
-726	Стражник Храма
-727	Скелет-Лучник
-728	Возвращенный Лучник
-729	Костяной Лучник
-730	Пылающий Мертвец-Лучник
-731	Лучник Ужаса
-732	Балрог
-733	Охранник
-734	Адский Лорд
-735	Лорд Вихря
-736	Громовой Жук
-737	Нечестивый Скарабей
-738	Охранник Гробниц
-739	Изумрудный Скарабей
-740	Алмазный Жук
-741	Рыскающая Жрица
-742	Пустынная Жрица
-743	Кошачья Жрица
-744	Жрица Лакуни
-745	Плюющий Смертью
-746	Пожиратель
-747	Могильщик
-748	Лягушка-Бык
-749	Кислотный Принц
-750	Ледяной Принц
-751	Зомби
-752	Голодный Труп
-753	Джинн
-754	Призрачный Зомби
-755	Сажатель-на-кол
-756	Ассамит
-757	Носферату
-758	Вентру
-759	Кровавый Маркиз
-760	Скелет
-761	Вернувшийся
-762	Костяной Воин
-763	Горящий Труп
-764	Ужас
-765	Падший
-766	Вторженец
-767	Осквернитель
-768	Бич
-769	Разрушитель
-770	Падший Шаман
-771	Шаман-Захватчик
-772	Шаман-Осквернитель
-773	Шаман Бедствия
-774	Шаман-Разрушитель
-775	Падший Воин
-776	Падший Герой
-777	Рыцарь Войны
-778	Рыцарь Чумы
-779	Рыцарь Голода
-780	Охотник Джунглей
-781	Древесный Охотник
-782	Дьявол Джунглей
-783	Кровавый Охотник
-784	Убийца
-785	Охотник Джунглей
-786	Древесный Охотник
-787	Дьявол Джунглей
-788	Кровавый Охотник
-789	Убийца
-790	Воин-Горгулья
-791	Защитник Горы
-792	Защитник Вершины
-793	Каменный Воин
-794	Гранитный Король
-795	Спрятанный
-796	Фата Моргана
-797	Сталкер
-798	Банши
-799	Злой Дух
-800	Комар Смерти
-801	Кровавое Жало
-802	Высасывающий Душу
-803	Острое Жало
-804	Клан Камня
-805	Клан Ночи
-806	Клан Плоти
-807	Клан Огня
-808	Клан Смерти
-809	Клан Камня
-810	Клан Ночи
-811	Клан Плоти
-812	Клан Огня
-813	Клан Смерти
-814	Рыскающий
-815	Пустынная Кошка
-816	Кошачья Ведьма
-817	Солдат Лакуни
-818	Ледяной Лорд
-819	Хрустальный Лорд
-820	Сапфировый Лорд
-821	Покровитель
-822	Саскуотч
-823	Бронзовый Титан
-824	Золотой Титан
-825	Серебряный Титан
-826	Мерзость
-827	Проклятая Душа
-828	Испорченная Душа
-829	Извращенная Душа
-830	Осужденная Душа
-831	Рыскающий
-832	Пустынная Кошка
-833	Кошачья Ведьма
-834	Солдат Лакуни
-835	Минотавр
-836	Роковой Страж
-837	Стальной Лорд
-838	Кровавый Рыцарь
-839	Обсидиановый Лорд
-840	Красный Шторм
-841	Штормовой Всадник
-842	Лорд Шторма
-843	Лорд Вихря
-844	Солнечный Тигр
-845	Лунная Пантера
-846	Крыса Убийца
-847	Шипастый Дьявол
-848	Крыса Джунглей
-849	Шипованный Ужас
-850	Темная Плутовка
-851	Темная Охотница
-852	Ассассин
-853	Кровавая Плутовка
-854	Вампирша
-855	Темная Плутовка
-856	Темная Охотница
-857	Охотница за Плотью
-858	Кровавая Плутовка
-859	Вампирша
-860	Темная Плутовка
-861	Темная Охотница
-862	Охотница за Плотью
-863	Кровавая Плутовка
-864	Вампирша
-865	Костяной Маг
-866	Костяной Маг
-867	Костяной Колдун
-868	Маг Горящий Мертвец
-869	Горящий Мертвый Маг
-870	Пылающий Мертвец-Колдун
-871	Маг Ужаса
-872	Ужасный Маг
-873	Ужасный Колдун
-874	Тарантул
-875	Песчаный Дьявол
-876	Прядильщик Пламени
-877	Паук Души
-878	Заклинатель Хаоса
-879	Душедер
-880	Инкарнация
-881	Суккуб
-882	Сирена
-883	Адское Отродье
-884	Снежная Ведьма
-885	Сжигатель Души
-886	Доминатор
-887	Священная Жаба
-888	Монстр Маны
-889	Темная Жаба
-890	Демоническая Жаба
-891	Кошмарная Жаба
-892	Ржавый Монстр
-893	Ржавая Клешня
-894	Коррозийный Зверь
-895	Ржавый Ползающий
-896	Коррозийный Кошмар
-897	Немертвый Стервятник
-898	Охранник Оазиса
-899	Разрезатель Костей
-900	Смотритель Смерти
-901	Темный Рыцарь
-902	Рыцарь Ада
-903	Рыцарь Хаоса
-904	Воин Души
-905	Воин Крови
-906	Темный Советник
-907	Темный Магистрат
-908	Темный Каббалист
-909	Темный Древний
-910	Змея Гробницы
-911	Огненный Змей
-912	Золотой Змей
-913	Лазурный Змей
-914	Демон
-915	Мерцание
-916	Мрак
-917	Хранитель
-918	Танцующий Свет
-919	Призрачное Пламя
-920	Черное Пламя
-921	Замученная Душа
-922	Архонт
-923	Кровавый Архонт
-924	Темный Архонт
-925	Сумеречный Архонт
-926	Тамплиер
-927	Кровавый Тамплиер
-928	Темный Тамплиер
-929	Сумеречный Тамплиер
-930	\orange;Огненный Клан\blue;
-931	\orange;Вампирша\blue;
-932	\orange;Фата Моргана\blue;
-933	\orange;Падший\blue;
-934	\orange;Плюющий Ядом\blue;
-935	\orange;Кислотный Принц\blue;
-937	Убийца
-938	Скелет-Лучник
-939	Зомби
-940	Скелет
-941	Падший
-942	Падший Шаман
-943	Стальной Лорд
-944	Кислотный Дьявол
-946	\gold;          Тал Раша          \blue;
-947	\orange;Красная Буря\blue;
-948	\orange;Плюющий Ядом\blue;
-949	\orange;Сумеречный Архонт\blue;
-950	\yellow;Сын Азмодана\blue;
-951	\orange;Лунная Пантера\blue;
-952	\orange;Изголодавшийся Зверь
-953	          Дуриэль          
-954	          Кентрил Дюмон          
-955	\orange;Голиаф\blue;
-956	\orange;Солдат-Корова
-957	\orange;Командир-Корова
-958	\orange;Ниндзя-Корова
-959	\orange;Шаман-Корова
-960	\orange;Призыватель-Корова
-961	\gold;Излучатель Смерти\blue;
-962	\gold;          Азмодан, Повелитель Греха          
-963	Сумеречный Архонт
-964	\gold;          Акарат          \blue;
-965	\orange;Последователь Акарата\blue;
-966	\gold;          Тал Раша          \blue;
-967	\orange;Хорадрический Маг\blue;
-968	\gold;          Король Кот          
-969	          Излучатель Смерти          
-970	\orange;Механик Смерти\blue;
-971	\gold;          Мясник          \blue;
-972	Цыпленок (На Мясо)
-973	\gold;          Король Кот          
-974	\orange;Медвежий Шаман
-975	Тотем Ярости Смерти
-976	Тотем Притока Крови
-978	Стихийный Тотем
-979	Воющий Тотем
-980	Тотем Когтя Мороза
-981	Тотем Сердца Огня
-982	Тотем Притока Маны
-983	Тотем Глаза Бури
-984	Чернотелка
-985	Рампагор
-986	Ламия
-987	Оверлорд
-988	Дух Стража
-989	Дух Защитника
-990	Дух Покровителя
-992	Костяной Маг
-993	Маг Горящий Мертвец
-994	Маг Ужаса
-995	          Инариус          
+708	Duriel
+709	Baal
+710	Slayer
+711	Flesh Beast
+712	Acid Beast
+713	Poison Spitter
+714	Pit Beast
+715	Chaos Beast
+716	Lava Maw
+717	Sand Raider
+718	Marauder
+719	Invader
+720	Assailant
+721	Intruder
+722	Skull Ape
+723	Black Baboon
+724	Dark Gibbon
+725	Gargoyle Ape
+726	Temple Guard
+727	Skeleton Archer
+728	Returned Archer
+729	Bone Archer
+730	Burning Dead Archer
+731	Horror Archer
+732	Balrog
+733	Guardian
+734	Infernal Lord
+735	Vortex Lord
+736	Thunder Beetle
+737	Unholy Scarab
+738	Tomb Guardian
+739	Emerald Scarab
+740	Diamond Beetle
+741	Prowler Priestess
+742	Desert Priestess
+743	Feline Priestess
+744	Lacuni Priestess
+745	Death Spitter
+746	Devourer
+747	Gravedigger
+748	Bullfrog
+749	Acid Prince
+750	Ice Prince
+751	Zombie
+752	Hungry Dead
+753	Genie
+754	Ghost Zombie
+755	Impaler
+756	Assamite
+757	Nosferatu
+758	Ventrue
+759	Blood Marquis
+760	Skeleton
+761	Returned
+762	Bone Warrior
+763	Burning Dead
+764	Horror
+765	Fallen One
+766	Invader
+767	Defiler
+768	Scourge
+769	Destroyer
+770	Fallen Shaman
+771	Invader Shaman
+772	Defiler Shaman
+773	Scourge Shaman
+774	Destroyer Shaman
+775	Fallen Warrior
+776	Fallen Hero
+777	Knight of War
+778	Knight of Pestilence
+779	Knight of Famine
+780	Jungle Hunter
+781	Tree Hunter
+782	Jungle Devil
+783	Blood Hunter
+784	Slayer
+785	Jungle Hunter
+786	Tree Hunter
+787	Jungle Devil
+788	Blood Hunter
+789	Slayer
+790	Gargoyle Warrior
+791	Mountain Defender
+792	Summit Guardian
+793	Stone Warrior
+794	Granite King
+795	Hidden One
+796	Fata Morgana
+797	Stalker
+798	Banshee
+799	Evil Spirit
+800	Death Gnat
+801	Blood Stinger
+802	Soul Sucker
+803	Razor Sting
+804	Stone Clan
+805	Night Clan
+806	Flesh Clan
+807	Fire Clan
+808	Death Clan
+809	Stone Clan
+810	Night Clan
+811	Flesh Clan
+812	Fire Clan
+813	Death Clan
+814	Prowler
+815	Desert Cat
+816	Feline Witch
+817	Lacuni Soldier
+818	Frozen Lord
+819	Crystal Lord
+820	Sapphire Lord
+821	Protector
+822	Sasquatch
+823	Bronze Titan
+824	Gold Titan
+825	Silver Titan
+826	Abomination
+827	Cursed Soul
+828	Tainted Soul
+829	Twisted Soul
+830	Damned Soul
+831	Prowler
+832	Desert Cat
+833	Feline Witch
+834	Lacuni Soldier
+835	Minotaur
+836	Doom Guard
+837	Steel Lord
+838	Blood Knight
+839	Obsidian Lord
+840	Red Storm
+841	Storm Rider
+842	Storm Lord
+843	Maelstrom Lord
+844	Sun Tiger
+845	Moon Panther
+846	Kill Rat
+847	Spike Fiend
+848	Jungle Rat
+849	Spiked Terror
+850	Dark Rogue
+851	Dark Huntress
+852	Ассасин
+853	Blood Rogue
+854	Vampiress
+855	Dark Rogue
+856	Dark Huntress
+857	Flesh Huntress
+858	Blood Rogue
+859	Vampiress
+860	Dark Rogue
+861	Dark Huntress
+862	Flesh Huntress
+863	Blood Rogue
+864	Vampiress
+865	Bone Mage
+866	Bone Warlock
+867	Bone Sorcerer
+868	Burning Dead Mage
+869	Burning Dead Warlock
+870	Burning Dead Sorcerer
+871	Horror Mage
+872	Horror Warlock
+873	Horror Sorcerer
+874	Tarantula
+875	Sand Devil
+876	Flame Weaver
+877	Soul Spider
+878	Chaos Caster
+879	Soul Flayer
+880	Incarnation
+881	Succubus
+882	Siren
+883	Hellspawn
+884	Snow Witch
+885	Soul Burner
+886	Dominator
+887	Arcane Toad
+888	Mana Monster
+889	Dark Toad
+890	Demonic Toad
+891	Terror Toad
+892	Rust Monster
+893	Rust Claw
+894	Corrosive Beast
+895	Rust Creeper
+896	Corrosive Terror
+897	Undead Vulture
+898	Oasis Guard
+899	Bone Gasher
+900	Death Watcher
+901	Dark Knight
+902	Hell Knight
+903	Chaos Knight
+904	Soul Warrior
+905	Blood Warrior
+906	Dark Counselor
+907	Dark Magistrate
+908	Dark Cabalist
+909	Dark Ancient
+910	Tomb Snake
+911	Fire Drake
+912	Gold Viper
+913	Azure Drake
+914	Fiend
+915	Blink
+916	Gloom
+917	Familiar
+918	Dancing Light
+919	Ghost Flame
+920	Black Flame
+921	Tortured Soul
+922	Archon
+923	Crimson Archon
+924	Dark Archon
+925	Twilight Archon
+926	Templar
+927	Crimson Templar
+928	Dark Templar
+929	Twilight Templar
+930	Fire Clan
+931	Vampiress
+932	Fata Morgana
+933	Fallen One
+934	Poison Spitter
+935	Amazon Warrior
+936	Amazon Warrior
+937	Slayer
+938	Skeleton Archer
+939	Zombie
+940	Skeleton
+941	Fallen One
+942	Fallen Shaman
+943	Steel Lord
+944	Acid Fiend
+945	Shenk the Overseer
+946	Tal Rasha
+947	Red Storm
+948	Poison Spitter
+949	Twilight Archon
+950	Son of Azmodan
+951	Moon Panther
+952	\orange;Ravening Beast
+953	Duriel
+954	Kentril Dumon
+955	Goliath
+956	Cow Soldier
+957	Cow Honcho
+958	Cow Ninja
+959	Cow Shaman
+960	Cow Summoner
+961	Death Projector
+962	Azmodan, Lord of Sin
+963	Twilight Archon
+964	Akarat
+965	Follower of Akarat
+966	Tal Rasha
+967	Horadric Mage
+968	King Koth
+969	Death Projector
+970	Death's Mechanic
+971	The Butcher
+972	Chicken (Critter)
+973	King Koth
+974	Bear Shaman
+975	Death's Fury Totem
+976	Blood Tide Totem
+978	Elemental Totem
+979	Howling Totem
+980	Frostclaw Totem
+981	Fireheart Totem
+982	Mana Tide Totem
+983	Stormeye Totem
+984	Darkling
+985	Rampagor
+986	Lamia
+987	Overlord
+988	Guardian Spirit
+989	Defender Spirit
+990	Protector Spirit
+991	The Countess
+992	Bone Mage
+993	Burning Dead Mage
+994	Horror Mage
+995	Inarius
 996	Priest Boss
-997	\gold;          Инариус          \blue;
-998	\orange;Монахиня Тщеславия\blue;
-999	\orange;Монахиня Тщеславия\blue;
-1000	\orange;Монахиня Тщеславия\blue;
-1001	          Хрустальный Шар          
-1003	\orange;Оверлорд
-1004	\gold;          Существо Пламени          \blue;
-1005	\gold;          Хранитель Хоразона          \blue;
-1006	\orange;Костяной Лучник
-1007	\orange;Горящий Мертвый Лучник
-1008	\orange;Лучник Ужаса
-1009	\orange;Костяной Воин
-1010	\orange;Горящий Труп
-1011	\orange;Ужас
-1012	\orange;Костяной Маг
-1013	\orange;Горящий Мертвый Маг
-1014	\orange;Маг Ужаса
-1015	\orange;Тотем Теневых Врат
-1016	\orange;Убитая Душа\blue;
-1017	\orange;Убитая Душа\blue;
-1018	\orange;Убитая Душа\blue;
-1019	\orange;Убитая Душа\blue;
-1020	\orange;Убитая Душа\blue;
-1025	\gold;          Некромант Эннеады          
-1027	Громовой Медведь
-1030	          Малик          
-1031	\gold;          Посланник Малика          
-1032	\gold;          Люцион, Сын Мефисто          
-1034	\orange;Темный Тамплиер
-1036	\orange;Небесный
-1037	\orange;Источник Света\blue;
-1038	\gold;          Аватар Закарума          
-1040	Ледяной Элементаль
-1041	Чемпион Солнца
-1043	\orange;Мать Плоти
-1044	\orange;Демон Плоти
-1045	\orange;Отродье Смерти
-1046	\orange;Ядовитый Демон\blue;
-1048	\orange;Принц Смерти
-1049	\orange;Кровавый Бенгальский Тигр
-1050	\orange;Обсидиановый Рыцарь
-1051	\orange;Жнец
-1052	\orange;Темная Сестра\blue;
-1053	\orange;Монстр Бедствия
-1054	\orange;Лазурный Змей
-1055	\orange;Разъедающая Смерть
-1056	\orange;Замученная Душа\blue;
-1057	\orange;Кровавый Брат\blue;
-1059	\gold;          Лорд Примус          \blue;
-1060	\orange;Кровавый Ползун\blue;
-1068	Неживой Советник
-1069	\gold;          Лорд Элдрик Житан          \blue;
-1070	\orange;Охранник Раккис\blue;
-1071	\orange;Житель\blue;
-1076	\gold;          Джарис Хан, Король Уреха          \gold;
-1080	Падший Воин
-1081	Призрачное Пламя
-1082	Золотой Телец
-1083	\gold;          Сковос, Жрица Карчеус          \blue;
-1084	\gold;          Филиос, Жрица Гефетрус          \blue;
-1085	\gold;          Лисандер, Жрица Зере          \blue;
-1086	\orange;Амазонка
-1088	\orange;Вулканическая Ловушка
-1089	ПРЕВЕД МЕДВЕД
-1090	ПРЕВЕД МЕДВЕД
-1091	ПРЕВЕД МЕДВЕД
-1092	\orange;Некробот\blue;
-1093	\orange;Гарпилиск
-1094	\orange;Неоновый Демон
-1095	\gold;          Альфа          
-1096	\gold;          Бета          
-1097	\gold;          Гамма          
-1098	\gold;          Дельта          
-1099	\gold;          Эпсилон          
-1100	ПРЕВЕД МЕДВЕД
-1101	Посвященный/Аколит
-1102	Мастер тени
-1103	Бич
-1104	\orange;Небесный
-1105	\gold;          Аватар Закарума          
-1107	Сторожевое Древо
-1108	Кровавый Рыцарь
-1109	\gold;          Бартук          
-1110	\orange;Кровавый Голем
-1111	Огненный Элементаль
-1113	Архонт Пустоты
-1114	Взрывающийся Тотем
-1117	Хранитель
-1119	\yellow;Ке-Хеган\blue;
-1120	\yellow;Миротворец\blue;
-1121	\dgrey;Миротворец (Галлюцинация)
-1122	\yellow;Живое Пламя\blue;
-1123	\yellow;Визгун\blue;
-1124	\yellow;Магмовый Змей\blue;
-1125	\yellow;Темный Визжири\blue;
-1126	\yellow;Воин Разума\blue;
-1127	\yellow;Рыцарь Армагеддона\blue;
-1128	\yellow;Призрачный Феникс\blue;
-1129	\yellow;Крушитель Стали\blue;
-1130	\yellow;Темный Горизонт\blue;
-1131	\yellow;Панихида\blue;
-1132	\yellow;Архонт Пустоты\blue;
-1133	\yellow;Матка\blue;
-1134	\yellow;Испорченный Колдун\blue;
-1135	\yellow;Детеныш\blue;
-1136	\yellow;Темный Чемпион\blue;
-1137	\yellow;Темный Чемпион\blue;
-1138	\yellow;Распинатель\blue;
-1139	\yellow;Бессмертный\blue;
-1140	\yellow;Проклятье Хорадримов\blue;
-1141	\yellow;Темный Страж\blue;
-1142	\yellow;Адская Кошка-Жрица\blue;
-1143	\yellow;Адская Кошка\blue;
-1144	\yellow;Адская Кошка\blue;
-1145	\yellow;Бритвошерстый Титан\blue;
-1146	\yellow;Сломленная Душа\blue;
-1147	\yellow;Демон Черного Льда\blue;
-1148	\yellow;Фантом\blue;
-1149	\yellow;Жужжащая Пила\blue;
-1150	\yellow;Эдирем\blue;
-1151	\yellow;Громик\blue;
-1152	\yellow;Штормовой Шаман\blue;
-1153	\yellow;Серебряный Тиран\blue;
-1154	\yellow;Лорд Ядра\blue;
-1155	\yellow;Сын Люциона\blue;
-1156	\yellow;Поджигатель Крови\blue;
-1157	\yellow;Клан Черепа\blue;
-1158	\yellow;Клан Черепа\blue;
-1159	\yellow;Кровавый Принц\blue;
-1160	\yellow;Черная Смерть\blue;
-1161	\yellow;Рыцарь Смерти\blue;
-1162	\yellow;Чумной Мертвый Лучник\blue;
-1163	\yellow;Чумной Труп\blue;
-1164	\yellow;Фетиш-Снайпер\blue;
-1165	\yellow;Фетиш-Охотник\blue;
-1166	\yellow;Аннигилятор\blue;
-1167	\yellow;Ифрит\blue;
-1168	\yellow;Шоковая Обезьяна\blue;
-1169	Надсмотрщик
-1175	Падальщик
-1176	\yellow;Кошмар\blue;
-1177	\yellow;Игольчатый Медведь\blue;
-1178	\yellow;Морозный Хищник\blue;
-1179	\yellow;Костодробилка\blue;
-1180	\yellow;Сгнивший Лучник\blue;
-1181	\yellow;Гниль\blue;
-1182	\yellow;Завывающий\blue;
-1183	\yellow;Шокирующее Жало\blue;
-1184	\yellow;Выкованный Шаман\blue;
-1185	\yellow;Бродяга Кровавого Огня\blue;
-1186	\yellow;Бродяга Кровавого Огня\blue;
-1187	\yellow;Стальношерстый Титан\blue;
-1188	\yellow;Хозяин Роя\blue;
-1189	\yellow;Сгнивший Маг\blue;
-1190	\yellow;Утренняя Звезда\blue;
-1191	\yellow;Проклятие Гробниц\blue;
-1192	\yellow;Черная Кошка\blue;
-1193	\yellow;Измельчитель\blue;
-1194	\yellow;Ледяной Клан\blue;
-1195	\yellow;Мраморная Лягушка\blue;
-1196	\yellow;Падший Священник\blue;
-1197	\yellow;Несущий Чуму\blue;
-1198	\yellow;Джинн\blue;
-1199	\yellow;Король Обезьян\blue;
-1200	\yellow;Гадюка\blue;
-1201	\yellow;Калечащий\blue;
-1202	\yellow;Рой\blue;
-1203	\yellow;Зубец\blue;
-1204	\yellow;Ледяной Клан\blue;
-1205	          Адская Хитрая Штука          
-1206	\dgrey;Баал (Видение Разрушения)\blue;
-1209	\gold;          Империус          
-1210	\gold;          Малтаэль          \blue;
-1211	\gold;Символ Времени
-1212	\gold;Символ Времени
-1213	Шоковый Зверь
-1214	\orange;Темная Сестра\blue;
-1215	\orange;Обсидиановый Рыцарь
-1216	Жертвенный Агнец
-1217	\orange;Темный Нефалем\blue;
-1218	Ульдиссиан, Король Темных Эдиремов
-1219	\gold;          Империус          
-1220	\gold;          Малтаэль          \blue;
-1221	Эдирем
-1222	\orange;Темный Нефалем\blue;
-1223	\orange;Карательная Турель\blue;
-1224	\orange;Карательная Турель\blue;
-1225	\orange;Служитель Триединства\blue;
-1226	\orange;Морлу\blue;
-1227	\gold;          Лилит          \blue;
-1229	Призрачный Волк
-1230	\yellow;Клан Черепа\blue;
-1231	Утренняя Звезда
-1232	Измельчитель
-1233	Монстр Бедствия
-1234	Тотем Стены Мертвых
-1235	Зомби Мертвой Стены
-1236	\yellow;Кобра\blue;
-1237	\yellow;Соглядатай\blue;
-1238	\yellow;Удар Молнии\blue;
-1239	\yellow;Капканная Крыса\blue;
-1240	\yellow;Заледенелая Душа\blue;
-1241	\yellow;Лавина\blue;
-1242	\yellow;Рогатый Левиафан\blue;
-1243	\yellow;Сын Азмодана\blue;
-1244	\yellow;Повелитель Туч\blue;
-1245	\yellow;Носитель Огня Смерти\blue;
-1246	\gold;          Темнозвездный Дракон          
-1247	\orange;Ловушка Химер
-1248	\orange;Воющий Дух\blue;
-1249	Темнозвездный Дракон
-1250	Падший
-1251	\gold;Империус\blue;
-1252	\yellow;Утрення Звезда\gold;
-1253	\gold;          Куов Цин          \blue;
-1254	Дух Возмездия
-1256	\yellow;Миротворец\blue;
-1257	\yellow;Живое Пламя\blue;
-1258	\yellow;Визгун\blue;
-1259	\yellow;Темный Визжири\blue;
-1260	\yellow;Воин Разума\blue;
-1261	\yellow;Ни Ва\blue;
-1262	\yellow;Ужасающий Гигант\blue;
-1263	\yellow;Крушитель Стали\blue;
-1264	\yellow;Темный Горизонт\blue;
-1265	\yellow;Панихида\blue;
-1266	\yellow;Архонт Пустоты\blue;
-1267	\yellow;Испорченный Колдун\blue;
-1268	\yellow;Высшая Жрица\blue;
-1269	\yellow;Злобная Леди\blue;
-1270	\yellow;Распинатель\blue;
-1271	\yellow;Бессмертный\blue;
-1272	\yellow;Галюциногенный Гриб\blue;
-1273	\yellow;Еретик\blue;
-1274	\yellow;Бритвошерстый Титан\blue;
-1275	\yellow;Ониксовый Рыцарь\blue;
-1276	\yellow;Демон Черного Льда\blue;
-1277	\yellow;Фантом\blue;
-1278	\yellow;Жужжащая Пила\blue;
-1279	\yellow;Эдирем\blue;
-1280	\yellow;Громик\blue;
-1281	\yellow;Василиск\blue;
-1282	\yellow;Древо Жизни\blue;
-1283	\yellow;Лорд Ядра\blue;
-1284	Кристальная Ведьма
-1285	\yellow;Поджигатель Крови\blue;
-1286	\yellow;Кровавый Камень\blue;
-1287	\yellow;Гремлин\blue;
-1288	\yellow;Кровавый Принц\blue;
-1289	\yellow;Черная Смерть\blue;
-1290	\yellow;Призрачный Лорд\blue;
-1291	\yellow;Актер\blue;
-1292	\yellow;Альбула\blue;
-1293	\yellow;Фетиш-Снайпер\blue;
-1294	\yellow;Фетиш-Охотник\blue;
-1295	\yellow;Жижа\blue;
-1296	\yellow;Ифрит\blue;
-1297	\yellow;Шоковая Обезьяна\blue;
-1298	\yellow;Кошмар\blue;
-1299	\yellow;Игольчатый Медведь\blue;
-1300	\yellow;Морозный Хищник\blue;
-1301	\yellow;Костодробилка\blue;
-1302	\yellow;Ульфхедин\blue;
-1303	\yellow;Чумной Мертвый Лучник\blue;
-1304	\yellow;Завывающий\blue;
-1305	\yellow;Шокирующее Жало\blue;
-1306	\yellow;Штормовой Шаман\blue;
-1307	\yellow;Пепельный Тролль\blue;
-1308	\yellow;Бродяга Кровавого Огня\blue;
-1309	\yellow;Альфа Центавр\blue;
-1310	\yellow;Чумной Труп\blue;
-1311	\yellow;Сенобит\blue;
-1312	\yellow;Утренняя Звезда\blue;
-1313	\yellow;Проклятие Гробниц\blue;
-1314	\yellow;Черная Кошка\blue;
-1315	\yellow;Измельчитель\blue;
-1316	\yellow;Гиена Судьбы\blue;
-1317	\yellow;Мраморная Лягушка\blue;
-1318	\yellow;Призрачный Феникс\blue;
-1319	\yellow;Несущий Чуму\blue;
-1320	\yellow;Джинн\blue;
-1321	\yellow;Король Обезьян\blue;
-1322	\yellow;Гадюка\blue;
-1323	\yellow;Калечащий\blue;
-1324	\yellow;Зубец\blue;
-1325	\yellow;Ледяной Клан\blue;
-1326	\yellow;Кобра\blue;
-1327	\yellow;Соглядатай\blue;
-1328	\yellow;Удар Молнии\blue;
-1329	\yellow;Капканная Крыса\blue;
-1330	\yellow;Магмовый Змей\blue;
-1331	\yellow;Аннигилятор\blue;
-1332	\yellow;Выкованный Шаман\blue;
-1333	\yellow;Каменный Молот\blue;
-1334	\yellow;Повелитель Туч\blue;
-1335	\yellow;Носитель Огня Смерти\blue;
-1336	Кислотный Зверь
-1337	Плюющий Ядом
-1338	Зверь Ямы
-1339	Зверь Хаоса
-1340	Брюхо Лавы
-1341	Песчаный рейдер
-1342	Мародер
-1343	Вторженец
-1344	Противник
-1345	Вторженец
-1346	Черепная Обезьяна
-1347	Черный Бабуин
-1348	Темный Гиббон
-1349	Обезьяна-Горгулья
-1350	Стражник Храма
-1351	Скелет-Лучник
-1352	Возвращенный Лучник
-1353	Костяной Лучник
-1354	Пылающий Мертвец-Лучник
-1355	Лучник Ужаса
-1356	Балрог
-1357	Охранник
-1358	Адский Лорд
-1359	Лорд Вихря
-1360	Громовой Жук
-1361	Нечестивый Скарабей
-1362	Охранник Гробниц
-1363	Изумрудный Скарабей
-1364	Алмазный Жук
-1365	Рыскающая Жрица
-1366	Пустынная Жрица
-1367	Кошачья Жрица
-1368	Жрица Лакуни
-1369	Арлекин
-1370	Вредитель
-1371	Тенеплет
-1372	Лягушка-Бык
-1373	Кислотный Принц
-1374	Ледяной Принц
-1375	Зомби
-1376	Голодный Труп
-1377	Джинн
-1378	Призрачный Зомби
-1379	Сажатель-на-кол
-1380	Ассамит
-1381	Носферату
-1382	Вентру
-1383	Кровавый Маркиз
-1384	Скелет
-1385	Вернувшийся
-1386	Костяной Воин
-1387	Горящий Труп
-1388	Ужас
-1389	Падший
-1390	Вторженец
-1391	Осквернитель
-1392	Бич
-1393	Разрушитель
-1394	Падший Шаман
-1395	Шаман-Захватчик
-1396	Шаман-Осквернитель
-1397	Шаман Бедствия
-1398	Шаман-Разрушитель
-1399	Падший Воин
-1400	Падший Герой
-1401	Рыцарь Войны
-1402	Рыцарь Чумы
-1403	Рыцарь Голода
-1404	Охотник Джунглей
-1405	Древесный Охотник
-1406	Дьявол Джунглей
-1407	Кровавый Охотник
-1408	Убийца
-1409	Охотник Джунглей
-1410	Древесный Охотник
-1411	Дьявол Джунглей
-1412	Кровавый Охотник
-1413	Убийца
-1414	Воин-Горгулья
-1415	Защитник Горы
-1416	Защитник Вершины
-1417	Каменный Воин
-1418	Гранитный Король
-1419	Спрятанный
-1420	Фата Моргана
-1421	Сталкер
-1422	Банши
-1423	Злой Дух
-1424	Комар Смерти
-1425	Кровавое Жало
-1426	Высасывающий Душу
-1427	Острое Жало
-1428	Клан Камня
-1429	Клан Ночи
-1430	Клан Плоти
-1431	Клан Огня
-1432	Клан Смерти
-1433	Клан Камня
-1434	Клан Ночи
-1435	Клан Плоти
-1436	Клан Огня
-1437	Клан Смерти
-1438	Рыскающий
-1439	Пустынная Кошка
-1440	Кошачья Ведьма
-1441	Солдат Лакуни
-1442	Ледяной Лорд
-1443	Хрустальный Лорд
-1444	Сапфировый Лорд
-1445	Покровитель
-1446	Саскуотч
-1447	Бронзовый Титан
-1448	Золотой Титан
-1449	Серебряный Титан
-1450	Мерзость
-1451	Проклятая Душа
-1452	Испорченная Душа
-1453	Извращенная Душа
-1454	Осужденная Душа
-1455	Рыскающий
-1456	Пустынная Кошка
-1457	Кошачья Ведьма
-1458	Солдат Лакуни
-1459	Минотавр
-1460	DoomGuard
-1461	Стальной Лорд
-1462	Кровавый Рыцарь
-1463	Обсидиановый Лорд
-1464	Красный Шторм
-1465	Штормовой Всадник
-1466	Лорд Шторма
-1467	Лорд Вихря
-1468	Солнечный Тигр
-1469	Лунная Пантера
-1470	Крыса Убийца
-1471	Шипастый Дьявол
-1472	Крыса Джунглей
-1473	Шипованный Ужас
-1474	Темная Плутовка
-1475	Темная Охотница
-1476	Ассассин
-1477	Кровавая Плутовка
-1478	Вампирша
-1479	Кентавр
-1480	Роковой Охотник
-1481	Куатл
-1482	Наземная Акула
-1483	Радужный Охотник
-1484	Темная Плутовка
-1485	Темная Охотница
-1486	Охотница за Плотью
-1487	Кровавая Плутовка
-1488	Вампирша
-1489	Костяной Маг
-1490	Костяной Маг
-1491	Костяной Колдун
-1492	Маг Горящий Мертвец
-1493	Горящий Мертвый Маг
-1494	Пылающий Мертвец-Колдун
-1495	Маг Ужаса
-1496	Ужасный Маг
-1497	Ужасный Колдун
-1498	Тарантул
-1499	Песчаный Дьявол
-1500	Прядильщик Пламени
-1501	Паук Души
-1502	Трупный Червь
-1503	Черный Рыцарь
-1504	Адепт
-1505	Суккуб
-1506	Сирена
-1507	Адское Отродье
-1508	Снежная Ведьма
-1509	Сжигатель Души
-1510	Доминатор
-1511	Священная Жаба
-1512	Монстр Маны
-1513	Темная Жаба
-1514	Демоническая Жаба
-1515	Кошмарная Жаба
-1516	Ржавый Монстр
-1517	Ржавая Клешня
-1518	Коррозийный Зверь
-1519	Ржавый Ползающий
-1520	Коррозийный Кошмар
-1521	Немертвый Стервятник
-1522	Охранник Оазиса
-1523	Разрезатель Костей
-1524	Смотритель Смерти
-1525	Демон Магмы
-1526	Лорд Лавы
-1527	Адский Камень
-1528	Рыцарь Пропасти
-1529	Лунный Рыцарь
-1530	Темный Советник
-1531	Темный Магистрат
-1532	Темный Каббалист
-1533	Темный Древний
-1534	Змея Гробницы
-1535	Огненный Змей
-1536	Золотой Змей
-1537	Лазурный Змей
-1538	Демон
-1539	Мерцание
-1540	Мрак
-1541	Хранитель
-1542	Танцующий Свет
-1543	Призрачное Пламя
-1544	Черное Пламя
-1545	Замученная Душа
-1546	Архонт
-1547	Кровавый Архонт
-1548	Темный Архонт
-1549	Сумеречный Архонт
-1550	Тамплиер
-1551	Кровавый Тамплиер
-1552	Темный Тамплиер
-1553	Сумеречный Тамплиер
-1554	Черный Рыцарь
-1555	\yellow;Ониксовый Рыцарь\blue;
-1556	Горгулья
-1557	\yellow;Каменный Молот\blue;
-1558	Свирепый Демон Пропасти
-1559	\yellow;Расчленитель\blue;
-1560	Рыцарь Пропасти
-1561	Лунный Рыцарь
-1562	\yellow;Дьявольский Серафим\blue;
-1563	Светящийся Гриб
-1564	\yellow;Галюциногенный Гриб\blue;
-1565	Адепт
-1566	\yellow;Еретик\blue;
-1567	\gold;          Астрога          \blue;
-1568	Статуя Пауков
-1569	Чернотелка
-1570	\yellow;Эдирем\gold;
-1571	\yellow;Сгнивший Лучник\gold;
-1572	Алтарь Вымирания
-1573	\gold;          Бычий Принц Родео          \blue;
-1574	Живой Камень
-1575	\yellow;Древний Гигант\blue;
-1576	Рейдер
-1577	\yellow;Ульфхедин\blue;
-1578	Асатруар
-1579	\yellow;Готи\blue;
-1580	Энт
-1581	\yellow;Древо Жизни\blue;
-1582	Кристальная Ведьма
-1583	\yellow;Высшая Жрица\blue;
-1585	Демон Магмы
-1586	Лорд Лавы
-1587	Адский Камень
-1588	\yellow;Кровавый Камень\blue;
-1589	Падший Наездник на Волке
-1590	\yellow;Наездник-Разрушитель на Волке\blue;
-1591	Приговоренный
-1592	Грешник
-1593	\yellow;Сенобит\blue;
-1594	Крушитель
-1595	\yellow;Ужасающий Гигант\blue;
-1596	\gold;          Белиал, Повелитель Лжи          
-1597	\orange;Камень из Провала\blue;
-1598	\orange;Злобный\blue;
-1599	\orange;Каменная Кувалда\blue;
-1600	\orange;Асатор\blue;
-1601	\orange;Звездный Рыцарь\blue;
-1602	Грешник
-1603	Лавина
-1604	Светящийся Гриб
-1605	Крыска
-1606	\orange;Прихвостень\blue;
-1607	\orange;Убитая Душа\blue;
-1608	\orange;Убитая Душа\blue;
-1609	\orange;Убитая Душа\blue;
-1610	\orange;Убитая Душа\blue;
-1611	\orange;Убитая Душа\blue;
-1612	\gold;          Ассур          
-1613	Образ Закарума
-1614	\orange;Прихвостень\blue;
-1615	\orange;Кровавый Голем
-1616	\orange;Некробот\blue;
-1617	\gold;          Малтаэль          \blue;
-1618	Сирена
-1619	Эдирем
-1620	Образ Закарума
-1621	\orange;Тотем Черной Руки
-1622	\gold;          Архиепископ Лазарь          
-1623	\orange;Фанатка\blue;
-1624	\orange;Магинер
-1625	\orange;AC-2 Заклепочник\blue;
-1626	\orange;AC-1 Молотильщик\blue;
-1627	\orange;RC-2 Тяжелый Дрон\blue;
-1628	\orange;RC-1 Легкий Дрон\blue;
-1629	\gold;          Главная Управляющая Система          \blue;
-1630	\orange;Часовой (Пулемет)\blue;
-1631	\orange;Часовой (Дроны)\blue;
-1632	\orange;Часовой (Дроны)\blue;
-1633	\orange;Часовой (Инфорсеры)
-1634	\orange;Часовой (Инфорсеры)
-1635	\orange;Часовой (Мины)\blue;
-1636	\orange;Часовой (РГЧ)\blue;
-1637	\orange;Часовой (ЭМИ)\blue;
-1638	\orange;Тотем Энергетического Щита
-1639	\orange;Часовой (Пулемет)\blue;
-1640	\orange;Часовой (Пулемет)\blue;
-1641	\orange;Часовой (Магинеры)
-1642	Лепрекон
-1643	Дух Эльфа
-1644	\yellow;Ульфхедин\gold;
-1645	\orange;Асатор\gold;
-1646	Змея Гробницы\gold;
-1647	\orange;Крыска\gold;
-1648	\yellow;Ониксовый Рыцарь\gold;
-1649	Тотем Клыка Дьявола
-1650	Волк-Спутник
-1651	\gold;          Акарат          \blue;
-1652	\red;Яйцо Дракона\blue;
-1653	\red;Яйцо Дракона\blue;
-1654	\red;          Отродье Баала          
-1655	\red;          Отродье Баала          
-1656	\red;Яйцо Дракона\blue;
-1657	\red;Яйцо Дракона\blue;
-1658	\red;          Отродье Баала          
-1659	\red;          Отродье Баала          
-1660	Джинн
-1661	\yellow;Игольчатый Медведь\blue;
-1662	\yellow;Морозный Хищник\blue;
-1663	Приговоренный
-1664	\yellow;Хозяин Роя\blue;
-1665	\yellow;Испорченный Колдун\blue;
-1666	\yellow;Фантом\blue;
-1667	\yellow;Ледяной Клан\blue;
-1668	\yellow;Несущий Чуму\blue;
-1669	\yellow;Носитель Огня Смерти\blue;
-1670	\yellow;Визгун\blue;
-1671	Грешник
-1672	\yellow;Готи\blue;
-1673	Лорд Лавы
-1674	\yellow;Ужасающий Гигант\blue;
-1675	\yellow;Адская Кошка-Жрица\blue;
-1676	          Магда          
-1677	\yellow;Рыцарь Армагеддона\blue;
-1678	\yellow;Удар Молнии\blue;
-1679	\yellow;Призрачный Феникс\blue;
-1680	\yellow;Чумной Мертвый Лучник\blue;
-1681	\yellow;Сын Люциона\blue;
-1682	Бронированный Титан
-1683	\yellow;Демон Черного Льда\blue;
-1684	\yellow;Дьявольский Серафим\blue;
-1685	ПРЕВЕД МЕДВЕД
-1686	\yellow;Капканная Крыса\blue;
-1687	Сторожевое Древо
-1688	Рампагор
-1689	Скелетный Живодер
-1690	Страж Тотемов
-1691	Сокрытый Король
-1692	Сокрытый Ужас
-1693	Страшный Ужас
-1694	\red;Сокрытый Король
-1695	\yellow;Рыцарь Армагеддона\blue;
-1696	Тотем Бомбы Страха
-1697	Рогатый Бог
-1698	\white;Полуночная Фея
-1699	\dgreen;Бурекогтевый Ужас\blue;
-1700	\dgreen;Пустошь\blue;
-1701	\dgreen;Светящаяся Капля\blue;
-1702	\dgreen;Фея-Ведьма\blue;
-1703	\dgreen;Охотник за Смертью\blue;
-1704	потревоженная Ведьма...
-1705	ПРЕВЕД МЕДВЕД
-1706	\dgreen;Бурекогтевый Ужас\blue;
-1707	\dgreen;Пустошь\blue;
-1708	\dgreen;Светящаяся Капля\blue;
-1709	\dgreen;Фея-Ведьма\blue;
-1710	\dgreen;Охотник за Смертью\blue;
-1711	потревоженная Ведьма...
-1712	          Золтун Кулл          
-1713	\orange;Хорадрический Маг\blue;
-1714	\white;Заблудший Путник
-1722	Чернокнижник
-1723	Кентавр
-1724	Роковой Охотник
-1725	\yellow;Альфа Центавр\blue;
-1726	Грозное Крыло
-1727	Костяная Буря
-1728	\yellow;Призрачный Лорд\blue;
-1729	Арлекин
-1730	\yellow;Актер\blue;
-1731	Вредитель
-1732	\yellow;Гремлин\blue;
-1733	Тенеплет
-1734	\yellow;Гиена Судьбы\blue;
-1735	Король Ящериц
-1736	\yellow;Василиск\blue;
-1737	\orange;Коронованный Аспид\blue;
-1738	Свартальф
-1739	\yellow;Злобная Леди\blue;
-1740	\gold;Ересиарх\blue;
-1741	\yellow;Ке-Хеган\blue;
-1742	\yellow;Злобная Дама\blue;
-1743	Чернокнижник
-1744	Хранитель Черной Кошки
-1745	          Диабло          
-1746	Могильщик
-1747	Свинья!
-1748	\yellow;Детонатор
-1749	\yellow;Гипно-жаба
-1750	\orange;Астральный Страж
-1751	\orange;Некросфера
-1752	\orange;Броневик
-1754	\orange;Змея Джунглей
-1755	\orange;Фонарик Архонта
-1756	\orange;Фэйр
-1757	\orange;Бессолнечный Пировальщик
-1758	\orange;Бессолнечный Мутант
-1759	\yellow;Свиноруб\blue;
-1760	\yellow;Свиноруб\blue;
-1761	\yellow;Куча Мала\gold;
-1762	\yellow;Куча Мала\gold;
-1763	\yellow;Гемочума\blue;
-1764	\yellow;Гемочума\blue;
-1765	\yellow;Гемочума\blue;
-1766	\yellow;Гемочума\blue;
-1771	\dgrey;Ужас
-1772	Летунчик
-1773	Пещерный Люциан
-1774	\yellow;Альбула\blue;
-1779	Куатл
-1780	Наземная Акула
-1781	Радужный Охотник
-1782	\yellow;Ни Ва\blue;
-1785	\dgrey;Огненный Жук\blue;
-1786	\yellow;Махасаттва\blue;
-1787	Трупный Червь
-1788	Лизун
-1789	\yellow;Жижа\blue;
-1790	Канализационный Тролль
-1791	Подземельный Тролль
-1792	\yellow;Пепельный Тролль\blue;
-1793	Странствующий Сарандеш
-1794	\yellow;Падший Сарандеш\blue;
-1795	Летунчик
-1796	Летунчик
-1797	\yellow;Лорд Ядра\blue;
-1798	\yellow;Поджигатель Крови\blue;
-1799	\yellow;Мраморная Лягушка\blue;
-1800	\yellow;Капканная Крыса\blue;
-1801	\yellow;Ониксовый Рыцарь\blue;
-1802	\yellow;Каменный Молот\blue;
-1803	\yellow;Дьявольский Серафим\blue;
-1804	\yellow;Еретик\blue;
-1805	\yellow;Ульфхедин\blue;
-1806	\yellow;Сенобит\blue;
-1807	\yellow;Ужасающий Гигант\blue;
-1808	\yellow;Альфа Центавр\blue;
-1809	\yellow;Гиена Судьбы\blue;
-1810	\yellow;Василиск\blue;
-1811	\yellow;Злобная Дама\blue;
-1812	\yellow;Детонатор
-1813	\yellow;Пепельный Тролль\blue;
-1815	\yellow;Махасаттва\blue;
-1816	\yellow;Падший Сарандеш\blue;
-1817	Спящий Пещерный Люциан
-1818	\yellow;Фетиш-Ракетчик\blue;
-1819	\yellow;Серебряная Стрела\blue;
-1821	Размытый
-1822	Размытый
-1823	\orange;Ловушка Химер
-1824	\orange;Элементаль Молнии\blue;
-1825	\orange;Элементаль Огня\blue;
-1826	\orange;Элементаль Льда\blue;
-1827	\orange;Элементаль Земли\blue;
-1828	\orange;Элементаль Магии\blue;
-1829	\gold;Дух Электрума\blue;
-1830	\gold;Дух Ада\blue;
-1831	\gold;Дух Мороза\blue;
-1832	\gold;Дух Камня\blue;
-1833	\gold;Дух Колдовства\blue;
-1834	\gold;          Колонна Черепов          \blue;
-1835	\gold;          Кабраксис, Вор Надежды           \blue;
-1836	Теневая Личность
-1837	\orange;Адская Крыса\blue;
-1838	\dgrey;Призрак Кабраксиса\blue;
-1839	\red;Привет, Дебил\blue;
-1840	\yellow;Темный Страж\blue;
-1842	\gold;Инариус\blue;
-1843	\gold;Бычий Принц Родео\blue;
-1844	\gold;Империус\blue;
-1845	\gold;Малтаэль\blue;
-1846	\gold;Андариэль\blue;
-1847	\gold;Джарис Хан, Король Уреха\blue;
-1848	\gold;Куов Цин\blue;
-1849	\gold;Сковос, Жрица Карчеус\blue;
-1850	\gold;Филиос, Жрица Гефетрус\blue;
-1851	\gold;Лисандер, Жрица Зере\blue;
-1852	\gold;Хранитель Хоразона\blue;
-1853	\gold;Тал Раша\blue;
-1854	\gold;Дуриэль\blue;
-1855	\gold;Лорд Примус\blue;
-1856	\gold;Мефисто\blue;
-1857	\gold;Темнозвездный Дракон\blue;
-1858	\gold;Баал\blue;
-1859	\gold;Малик\blue;
-1860	\gold;Лорд Элдрик Житан\blue;
-1861	\gold;Мясник\blue;
-1862	\gold;Диабло\blue;
-1863	\gold;Излучатель Смерти\blue;
-1866	\gold;          Ульдиссиан          
-1867	\gold;Замаскированный Эдирем
-1868	\gold;Замаскированный Эдирем
-1869	\gold;Замаскированный Эдирем
-1870	\gold;Замаскированный Эдирем
-1871	\gold;Замаскированный Эдирем
-1872	\gold;Замаскированный Эдирем
-1873	\gold;Замаскированный Эдирем
-1874	\gold;Замаскированный Эдирем
-1875	\gold;Замаскированный Эдирем
-1876	\gold;Замаскированный Эдирем
-1877	\gold;Замаскированный Эдирем
-1878	          \gold;Память Ульдиссиана          
-1879	          \gold;Память Ульдиссиана          
-1880	          \gold;Память Ульдиссиана          
-1881	          \gold;Память Ульдиссиана          
-1882	          \gold;Память Ульдиссиана          
-1883	          \gold;Память Ульдиссиана          
-1884	          \gold;Память Ульдиссиана          
-1885	          \gold;Память Ульдиссиана          
-1886	          \gold;Память Ульдиссиана          
-1887	          \gold;Память Ульдиссиана          
-1888	          \gold;Память Ульдиссиана          
-1889	          \gold;Память Ульдиссиана          
-1890	          \gold;Память Ульдиссиана          
-1891	          \gold;Память Ульдиссиана          
-1892	          \gold;Память Ульдиссиана          
-1893	          \gold;Память Ульдиссиана          
-1894	          \gold;Память Ульдиссиана          
-1895	          \gold;Память Ульдиссиана          
-1896	\gold;          Ульдиссиан          
-1897	\yellow;Эдирем\blue;
-1926	\orange;Некробот\gold;
-1929	\orange;Пират Морей-Близнецов
-1962	Империус
-1963	Джарис Хан, Король Уреха
+997	Inarius
+998	Nun of Vanity
+999	Nun of Vanity
+1000	Nun of Vanity
+1001	Crystal Ball
+1002	Ennead Necromancer
+1003	Overlord
+1004	Creature of Flame
+1005	Horazon's Familiar
+1006	Bone Archer
+1007	Burning Dead Archer
+1008	Horror Archer
+1009	Bone Warrior
+1010	Burning Dead
+1011	Horror
+1012	Bone Sorcerer
+1013	Burning Dead Sorcerer
+1014	Horror Sorcerer
+1015	Shadowgate Totem
+1016	Slain Soul
+1017	Slain Soul
+1018	Slain Soul
+1019	Slain Soul
+1020	Slain Soul
+1021	Kabraxis
+1022	Buyard Cholik
+1023	Possessed Cultist
+1024	Possessed Cultist
+1025	Ennead Necromancer
+1026	Kabraxis
+1027	Thunder Bear
+1028	Possessed Cultist
+1031	Malic's Messenger
+1033	BossSunless
+1034	Dark Templar
+1036	Ethereal
+1037	Lightwell
+1038	Zakarum's Avatar
+1040	Ice Elemental
+1041	Champion of the Sun
+1043	Flesh Mother
+1044	Flesh Fiend
+1045	Deathspawn
+1046	Venom Fiend
+1048	Death Prince
+1049	Blood Bengal
+1050	Obsidian Knight
+1051	Reaper
+1052	Darksister
+1053	Bane Monster
+1054	Azure Drake
+1055	Corrosive Death
+1056	Wracked Soul
+1057	Bloodbrother
+1058	Chimaera Trap
+1059	Lord Primus
+1060	Gore Crawler
+1067	Undead Counselor
+1068	Undead Counselor
+1069	Lord Aldric Jitan
+1070	Rakkis Guardsman
+1071	Citizen
+1076	Juris Khan, King of Ureh
+1080	Fallen Warrior
+1081	Ghost Flame
+1082	Golden Calf
+1083	Skovos, Priestess of Karcheus
+1084	Philios, Priestess of Hefaetrus
+1085	Lycander, Priestess of Zerae
+1086	Amazon Warrior
+1088	Volcanic Shrine
+1089	FLYING POLAR BUFFALO ERROR
+1090	FLYING POLAR BUFFALO ERROR
+1091	FLYING POLAR BUFFALO ERROR
+1092	Necrobot
+1093	Harpylisk
+1094	Neon Fiend
+1095	Alpha
+1096	Beta
+1097	Gamma
+1098	Delta
+1099	Epsilon
+1100	FLYING POLAR BUFFALO ERROR
+1101	Initiate/Acolyte
+1102	Shadow Master
+1103	Scourge
+1104	Ethereal
+1105	Zakarum's Avatar
+1107	Treewarden
+1108	Blood Knight
+1109	Bartuc
+1110	Blood Golem
+1111	Fire Elemental
+1113	Void Archon
+1114	Exploding Totem
+1117	Familiar
+1119	Que-Hegan
+1120	Peace Warder
+1121	Peace Warder (Hallucination)
+1122	Living Flame
+1123	Shrieker
+1124	Magma Drake
+1125	Dark Vizjerei
+1126	Mind Warrior
+1127	Armageddon Knight
+1128	Ghost Phoenix
+1129	Steel Crusher
+1130	Dark Horizon
+1131	Dirge
+1132	Void Archon
+1133	Brood Mother
+1134	Corruptor Warlock
+1135	Broodling
+1136	Dark Champion
+1137	Dark Champion
+1138	Cruciator
+1139	Deathless
+1140	Horadrim's Curse
+1141	Darkwarden
+1142	Hellcat Priestess
+1143	Hellcat
+1144	Hellcat
+1145	Razor Fur Titan
+1146	Broken Soul
+1147	Black Ice Demon
+1148	Phantasm
+1149	Buzzsaw
+1150	Edyrem
+1151	Thunderling
+1152	Storm Shaman
+1153	Silver Tyrant
+1154	Core Lord
+1155	Son of Lucion
+1156	Fireblood
+1157	Skull Clan
+1158	Skull Clan
+1159	Blood Prince
+1160	Black Death
+1161	Knight of Death
+1162	Plagued Dead Archer
+1163	Plagued Dead
+1164	Fetish Sniper
+1165	Fetish Hunter
+1166	Annihilator
+1167	Ifrit
+1168	Shock Monkey
+1169	Overseer
+1175	Scavenger
+1176	Nightmare
+1177	Quill Bear
+1178	Frost Raptor
+1179	Bonegrinder
+1180	Corruptor Archer
+1181	Corruptor
+1182	Lament
+1183	Shock Sting
+1184	Warforged Shaman
+1185	Bloodfire Rogue
+1186	Bloodfire Rogue
+1187	Steelfur Titan
+1188	Hivehost
+1189	Corruptor Mage
+1190	Daystar
+1191	Tomb Curse
+1192	Black Cat
+1193	Shredder
+1194	Ice Clan
+1195	Marbled Frog
+1196	Fallen Priest
+1197	Plague Bringer
+1198	Djinn
+1199	Monkey King
+1200	Adder
+1201	Mangler
+1202	Brood Swarm
+1203	Cog
+1204	Ice Clan
+1205	Infernal Contraption
+1206	Baal (Vision of Destruction)
+1208	Tyrael
+1210	Holy Nephalem
+1211	
+1212	Symbol of Time
+1213	Shock Beast
+1214	Darksister
+1215	Obsidian Knight
+1216	Sacrifical Lamb
+1217	Dark Nephalem
+1218	Uldyssian, Dark Edyrem King
+1219	Imperius
+1220	Malthael
+1221	Edyrem
+1222	Dark Nephalem
+1223	Mazi's Eidolon
+1224	Mazi's Eidolon
+1225	Celebrant of the Triune
+1226	Morlu
+1227	Lilith
+1229	Ghost Wolf
+1230	Skull Clan
+1231	Daystar
+1232	Shredder
+1233	Bane Monster
+1234	Dead Wall Totem
+1235	Dead Wall Zombie
+1236	Cobra
+1237	Lurker
+1238	Thunderbolt
+1239	Trap Rat
+1240	Iced Soul
+1241	Avalanche
+1242	Horned Leviathan
+1243	Son of Azmodan
+1244	Cloud Lord
+1245	Deathfire Bearer
+1246	Dark Star Dragon
+1247	Chimaera Trap
+1248	Howling Spirit
+1249	Dark Star Dragon
+1250	Fallen One
+1251	Imperius
+1252	Daystar
+1253	Quov Tsin
+1254	Spirit of Vengeance
+1256	Peace Warder
+1257	Living Flame
+1258	Shrieker
+1259	Dark Vizjerei
+1260	Mind Warrior
+1261	Ni Va
+1262	Grizzly Giant
+1263	Steel Crusher
+1264	Dark Horizon
+1265	Dirge
+1266	Void Archon
+1267	Corruptor Warlock
+1268	High Priestess
+1269	Unseelie Lady
+1270	Cruciator
+1271	Deathless
+1272	Shroom
+1273	Heretic
+1274	Razor Fur Titan
+1275	Onyx Knight
+1276	Black Ice Demon
+1277	Phantasm
+1278	Buzzsaw
+1279	Edyrem
+1280	Thunderling
+1281	Basilisk
+1282	Tree of Life
+1283	Core Lord
+1284	Crystal Witch
+1285	Fireblood
+1286	Blood Stone
+1287	Gremlin
+1288	Blood Prince
+1289	Black Death
+1290	Wraithlord
+1291	Trouper
+1292	Grubber 
+1293	Fetish Sniper
+1294	Fetish Hunter
+1295	Glooper
+1296	Ifrit
+1297	Shock Monkey
+1298	Nightmare
+1299	Quill Bear
+1300	Frost Raptor
+1301	Bonegrinder
+1302	Ulfhedinn
+1303	Plagued Dead Archer
+1304	Lament
+1305	Shock Sting
+1306	Storm Shaman
+1307	Ash Troll
+1308	Bloodfire Rogue
+1309	Alpha Centaur
+1310	Plagued Dead
+1311	Cenobite
+1312	Daystar
+1313	Tomb Curse
+1314	Black Cat
+1315	Shredder
+1316	Wyrdhyena
+1317	Marbled Frog
+1318	Ghost Phoenix
+1319	Plague Bringer
+1320	Djinn
+1321	Monkey King
+1322	Adder
+1323	Mangler
+1324	Cog
+1325	Ice Clan
+1326	Cobra
+1327	Lurker
+1328	Thunderbolt
+1329	Trap Rat
+1330	Magma Drake
+1331	Annihilator
+1332	Warforged Shaman
+1333	Stone Hammer Demon
+1334	Cloud Lord
+1335	Deathfire Bearer
+1336	Acid Beast
+1337	Poison Spitter
+1338	Pit Beast
+1339	Chaos Beast
+1340	Lava Maw
+1341	Sand Raider
+1342	Marauder
+1343	Invader
+1344	Assailant
+1345	Intruder
+1346	Skull Ape
+1347	Black Baboon
+1348	Dark Gibbon
+1349	Gargoyle Ape
+1350	Temple Guard
+1351	Skeleton Archer
+1352	Returned Archer
+1353	Bone Archer
+1354	Burning Dead Archer
+1355	Horror Archer
+1356	Balrog
+1357	Guardian
+1358	Infernal Lord
+1359	Vortex Lord
+1360	Thunder Beetle
+1361	Unholy Scarab
+1362	Tomb Guardian
+1363	Emerald Scarab
+1364	Diamond Beetle
+1365	Prowler Priestess
+1366	Desert Priestess
+1367	Feline Priestess
+1368	Lacuni Priestess
+1369	Harlequin
+1370	Pest
+1371	Tenebral
+1372	Bullfrog
+1373	Acid Prince
+1374	Ice Prince
+1375	Zombie
+1376	Hungry Dead
+1377	Genie
+1378	Ghost Zombie
+1379	Impaler
+1380	Assamite
+1381	Nosferatu
+1382	Ventrue
+1383	Blood Marquis
+1384	Skeleton
+1385	Returned
+1386	Bone Warrior
+1387	Burning Dead
+1388	Horror
+1389	Fallen One
+1390	Invader
+1391	Defiler
+1392	Scourge
+1393	Destroyer
+1394	Fallen Shaman
+1395	Invader Shaman
+1396	Defiler Shaman
+1397	Scourge Shaman
+1398	Destroyer Shaman
+1399	Fallen Warrior
+1400	Fallen Hero
+1401	Knight of War
+1402	Knight of Pestilence
+1403	Knight of Famine
+1404	Jungle Hunter
+1405	Tree Hunter
+1406	Jungle Devil
+1407	Blood Hunter
+1408	Slayer
+1409	Jungle Hunter
+1410	Tree Hunter
+1411	Jungle Devil
+1412	Blood Hunter
+1413	Slayer
+1414	Gargoyle Warrior
+1415	Mountain Defender
+1416	Summit Guardian
+1417	Stone Warrior
+1418	Granite King
+1419	Hidden One
+1420	Fata Morgana
+1421	Stalker
+1422	Banshee
+1423	Evil Spirit
+1424	Death Gnat
+1425	Blood Stinger
+1426	Soul Sucker
+1427	Razor Sting
+1428	Stone Clan
+1429	Night Clan
+1430	Flesh Clan
+1431	Fire Clan
+1432	Death Clan
+1433	Stone Clan
+1434	Night Clan
+1435	Flesh Clan
+1436	Fire Clan
+1437	Death Clan
+1438	Prowler
+1439	Desert Cat
+1440	Feline Witch
+1441	Lacuni Soldier
+1442	Frozen Lord
+1443	Crystal Lord
+1444	Sapphire Lord
+1445	Protector
+1446	Sasquatch
+1447	Bronze Titan
+1448	Gold Titan
+1449	Silver Titan
+1450	Abomination
+1451	Cursed Soul
+1452	Tainted Soul
+1453	Twisted Soul
+1454	Damned Soul
+1455	Prowler
+1456	Desert Cat
+1457	Feline Witch
+1458	Lacuni Soldier
+1459	Minotaur
+1460	Doom Guard
+1461	Steel Lord
+1462	Blood Knight
+1463	Obsidian Lord
+1464	Red Storm
+1465	Storm Rider
+1466	Storm Lord
+1467	Maelstrom Lord
+1468	Sun Tiger
+1469	Moon Panther
+1470	Kill Rat
+1471	Spike Fiend
+1472	Jungle Rat
+1473	Spiked Terror
+1474	Dark Rogue
+1475	Dark Huntress
+1476	Ассасин
+1477	Blood Rogue
+1478	Vampiress
+1479	Centaur
+1480	Doom Hunter
+1481	Couatl
+1482	Landshark
+1483	Rainbow Hunter
+1484	Dark Rogue
+1485	Dark Huntress
+1486	Flesh Huntress
+1487	Blood Rogue
+1488	Vampiress
+1489	Bone Mage
+1490	Bone Warlock
+1491	Bone Sorcerer
+1492	Burning Dead Mage
+1493	Burning Dead Warlock
+1494	Burning Dead Sorcerer
+1495	Horror Mage
+1496	Horror Warlock
+1497	Horror Sorcerer
+1498	Tarantula
+1499	Sand Devil
+1500	Flame Weaver
+1501	Soul Spider
+1502	Corpse Worm
+1503	Black Knight
+1504	Cultist
+1505	Succubus
+1506	Siren
+1507	Hellspawn
+1508	Snow Witch
+1509	Soul Burner
+1510	Dominator
+1511	Arcane Toad
+1512	Mana Monster
+1513	Dark Toad
+1514	Demonic Toad
+1515	Terror Toad
+1516	Rust Monster
+1517	Rust Claw
+1518	Corrosive Beast
+1519	Rust Creeper
+1520	Corrosive Terror
+1521	Undead Vulture
+1522	Oasis Guard
+1523	Bone Gasher
+1524	Death Watcher
+1525	Magma Demon
+1526	Lava Lord
+1527	Hell Stone
+1528	Pit Knight
+1529	Moon Knight
+1530	Dark Counselor
+1531	Dark Magistrate
+1532	Dark Cabalist
+1533	Dark Ancient
+1534	Tomb Snake
+1535	Fire Drake
+1536	Gold Viper
+1537	Azure Drake
+1538	Fiend
+1539	Blink
+1540	Gloom
+1541	Familiar
+1542	Dancing Light
+1543	Ghost Flame
+1544	Black Flame
+1545	Tortured Soul
+1546	Archon
+1547	Crimson Archon
+1548	Dark Archon
+1549	Twilight Archon
+1550	Templar
+1551	Crimson Templar
+1552	Dark Templar
+1553	Twilight Templar
+1554	Black Knight
+1555	Onyx Knight
+1556	Gargoyle
+1557	Stone Hammer Demon
+1558	Fell Pit Fiend
+1559	Mutilator
+1560	Pit Knight
+1561	Moon Knight
+1562	Serafiend
+1563	Glowing Fungus
+1564	Shroom
+1565	Cultist
+1566	Heretic
+1567	Astrogha
+1568	Spider Statue
+1569	Darkling
+1570	Edyrem
+1571	Corruptor Archer
+1572	Shrine of Extinction
+1573	The Cow King
+1574	Living Rock
+1575	Ancient Giant
+1576	Raider
+1577	Ulfhedinn
+1578	Asatruar
+1579	Gothi
+1580	Ent
+1581	Tree of Life
+1582	Crystal Witch
+1583	High Priestess
+1584	Bull Prince
+1585	Magma Demon
+1586	Lava Lord
+1587	Hell Stone
+1588	Blood Stone
+1589	Fallen Wolf Rider
+1590	Destroyer Wolf Rider
+1591	Condemned
+1592	Sinner
+1593	Cenobite
+1594	Crusher
+1595	Grizzly Giant
+1596	Belial, Lord of Lies
+1597	Pit Stone
+1598	Wicked Man
+1599	Rock Maul Demon
+1600	Asatruar
+1601	Star Knight
+1602	Sinner
+1603	Avalanche
+1604	Glowing Fungus
+1605	Ratfink
+1606	Belial, Lord of Lies
+1607	Slain Soul
+1608	Slain Soul
+1609	Slain Soul
+1610	Slain Soul
+1611	Slain Soul
+1612	Assur
+1614	Henchman
+1615	Blood Golem
+1616	Necrobot
+1617	Malthael
+1618	Siren
+1619	Edyrem
+1621	Black Hand Totem
+1622	Archbishop Lazarus
+1623	Groupie
+1624	Magineer
+1625	AC-2 Rivet Bot
+1626	AC-1 Hammer Bot
+1627	RC-2 Heavy Drone
+1628	RC-1 Light Drone
+1629	Master Control System
+1630	Sentinel (Chaingun)
+1631	Sentinel (Drones)
+1632	Sentinel (Drones)
+1633	Sentinel (Enforcers)
+1634	Sentinel (Enforcers)
+1635	Sentinel (Mines)
+1636	Sentinel (MIRV)
+1637	Sentinel (EMP)
+1638	Energy Shield Totem
+1639	Sentinel (Chaingun)
+1640	Sentinel (Chaingun)
+1641	Sentinel (Magineers)
+1642	Leprechaun
+1643	Elfin Spirit
+1644	Ulfhedinn
+1645	Asathorr
+1646	Tomb Snake
+1647	Ratfink
+1648	Onyx Knight
+1649	Devil's Fang Totem
+1650	Wolf Companion
+1651	Akarat
+1652	Dragon's Egg
+1653	Dragon's Egg
+1654	Baalspawn
+1655	Baalspawn
+1656	Dragon's Egg
+1657	Dragon's Egg
+1658	Baalspawn
+1659	Baalspawn
+1660	Jinn
+1661	Quill Bear
+1662	Frost Raptor
+1663	Condemned
+1664	Narthal
+1665	Corruptor Warlock
+1666	Phantasm
+1667	Ice Clan
+1668	Plague Bringer
+1669	Deathfire Bearer
+1670	Shrieker
+1671	Sinner
+1672	Gothi
+1673	Lava Lord
+1674	Grizzly Giant
+1675	Hellcat Priestess
+1676	Maghda
+1678	Thunderbolt
+1679	Ghost Phoenix
+1680	Plagued Dead Archer
+1681	Son of Lucion
+1682	Armored Titan
+1683	Black Ice Demon
+1684	Serafiend
+1685	Deathfire Bearer
+1686	Trap Rat
+1687	Treewarden
+1688	Rampagor
+1689	Skeletal Flayer
+1690	Totembound Guardian
+1691	Veil King
+1692	Veil Terror
+1693	Ghast
+1694	Veil King
+1695	Armageddon Knight
+1696	Fear Bomb Totem
+1697	Horned God
+1698	Midnight Fairy
+1699	Clawstorm Terror
+1700	Landmass
+1701	Glowing Blob
+1702	Fairy Witch
+1703	Bane Hunter
+1704	a startled Witch...
+1705	FLYING POLAR BUFFALO ERROR
+1706	Clawstorm Terror
+1707	Landmass
+1708	Glowing Blob
+1709	Fairy Witch
+1710	Bane Hunter
+1711	a startled Witch...
+1712	Zoltun Kulle
+1713	Horadric Mage
+1715	Thunderbolt
+1716	Broken Soul
+1717	Sinner
+1718	Dark Vizjerei
+1719	Dimensional Gate
+1720	Horadric Mage
+1722	Warlock
+1723	Centaur
+1724	Doom Hunter
+1725	Alpha Centaur
+1726	Dreadwing
+1727	Bonestorm
+1728	Wraithlord
+1729	Harlequin
+1730	Trouper
+1731	Pest
+1732	Gremlin
+1733	Tenebral
+1734	Wyrdhyena
+1735	Lizard King
+1736	Basilisk
+1737	Crowned Serpent
+1738	Svartalf
+1739	Unseelie Lady
+1740	Heresiarch
+1741	Que-Hegan
+1742	Unseelie Dame
+1743	Warlock
+1744	Black Cat Familiar
+1745	Diablo
+1746	Gravedigger
+1747	Pig!
+1748	Detonator
+1749	Hypnotoad
+1750	Astral Guardian
+1751	Necromorb
+1752	Hardliner
+1754	Jungle Snake
+1755	Lantern Archon
+1756	Feyr
+1757	Sunless Reveler
+1758	Sunless Mutant
+1759	Porkchop
+1760	Porkchop
+1761	The Pack
+1762	The Pack
+1763	Hemoplague
+1764	Hemoplague
+1765	Hemoplague
+1766	Hemoplague
+1767	Shadow Self
+1768	Iceclaw the Merciless
+1771	Nightmare
+1772	Flit
+1773	Cave Snapper
+1774	Grubber 
+1775	Grubber 
+1779	Couatl
+1780	Landshark
+1781	Rainbow Hunter
+1782	Ni Va
+1785	Fire Beetle
+1786	Mahasattva
+1787	Corpse Worm
+1788	Slimer
+1789	Glooper
+1790	Sewer Troll
+1791	Dungeon Troll
+1792	Ash Troll
+1793	Wandering Sarandesh
+1794	Fallen Sarandesh
+1795	Flit
+1796	Flit
+1797	Core Lord
+1798	Fireblood
+1799	Marbled Frog
+1800	Trap Rat
+1801	Onyx Knight
+1802	Stone Hammer Demon
+1803	Serafiend
+1804	Heretic
+1805	Ulfhedinn
+1806	Cenobite
+1807	Grizzly Giant
+1808	Alpha Centaur
+1809	Wyrdhyena
+1810	Basilisk
+1811	Unseelie Dame
+1812	Detonator
+1813	Ash Troll
+1815	Mahasattva
+1816	Fallen Sarandesh
+1817	Sleeping Cave Snapper
+1818	Fetish Rocketeer
+1819	Silverbolt
+1821	Blur
+1822	Blur
+1823	Chimaera Trap
+1824	Light Elemental
+1825	Fire Elemental
+1826	Ice Elemental
+1827	Earth Elemental
+1828	Magic Elemental
+1829	Spirit of Electrum
+1830	Spirit of Hell
+1831	Spirit of Frost
+1832	Spirit of Stone
+1833	Spirit of Wizardry
+1834	Pillar of Skulls
+1835	Kabraxis, the Thief of Hope 
+1836	Shadow Self
+1837	Hell Rat
+1838	Ghost of Kabraxis
+1839	Nothing
+1840	Darkwarden
+1842	Inarius
+1843	Bull Prince Rodeo
+1844	Imperius
+1845	Malthael
+1846	Andariel
+1847	Juris Khan, King of Ureh
+1848	Quov Tsin
+1849	Skovos, Priestess of Karcheus
+1850	Philios, Priestess of Hefaetrus
+1851	Lycander, Priestess of Zerae
+1852	Horazon's Familiar
+1853	Tal Rasha
+1854	Duriel
+1855	Lord Primus
+1856	Mephisto
+1857	Dark Star Dragon
+1858	Baal
+1859	Malic
+1860	Lord Aldric Jitan
+1861	The Butcher
+1862	Diablo
+1863	Death Projector
+1878	Uldyssian's Memory
+1879	Uldyssian's Memory
+1880	Uldyssian's Memory
+1881	Uldyssian's Memory
+1882	Uldyssian's Memory
+1883	Uldyssian's Memory
+1884	Uldyssian's Memory
+1885	Uldyssian's Memory
+1886	Uldyssian's Memory
+1887	Uldyssian's Memory
+1888	Uldyssian's Memory
+1889	Uldyssian's Memory
+1890	Uldyssian's Memory
+1891	Uldyssian's Memory
+1892	Uldyssian's Memory
+1893	Uldyssian's Memory
+1894	Uldyssian's Memory
+1895	Uldyssian's Memory
+1896	Uldyssian
+1897	Edyrem
+1926	Necrobot
+1929	Pirate of the Twin Seas
+1962	Imperius
+1963	Juris Khan, King of Ureh
 2021	vv_SandMaggotYoung
-2022	\orange;Яйцо Песчаной Личинки
-2023	\orange;Призрак Песчаной Личинки
-2025	\orange;Призрак Песчаной Личинки
-2026	\orange;Дух Умбару\blue;
-2027	\orange;Дух Умбару\blue;
-2028	\orange;Дух Умбару\blue;
-2029	\orange;Дух Умбару\blue;
-2030	\orange;Дух Умбару\blue;
-2031	\orange;Дух Умбару\blue;
-2032	\gold;          Терул          
-2033	\orange;Голиаф\blue;
-2035	\gold;          Зорун Цин          
-2036	\gold;Ловушка
-2038	\gold;Ловушка
-2042	\white;Заблудший Путник
-2043	потревоженная Ведьма...
-2044	\gold;          Атанна Хан          
-2045	\white;Заблудший Путник
-2048	\gold;          Ксазакс          
-2051	\orange;Небесный Наследник\blue;
-2052	\orange;Энкег\blue;
-2054	\orange;Лесное Пугало\blue;
-2055	\orange;Химера\blue;
-2056	\orange;Слуга Смерти\blue;
-2057	\orange;Грибная Турель\blue;
-2058	\orange;Утонувший Зверь\blue;
-2059	\orange;Гехрелет\blue;
-2060	\orange;Тьма\blue;
-2061	\orange;Гигантские Охотники\blue;
-2062	\gold;          Вальтек, Колдун Визжири          
-2063	\orange;Костяной Голем\blue;
-2064	\orange;Земной Дьявол\blue;
-2065	\orange;Железный Гигант\blue;
-2066	\orange;Каменная Лягушка\blue;
-2067	\orange;Краснорукий Солдат\blue;
-2068	\orange;Стервятник-Гарпия\blue;
-2069	\orange;Хобгоблин\blue;
-2070	\orange;Король Ящеров\blue;
-2071	\orange;Человек-Ящер\blue;
-2072	\orange;Темный Огр\blue;
-2073	\orange;Полярный Червь\blue;
-2074	\orange;Скелетная Тень\blue;
-2075	\orange;Гигантский Скелет\blue;
-2076	\orange;Скелет-Священник\blue;
-2077	\orange;Существо Хаоса\blue;
-2078	\orange;Виверн\blue;
-2079	\orange;Токола\blue;
-2080	\orange;Болотная Рептилия\blue;
-2081	\orange;Подземный Хищник\blue;
-2082	\orange;Проклятый Воин\blue;
-2083	\gold;          Андариэль, Дева Мучений          
-2084	\gold;          Дуриэль, Владыка Боли          
-2085	\gold;          Дул'Мефистос, Владыка Ненависти          
-2086	\gold;          Аль'Диаболос, Владыка Ужаса          
-2087	\gold;          Тор'Баалос, Владыка Разрушения          
-2088	\gold;          Печать Богов          
-2090	\orange;Божий Страж
-2091	\orange;Ловушка Химер
-2092	Тотем Сердца Огня
-2093	\orange;Божий Страж
-2098	\gold;          Арихан, Верховный Жрец Триединства          
-2099	\gold;          Vaca Loca, Король Мяса          
-2100	\orange;Смертучая Мышь
-2101	\gold;Посланник Примуса
-2102	\orange;Ловушка Химер
-2103	\orange;Шпиль Храма
-2104	\orange;Первобытная Глина
-2105	\orange;Архонт-Пронзатель
-2106	\orange;Страж Кракена
-2107	Тифлинг
-2108	Клятва Дракона
-2109	\orange;Пустота (ловушка)
-2110	\orange;Пустота (ловушка)
-2111	\orange;Пустота (ловушка)
-2112	\orange;Пустота (ловушка)
-2113	\gold;          Мендельн, Ученик Ратмы          
-2114	\gold;          Ратма, Последователь Траг'Оула          
-2115	\gold;          Дух Алчности          
-2116	\gold;          Дух Зависти          
-2117	\gold;          Дух Похоти          
-2118	\gold;          Дух Чревоугодия          
-2119	\gold;          Дух Гнева          
-2120	\gold;          Дух Уныния          
-2121	\orange;Пустота (ловушка)
-2122	\orange;Воин-Скелет
-2123	\orange;Воин-Скелет
-2124	\orange;Воин Тени
+2022	Sand Maggot Egg
+2023	Sand Maggot Ghost
+2025	Sand Maggot Ghost
+2026	Umbaru Spirit
+2027	Umbaru Spirit
+2028	Umbaru Spirit
+2029	Umbaru Spirit
+2030	Umbaru Spirit
+2031	Umbaru Spirit
+2032	Terul
+2033	Goliath
+2035	Zorun Tzin
+2036	Trap
+2038	Trap
+2042	Lost Traveler
+2043	a startled Witch...
+2044	Atanna Khan
+2045	Lost Traveler
+2048	Xazax
+2051	Celestial Descendant
+2052	Ankheg
+2054	Forest Bugbear
+2055	Chimera
+2056	Death Servant
+2057	Shroom Turret
+2058	Drowned Beast
+2059	Gehreleth
+2060	Darkness
+2061	Giant Hunters
+2062	Valthek, the Vizjerei Sorcerer
+2063	Bone Golem
+2064	Earth Fiend
+2065	Iron Giant
+2066	Stone Frog
+2067	Red-Armed Soldier
+2068	Vulture Harpy
+2069	Hobgoblin
+2070	Lizardking
+2071	Lizardman
+2072	Dark Ogre
+2073	Polar Worm
+2074	Skeletal Shadow
+2075	Giant Skeleton
+2076	Skeleton Priest
+2077	Chaos Critter
+2078	Wyvern
+2079	Thokola
+2080	Swampy Reptile
+2081	Subterranean Predator
+2082	Cursed Warrior
+2083	Andariel, the Maiden of Anguish
+2084	Duriel, the Lord of Pain
+2085	Dul'Mephistos, the Lord of Hatred
+2086	Al'Diabalos, the Lord of Terror
+2087	Tor'Baalos, the Lord of Destruction
+2088	Seal of the Gods
+2090	Godsman Guard
+2091	Chimaera Trap
+2092	Fireheart Totem
+2093	Godsman Guard
+2094	Umbaru Spirit
+2098	Lucion
+2099	Durram
+2100	Deathbat
+2101	Malic
+2102	Chimaera Trap
+2103	Temple Spire
+2104	Primal Clay
+2105	Impaler Archon
+2106	Kraken Guard
+2107	Tiefling
+2108	Dragon Oath
+2109	The Void (trap)
+2110	The Void (trap)
+2111	The Void (trap)
+2112	The Void (trap)
+2113	Mendeln
+2114	Rathma
+2115	Soul of Greed
+2116	Soul of Envy
+2117	Soul of Lust
+2118	Soul of Gluttony
+2119	Soul of Wrath
+2120	Soul of Sloth
+2121	The Void (trap)
+2122	Skeletal Warrior
+2123	Skeletal Warrior
+2124	Shadow Warrior
 2125	\gold;Пакман
-2126	\orange;Пустота (ловушка)
-2127	\orange;Раб Зависти
-2128	\orange;Страж Гробницы
-2129	\orange;Пустота (ловушка)
-2130	\orange;Пустота (ловушка)
-2131	\gold;          Дух Гордыни          
-2132	\orange;Пустота (ловушка)
-2133	\red;Миротворческая Ловушка
-2134	\gold;          Дух Гордыни          
-2135	\orange;Отродье Тьмы
-2136	\orange;Пустота (ловушка)
-2137	\orange;Отродье Тьмы
-2138	\orange;Вечный Призрак
-2139	\orange;Пустота (ловушка)
-2140	\orange;Пустота (ловушка)
-2141	\orange;Пустота (ловушка)
+2126	The Void (trap)
+2127	Slave of Envy
+2128	Tomb Guard
+2129	The Void (trap)
+2130	The Void (trap)
+2131	Soul of Pride
+2132	The Void (trap)
+2133	Peacekeeper Trap
+2134	Soul of Pride
+2135	Darkspawn
+2136	The Void (trap)
+2137	Darkspawn
+2138	Eternal Ghost
+2139	The Void (trap)
+2140	The Void (trap)
+2141	The Void (trap)
 2142	\gold;Пакман
 2143	RiftTrap
-2144	\orange;Пустота (ловушка)
-2145	\orange;Некробот\blue;
-2146	ПРЕВЕД МЕДВЕД
-2147	\gold;Страж Гробницы
-2148	\gold;Страж Гробницы
-2149	\gold;Страж Гробницы
-2150	\gold;Страж Гробницы
-2151	\gold;Замаскированный Эдирем
-2152	\gold;Замаскированный Эдирем
-2153	\gold;Замаскированный Эдирем
-2154	\gold;Замаскированный Эдирем
-2155	\gold;Замаскированный Эдирем
-2156	\gold;Замаскированный Эдирем
-2157	\gold;Замаскированный Эдирем
-2158	\gold;Замаскированный Эдирем
-2159	\gold;Замаскированный Эдирем
-2160	\gold;Замаскированный Эдирем
-2161	\gold;Замаскированный Эдирем
-2162	\orange;Пустота (ловушка)
-2163	\gold;Замаскированный Эдирем
-2164	\gold;Замаскированный Эдирем
-2165	\yellow;Эдирем\blue;
-2166	\orange;Шпиль Храма
-2167	\gold;Замаскированный Эдирем
-2168	\gold;          Мендельн, Ученик Ратмы          
-2169	\gold;          Ратма, Последователь Траг'Оула          
-2170	\gold;          Мендельн, Ученик Ратмы          
-2171	\gold;          Ратма, Последователь Траг'Оула          
-2172	Сокрытый Король
-2173	Гоплит
+2144	The Void (trap)
+2145	Necrobot
+2146	FLYING POLAR BUFFALO ERROR
+2151	Disguised Edyrem
+2152	Disguised Edyrem
+2154	Disguised Edyrem
+2155	Disguised Edyrem
+2158	Disguised Edyrem
+2160	Blur
+2161	Disguised Edyrem
+2162	The Void (trap)
+2163	Disguised Edyrem
+2164	Disguised Edyrem
+2165	Edyrem
+2166	Temple Spire
+2167	Disguised Edyrem
+2168	Mendeln
+2169	Rathma
+2170	Mendeln
+2171	Rathma
+2172	Veil King
+2173	Hoplite
 2174	\red;Блинки
 2175	\orange;Клайд
 2176	\blue;Инки
 2177	\purple;Пинки
-2178	Статуя Нефалема
-2179	Статуя Нефалема
-2180	Статуя Нефалема
-2181	Статуя Нефалема
-2182	Статуя Нефалема
-2183	Статуя Нефалема
-2184	Статуя Нефалема
-2192	\orange;Пустота (ловушка)
-2193	\orange;Пират Морей-Близнецов
-2194	\gold;          Атулуа, Богиня Амазонок          
-2202	Дух Клинка
-2203	\gold;Замаскированный Эдирем
-2204	Канализационная Крыса
-2205	Адепт
-2206	Хрустальный Лорд
-2207	Скелет-Лучник
-2208	Возвращенный Лучник
-2209	\yellow;Утренняя Звезда\blue;
-2210	Кристальная Ведьма
-2211	\yellow;Сгнивший Лучник\blue;
-2212	Паук Души
-2213	\orange;Служитель Триединства\blue;
-2214	\orange;Морлу\blue;
-2215	\orange;Дух Умбару\blue;
-2216	\orange;Голиаф\blue;
-2217	\dgreen;Пустошь\blue;
-2218	\orange;Воющий Дух\blue;
-2219	Голодный Труп
-2220	Костяной Лучник
-2221	Пылающий Мертвец-Лучник
-2222	Лучник Ужаса
-2223	Серебряный Титан
-2224	\orange;Фанатка\blue;
-2225	\yellow;Бродяга Кровавого Огня\blue;
-2226	\yellow;Заледенелая Душа\blue;
-2227	\yellow;Гемочума\blue;
-2228	Кровавый Тамплиер
-2229	\orange;Житель\blue;
-2230	\yellow;Серебряная Стрела\blue;
-2231	Покровитель
-2232	Саскуотч
-2233	Бронзовый Титан
-2234	Золотой Титан
-2235	\orange;Мерзость\blue;
-2236	Стальной Лорд
-2237	Кровавый Маркиз
-2238	Клан Камня
-2239	\dgreen;Бурекогтевый Ужас\blue;
-2240	\dgreen;Светящаяся Капля\blue;
-2241	\dgreen;Фея-Ведьма\blue;
-2242	\dgreen;Охотник за Смертью\blue;
-2243	\gold;          Тал Раша          \blue;
-2244	\orange;Дух Умбару\blue;
-2245	Балрог
-2246	\orange;Замученная Душа\blue;
-2247	\orange;Кровавый Брат\blue;
-2248	Чернотелка
-2249	Лунная Пантера
-2250	\yellow;Архонт Пустоты\blue;
-2251	Клан Огня
-2252	\dgrey;Огненный Жук\blue;
-2253	\yellow;Махасаттва\blue;
-2254	\yellow;Визгун\blue;
-2255	\orange;Ядовитый Демон\blue;
-2256	Ледяной Лорд
-2257	Спящий Пещерный Люциан
-2258	\orange;Механик Смерти\blue;
-2259	Вернувшийся
-2260	Рыскающая Жрица
-2261	\yellow;Эдирем\blue;
-2262	Костяной Колдун
-2263	Пылающий Мертвец-Колдун
-2264	Ужасный Колдун
-2265	\red;Существо Ужаса\blue;
-2266	\yellow;Черная Смерть\blue;
-2267	Скелет
-2268	\orange;Карательная Турель\blue;
-2269	Сокрытый Ужас
-2270	\orange;Дух Умбару\blue;
-2271	Обсидиановый Лорд
-2272	\orange;Дух Умбару\blue;
-2273	Асатруар
-2274	Немертвый Стервятник
-2275	Смотритель Смерти
-2276	\yellow;Дьявольский Серафим\blue;
-2277	Грешник
-2278	\yellow;Древо Жизни\blue;
-2279	Крыска
-2280	\orange;Убитая Душа\blue;
-2281	\orange;Убитая Душа\blue;
-2282	\orange;Убитая Душа\blue;
-2283	\orange;Убитая Душа\blue;
-2284	\orange;Убитая Душа\blue;
-2285	Рыцарь Войны
-2286	Рыцарь Чумы
-2287	Рыцарь Голода
-2288	Падший
-2289	\yellow;Зубец\blue;
-2290	Бронированный Титан
-2291	\yellow;Ониксовый Рыцарь\blue;
-2292	Плюющий Ядом
-2293	Видение
-2294	Мрак
-2295	Тамплиер
-2296	\yellow;Носитель Огня Смерти\blue;
-2297	Адский Лорд
-2298	\yellow;Панихида\blue;
-2299	\yellow;Живое Пламя\blue;
-2300	\yellow;Лавина\blue;
-2301	\yellow;Демон Черного Льда\blue;
-2302	\yellow;Капканная Крыса\blue;
-2303	\orange;Магинер
-2304	\orange;AC-2 Заклепочник\blue;
-2305	\orange;AC-1 Молотильщик\blue;
-2306	\orange;RC-2 Тяжелый Дрон\blue;
-2307	\orange;RC-1 Легкий Дрон\blue;
-2308	Суккуб
-2309	Темный Магистрат
-2310	Крыса Джунглей
-2311	\orange;Прихвостень\blue;
-2312	\orange;Дух Умбару\blue;
-2313	Балрог
-2314	\yellow;Свиноруб\blue;
-2315	Чернокнижник
-2316	\yellow;Рыцарь Смерти\blue;
-2317	\yellow;Поджигатель Крови\blue;
-2318	Воин Души
-2319	Воин Крови
-2320	\yellow;Ке-Хеган\blue;
-2321	Демон Магмы
-2322	Темная Охотница
-2323	Зомби
-2324	Душедер
-2325	\orange;Темный Нефалем\blue;
-2326	Кислотный Зверь
-2327	Осквернитель
-2328	Призрачный Волк
-2329	Темный Тамплиер
-2330	Приговоренный
-2331	Лунный Рыцарь
-2332	Клан Камня
-2333	Острое Жало
-2334	\yellow;Костодробилка\blue;
-2335	\dgrey;Баал (Видение Разрушения)\blue;
-2336	Злой Дух
-2337	Ледяной Принц
-2338	Адский Камень
-2339	\yellow;Каменный Молот\blue;
-2340	\orange;Некробот\blue;
-2341	Падший Наездник на Волке
-2342	Крушитель
-2343	\orange;Ледяной Король\blue;
-2344	Банши
-2345	\yellow;Черная Кошка\blue;
-2346	Хранитель
-2347	Клан Ночи
-2348	\yellow;Куча Мала\gold;
-2349	\orange;Житель\blue;
-2350	\orange;Кающийся
-2351	\orange;Пустота (ловушка)
-2352	\orange;Пустота (ловушка)
-2353	\orange;Лунный Арахнид
+2178	Nephalem Statue
+2179	Nephalem Statue
+2180	Nephalem Statue
+2181	Nephalem Statue
+2182	Nephalem Statue
+2183	Nephalem Statue
+2184	Nephalem Statue
+2192	The Void (trap)
+2193	Pirate of the Twin Seas
+2194	Athulua, the Amazonian Goddess
+2202	Blade Spirit
+2203	Disguised Edyrem
+2204	Sewer Rat
+2205	Cultist
+2206	Crystal Lord
+2207	Skeleton Archer
+2208	Returned Archer
+2209	Daystar
+2210	Crystal Witch
+2211	Corruptor Archer
+2212	Soul Spider
+2213	Celebrant of the Triune
+2214	Morlu
+2215	Umbaru Spirit
+2216	Goliath
+2217	Landmass
+2218	Howling Spirit
+2219	Hungry Dead
+2220	Bone Archer
+2221	Burning Dead Archer
+2222	Horror Archer
+2223	Silver Titan
+2224	Groupie
+2225	Bloodfire Rogue
+2226	Iced Soul
+2227	Hemoplague
+2228	Crimson Templar
+2229	Citizen
+2230	Silverbolt
+2231	Protector
+2232	Sasquatch
+2233	Bronze Titan
+2234	Gold Titan
+2235	\orange;Abomination
+2236	Steel Lord
+2237	Blood Marquis
+2238	Stone Clan
+2239	Clawstorm Terror
+2240	Glowing Blob
+2241	Fairy Witch
+2242	Bane Hunter
+2243	Tal Rasha
+2244	Umbaru Spirit
+2245	Balrog
+2246	Wracked Soul
+2247	Bloodbrother
+2248	Darkling
+2249	Moon Panther
+2250	Void Archon
+2251	Fire Clan
+2252	Fire Beetle
+2253	Mahasattva
+2254	Shrieker
+2255	Venom Fiend
+2256	Frozen Lord
+2257	Sleeping Cave Snapper
+2258	Death's Mechanic
+2259	Returned
+2260	Prowler Priestess
+2261	Edyrem
+2262	Bone Sorcerer
+2263	Burning Dead Sorcerer
+2264	Horror Sorcerer
+2265	Minion of Terror
+2266	Black Death
+2267	Skeleton
+2268	Mazi's Eidolon
+2269	Veil Terror
+2270	Umbaru Spirit
+2271	Obsidian Lord
+2272	Umbaru Spirit
+2273	Asatruar
+2274	Undead Vulture
+2275	Death Watcher
+2276	Serafiend
+2277	Sinner
+2278	Tree of Life
+2279	Ratfink
+2280	Slain Soul
+2281	Slain Soul
+2282	Slain Soul
+2283	Slain Soul
+2284	Slain Soul
+2285	Knight of War
+2286	Knight of Pestilence
+2287	Knight of Famine
+2288	Fallen One
+2289	Cog
+2290	Armored Titan
+2291	Onyx Knight
+2292	Poison Spitter
+2293	Wraith
+2294	Gloom
+2295	Templar
+2296	Deathfire Bearer
+2297	Infernal Lord
+2298	Dirge
+2299	Living Flame
+2300	Avalanche
+2301	Black Ice Demon
+2302	Trap Rat
+2303	Magineer
+2304	AC-2 Rivet Bot
+2305	AC-1 Hammer Bot
+2306	RC-2 Heavy Drone
+2307	RC-1 Light Drone
+2308	Succubus
+2309	Dark Magistrate
+2310	Jungle Rat
+2311	Henchman
+2312	Umbaru Spirit
+2313	Balrog
+2314	Porkchop
+2315	Warlock
+2316	Knight of Death
+2317	Fireblood
+2318	Soul Warrior
+2319	Blood Warrior
+2320	Que-Hegan
+2321	Magma Demon
+2322	Dark Huntress
+2323	Zombie
+2324	Soul Flayer
+2325	Dark Nephalem
+2326	Acid Beast
+2327	Defiler
+2328	Ghost Wolf
+2329	Dark Templar
+2330	Condemned
+2331	Moon Knight
+2332	Stone Clan
+2333	Razor Sting
+2334	Bonegrinder
+2335	Baal (Vision of Destruction)
+2336	Evil Spirit
+2337	Ice Prince
+2338	Hell Stone
+2339	Stone Hammer Demon
+2340	Necrobot
+2341	Fallen Wolf Rider
+2342	Crusher
+2343	Ice King
+2344	Banshee
+2345	Black Cat
+2346	Familiar
+2347	Night Clan
+2348	The Pack
+2349	Citizen
+2350	Penitent
+2351	The Void (trap)
+2352	The Void (trap)
+2353	Moon Arachnid
 2354	Миньон Разрушения
-2355	\gold;          Видение Мучения          
-2356	\gold;          Видение Боли          
-2357	\gold;          Видение Ненависти          
-2358	\gold;          Видение Ужаса          
-2359	\orange;Хранитель Леса
-2360	\orange;Калечащий Рой
-2361	\orange;Клан Хазры\blue;
-2362	\orange;Лунный Арахнид
+2355	Vision of Anguish
+2356	Vision of Pain
+2357	Vision of Hatred
+2358	Vision of Terror
+2359	Forest Keeper
+2360	Crippling Swarm
+2361	Khazra Clan
+2362	Moon Arachnid
 2363	Избранник Ратмы
-2364	\yellow;Ке-Хеган\blue;
-2365	\yellow;Миротворец\blue;
-2366	\dgrey;Миротворец (Галлюцинация)
-2367	\yellow;Живое Пламя\blue;
-2368	\yellow;Визгун\blue;
-2369	\yellow;Магмовый Змей\blue;
-2370	\yellow;Темный Визжири\blue;
-2371	\yellow;Воин Разума\blue;
-2372	\yellow;Рыцарь Армагеддона\blue;
-2373	\yellow;Призрачный Феникс\blue;
-2374	\yellow;Крушитель Стали\blue;
-2375	\yellow;Темный Горизонт\blue;
-2376	\yellow;Панихида\blue;
-2377	\yellow;Архонт Пустоты\blue;
-2378	\yellow;Матка\blue;
-2379	\yellow;Испорченный Колдун\blue;
-2380	\yellow;Детеныш\blue;
-2381	\yellow;Темный Чемпион\blue;
-2382	\yellow;Темный Чемпион\blue;
-2383	\yellow;Распинатель\blue;
-2384	\yellow;Бессмертный\blue;
-2385	\yellow;Проклятье Хорадримов\blue;
-2386	\yellow;Адская Кошка-Жрица\blue;
-2387	\yellow;Адская Кошка\blue;
-2388	\yellow;Адская Кошка\blue;
-2389	\yellow;Бритвошерстый Титан\blue;
-2390	\yellow;Сломленная Душа\blue;
-2391	\yellow;Демон Черного Льда\blue;
-2392	\yellow;Фантом\blue;
-2393	\yellow;Жужжащая Пила\blue;
-2394	\yellow;Эдирем\blue;
-2395	\yellow;Громик\blue;
-2396	\yellow;Штормовой Шаман\blue;
-2397	\yellow;Серебряный Тиран\blue;
-2398	\yellow;Лорд Ядра\blue;
-2399	\yellow;Сын Люциона\blue;
-2400	\yellow;Поджигатель Крови\blue;
-2401	\yellow;Клан Черепа\blue;
-2402	\yellow;Клан Черепа\blue;
-2403	\yellow;Кровавый Принц\blue;
-2404	\yellow;Черная Смерть\blue;
-2405	\yellow;Рыцарь Смерти\blue;
-2406	\yellow;Чумной Мертвый Лучник\blue;
-2407	\yellow;Чумной Труп\blue;
-2408	\yellow;Фетиш-Снайпер\blue;
-2409	\yellow;Фетиш-Охотник\blue;
-2410	\yellow;Аннигилятор\blue;
-2411	\yellow;Ифрит\blue;
-2412	\yellow;Шоковая Обезьяна\blue;
-2413	\yellow;Кошмар\blue;
-2414	\yellow;Игольчатый Медведь\blue;
-2415	\yellow;Морозный Хищник\blue;
-2416	\yellow;Костодробилка\blue;
-2417	\yellow;Сгнивший Лучник\blue;
-2418	\yellow;Гниль\blue;
-2419	\yellow;Завывающий\blue;
-2420	\yellow;Шокирующее Жало\blue;
-2421	\yellow;Выкованный Шаман\blue;
-2422	\yellow;Бродяга Кровавого Огня\blue;
-2423	\yellow;Бродяга Кровавого Огня\blue;
-2424	\yellow;Стальношерстый Титан\blue;
-2425	\yellow;Хозяин Роя\blue;
-2426	\yellow;Сгнивший Маг\blue;
-2427	\yellow;Утренняя Звезда\blue;
-2428	\yellow;Проклятие Гробниц\blue;
-2429	\yellow;Черная Кошка\blue;
-2430	\yellow;Измельчитель\blue;
-2431	\yellow;Ледяной Клан\blue;
-2432	\yellow;Мраморная Лягушка\blue;
-2433	\yellow;Падший Священник\blue;
-2434	\yellow;Несущий Чуму\blue;
-2435	\yellow;Джинн\blue;
-2436	\yellow;Король Обезьян\blue;
-2437	\yellow;Гадюка\blue;
-2438	\yellow;Калечащий\blue;
-2439	\yellow;Рой\blue;
-2440	\yellow;Зубец\blue;
-2441	\yellow;Ледяной Клан\blue;
-2442	\gold;          Самаэль, Вестник Конца          
-2443	Червь боли
-2444	\gold;          Самаэль, Вестник Конца          
+2364	Que-Hegan
+2365	Peace Warder
+2366	Peace Warder (Hallucination)
+2367	Living Flame
+2368	Shrieker
+2369	Magma Drake
+2370	Dark Vizjerei
+2371	Mind Warrior
+2372	Armageddon Knight
+2373	Ghost Phoenix
+2374	Steel Crusher
+2375	Dark Horizon
+2376	Dirge
+2377	Void Archon
+2378	Brood Mother
+2379	Corruptor Warlock
+2380	Broodling
+2381	Dark Champion
+2382	Dark Champion
+2383	Cruciator
+2384	Deathless
+2385	Horadrim's Curse
+2386	Hellcat Priestess
+2387	Hellcat
+2388	Hellcat
+2389	Razor Fur Titan
+2390	Broken Soul
+2391	Black Ice Demon
+2392	Phantasm
+2393	Buzzsaw
+2394	Edyrem
+2395	Thunderling
+2396	Storm Shaman
+2397	Silver Tyrant
+2398	Core Lord
+2399	Son of Lucion
+2400	Fireblood
+2401	Skull Clan
+2402	Skull Clan
+2403	Blood Prince
+2404	Black Death
+2405	Knight of Death
+2406	Plagued Dead Archer
+2407	Plagued Dead
+2408	Fetish Sniper
+2409	Fetish Hunter
+2410	Annihilator
+2411	Ifrit
+2412	Shock Monkey
+2413	Nightmare
+2414	Quill Bear
+2415	Frost Raptor
+2416	Bonegrinder
+2417	Corruptor Archer
+2418	Corruptor
+2419	Lament
+2420	Shock Sting
+2421	Warforged Shaman
+2422	Bloodfire Rogue
+2423	Bloodfire Rogue
+2424	Steelfur Titan
+2425	Hivehost
+2426	Corruptor Mage
+2427	Daystar
+2428	Tomb Curse
+2429	Black Cat
+2430	Shredder
+2431	Ice Clan
+2432	Marbled Frog
+2433	Fallen Priest
+2434	Plague Bringer
+2435	Djinn
+2436	Monkey King
+2437	Adder
+2438	Mangler
+2439	Brood Swarm
+2440	Cog
+2441	Ice Clan
+2442	Samael, Herald of the End
+2443	Pain Worm
+2444	Samael, Herald of the End
+2445	Sacrificial Altar
+2446	Sacrificial Altar
+2447	Sacrificial Altar
+2448	Sacrificial Altar
+2449	AC-2 Rivet Bot
+2450	AC-1 Hammer Bot
+2451	RC-2 Heavy Drone
+2452	RC-1 Light Drone
