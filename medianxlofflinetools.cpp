@@ -13,7 +13,6 @@
 #include "reversebitreader.h"
 #include "itemspropertiessplitter.h"
 #include "characterinfo.hpp"
-#include "skillplandialog.h"
 #include "fileassociationmanager.h"
 #include "messagecheckbox.h"
 #include "experienceindicatorgroupbox.h"
@@ -1100,12 +1099,6 @@ void MedianXLOfflineTools::fillBeltWithMoonCookies()
     }
 }
 
-void MedianXLOfflineTools::showSkillPlan()
-{
-    SkillplanDialog dlg(this);
-    dlg.exec();
-}
-
 void MedianXLOfflineTools::showAllStats()
 {
     AllStatsDialog dlg(this);
@@ -1646,7 +1639,6 @@ void MedianXLOfflineTools::connectSignals()
     connect(ui->actionFillBeltWithMoonCookies, SIGNAL(triggered()), SLOT(fillBeltWithMoonCookies()));
 
     // export
-    connect(ui->actionSkillPlan, SIGNAL(triggered()), SLOT(showSkillPlan()));
 
     // options
     connect(ui->actionBackup, SIGNAL(triggered(bool)), SLOT(backupSettingTriggered(bool)));
@@ -2439,7 +2431,7 @@ void MedianXLOfflineTools::clearUI()
 
     QList<QAction *> actions = QList<QAction *>() << ui->actionReloadCharacter << ui->actionSaveCharacter << ui->actionRename << ui->actionRespecStats << ui->actionRespecSkills << ui->actionActivateWaypoints
                                                   << ui->actionDeactivateHallsOfPain << ui->actionConvertToSoftcore << ui->actionResurrect << ui->actionFind << ui->actionFindNext << ui->actionFindPrevious
-                                                  << ui->actionShowItems << ui->actionSkillPlan << ui->actionShowAllStats << ui->actionSkillTree;
+                                                  << ui->actionShowItems << ui->actionShowAllStats << ui->actionSkillTree;
     foreach (QAction *action, actions)
         action->setDisabled(true);
 
@@ -2468,7 +2460,7 @@ void MedianXLOfflineTools::updateUI()
     clearUI();
 
     QList<QAction *> actions = QList<QAction *>() << ui->actionReloadCharacter << ui->actionRename << ui->actionRespecStats << ui->actionRespecSkills << ui->actionActivateWaypoints << ui->actionDeactivateHallsOfPain
-                                                  << ui->actionSkillPlan << ui->actionShowAllStats << ui->actionSkillTree;
+                                                  << ui->actionShowAllStats << ui->actionSkillTree;
     foreach (QAction *action, actions)
         action->setEnabled(true);
     ui->respecSkillsCheckBox->setEnabled(true);
@@ -2614,7 +2606,7 @@ void MedianXLOfflineTools::updateWindowTitle()
 {
     _charPathLabel->setText(QDir::toNativeSeparators(_charPath));
 
-    QString modVersion = SkillplanDialog::modVersionReadable();
+    QLatin1String modVersion("Sigma");
     // making setWindowFilePath() work correctly
 #ifdef Q_OS_MAC
     setWindowTitle(_charPath.isEmpty() ? modVersion : QString("%1 (%2)").arg(QFileInfo(_charPath).fileName(), modVersion));

@@ -502,7 +502,7 @@
        <x>10</x>
        <y>20</y>
        <width>91</width>
-       <height>20</height>
+       <height>32</height>
       </rect>
      </property>
      <property name="sizeAdjustPolicy">
@@ -515,7 +515,7 @@
        <x>188</x>
        <y>20</y>
        <width>91</width>
-       <height>20</height>
+       <height>32</height>
       </rect>
      </property>
      <property name="sizeAdjustPolicy">
@@ -740,7 +740,6 @@
     <property name="title">
      <string>E&amp;xport</string>
     </property>
-    <addaction name="actionSkillPlan"/>
     <addaction name="actionShowAllStats"/>
    </widget>
    <addaction name="menuFile"/>
@@ -776,8 +775,8 @@
    <addaction name="actionShowItems"/>
    <addaction name="actionFind"/>
    <addaction name="separator"/>
-   <addaction name="actionSkillPlan"/>
    <addaction name="actionSkillTree"/>
+   <addaction name="actionShowAllStats"/>
    <addaction name="separator"/>
    <addaction name="actionAbout"/>
   </widget>
@@ -1246,26 +1245,15 @@
     <enum>Qt::ApplicationShortcut</enum>
    </property>
   </action>
-  <action name="actionSkillPlan">
-   <property name="enabled">
-    <bool>false</bool>
-   </property>
-   <property name="text">
-    <string>Skillplan</string>
-   </property>
-   <property name="statusTip">
-    <string>Generate a link for Tub's Skillpoint Planner</string>
-   </property>
-   <property name="shortcut">
-    <string>Ctrl+P</string>
-   </property>
-  </action>
   <action name="actionShowAllStats">
    <property name="enabled">
     <bool>false</bool>
    </property>
    <property name="text">
     <string>All character stats</string>
+   </property>
+   <property name="iconText">
+    <string>All stats</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+A</string>

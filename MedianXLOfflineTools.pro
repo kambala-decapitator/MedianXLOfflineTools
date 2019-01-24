@@ -67,7 +67,6 @@ SOURCES += main.cpp \
            itemparser.cpp \
            propertiesdisplaymanager.cpp \
            findresultswidget.cpp \
-           skillplandialog.cpp \
            application.cpp \
            qtsingleapplication/qtsingleapplication.cpp \
            qtsingleapplication/qtlockedfile.cpp \
@@ -106,7 +105,6 @@ HEADERS += medianxlofflinetools.h \
            propertiesdisplaymanager.h \
            findresultswidget.h \
            characterinfo.hpp \
-           skillplandialog.h \
            application.h \
            qtsingleapplication/QtSingleApplication \
            qtsingleapplication/qtsingleapplication.h \
@@ -134,7 +132,6 @@ FORMS += medianxlofflinetools.ui \
          qd2charrenamer.ui \
          propertiesviewerwidget.ui \
          finditemsdialog.ui \
-         skillplandialog.ui \
          stashsortingoptionsdialog.ui \
          allstatsdialog.ui
 
@@ -236,7 +233,7 @@ macx {
         }
     }
 
-    COPYRIGHT = Copyright © kambala 2011-2018
+    COPYRIGHT = Copyright © kambala 2011-2019
     INFO_PLIST_PATH = $$CONTENTS_PATH/$$INFO_PLIST_NAME
     # literal $ is either $$ or \$$
     QMAKE_POST_LINK = sed -e \'s/@APP_VERSION@/$$VERSION/\' -e \'s/@COPYRIGHT@/$$COPYRIGHT/\' -e \'s/\$$(PRODUCT_BUNDLE_IDENTIFIER)/com.kambala.$$TARGET/\' -i \'\' $$INFO_PLIST_PATH;

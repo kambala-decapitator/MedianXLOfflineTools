@@ -106,7 +106,6 @@ private slots:
     void fillBeltWithMoonCookies();
 
     // export
-    void showSkillPlan();
     void showAllStats();
 
     // options
