@@ -181,10 +181,9 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, LaunchMode la
 #ifndef DUPE_CHECK
     Q_UNUSED(launchMode);
 
-    bool didModVersionChange = SkillplanDialog::didModVersionChange(); // must be called before the following conditions because it should load planner/readable versions
     if (!cmdPath.isEmpty())
         loadFile(cmdPath);
-    else if (ui->actionLoadLastUsedCharacter->isChecked() && !_recentFilesList.isEmpty() && !didModVersionChange)
+    else if (ui->actionLoadLastUsedCharacter->isChecked() && !_recentFilesList.isEmpty())
         loadFile(_recentFilesList.at(0));
     else
     {
@@ -202,6 +201,8 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, LaunchMode la
         updateWindowTitle();
     }
 #else
+    Q_UNUSED(cmdPath);
+
     QAction *dupeCheckAction = new QAction("Dupe Check", this);
     dupeCheckAction->setShortcut(QKeySequence("Ctrl+D"));
     connect(dupeCheckAction, SIGNAL(triggered()), SLOT(showDupeCheck()));
