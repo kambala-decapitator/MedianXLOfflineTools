@@ -37,6 +37,7 @@
 #include <QTimer>
 #include <QDateTime>
 #include <QFileSystemWatcher>
+#include <QDesktopServices>
 
 #include <QNetworkAccessManager>
 #include <QNetworkReply>
@@ -191,12 +192,7 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, LaunchMode la
         QSettings settings;
         settings.beginGroup("recentItems");
         if (!settings.contains(kLastSavePathKey))
-        {
-            QSettings d2Settings("HKEY_CURRENT_USER\\Software\\Blizzard Entertainment\\Diablo II", QSettings::NativeFormat);
-            QString d2SavePath = d2Settings.value("Save Path").toString();
-            if (!d2SavePath.isEmpty())
-                settings.setValue(kLastSavePathKey, d2SavePath);
-        }
+            settings.setValue(kLastSavePathKey, QDesktopServices::storageLocation(QDesktopServices::HomeLocation) + QLatin1String("/AppData/Roaming/MedianXL/save"));
 #endif
         updateWindowTitle();
     }
