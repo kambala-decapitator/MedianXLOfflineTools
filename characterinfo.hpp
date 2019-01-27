@@ -17,8 +17,12 @@ public:
         return obj;
     }
 
-    quint32 valueOfStatistic(Enums::CharacterStats::StatisticEnum stat) const { return basicInfo.statsDynamicData.property(Enums::CharacterStats::statisticNameFromValue(stat)).toUInt(); }
-    void setValueForStatisitc(quint32 value, Enums::CharacterStats::StatisticEnum stat) { basicInfo.statsDynamicData.setProperty(Enums::CharacterStats::statisticNameFromValue(stat), value); }
+    quint32 valueOfStatistic(Enums::CharacterStats::StatisticEnum stat) const
+    {
+        QList<QVariant> list = basicInfo.statsDynamicData.value(stat).toList();
+        return list.empty() ? 0 : list.first().toULongLong();
+    }
+    void setValueForStatisitc(quint32 value, Enums::CharacterStats::StatisticEnum stat) { basicInfo.statsDynamicData.replace(stat, QList<QVariant>() << value); }
 
     struct CharacterInfoBasic
     {
@@ -30,7 +34,7 @@ public:
         bool isHardcore;
         bool hadDied;
 
-        QObject statsDynamicData;
+        QMultiMap<Enums::CharacterStats::StatisticEnum, QVariant> statsDynamicData; // there're multiple Achievements, each contains 2 numbers
         quint16 totalStatPoints;
         
         SkillList skills;

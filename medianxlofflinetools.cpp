@@ -1947,9 +1947,7 @@ bool MedianXLOfflineTools::processSaveFile()
     }
 
     // clear dynamic values
-    QMetaEnum statisticMetaEnum = CharacterStats::statisticMetaEnum();
-    for (int i = 0; i < statisticMetaEnum.keyCount(); ++i)
-        charInfo.basicInfo.statsDynamicData.setProperty(statisticMetaEnum.key(i), QVariant());
+    charInfo.basicInfo.statsDynamicData.clear();
 
     int count = 0; // to prevent infinite loop if something goes wrong
     const int maxTries = 50;
@@ -1958,7 +1956,7 @@ bool MedianXLOfflineTools::processSaveFile()
     ReverseBitReader bitReader(statsBitData);
     for (; count < maxTries; ++count)
     {
-        int statCode = bitReader.readNumber(CharacterStats::StatCodeLength);
+        CharacterStats::StatisticEnum statCode = static_cast<CharacterStats::StatisticEnum>(bitReader.readNumber(CharacterStats::StatCodeLength));
         if (statCode == CharacterStats::End)
             break;
 
@@ -1971,8 +1969,9 @@ bool MedianXLOfflineTools::processSaveFile()
             return false;
         }
 
+        QList<QVariant> statData;
         if (txtProp->paramBitsSave)
-            bitReader.readNumber(txtProp->paramBitsSave);
+            statData << bitReader.readNumber(txtProp->paramBitsSave);
 
         qint64 statValue = bitReader.readNumber(statLength);
         if (statCode == CharacterStats::Level && statValue != clvl)
@@ -1993,13 +1992,14 @@ bool MedianXLOfflineTools::processSaveFile()
         }
         else if (statCode >= CharacterStats::Strength && statCode <= CharacterStats::Vitality)
         {
-            int baseStat = _baseStatsMap[charInfo.basicInfo.classCode].statsAtStart.statFromCode(static_cast<CharacterStats::StatisticEnum>(statCode));
+            int baseStat = _baseStatsMap[charInfo.basicInfo.classCode].statsAtStart.statFromCode(statCode);
             totalStats += statValue - baseStat;
         }
         else if (statCode == CharacterStats::FreeStatPoints)
             totalStats += statValue;
 
-        charInfo.basicInfo.statsDynamicData.setProperty(CharacterStats::statisticNameFromValue(statCode), statValue);
+        statData << statValue;
+        charInfo.basicInfo.statsDynamicData.insert(statCode, statData);
     }
     if (count == maxTries)
     {
@@ -2014,7 +2014,7 @@ bool MedianXLOfflineTools::processSaveFile()
         {
             CharacterStats::StatisticEnum statCode = static_cast<CharacterStats::StatisticEnum>(i);
             int baseStat = _baseStatsMap[charInfo.basicInfo.classCode].statsAtStart.statFromCode(statCode);
-            charInfo.basicInfo.statsDynamicData.setProperty(statisticMetaEnum.key(i), baseStat);
+            charInfo.setValueForStatisitc(baseStat, statCode);
         }
         charInfo.setValueForStatisitc(totalPossibleStats, CharacterStats::FreeStatPoints);
         shouldShowHackWarning = true;
@@ -2572,9 +2572,8 @@ void MedianXLOfflineTools::setStats()
     QMetaEnum statisticMetaEnum = Enums::CharacterStats::statisticMetaEnum();
     for (int i = 0; i < statisticMetaEnum.keyCount(); ++i)
     {
-        const char *name = statisticMetaEnum.key(i);
-        qulonglong value = CharacterInfo::instance().basicInfo.statsDynamicData.property(name).toULongLong();
         Enums::CharacterStats::StatisticEnum statCode = static_cast<Enums::CharacterStats::StatisticEnum>(statisticMetaEnum.value(i));
+        quint32 value = CharacterInfo::instance().valueOfStatistic(statCode);
 
         if (statCode >= Enums::CharacterStats::Strength && statCode <= Enums::CharacterStats::Vitality)
         {
@@ -2697,11 +2696,12 @@ QByteArray MedianXLOfflineTools::statisticBytes()
     QString result;
     QMetaEnum statisticMetaEnum = Enums::CharacterStats::statisticMetaEnum();
     bool isExpAndLevelNotSet = true;
-    for (int i = 0; i < statisticMetaEnum.keyCount(); ++i)
+    QList<QVariant> achievements = CharacterInfo::instance().basicInfo.statsDynamicData.values(Enums::CharacterStats::Achievements);
+    for (int i = 0, achievementIndex = 0; i < statisticMetaEnum.keyCount(); ++i)
     {
-        const char *enumKey = statisticMetaEnum.key(i);
         Enums::CharacterStats::StatisticEnum statCode = static_cast<Enums::CharacterStats::StatisticEnum>(statisticMetaEnum.value(i));
-        qulonglong value = 0;
+        bool isAchievement = false;
+        quint32 value = 0;
         if (statCode >= Enums::CharacterStats::Strength && statCode <= Enums::CharacterStats::Vitality)
         {
             value = _spinBoxesStatsMap[statCode]->value();
@@ -2710,6 +2710,10 @@ QByteArray MedianXLOfflineTools::statisticBytes()
         {
             int j = statCode - Enums::CharacterStats::Life, row = j / 2, col = j % 2;
             value = static_cast<qulonglong>(ui->statsTableWidget->item(row, col)->text().toDouble()) << 8;
+        }
+        else if (statCode == Enums::CharacterStats::Achievements)
+        {
+            isAchievement = true;
         }
         else if (statCode != Enums::CharacterStats::End && statCode != Enums::CharacterStats::Level && statCode != Enums::CharacterStats::Experience)
         {
@@ -2754,7 +2758,7 @@ QByteArray MedianXLOfflineTools::statisticBytes()
                 continue;
             }
             else
-                value = charInfo.basicInfo.statsDynamicData.property(enumKey).toULongLong();
+                value = charInfo.valueOfStatistic(statCode);
         }
         else if (statCode == Enums::CharacterStats::End) // byte align
         {
@@ -2764,13 +2768,25 @@ QByteArray MedianXLOfflineTools::statisticBytes()
         else
             continue;
 
-        if (value)
+        if (value || isAchievement)
         {
             addStatisticBits(result, statCode, Enums::CharacterStats::StatCodeLength);
-            addStatisticBits(result, value, ItemDataBase::Properties()->value(statCode)->bitsSave);
+
+            ItemPropertyTxt *txtProp = ItemDataBase::Properties()->value(statCode);
+            if (isAchievement)
+            {
+                QList<QVariant> achievementData = achievements.at(achievementIndex).toList();
+                if (++achievementIndex < achievements.size())
+                    --i;
+
+                addStatisticBits(result, achievementData.at(0).toULongLong(), txtProp->paramBitsSave);
+                value = achievementData.at(1).toULongLong();
+            }
+            addStatisticBits(result, value, txtProp->bitsSave);
         }
 
-        CharacterInfo::instance().basicInfo.statsDynamicData.setProperty(enumKey, value);
+        if (!isAchievement)
+            CharacterInfo::instance().setValueForStatisitc(value, statCode);
     }
 
     int bitsCount = result.length();
