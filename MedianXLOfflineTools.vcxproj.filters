@@ -166,15 +166,6 @@
     <ClCompile Include="findresultswidget.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="skillplandialog.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Debug\moc_skillplandialog.cpp">
-      <Filter>Generated Files\Debug</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_skillplandialog.cpp">
-      <Filter>Generated Files\Release</Filter>
-    </ClCompile>
     <ClCompile Include="application.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -375,9 +366,6 @@
     <ClInclude Include="characterinfo.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_skillplandialog.h">
-      <Filter>Generated Files</Filter>
-    </ClInclude>
     <ClInclude Include="qtsingleapplication\qtlockedfile.h">
       <Filter>qtsingleapplication</Filter>
     </ClInclude>
@@ -463,12 +451,6 @@
     </CustomBuild>
     <CustomBuild Include="findresultswidget.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="skillplandialog.h">
-      <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="skillplandialog.ui">
-      <Filter>Form Files</Filter>
     </CustomBuild>
     <CustomBuild Include="application.h">
       <Filter>Header Files</Filter>
