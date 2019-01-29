@@ -191,7 +191,6 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, LaunchMode la
 #ifdef Q_OS_WIN32
         QSettings settings;
         settings.beginGroup("recentItems");
-        if (!settings.contains(kLastSavePathKey))
             settings.setValue(kLastSavePathKey, QDesktopServices::storageLocation(QDesktopServices::HomeLocation) + QLatin1String("/AppData/Roaming/MedianXL/save"));
 #endif
         updateWindowTitle();
