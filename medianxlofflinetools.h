@@ -200,7 +200,9 @@ private:
     quint32 checksum(const QByteArray &charByteArray) const;
 
     inline int totalPossibleStatPoints(int level) const;
+    int totalPossibleStatPoints(int level, quint8 let) const;
     inline int totalPossibleSkillPoints() const;
+    int totalPossibleSkillPoints(int level, quint8 doe, quint8 rad, quint8 iz) const;
     int investedStatPoints();
     inline void recalculateStatPoints();
 

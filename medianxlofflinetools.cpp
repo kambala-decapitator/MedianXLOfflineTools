@@ -191,7 +191,7 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, LaunchMode la
 #ifdef Q_OS_WIN32
         QSettings settings;
         settings.beginGroup("recentItems");
-            settings.setValue(kLastSavePathKey, QDesktopServices::storageLocation(QDesktopServices::HomeLocation) + QLatin1String("/AppData/Roaming/MedianXL/save"));
+        settings.setValue(kLastSavePathKey, QDesktopServices::storageLocation(QDesktopServices::HomeLocation) + QLatin1String("/AppData/Roaming/MedianXL/save"));
 #endif
         updateWindowTitle();
     }
@@ -365,13 +365,15 @@ void MedianXLOfflineTools::saveCharacter()
 {
     CharacterInfo &charInfo = CharacterInfo::instance();
 #ifdef MAKE_FINISHED_CHARACTER
-    charInfo.basicInfo.level = 120;
-    ui->levelSpinBox->setMaximum(120);
-    ui->levelSpinBox->setValue(120);
-    ui->freeSkillPointsLineEdit->setText("134");
-    ui->freeStatPointsLineEdit->setText("1110");
-    ui->signetsOfLearningEatenLineEdit->setText("500");
-    ui->signetsOfSkillEatenLineEdit->setText("3");
+    charInfo.basicInfo.level = Enums::CharacterStats::MaxLevel;
+    ui->levelSpinBox->setMaximum(Enums::CharacterStats::MaxLevel);
+    ui->levelSpinBox->setValue(Enums::CharacterStats::MaxLevel);
+    ui->signetsOfLearningEatenLineEdit->setText(QString::number(Enums::CharacterStats::SignetsOfLearningMax));
+    ui->signetsOfSkillEatenLineEdit->setText(QString::number(Enums::CharacterStats::SignetsOfSkillMax));
+    charInfo.setValueForStatisitc(Enums::CharacterStats::SignetsOfLearningMax, Enums::CharacterStats::SignetsOfLearningEaten);
+    charInfo.setValueForStatisitc(Enums::CharacterStats::SignetsOfSkillMax, Enums::CharacterStats::SignetsOfSkillEaten);
+    ui->freeSkillPointsLineEdit->setText(QString::number(totalPossibleSkillPoints(charInfo.basicInfo.level, kDifficultiesNumber, kDifficultiesNumber, kDifficultiesNumber)));
+    ui->freeStatPointsLineEdit->setText(QString::number(totalPossibleStatPoints(charInfo.basicInfo.level, kDifficultiesNumber)));
 #endif
 
     QByteArray statsBytes = statisticBytes();
@@ -2002,6 +2004,7 @@ bool MedianXLOfflineTools::processSaveFile()
         return false;
     }
 
+#ifndef MAKE_FINISHED_CHARACTER
     int totalPossibleStats = totalPossibleStatPoints(charInfo.basicInfo.level);
     if (totalStats > totalPossibleStats) // check if stats are hacked
     {
@@ -2014,6 +2017,7 @@ bool MedianXLOfflineTools::processSaveFile()
         charInfo.setValueForStatisitc(totalPossibleStats, CharacterStats::FreeStatPoints);
         shouldShowHackWarning = true;
     }
+#endif
 
     // skills
     quint16 skills = 0, maxPossibleSkills = totalPossibleSkillPoints();
@@ -2033,6 +2037,7 @@ bool MedianXLOfflineTools::processSaveFile()
         //qDebug() << i << skillValue << ItemDataBase::Skills()->at(skillsIndexes.first.at(i))->name;
     }
     skills += charInfo.valueOfStatistic(CharacterStats::FreeSkillPoints);
+#ifndef MAKE_FINISHED_CHARACTER
     if (skills > maxPossibleSkills) // check if skills are hacked
     {
         skills = maxPossibleSkills;
@@ -2040,6 +2045,7 @@ bool MedianXLOfflineTools::processSaveFile()
         _saveFileContents.replace(firstSkillOffset, skillsNumber, QByteArray(skillsNumber, 0));
         shouldShowHackWarning = true;
     }
+#endif
     charInfo.basicInfo.totalSkillPoints = skills;
 
     charInfo.basicInfo.skillsReadable.clear();
@@ -2088,6 +2094,7 @@ bool MedianXLOfflineTools::processSaveFile()
     //qint32 strBonus = propValues.value(ItemProperties::StrengthBonus);
     //qDebug() << "strength value is" << charInfo.valueOfStatistic(CharacterStats::Strength) * (strBonus ? strBonus : 1) + propValues.value(ItemProperties::Strength);
 
+#ifndef MAKE_FINISHED_CHARACTER
     qint32 avoidValue = 0;//propValues.value(ItemProperties::Avoid1);
     foreach (ItemInfo *item, itemsBuffer)
         if (ItemDataBase::doesItemGrantBonus(item))
@@ -2099,6 +2106,7 @@ bool MedianXLOfflineTools::processSaveFile()
             avoidText += QString(" (%1)").arg(tr("well, you have %1% actually", "avoid").arg(avoidValue));
         showLoadingError(avoidText, true);
     }
+#endif
 
     // corpse data
     inputDataStream.skipRawData(ItemParser::kItemHeader.length()); // JM
@@ -2256,15 +2264,23 @@ quint32 MedianXLOfflineTools::checksum(const QByteArray &charByteArray) const
 
 inline int MedianXLOfflineTools::totalPossibleStatPoints(int level) const
 {
-    const CharacterInfo &charInfo = CharacterInfo::instance();
-    return (level - 1) * kStatPointsPerLevel + 5 * charInfo.questsInfo.lamEsensTomeQuestsCompleted() + charInfo.valueOfStatistic(Enums::CharacterStats::SignetsOfLearningEaten);
+    return totalPossibleStatPoints(level, CharacterInfo::instance().questsInfo.lamEsensTomeQuestsCompleted());
+}
+
+int MedianXLOfflineTools::totalPossibleStatPoints(int level, quint8 let) const
+{
+    return (level - 1) * kStatPointsPerLevel + 5 * let + CharacterInfo::instance().valueOfStatistic(Enums::CharacterStats::SignetsOfLearningEaten);
 }
 
 inline int MedianXLOfflineTools::totalPossibleSkillPoints() const
 {
     const CharacterInfo &charInfo = CharacterInfo::instance();
-    return (charInfo.basicInfo.level - 1) * kSkillPointsPerLevel + charInfo.questsInfo.denOfEvilQuestsCompleted() + charInfo.questsInfo.radamentQuestsCompleted() + charInfo.questsInfo.izualQuestsCompleted() * 2 +
-        charInfo.valueOfStatistic(Enums::CharacterStats::SignetsOfSkillEaten);
+    return totalPossibleSkillPoints(charInfo.basicInfo.level, charInfo.questsInfo.denOfEvilQuestsCompleted(), charInfo.questsInfo.radamentQuestsCompleted(), charInfo.questsInfo.izualQuestsCompleted());
+}
+
+int MedianXLOfflineTools::totalPossibleSkillPoints(int level, quint8 doe, quint8 rad, quint8 iz) const
+{
+    return (level - 1) * kSkillPointsPerLevel + doe + rad + iz * 2 + CharacterInfo::instance().valueOfStatistic(Enums::CharacterStats::SignetsOfSkillEaten);
 }
 
 int MedianXLOfflineTools::investedStatPoints()
