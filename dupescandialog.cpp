@@ -453,10 +453,6 @@ QString DupeScanDialog::baseDupeScanLogFileName()
 
 bool DupeScanDialog::addItemInfoToXml(ItemInfo *item, bool isSocketable, QXmlStreamWriter &xml)
 {
-    static QRegExp runeRegex("r(\\d\\d)");
-    if (!(isSocketable || (item->isExtended && shouldCheckItem(item)) || (runeRegex.indexIn(item->itemType) != -1 && runeRegex.cap(1).toInt() > 50))) // also save Great/Elemental runes
-        return false;
-
     xml.writeStartElement(QLatin1String("item"));
 
     xml.writeStartElement(QLatin1String("name"));
@@ -465,6 +461,28 @@ bool DupeScanDialog::addItemInfoToXml(ItemInfo *item, bool isSocketable, QXmlStr
         xml.writeAttribute(QLatin1String("special"), nameList.first());
     xml.writeCharacters(nameList.last());
     xml.writeEndElement(); // name
+
+    ItemBase *baseInfo = ItemDataBase::Items()->value(item->itemType);
+    QString imageName;
+    if (item->quality == Enums::ItemQuality::Unique || item->quality == Enums::ItemQuality::Set)
+    {
+        SetOrUniqueItemInfo *setOrUniqueInfo = item->quality == Enums::ItemQuality::Set ? static_cast<SetOrUniqueItemInfo *>(ItemDataBase::Sets()   ->value(item->setOrUniqueId))
+                                                                                        : static_cast<SetOrUniqueItemInfo *>(ItemDataBase::Uniques()->value(item->setOrUniqueId));
+        if (setOrUniqueInfo && !setOrUniqueInfo->imageName.isEmpty())
+            imageName = setOrUniqueInfo->imageName;
+    }
+    if (imageName.isEmpty())
+    {
+        if (item->variableGraphicIndex)
+        {
+            int i = item->variableGraphicIndex - 1;
+            const QList<QByteArray> &variableImageNames = ItemDataBase::ItemTypes()->value(baseInfo->types.at(0)).variableImageNames;
+            imageName = i < variableImageNames.size() ? variableImageNames.at(i) : variableImageNames.last();
+        }
+        else
+            imageName = baseInfo->imageName;
+    }
+    xml.writeTextElement(QLatin1String("image"), imageName.toLower());
 
     xml.writeTextElement(QLatin1String("ilvl"), QString::number(item->ilvl));
     xml.writeTextElement(QLatin1String("type"), item->itemType.constData());
