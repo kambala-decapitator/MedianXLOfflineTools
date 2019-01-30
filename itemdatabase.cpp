@@ -770,7 +770,7 @@ bool ItemDataBase::doesItemGrantBonus(ItemInfo *item)
 bool ItemDataBase::canDisenchantIntoArcaneShards(ItemInfo *item)
 {
     // prohibit disenchanting TUs from the Gift Box (Griswold) and quest items into shards
-    return canDisenchant(item) && !(item->props.contains(Enums::ItemProperties::ItemDuped) || Items()->value(item->itemType)->questId > 0);
+    return canDisenchant(item) && !(item->props.contains(Enums::ItemProperties::CantDisenchant) || Items()->value(item->itemType)->questId > 0);
 }
 
 bool ItemDataBase::canDisenchantIntoSignetOfLearning(ItemInfo *item)
