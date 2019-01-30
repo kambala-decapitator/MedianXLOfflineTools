@@ -48,6 +48,7 @@ public:
 
     static const QList<int> &kRows();
     static int rowsInStorageAtIndex(int storage);
+    static int colsInStorageAtIndex(int storage);
     static int tabIndexFromItemStorage(int storage);
     static const QString &tabNameAtIndex(int i);
 

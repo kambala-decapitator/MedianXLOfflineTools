@@ -405,6 +405,11 @@ int ItemsViewerDialog::rowsInStorageAtIndex(int storage)
     return kRows().at(tabIndexFromItemStorage(storage));
 }
 
+int ItemsViewerDialog::colsInStorageAtIndex(int /*storage*/)
+{
+    return kColumnsDefault;
+}
+
 int ItemsViewerDialog::tabIndexFromItemStorage(int storage)
 {
     return storage > Enums::ItemStorage::Inventory ? storage - 2 : storage;

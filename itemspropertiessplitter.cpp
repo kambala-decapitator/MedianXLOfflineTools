@@ -755,7 +755,7 @@ ItemInfo *ItemsPropertiesSplitter::disenchantItemIntoItem(ItemInfo *oldItem, Ite
     ItemsList items = ItemDataBase::itemsStoredIn(oldItem->storage, oldItem->location, oldItem->plugyPage ? &oldItem->plugyPage : 0);
     items.removeOne(oldItem);
     ItemInfo *newItemCopy = new ItemInfo(*newItem); // it's safe because there're no properties and no socketables
-    if (!ItemDataBase::canStoreItemAt(oldItem->row, oldItem->column, newItemCopy->itemType, items, ItemsViewerDialog::rowsInStorageAtIndex(oldItem->storage)))
+    if (!ItemDataBase::canStoreItemAt(oldItem->row, oldItem->column, newItemCopy->itemType, items, ItemsViewerDialog::rowsInStorageAtIndex(oldItem->storage), ItemsViewerDialog::colsInStorageAtIndex(oldItem->storage)))
     {
         ERROR_BOX("If you see this text (which you shouldn't), please tell me which item you've just tried to disenchant");
         delete newItemCopy;
@@ -778,7 +778,7 @@ ItemInfo *ItemsPropertiesSplitter::disenchantItemIntoItem(ItemInfo *oldItem, Ite
 
 bool ItemsPropertiesSplitter::storeItemInStorage(ItemInfo *item, int storage)
 {
-    bool result = ItemDataBase::storeItemIn(item, static_cast<Enums::ItemStorage::ItemStorageEnum>(storage), ItemsViewerDialog::rowsInStorageAtIndex(storage));
+    bool result = ItemDataBase::storeItemIn(item, static_cast<Enums::ItemStorage::ItemStorageEnum>(storage), ItemsViewerDialog::rowsInStorageAtIndex(storage), ItemsViewerDialog::colsInStorageAtIndex(storage));
     if (result)
         addItemToList(item, false);
     return result;

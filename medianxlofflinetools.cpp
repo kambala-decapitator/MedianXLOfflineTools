@@ -1032,8 +1032,8 @@ void MedianXLOfflineTools::itemStorageTabChanged(int tabIndex)
 void MedianXLOfflineTools::giveCube()
 {
     ItemInfo *cube = ItemDataBase::loadItemFromFile("cube");
-    if (!ItemDataBase::storeItemIn(cube, Enums::ItemStorage::Inventory, ItemsViewerDialog::rowsInStorageAtIndex(Enums::ItemStorage::Inventory)) &&
-        !ItemDataBase::storeItemIn(cube, Enums::ItemStorage::Stash,     ItemsViewerDialog::rowsInStorageAtIndex(Enums::ItemStorage::Stash)))
+    if (!ItemDataBase::storeItemIn(cube, Enums::ItemStorage::Inventory, ItemsViewerDialog::rowsInStorageAtIndex(Enums::ItemStorage::Inventory), ItemsViewerDialog::colsInStorageAtIndex(Enums::ItemStorage::Inventory)) &&
+        !ItemDataBase::storeItemIn(cube, Enums::ItemStorage::Stash,     ItemsViewerDialog::rowsInStorageAtIndex(Enums::ItemStorage::Stash),     ItemsViewerDialog::colsInStorageAtIndex(Enums::ItemStorage::Stash)))
     {
         ERROR_BOX(tr("You have no free space in inventory and stash to store the Cube"));
         delete cube;
@@ -1074,7 +1074,7 @@ void MedianXLOfflineTools::fillBeltWithMoonCookies()
         for (int i = 0; i < newMoonSymbols; ++i)
         {
             ItemInfo *moonSymbol = new ItemInfo(*moonSymbolTemplate);
-            if (ItemDataBase::storeItemIn(moonSymbol, storage, ItemParser::kBeltMaxRows, location, &beltItems, 0, ItemParser::kBeltMaxColumns, false))
+            if (ItemDataBase::storeItemIn(moonSymbol, storage, ItemParser::kBeltMaxRows, ItemParser::kBeltMaxColumns, location, &beltItems, 0, false))
             {
                 int displayColumn = moonSymbol->column;
                 moonSymbol->column += moonSymbol->row * ItemParser::kBeltMaxRows;

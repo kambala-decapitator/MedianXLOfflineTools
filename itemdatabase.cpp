@@ -673,12 +673,12 @@ ItemsList ItemDataBase::itemsStoredIn(int storage, int location /*= Enums::ItemL
     return items;
 }
 
-bool ItemDataBase::storeItemIn(ItemInfo *item, Enums::ItemStorage::ItemStorageEnum storage, quint8 rowsTotal, quint32 plugyPage /*= 0*/, quint8 colsTotal /*= 10*/, bool shouldChangeCoordinatesBits /*= true*/)
+bool ItemDataBase::storeItemIn(ItemInfo *item, Enums::ItemStorage::ItemStorageEnum storage, quint8 rowsTotal, quint8 colsTotal, quint32 plugyPage /*= 0*/, bool shouldChangeCoordinatesBits /*= true*/)
 {
-    return storeItemIn(item, storage, rowsTotal, Enums::ItemLocation::Stored, 0, plugyPage, colsTotal, shouldChangeCoordinatesBits);
+    return storeItemIn(item, storage, rowsTotal, colsTotal, Enums::ItemLocation::Stored, 0, plugyPage, shouldChangeCoordinatesBits);
 }
 
-bool ItemDataBase::storeItemIn(ItemInfo *item, Enums::ItemStorage::ItemStorageEnum storage, quint8 rowsTotal, Enums::ItemLocation::ItemLocationEnum location, ItemsList *pItems /*= 0*/, quint32 plugyPage /*= 0*/, quint8 colsTotal /*= 10*/, bool shouldChangeCoordinatesBits /*= true*/)
+bool ItemDataBase::storeItemIn(ItemInfo *item, Enums::ItemStorage::ItemStorageEnum storage, quint8 rowsTotal, quint8 colsTotal, Enums::ItemLocation::ItemLocationEnum location, ItemsList *pItems /*= 0*/, quint32 plugyPage /*= 0*/, bool shouldChangeCoordinatesBits /*= true*/)
 {
     ItemsList items = pItems ? *pItems : itemsStoredIn(storage, location, plugyPage ? &plugyPage : 0);
     for (quint8 i = 0; i < rowsTotal; ++i)
@@ -701,7 +701,7 @@ bool ItemDataBase::storeItemIn(ItemInfo *item, Enums::ItemStorage::ItemStorageEn
     return false;
 }
 
-bool ItemDataBase::canStoreItemAt(quint8 row, quint8 col, const QByteArray &storeItemType, const ItemsList &items, int rowsTotal, int colsTotal /*= 10*/)
+bool ItemDataBase::canStoreItemAt(quint8 row, quint8 col, const QByteArray &storeItemType, const ItemsList &items, int rowsTotal, int colsTotal)
 {
     // col is horizontal (x), row is vertical (y)
     ItemBase *storeItemBase = ItemDataBase::Items()->value(storeItemType);
