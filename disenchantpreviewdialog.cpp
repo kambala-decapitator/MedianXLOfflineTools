@@ -64,6 +64,7 @@ DisenchantPreviewDialog::DisenchantPreviewDialog(const ItemsList &items, bool ar
     if (areItemsFromSamePage)
         _itemsTreeView->hideColumn(DisenchantPreviewModel::PageColumn);
 
+    connect(_itemsTreeModel, SIGNAL(dataChanged(QModelIndex,QModelIndex)), SLOT(updateLabelTextAndOkButtonState()));
     connect(_itemsTreeView, SIGNAL(customContextMenuRequested(const QPoint &)), SLOT(showTreeViewContextMenu(const QPoint &)));
     connect(_buttonBox, SIGNAL(accepted()), SLOT(accept()));
     connect(_buttonBox, SIGNAL(rejected()), SLOT(reject()));
@@ -154,8 +155,6 @@ void DisenchantPreviewDialog::changeSelectedItemsCheckState()
         QModelIndex checkboxIndex = _proxyModel->index(index.row(), DisenchantPreviewModel::CheckboxColumn);
         _proxyModel->setData(checkboxIndex, checkAction == Invert ? !isRowChecked(checkboxIndex) : static_cast<bool>(checkAction), Qt::CheckStateRole);
     }
-
-    updateLabelTextAndOkButtonState();
 }
 
 void DisenchantPreviewDialog::updateLabelTextAndOkButtonState()

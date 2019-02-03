@@ -46,6 +46,7 @@ protected:
 private slots:
     void showTreeViewContextMenu(const QPoint &pos);
     void changeSelectedItemsCheckState();
+    void updateLabelTextAndOkButtonState();
 
 private:
     QLabel *_label;
@@ -55,7 +56,6 @@ private:
     DisenchantPreviewModel *_itemsTreeModel;
     CheckboxSortFilterProxyModel *_proxyModel;
 
-    void updateLabelTextAndOkButtonState();
     bool isRowChecked(int row) const;
     bool isRowChecked(const QModelIndex &index) const;
 
