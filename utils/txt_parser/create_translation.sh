@@ -5,3 +5,4 @@ perl txtparser.pl $1
 cp -fR generated/$1 data/$1
 ./CompressFiles data/$1
 rm -f data/$1/*.txt
+rm -f generated/$1/tbl.dat

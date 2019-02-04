@@ -1,7 +1,4 @@
 - rlvl doesn't check socketables? (CotW)
-- remove non-2017 support
-- proper support of level 120+
-- app crashes when trying to load characters from program files (only when game is installed there?)
 
 Не знаю насколько это просто будет реализовать, но по-моему будет полезно иметь возможность переназначать номера страниц вручную. В данный момент можно добавлять пустые страницы но для сортировки приходится перемещать всё вручную (не прибегая к автоматической сортировке). К этой функции можно так же добавить выбор типа сундука, то есть private или shared. Таким образом процесс сортировки "на свой вкус" будет заметно упрощен.
 
@@ -67,4 +64,18 @@ struct D2SaveHeaderStrc
    BYTE nLastQuest[3];                  // 0x14F (new data starts here)
    BYTE nLastQuestFlags[3];             // 0x152
    BYTE nQuestHistory[3][72];           // 0x155
+};
+
+enum D2C_AchievementCountLayers
+{
+    ACHIEVEMENT_KILL_MONSTER = 8192,
+    ACHIEVEMENT_KILL_UNDEAD,
+    ACHIEVEMENT_KILL_DEMON,
+    ACHIEVEMENT_KILL_PLAYER,
+    ACHIEVEMENT_DEATH,
+    ACHIEVEMENT_RAID_COMPLETED,
+    ACHIEVEMENT_BOUNTY_TASK_COMPLETED,
+    ACHIEVEMENT_GOLD_BOUNTY_COMPLETED,
+    ACHIEVEMENT_SILVER_BOUNTY_COMPLETED,
+    ACHIEVEMENT_BRONZE_BOUNTY_COMPLETED,
 };

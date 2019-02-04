@@ -77,7 +77,7 @@
 83	0	4							к Навыкам Амазонки 	к Навыкам Амазонки 		13	155	1				3	item_addclassskills
 85	25	8							к Получаемому Опыту	к Получаемому Опыту		4	16	1					item_addexperience
 86	0	10							к Жизни после каждого Убийства	к Жизни после каждого Убийства		1	21	1					item_healafterkill
-87	45	10							Снижает Цены у всех Торговцев на	Снижает Цены у всех Торговцев на		20	13	1					item_reducedprices
+87	45	10							к Ценам у Торговцев	к Ценам у Торговцев		20	13	1					item_reducedprices
 88	0	32	16	32														16	achievement_counts
 89	5	8							к Радиусу Освещения	к Радиусу Освещения		1	11	1					item_lightradius
 90	0	24																	item_lightcolor
@@ -314,7 +314,7 @@
 369	0	5																	x_signet51
 370	0	5																	x_signet52
 371	0	7							\orange;Изумительная Грация\white;	\orange;Изумительная Грация\white;		3	247	0				17	item_amazinggrace
-372	0	1							\dgrey;Не может быть убрано из гнёзд\blue;	\dgrey;Не может быть убрано из гнёзд\blue;		3	4	0					item_nounsock
+372	0	1							\dgrey;Не может быть извлечено из гнёзд\blue;	\dgrey;Не может быть извлечено из гнёзд\blue;		3	4	0					item_nounsock
 373	300	9																	passive_phys_pierce
 375	0	15										31	246	0				15	desc_top
 376	50	8							Замедляет Ближнюю Цель на	Замедляет Ближнюю Цель на		2	82	2					item_slow_offweapon
@@ -342,7 +342,7 @@
 406	0	10							к Урону Заклинаний Холода	к Урону Заклинаний Холода	(Основано на Уровне Персонажа)	7	93	1					passive_cold_mastery_perlevel
 407	0	10							к Урону Заклинаний Яда	к Урону Заклинаний Яда	(Основано на Уровне Персонажа)	7	93	1					passive_pois_mastery_perlevel
 408	0	5																	x_signet61
-409	50	8							к Длит. Навыков Баффа/Дебаффа/Холода	к Длит. Навыков Баффа/Дебаффа/Холода		2	130	1					profession_duration_mod
+409	50	8							к Длит. Навыков (Де-)Баффа/Холода	к Длит. Навыков (Де-)Баффа/Холода		2	130	1					profession_duration_mod
 412	0	10																	resonance_buff
 413	0	8							к Живучести при использовании Яблока	к Живучести при использовании Яблока		2	55	1					skill_bloodymary_bonus
 414	50	9							Бонус к жизни для призванных Edyrem:	Бонус к жизни для призванных Edyrem:		4	133	1					skill_edyrem_hp_percent
@@ -377,6 +377,7 @@
 468	0	8							Урон для Vessel of Retribution	Урон для Vessel of Retribution		4	142	1					skill_light_mastery
 469	0	8							Дополнительные Цели для Сосудов Паладина	Дополнительные Цели для Сосудов Паладина		1	143	1					skill_shadow_mastery
 470	50	9							к Урону Призываемых Существ	к Урону Призываемых Существ		4	80	1					skill_minion_dmg_percent
+471	50	9							к Урону Призываемых Существ	к Урону Призываемых Существ		4	80	1					shamanic_dmg
 473	0	8							\green;Открывает ваш Навык Эннеады (Ennead)	\green;Открывает ваш Навык Эннеады (Ennead)		3	239	0					learn_ennead
 474	0	8							\green;Открывает ваш Навык Черной Дороги (Black Road)	\green;Открывает ваш Навык Черной Дороги (Black Road)		3	239	0					learn_blackroad
 475	0	1							\red;Превращение в Друида\blue;	\red;Превращение в Друида\blue;		3	240	0					item_desc_druidmorph
@@ -398,7 +399,7 @@
 498	0	9							к Урону Элементалей при Призыве во время использования Пакта Крови	к Урону Элементалей при Призыве во время использования Пакта Крови		2	19	1					item_cots_when_pact
 499	0	10							к Энергии	к Энергии	(Основано на Уровне Персонажа)	6	65	1					item_energy_perlevel
 500	100	8							к Рейтингу Атаки Призываемых Существ	к Рейтингу Атаки Призываемых Существ		4	111	1					item_minion_attack
-501	23	10							\grey;Тайных Кристаллов: 	\grey;Количество: 		3	60	2					shrine_counter
+501	23	10							\grey;Arcane Crystals: 	\grey;Количество: 		3	60	2					shrine_counter
 503	0	10							к Силе	к Силе	(Основано на Уровне Навыка Blessed Life)	6	71	1					item_strength_perblessedlife
 504	0	10							к Ловкости	к Ловкости	(Основано на Уровне Навыка Blessed Life)	6	67	1					item_dexterity_perblessedlife
 505	0	10							Life Regenerated per Second (Based on Character Level)	Life Regenerated per Second (Based on Character Level)		32	65	1					item_hpregen_perlevel

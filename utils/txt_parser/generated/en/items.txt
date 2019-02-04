@@ -1540,10 +1540,10 @@ cy01	\orange;Cycle	\blue;+1 Required Level\n+(2 to 8) to Strength\n\grey;Cube Wi
 cy02	\orange;Cycle	\blue;+1 Required Level\n+(2 to 8) to Dexterity\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invch1		cyc1,cycl		-1
 cy03	\orange;Cycle	\blue;+1 Required Level\n+(2 to 8) to Vitality\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invch1		cyc1,cycl		-1
 cy04	\orange;Cycle	\blue;+1 Required Level\n+(2 to 8) to Energy\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invch1		cyc1,cycl		-1
-cy05	\orange;Cycle	\blue;+3 Required Level\n+(5 to 15) to Strength\n+(1 to 2)% to Strength\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	2	2		0	0	0									invch2		cyc2,cycl		-1
-cy06	\orange;Cycle	\blue;+3 Required Level\n+(5 to 15) to Dexterity\n+(1 to 2)% to Dexterity\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	2	2		0	0	0									invch2		cyc2,cycl		-1
-cy07	\orange;Cycle	\blue;+3 Required Level\n+(5 to 15) to Vitality\n+(1 to 2)% to Vitality\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	2	2		0	0	0									invch2		cyc2,cycl		-1
-cy08	\orange;Cycle	\blue;+3 Required Level\n+(5 to 15) to Energy\n+(1 to 2)% to Energy\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	2	2		0	0	0									invch2		cyc2,cycl		-1
+cy05	\orange;Cycle	\blue;+3 Required Level\n+(5 to 15) to Strength\n+(0 to 2)% to Strength\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	2	2		0	0	0									invch2		cyc2,cycl		-1
+cy06	\orange;Cycle	\blue;+3 Required Level\n+(5 to 15) to Dexterity\n+(0 to 2)% to Dexterity\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	2	2		0	0	0									invch2		cyc2,cycl		-1
+cy07	\orange;Cycle	\blue;+3 Required Level\n+(5 to 15) to Vitality\n+(0 to 2)% to Vitality\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	2	2		0	0	0									invch2		cyc2,cycl		-1
+cy08	\orange;Cycle	\blue;+3 Required Level\n+(5 to 15) to Energy\n+(0 to 2)% to Energy\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	2	2		0	0	0									invch2		cyc2,cycl		-1
 cy09	\orange;Cycle	\blue;+5 Required Level\n+(10 to 20) to Strength\n+(2 to 3)% to Strength\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	3	2		0	0	0									invsst		cyc3,cycl		-1
 cy10	\orange;Cycle	\blue;+5 Required Level\n+(10 to 20) to Dexterity\n+(2 to 3)% to Dexterity\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	3	2		0	0	0									invsst		cyc3,cycl		-1
 cy11	\orange;Cycle	\blue;+5 Required Level\n+(10 to 20) to Vitality\n+(2 to 3)% to Vitality\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	3	2		0	0	0									invsst		cyc3,cycl		-1

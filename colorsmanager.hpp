@@ -65,7 +65,8 @@ public:
         Orange,
         Yellow,
         DarkGreen,
-        Purple
+        Purple,
+        LastColor = Purple
     };
 
     // last byte in the color code

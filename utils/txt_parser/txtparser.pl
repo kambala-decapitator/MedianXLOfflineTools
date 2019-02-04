@@ -551,6 +551,12 @@ for my $i (0..scalar @$baseStats)
 }
 close $out;
 
+open $out, ">", "$prefix/tbl.dat"; # not compressed
+for my $tblKey (sort keys %$tbl)
+{
+	print $out $tblKey, "\t", $tbl->{$tblKey}, "\n"
+}
+
 # open my $out, ">", "d2items.pm";
 # print $out saveStructure($miscTypes, "itemMisc", 80);
 # print $out saveStructure($weaponTypes, "itemWeapons", 80);

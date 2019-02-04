@@ -268,6 +268,7 @@ public:
         Trophy_ShrineBless_ClassCharmVeterans = 219,
         CantDisenchant = 276,
         MysticOrbsEffectDoubled = 296,
+        CooldownReduction = 309,
         Avoid1 = 338,
         Avoid2,
         Avoid3,

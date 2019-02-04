@@ -377,6 +377,7 @@
 468	0	8							Damage to Vessel of Retribution	Damage to Vessel of Retribution		4	142	1					skill_light_mastery
 469	0	8							Extra Targets to Paladin Vessels	Extra Targets to Paladin Vessels		1	143	1					skill_shadow_mastery
 470	50	9							to Summoned Minion Damage	to Summoned Minion Damage		4	80	1					skill_minion_dmg_percent
+471	50	9							to Summoned Minion Damage	to Summoned Minion Damage		4	80	1					shamanic_dmg
 473	0	8							\green;Unlocks your Ennead Skill	\green;Unlocks your Ennead Skill		3	239	0					learn_ennead
 474	0	8							\green;Unlocks your Black Road Skill	\green;Unlocks your Black Road Skill		3	239	0					learn_blackroad
 475	0	1							\red;Druid Morph\blue;	\red;Druid Morph\blue;		3	240	0					item_desc_druidmorph

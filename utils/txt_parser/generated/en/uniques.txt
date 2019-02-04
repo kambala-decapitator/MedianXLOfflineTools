@@ -1436,7 +1436,7 @@
 1434	Holy Wars	100	
 1435	Crown of Arnazeus	100	
 1436	Deviant Crown	60	
-1437	Phoenix Beak	100	
+1437	Phoenix Beak	666	
 1438	Sky Spirit	100	
 1439	Shadowtwin	100	
 1440	Warmonger	100	
@@ -1444,7 +1444,7 @@
 1442	Segnitia	100	
 1443	Blacktongue	100	
 1444	Carsomyr	100	
-1445	Hanfod Tân	100	
+1445	Hanfod Tân	666	
 1446	The Searing Heat	100	flammeen
 1447	The Biting Frost	100	flammeen
 1448	Warshrike	100	
@@ -1517,7 +1517,7 @@
 1515	The Pathless	100	
 1516	Claw of the Spirit Wolf	100	
 1517	Farsight Globe	80	
-1518	Eye of the Storm	20	
+1518	Storm Shard	20	
 1519	The Boulder	1	
 1520	Borgin's Vigil	0	
 1521	Katamari	30	
@@ -1703,3 +1703,5 @@
 1701	Manastorm	100	
 1702	Dark Guardian	100	
 1703	Feardrinker	100	
+1704	Phoenix Beak	100	
+1705	Hanfod Tân	100	

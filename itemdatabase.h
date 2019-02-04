@@ -35,6 +35,7 @@ public:
     static RunewordHash *RW();
     static QHash<QByteArray, SocketableItemInfo *> *Socketables();
     static QStringList *NonMagicItemQualities();
+    static QHash<QString, QString> *StringTable();
 
     static FullSetInfo fullSetInfoForKey(const QByteArray &setKey) { return _sets.value(setKey); }
     static QString completeItemName(ItemInfo *item, bool shouldUseColor, bool showQualityText = true);
@@ -60,7 +61,7 @@ public:
     static bool isTomeWithScrolls(ItemInfo *item);
 
     static bool doesItemGrantBonus(ItemInfo *item);
-    static bool isCtcProperty(int propId) { return Properties()->value(propId)->descPositive.startsWith('%'); }
+    static bool isCtcProperty(int propId) { return propId != Enums::ItemProperties::CooldownReduction && Properties()->value(propId)->descPositive.startsWith('%'); }
 
     static bool canDisenchantIntoArcaneShards(ItemInfo *item);
     static bool canDisenchantIntoSignetOfLearning(ItemInfo *item);

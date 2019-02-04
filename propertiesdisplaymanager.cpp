@@ -326,13 +326,6 @@ void PropertiesDisplayManager::constructPropertyStrings(const PropertiesMap &pro
         if (!displayString.isEmpty())
         {
             displayString += hiddenPropertyText;
-            if (propId == ItemProperties::ReplenishLife || propId == ItemProperties::ReplenishLifeBasedOnClvl)
-            {
-                double lifePerSec = prop->value / 256.0;
-                if (propId == ItemProperties::ReplenishLifeBasedOnClvl)
-                    lifePerSec *= CharacterInfo::instance().basicInfo.level / 32.0;
-                displayString += QString(" (%1)").arg(tr("%1 life per second").arg(lifePerSec, 0, 'f', 3));
-            }
 
             quint8 descPriority = ItemDataBase::Properties()->value(propId)->descPriority;
             propsDisplayMap.insertMulti(descPriority, ItemPropertyDisplay(displayString, descPriority, propId));
@@ -449,7 +442,7 @@ QString PropertiesDisplayManager::propertyDisplay(ItemProperty *propDisplay, int
 #else
     sprintf
 #endif
-    (valueStringSigned, "%+d", value);
+    (valueStringSigned, "%+d", prop->descFunc == 32 ? value / 10 : value);
 
     QString description = value < 0 ? prop->descNegative : prop->descPositive, result;
     switch (prop->descFunc) // it's described in https://d2mods.info/index.php?ind=reviews&op=entry_view&iden=448 - ItemStatCost.txt tutorial
@@ -492,6 +485,19 @@ QString PropertiesDisplayManager::propertyDisplay(ItemProperty *propDisplay, int
         result = QString("%1% %2 %3").arg(value).arg(description).arg(shouldColor ? htmlStringFromDiabloColorString(monsterName, ColorsManager::NoColor) : monsterName);
         break;
     }
+    // new in Sigma:
+    case 31:
+    {
+        QString s = ItemDataBase::StringTable()->value(QString::number(propDisplay->param), tr("tbl key %1 missing").arg(propDisplay->param));
+        result = shouldColor ? htmlStringFromDiabloColorString(s, value > ColorsManager::LastColor ? ColorsManager::Blue : static_cast<ColorsManager::ColorIndex>(value)) : s;
+        break;
+    }
+    case 32: // HP regen
+        result = QString("%1 %2").arg(valueStringSigned).arg(description);
+        break;
+    case 33:
+        result = description.replace(QLatin1String("%s"), ItemDataBase::Skills()->at(propDisplay->param)->name).replace(QLatin1String("%.1g"), QString::number(value / 25.0, 'g', 1) + ItemDataBase::StringTable()->value(prop->descStringAdd));
+        break;
     // 9, 10, 14, 16-19 - absent
     // everything else is constructed in ItemParser (mostly in parseItemProperties()), i.e. has displayString
     default:

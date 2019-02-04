@@ -474,6 +474,32 @@ QStringList *ItemDataBase::NonMagicItemQualities()
     return &allQualities;
 }
 
+QHash<QString, QString> *ItemDataBase::StringTable()
+{
+    static QHash<QString, QString> strings;
+    if (strings.isEmpty())
+    {
+        QFile f(ResourcePathManager::localizedPathForFileName("tbl"));
+        if (!f.open(QIODevice::ReadOnly))
+        {
+            ERROR_BOX_NO_PARENT(tr("String table not loaded.") + "\n" + tr("Reason: %1").arg(f.errorString()));
+            return 0;
+        }
+
+        QByteArray fileData = f.readAll();
+        QBuffer buf(&fileData);
+        if (!buf.open(QIODevice::ReadOnly))
+            return 0;
+        while (!buf.atEnd())
+        {
+            QList<QByteArray> data = stringArrayOfCurrentLineInFile(buf);
+            if (!data.isEmpty())
+                strings[QString::fromUtf8(data.at(0))] = data.size() > 1 ? QString::fromUtf8(data.at(1)) : QString();
+        }
+    }
+    return &strings;
+}
+
 QList<QByteArray> ItemDataBase::stringArrayOfCurrentLineInFile(QIODevice &d)
 {
     bool isFirstPos = d.pos() == 0;
