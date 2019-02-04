@@ -232,7 +232,7 @@ Astarte	1	Zero socketables	stor									r34						ac%		87	114	swing3		25	25	oskil
 Oracle	1	Zero socketables	stor									r40						ac%		115	143	sor		3	4	mana%		21	30	cast3		40	40	mana/lvl	320	320	320	ac		500	500					Oracle		0
 Vanity	1	Zero socketables	stor									r47						ac%		144	171	gold%		30	30	mag%		16	25	sor		3	5	dex		51	100	enr		51	100	hp%-mp%		-2	-2	Vanity		0
 Comaetho	1	Zero socketables	stor									r50						ac%		144	171	avoidance		5	5	sor		2	2	pierce-all		16	25	hex-syn		50	50	slow-thorns		10	10					Comaetho		0
-Venefica	1	Zero socketables	stor									r53						ease		-8	-8	ac%		172	200	extra-pois/lvl	16	16	16	sor		4	5	skillcap		1	1	howl-thorns		21	25	poison-dur		201	250	Venefica		0
+Venefica	1	Zero socketables	stor									r53						ease		-8	-8	ac%		172	200	extra-pois/lvl	16	16	16	sor		4	5	pierce-pois		15	15	howl-thorns		21	25	poison-dur		201	250	Venefica		0
 Shamo	1	a	nagi									r16						oskill	884	1	5	att-skill	889	10	10	dmg%		58	86	dmg-max		25	25	swing3		30	30	wirts		40	40					Shamo		0
 Amok	1	a	bow									r09						oskill	890	1	6	dmg%		24	35	swing3		10	10	heal-hit		1	1	kill-skill	511	2	9	extra-ltng		-3	-3					Amok		0
 Gharaniq	1	a	bswd	baxe								r33						oskill	881	4	16	dmg%		115	143	dmg-norm		13	25	dmg-minion		21	25	str		31	50	dex		101	150	bar		2	2	Gharaniq		0

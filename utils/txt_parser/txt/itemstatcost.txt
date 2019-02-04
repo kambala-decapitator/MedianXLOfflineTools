@@ -471,7 +471,7 @@ skill_elixirs_synergy	467	replace w/ syn	skills	Damage when using an Apple	10	0	
 skill_light_mastery	468		items	Damage to Vessel of Retribution	8	0		0	255	12			1		142	4	1	ModitemVDmgSyn	ModitemVDmgSyn																																			1024	8	0	0
 skill_shadow_mastery	469		items	Extra Targets to Paladin Vessels	8	0		0	255	12			1		143	1	1	ModitemVTgtSyn	ModitemVTgtSyn																																			1024	8	0	0
 skill_minion_dmg_percent	470		items	Bonus to Summoned Minion Damage	9	50		-50	461	12			1		80	4	1	ModitemDmgMinBonus	ModitemDmgMinBonus									55	41																									1024	9	50	0
-not_used_471	471		unused							5			1																																									1024	0	0	0
+shamanic_dmg	471		items	Bonus to Summoned Minion Damage	9	50		-50	461	12			1		80	4	1	ModitemDmgMinBonus	ModitemDmgMinBonus									55	41																									1024	9	50	0
 not_used_472	472		unused							5			1																																									1024	0	0	0
 learn_ennead	473		items + skills	\green;Unlocks your Ennead Skill	8	0		0	255	12			1		239	3	0	ModitemLernEnnead	ModitemLernEnnead									6	2																									1024	8	0	0
 learn_blackroad	474		items + skills	\green;Unlocks your Black Road Skill	8	0		0	255	12			1		239	3	0	ModitemLearnBlackroad	ModitemLearnBlackroad									6	2																									1024	8	0	0
