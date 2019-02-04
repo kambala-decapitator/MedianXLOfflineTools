@@ -2781,10 +2781,11 @@ QByteArray MedianXLOfflineTools::statisticBytes()
 
         if (value || isAchievement)
         {
-            addStatisticBits(result, statCode, Enums::CharacterStats::StatCodeLength);
+            if (!isAchievement || !achievements.isEmpty())
+                addStatisticBits(result, statCode, Enums::CharacterStats::StatCodeLength);
 
             ItemPropertyTxt *txtProp = ItemDataBase::Properties()->value(statCode);
-            if (isAchievement)
+            if (isAchievement && !achievements.isEmpty())
             {
                 QList<QVariant> achievementData = achievements.at(achievementIndex).toList();
                 if (++achievementIndex < achievements.size())
@@ -2793,7 +2794,8 @@ QByteArray MedianXLOfflineTools::statisticBytes()
                 addStatisticBits(result, achievementData.at(0).toULongLong(), txtProp->paramBitsSave);
                 value = achievementData.at(1).toULongLong();
             }
-            addStatisticBits(result, value, txtProp->bitsSave);
+            if (value)
+                addStatisticBits(result, value, txtProp->bitsSave);
         }
 
         if (!isAchievement)
