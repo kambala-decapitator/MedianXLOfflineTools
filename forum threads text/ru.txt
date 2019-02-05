@@ -1,19 +1,8 @@
-[B]Тема на официальном форуме Медиана[/B]: https://forum.median-xl.com/viewtopic.php?f=40&t=342
+[B]Тема на официальном форуме Медиана[/B]: [URL="https://forum.median-xl.com/viewtopic.php?f=40&t=342"]Median XL Offline Tools v0.5 (Sigma support!) - Median XL[/URL]
 
-[SIZE=4][COLOR=#6666ff]Это [B][U]НЕ[/U][/B] читерская программа и только для [B][U]Одиночной Игры[/U][/B]![/COLOR][/SIZE]
+[COLOR=#6666ff]Это [B][U]НЕ[/U][/B] читерская программа и только для [B][U]Одиночной Игры[/U][/B]![/COLOR]
 
-Как можно догадаться из названия, это практически полный оффлайн аналог grig'овских [URL='http://grig.vlexofree.com/']MXL Online Tools[/URL] (они расписаны в [URL='http://worldofplayers.ru/threads/33303/']теме ЧаВо[/URL]), но со многими дополнениями.
-
-Приложение должно грузить персонажа из любой версии Median XL и успешно выполнять над ним базовые операции типа сброса атрибутов/навыков. Обработка предметов полагается на исходники мода, а потому может быть несовместима с персонажем из другой версии. Эти данные не зашиты в программу, потому когда выйдет новая версия мода, программу не нужно перекомпилировать — обычно достаточно просто заменить файлы в 'resources/data' новыми, которые я выложу. Текущие поддерживаемые версии:
-[LIST]
-[*]Median XL 2017 1.3
-[*]Ultimative XVI (персонажи из v5+ должны быть совместимыми)
-[*]Kehjan Labyrinth + Tathamet vs Anu [Лабиринт Кейджан + Тафамет против Ану]
-[*]Hardened
-[*]Median XL 2012 v005 (более ранние версии тоже должны работать)
-[/LIST]
-
-Приложение написано на C++ с использованием [URL='https://www.qt.io']фреймворка Qt[/URL] (версии 4.8.7 на данный момент), так что можете даже не пытаться дотнетрефлекторнуть исходный код (а он не будет опубликован по очевидным причинам).
+Как можно догадаться из названия, это практически полный оффлайн аналог grig'овских [URL='http://grig.vlexofree.com/']MXL Online Tools[/URL] (они расписаны в [URL='http://worldofplayers.ru/threads/33303/']теме ЧаВо[/URL]), но со многими дополнениями. Приложение написано на C++ с использованием [URL='https://www.qt.io']фреймворка Qt[/URL] (версии 4.8.7 на данный момент), так что можете даже не пытаться дотнетрефлекторнуть исходный код (а он не будет опубликован по очевидным причинам).
 
 Надеюсь я создал достаточную защиту от хаков для среднестатистического юзера. Но если же вам всё-таки удастся хакнуть персонажа и сохранить его через эту программу, пожалуйста сообщите мне об этом, чтоб я мог закрыть эту дыру :)
 
@@ -27,7 +16,6 @@
 [*]понижение уровня
 [*]активация телепортов
 [*]возрождение и преобразование хардкорного (смертного) персонажа
-[*]ссылки для [URL='http://worldofplayers.ru/threads/33660/']Планировщика Навыков[/URL]
 [/LIST]
 [*]Предметы:
 [LIST]
@@ -59,26 +47,49 @@
 [/LIST]
 [/spoiler]
 
-[SIZE=4][COLOR=#6666ff]ПРЕДУПРЕЖДЕНИЕ: по умолчанию вы можете открывать только персонажей [B]Median XL 2017[/B]. Если вы хотите открывать персонажей из других модов или версий, пожалуйста перейдите в секцию загрузок [B]Данные модов[/B].[/COLOR][/SIZE]
+[B]Загрузки[/B]:
+[LIST]
+[*][I]Windows[/I] (XP SP3 и позже): [URL="https://mega.nz/#!JABjBYYJ!CQZRXArEkvmeyEEKLl_axcXqGpttYrRsSPi9lPqit_4"]MEGA[/URL] (если не запускается, установите MSVC++ 2015 Redistributable [FONT=Courier New]vc_redist.x[B]86[/B].exe[/FONT] с [URL='https://www.mediafire.com/?84qc8d5dy3cd9f6']Mediafire[/URL] или с [URL='https://www.microsoft.com/en-us/download/details.aspx?id=52685']сайта Microsoft[/URL])
+[*][I]macOS[/I] (10.9 и позже, Intel 64bit): [URL="https://mega.nz/#!QYwlQK5B!PaouegAPH3K8qkDnVAltF5T37VUAla19jpWb8_kRc28"]MEGA[/URL]
+[/LIST]
+
+[spoiler="Mini-FAQ"]В: Я не могу распаковать архив без ошибок :(
+О: Используй 7zip, Люк.
+
+В: Я сломал персонажа и/или сундук PlugY и ни игра, ни данное приложение не могут его загрузить. Как я могу его восстановить из резервной копии?
+О: Пройдите в папку сохранений и поищите файл(ы) <персонаж>.<d2s или d2x>_<дата>.bak и удалите всё справа от d2s или d2x. Если вы хотите восстановить общий сундук, то он называется _LOD<_HC для смертных (хардкорных)>_SharedStashSave.sss_<дата>.bak и удалите всё справа от sss.
+Если вы не видите расширение файла:
+[LIST]
+[*]Проводник Windows: Параметры/Свойства Папки - Вид - Прокрутите в самый низ - Снимите галочку со «Скрывать расширения...» - OK
+[*]Mac OS X Finder: Настройки - Последняя вкладка (Дополнения) - Показывать расширения для всех типов файлов
+[/LIST]
+
+В: Программа не запускается; она появляется в списке процессов лишь на секунду и/или появляется окошко с информацией о сбое.
+О: Наверное персонаж, которого вы загружали в последний раз, сломался. Чтобы программа вновь заработала, кликните дважды на файл 'disable_auto_load' (в Windows также необходимо нажать «Да» после этого): это отключит загрузку последнего использованного персонажа. Если вы вновь захотите активировать эту опцию, откройте меню «Настройки» в программе и нажмите на нее.[/spoiler]
+[spoiler="Старая версия с поддержкой предков Сигмы"]Приложение должно грузить персонажа из любой версии Median XL и успешно выполнять над ним базовые операции типа сброса атрибутов/навыков. Обработка предметов полагается на исходники мода, а потому может быть несовместима с персонажем из другой версии. Эти данные не зашиты в программу, потому когда выйдет новая версия мода, программу не нужно перекомпилировать — обычно достаточно просто заменить файлы в 'resources/data' новыми, которые я выложу. Текущие поддерживаемые версии:
+[LIST]
+[*]Median XL 2017 1.3
+[*]Ultimative XVI (персонажи из v5+ должны быть совместимыми)
+[*]Kehjan Labyrinth + Tathamet vs Anu [Лабиринт Кейджан + Тафамет против Ану]
+[*]Hardened
+[*]Median XL 2012 v005 (более ранние версии тоже должны работать)
+[/LIST]
 
 [B]Загрузки[/B]:
 [LIST]
 [*][B]Приложение[/B]:
 [LIST]
-[*][I]Windows[/I] (XP SP3 и позже): https://www.mediafire.com/file/gfij7i3vs2j48ix/MedianXLOfflineTools_0.4.6.7z/file (если не запускается, установите MSVC++ 2015 Redistributable [FONT=Courier New]vc_redist.x[B]86[/B].exe[/FONT] с [URL='https://www.mediafire.com/?84qc8d5dy3cd9f6']Mediafire[/URL] или с [URL='https://www.microsoft.com/en-us/download/details.aspx?id=52685']сайта Microsoft[/URL])
-[*][I]macOS[/I] (10.9 и позже, Intel 64bit, рекомендуемая версия для современных ОС): https://www.mediafire.com/file/llujz2wc05xf0j5/MedianXLOfflineTools_mac_0.4.6.tbz/file
-[*][I]старые Mac OS X[/I] (10.5 и позже, 32bit универсальное приложение, не будет запускаться начиная с macOS 10.14): https://www.mediafire.com/file/bbqr2u0reke2uzd/MedianXLOfflineTools_mac_universal_32bit_0.4.6.tbz/file
+[*][I]Windows[/I] (XP SP3 и позже): [URL]http://mxl.vn.cz/kambala/MedianXLOfflineTools_0.4.6.7z[/URL] (если не запускается, установите MSVC++ 2015 Redistributable [FONT=Courier New]vc_redist.x[B]86[/B].exe[/FONT] с [URL='https://www.mediafire.com/?84qc8d5dy3cd9f6']Mediafire[/URL] или с [URL='https://www.microsoft.com/en-us/download/details.aspx?id=52685']сайта Microsoft[/URL])
+[*][I]macOS[/I] (10.9 и позже, Intel 64bit, рекомендуемая версия для современных ОС): [URL]http://mxl.vn.cz/kambala/MedianXLOfflineTools_mac_0.4.6.tbz[/URL]
+[*][I]старые Mac OS X[/I] (10.5 и позже, 32bit универсальное приложение, не будет запускаться начиная с macOS 10.14): [URL]http://mxl.vn.cz/kambala/MedianXLOfflineTools_mac_universal_32bit_0.4.6.tbz[/URL]
 [/LIST]
 [*][B]Данные модов[/B] (инструкции по установке находятся ниже в Mini-FAQ):
 [LIST]
-[*][I]2017 1.3:[/I] http://mxl.vn.cz/kambala/2017-1.3.zip
-[*][I]Ultimative XVI:[/I] http://mxl.vn.cz/kambala/ultimativeXVI.7z
-[*][I]2012 v005 / Лабиринт Кейджан + Тафамет против Ану / Hardened:[/I] http://mxl.vn.cz/kambala/2012-005+kehjan+tathamet.7z
+[*][I]2017 1.3:[/I] [URL]http://mxl.vn.cz/kambala/2017-1.3.zip[/URL]
+[*][I]Ultimative XVI:[/I] [URL]http://mxl.vn.cz/kambala/ultimativeXVI.7z[/URL]
+[*][I]2012 v005 / Лабиринт Кейджан + Тафамет против Ану / Hardened:[/I] [URL]http://mxl.vn.cz/kambala/2012-005+kehjan+tathamet.7z[/URL]
 [/LIST]
 [/LIST]
-
-[spoiler="Mini-FAQ"]В: Я не могу распаковать архив без ошибок :(
-О: Используй 7zip, Люк.
 
 В: Как установить данные мода?
 О: Перезапустите приложение после выполнения нижеуказанных шагов если оно запущено.
@@ -92,18 +103,7 @@
 [code]APP_PATH = "/Applications/MedianXLOfflineTools.app" # поместите в кавычки реальный путь, это лишь пример
 cp -R resources/data/* "${APP_PATH}/Contents/resources/data"[/code]
 [/LIST]
-[/LIST]
-
-В: Я сломал персонажа и/или сундук PlugY и ни игра, ни данное приложение не могут его загрузить. Как я могу его восстановить из резервной копии?
-О: Пройдите в папку сохранений и поищите файл(ы) <персонаж>.<d2s или d2x>_<дата>.bak и удалите всё справа от d2s или d2x. Если вы хотите восстановить общий сундук, то он называется _LOD<_HC для смертных (хардкорных)>_SharedStashSave.sss_<дата>.bak и удалите всё справа от sss.
-Если вы не видите расширение файла:
-[LIST]
-[*]Проводник Windows: Параметры/Свойства Папки - Вид - Прокрутите в самый низ - Снимите галочку со «Скрывать расширения...» - OK
-[*]Mac OS X Finder: Настройки - Последняя вкладка (Дополнения) - Показывать расширения для всех типов файлов
-[/LIST]
-
-В: Программа не запускается; она появляется в списке процессов лишь на секунду и/или появляется окошко с информацией о сбое.
-О: Наверное персонаж, которого вы загружали в последний раз, сломался. Чтобы программа вновь заработала, кликните дважды на файл 'disable_auto_load' (в Windows также необходимо нажать «Да» после этого): это отключит загрузку последнего использованного персонажа. Если вы вновь захотите активировать эту опцию, откройте меню «Настройки» в программе и нажмите на нее.[/spoiler]
+[/LIST][/spoiler]
 [spoiler="Скриншоты"]кликните для полноразмерного просмотра
 [URL='http://s1125.photobucket.com/user/kambala_decapitator/media/Median%20XL%20Offline%20Tools/main_ru4.png.html'][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_main_ru4.png[/IMG][/URL][URL='http://s1125.photobucket.com/user/kambala_decapitator/media/Median%20XL%20Offline%20Tools/main_ru_mac2.png.html'][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_main_ru_mac2.png[/IMG][/URL]
 [URL='http://s1125.photobucket.com/user/kambala_decapitator/media/items2_ru.png.html'][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/th_items2_ru.png[/IMG][/URL][URL='http://s1125.photobucket.com/user/kambala_decapitator/media/items_plugy2_ru.png.html'][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/th_items_plugy2_ru.png[/IMG][/URL]
@@ -118,11 +118,17 @@ cp -R resources/data/* "${APP_PATH}/Contents/resources/data"[/code]
 
 [B]История версий:[/B]
 
+[I]v0.5 (05.02.2019)[/I]
+[LIST]
+[*][+] поддержка Сигмы
+[*][-] удалена поддержка предков Сигмы
+[/LIST]
+[spoiler="предыдущие версии"]
 [I]v0.4.6 (26.12.2018)[/I]
 [LIST]
 [*][ф] исправлено сохранение общего сундука после открытия другого персонажа
 [/LIST]
-[spoiler="предыдущие версии"]
+
 [I]v0.4.5 (22.04.2018)[/I]
 [LIST]
 [*][ф] исправлено сохранение общего сундука когда в нем нет золота
