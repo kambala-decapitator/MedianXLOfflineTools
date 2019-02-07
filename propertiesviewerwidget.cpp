@@ -114,7 +114,10 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
         {
             PropertiesMap socketableProps = PropertiesDisplayManager::socketableProperties(socketableItem, itemBase->socketableType);
             PropertiesDisplayManager::addProperties(&allProps, socketableProps);
-            html += ItemDataBase::completeItemName(socketableItem, true) + kHtmlLineBreak + propertiesToHtml(socketableProps) + htmlLine;
+            html += ItemDataBase::completeItemName(socketableItem, true) + kHtmlLineBreak;
+            if (socketableItem->itemType == ItemDataBase::kJewelType)
+                html += qApp->translate(kTranslationContext, "Item Level: %1").arg(socketableItem->ilvl) + kHtmlLineBreak;
+            html += propertiesToHtml(socketableProps) + htmlLine;
 
             if (socketableProps != socketableItem->props)
                 qDeleteAll(socketableProps);
