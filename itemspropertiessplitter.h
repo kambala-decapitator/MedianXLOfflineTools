@@ -37,6 +37,8 @@ public:
     virtual void showItem(ItemInfo *item);
     void showFirstItem();
     virtual ItemsList *getItems() { return &_allItems; }
+    virtual bool storeItemInStorage(ItemInfo *item, int storage, bool emitSignal = false);
+    void setCellSpanForItem(ItemInfo *item);
 
     virtual QPair<bool, bool> updateDisenchantButtonsState(bool includeUniques, bool includeSets, bool toCrystals, ItemsList *pItems = 0);
     virtual QPair<bool, bool> updateUpgradeButtonsState(int reserveRunes, ItemsList *pItems = 0);
@@ -53,12 +55,14 @@ signals:
     void cubeDeleted(bool = true);  // connect directly to QAction's setEnabled() slot
     void itemsChanged(bool = true); // connect directly to main window's setModified() slot
     void signetsOfLearningEaten(int signets);
+    void itemMovingToSharedStash(ItemInfo *);
 
 protected slots:
     void itemSelected(const QModelIndex &index, bool display = true);
     void moveItem(const QModelIndex &newIndex, const QModelIndex &oldIndex);
 
     void showContextMenu(const QPoint &pos);
+    void moveToSharedStash();
     void exportText();
     void disenchantSelectedItem();
 //    void unsocketItem();
@@ -101,9 +105,9 @@ protected:
 
     virtual void addItemToList(ItemInfo *item, bool emitSignal = true);
     virtual void removeItemFromList(ItemInfo *item, bool emitSignal = true);
+    void removeItemFromModel(ItemInfo *item);
     ItemInfo *disenchantItemIntoItem(ItemInfo *oldItem, ItemInfo *newItem, bool emitSignal = true);
     virtual bool isItemInCurrentStorage(ItemInfo *item) const { Q_UNUSED(item); return true; }
-    virtual bool storeItemInStorage(ItemInfo *item, int storage);
     bool upgradeItemsInMap(UpgradableItemsMultiMap &itemsMap, quint8 maxKey, const QString &itemNameFormat);
 
     bool canSocketableMapBeUpgraded(const UpgradableItemsMultiMap &socketableMap);

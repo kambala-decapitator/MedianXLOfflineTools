@@ -91,7 +91,7 @@ void ItemsPropertiesSplitter::moveItem(const QModelIndex &newIndex, const QModel
     int oldRow = oldIndex.row(), oldCol = oldIndex.column();
     if (_itemsView->rowSpan(oldRow, oldCol) > 1 || _itemsView->columnSpan(oldRow, oldCol) > 1)
         _itemsView->setSpan(oldRow, oldCol, 1, 1);
-    _itemsView->setCellSpanForItem(item);
+    setCellSpanForItem(item);
     _itemsView->setCurrentIndex(newIndex);
 
     emit itemsChanged();
@@ -182,7 +182,7 @@ void ItemsPropertiesSplitter::updateItems(const ItemsList &newItems)
 
     _itemsView->clearSpans();
     foreach (ItemInfo *item, newItems)
-        _itemsView->setCellSpanForItem(item);
+        setCellSpanForItem(item);
 
     showFirstItem();
 }
@@ -193,6 +193,10 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
     if (item)
     {
         QList<QAction *> actions;
+
+        QAction *moveToSharedStashAction = new QAction(tr("Move to shared PlugY stash"), this);
+        connect(moveToSharedStashAction, SIGNAL(triggered()), SLOT(moveToSharedStash()));
+        actions << moveToSharedStashAction;
 
         // TODO: 0.5
         //QMenu *menuExport = new QMenu(tr("Export as"), _itemsView);
@@ -320,6 +324,16 @@ ItemInfo *ItemsPropertiesSplitter::selectedItem(bool showError /*= true*/)
     if (!item && showError)
         ERROR_BOX("TROLOLOL no item selection found");
     return item;
+}
+
+void ItemsPropertiesSplitter::moveToSharedStash()
+{
+    ItemInfo *item = selectedItem();
+    removeItemFromModel(item);
+    _itemsView->selectionModel()->clearSelection();
+    emit itemCountChanged(_itemsModel->itemCount());
+
+    emit itemMovingToSharedStash(item);
 }
 
 void ItemsPropertiesSplitter::exportText()
@@ -451,7 +465,7 @@ void ItemsPropertiesSplitter::extractShrinesFromVessel()
             delete shrineCopy;
             break;
         }
-        _itemsView->setCellSpanForItem(shrineCopy);
+        setCellSpanForItem(shrineCopy);
     }
     delete shrine;
 
@@ -616,14 +630,17 @@ void ItemsPropertiesSplitter::removeItemFromList(ItemInfo *item, bool emitSignal
     if (selectedItem(false) == item)
         _propertiesWidget->clear();
     if (isItemInCurrentStorage(item))
-    {
-        _itemsModel->removeItem(item);
-        if (_itemsView->rowSpan(item->row, item->column) > 1 || _itemsView->columnSpan(item->row, item->column) > 1)
-            _itemsView->setSpan(item->row, item->column, 1, 1);
-    }
+        removeItemFromModel(item);
 
     if (emitSignal)
         emit itemsChanged();
+}
+
+void ItemsPropertiesSplitter::removeItemFromModel(ItemInfo *item)
+{
+    _itemsModel->removeItem(item);
+    if (_itemsView->rowSpan(item->row, item->column) > 1 || _itemsView->columnSpan(item->row, item->column) > 1) // hides warning in console
+        _itemsView->setSpan(item->row, item->column, 1, 1);
 }
 
 ItemsList ItemsPropertiesSplitter::disenchantAllItems(bool toShards, bool upgradeToCrystals, bool eatSignets, ItemsList *pItems /*= 0*/)
@@ -776,12 +793,17 @@ ItemInfo *ItemsPropertiesSplitter::disenchantItemIntoItem(ItemInfo *oldItem, Ite
     return newItemCopy;
 }
 
-bool ItemsPropertiesSplitter::storeItemInStorage(ItemInfo *item, int storage)
+bool ItemsPropertiesSplitter::storeItemInStorage(ItemInfo *item, int storage, bool emitSignal /*= false*/)
 {
     bool result = ItemDataBase::storeItemIn(item, static_cast<Enums::ItemStorage::ItemStorageEnum>(storage), ItemsViewerDialog::rowsInStorageAtIndex(storage), ItemsViewerDialog::colsInStorageAtIndex(storage));
     if (result)
-        addItemToList(item, false);
+        addItemToList(item, emitSignal);
     return result;
+}
+
+void ItemsPropertiesSplitter::setCellSpanForItem(ItemInfo *item)
+{
+    _itemsView->setCellSpanForItem(item);
 }
 
 bool ItemsPropertiesSplitter::upgradeItemsInMap(UpgradableItemsMultiMap &itemsMap, quint8 maxKey, const QString &itemNameFormat)

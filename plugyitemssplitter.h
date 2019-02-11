@@ -21,6 +21,7 @@ public:
     void updateSpinbox() { setItems(_allItems); }
     virtual void showItem(ItemInfo *item);
     virtual ItemsList *getItems() { return allOrCurrentPageItems(); }
+    virtual bool storeItemInStorage(ItemInfo *item, int storage, bool emitSignal = false);
 
     virtual QPair<bool, bool> updateDisenchantButtonsState(bool includeUniques, bool includeSets, bool toCrystals, ItemsList *items = 0);
     virtual QPair<bool, bool> updateUpgradeButtonsState(int reserveRunes, ItemsList *items = 0);
@@ -59,7 +60,6 @@ protected:
     virtual bool isItemInCurrentStorage(ItemInfo *item) const;
     virtual void addItemToList(ItemInfo *item, bool emitSignal = true);
     virtual void removeItemFromList(ItemInfo *item, bool emitSignal = true);
-    virtual bool storeItemInStorage(ItemInfo *item, int storage);
 
 signals:
     void pageChanged();

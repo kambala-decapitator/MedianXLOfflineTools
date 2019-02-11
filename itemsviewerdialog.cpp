@@ -63,6 +63,7 @@ ItemsViewerDialog::ItemsViewerDialog(const QHash<int, bool> &plugyStashesExisten
         connect(splitter, SIGNAL(cubeDeleted(bool)), SIGNAL(cubeDeleted(bool)));
         connect(splitter, SIGNAL(cubeDeleted(bool)), SLOT(setCubeTabDisabled(bool)));
         connect(splitter, SIGNAL(signetsOfLearningEaten(int)), SIGNAL(signetsOfLearningEaten(int)));
+        connect(splitter, SIGNAL(itemMovingToSharedStash(ItemInfo *)), SLOT(moveItemToSharedStash(ItemInfo *)));
 
         if (isPlugyStorageIndex(i))
         {
@@ -566,6 +567,19 @@ void ItemsViewerDialog::removeCurrentPage()
 {
     currentPlugySplitter()->removeCurrentPage();
     updateRemoveCurrentBlankPageButtonState();
+}
+
+void ItemsViewerDialog::moveItemToSharedStash(ItemInfo *item)
+{
+    item->storage = CharacterInfo::instance().basicInfo.isHardcore ? Enums::ItemStorage::HCStash : Enums::ItemStorage::SharedStash;
+
+    int tab = tabIndexFromItemStorage(item->storage);
+    _tabWidget->setTabEnabled(tab, true);
+
+    ItemsPropertiesSplitter *splitter = splitterAtIndex(tab);
+    splitter->storeItemInStorage(item, item->storage, true);
+    splitter->setCellSpanForItem(item);
+    itemCountChangedInTab(tab, splitter->itemCount());
 }
 
 void ItemsViewerDialog::adjustHeight(bool isBoxExpanded)

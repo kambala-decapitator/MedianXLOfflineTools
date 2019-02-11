@@ -63,6 +63,8 @@ extern void qt_mac_set_dock_menu(QMenu *);
 
 static const QString kLastSavePathKey("lastSavePath"), kBackupExtension("bak"), kReadonlyCss("QLineEdit { background-color: rgb(227, 227, 227) }"), kTimeFormatReadable("yyyyMMdd-hhmmss"), kMedianXlServer("http://mxl.vn.cz/kambala/");
 static const QByteArray kMercHeader("jf"), kSkillsHeader("if");
+static const char sharedStashHeader[] = {'S', 'S', 'S', '\0', '0'};
+static const int plugyHeaderSize = 5;
 
 const QString MedianXLOfflineTools::kCompoundFormat("%1, %2");
 const QString MedianXLOfflineTools::kCharacterExtension("d2s");
@@ -628,10 +630,16 @@ void MedianXLOfflineTools::saveCharacter()
 
         PlugyStashInfo &info = iter.value();
         QFile inputFile(info.path);
-        if (!inputFile.exists())
+        if (inputFile.exists())
+            backupedFiles += backupFile(inputFile);
+        else if (iter.key() == Enums::ItemStorage::PersonalStash)
             continue;
-
-        backupedFiles += backupFile(inputFile);
+        else
+        {
+            // create shared stash without gold
+            info.header = QByteArray(sharedStashHeader, plugyHeaderSize);
+            info.version = '1';
+        }
         if (!inputFile.open(QIODevice::WriteOnly))
         {
             showErrorMessageBoxForFile(tr("Error creating file '%1'"), inputFile);
@@ -2315,16 +2323,12 @@ void MedianXLOfflineTools::processPlugyStash(QHash<Enums::ItemStorage::ItemStora
     inputFile.close();
 
     QByteArray header;
-    const int headerSize = 5;
     Enums::ItemStorage::ItemStorageEnum plugyStorage = iter.key();
     if (plugyStorage == Enums::ItemStorage::PersonalStash)
         header = QByteArray("CSTM0");
     else
-    {
-        char sharedStashHeader[] = {'S', 'S', 'S', '\0', '0'};
-        header = QByteArray(sharedStashHeader, headerSize);
-    }
-    if (bytes.left(headerSize) != header)
+        header = QByteArray(sharedStashHeader, plugyHeaderSize);
+    if (bytes.left(plugyHeaderSize) != header)
     {
         ERROR_BOX(tr("PlugY stash '%1' has wrong header").arg(QFileInfo(info.path).fileName()));
         return;
@@ -2333,7 +2337,7 @@ void MedianXLOfflineTools::processPlugyStash(QHash<Enums::ItemStorage::ItemStora
 
     QDataStream inputDataStream(bytes);
     inputDataStream.setByteOrder(QDataStream::LittleEndian);
-    inputDataStream.skipRawData(headerSize);
+    inputDataStream.skipRawData(plugyHeaderSize);
 
     inputDataStream >> info.version;
     // in personal stash it's not really gold, simply 4 zeros: https://github.com/ChaosMarc/PlugY/blob/master/PlugY/ExtendedSaveFile.cpp#L152

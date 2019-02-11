@@ -207,16 +207,21 @@ void PlugyItemsSplitter::removeItemFromList(ItemInfo *item, bool emitSignal /*= 
         _pagedItems.removeOne(item);
 }
 
-bool PlugyItemsSplitter::storeItemInStorage(ItemInfo *item, int storage)
+bool PlugyItemsSplitter::storeItemInStorage(ItemInfo *item, int storage, bool emitSignal /*= false*/)
 {
-    for (quint32 i = 1; i <= _lastNotEmptyPage; ++i)
+    Enums::ItemStorage::ItemStorageEnum storage_ = static_cast<Enums::ItemStorage::ItemStorageEnum>(storage);
+    int rows = ItemsViewerDialog::rowsInStorageAtIndex(storage), cols = ItemsViewerDialog::colsInStorageAtIndex(storage);
+    for (quint32 i = 1; i <= _lastNotEmptyPage + 1; ++i)
     {
-        if (ItemDataBase::storeItemIn(item, static_cast<Enums::ItemStorage::ItemStorageEnum>(storage), ItemsViewerDialog::rowsInStorageAtIndex(storage), i))
+        if (ItemDataBase::storeItemIn(item, storage_, rows, cols, i))
         {
-            addItemToList(item, false);
+            if (i > _lastNotEmptyPage)
+                ++_lastNotEmptyPage;
+            addItemToList(item, emitSignal);
             return true;
         }
     }
+
     return false;
 }
 
