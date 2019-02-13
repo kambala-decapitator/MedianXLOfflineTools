@@ -105,6 +105,7 @@ private slots:
     void insertBlankPages();
     void removeCurrentPage();
     void moveItemBetweenStashes(ItemInfo *item);
+    void moveCurrentItemsToSharedStash();
 
     void adjustHeight(bool isBoxExpanded);
 
@@ -124,6 +125,7 @@ private:
     QSpinBox *_reserveRunesSpinBox;
 
     QCheckBox *_applyActionToAllPagesCheckbox;
+    QPushButton *_moveCurrentItemsToSharedStashButton;
 
     QGroupBox *_stashBox;
     QPushButton *_sortStashButton, *_insertBlankPagesBeforeButton, *_insertBlankPagesAfterButton, *_removeCurrentBlankPage;

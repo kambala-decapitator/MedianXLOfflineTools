@@ -109,6 +109,7 @@ ItemsViewerDialog::ItemsViewerDialog(const QHash<int, bool> &plugyStashesExisten
 
     connect(_applyActionToAllPagesCheckbox, SIGNAL(toggled(bool)), SLOT(applyActionToAllPagesChanged(bool)));
     connect(_tabWidget, SIGNAL(currentChanged(int)), SLOT(tabChanged(int)));
+    connect(_moveCurrentItemsToSharedStashButton, SIGNAL(clicked()), SLOT(moveCurrentItemsToSharedStash()));
 
     _stashBox->hide();
     _itemManagementWidget->setDisabled(true);
@@ -191,6 +192,8 @@ void ItemsViewerDialog::createLayout()
     _applyActionToAllPagesCheckbox->setToolTip(tr("Either action will be applied to all pages of the current PlugY stash"));
     _applyActionToAllPagesCheckbox->setChecked(true);
 
+    _moveCurrentItemsToSharedStashButton = new QPushButton(tr("Move current items\nto shared stash"), this);
+
     // stash box setup
     _stashBox = new QGroupBox(tr("PlugY Stash"), _itemManagementWidget);
     _sortStashButton = new QPushButton(tr("Sort"), _stashBox);
@@ -213,6 +216,7 @@ void ItemsViewerDialog::createLayout()
     itemManagementBoxLayout->addWidget(_disenchantBox);
     itemManagementBoxLayout->addWidget(_applyActionToAllPagesCheckbox);
     itemManagementBoxLayout->addWidget(_upgradeBox);
+    itemManagementBoxLayout->addWidget(_moveCurrentItemsToSharedStashButton);
     itemManagementBoxLayout->addStretch();
     itemManagementBoxLayout->addWidget(_stashBox);
 
@@ -461,6 +465,7 @@ void ItemsViewerDialog::updateItemManagementButtonsState()
     updateDisenchantButtonsState();
     updateUpgradeButtonsState();
     updateStashButtonsState();
+    _moveCurrentItemsToSharedStashButton->setVisible(!_stashBox->isVisible());
 }
 
 #ifdef Q_OS_MAC
@@ -571,13 +576,15 @@ void ItemsViewerDialog::removeCurrentPage()
     updateRemoveCurrentBlankPageButtonState();
 }
 
+#define CURRENT_SHARED_STASH (CharacterInfo::instance().basicInfo.isHardcore ? Enums::ItemStorage::HCStash : Enums::ItemStorage::SharedStash)
+
 void ItemsViewerDialog::moveItemBetweenStashes(ItemInfo *item)
 {
     QList<Enums::ItemStorage::ItemStorageEnum> newStoragesToTry;
     if (qobject_cast<PlugyItemsSplitter *>(sender()))
         newStoragesToTry << Enums::ItemStorage::Stash << Enums::ItemStorage::Inventory << Enums::ItemStorage::Cube;
     else
-        newStoragesToTry << (CharacterInfo::instance().basicInfo.isHardcore ? Enums::ItemStorage::HCStash : Enums::ItemStorage::SharedStash);
+        newStoragesToTry << CURRENT_SHARED_STASH;
 
     int oldStorage = item->storage;
     foreach (Enums::ItemStorage::ItemStorageEnum newStorage, newStoragesToTry)
@@ -596,6 +603,23 @@ void ItemsViewerDialog::moveItemBetweenStashes(ItemInfo *item)
 
     item->storage = oldStorage;
     ERROR_BOX(tr("Unable to move selected item: not enough free space"));
+}
+
+void ItemsViewerDialog::moveCurrentItemsToSharedStash()
+{
+    ItemsList itemsToMove = currentSplitter()->itemsModel()->items();
+    if (itemsToMove.isEmpty())
+        return;
+
+    Enums::ItemStorage::ItemStorageEnum storage = CURRENT_SHARED_STASH;
+    int tab = tabIndexFromItemStorage(storage);
+    PlugyItemsSplitter *plugySplitter = qobject_cast<PlugyItemsSplitter *>(splitterAtIndex(tab));
+    plugySplitter->addItemsToLastPage(itemsToMove, storage);
+    _tabWidget->setTabEnabled(tab, true);
+    itemCountChangedInTab(tab, plugySplitter->itemCount());
+
+    currentSplitter()->setItems(ItemsList());
+    itemCountChangedInCurrentTab(0);
 }
 
 void ItemsViewerDialog::adjustHeight(bool isBoxExpanded)

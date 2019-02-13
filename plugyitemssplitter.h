@@ -22,6 +22,7 @@ public:
     virtual void showItem(ItemInfo *item);
     virtual ItemsList *getItems() { return allOrCurrentPageItems(); }
     virtual bool storeItemInStorage(ItemInfo *item, int storage, bool emitSignal = false);
+    void addItemsToLastPage(const ItemsList &items, Enums::ItemStorage::ItemStorageEnum storage);
 
     virtual QPair<bool, bool> updateDisenchantButtonsState(bool includeUniques, bool includeSets, bool toCrystals, ItemsList *items = 0);
     virtual QPair<bool, bool> updateUpgradeButtonsState(int reserveRunes, ItemsList *items = 0);
@@ -91,6 +92,7 @@ private:
     bool keyEventHasShift(QKeyEvent *keyEvent);
     void setShortcutTextInButtonTooltip(QPushButton *button, const QKeySequence &keySequence);
     ItemsList *allOrCurrentPageItems() { return _shouldApplyActionToAllPages ? &_allItems : &_pagedItems; }
+    void setNewLastPage(quint32 newLastPage);
 //    void moveItemsToFirstPages(ItemsList *items, bool toShards);
 
     void showErrorLoadingSortingOrderFile(const QFile &f);

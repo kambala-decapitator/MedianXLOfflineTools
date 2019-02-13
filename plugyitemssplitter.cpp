@@ -228,13 +228,33 @@ bool PlugyItemsSplitter::storeItemInStorage(ItemInfo *item, int storage, bool em
         if (ItemDataBase::storeItemIn(item, storage_, rows, cols, i))
         {
             if (i > _lastNotEmptyPage)
-                ++_lastNotEmptyPage;
+                setNewLastPage(_lastNotEmptyPage + 1);
             addItemToList(item, emitSignal);
             return true;
         }
     }
 
     return false;
+}
+
+void PlugyItemsSplitter::addItemsToLastPage(const ItemsList &items, Enums::ItemStorage::ItemStorageEnum storage)
+{
+    if (items.isEmpty())
+        return;
+
+    bool wasStashEmpty = _lastNotEmptyPage == 0;
+    setNewLastPage(_lastNotEmptyPage + 1);
+    foreach (ItemInfo *item, items)
+    {
+        item->storage = storage;
+        item->plugyPage = _lastNotEmptyPage;
+        item->hasChanged = true;
+        addItemToList(item, false);
+
+        if (wasStashEmpty)
+            setCellSpanForItem(item);
+    }
+    emit itemsChanged();
 }
 
 //void PlugyItemsSplitter::moveItemsToFirstPages(ItemsList *items, bool toShards)
@@ -502,6 +522,14 @@ void PlugyItemsSplitter::setShortcutTextInButtonTooltip(QPushButton *button, con
     button->setToolTip(keySequence.toString(QKeySequence::NativeText));
 }
 
+void PlugyItemsSplitter::setNewLastPage(quint32 newLastPage)
+{
+    _lastNotEmptyPage = newLastPage;
+
+    _pageSpinBox->setSuffix(QString(" / %1").arg(_lastNotEmptyPage));
+    _pageSpinBox->setRange(1, _lastNotEmptyPage);
+}
+
 void PlugyItemsSplitter::showItem(ItemInfo *item)
 {
     if (item)
@@ -529,10 +557,7 @@ void PlugyItemsSplitter::setItems(const ItemsList &newItems)
     _allItems = newItems;
 
     ItemsList::const_iterator maxPageIter = std::max_element(_allItems.constBegin(), _allItems.constEnd(), compareItemsByPlugyPage);
-    _lastNotEmptyPage = maxPageIter == _allItems.constEnd() ? 0 : (*maxPageIter)->plugyPage;
-
-    _pageSpinBox->setSuffix(QString(" / %1").arg(_lastNotEmptyPage));
-    _pageSpinBox->setRange(1, _lastNotEmptyPage);
+    setNewLastPage(maxPageIter == _allItems.constEnd() ? 0 : (*maxPageIter)->plugyPage);
 
     updateItemsForCurrentPage(false);
 }
