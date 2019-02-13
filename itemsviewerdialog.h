@@ -104,7 +104,7 @@ private slots:
     void sortStash();
     void insertBlankPages();
     void removeCurrentPage();
-    void moveItemToSharedStash(ItemInfo *item);
+    void moveItemBetweenStashes(ItemInfo *item);
 
     void adjustHeight(bool isBoxExpanded);
 

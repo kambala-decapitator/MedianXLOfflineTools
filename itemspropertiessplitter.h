@@ -55,14 +55,14 @@ signals:
     void cubeDeleted(bool = true);  // connect directly to QAction's setEnabled() slot
     void itemsChanged(bool = true); // connect directly to main window's setModified() slot
     void signetsOfLearningEaten(int signets);
-    void itemMovingToSharedStash(ItemInfo *);
+    void itemMovingBetweenStashes(ItemInfo *);
 
 protected slots:
     void itemSelected(const QModelIndex &index, bool display = true);
     void moveItem(const QModelIndex &newIndex, const QModelIndex &oldIndex);
 
     void showContextMenu(const QPoint &pos);
-    void moveToSharedStash();
+    void moveBetweenStashes();
     void exportText();
     void disenchantSelectedItem();
 //    void unsocketItem();
@@ -117,6 +117,9 @@ protected:
     void createItemActions();
     QAction *separatorAction();
     void createActionsForMysticOrbs(QMenu *parentMenu, bool isItemMO, ItemInfo *item);
+
+    virtual bool shouldAddMoveItemAction() const;
+    virtual QString moveItemActionText() const;
 };
 
 #endif // ITEMSPROPERTIESSPLITTER_H

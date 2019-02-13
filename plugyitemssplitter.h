@@ -38,6 +38,8 @@ public:
     quint32 currentPage() const;
     int pageItemCount() const { return _pagedItems.size(); }
 
+    bool isSharedStash, isHcStash;
+
 public slots:
     // these 8 are connected to main menu actions
     void previous10Pages() { left10Clicked();  }
@@ -60,6 +62,9 @@ protected:
     virtual bool isItemInCurrentStorage(ItemInfo *item) const;
     virtual void addItemToList(ItemInfo *item, bool emitSignal = true);
     virtual void removeItemFromList(ItemInfo *item, bool emitSignal = true);
+
+    virtual bool shouldAddMoveItemAction() const;
+    virtual QString moveItemActionText() const;
 
 signals:
     void pageChanged();

@@ -194,9 +194,12 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
     {
         QList<QAction *> actions;
 
-        QAction *moveToSharedStashAction = new QAction(tr("Move to shared PlugY stash"), this);
-        connect(moveToSharedStashAction, SIGNAL(triggered()), SLOT(moveToSharedStash()));
-        actions << moveToSharedStashAction;
+        if (shouldAddMoveItemAction())
+        {
+            QAction *moveBetweenStashesAction = new QAction(moveItemActionText(), this);
+            connect(moveBetweenStashesAction, SIGNAL(triggered()), SLOT(moveBetweenStashes()));
+            actions << moveBetweenStashesAction << separatorAction();
+        }
 
         // TODO: 0.5
         //QMenu *menuExport = new QMenu(tr("Export as"), _itemsView);
@@ -326,14 +329,14 @@ ItemInfo *ItemsPropertiesSplitter::selectedItem(bool showError /*= true*/)
     return item;
 }
 
-void ItemsPropertiesSplitter::moveToSharedStash()
+void ItemsPropertiesSplitter::moveBetweenStashes()
 {
     ItemInfo *item = selectedItem();
     removeItemFromModel(item);
     _itemsView->selectionModel()->clearSelection();
     emit itemCountChanged(_itemsModel->itemCount());
 
-    emit itemMovingToSharedStash(item);
+    emit itemMovingBetweenStashes(item);
 }
 
 void ItemsPropertiesSplitter::exportText()
@@ -1003,4 +1006,14 @@ void ItemsPropertiesSplitter::createActionsForMysticOrbs(QMenu *parentMenu, bool
         connect(moAction, SIGNAL(triggered()), SIGNAL(itemsChanged()));
         parentMenu->addAction(moAction);
     }
+}
+
+bool ItemsPropertiesSplitter::shouldAddMoveItemAction() const
+{
+    return true;
+}
+
+QString ItemsPropertiesSplitter::moveItemActionText() const
+{
+    return tr("Move to shared PlugY stash");
 }

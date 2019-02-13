@@ -7,6 +7,7 @@
 #include "resourcepathmanager.hpp"
 #include "itemparser.h"
 #include "reversebitwriter.h"
+#include "characterinfo.hpp"
 
 #include <QPushButton>
 #include <QDoubleSpinBox>
@@ -205,6 +206,17 @@ void PlugyItemsSplitter::removeItemFromList(ItemInfo *item, bool emitSignal /*= 
     ItemsPropertiesSplitter::removeItemFromList(item, emitSignal);
     if (isItemInCurrentStorage(item))
         _pagedItems.removeOne(item);
+}
+
+bool PlugyItemsSplitter::shouldAddMoveItemAction() const
+{
+    bool isHcChar = CharacterInfo::instance().basicInfo.isHardcore;
+    return (isHcChar && isHcStash) || (!isHcChar && !isHcStash);
+}
+
+QString PlugyItemsSplitter::moveItemActionText() const
+{
+    return tr("Move to character");
 }
 
 bool PlugyItemsSplitter::storeItemInStorage(ItemInfo *item, int storage, bool emitSignal /*= false*/)

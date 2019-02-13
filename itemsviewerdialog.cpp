@@ -63,11 +63,13 @@ ItemsViewerDialog::ItemsViewerDialog(const QHash<int, bool> &plugyStashesExisten
         connect(splitter, SIGNAL(cubeDeleted(bool)), SIGNAL(cubeDeleted(bool)));
         connect(splitter, SIGNAL(cubeDeleted(bool)), SLOT(setCubeTabDisabled(bool)));
         connect(splitter, SIGNAL(signetsOfLearningEaten(int)), SIGNAL(signetsOfLearningEaten(int)));
-        connect(splitter, SIGNAL(itemMovingToSharedStash(ItemInfo *)), SLOT(moveItemToSharedStash(ItemInfo *)));
+        connect(splitter, SIGNAL(itemMovingBetweenStashes(ItemInfo *)), SLOT(moveItemBetweenStashes(ItemInfo *)));
 
         if (isPlugyStorageIndex(i))
         {
             PlugyItemsSplitter *plugySplitter = static_cast<PlugyItemsSplitter *>(splitter);
+            plugySplitter->isSharedStash = i >= SharedStashIndex && i <= HCStashIndex;
+            plugySplitter->isHcStash = i == HCStashIndex;
             connect(plugySplitter, SIGNAL(pageChanged()), SLOT(updateItemManagementButtonsState()));
             connect(plugySplitter, SIGNAL(stashSorted()), SIGNAL(stashSorted()));
         }
@@ -569,17 +571,31 @@ void ItemsViewerDialog::removeCurrentPage()
     updateRemoveCurrentBlankPageButtonState();
 }
 
-void ItemsViewerDialog::moveItemToSharedStash(ItemInfo *item)
+void ItemsViewerDialog::moveItemBetweenStashes(ItemInfo *item)
 {
-    item->storage = CharacterInfo::instance().basicInfo.isHardcore ? Enums::ItemStorage::HCStash : Enums::ItemStorage::SharedStash;
+    QList<Enums::ItemStorage::ItemStorageEnum> newStoragesToTry;
+    if (qobject_cast<PlugyItemsSplitter *>(sender()))
+        newStoragesToTry << Enums::ItemStorage::Stash << Enums::ItemStorage::Inventory << Enums::ItemStorage::Cube;
+    else
+        newStoragesToTry << (CharacterInfo::instance().basicInfo.isHardcore ? Enums::ItemStorage::HCStash : Enums::ItemStorage::SharedStash);
 
-    int tab = tabIndexFromItemStorage(item->storage);
-    _tabWidget->setTabEnabled(tab, true);
+    int oldStorage = item->storage;
+    foreach (Enums::ItemStorage::ItemStorageEnum newStorage, newStoragesToTry)
+    {
+        item->storage = newStorage;
+        int tab = tabIndexFromItemStorage(item->storage);
+        ItemsPropertiesSplitter *splitter = splitterAtIndex(tab);
+        if (!splitter->storeItemInStorage(item, item->storage, true))
+            continue;
 
-    ItemsPropertiesSplitter *splitter = splitterAtIndex(tab);
-    splitter->storeItemInStorage(item, item->storage, true);
-    splitter->setCellSpanForItem(item);
-    itemCountChangedInTab(tab, splitter->itemCount());
+        splitter->setCellSpanForItem(item);
+        _tabWidget->setTabEnabled(tab, true);
+        itemCountChangedInTab(tab, splitter->itemCount());
+        return;
+    }
+
+    item->storage = oldStorage;
+    ERROR_BOX(tr("Unable to move selected item: not enough free space"));
 }
 
 void ItemsViewerDialog::adjustHeight(bool isBoxExpanded)
