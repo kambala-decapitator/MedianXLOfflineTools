@@ -110,7 +110,7 @@ ItemsViewerDialog::ItemsViewerDialog(const QHash<int, bool> &plugyStashesExisten
     connect(_applyActionToAllPagesCheckbox, SIGNAL(toggled(bool)), SLOT(applyActionToAllPagesChanged(bool)));
     connect(_tabWidget, SIGNAL(currentChanged(int)), SLOT(tabChanged(int)));
 
-    _stashBox->setDisabled(true);
+    _stashBox->hide();
     _itemManagementWidget->setDisabled(true);
 
     loadSettings();
@@ -626,8 +626,8 @@ void ItemsViewerDialog::updateUpgradeButtonsState()
 
 void ItemsViewerDialog::updateStashButtonsState()
 {
-    _stashBox->setEnabled(isPlugyStorageIndex(_tabWidget->currentIndex()));
-    if (_stashBox->isEnabled())
+    _stashBox->setVisible(isPlugyStorageIndex(_tabWidget->currentIndex()));
+    if (_stashBox->isVisible())
     {
         _sortStashButton->setEnabled(currentPlugySplitter()->itemCount() > 0);
         updateRemoveCurrentBlankPageButtonState();
