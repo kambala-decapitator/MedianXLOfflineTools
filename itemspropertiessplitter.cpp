@@ -13,6 +13,7 @@
 
 #include <QMenu>
 #include <QInputDialog>
+#include <QApplication>
 
 #ifndef QT_NO_DEBUG
 #include <QDebug>
@@ -39,6 +40,7 @@ ItemsPropertiesSplitter::ItemsPropertiesSplitter(ItemStorageTableView *itemsView
     setStretchFactor(1, 5);
 
     connect(_itemsView, SIGNAL(customContextMenuRequested(const QPoint &)), SLOT(showContextMenu(const QPoint &)));
+    connect(_itemsView, SIGNAL(pressed(QModelIndex)), SLOT(moveBetweenStashes()));
 }
 
 void ItemsPropertiesSplitter::setModel(ItemStorageTableModel *model)
@@ -331,7 +333,10 @@ ItemInfo *ItemsPropertiesSplitter::selectedItem(bool showError /*= true*/)
 
 void ItemsPropertiesSplitter::moveBetweenStashes()
 {
-    ItemInfo *item = selectedItem();
+    ItemInfo *item = selectedItem(false);
+    if (sender() == _itemsView && !(qApp->mouseButtons() == Qt::LeftButton && qApp->keyboardModifiers() == Qt::AltModifier && item))
+        return;
+
     removeItemFromModel(item);
     _itemsView->selectionModel()->clearSelection();
     emit itemCountChanged(_itemsModel->itemCount());
@@ -1008,12 +1013,5 @@ void ItemsPropertiesSplitter::createActionsForMysticOrbs(QMenu *parentMenu, bool
     }
 }
 
-bool ItemsPropertiesSplitter::shouldAddMoveItemAction() const
-{
-    return true;
-}
-
-QString ItemsPropertiesSplitter::moveItemActionText() const
-{
-    return tr("Move to shared PlugY stash");
-}
+bool ItemsPropertiesSplitter::shouldAddMoveItemAction() const { return true; }
+QString ItemsPropertiesSplitter::moveItemActionText() const { return tr("Move to shared PlugY stash"); }
