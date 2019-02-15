@@ -4,6 +4,7 @@
 #include "itemdatabase.h"
 #include "enums.h"
 #include "propertiesdisplaymanager.h"
+#include "resourcepathmanager.hpp"
 
 #include <QLineEdit>
 #include <QTextEdit>
@@ -152,6 +153,16 @@ DupeScanDialog::DupeScanDialog(const QString &currentPath, bool isDumpItemsMode,
     connect(scanButton,   SIGNAL(clicked()), SLOT(scan()));
     connect(_saveButton,  SIGNAL(clicked()), SLOT(save()));
     connect(okButton,     SIGNAL(clicked()), SLOT(accept()));
+
+    // ugly copypaste
+    QByteArray fileData = ItemDataBase::decompressedFileData(ResourcePathManager::dataPathForFileName("exptable.dat"), QString());
+    if (!fileData.isEmpty())
+    {
+        _experienceTable.reserve(Enums::CharacterStats::MaxLevel);
+        foreach (const QByteArray &numberString, fileData.split('\n'))
+            if (!numberString.isEmpty())
+                _experienceTable.append(numberString.trimmed().toUInt());
+    }
 
     if (!isDumpItemsMode)
     {
@@ -325,6 +336,7 @@ void DupeScanDialog::scanCharactersInDir(const QString &path)
         }
 
         dupedItemFound = false;
+        const CharacterInfo &ci = CharacterInfo::instance();
         if (_isDumpItemsMode)
         {
             QString filePath = fileInfo.absoluteFilePath();
@@ -338,7 +350,55 @@ void DupeScanDialog::scanCharactersInDir(const QString &path)
             QXmlStreamWriter xml(&xmlFile);
             xml.setAutoFormatting(true);
             xml.writeStartDocument();
-            foreach (ItemInfo *item, CharacterInfo::instance().items.character)
+            xml.writeStartElement(QLatin1String("char"));
+
+            const CharacterInfo::CharacterInfoBasic &bci = ci.basicInfo;
+            xml.writeStartElement(QLatin1String("info"));
+            xml.writeTextElement(QLatin1String("title"), Enums::Progression::titleNameAndMaxDifficultyFromValue(bci.titleCode, bci.classCode >= Enums::ClassName::Necromancer && bci.classCode <= Enums::ClassName::Druid, bci.isHardcore).first);
+            xml.writeTextElement(QLatin1String("name"), bci.originalName);
+            xml.writeTextElement(QLatin1String("class"), Enums::ClassName::classes().at(bci.classCode));
+            xml.writeTextElement(QLatin1String("schc"), bci.isHardcore ? QLatin1String("HC") : QLatin1String("SC"));
+            xml.writeTextElement(QLatin1String("status"), bci.isHardcore && bci.hadDied ? QLatin1String("dead") : QLatin1String("alive"));
+            xml.writeTextElement(QLatin1String("ladder"), QString("%1Ladder").arg(bci.isLadder ? QLatin1String(0) : QLatin1String("Non-")));
+            xml.writeEndElement(); // info
+
+            quint32 exp = ci.valueOfStatistic(Enums::CharacterStats::Experience), prevExp = _experienceTable.at(bci.level - 1);
+            xml.writeStartElement(QLatin1String("stats"));
+            xml.writeTextElement(QLatin1String("level"), QString::number(bci.level));
+            xml.writeTextElement(QLatin1String("experience"), QString::number(exp));
+            xml.writeTextElement(QLatin1String("progress"), QString::number(static_cast<double>(exp - prevExp) / (_experienceTable.at(bci.level) - prevExp) * 100, 'f', 0) + QLatin1String("%"));
+            xml.writeTextElement(QLatin1String("strength"), QString::number(ci.valueOfStatistic(Enums::CharacterStats::Strength)));
+            xml.writeTextElement(QLatin1String("life"), QString::number(ci.valueOfStatistic(Enums::CharacterStats::Life)));
+            xml.writeTextElement(QLatin1String("base_life"), QString::number(ci.valueOfStatistic(Enums::CharacterStats::BaseLife)));
+            xml.writeTextElement(QLatin1String("dexterity"), QString::number(ci.valueOfStatistic(Enums::CharacterStats::Dexterity)));
+            xml.writeTextElement(QLatin1String("mana"), QString::number(ci.valueOfStatistic(Enums::CharacterStats::Mana)));
+            xml.writeTextElement(QLatin1String("base_mana"), QString::number(ci.valueOfStatistic(Enums::CharacterStats::BaseMana)));
+            xml.writeTextElement(QLatin1String("vitality"), QString::number(ci.valueOfStatistic(Enums::CharacterStats::Vitality)));
+            xml.writeTextElement(QLatin1String("energy"), QString::number(ci.valueOfStatistic(Enums::CharacterStats::Energy)));
+            xml.writeTextElement(QLatin1String("stash_gold"), QString::number(ci.valueOfStatistic(Enums::CharacterStats::StashGold)));
+            xml.writeTextElement(QLatin1String("free_stat_points"), QString::number(ci.valueOfStatistic(Enums::CharacterStats::FreeStatPoints)));
+            xml.writeTextElement(QLatin1String("sol_used"), QString::number(ci.valueOfStatistic(Enums::CharacterStats::SignetsOfLearningEaten)));
+            xml.writeEndElement(); // stats
+
+            xml.writeStartElement(QLatin1String("skills"));
+            QList<int> skills = Enums::Skills::currentCharacterSkillsIndexes().second;
+            for (int i = 0; i < skills.size(); ++i)
+            {
+                int skillIndex = skills.at(i);
+                SkillInfo *skill = ItemDataBase::Skills()->value(skillIndex);
+                xml.writeStartElement(QLatin1String("skill"));
+                xml.writeTextElement(QLatin1String("name"), skill->name);
+                xml.writeTextElement(QLatin1String("id"), QString::number(skillIndex));
+                xml.writeTextElement(QLatin1String("points"), QString::number(bci.skillsReadable.at(i)));
+                xml.writeTextElement(QLatin1String("page"), QString::number(skill->tab));
+                xml.writeTextElement(QLatin1String("column"), QString::number(skill->col));
+                xml.writeTextElement(QLatin1String("row"), QString::number(skill->row));
+                xml.writeEndElement(); // skill
+            }
+            xml.writeEndElement(); // skills
+
+            xml.writeStartElement(QLatin1String("items"));
+            foreach (ItemInfo *item, ci.items.character)
             {
                 if (!addItemInfoToXml(item, false, xml))
                     continue;
@@ -353,11 +413,14 @@ void DupeScanDialog::scanCharactersInDir(const QString &path)
                 xml.writeEndElement(); // socketables
                 xml.writeEndElement(); // item
             }
+            xml.writeEndElement(); // items
+
+            xml.writeEndElement(); // char
             xml.writeEndDocument();
         }
         else
         {
-            ItemsList itemsAndSocketables = CharacterInfo::instance().items.character, checkedItems;
+            ItemsList itemsAndSocketables = ci.items.character, checkedItems;
             for (int i = 0; i < itemsAndSocketables.size() - 1; ++i)
             {
                 ItemInfo *iItem = itemsAndSocketables.at(i);

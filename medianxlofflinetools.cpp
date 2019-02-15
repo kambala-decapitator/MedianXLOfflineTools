@@ -1816,6 +1816,7 @@ bool MedianXLOfflineTools::processSaveFile()
     }
     charInfo.basicInfo.isHardcore = status & StatusBits::IsHardcore;
     charInfo.basicInfo.hadDied = status & StatusBits::HadDied;
+    charInfo.basicInfo.isLadder = status & StatusBits::IsLadder;
 
     if (classCode > ClassName::Assassin)
     {
@@ -2526,7 +2527,7 @@ void MedianXLOfflineTools::updateUI()
 
         if (charInfo.mercenary.level == Enums::CharacterStats::MaxLevel - 1 && charInfo.mercenary.experience < mercExperienceForLevel(Enums::CharacterStats::MaxLevel - 1) + 5)
         {
-            // display levels 119 and 125 as 100% of progressbar
+            // display (maxlevel-1) as 100% of progressbar
             _mercExpGroupBox->setPreviousLevelExperience(mercExperienceForLevel(charInfo.mercenary.level - 1));
             _mercExpGroupBox->setNextLevelExperience(charInfo.mercenary.experience);
         }
@@ -2694,7 +2695,7 @@ void MedianXLOfflineTools::updateCharacterExperienceProgressbar(quint32 newExper
 {
     if (_oldClvl == Enums::CharacterStats::MaxLevel)
     {
-        // display levels 120 and 126 as 100% of progressbar
+        // display maxlevel as 100% of progressbar
         _expGroupBox->setPreviousLevelExperience(experienceTable.at(_oldClvl - 2));
         _expGroupBox->setNextLevelExperience(newExperience);
     }

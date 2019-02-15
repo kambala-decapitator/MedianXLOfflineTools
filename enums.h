@@ -41,7 +41,8 @@ public:
     {
         IsHardcore = 0x4,
         HadDied = 0x8,
-        IsExpansion = 0x20
+        IsExpansion = 0x20,
+        IsLadder = 0x40
     };
 };
 

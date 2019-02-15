@@ -33,6 +33,7 @@ public:
         //quint8 currentDifficulty, currentAct; // not used atm
         bool isHardcore;
         bool hadDied;
+        bool isLadder;
 
         QMultiMap<Enums::CharacterStats::StatisticEnum, QVariant> statsDynamicData; // there're multiple Achievements, each contains 2 numbers
         quint16 totalStatPoints;

@@ -47,6 +47,7 @@ private:
     QFutureWatcher<QString> *_futureWatcher;
     QTime _timeCounter;
     bool _isAutoLaunched, _isVerbose;
+    QList<quint32> _experienceTable;
 
     QLineEdit *_pathLineEdit;
     QTextEdit *_logBrowser;
