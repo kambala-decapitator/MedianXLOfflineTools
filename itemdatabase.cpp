@@ -8,6 +8,8 @@
 
 #include <QBuffer>
 
+#include <algorithm>
+
 #ifndef QT_NO_DEBUG
 #include <QDebug>
 #endif
@@ -224,6 +226,13 @@ QHash<uint, SetItemInfo *> *ItemDataBase::Sets()
             _sets[setItem->key].itemNames << setItem->itemName;
         }
         buf.close();
+
+        // sort set item names
+        for (QHash<QByteArray, FullSetInfo>::iterator it = _sets.begin(); it != _sets.end(); ++it)
+        {
+            FullSetInfo &info = it.value();
+            std::sort(info.itemNames.begin(), info.itemNames.end());
+        }
 
         // full set bonuses
         fileData = decompressedFileData(ResourcePathManager::dataPathForFileName("sets.dat"), tr("Sets data not loaded."));

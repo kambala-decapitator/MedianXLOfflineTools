@@ -9,7 +9,7 @@
 
 struct FullSetInfo
 {
-    QSet<QString> itemNames;
+    QList<QString> itemNames;
     QList<SetFixedProperty> partialSetProperties;
     QList<SetFixedProperty> fullSetProperties;
 };
