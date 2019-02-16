@@ -493,7 +493,40 @@ QString PropertiesDisplayManager::propertyDisplay(ItemProperty *propDisplay, int
     case 31:
     {
         QString s = ItemDataBase::StringTable()->value(propDisplay->param, tr("tbl key %1 missing").arg(propDisplay->param));
-        result = shouldColor ? htmlStringFromDiabloColorString(s, value > ColorsManager::LastColor ? ColorsManager::Blue : static_cast<ColorsManager::ColorIndex>(value)) : s;
+        if (shouldColor)
+        {
+            enum eStringColors {
+                D2C_NONE,
+                D2C_RED,
+                D2C_LGREEN,
+                D2C_BLUE,
+                D2C_GOLD,
+                D2C_GREY,
+                D2C_BLACK,
+                D2C_TAN,
+                D2C_ORANGE,
+                D2C_YELLOW,
+                D2C_DGREEN,
+                D2C_PURPLE,
+                D2C_DGREEN2
+            };
+
+            --value; // property can't store a value of 0
+            ColorsManager::ColorIndex textColor;
+            if (value > D2C_DGREEN2)
+                textColor = ColorsManager::Blue;
+            else if (value == D2C_DGREEN2)
+                textColor = ColorsManager::DarkGreen;
+            else
+            {
+                if (value >= D2C_BLACK)
+                    --value;
+                textColor = static_cast<ColorsManager::ColorIndex>(value);
+            }
+            result = htmlStringFromDiabloColorString(s, textColor);
+        }
+        else
+            result = s;
         break;
     }
     case 32: // HP regen

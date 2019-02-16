@@ -66,6 +66,7 @@ public:
         Yellow,
         DarkGreen,
         Purple,
+        //DarkGreen2,
         LastColor = Purple
     };
 
