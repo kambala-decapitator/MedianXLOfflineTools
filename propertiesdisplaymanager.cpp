@@ -492,7 +492,7 @@ QString PropertiesDisplayManager::propertyDisplay(ItemProperty *propDisplay, int
     // new in Sigma:
     case 31:
     {
-        QString s = ItemDataBase::StringTable()->value(QString::number(propDisplay->param), tr("tbl key %1 missing").arg(propDisplay->param));
+        QString s = ItemDataBase::StringTable()->value(propDisplay->param, tr("tbl key %1 missing").arg(propDisplay->param));
         result = shouldColor ? htmlStringFromDiabloColorString(s, value > ColorsManager::LastColor ? ColorsManager::Blue : static_cast<ColorsManager::ColorIndex>(value)) : s;
         break;
     }
@@ -500,7 +500,7 @@ QString PropertiesDisplayManager::propertyDisplay(ItemProperty *propDisplay, int
         result = QString("%1 %2").arg(valueStringSigned).arg(description);
         break;
     case 33:
-        result = description.replace(QLatin1String("%s"), ItemDataBase::Skills()->at(propDisplay->param)->name).replace(QLatin1String("%.1g"), QString::number(value / 25.0, 'g', 1) + ItemDataBase::StringTable()->value(prop->descStringAdd));
+        result = description.replace(QLatin1String("%s"), ItemDataBase::Skills()->at(propDisplay->param)->name).replace(QLatin1String("%.1g"), QString::number(value / 25.0, 'g', 1) + ItemDataBase::stringFromTblKey(prop->descStringAdd));
         break;
     // 9, 10, 14, 16-19 - absent
     // everything else is constructed in ItemParser (mostly in parseItemProperties()), i.e. has displayString

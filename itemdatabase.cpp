@@ -20,6 +20,7 @@
 
 const char *const ItemDataBase::kJewelType = "jew";
 QHash<QByteArray, FullSetInfo> ItemDataBase::_sets;
+QHash<QString, quint32> ItemDataBase::_tblIndexLookup;
 
 QByteArray ItemDataBase::decompressedFileData(const QString &compressedFilePath, const QString &errorMessage)
 {
@@ -483,30 +484,53 @@ QStringList *ItemDataBase::NonMagicItemQualities()
     return &allQualities;
 }
 
-QHash<QString, QString> *ItemDataBase::StringTable()
+QString unquotedString(const QByteArray &ba)
 {
-    static QHash<QString, QString> strings;
+    QString s = QString::fromUtf8(ba);
+    return s.size() > 2 ? s.mid(1, s.size() - 2) : QString();
+}
+
+QHash<quint32, QString> *ItemDataBase::StringTable()
+{
+    static QHash<quint32, QString> strings;
     if (strings.isEmpty())
     {
-        QFile f(ResourcePathManager::localizedPathForFileName("tbl"));
-        if (!f.open(QIODevice::ReadOnly))
+        quint32 i = 0;
+        foreach (QLatin1String tblName, QList<QLatin1String>() << QLatin1String("string") << QLatin1String("patchstring") << QLatin1String("expansionstring"))
         {
-            ERROR_BOX_NO_PARENT(tr("String table not loaded.") + "\n" + tr("Reason: %1").arg(f.errorString()));
-            return 0;
-        }
+            QFile f(ResourcePathManager::localizedPathForFileName(tblName));
+            if (!f.open(QIODevice::ReadOnly))
+            {
+                ERROR_BOX_NO_PARENT(tr("String table '%1' not loaded.").arg(tblName) + "\n" + tr("Reason: %1").arg(f.errorString()));
+                return 0;
+            }
 
-        QByteArray fileData = f.readAll();
-        QBuffer buf(&fileData);
-        if (!buf.open(QIODevice::ReadOnly))
-            return 0;
-        while (!buf.atEnd())
-        {
-            QList<QByteArray> data = stringArrayOfCurrentLineInFile(buf);
-            if (!data.isEmpty())
-                strings[QString::fromUtf8(data.at(0))] = data.size() > 1 ? QString::fromUtf8(data.at(1)) : QString();
+            QByteArray fileData = f.readAll();
+            QBuffer buf(&fileData);
+            if (!buf.open(QIODevice::ReadOnly))
+                return 0;
+
+            quint32 j = i;
+            while (!buf.atEnd())
+            {
+                QList<QByteArray> data = stringArrayOfCurrentLineInFile(buf);
+                if (!data.isEmpty())
+                {
+                    strings[j] = data.size() > 1 ? unquotedString(data.at(1)) : QString();
+                    _tblIndexLookup[unquotedString(data.at(0))] = j;
+                    ++j;
+                }
+            }
+
+            i += 10000;
         }
     }
     return &strings;
+}
+
+QString ItemDataBase::stringFromTblKey(const QString &key)
+{
+    return StringTable()->value(_tblIndexLookup.value(key, -1));
 }
 
 QList<QByteArray> ItemDataBase::stringArrayOfCurrentLineInFile(QIODevice &d)
