@@ -632,7 +632,7 @@ void MedianXLOfflineTools::saveCharacter()
         QFile inputFile(info.path);
         if (inputFile.exists())
             backupedFiles += backupFile(inputFile);
-        else if (iter.key() == Enums::ItemStorage::PersonalStash)
+        else if (items.isEmpty())
             continue;
         else
         {
