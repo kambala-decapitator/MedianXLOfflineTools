@@ -593,6 +593,13 @@ void ItemsPropertiesSplitter::dumpInfo(ItemInfo *item /*= 0*/, bool shouldShowMs
 }
 #endif
 
+void ItemsPropertiesSplitter::setCurrentStorageHasChanged()
+{
+    // a hack to make stash modified
+    if (!_allItems.isEmpty())
+        _allItems.first()->hasChanged = true;
+}
+
 void ItemsPropertiesSplitter::deleteItem(ItemInfo *item)
 {
     performDeleteItem(item);
@@ -601,8 +608,7 @@ void ItemsPropertiesSplitter::deleteItem(ItemInfo *item)
     emit itemCountChanged(_allItems.size());
     emit itemDeleted();
 
-    if (!_allItems.isEmpty())
-        _allItems.first()->hasChanged = true; // a hack to make stash modified
+    setCurrentStorageHasChanged();
 }
 
 void ItemsPropertiesSplitter::performDeleteItem(ItemInfo *item, bool emitSignal /*= true*/)

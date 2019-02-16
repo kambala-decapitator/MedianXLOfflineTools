@@ -105,7 +105,7 @@ protected:
 
     virtual void addItemToList(ItemInfo *item, bool emitSignal = true);
     virtual void removeItemFromList(ItemInfo *item, bool emitSignal = true);
-    void removeItemFromModel(ItemInfo *item);
+    virtual void removeItemFromModel(ItemInfo *item);
     ItemInfo *disenchantItemIntoItem(ItemInfo *oldItem, ItemInfo *newItem, bool emitSignal = true);
     virtual bool isItemInCurrentStorage(ItemInfo *item) const { Q_UNUSED(item); return true; }
     bool upgradeItemsInMap(UpgradableItemsMultiMap &itemsMap, quint8 maxKey, const QString &itemNameFormat);
@@ -120,6 +120,7 @@ protected:
 
     virtual bool shouldAddMoveItemAction() const;
     virtual QString moveItemActionText() const;
+    void setCurrentStorageHasChanged();
 };
 
 #endif // ITEMSPROPERTIESSPLITTER_H

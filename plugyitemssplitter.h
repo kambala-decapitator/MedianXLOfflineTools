@@ -62,7 +62,7 @@ protected:
 
     virtual bool isItemInCurrentStorage(ItemInfo *item) const;
     virtual void addItemToList(ItemInfo *item, bool emitSignal = true);
-    virtual void removeItemFromList(ItemInfo *item, bool emitSignal = true);
+    virtual void removeItemFromModel(ItemInfo *item);
 
     virtual bool shouldAddMoveItemAction() const;
     virtual QString moveItemActionText() const;
@@ -77,6 +77,7 @@ private slots:
     void rightClicked();
     void left10Clicked();
     void right10Clicked();
+    void moveBetweenStashes();
 
 private:
     QPushButton *_left10Button, *_leftButton, *_rightButton, *_right10Button;

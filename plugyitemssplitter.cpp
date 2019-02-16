@@ -201,11 +201,11 @@ void PlugyItemsSplitter::addItemToList(ItemInfo *item, bool emitSignal /*= true*
         _pagedItems.append(item);
 }
 
-void PlugyItemsSplitter::removeItemFromList(ItemInfo *item, bool emitSignal /*= true*/)
+void PlugyItemsSplitter::removeItemFromModel(ItemInfo *item)
 {
-    ItemsPropertiesSplitter::removeItemFromList(item, emitSignal);
-    if (isItemInCurrentStorage(item))
-        _pagedItems.removeOne(item);
+    ItemsPropertiesSplitter::removeItemFromModel(item);
+    _pagedItems.removeOne(item);
+    _allItems.removeOne(item);
 }
 
 bool PlugyItemsSplitter::shouldAddMoveItemAction() const
@@ -605,6 +605,12 @@ void PlugyItemsSplitter::right10Clicked()
 {
     quint32 step = _isShiftPressed ? 100 : 10;
     _pageSpinBox->setValue(qCeil((_pageSpinBox->value() + 1) / step) * step);
+}
+
+void PlugyItemsSplitter::moveBetweenStashes()
+{
+    ItemsPropertiesSplitter::moveBetweenStashes();
+    setCurrentStorageHasChanged();
 }
 
 
