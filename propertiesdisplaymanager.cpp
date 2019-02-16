@@ -175,11 +175,15 @@ QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item)
     int rlvl;
     switch (item->quality)
     {
-    case Enums::ItemQuality::Set:
-        rlvl = 100;
-        break;
-    case Enums::ItemQuality::Unique:
-        rlvl = ItemDataBase::Uniques()->contains(item->setOrUniqueId) ? ItemDataBase::Uniques()->value(item->setOrUniqueId)->rlvl : ItemDataBase::Items()->value(item->itemType)->rlvl;
+    case Enums::ItemQuality::Set: case Enums::ItemQuality::Unique:
+    {
+        SetOrUniqueItemInfo *info;
+        if (item->quality == Enums::ItemQuality::Set)
+            info = ItemDataBase::Sets()->value(item->setOrUniqueId);
+        else
+            info = ItemDataBase::Uniques()->value(item->setOrUniqueId);
+        rlvl = info ? info->rlvl : itemBase->rlvl;
+    }
         break;
     default:
         rlvl = itemBase->rlvl;
