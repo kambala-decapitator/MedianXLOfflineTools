@@ -303,7 +303,7 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
     int maxSocketableRlvl = 0;
     foreach (ItemInfo *socketableItem, item->socketablesInfo)
     {
-        int socketableRlvl = socketableItem->quality == ItemQuality::Unique ? ItemDataBase::Uniques()->value(item->setOrUniqueId)->rlvl : ItemDataBase::Items()->value(socketableItem->itemType)->rlvl;
+        int socketableRlvl = socketableItem->quality == ItemQuality::Unique ? ItemDataBase::Uniques()->value(socketableItem->setOrUniqueId)->rlvl : ItemDataBase::Items()->value(socketableItem->itemType)->rlvl;
         if (maxSocketableRlvl < socketableRlvl)
             maxSocketableRlvl = socketableRlvl;
     }
