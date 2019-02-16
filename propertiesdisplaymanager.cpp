@@ -192,7 +192,7 @@ QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item)
     int maxSocketableRlvl = 0;
     foreach (ItemInfo *socketableItem, item->socketablesInfo)
     {
-        int socketableRlvl = ItemDataBase::Items()->value(socketableItem->itemType)->rlvl;
+        int socketableRlvl = socketableItem->quality == Enums::ItemQuality::Unique ? ItemDataBase::Uniques()->value(item->setOrUniqueId)->rlvl : ItemDataBase::Items()->value(socketableItem->itemType)->rlvl;
         if (maxSocketableRlvl < socketableRlvl)
             maxSocketableRlvl = socketableRlvl;
     }

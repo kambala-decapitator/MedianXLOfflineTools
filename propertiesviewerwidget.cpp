@@ -284,14 +284,14 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
     switch (item->quality)
     {
     case ItemQuality::Set: case ItemQuality::Unique:
-        {
-            SetOrUniqueItemInfo *info;
-            if (item->quality == ItemQuality::Set)
-                info = ItemDataBase::Sets()->value(item->setOrUniqueId);
-            else
-                info = ItemDataBase::Uniques()->value(item->setOrUniqueId);
-            rlvl = info ? info->rlvl : itemBase->rlvl;
-        }
+    {
+        SetOrUniqueItemInfo *info;
+        if (item->quality == ItemQuality::Set)
+            info = ItemDataBase::Sets()->value(item->setOrUniqueId);
+        else
+            info = ItemDataBase::Uniques()->value(item->setOrUniqueId);
+        rlvl = info ? info->rlvl : itemBase->rlvl;
+    }
         break;
 //  case ItemQuality::Rare: case ItemQuality::Crafted: case ItemQuality::Magic:
         // TODO: [0.5+] add support for affix rlvl
@@ -303,7 +303,7 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
     int maxSocketableRlvl = 0;
     foreach (ItemInfo *socketableItem, item->socketablesInfo)
     {
-        int socketableRlvl = ItemDataBase::Items()->value(socketableItem->itemType)->rlvl;
+        int socketableRlvl = socketableItem->quality == ItemQuality::Unique ? ItemDataBase::Uniques()->value(item->setOrUniqueId)->rlvl : ItemDataBase::Items()->value(socketableItem->itemType)->rlvl;
         if (maxSocketableRlvl < socketableRlvl)
             maxSocketableRlvl = socketableRlvl;
     }
