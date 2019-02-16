@@ -198,7 +198,7 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
 
         if (shouldAddMoveItemAction())
         {
-            QAction *moveBetweenStashesAction = new QAction(moveItemActionText(), this);
+            QAction *moveBetweenStashesAction = new QAction(moveItemActionText() + QString(" (%1)").arg(tr("Alt+Click")), this);
             connect(moveBetweenStashesAction, SIGNAL(triggered()), SLOT(moveBetweenStashes()));
             actions << moveBetweenStashesAction << separatorAction();
         }
@@ -334,7 +334,7 @@ ItemInfo *ItemsPropertiesSplitter::selectedItem(bool showError /*= true*/)
 void ItemsPropertiesSplitter::moveBetweenStashes()
 {
     ItemInfo *item = selectedItem(false);
-    if (sender() == _itemsView && !(qApp->mouseButtons() == Qt::LeftButton && qApp->keyboardModifiers() == Qt::AltModifier && item))
+    if (sender() == _itemsView && !(item && qApp->mouseButtons() == Qt::LeftButton && qApp->keyboardModifiers() == Qt::AltModifier)) // Alt+Click
         return;
 
     removeItemFromModel(item);
