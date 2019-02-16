@@ -795,22 +795,18 @@ bool ItemDataBase::doesItemGrantBonus(ItemInfo *item)
 
 bool ItemDataBase::canDisenchantIntoArcaneShards(ItemInfo *item)
 {
-    // prohibit disenchanting TUs from the Gift Box (Griswold) and quest items into shards
-    return canDisenchant(item) && !(item->props.contains(Enums::ItemProperties::CantDisenchant) || Items()->value(item->itemType)->questId > 0);
+    // prohibit disenchanting items with respective property and quest items into shards
+    return canDisenchant(item) && item->quality == Enums::ItemQuality::Unique && ItemParser::itemTypesInheritFromType(Items()->value(item->itemType)->types, "dcht")
+            && !(item->props.contains(Enums::ItemProperties::CantDisenchant) || Items()->value(item->itemType)->questId > 0);
 }
 
 bool ItemDataBase::canDisenchantIntoSignetOfLearning(ItemInfo *item)
 {
     // prohibit disenchanting TUs into signets
-    return canDisenchantIntoArcaneShards(item) && !(item->quality == Enums::ItemQuality::Unique && Items()->value(item->itemType)->genericType != Enums::ItemTypeGeneric::Misc && isTiered(item));
+    return canDisenchant(item) && (item->quality == Enums::ItemQuality::Set || item->quality == Enums::ItemQuality::Unique) && ItemParser::itemTypesInheritFromType(Items()->value(item->itemType)->types, "ssgl");
 }
 
 bool ItemDataBase::canDisenchant(ItemInfo *item)
 {
-    if (item && item->location == Enums::ItemLocation::Stored && (item->quality == Enums::ItemQuality::Set || item->quality == Enums::ItemQuality::Unique))
-    {
-        QList<QByteArray> itemTypes = Items()->value(item->itemType)->types;
-        return ItemParser::itemTypesInheritFromType(itemTypes, "dcht");
-    }
-    return false;
+    return item && item->location == Enums::ItemLocation::Stored;
 }
