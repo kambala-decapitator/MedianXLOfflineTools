@@ -191,8 +191,9 @@ void ItemsViewerDialog::createLayout()
     _applyActionToAllPagesCheckbox = new QCheckBox(tr("Apply to all pages"), this);
     _applyActionToAllPagesCheckbox->setToolTip(tr("Either action will be applied to all pages of the current PlugY stash"));
     _applyActionToAllPagesCheckbox->setChecked(true);
+    _applyActionToAllPagesCheckbox->hide();
 
-    _moveCurrentItemsToSharedStashButton = new QPushButton(tr("Move current items\nto shared stash"), this);
+    _moveCurrentItemsToSharedStashButton = new QPushButton(tr("Move items here\nto shared stash"), this);
 
     // stash box setup
     _stashBox = new QGroupBox(tr("PlugY Stash"), _itemManagementWidget);
@@ -211,12 +212,15 @@ void ItemsViewerDialog::createLayout()
     vboxLayout->addWidget(_sortStashButton);
     vboxLayout->addWidget(blankPagesBox);
 
+    vboxLayout = new QVBoxLayout;
+    vboxLayout->addWidget(_applyActionToAllPagesCheckbox);
+    vboxLayout->addWidget(_moveCurrentItemsToSharedStashButton);
+
     // item management groupbox layout
     QHBoxLayout *itemManagementBoxLayout = new QHBoxLayout(_itemManagementWidget);
     itemManagementBoxLayout->addWidget(_disenchantBox);
-    itemManagementBoxLayout->addWidget(_applyActionToAllPagesCheckbox);
+    itemManagementBoxLayout->addLayout(vboxLayout);
     itemManagementBoxLayout->addWidget(_upgradeBox);
-    itemManagementBoxLayout->addWidget(_moveCurrentItemsToSharedStashButton);
     itemManagementBoxLayout->addStretch();
     itemManagementBoxLayout->addWidget(_stashBox);
 
@@ -278,7 +282,6 @@ void ItemsViewerDialog::tabChanged(int tabIndex)
 
     splitterAtIndex(tabIndex)->showFirstItem();
     _itemManagementWidget->setEnabled(isStorage);
-    _applyActionToAllPagesCheckbox->setEnabled(isPlugyStash);
 
     if (isStorage)
     {
@@ -286,6 +289,7 @@ void ItemsViewerDialog::tabChanged(int tabIndex)
             currentPlugySplitter()->setApplyActionToAllPages(_applyActionToAllPagesCheckbox->isChecked()); // must be explicitly set
         updateItemManagementButtonsState();
     }
+    _applyActionToAllPagesCheckbox->setVisible(isPlugyStash);
 }
 
 void ItemsViewerDialog::itemCountChangedInCurrentTab(int newCount)
