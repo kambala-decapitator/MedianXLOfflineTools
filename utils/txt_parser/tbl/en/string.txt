@@ -5103,7 +5103,7 @@
 "x"	"OK"
 "x"	"CANCEL"
 "x"	"(c) 2000 Blizzard Entertainment"
-"x"	"Sigma 1.0.3"
+"x"	"Sigma 1.0.4"
 "x"	"SINGLE PLAYER"
 "x"	"THE SIN WAR"
 "x"	"MULTIPLAYER"

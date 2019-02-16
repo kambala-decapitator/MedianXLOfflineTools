@@ -208,7 +208,7 @@ for my $setItem (@$setItems)
 
 my $itemName = 'name';
 my $armorTypes = parsetxt("armor.txt", $itemName=>1, "#code"=>0, $nameStr=>21, w=>31, h=>32, type=>2,
-                          type2=>3, rlvl=>18, image=>37, rstr=>11, rdex=>12);
+                          type2=>3, rlvl=>18, image=>37, rstr=>12, rdex=>13);
 my $weaponTypes = parsetxt("weapons.txt", $itemName=>1, "#code"=>0, $nameStr=>5, w=>43, h=>44, type=>2,
                            type2=>3, stackable=>45, rlvl=>30, rstr=>25, rdex=>26, image=>50, quest=>67,
                            '1hMinDmg'=>12, '1hMaxDmg'=>13, '2hMinDmg'=>16, '2hMaxDmg'=>17, throwMinDmg=>18, throwMaxDmg=>19,

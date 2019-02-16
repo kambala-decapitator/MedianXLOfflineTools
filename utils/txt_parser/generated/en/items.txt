@@ -1,470 +1,470 @@
 #code	name	spelldescstr	width	height	gentype	stackable	rlvl	rstr	rdex	1h2h	2h	1hMinDmg	1hMaxDmg	2hMinDmg	2hMaxDmg	throwMinDmg	throwMaxDmg	image	quest	type	sockettype	class
-01!	Athulua's Hand (1)		2	2	0		0	0	0									invxmlu		azsd,tier	0	0
-03!	Athulua's Hand (2)		2	2	0		9	0	0									invxmlu		azsd,tier	0	0
-05!	Athulua's Hand (3)		2	2	0		18	0	0									invxmlu		azsd,tier	0	0
-06!	Athulua's Hand (4)		2	2	0		22	0	0									invxmlu		azsd,tier	0	0
-07!	Athulua's Hand (Sacred)		2	2	0		30	0	0									invxmlu		sasz	0	0
-08!	Phoenix Shield (1)		2	3	0		4	0	29									invkitu		azsd,tier	0	0
-10!	Phoenix Shield (2)		2	3	0		12	0	43									invkitu		azsd,tier	0	0
-12!	Phoenix Shield (3)		2	3	0		21	0	91									invkitu		azsd,tier	0	0
-13!	Phoenix Shield (4)		2	3	0		26	0	190									invkitu		azsd,tier	0	0
-14!	Phoenix Shield (Sacred)		2	3	0		30	0	648									invkitu		sasz	0	0
-15!	Setzschild (1)		2	4	0		6	15	47									invutss		azsd,tier	0	0
-17!	Setzschild (2)		2	4	0		15	15	70									invutss		azsd,tier	0	0
-19!	Setzschild (3)		2	4	0		23	15	147									invutss		azsd,tier	0	0
-1@G	Gambeson (1)		2	3	0		1	0	0									invxtuu		stor,tier		1
-1@H	Lamellar Armor (2)		2	3	0		11	0	0									invxrss		stor,tier		1
-1@I	Kazarghand (3)		2	3	0		20	0	0									invxaru		stor,tier		1
-1@J	Banded Plate (Sacred)		2	3	0		30	0	0									invfulu		sstr		1
-1@M	Einherjar Helm (4)		2	2	0		25	0	0									invuhms		azhm,tier		0
-1@N	Parma (1)		2	2	0		2	0	22									invsmlu		ishd,tier	0	6
-1@O	Aspis (2)		2	3	0		12	3	44									invxrgu		ishd,tier	0	6
-1@P	Totem Shield (3)		2	3	0		20	0	0									invxshu		ishd,tier	0	6
-1@Q	Bladed Shield (Sacred)		2	3	0		30	0	0									invxpku		sisd	0	6
-20!	Setzschild (4)		2	4	0		28	15	305									invutss		azsd,tier	0	0
-21!	Setzschild (Sacred)		2	4	0		30	15	643									invutss		sasz	0	0
-22!	Bull Shield (1)		2	4	0		1	12	10									invgtsu		basd,tier	0	4
-24!	Bull Shield (2)		2	4	0		10	12	15									invgtsu		basd,tier	0	4
-26!	Bull Shield (3)		2	4	0		19	12	32									invgtsu		basd,tier	0	4
-27!	Bull Shield (4)		2	4	0		23	12	67									invgtsu		basd,tier	0	4
-28!	Bull Shield (Sacred)		2	4	0		30	12	347									invgtsu		saba	0	4
-29!	Bronze Shield (1)		2	2	0		3	0	25									invbucu		basd,tier	0	4
-2@I	Kazarghand (4)		2	3	0		25	0	0									invxaru		stor,tier		1
-2@J	Ceremonial Armor (1)		2	3	0		6	0	0									invaaru		stor,tier		1
-2@K	Morion (2)		2	2	0		9	0	16									invxkpu		azhm,tier		0
-2@L	Cervelliere (3)		2	2	0		20	0	120									invfhlu		azhm,tier		0
-2@M	Einherjar Helm (Sacred)		2	2	0		30	0	0									invuhms		szhm		0
-2@P	Totem Shield (4)		2	3	0		25	0	0									invxshu		ishd,tier	0	6
-31!	Bronze Shield (2)		2	2	0		12	0	36									invbucu		basd,tier	0	4
-33!	Bronze Shield (3)		2	2	0		21	0	78									invbucu		basd,tier	0	4
-34!	Bronze Shield (4)		2	2	0		25	0	162									invbucu		basd,tier	0	4
-35!	Bronze Shield (Sacred)		2	2	0		30	0	552									invbucu		saba	0	4
-36!	Gilded Shield (1)		2	3	0		7	6	44									invlrgu		basd,tier	0	4
-38!	Gilded Shield (2)		2	3	0		15	6	66									invlrgu		basd,tier	0	4
-3@G	Gambeson (2)		2	3	0		10	0	0									invxtuu		stor,tier		1
-3@H	Lamellar Armor (3)		2	3	0		19	0	0									invxrss		stor,tier		1
-3@I	Kazarghand (Sacred)		2	3	0		30	0	0									invxaru		sstr		1
-3@L	Cervelliere (4)		2	2	0		24	0	250									invfhlu		azhm,tier		0
-3@M	Spangenhelm (1)		2	2	0		5	0	81									invxrnu		azhm,tier		0
-3@N	Parma (2)		2	2	0		11	0	32									invsmlu		ishd,tier	0	6
-3@O	Aspis (3)		2	3	0		20	3	93									invxrgu		ishd,tier	0	6
-3@P	Totem Shield (Sacred)		2	3	0		30	0	0									invxshu		sisd	0	6
-40!	Gilded Shield (3)		2	3	0		24	6	139									invlrgu		basd,tier	0	4
-41!	Gilded Shield (4)		2	3	0		28	6	286									invlrgu		basd,tier	0	4
-42!	Gilded Shield (Sacred)		2	3	0		30	6	655									invlrgu		saba	0	4
-43!	Hundsgugel (1)		2	2	0		1	0	18									invhlmu		pzhm,tier		3
-45!	Hundsgugel (2)		2	2	0		9	0	26									invhlmu		pzhm,tier		3
-47!	Hundsgugel (3)		2	2	0		18	0	55									invhlmu		pzhm,tier		3
-48!	Hundsgugel (4)		2	2	0		22	0	115									invhlmu		pzhm,tier		3
-49!	Hundsgugel (Sacred)		2	2	0		30	0	363									invhlmu		sphz		3
-4@H	Lamellar Armor (4)		2	3	0		24	0	0									invxrss		stor,tier		1
-4@I	Banded Plate (1)		2	3	0		6	0	0									invfulu		stor,tier		1
-4@J	Ceremonial Armor (2)		2	3	0		15	0	0									invaaru		stor,tier		1
-4@K	Morion (3)		2	2	0		18	0	34									invxkpu		azhm,tier		0
-4@L	Cervelliere (Sacred)		2	2	0		30	0	516									invfhlu		szhm		0
-4@O	Aspis (4)		2	3	0		25	3	192									invxrgu		ishd,tier	0	6
-4@P	Bladed Shield (1)		2	3	0		4	0	0									invxpku		ishd,tier	0	6
-50!	Blackguard Helm (1)		2	2	0		3	0	0									invbhmu		pzhm,tier		3
-52!	Blackguard Helm (2)		2	2	0		12	0	0									invbhmu		pzhm,tier		3
-54!	Blackguard Helm (3)		2	2	0		20	0	0									invbhmu		pzhm,tier		3
-55!	Blackguard Helm (4)		2	2	0		25	0	0									invbhmu		pzhm,tier		3
-56!	Blackguard Helm (Sacred)		2	2	0		30	0	0									invbhmu		sphz		3
-5@G	Gambeson (3)		2	3	0		19	0	0									invxtuu		stor,tier		1
-5@H	Lamellar Armor (Sacred)		2	3	0		30	0	0									invxrss		sstr		1
-5@K	Morion (4)		2	2	0		22	0	71									invxkpu		azhm,tier		0
-5@L	Einherjar Helm (1)		2	2	0		3	0	0									invuhms		azhm,tier		0
-5@M	Spangenhelm (2)		2	2	0		14	0	119									invxrnu		azhm,tier		0
-5@N	Parma (3)		2	2	0		20	0	68									invsmlu		ishd,tier	0	6
-5@O	Aspis (Sacred)		2	3	0		30	3	497									invxrgu		sisd	0	6
-600	Quilted Armor (1)		2	3	0		0	0	10									invqlt		tors,tier		-1
-601	Leather Armor (1)		2	3	0		1	0	19									invlea		tors,tier		-1
-602	Hard Leather Armor (1)		2	3	0		1	0	25									invhla		tors,tier		-1
-603	Studded Leather (1)		2	3	0		1	0	31									invstu		tors,tier		-1
-604	Ring Mail (1)		2	3	0		2	0	37									invrng		tors,tier		-1
-605	Scale Mail (1)		2	3	0		2	0	43									invscl		tors,tier		-1
-606	Chain Mail (1)		2	3	0		2	0	49									invchn		tors,tier		-1
-607	Breast Plate (1)		2	3	0		2	0	55									invbrs		tors,tier		-1
-608	Splint Mail (1)		2	3	0		3	0	61									invspl		tors,tier		-1
-609	Plate Mail (1)		2	3	0		3	0	67									invplt		tors,tier		-1
-610	Field Plate (1)		2	3	0		3	0	73									invfld		tors,tier		-1
-611	Light Plate (1)		2	3	0		4	0	79									invltp		tors,tier		-1
-612	Gothic Plate (1)		2	3	0		4	3	85									invgth		tors,tier		-1
-613	Full Plate Mail (1)		2	3	0		5	6	91									invful		tors,tier		-1
-614	Ancient Armor (1)		2	3	0		5	9	97									invaar		tors,tier		-1
-615	Cap (1)		2	2	0		0	0	10									invcap		helm,tier		-1
-616	Skull Cap (1)		2	2	0		1	0	25									invskp		helm,tier		-1
-617	Helm (1)		2	2	0		2	0	39									invhlm		helm,tier		-1
-618	Full Helm (1)		2	2	0		3	0	53									invfhl		helm,tier		-1
-619	Great Helm (1)		2	2	0		4	0	67									invghm		helm,tier		-1
-620	Crown (1)		2	2	0		5	0	81									invcrn		crow,tier		-1
-621	Buckler (1)		2	2	0		0	0	6									invbuc		shie,tier	0	-1
-622	Small Shield (1)		2	2	0		1	0	14									invsml		shie,tier	0	-1
-623	Large Shield (1)		2	3	0		2	0	22									invlrg		shie,tier	0	-1
-624	Kite Shield (1)		2	3	0		2	3	30									invkit		shie,tier	0	-1
-625	Tower Shield (1)		2	3	0		3	6	38									invtow		shie,tier	0	-1
-626	Gothic Shield (1)		2	4	0		5	9	46									invgts		shie,tier	0	-1
-627	Sash (1)		2	1	0		0	0	9									invlbl		belt,tier		-1
-628	Light Belt (1)		2	1	0		1	0	27									invvbl		belt,tier		-1
-629	Belt (1)		2	1	0		2	0	45									invmbl		belt,tier		-1
-630	Heavy Belt (1)		2	1	0		3	0	63									invtbl		belt,tier		-1
-631	Plated Belt (1)		2	1	0		5	0	81									invhbl		belt,tier		-1
-632	Leather Gloves (1)		2	2	0		0	0	10									invlgl		glov,tier		-1
-633	Heavy Gloves (1)		2	2	0		1	0	24									invvgl		glov,tier		-1
-634	Chain Gloves (1)		2	2	0		2	0	38									invmgl		glov,tier		-1
-635	Light Gauntlets (1)		2	2	0		3	0	52									invtgl		glov,tier		-1
-636	Gauntlets (1)		2	2	0		5	0	66									invhgl		glov,tier		-1
-637	Boots (1)		2	2	0		0	0	10									invlbt		boot,tier		-1
-638	Heavy Boots (1)		2	2	0		1	0	28									invvbt		boot,tier		-1
-639	Chain Boots (1)		2	2	0		2	0	44									invmbt		boot,tier		-1
-640	Light Plated Boots (1)		2	2	0		3	0	60									invtbt		boot,tier		-1
-641	Greaves (1)		2	2	0		4	0	76									invhbt		boot,tier		-1
-642	Bone Shield (1)		2	3	0		2	0	0									invbsh		bshi,tier	0	-1
-643	Spiked Shield (1)		2	3	0		3	0	0									invspk		bshi,tier	0	-1
-644	Mask (1)		2	2	0		3	0	50									invmsk		bhlm,tier		-1
-645	Bone Helm (1)		2	2	0		5	0	61									invbhm		bhlm,tier		-1
-692	Quilted Armor (2)		2	3	0		9	0	19									invqlt		tors,tier		-1
-693	Leather Armor (2)		2	3	0		9	0	28									invlea		tors,tier		-1
-694	Hard Leather Armor (2)		2	3	0		9	0	37									invhla		tors,tier		-1
-695	Studded Leather (2)		2	3	0		10	0	46									invstu		tors,tier		-1
-696	Ring Mail (2)		2	3	0		10	0	55									invrng		tors,tier		-1
-697	Scale Mail (2)		2	3	0		10	0	63									invscl		tors,tier		-1
-698	Chain Mail (2)		2	3	0		11	0	72									invchn		tors,tier		-1
-699	Breast Plate (2)		2	3	0		11	0	81									invbrs		tors,tier		-1
-6@G	Gambeson (4)		2	3	0		23	0	0									invxtuu		stor,tier		1
-6@H	Kazarghand (1)		2	3	0		3	0	0									invxaru		stor,tier		1
-6@I	Banded Plate (2)		2	3	0		14	0	0									invfulu		stor,tier		1
-6@J	Ceremonial Armor (3)		2	3	0		24	0	0									invaaru		stor,tier		1
-6@K	Morion (Sacred)		2	2	0		30	0	456									invxkpu		szhm		0
-6@N	Parma (4)		2	2	0		24	0	141									invsmlu		ishd,tier	0	6
-6@O	Totem Shield (1)		2	3	0		3	0	0									invxshu		ishd,tier	0	6
-6@P	Bladed Shield (2)		2	3	0		12	0	0									invxpku		ishd,tier	0	6
-700	Splint Mail (2)		2	3	0		11	0	90									invspl		tors,tier		-1
-701	Plate Mail (2)		2	3	0		11	0	99									invplt		tors,tier		-1
-702	Field Plate (2)		2	3	0		12	0	107									invfld		tors,tier		-1
-703	Light Plate (2)		2	3	0		12	0	116									invltp		tors,tier		-1
-704	Gothic Plate (2)		2	3	0		13	3	125									invgth		tors,tier		-1
-705	Full Plate Mail (2)		2	3	0		14	6	134									invful		tors,tier		-1
-706	Ancient Armor (2)		2	3	0		15	9	143									invaar		tors,tier		-1
-707	Cap (2)		2	2	0		8	0	16									invcap		helm,tier		-1
-708	Skull Cap (2)		2	2	0		10	0	37									invskp		helm,tier		-1
-709	Helm (2)		2	2	0		11	0	57									invhlm		helm,tier		-1
-710	Full Helm (2)		2	2	0		11	0	78									invfhl		helm,tier		-1
-711	Great Helm (2)		2	2	0		12	0	99									invghm		helm,tier		-1
-712	Crown (2)		2	2	0		14	0	119									invcrn		crow,tier		-1
-713	Buckler (2)		2	2	0		8	0	9									invbuc		shie,tier	0	-1
-714	Small Shield (2)		2	2	0		10	0	20									invsml		shie,tier	0	-1
-715	Large Shield (2)		2	3	0		10	0	32									invlrg		shie,tier	0	-1
-716	Kite Shield (2)		2	3	0		11	3	44									invkit		shie,tier	0	-1
-717	Tower Shield (2)		2	3	0		12	6	56									invtow		shie,tier	0	-1
-718	Gothic Shield (2)		2	4	0		14	9	68									invgts		shie,tier	0	-1
-719	Sash (2)		2	1	0		8	0	13									invlbl		belt,tier		-1
-720	Light Belt (2)		2	1	0		10	0	40									invvbl		belt,tier		-1
-721	Belt (2)		2	1	0		11	0	67									invmbl		belt,tier		-1
-722	Heavy Belt (2)		2	1	0		12	0	92									invtbl		belt,tier		-1
-723	Plated Belt (2)		2	1	0		13	0	119									invhbl		belt,tier		-1
-724	Leather Gloves (2)		2	2	0		8	0	15									invlgl		glov,tier		-1
-725	Heavy Gloves (2)		2	2	0		10	0	35									invvgl		glov,tier		-1
-726	Chain Gloves (2)		2	2	0		11	0	56									invmgl		glov,tier		-1
-727	Light Gauntlets (2)		2	2	0		12	0	76									invtgl		glov,tier		-1
-728	Gauntlets (2)		2	2	0		13	0	97									invhgl		glov,tier		-1
-729	Boots (2)		2	2	0		8	0	18									invlbt		boot,tier		-1
-730	Heavy Boots (2)		2	2	0		10	0	41									invvbt		boot,tier		-1
-731	Chain Boots (2)		2	2	0		11	0	65									invmbt		boot,tier		-1
-732	Light Plated Boots (2)		2	2	0		12	0	88									invtbt		boot,tier		-1
-733	Greaves (2)		2	2	0		13	0	112									invhbt		boot,tier		-1
-734	Bone Shield (2)		2	3	0		11	0	0									invbsh		bshi,tier	0	-1
-735	Spiked Shield (2)		2	3	0		12	0	0									invspk		bshi,tier	0	-1
-736	Mask (2)		2	2	0		12	0	74									invmsk		bhlm,tier		-1
-737	Bone Helm (2)		2	2	0		13	0	90									invbhm		bhlm,tier		-1
-784	Quilted Armor (3)		2	3	0		17	0	40									invqlt		tors,tier		-1
-785	Leather Armor (3)		2	3	0		17	0	59									invlea		tors,tier		-1
-786	Hard Leather Armor (3)		2	3	0		18	0	78									invhla		tors,tier		-1
-787	Studded Leather (3)		2	3	0		19	0	96									invstu		tors,tier		-1
-788	Ring Mail (3)		2	3	0		19	0	115									invrng		tors,tier		-1
-789	Scale Mail (3)		2	3	0		19	0	133									invscl		tors,tier		-1
-790	Chain Mail (3)		2	3	0		19	0	152									invchn		tors,tier		-1
-791	Breast Plate (3)		2	3	0		20	0	170									invbrs		tors,tier		-1
-792	Splint Mail (3)		2	3	0		20	0	189									invspl		tors,tier		-1
-793	Plate Mail (3)		2	3	0		21	0	207									invplt		tors,tier		-1
-794	Field Plate (3)		2	3	0		21	0	226									invfld		tors,tier		-1
-795	Light Plate (3)		2	3	0		21	0	244									invltp		tors,tier		-1
-796	Gothic Plate (3)		2	3	0		22	3	263									invgth		tors,tier		-1
-797	Full Plate Mail (3)		2	3	0		23	6	281									invful		tors,tier		-1
-798	Ancient Armor (3)		2	3	0		23	9	300									invaar		tors,tier		-1
-799	Cap (3)		2	2	0		17	0	34									invcap		helm,tier		-1
-7@G	Gambeson (Sacred)		2	3	0		30	0	0									invxtuu		sstr		1
-7@J	Ceremonial Armor (4)		2	3	0		27	0	0									invaaru		stor,tier		1
-7@K	Cervelliere (1)		2	2	0		2	0	39									invfhlu		azhm,tier		0
-7@L	Einherjar Helm (2)		2	2	0		12	0	0									invuhms		azhm,tier		0
-7@M	Spangenhelm (3)		2	2	0		23	0	251									invxrnu		azhm,tier		0
-7@N	Parma (Sacred)		2	2	0		30	0	480									invsmlu		sisd	0	6
-800	Skull Cap (3)		2	2	0		18	0	78									invskp		helm,tier		-1
-801	Helm (3)		2	2	0		19	0	120									invhlm		helm,tier		-1
-802	Full Helm (3)		2	2	0		20	0	164									invfhl		helm,tier		-1
-803	Great Helm (3)		2	2	0		21	0	207									invghm		helm,tier		-1
-804	Crown (3)		2	2	0		23	0	251									invcrn		crow,tier		-1
-805	Buckler (3)		2	2	0		17	0	19									invbuc		shie,tier	0	-1
-806	Small Shield (3)		2	2	0		18	0	43									invsml		shie,tier	0	-1
-807	Large Shield (3)		2	3	0		19	0	68									invlrg		shie,tier	0	-1
-808	Kite Shield (3)		2	3	0		20	3	93									invkit		shie,tier	0	-1
-809	Tower Shield (3)		2	3	0		21	6	118									invtow		shie,tier	0	-1
-810	Gothic Shield (3)		2	4	0		22	9	142									invgts		shie,tier	0	-1
-811	Sash (3)		2	1	0		17	0	28									invlbl		belt,tier		-1
-812	Light Belt (3)		2	1	0		19	0	83									invvbl		belt,tier		-1
-813	Belt (3)		2	1	0		20	0	139									invmbl		belt,tier		-1
-814	Heavy Belt (3)		2	1	0		20	0	195									invtbl		belt,tier		-1
-815	Plated Belt (3)		2	1	0		22	0	251									invhbl		belt,tier		-1
-816	Leather Gloves (3)		2	2	0		17	0	31									invlgl		glov,tier		-1
-817	Heavy Gloves (3)		2	2	0		19	0	74									invvgl		glov,tier		-1
-818	Chain Gloves (3)		2	2	0		20	0	118									invmgl		glov,tier		-1
-819	Light Gauntlets (3)		2	2	0		20	0	161									invtgl		glov,tier		-1
-820	Gauntlets (3)		2	2	0		22	0	204									invhgl		glov,tier		-1
-821	Boots (3)		2	2	0		17	0	37									invlbt		boot,tier		-1
-822	Heavy Boots (3)		2	2	0		19	0	87									invvbt		boot,tier		-1
-823	Chain Boots (3)		2	2	0		19	0	137									invmbt		boot,tier		-1
-824	Light Plated Boots (3)		2	2	0		20	0	186									invtbt		boot,tier		-1
-825	Greaves (3)		2	2	0		22	0	235									invhbt		boot,tier		-1
-826	Bone Shield (3)		2	3	0		20	0	0									invbsh		bshi,tier	0	-1
-827	Spiked Shield (3)		2	3	0		21	0	0									invspk		bshi,tier	0	-1
-828	Mask (3)		2	2	0		21	0	155									invmsk		bhlm,tier		-1
-829	Bone Helm (3)		2	2	0		22	0	189									invbhm		bhlm,tier		-1
-830	Quilted Armor (4)		2	3	0		22	0	83									invqlt		tors,tier		-1
-831	Leather Armor (4)		2	3	0		22	0	122									invlea		tors,tier		-1
-832	Hard Leather Armor (4)		2	3	0		22	0	160									invhla		tors,tier		-1
-833	Studded Leather (4)		2	3	0		23	0	199									invstu		tors,tier		-1
-834	Ring Mail (4)		2	3	0		23	0	237									invrng		tors,tier		-1
-835	Scale Mail (4)		2	3	0		23	0	276									invscl		tors,tier		-1
-836	Chain Mail (4)		2	3	0		24	0	314									invchn		tors,tier		-1
-837	Breast Plate (4)		2	3	0		25	0	353									invbrs		tors,tier		-1
-838	Splint Mail (4)		2	3	0		24	0	391									invspl		tors,tier		-1
-839	Plate Mail (4)		2	3	0		25	0	429									invplt		tors,tier		-1
-840	Field Plate (4)		2	3	0		25	0	468									invfld		tors,tier		-1
-841	Light Plate (4)		2	3	0		25	0	506									invltp		tors,tier		-1
-842	Gothic Plate (4)		2	3	0		26	3	545									invgth		tors,tier		-1
-843	Full Plate Mail (4)		2	3	0		27	6	543									invful		tors,tier		-1
-844	Ancient Armor (4)		2	3	0		27	9	622									invaar		tors,tier		-1
-845	Cap (4)		2	2	0		22	0	71									invcap		helm,tier		-1
-846	Skull Cap (4)		2	2	0		23	0	160									invskp		helm,tier		-1
-847	Helm (4)		2	2	0		24	0	250									invhlm		helm,tier		-1
-848	Full Helm (4)		2	2	0		24	0	340									invfhl		helm,tier		-1
-849	Great Helm (4)		2	2	0		25	0	429									invghm		helm,tier		-1
-850	Crown (4)		2	2	0		27	0	519									invcrn		crow,tier		-1
-851	Buckler (4)		2	2	0		21	0	38									invbuc		shie,tier	0	-1
-852	Small Shield (4)		2	2	0		23	0	90									invsml		shie,tier	0	-1
-853	Large Shield (4)		2	3	0		24	0	141									invlrg		shie,tier	0	-1
-854	Kite Shield (4)		2	3	0		24	3	192									invkit		shie,tier	0	-1
-855	Tower Shield (4)		2	3	0		25	6	244									invtow		shie,tier	0	-1
-856	Gothic Shield (4)		2	4	0		27	9	295									invgts		shie,tier	0	-1
-857	Sash (4)		2	1	0		21	0	58									invlbl		belt,tier		-1
-858	Light Belt (4)		2	1	0		23	0	173									invvbl		belt,tier		-1
-859	Belt (4)		2	1	0		24	0	288									invmbl		belt,tier		-1
-860	Heavy Belt (4)		2	1	0		25	0	404									invtbl		belt,tier		-1
-861	Plated Belt (4)		2	1	0		26	0	519									invhbl		belt,tier		-1
-862	Leather Gloves (4)		2	2	0		21	0	64									invlgl		glov,tier		-1
-863	Heavy Gloves (4)		2	2	0		23	0	154									invvgl		glov,tier		-1
-864	Chain Gloves (4)		2	2	0		24	0	244									invmgl		glov,tier		-1
-865	Light Gauntlets (4)		2	2	0		25	0	333									invtgl		glov,tier		-1
-866	Gauntlets (4)		2	2	0		26	0	423									invhgl		glov,tier		-1
-867	Boots (4)		2	2	0		21	0	77									invlbt		boot,tier		-1
-868	Heavy Boots (4)		2	2	0		23	0	179									invvbt		boot,tier		-1
-869	Chain Boots (4)		2	2	0		24	0	282									invmbt		boot,tier		-1
-870	Light Plated Boots (4)		2	2	0		25	0	385									invtbt		boot,tier		-1
-871	Greaves (4)		2	2	0		26	0	487									invhbt		boot,tier		-1
-872	Bone Shield (4)		2	3	0		24	0	0									invbsh		bshi,tier	0	-1
-873	Spiked Shield (4)		2	3	0		25	0	0									invspk		bshi,tier	0	-1
-874	Mask (4)		2	2	0		25	0	320									invmsk		bhlm,tier		-1
-875	Bone Helm (4)		2	2	0		27	0	391									invbhm		bhlm,tier		-1
-8@G	Lamellar Armor (1)		2	3	0		2	0	0									invxrss		stor,tier		1
-8@H	Kazarghand (2)		2	3	0		12	0	0									invxaru		stor,tier		1
-8@I	Banded Plate (3)		2	3	0		23	0	0									invfulu		stor,tier		1
-8@J	Ceremonial Armor (Sacred)		2	3	0		30	0	0									invaaru		sstr		1
-8@M	Spangenhelm (4)		2	2	0		27	0	519									invxrnu		azhm,tier		0
-8@N	Aspis (1)		2	3	0		3	3	30									invxrgu		ishd,tier	0	6
-8@O	Totem Shield (2)		2	3	0		12	0	0									invxshu		ishd,tier	0	6
-8@P	Bladed Shield (3)		2	3	0		21	0	0									invxpku		ishd,tier	0	6
-9@I	Banded Plate (4)		2	3	0		27	0	0									invfulu		stor,tier		1
-9@J	Morion (1)		2	2	0		1	0	10									invxkpu		azhm,tier		0
-9@K	Cervelliere (2)		2	2	0		11	0	57									invfhlu		azhm,tier		0
-9@L	Einherjar Helm (3)		2	2	0		21	0	0									invuhms		azhm,tier		0
-9@M	Spangenhelm (Sacred)		2	2	0		30	0	606									invxrnu		szhm		0
-9@P	Bladed Shield (4)		2	3	0		26	0	0									invxpku		ishd,tier	0	6
-@01	Quilted Armor (Sacred)		2	3	0		30	0	460									invqlt		qtor		-1
-@02	Leather Armor (Sacred)		2	3	0		30	0	474									invlea		qtor		-1
-@03	Hard Leather Armor (Sacred)		2	3	0		30	0	486									invhla		qtor		-1
-@04	Studded Leather (Sacred)		2	3	0		30	0	499									invstu		qtor		-1
-@05	Ring Mail (Sacred)		2	3	0		30	0	512									invrng		qtor		-1
-@06	Scale Mail (Sacred)		2	3	0		30	0	525									invscl		qtor		-1
-@07	Chain Mail (Sacred)		2	3	0		30	0	538									invchn		qtor		-1
-@08	Breast Plate (Sacred)		2	3	0		30	0	550									invbrs		qtor		-1
-@09	Splint Mail (Sacred)		2	3	0		30	0	563									invspl		qtor		-1
-@10	Plate Mail (Sacred)		2	3	0		30	0	576									invplt		qtor		-1
-@11	Field Plate (Sacred)		2	3	0		30	0	589									invfld		qtor		-1
-@12	Light Plate (Sacred)		2	3	0		30	0	602									invltp		qtor		-1
-@13	Gothic Plate (Sacred)		2	3	0		30	3	614									invgth		qtor		-1
-@14	Full Plate Mail (Sacred)		2	3	0		30	6	640									invful		qtor		-1
-@15	Ancient Armor (Sacred)		2	3	0		30	9	720									invaar		qtor		-1
-@16	Cap (Sacred)		2	2	0		30	0	456									invcap		qhlm		-1
-@17	Skull Cap (Sacred)		2	2	0		30	0	486									invskp		qhlm		-1
-@18	Helm (Sacred)		2	2	0		30	0	516									invhlm		qhlm		-1
-@19	Full Helm (Sacred)		2	2	0		30	0	546									invfhl		qhlm		-1
-@20	Great Helm (Sacred)		2	2	0		30	0	576									invghm		qhlm		-1
-@21	Crown (Sacred)		2	2	0		30	0	606									invcrn		qhlm		-1
-@22	Buckler (Sacred)		2	2	0		30	0	446									invbuc		qshi	0	-1
-@23	Small Shield (Sacred)		2	2	0		30	0	463									invsml		qshi	0	-1
-@24	Large Shield (Sacred)		2	3	0		30	0	480									invlrg		qshi	0	-1
-@25	Kite Shield (Sacred)		2	3	0		30	3	497									invkit		qshi	0	-1
-@26	Tower Shield (Sacred)		2	3	0		30	6	514									invtow		qshi	0	-1
-@27	Gothic Shield (Sacred)		2	4	0		30	9	531									invgts		qshi	0	-1
-@28	Sash (Sacred)		2	1	0		30	0	452									invlbl		belt,qblt		-1
-@29	Light Belt (Sacred)		2	1	0		30	0	490									invvbl		belt,qblt		-1
-@30	Belt (Sacred)		2	1	0		30	0	529									invmbl		belt,qblt		-1
-@31	Heavy Belt (Sacred)		2	1	0		30	0	568									invtbl		belt,qblt		-1
-@32	Plated Belt (Sacred)		2	1	0		30	0	606									invhbl		belt,qblt		-1
-@33	Leather Gloves (Sacred)		2	2	0		30	0	454									invlgl		qglv		-1
-@34	Heavy Gloves (Sacred)		2	2	0		30	0	484									invvgl		qglv		-1
-@35	Chain Gloves (Sacred)		2	2	0		30	0	514									invmgl		qglv		-1
-@36	Light Gauntlets (Sacred)		2	2	0		30	0	544									invtgl		qglv		-1
-@37	Gauntlets (Sacred)		2	2	0		30	0	574									invhgl		qglv		-1
-@38	Boots (Sacred)		2	2	0		30	0	458									invlbt		qbot		-1
-@39	Heavy Boots (Sacred)		2	2	0		30	0	492									invvbt		qbot		-1
-@40	Chain Boots (Sacred)		2	2	0		30	0	527									invmbt		qbot		-1
-@41	Light Plated Boots (Sacred)		2	2	0		30	0	561									invtbt		qbot		-1
-@42	Greaves (Sacred)		2	2	0		30	0	595									invhbt		qbot		-1
-@43	Bone Shield (Sacred)		2	3	0		30	0	0									invbsh		qshi	0	-1
-@44	Spiked Shield (Sacred)		2	3	0		30	0	0									invspk		qshi	0	-1
-@45	Mask (Sacred)		2	2	0		30	0	540									invmsk		qhlm		-1
-@46	Bone Helm (Sacred)		2	2	0		30	0	563									invbhm		qhlm		-1
-@47	Wolf Head (Sacred)		2	2	0		30	0	440									invdr1		qplt		5
-@48	Hawk Helm (Sacred)		2	2	0		30	0	445									invdr2		qplt		5
-@49	Antlers (Sacred)		2	2	0		30	0	450									invdr3		qplt		5
-@50	Falcon Mask (Sacred)		2	2	0		30	0	454									invdr4		qplt		5
-@51	Spirit Mask (Sacred)		2	2	0		30	0	594									invdr5		qplt		5
-@52	Jawbone Cap (Sacred)		2	2	0		30	0	442									invba1		qphm		4
-@53	Fanged Helm (Sacred)		2	2	0		30	0	446									invba2		qphm		4
-@54	Horned Helm (Sacred)		2	2	0		30	0	451									invba3		qphm		4
-@55	Assault Helmet (Sacred)		2	2	0		30	0	550									invba4		qphm		4
-@56	Avenger Guard (Sacred)		2	2	0		30	0	580									invba5		qphm		4
-@57	Targe (Sacred)		2	2	0		30	0	0									invpa1		qaur	0	3
-@58	Rondache (Sacred)		2	2	0		30	0	0									invpa2		qaur	0	3
-@59	Heraldic Shield (Sacred)		2	4	0		30	0	442									invpa3		qaur	0	3
-@60	Aerin Shield (Sacred)		2	4	0		30	0	445									invpa4		qaur	0	3
-@61	Crown Shield (Sacred)		2	2	0		30	0	0									invpa5		qaur	0	3
-@62	Preserved Head (Sacred)		2	2	0		30	0	0									invne1		qhed	0	2
-@63	Zombie Head (Sacred)		2	2	0		30	0	0									invne2		qhed	0	2
-@64	Unraveller Head (Sacred)		2	2	0		30	0	0									invne3		qhed	0	2
-@65	Gargoyle Head (Sacred)		2	2	0		30	0	0									invne4		qhed	0	2
-@66	Demon Head (Sacred)		2	2	0		30	0	0									invne5		qhed	0	2
-@67	Circlet (Sacred)		2	2	0		30	0	0									invci0		qcic		-1
-@68	Coronet (Sacred)		2	2	0		30	0	0									invci1		qcic		-1
-@69	Tiara (Sacred)		2	2	0		30	0	0									invci2		qcic		-1
-@70	Diadem (Sacred)		2	2	0		30	0	0									invci3		qcic		-1
-Ysh4	Mage's Plate		2	3	0		30	3	500									lab_armor		###3		-1
-Ysh5	Divine Guard		2	3	0		30	0	0									lab_shield		###4	0	-1
-Ysh6	Sorcerer's Mask		2	2	0		30	0	500									lab_helm		###5		-1
-Ysh7	Mana Belt		2	1	0		30	0	500									lab_belt		###6,qblt		-1
-Ysh8	Warkeepers		2	2	0		30	0	500									lab_gloves		###7		-1
-Ysh9	Winged Feet		2	2	0		30	0	500									lab_boots		###8		-1
-crn	Crown		2	2	0		0	0	55									invcrn		helm		-1
-e10	Targe (3)		2	2	0		18	0	0									invpa1		ashd,tier	0	3
-e11	Rondache (3)		2	2	0		19	0	0									invpa2		ashd,tier	0	3
-e12	Heraldic Shield (3)		2	4	0		20	0	88									invpa3		ashd,tier	0	3
-e13	Aerin Shield (3)		2	4	0		21	0	112									invpa4		ashd,tier	0	3
-e14	Crown Shield (3)		2	2	0		22	0	0									invpa5		ashd,tier	0	3
-e15	Preserved Head (3)		2	2	0		18	0	0									invne1		head,tier	0	2
-e16	Zombie Head (3)		2	2	0		19	0	0									invne2		head,tier	0	2
-e17	Unraveller Head (3)		2	2	0		20	0	0									invne3		head,tier	0	2
-e18	Gargoyle Head (3)		2	2	0		21	0	0									invne4		head,tier	0	2
-e19	Demon Head (3)		2	2	0		22	0	0									invne5		head,tier	0	2
-e20	Wolf Head (4)		2	2	0		23	0	152									invdr1		pelt,tier		5
-e21	Hawk Helm (4)		2	2	0		24	0	238									invdr2		pelt,tier		5
-e22	Antlers (4)		2	2	0		24	0	323									invdr3		pelt,tier		5
-e23	Falcon Mask (4)		2	2	0		25	0	408									invdr4		pelt,tier		5
-e24	Spirit Mask (4)		2	2	0		27	0	494									invdr5		pelt,tier		5
-e25	Jawbone Cap (4)		2	2	0		23	0	168									invba1		phlm,tier		4
-e26	Fanged Helm (4)		2	2	0		24	0	262									invba2		phlm,tier		4
-e27	Horned Helm (4)		2	2	0		24	0	357									invba3		phlm,tier		4
-e28	Assault Helmet (4)		2	2	0		25	0	450									invba4		phlm,tier		4
-e29	Avenger Guard (4)		2	2	0		27	0	470									invba5		phlm,tier		4
-e30	Targe (4)		2	2	0		23	0	0									invpa1		ashd,tier	0	3
-e31	Rondache (4)		2	2	0		24	0	0									invpa2		ashd,tier	0	3
-e32	Heraldic Shield (4)		2	4	0		24	0	182									invpa3		ashd,tier	0	3
-e33	Aerin Shield (4)		2	4	0		25	0	232									invpa4		ashd,tier	0	3
-e34	Crown Shield (4)		2	2	0		27	0	0									invpa5		ashd,tier	0	3
-e35	Preserved Head (4)		2	2	0		23	0	0									invne1		head,tier	0	2
-e36	Zombie Head (4)		2	2	0		24	0	0									invne2		head,tier	0	2
-e37	Unraveller Head (4)		2	2	0		24	0	0									invne3		head,tier	0	2
-e38	Gargoyle Head (4)		2	2	0		25	0	0									invne4		head,tier	0	2
-e39	Demon Head (4)		2	2	0		27	0	0									invne5		head,tier	0	2
-fld	Field Plate		2	3	0		0	5	55									invfld		tors		-1
-hbt	Greaves		2	2	0		0	0	70									invhbt		boot		-1
-hgl	Gauntlets		2	2	0		0	0	60									invhgl		glov		-1
-k01	Circlet (1)		2	2	0		2	0	0									invci0		circ,tier		-1
-k02	Coronet (1)		2	2	0		3	0	0									invci1		circ,tier		-1
-k03	Tiara (1)		2	2	0		4	0	0									invci2		circ,tier		-1
-k04	Diadem (1)		2	2	0		5	0	0									invci3		circ,tier		-1
-k09	Circlet (2)		2	2	0		11	0	0									invci0		circ,tier		-1
-k10	Coronet (2)		2	2	0		11	0	0									invci1		circ,tier		-1
-k11	Tiara (2)		2	2	0		12	0	0									invci2		circ,tier		-1
-k12	Diadem (2)		2	2	0		14	0	0									invci3		circ,tier		-1
-k17	Circlet (3)		2	2	0		19	0	0									invci0		circ,tier		-1
-k18	Coronet (3)		2	2	0		20	0	0									invci1		circ,tier		-1
-k19	Tiara (3)		2	2	0		21	0	0									invci2		circ,tier		-1
-k20	Diadem (3)		2	2	0		23	0	0									invci3		circ,tier		-1
-k21	Circlet (4)		2	2	0		24	0	0									invci0		circ,tier		-1
-k22	Coronet (4)		2	2	0		24	0	0									invci1		circ,tier		-1
-k23	Tiara (4)		2	2	0		25	0	0									invci2		circ,tier		-1
-k24	Diadem (4)		2	2	0		27	0	0									invci3		circ,tier		-1
-tow	Tower Shield		2	3	0		0	10	75									invtow		shie	0	-1
-w10	Wolf Head (1)		2	2	0		1	0	23									invdr1		pelt,tier		5
-w11	Hawk Helm (1)		2	2	0		2	0	37									invdr2		pelt,tier		5
-w12	Antlers (1)		2	2	0		3	0	50									invdr3		pelt,tier		5
-w13	Falcon Mask (1)		2	2	0		4	0	63									invdr4		pelt,tier		5
-w14	Spirit Mask (1)		2	2	0		5	0	77									invdr5		pelt,tier		5
-w15	Jawbone Cap (1)		2	2	0		1	0	26									invba1		phlm,tier		4
-w16	Fanged Helm (1)		2	2	0		2	0	40									invba2		phlm,tier		4
-w17	Horned Helm (1)		2	2	0		3	0	55									invba3		phlm,tier		4
-w18	Assault Helmet (1)		2	2	0		4	0	70									invba4		phlm,tier		4
-w19	Avenger Guard (1)		2	2	0		5	0	85									invba5		phlm,tier		4
-w20	Targe (1)		2	2	0		1	0	0									invpa1		ashd,tier	0	3
-w21	Rondache (1)		2	2	0		2	0	0									invpa2		ashd,tier	0	3
-w22	Heraldic Shield (1)		2	4	0		2	0	28									invpa3		ashd,tier	0	3
-w23	Aerin Shield (1)		2	4	0		3	0	36									invpa4		ashd,tier	0	3
-w24	Crown Shield (1)		2	2	0		5	0	0									invpa5		ashd,tier	0	3
-w25	Preserved Head (1)		2	2	0		1	0	0									invne1		head,tier	0	2
-w26	Zombie Head (1)		2	2	0		2	0	0									invne2		head,tier	0	2
-w27	Unraveller Head (1)		2	2	0		2	0	0									invne3		head,tier	0	2
-w28	Gargoyle Head (1)		2	2	0		3	0	0									invne4		head,tier	0	2
-w29	Demon Head (1)		2	2	0		5	0	0									invne5		head,tier	0	2
-w50	Wolf Head (2)		2	2	0		10	0	35									invdr1		pelt,tier		5
-w51	Hawk Helm (2)		2	2	0		11	0	55									invdr2		pelt,tier		5
-w52	Antlers (2)		2	2	0		11	0	74									invdr3		pelt,tier		5
-w53	Falcon Mask (2)		2	2	0		12	0	94									invdr4		pelt,tier		5
-w54	Spirit Mask (2)		2	2	0		14	0	113									invdr5		pelt,tier		5
-w55	Jawbone Cap (2)		2	2	0		10	0	39									invba1		phlm,tier		4
-w56	Fanged Helm (2)		2	2	0		11	0	60									invba2		phlm,tier		4
-w57	Horned Helm (2)		2	2	0		11	0	81									invba3		phlm,tier		4
-w58	Assault Helmet (2)		2	2	0		12	0	104									invba4		phlm,tier		4
-w59	Avenger Guard (2)		2	2	0		14	0	125									invba5		phlm,tier		4
-w60	Targe (2)		2	2	0		10	0	0									invpa1		ashd,tier	0	3
-w61	Rondache (2)		2	2	0		10	0	0									invpa2		ashd,tier	0	3
-w62	Heraldic Shield (2)		2	4	0		11	0	42									invpa3		ashd,tier	0	3
-w63	Aerin Shield (2)		2	4	0		12	0	53									invpa4		ashd,tier	0	3
-w64	Crown Shield (2)		2	2	0		14	0	0									invpa5		ashd,tier	0	3
-w65	Preserved Head (2)		2	2	0		10	0	0									invne1		head,tier	0	2
-w66	Zombie Head (2)		2	2	0		10	0	0									invne2		head,tier	0	2
-w67	Unraveller Head (2)		2	2	0		11	0	0									invne3		head,tier	0	2
-w68	Gargoyle Head (2)		2	2	0		12	0	0									invne4		head,tier	0	2
-w69	Demon Head (2)		2	2	0		14	0	0									invne5		head,tier	0	2
-w90	Wolf Head (3)		2	2	0		18	0	74									invdr1		pelt,tier		5
-w91	Hawk Helm (3)		2	2	0		19	0	114									invdr2		pelt,tier		5
-w92	Antlers (3)		2	2	0		20	0	155									invdr3		pelt,tier		5
-w93	Falcon Mask (3)		2	2	0		21	0	197									invdr4		pelt,tier		5
-w94	Spirit Mask (3)		2	2	0		23	0	238									invdr5		pelt,tier		5
-w95	Jawbone Cap (3)		2	2	0		18	0	81									invba1		phlm,tier		4
-w96	Fanged Helm (3)		2	2	0		19	0	126									invba2		phlm,tier		4
-w97	Horned Helm (3)		2	2	0		20	0	172									invba3		phlm,tier		4
-w98	Assault Helmet (3)		2	2	0		21	0	217									invba4		phlm,tier		4
-w99	Avenger Guard (3)		2	2	0		23	0	263									invba5		phlm,tier		4
+01!	Athulua's Hand (1)		2	2	0		0	0	21									invxmlu		azsd,tier	0	0
+03!	Athulua's Hand (2)		2	2	0		9	0	32									invxmlu		azsd,tier	0	0
+05!	Athulua's Hand (3)		2	2	0		18	0	67									invxmlu		azsd,tier	0	0
+06!	Athulua's Hand (4)		2	2	0		22	0	139									invxmlu		azsd,tier	0	0
+07!	Athulua's Hand (Sacred)		2	2	0		30	0	349									invxmlu		sasz	0	0
+08!	Phoenix Shield (1)		2	3	0		4	29	0									invkitu		azsd,tier	0	0
+10!	Phoenix Shield (2)		2	3	0		12	43	0									invkitu		azsd,tier	0	0
+12!	Phoenix Shield (3)		2	3	0		21	91	0									invkitu		azsd,tier	0	0
+13!	Phoenix Shield (4)		2	3	0		26	190	0									invkitu		azsd,tier	0	0
+14!	Phoenix Shield (Sacred)		2	3	0		30	648	0									invkitu		sasz	0	0
+15!	Setzschild (1)		2	4	0		6	47	0									invutss		azsd,tier	0	0
+17!	Setzschild (2)		2	4	0		15	70	0									invutss		azsd,tier	0	0
+19!	Setzschild (3)		2	4	0		23	147	0									invutss		azsd,tier	0	0
+1@G	Gambeson (1)		2	3	0		1	0	25									invxtuu		stor,tier		1
+1@H	Lamellar Armor (2)		2	3	0		11	0	46									invxrss		stor,tier		1
+1@I	Kazarghand (3)		2	3	0		20	0	170									invxaru		stor,tier		1
+1@J	Banded Plate (Sacred)		2	3	0		30	0	627									invfulu		sstr		1
+1@M	Einherjar Helm (4)		2	2	0		25	0	340									invuhms		azhm,tier		0
+1@N	Parma (1)		2	2	0		2	22	45									invsmlu		ishd,tier	0	6
+1@O	Aspis (2)		2	3	0		12	44	87									invxrgu		ishd,tier	0	6
+1@P	Totem Shield (3)		2	3	0		20	0	137									invxshu		ishd,tier	0	6
+1@Q	Bladed Shield (Sacred)		2	3	0		30	0	550									invxpku		sisd	0	6
+20!	Setzschild (4)		2	4	0		28	305	0									invutss		azsd,tier	0	0
+21!	Setzschild (Sacred)		2	4	0		30	643	0									invutss		sasz	0	0
+22!	Bull Shield (1)		2	4	0		1	10	23									invgtsu		basd,tier	0	4
+24!	Bull Shield (2)		2	4	0		10	15	34									invgtsu		basd,tier	0	4
+26!	Bull Shield (3)		2	4	0		19	32	71									invgtsu		basd,tier	0	4
+27!	Bull Shield (4)		2	4	0		23	67	149									invgtsu		basd,tier	0	4
+28!	Bull Shield (Sacred)		2	4	0		30	347	374									invgtsu		saba	0	4
+29!	Bronze Shield (1)		2	2	0		3	25	0									invbucu		basd,tier	0	4
+2@I	Kazarghand (4)		2	3	0		25	0	353									invxaru		stor,tier		1
+2@J	Ceremonial Armor (1)		2	3	0		6	0	97									invaaru		stor,tier		1
+2@K	Morion (2)		2	2	0		9	16	0									invxkpu		azhm,tier		0
+2@L	Cervelliere (3)		2	2	0		20	120	0									invfhlu		azhm,tier		0
+2@M	Einherjar Helm (Sacred)		2	2	0		30	0	534									invuhms		szhm		0
+2@P	Totem Shield (4)		2	3	0		25	0	282									invxshu		ishd,tier	0	6
+31!	Bronze Shield (2)		2	2	0		12	36	0									invbucu		basd,tier	0	4
+33!	Bronze Shield (3)		2	2	0		21	78	0									invbucu		basd,tier	0	4
+34!	Bronze Shield (4)		2	2	0		25	162	0									invbucu		basd,tier	0	4
+35!	Bronze Shield (Sacred)		2	2	0		30	552	0									invbucu		saba	0	4
+36!	Gilded Shield (1)		2	3	0		7	44	0									invlrgu		basd,tier	0	4
+38!	Gilded Shield (2)		2	3	0		15	66	0									invlrgu		basd,tier	0	4
+3@G	Gambeson (2)		2	3	0		10	0	37									invxtuu		stor,tier		1
+3@H	Lamellar Armor (3)		2	3	0		19	0	96									invxrss		stor,tier		1
+3@I	Kazarghand (Sacred)		2	3	0		30	0	550									invxaru		sstr		1
+3@L	Cervelliere (4)		2	2	0		24	250	0									invfhlu		azhm,tier		0
+3@M	Spangenhelm (1)		2	2	0		5	81	0									invxrnu		azhm,tier		0
+3@N	Parma (2)		2	2	0		11	32	67									invsmlu		ishd,tier	0	6
+3@O	Aspis (3)		2	3	0		20	93	183									invxrgu		ishd,tier	0	6
+3@P	Totem Shield (Sacred)		2	3	0		30	0	527									invxshu		sisd	0	6
+40!	Gilded Shield (3)		2	3	0		24	139	0									invlrgu		basd,tier	0	4
+41!	Gilded Shield (4)		2	3	0		28	286	0									invlrgu		basd,tier	0	4
+42!	Gilded Shield (Sacred)		2	3	0		30	655	0									invlrgu		saba	0	4
+43!	Hundsgugel (1)		2	2	0		1	18	0									invhlmu		pzhm,tier		3
+45!	Hundsgugel (2)		2	2	0		9	26	0									invhlmu		pzhm,tier		3
+47!	Hundsgugel (3)		2	2	0		18	55	0									invhlmu		pzhm,tier		3
+48!	Hundsgugel (4)		2	2	0		22	115	0									invhlmu		pzhm,tier		3
+49!	Hundsgugel (Sacred)		2	2	0		30	363	0									invhlmu		sphz		3
+4@H	Lamellar Armor (4)		2	3	0		24	0	199									invxrss		stor,tier		1
+4@I	Banded Plate (1)		2	3	0		6	0	91									invfulu		stor,tier		1
+4@J	Ceremonial Armor (2)		2	3	0		15	0	143									invaaru		stor,tier		1
+4@K	Morion (3)		2	2	0		18	34	0									invxkpu		azhm,tier		0
+4@L	Cervelliere (Sacred)		2	2	0		30	516	0									invfhlu		szhm		0
+4@O	Aspis (4)		2	3	0		25	192	378									invxrgu		ishd,tier	0	6
+4@P	Bladed Shield (1)		2	3	0		4	0	55									invxpku		ishd,tier	0	6
+50!	Blackguard Helm (1)		2	2	0		3	0	29									invbhmu		pzhm,tier		3
+52!	Blackguard Helm (2)		2	2	0		12	0	43									invbhmu		pzhm,tier		3
+54!	Blackguard Helm (3)		2	2	0		20	0	90									invbhmu		pzhm,tier		3
+55!	Blackguard Helm (4)		2	2	0		25	0	187									invbhmu		pzhm,tier		3
+56!	Blackguard Helm (Sacred)		2	2	0		30	0	387									invbhmu		sphz		3
+5@G	Gambeson (3)		2	3	0		19	0	78									invxtuu		stor,tier		1
+5@H	Lamellar Armor (Sacred)		2	3	0		30	0	499									invxrss		sstr		1
+5@K	Morion (4)		2	2	0		22	71	0									invxkpu		azhm,tier		0
+5@L	Einherjar Helm (1)		2	2	0		3	0	53									invuhms		azhm,tier		0
+5@M	Spangenhelm (2)		2	2	0		14	119	0									invxrnu		azhm,tier		0
+5@N	Parma (3)		2	2	0		20	68	139									invsmlu		ishd,tier	0	6
+5@O	Aspis (Sacred)		2	3	0		30	497	559									invxrgu		sisd	0	6
+600	Quilted Armor (1)		2	3	0		0	10	0									invqlt		tors,tier		-1
+601	Leather Armor (1)		2	3	0		1	19	0									invlea		tors,tier		-1
+602	Hard Leather Armor (1)		2	3	0		1	25	0									invhla		tors,tier		-1
+603	Studded Leather (1)		2	3	0		1	31	0									invstu		tors,tier		-1
+604	Ring Mail (1)		2	3	0		2	37	0									invrng		tors,tier		-1
+605	Scale Mail (1)		2	3	0		2	43	0									invscl		tors,tier		-1
+606	Chain Mail (1)		2	3	0		2	49	0									invchn		tors,tier		-1
+607	Breast Plate (1)		2	3	0		2	55	0									invbrs		tors,tier		-1
+608	Splint Mail (1)		2	3	0		3	61	0									invspl		tors,tier		-1
+609	Plate Mail (1)		2	3	0		3	67	0									invplt		tors,tier		-1
+610	Field Plate (1)		2	3	0		3	73	0									invfld		tors,tier		-1
+611	Light Plate (1)		2	3	0		4	79	0									invltp		tors,tier		-1
+612	Gothic Plate (1)		2	3	0		4	85	0									invgth		tors,tier		-1
+613	Full Plate Mail (1)		2	3	0		5	91	0									invful		tors,tier		-1
+614	Ancient Armor (1)		2	3	0		5	97	0									invaar		tors,tier		-1
+615	Cap (1)		2	2	0		0	10	0									invcap		helm,tier		-1
+616	Skull Cap (1)		2	2	0		1	25	0									invskp		helm,tier		-1
+617	Helm (1)		2	2	0		2	39	0									invhlm		helm,tier		-1
+618	Full Helm (1)		2	2	0		3	53	0									invfhl		helm,tier		-1
+619	Great Helm (1)		2	2	0		4	67	0									invghm		helm,tier		-1
+620	Crown (1)		2	2	0		5	81	0									invcrn		crow,tier		-1
+621	Buckler (1)		2	2	0		0	6	17									invbuc		shie,tier	0	-1
+622	Small Shield (1)		2	2	0		1	14	31									invsml		shie,tier	0	-1
+623	Large Shield (1)		2	3	0		2	22	45									invlrg		shie,tier	0	-1
+624	Kite Shield (1)		2	3	0		2	30	59									invkit		shie,tier	0	-1
+625	Tower Shield (1)		2	3	0		3	38	73									invtow		shie,tier	0	-1
+626	Gothic Shield (1)		2	4	0		5	46	87									invgts		shie,tier	0	-1
+627	Sash (1)		2	1	0		0	9	0									invlbl		belt,tier		-1
+628	Light Belt (1)		2	1	0		1	27	0									invvbl		belt,tier		-1
+629	Belt (1)		2	1	0		2	45	0									invmbl		belt,tier		-1
+630	Heavy Belt (1)		2	1	0		3	63	0									invtbl		belt,tier		-1
+631	Plated Belt (1)		2	1	0		5	81	0									invhbl		belt,tier		-1
+632	Leather Gloves (1)		2	2	0		0	10	0									invlgl		glov,tier		-1
+633	Heavy Gloves (1)		2	2	0		1	24	0									invvgl		glov,tier		-1
+634	Chain Gloves (1)		2	2	0		2	38	0									invmgl		glov,tier		-1
+635	Light Gauntlets (1)		2	2	0		3	52	0									invtgl		glov,tier		-1
+636	Gauntlets (1)		2	2	0		5	66	0									invhgl		glov,tier		-1
+637	Boots (1)		2	2	0		0	10	0									invlbt		boot,tier		-1
+638	Heavy Boots (1)		2	2	0		1	28	0									invvbt		boot,tier		-1
+639	Chain Boots (1)		2	2	0		2	44	0									invmbt		boot,tier		-1
+640	Light Plated Boots (1)		2	2	0		3	60	0									invtbt		boot,tier		-1
+641	Greaves (1)		2	2	0		4	76	0									invhbt		boot,tier		-1
+642	Bone Shield (1)		2	3	0		2	0	44									invbsh		bshi,tier	0	-1
+643	Spiked Shield (1)		2	3	0		3	0	55									invspk		bshi,tier	0	-1
+644	Mask (1)		2	2	0		3	50	0									invmsk		bhlm,tier		-1
+645	Bone Helm (1)		2	2	0		5	61	0									invbhm		bhlm,tier		-1
+692	Quilted Armor (2)		2	3	0		9	19	0									invqlt		tors,tier		-1
+693	Leather Armor (2)		2	3	0		9	28	0									invlea		tors,tier		-1
+694	Hard Leather Armor (2)		2	3	0		9	37	0									invhla		tors,tier		-1
+695	Studded Leather (2)		2	3	0		10	46	0									invstu		tors,tier		-1
+696	Ring Mail (2)		2	3	0		10	55	0									invrng		tors,tier		-1
+697	Scale Mail (2)		2	3	0		10	63	0									invscl		tors,tier		-1
+698	Chain Mail (2)		2	3	0		11	72	0									invchn		tors,tier		-1
+699	Breast Plate (2)		2	3	0		11	81	0									invbrs		tors,tier		-1
+6@G	Gambeson (4)		2	3	0		23	0	160									invxtuu		stor,tier		1
+6@H	Kazarghand (1)		2	3	0		3	0	55									invxaru		stor,tier		1
+6@I	Banded Plate (2)		2	3	0		14	0	134									invfulu		stor,tier		1
+6@J	Ceremonial Armor (3)		2	3	0		24	0	300									invaaru		stor,tier		1
+6@K	Morion (Sacred)		2	2	0		30	456	0									invxkpu		szhm		0
+6@N	Parma (4)		2	2	0		24	141	288									invsmlu		ishd,tier	0	6
+6@O	Totem Shield (1)		2	3	0		3	0	44									invxshu		ishd,tier	0	6
+6@P	Bladed Shield (2)		2	3	0		12	0	81									invxpku		ishd,tier	0	6
+700	Splint Mail (2)		2	3	0		11	90	0									invspl		tors,tier		-1
+701	Plate Mail (2)		2	3	0		11	99	0									invplt		tors,tier		-1
+702	Field Plate (2)		2	3	0		12	107	0									invfld		tors,tier		-1
+703	Light Plate (2)		2	3	0		12	116	0									invltp		tors,tier		-1
+704	Gothic Plate (2)		2	3	0		13	125	0									invgth		tors,tier		-1
+705	Full Plate Mail (2)		2	3	0		14	134	0									invful		tors,tier		-1
+706	Ancient Armor (2)		2	3	0		15	143	0									invaar		tors,tier		-1
+707	Cap (2)		2	2	0		8	16	0									invcap		helm,tier		-1
+708	Skull Cap (2)		2	2	0		10	37	0									invskp		helm,tier		-1
+709	Helm (2)		2	2	0		11	57	0									invhlm		helm,tier		-1
+710	Full Helm (2)		2	2	0		11	78	0									invfhl		helm,tier		-1
+711	Great Helm (2)		2	2	0		12	99	0									invghm		helm,tier		-1
+712	Crown (2)		2	2	0		14	119	0									invcrn		crow,tier		-1
+713	Buckler (2)		2	2	0		8	9	25									invbuc		shie,tier	0	-1
+714	Small Shield (2)		2	2	0		10	20	46									invsml		shie,tier	0	-1
+715	Large Shield (2)		2	3	0		10	32	67									invlrg		shie,tier	0	-1
+716	Kite Shield (2)		2	3	0		11	44	87									invkit		shie,tier	0	-1
+717	Tower Shield (2)		2	3	0		12	56	107									invtow		shie,tier	0	-1
+718	Gothic Shield (2)		2	4	0		14	68	128									invgts		shie,tier	0	-1
+719	Sash (2)		2	1	0		8	13	0									invlbl		belt,tier		-1
+720	Light Belt (2)		2	1	0		10	40	0									invvbl		belt,tier		-1
+721	Belt (2)		2	1	0		11	67	0									invmbl		belt,tier		-1
+722	Heavy Belt (2)		2	1	0		12	92	0									invtbl		belt,tier		-1
+723	Plated Belt (2)		2	1	0		13	119	0									invhbl		belt,tier		-1
+724	Leather Gloves (2)		2	2	0		8	15	0									invlgl		glov,tier		-1
+725	Heavy Gloves (2)		2	2	0		10	35	0									invvgl		glov,tier		-1
+726	Chain Gloves (2)		2	2	0		11	56	0									invmgl		glov,tier		-1
+727	Light Gauntlets (2)		2	2	0		12	76	0									invtgl		glov,tier		-1
+728	Gauntlets (2)		2	2	0		13	97	0									invhgl		glov,tier		-1
+729	Boots (2)		2	2	0		8	18	0									invlbt		boot,tier		-1
+730	Heavy Boots (2)		2	2	0		10	41	0									invvbt		boot,tier		-1
+731	Chain Boots (2)		2	2	0		11	65	0									invmbt		boot,tier		-1
+732	Light Plated Boots (2)		2	2	0		12	88	0									invtbt		boot,tier		-1
+733	Greaves (2)		2	2	0		13	112	0									invhbt		boot,tier		-1
+734	Bone Shield (2)		2	3	0		11	0	65									invbsh		bshi,tier	0	-1
+735	Spiked Shield (2)		2	3	0		12	0	81									invspk		bshi,tier	0	-1
+736	Mask (2)		2	2	0		12	74	0									invmsk		bhlm,tier		-1
+737	Bone Helm (2)		2	2	0		13	90	0									invbhm		bhlm,tier		-1
+784	Quilted Armor (3)		2	3	0		17	40	0									invqlt		tors,tier		-1
+785	Leather Armor (3)		2	3	0		17	59	0									invlea		tors,tier		-1
+786	Hard Leather Armor (3)		2	3	0		18	78	0									invhla		tors,tier		-1
+787	Studded Leather (3)		2	3	0		19	96	0									invstu		tors,tier		-1
+788	Ring Mail (3)		2	3	0		19	115	0									invrng		tors,tier		-1
+789	Scale Mail (3)		2	3	0		19	133	0									invscl		tors,tier		-1
+790	Chain Mail (3)		2	3	0		19	152	0									invchn		tors,tier		-1
+791	Breast Plate (3)		2	3	0		20	170	0									invbrs		tors,tier		-1
+792	Splint Mail (3)		2	3	0		20	189	0									invspl		tors,tier		-1
+793	Plate Mail (3)		2	3	0		21	207	0									invplt		tors,tier		-1
+794	Field Plate (3)		2	3	0		21	226	0									invfld		tors,tier		-1
+795	Light Plate (3)		2	3	0		21	244	0									invltp		tors,tier		-1
+796	Gothic Plate (3)		2	3	0		22	263	0									invgth		tors,tier		-1
+797	Full Plate Mail (3)		2	3	0		23	281	0									invful		tors,tier		-1
+798	Ancient Armor (3)		2	3	0		23	300	0									invaar		tors,tier		-1
+799	Cap (3)		2	2	0		17	34	0									invcap		helm,tier		-1
+7@G	Gambeson (Sacred)		2	3	0		30	0	486									invxtuu		sstr		1
+7@J	Ceremonial Armor (4)		2	3	0		27	0	622									invaaru		stor,tier		1
+7@K	Cervelliere (1)		2	2	0		2	39	0									invfhlu		azhm,tier		0
+7@L	Einherjar Helm (2)		2	2	0		12	0	78									invuhms		azhm,tier		0
+7@M	Spangenhelm (3)		2	2	0		23	251	0									invxrnu		azhm,tier		0
+7@N	Parma (Sacred)		2	2	0		30	480	529									invsmlu		sisd	0	6
+800	Skull Cap (3)		2	2	0		18	78	0									invskp		helm,tier		-1
+801	Helm (3)		2	2	0		19	120	0									invhlm		helm,tier		-1
+802	Full Helm (3)		2	2	0		20	164	0									invfhl		helm,tier		-1
+803	Great Helm (3)		2	2	0		21	207	0									invghm		helm,tier		-1
+804	Crown (3)		2	2	0		23	251	0									invcrn		crow,tier		-1
+805	Buckler (3)		2	2	0		17	19	53									invbuc		shie,tier	0	-1
+806	Small Shield (3)		2	2	0		18	43	96									invsml		shie,tier	0	-1
+807	Large Shield (3)		2	3	0		19	68	139									invlrg		shie,tier	0	-1
+808	Kite Shield (3)		2	3	0		20	93	183									invkit		shie,tier	0	-1
+809	Tower Shield (3)		2	3	0		21	118	226									invtow		shie,tier	0	-1
+810	Gothic Shield (3)		2	4	0		22	142	270									invgts		shie,tier	0	-1
+811	Sash (3)		2	1	0		17	28	0									invlbl		belt,tier		-1
+812	Light Belt (3)		2	1	0		19	83	0									invvbl		belt,tier		-1
+813	Belt (3)		2	1	0		20	139	0									invmbl		belt,tier		-1
+814	Heavy Belt (3)		2	1	0		20	195	0									invtbl		belt,tier		-1
+815	Plated Belt (3)		2	1	0		22	251	0									invhbl		belt,tier		-1
+816	Leather Gloves (3)		2	2	0		17	31	0									invlgl		glov,tier		-1
+817	Heavy Gloves (3)		2	2	0		19	74	0									invvgl		glov,tier		-1
+818	Chain Gloves (3)		2	2	0		20	118	0									invmgl		glov,tier		-1
+819	Light Gauntlets (3)		2	2	0		20	161	0									invtgl		glov,tier		-1
+820	Gauntlets (3)		2	2	0		22	204	0									invhgl		glov,tier		-1
+821	Boots (3)		2	2	0		17	37	0									invlbt		boot,tier		-1
+822	Heavy Boots (3)		2	2	0		19	87	0									invvbt		boot,tier		-1
+823	Chain Boots (3)		2	2	0		19	137	0									invmbt		boot,tier		-1
+824	Light Plated Boots (3)		2	2	0		20	186	0									invtbt		boot,tier		-1
+825	Greaves (3)		2	2	0		22	235	0									invhbt		boot,tier		-1
+826	Bone Shield (3)		2	3	0		20	0	137									invbsh		bshi,tier	0	-1
+827	Spiked Shield (3)		2	3	0		21	0	170									invspk		bshi,tier	0	-1
+828	Mask (3)		2	2	0		21	155	0									invmsk		bhlm,tier		-1
+829	Bone Helm (3)		2	2	0		22	189	0									invbhm		bhlm,tier		-1
+830	Quilted Armor (4)		2	3	0		22	83	0									invqlt		tors,tier		-1
+831	Leather Armor (4)		2	3	0		22	122	0									invlea		tors,tier		-1
+832	Hard Leather Armor (4)		2	3	0		22	160	0									invhla		tors,tier		-1
+833	Studded Leather (4)		2	3	0		23	199	0									invstu		tors,tier		-1
+834	Ring Mail (4)		2	3	0		23	237	0									invrng		tors,tier		-1
+835	Scale Mail (4)		2	3	0		23	276	0									invscl		tors,tier		-1
+836	Chain Mail (4)		2	3	0		24	314	0									invchn		tors,tier		-1
+837	Breast Plate (4)		2	3	0		25	353	0									invbrs		tors,tier		-1
+838	Splint Mail (4)		2	3	0		24	391	0									invspl		tors,tier		-1
+839	Plate Mail (4)		2	3	0		25	429	0									invplt		tors,tier		-1
+840	Field Plate (4)		2	3	0		25	468	0									invfld		tors,tier		-1
+841	Light Plate (4)		2	3	0		25	506	0									invltp		tors,tier		-1
+842	Gothic Plate (4)		2	3	0		26	545	0									invgth		tors,tier		-1
+843	Full Plate Mail (4)		2	3	0		27	543	0									invful		tors,tier		-1
+844	Ancient Armor (4)		2	3	0		27	622	0									invaar		tors,tier		-1
+845	Cap (4)		2	2	0		22	71	0									invcap		helm,tier		-1
+846	Skull Cap (4)		2	2	0		23	160	0									invskp		helm,tier		-1
+847	Helm (4)		2	2	0		24	250	0									invhlm		helm,tier		-1
+848	Full Helm (4)		2	2	0		24	340	0									invfhl		helm,tier		-1
+849	Great Helm (4)		2	2	0		25	429	0									invghm		helm,tier		-1
+850	Crown (4)		2	2	0		27	519	0									invcrn		crow,tier		-1
+851	Buckler (4)		2	2	0		21	38	109									invbuc		shie,tier	0	-1
+852	Small Shield (4)		2	2	0		23	90	199									invsml		shie,tier	0	-1
+853	Large Shield (4)		2	3	0		24	141	288									invlrg		shie,tier	0	-1
+854	Kite Shield (4)		2	3	0		24	192	378									invkit		shie,tier	0	-1
+855	Tower Shield (4)		2	3	0		25	244	468									invtow		shie,tier	0	-1
+856	Gothic Shield (4)		2	4	0		27	295	558									invgts		shie,tier	0	-1
+857	Sash (4)		2	1	0		21	58	0									invlbl		belt,tier		-1
+858	Light Belt (4)		2	1	0		23	173	0									invvbl		belt,tier		-1
+859	Belt (4)		2	1	0		24	288	0									invmbl		belt,tier		-1
+860	Heavy Belt (4)		2	1	0		25	404	0									invtbl		belt,tier		-1
+861	Plated Belt (4)		2	1	0		26	519	0									invhbl		belt,tier		-1
+862	Leather Gloves (4)		2	2	0		21	64	0									invlgl		glov,tier		-1
+863	Heavy Gloves (4)		2	2	0		23	154	0									invvgl		glov,tier		-1
+864	Chain Gloves (4)		2	2	0		24	244	0									invmgl		glov,tier		-1
+865	Light Gauntlets (4)		2	2	0		25	333	0									invtgl		glov,tier		-1
+866	Gauntlets (4)		2	2	0		26	423	0									invhgl		glov,tier		-1
+867	Boots (4)		2	2	0		21	77	0									invlbt		boot,tier		-1
+868	Heavy Boots (4)		2	2	0		23	179	0									invvbt		boot,tier		-1
+869	Chain Boots (4)		2	2	0		24	282	0									invmbt		boot,tier		-1
+870	Light Plated Boots (4)		2	2	0		25	385	0									invtbt		boot,tier		-1
+871	Greaves (4)		2	2	0		26	487	0									invhbt		boot,tier		-1
+872	Bone Shield (4)		2	3	0		24	0	282									invbsh		bshi,tier	0	-1
+873	Spiked Shield (4)		2	3	0		25	0	353									invspk		bshi,tier	0	-1
+874	Mask (4)		2	2	0		25	320	0									invmsk		bhlm,tier		-1
+875	Bone Helm (4)		2	2	0		27	391	0									invbhm		bhlm,tier		-1
+8@G	Lamellar Armor (1)		2	3	0		2	0	31									invxrss		stor,tier		1
+8@H	Kazarghand (2)		2	3	0		12	0	81									invxaru		stor,tier		1
+8@I	Banded Plate (3)		2	3	0		23	0	281									invfulu		stor,tier		1
+8@J	Ceremonial Armor (Sacred)		2	3	0		30	0	722									invaaru		sstr		1
+8@M	Spangenhelm (4)		2	2	0		27	519	0									invxrnu		azhm,tier		0
+8@N	Aspis (1)		2	3	0		3	30	59									invxrgu		ishd,tier	0	6
+8@O	Totem Shield (2)		2	3	0		12	0	65									invxshu		ishd,tier	0	6
+8@P	Bladed Shield (3)		2	3	0		21	0	170									invxpku		ishd,tier	0	6
+9@I	Banded Plate (4)		2	3	0		27	0	583									invfulu		stor,tier		1
+9@J	Morion (1)		2	2	0		1	10	0									invxkpu		azhm,tier		0
+9@K	Cervelliere (2)		2	2	0		11	57	0									invfhlu		azhm,tier		0
+9@L	Einherjar Helm (3)		2	2	0		21	0	164									invuhms		azhm,tier		0
+9@M	Spangenhelm (Sacred)		2	2	0		30	606	0									invxrnu		szhm		0
+9@P	Bladed Shield (4)		2	3	0		26	0	353									invxpku		ishd,tier	0	6
+@01	Quilted Armor (Sacred)		2	3	0		30	460	0									invqlt		qtor		-1
+@02	Leather Armor (Sacred)		2	3	0		30	474	0									invlea		qtor		-1
+@03	Hard Leather Armor (Sacred)		2	3	0		30	486	0									invhla		qtor		-1
+@04	Studded Leather (Sacred)		2	3	0		30	499	0									invstu		qtor		-1
+@05	Ring Mail (Sacred)		2	3	0		30	512	0									invrng		qtor		-1
+@06	Scale Mail (Sacred)		2	3	0		30	525	0									invscl		qtor		-1
+@07	Chain Mail (Sacred)		2	3	0		30	538	0									invchn		qtor		-1
+@08	Breast Plate (Sacred)		2	3	0		30	550	0									invbrs		qtor		-1
+@09	Splint Mail (Sacred)		2	3	0		30	563	0									invspl		qtor		-1
+@10	Plate Mail (Sacred)		2	3	0		30	576	0									invplt		qtor		-1
+@11	Field Plate (Sacred)		2	3	0		30	589	0									invfld		qtor		-1
+@12	Light Plate (Sacred)		2	3	0		30	602	0									invltp		qtor		-1
+@13	Gothic Plate (Sacred)		2	3	0		30	614	0									invgth		qtor		-1
+@14	Full Plate Mail (Sacred)		2	3	0		30	640	0									invful		qtor		-1
+@15	Ancient Armor (Sacred)		2	3	0		30	720	0									invaar		qtor		-1
+@16	Cap (Sacred)		2	2	0		30	456	0									invcap		qhlm		-1
+@17	Skull Cap (Sacred)		2	2	0		30	486	0									invskp		qhlm		-1
+@18	Helm (Sacred)		2	2	0		30	516	0									invhlm		qhlm		-1
+@19	Full Helm (Sacred)		2	2	0		30	546	0									invfhl		qhlm		-1
+@20	Great Helm (Sacred)		2	2	0		30	576	0									invghm		qhlm		-1
+@21	Crown (Sacred)		2	2	0		30	606	0									invcrn		qhlm		-1
+@22	Buckler (Sacred)		2	2	0		30	446	469									invbuc		qshi	0	-1
+@23	Small Shield (Sacred)		2	2	0		30	463	499									invsml		qshi	0	-1
+@24	Large Shield (Sacred)		2	3	0		30	480	529									invlrg		qshi	0	-1
+@25	Kite Shield (Sacred)		2	3	0		30	497	559									invkit		qshi	0	-1
+@26	Tower Shield (Sacred)		2	3	0		30	514	589									invtow		qshi	0	-1
+@27	Gothic Shield (Sacred)		2	4	0		30	531	619									invgts		qshi	0	-1
+@28	Sash (Sacred)		2	1	0		30	452	0									invlbl		belt,qblt		-1
+@29	Light Belt (Sacred)		2	1	0		30	490	0									invvbl		belt,qblt		-1
+@30	Belt (Sacred)		2	1	0		30	529	0									invmbl		belt,qblt		-1
+@31	Heavy Belt (Sacred)		2	1	0		30	568	0									invtbl		belt,qblt		-1
+@32	Plated Belt (Sacred)		2	1	0		30	606	0									invhbl		belt,qblt		-1
+@33	Leather Gloves (Sacred)		2	2	0		30	454	0									invlgl		qglv		-1
+@34	Heavy Gloves (Sacred)		2	2	0		30	484	0									invvgl		qglv		-1
+@35	Chain Gloves (Sacred)		2	2	0		30	514	0									invmgl		qglv		-1
+@36	Light Gauntlets (Sacred)		2	2	0		30	544	0									invtgl		qglv		-1
+@37	Gauntlets (Sacred)		2	2	0		30	574	0									invhgl		qglv		-1
+@38	Boots (Sacred)		2	2	0		30	458	0									invlbt		qbot		-1
+@39	Heavy Boots (Sacred)		2	2	0		30	492	0									invvbt		qbot		-1
+@40	Chain Boots (Sacred)		2	2	0		30	527	0									invmbt		qbot		-1
+@41	Light Plated Boots (Sacred)		2	2	0		30	561	0									invtbt		qbot		-1
+@42	Greaves (Sacred)		2	2	0		30	595	0									invhbt		qbot		-1
+@43	Bone Shield (Sacred)		2	3	0		30	0	527									invbsh		qshi	0	-1
+@44	Spiked Shield (Sacred)		2	3	0		30	0	550									invspk		qshi	0	-1
+@45	Mask (Sacred)		2	2	0		30	540	0									invmsk		qhlm		-1
+@46	Bone Helm (Sacred)		2	2	0		30	563	0									invbhm		qhlm		-1
+@47	Wolf Head (Sacred)		2	2	0		30	440	0									invdr1		qplt		5
+@48	Hawk Helm (Sacred)		2	2	0		30	445	0									invdr2		qplt		5
+@49	Antlers (Sacred)		2	2	0		30	450	0									invdr3		qplt		5
+@50	Falcon Mask (Sacred)		2	2	0		30	454	0									invdr4		qplt		5
+@51	Spirit Mask (Sacred)		2	2	0		30	594	0									invdr5		qplt		5
+@52	Jawbone Cap (Sacred)		2	2	0		30	442	0									invba1		qphm		4
+@53	Fanged Helm (Sacred)		2	2	0		30	446	0									invba2		qphm		4
+@54	Horned Helm (Sacred)		2	2	0		30	451	0									invba3		qphm		4
+@55	Assault Helmet (Sacred)		2	2	0		30	550	0									invba4		qphm		4
+@56	Avenger Guard (Sacred)		2	2	0		30	580	0									invba5		qphm		4
+@57	Targe (Sacred)		2	2	0		30	0	437									invpa1		qaur	0	3
+@58	Rondache (Sacred)		2	2	0		30	0	440									invpa2		qaur	0	3
+@59	Heraldic Shield (Sacred)		2	4	0		30	442	0									invpa3		qaur	0	3
+@60	Aerin Shield (Sacred)		2	4	0		30	445	0									invpa4		qaur	0	3
+@61	Crown Shield (Sacred)		2	2	0		30	0	447									invpa5		qaur	0	3
+@62	Preserved Head (Sacred)		2	2	0		30	0	436									invne1		qhed	0	2
+@63	Zombie Head (Sacred)		2	2	0		30	0	438									invne2		qhed	0	2
+@64	Unraveller Head (Sacred)		2	2	0		30	0	441									invne3		qhed	0	2
+@65	Gargoyle Head (Sacred)		2	2	0		30	0	443									invne4		qhed	0	2
+@66	Demon Head (Sacred)		2	2	0		30	0	445									invne5		qhed	0	2
+@67	Circlet (Sacred)		2	2	0		30	0	262									invci0		qcic		-1
+@68	Coronet (Sacred)		2	2	0		30	0	327									invci1		qcic		-1
+@69	Tiara (Sacred)		2	2	0		30	0	392									invci2		qcic		-1
+@70	Diadem (Sacred)		2	2	0		30	0	524									invci3		qcic		-1
+Ysh4	Mage's Plate		2	3	0		30	500	0									lab_armor		###3		-1
+Ysh5	Divine Guard		2	3	0		30	0	500									lab_shield		###4	0	-1
+Ysh6	Sorcerer's Mask		2	2	0		30	500	0									lab_helm		###5		-1
+Ysh7	Mana Belt		2	1	0		30	500	0									lab_belt		###6,qblt		-1
+Ysh8	Warkeepers		2	2	0		30	500	0									lab_gloves		###7		-1
+Ysh9	Winged Feet		2	2	0		30	500	0									lab_boots		###8		-1
+crn	Crown		2	2	0		0	55	0									invcrn		helm		-1
+e10	Targe (3)		2	2	0		18	0	41									invpa1		ashd,tier	0	3
+e11	Rondache (3)		2	2	0		19	0	64									invpa2		ashd,tier	0	3
+e12	Heraldic Shield (3)		2	4	0		20	88	0									invpa3		ashd,tier	0	3
+e13	Aerin Shield (3)		2	4	0		21	112	0									invpa4		ashd,tier	0	3
+e14	Crown Shield (3)		2	2	0		22	0	135									invpa5		ashd,tier	0	3
+e15	Preserved Head (3)		2	2	0		18	0	34									invne1		head,tier	0	2
+e16	Zombie Head (3)		2	2	0		19	0	54									invne2		head,tier	0	2
+e17	Unraveller Head (3)		2	2	0		20	0	74									invne3		head,tier	0	2
+e18	Gargoyle Head (3)		2	2	0		21	0	94									invne4		head,tier	0	2
+e19	Demon Head (3)		2	2	0		22	0	113									invne5		head,tier	0	2
+e20	Wolf Head (4)		2	2	0		23	152	0									invdr1		pelt,tier		5
+e21	Hawk Helm (4)		2	2	0		24	238	0									invdr2		pelt,tier		5
+e22	Antlers (4)		2	2	0		24	323	0									invdr3		pelt,tier		5
+e23	Falcon Mask (4)		2	2	0		25	408	0									invdr4		pelt,tier		5
+e24	Spirit Mask (4)		2	2	0		27	494	0									invdr5		pelt,tier		5
+e25	Jawbone Cap (4)		2	2	0		23	168	0									invba1		phlm,tier		4
+e26	Fanged Helm (4)		2	2	0		24	262	0									invba2		phlm,tier		4
+e27	Horned Helm (4)		2	2	0		24	357	0									invba3		phlm,tier		4
+e28	Assault Helmet (4)		2	2	0		25	450	0									invba4		phlm,tier		4
+e29	Avenger Guard (4)		2	2	0		27	470	0									invba5		phlm,tier		4
+e30	Targe (4)		2	2	0		23	0	85									invpa1		ashd,tier	0	3
+e31	Rondache (4)		2	2	0		24	0	134									invpa2		ashd,tier	0	3
+e32	Heraldic Shield (4)		2	4	0		24	182	0									invpa3		ashd,tier	0	3
+e33	Aerin Shield (4)		2	4	0		25	232	0									invpa4		ashd,tier	0	3
+e34	Crown Shield (4)		2	2	0		27	0	280									invpa5		ashd,tier	0	3
+e35	Preserved Head (4)		2	2	0		23	0	72									invne1		head,tier	0	2
+e36	Zombie Head (4)		2	2	0		24	0	112									invne2		head,tier	0	2
+e37	Unraveller Head (4)		2	2	0		24	0	153									invne3		head,tier	0	2
+e38	Gargoyle Head (4)		2	2	0		25	0	195									invne4		head,tier	0	2
+e39	Demon Head (4)		2	2	0		27	0	236									invne5		head,tier	0	2
+fld	Field Plate		2	3	0		0	55	0									invfld		tors		-1
+hbt	Greaves		2	2	0		0	70	0									invhbt		boot		-1
+hgl	Gauntlets		2	2	0		0	60	0									invhgl		glov		-1
+k01	Circlet (1)		2	2	0		2	0	14									invci0		circ,tier		-1
+k02	Coronet (1)		2	2	0		3	0	17									invci1		circ,tier		-1
+k03	Tiara (1)		2	2	0		4	0	21									invci2		circ,tier		-1
+k04	Diadem (1)		2	2	0		5	0	28									invci3		circ,tier		-1
+k09	Circlet (2)		2	2	0		11	0	29									invci0		circ,tier		-1
+k10	Coronet (2)		2	2	0		11	0	36									invci1		circ,tier		-1
+k11	Tiara (2)		2	2	0		12	0	43									invci2		circ,tier		-1
+k12	Diadem (2)		2	2	0		14	0	57									invci3		circ,tier		-1
+k17	Circlet (3)		2	2	0		19	0	69									invci0		circ,tier		-1
+k18	Coronet (3)		2	2	0		20	0	85									invci1		circ,tier		-1
+k19	Tiara (3)		2	2	0		21	0	103									invci2		circ,tier		-1
+k20	Diadem (3)		2	2	0		23	0	137									invci3		circ,tier		-1
+k21	Circlet (4)		2	2	0		24	0	147									invci0		circ,tier		-1
+k22	Coronet (4)		2	2	0		24	0	183									invci1		circ,tier		-1
+k23	Tiara (4)		2	2	0		25	0	220									invci2		circ,tier		-1
+k24	Diadem (4)		2	2	0		27	0	294									invci3		circ,tier		-1
+tow	Tower Shield		2	3	0		0	75	0									invtow		shie	0	-1
+w10	Wolf Head (1)		2	2	0		1	23	0									invdr1		pelt,tier		5
+w11	Hawk Helm (1)		2	2	0		2	37	0									invdr2		pelt,tier		5
+w12	Antlers (1)		2	2	0		3	50	0									invdr3		pelt,tier		5
+w13	Falcon Mask (1)		2	2	0		4	63	0									invdr4		pelt,tier		5
+w14	Spirit Mask (1)		2	2	0		5	77	0									invdr5		pelt,tier		5
+w15	Jawbone Cap (1)		2	2	0		1	26	0									invba1		phlm,tier		4
+w16	Fanged Helm (1)		2	2	0		2	40	0									invba2		phlm,tier		4
+w17	Horned Helm (1)		2	2	0		3	55	0									invba3		phlm,tier		4
+w18	Assault Helmet (1)		2	2	0		4	70	0									invba4		phlm,tier		4
+w19	Avenger Guard (1)		2	2	0		5	85	0									invba5		phlm,tier		4
+w20	Targe (1)		2	2	0		1	0	13									invpa1		ashd,tier	0	3
+w21	Rondache (1)		2	2	0		2	0	20									invpa2		ashd,tier	0	3
+w22	Heraldic Shield (1)		2	4	0		2	28	0									invpa3		ashd,tier	0	3
+w23	Aerin Shield (1)		2	4	0		3	36	0									invpa4		ashd,tier	0	3
+w24	Crown Shield (1)		2	2	0		5	0	43									invpa5		ashd,tier	0	3
+w25	Preserved Head (1)		2	2	0		1	0	11									invne1		head,tier	0	2
+w26	Zombie Head (1)		2	2	0		2	0	17									invne2		head,tier	0	2
+w27	Unraveller Head (1)		2	2	0		2	0	24									invne3		head,tier	0	2
+w28	Gargoyle Head (1)		2	2	0		3	0	30									invne4		head,tier	0	2
+w29	Demon Head (1)		2	2	0		5	0	36									invne5		head,tier	0	2
+w50	Wolf Head (2)		2	2	0		10	35	0									invdr1		pelt,tier		5
+w51	Hawk Helm (2)		2	2	0		11	55	0									invdr2		pelt,tier		5
+w52	Antlers (2)		2	2	0		11	74	0									invdr3		pelt,tier		5
+w53	Falcon Mask (2)		2	2	0		12	94	0									invdr4		pelt,tier		5
+w54	Spirit Mask (2)		2	2	0		14	113	0									invdr5		pelt,tier		5
+w55	Jawbone Cap (2)		2	2	0		10	39	0									invba1		phlm,tier		4
+w56	Fanged Helm (2)		2	2	0		11	60	0									invba2		phlm,tier		4
+w57	Horned Helm (2)		2	2	0		11	81	0									invba3		phlm,tier		4
+w58	Assault Helmet (2)		2	2	0		12	104	0									invba4		phlm,tier		4
+w59	Avenger Guard (2)		2	2	0		14	125	0									invba5		phlm,tier		4
+w60	Targe (2)		2	2	0		10	0	19									invpa1		ashd,tier	0	3
+w61	Rondache (2)		2	2	0		10	0	30									invpa2		ashd,tier	0	3
+w62	Heraldic Shield (2)		2	4	0		11	42	0									invpa3		ashd,tier	0	3
+w63	Aerin Shield (2)		2	4	0		12	53	0									invpa4		ashd,tier	0	3
+w64	Crown Shield (2)		2	2	0		14	0	64									invpa5		ashd,tier	0	3
+w65	Preserved Head (2)		2	2	0		10	0	16									invne1		head,tier	0	2
+w66	Zombie Head (2)		2	2	0		10	0	25									invne2		head,tier	0	2
+w67	Unraveller Head (2)		2	2	0		11	0	35									invne3		head,tier	0	2
+w68	Gargoyle Head (2)		2	2	0		12	0	45									invne4		head,tier	0	2
+w69	Demon Head (2)		2	2	0		14	0	54									invne5		head,tier	0	2
+w90	Wolf Head (3)		2	2	0		18	74	0									invdr1		pelt,tier		5
+w91	Hawk Helm (3)		2	2	0		19	114	0									invdr2		pelt,tier		5
+w92	Antlers (3)		2	2	0		20	155	0									invdr3		pelt,tier		5
+w93	Falcon Mask (3)		2	2	0		21	197	0									invdr4		pelt,tier		5
+w94	Spirit Mask (3)		2	2	0		23	238	0									invdr5		pelt,tier		5
+w95	Jawbone Cap (3)		2	2	0		18	81	0									invba1		phlm,tier		4
+w96	Fanged Helm (3)		2	2	0		19	126	0									invba2		phlm,tier		4
+w97	Horned Helm (3)		2	2	0		20	172	0									invba3		phlm,tier		4
+w98	Assault Helmet (3)		2	2	0		21	217	0									invba4		phlm,tier		4
+w99	Avenger Guard (3)		2	2	0		23	263	0									invba5		phlm,tier		4
 !01	Naginata (1)		2	4	1		3	0	58		1			19	20			invwsc	0	nagi,tier	1	6
 !03	Naginata (2)		2	4	1		13	0	95		1			45	47			invwsc	0	nagi,tier	1	6
 !05	Naginata (3)		2	4	1		23	0	192		1			78	79			invwsc	0	nagi,tier	1	6

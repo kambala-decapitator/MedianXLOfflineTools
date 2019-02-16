@@ -230,7 +230,7 @@
 11343	+2% Kraken Stance Damage per Base Level in the Honor Tree
 11344	Deal No Elemental or Magic Damage
 11345	Fear No Evil
-11346	50% of Your Total Character Defense Added as Vitality
+11346	50% of Your Total Character Defense Bonus Added as Vitality
 11347	\dgrey;+600 Strength Factor to Spell Damage\n+600 Energy Factor to Spell Damage\n+25% Physical Resist\n+33% Deadly Strike\n+100% Magic Find\n+50% Cast Speed\n\orange;If you have No Devotion Skills:
 11348	Stormcall Deals No Lightning Damage\nStormcall Deals Double Damage
 11349	+14% Magic Damage to Crucify per Base Level
@@ -3571,7 +3571,7 @@ DescASTRtimerSyn	Less cooldown per Base Level (Diminishing Returns)
 DescATTS	Attack Speed: 
 DescAbyssPerHit	Vortex hits 13 times per second\nSphere does no damage
 DescAcid2Aura	Elemental Spell Damage: 
-DescAcid3	\orange;Venomous Aura\grey;\n\nCast Level 5 Poison Flash
+DescAcid3	\orange;Venomous Aura\grey;\n\nCast Level 5/15/30 Poison Flash
 DescAcidNr	Acid Fiends: 
 DescAcidTranceIAS	Attack and Movement Speed: +
 DescActiveRadius	Activation Radius: 
@@ -3689,7 +3689,7 @@ DescBlankMaxRev	Maximum Minions: 3\n
 DescBlankNewRet	Converts 10% Physical Damage to Magic\n70% Weapon Damage\n
 DescBlankNovaChargeBuff	25% of Base Dexterity added to Energy\n
 DescBlankOmax	Area Effect Delay: 1.2 seconds\nConverts 50% Physical Damage to Magic Damage\n25% Weapon Damage\n
-DescBlankOmin	Area Effect Delay: 1.2 seconds\nConverts 50% Physical Damage to Magic Damage\n35% Weapon Damage\n
+DescBlankOmin	Area Effect Delay: 1.2 seconds\nConverts 50% Physical Damage to Magic Damage\n50% Weapon Damage\n
 DescBlankPounce	\nUses Fury: strength and dexterity bonus doubled\nGrants Fury: stand still for 1 second after pouncing\n\orange;Fury\n
 DescBlankRatto	+1% Base Chance of Blocking\n\nCooldown: 2 seconds\n
 DescBlankSGuide	Range: 11 yards\n\red;Bonuses are only applied if you are within range of a wolf/ancient spirit\n
@@ -9688,7 +9688,7 @@ SkillnameHammerofzerae	Hammer of Zerae
 SkillnameHammertime	Hammertime
 SkillnameHawkTalons	Hawk Talons
 SkillnameHereItComes	Pyroblast
-SkillnameHm	V.o. Judgement
+SkillnameHm	V.o. Justice
 SkillnameHmmmmm	Vessel of Justice
 SkillnameHoplite	Hoplite
 SkillnameHornedGod	Horned God
@@ -10825,7 +10825,8 @@ StrCascadea1	Up to
 StrCascadeb1	 projectiles per volley
 StrCfgAssignHotkey	Or press any key to assign\nPress DEL to unassign key\nPress ESC to cancel
 StrCfgAutomapMode	Small automap
-StrCfgDebugUi	Enable Debug Interface
+StrCfgColorblind	Enable color blindness accommodations
+StrCfgDebugUi	Enable debug interface
 StrCfgTabDisplay	Settings\nInterface
 StrCfgTabHotkey	Settings\nHotkey
 StrCfgTabNotif	Settings\nNotification
@@ -10869,6 +10870,8 @@ StrMercAttributes	Attributes
 StrMercEx12	Shapeshifter
 StrMercEx14	Defender
 StrMercEx15	Crusader
+StrMinute	 minute
+StrMinutes	 minutes
 StrParty26	Both players must be at least level 9
 StrParty27	to go hostile with each other
 StrPhysDamg	Physical Damage: 
@@ -11406,9 +11409,9 @@ To Guild 3
 To Guild 4	
 To Guild 5	
 To Harrogath	To Harrogath
-To Hell1	To Abaddon
-To Hell2	To The Pit of Acheron
-To Hell3	To The Infernal Pit
+To Hell1	\grey;Elite Zone\n\yellow;Abaddon
+To Hell2	\grey;Elite Zone\n\yellow;Pit of Acheron
+To Hell3	\grey;Elite Zone\n\yellow;Infernal Pit
 To Kabraxis Church	\grey;Difficulty: \yellow;Moderate\n\n\orange;+ The Black Road +\n\n\grey;Dungeon Quest\n\gold;Church of Dien-Ap-Sten
 To Kurast 3000 B.A.	\grey;Difficulty: \yellow;Moderate\n\n\grey;Nephalem Rift\n\gold;Kurast 3000 BA
 To Level Challenge 1	\grey;Required Level: 50\n\n\orange;Quest: Defeat the three Priestesses\n\n\grey;Level Challenge\n\gold;Tran Athulua
@@ -11466,7 +11469,7 @@ To The Dry Hills	To The Dry Hills
 To The Durance of Hate Level 1	To The Durance of Hate Level 1
 To The Durance of Hate Level 2	To The Durance of Hate Level 2
 To The Durance of Hate Level 3	To The Seat of Hatred
-To The Echo Chamber	To The Drifter Cavern
+To The Echo Chamber	\grey;Elite Zone\n\yellow;Drifter Cavern
 To The Edge of Nothingness	\grey;Difficulty: \dgrey;Impossible\n\n\orange;+ Herald of the End +\n\n\grey;Dungeon Quest\n\gold;Edge of Nothingness
 To The Far Oasis	To The Far Oasis
 To The Figment of Pain	\grey;Difficulty: \purple;Very Hard\n\n\orange;+ Valthek Set Quest +\n\n\grey;Dungeon Quest\n\gold;Figment of Pain
@@ -11479,7 +11482,7 @@ To The Forgotten Temple	To The Forgotten Temple
 To The Forgotten Tower	To The Forgotten Tower
 To The Genesis	\grey;Difficulty: \dgrey;Extreme\n\n\orange;+ Archbishop Lazarus +\n\n\grey;Dungeon Quest\n\gold;Genesis
 To The Glacier Caves Level 1	To The Ancients' Way
-To The Glacier Caves Level 2	To The Icy Cellar
+To The Glacier Caves Level 2	\grey;Elite Zone\n\yellow;Icy Cellar
 To The Great Marsh	To The Great Marsh
 To The Halls of Anguish	To The Halls of Anguish
 To The Halls of Death's Calling	To The Halls of Pain
