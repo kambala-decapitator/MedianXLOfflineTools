@@ -1,6 +1,6 @@
-[B]Тема на официальном форуме Медиана[/B]: [URL="https://forum.median-xl.com/viewtopic.php?f=40&t=342"]Median XL Offline Tools v0.5 (Sigma support!) - Median XL[/URL]
+[B]Тема на официальном форуме Медиана[/B]: [URL='https://forum.median-xl.com/viewtopic.php?f=40&t=342']Median XL Offline Tools[/URL]
 
-[COLOR=#6666ff]Это [B][U]НЕ[/U][/B] читерская программа и только для [B][U]Одиночной Игры[/U][/B]![/COLOR]
+[COLOR=#6666ff]Это [B][U]НЕ[/U][/B] читерская программа и только для [B][U]Одиночной Игры[/U][/B]! Необходимо выйти из игры, прежде чем редактировать персонажа, иначе изменения не сохранятся.[/COLOR]
 
 Как можно догадаться из названия, это практически полный оффлайн аналог grig'овских [URL='http://grig.vlexofree.com/']MXL Online Tools[/URL] (они расписаны в [URL='http://worldofplayers.ru/threads/33303/']теме ЧаВо[/URL]), но со многими дополнениями. Приложение написано на C++ с использованием [URL='https://www.qt.io']фреймворка Qt[/URL] (версии 4.8.7 на данный момент), так что можете даже не пытаться дотнетрефлекторнуть исходный код (а он не будет опубликован по очевидным причинам).
 
@@ -22,6 +22,7 @@
 [*]просмотр предметов персонажа и в сундуках PlugY и их свойств (включая скрытые)
 [*]поиск предметов
 [*]сортировка сундуков PlugY
+[*]перемещение предметов между сундуком PlugY и персонажем (версия 0.5.1 и позже)
 [*]массовое расщепление уников/комплектов с предпросмотром
 [*]массовое улучшение самоцветов/рун
 [*]восстановление Куба
@@ -49,8 +50,8 @@
 
 [B]Загрузки[/B]:
 [LIST]
-[*][I]Windows[/I] (XP SP3 и позже): [URL="https://mega.nz/#!JABjBYYJ!CQZRXArEkvmeyEEKLl_axcXqGpttYrRsSPi9lPqit_4"]MEGA[/URL] (если не запускается, установите MSVC++ 2015 Redistributable [FONT=Courier New]vc_redist.x[B]86[/B].exe[/FONT] с [URL='https://www.mediafire.com/?84qc8d5dy3cd9f6']Mediafire[/URL] или с [URL='https://www.microsoft.com/en-us/download/details.aspx?id=52685']сайта Microsoft[/URL])
-[*][I]macOS[/I] (10.9 и позже, Intel 64bit): [URL="https://mega.nz/#!QYwlQK5B!PaouegAPH3K8qkDnVAltF5T37VUAla19jpWb8_kRc28"]MEGA[/URL]
+[*][I]Windows[/I] (XP SP3 и позже): [URL]http://mxl.vn.cz/kambala/MedianXLOfflineTools_0.5.1.7z[/URL] (если не запускается, установите MSVC++ 2015 Redistributable [FONT=Courier New]vc_redist.x[B]86[/B].exe[/FONT] с [URL='https://www.mediafire.com/?84qc8d5dy3cd9f6']Mediafire[/URL] или с [URL='https://www.microsoft.com/en-us/download/details.aspx?id=52685']сайта Microsoft[/URL])
+[*][I]macOS[/I] (10.9 и позже, Intel 64bit): [URL]http://mxl.vn.cz/kambala/MedianXLOfflineTools_mac_0.5.1.tbz[/URL]
 [/LIST]
 
 [spoiler="Mini-FAQ"]В: Я не могу распаковать архив без ошибок :(
@@ -103,7 +104,8 @@
 [code]APP_PATH = "/Applications/MedianXLOfflineTools.app" # поместите в кавычки реальный путь, это лишь пример
 cp -R resources/data/* "${APP_PATH}/Contents/resources/data"[/code]
 [/LIST]
-[/LIST][/spoiler]
+[/LIST]
+[/spoiler]
 [spoiler="Скриншоты"]кликните для полноразмерного просмотра
 [URL='http://s1125.photobucket.com/user/kambala_decapitator/media/Median%20XL%20Offline%20Tools/main_ru4.png.html'][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_main_ru4.png[/IMG][/URL][URL='http://s1125.photobucket.com/user/kambala_decapitator/media/Median%20XL%20Offline%20Tools/main_ru_mac2.png.html'][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_main_ru_mac2.png[/IMG][/URL]
 [URL='http://s1125.photobucket.com/user/kambala_decapitator/media/items2_ru.png.html'][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/th_items2_ru.png[/IMG][/URL][URL='http://s1125.photobucket.com/user/kambala_decapitator/media/items_plugy2_ru.png.html'][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/th_items_plugy2_ru.png[/IMG][/URL]
@@ -120,10 +122,20 @@ cp -R resources/data/* "${APP_PATH}/Contents/resources/data"[/code]
 
 [I]v0.5 (05.02.2019)[/I]
 [LIST]
+[*][+] перемещение выбранного предмета в/из общий сундук PlugY: команда в контекстном меню и горячая клавиша Alt+Клик
+[*][+] перемещение всех текущих видимых предметов на последнюю страницу сундука PlugY: кнопка внизу
+[*][ф] расщепление вещей как в Сигме
+[*][ф] исправлено вычисление требуемого уровня, если вставлен уникальный драгоценный камень
+[*][ф] исправлены значения требуемых силы и ловкости
+[*][ф] исправлено отображение особых (оранжевых) свойств Священных Уников (SU)
+[/LIST]
+[spoiler="предыдущие версии"]
+[I]v0.5 (05.02.2019)[/I]
+[LIST]
 [*][+] поддержка Сигмы
 [*][-] удалена поддержка предков Сигмы
 [/LIST]
-[spoiler="предыдущие версии"]
+
 [I]v0.4.6 (26.12.2018)[/I]
 [LIST]
 [*][ф] исправлено сохранение общего сундука после открытия другого персонажа

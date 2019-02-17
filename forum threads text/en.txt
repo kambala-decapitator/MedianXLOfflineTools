@@ -1,6 +1,6 @@
 [size=6]Just in case, here's the Russian thread: http://worldofplayers.ru/threads/34489/[/size]
 
-[size=18][color=#6666ff]This is [b][u]NOT[/u][/b] a cheating tool and only for [b][u]Single Player[/u][/b] mode![/color][/size]
+[size=18][color=#6666ff]This is [b][u]NOT[/u][/b] a cheating tool and only for [b][u]Single Player[/u][/b] mode! You must be not in game before editing your character, as otherwise your changes won't be applied.[/color][/size]
 
 As you can guess from the title, it's an almost complete offline analogue of grig's [url=http://grig.vlexofree.com/]Median XL Online Tools[/url], but with nice additions. It's written in C++ using the [url=https://www.qt.io]Qt framework[/url] (v4.8.7 as of current release), so don't hope to dotnetreflect the source code (and it won't be released for obvious reasons).
 
@@ -17,6 +17,7 @@ I hope I provided enough anti-hack protection for an average user. If you manage
 [list][*]viewing all character/PlugY items and their properties (including hidden)
 [*]searching
 [*]sorting PlugY stashes
+[*]moving items between character/shared PlugY stash (v0.5.1 and later)
 [*]mass disenchant of uniques/sets with preview
 [*]mass upgrade of gems/runes
 [*]recovering missing Cube[/list][*]Selected item (context menu):
@@ -25,7 +26,7 @@ I hope I provided enough anti-hack protection for an average user. If you manage
 [*]removing all or specific Mystic Orbs (UMO not supported yet)
 [*]rune downgrading
 [*]deleting
-[*]collect/extract Shrines to/from Shrine Vessel (Ultimative only)[/list][*]OS-specific:
+[*]collect/extract Shrines to/from Shrine Vessel[/list][*]OS-specific:
 [list][*].d2s file association
 [*]recent files in Windows 7 taskbar / Mac OS X dock icon
 [*]drag'n'drop .d2s files on the application window, application shortcut and on the Windows 7 taskbar / Mac OS X dock icon
@@ -33,8 +34,8 @@ I hope I provided enough anti-hack protection for an average user. If you manage
 [*]single instance[/list][*]and many others ;)[/list][/spoil]
 
 [b]Downloads[/b]:
-[list][*][i]Windows[/i] (XP SP3 and later): https://mega.nz/#!JABjBYYJ!CQZRXArEkvmeyEEKLl_axcXqGpttYrRsSPi9lPqit_4 (if it doesn't launch, install MSVC++ 2015 Redistributable vc_redist.x[c]86[/c].exe from [url=https://www.mediafire.com/?84qc8d5dy3cd9f6]Mediafire[/url] or from [url=https://www.microsoft.com/en-us/download/details.aspx?id=52685]Microsoft's website[/url])
-[*][i]macOS[/i] (10.9 and later, Intel 64bit): https://mega.nz/#!QYwlQK5B!PaouegAPH3K8qkDnVAltF5T37VUAla19jpWb8_kRc28[/list]
+[list][*][i]Windows[/i] (XP SP3 and later): http://mxl.vn.cz/kambala/MedianXLOfflineTools_0.5.1.7z (if it doesn't launch, install MSVC++ 2015 Redistributable vc_redist.x[c]86[/c].exe from [url=https://www.mediafire.com/?84qc8d5dy3cd9f6]Mediafire[/url] or from [url=https://www.microsoft.com/en-us/download/details.aspx?id=52685]Microsoft's website[/url])
+[*][i]macOS[/i] (10.9 and later, Intel 64bit): http://mxl.vn.cz/kambala/MedianXLOfflineTools_mac_0.5.1.tbz[/list]
 
 [b]Mini-FAQ:[/b]
 [spoil]Q: I can't unrar the distributed archive without errors :(
@@ -93,12 +94,20 @@ cp -R resources/data/* "${APP_PATH}/Contents/resources/data"[/code][/list][/list
 
 [b]Changelog[/b]:
 
-[i]v0.5 (05.02.2019)[/i]
+[i]v0.5.1 (17.02.2019)[/i]
+[list][+] moving selected item to/from shared PlugY stash: context menu command and Alt+Click hotkey
+[+] moving all currently visible items to last page in the shared PlugY stash: button in the bottom
+[f] disenchanting logic matches Sigma
+[f] fixed rlvl calculation when a unique jewel is inserted
+[f] fixed required str/dex values
+[f] fixed displaying special (orange) SU properties
+[/list]
+Older versions:
+[spoil][i]v0.5 (05.02.2019)[/i]
 [list][+] Sigma support
 [-] removed support of pre-Sigma mods
 [/list]
-Older versions:
-[spoil][i]v0.4.6 (26.12.2018)[/i]
+[i]v0.4.6 (26.12.2018)[/i]
 [list][f] fixed saving shared stash after opening another character
 [/list]
 [i]v0.4.5 (22.04.2018)[/i]
