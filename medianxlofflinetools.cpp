@@ -213,6 +213,47 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, LaunchMode la
 
     if (launchMode != LaunchModeNormal)
         QTimer::singleShot(0, launchMode == LaunchModeDumpItems ? dumpItemsAction : dupeCheckAction, SLOT(trigger()));
+    else
+    {
+        // [-hc2sc] [-toladder | -fromladder] charPath
+        QStringList args = qApp->arguments();
+        QString charPath = args.last();
+        if (!QFile::exists(charPath))
+            return;
+
+        bool hc2sc = false, *pToLadder = 0;
+        for (int i = 1; i < args.size() - 1; ++i)
+        {
+            QString arg = args.at(i);
+            if (arg == QLatin1String("-hc2sc"))
+                hc2sc = true;
+            else if (arg == QLatin1String("-toladder"))
+            {
+                delete pToLadder;
+                pToLadder = new bool(true);
+            }
+            else if (arg == QLatin1String("-fromladder"))
+            {
+                delete pToLadder;
+                pToLadder = new bool(false);
+            }
+            else
+                qDebug("unknown arg %s", qPrintable(arg));
+        }
+        if (!hc2sc && !pToLadder)
+            return;
+
+        _charPath = charPath;
+        if (processSaveFile())
+        {
+            if (hc2sc)
+                CharacterInfo::instance().basicInfo.isHardcore = false;
+            if (pToLadder)
+                CharacterInfo::instance().basicInfo.isLadder = *pToLadder;
+            saveCharacter();
+            qApp->quit();
+        }
+    }
 #endif
 }
 
@@ -378,16 +419,19 @@ void MedianXLOfflineTools::saveCharacter()
     ui->freeStatPointsLineEdit->setText(QString::number(totalPossibleStatPoints(charInfo.basicInfo.level, kDifficultiesNumber)));
 #endif
 
-    QByteArray statsBytes = statisticBytes();
-    if (statsBytes.isEmpty())
-        return;
-
     QByteArray tempFileContents(_saveFileContents);
-    tempFileContents.replace(Enums::Offsets::StatsData, charInfo.skillsOffset - Enums::Offsets::StatsData, statsBytes);
-    int diff = Enums::Offsets::StatsData + statsBytes.size() - charInfo.skillsOffset;
-    charInfo.skillsOffset = Enums::Offsets::StatsData + statsBytes.size();
-    charInfo.itemsOffset += diff;
-    charInfo.itemsEndOffset += diff;
+    if (_isLoaded) // this portion is untouched when saving through command line
+    {
+        QByteArray statsBytes = statisticBytes();
+        if (statsBytes.isEmpty())
+            return;
+
+        tempFileContents.replace(Enums::Offsets::StatsData, charInfo.skillsOffset - Enums::Offsets::StatsData, statsBytes);
+        int diff = Enums::Offsets::StatsData + statsBytes.size() - charInfo.skillsOffset;
+        charInfo.skillsOffset = Enums::Offsets::StatsData + statsBytes.size();
+        charInfo.itemsOffset += diff;
+        charInfo.itemsEndOffset += diff;
+    }
 
     if (ui->respecSkillsCheckBox->isChecked())
     {
@@ -428,6 +472,10 @@ void MedianXLOfflineTools::saveCharacter()
         statusValue |= Enums::StatusBits::IsHardcore;
     else
         statusValue &= ~Enums::StatusBits::IsHardcore;
+    if (charInfo.basicInfo.isLadder)
+        statusValue |= Enums::StatusBits::IsLadder;
+    else
+        statusValue &= ~Enums::StatusBits::IsLadder;
     tempFileContents[Enums::Offsets::Status] = statusValue;
 
     QDataStream outputDataStream(&tempFileContents, QIODevice::ReadWrite);
@@ -501,28 +549,31 @@ void MedianXLOfflineTools::saveCharacter()
     else
         newName = charInfo.basicInfo.originalName;
 
-    quint8 newClvl = ui->levelSpinBox->value();
+    if (_isLoaded) // ui is inaccessible otherwise
+    {
+        quint8 newClvl = ui->levelSpinBox->value();
 #ifndef MAKE_FINISHED_CHARACTER
-    if (charInfo.basicInfo.level != newClvl)
+        if (charInfo.basicInfo.level != newClvl)
 #endif
-    {
-        charInfo.basicInfo.level = newClvl;
-        charInfo.basicInfo.totalSkillPoints = ui->freeSkillPointsLineEdit->text().toUShort();
-        recalculateStatPoints();
+        {
+            charInfo.basicInfo.level = newClvl;
+            charInfo.basicInfo.totalSkillPoints = ui->freeSkillPointsLineEdit->text().toUShort();
+            recalculateStatPoints();
 
-        outputDataStream.device()->seek(Enums::Offsets::Level);
-        outputDataStream << newClvl;
+            outputDataStream.device()->seek(Enums::Offsets::Level);
+            outputDataStream << newClvl;
 
-        ui->levelSpinBox->setMaximum(newClvl);
-    }
+            ui->levelSpinBox->setMaximum(newClvl);
+        }
 
-    if (charInfo.mercenary.exists)
-    {
-        quint16 newMercValue = Enums::Mercenary::mercBaseValueFromCode(charInfo.mercenary.code) + ui->mercTypeComboBox->currentIndex();
-        charInfo.mercenary.code = Enums::Mercenary::mercCodeFromValue(newMercValue);
-        charInfo.mercenary.nameIndex = ui->mercNameComboBox->currentIndex();
-        outputDataStream.device()->seek(Enums::Offsets::Mercenary + 4);
-        outputDataStream << charInfo.mercenary.nameIndex << newMercValue;
+        if (charInfo.mercenary.exists)
+        {
+            quint16 newMercValue = Enums::Mercenary::mercBaseValueFromCode(charInfo.mercenary.code) + ui->mercTypeComboBox->currentIndex();
+            charInfo.mercenary.code = Enums::Mercenary::mercCodeFromValue(newMercValue);
+            charInfo.mercenary.nameIndex = ui->mercNameComboBox->currentIndex();
+            outputDataStream.device()->seek(Enums::Offsets::Mercenary + 4);
+            outputDataStream << charInfo.mercenary.nameIndex << newMercValue;
+        }
     }
 
     // put corpse items on a character
@@ -687,7 +738,9 @@ void MedianXLOfflineTools::saveCharacter()
     // save the character
     QSettings settings;
     settings.beginGroup("recentItems");
-    QString savePath = settings.value(kLastSavePathKey).toString() + QDir::separator(), fileName = savePath + newName, saveFileName = fileName + kCharacterExtensionWithDot;
+    QString savePath = settings.value(kLastSavePathKey).toString() + QDir::separator(), fileName = savePath + newName, saveFileName = fileName;
+    if (_charPath.endsWith(QLatin1String(".d2s"), Qt::CaseInsensitive))
+        saveFileName += kCharacterExtensionWithDot;
     QFile outputFile(saveFileName);
     if (hasNameChanged)
     {
@@ -752,12 +805,15 @@ void MedianXLOfflineTools::saveCharacter()
             }
 
             setModified(false);
-            loadFile(_charPath, true, false); // update all UI at once by reloading the file
+            if (_isLoaded) // false when saving char passed through command line
+            {
+                loadFile(_charPath, true, false); // update all UI at once by reloading the file
 
-            QString text = tr("File '%1' successfully saved!").arg(QDir::toNativeSeparators(saveFileName));
-            if (!backupedFiles.isEmpty())
-                text += kHtmlLineBreak + kHtmlLineBreak + tr("The following backups were created:") + QString("<ul><li>%1</li></ul>").arg(backupedFiles.join("</li><li>"));
-            INFO_BOX(text);
+                QString text = tr("File '%1' successfully saved!").arg(QDir::toNativeSeparators(saveFileName));
+                if (!backupedFiles.isEmpty())
+                    text += kHtmlLineBreak + kHtmlLineBreak + tr("The following backups were created:") + QString("<ul><li>%1</li></ul>").arg(backupedFiles.join("</li><li>"));
+                INFO_BOX(text);
+            }
         }
         else
             showErrorMessageBoxForFile(tr("Error writing file '%1'"), outputFile);
