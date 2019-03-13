@@ -199,6 +199,7 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, LaunchMode la
     }
 #else
     Q_UNUSED(cmdPath);
+    shouldShowWindow = true;
 
     QAction *dupeCheckAction = new QAction("Dupe Check", this);
     dupeCheckAction->setShortcut(QKeySequence("Ctrl+D"));
@@ -251,6 +252,8 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, LaunchMode la
             if (pToLadder)
                 CharacterInfo::instance().basicInfo.isLadder = *pToLadder;
             saveCharacter();
+
+            shouldShowWindow = false;
             QTimer::singleShot(0, qApp, SLOT(quit()));
         }
     }

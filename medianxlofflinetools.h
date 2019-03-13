@@ -52,6 +52,10 @@ public:
     MedianXLOfflineTools(const QString &cmdPath, LaunchMode launchMode, QWidget *parent = 0, Qt::WindowFlags flags = 0);
     virtual ~MedianXLOfflineTools();
 
+#ifdef DUPE_CHECK
+    bool shouldShowWindow;
+#endif
+
 public slots:
     bool loadFile(const QString &charPath, bool shouldCheckExtension = true, bool shouldOpenItemsWindow = true);
     void loadFileSkipExtensionCheck(const QString &charPath);

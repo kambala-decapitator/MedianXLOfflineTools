@@ -75,6 +75,9 @@ void Application::createAndShowMainWindow()
     disableLionWindowRestoration();
     delete _showWindowMacTimer;
 #endif
+#ifdef DUPE_CHECK
+    if (_mainWindow->shouldShowWindow)
+#endif
     _mainWindow->show();
 
 #ifndef DUPE_CHECK
