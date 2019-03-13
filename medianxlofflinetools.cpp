@@ -742,13 +742,16 @@ void MedianXLOfflineTools::saveCharacter()
     if (_charPath.endsWith(QLatin1String(".d2s"), Qt::CaseInsensitive))
         saveFileName += kCharacterExtensionWithDot;
     QFile outputFile(saveFileName);
-    if (hasNameChanged)
+    if (_isLoaded)
     {
-        QFile oldFile(QString("%1%2.%3").arg(savePath, charInfo.basicInfo.originalName, kCharacterExtension));
-        backupedFiles += backupFile(oldFile);
+        if (hasNameChanged)
+        {
+            QFile oldFile(QString("%1%2.%3").arg(savePath, charInfo.basicInfo.originalName, kCharacterExtension));
+            backupedFiles += backupFile(oldFile);
+        }
+        else
+            backupedFiles += backupFile(outputFile);
     }
-    else
-        backupedFiles += backupFile(outputFile);
 
     if (outputFile.open(QIODevice::WriteOnly))
     {
@@ -757,6 +760,8 @@ void MedianXLOfflineTools::saveCharacter()
         {
             outputFile.flush();
             outputFile.close(); // without this explicit call QFileSystemWatcher will report the file as modified after the method returns
+            if (!_isLoaded)
+                return;
             _saveFileContents = tempFileContents;
 
             if (hasNameChanged)
@@ -805,15 +810,12 @@ void MedianXLOfflineTools::saveCharacter()
             }
 
             setModified(false);
-            if (_isLoaded) // false when saving char passed through command line
-            {
-                loadFile(_charPath, true, false); // update all UI at once by reloading the file
+            loadFile(_charPath, true, false); // update all UI at once by reloading the file
 
-                QString text = tr("File '%1' successfully saved!").arg(QDir::toNativeSeparators(saveFileName));
-                if (!backupedFiles.isEmpty())
-                    text += kHtmlLineBreak + kHtmlLineBreak + tr("The following backups were created:") + QString("<ul><li>%1</li></ul>").arg(backupedFiles.join("</li><li>"));
-                INFO_BOX(text);
-            }
+            QString text = tr("File '%1' successfully saved!").arg(QDir::toNativeSeparators(saveFileName));
+            if (!backupedFiles.isEmpty())
+                text += kHtmlLineBreak + kHtmlLineBreak + tr("The following backups were created:") + QString("<ul><li>%1</li></ul>").arg(backupedFiles.join("</li><li>"));
+            INFO_BOX(text);
         }
         else
             showErrorMessageBoxForFile(tr("Error writing file '%1'"), outputFile);
