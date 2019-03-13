@@ -251,7 +251,7 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, LaunchMode la
             if (pToLadder)
                 CharacterInfo::instance().basicInfo.isLadder = *pToLadder;
             saveCharacter();
-            qApp->quit();
+            QTimer::singleShot(0, qApp, SLOT(quit()));
         }
     }
 #endif
@@ -736,14 +736,20 @@ void MedianXLOfflineTools::saveCharacter()
     }
 
     // save the character
-    QSettings settings;
-    settings.beginGroup("recentItems");
-    QString savePath = settings.value(kLastSavePathKey).toString() + QDir::separator(), fileName = savePath + newName, saveFileName = fileName;
-    if (_charPath.endsWith(QLatin1String(".d2s"), Qt::CaseInsensitive))
-        saveFileName += kCharacterExtensionWithDot;
-    QFile outputFile(saveFileName);
+    QString savePath, fileName, saveFileName;
+    QFile outputFile;
     if (_isLoaded)
     {
+        QSettings settings;
+        settings.beginGroup("recentItems");
+        savePath = settings.value(kLastSavePathKey).toString() + QDir::separator();
+        fileName = savePath + newName;
+
+        saveFileName = fileName;
+        if (_charPath.endsWith(QLatin1String(".d2s"), Qt::CaseInsensitive))
+            saveFileName += kCharacterExtensionWithDot;
+        outputFile.setFileName(saveFileName);
+
         if (hasNameChanged)
         {
             QFile oldFile(QString("%1%2.%3").arg(savePath, charInfo.basicInfo.originalName, kCharacterExtension));
@@ -752,6 +758,8 @@ void MedianXLOfflineTools::saveCharacter()
         else
             backupedFiles += backupFile(outputFile);
     }
+    else
+        outputFile.setFileName(_charPath);
 
     if (outputFile.open(QIODevice::WriteOnly))
     {
