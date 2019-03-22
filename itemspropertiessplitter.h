@@ -62,7 +62,7 @@ protected slots:
     void moveItem(const QModelIndex &newIndex, const QModelIndex &oldIndex);
 
     void showContextMenu(const QPoint &pos);
-    virtual void moveBetweenStashes();
+    virtual bool moveBetweenStashes();
     void exportText();
     void disenchantSelectedItem();
 //    void unsocketItem();

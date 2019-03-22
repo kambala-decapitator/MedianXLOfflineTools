@@ -77,7 +77,7 @@ private slots:
     void rightClicked();
     void left10Clicked();
     void right10Clicked();
-    void moveBetweenStashes();
+    bool moveBetweenStashes();
 
 private:
     QPushButton *_left10Button, *_leftButton, *_rightButton, *_right10Button;

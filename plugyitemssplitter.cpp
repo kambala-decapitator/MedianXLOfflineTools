@@ -607,10 +607,11 @@ void PlugyItemsSplitter::right10Clicked()
     _pageSpinBox->setValue(qCeil((_pageSpinBox->value() + 1) / step) * step);
 }
 
-void PlugyItemsSplitter::moveBetweenStashes()
+bool PlugyItemsSplitter::moveBetweenStashes()
 {
-    ItemsPropertiesSplitter::moveBetweenStashes();
-    setCurrentStorageHasChanged();
+    if (ItemsPropertiesSplitter::moveBetweenStashes())
+        setCurrentStorageHasChanged();
+    return true;
 }
 
 

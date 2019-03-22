@@ -331,17 +331,18 @@ ItemInfo *ItemsPropertiesSplitter::selectedItem(bool showError /*= true*/)
     return item;
 }
 
-void ItemsPropertiesSplitter::moveBetweenStashes()
+bool ItemsPropertiesSplitter::moveBetweenStashes()
 {
     ItemInfo *item = selectedItem(false);
     if (sender() == _itemsView && !(item && qApp->mouseButtons() == Qt::LeftButton && qApp->keyboardModifiers() == Qt::AltModifier)) // Alt+Click
-        return;
+        return false;
 
     removeItemFromModel(item);
     _itemsView->selectionModel()->clearSelection();
     emit itemCountChanged(_itemsModel->itemCount());
 
     emit itemMovingBetweenStashes(item);
+    return true;
 }
 
 void ItemsPropertiesSplitter::exportText()
