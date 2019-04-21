@@ -559,7 +559,7 @@ bool DupeScanDialog::addItemInfoToXml(ItemInfo *item, bool isSocketable, QXmlStr
         xml.writeTextElement(QLatin1String("placement"), QString("location %1, ").arg(metaEnumFromName<Enums::ItemLocation>("ItemLocationEnum").valueToKey(item->location)) + ItemParser::itemStorageAndCoordinatesString("storage %1, row %2, col %3, equipped in %4", item));
     }
 
-    QString desc = PropertiesDisplayManager::completeItemDescription(item);
+    QString desc = PropertiesDisplayManager::completeItemDescription(item, true);
     xml.writeTextElement(QLatin1String("completeDescription"), desc.replace(QLatin1String("\n\n"), QLatin1String("\n")).trimmed());
 
     return true;

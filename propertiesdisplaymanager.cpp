@@ -12,15 +12,15 @@
 
 const QList<QByteArray> PropertiesDisplayManager::kDamageToUndeadTypes = QList<QByteArray>() << "mace" << "hamm" << "staf" << "scep" << "club" << "wand";
 
-QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item)
+QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item, bool useColor /*= false*/)
 {
-    QString ilvlText = "\n" + tr("Item Level: %1").arg(item->ilvl) + "\n";
+    QString ilvlText = tr("Item Level: %1").arg(item->ilvl) + "\n";
     if (item->isEar)
     {
         QString itemDescription = tr("%1's Ear", "param is character name").arg(item->earInfo.name.constData()) + "\n";
         itemDescription += Enums::ClassName::classes().at(item->earInfo.classCode) + "\n";
         itemDescription += tr("Level %1").arg(item->earInfo.level);
-        return itemDescription + ilvlText;
+        return itemDescription + "\n" + ilvlText;
     }
 
     bool isClassCharm = ItemDataBase::isClassCharm(item);
@@ -54,7 +54,12 @@ QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item)
     }
 
     // create full item description
-    QString itemDescription = ItemDataBase::completeItemName(item, false).replace(kHtmlLineBreak, "\n") + ilvlText;
+    QString itemDescription = ItemDataBase::completeItemName(item, useColor) + "\n";
+    if (useColor)
+        itemDescription += ColorsManager::colorStrings().at(ColorsManager::White);
+    else
+        itemDescription.replace(kHtmlLineBreak, "\n");
+    itemDescription += ilvlText;
     if (!itemBase->spelldesc.isEmpty())
         itemDescription += itemBase->spelldesc + "\n";
 
@@ -63,7 +68,7 @@ QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item)
         if (ItemDataBase::Items()->value(socketable->itemType)->types.first() == "rune")
             runes += ItemDataBase::Socketables()->value(socketable->itemType)->letter;
     if (!runes.isEmpty()) // gem-/jewelwords don't have any letters
-        itemDescription += QString("\n'%1'").arg(runes);
+        itemDescription += QString("\n%1'%2'").arg(useColor ? ColorsManager::colorStrings().at(ColorsManager::Gold) : QString(), runes);
 
     quint8 clvl = CharacterInfo::instance().basicInfo.level;
     ItemProperty *foo = new ItemProperty;
@@ -197,7 +202,7 @@ QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item)
             maxSocketableRlvl = socketableRlvl;
     }
     if (int actualRlvl = qMax(rlvl, maxSocketableRlvl) + allProps.value(Enums::ItemProperties::RequiredLevel, foo)->value)
-        itemDescription += "\n" + tr("Required Level: %1").arg(actualRlvl);
+        itemDescription += "\n" + tr("Required Level: %2").arg(actualRlvl);
     delete foo;
 
     // add '+50% damage to undead' if item type matches
@@ -209,6 +214,9 @@ QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item)
         else
             shouldAddDamageToUndeadInTheBottom = true;
     }
+
+    if (useColor)
+        itemDescription += QString("\n-PROPS-") + ColorsManager::colorStrings().at(ColorsManager::Blue).constData();
 
     if (!allProps.isEmpty())
     {

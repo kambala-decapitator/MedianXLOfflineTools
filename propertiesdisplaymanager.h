@@ -18,7 +18,7 @@ public:
         UsedWithoutPrimary
     };
 
-    static QString completeItemDescription(ItemInfo *item); // this is an ugly copy-paste from properties viewer, but I didn't find a better way; currently used for search
+    static QString completeItemDescription(ItemInfo *item, bool useColor = false); // this is an ugly copy-paste from properties viewer, but I didn't find a better way; currently used for search
     static void addProperties(PropertiesMap *mutableProps, const PropertiesMap &propsToAdd, const QSet<int> *pIgnorePropIds = 0);
     static void addTemporaryPropertiesAndDelete(PropertiesMap *mutableProps, const PropertiesMap &tempPropsToAdd, const QSet<int> *pIgnorePropIds = 0);
     // currently shouldColor is used for reanimates' names only
