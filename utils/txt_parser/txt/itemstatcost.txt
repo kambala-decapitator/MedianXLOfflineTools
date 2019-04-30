@@ -150,7 +150,7 @@ item_absorbmagic_percent	146		items	Magic Absorb	10	0		0	1023	7			1		31	2	2	ModS
 item_absorbmagic	147		items	Magic Absorb	10	0		0	1023	7			1		38	1	1	ModStr5l	ModStr5l									870	102																									1024	10	0	0
 item_absorbcold_percent	148		items	Cold Absorb	10	0		0	1023	7			1		30	2	2	ModStr5m	ModStr5m									2743	51																									1024	10	0	0
 item_absorbcold	149		items	Cold Absorb	10	0		0	1023	7			1		36	1	1	ModStr5n	ModStr5n									870	102																									1024	10	0	0
-item_slow	150		items	Slow Target	8	50		-50	205	7			1	1	82	2	2	ModStr5r	ModStr5r		1							51	20														domeleedamage	19	domissiledamage	19								1024	8	50	0
+item_slow	150		items	Slow Target	8	50		-50	205	7			1	1	81	2	2	ModStr5r	ModStr5r		1							51	20														domeleedamage	19	domissiledamage	19								1024	8	50	0
 item_aura	151		items		7	1	11	-1	126				1	1																																								1024	7	1	0
 item_indesctructible	152		classic	Indestructible	1			0	1	1			1		165	3	0	ModStre9s	ModStre9s																																			1024	1	0	0
 item_cannotbefrozen	153		items	Cannot Be Frozen	1			0	1	2			1		25	3	0	ModStr5z	ModStr5z									7506	1024																									1024	1	0	0
@@ -265,7 +265,7 @@ new_totem_syn	261		items	Extra Totems	5	0		0	31	12			1		155	1	1	ModitemTotemsMax
 passiveF	262		classic							12			1																																									1024	0	0	0
 x_signet36	263		cube / mo		5	0		0	31	12			1															7	2																									1024	5	0	0
 x_signet37	264		cube / mo		5	0		0	31	12			1															7	2																									1024	5	0	0
-not_used_265	265		unused							5			1																																									1024	0	0	0
+item_healafterplayerkill	265		items	Life after each Kill	10	0		0	1023	15			1	1	21	1	1	ModitemHPaK	ModitemHPaK									15	51														kill	33										1024	10	0	0
 item_warp_blue	266		items	\orange;Area Effect Attack\white;	7	0	17	0	127	7	17		1	1	248	3	0	ModitemWarpBlue	ModitemWarpBlue		1							95	128							2							domeleeattack	20	domissileattack	20								1024	7	0	0
 item_stance_radius	267		items	Enhanced Stance Radius	5	0		0	31	12			1		203	1	1	ModitemStanceRadius	ModitemStanceRadius									133	512																									1024	5	0	0
 baccha_on	268		skills							12			1																																									1024	0	0	0
@@ -301,9 +301,9 @@ W_M	297		skills		2	1		-1	2	9			1															1006	251																									
 tp_lock	298	town portal cuck	skills		5	0		0	31	12			1															7	2																									1024	5	0	0
 strength_bonus_wpn	299		classic	\grey;Current Strength Damage Bonus:	10	0		0	1023	6			1		251	2	2	ModitemStrWpnAdder	ModitemStrWpnAdder									4	1								2	8	strength	weapondisplay_dummy														1024	10	0	0
 dexterity_bonus_wpn	300		classic	\grey;Current Dexterity Damage Bonus:	10	0		0	1023	6			1		250	2	2	ModitemDexWpnAdder	ModitemDexWpnAdder									4	1								2	8	dexterity	weapondisplay_dummy														1024	10	0	0
-item_shadows_corpsesynergy	301	replace w/ syn	items	Shadows Spawn Corpses on Striking 5%	1	0		0	1	9			1		138	3	0	ModitemShadowCorpse	ModitemShadowCorpse									41	22																									1024	1	0	0
-skill_shadows_addcorpseonstriking	302		skills							9			1																																									1024	0	0	0
-skill_voidarchon_fire	303	replace w/ syn	skills	Fire Damage to Void Archon	12	0		0	4095	13			1		53	1	1	ModitemVoidFire	ModitemVoidFire									101	122																									1024	12	0	0
+item_shadows_corpsesynergy	301	UNUSED	items	Shadows Spawn Corpses on Striking 5%	1	0		0	1	9			1		138	3	0	ModitemShadowCorpse	ModitemShadowCorpse									41	22																									1024	1	0	0
+skill_shadows_addcorpseonstriking	302	UNUSED	skills							9			1																																									1024	0	0	0
+skill_voidarchon_fire	303	UNUSED	skills	Fire Damage to Void Archon	12	0		0	4095	13			1		53	1	1	ModitemVoidFire	ModitemVoidFire									101	122																									1024	12	0	0
 statX_1	304		skills		7	24		-24	103	9			1		246													1006	251																									1024	7	24	0
 item_pierce_cold	305		classic	to Enemy Cold Resistance	10	500		-500	523	9			1		93	20	1	Moditemenrescoldsk	Moditemenrescoldsk									716	257																									1024	10	500	0
 item_pierce_fire	306		classic	to Enemy Fire Resistance	10	500		-500	523	9			1		93	20	1	Moditemenresfiresk	Moditemenresfiresk									620	249																									1024	10	500	0
@@ -390,14 +390,14 @@ witchberry_lifeheal	386	moon cookie	cube + skills		8	0		0	255	12			1												
 passive_motw_dmgpct	387	replace w/ syn	items	Bonus Damage to Mark of the Wild	8	0		0	255	12			1		154	4	1	ModitemMotwDmg	ModitemMotwDmg									331	91																									1024	8	0	0
 passive_motw_elempct	388		items	Bonus Elemental Damage to Mark of the Wild	8	0		0	255	12			1		154	4	1	ModitemMotwElem	ModitemMotwElem									331	91																									1024	8	0	0
 passive_motw_duration	389	replace w/ syn	items	Duration Bonus to Mark of the Wild	10	0		0	1023	12			1		127	2	1	ModitemMotwDur	ModitemMotwDur									80	29																									1024	10	0	0
-passive_shadows_addmax	390	replace w/ syn	items	Extra Flayer Minions	5	0		0	31	12			1		155	1	1	ModitemMaxSummon	ModitemMaxSummon									2	51																									1024	5	0	0
+passive_shadows_addmax	390	UNUSED	items	Extra Flayer Minions	5	0		0	31	12			1		155	1	1	ModitemMaxSummon	ModitemMaxSummon									2	51																									1024	5	0	0
 passive_hex_adddmg	391	replace w/ syn	items	Bonus to Miasma Haunt Duration	10	0		0	1023	12			1		97	2	1	ModitemHexDur	ModitemHexDur									5	61																									1024	10	0	0
 not_used_392	392		unused							5			1																																									1024	0	0	0
 special_syn2	393		items		14	1001	12	-1001	15382	17	12		1																																									1024	14	1001	0
-passive_shadows_addelem	394		skills		8	0		0	255	12			1																																									1024	8	0	0
-passive_vindicate_adddmg	395	replace w/ syn	skills							12			1																																									1024	0	0	0
-not_used_396	396		unused							5			1																																									1024	0	0	0
-not_used_397	397		unused							5			1																																									1024	0	0	0
+passive_shadows_addelem	394	replaceable	skills		8	0		0	255	12			1																																									1024	8	0	0
+weapon_count	395		items		3	0		0	7	12			1																																									1024	3	0	0
+special_syn3	396		items		14	1001	12	-1001	15382	17	12		1																																									1024	14	1001	0
+special_syn4	397		items		14	1001	12	-1001	15382	17	12		1																																									1024	14	1001	0
 yshari_enable	398	yshari	skills		5	0		0	31	12			1															7	2																									1024	5	0	0
 passive_wrath_synergy	399	replace w/ syn	items	to Searing Glow Dazzle Duration	8	0		0	255	12			1		153	4	1	ModitemSearingSyn	ModitemSearingSyn									256	67																									1024	8	0	0
 not_used_400	400		unused							5			1																																									1024	0	0	0
@@ -444,7 +444,7 @@ item_manawhenstruck	440		items	Mana when Struck by an Enemy	8	0		0	255	7			1	1	1
 passive_aura_addmax	441		items	to Maximum Necromancer Minions	6	5		-5	58	12			1		84	1	1	ModitemExtraPets	ModitemExtraPets									50	35																		11	1	1	ModitemExtraAllPets	ModitemExtraAllPets			1024	6	5	0
 str_bonus_blue	442		items	Current Strength Damage Bonus:	10	0		0	1023	6			1		135	2	2	ModitemStrBBB	ModitemStrBBB									4	1								2	8	strength	damagepercent														1024	10	0	0
 item_upgraded	443		cube	\green;Already upgraded!	8	0		0	255	12			1		249	3	0	ModitemUpgraded	ModitemUpgraded									4	1																									1024	8	0	0
-skill_minion_hp_percent	444		items	Bonus to Summoned Minion Life	9	50		-50	461	12			1		80	4	1	ModitemHPMinBonus	ModitemHPMinPenality									55	41																									1024	9	50	0
+skill_minion_hp_percent	444		items	Bonus to Summoned Minion Life	9	50		-50	461	12			1		83	4	1	ModitemHPMinBonus	ModitemHPMinPenality									55	41																									1024	9	50	0
 skill_ancientspirits_synergy	445		items	to Maximum Barbarian Minions	6	0		0	63	12			1		73	1	1	ModitemMoreBarbs	ModitemMoreBarbs									50	35																		11	1	1	ModitemExtraAllPets	ModitemExtraAllPets			1024	6	0	0
 skill_shamanspath_synergy	446	replace w/ syn	items	Damage to Protector Spirit Bloodlust	8	0		0	255	12			1		80	4	1	ModitemSPSyn	ModitemSPSyn									52	58																									1024	8	0	0
 not_used_447	447		unused							5			1																																									1024	0	0	0
@@ -470,9 +470,9 @@ trader_chest	466		cube		7	0		0	127	8			1		10	3	2	ModitemGemSpace	ModitemGemSpace
 skill_elixirs_synergy	467	replace w/ syn	skills	Damage when using an Apple	10	0		0	1023	12			1		54	4	1	ModitemElix	ModitemElix									17	3																									1024	10	0	0
 skill_light_mastery	468		items	Damage to Vessel of Retribution	8	0		0	255	12			1		142	4	1	ModitemVDmgSyn	ModitemVDmgSyn																																			1024	8	0	0
 skill_shadow_mastery	469		items	Extra Targets to Paladin Vessels	8	0		0	255	12			1		143	1	1	ModitemVTgtSyn	ModitemVTgtSyn																																			1024	8	0	0
-skill_minion_dmg_percent	470		items	Bonus to Summoned Minion Damage	9	50		-50	461	12			1		80	4	1	ModitemDmgMinBonus	ModitemDmgMinBonus									55	41																									1024	9	50	0
-shamanic_dmg	471		items	Bonus to Summoned Minion Damage	9	50		-50	461	12			1		80	4	1	ModitemDmgMinBonus	ModitemDmgMinBonus									55	41																									1024	9	50	0
-not_used_472	472		unused							5			1																																									1024	0	0	0
+skill_minion_dmg_percent	470		items	Bonus to Summoned Minion Damage	9	50		-50	461	12			1		83	4	1	ModitemDmgMinBonus	ModitemDmgMinBonus									55	41																									1024	9	50	0
+shamanic_dmg	471	Shamanic Trance dmg bonus	items		9	50		-50	461	12			1		80	4	1	ModitemDmgMinBonus	ModitemDmgMinBonus									55	41																									1024	9	50	0
+shamanic_life	472	Barb summon dummy	items		9	50		-50	461	12			1		80	4	1	ModitemDmgMinBonus	ModitemDmgMinBonus									55	41																									1024	9	50	0
 learn_ennead	473		items + skills	\green;Unlocks your Ennead Skill	8	0		0	255	12			1		239	3	0	ModitemLernEnnead	ModitemLernEnnead									6	2																									1024	8	0	0
 learn_blackroad	474		items + skills	\green;Unlocks your Black Road Skill	8	0		0	255	12			1		239	3	0	ModitemLearnBlackroad	ModitemLearnBlackroad									6	2																									1024	8	0	0
 item_desc_druidmorph	475	replace w/ desc	items	\red;Druid Morph\blue;	1	0		0	1	12			1		240	3	0	ModitemDruidString	ModitemDruidString																																			1024	1	0	0
@@ -487,7 +487,7 @@ item_rune_runemaster	483		items		10	0		0	1023	6			1																								4	5	i
 not_used_484	484		unused							5			1																																									1024	0	0	0
 enr_factor	485		items	Energy Factor to Spell Damage	10	200		-200	823	12			1		200	1	1	ModitemEnrFactor	ModitemEnrFactor									2	1																									1024	10	200	0
 not_used_486	486		unused							5			1																																									1024	0	0	0
-minion_resist_all	487		items	Bonus to Summoned Minion Resistances	9	25		-25	486	12			1		80	4	1	ModitemResMinBonus	ModitemResMinBonus									55	41																									1024	9	25	0
+minion_resist_all	487		items	Bonus to Summoned Minion Resistances	9	25		-25	486	12			1		82	4	1	ModitemResMinBonus	ModitemResMinBonus									55	41																									1024	9	25	0
 enr_factor_percent	488		items	Bonus to Energy Factor	9	50		-50	461	11			1		162	4	1	ModitemEFPct	ModitemEFPct									506	145								11			enr_factor														1024	9	50	0
 item_targettakesdamage	489		items	Target Takes Additional Damage of	10	0		0	1023	16			1	1	18	3	2	ModitemDoomed	ModitemDoomed									56	64														domeleedamage	6	domissileattack	6								1024	10	0	0
 not_used_490	490		unused							5			1																																									1024	0	0	0
@@ -500,7 +500,7 @@ tree_synergy	496		items	"\orange;Such Voracity, Balance for Destruction\blue;"	9
 pact_checker	497	replace w/ syn	skills							12			1																																									1024	0	0	0
 item_cots_when_pact	498	replace w/ syn	skills	Bonus to Fire Elemental Damage if Summoned during Pact of Blood	9	0		0	511	12			1		19	2	1	ModitemCotsWhenPact	ModitemCotsWhenPact									444	203																									1024	9	0	0
 item_energy_perlevel	499		items	to Energy	10	0		0	1023	6			1		65	6	1	ModStr1d	ModStr1d	increaseswithplaylevelX								53	64								2	5	level	energy														1024	10	0	0
-item_minion_attack	500		items	Bonus to Summoned Minion Attack Rating	8	100		-100	155	12			1		111	4	1	ModitemMinionAttack	ModitemMinionAttack									44	46																									1024	8	100	0
+item_minion_attack	500		items	Bonus to Summoned Minion Attack Rating	8	100		-100	155	12			1		82	4	1	ModitemMinionAttack	ModitemMinionAttack									44	46																									1024	8	100	0
 shrine_counter	501		cube	\white;Quantity:	10	23		-23	1000	12			1		60	3	2	ModItemShrineCount	ModItemShrineCountEmpty																																			1024	10	23	0
 blessed_life_level	502	replace w/ syn	skills							12			1																																									1024	0	0	0
 item_strength_perblessedlife	503		items	to Strength	10	0		0	1023	6			1		71	6	1	ModStr1a	ModStr1a	ModitemStrBL								66	64								2	5	blessed_life_level	strength														1024	10	0	0

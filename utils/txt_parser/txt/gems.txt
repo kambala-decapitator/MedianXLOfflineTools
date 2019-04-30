@@ -62,7 +62,7 @@ Ist Rune	Ist	18	r24	2	enr		10	10	ac/runemaster	32	32	32					enr		10	10	ac/runema
 Gul Rune	Gul	18	r25	2	res-cold		30	30	ac/runemaster	32	32	32					res-cold		20	20	ac/runemaster	32	32	32					res-cold		20	20	ac/runemaster	32	32	32				0
 Vex Rune	Vex	18	r26	2	half-freeze		1	1	ac/runemaster	32	32	32					half-freeze		1	1	ac/runemaster	32	32	32					half-freeze		1	1	ac/runemaster	32	32	32				0
 Ohm Rune	Ohm	18	r27	2	vit%		5	5	ac/runemaster	32	32	32					vit%		5	5	ac/runemaster	32	32	32					vit%		5	5	ac/runemaster	32	32	32				0
-Lo Rune	Lo	18	r28	2	res-ltng		30	30	ac/runemaster	32	32	32					res-ltng		25	25	ac/runemaster	32	32	32					res-ltng		25	25	ac/runemaster	32	32	32				0
+Lo Rune	Lo	18	r28	2	res-ltng		30	30	ac/runemaster	32	32	32					res-ltng		20	20	ac/runemaster	32	32	32					res-ltng		20	20	ac/runemaster	32	32	32				0
 Sur Rune	Sur	18	r29	2	regen-mana		15	15	ac/runemaster	32	32	32					regen-mana		5	5	ac/runemaster	32	32	32					regen-mana		5	5	ac/runemaster	32	32	32				0
 Ber Rune	Ber	18	r30	2	uninterrupt		10	10	ac/runemaster	32	32	32					uninterrupt		5	5	ac/runemaster	32	32	32					uninterrupt		5	5	ac/runemaster	32	32	32				0
 Jah Rune	Jah	18	r31	2	dmg%		15	15	ac/runemaster	32	32	32					ac%		15	15	ac/runemaster	32	32	32					ac%		15	15	ac/runemaster	32	32	32				0
@@ -79,7 +79,7 @@ Kra Rune	Kra	18	r41	2	res-all-minion		5	5	ac/runemaster	32	32	32					res-all-min
 Vith Rune	Vith	18	r42	2	pot-rate		5	5	ac/runemaster	32	32	32					pot-rate		5	5	ac/runemaster	32	32	32					pot-rate		5	5	ac/runemaster	32	32	32				0
 No Rune	No	18	r43	2	block3		15	15	ac/runemaster	32	32	32					block3		15	15	ac/runemaster	32	32	32					block3		15	15	ac/runemaster	32	32	32				0
 Yul Rune	Yul	18	r44	2	dmg-minion		10	10	ac/runemaster	32	32	32					dmg-minion		10	10	ac/runemaster	32	32	32					dmg-minion		10	10	ac/runemaster	32	32	32				0
-Thai Rune	Thai	18	r45	2	res-all		15	15	ac/runemaster	32	32	32					res-all		15	15	ac/runemaster	32	32	32					res-all		15	15	ac/runemaster	32	32	32				0
+Thai Rune	Thai	18	r45	2	res-all		10	10	ac/runemaster	32	32	32					res-all		10	10	ac/runemaster	32	32	32					res-all		10	10	ac/runemaster	32	32	32				0
 Rha Rune	Rha	18	r46	2	ac		200	200	ac/runemaster	32	32	32					ac		200	200	ac/runemaster	32	32	32					ac		200	200	ac/runemaster	32	32	32				0
 Xar Rune	Xar	18	r47	2	hp%-mp%		2	2	ac/runemaster	32	32	32					hp%-mp%		2	2	ac/runemaster	32	32	32					hp%-mp%		2	2	ac/runemaster	32	32	32				0
 Nih Rune	Nih	18	r48	2	skill-dur		10	10	ac/runemaster	32	32	32					skill-dur		10	10	ac/runemaster	32	32	32					skill-dur		10	10	ac/runemaster	32	32	32				0
@@ -122,4 +122,4 @@ Magic Rune	Ma	19	r59	3	dmg-mag		50	100	ac/runemaster	32	32	32	eq-grw		7	7	dmg-ma
 Pois Rune	Po	12	r60	3	dmg-pois	25	2048	2560	ac/runemaster	32	32	32	eq-grw		7	7	dmg-pois	25	512	1025	ac/runemaster	32	32	32					dmg-pois	25	512	1025	ac/runemaster	32	32	32	eq-gr		7	7
 Ltng Rune	Li	14	r61	3	dmg-ltng		50	100	ac/runemaster	32	32	32	eq-grw		7	7	dmg-ltng		13	25	ac/runemaster	32	32	32					dmg-ltng		13	25	ac/runemaster	32	32	32	eq-gr		7	7
 Cold Rune	Co	6	r62	3	dmg-cold		50	100	ac/runemaster	32	32	32	eq-grw		7	7	dmg-cold		13	25	ac/runemaster	32	32	32					dmg-cold		13	25	ac/runemaster	32	32	32	eq-gr		7	7
-Ultra Rune	Xis	3	r98	3	dmg%		30	30	ac/runemaster	32	32	32	item-nounsock		1	1	ac%		30	30	ac/runemaster	32	32	32	item-nounsock		1	1	ac%		30	30	ac/runemaster	32	32	32	item-nounsock		1	1
+Ultra Rune	Xis	3	r98	3	dmg%		25	25	ac/runemaster	32	32	32	item-nounsock		1	1	ac%		25	25	ac/runemaster	32	32	32	item-nounsock		1	1	ac%		25	25	ac/runemaster	32	32	32	item-nounsock		1	1

@@ -1,384 +1,390 @@
-code	* count	* where	* Original Order Experiment	set1	val1	func1	stat1	set2	val2	func2	stat2	set3	val3	func3	stat3	set4	val4	func4	stat4	set5	val5	func5	stat5	set6	val6	func6	stat6	set7	val7	func7	stat7	*desc	*param	*min	*max	*notes	*eol
-Expansion	999	all	121																																		0
-att%	358	all	96			1	item_tohit_percent																													none	0
-extra-pm	275	all	206			1	passive_pm_mastery																									Laz / Interacts with skills.txt		min	max	damage bonus to physical and magic skills	0
-shrinecount	680	cube	429			1	shrine_counter																														0
-sock	22	cube	134			14	item_numsockets																													none	0
-upgraded	16	cube	252			1	item_upgraded																									Laz / Interacts with cubemain.txt		1	1	none	0
-chest_gamble	8	cube	405			1	trader_chest																									Laz / MC counter		min	max	none	0
-wtf	7	cube	286			1	brc_complete																									Laz / Interacts with skills.txt		min	max	none	0
-xsignet03	4	cube	355			1	x_signet03																									Laz / MC counter		min	max	none	0
-xsignet01	3	cube	353			1	x_signet01																									Laz / MC counter		min	max	none	0
-xsignet02	3	cube	354			1	x_signet02																									Laz / MC counter		min	max	none	0
-xsignet04	3	cube	356			1	x_signet04																									Laz / MC counter		min	max	none	0
-xsignet05	3	cube	357			1	x_signet05																									Laz / MC counter		min	max	none	0
-xsignet06	3	cube	358			1	x_signet06																									Laz / MC counter		min	max	none	0
-xsignet07	3	cube	359			1	x_signet07																									Laz / MC counter		min	max	none	0
-xsignet08	3	cube	360			1	x_signet08																									Laz / MC counter		min	max	none	0
-xsignet09	3	cube	361			1	x_signet09																									Laz / MC counter		min	max	none	0
-xsignet12	3	cube	364			1	x_signet12																									Laz / MC counter		min	max	none	0
-xsignet13	3	cube	365			1	x_signet13																									Laz / MC counter		min	max	none	0
-xsignet14	3	cube	366			1	x_signet14																									Laz / MC counter		min	max	none	0
-xsignet15	3	cube	367			1	x_signet15																									Laz / MC counter		min	max	none	0
-xsignet16	3	cube	368			1	x_signet16																									Laz / MC counter		min	max	none	0
-xsignet25	3	cube	377			1	x_signet25																									Laz / MC counter		min	max	none	0
-xsignet26	3	cube	378			1	x_signet26																									Laz / MC counter		min	max	none	0
-xsignet27	3	cube	379			1	x_signet27																									Laz / MC counter		min	max	none	0
-xsignet30	3	cube	380			1	x_signet30																									Laz / MC counter		min	max	none	0
-xsignet46	3	cube	390			1	x_signet46																									Laz / MC counter		min	max	none	0
-xsignet47	3	cube	391			1	x_signet47																									Laz / MC counter		min	max	none	0
-xsignet48	3	cube	392			1	x_signet48																									Laz / MC counter		min	max	none	0
-xsignet50	3	cube	393			1	x_signet50																									Laz / MC counter		min	max	none	0
-xsignet51	3	cube	394			1	x_signet51																									Laz / MC counter		min	max	none	0
-xsignet52	3	cube	395			1	x_signet52																									Laz / MC counter		min	max	none	0
-xsignet53	3	cube	396			1	x_signet53																									Laz / MC counter		min	max	none	0
-xsignet10	2	cube	362			1	x_signet10																									Laz / MC counter		min	max	none	0
-xsignet11	2	cube	363			1	x_signet11																									Laz / MC counter		min	max	none	0
-xsignet17	2	cube	369			1	x_signet17																									Laz / MC counter		min	max	none	0
-xsignet18	2	cube	370			1	x_signet18																									Laz / MC counter		min	max	none	0
-xsignet19	2	cube	371			1	x_signet19																									Laz / MC counter		min	max	none	0
-xsignet20	2	cube	372			1	x_signet20																									Laz / MC counter		min	max	none	0
-xsignet21	2	cube	373			1	x_signet21																									Laz / MC counter		min	max	none	0
-xsignet22	2	cube	374			1	x_signet22																									Laz / MC counter		min	max	none	0
-xsignet23	2	cube	375			1	x_signet23																									Laz / MC counter		min	max	none	0
-xsignet24	2	cube	376			1	x_signet24																									Laz / MC counter		min	max	none	0
-xsignet31	2	cube	381			1	x_signet31																									Laz / MC counter		min	max	none	0
-xsignet32	2	cube	382			1	x_signet32																									Laz / MC counter		min	max	none	0
-xsignet33	2	cube	383			1	x_signet33																									Laz / MC counter		min	max	none	0
-xsignet35	2	cube	384			1	x_signet35																									Laz / MC counter		min	max	none	0
-xsignet36	2	cube	385			1	x_signet36																									Laz / MC counter		min	max	none	0
-xsignet37	2	cube	386			1	x_signet37																									Laz / MC counter		min	max	none	0
-xsignet38	2	cube	387			1	x_signet38																									Laz / MC counter		min	max	none	0
-xsignet39	2	cube	388			1	x_signet39																									Laz / MC counter		min	max	none	0
-xsignet40	2	cube	389			1	x_signet40																									Laz / MC counter		min	max	none	0
-xsignet60	2	cube	398			1	x_signet60																									Laz / MC counter		min	max	none	0
-xsignet61	2	cube	399			1	x_signet61																									Laz / MC counter		min	max	none	0
-xsignet62	2	cube	400			1	x_signet62																									Laz / MC counter		min	max	none	0
-has-edyrem	2	cube	346			1	item_has_edyrem																									Laz / Interacts with cubemain.txt		min	max	none	0
-ac/runemaster	189	gems / runes	268			17	item_rune_runemaster																									Laz / Hidden rune bonus	(32nds)			none	0
-hp/paragon	180	gems / runes	267			17	item_gem_paragon																									Laz / Hidden gem bonus	(32nds)			none	0
-eq-gr	12	gems / runes	451			1	eq_gr																													For each equipped Great Rune in Shield	0
-hit-skill	1717	mon / items	128			11	item_skillonhit																									Proc Skill on Hit	Skill #	% Chance	Level	none	0
-swing3	719	mon / items	57			8	item_fasterattackrate																													none	0
-att-skill	681	mon / items	127			11	item_skillonattack																									Proc Skill on Swing	Skill #	% Chance	Level	none	0
-red-dmg%	670	mon / items	4			1	damageresist																													none	0
-cast3	544	mon / items	87			8	item_fastercastrate																													none	0
-state	521	mon / items	205			24	state																										state	1	1		0
-kill-skill	485	mon / items	198			11	item_skillonkill																									Proc Skill on killing something	Skill #	% Chance	Level		0
-crush	483	mon / items	108			1	item_crushingblow																													none	0
-death-skill	478	mon / items	199			11	item_skillondeath																									Proc Skill on getting killed	Skill #	% Chance	Level		0
-reanimate	413	mon / items	117			24	item_reanimate																													none	0
-extra-fire	390	mon / items	184			1	passive_fire_mastery																														0
-pierce-fire	358	mon / items	172			1	passive_fire_pierce																									Negates % of Enemy Cold Resistance		min	max	none	0
-pierce-pois	336	mon / items	175			1	passive_pois_pierce																									Negates % of Enemy Poison Resistance		min	max	none	0
-extra-pois	289	mon / items	187			1	passive_pois_mastery																														0
-pierce-cold	263	mon / items	174			1	passive_cold_pierce																									Negates % of Enemy Lightning Resistance		min	max	none	0
-aura	254	mon / items	126			22	item_aura																													none	0
-pierce-ltng	245	mon / items	173			1	passive_ltng_pierce																									Negates % of Enemy Fire Resistance		min	max	none	0
-slow	244	mon / items	114			1	item_slow																													none	0
-heal-kill	239	mon / items	193			1	item_healafterkill																									life gained after each kill					0
-fade	219	mon / items	201			17	fade																									only use on monprop	fade type				0
-reanimate-rand	209	mon / items	306			12	item_reanimate																													none	0
-dmg-stun	131	mon / items	220			1	stunlength																									Laz / Adds stun length		min Frames	max Frames	only on direct melee hits?	0
-damage-skill	127	mon / items	336			11	item_skillondamaged																									Laz / New procs	Skill #	% Chance	Level		0
-res-pois-len	101	mon / items	88			1	item_poisonlengthresist																													none	0
-heal-melee	98	mon / items	327			1	skill_healonstrikingmelee																									Laz / Life on striking		min	max	none	0
-pierce-all	96	mon / items	287			1	passive_fire_pierce			3	passive_ltng_pierce			3	passive_cold_pierce			3	passive_pois_pierce													Laz / Combination affix		min	max	none	0
-avoidance	87	mon / items	253			1	passive_dodge			3	passive_avoid			3	passive_evade																	Laz / Combination affix		min	max	none	0
-ignore-ac	68	mon / items	92			1	item_ignoretargetac																													none	0
-poison-dur	58	mon / items	250			1	skill_poison_dur																									Laz / Interacts with skills.txt		min	max	adds with synergies	0
-howl-thorns	55	mon / items	209			1	item_howlthorns																									Laz / Howls melee attacker		min	max	"in 100ths, not in 128ths"	0
-move3	52	mon / items	78			8	item_fastermovevelocity																													none	0
-howl	48	mon / items	90			1	item_howl																													none	0
-abs-fire%	47	mon / items	43			1	item_absorbfire_percent																													none	0
-anykill-skill	43	mon / items	425			11	item_skillonanykill																									Proc Skill on killing something	Skill #	% Chance	Level		0
-ac-miss	42	mon / items	1			1	armorclass_vs_missile																													none	0
-pierce-fcl	41	mon / items	298			1	passive_fire_pierce			3	passive_ltng_pierce			3	passive_cold_pierce																	Laz / Combination affix		min	max	none	0
-abs-cold%	29	mon / items	49			1	item_absorbcold_percent																													none	0
-abs-fcl%	23	mon / items	284			1	item_absorbfire_percent			3	item_absorblight_percent			3	item_absorbcold_percent																	Laz / Combination affix		min	max	none	0
-abs-ltng%	22	mon / items	45			1	item_absorblight_percent																													none	0
-dmg-elem	22	mon / items	188			15	firemindam			16	firemaxdam			15	lightmindam			16	lightmaxdam			15	coldmindam			16	coldmaxdam			17	coldlength						0
-abs-fire	16	mon / items	44			1	item_absorbfire																													none	0
-abs-ltng	14	mon / items	46			1	item_absorblight																													none	0
-abs-cold	13	mon / items	50			1	item_absorbcold																													none	0
-knock	9	mon / items	60			1	item_knockback																													none	0
-stupidity	9	mon / items	91			1	item_stupidity																													none	0
-freeze	8	mon / items	106			1	item_freeze																										chance in 128	length in frames		none	0
-abs-mag	5	mon / items	48			1	item_absorbmagic																													none	0
-abs-mag%	4	mon / items	47			1	item_absorbmagic_percent																													none	0
-mon-buff	1233	monster	413			1	item_fasterattackrate			3	item_cannotbefrozen			3	passive_fire_mastery			3	passive_ltng_mastery			3	passive_cold_mastery			3	passive_pois_mastery			3	passive_pm_mastery					none	0
-ele-div	738	monster	447			24	ele_divisor																														0
-dmg-div	170	monster	435			1	damage_divisor																														0
-mon-avall	159	monster	418			1	passive_dodge			3	passive_avoid			3	passive_evade			3	item_poisonlengthresist													Laz / Combination affix		min	max	none	0
-openwounds	18	monster	107			1	item_openwounds																													none	0
-abs-fclp%	6	monster	446			15	item_absorbfire_percent			15	item_absorblight_percent			15	item_absorbcold_percent			16	item_poisonlengthresist													Laz / Combination affix		min	max	none	0
-howl-and-thorns	6	monster	334			1	item_howl			3	item_howlthorns																					Laz / Combination affix		min	max	none	0
-soulstealer-avall	5	monster	437			15	item_healafterkill			16	passive_dodge			16	passive_avoid			16	passive_evade																		0
-baal-buff	4	monster	438			15	item_fasterattackrate			16	item_slow			16	item_fastermovevelocity																						0
-swingmove3	3	monster	312			1	item_fasterattackrate																									Laz / Combination affix		min	max	none	0
-mon-buffPLR	1	monster	445			1	item_fasterattackrate			3	item_poisonlengthresist			3	passive_fire_mastery			3	passive_ltng_mastery			3	passive_cold_mastery			3	passive_pois_mastery			3	passive_pm_mastery					none	0
-slow-thorns	56	items	208			1	item_slowthorns																									Laz / Slows melee attacker		min	max	none	0
-blessings-counter	1126	items	412			1	blessings_counter																									Laz / MC counter		min	max	none	0
-dmg%	1104	items	29			7																														none	0
-ac%	1055	items	5			2	item_armor_percent																													none	0
-desc-honorific	729	items	328			1	item_is_honorific																									Laz / String for special class		1	1	desc string for special item class	0
-dmg-max	696	items	28			6																														none	0
-levelreq	549	items	202			1	item_levelreq																														0
-ease	519	items	75			1	item_req_percent																													none	0
-str	495	items	7			1	strength																													none	0
-dmg-norm	410	items	141			15	mindamage			16	maxdamage																					Normal Damage Modifier		Min	Max	none	0
-dex	402	items	8			1	dexterity																													none	0
-allskills	391	items	104			1	item_allskills																													none	0
-str%	355	items	215			1	item_strength_percent																									Laz / Percentage strength		min	max	none	0
-item-nounsock	350	items	420			1	item_nounsock																									Laz / MC counter		min	max	none	0
-enr	326	items	10			1	energy																													none	0
-res-all	323	items	41			1	fireresist			3	lightresist			3	coldresist			3	poisonresist																	none	0
-hp-minion	319	items	254			1	skill_minion_hp_percent																									Laz / Interacts with skills.txt		min	max	none	0
-dex%	307	items	216			1	item_dexterity_percent																									Laz / Percentage dexterity		min	max	none	0
-dmg-minion	305	items	255			1	skill_minion_dmg_percent																									Laz / Interacts with skills.txt		min	max	none	0
-dmg-min	301	items	27			5																														none	0
-enr-factor	297	items	271			1	enr_factor																									Laz / Interacts with skills.txt		min	max	none	0
-regen	295	items	53			1	hpregen																													none	0
-vit	287	items	9			1	vitality																													none	0
-ac	283	items	0			1	armorclass																													none	0
-extra-cold	283	items	186			1	passive_cold_mastery																														0
-extra-ltng	282	items	185			1	passive_ltng_mastery																														0
-ac-global	259	items	222			1	skill_armor_percent																									Laz / Global AC increase		min	max	overridden by armor_override_percent	0
-dmg-cold	248	items	138			15	coldmindam			16	coldmaxdam			17	coldlength																	Cold Damage	Length (Frames)	Min	Max	none	0
-dmg-fire	247	items	135			15	firemindam			16	firemaxdam																					Fire Damage		Min	Max	none	0
-enr%	243	items	217			1	item_energy_percent																									Laz / Percentage energy		min	max	none	0
-res-fire	235	items	31			1	fireresist																													none	0
-mag%	224	items	59			1	item_magicbonus																													none	0
-dmg-ltng	213	items	136			15	lightmindam			16	lightmaxdam																					Lightning Damage		Min	Max	none	0
-lifesteal	211	items	66			1	lifedrainmindam																													none	0
-gold%	207	items	58			1	item_goldbonus																													none	0
-hp	206	items	13			1	maxhp																													none	0
-vit%	206	items	218			1	item_vitality_percent																									Laz / Percentage vitality		min	max	none	0
-res-all-minion	200	items	272			1	minion_resist_all																									Laz / Interacts with skills.txt		min	max	none	0
-nec	197	items	69		2	21	item_addclassskills																													none	0
-regen-mana	195	items	62			1	manarecoverybonus																													none	0
-balance3	194	items	81			8	item_fastergethitrate																													none	0
-res-cold	194	items	35			1	coldresist																													none	0
-dru	190	items	122		5	21	item_addclassskills																									All Druid Skills				none	0
-all-stats	177	items	191			1	strength			3	energy			3	dexterity			3	vitality																		0
-res-pois	168	items	39			1	poisonresist																													none	0
-extra-all	166	items	207			1	passive_fire_mastery			3	passive_ltng_mastery			3	passive_cold_mastery			3	passive_pois_mastery			3	passive_pm_mastery									Laz / EDM%		min	max	also affects elem affixes?	0
-res-ltng	161	items	33			1	lightresist																													none	0
-sor	161	items	70		1	21	item_addclassskills																													none	0
-light	159	items	73			1	item_lightradius																													none	0
-pal	158	items	68		3	21	item_addclassskills																													none	0
-uninterrupt	158	items	221			1	skill_concentration																									Laz / Chance uninterrupt		min	max	"savebits of 5, very low cap"	0
-deadly	154	items	113			1	item_deadlystrike																													none	0
-mana	149	items	11			1	maxmana																													none	0
-att%-minion	128	items	280			1	item_minion_attack																									Laz / Interacts with skills.txt		min	max	none	0
-bar	125	items	71		4	21	item_addclassskills																													none	0
-ass	121	items	123		6	21	item_addclassskills																									All Assassin Skills				none	0
-ama	119	items	67		0	21	item_addclassskills																													none	0
-res-mag	118	items	37			1	magicresist																													none	0
-block	115	items	16			1	toblock																													none	0
-dmg-global	113	items	223			1	damagepercent																									Laz / Global dmg increase		min	max	none	0
-hp%	112	items	14			1	item_maxhp_percent																													none	0
-skill	112	items	124			22	item_singleskill																													none	0
-addxp	109	items	192			1	item_addexperience																									additional xp gain					0
-mana%	106	items	12			1	item_maxmana_percent																													none	0
-block3	103	items	84			8	item_fasterblockrate																													none	0
-mana-kill	98	items	110			1	item_manaafterkill																													none	0
-red-dmg	96	items	3			1	normal_damage_reduction																													none	0
-dmg-undead	85	items	99			1	item_undeaddamage_percent																													none	0
-manasteal	84	items	65			1	manadrainmindam																													none	0
-dmg-demon	82	items	98			1	item_demondamage_percent																													none	0
-dmg-pois	77	items	139			15	poisonmindam			16	poisonmaxdam			17	poisonlength																	Poison Damage	Length (Frames)	Min	Max	none	0
-heal-hit	75	items	302			1	item_healonstriking																									Laz / Life on striking		min	max	none	0
-all-stats%	70	items	219			1	item_strength_percent			3	item_dexterity_percent			3	item_energy_percent			3	item_vitality_percent													Laz / Percentage all stats		min	max	none	0
-dmg-mag	63	items	137			15	magicmindam			16	magicmaxdam																					Magic Damge		Min	Max	none	0
-res-all-max	63	items	42			1	maxfireresist			3	maxlightresist			3	maxcoldresist			3	maxpoisonresist																	none	0
-charged	60	items	183			19	item_charged_skill																									Charged Skill	skill	charges	level	none	0
-gethit-skill	58	items	129			11	item_skillongethit																									Proc Skill on Get Hit	Skill #	% Chance	Level	none	0
-cold-max	56	items	18			1	coldmaxdam																													none	0
-oskill	1201	items	204			22	item_nonclassskill																										Skill	min level	max level	none	0
-cold-min	55	items	17			1	coldmindam																													none	0
-skill-dur	49	items	235			1	profession_duration_mod																									Laz / Interacts with skills.txt		min	max	don't overdo it!	0
-fire-max	48	items	21			1	firemaxdam																													none	0
-cold-len	47	items	19			1	coldlength																													none	0
-indestruct	47	items	182			20																										Indestructible				none	0
-fire-min	46	items	20			1	firemindam																													none	0
-desc-top	45	items	441			24	desc_top																														0
-thorns%	40	items	212			1	thorns_percent																									Laz / Percentage thorns		min	max	beware physical resistance in hell	0
-innate-impact	39	items	422			11	item_megaimpact																									Laz / New procs	Skill #	% Chance	Level	white text	0
-ltng-max	38	items	23			1	lightmaxdam																													none	0
-att-damage	37	items	276			1	item_targettakesdamage																									Laz / Active thorns damage		min	max	none	0
-innate-grace	37	items	417			11	item_amazinggrace																									Laz / New procs	Skill #	% Chance	Level	white text	0
-ltng-min	37	items	22			1	lightmindam																													none	0
-mana-melee	36	items	330			1	item_manaonstrikingmelee																									Laz / Life on striking		min	max	none	0
-res-fire-max	36	items	32			1	maxfireresist																													none	0
-dmg/lvl	35	items	146			17	item_maxdamage_perlevel																									Max Damage per Player Level	(32nds)			none	0
-enr-factor%	35	items	274			1	enr_factor_percent																									Laz / Knockback thorns		1	1	none	0
-mana-hit	35	items	303			1	item_manaonstriking																									Laz / Mana on striking		min	max	none	0
-getatt-skill	34	items	337			11	item_skillongetmeleed																									Laz / New procs	Skill #	% Chance	Level		0
-res-curse	32	items	213			1	curse_resistance																									Laz / Curse resistance		min	max	cap at 75%?	0
-blood-phys	31	items	227			1	passive_bloodlust_dmgpct																									Laz / Interacts with skills.txt		min	max	none	0
-innate-fury	31	items	423			11	item_thunderfury																									Laz / New procs	Skill #	% Chance	Level	white text	0
-innate-skill	31	items	340			11	item_warpskillonattack																									Laz / New procs	Skill #	% Chance	Level	white text	0
-res-cold-max	29	items	36			1	maxcoldresist																													none	0
-all3	28	items	246			1	item_fastergethitrate			3	item_fasterblockrate			3	item_fastercastrate			3	item_fasterattackrate													Laz / Combination affix		min	max	none	0
-cheap	28	items	194			1	item_reducedprices																									reduces vendor prices		min	max	none	0
-dur%	27	items	52			13	item_maxdurability_percent																													none	0
-syn1	27	items	449			24	special_syn1																											-1000	15k	"Layer = skill ID, max 1 use per Skill"	0
-dmg-ac	25	items	97			1	item_damagetargetac																													none	0
-res-ltng-max	25	items	34			1	maxlightresist																													none	0
-maxminions	24	items	269			1	passive_aura_addmax																									Laz / Interacts with skills.txt		min	max	none	0
-nofreeze	24	items	115			1	item_cannotbefrozen																													none	0
-desc-bottom	23	items	442			24	desc_bottom																														0
-motw-phys	23	items	230			1	passive_motw_dmgpct																									Laz / Interacts with skills.txt		min	max	none	0
-skillcap	23	items	265			1	skill_more																									Laz / Interacts with skills.txt		min	max	none	0
-str-factor	23	items	407			1	str_factor																									Laz / Interacts with skills.txt		min	max	none	0
-motw-dur	21	items	232			1	passive_motw_duration																									Laz / Interacts with skills.txt		1	1	none	0
-motw-elem	21	items	231			1	passive_motw_elempct																									Laz / Interacts with skills.txt		min	max	none	0
-reduce-ac	21	items	93			1	item_fractionaltargetac																													none	0
-demon-heal	19	items	111			1	item_healafterdemonkill																													none	0
-swingcast3	19	items	247			1	item_fastercastrate			3	item_fasterattackrate																					Laz / Combination affix		min	max	none	0
-extra-totems	18	items	414			1	new_totem_syn																									Laz / Interacts with skills.txt		min Frames	max Frames	"savebits of 5, very low cap"	0
-hp%-mp%	18	items	226			1	item_maxhp_percent			3	item_maxmana_percent																					Laz / Combination affix		min	max	none	0
-red-mag	18	items	6			1	magic_damage_reduction																													none	0
-extra-fire/lvl	17	items	242			17	passive_fire_mastery_perlevel																									Laz / Mastery per level	(32nds)			none	0
-half-freeze	17	items	95			1	item_halffreezeduration																													none	0
-levelup-skill	17	items	200			11	item_skillonlevelup																									Proc Skill on level up	Skill #	% Chance	Level		0
-pierce-fipo	17	items	421			1	passive_fire_pierce			3	passive_pois_pierce																					Laz / Combination affix		min	max	none	0
-regen/lvl	17	items	283			17	item_hpregen_perlevel																									Laz / Life regen per level	(32nds)			none	0
-slow-melee	17	items	424			1	item_slow_offweapon																									Laz / Melee slow		min	max	none	0
-strbonusblue	17	items	341			17	str_bonus_blue																									AC per Player Level	(32nds)			none	0
-res-pois-max	16	items	40			1	maxpoisonresist																													none	0
-stance-radius	16	items	347			1	item_stance_radius																									Laz / Interacts with skills.txt		min	max	none	0
-gethitr-skill	15	items	338			11	item_skillongetmissilehit																									Laz / New procs	Skill #	% Chance	Level		0
-att	14	items	15			1	tohit																													none	0
-learn-blackroad	14	items	258			1	learn_blackroad																									Laz / Interacts with skills.txt		min	max	none	0
-learn-ennead	14	items	257			1	learn_ennead																									Laz / Interacts with skills.txt		min	max	none	0
-needs-lced	14	items	296			1	item_needschallenged																									Laz / Interacts with cubemain.txt		1 or -1	1 or -1	none	0
-pot-rate	14	items	279			1	item_faster_potions																									Laz / Interacts with misc.txt		min	max	none	0
-xsignet59	14	items	397			1	x_signet59																									Laz / MC counter		min	max	none	0
-ac-hth	13	items	2			1	armorclass_vs_hth																													none	0
-dmg-to-mana	13	items	30			1	item_damagetomana																													none	0
-stam	13	items	63			1	maxstamina																													none	0
-heal-thorns	12	items	275			1	item_healwhenstruck																									Laz / Life gained when struck in melee		min	max	none	0
-maxspirits	12	items	270			1	skill_ancientspirits_synergy																									Laz / Interacts with skills.txt		min	max	none	0
-pois-len	12	items	26			1	poisonlength																													none	0
-pierce-fico	11	items	329			1	passive_fire_pierce			3	passive_cold_pierce																					Laz / Combination affix		min	max	none	0
-desc-dbaura	10	items	262			1	item_desc_dbaura																									Laz / String for Shedim		1	1	desc string for demon blood aura	0
-lstance-syn	10	items	339			1	lion_stance_syn																									Laz / Interacts with skills.txt		min	max	none	0
-pois-max	10	items	25			1	poisonmaxdam																													none	0
-pois-min	10	items	24			1	poisonmindam																													none	0
-rip	10	items	195			1	item_restinpeace																									slain monsters' corpses can't be used		1	1	none	0
-wirts	10	items	241			1	strength			3	dexterity																					Laz / Combination affix		min	max	none	0
-ac/lvl	9	items	142			17	item_armor_perlevel																									AC per Player Level	(32nds)			none	0
-ethereal	9	items	203			23																															0
-extra-fcl	9	items	260			1	passive_fire_mastery			3	passive_ltng_mastery			3	passive_cold_mastery																	Laz / EDM%		min	max	also affects elem affixes?	0
-mana-thorns	9	items	304			1	item_manawhenstruck																									Laz / Life gained when struck in melee		min	max	none	0
-shadows-max	9	items	234			1	passive_shadows_addmax																									Laz / Interacts with skills.txt		min	max	none	0
-blood-elem	8	items	228			1	passive_bloodlust_elempct																									Laz / Interacts with skills.txt		min	max	none	0
-extra-fico	8	items	310			1	passive_fire_mastery			3	passive_cold_mastery																					Laz / Combination affix		min	max	none	0
-no-ac	8	items	273			1	armor_override_percent																									Laz / Global AC increase		-100	-100	none	0
-slow-thorns-r	8	items	305			1	skill_slowrangedthorns																									Laz / Slows ranged attacker		min	max	none	0
-ac%/lvl	7	items	143			17	item_armorpercent_perlevel																									AC% per Player Level	(32nds)			none	0
-color	7	items	74	1		1	item_lightcolor																													none	0
-extra-cold/lvl	7	items	244			17	passive_cold_mastery_perlevel																									Laz / Mastery per level	(32nds)			none	0
-fire-thorns	7	items	225			1	item_attackertakesfiredamage																									Laz / Elemental thorns		min	max	none	0
-pagan2	7	items	249			1	skill_paganheart_synergy																									Laz / Interacts with misc.txt		min	max	none	0
-pierce	7	items	118			1	item_pierce																													"PAL(25), NEC(33)"	0
-shamans-syn	7	items	322			1	skill_shamanspath_synergy																									Laz / Interacts with skills.txt		min	max	none	0
-syn2	7	items	450			24	special_syn2																														0
-cd-reduce	6	items	443			24	skill_cooldown_reduce																									Laz / Interacts with skills.txt		min	max	none	0
-cold-thorns	6	items	224			1	item_attackertakescolddamage																									Laz / Elemental thorns	Frames	min Dmg	max Dmg	does it actually use cold length?	0
-desc-lockout	6	items	317			1	passive_state_lockout																									Laz / String for Evanescence		1	1	desc string for Evanescence	0
-extra-ficop	6	items	285			1	passive_fire_mastery			3	passive_cold_mastery			3	passive_pois_mastery																	Laz / EDM%		min	max	also affects elem affixes?	0
-extra-ltng/lvl	6	items	243			17	passive_ltng_mastery_perlevel																									Laz / Mastery per level	(32nds)			none	0
-item-nodisenchant	6	items	419			1	item_nodcht																									Laz / MC counter		min	max	none	0
-pierce-fcp	6	items	319			1	passive_fire_pierce			3	passive_cold_pierce			3	passive_pois_pierce																	Laz / Combination affix		min	max	none	0
-vessel-dmg	6	items	430			1	skill_light_mastery			3	skill_voj_mastery																					Combo affix		min	max	none	0
-castgethit3	5	items	313			1	item_fastergethitrate			3	item_fastercastrate																					Laz / Combination affix		min	max	none	0
-crush/lvl	5	items	154			17	item_crushingblow_perlevel																									+% Chance of Crushing Blow per Player Level	(32nds)			none	0
-dmg-mon%	5	items	197			24	damage_vs_montype																									damage% vs. monster type	mon type	min	max		0
-hexdmg-syn	5	items	332			1	passive_hex_adddmg																									Laz / Interacts with skills.txt		min	max	none	0
-hex-syn	5	items	324			1	hex_dur_syn																									Laz / Interacts with skills.txt		min	max	none	0
-hp/lvl	5	items	144			17	item_hp_perlevel																									HP per Player Level	(32nds)			none	0
-innate-blue	5	items	350			11	item_warp_blue																									Laz / New procs	Skill #	% Chance	Level	white text	0
-moon-syn	5	items	323			1	moonstrike_synergy																									Laz / Interacts with skills.txt		min	max	none	0
-runemaster	5	items	266			1	item_skill_runemaster																									Laz / Itemstatcost.txt juju		min	max	none	0
-stupid-thorns	5	items	211			1	item_stupiditythorns																									Laz / Blinds melee attacker		min	max	none	0
-thorns	5	items	54			1	item_attackertakesdamage																													none	0
-unity	5	items	238			1	strength			3	dexterity			3	vitality																	Laz / Combination affix		min	max	none	0
-balance	4	items	239			1	strength			3	energy			3	vitality																	Laz / Combination affix		min	max	none	0
-dmg-global/lvl	4	items	299			17	item_totaldamage_perlevel																									Laz / Damagepercent per level	(32nds)			none	0
-hpdmg-minion	4	items	348			1	skill_minion_hp_percent			3	skill_minion_dmg_percent																					Laz / Interacts with skills.txt		min	max	none	0
-hp-mana	4	items	214			1	maxhp			3	maxmana																					Laz / No rocket sci here		min	max	"just saves space, k?"	0
-mag-max	4	items	411			1	magicmaxdam																													none	0
-mag-min	4	items	410			1	magicmindam																													none	0
-rep-dur	4	items	156			17	item_replenish_durability																									regenerates durability	speed (see note)			regenerates 1 durability point per 100/lvl seconds	0
-res-firepoison	4	items	315			1	fireresist			3	poisonresist																					Laz / Combination affix		min	max	none	0
-str-enr	4	items	349			1	strength			3	energy																					Laz / Combination affix		min	max	none	0
-wrath-synergy	4	items	233			1	passive_wrath_synergy																									Laz / Interacts with skills.txt		min	max	none	0
-xsignet63	4	items	401			1	x_signet63																									Laz / MC counter		min	max	none	0
-xsignet64	4	items	402			1	x_signet64																									Laz / MC counter		min	max	none	0
-xsignet65	4	items	403			1	x_signet65																									Laz / MC counter		min	max	none	0
-assassin-blades	3	items	436			1	skill_scorpion_blades																									Laz / Interacts with skills.txt		min	max	none	0
-desc-druid	3	items	259			1	item_desc_druidmorph																									Laz / String for Dead Ringer		1	1	desc string for druid morph on dead ringer	0
-desc-lifespells	3	items	409			1	item_desc_lifecostspells																									Laz / String for Judas		1	1	none	0
-enr/lvl	3	items	406			17	item_energy_perlevel																									Energy per Player Level	(32nds)			none	0
-freeze-thorns	3	items	210			1	item_freezethorns																									Laz / Freezes melee attacker		min	max	none	0
-gehenna	3	items	307			1	passive_cold_pierce			3	passive_pois_pierce			3	passive_cold_mastery			3	passive_pois_mastery													Laz / Combination affix		min	max	none	0
-mm-syn	3	items	251			1	passive_missiles_missiles																									Laz / Interacts with skills.txt		min	max	none	0
-acidtrance-syn	2	items	316			1	passive_acidtrance_synergy																									Laz / Interacts with skills.txt		min	max	none	0
-balance%	2	items	240			1	item_strength_percent			3	item_energy_percent			3	item_vitality_percent																	Laz / Combination affix		min	max	none	0
-class-restrict	2	items	451			1	item_class_spec																														0
-courage	2	items	236			1	strength			3	dexterity			3	vitality			3	item_strength_percent			3	item_dexterity_percent			3	item_vitality_percent					Laz / Combination affix		min	max	none	0
-desc-difficulty	2	items	263			1	item_desc_hardaura																									Laz / String for Jolly Roger		1 to 15	1 to 15	desc string for hard aura	0
-dex-enr	2	items	301			1	energy			3	dexterity																					Laz / Combination affix		min	max	none	0
-hpm-str%-enr%	2	items	308			1	skill_minion_hp_percent			3	item_strength_percent			3	item_energy_percent																	Laz / Combination affix		min	max	none	0
-light-thorns	2	items	105			1	item_attackertakeslightdamage																													none	0
-mana/lvl	2	items	145			17	item_mana_perlevel																									Mana per Player Level	(32nds)			none	0
-res-courage	2	items	237			1	fireresist			3	lightresist			3	coldresist																	Laz / Combination affix		min	max	none	0
-res-fcl	2	items	335			1	fireresist			3	lightresist			3	coldresist																	Laz / Combination affix		min	max	none	0
-shadows-attsyn	2	items	326			1	item_shadows_corpsesynergy																									Laz / Interacts with skills.txt		min	max	none	0
-si-1	2	items	440			1	si_1																											-1	3	x2	0
-str/bl	2	items	281			17	item_strength_perblessedlife																									Laz / Strength per point in BL	(32nds)			none	0
-str-heal	2	items	261			1	strength			3	item_healafterkill																					Laz / EDM%		min	max	also affects elem affixes?	0
-strvit	2	items	325			1	strength			3	vitality																					Laz / Combination affix		min	max	none	0
-all-thorns	1	items	314			1	item_attackertakesfiredamage			3	item_attackertakescolddamage			3	item_attackertakeslightdamage																	Laz / Combination affix		min	max	does it actually use cold length?	0
-arc-synergy	1	items	331			1	skill_arcanestrike_synergy																									Laz / Interacts with skills.txt		min	max	none	0
-crush-vit%	1	items	415			1	item_crushingblow			3	item_vitality_percent																					Laz / Interacts with skills.txt		min	max	none	0
-desc_fatasstriton	1	items	427			1	desc-fatasstriton																											1	1		0
-desc_superbeasty	1	items	426			1	desc-superbeasty																											1	1		0
-desc-breaker	1	items	342			1	item_desc_breaker																									Laz / String for Judas		1	1	none	0
-desc-instructions	1	items	264			1	item_desc_instructions																									Laz / String for Jolly Roger		1	1	desc string for jolly roger	0
-desc-suchbalance	1	items	433			1	tree_synergy																														0
-dex/bl	1	items	282			17	item_dexterity_perblessedlife																									Laz / Vitality per point in BL	(32nds)			none	0
-dmg-elem-max	1	items	190			1	firemaxdam			3	lightmaxdam			3	coldmaxdam			17	coldlength																		0
-extra-cop	1	items	318			1	passive_cold_mastery			3	passive_pois_mastery																					Laz / Combination affix		min	max	also affects elem affixes?	0
-extra-ficom	1	items	434			1	passive_fire_mastery			3	passive_cold_mastery			3	passive_pm_mastery																	Laz / EDM%		min	max	also affects elem affixes?	0
-extra-firepm	1	items	320			1	passive_fire_mastery			3	passive_pm_mastery																					Laz / Combination affix		min	max	none	0
-extra-pierce-fico	1	items	309			1	passive_fire_pierce			3	passive_cold_pierce			3	passive_fire_mastery			3	passive_cold_mastery			3	enr_factor									Laz / Combination affix		min	max	none	0
-extra-pois/lvl	1	items	245			17	passive_pois_mastery_perlevel																									Laz / Mastery per level	(32nds)			none	0
-holyarmor-vel	1	items	229			1	passive_holyarmor_addmove																									Laz / Interacts with skills.txt		min	max	none	0
-hp-edyrem	1	items	444			1	skill_edyrem_hp_percent																									Laz / Interacts with skills.txt		min	max	none	0
-lh-stupidity	1	items	297			1	passive_lionheart_addstupidth																									Laz / Interacts with skills.txt		min	max	none	0
-life-manasteal	1	items	300			1	lifedrainmindam			3	manadrainmindam																					Laz / Combination affix		min	max	none	0
-lohengrin	1	items	321			1	item_fasterattackrate			3	item_undeaddamage_percent			3	fireresist			3	lightresist			3	coldresist			3	strength			3	dexterity	Laz / Combination affix		min	max	none	0
-mag%/lvl	1	items	153			17	item_find_magic_perlevel																									+% Magical per Player Lvl	(32nds)			none	0
-pierce-flp	1	items	288			1	passive_fire_pierce			3	passive_ltng_pierce			3	passive_pois_pierce																	Laz / Combination affix		min	max	none	0
-pierce-lipo	1	items	432			1	passive_ltng_pierce			3	passive_pois_pierce																					Laz / Combination affix		min	max	none	0
-poison-set	1	items	343			1	item_poison_set																									Laz / Interacts with skills.txt		min	max	none	0
-res-all-group	1	items	278			1	minion_resist_all			3	fireresist			3	lightresist			3	coldresist			3	poisonresist									Laz / Combination affix		min	max	none	0
-res-fireltng	1	items	248			1	fireresist			3	lightresist																					Laz / Combination affix		min	max	none	0
-stamdrain	1	items	116			1	item_staminadrainpct																													none	0
-stamsteal	1	items	277			1	stamdrainmindam																									Laz / Stamina leech		min	max	none	0
-statX-2	1	items	448			1	statX_2																											-24	100		0
-str-vit-regen	1	items	311			1	strength			3	vitality			3	hpregen																	Laz / Combination affix		min	max	none	0
-swingbalance3	1	items	416			1	item_fasterattackrate			3	item_fastergethitrate																									none	0
-trololololol	1	items	428			1	item_absorbfire				item_absorblight				item_absorbmagic				item_absorbcold																	none	0
-vessel-mod	1	items	439			1	vessel_mod																											-1	3	x2	0
-vessel-tgt	1	items	431			1	skill_shadow_mastery																														0
-upgrade1		cube				1	cube_upgrade_1																														0
-upgrade2		cube				1	cube_upgrade_2																														0
-upgrade3		cube				1	cube_upgrade_3																														0
-upgrade4		cube				1	cube_upgrade_4																														0
-eq-grw	12	gems / runes	451			1	eq_grw																													For each equipped Great Rune in Weapon	0
-pierce-phys		items	174			1	passive_phys_pierce																									Negates % of Enemy Physical Resistance		min	max	none	0
+code	* count	* where	set1	val1	func1	stat1	set2	val2	func2	stat2	set3	val3	func3	stat3	set4	val4	func4	stat4	set5	val5	func5	stat5	set6	val6	func6	stat6	set7	val7	func7	stat7	*desc	*param	*min	*max	*notes	*eol
+Expansion	999	all																																		0
+att%	358	all			1	item_tohit_percent																													none	0
+extra-pm	275	all			1	passive_pm_mastery																									Laz / Interacts with skills.txt		min	max	damage bonus to physical and magic skills	0
+shrinecount	680	cube			1	shrine_counter																														0
+sock	22	cube			14	item_numsockets																													none	0
+upgraded	16	cube			1	item_upgraded																									Laz / Interacts with cubemain.txt		1	1	none	0
+chest_gamble	8	cube			1	trader_chest																									Laz / MC counter		min	max	none	0
+wtf	7	cube			1	brc_complete																									Laz / Interacts with skills.txt		min	max	none	0
+xsignet03	4	cube			1	x_signet03																									Laz / MC counter		min	max	none	0
+xsignet01	3	cube			1	x_signet01																									Laz / MC counter		min	max	none	0
+xsignet02	3	cube			1	x_signet02																									Laz / MC counter		min	max	none	0
+xsignet04	3	cube			1	x_signet04																									Laz / MC counter		min	max	none	0
+xsignet05	3	cube			1	x_signet05																									Laz / MC counter		min	max	none	0
+xsignet06	3	cube			1	x_signet06																									Laz / MC counter		min	max	none	0
+xsignet07	3	cube			1	x_signet07																									Laz / MC counter		min	max	none	0
+xsignet08	3	cube			1	x_signet08																									Laz / MC counter		min	max	none	0
+xsignet09	3	cube			1	x_signet09																									Laz / MC counter		min	max	none	0
+xsignet12	3	cube			1	x_signet12																									Laz / MC counter		min	max	none	0
+xsignet13	3	cube			1	x_signet13																									Laz / MC counter		min	max	none	0
+xsignet14	3	cube			1	x_signet14																									Laz / MC counter		min	max	none	0
+xsignet15	3	cube			1	x_signet15																									Laz / MC counter		min	max	none	0
+xsignet16	3	cube			1	x_signet16																									Laz / MC counter		min	max	none	0
+xsignet25	3	cube			1	x_signet25																									Laz / MC counter		min	max	none	0
+xsignet26	3	cube			1	x_signet26																									Laz / MC counter		min	max	none	0
+xsignet27	3	cube			1	x_signet27																									Laz / MC counter		min	max	none	0
+xsignet30	3	cube			1	x_signet30																									Laz / MC counter		min	max	none	0
+xsignet46	3	cube			1	x_signet46																									Laz / MC counter		min	max	none	0
+xsignet47	3	cube			1	x_signet47																									Laz / MC counter		min	max	none	0
+xsignet48	3	cube			1	x_signet48																									Laz / MC counter		min	max	none	0
+xsignet50	3	cube			1	x_signet50																									Laz / MC counter		min	max	none	0
+xsignet51	3	cube			1	x_signet51																									Laz / MC counter		min	max	none	0
+xsignet52	3	cube			1	x_signet52																									Laz / MC counter		min	max	none	0
+xsignet53	3	cube			1	x_signet53																									Laz / MC counter		min	max	none	0
+xsignet10	2	cube			1	x_signet10																									Laz / MC counter		min	max	none	0
+xsignet11	2	cube			1	x_signet11																									Laz / MC counter		min	max	none	0
+xsignet17	2	cube			1	x_signet17																									Laz / MC counter		min	max	none	0
+xsignet18	2	cube			1	x_signet18																									Laz / MC counter		min	max	none	0
+xsignet19	2	cube			1	x_signet19																									Laz / MC counter		min	max	none	0
+xsignet20	2	cube			1	x_signet20																									Laz / MC counter		min	max	none	0
+xsignet21	2	cube			1	x_signet21																									Laz / MC counter		min	max	none	0
+xsignet22	2	cube			1	x_signet22																									Laz / MC counter		min	max	none	0
+xsignet23	2	cube			1	x_signet23																									Laz / MC counter		min	max	none	0
+xsignet24	2	cube			1	x_signet24																									Laz / MC counter		min	max	none	0
+xsignet31	2	cube			1	x_signet31																									Laz / MC counter		min	max	none	0
+xsignet32	2	cube			1	x_signet32																									Laz / MC counter		min	max	none	0
+xsignet33	2	cube			1	x_signet33																									Laz / MC counter		min	max	none	0
+xsignet35	2	cube			1	x_signet35																									Laz / MC counter		min	max	none	0
+xsignet36	2	cube			1	x_signet36																									Laz / MC counter		min	max	none	0
+xsignet37	2	cube			1	x_signet37																									Laz / MC counter		min	max	none	0
+xsignet38	2	cube			1	x_signet38																									Laz / MC counter		min	max	none	0
+xsignet39	2	cube			1	x_signet39																									Laz / MC counter		min	max	none	0
+xsignet40	2	cube			1	x_signet40																									Laz / MC counter		min	max	none	0
+xsignet60	2	cube			1	x_signet60																									Laz / MC counter		min	max	none	0
+xsignet61	2	cube			1	x_signet61																									Laz / MC counter		min	max	none	0
+xsignet62	2	cube			1	x_signet62																									Laz / MC counter		min	max	none	0
+has-edyrem	2	cube			1	item_has_edyrem																									Laz / Interacts with cubemain.txt		min	max	none	0
+ac/runemaster	189	gems / runes			17	item_rune_runemaster																									Laz / Hidden rune bonus	(32nds)			none	0
+hp/paragon	180	gems / runes			17	item_gem_paragon																									Laz / Hidden gem bonus	(32nds)			none	0
+eq-gr	12	gems / runes			1	eq_gr																													For each equipped Great Rune in Shield	0
+hit-skill	1717	mon / items			11	item_skillonhit																									Proc Skill on Hit	Skill #	% Chance	Level	none	0
+swing3	719	mon / items			8	item_fasterattackrate																													none	0
+att-skill	681	mon / items			11	item_skillonattack																									Proc Skill on Swing	Skill #	% Chance	Level	none	0
+red-dmg%	670	mon / items			1	damageresist																													none	0
+cast3	544	mon / items			8	item_fastercastrate																													none	0
+state	521	mon / items			24	state																										state	1	1		0
+kill-skill	485	mon / items			11	item_skillonkill																									Proc Skill on killing something	Skill #	% Chance	Level		0
+crush	483	mon / items			1	item_crushingblow																													none	0
+death-skill	478	mon / items			11	item_skillondeath																									Proc Skill on getting killed	Skill #	% Chance	Level		0
+reanimate	413	mon / items			24	item_reanimate																													none	0
+extra-fire	390	mon / items			1	passive_fire_mastery																														0
+pierce-fire	358	mon / items			1	passive_fire_pierce																									Negates % of Enemy Cold Resistance		min	max	none	0
+pierce-pois	336	mon / items			1	passive_pois_pierce																									Negates % of Enemy Poison Resistance		min	max	none	0
+extra-pois	289	mon / items			1	passive_pois_mastery																														0
+pierce-cold	263	mon / items			1	passive_cold_pierce																									Negates % of Enemy Lightning Resistance		min	max	none	0
+aura	254	mon / items			22	item_aura																													none	0
+pierce-ltng	245	mon / items			1	passive_ltng_pierce																									Negates % of Enemy Fire Resistance		min	max	none	0
+slow	244	mon / items			1	item_slow																													none	0
+heal-kill	239	mon / items			1	item_healafterkill																									life gained after each kill					0
+fade	219	mon / items			17	fade																									only use on monprop	fade type				0
+reanimate-rand	209	mon / items			12	item_reanimate																													none	0
+dmg-stun	131	mon / items			1	stunlength																									Laz / Adds stun length		min Frames	max Frames	only on direct melee hits?	0
+damage-skill	127	mon / items			11	item_skillondamaged																									Laz / New procs	Skill #	% Chance	Level		0
+res-pois-len	101	mon / items			1	item_poisonlengthresist																													none	0
+heal-melee	98	mon / items			1	skill_healonstrikingmelee																									Laz / Life on striking		min	max	none	0
+pierce-all	96	mon / items			1	passive_fire_pierce			3	passive_ltng_pierce			3	passive_cold_pierce			3	passive_pois_pierce													Laz / Combination affix		min	max	none	0
+avoidance	87	mon / items			1	passive_dodge			3	passive_avoid			3	passive_evade																	Laz / Combination affix		min	max	none	0
+ignore-ac	68	mon / items			1	item_ignoretargetac																													none	0
+poison-dur	58	mon / items			1	skill_poison_dur																									Laz / Interacts with skills.txt		min	max	adds with synergies	0
+howl-thorns	55	mon / items			1	item_howlthorns																									Laz / Howls melee attacker		min	max	"in 100ths, not in 128ths"	0
+move3	52	mon / items			8	item_fastermovevelocity																													none	0
+howl	48	mon / items			1	item_howl																													none	0
+abs-fire%	47	mon / items			1	item_absorbfire_percent																													none	0
+anykill-skill	43	mon / items			11	item_skillonanykill																									Proc Skill on killing something	Skill #	% Chance	Level		0
+ac-miss	42	mon / items			1	armorclass_vs_missile																													none	0
+pierce-fcl	41	mon / items			1	passive_fire_pierce			3	passive_ltng_pierce			3	passive_cold_pierce																	Laz / Combination affix		min	max	none	0
+abs-cold%	29	mon / items			1	item_absorbcold_percent																													none	0
+abs-fcl%	23	mon / items			1	item_absorbfire_percent			3	item_absorblight_percent			3	item_absorbcold_percent																	Laz / Combination affix		min	max	none	0
+abs-ltng%	22	mon / items			1	item_absorblight_percent																													none	0
+dmg-elem	22	mon / items			15	firemindam			16	firemaxdam			15	lightmindam			16	lightmaxdam			15	coldmindam			16	coldmaxdam			17	coldlength						0
+abs-fire	16	mon / items			1	item_absorbfire																													none	0
+abs-ltng	14	mon / items			1	item_absorblight																													none	0
+abs-cold	13	mon / items			1	item_absorbcold																													none	0
+knock	9	mon / items			1	item_knockback																													none	0
+stupidity	9	mon / items			1	item_stupidity																													none	0
+freeze	8	mon / items			1	item_freeze																										chance in 128	length in frames		none	0
+abs-mag	5	mon / items			1	item_absorbmagic																													none	0
+abs-mag%	4	mon / items			1	item_absorbmagic_percent																													none	0
+mon-buff	1233	monster			1	item_fasterattackrate			3	item_cannotbefrozen			3	passive_fire_mastery			3	passive_ltng_mastery			3	passive_cold_mastery			3	passive_pois_mastery			3	passive_pm_mastery					none	0
+ele-div	738	monster			24	ele_divisor																														0
+dmg-div	170	monster			1	damage_divisor																														0
+mon-avall	159	monster			1	passive_dodge			3	passive_avoid			3	passive_evade			3	item_poisonlengthresist													Laz / Combination affix		min	max	none	0
+openwounds	18	monster			1	item_openwounds																													none	0
+abs-fclp%	6	monster			15	item_absorbfire_percent			15	item_absorblight_percent			15	item_absorbcold_percent			16	item_poisonlengthresist													Laz / Combination affix		min	max	none	0
+howl-and-thorns	6	monster			1	item_howl			3	item_howlthorns																					Laz / Combination affix		min	max	none	0
+soulstealer-avall	5	monster			15	item_healafterplayerkill			16	passive_dodge			16	passive_avoid			16	passive_evade																		0
+baal-buff	4	monster			15	item_fasterattackrate			16	item_slow			16	item_fastermovevelocity																						0
+swingmove3	3	monster			1	item_fasterattackrate																									Laz / Combination affix		min	max	none	0
+mon-buffPLR	1	monster			1	item_fasterattackrate			3	item_poisonlengthresist			3	passive_fire_mastery			3	passive_ltng_mastery			3	passive_cold_mastery			3	passive_pois_mastery			3	passive_pm_mastery					none	0
+slow-thorns	56	items			1	item_slowthorns																									Laz / Slows melee attacker		min	max	none	0
+blessings-counter	1126	items			1	blessings_counter																									Laz / MC counter		min	max	none	0
+dmg%	1104	items			7																														none	0
+ac%	1055	items			2	item_armor_percent																													none	0
+desc-honorific	729	items			1	item_is_honorific																									Laz / String for special class		1	1	desc string for special item class	0
+dmg-max	696	items			6																														none	0
+levelreq	549	items			1	item_levelreq																														0
+ease	519	items			1	item_req_percent																													none	0
+str	495	items			1	strength																													none	0
+dmg-norm	410	items			15	mindamage			16	maxdamage																					Normal Damage Modifier		Min	Max	none	0
+dex	402	items			1	dexterity																													none	0
+allskills	391	items			1	item_allskills																													none	0
+str%	355	items			1	item_strength_percent																									Laz / Percentage strength		min	max	none	0
+item-nounsock	350	items			1	item_nounsock																									Laz / MC counter		min	max	none	0
+enr	326	items			1	energy																													none	0
+res-all	323	items			1	fireresist			3	lightresist			3	coldresist			3	poisonresist																	none	0
+hp-minion	319	items			1	skill_minion_hp_percent																									Laz / Interacts with skills.txt		min	max	none	0
+dex%	307	items			1	item_dexterity_percent																									Laz / Percentage dexterity		min	max	none	0
+dmg-minion	305	items			1	skill_minion_dmg_percent																									Laz / Interacts with skills.txt		min	max	none	0
+dmg-min	301	items			5																														none	0
+enr-factor	297	items			1	enr_factor																									Laz / Interacts with skills.txt		min	max	none	0
+regen	295	items			1	hpregen																													none	0
+vit	287	items			1	vitality																													none	0
+ac	283	items			1	armorclass																													none	0
+extra-cold	283	items			1	passive_cold_mastery																														0
+extra-ltng	282	items			1	passive_ltng_mastery																														0
+ac-global	259	items			1	skill_armor_percent																									Laz / Global AC increase		min	max	overridden by armor_override_percent	0
+dmg-cold	248	items			15	coldmindam			16	coldmaxdam			17	coldlength																	Cold Damage	Length (Frames)	Min	Max	none	0
+dmg-fire	247	items			15	firemindam			16	firemaxdam																					Fire Damage		Min	Max	none	0
+enr%	243	items			1	item_energy_percent																									Laz / Percentage energy		min	max	none	0
+res-fire	235	items			1	fireresist																													none	0
+mag%	224	items			1	item_magicbonus																													none	0
+dmg-ltng	213	items			15	lightmindam			16	lightmaxdam																					Lightning Damage		Min	Max	none	0
+lifesteal	211	items			1	lifedrainmindam																													none	0
+gold%	207	items			1	item_goldbonus																													none	0
+hp	206	items			1	maxhp																													none	0
+vit%	206	items			1	item_vitality_percent																									Laz / Percentage vitality		min	max	none	0
+res-all-minion	200	items			1	minion_resist_all																									Laz / Interacts with skills.txt		min	max	none	0
+nec	197	items		2	21	item_addclassskills																													none	0
+regen-mana	195	items			1	manarecoverybonus																													none	0
+balance3	194	items			8	item_fastergethitrate																													none	0
+res-cold	194	items			1	coldresist																													none	0
+dru	190	items		5	21	item_addclassskills																									All Druid Skills				none	0
+all-stats	177	items			1	strength			3	energy			3	dexterity			3	vitality																		0
+res-pois	168	items			1	poisonresist																													none	0
+extra-all	166	items			1	passive_fire_mastery			3	passive_ltng_mastery			3	passive_cold_mastery			3	passive_pois_mastery			3	passive_pm_mastery									Laz / EDM%		min	max	also affects elem affixes?	0
+res-ltng	161	items			1	lightresist																													none	0
+sor	161	items		1	21	item_addclassskills																													none	0
+light	159	items			1	item_lightradius																													none	0
+pal	158	items		3	21	item_addclassskills																													none	0
+uninterrupt	158	items			1	skill_concentration																									Laz / Chance uninterrupt		min	max	"savebits of 5, very low cap"	0
+deadly	154	items			1	item_deadlystrike																													none	0
+mana	149	items			1	maxmana																													none	0
+att%-minion	128	items			1	item_minion_attack																									Laz / Interacts with skills.txt		min	max	none	0
+bar	125	items		4	21	item_addclassskills																													none	0
+ass	121	items		6	21	item_addclassskills																									All Assassin Skills				none	0
+ama	119	items		0	21	item_addclassskills																													none	0
+res-mag	118	items			1	magicresist																													none	0
+block	115	items			1	toblock																													none	0
+dmg-global	113	items			1	damagepercent																									Laz / Global dmg increase		min	max	none	0
+hp%	112	items			1	item_maxhp_percent																													none	0
+skill	112	items			22	item_singleskill																													none	0
+addxp	109	items			1	item_addexperience																									additional xp gain					0
+mana%	106	items			1	item_maxmana_percent																													none	0
+block3	103	items			8	item_fasterblockrate																													none	0
+mana-kill	98	items			1	item_manaafterkill																													none	0
+red-dmg	96	items			1	normal_damage_reduction																													none	0
+dmg-undead	85	items			1	item_undeaddamage_percent																													none	0
+manasteal	84	items			1	manadrainmindam																													none	0
+dmg-demon	82	items			1	item_demondamage_percent																													none	0
+dmg-pois	77	items			15	poisonmindam			16	poisonmaxdam			17	poisonlength																	Poison Damage	Length (Frames)	Min	Max	none	0
+heal-hit	75	items			1	item_healonstriking																									Laz / Life on striking		min	max	none	0
+all-stats%	70	items			1	item_strength_percent			3	item_dexterity_percent			3	item_energy_percent			3	item_vitality_percent													Laz / Percentage all stats		min	max	none	0
+dmg-mag	63	items			15	magicmindam			16	magicmaxdam																					Magic Damge		Min	Max	none	0
+res-all-max	63	items			1	maxfireresist			3	maxlightresist			3	maxcoldresist			3	maxpoisonresist																	none	0
+charged	60	items			19	item_charged_skill																									Charged Skill	skill	charges	level	none	0
+gethit-skill	58	items			11	item_skillongethit																									Proc Skill on Get Hit	Skill #	% Chance	Level	none	0
+cold-max	56	items			1	coldmaxdam																													none	0
+oskill	1201	items			22	item_nonclassskill																										Skill	min level	max level	none	0
+cold-min	55	items			1	coldmindam																													none	0
+skill-dur	49	items			1	profession_duration_mod																									Laz / Interacts with skills.txt		min	max	don't overdo it!	0
+fire-max	48	items			1	firemaxdam																													none	0
+cold-len	47	items			1	coldlength																													none	0
+indestruct	47	items			20																										Indestructible				none	0
+fire-min	46	items			1	firemindam																													none	0
+desc-top	45	items			24	desc_top																														0
+thorns%	40	items			1	thorns_percent																									Laz / Percentage thorns		min	max	beware physical resistance in hell	0
+innate-impact	39	items			11	item_megaimpact																									Laz / New procs	Skill #	% Chance	Level	white text	0
+ltng-max	38	items			1	lightmaxdam																													none	0
+att-damage	37	items			1	item_targettakesdamage																									Laz / Active thorns damage		min	max	none	0
+innate-grace	37	items			11	item_amazinggrace																									Laz / New procs	Skill #	% Chance	Level	white text	0
+ltng-min	37	items			1	lightmindam																													none	0
+mana-melee	36	items			1	item_manaonstrikingmelee																									Laz / Life on striking		min	max	none	0
+res-fire-max	36	items			1	maxfireresist																													none	0
+dmg/lvl	35	items			17	item_maxdamage_perlevel																									Max Damage per Player Level	(32nds)			none	0
+enr-factor%	35	items			1	enr_factor_percent																									Laz / Knockback thorns		1	1	none	0
+mana-hit	35	items			1	item_manaonstriking																									Laz / Mana on striking		min	max	none	0
+getatt-skill	34	items			11	item_skillongetmeleed																									Laz / New procs	Skill #	% Chance	Level		0
+res-curse	32	items			1	curse_resistance																									Laz / Curse resistance		min	max	cap at 75%?	0
+blood-phys	31	items			1	passive_bloodlust_dmgpct																									Laz / Interacts with skills.txt		min	max	none	0
+innate-fury	31	items			11	item_thunderfury																									Laz / New procs	Skill #	% Chance	Level	white text	0
+innate-skill	31	items			11	item_warpskillonattack																									Laz / New procs	Skill #	% Chance	Level	white text	0
+res-cold-max	29	items			1	maxcoldresist																													none	0
+all3	28	items			1	item_fastergethitrate			3	item_fasterblockrate			3	item_fastercastrate			3	item_fasterattackrate													Laz / Combination affix		min	max	none	0
+cheap	28	items			1	item_reducedprices																									reduces vendor prices		min	max	none	0
+dur%	27	items			13	item_maxdurability_percent																													none	0
+syn1	27	items			24	special_syn1																											-1000	15k	"Layer = skill ID, max 1 use per Skill"	0
+dmg-ac	25	items			1	item_damagetargetac																													none	0
+res-ltng-max	25	items			1	maxlightresist																													none	0
+maxminions	24	items			1	passive_aura_addmax																									Laz / Interacts with skills.txt		min	max	none	0
+nofreeze	24	items			1	item_cannotbefrozen																													none	0
+desc-bottom	23	items			24	desc_bottom																														0
+motw-phys	23	items			1	passive_motw_dmgpct																									Laz / Interacts with skills.txt		min	max	none	0
+skillcap	23	items			1	skill_more																									Laz / Interacts with skills.txt		min	max	none	0
+str-factor	23	items			1	str_factor																									Laz / Interacts with skills.txt		min	max	none	0
+motw-dur	21	items			1	passive_motw_duration																									Laz / Interacts with skills.txt		1	1	none	0
+motw-elem	21	items			1	passive_motw_elempct																									Laz / Interacts with skills.txt		min	max	none	0
+reduce-ac	21	items			1	item_fractionaltargetac																													none	0
+demon-heal	19	items			1	item_healafterdemonkill																													none	0
+swingcast3	19	items			1	item_fastercastrate			3	item_fasterattackrate																					Laz / Combination affix		min	max	none	0
+extra-totems	18	items			1	new_totem_syn																									Laz / Interacts with skills.txt		min Frames	max Frames	"savebits of 5, very low cap"	0
+hp%-mp%	18	items			1	item_maxhp_percent			3	item_maxmana_percent																					Laz / Combination affix		min	max	none	0
+red-mag	18	items			1	magic_damage_reduction																													none	0
+extra-fire/lvl	17	items			17	passive_fire_mastery_perlevel																									Laz / Mastery per level	(32nds)			none	0
+half-freeze	17	items			1	item_halffreezeduration																													none	0
+levelup-skill	17	items			11	item_skillonlevelup																									Proc Skill on level up	Skill #	% Chance	Level		0
+pierce-fipo	17	items			1	passive_fire_pierce			3	passive_pois_pierce																					Laz / Combination affix		min	max	none	0
+regen/lvl	17	items			17	item_hpregen_perlevel																									Laz / Life regen per level	(32nds)			none	0
+slow-melee	17	items			1	item_slow_offweapon																									Laz / Melee slow		min	max	none	0
+strbonusblue	17	items			17	str_bonus_blue																									AC per Player Level	(32nds)			none	0
+res-pois-max	16	items			1	maxpoisonresist																													none	0
+stance-radius	16	items			1	item_stance_radius																									Laz / Interacts with skills.txt		min	max	none	0
+gethitr-skill	15	items			11	item_skillongetmissilehit																									Laz / New procs	Skill #	% Chance	Level		0
+att	14	items			1	tohit																													none	0
+learn-blackroad	14	items			1	learn_blackroad																									Laz / Interacts with skills.txt		min	max	none	0
+learn-ennead	14	items			1	learn_ennead																									Laz / Interacts with skills.txt		min	max	none	0
+needs-lced	14	items			1	item_needschallenged																									Laz / Interacts with cubemain.txt		1 or -1	1 or -1	none	0
+pot-rate	14	items			1	item_faster_potions																									Laz / Interacts with misc.txt		min	max	none	0
+xsignet59	14	items			1	x_signet59																									Laz / MC counter		min	max	none	0
+ac-hth	13	items			1	armorclass_vs_hth																													none	0
+dmg-to-mana	13	items			1	item_damagetomana																													none	0
+stam	13	items			1	maxstamina																													none	0
+heal-thorns	12	items			1	item_healwhenstruck																									Laz / Life gained when struck in melee		min	max	none	0
+maxspirits	12	items			1	skill_ancientspirits_synergy																									Laz / Interacts with skills.txt		min	max	none	0
+pois-len	12	items			1	poisonlength																													none	0
+pierce-fico	11	items			1	passive_fire_pierce			3	passive_cold_pierce																					Laz / Combination affix		min	max	none	0
+desc-dbaura	10	items			1	item_desc_dbaura																									Laz / String for Shedim		1	1	desc string for demon blood aura	0
+lstance-syn	10	items			1	lion_stance_syn																									Laz / Interacts with skills.txt		min	max	none	0
+pois-max	10	items			1	poisonmaxdam																													none	0
+pois-min	10	items			1	poisonmindam																													none	0
+rip	10	items			1	item_restinpeace																									slain monsters' corpses can't be used		1	1	none	0
+wirts	10	items			1	strength			3	dexterity																					Laz / Combination affix		min	max	none	0
+ac/lvl	9	items			17	item_armor_perlevel																									AC per Player Level	(32nds)			none	0
+ethereal	9	items			23																															0
+extra-fcl	9	items			1	passive_fire_mastery			3	passive_ltng_mastery			3	passive_cold_mastery																	Laz / EDM%		min	max	also affects elem affixes?	0
+mana-thorns	9	items			1	item_manawhenstruck																									Laz / Life gained when struck in melee		min	max	none	0
+shadows-max	9	items			1	passive_shadows_addmax																									Laz / Interacts with skills.txt		min	max	none	0
+blood-elem	8	items			1	passive_bloodlust_elempct																									Laz / Interacts with skills.txt		min	max	none	0
+extra-fico	8	items			1	passive_fire_mastery			3	passive_cold_mastery																					Laz / Combination affix		min	max	none	0
+no-ac	8	items			1	armor_override_percent																									Laz / Global AC increase		-100	-100	none	0
+slow-thorns-r	8	items			1	skill_slowrangedthorns																									Laz / Slows ranged attacker		min	max	none	0
+ac%/lvl	7	items			17	item_armorpercent_perlevel																									AC% per Player Level	(32nds)			none	0
+color	7	items	1		1	item_lightcolor																													none	0
+extra-cold/lvl	7	items			17	passive_cold_mastery_perlevel																									Laz / Mastery per level	(32nds)			none	0
+fire-thorns	7	items			1	item_attackertakesfiredamage																									Laz / Elemental thorns		min	max	none	0
+pagan2	7	items			1	skill_paganheart_synergy																									Laz / Interacts with misc.txt		min	max	none	0
+pierce	7	items			1	item_pierce																													"PAL(25), NEC(33)"	0
+shamans-syn	7	items			1	skill_shamanspath_synergy																									Laz / Interacts with skills.txt		min	max	none	0
+syn2	7	items			24	special_syn2																														0
+cd-reduce	6	items			24	skill_cooldown_reduce																									Laz / Interacts with skills.txt		min	max	none	0
+cold-thorns	6	items			1	item_attackertakescolddamage																									Laz / Elemental thorns	Frames	min Dmg	max Dmg	does it actually use cold length?	0
+desc-lockout	6	items			1	passive_state_lockout																									Laz / String for Evanescence		1	1	desc string for Evanescence	0
+extra-ficop	6	items			1	passive_fire_mastery			3	passive_cold_mastery			3	passive_pois_mastery																	Laz / EDM%		min	max	also affects elem affixes?	0
+extra-ltng/lvl	6	items			17	passive_ltng_mastery_perlevel																									Laz / Mastery per level	(32nds)			none	0
+item-nodisenchant	6	items			1	item_nodcht																									Laz / MC counter		min	max	none	0
+pierce-fcp	6	items			1	passive_fire_pierce			3	passive_cold_pierce			3	passive_pois_pierce																	Laz / Combination affix		min	max	none	0
+vessel-dmg	6	items			1	skill_light_mastery			3	skill_voj_mastery																					Combo affix		min	max	none	0
+castgethit3	5	items			1	item_fastergethitrate			3	item_fastercastrate																					Laz / Combination affix		min	max	none	0
+crush/lvl	5	items			17	item_crushingblow_perlevel																									+% Chance of Crushing Blow per Player Level	(32nds)			none	0
+dmg-mon%	5	items			24	damage_vs_montype																									damage% vs. monster type	mon type	min	max		0
+hexdmg-syn	5	items			1	passive_hex_adddmg																									Laz / Interacts with skills.txt		min	max	none	0
+hex-syn	5	items			1	hex_dur_syn																									Laz / Interacts with skills.txt		min	max	none	0
+hp/lvl	5	items			17	item_hp_perlevel																									HP per Player Level	(32nds)			none	0
+innate-blue	5	items			11	item_warp_blue																									Laz / New procs	Skill #	% Chance	Level	white text	0
+moon-syn	5	items			1	moonstrike_synergy																									Laz / Interacts with skills.txt		min	max	none	0
+runemaster	5	items			1	item_skill_runemaster																									Laz / Itemstatcost.txt juju		min	max	none	0
+stupid-thorns	5	items			1	item_stupiditythorns																									Laz / Blinds melee attacker		min	max	none	0
+thorns	5	items			1	item_attackertakesdamage																													none	0
+unity	5	items			1	strength			3	dexterity			3	vitality																	Laz / Combination affix		min	max	none	0
+balance	4	items			1	strength			3	energy			3	vitality																	Laz / Combination affix		min	max	none	0
+dmg-global/lvl	4	items			17	item_totaldamage_perlevel																									Laz / Damagepercent per level	(32nds)			none	0
+hpdmg-minion	4	items			1	skill_minion_hp_percent			3	skill_minion_dmg_percent																					Laz / Interacts with skills.txt		min	max	none	0
+hp-mana	4	items			1	maxhp			3	maxmana																					Laz / No rocket sci here		min	max	"just saves space, k?"	0
+mag-max	4	items			1	magicmaxdam																													none	0
+mag-min	4	items			1	magicmindam																													none	0
+rep-dur	4	items			17	item_replenish_durability																									regenerates durability	speed (see note)			regenerates 1 durability point per 100/lvl seconds	0
+res-firepoison	4	items			1	fireresist			3	poisonresist																					Laz / Combination affix		min	max	none	0
+str-enr	4	items			1	strength			3	energy																					Laz / Combination affix		min	max	none	0
+wrath-synergy	4	items			1	passive_wrath_synergy																									Laz / Interacts with skills.txt		min	max	none	0
+xsignet63	4	items			1	x_signet63																									Laz / MC counter		min	max	none	0
+xsignet64	4	items			1	x_signet64																									Laz / MC counter		min	max	none	0
+xsignet65	4	items			1	x_signet65																									Laz / MC counter		min	max	none	0
+assassin-blades	3	items			1	skill_scorpion_blades																									Laz / Interacts with skills.txt		min	max	none	0
+desc-druid	3	items			1	item_desc_druidmorph																									Laz / String for Dead Ringer		1	1	desc string for druid morph on dead ringer	0
+desc-lifespells	3	items			1	item_desc_lifecostspells																									Laz / String for Judas		1	1	none	0
+enr/lvl	3	items			17	item_energy_perlevel																									Energy per Player Level	(32nds)			none	0
+freeze-thorns	3	items			1	item_freezethorns																									Laz / Freezes melee attacker		min	max	none	0
+gehenna	3	items			1	passive_cold_pierce			3	passive_pois_pierce			3	passive_cold_mastery			3	passive_pois_mastery													Laz / Combination affix		min	max	none	0
+mm-syn	3	items			1	passive_missiles_missiles																									Laz / Interacts with skills.txt		min	max	none	0
+acidtrance-syn	2	items			1	passive_acidtrance_synergy																									Laz / Interacts with skills.txt		min	max	none	0
+balance%	2	items			1	item_strength_percent			3	item_energy_percent			3	item_vitality_percent																	Laz / Combination affix		min	max	none	0
+class-restrict	2	items			1	item_class_spec																														0
+courage	2	items			1	strength			3	dexterity			3	vitality			3	item_strength_percent			3	item_dexterity_percent			3	item_vitality_percent					Laz / Combination affix		min	max	none	0
+desc-difficulty	2	items			1	item_desc_hardaura																									Laz / String for Jolly Roger		1 to 15	1 to 15	desc string for hard aura	0
+dex-enr	2	items			1	energy			3	dexterity																					Laz / Combination affix		min	max	none	0
+hpm-str%-enr%	2	items			1	skill_minion_hp_percent			3	item_strength_percent			3	item_energy_percent																	Laz / Combination affix		min	max	none	0
+light-thorns	2	items			1	item_attackertakeslightdamage																													none	0
+mana/lvl	2	items			17	item_mana_perlevel																									Mana per Player Level	(32nds)			none	0
+res-courage	2	items			1	fireresist			3	lightresist			3	coldresist																	Laz / Combination affix		min	max	none	0
+res-fcl	2	items			1	fireresist			3	lightresist			3	coldresist																	Laz / Combination affix		min	max	none	0
+si-1	2	items			1	si_1																											-1	3	x2	0
+str/bl	2	items			17	item_strength_perblessedlife																									Laz / Strength per point in BL	(32nds)			none	0
+str-heal	2	items			1	strength			3	item_healafterkill																					Laz / EDM%		min	max	also affects elem affixes?	0
+strvit	2	items			1	strength			3	vitality																					Laz / Combination affix		min	max	none	0
+all-thorns	1	items			1	item_attackertakesfiredamage			3	item_attackertakescolddamage			3	item_attackertakeslightdamage																	Laz / Combination affix		min	max	does it actually use cold length?	0
+arc-synergy	1	items			1	skill_arcanestrike_synergy																									Laz / Interacts with skills.txt		min	max	none	0
+crush-vit%	1	items			1	item_crushingblow			3	item_vitality_percent																					Laz / Interacts with skills.txt		min	max	none	0
+desc_fatasstriton	1	items			1	desc-fatasstriton																											1	1		0
+desc_superbeasty	1	items			1	desc-superbeasty																											1	1		0
+desc-breaker	1	items			1	item_desc_breaker																									Laz / String for Judas		1	1	none	0
+desc-instructions	1	items			1	item_desc_instructions																									Laz / String for Jolly Roger		1	1	desc string for jolly roger	0
+desc-suchbalance	1	items			1	tree_synergy																														0
+dex/bl	1	items			17	item_dexterity_perblessedlife																									Laz / Vitality per point in BL	(32nds)			none	0
+dmg-elem-max	1	items			1	firemaxdam			3	lightmaxdam			3	coldmaxdam			17	coldlength																		0
+extra-cop	1	items			1	passive_cold_mastery			3	passive_pois_mastery																					Laz / Combination affix		min	max	also affects elem affixes?	0
+extra-ficom	1	items			1	passive_fire_mastery			3	passive_cold_mastery			3	passive_pm_mastery																	Laz / EDM%		min	max	also affects elem affixes?	0
+extra-firepm	1	items			1	passive_fire_mastery			3	passive_pm_mastery																					Laz / Combination affix		min	max	none	0
+extra-pierce-fico	1	items			1	passive_fire_pierce			3	passive_cold_pierce			3	passive_fire_mastery			3	passive_cold_mastery			3	enr_factor									Laz / Combination affix		min	max	none	0
+extra-pois/lvl	1	items			17	passive_pois_mastery_perlevel																									Laz / Mastery per level	(32nds)			none	0
+holyarmor-vel	1	items			1	passive_holyarmor_addmove																									Laz / Interacts with skills.txt		min	max	none	0
+hp-edyrem	1	items			1	skill_edyrem_hp_percent																									Laz / Interacts with skills.txt		min	max	none	0
+lh-stupidity	1	items			1	passive_lionheart_addstupidth																									Laz / Interacts with skills.txt		min	max	none	0
+life-manasteal	1	items			1	lifedrainmindam			3	manadrainmindam																					Laz / Combination affix		min	max	none	0
+lohengrin	1	items			1	item_fasterattackrate			3	item_undeaddamage_percent			3	fireresist			3	lightresist			3	coldresist			3	strength			3	dexterity	Laz / Combination affix		min	max	none	0
+mag%/lvl	1	items			17	item_find_magic_perlevel																									+% Magical per Player Lvl	(32nds)			none	0
+pierce-flp	1	items			1	passive_fire_pierce			3	passive_ltng_pierce			3	passive_pois_pierce																	Laz / Combination affix		min	max	none	0
+pierce-lipo	1	items			1	passive_ltng_pierce			3	passive_pois_pierce																					Laz / Combination affix		min	max	none	0
+poison-set	1	items			1	item_poison_set																									Laz / Interacts with skills.txt		min	max	none	0
+res-all-group	1	items			1	minion_resist_all			3	fireresist			3	lightresist			3	coldresist			3	poisonresist									Laz / Combination affix		min	max	none	0
+res-fireltng	1	items			1	fireresist			3	lightresist																					Laz / Combination affix		min	max	none	0
+stamdrain	1	items			1	item_staminadrainpct																													none	0
+stamsteal	1	items			1	stamdrainmindam																									Laz / Stamina leech		min	max	none	0
+statX-2	1	items			1	statX_2																											-24	100		0
+str-vit-regen	1	items			1	strength			3	vitality			3	hpregen																	Laz / Combination affix		min	max	none	0
+swingbalance3	1	items			1	item_fasterattackrate			3	item_fastergethitrate																									none	0
+trololololol	1	items			1	item_absorbfire				item_absorblight				item_absorbmagic				item_absorbcold																	none	0
+vessel-mod	1	items			1	vessel_mod																											-1	3	x2	0
+vessel-tgt	1	items			1	skill_shadow_mastery																														0
+upgrade1		cube			1	cube_upgrade_1																														0
+upgrade2		cube			1	cube_upgrade_2																														0
+upgrade3		cube			1	cube_upgrade_3																														0
+upgrade4		cube			1	cube_upgrade_4																														0
+eq-grw	12	gems / runes			1	eq_grw																													For each equipped Great Rune in Weapon	0
+pierce-phys		items			1	passive_phys_pierce																									Negates % of Enemy Physical Resistance		min	max	none	0
+weapon-count		item automagic			1	weapon_count																													For weps which can be dual wielded	0
+lab-combo1		monster			15	damagepercent			16	item_absorbfire_percent			16	item_absorblight_percent			16	item_absorbcold_percent			17	item_fastermovevelocity													"Min = dmg%, Max = FCL absorb, Layer = FRW"	0
+lab-combo2		monster			15	damage_divisor			16	passive_fire_pierce			16	passive_ltng_pierce			16	passive_cold_pierce			16	passive_pois_pierce			17	curse_resistance									"Min = dmg-div, Max = pierce-all, Layer = Curse Resist"	0
+syn3		items			24	special_syn3																														0
+syn4		items			24	special_syn4																														0
+abs-all%		monster			1	item_absorbfire_percent			3	item_absorblight_percent			3	item_absorbcold_percent			3	item_absorbmagic_percent			3	item_poisonlengthresist													omega	0
+heal-pkill		monster			1	item_healafterplayerkill																									life gained after each player kill					0

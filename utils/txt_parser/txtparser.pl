@@ -50,8 +50,8 @@ sub tblExpandHash
 }
 
 my $zeroRe = qr/^0$/;
-my %propertiesStatsHash; $propertiesStatsHash{"stat".($_ + 1)} = 7 + $_ * 4 for (0..6);
-my $properties = parsetxt("properties.txt", "#code"=>"0", param1 => 5, %propertiesStatsHash);
+my %propertiesStatsHash; $propertiesStatsHash{"stat".($_ + 1)} = 6 + $_ * 4 for (0..6);
+my $properties = parsetxt("properties.txt", "#code"=>"0", param1 => 4, %propertiesStatsHash);
 
 my $descArrayRef = [
     {key => "descstrpos", col => 18, expanded => "descPositive"},
@@ -168,8 +168,8 @@ sub expandSetProperties
 }
 
 my %setsPropertiesHash, my @setsPropertiesKeys;
-&getSetFixedPropertiesHash(6,  8, \%setsPropertiesHash, \@setsPropertiesKeys, 'part_'); # partial bonuses
-&getSetFixedPropertiesHash(38, 8, \%setsPropertiesHash, \@setsPropertiesKeys, 'full_'); # full ones
+&getSetFixedPropertiesHash(8,  8, \%setsPropertiesHash, \@setsPropertiesKeys, 'part_'); # partial bonuses
+&getSetFixedPropertiesHash(40, 8, \%setsPropertiesHash, \@setsPropertiesKeys, 'full_'); # full ones
 
 my $oldSetCond = qr/^old LoD$/;
 my $sets = parsetxt("sets.txt", "#key" => 0, tbl => 1, '!_lodSet' => {col => 2, val => $oldSetCond}, %setsPropertiesHash);
