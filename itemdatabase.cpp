@@ -283,7 +283,7 @@ QList<SkillInfo *> *ItemDataBase::Skills()
                 skill->tab = data.at(3).toShort();
                 skill->row = data.at(4).toShort();
                 skill->col = data.at(5).toShort();
-                skill->imageId = data.at(6).toShort();
+                skill->imageId = data.at(6).toUShort();
             }
             allSkills.push_back(skill);
         }

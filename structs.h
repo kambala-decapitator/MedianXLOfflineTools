@@ -225,7 +225,8 @@ struct UniqueItemInfo : public SetOrUniqueItemInfo
 struct SkillInfo
 {
     QString name;
-    qint8 classCode, tab, row, col, imageId;
+    qint8 classCode, tab, row, col;
+    quint16 imageId;
 };
 
 typedef QList<quint8> SkillList;
