@@ -134,7 +134,7 @@
 147	0	10							Magic Absorb	Magic Absorb		1	38	1					item_absorbmagic
 148	0	10							Cold Absorb	Cold Absorb		2	30	2					item_absorbcold_percent
 149	0	10							Cold Absorb	Cold Absorb		1	36	1					item_absorbcold
-150	50	8							Slow Target	Slow Target		2	82	2					item_slow
+150	50	8							Slow Target	Slow Target		2	81	2					item_slow
 151	1	7																11	item_aura
 152		1							Indestructible	Indestructible		3	165	0					item_indesctructible
 153		1							Cannot Be Frozen	Cannot Be Frozen		3	25	0					item_cannotbefrozen
@@ -224,13 +224,14 @@
 254	0	8							Increased Stack Size	Increased Stack Size		3	10	0					item_extra_stack
 255	0	5																	x_signet32
 256	0	5																	x_signet33
-257	1	2							\orange;Parasite Gains 12 Additional Targets\blue;	\orange;Neutrality: Vessel Damage Bonus from Passives is Doubled\nUnholy: Blood Thorns Deal 40% More Total Damage\nHoly: Plague Deals 150% More Total Damage\blue;		3	245	0					vessel_mod
+257	1	2							\orange;Parasite Gains 12 Additional Targets\blue;	\orange;Neutrality: +50% Total Vessel Damage Bonus from Passives\nUnholy: Blood Thorns Deal 40% More Total Damage\nHoly: Plague Deals 150% More Total Damage\blue;		3	245	0					vessel_mod
 258	0	5																	x_signet35
 259	0	2							Drains 1% Life per Second	Drains 1% Life per Second		3	54	0					item_drain_aura
 260	0	7							\orange;Thunderfury\white;	\orange;Thunderfury\white;		3	248	0				17	item_thunderfury
 261	0	5							Extra Totems	Extra Totems		1	155	1					new_totem_syn
 263	0	5																	x_signet36
 264	0	5																	x_signet37
+265	0	10							Life after each Kill	Life after each Kill		1	21	1					item_healafterplayerkill
 266	0	7							\orange;Area Effect Attack\white;	\orange;Area Effect Attack\white;		3	248	0				17	item_warp_blue
 267	0	5							Enhanced Stance Radius	Enhanced Stance Radius		1	203	1					item_stance_radius
 270	0	3																	item_has_edyrem
@@ -334,6 +335,9 @@
 391	0	10							Bonus to Miasma Haunt Duration	Bonus to Miasma Haunt Duration		2	97	1					passive_hex_adddmg
 393	1001	14																12	special_syn2
 394	0	8																	passive_shadows_addelem
+395	0	3																	weapon_count
+396	1001	14																12	special_syn3
+397	1001	14																12	special_syn4
 398	0	5																	yshari_enable
 399	0	8							to Searing Glow Dazzle Duration	to Searing Glow Dazzle Duration		4	153	1					passive_wrath_synergy
 403	0	5																	x_signet60
@@ -355,7 +359,7 @@
 441	5	6			445	to All Maximum Minions	to All Maximum Minions		to Maximum Necromancer Minions	to Maximum Necromancer Minions		1	84	1	11	1	1		passive_aura_addmax
 442	0	10							Additional Strength Damage Bonus:	Additional Strength Damage Bonus:		2	135	2					str_bonus_blue
 443	0	8							\green;Already upgraded!	\green;Already upgraded!		3	249	0					item_upgraded
-444	50	9							Penalty to Summoned Minion Life	to Summoned Minion Life		4	80	1					skill_minion_hp_percent
+444	50	9							Penalty to Summoned Minion Life	to Summoned Minion Life		4	83	1					skill_minion_hp_percent
 445	0	6			441	to All Maximum Minions	to All Maximum Minions		to Maximum Barbarian Minions	to Maximum Barbarian Minions		1	73	1	11	1	1		skill_ancientspirits_synergy
 446	0	8							Damage to Protector Spirit Bloodlust	Damage to Protector Spirit Bloodlust		4	80	1					skill_shamanspath_synergy
 449	0	8							Enhanced Damage to Moonstrike	Enhanced Damage to Moonstrike		4	38	1					moonstrike_synergy
@@ -376,8 +380,9 @@
 467	0	10							Damage when using an Apple	Damage when using an Apple		4	54	1					skill_elixirs_synergy
 468	0	8							Damage to Vessel of Retribution	Damage to Vessel of Retribution		4	142	1					skill_light_mastery
 469	0	8							Extra Targets to Paladin Vessels	Extra Targets to Paladin Vessels		1	143	1					skill_shadow_mastery
-470	50	9							to Summoned Minion Damage	to Summoned Minion Damage		4	80	1					skill_minion_dmg_percent
+470	50	9							to Summoned Minion Damage	to Summoned Minion Damage		4	83	1					skill_minion_dmg_percent
 471	50	9							to Summoned Minion Damage	to Summoned Minion Damage		4	80	1					shamanic_dmg
+472	50	9							to Summoned Minion Damage	to Summoned Minion Damage		4	80	1					shamanic_life
 473	0	8							\green;Unlocks your Ennead Skill	\green;Unlocks your Ennead Skill		3	239	0					learn_ennead
 474	0	8							\green;Unlocks your Black Road Skill	\green;Unlocks your Black Road Skill		3	239	0					learn_blackroad
 475	0	1							\red;Druid Morph\blue;	\red;Druid Morph\blue;		3	240	0					item_desc_druidmorph
@@ -389,7 +394,7 @@
 482	0	10																	item_gem_paragon
 483	0	10																	item_rune_runemaster
 485	200	10							Energy Factor to Spell Damage	Energy Factor to Spell Damage		1	200	1					enr_factor
-487	25	9							to Summoned Minion Resistances	to Summoned Minion Resistances		4	80	1					minion_resist_all
+487	25	9							to Summoned Minion Resistances	to Summoned Minion Resistances		4	82	1					minion_resist_all
 488	50	9							Bonus to Energy Factor	Bonus to Energy Factor		4	162	1					enr_factor_percent
 489	0	10							Target Takes Additional Damage of	Target Takes Additional Damage of		3	18	2					item_targettakesdamage
 492	50	8							Reduced Healing Rate from Apples	Increased Healing Rate from Apples		4	36	1					item_faster_potions
@@ -398,7 +403,7 @@
 496	1	9							\orange;Such Voracity, Balance for Destruction\blue;	\orange;Such Voracity, Balance for Destruction\blue;		3	5	0					tree_synergy
 498	0	9							Bonus to Fire Elemental Damage if Summoned during Pact of Blood	Bonus to Fire Elemental Damage if Summoned during Pact of Blood		2	19	1					item_cots_when_pact
 499	0	10							to Energy	to Energy	(Based on Character Level)	6	65	1					item_energy_perlevel
-500	100	8							to Summoned Minion Attack Rating	to Summoned Minion Attack Rating		4	111	1					item_minion_attack
+500	100	8							to Summoned Minion Attack Rating	to Summoned Minion Attack Rating		4	82	1					item_minion_attack
 501	23	10							\grey;Arcane Crystals: 	\grey;Quantity:		3	60	2					shrine_counter
 503	0	10							to Strength	to Strength	(Based on Blessed Life Skill Level)	6	71	1					item_strength_perblessedlife
 504	0	10							to Dexterity	to Dexterity	(Based on Blessed Life Skill Level)	6	67	1					item_dexterity_perblessedlife

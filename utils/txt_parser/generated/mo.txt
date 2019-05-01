@@ -25,7 +25,7 @@
 243	26+	16	15			4	Enhanced Defense
 244	27+	171	4			4	Total Character Defense
 249	30+	164	2			4	Chance of Uninterruptable Attack
-251	31+	85	2			4	to Experience Gained
+251	31+	85	1			4	to Experience Gained
 255	32+	60	3			4	Life stolen per Hit
 256	33+	62	5			4	Mana stolen per Hit
 258	35+	119	50			4	Bonus to Attack Rating

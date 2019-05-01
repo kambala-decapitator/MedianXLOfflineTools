@@ -89,7 +89,7 @@
 87	Decrepify	-1	1	5	3	42
 88	Bone Prison	-1	2	5	3	44
 89	APF-20 'Maelstrom' MkI	-1	1	3	2	36
-90	Punisher	-1	0	0	0	69
+90	Iron Golem	2	1	4	3	134
 91	Lower Resist	-1	1	6	2	50
 92	Veil King Plague Grasp	-1	0	0	0	0
 93		-1				
@@ -218,7 +218,7 @@
 216		-1				
 217	Scroll of Identify	-1	0	0	0	2
 218	Tome of Identify	-1	0	0	0	2
-219		-1				
+219	Tome of Townportal	-1	0	0	0	6
 220	Tome of Townportal	-1	0	0	0	6
 221		-1				
 222		-1				
@@ -400,31 +400,31 @@
 398	Plague Avatar	5	2	3	2	44
 399	Mythal	5	2	4	2	108
 400	Acid Fiends	5	2	5	2	48
-401	Skeletal Flayer	2	1	1	3	86
-402	Rampagor	2	1	2	3	88
-403	Lamia	2	1	3	3	90
-404	Veil King	2	1	4	3	92
-405	Void Archon	2	1	5	3	94
+401	Blood Skeleton	2	1	1	3	130
+402	Night Hawks	2	1	2	3	136
+403	Abyss Knight	2	1	3	3	126
+404		-1				
+405	Resurgence	2	1	5	3	138
 406	Angel of Death	2	2	4	2	20
 407	Sacrifices	2	1	2	2	40
 408	Parasite	2	2	2	2	98
 409	Carnage	2	2	1	2	84
 410	Famine	2	2	3	2	72
-411		-1				
-412	Talon's Hold	2	1	5	2	24
+411	Death Pact	2	1	3	2	132
+412	Death Ward	2	1	5	2	66
 413	Widowmaker	2	2	5	3	26
-414	Bend the Shadows	2	1	3	2	58
+414	Bend the Shadows	-1	0	0	0	248
 415	Deathlord	2	2	5	2	80
-416	Death's Fury Totem	2	1	1	1	30
+416	Totemic Mastery	2	1	3	1	142
 417	Flametail Shot	2	2	1	3	110
 418	Dragonfire Oil	2	2	3	3	106
 419	Fragmentation Shot	2	2	4	3	102
-420	Howling Totem	2	1	4	1	38
-421	Frostclaw Totem	2	1	2	1	42
+420	Soulbond	2	1	5	1	140
+421	Frostclaw Totem	2	1	1	1	42
 422	Embalming	2	1	1	2	104
-423	Fireheart Totem	2	1	3	1	44
+423	Stormeye Totem	2	1	2	1	48
 424	Bane	2	1	4	2	112
-425	Stormeye Totem	2	1	5	1	48
+425	Fireheart Totem	2	1	4	1	44
 426	Retaliate	3	1	1	1	0
 427	Divine Judgment	3	1	2	1	70
 428	Plague	3	1	3	1	56
@@ -552,7 +552,7 @@
 550		-1				
 551	Dark Summoning	-1	0	0	0	1
 552		-1				
-553		-1				
+553	Punisher	-1	0	0	0	69
 554	Gift of Inner Fire	-1	0	0	0	0
 555	Frozen Orb	-1	3	6	1	56
 556		-1				
@@ -591,7 +591,7 @@
 589	Vampiric Icon	6	3	1	3	58
 590	Immortal	4	3	1	1	74
 591	Symbiosis	5	3	1	3	74
-592	Black Mass	2	3	1	1	52
+592	Talon's Hold	2	3	1	1	24
 593	Divine Apparition	3	3	1	1	62
 594	Symbol of Esu	1	3	1	1	92
 595	Shower of Rocks	-1	1	5	2	6
@@ -612,9 +612,9 @@
 610	Force of Nature	5	3	5	1	62
 611	Faerie Fire	5	3	5	2	54
 612	Tremor	5	3	5	3	56
-613	Jinn	2	3	5	1	96
-614	Rathma's Chosen	2	3	5	2	54
-615	Death Ward	2	3	5	3	66
+613	Jinn	2	3	5	1	146
+614	Rathma's Chosen	2	3	5	3	54
+615	Veil King	2	3	5	2	148
 616	Resurrect	3	3	5	3	52
 617	Superbeast	3	3	5	1	54
 618	Dragonknight	3	3	5	2	68
@@ -911,7 +911,7 @@
 909		-1				
 910		-1				
 911		-1				
-912		-1				
+912	Spike Rush	-1	0	0	0	0
 913	Thorn Field	-1	0	0	0	157
 914	Punisher	-1	0	0	0	69
 915		-1				
@@ -980,13 +980,13 @@
 978	Earthquake	-1	0	0	0	0
 979	Amatoxin	-1	0	0	0	0
 980	Stormblast	-1	1	3	1	30
-981	Dragonheart	-1	1	4	1	98
+981	Lionheart	-1	0	0	0	98
 982	Spiral Dance	-1	0	0	0	93
 983	Path of Flames	-1	0	0	0	198
 984	Body of the Savior	-1	0	0	0	129
 985	Iceburst	-1	1	3	2	80
 986		-1				
-987		-1				
+987	Frozen Orb	-1	3	6	1	56
 988		-1				
 989		-1				
 990	Balefire	-1	2	2	1	30
@@ -1037,7 +1037,7 @@
 1035	Nephalem Spirit	4	3	5	1	76
 1036		-1				
 1037	Psicrown	-1	0	0	0	149
-1038		-1				
+1038	Nephalem Spirit	-1	3	5	1	76
 1039		-1				
 1040		-1				
 1041		-1				
@@ -1051,7 +1051,7 @@
 1049	Devil's Omen	-1	0	0	0	0
 1050		-1				
 1051		-1				
-1052	Summon Veil Kings	-1	0	0	0	205
+1052		-1				
 1053	Trinity Beam	-1	0	0	0	0
 1054		-1				
 1055		-1				
@@ -1061,8 +1061,8 @@
 1059		-1				
 1060		-1				
 1061		-1				
-1062		-1				
-1063		-1				
+1062	Trinity Beam	-1	0	0	0	0
+1063	\green;Venomcloud Totem	-1	0	0	0	253
 1064		-1				
 1065		-1				
 1066		-1				
@@ -1106,10 +1106,10 @@
 1104		-1				
 1105	Broadside	-1	1	5	2	38
 1106		-1				
-1107		-1				
-1108		-1				
-1109		-1				
-1110		-1				
+1107	Skeletal Flayer	-1	0	0	0	249
+1108	Rampagor	-1	0	0	0	250
+1109	Lamia	-1	0	0	0	251
+1110	Void Archon	-1	0	0	0	252
 1111		-1				
 1112		-1				
 1113		-1				
@@ -1476,3 +1476,36 @@
 1474		-1				
 1475		-1				
 1476		-1				
+1477		-1				
+1478	Charged Strike	-1	0	0	0	247
+1479	Flamefront	-1	1	1	1	62
+1480	Flamefront	-1	1	1	1	62
+1481	Vindicate	-1	0	0	0	17
+1482	Spellbind	-1	3	1	1	50
+1483	Frigid Sphere	-1	1	1	3	10
+1484	Frigid Sphere	-1	1	1	3	10
+1485	Frigid Sphere	-1	1	1	3	10
+1486	Frigid Sphere	-1	1	1	3	10
+1487	Frigid Sphere	-1	1	1	3	10
+1488	Frigid Sphere	-1	1	1	3	10
+1489	Flamestrike	-1	1	3	1	4
+1490	Vortex	-1	0	0	0	76
+1491	Noctule	-1	0	0	0	234
+1492	Phalanx	-1	1	3	1	4
+1493	Death Shards	-1	2	2	3	70
+1494		-1				
+1495	Shunpo	-1	0	0	0	189
+1496	Frozen Orb	-1	3	6	1	56
+1497	Pestilence	-1	2	5	1	122
+1498	Fortress	-1	2	3	2	34
+1499	Lightning	-1	2	3	2	26
+1500	Frozen Orb	-1	3	6	1	56
+1501	Shock Flower	-1	0	0	0	188
+1502	Limpet Laser	-1	2	3	3	96
+1503	Fireball Sentry	-1	2	4	3	82
+1504	Cluster Bomb	-1	2	1	3	88
+1505	Iceburst	-1	1	3	2	80
+1506	Iceburst	-1	1	3	2	80
+1507	Lightning Arena	-1	0	0	0	184
+1508	Flamefront	-1	1	1	1	62
+1509		-1				
