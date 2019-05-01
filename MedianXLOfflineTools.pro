@@ -37,7 +37,7 @@ else: DUPE_CHECK = 1
 # app version
 NVER1 = 0
 NVER2 = 5
-NVER3 = 1
+NVER3 = 2
 NVER4 = 0
 
       greaterThan(NVER4, 0): NVER_STRING_LAST = $$sprintf("%1.%2", $$NVER3, $$NVER4)
