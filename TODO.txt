@@ -1,6 +1,3 @@
-- colors in XML output
-
-
 Не знаю насколько это просто будет реализовать, но по-моему будет полезно иметь возможность переназначать номера страниц вручную. В данный момент можно добавлять пустые страницы но для сортировки приходится перемещать всё вручную (не прибегая к автоматической сортировке). К этой функции можно так же добавить выбор типа сундука, то есть private или shared. Таким образом процесс сортировки "на свой вкус" будет заметно упрощен.
 
 
@@ -35,36 +32,36 @@ future versions:
 // Sigma save file structure
 struct D2SaveHeaderStrc
 {
-   DWORD dwHeaderMagic;                 // 0x000
-   DWORD dwVersion;                     // 0x004
-   DWORD dwSize;                        // 0x008
-   DWORD dwChecksum;                    // 0x00C
-   DWORD dwWeaponSet;                   // 0x010
-   char szName[16];                     // 0x014
-   DWORD dwSaveFlags;                   // 0x024
-   BYTE nClass;                         // 0x028
-   BYTE nStats;                         // 0x029
-   BYTE nSkills;                        // 0x02A
-   BYTE nLevel;                         // 0x02B
-   DWORD dwCreateTime;                  // 0x02C
-   DWORD dwLasTime;                     // 0x030
-   DWORD dwPlayTime;                    // 0x034
-   D2SaveSkillKeyStrc pSkillKeys[16];   // 0x038
-   D2SaveSkillKeyStrc pButtonSkills[4]; // 0x078
-   BYTE nComponent[16];                 // 0x088
-   BYTE nCompColor[16];                 // 0x098
-   BYTE nTown[3];                       // 0x0A8
-   DWORD dwMapSeed;                     // 0x0AB
-   D2SaveMercDataStrc pMercData;        // 0x0AF
-   BYTE nRealmData[16];                 // 0x0BF
-   BYTE nSaveField;                     // 0x0CF
-   DWORD dwLastLevel;                   // 0x0D0
-   DWORD dwLastTown;                    // 0x0D4
-   BYTE nLastDifficulty;                // 0x0D8
-   BYTE nRealmDataEx[118];              // 0x0D9
-   BYTE nLastQuest[3];                  // 0x14F (new data starts here)
-   BYTE nLastQuestFlags[3];             // 0x152
-   BYTE nQuestHistory[3][72];           // 0x155
+    DWORD dwHeaderMagic;                 // 0x000
+    DWORD dwVersion;                     // 0x004
+    DWORD dwSize;                        // 0x008
+    DWORD dwChecksum;                    // 0x00C
+    DWORD dwWeaponSet;                   // 0x010
+    char szName[16];                     // 0x014
+    DWORD dwSaveFlags;                   // 0x024
+    BYTE nClass;                         // 0x028
+    BYTE nStats;                         // 0x029
+    BYTE nSkills;                        // 0x02A
+    BYTE nLevel;                         // 0x02B
+    DWORD dwCreateTime;                  // 0x02C
+    DWORD dwLasTime;                     // 0x030
+    DWORD dwPlayTime;                    // 0x034
+    D2SaveSkillKeyStrc pSkillKeys[16];   // 0x038
+    D2SaveSkillKeyStrc pButtonSkills[4]; // 0x078
+    BYTE nComponent[16];                 // 0x088
+    BYTE nCompColor[16];                 // 0x098
+    BYTE nTown[3];                       // 0x0A8
+    DWORD dwMapSeed;                     // 0x0AB
+    D2SaveMercDataStrc pMercData;        // 0x0AF
+    BYTE nRealmData[16];                 // 0x0BF
+    BYTE nSaveField;                     // 0x0CF
+    DWORD dwLastLevel;                   // 0x0D0
+    DWORD dwLastTown;                    // 0x0D4
+    BYTE nLastDifficulty;                // 0x0D8
+    BYTE nRealmDataEx[118];              // 0x0D9
+    BYTE nLastQuest[3];                  // 0x14F (new data starts here)
+    BYTE nLastQuestFlags[3];             // 0x152
+    BYTE nQuestHistory[3][72];           // 0x155
 };
 
 enum D2C_AchievementCountLayers
@@ -79,4 +76,6 @@ enum D2C_AchievementCountLayers
     ACHIEVEMENT_GOLD_BOUNTY_COMPLETED,
     ACHIEVEMENT_SILVER_BOUNTY_COMPLETED,
     ACHIEVEMENT_BRONZE_BOUNTY_COMPLETED,
+    ACHIEVEMENT_OPENED_TOWN_PORTAL,
+    ACHIEVEMENT_SUMMONED_MONSTER,
 };

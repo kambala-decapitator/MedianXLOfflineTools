@@ -50,8 +50,8 @@
 
 [B]Загрузки[/B]:
 [LIST]
-[*][I]Windows[/I] (XP SP3 и позже): [URL]http://mxl.vn.cz/kambala/MedianXLOfflineTools_0.5.1.7z[/URL] (если не запускается, установите MSVC++ 2015 Redistributable [FONT=Courier New]vc_redist.x[B]86[/B].exe[/FONT] с [URL='https://www.mediafire.com/?84qc8d5dy3cd9f6']Mediafire[/URL] или с [URL='https://www.microsoft.com/en-us/download/details.aspx?id=52685']сайта Microsoft[/URL])
-[*][I]macOS[/I] (10.9 и позже, Intel 64bit): [URL]http://mxl.vn.cz/kambala/MedianXLOfflineTools_mac_0.5.1.tbz[/URL]
+[*][I]Windows[/I] (XP SP3 и позже): [URL]http://mxl.vn.cz/kambala/MedianXLOfflineTools_0.5.2.7z[/URL] (если не запускается, установите MSVC++ 2015 Redistributable [FONT=Courier New]vc_redist.x[B]86[/B].exe[/FONT] с [URL='https://www.mediafire.com/?84qc8d5dy3cd9f6']Mediafire[/URL] или с [URL='https://www.microsoft.com/en-us/download/details.aspx?id=52685']сайта Microsoft[/URL])
+[*][I]macOS[/I] (10.9 и позже, Intel 64bit): [URL]http://mxl.vn.cz/kambala/MedianXLOfflineTools_mac_0.5.2.tbz[/URL]
 [/LIST]
 
 [spoiler="Mini-FAQ"]В: Я не могу распаковать архив без ошибок :(
@@ -120,7 +120,14 @@ cp -R resources/data/* "${APP_PATH}/Contents/resources/data"[/code]
 
 [B]История версий:[/B]
 
-[I]v0.5 (05.02.2019)[/I]
+[I]v0.5.2 (06.05.2019)[/I]
+[LIST]
+[*][+] отображение предмета, с помощью которого был создан Iron Golem
+[*][ф] исправлено клонирование предмета при перемещении в/из общий сундук PlugY
+[*][-] не отображаются предметы трупа (в Сигме нет трупов)
+[/LIST]
+[spoiler="предыдущие версии"]
+[I]v0.5.1 (17.02.2019)[/I]
 [LIST]
 [*][+] перемещение выбранного предмета в/из общий сундук PlugY: команда в контекстном меню и горячая клавиша Alt+Клик
 [*][+] перемещение всех текущих видимых предметов на последнюю страницу сундука PlugY: кнопка внизу
@@ -129,7 +136,7 @@ cp -R resources/data/* "${APP_PATH}/Contents/resources/data"[/code]
 [*][ф] исправлены значения требуемых силы и ловкости
 [*][ф] исправлено отображение особых (оранжевых) свойств Священных Уников (SU)
 [/LIST]
-[spoiler="предыдущие версии"]
+
 [I]v0.5 (05.02.2019)[/I]
 [LIST]
 [*][+] поддержка Сигмы
