@@ -354,7 +354,7 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
         SetItemInfo *setItem = ItemDataBase::Sets()->value(item->setOrUniqueId);
         const FullSetInfo fullSetInfo = ItemDataBase::fullSetInfoForKey(setItem->key);
 
-        if (item->location == ItemLocation::Equipped || item->location == ItemLocation::Corpse || item->location == ItemLocation::Merc)
+        if (item->location == ItemLocation::Equipped || item->location == ItemLocation::Merc)
         {
             // set item properties stored in item (seems that they're not needed)
             //if (!item->setProps.isEmpty())
@@ -365,7 +365,7 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
             foreach (ItemInfo *anItem, ItemDataBase::itemsStoredIn(item->storage, item->location))
                 if (anItem != item && anItem->quality == ItemQuality::Set && fullSetInfo.itemNames.contains(ItemDataBase::Sets()->value(anItem->setOrUniqueId)->itemName))
                     ++setItemsOnCharacter;
-            
+
             if (quint8 partialPropsNumber = (setItemsOnCharacter - 1) * 2)
             {
                 // set item properties from txt

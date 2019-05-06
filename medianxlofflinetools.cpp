@@ -62,7 +62,7 @@ extern void qt_mac_set_dock_menu(QMenu *);
 // static const
 
 static const QString kLastSavePathKey("lastSavePath"), kBackupExtension("bak"), kReadonlyCss("QLineEdit { background-color: rgb(227, 227, 227) }"), kTimeFormatReadable("yyyyMMdd-hhmmss"), kMedianXlServer("http://mxl.vn.cz/kambala/");
-static const QByteArray kMercHeader("jf"), kSkillsHeader("if");
+static const QByteArray kMercHeader("jf"), kSkillsHeader("if"), kIronGolemHeader("kf");
 static const char sharedStashHeader[] = {'S', 'S', 'S', '\0', '0'};
 static const int plugyHeaderSize = 5;
 
@@ -579,30 +579,8 @@ void MedianXLOfflineTools::saveCharacter()
         }
     }
 
-    // put corpse items on a character
-    ItemsList corpseItems = ItemDataBase::itemsStoredIn(Enums::ItemStorage::NotInStorage, Enums::ItemLocation::Corpse),
-            equippedItems = ItemDataBase::itemsStoredIn(Enums::ItemStorage::NotInStorage, Enums::ItemLocation::Equipped);
-    for (int i = 0; i < corpseItems.size(); ++i)
-    {
-        ItemInfo *item = corpseItems.at(i);
-        bool found = false;
-        foreach (ItemInfo *equippedItem, equippedItems)
-        {
-            if (equippedItem->whereEquipped == item->whereEquipped)
-            {
-                found = true;
-                break;
-            }
-        }
-        if (!found)
-        {
-            item->location = Enums::ItemLocation::Equipped;
-            corpseItems.removeAt(i--);
-        }
-    }
-
-    int characterItemsSize = 2, mercItemsSize = 0, corpseItemsSize = 0;
-    ItemsList characterItems, mercItems;
+    int characterItemsSize = 2, mercItemsSize = 0, ironGolemItemsSize = 0;
+    ItemsList characterItems, mercItems, ironGolemItems;
     QHash<Enums::ItemStorage::ItemStorageEnum, ItemsList> plugyItemsHash;
     foreach (ItemInfo *item, charInfo.items.character)
     {
@@ -619,9 +597,10 @@ void MedianXLOfflineTools::saveCharacter()
                 pItems = &mercItems;
                 item->location = Enums::ItemLocation::Equipped;
                 break;
-            case Enums::ItemLocation::Corpse:
-                pItemsSize = &corpseItemsSize;
-                pItems = 0;
+            case Enums::ItemLocation::IronGolem:
+                pItemsSize = &ironGolemItemsSize;
+                pItems = &ironGolemItems;
+                item->location = Enums::ItemLocation::Equipped;
                 break;
             default:
                 pItemsSize = &characterItemsSize;
@@ -643,26 +622,23 @@ void MedianXLOfflineTools::saveCharacter()
     outputDataStream << static_cast<quint16>(characterItems.size());
     ItemParser::writeItems(characterItems, outputDataStream);
 
-    // write corpse items
-    int mercItemsOffset = tempFileContents.lastIndexOf(kMercHeader);
-    outputDataStream.skipRawData(ItemParser::kItemHeader.length());
-    if (!corpseItems.isEmpty())
-        outputDataStream.skipRawData(2 + 12 + ItemParser::kItemHeader.length()); // number of corpses + unknown corpse data + JM
-    outputDataStream << static_cast<quint16>(corpseItems.size());
-    int pos = outputDataStream.device()->pos();
-    tempFileContents.replace(pos, mercItemsOffset - pos, QByteArray(corpseItemsSize, 0));
-    ItemParser::writeItems(corpseItems, outputDataStream);
-
     // write merc items
+    outputDataStream.skipRawData(ItemParser::kItemHeader.length() + 2 + kMercHeader.length()); // JM + 0 corpses + merc header
     if (charInfo.mercenary.exists)
     {
-        writeByteArrayDataWithoutNull(outputDataStream, kMercHeader);
         writeByteArrayDataWithoutNull(outputDataStream, ItemParser::kItemHeader);
         outputDataStream << static_cast<quint16>(mercItems.size());
-        int terminatorOffset = tempFileContents.size() - 3;
-        pos = outputDataStream.device()->pos();
-        tempFileContents.replace(pos, terminatorOffset - pos, QByteArray(mercItemsSize, 0));
+        int pos = outputDataStream.device()->pos();
+        tempFileContents.replace(pos, tempFileContents.indexOf(kIronGolemHeader, pos) - pos, QByteArray(mercItemsSize, 0));
         ItemParser::writeItems(mercItems, outputDataStream);
+    }
+
+    // write possibly deleted golem item
+    if (ironGolemItems.isEmpty())
+    {
+        outputDataStream.skipRawData(kIronGolemHeader.length());
+        outputDataStream << static_cast<quint8>(0);
+        tempFileContents.truncate(outputDataStream.device()->pos());
     }
 
     // write file size & checksum
@@ -2187,27 +2163,7 @@ bool MedianXLOfflineTools::processSaveFile()
 #endif
 
     // corpse data
-    inputDataStream.skipRawData(ItemParser::kItemHeader.length()); // JM
-    inputDataStream >> charInfo.basicInfo.corpses;
-    if (charInfo.basicInfo.corpses)
-    {
-        inputDataStream.skipRawData(12 + ItemParser::kItemHeader.length()); // some unknown corpse data + JM
-        quint16 corpseItemsTotal;
-        inputDataStream >> corpseItemsTotal;
-        ItemsList corpseItems;
-        ItemParser::parseItemsToBuffer(corpseItemsTotal, inputDataStream, _saveFileContents.left(_saveFileContents.indexOf(kMercHeader, inputDataStream.device()->pos())),
-                                       tr("Corrupted item detected in %1 in slot %4"), &corpseItems);
-        foreach (ItemInfo *item, corpseItems)
-            item->location = ItemLocation::Corpse;
-        itemsBuffer += corpseItems;
-
-        // after saving there can actually be only one corpse, but let's be safe
-        if (charInfo.basicInfo.corpses > 1)
-        {
-            qWarning("more than one corpse found!");
-            inputDataStream.device()->seek(_saveFileContents.indexOf(kMercHeader));
-        }
-    }
+    inputDataStream.skipRawData(ItemParser::kItemHeader.length() + 2); // JM + number of corpses (always 0 in Sigma)
 
     // merc
     if (_saveFileContents.mid(inputDataStream.device()->pos(), kMercHeader.length()) != kMercHeader)
@@ -2222,17 +2178,27 @@ bool MedianXLOfflineTools::processSaveFile()
         quint16 mercItemsTotal;
         inputDataStream >> mercItemsTotal;
         ItemsList mercItems;
-        ItemParser::parseItemsToBuffer(mercItemsTotal, inputDataStream, _saveFileContents.left(_saveFileContents.size() - 3), tr("Corrupted item detected in %1 in slot %4"), &mercItems);
+        ItemParser::parseItemsToBuffer(mercItemsTotal, inputDataStream, _saveFileContents.left(_saveFileContents.indexOf(kIronGolemHeader, inputDataStream.device()->pos())), tr("Corrupted item detected in %1 in slot %4"), &mercItems);
         foreach (ItemInfo *item, mercItems)
             item->location = ItemLocation::Merc;
         itemsBuffer += mercItems;
     }
 
-    // end
-    if (_saveFileContents.mid(inputDataStream.device()->pos(), 2) != "kf" || _saveFileContents.at(_saveFileContents.size() - 1) != 0)
+    // iron golem
+    if (_saveFileContents.mid(inputDataStream.device()->pos(), kIronGolemHeader.length()) != kIronGolemHeader)
     {
-        showLoadingError(tr("Save file is not terminated correctly!"));
+        showLoadingError(tr("Iron Golem items section not found!"));
         return false;
+    }
+    inputDataStream.skipRawData(kIronGolemHeader.length());
+    if (_saveFileContents.mid(inputDataStream.device()->pos(), 1).at(0) > 0)
+    {
+        inputDataStream.skipRawData(1);
+        ItemsList golemItems;
+        ItemParser::parseItemsToBuffer(1, inputDataStream, _saveFileContents, tr("Corrupted item detected in %1 in slot %4"), &golemItems);
+        foreach (ItemInfo *item, golemItems)
+            item->location = ItemLocation::IronGolem;
+        itemsBuffer += golemItems;
     }
 
     bool sharedStashPathChanged = true, hcStashPathChanged = true;

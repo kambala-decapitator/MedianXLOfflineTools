@@ -41,8 +41,6 @@ public:
         SkillList skills;
         SkillList skillsReadable; // used in planner and skill tree
         quint16 totalSkillPoints;
-
-        quint16 corpses;
     } basicInfo;
 
     struct

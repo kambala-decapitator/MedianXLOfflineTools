@@ -13,7 +13,7 @@ public:
     {
         CharacterNameIndex = 0,
         MercenaryNameIndex,
-        CorpseNameIndex
+        IronGolemNameIndex
     };
 
     explicit GearItemsSplitter(ItemStorageTableView *itemsView, QWidget *parent = 0);

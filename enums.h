@@ -354,7 +354,8 @@ public:
         Equipped,
         Belt,
         Merc,
-        Corpse
+        Corpse,
+        IronGolem
     };
 };
 

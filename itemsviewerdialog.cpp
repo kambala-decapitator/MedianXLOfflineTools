@@ -335,7 +335,7 @@ void ItemsViewerDialog::updateGearItems(ItemsList *pBeltItems /*= 0*/, ItemsList
     if (!pEquippedItems)
         items = ItemDataBase::itemsStoredIn(Enums::ItemStorage::NotInStorage, Enums::ItemLocation::Equipped);
     items += ItemDataBase::itemsStoredIn(Enums::ItemStorage::NotInStorage, Enums::ItemLocation::Merc);
-    items += ItemDataBase::itemsStoredIn(Enums::ItemStorage::NotInStorage, Enums::ItemLocation::Corpse);
+    items += ItemDataBase::itemsStoredIn(Enums::ItemStorage::NotInStorage, Enums::ItemLocation::IronGolem);
 
     foreach (ItemInfo *item, items)
     {
