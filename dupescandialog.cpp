@@ -400,14 +400,19 @@ void DupeScanDialog::scanCharactersInDir(const QString &path)
             xml.writeStartElement(QLatin1String("items"));
             foreach (ItemInfo *item, ci.items.character)
             {
-                addItemInfoToXml(item, false, xml);
+                addItemInfoToXml(item, xml);
+                xml.writeTextElement(QLatin1String("socketsNumber"), QString::number(item->socketsNumber));
+                xml.writeTextElement(QLatin1String("socketablesNumber"), QString::number(item->socketablesNumber));
+                xml.writeTextElement(QLatin1String("isEthereal"), QString::number(item->isEthereal));
+                xml.writeTextElement(QLatin1String("isRW"), QString::number(item->isRW));
+                xml.writeTextElement(QLatin1String("placement"), QString("location %1, ").arg(metaEnumFromName<Enums::ItemLocation>("ItemLocationEnum").valueToKey(item->location)) + ItemParser::itemStorageAndCoordinatesString("storage %1, row %2, col %3, equipped in %4", item));
 
                 if (!item->socketablesInfo.isEmpty())
                 {
                     xml.writeStartElement(QLatin1String("socketables"));
                     foreach (ItemInfo *socketableItem, item->socketablesInfo)
                     {
-                        addItemInfoToXml(socketableItem, true, xml);
+                        addItemInfoToXml(socketableItem, xml);
                         xml.writeEndElement(); // socketableItem
                     }
                     xml.writeEndElement(); // socketables
@@ -516,7 +521,7 @@ QString DupeScanDialog::baseDupeScanLogFileName()
     return _pathLineEdit->text() + "/MXLOT dupe stats";
 }
 
-void DupeScanDialog::addItemInfoToXml(ItemInfo *item, bool isSocketable, QXmlStreamWriter &xml)
+void DupeScanDialog::addItemInfoToXml(ItemInfo *item, QXmlStreamWriter &xml)
 {
     xml.writeStartElement(QLatin1String("item"));
 
@@ -552,14 +557,6 @@ void DupeScanDialog::addItemInfoToXml(ItemInfo *item, bool isSocketable, QXmlStr
     xml.writeTextElement(QLatin1String("ilvl"), QString::number(item->ilvl));
     xml.writeTextElement(QLatin1String("type"), item->itemType.constData());
     xml.writeTextElement(QLatin1String("quality"), metaEnumFromName<Enums::ItemQuality>("ItemQualityEnum").valueToKey(item->quality));
-    if (!isSocketable)
-    {
-        xml.writeTextElement(QLatin1String("socketsNumber"), QString::number(item->socketsNumber));
-        xml.writeTextElement(QLatin1String("socketablesNumber"), QString::number(item->socketablesNumber));
-        xml.writeTextElement(QLatin1String("isEthereal"), QString::number(item->isEthereal));
-        xml.writeTextElement(QLatin1String("isRW"), QString::number(item->isRW));
-        xml.writeTextElement(QLatin1String("placement"), QString("location %1, ").arg(metaEnumFromName<Enums::ItemLocation>("ItemLocationEnum").valueToKey(item->location)) + ItemParser::itemStorageAndCoordinatesString("storage %1, row %2, col %3, equipped in %4", item));
-    }
 
     QString desc = PropertiesDisplayManager::completeItemDescription(item, true);
     xml.writeTextElement(QLatin1String("completeDescription"), desc.replace(QLatin1String("\n\n"), QLatin1String("\n")).trimmed());
