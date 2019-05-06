@@ -407,6 +407,15 @@ void DupeScanDialog::scanCharactersInDir(const QString &path)
                 xml.writeTextElement(QLatin1String("isRW"), QString::number(item->isRW));
                 xml.writeTextElement(QLatin1String("placement"), QString("location %1, ").arg(metaEnumFromName<Enums::ItemLocation>("ItemLocationEnum").valueToKey(item->location)) + ItemParser::itemStorageAndCoordinatesString("storage %1, row %2, col %3, equipped in %4", item));
 
+                if (ItemDataBase::isUberCharm(item))
+                    xml.writeTextElement(QLatin1String("isCharm"), QLatin1String("1"));
+                else
+                {
+                    static const QRegExp trophyRegex("^\\[\\d\\d$");
+                    if (QString(item->itemType).contains(trophyRegex))
+                        xml.writeTextElement(QLatin1String("isTrophy"), QLatin1String("1"));
+                }
+
                 if (!item->socketablesInfo.isEmpty())
                 {
                     xml.writeStartElement(QLatin1String("socketables"));
