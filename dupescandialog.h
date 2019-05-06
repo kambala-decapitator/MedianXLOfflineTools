@@ -59,7 +59,7 @@ private:
     void scanCharactersInDir(const QString &path);
     bool saveLog(const QString &fileName, bool isPlainText = true);
     QString baseDupeScanLogFileName();
-    bool addItemInfoToXml(ItemInfo *item, bool isSocketable, QXmlStreamWriter &xml);
+    void addItemInfoToXml(ItemInfo *item, bool isSocketable, QXmlStreamWriter &xml);
 };
 
 #endif // DUPESCANDIALOG_H

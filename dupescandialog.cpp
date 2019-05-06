@@ -400,17 +400,19 @@ void DupeScanDialog::scanCharactersInDir(const QString &path)
             xml.writeStartElement(QLatin1String("items"));
             foreach (ItemInfo *item, ci.items.character)
             {
-                if (!addItemInfoToXml(item, false, xml))
-                    continue;
+                addItemInfoToXml(item, false, xml);
 
                 if (!item->socketablesInfo.isEmpty())
-                    xml.writeStartElement(QLatin1String("socketables"));
-                foreach (ItemInfo *socketableItem, item->socketablesInfo)
                 {
-                    addItemInfoToXml(socketableItem, true, xml);
-                    xml.writeEndElement(); // socketableItem
+                    xml.writeStartElement(QLatin1String("socketables"));
+                    foreach (ItemInfo *socketableItem, item->socketablesInfo)
+                    {
+                        addItemInfoToXml(socketableItem, true, xml);
+                        xml.writeEndElement(); // socketableItem
+                    }
+                    xml.writeEndElement(); // socketables
                 }
-                xml.writeEndElement(); // socketables
+
                 xml.writeEndElement(); // item
             }
             xml.writeEndElement(); // items
@@ -514,7 +516,7 @@ QString DupeScanDialog::baseDupeScanLogFileName()
     return _pathLineEdit->text() + "/MXLOT dupe stats";
 }
 
-bool DupeScanDialog::addItemInfoToXml(ItemInfo *item, bool isSocketable, QXmlStreamWriter &xml)
+void DupeScanDialog::addItemInfoToXml(ItemInfo *item, bool isSocketable, QXmlStreamWriter &xml)
 {
     xml.writeStartElement(QLatin1String("item"));
 
@@ -561,6 +563,4 @@ bool DupeScanDialog::addItemInfoToXml(ItemInfo *item, bool isSocketable, QXmlStr
 
     QString desc = PropertiesDisplayManager::completeItemDescription(item, true);
     xml.writeTextElement(QLatin1String("completeDescription"), desc.replace(QLatin1String("\n\n"), QLatin1String("\n")).trimmed());
-
-    return true;
 }
