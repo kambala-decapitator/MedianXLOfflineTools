@@ -34,8 +34,8 @@ I hope I provided enough anti-hack protection for an average user. If you manage
 [*]single instance[/list][*]and many others ;)[/list][/spoil]
 
 [b]Downloads[/b]:
-[list][*][i]Windows[/i] (XP SP3 and later): http://mxl.vn.cz/kambala/MedianXLOfflineTools_0.5.2.7z (if it doesn't launch, install MSVC++ 2015 Redistributable vc_redist.x[c]86[/c].exe from [url=https://www.mediafire.com/?84qc8d5dy3cd9f6]Mediafire[/url] or from [url=https://www.microsoft.com/en-us/download/details.aspx?id=52685]Microsoft's website[/url])
-[*][i]macOS[/i] (10.9 and later, Intel 64bit): http://mxl.vn.cz/kambala/MedianXLOfflineTools_mac_0.5.2.tbz[/list]
+[list][*][i]Windows[/i] (XP SP3 and later): http://mxl.vn.cz/kambala/MedianXLOfflineTools_0.5.2.1.7z (if it doesn't launch, install MSVC++ 2015 Redistributable vc_redist.x[c]86[/c].exe from [url=https://www.mediafire.com/?84qc8d5dy3cd9f6]Mediafire[/url] or from [url=https://www.microsoft.com/en-us/download/details.aspx?id=52685]Microsoft's website[/url])
+[*][i]macOS[/i] (10.9 and later, Intel 64bit): http://mxl.vn.cz/kambala/MedianXLOfflineTools_mac_0.5.2.1.tbz[/list]
 
 [b]Mini-FAQ:[/b]
 [spoil]Q: I can't unrar the distributed archive without errors :(
@@ -94,13 +94,16 @@ cp -R resources/data/* "${APP_PATH}/Contents/resources/data"[/code][/list][/list
 
 [b]Changelog[/b]:
 
-[i]v0.5.2 (06.05.2019)[/i]
+[i]v0.5.2.1 (07.05.2019)[/i]
+[list][f] improve parsing of merc/Iron Golem items to prevent error in rare cases
+[/list]
+Older versions:
+[spoil][i]v0.5.2 (06.05.2019)[/i]
 [list][+] display item used to create Iron Golem
 [f] fix duping when moving to/from PlugY stash
 [-] don't display corpse items (in Sigma there're no corpses)
 [/list]
-Older versions:
-[spoil][i]v0.5.1 (17.02.2019)[/i]
+[i]v0.5.1 (17.02.2019)[/i]
 [list][+] moving selected item to/from shared PlugY stash: context menu command and Alt+Click hotkey
 [+] moving all currently visible items to last page in the shared PlugY stash: button in the bottom
 [f] disenchanting logic matches Sigma
