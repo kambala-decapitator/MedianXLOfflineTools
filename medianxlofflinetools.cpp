@@ -2175,10 +2175,21 @@ bool MedianXLOfflineTools::processSaveFile()
     if (charInfo.mercenary.exists)
     {
         inputDataStream.skipRawData(ItemParser::kItemHeader.length()); // JM
+
+        // find iron golem header
+        int golemHeaderPos = -1, golemFlagPos;
+        char golemFlag;
+        do
+        {
+            golemHeaderPos = _saveFileContents.lastIndexOf(kIronGolemHeader, golemHeaderPos);
+            golemFlagPos = golemHeaderPos + kIronGolemHeader.length();
+            golemFlag = _saveFileContents.mid(golemFlagPos, 1).at(0);
+        } while (!((!golemFlag && golemFlagPos == _saveFileContents.size() - 1) || (golemFlag && _saveFileContents.mid(golemFlagPos + 1, ItemParser::kItemHeader.length()) == ItemParser::kItemHeader)));
+
         quint16 mercItemsTotal;
         inputDataStream >> mercItemsTotal;
         ItemsList mercItems;
-        ItemParser::parseItemsToBuffer(mercItemsTotal, inputDataStream, _saveFileContents.left(_saveFileContents.indexOf(kIronGolemHeader, inputDataStream.device()->pos())), tr("Corrupted item detected in %1 in slot %4"), &mercItems);
+        ItemParser::parseItemsToBuffer(mercItemsTotal, inputDataStream, _saveFileContents.left(golemHeaderPos), tr("Corrupted item detected in %1 in slot %4"), &mercItems);
         foreach (ItemInfo *item, mercItems)
             item->location = ItemLocation::Merc;
         itemsBuffer += mercItems;
