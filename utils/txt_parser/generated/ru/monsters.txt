@@ -934,7 +934,7 @@
 932	Fata Morgana
 933	Fallen One
 934	Poison Spitter
-935	Amazon Warrior
+935	\gold;Kethryes
 936	Amazon Warrior
 937	Slayer
 938	Skeleton Archer
@@ -1028,7 +1028,8 @@
 1027	Thunder Bear
 1028	Possessed Cultist
 1031	Malic's Messenger
-1033	BossSunless
+1032	Тотем Venomcloud
+1033	Sunless Angel
 1034	Dark Templar
 1036	Ethereal
 1037	Lightwell
@@ -1052,6 +1053,9 @@
 1058	Chimaera Trap
 1059	Lord Primus
 1060	Gore Crawler
+1061	Blood Skeleton
+1062	Night Hawk
+1063	Abyss Knight
 1067	Undead Counselor
 1068	Undead Counselor
 1069	Lord Aldric Jitan
@@ -2230,3 +2234,307 @@
 2450	AC-1 Hammer Bot
 2451	RC-2 Heavy Drone
 2452	RC-1 Light Drone
+2453	Remade Flesh
+2454	Remade Flesh
+2455	Remade Flesh
+2456	Remade Flesh
+2457	Remade Flesh
+2458	Remade Flesh
+2459	Remade Flesh
+2460	Remade Flesh
+2461	Remade Flesh
+2462	Remade Flesh
+2463	Remade Flesh
+2464	Remade Flesh
+2465	Remade Flesh
+2466	Remade Flesh
+2467	Remade Flesh
+2468	Erinys
+2469	Erinys
+2470	Erinys
+2471	Erinys
+2472	Erinys
+2473	Erinys
+2474	Erinys
+2475	Erinys
+2476	Erinys
+2477	Erinys
+2478	Erinys
+2479	Erinys
+2480	Erinys
+2481	Erinys
+2482	Erinys
+2483	Colossal Tunneler
+2484	Colossal Tunneler
+2485	Colossal Tunneler
+2486	Colossal Tunneler
+2487	Colossal Tunneler
+2488	Colossal Tunneler
+2489	Colossal Tunneler
+2490	Colossal Tunneler
+2491	Colossal Tunneler
+2492	Colossal Tunneler
+2493	Colossal Tunneler
+2494	Colossal Tunneler
+2495	Colossal Tunneler
+2496	Colossal Tunneler
+2497	Colossal Tunneler
+2498	Sinew Shaper
+2499	Sinew Shaper
+2500	Sinew Shaper
+2501	Sinew Shaper
+2502	Sinew Shaper
+2503	Sinew Shaper
+2504	Sinew Shaper
+2505	Sinew Shaper
+2506	Sinew Shaper
+2507	Sinew Shaper
+2508	Sinew Shaper
+2509	Sinew Shaper
+2510	Sinew Shaper
+2511	Sinew Shaper
+2512	Sinew Shaper
+2513	Remade Flesh
+2514	Remade Flesh
+2515	Remade Flesh
+2516	Remade Flesh
+2517	Remade Flesh
+2518	Remade Flesh
+2519	Remade Flesh
+2520	Remade Flesh
+2521	Remade Flesh
+2522	Remade Flesh
+2523	Remade Flesh
+2524	Remade Flesh
+2525	Remade Flesh
+2526	Remade Flesh
+2527	Remade Flesh
+2528	Observer
+2529	Observer
+2530	Observer
+2531	Observer
+2532	Observer
+2533	Observer
+2534	Observer
+2535	Observer
+2536	Observer
+2537	Observer
+2538	Observer
+2539	Observer
+2540	Observer
+2541	Observer
+2542	Observer
+2543	Twisted Necrobot
+2544	Twisted Necrobot
+2545	Twisted Necrobot
+2546	Twisted Necrobot
+2547	Twisted Necrobot
+2548	Twisted Necrobot
+2549	Twisted Necrobot
+2550	Twisted Necrobot
+2551	Twisted Necrobot
+2552	Twisted Morlu
+2553	Twisted Morlu
+2554	Twisted Morlu
+2555	Twisted Morlu
+2556	Twisted Morlu
+2557	Twisted Morlu
+2558	Twisted Morlu
+2559	Twisted Morlu
+2560	Twisted Morlu
+2561	Sapphire Knight
+2562	Sapphire Knight
+2563	Sapphire Knight
+2564	Sapphire Knight
+2565	Sapphire Knight
+2566	Sapphire Knight
+2567	Sapphire Knight
+2568	Sapphire Knight
+2569	Sapphire Knight
+2570	Corrupted Amazon
+2571	Corrupted Amazon
+2572	Corrupted Amazon
+2573	Corrupted Amazon
+2574	Corrupted Amazon
+2575	Corrupted Amazon
+2576	Corrupted Amazon
+2577	Corrupted Amazon
+2578	Corrupted Amazon
+2579	Corrupted Amazon
+2580	Corrupted Amazon
+2581	Corrupted Amazon
+2582	Corrupted Amazon
+2583	Corrupted Amazon
+2584	Corrupted Assassin
+2585	Corrupted Assassin
+2586	Corrupted Assassin
+2587	Corrupted Assassin
+2588	Corrupted Assassin
+2589	Corrupted Assassin
+2590	Corrupted Assassin
+2591	Corrupted Assassin
+2592	Corrupted Assassin
+2593	Corrupted Assassin
+2594	Corrupted Assassin
+2595	Corrupted Assassin
+2596	Corrupted Assassin
+2597	Corrupted Assassin
+2598	Corrupted Barbarian
+2599	Corrupted Barbarian
+2600	Corrupted Barbarian
+2601	Corrupted Barbarian
+2602	Corrupted Barbarian
+2603	Corrupted Barbarian
+2604	Corrupted Barbarian
+2605	Corrupted Barbarian
+2606	Corrupted Barbarian
+2607	Corrupted Barbarian
+2608	Corrupted Barbarian
+2609	Corrupted Barbarian
+2610	Corrupted Barbarian
+2611	Corrupted Barbarian
+2612	Abyssal Shrine
+2613	Abyssal Shrine
+2614	Astrogha
+2615	Astrogha
+2616	Astrogha
+2617	Astrogha
+2618	Astrogha
+2619	Astrogha
+2620	Astrogha
+2621	Astrogha
+2622	Astrogha
+2623	Astrogha
+2624	Archbishop Lazarus
+2625	Archbishop Lazarus
+2626	Archbishop Lazarus
+2627	Archbishop Lazarus
+2628	Archbishop Lazarus
+2629	Archbishop Lazarus
+2630	Archbishop Lazarus
+2631	Archbishop Lazarus
+2632	Archbishop Lazarus
+2633	Archbishop Lazarus
+2634	Groupie
+2635	Kabraxis, the Thief of Hope 
+2636	Kabraxis, the Thief of Hope 
+2637	Kabraxis, the Thief of Hope 
+2638	Kabraxis, the Thief of Hope 
+2639	Kabraxis, the Thief of Hope 
+2640	Kabraxis, the Thief of Hope 
+2641	Kabraxis, the Thief of Hope 
+2642	Kabraxis, the Thief of Hope 
+2643	Kabraxis, the Thief of Hope 
+2644	Kabraxis, the Thief of Hope 
+2645	Lord Aldric Jitan
+2646	Lord Aldric Jitan
+2647	Lord Aldric Jitan
+2648	Lord Aldric Jitan
+2649	Lord Aldric Jitan
+2650	Lord Aldric Jitan
+2651	Lord Aldric Jitan
+2652	Lord Aldric Jitan
+2653	Lord Aldric Jitan
+2654	Lord Aldric Jitan
+2655	Bartuc
+2656	Bartuc
+2657	Bartuc
+2658	Bartuc
+2659	Bartuc
+2660	Bartuc
+2661	Bartuc
+2662	Bartuc
+2663	Bartuc
+2664	Bartuc
+2665	Azmodan, Lord of Sin
+2666	Azmodan, Lord of Sin
+2667	Azmodan, Lord of Sin
+2668	Azmodan, Lord of Sin
+2669	Azmodan, Lord of Sin
+2670	Azmodan, Lord of Sin
+2671	Azmodan, Lord of Sin
+2672	Azmodan, Lord of Sin
+2673	Azmodan, Lord of Sin
+2674	Azmodan, Lord of Sin
+2675	Quov Tsin
+2676	Quov Tsin
+2677	Quov Tsin
+2678	Quov Tsin
+2679	Quov Tsin
+2680	Quov Tsin
+2681	Quov Tsin
+2682	Quov Tsin
+2683	Quov Tsin
+2684	Quov Tsin
+2685	Corrupted Necromancer
+2686	Corrupted Necromancer
+2687	Corrupted Necromancer
+2688	Corrupted Necromancer
+2689	Corrupted Necromancer
+2690	Corrupted Necromancer
+2691	Corrupted Necromancer
+2692	Corrupted Necromancer
+2693	Corrupted Necromancer
+2694	Corrupted Necromancer
+2695	Corrupted Necromancer
+2696	Corrupted Necromancer
+2697	Corrupted Necromancer
+2698	Corrupted Necromancer
+2699	Blood Skeleton
+2700	Blood Skeleton
+2701	Blood Skeleton
+2702	Blood Skeleton
+2703	Blood Skeleton
+2704	Blood Skeleton
+2705	Blood Skeleton
+2706	Blood Skeleton
+2707	Blood Skeleton
+2708	Blood Skeleton
+2709	Blood Skeleton
+2710	Blood Skeleton
+2711	Blood Skeleton
+2712	Blood Skeleton
+2713	Abyss Knight
+2714	Abyss Knight
+2715	Abyss Knight
+2716	Abyss Knight
+2717	Abyss Knight
+2718	Abyss Knight
+2719	Abyss Knight
+2720	Abyss Knight
+2721	Abyss Knight
+2722	Abyss Knight
+2723	Abyss Knight
+2724	Abyss Knight
+2725	Abyss Knight
+2726	Abyss Knight
+2727	Unstable Anomaly
+2728	Unstable Anomaly
+2729	Unstable Anomaly
+2730	Unstable Anomaly
+2731	Unstable Anomaly
+2732	Phoboss, Nephalem's Bane
+2733	Phoboss, Nephalem's Bane
+2734	Phoboss, Nephalem's Bane
+2735	Phoboss, Nephalem's Bane
+2736	Phoboss, Nephalem's Bane
+2737	Navigator
+2738	Navigator
+2739	Navigator
+2740	Navigator
+2741	Navigator
+2742	Navigator
+2743	Navigator
+2744	Navigator
+2745	Navigator
+2746	Navigator
+2747	Gharbad the Weak
+2748	Gharbad the Weak
+2749	Gharbad the Weak
+2750	Gharbad the Weak
+2751	Gharbad the Weak
+2752	Gharbad the Weak
+2753	Gharbad the Weak
+2754	Gharbad the Weak
+2755	Gharbad the Weak
+2756	Gharbad the Weak

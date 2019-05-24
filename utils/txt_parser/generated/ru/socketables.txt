@@ -76,7 +76,7 @@ r24	\purple;Ist Rune	Ист	1		10							1		10							1		10
 r25	\purple;Gul Rune	Гул	43		20							43		20							43		30						
 r26	\purple;Vex Rune	Векс	118		1							118		1							118		1						
 r27	\purple;Ohm Rune	Ом	362		5							362		5							362		5						
-r28	\purple;Lo Rune	Ло	41		25							41		25							41		30						
+r28	\purple;Lo Rune	Ло	41		20							41		20							41		30						
 r29	\purple;Sur Rune	Сур	27		5							27		5							27		15						
 r30	\purple;Ber Rune	Бер	164		5							164		5							164		10						
 r31	\purple;Jah Rune	Джа	16		15							16		15							17		15						
@@ -93,7 +93,7 @@ r41	\purple;Kra Rune	Кра	487		5							487		5							487		5
 r42	\purple;Vith Rune	Вит	492		5							492		5							492		5						
 r43	\purple;No Rune	Но	102		15							102		15							102		15						
 r44	\purple;Yul Rune	Юл	470		10							470		10							470		10						
-r45	\purple;Thai Rune	Таи	39,41,43,45		15							39,41,43,45		15							39,41,43,45		15						
+r45	\purple;Thai Rune	Таи	39,41,43,45		10							39,41,43,45		10							39,41,43,45		10						
 r46	\purple;Rha Rune	Ра	31		200							31		200							31		200						
 r47	\purple;Xar Rune	Ксар	76,77		2							76,77		2							76,77		2						
 r48	\purple;Nih Rune	Них	409		10							409		10							409		10						
@@ -111,7 +111,7 @@ r59	\grey;Elemental Rune\n\purple;Magic Rune	Маг	52,53		13							52,53		13			
 r60	\grey;Elemental Rune\n\purple;Poison Rune	Йад	57,58,59	25	512							57,58,59	25	512				508		7	57,58,59	25	2048				509		7
 r61	\grey;Elemental Rune\n\purple;Light Rune	Мол	50,51		13							50,51		13				508		7	50,51		50				509		7
 r62	\grey;Elemental Rune\n\purple;Ice Rune	Хол	54,55,56		13							54,55,56		13				508		7	54,55,56		50				509		7
-r98	\grey;Legendary Rune\n\purple;Kabraxis' Stone	Ксис	16		30				372		1	16		30				372		1	17		30				372		1
+r98	\grey;Legendary Rune\n\purple;Kabraxis' Stone	Ксис	16		25				372		1	16		25				372		1	17		25				372		1
 skc	\purple;Chipped Skull		16		4							110		1							17		4						
 skf	\purple;Flawed Skull		16		6							110		2							17		6						
 skl	\purple;Flawless Skull		16		8							110		4							17		8						

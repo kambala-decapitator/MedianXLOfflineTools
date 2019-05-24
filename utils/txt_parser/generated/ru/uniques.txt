@@ -38,7 +38,7 @@
 36	Eternal Bone Pile	120	
 37	By Robert Marks\nDemonsbane	120	demonsbaneZ
 38	Weather Control	120	
-39	Lylia's Curse	120	
+39	Lylia's Curse	125	
 40	Umbaru Treasure	120	
 41	Soul of Kabraxis	120	
 42	Golden Cycle	120	
@@ -54,25 +54,25 @@
 52	Rathma's Supremacy	130	
 53	\gold;Neutrality Pact	130	
 54	Vial of Elder Blood	135	
-55	Placeholder	0	
-56	Placeholder	0	
+55	''The Worst Beta I've Been In''	666	
+56	Spirit of Creation	120	
 57	Placeholder	0	
 58	Placeholder	0	
 59	Placeholder	0	
 60	Placeholder	0	
 61	Placeholder	0	
 62	Placeholder	0	
-63	Griswold's Heart	12	
-64	Griswold's Heart	60	
-65	Griswold's Heart	90	
+63	Griswold's Heart	10	
+64	Griswold's Heart	50	
+65	Griswold's Heart	80	
 66	Ring of the Five	100	Ring08
 67	Assur's Bane	100	Ring08
 68	\gold;Ring of Pride	0	invrinquest
 69	Quest Ring\nSigil of the 7 Deadly Sins	130	invrinquest
 70	\gold;(Secret)\nValkyrie's Prime	110	
-71	Зловредность	125	
-72	Опустошение	125	
-73	Подавленность	125	
+71	Maleficence	125	
+72	Desolation	125	
+73	Despondence	125	
 74	Celestial Sigil	125	invamu
 75	Catechumen	7	
 76	Catechumen	25	
@@ -338,14 +338,14 @@
 336	Bonechewer	22	
 337	Bonechewer	39	
 338	Bonechewer	48	
-339	Fauztin's Visage	7	
-340	Fauztin's Visage	25	
-341	Fauztin's Visage	42	
-342	Fauztin's Visage	51	
-343	Ravenflock	11	
-344	Ravenflock	29	
-345	Ravenflock	47	
-346	Ravenflock	55	
+339	Fauztin's Visage	11	
+340	Fauztin's Visage	37	
+341	Fauztin's Visage	61	
+342	Fauztin's Visage	75	
+343	Ravenflock	16	
+344	Ravenflock	45	
+345	Ravenflock	70	
+346	Ravenflock	84	
 347	Frostbringer	7	
 348	Frostbringer	26	
 349	Frostbringer	45	
@@ -1383,7 +1383,7 @@
 1381	Gaze of the Dead	120	
 1382	Black Masquerade	125	
 1383	Rainbow Fury	100	
-1384	The Collector	100	
+1384	The Collector	110	
 1385	Storm Focus	100	
 1386	The Pyre	100	
 1387	Mad King's Spine	100	
@@ -1444,7 +1444,7 @@
 1442	Segnitia	100	
 1443	Blacktongue	100	
 1444	Carsomyr	100	
-1445	Hanfod Tân	666	
+1445	Hanfod Tan	666	
 1446	The Searing Heat	100	flammeen
 1447	The Biting Frost	100	flammeen
 1448	Warshrike	100	
@@ -1704,4 +1704,11 @@
 1702	Dark Guardian	100	
 1703	Feardrinker	100	
 1704	Phoenix Beak	100	
-1705	Hanfod Tân	100	
+1705	Hanfod Tan	100	
+1706	Dimensional Key	130	
+1707	King's Desire	100	
+1708	Smokeless Fire	100	invwndur
+1709	Grim Visor	100	
+1710	Iron Shard	100	
+1711	The Worshipper	120	
+1712	Malevolence	100	
