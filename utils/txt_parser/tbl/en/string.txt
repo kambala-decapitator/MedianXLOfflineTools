@@ -9186,7 +9186,7 @@
 "ModitemExtraAllPets"	"to All Maximum Minions"
 "ItemmodAllMaxRes"	"Maximum Elemental Resists"
 "ModitemPaganB"	"to All Skills when using an Apple"
-"ModitemRunemaster"	"to Defense per Socketed Rune"
+"ModitemRunemaster"	"to Runemaster Defense Bonus"
 "ModitemMoreBarbs"	"to Maximum Barbarian Minions"
 "ModitemExtraPets"	"to Maximum Necromancer Minions"
 "ModitemdamPMsk"	"to Physical/Magic Spell Damage"

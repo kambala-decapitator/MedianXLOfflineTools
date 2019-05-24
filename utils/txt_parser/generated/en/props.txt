@@ -390,7 +390,7 @@
 478	0	1							Socketed (1)\nLevel 20 Warp Field Aura	Socketed (1)\nLevel 20 Warp Field Aura		3	6	0					item_desc_instructions
 479	0	4							Maximum Skill Level Increased by	Maximum Skill Level Increased by		3	74	2					skill_more
 480	0	5							to Vitality per Socketed Gem	to Vitality per Socketed Gem		1	80	1					item_skill_paragon
-481	0	5							to Defense per Socketed Rune	to Defense per Socketed Rune		4	79	1					item_skill_runemaster
+481	0	5							to Runemaster Defense Bonus	to Runemaster Defense Bonus		4	79	1					item_skill_runemaster
 482	0	10																	item_gem_paragon
 483	0	10																	item_rune_runemaster
 485	200	10							Energy Factor to Spell Damage	Energy Factor to Spell Damage		1	200	1					enr_factor
