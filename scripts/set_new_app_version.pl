@@ -3,9 +3,10 @@
 use strict;
 use File::Slurp qw(edit_file edit_file_lines);
 
-die "usage: perl set_new_app_version.pl <project name> <version> [info.plist path]" if scalar(@ARGV) < 2;
+die "usage: perl set_new_app_version.pl <Qt project name> <MSVS project name> <version> [info.plist path]" if scalar(@ARGV) < 2;
 
-my $projName = shift;
+my $qtProjName = shift;
+my $msvsProjName = shift;
 
 my $versionComponents = 4;
 my $newVersion = shift;
@@ -16,10 +17,10 @@ push @versionNumbers, (0) x ($versionComponents - scalar(@versionNumbers));
 my $newDefinesMsvs = '';
 for my $i (1..$versionComponents) { $newDefinesMsvs = $newDefinesMsvs."NVER$i=$versionNumbers[$i-1];" }
 $newDefinesMsvs = $newDefinesMsvs."NVER_STRING=\"$newVersion\";";
-edit_file { s/NVER1=.+";/$newDefinesMsvs/g } "$projName.vcxproj";
+edit_file { s/NVER1=.+";/$newDefinesMsvs/g } "$msvsProjName";
 
 # QtCreator's .pro
-edit_file { for my $i (1..$versionComponents) { s/(?<=NVER$i = ).+/$versionNumbers[$i-1]/ } } "$projName.pro";
+edit_file { for my $i (1..$versionComponents) { s/(?<=NVER$i = ).+/$versionNumbers[$i-1]/ } } "$qtProjName";
 
 # increment info.plist's bundle version
 my $infoPlistPath = shift;
