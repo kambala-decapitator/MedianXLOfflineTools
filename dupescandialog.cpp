@@ -6,6 +6,7 @@
 #include "propertiesdisplaymanager.h"
 #include "resourcepathmanager.hpp"
 #include "xmlwriter.h"
+#include "jsonwriter.h"
 
 #include <QLineEdit>
 #include <QTextEdit>
@@ -338,7 +339,18 @@ void DupeScanDialog::scanCharactersInDir(const QString &path)
         const CharacterInfo &ci = CharacterInfo::instance();
         if (_isDumpItemsMode)
         {
-            IKeyValueWriter *charDumper = new XMLWriter(QLatin1String("char"));
+            IKeyValueWriter *charDumper;
+            QString extension;
+            if (1)
+            {
+                charDumper = new XMLWriter(QLatin1String("char"));
+                extension = QLatin1String(".xml");
+            }
+            else
+            {
+                charDumper = new JSONWriter;
+                extension = QLatin1String(".json");
+            }
 
             // info
             const CharacterInfo::CharacterInfoBasic &bci = ci.basicInfo;
@@ -420,7 +432,7 @@ void DupeScanDialog::scanCharactersInDir(const QString &path)
             }
             charDumper->addDataFromArray(QLatin1String("items"), QLatin1String("item"), itemsKeyValue);
 
-            QFile outFile(fileInfo.absoluteFilePath() + ".xml");
+            QFile outFile(fileInfo.absoluteFilePath() + extension);
             if (outFile.open(QIODevice::WriteOnly))
                 outFile.write(charDumper->write());
             else
