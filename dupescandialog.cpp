@@ -18,6 +18,7 @@
 #include <QCheckBox>
 #include <QProgressBar>
 #include <QApplication>
+#include <QMenu>
 
 #include <QDir>
 #include <QFile>
@@ -124,6 +125,17 @@ DupeScanDialog::DupeScanDialog(const QString &currentPath, bool isDumpItemsMode,
     hbl->addWidget(browseButton);
 
     QPushButton *scanButton = new QPushButton("Scan!", this), *okButton = new QPushButton("OK", this);
+    if (isDumpItemsMode)
+    {
+        QMenu *formatMenu = new QMenu(scanButton);
+        formatMenu->addAction(QLatin1String("XML"));
+        formatMenu->addAction(QLatin1String("JSON"));
+        scanButton->setMenu(formatMenu);
+        connect(formatMenu, SIGNAL(triggered(QAction *)), SLOT(dumpFormatSelected(QAction *)));
+    }
+    else
+        connect(scanButton, SIGNAL(clicked()), SLOT(scan()));
+
     QHBoxLayout *hbl2 = new QHBoxLayout;
     hbl2->addWidget(scanButton);
     hbl2->addWidget(_saveButton);
@@ -150,7 +162,6 @@ DupeScanDialog::DupeScanDialog(const QString &currentPath, bool isDumpItemsMode,
     resize(600, 400);
 
     connect(browseButton, SIGNAL(clicked()), SLOT(selectPath()));
-    connect(scanButton,   SIGNAL(clicked()), SLOT(scan()));
     connect(_saveButton,  SIGNAL(clicked()), SLOT(save()));
     connect(okButton,     SIGNAL(clicked()), SLOT(accept()));
 
@@ -284,6 +295,12 @@ void DupeScanDialog::crossCheckResultReady(int i)
         appendStringToLog(result);
 }
 
+void DupeScanDialog::dumpFormatSelected(QAction *action)
+{
+    _dumpFormat = action->text().toLower();
+    scan();
+}
+
 void DupeScanDialog::appendStringToLog(const QString &s)
 {
     QMetaObject::invokeMethod(_logBrowser, "append", Q_ARG(QString, s));
@@ -340,17 +357,10 @@ void DupeScanDialog::scanCharactersInDir(const QString &path)
         if (_isDumpItemsMode)
         {
             IKeyValueWriter *charDumper;
-            QString extension;
-            if (1)
-            {
+            if (_dumpFormat == QLatin1String("xml"))
                 charDumper = new XMLWriter(QLatin1String("char"));
-                extension = QLatin1String(".xml");
-            }
             else
-            {
                 charDumper = new JSONWriter;
-                extension = QLatin1String(".json");
-            }
 
             // info
             const CharacterInfo::CharacterInfoBasic &bci = ci.basicInfo;
@@ -432,7 +442,7 @@ void DupeScanDialog::scanCharactersInDir(const QString &path)
             }
             charDumper->addDataFromArray(QLatin1String("items"), QLatin1String("item"), itemsKeyValue);
 
-            QFile outFile(fileInfo.absoluteFilePath() + extension);
+            QFile outFile(fileInfo.absoluteFilePath() + QString(".%1").arg(_dumpFormat));
             if (outFile.open(QIODevice::WriteOnly))
                 outFile.write(charDumper->write());
             else

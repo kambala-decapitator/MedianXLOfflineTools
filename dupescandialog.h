@@ -39,9 +39,10 @@ private slots:
     void scanFinished_();
     void save();
     void crossCheckResultReady(int i);
+    void dumpFormatSelected(QAction *action);
 
 private:
-    QString _currentCharPath, _loadingMessage;
+    QString _currentCharPath, _loadingMessage, _dumpFormat;
     bool _isDumpItemsMode;
     ItemsHash _allItemsHash;
     QFutureWatcher<QString> *_futureWatcher;
