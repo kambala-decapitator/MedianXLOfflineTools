@@ -432,8 +432,11 @@ void DupeScanDialog::scanCharactersInDir(const QString &path)
             foreach (ItemInfo *item, ci.items.character)
             {
                 keyValue = keyValueFromItem(item);
-                keyValue[QLatin1String("socketsNumber")] = item->socketsNumber;
-                keyValue[QLatin1String("socketablesNumber")] = item->socketablesNumber;
+                if (item->isExtended)
+                {
+                    keyValue[QLatin1String("socketsNumber")] = item->isSocketed ? item->socketsNumber : 0;
+                    keyValue[QLatin1String("socketablesNumber")] = item->socketablesNumber;
+                }
                 keyValue[QLatin1String("isEthereal")] = item->isEthereal;
                 keyValue[QLatin1String("isRW")] = item->isRW;
                 keyValue[QLatin1String("placement")] = QString("location %1, ").arg(metaEnumFromName<Enums::ItemLocation>("ItemLocationEnum").valueToKey(item->location)) + ItemParser::itemStorageAndCoordinatesString("storage %1, row %2, col %3, equipped in %4", item);
