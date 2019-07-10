@@ -393,20 +393,20 @@ void DupeScanDialog::scanCharactersInDir(const QString &path)
             // stats
             quint32 exp = ci.valueOfStatistic(Enums::CharacterStats::Experience), prevExp = _experienceTable.at(bci.level - 1);
             keyValue.clear();
-            keyValue[QLatin1String("level")] = QString::number(bci.level);
-            keyValue[QLatin1String("experience")] = QString::number(exp);
-            keyValue[QLatin1String("progress")] = QString::number(static_cast<double>(exp - prevExp) / (_experienceTable.at(bci.level) - prevExp) * 100, 'f', 0) + QLatin1String("%");
-            keyValue[QLatin1String("strength")] = QString::number(ci.valueOfStatistic(Enums::CharacterStats::Strength));
-            keyValue[QLatin1String("life")] = QString::number(ci.valueOfStatistic(Enums::CharacterStats::Life));
-            keyValue[QLatin1String("base_life")] = QString::number(ci.valueOfStatistic(Enums::CharacterStats::BaseLife));
-            keyValue[QLatin1String("dexterity")] = QString::number(ci.valueOfStatistic(Enums::CharacterStats::Dexterity));
-            keyValue[QLatin1String("mana")] = QString::number(ci.valueOfStatistic(Enums::CharacterStats::Mana));
-            keyValue[QLatin1String("base_mana")] = QString::number(ci.valueOfStatistic(Enums::CharacterStats::BaseMana));
-            keyValue[QLatin1String("vitality")] = QString::number(ci.valueOfStatistic(Enums::CharacterStats::Vitality));
-            keyValue[QLatin1String("energy")] = QString::number(ci.valueOfStatistic(Enums::CharacterStats::Energy));
-            keyValue[QLatin1String("stash_gold")] = QString::number(ci.valueOfStatistic(Enums::CharacterStats::StashGold));
-            keyValue[QLatin1String("free_stat_points")] = QString::number(ci.valueOfStatistic(Enums::CharacterStats::FreeStatPoints));
-            keyValue[QLatin1String("sol_used")] = QString::number(ci.valueOfStatistic(Enums::CharacterStats::SignetsOfLearningEaten));
+            keyValue[QLatin1String("level")] = bci.level;
+            keyValue[QLatin1String("experience")] = exp;
+            keyValue[QLatin1String("progress")] = QString("%1%").arg(static_cast<double>(exp - prevExp) / (_experienceTable.at(bci.level) - prevExp) * 100, 0, 'f', 0);
+            keyValue[QLatin1String("strength")] = ci.valueOfStatistic(Enums::CharacterStats::Strength);
+            keyValue[QLatin1String("life")] = ci.valueOfStatistic(Enums::CharacterStats::Life);
+            keyValue[QLatin1String("base_life")] = ci.valueOfStatistic(Enums::CharacterStats::BaseLife);
+            keyValue[QLatin1String("dexterity")] = ci.valueOfStatistic(Enums::CharacterStats::Dexterity);
+            keyValue[QLatin1String("mana")] = ci.valueOfStatistic(Enums::CharacterStats::Mana);
+            keyValue[QLatin1String("base_mana")] = ci.valueOfStatistic(Enums::CharacterStats::BaseMana);
+            keyValue[QLatin1String("vitality")] = ci.valueOfStatistic(Enums::CharacterStats::Vitality);
+            keyValue[QLatin1String("energy")] = ci.valueOfStatistic(Enums::CharacterStats::Energy);
+            keyValue[QLatin1String("stash_gold")] = ci.valueOfStatistic(Enums::CharacterStats::StashGold);
+            keyValue[QLatin1String("free_stat_points")] = ci.valueOfStatistic(Enums::CharacterStats::FreeStatPoints);
+            keyValue[QLatin1String("sol_used")] = ci.valueOfStatistic(Enums::CharacterStats::SignetsOfLearningEaten);
             charDumper->addDataFromMap(QLatin1String("stats"), keyValue);
 
             // skills
@@ -418,11 +418,11 @@ void DupeScanDialog::scanCharactersInDir(const QString &path)
                 SkillInfo *skill = ItemDataBase::Skills()->value(skillIndex);
                 keyValue.clear();
                 keyValue[QLatin1String("name")] = skill->name;
-                keyValue[QLatin1String("id")] = QString::number(skillIndex);
-                keyValue[QLatin1String("points")] = QString::number(bci.skillsReadable.at(i));
-                keyValue[QLatin1String("page")] = QString::number(skill->tab);
-                keyValue[QLatin1String("column")] = QString::number(skill->col);
-                keyValue[QLatin1String("row")] = QString::number(skill->row);
+                keyValue[QLatin1String("id")] = skillIndex;
+                keyValue[QLatin1String("points")] = bci.skillsReadable.at(i);
+                keyValue[QLatin1String("page")] = skill->tab;
+                keyValue[QLatin1String("column")] = skill->col;
+                keyValue[QLatin1String("row")] = skill->row;
                 skillsKeyValue += keyValue;
             }
             charDumper->addDataFromArray(QLatin1String("skills"), QLatin1String("skill"), skillsKeyValue);
@@ -432,10 +432,10 @@ void DupeScanDialog::scanCharactersInDir(const QString &path)
             foreach (ItemInfo *item, ci.items.character)
             {
                 keyValue = keyValueFromItem(item);
-                keyValue[QLatin1String("socketsNumber")] = QString::number(item->socketsNumber);
-                keyValue[QLatin1String("socketablesNumber")] = QString::number(item->socketablesNumber);
-                keyValue[QLatin1String("isEthereal")] = QString::number(item->isEthereal);
-                keyValue[QLatin1String("isRW")] = QString::number(item->isRW);
+                keyValue[QLatin1String("socketsNumber")] = item->socketsNumber;
+                keyValue[QLatin1String("socketablesNumber")] = item->socketablesNumber;
+                keyValue[QLatin1String("isEthereal")] = item->isEthereal;
+                keyValue[QLatin1String("isRW")] = item->isRW;
                 keyValue[QLatin1String("placement")] = QString("location %1, ").arg(metaEnumFromName<Enums::ItemLocation>("ItemLocationEnum").valueToKey(item->location)) + ItemParser::itemStorageAndCoordinatesString("storage %1, row %2, col %3, equipped in %4", item);
 
                 if (ItemDataBase::isUberCharm(item))
@@ -591,7 +591,7 @@ QVariantMap DupeScanDialog::keyValueFromItem(ItemInfo *item)
     }
     keyValue[QLatin1String("image")] = imageName.toLower();
 
-    keyValue[QLatin1String("ilvl")] = QString::number(item->ilvl);
+    keyValue[QLatin1String("ilvl")] = item->ilvl;
     keyValue[QLatin1String("type")] = item->itemType.constData();
     keyValue[QLatin1String("quality")] = metaEnumFromName<Enums::ItemQuality>("ItemQualityEnum").valueToKey(item->quality);
     keyValue[QLatin1String("completeDescription")] = PropertiesDisplayManager::completeItemDescription(item, true).replace(QLatin1String("\n\n"), QLatin1String("\n")).trimmed();
