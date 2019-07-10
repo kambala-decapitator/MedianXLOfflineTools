@@ -37,6 +37,8 @@
 #include <QtConcurrentMap>
 #endif
 
+static const QLatin1String XmlFormat("xml"), JsonFormat("json");
+
 
 bool shouldCheckItem(ItemInfo *item)
 {
@@ -128,8 +130,8 @@ DupeScanDialog::DupeScanDialog(const QString &currentPath, bool isDumpItemsMode,
     if (isDumpItemsMode)
     {
         QMenu *formatMenu = new QMenu(scanButton);
-        formatMenu->addAction(QLatin1String("XML"));
-        formatMenu->addAction(QLatin1String("JSON"));
+        foreach (const QString &format, QStringList() << XmlFormat << JsonFormat)
+            formatMenu->addAction(format.toUpper());
         scanButton->setMenu(formatMenu);
         connect(formatMenu, SIGNAL(triggered(QAction *)), SLOT(dumpFormatSelected(QAction *)));
     }
@@ -147,11 +149,26 @@ DupeScanDialog::DupeScanDialog(const QString &currentPath, bool isDumpItemsMode,
     mainLayout->addWidget(_logBrowser);
     mainLayout->addLayout(hbl2);
 
+    QString path;
     QStringList args = qApp->arguments();
-    _isAutoLaunched = args.size() >= 3;
-    if (args.size() == 4)
-        _isVerbose = args.at(2).startsWith(QLatin1String("-v"));
-    QString path = _isAutoLaunched ? args.last() : QFileInfo(currentPath).canonicalPath();
+    int argsSize = args.size();
+    if ((_isAutoLaunched = argsSize >= 3))
+    {
+        path = args.last();
+
+        bool isJson = false;
+        for (int i = 2; i < argsSize - 1; ++i)
+        {
+            QString arg = args.at(i);
+            if (arg.startsWith(QLatin1String("-v")))
+                _isVerbose = true;
+            else if (arg.endsWith(JsonFormat, Qt::CaseInsensitive))
+                isJson = true;
+        }
+        _dumpFormat = isJson ? JsonFormat : XmlFormat;
+    }
+    else
+        path = QFileInfo(currentPath).canonicalPath();
     _pathLineEdit->setText(QDir::toNativeSeparators(path));
 
     _logBrowser->setReadOnly(true);
@@ -357,7 +374,7 @@ void DupeScanDialog::scanCharactersInDir(const QString &path)
         if (_isDumpItemsMode)
         {
             IKeyValueWriter *charDumper;
-            if (_dumpFormat == QLatin1String("xml"))
+            if (_dumpFormat == XmlFormat)
                 charDumper = new XMLWriter(QLatin1String("char"));
             else
                 charDumper = new JSONWriter;
