@@ -5,6 +5,7 @@
 #include "enums.h"
 #include "propertiesdisplaymanager.h"
 #include "resourcepathmanager.hpp"
+#include "xmlwriter.h"
 
 #include <QLineEdit>
 #include <QTextEdit>
@@ -21,8 +22,6 @@
 #include <QFile>
 #include <QRegExp>
 #include <QTimer>
-
-#include <QXmlStreamWriter>
 
 #ifndef QT_NO_DEBUG
 #include <QDebug>
@@ -339,100 +338,93 @@ void DupeScanDialog::scanCharactersInDir(const QString &path)
         const CharacterInfo &ci = CharacterInfo::instance();
         if (_isDumpItemsMode)
         {
-            QString filePath = fileInfo.absoluteFilePath();
-            QFile xmlFile(filePath + ".xml");
-            if (!xmlFile.open(QIODevice::WriteOnly))
-            {
-                appendStringToLog(QString("error writing %1: %2").arg(xmlFile.fileName(), xmlFile.errorString()));
-                goto CHARACTER_END;
-            }
+            IKeyValueWriter *charDumper = new XMLWriter(QLatin1String("char"));
 
-            QXmlStreamWriter xml(&xmlFile);
-            xml.setAutoFormatting(true);
-            xml.writeStartDocument();
-            xml.writeStartElement(QLatin1String("char"));
-
+            // info
             const CharacterInfo::CharacterInfoBasic &bci = ci.basicInfo;
-            xml.writeStartElement(QLatin1String("info"));
-            xml.writeTextElement(QLatin1String("title"), Enums::Progression::titleNameAndMaxDifficultyFromValue(bci.titleCode, bci.classCode >= Enums::ClassName::Necromancer && bci.classCode <= Enums::ClassName::Druid, bci.isHardcore).first);
-            xml.writeTextElement(QLatin1String("name"), bci.originalName);
-            xml.writeTextElement(QLatin1String("class"), Enums::ClassName::classes().at(bci.classCode));
-            xml.writeTextElement(QLatin1String("schc"), bci.isHardcore ? QLatin1String("HC") : QLatin1String("SC"));
-            xml.writeTextElement(QLatin1String("status"), bci.isHardcore && bci.hadDied ? QLatin1String("dead") : QLatin1String("alive"));
-            xml.writeTextElement(QLatin1String("ladder"), QString("%1Ladder").arg(bci.isLadder ? QLatin1String(0) : QLatin1String("Non-")));
-            xml.writeEndElement(); // info
+            QVariantMap keyValue;
+            keyValue[QLatin1String("title")] = Enums::Progression::titleNameAndMaxDifficultyFromValue(bci.titleCode, bci.classCode >= Enums::ClassName::Necromancer && bci.classCode <= Enums::ClassName::Druid, bci.isHardcore).first;
+            keyValue[QLatin1String("name")] = bci.originalName;
+            keyValue[QLatin1String("class")] = Enums::ClassName::classes().at(bci.classCode);
+            keyValue[QLatin1String("schc")] = bci.isHardcore ? QLatin1String("HC") : QLatin1String("SC");
+            keyValue[QLatin1String("status")] = bci.isHardcore && bci.hadDied ? QLatin1String("dead") : QLatin1String("alive");
+            keyValue[QLatin1String("ladder")] = QString("%1Ladder").arg(bci.isLadder ? QLatin1String(0) : QLatin1String("Non-"));
+            charDumper->addDataFromMap(QLatin1String("info"), keyValue);
 
+            // stats
             quint32 exp = ci.valueOfStatistic(Enums::CharacterStats::Experience), prevExp = _experienceTable.at(bci.level - 1);
-            xml.writeStartElement(QLatin1String("stats"));
-            xml.writeTextElement(QLatin1String("level"), QString::number(bci.level));
-            xml.writeTextElement(QLatin1String("experience"), QString::number(exp));
-            xml.writeTextElement(QLatin1String("progress"), QString::number(static_cast<double>(exp - prevExp) / (_experienceTable.at(bci.level) - prevExp) * 100, 'f', 0) + QLatin1String("%"));
-            xml.writeTextElement(QLatin1String("strength"), QString::number(ci.valueOfStatistic(Enums::CharacterStats::Strength)));
-            xml.writeTextElement(QLatin1String("life"), QString::number(ci.valueOfStatistic(Enums::CharacterStats::Life)));
-            xml.writeTextElement(QLatin1String("base_life"), QString::number(ci.valueOfStatistic(Enums::CharacterStats::BaseLife)));
-            xml.writeTextElement(QLatin1String("dexterity"), QString::number(ci.valueOfStatistic(Enums::CharacterStats::Dexterity)));
-            xml.writeTextElement(QLatin1String("mana"), QString::number(ci.valueOfStatistic(Enums::CharacterStats::Mana)));
-            xml.writeTextElement(QLatin1String("base_mana"), QString::number(ci.valueOfStatistic(Enums::CharacterStats::BaseMana)));
-            xml.writeTextElement(QLatin1String("vitality"), QString::number(ci.valueOfStatistic(Enums::CharacterStats::Vitality)));
-            xml.writeTextElement(QLatin1String("energy"), QString::number(ci.valueOfStatistic(Enums::CharacterStats::Energy)));
-            xml.writeTextElement(QLatin1String("stash_gold"), QString::number(ci.valueOfStatistic(Enums::CharacterStats::StashGold)));
-            xml.writeTextElement(QLatin1String("free_stat_points"), QString::number(ci.valueOfStatistic(Enums::CharacterStats::FreeStatPoints)));
-            xml.writeTextElement(QLatin1String("sol_used"), QString::number(ci.valueOfStatistic(Enums::CharacterStats::SignetsOfLearningEaten)));
-            xml.writeEndElement(); // stats
+            keyValue.clear();
+            keyValue[QLatin1String("level")] = QString::number(bci.level);
+            keyValue[QLatin1String("experience")] = QString::number(exp);
+            keyValue[QLatin1String("progress")] = QString::number(static_cast<double>(exp - prevExp) / (_experienceTable.at(bci.level) - prevExp) * 100, 'f', 0) + QLatin1String("%");
+            keyValue[QLatin1String("strength")] = QString::number(ci.valueOfStatistic(Enums::CharacterStats::Strength));
+            keyValue[QLatin1String("life")] = QString::number(ci.valueOfStatistic(Enums::CharacterStats::Life));
+            keyValue[QLatin1String("base_life")] = QString::number(ci.valueOfStatistic(Enums::CharacterStats::BaseLife));
+            keyValue[QLatin1String("dexterity")] = QString::number(ci.valueOfStatistic(Enums::CharacterStats::Dexterity));
+            keyValue[QLatin1String("mana")] = QString::number(ci.valueOfStatistic(Enums::CharacterStats::Mana));
+            keyValue[QLatin1String("base_mana")] = QString::number(ci.valueOfStatistic(Enums::CharacterStats::BaseMana));
+            keyValue[QLatin1String("vitality")] = QString::number(ci.valueOfStatistic(Enums::CharacterStats::Vitality));
+            keyValue[QLatin1String("energy")] = QString::number(ci.valueOfStatistic(Enums::CharacterStats::Energy));
+            keyValue[QLatin1String("stash_gold")] = QString::number(ci.valueOfStatistic(Enums::CharacterStats::StashGold));
+            keyValue[QLatin1String("free_stat_points")] = QString::number(ci.valueOfStatistic(Enums::CharacterStats::FreeStatPoints));
+            keyValue[QLatin1String("sol_used")] = QString::number(ci.valueOfStatistic(Enums::CharacterStats::SignetsOfLearningEaten));
+            charDumper->addDataFromMap(QLatin1String("stats"), keyValue);
 
-            xml.writeStartElement(QLatin1String("skills"));
+            // skills
+            QList<QVariantMap> skillsKeyValue;
             QList<int> skills = Enums::Skills::currentCharacterSkillsIndexes().second;
             for (int i = 0; i < skills.size(); ++i)
             {
                 int skillIndex = skills.at(i);
                 SkillInfo *skill = ItemDataBase::Skills()->value(skillIndex);
-                xml.writeStartElement(QLatin1String("skill"));
-                xml.writeTextElement(QLatin1String("name"), skill->name);
-                xml.writeTextElement(QLatin1String("id"), QString::number(skillIndex));
-                xml.writeTextElement(QLatin1String("points"), QString::number(bci.skillsReadable.at(i)));
-                xml.writeTextElement(QLatin1String("page"), QString::number(skill->tab));
-                xml.writeTextElement(QLatin1String("column"), QString::number(skill->col));
-                xml.writeTextElement(QLatin1String("row"), QString::number(skill->row));
-                xml.writeEndElement(); // skill
+                keyValue.clear();
+                keyValue[QLatin1String("name")] = skill->name;
+                keyValue[QLatin1String("id")] = QString::number(skillIndex);
+                keyValue[QLatin1String("points")] = QString::number(bci.skillsReadable.at(i));
+                keyValue[QLatin1String("page")] = QString::number(skill->tab);
+                keyValue[QLatin1String("column")] = QString::number(skill->col);
+                keyValue[QLatin1String("row")] = QString::number(skill->row);
+                skillsKeyValue += keyValue;
             }
-            xml.writeEndElement(); // skills
+            charDumper->addDataFromArray(QLatin1String("skills"), QLatin1String("skill"), skillsKeyValue);
 
-            xml.writeStartElement(QLatin1String("items"));
+            // items
+            QList<QVariantMap> itemsKeyValue;
             foreach (ItemInfo *item, ci.items.character)
             {
-                addItemInfoToXml(item, xml);
-                xml.writeTextElement(QLatin1String("socketsNumber"), QString::number(item->socketsNumber));
-                xml.writeTextElement(QLatin1String("socketablesNumber"), QString::number(item->socketablesNumber));
-                xml.writeTextElement(QLatin1String("isEthereal"), QString::number(item->isEthereal));
-                xml.writeTextElement(QLatin1String("isRW"), QString::number(item->isRW));
-                xml.writeTextElement(QLatin1String("placement"), QString("location %1, ").arg(metaEnumFromName<Enums::ItemLocation>("ItemLocationEnum").valueToKey(item->location)) + ItemParser::itemStorageAndCoordinatesString("storage %1, row %2, col %3, equipped in %4", item));
+                keyValue = keyValueFromItem(item);
+                keyValue[QLatin1String("socketsNumber")] = QString::number(item->socketsNumber);
+                keyValue[QLatin1String("socketablesNumber")] = QString::number(item->socketablesNumber);
+                keyValue[QLatin1String("isEthereal")] = QString::number(item->isEthereal);
+                keyValue[QLatin1String("isRW")] = QString::number(item->isRW);
+                keyValue[QLatin1String("placement")] = QString("location %1, ").arg(metaEnumFromName<Enums::ItemLocation>("ItemLocationEnum").valueToKey(item->location)) + ItemParser::itemStorageAndCoordinatesString("storage %1, row %2, col %3, equipped in %4", item);
 
                 if (ItemDataBase::isUberCharm(item))
-                    xml.writeTextElement(QLatin1String("isCharm"), QLatin1String("1"));
+                    keyValue[QLatin1String("isCharm")] = QLatin1String("1");
                 else
                 {
                     static const QRegExp trophyRegex("^\\[\\d\\d$");
                     if (QString(item->itemType).contains(trophyRegex))
-                        xml.writeTextElement(QLatin1String("isTrophy"), QLatin1String("1"));
+                        keyValue[QLatin1String("isTrophy")] = QLatin1String("1");
                 }
 
                 if (!item->socketablesInfo.isEmpty())
                 {
-                    xml.writeStartElement(QLatin1String("socketables"));
+                    QVariantList socketables;
                     foreach (ItemInfo *socketableItem, item->socketablesInfo)
-                    {
-                        addItemInfoToXml(socketableItem, xml);
-                        xml.writeEndElement(); // socketableItem
-                    }
-                    xml.writeEndElement(); // socketables
+                        socketables += keyValueFromItem(socketableItem);
+                    keyValue[QLatin1String("socketables")] = socketables;
                 }
 
-                xml.writeEndElement(); // item
+                itemsKeyValue += keyValue;
             }
-            xml.writeEndElement(); // items
+            charDumper->addDataFromArray(QLatin1String("items"), QLatin1String("item"), itemsKeyValue);
 
-            xml.writeEndElement(); // char
-            xml.writeEndDocument();
+            QFile outFile(fileInfo.absoluteFilePath() + ".xml");
+            if (outFile.open(QIODevice::WriteOnly))
+                outFile.write(charDumper->write());
+            else
+                appendStringToLog(QString("error writing %1: %2").arg(outFile.fileName(), outFile.errorString()));
         }
         else
         {
@@ -483,7 +475,6 @@ void DupeScanDialog::scanCharactersInDir(const QString &path)
             _allItemsHash[fileName] = itemsCopy;
         }
 
-CHARACTER_END:
         if (!_isDumpItemsMode && (!_skipEmptyCheckBox->isChecked() || dupedItemFound || !_loadingMessage.isEmpty()))
             appendStringToLog("========================================");
 
@@ -530,16 +521,14 @@ QString DupeScanDialog::baseDupeScanLogFileName()
     return _pathLineEdit->text() + "/MXLOT dupe stats";
 }
 
-void DupeScanDialog::addItemInfoToXml(ItemInfo *item, QXmlStreamWriter &xml)
+QVariantMap DupeScanDialog::keyValueFromItem(ItemInfo *item)
 {
-    xml.writeStartElement(QLatin1String("item"));
+    QVariantMap keyValue;
 
-    xml.writeStartElement(QLatin1String("name"));
     QStringList nameList = ItemDataBase::completeItemName(item, false, false).split(kHtmlLineBreak);
+    keyValue[QLatin1String("name")] = nameList.last();
     if (nameList.size() > 1)
-        xml.writeAttribute(QLatin1String("special"), nameList.first());
-    xml.writeCharacters(nameList.last());
-    xml.writeEndElement(); // name
+        keyValue[QLatin1String("name_special")] = nameList.first();
 
     ItemBase *baseInfo = ItemDataBase::Items()->value(item->itemType);
     QString imageName;
@@ -561,12 +550,11 @@ void DupeScanDialog::addItemInfoToXml(ItemInfo *item, QXmlStreamWriter &xml)
         else
             imageName = baseInfo->imageName;
     }
-    xml.writeTextElement(QLatin1String("image"), imageName.toLower());
+    keyValue[QLatin1String("image")] = imageName.toLower();
 
-    xml.writeTextElement(QLatin1String("ilvl"), QString::number(item->ilvl));
-    xml.writeTextElement(QLatin1String("type"), item->itemType.constData());
-    xml.writeTextElement(QLatin1String("quality"), metaEnumFromName<Enums::ItemQuality>("ItemQualityEnum").valueToKey(item->quality));
-
-    QString desc = PropertiesDisplayManager::completeItemDescription(item, true);
-    xml.writeTextElement(QLatin1String("completeDescription"), desc.replace(QLatin1String("\n\n"), QLatin1String("\n")).trimmed());
+    keyValue[QLatin1String("ilvl")] = QString::number(item->ilvl);
+    keyValue[QLatin1String("type")] = item->itemType.constData();
+    keyValue[QLatin1String("quality")] = metaEnumFromName<Enums::ItemQuality>("ItemQualityEnum").valueToKey(item->quality);
+    keyValue[QLatin1String("completeDescription")] = PropertiesDisplayManager::completeItemDescription(item, true).replace(QLatin1String("\n\n"), QLatin1String("\n")).trimmed();
+    return keyValue;
 }
