@@ -6,7 +6,6 @@ shrinecount	680	cube			1	shrine_counter																														0
 sock	22	cube			14	item_numsockets																													none	0
 upgraded	16	cube			1	item_upgraded																									Laz / Interacts with cubemain.txt		1	1	none	0
 chest_gamble	8	cube			1	trader_chest																									Laz / MC counter		min	max	none	0
-wtf	7	cube			1	brc_complete																									Laz / Interacts with skills.txt		min	max	none	0
 xsignet03	4	cube			1	x_signet03																									Laz / MC counter		min	max	none	0
 xsignet01	3	cube			1	x_signet01																									Laz / MC counter		min	max	none	0
 xsignet02	3	cube			1	x_signet02																									Laz / MC counter		min	max	none	0
@@ -255,7 +254,6 @@ learn-blackroad	14	items			1	learn_blackroad																									Laz / Inter
 learn-ennead	14	items			1	learn_ennead																									Laz / Interacts with skills.txt		min	max	none	0
 needs-lced	14	items			1	item_needschallenged																									Laz / Interacts with cubemain.txt		1 or -1	1 or -1	none	0
 pot-rate	14	items			1	item_faster_potions																									Laz / Interacts with misc.txt		min	max	none	0
-xsignet59	14	items			1	x_signet59																									Laz / MC counter		min	max	none	0
 ac-hth	13	items			1	armorclass_vs_hth																													none	0
 dmg-to-mana	13	items			1	item_damagetomana																													none	0
 stam	13	items			1	maxstamina																													none	0
@@ -263,7 +261,6 @@ heal-thorns	12	items			1	item_healwhenstruck																									Laz / Life 
 maxspirits	12	items			1	skill_ancientspirits_synergy																									Laz / Interacts with skills.txt		min	max	none	0
 pois-len	12	items			1	poisonlength																													none	0
 pierce-fico	11	items			1	passive_fire_pierce			3	passive_cold_pierce																					Laz / Combination affix		min	max	none	0
-desc-dbaura	10	items			1	item_desc_dbaura																									Laz / String for Shedim		1	1	desc string for demon blood aura	0
 lstance-syn	10	items			1	lion_stance_syn																									Laz / Interacts with skills.txt		min	max	none	0
 pois-max	10	items			1	poisonmaxdam																													none	0
 pois-min	10	items			1	poisonmindam																													none	0
@@ -288,7 +285,6 @@ shamans-syn	7	items			1	skill_shamanspath_synergy																									Laz / 
 syn2	7	items			24	special_syn2																														0
 cd-reduce	6	items			24	skill_cooldown_reduce																									Laz / Interacts with skills.txt		min	max	none	0
 cold-thorns	6	items			1	item_attackertakescolddamage																									Laz / Elemental thorns	Frames	min Dmg	max Dmg	does it actually use cold length?	0
-desc-lockout	6	items			1	passive_state_lockout																									Laz / String for Evanescence		1	1	desc string for Evanescence	0
 extra-ficop	6	items			1	passive_fire_mastery			3	passive_cold_mastery			3	passive_pois_mastery																	Laz / EDM%		min	max	also affects elem affixes?	0
 extra-ltng/lvl	6	items			17	passive_ltng_mastery_perlevel																									Laz / Mastery per level	(32nds)			none	0
 item-nodisenchant	6	items			1	item_nodcht																									Laz / MC counter		min	max	none	0
@@ -321,16 +317,12 @@ xsignet64	4	items			1	x_signet64																									Laz / MC counter		min	m
 xsignet65	4	items			1	x_signet65																									Laz / MC counter		min	max	none	0
 assassin-blades	3	items			1	skill_scorpion_blades																									Laz / Interacts with skills.txt		min	max	none	0
 desc-druid	3	items			1	item_desc_druidmorph																									Laz / String for Dead Ringer		1	1	desc string for druid morph on dead ringer	0
-desc-lifespells	3	items			1	item_desc_lifecostspells																									Laz / String for Judas		1	1	none	0
 enr/lvl	3	items			17	item_energy_perlevel																									Energy per Player Level	(32nds)			none	0
 freeze-thorns	3	items			1	item_freezethorns																									Laz / Freezes melee attacker		min	max	none	0
 gehenna	3	items			1	passive_cold_pierce			3	passive_pois_pierce			3	passive_cold_mastery			3	passive_pois_mastery													Laz / Combination affix		min	max	none	0
-mm-syn	3	items			1	passive_missiles_missiles																									Laz / Interacts with skills.txt		min	max	none	0
-acidtrance-syn	2	items			1	passive_acidtrance_synergy																									Laz / Interacts with skills.txt		min	max	none	0
 balance%	2	items			1	item_strength_percent			3	item_energy_percent			3	item_vitality_percent																	Laz / Combination affix		min	max	none	0
 class-restrict	2	items			1	item_class_spec																														0
 courage	2	items			1	strength			3	dexterity			3	vitality			3	item_strength_percent			3	item_dexterity_percent			3	item_vitality_percent					Laz / Combination affix		min	max	none	0
-desc-difficulty	2	items			1	item_desc_hardaura																									Laz / String for Jolly Roger		1 to 15	1 to 15	desc string for hard aura	0
 dex-enr	2	items			1	energy			3	dexterity																					Laz / Combination affix		min	max	none	0
 hpm-str%-enr%	2	items			1	skill_minion_hp_percent			3	item_strength_percent			3	item_energy_percent																	Laz / Combination affix		min	max	none	0
 light-thorns	2	items			1	item_attackertakeslightdamage																													none	0
@@ -344,7 +336,6 @@ strvit	2	items			1	strength			3	vitality																					Laz / Combination a
 all-thorns	1	items			1	item_attackertakesfiredamage			3	item_attackertakescolddamage			3	item_attackertakeslightdamage																	Laz / Combination affix		min	max	does it actually use cold length?	0
 arc-synergy	1	items			1	skill_arcanestrike_synergy																									Laz / Interacts with skills.txt		min	max	none	0
 crush-vit%	1	items			1	item_crushingblow			3	item_vitality_percent																					Laz / Interacts with skills.txt		min	max	none	0
-desc_fatasstriton	1	items			1	desc-fatasstriton																											1	1		0
 desc_superbeasty	1	items			1	desc-superbeasty																											1	1		0
 desc-breaker	1	items			1	item_desc_breaker																									Laz / String for Judas		1	1	none	0
 desc-instructions	1	items			1	item_desc_instructions																									Laz / String for Jolly Roger		1	1	desc string for jolly roger	0
@@ -388,3 +379,8 @@ syn3		items			24	special_syn3																														0
 syn4		items			24	special_syn4																														0
 abs-all%		monster			1	item_absorbfire_percent			3	item_absorblight_percent			3	item_absorbcold_percent			3	item_absorbmagic_percent			3	item_poisonlengthresist													omega	0
 heal-pkill		monster			1	item_healafterplayerkill																									life gained after each player kill					0
+extra-fipo		items			1	passive_fire_mastery			3	passive_pois_mastery																					Laz / Combination affix		min	max	none	0
+trophy-counter		items			1	trophy_counter																									Laz / MC counter		min	max	none	0
+dye		cube			1	item_dyes_color																														0
+anydeath-skill		mon / items			11	item_skillonanydeath																									Proc Skill on getting killed	Skill #	% Chance	Level		0
+samael1		monster			15	item_fasterattackrate			15	item_fastermovevelocity			16	item_absorbfire_percent			16	item_absorblight_percent			16	item_absorbcold_percent			17	item_poisonlengthresist									"min = FRW&IAS, max = abs FCL, layer = plr"	0

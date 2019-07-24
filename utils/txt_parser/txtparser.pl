@@ -177,7 +177,7 @@ my $sets = parsetxt("sets.txt", "#key" => 0, tbl => 1, '!_lodSet' => {col => 2, 
 
 my %greenPropertiesHash, my @greenPropertiesKeys;
 &getSetFixedPropertiesHash(57, 10, \%greenPropertiesHash, \@greenPropertiesKeys);
-my $setItems = parsetxt("setitems.txt", _autoindex=>0, iIName=>0, setKey=>1, rlvl=>8, image=>11, addfunc=>20,
+my $setItems = parsetxt("setitems.txt", _autoindex=>0, iIName=>0, setKey=>1, rlvl=>7, image=>86, addfunc=>93,
                         %greenPropertiesHash, '!_lodSet' => {col => 6, val => $oldSetCond});
 &tblExpandArray($setItems, "iIName", "IName");
 
@@ -635,7 +635,7 @@ sub parsetxt
                 {
                     my $hashRef = $structure{$key};
                     my $s = $cols[$hashRef->{col}];
-                    $ok = 0 if (!defined $s) or (length $s == 0) or ($s =~ /$hashRef->{val}/);
+                    $ok = 0 if (defined $s) and ($s =~ /$hashRef->{val}/);
                     _log ("BAD - !$key");
                 }
                 elsif ($key =~ /^\!/)

@@ -95,6 +95,7 @@ sdst	dstf,ct2w		Druid Staff (Sacred)
 xrun	rune,gem		Elemental Rune
 elix	misc		Elixir
 geme	gem		Emerald
+erun	rune,gem		Enchanted Rune
 gem1	gem		Flawed Gem
 gem3	gem		Flawless Gem
 gem	sock		Gem

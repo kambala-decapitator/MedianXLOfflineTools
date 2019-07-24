@@ -63,7 +63,7 @@
 61		-1				
 62	Hades Gate	6	1	5	3	6
 63	Hailstorm	-1	0	0	0	148
-64	Frozen Orb	-1	3	6	1	56
+64	Frozen Orb	-1	0	0	0	228
 65	Bloodbath	-1	0	0	0	20
 66	Amplify Damage	-1	1	1	2	0
 67	Gamma Field	-1	0	0	0	44
@@ -300,8 +300,8 @@
 298		-1				
 299	Venomous Aura	-1	0	0	0	0
 300		-1				
-301	Sun Strike	0	1	1	1	0
-302	Barrage	0	1	2	1	2
+301	Trinity Arrow	0	1	1	1	0
+302	Barrage	0	1	2	1	86
 303	Phalanx	0	1	3	1	4
 304	Wyrmshot	0	1	5	1	66
 305	Dragonlore	0	1	4	1	62
@@ -328,17 +328,17 @@
 326	Batstrike	6	1	2	1	0
 327	Crucify	6	1	1	1	2
 328	Queen of Blades	6	2	3	1	4
-329	Tiefling Form	6	2	5	3	86
+329	Tiefling Form	6	2	6	2	86
 330	Doom	6	2	5	2	8
 331	Way of the Spider	6	2	2	1	10
 332	Shadow Refuge	6	1	2	3	12
 333	Barrier Strike	6	1	3	3	84
 334	Twin Fang Strike	6	1	3	1	92
 335	Way of the Phoenix	6	2	4	1	18
-336	Cluster Bomb	6	2	1	3	88
-337	Limpet Laser	6	2	3	3	96
-338	Electrofield Sentry	6	2	2	3	80
-339	Fireball Sentry	6	2	4	3	82
+336	Subterfuge	6	2	1	3	108
+337	Catalyst Trap	6	2	4	3	96
+338	Incineration Trap	6	2	2	3	82
+339	Shockwave Trap	6	2	3	3	80
 340	Singularity	6	2	4	2	56
 341	Scorpion Blade	6	1	1	2	30
 342	Storm Crows	6	1	2	2	32
@@ -430,8 +430,8 @@
 428	Plague	3	1	3	1	56
 429	Dragonheart	3	1	4	1	98
 430	Colosseum	3	1	5	1	80
-431	Terror Strike	3	2	1	1	10
-432	Black Sleep	3	2	3	1	60
+431	Grim Presence	3	2	1	1	10
+432	Possession	3	2	3	1	60
 433	Lemures	3	2	2	1	14
 434	Blood Thorns	3	2	4	1	16
 435	Scourge	3	2	5	2	64
@@ -449,7 +449,7 @@
 447	Rapture	3	1	2	2	42
 448	Solstice and Equinox	3	1	3	2	44
 449	Sacred Armor	3	1	4	2	46
-450	Hymn	3	2	5	1	48
+450	Sanguine Covenant	3	2	5	1	48
 451	Flamefront	1	1	1	1	62
 452	Living Flame	1	1	2	1	102
 453	Flamestrike	1	1	3	1	4
@@ -520,7 +520,7 @@
 518	Fire Splash	-1	0	0	0	0
 519		-1				
 520		-1				
-521		-1				
+521	Sun Strike	-1	0	0	0	0
 522		-1				
 523		-1				
 524		-1				
@@ -554,7 +554,7 @@
 552		-1				
 553	Punisher	-1	0	0	0	69
 554	Gift of Inner Fire	-1	0	0	0	0
-555	Frozen Orb	-1	3	6	1	56
+555	Frozen Orb	-1	0	0	0	228
 556		-1				
 557		-1				
 558	Time Strike	-1	0	0	0	74
@@ -762,7 +762,7 @@
 760	Warp Crash	-1	0	0	0	0
 761	Summon Shock Beast	-1	0	0	0	213
 762	Beacon	-1	3	5	1	60
-763	Demonic Charm	-1	0	0	0	165
+763	Mind Control	-1	0	0	0	165
 764		-1				
 765		-1				
 766	Pyroclastic Flow	-1	0	0	0	150
@@ -940,7 +940,7 @@
 938	Charged Strike	-1	0	0	0	247
 939	Respawner	-1	0	0	0	0
 940		-1				
-941		-1				
+941	Blizzard	-1	3	5	1	46
 942		-1				
 943	Blizzard	-1	3	5	1	46
 944		-1				
@@ -985,8 +985,8 @@
 983	Path of Flames	-1	0	0	0	198
 984	Body of the Savior	-1	0	0	0	129
 985	Iceburst	-1	1	3	2	80
-986		-1				
-987	Frozen Orb	-1	3	6	1	56
+986	Cluster Bomb	-1	2	1	3	88
+987	Frozen Orb	-1	0	0	0	228
 988		-1				
 989		-1				
 990	Balefire	-1	2	2	1	30
@@ -1064,11 +1064,11 @@
 1062	Trinity Beam	-1	0	0	0	0
 1063	\green;Venomcloud Totem	-1	0	0	0	253
 1064		-1				
-1065		-1				
-1066		-1				
+1065	Thunder Arena	-1	0	0	0	184
+1066	Terror Strike	-1	0	0	0	10
 1067		-1				
-1068		-1				
-1069		-1				
+1068	Lightning Fury	-1	0	0	0	254
+1069	Limpet Laser	-1	2	3	3	96
 1070		-1				
 1071		-1				
 1072		-1				
@@ -1291,7 +1291,7 @@
 1289		-1				
 1290		-1				
 1291		-1				
-1292		-1				
+1292	Charged Bolt	-1	2	1	2	4
 1293		-1				
 1294		-1				
 1295		-1				
@@ -1314,7 +1314,7 @@
 1312	Slicer Blade	-1	0	0	0	0
 1313	Lightning Arena	-1	0	0	0	184
 1314	Pestilence	-1	2	5	1	122
-1315	Barrage	-1	1	2	1	2
+1315	Barrage	-1	1	2	1	86
 1316	Phalanx	-1	1	3	1	4
 1317	Magic Missiles	-1	2	1	1	36
 1318	Pounce	-1	1	5	3	70
@@ -1485,7 +1485,7 @@
 1483	Frigid Sphere	-1	1	1	3	10
 1484	Frigid Sphere	-1	1	1	3	10
 1485	Frigid Sphere	-1	1	1	3	10
-1486	Frigid Sphere	-1	1	1	3	10
+1486	Rotting Flesh	-1	2	2	1	114
 1487	Frigid Sphere	-1	1	1	3	10
 1488	Frigid Sphere	-1	1	1	3	10
 1489	Flamestrike	-1	1	3	1	4
@@ -1495,11 +1495,11 @@
 1493	Death Shards	-1	2	2	3	70
 1494		-1				
 1495	Shunpo	-1	0	0	0	189
-1496	Frozen Orb	-1	3	6	1	56
+1496	Frozen Orb	-1	0	0	0	228
 1497	Pestilence	-1	2	5	1	122
 1498	Fortress	-1	2	3	2	34
 1499	Lightning	-1	2	3	2	26
-1500	Frozen Orb	-1	3	6	1	56
+1500	Frozen Orb	-1	0	0	0	228
 1501	Shock Flower	-1	0	0	0	188
 1502	Limpet Laser	-1	2	3	3	96
 1503	Fireball Sentry	-1	2	4	3	82
@@ -1509,3 +1509,19 @@
 1507	Lightning Arena	-1	0	0	0	184
 1508	Flamefront	-1	1	1	1	62
 1509		-1				
+1510	Shunpo	-1	0	0	0	189
+1511		-1				
+1512		-1				
+1513		-1				
+1514		-1				
+1515		-1				
+1516		-1				
+1517		-1				
+1518	Frozen Orb	-1	0	0	0	228
+1519		0				
+1520		4				
+1521		5				
+1522		2				
+1523		3				
+1524		1				
+1525	Artifice Mastery	6	2	5	3	106

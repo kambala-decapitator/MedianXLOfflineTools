@@ -55,7 +55,7 @@ Miscellaneous	misc	Miscellaneous Items							0	0					0	0	0	0		1	0	0	0	0	0	0	0	0	
 Socket Filler	sock						misc		0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
 Second Hand	seco								0	0					0	0	0	0		1	0	0	0	0	0	0	0	0	3		0		0								0
 Staves And Rods	rod						blun		0	0					0	0	0	0		1	0	0	0	0	0	0	0	0	3		0		0								0
-Missile	misl						misc	myor	0	0					0	0	0	0			0	0	0	0	1	1	1	0	3		0		0								0
+Missile	misl	Quivers					misc	myor	0	0					0	0	0	0			0	0	0	0	1	1	1	0	3		0		0								0
 Blunt	blun	Blunt Weapons					mele		0	0					0	0	0	0		1	0	0	0	0	0	0	0	0	3		0		0								0
 Expansion																																									0
 Jewel	jewl	Jewels	63				sock	dcht	0	0					0	0	0	0	1	1	0	0	1	0	0	0	0	0	3		0		6	invjw1	invjw2	invjw3	invjw4	invjw5	invjw6	misc	0
@@ -203,7 +203,7 @@ Sorceress Crystal Sword (Sacred)	sscd	Sorceress Crystal Swords	38				scrd	ct1w	1
 Sorceress Torso	stor	Sorceress Body Armor	58				tors		1	1	tors	tors			0	0	0	0		1	0	0	0	0	6	6	6	0	2		1	sor	0							armo	0
 Sorceress Torso (Sacred)	sstr	Sorceress Body Armor	58				stor	ct2a	1	1	tors	tors			0	0	0	0		1	0	0	0	0	6	6	6	0	2		1	sor	0							armo	0
 Portable Shrine Base Item	waah			portable shrine					0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0							misc	0
-Affix Crystal	asaa			cube reagent					0	0					0	0	0	0			1	0	0	0	0	0	0	0	3		0		0							misc	0
+Affix Crystal	asaa	Mystic Orbs		cube reagent					0	0					0	0	0	0			1	0	0	0	0	0	0	0	3		0		0							misc	0
 Amulet (Sacred)	qamu	Amulets	59				amul		0	1	neck	neck			0	0	0	0	1	1	0	0	0	0	0	0	0	0	3		1		3	invamu1	invamu2	invamu3				misc	0
 Ring (Sacred)	qrin	Rings	60				ring		0	1	rrin	lrin			0	0	0	0	1	1	0	0	0	0	0	0	0	0	3		1		5	invrin1	invrin2	invrin3	invrin4	invrin5		misc	0
 Missile (Sacred)	qmsl						misl		0	0					0	0	0	0	1	1	0	0	0	0	0	0	0	0	3		0		0								0
@@ -224,18 +224,18 @@ Amber	geml						gem		0	0					0	0	0	0			1	0	1	0	0	0	0	0	3		0		0							misc	0
 Mega Ring	kill	Quest Rings	69				misc		0	1	rrin	lrin			0	0	0	0	1	1	0	0	0	0	0	0	0	0	3		1		5	invrin1	invrin2	invrin3	invrin4	invrin5		misc	0
 New Helm	helm	Helms	40				armo	hlm1	1	1	head	head			0	0	0	0		1	0	0	0	0	6	6	6	0	3		1		0							armo	0
 Tier (1-6)	tier	Tiered Items		shard shatter					0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
-Craft Sacred Minor (Armor)	ct1a			shrine craft/bless			sarm	ct1x	0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
-Craft Sacred Major (Armor)	ct2a			shrine craft/bless			sarm	ct2x	0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
-Craft Sacred Minor (Weapon)	ct1w	Crafted One-Handed Weapons		shrine craft/bless			swea	ct1x	0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
-Craft Sacred Major (Weapon)	ct2w	Crafted Two-Handed Weapons		shrine craft/bless			swea	ct2x	0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
-Craft Sacred Minor	ct1x			shrine craft/bless			ssgl		0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
-Craft Sacred Major	ct2x			shrine craft/bless			ssgl		0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
+Craft Sacred Minor (Armor)	ct1a	Armors (except Body Armors)		shrine craft/bless			sarm	ct1x	0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
+Craft Sacred Major (Armor)	ct2a	Body Armors		shrine craft/bless			sarm	ct2x	0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
+Craft Sacred Minor (Weapon)	ct1w	One-Handed Weapons		shrine craft/bless			swea	ct1x	0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
+Craft Sacred Major (Weapon)	ct2w	Two-Handed Weapons		shrine craft/bless			swea	ct2x	0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
+Craft Sacred Minor	ct1x	"One-Handed Weapons, Armors (except Body Armors)"		shrine craft/bless			ssgl		0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
+Craft Sacred Major	ct2x	"Two-Handed Weapons, Body Armors"		shrine craft/bless			ssgl		0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
 Sacred Bow	#bow	Sacred Bows	70	Sky Siege			bow		0	1	rarm	larm	bowq		0	0	0	0		1	0	0	0	0	0	0	0	1	2		0		0							weap	0
 Mass Disenchant	dcht			for arcane crystals/shards					0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
 Sacred Armor	sarm			tcex			ssgl		0	0					0	0	0	0			0	0	0	0	0	0	0	1	3		0		0								0
 Sacred Weapon	swea			tcex			ssgl		0	0					0	0	0	0			0	0	0	0	0	0	0	1	3		0		0								0
 Sacred Group	ssgl						sign		0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
-Unique Mystic orb	asa#			cube reagent					0	0					0	0	0	0			1	0	0	0	0	0	0	0	3		0		0							misc	0
+Unique Mystic orb	asa#	Unique Mystic Orbs		cube reagent					0	0					0	0	0	0			1	0	0	0	0	0	0	0	3		0		0							misc	0
 Druid Gift Box	dbox						fbox		0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
 Necro Gift Box	nbox						fbox		0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
 Pala Gift Box	pbox						fbox		0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
@@ -260,7 +260,7 @@ Rings and Amulets	riam						misc	myor	0	0					0	0	0	0		1	0	0	0	0	0	0	0	0	3		0		0
 SSword	xxx1	Tyrannical Blades		quest			mele		0	1	rarm				0	0	0	0		1	0	0	0	0	0	0	0	0	0		0		0							weap	0
 SBow	xxx2	Voidsworn Bows		quest			bow		0	1	rarm	larm	bowq		0	0	0	0		1	0	0	0	0	0	0	0	0	0		0		0							weap	0
 SStaff	xxx3	Voidforged Staves		quest			mele		0	1	rarm	larm			0	0	0	0		1	0	0	0	0	0	0	0	0	0		0		0							weap	0
-SAmu	xxx4	Amulets		quest			misc		0	1	neck	neck			0	0	0	0		1	0	0	0	0	0	0	0	0	0		0		0								0
+SAmu	xxx4	Quest Amulets		quest			misc		0	1	neck	neck			0	0	0	0		1	0	0	0	0	0	0	0	0	0		0		0								0
 Signetable	sign								0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
 Wirts Leg	wrtl						mace		1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	3		0		0							weap	0
 Horadric Malus	horm						hamm		1	1	rarm	larm			0	0	0	0		1	0	0	0	0	6	6	6	0	3		0		0							weap	0
@@ -269,3 +269,5 @@ Cycle	cycl								0	1					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
 Small Cycle	cyc1						cycl		0	1					0	0	0	0			0	0	0	0	0	0	0	0	3		0		3	invch1	invch4	invch7				misc	0
 Medium Cycle	cyc2						cycl		0	1					0	0	0	0			0	0	0	0	0	0	0	0	3		0		3	invch2	invch5	invch8				misc	0
 Large Cycle	cyc3						cycl		0	1					0	0	0	0			0	0	0	0	0	0	0	0	3		0		3	invch3	invch6	invch9				misc	0
+Trophy	trph								0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
+Enchanted Rune	erun						rune	gem	0	0					0	0	0	0			1	0	1	0	0	0	0	0	3		0		0							misc	0

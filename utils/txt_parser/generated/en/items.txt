@@ -1159,7 +1159,7 @@ wol	Wirt's Other Leg		1	3	1		0	0	0			13	18					invwol		wrtl	1	-1
 &74	\orange;Mystic Orb\nEye of Malic	\blue;+10 Required Level\nAdds 10-20 Cold Damage\nAdds 10-20 Fire Damage\n1% Chance to cast level 47 Frozen Soul on Melee Attack\n1% Chance to cast level 47 Bloodstar on Melee Attack\n\grey;Cube with Item to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_any		asaa,asa#		-1
 &75	\orange;Mystic Orb\nApple of Discord	\blue;+10 Required Level\n+60 to Mana\n+60 to Life\n\grey;Cube with Item to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_any		asaa,asa#		-1
 &76	\orange;Mystic Orb\nIdol of Stars	\blue;+10 Required Level\n+8 to Energy\n+8 to Vitality\n+10 to Dexterity\n+10 to Strength\n\grey;Cube with Any Armor to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_armo		asaa,asa#		-1
-&77	\orange;Mystic Orb\nNagapearl	\blue;+10 Required Level\n15% Magic Find\n15% Gold Find\nAdds Stun Attack: 0.2 seconds\n\grey;Cube with Any Armor to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_armo		asaa,asa#		-1
+&77	\orange;Mystic Orb\nNagapearl	\blue;+10 Required Level\n10% Magic Find\n10% Gold Find\nAdds Stun Attack: 0.2 seconds\n\grey;Cube with Any Armor to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_armo		asaa,asa#		-1
 &78	\orange;Mystic Orb\nThe Moon Crystal	\blue;+10 Required Level\nRegenerate Mana +10%\nLightning Resist 15%\nCold Resist 15%\n10% Cast Speed\n\grey;Cube with Any Armor to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_armo		asaa,asa#		-1
 &79	\orange;Mystic Orb\nAuriel's Focus	\blue;+10 Required Level\nPoison Length Reduced by 5%\n+20 to Energy\n+25% Enhanced Defense\n+2% Bonus to Energy Factor\n\grey;Cube with Any Armor to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_armo		asaa,asa#		-1
 &80	\orange;Mystic Orb\nSolitude	\blue;+10 Required Level\n10% Bonus to Buff/Debuff/Cold Skill Duration\n2% Bonus to all Attributes\n1% Chance to cast level 4 Banish when Struck\n\grey;Cube with Any Armor to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_armo		asaa,asa#		-1
@@ -1201,7 +1201,7 @@ wol	Wirt's Other Leg		1	3	1		0	0	0			13	18					invwol		wrtl	1	-1
 0g2	\red;Elixir of Greater Wealth (Disabled)	+600% Gold Find for 30 seconds	1	1	2		0	0	0									invxyz		hpot		-1
 0g7	\red;Elixir of Power (Disabled)	+5 Skill Levels for 60 seconds	1	1	2		0	0	0									invnpl		hpot		-1
 0g8	\red;Elixir of Love (Disabled)	-50% Vendor Prices for 60 seconds	1	1	2		0	0	0									invpor		hpot		-1
-0o[	Cube Reagent\n\orange;Catalyst of Learning	The Items will be Consumed by the Recipe\n\green;Disenchanting\n\n\grey;(Max: 25)\nCube with Sacred Unique/Set Items to Create Signet of Learning\n	1	1	2		0	0	0									catal1		thng		-1
+0o[	Cube Reagent\n\orange;Catalyst of Learning	The Items will be Consumed by the Recipe\n\green;Disenchanting\n\n\grey;(Max: 25)\n(Weapons and Armor Only)\nCube with Sacred Unique/Set Items to Create Signet of Learning\n	1	1	2		0	0	0									catal1		thng		-1
 0sc	Scroll of Knowledge		1	1	2		0	0	0									invrsc		scro		-1
 0u1	Hammer of the Taan Judges		1	2	2		0	0	0									invhmr		grtz		-1
 10+	Cube Reagent\n\orange;Mystic Orb	\blue;+4 Required Level\nPhysical Damage Reduced by 6\n\grey;Cube with Ring/Amulet/Quiver to Add Bonus\n	1	1	2		0	0	0									orb_misc		asaa		-1
@@ -1472,30 +1472,30 @@ R8+	\orange;Trinity Shrine (2)	\dgrey;(One-Handed Weapons, Other Armor)\n\blue;A
 R9+	\orange;Trinity Shrine (1)	\dgrey;(One-Handed Weapons, Other Armor)\n\blue;Adds 10-20 fire damage\nAdds 14-16 cold damage\nAdds 1-30 lightning damage\n\n\dgrey;(Two-Handed Weapons, Body Armor)\n\blue;-5% to Enemy Fire Resistance\n-5% to Enemy Cold Resistance\n-5% to Enemy Lightning Resistance\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Stone		prsh		-1
 Ysh1	Arcane Seal		1	1	2		0	0	0									lab_rn1		###1		-1
 Ysh2	Necklace		1	1	2		0	0	0									lab_amu		###2		-1
-[01	\orange;Lord Aldric Jitan Trophy	Cube with the Moon of the Spider...	1	1	2		0	0	0									kLAJ		thng		-1
-[02	\orange;Legacy of Blood Trophy	Cube with the Legacy of Blood...	1	1	2		0	0	0									kLegacy		thng		-1
-[03	\orange;Judgement Day Trophy	Cube with the Crystalline Flame Medallion...	1	1	2		0	0	0									kJday		thng		-1
-[04	\orange;Akarat Trophy	Cube with the Visions of Akarat...	1	1	2		0	0	0									kAkarat		thng		-1
-[05	\orange;Kingdom of Shadow Trophy	Cube with the Eternal Bone Pile...	1	1	2		0	0	0									kUreh		thng		-1
-[06	\orange;Duncraig Trophy	Cube with the Demonsbane...	1	1	2		0	0	0									kDuncraig		thng		-1
-[07	\orange;Rathma Square Trophy	Cube with the Spirit Trance Herb...	1	1	2		0	0	0									kRathma		thng		-1
-[08	\orange;Cathedral of Light Trophy	Cube with the Idol of Vanity...	1	1	2		0	0	0									kCoVan		thng		-1
-[09	\orange;Tran Athulua Trophy	Cube with the Sunstone of the Gods...	1	1	2		0	0	0									kTran		thng		-1
-[10	\orange;Quov Tsin Trophy	Cube with the Silver Seal of Ureh...	1	1	2		0	0	0									kTsin		thng		-1
-[11	\orange;Astrogha Trophy	Cube with the Astrogha's Venom Stinger...	1	1	2		0	0	0									kAstrogha		thng		-1
-[12	\orange;The Lord of Sin Trophy	Cube with the Azmodan's Heart...	1	1	2		0	0	0									kAzmodan		thng		-1
-[13	\orange;Viz-jun Trophy	Cube with the Cold Fusion Schematics...	1	1	2		0	0	0									kVizjun		thng		-1
-[14	\orange;Archbishop Lazarus Trophy	Cube with the Glorious Book of Median...	1	1	2		0	0	0									kLazbro		thng		-1
-[15	\orange;Triune Trophy	Cube with the Corrupted Wormhole...	1	1	2		0	0	0									kTR		thng		-1
-[16	\orange;Uldyssian's Trophy	Cube with Angiris' Pact...	1	1	2		0	0	0									kUldyssian		thng		-1
-[17	\orange;Black Road Trophy	Cube with the Soul of Kabraxis...	1	1	2		0	0	0									kKabraxis		thng		-1
+[01	\orange;Lord Aldric Jitan Trophy	\blue;Enhanced Weapon Damage +25%\n\grey;Cube with the Moon of the Spider to Add Bonus:\n	1	1	2		0	0	0									kLAJ		thng,trph		-1
+[02	\orange;Legacy of Blood Trophy	\blue;Total Character Defense +15%\n\grey;Cube with the Legacy of Blood to Add Bonus:\n	1	1	2		0	0	0									kLegacy		thng,trph		-1
+[03	\orange;Judgement Day Trophy	\blue;+5% to All Attributes\n\grey;Cube with the Crystalline Flame Medallion to Add Bonus:\n	1	1	2		0	0	0									kJday		thng,trph		-1
+[04	\orange;Akarat Trophy	\blue;Increase Maximum Life and Mana +5%\n\grey;Cube with the Visions of Akarat to Add Bonus:\n	1	1	2		0	0	0									kAkarat		thng,trph		-1
+[05	\orange;Kingdom of Shadow Trophy	\blue;+1 to All Skills\n\grey;Cube with the Eternal Bone Pile to Add Bonus:\n	1	1	2		0	0	0									kUreh		thng,trph		-1
+[06	\orange;Duncraig Trophy	\blue;+10% Combat Speeds\n\grey;Cube with the Demonsbane to Add Bonus:\n	1	1	2		0	0	0									kDuncraig		thng,trph		-1
+[07	\orange;Rathma Square Trophy	\blue;10% Chance of Uninterruptable Attack\n\grey;Cube with the Spirit Trance Herb to Add Bonus:\n	1	1	2		0	0	0									kRathma		thng,trph		-1
+[08	\orange;Cathedral of Light Trophy	\blue;+10% to Summoned Minion Damage\n+10% to Summoned Minion Life\n\grey;Cube with the Idol of Vanity to Add Bonus:\n	1	1	2		0	0	0									kCoVan		thng,trph		-1
+[09	\orange;Tran Athulua Trophy	\blue;Physical Resist +5%\n\grey;Cube with the Sunstone of the Gods to Add Bonus:\n	1	1	2		0	0	0									kTran		thng,trph		-1
+[10	\orange;Quov Tsin Trophy	\blue;+8% to Spell Damage\n\grey;Cube with the Silver Seal of Ureh to Add Bonus:\n	1	1	2		0	0	0									kTsin		thng,trph		-1
+[11	\orange;Astrogha Trophy	\blue;-5% to Enemy Elemental Resistances\n\grey;Cube with Astrogha's Venom Stinger to Add Bonus:\n	1	1	2		0	0	0									kAstrogha		thng,trph		-1
+[12	\orange;The Lord of Sin Trophy	\blue;+150 to Mana\n+150 to Life\n\grey;Cube with Azmodan's Heart to Add Bonus:\n	1	1	2		0	0	0									kAzmodan		thng,trph		-1
+[13	\orange;Viz-jun Trophy	\blue;+(5-20) to Energy\n+(5-20) to Vitality\n+(5-20) to Dexterity\n+(5-20) to Strength\n\grey;Cube with the Cold Fusion Schematics to Add Bonus:\n	1	1	2		0	0	0									kVizjun		thng,trph		-1
+[14	\orange;Archbishop Lazarus Trophy	\blue;+1 to All Skills\n\grey;Cube with the Glorious Book of Median to Add Bonus:\n	1	1	2		0	0	0									kLazbro		thng,trph		-1
+[15	\orange;Triune Trophy	\blue;+30% Magic Find\n\grey;Cube with the Corrupted Wormhole to Add Bonus:\n	1	1	2		0	0	0									kTR		thng,trph		-1
+[16	\orange;Uldyssian Trophy	\blue;Adds 250-300 Lightning Damage\nAdds 250-300 Cold Damage\nAdds 250-300 Fire Damage\n\grey;Cube with the Neutrality Pact to Add Bonus:\n	1	1	2		0	0	0									kUldyssian		thng,trph		-1
+[17	\orange;Black Road Trophy	\blue;2% Chance to Reanimate as a Random Monster\n\grey;Cube with the Soul of Kabraxis to Add Bonus:\n	1	1	2		0	0	0									kKabraxis		thng,trph		-1
 \\1	\purple;Great Rainbow Stone	Cube All Gems with The Black Road to Add Bonus	1	1	2		0	0	0									og5		thng		-1
 \\2	\purple;Great Skull	Cube All Gems with The Black Road to Add Bonus	1	1	2		0	0	0									invskz		thng		-1
 \\3	\purple;Great Topaz	Cube All Gems with The Black Road to Add Bonus	1	1	2		0	0	0									invgsye		thng		-1
-\\4	\purple;Great Saphire	Cube All Gems with The Black Road to Add Bonus	1	1	2		0	0	0									invgsbe		thng		-1
+\\4	\purple;Great Sapphire	Cube All Gems with The Black Road to Add Bonus	1	1	2		0	0	0									invgsbe		thng		-1
 \\5	\purple;Great Ruby	Cube All Gems with The Black Road to Add Bonus	1	1	2		0	0	0									invgsre		thng		-1
-\\6	\orange;Mythic Cycle		1	1	2		0	0	0									invgcyc		grtz		-1
-\\7	\grey;Quest Item\n\gold;Tome of Possession	\orange;Lure him to Malic, and fool him to kill his master\nUse this book to convert Lucion, Primus of the Triune	2	2	2		0	0	0									invbbb		grtz		-1
+\\6	\gold;Golden Cycle		1	1	2		0	0	0									invgcyc		grtz		-1
+\\7	\grey;Quest Item\n\gold;Tome of Possession	\n\red;... unless it is really necessary?\nkeeping this book in the inventory might be a bad idea\n\n\orange;the book is old, if the spell works, it might not be very reliable\nthe person carrying it and allies next to him become unable to avoid any damage\nafter recovering this book, it seems Lucion's servants have cursed it...\n\n\grey;... maybe Uldyssian wrote this book to defeat Lucion?\nafter some missing pages, you find instructions to mind control demons\nthis strange book appears to have old writings from the edyrem...\n	2	2	2		0	0	0									invbbb		grtz		-1
 \\8	Corrupted Wormhole		1	1	2		0	0	0									invlucion		grtz		-1
 a55	Optical Detector		1	1	2		0	0	0									inveye		grtz		-1
 a56	Azmodan's Heart		1	1	2		0	0	0									invhrt		grtz		-1
@@ -1531,13 +1531,13 @@ brc4	Black Road Challenge\n\orange;Scroll of Knowledge	Cube your Class Charm wit
 brc5	Black Road Challenge\n\orange;Scroll of Blood	You only have 30 seconds after killing the first Boss!\nCube your Class Charm to Complete Trial\n\yellow;Reward\n\n\grey;Kill Skovos and Lycander in less than 30 Seconds\n\yellow;Trial of Blood\n\n\grey;Tran Athulua (Island of Skartara - Halls of the Dead)\n\yellow;Location\n\n\grey;Nightmare\n\yellow;Difficulty\n	1	1	2		0	0	0									ChallengeScroll		thng		-1
 brc6	Black Road Challenge\n\orange;Scroll of Completion	\grey;Cube your Class Charm with 2 Arcane Crystals to Add Bonus\nIf you have completed all five trials:\n\yellow;Black Road Completion\n\n\grey;Anywhere\n\yellow;Location\n\n\grey;Any\n\yellow;Difficulty\n	1	1	2		0	0	0									ChallengeScroll		thng		-1
 brz	Brain		1	1	2		0	0	0									invbrnz		body		-1
-bt01	Consumable\n\orange;Beta Trinket of Grind	\blue;- Grants Experience -	1	1	2		666	0	0									newsignet1		poti		-1
-bt02	Consumable\n\orange;Beta Trinket of Nihlathak	\blue;- Grants 10 Stat Points -	1	1	2		666	0	0									newtokenofter		poti		-1
-bt03	Cube Reagent\n\orange;Beta Trinket of Mephisto	\blue;- Grants 3 Arcane Crystals -	1	1	2		666	0	0									newsignet6		poti		-1
-bt04	Cube Reagent\n\orange;Beta Trinket of Kurast	\blue;- Duplicates Shrines Twice -	1	1	2		666	0	0									newsignet3		poti		-1
-bt05	Cube Reagent\n\orange;Beta Trinket of Chuck	\blue;- Converts Item to Unique (116) -	1	1	2		666	0	0									newsignet5		poti		-1
-bt06	Cube Reagent\n\orange;Beta Trinket of Patience	\blue;- Creates Beta Charm -	1	1	2		666	0	0									newsignet2		poti		-1
-bt99	''The Worst Beta I've Been In''		1	1	2		666	0	0									invsple		grtz		-1
+bt01	Consumable\n\orange;Beta Trinket of Grind	\blue;- Grants Experience -	1	1	2		120	0	0									newsignet1		poti		-1
+bt02	Consumable\n\orange;Beta Trinket of Nihlathak	\blue;- Grants 10 Stat Points -	1	1	2		100	0	0									newtokenofter		poti		-1
+bt03	Cube Reagent\n\orange;Beta Trinket of Mephisto	\blue;- Grants 3 Arcane Crystals -	1	1	2		15	0	0									newsignet6		poti		-1
+bt04	Cube Reagent\n\orange;Beta Trinket of Kurast	\blue;- Duplicates Shrines Twice -	1	1	2		80	0	0									newsignet3		poti		-1
+bt05	Cube Reagent\n\orange;Beta Trinket of Chuck	\blue;- Converts Item to Unique (116) -	1	1	2		120	0	0									newsignet5		poti		-1
+bt06	Cube Reagent\n\orange;Beta Trinket of Patience	\blue;- Creates Beta Charm -	1	1	2		5	0	0									newsignet2		poti		-1
+bt99	''The Worst Beta I've Been In''		1	1	2		5	0	0									invsple		grtz		-1
 bxa	Soul of Kabraxis		1	1	2		100	0	0									braxwhorl		grtz		-1
 c@c	(Sorceress Only)\n\red;Moon Symbol	A blessed symbol of the goddess...	1	1	2		0	0	0									moon1		poti		-1
 cm1	\orange;Cycle		1	1	2		0	0	0									invch1		scha		-1
@@ -1591,11 +1591,11 @@ cy29	\orange;Cycle	\blue;+1 Required Level\n+(0 to 20) to Mana\n+(0 to 20) to Li
 cy30	\orange;Cycle	\blue;+3 Required Level\nMaximum Mana +(0 to 2)%\n+(5 to 30) to Mana\nMaximum Life +(0 to 2)%\n+(5 to 30) to Life\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	2	2		0	0	0									invch2		cyc2,cycl		-1
 cy31	\orange;Cycle	\blue;+5 Required Level\nMaximum Mana +(1 to 3)%\n+(10 to 50) to Mana\nMaximum Life +(1 to 3)%\n+(10 to 50) to Life\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	3	2		0	0	0									invsst		cyc3,cycl		-1
 dog	Apple	Regenerates 1% life per second for 10 minutes	1	1	2		0	0	0									newapple		poti		-1
-dr01	Quest Item\n\gold;Depleted Riftstone (\green;1\gold;)	energy source and allow you to investigate further...\nPerhaps transmuting it with an Arcane Crystal could unleash the\n\nto resemble the Rift activators you have come to know well\nIt certainly did not originate on Sanctuary, and yet it appears\n\ndread as you sense the latent otherworldly energy seeping from it\nThe stone emits a faint glow. Holding it in your hand fills you with\n	1	1	2		0	0	0									DepletedRunestone		thng		-1
-dr02	Quest Item\n\gold;Depleted Riftstone (\green;2\gold;)	Transmute With One Arcane Crystal to Charge\n	1	1	2		0	0	0									DepletedRunestone		thng		-1
-dr03	Quest Item\n\gold;Depleted Riftstone (\green;3\gold;)	Transmute With One Arcane Crystal to Charge\n	1	1	2		0	0	0									DepletedRunestone		thng		-1
-dr04	Quest Item\n\gold;Depleted Riftstone (\green;4\gold;)	Transmute With One Arcane Crystal to Charge\n	1	1	2		0	0	0									DepletedRunestone		thng		-1
-dr05	Quest Item\n\gold;Depleted Riftstone (\green;5\gold;)	Transmute With One Arcane Crystal to Charge\n	1	1	2		0	0	0									DepletedRunestone		thng		-1
+dr01	Quest Item\n\gold;Depleted Riftstone (\green;1\gold;)	energy source and allow you to investigate further...\nPerhaps transmuting it in the Horadric Cube could unleash the\n\nto resemble the Rift activators you have come to know well\nIt certainly did not originate on Sanctuary, and yet it appears\n\ndread as you sense the latent otherworldly energy seeping from it\nThe stone emits a faint glow. Holding it in your hand fills you with\n	1	1	2		0	0	0									DepletedRunestone		thng		-1
+dr02	Quest Item\n\gold;Depleted Riftstone (\green;2\gold;)	Transmute in the Cube to Charge\n	1	1	2		0	0	0									DepletedRunestone		thng		-1
+dr03	Quest Item\n\gold;Depleted Riftstone (\green;3\gold;)	Transmute in the Cube to Charge\n	1	1	2		0	0	0									DepletedRunestone		thng		-1
+dr04	Quest Item\n\gold;Depleted Riftstone (\green;4\gold;)	Transmute in the Cube to Charge\n	1	1	2		0	0	0									DepletedRunestone		thng		-1
+dr05	Quest Item\n\gold;Depleted Riftstone (\green;5\gold;)	Transmute in the Cube to Charge\n	1	1	2		0	0	0									DepletedRunestone		thng		-1
 dr06	Quest Item\n\gold;Depleted Riftstone (\orange;6\gold;)	Transmute With Two Arcane Crystals to Charge\n	1	1	2		0	0	0									DepletedRunestone		thng		-1
 dr07	Quest Item\n\gold;Depleted Riftstone (\orange;7\gold;)	Transmute With Two Arcane Crystals to Charge\n	1	1	2		0	0	0									DepletedRunestone		thng		-1
 dr08	Quest Item\n\gold;Depleted Riftstone (\orange;8\gold;)	Transmute With Two Arcane Crystals to Charge\n	1	1	2		0	0	0									DepletedRunestone		thng		-1
@@ -1607,6 +1607,27 @@ dr13	Quest Item\n\gold;Depleted Riftstone (\red;13\gold;)	Transmute With Three A
 dr14	Quest Item\n\gold;Depleted Riftstone (\red;14\gold;)	Transmute With Three Arcane Crystals to Charge\n	1	1	2		0	0	0									DepletedRunestone		thng		-1
 dr15	Quest Item\n\gold;Depleted Riftstone (\red;15\gold;)	Transmute With Three Arcane Crystals to Charge\n	1	1	2		0	0	0									DepletedRunestone		thng		-1
 dtm	\grey;Cube Reagent\n\orange;Dark Tome	\blue;+1 to Dark Portal\n\grey;Cube with Class Charm to Add Bonus\n	1	2	2		0	0	0									invdtm		thng		-1
+dy01	\orange;Mystic Dye	\blue;Color: White\n\grey;Right-click to set item color	1	1	2		0	0	0									dye-whit-1		thng		-1
+dy02	\orange;Mystic Dye	\blue;Color: Light Grey\n\grey;Right-click to set item color	1	1	2		0	0	0									dye-lgrey-2		thng		-1
+dy03	\orange;Mystic Dye	\blue;Color: Dark Grey\n\grey;Right-click to set item color	1	1	2		0	0	0									dye-dgrey-3		thng		-1
+dy04	\orange;Mystic Dye	\blue;Color: Black\n\grey;Right-click to set item color	1	1	2		0	0	0									dye-black-4		thng		-1
+dy05	\orange;Mystic Dye	\blue;Color: Light Blue\n\grey;Right-click to set item color	1	1	2		0	0	0									dye-lblu-5		thng		-1
+dy06	\orange;Mystic Dye	\blue;Color: Dark Blue\n\grey;Right-click to set item color	1	1	2		0	0	0									dye-dblu-6		thng		-1
+dy07	\orange;Mystic Dye	\blue;Color: Crystal Blue\n\grey;Right-click to set item color	1	1	2		0	0	0									dye-cblu-7		thng		-1
+dy08	\orange;Mystic Dye	\blue;Color: Light Red\n\grey;Right-click to set item color	1	1	2		0	0	0									dye-lred-8		thng		-1
+dy09	\orange;Mystic Dye	\blue;Color: Dark Red\n\grey;Right-click to set item color	1	1	2		0	0	0									dye-dred-9		thng		-1
+dy10	\orange;Mystic Dye	\blue;Color: Crystal Red\n\grey;Right-click to set item color	1	1	2		0	0	0									dye-cred-10		thng		-1
+dy11	\orange;Mystic Dye	\blue;Color: Light Green\n\grey;Right-click to set item color	1	1	2		0	0	0									dye-lgrn-11		thng		-1
+dy12	\orange;Mystic Dye	\blue;Color: Dark Green\n\grey;Right-click to set item color	1	1	2		0	0	0									dye-dgrn-12		thng		-1
+dy13	\orange;Mystic Dye	\blue;Color: Crystal Green\n\grey;Right-click to set item color	1	1	2		0	0	0									dye-cgrn-13		thng		-1
+dy14	\orange;Mystic Dye	\blue;Color: Light Yellow\n\grey;Right-click to set item color	1	1	2		0	0	0									dye-lyel-14		thng		-1
+dy15	\orange;Mystic Dye	\blue;Color: Dark Yellow\n\grey;Right-click to set item color	1	1	2		0	0	0									dye-dyel-15		thng		-1
+dy16	\orange;Mystic Dye	\blue;Color: Light Gold\n\grey;Right-click to set item color	1	1	2		0	0	0									dye-lgld-16		thng		-1
+dy17	\orange;Mystic Dye	\blue;Color: Dark Gold\n\grey;Right-click to set item color	1	1	2		0	0	0									dye-dgld-17		thng		-1
+dy18	\orange;Mystic Dye	\blue;Color: Light Purple\n\grey;Right-click to set item color	1	1	2		0	0	0									dye-lpur-18		thng		-1
+dy19	\orange;Mystic Dye	\blue;Color: Dark Purple\n\grey;Right-click to set item color	1	1	2		0	0	0									dye-dpur-19		thng		-1
+dy20	\orange;Mystic Dye	\blue;Color: Orange\n\grey;Right-click to set item color	1	1	2		0	0	0									dye-oran-20		thng		-1
+dy21	\orange;Mystic Dye	\blue;Color: Bright White\n\grey;Right-click to set item color	1	1	2		0	0	0									dye-bwht-21		thng		-1
 ear	Ear		1	1	2		0	0	0									invear		play		-1
 ebx	Vial of Elder Blood		1	1	2		0	0	0									ElderVial		grtz		-1
 eby	Dimensional Key		1	1	2		0	0	0									DimensionalKey		grtz		-1
@@ -1676,27 +1697,28 @@ ir02	Quest Item\n\gold;Charged Riftstone (\green;2\gold;)	\dgrey;- Transmute -\n
 ir03	Quest Item\n\gold;Charged Riftstone (\green;3\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes may spawn\n\green;Cannot be Chilled or Frozen\n\n\grey;Damage: +20%\nLife: +40%\n	1	1	2		0	0	0									ChargedRunestoneG		thng		-1
 ir04	Quest Item\n\gold;Charged Riftstone (\green;4\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes may spawn\n\green;Immune to Crowd Control, Max Slow Effect: 25%\n\grey;Cannot be Chilled or Frozen\n\nDamage: +30%\nLife: +60%\n	1	1	2		0	0	0									ChargedRunestoneG		thng		-1
 ir05	Quest Item\n\gold;Charged Riftstone (\green;5\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes may spawn\n\green;Immune to Crushing Blow, 50% Less Poison Duration\n\grey;Immune to Crowd Control, Max Slow Effect: 25%\nCannot be Chilled or Frozen\n\nDamage: +40%\nLife: +80%\n	1	1	2		0	0	0									ChargedRunestoneG		thng		-1
-ir06	Quest Item\n\gold;Charged Riftstone (\orange;6\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes and Champions may spawn\nImmune to Crushing Blow, 50% Less Poison Duration\nImmune to Crowd Control, Max Slow Effect: 25%\n\green;Absorb 60% Fire, Cold and Lightning\n\grey;Cannot be Chilled or Frozen\n\nDamage: +50%\nLife: +100%\n	1	1	2		0	0	0									ChargedRunestoneY		thng		-1
-ir07	Quest Item\n\gold;Charged Riftstone (\orange;7\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes and Champions may spawn\nImmune to Crushing Blow, 50% Less Poison Duration\nImmune to Crowd Control, Max Slow Effect: 25%\n\green;Dimensional Tear, +10% Monster Density\n\grey;Absorb 60% Fire, Cold and Lightning\nCannot be Chilled or Frozen\n\nDamage: +60%\nLife: +120%\n	1	1	2		0	0	0									ChargedRunestoneY		thng		-1
-ir08	Quest Item\n\gold;Charged Riftstone (\orange;8\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes and Champions may spawn\nImmune to Crushing Blow, 50% Less Poison Duration\nImmune to Crowd Control, Max Slow Effect: 25%\nDimensional Tear, +10% Monster Density\nAbsorb 60% Fire, Cold and Lightning\nCannot be Chilled or Frozen\n\green;60% Leech Resistance\n\n\grey;Damage: +70%\nLife: +140%\n	1	1	2		0	0	0									ChargedRunestoneY		thng		-1
-ir09	Quest Item\n\gold;Charged Riftstone (\orange;9\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes and Champions may spawn\nImmune to Crushing Blow, 50% Less Poison Duration\nImmune to Crowd Control, Max Slow Effect: 25%\nDimensional Tear, +10% Monster Density\nAbsorb 60% Fire, Cold and Lightning\nCannot be Chilled or Frozen\n\green;+70% Movement Speed\n\grey;60% Leech Resistance\n\green;Curse Immunity\n\n\grey;Damage: +80%\nLife: +160%\n	1	1	2		0	0	0									ChargedRunestoneY		thng		-1
-ir10	Quest Item\n\gold;Charged Riftstone (\orange;10\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes and Champions may spawn\nImmune to Crushing Blow, 50% Less Poison Duration\nImmune to Crowd Control, Max Slow Effect: 25%\nDimensional Tear, +10% Monster Density\nAbsorb 60% Fire, Cold and Lightning\nCannot be Chilled or Frozen\n+70% Movement Speed\n60% Leech Resistance\n\green;No Monster Corpses\n\grey;Curse Immunity\n\nDamage: +90%\nLife: +180%\n	1	1	2		0	0	0									ChargedRunestoneY		thng		-1
-ir11	Quest Item\n\gold;Charged Riftstone (\red;11\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes, Champions and Sovereigns may spawn\nImmune to Crushing Blow, 50% Less Poison Duration\nImmune to Crowd Control, Max Slow Effect: 25%\nDimensional Tear, +10% Monster Density\nAbsorb 60% Fire, Cold and Lightning\nCannot be Chilled or Frozen\n+70% Movement Speed\n60% Leech Resistance\nNo Monster Corpses\n\green;Empowered Skills\n\grey;Curse Immunity\n\n\green;Pack Size: +20%\n\grey;Damage: +100%\nLife: +200%\n	1	1	2		0	0	0									ChargedRunestoneR		thng		-1
-ir12	Quest Item\n\gold;Charged Riftstone (\red;12\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes, Champions and Sovereigns may spawn\nImmune to Crushing Blow, 50% Less Poison Duration\nImmune to Crowd Control, Max Slow Effect: 25%\nDimensional Tear, +10% Monster Density\n\green;Reduce Player Avoid and Block on Hit\n\grey;Absorb 60% Fire, Cold and Lightning\nCannot be Chilled or Frozen\n+70% Movement Speed\n60% Leech Resistance\nNo Monster Corpses\nEmpowered Skills\nCurse Immunity\n\nPack Size: +20%\nDamage: +110%\nLife: +220%\n	1	1	2		0	0	0									ChargedRunestoneR		thng		-1
-ir13	Quest Item\n\gold;Charged Riftstone (\red;13\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes, Champions and Sovereigns may spawn\nImmune to Crushing Blow, 50% Less Poison Duration\nImmune to Crowd Control, Max Slow Effect: 25%\n\green;Gain 200% of Physical Damage as Elemental\n\grey;Dimensional Tear, +10% Monster Density\nReduce Player Avoid and Block on Hit\nAbsorb 60% Fire, Cold and Lightning\nCannot be Chilled or Frozen\n+70% Movement Speed\n60% Leech Resistance\nNo Monster Corpses\nEmpowered Skills\nCurse Immunity\n\nPack Size: +20%\nDamage: +120%\nLife: +240%\n	1	1	2		0	0	0									ChargedRunestoneR		thng		-1
-ir14	Quest Item\n\gold;Charged Riftstone (\red;14\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes, Champions and Sovereigns may spawn\nImmune to Crushing Blow, 50% Less Poison Duration\nImmune to Crowd Control, Max Slow Effect: 25%\nGain 200% of Physical Damage as Elemental\nDimensional Tear, +10% Monster Density\nReduce Player Avoid and Block on Hit\nAbsorb 60% Fire, Cold and Lightning\n\green;Pierce 100% Elemental Resists\n\grey;Cannot be Chilled or Frozen\n+70% Movement Speed\n60% Leech Resistance\nNo Monster Corpses\nEmpowered Skills\nCurse Immunity\n\nPack Size: +20%\nDamage: +130%\nLife: +260%\n	1	1	2		0	0	0									ChargedRunestoneR		thng		-1
-ir15	Quest Item\n\gold;Charged Riftstone (\red;15\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes, Champions and Sovereigns may spawn\nImmune to Crushing Blow, 50% Less Poison Duration\nImmune to Crowd Control, Max Slow Effect: 25%\nGain 200% of Physical Damage as Elemental\nDimensional Tear, +10% Monster Density\nReduce Player Avoid and Block on Hit\nAbsorb 60% Fire, Cold and Lightning\nPierce 100% Elemental Resists\nCannot be Chilled or Frozen\n+70% Movement Speed\n60% Leech Resistance\nNo Monster Corpses\nEmpowered Skills\nCurse Immunity\n\green;Nemesis\n\n\n\grey;Pack Size: +20%\nDamage: +150%\nLife: +300%\n	1	1	2		0	0	0									ChargedRunestoneR		thng		-1
+ir06	Quest Item\n\gold;Charged Riftstone (\orange;6\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes and Champions may spawn\nImmune to Crushing Blow, 50% Less Poison Duration\nImmune to Crowd Control, Max Slow Effect: 25%\n\green;Absorb 50% Fire, Cold and Lightning\n\grey;Cannot be Chilled or Frozen\n\nDamage: +50%\nLife: +100%\n	1	1	2		0	0	0									ChargedRunestoneY		thng		-1
+ir07	Quest Item\n\gold;Charged Riftstone (\orange;7\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes and Champions may spawn\nImmune to Crushing Blow, 50% Less Poison Duration\nImmune to Crowd Control, Max Slow Effect: 25%\n\green;Dimensional Tear, +10% Monster Density\n\grey;Absorb 50% Fire, Cold and Lightning\nCannot be Chilled or Frozen\n\nDamage: +60%\nLife: +120%\n	1	1	2		0	0	0									ChargedRunestoneY		thng		-1
+ir08	Quest Item\n\gold;Charged Riftstone (\orange;8\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes and Champions may spawn\nImmune to Crushing Blow, 50% Less Poison Duration\nImmune to Crowd Control, Max Slow Effect: 25%\nDimensional Tear, +10% Monster Density\nAbsorb 50% Fire, Cold and Lightning\nCannot be Chilled or Frozen\n\green;60% Leech Resistance\n\n\grey;Damage: +70%\nLife: +140%\n	1	1	2		0	0	0									ChargedRunestoneY		thng		-1
+ir09	Quest Item\n\gold;Charged Riftstone (\orange;9\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes and Champions may spawn\nImmune to Crushing Blow, 50% Less Poison Duration\nImmune to Crowd Control, Max Slow Effect: 25%\nDimensional Tear, +10% Monster Density\nAbsorb 50% Fire, Cold and Lightning\nCannot be Chilled or Frozen\n\green;+70% Movement Speed\n\grey;60% Leech Resistance\n\green;Curse Immunity\n\n\grey;Damage: +80%\nLife: +160%\n	1	1	2		0	0	0									ChargedRunestoneY		thng		-1
+ir10	Quest Item\n\gold;Charged Riftstone (\orange;10\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes and Champions may spawn\nImmune to Crushing Blow, 50% Less Poison Duration\nImmune to Crowd Control, Max Slow Effect: 25%\nDimensional Tear, +10% Monster Density\nAbsorb 50% Fire, Cold and Lightning\nCannot be Chilled or Frozen\n+70% Movement Speed\n60% Leech Resistance\n\green;No Monster Corpses\n\grey;Curse Immunity\n\nDamage: +90%\nLife: +180%\n	1	1	2		0	0	0									ChargedRunestoneY		thng		-1
+ir11	Quest Item\n\gold;Charged Riftstone (\red;11\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes, Champions and Sovereigns may spawn\nImmune to Crushing Blow, 50% Less Poison Duration\nImmune to Crowd Control, Max Slow Effect: 25%\nDimensional Tear, +10% Monster Density\nAbsorb 50% Fire, Cold and Lightning\nCannot be Chilled or Frozen\n+70% Movement Speed\n60% Leech Resistance\nNo Monster Corpses\n\green;Empowered Skills\n\grey;Curse Immunity\n\n\green;Pack Size: +20%\n\grey;Damage: +100%\nLife: +200%\n	1	1	2		0	0	0									ChargedRunestoneR		thng		-1
+ir12	Quest Item\n\gold;Charged Riftstone (\red;12\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes, Champions and Sovereigns may spawn\nImmune to Crushing Blow, 50% Less Poison Duration\nImmune to Crowd Control, Max Slow Effect: 25%\nDimensional Tear, +10% Monster Density\n\green;Reduce Player Avoid and Block on Hit\n\grey;Absorb 50% Fire, Cold and Lightning\nCannot be Chilled or Frozen\n+70% Movement Speed\n60% Leech Resistance\nNo Monster Corpses\nEmpowered Skills\nCurse Immunity\n\nPack Size: +20%\nDamage: +110%\nLife: +220%\n	1	1	2		0	0	0									ChargedRunestoneR		thng		-1
+ir13	Quest Item\n\gold;Charged Riftstone (\red;13\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes, Champions and Sovereigns may spawn\nImmune to Crushing Blow, 50% Less Poison Duration\nImmune to Crowd Control, Max Slow Effect: 25%\n\green;Gain 150% of Physical Damage as Elemental\n\grey;Dimensional Tear, +10% Monster Density\nReduce Player Avoid and Block on Hit\nAbsorb 50% Fire, Cold and Lightning\nCannot be Chilled or Frozen\n+70% Movement Speed\n60% Leech Resistance\nNo Monster Corpses\nEmpowered Skills\nCurse Immunity\n\nPack Size: +20%\nDamage: +120%\nLife: +240%\n	1	1	2		0	0	0									ChargedRunestoneR		thng		-1
+ir14	Quest Item\n\gold;Charged Riftstone (\red;14\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes, Champions and Sovereigns may spawn\nImmune to Crushing Blow, 50% Less Poison Duration\nImmune to Crowd Control, Max Slow Effect: 25%\nGain 150% of Physical Damage as Elemental\nDimensional Tear, +10% Monster Density\nReduce Player Avoid and Block on Hit\nAbsorb 50% Fire, Cold and Lightning\n\green;Pierce 100% Elemental Resists\n\grey;Cannot be Chilled or Frozen\n+70% Movement Speed\n60% Leech Resistance\nNo Monster Corpses\nEmpowered Skills\nCurse Immunity\n\nPack Size: +20%\nDamage: +130%\nLife: +260%\n	1	1	2		0	0	0									ChargedRunestoneR		thng		-1
+ir15	Quest Item\n\gold;Charged Riftstone (\red;15\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes, Champions and Sovereigns may spawn\nImmune to Crushing Blow, 50% Less Poison Duration\nImmune to Crowd Control, Max Slow Effect: 25%\nGain 150% of Physical Damage as Elemental\nDimensional Tear, +10% Monster Density\nReduce Player Avoid and Block on Hit\nAbsorb 50% Fire, Cold and Lightning\nPierce 100% Elemental Resists\nCannot be Chilled or Frozen\n+70% Movement Speed\n60% Leech Resistance\nNo Monster Corpses\nEmpowered Skills\nCurse Immunity\n\green;Nemesis\n\n\n\grey;Pack Size: +20%\nDamage: +150%\nLife: +300%\n	1	1	2		0	0	0									ChargedRunestoneR		thng		-1
 ir81	\orange;Occult Effigy\nCelestial Wind	\blue;+10 Required Level\nSet Movement Speed to 40%\n\grey;Cube with Boots to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									OccultOrb		thng		-1
 ir82	\orange;Occult Effigy\nSigil of Absolution	\blue;(Max 2 Uses per Item)\nRequirements +25%\n-5 Required Level\n\grey;Cube with Any Weapon/Armor to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									OccultOrb		thng		-1
-ir83	\orange;Occult Effigy\nPath of Brutality	\blue;+10 Required Level\nTransforms every +1 to All Skills to +4% Deadly Strike\n\grey;Cube with Any Ring/Amulet to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									OccultOrb		thng		-1
-ir84	\orange;Occult Effigy\nEmpyrean Touch	\blue;+10 Required Level\nItem Becomes Ethereal\n\grey;Cube with Any Weapon/Armor to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									OccultOrb		thng		-1
+ir83	\orange;Occult Effigy\nPath of Brutality	\blue;+10 Required Level\nItem Becomes (Your Class Only)\nTransforms every +1 to All Skills to +4% Deadly Strike\n\grey;Cube with Unique Ring/Amulet to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									OccultOrb		thng		-1
+ir84	\orange;Occult Effigy\nEmpyrean Touch	\red;Does Not Work on Indestructible Items\n\n\blue;+10 Required Level\nItem Becomes Ethereal\n\grey;Cube with Any Weapon/Armor to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									OccultOrb		thng		-1
 ir85	\orange;Occult Effigy\nElemental Ire	\blue;+10 Required Level\nAdds 75-125 Lightning Damage\nAdds 75-125 Fire Damage\n\grey;Cube with a Quiver to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									OccultOrb		thng		-1
 ir86	\orange;Occult Effigy\nBreath of Thaumaturgy	\blue;+25 Required Level\nItem can be blessed Again\n\grey;Cube with a Blessed Crafted Weapon/Armor to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									OccultOrb		thng		-1
 ir87	\orange;Occult Effigy\nElemental Dominion	\blue;+10 Required Level\nAdds 150-250 Cold Damage\nAdds 150-250 Lightning Damage\nAdds 150-250 Fire Damage\n\grey;Cube with a Zero Socket Weapon to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									OccultOrb		thng		-1
 ir88	\orange;Occult Effigy\nArcane Hunger	\blue;+10 Required Level\n(Max 1 Use per Item)\nItem Cannot be Unsocketed\nAll Life Leech transformed to +25% Spell Damage\n\grey;with at least 15% Life Leech to Add Bonus\nCube with a One Handed Weapon\n\nCube Reagent	1	1	2		0	0	0									OccultOrb		thng		-1
+ir89	\orange;Occult Effigy\nDark Summoning	\blue;+10 Required Level\n1% Reanimate as: Random Monster\n\grey;Cube with Gloves to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									OccultOrb		thng		-1
 ir91	Quest Item\n\gold;Dream Fragment (1)	And most importantly: to what purpose?\n\nclosely match our own. I wonder what eldritch sorcery is involved here.\non Sanctuary. They appear to be terraforming these dimensions to\nYet the creatures I have encountered here clearly did not originate\n\nThese worlds are both familliar and different at the same time.\n	1	1	2		0	0	0									DreamFragment		thng		-1
 ir92	Quest Item\n\gold;Dream Fragment (2)	Witness me, Ancestors. I who lived honorable and died like a fool.\n\nThe one so closely aligned to a line from the sky to the Arreat Summit.\nCould not make much of it, but a star marked there caught my eye.\nOne of the mages I slew was carrying the fragment of a scroll.\n\nno council. This lack of preparation will now be my end.\nI entered the Rift like an impetuous whelp, seeking glory and heeding\nThe filth crumbles swiftly before my axe, but there is no end in sight.\n	1	1	2		0	0	0									DreamFragment		thng		-1
-ir93	Quest Item\n\gold;Dream Fragment (3)	have the upper hand, should the worst come to pass.\nI imprint this knowledge into my essence so my fellow priests can\n\nThis has yielded nothing yet for the fiends are not willing to converse.\nand thus gain a rudimentary understanding of their language.\nI managed to assimilate the sousl of enough of these creatures\n\nThe strands of time flow crooked here, it is hard to focus.\nyielded something worthwhile today. Or was it yesterday?\nNavigating this twisted maze, through time and space, has finaly\n	1	1	2		0	0	0									DreamFragment		thng		-1
+ir93	Quest Item\n\gold;Dream Fragment (3)	have the upper hand, should the worst come to pass.\nI imprint this knowledge into my essence so my fellow priests can\n\nThis has yielded nothing yet for the fiends are not willing to converse.\nand thus gain a rudimentary understanding of their language.\nI managed to assimilate the souls of enough of these creatures\n\nThe strands of time flow crooked here, it is hard to focus.\nyielded something worthwhile today. Or was it yesterday?\nNavigating this twisted maze, through time and space, has finally\n	1	1	2		0	0	0									DreamFragment		thng		-1
 ir94	Quest Item\n\gold;Dream Fragment (4)	The Keey is not enough! The Door first and then the Command. Yes! Yes!\n\nVery powerful, very strong. Live! Live! No paain and promise I keep!\n\nSomething for you I am maaking. Again, not kill Gharbad, live and give good.\n\nPleease, no hurt, no kill. Keep alive and next time good bring to you.\n	1	1	2		0	0	0									DreamFragment		thng		-1
 ir95	Quest Item\n\gold;Dream Fragment (5)	Do not. Fail me.\n\nShould he fail, you must protect the Conclave at all costs.\n\nopen to a counter-attack.\nwill soon assault their world directly. This could leave him\nSamael has his orders, but he is reckless. Doubtless, he\n\nYou will be instrumental to the second phase of my plan.\n\nPhoboss,\n	1	1	2		0	0	0									DreamFragment		thng		-1
 ir96	Quest Item\n\gold;Star Chart (1)	Until the chart is restored it cannot be read\n\nA piece of a scroll, illustrating the night sky\n	1	1	2		0	0	0									StarChart1		thng		-1
@@ -1720,11 +1742,12 @@ ktcx	\orange;Pulsating Worldstone Shard	\yellow;- Transmute -\n\white;worlds, di
 ktdx	\orange;Pulsating Worldstone Shard	\yellow;- Transmute -\n\white;sure what lurks just beyond our understanding''\nsafe in the sea of possibilities, yet we can't be\nThe Worldstone has existed since the Dawn of Time and kept us\n''There are many more worlds than those upon which we have stood.	1	1	2		0	0	0									invss1		thng		-1
 ktex	\orange;Pulsating Worldstone Shard	\yellow;- Transmute -\n\white;This shard is the key, its full potential must be unlocked.\n\nIt has exposed us all to an even greater threat.\nSanctuary to the direct influence of Heaven and Hell.\nThe destruction of the Worldstone has not only exposed\n\n\dgrey;...	1	1	2		0	0	0									invss1		thng		-1
 ktfx	\orange;Pulsating Worldstone Shard	It which is a splinter of the spirit in a land Unformed\n\nIt which is of many and may cleanse the soul\n\nIt which is of the brother, savior and sacrifice\n\nIt which can manifest their son and his disciple\n\nIt which bears the writings of genesis	1	1	2		0	0	0									invss1		thng		-1
-ktgx	\orange;Pulsating Worldstone Crystal	The Way will be made clear, stand ready\n\nOne of each Fauztinville Great Rune\nFour Greater Signets of Learning\nIt must now be imbued with Knowledge and Arcana\n\n\dgrey;The Worldstone crystal has been reforged	1	1	2		0	0	0									invss3		thng		-1
+ktgx	\orange;Pulsating Worldstone Crystal	The Way will be made clear, stand ready\n\nTaha Great Rune\nGreater Signet of Learning\nIt must now be imbued with Knowledge and Arcana\n\n\dgrey;The Worldstone crystal has been reforged	1	1	2		0	0	0									invss3		thng		-1
 ktor	\grey;Quest Item\n\gold;Edyrem's Time-Travel	\blue;Open a Rift to Toraja...	1	1	2		125	0	0									invrsc		thng		-1
 ktox	\grey;Quest Item\n\gold;Dimensional Link	\red;Only works in Act 5\n\blue;Summon a Portal to the Edge of Nothingness...	1	1	2		135	0	0									invrsc		thng		-1
 kvoi	\grey;Quest Item\n\gold;Abyss Gate	\blue;Summon a Portal to The Void...	1	1	2		130	0	0									invrsc		thng		-1
 l@l	\grey;Quest Item\n\gold;Skinrender's Sigil	Cube All 5 Sigils with Ring of the Five\n	1	1	2		0	0	0									ring01		thng		-1
+lms	'The Last Man Standing'\nEvent Award:		2	2	2		0	0	0									lastman		grtz		-1
 lok	Crystalline Flame Medallion		1	1	2		0	0	0									invvip		grtz		-1
 luv	The Black Tower Key		1	2	2		0	0	0									invmph	20	key		-1
 m@m	\grey;Quest Item\n\gold;Spinecracker's Sigil	Cube All 5 Sigils with Ring of the Five\n	1	1	2		0	0	0									ring03		thng		-1
@@ -1813,7 +1836,7 @@ r59	\grey;Elemental Rune\n\purple;Magic Rune		1	1	2		100	0	0									magic-rune	
 r60	\grey;Elemental Rune\n\purple;Poison Rune		1	1	2		100	0	0									pois-rune		xrun		-1
 r61	\grey;Elemental Rune\n\purple;Light Rune		1	1	2		100	0	0									ltng-rune		xrun		-1
 r62	\grey;Elemental Rune\n\purple;Ice Rune		1	1	2		100	0	0									cold-rune		xrun		-1
-r98	\grey;Legendary Rune\n\purple;Kabraxis' Stone		1	1	2		120	0	0									ultra-rune		xrun		-1
+r98	\grey;Enchanted Rune\n\purple;Xis Rune	Can be Cubed with Low Rune	1	1	2		120	0	0									ultra-rune		xrun		-1
 r99	\grey;Primal Rune\n\purple;Runestone		1	1	2		0	0	0									BlankRune		thng,esse		-1
 r@r	\grey;Quest Item\n\gold;Ring of the Five	Cube All 5 Sigils with Ring of the Five\n	1	1	2		0	0	0									ring08		kill		-1
 rin	Ring		1	1	2		0	0	0									invrin		ring		-1
@@ -1822,6 +1845,39 @@ rpl	FLYING POLAR BUFFALO ERROR		1	1	2	1	0	0	0									invrpl		hpot		-1
 rps	FLYING POLAR BUFFALO ERROR		1	1	2	1	0	0	0									invrps		hpot		-1
 rvl	Full Rejuvenation Potion	The Big One!	1	1	2		0	0	0									invvpl		rpot		-1
 rvs	Rejuvenation Potion	Regenerates Life and Mana over 8 seconds	1	1	2		0	0	0									invvps		rpot		-1
+rx01	\grey;Enchanted Rune\n\purple;El-Xis Rune		1	1	2		120	0	0									xisEl		erun		-1
+rx02	\grey;Enchanted Rune\n\purple;Eld-Xis Rune		1	1	2		120	0	0									xisEld		erun		-1
+rx03	\grey;Enchanted Rune\n\purple;Tir-Xis Rune		1	1	2		120	0	0									xisTir		erun		-1
+rx04	\grey;Enchanted Rune\n\purple;Nef-Xis Rune		1	1	2		120	0	0									xisNef		erun		-1
+rx05	\grey;Enchanted Rune\n\purple;Eth-Xis Rune		1	1	2		120	0	0									xisEth		erun		-1
+rx06	\grey;Enchanted Rune\n\purple;Ith-Xis Rune		1	1	2		120	0	0									xisIth		erun		-1
+rx07	\grey;Enchanted Rune\n\purple;Tal-Xis Rune		1	1	2		120	0	0									xisTal		erun		-1
+rx08	\grey;Enchanted Rune\n\purple;Ral-Xis Rune		1	1	2		120	0	0									xisRal		erun		-1
+rx09	\grey;Enchanted Rune\n\purple;Ort-Xis Rune		1	1	2		120	0	0									xisOrt		erun		-1
+rx10	\grey;Enchanted Rune\n\purple;Thul-Xis Rune		1	1	2		120	0	0									xisThul		erun		-1
+rx11	\grey;Enchanted Rune\n\purple;Amn-Xis Rune		1	1	2		120	0	0									xisAmn		erun		-1
+rx12	\grey;Enchanted Rune\n\purple;Sol-Xis Rune		1	1	2		120	0	0									xisSol		erun		-1
+rx13	\grey;Enchanted Rune\n\purple;Shael-Xis Rune		1	1	2		120	0	0									xisShael		erun		-1
+rx14	\grey;Enchanted Rune\n\purple;Dol-Xis Rune		1	1	2		120	0	0									xisDol		erun		-1
+rx15	\grey;Enchanted Rune\n\purple;Hel-Xis Rune		1	1	2		120	0	0									xisHel		erun		-1
+rx16	\grey;Enchanted Rune\n\purple;Io-Xis Rune		1	1	2		120	0	0									xisIo		erun		-1
+rx17	\grey;Enchanted Rune\n\purple;Lum-Xis Rune		1	1	2		120	0	0									xisLum		erun		-1
+rx18	\grey;Enchanted Rune\n\purple;Ko-Xis Rune		1	1	2		120	0	0									xisKo		erun		-1
+rx19	\grey;Enchanted Rune\n\purple;Fal-Xis Rune		1	1	2		120	0	0									xisFal		erun		-1
+rx20	\grey;Enchanted Rune\n\purple;Lem-Xis Rune		1	1	2		120	0	0									xisLem		erun		-1
+rx21	\grey;Enchanted Rune\n\purple;Pul-Xis Rune		1	1	2		120	0	0									xisPul		erun		-1
+rx22	\grey;Enchanted Rune\n\purple;Um-Xis Rune		1	1	2		120	0	0									xisUm		erun		-1
+rx23	\grey;Enchanted Rune\n\purple;Mal-Xis Rune		1	1	2		120	0	0									xisMal		erun		-1
+rx24	\grey;Enchanted Rune\n\purple;Ist-Xis Rune		1	1	2		120	0	0									xisIst		erun		-1
+rx25	\grey;Enchanted Rune\n\purple;Gul-Xis Rune		1	1	2		120	0	0									xisGul		erun		-1
+rx26	\grey;Enchanted Rune\n\purple;Vex-Xis Rune		1	1	2		120	0	0									xisVex		erun		-1
+rx27	\grey;Enchanted Rune\n\purple;Ohm-Xis Rune		1	1	2		120	0	0									xisOhm		erun		-1
+rx28	\grey;Enchanted Rune\n\purple;Lo-Xis Rune		1	1	2		120	0	0									xisLo		erun		-1
+rx29	\grey;Enchanted Rune\n\purple;Sur-Xis Rune		1	1	2		120	0	0									xisSur		erun		-1
+rx30	\grey;Enchanted Rune\n\purple;Ber-Xis Rune		1	1	2		120	0	0									xisBer		erun		-1
+rx31	\grey;Enchanted Rune\n\purple;Jah-Xis Rune		1	1	2		120	0	0									xisJah		erun		-1
+rx32	\grey;Enchanted Rune\n\purple;Cham-Xis Rune		1	1	2		120	0	0									xisCham		erun		-1
+rx33	\grey;Enchanted Rune\n\purple;Zod-Xis Rune		1	1	2		120	0	0									xisZod		erun		-1
 s@s	Assur's Bane		1	1	2		0	0	0									ring08		kill		-1
 sath	\grey;Quest Item\n\gold;Askari Call	\grey;Location: Island of Skartara (Heart)\n\orange;Summon Athulua, the Amazonian Goddess	1	1	2		120	0	0									invblackscroll		thng		-1
 sbag	\gold;Angel Bag	\grey;Cube 6 Angel Bags to Create Six Angel Bag\n\nCube Reagent	1	2	2		0	0	0									angelbag2		thng		-1
@@ -1907,5 +1963,5 @@ zkx	\dgreen;Greater Signet of Gold	Right-click: Gold in Bank: %d	1	1	2		0	0	0			
 |bc	Cube Reagent\n\orange;Book of Cain	\blue;+1% to Experience Gained\n+10 to All Attributes\n+1 to All Skills\n\grey;Cube with Glorious Book of Median to Add Bonus\n	2	2	2		0	0	0									superbooffk		thng		-1
 |dc	Dragon Claw		1	1	2		120	0	0									invhorn		grtz		-1
 |ld	Lylia's Curse		1	1	2		120	0	0									lyliascharm		grtz		-1
-|ms	\gold;Mystic Shard	\blue;+1 to All Skills\n(5 to 20) to all Attributes\n-1 to Light Radius\n\grey;Cube with full Umbaru Treasure to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									chrysaor		thng		-1
+|ms	\gold;Ghost Trance	\blue;+1 to All Skills\n(11 to 50) to all Attributes\n-1 to Light Radius\n\grey;Cube with Umbaru Treasure to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									giyuaGolem		thng		-1
 |wc	Weather Control		1	1	2		120	0	0									invathulua		grtz		-1

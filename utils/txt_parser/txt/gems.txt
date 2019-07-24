@@ -85,9 +85,9 @@ Xar Rune	Xar	18	r47	2	hp%-mp%		2	2	ac/runemaster	32	32	32					hp%-mp%		2	2	ac/ru
 Nih Rune	Nih	18	r48	2	skill-dur		10	10	ac/runemaster	32	32	32					skill-dur		10	10	ac/runemaster	32	32	32					skill-dur		10	10	ac/runemaster	32	32	32				0
 Lai Rune	Lai	18	r49	2	dmg-global		5	5	ac/runemaster	32	32	32					dmg-global		5	5	ac/runemaster	32	32	32					dmg-global		5	5	ac/runemaster	32	32	32				0
 On Rune	On	18	r50	2	ac-global		5	5	ac/runemaster	32	32	32					ac-global		5	5	ac/runemaster	32	32	32					ac-global		5	5	ac/runemaster	32	32	32				0
-Taha Rune	Taha	18	r51	2	dmg-max		20	20	ac/runemaster	32	32	32	eq-grw		10	10	dmg-max		10	10	ac/runemaster	32	32	32					dmg-max		10	10	ac/runemaster	32	32	32	eq-gr		10	10
-Ghal Rune	Ghal	18	r52	2	enr-factor		15	15	ac/runemaster	32	32	32	eq-grw		10	10	enr-factor		5	5	ac/runemaster	32	32	32					enr-factor		5	5	ac/runemaster	32	32	32	eq-gr		10	10
-Qor Rune	Qor	18	r53	2	ease		-12	-12	ac/runemaster	32	32	32	eq-grw		10	10	ease		-12	-12	ac/runemaster	32	32	32					ease		-12	-12	ac/runemaster	32	32	32	eq-gr		10	10
+Taha Rune	Taha	18	r51	2	dmg-max		20	20	ac/runemaster	32	32	32	eq-grw		1	1	dmg-max		10	10	ac/runemaster	32	32	32					dmg-max		10	10	ac/runemaster	32	32	32	eq-gr		1	1
+Ghal Rune	Ghal	18	r52	2	enr-factor		15	15	ac/runemaster	32	32	32	eq-grw		1	1	enr-factor		5	5	ac/runemaster	32	32	32					enr-factor		5	5	ac/runemaster	32	32	32	eq-gr		1	1
+Qor Rune	Qor	18	r53	2	ease		-12	-12	ac/runemaster	32	32	32	eq-grw		1	1	ease		-12	-12	ac/runemaster	32	32	32					ease		-12	-12	ac/runemaster	32	32	32	eq-gr		1	1
 Chipped Rainbow Stone		16	yo1	3	crush		1	1	hp/paragon	32	32	32					gold%		1	1	hp/paragon	32	32	32					res-curse		2	2	hp/paragon	32	32	32				0
 Flawed Rainbow Stone		16	yo2	3	crush		1	1	hp/paragon	32	32	32					gold%		2	2	hp/paragon	32	32	32					res-curse		4	4	hp/paragon	32	32	32				0
 Rainbow Stone		16	yo3	3	crush		2	2	hp/paragon	32	32	32					gold%		4	4	hp/paragon	32	32	32					res-curse		6	6	hp/paragon	32	32	32				0
@@ -113,13 +113,46 @@ Flawed Amber		19	5$b	3	reanimate	1427	1	1	hp/paragon	32	32	32					res-ltng		8	8	
 Amber		19	5$c	3	reanimate	1427	1	1	hp/paragon	32	32	32					res-ltng		12	12	hp/paragon	32	32	32					slow-thorns		3	3	hp/paragon	32	32	32				0
 Flawless Amber		19	5$d	3	reanimate	1427	1	1	hp/paragon	32	32	32					res-ltng		16	16	hp/paragon	32	32	32					slow-thorns		4	4	hp/paragon	32	32	32				0
 Perfect Amber		19	5$e	3	reanimate	1427	2	2	hp/paragon	32	32	32					res-ltng		20	20	res-ltng-max		1	1	hp/paragon	32	32	32	slow-thorns		5	5	hp/paragon	32	32	32				0
-Krys Rune	Krys	18	r54	2	att-damage		100	100	ac/runemaster	32	32	32	eq-grw		10	10	att-damage		25	25	ac/runemaster	32	32	32					att-damage		25	25	ac/runemaster	32	32	32	eq-gr		10	10
-Auhe Rune	Auhe	18	r55	2	deadly		3	3	ac/runemaster	32	32	32	eq-grw		10	10	deadly		2	2	ac/runemaster	32	32	32					deadly		2	2	ac/runemaster	32	32	32	eq-gr		10	10
-Sha'ad Rune	Shaad	18	r56	2	dmg%		20	20	ac/runemaster	32	32	32	eq-grw		10	10	ac%		20	20	ac/runemaster	32	32	32					ac%		20	20	ac/runemaster	32	32	32	eq-gr		10	10
-Fire Rune	Fi	9	r57	3	dmg-fire		50	100	ac/runemaster	32	32	32	eq-grw		7	7	dmg-fire		13	25	ac/runemaster	32	32	32					dmg-fire		13	25	ac/runemaster	32	32	32	eq-gr		7	7
-Phys Rune	Ea	1	r58	3	dmg-norm		5	10	ac/runemaster	32	32	32	eq-grw		7	7	dmg-norm		3	5	ac/runemaster	32	32	32					dmg-norm		3	5	ac/runemaster	32	32	32	eq-gr		7	7
-Magic Rune	Ma	19	r59	3	dmg-mag		50	100	ac/runemaster	32	32	32	eq-grw		7	7	dmg-mag		13	25	ac/runemaster	32	32	32					dmg-mag		13	25	ac/runemaster	32	32	32	eq-gr		7	7
-Pois Rune	Po	12	r60	3	dmg-pois	25	2048	2560	ac/runemaster	32	32	32	eq-grw		7	7	dmg-pois	25	512	1025	ac/runemaster	32	32	32					dmg-pois	25	512	1025	ac/runemaster	32	32	32	eq-gr		7	7
-Ltng Rune	Li	14	r61	3	dmg-ltng		50	100	ac/runemaster	32	32	32	eq-grw		7	7	dmg-ltng		13	25	ac/runemaster	32	32	32					dmg-ltng		13	25	ac/runemaster	32	32	32	eq-gr		7	7
-Cold Rune	Co	6	r62	3	dmg-cold		50	100	ac/runemaster	32	32	32	eq-grw		7	7	dmg-cold		13	25	ac/runemaster	32	32	32					dmg-cold		13	25	ac/runemaster	32	32	32	eq-gr		7	7
+Krys Rune	Krys	18	r54	2	att-damage		100	100	ac/runemaster	32	32	32	eq-grw		1	1	att-damage		25	25	ac/runemaster	32	32	32					att-damage		25	25	ac/runemaster	32	32	32	eq-gr		1	1
+Auhe Rune	Auhe	18	r55	2	deadly		3	3	ac/runemaster	32	32	32	eq-grw		1	1	deadly		2	2	ac/runemaster	32	32	32					deadly		2	2	ac/runemaster	32	32	32	eq-gr		1	1
+Sha'ad Rune	Shaad	18	r56	2	dmg%		20	20	ac/runemaster	32	32	32	eq-grw		1	1	ac%		20	20	ac/runemaster	32	32	32					ac%		20	20	ac/runemaster	32	32	32	eq-gr		1	1
+Fire Rune	Fi	9	r57	3	dmg-fire		50	100	ac/runemaster	32	32	32	eq-grw		1	1	dmg-fire		13	25	ac/runemaster	32	32	32					dmg-fire		13	25	ac/runemaster	32	32	32	eq-gr		1	1
+Phys Rune	Ea	1	r58	3	dmg-norm		5	10	ac/runemaster	32	32	32	eq-grw		1	1	dmg-norm		3	5	ac/runemaster	32	32	32					dmg-norm		3	5	ac/runemaster	32	32	32	eq-gr		1	1
+Magic Rune	Ma	19	r59	3	dmg-mag		50	100	ac/runemaster	32	32	32	eq-grw		1	1	dmg-mag		13	25	ac/runemaster	32	32	32					dmg-mag		13	25	ac/runemaster	32	32	32	eq-gr		1	1
+Pois Rune	Po	12	r60	3	dmg-pois	25	2048	2560	ac/runemaster	32	32	32	eq-grw		1	1	dmg-pois	25	512	1025	ac/runemaster	32	32	32					dmg-pois	25	512	1025	ac/runemaster	32	32	32	eq-gr		1	1
+Ltng Rune	Li	14	r61	3	dmg-ltng		50	100	ac/runemaster	32	32	32	eq-grw		1	1	dmg-ltng		13	25	ac/runemaster	32	32	32					dmg-ltng		13	25	ac/runemaster	32	32	32	eq-gr		1	1
+Cold Rune	Co	6	r62	3	dmg-cold		50	100	ac/runemaster	32	32	32	eq-grw		1	1	dmg-cold		13	25	ac/runemaster	32	32	32					dmg-cold		13	25	ac/runemaster	32	32	32	eq-gr		1	1
 Ultra Rune	Xis	3	r98	3	dmg%		25	25	ac/runemaster	32	32	32	item-nounsock		1	1	ac%		25	25	ac/runemaster	32	32	32	item-nounsock		1	1	ac%		25	25	ac/runemaster	32	32	32	item-nounsock		1	1
+El Rune Super	ElXis	15	rx01	2	light		1	1	ac/runemaster	32	32	32	item-nounsock		1	1	light		1	1	ac/runemaster	32	32	32	item-nounsock		1	1	light		1	1	ac/runemaster	32	32	32	item-nounsock		1	1
+Eld Rune Super	EdXis	15	rx02	2	att%		25	25	ac/runemaster	32	32	32	item-nounsock		1	1	att%		25	25	ac/runemaster	32	32	32	item-nounsock		1	1	att%		25	25	ac/runemaster	32	32	32	item-nounsock		1	1
+Tir Rune Super	TiXis	15	rx03	2	gold%		10	10	ac/runemaster	32	32	32	item-nounsock		1	1	gold%		5	5	ac/runemaster	32	32	32	item-nounsock		1	1	gold%		5	5	ac/runemaster	32	32	32	item-nounsock		1	1
+Nef Rune Super	NeXis	15	rx04	2	poison-dur		15	15	ac/runemaster	32	32	32	item-nounsock		1	1	poison-dur		10	10	ac/runemaster	32	32	32	item-nounsock		1	1	poison-dur		10	10	ac/runemaster	32	32	32	item-nounsock		1	1
+Eth Rune Super	EtXis	15	rx05	2	dmg-max		5	5	ac/runemaster	32	32	32	item-nounsock		1	1	dmg-max		3	3	ac/runemaster	32	32	32	item-nounsock		1	1	dmg-max		3	3	ac/runemaster	32	32	32	item-nounsock		1	1
+Ith Rune Super	ItXis	15	rx06	2	dmg%		10	10	ac/runemaster	32	32	32	item-nounsock		1	1	ac%		10	10	ac/runemaster	32	32	32	item-nounsock		1	1	ac%		10	10	ac/runemaster	32	32	32	item-nounsock		1	1
+Tal Rune Super	TaXis	15	rx07	2	all-stats		5	5	ac/runemaster	32	32	32	item-nounsock		1	1	all-stats		5	5	ac/runemaster	32	32	32	item-nounsock		1	1	all-stats		5	5	ac/runemaster	32	32	32	item-nounsock		1	1
+Ral Rune Super	RaXis	15	rx08	2	extra-fire		3	3	ac/runemaster	32	32	32	item-nounsock		1	1	extra-fire		3	3	ac/runemaster	32	32	32	item-nounsock		1	1	extra-fire		3	3	ac/runemaster	32	32	32	item-nounsock		1	1
+Ort Rune Super	OrXis	15	rx09	2	extra-ltng		3	3	ac/runemaster	32	32	32	item-nounsock		1	1	extra-ltng		3	3	ac/runemaster	32	32	32	item-nounsock		1	1	extra-ltng		3	3	ac/runemaster	32	32	32	item-nounsock		1	1
+Thul Rune Super	ThXis	15	rx10	2	extra-cold		3	3	ac/runemaster	32	32	32	item-nounsock		1	1	extra-cold		3	3	ac/runemaster	32	32	32	item-nounsock		1	1	extra-cold		3	3	ac/runemaster	32	32	32	item-nounsock		1	1
+Amn Rune Super	AmXis	15	rx11	2	thorns%		25	25	ac/runemaster	32	32	32	item-nounsock		1	1	thorns%		25	25	ac/runemaster	32	32	32	item-nounsock		1	1	thorns%		25	25	ac/runemaster	32	32	32	item-nounsock		1	1
+Sol Rune Super	SoXis	15	rx12	2	extra-pois		3	3	ac/runemaster	32	32	32	item-nounsock		1	1	extra-pois		3	3	ac/runemaster	32	32	32	item-nounsock		1	1	extra-pois		3	3	ac/runemaster	32	32	32	item-nounsock		1	1
+Shael Rune Super	ShXis	15	rx13	2	str		10	10	ac/runemaster	32	32	32	item-nounsock		1	1	str		10	10	ac/runemaster	32	32	32	item-nounsock		1	1	str		10	10	ac/runemaster	32	32	32	item-nounsock		1	1
+Dol Rune Super	DoXis	15	rx14	2	dmg-min		5	5	ac/runemaster	32	32	32	item-nounsock		1	1	dmg-min		3	3	ac/runemaster	32	32	32	item-nounsock		1	1	dmg-min		3	3	ac/runemaster	32	32	32	item-nounsock		1	1
+Hel Rune Super	HeXis	15	rx15	2	extra-pm		3	3	ac/runemaster	32	32	32	item-nounsock		1	1	extra-pm		3	3	ac/runemaster	32	32	32	item-nounsock		1	1	extra-pm		3	3	ac/runemaster	32	32	32	item-nounsock		1	1
+Io Rune Super	IoXis	15	rx16	2	dex%		5	5	ac/runemaster	32	32	32	item-nounsock		1	1	dex%		5	5	ac/runemaster	32	32	32	item-nounsock		1	1	dex%		5	5	ac/runemaster	32	32	32	item-nounsock		1	1
+Lum Rune Super	LuXis	15	rx17	2	mag%		10	10	ac/runemaster	32	32	32	item-nounsock		1	1	mag%		7	7	ac/runemaster	32	32	32	item-nounsock		1	1	mag%		7	7	ac/runemaster	32	32	32	item-nounsock		1	1
+Ko Rune Super	KoXis	15	rx18	2	str%		5	5	ac/runemaster	32	32	32	item-nounsock		1	1	str%		5	5	ac/runemaster	32	32	32	item-nounsock		1	1	str%		5	5	ac/runemaster	32	32	32	item-nounsock		1	1
+Fal Rune Super	FaXis	15	rx19	2	dex		10	10	ac/runemaster	32	32	32	item-nounsock		1	1	dex		10	10	ac/runemaster	32	32	32	item-nounsock		1	1	dex		10	10	ac/runemaster	32	32	32	item-nounsock		1	1
+Lem Rune Super	LeXis	15	rx20	2	addxp		2	2	ac/runemaster	32	32	32	item-nounsock		1	1	addxp		1	1	ac/runemaster	32	32	32	item-nounsock		1	1	addxp		1	1	ac/runemaster	32	32	32	item-nounsock		1	1
+Pul Rune Super	PuXis	15	rx21	2	res-fire		30	30	ac/runemaster	32	32	32	item-nounsock		1	1	res-fire		20	20	ac/runemaster	32	32	32	item-nounsock		1	1	res-fire		20	20	ac/runemaster	32	32	32	item-nounsock		1	1
+Um Rune Super	UmXis	15	rx22	2	enr%		5	5	ac/runemaster	32	32	32	item-nounsock		1	1	enr%		5	5	ac/runemaster	32	32	32	item-nounsock		1	1	enr%		5	5	ac/runemaster	32	32	32	item-nounsock		1	1
+Mal Rune Super	MaXis	15	rx23	2	res-pois		30	30	ac/runemaster	32	32	32	item-nounsock		1	1	res-pois		20	20	ac/runemaster	32	32	32	item-nounsock		1	1	res-pois		20	20	ac/runemaster	32	32	32	item-nounsock		1	1
+Ist Rune Super	IsXis	15	rx24	2	enr		10	10	ac/runemaster	32	32	32	item-nounsock		1	1	enr		10	10	ac/runemaster	32	32	32	item-nounsock		1	1	enr		10	10	ac/runemaster	32	32	32	item-nounsock		1	1
+Gul Rune Super	GuXis	15	rx25	2	res-cold		30	30	ac/runemaster	32	32	32	item-nounsock		1	1	res-cold		20	20	ac/runemaster	32	32	32	item-nounsock		1	1	res-cold		20	20	ac/runemaster	32	32	32	item-nounsock		1	1
+Vex Rune Super	VeXis	15	rx26	2	half-freeze		1	1	ac/runemaster	32	32	32	item-nounsock		1	1	half-freeze		1	1	ac/runemaster	32	32	32	item-nounsock		1	1	half-freeze		1	1	ac/runemaster	32	32	32	item-nounsock		1	1
+Ohm Rune Super	OhXis	15	rx27	2	vit%		5	5	ac/runemaster	32	32	32	item-nounsock		1	1	vit%		5	5	ac/runemaster	32	32	32	item-nounsock		1	1	vit%		5	5	ac/runemaster	32	32	32	item-nounsock		1	1
+Lo Rune Super	LoXis	15	rx28	2	res-ltng		30	30	ac/runemaster	32	32	32	item-nounsock		1	1	res-ltng		20	20	ac/runemaster	32	32	32	item-nounsock		1	1	res-ltng		20	20	ac/runemaster	32	32	32	item-nounsock		1	1
+Sur Rune Super	SuXis	15	rx29	2	regen-mana		15	15	ac/runemaster	32	32	32	item-nounsock		1	1	regen-mana		5	5	ac/runemaster	32	32	32	item-nounsock		1	1	regen-mana		5	5	ac/runemaster	32	32	32	item-nounsock		1	1
+Ber Rune Super	BeXis	15	rx30	2	uninterrupt		10	10	ac/runemaster	32	32	32	item-nounsock		1	1	uninterrupt		5	5	ac/runemaster	32	32	32	item-nounsock		1	1	uninterrupt		5	5	ac/runemaster	32	32	32	item-nounsock		1	1
+Jah Rune Super	JaXis	15	rx31	2	dmg%		15	15	ac/runemaster	32	32	32	item-nounsock		1	1	ac%		15	15	ac/runemaster	32	32	32	item-nounsock		1	1	ac%		15	15	ac/runemaster	32	32	32	item-nounsock		1	1
+Cham Rune Super	ChXis	15	rx32	2	vit		10	10	ac/runemaster	32	32	32	item-nounsock		1	1	vit		10	10	ac/runemaster	32	32	32	item-nounsock		1	1	vit		10	10	ac/runemaster	32	32	32	item-nounsock		1	1
+Zod Rune Super	ZoXis	15	rx33	2	slow-melee		5	5	ac/runemaster	32	32	32	item-nounsock		1	1	slow-thorns		5	5	ac/runemaster	32	32	32	item-nounsock		1	1	slow-thorns		5	5	ac/runemaster	32	32	32	item-nounsock		1	1
