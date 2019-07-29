@@ -27,3 +27,8 @@ HEADERS += qjsonwriter_p.h \
     qjsonexport.h \
     qjsondocument.h \
     qjsonarray.h
+
+macx {
+    QMAKE_CXXFLAGS += -stdlib=libc++
+    QMAKE_MACOSX_DEPLOYMENT_TARGET = 10.9
+}
