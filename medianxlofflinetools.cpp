@@ -144,6 +144,7 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, LaunchMode la
     fillMaps();
     connectSignals();
 
+#ifndef DUPE_CHECK
 #if defined(Q_OS_WIN32) || defined(Q_OS_MAC)
 #ifdef Q_OS_WIN32
     if (QSysInfo::windowsVersion() <= QSysInfo::WV_WINDOWS7) // Windows 8 and later mustn't call this code
@@ -168,6 +169,7 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, LaunchMode la
     }
 #else
 #warning Add implementation to check file association to e.g. fileassociationmanager_linux.cpp
+#endif
 #endif
 
 #ifdef Q_OS_WIN32
