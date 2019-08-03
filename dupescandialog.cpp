@@ -59,6 +59,9 @@ QString dupedItemsStr(ItemInfo *item1, ItemInfo *item2)
             .arg(ItemParser::itemStorageAndCoordinatesString("<font color=blue>ITEM2</font>: location %1, row %2, col %3, equipped in %4", item2));
 }
 
+QString addBool(const QString &s, bool b) { return s + QLatin1String(b ? "1" : "0"); }
+QString boolListToString(const QList<bool> &list) { return std::accumulate(list.constBegin(), list.constEnd(), QString(), addBool); }
+
 
 struct CrossCompareTask
 {
@@ -408,6 +411,15 @@ void DupeScanDialog::scanCharactersInDir(const QString &path)
             keyValue[QLatin1String("free_stat_points")] = ci.valueOfStatistic(Enums::CharacterStats::FreeStatPoints);
             keyValue[QLatin1String("sol_used")] = ci.valueOfStatistic(Enums::CharacterStats::SignetsOfLearningEaten);
             charDumper->addDataFromMap(QLatin1String("stats"), keyValue);
+
+            // quests
+            keyValue.clear();
+            keyValue[QLatin1String("denOfEvil")] = boolListToString(ci.questsInfo.denOfEvil);
+            keyValue[QLatin1String("radament")] = boolListToString(ci.questsInfo.radament);
+            keyValue[QLatin1String("goldenBird")] = boolListToString(ci.questsInfo.goldenBird);
+            keyValue[QLatin1String("lamEsensTome")] = boolListToString(ci.questsInfo.lamEsensTome);
+            keyValue[QLatin1String("izual")] = boolListToString(ci.questsInfo.izual);
+            charDumper->addDataFromMap(QLatin1String("quests"), keyValue);
 
             // skills
             QList<QVariantMap> skillsKeyValue;
