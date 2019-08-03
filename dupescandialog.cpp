@@ -421,6 +421,15 @@ void DupeScanDialog::scanCharactersInDir(const QString &path)
             keyValue[QLatin1String("izual")] = boolListToString(ci.questsInfo.izual);
             charDumper->addDataFromMap(QLatin1String("quests"), keyValue);
 
+            // merc
+            if (ci.mercenary.exists)
+            {
+                keyValue.clear();
+                keyValue[QLatin1String("type")] = Enums::Mercenary::types().at(Enums::Mercenary::mercCodeFromValue(ci.mercenary.code));
+                keyValue[QLatin1String("level")] = ci.mercenary.level;
+                charDumper->addDataFromMap(QLatin1String("merc"), keyValue);
+            }
+
             // skills
             QList<QVariantMap> skillsKeyValue;
             QList<int> skills = Enums::Skills::currentCharacterSkillsIndexes().second;
