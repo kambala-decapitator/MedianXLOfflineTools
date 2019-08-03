@@ -25,18 +25,18 @@ QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item, bool u
 
     bool isClassCharm = ItemDataBase::isClassCharm(item);
 
-    PropertiesMap allProps;
-    PropertiesMap::const_iterator constIter = item->props.constBegin();
+    PropertiesMultiMap allProps;
+    PropertiesMultiMap::const_iterator constIter = item->props.constBegin();
     while (constIter != item->props.constEnd())
     {
-        allProps[constIter.key()] = new ItemProperty(*constIter.value()); // original values mustn't be modified
+        allProps.insertMulti(constIter.key(), new ItemProperty(*constIter.value())); // original values mustn't be modified
         ++constIter;
     }
 
     if (item->isRW)
         addProperties(&allProps, item->rwProps);
 
-    PropertiesMap::iterator iter = allProps.begin();
+    PropertiesMultiMap::iterator iter = allProps.begin();
     while (iter != allProps.end())
     {
         if (ItemDataBase::MysticOrbs()->contains(iter.key()) && isClassCharm)
@@ -47,7 +47,7 @@ QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item, bool u
     ItemBase *itemBase = ItemDataBase::Items()->value(item->itemType);
     foreach (ItemInfo *socketableItem, item->socketablesInfo)
     {
-        PropertiesMap socketableProps = socketableProperties(socketableItem, itemBase->socketableType);
+        PropertiesMultiMap socketableProps = socketableProperties(socketableItem, itemBase->socketableType);
         addProperties(&allProps, socketableProps);
         if (socketableProps != socketableItem->props)
             qDeleteAll(socketableProps);
@@ -238,7 +238,7 @@ QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item, bool u
         QStringList propStrings;
         for (qint8 socketableType = SocketableItemInfo::Armor; socketableType <= SocketableItemInfo::Weapon; ++socketableType)
         {
-            PropertiesMap props = PropertiesDisplayManager::genericSocketableProperties(item, socketableType - 1);
+            PropertiesMultiMap props = PropertiesDisplayManager::genericSocketableProperties(item, socketableType - 1);
             QMap<quint8, ItemPropertyDisplay> propsDisplayMap;
             constructPropertyStrings(props, &propsDisplayMap);
 
@@ -271,7 +271,7 @@ QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item, bool u
 
 void PropertiesDisplayManager::addProperties(PropertiesMap *mutableProps, const PropertiesMap &propsToAdd, const QSet<int> *pIgnorePropIds /*= 0*/)
 {
-    for (PropertiesMultiMap::const_iterator iter = propsToAdd.constBegin(); iter != propsToAdd.constEnd(); ++iter)
+    for (PropertiesMap::const_iterator iter = propsToAdd.constBegin(); iter != propsToAdd.constEnd(); ++iter)
     {
         int propId = iter.key();
         if (pIgnorePropIds && pIgnorePropIds->contains(propId))
@@ -304,12 +304,12 @@ void PropertiesDisplayManager::addTemporaryPropertiesAndDelete(PropertiesMap *mu
     qDeleteAll(tempPropsToAdd);
 }
 
-void PropertiesDisplayManager::constructPropertyStrings(const PropertiesMap &properties, QMap<quint8, ItemPropertyDisplay> *outDisplayPropertiesMap, bool shouldColor /*= false*/, ItemInfo *item /*= 0*/)
+void PropertiesDisplayManager::constructPropertyStrings(const PropertiesMultiMap &properties, QMap<quint8, ItemPropertyDisplay> *outDisplayPropertiesMultiMap, bool shouldColor /*= false*/, ItemInfo *item /*= 0*/)
 {
     using namespace Enums;
 
     QMap<quint8, ItemPropertyDisplay> propsDisplayMap;
-    for (PropertiesMap::const_iterator iter = properties.constBegin(); iter != properties.constEnd(); ++iter)
+    for (PropertiesMultiMap::const_iterator iter = properties.constBegin(); iter != properties.constEnd(); ++iter)
     {
         ItemProperty *prop = iter.value();
         int propId = iter.key();
@@ -415,10 +415,10 @@ void PropertiesDisplayManager::constructPropertyStrings(const PropertiesMap &pro
             }
         }
     }
-    *outDisplayPropertiesMap = propsDisplayMap;
+    *outDisplayPropertiesMultiMap = propsDisplayMap;
 }
 
-PropertiesDisplayManager::SecondaryDamageUsage PropertiesDisplayManager::secondaryDamageUsage(int secondaryDamageId, int secondaryDamageValue, const PropertiesMap &allProperties, ItemInfo *item)
+PropertiesDisplayManager::SecondaryDamageUsage PropertiesDisplayManager::secondaryDamageUsage(int secondaryDamageId, int secondaryDamageValue, const PropertiesMultiMap &allProperties, ItemInfo *item)
 {
     ItemProperty *foo = new ItemProperty;
     int damageProperty = secondaryDamageId == Enums::ItemProperties::MaximumDamageSecondary ? Enums::ItemProperties::MaximumDamage : Enums::ItemProperties::MinimumDamage;
@@ -551,7 +551,7 @@ QString PropertiesDisplayManager::propertyDisplay(ItemProperty *propDisplay, int
     return result;
 }
 
-QString PropertiesDisplayManager::propertiesToHtml(const PropertiesMap &properties, ItemInfo *item /*= 0*/, int textColor /*= ColorsManager::Blue*/)
+QString PropertiesDisplayManager::propertiesToHtml(const PropertiesMultiMap &properties, ItemInfo *item /*= 0*/, int textColor /*= ColorsManager::Blue*/)
 {
     QMap<quint8, ItemPropertyDisplay> propsDisplayMap;
     constructPropertyStrings(properties, &propsDisplayMap, true, item);
@@ -569,14 +569,14 @@ QString PropertiesDisplayManager::propertiesToHtml(const PropertiesMap &properti
     return coloredText(html, textColor);
 }
 
-PropertiesMap PropertiesDisplayManager::socketableProperties(ItemInfo *socketableItem, qint8 socketableType)
+PropertiesMultiMap PropertiesDisplayManager::socketableProperties(ItemInfo *socketableItem, qint8 socketableType)
 {
     return ItemDataBase::isGenericSocketable(socketableItem) ? genericSocketableProperties(socketableItem, socketableType) : socketableItem->props;
 }
 
-PropertiesMap PropertiesDisplayManager::genericSocketableProperties(ItemInfo *socketableItem, qint8 socketableType)
+PropertiesMultiMap PropertiesDisplayManager::genericSocketableProperties(ItemInfo *socketableItem, qint8 socketableType)
 {
-    PropertiesMap props;
+    PropertiesMultiMap props;
     SocketableItemInfo *socketableItemInfo = ItemDataBase::Socketables()->value(socketableItem->itemType);
     const QList<SocketableItemInfo::Properties> &socketableProps = socketableItemInfo->properties[static_cast<SocketableItemInfo::PropertyType>(socketableType + 1)];
     foreach (const SocketableItemInfo::Properties &prop, socketableProps)
@@ -595,13 +595,13 @@ PropertiesMap PropertiesDisplayManager::genericSocketableProperties(ItemInfo *so
             default:
                 break;
             }
-            props[prop.code] = itemProperty;
+            props.insertMulti(prop.code, itemProperty);
         }
     }
     return props;
 }
 
-void PropertiesDisplayManager::addChallengeNamesToClassCharm(PropertiesMap::iterator &iter)
+void PropertiesDisplayManager::addChallengeNamesToClassCharm(PropertiesMultiMap::iterator &iter)
 {
     QString &desc = iter.value()->displayString;
     switch (iter.key())

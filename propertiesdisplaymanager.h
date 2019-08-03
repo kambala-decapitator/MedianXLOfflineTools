@@ -22,15 +22,15 @@ public:
     static void addProperties(PropertiesMap *mutableProps, const PropertiesMap &propsToAdd, const QSet<int> *pIgnorePropIds = 0);
     static void addTemporaryPropertiesAndDelete(PropertiesMap *mutableProps, const PropertiesMap &tempPropsToAdd, const QSet<int> *pIgnorePropIds = 0);
     // currently shouldColor is used for reanimates' names only
-    static void constructPropertyStrings(const PropertiesMap &properties, QMap<quint8, ItemPropertyDisplay> *outDisplayPropertiesMap, bool shouldColor = false, ItemInfo *item = 0);
-    static SecondaryDamageUsage secondaryDamageUsage(int secondaryDamageId, int secondaryDamageValue, const PropertiesMap &allProperties, ItemInfo *item);
+    static void constructPropertyStrings(const PropertiesMultiMap &properties, QMap<quint8, ItemPropertyDisplay> *outDisplayPropertiesMultiMap, bool shouldColor = false, ItemInfo *item = 0);
+    static SecondaryDamageUsage secondaryDamageUsage(int secondaryDamageId, int secondaryDamageValue, const PropertiesMultiMap &allProperties, ItemInfo *item);
     static QString propertyDisplay(ItemProperty *propDisplay, int propId, bool shouldColor = false);
-    static QString propertiesToHtml(const PropertiesMap &properties, ItemInfo *item = 0, int textColor = ColorsManager::Blue);
+    static QString propertiesToHtml(const PropertiesMultiMap &properties, ItemInfo *item = 0, int textColor = ColorsManager::Blue);
 
-    static PropertiesMap socketableProperties(ItemInfo *socketableItem, qint8 socketableType);
-    static PropertiesMap genericSocketableProperties(ItemInfo *socketableItem, qint8 socketableType);
+    static PropertiesMultiMap socketableProperties(ItemInfo *socketableItem, qint8 socketableType);
+    static PropertiesMultiMap genericSocketableProperties(ItemInfo *socketableItem, qint8 socketableType);
 
-    static void addChallengeNamesToClassCharm(PropertiesMap::iterator &iter);
+    static void addChallengeNamesToClassCharm(PropertiesMultiMap::iterator &iter);
     static PropertiesMultiMap collectSetFixedProps(const QList<SetFixedProperty> &setProps, quint8 propsNumber = 0);
 
     static const QList<QByteArray> kDamageToUndeadTypes;
