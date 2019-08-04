@@ -54,9 +54,9 @@
 52	Rathma's Supremacy	130	
 53	\gold;Neutrality Pact	130	
 54	Vial of Elder Blood	135	
-55	''The Worst Beta I've Been In''	666	
+55	''The Worst Beta I've Been In''	1	
 56	Spirit of Creation	120	
-57	Placeholder	0	
+57	'The Last Man Standing'\nНаграда за Событие:	0	
 58	Placeholder	0	
 59	Placeholder	0	
 60	Placeholder	0	
@@ -1712,3 +1712,8 @@
 1710	Iron Shard	100	
 1711	The Worshipper	120	
 1712	Malevolence	100	
+1713	Maleficence	125	
+1714	Desolation	125	
+1715	Despondence	125	
+1716	Celestial Sigil	125	invamu
+1717	Vial of Elder Blood	135	

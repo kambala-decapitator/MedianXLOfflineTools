@@ -186,7 +186,7 @@
 216	0	10							к Жизни	к Жизни	(Основано на Уровне Персонажа)	6	62	1					item_hp_perlevel
 217	0	10							к Мане	к Мане	(Основано на Уровне Персонажа)	6	58	1					item_mana_perlevel
 218	0	10							к Максимальному Урону	к Максимальному Урону	(Основано на Уровне Персонажа)	6	130	1					item_maxdamage_perlevel
-219	0	5																	blessings_counter
+219	0	5							\green;Улучшено Святыней	\green;Улучшено Святыней		3	250	0					blessings_counter
 220	0	5																	x_signet10
 221	0	5																	x_signet11
 222	0	5																	x_signet12
@@ -235,6 +235,7 @@
 266	0	7							\orange;Урон по Площади\white;	\orange;Урон по Площади\white;		3	248	0				17	item_warp_blue
 267	0	5							к Радиусу Стоек	к Радиусу Стоек		1	203	1					item_stance_radius
 270	0	3																	item_has_edyrem
+271	0	8							%d%% Шанс использовать навык уровня %d %s при Смерти	%d%% Шанс использовать навык уровня %d %s при Смерти		15	165					17	item_skillonanydeath
 273	25	7																	item_crushthorns
 274	0	8							Hive Добавляет 33% к Живучести от Суммарного Бонуса Урону Заклинаний Яда	Hive Добавляет 33% к Живучести от Суммарного Бонуса Урону Заклинаний Яда		3	10	0					item_poison_set
 275	0	9							Повышенный Урон против Некроботов	Повышенный Урон против Некроботов		2	8	1					item_desc_breaker
@@ -268,7 +269,7 @@
 306	500	10							к Сопротивлению Огню у Врага	к Сопротивлению Огню у Врага		20	93	1					item_pierce_fire
 307	500	10							к Сопротивлению Молнии у Врага	к Сопротивлению Молнии у Врага		20	93	1					item_pierce_ltng
 308	500	10							к Сопротивлению Яду у Врага	к Сопротивлению Яду у Врага		20	93	1					item_pierce_pois
-309	2048	12							ModitemJitanCooldown	%s Перезарядка Снижена на %.1g	ModitemSecondDual	33	131	2				17	skill_cooldown_reduce
+309	2048	12							Перезарядка %s Уменьшена на %.1g	Перезарядка %s Снижена на %.1g		33	131	2				17	skill_cooldown_reduce
 310	0	5																	x_signet46
 311	0	5																	x_signet47
 312	0	5																	x_signet48
@@ -317,6 +318,7 @@
 371	0	7							\orange;Изумительная Грация\white;	\orange;Изумительная Грация\white;		3	247	0				17	item_amazinggrace
 372	0	1							\dgrey;Не может быть извлечено из гнёзд\blue;	\dgrey;Не может быть извлечено из гнёзд\blue;		3	4	0					item_nounsock
 373	300	9																	passive_phys_pierce
+374	50	10																	trap_chain
 375	0	15										31	246	0				15	desc_top
 376	50	8							Замедляет Ближнюю Цель на	Замедляет Ближнюю Цель на		2	82	2					item_slow_offweapon
 377	0	15										31	3	0				15	desc_bottom
@@ -363,6 +365,7 @@
 445	0	6			441	ко Всем Максимальным Существам	ко Всем Максимальным Существам		к Максимуму Существ Варвара	к Максимуму Существ Варвара		1	73	1	11	1	1		skill_ancientspirits_synergy
 446	0	8							к Урону Bloodlust от Protector Spirit	к Урону Bloodlust от Protector Spirit		4	80	1					skill_shamanspath_synergy
 449	0	8							Повышенный Урон Лунного Удара	Повышенный Урон Лунного Удара		4	38	1					moonstrike_synergy
+450	0	5							\orange;С Трофеем	\orange;С Трофеем		3	250	0					trophy_counter
 452	1	5																	cube_upgrade_1
 453	1	5																	cube_upgrade_2
 454	1	5																	cube_upgrade_3

@@ -1223,6 +1223,7 @@
 1252	Daystar
 1253	Quov Tsin
 1254	Spirit of Vengeance
+1255	Morlu
 1256	Peace Warder
 1257	Living Flame
 1258	Shrieker
@@ -1661,7 +1662,6 @@
 1694	Veil King
 1695	Armageddon Knight
 1696	Fear Bomb Totem
-1697	Horned God
 1698	Midnight Fairy
 1699	Clawstorm Terror
 1700	Landmass
@@ -1684,6 +1684,7 @@
 1718	Dark Vizjerei
 1719	Dimensional Gate
 1720	Horadric Mage
+1721	Magineer
 1722	Warlock
 1723	Centaur
 1724	Doom Hunter
@@ -1851,9 +1852,10 @@
 2031	Umbaru Spirit
 2032	Terul
 2033	Goliath
-2035	Zorun Tzin
-2036	Trap
-2038	Trap
+2034	Guardian of Giyua
+2035	Spirit of Giyua
+2036	Harvester of Souls
+2037	Unformed Phantasm
 2042	Lost Traveler
 2043	a startled Witch...
 2044	Atanna Khan
@@ -2393,8 +2395,8 @@
 2609	Corrupted Barbarian
 2610	Corrupted Barbarian
 2611	Corrupted Barbarian
-2612	Abyssal Shrine
-2613	Abyssal Shrine
+2612	Abyssal Shrine (x2 Трофеи)
+2613	Abyssal Shrine (x3 Трофеи)
 2614	Astrogha
 2615	Astrogha
 2616	Astrogha
@@ -2538,3 +2540,20 @@
 2754	Gharbad the Weak
 2755	Gharbad the Weak
 2756	Gharbad the Weak
+2757	Assur
+2758	Assur
+2759	Assur
+2760	Assur
+2761	Assur
+2762	Assur
+2763	Assur
+2764	Assur
+2765	Assur
+2766	Assur
+2767	Abyssal Shrine (x3 Трофеи)
+2768	Abyssal Shrine (x3 Трофеи)
+2769	Abyssal Shrine (x3 Трофеи)
+2770	Abyssal Shrine (x3 Трофеи)
+2771	Abyssal Shrine (x3 Трофеи)
+2772	Abyssal Shrine (x3 Трофеи)
+2773	Abyssal Shrine (x3 Трофеи)
