@@ -61,6 +61,7 @@ private:
     bool saveLog(const QString &fileName, bool isPlainText = true);
     QString baseDupeScanLogFileName();
     QVariantMap keyValueFromItem(ItemInfo *item);
+    QVariantMap keyValueFromSkillId(quint32 skillId);
 };
 
 #endif // DUPESCANDIALOG_H

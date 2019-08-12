@@ -448,6 +448,26 @@ void DupeScanDialog::scanCharactersInDir(const QString &path)
             }
             charDumper->addDataFromArray(QLatin1String("skills"), QLatin1String("skill"), skillsKeyValue);
 
+            // hotkeyedSkills
+            keyValue.clear();
+            keyValue[QLatin1String("main_lmb")] = keyValueFromSkillId(ci.basicInfo.mainHandSkills.lmb);
+            keyValue[QLatin1String("main_rmb")] = keyValueFromSkillId(ci.basicInfo.mainHandSkills.rmb);
+            keyValue[QLatin1String("alt_lmb")] = keyValueFromSkillId(ci.basicInfo.altHandSkills.lmb);
+            keyValue[QLatin1String("alt_rmb")] = keyValueFromSkillId(ci.basicInfo.altHandSkills.rmb);
+            QVariantList hotkeyedSkillsKeyValue;
+            for (int i = 0; i < ci.basicInfo.hotkeyedSkills.size(); ++i)
+            {
+                quint32 skillId = ci.basicInfo.hotkeyedSkills.at(i);
+                if (skillId != 65535)
+                {
+                    QVariantMap v = keyValueFromSkillId(skillId);
+                    v[QLatin1String("index")] = i;
+                    hotkeyedSkillsKeyValue += v;
+                }
+            }
+            keyValue[QLatin1String("assigned")] = hotkeyedSkillsKeyValue;
+            charDumper->addDataFromMap(QLatin1String("skills_hotkeyed"), keyValue);
+
             // items
             QList<QVariantMap> itemsKeyValue;
             foreach (ItemInfo *item, ci.items.character)
@@ -619,5 +639,13 @@ QVariantMap DupeScanDialog::keyValueFromItem(ItemInfo *item)
     keyValue[QLatin1String("type")] = item->itemType.constData();
     keyValue[QLatin1String("quality")] = metaEnumFromName<Enums::ItemQuality>("ItemQualityEnum").valueToKey(item->quality);
     keyValue[QLatin1String("completeDescription")] = PropertiesDisplayManager::completeItemDescription(item, true).replace(QLatin1String("\n\n"), QLatin1String("\n")).trimmed();
+    return keyValue;
+}
+
+QVariantMap DupeScanDialog::keyValueFromSkillId(quint32 skillId)
+{
+    QVariantMap keyValue;
+    keyValue[QLatin1String("id")] = skillId;
+    keyValue[QLatin1String("name")] = ItemDataBase::Skills()->value(skillId)->name;
     return keyValue;
 }

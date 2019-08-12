@@ -1886,6 +1886,20 @@ bool MedianXLOfflineTools::processSaveFile()
     }
     charInfo.basicInfo.level = clvl;
 
+    const int hotkeyedSkillsSize = 16;
+    QList<quint32> &hotkeyedSkills = charInfo.basicInfo.hotkeyedSkills;
+    hotkeyedSkills.clear();
+    hotkeyedSkills.reserve(hotkeyedSkillsSize);
+    inputDataStream.device()->seek(Offsets::SkillKeys);
+    for (int i = 0; i < hotkeyedSkillsSize; ++i)
+    {
+        quint32 skill;
+        inputDataStream >> skill;
+        hotkeyedSkills += skill;
+    }
+    inputDataStream >> charInfo.basicInfo.mainHandSkills.lmb >> charInfo.basicInfo.mainHandSkills.rmb;
+    inputDataStream >> charInfo.basicInfo.altHandSkills.lmb >> charInfo.basicInfo.altHandSkills.rmb;
+
     inputDataStream.device()->seek(Offsets::Mercenary);
     quint32 mercID;
     inputDataStream >> mercID;

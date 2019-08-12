@@ -41,6 +41,9 @@ public:
         SkillList skills;
         SkillList skillsReadable; // used in planner and skill tree
         quint16 totalSkillPoints;
+
+        QList<quint32> hotkeyedSkills;
+        struct { quint32 lmb, rmb; } mainHandSkills, altHandSkills;
     } basicInfo;
 
     struct

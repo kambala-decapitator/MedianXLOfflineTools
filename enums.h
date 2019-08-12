@@ -21,6 +21,7 @@ public:
         Progression = 0x25,
         Class = 0x28,
         Level = 0x2B,
+        SkillKeys = 0x38,
         CurrentLocation = 0xA8,
         Mercenary = 0xB3,
         QuestsHeader = 0x165,
