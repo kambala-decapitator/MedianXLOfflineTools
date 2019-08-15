@@ -271,15 +271,6 @@
     <ClCompile Include="disenchantpreviewmodel.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="dupescandialog.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Debug\moc_dupescandialog.cpp">
-      <Filter>Generated Files\Debug</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_dupescandialog.cpp">
-      <Filter>Generated Files\Release</Filter>
-    </ClCompile>
     <ClCompile Include="stashsortingoptionsdialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -498,9 +489,6 @@
       <Filter>Header Files</Filter>
     </CustomBuild>
     <CustomBuild Include="progressbarmodal.hpp">
-      <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="dupescandialog.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
     <CustomBuild Include="stashsortingoptionsdialog.ui">
