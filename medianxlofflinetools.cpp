@@ -581,7 +581,7 @@ void MedianXLOfflineTools::saveCharacter()
         }
     }
 
-    int characterItemsSize = 2, mercItemsSize = 0, ironGolemItemsSize = 0;
+    int characterItemsSize = 2, mercItemsSize = 0;
     ItemsList characterItems, mercItems, ironGolemItems;
     QHash<Enums::ItemStorage::ItemStorageEnum, ItemsList> plugyItemsHash;
     foreach (ItemInfo *item, charInfo.items.character)
@@ -590,8 +590,8 @@ void MedianXLOfflineTools::saveCharacter()
             plugyItemsHash[static_cast<Enums::ItemStorage::ItemStorageEnum>(item->storage)] += item;
         else
         {
-            int *pItemsSize;
-            ItemsList *pItems;
+            int *pItemsSize = 0;
+            ItemsList *pItems = 0;
             switch (item->location)
             {
             case Enums::ItemLocation::Merc:
@@ -600,9 +600,11 @@ void MedianXLOfflineTools::saveCharacter()
                 item->location = Enums::ItemLocation::Equipped;
                 break;
             case Enums::ItemLocation::IronGolem:
-                pItemsSize = &ironGolemItemsSize;
-                pItems = &ironGolemItems;
-                item->location = Enums::ItemLocation::Equipped;
+                if (!ui->respecSkillsCheckBox->isChecked())
+                {
+                    pItems = &ironGolemItems;
+                    item->location = Enums::ItemLocation::Equipped;
+                }
                 break;
             default:
                 pItemsSize = &characterItemsSize;
@@ -612,9 +614,12 @@ void MedianXLOfflineTools::saveCharacter()
 
             if (pItems)
                 pItems->append(item);
-            *pItemsSize += ItemParser::kItemHeader.length() + item->bitString.length() / 8;
-            foreach (ItemInfo *socketableItem, item->socketablesInfo)
-                *pItemsSize += ItemParser::kItemHeader.length() + socketableItem->bitString.length() / 8;
+            if (pItemsSize)
+            {
+                *pItemsSize += ItemParser::kItemHeader.length() + item->bitString.length() / 8;
+                foreach (ItemInfo *socketableItem, item->socketablesInfo)
+                    *pItemsSize += ItemParser::kItemHeader.length() + socketableItem->bitString.length() / 8;
+            }
         }
     }
 
