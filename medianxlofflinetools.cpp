@@ -61,6 +61,7 @@ extern void qt_mac_set_dock_menu(QMenu *);
 
 // static const
 
+static const QString modName(QChar(0x03A3));
 static const QString kLastSavePathKey("lastSavePath"), kBackupExtension("bak"), kReadonlyCss("QLineEdit { background-color: rgb(227, 227, 227) }"), kTimeFormatReadable("yyyyMMdd-hhmmss"), kMedianXlServer("http://mxl.vn.cz/kambala/");
 static const QByteArray kMercHeader("jf"), kSkillsHeader("if"), kIronGolemHeader("kf");
 static const char sharedStashHeader[] = {'S', 'S', 'S', '\0', '0'};
@@ -2036,7 +2037,6 @@ bool MedianXLOfflineTools::processSaveFile()
         int statLength = txtProp->bitsSave;
         if (!statLength)
         {
-            QString modName("Median XL Sigma");
             showLoadingError(tr("Unknown statistic code found: %1. This is not %2 character.", "second param is mod name").arg(statCode).arg(modName));
             return false;
         }
@@ -2689,7 +2689,10 @@ void MedianXLOfflineTools::updateWindowTitle()
 {
     _charPathLabel->setText(QDir::toNativeSeparators(_charPath));
 
-    QLatin1String modVersion("Sigma");
+    QString modVersion = modName;
+    if (!_modDataVersion.isEmpty())
+        modVersion += QLatin1String(" v") + _modDataVersion;
+
     // making setWindowFilePath() work correctly
 #ifdef Q_OS_MAC
     setWindowTitle(_charPath.isEmpty() ? modVersion : QString("%1 (%2)").arg(QFileInfo(_charPath).fileName(), modVersion));
