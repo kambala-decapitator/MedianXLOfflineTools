@@ -74,8 +74,6 @@ private slots:
     void updateFindResults();
     void dupeScanFinished();
 
-    void networkReplyCheckForUpdateFinished(QNetworkReply *reply);
-
     void fileContentsChanged();
     void fileChangeTimerFired();
 
@@ -239,7 +237,6 @@ private:
     void showErrorMessageBoxForFile(const QString &message, const QFile &file);
     bool maybeSave();
 
-    void checkForUpdateFromForumUrl(const QUrl &url);
     void displayInfoAboutServerVersion(const QString &version);
 };
 

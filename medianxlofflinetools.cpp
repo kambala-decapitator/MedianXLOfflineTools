@@ -1196,12 +1196,8 @@ void MedianXLOfflineTools::checkForUpdate()
     _qnamCheckForUpdate->deleteLater();
 
     if (!reply->error())
-    {
-        reply->deleteLater();
         displayInfoAboutServerVersion(reply->readAll().trimmed());
-    }
-    else
-        checkForUpdateFromForumUrl(QUrl("https://forum.median-xl.com/viewforum.php?f=40"));
+    reply->deleteLater();
 }
 
 void MedianXLOfflineTools::aboutApp()
@@ -2986,34 +2982,6 @@ bool MedianXLOfflineTools::maybeSave()
         }
     }
     return true;
-}
-
-void MedianXLOfflineTools::checkForUpdateFromForumUrl(const QUrl &url)
-{
-    _qnamCheckForUpdate = new QNetworkAccessManager;
-    connect(_qnamCheckForUpdate, SIGNAL(finished(QNetworkReply *)), SLOT(networkReplyCheckForUpdateFinished(QNetworkReply *)));
-    qApp->processEvents(); // prevents UI from freezing
-    _qnamCheckForUpdate->get(QNetworkRequest(url));
-}
-
-void MedianXLOfflineTools::networkReplyCheckForUpdateFinished(QNetworkReply *reply)
-{
-    QByteArray webpage = reply->readAll();
-    reply->deleteLater();
-    _qnamCheckForUpdate->deleteLater();
-
-    QRegExp rx(QString("%1 v(.+)").arg(qApp->applicationName()));
-    rx.setMinimal(true);
-    if (rx.indexIn(webpage) != -1)
-        displayInfoAboutServerVersion(rx.cap(1));
-    else
-    {
-        QUrl newUrl("http://worldofplayers.ru/forums/935/");
-        if (newUrl != reply->url())
-            checkForUpdateFromForumUrl(newUrl);
-        else if (_isManuallyCheckingForUpdate)
-            ERROR_BOX(tr("Error contacting update server. Please try again later."));
-    }
 }
 
 void MedianXLOfflineTools::displayInfoAboutServerVersion(const QString &version)
