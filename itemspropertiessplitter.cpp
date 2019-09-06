@@ -14,6 +14,7 @@
 #include <QMenu>
 #include <QInputDialog>
 #include <QApplication>
+#include <QClipboard>
 
 #ifndef QT_NO_DEBUG
 #include <QDebug>
@@ -62,6 +63,38 @@ void ItemsPropertiesSplitter::itemSelected(const QModelIndex &index, bool displa
     _itemActions[DisenchantShards]->setEnabled(ItemDataBase::canDisenchantIntoArcaneShards(item));
     _itemActions[DisenchantSignet]->setEnabled(ItemDataBase::canDisenchantIntoSignetOfLearning(item));
     _itemActions[RemoveMO]->setEnabled(_propertiesWidget->hasMysticOrbs() && !ItemDataBase::isUberCharm(item));
+
+    // item bbcode
+    QAction *bbcodeAction = _itemActions[CopyItemBBCode];
+    bool enableBBCode = item != 0;
+    if (item)
+    {
+        if (item->quality == Enums::ItemQuality::Set)
+        {
+            bbcodeAction->setObjectName(ItemDataBase::Sets()->value(item->setOrUniqueId)->itemName);
+        }
+        else if (item->quality == Enums::ItemQuality::Unique)
+        {
+            bbcodeAction->setObjectName(ItemDataBase::Uniques()->value(item->setOrUniqueId)->name);
+        }
+        else if (item->isRW)
+        {
+            QString rwName = item->rwName;
+            foreach (ItemInfo *socketable, item->socketablesInfo)
+            {
+                if (socketable->itemType.startsWith("rx"))
+                {
+                    rwName += QLatin1String(" (Xis)");
+                    break;
+                }
+            }
+            bbcodeAction->setObjectName(rwName);
+        }
+        else
+            enableBBCode = false;
+    }
+    foreach (QAction *action, bbcodeAction->menu()->actions() + QList<QAction *>() << bbcodeAction)
+        action->setEnabled(enableBBCode);
 
     // eat signet of learning
     quint8 statsFromSignet = 0;
@@ -202,6 +235,9 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
             connect(moveBetweenStashesAction, SIGNAL(triggered()), SLOT(moveBetweenStashes()));
             actions << moveBetweenStashesAction << separatorAction();
         }
+
+        if (_itemActions[CopyItemBBCode]->isEnabled())
+            actions << _itemActions[CopyItemBBCode] << separatorAction();
 
         // TODO: 0.5
         //QMenu *menuExport = new QMenu(tr("Export as"), _itemsView);
@@ -348,6 +384,13 @@ bool ItemsPropertiesSplitter::moveBetweenStashes()
 void ItemsPropertiesSplitter::exportText()
 {
 
+}
+
+void ItemsPropertiesSplitter::copyItemBBCode(QAction *action)
+{
+    QString codeType = action->objectName();
+    QAction *menuAction = qobject_cast<QMenu *>(sender())->menuAction();
+    qApp->clipboard()->setText(QString("[item%1]%2[/item]").arg(codeType.isEmpty() ? QString() : (QLatin1String("=") + codeType)).arg(menuAction->objectName()));
 }
 
 void ItemsPropertiesSplitter::disenchantSelectedItem()
@@ -951,6 +994,26 @@ void ItemsPropertiesSplitter::createItemActions()
     //connect(actionHtml, SIGNAL(triggered()), SLOT(exportText()));
     //_itemsView->addAction(actionHtml);
     //_itemActions[ExportHtml] = actionHtml;
+
+    QMenu *menuCopyItemBBCode = new QMenu(tr("Copy item BBCode"), _itemsView);
+    {
+        QAction *actionBBCodeText = new QAction(tr("Text", "BBCode type"), menuCopyItemBBCode);
+        actionBBCodeText->setShortcut(QKeySequence("Ctrl+Alt+C"));
+
+        QAction *actionBBCodeImage = new QAction(tr("Image", "BBCode type"), menuCopyItemBBCode);
+        actionBBCodeImage->setObjectName(QLatin1String("image"));
+
+        QAction *actionBBCodeFull = new QAction(tr("Full", "BBCode type"), menuCopyItemBBCode);
+        actionBBCodeFull->setObjectName(QLatin1String("full"));
+
+        foreach (QAction *action, QList<QAction *>() << actionBBCodeText << actionBBCodeImage << actionBBCodeFull)
+        {
+            menuCopyItemBBCode->addAction(action);
+            _itemsView->addAction(action);
+        }
+    }
+    connect(menuCopyItemBBCode, SIGNAL(triggered(QAction*)), SLOT(copyItemBBCode(QAction*)));
+    _itemActions[CopyItemBBCode] = menuCopyItemBBCode->menuAction();
 
     QAction *actionSol = new QAction(QIcon(ResourcePathManager::pathForItemImageName("sigil1b")), tr("Signet of Learning"), _itemsView);
     actionSol->setShortcut(QKeySequence("Ctrl+D"));

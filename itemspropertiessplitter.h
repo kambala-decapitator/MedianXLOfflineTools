@@ -64,6 +64,7 @@ protected slots:
     void showContextMenu(const QPoint &pos);
     virtual bool moveBetweenStashes();
     void exportText();
+    void copyItemBBCode(QAction *action);
     void disenchantSelectedItem();
 //    void unsocketItem();
     void downgradeSelectedRune();
@@ -83,6 +84,7 @@ protected:
     {
         //ExportBbCode,
         //ExportHtml,
+        CopyItemBBCode,
         DisenchantShards,
         DisenchantSignet,
         //Unsocket,
