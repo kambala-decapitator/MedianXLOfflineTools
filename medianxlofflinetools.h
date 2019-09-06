@@ -157,6 +157,7 @@ private:
 
     QNetworkAccessManager *_qnamCheckForUpdate;
     bool _isManuallyCheckingForUpdate;
+    QByteArray _modDataVersion;
 
     QFileSystemWatcher *_fsWatcher;
     QTimer *_fileChangeTimer;
@@ -237,7 +238,7 @@ private:
     void showErrorMessageBoxForFile(const QString &message, const QFile &file);
     bool maybeSave();
 
-    void displayInfoAboutServerVersion(const QString &version);
+    void displayInfoAboutServerVersion(const QByteArray &version);
 };
 
 #endif // MEDIANXLOFFLINETOOLS_H

@@ -1189,7 +1189,7 @@ void MedianXLOfflineTools::checkForUpdate()
     _isManuallyCheckingForUpdate = sender() != 0;
 
     _qnamCheckForUpdate = new QNetworkAccessManager;
-    QNetworkReply *reply = _qnamCheckForUpdate->get(QNetworkRequest(QUrl(kMedianXlServer + "mxlot_version.txt")));
+    QNetworkReply *reply = _qnamCheckForUpdate->get(QNetworkRequest(QUrl(kMedianXlServer + "mxlot_version2.txt")));
     QEventLoop eventLoop;
     connect(reply, SIGNAL(finished()), &eventLoop, SLOT(quit()));
     eventLoop.exec();
@@ -1278,6 +1278,10 @@ void MedianXLOfflineTools::loadData()
     loadExpTable();
     loadMercNames();
     loadBaseStats();
+
+    QFile f(ResourcePathManager::dataPathForFileName("version.txt"));
+    if (f.open(QIODevice::ReadOnly))
+        _modDataVersion = f.readAll().trimmed();
 }
 
 void MedianXLOfflineTools::loadExpTable()
@@ -2984,10 +2988,23 @@ bool MedianXLOfflineTools::maybeSave()
     return true;
 }
 
-void MedianXLOfflineTools::displayInfoAboutServerVersion(const QString &version)
+void MedianXLOfflineTools::displayInfoAboutServerVersion(const QByteArray &version)
 {
-    if (qApp->applicationVersion() < version)
-        INFO_BOX(tr("New version <b>%1</b> is available!").arg(version) + kHtmlLineBreak + kHtmlLineBreak + kForumThreadHtmlLinks);
+    QList<QByteArray> versions = version.split('\n');
+#if !IS_RELEASE_BUILD
+    Q_ASSERT(versions.size() == 2);
+#endif
+
+    QString updateText;
+    QByteArray appVersion = versions.at(0), modDataVersion = versions.at(1);
+    QLatin1String appVersionStr(appVersion);
+    if (qApp->applicationVersion() < appVersionStr)
+        updateText = tr("New app version <b>%1</b> is available!").arg(appVersionStr);
+    else if (!_modDataVersion.isEmpty() && _modDataVersion < modDataVersion)
+        updateText = tr("New mod data <b>%1</b> is available!").arg(QLatin1String(modDataVersion));
+
+    if (!updateText.isEmpty())
+        INFO_BOX(updateText + kHtmlLineBreak + kHtmlLineBreak + kForumThreadHtmlLinks);
     else if (_isManuallyCheckingForUpdate)
         INFO_BOX(tr("You have the latest version"));
 }
