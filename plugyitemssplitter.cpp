@@ -113,9 +113,6 @@ PlugyItemsSplitter::PlugyItemsSplitter(ItemStorageTableView *itemsView, QWidget 
     _pageSpinBox->setValue(1);
     _pageSpinBox->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
 
-    QWidget *w = new QWidget(this);
-    insertWidget(0, w);
-
     QHBoxLayout *hlayout = new QHBoxLayout;
     hlayout->addWidget(_left10Button);
     hlayout->addWidget(_leftButton);
@@ -126,8 +123,7 @@ PlugyItemsSplitter::PlugyItemsSplitter(ItemStorageTableView *itemsView, QWidget 
     hlayout->setSpacing(0);
     hlayout->setContentsMargins(QMargins());
 
-    QVBoxLayout *vlayout = new QVBoxLayout(w);
-    vlayout->addWidget(_itemsView);
+    QVBoxLayout *vlayout = static_cast<QVBoxLayout *>(widget(0)->layout());
     vlayout->addLayout(hlayout);
     vlayout->setSpacing(0);
     vlayout->setContentsMargins(QMargins());

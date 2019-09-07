@@ -15,6 +15,8 @@
 #include <QInputDialog>
 #include <QApplication>
 #include <QClipboard>
+#include <QVBoxLayout>
+#include <QPushButton>
 
 #ifndef QT_NO_DEBUG
 #include <QDebug>
@@ -32,7 +34,17 @@ static const quint8 kOnRuneKey = 50, kPerfectGrade = 4;
 
 ItemsPropertiesSplitter::ItemsPropertiesSplitter(ItemStorageTableView *itemsView, QWidget *parent /*= 0*/) : QSplitter(Qt::Horizontal, parent), _itemsView(itemsView), _propertiesWidget(new PropertiesViewerWidget(parent))
 {
-    addWidget(_itemsView);
+    QWidget *leftWidget = new QWidget(this);
+
+    QPushButton *copyBBCodesButton = new QPushButton(tr("Copy BBCode of items here"), leftWidget);
+    QMenu *copyBBCodesMenu = createCopyBBCodeMenu(false);
+    copyBBCodesButton->setMenu(copyBBCodesMenu);
+
+    QVBoxLayout *leftLayout = new QVBoxLayout(leftWidget);
+    leftLayout->addWidget(_itemsView);
+    leftLayout->addWidget(copyBBCodesButton);
+
+    addWidget(leftWidget);
     addWidget(_propertiesWidget);
 
     createItemActions();
@@ -42,6 +54,7 @@ ItemsPropertiesSplitter::ItemsPropertiesSplitter(ItemStorageTableView *itemsView
 
     connect(_itemsView, SIGNAL(customContextMenuRequested(const QPoint &)), SLOT(showContextMenu(const QPoint &)));
     connect(_itemsView, SIGNAL(pressed(QModelIndex)), SLOT(moveBetweenStashes()));
+    connect(copyBBCodesMenu, SIGNAL(triggered(QAction*)), SLOT(copyAllItemsBBCode(QAction*)));
 }
 
 void ItemsPropertiesSplitter::setModel(ItemStorageTableModel *model)
@@ -66,35 +79,9 @@ void ItemsPropertiesSplitter::itemSelected(const QModelIndex &index, bool displa
 
     // item bbcode
     QAction *bbcodeAction = _itemActions[CopyItemBBCode];
-    bool enableBBCode = item != 0;
-    if (item)
-    {
-        if (item->quality == Enums::ItemQuality::Set)
-        {
-            bbcodeAction->setObjectName(ItemDataBase::Sets()->value(item->setOrUniqueId)->itemName);
-        }
-        else if (item->quality == Enums::ItemQuality::Unique)
-        {
-            bbcodeAction->setObjectName(ItemDataBase::Uniques()->value(item->setOrUniqueId)->name);
-        }
-        else if (item->isRW)
-        {
-            QString rwName = item->rwName;
-            foreach (ItemInfo *socketable, item->socketablesInfo)
-            {
-                if (socketable->itemType.startsWith("rx"))
-                {
-                    rwName += QLatin1String(" (Xis)");
-                    break;
-                }
-            }
-            bbcodeAction->setObjectName(rwName);
-        }
-        else
-            enableBBCode = false;
-    }
+    bbcodeAction->setObjectName(itemNameBBCode(item));
     foreach (QAction *action, bbcodeAction->menu()->actions() + QList<QAction *>() << bbcodeAction)
-        action->setEnabled(enableBBCode);
+        action->setDisabled(bbcodeAction->objectName().isEmpty());
 
     // eat signet of learning
     quint8 statsFromSignet = 0;
@@ -386,11 +373,23 @@ void ItemsPropertiesSplitter::exportText()
 
 }
 
+void ItemsPropertiesSplitter::copyAllItemsBBCode(QAction *action)
+{
+    QStringList codes;
+    foreach (ItemInfo *item, _itemsModel->items())
+    {
+        QString name = itemNameBBCode(item);
+        if (!name.isEmpty())
+            codes << itemBBCode(name, action->objectName());
+    }
+    if (!codes.isEmpty())
+        qApp->clipboard()->setText(codes.join(QChar('\n')));
+}
+
 void ItemsPropertiesSplitter::copyItemBBCode(QAction *action)
 {
-    QString codeType = action->objectName();
     QAction *menuAction = qobject_cast<QMenu *>(sender())->menuAction();
-    qApp->clipboard()->setText(QString("[item%1]%2[/item]").arg(codeType.isEmpty() ? QString() : (QLatin1String("=") + codeType)).arg(menuAction->objectName()));
+    qApp->clipboard()->setText(itemBBCode(menuAction->objectName(), action->objectName()));
 }
 
 void ItemsPropertiesSplitter::disenchantSelectedItem()
@@ -979,6 +978,54 @@ UpgradableItemsMultiMap ItemsPropertiesSplitter::runesMapFromItems(const ItemsLi
     return runesMap;
 }
 
+QString ItemsPropertiesSplitter::itemBBCode(const QString &name, const QString &codeType)
+{
+    return QString("[item%1]%2[/item]").arg(codeType.isEmpty() ? QString() : (QLatin1String("=") + codeType)).arg(name);
+}
+
+QString ItemsPropertiesSplitter::itemNameBBCode(ItemInfo *item)
+{
+    if (!item)
+        return QString();
+
+    if (item->quality == Enums::ItemQuality::Set)
+        return ItemDataBase::Sets()->value(item->setOrUniqueId)->itemName;
+    else if (item->quality == Enums::ItemQuality::Unique)
+        return ItemDataBase::Uniques()->value(item->setOrUniqueId)->name;
+    else if (item->isRW)
+    {
+        QString rwName = item->rwName;
+        foreach (ItemInfo *socketable, item->socketablesInfo)
+        {
+            if (socketable->itemType.startsWith("rx"))
+            {
+                rwName += QLatin1String(" (Xis)");
+                break;
+            }
+        }
+        return rwName;
+    }
+    return QString();
+}
+
+QMenu *ItemsPropertiesSplitter::createCopyBBCodeMenu(bool addShortcut)
+{
+    QMenu *menu = new QMenu(tr("Copy item BBCode"), _itemsView);
+
+    QAction *actionBBCodeText = new QAction(tr("Text", "BBCode type"), menu);
+    if (addShortcut)
+        actionBBCodeText->setShortcut(QKeySequence("Ctrl+Alt+C"));
+
+    QAction *actionBBCodeImage = new QAction(tr("Image", "BBCode type"), menu);
+    actionBBCodeImage->setObjectName(QLatin1String("image"));
+
+    QAction *actionBBCodeFull = new QAction(tr("Full", "BBCode type"), menu);
+    actionBBCodeFull->setObjectName(QLatin1String("full"));
+
+    menu->addActions(QList<QAction *>() << actionBBCodeText << actionBBCodeImage << actionBBCodeFull);
+    return menu;
+}
+
 void ItemsPropertiesSplitter::createItemActions()
 {
     //QAction *actionBbCode = new QAction("BBCode", _itemsView);
@@ -995,24 +1042,9 @@ void ItemsPropertiesSplitter::createItemActions()
     //_itemsView->addAction(actionHtml);
     //_itemActions[ExportHtml] = actionHtml;
 
-    QMenu *menuCopyItemBBCode = new QMenu(tr("Copy item BBCode"), _itemsView);
-    {
-        QAction *actionBBCodeText = new QAction(tr("Text", "BBCode type"), menuCopyItemBBCode);
-        actionBBCodeText->setShortcut(QKeySequence("Ctrl+Alt+C"));
-
-        QAction *actionBBCodeImage = new QAction(tr("Image", "BBCode type"), menuCopyItemBBCode);
-        actionBBCodeImage->setObjectName(QLatin1String("image"));
-
-        QAction *actionBBCodeFull = new QAction(tr("Full", "BBCode type"), menuCopyItemBBCode);
-        actionBBCodeFull->setObjectName(QLatin1String("full"));
-
-        foreach (QAction *action, QList<QAction *>() << actionBBCodeText << actionBBCodeImage << actionBBCodeFull)
-        {
-            menuCopyItemBBCode->addAction(action);
-            _itemsView->addAction(action);
-        }
-    }
+    QMenu *menuCopyItemBBCode = createCopyBBCodeMenu(true);
     connect(menuCopyItemBBCode, SIGNAL(triggered(QAction*)), SLOT(copyItemBBCode(QAction*)));
+    _itemsView->addActions(menuCopyItemBBCode->actions());
     _itemActions[CopyItemBBCode] = menuCopyItemBBCode->menuAction();
 
     QAction *actionSol = new QAction(QIcon(ResourcePathManager::pathForItemImageName("sigil1b")), tr("Signet of Learning"), _itemsView);

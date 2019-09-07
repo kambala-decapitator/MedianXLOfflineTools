@@ -64,6 +64,7 @@ protected slots:
     void showContextMenu(const QPoint &pos);
     virtual bool moveBetweenStashes();
     void exportText();
+    void copyAllItemsBBCode(QAction *action);
     void copyItemBBCode(QAction *action);
     void disenchantSelectedItem();
 //    void unsocketItem();
@@ -116,6 +117,9 @@ protected:
     QHash<QByteArray, UpgradableItemsMultiMap> gemsMapsFromItems(const ItemsList &items);
     UpgradableItemsMultiMap runesMapFromItems(const ItemsList &items, int reserveRunes);
 
+    QString itemBBCode(const QString &name, const QString &codeType);
+    QString itemNameBBCode(ItemInfo *item);
+    QMenu *createCopyBBCodeMenu(bool addShortcut);
     void createItemActions();
     QAction *separatorAction();
     void createActionsForMysticOrbs(QMenu *parentMenu, bool isItemMO, ItemInfo *item);
