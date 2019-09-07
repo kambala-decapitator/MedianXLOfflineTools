@@ -988,24 +988,28 @@ QString ItemsPropertiesSplitter::itemNameBBCode(ItemInfo *item)
     if (!item)
         return QString();
 
+    QString name;
     if (item->quality == Enums::ItemQuality::Set)
-        return ItemDataBase::Sets()->value(item->setOrUniqueId)->itemName;
+        name = ItemDataBase::Sets()->value(item->setOrUniqueId)->itemName;
     else if (item->quality == Enums::ItemQuality::Unique)
-        return ItemDataBase::Uniques()->value(item->setOrUniqueId)->name;
+        name = ItemDataBase::Uniques()->value(item->setOrUniqueId)->name;
     else if (item->isRW)
     {
-        QString rwName = item->rwName;
+        name = item->rwName;
         foreach (ItemInfo *socketable, item->socketablesInfo)
         {
             if (socketable->itemType.startsWith("rx"))
             {
-                rwName += QLatin1String(" (Xis)");
+                name += QLatin1String(" (Xis)");
                 break;
             }
         }
-        return rwName;
     }
-    return QString();
+    else
+        return QString();
+
+    ItemDataBase::removeColorCodesFromString(name);
+    return name.split(QLatin1String("\\n"), QString::SkipEmptyParts).last();
 }
 
 QMenu *ItemsPropertiesSplitter::createCopyBBCodeMenu(bool addShortcut)
