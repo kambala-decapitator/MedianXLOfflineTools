@@ -202,7 +202,7 @@ QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item, bool u
             maxSocketableRlvl = socketableRlvl;
     }
     if (int actualRlvl = qMax(rlvl, maxSocketableRlvl) + allProps.value(Enums::ItemProperties::RequiredLevel, foo)->value)
-        itemDescription += "\n" + tr("Required Level: %2").arg(actualRlvl);
+        itemDescription += "\n" + tr("Required Level: %1").arg(actualRlvl);
     delete foo;
 
     // add '+50% damage to undead' if item type matches
