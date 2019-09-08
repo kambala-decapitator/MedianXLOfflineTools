@@ -2198,14 +2198,17 @@ bool MedianXLOfflineTools::processSaveFile()
         inputDataStream.skipRawData(ItemParser::kItemHeader.length()); // JM
 
         // find iron golem header
-        int golemHeaderPos = -1, golemFlagPos;
+        int golemHeaderPos = -1, golemFlagPos, attempts = 0;
         char golemFlag;
         do
         {
             golemHeaderPos = _saveFileContents.lastIndexOf(kIronGolemHeader, golemHeaderPos);
             golemFlagPos = golemHeaderPos + kIronGolemHeader.length();
-            golemFlag = _saveFileContents.mid(golemFlagPos, 1).at(0);
-        } while (!((!golemFlag && golemFlagPos == _saveFileContents.size() - 1) || (golemFlag && _saveFileContents.mid(golemFlagPos + 1, ItemParser::kItemHeader.length()) == ItemParser::kItemHeader)));
+            golemFlag = _saveFileContents.at(golemFlagPos);
+        } while (!(++attempts == 3 || (!golemFlag && golemFlagPos == _saveFileContents.size() - 1) || (golemFlag && _saveFileContents.mid(golemFlagPos + 1, ItemParser::kItemHeader.length()) == ItemParser::kItemHeader)));
+#if !IS_RELEASE_BUILD
+        Q_ASSERT(golemHeaderPos != -1);
+#endif
 
         quint16 mercItemsTotal;
         inputDataStream >> mercItemsTotal;
