@@ -50,12 +50,25 @@
 
 [B]Загрузки[/B]:
 [LIST]
-[*][I]Windows[/I] (XP SP3 и позже): [URL]http://mxl.vn.cz/kambala/MedianXLOfflineTools_0.5.2.1.7z[/URL] (если не запускается, установите MSVC++ 2015 Redistributable [FONT=Courier New]vc_redist.x[B]86[/B].exe[/FONT] с [URL='https://www.mediafire.com/?84qc8d5dy3cd9f6']Mediafire[/URL] или с [URL='https://www.microsoft.com/en-us/download/details.aspx?id=52685']сайта Microsoft[/URL])
-[*][I]macOS[/I] (10.9 и позже, Intel 64bit): [URL]http://mxl.vn.cz/kambala/MedianXLOfflineTools_mac_0.5.2.1.tbz[/URL]
+[*][I]Windows[/I] (XP SP3 и позже): [URL]http://mxl.vn.cz/kambala/MedianXLOfflineTools_0.5.3.7z[/URL] (если не запускается, установите MSVC++ 2015 Redistributable [FONT=Courier New]vc_redist.x[B]86[/B].exe[/FONT] с [URL='https://www.mediafire.com/?84qc8d5dy3cd9f6']Mediafire[/URL] или с [URL='https://www.microsoft.com/en-us/download/details.aspx?id=52685']сайта Microsoft[/URL])
+[*][I]macOS[/I] (10.9 и позже, Intel 64bit): [URL]http://mxl.vn.cz/kambala/MedianXLOfflineTools_mac_0.5.3.txz[/URL]
 [/LIST]
 
-[spoiler="Mini-FAQ"]В: Я не могу распаковать архив без ошибок :(
-О: Используй 7zip, Люк.
+[spoiler="Mini-FAQ"]В: Где находятся сохранения Сигмы?
+О: %APPDATA%\MedianXL\save
+
+В: Как установить данные мода?
+О: Перезапустите приложение после выполнения нижеуказанных шагов если оно запущено.
+[LIST]
+[*]Windows: просто распакуйте архив в папку с экзэшником с заменой
+[*]Mac OS X: распакуйте архив куда-нибудь и...
+[LIST]
+[*]краткий ответ: переместите [B]содержимое папки 'resources/data', а не саму папку 'data'[/B], в 'MedianXLOfflineTools.app/Contents/Resources/data'
+[*]длинный 'ручной' ответ: откройте в распакованную папку, внутри откройте папку 'resources', Выбрать всё (Cmd+A), Копировать (Cmd+C), найдите MedianXLOfflineTools.app, нажмите на него правой кнопкой (или Контрол и левой), выберите «Показать содержимое пакета», откройте папку Contents/Resources/data, Вставить (Cmd+V) с заменой
+[*]длинный 'терминальный' ответ: откройте Терминал, cd в папку, в которую вы распаковали данные мода (в ней должна находиться папка 'resources') и используйте следующий скрипт:
+[code]APP_PATH = "/Applications/MedianXLOfflineTools.app" # поместите в кавычки реальный путь, это лишь пример
+cp -R resources/data/* "${APP_PATH}/Contents/resources/data"[/code]
+[/LIST][/LIST]
 
 В: Я сломал персонажа и/или сундук PlugY и ни игра, ни данное приложение не могут его загрузить. Как я могу его восстановить из резервной копии?
 О: Пройдите в папку сохранений и поищите файл(ы) <персонаж>.<d2s или d2x>_<дата>.bak и удалите всё справа от d2s или d2x. Если вы хотите восстановить общий сундук, то он называется _LOD<_HC для смертных (хардкорных)>_SharedStashSave.sss_<дата>.bak и удалите всё справа от sss.
@@ -89,23 +102,7 @@
 [*][I]2017 1.3:[/I] [URL]http://mxl.vn.cz/kambala/2017-1.3.zip[/URL]
 [*][I]Ultimative XVI:[/I] [URL]http://mxl.vn.cz/kambala/ultimativeXVI.7z[/URL]
 [*][I]2012 v005 / Лабиринт Кейджан + Тафамет против Ану / Hardened:[/I] [URL]http://mxl.vn.cz/kambala/2012-005+kehjan+tathamet.7z[/URL]
-[/LIST]
-[/LIST]
-
-В: Как установить данные мода?
-О: Перезапустите приложение после выполнения нижеуказанных шагов если оно запущено.
-[LIST]
-[*]Windows: просто распакуйте архив в папку с экзэшником с заменой
-[*]Mac OS X: распакуйте архив куда-нибудь и...
-[LIST]
-[*]краткий ответ: переместите [B]содержимое папки 'resources/data', а не саму папку 'data'[/B], в 'MedianXLOfflineTools.app/Contents/Resources/data'
-[*]длинный 'ручной' ответ: откройте в распакованную папку, внутри откройте папку 'resources', Выбрать всё (Cmd+A), Копировать (Cmd+C), найдите MedianXLOfflineTools.app, нажмите на него правой кнопкой (или Контрол и левой), выберите «Показать содержимое пакета», откройте папку Contents/Resources/data, Вставить (Cmd+V) с заменой
-[*]длинный 'терминальный' ответ: откройте Терминал, cd в папку, в которую вы распаковали данные мода (в ней должна находиться папка 'resources') и используйте следующий скрипт:
-[code]APP_PATH = "/Applications/MedianXLOfflineTools.app" # поместите в кавычки реальный путь, это лишь пример
-cp -R resources/data/* "${APP_PATH}/Contents/resources/data"[/code]
-[/LIST]
-[/LIST]
-[/spoiler]
+[/LIST][/LIST][/spoiler]
 [spoiler="Скриншоты"]кликните для полноразмерного просмотра
 [URL='http://s1125.photobucket.com/user/kambala_decapitator/media/Median%20XL%20Offline%20Tools/main_ru4.png.html'][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_main_ru4.png[/IMG][/URL][URL='http://s1125.photobucket.com/user/kambala_decapitator/media/Median%20XL%20Offline%20Tools/main_ru_mac2.png.html'][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_main_ru_mac2.png[/IMG][/URL]
 [URL='http://s1125.photobucket.com/user/kambala_decapitator/media/items2_ru.png.html'][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/th_items2_ru.png[/IMG][/URL][URL='http://s1125.photobucket.com/user/kambala_decapitator/media/items_plugy2_ru.png.html'][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/th_items_plugy2_ru.png[/IMG][/URL]
@@ -120,11 +117,20 @@ cp -R resources/data/* "${APP_PATH}/Contents/resources/data"[/code]
 
 [B]История версий:[/B]
 
+[I]v0.5.3 (09.09.2019)[/I]
+[LIST]
+[*][+] копирование BBCode предмета для оф. форума: контекстное меню и кнопка для совокупности предметов
+[*][+] уведомление об обновлении данных мода
+[*][f] исправлено повреждение d2s при сбросе навыков Некроманта с активым Железным Големом
+[*][f] исправлено редкое зависание приложения, связанное с Железным Големом
+[*][f] исправлено отображение древа навыков
+[/LIST]
+[spoiler="предыдущие версии"]
 [I]v0.5.2.1 (07.05.2019)[/I]
 [LIST]
 [*][ф] улучшено чтение предметов наемника/Iron Golem для предотвращения ошибки в редких случаях
 [/LIST]
-[spoiler="предыдущие версии"]
+
 [I]v0.5.2 (06.05.2019)[/I]
 [LIST]
 [*][+] отображение предмета, с помощью которого был создан Iron Golem
