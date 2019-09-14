@@ -991,8 +991,13 @@ QString ItemsPropertiesSplitter::itemNameBBCode(ItemInfo *item)
     QString name;
     if (item->quality == Enums::ItemQuality::Set)
         name = ItemDataBase::Sets()->value(item->setOrUniqueId)->itemName;
-    else if (item->quality == Enums::ItemQuality::Unique)
-        name = ItemDataBase::Uniques()->value(item->setOrUniqueId)->name;
+	else if (item->quality == Enums::ItemQuality::Unique)
+	{
+		if (UniqueItemInfo *uniqueInfo = ItemDataBase::Uniques()->value(item->setOrUniqueId))
+			name = uniqueInfo->name;
+		else
+			return QString();
+	}
     else if (item->isRW)
     {
         name = item->rwName;
