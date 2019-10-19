@@ -1541,7 +1541,7 @@ void MedianXLOfflineTools::createQuestsGroupBoxLayout()
     radamentLabel->setStatusTip(rewardFormat.arg(tr("%n free skill point(s)", 0, 1)));
     izualLabel->setStatusTip(rewardFormat.arg(tr("%n free skill point(s)", 0, 2)));
     lamEsensTomeLabel->setStatusTip(rewardFormat.arg(tr("%n free stat point(s)", 0, kStatPointsPerLamEsensTome)));
-    goldenBirdLabel->setStatusTip(rewardFormat.arg(tr("'+20 to Life' potion")));
+    goldenBirdLabel->setStatusTip(rewardFormat.arg(tr("'+50 to Life' potion")));
 
     QGridLayout *gridLayout = new QGridLayout(_questsGroupBox);
     gridLayout->addWidget(doeLabel, 0, 0);
