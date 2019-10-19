@@ -74,6 +74,7 @@ const quint32 MedianXLOfflineTools::kFileSignature = 0xAA55AA55;
 const int MedianXLOfflineTools::kDifficultiesNumber = 3;
 const int MedianXLOfflineTools::kStatPointsPerLevel = 5;
 const int MedianXLOfflineTools::kSkillPointsPerLevel = 1;
+const int MedianXLOfflineTools::kStatPointsPerLamEsensTome = 10;
 const int MedianXLOfflineTools::kMaxRecentFiles = 15;
 
 
@@ -1539,7 +1540,7 @@ void MedianXLOfflineTools::createQuestsGroupBoxLayout()
     doeLabel->setStatusTip(rewardFormat.arg(tr("%n free skill point(s)", 0, 1)));
     radamentLabel->setStatusTip(rewardFormat.arg(tr("%n free skill point(s)", 0, 1)));
     izualLabel->setStatusTip(rewardFormat.arg(tr("%n free skill point(s)", 0, 2)));
-    lamEsensTomeLabel->setStatusTip(rewardFormat.arg(tr("5 free stat points")));
+    lamEsensTomeLabel->setStatusTip(rewardFormat.arg(tr("%n free stat point(s)", 0, kStatPointsPerLamEsensTome)));
     goldenBirdLabel->setStatusTip(rewardFormat.arg(tr("'+20 to Life' potion")));
 
     QGridLayout *gridLayout = new QGridLayout(_questsGroupBox);
@@ -2348,7 +2349,7 @@ inline int MedianXLOfflineTools::totalPossibleStatPoints(int level) const
 
 int MedianXLOfflineTools::totalPossibleStatPoints(int level, quint8 let) const
 {
-    return (level - 1) * kStatPointsPerLevel + 5 * let + CharacterInfo::instance().valueOfStatistic(Enums::CharacterStats::SignetsOfLearningEaten);
+    return (level - 1) * kStatPointsPerLevel + kStatPointsPerLamEsensTome * let + CharacterInfo::instance().valueOfStatistic(Enums::CharacterStats::SignetsOfLearningEaten);
 }
 
 inline int MedianXLOfflineTools::totalPossibleSkillPoints() const

@@ -47,7 +47,7 @@ public:
     static const QString kCompoundFormat, kCharacterExtension, kCharacterExtensionWithDot;
     static const quint32 kFileSignature;
     static const int kSkillsNumber, kDifficultiesNumber, kMaxRecentFiles;
-    static const int kStatPointsPerLevel, kSkillPointsPerLevel;
+    static const int kStatPointsPerLevel, kSkillPointsPerLevel, kStatPointsPerLamEsensTome;
 
     MedianXLOfflineTools(const QString &cmdPath, LaunchMode launchMode, QWidget *parent = 0, Qt::WindowFlags flags = 0);
     virtual ~MedianXLOfflineTools();
