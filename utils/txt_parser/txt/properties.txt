@@ -384,3 +384,11 @@ trophy-counter		items			1	trophy_counter																									Laz / MC counte
 dye		cube			1	item_dyes_color																														0
 anydeath-skill		mon / items			11	item_skillonanydeath																									Proc Skill on getting killed	Skill #	% Chance	Level		0
 samael1		monster			15	item_fasterattackrate			15	item_fastermovevelocity			16	item_absorbfire_percent			16	item_absorblight_percent			16	item_absorbcold_percent			17	item_poisonlengthresist									"min = FRW&IAS, max = abs FCL, layer = plr"	0
+hpmp-melee		items			1	skill_healonstrikingmelee			3	item_manaonstrikingmelee																							min	max	none	0
+hpmp-kill		items			1	item_healafterkill			3	item_manaafterkill																							min	max	none	0
+fragmentate		items			1	trophy_fragmentation																														0
+att%/lvl		items			17	item_tohitpercent_perlevel																									AR% per Player Level	(32nds)			none	0
+enable-coth		monster			1	greathunt_buff																														0
+rwmake		items			1	runeword_level																														0
+deimoss1		monster			15	item_healafterkill			16	item_absorbfire_percent			16	item_absorblight_percent			16	item_absorbcold_percent			17	curse_resistance													"min = heal kill, max = abs FCL, layer = curse res"	0
+deimoss2		monster			15	damage_divisor			16	passive_fire_pierce			17	passive_dodge			17	passive_avoid			17	passive_evade													"Min = dmg-div, Max = pierce-fire, Layer = avoid"	0

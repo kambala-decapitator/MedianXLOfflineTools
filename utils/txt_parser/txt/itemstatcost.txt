@@ -294,7 +294,7 @@ not_used_290	290		unused							5			1																																									102
 skill_justkilledsomeone	291		skills	Retribute Fire Resist Penalty Increased by	8	0		0	255	9			1		106	2	2	ModitemRetributeSynergy	ModitemRetributeSynergy									32	11																									1024	8	0	0
 item_skillonanykill	292		items	%d%% Chance to cast level %d %s on Death Blow	7	0	17	0	127	7	17		1	1	164	15		ModitemSkillAnyKill	ModitemSkillAnyKill		1							43	10							2							kill	30										1024	7	0	0
 skill_arcanestrike_synergy	293	replace w/ syn	items	Doubled Terror Strike Duration	1	0		0	1	9			1		31	3	0	ModitemDoubleArc	ModitemDoubleArc									504	101																									1024	1	0	0
-runeword_level	294	Allows rw up to that level on items	items		5	0		0	31	5			1															7	2																									1024	5	0	0
+runeword_level	294	Allows rw up to that level on items	items		8	0		0	255	8			1		240	3	2	ModitemRunewording	ModitemRunewording									7	2																									1024	8	0	0
 item_manaonstrikingmelee	295		items	Mana on Attack	9	200		-200	311	7			1	1	25	1	1	ModitemManaAttackMelee	ModitemManaAttackMelee									41	25														domeleedamage	17										1024	9	200	0
 item_is_honorific	296		cube	\dgreen;Orb Effects Applied to this Item are Doubled\blue;	1	0		0	1	6			1		239	3	0	ModitemHonorific	ModitemHonorific									1	1																									1024	1	0	0
 W_M	297		skills		2	1		-1	2	9			1															1006	251																									1024	2	1	0
@@ -447,10 +447,10 @@ item_upgraded	443		cube	\green;Already upgraded!	8	0		0	255	12			1		249	3	0	Modi
 skill_minion_hp_percent	444		items	Bonus to Summoned Minion Life	9	50		-50	461	12			1		83	4	1	ModitemHPMinBonus	ModitemHPMinPenality									55	41																									1024	9	50	0
 skill_ancientspirits_synergy	445		items	to Maximum Barbarian Minions	6	0		0	63	12			1		73	1	1	ModitemMoreBarbs	ModitemMoreBarbs									50	35																		11	1	1	ModitemExtraAllPets	ModitemExtraAllPets			1024	6	0	0
 skill_shamanspath_synergy	446	replace w/ syn	items	Damage to Protector Spirit Bloodlust	8	0		0	255	12			1		80	4	1	ModitemSPSyn	ModitemSPSyn									52	58																									1024	8	0	0
-not_used_447	447		unused							5			1																																									1024	0	0	0
+trophy_fragmentation	447		items		9	0		0	511	10			1		245	7	2	ModitemFragmentation	ModitemFragmentation	ModitemReallyBlank																																		1024	9	0	0
 potion_efficiency	448		skills							12			1																																									1024	0	0	0
 moonstrike_synergy	449	replace w/ syn	items	Enhanced Damage to Moonstrike	8	0		0	255	12			1		38	4	1	ModitemMoonstrikeSyn	ModitemMoonstrikeSyn									12	6																									1024	8	0	0
-trophy_counter	450	trophies	cube		5	0		0	31	12			1		250	3	0	ModitemTrophied	ModitemTrophied									3	1																									1024	5	0	0
+trophy_counter	450	trophies	cube		5	0		0	31	12			1															3	1																									1024	5	0	0
 hounfor_active	451		skills							12			1																																									1024	0	0	0
 cube_upgrade_1	452		cube		5	1		-1	30	6			1																																									1024	5	1	0
 cube_upgrade_2	453		cube		5	1		-1	30	6			1																																									1024	5	1	0
@@ -476,7 +476,7 @@ shamanic_life	472	Barb summon dummy	items		9	50		-50	461	12			1		80	4	1	ModitemD
 learn_ennead	473		items + skills	\green;Unlocks your Ennead Skill	8	0		0	255	12			1		239	3	0	ModitemLernEnnead	ModitemLernEnnead									6	2																									1024	8	0	0
 learn_blackroad	474		items + skills	\green;Unlocks your Black Road Skill	8	0		0	255	12			1		239	3	0	ModitemLearnBlackroad	ModitemLearnBlackroad									6	2																									1024	8	0	0
 item_desc_druidmorph	475	replace w/ desc	items	\red;Druid Morph\blue;	1	0		0	1	12			1		240	3	0	ModitemDruidString	ModitemDruidString																																			1024	1	0	0
-not_used_476	476		unused							5			1																																									1024	0	0	0
+blink_delay	476	Cooldown to blinks	items		9	50		-50	461	12			1															55	41																									1024	9	50	0
 item_desc_hardaura	477	replace w/ desc	items	Nearby enemies lose 10% magic and elemental resistances	4	1		-1	14	12			1		109	3	0	ModitemIncDif	DescBlack7																																			1024	4	1	0
 item_desc_instructions	478	replace w/ desc	items	Socketed (1)\nLevel 20 Warp Field Aura	1	0		0	1	12			1		6	3	0	ModitemJollyRoger	ModitemJollyRoger																																			1024	1	0	0
 skill_more	479		items	Maximum Skill Level Increased by	4	0		0	15	12			1		74	3	2	ModitemMorSkillz	ModitemMorSkillz									202	59																									1024	4	0	0
