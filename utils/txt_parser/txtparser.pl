@@ -213,7 +213,7 @@ my $weaponTypes = parsetxt("weapons.txt", $itemName=>1, "#code"=>0, $nameStr=>5,
                            type2=>3, stackable=>45, rlvl=>30, rstr=>25, rdex=>26, image=>50, quest=>67,
                            '1hMinDmg'=>12, '1hMaxDmg'=>13, '2hMinDmg'=>16, '2hMaxDmg'=>17, throwMinDmg=>18, throwMaxDmg=>19,
                            '1h2h'=>14, '2h'=>15);
-my $miscTypes = parsetxt("misc.txt", $itemName=>0, "#code"=>5, $nameStr=>7, $spellDescStr=>68,
+my $miscTypes = parsetxt("misc.txt", $itemName=>0, "#code"=>5, $nameStr=>7, $spellDescStr=>69,
                          w=>24, h=>25, type=>8, type2=>9, stackable=>48, rlvl=>13, image=>30, quest=>52);
 &tblExpandHash($_, $itemName) for ($armorTypes, $weaponTypes, $miscTypes);
 
@@ -241,7 +241,7 @@ foreach my $elem (@$skills)
 }
 &tblExpandArray($processedSkills, "iname", "name");
 
-my $monstats = parsetxt("monstats.txt", _autoindex=>"0", $nameStr=>5);
+my $monstats = parsetxt("monstats.txt", _autoindex=>"0", $nameStr=>6);
 &tblExpandArray($monstats, $nameStr);
 
 # RW
@@ -334,9 +334,9 @@ if ($locale ne 'en')
 my $prefix = "generated/$locale";
 make_path $prefix;
 
-my %invgfx; $invgfx{"invgfx$_"} = 33 + $_ for (1..6);
+my %invgfx; $invgfx{"invgfx$_"} = 34 + $_ for (1..6);
 my @invgfxKeys = sort keys %invgfx;
-my $itemTypes = parsetxt("itemtypes.txt", "#code"=>0, code0=>1, equiv1=>7, equiv2=>8, bodyLoc=>11, class=>32, %invgfx);
+my $itemTypes = parsetxt("itemtypes.txt", "#code"=>0, code0=>1, equiv1=>8, equiv2=>9, bodyLoc=>12, class=>33, %invgfx);
 open my $out, ">", "generated/itemtypes.txt";
 print $out "#code\tequiv\tvarImages\tname\n";
 for my $name (sort keys %$itemTypes)

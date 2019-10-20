@@ -306,7 +306,7 @@ tors						Pygmalion	r52	r52
 weap						Archangel	r53	r53					
 glov	boot					Knave	r54	r54					
 helm	shld					Checkmate	r55	r55					
-taxe						Kodiak	r55						
+taxe						Leo	r55						
 basd						Tonatiuh	r55						
 tkni						Tau	r55						
 tkni						Patriot	r02						
@@ -534,4 +534,5 @@ jave						Raid	rx10
 jave						Hastata	rx20						
 jave						Haste	rx30						
 pspe						Ensi	rx12						
+axe						Kodiak	r38						
 weap	armo					Secret Jewel Bonus!	jew						

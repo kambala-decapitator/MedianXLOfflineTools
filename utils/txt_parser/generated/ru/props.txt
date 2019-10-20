@@ -102,7 +102,7 @@
 111	100	10							Урон	Урон		1	127	2					item_normaldamage
 112	25	7							Обращает Цель в Бегство при Попадании	Обращает Цель в Бегство при Попадании		5	84	2					item_howl
 113	50	8							Удар Ослепляет Цель	Удар Ослепляет Цель		12	85	2					item_stupidity
-114	0	10							Полученного Урона Переходит в Ману	Полученного Урона Переходит в Ману		2	16	1					item_damagetomana
+114	0	10							Полученного Урона от Оружия Восстанавливает Ману	Полученного Урона от Оружия Восстанавливает Ману		2	16	1					item_damagetomana
 115	0	1							Игнорирует Защиту Цели 	Игнорирует Защиту Цели 		3	124	0					item_ignoretargetac
 116	0	7							Защита Цели	Защита Цели		20	123	1					item_fractionaltargetac
 117	0	1							Монстры Не Могут Лечиться	Монстры Не Могут Лечиться		3	86	0					item_preventheal
@@ -168,7 +168,7 @@
 197	0	8							%d%% Шанс использовать навык уровня %d %s при Смерти	%d%% Шанс использовать навык уровня %d %s при Смерти		15	165					17	item_skillondeath
 198	0	8							%d%% Шанс использовать навык уровня %d %s при Попадании	%d%% Шанс использовать навык уровня %d %s при Попадании		15	165					17	item_skillonhit
 199	0	7							%d%% Шанс использовать навык уровня %d %s при получении Нового Уровня	%d%% Шанс использовать навык уровня %d %s при получении Нового Уровня		15	165					17	item_skillonlevelup
-200	0	7							\orange;Мега Удар\white;	\orange;Мега Удар\white;		3	247	0				17	item_megaimpact
+200	0	7							\orange;Мега Удар\grey;	\orange;Мега Удар\grey;		3	247	0				17	item_megaimpact
 201	0	7							%d%% Шанс использовать навык уровня %d %s когда в вас Попали	%d%% Шанс использовать навык уровня %d %s когда в вас Попали		15	165					17	item_skillongethit
 202	0	5																	x_signet05
 203	0	10							Общий Физический Урон Оружия	Общий Физический Урон Оружия	(Основано на Уровне Персонажа)	8	65	2					item_totaldamage_perlevel
@@ -227,12 +227,12 @@
 257	1	2							\orange;Parasite Получает 12 Дополнительных Целей\blue;	\orange;Нейтральный: +50% к Общему Урону Vessel-ов от Пассивок\nНечестивый: Blood Thorns Наносят на 40% Больше Общего Урона\nСвятой: Plague Наносит на 150% Больше Общего Урона\blue;		3	245	0					vessel_mod
 258	0	5																	x_signet35
 259	0	2							Вытягивает 2% Жизни в Секунду	Вытягивает 2% Жизни в Секунду		3	54	0					item_drain_aura
-260	0	7							\orange;Громовая Ярость\white;	\orange;Громовая Ярость\white;		3	248	0				17	item_thunderfury
+260	0	7							\orange;Громовая Ярость\grey;	\orange;Громовая Ярость\grey;		3	248	0				17	item_thunderfury
 261	0	5							Дополнительный Тотем	Дополнительный Тотем		1	155	1					new_totem_syn
 263	0	5																	x_signet36
 264	0	5																	x_signet37
 265	0	10							к Жизни после каждого Убийства	к Жизни после каждого Убийства		1	21	1					item_healafterplayerkill
-266	0	7							\orange;Урон по Площади\white;	\orange;Урон по Площади\white;		3	248	0				17	item_warp_blue
+266	0	7							\orange;Урон по Площади\grey;	\orange;Урон по Площади\grey;		3	248	0				17	item_warp_blue
 267	0	5							к Радиусу Стоек	к Радиусу Стоек		1	203	1					item_stance_radius
 270	0	3																	item_has_edyrem
 271	0	8							%d%% Шанс использовать навык уровня %d %s при Смерти	%d%% Шанс использовать навык уровня %d %s при Смерти		15	165					17	item_skillonanydeath
@@ -240,7 +240,7 @@
 274	0	8							Hive Добавляет 33% к Живучести от Суммарного Бонуса Урону Заклинаний Яда	Hive Добавляет 33% к Живучести от Суммарного Бонуса Урону Заклинаний Яда		3	10	0					item_poison_set
 275	0	9							Повышенный Урон против Некроботов	Повышенный Урон против Некроботов		2	8	1					item_desc_breaker
 276	0	1							\dgrey;Не может быть расщеплено\blue;	\dgrey;Не может быть расщеплено\blue;		3	4	0					item_nodcht
-277	0	7							\orange;Урон по Площади\white;	\orange;Урон по Площади\white;		3	248	0				17	item_warpskillonattack
+277	0	7							\orange;Урон по Площади\grey;	\orange;Урон по Площади\grey;		3	248	0				17	item_warpskillonattack
 278	200	10							Фактора Силы к Урону Заклинаний	Фактора Силы к Урону Заклинаний		1	203	1					str_factor
 279	0	9							к Урону в Стойке Льва	к Урону в Стойке Льва		2	119	2					lion_stance_syn
 280	0	10																	greathunt_buff
@@ -255,7 +255,7 @@
 291	0	8							Retribute Fire Resist Penalty Increased by	Retribute Fire Resist Penalty Increased by		2	106	2					skill_justkilledsomeone
 292	0	7							%d%% Шанс использовать навык уровня %d %s когда Враг Умирает	%d%% Шанс использовать навык уровня %d %s когда Враг Умирает		15	164					17	item_skillonanykill
 293	0	1							Удваивает Длительность Terror Strike	Удваивает Длительность Terror Strike		3	31	0					skill_arcanestrike_synergy
-294	0	5																	runeword_level
+294	0	8							\dgreen;Allows Runewords up to Level	\dgreen;Allows Runewords up to Level		3	240	2					runeword_level
 295	200	9							к Мане при Атаке	к Мане при Атаке		1	25	1					item_manaonstrikingmelee
 296	0	1							\dgreen;Эффект от Мистических Сфер Удваивается при Применении\blue;	\dgreen;Эффект от Мистических Сфер Удваивается при Применении\blue;		3	239	0					item_is_honorific
 297	1	2																	W_M
@@ -315,7 +315,7 @@
 368	0	10			128,367		Атакующий Получает Стихийный Урон		Атакующему Наносится Урон Огнем	Атакующему Наносится Урон Огнем		3	19	2	14	3	2		item_attackertakesfiredamage
 369	0	5																	x_signet51
 370	0	5																	x_signet52
-371	0	7							\orange;Изумительная Грация\white;	\orange;Изумительная Грация\white;		3	247	0				17	item_amazinggrace
+371	0	7							\orange;Изумительная Грация\grey;	\orange;Изумительная Грация\grey;		3	247	0				17	item_amazinggrace
 372	0	1							\dgrey;Не может быть извлечено из гнёзд\blue;	\dgrey;Не может быть извлечено из гнёзд\blue;		3	4	0					item_nounsock
 373	300	9																	passive_phys_pierce
 374	50	10																	trap_chain
@@ -364,8 +364,9 @@
 444	50	9							к Жизни Призываемых Существ	к Жизни Призываемых Существ		4	83	1					skill_minion_hp_percent
 445	0	6			441	ко Всем Максимальным Существам	ко Всем Максимальным Существам		к Максимуму Существ Варвара	к Максимуму Существ Варвара		1	73	1	11	1	1		skill_ancientspirits_synergy
 446	0	8							к Урону Bloodlust от Protector Spirit	к Урону Bloodlust от Protector Spirit		4	80	1					skill_shamanspath_synergy
+447	0	9							Восстановлено:	Восстановлено:		7	245	2					trophy_fragmentation
 449	0	8							Повышенный Урон Лунного Удара	Повышенный Урон Лунного Удара		4	38	1					moonstrike_synergy
-450	0	5							\orange;С Трофеем	\orange;С Трофеем		3	250	0					trophy_counter
+450	0	5																	trophy_counter
 452	1	5																	cube_upgrade_1
 453	1	5																	cube_upgrade_2
 454	1	5																	cube_upgrade_3
@@ -389,6 +390,7 @@
 473	0	8							\green;Открывает ваш Навык Эннеады (Ennead)	\green;Открывает ваш Навык Эннеады (Ennead)		3	239	0					learn_ennead
 474	0	8							\green;Открывает ваш Навык Черной Дороги (Black Road)	\green;Открывает ваш Навык Черной Дороги (Black Road)		3	239	0					learn_blackroad
 475	0	1							\red;Превращение в Друида\blue;	\red;Превращение в Друида\blue;		3	240	0					item_desc_druidmorph
+476	50	9																	blink_delay
 477	1	4							Добавляет 9000-9000 Магического Урона	Ближайшие враги теряют 10% магического и стихийных сопротивлений		3	109	0					item_desc_hardaura
 478	0	1							С гнездами (1)\nАура Warp Field Уровня 20	С гнездами (1)\nАура Warp Field Уровня 20		3	6	0					item_desc_instructions
 479	0	4							Макс. Уровень Навыков Увеличивается на	Макс. Уровень Навыков Увеличивается на		3	74	2					skill_more

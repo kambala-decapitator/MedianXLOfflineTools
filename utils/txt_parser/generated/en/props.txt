@@ -102,7 +102,7 @@
 111	100	10							Damage	Damage		1	127	2					item_normaldamage
 112	25	7							Hit Causes Monster to Flee	Hit Causes Monster to Flee		5	84	2					item_howl
 113	50	8							Hit Blinds Target	Hit Blinds Target		12	85	2					item_stupidity
-114	0	10							Damage Taken Goes To Mana	Damage Taken Goes To Mana		2	16	1					item_damagetomana
+114	0	10							Weapon Damage Taken Restores Mana	Weapon Damage Taken Restores Mana		2	16	1					item_damagetomana
 115	0	1							Ignore Target's Defense	Ignore Target's Defense		3	124	0					item_ignoretargetac
 116	0	7							Target Defense	Target Defense		20	123	1					item_fractionaltargetac
 117	0	1							Prevent Monster Heal	Prevent Monster Heal		3	86	0					item_preventheal
@@ -168,7 +168,7 @@
 197	0	8							%d%% Chance to cast level %d %s when you Die	%d%% Chance to cast level %d %s when you Die		15	165					17	item_skillondeath
 198	0	8							%d%% Chance to cast level %d %s on Striking	%d%% Chance to cast level %d %s on Striking		15	165					17	item_skillonhit
 199	0	7							%d%% Chance to cast level %d %s when you Level-Up	%d%% Chance to cast level %d %s when you Level-Up		15	165					17	item_skillonlevelup
-200	0	7							\orange;Mega Impact\white;	\orange;Mega Impact\white;		3	247	0				17	item_megaimpact
+200	0	7							\orange;Mega Impact\grey;	\orange;Mega Impact\grey;		3	247	0				17	item_megaimpact
 201	0	7							%d%% Chance to cast level %d %s when Struck	%d%% Chance to cast level %d %s when Struck		15	165					17	item_skillongethit
 202	0	5																	x_signet05
 203	0	10							Enhanced Weapon Damage	Enhanced Weapon Damage	(Based on Character Level)	8	65	2					item_totaldamage_perlevel
@@ -227,12 +227,12 @@
 257	1	2							\orange;Parasite Gains 12 Additional Targets\blue;	\orange;Neutrality: +50% Total Vessel Damage Bonus from Passives\nUnholy: Blood Thorns Deal 40% More Total Damage\nHoly: Plague Deals 150% More Total Damage\blue;		3	245	0					vessel_mod
 258	0	5																	x_signet35
 259	0	2							Drains 1% Life per Second	Drains 1% Life per Second		3	54	0					item_drain_aura
-260	0	7							\orange;Thunderfury\white;	\orange;Thunderfury\white;		3	248	0				17	item_thunderfury
+260	0	7							\orange;Thunderfury\grey;	\orange;Thunderfury\grey;		3	248	0				17	item_thunderfury
 261	0	5							Extra Totems	Extra Totems		1	155	1					new_totem_syn
 263	0	5																	x_signet36
 264	0	5																	x_signet37
 265	0	10							Life after each Kill	Life after each Kill		1	21	1					item_healafterplayerkill
-266	0	7							\orange;Area Effect Attack\white;	\orange;Area Effect Attack\white;		3	248	0				17	item_warp_blue
+266	0	7							\orange;Area Effect Attack\grey;	\orange;Area Effect Attack\grey;		3	248	0				17	item_warp_blue
 267	0	5							Enhanced Stance Radius	Enhanced Stance Radius		1	203	1					item_stance_radius
 270	0	3																	item_has_edyrem
 271	0	8							%d%% Chance to cast level %d %s when you Die	%d%% Chance to cast level %d %s when you Die		15	165					17	item_skillonanydeath
@@ -240,7 +240,7 @@
 274	0	8							Hive Adds 33% of Poison Spell Damage Items to Vitality	Hive Adds 33% of Poison Spell Damage Items to Vitality		3	10	0					item_poison_set
 275	0	9							Enhanced Damage vs. Necrobots	Enhanced Damage vs. Necrobots		2	8	1					item_desc_breaker
 276	0	1							\dgrey;Cannot be Disenchanted\blue;	\dgrey;Cannot be Disenchanted\blue;		3	4	0					item_nodcht
-277	0	7							\orange;Area Effect Attack\white;	\orange;Area Effect Attack\white;		3	248	0				17	item_warpskillonattack
+277	0	7							\orange;Area Effect Attack\grey;	\orange;Area Effect Attack\grey;		3	248	0				17	item_warpskillonattack
 278	200	10							Strength Factor to Spell Damage	Strength Factor to Spell Damage		1	203	1					str_factor
 279	0	9							Lion Stance Damage Bonus	Lion Stance Damage Bonus		2	119	2					lion_stance_syn
 280	0	10																	greathunt_buff
@@ -255,7 +255,7 @@
 291	0	8							Retribute Fire Resist Penalty Increased by	Retribute Fire Resist Penalty Increased by		2	106	2					skill_justkilledsomeone
 292	0	7							%d%% Chance to cast level %d %s on Death Blow	%d%% Chance to cast level %d %s on Death Blow		15	164					17	item_skillonanykill
 293	0	1							Doubled Terror Strike Duration	Doubled Terror Strike Duration		3	31	0					skill_arcanestrike_synergy
-294	0	5																	runeword_level
+294	0	8							\dgreen;Allows Runewords up to Level	\dgreen;Allows Runewords up to Level		3	240	2					runeword_level
 295	200	9							Mana on Attack	Mana on Attack		1	25	1					item_manaonstrikingmelee
 296	0	1							\dgreen;Orb Effects Applied to this Item are Doubled\blue;	\dgreen;Orb Effects Applied to this Item are Doubled\blue;		3	239	0					item_is_honorific
 297	1	2																	W_M
@@ -315,7 +315,7 @@
 368	0	10			128,367		Attacker Takes Elemental Damage of		Attacker Takes Fire Damage of	Attacker Takes Fire Damage of		3	19	2	14	3	2		item_attackertakesfiredamage
 369	0	5																	x_signet51
 370	0	5																	x_signet52
-371	0	7							\orange;Amazing Grace\white;	\orange;Amazing Grace\white;		3	247	0				17	item_amazinggrace
+371	0	7							\orange;Amazing Grace\grey;	\orange;Amazing Grace\grey;		3	247	0				17	item_amazinggrace
 372	0	1							\dgrey;Cannot be Unsocketed\blue;	\dgrey;Cannot be Unsocketed\blue;		3	4	0					item_nounsock
 373	300	9																	passive_phys_pierce
 374	50	10																	trap_chain
@@ -364,8 +364,9 @@
 444	50	9							Penalty to Summoned Minion Life	to Summoned Minion Life		4	83	1					skill_minion_hp_percent
 445	0	6			441	to All Maximum Minions	to All Maximum Minions		to Maximum Barbarian Minions	to Maximum Barbarian Minions		1	73	1	11	1	1		skill_ancientspirits_synergy
 446	0	8							Damage to Protector Spirit Bloodlust	Damage to Protector Spirit Bloodlust		4	80	1					skill_shamanspath_synergy
+447	0	9							Restored:	Restored:		7	245	2					trophy_fragmentation
 449	0	8							Enhanced Damage to Moonstrike	Enhanced Damage to Moonstrike		4	38	1					moonstrike_synergy
-450	0	5							\orange;Trophy Applied	\orange;Trophy Applied		3	250	0					trophy_counter
+450	0	5																	trophy_counter
 452	1	5																	cube_upgrade_1
 453	1	5																	cube_upgrade_2
 454	1	5																	cube_upgrade_3
@@ -389,6 +390,7 @@
 473	0	8							\green;Unlocks your Ennead Skill	\green;Unlocks your Ennead Skill		3	239	0					learn_ennead
 474	0	8							\green;Unlocks your Black Road Skill	\green;Unlocks your Black Road Skill		3	239	0					learn_blackroad
 475	0	1							\red;Druid Morph\blue;	\red;Druid Morph\blue;		3	240	0					item_desc_druidmorph
+476	50	9																	blink_delay
 477	1	4							Adds 9000-9000 Magic Damage	Nearby enemies lose 10% magic and elemental resistances		3	109	0					item_desc_hardaura
 478	0	1							Socketed (1)\nLevel 20 Warp Field Aura	Socketed (1)\nLevel 20 Warp Field Aura		3	6	0					item_desc_instructions
 479	0	4							Maximum Skill Level Increased by	Maximum Skill Level Increased by		3	74	2					skill_more

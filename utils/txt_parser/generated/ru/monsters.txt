@@ -1,414 +1,414 @@
 #index	name
--1	Seraph
-0	Rathma Priest
+0	Seraph
 1	Rathma Priest
-2	Burning Dead
-3	Horror
-4	Zombie
-5	Hungry Dead
-6	Ghoul
-7	Drowned Carcass
-8	Plague Bearer
-9	Afflicted
-10	Tainted
-11	Misshapen
-12	Disfigured
-13	Damned
-14	Foul Crow
-15	Blood Hawk
-16	Black Raptor
-17	Cloud Stalker
-18	Fallen One
-19	Invader
-20	Defiler
-21	Scourge
+2	Rathma Priest
+3	Burning Dead
+4	Horror
+5	Zombie
+6	Hungry Dead
+7	Ghoul
+8	Drowned Carcass
+9	Plague Bearer
+10	Afflicted
+11	Tainted
+12	Misshapen
+13	Disfigured
+14	Damned
+15	Foul Crow
+16	Blood Hawk
+17	Black Raptor
+18	Cloud Stalker
+19	Fallen One
+20	Invader
+21	Defiler
 22	Scourge
-23	Brute
-24	Yeti
-25	Crusher
-26	Wailing Beast
-27	Gargantuan Beast
-28	Sand Raider
-29	Savage Wolf
-30	Invader
-31	Infidel
-32	Assailant
-33	FLYING POLAR BUFFALO ERROR
+23	Scourge
+24	Brute
+25	Yeti
+26	Crusher
+27	Wailing Beast
+28	Gargantuan Beast
+29	Sand Raider
+30	Savage Wolf
+31	Invader
+32	Infidel
+33	Assailant
 34	FLYING POLAR BUFFALO ERROR
 35	FLYING POLAR BUFFALO ERROR
 36	FLYING POLAR BUFFALO ERROR
-37	Ghost
-38	Wraith
-39	Specter
-40	Apparition
-41	Dark Shape
-42	Dark Hunter
-43	Vile Hunter
-44	Dark Stalker
-45	Black Rogue
-46	Flesh Hunter
-47	Dune Beast
-48	Rock Dweller
-49	Jungle Hunter
-50	Doom Ape
-51	Temple Guard
-52	Moon Clan
-53	Night Clan
-54	Blood Clan
-55	Hell Clan
-56	Death Clan
-57	Fallen Shaman
-58	Invader Shaman
-59	Defiler Shaman
-60	Scourge Shaman
+37	FLYING POLAR BUFFALO ERROR
+38	Ghost
+39	Wraith
+40	Specter
+41	Apparition
+42	Dark Shape
+43	Dark Hunter
+44	Vile Hunter
+45	Dark Stalker
+46	Black Rogue
+47	Flesh Hunter
+48	Dune Beast
+49	Rock Dweller
+50	Jungle Hunter
+51	Doom Ape
+52	Temple Guard
+53	Moon Clan
+54	Night Clan
+55	Blood Clan
+56	Hell Clan
+57	Death Clan
+58	Fallen Shaman
+59	Invader Shaman
+60	Defiler Shaman
 61	Scourge Shaman
-62	Quill Rat
-63	Spike Fiend
-64	Thorn Beast
-65	Razor Spine
-66	Bush Barb
-67	Sand Maggot
-68	Rock Worm
-69	Devourer
-70	Giant Lamprey
-71	Blood Maggot
-72	Tomb Viper
-73	Claw Viper
-74	Salamander
-75	Pit Viper
-76	Serpent Magus
-77	Sand Leaper
-78	Cave Leaper
-79	Tomb Creeper
-80	Tree Lurker
-81	Cliff Lurker
-82	Huntress
-83	Saber Cat
-84	Night Tiger
-85	Hell Cat
-86	Itchies
-87	Black Locusts
-88	Plague Bugs
-89	Hell Swarm
-90	Dung Soldier
-91	Death Beetle
-92	Scarab
-93	Steel Scarab
-94	Bone Scarab
-95	Dried Corpse
-96	Decayed
-97	Embalmed
-98	Preserved Dead
-99	Cadaver
-100	Hollow One
-101	Guardian
-102	Unraveler
-103	Horadrim Ancient
-104	Разгадыватель
-105	FLYING POLAR BUFFALO ERROR
+62	Scourge Shaman
+63	Quill Rat
+64	Spike Fiend
+65	Thorn Beast
+66	Razor Spine
+67	Bush Barb
+68	Sand Maggot
+69	Rock Worm
+70	Devourer
+71	Giant Lamprey
+72	Blood Maggot
+73	Tomb Viper
+74	Claw Viper
+75	Salamander
+76	Pit Viper
+77	Serpent Magus
+78	Sand Leaper
+79	Cave Leaper
+80	Tomb Creeper
+81	Tree Lurker
+82	Cliff Lurker
+83	Huntress
+84	Saber Cat
+85	Night Tiger
+86	Hell Cat
+87	Itchies
+88	Black Locusts
+89	Plague Bugs
+90	Hell Swarm
+91	Dung Soldier
+92	Death Beetle
+93	Scarab
+94	Steel Scarab
+95	Bone Scarab
+96	Dried Corpse
+97	Decayed
+98	Embalmed
+99	Preserved Dead
+100	Cadaver
+101	Hollow One
+102	Guardian
+103	Unraveler
+104	Horadrim Ancient
+105	Разгадыватель
 106	FLYING POLAR BUFFALO ERROR
 107	FLYING POLAR BUFFALO ERROR
 108	FLYING POLAR BUFFALO ERROR
-109	Carrion Bird
-110	Undead Scavenger
-111	Hell Buzzard
-112	Winged Nightmare
-113	Sucker
-114	Feeder
-115	Blood Hook
-116	Blood Wing
-117	Gloam
-118	Swamp Ghost
-119	Burning Soul
-120	Black Soul
-121	Arach
-122	Sand Fisher
-123	Poison Spinner
-124	Flame Spider
-125	Spider Magus
-126	Thorned Hulk
-127	Bramble Hulk
-128	Thrasher
-129	Spikefist
-130	Ghoul Lord
-131	Night Lord
-132	Dark Lord
-133	Blood Lord
-134	The Banished
-135	Desert Wing
-136	Fiend
-137	Gloombat
-138	Blood Diver
-139	Dark Familiar
-140	Jungle Hunter
-141	Tree Hunter
-142	Jungle Devil
-143	Blood Hunter
-144	Slayer
-145	Deckard Cain
-146	Gheed
-147	Akara
-148	FLYING POLAR BUFFALO ERROR
-149	Kashya
-150	FLYING POLAR BUFFALO ERROR
+109	FLYING POLAR BUFFALO ERROR
+110	Carrion Bird
+111	Undead Scavenger
+112	Hell Buzzard
+113	Winged Nightmare
+114	Sucker
+115	Feeder
+116	Blood Hook
+117	Blood Wing
+118	Gloam
+119	Swamp Ghost
+120	Burning Soul
+121	Black Soul
+122	Arach
+123	Sand Fisher
+124	Poison Spinner
+125	Flame Spider
+126	Spider Magus
+127	Thorned Hulk
+128	Bramble Hulk
+129	Thrasher
+130	Spikefist
+131	Ghoul Lord
+132	Night Lord
+133	Dark Lord
+134	Blood Lord
+135	The Banished
+136	Desert Wing
+137	Fiend
+138	Gloombat
+139	Blood Diver
+140	Dark Familiar
+141	Jungle Hunter
+142	Tree Hunter
+143	Jungle Devil
+144	Blood Hunter
+145	Slayer
+146	Deckard Cain
+147	Gheed
+148	Akara
+149	FLYING POLAR BUFFALO ERROR
+150	Kashya
 151	FLYING POLAR BUFFALO ERROR
 152	FLYING POLAR BUFFALO ERROR
-153	Charsi
-154	Warriv
-155	Andariel
-156	FLYING POLAR BUFFALO ERROR
+153	FLYING POLAR BUFFALO ERROR
+154	Charsi
+155	Warriv
+156	Andariel
 157	FLYING POLAR BUFFALO ERROR
 158	FLYING POLAR BUFFALO ERROR
-159	Dark Ranger
-160	Vile Archer
-161	Dark Archer
-162	Black Archer
-163	Flesh Archer
-164	Dark Spearwoman
-165	Vile Lancer
-166	Dark Lancer
-167	Black Lancer
-168	Flesh Lancer
-169	Skeleton Archer
-170	Returned Archer
-171	Bone Archer
-172	Burning Dead Archer
-173	Horror Archer
-174	Warriv
-175	Atma
-176	Drognan
-177	Fara
-178	FLYING POLAR BUFFALO ERROR
-179	Sand Maggot Young
-180	Rock Worm Young
-181	Devourer Young
-182	Giant Lamprey Young
-183	Blood Maggot Young
-184	FLYING POLAR BUFFALO ERROR
-185	Blunderbore
-186	Gorebelly
-187	Мучитель
-188	Urdar
-189	Sand Maggot Egg
-190	Rock Worm Egg
-191	Devourer Egg
-192	Giant Lamprey Egg
-193	Blood Maggot Egg
-194	FLYING POLAR BUFFALO ERROR
+159	FLYING POLAR BUFFALO ERROR
+160	Dark Ranger
+161	Vile Archer
+162	Dark Archer
+163	Black Archer
+164	Flesh Archer
+165	Dark Spearwoman
+166	Vile Lancer
+167	Dark Lancer
+168	Black Lancer
+169	Flesh Lancer
+170	Skeleton Archer
+171	Returned Archer
+172	Bone Archer
+173	Burning Dead Archer
+174	Horror Archer
+175	Warriv
+176	Atma
+177	Drognan
+178	Fara
+179	FLYING POLAR BUFFALO ERROR
+180	Sand Maggot Young
+181	Rock Worm Young
+182	Devourer Young
+183	Giant Lamprey Young
+184	Blood Maggot Young
+185	FLYING POLAR BUFFALO ERROR
+186	Blunderbore
+187	Gorebelly
+188	Мучитель
+189	Urdar
+190	Sand Maggot Egg
+191	Rock Worm Egg
+192	Devourer Egg
+193	Giant Lamprey Egg
+194	Blood Maggot Egg
 195	FLYING POLAR BUFFALO ERROR
 196	FLYING POLAR BUFFALO ERROR
-197	Greiz
-198	Elzix
-199	Geglash
-200	Jerhyn
-201	Lysander
-202	FLYING POLAR BUFFALO ERROR
+197	FLYING POLAR BUFFALO ERROR
+198	Greiz
+199	Elzix
+200	Geglash
+201	Jerhyn
+202	Lysander
 203	FLYING POLAR BUFFALO ERROR
 204	FLYING POLAR BUFFALO ERROR
-205	Foul Crow Nest
-206	Blood Hawk Nest
-207	Black Raptor Nest
-208	Cloud Stalker Nest
-209	Meshif
-210	Duriel
-211	Undead Rat Man
-212	Undead Fetish
-213	Undead Flayer
-214	Undead Soul Killer
-215	Magineer
-216	Seal of Frost
-217	Seal of Hell
-218	Seal of Wizardry
-219	Seal of Stone
-220	Seal of Electrum
-221	FLYING POLAR BUFFALO ERROR
+205	FLYING POLAR BUFFALO ERROR
+206	Foul Crow Nest
+207	Blood Hawk Nest
+208	Black Raptor Nest
+209	Cloud Stalker Nest
+210	Meshif
+211	Duriel
+212	Undead Rat Man
+213	Undead Fetish
+214	Undead Flayer
+215	Undead Soul Killer
+216	Magineer
+217	Seal of Frost
+218	Seal of Hell
+219	Seal of Wizardry
+220	Seal of Stone
+221	Seal of Electrum
 222	FLYING POLAR BUFFALO ERROR
 223	FLYING POLAR BUFFALO ERROR
 224	FLYING POLAR BUFFALO ERROR
 225	FLYING POLAR BUFFALO ERROR
-226	Maggot
-227	Саркофаг с Мумией
-228	Radament
-229	FLYING POLAR BUFFALO ERROR
+226	FLYING POLAR BUFFALO ERROR
+227	Maggot
+228	Саркофаг с Мумией
+229	Radament
 230	FLYING POLAR BUFFALO ERROR
 231	FLYING POLAR BUFFALO ERROR
 232	FLYING POLAR BUFFALO ERROR
-233	Flying Scimitar
-234	Zakarumite
-235	Faithful
-236	Zealot
-237	Sexton
-238	Cantor
-239	Heirophant
+233	FLYING POLAR BUFFALO ERROR
+234	Flying Scimitar
+235	Zakarumite
+236	Faithful
+237	Zealot
+238	Sexton
+239	Cantor
 240	Heirophant
-241	Mephisto
-242	Diablo
-243	Deckard Cain
+241	Heirophant
+242	Mephisto
+243	Diablo
 244	Deckard Cain
 245	Deckard Cain
-246	Swamp Dweller
-247	Bog Creature
-248	Slime Prince
-249	The Summoner
-250	Tyrael
-251	Asheara
-252	Hratli
-253	Alkor
-254	Ormus
-255	Izual
-256	Halbu
-257	Water Watcher
-258	River Stalker
-259	Stygian Watcher
-260	Water Watcher
-261	River Stalker
-262	Stygian Watcher
-263	Meshif
-264	Deckard Cain
-265	Flavie
-266	Blood Raven
-267	FLYING POLAR BUFFALO ERROR
+246	Deckard Cain
+247	Swamp Dweller
+248	Bog Creature
+249	Slime Prince
+250	The Summoner
+251	Tyrael
+252	Asheara
+253	Hratli
+254	Alkor
+255	Ormus
+256	Izual
+257	Halbu
+258	Water Watcher
+259	River Stalker
+260	Stygian Watcher
+261	Water Watcher
+262	River Stalker
+263	Stygian Watcher
+264	Meshif
+265	Deckard Cain
+266	Flavie
+267	Blood Raven
 268	FLYING POLAR BUFFALO ERROR
-269	Rogue Scout
-270	FLYING POLAR BUFFALO ERROR
+269	FLYING POLAR BUFFALO ERROR
+270	Rogue Scout
 271	FLYING POLAR BUFFALO ERROR
-272	Gargoyle Trap
-273	Returned Mage
-274	Bone Mage
-275	Burning Dead Mage
-276	Horror Mage
-277	Jungle Hunter Shaman
-278	Tree Hunter Shaman
-279	Jungle Devil Shaman
-280	Blood Hunter Shaman
-281	Slayer Shaman
-282	Larva
-283	Sand Maggot Queen
-284	Rock Worm Queen
-285	Devourer Queen
-286	Giant Lamprey Queen
-287	Blood Maggot Queen
-288	Clay Golem
-289	Blood Golem
-290	Iron Golem
-291	Fire Golem
-292	FLYING POLAR BUFFALO ERROR
+272	FLYING POLAR BUFFALO ERROR
+273	Gargoyle Trap
+274	Returned Mage
+275	Bone Mage
+276	Burning Dead Mage
+277	Horror Mage
+278	Jungle Hunter Shaman
+279	Tree Hunter Shaman
+280	Jungle Devil Shaman
+281	Blood Hunter Shaman
+282	Slayer Shaman
+283	Larva
+284	Sand Maggot Queen
+285	Rock Worm Queen
+286	Devourer Queen
+287	Giant Lamprey Queen
+288	Blood Maggot Queen
+289	Clay Golem
+290	Blood Golem
+291	Iron Golem
+292	Fire Golem
 293	FLYING POLAR BUFFALO ERROR
-294	Night Marauder
-295	FLYING POLAR BUFFALO ERROR
-296	Natalya
-297	Flesh Spawner
-298	Stygian Hag
-299	Grotesque
-300	Flesh Beast
-301	Stygian Dog
-302	Grotesque Wyrm
-303	Doom Caster
-304	Strangler
-305	Storm Caster
-306	Corpulent
-307	Corpse Spitter
-308	Maw Fiend
-309	Doom Knight
-310	Abyss Knight
-311	Oblivion Knight
-312	Quill Bear
-313	Spike Giant
-314	Thorn Brute
-315	Razor Beast
-316	Barbed Giant
-317	FLYING POLAR BUFFALO ERROR
-318	Parrot (Critter)
-319	FLYING POLAR BUFFALO ERROR
+294	FLYING POLAR BUFFALO ERROR
+295	Night Marauder
+296	FLYING POLAR BUFFALO ERROR
+297	Natalya
+298	Flesh Spawner
+299	Stygian Hag
+300	Grotesque
+301	Flesh Beast
+302	Stygian Dog
+303	Grotesque Wyrm
+304	Doom Caster
+305	Strangler
+306	Storm Caster
+307	Corpulent
+308	Corpse Spitter
+309	Maw Fiend
+310	Doom Knight
+311	Abyss Knight
+312	Oblivion Knight
+313	Quill Bear
+314	Spike Giant
+315	Thorn Brute
+316	Razor Beast
+317	Barbed Giant
+318	FLYING POLAR BUFFALO ERROR
+319	Parrot (Critter)
 320	FLYING POLAR BUFFALO ERROR
 321	FLYING POLAR BUFFALO ERROR
 322	FLYING POLAR BUFFALO ERROR
 323	FLYING POLAR BUFFALO ERROR
 324	FLYING POLAR BUFFALO ERROR
-325	Ловушка
+325	FLYING POLAR BUFFALO ERROR
 326	Ловушка
 327	Ловушка
 328	Ловушка
 329	Ловушка
-330	Kaelan
-331	FLYING POLAR BUFFALO ERROR
-332	Diablo
-333	Sucker Nest
-334	Feeder Nest
-335	Blood Hook Nest
-336	Blood Wing Nest
-337	Guard
-338	FLYING POLAR BUFFALO ERROR
-339	Kabraxis' Prison
-340	Kabraxis' Prison
-341	Kabraxis' Prison
-342	Kabraxis' Prison
-343	FLYING POLAR BUFFALO ERROR
-344	Council Member
+330	Ловушка
+331	Kaelan
+332	FLYING POLAR BUFFALO ERROR
+333	Diablo
+334	Sucker Nest
+335	Feeder Nest
+336	Blood Hook Nest
+337	Blood Wing Nest
+338	Guard
+339	FLYING POLAR BUFFALO ERROR
+340	DiabloPrison
+341	DiabloPrison
+342	DiabloPrison
+343	DiabloPrison
+344	FLYING POLAR BUFFALO ERROR
 345	Council Member
 346	Council Member
-347	Башня
+347	Council Member
 348	Башня
 349	Башня
-350	Гидра
+350	Башня
 351	Гидра
 352	Гидра
-353	Ловушка
-354	FLYING POLAR BUFFALO ERROR
-355	Приманка
-356	Valkyrie
-357	FLYING POLAR BUFFALO ERROR
-358	Iron Wolf
-359	Balrog
-360	Pit Lord
-361	Venom Lord
-362	Necroskeleton
-363	Necromage
-364	Griswold
-365	Неразрушимая Сфера
-366	Tyrael
-367	Dark Wanderer
-368	Ловушка
-369	FLYING POLAR BUFFALO ERROR
-370	Glacial Spire
-371	Fire Tower
-372	Slinger
-373	Spear Cat
-374	Night Slinger
-375	Hell Slinger
-376	FLYING POLAR BUFFALO ERROR
+353	Гидра
+354	Ловушка
+355	FLYING POLAR BUFFALO ERROR
+356	Приманка
+357	Valkyrie
+358	FLYING POLAR BUFFALO ERROR
+359	Iron Wolf
+360	Balrog
+361	Pit Lord
+362	Venom Lord
+363	Necroskeleton
+364	Necromage
+365	Griswold
+366	Неразрушимая Сфера
+367	Tyrael
+368	Dark Wanderer
+369	Ловушка
+370	FLYING POLAR BUFFALO ERROR
+371	Glacial Spire
+372	Fire Tower
+373	Slinger
+374	Spear Cat
+375	Night Slinger
+376	Hell Slinger
 377	FLYING POLAR BUFFALO ERROR
-378	Bone Mage
+378	FLYING POLAR BUFFALO ERROR
 379	Bone Mage
 380	Bone Mage
 381	Bone Mage
-382	Burning Dead Mage
+382	Bone Mage
 383	Burning Dead Mage
 384	Burning Dead Mage
 385	Burning Dead Mage
-386	Horror Mage
+386	Burning Dead Mage
 387	Horror Mage
 388	Horror Mage
 389	Horror Mage
-390	Hell Bovine
-391	Stained Glass Window
+390	Horror Mage
+391	Hell Bovine
 392	Stained Glass Window
-393	Spear Cat
-394	Night Slinger
-395	Jungle Hunter
-396	Tree Hunter
-397	Jungle Devil
-398	Blood Hunter
-399	Slayer
-400	FLYING POLAR BUFFALO ERROR
-401	The Smith
-402	Trapped Soul
+393	Stained Glass Window
+394	Spear Cat
+395	Night Slinger
+396	Jungle Hunter
+397	Tree Hunter
+398	Jungle Devil
+399	Blood Hunter
+400	Slayer
+401	FLYING POLAR BUFFALO ERROR
+402	The Smith
 403	Trapped Soul
-404	Jamella
-405	Izual
-406	Rat Man
-407	Hadriel
-408	Hephasto The Armorer
+404	Trapped Soul
+405	Jamella
+406	Izual
+407	Rat Man
+408	Hadriel
+409	Hephasto The Armorer
 410	Wake of Fire
 411	Charged Bolt Sentry
 412	Lightning Sentry
@@ -989,7 +989,6 @@
 988	Guardian Spirit
 989	Defender Spirit
 990	Protector Spirit
-991	The Countess
 992	Bone Mage
 993	Burning Dead Mage
 994	Horror Mage
@@ -1179,6 +1178,7 @@
 1205	Infernal Contraption
 1206	Baal (Vision of Destruction)
 1208	Tyrael
+1209	Chimaera Trap
 1210	Holy Nephalem
 1211	
 1212	Symbol of Time
@@ -1662,6 +1662,7 @@
 1694	Veil King
 1695	Armageddon Knight
 1696	Fear Bomb Totem
+1697	Trap Rat
 1698	Midnight Fairy
 1699	Clawstorm Terror
 1700	Landmass
@@ -1816,26 +1817,43 @@
 1861	The Butcher
 1862	Diablo
 1863	Death Projector
-1878	Uldyssian's Memory
-1879	Uldyssian's Memory
-1880	Uldyssian's Memory
-1881	Uldyssian's Memory
-1882	Uldyssian's Memory
-1883	Uldyssian's Memory
-1884	Uldyssian's Memory
-1885	Uldyssian's Memory
-1886	Uldyssian's Memory
-1887	Uldyssian's Memory
-1888	Uldyssian's Memory
-1889	Uldyssian's Memory
-1890	Uldyssian's Memory
-1891	Uldyssian's Memory
-1892	Uldyssian's Memory
-1893	Uldyssian's Memory
-1894	Uldyssian's Memory
-1895	Uldyssian's Memory
-1896	Uldyssian
+1878	Moreina the Corrupted
+1879	The Dark Countess
+1880	Radament the Fallen
+1881	Jazreth the Deceived
+1882	Lachdanan
+1883	Zhar the Mad
+1884	Deathshade Fleshmaul
+1885	Nihlathak the Treacherous
+1886	Master of Deception
+1887	General of Vices
+1888	Talic's Defiled Memory
+1889	Madawc's Defiled Memory
+1890	Kolric's Defiled Memory
+1891	Demon Queen
+1892	Maggot King
+1893	Mefis
+1894	Dialon
+1895	Bala
+1896	Uldyssian the Tainted
 1897	Edyrem
+1898	\orange;Abyssal Spire
+1899	\orange;Abyssal Spire
+1900	\orange;Abyssal Spire
+1901	\orange;Councillor Ormac
+1902	\orange;Councillor Vanig
+1903	\orange;Abyssal Spire
+1904	\orange;Abyssal Spire
+1905	Deimoss the Fleshweaver
+1906	Deimoss the Fleshweaver
+1907	Corrupted Amazon
+1908	Corrupted Assassin
+1909	Corrupted Barbarian
+1910	Corrupted Necromancer
+1911	Gharbad the Weak
+1912	Navigator
+1913	Twisted Clawstorm
+1914	Rathma
 1926	Necrobot
 1929	Pirate of the Twin Seas
 1962	Imperius
@@ -1850,12 +1868,13 @@
 2029	Umbaru Spirit
 2030	Umbaru Spirit
 2031	Umbaru Spirit
-2032	Terul
+2032	Zagraal
 2033	Goliath
 2034	Guardian of Giyua
 2035	Spirit of Giyua
 2036	Harvester of Souls
 2037	Unformed Phantasm
+2038	Zagraal
 2042	Lost Traveler
 2043	a startled Witch...
 2044	Atanna Khan
@@ -1871,7 +1890,7 @@
 2059	Gehreleth
 2060	Darkness
 2061	Giant Hunters
-2062	Valthek, the Vizjerei Sorcerer
+2062	Valthek, the Archmage
 2063	Bone Golem
 2064	Earth Fiend
 2065	Iron Giant
@@ -1897,11 +1916,11 @@
 2085	Dul'Mephistos, the Lord of Hatred
 2086	Al'Diabalos, the Lord of Terror
 2087	Tor'Baalos, the Lord of Destruction
-2088	Seal of the Gods
-2090	Godsman Guard
+2088	Valthek's Altar
+2090	Mystic Aegis
 2091	Chimaera Trap
 2092	Fireheart Totem
-2093	Godsman Guard
+2093	Mystic Aegis
 2094	Umbaru Spirit
 2098	Lucion
 2099	Durram
@@ -1957,6 +1976,7 @@
 2154	Disguised Edyrem
 2155	Disguised Edyrem
 2158	Disguised Edyrem
+2159	Samael, Herald of the End
 2160	Blur
 2161	Disguised Edyrem
 2162	The Void (trap)
@@ -2395,8 +2415,8 @@
 2609	Corrupted Barbarian
 2610	Corrupted Barbarian
 2611	Corrupted Barbarian
-2612	Abyssal Shrine (x2 Трофеи)
-2613	Abyssal Shrine (x3 Трофеи)
+2612	Abyssal Shrine
+2613	Abyssal Shrine
 2614	Astrogha
 2615	Astrogha
 2616	Astrogha
@@ -2428,16 +2448,16 @@
 2642	Kabraxis, the Thief of Hope 
 2643	Kabraxis, the Thief of Hope 
 2644	Kabraxis, the Thief of Hope 
-2645	Lord Aldric Jitan
-2646	Lord Aldric Jitan
-2647	Lord Aldric Jitan
-2648	Lord Aldric Jitan
-2649	Lord Aldric Jitan
-2650	Lord Aldric Jitan
-2651	Lord Aldric Jitan
-2652	Lord Aldric Jitan
-2653	Lord Aldric Jitan
-2654	Lord Aldric Jitan
+2645	Malthael
+2646	Malthael
+2647	Malthael
+2648	Malthael
+2649	Malthael
+2650	Malthael
+2651	Malthael
+2652	Malthael
+2653	Malthael
+2654	Malthael
 2655	Bartuc
 2656	Bartuc
 2657	Bartuc
@@ -2550,10 +2570,10 @@
 2764	Assur
 2765	Assur
 2766	Assur
-2767	Abyssal Shrine (x3 Трофеи)
-2768	Abyssal Shrine (x3 Трофеи)
-2769	Abyssal Shrine (x3 Трофеи)
-2770	Abyssal Shrine (x3 Трофеи)
-2771	Abyssal Shrine (x3 Трофеи)
-2772	Abyssal Shrine (x3 Трофеи)
-2773	Abyssal Shrine (x3 Трофеи)
+2767	UNUSED
+2768	UNUSED
+2769	UNUSED
+2770	UNUSED
+2771	UNUSED
+2772	UNUSED
+2773	UNUSED

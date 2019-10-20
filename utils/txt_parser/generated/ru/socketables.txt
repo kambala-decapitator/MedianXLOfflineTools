@@ -90,15 +90,15 @@ r38	\purple;Thur Rune	Тур	500		50							500		50							500		50
 r39	\purple;Nas Rune	Нас	444		10							444		10							444		10						
 r40	\purple;Ath Rune	Ат	99		15							99		15							99		15						
 r41	\purple;Kra Rune	Кра	487		5							487		5							487		5						
-r42	\purple;Vith Rune	Вит	492		5							492		5							492		5						
-r43	\purple;No Rune	Но	102		15							102		15							102		15						
-r44	\purple;Yul Rune	Юл	470		10							470		10							470		10						
-r45	\purple;Thai Rune	Таи	39,41,43,45		10							39,41,43,45		10							39,41,43,45		10						
-r46	\purple;Rha Rune	Ра	31		200							31		200							31		200						
-r47	\purple;Xar Rune	Ксар	76,77		2							76,77		2							76,77		2						
+r42	\purple;Vith Rune	Вит	470		10							470		10							470		10						
+r43	\purple;No Rune	Но	336		3							336		3							336		3						
+r44	\purple;Yul Rune	Юл	334		3							334		3							334		3						
+r45	\purple;Thai Rune	Таи	335		3							335		3							335		3						
+r46	\purple;Rha Rune	Ра	333		3							333		3							333		3						
+r47	\purple;Xar Rune	Ксар	333,334,335		2							333,334,335		2							333,334,335		2						
 r48	\purple;Nih Rune	Них	409		10							409		10							409		10						
-r49	\purple;Lai Rune	Лаи	25		5							25		5							25		5						
-r50	\purple;On Rune	Он	171		5							171		5							171		5						
+r49	\purple;Lai Rune	Лаи	39,41,43,45		10							39,41,43,45		10							39,41,43,45		10						
+r50	\purple;On Rune	Он	76,77		2							76,77		2							76,77		3						
 r51	\grey;Great Rune\n\purple;Taha Rune	Таха	22		10							22		10				508		1	22		20				509		1
 r52	\grey;Great Rune\n\purple;Ghal Rune	Гал	485		5							485		5				508		1	485		15				509		1
 r53	\grey;Great Rune\n\purple;Qor Rune	Куор	91		-12							91		-12				508		1	91		-12				509		1

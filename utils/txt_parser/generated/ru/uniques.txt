@@ -20,13 +20,13 @@
 18	The Butcher's Tooth	105	
 19	\gold;Six Angel Bag	105	
 20	Visions of Akarat	110	akaratbook
-21	Scroll of Kings	110	scrollofkings
+21	Scroll of Kings	110	
 22	Sacred Worldstone Key	110	
 23	Horazon's Focus	110	
 24	Moon of the Spider	110	
 25	Azmodan's Heart	115	
 26	Idol of Vanity	115	
-27	Legacy of Blood	115	bloodlegacy
+27	Legacy of Blood	115	
 28	Sunstone of the Gods	115	
 29	Zakarum's Ear	115	
 30	Spirit Trance Herb	115	
@@ -62,9 +62,9 @@
 60	Placeholder	0	
 61	Placeholder	0	
 62	Placeholder	0	
-63	Griswold's Heart	10	
-64	Griswold's Heart	50	
-65	Griswold's Heart	80	
+63	Akara's Robe	10	invxtuu
+64	Akara's Robe	50	invxtuu
+65	Akara's Robe	80	invxtuu
 66	Ring of the Five	100	Ring08
 67	Assur's Bane	100	Ring08
 68	\gold;Ring of Pride	0	invrinquest
@@ -1717,3 +1717,16 @@
 1715	Despondence	125	
 1716	Celestial Sigil	125	invamu
 1717	Vial of Elder Blood	135	
+1718	Zann Esu's Stone	100	
+1719	Zann Esu's Stone	100	
+1720	Zann Esu's Stone	100	
+1721	Пробуждение	130	invawaken
+1722	Endless Pride	120	
+1723	Arrogance	120	invarrogance
+1724	Wintry Majesty	120	invmajesty
+1725	Clockwork Slippers	80	
+1726	Tinker's Gambit	100	
+1727	Khazra Pouch	90	
+1728	Hand of Rathma	100	invmagicwand
+1729	Implement V.II	125	
+1730	Flameskin	100	

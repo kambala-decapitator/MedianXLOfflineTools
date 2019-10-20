@@ -92,7 +92,11 @@ dbox	fbox		Druid Gift Box
 drui	clas		Druid Item
 dstf	staf,dbox		Druid Staff
 sdst	dstf,ct2w		Druid Staff (Sacred)
+elrx	elex		Elemental Ranged Weapons
 xrun	rune,gem		Elemental Rune
+el1x	elex		Elemental Weapon 1H Melee
+el2x	elex		Elemental Weapon 2H Melee
+elex	weap		Elemental Weapons
 elix	misc		Elixir
 geme	gem		Emerald
 erun	rune,gem		Enchanted Rune
@@ -153,16 +157,16 @@ gemq	gem		Onyx
 orb	mele,sorc		Orb
 qorb	orb,ct1w		Orb (Sacred)
 pbox	fbox		Pala Gift Box
-pclb	club,pbox		Paladin Club
+pclb	club		Paladin Club
 spcb	pclb,ct1w		Paladin Club (Sacred)
-pham	hamm,pbox		Paladin Hammer
+pham	hamm		Paladin Hammer
 sphm	pham,ct2w		Paladin Hammer (Sacred)
 pzhm	helm		Paladin Helm
 sphz	pzhm,ct1a		Paladin Helm (Sacred)
 pala	clas		Paladin Item
-pmac	mace,pbox		Paladin Mace
+pmac	mace		Paladin Mace
 spmc	pmac,ct1w		Paladin Mace (Sacred)
-pspe	spea,pbox		Paladin Spear
+pspe	spea		Paladin Spear
 spsp	pspe,ct2w		Paladin Spear (Sacred)
 pelt	helm,drui		Pelt
 qplt	pelt,ct1a		Pelt (Sacred)

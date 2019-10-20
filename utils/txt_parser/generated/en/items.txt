@@ -330,10 +330,10 @@
 @40	Chain Boots (Sacred)		2	2	0		30	527	0									invmbt		qbot		-1
 @41	Light Plated Boots (Sacred)		2	2	0		30	561	0									invtbt		qbot		-1
 @42	Greaves (Sacred)		2	2	0		30	595	0									invhbt		qbot		-1
-@43	Bone Shield (Sacred)		2	3	0		30	0	527									invbsh		qshi	0	-1
-@44	Spiked Shield (Sacred)		2	3	0		30	0	550									invspk		qshi	0	-1
-@45	Mask (Sacred)		2	2	0		30	540	0									invmsk		qhlm		-1
-@46	Bone Helm (Sacred)		2	2	0		30	563	0									invbhm		qhlm		-1
+@43	Bone Shield (Sacred)		2	3	0		30	0	527									invbsh		qbon	0	-1
+@44	Spiked Shield (Sacred)		2	3	0		30	0	550									invspk		qbon	0	-1
+@45	Mask (Sacred)		2	2	0		30	540	0									invmsk		qbhe		-1
+@46	Bone Helm (Sacred)		2	2	0		30	563	0									invbhm		qbhe		-1
 @47	Wolf Head (Sacred)		2	2	0		30	440	0									invdr1		qplt		5
 @48	Hawk Helm (Sacred)		2	2	0		30	445	0									invdr2		qplt		5
 @49	Antlers (Sacred)		2	2	0		30	450	0									invdr3		qplt		5
@@ -562,7 +562,7 @@ w99	Avenger Guard (3)		2	2	0		23	263	0									invba5		phlm,tier		4
 110	Bastard Sword (1)		1	4	1		3	73	0	1	1	9	11	16	17			invbsw	0	2hsd,tier	1	-1
 111	Flamberge (1)		2	4	1		3	89	0	1	1	11	13	19	21			invflb	0	2hsd,tier	1	-1
 112	Great Sword (1)		2	4	1		5	105	0	1	1	12	15	22	23			invgsd	0	2hsd,tier	1	-1
-113	Crystal Sword (1)		2	3	1		5	0	73			7	8					invcrs	0	crsd,tier	1	-1
+113	Crystal Sword (1)		2	3	1		5	0	73			0	0					invcrs	0	crsd,el1x	1	-1
 114	Hand Axe (1)		1	3	1		0	0	0			4	6					invhax	0	axe,tier	1	-1
 115	Axe (1)		2	3	1		1	31	0			6	8					invaxe	0	axe,tier	1	-1
 116	Double Axe (1)		2	3	1		2	49	0			7	11					inv2ax	0	axe,tier	1	-1
@@ -571,7 +571,7 @@ w99	Avenger Guard (3)		2	2	0		23	263	0									invba5		phlm,tier		4
 119	Large Axe (1)		2	3	1		0	18	0		1			7	9			invlax	0	2hax,tier	1	-1
 11@	Bastard Sword (Sacred)		1	4	1		30	535	0	1	1	44	47	70	72			invbsw	0	s2hd	1	-1
 120	Broad Axe (1)		2	3	1		1	39	0		1			10	13			invbrx	0	2hax,tier	1	-1
-121	Battle Axe (1)		2	3	1		2	60	0		1			14	18			invbtx	0	2hax,tier	1	-1
+121	Battle Axe (1)		2	3	1		2	60	0		1			0	0			invbtx	0	2hax,el2x	1	-1
 122	Great Axe (1)		2	4	1		3	81	0		1			17	23			invgax	0	2hax,tier	1	-1
 123	Giant Axe (1)		2	3	1		5	102	0		1			20	28			invgix	0	2hax,tier	1	-1
 124	Club (1)		1	3	1		0	0	0			4	6					invclb	0	mace,tier	1	-1
@@ -602,7 +602,7 @@ w99	Avenger Guard (3)		2	2	0		23	263	0									invba5		phlm,tier		4
 147	Flying Knife (1)		1	2	1	1	2	0	53			6	7			6	7	invtkn	0	tkni,tier	1	-1
 148	Balanced Knife (1)		1	2	1	1	3	0	91			8	9			10	12	invbkf	0	tkni,tier	1	-1
 149	Throwing Axe (1)		1	2	1	1	0	15	0			5	6			2	6	invtax	0	taxe,tier	1	-1
-14@	Crystal Sword (Sacred)		2	3	1		30	0	510			40	42					invcrs	0	qcrs	1	-1
+14@	Crystal Sword (Sacred)		2	3	1		30	0	510			0	0					invcrs	0	qcrs,el1x	1	-1
 150	Balanced Axe (1)		2	3	1	1	3	77	0			5	12			4	19	invbal	0	taxe,tier	1	-1
 151	Short Staff (1)		1	3	1		0	0	0		1			2	4			invsst	0	staf,tier	1	-1
 152	Long Staff (1)		1	4	1		1	0	8		1			6	8			invlst	0	staf,tier	1	-1
@@ -618,7 +618,7 @@ w99	Avenger Guard (3)		2	2	0		23	263	0									invba5		phlm,tier		4
 161	Hunter's Bow (1)		2	3	1		0	0	27		1			3	5			invhbw	0	bow,tier	1	-1
 162	Long Bow (1)		2	4	1		1	0	39		1			5	7			invlbw	0	bow,tier	1	-1
 163	Composite Bow (1)		2	3	1		2	0	51		1			7	10			invcbw	0	bow,tier	1	-1
-164	Short Battle Bow (1)		2	3	1		2	0	63		1			9	13			invsbb	0	bow,tier	1	-1
+164	Short Battle Bow (1)		2	3	1		2	0	63		1			0	0			invsbb	0	bow,elrx	1	-1
 165	Long Battle Bow (1)		2	4	1		3	0	75		1			10	15			invlbb	0	bow,tier	1	-1
 166	Short War Bow (1)		2	3	1		4	0	87		1			12	18			invswb	0	bow,tier	1	-1
 167	Long War Bow (1)		2	4	1		5	0	99		1			13	20			invlwb	0	bow,tier	1	-1
@@ -640,7 +640,7 @@ w99	Avenger Guard (3)		2	2	0		23	263	0									invba5		phlm,tier		4
 1@F	Trebuchet (1)		2	3	1		6	72	0		1			19	26			inv8mxu		nxbw,tier	1	2
 20@	Large Axe (Sacred)		2	3	1		30	408	0		1			65	67			invlax	0	s2ha	1	-1
 21@	Broad Axe (Sacred)		2	3	1		30	447	0		1			71	75			invbrx	0	s2ha	1	-1
-22@	Battle Axe (Sacred)		2	3	1		30	486	0		1			76	83			invbtx	0	s2ha	1	-1
+22@	Battle Axe (Sacred)		2	3	1		30	486	0		1			0	0			invbtx	0	s2ha,el2x	1	-1
 236	Short Sword (2)		1	3	1		9	18	0			9	9					invssd	0	swor,tier	1	-1
 237	Scimitar (2)		1	3	1		10	48	0			11	12					invscm	0	swor,tier	1	-1
 238	Saber (2)		1	3	1		11	64	0			13	14					invsbr	0	swor,tier	1	-1
@@ -655,7 +655,7 @@ w99	Avenger Guard (3)		2	2	0		23	263	0									invba5		phlm,tier		4
 246	Bastard Sword (2)		1	4	1		12	110	0	1	1	17	20	30	32			invbsw	0	2hsd,tier	1	-1
 247	Flamberge (2)		2	4	1		13	130	0	1	1	19	23	36	38			invflb	0	2hsd,tier	1	-1
 248	Great Sword (2)		2	4	1		14	151	0	1	1	21	26	40	43			invgsd	0	2hsd,tier	1	-1
-249	Crystal Sword (2)		2	3	1		15	0	110			13	14					invcrs	0	crsd,tier	1	-1
+249	Crystal Sword (2)		2	3	1		15	0	110			0	0					invcrs	0	crsd,el1x	1	-1
 24@	Giant Axe (Sacred)		2	3	1		30	685	0		1			83	101			invgix	0	s2ha	1	-1
 250	Hand Axe (2)		1	3	1		9	18	0			8	10					invhax	0	axe,tier	1	-1
 251	Axe (2)		2	3	1		11	56	0			11	15					invaxe	0	axe,tier	1	-1
@@ -664,7 +664,7 @@ w99	Avenger Guard (3)		2	2	0		23	263	0									invba5		phlm,tier		4
 254	War Axe (2)		2	3	1		14	125	0			19	29					invwax	0	axe,tier	1	-1
 255	Large Axe (2)		2	3	1		9	39	0		1			14	16			invlax	0	2hax,tier	1	-1
 256	Broad Axe (2)		2	3	1		11	67	0		1			20	25			invbrx	0	2hax,tier	1	-1
-257	Battle Axe (2)		2	3	1		12	93	0		1			26	35			invbtx	0	2hax,tier	1	-1
+257	Battle Axe (2)		2	3	1		12	93	0		1			0	0			invbtx	0	2hax,el2x	1	-1
 258	Great Axe (2)		2	4	1		12	120	0		1			34	44			invgax	0	2hax,tier	1	-1
 259	Giant Axe (2)		2	3	1		14	146	0		1			39	51			invgix	0	2hax,tier	1	-1
 25@	Club (Sacred)		1	3	1		30	376	0			41	42					invclb	0	qmac	1	-1
@@ -721,7 +721,7 @@ w99	Avenger Guard (3)		2	2	0		23	263	0									invba5		phlm,tier		4
 2@C	Hand of God (2)		2	3	1		15	109	0		1			36	43			inv9gmu		pham,tier	1	3
 2@D	Needle Crossbow (3)		2	3	1		20	100	0		1			40	46			invlxbu		nxbw,tier	1	2
 2@E	Dart Thrower (Sacred)		2	3	1		30	395	0		1			85	86			inv8lxu		snxb	1	2
-300	Short Battle Bow (2)		2	3	1		12	0	97		1			20	27			invsbb	0	bow,tier	1	-1
+300	Short Battle Bow (2)		2	3	1		12	0	97		1			0	0			invsbb	0	bow,elrx	1	-1
 301	Long Battle Bow (2)		2	4	1		12	0	112		1			22	32			invlbb	0	bow,tier	1	-1
 302	Short War Bow (2)		2	3	1		14	0	127		1			25	36			invswb	0	bow,tier	1	-1
 303	Long War Bow (2)		2	4	1		15	0	143		1			27	39			invlwb	0	bow,tier	1	-1
@@ -746,7 +746,7 @@ w99	Avenger Guard (3)		2	2	0		23	263	0									invba5		phlm,tier		4
 382	Bastard Sword (3)		1	4	1		21	216	0	1	1	26	31	46	49			invbsw	0	2hsd,tier	1	-1
 383	Flamberge (3)		2	4	1		22	253	0	1	1	30	36	55	58			invflb	0	2hsd,tier	1	-1
 384	Great Sword (3)		2	4	1		24	291	0	1	1	32	39	61	65			invgsd	0	2hsd,tier	1	-1
-385	Crystal Sword (3)		2	3	1		24	0	216			19	22					invcrs	0	crsd,tier	1	-1
+385	Crystal Sword (3)		2	3	1		24	0	216			0	0					invcrs	0	crsd,el1x	1	-1
 386	Hand Axe (3)		1	3	1		18	49	0			13	16					invhax	0	axe,tier	1	-1
 387	Axe (3)		2	3	1		20	118	0			17	24					invaxe	0	axe,tier	1	-1
 388	Double Axe (3)		2	3	1		21	160	0			22	31					inv2ax	0	axe,tier	1	-1
@@ -755,7 +755,7 @@ w99	Avenger Guard (3)		2	2	0		23	263	0									invba5		phlm,tier		4
 390	War Axe (3)		2	3	1		24	244	0			29	45					invwax	0	axe,tier	1	-1
 391	Large Axe (3)		2	3	1		18	88	0		1			24	28			invlax	0	2hax,tier	1	-1
 392	Broad Axe (3)		2	3	1		20	137	0		1			34	41			invbrx	0	2hax,tier	1	-1
-393	Battle Axe (3)		2	3	1		21	186	0		1			43	54			invbtx	0	2hax,tier	1	-1
+393	Battle Axe (3)		2	3	1		21	186	0		1			0	0			invbtx	0	2hax,el2x	1	-1
 394	Great Axe (3)		2	4	1		22	235	0		1			53	68			invgax	0	2hax,tier	1	-1
 395	Giant Axe (3)		2	3	1		24	284	0		1			60	79			invgix	0	2hax,tier	1	-1
 396	Club (3)		1	3	1		18	49	0			14	17					invclb	0	mace,tier	1	-1
@@ -813,7 +813,7 @@ w99	Avenger Guard (3)		2	2	0		23	263	0									invba5		phlm,tier		4
 433	Hunter's Bow (3)		2	3	1		19	0	109		1			20	24			invhbw	0	bow,tier	1	-1
 434	Long Bow (3)		2	4	1		20	0	137		1			24	31			invlbw	0	bow,tier	1	-1
 435	Composite Bow (3)		2	3	1		20	0	165		1			29	38			invcbw	0	bow,tier	1	-1
-436	Short Battle Bow (3)		2	3	1		21	0	193		1			34	45			invsbb	0	bow,tier	1	-1
+436	Short Battle Bow (3)		2	3	1		21	0	193		1			0	0			invsbb	0	bow,elrx	1	-1
 437	Long Battle Bow (3)		2	4	1		21	0	221		1			38	51			invlbb	0	bow,tier	1	-1
 438	Short War Bow (3)		2	3	1		23	0	249		1			41	56			invswb	0	bow,tier	1	-1
 439	Long War Bow (3)		2	4	1		24	0	277		1			45	62			invlwb	0	bow,tier	1	-1
@@ -832,7 +832,7 @@ w99	Avenger Guard (3)		2	2	0		23	263	0									invba5		phlm,tier		4
 450	Bastard Sword (4)		1	4	1		26	427	0	1	1	31	37	56	59			invbsw	0	2hsd,tier	1	-1
 451	Flamberge (4)		2	4	1		27	499	0	1	1	35	42	65	69			invflb	0	2hsd,tier	1	-1
 452	Great Sword (4)		2	4	1		28	570	0	1	1	38	47	73	77			invgsd	0	2hsd,tier	1	-1
-453	Crystal Sword (4)		2	3	1		28	0	427			23	26					invcrs	0	crsd,tier	1	-1
+453	Crystal Sword (4)		2	3	1		28	0	427			0	0					invcrs	0	crsd,el1x	1	-1
 454	Hand Axe (4)		1	3	1		23	104	0			16	20					invhax	0	axe,tier	1	-1
 455	Axe (4)		2	3	1		24	239	0			21	28					invaxe	0	axe,tier	1	-1
 456	Double Axe (4)		2	3	1		25	319	0			26	37					inv2ax	0	axe,tier	1	-1
@@ -841,7 +841,7 @@ w99	Avenger Guard (3)		2	2	0		23	263	0									invba5		phlm,tier		4
 459	Large Axe (4)		2	3	1		23	180	0		1			29	33			invlax	0	2hax,tier	1	-1
 45@	Kriss (Sacred)		1	3	1		30	0	454			39	40					invkrs	0	qknf	1	-1
 460	Broad Axe (4)		2	3	1		24	274	0		1			40	49			invbrx	0	2hax,tier	1	-1
-461	Battle Axe (4)		2	3	1		25	369	0		1			51	65			invbtx	0	2hax,tier	1	-1
+461	Battle Axe (4)		2	3	1		25	369	0		1			0	0			invbtx	0	2hax,el2x	1	-1
 462	Great Axe (4)		2	4	1		26	463	0		1			62	80			invgax	0	2hax,tier	1	-1
 463	Giant Axe (4)		2	3	1		27	557	0		1			65	99			invgix	0	2hax,tier	1	-1
 464	Club (4)		1	3	1		23	104	0			17	21					invclb	0	mace,tier	1	-1
@@ -897,7 +897,7 @@ w99	Avenger Guard (3)		2	2	0		23	263	0									invba5		phlm,tier		4
 501	Hunter's Bow (4)		2	3	1		24	0	221		1			25	30			invhbw	0	bow,tier	1	-1
 502	Long Bow (4)		2	4	1		25	0	274		1			30	38			invlbw	0	bow,tier	1	-1
 503	Composite Bow (4)		2	3	1		25	0	328		1			35	46			invcbw	0	bow,tier	1	-1
-504	Short Battle Bow (4)		2	3	1		26	0	382		1			40	53			invsbb	0	bow,tier	1	-1
+504	Short Battle Bow (4)		2	3	1		26	0	382		1			0	0			invsbb	0	bow,elrx	1	-1
 505	Long Battle Bow (4)		2	4	1		26	0	436		1			45	61			invlbb	0	bow,tier	1	-1
 506	Short War Bow (4)		2	3	1		27	0	490		1			50	68			invswb	0	bow,tier	1	-1
 507	Long War Bow (4)		2	4	1		28	0	543		1			54	74			invlwb	0	bow,tier	1	-1
@@ -927,7 +927,7 @@ w99	Avenger Guard (3)		2	2	0		23	263	0									invba5		phlm,tier		4
 62@	Hunter's Bow (Sacred)		2	3	1		30	0	425		1			56	59			invhbw	0	qbow	1	-1
 63@	Long Bow (Sacred)		2	4	1		30	0	447		1			59	62			invlbw	0	qbow	1	-1
 64@	Composite Bow (Sacred)		2	3	1		30	0	470		1			61	66			invcbw	0	qbow	1	-1
-65@	Short Battle Bow (Sacred)		2	3	1		30	0	492		1			63	70			invsbb	0	qbow	1	-1
+65@	Short Battle Bow (Sacred)		2	3	1		30	0	492		1			0	0			invsbb	0	qbow,elrx	1	-1
 66@	Long Battle Bow (Sacred)		2	4	1		30	0	544		1			66	74			invlbb	0	qbow	1	-1
 67@	Short War Bow (Sacred)		2	3	1		30	0	590		1			68	77			invswb	0	qbow	1	-1
 68@	Long War Bow (Sacred)		2	4	1		30	0	650		1			70	79			invlwb	0	qbow	1	-1
@@ -967,7 +967,7 @@ w99	Avenger Guard (3)		2	2	0		23	263	0									invba5		phlm,tier		4
 82@	Smoked Sphere (Sacred)		1	2	1		30	0	183			37	39					invob3		qorb	1	1
 83@	Clasped Orb (Sacred)		1	2	1		30	0	188			39	41					invob4		qorb	1	1
 84@	Jared's Stone (Sacred)		1	3	1		30	0	242			40	43					invob5		qorb	1	1
-85@	Stag Bow (Sacred)		2	4	1		30	0	557		1			63	70			invam1		qabw	1	0
+85@	Stag Bow (Sacred)		2	4	1		30	0	557		1			0	0			invam1		qabw,elrx	1	0
 86@	Reflex Bow (Sacred)		2	4	1		30	0	680		1			67	75			invam2		qabw	1	0
 87@	Maiden Spear (Sacred)		2	4	1		30	346	500		1			60	70			invam3		qasp	1	0
 88@	Maiden Pike (Sacred)		2	4	1		30	350	590		1			52	93			invam4		qasp	1	0
@@ -1016,7 +1016,7 @@ j11	Sacred Globe (1)		1	2	1		1	0	8			5	5					invob2		orb,tier	1	1
 j12	Smoked Sphere (1)		1	2	1		2	0	15			5	7					invob3		orb,tier	1	1
 j13	Clasped Orb (1)		1	2	1		3	0	9			6	8					invob4		orb,tier	1	1
 j14	Jared's Stone (1)		1	3	1		5	0	25			7	9					invob5		orb,tier	1	1
-j15	Stag Bow (1)		2	4	1		3	0	78		1			9	13			invam1		abow,tier	1	0
+j15	Stag Bow (1)		2	4	1		3	0	78		1			0	0			invam1		abow,elrx	1	0
 j16	Reflex Bow (1)		2	4	1		5	0	103		1			11	17			invam2		abow,tier	1	0
 j17	Maiden Spear (1)		2	4	1		3	33	67		1			6	16			invam3		aspe,tier	1	0
 j18	Maiden Pike (1)		2	4	1		5	43	87		1			7	19			invam4		aspe,tier	1	0
@@ -1033,7 +1033,7 @@ j45	Sacred Globe (2)		1	2	1		10	0	19			8	9					invob2		orb,tier	1	1
 j46	Smoked Sphere (2)		1	2	1		11	0	36			10	12					invob3		orb,tier	1	1
 j47	Clasped Orb (2)		1	2	1		12	0	15			11	14					invob4		orb,tier	1	1
 j48	Jared's Stone (2)		1	3	1		14	0	48			13	16					invob5		orb,tier	1	1
-j49	Stag Bow (2)		2	4	1		12	0	118		1			19	27			invam1		abow,tier	1	0
+j49	Stag Bow (2)		2	4	1		12	0	118		1			0	0			invam1		abow,elrx	1	0
 j50	Reflex Bow (2)		2	4	1		15	0	150		1			24	34			invam2		abow,tier	1	0
 j51	Maiden Spear (2)		2	4	1		12	50	102		1			13	29			invam3		aspe,tier	1	0
 j52	Maiden Pike (2)		2	4	1		14	63	126		1			14	34			invam4		aspe,tier	1	0
@@ -1050,7 +1050,7 @@ j79	Sacred Globe (3)		1	2	1		20	0	43			13	14					invob2		orb,tier	1	1
 j80	Smoked Sphere (3)		1	2	1		21	0	81			15	18					invob3		orb,tier	1	1
 j81	Clasped Orb (3)		1	2	1		21	0	32			17	21					invob4		orb,tier	1	1
 j82	Jared's Stone (3)		1	3	1		23	0	104			19	23					invob5		orb,tier	1	1
-j83	Stag Bow (3)		2	4	1		21	0	231		1			33	44			invam1		abow,tier	1	0
+j83	Stag Bow (3)		2	4	1		21	0	231		1			0	0			invam1		abow,elrx	1	0
 j84	Reflex Bow (3)		2	4	1		24	0	290		1			39	54			invam2		abow,tier	1	0
 j85	Maiden Spear (3)		2	4	1		22	102	203		1			21	45			invam3		aspe,tier	1	0
 j86	Maiden Pike (3)		2	4	1		23	123	246		1			22	53			invam4		aspe,tier	1	0
@@ -1113,7 +1113,7 @@ l74	Heavy Crossbow (4)		2	4	1		27	514	0		1			78	101			invhxb		xbow,tier	1	-1
 l75	Repeating Crossbow (4)		2	3	1		28	570	0		1			74	102			invrxb		xbow,tier	1	-1
 leg	Wirt's Leg		1	3	1		0	0	0			8	12					invleg		wrtl	1	-1
 msf	Staff of Kings		1	3	1		0	12	0		1			13	16			invmsf	10	staf	1	-1
-o10	Stag Bow (4)		2	4	1		26	0	457		1			39	53			invam1		abow,tier	1	0
+o10	Stag Bow (4)		2	4	1		26	0	457		1			0	0			invam1		abow,elrx	1	0
 o11	Reflex Bow (4)		2	4	1		28	0	570		1			47	64			invam2		abow,tier	1	0
 o12	Maiden Spear (4)		2	4	1		26	201	402		1			25	54			invam3		aspe,tier	1	0
 o13	Maiden Pike (4)		2	4	1		27	241	483		1			19	71			invam4		aspe,tier	1	0
@@ -1134,11 +1134,11 @@ tax	Throwing Axe		1	2	1	1	0	0	40			10	11			6	8	invtax		taxe	1	-1
 v#X	\red;Sacred Bow		2	3	1		120	666	666		1			38	45			newathuluabow	0	#bow	1	-1
 vou	Voulge		2	4	1		0	50	0		1			10	20			invvou		pole	1	-1
 wol	Wirt's Other Leg		1	3	1		0	0	0			13	18					invwol		wrtl	1	-1
-!@1	\dgreen;Evil Eye of the Clawstorm	\blue;+20% to Experience Gained\n+1 to Class Skill Levels\n\grey;Cube All 5 Eyes with Class Charm to Add Bonus\n\nMonster Token	1	1	2		0	0	0									evileye		thng		-1
-!@2	\dgreen;Evil Eye of the Landmass	\blue;+20% to Experience Gained\n+1 to Class Skill Levels\n\grey;Cube All 5 Eyes with Class Charm to Add Bonus\n\nMonster Token	1	1	2		0	0	0									evileye		thng		-1
-!@3	\dgreen;Evil Eye of the Glowing Blob	\blue;+20% to Experience Gained\n+1 to Class Skill Levels\n\grey;Cube All 5 Eyes with Class Charm to Add Bonus\n\nMonster Token	1	1	2		0	0	0									evileye		thng		-1
-!@4	\dgreen;Evil Eye of the Fairy Witch	\blue;+20% to Experience Gained\n+1 to Class Skill Levels\n\grey;Cube All 5 Eyes with Class Charm to Add Bonus\n\nMonster Token	1	1	2		0	0	0									evileye		thng		-1
-!@5	\dgreen;Evil Eye of the Bane Hunter	\blue;+20% to Experience Gained\n+1 to Class Skill Levels\n\grey;Cube All 5 Eyes with Class Charm to Add Bonus\n\nMonster Token	1	1	2		0	0	0									evileye		thng		-1
+!@1	\dgreen;Evil Eye of the Clawstorm	\blue;+15% to Experience Gained\n+1 to Class Skill Levels\n\grey;Cube All 5 Eyes with Class Charm to Add Bonus\n\nMonster Token	1	1	2		0	0	0									evileye		thng		-1
+!@2	\dgreen;Evil Eye of the Landmass	\blue;+15% to Experience Gained\n+1 to Class Skill Levels\n\grey;Cube All 5 Eyes with Class Charm to Add Bonus\n\nMonster Token	1	1	2		0	0	0									evileye		thng		-1
+!@3	\dgreen;Evil Eye of the Glowing Blob	\blue;+15% to Experience Gained\n+1 to Class Skill Levels\n\grey;Cube All 5 Eyes with Class Charm to Add Bonus\n\nMonster Token	1	1	2		0	0	0									evileye		thng		-1
+!@4	\dgreen;Evil Eye of the Fairy Witch	\blue;+15% to Experience Gained\n+1 to Class Skill Levels\n\grey;Cube All 5 Eyes with Class Charm to Add Bonus\n\nMonster Token	1	1	2		0	0	0									evileye		thng		-1
+!@5	\dgreen;Evil Eye of the Bane Hunter	\blue;+15% to Experience Gained\n+1 to Class Skill Levels\n\grey;Cube All 5 Eyes with Class Charm to Add Bonus\n\nMonster Token	1	1	2		0	0	0									evileye		thng		-1
 !@B	\dgreen;Signet of Skill	Right-click: Free Skill Points: %d	1	1	2		0	0	0									sigil4B		poti		-1
 ##.	\gold;Neutrality Pact		1	1	2		0	0	0									scroll05		grtz		-1
 #X1	Cube Reagent (Secret)\n\orange;Emblem of Suffering		1	1	2		0	0	0									newsignet1		thng		-1
@@ -1153,7 +1153,7 @@ wol	Wirt's Other Leg		1	3	1		0	0	0			13	18					invwol		wrtl	1	-1
 &68	\orange;Mystic Orb\nHeart of Frost	\blue;+10 Required Level\n+5% to Cold Spell Damage\n+5% Bonus to Summoned Minion Damage\nEnhanced Weapon Damage +15%\n\grey;Cube with Ring/Amulet/Quiver to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_misc		asaa,asa#		-1
 &69	\orange;Mystic Orb\nRelic of Yaerius	\blue;+10 Required Level\n+10 Life after Each Kill\n+5 Life Regenerated per Second\n+5 to Maximum Damage\n+25% Damage to Undead\n\grey;Cube with Ring/Amulet/Quiver to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_misc		asaa,asa#		-1
 &70	\orange;Mystic Orb\nThe Endless Light	\blue;+10 Required Level\n+100 Defense\nTotal Character Defense Plus 3%\n-2% to Enemy Elemental Resistances\n\grey;Cube with Ring/Amulet/Quiver to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_misc		asaa,asa#		-1
-&71	\orange;Mystic Orb\nMarksman's Eye	\blue;+10 Required Level\n2% Bonus to Dexterity\n10% Bonus to Attack Rating\n+3 to Minimum Damage\n5% Attack Speed\n\grey;Cube with Item to Add Bonus\n	1	1	2		0	0	0									orb_any		asaa,asa#		-1
+&71	\orange;Mystic Orb\nMarksman's Eye	\blue;+10 Required Level\n2% Bonus to Dexterity\n10% Bonus to Attack Rating\n+3 to Minimum Damage\n5% Attack Speed\n\grey;Cube with Item to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_any		asaa,asa#		-1
 &72	\orange;Mystic Orb\nFarnham's Lost Marble	\blue;+10 Required Level\nRandom Run/Walk Speed\n+75 Mana on Attack\n+75 Life on Attack\n\grey;Cube with Item to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_any		asaa,asa#		-1
 &73	\orange;Mystic Orb\nZayl's Soul Orb	\blue;+10 Required Level\nHalf Freeze Duration\n+200 to Mana\n2% Reanimate As: Flying Scimitar\n\grey;Cube with Item to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_any		asaa,asa#		-1
 &74	\orange;Mystic Orb\nEye of Malic	\blue;+10 Required Level\nAdds 10-20 Cold Damage\nAdds 10-20 Fire Damage\n1% Chance to cast level 47 Frozen Soul on Melee Attack\n1% Chance to cast level 47 Bloodstar on Melee Attack\n\grey;Cube with Item to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_any		asaa,asa#		-1
@@ -1170,7 +1170,7 @@ wol	Wirt's Other Leg		1	3	1		0	0	0			13	18					invwol		wrtl	1	-1
 &85	\orange;Mystic Orb\nUldyssian's Spirit	\blue;+10 Required Level\n+3% to Spell Damage\n+50% Damage to Demons\n+10 Energy Factor to Spell Damage\n+10 Strength Factor to Spell Damage\n\grey;Cube with Any Weapon to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_weap		asaa,asa#		-1
 &86	\orange;Mystic Orb\nOrb of Annihilation	\blue;+10 Required Level\n5% Bonus to Energy\n+5% to Physical/Magic Spell Damage\n10% Chance to cast level 1 Detonate on Melee Attack\n\grey;Cube with Any Weapon to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_weap		asaa,asa#		-1
 &87	\orange;Mystic Orb\nWarbringer	\blue;+10 Required Level\n+5 Maximum Damage\n2% Chance to cast level 5 Arrow on Striking\n\grey;Cube with Any Weapon to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_weap		asaa,asa#		-1
-&88	\orange;Mystic Orb\nTen Pin Striker	\blue;+10 Required Level\nTarget Takes Additional Damage of 100\n100% Bonus to Attack Rating\n2% Movement Speed\n\grey;Cube with Any Weapon to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_weap		asaa,asa#		-1
+&88	\orange;Mystic Orb\nTen Pin Striker	\blue;+10 Required Level\nTarget Takes Additional Damage of 100\n100% Bonus to Attack Rating\n\grey;Cube with Any Weapon to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_weap		asaa,asa#		-1
 &89	\orange;Mystic Orb\nWrathspirit	\blue;+10 Required Level\n+10 Life after each Kill\n+3% to Spell Damage\n1% Chance to cast level 46 Punisher when Struck\n\grey;Cube with Any Weapon to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_weap		asaa,asa#		-1
 &90	\orange;Mystic Orb\nCrystal of Tears	\blue;+10 Required Level\n-2% to Maximum Life\nAdds 7-12 Damage\n\grey;Cube with Any Armor to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_armo		asaa,asa#		-1
 &91	\orange;Mystic Orb\nEssence of Itherael	\blue;+10 Required Level\nTotal Character Defense Plus 15%\nEnhanced Weapon Damage +20%\n\grey;Cube with Any Armor to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_armo		asaa,asa#		-1
@@ -1201,7 +1201,7 @@ wol	Wirt's Other Leg		1	3	1		0	0	0			13	18					invwol		wrtl	1	-1
 0g2	\red;Elixir of Greater Wealth (Disabled)	+600% Gold Find for 30 seconds	1	1	2		0	0	0									invxyz		hpot		-1
 0g7	\red;Elixir of Power (Disabled)	+5 Skill Levels for 60 seconds	1	1	2		0	0	0									invnpl		hpot		-1
 0g8	\red;Elixir of Love (Disabled)	-50% Vendor Prices for 60 seconds	1	1	2		0	0	0									invpor		hpot		-1
-0o[	Cube Reagent\n\orange;Catalyst of Learning	The Items will be Consumed by the Recipe\n\green;Disenchanting\n\n\grey;(Max: 25)\n(Weapons and Armor Only)\nCube with Sacred Unique/Set Items to Create Signet of Learning\n	1	1	2		0	0	0									catal1		thng		-1
+0o[	\gold;Catalyst of Learning	90\nLearning:\nYou can create Signets of Learning by \nconsuming Sacred Uniques and Sets \nyou no longer need.\n\nCatalyst + Sacred Sets/Uniques (max 25) \n--> Signet of Learning\n	1	1	2		0	0	0									catal1	255	thng		-1
 0sc	Scroll of Knowledge		1	1	2		0	0	0									invrsc		scro		-1
 0u1	Hammer of the Taan Judges		1	2	2		0	0	0									invhmr		grtz		-1
 10+	Cube Reagent\n\orange;Mystic Orb	\blue;+4 Required Level\nPhysical Damage Reduced by 6\n\grey;Cube with Ring/Amulet/Quiver to Add Bonus\n	1	1	2		0	0	0									orb_misc		asaa		-1
@@ -1236,7 +1236,7 @@ wol	Wirt's Other Leg		1	3	1		0	0	0			13	18					invwol		wrtl	1	-1
 25^	\dgreen;Greater Signet of Learning	Right-click: Free Attribute Points: %d	1	1	2		0	0	0									sigilXL		poti		-1
 26+	Cube Reagent\n\orange;Mystic Orb	\blue;+4 Required Level\n+15% Enhanced Defense\n\grey;Cube with Any Armor to Add Bonus\n	1	1	2		0	0	0									orb_armo		asaa		-1
 27+	Cube Reagent\n\orange;Mystic Orb	\blue;+4 Required Level\nTotal Character Defense +4%\n\grey;Cube with Any Armor to Add Bonus\n	1	1	2		0	0	0									orb_armo		asaa		-1
-2o[	Cube Reagent\n\orange;Oil of Disjunction	\yellow;These Recipes will return both the Item and the Socket Fillers\n\grey;Cube with Magical Item to Unsocket\nCube with Normal/Runeword Item + 3 Perfect Gems to Unsocket\n	1	1	2		0	0	0									oil_disjunction		thng		-1
+2o[	Cube Reagent\n\orange;Oil of Disjunction	80\nThe Oil of Disjunction will unsocket and \nreturn socket fillers from any item.\nUnsocketing non-magical items has \nan increased cost.\n\nOil + Magical Item\n--> Item + Socket Fillers\n\nOil + Non-Magical Item + 3 Perf. Gems\n--> Item + Socket Fillers\n	1	1	2		0	0	0									oil_disjunction		thng		-1
 2x5	\dgreen;Alpha Brain		1	1	2		0	0	0									invbrnz		thng		-1
 2x6	\dgreen;Beta Brain		1	1	2		0	0	0									invbrnz		thng		-1
 2x7	\dgreen;Gamma Brain		1	1	2		0	0	0									invbrnz		thng		-1
@@ -1251,12 +1251,12 @@ wol	Wirt's Other Leg		1	3	1		0	0	0			13	18					invwol		wrtl	1	-1
 37+	Cube Reagent\n\orange;Mystic Orb	\blue;+4 Required Level\n+6 to Maximum Damage\n\grey;Cube with Any Weapon to Add Bonus\n	1	1	2		0	0	0									orb_weap		asaa		-1
 38+	Cube Reagent\n\orange;Mystic Orb	\blue;+4 Required Level\n1% Deadly Strike\n\grey;Cube with Any Weapon to Add Bonus\n	1	1	2		0	0	0									orb_weap		asaa		-1
 39+	Cube Reagent\n\orange;Mystic Orb	\blue;+4 Required Level\n1% Chance of Crushing Blow\n\grey;Cube with Any Weapon to Add Bonus\n	1	1	2		0	0	0									orb_weap		asaa		-1
-3o[	Cube Reagent\n\orange;Catalyst of Disenchantment	The Items will be Consumed by the Recipe\n\green;Disenchanting\n\n\grey;(Max: 10)\nCube with Unique Items to Create Arcane Shards\n	1	1	2		0	0	0									catal2		thng		-1
+3o[	\gold;Catalyst of Disenchantment	90\nDisenchanting:\nYou can create Arcane Shards by \nconsuming Tiered (#) Uniques \nyou no longer need.\n\nCatalyst + Tiered Uniques (max 10) \n--> Arcane Shards\n	1	1	2		0	0	0									catal2	255	thng		-1
 40+	Cube Reagent\n\orange;Mystic Orb	\blue;+4 Required Level\n+10 Life after each Kill\n\grey;Cube with Any Weapon to Add Bonus\n	1	1	2		0	0	0									orb_weap		asaa		-1
 46+	Cube Reagent\n\orange;Mystic Orb	\blue;+4 Required Level\nElemental Resists +3%\n\grey;Cube with Any Armor to Add Bonus\n	1	1	2		0	0	0									orb_armo		asaa		-1
 47+	Cube Reagent\n\orange;Mystic Orb	\blue;+4 Required Level\nRequirements -4%\n\grey;Cube with Any Armor to Add Bonus\n	1	1	2		0	0	0									orb_armo		asaa		-1
 48+	Cube Reagent\n\orange;Mystic Orb	\blue;+4 Required Level\nAdds 1-2 Weapon Damage\n\grey;Cube with Any Armor to Add Bonus\n	1	1	2		0	0	0									orb_armo		asaa		-1
-4o[	Cube Reagent\n\orange;Oil of Enhancement	\yellow;This Recipe does not work with Sacred Items\n\grey;Cube with Item + 2 Arcane Crystals to Create/Reroll Unique\n\nCube with Normal Item to Upgrade\n	1	1	2		0	0	0									oil_enhancement		thng		-1
+4o[	Cube Reagent\n\orange;Oil of Enhancement	70\nThe Oil of Enhancement can be used to\ncreate Tiered Uniques or magic items.\n\nOil + Tiered Item + 2 Arcane Crystals\n--> Tiered Unique Item\n\nOil + Item\n--> Magic Item\n	1	1	2		0	0	0									oil_enhancement		thng		-1
 5$a	\purple;Chipped Amber		1	1	2		1	0	0									invgsaa		geml,gem0		-1
 5$b	\purple;Flawed Amber		1	1	2		5	0	0									invgsab		geml,gem1		-1
 5$c	\purple;Amber		1	1	2		12	0	0									invgsac		geml,gem2		-1
@@ -1266,30 +1266,29 @@ wol	Wirt's Other Leg		1	3	1		0	0	0			13	18					invwol		wrtl	1	-1
 51+	Cube Reagent\n\orange;Mystic Orb	\blue;+4 Required Level\n+2% Gold Find\n\grey;Cube with Any Armor to Add Bonus\n	1	1	2		0	0	0									orb_armo		asaa		-1
 52+	Cube Reagent\n\orange;Mystic Orb	\blue;+4 Required Level\n6% Hit Recovery\n\grey;Cube with Any Armor to Add Bonus\n	1	1	2		0	0	0									orb_armo		asaa		-1
 53+	Cube Reagent\n\orange;Mystic Orb	\blue;+4 Required Level\n+4 Life Regenerated per Second\n\grey;Cube with Any Armor to Add Bonus\n	1	1	2		0	0	0									orb_armo		asaa		-1
-5o[	Cube Reagent\n\orange;Oil of Renewal	\yellow;This Recipe will Reroll Item as Superior\n\grey;Cube with Weapon/Armor to Restore\n	1	1	2		0	0	0									oil_renewal		thng		-1
+5o[	Cube Reagent\n\orange;Oil of Renewal	80\nThe Oil of Renewal can be used to roll\nany item to superior quality, to prepare\nthem for runeword bases.\n\nOil + Item\n--> Superior Item\n	1	1	2		0	0	0									oil_renewal		thng		-1
 60+	Cube Reagent\n\orange;Mystic Orb	\blue;+4 Required Level\n+30 Life on Attack\n\grey;Cube with Any Weapon to Add Bonus\n	1	1	2		0	0	0									orb_weap		asaa		-1
 61+	Cube Reagent\n\orange;Mystic Orb	\blue;+4 Required Level\n+40 Mana on Attack\n\grey;Cube with Any Weapon to Add Bonus\n	1	1	2		0	0	0									orb_weap		asaa		-1
 62+	Cube Reagent\n\orange;Mystic Orb	\blue;+4 Required Level\n+8 Energy Factor to Spell Damage\n\grey;Cube with Any Weapon to Add Bonus\n	1	1	2		0	0	0									orb_weap		asaa		-1
 63+	Cube Reagent\n\orange;Mystic Orb	\blue;+4 Required Level\nEnhanced Weapon Damage +20%\n\grey;Cube with Any Weapon to Add Bonus\n	1	1	2		0	0	0									orb_weap		asaa		-1
 64+	Cube Reagent\n\orange;Mystic Orb	\blue;+4 Required Level\n6% Cast Speed\n\grey;Cube with Any Weapon to Add Bonus\n	1	1	2		0	0	0									orb_weap		asaa		-1
 65+	Cube Reagent\n\orange;Mystic Orb	\blue;+4 Required Level\n6% Increased Attack Speed\n\grey;Cube with Any Weapon to Add Bonus\n	1	1	2		0	0	0									orb_weap		asaa		-1
-6o[	Cube Reagent\n\orange;Oil of Luck	\yellow;This Recipe can only be used once per Item\n\grey;Cube with Item for a Chance to Add Bonus\n	1	1	2		0	0	0									oil_luck		thng		-1
+6o[	Cube Reagent\n\orange;Oil of Luck	75\nThe Oil of Luck has a chance to add \nan extra bonus to any item.\n\nOil + Item\n--> Item with 1/5 Chance of Added Bonus\n(Limit: 1)\n\nWeapons: +20% Enhanced Damage \nWeapons: 100% Bonus to Attack Rating\nArmors: +20% Enhanced Defense\nArmors: Physical Resist +1%\nAmulets: +1 to All Skills\nRings: +5% to Spell Damage\nQuivers: 5% to All Attributes\nJewels: +2 to Any Stat\n	1	1	2		0	0	0									oil_luck		thng		-1
 7$a	\purple;Chipped Turquoise		1	1	2		1	0	0									invgsta		gemo,gem0		-1
 7$b	\purple;Flawed Turquoise		1	1	2		5	0	0									invgstb		gemo,gem1		-1
 7$c	\purple;Turquoise		1	1	2		12	0	0									invgstc		gemo,gem2		-1
 7$d	\purple;Flawless Turquoise		1	1	2		15	0	0									invgstd		gemo,gem3		-1
 7$e	\purple;Perfect Turquoise		1	1	2		18	0	0									invgste		gemo,gem4		-1
-7o[	Cube Reagent\n\orange;Oil of Craft	\yellow;Ohm, Ber, Zod, Kur, Nas, Vith, Thai, Nih and On\nAllowed Runes: Tir, Ith, Ort, Shael, Lum, Lem, Ist,\n\grey;Cube with Jewel + Rune + Arcane Reagent to create a Crafted Jewel\n\nCube with Shrine/Arcane Crystal to Create a Storage Vessel\n	1	1	2		0	0	0									oil_jewelcraft		thng		-1
+7o[	Cube Reagent\n\orange;Oil of Craft	70\nThe Oil of Craft lets you create arcane\nclusters and shrine vessels:\n\nOil + Arcane Crystal\n--> Arcane Cluster (1)\n\nOil + Portable Shrine\n--> Shrine Vessel (1)\n\nYou can also craft powerful jewels.\n\nOil + Jewel + Rune + Arcane Shards\n--> Crafted Jewel\n(Reduces Item Level by 15%)\n\nTir: Magic Find\nIth: Elemental Resists\nOrt: -Requirements\nShael: Defense\nLum: Experience Gained\nLem: All Attributes\nIst: Summoned Minion Life\nOhm: Maximum Damage\nBer: Life/Mana Stolen per Hit\nZod: Spell Damage\nKur: Summoned Minion Damage\nNas: Slows Melee Target\nVith: Summoned Minion Resistances\nThai: Minimum Damage\nNih: Life/Mana on Attack\nOn: Life/Mana after each Kill\n	1	1	2		0	0	0									oil_jewelcraft		thng		-1
 8o[	Cube Reagent\n\orange;Oil of Absolution		1	1	2		0	0	0									oil_absolution		thng		-1
 9$a	\purple;Chipped Bloodstone		1	1	2		1	0	0									invgsca		gemp,gem0		-1
 9$b	\purple;Flawed Bloodstone		1	1	2		5	0	0									invgscb		gemp,gem1		-1
 9$c	\purple;Bloodstone		1	1	2		12	0	0									invgscc		gemp,gem2		-1
 9$d	\purple;Flawless Bloodstone		1	1	2		15	0	0									invgscd		gemp,gem3		-1
 9$e	\purple;Perfect Bloodstone		1	1	2		18	0	0									invgsce		gemp,gem4		-1
-9o[	Cube Reagent\n\orange;Catalyst of Destruction	deprecated	1	1	2		0	0	0									catal3		thng		-1
 @##	\grey;Cube Reagent\n\orange;Deity's Bow	\yellow;very rare Emblems that drop from Monsters\nRecipes for this Item are Unknown, but said to use\n	2	3	2		0	0	0									newathuluabow		thng		-1
 A0+	\orange;Creepy Shrine (10)	\blue;+x to Strength\nx% to Strength\nx% Chance of Crushing Blow\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Creepy		prsh,flsh		-1
-A0+S	\orange;Creepy Vessel	\yellow;(Requires fully-charged Shrines)\nCube with Portable Shrines to store them inside!\n\n\grey;Cube Reagent	1	2	2		0	0	0									#Creepy		shco		-1
+A0+S	\orange;Creepy Vessel	Right Click to Collect	1	2	2		0	0	0									#Creepy		shco		-1
 A1+	\orange;Creepy Shrine (9)	\blue;+x to Strength\nx% to Strength\nx% Chance of Crushing Blow\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Creepy		prsh		-1
 A2+	\orange;Creepy Shrine (8)	\blue;+x to Strength\nx% to Strength\nx% Chance of Crushing Blow\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Creepy		prsh		-1
 A3+	\orange;Creepy Shrine (7)	\blue;+x to Strength\nx% to Strength\nx% Chance of Crushing Blow\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Creepy		prsh		-1
@@ -1300,7 +1299,7 @@ A7+	\orange;Creepy Shrine (3)	\blue;+x to Strength\nx% to Strength\nx% Chance of
 A8+	\orange;Creepy Shrine (2)	\blue;+x to Strength\nx% to Strength\nx% Chance of Crushing Blow\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Creepy		prsh		-1
 A9+	\orange;Creepy Shrine (1)	\blue;+x to Strength\nx% to Strength\nx% Chance of Crushing Blow\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Creepy		prsh		-1
 B0+	\orange;Abandoned Shrine (10)	\blue;+x to Dexterity\nx% to Dexterity\nx% Bonus to Attack Rating\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Abandoned		prsh,flsh		-1
-B0+S	\orange;Abandoned Vessel	\yellow;(Requires fully-charged Shrines)\nCube with Portable Shrines to store them inside!\n\n\grey;Cube Reagent	1	2	2		0	0	0									#Abandoned		shco		-1
+B0+S	\orange;Abandoned Vessel	Right Click to Collect	1	2	2		0	0	0									#Abandoned		shco		-1
 B1+	\orange;Abandoned Shrine (9)	\blue;+x to Dexterity\nx% to Dexterity\nx% Bonus to Attack Rating\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Abandoned		prsh		-1
 B2+	\orange;Abandoned Shrine (8)	\blue;+x to Dexterity\nx% to Dexterity\nx% Bonus to Attack Rating\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Abandoned		prsh		-1
 B3+	\orange;Abandoned Shrine (7)	\blue;+x to Dexterity\nx% to Dexterity\nx% Bonus to Attack Rating\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Abandoned		prsh		-1
@@ -1311,7 +1310,7 @@ B7+	\orange;Abandoned Shrine (3)	\blue;+x to Dexterity\nx% to Dexterity\nx% Bonu
 B8+	\orange;Abandoned Shrine (2)	\blue;+x to Dexterity\nx% to Dexterity\nx% Bonus to Attack Rating\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Abandoned		prsh		-1
 B9+	\orange;Abandoned Shrine (1)	\blue;+x to Dexterity\nx% to Dexterity\nx% Bonus to Attack Rating\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Abandoned		prsh		-1
 C0+	\orange;Quiet Shrine (10)	\blue;+x to Vitality\nx% to Vitality\n+x Life Regenerated per Second\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Quiet		prsh,flsh		-1
-C0+S	\orange;Quiet Vessel	\yellow;(Requires fully-charged Shrines)\nCube with Portable Shrines to store them inside!\n\n\grey;Cube Reagent	1	2	2		0	0	0									#Quiet		shco		-1
+C0+S	\orange;Quiet Vessel	Right Click to Collect	1	2	2		0	0	0									#Quiet		shco		-1
 C1+	\orange;Quiet Shrine (9)	\blue;+x to Vitality\nx% to Vitality\n+x Life Regenerated per Second\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Quiet		prsh		-1
 C2+	\orange;Quiet Shrine (8)	\blue;+x to Vitality\nx% to Vitality\n+x Life Regenerated per Second\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Quiet		prsh		-1
 C3+	\orange;Quiet Shrine (7)	\blue;+x to Vitality\nx% to Vitality\n+x Life Regenerated per Second\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Quiet		prsh		-1
@@ -1322,7 +1321,7 @@ C7+	\orange;Quiet Shrine (3)	\blue;+x to Vitality\nx% to Vitality\n+x Life Regen
 C8+	\orange;Quiet Shrine (2)	\blue;+x to Vitality\nx% to Vitality\n+x Life Regenerated per Second\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Quiet		prsh		-1
 C9+	\orange;Quiet Shrine (1)	\blue;+x to Vitality\nx% to Vitality\n+x Life Regenerated per Second\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Quiet		prsh		-1
 D0+	\orange;Eerie Shrine (10)	\blue;+x to Energy\nx% to Energy\n+x Energy Factor to Spell Damage\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Eerie		prsh,flsh		-1
-D0+S	\orange;Eerie Vessel	\yellow;(Requires fully-charged Shrines)\nCube with Portable Shrines to store them inside!\n\n\grey;Cube Reagent	1	2	2		0	0	0									#Eerie		shco		-1
+D0+S	\orange;Eerie Vessel	Right Click to Collect	1	2	2		0	0	0									#Eerie		shco		-1
 D1+	\orange;Eerie Shrine (9)	\blue;+x to Energy\nx% to Energy\n+x Energy Factor to Spell Damage\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Eerie		prsh		-1
 D2+	\orange;Eerie Shrine (8)	\blue;+x to Energy\nx% to Energy\n+x Energy Factor to Spell Damage\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Eerie		prsh		-1
 D3+	\orange;Eerie Shrine (7)	\blue;+x to Energy\nx% to Energy\n+x Energy Factor to Spell Damage\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Eerie		prsh		-1
@@ -1333,7 +1332,7 @@ D7+	\orange;Eerie Shrine (3)	\blue;+x to Energy\nx% to Energy\n+x Energy Factor 
 D8+	\orange;Eerie Shrine (2)	\blue;+x to Energy\nx% to Energy\n+x Energy Factor to Spell Damage\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Eerie		prsh		-1
 D9+	\orange;Eerie Shrine (1)	\blue;+x to Energy\nx% to Energy\n+x Energy Factor to Spell Damage\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Eerie		prsh		-1
 E0+	\orange;Weird Shrine (10)	\blue;Adds x-y damage\n+x% Enhanced Damage\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Weird		prsh,flsh		-1
-E0+S	\orange;Weird Vessel	\yellow;(Requires fully-charged Shrines)\nCube with Portable Shrines to store them inside!\n\n\grey;Cube Reagent	1	2	2		0	0	0									#Weird		shco		-1
+E0+S	\orange;Weird Vessel	Right Click to Collect	1	2	2		0	0	0									#Weird		shco		-1
 E1+	\orange;Weird Shrine (9)	\blue;Adds x-y damage\n+x% Enhanced Damage\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Weird		prsh		-1
 E2+	\orange;Weird Shrine (8)	\blue;Adds x-y damage\n+x% Enhanced Damage\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Weird		prsh		-1
 E3+	\orange;Weird Shrine (7)	\blue;Adds x-y damage\n+x% Enhanced Damage\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Weird		prsh		-1
@@ -1344,7 +1343,7 @@ E7+	\orange;Weird Shrine (3)	\blue;Adds x-y damage\n+x% Enhanced Damage\n\grey;C
 E8+	\orange;Weird Shrine (2)	\blue;Adds x-y damage\n+x% Enhanced Damage\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Weird		prsh		-1
 E9+	\orange;Weird Shrine (1)	\blue;Adds x-y damage\n+x% Enhanced Damage\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Weird		prsh		-1
 F0+	\orange;Intimidating Shrine (10)	\blue;x% Deadly Strike\nRequirements +x%\n+x% Enhanced Damage\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Gloomy		prsh,flsh		-1
-F0+S	\orange;Intimidating Vessel	\yellow;(Requires fully-charged Shrines)\nCube with Portable Shrines to store them inside!\n\n\grey;Cube Reagent	1	2	2		0	0	0									#Gloomy		shco		-1
+F0+S	\orange;Intimidating Vessel	Right Click to Collect	1	2	2		0	0	0									#Gloomy		shco		-1
 F1+	\orange;Intimidating Shrine (9)	\blue;x% Deadly Strike\nRequirements +x%\n+x% Enhanced Damage\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Gloomy		prsh		-1
 F2+	\orange;Intimidating Shrine (8)	\blue;x% Deadly Strike\nRequirements +x%\n+x% Enhanced Damage\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Gloomy		prsh		-1
 F3+	\orange;Intimidating Shrine (7)	\blue;x% Deadly Strike\nRequirements +x%\n+x% Enhanced Damage\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Gloomy		prsh		-1
@@ -1355,7 +1354,7 @@ F7+	\orange;Intimidating Shrine (3)	\blue;x% Deadly Strike\nRequirements +x%\n+x
 F8+	\orange;Intimidating Shrine (2)	\blue;x% Deadly Strike\nRequirements +x%\n+x% Enhanced Damage\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Gloomy		prsh		-1
 F9+	\orange;Intimidating Shrine (1)	\blue;x% Deadly Strike\nRequirements +x%\n+x% Enhanced Damage\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Gloomy		prsh		-1
 G0+	\orange;Tainted Shrine (10)	\blue;+x% to Summoned Minion Damage\n+x% to Summoned Minion Attack Rating\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Tainted		prsh,flsh		-1
-G0+S	\orange;Tainted Vessel	\yellow;(Requires fully-charged Shrines)\nCube with Portable Shrines to store them inside!\n\n\grey;Cube Reagent	1	2	2		0	0	0									#Tainted		shco		-1
+G0+S	\orange;Tainted Vessel	Right Click to Collect	1	2	2		0	0	0									#Tainted		shco		-1
 G1+	\orange;Tainted Shrine (9)	\blue;+x% to Summoned Minion Damage\n+x% to Summoned Minion Attack Rating\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Tainted		prsh		-1
 G2+	\orange;Tainted Shrine (8)	\blue;+x% to Summoned Minion Damage\n+x% to Summoned Minion Attack Rating\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Tainted		prsh		-1
 G3+	\orange;Tainted Shrine (7)	\blue;+x% to Summoned Minion Damage\n+x% to Summoned Minion Attack Rating\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Tainted		prsh		-1
@@ -1366,7 +1365,7 @@ G7+	\orange;Tainted Shrine (3)	\blue;+x% to Summoned Minion Damage\n+x% to Summo
 G8+	\orange;Tainted Shrine (2)	\blue;+x% to Summoned Minion Damage\n+x% to Summoned Minion Attack Rating\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Tainted		prsh		-1
 G9+	\orange;Tainted Shrine (1)	\blue;+x% to Summoned Minion Damage\n+x% to Summoned Minion Attack Rating\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Tainted		prsh		-1
 H0+	\orange;Fascinating Shrine (10)	\blue;+x% to Fire Spell Damage\n-x% to Enemy Fire Resistance\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Fascinating		prsh,flsh		-1
-H0+S	\orange;Fascinating Vessel	\yellow;(Requires fully-charged Shrines)\nCube with Portable Shrines to store them inside!\n\n\grey;Cube Reagent	1	2	2		0	0	0									#Fascinating		shco		-1
+H0+S	\orange;Fascinating Vessel	Right Click to Collect	1	2	2		0	0	0									#Fascinating		shco		-1
 H1+	\orange;Fascinating Shrine (9)	\blue;+x% to Fire Spell Damage\n-x% to Enemy Fire Resistance\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Fascinating		prsh		-1
 H2+	\orange;Fascinating Shrine (8)	\blue;+x% to Fire Spell Damage\n-x% to Enemy Fire Resistance\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Fascinating		prsh		-1
 H3+	\orange;Fascinating Shrine (7)	\blue;+x% to Fire Spell Damage\n-x% to Enemy Fire Resistance\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Fascinating		prsh		-1
@@ -1377,7 +1376,7 @@ H7+	\orange;Fascinating Shrine (3)	\blue;+x% to Fire Spell Damage\n-x% to Enemy 
 H8+	\orange;Fascinating Shrine (2)	\blue;+x% to Fire Spell Damage\n-x% to Enemy Fire Resistance\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Fascinating		prsh		-1
 H9+	\orange;Fascinating Shrine (1)	\blue;+x% to Fire Spell Damage\n-x% to Enemy Fire Resistance\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Fascinating		prsh		-1
 I0+	\orange;Ornate Shrine (10)	\blue;+x% to Lightning Spell Damage\n-x% to Enemy Lightning Resistance\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Ornate		prsh,flsh		-1
-I0+S	\orange;Ornate Vessel	\yellow;(Requires fully-charged Shrines)\nCube with Portable Shrines to store them inside!\n\n\grey;Cube Reagent	1	2	2		0	0	0									#Ornate		shco		-1
+I0+S	\orange;Ornate Vessel	Right Click to Collect	1	2	2		0	0	0									#Ornate		shco		-1
 I1+	\orange;Ornate Shrine (9)	\blue;+x% to Lightning Spell Damage\n-x% to Enemy Lightning Resistance\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Ornate		prsh		-1
 I2+	\orange;Ornate Shrine (8)	\blue;+x% to Lightning Spell Damage\n-x% to Enemy Lightning Resistance\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Ornate		prsh		-1
 I3+	\orange;Ornate Shrine (7)	\blue;+x% to Lightning Spell Damage\n-x% to Enemy Lightning Resistance\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Ornate		prsh		-1
@@ -1388,7 +1387,7 @@ I7+	\orange;Ornate Shrine (3)	\blue;+x% to Lightning Spell Damage\n-x% to Enemy 
 I8+	\orange;Ornate Shrine (2)	\blue;+x% to Lightning Spell Damage\n-x% to Enemy Lightning Resistance\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Ornate		prsh		-1
 I9+	\orange;Ornate Shrine (1)	\blue;+x% to Lightning Spell Damage\n-x% to Enemy Lightning Resistance\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Ornate		prsh		-1
 J0+	\orange;Sacred Shrine (10)	\blue;+x% to Cold Spell Damage\n-x% to Enemy Cold Resistance\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Sacred		prsh,flsh		-1
-J0+S	\orange;Sacred Vessel	\yellow;(Requires fully-charged Shrines)\nCube with Portable Shrines to store them inside!\n\n\grey;Cube Reagent	1	2	2		0	0	0									#Sacred		shco		-1
+J0+S	\orange;Sacred Vessel	Right Click to Collect	1	2	2		0	0	0									#Sacred		shco		-1
 J1+	\orange;Sacred Shrine (9)	\blue;+x% to Cold Spell Damage\n-x% to Enemy Cold Resistance\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Sacred		prsh		-1
 J2+	\orange;Sacred Shrine (8)	\blue;+x% to Cold Spell Damage\n-x% to Enemy Cold Resistance\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Sacred		prsh		-1
 J3+	\orange;Sacred Shrine (7)	\blue;+x% to Cold Spell Damage\n-x% to Enemy Cold Resistance\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Sacred		prsh		-1
@@ -1399,7 +1398,7 @@ J7+	\orange;Sacred Shrine (3)	\blue;+x% to Cold Spell Damage\n-x% to Enemy Cold 
 J8+	\orange;Sacred Shrine (2)	\blue;+x% to Cold Spell Damage\n-x% to Enemy Cold Resistance\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Sacred		prsh		-1
 J9+	\orange;Sacred Shrine (1)	\blue;+x% to Cold Spell Damage\n-x% to Enemy Cold Resistance\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Sacred		prsh		-1
 K0+	\orange;Shimmering Shrine (10)	\blue;+x% to Poison Spell Damage\n-x% to Enemy Poison Resistance\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Shimmering		prsh,flsh		-1
-K0+S	\orange;Shimmering Vessel	\yellow;(Requires fully-charged Shrines)\nCube with Portable Shrines to store them inside!\n\n\grey;Cube Reagent	1	2	2		0	0	0									#Shimmering		shco		-1
+K0+S	\orange;Shimmering Vessel	Right Click to Collect	1	2	2		0	0	0									#Shimmering		shco		-1
 K1+	\orange;Shimmering Shrine (9)	\blue;+x% to Poison Spell Damage\n-x% to Enemy Poison Resistance\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Shimmering		prsh		-1
 K2+	\orange;Shimmering Shrine (8)	\blue;+x% to Poison Spell Damage\n-x% to Enemy Poison Resistance\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Shimmering		prsh		-1
 K3+	\orange;Shimmering Shrine (7)	\blue;+x% to Poison Spell Damage\n-x% to Enemy Poison Resistance\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Shimmering		prsh		-1
@@ -1416,7 +1415,7 @@ Kx4	\purple;Lightning Essence	\yellow;This Recipe will create a Rune of the same
 Kx5	\purple;Icy Essence	\yellow;This Recipe will create a Rune of the same Element\n\grey;Cube with Primal Rune to Upgrade\n\nCube Reagent	1	1	2		0	0	0									IcyEssence		thng,esse		-1
 Kx6	\purple;Fiery Essence	\yellow;This Recipe will create a Rune of the same Element\n\grey;Cube with Primal Rune to Upgrade\n\nCube Reagent	1	1	2		0	0	0									FieryEssence		thng,esse		-1
 M0+	\orange;Spiritual Shrine (10)	\blue;+x% Cast Speed\nMaximum Mana +x%\nRegenerate Mana +x%\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Spiritual		prsh,flsh		-1
-M0+S	\orange;Spiritual Vessel	\yellow;(Requires fully-charged Shrines)\nCube with Portable Shrines to store them inside!\n\n\grey;Cube Reagent	1	2	2		0	0	0									#Spiritual		shco		-1
+M0+S	\orange;Spiritual Vessel	Right Click to Collect	1	2	2		0	0	0									#Spiritual		shco		-1
 M1+	\orange;Spiritual Shrine (9)	\blue;+x% Cast Speed\nMaximum Mana +x%\nRegenerate Mana +x%\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Spiritual		prsh		-1
 M2+	\orange;Spiritual Shrine (8)	\blue;+x% Cast Speed\nMaximum Mana +x%\nRegenerate Mana +x%\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Spiritual		prsh		-1
 M3+	\orange;Spiritual Shrine (7)	\blue;+x% Cast Speed\nMaximum Mana +x%\nRegenerate Mana +x%\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Spiritual		prsh		-1
@@ -1427,7 +1426,7 @@ M7+	\orange;Spiritual Shrine (3)	\blue;+x% Cast Speed\nMaximum Mana +x%\nRegener
 M8+	\orange;Spiritual Shrine (2)	\blue;+x% Cast Speed\nMaximum Mana +x%\nRegenerate Mana +x%\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Spiritual		prsh		-1
 M9+	\orange;Spiritual Shrine (1)	\blue;+x% Cast Speed\nMaximum Mana +x%\nRegenerate Mana +x%\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Spiritual		prsh		-1
 N0+	\orange;Magical Shrine (10)	\blue;+x% to Summoned Minion Life\n+x% to Summoned Minion Resistances\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Magical		prsh,flsh		-1
-N0+S	\orange;Magical Vessel	\yellow;(Requires fully-charged Shrines)\nCube with Portable Shrines to store them inside!\n\n\grey;Cube Reagent	1	2	2		0	0	0									#Magical		shco		-1
+N0+S	\orange;Magical Vessel	Right Click to Collect	1	2	2		0	0	0									#Magical		shco		-1
 N1+	\orange;Magical Shrine (9)	\blue;+x% to Summoned Minion Life\n+x% to Summoned Minion Resistances\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Magical		prsh		-1
 N2+	\orange;Magical Shrine (8)	\blue;+x% to Summoned Minion Life\n+x% to Summoned Minion Resistances\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Magical		prsh		-1
 N3+	\orange;Magical Shrine (7)	\blue;+x% to Summoned Minion Life\n+x% to Summoned Minion Resistances\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Magical		prsh		-1
@@ -1438,7 +1437,7 @@ N7+	\orange;Magical Shrine (3)	\blue;+x% to Summoned Minion Life\n+x% to Summone
 N8+	\orange;Magical Shrine (2)	\blue;+x% to Summoned Minion Life\n+x% to Summoned Minion Resistances\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Magical		prsh		-1
 N9+	\orange;Magical Shrine (1)	\blue;+x% to Summoned Minion Life\n+x% to Summoned Minion Resistances\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Magical		prsh		-1
 O0+	\orange;Enchanted Shrine (10)	\blue;Magic Resist +x%\n+x% to Physical/Magic Spell Damage\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Enchanted		prsh,flsh		-1
-O0+S	\orange;Enchanted Vessel	\yellow;(Requires fully-charged Shrines)\nCube with Portable Shrines to store them inside!\n\n\grey;Cube Reagent	1	2	2		0	0	0									#Enchanted		shco		-1
+O0+S	\orange;Enchanted Vessel	Right Click to Collect	1	2	2		0	0	0									#Enchanted		shco		-1
 O1+	\orange;Enchanted Shrine (9)	\blue;Magic Resist +x%\n+x% to Physical/Magic Spell Damage\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Enchanted		prsh		-1
 O2+	\orange;Enchanted Shrine (8)	\blue;Magic Resist +x%\n+x% to Physical/Magic Spell Damage\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Enchanted		prsh		-1
 O3+	\orange;Enchanted Shrine (7)	\blue;Magic Resist +x%\n+x% to Physical/Magic Spell Damage\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Enchanted		prsh		-1
@@ -1449,7 +1448,7 @@ O7+	\orange;Enchanted Shrine (3)	\blue;Magic Resist +x%\n+x% to Physical/Magic S
 O8+	\orange;Enchanted Shrine (2)	\blue;Magic Resist +x%\n+x% to Physical/Magic Spell Damage\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Enchanted		prsh		-1
 O9+	\orange;Enchanted Shrine (1)	\blue;Magic Resist +x%\n+x% to Physical/Magic Spell Damage\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Enchanted		prsh		-1
 Q0+	\orange;Hidden Shrine (10)	\blue;1% Reanimate as: Random Monster\n1% Reanimate as: Random Monster\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Hidden		prsh,flsh		-1
-Q0+S	\orange;Hidden Vessel	\yellow;(Requires fully-charged Shrines)\nCube with Portable Shrines to store them inside!\n\n\grey;Cube Reagent	1	2	2		0	0	0									#Hidden		shco		-1
+Q0+S	\orange;Hidden Vessel	Right Click to Collect	1	2	2		0	0	0									#Hidden		shco		-1
 Q1+	\orange;Hidden Shrine (9)	\blue;1% Reanimate as: Random Monster\n1% Reanimate as: Random Monster\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Hidden		prsh		-1
 Q2+	\orange;Hidden Shrine (8)	\blue;1% Reanimate as: Random Monster\n1% Reanimate as: Random Monster\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Hidden		prsh		-1
 Q3+	\orange;Hidden Shrine (7)	\blue;1% Reanimate as: Random Monster\n1% Reanimate as: Random Monster\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Hidden		prsh		-1
@@ -1460,7 +1459,7 @@ Q7+	\orange;Hidden Shrine (3)	\blue;1% Reanimate as: Random Monster\n1% Reanimat
 Q8+	\orange;Hidden Shrine (2)	\blue;1% Reanimate as: Random Monster\n1% Reanimate as: Random Monster\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Hidden		prsh		-1
 Q9+	\orange;Hidden Shrine (1)	\blue;1% Reanimate as: Random Monster\n1% Reanimate as: Random Monster\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Hidden		prsh		-1
 R0+	\orange;Trinity Shrine (10)	\dgrey;(One-Handed Weapons, Other Armor)\n\blue;Adds 10-20 fire damage\nAdds 14-16 cold damage\nAdds 1-30 lightning damage\n\n\dgrey;(Two-Handed Weapons, Body Armor)\n\blue;-5% to Enemy Fire Resistance\n-5% to Enemy Cold Resistance\n-5% to Enemy Lightning Resistance\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Stone		prsh,flsh		-1
-R0+S	\orange;Trinity Vessel	\yellow;(Requires fully-charged Shrines)\nCube with Portable Shrines to store them inside!\n\n\grey;Cube Reagent	1	2	2		0	0	0									#Stone		shco		-1
+R0+S	\orange;Trinity Vessel	Right Click to Collect	1	2	2		0	0	0									#Stone		shco		-1
 R1+	\orange;Trinity Shrine (9)	\dgrey;(One-Handed Weapons, Other Armor)\n\blue;Adds 10-20 fire damage\nAdds 14-16 cold damage\nAdds 1-30 lightning damage\n\n\dgrey;(Two-Handed Weapons, Body Armor)\n\blue;-5% to Enemy Fire Resistance\n-5% to Enemy Cold Resistance\n-5% to Enemy Lightning Resistance\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Stone		prsh		-1
 R2+	\orange;Trinity Shrine (8)	\dgrey;(One-Handed Weapons, Other Armor)\n\blue;Adds 10-20 fire damage\nAdds 14-16 cold damage\nAdds 1-30 lightning damage\n\n\dgrey;(Two-Handed Weapons, Body Armor)\n\blue;-5% to Enemy Fire Resistance\n-5% to Enemy Cold Resistance\n-5% to Enemy Lightning Resistance\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Stone		prsh		-1
 R3+	\orange;Trinity Shrine (7)	\dgrey;(One-Handed Weapons, Other Armor)\n\blue;Adds 10-20 fire damage\nAdds 14-16 cold damage\nAdds 1-30 lightning damage\n\n\dgrey;(Two-Handed Weapons, Body Armor)\n\blue;-5% to Enemy Fire Resistance\n-5% to Enemy Cold Resistance\n-5% to Enemy Lightning Resistance\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Stone		prsh		-1
@@ -1472,30 +1471,33 @@ R8+	\orange;Trinity Shrine (2)	\dgrey;(One-Handed Weapons, Other Armor)\n\blue;A
 R9+	\orange;Trinity Shrine (1)	\dgrey;(One-Handed Weapons, Other Armor)\n\blue;Adds 10-20 fire damage\nAdds 14-16 cold damage\nAdds 1-30 lightning damage\n\n\dgrey;(Two-Handed Weapons, Body Armor)\n\blue;-5% to Enemy Fire Resistance\n-5% to Enemy Cold Resistance\n-5% to Enemy Lightning Resistance\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Stone		prsh		-1
 Ysh1	Arcane Seal		1	1	2		0	0	0									lab_rn1		###1		-1
 Ysh2	Necklace		1	1	2		0	0	0									lab_amu		###2		-1
-[01	\orange;Lord Aldric Jitan Trophy	\blue;Enhanced Weapon Damage +25%\n\grey;Cube with the Moon of the Spider to Add Bonus:\n	1	1	2		0	0	0									kLAJ		thng,trph		-1
-[02	\orange;Legacy of Blood Trophy	\blue;Total Character Defense +15%\n\grey;Cube with the Legacy of Blood to Add Bonus:\n	1	1	2		0	0	0									kLegacy		thng,trph		-1
-[03	\orange;Judgement Day Trophy	\blue;+5% to All Attributes\n\grey;Cube with the Crystalline Flame Medallion to Add Bonus:\n	1	1	2		0	0	0									kJday		thng,trph		-1
-[04	\orange;Akarat Trophy	\blue;Increase Maximum Life and Mana +5%\n\grey;Cube with the Visions of Akarat to Add Bonus:\n	1	1	2		0	0	0									kAkarat		thng,trph		-1
-[05	\orange;Kingdom of Shadow Trophy	\blue;+1 to All Skills\n\grey;Cube with the Eternal Bone Pile to Add Bonus:\n	1	1	2		0	0	0									kUreh		thng,trph		-1
-[06	\orange;Duncraig Trophy	\blue;+10% Combat Speeds\n\grey;Cube with the Demonsbane to Add Bonus:\n	1	1	2		0	0	0									kDuncraig		thng,trph		-1
-[07	\orange;Rathma Square Trophy	\blue;10% Chance of Uninterruptable Attack\n\grey;Cube with the Spirit Trance Herb to Add Bonus:\n	1	1	2		0	0	0									kRathma		thng,trph		-1
-[08	\orange;Cathedral of Light Trophy	\blue;+10% to Summoned Minion Damage\n+10% to Summoned Minion Life\n\grey;Cube with the Idol of Vanity to Add Bonus:\n	1	1	2		0	0	0									kCoVan		thng,trph		-1
-[09	\orange;Tran Athulua Trophy	\blue;Physical Resist +5%\n\grey;Cube with the Sunstone of the Gods to Add Bonus:\n	1	1	2		0	0	0									kTran		thng,trph		-1
-[10	\orange;Quov Tsin Trophy	\blue;+8% to Spell Damage\n\grey;Cube with the Silver Seal of Ureh to Add Bonus:\n	1	1	2		0	0	0									kTsin		thng,trph		-1
-[11	\orange;Astrogha Trophy	\blue;-5% to Enemy Elemental Resistances\n\grey;Cube with Astrogha's Venom Stinger to Add Bonus:\n	1	1	2		0	0	0									kAstrogha		thng,trph		-1
-[12	\orange;The Lord of Sin Trophy	\blue;+150 to Mana\n+150 to Life\n\grey;Cube with Azmodan's Heart to Add Bonus:\n	1	1	2		0	0	0									kAzmodan		thng,trph		-1
-[13	\orange;Viz-jun Trophy	\blue;+(5-20) to Energy\n+(5-20) to Vitality\n+(5-20) to Dexterity\n+(5-20) to Strength\n\grey;Cube with the Cold Fusion Schematics to Add Bonus:\n	1	1	2		0	0	0									kVizjun		thng,trph		-1
-[14	\orange;Archbishop Lazarus Trophy	\blue;+1 to All Skills\n\grey;Cube with the Glorious Book of Median to Add Bonus:\n	1	1	2		0	0	0									kLazbro		thng,trph		-1
-[15	\orange;Triune Trophy	\blue;+30% Magic Find\n\grey;Cube with the Corrupted Wormhole to Add Bonus:\n	1	1	2		0	0	0									kTR		thng,trph		-1
-[16	\orange;Uldyssian Trophy	\blue;Adds 250-300 Lightning Damage\nAdds 250-300 Cold Damage\nAdds 250-300 Fire Damage\n\grey;Cube with the Neutrality Pact to Add Bonus:\n	1	1	2		0	0	0									kUldyssian		thng,trph		-1
-[17	\orange;Black Road Trophy	\blue;2% Chance to Reanimate as a Random Monster\n\grey;Cube with the Soul of Kabraxis to Add Bonus:\n	1	1	2		0	0	0									kKabraxis		thng,trph		-1
+[01	\gold;Lord of Lies Trophy	\blue;Enhanced Weapon Damage +30%\n\grey;Cube with the Book of Lies to Add Bonus:\n	1	1	2		0	0	0									trophy12		thng,trph		-1
+[02	\gold;Legacy of Blood Trophy	\blue;Total Character Defense 20%\n\grey;Cube with the Legacy of Blood to Add Bonus:\n	1	1	2		0	0	0									trophy01		thng,trph		-1
+[03	\gold;Judgement Day Trophy	\blue;5% to All Attributes\n\grey;Cube with the Crystalline Flame Medallion to Add Bonus:\n	1	1	2		0	0	0									trophy05		thng,trph		-1
+[04	\gold;Yshari Sanctum Trophy	\blue;Increase Maximum Life and Mana 5%\n\grey;Cube with the Ancient Repositories to Add Bonus:\n	1	1	2		0	0	0									trophy14		thng,trph		-1
+[05	\gold;Kingdom of Shadow Trophy	\blue;10% Movement Speed\n\grey;Cube with the Eternal Bone Pile to Add Bonus:\n	1	1	2		0	0	0									trophy07		thng,trph		-1
+[06	\gold;Duncraig Trophy	\blue;10% Combat Speeds\n\grey;Cube with the Demonsbane to Add Bonus:\n	1	1	2		0	0	0									trophy11		thng,trph		-1
+[07	\gold;Xazax Trophy	\blue;15% Chance of Uninterruptable Attack\n\grey;Cube with Xazax's Illusion to Add Bonus:\n	1	1	2		0	0	0									trophy15		thng,trph		-1
+[08	\gold;The Veiled Prophet Trophy	\blue;+20% to Summoned Minion Life\n+10% to Summoned Minion Resistances\n\grey;Cube with the Idol of Vanity to Add Bonus:\n	1	1	2		0	0	0									trophy02		thng,trph		-1
+[09	\gold;Tran Athulua Trophy	\blue;Physical Resist 5%\n\grey;Cube with the Sunstone of the Gods to Add Bonus:\n	1	1	2		0	0	0									trophy04		thng,trph		-1
+[10	\gold;Quov Tsin Trophy	\blue;+10% to Spell Damage\n\grey;Cube with the Silver Seal of Ureh to Add Bonus:\n	1	1	2		0	0	0									trophy06		thng,trph		-1
+[11	\gold;Astrogha Trophy	\blue;-5% to Enemy Elemental Resistances\n\grey;Cube with Astrogha's Venom Stinger to Add Bonus:\n	1	1	2		0	0	0									trophy16		thng,trph		-1
+[12	\gold;Heart of Sin Trophy	\blue;+150 to Mana\n+150 to Life\n\grey;Cube with Azmodan's Heart to Add Bonus:\n	1	1	2		0	0	0									trophy03		thng,trph		-1
+[13	\gold;Viz-jun Trophy	\blue;+15 to All Attributes\n\grey;Cube with the Cold Fusion Schematics to Add Bonus:\n	1	1	2		0	0	0									trophy17		thng,trph		-1
+[14	\gold;Archbishop Lazarus Trophy	\blue;Maximum Elemental Resists +1%\n\grey;Cube with the Glorious Book of Median to Add Bonus:\n	1	1	2		0	0	0									trophy20		thng,trph		-1
+[15	\gold;The Triune Trophy	\blue;30% Magic Find\n\grey;Cube with the Corrupted Wormhole to Add Bonus:\n	1	1	2		0	0	0									trophy10		thng,trph		-1
+[16	\gold;Nephalem's Sacrifice Trophy	\blue;Adds 200-300 lightning damage\nAdds 200-300 cold damage\nAdds 200-300 fire damage\n\grey;Cube with the Neutrality Pact to Add Bonus:\n	1	1	2		0	0	0									trophy19		thng,trph		-1
+[17	\gold;Banisher of Light Trophy	\blue;2% Reanimate as: Random Monster\n\grey;Cube with the Soul of Kabraxis to Add Bonus:\n	1	1	2		0	0	0									trophy09		thng,trph		-1
+[18	\gold;Ghosts of Old Bremmtown Trophy	\blue;+10% to Experience Gained\n\grey;Cube with Upgraded Dragon Claw to Add Bonus:\n\orange;Kill Dark Star Dragon in Under 30 Seconds to Apply Bonus\n	1	1	2		0	0	0									trophy13		thng,trph		-1
+[19	\gold;The Void Trophy	\blue;+1 to All Skills\n\grey;Cube with Rathma's Supremacy to Add Bonus:\n	1	1	2		0	0	0									trophy18		thng,trph		-1
+[20	\gold;Eve of Destruction Trophy	\blue;Elemental Resists +10%\n\grey;Cube with Spirit of Creation to Add Bonus:\n	1	1	2		0	0	0									trophy08		thng,trph		-1
 \\1	\purple;Great Rainbow Stone	Cube All Gems with The Black Road to Add Bonus	1	1	2		0	0	0									og5		thng		-1
 \\2	\purple;Great Skull	Cube All Gems with The Black Road to Add Bonus	1	1	2		0	0	0									invskz		thng		-1
 \\3	\purple;Great Topaz	Cube All Gems with The Black Road to Add Bonus	1	1	2		0	0	0									invgsye		thng		-1
 \\4	\purple;Great Sapphire	Cube All Gems with The Black Road to Add Bonus	1	1	2		0	0	0									invgsbe		thng		-1
 \\5	\purple;Great Ruby	Cube All Gems with The Black Road to Add Bonus	1	1	2		0	0	0									invgsre		thng		-1
 \\6	\gold;Golden Cycle		1	1	2		0	0	0									invgcyc		grtz		-1
-\\7	\grey;Quest Item\n\gold;Tome of Possession	\n\red;... unless it is really necessary?\nkeeping this book in the inventory might be a bad idea\n\n\orange;the book is old, if the spell works, it might not be very reliable\nthe person carrying it and allies next to him become unable to avoid any damage\nafter recovering this book, it seems Lucion's servants have cursed it...\n\n\grey;... maybe Uldyssian wrote this book to defeat Lucion?\nafter some missing pages, you find instructions to mind control demons\nthis strange book appears to have old writings from the edyrem...\n	2	2	2		0	0	0									invbbb		grtz		-1
+\\7	\grey;Quest Item\n\gold;Tome of Possession	\n\red;... unless it is really necessary?\nkeeping this book in the inventory might be a bad idea\n\n\orange;the book is old, if the spell works, it might not be very reliable\n\nthe person carrying it and allies next to him become unable to avoid any damage\nafter recovering this book, it seems Lucion's servants have cursed it...\n\n\grey;... maybe Uldyssian wrote this book to defeat Lucion?\nafter some missing pages, you find instructions to mind control demons\nthis strange book appears to have old writings from the edyrem...\n	2	2	2		0	0	0									invbbb		grtz		-1
 \\8	Corrupted Wormhole		1	1	2		0	0	0									invlucion		grtz		-1
 a55	Optical Detector		1	1	2		0	0	0									inveye		grtz		-1
 a56	Azmodan's Heart		1	1	2		0	0	0									invhrt		grtz		-1
@@ -1503,17 +1505,17 @@ a57	Visions of Akarat		1	1	2		0	0	0									invsbk2		grtz		-1
 a58	Scroll of Kings		1	1	2		0	0	0									invscb2		grtz		-1
 a59	Laser Focus Crystal		1	1	2		0	0	0									invdss		grtz		-1
 a60	The Butcher's Tooth		1	1	2		0	0	0									invfang		grtz		-1
-a61	Sacred Worldstone Key		1	1	2		0	0	0									newsacwk		grtz		-1
-a66	Idol of Vanity		1	1	2		0	0	0									newidolofvanity		grtz		-1
+a61	Sacred Worldstone Key		1	2	2		0	0	0									invworldkey		grtz		-1
+a66	Idol of Vanity		1	2	2		0	0	0									invgbi		grtz		-1
 a67	Congratulations. You got it!\n\gold;Spirit of Damnation	\blue;Maximum Skill Level Increased by 1\n\grey;Cube with Idol of Vanity to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invsple		thng		-1
-a68	Horazon's Focus		1	1	2		0	0	0									newhorazonsfocus		grtz		-1
+a68	Horazon's Focus		1	1	2		0	0	0									invhorazon		grtz		-1
 ab!	Astrogha's Venom Stinger		1	1	2		0	0	0									invtail		grtz		-1
-adi	By Richard Knaak\nLegacy of Blood		1	1	2		0	0	0									invhscr2		grtz		-1
+adi	By Richard Knaak\nLegacy of Blood		1	1	2		0	0	0									invlegacy		grtz		-1
 amu	Amulet		1	1	2		0	0	0									invamu		amul		-1
 aq!	Silver Seal of Ureh		1	1	2		0	0	0									invrin		grtz		-1
 aqv	Arrow Quiver		1	3	2	1	0	0	0									invqvr		bowq	2	-1
 ass	Right Click to learn skill of your choice\nBook of Skill		2	2	2		0	0	0									invsbk	15	ques		-1
-asx	\orange;Arcane Cluster	\yellow;Cube with Arcane Crystals to store them inside\n\n\grey;Cube Reagent	1	1	2		0	0	0									invsr6		thng		-1
+asx	\orange;Arcane Cluster	Right Click to Collect	1	1	2		0	0	0									invsr6		thng		-1
 az!	Fool's Gold		1	1	2		0	0	0									invgldm		grtz		-1
 b@b	\red;Goodberry	A magical fruit of the Glor-An-Fhaidha...	1	1	2		666	0	0									cherries		hpot		-1
 bbb	Lam Esen's Tome		2	2	2		0	0	0									invbbb	16	ques		-1
@@ -1531,12 +1533,13 @@ brc4	Black Road Challenge\n\orange;Scroll of Knowledge	Cube your Class Charm wit
 brc5	Black Road Challenge\n\orange;Scroll of Blood	You only have 30 seconds after killing the first Boss!\nCube your Class Charm to Complete Trial\n\yellow;Reward\n\n\grey;Kill Skovos and Lycander in less than 30 Seconds\n\yellow;Trial of Blood\n\n\grey;Tran Athulua (Island of Skartara - Halls of the Dead)\n\yellow;Location\n\n\grey;Nightmare\n\yellow;Difficulty\n	1	1	2		0	0	0									ChallengeScroll		thng		-1
 brc6	Black Road Challenge\n\orange;Scroll of Completion	\grey;Cube your Class Charm with 2 Arcane Crystals to Add Bonus\nIf you have completed all five trials:\n\yellow;Black Road Completion\n\n\grey;Anywhere\n\yellow;Location\n\n\grey;Any\n\yellow;Difficulty\n	1	1	2		0	0	0									ChallengeScroll		thng		-1
 brz	Brain		1	1	2		0	0	0									invbrnz		body		-1
-bt01	Consumable\n\orange;Beta Trinket of Grind	\blue;- Grants Experience -	1	1	2		120	0	0									newsignet1		poti		-1
-bt02	Consumable\n\orange;Beta Trinket of Nihlathak	\blue;- Grants 10 Stat Points -	1	1	2		100	0	0									newtokenofter		poti		-1
-bt03	Cube Reagent\n\orange;Beta Trinket of Mephisto	\blue;- Grants 3 Arcane Crystals -	1	1	2		15	0	0									newsignet6		poti		-1
-bt04	Cube Reagent\n\orange;Beta Trinket of Kurast	\blue;- Duplicates Shrines Twice -	1	1	2		80	0	0									newsignet3		poti		-1
-bt05	Cube Reagent\n\orange;Beta Trinket of Chuck	\blue;- Converts Item to Unique (116) -	1	1	2		120	0	0									newsignet5		poti		-1
-bt06	Cube Reagent\n\orange;Beta Trinket of Patience	\blue;- Creates Beta Charm -	1	1	2		5	0	0									newsignet2		poti		-1
+bt01	\orange;Juneend's AFK Service	\blue;Eat For Experience	1	1	2		120	0	0									newsignet1		poti		-1
+bt02	\orange;Nihlathak Simulator	\blue;Eat For 10 Stat Points	1	1	2		100	0	0									newtokenofter		poti		-1
+bt03	\orange;Thunderban's Market	\blue;Cube = 3 Arcane Crystals	1	1	2		15	0	0									newreroller		poti		-1
+bt04	\orange;Chuck's Secret	\blue;Cube = Duplicates Shrines Twice	1	1	2		80	0	0									newsignet3		poti		-1
+bt05	\orange;#unique command but it costs 1 mill	\blue;Cube = Converts Item to SU	1	1	2		120	0	0									newsignet5		poti		-1
+bt06	\orange;Thraxis the Martyr	\blue;Cube = Creates Beta Charm	1	1	2		5	0	0									newsignet2		poti		-1
+bt07	\orange;Instant Regret	\blue;Cube = Creates 2 Respec Potions	1	1	2		50	0	0									newsignet6		poti		-1
 bt99	''The Worst Beta I've Been In''		1	1	2		5	0	0									invsple		grtz		-1
 bxa	Soul of Kabraxis		1	1	2		100	0	0									braxwhorl		grtz		-1
 c@c	(Sorceress Only)\n\red;Moon Symbol	A blessed symbol of the goddess...	1	1	2		0	0	0									moon1		poti		-1
@@ -1559,53 +1562,53 @@ cr12	Quest Item\n\gold;Charged Riftstone (\red;12\gold;)	\dgrey;- Transmute for 
 cr13	Quest Item\n\gold;Charged Riftstone (\red;13\gold;)	\dgrey;- Transmute for Full Monster Stats -\n\n\grey;Difficulty: \dgrey;Extreme\n\grey;Area Level: 133\n\gold;Dimensional Labyrinth 13\n\n\grey;Right click to open a portal\n	1	1	2		127	0	0									ChargedRunestoneR		thng		-1
 cr14	Quest Item\n\gold;Charged Riftstone (\red;14\gold;)	\dgrey;- Transmute for Full Monster Stats -\n\n\grey;Difficulty: \dgrey;Extreme\n\grey;Area Level: 134\n\gold;Dimensional Labyrinth 14\n\n\grey;Right click to open a portal\n	1	1	2		128	0	0									ChargedRunestoneR		thng		-1
 cr15	Quest Item\n\gold;Charged Riftstone (\red;15\gold;)	\dgrey;- Transmute for Full Monster Stats -\n\n\grey;Difficulty: \dgrey;Extreme\n\grey;Area Level: 135\n\gold;Dimensional Labyrinth 15\n\n\grey;Right click to open a portal\n	1	1	2		129	0	0									ChargedRunestoneR		thng		-1
-cy01	\orange;Cycle	\blue;+1 Required Level\n+(2 to 8) to Strength\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invch1		cyc1,cycl		-1
-cy02	\orange;Cycle	\blue;+1 Required Level\n+(2 to 8) to Dexterity\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invch1		cyc1,cycl		-1
-cy03	\orange;Cycle	\blue;+1 Required Level\n+(2 to 8) to Vitality\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invch1		cyc1,cycl		-1
-cy04	\orange;Cycle	\blue;+1 Required Level\n+(2 to 8) to Energy\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invch1		cyc1,cycl		-1
-cy05	\orange;Cycle	\blue;+3 Required Level\n+(5 to 15) to Strength\n+(0 to 2)% to Strength\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	2	2		0	0	0									invch2		cyc2,cycl		-1
-cy06	\orange;Cycle	\blue;+3 Required Level\n+(5 to 15) to Dexterity\n+(0 to 2)% to Dexterity\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	2	2		0	0	0									invch2		cyc2,cycl		-1
-cy07	\orange;Cycle	\blue;+3 Required Level\n+(5 to 15) to Vitality\n+(0 to 2)% to Vitality\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	2	2		0	0	0									invch2		cyc2,cycl		-1
-cy08	\orange;Cycle	\blue;+3 Required Level\n+(5 to 15) to Energy\n+(0 to 2)% to Energy\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	2	2		0	0	0									invch2		cyc2,cycl		-1
-cy09	\orange;Cycle	\blue;+5 Required Level\n+(10 to 20) to Strength\n+(2 to 3)% to Strength\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	3	2		0	0	0									invsst		cyc3,cycl		-1
-cy10	\orange;Cycle	\blue;+5 Required Level\n+(10 to 20) to Dexterity\n+(2 to 3)% to Dexterity\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	3	2		0	0	0									invsst		cyc3,cycl		-1
-cy11	\orange;Cycle	\blue;+5 Required Level\n+(10 to 20) to Vitality\n+(2 to 3)% to Vitality\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	3	2		0	0	0									invsst		cyc3,cycl		-1
-cy12	\orange;Cycle	\blue;+5 Required Level\n+(10 to 20) to Energy\n+(2 to 3)% to Energy\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	3	2		0	0	0									invsst		cyc3,cycl		-1
-cy13	\orange;Cycle	\blue;+2 Required Level\n+(1 to 4)% Gold Find\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invch1		cyc1,cycl		-1
-cy14	\orange;Cycle	\blue;+3 Required Level\n+(3 to 7)% Gold Find\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	2	2		0	0	0									invch2		cyc2,cycl		-1
-cy15	\orange;Cycle	\blue;+4 Required Level\n+(6 to 10)% Gold Find\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	3	2		0	0	0									invsst		cyc3,cycl		-1
-cy16	\orange;Cycle	\blue;+2 Required Level\n+(1 to 4)% Magic Find\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invch1		cyc1,cycl		-1
-cy17	\orange;Cycle	\blue;+3 Required Level\n+(3 to 7)% Magic Find\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	2	2		0	0	0									invch2		cyc2,cycl		-1
-cy18	\orange;Cycle	\blue;+4 Required Level\n+(6 to 10)% Magic Find\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	3	2		0	0	0									invsst		cyc3,cycl		-1
-cy19	\orange;Cycle	\blue;+2 Required Level\n+(1 to 3)% Combat Speeds\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invch1		cyc1,cycl		-1
-cy20	\orange;Cycle	\blue;+3 Required Level\n+(2 to 6)% Combat Speeds\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	2	2		0	0	0									invch2		cyc2,cycl		-1
-cy21	\orange;Cycle	\blue;+4 Required Level\n+(4 to 8)% Combat Speeds\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	3	2		0	0	0									invsst		cyc3,cycl		-1
-cy22	\orange;Cycle	\blue;+18 Required Level\n-5 to All Attributes\n+1 to Amazon Skill Levels\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	3	2		0	0	0									invsst		cyc3,cycl		-1
-cy23	\orange;Cycle	\blue;+18 Required Level\n-5 to All Attributes\n+1 to Assassin Skill Levels\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	3	2		0	0	0									invsst		cyc3,cycl		-1
-cy24	\orange;Cycle	\blue;+18 Required Level\n-5 to All Attributes\n+1 to Barbarian Skill Levels\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	3	2		0	0	0									invsst		cyc3,cycl		-1
-cy25	\orange;Cycle	\blue;+18 Required Level\n-5 to All Attributes\n+1 to Druid Skill Levels\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	3	2		0	0	0									invsst		cyc3,cycl		-1
-cy26	\orange;Cycle	\blue;+18 Required Level\n-5 to All Attributes\n+1 to Necromancer Skill Levels\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	3	2		0	0	0									invsst		cyc3,cycl		-1
-cy27	\orange;Cycle	\blue;+18 Required Level\n-5 to All Attributes\n+1 to Sorceress Skill Levels\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	3	2		0	0	0									invsst		cyc3,cycl		-1
-cy28	\orange;Cycle	\blue;+18 Required Level\n-5 to All Attributes\n+1 to Paladin Skill Levels\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	3	2		0	0	0									invsst		cyc3,cycl		-1
-cy29	\orange;Cycle	\blue;+1 Required Level\n+(0 to 20) to Mana\n+(0 to 20) to Life\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invch1		cyc1,cycl		-1
-cy30	\orange;Cycle	\blue;+3 Required Level\nMaximum Mana +(0 to 2)%\n+(5 to 30) to Mana\nMaximum Life +(0 to 2)%\n+(5 to 30) to Life\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	2	2		0	0	0									invch2		cyc2,cycl		-1
-cy31	\orange;Cycle	\blue;+5 Required Level\nMaximum Mana +(1 to 3)%\n+(10 to 50) to Mana\nMaximum Life +(1 to 3)%\n+(10 to 50) to Life\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	3	2		0	0	0									invsst		cyc3,cycl		-1
-dog	Apple	Regenerates 1% life per second for 10 minutes	1	1	2		0	0	0									newapple		poti		-1
+cy01	\orange;Small Cycle	\blue;+1 Required Level\n+(2 to 8) to Strength\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invch1		cyc1,cycl		-1
+cy02	\orange;Small Cycle	\blue;+1 Required Level\n+(2 to 8) to Dexterity\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invch1		cyc1,cycl		-1
+cy03	\orange;Small Cycle	\blue;+1 Required Level\n+(2 to 8) to Vitality\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invch1		cyc1,cycl		-1
+cy04	\orange;Small Cycle	\blue;+1 Required Level\n+(2 to 8) to Energy\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invch1		cyc1,cycl		-1
+cy05	\orange;Medium Cycle	\blue;+3 Required Level\n+(5 to 15) to Strength\n+(0 to 2)% to Strength\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	2	2		0	0	0									invch2		cyc2,cycl		-1
+cy06	\orange;Medium Cycle	\blue;+3 Required Level\n+(5 to 15) to Dexterity\n+(0 to 2)% to Dexterity\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	2	2		0	0	0									invch2		cyc2,cycl		-1
+cy07	\orange;Medium Cycle	\blue;+3 Required Level\n+(5 to 15) to Vitality\n+(0 to 2)% to Vitality\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	2	2		0	0	0									invch2		cyc2,cycl		-1
+cy08	\orange;Medium Cycle	\blue;+3 Required Level\n+(5 to 15) to Energy\n+(0 to 2)% to Energy\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	2	2		0	0	0									invch2		cyc2,cycl		-1
+cy09	\orange;Large Cycle	\blue;+5 Required Level\n+(10 to 20) to Strength\n+(2 to 3)% to Strength\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	3	2		0	0	0									invsst		cyc3,cycl		-1
+cy10	\orange;Large Cycle	\blue;+5 Required Level\n+(10 to 20) to Dexterity\n+(2 to 3)% to Dexterity\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	3	2		0	0	0									invsst		cyc3,cycl		-1
+cy11	\orange;Large Cycle	\blue;+5 Required Level\n+(10 to 20) to Vitality\n+(2 to 3)% to Vitality\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	3	2		0	0	0									invsst		cyc3,cycl		-1
+cy12	\orange;Large Cycle	\blue;+5 Required Level\n+(10 to 20) to Energy\n+(2 to 3)% to Energy\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	3	2		0	0	0									invsst		cyc3,cycl		-1
+cy13	\orange;Small Cycle	\blue;+2 Required Level\n+(1 to 4)% Gold Find\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invch1		cyc1,cycl		-1
+cy14	\orange;Medium Cycle	\blue;+3 Required Level\n+(3 to 7)% Gold Find\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	2	2		0	0	0									invch2		cyc2,cycl		-1
+cy15	\orange;Large Cycle	\blue;+4 Required Level\n+(6 to 10)% Gold Find\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	3	2		0	0	0									invsst		cyc3,cycl		-1
+cy16	\orange;Small Cycle	\blue;+2 Required Level\n+(1 to 4)% Magic Find\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invch1		cyc1,cycl		-1
+cy17	\orange;Medium Cycle	\blue;+3 Required Level\n+(3 to 7)% Magic Find\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	2	2		0	0	0									invch2		cyc2,cycl		-1
+cy18	\orange;Large Cycle	\blue;+4 Required Level\n+(6 to 10)% Magic Find\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	3	2		0	0	0									invsst		cyc3,cycl		-1
+cy19	\orange;Small Cycle	\blue;+2 Required Level\n+(1 to 3)% Combat Speeds\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invch1		cyc1,cycl		-1
+cy20	\orange;Medium Cycle	\blue;+3 Required Level\n+(2 to 6)% Combat Speeds\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	2	2		0	0	0									invch2		cyc2,cycl		-1
+cy21	\orange;Large Cycle	\blue;+4 Required Level\n+(4 to 8)% Combat Speeds\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	3	2		0	0	0									invsst		cyc3,cycl		-1
+cy22	\orange;Large Cycle	\blue;+18 Required Level\n-5 to All Attributes\n+1 to Amazon Skill Levels\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	3	2		0	0	0									invsst		cyc3,cycl		-1
+cy23	\orange;Large Cycle	\blue;+18 Required Level\n-5 to All Attributes\n+1 to Assassin Skill Levels\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	3	2		0	0	0									invsst		cyc3,cycl		-1
+cy24	\orange;Large Cycle	\blue;+18 Required Level\n-5 to All Attributes\n+1 to Barbarian Skill Levels\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	3	2		0	0	0									invsst		cyc3,cycl		-1
+cy25	\orange;Large Cycle	\blue;+18 Required Level\n-5 to All Attributes\n+1 to Druid Skill Levels\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	3	2		0	0	0									invsst		cyc3,cycl		-1
+cy26	\orange;Large Cycle	\blue;+18 Required Level\n-5 to All Attributes\n+1 to Necromancer Skill Levels\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	3	2		0	0	0									invsst		cyc3,cycl		-1
+cy27	\orange;Large Cycle	\blue;+18 Required Level\n-5 to All Attributes\n+1 to Sorceress Skill Levels\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	3	2		0	0	0									invsst		cyc3,cycl		-1
+cy28	\orange;Large Cycle	\blue;+18 Required Level\n-5 to All Attributes\n+1 to Paladin Skill Levels\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	3	2		0	0	0									invsst		cyc3,cycl		-1
+cy29	\orange;Small Cycle	\blue;+1 Required Level\n+(0 to 20) to Mana\n+(0 to 20) to Life\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invch1		cyc1,cycl		-1
+cy30	\orange;Medium Cycle	\blue;+3 Required Level\nMaximum Mana +(0 to 2)%\n+(5 to 30) to Mana\nMaximum Life +(0 to 2)%\n+(5 to 30) to Life\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	2	2		0	0	0									invch2		cyc2,cycl		-1
+cy31	\orange;Large Cycle	\blue;+5 Required Level\nMaximum Mana +(1 to 3)%\n+(10 to 50) to Mana\nMaximum Life +(1 to 3)%\n+(10 to 50) to Life\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	3	2		0	0	0									invsst		cyc3,cycl		-1
+dog	Apple	Regenerates 100 life per second for 10 minutes	1	1	2		0	0	0									newapple		poti		-1
 dr01	Quest Item\n\gold;Depleted Riftstone (\green;1\gold;)	energy source and allow you to investigate further...\nPerhaps transmuting it in the Horadric Cube could unleash the\n\nto resemble the Rift activators you have come to know well\nIt certainly did not originate on Sanctuary, and yet it appears\n\ndread as you sense the latent otherworldly energy seeping from it\nThe stone emits a faint glow. Holding it in your hand fills you with\n	1	1	2		0	0	0									DepletedRunestone		thng		-1
 dr02	Quest Item\n\gold;Depleted Riftstone (\green;2\gold;)	Transmute in the Cube to Charge\n	1	1	2		0	0	0									DepletedRunestone		thng		-1
 dr03	Quest Item\n\gold;Depleted Riftstone (\green;3\gold;)	Transmute in the Cube to Charge\n	1	1	2		0	0	0									DepletedRunestone		thng		-1
 dr04	Quest Item\n\gold;Depleted Riftstone (\green;4\gold;)	Transmute in the Cube to Charge\n	1	1	2		0	0	0									DepletedRunestone		thng		-1
 dr05	Quest Item\n\gold;Depleted Riftstone (\green;5\gold;)	Transmute in the Cube to Charge\n	1	1	2		0	0	0									DepletedRunestone		thng		-1
-dr06	Quest Item\n\gold;Depleted Riftstone (\orange;6\gold;)	Transmute With Two Arcane Crystals to Charge\n	1	1	2		0	0	0									DepletedRunestone		thng		-1
-dr07	Quest Item\n\gold;Depleted Riftstone (\orange;7\gold;)	Transmute With Two Arcane Crystals to Charge\n	1	1	2		0	0	0									DepletedRunestone		thng		-1
-dr08	Quest Item\n\gold;Depleted Riftstone (\orange;8\gold;)	Transmute With Two Arcane Crystals to Charge\n	1	1	2		0	0	0									DepletedRunestone		thng		-1
-dr09	Quest Item\n\gold;Depleted Riftstone (\orange;9\gold;)	Transmute With Two Arcane Crystals to Charge\n	1	1	2		0	0	0									DepletedRunestone		thng		-1
-dr10	Quest Item\n\gold;Depleted Riftstone (\orange;10\gold;)	Transmute With Two Arcane Crystals to Charge\n	1	1	2		0	0	0									DepletedRunestone		thng		-1
-dr11	Quest Item\n\gold;Depleted Riftstone (\red;11\gold;)	Transmute With Three Arcane Crystals to Charge\n	1	1	2		0	0	0									DepletedRunestone		thng		-1
-dr12	Quest Item\n\gold;Depleted Riftstone (\red;12\gold;)	Transmute With Three Arcane Crystals to Charge\n	1	1	2		0	0	0									DepletedRunestone		thng		-1
-dr13	Quest Item\n\gold;Depleted Riftstone (\red;13\gold;)	Transmute With Three Arcane Crystals to Charge\n	1	1	2		0	0	0									DepletedRunestone		thng		-1
-dr14	Quest Item\n\gold;Depleted Riftstone (\red;14\gold;)	Transmute With Three Arcane Crystals to Charge\n	1	1	2		0	0	0									DepletedRunestone		thng		-1
-dr15	Quest Item\n\gold;Depleted Riftstone (\red;15\gold;)	Transmute With Three Arcane Crystals to Charge\n	1	1	2		0	0	0									DepletedRunestone		thng		-1
+dr06	Quest Item\n\gold;Depleted Riftstone (\orange;6\gold;)	Transmute With Arcane Crystal to Charge\n	1	1	2		0	0	0									DepletedRunestone		thng		-1
+dr07	Quest Item\n\gold;Depleted Riftstone (\orange;7\gold;)	Transmute With Arcane Crystal to Charge\n	1	1	2		0	0	0									DepletedRunestone		thng		-1
+dr08	Quest Item\n\gold;Depleted Riftstone (\orange;8\gold;)	Transmute With Arcane Crystal to Charge\n	1	1	2		0	0	0									DepletedRunestone		thng		-1
+dr09	Quest Item\n\gold;Depleted Riftstone (\orange;9\gold;)	Transmute With Arcane Crystal to Charge\n	1	1	2		0	0	0									DepletedRunestone		thng		-1
+dr10	Quest Item\n\gold;Depleted Riftstone (\orange;10\gold;)	Transmute With Arcane Crystal to Charge\n	1	1	2		0	0	0									DepletedRunestone		thng		-1
+dr11	Quest Item\n\gold;Depleted Riftstone (\red;11\gold;)	Transmute With Two Arcane Crystals to Charge\n	1	1	2		0	0	0									DepletedRunestone		thng		-1
+dr12	Quest Item\n\gold;Depleted Riftstone (\red;12\gold;)	Transmute With Two Arcane Crystals to Charge\n	1	1	2		0	0	0									DepletedRunestone		thng		-1
+dr13	Quest Item\n\gold;Depleted Riftstone (\red;13\gold;)	Transmute With Two Arcane Crystals to Charge\n	1	1	2		0	0	0									DepletedRunestone		thng		-1
+dr14	Quest Item\n\gold;Depleted Riftstone (\red;14\gold;)	Transmute With Two Arcane Crystals to Charge\n	1	1	2		0	0	0									DepletedRunestone		thng		-1
+dr15	Quest Item\n\gold;Depleted Riftstone (\red;15\gold;)	Transmute With Two Arcane Crystals to Charge\n	1	1	2		0	0	0									DepletedRunestone		thng		-1
 dtm	\grey;Cube Reagent\n\orange;Dark Tome	\blue;+1 to Dark Portal\n\grey;Cube with Class Charm to Add Bonus\n	1	2	2		0	0	0									invdtm		thng		-1
 dy01	\orange;Mystic Dye	\blue;Color: White\n\grey;Right-click to set item color	1	1	2		0	0	0									dye-whit-1		thng		-1
 dy02	\orange;Mystic Dye	\blue;Color: Light Grey\n\grey;Right-click to set item color	1	1	2		0	0	0									dye-lgrey-2		thng		-1
@@ -1698,18 +1701,18 @@ ir03	Quest Item\n\gold;Charged Riftstone (\green;3\gold;)	\dgrey;- Transmute -\n
 ir04	Quest Item\n\gold;Charged Riftstone (\green;4\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes may spawn\n\green;Immune to Crowd Control, Max Slow Effect: 25%\n\grey;Cannot be Chilled or Frozen\n\nDamage: +30%\nLife: +60%\n	1	1	2		0	0	0									ChargedRunestoneG		thng		-1
 ir05	Quest Item\n\gold;Charged Riftstone (\green;5\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes may spawn\n\green;Immune to Crushing Blow, 50% Less Poison Duration\n\grey;Immune to Crowd Control, Max Slow Effect: 25%\nCannot be Chilled or Frozen\n\nDamage: +40%\nLife: +80%\n	1	1	2		0	0	0									ChargedRunestoneG		thng		-1
 ir06	Quest Item\n\gold;Charged Riftstone (\orange;6\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes and Champions may spawn\nImmune to Crushing Blow, 50% Less Poison Duration\nImmune to Crowd Control, Max Slow Effect: 25%\n\green;Absorb 50% Fire, Cold and Lightning\n\grey;Cannot be Chilled or Frozen\n\nDamage: +50%\nLife: +100%\n	1	1	2		0	0	0									ChargedRunestoneY		thng		-1
-ir07	Quest Item\n\gold;Charged Riftstone (\orange;7\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes and Champions may spawn\nImmune to Crushing Blow, 50% Less Poison Duration\nImmune to Crowd Control, Max Slow Effect: 25%\n\green;Dimensional Tear, +10% Monster Density\n\grey;Absorb 50% Fire, Cold and Lightning\nCannot be Chilled or Frozen\n\nDamage: +60%\nLife: +120%\n	1	1	2		0	0	0									ChargedRunestoneY		thng		-1
-ir08	Quest Item\n\gold;Charged Riftstone (\orange;8\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes and Champions may spawn\nImmune to Crushing Blow, 50% Less Poison Duration\nImmune to Crowd Control, Max Slow Effect: 25%\nDimensional Tear, +10% Monster Density\nAbsorb 50% Fire, Cold and Lightning\nCannot be Chilled or Frozen\n\green;60% Leech Resistance\n\n\grey;Damage: +70%\nLife: +140%\n	1	1	2		0	0	0									ChargedRunestoneY		thng		-1
-ir09	Quest Item\n\gold;Charged Riftstone (\orange;9\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes and Champions may spawn\nImmune to Crushing Blow, 50% Less Poison Duration\nImmune to Crowd Control, Max Slow Effect: 25%\nDimensional Tear, +10% Monster Density\nAbsorb 50% Fire, Cold and Lightning\nCannot be Chilled or Frozen\n\green;+70% Movement Speed\n\grey;60% Leech Resistance\n\green;Curse Immunity\n\n\grey;Damage: +80%\nLife: +160%\n	1	1	2		0	0	0									ChargedRunestoneY		thng		-1
-ir10	Quest Item\n\gold;Charged Riftstone (\orange;10\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes and Champions may spawn\nImmune to Crushing Blow, 50% Less Poison Duration\nImmune to Crowd Control, Max Slow Effect: 25%\nDimensional Tear, +10% Monster Density\nAbsorb 50% Fire, Cold and Lightning\nCannot be Chilled or Frozen\n+70% Movement Speed\n60% Leech Resistance\n\green;No Monster Corpses\n\grey;Curse Immunity\n\nDamage: +90%\nLife: +180%\n	1	1	2		0	0	0									ChargedRunestoneY		thng		-1
-ir11	Quest Item\n\gold;Charged Riftstone (\red;11\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes, Champions and Sovereigns may spawn\nImmune to Crushing Blow, 50% Less Poison Duration\nImmune to Crowd Control, Max Slow Effect: 25%\nDimensional Tear, +10% Monster Density\nAbsorb 50% Fire, Cold and Lightning\nCannot be Chilled or Frozen\n+70% Movement Speed\n60% Leech Resistance\nNo Monster Corpses\n\green;Empowered Skills\n\grey;Curse Immunity\n\n\green;Pack Size: +20%\n\grey;Damage: +100%\nLife: +200%\n	1	1	2		0	0	0									ChargedRunestoneR		thng		-1
-ir12	Quest Item\n\gold;Charged Riftstone (\red;12\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes, Champions and Sovereigns may spawn\nImmune to Crushing Blow, 50% Less Poison Duration\nImmune to Crowd Control, Max Slow Effect: 25%\nDimensional Tear, +10% Monster Density\n\green;Reduce Player Avoid and Block on Hit\n\grey;Absorb 50% Fire, Cold and Lightning\nCannot be Chilled or Frozen\n+70% Movement Speed\n60% Leech Resistance\nNo Monster Corpses\nEmpowered Skills\nCurse Immunity\n\nPack Size: +20%\nDamage: +110%\nLife: +220%\n	1	1	2		0	0	0									ChargedRunestoneR		thng		-1
-ir13	Quest Item\n\gold;Charged Riftstone (\red;13\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes, Champions and Sovereigns may spawn\nImmune to Crushing Blow, 50% Less Poison Duration\nImmune to Crowd Control, Max Slow Effect: 25%\n\green;Gain 150% of Physical Damage as Elemental\n\grey;Dimensional Tear, +10% Monster Density\nReduce Player Avoid and Block on Hit\nAbsorb 50% Fire, Cold and Lightning\nCannot be Chilled or Frozen\n+70% Movement Speed\n60% Leech Resistance\nNo Monster Corpses\nEmpowered Skills\nCurse Immunity\n\nPack Size: +20%\nDamage: +120%\nLife: +240%\n	1	1	2		0	0	0									ChargedRunestoneR		thng		-1
-ir14	Quest Item\n\gold;Charged Riftstone (\red;14\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes, Champions and Sovereigns may spawn\nImmune to Crushing Blow, 50% Less Poison Duration\nImmune to Crowd Control, Max Slow Effect: 25%\nGain 150% of Physical Damage as Elemental\nDimensional Tear, +10% Monster Density\nReduce Player Avoid and Block on Hit\nAbsorb 50% Fire, Cold and Lightning\n\green;Pierce 100% Elemental Resists\n\grey;Cannot be Chilled or Frozen\n+70% Movement Speed\n60% Leech Resistance\nNo Monster Corpses\nEmpowered Skills\nCurse Immunity\n\nPack Size: +20%\nDamage: +130%\nLife: +260%\n	1	1	2		0	0	0									ChargedRunestoneR		thng		-1
-ir15	Quest Item\n\gold;Charged Riftstone (\red;15\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes, Champions and Sovereigns may spawn\nImmune to Crushing Blow, 50% Less Poison Duration\nImmune to Crowd Control, Max Slow Effect: 25%\nGain 150% of Physical Damage as Elemental\nDimensional Tear, +10% Monster Density\nReduce Player Avoid and Block on Hit\nAbsorb 50% Fire, Cold and Lightning\nPierce 100% Elemental Resists\nCannot be Chilled or Frozen\n+70% Movement Speed\n60% Leech Resistance\nNo Monster Corpses\nEmpowered Skills\nCurse Immunity\n\green;Nemesis\n\n\n\grey;Pack Size: +20%\nDamage: +150%\nLife: +300%\n	1	1	2		0	0	0									ChargedRunestoneR		thng		-1
+ir07	Quest Item\n\gold;Charged Riftstone (\orange;7\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes and Champions may spawn\nImmune to Crushing Blow, 50% Less Poison Duration\nImmune to Crowd Control, Max Slow Effect: 25%\n\grey;Absorb 50% Fire, Cold and Lightning\nCannot be Chilled or Frozen\n\green;Dimensional Tear\n\nMonster Density: +10%\n\grey;Damage: +60%\nLife: +120%\n	1	1	2		0	0	0									ChargedRunestoneY		thng		-1
+ir08	Quest Item\n\gold;Charged Riftstone (\orange;8\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes and Champions may spawn\nImmune to Crushing Blow, 50% Less Poison Duration\nImmune to Crowd Control, Max Slow Effect: 25%\nAbsorb 50% Fire, Cold and Lightning\nCannot be Chilled or Frozen\n\green;60% Leech Resistance\n\grey;Dimensional Tear\n\nMonster Density: +10%\nDamage: +70%\nLife: +140%\n	1	1	2		0	0	0									ChargedRunestoneY		thng		-1
+ir09	Quest Item\n\gold;Charged Riftstone (\orange;9\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes and Champions may spawn\nImmune to Crushing Blow, 50% Less Poison Duration\nImmune to Crowd Control, Max Slow Effect: 25%\nAbsorb 50% Fire, Cold and Lightning\nCannot be Chilled or Frozen\n\green;+70% Movement Speed\n\grey;60% Leech Resistance\nDimensional Tear\n\green;Curse Immunity\n\n\grey;Monster Density: +10%\nDamage: +80%\nLife: +160%\n	1	1	2		0	0	0									ChargedRunestoneY		thng		-1
+ir10	Quest Item\n\gold;Charged Riftstone (\orange;10\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes and Champions may spawn\nImmune to Crushing Blow, 50% Less Poison Duration\nImmune to Crowd Control, Max Slow Effect: 25%\nAbsorb 50% Fire, Cold and Lightning\nCannot be Chilled or Frozen\n+70% Movement Speed\n60% Leech Resistance\n\green;No Monster Corpses\n\grey;Dimensional Tear\nCurse Immunity\n\nMonster Density: +10%\nDamage: +90%\nLife: +180%\n	1	1	2		0	0	0									ChargedRunestoneY		thng		-1
+ir11	Quest Item\n\gold;Charged Riftstone (\red;11\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes, Champions and Sovereigns may spawn\nImmune to Crushing Blow, 50% Less Poison Duration\nImmune to Crowd Control, Max Slow Effect: 25%\nAbsorb 50% Fire, Cold and Lightning\nCannot be Chilled or Frozen\n+70% Movement Speed\n60% Leech Resistance\nNo Monster Corpses\n\green;Empowered Skills\n\grey;Dimensional Tear\nCurse Immunity\n\nMonster Density: +10%\n\green;Pack Size: +20%\n\grey;Damage: +100%\nLife: +200%\n	1	1	2		0	0	0									ChargedRunestoneR		thng		-1
+ir12	Quest Item\n\gold;Charged Riftstone (\red;12\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes, Champions and Sovereigns may spawn\nImmune to Crushing Blow, 50% Less Poison Duration\nImmune to Crowd Control, Max Slow Effect: 25%\n\green;Reduce Player Avoid and Block on Hit\n\grey;Absorb 50% Fire, Cold and Lightning\nCannot be Chilled or Frozen\n+70% Movement Speed\n60% Leech Resistance\nNo Monster Corpses\nEmpowered Skills\nDimensional Tear\nCurse Immunity\n\nMonster Density: +10%\nPack Size: +20%\nDamage: +110%\nLife: +220%\n	1	1	2		0	0	0									ChargedRunestoneR		thng		-1
+ir13	Quest Item\n\gold;Charged Riftstone (\red;13\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes, Champions and Sovereigns may spawn\nImmune to Crushing Blow, 50% Less Poison Duration\nImmune to Crowd Control, Max Slow Effect: 25%\n\green;Gain 150% of Physical Damage as Elemental\n\grey;Reduce Player Avoid and Block on Hit\nAbsorb 50% Fire, Cold and Lightning\nCannot be Chilled or Frozen\n+70% Movement Speed\n60% Leech Resistance\nNo Monster Corpses\nEmpowered Skills\nDimensional Tear\nCurse Immunity\n\nMonster Density: +10%\nPack Size: +20%\nDamage: +120%\nLife: +240%\n	1	1	2		0	0	0									ChargedRunestoneR		thng		-1
+ir14	Quest Item\n\gold;Charged Riftstone (\red;14\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes, Champions and Sovereigns may spawn\nImmune to Crushing Blow, 50% Less Poison Duration\nImmune to Crowd Control, Max Slow Effect: 25%\nGain 150% of Physical Damage as Elemental\nReduce Player Avoid and Block on Hit\nAbsorb 50% Fire, Cold and Lightning\n\green;Pierce 100% Elemental Resists\n\grey;Cannot be Chilled or Frozen\n+70% Movement Speed\n60% Leech Resistance\nNo Monster Corpses\nEmpowered Skills\nDimensional Tear\nCurse Immunity\n\nMonster Density: +10%\nPack Size: +20%\nDamage: +130%\nLife: +260%\n	1	1	2		0	0	0									ChargedRunestoneR		thng		-1
+ir15	Quest Item\n\gold;Charged Riftstone (\red;15\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes, Champions and Sovereigns may spawn\nImmune to Crushing Blow, 50% Less Poison Duration\nImmune to Crowd Control, Max Slow Effect: 25%\nGain 150% of Physical Damage as Elemental\nReduce Player Avoid and Block on Hit\nAbsorb 50% Fire, Cold and Lightning\nPierce 100% Elemental Resists\nCannot be Chilled or Frozen\n+70% Movement Speed\n60% Leech Resistance\nNo Monster Corpses\nEmpowered Skills\nDimensional Tear\nCurse Immunity\n\green;Nemesis\n\n\n\grey;Monster Density: +40%\nPack Size: +20%\nDamage: +150%\nLife: +300%\n	1	1	2		0	0	0									ChargedRunestoneR		thng		-1
 ir81	\orange;Occult Effigy\nCelestial Wind	\blue;+10 Required Level\nSet Movement Speed to 40%\n\grey;Cube with Boots to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									OccultOrb		thng		-1
 ir82	\orange;Occult Effigy\nSigil of Absolution	\blue;(Max 2 Uses per Item)\nRequirements +25%\n-5 Required Level\n\grey;Cube with Any Weapon/Armor to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									OccultOrb		thng		-1
-ir83	\orange;Occult Effigy\nPath of Brutality	\blue;+10 Required Level\nItem Becomes (Your Class Only)\nTransforms every +1 to All Skills to +4% Deadly Strike\n\grey;Cube with Unique Ring/Amulet to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									OccultOrb		thng		-1
+ir83	\orange;Occult Effigy\nPath of Brutality	\blue;+10 Required Level\nItem Becomes (Your Class Only)\nTransforms every +1 to All Skills to +3% Deadly Strike\n\grey;Cube with Unique Ring/Amulet to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									OccultOrb		thng		-1
 ir84	\orange;Occult Effigy\nEmpyrean Touch	\red;Does Not Work on Indestructible Items\n\n\blue;+10 Required Level\nItem Becomes Ethereal\n\grey;Cube with Any Weapon/Armor to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									OccultOrb		thng		-1
 ir85	\orange;Occult Effigy\nElemental Ire	\blue;+10 Required Level\nAdds 75-125 Lightning Damage\nAdds 75-125 Fire Damage\n\grey;Cube with a Quiver to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									OccultOrb		thng		-1
 ir86	\orange;Occult Effigy\nBreath of Thaumaturgy	\blue;+25 Required Level\nItem can be blessed Again\n\grey;Cube with a Blessed Crafted Weapon/Armor to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									OccultOrb		thng		-1
@@ -1731,20 +1734,21 @@ j34	A Jade Figurine		1	2	2		0	0	0									invjbi	19	ques		-1
 jaw	Jawbone		1	1	2		0	0	0									invjaw		body		-1
 jew	Jewel		1	1	2		0	0	0									invgswe		jewl		-1
 k@k	The Book of Lies		1	1	2		0	0	0									invsbk2		grtz		-1
-kazm	\grey;Quest Item\n\gold;Key of Sin	\blue;Summon a Portal to The Realm of Sin...	1	2	2		115	0	0									invmph		key		-1
-kbel	\grey;Quest Item\n\gold;Key of Lies	\blue;Summon a Portal to The Realm of Lies...	1	2	2		125	0	0									invmph		key		-1
+kazm	\grey;Quest Item\n\gold;Key of Sin	\blue;Summon a Portal to The Realm of Sin...	1	2	2		115	0	0									invmph		thng		-1
+kbel	\grey;Quest Item\n\gold;Key of Lies	\blue;Summon a Portal to The Realm of Lies...	1	2	2		125	0	0									invmph		thng		-1
 key	Key		1	1	2	1	0	0	0									invkey		key		-1
-kfau	\grey;Quest Item\n\gold;Mind Warp	\blue;Open a Rift to Fauztinville...	1	1	2		125	0	0									invrsc		key		-1
+kfau	\grey;Quest Item\n\gold;Mind Warp	\blue;Open a Rift to Fauztinville...	1	1	2		125	0	0									invrsc		thng		-1
 kpac	\orange;Cherry		1	1	2		120	0	0									cherries		thng		-1
-ktax	\orange;Pulsating Worldstone Shard	\yellow;- Transmute -\n\white;will forge a new world and our children will know peace.''\n''...and that is why neither of our brethren will find us here. We\n\n\dgrey;with fractured memories from long ago\nAs you touch the crystal your mind is filled	1	1	2		0	0	0									invss1		thng		-1
-ktbx	\orange;Pulsating Worldstone Shard	\yellow;- Transmute -\n\white;... nothing more than an attempt to explain the unfathomable.''\n''The Veil? Inarius surely you haven't succumbed to Itherael's prophecies.\n\nConflict and the dangers beyond the Veil.''\n''A Sanctuary, forevermore. Free from the Eternal	1	1	2		0	0	0									invss1		thng		-1
-ktcx	\orange;Pulsating Worldstone Shard	\yellow;- Transmute -\n\white;worlds, dimensions, are but a grain of sand in the universe.''\n''Lilith... the High Heavens, Burning Hells, Sanctuary. These\n\nour worlds. What came before is irrelevant!''\n''The Stone has been, is, and will be the axis of	1	1	2		0	0	0									invss1		thng		-1
-ktdx	\orange;Pulsating Worldstone Shard	\yellow;- Transmute -\n\white;sure what lurks just beyond our understanding''\nsafe in the sea of possibilities, yet we can't be\nThe Worldstone has existed since the Dawn of Time and kept us\n''There are many more worlds than those upon which we have stood.	1	1	2		0	0	0									invss1		thng		-1
-ktex	\orange;Pulsating Worldstone Shard	\yellow;- Transmute -\n\white;This shard is the key, its full potential must be unlocked.\n\nIt has exposed us all to an even greater threat.\nSanctuary to the direct influence of Heaven and Hell.\nThe destruction of the Worldstone has not only exposed\n\n\dgrey;...	1	1	2		0	0	0									invss1		thng		-1
+ktax	\orange;Pulsating Worldstone Shard	\yellow;- Transmute -\n\grey;will forge a new world and our children will know peace.''\n''...and that is why neither of our brethren will find us here. We\n\n\dgrey;with fractured memories from long ago\nAs you touch the crystal your mind is filled	1	1	2		0	0	0									invss1		thng		-1
+ktbx	\orange;Pulsating Worldstone Shard	\yellow;- Transmute -\n\grey;... nothing more than an attempt to explain the unfathomable.''\n''The Veil? Inarius surely you haven't succumbed to Itherael's prophecies.\n\nConflict and the dangers beyond the Veil.''\n''A Sanctuary, forevermore. Free from the Eternal	1	1	2		0	0	0									invss1		thng		-1
+ktcx	\orange;Pulsating Worldstone Shard	\yellow;- Transmute -\n\grey;worlds, dimensions, are but a grain of sand in the universe.''\n''Lilith... the High Heavens, Burning Hells, Sanctuary. These\n\nour worlds. What came before is irrelevant!''\n''The Stone has been, is, and will be the axis of	1	1	2		0	0	0									invss1		thng		-1
+ktdx	\orange;Pulsating Worldstone Shard	\yellow;- Transmute -\n\grey;sure what lurks just beyond our understanding''\nsafe in the sea of possibilities, yet we can't be\nThe Worldstone has existed since the Dawn of Time and kept us\n''There are many more worlds than those upon which we have stood.	1	1	2		0	0	0									invss1		thng		-1
+ktex	\orange;Pulsating Worldstone Shard	\yellow;- Transmute -\n\grey;This shard is the key, its full potential must be unlocked.\n\nIt has exposed us all to an even greater threat.\nSanctuary to the direct influence of Heaven and Hell.\nThe destruction of the Worldstone has not only exposed\n\n\dgrey;...	1	1	2		0	0	0									invss1		thng		-1
 ktfx	\orange;Pulsating Worldstone Shard	It which is a splinter of the spirit in a land Unformed\n\nIt which is of many and may cleanse the soul\n\nIt which is of the brother, savior and sacrifice\n\nIt which can manifest their son and his disciple\n\nIt which bears the writings of genesis	1	1	2		0	0	0									invss1		thng		-1
 ktgx	\orange;Pulsating Worldstone Crystal	The Way will be made clear, stand ready\n\nTaha Great Rune\nGreater Signet of Learning\nIt must now be imbued with Knowledge and Arcana\n\n\dgrey;The Worldstone crystal has been reforged	1	1	2		0	0	0									invss3		thng		-1
 ktor	\grey;Quest Item\n\gold;Edyrem's Time-Travel	\blue;Open a Rift to Toraja...	1	1	2		125	0	0									invrsc		thng		-1
 ktox	\grey;Quest Item\n\gold;Dimensional Link	\red;Only works in Act 5\n\blue;Summon a Portal to the Edge of Nothingness...	1	1	2		135	0	0									invrsc		thng		-1
+ktpx	\grey;Quest Item\n\gold;Otherworldly Link	\red;Only works in Act 5\n\blue;Summon a Portal to the Dimensional Plane...	1	1	2		130	0	0									invrsc		thng		-1
 kvoi	\grey;Quest Item\n\gold;Abyss Gate	\blue;Summon a Portal to The Void...	1	1	2		130	0	0									invrsc		thng		-1
 l@l	\grey;Quest Item\n\gold;Skinrender's Sigil	Cube All 5 Sigils with Ring of the Five\n	1	1	2		0	0	0									ring01		thng		-1
 lms	'The Last Man Standing'\nEvent Award:		2	2	2		0	0	0									lastman		grtz		-1
@@ -1761,7 +1765,7 @@ mpf	FLYING POLAR BUFFALO ERROR		1	1	2		0	0	0									invbpl		mpot		-1
 mpo	FLYING POLAR BUFFALO ERROR		1	1	2		0	0	0									invbps		mpot		-1
 mss	Mephisto's Soulstone		1	1	2		0	0	0									invmss	23	ques		-1
 o@o	\grey;Quest Item\n\gold;Eyegouger's Sigil	Cube All 5 Sigils with Ring of the Five\n	1	1	2		0	0	0									ring06		thng		-1
-ooc	Cube Reagent\n\orange;Oil of Conjuration	\yellow;This Recipe can only be used once per Item\n\grey;Cube with a Weapon for a 40% Chance to Add 10% Spell Damage\n	1	1	2		0	0	0									oil_conjuration		thng		-1
+ooc	Cube Reagent\n\orange;Oil of Conjuration	70\nThe Oil of Conjuration has a chance to \nadd an extra bonus to caster weapons, \ninstead of using the lucky recipe.\n\nOil + Weapon\n--> Item with 2/5 Chance of Added Bonus\n(Limit: 1)\n\nWeapons: +10% Spell Damage\n	1	1	2		0	0	0									oil_conjuration		thng		-1
 p@p	\grey;Quest Item\n\gold;Fleshcutter's Sigil	Cube All 5 Sigils with Ring of the Five\n	1	1	2		0	0	0									ring07		thng		-1
 pacb	\orange;Home Cherry	\dgrey;Do NOT tell anyone what you just saw\nThese cherries will take you back home safely	1	1	2		0	0	0									cherries		thng		-1
 q@q	\grey;Quest Item\n\gold;Bonehexer's Sigil	Cube All 5 Sigils with Ring of the Five\n	1	1	2		0	0	0									ring09		thng		-1
@@ -1769,11 +1773,11 @@ qbr	Khalim's Brain		1	1	2		0	0	0									invbrnz	17	ques		-1
 qey	Khalim's Eye		1	1	2		0	0	0									inveye	17	ques		-1
 qhr	Khalim's Heart		1	1	2		0	0	0									invhrt	17	ques		-1
 qll	Quill		1	1	2		0	0	0									invquil		body		-1
-qu2	\grey;Cube Reagent\n\orange;Arcane Shards (2)	\yellow;Arcane Crystals are reagents in powerful recipes\n\grey;Cube with 3 Arcane Shards to Create Arcane Crystal\n	1	1	2		0	0	0									invfary2		thng		-1
-qu3	\grey;Cube Reagent\n\orange;Arcane Shards (3)	\yellow;Arcane Crystals are reagents in powerful recipes\n\grey;Cube with 2 Arcane Shards to Create Arcane Crystal\n	1	1	2		0	0	0									invfary3		thng		-1
-qu4	\grey;Cube Reagent\n\orange;Arcane Shards (4)	\yellow;Arcane Crystals are reagents in powerful recipes\n\grey;Cube with Arcane Shard to Create Arcane Crystal\n	1	1	2		0	0	0									invfary4		thng		-1
-qul	\grey;Cube Reagent\n\orange;Arcane Shards (1)	\yellow;Arcane Crystals are reagents in powerful recipes\n\grey;Cube with 4 Arcane Shards to Create Arcane Crystal\n	1	1	2		0	0	0									invfary1		thng		-1
-qum	\grey;Cube Reagent\n\orange;Arcane Crystal	\yellow;This Recipe only works once per Rare/Crafted Item\n\grey;Cube with Rare/Crafted Item + Shrine to Bless\n\nCube with Tiered Item to Increase Tier\n	1	1	2		0	0	0									gemcontainer		thng		-1
+qu2	\grey;Cube Reagent\n\orange;Arcane Shards (2)	90\nCreating Arcane Crystals:\n\n5 Arcane Shards\n--> Arcane Crystal\n	1	1	2		0	0	0									invfary2		thng		-1
+qu3	\grey;Cube Reagent\n\orange;Arcane Shards (3)	90\nCreating Arcane Crystals:\n\n5 Arcane Shards\n--> Arcane Crystal\n	1	1	2		0	0	0									invfary3		thng		-1
+qu4	\grey;Cube Reagent\n\orange;Arcane Shards (4)	90\nCreating Arcane Crystals:\n\n5 Arcane Shards\n--> Arcane Crystal\n	1	1	2		0	0	0									invfary4		thng		-1
+qul	\grey;Cube Reagent\n\orange;Arcane Shards (1)	90\nCreating Arcane Crystals:\n\n5 Arcane Shards\n--> Arcane Crystal\n	1	1	2		0	0	0									invfary1		thng		-1
+qum	\grey;Cube Reagent\n\orange;Arcane Crystal	80 \nArcane Crystals let you create and\nupgrade Tiered (#) Uniques:\n\n2 Crystals + Tiered Item + Oil of Ench.\n--> Tiered Unique Item\n\n1 Crystal + Tiered Unique\n--> Increased Tier\n\nShrine Blessing:\nYou can bless Sacred Crafted, Honorific \nand Rare Items for extra bonuses.\n\n2 Crystals + Item + Shrine\n--> Item with Added Bonuses\n(Limit: 1)\n	1	1	2		0	0	0									gemcontainer		thng		-1
 r01	\purple;El Rune		1	1	2		11	0	0									invrEl		rune		-1
 r02	\purple;Eld Rune		1	1	2		11	0	0									invrEld		rune		-1
 r03	\purple;Tir Rune		1	1	2		13	0	0									invrTir		rune		-1
@@ -1900,14 +1904,14 @@ tal	Tail		1	1	2		0	0	0									invtail		body		-1
 tbk	Tome of Town Portal		1	2	2	1	0	0	0									invbbk		book		-1
 tbr	By Mel Odom\nThe Black Road		1	1	2		110	0	0									invsbk3		grtz		-1
 tch	Torch		1	2	2		0	0	0									invtrch		torc		-1
-ths	The Sleep	Cube with Trophy to Add Bonus	1	1	2		115	0	0									jewelabc		grtz		-1
+ths	The Sleep	Cube with Trophy to Awaken	1	1	2		115	0	0									jewelabc		grtz		-1
 toa	\orange;Belladonna Extract	Right-click to reset Stat/Skill Points	1	1	2		0	0	0									pot04		ques		-1
 tr1	Horadric Scroll		2	2	2		0	0	0									invhscr	10	ques		-1
-tr2	\grey;Cube Reagent\n\orange;Scroll of Resistance	\blue;+10% to Elemental Resistances\n\grey;Cube with the Sunstone of the Twin Seas to Add Bonus\n	2	2	2		0	0	0									invscb	32	thng		-1
+tr2	Scroll of Resistance	\blue;+10% to Elemental Resistances\n\grey;Cube with the Sunstone of the Twin Seas to Add Bonus\n\nCube Reagent	2	2	2		0	0	0									invscb	32	thng		-1
 trc	Umbaru Treasure		1	1	2		110	0	0									foolsbox		grtz		-1
 tsc	Scroll of Town Portal		1	1	2		0	0	0									invbsc		scro		-1
 twi	\gold;Sunstone of the Twin Seas		1	1	2		0	0	0									invgmg		grtz		-1
-u@+	\gold;I Am Rich	\red;wealthy and powerful.\ndestroying them. I can afford this because I am\nArchbishop Lazarus and Uldyssian trophies to create,\nThis item does nothing and requires the Kabraxis,	1	1	2		0	0	0									redgem		grtz		-1
+u@+	\gold;I Am Rich	\yellow;- I can afford this because I am wealthy and powerful. -\n\red;trophies and the Vial of Elder Blood to create, destroying them. \nThis item does nothing and required the Yshari Sanctum, Uldyssian, Void	1	1	2		0	0	0									redgem		grtz		-1
 vic	Cube Reagent\n\orange;Sacrifical Heart		1	1	2		0	0	0									invhrt		thng		-1
 vip	Amulet of the Viper		1	1	2		0	0	0									invvip	10	amul		-1
 voDX	Cube Reagent\n\orange;Enchanting Crystal	\yellow;same Type, and can only be used once per Item\nThis Recipe might return a different Unique Item of the\n\grey;Cube with Sacred Unique Weapon/Armor to Reroll\n	1	1	2		0	0	0									newreroller		thng		-1
@@ -1939,7 +1943,7 @@ x5x	\gold;Sunstone of Fire	\grey;Cube All Three Sunstones to Create Sunstone\n	1
 x6x	\gold;Sunstone of Ice	\grey;Cube All Three Sunstones to Create Sunstone\n	1	1	2		0	0	0									invgmb		thng		-1
 x7x	\gold;Sunstone of Thunder	\grey;Cube All Three Sunstones to Create Sunstone\n	1	1	2		0	0	0									invgmw		thng		-1
 x@x	The Glorious Book of Median		1	1	2		0	0	0									invsbk2		grtz		-1
-xyz	Right Click to permanently add 20 to Life\nPotion of Life		1	1	2		0	0	0									invxyz	19	ques		-1
+xyz	Right Click to permanently add 50 to Life\nPotion of Life		1	1	2		0	0	0									invxyz	19	ques		-1
 yo1	\purple;Chipped Rainbow Stone		1	1	2		1	0	0									og1		gemx,gem0		-1
 yo2	\purple;Flawed Rainbow Stone		1	1	2		5	0	0									og2		gemx,gem1		-1
 yo3	\purple;Rainbow Stone		1	1	2		12	0	0									og3		gemx,gem2		-1
@@ -1957,10 +1961,30 @@ zkr	\dgreen;Large Signet of Experience	Right-click: Experience: %d	1	1	2		0	0	0	
 zku	\dgreen;Signet of Experience	Right-click: Experience: %d	1	1	2		0	0	0									sigil5B		poti		-1
 zkw	\dgreen;Signet of Gold	Right-click: Gold in Bank: %d	1	1	2		0	0	0									sigil3B		poti		-1
 zkx	\dgreen;Greater Signet of Gold	Right-click: Gold in Bank: %d	1	1	2		0	0	0									sigil2B		poti		-1
+{01	\orange;Lord of Lies Fragment	\grey;Cube 3 identical Fragments to Create Trophy	1	1	2		0	0	0									apple		thng,trfr		-1
+{02	\orange;Legacy of Blood Fragment	\grey;Cube 3 identical Fragments to Create Trophy	1	1	2		0	0	0									apple		thng,trfr		-1
+{03	\orange;Judgement Day Fragment	\grey;Cube 3 identical Fragments to Create Trophy	1	1	2		0	0	0									apple		thng,trfr		-1
+{04	\orange;Yshari Sanctum Fragment	\grey;Cube 3 identical Fragments to Create Trophy	1	1	2		0	0	0									apple		thng,trfr		-1
+{05	\orange;Kingdom of Shadow Fragment	\grey;Cube 3 identical Fragments to Create Trophy	1	1	2		0	0	0									apple		thng,trfr		-1
+{06	\orange;Duncraig Fragment	\grey;Cube 3 identical Fragments to Create Trophy	1	1	2		0	0	0									apple		thng,trfr		-1
+{07	\orange;Xazax Fragment	\grey;Cube 3 identical Fragments to Create Trophy	1	1	2		0	0	0									apple		thng,trfr		-1
+{08	\orange;The Veiled Prophet Fragment	\grey;Cube 3 identical Fragments to Create Trophy	1	1	2		0	0	0									apple		thng,trfr		-1
+{09	\orange;Tran Athulua Fragment	\grey;Cube 3 identical Fragments to Create Trophy	1	1	2		0	0	0									apple		thng,trfr		-1
+{10	\orange;Quov Tsin Fragment	\grey;Cube 3 identical Fragments to Create Trophy	1	1	2		0	0	0									apple		thng,trfr		-1
+{11	\orange;Astrogha Fragment	\grey;Cube 3 identical Fragments to Create Trophy	1	1	2		0	0	0									apple		thng,trfr		-1
+{12	\orange;Heart of Sin Fragment	\grey;Cube 3 identical Fragments to Create Trophy	1	1	2		0	0	0									apple		thng,trfr		-1
+{13	\orange;Viz-jun Fragment	\grey;Cube 3 identical Fragments to Create Trophy	1	1	2		0	0	0									apple		thng,trfr		-1
+{14	\orange;Archbishop Lazarus Fragment	\grey;Cube 3 identical Fragments to Create Trophy	1	1	2		0	0	0									apple		thng,trfr		-1
+{15	\orange;The Triune Fragment	\grey;Cube 3 identical Fragments to Create Trophy	1	1	2		0	0	0									apple		thng,trfr		-1
+{16	\orange;Nephalem's Sacrifice Fragment	\grey;Cube 3 identical Fragments to Create Trophy	1	1	2		0	0	0									apple		thng,trfr		-1
+{17	\orange;Banisher of Light Fragment	\grey;Cube 3 identical Fragments to Create Trophy	1	1	2		0	0	0									apple		thng,trfr		-1
+{18	\orange;Ghosts of Old Bremmtown Fragment	\grey;Cube 3 identical Fragments to Create Trophy	1	1	2		0	0	0									apple		thng,trfr		-1
+{19	\orange;The Void Fragment	\grey;Cube 3 identical Fragments to Create Trophy	1	1	2		0	0	0									apple		thng,trfr		-1
+{20	\orange;Eve of Destruction Fragment	\grey;Cube 3 identical Fragments to Create Trophy	1	1	2		0	0	0									apple		thng,trfr		-1
 |\#	Xazax's Illusion		1	1	2		0	0	0									maggotlairfag		grtz		-1
 |\\	The Ancient Repositories		1	1	2		0	0	0									ancientrepositoriesz		grtz		-1
 |ab	Cube Reagent\n\orange;Ancient Book	\yellow;very rare Emblems that drop from Monsters\nRecipes for this Item are Unknown, but said to use\n	2	2	2		0	0	0									bookwastex		thng		-1
-|bc	Cube Reagent\n\orange;Book of Cain	\blue;+1% to Experience Gained\n+10 to All Attributes\n+1 to All Skills\n\grey;Cube with Glorious Book of Median to Add Bonus\n	2	2	2		0	0	0									superbooffk		thng		-1
+|bc	Cube Reagent\n\orange;Book of Cain	\blue;+5% to Experience Gained\n+10 to All Attributes\n+1 to All Skills\n\grey;Cube with Glorious Book of Median to Add Bonus\n	2	2	2		0	0	0									superbooffk		thng		-1
 |dc	Dragon Claw		1	1	2		120	0	0									invhorn		grtz		-1
 |ld	Lylia's Curse		1	1	2		120	0	0									lyliascharm		grtz		-1
 |ms	\gold;Ghost Trance	\blue;+1 to All Skills\n(11 to 50) to all Attributes\n-1 to Light Radius\n\grey;Cube with Umbaru Treasure to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									giyuaGolem		thng		-1
