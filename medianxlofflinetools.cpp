@@ -178,8 +178,10 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, LaunchMode la
     syncWindowsTaskbarRecentFiles(); // is actually used only in Windows 7 and later
 #endif
 
+#ifndef DUPE_CHECK
     if (ui->actionCheckForUpdateOnStart->isChecked())
         checkForUpdate();
+#endif
 
 #ifdef Q_OS_MAC
     QTimer::singleShot(2000, this, SLOT(moveUpdateActionToAppleMenu())); // needs a slight delay to create menu
