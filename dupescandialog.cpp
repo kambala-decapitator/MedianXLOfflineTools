@@ -650,6 +650,7 @@ QVariantMap DupeScanDialog::keyValueFromSkillId(quint32 skillId)
 
     skillId &= LeftMouseSkillMask - 1; // upper bits also contain info about charges
     keyValue[QLatin1String("id")] = skillId;
-    keyValue[QLatin1String("name")] = ItemDataBase::Skills()->value(skillId)->name;
+    if (SkillInfo *skill = ItemDataBase::Skills()->value(skillId))
+        keyValue[QLatin1String("name")] = skill->name;
     return keyValue;
 }
