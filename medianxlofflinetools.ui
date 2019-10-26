@@ -190,19 +190,6 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QLineEdit" name="signetsOfSkillEatenLineEdit">
-     <property name="geometry">
-      <rect>
-       <x>200</x>
-       <y>50</y>
-       <width>65</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="readOnly">
-      <bool>true</bool>
-     </property>
-    </widget>
     <widget class="QCheckBox" name="respecSkillsCheckBox">
      <property name="geometry">
       <rect>

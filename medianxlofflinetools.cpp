@@ -421,9 +421,7 @@ void MedianXLOfflineTools::saveCharacter()
     ui->levelSpinBox->setMaximum(Enums::CharacterStats::MaxLevel);
     ui->levelSpinBox->setValue(Enums::CharacterStats::MaxLevel);
     ui->signetsOfLearningEatenLineEdit->setText(QString::number(Enums::CharacterStats::SignetsOfLearningMax));
-    ui->signetsOfSkillEatenLineEdit->setText(QString::number(Enums::CharacterStats::SignetsOfSkillMax));
     charInfo.setValueForStatisitc(Enums::CharacterStats::SignetsOfLearningMax, Enums::CharacterStats::SignetsOfLearningEaten);
-    charInfo.setValueForStatisitc(Enums::CharacterStats::SignetsOfSkillMax, Enums::CharacterStats::SignetsOfSkillEaten);
     ui->freeSkillPointsLineEdit->setText(QString::number(totalPossibleSkillPoints(charInfo.basicInfo.level, kDifficultiesNumber, kDifficultiesNumber, kDifficultiesNumber)));
     ui->freeStatPointsLineEdit->setText(QString::number(totalPossibleStatPoints(charInfo.basicInfo.level, kDifficultiesNumber)));
 #endif
@@ -1390,12 +1388,12 @@ void MedianXLOfflineTools::createLanguageMenu()
 void MedianXLOfflineTools::createLayout()
 {
     QList<QWidget *> widgetsToFixSize = QList<QWidget *>() << ui->charNamePreviewLabel << ui->classLineEdit << ui->titleLineEdit << ui->freeSkillPointsLineEdit
-                                                           << ui->freeStatPointsLineEdit << ui->signetsOfLearningEatenLineEdit << ui->signetsOfSkillEatenLineEdit << ui->strengthSpinBox << ui->dexteritySpinBox
+                                                           << ui->freeStatPointsLineEdit << ui->signetsOfLearningEatenLineEdit << ui->strengthSpinBox << ui->dexteritySpinBox
                                                            << ui->vitalitySpinBox << ui->energySpinBox << ui->inventoryGoldLineEdit << ui->stashGoldLineEdit << ui->mercLevelLineEdit;
     foreach (QWidget *w, widgetsToFixSize)
         w->setFixedSize(w->size());
 
-    QList<QLineEdit *> readonlyLineEdits = QList<QLineEdit *>() << ui->freeSkillPointsLineEdit << ui->freeStatPointsLineEdit << ui->signetsOfLearningEatenLineEdit << ui->signetsOfSkillEatenLineEdit
+    QList<QLineEdit *> readonlyLineEdits = QList<QLineEdit *>() << ui->freeSkillPointsLineEdit << ui->freeStatPointsLineEdit << ui->signetsOfLearningEatenLineEdit
                                                                 << ui->inventoryGoldLineEdit << ui->stashGoldLineEdit << ui->mercLevelLineEdit << ui->classLineEdit;
     foreach (QLineEdit *lineEdit, readonlyLineEdits)
         lineEdit->setStyleSheet(kReadonlyCss);
@@ -1500,8 +1498,6 @@ void MedianXLOfflineTools::createStatsGroupBoxLayout()
     gridLayout->addWidget(new QLabel(tr("Free Skills")), 1, 0, Qt::AlignRight);
     gridLayout->addWidget(ui->freeSkillPointsLineEdit, 1, 1);
     gridLayout->addWidget(ui->respecSkillsCheckBox, 1, 2);
-    gridLayout->addWidget(new QLabel(tr("Signets of Skill")), 1, 3, Qt::AlignRight);
-    gridLayout->addWidget(ui->signetsOfSkillEatenLineEdit, 1, 4);
 
     gridLayout->addWidget(ui->statsTableWidget, 2, 2, 4, 3, Qt::AlignCenter);
     gridLayout->addWidget(new QLabel(tr("Strength")), 2, 0, Qt::AlignRight);
@@ -1680,7 +1676,6 @@ void MedianXLOfflineTools::fillMaps()
     _lineEditsStatsMap[Enums::CharacterStats::InventoryGold] = ui->inventoryGoldLineEdit;
     _lineEditsStatsMap[Enums::CharacterStats::StashGold] = ui->stashGoldLineEdit;
     _lineEditsStatsMap[Enums::CharacterStats::SignetsOfLearningEaten] = ui->signetsOfLearningEatenLineEdit;
-    _lineEditsStatsMap[Enums::CharacterStats::SignetsOfSkillEaten] = ui->signetsOfSkillEatenLineEdit;
 }
 
 void MedianXLOfflineTools::connectSignals()
@@ -2059,12 +2054,6 @@ bool MedianXLOfflineTools::processSaveFile()
                 shouldShowHackWarning = true;
             statValue = CharacterStats::SignetsOfLearningMax;
         }
-        else if (statCode == CharacterStats::SignetsOfSkillEaten && statValue > CharacterStats::SignetsOfSkillMax)
-        {
-            if (statValue > CharacterStats::SignetsOfSkillMax + 1)
-                shouldShowHackWarning = true;
-            statValue = CharacterStats::SignetsOfSkillMax;
-        }
         else if (statCode >= CharacterStats::Strength && statCode <= CharacterStats::Vitality)
         {
             int baseStat = _baseStatsMap[charInfo.basicInfo.classCode].statsAtStart.statFromCode(statCode);
@@ -2362,7 +2351,7 @@ inline int MedianXLOfflineTools::totalPossibleSkillPoints() const
 
 int MedianXLOfflineTools::totalPossibleSkillPoints(int level, quint8 doe, quint8 rad, quint8 iz) const
 {
-    return (level - 1) * kSkillPointsPerLevel + doe + rad + iz * 2 + CharacterInfo::instance().valueOfStatistic(Enums::CharacterStats::SignetsOfSkillEaten);
+    return (level - 1) * kSkillPointsPerLevel + doe + rad + iz * 2;
 }
 
 int MedianXLOfflineTools::investedStatPoints()
@@ -2581,7 +2570,6 @@ void MedianXLOfflineTools::updateUI()
     int stats = charInfo.basicInfo.totalStatPoints, skills = charInfo.basicInfo.totalSkillPoints;
     updateStatusTips(stats, stats - charInfo.valueOfStatistic(Enums::CharacterStats::FreeStatPoints), skills, skills - charInfo.valueOfStatistic(Enums::CharacterStats::FreeSkillPoints));
     ui->signetsOfLearningEatenLineEdit->setStatusTip(maxValueFormat.arg(Enums::CharacterStats::SignetsOfLearningMax));
-    ui->signetsOfSkillEatenLineEdit->setStatusTip(maxValueFormat.arg(Enums::CharacterStats::SignetsOfSkillMax));
     ui->stashGoldLineEdit->setStatusTip(maxValueFormat.arg(QLocale().toString(Enums::CharacterStats::StashGoldMax)));
     if (_sharedGold)
         ui->stashGoldLineEdit->setStatusTip(ui->stashGoldLineEdit->statusTip() + ", " + tr("Shared: %1", "amount of gold in shared stash").arg(QLocale().toString(_sharedGold)));
@@ -2810,13 +2798,8 @@ QByteArray MedianXLOfflineTools::statisticBytes()
         else if (statCode != Enums::CharacterStats::End && statCode != Enums::CharacterStats::Level && statCode != Enums::CharacterStats::Experience)
         {
             value = _lineEditsStatsMap[statCode]->text().toULongLong();
-            // signets should be set to (max + 1)
-            if (statCode == Enums::CharacterStats::SignetsOfSkillEaten && value == Enums::CharacterStats::SignetsOfSkillMax)
-            {
-                ++value;
-            }
 #ifndef MAKE_FINISHED_CHARACTER
-            else if (statCode == Enums::CharacterStats::FreeStatPoints)
+            if (statCode == Enums::CharacterStats::FreeStatPoints)
             {
                 int totalPossibleFreeStats = totalPossibleStatPoints(ui->levelSpinBox->value()) - investedStatPoints();
                 if (value > static_cast<quint32>(totalPossibleFreeStats)) // prevent hacks and shut the compiler up
