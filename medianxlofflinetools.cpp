@@ -2811,8 +2811,7 @@ QByteArray MedianXLOfflineTools::statisticBytes()
         {
             value = _lineEditsStatsMap[statCode]->text().toULongLong();
             // signets should be set to (max + 1)
-            if ((statCode == Enums::CharacterStats::SignetsOfLearningEaten && value == Enums::CharacterStats::SignetsOfLearningMax) ||
-                (statCode == Enums::CharacterStats::SignetsOfSkillEaten    && value == Enums::CharacterStats::SignetsOfSkillMax))
+            if (statCode == Enums::CharacterStats::SignetsOfSkillEaten && value == Enums::CharacterStats::SignetsOfSkillMax)
             {
                 ++value;
             }
