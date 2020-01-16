@@ -299,8 +299,8 @@ item_manaonstrikingmelee	295		items	Mana on Attack	9	200		-200	311	7			1	1	25	1	
 item_is_honorific	296		cube	\dgreen;Orb Effects Applied to this Item are Doubled\blue;	1	0		0	1	6			1		239	3	0	ModitemHonorific	ModitemHonorific									1	1																									1024	1	0	0
 W_M	297		skills		2	1		-1	2	9			1															1006	251																									1024	2	1	0
 tp_lock	298	town portal cuck	skills		5	0		0	31	12			1															7	2																									1024	5	0	0
-strength_bonus_wpn	299		classic	\grey;Current Strength Damage Bonus:	10	0		0	1023	6			1		251	2	2	ModitemStrWpnAdder	ModitemStrWpnAdder									4	1								2	8	strength	weapondisplay_dummy														1024	10	0	0
-dexterity_bonus_wpn	300		classic	\grey;Current Dexterity Damage Bonus:	10	0		0	1023	6			1		250	2	2	ModitemDexWpnAdder	ModitemDexWpnAdder									4	1								2	8	dexterity	weapondisplay_dummy														1024	10	0	0
+strength_bonus_wpn	299		classic	\grey;Current Strength Damage Bonus:	10	0		0	1023	6			1		251	2	2	ModitemStrWpnAdder	ModitemStrWpnAdder									4	1								2	8	strength	damagepercent														1024	10	0	0
+dexterity_bonus_wpn	300		classic	\grey;Current Dexterity Damage Bonus:	10	0		0	1023	6			1		250	2	2	ModitemDexWpnAdder	ModitemDexWpnAdder									4	1								2	8	dexterity	damagepercent														1024	10	0	0
 item_shadows_corpsesynergy	301	UNUSED	items	Shadows Spawn Corpses on Striking 5%	1	0		0	1	9			1		138	3	0	ModitemShadowCorpse	ModitemShadowCorpse									41	22																									1024	1	0	0
 skill_shadows_addcorpseonstriking	302	UNUSED	skills							9			1																																									1024	0	0	0
 skill_voidarchon_fire	303	UNUSED	skills	Fire Damage to Void Archon	12	0		0	4095	13			1		53	1	1	ModitemVoidFire	ModitemVoidFire									101	122																									1024	12	0	0
@@ -378,7 +378,7 @@ trap_chain	374		items		10	50		-50	973	12			1																																				
 desc_top	375		items		15	0	15	0	32767	15	15				246	31	0											1006	251																									1024	15	0	0
 item_slow_offweapon	376		items	Slows Melee Target by	8	50		-50	205	7			1	1	82	2	2	DescSlowVariantMelee	DescSlowVariantMelee		1							51	20														domeleeattack	19										1024	8	50	0
 desc_bottom	377		items		15	0	15	0	32767	15	15				3	31	0											1006	251																									1024	15	0	0
-statX_2	378		items		7	24		-24	103	9			1		246													1006	251																									1024	7	24	0
+desc_less_top	378		items		15	0	15	0	32767	15	15				238	31	0											1006	251																									1024	15	0	0
 deathlord_penalty	379		skills		5	0		0	31	12			1			3	0											300	85																									1024	5	0	0
 passive_bloodlust_dmgpct	380		items	Bonus Damage to Bloodlust	8	0		0	255	12			1		154	4	1	ModitemBloodlustDmg	ModitemBloodlustDmg									331	91																									1024	8	0	0
 passive_bloodlust_elempct	381		items	Bonus Elemental Damage to Bloodlust	8	0		0	255	12			1		154	4	1	ModitemBloodlustElem	ModitemBloodlustElem									331	91																									1024	8	0	0
@@ -421,7 +421,7 @@ ele_divisor	417		items		16	0	5	0	65535	17	5																																					
 item_needschallenged	418	brc	items	\orange;Can Be Upgraded with Black Road Challenge	2	0		0	3	12			1		230	3	0	ModitemNeedsLCed	ModitemNeedsLCed									4	1																									1024	2	0	0
 not_used_419	419		unused							5			1																																									1024	0	0	0
 event_hit2	420	technical - not suited for affixes	skills							12			1																																									1024	0	0	0
-not_used_421	421		unused							5			1																																									1024	0	0	0
+scosglen_check	421		skills		4	0		0	15	5			1																																									1024	4	0	0
 not_used_422	422		unused							5			1																																									1024	0	0	0
 not_used_423	423		unused							5			1																																									1024	0	0	0
 not_used_424	424		unused							5			1																																									1024	0	0	0

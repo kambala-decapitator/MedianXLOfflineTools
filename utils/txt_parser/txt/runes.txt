@@ -34,7 +34,7 @@ Seed of Conflict	1	Zero socketables	scyh									r49						dmg%		144	171	dmg-max	
 Myrmidon	1	Zero socketables	spea									r29						vit%		20	20	dmg%		87	114	dmg/lvl	24	24	24	dex%		20	20	oskill	666	1	4	ac-global		21	40	ease		15	15	Myrmidon		0
 Demhe	1	Zero socketables	mace	scep					hamm			r33						dmg%		172	200	dmg-max		38	50	att-skill	398	20	50	gehenna		11	13	mana-hit		101	150	dmg-stun		125	125					Demhe		0
 Calypso	1	Zero socketables	hamm									r37						swing3		30	30	dmg%		144	171	kill-skill	702	20	21	skill-dur		21	25	att-skill	459	5	27	dmg-cold	75	375	500	dmg-norm		19	38	Calypso		0
-Pax Mystica	1	Zero socketables	staf									r04						charged	346	20	1	res-all		11	15	allskills		1	1	mag%		11	13													Pax Mystica		0
+Pax Mystica	1	Zero socketables	staf									r04						oskill	346	2	5	res-all		11	15	allskills		1	1	mag%		11	13													Pax Mystica		0
 Hadad	1	Zero socketables	staf									r11						gethit-skill	669	5	13	allskills		2	2	extra-ltng/lvl	8	8	8	slow-thorns		11	15	oskill	680	1	4									Hadad		0
 Summanus	1	Zero socketables	staf									r19						dex		50	50	enr		25	25	allskills		2	2	att-skill	999	5	17	dmg%		58	86	dmg-max		26	38	swing3		40	40	Summanus		0
 Akhenaten	1	Zero socketables	staf									r27						vit%		15	15	allskills		3	4	cast3		20	20	extra-fire		21	25	extra-pois		21	25	slow-thorns-r		21	25	res-firepoison		50	50	Akhenaten		0
@@ -63,8 +63,8 @@ Manta	1	Zero socketables	abow									r51						dmg-max		91	115	desc-bottom	11301
 Shedim	1	Zero socketables	h2h									r02						att%		25	25	dmg%		24	46	pierce-pois		6	8	dmg-pois	25	128	256	res-pois-len		11	20	mana-kill		11	15	dmg-undead		50	50	Shedim		0
 Fiend	1	Zero socketables	h2h									r17						att-skill	699	20	6	dmg%		58	86	dmg-fire		50	63	swing3		25	25	mag%		11	20	oskill	833	1	7	oskill	824	1	7	Fiend		0
 Frequency	1	Zero socketables	h2h									r27						dex%		5	5	dmg%		87	114	att-skill	579	10	20	res-ltng		31	60	hit-skill	540	13	7	dmg-stun		125	125	dmg-ltng		1	250	Frequency		0
-Choronzon	1	Zero socketables	h2h									r34						dmg%		115	143	att-skill	459	20	24	pierce-cold		16	25	oskill	460	1	7	dmg-minion		21	40	gold%		30	30	hp-mana		333	333	Choronzon		0
-Anarchy	1	Zero socketables	h2h									r46						cast3		40	40	extra-fire		16	25	extra-ltng		16	25	ass		2	4	mana-kill		51	60	hp%-mp%		25	25					Anarchy		0
+Choronzon	1	Zero socketables	h2h									r34						dmg%		115	143	att-skill	459	20	24	pierce-cold		16	25	dmg-minion		21	40	gold%		30	30	hp-mana		333	333					Choronzon		0
+Anarchy	1	Zero socketables	h2h									r46						cast3		30	30	extra-fire		16	25	extra-ltng		16	25	ass		2	4	mana-kill		51	60	hp%-mp%		15	15					Anarchy		0
 Hail	1	Zero socketables	h2h									r48						dmg%		144	171	kill-skill	595	20	29	dmg-max		76	100	swing3		40	40	dmg-cold	25	125	375	ass		2	2					Hail		0
 Nahemah	1	Zero socketables	h2h									r52						reanimate	2337	10	10	dmg%		172	200	oskill	569	16	19	oskill	469	16	19	dmg-max		101	125	dmg-cold	50	250	500					Nahemah		0
 Khattak	1	Zero socketables	nagi									r08						extra-ltng		3	3	dmg%		35	46	swing3		20	20	uninterrupt		11	20	dmg-max		30	30	balance3		40	40					Khattak		0
@@ -86,7 +86,7 @@ Ocean	1	Zero socketables	dstf									r05						gethit-skill	702	10	4	dru		1	1	ex
 Samhain	1	Zero socketables	dstf									r12						extra-pois		8	10	extra-fire		8	10	dru		2	2	heal-kill		11	20	cast3		40	40	regen		21	25					Samhain		0
 Augur	1	Zero socketables	dstf									r20						addxp		1	1	oskill	569	1	7	oskill	570	1	7	dru		2	4	all-stats%		16	20	mag%		16	25	ac/lvl	320	320	320	Augur		0
 Lincos	1	Zero socketables	dstf									r29						enr%		21	30	dru		3	6	oskill	473	21	24	pierce-fcp		10	10	regen-mana		21	40	res-all-max		2	2					Lincos		0
-Laadan	1	Zero socketables	dstf									r37						cast3		85	85	dru		4	7	oskill	474	24	29	mana		500	500	slow-thorns		16	20	light		2	2	ease		-10	-10	Laadan		0
+Laadan	1	Zero socketables	dstf									r37						cast3		85	85	dru		4	7	oskill	474	24	29	mana		500	500	slow-thorns		16	20	cd-reduce	474	150	150	ease		-10	-10	Laadan		0
 Lojban	1	Zero socketables	dstf									r45						res-all		26	35	dru		6	8	dmg-minion		51	60	extra-pois		41	50	pierce-pois		6	10	att%-minion		21	50	oskill	469	9	14	Lojban		0
 Loxian	1	Zero socketables	dstf									r52						enr-factor		136	185	red-dmg%		11	15	dru		8	10	extra-all		41	50	ac-global		51	75	cast3		20	20					Loxian		0
 Black Cat	1	Zero socketables	nscy									r02						att%		75	75	hp		7	7	dmg%		30	57	mag%		-7	-7	att-skill	530	10	2	kill-skill	553	25	40	crush		3	5	Black Cat		0

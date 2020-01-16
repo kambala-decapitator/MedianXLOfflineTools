@@ -202,6 +202,7 @@ cold-len	47	items			1	coldlength																													none	0
 indestruct	47	items			20																										Indestructible				none	0
 fire-min	46	items			1	firemindam																													none	0
 desc-top	45	items			24	desc_top																														0
+desc-less-top		items			24	desc_less_top																														0
 thorns%	40	items			1	thorns_percent																									Laz / Percentage thorns		min	max	beware physical resistance in hell	0
 innate-impact	39	items			11	item_megaimpact																									Laz / New procs	Skill #	% Chance	Level	white text	0
 ltng-max	38	items			1	lightmaxdam																													none	0
@@ -360,7 +361,6 @@ res-all-group	1	items			1	minion_resist_all			3	fireresist			3	lightresist			3	c
 res-fireltng	1	items			1	fireresist			3	lightresist																					Laz / Combination affix		min	max	none	0
 stamdrain	1	items			1	item_staminadrainpct																													none	0
 stamsteal	1	items			1	stamdrainmindam																									Laz / Stamina leech		min	max	none	0
-statX-2	1	items			1	statX_2																											-24	100		0
 str-vit-regen	1	items			1	strength			3	vitality			3	hpregen																	Laz / Combination affix		min	max	none	0
 swingbalance3	1	items			1	item_fasterattackrate			3	item_fastergethitrate																									none	0
 trololololol	1	items			1	item_absorbfire				item_absorblight				item_absorbmagic				item_absorbcold																	none	0

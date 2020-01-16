@@ -81,7 +81,7 @@ No Rune	No	18	r43	2	pierce-pois		3	3	ac/runemaster	32	32	32					pierce-pois		3	3
 Yul Rune	Yul	18	r44	2	pierce-ltng		3	3	ac/runemaster	32	32	32					pierce-ltng		3	3	ac/runemaster	32	32	32					pierce-ltng		3	3	ac/runemaster	32	32	32				0
 Thai Rune	Thai	18	r45	2	pierce-cold		3	3	ac/runemaster	32	32	32					pierce-cold		3	3	ac/runemaster	32	32	32					pierce-cold		3	3	ac/runemaster	32	32	32				0
 Rha Rune	Rha	18	r46	2	pierce-fire		3	3	ac/runemaster	32	32	32					pierce-fire		3	3	ac/runemaster	32	32	32					pierce-fire		3	3	ac/runemaster	32	32	32				0
-Xar Rune	Xar	18	r47	2	pierce-fcl		2	2	ac/runemaster	32	32	32					pierce-fcl		2	2	ac/runemaster	32	32	32					pierce-fcl		2	2	ac/runemaster	32	32	32				0
+Xar Rune	Xar	18	r47	2	pierce-all		2	2	ac/runemaster	32	32	32					pierce-all		2	2	ac/runemaster	32	32	32					pierce-all		2	2	ac/runemaster	32	32	32				0
 Nih Rune	Nih	18	r48	2	skill-dur		10	10	ac/runemaster	32	32	32					skill-dur		10	10	ac/runemaster	32	32	32					skill-dur		10	10	ac/runemaster	32	32	32				0
 Lai Rune	Lai	18	r49	2	res-all		10	10	ac/runemaster	32	32	32					res-all		10	10	ac/runemaster	32	32	32					res-all		10	10	ac/runemaster	32	32	32				0
 On Rune	On	18	r50	2	hp%-mp%		3	3	ac/runemaster	32	32	32					hp%-mp%		2	2	ac/runemaster	32	32	32					hp%-mp%		2	2	ac/runemaster	32	32	32				0
