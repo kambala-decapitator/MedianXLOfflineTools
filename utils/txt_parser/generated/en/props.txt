@@ -322,7 +322,7 @@
 375	0	15										31	246	0				15	desc_top
 376	50	8							Slows Melee Target by	Slows Melee Target by		2	82	2					item_slow_offweapon
 377	0	15										31	3	0				15	desc_bottom
-378	24	7											246						statX_2
+378	0	15										31	238	0				15	desc_less_top
 379	0	5										3		0					deathlord_penalty
 380	0	8							Bonus Damage to Bloodlust	Bonus Damage to Bloodlust		4	154	1					passive_bloodlust_dmgpct
 381	0	8							Bonus Elemental Damage to Bloodlust	Bonus Elemental Damage to Bloodlust		4	154	1					passive_bloodlust_elempct
@@ -354,6 +354,7 @@
 414	50	9							Bonus to Summoned Edyrem Life	Bonus to Summoned Edyrem Life		4	133	1					skill_edyrem_hp_percent
 417	0	16																5	ele_divisor
 418	0	2							\orange;Can Be Upgraded with Black Road Challenge	\orange;Can Be Upgraded with Black Road Challenge		3	230	0					item_needschallenged
+421	0	4																	scosglen_check
 430	0	8							to All Skills when using an Apple	to All Skills when using an Apple		1	55	1					skill_paganheart_synergy
 431	50	9							Bonus to Poison Skill Duration	Bonus to Poison Skill Duration		4	154	1					skill_poison_dur
 439	0	8							Life when Struck by an Enemy	Life when Struck by an Enemy		1	19	1					item_healwhenstruck

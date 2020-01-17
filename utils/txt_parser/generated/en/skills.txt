@@ -81,7 +81,7 @@
 79	Immolation Bomb	-1	0	0	0	65
 80	Raise Skeletal Mage	-1	3	3	3	28
 81	Poison Flash	-1	2	1	2	70
-82	Boneyard	-1	2	3	1	116
+82	Boneyard	-1	2	1	1	116
 83	Totembound Guardian	-1	0	0	0	158
 84		-1				
 85		-1				
@@ -154,7 +154,7 @@
 152		-1				
 153	Nova Bomb	-1	0	0	0	90
 154	Immolation Bomb	-1	0	0	0	65
-155	Cluster Bomb	-1	0	0	0	88
+155	Cluster Bomb	-1	0	0	0	10
 156		-1				
 157		-1				
 158		-1				
@@ -249,7 +249,7 @@
 247		-1				
 248	Time Freeze	-1	0	0	0	0
 249		-1				
-250	Pestilence	2	2	5	1	122
+250	Pestilence	2	2	4	1	122
 251		-1				
 252		-1				
 253		-1				
@@ -261,7 +261,7 @@
 259		-1				
 260		-1				
 261		-1				
-262	Funeral Pyre	-1	2	1	1	118
+262	Funeral Pyre	-1	0	0	0	125
 263	Punisher	-1	0	0	0	69
 264		-1				
 265		-1				
@@ -489,7 +489,7 @@
 487	Respawner	-1	0	0	0	0
 488	Glacial Nova	-1	0	0	0	36
 489	Stormpike	-1	0	0	0	0
-490		-1				
+490	Werebear Morph	-1	1	1	1	58
 491		-1				
 492	Arrow	-1	0	0	0	0
 493		-1				
@@ -757,7 +757,7 @@
 755	Thunder Wave	-1	0	0	0	0
 756	Moon Queen	-1	1	4	2	60
 757	Summon Thunder Bear	-1	0	0	0	155
-758	Timefield	-1	0	0	0	212
+758	Timefield	-1	0	0	0	159
 759		-1				
 760	Warp Crash	-1	0	0	0	0
 761	Summon Shock Beast	-1	0	0	0	213
@@ -875,7 +875,7 @@
 873	Rune of Mana	-1	0	0	0	71
 874	Bear Claw	-1	1	1	3	40
 875		-1				
-876	Purify	-1	0	0	0	10
+876	Purify	-1	0	0	0	9
 877	Powder Keg	-1	0	0	0	208
 878		-1				
 879	Lifeshield	5	3	1	1	76
@@ -896,7 +896,7 @@
 894	Call Henchman	-1	0	0	0	217
 895	Call Blood Golem	-1	0	0	0	216
 896	Call Necrobot	-1	0	0	0	218
-897	Rotting Flesh	-1	2	2	1	114
+897	Rotting Flesh	-1	2	3	1	114
 898	Cyclone	-1	0	0	0	222
 899	Squall Gust	-1	0	0	0	154
 900	Medusa	-1	0	0	0	117
@@ -910,7 +910,7 @@
 908		-1				
 909		-1				
 910		-1				
-911		-1				
+911	Tremor	-1	0	0	0	29
 912	Spike Rush	-1	0	0	0	0
 913	Thorn Field	-1	0	0	0	157
 914	Punisher	-1	0	0	0	69
@@ -980,12 +980,12 @@
 978	Earthquake	-1	0	0	0	0
 979	Amatoxin	-1	0	0	0	0
 980	Stormblast	-1	1	3	1	30
-981	Lionheart	-1	0	0	0	98
+981	Lionheart	-1	0	0	0	0
 982	Spiral Dance	-1	0	0	0	93
 983	Path of Flames	-1	0	0	0	198
 984	Body of the Savior	-1	0	0	0	129
 985	Iceburst	-1	1	3	2	80
-986	Cluster Bomb	-1	0	0	0	88
+986	Cluster Bomb	-1	0	0	0	10
 987	Frozen Orb	-1	0	0	0	228
 988		-1				
 989		-1				
@@ -1025,7 +1025,7 @@
 1023	Mark of the Wild	-1	0	0	0	14
 1024	Phoenix Wave	-1	0	0	0	169
 1025	Splitfire	-1	0	0	0	137
-1026	Stormfront	-1	0	0	0	204
+1026	Stormclash	-1	0	0	0	204
 1027	Static Spike	-1	0	0	0	202
 1028	Avalanche	-1	0	0	0	140
 1029	Churel	-1	0	0	0	98
@@ -1068,7 +1068,7 @@
 1066	Terror Strike	-1	0	0	0	0
 1067		-1				
 1068	Lightning Fury	-1	0	0	0	254
-1069	Limpet Laser	-1	0	0	0	96
+1069	Limpet Laser	-1	0	0	0	15
 1070	Flamefront	-1	1	1	1	62
 1071	Blizzard	-1	3	5	1	46
 1072	Flamestrike	-1	1	3	1	4
@@ -1225,7 +1225,7 @@
 1223		-1				
 1224		-1				
 1225		-1				
-1226		-1				
+1226	Bear Claw	-1	1	1	3	40
 1227		-1				
 1228		-1				
 1229		-1				
@@ -1265,10 +1265,10 @@
 1263	Harbinger	5	1	3	3	116
 1264	Twisted Claw	5	1	5	3	118
 1265	Feed the Pack	5	1	4	3	120
-1266	Boneyard	2	2	3	1	116
-1267	Funeral Pyre	2	2	1	1	118
-1268	Rotting Flesh	2	2	2	1	114
-1269	Nightwalker	2	2	4	1	120
+1266	Boneyard	2	2	1	1	116
+1267	Dream Eater	2	2	5	1	118
+1268	Rotting Flesh	2	2	3	1	114
+1269	Nightwalker	2	2	2	1	120
 1270		-1				
 1271	Vessel of Retribution	3	1	1	2	90
 1272	Euphoria	3	2	2	2	94
@@ -1313,7 +1313,7 @@
 1311	Diseased Cattle	-1	0	0	0	46
 1312	Slicer Blade	-1	0	0	0	0
 1313	Lightning Arena	-1	0	0	0	184
-1314	Pestilence	-1	2	5	1	122
+1314	Pestilence	-1	2	4	1	122
 1315	Barrage	-1	1	2	1	86
 1316	Phalanx	-1	1	3	1	4
 1317	Magic Missiles	-1	2	1	1	36
@@ -1361,7 +1361,7 @@
 1359	Avalanche	-1	0	0	0	140
 1360	Ring of Light	-1	0	0	0	43
 1361	Iron Spiral	-1	1	2	1	78
-1362	Funeral Pyre	-1	2	1	1	118
+1362	Funeral Pyre	-1	0	0	0	125
 1363	Ice Lance	-1	0	0	0	87
 1364		-1				
 1365	Divine Apparition	-1	3	1	1	62
@@ -1391,11 +1391,11 @@
 1389	Ring of Light	-1	0	0	0	43
 1390	Stormcall	-1	2	2	2	78
 1391		-1				
-1392	Harbinger	-1	0	0	0	197
+1392	Harbinger	-1	0	0	0	97
 1393		-1				
-1394	Ultimate Chaos	-1	0	0	0	197
+1394	Ultimate Chaos	-1	0	0	0	104
 1395		-1				
-1396	Voidstar	-1	0	0	0	197
+1396	Voidstar	-1	0	0	0	105
 1397	Ice Bolt Nova	-1	0	0	0	195
 1398	Town Portal	-1	0	0	0	6
 1399		-1				
@@ -1413,7 +1413,7 @@
 1411		-1				
 1412	Respawner	-1	0	0	0	0
 1413	Earthquake	-1	0	0	0	0
-1414	Harbinger	-1	0	0	0	197
+1414	Harbinger	-1	0	0	0	97
 1415	Fire Bolt Nova	-1	0	0	0	219
 1416	\tan;Homing Nova Shot	-1	0	0	0	235
 1417		-1				
@@ -1429,7 +1429,7 @@
 1427		-1				
 1428		-1				
 1429		-1				
-1430	Arcane Swarm	-1	0	0	0	126
+1430	Arcane Swarm	-1	0	0	0	16
 1431		-1				
 1432	Barrage	-1	0	0	0	238
 1433	Parasite	-1	0	0	0	239
@@ -1485,7 +1485,7 @@
 1483	Frigid Sphere	-1	1	1	3	10
 1484	Frigid Sphere	-1	1	1	3	10
 1485		-1				
-1486	Rotting Flesh	-1	2	2	1	114
+1486	Rotting Flesh	-1	2	3	1	114
 1487	Frigid Sphere	-1	1	1	3	10
 1488	Frigid Sphere	-1	1	1	3	10
 1489	Flamestrike	-1	1	3	1	4
@@ -1496,14 +1496,14 @@
 1494		-1				
 1495	Shunpo	-1	0	0	0	189
 1496	Frozen Orb	-1	0	0	0	228
-1497	Pestilence	-1	2	5	1	122
+1497	Pestilence	-1	2	4	1	122
 1498	Fortress	-1	2	3	2	34
 1499	Lightning	-1	2	3	2	26
 1500	Frozen Orb	-1	0	0	0	228
 1501	Shock Flower	-1	0	0	0	188
-1502	Limpet Laser	-1	0	0	0	96
-1503	Fireball Sentry	-1	0	0	0	82
-1504	Cluster Bomb	-1	0	0	0	88
+1502	Limpet Laser	-1	0	0	0	15
+1503	Fireball Sentry	-1	0	0	0	0
+1504	Cluster Bomb	-1	0	0	0	10
 1505	Iceburst	-1	1	3	2	80
 1506	Iceburst	-1	1	3	2	80
 1507	Lightning Arena	-1	0	0	0	184
@@ -1523,7 +1523,7 @@
 1521		5				
 1522		2				
 1523		3				
-1524		1				
+1524	Twilight Havoc	1	3	4	2	128
 1525	Artifice Mastery	6	2	5	3	106
 1526		-1				
 1527	Treewarden Form	-1	0	0	0	0
@@ -1538,3 +1538,43 @@
 1536		-1				
 1537		-1				
 1538		-1				
+1539		-1				
+1540		-1				
+1541		-1				
+1542		-1				
+1543		-1				
+1544		-1				
+1545		-1				
+1546		-1				
+1547		-1				
+1548		-1				
+1549		-1				
+1550		-1				
+1551		-1				
+1552		-1				
+1553		-1				
+1554		-1				
+1555		-1				
+1556		-1				
+1557		-1				
+1558		-1				
+1559		-1				
+1560		-1				
+1561		-1				
+1562		-1				
+1563		-1				
+1564		-1				
+1565		-1				
+1566		-1				
+1567		-1				
+1568	Gift of the Wild	-1	0	0	0	101
+1569		-1				
+1570		-1				
+1571		-1				
+1572		-1				
+1573	Avalanche	-1	0	0	0	140
+1574		-1				
+1575		-1				
+1576		-1				
+1577	Funeral Pyre	-1	0	0	0	125
+1578		-1				

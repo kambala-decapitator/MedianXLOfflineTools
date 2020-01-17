@@ -95,7 +95,7 @@ r43	\purple;No Rune	No	336		3							336		3							336		3
 r44	\purple;Yul Rune	Yul	334		3							334		3							334		3						
 r45	\purple;Thai Rune	Thai	335		3							335		3							335		3						
 r46	\purple;Rha Rune	Rha	333		3							333		3							333		3						
-r47	\purple;Xar Rune	Xar	333,334,335		2							333,334,335		2							333,334,335		2						
+r47	\purple;Xar Rune	Xar	333,334,335,336		2							333,334,335,336		2							333,334,335,336		2						
 r48	\purple;Nih Rune	Nih	409		10							409		10							409		10						
 r49	\purple;Lai Rune	Lai	39,41,43,45		10							39,41,43,45		10							39,41,43,45		10						
 r50	\purple;On Rune	On	76,77		2							76,77		2							76,77		3						

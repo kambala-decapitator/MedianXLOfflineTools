@@ -1420,7 +1420,7 @@
 1418	Aidan's Lament	100	
 1419	Undead Crown	100	UndeadCrown
 1420	Shadowsabre	100	
-1421	Astral Blade	100	
+1421	Cold Blood	100	
 1422	Azurewrath	100	invcrsu
 1423	Bone Scalpel	100	
 1424	Wizardspike	100	
@@ -1516,7 +1516,7 @@
 1514	Etrayu	100	
 1515	The Pathless	100	
 1516	Claw of the Spirit Wolf	100	
-1517	Farsight Globe	80	
+1517	Farsight Globe	40	
 1518	Storm Shard	20	
 1519	The Boulder	1	
 1520	Borgin's Vigil	0	
@@ -1591,7 +1591,7 @@
 1589	Bottled Will-o-Wisp	100	
 1590	Homunculus	100	
 1591	Screen of Viz-Jaq'Taar	100	
-1592	Natalya's Deception	42	invqltz
+1592	Natalya's Deception	55	invqltz
 1593	Guardian of Scosglen	100	
 1594	Mr. Painless	100	
 1595	Askarbydd	100	
@@ -1730,3 +1730,18 @@
 1728	Hand of Rathma	100	invmagicwand
 1729	Implement V.II	125	
 1730	Flameskin	100	
+1731	Throatcutter	90	
+1732	Blackleach Blade	6	
+1733	Blackleach Blade	26	
+1734	Blackleach Blade	47	
+1735	Blackleach Blade	57	
+1736	Vaetia's Wall	100	
+1737	Sash of the Frozen Seas	100	
+1738	Azgar's Crystal	100	invbswu
+1739	Stormpick	100	
+1740	Fire Hydra	100	invqf2
+1741	Astral Blade	100	
+1742	The Defender	100	
+1743	Stormstrike	100	
+1744	Hephasto's Reaver	60	
+1745	Daydreamer	130	

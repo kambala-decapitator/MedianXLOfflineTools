@@ -322,7 +322,7 @@
 375	0	15										31	246	0				15	desc_top
 376	50	8							Замедляет Ближнюю Цель на	Замедляет Ближнюю Цель на		2	82	2					item_slow_offweapon
 377	0	15										31	3	0				15	desc_bottom
-378	24	7											246						statX_2
+378	0	15										31	238	0				15	desc_less_top
 379	0	5										3		0					deathlord_penalty
 380	0	8							\red;к Бонусному Урону от Bloodlust	\red;к Бонусному Урону от Bloodlust		4	154	1					passive_bloodlust_dmgpct
 381	0	8							\red;к Стихийному Урону от Bloodlust	\red;к Стихийному Урону от Bloodlust		4	154	1					passive_bloodlust_elempct
@@ -354,6 +354,7 @@
 414	50	9							Бонус к жизни для призванных Edyrem:	Бонус к жизни для призванных Edyrem:		4	133	1					skill_edyrem_hp_percent
 417	0	16																5	ele_divisor
 418	0	2							\orange;Можно Улучшить Испытанием Черной Дороги	\orange;Можно Улучшить Испытанием Черной Дороги		3	230	0					item_needschallenged
+421	0	4																	scosglen_check
 430	0	8							ко Всем Навыкам при использовании Яблока	ко Всем Навыкам при использовании Яблока		1	55	1					skill_paganheart_synergy
 431	50	9							к Длительности Навыков Яда	к Длительности Навыков Яда		4	154	1					skill_poison_dur
 439	0	8							к Жизни при Получении Удара	к Жизни при Получении Удара		1	19	1					item_healwhenstruck
