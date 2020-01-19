@@ -410,6 +410,19 @@ void DupeScanDialog::scanCharactersInDir(const QString &path)
             keyValue[QLatin1String("stash_gold")] = ci.valueOfStatistic(Enums::CharacterStats::StashGold);
             keyValue[QLatin1String("free_stat_points")] = ci.valueOfStatistic(Enums::CharacterStats::FreeStatPoints);
             keyValue[QLatin1String("sol_used")] = ci.valueOfStatistic(Enums::CharacterStats::SignetsOfLearningEaten);
+            {
+                QVariantList achievements = bci.statsDynamicData.values(Enums::CharacterStats::Achievements);
+                QVariantList achievementsKeyValue;
+                foreach (const QVariant &achievement, achievements)
+                {
+                    QVariantList achievementValues = achievement.toList();
+                    QVariantMap achievementKeyValue;
+                    achievementKeyValue[QLatin1String("layer")] = achievementValues.at(0);
+                    achievementKeyValue[QLatin1String("value")] = achievementValues.at(1);
+                    achievementsKeyValue += achievementKeyValue;
+                }
+                keyValue[QLatin1String("achievements")] = achievementsKeyValue;
+            }
             charDumper->addDataFromMap(QLatin1String("stats"), keyValue);
 
             // quests
