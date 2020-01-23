@@ -496,7 +496,11 @@ void DupeScanDialog::scanCharactersInDir(const QString &path)
                 keyValue[QLatin1String("placement")] = QString("location %1, ").arg(metaEnumFromName<Enums::ItemLocation>("ItemLocationEnum").valueToKey(item->location)) + ItemParser::itemStorageAndCoordinatesString("storage %1, row %2, col %3, equipped in %4", item);
 
                 if (ItemDataBase::isUberCharm(item))
+                {
                     keyValue[QLatin1String("isCharm")] = QLatin1String("1");
+                    keyValue[QLatin1String("isClassCharm")] = QLatin1String(ItemDataBase::isClassCharm(item) ? "1" : "0");
+                    keyValue[QLatin1String("hasTrophy")] = QLatin1String(item->props.find(Enums::ItemProperties::Trophy_ShrineBless_ClassCharmVeterans) != item->props.end() ? "1" : "0");
+                }
                 else
                 {
                     static const QRegExp trophyRegex("^\\[\\d\\d$");
