@@ -235,12 +235,18 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
                     continue;
                 }
 
-                PropertiesMultiMap::iterator blessPropIter = item->props.find(Enums::ItemProperties::Trophy_ShrineBless_ClassCharmVeterans); // impossible to put inside the condition
+                PropertiesMultiMap::iterator blessPropIter = item->props.find(Enums::ItemProperties::ShrineBless); // impossible to put inside the condition
                 if (blessPropIter != item->props.end())
                 {
                     QString newDesc = ItemDataBase::isUberCharm(item) ? (ItemDataBase::isClassCharm(item) ? tr("Veterans") : tr("Trophy'd"))
                                                                       : tr("Blessed");
                     blessPropIter.value()->displayString = QString("[%1]").arg(newDesc);
+                }
+                if (ItemDataBase::isUberCharm(item))
+                {
+                    PropertiesMultiMap::iterator trophyPropIter = item->props.find(Enums::ItemProperties::Trophy);
+                    if (trophyPropIter != item->props.end())
+                        trophyPropIter.value()->displayString = QString("[%1]").arg(tr("Trophy'd"));
                 }
 
                 if (item->quality == Enums::ItemQuality::Set)
