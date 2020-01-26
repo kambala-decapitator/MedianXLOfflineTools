@@ -68,7 +68,7 @@ QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item, bool u
         if (ItemDataBase::Items()->value(socketable->itemType)->types.first() == "rune")
             runes += ItemDataBase::Socketables()->value(socketable->itemType)->letter;
     if (!runes.isEmpty()) // gem-/jewelwords don't have any letters
-        itemDescription += QString("\n%1'%2'").arg(useColor ? ColorsManager::colorStrings().at(ColorsManager::Gold) : QString(), runes);
+        itemDescription += QString("%1'%2'\n").arg(useColor ? ColorsManager::colorStrings().at(ColorsManager::Gold) : QString(), runes);
 
     quint8 clvl = CharacterInfo::instance().basicInfo.level;
     ItemProperty *foo = new ItemProperty;
