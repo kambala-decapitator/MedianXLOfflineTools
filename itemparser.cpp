@@ -247,6 +247,13 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
                     PropertiesMultiMap::iterator trophyPropIter = item->props.find(Enums::ItemProperties::Trophy);
                     if (trophyPropIter != item->props.end())
                         trophyPropIter.value()->displayString = QString("[%1]").arg(tr("Trophy'd"));
+
+                    for (int cubeUpgradeStat = Enums::ItemProperties::CubeUpgrade1; cubeUpgradeStat <= Enums::ItemProperties::CubeUpgrade4; ++cubeUpgradeStat)
+                    {
+                        PropertiesMultiMap::iterator upgradePropIter = item->props.find(cubeUpgradeStat);
+                        if (upgradePropIter != item->props.end())
+                            upgradePropIter.value()->displayString = QString("[%1]").arg(ItemDataBase::isClassCharm(item) ? tr("Veterans") : tr("Upgraded"));
+                    }
                 }
 
                 if (item->quality == Enums::ItemQuality::Set)
