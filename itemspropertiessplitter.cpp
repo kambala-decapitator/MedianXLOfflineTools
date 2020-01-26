@@ -623,6 +623,8 @@ void ItemsPropertiesSplitter::dumpInfo(ItemInfo *item /*= 0*/, bool shouldShowMs
     qDebug() << ItemParser::itemStorageAndCoordinatesString("location %1, row %2, col %3, equipped in %4", item) << "quality" << quality << "code" << item->itemType << "types" << base->types << "image" << base->imageName << "vargfx" << item->variableGraphicIndex << "quest ID" << base->questId;
     if (isSetOrUnique)
         qDebug() << "set/unique ID" << item->setOrUniqueId;
+    for (PropertiesMultiMap::const_iterator it = item->props.constBegin(); it != item->props.constEnd(); ++it)
+        qDebug() << "prop" << it.key() << it.value()->value << it.value()->param;
     qDebug("--------------------");
 
     if (shouldShowMsgBox)
