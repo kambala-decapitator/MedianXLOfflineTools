@@ -266,6 +266,7 @@ public:
         EnhancedDefenceBasedOnClvl,
         MaximumDamageBasedOnClvl = 218,
         ShrineBless = 219,
+        EdyremUpgrade = 270,
         CantDisenchant = 276,
         MysticOrbsEffectDoubled = 296,
         CooldownReduction = 309,

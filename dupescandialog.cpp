@@ -502,8 +502,11 @@ void DupeScanDialog::scanCharactersInDir(const QString &path)
                     keyValue[QLatin1String("hasTrophy")] = QLatin1String((item->props.find(Enums::ItemProperties::Trophy) != item->props.end()
                       || item->props.find(Enums::ItemProperties::ShrineBless) != item->props.end()) ? "1" : "0");
 
+                    QList<int> upgradeProps = QList<int>() << Enums::ItemProperties::EdyremUpgrade;
                     for (int cubeUpgradeStat = Enums::ItemProperties::CubeUpgrade1; cubeUpgradeStat <= Enums::ItemProperties::CubeUpgrade4; ++cubeUpgradeStat)
-                        if (item->props.find(cubeUpgradeStat) != item->props.end())
+                        upgradeProps << cubeUpgradeStat;
+                    foreach (int upgradeProp, upgradeProps)
+                        if (item->props.find(upgradeProp) != item->props.end())
                             keyValue[QLatin1String("isUpgraded")] = QLatin1String("1");
                 }
                 else
