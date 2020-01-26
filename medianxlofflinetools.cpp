@@ -1520,7 +1520,7 @@ void MedianXLOfflineTools::createQuestsGroupBoxLayout()
 {
     _questsGroupBox = new QGroupBox(tr("Quests"), this);
 
-    QList<int> questKeys = QList<int>() << Enums::Quests::DenOfEvil << Enums::Quests::Radament << Enums::Quests::Izual << Enums::Quests::LamEsensTome << Enums::Quests::GoldenBird;
+    QList<int> questKeys = QList<int>() << Enums::Quests::DenOfEvil << Enums::Quests::Radament << Enums::Quests::Izual << Enums::Quests::LamEsensTome << Enums::Quests::GoldenBird << Enums::Quests::Anya;
     QStringList difficulites = QStringList() << tr("Hatred") << tr("Terror") << tr("Destruction");
     foreach (int quest, questKeys)
     {
@@ -1534,12 +1534,13 @@ void MedianXLOfflineTools::createQuestsGroupBoxLayout()
 
     QString rewardFormat = tr("Reward: %1", "tooltip for quest label");
 
-    QLabel *doeLabel = new QLabel(tr("Den of Evil")), *radamentLabel = new QLabel(tr("Radament")), *izualLabel = new QLabel(tr("Izual")), *lamEsensTomeLabel = new QLabel(tr("Lam Esen's Tome")), *goldenBirdLabel = new QLabel(tr("Golden Bird"));
+    QLabel *doeLabel = new QLabel(tr("Den of Evil")), *radamentLabel = new QLabel(tr("Radament")), *izualLabel = new QLabel(tr("Izual")), *lamEsensTomeLabel = new QLabel(tr("Lam Esen's Tome")), *goldenBirdLabel = new QLabel(tr("Golden Bird")), *anyaLabel = new QLabel(tr("Malah's Scroll"));
     doeLabel->setStatusTip(rewardFormat.arg(tr("%n free skill point(s)", 0, 1)));
     radamentLabel->setStatusTip(rewardFormat.arg(tr("%n free skill point(s)", 0, 1)));
     izualLabel->setStatusTip(rewardFormat.arg(tr("%n free skill point(s)", 0, 2)));
     lamEsensTomeLabel->setStatusTip(rewardFormat.arg(tr("%n free stat point(s)", 0, kStatPointsPerLamEsensTome)));
     goldenBirdLabel->setStatusTip(rewardFormat.arg(tr("'+50 to Life' potion")));
+    anyaLabel->setStatusTip(rewardFormat.arg(tr("'+10% to Elemental Resistances' scroll")));
 
     QGridLayout *gridLayout = new QGridLayout(_questsGroupBox);
     gridLayout->addWidget(doeLabel, 0, 0);
@@ -1547,6 +1548,7 @@ void MedianXLOfflineTools::createQuestsGroupBoxLayout()
     gridLayout->addWidget(izualLabel, 2, 0);
     gridLayout->addWidget(lamEsensTomeLabel, 4, 0);
     gridLayout->addWidget(goldenBirdLabel, 5, 0);
+    gridLayout->addWidget(anyaLabel, 6, 0);
 
     const int lineRow = 3;
     for (int i = 0; i < questKeys.size(); ++i)
@@ -1947,6 +1949,7 @@ bool MedianXLOfflineTools::processSaveFile()
         charInfo.questsInfo.goldenBird   += static_cast<bool>(_saveFileContents.at(baseOffset + Quests::GoldenBird)   &  Quests::IsCompleted);
         charInfo.questsInfo.lamEsensTome += static_cast<bool>(_saveFileContents.at(baseOffset + Quests::LamEsensTome) &  Quests::IsCompleted);
         charInfo.questsInfo.izual        += static_cast<bool>(_saveFileContents.at(baseOffset + Quests::Izual)        &  Quests::IsCompleted);
+        charInfo.questsInfo.rescueAnya   += static_cast<bool>(_saveFileContents.at(baseOffset + Quests::Anya)         &  (Quests::IsCompleted | Quests::IsTaskDone));
     }
 
     // WP
@@ -2609,6 +2612,7 @@ void MedianXLOfflineTools::updateUI()
         _checkboxesQuestsHash[Enums::Quests::Izual]       [i]->setChecked(charInfo.questsInfo.izual       .at(i));
         _checkboxesQuestsHash[Enums::Quests::LamEsensTome][i]->setChecked(charInfo.questsInfo.lamEsensTome.at(i));
         _checkboxesQuestsHash[Enums::Quests::GoldenBird]  [i]->setChecked(charInfo.questsInfo.goldenBird  .at(i));
+        _checkboxesQuestsHash[Enums::Quests::Anya]        [i]->setChecked(charInfo.questsInfo.rescueAnya  .at(i));
     }
 
     bool hasItems = !charInfo.items.character.isEmpty();

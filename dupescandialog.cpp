@@ -432,6 +432,7 @@ void DupeScanDialog::scanCharactersInDir(const QString &path)
             keyValue[QLatin1String("goldenBird")] = boolListToString(ci.questsInfo.goldenBird);
             keyValue[QLatin1String("lamEsensTome")] = boolListToString(ci.questsInfo.lamEsensTome);
             keyValue[QLatin1String("izual")] = boolListToString(ci.questsInfo.izual);
+            keyValue[QLatin1String("anya")] = boolListToString(ci.questsInfo.rescueAnya);
             charDumper->addDataFromMap(QLatin1String("quests"), keyValue);
 
             // merc

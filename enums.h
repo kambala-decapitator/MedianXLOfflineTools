@@ -142,13 +142,14 @@ public:
         LamEsensTome = 0x22,
         Izual = 0x32,
         Act5Enabled = 0x38,
+        Anya = 0x4A,
         Nihlathak = 0x4C
     };
 
     enum
     {
-        IsCompleted = 0x1,
-        IsTaskDone = 0x2,
+        IsCompleted = 1 << 0,
+        IsTaskDone = 1 << 1,
         Size = 0x60
     };
 };

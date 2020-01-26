@@ -48,15 +48,16 @@ public:
 
     struct
     {
-        QList<bool> denOfEvil, radament, goldenBird, lamEsensTome, izual; // size == 3
+        QList<bool> denOfEvil, radament, goldenBird, lamEsensTome, izual, rescueAnya; // size == 3
 
         quint8 denOfEvilQuestsCompleted()    const { return sumOfList(denOfEvil);    }
         quint8 radamentQuestsCompleted()     const { return sumOfList(radament);     }
         quint8 goldenBirdQuestsCompleted()   const { return sumOfList(goldenBird);   }
         quint8 lamEsensTomeQuestsCompleted() const { return sumOfList(lamEsensTome); }
         quint8 izualQuestsCompleted()        const { return sumOfList(izual);        }
+        quint8 rescueAnyaQuestsCompleted()   const { return sumOfList(rescueAnya);   }
 
-        void clear() { denOfEvil.clear(); radament.clear(); goldenBird.clear(); lamEsensTome.clear(); izual.clear(); }
+        void clear() { denOfEvil.clear(); radament.clear(); goldenBird.clear(); lamEsensTome.clear(); izual.clear(); rescueAnya.clear(); }
 
     private:
         quint8 sumOfList(const QList<bool> &list) const { return std::accumulate(list.constBegin(), list.constEnd(), quint8(0)); }
