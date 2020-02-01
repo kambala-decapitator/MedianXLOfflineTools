@@ -27,17 +27,17 @@ const QString &ItemParser::kEnhancedDamageFormat()
 }
 
 
-QString ItemParser::parseItemsToBuffer(quint16 itemsTotal, QDataStream &inputDataStream, const QByteArray &bytes, const QString &corruptedItemFormat, ItemsList *itemsBuffer, bool isPlugyStash /*= false*/)
+QString ItemParser::parseItemsToBuffer(quint16 itemsTotal, QDataStream &inputDataStream, const QByteArray &bytes, const QString &corruptedItemFormat, ItemsList *itemsBuffer, quint32 plugyPage /*= 0*/)
 {
     QString corruptedItemsString;
     for (quint16 i = 0; i < itemsTotal; ++i)
     {
-        if (ItemInfo *item = ItemParser::parseItem(inputDataStream, bytes, isPlugyStash && i == itemsTotal - 1))
+        if (ItemInfo *item = ItemParser::parseItem(inputDataStream, bytes, plugyPage != 0 && i == itemsTotal - 1))
         {
             itemsBuffer->append(item);
 
             if (item->status != ItemInfo::Ok)
-                corruptedItemsString += itemStorageAndCoordinatesString(corruptedItemFormat, item) + "\n";
+                corruptedItemsString += itemStorageAndCoordinatesString(corruptedItemFormat, item, plugyPage) + "\n";
         }
     }
     if (itemsBuffer->size() != itemsTotal)
@@ -496,9 +496,9 @@ void ItemParser::writeItems(const ItemsList &items, QDataStream &ds)
     }
 }
 
-QString ItemParser::itemStorageAndCoordinatesString(const QString &text, ItemInfo *item)
+QString ItemParser::itemStorageAndCoordinatesString(const QString &text, ItemInfo *item, quint32 plugyPage /*= 0*/)
 {
-    return text.arg(ItemsViewerDialog::tabNameAtIndex(ItemsViewerDialog::tabIndexFromItemStorage(item->storage))).arg(item->row + 1).arg(item->column + 1).arg(item->plugyPage ? item->plugyPage : item->whereEquipped);
+    return text.arg(ItemsViewerDialog::tabNameAtIndex(ItemsViewerDialog::tabIndexFromItemStorage(item->storage))).arg(item->row + 1).arg(item->column + 1).arg(item->plugyPage ? item->plugyPage : (plugyPage ? plugyPage : item->whereEquipped));
 }
 
 bool ItemParser::itemTypesInheritFromType(const QList<QByteArray> &itemTypes, const QByteArray &allowedItemType)

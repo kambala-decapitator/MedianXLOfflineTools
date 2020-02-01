@@ -2457,7 +2457,7 @@ void MedianXLOfflineTools::processPlugyStash(QHash<Enums::ItemStorage::ItemStora
         quint16 itemsOnPage;
         inputDataStream >> itemsOnPage;
         ItemsList plugyItems;
-        corruptedItems += ItemParser::parseItemsToBuffer(itemsOnPage, inputDataStream, bytes, tr("Corrupted item detected in %1 on page %4 at (%2,%3)"), &plugyItems, true);
+        corruptedItems += ItemParser::parseItemsToBuffer(itemsOnPage, inputDataStream, bytes, tr("Corrupted item detected in %1 on page %4 at (%2,%3)"), &plugyItems, page);
         foreach (ItemInfo *item, plugyItems)
         {
             item->storage = plugyStorage;

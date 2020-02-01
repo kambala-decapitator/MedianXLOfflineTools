@@ -18,7 +18,7 @@ public:
     static const int kBeltMaxRows, kBeltMaxColumns, kInscribedNameCharacterLength;
     static const QString &kEnhancedDamageFormat(); // stupid lupdate
 
-    static QString parseItemsToBuffer(quint16 itemsTotal, QDataStream &inputDataStream, const QByteArray &bytes, const QString &corruptedItemFormat, ItemsList *itemsBuffer, bool isPlugyStash = false);
+    static QString parseItemsToBuffer(quint16 itemsTotal, QDataStream &inputDataStream, const QByteArray &bytes, const QString &corruptedItemFormat, ItemsList *itemsBuffer, quint32 plugyPage = 0);
     static ItemInfo *parseItem(QDataStream &inputDataStream, const QByteArray &bytes, bool isLastItemOnPlugyPage = false);
     static PropertiesMultiMap parseItemProperties(ReverseBitReader &bitReader, ItemInfo::ParsingStatus *status);
     static void convertParamsInMagicDamageString(ItemProperty *prop, ItemPropertyTxt *txtProp);
@@ -29,7 +29,7 @@ public:
     static bool itemTypesInheritFromTypes(const QList<QByteArray> &itemTypes, const QList<QByteArray> &allowedItemTypes);
 
     static void writeItems(const ItemsList &items, QDataStream &ds);
-    static QString itemStorageAndCoordinatesString(const QString &text, ItemInfo *item);
+    static QString itemStorageAndCoordinatesString(const QString &text, ItemInfo *item, quint32 plugyPage = 0);
 
 private:
     static QString mysticOrbReadableProperty(const QString &fullDescription);
