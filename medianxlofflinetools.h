@@ -187,6 +187,7 @@ private:
     void createMercGroupBoxLayout();
     void createStatsGroupBoxLayout();
     void createQuestsGroupBoxLayout();
+    void configureQuestLabel(QLabel *l, const QString &reward, const QString &questInfo);
 
     void loadSettings();
     void saveSettings() const;

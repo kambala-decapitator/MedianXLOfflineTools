@@ -1526,15 +1526,13 @@ void MedianXLOfflineTools::createQuestsGroupBoxLayout()
         }
     }
 
-    QString rewardFormat = tr("Reward: %1", "tooltip for quest label");
-
     QLabel *doeLabel = new QLabel(tr("Den of Evil")), *radamentLabel = new QLabel(tr("Radament")), *izualLabel = new QLabel(tr("Izual")), *lamEsensTomeLabel = new QLabel(tr("Lam Esen's Tome")), *goldenBirdLabel = new QLabel(tr("Golden Bird")), *anyaLabel = new QLabel(tr("Malah's Scroll"));
-    doeLabel->setStatusTip(rewardFormat.arg(tr("%n free skill point(s)", 0, 1)));
-    radamentLabel->setStatusTip(rewardFormat.arg(tr("%n free skill point(s)", 0, 1)));
-    izualLabel->setStatusTip(rewardFormat.arg(tr("%n free skill point(s)", 0, 2)));
-    lamEsensTomeLabel->setStatusTip(rewardFormat.arg(tr("%n free stat point(s)", 0, kStatPointsPerLamEsensTome)));
-    goldenBirdLabel->setStatusTip(rewardFormat.arg(tr("'+50 to Life' potion")));
-    anyaLabel->setStatusTip(rewardFormat.arg(tr("'+10% to Elemental Resistances' scroll")));
+    configureQuestLabel(doeLabel, tr("%n free skill point(s)", 0, 1), QLatin1String("A1Q1"));
+    configureQuestLabel(radamentLabel, tr("%n free skill point(s)", 0, 1), QLatin1String("A2Q1"));
+    configureQuestLabel(izualLabel, tr("%n free skill point(s)", 0, 2), QLatin1String("A4Q1"));
+    configureQuestLabel(lamEsensTomeLabel, tr("%n free stat point(s)", 0, kStatPointsPerLamEsensTome), QLatin1String("A3Q4"));
+    configureQuestLabel(goldenBirdLabel, tr("'+50 to Life' potion"), QLatin1String("A3Q1"));
+    configureQuestLabel(anyaLabel, tr("'+10% to Elemental Resistances' scroll"), QLatin1String("A5Q3"));
 
     QGridLayout *gridLayout = new QGridLayout(_questsGroupBox);
     gridLayout->addWidget(doeLabel, 0, 0);
@@ -1552,6 +1550,12 @@ void MedianXLOfflineTools::createQuestsGroupBoxLayout()
     QFrame *line = new QFrame(_questsGroupBox);
     line->setFrameShape(QFrame::HLine);
     gridLayout->addWidget(line, lineRow, 0, 1, 4);
+}
+
+void MedianXLOfflineTools::configureQuestLabel(QLabel *l, const QString &reward, const QString &questInfo)
+{
+    l->setStatusTip(tr("Reward: %1", "tooltip for quest label").arg(reward));
+    l->setToolTip(questInfo);
 }
 
 void MedianXLOfflineTools::loadSettings()
@@ -1943,7 +1947,7 @@ bool MedianXLOfflineTools::processSaveFile()
         charInfo.questsInfo.goldenBird   += static_cast<bool>(_saveFileContents.at(baseOffset + Quests::GoldenBird)   &  Quests::IsCompleted);
         charInfo.questsInfo.lamEsensTome += static_cast<bool>(_saveFileContents.at(baseOffset + Quests::LamEsensTome) &  Quests::IsCompleted);
         charInfo.questsInfo.izual        += static_cast<bool>(_saveFileContents.at(baseOffset + Quests::Izual)        &  Quests::IsCompleted);
-        charInfo.questsInfo.rescueAnya   += static_cast<bool>(_saveFileContents.at(baseOffset + Quests::Anya)         &  (Quests::IsCompleted | Quests::IsTaskDone));
+        charInfo.questsInfo.rescueAnya   += static_cast<bool>(_saveFileContents.at(baseOffset + Quests::Anya)         & (Quests::IsCompleted | Quests::IsTaskDone));
     }
 
     // WP
