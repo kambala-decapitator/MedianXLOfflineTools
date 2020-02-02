@@ -1191,15 +1191,9 @@ void MedianXLOfflineTools::checkForUpdate()
     _isManuallyCheckingForUpdate = sender() != 0;
 
     _qnamCheckForUpdate = new QNetworkAccessManager;
-    QNetworkReply *reply = _qnamCheckForUpdate->get(QNetworkRequest(QUrl(kMedianXlServer + "mxlot_version2.txt")));
-    QEventLoop eventLoop;
-    connect(reply, SIGNAL(finished()), &eventLoop, SLOT(quit()));
-    eventLoop.exec();
-    _qnamCheckForUpdate->deleteLater();
-
-    if (!reply->error())
-        displayInfoAboutServerVersion(reply->readAll().trimmed());
-    reply->deleteLater();
+    connect(_qnamCheckForUpdate, SIGNAL(finished(QNetworkReply *)), SLOT(networkReplyCheckForUpdateFinished(QNetworkReply *)));
+    qApp->processEvents(); // prevents UI from freezing
+    _qnamCheckForUpdate->get(QNetworkRequest(QUrl(kMedianXlServer + "mxlot_version2.txt")));
 }
 
 void MedianXLOfflineTools::aboutApp()
@@ -2981,6 +2975,14 @@ bool MedianXLOfflineTools::maybeSave()
         }
     }
     return true;
+}
+
+void MedianXLOfflineTools::networkReplyCheckForUpdateFinished(QNetworkReply *reply)
+{
+    if (!reply->error())
+        displayInfoAboutServerVersion(reply->readAll().trimmed());
+    reply->deleteLater();
+    _qnamCheckForUpdate->deleteLater();
 }
 
 void MedianXLOfflineTools::displayInfoAboutServerVersion(const QByteArray &version)

@@ -74,6 +74,8 @@ private slots:
     void updateFindResults();
     void dupeScanFinished();
 
+    void networkReplyCheckForUpdateFinished(QNetworkReply *reply);
+
     void fileContentsChanged();
     void fileChangeTimerFired();
 
