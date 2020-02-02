@@ -470,6 +470,9 @@ void MedianXLOfflineTools::saveCharacter()
     charInfo.basicInfo.isHardcore = true;
     charInfo.basicInfo.hadDied = false;
 #endif
+#ifndef QT_NO_DEBUG_OUTPUT
+    charInfo.basicInfo.isLadder = !_makeNonLadderCheckbox->isChecked();
+#endif
     char statusValue = tempFileContents.at(Enums::Offsets::Status);
     if (charInfo.basicInfo.hadDied)
         statusValue |= Enums::StatusBits::HadDied;
@@ -1448,11 +1451,22 @@ void MedianXLOfflineTools::createCharacterGroupBoxLayout()
     hbl2->addStretch();
     hbl2->addWidget(ui->resurrectButton);
 
-    _expGroupBox = new ExperienceIndicatorGroupBox(this);
-
     QVBoxLayout *vbl = new QVBoxLayout(ui->characterGroupBox);
     vbl->addLayout(gridLayout);
+
+    _expGroupBox = new ExperienceIndicatorGroupBox(this);
+#ifndef QT_NO_DEBUG_OUTPUT
+    _makeNonLadderCheckbox = new QCheckBox(QLatin1String("Make non-ladder"), this);
+    connect(_makeNonLadderCheckbox, SIGNAL(clicked(bool)), SLOT(modify()));
+
+    QHBoxLayout *hbl = new QHBoxLayout;
+    hbl->addWidget(_expGroupBox);
+    hbl->addWidget(_makeNonLadderCheckbox);
+    vbl->addLayout(hbl);
+#else
     vbl->addWidget(_expGroupBox);
+#endif
+
     vbl->addWidget(ui->hardcoreGroupBox);
 }
 
@@ -2499,6 +2513,10 @@ void MedianXLOfflineTools::clearUI()
     QList<QCheckBox *> checkBoxes = QList<QCheckBox *>() << ui->convertToSoftcoreCheckBox << ui->respecSkillsCheckBox << ui->activateWaypointsCheckBox << ui->deactivateHallsOfPainCheckBox;
     foreach (QList<QCheckBox *> questCheckBoxes, _checkboxesQuestsHash.values())
         checkBoxes << questCheckBoxes;
+#ifndef QT_NO_DEBUG_OUTPUT
+    _makeNonLadderCheckbox->setEnabled(false);
+    checkBoxes << _makeNonLadderCheckbox;
+#endif
     foreach (QCheckBox *checkbox, checkBoxes)
         checkbox->setChecked(false);
 
@@ -2564,6 +2582,10 @@ void MedianXLOfflineTools::updateUI()
     ui->levelSpinBox->setValue(_oldClvl);
 
     updateCharacterExperienceProgressbar(charInfo.valueOfStatistic(Enums::CharacterStats::Experience));
+
+#ifndef QT_NO_DEBUG_OUTPUT
+    _makeNonLadderCheckbox->setEnabled(charInfo.basicInfo.isLadder);
+#endif
 
     setStats();
     recalculateStatPoints();
