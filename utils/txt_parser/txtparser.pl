@@ -212,7 +212,7 @@ my $armorTypes = parsetxt("armor.txt", $itemName=>1, "#code"=>0, $nameStr=>21, w
 my $weaponTypes = parsetxt("weapons.txt", $itemName=>1, "#code"=>0, $nameStr=>5, w=>43, h=>44, type=>2,
                            type2=>3, stackable=>45, rlvl=>30, rstr=>25, rdex=>26, image=>50, quest=>67,
                            '1hMinDmg'=>12, '1hMaxDmg'=>13, '2hMinDmg'=>16, '2hMaxDmg'=>17, throwMinDmg=>18, throwMaxDmg=>19,
-                           '1h2h'=>14, '2h'=>15);
+                           '1h2h'=>14, '2h'=>15, strBonus=>23, dexBonus=>24);
 my $miscTypes = parsetxt("misc.txt", $itemName=>0, "#code"=>5, $nameStr=>7, $spellDescStr=>69,
                          w=>24, h=>25, type=>8, type2=>9, stackable=>48, rlvl=>13, image=>30, quest=>52);
 &tblExpandHash($_, $itemName) for ($armorTypes, $weaponTypes, $miscTypes);
@@ -359,7 +359,7 @@ close $out;
 
 open $out, ">", "$prefix/items.txt";
 print $out "#code\tname\t$spellDescStr\twidth\theight\tgentype\tstackable\trlvl\trstr\trdex\t1h2h\t2h\t";
-print $out "1hMinDmg\t1hMaxDmg\t2hMinDmg\t2hMaxDmg\tthrowMinDmg\tthrowMaxDmg\timage\tquest\t";
+print $out "1hMinDmg\t1hMaxDmg\t2hMinDmg\t2hMaxDmg\tthrowMinDmg\tthrowMaxDmg\timage\tquest\tstrBonus\tdexBonus\t";
 print $out "type\tsockettype\tclass\n"; # these columns are treated specially
 my $itemType = 0;
 for my $ref ($armorTypes, $weaponTypes, $miscTypes)
@@ -375,9 +375,10 @@ for my $ref ($armorTypes, $weaponTypes, $miscTypes)
             (defined $hashRef->{stackable} and $hashRef->{stackable} > 0 ? $hashRef->{stackable} : ''),
             ($hashRef->{rlvl} // 0), ($hashRef->{rstr} // 0), ($hashRef->{rdex} // 0),
             ($hashRef->{'1h2h'} // ''), ($hashRef->{'2h'} // '');
-        printf $out "%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t", ($hashRef->{'1hMinDmg'} // ''), ($hashRef->{'1hMaxDmg'} // ''),
+        printf $out "%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t", ($hashRef->{'1hMinDmg'} // ''), ($hashRef->{'1hMaxDmg'} // ''),
             ($hashRef->{'2hMinDmg'} // ''), ($hashRef->{'2hMaxDmg'} // ''), ($hashRef->{throwMinDmg} // ''),
-            ($hashRef->{throwMaxDmg} // ''), $hashRef->{image}, ($hashRef->{quest} // '');
+            ($hashRef->{throwMaxDmg} // ''), $hashRef->{image}, ($hashRef->{quest} // ''),
+            ($hashRef->{strBonus} // ''), ($hashRef->{dexBonus} // '');
 
         print $out $type;
         print $out ",", $hashRef->{type2} if defined $hashRef->{type2};

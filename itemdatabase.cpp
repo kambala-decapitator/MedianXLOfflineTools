@@ -89,9 +89,11 @@ QHash<QByteArray, ItemBase *> *ItemDataBase::Items()
             item->maxThrowDmg = data.at(17).toUShort();
             item->imageName = data.at(18);
             item->questId = data.at(19).toUShort();
-            item->types = data.at(20).split(',');
-            item->socketableType = data.at(21).isEmpty() ? -1 : data.at(21).toShort();
-            item->classCode = data.at(22).toShort();
+            item->strBonus = data.at(20).toUShort();
+            item->dexBonus = data.at(21).toUShort();
+            item->types = data.at(22).split(',');
+            item->socketableType = data.at(23).isEmpty() ? -1 : data.at(23).toShort();
+            item->classCode = data.at(24).toShort();
             allItems[data.at(0)] = item;
         }
     }

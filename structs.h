@@ -174,6 +174,7 @@ struct ItemBase
     quint16 minThrowDmg, maxThrowDmg;
     QByteArray imageName;
     quint8 questId; // non-zero value means that it's a quest item
+    quint8 strBonus, dexBonus;
     QList<QByteArray> types;
     qint8 socketableType, classCode;
 };

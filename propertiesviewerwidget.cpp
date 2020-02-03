@@ -311,6 +311,9 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
         itemDescription += htmlStringFromDiabloColorString(qApp->translate(kTranslationContext, "Required Level: %1").arg(actualRlvl), clvl < actualRlvl ? ColorsManager::Red : ColorsManager::White) + kHtmlLineBreak;
     delete foo;
 
+    foreach (const QString &bonus, PropertiesDisplayManager::weaponDamageBonuses(itemBase))
+        itemDescription += bonus + kHtmlLineBreak;
+
     // add '+50% damage to undead' if item type matches
     bool shouldAddDamageToUndeadInTheBottom = false;
     if (ItemParser::itemTypesInheritFromTypes(itemBase->types, PropertiesDisplayManager::kDamageToUndeadTypes))

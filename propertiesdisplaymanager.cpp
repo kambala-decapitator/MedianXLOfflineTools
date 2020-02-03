@@ -205,6 +205,9 @@ QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item, bool u
         itemDescription += "\n" + tr("Required Level: %1").arg(actualRlvl);
     delete foo;
 
+    foreach (const QString &bonus, PropertiesDisplayManager::weaponDamageBonuses(itemBase))
+        itemDescription += "\n" + bonus;
+
     // add '+50% damage to undead' if item type matches
     bool shouldAddDamageToUndeadInTheBottom = false;
     if (ItemParser::itemTypesInheritFromTypes(itemBase->types, kDamageToUndeadTypes))
@@ -662,4 +665,19 @@ PropertiesMultiMap PropertiesDisplayManager::collectSetFixedProps(const QList<Se
         }
     }
     return setFixedProps;
+}
+
+QStringList PropertiesDisplayManager::weaponDamageBonuses(ItemBase *itemBase)
+{
+    if (itemBase->genericType != Enums::ItemTypeGeneric::Weapon)
+        return QStringList();
+
+    const CharacterInfo &charInfo = CharacterInfo::instance();
+    QStringList bonuses;
+    bonuses.reserve(2);
+    if (itemBase->strBonus > 0)
+        bonuses += ItemDataBase::StringTable()->value(10104) + QString(" %1%").arg(charInfo.valueOfStatistic(Enums::CharacterStats::Strength) * itemBase->strBonus / 100);
+    if (itemBase->dexBonus > 0)
+        bonuses += ItemDataBase::StringTable()->value(10105) + QString(" %1%").arg(charInfo.valueOfStatistic(Enums::CharacterStats::Dexterity) * itemBase->dexBonus / 100);
+    return bonuses;
 }
