@@ -225,15 +225,7 @@ QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item, bool u
     {
         if (!item->isIdentified)
             itemDescription += "\n" + tr("[Unidentified]");
-
-        QMap<quint8, ItemPropertyDisplay> propsDisplayMap;
-        constructPropertyStrings(allProps, &propsDisplayMap);
-        QMap<quint8, ItemPropertyDisplay>::const_iterator iter = propsDisplayMap.constEnd();
-        while (iter != propsDisplayMap.constBegin())
-        {
-            --iter;
-            itemDescription += "\n" + iter.value().displayString;
-        }
+        itemDescription += propsToString(allProps);
     }
     else if (ItemDataBase::isGenericSocketable(item))
     {
@@ -267,6 +259,49 @@ QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item, bool u
         itemDescription += "\n" + tr("Socketed: (%1), Inserted: (%2)").arg(item->socketsNumber).arg(item->socketablesNumber);
     if (item->isEthereal)
         itemDescription += "\n" + tr("Ethereal (Cannot be Repaired)");
+
+    if (item->quality == Enums::ItemQuality::Set)
+    {
+        SetItemInfo *setItem = ItemDataBase::Sets()->value(item->setOrUniqueId);
+        const FullSetInfo fullSetInfo = ItemDataBase::fullSetInfoForKey(setItem->key);
+
+        if (item->location == Enums::ItemLocation::Equipped || item->location == Enums::ItemLocation::Merc)
+        {
+            // set item properties stored in item (seems that they're not needed)
+            //if (!item->setProps.isEmpty())
+            //    itemDescription += propertiesToHtml(item->setProps, ColorsManager::Green);
+
+            // count equipped set items
+            quint8 setItemsOnCharacter = 1;
+            foreach (ItemInfo *anItem, ItemDataBase::itemsStoredIn(item->storage, item->location))
+                if (anItem != item && anItem->quality == Enums::ItemQuality::Set && fullSetInfo.itemNames.contains(ItemDataBase::Sets()->value(anItem->setOrUniqueId)->itemName))
+                    ++setItemsOnCharacter;
+
+            if (quint8 partialPropsNumber = (setItemsOnCharacter - 1) * 2)
+            {
+                // set item properties from txt
+                PropertiesMultiMap setItemFixedProps = PropertiesDisplayManager::collectSetFixedProps(setItem->fixedProperties, partialPropsNumber);
+                if (!setItemFixedProps.isEmpty())
+                {
+                    QString s = propsToString(setItemFixedProps);
+                    if (!s.isEmpty())
+                        itemDescription += "\n-SET_ITEM-" + s;
+                }
+                qDeleteAll(setItemFixedProps);
+
+                // set properties from txt
+                PropertiesMultiMap setFixedProps = PropertiesDisplayManager::collectSetFixedProps(fullSetInfo.partialSetProperties, partialPropsNumber);
+                if (setItemsOnCharacter == fullSetInfo.itemNames.size())
+                    PropertiesDisplayManager::addTemporaryPropertiesAndDelete(&setFixedProps, PropertiesDisplayManager::collectSetFixedProps(fullSetInfo.fullSetProperties));
+
+                QString s = propsToString(setFixedProps);
+                if (!s.isEmpty())
+                    itemDescription += "\n-SET-" + s;
+
+                qDeleteAll(setFixedProps);
+            }
+        }
+    }
 
     qDeleteAll(allProps);
     return itemDescription;
@@ -665,6 +700,20 @@ PropertiesMultiMap PropertiesDisplayManager::collectSetFixedProps(const QList<Se
         }
     }
     return setFixedProps;
+}
+
+QString PropertiesDisplayManager::propsToString(const PropertiesMultiMap &setProps)
+{
+    QString s;
+    QMap<quint8, ItemPropertyDisplay> propsDisplayMap;
+    constructPropertyStrings(setProps, &propsDisplayMap);
+    QMap<quint8, ItemPropertyDisplay>::const_iterator iter = propsDisplayMap.constEnd();
+    while (iter != propsDisplayMap.constBegin())
+    {
+        --iter;
+        s += "\n" + iter.value().displayString;
+    }
+    return s;
 }
 
 QStringList PropertiesDisplayManager::weaponDamageBonuses(ItemBase *itemBase)

@@ -32,6 +32,7 @@ public:
 
     static void addChallengeNamesToClassCharm(PropertiesMultiMap::iterator &iter);
     static PropertiesMultiMap collectSetFixedProps(const QList<SetFixedProperty> &setProps, quint8 propsNumber = 0);
+    static QString propsToString(const PropertiesMultiMap &setProps);
 
     static QStringList weaponDamageBonuses(ItemBase *itemBase);
 
