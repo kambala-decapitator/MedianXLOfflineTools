@@ -50,8 +50,8 @@
 
 [B]Загрузки[/B]:
 [LIST]
-[*][I]Windows[/I] (XP SP3 и позже): [URL]http://mxl.vn.cz/kambala/MedianXLOfflineTools_0.5.4.7z[/URL] (если не запускается, установите MSVC++ 2015 Redistributable [FONT=Courier New]vc_redist.x[B]86[/B].exe[/FONT] с [URL='https://www.mediafire.com/?84qc8d5dy3cd9f6']Mediafire[/URL] или с [URL='https://www.microsoft.com/en-us/download/details.aspx?id=52685']сайта Microsoft[/URL])
-[*][I]macOS[/I] (10.9 и позже, Intel 64bit): [URL]http://mxl.vn.cz/kambala/MedianXLOfflineTools_mac_0.5.4.txz[/URL]
+[*][I]Windows[/I] (XP SP3 и позже): [URL]http://mxl.vn.cz/kambala/MedianXLOfflineTools_0.5.5.7z[/URL] (если не запускается, установите MSVC++ 2015 Redistributable [FONT=Courier New]vc_redist.x[B]86[/B].exe[/FONT] с [URL='https://www.mediafire.com/?84qc8d5dy3cd9f6']Mediafire[/URL] или с [URL='https://www.microsoft.com/en-us/download/details.aspx?id=52685']сайта Microsoft[/URL])
+[*][I]macOS[/I] (10.9 и позже, Intel 64bit): [URL]http://mxl.vn.cz/kambala/MedianXLOfflineTools_mac_0.5.5.txz[/URL]
 [/LIST]
 
 [spoiler="Mini-FAQ"]В: Где находятся сохранения Сигмы?
@@ -66,7 +66,7 @@
 [*]краткий ответ: переместите [B]содержимое папки 'resources/data', а не саму папку 'data'[/B], в 'MedianXLOfflineTools.app/Contents/Resources/data'
 [*]длинный 'ручной' ответ: откройте в распакованную папку, внутри откройте папку 'resources', Выбрать всё (Cmd+A), Копировать (Cmd+C), найдите MedianXLOfflineTools.app, нажмите на него правой кнопкой (или Контрол и левой), выберите «Показать содержимое пакета», откройте папку Contents/Resources/data, Вставить (Cmd+V) с заменой
 [*]длинный 'терминальный' ответ: откройте Терминал, cd в папку, в которую вы распаковали данные мода (в ней должна находиться папка 'resources') и используйте следующий скрипт:
-[code]APP_PATH = "/Applications/MedianXLOfflineTools.app" # поместите в кавычки реальный путь, это лишь пример
+[code]APP_PATH="/Applications/MedianXLOfflineTools.app" # поместите в кавычки реальный путь, это лишь пример
 cp -R resources/data/* "${APP_PATH}/Contents/resources/data"[/code]
 [/LIST][/LIST]
 
@@ -117,12 +117,24 @@ cp -R resources/data/* "${APP_PATH}/Contents/resources/data"[/code]
 
 [B]История версий:[/B]
 
+[I]v0.5.5 (11.04.2020)[/I]
+[LIST]
+[*][+] добавлены данные от Сигмы 1.5
+[*][+] добавлено отображение статуса квестов о спасении Ани (A5Q3)
+[*][+] добавлено отображение локации квестов во всплывающей подсказке
+[*][+] добавлено отображение бонуса урону от силы/ловкости на оружии
+[*][ф] исправлено закрытие приложения при нажатии на ОК в диалоге обновления
+[*][ф] исправлено распознавание трофеев и улучшений на талисманах
+[*][ф] убрано упоминание о Печатях Навыка
+[*][ф] максимальное количество Печатей Обучения больше не отображается как Макс+1
+[/LIST]
+[spoiler="предыдущие версии"]
 [I]v0.5.4 (20.10.2019)[/I]
 [LIST]
 [*][ф] исправлен расчёт максимального количества доступных атрибутов для Сигмы 1.3 (Том Лам Эзена)
 [*][ф] исправлено падение программы при наличии одной из Ног Вирта на вкладке с предметами
 [/LIST]
-[spoiler="предыдущие версии"]
+
 [I]v0.5.3 (09.09.2019)[/I]
 [LIST]
 [*][+] копирование BBCode предмета для оф. форума: контекстное меню и кнопка для совокупности предметов

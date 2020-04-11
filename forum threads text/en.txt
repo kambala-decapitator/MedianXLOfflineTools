@@ -34,8 +34,8 @@ I hope I provided enough anti-hack protection for an average user. If you manage
 [*]single instance[/list][*]and many others ;)[/list][/spoil]
 
 [b]Downloads[/b]:
-[list][*][i]Windows[/i] (XP SP3 and later): http://mxl.vn.cz/kambala/MedianXLOfflineTools_0.5.4.7z (if it doesn't launch, install MSVC++ 2015 Redistributable vc_redist.x[c]86[/c].exe from [url=https://www.mediafire.com/?84qc8d5dy3cd9f6]Mediafire[/url] or from [url=https://www.microsoft.com/en-us/download/details.aspx?id=52685]Microsoft's website[/url])
-[*][i]macOS[/i] (10.9 and later, Intel 64bit): http://mxl.vn.cz/kambala/MedianXLOfflineTools_mac_0.5.4.txz[/list]
+[list][*][i]Windows[/i] (XP SP3 and later): http://mxl.vn.cz/kambala/MedianXLOfflineTools_0.5.5.7z (if it doesn't launch, install MSVC++ 2015 Redistributable vc_redist.x[c]86[/c].exe from [url=https://www.mediafire.com/?84qc8d5dy3cd9f6]Mediafire[/url] or from [url=https://www.microsoft.com/en-us/download/details.aspx?id=52685]Microsoft's website[/url])
+[*][i]macOS[/i] (10.9 and later, Intel 64bit): http://mxl.vn.cz/kambala/MedianXLOfflineTools_mac_0.5.5.txz[/list]
 
 [b]Mini-FAQ:[/b]
 [spoil]Q: Where are Sigma saves?
@@ -48,7 +48,7 @@ A: Restart the application after following actions if it's running.
 [list][*]short answer: move [b]the contents of 'resources/data', not the 'data' folder itself[/b], to 'MedianXLOfflineTools.app/Contents/Resources/data'
 [*]long 'manual' answer: open unpacked folder, open 'resources' folder inside, Select All (Cmd+A), Copy (Cmd+C), locate MedianXLOfflineTools.app, right-click (or Control-click) it, select 'Show package contents', open Contents/Resources/data folder, Paste (Cmd+V) replacing everything
 [*]long 'terminal' answer: open Terminal, cd to where you unpacked mod data (this folder should contain unpacked 'resources' folder) and use the following shell script:
-[code]APP_PATH = "/Applications/MedianXLOfflineTools.app" # place the actual path inside double quotes, it's just an example
+[code]APP_PATH="/Applications/MedianXLOfflineTools.app" # place the actual path inside double quotes, it's just an example
 cp -R resources/data/* "${APP_PATH}/Contents/resources/data"[/code][/list][/list]
 
 Q: I've fcked up my character and/or PlugY stash and neither the game nor this application can load it. How can I restore it from backup?
@@ -94,12 +94,22 @@ A: Probably the character you had loaded last time became broken. To make the ap
 
 [b]Changelog[/b]:
 
-[i]v0.5.4 (20.10.2019)[/i]
+[i]v0.5.5 (11.04.2020)[/i]
+[list][+] contains Sigma 1.5 data
+[+] show completion of Rescue Anya quest (A5Q3)
+[+] show quest location in label tooltip
+[+] show str/dex damage bonus on weapons
+[f] fix app closing on pressing OK in the update dialog
+[f] fix detecting trophies and upgrades on charms
+[f] remove mentioning Signets of Skill
+[f] max Signets of Learning will no longer display as MAX+1
+[/list]
+Older versions:
+[spoil][i]v0.5.4 (20.10.2019)[/i]
 [list][f] fix computing max available stat points for Sigma 1.3 (Lam Esen's Tome)
 [f] fix crash on opening items tab with one of the Wirt's Leg
 [/list]
-Older versions:
-[spoil][i]v0.5.3 (09.09.2019)[/i]
+[i]v0.5.3 (09.09.2019)[/i]
 [list][+] copy item's BBCode for the forum: context menu and batch action
 [+] notiy about mod data update
 [f] fix d2s corruption on respeccing Necromancer's skills with active Iron Golem
