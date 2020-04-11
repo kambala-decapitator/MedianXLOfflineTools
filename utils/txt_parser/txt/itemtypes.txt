@@ -271,8 +271,8 @@ Medium Cycle	cyc2	267						cycl		0	1					0	0	0	0			0	0	0	0	0	0	0	0	3		0		3	invch
 Large Cycle	cyc3	268						cycl		0	1					0	0	0	0			0	0	0	0	0	0	0	0	3		0		3	invch3	invch6	invch9				misc	0
 Trophy	trph	269								0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
 Enchanted Rune	erun	270						rune	gem	0	0					0	0	0	0			1	0	1	0	0	0	0	0	3		0		0							misc	0
-Elemental Weapons	elex	271						weap		0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
-Elemental Weapon 1H Melee	el1x	272						elex		0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
-Elemental Weapon 2H Melee	el2x	273						elex		0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
-Elemental Ranged Weapons	elrx	274						elex		0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
+Elemental Weapons	elex	271	Elemental Weapons					weap		0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
+Elemental Weapon 1H Melee	el1x	272	Elemental One-Handed Melee Weapons					elex		0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
+Elemental Weapon 2H Melee	el2x	273	Elemental Two-Handed Melee Weapons					elex		0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
+Elemental Ranged Weapons	elrx	274	Elemental Ranged Weapons					elex		0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
 Trophy Fragment	trfr	275								0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0

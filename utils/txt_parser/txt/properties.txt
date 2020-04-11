@@ -245,7 +245,6 @@ half-freeze	17	items			1	item_halffreezeduration																													non
 levelup-skill	17	items			11	item_skillonlevelup																									Proc Skill on level up	Skill #	% Chance	Level		0
 pierce-fipo	17	items			1	passive_fire_pierce			3	passive_pois_pierce																					Laz / Combination affix		min	max	none	0
 regen/lvl	17	items			17	item_hpregen_perlevel																									Laz / Life regen per level	(32nds)			none	0
-slow-melee	17	items			1	item_slow_offweapon																									Laz / Melee slow		min	max	none	0
 strbonusblue	17	items			17	str_bonus_blue																									AC per Player Level	(32nds)			none	0
 res-pois-max	16	items			1	maxpoisonresist																													none	0
 stance-radius	16	items			1	item_stance_radius																									Laz / Interacts with skills.txt		min	max	none	0
@@ -275,7 +274,6 @@ shadows-max	9	items			1	passive_shadows_addmax																									Laz / Int
 blood-elem	8	items			1	passive_bloodlust_elempct																									Laz / Interacts with skills.txt		min	max	none	0
 extra-fico	8	items			1	passive_fire_mastery			3	passive_cold_mastery																					Laz / Combination affix		min	max	none	0
 no-ac	8	items			1	armor_override_percent																									Laz / Global AC increase		-100	-100	none	0
-slow-thorns-r	8	items			1	skill_slowrangedthorns																									Laz / Slows ranged attacker		min	max	none	0
 ac%/lvl	7	items			17	item_armorpercent_perlevel																									AC% per Player Level	(32nds)			none	0
 color	7	items	1		1	item_lightcolor																													none	0
 extra-cold/lvl	7	items			17	passive_cold_mastery_perlevel																									Laz / Mastery per level	(32nds)			none	0
@@ -392,3 +390,6 @@ enable-coth		monster			1	greathunt_buff																														0
 rwmake		items			1	runeword_level																														0
 deimoss1		monster			15	item_healafterkill			16	item_absorbfire_percent			16	item_absorblight_percent			16	item_absorbcold_percent			17	curse_resistance													"min = heal kill, max = abs FCL, layer = curse res"	0
 deimoss2		monster			15	damage_divisor			16	passive_fire_pierce			17	passive_dodge			17	passive_avoid			17	passive_evade													"Min = dmg-div, Max = pierce-fire, Layer = avoid"	0
+dmg-IED		items			1	IED																													none	0
+taxe-sacred-ltng		items			15	lightmindam			16	lightmaxdam			17	weapon_count																					none	0
+dexbonusblue		items			17	dexterity_bonus_wpn																									AC per Player Level	(32nds)			none	0
