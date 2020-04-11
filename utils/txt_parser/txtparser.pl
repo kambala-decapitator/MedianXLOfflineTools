@@ -218,7 +218,7 @@ my $miscTypes = parsetxt("misc.txt", $itemName=>0, "#code"=>5, $nameStr=>7, $spe
 &tblExpandHash($_, $itemName) for ($armorTypes, $weaponTypes, $miscTypes);
 
 my $skills = parsetxt("skills.txt", _index=>"1", "dbgname"=>"0", "internalName"=>"3", "class"=>"2",
-                      "srvmissile"=>"7", "srvmissilea"=>"10", "srvmissileb"=>"11", "srvmissilec"=>"12");
+                      "srvmissile"=>"8", "srvmissilea"=>"11", "srvmissileb"=>"12", "srvmissilec"=>"13");
 my $skillsDsc = parsetxt("skilldesc.txt", "#code"=>0, tab => 1, row => 2, col => 3, image => 8, dscname=>9);
 
 my $processedSkills;

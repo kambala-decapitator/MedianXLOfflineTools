@@ -271,7 +271,7 @@ shld						Derweze	r56
 boot						Riptide	r56						
 azhm						Shaheeda	r56						
 dbow						Dirge	r56						
-pelt						Nigra	r56						
+pelt						FLYING POLAR BUFFALO ERROR	r56						
 dstf						Hermanubis	r56						
 aspe						Freybug	r56						
 abow						Cecaelia	r56						
@@ -304,7 +304,7 @@ nstf						Styx	r56
 staf						Kyrie	r51	r51					
 tors						Pygmalion	r52	r52					
 weap						Archangel	r53	r53					
-glov	boot					Knave	r54	r54					
+boot						Knave	r54	r50	r54				
 helm	shld					Checkmate	r55	r55					
 taxe						Leo	r55						
 basd						Tonatiuh	r55						
@@ -312,7 +312,7 @@ tkni						Tau	r55
 tkni						Patriot	r02						
 taxe						Fennec	r20						
 tkni						Quantum	r30						
-taxe						Raptor	r40						
+taxe						Raptor	r43	r49	r43	r01			
 nscy						Lemuria	r20						
 abow						Aspect	r13						
 phlm						Ekam	r27						
@@ -535,4 +535,5 @@ jave						Hastata	rx20
 jave						Haste	rx30						
 pspe						Ensi	rx12						
 axe						Kodiak	r38						
+glov						Memory	r47	r52					
 weap	armo					Secret Jewel Bonus!	jew						

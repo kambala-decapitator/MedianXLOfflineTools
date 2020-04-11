@@ -214,10 +214,10 @@
 212	Golden Fleece	21	
 213	Golden Fleece	38	
 214	Golden Fleece	47	
-215	The Jester	1	
-216	The Jester	17	
-217	The Jester	35	
-218	The Jester	44	
+215	The Jester	1	invjester
+216	The Jester	17	invjester
+217	The Jester	35	invjester
+218	The Jester	44	invjester
 219	Wedding Dress of the Zann	12	
 220	Wedding Dress of the Zann	31	
 221	Wedding Dress of the Zann	48	
@@ -1745,3 +1745,7 @@
 1743	Stormstrike	100	
 1744	Hephasto's Reaver	60	
 1745	Daydreamer	130	
+1746	Luminescence	100	
+1747	Ophiophagus	120	
+1748	Malus Domestica	100	
+1749	Unveiling Eye	130	invsoulseek

@@ -261,7 +261,7 @@
 297	1	2																	W_M
 298	0	5																	tp_lock
 299	0	10							\grey;Current Strength Damage Bonus:	\grey;Current Strength Damage Bonus:		2	251	2					strength_bonus_wpn
-300	0	10							\grey;Current Dexterity Damage Bonus:	\grey;Current Dexterity Damage Bonus:		2	250	2					dexterity_bonus_wpn
+300	0	10							Additional Dexterity Damage Bonus:	Additional Dexterity Damage Bonus:		2	135	2					dexterity_bonus_wpn
 301	0	1							Shadows Spawn Corpses on Striking 5%	Shadows Spawn Corpses on Striking 5%		3	138	0					item_shadows_corpsesynergy
 303	0	12							Fire Damage to Void Archon	Fire Damage to Void Archon		1	53	1					skill_voidarchon_fire
 304	24	7											246						statX_1
@@ -382,7 +382,6 @@
 464	1	9							\orange;Bow Devotion: Ecstatic Frenzy does not Reduce your Defense	Scorpion Blade Projectiles		3	245	0					skill_scorpion_blades
 465	0	8																	skill_totem_damage
 466	0	7							Essence Slots:	Essence Slots:		3	10	2					trader_chest
-467	0	10							Damage when using an Apple	Damage when using an Apple		4	54	1					skill_elixirs_synergy
 468	0	8							Damage to Vessel of Retribution	Damage to Vessel of Retribution		4	142	1					skill_light_mastery
 469	0	8							Extra Targets to Paladin Vessels	Extra Targets to Paladin Vessels		1	143	1					skill_shadow_mastery
 470	50	9							to Summoned Minion Damage	to Summoned Minion Damage		4	83	1					skill_minion_dmg_percent
@@ -399,6 +398,7 @@
 481	0	5							to Runemaster Defense Bonus	to Runemaster Defense Bonus		4	79	1					item_skill_runemaster
 482	0	10																	item_gem_paragon
 483	0	10																	item_rune_runemaster
+484	50	9							Innate Elemental Damage	Innate Elemental Damage		2	99	1					IED
 485	200	10							Energy Factor to Spell Damage	Energy Factor to Spell Damage		1	200	1					enr_factor
 487	25	9							to Summoned Minion Resistances	to Summoned Minion Resistances		4	82	1					minion_resist_all
 488	50	9							Bonus to Energy Factor	Bonus to Energy Factor		4	162	1					enr_factor_percent

@@ -7,8 +7,8 @@
 5	Left Hand Swing	-1	0	0	0	3
 6	Magic Arrow	-1	1	1	2	0
 7	Fire Arrow	-1	1	1	3	2
-8	Titan Strike	-1	0	0	0	12
-9	Titan Strike	-1	0	0	0	13
+8	Titan's Fortitude	-1	0	0	0	12
+9	Titan's Fortitude	-1	0	0	0	13
 10	Jab	-1	3	1	1	8
 11	Cold Arrow	-1	1	2	1	10
 12	Multiple Shot	-1	1	2	2	12
@@ -328,7 +328,7 @@
 326	Batstrike	6	1	2	1	0
 327	Crucify	6	1	1	1	2
 328	Queen of Blades	6	2	3	1	4
-329	Tiefling Form	6	2	6	2	86
+329	Pinnacle	6	2	6	2	86
 330	Doom	6	2	5	2	8
 331	Way of the Spider	6	2	2	1	10
 332	Shadow Refuge	6	1	2	3	12
@@ -370,7 +370,7 @@
 368	Fortress	4	2	3	2	34
 369	Spirit Guide	4	2	4	2	36
 370	Mountain King	4	2	5	2	38
-371	Bear Claw	4	1	1	3	40
+371	Snake Bite	4	1	1	3	40
 372	Stampede	4	1	2	3	42
 373	Rebound	4	1	3	3	44
 374	Screaming Eagle	4	1	4	3	46
@@ -497,7 +497,7 @@
 495	Energy Beam	-1	0	0	0	133
 496	Celerity	-1	0	0	0	0
 497		-1				
-498	Claw Tornado	-1	0	0	0	83
+498	Sandstorm	-1	0	0	0	83
 499		-1				
 500	Crucify	-1	1	1	1	2
 501	Death of a God	-1	0	0	0	0
@@ -567,12 +567,12 @@
 565	Demonic Speed	-1	0	0	0	146
 566	Fire Cascade	-1	0	0	0	84
 567	Frostfire Wave	-1	0	0	0	135
-568	Possess	-1	0	0	0	212
+568		-1				
 569	Raven Flight	-1	0	0	0	118
 570	Raven Heart	-1	0	0	0	171
 571	Shackles of Ice	-1	0	0	0	200
 572	Typhoon Sentry	-1	0	0	0	123
-573	Claw Tornado	-1	0	0	0	83
+573	Sandstorm	-1	0	0	0	83
 574	Hellgate	-1	0	0	0	24
 575		-1				
 576		-1				
@@ -641,7 +641,7 @@
 639		-1				
 640		-1				
 641		-1				
-642	Scattershot	-1	0	0	0	92
+642	Buckshot	-1	0	0	0	92
 643	Overpower	-1	0	0	0	40
 644	War Spirit	0	3	1	3	58
 645	Psionic Scream	6	2	3	2	24
@@ -662,7 +662,7 @@
 660	Force Blast	1	3	1	3	116
 661		-1				
 662		-1				
-663	Bear Claw	-1	1	1	3	40
+663	Snake Bite	-1	1	1	3	40
 664	Stampede Nova	-1	0	0	0	0
 665		-1				
 666	Bloodspeaker's Mark	-1	0	0	0	141
@@ -873,7 +873,7 @@
 871	Summon Avalanche	-1	0	0	0	160
 872	Summon Glowing Fungus	-1	0	0	0	166
 873	Rune of Mana	-1	0	0	0	71
-874	Bear Claw	-1	1	1	3	40
+874	Snake Bite	-1	1	1	3	40
 875		-1				
 876	Purify	-1	0	0	0	9
 877	Powder Keg	-1	0	0	0	208
@@ -910,11 +910,11 @@
 908		-1				
 909		-1				
 910		-1				
-911	Tremor	-1	0	0	0	29
+911		-1				
 912	Spike Rush	-1	0	0	0	0
 913	Thorn Field	-1	0	0	0	157
 914	Punisher	-1	0	0	0	69
-915		-1				
+915	Wildfire	-1	1	3	1	100
 916	Supernova	-1	0	0	0	38
 917	Pyroblast	-1	1	4	1	68
 918		-1				
@@ -1004,7 +1004,7 @@
 1002	Venomous Spirit	-1	0	0	0	94
 1003	Inner Fire	-1	0	0	0	66
 1004	Disco Inferno	-1	0	0	0	131
-1005	Death Ray	-1	0	0	0	179
+1005	Virulence	-1	0	0	0	179
 1006		-1				
 1007		-1				
 1008	Rune of Ice	-1	0	0	0	34
@@ -1148,7 +1148,7 @@
 1146		-1				
 1147	Holybolt	-1	0	0	0	27
 1148	Arcane Blast	-1	0	0	0	25
-1149	Iron Shield	-1	0	0	0	26
+1149		-1				
 1150		-1				
 1151		-1				
 1152		-1				
@@ -1162,7 +1162,7 @@
 1160		-1				
 1161		-1				
 1162		-1				
-1163		-1				
+1163	Flamestrike	-1	1	3	1	4
 1164		-1				
 1165		-1				
 1166		-1				
@@ -1225,7 +1225,7 @@
 1223		-1				
 1224		-1				
 1225		-1				
-1226	Bear Claw	-1	1	1	3	40
+1226	Snake Bite	-1	1	1	3	40
 1227		-1				
 1228		-1				
 1229		-1				
@@ -1320,7 +1320,7 @@
 1318	Pounce	-1	1	5	3	70
 1319	Storm Crows	-1	1	2	2	32
 1320	Thunder Slam	-1	1	4	2	4
-1321	Bear Claw	-1	1	1	3	40
+1321	Snake Bite	-1	1	1	3	40
 1322	Rend	-1	1	2	1	90
 1323	Idol of Scosglen	-1	1	5	1	106
 1324	Plague Avatar	-1	2	3	2	44
@@ -1335,7 +1335,7 @@
 1333	Fire Splash	-1	0	0	0	0
 1334	Pain Spirit	-1	0	0	0	88
 1335	Slayer Bolt	-1	0	0	0	0
-1336	Claw Tornado	-1	0	0	0	83
+1336	Sandstorm	-1	0	0	0	83
 1337	Death Spiral	-1	0	0	0	0
 1338	Shadowstorm	-1	0	0	0	0
 1339	Guided Chain	-1	0	0	0	79
@@ -1401,7 +1401,7 @@
 1399		-1				
 1400	Mana Shield	-1	0	0	0	22
 1401	Noctule	-1	0	0	0	234
-1402	Demon Blood	-1	0	0	0	0
+1402		-1				
 1403	Phalanx	-1	1	3	1	4
 1404	Noctule	-1	0	0	0	234
 1405	Fire Bolt Nova	-1	0	0	0	219
@@ -1578,3 +1578,24 @@
 1576		-1				
 1577	Funeral Pyre	-1	0	0	0	125
 1578		-1				
+1579		-1				
+1580		-1				
+1581		-1				
+1582	Thunderstone	-1	1	2	2	22
+1583		-1				
+1584	Avalanche	-1	0	0	0	140
+1585		-1				
+1586		-1				
+1587		-1				
+1588		-1				
+1589	Lightning	-1	2	3	2	26
+1590	Ice Bolt Nova	-1	0	0	0	195
+1591	Frozen Orb	-1	0	0	0	228
+1592	Flamestrike	-1	1	3	1	4
+1593	Miasma	-1	2	3	1	108
+1594		-1				
+1595		-1				
+1596		-1				
+1597	Funeral Pyre	-1	0	0	0	125
+1598	Gift of the Wild	-1	0	0	0	101
+1599	Thunderstone	-1	1	2	2	22

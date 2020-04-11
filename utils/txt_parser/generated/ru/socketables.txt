@@ -1,9 +1,9 @@
 #code	name	letter	armor1code	armor1param	armor1value	armor2code	armor2param	armor2value	armor3code	armor3param	armor3value	shield1code	shield1param	shield1value	shield2code	shield2param	shield2value	shield3code	shield3param	shield3value	weapon1code	weapon1param	weapon1value	weapon2code	weapon2param	weapon2value	weapon3code	weapon3param	weapon3value
 5$a	\purple;Chipped Amber		41		4							363		1							155	1427	1						
-5$b	\purple;Flawed Amber		41		8							363		2							155	1427	1						
-5$c	\purple;Amber		41		12							363		3							155	1427	1						
-5$d	\purple;Flawless Amber		41		16							363		4							155	1427	1						
-5$e	\purple;Perfect Amber		41		20	42		1				363		5							155	1427	2						
+5$b	\purple;Flawed Amber		41		8							363		1							155	1427	1						
+5$c	\purple;Amber		41		12							363		1							155	1427	1						
+5$d	\purple;Flawless Amber		41		16							363		2							155	1427	1						
+5$e	\purple;Perfect Amber		41		20	42		1				363		2							155	1427	2						
 7$a	\purple;Chipped Turquoise		45		4							80		1							27		2						
 7$b	\purple;Flawed Turquoise		45		8							80		2							27		4						
 7$c	\purple;Turquoise		45		12							80		4							27		6						
@@ -69,19 +69,19 @@ r17	\purple;Lum Rune	Люм	80		7							80		7							80		10
 r18	\purple;Ko Rune	Ко	359		5							359		5							359		5						
 r19	\purple;Fal Rune	Фал	2		10							2		10							2		10						
 r20	\purple;Lem Rune	Лем	85		1							85		1							85		2						
-r21	\purple;Pul Rune	Пул	39		20							39		20							39		30						
+r21	\purple;Pul Rune	Пул	39		25							39		25							39		30						
 r22	\purple;Um Rune	Ум	361		5							361		5							361		5						
-r23	\purple;Mal Rune	Мал	45		20							45		20							45		30						
+r23	\purple;Mal Rune	Мал	45		25							45		25							45		30						
 r24	\purple;Ist Rune	Ист	1		10							1		10							1		10						
-r25	\purple;Gul Rune	Гул	43		20							43		20							43		30						
+r25	\purple;Gul Rune	Гул	43		25							43		25							43		30						
 r26	\purple;Vex Rune	Векс	118		1							118		1							118		1						
 r27	\purple;Ohm Rune	Ом	362		5							362		5							362		5						
-r28	\purple;Lo Rune	Ло	41		20							41		20							41		30						
+r28	\purple;Lo Rune	Ло	41		25							41		25							41		30						
 r29	\purple;Sur Rune	Сур	27		5							27		5							27		15						
 r30	\purple;Ber Rune	Бер	164		5							164		5							164		10						
 r31	\purple;Jah Rune	Джа	16		15							16		15							17		15						
 r32	\purple;Cham Rune	Чам	3		10							3		10							3		10						
-r33	\purple;Zod Rune	Зод	363		5							363		5							376		5						
+r33	\purple;Zod Rune	Зод	363		2							363		2							150		2						
 r34	\purple;Sha Rune	Ша	93		15							93		15							93		15						
 r35	\purple;Lah Rune	Ла	359,360,361,362		3							359,360,361,362		3							359,360,361,362		3						
 r36	\purple;Kur Rune	Кур	77		3							77		3							77		3						
@@ -100,7 +100,7 @@ r48	\purple;Nih Rune	Них	409		10							409		10							409		10
 r49	\purple;Lai Rune	Лаи	39,41,43,45		10							39,41,43,45		10							39,41,43,45		10						
 r50	\purple;On Rune	Он	76,77		2							76,77		2							76,77		3						
 r51	\grey;Great Rune\n\purple;Taha Rune	Таха	22		10							22		10				508		1	22		20				509		1
-r52	\grey;Great Rune\n\purple;Ghal Rune	Гал	485		5							485		5				508		1	485		15				509		1
+r52	\grey;Great Rune\n\purple;Ghal Rune	Гал	485		15							485		15				508		1	485		30				509		1
 r53	\grey;Great Rune\n\purple;Qor Rune	Куор	91		-12							91		-12				508		1	91		-12				509		1
 r54	\grey;Great Rune\n\purple;Krys Rune	Крис	489		25							489		25				508		1	489		100				509		1
 r55	\grey;Great Rune\n\purple;Auhe Rune	Аухе	141		2							141		2				508		1	141		3				509		1
@@ -144,7 +144,7 @@ rx29	\grey;Enchanted Rune\n\purple;Sur-Xis Rune	SuXis	27		5				372		1	27		5				3
 rx30	\grey;Enchanted Rune\n\purple;Ber-Xis Rune	BeXis	164		5				372		1	164		5				372		1	164		10				372		1
 rx31	\grey;Enchanted Rune\n\purple;Jah-Xis Rune	JaXis	16		15				372		1	16		15				372		1	17		15				372		1
 rx32	\grey;Enchanted Rune\n\purple;Cham-Xis Rune	ChXis	3		10				372		1	3		10				372		1	3		10				372		1
-rx33	\grey;Enchanted Rune\n\purple;Zod-Xis Rune	ZoXis	363		5				372		1	363		5				372		1	376		5				372		1
+rx33	\grey;Enchanted Rune\n\purple;Zod-Xis Rune	ZoXis	363		2				372		1	363		2				372		1	150		2				372		1
 skc	\purple;Chipped Skull		16		4							110		1							17		4						
 skf	\purple;Flawed Skull		16		6							110		2							17		6						
 skl	\purple;Flawless Skull		16		8							110		4							17		8						

@@ -601,7 +601,7 @@ w99	Avenger Guard (3)		2	2	0		23	263	0									invba5				phlm,tier		4
 146	Throwing Knife (1)		1	2	1	1	0	0	15			4	6			2	7	invtkn	0	0	17	tkni,tier	1	-1
 147	Flying Knife (1)		1	2	1	1	2	0	53			6	7			6	7	invtkn	0	0	17	tkni,tier	1	-1
 148	Balanced Knife (1)		1	2	1	1	3	0	91			8	9			10	12	invbkf	0	0	17	tkni,tier	1	-1
-149	Throwing Axe (1)		1	2	1	1	0	15	0			5	6			2	6	invtax	0	18	0	taxe,tier	1	-1
+149	Throwing Axe (1)		1	2	1	1	0	15	0			0	0			0	0	invtax	0	0	0	taxe,elrx	1	-1
 14@	Crystal Sword (Sacred)		2	3	1		30	0	510			0	0					invcrs	0	0	0	qcrs,el1x	1	-1
 150	Balanced Axe (1)		2	3	1	1	3	77	0			5	12			4	19	invbal	0	18	0	taxe,tier	1	-1
 151	Short Staff (1)		1	3	1		0	0	0		1			2	4			invsst	0	0	10	staf,tier	1	-1
@@ -695,7 +695,7 @@ w99	Avenger Guard (3)		2	2	0		23	263	0									invba5				phlm,tier		4
 282	Throwing Knife (2)		1	2	1	1	9	0	36			8	8			9	10	invtkn	0	0	17	tkni,tier	1	-1
 283	Flying Knife (2)		1	2	1	1	11	0	84			11	12			16	18	invtkn	0	0	17	tkni,tier	1	-1
 284	Balanced Knife (2)		1	2	1	1	13	0	132			14	16			22	26	invbkf	0	0	17	tkni,tier	1	-1
-285	Throwing Axe (2)		1	2	1	1	8	36	0			7	8			8	10	invtax	0	18	0	taxe,tier	1	-1
+285	Throwing Axe (2)		1	2	1	1	12	36	0			0	0			0	0	invtax	0	0	0	taxe,elrx	1	-1
 286	Balanced Axe (2)		2	3	1	1	12	115	0			9	21			12	37	invbal	0	18	0	taxe,tier	1	-1
 287	Short Staff (2)		1	3	1		8	0	8		1			10	12			invsst	0	0	10	staf,tier	1	-1
 288	Long Staff (2)		1	4	1		10	0	19		1			13	16			invlst	0	0	10	staf,tier	1	-1
@@ -797,7 +797,7 @@ w99	Avenger Guard (3)		2	2	0		23	263	0									invba5				phlm,tier		4
 419	Flying Knife (3)		1	2	1	1	20	0	169			16	18			27	31	invtkn	0	0	17	tkni,tier	1	-1
 41@	Spetum (Sacred)		2	4	1		30	453	492		1			57	74			invspt	0	0	25	qspe	1	-1
 420	Balanced Knife (3)		1	2	1	1	22	0	258			21	24			37	42	invbkf	0	0	17	tkni,tier	1	-1
-421	Throwing Axe (3)		1	2	1	1	18	81	0			11	12			16	18	invtax	0	18	0	taxe,tier	1	-1
+421	Throwing Axe (3)		1	2	1	1	21	81	0			0	0			0	0	invtax	0	0	0	taxe,elrx	1	-1
 422	Balanced Axe (3)		2	3	1	1	21	225	0			14	32			22	59	invbal	0	18	0	taxe,tier	1	-1
 423	Short Staff (3)		1	3	1		18	0	25		1			18	20			invsst	0	0	10	staf,tier	1	-1
 424	Long Staff (3)		1	4	1		20	0	43		1			22	26			invlst	0	0	10	staf,tier	1	-1
@@ -871,7 +871,7 @@ w99	Avenger Guard (3)		2	2	0		23	263	0									invba5				phlm,tier		4
 486	Throwing Knife (4)		1	2	1	1	22	0	167			14	14			22	23	invtkn	0	0	17	tkni,tier	1	-1
 487	Flying Knife (4)		1	2	1	1	25	0	337			19	21			33	37	invtkn	0	0	17	tkni,tier	1	-1
 488	Balanced Knife (4)		1	2	1	1	27	0	508			24	28			44	51	invbkf	0	0	17	tkni,tier	1	-1
-489	Throwing Axe (4)		1	2	1	1	22	167	0			13	14			20	23	invtax	0	18	0	taxe,tier	1	-1
+489	Throwing Axe (4)		1	2	1	1	26	167	0			0	0			0	0	invtax	0	0	0	taxe,elrx	1	-1
 48@	Flying Knife (Sacred)		1	2	1	1	30	0	473			38	39			59	61	invtkn	0	0	17	qtkn	1	-1
 490	Balanced Axe (4)		2	3	1	1	26	445	0			16	37			27	71	invbal	0	18	0	taxe,tier	1	-1
 491	Short Staff (4)		1	3	1		22	0	52		1			22	24			invsst	0	0	10	staf,tier	1	-1
@@ -901,7 +901,7 @@ w99	Avenger Guard (3)		2	2	0		23	263	0									invba5				phlm,tier		4
 505	Long Battle Bow (4)		2	4	1		26	0	436		1			45	61			invlbb	0	0	17	bow,tier	1	-1
 506	Short War Bow (4)		2	3	1		27	0	490		1			50	68			invswb	0	0	17	bow,tier	1	-1
 507	Long War Bow (4)		2	4	1		28	0	543		1			54	74			invlwb	0	0	17	bow,tier	1	-1
-50@	Throwing Axe (Sacred)		1	2	1	1	30	402	0			36	36			53	54	invtax	0	18	0	qtax	1	-1
+50@	Throwing Axe (Sacred)		1	2	1	1	30	402	0			0	0			0	0	invtax	0	0	0	qtax,elrx	1	-1
 51@	Balanced Axe (Sacred)		2	3	1	1	30	586	0			37	47			56	78	invbal	0	18	0	qtax	1	-1
 52@	Short Staff (Sacred)		1	3	1		30	0	188		1			53	55			invsst	0	0	10	qstf	1	-1
 53@	Long Staff (Sacred)		1	4	1		30	0	203		1			56	58			invlst	0	0	10	qstf	1	-1
@@ -1171,7 +1171,7 @@ wol	Wirt's Other Leg		1	3	1		0	0	0			13	18					invwol		0	0	wrtl	1	-1
 &86	\orange;Mystic Orb\nOrb of Annihilation	\blue;+10 Required Level\n5% Bonus to Energy\n+5% to Physical/Magic Spell Damage\n10% Chance to cast level 1 Detonate on Melee Attack\n\grey;Cube with Any Weapon to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_weap				asaa,asa#		-1
 &87	\orange;Mystic Orb\nWarbringer	\blue;+10 Required Level\n+5 Maximum Damage\n2% Chance to cast level 5 Arrow on Striking\n\grey;Cube with Any Weapon to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_weap				asaa,asa#		-1
 &88	\orange;Mystic Orb\nTen Pin Striker	\blue;+10 Required Level\nTarget Takes Additional Damage of 100\n100% Bonus to Attack Rating\n\grey;Cube with Any Weapon to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_weap				asaa,asa#		-1
-&89	\orange;Mystic Orb\nWrathspirit	\blue;+10 Required Level\n+10 Life after each Kill\n+3% to Spell Damage\n1% Chance to cast level 46 Punisher when Struck\n\grey;Cube with Any Weapon to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_weap				asaa,asa#		-1
+&89	\orange;Mystic Orb\nWrathspirit	\blue;+10 Required Level\n+15 Life after each Kill\n+3% to Spell Damage\n1% Chance to cast level 46 Punisher when Struck\n\grey;Cube with Any Weapon to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_weap				asaa,asa#		-1
 &90	\orange;Mystic Orb\nCrystal of Tears	\blue;+10 Required Level\n-2% to Maximum Life\nAdds 7-12 Damage\n\grey;Cube with Any Armor to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_armo				asaa,asa#		-1
 &91	\orange;Mystic Orb\nEssence of Itherael	\blue;+10 Required Level\nTotal Character Defense +15%\nEnhanced Weapon Damage +15%\n\grey;Cube with Any Armor to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_armo				asaa,asa#		-1
 &92	\orange;Mystic Orb\nPeriapt of Life	\blue;+10 Required Level\n+10 Life Regenerated per Second\n5% Bonus to Vitality\n\grey;Cube with Any Armor to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_armo				asaa,asa#		-1
@@ -1279,7 +1279,7 @@ wol	Wirt's Other Leg		1	3	1		0	0	0			13	18					invwol		0	0	wrtl	1	-1
 7$c	\purple;Turquoise		1	1	2		12	0	0									invgstc				gemo,gem2		-1
 7$d	\purple;Flawless Turquoise		1	1	2		15	0	0									invgstd				gemo,gem3		-1
 7$e	\purple;Perfect Turquoise		1	1	2		18	0	0									invgste				gemo,gem4		-1
-7o[	Cube Reagent\n\orange;Oil of Craft	70\nThe Oil of Craft lets you create arcane\nclusters and shrine vessels:\n\nOil + Arcane Crystal\n--> Arcane Cluster (1)\n\nOil + Portable Shrine\n--> Shrine Vessel (1)\n\nYou can also craft powerful jewels.\n\nOil + Jewel + Rune + Arcane Shards\n--> Crafted Jewel\n(Reduces Item Level by 15%)\n\nTir: Magic Find\nIth: Elemental Resists\nOrt: -Requirements\nShael: Defense\nLum: Experience Gained\nLem: All Attributes\nIst: Summoned Minion Life\nOhm: Maximum Damage\nBer: Life/Mana Stolen per Hit\nZod: Spell Damage\nKur: Summoned Minion Damage\nNas: Slows Melee Target\nVith: Summoned Minion Resistances\nThai: Minimum Damage\nNih: Life/Mana on Attack\nOn: Life/Mana after each Kill\n	1	1	2		0	0	0									oil_jewelcraft				thng		-1
+7o[	Cube Reagent\n\orange;Oil of Craft	70\nThe Oil of Craft lets you create arcane\nclusters and shrine vessels:\n\nOil + Arcane Crystal\n--> Arcane Cluster (1)\n\nOil + Portable Shrine\n--> Shrine Vessel (1)\n\nYou can also craft powerful jewels.\n\nOil + Jewel + Rune + Arcane Shards\n--> Crafted Jewel\n(Reduces Item Level by 15%)\n\nTir: Magic Find\nIth: Elemental Resists\nOrt: -Requirements\nShael: Defense\nLum: Experience Gained\nLem: All Attributes\nIst: Summoned Minion Life\nOhm: Maximum Damage\nBer: Life/Mana Stolen per Hit\nZod: Spell Damage\nKur: Summoned Minion Damage\nNas: Slows Attacker\nVith: Summoned Minion Resistances\nThai: Minimum Damage\nNih: Life/Mana on Attack\nOn: Life/Mana after each Kill\n	1	1	2		0	0	0									oil_jewelcraft				thng		-1
 8o[	Cube Reagent\n\orange;Oil of Absolution		1	1	2		0	0	0									oil_absolution				thng		-1
 9$a	\purple;Chipped Bloodstone		1	1	2		1	0	0									invgsca				gemp,gem0		-1
 9$b	\purple;Flawed Bloodstone		1	1	2		5	0	0									invgscb				gemp,gem1		-1
@@ -1458,17 +1458,17 @@ Q6+	\orange;Hidden Shrine (4)	\blue;1% Reanimate as: Random Monster\n1% Reanimat
 Q7+	\orange;Hidden Shrine (3)	\blue;1% Reanimate as: Random Monster\n1% Reanimate as: Random Monster\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Hidden				prsh		-1
 Q8+	\orange;Hidden Shrine (2)	\blue;1% Reanimate as: Random Monster\n1% Reanimate as: Random Monster\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Hidden				prsh		-1
 Q9+	\orange;Hidden Shrine (1)	\blue;1% Reanimate as: Random Monster\n1% Reanimate as: Random Monster\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Hidden				prsh		-1
-R0+	\orange;Trinity Shrine (10)	\dgrey;(One-Handed Weapons, Other Armor)\n\blue;Adds 10-20 fire damage\nAdds 14-16 cold damage\nAdds 1-30 lightning damage\n\n\dgrey;(Two-Handed Weapons, Body Armor)\n\blue;-5% to Enemy Fire Resistance\n-5% to Enemy Cold Resistance\n-5% to Enemy Lightning Resistance\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Stone				prsh,flsh		-1
+R0+	\orange;Trinity Shrine (10)	\blue;+x to All Attributes\n+x% to Innate Elemental Damage\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Stone				prsh,flsh		-1
 R0+S	\orange;Trinity Vessel	Right Click to Collect	1	2	2		0	0	0									#Stone				shco		-1
-R1+	\orange;Trinity Shrine (9)	\dgrey;(One-Handed Weapons, Other Armor)\n\blue;Adds 10-20 fire damage\nAdds 14-16 cold damage\nAdds 1-30 lightning damage\n\n\dgrey;(Two-Handed Weapons, Body Armor)\n\blue;-5% to Enemy Fire Resistance\n-5% to Enemy Cold Resistance\n-5% to Enemy Lightning Resistance\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Stone				prsh		-1
-R2+	\orange;Trinity Shrine (8)	\dgrey;(One-Handed Weapons, Other Armor)\n\blue;Adds 10-20 fire damage\nAdds 14-16 cold damage\nAdds 1-30 lightning damage\n\n\dgrey;(Two-Handed Weapons, Body Armor)\n\blue;-5% to Enemy Fire Resistance\n-5% to Enemy Cold Resistance\n-5% to Enemy Lightning Resistance\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Stone				prsh		-1
-R3+	\orange;Trinity Shrine (7)	\dgrey;(One-Handed Weapons, Other Armor)\n\blue;Adds 10-20 fire damage\nAdds 14-16 cold damage\nAdds 1-30 lightning damage\n\n\dgrey;(Two-Handed Weapons, Body Armor)\n\blue;-5% to Enemy Fire Resistance\n-5% to Enemy Cold Resistance\n-5% to Enemy Lightning Resistance\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Stone				prsh		-1
-R4+	\orange;Trinity Shrine (6)	\dgrey;(One-Handed Weapons, Other Armor)\n\blue;Adds 10-20 fire damage\nAdds 14-16 cold damage\nAdds 1-30 lightning damage\n\n\dgrey;(Two-Handed Weapons, Body Armor)\n\blue;-5% to Enemy Fire Resistance\n-5% to Enemy Cold Resistance\n-5% to Enemy Lightning Resistance\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Stone				prsh		-1
-R5+	\orange;Trinity Shrine (5)	\dgrey;(One-Handed Weapons, Other Armor)\n\blue;Adds 10-20 fire damage\nAdds 14-16 cold damage\nAdds 1-30 lightning damage\n\n\dgrey;(Two-Handed Weapons, Body Armor)\n\blue;-5% to Enemy Fire Resistance\n-5% to Enemy Cold Resistance\n-5% to Enemy Lightning Resistance\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Stone				prsh		-1
-R6+	\orange;Trinity Shrine (4)	\dgrey;(One-Handed Weapons, Other Armor)\n\blue;Adds 10-20 fire damage\nAdds 14-16 cold damage\nAdds 1-30 lightning damage\n\n\dgrey;(Two-Handed Weapons, Body Armor)\n\blue;-5% to Enemy Fire Resistance\n-5% to Enemy Cold Resistance\n-5% to Enemy Lightning Resistance\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Stone				prsh		-1
-R7+	\orange;Trinity Shrine (3)	\dgrey;(One-Handed Weapons, Other Armor)\n\blue;Adds 10-20 fire damage\nAdds 14-16 cold damage\nAdds 1-30 lightning damage\n\n\dgrey;(Two-Handed Weapons, Body Armor)\n\blue;-5% to Enemy Fire Resistance\n-5% to Enemy Cold Resistance\n-5% to Enemy Lightning Resistance\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Stone				prsh		-1
-R8+	\orange;Trinity Shrine (2)	\dgrey;(One-Handed Weapons, Other Armor)\n\blue;Adds 10-20 fire damage\nAdds 14-16 cold damage\nAdds 1-30 lightning damage\n\n\dgrey;(Two-Handed Weapons, Body Armor)\n\blue;-5% to Enemy Fire Resistance\n-5% to Enemy Cold Resistance\n-5% to Enemy Lightning Resistance\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Stone				prsh		-1
-R9+	\orange;Trinity Shrine (1)	\dgrey;(One-Handed Weapons, Other Armor)\n\blue;Adds 10-20 fire damage\nAdds 14-16 cold damage\nAdds 1-30 lightning damage\n\n\dgrey;(Two-Handed Weapons, Body Armor)\n\blue;-5% to Enemy Fire Resistance\n-5% to Enemy Cold Resistance\n-5% to Enemy Lightning Resistance\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Stone				prsh		-1
+R1+	\orange;Trinity Shrine (9)	\blue;+x to All Attributes\n+x% to Innate Elemental Damage\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Stone				prsh		-1
+R2+	\orange;Trinity Shrine (8)	\blue;+x to All Attributes\n+x% to Innate Elemental Damage\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Stone				prsh		-1
+R3+	\orange;Trinity Shrine (7)	\blue;+x to All Attributes\n+x% to Innate Elemental Damage\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Stone				prsh		-1
+R4+	\orange;Trinity Shrine (6)	\blue;+x to All Attributes\n+x% to Innate Elemental Damage\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Stone				prsh		-1
+R5+	\orange;Trinity Shrine (5)	\blue;+x to All Attributes\n+x% to Innate Elemental Damage\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Stone				prsh		-1
+R6+	\orange;Trinity Shrine (4)	\blue;+x to All Attributes\n+x% to Innate Elemental Damage\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Stone				prsh		-1
+R7+	\orange;Trinity Shrine (3)	\blue;+x to All Attributes\n+x% to Innate Elemental Damage\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Stone				prsh		-1
+R8+	\orange;Trinity Shrine (2)	\blue;+x to All Attributes\n+x% to Innate Elemental Damage\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Stone				prsh		-1
+R9+	\orange;Trinity Shrine (1)	\blue;+x to All Attributes\n+x% to Innate Elemental Damage\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Stone				prsh		-1
 Ysh1	Arcane Seal		1	1	2		0	0	0									lab_rn1				###1		-1
 Ysh2	Necklace		1	1	2		0	0	0									lab_amu				###2		-1
 [01	\gold;Lord of Lies Trophy	\blue;Enhanced Weapon Damage +30%\n\grey;Cube with the Book of Lies to Add Bonus:\n	1	1	2		0	0	0									trophy12				thng,trph		-1
@@ -1951,7 +1951,7 @@ yo3	\purple;Rainbow Stone		1	1	2		12	0	0									og3				gemx,gem2		-1
 yo4	\purple;Flawless Rainbow Stone		1	1	2		15	0	0									og4				gemx,gem3		-1
 yo5	\purple;Perfect Rainbow Stone		1	1	2		18	0	0									og5				gemx,gem4		-1
 yps	Antidote Potion		1	1	2		0	0	0									invnps				apot		-1
-yq1	\orange;Sunless Crystal Bird	\blue;(-2 to -5)% to Enemy Elemental Resistances\n3% Chance of Crushing Blow\n(-2 to 2) to Light Radius\n\grey;Cube with Six Angel Bag to Add Bonus\n\nCube Reagent	1	2	2		0	0	0									bird4				thng		-1
+yq1	\orange;Sunless Crystal Bird	\blue;(-2 to -5)% to Enemy Elemental Resistances\n3% Chance of Crushing Blow\n(-3 to 5) to Light Radius\n\grey;Cube with Six Angel Bag to Add Bonus\n\nCube Reagent	1	2	2		0	0	0									bird4				thng		-1
 yq2	Six Angel Bag		1	2	2		0	0	0									angelbag1				grtz		-1
 yq8	Zakarum's Ear		1	1	2		0	0	0									invear				grtz		-1
 yqe	By Richard Knaak\nMoon of the Spider		1	1	2		0	0	0									invhscr2				grtz		-1
@@ -1988,5 +1988,5 @@ zkx	\dgreen;Greater Signet of Gold	Right-click: Gold in Bank: %d	1	1	2		0	0	0			
 |bc	Cube Reagent\n\orange;Book of Cain	\blue;+5% to Experience Gained\n+10 to All Attributes\n+1 to All Skills\n\grey;Cube with Glorious Book of Median to Add Bonus\n	2	2	2		0	0	0									superbooffk				thng		-1
 |dc	Dragon Claw		1	1	2		120	0	0									invhorn				grtz		-1
 |ld	Lylia's Curse		1	1	2		120	0	0									lyliascharm				grtz		-1
-|ms	\gold;Ghost Trance	\blue;+1 to All Skills\n(11 to 40) to all Attributes\n-1 to Light Radius\n\grey;Cube with Umbaru Treasure to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									giyuaGolem				thng		-1
+|ms	\gold;Ghost Trance	\blue;+1 to All Skills\n(11 to 40) to all Attributes\n\grey;Cube with Umbaru Treasure to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									giyuaGolem				thng		-1
 |wc	Weather Control		1	1	2		120	0	0									invathulua				grtz		-1
