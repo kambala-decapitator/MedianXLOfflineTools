@@ -2584,7 +2584,8 @@ void MedianXLOfflineTools::updateUI()
     updateCharacterExperienceProgressbar(charInfo.valueOfStatistic(Enums::CharacterStats::Experience));
 
 #ifndef QT_NO_DEBUG_OUTPUT
-    _makeNonLadderCheckbox->setEnabled(charInfo.basicInfo.isLadder);
+    _makeNonLadderCheckbox->setEnabled(true);
+    _makeNonLadderCheckbox->setChecked(true);
 #endif
 
     setStats();
