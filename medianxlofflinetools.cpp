@@ -2156,8 +2156,12 @@ bool MedianXLOfflineTools::processSaveFile()
     inputDataStream >> charItemsTotal;
     ItemsList itemsBuffer;
     QString corruptedItems = ItemParser::parseItemsToBuffer(charItemsTotal, inputDataStream, _saveFileContents, tr("Corrupted item detected in %1 at (%2,%3)"), &itemsBuffer);
+#ifdef DUPE_CHECK
+    qDebug("%s", qPrintable(corruptedItems));
+#else
     if (!corruptedItems.isEmpty())
         ERROR_BOX(corruptedItems.trimmed());
+#endif
     charInfo.itemsEndOffset = inputDataStream.device()->pos();
     qDebug("items end offset %u", charInfo.itemsEndOffset);
 
