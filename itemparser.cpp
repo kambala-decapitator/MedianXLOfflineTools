@@ -355,6 +355,8 @@ PropertiesMultiMap ItemParser::parseItemProperties(ReverseBitReader &bitReader, 
             propToAdd->bitStringOffset = bitReader.pos() + 16; // include 'JM' bit length
 
             ItemPropertyTxt *txtProperty = ItemDataBase::Properties()->value(id);
+            if (!txtProperty)
+                throw 6;
             propToAdd->param = txtProperty->paramBits ? bitReader.readNumber(txtProperty->paramBits) : 0;
             propToAdd->value = bitReader.readNumber(txtProperty->bits) - txtProperty->add;
             if (id == ItemProperties::EnhancedDamage)
