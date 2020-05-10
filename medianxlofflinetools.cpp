@@ -2959,7 +2959,7 @@ QString MedianXLOfflineTools::backupFile(QFile &file)
                                                                       QString::number(QDateTime::currentMSecsSinceEpoch())).arg(kBackupExtension));
         if (backupFile.exists() && !backupFile.remove()) // it shouldn't actually exist, but let's be safe
             showErrorMessageBoxForFile(tr("Error removing old backup '%1'"), backupFile);
-        else
+        else if (file.exists())
         {
             if (file.copy(backupFile.fileName()))
                 return QFileInfo(backupFile.fileName()).fileName();
