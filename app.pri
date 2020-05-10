@@ -9,6 +9,11 @@ TEMPLATE = app
 
 QT += network
 
+MOC_DIR = moc
+OBJECTS_DIR = obj
+RCC_DIR = rcc
+UI_DIR = ui
+
 greaterThan(QT_MAJOR_VERSION, 4): {
     DEFINES += IS_QT5
     IS_QT5 = 1
