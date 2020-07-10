@@ -8,7 +8,7 @@
 206	07+	330	2			4	to Lightning Spell Damage
 207	08+	332	2			4	to Poison Spell Damage
 213	09+	357	2			4	to Physical/Magic Spell Damage
-220	10+	34	6			4	Physical Damage Reduced by
+220	10+	34	4			4	Physical Damage Reduced by
 221	11+	27	5			4	Regenerate Mana
 222	12+	470	4			4	to Summoned Minion Damage
 223	13+	444	4			4	to Summoned Minion Life
@@ -24,7 +24,7 @@
 242	25+	109	4			4	Curse Length Reduction
 243	26+	16	15			4	Enhanced Defense
 244	27+	171	4			4	Total Character Defense
-249	30+	164	2			4	Chance of Uninterruptable Attack
+249	30+	485	6			4	Energy Factor to Spell Damage
 251	31+	85	1			4	to Experience Gained
 255	32+	60	3			4	Life stolen per Hit
 256	33+	62	5			4	Mana stolen per Hit
@@ -32,18 +32,18 @@
 263	36+	17	15			4	Enhanced Maximum Damage
 264	37+	22	6			4	to Maximum Damage
 285	38+	141	1			4	Deadly Strike
-286	39+	136	1			4	Chance of Crushing Blow
+286	39+	136	3			4	Chance of Crushing Blow
 287	40+	86	10			4	Life after each Kill
 310	46+	39,41,43,45	3			4	Fire Resist
 311	47+	91	-4			4	Requirements
-312	48+	21,22	1			4	to Minimum Damage
+312	48+	22	2			4	to Maximum Damage
 314	50+	102	6			4	Block Speed
 369	51+	79	2			4	Gold Find
 370	52+	99	6			4	Hit Recovery
 382	53+	74	40			4	Life Regenerated per Second
 403	60+	210	30			4	Life on Attack
 408	61+	295	40			4	Mana on Attack
-458	62+	485	8			4	Energy Factor to Spell Damage
+458	62+	484	2			4	Innate Elemental Damage
 459	63+	25	20			4	Enhanced Weapon Damage
 460	64+	105	6			4	Cast Speed
 461	65+	93	6			4	Attack Speed

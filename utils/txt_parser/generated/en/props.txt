@@ -24,7 +24,7 @@
 22	0	11							to Maximum Damage	to Maximum Damage		1	131	1					maxdamage
 23	0	11							to Minimum Damage	to Minimum Damage		1	129	1					secondary_mindamage
 24	0	11							to Maximum Damage	to Maximum Damage		1	128	1					secondary_maxdamage
-25	50	10							Reduced Weapon Damage	Enhanced Weapon Damage		4	85	2					damagepercent
+25	50	10							Enhanced Weapon Damage	Enhanced Weapon Damage		4	85	2					damagepercent
 26	0	10																	manarecovery
 27	100	9							Regenerate Mana	Regenerate Mana		4	57	2					manarecoverybonus
 28	0	10							Heal Stamina Plus	Heal Stamina Plus		2	53	2					staminarecoverybonus
@@ -48,8 +48,8 @@
 49	0	12							to Maximum Fire Damage	to Maximum Fire Damage		1	106	1					firemaxdam
 50	0	12							to Minimum Lightning Damage	to Minimum Lightning Damage		1	104	1					lightmindam
 51	0	12							to Maximum Lightning Damage	to Maximum Lightning Damage		1	103	1					lightmaxdam
-52	0	12							+%d magic damage	+%d magic damage		1	109	1					magicmindam
-53	0	12							+%d magic damage	+%d magic damage		1	108	1					magicmaxdam
+52	0	12							to Minimum Magic Damage	to Minimum Magic Damage		1	109	1					magicmindam
+53	0	12							to Maximum Magic Damage	to Maximum Magic Damage		1	108	1					magicmaxdam
 54	0	12							to Minimum Cold Damage	to Minimum Cold Damage		1	101	1					coldmindam
 55	0	12							to Maximum Cold Damage	to Maximum Cold Damage		1	100	1					coldmaxdam
 56	0	10																	coldlength
@@ -328,7 +328,8 @@
 381	0	8							Bonus Elemental Damage to Bloodlust	Bonus Elemental Damage to Bloodlust		4	154	1					passive_bloodlust_elempct
 382	0	5																	x_signet53
 383	1001	14																12	special_syn1
-384	0	8							Movement Speed to Sacred Armor	Movement Speed to Sacred Armor		2	155	1					passive_holyarmor_addmove
+384	0	8							Movement Speed to Sacred Armor	Movement Speed to Sacred Armor		2	155	1					near_resurrected
+385	0	15										34	246	0				15	desc_orange
 386	0	8																	witchberry_lifeheal
 387	0	8							Bonus Damage to Mark of the Wild	Bonus Damage to Mark of the Wild		4	154	1					passive_motw_dmgpct
 388	0	8							Bonus Elemental Damage to Mark of the Wild	Bonus Elemental Damage to Mark of the Wild		4	154	1					passive_motw_elempct
@@ -382,6 +383,7 @@
 464	1	9							\orange;Bow Devotion: Ecstatic Frenzy does not Reduce your Defense	Scorpion Blade Projectiles		3	245	0					skill_scorpion_blades
 465	0	8																	skill_totem_damage
 466	0	7							Essence Slots:	Essence Slots:		3	10	2					trader_chest
+467	50	9																	rp_lock
 468	0	8							Damage to Vessel of Retribution	Damage to Vessel of Retribution		4	142	1					skill_light_mastery
 469	0	8							Extra Targets to Paladin Vessels	Extra Targets to Paladin Vessels		1	143	1					skill_shadow_mastery
 470	50	9							to Summoned Minion Damage	to Summoned Minion Damage		4	83	1					skill_minion_dmg_percent

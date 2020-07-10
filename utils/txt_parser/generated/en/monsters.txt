@@ -992,15 +992,14 @@
 992	Bone Mage
 993	Reignited Mage
 994	Horror Mage
-995	Inarius
-996	Priest Boss
-997	Inarius
+995	The Prophet
+996	High Cleric
 998	Nun of Vanity
 999	Nun of Vanity
 1000	Nun of Vanity
-1001	Crystal Ball
+1001	Veil Piercer
 1002	Councillor Gavin, Vanig's Lost Brother
-1003	Overlord
+1003	Fallen One
 1004	Creature of Flame
 1005	Horazon's Familiar
 1006	Bone Archer
@@ -1839,12 +1838,12 @@
 1896	Uldyssian the Tainted
 1897	Edyrem
 1898	\orange;Abyssal Spire
-1899	\orange;Abyssal Spire
-1900	\orange;Abyssal Spire
-1901	\orange;Councillor Ormac
-1902	\orange;Councillor Vanig
-1903	\orange;Abyssal Spire
-1904	\orange;Abyssal Spire
+1899	Gestating Growth
+1900	Gestating Growth
+1901	Gestating Growth
+1902	Gestating Growth
+1903	Gestating Growth
+1904	Gestating Growth
 1905	Deimoss the Fleshweaver
 1906	Deimoss the Fleshweaver
 1907	Corrupted Amazon
@@ -1854,13 +1853,13 @@
 1911	Gharbad the Weak
 1912	Navigator
 1913	Twisted Clawstorm
-1914	Rathma
+1914	BossRathma
 1915	Uldyssian the Tainted
 1916	Kabraxis, the Thief of Hope 
 1917	Astrogha
 1918	Archbishop Lazarus
 1919	\orange;Councillor Ormac
-1920	\orange;Councillor Ormac
+1920	Lesser Riftwalker
 1921	\orange;Councillor Ormac
 1922	\orange;Councillor Ormac
 1923	Crystal Lord
@@ -1870,9 +1869,63 @@
 1927	Black Raptor Nest
 1928	Sucker
 1929	Pirate of the Twin Seas
-1930	Corrupted Amazon
+1930	Thunder Storm
+1931	\orange;Abyssal Spire
+1932	\orange;Abyssal Spire
+1933	\orange;Councillor Ormac
+1934	\orange;Councillor Vanig
+1935	\orange;Abyssal Spire
+1936	\orange;Abyssal Spire
+1939	BossRathma
+1940	BossRathma
+1941	BossRathma
+1942	
 1962	Imperius
 1963	Juris Khan, King of Ureh
+1966	DruidGeneric
+1967	Druid1
+1968	DruidGeneric
+1969	Druid2
+1970	DruidGeneric
+1971	Druid3
+1972	DruidGeneric
+1973	Druid4
+1974	DruidGeneric
+1975	Druid5
+1976	ScosHulk
+1977	ScosHorde
+1978	ScosHordeMinion
+1979	ScosBloodlord
+1980	ScosMauler
+1981	ScosViper
+1982	Bul Kathos
+1983	Vasily
+1984	RhinoBeetle
+1985	Azgar
+1986	AzgarEvil
+1987	Emissary 1
+1988	Emissary 2
+1989	Emissary 3
+1990	Emissary 4
+1991	Ancient Gate
+1992	Ancient Gate
+1993	Ancient Gate
+1994	Bul Kathos
+1995	Vasily
+1996	Bul Kathos
+1997	Vasily
+1998	Emissary 1
+1999	Emissary 1
+2000	Emissary 1
+2001	Emissary 1
+2002	Emissary 1
+2003	Emissary 1
+2004	Emissary 1
+2005	Emissary 1
+2006	Emissary 1
+2007	Emissary 1
+2008	Emissary 1
+2009	Emissary 1
 2021	vv_SandMaggotYoung
 2022	Sand Maggot Egg
 2023	Sand Maggot Ghost
@@ -1894,7 +1947,11 @@
 2043	a startled Witch...
 2044	Atanna Khan
 2045	Lost Traveler
+2046	Mysterious Companion
+2047	Mysterious Companion
 2048	Xazax
+2049	Mysterious Companion
+2050	Mysterious Companion
 2051	Celestial Descendant
 2052	Ankheg
 2054	Moloch
@@ -1948,12 +2005,10 @@
 2106	Kraken Guard
 2107	Tiefling
 2108	Dragon Oath
-2109	The Void (trap)
-2110	The Void (trap)
-2111	The Void (trap)
-2112	The Void (trap)
-2113	Mendeln
-2114	Rathma
+2111	Inarius
+2112	Ancestral Seal
+2113	Lilith
+2114	Inarius
 2115	Soul of Greed
 2116	Soul of Envy
 2117	Soul of Lust
@@ -1961,22 +2016,20 @@
 2119	Soul of Wrath
 2120	Soul of Sloth
 2121	The Void (trap)
-2122	Skeletal Warrior
-2123	Skeletal Warrior
-2124	Shadow Warrior
+2122	Soul of Pride
+2123	Soul of Pride
+2124	The Void (trap)
 2125	\gold;Pac-Man
-2126	The Void (trap)
 2127	Slave of Envy
-2128	Tomb Guard
+2128	Vacuous Concubine
 2129	The Void (trap)
 2130	The Void (trap)
 2131	Soul of Pride
 2132	The Void (trap)
 2133	Peacekeeper Trap
-2134	Soul of Pride
+2134	The Void (trap)
 2135	Darkspawn
 2136	The Void (trap)
-2137	Darkspawn
 2138	Eternal Ghost
 2139	The Void (trap)
 2140	The Void (trap)
@@ -2000,10 +2053,6 @@
 2165	Edyrem
 2166	Temple Spire
 2167	Disguised Edyrem
-2168	Mendeln
-2169	Rathma
-2170	Mendeln
-2171	Rathma
 2172	Veil King
 2173	Hoplite
 2174	\red;Blinky

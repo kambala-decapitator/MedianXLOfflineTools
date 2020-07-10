@@ -1,253 +1,253 @@
 #index	item	set	key	rlvl	image	prop1	param1	min1	max1	prop2	param2	min2	max2	prop3	param3	min3	max3	prop4	param4	min4	max4	prop5	param5	min5	max5	prop6	param6	min6	max6	prop7	param7	min7	max7	prop8	param8	min8	max8	prop9	param9	min9	max9	prop10	param10	min10	max10
-127	Frost	Pantheon	MSPantheon	80																																									
-128	Water	Pantheon	MSPantheon	80																																									
+127	Frost	(Amazon Bow Set)\nPantheon	MSPantheon	80																																									
+128	Water	(Amazon Bow Set)\nPantheon	MSPantheon	80																																									
 129	Heaven	Legacy Reliquary	MSUnusedLol	666																																									
-130	Earth	Pantheon	MSPantheon	80																																									
-131	Fire	Pantheon	MSPantheon	80																																									
-132	Celestia's Charge	Celestia's Myth	MSCelestia's Myth	90																																									
-133	Celestia's Ribbon	Celestia's Myth	MSCelestia's Myth	90																																									
+130	Earth	(Amazon Bow Set)\nPantheon	MSPantheon	80																																									
+131	Fire	(Amazon Bow Set)\nPantheon	MSPantheon	80																																									
+132	Celestia's Charge	(Amazon Spear Set)\nCelestia's Myth	MSCelestia's Myth	90																																									
+133	Celestia's Ribbon	(Amazon Spear Set)\nCelestia's Myth	MSCelestia's Myth	90																																									
 134	Celestia's Glory	Legacy Reliquary	MSUnusedLol	666																																									
-135	Celestia's Wings	Celestia's Myth	MSCelestia's Myth	90																																									
-136	Celestia's Passion	Celestia's Myth	MSCelestia's Myth	90																																									
+135	Celestia's Wings	(Amazon Spear Set)\nCelestia's Myth	MSCelestia's Myth	90																																									
+136	Celestia's Passion	(Amazon Spear Set)\nCelestia's Myth	MSCelestia's Myth	90																																									
 137	Vasily's Moonwalkers	Legacy Reliquary	MSUnusedLol	666																																									
-138	Vasily's Crescent	Vasily's Following	MSVasily's Following	80																																									
-139	Vasily's Shepherd Moon	Vasily's Following	MSVasily's Following	80																																									
-140	Vasily's Eclipse	Vasily's Following	MSVasily's Following	80																																									
-141	Vasily's Falling Star	Vasily's Following	MSVasily's Following	80																																									
-142	Red Vex' Sin	Red Vex' Embrace	MSRed Vex' Embrace	90																																									
-143	Red Vex' Curse	Red Vex' Embrace	MSRed Vex' Embrace	90																																									
+138	Vasily's Crescent	(Amazon Javelin Set)\nVasily's Following	MSVasily's Following	80																																									
+139	Vasily's Shepherd Moon	(Amazon Javelin Set)\nVasily's Following	MSVasily's Following	80																																									
+140	Vasily's Eclipse	(Amazon Javelin Set)\nVasily's Following	MSVasily's Following	80																																									
+141	Vasily's Falling Star	(Amazon Javelin Set)\nVasily's Following	MSVasily's Following	80																																									
+142	Red Vex' Sin	(Amazon Blood Set)\nRed Vex' Embrace	MSRed Vex' Embrace	90																																									
+143	Red Vex' Curse	(Amazon Blood Set)\nRed Vex' Embrace	MSRed Vex' Embrace	90																																									
 144	Red Vex' Mantle	Legacy Reliquary	MSUnusedLol	666																																									
-145	Red Vex' Idol	Red Vex' Embrace	MSRed Vex' Embrace	90																																									
-146	Red Vex' Flayer	Red Vex' Embrace	MSRed Vex' Embrace	90																																									
+145	Red Vex' Idol	(Amazon Blood Set)\nRed Vex' Embrace	MSRed Vex' Embrace	90																																									
+146	Red Vex' Flayer	(Amazon Blood Set)\nRed Vex' Embrace	MSRed Vex' Embrace	90																																									
 147	Witchhunter's Rope	Legacy Reliquary	MSUnusedLol	666																																									
-148	Witchhunter's Hood	Witchhunter's Attire	MSWitchhunter's Attire	90																																									
-149	Witchhunter's Faith	Witchhunter's Attire	MSWitchhunter's Attire	90																																									
-150	Witchhunter's Crucifix	Witchhunter's Attire	MSWitchhunter's Attire	90																																									
-151	Witchhunter's Fire	Witchhunter's Attire	MSWitchhunter's Attire	90																																									
-152	Serpent's Tail	The Snake Pit	MSThe Snake Pit	100																																									
-153	Serpent's Coil	The Snake Pit	MSThe Snake Pit	100																																									
-154	Serpent's Tongue	The Snake Pit	MSThe Snake Pit	100																																									
+148	Witchhunter's Hood	(Assassin Claw Set)\nWitchhunter's Attire	MSWitchhunter's Attire	90																																									
+149	Witchhunter's Faith	(Assassin Claw Set)\nWitchhunter's Attire	MSWitchhunter's Attire	90																																									
+150	Witchhunter's Crucifix	(Assassin Claw Set)\nWitchhunter's Attire	MSWitchhunter's Attire	90																																									
+151	Witchhunter's Ire	(Assassin Claw Set)\nWitchhunter's Attire	MSWitchhunter's Attire	90																																									
+152	Serpent's Tail	(Assassin Naginata Set)\nThe Snake Pit	MSThe Snake Pit	100																																									
+153	Serpent's Coil	(Assassin Naginata Set)\nThe Snake Pit	MSThe Snake Pit	100																																									
+154	Serpent's Tongue	(Assassin Naginata Set)\nThe Snake Pit	MSThe Snake Pit	100																																									
 155	Serpent's Scales	Legacy Reliquary	MSUnusedLol	666																																									
-156	Serpent's Fangs	The Snake Pit	MSThe Snake Pit	100																																									
-157	Tracker's Runeward	Creed	MSCreed	90																																									
+156	Serpent's Fangs	(Assassin Naginata Set)\nThe Snake Pit	MSThe Snake Pit	100																																									
+157	Tracker's Runeward	(Assassin Throwing Set)\nCreed	MSCreed	90																																									
 158	Tracker's Totem	Legacy Reliquary	MSUnusedLol	666																																									
-159	Tracker's Stealth	Creed	MSCreed	90																																									
-160	Tracker's Effigy	Creed	MSCreed	90																																									
-161	Tracker's Strike	Creed	MSCreed	90																																									
+159	Tracker's Stealth	(Assassin Throwing Set)\nCreed	MSCreed	90																																									
+160	Tracker's Effigy	(Assassin Throwing Set)\nCreed	MSCreed	90																																									
+161	Tracker's Strike	(Assassin Throwing Set)\nCreed	MSCreed	90																																									
 162	Vizjun's Progress	Legacy Reliquary	MSUnusedLol	666																																									
-163	Vizjun's Foresight	Vizjun's Devices	MSVizjun's Devices	80																																									
-164	Vizjun's Engine	Vizjun's Devices	MSVizjun's Devices	80																																									
-165	Vizjun's Monitor	Vizjun's Devices	MSVizjun's Devices	80																																									
-166	Vizjun's Science	Vizjun's Devices	MSVizjun's Devices	80																																									
+163	Vizjun's Foresight	(Assassin Trap Set)\nVizjun's Devices	MSVizjun's Devices	80																																									
+164	Vizjun's Engine	(Assassin Trap Set)\nVizjun's Devices	MSVizjun's Devices	80																																									
+165	Vizjun's Monitor	(Assassin Trap Set)\nVizjun's Devices	MSVizjun's Devices	80																																									
+166	Vizjun's Science	(Assassin Trap Set)\nVizjun's Devices	MSVizjun's Devices	80																																									
 167	Crane's Reach	Legacy Reliquary	MSUnusedLol	666																																									
-168	Snake's Battle Chant	Gathering of the Tribes	MSGathering of the Tribes	80																																									
-169	Wolf's Fang	Gathering of the Tribes	MSGathering of the Tribes	80																																									
-170	Bear's Warding	Gathering of the Tribes	MSGathering of the Tribes	80																																									
-171	The Coming Storm	Gathering of the Tribes	MSGathering of the Tribes	80																																									
+168	Snake's Battle Chant	(Barbarian Berserker Set)\nGathering of the Tribes	MSGathering of the Tribes	80																																									
+169	Wolf's Fang	(Barbarian Berserker Set)\nGathering of the Tribes	MSGathering of the Tribes	80																																									
+170	Bear's Warding	(Barbarian Berserker Set)\nGathering of the Tribes	MSGathering of the Tribes	80																																									
+171	The Coming Storm	(Barbarian Berserker Set)\nGathering of the Tribes	MSGathering of the Tribes	80																																									
 172	Rockslide	Legacy Reliquary	MSUnusedLol	666																																									
-173	Ravine	Mount Arreat	MSMount Arreat	90																																									
-174	Avalanche	Mount Arreat	MSMount Arreat	90																																									
-175	Snowstorm	Mount Arreat	MSMount Arreat	90																																									
-176	Eruption	Mount Arreat	MSMount Arreat	90																																									
-177	Hunter's Trackless Step	Big Game Hunter	MSBig Game Hunter	90																																									
+173	Ravine	(Barbarian Gladiator Set)\nMount Arreat	MSMount Arreat	90																																									
+174	Avalanche	(Barbarian Gladiator Set)\nMount Arreat	MSMount Arreat	90																																									
+175	Snowstorm	(Barbarian Gladiator Set)\nMount Arreat	MSMount Arreat	90																																									
+176	Eruption	(Barbarian Gladiator Set)\nMount Arreat	MSMount Arreat	90																																									
+177	Hunter's Trackless Step	(Barbarian Throwing Set)\nBig Game Hunter	MSBig Game Hunter	90																																									
 178	Hunter's Trophy	Legacy Reliquary	MSUnusedLol	666																																									
-179	Hunter's Skin	Big Game Hunter	MSBig Game Hunter	90																																									
-180	Hunter's Camouflage	Big Game Hunter	MSBig Game Hunter	90																																									
-181	Hunter's Claw Fist	Big Game Hunter	MSBig Game Hunter	90																																									
+179	Hunter's Skin	(Barbarian Throwing Set)\nBig Game Hunter	MSBig Game Hunter	90																																									
+180	Hunter's Camouflage	(Barbarian Throwing Set)\nBig Game Hunter	MSBig Game Hunter	90																																									
+181	Hunter's Claw Fist	(Barbarian Throwing Set)\nBig Game Hunter	MSBig Game Hunter	90																																									
 182	The Defender	Legacy Reliquary	MSUnusedLol	666																																									
-183	The Protector	Spirits of the Nephalem	MSSpirits of the Nephalem	100																																									
-184	The Guardian	Spirits of the Nephalem	MSSpirits of the Nephalem	100																																									
-185	Destiny	Spirits of the Nephalem	MSSpirits of the Nephalem	100																																									
-186	Sacred Charge	Spirits of the Nephalem	MSSpirits of the Nephalem	100																																									
+183	The Protector	(Barbarian Shaman Set)\nSpirits of the Nephalem	MSSpirits of the Nephalem	100																																									
+184	The Guardian	(Barbarian Shaman Set)\nSpirits of the Nephalem	MSSpirits of the Nephalem	100																																									
+185	Destiny	(Barbarian Shaman Set)\nSpirits of the Nephalem	MSSpirits of the Nephalem	100																																									
+186	Sacred Charge	(Barbarian Shaman Set)\nSpirits of the Nephalem	MSSpirits of the Nephalem	100																																									
 187	Nature's Grasp	Legacy Reliquary	MSUnusedLol	666																																									
-188	Nature's Embrace	Caoi Dulra	MSCaoi Dulra	90																																									
-189	Nature's Vigil	Caoi Dulra	MSCaoi Dulra	90																																									
-190	Nature's Will	Caoi Dulra	MSCaoi Dulra	90																																									
-191	Nature's Wrath	Caoi Dulra	MSCaoi Dulra	90																																									
-192	Lone Wolf's Track	Lone Wolf's Path	MSLone Wolf's Path	100																																									
-193	Lone Wolf's Claws	Lone Wolf's Path	MSLone Wolf's Path	100																																									
+188	Nature's Embrace	(Druid Hunter Set)\nCaoi Dulra	MSCaoi Dulra	90																																									
+189	Nature's Vigil	(Druid Hunter Set)\nCaoi Dulra	MSCaoi Dulra	90																																									
+190	Nature's Will	(Druid Hunter Set)\nCaoi Dulra	MSCaoi Dulra	90																																									
+191	Nature's Wrath	(Druid Hunter Set)\nCaoi Dulra	MSCaoi Dulra	90																																									
+192	Lone Wolf's Track	(Druid Seer Set)\nLone Wolf's Path	MSLone Wolf's Path	100																																									
+193	Lone Wolf's Claws	(Druid Seer Set)\nLone Wolf's Path	MSLone Wolf's Path	100																																									
 194	Lone Wolf's Gaze	Legacy Reliquary	MSUnusedLol	666																																									
-195	Lone Wolf's Fur	Lone Wolf's Path	MSLone Wolf's Path	100																																									
-196	Lone Wolf's Maul	Lone Wolf's Path	MSLone Wolf's Path	100																																									
-197	Rathma's Chase	Rathma's Empire	MSRathma's Empire	90																																									
+195	Lone Wolf's Fur	(Druid Seer Set)\nLone Wolf's Path	MSLone Wolf's Path	100																																									
+196	Lone Wolf's Maul	(Druid Seer Set)\nLone Wolf's Path	MSLone Wolf's Path	100																																									
+197	Rathma's Chase	(Necromancer Melee Set)\nRathma's Empire	MSRathma's Empire	90																																									
 198	Rathma's Trap	Legacy Reliquary	MSUnusedLol	666																																									
-199	Rathma's Death Gaze	Rathma's Empire	MSRathma's Empire	90																																									
-200	Rathma's Skeleton	Rathma's Empire	MSRathma's Empire	90																																									
-201	Rathma's Tyranny	Rathma's Empire	MSRathma's Empire	90																																									
-202	Achilios' Stealth	Achilios' Wake	MSAchilios' Wake	90																																									
+199	Rathma's Death Gaze	(Necromancer Melee Set)\nRathma's Empire	MSRathma's Empire	90																																									
+200	Rathma's Skeleton	(Necromancer Melee Set)\nRathma's Empire	MSRathma's Empire	90																																									
+201	Rathma's Tyranny	(Necromancer Melee Set)\nRathma's Empire	MSRathma's Empire	90																																									
+202	Achilios' Stealth	(Necromancer Crossbow Set)\nAchilios' Wake	MSAchilios' Wake	90																																									
 203	Achilios' Knuckledusters	Legacy Reliquary	MSUnusedLol	666																																									
-204	Achilios' Eagle Eye	Achilios' Wake	MSAchilios' Wake	90																																									
-205	Achilios' Refuge	Achilios' Wake	MSAchilios' Wake	90																																									
-206	Achilios' Sledgehammer	Achilios' Wake	MSAchilios' Wake	90																																									
-207	Till We Have Heaven In Sight	Satanic Mantra	MSSatanic Mantra	80																																									
+204	Achilios' Eagle Eye	(Necromancer Crossbow Set)\nAchilios' Wake	MSAchilios' Wake	90																																									
+205	Achilios' Refuge	(Necromancer Crossbow Set)\nAchilios' Wake	MSAchilios' Wake	90																																									
+206	Achilios' Sledgehammer	(Necromancer Crossbow Set)\nAchilios' Wake	MSAchilios' Wake	90																																									
+207	Till We Have Heaven In Sight	(Necromancer Summoner Set)\nSatanic Mantra	MSSatanic Mantra	80																																									
 208	Till We Have	Legacy Reliquary	MSUnusedLol	666																																									
-209	Through Death's Veil	Satanic Mantra	MSSatanic Mantra	80																																									
-210	Lend Me Thy Light	Satanic Mantra	MSSatanic Mantra	80																																									
-211	Archangel Dark Angel	Satanic Mantra	MSSatanic Mantra	80																																									
-212	Cinadide's Bender	Cinadide's Craft	MSCinadide's Craft	100																																									
-213	Cinadide's Anvil	Cinadide's Craft	MSCinadide's Craft	100																																									
-214	Cinadide's Bellows	Cinadide's Craft	MSCinadide's Craft	100																																									
+209	Through Death's Veil	(Necromancer Summoner Set)\nSatanic Mantra	MSSatanic Mantra	80																																									
+210	Lend Me Thy Light	(Necromancer Summoner Set)\nSatanic Mantra	MSSatanic Mantra	80																																									
+211	Archangel Dark Angel	(Necromancer Summoner Set)\nSatanic Mantra	MSSatanic Mantra	80																																									
+212	Cinadide's Bender	(Paladin Honor Set)\nCinadide's Craft	MSCinadide's Craft	100																																									
+213	Cinadide's Anvil	(Paladin Honor Set)\nCinadide's Craft	MSCinadide's Craft	100																																									
+214	Cinadide's Bellows	(Paladin Honor Set)\nCinadide's Craft	MSCinadide's Craft	100																																									
 215	Cinadide's Forge	Legacy Reliquary	MSUnusedLol	666																																									
-216	Cinadide's Malus	Cinadide's Craft	MSCinadide's Craft	100																																									
-217	Hadriel's Presence	Hadriel's Lore	MSHadriel's Lore	90																																									
+216	Cinadide's Malus	(Paladin Honor Set)\nCinadide's Craft	MSCinadide's Craft	100																																									
+217	Hadriel's Presence	(Paladin Dragon Set)\nHadriel's Lore	MSHadriel's Lore	90																																									
 218	Hadriel's Courage	Legacy Reliquary	MSUnusedLol	666																																									
-219	Hadriel's Wings	Hadriel's Lore	MSHadriel's Lore	90																																									
-220	Hadriel's Pure Heart	Hadriel's Lore	MSHadriel's Lore	90																																									
-221	Hadriel's Avenger	Hadriel's Lore	MSHadriel's Lore	90																																									
+219	Hadriel's Wings	(Paladin Dragon Set)\nHadriel's Lore	MSHadriel's Lore	90																																									
+220	Hadriel's Pure Heart	(Paladin Dragon Set)\nHadriel's Lore	MSHadriel's Lore	90																																									
+221	Hadriel's Avenger	(Paladin Dragon Set)\nHadriel's Lore	MSHadriel's Lore	90																																									
 222	Malthael's Stride	Legacy Reliquary	MSUnusedLol	666																																									
-223	Malthael's Ward	Malthael's Sanctuary	MSMalthael's Sanctuary	80																																									
-224	Malthael's Crown	Malthael's Sanctuary	MSMalthael's Sanctuary	80																																									
-225	Malthael's Halo	Malthael's Sanctuary	MSMalthael's Sanctuary	80																																									
-226	Malthael's Wrath	Malthael's Sanctuary	MSMalthael's Sanctuary	80																																									
-227	Imperius' Winged Feet	Imperius' Edict	MSImperius' Edict	90																																									
+223	Malthael's Ward	(Paladin Ritualist Set)\nMalthael's Sanctuary	MSMalthael's Sanctuary	80																																									
+224	Malthael's Crown	(Paladin Ritualist Set)\nMalthael's Sanctuary	MSMalthael's Sanctuary	80																																									
+225	Malthael's Halo	(Paladin Ritualist Set)\nMalthael's Sanctuary	MSMalthael's Sanctuary	80																																									
+226	Malthael's Wrath	(Paladin Ritualist Set)\nMalthael's Sanctuary	MSMalthael's Sanctuary	80																																									
+227	Imperius' Winged Feet	(Paladin Warlock Set)\nImperius' Edict	MSImperius' Edict	90																																									
 228	Imperius' Crusade	Legacy Reliquary	MSUnusedLol	666																																									
-229	Imperius' Aura	Imperius' Edict	MSImperius' Edict	90																																									
-230	Imperius' Radiance	Imperius' Edict	MSImperius' Edict	90																																									
-231	Imperius' Sky Hammer	Imperius' Edict	MSImperius' Edict	90																																									
-232	Zann Esu's Rune Loop	Zann Esu's Secrets	MSZann Esu's Secrets	80																																									
+229	Imperius' Aura	(Paladin Warlock Set)\nImperius' Edict	MSImperius' Edict	90																																									
+230	Imperius' Radiance	(Paladin Warlock Set)\nImperius' Edict	MSImperius' Edict	90																																									
+231	Imperius' Sky Hammer	(Paladin Warlock Set)\nImperius' Edict	MSImperius' Edict	90																																									
+232	Zann Esu's Rune Loop	(Sorceress Cold Set)\nZann Esu's Secrets	MSZann Esu's Secrets	80																																									
 233	Zann Esu's Mysteries	Legacy Reliquary	MSUnusedLol	666																																									
-234	Zann Esu's Robes	Zann Esu's Secrets	MSZann Esu's Secrets	80																																									
-235	Zann Esu's Binding Circle	Zann Esu's Secrets	MSZann Esu's Secrets	80																																									
-236	Zann Esu's Charm	Zann Esu's Secrets	MSZann Esu's Secrets	80																																									
+234	Zann Esu's Robes	(Sorceress Cold Set)\nZann Esu's Secrets	MSZann Esu's Secrets	80																																									
+235	Zann Esu's Binding Circle	(Sorceress Cold Set)\nZann Esu's Secrets	MSZann Esu's Secrets	80																																									
+236	Zann Esu's Charm	(Sorceress Cold Set)\nZann Esu's Secrets	MSZann Esu's Secrets	80																																									
 237	Elemental Trance	Legacy Reliquary	MSUnusedLol	666																																									
-238	Elemental Spirit	Elemental Children	MSEdyrem's Children	90																																									
-239	Elemental Clash	Elemental Children	MSEdyrem's Children	90																																									
-240	Elemental Fury	Elemental Children	MSEdyrem's Children	90																																									
-241	Elemental Storm	Elemental Children	MSEdyrem's Children	90																																									
+238	Elemental Spirit	(Sorceress Lightning Set)\nElemental Children	MSEdyrem's Children	90																																									
+239	Elemental Clash	(Sorceress Lightning Set)\nElemental Children	MSEdyrem's Children	90																																									
+240	Elemental Fury	(Sorceress Lightning Set)\nElemental Children	MSEdyrem's Children	90																																									
+241	Elemental Storm	(Sorceress Lightning Set)\nElemental Children	MSEdyrem's Children	90																																									
 242	Pentad	Legacy Reliquary	MSUnusedLol	666																																									
-243	Tetrad	Adria's Circle	MSAdria's Circle	90																																									
-244	Triad	Adria's Circle	MSAdria's Circle	90																																									
-245	Dyad	Adria's Circle	MSAdria's Circle	90																																									
-246	Monad	Adria's Circle	MSAdria's Circle	90																																									
+243	Tetrad	(Sorceress Poison Set)\nAdria's Circle	MSAdria's Circle	90																																									
+244	Triad	(Sorceress Poison Set)\nAdria's Circle	MSAdria's Circle	90																																									
+245	Dyad	(Sorceress Poison Set)\nAdria's Circle	MSAdria's Circle	90																																									
+246	Monad	(Sorceress Poison Set)\nAdria's Circle	MSAdria's Circle	90																																									
 247	Emerald Growth	Legacy Reliquary	MSUnusedLol	666																																									
-248	Emerald Sky	Rainbow Warrior	MSRainbow Warrior2	100																																									
-249	Emerald Cloud	Rainbow Warrior	MSRainbow Warrior2	100																																									
-250	Emerald Earth	Rainbow Warrior	MSRainbow Warrior2	100																																									
-251	Emerald Flower	Rainbow Warrior	MSRainbow Warrior2	100																																									
-252	Scosglen's Legends	Last King of Scosglen	MSLastKing	80																																									
-253	Scosglen's History	Last King of Scosglen	MSLastKing	80																																									
-254	Scosglen's Tales	Last King of Scosglen	MSLastKing	80																																									
+248	Emerald Sky	(Druid Trap Rat Set)\nRainbow Warrior	MSRainbow Warrior2	100																																									
+249	Emerald Cloud	(Druid Trap Rat Set)\nRainbow Warrior	MSRainbow Warrior2	100																																									
+250	Emerald Earth	(Druid Trap Rat Set)\nRainbow Warrior	MSRainbow Warrior2	100																																									
+251	Emerald Flower	(Druid Trap Rat Set)\nRainbow Warrior	MSRainbow Warrior2	100																																									
+252	Scosglen's Legends	(Druid Werebear Set)\nLast King of Scosglen	MSLastKing	80																																									
+253	Scosglen's History	(Druid Werebear Set)\nLast King of Scosglen	MSLastKing	80																																									
+254	Scosglen's Tales	(Druid Werebear Set)\nLast King of Scosglen	MSLastKing	80																																									
 255	Scosglen's Fables	Legacy Reliquary	MSUnusedLol	666																																									
-256	Scosglen's Myths	Last King of Scosglen	MSLastKing	80																																									
+256	Scosglen's Myths	(Druid Werebear Set)\nLast King of Scosglen	MSLastKing	80																																									
 257	Tower Push	Legacy Reliquary	MSUnusedLol	666																																									
-258	Tower Denial	The Towerlord	MSTowerlord	80																																									
-259	Tower Wall	The Towerlord	MSTowerlord	80																																									
-260	Tower Defense	The Towerlord	MSTowerlord	80																																									
-261	Tower Rush	The Towerlord	MSTowerlord	80																																									
-262	Warmage's Wake	The Warmage	MSWarmage2	90																																									
+258	Tower Denial	(Necromancer Totem Set)\nThe Towerlord	MSTowerlord	80																																									
+259	Tower Wall	(Necromancer Totem Set)\nThe Towerlord	MSTowerlord	80																																									
+260	Tower Defense	(Necromancer Totem Set)\nThe Towerlord	MSTowerlord	80																																									
+261	Tower Rush	(Necromancer Totem Set)\nThe Towerlord	MSTowerlord	80																																									
+262	Warmage's Wake	(Sorceress Fire Set)\nThe Warmage	MSWarmage2	90																																									
 263	Warmage's Conjuration	Legacy Reliquary	MSUnusedLol	666																																									
-264	Warmage's Breath	The Warmage	MSWarmage2	90																																									
-265	Warmage's Flameshroud	The Warmage	MSWarmage2	90																																									
-266	Warmage's Fireblade	The Warmage	MSWarmage2	90																																									
+264	Warmage's Breath	(Sorceress Fire Set)\nThe Warmage	MSWarmage2	90																																									
+265	Warmage's Flameshroud	(Sorceress Fire Set)\nThe Warmage	MSWarmage2	90																																									
+266	Warmage's Fireblade	(Sorceress Fire Set)\nThe Warmage	MSWarmage2	90																																									
 267	Charge of the Goddess	Legacy Reliquary	MSUnusedLol	666																																									
-268	Sacred Circle	The Mysteries	MSThe Mysteries	100																																									
-269	Pentacle	The Mysteries	MSThe Mysteries	100																																									
-270	Cauldron	The Mysteries	MSThe Mysteries	100																																									
-271	Witchblade	The Mysteries	MSThe Mysteries	100																																									
-272	Apeshoot	Testament of the Apes	MSTestament of the Apes	100																																									
-273	Apeskin	Testament of the Apes	MSTestament of the Apes	100																																									
-274	Apeskull	Testament of the Apes	MSTestament of the Apes	100																																									
-275	Apehand	Testament of the Apes	MSTestament of the Apes	100																																									
-276	Apefoot	Testament of the Apes	MSTestament of the Apes	100																																									
-277	Lazarus' Chasuble	Archbishop Lazarus	Set_Lazbro	100																																									
-278	Lazarus' Surplice Cap	Archbishop Lazarus	Set_Lazbro	100																																									
-279	Lazarus' Votive Lamp	Archbishop Lazarus	Set_Lazbro	100																																									
+268	Sacred Circle	(Sorceress Melee Set)\nThe Mysteries	MSThe Mysteries	100																																									
+269	Pentacle	(Sorceress Melee Set)\nThe Mysteries	MSThe Mysteries	100																																									
+270	Cauldron	(Sorceress Melee Set)\nThe Mysteries	MSThe Mysteries	100																																									
+271	Witchblade	(Sorceress Melee Set)\nThe Mysteries	MSThe Mysteries	100																																									
+272	Apeshoot	(Ape Set)\nTestament of the Apes	MSTestament of the Apes	100																																									
+273	Apeskin	(Ape Set)\nTestament of the Apes	MSTestament of the Apes	100																																									
+274	Apeskull	(Ape Set)\nTestament of the Apes	MSTestament of the Apes	100																																									
+275	Apehand	(Ape Set)\nTestament of the Apes	MSTestament of the Apes	100																																									
+276	Apefoot	(Ape Set)\nTestament of the Apes	MSTestament of the Apes	100																																									
+277	Lazarus' Chasuble	(Tribute Set)\nArchbishop Lazarus	Set_Lazbro	100																																									
+278	Lazarus' Surplice Cap	(Tribute Set)\nArchbishop Lazarus	Set_Lazbro	100																																									
+279	Lazarus' Votive Lamp	(Tribute Set)\nArchbishop Lazarus	Set_Lazbro	100																																									
 280	Ismail's Majesty	Legacy Reliquary	MSUnusedLol	666																																									
-281	Wyand's Perfidy	Curse of the Zakarum	Set_xaru	110																																									
-282	Bilefroth Skin	Henchmen Trophies	Set_PewPew	110	set_pewpew1				ac		1500	1500																					blac		set_pewpew1					5	5000		0
+281	Wyand's Perfidy	(Zakarum Set)\nCurse of the Zakarum	Set_xaru	110																																									
+282	Bilefroth Skin	(Legendary Set)\nHenchmen Trophies	Set_PewPew	100	set_pewpew1				ac		1500	1500																					blac		set_pewpew1					5	5000		0
 		
-283	Blackskull's Horns	Henchmen Trophies	Set_PewPew	110	set_pewpew2				abs-fire		5	5																					blac		set_pewpew2					5	5000		0
+283	Blackskull's Horns	(Legendary Set)\nHenchmen Trophies	Set_PewPew	100	set_pewpew2				abs-fire		5	5																					blac		set_pewpew2					5	5000		0
 		
-284	Doomcloud Spine	Henchmen Trophies	Set_PewPew	110	set_pewpew3				abs-ltng		5	5																					blac		set_pewpew3					5	5000		0
+284	Doomcloud Spine	(Legendary Set)\nHenchmen Trophies	Set_PewPew	100	set_pewpew3				abs-ltng		5	5																					blac		set_pewpew3					5	5000		0
 		
-285	Stareye's Claws	Henchmen Trophies	Set_PewPew	110	set_pewpew4				abs-cold		5	5																					blac		set_pewpew4					5	5000		0
+285	Stareye's Claws	(Legendary Set)\nHenchmen Trophies	Set_PewPew	100	set_pewpew4				abs-cold		5	5																					blac		set_pewpew4					5	5000		0
 		
-286	Fangskin Scales	Henchmen Trophies	Set_PewPew	110	set_pewpew5				abs-mag		5	5																					blac		set_pewpew5					5	5000		0
+286	Fangskin Scales	(Legendary Set)\nHenchmen Trophies	Set_PewPew	100	set_pewpew5				abs-mag		5	5																					blac		set_pewpew5					5	5000		0
 		
-287	Lazarus' Lamen	Archbishop Lazarus	Set_Lazbro	100																																									
-288	Maffer's Frenzy	Curse of the Zakarum	Set_xaru	100																																									
-289	Bremm's Retribution	Curse of the Zakarum	Set_xaru	100																																									
-290	Horazon's Guard	Brotherhood of the Vizjerei	Set_labrynth	120	lab_armor																																								
-291	Valthek's Blade	Brotherhood of the Vizjerei	Set_labrynth	120																																									
-292	Nor Tiraj's Safeguard	Brotherhood of the Vizjerei	Set_labrynth	120	lab_shield																																								
-293	Quov Tsin's Crown	Brotherhood of the Vizjerei	Set_labrynth	120	lab_helm																																								
-294	Bartuc's Blood	Brotherhood of the Vizjerei	Set_labrynth	120	lab_belt																																								
-295	Zoltun's Gauntlets	Brotherhood of the Horadrim	Set_labrynth2	120	lab_gloves																																								
-296	Radament's Greaves	Brotherhood of the Horadrim	Set_labrynth2	120	lab_boots																																								
-297	Jered Cain's Diamond	Brotherhood of the Horadrim	Set_labrynth2	120	lab_rn1																																								
-298	Deckard Cain's Gem	Brotherhood of the Horadrim	Set_labrynth2	120	lab_rn2																																								
-299	Tal Rasha's Talisman	Brotherhood of the Horadrim	Set_labrynth2	120	lab_amu																																								
-300	Geleb's Greed	Curse of the Zakarum	Set_xaru	100																																									
-301	Yaerius' Mediation	Yaerius' Grey Omen	MSSelathiel Archives	100																																									
-302	Yaerius' Alembic	Yaerius' Grey Omen	MSSelathiel Archives	100																																									
-303	Yaerius' Untruth	Yaerius' Grey Omen	MSSelathiel Archives	100																																									
-304	Yaerius' Simulacrum	Yaerius' Grey Omen	MSSelathiel Archives	100																																									
+287	Lazarus' Lamen	(Tribute Set)\nArchbishop Lazarus	Set_Lazbro	100																																									
+288	Maffer's Frenzy	(Zakarum Set)\nCurse of the Zakarum	Set_xaru	100																																									
+289	Bremm's Retribution	(Zakarum Set)\nCurse of the Zakarum	Set_xaru	100																																									
+290	Horazon's Guard	(Valthek Quest Set)\nBrotherhood of the Vizjerei	Set_labrynth	120	lab_armor																																								
+291	Valthek's Blade	(Valthek Quest Set)\nBrotherhood of the Vizjerei	Set_labrynth	120																																									
+292	Nor Tiraj's Safeguard	(Valthek Quest Set)\nBrotherhood of the Vizjerei	Set_labrynth	120	lab_shield																																								
+293	Quov Tsin's Crown	(Valthek Quest Set)\nBrotherhood of the Vizjerei	Set_labrynth	120	lab_helm																																								
+294	Bartuc's Blood	(Valthek Quest Set)\nBrotherhood of the Vizjerei	Set_labrynth	120	lab_belt																																								
+295	Zoltun's Gauntlets	(Valthek Quest Set)\nBrotherhood of the Horadrim	Set_labrynth2	120	lab_gloves																																								
+296	Radament's Greaves	(Valthek Quest Set)\nBrotherhood of the Horadrim	Set_labrynth2	120	lab_boots																																								
+297	Jered Cain's Diamond	(Valthek Quest Set)\nBrotherhood of the Horadrim	Set_labrynth2	120	lab_rn1																																								
+298	Deckard Cain's Gem	(Valthek Quest Set)\nBrotherhood of the Horadrim	Set_labrynth2	120	lab_rn2																																								
+299	Tal Rasha's Talisman	(Valthek Quest Set)\nBrotherhood of the Horadrim	Set_labrynth2	120	lab_amu																																								
+300	Geleb's Greed	(Zakarum Set)\nCurse of the Zakarum	Set_xaru	100																																									
+301	Yaerius' Mediation	(Paladin Neutral Set)\nYaerius' Grey Omen	MSSelathiel Archives	100																																									
+302	Yaerius' Alembic	(Paladin Neutral Set)\nYaerius' Grey Omen	MSSelathiel Archives	100																																									
+303	Yaerius' Untruth	(Paladin Neutral Set)\nYaerius' Grey Omen	MSSelathiel Archives	100																																									
+304	Yaerius' Simulacrum	(Paladin Neutral Set)\nYaerius' Grey Omen	MSSelathiel Archives	100																																									
 305	Yaerius' Xyston	Legacy Reliquary	MSUnusedLol	666																																									
 306	Zerae's Blessing	Legacy Reliquary	MSUnusedLol	666																																									
-307	Zerae's Refinement	Zerae's Divinity	MSZeraes Divinity	90																																									
-308	Zerae's Vindication	Zerae's Divinity	MSZeraes Divinity	90																																									
-309	Zerae's Redemption	Zerae's Divinity	MSZeraes Divinity	90																																									
-310	Zerae's Holy Wrath	Zerae's Divinity	MSZeraes Divinity	90																																									
-311	Marchosias' Hatred	Marchosias' Essence	MREssence	90																																									
-312	Marchosias' Might	Marchosias' Essence	MREssence	90																																									
-313	Marchosias' Evil Grin	Marchosias' Essence	MREssence	90																																									
+307	Zerae's Refinement	(Amazon Storm Set)\nZerae's Divinity	MSZeraes Divinity	90																																									
+308	Zerae's Vindication	(Amazon Storm Set)\nZerae's Divinity	MSZeraes Divinity	90																																									
+309	Zerae's Redemption	(Amazon Storm Set)\nZerae's Divinity	MSZeraes Divinity	90																																									
+310	Zerae's Holy Wrath	(Amazon Storm Set)\nZerae's Divinity	MSZeraes Divinity	90																																									
+311	Marchosias' Hatred	(Druid Werewolf Set)\nMarchosias' Essence	MREssence	90																																									
+312	Marchosias' Might	(Druid Werewolf Set)\nMarchosias' Essence	MREssence	90																																									
+313	Marchosias' Evil Grin	(Druid Werewolf Set)\nMarchosias' Essence	MREssence	90																																									
 314	Marchosias' Deception	Legacy Reliquary	MSUnusedLol	666																																									
-315	Marchosias' Anger	Marchosias' Essence	MREssence	90																																									
-316	Steppe Sleeper	Tundra Walker	MSTundra Walker	80																																									
-317	Ancient Bronze	Tundra Walker	MSTundra Walker	80																																									
+315	Marchosias' Anger	(Druid Werewolf Set)\nMarchosias' Essence	MREssence	90																																									
+316	Steppe Sleeper	(Barbarian Warrior Set)\nTundra Walker	MSTundra Walker	80																																									
+317	Ancient Bronze	(Barbarian Warrior Set)\nTundra Walker	MSTundra Walker	80																																									
 318	Snow Silver	Legacy Reliquary	MSUnusedLol	666																																									
-319	Grey Ranger	Tundra Walker	MSTundra Walker	80																																									
-320	Vale Hunter	Tundra Walker	MSTundra Walker	80																																									
+319	Grey Ranger	(Barbarian Warrior Set)\nTundra Walker	MSTundra Walker	80																																									
+320	Vale Hunter	(Barbarian Warrior Set)\nTundra Walker	MSTundra Walker	80																																									
 321	Lirian Moon	Legacy Reliquary	MSUnusedLol	666																																									
-322	The Trickster	Celestial Orchard	MSOrchard	90																																									
-323	Giyua's Sacrum	Celestial Orchard	MSOrchard	90																																									
-324	The Dragon Grave	Celestial Orchard	MSOrchard	90																																									
-325	Femur of the Prophet	Celestial Orchard	MSOrchard	90																																									
-326	Quantum Bevel	Universal Law	MSUniversalLaw	80																																									
-327	Dead Lens	Universal Law	MSUniversalLaw	80	invbshu																																								
+322	The Trickster	(Necromancer Malice Set)\nCelestial Orchard	MSOrchard	90																																									
+323	Giyua's Sacrum	(Necromancer Malice Set)\nCelestial Orchard	MSOrchard	90																																									
+324	The Dragon Grave	(Necromancer Malice Set)\nCelestial Orchard	MSOrchard	90																																									
+325	Femur of the Prophet	(Necromancer Malice Set)\nCelestial Orchard	MSOrchard	90																																									
+326	Quantum Bevel	(Assassin Psionic Set)\nUniversal Law	MSUniversalLaw	80																																									
+327	Dead Lens	(Assassin Psionic Set)\nUniversal Law	MSUniversalLaw	80	invbshu																																								
 328	World Line	Legacy Reliquary	MSUnusedLol	666																																									
-329	Hypersurface	Universal Law	MSUniversalLaw	80																																									
-330	Killing Vector	Universal Law	MSUniversalLaw	80	invaxfu																																								
-331	The Conqueror	Trophy Hunter	M_HeadHunter	120																																									
-332	Idol of Fortune	Trophy Hunter	M_HeadHunter	120	invamugl																																								
-333	Hand of Inarius	Sanctuary	M_Nephalems	100																																									
-334	Lilith's Disguise	Sanctuary	M_Nephalems	100																																									
-335	Worldstone	Sanctuary	M_Nephalems	100																																									
-336	Eye of Wisdom	Thunderstorm	M_Thunderstorm	100	invamuset																												blac		invamuset					5	5000		0
+329	Hypersurface	(Assassin Psionic Set)\nUniversal Law	MSUniversalLaw	80																																									
+330	Killing Vector	(Assassin Psionic Set)\nUniversal Law	MSUniversalLaw	80	invaxfu																																								
+331	The Conqueror	(Trophy Set)\nTrophy Hunter	M_HeadHunter	120																																									
+332	Idol of Fortune	(Trophy Set)\nTrophy Hunter	M_HeadHunter	120	invamugl																																								
+333	Hand of Inarius	(Edyrem Set)\nSanctuary	M_Nephalems	100																																									
+334	Lilith's Disguise	(Edyrem Set)\nSanctuary	M_Nephalems	100																																									
+335	Worldstone	(Edyrem Set)\nSanctuary	M_Nephalems	100																																									
+336	Eye of Wisdom	(Amazon Oskill Set)\nThunderstorm	M_Thunderstorm	100	invamuset																												blac		invamuset					5	5000		0
 		
-337	Charged Cloud	Thunderstorm	M_Thunderstorm	100																													dgld							5	5000		0
+337	Charged Cloud	(Amazon Oskill Set)\nThunderstorm	M_Thunderstorm	100																													dgld							5	5000		0
 		
-338	Eye of Wisdom	Battle Devices	M_BattleDevices	100	invamuset																												blac		invamuset					5	5000		0
+338	Eye of Wisdom	(Assassin Oskill Set)\nBattle Devices	M_BattleDevices	100	invamuset																												blac		invamuset					5	5000		0
 		
-339	Death Magnet	Battle Devices	M_BattleDevices	100																													blac							5	5000		0
+339	Death Magnet	(Assassin Oskill Set)\nBattle Devices	M_BattleDevices	100																													blac							5	5000		0
 		
-340	Eye of Wisdom	Guardian of the Sightless Eye	M_GuardianRogue	100	invamuset																												blac		invamuset					5	5000		0
+340	Eye of Wisdom	(Barbarian Oskill Set)\nGuardian of the Sightless Eye	M_GuardianRogue	100	invamuset																												blac		invamuset					5	5000		0
 		
-341	Imperial Guard	Guardian of the Sightless Eye	M_GuardianRogue	100																													lyel							5	5000		0
+341	Imperial Guard	(Barbarian Oskill Set)\nGuardian of the Sightless Eye	M_GuardianRogue	100																													lyel							5	5000		0
 		
-342	Eye of Wisdom	Oak's Teaching	M_OakTeaching	100	invamuset																												blac		invamuset					5	5000		0
+342	Eye of Wisdom	(Druid Oskill Set)\nOak's Teaching	M_OakTeaching	100	invamuset																												blac		invamuset					5	5000		0
 		
-343	Apprentice	Oak's Teaching	M_OakTeaching	100																													dgrn							5	5000		0
+343	Apprentice	(Druid Oskill Set)\nOak's Teaching	M_OakTeaching	100																													dgrn							5	5000		0
 		
-344	Eye of Wisdom	The Offering	M_TheOffering	100	invamuset																												blac		invamuset					5	5000		0
+344	Eye of Wisdom	(Necromancer Oskill Set)\nThe Offering	M_TheOffering	100	invamuset																												blac		invamuset					5	5000		0
 		
-345	Sacrificial Mind	The Offering	M_TheOffering	100																													blac							5	5000		0
+345	Sacrificial Mind	(Necromancer Oskill Set)\nThe Offering	M_TheOffering	100																													blac							5	5000		0
 		
-346	Eye of Wisdom	Armageddon	M_Armageddon	100	invamuset																												blac		invamuset					5	5000		0
+346	Eye of Wisdom	(Paladin Oskill Set)\nArmageddon	M_Armageddon	100	invamuset																												blac		invamuset					5	5000		0
 		
-347	The Witness	Armageddon	M_Armageddon	100																													dred							5	5000		0
+347	The Witness	(Paladin Oskill Set)\nArmageddon	M_Armageddon	100																													dred							5	5000		0
 		
-348	Eye of Wisdom	Wintertide	M_Wintertide	100	invamuset																												blac		invamuset					5	5000		0
+348	Eye of Wisdom	(Sorceress Oskill Set)\nWintertide	M_Wintertide	100	invamuset																												blac		invamuset					5	5000		0
 		
-349	Arctic Shard	Wintertide	M_Wintertide	100																													dblu							5	5000		0
+349	Arctic Shard	(Sorceress Oskill Set)\nWintertide	M_Wintertide	100																													dblu							5	5000		0
 		
-350	Angel of Death	Astrogha's Moon	M_AstroghasMoon	90																																									
-351	Viper Skin	Astrogha's Moon	M_AstroghasMoon	100																																									
-352	Darkling	Astrogha's Moon	M_AstroghasMoon	100																																									
-353	The Judgment	Vizjerei Dominion	M_VizjereiDominion	100					cd-reduce		100	100					syn2		1	1																				5	5000		0
+350	Angel of Death	(Wyrd Set)\nAstrogha's Moon	M_AstroghasMoon	90																																									
+351	Viper Skin	(Wyrd Set)\nAstrogha's Moon	M_AstroghasMoon	100																																									
+352	Darkling	(Wyrd Set)\nAstrogha's Moon	M_AstroghasMoon	100																																									
+353	The Judgment	(Sorceress Arcane Set)\nVizjerei Dominion	M_VizjereiDominion	100					cd-reduce		100	100					syn2		1	1																				5	5000		0
 		
-354	The Catalyst	Vizjerei Dominion	M_VizjereiDominion	100																																				5	5000		0
+354	The Catalyst	(Sorceress Arcane Set)\nVizjerei Dominion	M_VizjereiDominion	100																																				5	5000		0
 		
-355	The Hunger	Vizjerei Dominion	M_VizjereiDominion	100																																									
-356	The Darkness	Vizjerei Dominion	M_VizjereiDominion	100																																									
-357	The Presence	Vizjerei Dominion	M_VizjereiDominion	100																																									
+355	The Hunger	(Sorceress Arcane Set)\nVizjerei Dominion	M_VizjereiDominion	100																																									
+356	The Darkness	(Sorceress Arcane Set)\nVizjerei Dominion	M_VizjereiDominion	100																																									
+357	The Presence	(Sorceress Arcane Set)\nVizjerei Dominion	M_VizjereiDominion	100																																									

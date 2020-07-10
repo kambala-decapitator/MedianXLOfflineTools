@@ -21,7 +21,7 @@ aspe	spea,amaz		Amazon Spear
 qasp	aspe,ct2w		Amazon Spear (Sacred)
 geml	gem		Amber
 gema	gem		Amethyst
-amul	riam,hlm1	invamu1,invamu2,invamu3	Amulet
+amul	riam,sg&d	invamu1,invamu2,invamu3	Amulet
 qamu	amul	invamu1,invamu2,invamu3	Amulet (Sacred)
 apot	poti		Antidote Potion
 armo	myor		Any Armor
@@ -121,7 +121,7 @@ herb	misc		Herb
 horm	hamm		Horadric Malus
 jave	comb,spea		Javelin
 qjvn	jave,ct1w		Javelin (Sacred)
-jewl	sock,dcht	invjw1,invjw2,invjw3,invjw4,invjw5,invjw6	Jewel
+jewl	sock,sg&d	invjw1,invjw2,invjw3,invjw4,invjw5,invjw6	Jewel
 key	misc		Key
 knif	mele,dbox		Knife
 qknf	knif,ct1w		Knife (Sacred)
@@ -180,8 +180,9 @@ phlm	helm,barb		Primal Helm
 qphm	phlm,ct1a		Primal Helm (Sacred)
 gemx	gem		Rainbow Gem
 rpot	hpot,mpot		Rejuv Potion
+reli	sock	relic01,relic02,relic03,relic04,relic05,relic06	Relic
 grtz	char		Reward Charm
-ring	riam,dcht	invrin1,invrin2,invrin3,invrin4,invrin5	Ring
+ring	riam,sg&d	invrin1,invrin2,invrin3,invrin4,invrin5	Ring
 qrin	ring	invrin1,invrin2,invrin3,invrin4,invrin5	Ring (Sacred)
 riam	misc,myor		Rings and Amulets
 gemr	gem		Ruby
@@ -204,6 +205,7 @@ qscy	scyh,ct2w		Scythe (Sacred)
 shie	shld		Shield
 qshi	shie,ct1a		Shield (Sacred)
 shco	thng		Shrine Container
+sg&d	dcht,ssgl		Siggable And Shardable
 gemz	gem		Skull
 scha	char	invch1,invch4,invch7	Small Charm
 cyc1	cycl	invch1,invch4,invch7	Small Cycle
