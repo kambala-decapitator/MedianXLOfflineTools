@@ -25,7 +25,7 @@ mindamage	21		items	to Minimum Damage	11	0		0	2047	16			1		132	1	1	ModStr1g	ModS
 maxdamage	22		items	to Maximum Damage	11	0		0	2047	16			1		131	1	1	ModStr1f	ModStr1f		1							47	50																									1024	11	0	0
 secondary_mindamage	23		items	to Minimum Damage	11	0		0	2047	16			1		129	1	1	ModStr1g	ModStr1g		1							38	64																									1024	11	0	0
 secondary_maxdamage	24		items	to Maximum Damage	11	0		0	2047	16			1		128	1	1	ModStr1f	ModStr1f		1							44	64																									1024	11	0	0
-damagepercent	25		items	Enhanced Weapon Damage	10	50		-50	973	12			1		85	4	2	ModTotPhysDmg	ModNegPhysDmgZ		1							23	20																									1024	10	50	0
+damagepercent	25		items	Enhanced Weapon Damage	10	50		-50	973	12			1		85	4	2	ModTotPhysDmg	ModTotPhysDmg		1							23	20																									1024	10	50	0
 manarecovery	26		skills		10	0		0	1023																																													1024	10	0	0
 manarecoverybonus	27		items	Regenerate Mana	9	100		-100	411	16			1		57	4	2	ModStr4g	ModStr4g																																			1024	9	100	0
 staminarecoverybonus	28		misc	Heal Stamina Plus	10	0		0	1023	16			1		53	2	2	ModStr3v	ModStr3v																																			1024	10	0	0
@@ -52,8 +52,8 @@ firemindam	48		items	to Minimum Fire Damage	12	0		0	4095	16			1		107	1	1	ModStr1
 firemaxdam	49		items	to Maximum Fire Damage	12	0		0	4095	16			1		106	1	1	ModStr1o	ModStr1o		1							10	5																									1024	12	0	0
 lightmindam	50		items	to Minimum Lightning Damage	12	0		0	4095	16			1		104	1	1	ModStr1r	ModStr1r		1							6	5																									1024	12	0	0
 lightmaxdam	51		items	to Maximum Lightning Damage	12	0		0	4095	16			1		103	1	1	ModStr1q	ModStr1q		1							9	5																									1024	12	0	0
-magicmindam	52		items	+%d magic damage	12	0		0	4095	16			1		109	1	1	strModMagicDamage	strModMagicDamage		1							98	10																									1024	12	0	0
-magicmaxdam	53		items	+%d magic damage	12	0		0	4095	16			1		108	1	1	strModMagicDamage	strModMagicDamage		1							92	10																									1024	12	0	0
+magicmindam	52		items	+%d magic damage	12	0		0	4095	16			1		109	1	1	ModMagicMin	ModMagicMin		1							98	10																									1024	12	0	0
+magicmaxdam	53		items	+%d magic damage	12	0		0	4095	16			1		108	1	1	ModMagicMax	ModMagicMax		1							92	10																									1024	12	0	0
 coldmindam	54		items	to Minimum Cold Damage	12	0		0	4095	16			1		101	1	1	ModStr1t	ModStr1t		1							226	256																									1024	12	0	0
 coldmaxdam	55		items	to Maximum Cold Damage	12	0		0	4095	16			1		100	1	1	ModStr1s	ModStr1s		1							64	170																									1024	12	0	0
 coldlength	56		items		10	0		0	1023	16			1								1							39	2																									1024	10	0	0
@@ -164,7 +164,7 @@ item_throw_maxdamage	160		items		10	0		0	1023	7			1								1							44	64								
 skill_handofathena	161		skills	Unusual Missile Speed	6	10		-10	53	12			1		82	3	1	ModMsl	ModMsl									26	5																									1024	6	10	0
 skill_staminapercent	162		classic							13			1																								1			maxstamina														1024	0	0	0
 skill_passive_staminapercent	163		classic							12			1																								1			maxstamina														1024	0	0	0
-skill_concentration	164		items	Chance of Uninterruptable Attack	8	20		-20	235	12			1		25	2	1	ModitemUninter	ModitemUninter									168	425																									1024	8	20	0
+skill_concentration	164		skills		8	20		-20	235	12			1		25	2	1	ModitemUninter	ModitemUninter									168	425																									1024	8	20	0
 skill_enchant	165		classic							12			1																																									1024	0	0	0
 skill_pierce	166		classic							12			1																																									1024	0	0	0
 skill_conviction	167		classic							12			1																																									1024	0	0	0
@@ -384,8 +384,8 @@ passive_bloodlust_dmgpct	380		items	Bonus Damage to Bloodlust	8	0		0	255	12			1	
 passive_bloodlust_elempct	381		items	Bonus Elemental Damage to Bloodlust	8	0		0	255	12			1		154	4	1	ModitemBloodlustElem	ModitemBloodlustElem									331	91																									1024	8	0	0
 x_signet53	382		cube / mo		5	0		0	31	12			1															7	2																									1024	5	0	0
 special_syn1	383		items		14	1001	12	-1001	15382	17	12		1																																									1024	14	1001	0
-passive_holyarmor_addmove	384	replace w/ syn	items	Movement Speed to Sacred Armor	8	0		0	255	12			1		155	2	1	ModitemHolyArmor2	ModitemHolyArmor2																																			1024	8	0	0
-not_used_385	385		unused							5			1																																									1024	0	0	0
+near_resurrected	384		Skills	Checks if you are near a resurrected minion	8	0		0	255	12			1		155	2	1	ModitemHolyArmor2	ModitemHolyArmor2																																			1024	8	0	0
+desc_orange	385	"Always displays orange, for desc stat stacking (in the future min/max could be used as variables for the string)"	items		15	0	15	0	32767	15	15				246	34	0											1006	251																									1024	15	0	0
 witchberry_lifeheal	386	moon cookie	cube + skills		8	0		0	255	12			1																																									1024	8	0	0
 passive_motw_dmgpct	387	replace w/ syn	items	Bonus Damage to Mark of the Wild	8	0		0	255	12			1		154	4	1	ModitemMotwDmg	ModitemMotwDmg									331	91																									1024	8	0	0
 passive_motw_elempct	388		items	Bonus Elemental Damage to Mark of the Wild	8	0		0	255	12			1		154	4	1	ModitemMotwElem	ModitemMotwElem									331	91																									1024	8	0	0
@@ -464,10 +464,10 @@ x_signet64	460		cube / mo		5	0		0	31	12			1															7	2																			
 x_signet65	461		cube / mo		5	0		0	31	12			1															7	2																									1024	5	0	0
 skill_voj_mastery	462		items	Damage to Vessel of Justice	8	0		0	255	12			1		142	4	1	ModitemVoJDmgSyn	ModitemVoJDmgSyn																																			1024	8	0	0
 item_class_spec	463	Add class req to item	items		5	0		0	31	5			1																																									1024	5	0	0
-skill_scorpion_blades	464	replace w/ syn	items	Scorpion Blade Projectiles	9	1		-1	510	12			1		245	3	0	ModItemScorpionBlades	ModItemAthuluaSc									59	50																									1024	9	1	0
+skill_scorpion_blades	464	replaced n free	items	Scorpion Blade Projectiles	9	1		-1	510	12			1		245	3	0	ModItemScorpionBlades	ModItemAthuluaSc									59	50																									1024	9	1	0
 skill_totem_damage	465		skills		8	0		0	255	9			1																																									1024	8	0	0
 trader_chest	466		cube	Essence Slots:	7	0		0	127	8			1		10	3	2	ModitemGemSpace	ModitemGemSpace																																			1024	7	0	0
-not_used_467	467		unused							5			1																																									1024	0	0	0
+rp_lock	467		items		9	50		-50	461	12			1															55	41																									1024	9	50	0
 skill_light_mastery	468		items	Damage to Vessel of Retribution	8	0		0	255	12			1		142	4	1	ModitemVDmgSyn	ModitemVDmgSyn																																			1024	8	0	0
 skill_shadow_mastery	469		items	Extra Targets to Paladin Vessels	8	0		0	255	12			1		143	1	1	ModitemVTgtSyn	ModitemVTgtSyn																																			1024	8	0	0
 skill_minion_dmg_percent	470		items	to Summoned Minion Damage	9	50		-50	461	12			1		83	4	1	ModitemDmgMinBonus	ModitemDmgMinBonus									55	41																									1024	9	50	0

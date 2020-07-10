@@ -201,6 +201,7 @@ fire-max	48	items			1	firemaxdam																													none	0
 cold-len	47	items			1	coldlength																													none	0
 indestruct	47	items			20																										Indestructible				none	0
 fire-min	46	items			1	firemindam																													none	0
+desc-orange		items			24	desc_orange																														0
 desc-top	45	items			24	desc_top																														0
 desc-less-top		items			24	desc_less_top																														0
 thorns%	40	items			1	thorns_percent																									Laz / Percentage thorns		min	max	beware physical resistance in hell	0
@@ -346,7 +347,6 @@ extra-ficom	1	items			1	passive_fire_mastery			3	passive_cold_mastery			3	passiv
 extra-firepm	1	items			1	passive_fire_mastery			3	passive_pm_mastery																					Laz / Combination affix		min	max	none	0
 extra-pierce-fico	1	items			1	passive_fire_pierce			3	passive_cold_pierce			3	passive_fire_mastery			3	passive_cold_mastery			3	enr_factor									Laz / Combination affix		min	max	none	0
 extra-pois/lvl	1	items			17	passive_pois_mastery_perlevel																									Laz / Mastery per level	(32nds)			none	0
-holyarmor-vel	1	items			1	passive_holyarmor_addmove																									Laz / Interacts with skills.txt		min	max	none	0
 hp-edyrem	1	items			1	skill_edyrem_hp_percent																									Laz / Interacts with skills.txt		min	max	none	0
 lh-stupidity	1	items			1	passive_lionheart_addstupidth																									Laz / Interacts with skills.txt		min	max	none	0
 life-manasteal	1	items			1	lifedrainmindam			3	manadrainmindam																					Laz / Combination affix		min	max	none	0
@@ -393,3 +393,6 @@ deimoss2		monster			15	damage_divisor			16	passive_fire_pierce			17	passive_dodg
 dmg-IED		items			1	IED																													none	0
 taxe-sacred-ltng		items			15	lightmindam			16	lightmaxdam			17	weapon_count																					none	0
 dexbonusblue		items			17	dexterity_bonus_wpn																									AC per Player Level	(32nds)			none	0
+crsd-sacred-cold		items			15	coldmindam			16	coldmaxdam			17	weapon_count																					none	0
+h2h-sacred-ltng		items			15	lightmindam			16	lightmaxdam			17	weapon_count																					none	0
+samael2		monster			15	curse_resistance			16	item_healafterkill			17	damage_divisor																					"min = curse res, max = heal kill, layer=dmg-div"	0

@@ -64,7 +64,7 @@ Vex Rune	Vex	18	r26	2	half-freeze		1	1	ac/runemaster	32	32	32					half-freeze		1
 Ohm Rune	Ohm	18	r27	2	vit%		5	5	ac/runemaster	32	32	32					vit%		5	5	ac/runemaster	32	32	32					vit%		5	5	ac/runemaster	32	32	32				0
 Lo Rune	Lo	18	r28	2	res-ltng		30	30	ac/runemaster	32	32	32					res-ltng		25	25	ac/runemaster	32	32	32					res-ltng		25	25	ac/runemaster	32	32	32				0
 Sur Rune	Sur	18	r29	2	regen-mana		15	15	ac/runemaster	32	32	32					regen-mana		5	5	ac/runemaster	32	32	32					regen-mana		5	5	ac/runemaster	32	32	32				0
-Ber Rune	Ber	18	r30	2	uninterrupt		10	10	ac/runemaster	32	32	32					uninterrupt		5	5	ac/runemaster	32	32	32					uninterrupt		5	5	ac/runemaster	32	32	32				0
+Ber Rune	Ber	18	r30	2	indestruct	1	1	1	ac/runemaster	32	32	32					indestruct	1	1	1	ac/runemaster	32	32	32					indestruct	1	1	1	ac/runemaster	32	32	32				0
 Jah Rune	Jah	18	r31	2	dmg%		15	15	ac/runemaster	32	32	32					ac%		15	15	ac/runemaster	32	32	32					ac%		15	15	ac/runemaster	32	32	32				0
 Cham Rune	Cham	18	r32	2	vit		10	10	ac/runemaster	32	32	32					vit		10	10	ac/runemaster	32	32	32					vit		10	10	ac/runemaster	32	32	32				0
 Zod Rune	Zod	18	r33	2	slow		2	2	ac/runemaster	32	32	32					slow-thorns		2	2	ac/runemaster	32	32	32					slow-thorns		2	2	ac/runemaster	32	32	32				0
@@ -88,16 +88,16 @@ On Rune	On	18	r50	2	hp%-mp%		3	3	ac/runemaster	32	32	32					hp%-mp%		2	2	ac/rune
 Taha Rune	Taha	18	r51	2	dmg-max		20	20	ac/runemaster	32	32	32	eq-grw		1	1	dmg-max		10	10	ac/runemaster	32	32	32					dmg-max		10	10	ac/runemaster	32	32	32	eq-gr		1	1
 Ghal Rune	Ghal	18	r52	2	enr-factor		30	30	ac/runemaster	32	32	32	eq-grw		1	1	enr-factor		15	15	ac/runemaster	32	32	32					enr-factor		15	15	ac/runemaster	32	32	32	eq-gr		1	1
 Qor Rune	Qor	18	r53	2	ease		-12	-12	ac/runemaster	32	32	32	eq-grw		1	1	ease		-12	-12	ac/runemaster	32	32	32					ease		-12	-12	ac/runemaster	32	32	32	eq-gr		1	1
-Chipped Rainbow Stone		16	yo1	3	crush		1	1	hp/paragon	32	32	32					gold%		1	1	hp/paragon	32	32	32					res-curse		2	2	hp/paragon	32	32	32				0
-Flawed Rainbow Stone		16	yo2	3	crush		1	1	hp/paragon	32	32	32					gold%		2	2	hp/paragon	32	32	32					res-curse		4	4	hp/paragon	32	32	32				0
-Rainbow Stone		16	yo3	3	crush		2	2	hp/paragon	32	32	32					gold%		4	4	hp/paragon	32	32	32					res-curse		6	6	hp/paragon	32	32	32				0
-Flawless Rainbow Stone		16	yo4	3	crush		2	2	hp/paragon	32	32	32					gold%		6	6	hp/paragon	32	32	32					res-curse		8	8	hp/paragon	32	32	32				0
-Perfect Rainbow Stone		15	yo5	3	crush		3	3	hp/paragon	32	32	32					gold%		8	8	hp/paragon	32	32	32					res-curse		10	10	hp/paragon	32	32	32				0
-Chipped Onyx		3	g$a	3	dmg-minion		2	2	hp/paragon	32	32	32					res-cold		4	4	hp/paragon	32	32	32					uninterrupt		1	1	hp/paragon	32	32	32				0
-Flawed Onyx		3	g$b	3	dmg-minion		4	4	hp/paragon	32	32	32					res-cold		8	8	hp/paragon	32	32	32					uninterrupt		2	2	hp/paragon	32	32	32				0
-Onyx		3	g$c	3	dmg-minion		6	6	hp/paragon	32	32	32					res-cold		12	12	hp/paragon	32	32	32					uninterrupt		3	3	hp/paragon	32	32	32				0
-Flawless Onyx		3	g$d	3	dmg-minion		8	8	hp/paragon	32	32	32					res-cold		16	16	hp/paragon	32	32	32					uninterrupt		4	4	hp/paragon	32	32	32				0
-Perfect Onyx		3	g$e	3	dmg-minion		10	10	hp/paragon	32	32	32					res-cold		20	20	res-cold-max		1	1	hp/paragon	32	32	32	uninterrupt		5	5	hp/paragon	32	32	32				0
+Chipped Rainbow Stone		16	yo1	3	dmg-IED		1	1	hp/paragon	32	32	32					gold%		1	1	hp/paragon	32	32	32					res-curse		2	2	hp/paragon	32	32	32				0
+Flawed Rainbow Stone		16	yo2	3	dmg-IED		1	1	hp/paragon	32	32	32					gold%		2	2	hp/paragon	32	32	32					res-curse		4	4	hp/paragon	32	32	32				0
+Rainbow Stone		16	yo3	3	dmg-IED		2	2	hp/paragon	32	32	32					gold%		4	4	hp/paragon	32	32	32					res-curse		6	6	hp/paragon	32	32	32				0
+Flawless Rainbow Stone		16	yo4	3	dmg-IED		2	2	hp/paragon	32	32	32					gold%		6	6	hp/paragon	32	32	32					res-curse		8	8	hp/paragon	32	32	32				0
+Perfect Rainbow Stone		15	yo5	3	dmg-IED		3	3	hp/paragon	32	32	32					gold%		8	8	hp/paragon	32	32	32					res-curse		10	10	hp/paragon	32	32	32				0
+Chipped Onyx		3	g$a	3	dmg-minion		2	2	hp/paragon	32	32	32					res-cold		4	4	hp/paragon	32	32	32					slow		1	1	hp/paragon	32	32	32				0
+Flawed Onyx		3	g$b	3	dmg-minion		4	4	hp/paragon	32	32	32					res-cold		8	8	hp/paragon	32	32	32					slow		1	1	hp/paragon	32	32	32				0
+Onyx		3	g$c	3	dmg-minion		6	6	hp/paragon	32	32	32					res-cold		12	12	hp/paragon	32	32	32					slow		1	1	hp/paragon	32	32	32				0
+Flawless Onyx		3	g$d	3	dmg-minion		8	8	hp/paragon	32	32	32					res-cold		16	16	hp/paragon	32	32	32					slow		2	2	hp/paragon	32	32	32				0
+Perfect Onyx		3	g$e	3	dmg-minion		10	10	hp/paragon	32	32	32					res-cold		20	20	res-cold-max		1	1	hp/paragon	32	32	32	slow		2	2	hp/paragon	32	32	32				0
 Chipped Bloodstone		8	9$a	3	hp-minion		2	2	hp/paragon	32	32	32					res-fire		4	4	hp/paragon	32	32	32					res-all-minion		1	1	hp/paragon	32	32	32				0
 Flawed Bloodstone		8	9$b	3	hp-minion		4	4	hp/paragon	32	32	32					res-fire		8	8	hp/paragon	32	32	32					res-all-minion		2	2	hp/paragon	32	32	32				0
 Bloodstone		8	9$c	3	hp-minion		6	6	hp/paragon	32	32	32					res-fire		12	12	hp/paragon	32	32	32					res-all-minion		3	3	hp/paragon	32	32	32				0
@@ -119,7 +119,7 @@ Sha'ad Rune	Shaad	18	r56	2	dmg%		20	20	ac/runemaster	32	32	32	eq-grw		1	1	ac%		2
 Fire Rune	Fi	9	r57	3	dmg-fire		50	100	ac/runemaster	32	32	32	eq-grw		1	1	dmg-fire		13	25	ac/runemaster	32	32	32					dmg-fire		13	25	ac/runemaster	32	32	32	eq-gr		1	1
 Phys Rune	Ea	1	r58	3	dmg-norm		5	10	ac/runemaster	32	32	32	eq-grw		1	1	dmg-norm		3	5	ac/runemaster	32	32	32					dmg-norm		3	5	ac/runemaster	32	32	32	eq-gr		1	1
 Magic Rune	Ma	19	r59	3	dmg-mag		50	100	ac/runemaster	32	32	32	eq-grw		1	1	dmg-mag		13	25	ac/runemaster	32	32	32					dmg-mag		13	25	ac/runemaster	32	32	32	eq-gr		1	1
-Pois Rune	Po	12	r60	3	dmg-pois	25	2048	2560	ac/runemaster	32	32	32	eq-grw		1	1	dmg-pois	25	512	1025	ac/runemaster	32	32	32					dmg-pois	25	512	1025	ac/runemaster	32	32	32	eq-gr		1	1
+Pois Rune	Po	12	r60	3	dmg-pois	50	2048	2560	ac/runemaster	32	32	32	eq-grw		1	1	dmg-pois	50	512	1025	ac/runemaster	32	32	32					dmg-pois	50	512	1025	ac/runemaster	32	32	32	eq-gr		1	1
 Ltng Rune	Li	14	r61	3	dmg-ltng		50	100	ac/runemaster	32	32	32	eq-grw		1	1	dmg-ltng		13	25	ac/runemaster	32	32	32					dmg-ltng		13	25	ac/runemaster	32	32	32	eq-gr		1	1
 Cold Rune	Co	6	r62	3	dmg-cold		50	100	ac/runemaster	32	32	32	eq-grw		1	1	dmg-cold		13	25	ac/runemaster	32	32	32					dmg-cold		13	25	ac/runemaster	32	32	32	eq-gr		1	1
 Ultra Rune	Xis	3	r98	3	dmg%		25	25	ac/runemaster	32	32	32	item-nounsock		1	1	ac%		25	25	ac/runemaster	32	32	32	item-nounsock		1	1	ac%		25	25	ac/runemaster	32	32	32	item-nounsock		1	1
@@ -152,7 +152,7 @@ Vex Rune Super	VeXis	15	rx26	2	half-freeze		1	1	ac/runemaster	32	32	32	item-noun
 Ohm Rune Super	OhXis	15	rx27	2	vit%		5	5	ac/runemaster	32	32	32	item-nounsock		1	1	vit%		5	5	ac/runemaster	32	32	32	item-nounsock		1	1	vit%		5	5	ac/runemaster	32	32	32	item-nounsock		1	1
 Lo Rune Super	LoXis	15	rx28	2	res-ltng		30	30	ac/runemaster	32	32	32	item-nounsock		1	1	res-ltng		20	20	ac/runemaster	32	32	32	item-nounsock		1	1	res-ltng		20	20	ac/runemaster	32	32	32	item-nounsock		1	1
 Sur Rune Super	SuXis	15	rx29	2	regen-mana		15	15	ac/runemaster	32	32	32	item-nounsock		1	1	regen-mana		5	5	ac/runemaster	32	32	32	item-nounsock		1	1	regen-mana		5	5	ac/runemaster	32	32	32	item-nounsock		1	1
-Ber Rune Super	BeXis	15	rx30	2	uninterrupt		10	10	ac/runemaster	32	32	32	item-nounsock		1	1	uninterrupt		5	5	ac/runemaster	32	32	32	item-nounsock		1	1	uninterrupt		5	5	ac/runemaster	32	32	32	item-nounsock		1	1
+Ber Rune Super	BeXis	15	rx30	2	indestruct	1	1	1	ac/runemaster	32	32	32	item-nounsock		1	1	indestruct	1	1	1	ac/runemaster	32	32	32	item-nounsock		1	1	indestruct	1	1	1	ac/runemaster	32	32	32	item-nounsock		1	1
 Jah Rune Super	JaXis	15	rx31	2	dmg%		15	15	ac/runemaster	32	32	32	item-nounsock		1	1	ac%		15	15	ac/runemaster	32	32	32	item-nounsock		1	1	ac%		15	15	ac/runemaster	32	32	32	item-nounsock		1	1
 Cham Rune Super	ChXis	15	rx32	2	vit		10	10	ac/runemaster	32	32	32	item-nounsock		1	1	vit		10	10	ac/runemaster	32	32	32	item-nounsock		1	1	vit		10	10	ac/runemaster	32	32	32	item-nounsock		1	1
 Zod Rune Super	ZoXis	15	rx33	2	slow		2	2	ac/runemaster	32	32	32	item-nounsock		1	1	slow-thorns		2	5	ac/runemaster	32	32	32	item-nounsock		1	1	slow-thorns		2	2	ac/runemaster	32	32	32	item-nounsock		1	1
