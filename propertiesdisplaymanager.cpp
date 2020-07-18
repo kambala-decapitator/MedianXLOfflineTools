@@ -536,7 +536,7 @@ QString PropertiesDisplayManager::propertyDisplay(ItemProperty *propDisplay, int
         break;
     }
     // new in Sigma:
-    case 31:
+    case 31: case 34:
     {
         QString s = ItemDataBase::StringTable()->value(propDisplay->param, tr("tbl key %1 missing").arg(propDisplay->param));
         if (shouldColor)
@@ -559,7 +559,9 @@ QString PropertiesDisplayManager::propertyDisplay(ItemProperty *propDisplay, int
 
             --value; // property can't store a value of 0
             ColorsManager::ColorIndex textColor;
-            if (value > D2C_DGREEN2)
+            if (prop->descFunc == 34)
+                textColor = ColorsManager::Orange;
+            else if (value > D2C_DGREEN2)
                 textColor = ColorsManager::Blue;
             else if (value == D2C_DGREEN2)
                 textColor = ColorsManager::DarkGreen;
