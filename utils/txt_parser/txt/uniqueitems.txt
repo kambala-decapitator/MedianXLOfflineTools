@@ -70,10 +70,10 @@ UpgradedBossKillerRing	s@s	1	5	1	100	Duncraig	Quest Item	oskill	876	1	1	allskill
 BossSummonerRing	vor1	1	1	1	0	Void	Uber Reward																																																					1	5	5000		invrinquest								0
 UpgradedBossSummonerRing	vor2	1	1	1	130	Void	Uber Reward	oskill	1182	1	1	light		6	15	all-stats		26	50	hp		200	200	mana		200	200																														blac	blac		1	5	5000		invrinquest								0
 SuperBowSU	v#X	1	1	105	110	Athulua	Uber Reward	death-skill	163	100	1	dmg%		151	200	dmg-norm		150	250	res-all-max		0	2	oskill	1088	10	10	allskills		1	4	desc-bottom	11474	1	1	hit-skill	492	35	15	ignore-ac		1	1																	1	10	100000										0
-SamSword	SM1	1	100	110	125	Samael	Uber Reward	dmg%		200	200	oskill	1392	50	50	hit-skill	976	1	20	avoidance		1	5	res-ltng		-100	-100	addxp		3	3																													1	5	5000									1	0
-SamBow	SM2	1	100	110	125	Samael	Uber Reward	aura	1393	1	1	desc-top	11451	4	4	oskill	1394	1	1	kill-skill	687	5	60	red-dmg%		15	25	res-ltng		-100	-100	mag%		100	100	hit-skill	814	1	21																					1	5	5000									1	0
-SamStaff	SM3	1	100	110	125	Samael	Uber Reward	aura	1395	1	1	desc-top	11452	4	4	oskill	1396	20	20	extra-all		30	30	res-ltng		-100	-100	hp		600	1000	oskill	52	1	1																									1	5	5000									1	0
-SamAmu	ebz	1	100	110	125	Samael	Uber Reward	aura	662	20	20	allskills		2	4	deadly		5	5	crush		5	5	res-ltng		-100	-100	extra-all		20	20	anykill-skill	96	1	50	desc-top	11422	9	9																					1	5	5000		invamu							1	0
+SamSword	SM1	1	100	110	125	Samael	Uber Reward	dmg%		200	200	oskill	1392	50	50	hit-skill	976	1	20	avoidance		1	5	res-ltng		-100	-100	addxp		3	3																													1	5	5000										0
+SamBow	SM2	1	100	110	125	Samael	Uber Reward	aura	1393	1	1	desc-top	11451	4	4	oskill	1394	1	1	kill-skill	687	5	60	red-dmg%		15	25	res-ltng		-100	-100	mag%		100	100	hit-skill	814	1	21																					1	5	5000										0
+SamStaff	SM3	1	100	110	125	Samael	Uber Reward	aura	1395	1	1	desc-top	11452	4	4	oskill	1396	20	20	extra-all		30	30	res-ltng		-100	-100	hp		600	1000	oskill	52	1	1																									1	5	5000										0
+SamAmu	ebz	1	100	110	125	Samael	Uber Reward	aura	662	20	20	allskills		2	4	deadly		5	5	crush		5	5	res-ltng		-100	-100	extra-all		20	20	anykill-skill	96	1	50	desc-top	11422	9	9																					1	5	5000		invamu								0
 Catechumen	w23	1	10	12	7	Aerin Shield (Grade 1)	Tiered Unique	ac%		61	70	dmg-undead		31	50	dmg-min		4	7	dmg-max		8	13	heal-melee		20	20	res-fire		11	20	res-cold		11	20	res-ltng		11	20	res-pois		11	20	reanimate	2228	2	2	att-skill	451	5	6						lgld	lgld		1	5	5000										0
 Catechumen	w63	1	10	29	25	Aerin Shield (Grade 2)	Tiered Unique	ac%		91	100	dmg-undead		71	90	dmg-min		9	12	dmg-max		18	23	heal-melee		40	40	res-fire		21	30	res-cold		21	30	res-ltng		21	30	res-pois		21	30	reanimate	2228	3	3	att-skill	451	9	18						lgld	lgld		1	5	5000										0
 Catechumen	e13	1	10	50	42	Aerin Shield (Grade 3)	Tiered Unique	ac%		121	130	dmg-undead		111	130	dmg-min		14	17	dmg-max		28	33	heal-melee		60	60	res-fire		31	40	res-cold		31	40	res-ltng		31	40	res-pois		31	40	reanimate	2228	4	4	att-skill	451	13	30						lgld	lgld		1	5	5000										0
@@ -1598,7 +1598,7 @@ Askarbydd	86@	1	70	105	100	Reflex Bow SU1	Sacred(1) Unique	dmg%		140	200	oskill	
 Chasmstriker	86@	1	30	120	100	Reflex Bow SU2	Sacred(2) Unique	dmg%		172	200	dmg-max		126	150	kill-skill	595	25	14	lifesteal			10	dex		101	150	str		101	150	hit-skill	492	13	1																						oran	oran		1	5	5000										0
 NihlataksBombard	79@	1	80	105	100	Repeating Crossbow SU1	Sacred(1) Unique	dmg%		140	160	aura	1440	1	1	desc-top	11328	9	9	dmg-fire		900	1800	pierce-fire		20	25	nec		5	6	res-all-minion		20	20	dmg-max		50	100																		dgry	lgry		1	5	5000										0
 ManticoreSting	79@	1	20	120	100	Repeating Crossbow SU2	Sacred(2) Unique	dmg%		160	200	aura	1439	1	1	desc-top	11327	9	9	dmg-pois	50	7680	7680	att%		200	250	crush		10	10	hit-skill	813	16	1	heal-hit		7	7	dmg-max		150	200	hp		700	1000										cgrn	cgrn		1	5	5000										0
-XorinesRing	rin	1	75	80	80	Ring (Grade 1)	Tiered Unique	att%		51	100	kill-skill	553	10	19	dmg-pois	25	256	768	desc-top	11504	9	9	syn1	553	1	1	syn1	914	1	1																													1	5	5000										0
+XorinesRing	rin	1	75	80	80	Ring (Grade 1)	Tiered Unique	att%		51	100	kill-skill	553	10	19	dmg-pois	25	256	768	desc-top	11598	9	9	syn1	553	1	1	syn1	914	1	1																													1	5	5000										0
 TheSealOfKharos	rin	1	25	80	60	Ring (Grade 1)	Tiered Unique	ama		1	2	extra-fire		11	15	extra-pm		16	25	hp-minion		11	15	cast3		25	25	regen		-500	-500																													1	5	5000										0
 RingOfDisengage	rin	1	200	1	1	Ring (Grade 1)	Tiered Unique	kill-skill	496	1	8	stam		5	5	str		6	10	dex		6	10																																					1	5	5000										0
 Bloodbond	rin	1	20	50	50	Ring (Grade 1)	Tiered Unique	kill-skill	109	1	50	red-dmg%		2	2	addxp		1	1	regen		500	500																																					1	5	5000										0
@@ -1712,10 +1712,10 @@ GrimVisor	69@	1	98	105	100	Wand SU1	Sacred(1) Unique	syn2	401	10	10	maxminions		
 IronShard	!14	1	80	105	100	Raptor Scythe SU1	Sacred(1) Unique	aura	1115	1	1	ethereal		1	1	desc-top	11429	9	9	reanimate	2340	5	5	dmg%		100	140	att-skill	912	10	10	att%		101	150	ease		250	250	hp%		-20	-20	ac		1001	5000	dmg-min		31	50	dmg-max		201	230		dgry	dgry		1	5	5000										0
 TheWorshiper	!69	1	4	130	120	Marrow Staff SU3	Sacred(3) Unique	syn1	420	1	1	syn2	420	20	20	desc-top	11430	9	9	cd-reduce	414	50	50	nec		8	11	mag%		51	100	pierce-fcl		33	33	desc-bottom	11432	4	4	hp		501	1000	mana		501	1000										blac	blac		1	5	5000										0
 Malevolence	71@	1	20	120	100	Bone Wand SU2	Sacred(2) Unique	desc-top	11431	9	9	oskill	1063	31	42	extra-pois		21	50	pierce-pois		11	20	extra-pm		21	50	mana%		11	15	enr		101	150	enr-factor%		10	10	skill	1268	13	26	skill	250	13	26										dblu	dblu		1	5	5000										0
-SamSword1	SM1	1	100	110	125	Samael	Uber Reward	desc-top	11442	4	4																																																	1	5	5000									1	0
-SamBow1	SM2	1	100	110	125	Samael	Uber Reward	desc-top	11442	4	4																																																	1	5	5000									1	0
-SamStaff1	SM3	1	100	110	125	Samael	Uber Reward	desc-top	11442	4	4																																																	1	5	5000									1	0
-SamAmu1	ebz	1	100	110	125	Samael	Uber Reward	desc-top	11442	4	4																																																	1	5	5000		invamu							1	0
+SamSword1	SM1	1	100	110	125	Samael	Uber Reward	desc-top	11442	4	4																																																	1	5	5000										0
+SamBow1	SM2	1	100	110	125	Samael	Uber Reward	desc-top	11442	4	4																																																	1	5	5000										0
+SamStaff1	SM3	1	100	110	125	Samael	Uber Reward	desc-top	11442	4	4																																																	1	5	5000										0
+SamAmu1	ebz	1	100	110	125	Samael	Uber Reward	desc-top	11442	4	4																																																	1	5	5000		invamu								0
 ElderVial1	ebx	1	100	1	135	Samael Charm	Uber Reward	desc-top	11443	4	4	desc-top	11433	4	4																																													1	5	5000										0
 ZannEsuStone	jew	1	75	115	100	Jewel SU	Sacred(2) Unique	extra-all		3	3	cast3		5	5	res-cold-max		1	1																																									1	5	5000										0
 ZannEsuStone	jew	1	75	115	100	Jewel SU	Sacred(2) Unique	extra-all		3	3	cast3		5	5	res-ltng-max		1	1																																									1	5	5000										0
