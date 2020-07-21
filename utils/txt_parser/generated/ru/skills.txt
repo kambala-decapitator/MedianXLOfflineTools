@@ -126,8 +126,8 @@
 124	Redemption	-1	3	6	2	54
 125	Salvation	-1	3	6	3	58
 126	Bash	-1	1	1	2	0
-127	Twin Fang Strike	-1	1	3	1	92
-128	Twin Fang Strike	-1	1	3	1	92
+127		-1				
+128		-1				
 129	Frog Prince	-1	0	0	0	0
 130	Frog Prince	-1	0	0	0	0
 131	Vindicate	-1	0	0	0	17
@@ -255,14 +255,14 @@
 253		-1				
 254		-1				
 255		-1				
-256	Punisher	-1	0	0	0	69
+256	Punisher Bolt	-1	0	0	0	69
 257		-1				
 258		-1				
 259		-1				
 260		-1				
 261		-1				
 262	Funeral Pyre	-1	0	0	0	125
-263	Punisher	-1	0	0	0	69
+263	Punisher Bolt	-1	0	0	0	69
 264		-1				
 265		-1				
 266		-1				
@@ -333,7 +333,7 @@
 331	Way of the Spider	6	2	2	1	10
 332	Shadow Refuge	6	1	2	3	12
 333	Barrier Strike	6	1	3	3	84
-334	Twin Fang Strike	6	1	3	1	92
+334	Anathema	6	1	5	1	92
 335	Way of the Phoenix	6	2	4	1	18
 336	Subterfuge	6	2	1	3	108
 337	Catalyst Trap	6	2	4	3	96
@@ -389,7 +389,7 @@
 387	Hunting Banshee	5	2	2	1	22
 388	Pagan Rites	5	2	3	1	24
 389	Rain of Fire	5	2	4	1	64
-390	Freezing Gale	5	2	5	1	104
+390	Hurricane	5	2	5	1	104
 391	Превращение в Медведя	5	1	1	1	58
 392	Rend	5	1	2	1	90
 393	Circle of Life	5	1	4	1	42
@@ -497,7 +497,7 @@
 495	Energy Beam	-1	0	0	0	133
 496	Celerity	-1	0	0	0	0
 497		-1				
-498	Sandstorm	-1	0	0	0	83
+498	Claw Tornado	-1	0	0	0	83
 499		-1				
 500	Crucify	-1	1	1	1	2
 501	Death of a God	-1	0	0	0	0
@@ -552,7 +552,7 @@
 550		-1				
 551	Dark Summoning	-1	0	0	0	1
 552		-1				
-553	Punisher	-1	0	0	0	69
+553	Punishers	-1	0	0	0	69
 554	Gift of Inner Fire	-1	0	0	0	0
 555	Azure Orb	-1	0	0	0	228
 556	Flamefront	-1	1	1	1	62
@@ -615,9 +615,9 @@
 613	Jinn	2	3	5	1	146
 614	Rathma's Chosen	2	3	5	3	54
 615	Veil King	2	3	5	2	148
-616	Resurrect	3	3	5	3	52
-617	Superbeast	3	3	5	1	54
-618	Dragon's Blessing	3	3	5	2	68
+616	Resurrect	3	3	5	2	52
+617	Superbeast	3	3	5	3	54
+618	Dragon's Blessing	3	3	5	1	68
 619	Chronofield	1	3	5	1	12
 620	Witch Blood	1	3	5	2	26
 621	Baneblade	1	3	5	3	114
@@ -775,7 +775,7 @@
 773	Summon Edyrem	-1	0	0	0	4
 774	Frigid Sphere	-1	1	1	3	10
 775		-1				
-776		-1				
+776	Frigid Sphere	-1	1	1	3	10
 777	Blood Flash	-1	0	0	0	52
 778		-1				
 779	Spike Nova	-1	0	0	0	0
@@ -793,7 +793,7 @@
 791	Summon Daystar	-1	0	0	0	210
 792	Summon Shredder	-1	0	0	0	215
 793	Summon Bane Monster	-1	0	0	0	207
-794	Superbeast	-1	3	5	1	54
+794	Superbeast	-1	3	5	3	54
 795		-1				
 796	Sacrifices	-1	1	2	2	40
 797	Dead Wall Totem	-1	0	0	0	80
@@ -835,8 +835,8 @@
 833	Bloodstar	-1	0	0	0	53
 834	Glacial Nova	-1	0	0	0	36
 835	Countdown	-1	0	0	0	163
-836	Trinity Beam	-1	0	0	0	0
-837	Trinity Beam	-1	0	0	0	0
+836	Trinity Beam	-1	0	0	0	255
+837	Trinity Beam	-1	0	0	0	255
 838		-1				
 839	Blood Fury	-1	0	0	0	162
 840	Shock Flower	-1	0	0	0	188
@@ -894,8 +894,8 @@
 892	Ancients' Hand	-1	0	0	0	139
 893	Shamanic Trance	-1	2	4	1	56
 894	Call Henchman	-1	0	0	0	217
-895	Call Blood Golem	-1	0	0	0	216
-896	Call Necrobot	-1	0	0	0	218
+895		-1				
+896		-1				
 897	Rotting Flesh	-1	2	3	1	114
 898	Cyclone	-1	0	0	0	222
 899	Squall Gust	-1	0	0	0	154
@@ -913,7 +913,7 @@
 911		-1				
 912	Spike Rush	-1	0	0	0	0
 913	Thorn Field	-1	0	0	0	157
-914	Punisher	-1	0	0	0	69
+914	Punisher Bolt	-1	0	0	0	69
 915	Wildfire	-1	1	3	1	100
 916	Supernova	-1	0	0	0	38
 917	Pyroblast	-1	1	4	1	68
@@ -931,7 +931,7 @@
 929		-1				
 930	Arrowside	-1	0	0	0	0
 931	Arrowside	-1	0	0	0	0
-932	Superbeast	-1	3	5	1	54
+932	Superbeast	-1	3	5	3	54
 933		-1				
 934		-1				
 935		-1				
@@ -1052,7 +1052,7 @@
 1050		-1				
 1051		-1				
 1052		-1				
-1053	Trinity Beam	-1	0	0	0	0
+1053	Trinity Beam	-1	0	0	0	255
 1054		-1				
 1055		-1				
 1056		-1				
@@ -1061,8 +1061,8 @@
 1059		-1				
 1060		-1				
 1061		-1				
-1062	Trinity Beam	-1	0	0	0	0
-1063	\green;Тотем Venomcloud	-1	0	0	0	253
+1062	Trinity Beam	-1	0	0	0	255
+1063	Тотем Venomcloud	-1	0	0	0	253
 1064		-1				
 1065	Thunder Arena	-1	0	0	0	184
 1066	Terror Strike	-1	0	0	0	0
@@ -1185,7 +1185,7 @@
 1183		-1				
 1184		-1				
 1185		-1				
-1186		-1				
+1186	Scream of Trag'Oul	-1	0	0	0	30
 1187		-1				
 1188		-1				
 1189		-1				
@@ -1252,8 +1252,8 @@
 1250	Asterism	0	2	4	2	82
 1251	Magnetic Field	0	2	5	2	84
 1252	Prismatic Cloak	6	3	1	1	98
-1253	Noctule	6	1	5	1	100
-1254	Shadow Dancer	6	1	4	1	104
+1253	Noctule	6	1	4	1	100
+1254	Shadow Dancer	6	1	3	1	104
 1255	Backstab	6	1	1	3	102
 1256	Windform	4	1	4	1	82
 1257	Daedalus	4	1	5	1	84
@@ -1335,7 +1335,7 @@
 1333	Fire Splash	-1	0	0	0	0
 1334	Pain Spirit	-1	0	0	0	88
 1335	Slayer Bolt	-1	0	0	0	0
-1336	Sandstorm	-1	0	0	0	83
+1336	Claw Tornado	-1	0	0	0	83
 1337	Death Spiral	-1	0	0	0	0
 1338	Shadowstorm	-1	0	0	0	0
 1339	Guided Chain	-1	0	0	0	79
@@ -1349,7 +1349,7 @@
 1347	Wyrd	-1	0	0	0	206
 1348	Knife Throw	-1	0	0	0	0
 1349	Static Lance	-1	0	0	0	225
-1350	Trinity Beam	-1	0	0	0	0
+1350	Trinity Beam	-1	0	0	0	255
 1351	Shock Flower	-1	0	0	0	188
 1352	Spiral Dance	-1	0	0	0	93
 1353	Medusa	-1	0	0	0	117
@@ -1365,7 +1365,7 @@
 1363	Ice Lance	-1	0	0	0	87
 1364		-1				
 1365	Divine Apparition	-1	3	1	1	62
-1366	Superbeast	-1	3	5	1	54
+1366	Superbeast	-1	3	5	3	54
 1367		-1				
 1368		-1				
 1369		-1				
@@ -1415,7 +1415,7 @@
 1413	Earthquake	-1	0	0	0	0
 1414	Harbinger	-1	0	0	0	97
 1415	Fire Bolt Nova	-1	0	0	0	219
-1416	\tan;Homing Nova Shot	-1	0	0	0	235
+1416	Homing Nova Shot	-1	0	0	0	235
 1417		-1				
 1418	\tan;Быстрый Wyrmshot	-1	0	0	0	236
 1419	Carnage	-1	0	0	0	237
@@ -1517,12 +1517,12 @@
 1515		-1				
 1516		-1				
 1517		-1				
-1518	Frozen Orb	-1	0	0	0	228
+1518		-1				
 1519	Askari Lightning	0	2	6	2	88
 1520		4				
 1521		5				
 1522		2				
-1523		3				
+1523	Absolution	3	3	4	2	102
 1524	Twilight Havoc	1	3	4	2	128
 1525	Artifice Mastery	6	2	5	3	106
 1526		-1				
@@ -1599,3 +1599,4 @@
 1597	Funeral Pyre	-1	0	0	0	125
 1598	Gift of the Wild	-1	0	0	0	101
 1599	Thunderstone	-1	1	2	2	22
+1600		-1				

@@ -4252,7 +4252,7 @@
 "SkillnamePsicrown"	"Psicrown"
 "SkillnamePsiStorm"	"Psionic Storm"
 "SkillnamePummel"	"Rend"
-"SkillnamePunish"	"Punisher"
+"SkillnamePunish"	"Punisher Bolt"
 "SkillnamePunisherBarrage"	"Punisher Barrage"
 "SkillnamePurgeAttack"	"Parasite"
 "SkillnamePwn"	"Bloodsp.Mark"
@@ -6543,3 +6543,4 @@
 "DescHelloMeInTwoYears"	"Duration and Cooldown Increased per Base Level"
 "DescLFury"	"(Increases with Spell Damage)"
 "DescImbalanced"	"% Improved Defense per Base Level"
+"SkillnamePunishers"	"Punishers"

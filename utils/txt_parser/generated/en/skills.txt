@@ -255,14 +255,14 @@
 253		-1				
 254		-1				
 255		-1				
-256	Punisher	-1	0	0	0	69
+256	Punisher Bolt	-1	0	0	0	69
 257		-1				
 258		-1				
 259		-1				
 260		-1				
 261		-1				
 262	Funeral Pyre	-1	0	0	0	125
-263	Punisher	-1	0	0	0	69
+263	Punisher Bolt	-1	0	0	0	69
 264		-1				
 265		-1				
 266		-1				
@@ -552,7 +552,7 @@
 550		-1				
 551	Dark Summoning	-1	0	0	0	1
 552		-1				
-553	Punisher	-1	0	0	0	69
+553	Punishers	-1	0	0	0	69
 554	Gift of Inner Fire	-1	0	0	0	0
 555	Azure Orb	-1	0	0	0	228
 556	Flamefront	-1	1	1	1	62
@@ -913,7 +913,7 @@
 911		-1				
 912	Spike Rush	-1	0	0	0	0
 913	Thorn Field	-1	0	0	0	157
-914	Punisher	-1	0	0	0	69
+914	Punisher Bolt	-1	0	0	0	69
 915	Wildfire	-1	1	3	1	100
 916	Supernova	-1	0	0	0	38
 917	Pyroblast	-1	1	4	1	68
