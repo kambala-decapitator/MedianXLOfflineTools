@@ -623,6 +623,7 @@ sub parsetxt
     my $firstLine = 1;
     foreach my $line (<$fh>)
     {
+        chomp $line;
         $count++;
         my @cols = split(/\t/, $line);
         _log ("$fname: $count: ".(join",", @cols));

@@ -154,16 +154,11 @@
 279	Lazarus' Votive Lamp	(Tribute Set)\nArchbishop Lazarus	Set_Lazbro	100																																									
 280	Ismail's Majesty	Legacy Reliquary	MSUnusedLol	666																																									
 281	Wyand's Perfidy	(Zakarum Set)\nCurse of the Zakarum	Set_xaru	110																																									
-282	Bilefroth Skin	(Legendary Set)\nHenchmen Trophies	Set_PewPew	100	set_pewpew1				ac		1500	1500																					blac		set_pewpew1					5	5000		0
-		
-283	Blackskull's Horns	(Legendary Set)\nHenchmen Trophies	Set_PewPew	100	set_pewpew2				abs-fire		5	5																					blac		set_pewpew2					5	5000		0
-		
-284	Doomcloud Spine	(Legendary Set)\nHenchmen Trophies	Set_PewPew	100	set_pewpew3				abs-ltng		5	5																					blac		set_pewpew3					5	5000		0
-		
-285	Stareye's Claws	(Legendary Set)\nHenchmen Trophies	Set_PewPew	100	set_pewpew4				abs-cold		5	5																					blac		set_pewpew4					5	5000		0
-		
-286	Fangskin Scales	(Legendary Set)\nHenchmen Trophies	Set_PewPew	100	set_pewpew5				abs-mag		5	5																					blac		set_pewpew5					5	5000		0
-		
+282	Bilefroth Skin	(Legendary Set)\nHenchmen Trophies	Set_PewPew	100	set_pewpew1				ac		1500	1500																					blac		set_pewpew1					5	5000		0		
+283	Blackskull's Horns	(Legendary Set)\nHenchmen Trophies	Set_PewPew	100	set_pewpew2				abs-fire		5	5																					blac		set_pewpew2					5	5000		0		
+284	Doomcloud Spine	(Legendary Set)\nHenchmen Trophies	Set_PewPew	100	set_pewpew3				abs-ltng		5	5																					blac		set_pewpew3					5	5000		0		
+285	Stareye's Claws	(Legendary Set)\nHenchmen Trophies	Set_PewPew	100	set_pewpew4				abs-cold		5	5																					blac		set_pewpew4					5	5000		0		
+286	Fangskin Scales	(Legendary Set)\nHenchmen Trophies	Set_PewPew	100	set_pewpew5				abs-mag		5	5																					blac		set_pewpew5					5	5000		0		
 287	Lazarus' Lamen	(Tribute Set)\nArchbishop Lazarus	Set_Lazbro	100																																									
 288	Maffer's Frenzy	(Zakarum Set)\nCurse of the Zakarum	Set_xaru	100																																									
 289	Bremm's Retribution	(Zakarum Set)\nCurse of the Zakarum	Set_xaru	100																																									
@@ -213,41 +208,25 @@
 333	Hand of Inarius	(Edyrem Set)\nSanctuary	M_Nephalems	100																																									
 334	Lilith's Disguise	(Edyrem Set)\nSanctuary	M_Nephalems	100																																									
 335	Worldstone	(Edyrem Set)\nSanctuary	M_Nephalems	100																																									
-336	Eye of Wisdom	(Amazon Oskill Set)\nThunderstorm	M_Thunderstorm	100	invamuset																												blac		invamuset					5	5000		0
-		
-337	Charged Cloud	(Amazon Oskill Set)\nThunderstorm	M_Thunderstorm	100																													dgld							5	5000		0
-		
-338	Eye of Wisdom	(Assassin Oskill Set)\nBattle Devices	M_BattleDevices	100	invamuset																												blac		invamuset					5	5000		0
-		
-339	Death Magnet	(Assassin Oskill Set)\nBattle Devices	M_BattleDevices	100																													blac							5	5000		0
-		
-340	Eye of Wisdom	(Barbarian Oskill Set)\nGuardian of the Sightless Eye	M_GuardianRogue	100	invamuset																												blac		invamuset					5	5000		0
-		
-341	Imperial Guard	(Barbarian Oskill Set)\nGuardian of the Sightless Eye	M_GuardianRogue	100																													lyel							5	5000		0
-		
-342	Eye of Wisdom	(Druid Oskill Set)\nOak's Teaching	M_OakTeaching	100	invamuset																												blac		invamuset					5	5000		0
-		
-343	Apprentice	(Druid Oskill Set)\nOak's Teaching	M_OakTeaching	100																													dgrn							5	5000		0
-		
-344	Eye of Wisdom	(Necromancer Oskill Set)\nThe Offering	M_TheOffering	100	invamuset																												blac		invamuset					5	5000		0
-		
-345	Sacrificial Mind	(Necromancer Oskill Set)\nThe Offering	M_TheOffering	100																													blac							5	5000		0
-		
-346	Eye of Wisdom	(Paladin Oskill Set)\nArmageddon	M_Armageddon	100	invamuset																												blac		invamuset					5	5000		0
-		
-347	The Witness	(Paladin Oskill Set)\nArmageddon	M_Armageddon	100																													dred							5	5000		0
-		
-348	Eye of Wisdom	(Sorceress Oskill Set)\nWintertide	M_Wintertide	100	invamuset																												blac		invamuset					5	5000		0
-		
-349	Arctic Shard	(Sorceress Oskill Set)\nWintertide	M_Wintertide	100																													dblu							5	5000		0
-		
+336	Eye of Wisdom	(Amazon Oskill Set)\nThunderstorm	M_Thunderstorm	100	invamuset																												blac		invamuset					5	5000		0		
+337	Charged Cloud	(Amazon Oskill Set)\nThunderstorm	M_Thunderstorm	100																													dgld							5	5000		0		
+338	Eye of Wisdom	(Assassin Oskill Set)\nBattle Devices	M_BattleDevices	100	invamuset																												blac		invamuset					5	5000		0		
+339	Death Magnet	(Assassin Oskill Set)\nBattle Devices	M_BattleDevices	100																													blac							5	5000		0		
+340	Eye of Wisdom	(Barbarian Oskill Set)\nGuardian of the Sightless Eye	M_GuardianRogue	100	invamuset																												blac		invamuset					5	5000		0		
+341	Imperial Guard	(Barbarian Oskill Set)\nGuardian of the Sightless Eye	M_GuardianRogue	100																													lyel							5	5000		0		
+342	Eye of Wisdom	(Druid Oskill Set)\nOak's Teaching	M_OakTeaching	100	invamuset																												blac		invamuset					5	5000		0		
+343	Apprentice	(Druid Oskill Set)\nOak's Teaching	M_OakTeaching	100																													dgrn							5	5000		0		
+344	Eye of Wisdom	(Necromancer Oskill Set)\nThe Offering	M_TheOffering	100	invamuset																												blac		invamuset					5	5000		0		
+345	Sacrificial Mind	(Necromancer Oskill Set)\nThe Offering	M_TheOffering	100																													blac							5	5000		0		
+346	Eye of Wisdom	(Paladin Oskill Set)\nArmageddon	M_Armageddon	100	invamuset																												blac		invamuset					5	5000		0		
+347	The Witness	(Paladin Oskill Set)\nArmageddon	M_Armageddon	100																													dred							5	5000		0		
+348	Eye of Wisdom	(Sorceress Oskill Set)\nWintertide	M_Wintertide	100	invamuset																												blac		invamuset					5	5000		0		
+349	Arctic Shard	(Sorceress Oskill Set)\nWintertide	M_Wintertide	100																													dblu							5	5000		0		
 350	Angel of Death	(Wyrd Set)\nAstrogha's Moon	M_AstroghasMoon	90																																									
 351	Viper Skin	(Wyrd Set)\nAstrogha's Moon	M_AstroghasMoon	100																																									
 352	Darkling	(Wyrd Set)\nAstrogha's Moon	M_AstroghasMoon	100																																									
-353	The Judgment	(Sorceress Arcane Set)\nVizjerei Dominion	M_VizjereiDominion	100					cd-reduce		100	100					syn2		1	1																				5	5000		0
-		
-354	The Catalyst	(Sorceress Arcane Set)\nVizjerei Dominion	M_VizjereiDominion	100																																				5	5000		0
-		
+353	The Judgment	(Sorceress Arcane Set)\nVizjerei Dominion	M_VizjereiDominion	100					cd-reduce		100	100					syn2		1	1																				5	5000		0		
+354	The Catalyst	(Sorceress Arcane Set)\nVizjerei Dominion	M_VizjereiDominion	100																																				5	5000		0		
 355	The Hunger	(Sorceress Arcane Set)\nVizjerei Dominion	M_VizjereiDominion	100																																									
 356	The Darkness	(Sorceress Arcane Set)\nVizjerei Dominion	M_VizjereiDominion	100																																									
 357	The Presence	(Sorceress Arcane Set)\nVizjerei Dominion	M_VizjereiDominion	100																																									
