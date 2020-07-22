@@ -21,7 +21,6 @@ public:
     static QString parseItemsToBuffer(quint16 itemsTotal, QDataStream &inputDataStream, const QByteArray &bytes, const QString &corruptedItemFormat, ItemsList *itemsBuffer, quint32 plugyPage = 0);
     static ItemInfo *parseItem(QDataStream &inputDataStream, const QByteArray &bytes, bool isLastItemOnPlugyPage = false);
     static PropertiesMultiMap parseItemProperties(ReverseBitReader &bitReader, ItemInfo::ParsingStatus *status);
-    static void convertParamsInMagicDamageString(ItemProperty *prop, ItemPropertyTxt *txtProp);
     static void createDisplayStringForPropertyWithId(int id, ItemProperty *prop);
 
     static bool itemTypesInheritFromType(const QList<QByteArray> &itemTypes, const QByteArray &allowedItemType);

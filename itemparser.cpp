@@ -374,8 +374,6 @@ PropertiesMultiMap ItemParser::parseItemProperties(ReverseBitReader &bitReader, 
                 bool hasLength = false;
                 if (id == ItemProperties::MinimumDamageCold || id == ItemProperties::MinimumDamagePoison)
                     hasLength = true; // length is present only when min damage is specified
-                else if (id == ItemProperties::MinimumDamageMagic)
-                    convertParamsInMagicDamageString(propToAdd, txtProperty);
                 props.insert(id++, propToAdd);
 
                 // get max elemental damage
@@ -384,9 +382,6 @@ PropertiesMultiMap ItemParser::parseItemProperties(ReverseBitReader &bitReader, 
 
                 ItemPropertyTxt *txtMaxElementalDamageProp = ItemDataBase::Properties()->value(id);
                 maxElementalDamageProp->value = bitReader.readNumber(txtMaxElementalDamageProp->bits) - txtMaxElementalDamageProp->add;
-
-                if (id == ItemProperties::MaximumDamageMagic)
-                    convertParamsInMagicDamageString(maxElementalDamageProp, txtMaxElementalDamageProp);
                 props.insert(id, maxElementalDamageProp);
 
                 if (hasLength) // cold or poison length
@@ -427,12 +422,6 @@ PropertiesMultiMap ItemParser::parseItemProperties(ReverseBitReader &bitReader, 
 
     *status = ItemInfo::Failed;
     return PropertiesMultiMap();
-}
-
-void ItemParser::convertParamsInMagicDamageString(ItemProperty *prop, ItemPropertyTxt *txtProp)
-{
-    QString desc = txtProp->descPositive;
-    prop->displayString = desc.replace("%d", "%1").arg(prop->value);
 }
 
 void ItemParser::createDisplayStringForPropertyWithId(int id, ItemProperty *prop)

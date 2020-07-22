@@ -629,9 +629,6 @@ PropertiesMultiMap PropertiesDisplayManager::genericSocketableProperties(ItemInf
             case Enums::ItemProperties::EnhancedDamage:
                 itemProperty->displayString = ItemParser::kEnhancedDamageFormat().arg(prop.value);
                 break;
-            case Enums::ItemProperties::MinimumDamageMagic: case Enums::ItemProperties::MaximumDamageMagic:
-                ItemParser::convertParamsInMagicDamageString(itemProperty, ItemDataBase::Properties()->value(prop.code));
-                break;
             default:
                 break;
             }
@@ -694,10 +691,7 @@ PropertiesMultiMap PropertiesDisplayManager::collectSetFixedProps(const QList<Se
                     break;
                 }
             }
-            if (propId == Enums::ItemProperties::MinimumDamageMagic || propId == Enums::ItemProperties::MaximumDamageMagic)
-                ItemParser::convertParamsInMagicDamageString(prop, ItemDataBase::Properties()->value(propId));
-            else
-                ItemParser::createDisplayStringForPropertyWithId(propId, prop);
+            ItemParser::createDisplayStringForPropertyWithId(propId, prop);
             setFixedProps.insert(propId, prop);
         }
     }
