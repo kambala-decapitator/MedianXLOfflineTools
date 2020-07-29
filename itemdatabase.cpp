@@ -18,6 +18,7 @@
 #define CRC_OF_BYTEARRAY(byteArray) qChecksum(byteArray.constData(), byteArray.length())
 
 
+const double ItemDataBase::EtherealMultiplier = 1.25;
 const char *const ItemDataBase::kJewelType = "jew";
 QHash<QByteArray, FullSetInfo> ItemDataBase::_sets;
 QHash<QString, quint32> ItemDataBase::_tblIndexLookup;

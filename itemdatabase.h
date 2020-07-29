@@ -21,6 +21,7 @@ class ItemDataBase
     Q_DECLARE_TR_FUNCTIONS(ItemDataBase)
 
 public:
+    static const double EtherealMultiplier;
     static const char *const kJewelType;
     static QByteArray decompressedFileData(const QString &compressedFilePath, const QString &errorMessage);
 

@@ -194,8 +194,8 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
             int minDmg = itemBase->minThrowDmg, maxDmg = itemBase->maxThrowDmg;
             if (item->isEthereal)
             {
-                minDmg *= 1.5;
-                maxDmg *= 1.5;
+                minDmg *= ItemDataBase::EtherealMultiplier;
+                maxDmg *= ItemDataBase::EtherealMultiplier;
             }
             if (ed)
             {
@@ -213,8 +213,8 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
             int minDmg = itemBase->min1hDmg, maxDmg = itemBase->max1hDmg;
             if (item->isEthereal)
             {
-                minDmg *= 1.5;
-                maxDmg *= 1.5;
+                minDmg *= ItemDataBase::EtherealMultiplier;
+                maxDmg *= ItemDataBase::EtherealMultiplier;
             }
             if (ed)
             {
@@ -232,8 +232,8 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
             int minDmg = itemBase->min2hDmg, maxDmg = itemBase->max2hDmg;
             if (item->isEthereal)
             {
-                minDmg *= 1.5;
-                maxDmg *= 1.5;
+                minDmg *= ItemDataBase::EtherealMultiplier;
+                maxDmg *= ItemDataBase::EtherealMultiplier;
             }
             if (ed)
             {
