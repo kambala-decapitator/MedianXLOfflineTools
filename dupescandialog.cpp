@@ -494,6 +494,17 @@ void DupeScanDialog::scanCharactersInDir(const QString &path)
                 }
                 keyValue[QLatin1String("isEthereal")] = item->isEthereal;
                 keyValue[QLatin1String("isRW")] = item->isRW;
+                if (item->isRW)
+                {
+                    foreach (ItemInfo *socketable, item->socketablesInfo)
+                    {
+                        if (ItemParser::itemTypesInheritFromType(ItemDataBase::Items()->value(socketable->itemType)->types, "erun"))
+                        {
+                            keyValue[QLatin1String("isEnhancedRW")] = QLatin1String("1");
+                            break;
+                        }
+                    }
+                }
                 keyValue[QLatin1String("placement")] = QString("location %1, ").arg(metaEnumFromName<Enums::ItemLocation>("ItemLocationEnum").valueToKey(item->location)) + ItemParser::itemStorageAndCoordinatesString("storage %1, row %2, col %3, equipped in %4", item);
 
                 if (ItemDataBase::isUberCharm(item))
