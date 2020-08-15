@@ -7,6 +7,7 @@
 137-141 # Javelin (Vasily's Following)
 142-146 # Blood (Red Vex' Embrace)
 306-310 # Storm Set (Zerae's Divinity)
+336-337 # Amazon Oskill Set (Thunderstorm)
 
 # ass
 152-156 # Combat (The Snake Pit)
@@ -14,6 +15,7 @@
 157-161 # Throwing (Creed)
 162-166 # Bomb (Vizjun's Devices)
 326-330 # Psychic Set (Universal Law)
+338-339 # Assassin Oskill Set (Battle Devices)
 
 # baba
 172-176 # Dual Wield (Mount Arreat)
@@ -21,6 +23,7 @@
 177-181 # Throwing (Big Game Hunter)
 182-186 # Shaman (Spirits of the Nephalem)
 316-320 # Berserker Set (Tundra Walker)
+340-341 # Barbarian Oskill Set (Guardian of the Sightless Eye)
 
 # dudu
 192-196 # Elemental (Lone Wolf's Path)
@@ -28,6 +31,7 @@
 252-256 # Treewarden (Last King of Scosglen)
 247-251 # Trap Rat (Rainbow Warrior)
 311-315 # Werewolf Set (Marchosias' Essence)
+342-343 # Druid Oskill Set (Oak's Teaching)
 
 # necro
 207-211 # Summoner (Satanic Mantra)
@@ -35,6 +39,7 @@
 202-206 # Crossbow (Achilios' Wake)
 257-261 # Totemic (The Towerlord)
 321-325 # Malice Set (Celestial Orchard)
+344-345 # Necromancer Oskill Set (The Offering)
 
 # papa
 212-216 # Holy Melee (Cinadide's Craft)
@@ -42,6 +47,7 @@
 222-226 # Unholy Melee (Malthael's Sanctuary)
 227-231 # Unholy Caster (Imperius' Edict)
 301-305 # Neutral Set (Yaerius' Grey Omen)
+346-347 # Paladin Oskill Set (Armageddon)
 
 # soso
 262-266 # Fire (The Warmage)
@@ -49,12 +55,17 @@
 237-241 # Lightning (Elemental Children)
 242-246 # Poison (Adria's Circle)
 267-271 # Melee (The Mysteries)
+348-349 # Sorceress Oskill Set (Wintertide)
+353-357 # Sorceress Arcane Set (Vizjerei Dominion)
 
 # other
-277-279,287			# Summoner Set (Archbishop Lazarus)
-272-276 			# Crossbow Set (Testament of the Apes)
-282-286				# Elemental Set (Henchmen Trophies)
+277-279,287 # Summoner Set (Archbishop Lazarus)
+272-276 # Crossbow Set (Testament of the Apes)
+282-286 # Elemental Set (Henchmen Trophies)
 280-281,288-289,300 # Fire Set (Curse of the Zakarum)
+331-332 # Trophy Set (Trophy Hunter)
+333-335 # Edyrem Set (Sanctuary)
+350-352 # Wyrd Set (Astrogha's Moon)
 
 # Yshari
 290-294 # Yshari Bosses'  Set (Brotherhood of the Vizjerei)

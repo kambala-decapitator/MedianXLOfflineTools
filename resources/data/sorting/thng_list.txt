@@ -4,92 +4,170 @@ code	name
 !@3	\dgreen;Evil Eye of the Glowing Blob
 !@4	\dgreen;Evil Eye of the Fairy Witch
 !@5	\dgreen;Evil Eye of the Bane Hunter
-!@6	\dgreen;Dogma of Suffering
-!@7	\dgreen;Dogma of Pain
-!@8	\dgreen;Dogma of Hatred
-!@9	\dgreen;Dogma of Terror
-!@A	\dgreen;Dogma of Destruction
 @##	\grey;Cube Reagent\n\orange;Deity's Bow
 \\1	\purple;Great Rainbow Stone
 \\2	\purple;Great Skull
 \\3	\purple;Great Topaz
-\\4	\purple;Great Saphire
+\\4	\purple;Great Sapphire
 \\5	\purple;Great Ruby
-##/	\orange;Uldyssian's Trophy
-#2^	\orange;Pandora's Box
-#3^	\grey;Cube Reagent\n\orange;Arcane Shards (2)
-#4^	\grey;Cube Reagent\n\orange;Arcane Shards (3)
-#5^	\grey;Cube Reagent\n\orange;Arcane Shards (4)
 #X1	Cube Reagent (Secret)\n\orange;Emblem of Suffering
 #X2	Cube Reagent (Secret)\n\orange;Emblem of Pain
 #X3	Cube Reagent (Secret)\n\orange;Emblem of Hatred
 #X4	Cube Reagent (Secret)\n\orange;Emblem of Terror
 #X5	Cube Reagent (Secret)\n\orange;Emblem of Destruction
 #X6	Cube Reagent (Secret)\n\orange;Emblem of Lies
-#X8	\red;Instructions\nLevel Challenge 0
 #X9	Cube Reagent\n\orange;Griswold's Treasure
-`^#	\gold;Mystic Shard
-||_	\grey;Cube Reagent\n\orange;Cursed Crystal
-||.	\grey;Cube Reagent\n\orange;Blessed Crystal
-||*	Cube Reagent\n\orange;Ancient Book
-||#	\gold;Book of Ultimative
-||`	\orange;Broken Crystal
-||l	Cube Reagent\n\orange;Book of Cain
-0oµ	Cube Reagent\n\orange;Catalyst of Learning
-1oµ	Cube Reagent\n\orange;Oil of Duplication
-2oµ	Cube Reagent\n\orange;Oil of Disjunction
+|ab	Cube Reagent\n\orange;Ancient Book
+|bc	Cube Reagent\n\orange;Book of Cain
+|ms	\gold;Ghost Trance
+0o[	\gold;Catalyst of Learning
+2o[	Cube Reagent\n\orange;Oil of Disjunction
 2x5	\dgreen;Alpha Brain
 2x6	\dgreen;Beta Brain
 2x7	\dgreen;Gamma Brain
 2x8	\dgreen;Delta Brain
 2x9	\dgreen;Epsilon Brain
-3oµ	Cube Reagent\n\orange;Catalyst of Disenchantment
-4oµ	Cube Reagent\n\orange;Oil of Enhancement
-5oµ	Cube Reagent\n\orange;Oil of Renewal
-6oµ	Cube Reagent\n\orange;Oil of Luck
-7oµ	Cube Reagent\n\orange;Oil of Craft
-8oµ	Cube Reagent\n\orange;Oil of Absolution
-9oµ	Cube Reagent\n\orange;Catalyst of Destruction
+3o[	\gold;Catalyst of Disenchantment
+4o[	Cube Reagent\n\orange;Oil of Enhancement
+5o[	Cube Reagent\n\orange;Oil of Renewal
+6o[	Cube Reagent\n\orange;Oil of Luck
+7o[	Cube Reagent\n\orange;Oil of Craft
+8o[	Cube Reagent\n\orange;Oil of Absolution
 a67	Congratulations. You got it!\n\gold;Spirit of Damnation
-abu	Do Not Use Ethereal Items Idiot
+asx	\orange;Arcane Cluster
 brc1	Black Road Challenge\n\orange;Scroll of Fear
 brc2	Black Road Challenge\n\orange;Scroll of Greed
 brc3	Black Road Challenge\n\orange;Scroll of Contrition
 brc4	Black Road Challenge\n\orange;Scroll of Knowledge
 brc5	Black Road Challenge\n\orange;Scroll of Blood
 brc6	Black Road Challenge\n\orange;Scroll of Completion
-brx	\red;Scroll of Kabraxis
-bxt	\orange;Kabraxis Trophy
+cr01	Quest Item\n\gold;Charged Riftstone (\green;1\gold;)
+cr02	Quest Item\n\gold;Charged Riftstone (\green;2\gold;)
+cr03	Quest Item\n\gold;Charged Riftstone (\green;3\gold;)
+cr04	Quest Item\n\gold;Charged Riftstone (\green;4\gold;)
+cr05	Quest Item\n\gold;Charged Riftstone (\green;5\gold;)
+cr06	Quest Item\n\gold;Charged Riftstone (\orange;6\gold;)
+cr07	Quest Item\n\gold;Charged Riftstone (\orange;7\gold;)
+cr08	Quest Item\n\gold;Charged Riftstone (\orange;8\gold;)
+cr09	Quest Item\n\gold;Charged Riftstone (\orange;9\gold;)
+cr10	Quest Item\n\gold;Charged Riftstone (\orange;10\gold;)
+cr11	Quest Item\n\gold;Charged Riftstone (\red;11\gold;)
+cr12	Quest Item\n\gold;Charged Riftstone (\red;12\gold;)
+cr13	Quest Item\n\gold;Charged Riftstone (\red;13\gold;)
+cr14	Quest Item\n\gold;Charged Riftstone (\red;14\gold;)
+cr15	Quest Item\n\gold;Charged Riftstone (\red;15\gold;)
+dr01	Quest Item\n\gold;Depleted Riftstone (\green;1\gold;)
+dr02	Quest Item\n\gold;Depleted Riftstone (\green;2\gold;)
+dr03	Quest Item\n\gold;Depleted Riftstone (\green;3\gold;)
+dr04	Quest Item\n\gold;Depleted Riftstone (\green;4\gold;)
+dr05	Quest Item\n\gold;Depleted Riftstone (\green;5\gold;)
+dr06	Quest Item\n\gold;Depleted Riftstone (\orange;6\gold;)
+dr07	Quest Item\n\gold;Depleted Riftstone (\orange;7\gold;)
+dr08	Quest Item\n\gold;Depleted Riftstone (\orange;8\gold;)
+dr09	Quest Item\n\gold;Depleted Riftstone (\orange;9\gold;)
+dr10	Quest Item\n\gold;Depleted Riftstone (\orange;10\gold;)
+dr11	Quest Item\n\gold;Depleted Riftstone (\red;11\gold;)
+dr12	Quest Item\n\gold;Depleted Riftstone (\red;12\gold;)
+dr13	Quest Item\n\gold;Depleted Riftstone (\red;13\gold;)
+dr14	Quest Item\n\gold;Depleted Riftstone (\red;14\gold;)
+dr15	Quest Item\n\gold;Depleted Riftstone (\red;15\gold;)
+dtm	\grey;Cube Reagent\n\orange;Dark Tome
+dy01	\orange;Mystic Dye
+dy02	\orange;Mystic Dye
+dy03	\orange;Mystic Dye
+dy04	\orange;Mystic Dye
+dy05	\orange;Mystic Dye
+dy06	\orange;Mystic Dye
+dy07	\orange;Mystic Dye
+dy08	\orange;Mystic Dye
+dy09	\orange;Mystic Dye
+dy10	\orange;Mystic Dye
+dy11	\orange;Mystic Dye
+dy12	\orange;Mystic Dye
+dy13	\orange;Mystic Dye
+dy14	\orange;Mystic Dye
+dy15	\orange;Mystic Dye
+dy16	\orange;Mystic Dye
+dy17	\orange;Mystic Dye
+dy18	\orange;Mystic Dye
+dy19	\orange;Mystic Dye
+dy20	\orange;Mystic Dye
+dy21	\orange;Mystic Dye
+dy99	\orange;Mystic Dye
 hnrx	Cube Reagent\n\orange;Mark of Infusion
-k.Z	\red;Key of Damnation
-Kx1	\purple;Earth Essence
-Kx2	\purple;Magic Essence
-Kx3	\purple;Venomous Essence
-Kx4	\purple;Lightning Essence
-Kx5	\purple;Icy Essence
-Kx6	\purple;Fiery Essence
-kZ8	\gold;Sunless Crystal Bird
-l@l	\dgreen;Skinrender's Sigil
-m@m	\dgreen;Spinecracker's Sigil
+htor	\gold;Heroic Torch
+ir01	Quest Item\n\gold;Charged Riftstone (\green;1\gold;)
+ir02	Quest Item\n\gold;Charged Riftstone (\green;2\gold;)
+ir03	Quest Item\n\gold;Charged Riftstone (\green;3\gold;)
+ir04	Quest Item\n\gold;Charged Riftstone (\green;4\gold;)
+ir05	Quest Item\n\gold;Charged Riftstone (\green;5\gold;)
+ir06	Quest Item\n\gold;Charged Riftstone (\orange;6\gold;)
+ir07	Quest Item\n\gold;Charged Riftstone (\orange;7\gold;)
+ir08	Quest Item\n\gold;Charged Riftstone (\orange;8\gold;)
+ir09	Quest Item\n\gold;Charged Riftstone (\orange;9\gold;)
+ir10	Quest Item\n\gold;Charged Riftstone (\orange;10\gold;)
+ir11	Quest Item\n\gold;Charged Riftstone (\red;11\gold;)
+ir12	Quest Item\n\gold;Charged Riftstone (\red;12\gold;)
+ir13	Quest Item\n\gold;Charged Riftstone (\red;13\gold;)
+ir14	Quest Item\n\gold;Charged Riftstone (\red;14\gold;)
+ir15	Quest Item\n\gold;Charged Riftstone (\red;15\gold;)
+ir81	\orange;Occult Effigy\nCelestial Wind
+ir82	\orange;Occult Effigy\nSigil of Absolution
+ir83	\orange;Occult Effigy\nPath of Brutality
+ir84	\orange;Occult Effigy\nEmpyrean Touch
+ir85	\orange;Occult Effigy\nElemental Ire
+ir86	\orange;Occult Effigy\nBreath of Thaumaturgy
+ir87	\orange;Occult Effigy\nElemental Dominion
+ir88	\orange;Occult Effigy\nArcane Hunger
+ir89	\orange;Occult Effigy\nDark Summoning
+ir91	Quest Item\n\gold;Dream Fragment (1)
+ir92	Quest Item\n\gold;Dream Fragment (2)
+ir93	Quest Item\n\gold;Dream Fragment (3)
+ir94	Quest Item\n\gold;Dream Fragment (4)
+ir95	Quest Item\n\gold;Dream Fragment (5)
+ir96	Quest Item\n\gold;Star Chart (1)
+ir97	Quest Item\n\gold;Star Chart (2)
+ir98	Quest Item\n\gold;Star Chart (3)
+ir99	Quest Item\n\gold;Star Chart (4)
+ir9X	Quest Item\n\gold;Completed Star Chart
+kazm	\grey;Quest Item\n\gold;Key of Sin
+kbel	\grey;Quest Item\n\gold;Key of Lies
+kfau	\grey;Quest Item\n\gold;Mind Warp
+kpac	\orange;Cherry
+ktax	\orange;Pulsating Worldstone Shard
+ktbx	\orange;Pulsating Worldstone Shard
+ktcx	\orange;Pulsating Worldstone Shard
+ktdx	\orange;Pulsating Worldstone Shard
+ktex	\orange;Pulsating Worldstone Shard
+ktfx	\orange;Pulsating Worldstone Shard
+ktgx	\orange;Pulsating Worldstone Crystal
+ktor	\grey;Quest Item\n\gold;Edyrem's Time-Travel
+ktox	\grey;Quest Item\n\gold;Dimensional Link
+ktpx	\grey;Quest Item\n\gold;Otherworldly Link
+ktzx	\dgreen;Riftwalker's Eye
+kvoi	\grey;Quest Item\n\gold;Abyss Gate
+l@l	\grey;Quest Item\n\gold;Skinrender's Sigil
+m@m	\grey;Quest Item\n\gold;Spinecracker's Sigil
 mec	Cube Reagent\n\orange;Meditation Candle
-o@o	\dgreen;Eyegouger's Sigil
-p@p	\dgreen;Fleshcutter's Sigil
-q@q	\dgreen;Bonehexer's Sigil
+o@o	\grey;Quest Item\n\gold;Eyegouger's Sigil
+ooc	Cube Reagent\n\orange;Oil of Conjuration
+p@p	\grey;Quest Item\n\gold;Fleshcutter's Sigil
+pacb	\orange;Home Cherry
+q@q	\grey;Quest Item\n\gold;Bonehexer's Sigil
+qu2	\grey;Cube Reagent\n\orange;Arcane Shards (2)
+qu3	\grey;Cube Reagent\n\orange;Arcane Shards (3)
+qu4	\grey;Cube Reagent\n\orange;Arcane Shards (4)
 qul	\grey;Cube Reagent\n\orange;Arcane Shards (1)
 qum	\grey;Cube Reagent\n\orange;Arcane Crystal
-qus	Cube Reagent (1/4)\n\orange;Regular Arcane Crystal
-qut	Cube Reagent (2/4)\n\orange;Glowing Arcane Crystal
-qux	Cube Reagent (3/4)\n\orange;Brilliant Arcane Crystal
-quy	Cube Reagent (4/4)\n\orange;Dazzling Arcane Crystal
-r97	\grey;Primal Rune\n\purple;Runestone
-r99	\grey;Primal Rune\n\purple;Runestone
+sath	\grey;Quest Item\n\gold;Askari Call
+sbag	\gold;Angel Bag
 senn	Ennead Challenge\n\orange;Scroll of Kurast
 slc1	Level Challenge I\n\orange;Scroll of Athulua
 slc2	Level Challenge II\n\orange;Scroll of the Zakarum
 smi1	Minigame\n\orange;Scroll of Witches
 smi2	Minigame\n\orange;Scroll of Mirrors
-tr2	\grey;Cube Reagent\n\orange;Scroll of Resistance
-u@v	for an upgrade!\nSee the documentation\nYou're not cool enough!\n\gold;Poser!
+sofd	Cube Reagent\n\orange;Seal of Darkness
+tr2	Scroll of Resistance
 vic	Cube Reagent\n\orange;Sacrifical Heart
 voDX	Cube Reagent\n\orange;Enchanting Crystal
 voi1	\purple;Scroll of Greed
@@ -98,24 +176,10 @@ voi3	\purple;Scroll of Envy
 voi4	\purple;Scroll of Wrath
 voi5	\purple;Scroll of Gluttony
 voi6	\purple;Scroll of Lust
-x1x	\gold;Sunstone of Fire
-x2x	\gold;Sunstone of Ice
-x3x	\gold;Sunstone of Thunder
-yq1	Sunless Crystal Bird
-µ01	\orange;Lord Aldric Jitan Trophy
-µ02	\orange;Legacy of Blood Trophy
-µ03	\orange;Judgement Day Trophy
-µ04	\orange;Akarat Trophy
-µ05	\orange;Kingdom of Shadow Trophy
-µ06	\orange;Duncraig Trophy
-µ07	\orange;Rathma Square Trophy
-µ08	\orange;Cathedral of Vanity Trophy
-µ09	\orange;Tran Athulua Trophy
-µ10	\orange;Quov Tsin Trophy
-µ11	\orange;Astrogha Trophy
-µ12	\orange;Azmodan Trophy
-µ13	\orange;MCS Trophy
-µ14	\orange;Brother Laz Trophy
-µ15	\orange;Triune Trophy
-µ98	\orange;Cleanup Trophy
-µ99	\orange;Learn to Read Trophy
+x1x	\gold;Shard of Fire
+x2x	\gold;Shard of Ice
+x3x	\gold;Shard of Thunder
+x5x	\gold;Sunstone of Fire
+x6x	\gold;Sunstone of Ice
+x7x	\gold;Sunstone of Thunder
+yq1	\orange;Sunless Crystal Bird

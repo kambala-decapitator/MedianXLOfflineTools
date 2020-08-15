@@ -4,6 +4,7 @@
 # general weapons
 swor # 1h sword
 crsd # crystal sword
+xxx1 # SSword
 2hsd # 2h sword
 axe  # 1h axe
 2hax # 2h axe
@@ -17,8 +18,12 @@ knif # dagger
 tkni # throwing knife
 taxe # throwing axe
 staf # staff
+xxx3 # SStaff
+el1x # Elemental Weapon 1H Melee
+el2x # Elemental Weapon 2H Melee
 bow  # bow
 xbow # xbow
+elex # Elemental Weapons
 # class weapons
 # ama
 abow # bow
@@ -83,5 +88,7 @@ bowq # arrows
 xboq # bolts
 # jewelry
 amul # amulet
+xxx4 # SAmu
 ring # ring
 jewl # jewel
+reli # relic
