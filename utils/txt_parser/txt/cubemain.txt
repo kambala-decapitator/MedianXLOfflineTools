@@ -2457,10 +2457,10 @@ Ten Pin Striker	1	UMO					2	weap	&88						useitem				levelreq			10	10	att-damage
 Wrathspirit Honorific	1	UMO	15	296	1		2	"weap,tmp"	&89						useitem				levelreq			17	17	heal-kill			30	30	extra-all			6	6	gethit-skill		553	2	46																																																																	100		0
 Wrathspirit	1	UMO	15	296	1		2	weap	&89						useitem				levelreq			10	10	heal-kill			30	30	extra-all			6	6	gethit-skill		553	2	46																																																																	100		0
 Wrathspirit	1	UMO					2	weap	&89						useitem				levelreq			10	10	heal-kill			15	15	extra-all			3	3	gethit-skill		553	1	46																																																																	100		0
-Idol of Stars Honorific	1	UMO	15	296	1		2	"armo,tmp"	&76						useitem				levelreq			17	17	enr			24	24	enr			24	24	enr			24	24																																																																	100		0
-Idol of Stars	1	UMO	15	296	1		2	armo	&76						useitem				levelreq			10	10	enr			24	24	enr			24	24	enr			24	24																																																																	100		0
-Idol of Stars: Natalya's Deception	1	UMO					2	NatalyasDeception	&76						useitem				levelreq			10	10	enr			48	48	enr			48	48	enr			48	48																																																																	100		0
-Idol of Stars	1	UMO					2	armo	&76						useitem				levelreq			10	10	enr			12	12	enr			12	12	enr			12	12																																																																	100		0
+Idol of Stars Honorific	1	UMO	15	296	1		2	"armo,tmp"	&76						useitem				levelreq			17	17	str			28	28	dex			28	28	enr			20	20																																																																	100		0
+Idol of Stars	1	UMO	15	296	1		2	armo	&76						useitem				levelreq			10	10	str			28	28	dex			28	28	enr			20	20																																																																	100		0
+Idol of Stars: Natalya's Deception	1	UMO					2	NatalyasDeception	&76						useitem				levelreq			10	10	str			56	56	dex			56	56	enr			40	40																																																																	100		0
+Idol of Stars	1	UMO					2	armo	&76						useitem				levelreq			10	10	str			14	14	dex			14	14	enr			10	10																																																																	100		0
 Nagapearl Honorific	1	UMO	15	296	1		2	"armo,tmp"	&77						useitem				levelreq			17	17	gold%			20	20	mag%			20	20	dmg-stun			10	10																																																																	100		0
 Nagapearl	1	UMO	15	296	1		2	armo	&77						useitem				levelreq			10	10	gold%			20	20	mag%			20	20	dmg-stun			10	10																																																																	100		0
 Nagapearl: Natalya's Deception	1	UMO					2	NatalyasDeception	&77						useitem				levelreq			10	10	gold%			40	40	mag%			40	40	dmg-stun			20	20																																																																	100		0
