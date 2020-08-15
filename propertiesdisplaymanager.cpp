@@ -65,7 +65,7 @@ QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item, bool u
 
     QString runes;
     foreach (ItemInfo *socketable, item->socketablesInfo)
-        if (ItemDataBase::Items()->value(socketable->itemType)->types.first() == "rune")
+        if (ItemParser::itemTypesInheritFromType(ItemDataBase::Items()->value(socketable->itemType)->types, "rune"))
             runes += ItemDataBase::Socketables()->value(socketable->itemType)->letter;
     if (!runes.isEmpty()) // gem-/jewelwords don't have any letters
         itemDescription += QString("%1'%2'\n").arg(useColor ? ColorsManager::colorStrings().at(ColorsManager::Gold) : QString(), runes);
