@@ -179,7 +179,7 @@ QHash<uint, ItemPropertyTxt *> *ItemDataBase::Properties()
 QList<SetFixedProperty> collectSetProperties(const QList<QByteArray> &data, quint16 firstColumn, quint16 lastColumn = 0)
 {
     QList<SetFixedProperty> result;
-    for (quint16 i = firstColumn, n = lastColumn ? lastColumn : data.size(); i < n; i += 4)
+    for (quint16 i = firstColumn, n = lastColumn ? qMin(lastColumn, static_cast<quint16>(data.size())) : data.size(); i < n; i += 4)
     {
         SetFixedProperty prop;
         QByteArray propIds = data.at(i);
