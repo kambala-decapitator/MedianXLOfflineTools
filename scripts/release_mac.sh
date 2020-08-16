@@ -16,18 +16,23 @@ fi
 
 touch medianxlofflinetools.cpp # make sure it's rebuilt to generate current time
 
-qtProject="$(pwd)/MedianXLOfflineTools.pro"
+repoDir=$(pwd)
 bundleName=MedianXLOfflineTools.app
 
 mkdir -p "$buildDir"
 cd "$buildDir"
 
-"$QTDIR"/bin/qmake "$qtProject" -nocache CONFIG+=release
+"$QTDIR"/bin/qmake "$repoDir/MedianXLOfflineTools.pro" -nocache CONFIG+=release
 make -j$(getconf _NPROCESSORS_ONLN) --silent
 "$QTDIR"/bin/macdeployqt "$bundleName"
 
 appVersion=$(/usr/libexec/PlistBuddy -c 'Print :CFBundleShortVersionString' "$bundleName"/Contents/Info.plist)
-archiveName="MedianXLOfflineTools_mac_${appVersion}.txz"
-tar -cf "$archiveName" --xz "$bundleName"
+enclosingDirName="MedianXLOfflineTools_mac_$appVersion"
+mkdir "$enclosingDirName"
+mv "$bundleName" "$enclosingDirName"
+cp "$repoDir/scripts/disable_auto_load.command" "$enclosingDirName"
+
+archiveName="${enclosingDirName}.txz"
+tar -cf "$archiveName" --xz "$enclosingDirName"
 
 echo -e "\n$(pwd)/$archiveName"
