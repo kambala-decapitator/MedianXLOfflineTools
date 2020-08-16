@@ -449,10 +449,7 @@ QHash<QByteArray, SocketableItemInfo *> *ItemDataBase::Socketables()
                         break;
                     QByteArray codeString = data.at(firstCol);
                     if (codeString.isEmpty())
-                    {
-                        firstCol += (3 - j) * 3;
-                        break;
-                    }
+                        continue;
                     int param = data.at(firstCol + 1).toInt(), value = data.at(firstCol + 2).toInt();
                     foreach (const QByteArray &code, codeString.split(','))
                         props += SocketableItemInfo::Properties(code.toInt(), param, value);
