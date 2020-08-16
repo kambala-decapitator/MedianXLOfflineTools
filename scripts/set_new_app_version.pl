@@ -3,7 +3,7 @@
 use strict;
 use File::Slurp qw(edit_file edit_file_lines);
 
-die "usage: perl set_new_app_version.pl <Qt project name> <MSVS project name> <version> [info.plist path]" if scalar(@ARGV) < 2;
+die "usage: perl set_new_app_version.pl <Qt project name> <MSVS project name> <version> [info.plist path]" if scalar(@ARGV) < 3;
 
 my $qtProjName = shift;
 my $msvsProjName = shift;
