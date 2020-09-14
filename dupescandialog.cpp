@@ -407,6 +407,7 @@ void DupeScanDialog::scanCharactersInDir(const QString &path)
             keyValue[QLatin1String("base_mana")] = ci.valueOfStatistic(Enums::CharacterStats::BaseMana);
             keyValue[QLatin1String("vitality")] = ci.valueOfStatistic(Enums::CharacterStats::Vitality);
             keyValue[QLatin1String("energy")] = ci.valueOfStatistic(Enums::CharacterStats::Energy);
+            keyValue[QLatin1String("inventory_gold")] = ci.valueOfStatistic(Enums::CharacterStats::InventoryGold);
             keyValue[QLatin1String("stash_gold")] = ci.valueOfStatistic(Enums::CharacterStats::StashGold);
             keyValue[QLatin1String("free_stat_points")] = ci.valueOfStatistic(Enums::CharacterStats::FreeStatPoints);
             keyValue[QLatin1String("sol_used")] = ci.valueOfStatistic(Enums::CharacterStats::SignetsOfLearningEaten);
