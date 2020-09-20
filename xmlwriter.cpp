@@ -28,8 +28,8 @@ void XMLWriter::addDataFromMap(const QString &key, const QVariantMap &map)
                 list += element.toMap();
             addDataFromArray(k, QLatin1String("item"), list);
         }
-//        else if (v.canConvert<QVariantMap>())
-//            addDataFromMap(k, v.toMap())
+        else if (v.canConvert<QVariantMap>())
+            addDataFromMap(k, v.toMap());
         else
             _xml->writeTextElement(k, v.toString());
     }
