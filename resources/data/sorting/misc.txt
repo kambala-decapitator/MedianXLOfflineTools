@@ -9,6 +9,8 @@ asaa  # MO   (hardcoded ordering: any - armor - ring/amulet - weapon)
 asa\# # UMO (backslash is intended; sorting order same as MO)
 ara.  # class charm (regular expression)
 char  # charm
+shco  # vessel
+prsh  # shrine
 cycl  # cycle
 poti  # signet, moon symbol, apple
 hpot  # elixir, goodberry, healing potion
@@ -25,15 +27,13 @@ thng
 	\#X[1-6]        # emblem of ...
 	\|[a-z]+|\#X9   # cube reagent
 	Kx\d|r99        # essence / runestone
-	[A-Z]\d\+S?     # shrine / vessel
 	\[\d\d          # trophy
 	\{\d\d          # fragment
 	qu[l2-4m]|asx   # arcane shard / crystal / cluster
 	\do\[|ooc       # catalyst/oil
 	2x\d            # robot brain
-	[a-z]@\1        # duncraig sigil
+	([a-z])@\1      # duncraig sigil
 	\\\\[1-5]       # great gem
-	\d\d\-          # pearl of wisdom
 	x\dx            # sunstone
 	dy\d+           # dyes
 	ir8\d           # occult effigy
