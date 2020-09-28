@@ -410,6 +410,7 @@ void DupeScanDialog::scanCharactersInDir(const QString &path)
             keyValue[QLatin1String("inventory_gold")] = ci.valueOfStatistic(Enums::CharacterStats::InventoryGold);
             keyValue[QLatin1String("stash_gold")] = ci.valueOfStatistic(Enums::CharacterStats::StashGold);
             keyValue[QLatin1String("free_stat_points")] = ci.valueOfStatistic(Enums::CharacterStats::FreeStatPoints);
+            keyValue[QLatin1String("free_skill_points")] = ci.valueOfStatistic(Enums::CharacterStats::FreeSkillPoints);
             keyValue[QLatin1String("sol_used")] = ci.valueOfStatistic(Enums::CharacterStats::SignetsOfLearningEaten);
             {
                 QVariantList achievements = bci.statsDynamicData.values(Enums::CharacterStats::Achievements);
