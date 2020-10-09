@@ -10,7 +10,7 @@
 213	09+	357	2			4	to Physical/Magic Spell Damage
 220	10+	34	4			4	Physical Damage Reduced by
 221	11+	27	5			4	Regenerate Mana
-222	12+	470	4			4	to Summoned Minion Damage
+222	12+	470	2			4	to Summoned Minion Damage
 223	13+	444	4			4	to Summoned Minion Life
 224	14+	487	2			4	to Summoned Minion Resistances
 227	16+	80	3			4	Magic Find
@@ -24,7 +24,7 @@
 242	25+	109	4			4	Curse Length Reduction
 243	26+	16	15			4	Enhanced Defense
 244	27+	171	4			4	Total Character Defense
-249	30+	485	6			4	Energy Factor to Spell Damage
+249	30+	485	6			4	Spell Focus
 251	31+	85	1			4	to Experience Gained
 255	32+	60	3			4	Life stolen per Hit
 256	33+	62	5			4	Mana stolen per Hit
@@ -42,8 +42,8 @@
 370	52+	99	6			4	Hit Recovery
 382	53+	74	40			4	Life Regenerated per Second
 403	60+	210	30			4	Life on Attack
-408	61+	295	40			4	Mana on Attack
+408	61+	295	20			4	Mana on Attack
 458	62+	484	2			4	Innate Elemental Damage
-459	63+	25	20			4	Enhanced Weapon Damage
+459	63+	25	12			4	Enhanced Weapon Damage
 460	64+	105	6			4	Cast Speed
 461	65+	93	6			4	Attack Speed

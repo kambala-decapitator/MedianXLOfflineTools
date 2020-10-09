@@ -943,7 +943,7 @@
 941	Fallen One
 942	Fallen Shaman
 943	Steel Lord
-944	Acid Fiend
+944	Harvester
 945	Shenk the Overseer
 946	Tal Rasha
 947	Red Storm
@@ -1060,6 +1060,7 @@
 1070	Rakkis Guardsman
 1071	Citizen
 1076	Juris Khan, King of Ureh
+1079	Amazon Defender
 1080	Fallen Warrior
 1081	Ghost Flame
 1082	Golden Calf
@@ -1882,31 +1883,32 @@
 1942	
 1962	Imperius
 1963	Juris Khan, King of Ureh
-1966	DruidGeneric
-1967	Druid1
-1968	DruidGeneric
-1969	Druid2
-1970	DruidGeneric
-1971	Druid3
-1972	DruidGeneric
-1973	Druid4
-1974	DruidGeneric
-1975	Druid5
-1976	ScosHulk
-1977	ScosHorde
-1978	ScosHordeMinion
-1979	ScosBloodlord
-1980	ScosMauler
-1981	ScosViper
+1965	Azgar
+1966	Druid Student
+1967	Corrupted Werewolf
+1968	Druid Student
+1969	Corrupted Seer
+1970	Druid Student
+1971	Corrupted Trap Rat
+1972	Druid Student
+1973	Corrupted Werebear
+1974	Druid Student
+1975	Corrupted Hunter
+1976	Worldstone Guardian
+1977	Void Corruptor
+1978	Void Minion
+1979	Subjugator
+1980	Depraved Scout
+1981	Soul Gaoler
 1982	Bul Kathos
 1983	Vasily
-1984	RhinoBeetle
+1984	Rhino Beetle
 1985	Azgar
-1986	AzgarEvil
-1987	Emissary 1
-1988	Emissary 2
-1989	Emissary 3
-1990	Emissary 4
+1986	Azgar
+1987	Visionary of Destruction
+1988	Emissary of Destruction I
+1989	Emissary of Destruction II
+1990	Lord of Destruction
 1991	Ancient Gate
 1992	Ancient Gate
 1993	Ancient Gate
@@ -1914,18 +1916,18 @@
 1995	Vasily
 1996	Bul Kathos
 1997	Vasily
-1998	Emissary 1
-1999	Emissary 1
-2000	Emissary 1
-2001	Emissary 1
-2002	Emissary 1
-2003	Emissary 1
-2004	Emissary 1
-2005	Emissary 1
-2006	Emissary 1
-2007	Emissary 1
-2008	Emissary 1
-2009	Emissary 1
+1998	Visionary of Destruction
+1999	Visionary of Destruction
+2000	Visionary of Destruction
+2001	Visionary of Destruction
+2002	Visionary of Destruction
+2003	Visionary of Destruction
+2004	Visionary of Destruction
+2005	Visionary of Destruction
+2006	Visionary of Destruction
+2007	Visionary of Destruction
+2008	Visionary of Destruction
+2009	Visionary of Destruction
 2021	vv_SandMaggotYoung
 2022	Sand Maggot Egg
 2023	Sand Maggot Ghost
@@ -2030,6 +2032,7 @@
 2134	The Void (trap)
 2135	Darkspawn
 2136	The Void (trap)
+2137	FLYING POLAR BUFFALO ERROR
 2138	Eternal Ghost
 2139	The Void (trap)
 2140	The Void (trap)

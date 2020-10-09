@@ -465,673 +465,673 @@ w96	Fanged Helm (3)		2	2	0		19	126	0									invba2				phlm,tier		4
 w97	Horned Helm (3)		2	2	0		20	172	0									invba3				phlm,tier		4
 w98	Assault Helmet (3)		2	2	0		21	217	0									invba4				phlm,tier		4
 w99	Avenger Guard (3)		2	2	0		23	263	0									invba5				phlm,tier		4
-!01	Naginata (1)		2	4	1		3	0	58		1			19	20			invwsc	0	0	25	nagi,tier	1	6
-!03	Naginata (2)		2	4	1		13	0	95		1			45	47			invwsc	0	0	25	nagi,tier	1	6
-!05	Naginata (3)		2	4	1		23	0	192		1			78	79			invwsc	0	0	25	nagi,tier	1	6
-!06	Naginata (4)		2	4	1		28	0	382		1			94	96			invwsc	0	0	25	nagi,tier	1	6
-!07	Naginata (Sacred)		2	4	1		30	0	558		1			101	120			invwsc	0	0	25	snag	1	6
-!08	Raptor Scythe (1)		2	4	1		0	0	0		1			5	10			inv9s8u	0	26	0	nscy,tier	1	2
-!1!	Warp Blade (2)		2	3	1		16	0	71			16	28					inv9cru	0	0	21	scrd,tier	1	1
-!10	Raptor Scythe (2)		2	4	1		9	19	0		1			11	15			inv9s8u	0	26	0	nscy,tier	1	2
-!12	Raptor Scythe (3)		2	4	1		19	54	0		1			20	26			inv9s8u	0	26	0	nscy,tier	1	2
-!13	Raptor Scythe (4)		2	4	1		25	114	0		1			25	32			inv9s8u	0	26	0	nscy,tier	1	2
-!14	Raptor Scythe (Sacred)		2	4	1		30	414	0		1			77	80			inv9s8u	0	26	0	snsy	1	2
-!15	Bonesplitter (1)		2	4	1		3	53	0		1			4	20			invscyu	0	26	0	nscy,tier	1	2
-!17	Bonesplitter (2)		2	4	1		13	87	0		1			11	37			invscyu	0	26	0	nscy,tier	1	2
-!19	Bonesplitter (3)		2	4	1		23	176	0		1			19	59			invscyu	0	26	0	nscy,tier	1	2
-!20	Bonesplitter (4)		2	4	1		28	350	0		1			23	70			invscyu	0	26	0	nscy,tier	1	2
-!21	Bonesplitter (Sacred)		2	4	1		30	512	0		1			82	84			invscyu	0	26	0	snsy	1	2
-!22	Mammen Axe (1)		1	3	1		0	0	0			5	7					invhaxu	0	22	0	baxe,tier	1	4
-!24	Mammen Axe (2)		1	3	1		10	21	0			11	12					invhaxu	0	22	0	baxe,tier	1	4
-!26	Mammen Axe (3)		1	3	1		20	59	0			19	20					invhaxu	0	22	0	baxe,tier	1	4
-!27	Mammen Axe (4)		1	3	1		25	124	0			23	23					invhaxu	0	22	0	baxe,tier	1	4
-!28	Mammen Axe (Sacred)		1	3	1		30	452	0			34	47					invhaxu	0	22	0	sbax	1	4
-!3!	Warp Blade (3)		2	3	1		26	0	140			23	44					inv9cru	0	0	21	scrd,tier	1	1
-!30	Hammerhead Axe (2)		2	3	1		15	137	0			22	27					invaxeu	0	22	0	baxe,tier	1	4
-!32	Hammerhead Axe (3)		2	3	1		26	268	0			34	41					invaxeu	0	22	0	baxe,tier	1	4
-!33	Hammerhead Axe (4)		2	3	1		30	529	0			41	49					invaxeu	0	22	0	baxe,tier	1	4
-!34	Hammerhead Axe (Sacred)		2	3	1		30	630	0			51	55					invaxeu	0	22	0	sbax	1	4
-!35	Ono (1)		2	3	1		0	21	0		1			9	12			inv9btu	0	22	0	2hbx,tier	1	4
-!37	Ono (2)		2	3	1		9	47	0		1			16	19			inv9btu	0	22	0	2hbx,tier	1	4
-!39	Ono (3)		2	3	1		20	106	0		1			28	34			inv9btu	0	22	0	2hbx,tier	1	4
-!4!	Warp Blade (4)		2	3	1		31	0	277			29	53					inv9cru	0	0	21	scrd,tier	1	1
-!40	Ono (4)		2	3	1		25	216	0		1			35	40			inv9btu	0	22	0	2hbx,tier	1	4
-!41	Ono (Sacred)		2	3	1		30	489	0		1			80	83			inv9btu	0	22	0	s2hx	1	4
-!42	Valaska (1)		2	3	1		3	89	0		1			19	26			invbtxu	0	26	0	2hbx,tier	1	4
-!44	Valaska (2)		2	3	1		13	132	0		1			37	49			invbtxu	0	26	0	2hbx,tier	1	4
-!46	Valaska (3)		2	3	1		24	258	0		1			59	77			invbtxu	0	26	0	2hbx,tier	1	4
-!47	Valaska (4)		2	3	1		29	509	0		1			71	91			invbtxu	0	26	0	2hbx,tier	1	4
-!48	Valaska (Sacred)		2	3	1		30	616	0		1			101	106			invbtxu	0	26	0	s2hx	1	4
-!49	Labrys (1)		2	4	1		6	127	0		1			24	28			invgaxu	0	26	0	2hbx,tier	1	4
-!5!	Warp Blade (Sacred)		2	3	1		30	0	400			49	86					inv9cru	0	0	21	sscd	1	1
-!51	Labrys (2)		2	4	1		15	183	0		1			47	51			invgaxu	0	26	0	2hbx,tier	1	4
-!53	Labrys (3)		2	4	1		26	354	0		1			74	79			invgaxu	0	26	0	2hbx,tier	1	4
-!54	Labrys (4)		2	4	1		30	696	0		1			80	99			invgaxu	0	26	0	2hbx,tier	1	4
-!55	Labrys (Sacred)		2	4	1		30	796	0		1			107	109			invgaxu	0	26	0	s2hx	1	4
-!56	Flamen Staff (1)		1	4	1		2	18	0		1			7	8			invcstu	0	10	0	dstf,tier	1	5
-!58	Flamen Staff (2)		1	4	1		12	32	0		1			13	17			invcstu	0	10	0	dstf,tier	1	5
-!60	Flamen Staff (3)		1	4	1		23	69	0		1			22	27			invcstu	0	10	0	dstf,tier	1	5
-!61	Flamen Staff (4)		1	4	1		27	138	0		1			27	33			invcstu	0	10	0	dstf,tier	1	5
-!62	Flamen Staff (Sacred)		1	4	1		30	240	0		1			48	51			invcstu	0	10	0	sdst	1	5
-!63	Marrow Staff (1)		2	4	1		5	37	0		1			9	12			inv8wsu	0	10	0	nstf,tier	1	2
-!65	Marrow Staff (2)		2	4	1		15	56	0		1			16	21			inv8wsu	0	10	0	nstf,tier	1	2
-!67	Marrow Staff (3)		2	4	1		25	112	0		1			25	32			inv8wsu	0	10	0	nstf,tier	1	2
-!68	Marrow Staff (4)		2	4	1		29	222	0		1			29	38			inv8wsu	0	10	0	nstf,tier	1	2
-!69	Marrow Staff (Sacred)		2	4	1		30	275	0		1			45	49			inv8wsu	0	10	0	snst	1	2
-!70	Hexblade (1)		1	3	1		2	0	27			4	6					invkrsu	0	0	21	nknf,tier	1	2
-!72	Hexblade (2)		1	3	1		12	0	53			7	12					invkrsu	0	0	21	nknf,tier	1	2
-!74	Hexblade (3)		1	3	1		22	0	114			11	20					invkrsu	0	0	21	nknf,tier	1	2
-!75	Hexblade (4)		1	3	1		27	0	233			13	24					invkrsu	0	0	21	nknf,tier	1	2
-!76	Hexblade (Sacred)		1	3	1		30	0	463			26	49					invkrsu	0	0	21	snkf	1	2
-!77	Spirit Edge (1)		1	3	1		5	0	67			5	9					inv9blu	0	0	21	nknf,tier	1	2
-!79	Spirit Edge (2)		1	3	1		15	0	104			10	18					inv9blu	0	0	21	nknf,tier	1	2
-!81	Spirit Edge (3)		1	3	1		25	0	207			15	29					inv9blu	0	0	21	nknf,tier	1	2
-!82	Spirit Edge (4)		1	3	1		29	0	410			18	34					inv9blu	0	0	21	nknf,tier	1	2
-!83	Spirit Edge (Sacred)		1	3	1		30	0	537			32	57					inv9blu	0	0	21	snkf	1	2
-!84	Holy Lance (1)		2	4	1		1	34	0		1			5	12			invtriu	0	26	0	pspe,tier	1	3
-!86	Holy Lance (2)		2	4	1		11	64	0		1			11	27			invtriu	0	26	0	pspe,tier	1	3
-!88	Holy Lance (3)		2	4	1		22	137	0		1			18	44			invtriu	0	26	0	pspe,tier	1	3
-!89	Holy Lance (4)		2	4	1		26	276	0		1			22	53			invtriu	0	26	0	pspe,tier	1	3
-!90	Holy Lance (Sacred)		2	4	1		30	514	0		1			49	85			invtriu	0	26	0	spsp	1	3
-!91	Tepoztopilli (1)		2	4	1		5	112	0		1			9	19			inv9bru	0	26	0	pspe,tier	1	3
-!93	Tepoztopilli (2)		2	4	1		15	165	0		1			19	35			inv9bru	0	26	0	pspe,tier	1	3
-!95	Tepoztopilli (3)		2	4	1		25	325	0		1			32	54			inv9bru	0	26	0	pspe,tier	1	3
-!96	Tepoztopilli (4)		2	4	1		30	641	0		1			34	74			inv9bru	0	26	0	pspe,tier	1	3
-!97	Tepoztopilli (Sacred)		2	4	1		30	733	0		1			68	75			inv9bru	0	26	0	spsp	1	3
-!98	Warp Blade (1)		2	3	1		6	0	47			9	14					inv9cru	0	0	21	scrd,tier	1	1
-01@	Short Sword (Sacred)		1	3	1		30	376	0			37	38					invssd	0	18	0	qswd	1	-1
-02@	Scimitar (Sacred)		1	3	1		30	421	0			39	40					invscm	0	18	0	qswd	1	-1
-03@	Saber (Sacred)		1	3	1		30	443	0			41	42					invsbr	0	18	0	qswd	1	-1
-04@	Falchion (Sacred)		1	3	1		30	466	0			42	44					invflc	0	18	0	qswd	1	-1
-05@	Broad Sword (Sacred)		2	3	1		30	488	0			44	46					invbsd	0	18	0	qswd	1	-1
-06@	Long Sword (Sacred)		2	3	1		30	540	0			45	48					invlsd	0	18	0	qswd	1	-1
-07@	War Sword (Sacred)		1	3	1		30	581	0			46	50					invwsd	0	18	0	qswd	1	-1
-08@	Two-Handed Sword (Sacred)		1	4	1		30	421	0	1	1	37	39	55	56			inv2hs	0	26	0	s2hd	1	-1
-09@	Claymore (Sacred)		1	4	1		30	450	0	1	1	40	41	60	61			invclm	0	26	0	s2hd	1	-1
-100	Short Sword (1)		1	3	1		0	0	0			4	6					invssd	0	18	0	swor,tier	1	-1
-101	Scimitar (1)		1	3	1		1	25	0			5	6					invscm	0	18	0	swor,tier	1	-1
-102	Saber (1)		1	3	1		2	37	0			6	8					invsbr	0	18	0	swor,tier	1	-1
-103	Falchion (1)		1	3	1		2	49	0			8	9					invflc	0	18	0	swor,tier	1	-1
-104	Broad Sword (1)		2	3	1		3	61	0			9	11					invbsd	0	18	0	swor,tier	1	-1
-105	Long Sword (1)		2	3	1		4	73	0			10	12					invlsd	0	18	0	swor,tier	1	-1
-106	War Sword (1)		1	3	1		6	85	0			11	13					invwsd	0	18	0	swor,tier	1	-1
-107	Two-Handed Sword (1)		1	4	1		0	25	0	1	1	5	7	5	10			inv2hs	0	26	0	2hsd,tier	1	-1
-108	Claymore (1)		1	4	1		1	41	0	1	1	6	7	9	10			invclm	0	26	0	2hsd,tier	1	-1
-109	Giant Sword (1)		1	4	1		2	57	0	1	1	8	9	13	13			invgis	0	26	0	2hsd,tier	1	-1
-10@	Giant Sword (Sacred)		1	4	1		30	480	0	1	1	42	45	65	67			invgis	0	26	0	s2hd	1	-1
-110	Bastard Sword (1)		1	4	1		3	73	0	1	1	9	11	16	17			invbsw	0	26	0	2hsd,tier	1	-1
-111	Flamberge (1)		2	4	1		3	89	0	1	1	11	13	19	21			invflb	0	26	0	2hsd,tier	1	-1
-112	Great Sword (1)		2	4	1		5	105	0	1	1	12	15	22	23			invgsd	0	26	0	2hsd,tier	1	-1
-113	Crystal Sword (1)		2	3	1		5	0	73			0	0					invcrs	0	0	0	crsd,el1x	1	-1
-114	Hand Axe (1)		1	3	1		0	0	0			4	6					invhax	0	18	0	axe,tier	1	-1
-115	Axe (1)		2	3	1		1	31	0			6	8					invaxe	0	18	0	axe,tier	1	-1
-116	Double Axe (1)		2	3	1		2	49	0			7	11					inv2ax	0	18	0	axe,tier	1	-1
-117	Military Pick (1)		2	3	1		3	67	0			9	14					invmpi	0	18	0	axe,tier	1	-1
-118	War Axe (1)		2	3	1		5	85	0			11	17					invwax	0	18	0	axe,tier	1	-1
-119	Large Axe (1)		2	3	1		0	18	0		1			7	9			invlax	0	26	0	2hax,tier	1	-1
-11@	Bastard Sword (Sacred)		1	4	1		30	535	0	1	1	44	47	70	72			invbsw	0	26	0	s2hd	1	-1
-120	Broad Axe (1)		2	3	1		1	39	0		1			10	13			invbrx	0	26	0	2hax,tier	1	-1
-121	Battle Axe (1)		2	3	1		2	60	0		1			0	0			invbtx	0	0	0	2hax,el2x	1	-1
-122	Great Axe (1)		2	4	1		3	81	0		1			17	23			invgax	0	26	0	2hax,tier	1	-1
-123	Giant Axe (1)		2	3	1		5	102	0		1			20	28			invgix	0	26	0	2hax,tier	1	-1
-124	Club (1)		1	3	1		0	0	0			4	6					invclb	0	18	0	mace,tier	1	-1
-125	Spiked Club (1)		1	3	1		1	24	0			6	8					invspc	0	18	0	mace,tier	1	-1
-126	Mace (1)		1	3	1		2	36	0			7	10					invmac	0	18	0	mace,tier	1	-1
-127	Morning Star (1)		1	3	1		3	48	0			8	13					invmst	0	18	0	mace,tier	1	-1
-128	Flail (1)		2	3	1		5	60	0			9	15					invfla	0	18	0	mace,tier	1	-1
-129	Scepter (1)		1	3	1		0	0	16			4	5					invscp	0	0	17	scep,tier	1	-1
-12@	Flamberge (Sacred)		2	4	1		30	600	0	1	1	46	50	75	77			invflb	0	26	0	s2hd	1	-1
-130	Grand Scepter (1)		1	3	1		2	0	40			6	9					invgsc	0	0	17	scep,tier	1	-1
-131	War Scepter (1)		2	3	1		3	0	64			9	13					invwsp	0	0	17	scep,tier	1	-1
-132	Javelin (1)		1	3	1	1	0	0	0			5	7			1	7	invjav	0	0	17	jave,tier	1	-1
-133	Pilum (1)		1	3	1	1	1	0	29			6	8			4	8	invpil	0	0	17	jave,tier	1	-1
-134	Short Spear (1)		1	3	1	1	2	0	47			7	10			6	13	invssp	0	0	17	jave,tier	1	-1
-135	Glaive (1)		1	4	1	1	3	0	65			8	13			8	18	invglv	0	0	17	jave,tier	1	-1
-136	Throwing Spear (1)		1	4	1	1	5	0	83			8	15			10	22	invtsp	0	0	17	jave,tier	1	-1
-137	Spear (1)		2	4	1		0	0	0		1			5	10			invspr	0	0	25	spea,tier	1	-1
-138	Trident (1)		2	4	1		1	18	29		1			5	10			invtri	0	0	25	spea,tier	1	-1
-139	Brandistock (1)		2	4	1		2	30	46		1			6	14			invbrn	0	0	25	spea,tier	1	-1
-13@	Great Sword (Sacred)		2	4	1		30	670	0	1	1	48	52	79	81			invgsd	0	26	0	s2hd	1	-1
-140	Spetum (1)		2	4	1		3	42	63		1			7	18			invspt	0	0	25	spea,tier	1	-1
-141	Pike (1)		2	4	1		5	54	80		1			8	21			invpik	0	0	25	spea,tier	1	-1
-142	Dagger (1)		1	2	1		0	0	0			4	5					invdgr	0	0	17	knif,tier	1	-1
-143	Dirk (1)		1	2	1		2	0	25			5	5					invdir	0	0	17	knif,tier	1	-1
-144	Kriss (1)		1	3	1		3	0	43			6	6					invkrs	0	0	17	knif,tier	1	-1
-145	Blade (1)		1	3	1		5	0	61			6	7					invbld	0	0	17	knif,tier	1	-1
-146	Throwing Knife (1)		1	2	1	1	0	0	15			4	6			2	7	invtkn	0	0	17	tkni,tier	1	-1
-147	Flying Knife (1)		1	2	1	1	2	0	53			6	7			6	7	invtkn	0	0	17	tkni,tier	1	-1
-148	Balanced Knife (1)		1	2	1	1	3	0	91			8	9			10	12	invbkf	0	0	17	tkni,tier	1	-1
-149	Throwing Axe (1)		1	2	1	1	0	15	0			0	0			0	0	invtax	0	0	0	taxe,elrx	1	-1
+!01	Naginata (1)		2	4	1		3	0	58		1			11	12			invwsc	0	0	15	nagi,tier	1	6
+!03	Naginata (2)		2	4	1		13	0	95		1			34	35			invwsc	0	0	15	nagi,tier	1	6
+!05	Naginata (3)		2	4	1		23	0	192		1			78	79			invwsc	0	0	15	nagi,tier	1	6
+!06	Naginata (4)		2	4	1		28	0	382		1			94	96			invwsc	0	0	15	nagi,tier	1	6
+!07	Naginata (Sacred)		2	4	1		30	0	558		1			101	120			invwsc	0	0	15	snag	1	6
+!08	Raptor Scythe (1)		2	4	1		0	0	0		1			3	6			inv9s8u	0	16	0	nscy,tier	1	2
+!1!	Warp Blade (2)		2	3	1		16	0	71			12	21					inv9cru	0	0	13	scrd,tier	1	1
+!10	Raptor Scythe (2)		2	4	1		9	19	0		1			8	11			inv9s8u	0	16	0	nscy,tier	1	2
+!12	Raptor Scythe (3)		2	4	1		19	54	0		1			20	26			inv9s8u	0	16	0	nscy,tier	1	2
+!13	Raptor Scythe (4)		2	4	1		25	114	0		1			25	32			inv9s8u	0	16	0	nscy,tier	1	2
+!14	Raptor Scythe (Sacred)		2	4	1		30	414	0		1			77	80			inv9s8u	0	16	0	snsy	1	2
+!15	Bonesplitter (1)		2	4	1		3	53	0		1			2	12			invscyu	0	16	0	nscy,tier	1	2
+!17	Bonesplitter (2)		2	4	1		13	87	0		1			8	28			invscyu	0	16	0	nscy,tier	1	2
+!19	Bonesplitter (3)		2	4	1		23	176	0		1			19	59			invscyu	0	16	0	nscy,tier	1	2
+!20	Bonesplitter (4)		2	4	1		28	350	0		1			23	70			invscyu	0	16	0	nscy,tier	1	2
+!21	Bonesplitter (Sacred)		2	4	1		30	512	0		1			82	84			invscyu	0	16	0	snsy	1	2
+!22	Mammen Axe (1)		1	3	1		0	0	0			3	4					invhaxu	0	14	0	baxe,tier	1	4
+!24	Mammen Axe (2)		1	3	1		10	21	0			8	9					invhaxu	0	14	0	baxe,tier	1	4
+!26	Mammen Axe (3)		1	3	1		20	59	0			19	20					invhaxu	0	14	0	baxe,tier	1	4
+!27	Mammen Axe (4)		1	3	1		25	124	0			23	23					invhaxu	0	14	0	baxe,tier	1	4
+!28	Mammen Axe (Sacred)		1	3	1		30	452	0			34	47					invhaxu	0	14	0	sbax	1	4
+!3!	Warp Blade (3)		2	3	1		26	0	140			23	44					inv9cru	0	0	13	scrd,tier	1	1
+!30	Hammerhead Axe (2)		2	3	1		15	137	0			17	20					invaxeu	0	14	0	baxe,tier	1	4
+!32	Hammerhead Axe (3)		2	3	1		26	268	0			34	41					invaxeu	0	14	0	baxe,tier	1	4
+!33	Hammerhead Axe (4)		2	3	1		30	529	0			41	49					invaxeu	0	14	0	baxe,tier	1	4
+!34	Hammerhead Axe (Sacred)		2	3	1		30	630	0			51	55					invaxeu	0	14	0	sbax	1	4
+!35	Ono (1)		2	3	1		0	21	0		1			5	7			inv9btu	0	14	0	2hbx,tier	1	4
+!37	Ono (2)		2	3	1		9	47	0		1			12	14			inv9btu	0	14	0	2hbx,tier	1	4
+!39	Ono (3)		2	3	1		20	106	0		1			28	34			inv9btu	0	14	0	2hbx,tier	1	4
+!4!	Warp Blade (4)		2	3	1		31	0	277			29	53					inv9cru	0	0	13	scrd,tier	1	1
+!40	Ono (4)		2	3	1		25	216	0		1			35	40			inv9btu	0	14	0	2hbx,tier	1	4
+!41	Ono (Sacred)		2	3	1		30	489	0		1			80	83			inv9btu	0	14	0	s2hx	1	4
+!42	Valaska (1)		2	3	1		3	89	0		1			11	16			invbtxu	0	16	0	2hbx,tier	1	4
+!44	Valaska (2)		2	3	1		13	132	0		1			28	37			invbtxu	0	16	0	2hbx,tier	1	4
+!46	Valaska (3)		2	3	1		24	258	0		1			59	77			invbtxu	0	16	0	2hbx,tier	1	4
+!47	Valaska (4)		2	3	1		29	509	0		1			71	91			invbtxu	0	16	0	2hbx,tier	1	4
+!48	Valaska (Sacred)		2	3	1		30	616	0		1			101	106			invbtxu	0	16	0	s2hx	1	4
+!49	Labrys (1)		2	4	1		6	127	0		1			14	17			invgaxu	0	16	0	2hbx,tier	1	4
+!5!	Warp Blade (Sacred)		2	3	1		30	0	400			49	86					inv9cru	0	0	13	sscd	1	1
+!51	Labrys (2)		2	4	1		15	183	0		1			35	38			invgaxu	0	16	0	2hbx,tier	1	4
+!53	Labrys (3)		2	4	1		26	354	0		1			74	79			invgaxu	0	16	0	2hbx,tier	1	4
+!54	Labrys (4)		2	4	1		30	696	0		1			80	99			invgaxu	0	16	0	2hbx,tier	1	4
+!55	Labrys (Sacred)		2	4	1		30	796	0		1			107	109			invgaxu	0	16	0	s2hx	1	4
+!56	Flamen Staff (1)		1	4	1		2	18	0		1			4	5			invcstu	0	6	0	dstf,tier	1	5
+!58	Flamen Staff (2)		1	4	1		12	32	0		1			10	13			invcstu	0	6	0	dstf,tier	1	5
+!60	Flamen Staff (3)		1	4	1		23	69	0		1			22	27			invcstu	0	6	0	dstf,tier	1	5
+!61	Flamen Staff (4)		1	4	1		27	138	0		1			27	33			invcstu	0	6	0	dstf,tier	1	5
+!62	Flamen Staff (Sacred)		1	4	1		30	240	0		1			48	51			invcstu	0	6	0	sdst	1	5
+!63	Marrow Staff (1)		2	4	1		5	37	0		1			5	7			inv8wsu	0	6	0	nstf,tier	1	2
+!65	Marrow Staff (2)		2	4	1		15	56	0		1			12	16			inv8wsu	0	6	0	nstf,tier	1	2
+!67	Marrow Staff (3)		2	4	1		25	112	0		1			25	32			inv8wsu	0	6	0	nstf,tier	1	2
+!68	Marrow Staff (4)		2	4	1		29	222	0		1			29	38			inv8wsu	0	6	0	nstf,tier	1	2
+!69	Marrow Staff (Sacred)		2	4	1		30	275	0		1			45	49			inv8wsu	0	6	0	snst	1	2
+!70	Hexblade (1)		1	3	1		2	0	27			2	4					invkrsu	0	0	13	nknf,tier	1	2
+!72	Hexblade (2)		1	3	1		12	0	53			5	9					invkrsu	0	0	13	nknf,tier	1	2
+!74	Hexblade (3)		1	3	1		22	0	114			11	20					invkrsu	0	0	13	nknf,tier	1	2
+!75	Hexblade (4)		1	3	1		27	0	233			13	24					invkrsu	0	0	13	nknf,tier	1	2
+!76	Hexblade (Sacred)		1	3	1		30	0	463			26	49					invkrsu	0	0	13	snkf	1	2
+!77	Spirit Edge (1)		1	3	1		5	0	67			3	5					inv9blu	0	0	13	nknf,tier	1	2
+!79	Spirit Edge (2)		1	3	1		15	0	104			8	14					inv9blu	0	0	13	nknf,tier	1	2
+!81	Spirit Edge (3)		1	3	1		25	0	207			15	29					inv9blu	0	0	13	nknf,tier	1	2
+!82	Spirit Edge (4)		1	3	1		29	0	410			18	34					inv9blu	0	0	13	nknf,tier	1	2
+!83	Spirit Edge (Sacred)		1	3	1		30	0	537			32	57					inv9blu	0	0	13	snkf	1	2
+!84	Holy Lance (1)		2	4	1		1	34	0		1			3	7			invtriu	0	16	0	pspe,tier	1	3
+!86	Holy Lance (2)		2	4	1		11	64	0		1			8	20			invtriu	0	16	0	pspe,tier	1	3
+!88	Holy Lance (3)		2	4	1		22	137	0		1			18	44			invtriu	0	16	0	pspe,tier	1	3
+!89	Holy Lance (4)		2	4	1		26	276	0		1			22	53			invtriu	0	16	0	pspe,tier	1	3
+!90	Holy Lance (Sacred)		2	4	1		30	514	0		1			49	85			invtriu	0	16	0	spsp	1	3
+!91	Tepoztopilli (1)		2	4	1		5	112	0		1			5	11			inv9bru	0	16	0	pspe,tier	1	3
+!93	Tepoztopilli (2)		2	4	1		15	165	0		1			14	26			inv9bru	0	16	0	pspe,tier	1	3
+!95	Tepoztopilli (3)		2	4	1		25	325	0		1			32	54			inv9bru	0	16	0	pspe,tier	1	3
+!96	Tepoztopilli (4)		2	4	1		30	641	0		1			34	74			inv9bru	0	16	0	pspe,tier	1	3
+!97	Tepoztopilli (Sacred)		2	4	1		30	733	0		1			68	75			inv9bru	0	16	0	spsp	1	3
+!98	Warp Blade (1)		2	3	1		6	0	47			5	8					inv9cru	0	0	13	scrd,tier	1	1
+01@	Short Sword (Sacred)		1	3	1		30	376	0			37	38					invssd	0	11	0	qswd	1	-1
+02@	Scimitar (Sacred)		1	3	1		30	421	0			39	40					invscm	0	11	0	qswd	1	-1
+03@	Saber (Sacred)		1	3	1		30	443	0			41	42					invsbr	0	11	0	qswd	1	-1
+04@	Falchion (Sacred)		1	3	1		30	466	0			42	44					invflc	0	11	0	qswd	1	-1
+05@	Broad Sword (Sacred)		2	3	1		30	488	0			44	46					invbsd	0	11	0	qswd	1	-1
+06@	Long Sword (Sacred)		2	3	1		30	540	0			45	48					invlsd	0	11	0	qswd	1	-1
+07@	War Sword (Sacred)		1	3	1		30	581	0			46	50					invwsd	0	11	0	qswd	1	-1
+08@	Two-Handed Sword (Sacred)		1	4	1		30	421	0	1	1	37	39	55	56			inv2hs	0	16	0	s2hd	1	-1
+09@	Claymore (Sacred)		1	4	1		30	450	0	1	1	40	41	60	61			invclm	0	16	0	s2hd	1	-1
+100	Short Sword (1)		1	3	1		0	0	0			2	4					invssd	0	11	0	swor,tier	1	-1
+101	Scimitar (1)		1	3	1		1	25	0			3	4					invscm	0	11	0	swor,tier	1	-1
+102	Saber (1)		1	3	1		2	37	0			4	5					invsbr	0	11	0	swor,tier	1	-1
+103	Falchion (1)		1	3	1		2	49	0			4	5					invflc	0	11	0	swor,tier	1	-1
+104	Broad Sword (1)		2	3	1		3	61	0			5	7					invbsd	0	11	0	swor,tier	1	-1
+105	Long Sword (1)		2	3	1		4	73	0			6	7					invlsd	0	11	0	swor,tier	1	-1
+106	War Sword (1)		1	3	1		6	85	0			7	8					invwsd	0	11	0	swor,tier	1	-1
+107	Two-Handed Sword (1)		1	4	1		0	25	0	1	1	3	4	3	6			inv2hs	0	16	0	2hsd,tier	1	-1
+108	Claymore (1)		1	4	1		1	41	0	1	1	3	4	5	6			invclm	0	16	0	2hsd,tier	1	-1
+109	Giant Sword (1)		1	4	1		2	57	0	1	1	4	5	7	8			invgis	0	16	0	2hsd,tier	1	-1
+10@	Giant Sword (Sacred)		1	4	1		30	480	0	1	1	42	45	65	67			invgis	0	16	0	s2hd	1	-1
+110	Bastard Sword (1)		1	4	1		3	73	0	1	1	5	7	9	10			invbsw	0	16	0	2hsd,tier	1	-1
+111	Flamberge (1)		2	4	1		3	89	0	1	1	7	8	11	13			invflb	0	16	0	2hsd,tier	1	-1
+112	Great Sword (1)		2	4	1		5	105	0	1	1	7	9	13	14			invgsd	0	16	0	2hsd,tier	1	-1
+113	Crystal Sword (1)		2	3	1		5	0	73									invcrs	0	0	0	crsd,el1x	1	-1
+114	Hand Axe (1)		1	3	1		0	0	0			2	4					invhax	0	11	0	axe,tier	1	-1
+115	Axe (1)		2	3	1		1	31	0			4	5					invaxe	0	11	0	axe,tier	1	-1
+116	Double Axe (1)		2	3	1		2	49	0			4	7					inv2ax	0	11	0	axe,tier	1	-1
+117	Military Pick (1)		2	3	1		3	67	0			5	8					invmpi	0	11	0	axe,tier	1	-1
+118	War Axe (1)		2	3	1		5	85	0			7	10					invwax	0	11	0	axe,tier	1	-1
+119	Large Axe (1)		2	3	1		0	18	0		1			4	5			invlax	0	16	0	2hax,tier	1	-1
+11@	Bastard Sword (Sacred)		1	4	1		30	535	0	1	1	44	47	70	72			invbsw	0	16	0	s2hd	1	-1
+120	Broad Axe (1)		2	3	1		1	39	0		1			6	8			invbrx	0	16	0	2hax,tier	1	-1
+121	Battle Axe (1)		2	3	1		2	60	0		1							invbtx	0	0	0	2hax,el2x	1	-1
+122	Great Axe (1)		2	4	1		3	81	0		1			10	14			invgax	0	16	0	2hax,tier	1	-1
+123	Giant Axe (1)		2	3	1		5	102	0		1			12	17			invgix	0	16	0	2hax,tier	1	-1
+124	Club (1)		1	3	1		0	0	0			2	4					invclb	0	11	0	mace,tier	1	-1
+125	Spiked Club (1)		1	3	1		1	24	0			4	5					invspc	0	11	0	mace,tier	1	-1
+126	Mace (1)		1	3	1		2	36	0			4	6					invmac	0	11	0	mace,tier	1	-1
+127	Morning Star (1)		1	3	1		3	48	0			5	8					invmst	0	11	0	mace,tier	1	-1
+128	Flail (1)		2	3	1		5	60	0			5	9					invfla	0	11	0	mace,tier	1	-1
+129	Scepter (1)		1	3	1		0	0	16			2	3					invscp	0	0	11	scep,tier	1	-1
+12@	Flamberge (Sacred)		2	4	1		30	600	0	1	1	46	50	75	77			invflb	0	16	0	s2hd	1	-1
+130	Grand Scepter (1)		1	3	1		2	0	40			4	5					invgsc	0	0	11	scep,tier	1	-1
+131	War Scepter (1)		2	3	1		3	0	64			5	8					invwsp	0	0	11	scep,tier	1	-1
+132	Javelin (1)		1	3	1	1	0	0	0			3	4			1	4	invjav	0	0	11	jave,tier	1	-1
+133	Pilum (1)		1	3	1	1	1	0	29			4	5			2	5	invpil	0	0	11	jave,tier	1	-1
+134	Short Spear (1)		1	3	1	1	2	0	47			4	6			4	8	invssp	0	0	11	jave,tier	1	-1
+135	Glaive (1)		1	4	1	1	3	0	65			5	8			5	11	invglv	0	0	11	jave,tier	1	-1
+136	Throwing Spear (1)		1	4	1	1	5	0	83			5	9			6	13	invtsp	0	0	11	jave,tier	1	-1
+137	Spear (1)		2	4	1		0	0	0		1			3	6			invspr	0	0	15	spea,tier	1	-1
+138	Trident (1)		2	4	1		1	18	29		1			3	6			invtri	0	0	15	spea,tier	1	-1
+139	Brandistock (1)		2	4	1		2	30	46		1			4	8			invbrn	0	0	15	spea,tier	1	-1
+13@	Great Sword (Sacred)		2	4	1		30	670	0	1	1	48	52	79	81			invgsd	0	16	0	s2hd	1	-1
+140	Spetum (1)		2	4	1		3	42	63		1			4	11			invspt	0	0	15	spea,tier	1	-1
+141	Pike (1)		2	4	1		5	54	80		1			5	13			invpik	0	0	15	spea,tier	1	-1
+142	Dagger (1)		1	2	1		0	0	0			2	3					invdgr	0	0	11	knif,tier	1	-1
+143	Dirk (1)		1	2	1		2	0	25			2	3					invdir	0	0	11	knif,tier	1	-1
+144	Kriss (1)		1	3	1		3	0	43			3	4					invkrs	0	0	11	knif,tier	1	-1
+145	Blade (1)		1	3	1		5	0	61			3	4					invbld	0	0	11	knif,tier	1	-1
+146	Throwing Knife (1)		1	2	1	1	0	0	15			2	4			1	4	invtkn	0	0	11	tkni,tier	1	-1
+147	Flying Knife (1)		1	2	1	1	2	0	53			3	4			3	4	invtkn	0	0	11	tkni,tier	1	-1
+148	Balanced Knife (1)		1	2	1	1	3	0	91			4	5			6	7	invbkf	0	0	11	tkni,tier	1	-1
+149	Throwing Axe (1)		1	2	1	1	0	15	0									invtax	0	0	0	taxe,elrx	1	-1
 14@	Crystal Sword (Sacred)		2	3	1		30	0	510			0	0					invcrs	0	0	0	qcrs,el1x	1	-1
-150	Balanced Axe (1)		2	3	1	1	3	77	0			5	12			4	19	invbal	0	18	0	taxe,tier	1	-1
-151	Short Staff (1)		1	3	1		0	0	0		1			2	4			invsst	0	0	10	staf,tier	1	-1
-152	Long Staff (1)		1	4	1		1	0	8		1			6	8			invlst	0	0	10	staf,tier	1	-1
-153	Gnarled Staff (1)		1	4	1		2	0	17		1			8	10			invcst	0	0	10	staf,tier	1	-1
-154	Battle Staff (1)		1	4	1		3	0	25		1			9	13			invbst	0	0	10	staf,tier	1	-1
-155	War Staff (1)		2	4	1		5	0	34		1			11	15			invwst	0	0	10	staf,tier	1	-1
-156	Bardiche (1)		2	4	1		0	17	1		1			4	10			invbar	0	26	0	pole,tier	1	-1
-157	Voulge (1)		2	4	1		1	33	5		1			4	12			invvou	0	26	0	pole,tier	1	-1
-158	Scythe (1)		2	4	1		3	49	49		1			4	18			invscy	0	0	25	scyh,tier	1	-1
-159	Halberd (1)		2	4	1		2	0	46		1			13	17			invhal	0	0	25	nagi,tier	1	6
-15@	Hand Axe (Sacred)		1	3	1		30	376	0			37	39					invhax	0	18	0	qaxe	1	-1
-160	Short Bow (1)		2	3	1		0	0	15		1			2	4			invsbw	0	0	17	bow,tier	1	-1
-161	Hunter's Bow (1)		2	3	1		0	0	27		1			3	5			invhbw	0	0	17	bow,tier	1	-1
-162	Long Bow (1)		2	4	1		1	0	39		1			5	7			invlbw	0	0	17	bow,tier	1	-1
-163	Composite Bow (1)		2	3	1		2	0	51		1			7	10			invcbw	0	0	17	bow,tier	1	-1
-164	Short Battle Bow (1)		2	3	1		2	0	63		1			0	0			invsbb	0	0	0	bow,elrx	1	-1
-165	Long Battle Bow (1)		2	4	1		3	0	75		1			10	15			invlbb	0	0	17	bow,tier	1	-1
-166	Short War Bow (1)		2	3	1		4	0	87		1			12	18			invswb	0	0	17	bow,tier	1	-1
-167	Long War Bow (1)		2	4	1		5	0	99		1			13	20			invlwb	0	0	17	bow,tier	1	-1
-16@	Axe (Sacred)		2	3	1		30	432	0			39	43					invaxe	0	18	0	qaxe	1	-1
-17@	Double Axe (Sacred)		2	3	1		30	466	0			42	47					inv2ax	0	18	0	qaxe	1	-1
-18@	Military Pick (Sacred)		2	3	1		30	500	0			44	52					invmpi	0	18	0	qaxe	1	-1
-19@	Hammerhead Axe (1)		2	3	1		6	93	0			12	15					invaxeu	0	22	0	baxe,tier	1	4
-1@1	Compound Bow (1)		2	3	1		2	57	0		1			7	11			invcbwu	0	26	0	dbow,tier	1	5
-1@2	Serpent Bow (2)		2	4	1		12	109	0		1			22	29			inv8lbu	0	26	0	dbow,tier	1	5
-1@3	Maple Bow (3)		2	3	1		22	249	0		1			43	55			inv8s8u	0	26	0	dbow,tier	1	5
-1@4	Viper Bow (Sacred)		2	3	1		30	660	0		1			77	83			invsbbu	0	26	0	sdbw	1	5
-1@7	Ida (4)		2	3	1		27	421	0			34	40					invbsdu	0	22	0	bswd,tier	1	4
-1@8	Kriegsmesser (1)		2	3	1		6	96	0			12	15					inv9lsu	0	22	0	bswd,tier	1	4
-1@9	Bonebreaker (2)		1	3	1		11	61	0			12	16					invspcu	0	18	0	pclb,tier	1	3
-1@@	War Axe (Sacred)		2	3	1		30	581	0			46	56					invwax	0	18	0	qaxe	1	-1
-1@A	Goedendag (3)		1	3	1		21	169	0			24	32					inv7mas	0	18	0	pmac,tier	1	3
-1@B	Angel Star (Sacred)		1	3	1		30	602	0			55	58					invmstu	0	18	0	spmc	1	3
-1@E	Dart Thrower (4)		2	3	1		26	280	0		1			58	70			inv8lxu		26	0	nxbw,tier	1	2
-1@F	Trebuchet (1)		2	3	1		6	72	0		1			19	26			inv8mxu		26	0	nxbw,tier	1	2
-20@	Large Axe (Sacred)		2	3	1		30	408	0		1			65	67			invlax	0	26	0	s2ha	1	-1
-21@	Broad Axe (Sacred)		2	3	1		30	447	0		1			71	75			invbrx	0	26	0	s2ha	1	-1
+150	Balanced Axe (1)		2	3	1	1	3	77	0			3	7			2	11	invbal	0	11	0	taxe,tier	1	-1
+151	Short Staff (1)		1	3	1		0	0	0		1			2	3			invsst	0	0	6	staf,tier	1	-1
+152	Long Staff (1)		1	4	1		1	0	8		1			4	5			invlst	0	0	6	staf,tier	1	-1
+153	Gnarled Staff (1)		1	4	1		2	0	17		1			5	6			invcst	0	0	6	staf,tier	1	-1
+154	Battle Staff (1)		1	4	1		3	0	25		1			5	8			invbst	0	0	6	staf,tier	1	-1
+155	War Staff (1)		2	4	1		5	0	34		1			7	9			invwst	0	0	6	staf,tier	1	-1
+156	Bardiche (1)		2	4	1		0	17	1		1			2	6			invbar	0	16	0	pole,tier	1	-1
+157	Voulge (1)		2	4	1		1	33	5		1			2	7			invvou	0	16	0	pole,tier	1	-1
+158	Scythe (1)		2	4	1		3	49	49		1			2	11			invscy	0	0	15	scyh,tier	1	-1
+159	Halberd (1)		2	4	1		2	0	46		1			8	10			invhal	0	0	15	nagi,tier	1	6
+15@	Hand Axe (Sacred)		1	3	1		30	376	0			37	39					invhax	0	11	0	qaxe	1	-1
+160	Short Bow (1)		2	3	1		0	0	15		1			2	3			invsbw	0	0	11	bow,tier	1	-1
+161	Hunter's Bow (1)		2	3	1		0	0	27		1			2	3			invhbw	0	0	11	bow,tier	1	-1
+162	Long Bow (1)		2	4	1		1	0	39		1			3	4			invlbw	0	0	11	bow,tier	1	-1
+163	Composite Bow (1)		2	3	1		2	0	51		1			4	6			invcbw	0	0	11	bow,tier	1	-1
+164	Short Battle Bow (1)		2	3	1		2	0	63		1							invsbb	0	0	0	bow,elrx	1	-1
+165	Long Battle Bow (1)		2	4	1		3	0	75		1			6	9			invlbb	0	0	11	bow,tier	1	-1
+166	Short War Bow (1)		2	3	1		4	0	87		1			7	11			invswb	0	0	11	bow,tier	1	-1
+167	Long War Bow (1)		2	4	1		5	0	99		1			8	12			invlwb	0	0	11	bow,tier	1	-1
+16@	Axe (Sacred)		2	3	1		30	432	0			39	43					invaxe	0	11	0	qaxe	1	-1
+17@	Double Axe (Sacred)		2	3	1		30	466	0			42	47					inv2ax	0	11	0	qaxe	1	-1
+18@	Military Pick (Sacred)		2	3	1		30	500	0			44	52					invmpi	0	11	0	qaxe	1	-1
+19@	Hammerhead Axe (1)		2	3	1		6	93	0			7	9					invaxeu	0	14	0	baxe,tier	1	4
+1@1	Compound Bow (1)		2	3	1		2	0	57		1			4	7			invcbwu	0	0	19	dbow,tier	1	5
+1@2	Serpent Bow (2)		2	4	1		12	0	109		1			17	22			inv8lbu	0	0	19	dbow,tier	1	5
+1@3	Maple Bow (3)		2	3	1		22	0	249		1			0	0			inv8s8u	0	0	0	dbow,elrx	1	5
+1@4	Viper Bow (Sacred)		2	3	1		30	0	660		1			77	83			invsbbu	0	0	19	sdbw	1	5
+1@7	Ida (4)		2	3	1		27	421	0			34	40					invbsdu	0	14	0	bswd,tier	1	4
+1@8	Kriegsmesser (1)		2	3	1		6	96	0			7	9					inv9lsu	0	14	0	bswd,tier	1	4
+1@9	Bonebreaker (2)		1	3	1		11	61	0			9	12					invspcu	0	11	0	pclb,tier	1	3
+1@@	War Axe (Sacred)		2	3	1		30	581	0			46	56					invwax	0	11	0	qaxe	1	-1
+1@A	Goedendag (3)		1	3	1		21	169	0			24	32					inv7mas	0	11	0	pmac,tier	1	3
+1@B	Angel Star (Sacred)		1	3	1		30	602	0			55	58					invmstu	0	11	0	spmc	1	3
+1@E	Dart Thrower (4)		2	3	1		26	280	0		1			58	70			inv8lxu		16	0	nxbw,tier	1	2
+1@F	Trebuchet (1)		2	3	1		6	72	0		1			11	16			inv8mxu		16	0	nxbw,tier	1	2
+20@	Large Axe (Sacred)		2	3	1		30	408	0		1			65	67			invlax	0	16	0	s2ha	1	-1
+21@	Broad Axe (Sacred)		2	3	1		30	447	0		1			71	75			invbrx	0	16	0	s2ha	1	-1
 22@	Battle Axe (Sacred)		2	3	1		30	486	0		1			0	0			invbtx	0	0	0	s2ha,el2x	1	-1
-236	Short Sword (2)		1	3	1		9	18	0			9	9					invssd	0	18	0	swor,tier	1	-1
-237	Scimitar (2)		1	3	1		10	48	0			11	12					invscm	0	18	0	swor,tier	1	-1
-238	Saber (2)		1	3	1		11	64	0			13	14					invsbr	0	18	0	swor,tier	1	-1
-239	Falchion (2)		1	3	1		12	79	0			14	17					invflc	0	18	0	swor,tier	1	-1
-23@	Great Axe (Sacred)		2	4	1		30	600	0		1			82	91			invgax	0	26	0	s2ha	1	-1
-240	Broad Sword (2)		2	3	1		12	95	0			16	19					invbsd	0	18	0	swor,tier	1	-1
-241	Long Sword (2)		2	3	1		13	110	0			18	21					invlsd	0	18	0	swor,tier	1	-1
-242	War Sword (2)		1	3	1		15	125	0			19	23					invwsd	0	18	0	swor,tier	1	-1
-243	Two-Handed Sword (2)		1	4	1		9	48	0	1	1	9	10	13	13			inv2hs	0	26	0	2hsd,tier	1	-1
-244	Claymore (2)		1	4	1		10	69	0	1	1	12	13	18	19			invclm	0	26	0	2hsd,tier	1	-1
-245	Giant Sword (2)		1	4	1		11	89	0	1	1	14	17	24	26			invgis	0	26	0	2hsd,tier	1	-1
-246	Bastard Sword (2)		1	4	1		12	110	0	1	1	17	20	30	32			invbsw	0	26	0	2hsd,tier	1	-1
-247	Flamberge (2)		2	4	1		13	130	0	1	1	19	23	36	38			invflb	0	26	0	2hsd,tier	1	-1
-248	Great Sword (2)		2	4	1		14	151	0	1	1	21	26	40	43			invgsd	0	26	0	2hsd,tier	1	-1
+236	Short Sword (2)		1	3	1		9	18	0			6	7					invssd	0	11	0	swor,tier	1	-1
+237	Scimitar (2)		1	3	1		10	48	0			8	9					invscm	0	11	0	swor,tier	1	-1
+238	Saber (2)		1	3	1		11	64	0			10	11					invsbr	0	11	0	swor,tier	1	-1
+239	Falchion (2)		1	3	1		12	79	0			11	13					invflc	0	11	0	swor,tier	1	-1
+23@	Great Axe (Sacred)		2	4	1		30	600	0		1			82	91			invgax	0	16	0	s2ha	1	-1
+240	Broad Sword (2)		2	3	1		12	95	0			12	14					invbsd	0	11	0	swor,tier	1	-1
+241	Long Sword (2)		2	3	1		13	110	0			14	16					invlsd	0	11	0	swor,tier	1	-1
+242	War Sword (2)		1	3	1		15	125	0			14	17					invwsd	0	11	0	swor,tier	1	-1
+243	Two-Handed Sword (2)		1	4	1		9	48	0	1	1	7	8	9	10			inv2hs	0	16	0	2hsd,tier	1	-1
+244	Claymore (2)		1	4	1		10	69	0	1	1	9	10	13	14			invclm	0	16	0	2hsd,tier	1	-1
+245	Giant Sword (2)		1	4	1		11	89	0	1	1	11	13	18	20			invgis	0	16	0	2hsd,tier	1	-1
+246	Bastard Sword (2)		1	4	1		12	110	0	1	1	13	15	23	24			invbsw	0	16	0	2hsd,tier	1	-1
+247	Flamberge (2)		2	4	1		13	130	0	1	1	14	17	27	29			invflb	0	16	0	2hsd,tier	1	-1
+248	Great Sword (2)		2	4	1		14	151	0	1	1	16	20	30	32			invgsd	0	16	0	2hsd,tier	1	-1
 249	Crystal Sword (2)		2	3	1		15	0	110			0	0					invcrs	0	0	0	crsd,el1x	1	-1
-24@	Giant Axe (Sacred)		2	3	1		30	685	0		1			83	101			invgix	0	26	0	s2ha	1	-1
-250	Hand Axe (2)		1	3	1		9	18	0			8	10					invhax	0	18	0	axe,tier	1	-1
-251	Axe (2)		2	3	1		11	56	0			11	15					invaxe	0	18	0	axe,tier	1	-1
-252	Double Axe (2)		2	3	1		12	79	0			14	20					inv2ax	0	18	0	axe,tier	1	-1
-253	Military Pick (2)		2	3	1		13	102	0			17	25					invmpi	0	18	0	axe,tier	1	-1
-254	War Axe (2)		2	3	1		14	125	0			19	29					invwax	0	18	0	axe,tier	1	-1
-255	Large Axe (2)		2	3	1		9	39	0		1			14	16			invlax	0	26	0	2hax,tier	1	-1
-256	Broad Axe (2)		2	3	1		11	67	0		1			20	25			invbrx	0	26	0	2hax,tier	1	-1
+24@	Giant Axe (Sacred)		2	3	1		30	685	0		1			83	101			invgix	0	16	0	s2ha	1	-1
+250	Hand Axe (2)		1	3	1		9	18	0			6	8					invhax	0	11	0	axe,tier	1	-1
+251	Axe (2)		2	3	1		11	56	0			8	11					invaxe	0	11	0	axe,tier	1	-1
+252	Double Axe (2)		2	3	1		12	79	0			11	15					inv2ax	0	11	0	axe,tier	1	-1
+253	Military Pick (2)		2	3	1		13	102	0			13	19					invmpi	0	11	0	axe,tier	1	-1
+254	War Axe (2)		2	3	1		14	125	0			14	22					invwax	0	11	0	axe,tier	1	-1
+255	Large Axe (2)		2	3	1		9	39	0		1			11	12			invlax	0	16	0	2hax,tier	1	-1
+256	Broad Axe (2)		2	3	1		11	67	0		1			15	19			invbrx	0	16	0	2hax,tier	1	-1
 257	Battle Axe (2)		2	3	1		12	93	0		1			0	0			invbtx	0	0	0	2hax,el2x	1	-1
-258	Great Axe (2)		2	4	1		12	120	0		1			34	44			invgax	0	26	0	2hax,tier	1	-1
-259	Giant Axe (2)		2	3	1		14	146	0		1			39	51			invgix	0	26	0	2hax,tier	1	-1
-25@	Club (Sacred)		1	3	1		30	376	0			41	42					invclb	0	18	0	qmac	1	-1
-260	Club (2)		1	3	1		9	18	0			9	11					invclb	0	18	0	mace,tier	1	-1
-261	Spiked Club (2)		1	3	1		10	47	0			11	15					invspc	0	18	0	mace,tier	1	-1
-262	Mace (2)		1	3	1		11	62	0			13	19					invmac	0	18	0	mace,tier	1	-1
-263	Morning Star (2)		1	3	1		12	78	0			14	23					invmst	0	18	0	mace,tier	1	-1
-264	Flail (2)		2	3	1		14	93	0			17	27					invfla	0	18	0	mace,tier	1	-1
-265	Scepter (2)		1	3	1		9	0	37			8	9					invscp	0	0	17	scep,tier	1	-1
-266	Grand Scepter (2)		1	3	1		11	0	67			12	16					invgsc	0	0	17	scep,tier	1	-1
-267	War Scepter (2)		2	3	1		13	0	98			16	22					invwsp	0	0	17	scep,tier	1	-1
-268	Javelin (2)		1	3	1	1	9	0	18			8	10			9	13	invjav	0	0	17	jave,tier	1	-1
-269	Pilum (2)		1	3	1	1	10	0	53			10	14			13	20	invpil	0	0	17	jave,tier	1	-1
-26@	Spiked Club (Sacred)		1	3	1		30	419	0			42	46					invspc	0	18	0	qmac	1	-1
-270	Short Spear (2)		1	3	1	1	11	0	76			12	18			16	29	invssp	0	0	17	jave,tier	1	-1
-271	Glaive (2)		1	4	1	1	12	0	99			13	22			20	37	invglv	0	0	17	jave,tier	1	-1
-272	Throwing Spear (2)		1	4	1	1	14	0	123			15	25			23	43	invtsp	0	0	17	jave,tier	1	-1
-273	Spear (2)		2	4	1		9	18	18		1			10	14			invspr	0	0	25	spea,tier	1	-1
-274	Trident (2)		2	4	1		10	39	53		1			12	21			invtri	0	0	25	spea,tier	1	-1
-275	Brandistock (2)		2	4	1		11	55	75		1			13	27			invbrn	0	0	25	spea,tier	1	-1
-276	Spetum (2)		2	4	1		12	70	97		1			14	34			invspt	0	0	25	spea,tier	1	-1
-277	Pike (2)		2	4	1		14	85	118		1			15	39			invpik	0	0	25	spea,tier	1	-1
-278	Dagger (2)		1	2	1		9	0	18			8	9					invdgr	0	0	17	knif,tier	1	-1
-279	Dirk (2)		1	2	1		11	0	48			9	10					invdir	0	0	17	knif,tier	1	-1
-27@	Mace (Sacred)		1	3	1		30	442	0			44	50					invmac	0	18	0	qmac	1	-1
-280	Kriss (2)		1	3	1		12	0	71			11	12					invkrs	0	0	17	knif,tier	1	-1
-281	Blade (2)		1	3	1		14	0	95			12	14					invbld	0	0	17	knif,tier	1	-1
-282	Throwing Knife (2)		1	2	1	1	9	0	36			8	8			9	10	invtkn	0	0	17	tkni,tier	1	-1
-283	Flying Knife (2)		1	2	1	1	11	0	84			11	12			16	18	invtkn	0	0	17	tkni,tier	1	-1
-284	Balanced Knife (2)		1	2	1	1	13	0	132			14	16			22	26	invbkf	0	0	17	tkni,tier	1	-1
+258	Great Axe (2)		2	4	1		12	120	0		1			26	33			invgax	0	16	0	2hax,tier	1	-1
+259	Giant Axe (2)		2	3	1		14	146	0		1			29	38			invgix	0	16	0	2hax,tier	1	-1
+25@	Club (Sacred)		1	3	1		30	376	0			41	42					invclb	0	11	0	qmac	1	-1
+260	Club (2)		1	3	1		9	18	0			7	8					invclb	0	11	0	mace,tier	1	-1
+261	Spiked Club (2)		1	3	1		10	47	0			8	11					invspc	0	11	0	mace,tier	1	-1
+262	Mace (2)		1	3	1		11	62	0			10	14					invmac	0	11	0	mace,tier	1	-1
+263	Morning Star (2)		1	3	1		12	78	0			11	17					invmst	0	11	0	mace,tier	1	-1
+264	Flail (2)		2	3	1		14	93	0			13	20					invfla	0	11	0	mace,tier	1	-1
+265	Scepter (2)		1	3	1		9	0	37			6	7					invscp	0	0	11	scep,tier	1	-1
+266	Grand Scepter (2)		1	3	1		11	0	67			9	12					invgsc	0	0	11	scep,tier	1	-1
+267	War Scepter (2)		2	3	1		13	0	98			12	17					invwsp	0	0	11	scep,tier	1	-1
+268	Javelin (2)		1	3	1	1	9	0	18			6	8			7	10	invjav	0	0	11	jave,tier	1	-1
+269	Pilum (2)		1	3	1	1	10	0	53			8	11			10	15	invpil	0	0	11	jave,tier	1	-1
+26@	Spiked Club (Sacred)		1	3	1		30	419	0			42	46					invspc	0	11	0	qmac	1	-1
+270	Short Spear (2)		1	3	1	1	11	0	76			9	14			12	22	invssp	0	0	11	jave,tier	1	-1
+271	Glaive (2)		1	4	1	1	12	0	99			10	17			15	28	invglv	0	0	11	jave,tier	1	-1
+272	Throwing Spear (2)		1	4	1	1	14	0	123			11	19			17	32	invtsp	0	0	11	jave,tier	1	-1
+273	Spear (2)		2	4	1		9	18	18		1			8	11			invspr	0	0	15	spea,tier	1	-1
+274	Trident (2)		2	4	1		10	39	53		1			9	16			invtri	0	0	15	spea,tier	1	-1
+275	Brandistock (2)		2	4	1		11	55	75		1			10	20			invbrn	0	0	15	spea,tier	1	-1
+276	Spetum (2)		2	4	1		12	70	97		1			11	26			invspt	0	0	15	spea,tier	1	-1
+277	Pike (2)		2	4	1		14	85	118		1			11	29			invpik	0	0	15	spea,tier	1	-1
+278	Dagger (2)		1	2	1		9	0	18			6	7					invdgr	0	0	11	knif,tier	1	-1
+279	Dirk (2)		1	2	1		11	0	48			7	8					invdir	0	0	11	knif,tier	1	-1
+27@	Mace (Sacred)		1	3	1		30	442	0			44	50					invmac	0	11	0	qmac	1	-1
+280	Kriss (2)		1	3	1		12	0	71			8	9					invkrs	0	0	11	knif,tier	1	-1
+281	Blade (2)		1	3	1		14	0	95			9	11					invbld	0	0	11	knif,tier	1	-1
+282	Throwing Knife (2)		1	2	1	1	9	0	36			5	6			7	8	invtkn	0	0	11	tkni,tier	1	-1
+283	Flying Knife (2)		1	2	1	1	11	0	84			8	9			12	14	invtkn	0	0	11	tkni,tier	1	-1
+284	Balanced Knife (2)		1	2	1	1	13	0	132			11	12			17	20	invbkf	0	0	11	tkni,tier	1	-1
 285	Throwing Axe (2)		1	2	1	1	12	36	0			0	0			0	0	invtax	0	0	0	taxe,elrx	1	-1
-286	Balanced Axe (2)		2	3	1	1	12	115	0			9	21			12	37	invbal	0	18	0	taxe,tier	1	-1
-287	Short Staff (2)		1	3	1		8	0	8		1			10	12			invsst	0	0	10	staf,tier	1	-1
-288	Long Staff (2)		1	4	1		10	0	19		1			13	16			invlst	0	0	10	staf,tier	1	-1
-289	Gnarled Staff (2)		1	4	1		11	0	29		1			16	20			invcst	0	0	10	staf,tier	1	-1
-28@	Morning Star (Sacred)		1	3	1		30	464	0			45	53					invmst	0	18	0	qmac	1	-1
-290	Battle Staff (2)		1	4	1		12	0	41		1			19	25			invbst	0	0	10	staf,tier	1	-1
-291	War Staff (2)		2	4	1		14	0	51		1			21	28			invwst	0	0	10	staf,tier	1	-1
-292	Bardiche (2)		2	4	1		8	38	19		1			10	13			invbar	0	26	0	pole,tier	1	-1
-293	Voulge (2)		2	4	1		11	59	25		1			10	23			invvou	0	26	0	pole,tier	1	-1
-294	Scythe (2)		2	4	1		12	79	79		1			10	33			invscy	0	0	25	scyh,tier	1	-1
-295	Halberd (2)		2	4	1		11	0	76		1			32	40			invhal	0	0	25	nagi,tier	1	6
-296	Short Bow (2)		2	3	1		8	0	36		1			7	9			invsbw	0	0	17	bow,tier	1	-1
-297	Hunter's Bow (2)		2	3	1		10	0	51		1			10	13			invhbw	0	0	17	bow,tier	1	-1
-298	Long Bow (2)		2	4	1		11	0	67		1			13	18			invlbw	0	0	17	bow,tier	1	-1
-299	Composite Bow (2)		2	3	1		11	0	81		1			16	23			invcbw	0	0	17	bow,tier	1	-1
-29@	Flail (Sacred)		2	3	1		30	486	0			47	56					invfla	0	18	0	qmac	1	-1
-2@3	Maple Bow (4)		2	3	1		26	492	0		1			51	66			inv8s8u	0	26	0	dbow,tier	1	5
-2@4	Recurve Bow (1)		2	3	1		6	111	0		1			14	21			invswbu	0	26	0	dbow,tier	1	5
-2@5	Spatha (2)		1	3	1		11	71	0			14	16					invscmu	0	22	0	bswd,tier	1	4
-2@6	Backsword (3)		1	3	1		21	181	0			25	29					inv9sbu	0	26	0	bswd,tier	1	4
-2@7	Ida (Sacred)		2	3	1		30	552	0			50	53					invbsdu	0	22	0	sbsd	1	4
-2@A	Goedendag (4)		1	3	1		26	339	0			29	39					inv7mas	0	18	0	pmac,tier	1	3
-2@C	Hand of God (2)		2	3	1		15	109	0		1			36	43			inv9gmu		26	0	pham,tier	1	3
-2@D	Needle Crossbow (3)		2	3	1		20	100	0		1			40	46			invlxbu		26	0	nxbw,tier	1	2
-2@E	Dart Thrower (Sacred)		2	3	1		30	395	0		1			85	86			inv8lxu		26	0	snxb	1	2
+286	Balanced Axe (2)		2	3	1	1	12	115	0			7	16			9	28	invbal	0	11	0	taxe,tier	1	-1
+287	Short Staff (2)		1	3	1		8	0	8		1			8	9			invsst	0	0	6	staf,tier	1	-1
+288	Long Staff (2)		1	4	1		10	0	19		1			10	12			invlst	0	0	6	staf,tier	1	-1
+289	Gnarled Staff (2)		1	4	1		11	0	29		1			12	15			invcst	0	0	6	staf,tier	1	-1
+28@	Morning Star (Sacred)		1	3	1		30	464	0			45	53					invmst	0	11	0	qmac	1	-1
+290	Battle Staff (2)		1	4	1		12	0	41		1			14	19			invbst	0	0	6	staf,tier	1	-1
+291	War Staff (2)		2	4	1		14	0	51		1			16	21			invwst	0	0	6	staf,tier	1	-1
+292	Bardiche (2)		2	4	1		8	38	19		1			8	10			invbar	0	16	0	pole,tier	1	-1
+293	Voulge (2)		2	4	1		11	59	25		1			8	17			invvou	0	16	0	pole,tier	1	-1
+294	Scythe (2)		2	4	1		12	79	79		1			8	25			invscy	0	0	15	scyh,tier	1	-1
+295	Halberd (2)		2	4	1		11	0	76		1			24	30			invhal	0	0	15	nagi,tier	1	6
+296	Short Bow (2)		2	3	1		8	0	36		1			5	7			invsbw	0	0	11	bow,tier	1	-1
+297	Hunter's Bow (2)		2	3	1		10	0	51		1			8	10			invhbw	0	0	11	bow,tier	1	-1
+298	Long Bow (2)		2	4	1		11	0	67		1			10	14			invlbw	0	0	11	bow,tier	1	-1
+299	Composite Bow (2)		2	3	1		11	0	81		1			12	17			invcbw	0	0	11	bow,tier	1	-1
+29@	Flail (Sacred)		2	3	1		30	486	0			47	56					invfla	0	11	0	qmac	1	-1
+2@3	Maple Bow (4)		2	3	1		26	0	492		1			0	0			inv8s8u	0	0	0	dbow,elrx	1	5
+2@4	Recurve Bow (1)		2	3	1		6	0	111		1			8	13			invswbu	0	0	19	dbow,tier	1	5
+2@5	Spatha (2)		1	3	1		11	71	0			11	12					invscmu	0	14	0	bswd,tier	1	4
+2@6	Backsword (3)		1	3	1		21	181	0			25	29					inv9sbu	0	16	0	bswd,tier	1	4
+2@7	Ida (Sacred)		2	3	1		30	552	0			50	53					invbsdu	0	14	0	sbsd	1	4
+2@A	Goedendag (4)		1	3	1		26	339	0			29	39					inv7mas	0	11	0	pmac,tier	1	3
+2@C	Hand of God (2)		2	3	1		15	109	0		1			27	32			inv9gmu		16	0	pham,tier	1	3
+2@D	Needle Crossbow (3)		2	3	1		20	100	0		1			40	46			invlxbu		16	0	nxbw,tier	1	2
+2@E	Dart Thrower (Sacred)		2	3	1		30	395	0		1			85	86			inv8lxu		16	0	snxb	1	2
 300	Short Battle Bow (2)		2	3	1		12	0	97		1			0	0			invsbb	0	0	0	bow,elrx	1	-1
-301	Long Battle Bow (2)		2	4	1		12	0	112		1			22	32			invlbb	0	0	17	bow,tier	1	-1
-302	Short War Bow (2)		2	3	1		14	0	127		1			25	36			invswb	0	0	17	bow,tier	1	-1
-303	Long War Bow (2)		2	4	1		15	0	143		1			27	39			invlwb	0	0	17	bow,tier	1	-1
-30@	Scepter (Sacred)		1	3	1		30	0	404			21	28					invscp	0	0	17	qscp	1	-1
-31@	Grand Scepter (Sacred)		1	3	1		30	0	449			30	38					invgsc	0	0	17	qscp	1	-1
-32@	War Scepter (Sacred)		2	3	1		30	0	494			38	52					invwsp	0	0	17	qscp	1	-1
-33@	Javelin (Sacred)		1	3	1	1	30	0	376			43	44			63	66	invjav	0	0	17	qjvn	1	-1
-34@	Pilum (Sacred)		1	3	1	1	30	0	428			44	47			66	73	invpil	0	0	17	qjvn	1	-1
-35@	Short Spear (Sacred)		1	3	1	1	30	0	462			45	50			69	80	invssp	0	0	17	qjvn	1	-1
-36@	Glaive (Sacred)		1	4	1	1	30	0	496			46	54			72	86	invglv	0	0	17	qjvn	1	-1
-372	Short Sword (3)		1	3	1		18	49	0			14	15					invssd	0	18	0	swor,tier	1	-1
-373	Scimitar (3)		1	3	1		19	104	0			17	19					invscm	0	18	0	swor,tier	1	-1
-374	Saber (3)		1	3	1		20	132	0			20	23					invsbr	0	18	0	swor,tier	1	-1
-375	Falchion (3)		1	3	1		21	160	0			22	26					invflc	0	18	0	swor,tier	1	-1
-376	Broad Sword (3)		2	3	1		22	188	0			25	29					invbsd	0	18	0	swor,tier	1	-1
-377	Long Sword (3)		2	3	1		22	216	0			28	33					invlsd	0	18	0	swor,tier	1	-1
-378	War Sword (3)		1	3	1		24	244	0			30	35					invwsd	0	18	0	swor,tier	1	-1
-379	Two-Handed Sword (3)		1	4	1		18	104	0	1	1	14	16	21	22			inv2hs	0	26	0	2hsd,tier	1	-1
-37@	Throwing Spear (Sacred)		1	4	1	1	30	0	530			48	56			74	94	invtsp	0	0	17	qjvn	1	-1
-380	Claymore (3)		1	4	1		19	142	0	1	1	18	21	29	32			invclm	0	26	0	2hsd,tier	1	-1
-381	Giant Sword (3)		1	4	1		20	179	0	1	1	22	26	38	40			invgis	0	26	0	2hsd,tier	1	-1
-382	Bastard Sword (3)		1	4	1		21	216	0	1	1	26	31	46	49			invbsw	0	26	0	2hsd,tier	1	-1
-383	Flamberge (3)		2	4	1		22	253	0	1	1	30	36	55	58			invflb	0	26	0	2hsd,tier	1	-1
-384	Great Sword (3)		2	4	1		24	291	0	1	1	32	39	61	65			invgsd	0	26	0	2hsd,tier	1	-1
+301	Long Battle Bow (2)		2	4	1		12	0	112		1			17	24			invlbb	0	0	11	bow,tier	1	-1
+302	Short War Bow (2)		2	3	1		14	0	127		1			19	27			invswb	0	0	11	bow,tier	1	-1
+303	Long War Bow (2)		2	4	1		15	0	143		1			20	29			invlwb	0	0	11	bow,tier	1	-1
+30@	Scepter (Sacred)		1	3	1		30	0	404			21	28					invscp	0	0	11	qscp	1	-1
+31@	Grand Scepter (Sacred)		1	3	1		30	0	449			30	38					invgsc	0	0	11	qscp	1	-1
+32@	War Scepter (Sacred)		2	3	1		30	0	494			38	52					invwsp	0	0	11	qscp	1	-1
+33@	Javelin (Sacred)		1	3	1	1	30	0	376			43	44			63	66	invjav	0	0	11	qjvn	1	-1
+34@	Pilum (Sacred)		1	3	1	1	30	0	428			44	47			66	73	invpil	0	0	11	qjvn	1	-1
+35@	Short Spear (Sacred)		1	3	1	1	30	0	462			45	50			69	80	invssp	0	0	11	qjvn	1	-1
+36@	Glaive (Sacred)		1	4	1	1	30	0	496			46	54			72	86	invglv	0	0	11	qjvn	1	-1
+372	Short Sword (3)		1	3	1		18	49	0			14	15					invssd	0	11	0	swor,tier	1	-1
+373	Scimitar (3)		1	3	1		19	104	0			17	19					invscm	0	11	0	swor,tier	1	-1
+374	Saber (3)		1	3	1		20	132	0			20	23					invsbr	0	11	0	swor,tier	1	-1
+375	Falchion (3)		1	3	1		21	160	0			22	26					invflc	0	11	0	swor,tier	1	-1
+376	Broad Sword (3)		2	3	1		22	188	0			25	29					invbsd	0	11	0	swor,tier	1	-1
+377	Long Sword (3)		2	3	1		22	216	0			28	33					invlsd	0	11	0	swor,tier	1	-1
+378	War Sword (3)		1	3	1		24	244	0			30	35					invwsd	0	11	0	swor,tier	1	-1
+379	Two-Handed Sword (3)		1	4	1		18	104	0	1	1	14	16	21	22			inv2hs	0	16	0	2hsd,tier	1	-1
+37@	Throwing Spear (Sacred)		1	4	1	1	30	0	530			48	56			74	94	invtsp	0	0	11	qjvn	1	-1
+380	Claymore (3)		1	4	1		19	142	0	1	1	18	21	29	32			invclm	0	16	0	2hsd,tier	1	-1
+381	Giant Sword (3)		1	4	1		20	179	0	1	1	22	26	38	40			invgis	0	16	0	2hsd,tier	1	-1
+382	Bastard Sword (3)		1	4	1		21	216	0	1	1	26	31	46	49			invbsw	0	16	0	2hsd,tier	1	-1
+383	Flamberge (3)		2	4	1		22	253	0	1	1	30	36	55	58			invflb	0	16	0	2hsd,tier	1	-1
+384	Great Sword (3)		2	4	1		24	291	0	1	1	32	39	61	65			invgsd	0	16	0	2hsd,tier	1	-1
 385	Crystal Sword (3)		2	3	1		24	0	216			0	0					invcrs	0	0	0	crsd,el1x	1	-1
-386	Hand Axe (3)		1	3	1		18	49	0			13	16					invhax	0	18	0	axe,tier	1	-1
-387	Axe (3)		2	3	1		20	118	0			17	24					invaxe	0	18	0	axe,tier	1	-1
-388	Double Axe (3)		2	3	1		21	160	0			22	31					inv2ax	0	18	0	axe,tier	1	-1
-389	Military Pick (3)		2	3	1		22	202	0			26	39					invmpi	0	18	0	axe,tier	1	-1
-38@	Spear (Sacred)		2	4	1		30	376	376		1			53	57			invspr	0	0	25	qspe	1	-1
-390	War Axe (3)		2	3	1		24	244	0			29	45					invwax	0	18	0	axe,tier	1	-1
-391	Large Axe (3)		2	3	1		18	88	0		1			24	28			invlax	0	26	0	2hax,tier	1	-1
-392	Broad Axe (3)		2	3	1		20	137	0		1			34	41			invbrx	0	26	0	2hax,tier	1	-1
+386	Hand Axe (3)		1	3	1		18	49	0			13	16					invhax	0	11	0	axe,tier	1	-1
+387	Axe (3)		2	3	1		20	118	0			17	24					invaxe	0	11	0	axe,tier	1	-1
+388	Double Axe (3)		2	3	1		21	160	0			22	31					inv2ax	0	11	0	axe,tier	1	-1
+389	Military Pick (3)		2	3	1		22	202	0			26	39					invmpi	0	11	0	axe,tier	1	-1
+38@	Spear (Sacred)		2	4	1		30	376	376		1			53	57			invspr	0	0	15	qspe	1	-1
+390	War Axe (3)		2	3	1		24	244	0			29	45					invwax	0	11	0	axe,tier	1	-1
+391	Large Axe (3)		2	3	1		18	88	0		1			24	28			invlax	0	16	0	2hax,tier	1	-1
+392	Broad Axe (3)		2	3	1		20	137	0		1			34	41			invbrx	0	16	0	2hax,tier	1	-1
 393	Battle Axe (3)		2	3	1		21	186	0		1			0	0			invbtx	0	0	0	2hax,el2x	1	-1
-394	Great Axe (3)		2	4	1		22	235	0		1			53	68			invgax	0	26	0	2hax,tier	1	-1
-395	Giant Axe (3)		2	3	1		24	284	0		1			60	79			invgix	0	26	0	2hax,tier	1	-1
-396	Club (3)		1	3	1		18	49	0			14	17					invclb	0	18	0	mace,tier	1	-1
-397	Spiked Club (3)		1	3	1		20	102	0			18	23					invspc	0	18	0	mace,tier	1	-1
-398	Mace (3)		1	3	1		21	130	0			20	30					invmac	0	18	0	mace,tier	1	-1
-399	Morning Star (3)		1	3	1		22	158	0			23	36					invmst	0	18	0	mace,tier	1	-1
-39@	Trident (Sacred)		2	4	1		30	408	428		1			54	62			invtri	0	0	25	qspe	1	-1
-3@1	Compound Bow (2)		2	3	1		12	92	0		1			18	24			invcbwu	0	26	0	dbow,tier	1	5
-3@2	Serpent Bow (3)		2	4	1		21	218	0		1			38	48			inv8lbu	0	26	0	dbow,tier	1	5
-3@3	Maple Bow (Sacred)		2	3	1		30	600	0		1			74	79			inv8s8u	0	26	0	sdbw	1	5
-3@6	Backsword (4)		1	3	1		26	360	0			30	35					inv9sbu	0	26	0	bswd,tier	1	4
-3@7	Bronze Sword (1)		2	3	1		4	82	0			11	13					invlsdu	0	22	0	bswd,tier	1	4
-3@8	Kriegsmesser (2)		2	3	1		15	141	0			21	26					inv9lsu	0	22	0	bswd,tier	1	4
-3@9	Bonebreaker (3)		1	3	1		20	132	0			21	25					invspcu	0	18	0	pclb,tier	1	3
-3@A	Goedendag (Sacred)		1	3	1		30	574	0			53	54					inv7mas	0	18	0	spmc	1	3
-3@D	Needle Crossbow (4)		2	3	1		25	200	0		1			49	56			invlxbu		26	0	nxbw,tier	1	2
-3@E	Stinger Crossbow (1)		2	3	1		4	63	0		1			20	26			invmxbu		26	0	nxbw,tier	1	2
-3@F	Trebuchet (2)		2	3	1		15	104	0		1			41	53			inv8mxu		26	0	nxbw,tier	1	2
-400	Flail (3)		2	3	1		23	186	0			25	41					invfla	0	18	0	mace,tier	1	-1
-401	Scepter (3)		1	3	1		18	0	83			13	15					invscp	0	0	17	scep,tier	1	-1
-402	Grand Scepter (3)		1	3	1		20	0	139			19	25					invgsc	0	0	17	scep,tier	1	-1
-403	War Scepter (3)		2	3	1		22	0	195			24	35					invwsp	0	0	17	scep,tier	1	-1
-404	Javelin (3)		1	3	1	1	18	0	49			13	16			19	23	invjav	0	0	17	jave,tier	1	-1
-405	Pilum (3)		1	3	1	1	20	0	114			16	21			24	36	invpil	0	0	17	jave,tier	1	-1
-406	Short Spear (3)		1	3	1	1	21	0	155			18	27			29	48	invssp	0	0	17	jave,tier	1	-1
-407	Glaive (3)		1	4	1	1	22	0	197			20	32			35	59	invglv	0	0	17	jave,tier	1	-1
-408	Throwing Spear (3)		1	4	1	1	23	0	239			23	37			38	69	invtsp	0	0	17	jave,tier	1	-1
-409	Spear (3)		2	4	1		18	49	49		1			18	23			invspr	0	0	25	spea,tier	1	-1
-40@	Brandistock (Sacred)		2	4	1		30	430	460		1			56	68			invbrn	0	0	25	qspe	1	-1
-410	Trident (3)		2	4	1		20	88	114		1			20	33			invtri	0	0	25	spea,tier	1	-1
-411	Brandistock (3)		2	4	1		21	116	153		1			22	43			invbrn	0	0	25	spea,tier	1	-1
-412	Spetum (3)		2	4	1		22	144	193		1			24	52			invspt	0	0	25	spea,tier	1	-1
-413	Pike (3)		2	4	1		23	172	232		1			25	60			invpik	0	0	25	spea,tier	1	-1
-414	Dagger (3)		1	2	1		18	0	49			13	14					invdgr	0	0	17	knif,tier	1	-1
-415	Dirk (3)		1	2	1		20	0	104			15	16					invdir	0	0	17	knif,tier	1	-1
-416	Kriss (3)		1	3	1		21	0	146			17	19					invkrs	0	0	17	knif,tier	1	-1
-417	Blade (3)		1	3	1		23	0	188			19	21					invbld	0	0	17	knif,tier	1	-1
-418	Throwing Knife (3)		1	2	1	1	18	0	81			12	12			17	18	invtkn	0	0	17	tkni,tier	1	-1
-419	Flying Knife (3)		1	2	1	1	20	0	169			16	18			27	31	invtkn	0	0	17	tkni,tier	1	-1
-41@	Spetum (Sacred)		2	4	1		30	453	492		1			57	74			invspt	0	0	25	qspe	1	-1
-420	Balanced Knife (3)		1	2	1	1	22	0	258			21	24			37	42	invbkf	0	0	17	tkni,tier	1	-1
+394	Great Axe (3)		2	4	1		22	235	0		1			53	68			invgax	0	16	0	2hax,tier	1	-1
+395	Giant Axe (3)		2	3	1		24	284	0		1			60	79			invgix	0	16	0	2hax,tier	1	-1
+396	Club (3)		1	3	1		18	49	0			14	17					invclb	0	11	0	mace,tier	1	-1
+397	Spiked Club (3)		1	3	1		20	102	0			18	23					invspc	0	11	0	mace,tier	1	-1
+398	Mace (3)		1	3	1		21	130	0			20	30					invmac	0	11	0	mace,tier	1	-1
+399	Morning Star (3)		1	3	1		22	158	0			23	36					invmst	0	11	0	mace,tier	1	-1
+39@	Trident (Sacred)		2	4	1		30	408	428		1			54	62			invtri	0	0	15	qspe	1	-1
+3@1	Compound Bow (2)		2	3	1		12	0	92		1			14	18			invcbwu	0	0	19	dbow,tier	1	5
+3@2	Serpent Bow (3)		2	4	1		21	0	218		1			38	48			inv8lbu	0	0	19	dbow,tier	1	5
+3@3	Maple Bow (Sacred)		2	3	1		30	0	600		1			0	0			inv8s8u	0	0	0	sdbw,elrx	1	5
+3@6	Backsword (4)		1	3	1		26	360	0			30	35					inv9sbu	0	16	0	bswd,tier	1	4
+3@7	Bronze Sword (1)		2	3	1		4	82	0			7	8					invlsdu	0	14	0	bswd,tier	1	4
+3@8	Kriegsmesser (2)		2	3	1		15	141	0			16	20					inv9lsu	0	14	0	bswd,tier	1	4
+3@9	Bonebreaker (3)		1	3	1		20	132	0			21	25					invspcu	0	11	0	pclb,tier	1	3
+3@A	Goedendag (Sacred)		1	3	1		30	574	0			53	54					inv7mas	0	11	0	spmc	1	3
+3@D	Needle Crossbow (4)		2	3	1		25	200	0		1			49	56			invlxbu		16	0	nxbw,tier	1	2
+3@E	Stinger Crossbow (1)		2	3	1		4	63	0		1			12	16			invmxbu		16	0	nxbw,tier	1	2
+3@F	Trebuchet (2)		2	3	1		15	104	0		1			31	40			inv8mxu		16	0	nxbw,tier	1	2
+400	Flail (3)		2	3	1		23	186	0			25	41					invfla	0	11	0	mace,tier	1	-1
+401	Scepter (3)		1	3	1		18	0	83			13	15					invscp	0	0	11	scep,tier	1	-1
+402	Grand Scepter (3)		1	3	1		20	0	139			19	25					invgsc	0	0	11	scep,tier	1	-1
+403	War Scepter (3)		2	3	1		22	0	195			24	35					invwsp	0	0	11	scep,tier	1	-1
+404	Javelin (3)		1	3	1	1	18	0	49			13	16			19	23	invjav	0	0	11	jave,tier	1	-1
+405	Pilum (3)		1	3	1	1	20	0	114			16	21			24	36	invpil	0	0	11	jave,tier	1	-1
+406	Short Spear (3)		1	3	1	1	21	0	155			18	27			29	48	invssp	0	0	11	jave,tier	1	-1
+407	Glaive (3)		1	4	1	1	22	0	197			20	32			35	59	invglv	0	0	11	jave,tier	1	-1
+408	Throwing Spear (3)		1	4	1	1	23	0	239			23	37			38	69	invtsp	0	0	11	jave,tier	1	-1
+409	Spear (3)		2	4	1		18	49	49		1			18	23			invspr	0	0	15	spea,tier	1	-1
+40@	Brandistock (Sacred)		2	4	1		30	430	460		1			56	68			invbrn	0	0	15	qspe	1	-1
+410	Trident (3)		2	4	1		20	88	114		1			20	33			invtri	0	0	15	spea,tier	1	-1
+411	Brandistock (3)		2	4	1		21	116	153		1			22	43			invbrn	0	0	15	spea,tier	1	-1
+412	Spetum (3)		2	4	1		22	144	193		1			24	52			invspt	0	0	15	spea,tier	1	-1
+413	Pike (3)		2	4	1		23	172	232		1			25	60			invpik	0	0	15	spea,tier	1	-1
+414	Dagger (3)		1	2	1		18	0	49			13	14					invdgr	0	0	11	knif,tier	1	-1
+415	Dirk (3)		1	2	1		20	0	104			15	16					invdir	0	0	11	knif,tier	1	-1
+416	Kriss (3)		1	3	1		21	0	146			17	19					invkrs	0	0	11	knif,tier	1	-1
+417	Blade (3)		1	3	1		23	0	188			19	21					invbld	0	0	11	knif,tier	1	-1
+418	Throwing Knife (3)		1	2	1	1	18	0	81			12	12			17	18	invtkn	0	0	11	tkni,tier	1	-1
+419	Flying Knife (3)		1	2	1	1	20	0	169			16	18			27	31	invtkn	0	0	11	tkni,tier	1	-1
+41@	Spetum (Sacred)		2	4	1		30	453	492		1			57	74			invspt	0	0	15	qspe	1	-1
+420	Balanced Knife (3)		1	2	1	1	22	0	258			21	24			37	42	invbkf	0	0	11	tkni,tier	1	-1
 421	Throwing Axe (3)		1	2	1	1	21	81	0			0	0			0	0	invtax	0	0	0	taxe,elrx	1	-1
-422	Balanced Axe (3)		2	3	1	1	21	225	0			14	32			22	59	invbal	0	18	0	taxe,tier	1	-1
-423	Short Staff (3)		1	3	1		18	0	25		1			18	20			invsst	0	0	10	staf,tier	1	-1
-424	Long Staff (3)		1	4	1		20	0	43		1			22	26			invlst	0	0	10	staf,tier	1	-1
-425	Gnarled Staff (3)		1	4	1		21	0	62		1			26	33			invcst	0	0	10	staf,tier	1	-1
-426	Battle Staff (3)		1	4	1		21	0	83		1			31	39			invbst	0	0	10	staf,tier	1	-1
-427	War Staff (3)		2	4	1		23	0	102		1			34	44			invwst	0	0	10	staf,tier	1	-1
-428	Bardiche (3)		2	4	1		18	86	39		1			18	22			invbar	0	26	0	pole,tier	1	-1
-429	Voulge (3)		2	4	1		20	123	45		1			18	37			invvou	0	26	0	pole,tier	1	-1
-42@	Pike (Sacred)		2	4	1		30	475	524		1			53	83			invpik	0	0	25	qspe	1	-1
-430	Scythe (3)		2	4	1		21	160	160		1			17	52			invscy	0	0	25	scyh,tier	1	-1
-431	Halberd (3)		2	4	1		21	0	153		1			55	67			invhal	0	0	25	nagi,tier	1	6
-432	Short Bow (3)		2	3	1		18	0	81		1			16	18			invsbw	0	0	17	bow,tier	1	-1
-433	Hunter's Bow (3)		2	3	1		19	0	109		1			20	24			invhbw	0	0	17	bow,tier	1	-1
-434	Long Bow (3)		2	4	1		20	0	137		1			24	31			invlbw	0	0	17	bow,tier	1	-1
-435	Composite Bow (3)		2	3	1		20	0	165		1			29	38			invcbw	0	0	17	bow,tier	1	-1
+422	Balanced Axe (3)		2	3	1	1	21	225	0			14	32			22	59	invbal	0	11	0	taxe,tier	1	-1
+423	Short Staff (3)		1	3	1		18	0	25		1			18	20			invsst	0	0	6	staf,tier	1	-1
+424	Long Staff (3)		1	4	1		20	0	43		1			22	26			invlst	0	0	6	staf,tier	1	-1
+425	Gnarled Staff (3)		1	4	1		21	0	62		1			26	33			invcst	0	0	6	staf,tier	1	-1
+426	Battle Staff (3)		1	4	1		21	0	83		1			31	39			invbst	0	0	6	staf,tier	1	-1
+427	War Staff (3)		2	4	1		23	0	102		1			34	44			invwst	0	0	6	staf,tier	1	-1
+428	Bardiche (3)		2	4	1		18	86	39		1			18	22			invbar	0	16	0	pole,tier	1	-1
+429	Voulge (3)		2	4	1		20	123	45		1			18	37			invvou	0	16	0	pole,tier	1	-1
+42@	Pike (Sacred)		2	4	1		30	475	524		1			53	83			invpik	0	0	15	qspe	1	-1
+430	Scythe (3)		2	4	1		21	160	160		1			17	52			invscy	0	0	15	scyh,tier	1	-1
+431	Halberd (3)		2	4	1		21	0	153		1			55	67			invhal	0	0	15	nagi,tier	1	6
+432	Short Bow (3)		2	3	1		18	0	81		1			16	18			invsbw	0	0	11	bow,tier	1	-1
+433	Hunter's Bow (3)		2	3	1		19	0	109		1			20	24			invhbw	0	0	11	bow,tier	1	-1
+434	Long Bow (3)		2	4	1		20	0	137		1			24	31			invlbw	0	0	11	bow,tier	1	-1
+435	Composite Bow (3)		2	3	1		20	0	165		1			29	38			invcbw	0	0	11	bow,tier	1	-1
 436	Short Battle Bow (3)		2	3	1		21	0	193		1			0	0			invsbb	0	0	0	bow,elrx	1	-1
-437	Long Battle Bow (3)		2	4	1		21	0	221		1			38	51			invlbb	0	0	17	bow,tier	1	-1
-438	Short War Bow (3)		2	3	1		23	0	249		1			41	56			invswb	0	0	17	bow,tier	1	-1
-439	Long War Bow (3)		2	4	1		24	0	277		1			45	62			invlwb	0	0	17	bow,tier	1	-1
-43@	Dagger (Sacred)		1	2	1		30	0	376			37	37					invdgr	0	0	17	qknf	1	-1
-440	Short Sword (4)		1	3	1		23	104	0			17	19					invssd	0	18	0	swor,tier	1	-1
-441	Scimitar (4)		1	3	1		24	212	0			20	23					invscm	0	18	0	swor,tier	1	-1
-442	Saber (4)		1	3	1		25	265	0			23	27					invsbr	0	18	0	swor,tier	1	-1
-443	Falchion (4)		1	3	1		26	319	0			26	31					invflc	0	18	0	swor,tier	1	-1
-444	Broad Sword (4)		2	3	1		26	373	0			29	35					invbsd	0	18	0	swor,tier	1	-1
-445	Long Sword (4)		2	3	1		27	427	0			33	39					invlsd	0	18	0	swor,tier	1	-1
-446	War Sword (4)		1	3	1		28	481	0			35	42					invwsd	0	18	0	swor,tier	1	-1
-447	Two-Handed Sword (4)		1	4	1		23	212	0	1	1	17	20	25	27			inv2hs	0	26	0	2hsd,tier	1	-1
-448	Claymore (4)		1	4	1		25	283	0	1	1	21	25	36	37			invclm	0	26	0	2hsd,tier	1	-1
-449	Giant Sword (4)		1	4	1		25	355	0	1	1	26	31	45	48			invgis	0	26	0	2hsd,tier	1	-1
-44@	Dirk (Sacred)		1	2	1		30	0	421			38	39					invdir	0	0	17	qknf	1	-1
-450	Bastard Sword (4)		1	4	1		26	427	0	1	1	31	37	56	59			invbsw	0	26	0	2hsd,tier	1	-1
-451	Flamberge (4)		2	4	1		27	499	0	1	1	35	42	65	69			invflb	0	26	0	2hsd,tier	1	-1
-452	Great Sword (4)		2	4	1		28	570	0	1	1	38	47	73	77			invgsd	0	26	0	2hsd,tier	1	-1
+437	Long Battle Bow (3)		2	4	1		21	0	221		1			38	51			invlbb	0	0	11	bow,tier	1	-1
+438	Short War Bow (3)		2	3	1		23	0	249		1			41	56			invswb	0	0	11	bow,tier	1	-1
+439	Long War Bow (3)		2	4	1		24	0	277		1			45	62			invlwb	0	0	11	bow,tier	1	-1
+43@	Dagger (Sacred)		1	2	1		30	0	376			37	37					invdgr	0	0	11	qknf	1	-1
+440	Short Sword (4)		1	3	1		23	104	0			17	19					invssd	0	11	0	swor,tier	1	-1
+441	Scimitar (4)		1	3	1		24	212	0			20	23					invscm	0	11	0	swor,tier	1	-1
+442	Saber (4)		1	3	1		25	265	0			23	27					invsbr	0	11	0	swor,tier	1	-1
+443	Falchion (4)		1	3	1		26	319	0			26	31					invflc	0	11	0	swor,tier	1	-1
+444	Broad Sword (4)		2	3	1		26	373	0			29	35					invbsd	0	11	0	swor,tier	1	-1
+445	Long Sword (4)		2	3	1		27	427	0			33	39					invlsd	0	11	0	swor,tier	1	-1
+446	War Sword (4)		1	3	1		28	481	0			35	42					invwsd	0	11	0	swor,tier	1	-1
+447	Two-Handed Sword (4)		1	4	1		23	212	0	1	1	17	20	25	27			inv2hs	0	16	0	2hsd,tier	1	-1
+448	Claymore (4)		1	4	1		25	283	0	1	1	21	25	36	37			invclm	0	16	0	2hsd,tier	1	-1
+449	Giant Sword (4)		1	4	1		25	355	0	1	1	26	31	45	48			invgis	0	16	0	2hsd,tier	1	-1
+44@	Dirk (Sacred)		1	2	1		30	0	421			38	39					invdir	0	0	11	qknf	1	-1
+450	Bastard Sword (4)		1	4	1		26	427	0	1	1	31	37	56	59			invbsw	0	16	0	2hsd,tier	1	-1
+451	Flamberge (4)		2	4	1		27	499	0	1	1	35	42	65	69			invflb	0	16	0	2hsd,tier	1	-1
+452	Great Sword (4)		2	4	1		28	570	0	1	1	38	47	73	77			invgsd	0	16	0	2hsd,tier	1	-1
 453	Crystal Sword (4)		2	3	1		28	0	427			0	0					invcrs	0	0	0	crsd,el1x	1	-1
-454	Hand Axe (4)		1	3	1		23	104	0			16	20					invhax	0	18	0	axe,tier	1	-1
-455	Axe (4)		2	3	1		24	239	0			21	28					invaxe	0	18	0	axe,tier	1	-1
-456	Double Axe (4)		2	3	1		25	319	0			26	37					inv2ax	0	18	0	axe,tier	1	-1
-457	Military Pick (4)		2	3	1		26	400	0			30	45					invmpi	0	18	0	axe,tier	1	-1
-458	War Axe (4)		2	3	1		27	481	0			35	54					invwax	0	18	0	axe,tier	1	-1
-459	Large Axe (4)		2	3	1		23	180	0		1			29	33			invlax	0	26	0	2hax,tier	1	-1
-45@	Kriss (Sacred)		1	3	1		30	0	454			39	40					invkrs	0	0	17	qknf	1	-1
-460	Broad Axe (4)		2	3	1		24	274	0		1			40	49			invbrx	0	26	0	2hax,tier	1	-1
+454	Hand Axe (4)		1	3	1		23	104	0			16	20					invhax	0	11	0	axe,tier	1	-1
+455	Axe (4)		2	3	1		24	239	0			21	28					invaxe	0	11	0	axe,tier	1	-1
+456	Double Axe (4)		2	3	1		25	319	0			26	37					inv2ax	0	11	0	axe,tier	1	-1
+457	Military Pick (4)		2	3	1		26	400	0			30	45					invmpi	0	11	0	axe,tier	1	-1
+458	War Axe (4)		2	3	1		27	481	0			35	54					invwax	0	11	0	axe,tier	1	-1
+459	Large Axe (4)		2	3	1		23	180	0		1			29	33			invlax	0	16	0	2hax,tier	1	-1
+45@	Kriss (Sacred)		1	3	1		30	0	454			39	40					invkrs	0	0	11	qknf	1	-1
+460	Broad Axe (4)		2	3	1		24	274	0		1			40	49			invbrx	0	16	0	2hax,tier	1	-1
 461	Battle Axe (4)		2	3	1		25	369	0		1			0	0			invbtx	0	0	0	2hax,el2x	1	-1
-462	Great Axe (4)		2	4	1		26	463	0		1			62	80			invgax	0	26	0	2hax,tier	1	-1
-463	Giant Axe (4)		2	3	1		27	557	0		1			65	99			invgix	0	26	0	2hax,tier	1	-1
-464	Club (4)		1	3	1		23	104	0			17	21					invclb	0	18	0	mace,tier	1	-1
-465	Spiked Club (4)		1	3	1		24	207	0			21	28					invspc	0	18	0	mace,tier	1	-1
-466	Mace (4)		1	3	1		25	261	0			24	35					invmac	0	18	0	mace,tier	1	-1
-467	Morning Star (4)		1	3	1		26	315	0			28	42					invmst	0	18	0	mace,tier	1	-1
-468	Flail (4)		2	3	1		27	369	0			31	49					invfla	0	18	0	mace,tier	1	-1
-469	Scepter (4)		1	3	1		23	0	171			16	18					invscp	0	0	17	scep,tier	1	-1
-46@	Blade (Sacred)		1	3	1		30	0	488			40	42					invbld	0	0	17	qknf	1	-1
-470	Grand Scepter (4)		1	3	1		25	0	279			22	29					invgsc	0	0	17	scep,tier	1	-1
-471	War Scepter (4)		2	3	1		27	0	387			29	41					invwsp	0	0	17	scep,tier	1	-1
-472	Javelin (4)		1	3	1	1	23	0	104			16	18			24	29	invjav	0	0	17	jave,tier	1	-1
-473	Pilum (4)		1	3	1	1	24	0	230			18	25			30	44	invpil	0	0	17	jave,tier	1	-1
-474	Short Spear (4)		1	3	1	1	25	0	310			21	32			36	58	invssp	0	0	17	jave,tier	1	-1
-475	Glaive (4)		1	4	1	1	26	0	391			24	38			42	71	invglv	0	0	17	jave,tier	1	-1
-476	Throwing Spear (4)		1	4	1	1	27	0	472			26	44			47	85	invtsp	0	0	17	jave,tier	1	-1
-477	Spear (4)		2	4	1		23	104	104		1			22	29			invspr	0	0	25	spea,tier	1	-1
-478	Trident (4)		2	4	1		24	180	230		1			24	40			invtri	0	0	25	spea,tier	1	-1
-479	Brandistock (4)		2	4	1		25	234	306		1			26	51			invbrn	0	0	25	spea,tier	1	-1
-47@	Throwing Knife (Sacred)		1	2	1	1	30	0	402			36	36			53	54	invtkn	0	0	17	qtkn	1	-1
-480	Spetum (4)		2	4	1		26	288	382		1			29	62			invspt	0	0	25	spea,tier	1	-1
-481	Pike (4)		2	4	1		27	342	458		1			21	82			invpik	0	0	25	spea,tier	1	-1
-482	Dagger (4)		1	2	1		22	0	104			16	17					invdgr	0	0	17	knif,tier	1	-1
-483	Dirk (4)		1	2	1		25	0	212			18	20					invdir	0	0	17	knif,tier	1	-1
-484	Kriss (4)		1	3	1		26	0	292			20	23					invkrs	0	0	17	knif,tier	1	-1
-485	Blade (4)		1	3	1		27	0	373			22	26					invbld	0	0	17	knif,tier	1	-1
-486	Throwing Knife (4)		1	2	1	1	22	0	167			14	14			22	23	invtkn	0	0	17	tkni,tier	1	-1
-487	Flying Knife (4)		1	2	1	1	25	0	337			19	21			33	37	invtkn	0	0	17	tkni,tier	1	-1
-488	Balanced Knife (4)		1	2	1	1	27	0	508			24	28			44	51	invbkf	0	0	17	tkni,tier	1	-1
+462	Great Axe (4)		2	4	1		26	463	0		1			62	80			invgax	0	16	0	2hax,tier	1	-1
+463	Giant Axe (4)		2	3	1		27	557	0		1			65	99			invgix	0	16	0	2hax,tier	1	-1
+464	Club (4)		1	3	1		23	104	0			17	21					invclb	0	11	0	mace,tier	1	-1
+465	Spiked Club (4)		1	3	1		24	207	0			21	28					invspc	0	11	0	mace,tier	1	-1
+466	Mace (4)		1	3	1		25	261	0			24	35					invmac	0	11	0	mace,tier	1	-1
+467	Morning Star (4)		1	3	1		26	315	0			28	42					invmst	0	11	0	mace,tier	1	-1
+468	Flail (4)		2	3	1		27	369	0			31	49					invfla	0	11	0	mace,tier	1	-1
+469	Scepter (4)		1	3	1		23	0	171			16	18					invscp	0	0	11	scep,tier	1	-1
+46@	Blade (Sacred)		1	3	1		30	0	488			40	42					invbld	0	0	11	qknf	1	-1
+470	Grand Scepter (4)		1	3	1		25	0	279			22	29					invgsc	0	0	11	scep,tier	1	-1
+471	War Scepter (4)		2	3	1		27	0	387			29	41					invwsp	0	0	11	scep,tier	1	-1
+472	Javelin (4)		1	3	1	1	23	0	104			16	18			24	29	invjav	0	0	11	jave,tier	1	-1
+473	Pilum (4)		1	3	1	1	24	0	230			18	25			30	44	invpil	0	0	11	jave,tier	1	-1
+474	Short Spear (4)		1	3	1	1	25	0	310			21	32			36	58	invssp	0	0	11	jave,tier	1	-1
+475	Glaive (4)		1	4	1	1	26	0	391			24	38			42	71	invglv	0	0	11	jave,tier	1	-1
+476	Throwing Spear (4)		1	4	1	1	27	0	472			26	44			47	85	invtsp	0	0	11	jave,tier	1	-1
+477	Spear (4)		2	4	1		23	104	104		1			22	29			invspr	0	0	15	spea,tier	1	-1
+478	Trident (4)		2	4	1		24	180	230		1			24	40			invtri	0	0	15	spea,tier	1	-1
+479	Brandistock (4)		2	4	1		25	234	306		1			26	51			invbrn	0	0	15	spea,tier	1	-1
+47@	Throwing Knife (Sacred)		1	2	1	1	30	0	402			36	36			53	54	invtkn	0	0	11	qtkn	1	-1
+480	Spetum (4)		2	4	1		26	288	382		1			29	62			invspt	0	0	15	spea,tier	1	-1
+481	Pike (4)		2	4	1		27	342	458		1			21	82			invpik	0	0	15	spea,tier	1	-1
+482	Dagger (4)		1	2	1		22	0	104			16	17					invdgr	0	0	11	knif,tier	1	-1
+483	Dirk (4)		1	2	1		25	0	212			18	20					invdir	0	0	11	knif,tier	1	-1
+484	Kriss (4)		1	3	1		26	0	292			20	23					invkrs	0	0	11	knif,tier	1	-1
+485	Blade (4)		1	3	1		27	0	373			22	26					invbld	0	0	11	knif,tier	1	-1
+486	Throwing Knife (4)		1	2	1	1	22	0	167			14	14			22	23	invtkn	0	0	11	tkni,tier	1	-1
+487	Flying Knife (4)		1	2	1	1	25	0	337			19	21			33	37	invtkn	0	0	11	tkni,tier	1	-1
+488	Balanced Knife (4)		1	2	1	1	27	0	508			24	28			44	51	invbkf	0	0	11	tkni,tier	1	-1
 489	Throwing Axe (4)		1	2	1	1	26	167	0			0	0			0	0	invtax	0	0	0	taxe,elrx	1	-1
-48@	Flying Knife (Sacred)		1	2	1	1	30	0	473			38	39			59	61	invtkn	0	0	17	qtkn	1	-1
-490	Balanced Axe (4)		2	3	1	1	26	445	0			16	37			27	71	invbal	0	18	0	taxe,tier	1	-1
-491	Short Staff (4)		1	3	1		22	0	52		1			22	24			invsst	0	0	10	staf,tier	1	-1
-492	Long Staff (4)		1	4	1		24	0	88		1			27	32			invlst	0	0	10	staf,tier	1	-1
-493	Gnarled Staff (4)		1	4	1		25	0	126		1			32	39			invcst	0	0	10	staf,tier	1	-1
-494	Battle Staff (4)		1	4	1		26	0	164		1			36	46			invbst	0	0	10	staf,tier	1	-1
-495	War Staff (4)		2	4	1		27	0	202		1			41	53			invwst	0	0	10	staf,tier	1	-1
-496	Bardiche (4)		2	4	1		22	176	71		1			22	26			invbar	0	26	0	pole,tier	1	-1
-497	Voulge (4)		2	4	1		25	248	79		1			21	44			invvou	0	26	0	pole,tier	1	-1
-498	Scythe (4)		2	4	1		26	319	319		1			21	62			invscy	0	0	25	scyh,tier	1	-1
-499	Halberd (4)		2	4	1		25	0	305		1			66	82			invhal	0	0	25	nagi,tier	1	6
-49@	Balanced Knife (Sacred)		1	2	1	1	30	0	612			41	43			65	68	invbkf	0	0	17	qtkn	1	-1
-4@2	Serpent Bow (4)		2	4	1		26	431	0		1			45	57			inv8lbu	0	26	0	dbow,tier	1	5
-4@3	Viper Bow (1)		2	3	1		4	98	0		1			13	19			invsbbu	0	26	0	dbow,tier	1	5
-4@4	Recurve Bow (2)		2	3	1		15	161	0		1			31	42			invswbu	0	26	0	dbow,tier	1	5
-4@5	Spatha (3)		1	3	1		21	149	0			22	26					invscmu	0	22	0	bswd,tier	1	4
-4@6	Backsword (Sacred)		1	3	1		30	526	0			48	51					inv9sbu	0	26	0	sbsd	1	4
-4@9	Bonebreaker (4)		1	3	1		25	269	0			24	31					invspcu	0	18	0	pclb,tier	1	3
-4@A	Angel Star (1)		1	3	1		4	62	0			9	14					invmstu	0	18	0	pmac,tier	1	3
-4@C	Hand of God (3)		2	3	1		24	211	0		1			56	65			inv9gmu		26	0	pham,tier	1	3
-4@D	Needle Crossbow (Sacred)		2	3	1		30	244	0		1			82	83			invlxbu		26	0	snxb	1	2
-500	Short Bow (4)		2	3	1		22	0	167		1			20	22			invsbw	0	0	17	bow,tier	1	-1
-501	Hunter's Bow (4)		2	3	1		24	0	221		1			25	30			invhbw	0	0	17	bow,tier	1	-1
-502	Long Bow (4)		2	4	1		25	0	274		1			30	38			invlbw	0	0	17	bow,tier	1	-1
-503	Composite Bow (4)		2	3	1		25	0	328		1			35	46			invcbw	0	0	17	bow,tier	1	-1
+48@	Flying Knife (Sacred)		1	2	1	1	30	0	473			38	39			59	61	invtkn	0	0	11	qtkn	1	-1
+490	Balanced Axe (4)		2	3	1	1	26	445	0			16	37			27	71	invbal	0	11	0	taxe,tier	1	-1
+491	Short Staff (4)		1	3	1		22	0	52		1			22	24			invsst	0	0	6	staf,tier	1	-1
+492	Long Staff (4)		1	4	1		24	0	88		1			27	32			invlst	0	0	6	staf,tier	1	-1
+493	Gnarled Staff (4)		1	4	1		25	0	126		1			32	39			invcst	0	0	6	staf,tier	1	-1
+494	Battle Staff (4)		1	4	1		26	0	164		1			36	46			invbst	0	0	6	staf,tier	1	-1
+495	War Staff (4)		2	4	1		27	0	202		1			41	53			invwst	0	0	6	staf,tier	1	-1
+496	Bardiche (4)		2	4	1		22	176	71		1			22	26			invbar	0	16	0	pole,tier	1	-1
+497	Voulge (4)		2	4	1		25	248	79		1			21	44			invvou	0	16	0	pole,tier	1	-1
+498	Scythe (4)		2	4	1		26	319	319		1			21	62			invscy	0	0	15	scyh,tier	1	-1
+499	Halberd (4)		2	4	1		25	0	305		1			66	82			invhal	0	0	15	nagi,tier	1	6
+49@	Balanced Knife (Sacred)		1	2	1	1	30	0	612			41	43			65	68	invbkf	0	0	11	qtkn	1	-1
+4@2	Serpent Bow (4)		2	4	1		26	0	431		1			45	57			inv8lbu	0	0	19	dbow,tier	1	5
+4@3	Viper Bow (1)		2	3	1		4	0	98		1			8	11			invsbbu	0	0	19	dbow,tier	1	5
+4@4	Recurve Bow (2)		2	3	1		15	0	161		1			23	32			invswbu	0	0	19	dbow,tier	1	5
+4@5	Spatha (3)		1	3	1		21	149	0			22	26					invscmu	0	14	0	bswd,tier	1	4
+4@6	Backsword (Sacred)		1	3	1		30	526	0			48	51					inv9sbu	0	16	0	sbsd	1	4
+4@9	Bonebreaker (4)		1	3	1		25	269	0			24	31					invspcu	0	11	0	pclb,tier	1	3
+4@A	Angel Star (1)		1	3	1		4	62	0			5	8					invmstu	0	11	0	pmac,tier	1	3
+4@C	Hand of God (3)		2	3	1		24	211	0		1			56	65			inv9gmu		16	0	pham,tier	1	3
+4@D	Needle Crossbow (Sacred)		2	3	1		30	244	0		1			82	83			invlxbu		16	0	snxb	1	2
+500	Short Bow (4)		2	3	1		22	0	167		1			20	22			invsbw	0	0	11	bow,tier	1	-1
+501	Hunter's Bow (4)		2	3	1		24	0	221		1			25	30			invhbw	0	0	11	bow,tier	1	-1
+502	Long Bow (4)		2	4	1		25	0	274		1			30	38			invlbw	0	0	11	bow,tier	1	-1
+503	Composite Bow (4)		2	3	1		25	0	328		1			35	46			invcbw	0	0	11	bow,tier	1	-1
 504	Short Battle Bow (4)		2	3	1		26	0	382		1			0	0			invsbb	0	0	0	bow,elrx	1	-1
-505	Long Battle Bow (4)		2	4	1		26	0	436		1			45	61			invlbb	0	0	17	bow,tier	1	-1
-506	Short War Bow (4)		2	3	1		27	0	490		1			50	68			invswb	0	0	17	bow,tier	1	-1
-507	Long War Bow (4)		2	4	1		28	0	543		1			54	74			invlwb	0	0	17	bow,tier	1	-1
+505	Long Battle Bow (4)		2	4	1		26	0	436		1			45	61			invlbb	0	0	11	bow,tier	1	-1
+506	Short War Bow (4)		2	3	1		27	0	490		1			50	68			invswb	0	0	11	bow,tier	1	-1
+507	Long War Bow (4)		2	4	1		28	0	543		1			54	74			invlwb	0	0	11	bow,tier	1	-1
 50@	Throwing Axe (Sacred)		1	2	1	1	30	402	0			0	0			0	0	invtax	0	0	0	qtax,elrx	1	-1
-51@	Balanced Axe (Sacred)		2	3	1	1	30	586	0			37	47			56	78	invbal	0	18	0	qtax	1	-1
-52@	Short Staff (Sacred)		1	3	1		30	0	188		1			53	55			invsst	0	0	10	qstf	1	-1
-53@	Long Staff (Sacred)		1	4	1		30	0	203		1			56	58			invlst	0	0	10	qstf	1	-1
-54@	Gnarled Staff (Sacred)		1	4	1		30	0	218		1			59	62			invcst	0	0	10	qstf	1	-1
-55@	Battle Staff (Sacred)		1	4	1		30	0	234		1			61	66			invbst	0	0	10	qstf	1	-1
-56@	War Staff (Sacred)		2	4	1		30	0	250		1			63	69			invwst	0	0	10	qstf	1	-1
-57@	Bardiche (Sacred)		2	4	1		30	406	71		1			53	56			invbar	0	26	0	qpol	1	-1
-58@	Voulge (Sacred)		2	4	1		30	436	79		1			53	64			invvou	0	26	0	qpol	1	-1
-59@	Scythe (Sacred)		2	4	1		30	466	466		1			53	73			invscy	0	0	25	qscy	1	-1
-5@1	Compound Bow (3)		2	3	1		21	186	0		1			33	41			invcbwu	0	26	0	dbow,tier	1	5
-5@2	Serpent Bow (Sacred)		2	4	1		30	555	0		1			71	75			inv8lbu	0	26	0	sdbw	1	5
-5@5	Spatha (4)		1	3	1		25	299	0			26	30					invscmu	0	22	0	bswd,tier	1	4
-5@6	Ida (1)		2	3	1		3	68	0			10	12					invbsdu	0	22	0	bswd,tier	1	4
-5@7	Bronze Sword (2)		2	3	1		13	124	0			20	24					invlsdu	0	22	0	bswd,tier	1	4
-5@8	Kriegsmesser (3)		2	3	1		25	276	0			34	40					inv9lsu	0	22	0	bswd,tier	1	4
-5@9	Bonebreaker (Sacred)		1	3	1		30	544	0			51	52					invspcu	0	18	0	spcb	1	3
-5@C	Hand of God (4)		2	3	1		28	466	0		1			60	82			inv9gmu		26	0	pham,tier	1	3
-5@D	Dart Thrower (1)		2	3	1		3	46	0		1			12	16			inv8lxu		26	0	nxbw,tier	1	2
-5@E	Stinger Crossbow (2)		2	3	1		14	93	0		1			43	52			invmxbu		26	0	nxbw,tier	1	2
-5@F	Trebuchet (3)		2	3	1		24	202	0		1			67	84			inv8mxu		26	0	nxbw,tier	1	2
-60@	Halberd (Sacred)		2	4	1		30	0	558		1			71	100			invhal	0	0	25	snag	1	6
-61@	Short Bow (Sacred)		2	3	1		30	0	402		1			53	55			invsbw	0	0	17	qbow	1	-1
-62@	Hunter's Bow (Sacred)		2	3	1		30	0	425		1			56	59			invhbw	0	0	17	qbow	1	-1
-63@	Long Bow (Sacred)		2	4	1		30	0	447		1			59	62			invlbw	0	0	17	qbow	1	-1
-64@	Composite Bow (Sacred)		2	3	1		30	0	470		1			61	66			invcbw	0	0	17	qbow	1	-1
+51@	Balanced Axe (Sacred)		2	3	1	1	30	586	0			37	47			56	78	invbal	0	11	0	qtax	1	-1
+52@	Short Staff (Sacred)		1	3	1		30	0	188		1			53	55			invsst	0	0	6	qstf	1	-1
+53@	Long Staff (Sacred)		1	4	1		30	0	203		1			56	58			invlst	0	0	6	qstf	1	-1
+54@	Gnarled Staff (Sacred)		1	4	1		30	0	218		1			59	62			invcst	0	0	6	qstf	1	-1
+55@	Battle Staff (Sacred)		1	4	1		30	0	234		1			61	66			invbst	0	0	6	qstf	1	-1
+56@	War Staff (Sacred)		2	4	1		30	0	250		1			63	69			invwst	0	0	6	qstf	1	-1
+57@	Bardiche (Sacred)		2	4	1		30	406	71		1			53	56			invbar	0	16	0	qpol	1	-1
+58@	Voulge (Sacred)		2	4	1		30	436	79		1			53	64			invvou	0	16	0	qpol	1	-1
+59@	Scythe (Sacred)		2	4	1		30	466	466		1			53	73			invscy	0	0	15	qscy	1	-1
+5@1	Compound Bow (3)		2	3	1		21	0	186		1			33	41			invcbwu	0	0	19	dbow,tier	1	5
+5@2	Serpent Bow (Sacred)		2	4	1		30	0	555		1			71	75			inv8lbu	0	0	19	sdbw	1	5
+5@5	Spatha (4)		1	3	1		25	299	0			26	30					invscmu	0	14	0	bswd,tier	1	4
+5@6	Ida (1)		2	3	1		3	68	0			6	7					invbsdu	0	14	0	bswd,tier	1	4
+5@7	Bronze Sword (2)		2	3	1		13	124	0			15	18					invlsdu	0	14	0	bswd,tier	1	4
+5@8	Kriegsmesser (3)		2	3	1		25	276	0			34	40					inv9lsu	0	14	0	bswd,tier	1	4
+5@9	Bonebreaker (Sacred)		1	3	1		30	544	0			51	52					invspcu	0	11	0	spcb	1	3
+5@C	Hand of God (4)		2	3	1		28	466	0		1			60	82			inv9gmu		16	0	pham,tier	1	3
+5@D	Dart Thrower (1)		2	3	1		3	46	0		1			7	10			inv8lxu		16	0	nxbw,tier	1	2
+5@E	Stinger Crossbow (2)		2	3	1		14	93	0		1			32	39			invmxbu		16	0	nxbw,tier	1	2
+5@F	Trebuchet (3)		2	3	1		24	202	0		1			67	84			inv8mxu		16	0	nxbw,tier	1	2
+60@	Halberd (Sacred)		2	4	1		30	0	558		1			71	100			invhal	0	0	15	snag	1	6
+61@	Short Bow (Sacred)		2	3	1		30	0	402		1			53	55			invsbw	0	0	11	qbow	1	-1
+62@	Hunter's Bow (Sacred)		2	3	1		30	0	425		1			56	59			invhbw	0	0	11	qbow	1	-1
+63@	Long Bow (Sacred)		2	4	1		30	0	447		1			59	62			invlbw	0	0	11	qbow	1	-1
+64@	Composite Bow (Sacred)		2	3	1		30	0	470		1			61	66			invcbw	0	0	11	qbow	1	-1
 65@	Short Battle Bow (Sacred)		2	3	1		30	0	492		1			0	0			invsbb	0	0	0	qbow,elrx	1	-1
-66@	Long Battle Bow (Sacred)		2	4	1		30	0	544		1			66	74			invlbb	0	0	17	qbow	1	-1
-67@	Short War Bow (Sacred)		2	3	1		30	0	590		1			68	77			invswb	0	0	17	qbow	1	-1
-68@	Long War Bow (Sacred)		2	4	1		30	0	650		1			70	79			invlwb	0	0	17	qbow	1	-1
-69@	Wand (Sacred)		1	2	1		30	0	166			35	36					invwnd		0	10	qwnd	1	2
-6@1	Compound Bow (4)		2	3	1		25	370	0		1			40	49			invcbwu	0	26	0	dbow,tier	1	5
-6@2	Maple Bow (1)		2	3	1		3	84	0		1			11	16			inv8s8u	0	26	0	dbow,tier	1	5
-6@3	Viper Bow (2)		2	3	1		14	144	0		1			28	38			invsbbu	0	26	0	dbow,tier	1	5
-6@4	Recurve Bow (3)		2	3	1		24	312	0		1			50	66			invswbu	0	26	0	dbow,tier	1	5
-6@5	Spatha (Sacred)		1	3	1		30	500	0			46	48					invscmu	0	22	0	sbsd	1	4
-6@8	Kriegsmesser (4)		2	3	1		29	543	0			40	48					inv9lsu	0	22	0	bswd,tier	1	4
-6@9	Goedendag (1)		1	3	1		3	46	0			8	11					inv7mas	0	18	0	pmac,tier	1	3
-6@A	Angel Star (2)		1	3	1		13	101	0			17	25					invmstu	0	18	0	pmac,tier	1	3
-6@C	Hand of God (Sacred)		2	3	1		30	832	0		1			104	105			inv9gmu		26	0	sphm	1	3
-6@F	Trebuchet (4)		2	3	1		29	399	0		1			81	101			inv8mxu		26	0	nxbw,tier	1	2
-70@	Yew Wand (Sacred)		1	2	1		30	0	168			36	38					invywn		0	10	qwnd	1	2
-71@	Bone Wand (Sacred)		1	2	1		30	0	170			37	40					invbwn		0	10	qwnd	1	2
-72@	Grim Wand (Sacred)		1	2	1		30	0	172			39	44					invgwn		0	10	qwnd	1	2
-73@	War Hammer (Sacred)		2	3	1		30	470	0			42	47					invwhm		22	0	qham,ct1w	1	-1
-74@	Maul (Sacred)		2	4	1		30	630	0		1			74	82			invmau		26	0	qham,ct2w	1	-1
-75@	Great Maul (Sacred)		2	3	1		30	736	0		1			76	89			invgma		26	0	qham,ct2w	1	-1
-76@	Light Crossbow (Sacred)		2	3	1		30	400	0		1			74	80			invlxb		18	0	qxbw	1	-1
-77@	Crossbow (Sacred)		2	3	1		30	502	0		1			78	86			invmxb		18	0	qxbw	1	-1
-78@	Heavy Crossbow (Sacred)		2	4	1		30	614	0		1			91	101			invhxb		18	0	qxbw	1	-1
-79@	Repeating Crossbow (Sacred)		2	3	1		30	670	0		1			88	105			invrxb		18	0	qxbw	1	-1
-7@1	Compound Bow (Sacred)		2	3	1		30	530	0		1			69	71			invcbwu	0	26	0	sdbw	1	5
-7@4	Recurve Bow (4)		2	3	1		29	613	0		1			60	79			invswbu	0	26	0	dbow,tier	1	5
-7@5	Backsword (1)		1	3	1		3	55	0			8	10					inv9sbu	0	26	0	bswd,tier	1	4
-7@6	Ida (2)		2	3	1		13	106	0			18	21					invbsdu	0	22	0	bswd,tier	1	4
-7@7	Bronze Sword (3)		2	3	1		23	244	0			31	37					invlsdu	0	22	0	bswd,tier	1	4
-7@8	Kriegsmesser (Sacred)		2	3	1		30	642	0			53	57					inv9lsu	0	22	0	sbsd	1	4
-7@C	Needle Crossbow (1)		2	3	1		2	28	0		1			7	10			invlxbu		26	0	nxbw,tier	1	2
-7@D	Dart Thrower (2)		2	3	1		12	70	0		1			28	35			inv8lxu		26	0	nxbw,tier	1	2
-7@E	Stinger Crossbow (3)		2	3	1		24	182	0		1			70	83			invmxbu		26	0	nxbw,tier	1	2
-7@F	Trebuchet (Sacred)		2	3	1		30	500	0		1			96	101			inv8mxu		26	0	snxb	1	2
-80@	Eagle Orb (Sacred)		1	2	1		30	0	171			35	36					invob1		0	17	qorb	1	1
-81@	Sacred Globe (Sacred)		1	2	1		30	0	177			36	37					invob2		0	17	qorb	1	1
-82@	Smoked Sphere (Sacred)		1	2	1		30	0	183			37	39					invob3		0	17	qorb	1	1
-83@	Clasped Orb (Sacred)		1	2	1		30	0	188			39	41					invob4		0	17	qorb	1	1
-84@	Jared's Stone (Sacred)		1	3	1		30	0	242			40	43					invob5		0	17	qorb	1	1
+66@	Long Battle Bow (Sacred)		2	4	1		30	0	544		1			66	74			invlbb	0	0	11	qbow	1	-1
+67@	Short War Bow (Sacred)		2	3	1		30	0	590		1			68	77			invswb	0	0	11	qbow	1	-1
+68@	Long War Bow (Sacred)		2	4	1		30	0	650		1			70	79			invlwb	0	0	11	qbow	1	-1
+69@	Wand (Sacred)		1	2	1		30	0	166			35	36					invwnd		0	6	qwnd	1	2
+6@1	Compound Bow (4)		2	3	1		25	0	370		1			40	49			invcbwu	0	0	19	dbow,tier	1	5
+6@2	Maple Bow (1)		2	3	1		3	0	84		1							inv8s8u	0	0	0	dbow,elrx	1	5
+6@3	Viper Bow (2)		2	3	1		14	0	144		1			21	29			invsbbu	0	0	19	dbow,tier	1	5
+6@4	Recurve Bow (3)		2	3	1		24	0	312		1			50	66			invswbu	0	0	19	dbow,tier	1	5
+6@5	Spatha (Sacred)		1	3	1		30	500	0			46	48					invscmu	0	14	0	sbsd	1	4
+6@8	Kriegsmesser (4)		2	3	1		29	543	0			40	48					inv9lsu	0	14	0	bswd,tier	1	4
+6@9	Goedendag (1)		1	3	1		3	46	0			5	7					inv7mas	0	11	0	pmac,tier	1	3
+6@A	Angel Star (2)		1	3	1		13	101	0			13	19					invmstu	0	11	0	pmac,tier	1	3
+6@C	Hand of God (Sacred)		2	3	1		30	832	0		1			104	105			inv9gmu		16	0	sphm	1	3
+6@F	Trebuchet (4)		2	3	1		29	399	0		1			81	101			inv8mxu		16	0	nxbw,tier	1	2
+70@	Yew Wand (Sacred)		1	2	1		30	0	168			36	38					invywn		0	6	qwnd	1	2
+71@	Bone Wand (Sacred)		1	2	1		30	0	170			37	40					invbwn		0	6	qwnd	1	2
+72@	Grim Wand (Sacred)		1	2	1		30	0	172			39	44					invgwn		0	6	qwnd	1	2
+73@	War Hammer (Sacred)		2	3	1		30	470	0			42	47					invwhm		14	0	qham,ct1w	1	-1
+74@	Maul (Sacred)		2	4	1		30	630	0		1			74	82			invmau		16	0	qham,ct2w	1	-1
+75@	Great Maul (Sacred)		2	3	1		30	736	0		1			76	89			invgma		16	0	qham,ct2w	1	-1
+76@	Light Crossbow (Sacred)		2	3	1		30	400	0		1			74	80			invlxb		11	0	qxbw	1	-1
+77@	Crossbow (Sacred)		2	3	1		30	502	0		1			78	86			invmxb		11	0	qxbw	1	-1
+78@	Heavy Crossbow (Sacred)		2	4	1		30	614	0		1			91	101			invhxb		11	0	qxbw	1	-1
+79@	Repeating Crossbow (Sacred)		2	3	1		30	670	0		1			88	105			invrxb		11	0	qxbw	1	-1
+7@1	Compound Bow (Sacred)		2	3	1		30	0	530		1			69	71			invcbwu	0	0	19	sdbw	1	5
+7@4	Recurve Bow (4)		2	3	1		29	0	613		1			60	79			invswbu	0	0	19	dbow,tier	1	5
+7@5	Backsword (1)		1	3	1		3	55	0			5	6					inv9sbu	0	16	0	bswd,tier	1	4
+7@6	Ida (2)		2	3	1		13	106	0			14	16					invbsdu	0	14	0	bswd,tier	1	4
+7@7	Bronze Sword (3)		2	3	1		23	244	0			31	37					invlsdu	0	14	0	bswd,tier	1	4
+7@8	Kriegsmesser (Sacred)		2	3	1		30	642	0			53	57					inv9lsu	0	14	0	sbsd	1	4
+7@C	Needle Crossbow (1)		2	3	1		2	28	0		1			4	6			invlxbu		16	0	nxbw,tier	1	2
+7@D	Dart Thrower (2)		2	3	1		12	70	0		1			21	26			inv8lxu		16	0	nxbw,tier	1	2
+7@E	Stinger Crossbow (3)		2	3	1		24	182	0		1			70	83			invmxbu		16	0	nxbw,tier	1	2
+7@F	Trebuchet (Sacred)		2	3	1		30	500	0		1			96	101			inv8mxu		16	0	snxb	1	2
+80@	Eagle Orb (Sacred)		1	2	1		30	0	171			35	36					invob1		0	11	qorb	1	1
+81@	Sacred Globe (Sacred)		1	2	1		30	0	177			36	37					invob2		0	11	qorb	1	1
+82@	Smoked Sphere (Sacred)		1	2	1		30	0	183			37	39					invob3		0	11	qorb	1	1
+83@	Clasped Orb (Sacred)		1	2	1		30	0	188			39	41					invob4		0	11	qorb	1	1
+84@	Jared's Stone (Sacred)		1	3	1		30	0	242			40	43					invob5		0	11	qorb	1	1
 85@	Stag Bow (Sacred)		2	4	1		30	0	557		1			0	0			invam1		0	0	qabw,elrx	1	0
-86@	Reflex Bow (Sacred)		2	4	1		30	0	680		1			67	75			invam2		0	25	qabw	1	0
-87@	Maiden Spear (Sacred)		2	4	1		30	346	500		1			60	70			invam3		0	25	qasp	1	0
-88@	Maiden Pike (Sacred)		2	4	1		30	350	590		1			52	93			invam4		0	25	qasp	1	0
-89@	Maiden Javelin (Sacred)		1	3	1	1	30	310	600			46	54			71	88	invam5		0	21	qajv	1	0
-8@1	Serpent Bow (1)		2	4	1		3	71	0		1			10	13			inv8lbu	0	26	0	dbow,tier	1	5
-8@2	Maple Bow (2)		2	3	1		13	126	0		1			25	34			inv8s8u	0	26	0	dbow,tier	1	5
-8@3	Viper Bow (3)		2	3	1		24	281	0		1			46	60			invsbbu	0	26	0	dbow,tier	1	5
-8@4	Recurve Bow (Sacred)		2	3	1		30	725	0		1			78	85			invswbu	0	26	0	sdbw	1	5
-8@7	Bronze Sword (4)		2	3	1		27	482	0			37	45					invlsdu	0	22	0	bswd,tier	1	4
-8@8	Bonebreaker (1)		1	3	1		2	31	0			6	8					invspcu	0	18	0	pclb,tier	1	3
-8@9	Goedendag (2)		1	3	1		12	81	0			15	21					inv7mas	0	18	0	pmac,tier	1	3
-8@A	Angel Star (3)		1	3	1		22	205	0			29	39					invmstu	0	18	0	pmac,tier	1	3
-8@E	Stinger Crossbow (4)		2	3	1		27	359	0		1			86	101			invmxbu		26	0	nxbw,tier	1	2
-90@	Katar (Sacred)		1	3	1		30	0	333			36	37					invktr		0	21	qh2h	1	6
+86@	Reflex Bow (Sacred)		2	4	1		30	0	680		1			67	75			invam2		0	15	qabw	1	0
+87@	Maiden Spear (Sacred)		2	4	1		30	346	500		1			60	70			invam3		0	15	qasp	1	0
+88@	Maiden Pike (Sacred)		2	4	1		30	350	590		1			52	93			invam4		0	15	qasp	1	0
+89@	Maiden Javelin (Sacred)		1	3	1	1	30	310	600			46	54			71	88	invam5		0	13	qajv	1	0
+8@1	Serpent Bow (1)		2	4	1		3	0	71		1			6	8			inv8lbu	0	0	19	dbow,tier	1	5
+8@2	Maple Bow (2)		2	3	1		13	0	126		1			0	0			inv8s8u	0	0	0	dbow,elrx	1	5
+8@3	Viper Bow (3)		2	3	1		24	0	281		1			46	60			invsbbu	0	0	19	dbow,tier	1	5
+8@4	Recurve Bow (Sacred)		2	3	1		30	0	725		1			78	85			invswbu	0	0	19	sdbw	1	5
+8@7	Bronze Sword (4)		2	3	1		27	482	0			37	45					invlsdu	0	14	0	bswd,tier	1	4
+8@8	Bonebreaker (1)		1	3	1		2	31	0			4	5					invspcu	0	11	0	pclb,tier	1	3
+8@9	Goedendag (2)		1	3	1		12	81	0			11	16					inv7mas	0	11	0	pmac,tier	1	3
+8@A	Angel Star (3)		1	3	1		22	205	0			29	39					invmstu	0	11	0	pmac,tier	1	3
+8@E	Stinger Crossbow (4)		2	3	1		27	359	0		1			86	101			invmxbu		16	0	nxbw,tier	1	2
+90@	Katar (Sacred)		1	3	1		30	0	333			36	37					invktr		0	13	qh2h	1	6
 91@	Wrist Blade (Sacred)		1	3	1		30	0	341			0	0					invktr		0	0	qh2h,el1x	1	6
-92@	Hatchet Hands (Sacred)		1	3	1		30	0	345			39	41					invaxf		0	21	qh2h	1	6
-93@	Cestus (Sacred)		1	3	1		30	0	349			41	43					invaxf		0	21	qh2h	1	6
-94@	Claws (Sacred)		1	3	1		30	0	400			42	44					invclw		0	21	qh2h	1	6
-95@	Blade Talons (Sacred)		1	3	1		30	0	562			46	49					invclw		0	21	qh2h	1	6
-96@	Scissors Katar (Sacred)		1	3	1		30	0	485			45	47					invskr		0	21	qh2h	1	6
-9@3	Viper Bow (4)		2	3	1		27	553	0		1			57	74			invsbbu	0	26	0	dbow,tier	1	5
-9@4	Spatha (1)		1	3	1		2	41	0			7	8					invscmu	0	22	0	bswd,tier	1	4
-9@5	Backsword (2)		1	3	1		12	89	0			16	19					inv9sbu	0	26	0	bswd,tier	1	4
-9@6	Ida (3)		2	3	1		22	212	0			29	33					invbsdu	0	22	0	bswd,tier	1	4
-9@7	Bronze Sword (Sacred)		2	3	1		30	576	0			52	55					invlsdu	0	22	0	sbsd	1	4
-9@A	Angel Star (4)		1	3	1		27	409	0			33	46					invmstu	0	18	0	pmac,tier	1	3
-9@B	Hand of God (1)		2	3	1		6	76	0		1			19	23			inv9gmu		26	0	pham,tier	1	3
-9@C	Needle Crossbow (2)		2	3	1		11	48	0		1			21	26			invlxbu		26	0	nxbw,tier	1	2
-9@D	Dart Thrower (3)		2	3	1		21	141	0		1			49	58			inv8lxu		26	0	nxbw,tier	1	2
-9@E	Stinger Crossbow (Sacred)		2	3	1		30	460	0		1			99	101			invmxbu		26	0	snxb	1	2
-SM1	Tyrannical Blade		2	3	1		121	0	0			133	150					Ssword	0	22	21	xxx1	1	-1
+92@	Hatchet Hands (Sacred)		1	3	1		30	0	345			39	41					invaxf		0	13	qh2h	1	6
+93@	Cestus (Sacred)		1	3	1		30	0	349			41	43					invaxf		0	13	qh2h	1	6
+94@	Claws (Sacred)		1	3	1		30	0	400			42	44					invclw		0	13	qh2h	1	6
+95@	Blade Talons (Sacred)		1	3	1		30	0	562			46	49					invclw		0	13	qh2h	1	6
+96@	Scissors Katar (Sacred)		1	3	1		30	0	485			45	47					invskr		0	13	qh2h	1	6
+9@3	Viper Bow (4)		2	3	1		27	0	553		1			57	74			invsbbu	0	0	19	dbow,tier	1	5
+9@4	Spatha (1)		1	3	1		2	41	0			4	5					invscmu	0	14	0	bswd,tier	1	4
+9@5	Backsword (2)		1	3	1		12	89	0			12	14					inv9sbu	0	16	0	bswd,tier	1	4
+9@6	Ida (3)		2	3	1		22	212	0			29	33					invbsdu	0	14	0	bswd,tier	1	4
+9@7	Bronze Sword (Sacred)		2	3	1		30	576	0			52	55					invlsdu	0	14	0	sbsd	1	4
+9@A	Angel Star (4)		1	3	1		27	409	0			33	46					invmstu	0	11	0	pmac,tier	1	3
+9@B	Hand of God (1)		2	3	1		6	76	0		1			11	14			inv9gmu		16	0	pham,tier	1	3
+9@C	Needle Crossbow (2)		2	3	1		11	48	0		1			16	20			invlxbu		16	0	nxbw,tier	1	2
+9@D	Dart Thrower (3)		2	3	1		21	141	0		1			49	58			inv8lxu		16	0	nxbw,tier	1	2
+9@E	Stinger Crossbow (Sacred)		2	3	1		30	460	0		1			99	101			invmxbu		16	0	snxb	1	2
+SM1	Tyrannical Blade		2	3	1		121	0	0			133	150					Ssword	0	14	13	xxx1	1	-1
 SM2	Voidsworn Bow		2	4	1		121	0	0		1			70	79			Sbow	0	0	0	xxx2	1	-1
 SM3	Voidforged Staff		1	4	1		121	0	0		1			13	16			Sstaff	0	0	0	xxx3	1	-1
-Ysh3	Mystical Blade		1	4	1		120	500	500			25	38					lab_sword	0	50	0	####	1	-1
+Ysh3	Mystical Blade		1	4	1		120	500	500			25	38					lab_sword	0	30	0	####	1	-1
 bsd	Broad Sword		2	3	1		0	48	0			11	16					invbsd		0	0	swor	1	-1
-d33	Decoy Gidbinn		1	2	1		0	15	20			1	2					invd33	18	0	17	knif	1	-1
-g33	The Gidbinn		1	2	1		0	15	25			9	11					invg33	18	0	17	knif	1	-1
+d33	Decoy Gidbinn		1	2	1		0	15	20			1	2					invd33	18	0	11	knif	1	-1
+g33	The Gidbinn		1	2	1		0	15	25			9	11					invg33	18	0	11	knif	1	-1
 gpl	Strangling Gas Potion		1	1	1	1	6	0	0				1					invgps	0	0	0	tpot	1	-1
 gpm	Choking Gas Potion		1	1	1	1	16	0	0				1					invgpm	0	0	0	tpot	1	-1
 gps	Rancid Gas Potion		1	1	1	1	24	0	0				1					invgpl	0	0	0	tpot	1	-1
-hdm	Horadric Malus		1	2	1		0	15	15			10	16					invhmr	4	26	0	horm	1	-1
-hfh	Hell Forge Hammer		2	3	1		20	0	0			13	39					invhfh	25	26	0	hamm	1	-1
-hst	Horadric Staff		1	4	1		15	15	0		1			14	20			invhst	10	0	10	staf	1	-1
-j10	Eagle Orb (1)		1	2	1		0	0	0			4	5					invob1		0	17	orb,tier	1	1
-j11	Sacred Globe (1)		1	2	1		1	0	8			5	5					invob2		0	17	orb,tier	1	1
-j12	Smoked Sphere (1)		1	2	1		2	0	15			5	7					invob3		0	17	orb,tier	1	1
-j13	Clasped Orb (1)		1	2	1		3	0	9			6	8					invob4		0	17	orb,tier	1	1
-j14	Jared's Stone (1)		1	3	1		5	0	25			7	9					invob5		0	17	orb,tier	1	1
-j15	Stag Bow (1)		2	4	1		3	0	78		1			0	0			invam1		0	0	abow,elrx	1	0
-j16	Reflex Bow (1)		2	4	1		5	0	103		1			11	17			invam2		0	25	abow,tier	1	0
-j17	Maiden Spear (1)		2	4	1		3	33	67		1			6	16			invam3		0	25	aspe,tier	1	0
-j18	Maiden Pike (1)		2	4	1		5	43	87		1			7	19			invam4		0	21	aspe,tier	1	0
-j19	Maiden Javelin (1)		1	3	1	1	5	43	87			8	13			8	19	invam5		0	21	ajav,tier	1	0
-j20	Katar (1)		1	3	1		0	0	0			4	6					invktr		0	21	h2h,tier	1	6
-j21	Wrist Blade (1)		1	3	1		1	0	20			0	0					invktr		0	0	h2h,el1x	1	6
-j22	Hatchet Hands (1)		1	3	1		2	0	29			6	7					invaxf		0	21	h2h,tier	1	6
-j23	Cestus (1)		1	3	1		2	0	39			7	8					invaxf		0	21	h2h,tier	1	6
-j24	Claws (1)		1	3	1		3	0	48			8	10					invclw		0	21	h2h,tier	1	6
-j25	Blade Talons (1)		1	3	1		5	0	84			11	13					invclw		0	21	h2h,tier	1	6
-j26	Scissors Katar (1)		1	3	1		6	0	68			10	12					invskr		0	21	h2h,tier	1	6
-j44	Eagle Orb (2)		1	2	1		8	0	18			7	7					invob1		0	17	orb,tier	1	1
-j45	Sacred Globe (2)		1	2	1		10	0	19			8	9					invob2		0	17	orb,tier	1	1
-j46	Smoked Sphere (2)		1	2	1		11	0	36			10	12					invob3		0	17	orb,tier	1	1
-j47	Clasped Orb (2)		1	2	1		12	0	15			11	14					invob4		0	17	orb,tier	1	1
-j48	Jared's Stone (2)		1	3	1		14	0	48			13	16					invob5		0	17	orb,tier	1	1
+hdm	Horadric Malus		1	2	1		0	15	15			10	16					invhmr	4	16	0	horm	1	-1
+hfh	Hell Forge Hammer		2	3	1		20	0	0			13	39					invhfh	25	16	0	hamm	1	-1
+hst	Horadric Staff		1	4	1		15	15	0		1			14	20			invhst	10	0	6	staf	1	-1
+j10	Eagle Orb (1)		1	2	1		0	0	0			2	3					invob1		0	11	orb,tier	1	1
+j11	Sacred Globe (1)		1	2	1		1	0	8			2	3					invob2		0	11	orb,tier	1	1
+j12	Smoked Sphere (1)		1	2	1		2	0	15			3	4					invob3		0	11	orb,tier	1	1
+j13	Clasped Orb (1)		1	2	1		3	0	9			4	5					invob4		0	11	orb,tier	1	1
+j14	Jared's Stone (1)		1	3	1		5	0	25			4	5					invob5		0	11	orb,tier	1	1
+j15	Stag Bow (1)		2	4	1		3	0	78		1							invam1		0	0	abow,elrx	1	0
+j16	Reflex Bow (1)		2	4	1		5	0	103		1			7	10			invam2		0	15	abow,tier	1	0
+j17	Maiden Spear (1)		2	4	1		3	33	67		1			4	10			invam3		0	15	aspe,tier	1	0
+j18	Maiden Pike (1)		2	4	1		5	43	87		1			4	11			invam4		0	13	aspe,tier	1	0
+j19	Maiden Javelin (1)		1	3	1	1	5	43	87			5	8			5	11	invam5		0	13	ajav,tier	1	0
+j20	Katar (1)		1	3	1		0	0	0			2	4					invktr		0	13	h2h,tier	1	6
+j21	Wrist Blade (1)		1	3	1		1	0	20									invktr		0	0	h2h,el1x	1	6
+j22	Hatchet Hands (1)		1	3	1		2	0	29			3	4					invaxf		0	13	h2h,tier	1	6
+j23	Cestus (1)		1	3	1		2	0	39			4	5					invaxf		0	13	h2h,tier	1	6
+j24	Claws (1)		1	3	1		3	0	48			5	6					invclw		0	13	h2h,tier	1	6
+j25	Blade Talons (1)		1	3	1		5	0	84			7	8					invclw		0	13	h2h,tier	1	6
+j26	Scissors Katar (1)		1	3	1		6	0	68			6	7					invskr		0	13	h2h,tier	1	6
+j44	Eagle Orb (2)		1	2	1		8	0	18			4	5					invob1		0	11	orb,tier	1	1
+j45	Sacred Globe (2)		1	2	1		10	0	19			6	7					invob2		0	11	orb,tier	1	1
+j46	Smoked Sphere (2)		1	2	1		11	0	36			8	9					invob3		0	11	orb,tier	1	1
+j47	Clasped Orb (2)		1	2	1		12	0	15			8	11					invob4		0	11	orb,tier	1	1
+j48	Jared's Stone (2)		1	3	1		14	0	48			10	12					invob5		0	11	orb,tier	1	1
 j49	Stag Bow (2)		2	4	1		12	0	118		1			0	0			invam1		0	0	abow,elrx	1	0
-j50	Reflex Bow (2)		2	4	1		15	0	150		1			24	34			invam2		0	25	abow,tier	1	0
-j51	Maiden Spear (2)		2	4	1		12	50	102		1			13	29			invam3		0	25	aspe,tier	1	0
-j52	Maiden Pike (2)		2	4	1		14	63	126		1			14	34			invam4		0	25	aspe,tier	1	0
-j53	Maiden Javelin (2)		1	3	1	1	14	64	128			13	22			19	37	invam5		0	21	ajav,tier	1	0
-j54	Katar (2)		1	3	1		9	0	14			8	9					invktr		0	21	h2h,tier	1	6
+j50	Reflex Bow (2)		2	4	1		15	0	150		1			18	26			invam2		0	15	abow,tier	1	0
+j51	Maiden Spear (2)		2	4	1		12	50	102		1			10	22			invam3		0	15	aspe,tier	1	0
+j52	Maiden Pike (2)		2	4	1		14	63	126		1			11	26			invam4		0	15	aspe,tier	1	0
+j53	Maiden Javelin (2)		1	3	1	1	14	64	128			10	17			14	28	invam5		0	13	ajav,tier	1	0
+j54	Katar (2)		1	3	1		9	0	14			6	7					invktr		0	13	h2h,tier	1	6
 j55	Wrist Blade (2)		1	3	1		10	0	39			0	0					invktr		0	0	h2h,el1x	1	6
-j56	Hatchet Hands (2)		1	3	1		11	0	50			11	13					invaxf		0	21	h2h,tier	1	6
-j57	Cestus (2)		1	3	1		12	0	63			13	15					invaxf		0	21	h2h,tier	1	6
-j58	Claws (2)		1	3	1		12	0	76			14	17					invclw		0	21	h2h,tier	1	6
-j59	Blade Talons (2)		1	3	1		14	0	120			19	23					invclw		0	21	h2h,tier	1	6
-j60	Scissors Katar (2)		1	3	1		15	0	99			17	21					invskr		0	21	h2h,tier	1	6
-j78	Eagle Orb (3)		1	2	1		18	0	49			11	12					invob1		0	17	orb,tier	1	1
-j79	Sacred Globe (3)		1	2	1		20	0	43			13	14					invob2		0	17	orb,tier	1	1
-j80	Smoked Sphere (3)		1	2	1		21	0	81			15	18					invob3		0	17	orb,tier	1	1
-j81	Clasped Orb (3)		1	2	1		21	0	32			17	21					invob4		0	17	orb,tier	1	1
-j82	Jared's Stone (3)		1	3	1		23	0	104			19	23					invob5		0	17	orb,tier	1	1
+j56	Hatchet Hands (2)		1	3	1		11	0	50			8	10					invaxf		0	13	h2h,tier	1	6
+j57	Cestus (2)		1	3	1		12	0	63			10	11					invaxf		0	13	h2h,tier	1	6
+j58	Claws (2)		1	3	1		12	0	76			11	13					invclw		0	13	h2h,tier	1	6
+j59	Blade Talons (2)		1	3	1		14	0	120			14	17					invclw		0	13	h2h,tier	1	6
+j60	Scissors Katar (2)		1	3	1		15	0	99			13	16					invskr		0	13	h2h,tier	1	6
+j78	Eagle Orb (3)		1	2	1		18	0	49			11	12					invob1		0	11	orb,tier	1	1
+j79	Sacred Globe (3)		1	2	1		20	0	43			13	14					invob2		0	11	orb,tier	1	1
+j80	Smoked Sphere (3)		1	2	1		21	0	81			15	18					invob3		0	11	orb,tier	1	1
+j81	Clasped Orb (3)		1	2	1		21	0	32			17	21					invob4		0	11	orb,tier	1	1
+j82	Jared's Stone (3)		1	3	1		23	0	104			19	23					invob5		0	11	orb,tier	1	1
 j83	Stag Bow (3)		2	4	1		21	0	231		1			0	0			invam1		0	0	abow,elrx	1	0
-j84	Reflex Bow (3)		2	4	1		24	0	290		1			39	54			invam2		0	25	abow,tier	1	0
-j85	Maiden Spear (3)		2	4	1		22	102	203		1			21	45			invam3		0	25	aspe,tier	1	0
-j86	Maiden Pike (3)		2	4	1		23	123	246		1			22	53			invam4		0	25	aspe,tier	1	0
-j87	Maiden Javelin (3)		1	3	1	1	23	125	251			20	33			33	60	invam5		0	21	ajav,tier	1	0
-j88	Katar (3)		1	3	1		18	0	39			13	14					invktr		0	21	h2h,tier	1	6
+j84	Reflex Bow (3)		2	4	1		24	0	290		1			39	54			invam2		0	15	abow,tier	1	0
+j85	Maiden Spear (3)		2	4	1		22	102	203		1			21	45			invam3		0	15	aspe,tier	1	0
+j86	Maiden Pike (3)		2	4	1		23	123	246		1			22	53			invam4		0	15	aspe,tier	1	0
+j87	Maiden Javelin (3)		1	3	1	1	23	125	251			20	33			33	60	invam5		0	13	ajav,tier	1	0
+j88	Katar (3)		1	3	1		18	0	39			13	14					invktr		0	13	h2h,tier	1	6
 j89	Wrist Blade (3)		1	3	1		19	0	83			0	0					invktr		0	0	h2h,el1x	1	6
-j90	Hatchet Hands (3)		1	3	1		20	0	106			18	20					invaxf		0	21	h2h,tier	1	6
-j91	Cestus (3)		1	3	1		21	0	128			20	23					invaxf		0	21	h2h,tier	1	6
-j92	Claws (3)		1	3	1		22	0	151			22	26					invclw		0	21	h2h,tier	1	6
-j93	Blade Talons (3)		1	3	1		24	0	232			29	35					invclw		0	21	h2h,tier	1	6
-j94	Scissors Katar (3)		1	3	1		24	0	195			26	31					invskr		0	21	h2h,tier	1	6
-j95	Eagle Orb (4)		1	2	1		22	0	104			13	14					invob1		0	17	orb,tier	1	1
-j96	Sacred Globe (4)		1	2	1		24	0	88			15	18					invob2		0	17	orb,tier	1	1
-j97	Smoked Sphere (4)		1	2	1		25	0	167			18	21					invob3		0	17	orb,tier	1	1
-j98	Clasped Orb (4)		1	2	1		26	0	65			20	25					invob4		0	17	orb,tier	1	1
-j99	Jared's Stone (4)		1	3	1		27	0	212			22	28					invob5		0	17	orb,tier	1	1
-l10	Wand (1)		1	2	1		0	0	0			1	3					invwnd		0	10	wand,tier	1	2
-l11	Yew Wand (1)		1	2	1		1	0	6			5	6					invywn		0	10	wand,tier	1	2
-l12	Bone Wand (1)		1	2	1		2	0	9			5	7					invbwn		0	10	wand,tier	1	2
-l13	Grim Wand (1)		1	2	1		5	0	15			7	10					invgwn		0	10	wand,tier	1	2
-l18	Wand (2)		1	2	1		9	0	4			6	8					invwnd		0	10	wand,tier	1	2
-l19	Yew Wand (2)		1	2	1		10	0	11			8	10					invywn		0	10	wand,tier	1	2
-l20	Bone Wand (2)		1	2	1		11	0	15			9	13					invbwn		0	10	wand,tier	1	2
-l21	Grim Wand (2)		1	2	1		14	0	23			11	18					invgwn		0	10	wand,tier	1	2
-l26	Wand (3)		1	2	1		18	0	12			10	12					invwnd		0	10	wand,tier	1	2
-l27	Yew Wand (3)		1	2	1		20	0	25			12	15					invywn		0	10	wand,tier	1	2
-l28	Bone Wand (3)		1	2	1		21	0	32			13	19					invbwn		0	10	wand,tier	1	2
-l29	Grim Wand (3)		1	2	1		23	0	46			17	26					invgwn		0	10	wand,tier	1	2
-l30	Wand (4)		1	2	1		23	0	26			12	14					invwnd		0	10	wand,tier	1	2
-l31	Yew Wand (4)		1	2	1		24	0	51			14	18					invywn		0	10	wand,tier	1	2
-l32	Bone Wand (4)		1	2	1		25	0	65			16	23					invbwn		0	10	wand,tier	1	2
-l33	Grim Wand (4)		1	2	1		27	0	92			20	31					invgwn		0	10	wand,tier	1	2
-l34	War Hammer (1)		2	3	1		2	56	0			7	10					invwhm		22	0	hamm,tier	1	-1
-l35	Maul (1)		2	4	1		3	93	0		1			14	18			invmau		26	0	hamm,tier	1	-1
-l36	Great Maul (1)		2	3	1		5	117	0		1			16	22			invgma		26	0	hamm,tier	1	-1
-l40	War Hammer (2)		2	3	1		12	90	0			12	18					invwhm		22	0	hamm,tier	1	-1
-l41	Maul (2)		2	4	1		12	137	0		1			26	34			invmau		26	0	hamm,tier	1	-1
-l42	Great Maul (2)		2	3	1		14	168	0		1			30	39			invgma		26	0	hamm,tier	1	-1
-l46	War Hammer (3)		2	3	1		21	184	0			19	26					invwhm		22	0	hamm,tier	1	-1
-l47	Maul (3)		2	4	1		22	270	0		1			40	52			invmau		26	0	hamm,tier	1	-1
-l48	Great Maul (3)		2	3	1		24	326	0		1			46	60			invgma		26	0	hamm,tier	1	-1
-l49	War Hammer (4)		2	3	1		25	366	0			22	31					invwhm		22	0	hamm,tier	1	-1
-l50	Maul (4)		2	4	1		26	532	0		1			47	61			invmau		26	0	hamm,tier	1	-1
-l51	Great Maul (4)		2	3	1		27	640	0		1			49	75			invgma		26	0	hamm,tier	1	-1
-l52	Light Crossbow (1)		2	3	1		0	14	0		1			7	10			invlxb		18	0	xbow,tier	1	-1
-l53	Crossbow (1)		2	3	1		2	66	0		1			11	16			invmxb		18	0	xbow,tier	1	-1
-l54	Heavy Crossbow (1)		2	4	1		4	91	0		1			18	26			invhxb		18	0	xbow,tier	1	-1
-l55	Repeating Crossbow (1)		2	3	1		5	103	0		1			17	28			invrxb		18	0	xbow,tier	1	-1
-l60	Light Crossbow (2)		2	3	1		11	69	0		1			19	26			invlxb		18	0	xbow,tier	1	-1
-l61	Crossbow (2)		2	3	1		12	101	0		1			26	35			invmxb		18	0	xbow,tier	1	-1
-l62	Heavy Crossbow (2)		2	4	1		14	134	0		1			39	53			invhxb		18	0	xbow,tier	1	-1
-l63	Repeating Crossbow (2)		2	3	1		15	150	0		1			37	55			invrxb		18	0	xbow,tier	1	-1
-l68	Light Crossbow (3)		2	3	1		20	144	0		1			36	46			invlxb		18	0	xbow,tier	1	-1
-l69	Crossbow (3)		2	3	1		21	202	0		1			44	59			invmxb		18	0	xbow,tier	1	-1
-l70	Heavy Crossbow (3)		2	4	1		23	260	0		1			64	83			invhxb		18	0	xbow,tier	1	-1
-l71	Repeating Crossbow (3)		2	3	1		24	290	0		1			61	87			invrxb		18	0	xbow,tier	1	-1
-l72	Light Crossbow (4)		2	3	1		25	287	0		1			44	56			invlxb		18	0	xbow,tier	1	-1
-l73	Crossbow (4)		2	3	1		26	401	0		1			52	70			invmxb		18	0	xbow,tier	1	-1
-l74	Heavy Crossbow (4)		2	4	1		27	514	0		1			78	101			invhxb		18	0	xbow,tier	1	-1
-l75	Repeating Crossbow (4)		2	3	1		28	570	0		1			74	102			invrxb		18	0	xbow,tier	1	-1
+j90	Hatchet Hands (3)		1	3	1		20	0	106			18	20					invaxf		0	13	h2h,tier	1	6
+j91	Cestus (3)		1	3	1		21	0	128			20	23					invaxf		0	13	h2h,tier	1	6
+j92	Claws (3)		1	3	1		22	0	151			22	26					invclw		0	13	h2h,tier	1	6
+j93	Blade Talons (3)		1	3	1		24	0	232			29	35					invclw		0	13	h2h,tier	1	6
+j94	Scissors Katar (3)		1	3	1		24	0	195			26	31					invskr		0	13	h2h,tier	1	6
+j95	Eagle Orb (4)		1	2	1		22	0	104			13	14					invob1		0	11	orb,tier	1	1
+j96	Sacred Globe (4)		1	2	1		24	0	88			15	18					invob2		0	11	orb,tier	1	1
+j97	Smoked Sphere (4)		1	2	1		25	0	167			18	21					invob3		0	11	orb,tier	1	1
+j98	Clasped Orb (4)		1	2	1		26	0	65			20	25					invob4		0	11	orb,tier	1	1
+j99	Jared's Stone (4)		1	3	1		27	0	212			22	28					invob5		0	11	orb,tier	1	1
+l10	Wand (1)		1	2	1		0	0	0			1	2					invwnd		0	6	wand,tier	1	2
+l11	Yew Wand (1)		1	2	1		1	0	6			3	4					invywn		0	6	wand,tier	1	2
+l12	Bone Wand (1)		1	2	1		2	0	9			3	4					invbwn		0	6	wand,tier	1	2
+l13	Grim Wand (1)		1	2	1		5	0	15			4	6					invgwn		0	6	wand,tier	1	2
+l18	Wand (2)		1	2	1		9	0	4			5	6					invwnd		0	6	wand,tier	1	2
+l19	Yew Wand (2)		1	2	1		10	0	11			6	8					invywn		0	6	wand,tier	1	2
+l20	Bone Wand (2)		1	2	1		11	0	15			7	10					invbwn		0	6	wand,tier	1	2
+l21	Grim Wand (2)		1	2	1		14	0	23			8	14					invgwn		0	6	wand,tier	1	2
+l26	Wand (3)		1	2	1		18	0	12			10	12					invwnd		0	6	wand,tier	1	2
+l27	Yew Wand (3)		1	2	1		20	0	25			12	15					invywn		0	6	wand,tier	1	2
+l28	Bone Wand (3)		1	2	1		21	0	32			13	19					invbwn		0	6	wand,tier	1	2
+l29	Grim Wand (3)		1	2	1		23	0	46			17	26					invgwn		0	6	wand,tier	1	2
+l30	Wand (4)		1	2	1		23	0	26			12	14					invwnd		0	6	wand,tier	1	2
+l31	Yew Wand (4)		1	2	1		24	0	51			14	18					invywn		0	6	wand,tier	1	2
+l32	Bone Wand (4)		1	2	1		25	0	65			16	23					invbwn		0	6	wand,tier	1	2
+l33	Grim Wand (4)		1	2	1		27	0	92			20	31					invgwn		0	6	wand,tier	1	2
+l34	War Hammer (1)		2	3	1		2	56	0			4	6					invwhm		14	0	hamm,tier	1	-1
+l35	Maul (1)		2	4	1		3	93	0		1			8	11			invmau		16	0	hamm,tier	1	-1
+l36	Great Maul (1)		2	3	1		5	117	0		1			10	13			invgma		16	0	hamm,tier	1	-1
+l40	War Hammer (2)		2	3	1		12	90	0			9	14					invwhm		14	0	hamm,tier	1	-1
+l41	Maul (2)		2	4	1		12	137	0		1			20	26			invmau		16	0	hamm,tier	1	-1
+l42	Great Maul (2)		2	3	1		14	168	0		1			23	29			invgma		16	0	hamm,tier	1	-1
+l46	War Hammer (3)		2	3	1		21	184	0			19	26					invwhm		14	0	hamm,tier	1	-1
+l47	Maul (3)		2	4	1		22	270	0		1			40	52			invmau		16	0	hamm,tier	1	-1
+l48	Great Maul (3)		2	3	1		24	326	0		1			46	60			invgma		16	0	hamm,tier	1	-1
+l49	War Hammer (4)		2	3	1		25	366	0			22	31					invwhm		14	0	hamm,tier	1	-1
+l50	Maul (4)		2	4	1		26	532	0		1			47	61			invmau		16	0	hamm,tier	1	-1
+l51	Great Maul (4)		2	3	1		27	640	0		1			49	75			invgma		16	0	hamm,tier	1	-1
+l52	Light Crossbow (1)		2	3	1		0	14	0		1			4	6			invlxb		11	0	xbow,tier	1	-1
+l53	Crossbow (1)		2	3	1		2	66	0		1			7	10			invmxb		11	0	xbow,tier	1	-1
+l54	Heavy Crossbow (1)		2	4	1		4	91	0		1			11	16			invhxb		11	0	xbow,tier	1	-1
+l55	Repeating Crossbow (1)		2	3	1		5	103	0		1			10	17			invrxb		11	0	xbow,tier	1	-1
+l60	Light Crossbow (2)		2	3	1		11	69	0		1			14	20			invlxb		11	0	xbow,tier	1	-1
+l61	Crossbow (2)		2	3	1		12	101	0		1			20	26			invmxb		11	0	xbow,tier	1	-1
+l62	Heavy Crossbow (2)		2	4	1		14	134	0		1			29	40			invhxb		11	0	xbow,tier	1	-1
+l63	Repeating Crossbow (2)		2	3	1		15	150	0		1			28	41			invrxb		11	0	xbow,tier	1	-1
+l68	Light Crossbow (3)		2	3	1		20	144	0		1			36	46			invlxb		11	0	xbow,tier	1	-1
+l69	Crossbow (3)		2	3	1		21	202	0		1			44	59			invmxb		11	0	xbow,tier	1	-1
+l70	Heavy Crossbow (3)		2	4	1		23	260	0		1			64	83			invhxb		11	0	xbow,tier	1	-1
+l71	Repeating Crossbow (3)		2	3	1		24	290	0		1			61	87			invrxb		11	0	xbow,tier	1	-1
+l72	Light Crossbow (4)		2	3	1		25	287	0		1			44	56			invlxb		11	0	xbow,tier	1	-1
+l73	Crossbow (4)		2	3	1		26	401	0		1			52	70			invmxb		11	0	xbow,tier	1	-1
+l74	Heavy Crossbow (4)		2	4	1		27	514	0		1			78	101			invhxb		11	0	xbow,tier	1	-1
+l75	Repeating Crossbow (4)		2	3	1		28	570	0		1			74	102			invrxb		11	0	xbow,tier	1	-1
 leg	Wirt's Leg		1	3	1		0	0	0			8	12					invleg		0	0	wrtl	1	-1
-msf	Staff of Kings		1	3	1		0	12	0		1			13	16			invmsf	10	0	10	staf	1	-1
+msf	Staff of Kings		1	3	1		0	12	0		1			13	16			invmsf	10	0	6	staf	1	-1
 o10	Stag Bow (4)		2	4	1		26	0	457		1			0	0			invam1		0	0	abow,elrx	1	0
-o11	Reflex Bow (4)		2	4	1		28	0	570		1			47	64			invam2		0	25	abow,tier	1	0
-o12	Maiden Spear (4)		2	4	1		26	201	402		1			25	54			invam3		0	25	aspe,tier	1	0
-o13	Maiden Pike (4)		2	4	1		27	241	483		1			19	71			invam4		0	25	aspe,tier	1	0
-o14	Maiden Javelin (4)		1	3	1	1	27	227	495			23	39			41	73	invam5		0	21	ajav,tier	1	0
-o15	Katar (4)		1	3	1		23	0	83			15	16					invktr		0	21	h2h,tier	1	6
+o11	Reflex Bow (4)		2	4	1		28	0	570		1			47	64			invam2		0	15	abow,tier	1	0
+o12	Maiden Spear (4)		2	4	1		26	201	402		1			25	54			invam3		0	15	aspe,tier	1	0
+o13	Maiden Pike (4)		2	4	1		27	241	483		1			19	71			invam4		0	15	aspe,tier	1	0
+o14	Maiden Javelin (4)		1	3	1	1	27	227	495			23	39			41	73	invam5		0	13	ajav,tier	1	0
+o15	Katar (4)		1	3	1		23	0	83			15	16					invktr		0	13	h2h,tier	1	6
 o16	Wrist Blade (4)		1	3	1		24	0	169			0	0					invktr		0	0	h2h,el1x	1	6
-o17	Hatchet Hands (4)		1	3	1		25	0	212			21	23					invaxf		0	21	h2h,tier	1	6
-o18	Cestus (4)		1	3	1		26	0	255			23	27					invaxf		0	21	h2h,tier	1	6
-o19	Claws (4)		1	3	1		26	0	298			26	30					invclw		0	21	h2h,tier	1	6
-o20	Blade Talons (4)		1	3	1		28	0	456			34	41					invclw		0	21	h2h,tier	1	6
-o21	Scissors Katar (4)		1	3	1		28	0	384			31	37					invskr		0	21	h2h,tier	1	6
+o17	Hatchet Hands (4)		1	3	1		25	0	212			21	23					invaxf		0	13	h2h,tier	1	6
+o18	Cestus (4)		1	3	1		26	0	255			23	27					invaxf		0	13	h2h,tier	1	6
+o19	Claws (4)		1	3	1		26	0	298			26	30					invclw		0	13	h2h,tier	1	6
+o20	Blade Talons (4)		1	3	1		28	0	456			34	41					invclw		0	13	h2h,tier	1	6
+o21	Scissors Katar (4)		1	3	1		28	0	384			36	37					invskr		0	13	h2h,tier	1	6
 opl	Fulminating Potion		1	1	1	1	0	0	0				1					invops	0	0	0	tpot	1	-1
 opm	Exploding Potion		1	1	1	1	12	0	0				1					invopm	0	0	0	tpot	1	-1
 ops	Oil Potion		1	1	1	1	20	0	0				1					invopl	0	0	0	tpot	1	-1
-qf1	Khalim's Flail		2	3	1		15	41	35			8	13					invqf1	17	18	0	mace	1	-1
-qf2	Khalim's Will		2	3	1		20	0	0			8	13					invqf2	17	18	0	mace	1	-1
+qf1	Khalim's Flail		2	3	1		15	41	35			8	13					invqf1	17	11	0	mace	1	-1
+qf2	Khalim's Will		2	3	1		20	0	0			8	13					invqf2	17	11	0	mace	1	-1
 tax	Throwing Axe		1	2	1	1	0	0	40			10	11			6	8	invtax		0	0	taxe	1	-1
-v#X	\red;Sacred Bow		2	3	1		120	666	666		1			38	45			newathuluabow	0	25	25	#bow	1	-1
+v#X	\red;Sacred Bow		2	3	1		120	666	666		1			38	45			newathuluabow	0	15	15	#bow	1	-1
 vou	Voulge		2	4	1		0	50	0		1			10	20			invvou		0	0	pole	1	-1
 wol	Wirt's Other Leg		1	3	1		0	0	0			13	18					invwol		0	0	wrtl	1	-1
 !@1	\dgreen;Evil Eye of the Clawstorm	\blue;+15% to Experience Gained\n+1 to Class Skill Levels\n\grey;Cube All 5 Eyes with Class Charm to Add Bonus\n\nMonster Token	1	1	2		0	0	0									evileye				thng		-1
@@ -1148,32 +1148,32 @@ wol	Wirt's Other Leg		1	3	1		0	0	0			13	18					invwol		0	0	wrtl	1	-1
 #X5	Cube Reagent (Secret)\n\orange;Emblem of Destruction		1	1	2		0	0	0									newsignet5				thng		-1
 #X6	Cube Reagent (Secret)\n\orange;Emblem of Lies		1	1	2		0	0	0									newsignet6				thng		-1
 #X9	Cube Reagent\n\orange;Griswold's Treasure	\yellow;The items vary for each Hero Class\n\grey;Cube with Oil of Craft to Open Box\n	2	2	2		0	0	0									reagentreward				thng		-1
-&66	\orange;Mystic Orb\nKara's Trinket	\blue;+10 Required Level\n+5% Bonus to Summoned Minion Life\n+5% Bonus to Summoned Minion Attack Rating\n+10% Bonus to Summoned Minion Damage\n3% Cast Speed\n\grey;Cube with Ring/Amulet/Quiver to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_misc				asaa,asa#		-1
-&67	\orange;Mystic Orb\nMonsterball	\blue;+10 Required Level\n+5 to Summon Shock Beast\n+2% Bonus to Summoned Minion Resistances\n+10% Bonus to Summoned Minion Life\n+5% Bonus to Summoned Minion Damage\n\grey;Cube with Ring/Amulet/Quiver to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_misc				asaa,asa#		-1
-&68	\orange;Mystic Orb\nHeart of Frost	\blue;+10 Required Level\n+5% to Cold Spell Damage\n+5% Bonus to Summoned Minion Damage\nEnhanced Weapon Damage +15%\n\grey;Cube with Ring/Amulet/Quiver to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_misc				asaa,asa#		-1
-&69	\orange;Mystic Orb\nRelic of Yaerius	\blue;+10 Required Level\n+10 Life after Each Kill\n+5 Life Regenerated per Second\n+5 to Maximum Damage\n+25% Damage to Undead\n\grey;Cube with Ring/Amulet/Quiver to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_misc				asaa,asa#		-1
+&66	\orange;Mystic Orb\nKara's Trinket	\blue;+10 Required Level\n+5% Bonus to Summoned Minion Life\n+5% Bonus to Summoned Minion Attack Rating\n+5% Bonus to Summoned Minion Damage\n3% Cast Speed\n\grey;Cube with Ring/Amulet/Quiver to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_misc				asaa,asa#		-1
+&67	\orange;Mystic Orb\nMonsterball	\blue;+10 Required Level\n+5 to Summon Shock Beast\n+2% Bonus to Summoned Minion Resistances\n+10% Bonus to Summoned Minion Life\n+3% Bonus to Summoned Minion Damage\n\grey;Cube with Ring/Amulet/Quiver to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_misc				asaa,asa#		-1
+&68	\orange;Mystic Orb\nHeart of Frost	\blue;+10 Required Level\n+5% to Cold Spell Damage\n+3% Bonus to Summoned Minion Damage\nEnhanced Weapon Damage +9%\n\grey;Cube with Ring/Amulet/Quiver to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_misc				asaa,asa#		-1
+&69	\orange;Mystic Orb\nHand of Yaerius	\blue;+10 Required Level\n+10 Life after Each Kill\n+5 Life Regenerated per Second\n+5 to Maximum Damage\n+12% Damage to Undead\n\grey;Cube with Ring/Amulet/Quiver to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_misc				asaa,asa#		-1
 &70	\orange;Mystic Orb\nThe Endless Light	\blue;+10 Required Level\n+100 Defense\nTotal Character Defense Plus 3%\n-2% to Enemy Elemental Resistances\n\grey;Cube with Ring/Amulet/Quiver to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_misc				asaa,asa#		-1
 &71	\orange;Mystic Orb\nMarksman's Eye	\blue;+10 Required Level\n2% Bonus to Dexterity\n10% Bonus to Attack Rating\n+3 to Minimum Damage\n5% Attack Speed\n\grey;Cube with Item to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_any				asaa,asa#		-1
-&72	\orange;Mystic Orb\nFarnham's Lost Marble	\blue;+10 Required Level\n-4% Movement Speed\n+75 Mana on Attack\n+75 Life on Attack\n\grey;Cube with Item to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_any				asaa,asa#		-1
-&73	\orange;Mystic Orb\nZayl's Soul Orb	\blue;+10 Required Level\nHalf Freeze Duration\n+200 to Mana\n2% Reanimate As: Flying Scimitar\n\grey;Cube with Item to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_any				asaa,asa#		-1
-&74	\orange;Mystic Orb\nEye of Malic	\blue;+10 Required Level\nAdds 10-20 Cold Damage\nAdds 10-20 Fire Damage\n1% Chance to cast level 47 Frozen Soul on Melee Attack\n1% Chance to cast level 47 Bloodstar on Melee Attack\n\grey;Cube with Item to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_any				asaa,asa#		-1
-&75	\orange;Mystic Orb\nApple of Discord	\blue;+10 Required Level\n+60 to Mana\n+60 to Life\n\grey;Cube with Item to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_any				asaa,asa#		-1
+&72	\orange;Mystic Orb\nFarnham's Lost Marble	\blue;+10 Required Level\n-4% Movement Speed\n+40 Mana on Attack\n+75 Life on Attack\n\grey;Cube with Item to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_any				asaa,asa#		-1
+&73	\orange;Mystic Orb\nZayl's Soul Orb	\blue;+10 Required Level\nHalf Freeze Duration\n+100 to Mana\n2% Reanimate As: Flying Scimitar\n\grey;Cube with Item to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_any				asaa,asa#		-1
+&74	\orange;Mystic Orb\nEye of Malic	\blue;+10 Required Level\nAdds 5-10 Cold Damage\nAdds 5-10 Fire Damage\n1% Chance to cast level 47 Frozen Soul on Melee Attack\n1% Chance to cast level 47 Bloodstar on Melee Attack\n\grey;Cube with Item to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_any				asaa,asa#		-1
+&75	\orange;Mystic Orb\nApple of Discord	\blue;+10 Required Level\n+30 to Mana\n+60 to Life\n\grey;Cube with Item to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_any				asaa,asa#		-1
 &76	\orange;Mystic Orb\nIdol of Stars	\blue;+10 Required Level\n+10 to Energy\n+12 to Dexterity\n+12 to Strength\n\grey;Cube with Any Armor to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_armo				asaa,asa#		-1
 &77	\orange;Mystic Orb\nNagapearl	\blue;+10 Required Level\n10% Magic Find\n10% Gold Find\nAdds Stun Attack: 0.2 seconds\n\grey;Cube with Any Armor to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_armo				asaa,asa#		-1
 &78	\orange;Mystic Orb\nThe Moon Crystal	\blue;+10 Required Level\nRegenerate Mana +10%\nLightning Resist 15%\nCold Resist 15%\n10% Cast Speed\n\grey;Cube with Any Armor to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_armo				asaa,asa#		-1
-&79	\orange;Mystic Orb\nAuriel's Focus	\blue;+10 Required Level\nPoison Length Reduced by 5%\n+15 to Energy\n+25% Enhanced Defense\n+2% Bonus to Energy Factor\n\grey;Cube with Any Armor to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_armo				asaa,asa#		-1
+&79	\orange;Mystic Orb\nAuriel's Focus	\blue;+10 Required Level\nPoison Length Reduced by 5%\n+15 to Energy\n+25% Enhanced Defense\n+2% Bonus to Spell Focus\n\grey;Cube with Any Armor to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_armo				asaa,asa#		-1
 &80	\orange;Mystic Orb\nSolitude	\blue;+10 Required Level\n10% Bonus to Buff/Debuff/Cold Skill Duration\n2% Bonus to all Attributes\n1% Chance to cast level 4 Banish when Struck\n\grey;Cube with Any Armor to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_armo				asaa,asa#		-1
-&81	\orange;Mystic Orb\nLarzuk's Round Shot	\blue;+10 Required Level\n2% Chance of Crushing Blow\nEnhanced Weapon Damage +50%\n+20 to Strength\n+15% Enhanced Damage\n\grey;Cube with Any Weapon to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_weap				asaa,asa#		-1
+&81	\orange;Mystic Orb\nLarzuk's Round Shot	\blue;+10 Required Level\n2% Chance of Crushing Blow\nEnhanced Weapon Damage +30%\n+20 to Strength\n+15% Enhanced Damage\n\grey;Cube with Any Weapon to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_weap				asaa,asa#		-1
 &82	\orange;Mystic Orb\nVizjun's Ball Bearing	\blue;+10 Required Level\n+20 to Dexterity\n2% Deadly Strike\n\grey;Cube with Any Weapon to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_weap				asaa,asa#		-1
-&83	\orange;Mystic Orb\nNor Tiraj's Flaming Sphere	\blue;+10 Required Level\nFire Resist +25%\n+5% to Fire Spell Damage\nAdds 6-12 Fire Damage\n1% Chance to cast level 42 Flamefront on Melee Attack\n\grey;Cube with Any Weapon to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_weap				asaa,asa#		-1
-&84	\orange;Mystic Orb\nThe Demon Core	\blue;+10 Required Level\n+5% to Poison Spell Damage\n+5% to Fire Spell Damage\n1% Chance to cast level 58 Gamma Field when you Kill an Enemy\n1% Chance to cast level 58 Apocalypse when you Kill an Enemy\n\grey;Cube with Any Weapon to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_weap				asaa,asa#		-1
-&85	\orange;Mystic Orb\nUldyssian's Spirit	\blue;+10 Required Level\n+3% to Spell Damage\n+50% Damage to Demons\n+10 Energy Factor to Spell Damage\n+10 Strength Factor to Spell Damage\n\grey;Cube with Any Weapon to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_weap				asaa,asa#		-1
+&83	\orange;Mystic Orb\nNor Tiraj's Flaming Sphere	\blue;+10 Required Level\nFire Resist +25%\n+5% to Fire Spell Damage\nAdds 3-6 Fire Damage\n1% Chance to cast level 42 Flamefront on Melee Attack\n\grey;Cube with Any Weapon to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_weap				asaa,asa#		-1
+&84	\orange;Mystic Orb\nThe Demon Core	\blue;+10 Required Level\n+5% to Poison Spell Damage\n+5% to Fire Spell Damage\n1% Chance to cast level 58 Gamma Field on Kill\n1% Chance to cast level 58 Apocalypse on Kill\n\grey;Cube with Any Weapon to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_weap				asaa,asa#		-1
+&85	\orange;Mystic Orb\nUldyssian's Spirit	\blue;+10 Required Level\n+3% to Spell Damage\n+30% Damage to Demons\n+25 Spell Focus\n\grey;Cube with Any Weapon to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_weap				asaa,asa#		-1
 &86	\orange;Mystic Orb\nOrb of Annihilation	\blue;+10 Required Level\n5% Bonus to Energy\n+5% to Physical/Magic Spell Damage\n10% Chance to cast level 1 Detonate on Melee Attack\n\grey;Cube with Any Weapon to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_weap				asaa,asa#		-1
 &87	\orange;Mystic Orb\nWarbringer	\blue;+10 Required Level\n+5 Maximum Damage\n2% Chance to cast level 5 Arrow on Striking\n\grey;Cube with Any Weapon to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_weap				asaa,asa#		-1
 &88	\orange;Mystic Orb\nTen Pin Striker	\blue;+10 Required Level\nTarget Takes Additional Damage of 100\n100% Bonus to Attack Rating\n\grey;Cube with Any Weapon to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_weap				asaa,asa#		-1
 &89	\orange;Mystic Orb\nWrathspirit	\blue;+10 Required Level\n+15 Life after each Kill\n+3% to Spell Damage\n1% Chance to cast level 46 Punisher when Struck\n\grey;Cube with Any Weapon to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_weap				asaa,asa#		-1
 &90	\orange;Mystic Orb\nCrystal of Tears	\blue;+10 Required Level\n-2% to Maximum Life\nAdds 5-10 Damage\n\grey;Cube with Any Armor to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_armo				asaa,asa#		-1
-&91	\orange;Mystic Orb\nEssence of Itherael	\blue;+10 Required Level\nTotal Character Defense +15%\nEnhanced Weapon Damage +15%\n\grey;Cube with Any Armor to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_armo				asaa,asa#		-1
+&91	\orange;Mystic Orb\nEssence of Itherael	\blue;+10 Required Level\nTotal Character Defense +15%\nEnhanced Weapon Damage +9%\n\grey;Cube with Any Armor to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_armo				asaa,asa#		-1
 &92	\orange;Mystic Orb\nPeriapt of Life	\blue;+10 Required Level\n+10 Life Regenerated per Second\n4% Bonus to Vitality\n\grey;Cube with Any Armor to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_armo				asaa,asa#		-1
 &93	\orange;Mystic Orb\nLodestone	\blue;+10 Required Level\nRequirements +10%\n+5% to Spell Damage\n\grey;Cube with Any Armor to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_armo				asaa,asa#		-1
 &94	\orange;Mystic Orb\nExplorer's Globe	\blue;+10 Required Level\n(-1 to 3)% Bonus to Energy\n(-1 to 3)% Bonus to Vitality\n(-1 to 3)% Bonus to Dexterity\n(-1 to 3)% Bonus to Strength\n\grey;Cube with Ring/Amulet/Quiver to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_misc				asaa,asa#		-1
@@ -1208,7 +1208,7 @@ wol	Wirt's Other Leg		1	3	1		0	0	0			13	18					invwol		0	0	wrtl	1	-1
 10^	\dgreen;Custom Signet of Learning	Right-click: Free Attribute Points: %d	1	1	2		0	0	0									newlearningFTW				poti		-1
 11+	Cube Reagent\n\orange;Mystic Orb	\blue;+4 Required Level\nRegenerate Mana +5%\n\grey;Cube with Ring/Amulet/Quiver to Add Bonus\n	1	1	2		0	0	0									orb_misc				asaa		-1
 11^	\dgreen;Custom Signet of Learning	Right-click: Free Attribute Points: %d	1	1	2		0	0	0									newlearningFTW				poti		-1
-12+	Cube Reagent\n\orange;Mystic Orb	\blue;+4 Required Level\n+4% Bonus to Summoned Minion Damage\n\grey;Cube with Item to Add Bonus\n	1	1	2		0	0	0									orb_any				asaa		-1
+12+	Cube Reagent\n\orange;Mystic Orb	\blue;+4 Required Level\n+2% Bonus to Summoned Minion Damage\n\grey;Cube with Item to Add Bonus\n	1	1	2		0	0	0									orb_any				asaa		-1
 12^	\dgreen;Custom Signet of Learning	Right-click: Free Attribute Points: %d	1	1	2		0	0	0									newlearningFTW				poti		-1
 13+	Cube Reagent\n\orange;Mystic Orb	\blue;+4 Required Level\n+4% Bonus to Summoned Minion Life\n\grey;Cube with Item to Add Bonus\n	1	1	2		0	0	0									orb_any				asaa		-1
 13^	\dgreen;Custom Signet of Learning	Right-click: Free Attribute Points: %d	1	1	2		0	0	0									newlearningFTW				poti		-1
@@ -1242,7 +1242,7 @@ wol	Wirt's Other Leg		1	3	1		0	0	0			13	18					invwol		0	0	wrtl	1	-1
 2x7	\dgreen;Gamma Brain		1	1	2		0	0	0									invbrnz				thng		-1
 2x8	\dgreen;Delta Brain		1	1	2		0	0	0									invbrnz				thng		-1
 2x9	\dgreen;Epsilon Brain		1	1	2		0	0	0									invbrnz				thng		-1
-30+	Cube Reagent\n\orange;Mystic Orb	\blue;+4 Required Level\n+6 Energy Factor to Spell Damage\n\grey;Cube with Any Armor to Add Bonus\n	1	1	2		0	0	0									orb_armo				asaa		-1
+30+	Cube Reagent\n\orange;Mystic Orb	\blue;+4 Required Level\n+6 Spell Focus\n\grey;Cube with Any Armor to Add Bonus\n	1	1	2		0	0	0									orb_armo				asaa		-1
 31+	Cube Reagent\n\orange;Mystic Orb	\blue;+4 Required Level\n+1% to Experience Gained\n\grey;Cube with Any Weapon to Add Bonus\n	1	1	2		0	0	0									orb_weap				asaa		-1
 32+	Cube Reagent\n\orange;Mystic Orb	\blue;+4 Required Level\n3% Life Stolen per Hit\n\grey;Cube with Any Weapon to Add Bonus\n	1	1	2		0	0	0									orb_weap				asaa		-1
 33+	Cube Reagent\n\orange;Mystic Orb	\blue;+4 Required Level\n5% Mana Stolen per Hit\n\grey;Cube with Any Weapon to Add Bonus\n	1	1	2		0	0	0									orb_weap				asaa		-1
@@ -1268,9 +1268,9 @@ wol	Wirt's Other Leg		1	3	1		0	0	0			13	18					invwol		0	0	wrtl	1	-1
 53+	Cube Reagent\n\orange;Mystic Orb	\blue;+4 Required Level\n+4 Life Regenerated per Second\n\grey;Cube with Any Armor to Add Bonus\n	1	1	2		0	0	0									orb_armo				asaa		-1
 5o[	Cube Reagent\n\orange;Oil of Renewal	80\nThe Oil of Renewal can be used to roll\nany item to superior quality, to prepare\nthem for runeword bases.\n\nOil + Item\n--> Superior Item\n	1	1	2		0	0	0									oil_renewal				thng		-1
 60+	Cube Reagent\n\orange;Mystic Orb	\blue;+4 Required Level\n+30 Life on Attack\n\grey;Cube with Any Weapon to Add Bonus\n	1	1	2		0	0	0									orb_weap				asaa		-1
-61+	Cube Reagent\n\orange;Mystic Orb	\blue;+4 Required Level\n+40 Mana on Attack\n\grey;Cube with Any Weapon to Add Bonus\n	1	1	2		0	0	0									orb_weap				asaa		-1
+61+	Cube Reagent\n\orange;Mystic Orb	\blue;+4 Required Level\n+20 Mana on Attack\n\grey;Cube with Any Weapon to Add Bonus\n	1	1	2		0	0	0									orb_weap				asaa		-1
 62+	Cube Reagent\n\orange;Mystic Orb	\blue;+4 Required Level\n+2% Innate Elemental Damage\n\grey;Cube with Any Weapon to Add Bonus\n	1	1	2		0	0	0									orb_weap				asaa		-1
-63+	Cube Reagent\n\orange;Mystic Orb	\blue;+4 Required Level\nEnhanced Weapon Damage +20%\n\grey;Cube with Any Weapon to Add Bonus\n	1	1	2		0	0	0									orb_weap				asaa		-1
+63+	Cube Reagent\n\orange;Mystic Orb	\blue;+4 Required Level\nEnhanced Weapon Damage +12%\n\grey;Cube with Any Weapon to Add Bonus\n	1	1	2		0	0	0									orb_weap				asaa		-1
 64+	Cube Reagent\n\orange;Mystic Orb	\blue;+4 Required Level\n6% Cast Speed\n\grey;Cube with Any Weapon to Add Bonus\n	1	1	2		0	0	0									orb_weap				asaa		-1
 65+	Cube Reagent\n\orange;Mystic Orb	\blue;+4 Required Level\n6% Increased Attack Speed\n\grey;Cube with Any Weapon to Add Bonus\n	1	1	2		0	0	0									orb_weap				asaa		-1
 6o[	Cube Reagent\n\orange;Oil of Luck	75\nThe Oil of Luck has a chance to add \nan extra bonus to any item.\n\nOil + Item\n--> Item with 1/5 Chance of Added Bonus\n(Limit: 1)\n\nWeapons: +20% Enhanced Damage\n                      or\n+20% Attack Speed if Elemental Base\nWeapons: 100% Bonus to Attack Rating\nArmors: +20% Enhanced Defense\nArmors: Physical Resist +1%\nAmulets: +1 to All Skills\nRings: +5% to Spell Damage\nQuivers: 5% to All Attributes\nJewels: +2 to Any Stat\n	1	1	2		0	0	0									oil_luck				thng		-1
@@ -1320,17 +1320,17 @@ C6+	\orange;Quiet Shrine (4)	\blue;+x to Vitality\nx% to Vitality\n+x Life Regen
 C7+	\orange;Quiet Shrine (3)	\blue;+x to Vitality\nx% to Vitality\n+x Life Regenerated per Second\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Quiet				prsh		-1
 C8+	\orange;Quiet Shrine (2)	\blue;+x to Vitality\nx% to Vitality\n+x Life Regenerated per Second\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Quiet				prsh		-1
 C9+	\orange;Quiet Shrine (1)	\blue;+x to Vitality\nx% to Vitality\n+x Life Regenerated per Second\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Quiet				prsh		-1
-D0+	\orange;Eerie Shrine (10)	\blue;+x to Energy\nx% to Energy\n+x Energy Factor to Spell Damage\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Eerie				prsh,flsh		-1
+D0+	\orange;Eerie Shrine (10)	\blue;+x to Energy\nx% to Energy\n+x Spell Focus\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Eerie				prsh,flsh		-1
 D0+S	\orange;Eerie Vessel	Right Click to Collect	1	2	2		0	0	0									#Eerie				shco		-1
-D1+	\orange;Eerie Shrine (9)	\blue;+x to Energy\nx% to Energy\n+x Energy Factor to Spell Damage\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Eerie				prsh		-1
-D2+	\orange;Eerie Shrine (8)	\blue;+x to Energy\nx% to Energy\n+x Energy Factor to Spell Damage\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Eerie				prsh		-1
-D3+	\orange;Eerie Shrine (7)	\blue;+x to Energy\nx% to Energy\n+x Energy Factor to Spell Damage\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Eerie				prsh		-1
-D4+	\orange;Eerie Shrine (6)	\blue;+x to Energy\nx% to Energy\n+x Energy Factor to Spell Damage\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Eerie				prsh		-1
-D5+	\orange;Eerie Shrine (5)	\blue;+x to Energy\nx% to Energy\n+x Energy Factor to Spell Damage\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Eerie				prsh		-1
-D6+	\orange;Eerie Shrine (4)	\blue;+x to Energy\nx% to Energy\n+x Energy Factor to Spell Damage\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Eerie				prsh		-1
-D7+	\orange;Eerie Shrine (3)	\blue;+x to Energy\nx% to Energy\n+x Energy Factor to Spell Damage\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Eerie				prsh		-1
-D8+	\orange;Eerie Shrine (2)	\blue;+x to Energy\nx% to Energy\n+x Energy Factor to Spell Damage\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Eerie				prsh		-1
-D9+	\orange;Eerie Shrine (1)	\blue;+x to Energy\nx% to Energy\n+x Energy Factor to Spell Damage\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Eerie				prsh		-1
+D1+	\orange;Eerie Shrine (9)	\blue;+x to Energy\nx% to Energy\n+x Spell Focus\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Eerie				prsh		-1
+D2+	\orange;Eerie Shrine (8)	\blue;+x to Energy\nx% to Energy\n+x Spell Focus\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Eerie				prsh		-1
+D3+	\orange;Eerie Shrine (7)	\blue;+x to Energy\nx% to Energy\n+x Spell Focus\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Eerie				prsh		-1
+D4+	\orange;Eerie Shrine (6)	\blue;+x to Energy\nx% to Energy\n+x Spell Focus\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Eerie				prsh		-1
+D5+	\orange;Eerie Shrine (5)	\blue;+x to Energy\nx% to Energy\n+x Spell Focus\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Eerie				prsh		-1
+D6+	\orange;Eerie Shrine (4)	\blue;+x to Energy\nx% to Energy\n+x Spell Focus\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Eerie				prsh		-1
+D7+	\orange;Eerie Shrine (3)	\blue;+x to Energy\nx% to Energy\n+x Spell Focus\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Eerie				prsh		-1
+D8+	\orange;Eerie Shrine (2)	\blue;+x to Energy\nx% to Energy\n+x Spell Focus\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Eerie				prsh		-1
+D9+	\orange;Eerie Shrine (1)	\blue;+x to Energy\nx% to Energy\n+x Spell Focus\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Eerie				prsh		-1
 E0+	\orange;Weird Shrine (10)	\blue;Adds x-y damage\n+x% Enhanced Damage\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Weird				prsh,flsh		-1
 E0+S	\orange;Weird Vessel	Right Click to Collect	1	2	2		0	0	0									#Weird				shco		-1
 E1+	\orange;Weird Shrine (9)	\blue;Adds x-y damage\n+x% Enhanced Damage\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Weird				prsh		-1
@@ -1471,23 +1471,23 @@ R8+	\orange;Trinity Shrine (2)	\blue;+x to All Attributes\n+x% to Innate Element
 R9+	\orange;Trinity Shrine (1)	\blue;+x to All Attributes\n+x% to Innate Elemental Damage\n\grey;Cube with Sacred Rare or Crafted Weapon/Armor to Craft\n\nCube Reagent	1	2	2		0	0	0									@Stone				prsh		-1
 Ysh1	Arcane Seal		1	1	2		0	0	0									lab_rn1				###1		-1
 Ysh2	Necklace		1	1	2		0	0	0									lab_amu				###2		-1
-[01	\gold;Lord of Lies Trophy	\blue;Enhanced Weapon Damage +30%\n\grey;Cube with the Book of Lies to Add Bonus:\n	1	1	2		0	0	0									trophy12				thng,trph		-1
-[02	\gold;Legacy of Blood Trophy	\blue;Total Character Defense 20%\n\grey;Cube with the Legacy of Blood to Add Bonus:\n	1	1	2		0	0	0									trophy01				thng,trph		-1
-[03	\gold;Judgement Day Trophy	\blue;5% to All Attributes\n\grey;Cube with the Crystalline Flame Medallion to Add Bonus:\n	1	1	2		0	0	0									trophy05				thng,trph		-1
-[04	\gold;Yshari Sanctum Trophy	\blue;Increase Maximum Life and Mana 5%\n\grey;Cube with the Ancient Repositories to Add Bonus:\n	1	1	2		0	0	0									trophy14				thng,trph		-1
-[05	\gold;Kingdom of Shadow Trophy	\blue;10% Movement Speed\n\grey;Cube with the Eternal Bone Pile to Add Bonus:\n	1	1	2		0	0	0									trophy07				thng,trph		-1
-[06	\gold;Duncraig Trophy	\blue;10% Combat Speeds\n\grey;Cube with the Demonsbane to Add Bonus:\n	1	1	2		0	0	0									trophy11				thng,trph		-1
-[07	\gold;Xazax Trophy	\blue;Slow Target 4%\n\grey;Cube with Xazax's Illusion to Add Bonus:\n	1	1	2		0	0	0									trophy15				thng,trph		-1
-[08	\gold;The Veiled Prophet Trophy	\blue;+20% to Summoned Minion Life\n+10% to Summoned Minion Resistances\n\grey;Cube with the Idol of Vanity to Add Bonus:\n	1	1	2		0	0	0									trophy02				thng,trph		-1
-[09	\gold;Tran Athulua Trophy	\blue;Physical Resist 5%\n\grey;Cube with the Sunstone of the Gods to Add Bonus:\n	1	1	2		0	0	0									trophy04				thng,trph		-1
-[10	\gold;Quov Tsin Trophy	\blue;+10% to Spell Damage\n\grey;Cube with the Silver Seal of Ureh to Add Bonus:\n	1	1	2		0	0	0									trophy06				thng,trph		-1
-[11	\gold;Astrogha Trophy	\blue;-5% to Enemy Elemental Resistances\n\grey;Cube with Astrogha's Venom Stinger to Add Bonus:\n	1	1	2		0	0	0									trophy16				thng,trph		-1
-[12	\gold;Heart of Sin Trophy	\blue;+150 to Mana\n+150 to Life\n\grey;Cube with Azmodan's Heart to Add Bonus:\n	1	1	2		0	0	0									trophy03				thng,trph		-1
-[13	\gold;Viz-jun Trophy	\blue;+15 to All Attributes\n\grey;Cube with the Cold Fusion Schematics to Add Bonus:\n	1	1	2		0	0	0									trophy17				thng,trph		-1
-[14	\gold;Archbishop Lazarus Trophy	\blue;Maximum Elemental Resists +1%\n\grey;Cube with the Glorious Book of Median to Add Bonus:\n	1	1	2		0	0	0									trophy20				thng,trph		-1
-[15	\gold;The Triune Trophy	\blue;30% Magic Find\n\grey;Cube with the Corrupted Wormhole to Add Bonus:\n	1	1	2		0	0	0									trophy10				thng,trph		-1
-[16	\gold;Nephalem's Sacrifice Trophy	\blue;Adds 200-300 lightning damage\nAdds 200-300 cold damage\nAdds 200-300 fire damage\n\grey;Cube with the Neutrality Pact to Add Bonus:\n	1	1	2		0	0	0									trophy19				thng,trph		-1
-[17	\gold;Banisher of Light Trophy	\blue;2% Reanimate as: Random Monster\n\grey;Cube with the Soul of Kabraxis to Add Bonus:\n	1	1	2		0	0	0									trophy09				thng,trph		-1
+[01	\gold;Lord of Lies Trophy	\blue;Enhanced Weapon Damage +20%\n\grey;Cube with the Book of Lies to Add Bonus\n	1	1	2		0	0	0									trophy12				thng,trph		-1
+[02	\gold;Legacy of Blood Trophy	\blue;Total Character Defense 20%\n\grey;Cube with the Legacy of Blood to Add Bonus\n	1	1	2		0	0	0									trophy01				thng,trph		-1
+[03	\gold;Judgement Day Trophy	\blue;5% to All Attributes\n\grey;Cube with the Crystalline Flame Medallion to Add Bonus\n	1	1	2		0	0	0									trophy05				thng,trph		-1
+[04	\gold;Yshari Sanctum Trophy	\blue;Increase Maximum Life and Mana 5%\n\grey;Cube with the Ancient Repositories to Add Bonus\n	1	1	2		0	0	0									trophy14				thng,trph		-1
+[05	\gold;Kingdom of Shadow Trophy	\blue;10% Movement Speed\n\grey;Cube with the Eternal Bone Pile to Add Bonus\n	1	1	2		0	0	0									trophy07				thng,trph		-1
+[06	\gold;Duncraig Trophy	\blue;10% Combat Speeds\n\grey;Cube with the Demonsbane to Add Bonus\n	1	1	2		0	0	0									trophy11				thng,trph		-1
+[07	\gold;Xazax Trophy	\blue;Slow Target 4%\n\grey;Cube with Xazax's Illusion to Add Bonus\n	1	1	2		0	0	0									trophy15				thng,trph		-1
+[08	\gold;The Veiled Prophet Trophy	\blue;+10% to Summoned Minion Resistances\n+20% to Summoned Minion Life\n\grey;Cube with the Idol of Vanity to Add Bonus\n	1	1	2		0	0	0									trophy02				thng,trph		-1
+[09	\gold;Tran Athulua Trophy	\blue;Physical Resist 5%\n\grey;Cube with the Sunstone of the Gods to Add Bonus\n	1	1	2		0	0	0									trophy04				thng,trph		-1
+[10	\gold;Quov Tsin Trophy	\blue;+10% to Spell Damage\n\grey;Cube with the Silver Seal of Ureh to Add Bonus\n	1	1	2		0	0	0									trophy06				thng,trph		-1
+[11	\gold;Astrogha Trophy	\blue;-5% to Enemy Elemental Resistances\n\grey;Cube with Astrogha's Venom Stinger to Add Bonus\n	1	1	2		0	0	0									trophy16				thng,trph		-1
+[12	\gold;Heart of Sin Trophy	\blue;+75 to Mana\n+150 to Life\n\grey;Cube with Azmodan's Heart to Add Bonus\n	1	1	2		0	0	0									trophy03				thng,trph		-1
+[13	\gold;Viz-jun Trophy	\blue;+15 to All Attributes\n\grey;Cube with the Cold Fusion Schematics to Add Bonus\n	1	1	2		0	0	0									trophy17				thng,trph		-1
+[14	\gold;Archbishop Lazarus Trophy	\blue;Maximum Elemental Resists +1%\n\grey;Cube with the Glorious Book of Median to Add Bonus\n	1	1	2		0	0	0									trophy20				thng,trph		-1
+[15	\gold;The Triune Trophy	\blue;30% Magic Find\n\grey;Cube with the Corrupted Wormhole to Add Bonus\n	1	1	2		0	0	0									trophy10				thng,trph		-1
+[16	\gold;Nephalem's Sacrifice Trophy	\blue;Adds 100-150 cold damage\nAdds 100-150 lightning damage\nAdds 100-150 fire damage\n\grey;Cube with the Neutrality Pact to Add Bonus\n	1	1	2		0	0	0									trophy19				thng,trph		-1
+[17	\gold;Banisher of Light Trophy	\blue;2% Reanimate as: Random Monster\n\grey;Cube with the Soul of Kabraxis to Add Bonus\n	1	1	2		0	0	0									trophy09				thng,trph		-1
 [18	\gold;Ghosts of Old Bremmtown Trophy	\blue;+10% to Experience Gained\n\grey;Cube with Upgraded Dragon Claw to Add Bonus:\n\orange;Kill Dark Star Dragon in Under 30 Seconds to Apply Bonus\n	1	1	2		0	0	0									trophy13				thng,trph		-1
 [19	\gold;The Void Trophy	\blue;+1 to All Skills\n\grey;Cube with Books of Kalan to Add Bonus:\n	1	1	2		0	0	0									trophy18				thng,trph		-1
 [20	\gold;Eve of Destruction Trophy	\blue;Elemental Resists +10%\n\grey;Cube with Spirit of Creation to Add Bonus:\n	1	1	2		0	0	0									trophy08				thng,trph		-1
@@ -1496,7 +1496,7 @@ Ysh2	Necklace		1	1	2		0	0	0									lab_amu				###2		-1
 \\3	\purple;Great Topaz	Cube All Gems with The Black Road to Add Bonus	1	1	2		0	0	0									invgsye				thng		-1
 \\4	\purple;Great Sapphire	Cube All Gems with The Black Road to Add Bonus	1	1	2		0	0	0									invgsbe				thng		-1
 \\5	\purple;Great Ruby	Cube All Gems with The Black Road to Add Bonus	1	1	2		0	0	0									invgsre				thng		-1
-\\6	\gold;Golden Cycle		1	1	2		0	0	0									invgcyc				grtz		-1
+\\6	\gold;Golden Cycle	\dgrey;(Limit: 1)\n\blue;Increase Maximum Life and Mana +5%\n+10 to All Attributes\n+1 to All Skills\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invch3				cyc3,cycl		-1
 \\7	\grey;Quest Item\n\gold;Tome of Possession	\n\red;... unless it is really necessary?\nkeeping this book in the inventory might be a bad idea\n\n\orange;the book is old, if the spell works, it might not be very reliable\n\nthe person carrying it and allies next to him become unable to avoid any damage\nafter recovering this book, it seems Lucion's servants have cursed it...\n\n\grey;... maybe Uldyssian wrote this book to defeat Lucion?\nafter some missing pages, you find instructions to mind control demons\nthis strange book appears to have old writings from the edyrem...\n	2	2	2		0	0	0									invbbb				grtz		-1
 \\8	Corrupted Wormhole		1	1	2		0	0	0									invlucion				grtz		-1
 a55	Optical Detector		1	1	2		0	0	0									inveye				grtz		-1
@@ -1591,9 +1591,9 @@ cy25	\orange;Large Cycle	\blue;+18 Required Level\n-5 to All Attributes\n+1 to D
 cy26	\orange;Large Cycle	\blue;+18 Required Level\n-5 to All Attributes\n+1 to Necromancer Skill Levels\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	3	2		0	0	0									invsst				cyc3,cycl		-1
 cy27	\orange;Large Cycle	\blue;+18 Required Level\n-5 to All Attributes\n+1 to Sorceress Skill Levels\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	3	2		0	0	0									invsst				cyc3,cycl		-1
 cy28	\orange;Large Cycle	\blue;+18 Required Level\n-5 to All Attributes\n+1 to Paladin Skill Levels\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	3	2		0	0	0									invsst				cyc3,cycl		-1
-cy29	\orange;Small Cycle	\blue;+1 Required Level\n+(0 to 20) to Mana\n+(0 to 20) to Life\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invch1				cyc1,cycl		-1
-cy30	\orange;Medium Cycle	\blue;+3 Required Level\nMaximum Mana +(0 to 2)%\n+(5 to 30) to Mana\nMaximum Life +(0 to 2)%\n+(5 to 30) to Life\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	2	2		0	0	0									invch2				cyc2,cycl		-1
-cy31	\orange;Large Cycle	\blue;+5 Required Level\nMaximum Mana +(1 to 3)%\n+(10 to 50) to Mana\nMaximum Life +(1 to 3)%\n+(10 to 50) to Life\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	3	2		0	0	0									invsst				cyc3,cycl		-1
+cy29	\orange;Small Cycle	\blue;+1 Required Level\n+(0 to 10) to Mana\n+(0 to 20) to Life\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invch1				cyc1,cycl		-1
+cy30	\orange;Medium Cycle	\blue;+3 Required Level\nMaximum Mana +(0 to 2)%\n+(2 to 15) to Mana\nMaximum Life +(0 to 2)%\n+(5 to 30) to Life\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	2	2		0	0	0									invch2				cyc2,cycl		-1
+cy31	\orange;Large Cycle	\blue;+5 Required Level\nMaximum Mana +(1 to 3)%\n+(5 to 25) to Mana\nMaximum Life +(1 to 3)%\n+(10 to 50) to Life\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	3	2		0	0	0									invsst				cyc3,cycl		-1
 dog	Apple	Regenerates 100 life per second for 10 minutes	1	1	2		0	0	0									newapple				poti		-1
 dr01	Quest Item\n\gold;Depleted Riftstone (\green;1\gold;)	energy source and allow you to investigate further...\nPerhaps transmuting it in the Horadric Cube could unleash the\n\nto resemble the Rift activators you have come to know well\nIt certainly did not originate on Sanctuary, and yet it appears\n\ndread as you sense the latent otherworldly energy seeping from it\nThe stone emits a faint glow. Holding it in your hand fills you with\n	1	1	2		0	0	0									DepletedRunestone				thng		-1
 dr02	Quest Item\n\gold;Depleted Riftstone (\green;2\gold;)	Transmute in the Cube to Charge\n	1	1	2		0	0	0									DepletedRunestone				thng		-1
@@ -1698,28 +1698,28 @@ htor	\gold;Heroic Torch	Cube to Create Class Charm	1	2	2		0	0	0									invtrch	
 ibk	Tome of Identify		1	2	2	1	0	0	0									invrbk				book		-1
 ice	Keep it to thaw Anya\nMalah's Potion		1	1	2		0	0	0									invxyz	32			ques		-1
 ir01	Quest Item\n\gold;Charged Riftstone (\green;1\gold;)	\dgrey;- Transmute -\n	1	1	2		0	0	0									ChargedRunestoneG				thng		-1
-ir02	Quest Item\n\gold;Charged Riftstone (\green;2\gold;)	\dgrey;- Transmute -\n\n\green;Monster Heroes may spawn\n\n\grey;Damage: +10%\nLife: +20%\n	1	1	2		0	0	0									ChargedRunestoneG				thng		-1
-ir03	Quest Item\n\gold;Charged Riftstone (\green;3\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes may spawn\n\green;Cannot be Chilled or Frozen\n\n\grey;Damage: +20%\nLife: +40%\n	1	1	2		0	0	0									ChargedRunestoneG				thng		-1
-ir04	Quest Item\n\gold;Charged Riftstone (\green;4\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes may spawn\n\green;Immune to Crowd Control, Max Slow Effect: 25%\n\grey;Cannot be Chilled or Frozen\n\nDamage: +30%\nLife: +60%\n	1	1	2		0	0	0									ChargedRunestoneG				thng		-1
-ir05	Quest Item\n\gold;Charged Riftstone (\green;5\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes may spawn\n\green;Immune to Crushing Blow, 50% Less Poison Duration\n\grey;Immune to Crowd Control, Max Slow Effect: 25%\nCannot be Chilled or Frozen\n\nDamage: +40%\nLife: +80%\n	1	1	2		0	0	0									ChargedRunestoneG				thng		-1
-ir06	Quest Item\n\gold;Charged Riftstone (\orange;6\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes and Champions may spawn\nImmune to Crushing Blow, 50% Less Poison Duration\nImmune to Crowd Control, Max Slow Effect: 25%\n\green;Absorb 50% Fire, Cold and Lightning\n\grey;Cannot be Chilled or Frozen\n\nDamage: +50%\nLife: +100%\n	1	1	2		0	0	0									ChargedRunestoneY				thng		-1
-ir07	Quest Item\n\gold;Charged Riftstone (\orange;7\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes and Champions may spawn\nImmune to Crushing Blow, 50% Less Poison Duration\nImmune to Crowd Control, Max Slow Effect: 25%\n\grey;Absorb 50% Fire, Cold and Lightning\nCannot be Chilled or Frozen\n\green;Dimensional Tear\n\nMonster Density: +10%\n\grey;Damage: +60%\nLife: +120%\n	1	1	2		0	0	0									ChargedRunestoneY				thng		-1
-ir08	Quest Item\n\gold;Charged Riftstone (\orange;8\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes and Champions may spawn\nImmune to Crushing Blow, 50% Less Poison Duration\nImmune to Crowd Control, Max Slow Effect: 25%\nAbsorb 50% Fire, Cold and Lightning\nCannot be Chilled or Frozen\n\green;50% Leech Resistance\n\grey;Dimensional Tear\n\nMonster Density: +10%\nDamage: +70%\nLife: +140%\n	1	1	2		0	0	0									ChargedRunestoneY				thng		-1
-ir09	Quest Item\n\gold;Charged Riftstone (\orange;9\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes and Champions may spawn\nImmune to Crushing Blow, 50% Less Poison Duration\nImmune to Crowd Control, Max Slow Effect: 25%\nAbsorb 50% Fire, Cold and Lightning\nCannot be Chilled or Frozen\n\green;+70% Movement Speed\n\grey;50% Leech Resistance\nDimensional Tear\n\green;Curse Immunity\n\n\grey;Monster Density: +10%\nDamage: +80%\nLife: +160%\n	1	1	2		0	0	0									ChargedRunestoneY				thng		-1
-ir10	Quest Item\n\gold;Charged Riftstone (\orange;10\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes and Champions may spawn\nImmune to Crushing Blow, 50% Less Poison Duration\nImmune to Crowd Control, Max Slow Effect: 25%\nAbsorb 50% Fire, Cold and Lightning\nCannot be Chilled or Frozen\n+70% Movement Speed\n50% Leech Resistance\n\green;No Monster Corpses\n\grey;Dimensional Tear\nCurse Immunity\n\nMonster Density: +10%\nDamage: +90%\nLife: +180%\n	1	1	2		0	0	0									ChargedRunestoneY				thng		-1
-ir11	Quest Item\n\gold;Charged Riftstone (\red;11\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes, Champions and Sovereigns may spawn\nImmune to Crushing Blow, 50% Less Poison Duration\nImmune to Crowd Control, Max Slow Effect: 25%\nAbsorb 50% Fire, Cold and Lightning\nCannot be Chilled or Frozen\n+70% Movement Speed\n50% Leech Resistance\nNo Monster Corpses\n\green;Empowered Skills\n\grey;Dimensional Tear\nCurse Immunity\n\nMonster Density: +10%\n\green;Pack Size: +20%\n\grey;Damage: +100%\nLife: +200%\n	1	1	2		0	0	0									ChargedRunestoneR				thng		-1
-ir12	Quest Item\n\gold;Charged Riftstone (\red;12\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes, Champions and Sovereigns may spawn\nImmune to Crushing Blow, 50% Less Poison Duration\nImmune to Crowd Control, Max Slow Effect: 25%\n\green;Reduce Player Avoid and Block on Hit\n\grey;Absorb 50% Fire, Cold and Lightning\nCannot be Chilled or Frozen\n+70% Movement Speed\n50% Leech Resistance\nNo Monster Corpses\nEmpowered Skills\nDimensional Tear\nCurse Immunity\n\nMonster Density: +10%\nPack Size: +20%\nDamage: +110%\nLife: +220%\n	1	1	2		0	0	0									ChargedRunestoneR				thng		-1
-ir13	Quest Item\n\gold;Charged Riftstone (\red;13\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes, Champions and Sovereigns may spawn\nImmune to Crushing Blow, 50% Less Poison Duration\nImmune to Crowd Control, Max Slow Effect: 25%\n\green;Gain 150% of Physical Damage as Elemental\n\grey;Reduce Player Avoid and Block on Hit\nAbsorb 50% Fire, Cold and Lightning\nCannot be Chilled or Frozen\n+70% Movement Speed\n50% Leech Resistance\nNo Monster Corpses\nEmpowered Skills\nDimensional Tear\nCurse Immunity\n\nMonster Density: +10%\nPack Size: +20%\nDamage: +120%\nLife: +240%\n	1	1	2		0	0	0									ChargedRunestoneR				thng		-1
-ir14	Quest Item\n\gold;Charged Riftstone (\red;14\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes, Champions and Sovereigns may spawn\nImmune to Crushing Blow, 50% Less Poison Duration\nImmune to Crowd Control, Max Slow Effect: 25%\nGain 150% of Physical Damage as Elemental\nReduce Player Avoid and Block on Hit\nAbsorb 50% Fire, Cold and Lightning\n\green;Pierce 100% Elemental Resists\n\grey;Cannot be Chilled or Frozen\n+70% Movement Speed\n50% Leech Resistance\nNo Monster Corpses\nEmpowered Skills\nDimensional Tear\nCurse Immunity\n\nMonster Density: +10%\nPack Size: +20%\nDamage: +130%\nLife: +260%\n	1	1	2		0	0	0									ChargedRunestoneR				thng		-1
-ir15	Quest Item\n\gold;Charged Riftstone (\red;15\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes, Champions and Sovereigns may spawn\nImmune to Crushing Blow, 50% Less Poison Duration\nImmune to Crowd Control, Max Slow Effect: 25%\nGain 150% of Physical Damage as Elemental\nReduce Player Avoid and Block on Hit\nAbsorb 50% Fire, Cold and Lightning\nPierce 100% Elemental Resists\nCannot be Chilled or Frozen\n+70% Movement Speed\n50% Leech Resistance\nNo Monster Corpses\nEmpowered Skills\nDimensional Tear\nCurse Immunity\n\green;Nemesis\n\n\n\grey;Monster Density: +40%\nPack Size: +20%\nDamage: +150%\nLife: +300%\n	1	1	2		0	0	0									ChargedRunestoneR				thng		-1
+ir02	Quest Item\n\gold;Charged Riftstone (\green;2\gold;)	\dgrey;- Transmute -\n\n\green;Monster Heroes may spawn\n\n\grey;Elemental Resists: +3%\nDamage: +10%\nLife: +20%\n	1	1	2		0	0	0									ChargedRunestoneG				thng		-1
+ir03	Quest Item\n\gold;Charged Riftstone (\green;3\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes may spawn\n\green;Cannot be Chilled or Frozen\n\n\grey;Elemental Resists: +6%\nDamage: +20%\nLife: +40%\n	1	1	2		0	0	0									ChargedRunestoneG				thng		-1
+ir04	Quest Item\n\gold;Charged Riftstone (\green;4\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes may spawn\n\green;Immune to Crowd Control, Max Slow Effect: 25%\n\grey;Cannot be Chilled or Frozen\n\nElemental Resists: +9%\nDamage: +30%\nLife: +60%\n	1	1	2		0	0	0									ChargedRunestoneG				thng		-1
+ir05	Quest Item\n\gold;Charged Riftstone (\green;5\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes may spawn\n\green;Immune to Crushing Blow, 50% Less Poison Duration\n\grey;Immune to Crowd Control, Max Slow Effect: 25%\nCannot be Chilled or Frozen\n\nElemental Resists: +12%\nDamage: +40%\nLife: +80%\n	1	1	2		0	0	0									ChargedRunestoneG				thng		-1
+ir06	Quest Item\n\gold;Charged Riftstone (\orange;6\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes and Champions may spawn\nImmune to Crushing Blow, 50% Less Poison Duration\nImmune to Crowd Control, Max Slow Effect: 25%\n\green;Absorb 50% Fire, Cold and Lightning\n\grey;Cannot be Chilled or Frozen\n\nElemental Resists: +15%\nDamage: +50%\nLife: +100%\n	1	1	2		0	0	0									ChargedRunestoneY				thng		-1
+ir07	Quest Item\n\gold;Charged Riftstone (\orange;7\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes and Champions may spawn\nImmune to Crushing Blow, 50% Less Poison Duration\nImmune to Crowd Control, Max Slow Effect: 25%\n\grey;Absorb 50% Fire, Cold and Lightning\nCannot be Chilled or Frozen\n\green;Dimensional Tear\n\n\grey;Elemental Resists: +18%\n\green;Monster Density: +10%\n\grey;Damage: +60%\nLife: +120%\n	1	1	2		0	0	0									ChargedRunestoneY				thng		-1
+ir08	Quest Item\n\gold;Charged Riftstone (\orange;8\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes and Champions may spawn\nImmune to Crushing Blow, 50% Less Poison Duration\nImmune to Crowd Control, Max Slow Effect: 25%\nAbsorb 50% Fire, Cold and Lightning\nCannot be Chilled or Frozen\n\green;50% Leech Resistance\n\grey;Dimensional Tear\n\nElemental Resists: +21%\nMonster Density: +10%\nDamage: +70%\nLife: +140%\n	1	1	2		0	0	0									ChargedRunestoneY				thng		-1
+ir09	Quest Item\n\gold;Charged Riftstone (\orange;9\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes and Champions may spawn\nImmune to Crushing Blow, 50% Less Poison Duration\nImmune to Crowd Control, Max Slow Effect: 25%\nAbsorb 50% Fire, Cold and Lightning\nCannot be Chilled or Frozen\n\green;+70% Movement Speed\n\grey;50% Leech Resistance\nDimensional Tear\n\green;Curse Immunity\n\n\grey;Elemental Resists: +24%\nMonster Density: +10%\nDamage: +80%\nLife: +160%\n	1	1	2		0	0	0									ChargedRunestoneY				thng		-1
+ir10	Quest Item\n\gold;Charged Riftstone (\orange;10\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes and Champions may spawn\nImmune to Crushing Blow, 50% Less Poison Duration\nImmune to Crowd Control, Max Slow Effect: 25%\nAbsorb 50% Fire, Cold and Lightning\nCannot be Chilled or Frozen\n+70% Movement Speed\n50% Leech Resistance\n\green;No Monster Corpses\n\grey;Dimensional Tear\nCurse Immunity\n\nElemental Resists: +27%\nMonster Density: +10%\nDamage: +90%\nLife: +180%\n	1	1	2		0	0	0									ChargedRunestoneY				thng		-1
+ir11	Quest Item\n\gold;Charged Riftstone (\red;11\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes, Champions and Sovereigns may spawn\nImmune to Crushing Blow, 50% Less Poison Duration\nImmune to Crowd Control, Max Slow Effect: 25%\nAbsorb 50% Fire, Cold and Lightning\nCannot be Chilled or Frozen\n+70% Movement Speed\n50% Leech Resistance\nNo Monster Corpses\n\green;Empowered Skills\n\grey;Dimensional Tear\nCurse Immunity\n\nElemental Resists: +30%\nMonster Density: +10%\n\green;Pack Size: +20%\n\grey;Damage: +100%\nLife: +200%\n	1	1	2		0	0	0									ChargedRunestoneR				thng		-1
+ir12	Quest Item\n\gold;Charged Riftstone (\red;12\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes, Champions and Sovereigns may spawn\nImmune to Crushing Blow, 50% Less Poison Duration\nImmune to Crowd Control, Max Slow Effect: 25%\n\green;Reduce Player Avoid and Block on Hit\n\grey;Absorb 50% Fire, Cold and Lightning\nCannot be Chilled or Frozen\n+70% Movement Speed\n50% Leech Resistance\nNo Monster Corpses\nEmpowered Skills\nDimensional Tear\nCurse Immunity\n\nElemental Resists: +33%\nMonster Density: +10%\nPack Size: +20%\nDamage: +110%\nLife: +220%\n	1	1	2		0	0	0									ChargedRunestoneR				thng		-1
+ir13	Quest Item\n\gold;Charged Riftstone (\red;13\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes, Champions and Sovereigns may spawn\nImmune to Crushing Blow, 50% Less Poison Duration\nImmune to Crowd Control, Max Slow Effect: 25%\n\green;Gain 200% of Physical Damage as Elemental\n\grey;Reduce Player Avoid and Block on Hit\nAbsorb 50% Fire, Cold and Lightning\nCannot be Chilled or Frozen\n+70% Movement Speed\n50% Leech Resistance\nNo Monster Corpses\nEmpowered Skills\nDimensional Tear\nCurse Immunity\n\nElemental Resists: +36%\nMonster Density: +10%\nPack Size: +20%\nDamage: +120%\nLife: +240%\n	1	1	2		0	0	0									ChargedRunestoneR				thng		-1
+ir14	Quest Item\n\gold;Charged Riftstone (\red;14\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes, Champions and Sovereigns may spawn\nImmune to Crushing Blow, 50% Less Poison Duration\nImmune to Crowd Control, Max Slow Effect: 25%\nGain 200% of Physical Damage as Elemental\nReduce Player Avoid and Block on Hit\nAbsorb 50% Fire, Cold and Lightning\n\green;Pierce 100% Elemental Resists\n\grey;Cannot be Chilled or Frozen\n+70% Movement Speed\n50% Leech Resistance\nNo Monster Corpses\nEmpowered Skills\nDimensional Tear\nCurse Immunity\n\nElemental Resists: +40%\nMonster Density: +10%\nPack Size: +20%\nDamage: +130%\nLife: +260%\n	1	1	2		0	0	0									ChargedRunestoneR				thng		-1
+ir15	Quest Item\n\gold;Charged Riftstone (\red;15\gold;)	\dgrey;- Transmute -\n\n\grey;Monster Heroes, Champions and Sovereigns may spawn\nImmune to Crushing Blow, 50% Less Poison Duration\nImmune to Crowd Control, Max Slow Effect: 25%\nGain 200% of Physical Damage as Elemental\nReduce Player Avoid and Block on Hit\nAbsorb 50% Fire, Cold and Lightning\nPierce 100% Elemental Resists\nCannot be Chilled or Frozen\n+70% Movement Speed\n50% Leech Resistance\nNo Monster Corpses\nEmpowered Skills\nDimensional Tear\nCurse Immunity\n\green;Nemesis\n\n\n\grey;Elemental Resists: +45%\nMonster Density: +40%\nPack Size: +20%\nDamage: +150%\nLife: +300%\n	1	1	2		0	0	0									ChargedRunestoneR				thng		-1
 ir81	\orange;Occult Effigy\nCelestial Wind	\blue;+10 Required Level\nSet Movement Speed to 40%\n\grey;Cube with Boots to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									OccultOrb				thng		-1
 ir82	\orange;Occult Effigy\nSigil of Absolution	\blue;(Max 2 Uses per Item)\nRequirements +25%\n-5 Required Level\n\grey;Cube with Any Weapon/Armor to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									OccultOrb				thng		-1
 ir83	\orange;Occult Effigy\nPath of Brutality	\blue;+10 Required Level\nItem Becomes (Your Class Only)\nTransforms every +1 to All Skills to +3% Deadly Strike\n\grey;Cube with Unique Ring/Amulet to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									OccultOrb				thng		-1
 ir84	\orange;Occult Effigy\nEmpyrean Touch	\red;Does Not Work on Indestructible Items\n\n\blue;+10 Required Level\nItem Becomes Ethereal\n\grey;Cube with Any Weapon/Armor to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									OccultOrb				thng		-1
-ir85	\orange;Occult Effigy\nElemental Ire	\blue;+10 Required Level\nAdds 75-125 Lightning Damage\nAdds 75-125 Fire Damage\n\grey;Cube with a Quiver to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									OccultOrb				thng		-1
+ir85	\orange;Occult Effigy\nElemental Ire	\blue;+10 Required Level\nAdds 40-60 Lightning Damage\nAdds 40-60 Fire Damage\n\grey;Cube with a Quiver to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									OccultOrb				thng		-1
 ir86	\orange;Occult Effigy\nBreath of Thaumaturgy	\blue;+25 Required Level\nItem can be blessed Again\n\grey;Cube with a Blessed Crafted Weapon/Armor to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									OccultOrb				thng		-1
-ir87	\orange;Occult Effigy\nElemental Dominion	\blue;+10 Required Level\nAdds 150-250 Cold Damage\nAdds 150-250 Lightning Damage\nAdds 150-250 Fire Damage\n\grey;Cube with a Zero Socket Weapon to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									OccultOrb				thng		-1
-ir88	\orange;Occult Effigy\nArcane Hunger	\blue;+10 Required Level\n(Max 1 Use per Item)\nItem Cannot be Unsocketed\nAll Life Leech transformed to +25% Spell Damage\n\grey;with at least 15% Life Leech to Add Bonus\nCube with a One Handed Weapon\n\nCube Reagent	1	1	2		0	0	0									OccultOrb				thng		-1
+ir87	\orange;Occult Effigy\nElemental Dominion	\blue;+10 Required Level\nAdds 75-125 Cold Damage\nAdds 75-125 Lightning Damage\nAdds 75-125 Fire Damage\n\grey;Cube with a Zero Socket Weapon to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									OccultOrb				thng		-1
+ir88	\orange;Occult Effigy\nArcane Hunger	\blue;+10 Required Level\n(Max 1 Use per Item)\nItem Cannot be Unsocketed\nAll Life Leech transformed to +20% Spell Damage\n\grey;with at least 15% Life Leech to Add Bonus\nCube with a One Handed Weapon\n\nCube Reagent	1	1	2		0	0	0									OccultOrb				thng		-1
 ir89	\orange;Occult Effigy\nDark Summoning	\blue;+10 Required Level\n1% Reanimate as: Random Monster\n\grey;Cube with Gloves to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									OccultOrb				thng		-1
 ir91	Quest Item\n\gold;Dream Fragment (1)	And most importantly: to what purpose?\n\nclosely match our own. I wonder what eldritch sorcery is involved here.\non Sanctuary. They appear to be terraforming these dimensions to\nYet the creatures I have encountered here clearly did not originate\n\nThese worlds are both familliar and different at the same time.\n	1	1	2		0	0	0									DreamFragment				thng		-1
 ir92	Quest Item\n\gold;Dream Fragment (2)	Witness me, Ancestors. I who lived honorable and died like a fool.\n\nThe one so closely aligned to a line from the sky to the Arreat Summit.\nCould not make much of it, but a star marked there caught my eye.\nOne of the mages I slew was carrying the fragment of a scroll.\n\nno council. This lack of preparation will now be my end.\nI entered the Rift like an impetuous whelp, seeking glory and heeding\nThe filth crumbles swiftly before my axe, but there is no end in sight.\n	1	1	2		0	0	0									DreamFragment				thng		-1
@@ -1907,7 +1907,7 @@ tal	Tail		1	1	2		0	0	0									invtail				body		-1
 tbk	Tome of Town Portal		1	2	2	1	0	0	0									invbbk				book		-1
 tbr	By Mel Odom\nThe Black Road		1	1	2		110	0	0									invsbk3				grtz		-1
 tch	Torch		1	2	2		0	0	0									invtrch				torc		-1
-ths	The Sleep	Cube with Trophy to Awaken	1	1	2		115	0	0									jewelabc				grtz		-1
+ths	The Sleep	\orange;Cube with Trophy to Awaken\grey;	1	1	2		115	0	0									jewelabc				grtz		-1
 toa	\orange;Belladonna Extract	Right-click to reset Stat/Skill Points	1	1	2		0	0	0									pot04				ques		-1
 tr1	Horadric Scroll		2	2	2		0	0	0									invhscr	10			ques		-1
 tr2	Scroll of Resistance	\blue;+10% to Elemental Resistances\n\grey;Cube with the Sunstone of the Twin Seas to Add Bonus\n\nCube Reagent	2	2	2		0	0	0									invscb	32			thng		-1

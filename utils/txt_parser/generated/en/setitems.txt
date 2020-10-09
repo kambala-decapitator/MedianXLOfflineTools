@@ -225,7 +225,7 @@
 350	Angel of Death	(Wyrd Set)\nAstrogha's Moon	M_AstroghasMoon	90																																									
 351	Viper Skin	(Wyrd Set)\nAstrogha's Moon	M_AstroghasMoon	100																																									
 352	Darkling	(Wyrd Set)\nAstrogha's Moon	M_AstroghasMoon	100																																									
-353	The Judgment	(Sorceress Arcane Set)\nVizjerei Dominion	M_VizjereiDominion	100					cd-reduce		100	100					syn2		1	1																				5	5000		0		
+353	The Judgment	(Sorceress Arcane Set)\nVizjerei Dominion	M_VizjereiDominion	100					cd-reduce		100	100																												5	5000		0		
 354	The Catalyst	(Sorceress Arcane Set)\nVizjerei Dominion	M_VizjereiDominion	100																																				5	5000		0		
 355	The Hunger	(Sorceress Arcane Set)\nVizjerei Dominion	M_VizjereiDominion	100																																									
 356	The Darkness	(Sorceress Arcane Set)\nVizjerei Dominion	M_VizjereiDominion	100																																									

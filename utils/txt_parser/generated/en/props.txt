@@ -156,7 +156,7 @@
 184	0	5																	x_signet01
 185				12					Stat Signets Used:	Stat Signets Used:		3	9	2					potion_stat_cap
 186				8					Skill Signets Used:	Skill Signets Used:		3	9	2					potion_skill_cap
-187	0	3							Dragonheart Spell Blinds Attacker	Dragonheart Spell Blinds Attacker		12	27	2					passive_lionheart_addstupidth
+187	0	3																	stance_ID
 188	0	3							+%d to Javelin and Spear Skills	+%d to Javelin and Spear Skills		14	156					16	item_addskill_tab
 189	0	16																	damage_divisor
 191	0	5																	x_signet02
@@ -233,7 +233,7 @@
 264	0	5																	x_signet37
 265	0	10							Life after each Kill	Life after each Kill		1	21	1					item_healafterplayerkill
 266	0	7							\orange;Area Effect Attack\grey;	\orange;Area Effect Attack\grey;		3	248	0				17	item_warp_blue
-267	0	5							Enhanced Stance Radius	Enhanced Stance Radius		1	203	1					item_stance_radius
+267	0	5							Enhanced Stance Radius	Enhanced Stance Radius			0	0					hotp
 270	0	3																	item_has_edyrem
 271	0	8							%d%% Chance to cast level %d %s when you Die	%d%% Chance to cast level %d %s when you Die		15	165					17	item_skillonanydeath
 273	25	7																	item_crushthorns
@@ -241,7 +241,7 @@
 275	0	9							Enhanced Damage vs. Necrobots	Enhanced Damage vs. Necrobots		2	8	1					item_desc_breaker
 276	0	1							\dgrey;Cannot be Disenchanted\blue;	\dgrey;Cannot be Disenchanted\blue;		3	4	0					item_nodcht
 277	0	7							\orange;Area Effect Attack\grey;	\orange;Area Effect Attack\grey;		3	248	0				17	item_warpskillonattack
-278	200	10							Strength Factor to Spell Damage	Strength Factor to Spell Damage		1	203	1					str_factor
+278	200	10							Spell Focus	Spell Focus		1	203	1					str_factor
 279	0	9							Lion Stance Damage Bonus	Lion Stance Damage Bonus		2	119	2					lion_stance_syn
 280	0	10																	greathunt_buff
 281	0	8							Nova Charge Scatter Increased by	Nova Charge Scatter Increased by		2	109	2					item_supernova_synergy
@@ -353,6 +353,7 @@
 412	0	10																	resonance_buff
 413	0	8							Bonus to Vitality when using an Apple	Bonus to Vitality when using an Apple		2	55	1					skill_bloodymary_bonus
 414	50	9							Bonus to Summoned Edyrem Life	Bonus to Summoned Edyrem Life		4	133	1					skill_edyrem_hp_percent
+415	0	12							\grey;Innate Fire Damage: \red;%d\grey; (%.1f%% of %s)	\grey;Innate Fire Damage: \red;%d\grey; (%.1f%% of %s)		35	253	0				16	ied_display
 417	0	16																5	ele_divisor
 418	0	2							\orange;Can Be Upgraded with Black Road Challenge	\orange;Can Be Upgraded with Black Road Challenge		3	230	0					item_needschallenged
 421	0	4																	scosglen_check
@@ -401,9 +402,9 @@
 482	0	10																	item_gem_paragon
 483	0	10																	item_rune_runemaster
 484	50	9							Innate Elemental Damage	Innate Elemental Damage		2	99	1					IED
-485	200	10							Energy Factor to Spell Damage	Energy Factor to Spell Damage		1	200	1					enr_factor
+485	200	10							Spell Focus	Spell Focus		1	200	1					enr_factor
 487	25	9							to Summoned Minion Resistances	to Summoned Minion Resistances		4	82	1					minion_resist_all
-488	50	9							Bonus to Energy Factor	Bonus to Energy Factor		4	162	1					enr_factor_percent
+488	50	9							Bonus to Spell Focus	Bonus to Spell Focus		4	162	1					enr_factor_percent
 489	0	10							Target Takes Additional Damage of	Target Takes Additional Damage of		3	18	2					item_targettakesdamage
 492	50	8							Reduced Healing Rate from Apples	Increased Healing Rate from Apples		4	36	1					item_faster_potions
 493	50	8							Slows Ranged Attacker by	Slows Ranged Attacker by		2	79	2					skill_slowrangedthorns

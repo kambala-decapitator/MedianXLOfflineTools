@@ -41,7 +41,7 @@
 39	Lylia's Curse	125	
 40	Umbaru Treasure	120	
 41	Soul of Kabraxis	120	
-42	Golden Cycle	120	
+42	Golden Cycle	0	invch7
 43	\grey;Quest Item\n\gold;Tome of Possession	120	
 44	Astrogha's Venom Stinger	125	
 45	The Book of Lies	125	
@@ -1392,7 +1392,7 @@
 1390	Aeterna	100	
 1391	Sarandeshi Hellcaller	100	
 1392	Esubane	100	
-1393	Colliding Fury	100	
+1393	Giyua's Grace	100	
 1394	Rodeo's Hide	100	
 1395	Pawnstorm	100	
 1396	Armor of the Old Religion	100	
@@ -1525,7 +1525,7 @@
 1523	Asheara's Cateye	100	
 1524	Zakarum Stoning Rock	60	
 1525	Wishmaster	0	
-1526	Atomus	0	
+1526	Atomus	120	
 1527	Inarius' Rock	100	
 1528	Xepera Xeper Xeperu	110	
 1529	Arkenstone	100	
@@ -1677,7 +1677,7 @@
 1675	Meshif's Iron Parrot	100	
 1676	Dark Nemesis	100	
 1677	Lancea	100	
-1678	Heartseeker	100	
+1678	Thrillseeker	100	
 1679	Royal Circlet	100	
 1680	Radiance	100	
 1681	Hexward	100	
@@ -1749,3 +1749,6 @@
 1747	Ophiophagus	120	
 1748	Malus Domestica	100	
 1749	Unveiling Eye	130	invsoulseek
+1750	Zephyr	100	
+1751	Void-Touched	100	voidmaple
+1752	Void-Infused	0	voidmaple

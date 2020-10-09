@@ -22,7 +22,7 @@
 20	Death Blossom	-1	0	0	0	58
 21	Holy Trap	-1	0	0	0	86
 22	Fear Bomb Totem	-1	0	0	0	81
-23	Spore Shot	-1	2	3	3	14
+23	Heartseeker	-1	0	0	0	14
 24	OHMAN	-1	0	0	0	197
 25		-1				
 26		-1				
@@ -80,7 +80,7 @@
 78	Javelin Nova	-1	0	0	0	0
 79	Immolation Bomb	-1	0	0	0	65
 80	Raise Skeletal Mage	-1	3	3	3	28
-81	Poison Flash	-1	2	1	2	70
+81	Harvest	-1	2	1	3	70
 82	Boneyard	-1	2	1	1	116
 83	Totembound Guardian	-1	0	0	0	158
 84		-1				
@@ -113,7 +113,7 @@
 111	Fire Fountain	-1	0	0	0	180
 112		-1				
 113	Concentration	-1	2	4	1	34
-114	Mythal	-1	2	4	2	108
+114	Mythal	-1	3	1	1	108
 115		-1				
 116	Detonate	-1	0	0	0	21
 117	Balefire	-1	2	2	1	30
@@ -151,7 +151,7 @@
 149		-1				
 150	Black Lotus Strike	-1	0	0	0	51
 151	Whirlwind	-1	1	6	1	50
-152		-1				
+152	Devastation	-1	0	0	0	0
 153	Nova Bomb	-1	0	0	0	90
 154	Immolation Bomb	-1	0	0	0	65
 155	Cluster Bomb	-1	0	0	0	10
@@ -222,7 +222,7 @@
 220	Том Городского Портала	-1	0	0	0	6
 221		-1				
 222		-1				
-223	Poison Flash	-1	2	1	2	70
+223	Harvest	-1	2	1	3	70
 224		-1				
 225		-1				
 226		-1				
@@ -233,7 +233,7 @@
 231		-1				
 232		-1				
 233		-1				
-234		-1				
+234	Pagan Ritual	-1	0	0	0	161
 235		-1				
 236	Lightning Arena	-1	0	0	0	184
 237		-1				
@@ -380,26 +380,26 @@
 378	Egg Trap	5	1	3	2	86
 379	Ferocity	5	1	4	2	60
 380	Thorn Wall	5	1	5	2	98
-381	Laughing Ghost	5	2	1	3	110
-382	Cascade	5	2	2	3	12
-383	Spore Shot	5	2	3	3	14
-384	Elfin Weapons	5	2	4	3	16
-385	Nova Shot	5	2	5	3	18
-386	Elemental	5	2	1	1	20
-387	Hunting Banshee	5	2	2	1	22
-388	Pagan Rites	5	2	3	1	24
-389	Rain of Fire	5	2	4	1	64
-390	Hurricane	5	2	5	1	104
+381	Steady Shot	5	2	1	1	110
+382	Cascade	5	2	2	1	12
+383	Heartseeker	5	2	3	1	14
+384	Pathfinder	5	2	4	1	16
+385	Bear Companion	5	2	5	1	18
+386	Ember Spirit	5	2	1	2	20
+387	Hunting Banshee	5	2	2	2	22
+388	Pagan Rites	5	2	4	2	24
+389	Rain of Fire	5	2	3	2	64
+390	Hurricane	5	2	5	2	104
 391	Превращение в Медведя	5	1	1	1	58
 392	Rend	5	1	2	1	90
-393	Circle of Life	5	1	4	1	42
+393	Hunger	5	1	4	1	42
 394	Wildfire	5	1	3	1	100
 395	Idol of Scosglen	5	1	5	1	106
-396	Poison Flash	5	2	1	2	70
-397	Elvensong	5	2	2	2	84
-398	Plague Avatar	5	2	3	2	44
-399	Mythal	5	2	4	2	108
-400	Acid Fiends	5	2	5	2	48
+396	Harvest	5	2	1	3	70
+397	Elvensong	5	2	2	3	84
+398	Infected Roots	5	2	3	3	44
+399	Mythal	5	3	1	1	108
+400	Harvesters	5	2	5	3	48
 401	Blood Skeleton	2	1	1	3	130
 402	Night Hawks	2	1	2	3	136
 403	Abyss Knight	2	1	3	3	126
@@ -471,7 +471,7 @@
 469	Arachnomancy	1	2	4	1	82
 470	Hive	1	2	5	1	38
 471	Moonstrike	1	2	1	3	40
-472	Familiar	1	2	2	2	98
+472	Rite of the Familiar	1	2	2	2	98
 473	Arcane Torrent	1	2	3	2	44
 474	Mana Sweep	1	2	4	2	46
 475	Bladestorm	1	2	5	3	104
@@ -557,7 +557,7 @@
 555	Azure Orb	-1	0	0	0	228
 556	Flamefront	-1	1	1	1	62
 557		-1				
-558	Time Strike	-1	0	0	0	74
+558	Vanquish	-1	0	0	0	75
 559		-1				
 560		-1				
 561		-1				
@@ -609,7 +609,7 @@
 607	Vine Companion	5	3	5	3	122
 608	Runemaster	4	3	5	2	54
 609	Shamanic Trance	4	2	4	1	56
-610	Force of Nature	5	3	5	1	62
+610	Survival Instinct	5	3	5	1	62
 611	Faerie Fire	5	3	5	2	54
 612	Tremor	-1	0	0	0	29
 613	Jinn	2	3	5	1	146
@@ -649,7 +649,7 @@
 647	Call Treewarden	-1	0	0	0	54
 648	Graveyard	2	3	1	3	68
 649	Blessed Life	3	3	1	3	8
-650		-1				
+650	Barkskin	5	2	4	3	76
 651		-1				
 652	Golden Calf	-1	0	0	0	192
 653		-1				
@@ -750,7 +750,7 @@
 748		-1				
 749		-1				
 750		-1				
-751	Cascade	-1	2	2	3	12
+751	Cascade	-1	2	2	1	12
 752		-1				
 753		-1				
 754	Thunder Wave	-1	0	0	0	0
@@ -814,7 +814,7 @@
 812	Summon Fallen	-1	0	0	0	176
 813	Bolt	-1	0	0	0	0
 814	Lifeblood	-1	0	0	0	115
-815	Elfin Weapons	-1	2	4	3	16
+815	Pathfinder	-1	2	4	1	16
 816	Trinity Nova	-1	0	0	0	220
 817	Guard Tower	-1	0	0	0	37
 818	Mana Sweep	-1	2	4	2	46
@@ -826,7 +826,7 @@
 824	Meteor Shower	-1	0	0	0	47
 825	Countdown	-1	0	0	0	163
 826	Static Lance	-1	0	0	0	225
-827	Hunting Banshee	-1	2	2	1	22
+827	Hunting Banshee	-1	2	2	2	22
 828	Winter Avatar	-1	0	0	0	42
 829	Jitan's Gate	-1	0	0	0	8
 830	Sunburn	-1	0	0	0	156
@@ -850,7 +850,7 @@
 848		-1				
 849		-1				
 850		-1				
-851	Elemental	-1	2	1	1	20
+851	Ember Spirit	-1	2	1	2	20
 852		-1				
 853	Gamma Field	-1	0	0	0	44
 854		-1				
@@ -878,7 +878,7 @@
 876	Purify	-1	0	0	0	9
 877	Powder Keg	-1	0	0	0	208
 878		-1				
-879	Lifeshield	5	3	1	1	76
+879		-1				
 880	Broadside	-1	1	5	2	38
 881	Crane Stance	-1	0	0	0	99
 882	Powder Keg	-1	0	0	0	208
@@ -910,7 +910,7 @@
 908		-1				
 909		-1				
 910		-1				
-911		-1				
+911	Gift of Inner Fire	-1	0	0	0	0
 912	Spike Rush	-1	0	0	0	0
 913	Thorn Field	-1	0	0	0	157
 914	Punisher Bolt	-1	0	0	0	69
@@ -919,7 +919,7 @@
 917	Pyroblast	-1	1	4	1	68
 918		-1				
 919	Queen of Blades	-1	2	3	1	4
-920	Hunting Banshee	-1	2	2	1	22
+920	Hunting Banshee	-1	2	2	2	22
 921	Lightning Fury	-1	0	0	0	254
 922	Pounce	-1	1	5	3	70
 923	Lifeblood	-1	0	0	0	115
@@ -928,7 +928,7 @@
 926	Divine Apparition	-1	3	1	1	62
 927	Blast Wave	-1	0	0	0	96
 928	Venomous Spirit	-1	0	0	0	94
-929		-1				
+929	Devastation	-1	0	0	0	0
 930	Arrowside	-1	0	0	0	0
 931	Arrowside	-1	0	0	0	0
 932	Superbeast	-1	3	5	3	54
@@ -988,9 +988,9 @@
 986	Cluster Bomb	-1	0	0	0	10
 987	Frozen Orb	-1	0	0	0	228
 988		-1				
-989		-1				
+989	Corrupted Vines	-1	0	0	0	0
 990	Balefire	-1	2	2	1	30
-991		-1				
+991	Cold Fear	-1	0	0	0	56
 992		-1				
 993	Shower of Rocks	-1	1	5	2	6
 994	Blindside	-1	0	0	0	0
@@ -1074,7 +1074,7 @@
 1072	Flamestrike	-1	1	3	1	4
 1073		-1				
 1074		-1				
-1075	Poison Flash	-1	2	1	2	70
+1075		-1				
 1076		-1				
 1077		-1				
 1078		-1				
@@ -1323,7 +1323,7 @@
 1321	Snake Bite	-1	1	1	3	40
 1322	Rend	-1	1	2	1	90
 1323	Idol of Scosglen	-1	1	5	1	106
-1324	Plague Avatar	-1	2	3	2	44
+1324	Infected Roots	-1	2	3	3	44
 1325	Frozen Breath	-1	1	3	3	66
 1326	Mind Flay	-1	2	1	3	32
 1327	Pyroblast	-1	1	4	1	68
@@ -1415,7 +1415,7 @@
 1413	Earthquake	-1	0	0	0	0
 1414	Harbinger	-1	0	0	0	97
 1415	Fire Bolt Nova	-1	0	0	0	219
-1416	Homing Nova Shot	-1	0	0	0	235
+1416		-1				
 1417		-1				
 1418	\tan;Быстрый Wyrmshot	-1	0	0	0	236
 1419	Carnage	-1	0	0	0	237
@@ -1600,3 +1600,18 @@
 1598	Gift of the Wild	-1	0	0	0	101
 1599	Thunderstone	-1	1	2	2	22
 1600		-1				
+1601	Wolf Stance	-1	2	5	3	50
+1602	Wolf Stance	-1	2	5	3	50
+1603	Lion Stance	-1	2	1	3	12
+1604	Snake Stance	-1	2	2	3	14
+1605	Bear Stance	-1	2	3	3	16
+1606	Lion Stance	-1	2	1	3	12
+1607	Snake Stance	-1	2	2	3	14
+1608	Bear Stance	-1	2	3	3	16
+1609	Eagle Stance	-1	2	4	3	18
+1610		-1				
+1611	Heartseeker	-1	0	0	0	14
+1612	Nova Shot	-1	0	0	0	18
+1613	Cascade	-1	2	2	1	12
+1614	Laughing Ghost	-1	0	0	0	110
+1615	Laughing Ghost	-1	0	0	0	110
