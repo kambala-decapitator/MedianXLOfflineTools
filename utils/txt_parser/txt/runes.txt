@@ -6,93 +6,93 @@ Jewelword4	1	Runeword Auto Filler							weap	armo		jew	jew	jew	jew			res-all		20
 Jewelword5	1	Runeword Auto Filler							weap	armo		jew	jew	jew	jew	jew		res-all		25	25	all-stats		25	25																					Jewelword5		0
 Jewelword6	1	Runeword Auto Filler							weap	armo		jew	jew	jew	jew	jew	jew	res-all		30	30	all-stats		30	30																					Jewelword6		0
 Dawn	1	R	weap									r01						dmg%		18	35	gold%		4	8	all-stats%		10	10	kill-skill	496	5	7	balance3		15	15	att%		101	150	light		1	1	Dawn		0
-Shark	1	Y	weap									r07						dmg/lvl	4	4	4	dmg%		24	35	kill-skill	600	5	9	blood-phys		11	15	swing3		20	20	mana		-1	-1					Shark		0
+Shark	1	Y	weap									r07						dmg/lvl	4	4	4	dmg%		24	35	kill-skill	600	5	9	blood-phys		7	9	swing3		20	20	mana		-1	-1					Shark		0
 Enyo	1	R	weap									r14						dmg-min		6	10	hpm-str%-enr%		20	20	att-skill	347	10	18	dmg%		69	92	dmg-stun		125	125	allskills		1	1	reanimate	712	5	10	Enyo		0
 Azrael	1	R	weap									r21						res-fire		26	26	kill-skill	518	10	30	hp		101	200	dmg%		87	103	lifesteal		6	13	str-heal		50	50	swingcast3		40	40	Azrael		0
-Void	1	N	weap									r28						res-cold		40	40	dmg%		58	72	slow		33	33	red-dmg		11	15	mana-hit		21	25	reanimate	2344	2	2	dmg-norm		7	13	Void		0
+Void	1	N	weap									r28						res-cold		40	40	dmg%		58	72	slow		33	33	red-dmg		11	15	mana-hit		11	13	reanimate	2344	2	2	dmg-norm		7	13	Void		0
 Oblivion	1	N	weap									r35						all-stats%		7	7	dmg/lvl	12	12	12	att-skill	1002	20	40	dmg%		115	143	crush		5	5	extra-pois		16	20	charged	459	17	20	Oblivion		0
 Berith	1	N	weap									r42						wirts		100	100	gold%		40	40	dmg%		115	143	all3		50	50	ac-global		11	15									Berith		0
-Gehenna	1	Y	weap									r47						hp%-mp%		23	23	dmg%		144	171	att-skill	703	20	32	dmg-cold	250	188	250	dmg-pois	25	1536	2048	ease		-33	-33	gehenna		25	25	Gehenna		0
-Triune	1	N	weap									r53						dmg%		115	143	dmg-elem		84	417	dmg-max		84	84	res-fcl		66	66	hp-mana		201	400									Triune		0
-Banshee	1	R	bow									r03						dmg%		18	35	hit-skill	459	1	7	dmg/lvl	8	8	8	move3		5	5	dmg-cold	75	5	13	abs-cold%		5	5	kill-skill	712	3	8	Banshee		0
+Gehenna	1	Y	weap									r47						hp%-mp%		23	23	dmg%		144	171	att-skill	703	20	32	dmg-cold	250	94	125	dmg-pois	25	1536	2048	ease		-33	-33	gehenna		25	25	Gehenna		0
+Triune	1	N	weap									r53						dmg%		115	143	dmg-elem		42	209	dmg-max		84	84	res-fcl		66	66	hp		201	400	mana		101	200					Triune		0
+Banshee	1	R	bow									r03						dmg%		18	35	hit-skill	459	1	7	dmg/lvl	8	8	8	move3		5	5	dmg-cold	75	3	7	abs-cold%		5	5	kill-skill	712	3	8	Banshee		0
 Shockwave	1	Y	bow									r12						dmg%		58	72	kill-skill	553	50	14	slow		11	15	crush		3	5	dex		21	40	enr		21	40	dmg-max		11	15	Shockwave		0
-Balance	1	R	bow									r22						unity		30	30	courage		15	15	dex		15	15	ac-global		11	15	dmg-global		41	50	dmg%		58	86					Balance		0
+Balance	1	R	bow									r22						unity		30	30	courage		15	15	dex		15	15	ac-global		11	15	dmg-global		25	30	dmg%		58	86					Balance		0
 Hive	1		bow									r30						dmg%		87	114	dmg-max		13	25	kill-skill	779	15	6	dmg-pois	25	1536	2304	regen/lvl	32	32	32	swing3		-15	-15					Hive		0
 Phantom	1		bow									r39						hit-skill	998	25	30	dmg%		144	171	all-stats		51	100	mana%		50	50	nofreeze		1	1									Phantom		0
 Curse	1	R	bow									r48						skill-dur		15	15	hit-skill	525	10	24	kill-skill	563	20	21	str%		25	25	dmg%		144	171	dmg/lvl	24	24	24	ac-global		21	25	Curse		0
 Typhaon	1	R	bow									r52						dmg%		172	200	hit-skill	492	13	11	wirts		50	50	res-all		31	40	swing3		40	40	dmg-max		76	125					Typhaon		0
-Thammuz	1	R	xbow									r04						dmg%		18	35	kill-skill	809	15	9	hp		111	111	dmg-fire		2	9	swing3		25	25	kill-skill	530	15	9					Thammuz		0
+Thammuz	1	R	xbow									r04						dmg%		18	35	kill-skill	809	15	9	hp		111	111	dmg-fire		1	5	swing3		25	25	kill-skill	530	15	9					Thammuz		0
 Python	1	R	xbow									r16						dex%		16	20	str%		21	25	dmg%		58	86	dmg/lvl	12	12	12	hp%		21	25	kill-skill	330	24	14	lifesteal		16	19	Python		0
 Cyclops	1	R (lvl 100)	xbow									r29						slow		25	25	dmg%		87	114	dmg-max		51	75	hit-skill	443	5	48	extra-ltng		16	20	swing3		50	50					Cyclops		0
 Tartarus	1		xbow									r44						dmg%		172	200	kill-skill	340	5	42	dmg/lvl	32	32	32	str%		41	50	res-fireltng		100	100	heal-kill		101	150					Tartarus		0
-Araboth	1		xbow									r45						dmg%		172	200	dmg-max		76	100	oskill	636	1	9	dmg-undead		101	150	all-stats		31	50	regen		41	50					Araboth		0
+Araboth	1		xbow									r45						dmg%		172	200	dmg-max		76	100	oskill	636	1	9	dmg-undead		61	90	all-stats		31	50	regen		41	50					Araboth		0
 Kingsblood2	1	R	knif						tkni			r26						addxp		4	4	dmg%		115	143	dmg-min		13	13	all-stats		31	40	allskills		1	1	light		2	2	lifesteal		6	12	Kingsblood2		0
 Endor	1	R low lvl	scyh									r31						dmg%		72	100	dmg-max		26	50	att-skill	387	25	34	att-skill	330	5	19	extra-cold		16	20	extra-pois		16	20					Endor		0
-Urada	1		swor									r46						ac		811	811	dmg%		144	171	reanimate	2340	4	4	dmg-ltng		1	276	all-stats		1	11	swing3		30	30	crush		5	5	Urada		0
-Sabertooth	1	R	axe									r48						dmg%		144	171	oskill	689	1	9	str		150	150	lifesteal		9	17	swing3		50	50	dmg-global/lvl	64	64	64					Sabertooth		0
-Seed of Conflict	1	R	scyh									r49						dmg%		144	171	dmg-max		51	63	ac-global		20	20	att-skill	712	5	9	heal-kill		101	150	mana-kill		101	150	nec		2	4	Seed of Conflict		0
+Urada	1		swor									r46						ac		811	811	dmg%		144	171	reanimate	2340	4	4	dmg-ltng		1	138	all-stats		1	11	swing3		30	30	crush		5	5	Urada		0
+Sabertooth	1	R	axe									r48						dmg%		144	171	oskill	689	1	9	str		150	150	lifesteal		9	17	swing3		50	50	dmg-global/lvl	39	39	39					Sabertooth		0
+Seed of Conflict	1	R	scyh									r49						dmg%		144	171	dmg-max		51	63	ac-global		20	20	att-skill	712	5	9	heal-kill		101	150	mana-kill		51	75	nec		2	4	Seed of Conflict		0
 Myrmidon	1	R low lvl ++	spea									r29						vit%		20	20	dmg%		87	114	dmg/lvl	24	24	24	dex%		20	20	oskill	666	1	4	ac-global		21	40	ease		15	15	Myrmidon		0
-Demhe	1	Y	mace	scep					hamm			r33						dmg%		172	200	dmg-max		38	50	att-skill	398	20	50	gehenna		11	13	mana-hit		101	150	dmg-stun		125	125					Demhe		0
-Calypso	1	R ++	hamm									r37						swing3		30	30	dmg%		144	171	kill-skill	702	20	21	skill-dur		21	25	att-skill	459	5	27	dmg-cold	75	375	500	dmg-norm		19	38	Calypso		0
+Demhe	1	Y	mace	scep					hamm			r33						dmg%		172	200	dmg-max		38	50	att-skill	398	20	50	gehenna		11	13	mana-hit		51	75	dmg-stun		125	125					Demhe		0
+Calypso	1	R ++	hamm									r37						swing3		30	30	dmg%		144	171	kill-skill	702	20	21	skill-dur		21	25	att-skill	459	5	27	dmg-cold	75	188	250	dmg-norm		19	38	Calypso		0
 Pax Mystica	1	Y	staf									r04						oskill	346	2	5	res-all		11	15	allskills		1	1	mag%		11	13													Pax Mystica		0
 Hadad	1	R	staf									r11						gethit-skill	669	5	13	allskills		2	2	extra-ltng/lvl	8	8	8	slow-thorns		11	15	oskill	680	1	4									Hadad		0
 Summanus	1	R	staf									r19						dex		50	50	enr		25	25	allskills		2	2	att-skill	999	5	17	dmg%		58	86	dmg-max		26	38	swing3		40	40	Summanus		0
 Akhenaten	1	R	staf									r27						vit%		15	15	allskills		3	4	cast3		20	20	extra-fire		21	25	extra-pois		21	25	slow-thorns		21	25	res-firepoison		50	50	Akhenaten		0
-Aes Dana	1		staf									r36						balance3		15	15	dru		5	7	dmg-minion		41	50	extra-pois		25	40	mana%		40	40	res-all-group		50	50					Aes Dana		0
+Aes Dana	1		staf									r36						balance3		15	15	dru		5	7	dmg-minion		21	25	extra-pois		25	40	mana%		40	40	res-all-group		50	50					Aes Dana		0
 Elverfolk	1	Y	staf									r44						enr-factor		51	100	allskills		6	8	pierce-all		21	30	res-all		31	50	ac-miss		750	750	enr%		21	30					Elverfolk		0
 Erilaz	1		staf									r51						ac		1000	1000	ac-global		41	50	sor		6	8	extra-fcl		21	30	ease		-20	-20	balance3		40	40	cast3		60	60	Erilaz		0
 Prophecy	1	R	scep									r06						dmg%		10	26	res-fire		21	40	res-cold		21	40	fire-thorns		21	25	cold-thorns	125	21	25	allskills		1	1	dmg-max		3	4	Prophecy		0
 Bane	1	R	scep									r17						dmg%		58	86	att-skill	531	5	7	att%		31	50	dmg-max		8	13	swing3		20	20	all-stats		21	25	crush/lvl	2	2	2	Bane		0
-Judas	1	R	scep									r22						enr%		5	5	dmg-mon%	11	300	300	desc-bottom	11299	4	4	ease		-66	-66	gold%		20	20	mag%		33	33	reanimate	811	5	10	Judas		0
+Judas	1	R	scep									r22						enr%		5	5	dmg-mon%	11	180	180	desc-bottom	11299	4	4	ease		-66	-66	gold%		20	20	mag%		33	33	reanimate	811	5	10	Judas		0
 Path	1		scep									r30						ama		2	3	gethit-skill	699	7	36	extra-fire		16	20	extra-pm		16	20	ease		-20	-20	addxp		4	5	enr-factor%		11	15	Path		0
 Gabriel	1		scep									r40						swingcast3		30	30	dmg%		115	143	att-skill	579	20	27	extra-ltng		16	20	dmg-max		51	75	pal		3	5	str-vit-regen		100	100	Gabriel		0
-Durga	1		scep									r49						ama		3	4	dmg-minion		100	100	extra-fire		21	25	cast3		40	40	heal-kill		51	100	blood-elem		11	13	howl-thorns		11	15	Durga		0
+Durga	1		scep									r49						ama		3	4	dmg-minion		50	50	extra-fire		21	25	cast3		40	40	heal-kill		51	100	blood-elem		11	13	howl-thorns		11	15	Durga		0
 Galdr	1		scep									r51						oskill	1193	11	19	desc-top	11353	9	9	state	126	1	1	extra-pierce-fico		15	15	pal		3	5	extra-fico		3	13	block		1	1	Galdr		0
-Aegina	1	R	aspe									r11						dmg%		30	57	dmg-cold	25	1	25	oskill	571	1	4	manasteal		31	40	wirts		21	25	att-skill	702	5	3					Aegina		0
+Aegina	1	R	aspe									r11						dmg%		30	57	dmg-cold	25	1	13	oskill	571	1	4	manasteal		31	40	wirts		21	25	att-skill	702	5	3					Aegina		0
 Sankara	1		aspe									r34						swing3		30	30	dmg%		87	114	dmg-max		26	50	ac-global		31	50	heal-kill		101	150	kill-skill	814	5	9	att-skill	330	5	58	Sankara		0
 Rusalka	1	R	aspe									r46						dmg%		172	200	dmg-min		76	125	att-skill	1002	25	32	oskill	1110	1	12	kill-skill	387	30	60	extra-cop		71	100	all-stats		51	100	Rusalka		0
 Evanescence	1		aspe									r51						ama		2	4	dmg%		144	171	dmg-max		91	140	swing3		100	100	oskill	464	2	23	red-dmg%		21	25	heal-melee		250	250	Evanescence		0
-Scar	1	R	ajav									r16						dmg%		58	86	kill-skill	313	50	32	crush		3	5	dmg-fire		13	38	skill	324	3	4	dex		15	15					Scar		0
-Dragonfly	1	R	ajav									r26						dmg%		87	114	oskill	693	1	6	lifesteal		9	12	slow		11	15	swing3		20	20	dmg-fire		38	63	move3		10	10	Dragonfly		0
-Trishula	1		ajav									r34						dmg%		87	114	dmg-elem	125	125	250	unity		21	40	oskill	357	6	12	oskill	358	6	12	pierce-fcl		16	25					Trishula		0
-Stalactite	1		ajav									r52						wirts		100	100	dmg%		144	171	dmg-cold	50	125	250	kill-skill	708	30	60	reanimate	2343	4	4	abs-cold%		5	5	pierce-cold		25	30	Stalactite		0
+Scar	1	R	ajav									r16						dmg%		58	86	kill-skill	313	50	32	crush		3	5	dmg-fire		7	19	skill	324	3	4	dex		15	15					Scar		0
+Dragonfly	1	R	ajav									r26						dmg%		87	114	oskill	693	1	6	lifesteal		9	12	slow		11	15	swing3		20	20	dmg-fire		19	32	move3		10	10	Dragonfly		0
+Trishula	1		ajav									r34						dmg%		87	114	dmg-elem	125	63	125	unity		21	40	aura	1606	6	6	pierce-fcl		16	25	desc-top	11616	9	9					Trishula		0
+Stalactite	1		ajav									r52						wirts		100	100	dmg%		144	171	dmg-cold	50	63	125	kill-skill	708	30	60	reanimate	2343	4	4	abs-cold%		5	5	pierce-cold		25	30	Stalactite		0
 Corsair	1	R	abow									r15						oskill	635	1	4	dmg%		30	57	gold%		13	25	mag%		16	20	swing3		20	20	dex%		11	15					Corsair		0
 IceBreaker2	1		abow									r29						res-cold		51	70	dmg%		87	114	crush		7	7	dmg-max		26	38	nofreeze		1	1	kill-skill	453	25	46					IceBreaker2		0
 Colliding Worlds	1		abow									r43						oskill	384	1	6	dmg%		115	143	dmg-max		38	50	str		41	50	dex		41	50	charged	397	10	5					Colliding Worlds		0
 Manta	1	R	abow									r51						dmg-max		91	115	desc-bottom	11301	8	8	dmg%		172	200	reanimate	2336	4	4	lifesteal		16	21	swing3		60	60	kill-skill	999	5	18	Manta		0
-Shedim	1	R	h2h									r02						att%		25	25	dmg%		24	46	pierce-pois		6	8	dmg-pois	25	128	256	res-pois-len		11	20	mana-kill		11	15	dmg-undead		50	50	Shedim		0
-Fiend	1	R	h2h									r17						att-skill	699	20	6	dmg%		58	86	dmg-fire		50	63	swing3		25	25	mag%		11	20	oskill	833	1	7	oskill	824	1	7	Fiend		0
-Frequency	1	R	h2h									r27						dex%		5	5	dmg%		87	114	att-skill	579	10	20	res-ltng		31	60	hit-skill	540	13	7	dmg-stun		125	125	dmg-ltng		1	250	Frequency		0
-Choronzon	1		h2h									r34						dmg%		115	143	att-skill	459	20	24	pierce-cold		16	25	dmg-minion		21	40	gold%		30	30	hp-mana		333	333					Choronzon		0
-Anarchy	1	Y	h2h									r46						cast3		30	30	extra-fire		16	25	extra-ltng		16	25	ass		2	4	mana-kill		51	60	hp%-mp%		15	15					Anarchy		0
-Hail	1	Y	h2h									r48						dmg%		144	171	kill-skill	595	20	29	dmg-max		76	100	swing3		40	40	dmg-cold	25	125	375	ass		2	2					Hail		0
-Nahemah	1		h2h									r52						reanimate	2337	10	10	dmg%		172	200	oskill	569	16	19	oskill	469	16	19	dmg-max		101	125	dmg-cold	50	250	500					Nahemah		0
+Shedim	1	R	h2h									r02						att%		25	25	dmg%		24	46	pierce-pois		6	8	dmg-pois	25	128	256	res-pois-len		11	20	mana-kill		6	8	dmg-undead		30	30	Shedim		0
+Fiend	1	R	h2h									r17						att-skill	699	20	6	dmg%		58	86	dmg-fire		25	32	swing3		25	25	mag%		11	20	oskill	833	1	7	oskill	824	1	7	Fiend		0
+Frequency	1	R	h2h									r27						dex%		5	5	dmg%		87	114	att-skill	579	10	20	res-ltng		31	60	hit-skill	540	13	7	dmg-stun		125	125	dmg-ltng		1	125	Frequency		0
+Choronzon	1		h2h									r34						dmg%		115	143	att-skill	459	20	24	pierce-cold		16	25	dmg-minion		11	20	gold%		30	30	hp		333	333	mana		166	166	Choronzon		0
+Anarchy	1	Y	h2h									r46						cast3		30	30	extra-fire		16	25	extra-ltng		16	25	ass		2	4	mana-kill		26	30	hp%-mp%		15	15					Anarchy		0
+Hail	1	Y	h2h									r48						dmg%		144	171	kill-skill	595	10	29	dmg-max		76	100	swing3		40	40	dmg-cold	25	63	188	ass		2	2					Hail		0
+Nahemah	1		h2h									r52						reanimate	2337	10	10	dmg%		172	200	oskill	569	16	19	oskill	469	16	19	dmg-max		101	125	dmg-cold	50	125	250					Nahemah		0
 Khattak	1	R	nagi									r08						extra-ltng		3	3	dmg%		35	46	swing3		20	20	dmg-max		30	30	balance3		40	40									Khattak		0
 Hieros Gamos	1		nagi									r46						dex%		21	25	oskill	323	1	6	vit%		21	25	dmg%		144	171	swing3		40	40	oskill	76	1	9	kill-skill	450	2	11	Hieros Gamos		0
-Lataif-as-Sitta	1		nagi									r52						dmg%		172	200	dmg-max		101	150	swing3		50	50	ass		6	6	oskill	447	11	16	dmg-demon		200	200	oskill	455	11	16	Lataif-as-Sitta		0
+Lataif-as-Sitta	1		nagi									r52						dmg%		172	200	dmg-max		101	150	swing3		50	50	ass		6	6	oskill	447	11	16	dmg-demon		120	120	oskill	455	11	16	Lataif-as-Sitta		0
 Ram	1	R	bswd	baxe								r10						dmg%		30	57	oskill	643	1	4	str%		11	15	bar		1	1	str		16	20	dmg-stun		25	25					Ram		0
 Essus	1	R	bswd	baxe								r22						dmg%		30	57	dmg-max		6	10	oskill	688	1	9	stupidity		2	4	hp%		11	15									Essus		0
 Thunderbird	1	R	bswd	baxe								r32						att-skill	807	25	17	dmg%		87	114	att-skill	680	5	26	extra-ltng		16	20	pierce-ltng		6	10	ease		-10	-10	res-ltng		50	50	Thunderbird		0
 Savitr	1		bswd	baxe								r37						dmg%		115	143	light		4	4	att-skill	779	5	14	att-skill	515	5	40	crush		3	5	bar		2	4					Savitr		0
-Khan	1		bswd	baxe								r43						dmg%		115	143	dmg/lvl	24	24	24	dmg-minion		41	50	maxspirits		1	1	ac-global		31	50	all-stats%		20	20					Khan		0
+Khan	1		bswd	baxe								r43						dmg%		115	143	dmg/lvl	24	24	24	dmg-minion		21	25	maxspirits		1	1	ac-global		31	50	all-stats%		20	20					Khan		0
 Lahmu	1		bswd	baxe								r49						pierce-pois		21	25	dmg%		144	171	dmg-max		76	100	indestruct		1	1	life-manasteal		14	18	str		100	100	vit		100	100	Lahmu		0
-Kahless	1		bswd	baxe								r51						dmg%		172	200	dmg-max		116	140	att-skill	518	25	56	extra-fire		11	20	dmg-fire		400	550	swing3		60	60	reanimate	1863	1	1	Kahless		0
-Peacock	1	R	dbow									r13						dmg%		30	57	dmg-elem	50	7	13	res-courage		25	25	slow		10	10													Peacock		0
+Kahless	1		bswd	baxe								r51						dmg%		172	200	dmg-max		116	140	att-skill	518	25	56	extra-fire		11	20	dmg-fire		200	275	swing3		60	60	reanimate	1863	1	1	Kahless		0
+Peacock	1	R	dbow									r13						dmg%		30	57	dmg-elem	50	4	7	res-courage		25	25	slow		10	10													Peacock		0
 Lynx	1	R	dbow									r27						dmg%		87	114	kill-skill	510	2	8	swing3		20	20	dmg-max		26	32	str%		25	25	dex%		25	25					Lynx		0
-Sylvanshine	1		dbow									r33						dmg%		144	171	dmg-max		101	125	dex		50	50	manasteal		21	25	kill-skill	701	15	40	dmg-cold	125	125	250					Sylvanshine		0
-Cernunnos	1		dbow									r44						dmg-minion		31	40	dmg%		144	171	reanimate	2332	3	5	dmg-max		76	100	hit-skill	492	13	5	heal-kill		51	75	ac-hth		205	205	Cernunnos		0
+Sylvanshine	1		dbow									r33						dmg%		144	171	dmg-max		101	125	dex		50	50	manasteal		21	25	kill-skill	701	15	40	dmg-cold	125	63	125					Sylvanshine		0
+Cernunnos	1		dbow									r44						dmg-minion		16	20	dmg%		144	171	reanimate	2332	3	5	dmg-max		76	100	hit-skill	492	13	5	heal-kill		51	75	ac-hth		205	205	Cernunnos		0
 Raudna	1		dbow									r51						dmg%		172	200	dmg-max		66	90	hit-skill	492	13	7	kill-skill	707	33	60	dru		3	5	crush		13	13	ease		-20	-20	Raudna		0
 Ocean	1	R	dstf									r05						gethit-skill	702	10	4	dru		1	1	extra-cold		6	8	regen-mana		31	50	mag%		6	6	all-stats		6	10					Ocean		0
 Samhain	1	R	dstf									r12						extra-pois		8	10	extra-fire		8	10	dru		2	2	heal-kill		11	20	cast3		40	40	regen		21	25					Samhain		0
 Augur	1	R	dstf									r20						addxp		1	1	oskill	569	1	7	oskill	570	1	7	dru		2	4	all-stats%		16	20	mag%		16	25	ac/lvl	320	320	320	Augur		0
 Lincos	1		dstf									r29						enr%		21	30	dru		3	6	oskill	473	21	24	pierce-fcp		10	10	regen-mana		21	40	res-all-max		2	2					Lincos		0
-Laadan	1		dstf									r37						cast3		85	85	dru		4	7	oskill	474	24	29	mana		500	500	slow-thorns		16	20	cd-reduce	474	150	150	ease		-10	-10	Laadan		0
-Lojban	1		dstf									r45						res-all		26	35	dru		6	8	dmg-minion		51	60	extra-pois		41	50	pierce-pois		6	10	att%-minion		21	50	oskill	469	9	14	Lojban		0
+Laadan	1		dstf									r37						cast3		85	85	dru		4	7	oskill	474	24	29	mana		250	250	slow-thorns		16	20	cd-reduce	474	150	150	ease		-10	-10	Laadan		0
+Lojban	1		dstf									r45						res-all		26	35	dru		6	8	dmg-minion		26	30	extra-pois		41	50	pierce-pois		6	10	att%-minion		21	50	oskill	469	9	14	Lojban		0
 Loxian	1		dstf									r52						enr-factor		136	185	red-dmg%		11	15	dru		8	10	extra-all		41	50	ac-global		51	75	cast3		20	20					Loxian		0
 Black Cat	1	R	nscy									r02						att%		75	75	hp		7	7	dmg%		30	57	mag%		-7	-7	att-skill	530	10	2	kill-skill	553	25	40	crush		3	5	Black Cat		0
 Mantra	1	R	nscy									r13						dex		15	15	str		15	15	dmg%		30	57	dmg-pois	25	256	512	pierce-pois		16	20	res-pois-len		31	40	dmg-stun		50	50	Mantra		0
-Chthon	1		nscy									r29						kill-skill	612	25	3	dmg-global		100	100	kill-skill	500	13	10	dmg%		87	114	dmg-max		50	50									Chthon		0
-Inti	1	R	nscy									r41						res-all-minion		10	10	oskill	335	25	27	oskill	322	25	27	swing3		70	70	allskills		2	4	dmg-fire		188	375	dmg%		115	143	Inti		0
+Chthon	1		nscy									r29						kill-skill	612	25	3	dmg-global		60	60	kill-skill	500	13	10	dmg%		87	114	dmg-max		50	50									Chthon		0
+Inti	1	R	nscy									r41						res-all-minion		10	10	oskill	335	25	27	oskill	322	25	27	swing3		70	70	allskills		2	4	dmg-fire		94	188	dmg%		115	143	Inti		0
 Leviathan	1		nscy									r51						dmg-max		91	115	dmg%		172	200	slow		21	25	oskill	670	8	27	red-dmg%		11	15	str%		31	50	dex%		31	50	Leviathan		0
 Loa	1	R	nknf									r05						dmg%		30	57	manasteal		21	40	reanimate	2288	2	3	light		1	1	dmg-max		5	5									Loa		0
 Jinx	1	R	nknf									r13						dmg%		30	57	dex		20	20	addxp		1	2	hit-skill	346	25	5													Jinx		0
@@ -101,42 +101,42 @@ Seid	1		nknf									r36						dmg%		144	171	nec		1	2	oskill	96	1	4	blood-elem		6
 Roc	1		nknf									r51						dmg-max		66	90	dmg%		172	200	oskill	353	3	12	dex%		31	40	str%		21	25	howl		32	32	reanimate	725	5	10	Roc		0
 Deep Water	1	R	nstf									r06						nec		1	1	extra-all		6	10	res-all		11	15	oskill	706	1	4													Deep Water		0
 Ladon	1		nstf									r25						res-fire		31	50	nec		3	5	oskill	564	1	12	extra-fire		16	20	oskill	453	1	12	red-dmg		11	15					Ladon		0
-Hali	1		nstf									r38						att%-minion		1	50	oskill	1022	1	14	dmg-minion		31	50	nec		4	6	res-all		31	50	hp		-100	-100	maxminions		1	1	Hali		0
+Hali	1		nstf									r38						att%-minion		1	50	oskill	1022	1	14	dmg-minion		16	25	nec		4	6	res-all		31	50	hp		-100	-100	maxminions		1	1	Hali		0
 Dagda	1	R	nstf									r49						nec		5	7	oskill	363	4	19	oskill	363	4	19	all-stats		21	40	cast3		15	15	hp%-mp%		15	15	gold%		19	19	Dagda		0
 Santa Compana	1		nstf									r52						castgethit3		50	50	oskill	445	1	3	oskill	1002	22	24	maxminions		1	1	ac-global		41	50	hp-minion		51	60	nec		8	10	Santa Compana		0
 Koan	1	R	wand									r09						regen-mana		31	40	gold%		-3	-3	nec		1	1	avoidance		10	10													Koan		0
 Ghoul	1	R	wand									r20						addxp		1	1	maxminions		1	1	extra-cold		11	13	nec		1	2	oskill	567	1	5									Ghoul		0
 Dead Ringer	1		wand									r39						hp-minion		1	10	state	157	1	1	desc-druid		1	1	oskill	396	9	12	oskill	67	4	6	allskills		1	2	hp%		11	20	Dead Ringer		0
-Ngozi	1		wand									r41						oskill	22	17	26	oskill	118	8	9	extra-all		16	20	cast3		10	10	oskill	388	17	26	howl-thorns		11	15					Ngozi		0
+Ngozi	1		wand									r41						oskill	22	17	26	oskill	118	8	9	extra-all		16	20	cast3		10	10	oskill	234	17	26	howl-thorns		11	15					Ngozi		0
 Semhazai	1		wand									r51						enr-factor		26	45	maxminions		1	1	hp-minion		-25	-25	nec		2	4	oskill	459	6	19	cast3		15	15	oskill	562	8	22	Semhazai		0
 Genie	1	R	nxbw									r08						oskill	521	1	1	dmg%		30	57	slow		11	15	hit-skill	1002	5	7	nec		1	1	reanimate	915	3	5					Genie		0
-Atlantis	1	R	nxbw									r19						dex		30	30	kill-skill	473	15	10	str		20	20	dmg%		58	86	mana%		21	25	dmg-global		11	15	gold%		13	19	Atlantis		0
+Atlantis	1	R	nxbw									r19						dex		30	30	kill-skill	473	15	10	str		20	20	dmg%		58	86	mana%		21	25	dmg-global		7	9	gold%		13	19	Atlantis		0
 Aether	1	R	nxbw									r31						dmg%		72	100	manasteal		11	14	avoidance		10	10	ignore-ac		1	1	str%		21	25	kill-skill	563	20	17					Aether		0
-Crucible	1		nxbw									r46						dmg%		115	143	kill-skill	389	15	42	dmg-fire		125	375	dmg-undead		150	150	charged	766	20	25	res-fire		31	60	gethit-skill	564	4	19	Crucible		0
+Crucible	1		nxbw									r46						dmg%		115	143	kill-skill	389	15	42	dmg-fire		63	188	dmg-undead		90	90	charged	766	20	25	res-fire		31	60	gethit-skill	564	4	19	Crucible		0
 Kronos	1	Y	nxbw									r51						dmg%		172	200	kill-skill	542	100	17	kill-skill	683	25	15	dmg-max		128	165	str%		31	40	crush-vit%		11	13	oskill	758	1	1	Kronos		0
-Jihad	1	R	pclb	pmac	pham							r05						dmg-max		1	3	dmg%		24	46	dmg-demon		200	200	kill-skill	37	10	15	pal		1	1	swing3		15	15					Jihad		0
-Intifada	1	R	pclb	pmac	pham							r15						dmg%		87	114	att-skill	595	13	8	no-ac		-100	-100	crush		6	10	dmg-minion		31	50	hp-minion		-21	-25					Intifada		0
+Jihad	1	R	pclb	pmac	pham							r05						dmg-max		1	3	dmg%		24	46	dmg-demon		120	120	kill-skill	37	10	15	pal		1	1	swing3		15	15					Jihad		0
+Intifada	1	R	pclb	pmac	pham							r15						dmg%		87	114	att-skill	595	10	8	no-ac		-100	-100	crush		6	10	dmg-minion		16	25	hp-minion		-21	-25					Intifada		0
 Lammasu	1	R	pclb	pmac	pham							r25						res-cold		1	10	dmg-stun		125	125	extra-all		11	15	slow		25	25	swing3		40	40	pal		1	2	res-all-minion		25	25	Lammasu		0
-Brahman	1	R	pclb	pmac	pham							r39						dmg%		144	171	lh-stupidity		2	4	oskill	370	1	4	dmg-max		51	88	ac		1000	1000	balance3		100	100	oskill	359	1	6	Brahman		0
+Brahman	1	R	pclb	pmac	pham							r39						dmg%		144	171	oskill	370	1	4	dmg-max		51	88	ac		1000	1000	balance3		100	100	aura	1608	1	1	desc-top	11618	9	9	Brahman		0
 Oriflamme	1		pclb	pmac	pham							r51						dmg-max		91	140	dmg%		172	200	str/bl	640	640	640	dex/bl	640	640	640	oskill	637	25	27	extra-fire		31	40	swing3		50	50	Oriflamme		0
-Ensi	1	R	pspe									r12						dmg%		58	86	att-skill	699	15	4	swing3		40	40	dmg-fire		7	19	stupidity		2	3									Ensi		0
+Ensi	1	R	pspe									r12						dmg%		58	86	att-skill	699	15	4	swing3		40	40	dmg-fire		4	10	stupidity		2	3									Ensi		0
 Nehushtan	1	R	pspe									r27						vit%		-15	-15	dmg%		115	143	dmg-pois	25	512	1536	pierce-pois		11	13	swing3		-10	-10	att-skill	81	25	16	light		-2	-2	Nehushtan		0
 Taqiyya	1	R	pspe									r40						balance3		60	60	dmg%		144	171	dmg-norm		38	88	swingcast3		50	50	att-skill	75	25	42	att-skill	79	25	42					Taqiyya		0
 Orisha	1		pspe									r48						oskill	58	3	15	extra-fire		21	30	extra-cold		21	30	pal		3	5	swing3		60	60	enr-factor		31	50	mana%		50	50	Orisha		0
-Rex Deus	1		pspe									r52						dmg%		172	200	heal-thorns		51	100	dmg-max		76	100	dmg-demon		500	500	heal-kill		101	150	all-stats		50	50					Rex Deus		0
+Rex Deus	1		pspe									r52						dmg%		172	200	heal-thorns		51	100	dmg-max		76	100	dmg-demon		300	300	heal-kill		101	150	all-stats		50	50					Rex Deus		0
 Circe	1	R	orb									r11						enr%		11	15	oskill	96	1	1	pagan2		1	1	extra-pois		6	8	extra-ltng		6	8									Circe		0
 Ker	1	R	orb									r20						addxp		1	1	oskill	1109	1	4	oskill	57	1	4	extra-cold		11	13	extra-pois		11	13	mana%		21	30					Ker		0
 Kabbalah	1	Y	orb									r36						enr%		20	20	sor		3	3	oskill	1365	6	16	extra-fire		16	20	block		1	1	addxp		2	4					Kabbalah		0
-Hestia	1		orb									r50						oskill	388	1	3	sor		3	4	extra-fire/lvl	12	12	12	res-fire		100	100	mag%		11	20	abs-fire%		5	5	nofreeze		1	1	Hestia		0
+Hestia	1		orb									r50						oskill	234	1	3	sor		3	4	extra-fire/lvl	12	12	12	res-fire		100	100	mag%		11	20	abs-fire%		5	5	nofreeze		1	1	Hestia		0
 Kallisti	1		orb									r51						howl-thorns		11	15	oskill	397	1	6	extra-pois		21	25	sor		4	5	cast3		40	40	all-thorns	75	500	500	pierce-pois		7	9	Kallisti		0
 Inanna	1	R	scrd									r12						dmg%		24	46	res-all		21	25	slow		25	25	heal-melee		41	50													Inanna		0
 Grace	1		scrd									r36						dmg%		115	143	block3		30	30	swing3		45	45	avoidance		10	10	dmg-min		13	25	sor		1	2	unity		21	40	Grace		0
-Khany	1	R	scrd									r50						dmg%		115	143	dmg/lvl	16	16	16	att-skill	347	5	29	extra-all		16	20	dmg-ltng		1	750	sor		1	2	swingcast3		50	50	Khany		0
+Khany	1	R	scrd									r50						dmg%		115	143	dmg/lvl	16	16	16	att-skill	347	5	29	extra-all		16	20	dmg-ltng		1	375	sor		1	2	swingcast3		50	50	Khany		0
 Shaula	1		scrd									r52						enr-factor		35	35	att-skill	473	15	29	dmg-norm		38	63	mana%		50	50	slow		33	33	dmg%		144	171	reanimate	1561	5	10	Shaula		0
-Rebel	1	Y	tors									r01						res-all		16	20	ac%		12	23	dmg-global		6	10	str		20	20	dex		20	20	vit		-10	-10	enr		-10	-10	Rebel		0
+Rebel	1	Y	tors									r01						res-all		16	20	ac%		12	23	dmg-global		4	6	str		20	20	dex		20	20	vit		-10	-10	enr		-10	-10	Rebel		0
 LumenArcana	1	Y	tors									r06						ac%		18	35	light		2	2	allskills		1	1	pierce-fire		3	8	pierce-cold		3	8	pierce-ltng		3	8	pierce-pois		3	8	Lumen Arcana		0
 Celebration	1		tors									r13						all-stats		11	20	mag%		16	25	att-skill	825	10	11	light		2	2	extra-all		6	8	att%		50	50					Celebration		0
-Thelema	1		tors									r19						vit		50	50	mana-thorns		41	50	ac%		30	57	allskills		1	1	cast3		25	25	att%-minion		61	100	dmg-minion		41	60	Thelema		0
+Thelema	1		tors									r19						vit		50	50	mana-thorns		21	25	ac%		30	57	allskills		1	1	cast3		25	25	att%-minion		61	100	dmg-minion		21	30	Thelema		0
 Cathedral	1		tors									r25						extra-pois		16	20	ac%		87	114	poison-dur		51	75	ac		1311	1311	charged	398	50	20	regen/lvl	32	32	32					Cathedral		0
 Mirage	1	R	tors									r33						slow-thorns		11	15	red-dmg		31	40	move3		5	5	swingcast3		30	30	allskills		1	1	res-all		51	60	fade		1	1	Mirage		0
 Dragonheart	1	Y	tors									r41						allskills		2	2	swing3		50	50	ac%/lvl	52	52	52	hp		500	500													Dragonheart		0
@@ -146,71 +146,71 @@ Summit	1	R	helm									r01						gold%		19	25	ease		-15	-15	cheap		5	5										
 Cannonball	1	Y	helm									r08						extra-fire		1	3	move3		5	8	stam		10	10	crush		3	3	att-skill	496	1	6	charged	564	5	5					Cannonball		0
 Ra	1	R	helm									r17						allskills		1	1	gold%		7	13	howl-thorns		11	15	pierce-fire		6	10	pierce-pois		6	10	cast3		25	25					Ra		0
 Alchemy	1	R	helm									r26						regen		21	25	hp-minion		21	30	regen		21	25	ac%		58	86	block3		25	25	swing3		25	25					Alchemy		0
-Dreadlord	1		helm									r35						att%-minion		41	50	dmg-minion		41	50	oskill	694	1	6	nec		0	1	crush		3	3	ac%		115	143	att-skill	443	25	22	Dreadlord		0
+Dreadlord	1		helm									r35						att%-minion		41	50	dmg-minion		21	25	oskill	694	1	6	nec		0	1	crush		3	3	ac%		115	143	att-skill	443	25	22	Dreadlord		0
 Cauldron	1	Y	helm									r44						att-skill	468	20	11	allskills		1	1	dmg-pois	25	612	1832	ac%		115	143													Cauldron		0
 Eidolon	1	Y	helm									r51						dmg-max		20	20	ac%		144	171	allskills		1	2	ac-global		21	30	light		4	4	res-all		31	40	all-stats%		20	20	Eidolon		0
 Sphinx	1	R	circ									r11						thorns%		25	25	ac		101	150	all-stats		11	15	ama		1	1	light		4	4	gold%		13	16					Sphinx		0
 Lily	1	R	circ									r31						ac%		4	15	regen		21	30	heal-kill		11	20	charged	397	20	5	vit%		11	15	allskills		1	2	heal-hit		1	1	Lily		0
 Eulenspiegel	1	R	circ									r38						cast3		20	20	gethit-skill	54	1	1	enr-factor		31	50	allskills		2	2	enr%		21	25	dex%		21	25					Eulenspiegel		0
-Wintermute	1		circ									r53						ease		-28	-28	ac-global		21	30	allskills		2	2	extra-all		16	20	mana		750	750	oskill	706	1	9	res-all		31	40	Wintermute		0
+Wintermute	1		circ									r53						ease		-28	-28	ac-global		21	30	allskills		2	2	extra-all		16	20	mana		375	375	oskill	706	1	9	res-all		31	40	Wintermute		0
 Geas	1	R	shld									r04						poison-dur		21	25	ac%		12	23	res-all		15	15	res-pois		-90	-90													Geas		0
 Pharaoh	1	R	shld									r12						extra-pois		3	5	allskills		1	1	str		11	15	vit		11	15	ease		-10	-10									Pharaoh		0
 Nomad	1	R	shld									r20						addxp		2	3	gold%		13	19	ac%		58	86	ac		163	163	att-skill	469	5	44	block3		40	40	stam		10		Nomad		0
 Goddess	1	Y	shld									r30						nofreeze		1	1	ac		-150	-150	allskills		2	2	ease		-10	-10													Goddess		0
-Kodo	1		shld									r40						kill-skill	600	5	8	blood-phys		11	15	str%		11	20	ac%		115	143	vit%		11	20	crush		5	5					Kodo		0
+Kodo	1		shld									r40						kill-skill	600	5	8	blood-phys		7	9	str%		11	20	ac%		115	143	vit%		11	20	crush		5	5					Kodo		0
 WallOfFire	1	Y	shld									r50						ac-global		11	20	ac%		144	171	vit%		31	40	block3		40	40	fire-thorns		500	500	str%		31	40	allskills		1	1	WallOfFire		0
 Avatar	1	Y	shld									r53						ease		45	45	ac%		172	200	castgethit3		45	45	mag%		16	25	allskills		1	1	pierce-fcl		25	30					Avatar		0
 Iblis	1	R	glov									r04						poison-dur		1	3	abs-fire%		2	2	extra-fire		8	10	enr%		10	10	light		5	5									Iblis		0
 Mercy	1	R	glov									r13						str		1	10	att-skill	553	5	14	vit%		11	15	ac		26	26	dmg-max		6	8									Mercy		0
 Kali	1	Y	glov									r21						res-fire		1	1	kill-skill	518	15	13	allskills		2	2	ac		-214	-214	res-fire-max		4	4									Kali		0
-Aiwass	1		glov									r33						dmg-minion		21	25	nec		2	2	ac		93	93	charged	873	78	4	str%		11	20									Aiwass		0
+Aiwass	1		glov									r33						dmg-minion		11	13	nec		2	2	ac		93	93	charged	873	78	4	str%		11	20									Aiwass		0
 Skald	1		glov									r41						res-all-minion		11	15	charged	96	33	3	charged	570	33	3	ac%		115	143	cast3		20	20	manasteal		14	18	att-skill	998	20	12	Skald		0
 Icarus	1		glov									r49						ac%		144	171	vit		75	75	enr		75	75	res-fire		-20	-20													Icarus		0
-Drekavac	1		glov									r51						dmg-max		18	23	dmg-cold		25	50	cold-thorns	75	101	150	mag%		11	20	allskills		1	1	swingcast3		45	45					Drekavac		0
+Drekavac	1		glov									r51						dmg-max		18	23	dmg-cold		13	25	cold-thorns	75	101	150	mag%		11	20	allskills		1	1	swingcast3		45	45					Drekavac		0
 Rainbow	1	Y	belt									r05						res-all		16	20	extra-all		3	3	mag%		6	8	light		2	2	res-all-minion		6	10									Rainbow		0
-Prodigy	1	R	belt									r15						extra-fire		6	8	extra-ltng		6	8	mana-kill		31	45	regen-mana		11	20	cast3		20	20	att%		100	100					Prodigy		0
-Fuse	1	R	belt									r23						ac%		58	86	gethit-skill	79	15	14	res-fire		31	50	extra-fire/lvl	4	4	4	charged	564	20	5	dmg-fire		5	24					Fuse		0
-Pulsa Dinura	1		belt									r34						pal		1	1	ac%		87	114	att-skill	563	2	6	heal-kill		31	50	dmg-fire		13	38	wrath-synergy		21	40	swingcast3		15	15	Pulsa Dinura		0
+Prodigy	1	R	belt									r15						extra-fire		6	8	extra-ltng		6	8	mana-kill		16	23	regen-mana		11	20	cast3		20	20	att%		100	100					Prodigy		0
+Fuse	1	R	belt									r23						ac%		58	86	gethit-skill	79	15	14	res-fire		31	50	extra-fire/lvl	4	4	4	charged	564	20	5	dmg-fire		3	12					Fuse		0
+Pulsa Dinura	1		belt									r34						pal		1	1	ac%		87	114	att-skill	563	2	6	heal-kill		31	50	dmg-fire		7	19	wrath-synergy		21	40	swingcast3		15	15	Pulsa Dinura		0
 Truce	1	Y	belt									r42						ac%		172	200	red-dmg%		10	10	swingcast3		-5	-5	slow-thorns		5	5	dmg-stun		25	25									Truce		0
 Dyaus Pita	1		belt									r50						ac%		115	143	str%		11	15	enr%		11	15	vit%		11	15													Dyaus Pita		0
-Ahriman	1	R	belt									r52						ac%		172	200	dmg-elem	25	50	150	res-all		31	40	all-stats		31	50	allskills		1	1	ease		10	10					Ahriman		0
+Ahriman	1	R	belt									r52						ac%		172	200	dmg-elem	25	25	75	res-all		31	40	all-stats		31	50	allskills		1	1	ease		10	10					Ahriman		0
 Epicenter	1	Y	boot									r06						ac%		4	15	crush/lvl	2	2	2	hp%		11	15																	Epicenter		0
-Outlaw	1	R	boot									r14						ac%		30	57	nec		1	1	enr		11	15	ac		-1	-1	howl-thorns		5	5	res-all-minion		11	20	dmg-minion		21	30	Outlaw		0
+Outlaw	1	R	boot									r14						ac%		30	57	nec		1	1	enr		11	15	ac		-1	-1	howl-thorns		5	5	res-all-minion		11	20	dmg-minion		11	15	Outlaw		0
 Ginfaxi	1	R	boot									r22						oskill	689	1	4	ac%		30	57	slow-thorns		5	5	str		16	20	ac-global		11	15									Ginfaxi		0
-Craton	1		boot									r32						ac-global		31	40	att-skill	595	3	7	crush		3	3	all-stats		21	25	red-dmg		16	20									Craton		0
+Craton	1		boot									r32						ac-global		31	40	att-skill	595	2	7	crush		3	3	all-stats		21	25	red-dmg		16	20									Craton		0
 Megalith	1	Y	boot									r40						ac%		115	143	cast3		25	25	str		41	50	red-dmg%		5	5	allskills		1	1	regen-mana		30	30					Megalith		0
 Nephilim	1	Y	boot									r48						ac%		144	171	str%		21	25	vit%		21	25	ac		150	150	strvit		50	50									Nephilim		0
 Hibagon	1		boot									r53						ease		-3	-3	ac%		172	200	reanimate	2233	3	3	reanimate	2234	3	3	reanimate	2223	3	3	res-all		31	40	allskills		1	1	Hibagon		0
 StataMater	1	R	azhm									r16						dex%		6	10	oskill	566	1	7	enr%		11	15	res-fire		100	100	pierce-fire		5	5	red-dmg		11	15	gold%		13	19	StataMater		0
 Amaterasu	1	R	azhm									r24						enr		40	40	oskill	632	1	9	extra-fire		11	13	ama		1	2	light		5	5	gold%		25	25	abs-fire%		2	2	Amaterasu		0
-Siegfried	1	R	azhm									r31						ac%		72	100	dex		50	50	res-all		21	25	dmg-elem	250	84	250	swing3		40	40	oskill	698	1	8	crush		5	5	Siegfried		0
+Siegfried	1	R	azhm									r31						ac%		72	100	dex		50	50	res-all		21	25	dmg-elem	250	42	125	swing3		40	40	oskill	698	1	8	crush		5	5	Siegfried		0
 Lohengrin	1		azhm									r42						reanimate	1849	0	1	reanimate	1850	0	1	reanimate	1851	0	1	lohengrin		40	40	dmg-max		26	38	state	126	1	1	desc-top	11353	9	9	Lohengrin		0
 Unicorn	1	Y	azhm									r52						enr-factor		16	20	ama		3	5	cast3		40	40	syn1	314	3	3	abs-fcl%		2	2	enr-factor%		15	20	desc-top	11336	9	9	Unicorn		0
 Edda	1	R	azsd									r15						extra-pm		3	5	cast3		15	15	mana%		11	20	ama		1	1	ease		-15	-15	extra-fire		6	8					Edda		0
-Lion	1	R	azsd									r35						all-stats%		18	27	swing3		20	20	block		1	1	light		2	2	dmg-global		21	30	ac%		87	114	balance3		40	40	Lion		0
-Eloi	1	R	azsd									r42						oskill	668	11	27	ac%		115	143	dmg-minion		11	15	red-dmg%		10	10	enr		-25	-25	cheap		5	5					Eloi		0
+Lion	1	R	azsd									r35						all-stats%		18	27	swing3		20	20	block		1	1	light		2	2	dmg-global		13	18	ac%		87	114	balance3		40	40	Lion		0
+Eloi	1	R	azsd									r42						oskill	668	11	27	ac%		115	143	dmg-minion		6	8	red-dmg%		10	10	enr		-25	-25	cheap		5	5					Eloi		0
 Nix	1		azsd									r48						skill-dur		15	15	ac%		172	200	oskill	703	22	29	extra-cold		21	25	dex%		25	25	oskill	397	1	3	reanimate	1564	3	3	Nix		0
 Ea2	1		azsd									r52						enr-factor		26	45	ama		2	2	ac%		115	143	ease		-20	-20	cast3		60	60	extra-firepm		21	30					Ea2		0
 Afrit	1	R	ishd									r13						oskill	525	1	9	extra-pm		6	10	cast3		15	15	mag%		11	20	red-dmg		3	5									Afrit		0
 Rahab	1	R	ishd									r19						dex		5	5	oskill	353	1	4	lifesteal		2	4	ac%		30	57	str		15	15	att-skill	473	10	4					Rahab		0
 Ligeia	1		ishd									r28						res-cold		30	30	kill-skill	62	8	13	oskill	695	11	14	res-all		40	40	res-pois		-90	-90	oskill	691	11	14					Ligeia		0
 Dar-Al-Harb	1	Y	ishd									r37						cast3		15	15	extra-fire/lvl	8	8	8	extra-ltng/lvl	8	8	8	dex-enr		25	25	ass		3	4	oskill	1107	19	22	oskill	1021	16	19	Dar-Al-Harb		0
-Scorched Earth	1		ishd									r51						dmg-max		8	20	att-skill	632	25	59	dmg-fire		63	125	extra-fire		21	25	dmg-stun		75	75	ac%		172	200	all-stats		31	50	Scorched Earth		0
-Algiz	1	R	phlm									r09						dmg-ltng		1	10	ac-global		11	15	att-skill	540	10	4	crush		3	3	str%		10	10	vit%		10	10					Algiz		0
+Scorched Earth	1		ishd									r51						dmg-max		8	20	att-skill	632	25	59	dmg-fire		32	63	extra-fire		21	25	dmg-stun		75	75	ac%		172	200	all-stats		31	50	Scorched Earth		0
+Algiz	1	R	phlm									r09						dmg-ltng		1	5	ac-global		11	15	att-skill	540	10	4	crush		3	3	str%		10	10	vit%		10	10					Algiz		0
 Nasrudin	1	R	phlm									r19						dex		31	40	ac%		58	86	all3		50	50	cast3		-20	-20	block3		-20	-20	gold%		13	19	oskill	690	3	9	Nasrudin		0
-Sagarmatha	1		phlm									r36						ac%		58	86	crush		5	5	dmg-cold	50	38	100	res-cold		51	70	att-skill	571	16	19	charged	828	50	12					Sagarmatha		0
-Morthwyrtha	1	R	phlm									r43						bar		3	4	oskill	563	1	3	maxspirits		1	1	dmg-minion		31	40	att%-minion		41	50									Morthwyrtha		0
-Wodziwob	1		phlm									r53						ease		-3	-3	att-skill	708	50	46	extra-cold		16	25	dmg-undead		100	100	mana-kill		250	250	mana%		21	25	avoidance		5	5	Wodziwob		0
-Enmerkar	1	R	basd									r17						ac%		58	86	all-stats%		11	20	shamans-syn		20	30	bar		1	1	charged	449	10	6									Enmerkar		0
+Sagarmatha	1		phlm									r36						ac%		58	86	crush		5	5	dmg-cold	50	19	50	res-cold		51	70	att-skill	571	16	19	charged	828	50	12					Sagarmatha		0
+Morthwyrtha	1	R	phlm									r43						bar		3	4	oskill	563	1	3	maxspirits		1	1	dmg-minion		16	20	att%-minion		41	50									Morthwyrtha		0
+Wodziwob	1		phlm									r53						ease		-3	-3	att-skill	708	50	46	extra-cold		16	25	dmg-undead		60	60	mana-kill		125	125	mana%		21	25	avoidance		5	5	Wodziwob		0
+Enmerkar	1	R	basd									r17						ac%		58	86	all-stats%		11	20	shamans-syn		8	12	bar		1	1	charged	449	10	6									Enmerkar		0
 Warpath	1	R	basd									r27						ac%		87	114	vit%		10	10	att-skill	542	10	4	dmg-norm		13	38	crush		5	5	block3		20	20					Warpath		0
 Gauntlet	1	R	basd									r39						att-skill	500	17	3	thorns%		201	250	heal-kill		51	100	block		-10	-10	ac%		87	114									Gauntlet		0
-Huracan	1		basd									r44						ac%		144	171	att-skill	498	15	7	res-all		50	50	dmg-elem		1	250	swing3		40	40	res-pois		-50	-50	oskill	58	22	26	Huracan		0
+Huracan	1		basd									r44						ac%		144	171	att-skill	498	15	7	res-all		50	50	dmg-elem		1	125	swing3		40	40	res-pois		-50	-50	oskill	58	22	26	Huracan		0
 E-Engur-A	1		basd									r52						ac%		172	200	all-stats		50	50	stupid-thorns		2	5	mag%		21	40	res-firepoison		100	100	bar		3	3					E-Engur-A		0
 Nezha	1	R	pelt									r18						ac%		58	86	dex%		10	10	swing3		20	20	mana%		11	20	mag%		21	40	dru		1	1					Nezha		0
 Natha	1	Y	pelt									r28						ac%		58	86	hit-skill	492	4	2	att%		31	50	swing3		20	20	balance3		50	50	red-dmg%		10	10					Natha		0
 Norma	1		pelt									r38						enr-factor%		21	25	motw-elem		10	10	ac%		115	143	dru		2	2	cast3		15	15	oskill	997	4	8					Norma		0
-Grove	1		pelt									r45						res-all		16	25	motw-phys		15	15	crush		5	5	str%		20	20	dex%		20	20	reanimate	2333	2	3	oskill	634	1	5	Grove		0
-Slyph	1		pelt									r52						ac%		172	200	red-dmg%		5	5	extra-pois		16	25	dru		2	2	dmg-minion		31	40	hp-minion		41	60	slow-thorns		3	5	Slyph		0
+Grove	1		pelt									r45						res-all		16	25	motw-phys		9	9	crush		5	5	str%		20	20	dex%		20	20	reanimate	2333	2	3	oskill	634	1	5	Grove		0
+Slyph	1		pelt									r52						ac%		172	200	red-dmg%		5	5	extra-pois		16	25	dru		2	2	dmg-minion		16	20	hp-minion		41	60	slow-thorns		3	5	Slyph		0
 Cube	1	R	head									r16						balance		20	20	balance%		10	10	ac%		58	86	nec		1	1	gold%		4	7									Cube		0
 Warlock	1	Y	head									r25						ac%		58	86	att-skill	451	25	24	oskill	324	3	8	res-fire		30	30	lifesteal		9	13	crush		6	10					Warlock		0
 Nahual	1	R	head									r36						ac%		115	143	oskill	362	4	14	oskill	363	2	12	hp%-mp%		21	40	allskills		2	2	all-stats		31	40	gethit-skill	513	10	4	Nahual		0
@@ -218,87 +218,87 @@ Quimbanda	1		head									r47						extra-fcl		16	25	nec		2	2	cast3		40	40	oskill
 Wyrm2	1		head									r51						ac%		172	200	dmg-max		8	20	crush		6	10	dmg-pois	25	2560	5120	oskill	965	21	25	str%		31	40	dex%		31	40	Wyrm2		0
 Ilmatar	1	R	pzhm									r10						extra-ltng		3	3	att-skill	999	25	7	pal		1	1	regen		11	15	str		21	25	dex		21	25	enr		21	25	Ilmatar		0
 Hierodule	1	R	pzhm									r25						pal		1	1	cast3		20	20	extra-ltng		6	8	extra-pm		6	8	res-all-max		1	1									Hierodule		0
-Crusade	1	R	pzhm									r37						att-skill	712	4	3	oskill	360	3	6	oskill	357	6	12	ac%		58	86	str		21	30									Crusade		0
-Surya	1		pzhm									r46						ac%		115	143	oskill	698	1	12	gold%		30	30	light		4	4	res-fire		41	50	oskill	360	1	4	all-stats%		11	15	Surya		0
+Crusade	1	R	pzhm									r37						att-skill	712	4	3	aura	1609	1	1	ac%		58	86	str		21	30	desc-top	11620	9	9									Crusade		0
+Surya	1		pzhm									r46						ac%		115	143	oskill	698	1	12	desc-top	11620	9	9	light		4	4	res-fire		41	50	aura	1609	1	1	all-stats%		11	15	Surya		0
 Malakbel	1		pzhm									r53						ease		-13	-13	reanimate	2335	1	1	res-fire		100	100	pal		2	2	cast3		10	10	extra-fire/lvl	8	8	8					Malakbel		0
-Asmodai	1	R	ashd									r14						mana-kill		11	20	heal-kill		11	20	gold%		4	4	dmg-min		3	5	kill-skill	839	5	4	skill-dur		21	25					Asmodai		0
+Asmodai	1	R	ashd									r14						mana-kill		6	10	heal-kill		11	20	gold%		4	4	dmg-min		3	5	kill-skill	839	5	4	skill-dur		21	25					Asmodai		0
 Sangreal	1	R	ashd									r28						ac		33	33	desc-top	11337	9	9	aura	297	1	1	swing3		25	25	balance3		25	25	block		-10	-10					Sangreal		0
 Zohar	1	R	ashd									r33						slow-thorns		20	20	oskill	676	1	7	ac%		87	114	dmg-max		38	50	cheap		5	5	swing3		20	20	avoidance		6	10	Zohar		0
-Asclepion	1		ashd									r46						oskill	358	26	34	swingcast3		15	15	block3		30	30	regen/lvl	48	48	48	pal		1	2	res-all		25	25	res-pois		75	75	Asclepion		0
-Amaymon	1		ashd									r51						dmg-max		46	58	slow		10	10	reanimate	1052	15	15	dmg-minion		41	80	hp-minion		51	100	res-all		50	50					Amaymon		0
+Asclepion	1		ashd									r46						dmg-pois	25	4608	4608	swingcast3		15	15	block3		30	30	regen/lvl	48	48	48	pal		1	2	res-all		25	25	res-pois		75	75	Asclepion		0
+Amaymon	1		ashd									r51						dmg-max		46	58	slow		10	10	reanimate	1052	15	15	dmg-minion		21	40	hp-minion		51	100	res-all		50	50					Amaymon		0
 Demeter	1	R	stor									r23						ac%		58	86	res-pois		20	20	oskill	67	12	15	pierce-pois		16	20	sor		2	2	red-dmg		11	20					Demeter		0
 Curandera	1	Y	stor									r29						ac%		58	86	sor		2	2	regen/lvl	48	48	48	red-dmg%		16	20	res-all		11	15									Curandera		0
-Astarte	1		stor									r34						ac%		87	114	swing3		25	25	oskill	756	1	5	moon-syn		151	200	dmg-min		38	50	dmg-stun		250	250	oskill	859	1	5	Astarte		0
-Oracle	1	Y	stor									r40						ac%		115	143	sor		3	4	mana%		21	30	cast3		40	40	mana/lvl	320	320	320	ac		500	500					Oracle		0
+Astarte	1		stor									r34						ac%		87	114	swing3		25	25	dmg-global		18	30	moon-syn		151	200	dmg-min		38	50	dmg-stun		250	250	oskill	859	1	5	Astarte		0
+Oracle	1	Y	stor									r40						ac%		115	143	sor		3	4	mana%		21	30	cast3		40	40	mana/lvl		160	160	ac		500	500					Oracle		0
 Vanity	1		stor									r47						ac%		144	171	gold%		30	30	mag%		16	25	sor		3	5	dex		51	100	enr		51	100					Vanity		0
 Comaetho	1	Y	stor									r50						ac%		144	171	avoidance		5	5	sor		2	2	pierce-all		16	25	hex-syn		50	50	slow-thorns		10	10					Comaetho		0
 Venefica	1	Y	stor									r53						ease		-8	-8	ac%		172	200	extra-pois/lvl	16	16	16	sor		4	5	pierce-pois		15	15	howl-thorns		21	25	poison-dur		101	125	Venefica		0
 Shamo	1	R	nagi									r16						oskill	884	1	5	att-skill	889	10	10	dmg%		58	86	dmg-max		25	25	swing3		30	30	wirts		40	40					Shamo		0
 Amok	1	R (nn oskill on entry lvl)	bow									r09						oskill	890	4	7	dmg%		24	35	swing3		10	10	heal-hit		1	1	kill-skill	511	2	9	pierce-cold		15	15	pierce-ltng		15	15	Amok		0
-Gharaniq	1		bswd	baxe								r33						oskill	881	4	16	dmg%		115	143	dmg-norm		13	25	dmg-minion		21	25	str		31	50	dex		101	150	bar		2	2	Gharaniq		0
+Gharaniq	1		bswd	baxe								r33						aura	881	1	1	dmg%		115	143	dmg-norm		13	25	desc-top	11612	9	9	str		31	50	dex		101	150	bar		2	2	Gharaniq		0
 Fawkes	1	Y	phlm									r33						oskill	882	18	26	extra-fire/lvl	24	24	24	allskills		2	2	cast3		50	50	enr		50	50	heal-kill		31	50	att-skill	386	20	19	Fawkes		0
 BonaDea	1	Y	azhm									r19						oskill	481	7	12	extra-ltng/lvl	16	16	16	pierce-ltng		16	20	cast3		40	40	oskill	63	7	12	extra-cold/lvl	16	16	16	pierce-cold		16	20	BonaDea		0
 Iambe	1	R	ishd									r23						oskill	883	7	14	extra-cold/lvl	8	8	8	cast3		20	20	mana%		21	25	ass		1	1	ac%		58	86					Iambe		0
 Aegipan	1	R	pelt									r09						oskill	887	6	9	oskill	886	6	9	oskill	888	6	9	att-skill	398	1	15	str%		10	10	ac-global		21	25					Aegipan		0
-Anak	1		bswd	baxe								r41						oskill	892	6	9	dmg%		144	171	dmg-norm		25	63	bar		2	2	lstance-syn		101	150	str%		25	25	hpdmg-minion		25	25	Anak		0
+Anak	1		bswd	baxe								r41						oskill	892	6	9	dmg%		144	171	dmg-norm		25	63	bar		2	2	dmg-global		61	90	str%		25	25	hpdmg-minion		25	12	Anak		0
 Paaliaq	1	R	tors									r10						oskill	891	1	3	ac%		30	46	dmg-norm		2	3	crush		3	3	swing3		10	10									Paaliaq		0
 Lyrannikin	1	R	stor									r11						ac%		30	43	oskill	647	3	5	oskill	397	3	5	res-all		5	5	red-dmg		3	5	res-pois-len		21	25					Lyrannikin		0
 Hornet	1	R	bow									r17						oskill	903	3	7	dmg%		58	86	dmg-norm		7	13	dmg-pois	25	128	256	move3		5	5	dex%		15	15					Hornet		0
 Brawl	1	R	glov									r16						oskill	904	2	5	ac%		58	69	swing3		10	10	dmg-norm		2	4	str		21	25									Brawl		0
 Lorelei	1		head									r38						oskill	905	17	24	ac%		87	114	hp		500	500	nec		1	1	red-dmg%		5	5	res-cold		41	50	dmg-stun		25	25	Lorelei		0
-Atlacamani	1	R low lvl	scyh									r37						crush		3	5	oskill	900	5	9	dmg%		138	154	wirts		41	60	swing3		25	25	dmg-cold	50	28	84	manasteal		11	15	Atlacamani		0
+Atlacamani	1	R low lvl	scyh									r37						crush		3	5	oskill	900	5	9	dmg%		138	154	wirts		41	60	swing3		25	25	dmg-cold	50	14	42	manasteal		11	15	Atlacamani		0
 Takfir	1		pclb	pmac	pham							r34						oskill	901	17	25	extra-pm		21	25	cast3		15	15	pal		2	2	ease		-15	-15	extra-fire		21	25	extra-cold		-11	-13	Takfir		0
 Cassilda	1		stor									r54						ac%		115	143	extra-fire		26	35	extra-pois		26	35	extra-ltng		26	35	oskill	445	2	6	sor		5	5	howl-thorns		33	33	Cassilda		0
-Eos	1		azsd									r54						ac%		115	143	dmg-global		-50	-50	dmg-fire		250	750	pierce-fire		19	24	hit-skill	518	3	26	block		1	1	dmg-demon		150	150	Eos		0
-Adramelech	1	R	weap									r54						dmg%		144	171	dmg-norm		50	100	heal-hit		10	10	att-skill	451	25	40	reanimate	2330	1	1	regen		-250	-250	dmg-fire		1	1000	Adramelech		0
-Rotundjere	1	R	pzhm									r54						ac%		115	143	pal		3	3	mana-kill		250	250	dmg-elem	100	63	375	dmg-pois	25	126	750	dmg-stun		50	50	all-stats		21	25	Rotundjere		0
+Eos	1		azsd									r54						ac%		115	143	dmg-global		-30	-30	dmg-fire		125	375	pierce-fire		19	24	hit-skill	518	3	26	block		1	1	dmg-demon		90	90	Eos		0
+Adramelech	1	R	weap									r54						dmg%		144	171	dmg-norm		50	100	heal-hit		10	10	att-skill	451	25	40	reanimate	2330	1	1	regen		-250	-250	dmg-fire		1	500	Adramelech		0
+Rotundjere	1	R	pzhm									r54						ac%		115	143	pal		3	3	mana-kill		125	125	dmg-elem	100	32	188	dmg-pois	25	126	750	dmg-stun		50	50	all-stats		21	25	Rotundjere		0
 Greisen	1		phlm									r54						ac%		115	143	oskill	28	5	6	ac-global		11	15	res-all		31	40	str%		21	25	vit%		21	25	dmg-stun		25	25	Greisen		0
-Snowsquall	1	Y	glov									r54						ac%		58	86	att-skill	883	10	9	dmg-cold	125	40	80	slow		20	20	allskills		1	1	dex		21	25	abs-cold%		5	5	Snowsquall		0
-Hecatomb	1		head									r55						nec		3	3	dmg-global		101	150	aura	284	40	40	desc-bottom	11303	4	4	dex		101	150	enr		101	150	oskill	139	21	28	Hecatomb		0
+Snowsquall	1	Y	glov									r54						ac%		58	86	att-skill	883	10	9	dmg-cold	125	20	40	slow		20	20	allskills		1	1	dex		21	25	abs-cold%		5	5	Snowsquall		0
+Hecatomb	1		head									r55						nec		3	3	dmg-global		61	90	aura	284	40	40	desc-bottom	11303	4	4	dex		101	150	enr		101	150	oskill	139	21	28	Hecatomb		0
 Jaguar	1		pspe									r55						dmg%		172	200	extra-pois		-25	-25	move3		10	10	avoidance		15	15	dmg-norm		150	200	att-skill	821	10	5	reanimate	1468	3	5	Jaguar		0
-Myrrhbearer	1		ashd									r55						ac%		115	143	extra-pm		21	25	block		1	1	dmg-minion		50	50	oskill	984	20	20	extra-fire		21	25	pal		2	2	Myrrhbearer		0
+Myrrhbearer	1		ashd									r55						ac%		115	143	extra-pm		21	25	block		1	1	dmg-minion		25	25	oskill	984	20	20	extra-fire		21	25	pal		2	2	Myrrhbearer		0
 Amanita	1		helm									r55						ac%		115	143	oskill	872	24	29	oskill	979	2	5	pierce-ltng		19	24	pierce-pois		19	24	howl-thorns		20	20	vit		-25	-25	Amanita		0
 Linga Sharira	1		tors									r55						ac%		172	200	balance3		200	200	regen-mana		45	45	red-dmg%		15	15	allskills		1	1	gethit-skill	914	8	50	ac-global		50	50	Linga Sharira		0
-Nero	1	Y	belt									r55						ac%		115	143	oskill	983	7	12	extra-fire		16	20	dmg-fire		125	250	att-skill	804	10	14	dmg-norm		7	25	dmg-demon		150	150	Nero		0
-Orchid	1		ishd									r55						ac%		115	143	att-skill	839	5	19	extra-pois		16	25	poison-dur		25	25	swing3		-10	-10	dmg-stun		75	75	mana-melee		500	500	Orchid		0
+Nero	1	Y	belt									r55						ac%		115	143	oskill	983	7	12	extra-fire		16	20	dmg-fire		63	125	att-skill	804	10	14	dmg-norm		7	25	dmg-demon		90	90	Nero		0
+Orchid	1		ishd									r55						ac%		115	143	att-skill	839	5	19	extra-pois		16	25	poison-dur		25	25	swing3		-10	-10	dmg-stun		75	75	mana-melee		250	250	Orchid		0
 Zodiac	1		staf									r55						allskills		8	10	extra-fcl		26	38	str		101	150	enr		101	150	vit		101	150	slow-thorns		21	25					Zodiac		0
-Stardust	1		bow									r55						dmg%		144	171	dmg-norm		57	69	kill-skill	824	2	61	pierce-all		13	18	dmg-elem		1	1000	kill-skill	936	2	52	dex%		21	30	Stardust		0
+Stardust	1		bow									r55						dmg%		144	171	dmg-norm		57	69	kill-skill	824	2	61	pierce-all		13	18	dmg-elem		1	500	kill-skill	936	2	52	dex%		21	30	Stardust		0
 Joker	1		h2h									r55						extra-fire		21	30	extra-pois		21	30	aura	295	4	4	desc-bottom	11308	4	4	ass		4	4	swingcast3		40	40	extra-ltng		21	30	Joker		0
-Gilgamesh	1	R	bswd	baxe								r55						dmg%		172	200	dmg-norm		125	188	oskill	892	6	14	str		250	250	vit		-50	-50	att-skill	535	13	34	dmg-minion		-50	-50	Gilgamesh		0
+Gilgamesh	1	R	bswd	baxe								r55						dmg%		172	200	dmg-norm		125	188	oskill	892	6	14	str		250	250	vit		-50	-50	att-skill	535	13	34	dmg-minion		-25	-25	Gilgamesh		0
 Skilt en Vriend	1		pclb	pmac	pham							r55						dmg%		115	143	pierce-pois		25	30	pal		4	4	dmg-pois	25	128	512	ac-global		11	15									Skilt en Vriend		0
-Krypteia	1		wand									r55						dmg-minion		200	200	maxminions		-1	-1	nec		4	4	ac		1000	1000	block		-1	-1	regen-mana		25	25	oskill	905	24	29	Krypteia		0
+Krypteia	1		wand									r55						dmg-minion		100	100	maxminions		-1	-1	nec		4	4	ac		1000	1000	block		-1	-1	regen-mana		25	25	oskill	905	24	29	Krypteia		0
 Sway of the Stars	1		scrd									r55						dmg%		144	171	dmg-norm		63	125	regen-mana		62	62	hp		7	7	att-skill	705	25	59	dex		51	75					Sway of the Stars		0
 Sauron	1	Y	orb									r55						pierce-fire		60	60	sor		3	3	oskill	983	19	26	light		2	2	reanimate	2341	2	3	reanimate	2342	2	3	ac		250	250	Sauron		0
 Tombstone	1		xbow									r55						dmg%		144	171	dmg-norm		63	125	swing3		-20	-20	reanimate	2255	10	10	vit		-50	-50	str		100	100	res-all		41	50	Tombstone		0
 Mkodos	1		nknf									r56						dmg%		126	154	dmg-norm		38	63	nec		4	4	hit-skill	1002	15	40	pierce-pois		25	30	extra-pois		21	25	heal-hit		8	10	Mkodos		0
 Wolfsangel	1	R	2hbx									r56						dmg%		155	183	dmg-norm		100	150	att-skill	978	25	19	hp/lvl	480	480	480	runemaster		4	4	avoidance		10	10	heal-melee		100	100	Wolfsangel		0
 Indigo	1	Y	circ									r56						res-all-max		2	2	allskills		2	2	ac		-500	-500	ease		-100	-100	cast3		50	50	pierce-all		13	15	enr-factor		100	100	Indigo		0
-Derweze	1		shld									r56						ac%		98	126	att-skill	311	20	27	dmg-demon		250	250	block		1	1	getatt-skill	632	15	27	res-fire-max		6	6	res-fire		150	150	Derweze		0
-Riptide	1		boot									r56						dmg-cold		50	50	dmg-mag		50	50	ac%		126	154	att-skill	473	25	16	res-all-max		2	2	red-dmg%		1	7					Riptide		0
-Shaheeda	1		azhm									r56						ac%		98	126	block		1	1	dmg-norm		13	38	crush		6	10	dmg-fire		125	375	dex		75	75					Shaheeda		0
-Dirge	1		dbow									r56						dmg%		126	154	dmg-global		201	250	kill-skill	500	25	20	deadly		20	20	str		100	100	heal-hit		5	5	dmg-norm		25	63	Dirge		0
+Derweze	1		shld									r56						ac%		98	126	att-skill	311	20	27	dmg-demon		150	150	block		1	1	getatt-skill	632	15	27	res-fire-max		6	6	res-fire		150	150	Derweze		0
+Riptide	1		boot									r56						dmg-cold		25	25	dmg-mag		25	25	ac%		126	154	att-skill	473	25	16	res-all-max		2	2	red-dmg%		1	7					Riptide		0
+Shaheeda	1		azhm									r56						ac%		98	126	block		1	1	dmg-norm		13	38	crush		6	10	dmg-fire		63	188	dex		75	75					Shaheeda		0
+Dirge	1		dbow									r56						dmg%		50	200	dmg-global		101	150	anykill-skill	500	25	20	deadly		20	20	dex		100	100	heal-hit		5	5	dmg-norm		25	60	Dirge		0
 Elementalist	1		pelt									r56						ac%		126	154	dru		5	5	syn1	386	1	1	aura	284	40	40	desc-top	11304	4	4	res-pois-len		50	50	syn1	387	1	1	Elementalist		0
 Hermanubis	1		dstf									r56						dru		8	10	reanimate	2266	10	10	reanimate	2334	10	10	cast3		50	50	balance3		50	50	oskill	407	2	5	extra-all		-13	-13	Hermanubis		0
-Freybug	1		aspe									r56						dmg%		126	154	dmg-norm		63	125	oskill	356	1	1	ama		3	3	heal-melee		200	200	str		100	100	dmg-stun		250	250	Freybug		0
-Cecaelia	1		abow									r56						dmg%		126	154	dmg-norm		38	75	oskill	479	4	7	slow		21	25	crush		3	5	dex		50	50	vit		100	100	Cecaelia		0
-Spectre	1		ajav									r56						dmg%		126	154	dmg-max		76	100	kill-skill	982	5	12	dmg-cold	75	250	375	ignore-ac		1	1	ac-global		31	40	red-dmg%		5	5	Spectre		0
+Freybug	1		aspe									r56						dmg%		126	154	dmg-norm		63	125	aura	1601	1	1	ama		3	3	heal-melee		200	200	str		100	100	desc-top	11615	9	9	Freybug		0
+Cecaelia	1		abow									r56						dmg%		126	154	dmg-norm		38	75	dmg-elem	25	400	500	slow		21	25	crush		3	5	dex		50	50	vit		100	100	Cecaelia		0
+Spectre	1		ajav									r56						dmg%		126	154	dmg-max		76	100	kill-skill	982	5	12	dmg-cold	75	125	188	ignore-ac		1	1	ac-global		31	40	red-dmg%		5	5	Spectre		0
 Oniwaka	1		nagi									r56						dmg%		126	154	dmg-norm		75	125	att-skill	461	25	48	pierce-ltng		19	30	enr		150	150	dex		150	150	swing3		50	50	Oniwaka		0
 Tzeentch	1	Y	nscy									r56						dmg%		126	154	dmg-norm		63	125	hit-skill	914	20	40	skill-dur		31	50	kill-skill	936	5	27	howl		7	7	manasteal		17	21	Tzeentch		0
 Apostasy	1	Y	scep									r56						extra-ltng		21	25	extra-pm		21	25	cast3		50	50	ac-global		21	30	pal		3	3	oskill	699	24	29	oskill	703	24	29	Apostasy		0
-Rhea	1		nxbw									r56						dmg%		155	183	dmg-norm		63	125	kill-skill	981	5	18	str%		21	30	light		2	2	crush		6	10	oskill	357	15	21	Rhea		0
+Rhea	1		nxbw									r56						dmg%		155	183	dmg-norm		63	125	kill-skill	981	5	18	str%		21	30	desc-top	11617	9	9	crush		6	10	aura	1606	12	12	Rhea		0
 Nyx	1		bow									r26						dmg%		87	103	dmg-norm		7	19	oskill	969	1	5	howl		7	7	lifesteal		21	30	aura	284	40	40	desc-bottom	11303	4	4	Nyx		0
 Ljosalf	1		staf									r30						oskill	833	31	38	extra-fire/lvl	16	16	16	allskills		3	3	getatt-skill	981	15	9	regen		50	50	res-all		11	15	anykill-skill	833	100	12	Ljosalf		0
-Jokulmorder	1		scep									r36						pal		2	2	oskill	871	13	15	dmg-minion		31	40	extra-cold		11	15	str		50	50	vit		50	50	dex		-50	-50	Jokulmorder		0
-Tynged	1		xbow									r41						hit-skill	330	1	16	crush		6	10	ease		-50	-50	mag%		21	25	dmg-cold	75	63	125									Tynged		0
+Jokulmorder	1		scep									r36						pal		2	2	oskill	871	13	15	dmg-minion		16	20	extra-cold		11	15	str		50	50	vit		50	50	dex		-50	-50	Jokulmorder		0
+Tynged	1		xbow									r41						hit-skill	330	1	16	crush		6	10	ease		-50	-50	mag%		21	25	dmg-cold	75	32	63									Tynged		0
 Skarn	1		bswd	baxe								r40						dmg%		115	143	oskill	972	26	34	res-fire		41	50	res-pois		41	50	red-dmg%		10	10	att-skill	901	20	16	crush		13	13	Skarn		0
 Eris	1		abow									r37						dmg%		58	86	hit-skill	712	1	6	oskill	1016	21	26	swing3		40	40	red-dmg%		5	5	heal-hit		3	3	charged	1018	100	16	Eris		0
-Titanomachia	1	R	aspe									r24						dmg%		58	86	dmg-max		26	38	att-skill	980	20	7	dmg-ltng		1	125	str		50	50	red-dmg%		5	5	dmg-stun		50	50	Titanomachia		0
+Titanomachia	1	R	aspe									r24						dmg%		58	86	dmg-max		26	38	att-skill	980	20	7	dmg-ltng		1	63	str		50	50	red-dmg%		5	5	dmg-stun		50	50	Titanomachia		0
 Herfjotur	1	Y	ajav									r41						dmg%		115	143	dmg-max		13	25	oskill	968	8	13	kill-skill	758	5	1	reanimate	1400	3	3	slow		25	25	hit-skill	803	10	5	Herfjotur		0
 Quaoar	1		pclb	pmac	pham							r29						dmg%		104	114	dmg-norm		7	13	att-skill	982	5	27	nofreeze		1	1	heal-hit		5	5	hp%		15	15					Quaoar		0
-Eventide	1		nscy									r36						dmg%		115	143	dmg-elem	75	63	188	att-skill	964	25	5	light		-2	-2	red-dmg%		-25	-25	state	74	1	1	crush		6	10	Eventide		0
-Vertigo	1		orb									r22						sor		2	2	cast3		50	50	extra-ltng		11	15	extra-cold		11	15	dmg-to-mana		25	25									Vertigo		0
-Tarqeq	1		dbow									r38						dmg%		115	143	kill-skill	530	5	40	hit-skill	492	5	1	dmg-cold	125	125	375	abs-cold%		5	5	oskill	756	1	3	pierce-cold		21	25	Tarqeq		0
-Eurynome	1	R	nstf									r17						nec		2	2	oskill	454	5	7	extra-fire		16	20	dmg-minion		100	100	hp-minion		-50	-50	enr		50	50	vit		-25	-25	Eurynome		0
+Eventide	1		nscy									r36						dmg%		115	143	dmg-elem	75	32	94	att-skill	964	25	5	light		-2	-2	red-dmg%		-25	-25	state	74	1	1	crush		6	10	Eventide		0
+Vertigo	1		orb									r22						sor		2	2	cast3		50	50	extra-ltng		11	15	extra-cold		11	15	dmg-to-mana		13	13									Vertigo		0
+Tarqeq	1		dbow									r38						dmg%		115	143	kill-skill	530	5	40	hit-skill	492	5	1	dmg-cold	125	63	188	abs-cold%		5	5	dmg-global		18	30	pierce-cold		21	25	Tarqeq		0
+Eurynome	1	R	nstf									r17						nec		2	2	oskill	454	5	7	extra-fire		16	20	dmg-minion		50	50	hp-minion		-50	-50	enr		50	50	vit		-25	-25	Eurynome		0
 Riot	1		h2h									r22						dmg%		58	86	dmg-norm		7	13	oskill	977	1	13	crush		5	5	ass		1	1	ac-global		11	15					Riot		0
 Resheph	1		pspe									r32						dmg%		87	114	pierce-pois		16	25	pal		3	4	swing3		-15	-15	dmg-pois	25	64	128	slow		15	15	ease		-10	-10	Resheph		0
 Gravastar	1		orb									r29						sor		3	3	slow-thorns		33	33	extra-cold		11	15	oskill	340	1	5	light		-2	-2	res-cold		31	40					Gravastar		0
@@ -309,91 +309,91 @@ Carabosse	1	R	h2h									r15						extra-fire		6	8	cast3		40	40	extra-ltng		16	2
 Styx	1	Y	nstf									r56						nec		10	12	oskill	464	2	5	oskill	459	29	32	extra-all		31	40	oskill	398	29	32	maxminions		-3	-3	enr%		41	50	Styx		0
 Kyrie	1		staf									r51	r51					allskills		8	10	extra-all		21	25	regen-mana		33	33	str		-75	-75	enr		150	150	charged	447	20	5					Kyrie		0
 Pygmalion	1		tors									r52	r52					ac%		144	171	reanimate	2339	1	1	str		150	150	dex		-50	-50	red-dmg%		10	10	reanimate	2340	1	1					Pygmalion		0
-Archangel	1	N	weap									r53	r53					dmg%		115	143	dmg-norm		13	50	oskill	698	4	12	reanimate	2331	2	3	dmg-cold	75	125	500	dmg-demon		201	250	dmg-mag		125	500	Archangel		0
+Archangel	1	N	weap									r53	r53					dmg%		115	143	dmg-norm		13	50	oskill	698	4	12	reanimate	2331	2	3	dmg-cold	75	63	250	dmg-demon		121	150	dmg-mag		63	250	Archangel		0
 Knave	1	Keep	boot									r54	r50	r54				syn1	474	1	1	syn2	474	-25	-25	desc-top	11525	9	9	hp%-mp%		3	3	red-dmg%		2	5	sor		0	1	res-mag		2	5	Knave		0
 Checkmate	1		helm	shld								r55	r55					ac%		172	200	block		-1	-1	dmg-stun		50	50	dmg-norm		7	19	str		31	40	kill-skill	687	2	20	kill-skill	600	2	20	Checkmate		0
-Kodiak	1		taxe									r55						dmg%		144	171	dmg-norm		25	75	bar		2	2	ac		500	500	dmg-undead		350	350	lstance-syn		151	200	crush		3	5	Kodiak		0
-Tonatiuh	1		basd									r55						ac%		115	143	oskill	881	6	12	light		5	5	dmg-fire		125	875	att-skill	451	20	36	bar		2	2	pierce-fire		19	30	Tonatiuh		0
+Kodiak	1		taxe									r55						dmg%		144	171	dmg-norm		25	75	bar		2	2	ac		500	500	dmg-undead		210	210	dmg-global		91	120	crush		3	5	Kodiak		0
+Tonatiuh	1		basd									r55						ac%		115	143	aura	881	3	3	desc-top	11613	9	9	dmg-fire		63	438	att-skill	451	20	36	bar		2	2	pierce-fire		19	30	Tonatiuh		0
 Tau	1		tkni									r55						dmg%		144	171	extra-fire		21	25	enr		51	75	extra-pois		21	25	ass		3	3	swing3		40	40	slow		11	15	Tau		0
-Patriot	1	R	tkni									r02						dmg%		12	18	dmg-fire		2	4	pierce-fire		6	8	pierce-pois		6	8	str		-5	-5									Patriot		0
-Fennec	1	R	taxe									r20						dmg%		58	69	dmg-minion		21	25	light		-2	-2	res-all-minion		21	30	res-all		11	15									Fennec		0
+Patriot	1	R	tkni									r02						dmg%		12	18	dmg-fire		1	2	pierce-fire		6	8	pierce-pois		6	8	str		-5	-5									Patriot		0
+Fennec	1	R	taxe									r20						dmg%		58	69	dmg-minion		11	13	light		-2	-2	res-all-minion		21	30	res-all		11	15									Fennec		0
 Quantum	1		tkni									r30						swing3		50	50	extra-fire		6	8	kill-skill	710	5	29	pierce-pois		11	13	ass		3	3	pierce-fire		11	13	pierce-ltng		11	13	Quantum		0
 Raptor	1		taxe									r43	r49	r43	r01			skill	358	8	13	pierce-pois		19	19	heal-kill		100	100	kill-skill	780	3	60	class-restrict	5	5	5	hp%		10	10					Raptor		0
-Lemuria	1		nscy									r20						dmg%		58	86	dmg-max		13	25	oskill	18	14	17	reanimate	2273	2	3	reanimate	1517	2	3	swing3		15	15	dmg-minion		-10	-10	Lemuria		0
-Aspect	1	R	abow									r13						dmg-fire		4	8	dmg-cold		4	8	dmg-ltng		4	8	swing3		10	10													Aspect		0
-Ekam	1		phlm									r27						dmg-minion		21	25	hp-minion		21	25	bar		1	1	red-dmg%		4	5	cast3		40	40	stance-radius		3	3	ease		-25	-25	Ekam		0
-Rattus	1	R	knif						tkni	nknf		r37						dmg%		115	143	dmg-norm		13	38	crush		8	8	swingbalance3		50	50	dru		2	2	heal-hit		1	1	motw-phys		20	40	Rattus		0
-Instinct	1	R	axe									r27						dmg%		87	114	dmg-max		25	50	motw-phys		40	60	dru		2	2	swing3		25	25	pierce-fire		33	33	extra-fire		16	25	Instinct		0
-Thundercloud	1		taxe									r51						dmg%		144	171	dmg-norm		38	75	kill-skill	462	20	60	bar		2	2	maxspirits		1	1	dmg-ltng		1	313	dmg-minion		31	50	Thundercloud		0
-Cheetah	1	R	taxe									r02						att%		75	75	dmg%		18	35	move3		5	5	dmg-minion		11	20	att%-minion		21	50	kill-skill	513	5	9				9	Cheetah		0
+Lemuria	1		nscy									r20						dmg%		58	86	dmg-max		13	25	oskill	18	14	17	reanimate	2273	2	3	reanimate	1517	2	3	swing3		15	15	dmg-minion		-5	-5	Lemuria		0
+Aspect	1	R	abow									r13						dmg-fire		2	4	dmg-cold		2	4	dmg-ltng		2	4	swing3		10	10													Aspect		0
+Ekam	1		phlm									r27						dmg-minion		11	13	hp-minion		21	25	bar		1	1	red-dmg%		4	5	cast3		40	40	ease		-25	-25					Ekam		0
+Rattus	1	R	knif						tkni	nknf		r37						dmg%		115	143	dmg-norm		13	38	crush		8	8	swingbalance3		50	50	dru		2	2	heal-hit		1	1	motw-phys		12	24	Rattus		0
+Instinct	1	R	axe									r27						dmg%		87	114	dmg-max		25	50	motw-phys		24	36	dru		2	2	swing3		25	25	pierce-fire		33	33	extra-fire		16	25	Instinct		0
+Thundercloud	1		taxe									r51						dmg%		144	171	dmg-norm		38	75	kill-skill	462	20	60	bar		2	2	maxspirits		1	1	dmg-ltng		1	157	dmg-minion		16	25	Thundercloud		0
+Cheetah	1	R	taxe									r02						att%		75	75	dmg%		18	35	move3		5	5	dmg-minion		6	10	att%-minion		21	50	kill-skill	513	5	9				9	Cheetah		0
 Chrysopelea	1	R	tkni									r10						dmg%		30	57	dmg-min		8	10	kill-skill	469	10	40	pierce-pois		6	10	poison-dur		11	20									Chrysopelea		0
 Dajjal	1	R	tkni									r20						addxp		3	3	kill-skill	564	3	8	dmg%		87	114	dmg/lvl	12	12	12	heal-hit		3	5	swing3		40	40	balance3		40	40	Dajjal		0
 Manitou	1		taxe									r30						dmg%		115	143	kill-skill	386	15	60	extra-fire		21	25	dmg-max		26	50	all-stats		50	50	bar		2	2	ac/lvl	320	320	320	Manitou		0
-Myriad	1		tkni									r40						dmg%		115	143	dmg-global/lvl	16	16	16	kill-skill	779	5	12	dmg-min		26	38	swing3		50	50	indestruct		1	1	crush		3	5	Myriad		0
+Myriad	1		tkni									r40						dmg%		115	143	dmg-global/lvl	10	10	10	kill-skill	779	5	12	dmg-min		26	38	swing3		50	50	indestruct		1	1	crush		3	5	Myriad		0
 Naiad	1		tkni									r49						dmg%		172	200	kill-skill	702	20	8	slow		25	25	att%		200	200													Naiad		0
 Burlesque	1	R	tkni									r51						enr-factor		41	50	dmg%		172	200	dmg-max		78	90	kill-skill	314	20	58	extra-pm		16	25	regen		21	25	dex-enr		100	100	Burlesque		0
-Raid	1	R	jave									r10						dmg%		35	57	ignore-ac		1	1	mana-kill		10	10	charged	346	10	5	dmg-minion		11	15	ama		1	1					Raid		0
+Raid	1	R	jave									r10						dmg%		35	57	ignore-ac		1	1	mana-kill		5	5	charged	346	10	5	dmg-minion		6	8	ama		1	1					Raid		0
 Hastata	1	R	jave									r20						dmg%		58	69	hit-skill	101	1	2	dmg-max		8	13	dex		31	40	pierce-fire		11	13	att%		51	100	heal-kill		21	25	Hastata		0
 HasteZ	1	R	jave									r30						dmg%		98	114	dmg-norm		13	25	block3		50	50	balance3		30	30	kill-skill	496	2	16	regen		21	25	skill-dur		21	25	HasteZ		0
 Hastilude	1		jave									r40						dmg%		115	143	dmg-max		26	38	block		-1	-1	swing3		50	50	getatt-skill	981	1	19	str%		11	15	vit%		11	15	Hastilude		0
-Hastur	1		jave									r51						pierce-fire		25	36	pierce-cold		25	36	ease		-50	-50	ama		3	3	res-all		41	50	oskill	479	1	3	slow		25	25	Hastur		0
+Hastur	1		jave									r51						pierce-fire		25	36	pierce-cold		25	36	ease		-50	-50	ama		3	3	res-all		41	50	dmg-elem	25	200	250	slow		25	25	Hastur		0
 Hastin	1		jave									r55						dmg%		144	171	dmg-norm		38	75	crush		7	10	kill-skill	59	4	8	all-stats		31	40	red-dmg%		5	5	ama		2	2	Hastin		0
 ThanksEveryone	1		tors									r51	r52	r53	r54	r55	r56	ac%		172	200	allskills		4	4	oskill	1004	1	1	heal-hit		2	2	addxp		7	7									ThanksEveryone		0
 Shattered Stone	1	R	weap						nscy	taxe	aspe	r58	r58	r58	r58	r58	r58	dmg%		200	200	allskills		0	2	dmg-norm		63	88	att-skill	500	15	36	lifesteal		20	20	indestruct		1	1					Shattered Stone		0
-Dead Mans Breath	1	R	bow						dbow			r62	r62	r62	r62	r62	r62	dmg%		200	200	allskills		0	2	hit-skill	387	1	23	pierce-cold		50	50	dmg-cold		125	250	heal-hit		1	1	kill-skill	903	9	16	Dead Mans Breath		0
-Faseroptic	1		xbow									r61	r61	r61	r61	r61	r61	dmg%		200	200	allskills		0	2	hit-skill	462	1	19	extra-ltng		30	35	pierce-ltng		18	18	res-ltng		100	100	dmg-ltng		250	375	Faseroptic		0
-RWMinefield	1	Y	swor									r57	r57	r57	r57	r57	r57	dmg%		171	200	allskills		0	2	oskill	1066	15	15	att-skill	986	20	40	extra-fire		25	38	pierce-fire		60	60	dmg-fire		250	250	RWMinefield		0
-Midas Touch	1	R low lvl	axe						taxe			r59	r59	r59	r59	r59	r59	dmg%		171	200	allskills		0	2	hit-skill	681	5	29	extra-pm		30	30	dmg-norm		63	75	dmg-mag		125	150	swing3		66	66	Midas Touch		0
+Dead Mans Breath	1	R	bow						dbow			r62	r62	r62	r62	r62	r62	dmg%		200	200	allskills		0	2	hit-skill	387	1	23	pierce-cold		50	50	dmg-cold		63	125	heal-hit		1	1	kill-skill	903	9	16	Dead Mans Breath		0
+Faseroptic	1		xbow									r61	r61	r61	r61	r61	r61	dmg%		200	200	allskills		0	2	hit-skill	462	1	19	extra-ltng		30	35	pierce-ltng		18	18	res-ltng		100	100	dmg-ltng		125	188	Faseroptic		0
+RWMinefield	1	Y	swor									r57	r57	r57	r57	r57	r57	dmg%		171	200	allskills		0	2	oskill	1066	15	15	att-skill	986	20	40	extra-fire		25	38	pierce-fire		60	60	dmg-fire		125	125	RWMinefield		0
+Midas Touch	1	R low lvl	axe						taxe			r59	r59	r59	r59	r59	r59	dmg%		171	200	allskills		0	2	hit-skill	681	5	29	extra-pm		30	30	dmg-norm		63	75	dmg-mag		63	75	swing3		66	66	Midas Touch		0
 Asymptomatic	1		spea						pspe			r60	r60	r60	r60	r60	r60	dmg%		171	200	allskills		0	2	oskill	965	5	9	pierce-pois		60	60	dmg-norm		75	100	oskill	316	13	16	res-pois-max		6	6	Asymptomatic		0
 Solarion	1		scyh									r60	r60	r60	r60	r60	r60	dmg%		171	200	allskills		0	2	oskill	979	23	31	extra-pois		25	35	pierce-pois		30	30	kill-skill	398	10	35	heal-kill		150	200	Solarion		0
-Malicicle	1		knif						tkni			r62	r62	r62				dmg%		171	200	allskills		0	1	att-skill	825	10	23	dmg-cold		150	175	pierce-cold		20	20	lifesteal		20	25	res-cold-max		2	2	Malicicle		0
+Malicicle	1		knif						tkni			r62	r62	r62				dmg%		171	200	allskills		0	1	att-skill	825	10	23	dmg-cold		75	88	pierce-cold		20	20	lifesteal		20	25	res-cold-max		2	2	Malicicle		0
 Arachnophilia	1	R ++	mace									r60	r60	r60	r60	r60	r60	dmg%		171	200	allskills		0	3	att-skill	469	15	36	pierce-pois		30	30	res-pois-max		8	8	res-pois		200	200	dmg-norm		63	88	Arachnophilia		0
-Neurogenesis	1		hamm									r61	r61	r61	r61	r61	r61	dmg%		171	200	allskills		0	4	hit-skill	443	2	38	pierce-ltng		18	18	extra-ltng		20	25	res-ltng-max		6	6	dmg-ltng		150	300	Neurogenesis		0
+Neurogenesis	1		hamm									r61	r61	r61	r61	r61	r61	dmg%		171	200	allskills		0	4	hit-skill	443	2	38	pierce-ltng		18	18	extra-ltng		20	25	res-ltng-max		6	6	dmg-ltng		75	150	Neurogenesis		0
 FrostHand	1		staf									r62	r62	r62	r62	r62	r62	allskills		0	10	oskill	457	13	16	extra-all		13	25	cast3		50	50	heal-kill		150	200	pierce-cold		30	30					FrostHand		0
 Oris Herald	1	Y	scep									r59	r59	r59	r59	r59	r59	cast3		50	50	allskills		0	4	oskill	314	23	37	extra-pm		25	35	ac		1000	1000	red-dmg%		15	15	enr%		30	30	Oris Herald		0
 Fleshbane	1		jave									r60	r60	r60	r60			dmg%		171	200	allskills		0	2	oskill	310	12	16	hit-skill	467	2	31	extra-pois		25	25	heal-kill		100	150	swing3		25	25	Fleshbane		0
 Dead Star	1	R	tkni									r60	r60					dmg%		171	200	allskills		0	1	hit-skill	695	5	21	pierce-pois		18	18	kill-skill	341	13	25	heal-hit		2	2	dmg-norm		38	50	Dead Star		0
 Dragon Seed	1		taxe									r58	r58	r58	r58	r58	r58	dmg%		171	200	allskills		0	2	hit-skill	374	1	23	dmg-norm		38	63	heal-hit		1	1	red-dmg%		15	15	reanimate	1652	2	2	Dragon Seed		0
-Arnazeus Pinnacle	1		abow									r57	r57	r57	r57	r57	r57	dmg%		171	200	ama		0	2	kill-skill	302	3	16	kill-skill	451	25	36	pierce-fire		30	30	dmg-fire		167	167	abs-fire		10	10	Arnazeus Pinnacle		0
+Arnazeus Pinnacle	1		abow									r57	r57	r57	r57	r57	r57	dmg%		171	200	ama		0	2	kill-skill	302	3	16	kill-skill	451	25	36	pierce-fire		30	30	dmg-fire		84	84	abs-fire		10	10	Arnazeus Pinnacle		0
 Askari Device	1		ajav									r57	r57	r57				dmg%		171	200	ama		0	1	hit-skill	79	1	26	heal-kill		100	100	pierce-fire		45	45	extra-fire		25	25	res-fire-max		6	6	Askari Device		0
 RWFlame	1	Y	aspe									r58	r58	r58	r58	r58	r58	dmg%		171	200	ama		0	3	kill-skill	78	5	12	dmg-norm		125	175	lifesteal		20	30	red-dmg%		10	10	att%		250	250	RWFlame		0
-Perfection	1		h2h									r59	r59	r59				dmg%		171	200	ass		0	2	kill-skill	480	10	36	extra-pm		25	25	dmg-mag		84	167	heal-hit		3	3	slow		30	30	Perfection		0
-Blooddancer	1		nagi									r59	r59	r59	r59	r59	r59	dmg%		171	200	ass		0	7	kill-skill	388	2	22	dmg-norm		125	188	extra-pm		50	50	swing3		66	66	heal-kill		50	75	Blooddancer		0
-Eldruin	1		bswd	baxe								r62	r62	r62	r62	r62	r62	dmg%		171	200	bar		0	1	att-skill	458	20	42	extra-cold		25	25	pierce-cold		15	15	dmg-cold		25	275	res-cold		80	80	Eldruin		0
-LightSoldier	1	RX	2hbx									r61	r61	r61	r61	r61	r61	dmg%		171	200	bar		0	3	kill-skill	461	25	60	pierce-ltng		60	60	dmg-ltng		84	167	dmg-norm		100	200	lifesteal		25	30	LightSoldier		0
-Amphibian	1		dbow									r62	r62	r62	r62	r62	r62	dmg%		171	200	dru		0	2	kill-skill	508	5	60	hit-skill	806	8	15	dmg-cold		250	300	heal-hit		1	1	dmg-norm		63	88	Amphibian		0
+Perfection	1		h2h									r59	r59	r59				dmg%		171	200	ass		0	2	kill-skill	480	10	36	extra-pm		25	25	dmg-mag		42	84	heal-hit		3	3	slow		30	30	Perfection		0
+Blooddancer	1		nagi									r59	r59	r59	r59	r59	r59	dmg%		171	200	ass		0	7	kill-skill	234	2	22	dmg-norm		125	188	extra-pm		50	50	swing3		66	66	heal-kill		50	75	Blooddancer		0
+Eldruin	1		bswd	baxe								r62	r62	r62	r62	r62	r62	dmg%		171	200	bar		0	1	att-skill	458	20	42	extra-cold		25	25	pierce-cold		15	15	dmg-cold		13	138	res-cold		80	80	Eldruin		0
+LightSoldier	1	RX	2hbx									r61	r61	r61	r61	r61	r61	dmg%		171	200	bar		0	3	kill-skill	461	25	60	pierce-ltng		60	60	dmg-ltng		42	84	dmg-norm		100	200	lifesteal		25	30	LightSoldier		0
+Amphibian	1		dbow									r62	r62	r62	r62	r62	r62	dmg%		171	200	dru		0	2	kill-skill	508	5	60	hit-skill	806	8	15	dmg-cold		125	150	heal-hit		1	1	dmg-norm		63	88	Amphibian		0
 FiaclaGears	1		dstf									r61	r61	r61	r61			cast3		50	50	dru		0	12	oskill	463	23	26	extra-ltng		25	40	enr-factor		150	250	pierce-ltng		30	30	enr%		30	30	FiaclaGears		0
 Bartucs Eye	1		nscy									r58	r58	r58	r58	r58	r58	dmg%		171	200	nec		0	4	oskill	1012	5	16	hit-skill	542	15	30	dmg-norm		125	188	ignore-ac		1	1	heal-hit		1	1	Bartucs Eye		0
 RWCut	1		nknf									r58	r58	r58				dmg%		171	200	nec		0	1	hit-skill	1017	25	3	dmg-norm		60	95	swing3		50	50	crush		11	20					RWCut		0
-Doomguard	1		wand									r59	r59					cast3		20	20	nec		0	3	oskill	399	12	23	extra-all		15	25	res-all-minion		25	25	hp-minion		100	100	dmg-minion		200	200	Doomguard		0
+Doomguard	1		wand									r59	r59					cast3		20	20	nec		0	3	oskill	399	12	23	extra-all		15	25	res-all-minion		25	25	hp-minion		100	100	dmg-minion		100	100	Doomguard		0
 Xazax	1		nstf									r57	r57	r57	r57	r57	r57	cast3		50	50	nec		0	11	oskill	682	31	36	extra-pm		25	30	enr%		30	40	enr-factor%		20	20	heal-kill		250	250	Xazax		0
-ForceMind	1		nxbw									r59	r59	r59	r59	r59	r59	dmg%		171	200	nec		0	2	hit-skill	503	1	17	dmg-mag		84	167	dmg-norm		84	167	swing3		30	30	hp%		15	15	ForceMind		0
+ForceMind	1		nxbw									r59	r59	r59	r59	r59	r59	dmg%		171	200	nec		0	2	hit-skill	503	1	17	dmg-mag		42	84	dmg-norm		84	167	swing3		30	30	hp%		15	15	ForceMind		0
 Hadriels Protector	1		pspe									r60	r60	r60	r60	r60	r60	dmg%		171	200	pal		0	4	att-skill	338	5	44	att-skill	339	5	44	res-pois		75	75	extra-all		25	25	balance3		60	60	Hadriels Protector		0
-Judgement	1		pclb	pham	pmac							r57	r57	r57	r57	r57	r57	dmg%		171	200	pal		0	2	kill-skill	824	2	36	pierce-fire		30	30	dmg-fire		167	167	res-fire-max		6	6	dmg-norm		63	188	Judgement		0
+Judgement	1		pclb	pham	pmac							r57	r57	r57	r57	r57	r57	dmg%		171	200	pal		0	2	kill-skill	824	2	36	pierce-fire		30	30	dmg-fire		84	84	res-fire-max		6	6	dmg-norm		63	188	Judgement		0
 Helgrotha	1	Y	orb									r60	r60	r60				cast3		50	50	sor		0	2	pierce-pois		60	60	hp%		20	20	block		1	1	extra-pois		15	15	enr%		25	25	Helgrotha		0
-Dark Exile	1		scrd									r62	r62	r62	r62	r62	r62	dmg%		171	200	sor		0	4	att-skill	63	5	23	dmg-norm		63	125	lifesteal		30	35	dmg-cold		278	556	pierce-cold		60	60	Dark Exile		0
-Hellfire Plate	1		tors									r57	r57	r57	r57	r57	r57	ac%		171	200	allskills		0	2	hit-skill	346	1	5	ac		1000	1000	red-dmg%		10	10	dmg-fire		167	167					Hellfire Plate		0
-Thundercap	1		helm						phlm			r61	r61	r61	r61			ac%		171	200	allskills		0	1	res-ltng-max		4	4	extra-ltng		18	18	pierce-ltng		21	21	abs-ltng		5	5	dmg-ltng		84	84	Thundercap		0
-Rathmas Blessing	1	Y	circ									r62	r62	r62	r62			oskill	870	16	28	allskills		0	3	res-all-minion		50	50	dmg-minion		50	50	hp-minion		50	50	abs-cold		10	10	res-cold		40	40	Rathmas Blessing		0
+Dark Exile	1		scrd									r62	r62	r62	r62	r62	r62	dmg%		171	200	sor		0	4	att-skill	63	5	23	dmg-norm		63	125	lifesteal		30	35	dmg-cold		139	278	pierce-cold		60	60	Dark Exile		0
+Hellfire Plate	1		tors									r57	r57	r57	r57	r57	r57	ac%		171	200	allskills		0	2	hit-skill	346	1	5	ac		1000	1000	red-dmg%		10	10	dmg-fire		84	84					Hellfire Plate		0
+Thundercap	1		helm						phlm			r61	r61	r61	r61			ac%		171	200	allskills		0	1	res-ltng-max		4	4	extra-ltng		18	18	pierce-ltng		21	21	abs-ltng		5	5	dmg-ltng		42	42	Thundercap		0
+Rathmas Blessing	1	Y	circ									r62	r62	r62	r62			oskill	870	16	28	allskills		0	3	res-all-minion		50	50	dmg-minion		25	25	hp-minion		50	50	abs-cold		10	10	res-cold		40	40	Rathmas Blessing		0
 Khalims Protector	1		shld						basd			r60	r60	r60	r60			ac%		171	200	allskills		0	2	block		2	2	res-pois-max		4	4	heal-kill		50	50	block3		40	40	ac-global		50	50	Khalims Protector		0
-Lysra	1		belt									r57	r57					ac%		171	200	allskills		0	1	dmg-fire		84	167	res-fire-max		2	2	abs-fire		5	5	pierce-fire		15	15					Lysra		0
-Retribution	1		glov									r57	r57	r57	r57			ac%		171	200	allskills		0	1	anykill-skill	388	1	3	res-fire-max		4	4	res-fire		50	50	extra-fire		20	25	red-dmg%		5	5	Retribution		0
+Lysra	1		belt									r57	r57					ac%		171	200	allskills		0	1	dmg-fire		42	84	res-fire-max		2	2	abs-fire		5	5	pierce-fire		15	15					Lysra		0
+Retribution	1		glov									r57	r57	r57	r57			ac%		171	200	allskills		0	1	anykill-skill	234	1	3	res-fire-max		4	4	res-fire		50	50	extra-fire		20	25	red-dmg%		5	5	Retribution		0
 Wind Runner	1	Y	boot									r58	r58	r58	r58			ac%		171	200	allskills		0	1	move3		10	10	dmg-norm		25	50	att%		250	250	swing3		35	35	lifesteal		10	15	Wind Runner		0
-Eaglehorn Mask	1		azhm									r59	r59	r59	r59			ac%		171	200	ama		0	1	extra-pm		20	25	dmg-mag		25	50	all-stats		30	50	block		1	1	heal-kill		30	50	Eaglehorn Mask		0
+Eaglehorn Mask	1		azhm									r59	r59	r59	r59			ac%		171	200	ama		0	1	extra-pm		20	25	dmg-mag		13	25	all-stats		30	50	block		1	1	heal-kill		30	50	Eaglehorn Mask		0
 SkovosHeart	1	R	azsd									r58	r58	r58	r58	r58	r58	ac%		171	200	ama		0	2	dmg-norm		25	50	heal-hit		1	1	swing3		40	40	block		1	1	att%		150	150	SkovosHeart		0
-Shadowsteps	1		ishd									r59	r59	r59	r59	r59	r59	ac%		171	200	ass		0	2	heal-hit		1	1	extra-pm		13	13	block		1	1	block3		40	40	dmg-mag		84	84	Shadowsteps		0
-Force Shock	1		phlm									r61	r61	r61	r61			ac%		171	200	bar		0	1	res-ltng-max		6	6	dmg-ltng		84	167	abs-ltng		10	10	vit%		30	30	dmg-norm		7	19	Force Shock		0
+Shadowsteps	1		ishd									r59	r59	r59	r59	r59	r59	ac%		171	200	ass		0	2	heal-hit		1	1	extra-pm		13	13	block		1	1	block3		40	40	dmg-mag		42	42	Shadowsteps		0
+Force Shock	1		phlm									r61	r61	r61	r61			ac%		171	200	bar		0	1	res-ltng-max		6	6	dmg-ltng		42	84	abs-ltng		10	10	vit%		30	30	dmg-norm		7	19	Force Shock		0
 Triunes Blessing	1	R	basd									r60	r60	r60	r60			ac%		171	200	bar		0	2	pierce-pois		30	30	block		1	1	att%		250	250	extra-pois		10	10	res-pois-max		2	2	Triunes Blessing		0
 Natures Grace	1		pelt									r60	r60	r60	r60			ac%		171	200	dru		0	2	extra-pois		25	25	block		1	1	ease		-50	-50	str%		40	40	str		100	100	Natures Grace		0
 Twisted Mind	1		head									r59	r59	r59	r59			ac%		171	200	nec		0	1	extra-pm		25	35	heal-kill		100	120	hp-minion		50	75	cast3		30	50	ignore-ac		1	1	Twisted Mind		0
 Battle Rage	1	R	pzhm									r58	r58	r58	r58			ac%		171	200	pal		0	1	dmg-norm		38	63	red-dmg%		10	10	lifesteal		10	20	swing3		25	25	res-all		20	25	Battle Rage		0
 Lightwell	1		ashd									r57	r57	r57	r57			ac%		171	200	pal		0	2	block		1	1	block3		30	30	avoidance		5	5	extra-fire		15	20	pierce-fire		15	15	Lightwell		0
-Space Dementia	1		stor									r61	r61	r61	r61	r61	r61	ac%		171	200	sor		3	5	ac		1000	1000	dmg-ltng		250	250	extra-ltng		25	30	abs-ltng		15	15	all-stats%		30	30	Space Dementia		0
-ThanksLaz	1		tors									r98	r98	r98	r98	r98	r98	allskills		1	4	ac%		172	200	pierce-all		3	30	red-dmg%		5	20	res-all-max		0	4	ac-global		100	100					ThanksLaz		0
-Rebel	1		tors									rx01						res-all		60	80	ac%		172	200	dmg-global		200	200	str		151	200	dex		151	200	vit		-75	-75	enr		-75	-75	Rebel		0
+Space Dementia	1		stor									r61	r61	r61	r61	r61	r61	ac%		171	200	sor		3	5	ac		1000	1000	dmg-ltng		125	125	extra-ltng		25	30	abs-ltng		15	15	all-stats%		30	30	Space Dementia		0
+ThanksLaz	1		tors									r98	r98	r98	r98	r98	r98	allskills		1	4	ac%		172	200	pierce-all		3	30	red-dmg%		5	20	res-all-max		0	4	ac-global		100	100	item-nounsock		1	1	ThanksLaz		0
+Rebel	1		tors									rx01						res-all		60	80	ac%		172	200	dmg-global		120	120	str		151	200	dex		151	200	vit		-75	-75	enr		-75	-75	Rebel		0
 LumenArcana	1		tors									rx06						ac%		144	171	light		3	3	allskills		1	3	pierce-fire		7	30	pierce-cold		7	30	pierce-ltng		7	30	pierce-pois		7	30	Lumen Arcana		0
 Celebration	1		tors									rx13						all-stats		41	60	mag%		41	60	att-skill	825	10	63	light		3	3	extra-all		26	38	att%		250	250					Celebration		0
-Thelema	1		tors									rx19						vit		120	150	mana-thorns		201	250	ac%		172	200	allskills		4	4	cast3		55	55	att%-minion		151	200	dmg-minion		101	150	Thelema		0
+Thelema	1		tors									rx19						vit		120	150	mana-thorns		101	125	ac%		172	200	allskills		4	4	cast3		55	55	att%-minion		151	200	dmg-minion		51	75	Thelema		0
 Cathedral	1		tors									rx25						extra-pois		45	55	ac%		190	190	poison-dur		76	100	ac		2420	2420	charged	398	50	40	regen/lvl	64	64	64					Cathedral		0
 Mirage	1		tors									rx33						slow-thorns		21	30	red-dmg		80	100	move3		10	10	swingcast3		50	50	allskills		2	2	res-all		77	77	fade		1	1	Mirage		0
 Summit	1		helm									rx01						gold%		60	60	ease		-100	-100	cheap		13	13																	Summit		0
@@ -409,24 +409,24 @@ Goddess	1		shld									rx30						nofreeze		1	1	ac		-433	-433	allskills		4	4	eas
 Iblis	1		glov									rx04						poison-dur		21	25	abs-fire%		4	4	extra-fire		33	38	enr%		25	35	light		10	10									Iblis		0
 Mercy	1		glov									rx13						str		151	200	att-skill	553	10	18	vit%		11	15	ac		26	26	dmg-max		50	63									Mercy		0
 Kali	1		glov									rx21						res-fire		91	91	kill-skill	518	25	33	allskills		2	2	ac		-314	-314	res-fire-max		6	6									Kali		0
-Aiwass	1		glov									rx33						dmg-minion		44	50	nec		3	3	ac		293	293	charged	873	78	12	str%		21	35									Aiwass		0
+Aiwass	1		glov									rx33						dmg-minion		23	25	nec		3	3	ac		293	293	charged	873	78	12	str%		21	35									Aiwass		0
 Rainbow	1		belt									rx05						res-all		31	40	extra-all		13	13	mag%		50	50	light		7	7	res-all-minion		41	50									Rainbow		0
-Prodigy	1		belt									rx15						extra-fire		13	43	extra-ltng		13	43	mana-kill		51	60	regen-mana		31	40	cast3		40	40	att%		100	100					Prodigy		0
-Fuse	1		belt									rx23						ac%		143	171	gethit-skill	79	20	28	res-fire		75	100	extra-fire/lvl	12	12	12	charged	564	40	5	dmg-fire		76	226					Fuse		0
+Prodigy	1		belt									rx15						extra-fire		13	43	extra-ltng		13	43	mana-kill		26	30	regen-mana		31	40	cast3		40	40	att%		100	100					Prodigy		0
+Fuse	1		belt									rx23						ac%		143	171	gethit-skill	79	20	28	res-fire		75	100	extra-fire/lvl	12	12	12	charged	564	40	5	dmg-fire		38	113					Fuse		0
 Epicenter	1		boot									rx06						ac%		163	191	crush/lvl	4	4	4	hp%		25	30																	Epicenter		0
-Outlaw	1		boot									rx14						ac%		200	200	nec		2	2	enr		250	300	ac		-1	-1	howl-thorns		10	10	res-all-minion		31	40	dmg-minion		71	100	Outlaw		0
+Outlaw	1		boot									rx14						ac%		200	200	nec		2	2	enr		250	300	ac		-1	-1	howl-thorns		10	10	res-all-minion		31	40	dmg-minion		36	50	Outlaw		0
 Ginfaxi	1		boot									rx22						oskill	689	15	20	ac%		200	200	slow-thorns		5	5	str		80	100	ac-global		91	120									Ginfaxi		0
-Craton	1		boot									rx32						ac-global		41	50	att-skill	595	7	7	crush		5	5	all-stats		50	50	red-dmg		-50	-70									Craton		0
+Craton	1		boot									rx32						ac-global		41	50	att-skill	595	5	7	crush		5	5	all-stats		50	50	red-dmg		-50	-70									Craton		0
 StataMater	1		azhm									rx16						dex%		10	15	oskill	566	30	37	enr%		25	35	res-fire		100	100	pierce-fire		30	30	red-dmg		41	50	gold%		30	30	StataMater		0
 Amaterasu	1		azhm									rx24						enr		190	190	oskill	632	21	27	extra-fire		21	25	ama		2	3	light		5	5	gold%		26	32	abs-fire%		4	4	Amaterasu		0
-Siegfried	1		azhm									rx31						dex		116	116	dmg-elem	250	167	292	swing3		50	50	oskill	698	6	16	crush		5	5									Siegfried		0
+Siegfried	1		azhm									rx31						dex		116	116	dmg-elem	250	84	146	swing3		50	50	oskill	698	6	16	crush		5	5									Siegfried		0
 Edda	1		azsd									rx15						extra-pm		20	25	cast3		40	40	mana%		41	50	ama		3	3	ease		-25	-25	extra-fire		23	28					Edda		0
 Afrit	1		ishd									rx13						oskill	525	31	37	extra-pm		61	75	cast3		40	40	mag%		21	40	red-dmg		3	5									Afrit		0
 Rahab	1		ishd									rx19						dex		140	140	oskill	353	8	13	lifesteal		30	40	ac%		172	200	str		50	50	att-skill	473	20	8					Rahab		0
 Ligeia	1		ishd									rx28						res-cold		30	30	kill-skill	62	13	18	oskill	695	23	29	res-all		40	40	res-pois		-90	-90	oskill	691	23	29					Ligeia		0
-Algiz	1		phlm									rx09						dmg-ltng		1	500	ac-global		41	50	att-skill	540	17	4	crush		5	5	str%		25	25	vit%		25	25					Algiz		0
+Algiz	1		phlm									rx09						dmg-ltng		1	250	ac-global		41	50	att-skill	540	17	4	crush		5	5	str%		25	25	vit%		25	25					Algiz		0
 Nasrudin	1		phlm									rx19						dex		251	300	ac%		200	200	all3		100	100	cast3		-70	-70	block3		-10	-10	gold%		26	32	oskill	690	9	15	Nasrudin		0
-Enmerkar	1		basd									rx17						ac%		172	200	all-stats%		41	50	shamans-syn		50	80	bar		3	3	charged	449	10	6									Enmerkar		0
+Enmerkar	1		basd									rx17						ac%		172	200	all-stats%		41	50	shamans-syn		19	30	bar		3	3	charged	449	10	6									Enmerkar		0
 Warpath	1		basd									rx27						ac%		172	200	vit%		50	50	att-skill	542	25	4	dmg-norm		25	100	crush		5	5	block3		60	60					Warpath		0
 Nezha	1		pelt									rx18						ac%		172	200	dex%		35	50	swing3		50	50	mana%		11	20	mag%		41	80	dru		2	2					Nezha		0
 Natha	1		pelt									rx28						ac%		200	200	hit-skill	492	7	2	att%		101	150	swing3		50	50	balance3		50	50	red-dmg%		15	15					Natha		0
@@ -434,7 +434,7 @@ Cube	1		head									rx16						balance		150	150	balance%		35	35	ac%		172	200	nec
 Warlock	1		head									rx25						ac%		58	86	att-skill	451	25	40	oskill	324	26	32	res-fire		60	60	lifesteal		30	40	crush		12	12					Warlock		0
 Ilmatar	1		pzhm									rx10						extra-ltng		30	30	att-skill	999	25	35	pal		2	2	regen		110	150	str		75	100	dex		75	100	enr		75	100	Ilmatar		0
 Hierodule	1		pzhm									rx25						pal		3	3	cast3		60	60	extra-ltng		15	15	extra-pm		30	45	res-all-max		2	2									Hierodule		0
-Asmodai	1		ashd									rx14						mana-kill		41	50	heal-kill		41	50	gold%		13	13	dmg-min		113	125	kill-skill	839	5	16	skill-dur		21	25					Asmodai		0
+Asmodai	1		ashd									rx14						mana-kill		21	25	heal-kill		41	50	gold%		13	13	dmg-min		113	125	kill-skill	839	5	16	skill-dur		21	25					Asmodai		0
 Sangreal	1		ashd									rx28						ac		5033	5033	desc-top	11337	9	9	aura	297	1	1	swing3		125	25	balance3		125	25	block		1	1					Sangreal		0
 Zohar	1		ashd									rx33						slow-thorns		20	20	oskill	676	14	21	ac%		200	200	dmg-max		100	125	cheap		10	10	swing3		50	50	avoidance		10	15	Zohar		0
 Demeter	1		stor									rx23						ac%		172	200	res-pois		70	70	oskill	67	25	29	pierce-pois		31	42	sor		4	4	red-dmg		31	50					Demeter		0
@@ -447,53 +447,53 @@ Paaliaq	1		tors									rx10						oskill	891	14	20	ac%		200	200	dmg-norm		63	88	
 Lyrannikin	1		stor									rx11						ac%		200	200	oskill	647	38	38	oskill	397	7	10	res-all		75	75	red-dmg		50	70	res-pois-len		65	75					Lyrannikin		0
 Brawl	1		glov									rx16						oskill	904	13	19	ac%		200	200	swing3		60	60	dmg-norm		19	25	str		135	170									Brawl		0
 Kundalini	1		stor									rx12						sor		4	4	cast3		80	80	oskill	447	10	15	ac%		200	200	ease		-100	-100	res-all		100	100					Kundalini		0
-Ekam	1		phlm									rx27						dmg-minion		60	80	hp-minion		40	50	bar		3	3	red-dmg%		7	7	cast3		60	60	stance-radius		5	5	ease		-25	-25	Ekam		0
+Ekam	1		phlm									rx27						dmg-minion		30	40	hp-minion		40	50	bar		3	3	red-dmg%		7	7	cast3		60	60	ease		-25	-25					Ekam		0
 Dawn	1		weap									rx01						dmg%		172	200	gold%		60	60	all-stats%		75	75	kill-skill	496	10	32	balance3		45	45	att%		301	500	light		2	4	Dawn		0
-Shark	1		weap									rx07						dmg/lvl	64	64	64	dmg%		200	200	kill-skill	600	1	31	blood-phys		60	100	swing3		40	40	mana		-500	-500					Shark		0
+Shark	1		weap									rx07						dmg/lvl	64	64	64	dmg%		200	200	kill-skill	600	1	31	blood-phys		36	60	swing3		40	40	mana		-250	-250					Shark		0
 Enyo	1		weap									rx14						dmg-min		104	100	hpm-str%-enr%		50	50	att-skill	347	15	42	dmg%		144	171	dmg-stun		125	125	allskills		3	3	reanimate	712	8	12	Enyo		0
 Azrael	1		weap									rx21						res-fire		208	66	kill-skill	518	20	60	hp		500	500	dmg%		172	200	lifesteal		19	27	str-heal		150	150	swingcast3		60	60	Azrael		0
-Void	1		weap									rx28						res-cold		208	100	dmg%		172	200	slow		40	40	red-dmg		51	75	mana-hit		16	40	reanimate	2344	3	3	dmg-norm		63	88	Void		0
-Banshee	1		bow									rx03						dmg%		119	86	hit-skill	459	1	27	dmg/lvl	64	64	64	move3		10	10	dmg-cold	75	100	125	abs-cold%		7	7	kill-skill	712	5	13	Banshee		0
+Void	1		weap									rx28						res-cold		208	100	dmg%		172	200	slow		40	40	red-dmg		51	75	mana-hit		8	20	reanimate	2344	3	3	dmg-norm		63	88	Void		0
+Banshee	1		bow									rx03						dmg%		119	86	hit-skill	459	1	27	dmg/lvl	64	64	64	move3		10	10	dmg-cold	75	50	63	abs-cold%		7	7	kill-skill	712	5	13	Banshee		0
 Shockwave	1		bow									rx12						dmg%		115	143	kill-skill	553	60	40	slow		21	25	crush		6	10	dex		61	70	enr		61	70	dmg-max		25	25	Shockwave		0
-Balance	1		bow									rx22						unity		60	60	courage		35	35	dex		35	35	ac-global		101	150	dmg-global		101	150	dmg%		172	200					Balance		0
+Balance	1		bow									rx22						unity		60	60	courage		35	35	dex		35	35	ac-global		101	150	dmg-global		61	90	dmg%		172	200					Balance		0
 Hive	1		bow									rx30						dmg%		144	143	dmg-max		63	100	kill-skill	779	15	12	dmg-pois	25	3072	4608	regen/lvl	64	64	64	swing3		-25	-25					Hive		0
-Thammuz	1		xbow									rx04						dmg%		115	143	kill-skill	809	25	42	hp		1111	1111	dmg-fire		250	251	swing3		50	50	kill-skill	530	25	42					Thammuz		0
+Thammuz	1		xbow									rx04						dmg%		115	143	kill-skill	809	25	42	hp		1111	1111	dmg-fire		125	126	swing3		50	50	kill-skill	530	25	42					Thammuz		0
 Python	1		xbow									rx16						dex%		26	40	str%		26	40	dmg%		172	200	dmg/lvl	48	48	32	hp%		31	40	kill-skill	330	20	61	lifesteal		26	29	Python		0
 Cyclops	1		xbow									rx29						slow		33	33	dmg%		144	171	dmg-max		151	200	hit-skill	443	6	53	extra-ltng		66	75	swing3		75	75					Cyclops		0
 Kingsblood2	1		knif						tkni			rx26						addxp		7	7	dmg%		200	200	dmg-min		167	167	all-stats		61	80	allskills		1	4	light		3	3	lifesteal		32	42	Kingsblood2		0
 Endor	1		scyh									rx31						dmg%		190	190	dmg-max		100	125	att-skill	387	25	60	att-skill	330	5	41	extra-cold		31	35	extra-pois		31	35					Endor		0
 Myrmidon	1		spea									rx29						vit%		40	40	dmg%		144	171	dmg/lvl	48	48	48	dex%		40	40	oskill	666	8	12	ac-global		101	130	ease		30	30	Myrmidon		0
-Demhe	1		mace	scep					hamm			rx33						dmg%		172	200	dmg-max		126	250	att-skill	398	25	55	gehenna		39	45	mana-hit		101	250	dmg-stun		125	125					Demhe		0
+Demhe	1		mace	scep					hamm			rx33						dmg%		172	200	dmg-max		126	250	att-skill	398	25	55	gehenna		39	45	mana-hit		51	125	dmg-stun		125	125					Demhe		0
 Pax Mystica	1		staf									rx04						oskill	346	20	37	res-all		55	66	allskills		13	13	mag%		61	80													Pax Mystica		0
 Hadad	1		staf									rx11						gethit-skill	669	5	46	allskills		8	10	extra-ltng/lvl	25	25	25	slow-thorns		50	50	oskill	680	21	36									Hadad		0
 Summanus	1		staf									rx19						dex		200	200	enr		100	100	allskills		8	10	att-skill	999	5	17	dmg%		172	200	dmg-max		188	188	swing3		50	50	Summanus		0
 Akhenaten	1		staf									rx27						vit%		25	25	allskills		11	12	cast3		50	50	extra-fire		50	50	extra-pois		50	50	slow-thorns		31	35	res-firepoison		66	66	Akhenaten		0
 Prophecy	1		scep									rx06						dmg%		144	171	res-fire		31	50	res-cold		31	50	fire-thorns		444	444	cold-thorns	125	444	444	allskills		5	7	dmg-max		50	75	Prophecy		0
 Bane	1		scep									rx17						dmg%		200	200	att-skill	531	12	31	att%		201	250	dmg-max		188	188	swing3		43	43	all-stats		43	43	crush/lvl	4	4	4	Bane		0
-Judas	1		scep									rx22						enr%		50	50	dmg-mon%	11	350	350	desc-bottom	11299	4	4	ease		-100	-100	gold%		30	30	mag%		100	100	reanimate	811	15	15	Judas		0
+Judas	1		scep									rx22						enr%		50	50	dmg-mon%	11	180	180	desc-bottom	11299	4	4	ease		-100	-100	gold%		30	30	mag%		100	100	reanimate	811	15	15	Judas		0
 Path	1		scep									rx30						ama		3	7	gethit-skill	699	25	37	extra-fire		26	30	extra-pm		26	30	ease		-50	-50	addxp		5	5	enr-factor%		21	25	Path		0
-Aegina	1		aspe									rx11						dmg%		172	200	dmg-cold	25	1	375	oskill	571	23	41	manasteal		41	50	wirts		75	75	att-skill	702	10	41					Aegina		0
-Scar	1		ajav									rx16						dmg%		144	171	kill-skill	313	50	60	crush		15	15	dmg-fire		150	200	skill	324	15	29	dex		100	100					Scar		0
-Dragonfly	1		ajav									rx26						dmg%		144	171	oskill	693	12	21	lifesteal		33	33	slow		41	50	swing3		50	50	dmg-fire		250	250	move3		10	10	Dragonfly		0
+Aegina	1		aspe									rx11						dmg%		172	200	dmg-cold	25	1	188	oskill	571	23	41	manasteal		41	50	wirts		75	75	att-skill	702	10	41					Aegina		0
+Scar	1		ajav									rx16						dmg%		144	171	kill-skill	313	50	60	crush		15	15	dmg-fire		75	100	skill	324	15	29	dex		100	100					Scar		0
+Dragonfly	1		ajav									rx26						dmg%		144	171	oskill	693	12	21	lifesteal		33	33	slow		41	50	swing3		50	50	dmg-fire		125	125	move3		10	10	Dragonfly		0
 Corsair	1		abow									rx15						oskill	635	24	42	dmg%		190	190	gold%		30	30	mag%		41	50	swing3		60	60	dex%		66	66					Corsair		0
 IceBreaker2	1		abow									rx29						res-cold		81	100	dmg%		172	200	crush		1	25	dmg-max		1	500	nofreeze		1	1	kill-skill	453	30	60					IceBreaker2		0
-Shedim	1		h2h									rx02						att%		250	250	dmg%		200	200	pierce-pois		25	60	dmg-pois	25	1280	2560	res-pois-len		75	75	mana-kill		41	150	dmg-undead		250	250	Shedim		0
-Fiend	1		h2h									rx17						att-skill	699	20	51	dmg%		183	183	dmg-fire		250	375	swing3		50	50	mag%		61	100	oskill	833	41	46	oskill	824	41	46	Fiend		0
-Frequency	1		h2h									rx27						dex%		21	30	dmg%		144	171	att-skill	579	20	60	res-ltng		75	75	hit-skill	540	18	14	dmg-stun		125	125	dmg-ltng		25	500	Frequency		0
+Shedim	1		h2h									rx02						att%		250	250	dmg%		200	200	pierce-pois		25	60	dmg-pois	25	1280	2560	res-pois-len		75	75	mana-kill		21	75	dmg-undead		150	150	Shedim		0
+Fiend	1		h2h									rx17						att-skill	699	20	51	dmg%		183	183	dmg-fire		125	188	swing3		50	50	mag%		61	100	oskill	833	41	46	oskill	824	41	46	Fiend		0
+Frequency	1		h2h									rx27						dex%		21	30	dmg%		144	171	att-skill	579	20	60	res-ltng		75	75	hit-skill	540	18	14	dmg-stun		125	125	dmg-ltng		13	250	Frequency		0
 Khattak	1		nagi									rx08						extra-ltng		51	75	dmg%		200	200	swing3		100	100	dmg-max		100	100	balance3		100	100									Khattak		0
 Ram	1		bswd	baxe								rx10						dmg%		172	200	oskill	643	16	32	str%		31	40	bar		2	6	str		101	150	dmg-stun		125	125					Ram		0
 Essus	1		bswd	baxe								rx22						dmg%		199	199	dmg-max		250	250	oskill	688	16	23	stupidity		2	6	hp%		31	40									Essus		0
 Thunderbird	1		bswd	baxe								rx32						att-skill	807	50	46	dmg%		144	171	att-skill	680	15	61	extra-ltng		46	55	pierce-ltng		20	20	ease		-40	-40	res-ltng		75	75	Thunderbird		0
-Peacock	1		dbow									rx13						dmg%		190	190	dmg-elem	50	84	167	res-courage		125	125	slow		35	35													Peacock		0
+Peacock	1		dbow									rx13						dmg%		190	190	dmg-elem	50	42	84	res-courage		125	125	slow		35	35													Peacock		0
 Lynx	1		dbow									rx27						dmg%		172	200	kill-skill	510	4	31	swing3		66	66	dmg-max		222	222	str%		41	50	dex%		41	50					Lynx		0
-Sylvanshine	1		dbow									rx33						dmg%		172	200	dmg-max		251	375	dex		150	150	manasteal		31	35	kill-skill	701	25	52	dmg-cold	125	334	417					Sylvanshine		0
+Sylvanshine	1		dbow									rx33						dmg%		172	200	dmg-max		251	375	dex		150	150	manasteal		31	35	kill-skill	701	25	52	dmg-cold	125	167	209					Sylvanshine		0
 Ocean	1		dstf									rx05						gethit-skill	702	20	61	dru		2	5	extra-cold		18	33	regen-mana		41	60	mag%		40	40	all-stats		66	100					Ocean		0
 Samhain	1		dstf									rx12						extra-pois		46	50	extra-fire		46	50	dru		8	12	heal-kill		101	250	cast3		60	60	regen		310	380					Samhain		0
 Augur	1		dstf									rx20						addxp		4	4	oskill	569	21	46	oskill	570	21	46	dru		5	12	all-stats%		31	40	mag%		50	50	ac/lvl	640	640	640	Augur		0
 Lincos	1		dstf									rx29						enr%		41	50	dru		8	11	oskill	473	42	48	pierce-fcp		40	40	regen-mana		31	50	res-all-max		2	2					Lincos		0
 Black Cat	1		nscy									rx02						att%		225	225	hp		700	700	dmg%		172	200	mag%		-17	-17	att-skill	530	20	61	kill-skill	553	35	60	crush		10	15	Black Cat		0
 Mantra	1		nscy									rx13						dex		105	105	str		125	125	dmg%		144	171	dmg-pois	25	2560	5120	pierce-pois		60	60	res-pois-len		175	175	dmg-stun		100	100	Mantra		0
-Chthon	1		nscy									rx29						kill-skill	612	30	14	dmg-global		150	150	kill-skill	500	15	27	dmg%		172	200	dmg-max		125	125									Chthon		0
+Chthon	1		nscy									rx29						kill-skill	612	30	14	dmg-global		90	90	kill-skill	500	15	27	dmg%		172	200	dmg-max		125	125									Chthon		0
 Loa	1		nknf									rx05						dmg%		172	200	manasteal		61	75	reanimate	2288	15	15	light		2	2	dmg-max		100	100									Loa		0
 Jinx	1		nknf									rx13						dmg%		144	171	dex		200	200	addxp		7	7	hit-skill	346	30	16													Jinx		0
 Misery	1		nknf									rx23						dmg%		172	200	heal-hit		21	25	slow		31	40	oskill	331	31	42	dmg-pois	25	640	1280	nec		1	4	hp		500	500	Misery		0
@@ -502,10 +502,10 @@ Ladon	1		nstf									rx25						res-fire		101	150	nec		8	10	oskill	564	21	34	ext
 Koan	1		wand									rx09						regen-mana		100	100	gold%		-7	-7	nec		4	6	avoidance		15	15													Koan		0
 Ghoul	1		wand									rx20						addxp		5	5	maxminions		1	1	extra-cold		39	39	nec		3	4	oskill	567	21	32									Ghoul		0
 Genie	1		nxbw									rx08						oskill	521	21	21	dmg%		172	200	slow		31	40	hit-skill	1002	10	41	nec		2	3	reanimate	915	5	10					Genie		0
-Atlantis	1		nxbw									rx19						dex		80	80	kill-skill	473	22	60	str		60	60	dmg%		144	200	mana%		33	33	dmg-global		51	100	gold%		30	30	Atlantis		0
+Atlantis	1		nxbw									rx19						dex		80	80	kill-skill	473	22	60	str		60	60	dmg%		144	200	mana%		33	33	dmg-global		31	60	gold%		30	30	Atlantis		0
 Aether	1		nxbw									rx31						dmg%		196	196	manasteal		21	25	avoidance		20	20	ignore-ac		1	1	str%		51	60	kill-skill	563	25	36					Aether		0
-Jihad	1		pclb	pmac	pham							rx05						dmg-max		101	125	dmg%		144	171	dmg-demon		300	300	kill-skill	37	20	48	pal		1	4	swing3		45	45					Jihad		0
-Intifada	1		pclb	pmac	pham							rx15						dmg%		172	200	att-skill	595	15	41	no-ac		-100	-100	crush		25	25	dmg-minion		101	150	hp-minion		-50	-50					Intifada		0
+Jihad	1		pclb	pmac	pham							rx05						dmg-max		101	125	dmg%		144	171	dmg-demon		180	180	kill-skill	37	20	48	pal		1	4	swing3		45	45					Jihad		0
+Intifada	1		pclb	pmac	pham							rx15						dmg%		172	200	att-skill	595	12	41	no-ac		-100	-100	crush		25	25	dmg-minion		51	75	hp-minion		-50	-50					Intifada		0
 Lammasu	1		pclb	pmac	pham							rx25						res-cold		31	50	dmg-stun		250	250	extra-all		26	30	slow		40	40	swing3		80	80	pal		2	5	res-all-minion		50	50	Lammasu		0
 Nehushtan	1		pspe									rx27						dmg%		172	200	dmg-pois	25	5120	15360	pierce-pois		25	30	swing3		-25	-25	att-skill	81	33	61	light		-3	-3					Nehushtan		0
 Circe	1		orb									rx11						enr%		61	75	oskill	96	24	24	pagan2		3	3	extra-pois		44	44	extra-ltng		44	44									Circe		0
@@ -513,32 +513,32 @@ Ker	1		orb									rx20						addxp		5	5	oskill	1109	11	25	oskill	57	11	25	extra-
 Inanna	1		scrd									rx12						dmg%		190	190	res-all		61	80	slow		50	50	heal-melee		201	250													Inanna		0
 Shamo	1		nagi									rx16						oskill	884	21	30	att-skill	889	20	41	dmg%		143	143	dmg-max		125	125	swing3		80	80	wirts		99	99					Shamo		0
 Amok	1		bow									rx09						oskill	890	26	42	dmg%		200	200	swing3		60	60	heal-hit		5	5	kill-skill	511	3	17	pierce-cold		25	25	pierce-ltng		25	25	Amok		0
-Gharaniq	1		bswd	baxe								rx33						oskill	881	6	19	dmg%		172	200	dmg-norm		125	125	dmg-minion		71	75	str		81	100	dex		201	250	bar		3	4	Gharaniq		0
+Gharaniq	1		bswd	baxe								rx33						aura	881	7	7	dmg%		172	200	dmg-norm		125	125	desc-top	11614	9	9	str		81	100	dex		201	250	bar		3	4	Gharaniq		0
 Hornet	1		bow									rx17						oskill	903	21	32	dmg%		172	200	dmg-norm		100	125	dmg-pois	25	256	512	dex%		21	40									Hornet		0
 Nyx	1		bow									rx26						dmg%		115	143	dmg-norm		7	200	oskill	969	12	35	howl		10	10	lifesteal		41	50	aura	284	40	40	desc-bottom	11303	4	4	Nyx		0
 Ljosalf	1		staf									rx30						oskill	833	46	49	extra-fire/lvl	20	20	20	allskills		7	10	getatt-skill	981	25	41	regen		250	250	res-all		82	86	anykill-skill	833	100	60	Ljosalf		0
-Titanomachia	1		aspe									rx24						dmg%		190	190	dmg-max		251	275	att-skill	980	25	19	dmg-ltng		1	250	str		150	150	red-dmg%		15	15	dmg-stun		200	200	Titanomachia		0
+Titanomachia	1		aspe									rx24						dmg%		190	190	dmg-max		251	275	att-skill	980	25	19	dmg-ltng		1	125	str		150	150	red-dmg%		15	15	dmg-stun		200	200	Titanomachia		0
 Quaoar	1		pclb	pmac	pham							rx29						dmg%		172	200	dmg-norm		63	188	att-skill	982	20	36	nofreeze		1	1	heal-hit		8	8	hp%		25	25					Quaoar		0
-Vertigo	1		orb									rx22						sor		4	5	cast3		75	75	extra-ltng		21	25	extra-cold		21	40	dmg-to-mana		42	46									Vertigo		0
-Eurynome	1		nstf									rx17						nec		8	10	oskill	454	31	41	extra-fire		51	63	dmg-minion		180	180	hp-minion		-75	-75	enr		100	100	vit		-40	-40	Eurynome		0
+Vertigo	1		orb									rx22						sor		4	5	cast3		75	75	extra-ltng		21	25	extra-cold		21	40	dmg-to-mana		21	23									Vertigo		0
+Eurynome	1		nstf									rx17						nec		8	10	oskill	454	31	41	extra-fire		51	63	dmg-minion		90	90	hp-minion		-75	-75	enr		100	100	vit		-40	-40	Eurynome		0
 Riot	1		h2h									rx22						dmg%		144	171	dmg-norm		63	125	oskill	977	21	40	crush		15	15	ass		2	4	ac-global		101	150					Riot		0
 Resheph	1		pspe									rx32						dmg%		197	197	pierce-pois		49	54	pal		5	7	swing3		-25	-25	dmg-pois	25	128	256	slow		30	30	ease		-50	-50	Resheph		0
 Gravastar	1		orb									rx29						sor		6	7	slow-thorns		50	50	extra-cold		21	30	oskill	340	21	37	light		-3	-3	res-cold		101	125					Gravastar		0
 Brocken	1		scrd									rx24						dmg%		172	200	dmg-norm		125	188	reanimate	1423	3	3	sor		4	7	ac-global		101	150	att-skill	708	10	51	oskill	363	21	29	Brocken		0
 Carabosse	1		h2h									rx15						extra-fire		26	30	cast3		60	60	extra-ltng		26	30	enr		101	175	ass		2	4	dex		50	50	oskill	1002	31	50	Carabosse		0
-Patriot	1		tkni									rx02						dmg%		172	200	dmg-fire		139	278	pierce-fire		31	60	pierce-pois		31	60	str		-25	-25									Patriot		0
-Fennec	1		taxe									rx20						dmg%		144	171	dmg-minion		121	130	light		-2	-2	res-all-minion		75	75	res-all		71	80	bar		2	2					Fennec		0
+Patriot	1		tkni									rx02						dmg%		172	200	dmg-fire		70	139	pierce-fire		31	60	pierce-pois		31	60	str		-25	-25									Patriot		0
+Fennec	1		taxe									rx20						dmg%		144	171	dmg-minion		61	65	light		-2	-2	res-all-minion		75	75	res-all		71	80	bar		2	2					Fennec		0
 Quantum	1		tkni									rx30						swing3		75	75	extra-fire		21	25	kill-skill	710	10	42	pierce-pois		25	30	ass		4	5	pierce-fire		25	30	pierce-ltng		25	30	Quantum		0
-Lemuria	1		nscy									rx20						dmg%		200	200	dmg-max		126	250	oskill	18	21	28	reanimate	2273	3	4	reanimate	1517	3	4	swing3		45	45	dmg-minion		-40	-40	Lemuria		0
-Aspect	1		abow									rx13						dmg-fire		375	375	dmg-cold		375	375	dmg-ltng		375	375	swing3		100	100													Aspect		0
-Instinct	1	Y	axe									rx27						dmg%		172	200	dmg-max		80	125	motw-phys		80	100	dru		6	6	swing3		40	40	pierce-fire		50	50	extra-fire		56	70	Instinct		0
-Cheetah	1		taxe									rx02						att%		250	250	dmg%		172	200	move3		10	10	dmg-minion		81	90	att%-minion		125	125	kill-skill	513	10	35				9	Cheetah		0
+Lemuria	1		nscy									rx20						dmg%		200	200	dmg-max		126	250	oskill	18	21	28	reanimate	2273	3	4	reanimate	1517	3	4	swing3		45	45	dmg-minion		-20	-20	Lemuria		0
+Aspect	1		abow									rx13						dmg-fire		188	188	dmg-cold		188	188	dmg-ltng		188	188	swing3		100	100													Aspect		0
+Instinct	1	Y	axe									rx27						dmg%		172	200	dmg-max		80	125	motw-phys		48	60	dru		6	6	swing3		40	40	pierce-fire		50	50	extra-fire		56	70	Instinct		0
+Cheetah	1		taxe									rx02						att%		250	250	dmg%		172	200	move3		10	10	dmg-minion		41	45	att%-minion		125	125	kill-skill	513	10	35				9	Cheetah		0
 Chrysopelea	1		tkni									rx10						dmg%		172	200	dmg-min		76	100	kill-skill	469	20	60	pierce-pois		31	60	poison-dur		21	25									Chrysopelea		0
 Dajjal	1		tkni									rx20						addxp		7	7	kill-skill	564	8	32	dmg%		144	171	dmg/lvl	32	32	32	heal-hit		6	10	swing3		60	60	balance3		60	60	Dajjal		0
 Manitou	1		taxe									rx30						dmg%		172	200	kill-skill	386	25	62	extra-fire		26	38	dmg-max		101	150	all-stats		100	100	bar		4	4	ac/lvl	640	640	640	Manitou		0
-Raid	1		jave									rx10						dmg%		144	171	ignore-ac		1	1	mana-kill		100	100	oskill	346	10	20	dmg-minion		101	150	ama		2	5					Raid		0
+Raid	1		jave									rx10						dmg%		144	171	ignore-ac		1	1	mana-kill		50	50	oskill	346	10	20	dmg-minion		51	75	ama		2	5					Raid		0
 Hastata	1		jave									rx20						dmg%		144	171	hit-skill	101	2	9	dmg-max		167	167	dex		51	60	pierce-fire		25	30	att%		201	250	heal-kill		101	125	Hastata		0
 HasteZ	1		jave									rx30						dmg%		172	285	dmg-norm		63	125	block3		75	75	balance3		30	30	kill-skill	496	5	45	regen		123	123	skill-dur		40	40	HasteZ		0
-Ensi	1		pspe									rx12						dmg%		172	200	att-skill	699	40	60	swing3		100	100	dmg-fire		250	375	stupidity		2	3									Ensi		0
-NewKodiak	1	Y	axe									r38						dmg%		141	170	dmg-global/lvl		32	32	dmg-min		21	50	swing3		40	40	cd-reduce	395	50	50	lifesteal		11	25	crush		11	25	Instinct		0
-Memory	1	Y	glov									r47	r52					allskills		1	1	enr-factor		20	40	pierce-all		8	8	extra-all		5	5	regen		1000	1000									Memory		
+Ensi	1		pspe									rx12						dmg%		172	200	att-skill	699	40	60	swing3		100	100	dmg-fire		125	188	stupidity		2	3									Ensi		0
+NewKodiak	1	Y	axe									r38						dmg%		141	170	dmg-global/lvl		20	20	dmg-min		21	50	swing3		40	40	cd-reduce	395	50	50	lifesteal		11	25	crush		11	25	Instinct		0
+Memory	1	Y	glov									r47	r52					allskills		1	1	enr-factor		20	40	pierce-all		8	8	extra-all		5	5	regen		1000	1000									Memory		0

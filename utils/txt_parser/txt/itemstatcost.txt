@@ -96,7 +96,7 @@ item_levelreq	92		items	Required Level	8			0	255						7	1	1	ModitemRLZOMG	Modite
 item_fasterattackrate	93		items	Attack Speed	9	60		-60	451	9		1	1		150	2	1	ModStr4m	ModStr4m		1							521	78																		9	2	1	DescStringMyAss	DescStringMyAss			1024	9	60	0
 item_levelreqpct	94		classic		10	64		-64	959						63	4	2	ModitemLevReq	ModitemLevReq									521	-26								1			item_levelreq														1024	10	64	0
 lastblockframe	95		classic																																																			1024	0	0	0
-item_fastermovevelocity	96		items	Movement Speed	9	50		-50	461	9		1	1		147	2	1	ModStr4s	ModStr4s									2042	78																									1024	9	50	0
+item_fastermovevelocity	96		items	Movement Speed	9	50		-50	461	9		1	1		147	2	1	ModStr4s	ModStr4s								1	2042	78																									1024	9	50	0
 item_nonclassskill	97		items		7	1	11	-1	126	15	11		1	1	86	28												91	164							1																		1024	7	1	0
 state	98		items		1		11	0	1	1	11	1		1														208	32																									1024	1	0	0
 item_fastergethitrate	99		items	Hit Recovery	9	50		-50	461	9		1	1		144	2	1	ModStr4p	ModStr4p									533	36																		9	2	1	DescStringMyAss	DescStringMyAss			1024	9	50	0
@@ -187,7 +187,7 @@ item_dyes_color	183	value - 1 = id in colors.txt	cube		5	0		0	31	5			1										
 x_signet01	184		cube / mo		5	0		0	31	12			1															7	2																									1024	5	0	0
 potion_stat_cap	185		char stat	Stat Signets Used:						11			1		9	3	2	ModitemStatCap	ModitemStatCap											1		12		1	1																			1024	0	0	0
 potion_skill_cap	186		char stat	Skill Signets Used:						6			1		9	3	2	ModitemSkillCap	ModitemSkillCap											1		8		1	1																			1024	0	0	0
-passive_lionheart_addstupidth	187	replace w/ syn	items	Dragonheart Spell Blinds Attacker	3	0		0	7	9			1		27	12	2	ModitemLHStupid	ModitemLHStupid																																			1024	3	0	0
+stance_ID	187		skills		3	0		0	7	9			1																																									1024	3	0	0
 item_addskill_tab	188		classic	+%d to Javelin and Spear Skills	3	0	16	0	7	3	6		1	1	156	14		StrSklTabItem1	StrSklTabItem1									5521	384																									1024	3	0	0
 damage_divisor	189		items		16	0		0	65535	17																																												1024	16	0	0
 passive_ultimative	190	natasha's legacy	skills							12			1																																									1024	0	0	0
@@ -267,7 +267,7 @@ x_signet36	263		cube / mo		5	0		0	31	12			1															7	2																			
 x_signet37	264		cube / mo		5	0		0	31	12			1															7	2																									1024	5	0	0
 item_healafterplayerkill	265		items	Life after each Kill	10	0		0	1023	15			1	1	21	1	1	ModitemHPaK	ModitemHPaK									15	51														kill	33										1024	10	0	0
 item_warp_blue	266		items	\orange;Area Effect Attack\grey;	7	0	17	0	127	7	17		1	1	248	3	0	ModitemWarpBlue	ModitemWarpBlue		1							95	128							2							domeleeattack	20	domissileattack	20								1024	7	0	0
-item_stance_radius	267		items	Enhanced Stance Radius	5	0		0	31	12			1		203	1	1	ModitemStanceRadius	ModitemStanceRadius									133	512																									1024	5	0	0
+hotp	267	Dudu bear proc	items		5	0		0	31	12			1		0		0	ModitemStanceRadius	ModitemStanceRadius									133	512																									1024	5	0	0
 baccha_on	268		skills							12			1																																									1024	0	0	0
 item_edyrem_mark	269		skills							12			1																																									1024	0	0	0
 item_has_edyrem	270		cube		3	0		0	7	12			1																																									1024	3	0	0
@@ -413,9 +413,9 @@ profession_duration_mod	409		items	Bonus to Buff/Debuff/Cold Skill Duration	8	50
 not_used_410	410		unused							5			1																																									1024	0	0	0
 not_used_411	411		unused							5			1																																									1024	0	0	0
 resonance_buff	412	UNUSED	skills		10	0		0	1023	12			1															8	2																									1024	10	0	0
-skill_bloodymary_bonus	413	sorc familiar	skills	Bonus to Vitality when using an Apple	8	0		0	255	12			1		55	2	1	ModitemMary	ModitemMary									17	3																									1024	8	0	0
+skill_bloodymary_bonus	413	UNUSED	skills	Bonus to Vitality when using an Apple	8	0		0	255	12			1		55	2	1	ModitemMary	ModitemMary									17	3																									1024	8	0	0
 skill_edyrem_hp_percent	414		items	Bonus to Summoned Edyrem Life	9	50		-50	461	12			1		133	4	1	ModitemEdyremBonus	ModitemEdyremBonus									81	16																									1024	9	50	0
-not_used_415	415		unused							5			1																																									1024	0	0	0
+ied_display	415		items		12	0	16	0	4095	12	16				253	35	0	ModitemEleInnateSeq	ModitemEleInnateSeq																																			1024	12	0	0
 passive6	416		skills							12			1																																									1024	0	0	0
 ele_divisor	417		items		16	0	5	0	65535	17	5																																											1024	16	0	0
 item_needschallenged	418	brc	items	\orange;Can Be Upgraded with Black Road Challenge	2	0		0	3	12			1		230	3	0	ModitemNeedsLCed	ModitemNeedsLCed									4	1																									1024	2	0	0
