@@ -1,13 +1,12 @@
-#!/usr/bin/env fish
+#!/usr/bin/env zsh
 
 rm -f *.pcx
 
-for f in * #.dc6
+for f in $(find . -iname '*.dc6')
     ~/Documents/MXL/dc6con.zip\ Folder/dc6con "$f"
-end
 
 mogrify -format png -fuzz 2% -transparent black *.pcx
 # mogrify -format png *.pcx
 
-set scriptDir (dirname (status --current-filename))
+scriptDir=$(cd "$(dirname "$0")" && pwd)
 mv *.png "$scriptDir/../resources/data/images/items"
