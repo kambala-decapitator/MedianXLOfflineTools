@@ -74,7 +74,7 @@ bswd	baxe					Kahless	r51
 dbow						Peacock	r13						
 dbow						Lynx	r27						
 dbow						Sylvanshine	r33						
-dbow						Cernunnos	r44						
+dbow						Cernunnos	r39	r34	r49				
 dbow						Raudna	r51						
 dstf						Ocean	r05						
 dstf						Samhain	r12						

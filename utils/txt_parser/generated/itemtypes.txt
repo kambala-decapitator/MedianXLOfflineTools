@@ -224,6 +224,7 @@ bshi	shie		Special Shield
 qbon	qshi		Special Shield (Sacred)
 staf	rod		Staff
 qstf	staf,ct2w		Staff (Sacred)
+wp01	mele		Staff of Herding TMP
 spot	poti		Stamina Potion
 gem2	gem		Standard Gem
 rod	blun		Staves And Rods

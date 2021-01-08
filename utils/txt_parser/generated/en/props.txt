@@ -262,7 +262,7 @@
 298	0	5																	tp_lock
 299	0	10							\grey;Current Strength Damage Bonus:	\grey;Current Strength Damage Bonus:		2	251	2					strength_bonus_wpn
 300	0	10							Additional Dexterity Damage Bonus:	Additional Dexterity Damage Bonus:		2	135	2					dexterity_bonus_wpn
-301	0	1							Shadows Spawn Corpses on Striking 5%	Shadows Spawn Corpses on Striking 5%		3	138	0					item_shadows_corpsesynergy
+301	0	1							\green;Already Enchanted	\green;Already Enchanted		3	250	0					item_shadows_corpsesynergy
 303	0	12							Fire Damage to Void Archon	Fire Damage to Void Archon		1	53	1					skill_voidarchon_fire
 304	24	7											246						statX_1
 305	500	10							to Enemy Cold Resistance	to Enemy Cold Resistance		20	93	1					item_pierce_cold
@@ -334,8 +334,9 @@
 387	0	8							Bonus Damage to Mark of the Wild	Bonus Damage to Mark of the Wild		4	154	1					passive_motw_dmgpct
 388	0	8							Bonus Elemental Damage to Mark of the Wild	Bonus Elemental Damage to Mark of the Wild		4	154	1					passive_motw_elempct
 389	0	10							Duration Bonus to Mark of the Wild	Duration Bonus to Mark of the Wild		2	127	1					passive_motw_duration
-390	0	5							Extra Flayer Minions	Extra Flayer Minions		1	155	1					passive_shadows_addmax
+390	0	5							\green;Already Enchanted	\green;Already Enchanted		3	250	0					is_enchanted
 391	0	10							Bonus to Miasma Haunt Duration	Bonus to Miasma Haunt Duration		2	97	1					passive_hex_adddmg
+392	101	8										0		0					xx420xx
 393	1001	14																12	special_syn2
 394	0	8																	passive_shadows_addelem
 395	0	3																	weapon_count
@@ -356,6 +357,7 @@
 415	0	12							\grey;Innate Fire Damage: \red;%d\grey; (%.1f%% of %s)	\grey;Innate Fire Damage: \red;%d\grey; (%.1f%% of %s)		35	253	0				16	ied_display
 417	0	16																5	ele_divisor
 418	0	2							\orange;Can Be Upgraded with Black Road Challenge	\orange;Can Be Upgraded with Black Road Challenge		3	230	0					item_needschallenged
+419	0	10																	goblincurse
 421	0	4																	scosglen_check
 430	0	8							to All Skills when using an Apple	to All Skills when using an Apple		1	55	1					skill_paganheart_synergy
 431	50	9							Bonus to Poison Skill Duration	Bonus to Poison Skill Duration		4	154	1					skill_poison_dur
@@ -363,7 +365,7 @@
 440	0	8							Mana when Struck by an Enemy	Mana when Struck by an Enemy		1	18	1					item_manawhenstruck
 441	5	6			445	to All Maximum Minions	to All Maximum Minions		to Maximum Necromancer Minions	to Maximum Necromancer Minions		1	84	1	11	1	1		passive_aura_addmax
 442	0	10							Additional Strength Damage Bonus:	Additional Strength Damage Bonus:		2	135	2					str_bonus_blue
-443	0	8							\green;Already upgraded!	\green;Already upgraded!		3	249	0					item_upgraded
+443	0	8							\green;Already Upgraded	\green;Already Upgraded		3	249	0					item_upgraded
 444	50	9							Penalty to Summoned Minion Life	to Summoned Minion Life		4	83	1					skill_minion_hp_percent
 445	0	6			441	to All Maximum Minions	to All Maximum Minions		to Maximum Barbarian Minions	to Maximum Barbarian Minions		1	73	1	11	1	1		skill_ancientspirits_synergy
 446	0	8							Damage to Protector Spirit Bloodlust	Damage to Protector Spirit Bloodlust		4	80	1					skill_shamanspath_synergy
@@ -406,6 +408,8 @@
 487	25	9							to Summoned Minion Resistances	to Summoned Minion Resistances		4	82	1					minion_resist_all
 488	50	9							Bonus to Spell Focus	Bonus to Spell Focus		4	162	1					enr_factor_percent
 489	0	10							Target Takes Additional Damage of	Target Takes Additional Damage of		3	18	2					item_targettakesdamage
+490	1	5																	cube_upgrade_5
+491	1	5																	cube_upgrade_6
 492	50	8							Reduced Healing Rate from Apples	Increased Healing Rate from Apples		4	36	1					item_faster_potions
 493	50	8							Slows Ranged Attacker by	Slows Ranged Attacker by		2	79	2					skill_slowrangedthorns
 495	24	7											246						statX_3

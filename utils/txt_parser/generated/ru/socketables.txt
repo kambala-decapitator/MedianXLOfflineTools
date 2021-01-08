@@ -150,8 +150,8 @@ skf	\purple;Flawed Skull		16		6							110		2							17		6
 skl	\purple;Flawless Skull		16		8							110		4							17		8						
 sku	\purple;Skull		16		7							110		3							17		7						
 skz	\purple;Perfect Skull		16		10							110		5							17		10						
-yo1	\purple;Chipped Rainbow Stone		79		1							109		2							484		1						
-yo2	\purple;Flawed Rainbow Stone		79		2							109		4							484		1						
-yo3	\purple;Rainbow Stone		79		4							109		6							484		2						
-yo4	\purple;Flawless Rainbow Stone		79		6							109		8							484		2						
-yo5	\purple;Perfect Rainbow Stone		79		8							109		10							484		3						
+yo1	\purple;Chipped Rainbow Stone		79		1				383	1617	1	109		2				383	1617	1	484		1				383	1617	1
+yo2	\purple;Flawed Rainbow Stone		79		2				383	1617	1	109		4				383	1617	1	484		1				383	1617	1
+yo3	\purple;Rainbow Stone		79		4				383	1617	1	109		6				383	1617	1	484		2				383	1617	1
+yo4	\purple;Flawless Rainbow Stone		79		6				383	1617	1	109		8				383	1617	1	484		2				383	1617	1
+yo5	\purple;Perfect Rainbow Stone		79		8				383	1617	1	109		10				383	1617	1	484		3				383	1617	1

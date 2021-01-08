@@ -1133,6 +1133,8 @@ qf2	Khalim's Will		2	3	1		20	0	0			8	13					invqf2	17	11	0	mace	1	-1
 tax	Throwing Axe		1	2	1	1	0	0	40			10	11			6	8	invtax		0	0	taxe	1	-1
 v#X	\red;Sacred Bow		2	3	1		120	666	666		1			38	45			newathuluabow	0	15	15	#bow	1	-1
 vou	Voulge		2	4	1		0	50	0		1			10	20			invvou		0	0	pole	1	-1
+wd01	Elder Staff		1	3	1		0	0	0		1							invsst	2	0	0	wp01	1	-1
+wd02	Elder Staff		1	3	1		0	0	0		1							invsst	2	0	0	wp02	1	-1
 wol	Wirt's Other Leg		1	3	1		0	0	0			13	18					invwol		0	0	wrtl	1	-1
 !@1	\dgreen;Evil Eye of the Clawstorm	\blue;+15% to Experience Gained\n+1 to Class Skill Levels\n\grey;Cube All 5 Eyes with Class Charm to Add Bonus\n\nMonster Token	1	1	2		0	0	0									evileye				thng		-1
 !@2	\dgreen;Evil Eye of the Landmass	\blue;+15% to Experience Gained\n+1 to Class Skill Levels\n\grey;Cube All 5 Eyes with Class Charm to Add Bonus\n\nMonster Token	1	1	2		0	0	0									evileye				thng		-1
@@ -1167,7 +1169,7 @@ wol	Wirt's Other Leg		1	3	1		0	0	0			13	18					invwol		0	0	wrtl	1	-1
 &82	\orange;Mystic Orb\nVizjun's Ball Bearing	\blue;+10 Required Level\n+20 to Dexterity\n2% Deadly Strike\n\grey;Cube with Any Weapon to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_weap				asaa,asa#		-1
 &83	\orange;Mystic Orb\nNor Tiraj's Flaming Sphere	\blue;+10 Required Level\nFire Resist +25%\n+5% to Fire Spell Damage\nAdds 3-6 Fire Damage\n1% Chance to cast level 42 Flamefront on Melee Attack\n\grey;Cube with Any Weapon to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_weap				asaa,asa#		-1
 &84	\orange;Mystic Orb\nThe Demon Core	\blue;+10 Required Level\n+5% to Poison Spell Damage\n+5% to Fire Spell Damage\n1% Chance to cast level 58 Gamma Field on Kill\n1% Chance to cast level 58 Apocalypse on Kill\n\grey;Cube with Any Weapon to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_weap				asaa,asa#		-1
-&85	\orange;Mystic Orb\nUldyssian's Spirit	\blue;+10 Required Level\n+3% to Spell Damage\n+30% Damage to Demons\n+25 Spell Focus\n\grey;Cube with Any Weapon to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_weap				asaa,asa#		-1
+&85	\orange;Mystic Orb\nUldyssian's Spirit	\blue;+10 Required Level\n+3% to Spell Damage\n+30% Damage to Demons\n+15 Spell Focus\n\grey;Cube with Any Weapon to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_weap				asaa,asa#		-1
 &86	\orange;Mystic Orb\nOrb of Annihilation	\blue;+10 Required Level\n5% Bonus to Energy\n+5% to Physical/Magic Spell Damage\n10% Chance to cast level 1 Detonate on Melee Attack\n\grey;Cube with Any Weapon to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_weap				asaa,asa#		-1
 &87	\orange;Mystic Orb\nWarbringer	\blue;+10 Required Level\n+5 Maximum Damage\n2% Chance to cast level 5 Arrow on Striking\n\grey;Cube with Any Weapon to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_weap				asaa,asa#		-1
 &88	\orange;Mystic Orb\nTen Pin Striker	\blue;+10 Required Level\nTarget Takes Additional Damage of 100\n100% Bonus to Attack Rating\n\grey;Cube with Any Weapon to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									orb_weap				asaa,asa#		-1
@@ -1594,6 +1596,9 @@ cy28	\orange;Large Cycle	\blue;+18 Required Level\n-5 to All Attributes\n+1 to P
 cy29	\orange;Small Cycle	\blue;+1 Required Level\n+(0 to 10) to Mana\n+(0 to 20) to Life\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invch1				cyc1,cycl		-1
 cy30	\orange;Medium Cycle	\blue;+3 Required Level\nMaximum Mana +(0 to 2)%\n+(2 to 15) to Mana\nMaximum Life +(0 to 2)%\n+(5 to 30) to Life\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	2	2		0	0	0									invch2				cyc2,cycl		-1
 cy31	\orange;Large Cycle	\blue;+5 Required Level\nMaximum Mana +(1 to 3)%\n+(5 to 25) to Mana\nMaximum Life +(1 to 3)%\n+(10 to 50) to Life\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	3	2		0	0	0									invsst				cyc3,cycl		-1
+dg01	Item Design		2	2	2		0	0	0									book01				dsgn		-1
+dg02	Item Design		2	2	2		0	0	0									book01				dsgn		-1
+dg03	Item Design		2	2	2		0	0	0									book01				dsgn		-1
 dog	Apple	Regenerates 100 life per second for 10 minutes	1	1	2		0	0	0									newapple				poti		-1
 dr01	Quest Item\n\gold;Depleted Riftstone (\green;1\gold;)	energy source and allow you to investigate further...\nPerhaps transmuting it in the Horadric Cube could unleash the\n\nto resemble the Rift activators you have come to know well\nIt certainly did not originate on Sanctuary, and yet it appears\n\ndread as you sense the latent otherworldly energy seeping from it\nThe stone emits a faint glow. Holding it in your hand fills you with\n	1	1	2		0	0	0									DepletedRunestone				thng		-1
 dr02	Quest Item\n\gold;Depleted Riftstone (\green;2\gold;)	Transmute in the Cube to Charge\n	1	1	2		0	0	0									DepletedRunestone				thng		-1
@@ -1638,6 +1643,67 @@ ebx	Vial of Elder Blood		1	1	2		0	0	0									ElderVial				grtz		-1
 eby	Dimensional Key		1	1	2		0	0	0									DimensionalKey				grtz		-1
 ebz	Amulet		1	1	2		0	0	0									invamu				xxx4		-1
 elx	Elixir		1	1	2		0	0	0									invpot				elix		-1
+en11	\orange;Scroll of Enchantment: Helmet	\orange;50% Area of Effect Attack\n\grey;Cube with Helm to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invbsc				thng		-1
+en12	\orange;Scroll of Enchantment: Helmet	\blue;20% Chance to Cast Level 10 Life Spark on Attack\n\grey;Cube with Helm to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invbsc				thng		-1
+en13	\orange;Scroll of Enchantment: Helmet	\orange;Lightning Arena Damage Increased by 1000%\n\blue;+20 to Lightning Arena\n\grey;Cube with Helm to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invbsc				thng		-1
+en14	\orange;Scroll of Enchantment: Helmet	\orange;Churel Buff Duration Increased by 66%\n\blue;+10 to Churel\n\grey;Cube with Helm to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invbsc				thng		-1
+en15	\orange;Scroll of Enchantment: Helmet	\orange;Level 5 Hellfire Aura\n\grey;Cube with Helm to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invbsc				thng		-1
+en16	\orange;Scroll of Enchantment: Helmet	\orange;Dark Power Adds 1% Innate Elemental Damage per Skill Level\n\blue;+10 to Dark Power\n\grey;Cube with Helm to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invbsc				thng		-1
+en17	\orange;Scroll of Enchantment: Helmet	\orange;Firedance Does Not Add Spell Damage\n\blue;+10 to Firedance\n\grey;Cube with Helm to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invbsc				thng		-1
+en18	\orange;Scroll of Enchantment: Helmet	\dgrey;Hive Duration set to 30 seconds\n\orange;Hive Adds 1% Poison Spell Damage per Skill Level\n\blue;+15 to Hive\n\grey;Cube with Helm to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invbsc				thng		-1
+en19	\orange;Scroll of Enchantment: Helmet	\dgrey;(+777% Magic Find for 7 Seconds)\n\blue;+1% Chance to Cast Level 1 Goblin Glee on Death Blow\n+10% Movement Speed\n\grey;Cube with Helm to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invbsc				thng		-1
+en21	\orange;Scroll of Enchantment: Body Armor	\blue;+10% to Fire Spell Damage\n+40 to Spell Focus\n\grey;Cube with a Body Armor to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invbsc				thng		-1
+en22	\orange;Scroll of Enchantment: Body Armor	\blue;+10% to Cold Spell Damage\n+40 to Spell Focus\n\grey;Cube with a Body Armor to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invbsc				thng		-1
+en23	\orange;Scroll of Enchantment: Body Armor	\blue;+10% to Lightning Spell Damage\n+40 to Spell Focus\n\grey;Cube with a Body Armor to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invbsc				thng		-1
+en24	\orange;Scroll of Enchantment: Body Armor	\blue;+10% to Poison Spell Damage\n+40 to Spell Focus\n\grey;Cube with a Body Armor to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invbsc				thng		-1
+en25	\orange;Scroll of Enchantment: Body Armor	\blue;+10% to Physical/Magic Spell Damage\n+40 to Spell Focus\n\grey;Cube with a Body Armor to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invbsc				thng		-1
+en26	\orange;Scroll of Enchantment: Body Armor	\blue;+10% Innate Elemental Damage\n+5% to All Attributes\n\grey;Cube with a Body Armor to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invbsc				thng		-1
+en27	\orange;Scroll of Enchantment: Body Armor	\blue;Enhanced Weapon Damage +75%\n\grey;Cube with a Body Armor to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invbsc				thng		-1
+en28	\orange;Scroll of Enchantment: Body Armor	\blue;Regenerate Mana +15%\n+2 to All Skills\n\grey;Cube with a Body Armor to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invbsc				thng		-1
+en31	\orange;Scroll of Enchantment: Gloves	\blue;+8% Life Stolen per Hit\n\grey;Cube with Gloves to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invbsc				thng		-1
+en32	\orange;Scroll of Enchantment: Gloves	\blue;+100 Life Regenerated per Second\n\grey;Cube with Gloves to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invbsc				thng		-1
+en33	\orange;Scroll of Enchantment: Gloves	\blue;1% Chance to Cast Level 5 Life Spark on Striking\n\grey;Cube with Gloves to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invbsc				thng		-1
+en34	\orange;Scroll of Enchantment: Gloves	\blue;+20 to Maximum Stamina\n\grey;Cube with Gloves to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invbsc				thng		-1
+en35	\orange;Scroll of Enchantment: Gloves	\blue;+60 Life After Each Kill\n\grey;Cube with Gloves to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invbsc				thng		-1
+en36	\orange;Scroll of Enchantment: Gloves	\blue;+10% Mana Stolen per Hit\n\grey;Cube with Gloves to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invbsc				thng		-1
+en41	\orange;Scroll of Enchantment: Boots	\blue;Total Character Defense +35%\n\grey;Cube with Boots to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invbsc				thng		-1
+en42	\orange;Scroll of Enchantment: Boots	\blue;1% Chance to Avoid Damage\n\grey;Cube with Boots to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invbsc				thng		-1
+en43	\orange;Scroll of Enchantment: Boots	\blue;Physical Damage Reduced by 35\n\grey;Cube with Boots to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invbsc				thng		-1
+en44	\orange;Scroll of Enchantment: Boots	\blue;Elemental/Magic Damage Reduced by 35\n\grey;Cube with Boots to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invbsc				thng		-1
+en45	\orange;Scroll of Enchantment: Boots	\blue;Lightning Absorb 1%\nCold Absorb 1%\nFire Absorb 1%\n\grey;Cube with Boots to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invbsc				thng		-1
+en46	\orange;Scroll of Enchantment: Boots	\blue;30% Curse Length Reduction\n\grey;Cube with Boots to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invbsc				thng		-1
+en51	\orange;Scroll of Enchantment: Belt	\blue;Maximum Fire Resist +1%\nFire Resist +20%\n\grey;Cube with a Belt to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invbsc				thng		-1
+en52	\orange;Scroll of Enchantment: Belt	\blue;Maximum Cold Resist +1%\nCold Resist +20%\n\grey;Cube with a Belt to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invbsc				thng		-1
+en53	\orange;Scroll of Enchantment: Belt	\blue;Maximum Lightning Resist +1%\nLightning Resist +20%\n\grey;Cube with a Belt to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invbsc				thng		-1
+en54	\orange;Scroll of Enchantment: Belt	\blue;Maximum Poison Resist +2%\nPoison Resist +30%\n\grey;Cube with a Belt to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invbsc				thng		-1
+en55	\orange;Scroll of Enchantment: Belt	\blue;Physical Resist +5%\n\grey;Cube with a Belt to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invbsc				thng		-1
+en56	\orange;Scroll of Enchantment: Belt	\blue;Magic Resist +5%\n\grey;Cube with a Belt to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invbsc				thng		-1
+en61	\orange;Scroll of Enchantment: Amulet	\blue;+30% Attack Speed\n\grey;Cube with Amulet to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invbsc				thng		-1
+en62	\orange;Scroll of Enchantment: Amulet	\blue;+30% Cast Speed\n\grey;Cube with Amulet to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invbsc				thng		-1
+en63	\orange;Scroll of Enchantment: Amulet	\blue;+40% Hit Recovery\n\grey;Cube with Amulet to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invbsc				thng		-1
+en64	\orange;Scroll of Enchantment: Amulet	\blue;+40% Block Speed\n\grey;Cube with Amulet to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invbsc				thng		-1
+en65	\orange;Scroll of Enchantment: Amulet	\blue;+25 Mana After each Kill\n\grey;Cube with Amulet to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invbsc				thng		-1
+en66	\orange;Scroll of Enchantment: Amulet	\blue;+20% Magic Find\n\grey;Cube with Amulet to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invbsc				thng		-1
+en67	\orange;Scroll of Enchantment: Amulet	\blue;+(5-10)% Experience Gained\n+(1-5) Light Radius\n\grey;Cube with Amulet to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invbsc				thng		-1
+en71	\orange;Scroll of Enchantment: Ring	\blue;+30% Bonus to Summoned Minion Attack Rating\n+15% Bonus to Summoned Minion Damage\n\grey;Cube with Ring to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invbsc				thng		-1
+en72	\orange;Scroll of Enchantment: Ring	\blue;+10% Bonus to Summoned Minion Resistances\n+25% Bonus to Summoned Minion Life\n\grey;Cube with Ring to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invbsc				thng		-1
+en73	\orange;Scroll of Enchantment: Ring	\blue;+35 to Strength\n\grey;Cube with Ring to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invbsc				thng		-1
+en74	\orange;Scroll of Enchantment: Ring	\blue;+35 to Dexterity\n\grey;Cube with Ring to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invbsc				thng		-1
+en75	\orange;Scroll of Enchantment: Ring	\blue;+35 to Vitality\n\grey;Cube with Ring to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invbsc				thng		-1
+en76	\orange;Scroll of Enchantment: Ring	\blue;+35 to Energy\n\grey;Cube with Ring to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invbsc				thng		-1
+en77	\orange;Scroll of Enchantment: Ring	\blue;Poison Length Reduced by 30%\n\grey;Cube with Ring to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invbsc				thng		-1
+en81	\orange;Scroll of Enchantment: Class Charm	\blue;Duration: +20%\nSpell Damage excl. Poison: +10%\nPhysical Damage: +15%\n\gold;Enhances Your Innate Skill\n\grey;Cube with the Sacred Sunstone to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invbsc				thng		-1
+en82	\orange;Scroll of Enchantment: Class Charm	\blue;Duration: +30%\nHealing: +20%\n\gold;Enhances Your Innate Skill\n\grey;Cube with the Shadow Vortex to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invbsc				thng		-1
+en83	\orange;Scroll of Enchantment: Class Charm	\blue;Duration: +50%\nDefense: +20%\nMaximum Life: +5%\n\gold;Enhances Your Innate Skill\n\grey;Cube with the Worldstone Orb to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invbsc				thng		-1
+en84	\orange;Scroll of Enchantment: Class Charm	\blue;Duration: +25%\nElemental Spell Damage: +5%\nPhysical Damage: +10%\nAttack Speed: +10%\n\gold;Enhances Your Innate Skill\n\grey;Cube with the Caoi Dura Fruit to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invbsc				thng		-1
+en85	\orange;Scroll of Enchantment: Class Charm	\blue;\blue;Cooldown  Reduced by 20%\n\gold;Enhances Your Innate Skill\n\grey;Cube with the Soulstone Shard to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invbsc				thng		-1
+en86	\orange;Scroll of Enchantment: Class Charm	\blue;Duration: +25%\nWeapon Physical Damage: +25%\n\gold;Enhances Your Innate Skill\n\grey;Cube with the Eye of Divinity to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invbsc				thng		-1
+en87	\orange;Scroll of Enchantment: Class Charm	\blue;Damage Aborbtion increased by 20%\n9% Less Mana Drained When Hit\n\gold;Enhances Your Innate Skill\n\grey;Cube with the Nexus Crystal to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invbsc				thng		-1
+en91	\orange;Scroll of Enchantment: Elder Staff	\blue;+1 to Telekinesis\n+30% Movement Speed\n\orange;+10% Magic Find per Socketed Rainbow Stone\n\grey;Cube with \gold;Staff of Herding \grey;to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invbsc				thng		-1
+en92	\orange;Scroll of Enchantment: Weapon	\blue;+200% Damage to Undead\n30% Increased Attack Speed\nAdds 25 - 50 Damage\n5% Chance to Cast Level 30 Thunder Hammer Nova on Attack\n\gold;Undead Slayer\n\grey;Cube with a Mace to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invbsc				thng		-1
+en93	\orange;Scroll of Enchantment: Weapon	\blue;+20% Spell Damage\n+250 Spell Focus\n\orange;40% Less Healing From Potions\n\gold;Reckless Power\n\grey;Cube with a Rare/Crafted Scepter to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invbsc				thng		-1
+en94	\orange;Scroll of Enchantment: Weapon	\blue;Slow Target +10%\nMaximum Life -5%\n10% Chance to Cast Level 1 Corrupted Vines on Death Blow\n\gold;Corruptor\n\grey;Cube with a Hammer to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invbsc				thng		-1
+en95	\orange;Scroll of Enchantment: Weapon	\dgrey;Does not Work on Indestructible Items\n\blue;Item Becomes Ethereal\n\gold;Silver Point\n\grey;Cube with a Rare/Crafted Dagger to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invbsc				thng		-1
 et1	\red;Elixir of Concentration (Disabled)	Buff/Debuff/Cold Skill Duration +25% for 30 seconds	1	1	2		0	0	0									invpob				hpot		-1
 ey2	\red;Elixir of Experience (Disabled)	+100% Experience for 30 seconds	1	1	2		0	0	0									invpog				hpot		-1
 ey3	\red;Elixir of Greed (Disabled)	+150% Magic Find for 30 seconds	1	1	2		0	0	0									invpoy				hpot		-1
@@ -1888,6 +1954,10 @@ rx33	\grey;Enchanted Rune\n\purple;Zod-Xis Rune		1	1	2		120	0	0									xisZod		
 s@s	Assur's Bane		1	1	2		0	0	0									ring08				kill		-1
 sath	\grey;Quest Item\n\gold;Askari Call	\grey;Location: Island of Skartara (Heart)\n\orange;Summon Athulua, the Amazonian Goddess	1	1	2		120	0	0									invblackscroll				thng		-1
 sbag	\gold;Angel Bag	\grey;Cube 6 Angel Bags to Create Six Angel Bag\n\nCube Reagent	1	2	2		0	0	0									angelbag2				thng		-1
+sc01	Scroll	80\nYou've made it here... I've left this note hidden here hoping that a worthy hero would find it. We need to stop the Uileloscadh Mór, the Lord of Destruction is almost finished corrupting all of Scosglen, and soon all of Sanctuary...\nOver centuries, Druids have been mastering the art of the Dubhdroiacht, this allows them to control the forces of nature. This place was the fortress for their greatest creation of all: the Dulra Catalyst. We need to stop Baal before he finishes it.\nPlease look for my diary, it's in the farms... Look for a chest near a hut, and you'll find it.\n	1	1	2		0	0	0									invrsc				thng		-1
+sc02	Scroll	80\nThis device allows him to control any living creature, including yourself... thankfully assembling it is far from easy. But this doesn't mean we have a lot of time. The catalyst was never completed because its threat to mankind, and the instructions were split to multiple Túr Dúlra experts that swore to protect them.\nBaal has corrupted almost all of them by now, after taking the information he needed. He's hidden in the fortress, but you can't see him. He has used the catalyst to shape a different dimension to protect him. Making our own Catalyst is our best attempt at defeating him.\nThe second part of the diary is in a chest in the Praying Temple. It's east of to the Farms.\n	1	1	2		0	0	0									invrsc				thng		-1
+sc03	Scroll	80\nTo build the catalyst, we will need the instructions. These can be read in the Ancient Circle at the Fortress, however only the quantities are there. Obtain the knowledge tomes by defeating the corrupted Druids, but remember only a handful have them. The complete tome will list the necessary ingredients to create the Catalyst.\nOnce you have obtained all tomes, look for the next diary in a hut close to the entrance.\n	1	1	2		0	0	0									invrsc				thng		-1
+sc04	Scroll	80\nThe tomes can be restored by transmuting them together in your horadric cube. But only an expert druid can decypher the instructions. If you aren't one, you'll have to also combine my three diaries, I've imbued power in them which should suffice.\nOnce you have the catalyst, go to the Ancient Circle and use it to enter Baal's dimension. Beware as he has control over nature and climate, it will not be pleasant.\nIt is now time for the worst. Prepare.\n	1	1	2		0	0	0									invrsc				thng		-1
 scz	Scalp		1	1	2		0	0	0									invscp				body		-1
 senn	Ennead Challenge\n\orange;Scroll of Kurast	Cube Class Charm with a Jewel to Add Bonus\n\yellow;Reward\n\n\grey;Find your Class Charm at level 80 or lower\n\yellow;Challenge\n\n\grey;Kurast 3000 BA (Torajan Jungles - Kurast Docks)\n\yellow;Location\n\n\grey;Normal\n\yellow;Difficulty\n	1	1	2		0	0	0									ChallengeScroll				thng		-1
 skc	\purple;Chipped Skull		1	1	2		1	0	0									invskc				gemz,gem0		-1
@@ -1987,7 +2057,7 @@ zkx	\dgreen;Greater Signet of Gold	Right-click: Gold in Bank: %d	1	1	2		0	0	0			
 |\#	Xazax's Illusion		1	1	2		0	0	0									maggotlairfag				grtz		-1
 |\\	The Ancient Repositories		1	1	2		0	0	0									ancientrepositoriesz				grtz		-1
 |ab	Cube Reagent\n\orange;Ancient Book	\yellow;very rare Emblems that drop from Monsters\nRecipes for this Item are Unknown, but said to use\n	2	2	2		0	0	0									bookwastex				thng		-1
-|bc	Cube Reagent\n\orange;Book of Cain	\blue;+5% to Experience Gained\n+10 to All Attributes\n+1 to All Skills\n\grey;Cube with Glorious Book of Median to Add Bonus\n	2	2	2		0	0	0									superbooffk				thng		-1
+|bc	Cube Reagent\n\gold;Book of Cain	\blue;+5% to Experience Gained\n+10 to All Attributes\n+1 to All Skills\n\grey;Cube with Glorious Book of Median to Add Bonus\n	2	2	2		0	0	0									superbooffk				thng		-1
 |dc	Dragon Claw		1	1	2		120	0	0									invhorn				grtz		-1
 |ld	Lylia's Curse		1	1	2		120	0	0									lyliascharm				grtz		-1
 |ms	\gold;Ghost Trance	\blue;+1 to All Skills\n(11 to 40) to all Attributes\n\grey;Cube with Umbaru Treasure to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									giyuaGolem				thng		-1

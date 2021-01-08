@@ -2644,3 +2644,27 @@
 2771	UNUSED
 2772	UNUSED
 2773	UNUSED
+2774	Treasure Goblin
+2775	Shiny Hoarder
+2776	Voided Horror
+2777	Voided Spawn
+2778	Voided Glob
+2779	Arcane Collector
+2780	\yellow;R\orange;a\red;i\purple;n\blue;b\dgreen;o\green;w \yellow;G\orange;o\red;b\purple;l\blue;i\dgreen;n
+2781	Glowing Baron
+2784	Rift Inspector
+2785	Rift Inspector
+2786	Rift Inspector
+2787	Rift Inspector
+2788	Rift Inspector
+2789	Rift Inspector
+2790	Rift Inspector
+2791	Rift Inspector
+2792	Rift Inspector
+2793	Rift Inspector
+2794	Rift Inspector
+2795	Rift Inspector
+2799	Relic Thief
+2802	Trophy Seeker
+2803	Decoy Goblin
+2805	Herder Goblin

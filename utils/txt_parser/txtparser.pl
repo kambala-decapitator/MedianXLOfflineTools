@@ -1,7 +1,7 @@
 #!/usr/bin/env perl
 
 # original script copyright (C) grig 2011
-# improvements and modifications for Median XL Offline Tools copyright (C) kambala 2011-2019
+# improvements and modifications for Median XL Offline Tools copyright (C) kambala 2011-2021
 
 use strict;
 use warnings;
@@ -266,10 +266,10 @@ foreach my $elem (@$rw)
 # skip lines that don't start with 'xsignet' at col 29 (AD in Excel) and are not for honorific/decoy recipe
 # 'value' field will contain either property value (including oskill level) or chance in ctc
 my $moStat = "xsignet";
-my $cubemain = parsetxt("cubemain.txt", '#_code' => 9, '!_enabled' => {col => 1, val => $zeroRe},
-                        '!_mo' => {col => 29, val => qr/^(?!$moStat)/},
-                        '!_honorific' => {col => 0, val => qr/^Mystic Orbs\:/}, prop => 19,
-                        param => 21, minValue => 22, maxValue => 23, rlvl => 27, moStat => 29);
+my $cubemain = parsetxt("cubemain.txt", '#_code' => 10, '!_enabled' => {col => 1, val => $zeroRe},
+                        '!_mo' => {col => 30, val => qr/^(?!$moStat)/},
+                        '!_honorific' => {col => 0, val => qr/^Mystic Orbs\:/}, prop => 20,
+                        param => 22, minValue => 23, maxValue => 24, rlvl => 28, moStat => 30);
 
 # MO names and properties
 my $mos; # hashref with keys from ID column of itemstatcost

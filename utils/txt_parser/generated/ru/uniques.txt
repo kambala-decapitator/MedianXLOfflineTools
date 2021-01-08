@@ -57,11 +57,11 @@
 55	''The Worst Beta I've Been In''	1	
 56	Spirit of Creation	120	
 57	'The Last Man Standing'\nНаграда за Событие:	0	
-58	Placeholder	0	
-59	Placeholder	0	
-60	Placeholder	0	
-61	Placeholder	0	
-62	Placeholder	0	
+58	Реагент Куба\n\gold;Book of Cain	0	
+59	\grey;Дизайн Предмета\n\gold;Book of Cain	0	
+60	\grey;Дизайн Предмета\n\gold;Valkyrie's Prime	110	
+61	\grey;Дизайн Предмета\n\gold;Staff of Herding	33	book03
+62	Staff of Herding	33	invherding
 63	Akara's Robe	10	invxtuu
 64	Akara's Robe	50	invxtuu
 65	Akara's Robe	80	invxtuu
@@ -69,7 +69,7 @@
 67	Assur's Bane	100	Ring08
 68	\gold;Ring of Pride	0	invrinquest
 69	Quest Ring\nRing of Virtue	130	invrinquest
-70	\gold;(Secret)\nValkyrie's Prime	110	
+70	Valkyrie's Prime	110	
 71	Maleficence	125	
 72	Desolation	125	
 73	Despondence	125	
