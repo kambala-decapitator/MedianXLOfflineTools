@@ -270,7 +270,6 @@ ac/lvl	9	items			17	item_armor_perlevel																									AC per Player Le
 ethereal	9	items			23																															0
 extra-fcl	9	items			1	passive_fire_mastery			3	passive_ltng_mastery			3	passive_cold_mastery																	Laz / EDM%		min	max	also affects elem affixes?	0
 mana-thorns	9	items			1	item_manawhenstruck																									Laz / Life gained when struck in melee		min	max	none	0
-shadows-max	9	items			1	passive_shadows_addmax																									Laz / Interacts with skills.txt		min	max	none	0
 blood-elem	8	items			1	passive_bloodlust_elempct																									Laz / Interacts with skills.txt		min	max	none	0
 extra-fico	8	items			1	passive_fire_mastery			3	passive_cold_mastery																					Laz / Combination affix		min	max	none	0
 no-ac	8	items			1	armor_override_percent																									Laz / Global AC increase		-100	-100	none	0
@@ -366,6 +365,13 @@ upgrade1		cube			1	cube_upgrade_1																														0
 upgrade2		cube			1	cube_upgrade_2																														0
 upgrade3		cube			1	cube_upgrade_3																														0
 upgrade4		cube			1	cube_upgrade_4																														0
+upgrade5		cube			1	cube_upgrade_5																														0
+upgrade6		cube			1	cube_upgrade_6																														0
+upgrade1to2		cube			1	cube_upgrade_1			3	cube_upgrade_2																										0
+upgrade1to3		cube			1	cube_upgrade_1			3	cube_upgrade_2			3	cube_upgrade_3																						0
+upgrade1to4		cube			1	cube_upgrade_1			3	cube_upgrade_2			3	cube_upgrade_3			3	cube_upgrade_4																		0
+upgrade1to5		cube			1	cube_upgrade_1			3	cube_upgrade_2			3	cube_upgrade_3			3	cube_upgrade_4			3	cube_upgrade_5														0
+upgrade1to6		cube			1	cube_upgrade_1			3	cube_upgrade_2			3	cube_upgrade_3			3	cube_upgrade_4			3	cube_upgrade_5			3	cube_upgrade_6										0
 eq-grw	12	gems / runes			1	eq_grw																													For each equipped Great Rune in Weapon	0
 pierce-phys		items			1	passive_phys_pierce																									Negates % of Enemy Physical Resistance		min	max	none	0
 weapon-count		item automagic			1	weapon_count																													For weps which can be dual wielded	0
@@ -395,3 +401,5 @@ crsd-sacred-cold		items			15	coldmindam			16	coldmaxdam			17	weapon_count							
 h2h-sacred-ltng		items			15	lightmindam			16	lightmaxdam			17	weapon_count																					none	0
 samael2		monster			15	curse_resistance			16	item_healafterkill			17	damage_divisor																					"min = curse res, max = heal kill, layer=dmg-div"	0
 ied-display		items			27	ied_display																													"par = stat, min = ele type, max = pct"	0
+is-enchanted		cube			1	is_enchanted																														0
+temp-stuff		cube			1	xx420xx																														0

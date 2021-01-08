@@ -354,7 +354,7 @@ M_AngelOfDeath	M_AstroghasMoon	amu	Amulet	200	123		90	allskills		0	2	extra-pois	
 M_ViperSkin	M_AstroghasMoon	@30	Belt (Sacred)	15	115		100	pierce-pois		11	20	slow		3	8	ac%		141	170	ease		-33	-33	swing3		30	30	att%		51	75																																																					dblu	dblu						5	5000		0
 M_Darkling	M_AstroghasMoon	@39	Heavy Boots (Sacred)	15	115		100	pierce-pois		6	15	ac%		141	170	move3		5	5	hp		-100	-100	allskills		0	1	extra-pois		6	15	lifesteal		7	12																																																	blac	blac						5	5000		0
 VD_Judgment	M_VizjereiDominion	amu	Amulet	10	123	sor	100	class-restrict		2	2	mana/lvl		240	240																													syn2	1276	100	100													cd-reduce	1524	100	100																												5	5000	1	0
-VD_Catalyst	M_VizjereiDominion	rin	Ring	242	123	sor	100	res-all		-10	-10	move3		1	10	syn1	470	3	3																									syn2	1447	1	1																																												5	5000	1	0
+VD_Catalyst	M_VizjereiDominion	rin	Ring	242	123	sor	100	res-all		-10	-10	move3		1	10																													syn2	1447	1	1																																												5	5000	1	0
 VD_Hunger	M_VizjereiDominion	rin	Ring	28	123	sor	100	regen		-500	-500	cast3		25	50	desc-bottom	11519	4	4	syn1	1276	1	1																																																																				5	5000		0
 VD_Darkness	M_VizjereiDominion	rin	Ring	28	123	sor	100	light		-4	-4	extra-pm		15	35	desc-bottom	11520	4	4	syn1	1447	1	1																																																																				5	5000		0
 VD_Presence	M_VizjereiDominion	rin	Ring	1	150	sor	100																																																																																				5	5000		0

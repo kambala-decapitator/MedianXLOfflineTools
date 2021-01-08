@@ -88,11 +88,11 @@ On Rune	On	18	r50	2	hp%-mp%		3	3	ac/runemaster	32	32	32					hp%-mp%		2	2	ac/rune
 Taha Rune	Taha	18	r51	2	dmg-max		20	20	ac/runemaster	32	32	32	eq-grw		1	1	dmg-max		10	10	ac/runemaster	32	32	32					dmg-max		10	10	ac/runemaster	32	32	32	eq-gr		1	1
 Ghal Rune	Ghal	18	r52	2	enr-factor		25	25	ac/runemaster	32	32	32	eq-grw		1	1	enr-factor		15	15	ac/runemaster	32	32	32					enr-factor		15	15	ac/runemaster	32	32	32	eq-gr		1	1
 Qor Rune	Qor	18	r53	2	ease		-12	-12	ac/runemaster	32	32	32	eq-grw		1	1	ease		-12	-12	ac/runemaster	32	32	32					ease		-12	-12	ac/runemaster	32	32	32	eq-gr		1	1
-Chipped Rainbow Stone		16	yo1	3	dmg-IED		1	1	hp/paragon	32	32	32					gold%		1	1	hp/paragon	32	32	32					res-curse		2	2	hp/paragon	32	32	32				0
-Flawed Rainbow Stone		16	yo2	3	dmg-IED		1	1	hp/paragon	32	32	32					gold%		2	2	hp/paragon	32	32	32					res-curse		4	4	hp/paragon	32	32	32				0
-Rainbow Stone		16	yo3	3	dmg-IED		2	2	hp/paragon	32	32	32					gold%		4	4	hp/paragon	32	32	32					res-curse		6	6	hp/paragon	32	32	32				0
-Flawless Rainbow Stone		16	yo4	3	dmg-IED		2	2	hp/paragon	32	32	32					gold%		6	6	hp/paragon	32	32	32					res-curse		8	8	hp/paragon	32	32	32				0
-Perfect Rainbow Stone		15	yo5	3	dmg-IED		3	3	hp/paragon	32	32	32					gold%		8	8	hp/paragon	32	32	32					res-curse		10	10	hp/paragon	32	32	32				0
+Chipped Rainbow Stone		16	yo1	3	dmg-IED		1	1	hp/paragon	32	32	32	syn1	1617	1	1	gold%		1	1	hp/paragon	32	32	32	syn1	1617	1	1	res-curse		2	2	hp/paragon	32	32	32	syn1	1617	1	1
+Flawed Rainbow Stone		16	yo2	3	dmg-IED		1	1	hp/paragon	32	32	32	syn1	1617	1	1	gold%		2	2	hp/paragon	32	32	32	syn1	1617	1	1	res-curse		4	4	hp/paragon	32	32	32	syn1	1617	1	1
+Rainbow Stone		16	yo3	3	dmg-IED		2	2	hp/paragon	32	32	32	syn1	1617	1	1	gold%		4	4	hp/paragon	32	32	32	syn1	1617	1	1	res-curse		6	6	hp/paragon	32	32	32	syn1	1617	1	1
+Flawless Rainbow Stone		16	yo4	3	dmg-IED		2	2	hp/paragon	32	32	32	syn1	1617	1	1	gold%		6	6	hp/paragon	32	32	32	syn1	1617	1	1	res-curse		8	8	hp/paragon	32	32	32	syn1	1617	1	1
+Perfect Rainbow Stone		15	yo5	3	dmg-IED		3	3	hp/paragon	32	32	32	syn1	1617	1	1	gold%		8	8	hp/paragon	32	32	32	syn1	1617	1	1	res-curse		10	10	hp/paragon	32	32	32	syn1	1617	1	1
 Chipped Onyx		3	g$a	3	dmg-minion		1	1	hp/paragon	32	32	32					res-cold		4	4	hp/paragon	32	32	32					slow		1	1	hp/paragon	32	32	32				0
 Flawed Onyx		3	g$b	3	dmg-minion		2	2	hp/paragon	32	32	32					res-cold		8	8	hp/paragon	32	32	32					slow		1	1	hp/paragon	32	32	32				0
 Onyx		3	g$c	3	dmg-minion		3	3	hp/paragon	32	32	32					res-cold		12	12	hp/paragon	32	32	32					slow		1	1	hp/paragon	32	32	32				0

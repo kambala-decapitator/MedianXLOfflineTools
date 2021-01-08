@@ -301,7 +301,7 @@ W_M	297		skills		2	1		-1	2	9			1															1006	251																									
 tp_lock	298	town portal cuck	skills		5	0		0	31	12			1															7	2																									1024	5	0	0
 strength_bonus_wpn	299		classic	\grey;Current Strength Damage Bonus:	10	0		0	1023	6			1		251	2	2	ModitemStrWpnAdder	ModitemStrWpnAdder									4	1								2	8	strength	damagepercent														1024	10	0	0
 dexterity_bonus_wpn	300		classic	\grey;Current Dexterity Damage Bonus:	10	0		0	1023	6			1		135	2	2	ModitemDexWpnAdder	ModitemDexWpnAdder									4	1								2	8	dexterity	damagepercent														1024	10	0	0
-item_shadows_corpsesynergy	301	UNUSED	items	Shadows Spawn Corpses on Striking 5%	1	0		0	1	9			1		138	3	0	ModitemShadowCorpse	ModitemShadowCorpse									41	22																									1024	1	0	0
+item_shadows_corpsesynergy	301	UNUSED	items		1	0		0	1	9			1		250	3	0	ModitemShadowCorpse	ModitemShadowCorpse									41	22																									1024	1	0	0
 skill_shadows_addcorpseonstriking	302	UNUSED	skills							9			1																																									1024	0	0	0
 skill_voidarchon_fire	303	UNUSED	skills	Fire Damage to Void Archon	12	0		0	4095	13			1		53	1	1	ModitemVoidFire	ModitemVoidFire									101	122																									1024	12	0	0
 statX_1	304		skills		7	24		-24	103	9			1		246													1006	251																									1024	7	24	0
@@ -390,9 +390,9 @@ witchberry_lifeheal	386	moon cookie	cube + skills		8	0		0	255	12			1												
 passive_motw_dmgpct	387	replace w/ syn	items	Bonus Damage to Mark of the Wild	8	0		0	255	12			1		154	4	1	ModitemMotwDmg	ModitemMotwDmg									331	91																									1024	8	0	0
 passive_motw_elempct	388		items	Bonus Elemental Damage to Mark of the Wild	8	0		0	255	12			1		154	4	1	ModitemMotwElem	ModitemMotwElem									331	91																									1024	8	0	0
 passive_motw_duration	389	replace w/ syn	items	Duration Bonus to Mark of the Wild	10	0		0	1023	12			1		127	2	1	ModitemMotwDur	ModitemMotwDur									80	29																									1024	10	0	0
-passive_shadows_addmax	390	UNUSED	items	Extra Flayer Minions	5	0		0	31	12			1		155	1	1	ModitemMaxSummon	ModitemMaxSummon									2	51																									1024	5	0	0
+is_enchanted	390		items	Extra Flayer Minions	5	0		0	31	12			1		250	3	0	ModitemShadowCorpse	ModitemShadowCorpse									2	51																									1024	5	0	0
 passive_hex_adddmg	391	replace w/ syn	items	Bonus to Miasma Haunt Duration	10	0		0	1023	12			1		97	2	1	ModitemHexDur	ModitemHexDur									5	61																									1024	10	0	0
-not_used_392	392		unused							5			1																																									1024	0	0	0
+xx420xx	392	"TEMP, save add on pot efficiency for 2.0 ffs"	items		8	101		-101	154	12			1			0	0											2	51																									1024	8	101	0
 special_syn2	393		items		14	1001	12	-1001	15382	17	12		1																																									1024	14	1001	0
 passive_shadows_addelem	394	replaceable	skills		8	0		0	255	12			1																																									1024	8	0	0
 weapon_count	395		items		3	0		0	7	12			1																																									1024	3	0	0
@@ -419,7 +419,7 @@ ied_display	415		items		12	0	16	0	4095	12	16				253	35	0	ModitemEleInnateSeq	Mod
 passive6	416		skills							12			1																																									1024	0	0	0
 ele_divisor	417		items		16	0	5	0	65535	17	5																																											1024	16	0	0
 item_needschallenged	418	brc	items	\orange;Can Be Upgraded with Black Road Challenge	2	0		0	3	12			1		230	3	0	ModitemNeedsLCed	ModitemNeedsLCed									4	1																									1024	2	0	0
-not_used_419	419		unused							5			1																																									1024	0	0	0
+goblincurse	419		skills		10	0		0	1023	12			1																																									1024	10	0	0
 event_hit2	420	technical - not suited for affixes	skills							12			1																																									1024	0	0	0
 scosglen_check	421		skills		4	0		0	15	5			1																																									1024	4	0	0
 not_used_422	422		unused							5			1																																									1024	0	0	0
@@ -490,8 +490,8 @@ not_used_486	486		unused							5			1																																									102
 minion_resist_all	487		items	to Summoned Minion Resistances	9	25		-25	486	12			1		82	4	1	ModitemResMinBonus	ModitemResMinBonus									55	41																									1024	9	25	0
 enr_factor_percent	488		items	Bonus to Energy Factor	9	50		-50	461	11			1		162	4	1	ModitemEFPct	ModitemEFPct									506	145								11			enr_factor														1024	9	50	0
 item_targettakesdamage	489		items	Target Takes Additional Damage of	10	0		0	1023	16			1	1	18	3	2	ModitemDoomed	ModitemDoomed									56	64														domeleedamage	6	domissileattack	6								1024	10	0	0
-not_used_490	490		unused							5			1																																									1024	0	0	0
-not_used_491	491		unused							5			1																																									1024	0	0	0
+cube_upgrade_5	490		cube		5	1		-1	30	6			1																																									1024	5	1	0
+cube_upgrade_6	491		cube		5	1		-1	30	6			1																																									1024	5	1	0
 item_faster_potions	492	replace w/ syn	items	Increased Healing Rate from Apples	8	50		-50	205	12			1		36	4	1	ModitemFasterPots	ModitemSlowerPots									451	117																									1024	8	50	0
 skill_slowrangedthorns	493	remove in 2.0	items	Slows Ranged Attacker by	8	50		-50	205	7			1	1	79	2	2	ModitemSlowsRangedAt	ModitemSlowsRangedAt									21	17														damagedbymissile	19										1024	8	50	0
 not_used_494	494		unused							5			1																																									1024	0	0	0

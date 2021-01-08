@@ -57,11 +57,11 @@ ElderVial	ebx	1	100	1	135	Samael Charm	Uber Reward	hp%-mp%		6	10	pierce-all		5	5
 Beta Trinket	bt99	1	1	1	1	Beta		addxp		0	0	gold%		100	100	mag%		200	200	move3		30	30	oskill	829	1	1																																1	1	5	5000										0
 BaalReward	blol	1	1	1	120	Baal	Uber Reward	skillcap		1	1	res-all		1	10	mana%		1	5	regen-mana		10	10	str		25	25																																1	1	5	5000										0
 LastManStanding	lms	1	0	1	0	Realm		state	420	1	1	desc-top	11450	4	4																																												1	1	5	5000										0
-Placeholder	ebx	0	0	1		Placeholder																																																						1	5	5000										0
-Placeholder	ebx	0	0	1		Placeholder																																																						1	5	5000										0
-Placeholder	ebx	0	0	1		Placeholder																																																						1	5	5000										0
-Placeholder	ebx	0	0	1		Placeholder																																																						1	5	5000										0
-Placeholder	ebx	0	0	1		Placeholder																																																						1	5	5000										0
+Book Of Cain	|bc	1	0	1																																																								1	5	5000										0
+Book Of Cain Design	dg01	1	0	1		Xazax	Item Design	upgrade1to6		1	1	desc-bottom	11632	2	2	desc-bottom	11633	2	2	desc-bottom	11634	2	2	desc-bottom	11635	2	2	desc-bottom	11636	2	2	desc-bottom	11637	2	2	desc-top	11638	1	1																					1	5	5000										0
+SuperBow Design	dg02	1	0	1	110	Athulua	Item Design	upgrade1to6		1	1	desc-bottom	11632	2	2	desc-bottom	11633	2	2	desc-bottom	11634	2	2	desc-bottom	11635	2	2	desc-bottom	11636	2	2	desc-bottom	11637	2	2	desc-top	11638	1	1																					1	5	5000										0
+Staff of Herding Design	dg03	1	0	1	33	Whimsyshire	Item Design	upgrade1to5		1	1	desc-bottom	11627	2	2	desc-bottom	11628	2	2	desc-bottom	11629	2	2	desc-bottom	11630	2	2	desc-bottom	11631	2	2	desc-top	11638	1	1																								1	1	5	5000		book03								0
+Staff of Herding	wd02	1	0	1	33	Whimsyshire	Staff of Herding	oskill	854	3	3	extra-fire/lvl		12	16	extra-cold/lvl		12	16	extra-ltng/lvl		12	16	regen/lvl		480	544	hp/lvl		144	176	mana/lvl		120	136	move3		20	20	desc-top	11646	9	9	aura	1617	1	1	red-dmg%		10	10									1	5	5000		invherding								0
 GriswoldsHeart	600	1	0	255	10	Tristram	Quest Reward	desc-bottom	11320	6	6	res-all		11	15	all-stats		6	10	ac		50	50	hp		50	50																														dred	dred		1	5	5000	flphla	invxtuu								0
 GriswoldsHeart (N)	784	1	0	255	50	Tristram	Quest Reward	desc-bottom	11320	6	6	res-all		21	25	all-stats		11	20	ac		250	250	hp		100	100	allskills		1	1																										dred	dred		1	5	5000	flphla	invxtuu								0
 GriswoldsHeart (H)	@01	1	0	255	80	Tristram	Quest Reward	ease		-21	-30	res-all		31	40	all-stats		31	50	ac		500	500	hp		200	200	allskills		1	1																										dred	dred		1	5	5000	flphla	invxtuu								0
@@ -1076,7 +1076,7 @@ Cornerstone of the Roflworld	cotw	1	5	1	120		Jitans Gate	oskill	829	2	4	syn1	829
 Cornerstone of the Roflworld	cotw	1	5	1	120		Judgement	oskill	446	9	17	extra-pm		6	8																																													1	5	5000										0
 Cornerstone of the Roflworld	cotw	1	5	1	120		Landmine	oskill	986	9	16	damage-skill	986	1	40																																													1	5	5000										0
 Cornerstone of the Roflworld	cotw	1	5	1	120		Lapidate	oskill	901	14	21	syn1	901	5	5	desc-orange	11548	1	1																																									1	5	5000										0
-Cornerstone of the Roflworld	cotw	1	5	1	120		Laughing Ghost	oskill	1614	4	11	kill-skill	1614	3	10																																													1	5	5000										0
+Cornerstone of the Roflworld	cotw	1	5	1	120		Laughing Ghost	oskill	1614	4	11	kill-skill	382	2	10																																													1	5	5000										0
 Cornerstone of the Roflworld	cotw	1	5	1	120		Lava Pit	oskill	311	13	21	blood-elem		10	10																																													1	5	5000										0
 Cornerstone of the Roflworld	cotw	1	5	1	120		Liche Form	oskill	1158	5	11	cd-reduce	1158	50	50																																													1	5	5000										0
 Cornerstone of the Roflworld	cotw	1	4	1	120		Lightning Arena	oskill	236	5	9	res-ltng-max		1	2																																													1	5	5000										0
@@ -1749,6 +1749,6 @@ Luminescence	87@	1	80	105	100	Maiden Spear SU1	Sacred(1) Unique	dmg%		121	160	dm
 Ophiophagus	51@	1	15	120	120	Balanced Axe SU2	Sacred(2) Unique	aura	1585	1	1	desc-top	11527	9	9	bar		5	5	ease		-100	-100	dmg%		130	200	dmg-norm		45	90	res-pois-max		2	2	mana%		15	15	hp%		15	15	class-restrict	5	5	5										dred	dred		1	5	5000										0
 MalusDomestica	25@	1	80	105	100	Club SU1	Sacred(1) Unique	aura	1184	1	1	desc-top	11530	9	9	hp		1	1000	reanimate	2278	10	10	hp%		10	10	vit%		11	20	allskills		0	2	red-dmg%		6	10	pot-rate		100	100														dred	dred		1	5	5000										0
 Unveiling Eye	@67	1	5	130	130	Circlet SU3	Sacred(2) Unique	aura	1467	1	1	desc-top	11531	9	9	rip		1	1	pierce-all		21	30	mag%		50	50																																	1	5	5000		invsoulseek								0
-Zephyr	3@3	1	920	105	100	Maple Bow SU1	Sacred(1) Unique	syn1	1416	1	1	desc-top	11621	9	9	pierce-fire		15	30	dmg-fire		200	300	skill	382	9	9	skill	383	9	9	res-all-minion		25	25	mag%		25	25	crush		10	10														lred	lred		1	5	5000										0
-VoidTouched	3@3	1	80	120	100	Maple Bow SU2	Sacred(2) Unique	anykill-skill	989	20	1	red-dmg%		10	10	syn2	1416	5	5	mag%		50	50	ease		400	400	desc-top	11622	9	9	pierce-fire		20	20	desc-bottom	11624	6	6																					1	5	5000		voidmaple								0
+Zephyr	3@3	1	930	105	100	Maple Bow SU1	Sacred(1) Unique	syn1	1416	1	1	desc-top	11621	9	9	pierce-fire		15	30	dmg-fire		200	300	skill	382	9	9	skill	383	9	9	res-all-minion		25	25	mag%		25	25	crush		10	10														lred	lred		1	5	5000										0
+VoidTouched	3@3	1	70	120	100	Maple Bow SU2	Sacred(2) Unique	anykill-skill	989	20	1	red-dmg%		10	10	syn2	1416	5	5	mag%		50	50	ease		400	400	desc-top	11622	9	9	pierce-fire		20	20	desc-bottom	11624	6	6																					1	5	5000		voidmaple								0
 VoidInfused	3@3	1	0	140	0	Maple Bow SU2	Sacred(2) Unique	anykill-skill	989	33	1	red-dmg%		20	20	syn2	1416	10	10	mag%		100	100	ease		600	600	desc-top	11623	9	9	pierce-fire		40	40	desc-bottom	11625	8	8																					1	5	5000		voidmaple								0

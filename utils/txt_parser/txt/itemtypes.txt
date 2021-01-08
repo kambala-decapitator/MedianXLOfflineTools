@@ -278,3 +278,7 @@ Elemental Ranged Weapons	elrx	274	Elemental Ranged Weapons					elex		0	0					0	0
 Trophy Fragment	trfr	275								0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
 Relic	reli	276						sock		0	0					0	0	0	0	1	1	0	0	1	0	0	0	0	0	3		0		6	relic01	relic02	relic03	relic04	relic05	relic06	misc	0
 Siggable And Shardable	sg&d	277						dcht	ssgl	0	0					0	0	0	0		1	0	0	0	0	0	0	0	0	3		0		0								0
+Item Design	dsgn	278								0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		6	book01	book02	book05	book06	book07	book08	misc	0
+Staff of Herding TMP	wp01	279	Staff of Herding		item design			mele		0	1	rarm	larm			0	0	0	0		1	0	0	0	0	0	0	0	0	0		0		0							weap	0
+Enchantment	ench	280			enchantments					0	0					0	0	0	0			1	0	0	0	0	0	0	0	3		0		0							misc	0
+Staff of Herding	wp02	281	Staff of Herding		item design					0	1	rarm	larm			0	0	0	0		1	0	0	0	0	0	0	0	0	0		0		0							weap	0
