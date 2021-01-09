@@ -72,9 +72,10 @@ QVariant ItemStorageTableModel::data(const QModelIndex &index, int role) const
                 {
                     int i = item->variableGraphicIndex - 1;
                     const QList<QByteArray> &variableImageNames = ItemDataBase::ItemTypes()->value(baseInfo->types.at(0)).variableImageNames;
-                    imageName = i < variableImageNames.size() ? variableImageNames.at(i) : variableImageNames.last();
+                    if (!variableImageNames.isEmpty())
+                        imageName = i < variableImageNames.size() ? variableImageNames.at(i) : variableImageNames.last();
                 }
-                else
+                if (imageName.isEmpty())
                     imageName = baseInfo->imageName;
             }
 
