@@ -153,7 +153,7 @@ QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item, bool u
             itemDescription += QString("%1: %2\n").arg(tr("Two-Hand Damage"), damageFormat.arg(minDmg).arg(maxDmg));
         }
     }
-    if (itemBase->genericType != Enums::ItemTypeGeneric::Misc && item->maxDurability)
+    if (itemBase->hasDurability && item->maxDurability)
     {
         itemDescription += QString("\n%1: ").arg(tr("Durability"));
         bool isIndestructible = allProps.value(Enums::ItemProperties::Indestructible, foo)->value == 1;

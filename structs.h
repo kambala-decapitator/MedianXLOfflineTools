@@ -177,6 +177,7 @@ struct ItemBase
     quint8 strBonus, dexBonus;
     QList<QByteArray> types;
     qint8 socketableType, classCode;
+    bool hasDurability;
 };
 
 struct ItemType

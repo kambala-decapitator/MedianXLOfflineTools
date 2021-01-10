@@ -208,11 +208,11 @@ for my $setItem (@$setItems)
 
 my $itemName = 'name';
 my $armorTypes = parsetxt("armor.txt", $itemName=>1, "#code"=>0, $nameStr=>21, w=>31, h=>32, type=>2,
-                          type2=>3, rlvl=>18, image=>37, rstr=>12, rdex=>13);
+                          type2=>3, rlvl=>18, image=>37, rstr=>12, rdex=>13, durability=>15, nodurability=>16);
 my $weaponTypes = parsetxt("weapons.txt", $itemName=>1, "#code"=>0, $nameStr=>5, w=>43, h=>44, type=>2,
                            type2=>3, stackable=>45, rlvl=>30, rstr=>25, rdex=>26, image=>50, quest=>67,
                            '1hMinDmg'=>12, '1hMaxDmg'=>13, '2hMinDmg'=>16, '2hMaxDmg'=>17, throwMinDmg=>18, throwMaxDmg=>19,
-                           '1h2h'=>14, '2h'=>15, strBonus=>23, dexBonus=>24);
+                           '1h2h'=>14, '2h'=>15, strBonus=>23, dexBonus=>24, durability=>27, nodurability=>28);
 my $miscTypes = parsetxt("misc.txt", $itemName=>0, "#code"=>5, $nameStr=>7, $spellDescStr=>69,
                          w=>24, h=>25, type=>8, type2=>9, stackable=>48, rlvl=>13, image=>30, quest=>52);
 &tblExpandHash($_, $itemName) for ($armorTypes, $weaponTypes, $miscTypes);
@@ -360,7 +360,8 @@ close $out;
 open $out, ">", "$prefix/items.txt";
 print $out "#code\tname\t$spellDescStr\twidth\theight\tgentype\tstackable\trlvl\trstr\trdex\t1h2h\t2h\t";
 print $out "1hMinDmg\t1hMaxDmg\t2hMinDmg\t2hMaxDmg\tthrowMinDmg\tthrowMaxDmg\timage\tquest\tstrBonus\tdexBonus\t";
-print $out "type\tsockettype\tclass\n"; # these columns are treated specially
+print $out "type\tsockettype\tclass\t"; # these columns are treated specially
+print $out "hasDurability\n";
 my $itemType = 0;
 for my $ref ($armorTypes, $weaponTypes, $miscTypes)
 {
@@ -386,15 +387,19 @@ for my $ref ($armorTypes, $weaponTypes, $miscTypes)
 
         for my $itemName (keys %$itemTypes) # find which class it belongs to
         {
-            $hashRef = $itemTypes->{$itemName};
+            my $hashRef = $itemTypes->{$itemName};
             if ($hashRef->{code0} eq $type)
             {
                 # to determine item type when parsing socketables (see @subtypes): 0 - shield, 1 - weapon, nothing - armor
                 print $out $itemType if defined $hashRef->{bodyLoc} and $hashRef->{bodyLoc} eq 'rarm';
-                print $out "\t".(defined $hashRef->{class} ? $classes{$hashRef->{class}} : -1)."\n";
+                print $out "\t".(defined $hashRef->{class} ? $classes{$hashRef->{class}} : -1)."\t";
                 last
             }
         }
+
+        print $out (($hashRef->{durability} // 0) > 0 and ($hashRef->{nodurability} // 0) == 1) ? 0 : 1;
+
+        print $out "\n"
     }
     $itemType++
 }
