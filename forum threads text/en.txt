@@ -34,8 +34,8 @@ I hope I provided enough anti-hack protection for an average user. If you manage
 [*]single instance[/list][*]and many others ;)[/list][/spoil]
 
 [b]Downloads[/b]:
-[list][*][i]Windows[/i] (XP SP3 and later): http://mxl.vn.cz/kambala/MedianXLOfflineTools_0.5.6.7z (if it doesn't launch, install MSVC++ 2015 Redistributable vc_redist.x[c]86[/c].exe from [url=https://www.mediafire.com/?84qc8d5dy3cd9f6]Mediafire[/url] or from [url=https://www.microsoft.com/en-us/download/details.aspx?id=52685]Microsoft's website[/url])
-[*][i]macOS[/i] (10.9 and later, Intel 64bit): http://mxl.vn.cz/kambala/MedianXLOfflineTools_mac_0.5.6.txz[/list]
+[list][*][i]Windows[/i] (XP SP3 and later): http://mxl.vn.cz/kambala/MedianXLOfflineTools_0.5.7.7z (if it doesn't launch, install MSVC++ 2015 Redistributable vc_redist.x[c]86[/c].exe from [url=https://www.mediafire.com/?84qc8d5dy3cd9f6]Mediafire[/url] or from [url=https://www.microsoft.com/en-us/download/details.aspx?id=52685]Microsoft's website[/url])
+[*][i]macOS[/i] (10.9 and later, Intel 64bit): http://mxl.vn.cz/kambala/MedianXLOfflineTools_mac_0.5.7.txz[/list]
 
 [b]Mini-FAQ:[/b]
 [spoil]Q: Where are Sigma saves?
@@ -94,7 +94,12 @@ A: Probably the character you had loaded last time became broken. To make the ap
 
 [b]Changelog[/b]:
 
-[i]v0.5.6 (16.08.2020)[/i]
+[i]v0.5.7 (10.01.2021)[/i]
+[list][f] compatibility with Sigma 1.8
+[f] sorting improvements
+[/list]
+Older versions:
+[spoil][i]v0.5.6 (16.08.2020)[/i]
 [list][f] prevent crash when items have unknown/legacy properties
 [f] fix showing orange text on Relics
 [f] fix showing magic damage
@@ -104,8 +109,7 @@ A: Probably the character you had loaded last time became broken. To make the ap
 [f] fix showing Cannot be Unsocketed property of Xis runes
 [f] update sorting templates: include new sets and more 'misc' items
 [/list]
-Older versions:
-[spoil][i]v0.5.5 (11.04.2020)[/i]
+[i]v0.5.5 (11.04.2020)[/i]
 [list][+] contains Sigma 1.5 data
 [+] show completion of Rescue Anya quest (A5Q3)
 [+] show quest location in label tooltip

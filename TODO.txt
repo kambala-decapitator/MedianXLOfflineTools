@@ -1,4 +1,3 @@
-making new char without doing save&exit and opening it in MXL Tools - quests not found
 в списке All char stats внезапно вылез "Cannot be Upgraded"
 convert to SC работает коряво — вроде как ломает status value
 

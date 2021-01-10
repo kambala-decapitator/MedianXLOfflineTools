@@ -50,8 +50,8 @@
 
 [B]Загрузки[/B]:
 [LIST]
-[*][I]Windows[/I] (XP SP3 и позже): [URL]http://mxl.vn.cz/kambala/MedianXLOfflineTools_0.5.6.7z[/URL] (если не запускается, установите MSVC++ 2015 Redistributable [FONT=Courier New]vc_redist.x[B]86[/B].exe[/FONT] с [URL='https://www.mediafire.com/?84qc8d5dy3cd9f6']Mediafire[/URL] или с [URL='https://www.microsoft.com/en-us/download/details.aspx?id=52685']сайта Microsoft[/URL])
-[*][I]macOS[/I] (10.9 и позже, Intel 64bit): [URL]http://mxl.vn.cz/kambala/MedianXLOfflineTools_mac_0.5.6.txz[/URL]
+[*][I]Windows[/I] (XP SP3 и позже): [URL]http://mxl.vn.cz/kambala/MedianXLOfflineTools_0.5.7.7z[/URL] (если не запускается, установите MSVC++ 2015 Redistributable [FONT=Courier New]vc_redist.x[B]86[/B].exe[/FONT] с [URL='https://www.mediafire.com/?84qc8d5dy3cd9f6']Mediafire[/URL] или с [URL='https://www.microsoft.com/en-us/download/details.aspx?id=52685']сайта Microsoft[/URL])
+[*][I]macOS[/I] (10.9 и позже, Intel 64bit): [URL]http://mxl.vn.cz/kambala/MedianXLOfflineTools_mac_0.5.7.txz[/URL]
 [/LIST]
 
 [spoiler="Mini-FAQ"]В: Где находятся сохранения Сигмы?
@@ -117,6 +117,12 @@ cp -R resources/data/* "${APP_PATH}/Contents/resources/data"[/code]
 
 [B]История версий:[/B]
 
+[I]v0.5.7 (10.01.2021)[/I]
+[LIST]
+[*][ф] совместимость с Сигмой 1.8
+[*][ф] улучшения сортировки
+[/LIST]
+[spoiler="предыдущие версии"]
 [I]v0.5.6 (16.08.2020)[/I]
 [LIST]
 [*][ф] исправлено падение когда предмет имеет неизвестное или устаревшее свойство
@@ -128,7 +134,7 @@ cp -R resources/data/* "${APP_PATH}/Contents/resources/data"[/code]
 [*][ф] исправлено отображение свойства «Нельзя Извлечь Содержимое Гнёзд» на Xis рунах
 [*][ф] обновлены шаблоны сортировки: добавлены новые комплекты и типы «прочих» вещей
 [/LIST]
-[spoiler="предыдущие версии"]
+
 [I]v0.5.5 (11.04.2020)[/I]
 [LIST]
 [*][+] добавлены данные от Сигмы 1.5
