@@ -31,7 +31,7 @@ CONFIG(release, debug|release): {
 # app version
 NVER1 = 0
 NVER2 = 5
-NVER3 = 6
+NVER3 = 7
 NVER4 = 0
 
       greaterThan(NVER4, 0): NVER_STRING_LAST = $$sprintf("%1.%2", $$NVER3, $$NVER4)
@@ -227,7 +227,7 @@ macx {
         }
     }
 
-    COPYRIGHT = Copyright © kambala 2011-2020
+    COPYRIGHT = Copyright © kambala 2011-2021
     INFO_PLIST_PATH = $$CONTENTS_PATH/$$INFO_PLIST_NAME
     # literal $ is either $$ or \$$
     QMAKE_POST_LINK = sed -e \'s/@APP_VERSION@/$$VERSION/\' -e \'s/@COPYRIGHT@/$$COPYRIGHT/\' -e \'s/\$$(PRODUCT_BUNDLE_IDENTIFIER)/com.kambala.$$TARGET/\' -i \'\' $$INFO_PLIST_PATH;
