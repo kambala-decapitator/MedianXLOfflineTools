@@ -37,7 +37,7 @@ thng
 	x\dx            # sunstone
 	dy\d+           # dyes
 	ir8\d           # occult effigy
-	ir9\d           # dream fragment / star chart
+	ir9(\d|X)       # dream fragment / star chart
 	kt[a-g]x        # pulsating worldstone shard / crystal
 	voi\d           # void scroll
 	brc\d           # BRC
