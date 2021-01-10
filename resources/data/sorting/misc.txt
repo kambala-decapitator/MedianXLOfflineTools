@@ -42,3 +42,5 @@ thng
 	voi\d           # void scroll
 	brc\d           # BRC
 	[cid]r\d+       # charged / depleted riftstone
+	en\d\d          # scroll of enchantment
+	dg0\d           # item design
