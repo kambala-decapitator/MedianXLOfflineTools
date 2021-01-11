@@ -1005,9 +1005,9 @@ Ysh3	Mystical Blade		1	4	1		120	500	500			25	38					lab_sword	0	30	0	####	1	-1	1
 bsd	палаш		2	3	1		0	48	0			11	16					invbsd		0	0	swor	1	-1	1
 d33	Гидбинн приманка		1	2	1		0	15	20			1	2					invd33	18	0	11	knif	1	-1	1
 g33	Гидбинн		1	2	1		0	15	25			9	11					invg33	18	0	11	knif	1	-1	1
-gpl	удушающий газ		1	1	1	1	6	0	0				1					invgps	0	0	0	tpot	1	-1	0
-gpm	Душащий газ		1	1	1	1	16	0	0				1					invgpm	0	0	0	tpot	1	-1	0
-gps	Тошнотворный газ		1	1	1	1	24	0	0				1					invgpl	0	0	0	tpot	1	-1	0
+gpl	удушающий газ		1	1	1	1	6	0	0				1					invgps	0	0	0	tpot	1	-1	1
+gpm	Душащий газ		1	1	1	1	16	0	0				1					invgpm	0	0	0	tpot	1	-1	1
+gps	Тошнотворный газ		1	1	1	1	24	0	0				1					invgpl	0	0	0	tpot	1	-1	1
 hdm	Хорадрический Малус		1	2	1		0	15	15			10	16					invhmr	4	16	0	horm	1	-1	1
 hfh	Адский Кузнечный Молот		2	3	1		20	0	0			13	39					invhfh	25	16	0	hamm	1	-1	1
 hst	Horadric Staff		1	4	1		15	15	0		1			14	20			invhst	10	0	6	staf	1	-1	1
@@ -1125,9 +1125,9 @@ o18	Cestus (4)		1	3	1		26	0	255			23	27					invaxf		0	13	h2h,tier	1	6	1
 o19	Claws (4)		1	3	1		26	0	298			26	30					invclw		0	13	h2h,tier	1	6	1
 o20	Blade Talons (4)		1	3	1		28	0	456			34	41					invclw		0	13	h2h,tier	1	6	1
 o21	Scissors Katar (4)		1	3	1		28	0	384			36	37					invskr		0	13	h2h,tier	1	6	1
-opl	Гремучее зелье		1	1	1	1	0	0	0				1					invops	0	0	0	tpot	1	-1	0
-opm	Взрывающееся зелье		1	1	1	1	12	0	0				1					invopm	0	0	0	tpot	1	-1	0
-ops	Масляное зелье		1	1	1	1	20	0	0				1					invopl	0	0	0	tpot	1	-1	0
+opl	Гремучее зелье		1	1	1	1	0	0	0				1					invops	0	0	0	tpot	1	-1	1
+opm	Взрывающееся зелье		1	1	1	1	12	0	0				1					invopm	0	0	0	tpot	1	-1	1
+ops	Масляное зелье		1	1	1	1	20	0	0				1					invopl	0	0	0	tpot	1	-1	1
 qf1	Khalim's Flail		2	3	1		15	41	35			8	13					invqf1	17	11	0	mace	1	-1	1
 qf2	Khalim's Will		2	3	1		20	0	0			8	13					invqf2	17	11	0	mace	1	-1	1
 tax	метательный топор		1	2	1	1	0	0	40			10	11			6	8	invtax		0	0	taxe	1	-1	1

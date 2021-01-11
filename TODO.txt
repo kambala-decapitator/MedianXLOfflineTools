@@ -1,3 +1,4 @@
+review durability logic: staff of herding / throwable potions
 в списке All char stats внезапно вылез "Cannot be Upgraded"
 convert to SC работает коряво — вроде как ломает status value
 
