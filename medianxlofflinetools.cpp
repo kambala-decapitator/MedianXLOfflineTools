@@ -2036,7 +2036,7 @@ bool MedianXLOfflineTools::processSaveFile()
     charInfo.basicInfo.statsDynamicData.clear();
 
     int count = 0; // to prevent infinite loop if something goes wrong
-    const int maxTries = 50;
+    const int maxTries = 1000;
     int totalStats = 0;
     bool shouldShowHackWarning = false;
     ReverseBitReader bitReader(statsBitData);
