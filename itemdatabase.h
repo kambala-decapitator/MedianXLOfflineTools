@@ -36,6 +36,8 @@ public:
     static RunewordHash *RW();
     static QHash<QByteArray, SocketableItemInfo *> *Socketables();
     static QStringList *NonMagicItemQualities();
+
+    static QHash<QString, quint32> tblIndexLookup;
     static QHash<quint32, QString> *StringTable();
     static QString stringFromTblKey(const QString &key);
 
@@ -70,7 +72,6 @@ public:
 
 private:
     static QHash<QByteArray, FullSetInfo> _sets;
-    static QHash<QString, quint32> _tblIndexLookup;
 
     static QList<QByteArray> stringArrayOfCurrentLineInFile(QIODevice &d);
     static void expandMultilineString(QString *stringToExpand);

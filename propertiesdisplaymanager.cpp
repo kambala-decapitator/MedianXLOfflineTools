@@ -580,9 +580,54 @@ QString PropertiesDisplayManager::propertyDisplay(ItemProperty *propDisplay, int
     case 32: // HP regen
         result = QString("%1 %2").arg(valueStringSigned).arg(description);
         break;
-    case 33:
+    case 33: // cooldown
         result = description.replace(QLatin1String("%s"), ItemDataBase::Skills()->at(propDisplay->param)->name).replace(QLatin1String("%.1g"), QString::number(value / 25.0, 'g', 1) + ItemDataBase::stringFromTblKey(prop->descStringAdd));
         break;
+    case 35: // innate elemental damage
+    {
+        if (int formatStringOffset = propDisplay->param & 0xFF)
+        {
+            quint32 stringIndex = ItemDataBase::StringTable()->key(description) + formatStringOffset;
+            description = ItemDataBase::StringTable()->value(stringIndex);
+        }
+        const QByteArray descUtf8 = description.toUtf8();
+
+        int statStringOffset = propDisplay->param >> 8;
+        Enums::CharacterStats::StatisticEnum stat;
+        switch (statStringOffset)
+        {
+        case 0:
+            stat = Enums::CharacterStats::Strength;
+            break;
+        case 2:
+            stat = Enums::CharacterStats::Dexterity;
+            break;
+        case 6:
+            stat = Enums::CharacterStats::Vitality;
+            break;
+        case 9:
+            stat = Enums::CharacterStats::Energy;
+            break;
+        default:
+            return description;
+        }
+        quint32 statStrIndex = ItemDataBase::tblIndexLookup.value(QLatin1String("strchrstr")) + statStringOffset;
+        const QByteArray statStrUtf8 = ItemDataBase::StringTable()->value(statStrIndex).toUtf8();
+
+        int innateElementalDamage = 0; // TODO: computation ignores innate elemental damage stat from all items
+
+        const char *formatStr = descUtf8.constData();
+        float param2 = propDisplay->value * (1 + innateElementalDamage / 100.0f);
+        int param1 = param2 * CharacterInfo::instance().valueOfStatistic(stat) / 100;
+        const char *param3 = statStrUtf8.constData();
+
+        int size = ::snprintf(0, 0, formatStr, param1, param2, param3) + 1;
+        char *buf = new char[size];
+        ::snprintf(buf, size, formatStr, param1, param2, param3);
+        result = QString::fromUtf8(buf, size);
+        delete [] buf;
+        break;
+    }
     // 9, 10, 14, 16-19 - absent
     // everything else is constructed in ItemParser (mostly in parseItemProperties()), i.e. has displayString
     default:

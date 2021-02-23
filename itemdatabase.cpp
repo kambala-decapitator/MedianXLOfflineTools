@@ -21,7 +21,7 @@
 const double ItemDataBase::EtherealMultiplier = 1.25;
 const char *const ItemDataBase::kJewelType = "jew";
 QHash<QByteArray, FullSetInfo> ItemDataBase::_sets;
-QHash<QString, quint32> ItemDataBase::_tblIndexLookup;
+QHash<QString, quint32> ItemDataBase::tblIndexLookup;
 
 QByteArray ItemDataBase::decompressedFileData(const QString &compressedFilePath, const QString &errorMessage)
 {
@@ -518,7 +518,7 @@ QHash<quint32, QString> *ItemDataBase::StringTable()
                 if (!data.isEmpty())
                 {
                     strings[j] = data.size() > 1 ? unquotedString(data.at(1)) : QString();
-                    _tblIndexLookup[unquotedString(data.at(0))] = j;
+                    tblIndexLookup[unquotedString(data.at(0))] = j;
                     ++j;
                 }
             }
@@ -531,7 +531,7 @@ QHash<quint32, QString> *ItemDataBase::StringTable()
 
 QString ItemDataBase::stringFromTblKey(const QString &key)
 {
-    return StringTable()->value(_tblIndexLookup.value(key, -1));
+    return StringTable()->value(tblIndexLookup.value(key));
 }
 
 QList<QByteArray> ItemDataBase::stringArrayOfCurrentLineInFile(QIODevice &d)
