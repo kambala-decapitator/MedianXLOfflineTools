@@ -531,7 +531,7 @@ QHash<quint32, QString> *ItemDataBase::StringTable()
 
 QString ItemDataBase::stringFromTblKey(const QString &key)
 {
-    return StringTable()->value(tblIndexLookup.value(key));
+    return key.isEmpty() ? QString() : StringTable()->value(tblIndexLookup.value(key));
 }
 
 QList<QByteArray> ItemDataBase::stringArrayOfCurrentLineInFile(QIODevice &d)
