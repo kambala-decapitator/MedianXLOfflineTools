@@ -627,6 +627,19 @@ quint8 PropertiesViewerWidget::mysticOrbEffectMultiplier() const
 {
     if (_item->props.contains(Enums::ItemProperties::MysticOrbsEffectQuadrupled) || _item->rwProps.contains(Enums::ItemProperties::MysticOrbsEffectQuadrupled))
         return 4;
+
+    const PropertiesMultiMap *propMaps[] = {&_item->props, &_item->rwProps};
+    for (int i = 0; i < 2; ++i)
+    {
+        const PropertiesMultiMap *props = propMaps[i];
+        for (PropertiesMultiMap::const_iterator it = props->constBegin(); it != props->constEnd(); ++it)
+        {
+            ItemPropertyTxt *propTxt = ItemDataBase::Properties()->value(it.key());
+            if (propTxt && (propTxt->descFunc == 31 || propTxt->descFunc == 34) && it.value()->param == 11514)
+                return 4;
+        }
+    }
+
     if (_item->props.contains(Enums::ItemProperties::MysticOrbsEffectDoubled) || _item->rwProps.contains(Enums::ItemProperties::MysticOrbsEffectDoubled))
         return 2;
     return 1;
