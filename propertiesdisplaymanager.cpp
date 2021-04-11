@@ -165,8 +165,11 @@ QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item, bool u
     }
     if (itemBase->isStackable)
         itemDescription += "\n" + tr("Quantity: %1").arg(item->quantity);
-    if (itemBase->classCode > -1)
-        itemDescription += "\n" + tr("(%1 Only)", "class-specific item").arg(Enums::ClassName::classes().at(itemBase->classCode));
+
+    ItemProperty *classRestrictionProp = allProps.value(Enums::ItemProperties::ClassRestriction);
+    qint8 classCode = classRestrictionProp ? (classRestrictionProp->value - 1) : itemBase->classCode;
+    if (classCode > -1)
+        itemDescription += "\n" + tr("(%1 Only)", "class-specific item").arg(Enums::ClassName::classes().at(classCode));
 
     // TODO: [later] use lambda to calculate requirements
     if (itemBase->rdex)

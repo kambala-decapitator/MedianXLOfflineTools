@@ -258,10 +258,13 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
     }
     if (itemBase->isStackable)
         itemDescription += qApp->translate(kTranslationContext, "Quantity: %1").arg(item->quantity) + kHtmlLineBreak;
-    if (itemBase->classCode > -1)
+
+    ItemProperty *classRestrictionProp = allProps.value(Enums::ItemProperties::ClassRestriction);
+    qint8 classCode = classRestrictionProp ? (classRestrictionProp->value - 1) : itemBase->classCode;
+    if (classCode > -1)
     {
-        QString text = qApp->translate(kTranslationContext, "(%1 Only)", "class-specific item").arg(ClassName::classes().at(itemBase->classCode));
-        if (itemBase->classCode != charBasicInfo.classCode)
+        QString text = qApp->translate(kTranslationContext, "(%1 Only)", "class-specific item").arg(ClassName::classes().at(classCode));
+        if (classCode != charBasicInfo.classCode)
             itemDescription += htmlStringFromDiabloColorString(text, ColorsManager::Red);
         else
             itemDescription += text;

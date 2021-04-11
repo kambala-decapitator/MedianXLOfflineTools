@@ -283,6 +283,7 @@ public:
         CubeUpgrade2,
         CubeUpgrade3,
         CubeUpgrade4,
+        ClassRestriction = 463,
         MaxSlvlIncrease = 479,
         ShrineVesselCounter = 501,
         StrengthBasedOnBlessedLifeSlvl = 503,
