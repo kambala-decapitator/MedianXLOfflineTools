@@ -269,6 +269,7 @@ public:
         ShrineBless = 219,
         EdyremUpgrade = 270,
         CantDisenchant = 276,
+        MysticOrbsEffectQuadrupled = 288,
         MysticOrbsEffectDoubled = 296,
         CooldownReduction = 309,
         Avoid1 = 338,

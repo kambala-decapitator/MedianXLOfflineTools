@@ -51,7 +51,7 @@ private:
     void updateItem() { _item->hasChanged = true; showItem(_item); }
 
     QString collectMysticOrbsDataFromProps(QSet<int> *moSet, PropertiesMap &props);
-    bool isMysticOrbEffectDoubled() const;
+    quint8 mysticOrbEffectMultiplier() const;
 };
 
 #endif // PROPERTIESVIEWERWIDGET_H

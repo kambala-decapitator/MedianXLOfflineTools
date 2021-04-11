@@ -577,7 +577,7 @@ ItemProperty *PropertiesViewerWidget::getProperty(int id, quint32 param, const P
 
 int PropertiesViewerWidget::totalMysticOrbValue(int moCode, PropertiesMap *props) const
 {
-    quint8 multiplier = 1 + isMysticOrbEffectDoubled();
+    quint8 multiplier = mysticOrbEffectMultiplier();
     return props->value(moCode)->value * ItemDataBase::MysticOrbs()->value(moCode)->value * multiplier;
 }
 
@@ -609,8 +609,13 @@ QString PropertiesViewerWidget::collectMysticOrbsDataFromProps(QSet<int> *moSet,
         foreach (int moCode, *moSet)
         {
             QString &displayString = props.value(moCode)->displayString;
-            if (isMysticOrbEffectDoubled() && !displayString.endsWith(" x 2"))
-                displayString += " x 2";
+            int multiplier = mysticOrbEffectMultiplier();
+            if (multiplier > 1)
+            {
+                QString suffix = QString(" x %1").arg(multiplier);
+                if (!displayString.endsWith(suffix))
+                    displayString += suffix;
+            }
             // quick & dirty hack with const_cast
             html += QString("%1 = %2").arg(displayString).arg(totalMysticOrbValue(moCode, &props)) + kHtmlLineBreak;
         }
@@ -618,7 +623,11 @@ QString PropertiesViewerWidget::collectMysticOrbsDataFromProps(QSet<int> *moSet,
     return html;
 }
 
-bool PropertiesViewerWidget::isMysticOrbEffectDoubled() const
+quint8 PropertiesViewerWidget::mysticOrbEffectMultiplier() const
 {
-    return _item->props.contains(Enums::ItemProperties::MysticOrbsEffectDoubled) || _item->rwProps.contains(Enums::ItemProperties::MysticOrbsEffectDoubled);// || _item->setProps.contains(Enums::ItemProperties::MysticOrbsEffectDoubled);
+    if (_item->props.contains(Enums::ItemProperties::MysticOrbsEffectQuadrupled) || _item->rwProps.contains(Enums::ItemProperties::MysticOrbsEffectQuadrupled))
+        return 4;
+    if (_item->props.contains(Enums::ItemProperties::MysticOrbsEffectDoubled) || _item->rwProps.contains(Enums::ItemProperties::MysticOrbsEffectDoubled))
+        return 2;
+    return 1;
 }
