@@ -198,12 +198,13 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
                 if (ItemDataBase::isTomeWithScrolls(item))
                     bitReader.skip(5); // some tome bits
 
-                if (itemBase->genericType == Enums::ItemTypeGeneric::Armor)
+                const bool isArmor = itemTypesInheritFromType(itemBase->types, "armo");
+                if (isArmor)
                 {
                     ItemPropertyTxt *defenceProp = ItemDataBase::Properties()->value(Enums::ItemProperties::Defence);
                     item->defense = bitReader.readNumber(defenceProp->bits) - defenceProp->add;
                 }
-                if (itemBase->genericType != Enums::ItemTypeGeneric::Misc)
+                if (isArmor || itemTypesInheritFromType(itemBase->types, "weap"))
                 {
                     ItemPropertyTxt *maxDurabilityProp = ItemDataBase::Properties()->value(Enums::ItemProperties::DurabilityMax);
                     item->maxDurability = bitReader.readNumber(maxDurabilityProp->bits) - maxDurabilityProp->add;
