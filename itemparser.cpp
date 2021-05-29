@@ -195,8 +195,8 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
                 }
 
                 bitReader.skip(); // tome of ID bit
-                if (ItemDataBase::isTomeWithScrolls(item))
-                    bitReader.skip(5); // some tome bits
+                if (itemTypesInheritFromTypes(itemBase->types, QList<QByteArray>() << "book" << "scro"))
+                    bitReader.skip(5); // book ID
 
                 const bool isArmor = itemTypesInheritFromType(itemBase->types, "armo");
                 if (isArmor)
