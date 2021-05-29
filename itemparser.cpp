@@ -203,7 +203,7 @@ ItemInfo *ItemParser::parseItem(QDataStream &inputDataStream, const QByteArray &
                     ItemPropertyTxt *defenceProp = ItemDataBase::Properties()->value(Enums::ItemProperties::Defence);
                     item->defense = bitReader.readNumber(defenceProp->bits) - defenceProp->add;
                 }
-                if (itemBase->hasDurability)
+                if (itemBase->genericType != Enums::ItemTypeGeneric::Misc)
                 {
                     ItemPropertyTxt *maxDurabilityProp = ItemDataBase::Properties()->value(Enums::ItemProperties::DurabilityMax);
                     item->maxDurability = bitReader.readNumber(maxDurabilityProp->bits) - maxDurabilityProp->add;

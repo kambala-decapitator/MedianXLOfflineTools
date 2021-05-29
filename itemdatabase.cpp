@@ -95,7 +95,6 @@ QHash<QByteArray, ItemBase *> *ItemDataBase::Items()
             item->types = data.at(22).split(',');
             item->socketableType = data.at(23).isEmpty() ? -1 : data.at(23).toShort();
             item->classCode = data.at(24).toShort();
-            item->hasDurability = item->genericType == Enums::ItemTypeGeneric::Misc ? false : (data.at(25).toInt() > 0);
             allItems[data.at(0)] = item;
         }
     }

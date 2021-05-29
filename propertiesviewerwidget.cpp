@@ -245,7 +245,7 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
             itemDescription += qApp->translate(kTranslationContext, "Two-Hand Damage") + ": " + htmlStringFromDiabloColorString(damageFormat.arg(minDmg).arg(maxDmg + (minDmg == maxDmg)), damageColor) + kHtmlLineBreak;
         }
     }
-    if (itemBase->hasDurability && item->maxDurability)
+    if (itemBase->genericType != ItemTypeGeneric::Misc && item->maxDurability)
     {
         itemDescription += qApp->translate(kTranslationContext, "Durability") + ": ";
         bool isIndestructible = allProps.value(ItemProperties::Indestructible, foo)->value == 1;
