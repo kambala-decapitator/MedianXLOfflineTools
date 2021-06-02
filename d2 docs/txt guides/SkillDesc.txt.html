@@ -1,2153 +1,1078 @@
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-
-<!-- begin document head -->
-
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
 <head>
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-  <meta name="generator" content="MKPortal" />
-  <meta http-equiv="Pragma" content="no-cache" />
-  <meta content="no-cache" http-equiv="no-cache" />
-  <meta http-equiv="Cache-Control" content="no-cache" />
-  <title>The Phrozen Keep - Knowledge Base - SkillDesc.txt File Guide (v. 2)</title>
-  <meta name="description" content="Diablo 2 Modmaking Central" />
-  <meta name="keywords" content="diablo, diablo2, diabloii, diablo3, diabloiii, mods, modmaking, modding, mod tools, phrozen, forum" />
-<link rel="icon" href="favicon.ico" type="image/x-icon" /> 
-<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-  
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:image" content="d2mods.info/pkog.png" />
 
-<!-- Ad Muncher content start --><script type="text/javascript" src="http://interceptedby.admuncher.com/13F9E45711FEBAA3/helper.js#0.58403.0" id="zZwx_MainScript"></script><link rel="stylesheet" href="http://interceptedby.admuncher.com/13F9E45711FEBAA3/helper.css" type="text/css" media="all" /><!-- Ad Muncher content end -->
+<title>The Phrozen Keep - Knowledge Base - SkillDesc.txt File Guide (v. 2)</title>
 
-<style type="text/css">
-/*
-+--------------------------------------------------------------------------
-|   Cascading Style Sheet for MKportal "Forum" Portal Template
-|   ========================================
-|   by Meo aka Luponero [Amedeo de longis]
-|      Don K. Colburn [visiblesoul.net]
-|   Copyright (c) 2004-2007 mkportal.it
-|   http://www.mkportal.it
-|   Email: luponero@mclink.it
-+--------------------------------------------------------------------------
-|   > MKPortal
-|   > Written By Amedeo de longis
-|   > Date started: 9.2.2004
-+--------------------------------------------------------------------------
-*/
+	<link rel="alternate" type="application/atom+xml" title="Feed - The Phrozen Keep" href="/forum/feed">	<link rel="alternate" type="application/atom+xml" title="Feed - News" href="/forum/feed/news">		<link rel="alternate" type="application/atom+xml" title="Feed - New Topics" href="/forum/feed/topics">	<link rel="alternate" type="application/atom+xml" title="Feed - Active Topics" href="/forum/feed/topics_active">			
 
-/*=============================
-M
-K  global styles
-P
-=============================*/
-/* IMPORT body */
-body,
-body {
-	/* Text-Sizing with ems: http://www.clagnut.com/blog/348/ */
-	font-family: "Lucida Grande", Verdana, Helvetica, Arial, sans-serif;
-	color: #FFFFFF;
-	background-color: #000000;
-	font-size: 62.5%; /* This sets the default font size to be equivalent to 10px */
-	margin: 0;
-}
+<!--
+	phpBB style name: D2mods
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:      volf )
+-->
 
-body {
-	font-size: 10px;
-	margin:0px; 
-	padding:0px; /* Opera 0 margin */	
-	text-align: center; /* center in IE */ 
-}
+<link href="./../assets/css/font-awesome.min.css?assets_version=342" rel="stylesheet">
 
-/* IMPORT body background (used for SMF) */
-td { padding: 0; }
+<link href="./../styles/prosilver/theme/normalize.css?assets_version=342" rel="stylesheet">
+<link href="./../styles/prosilver/theme/base.css?assets_version=342" rel="stylesheet">
+<link href="./../styles/prosilver/theme/utilities.css?assets_version=342" rel="stylesheet">
+<link href="./../styles/d2mods/theme/stylesheet.css?assets_version=342" rel="stylesheet">
 
-/* portal wrapper */
-#mkwrapper {
-	text-align:left; /* left-align text in IE */	
-	margin: 0px auto 0px auto;
-}
 
-/* IMPORT logostrip */
-#mklogostrip,
-#importlogostrip {	
-	background-color: #000000;	
-}
 
-/* logostrip */
-#mklogostrip {
-	text-align: left;
-}
+	<link href="./../assets/cookieconsent/cookieconsent.min.css?assets_version=342" rel="stylesheet">
 
-/* IMPORT global font formatting */
-table,
-tr,
-td,
-.tdglobal,
-.importfont {
-	font-size: 10px; 
-	color: #FFFFFF;
-	font-family: Verdana, Arial, Helvetica, sans-serif;	
-}
+<!--[if lte IE 9]>
+	<link href="./../styles/prosilver/theme/tweaks.css?assets_version=342" rel="stylesheet">
+<![endif]-->
 
-/* global font formatting */
-table,
-tr,
-td,
-.tdglobal {
-	font-size: 10px;	
-}
 
-/* IMPORT main portal table bg (if different than body bg) */
-.tabmain,
-.importmain {	
-	font-size: 10px;	
-}
 
-/* main portal table */
-.tabmain {
-	margin:0px;
-	padding:0px;	
-}
+<link href="./../ext/kinerity/knowledgebase/styles/d2mods/theme/knowledgebase_controller.css?assets_version=342" rel="stylesheet" type="text/css" media="screen" />
+<link href="./../ext/blitze/sitemaker/styles/d2mods/theme/assets/sitemaker.min.css?assets_version=342" rel="stylesheet" type="text/css" media="screen" />
+<link href="./../ext/dmzx/downloadsystem/styles/d2mods/theme/downloadsystem.css?assets_version=342" rel="stylesheet" type="text/css" media="screen" />
+<link href="./../ext/dmzx/formcreator/styles/d2mods/theme/formcreator.css?assets_version=342" rel="stylesheet" type="text/css" media="screen" />
+<link href="./../ext/dmzx/imageupload/styles/d2mods/theme/imageupload.css?assets_version=342" rel="stylesheet" type="text/css" media="screen" />
+<link href="./../ext/dmzx/youtubegallery/styles/d2mods/theme/video.css?assets_version=342" rel="stylesheet" type="text/css" media="screen" />
+<link href="./../ext/jeyp/cartography/styles/all/theme/css/cartography_main.css?assets_version=342" rel="stylesheet" type="text/css" media="screen" />
+<link href="./../ext/jeyp/cartography/styles/all/theme/css/cartography_bootstrap.css?assets_version=342" rel="stylesheet" type="text/css" media="screen" />
+<link href="./../ext/jeyp/cartography/styles/all/theme/css/lightslider.min.css?assets_version=342" rel="stylesheet" type="text/css" media="screen" />
+<link href="./../ext/jeyp/cartography/styles/all/theme/css/lightgallery.min.css?assets_version=342" rel="stylesheet" type="text/css" media="screen" />
+<link href="./../ext/phpbb/pages/styles/prosilver/theme/pages_common.css?assets_version=342" rel="stylesheet" type="text/css" media="screen" />
+<link href="./../ext/phpbbgallery/core/styles/d2mods/theme/gallery.css?assets_version=342" rel="stylesheet" type="text/css" media="screen" />
+<link href="./../ext/phpbbgallery/core/styles/all/theme/default.css?assets_version=342" rel="stylesheet" type="text/css" media="screen" />
+<link href="./../ext/stevotvr/flair/styles/prosilver/theme/flair.css?assets_version=342" rel="stylesheet" type="text/css" media="screen" />
 
-/* images */
-img { 		
-	border: 0px;
-	vertical-align: middle; /* Meo: Added in C1.2 */
-}
 
-/* Onyx - justified body for long texts */
-div.body_just {
-	font-size: 12px;
-	text-align: justify;
-}
+<!-- These cannot go into a CSS file as they are not processed with template vars -->
 
-/*=============================
-M
-K IMPORT LIGHT BACKGROUND
-P
-=============================*/
-.modulecell,
-.urlo2,
-.tabnews,
-.trattini,
-.trattini3,
-.tablemenu,
-.taburlo,
-.row1 {
-	background-color: #2F2F4F;
-	padding: 0;
-}
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-/*=============================
-M
-K IMPORT MEDIUM BACKGROUND
-P
-=============================*/
-.navigatore,
-.tdblock,
-.moduleborder,
-.modulex,
-.mkpagecurrent,
-.row2 {
-	background-color: #2F2F4F;
-	padding: 0;
-}
-
-/*=============================
-M
-K IMPORT DARK BACKGROUND
-P
-=============================*/
-.urlo,
-.sottotitolo,
-th {
-	color: #FFFFFF;
-	font-size: 1.1em;
-	font-weight: bold;
-	background-color: #113274;
-	background-image: url('./forum/styles/BlackRock/theme/images/cellpic3.gif');
-	white-space: nowrap;
-	padding: 7px 5px;
-}
-
-/*=============================
-M
-K  border and divider styles
-P
-=============================*/
-/* vertical spacer image used in portal skin */
-/* .vspacer {
-	background-image: url(./mkportal/templates/Forum/images/punto_vert.gif);
-	background-repeat: repeat-y;
-	background-color: transparent;	
-} */
-
-/* IMPORT border-color */
-.tabmain,
-.tablemenu, /* block wrapper, chat button strip */
-.taburlo,
-.urlo2,
-.tabnews,
-.trattini,
-.trattini2,
-.trattini3,
-.mkpagelink,
-.mkpagelinklast,
-.mkpagecurrent,
-.titadmin,
-.importborders {
-	border: 1px solid #000000;	
-}
-	
-.trattini { /*used only in tpl_main.php(deprecated), blog, ad_blocks.php*/
-	border-width: 1px 0 0 0;
-	border-style: dashed;
-}
-
-/* blocks admin */
-.trattini2 {
-	border-width: 0 1px 0 0;
-	border-style: dashed;
-}
-
-.trattini3 { /* used only in blog, quotes, urlobox, calendar*/
-	border-width: 0 0 1px 0;
-	border-style: dashed;
-}
-
-/*=============================
-M
-K  hyperlink styles
-P
-=============================*/
-/* IMPORT global links */
-a:link,
-a:active,
-a.uno:link,
-.importlink {
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	color: #00ffff;	
-	text-decoration: none;	
-}
-
-a:visited,
-a.uno:visited,
-.importvisited {
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	color: #00ffff;	
-	text-decoration: none;	
-}
-
-a:hover,
-a.uno:hover,
-.importhover {
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	text-decoration: underline;
-}
-
-/* a:active {
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	color: #496c9f;	
-	text-decoration: none; 	
-} */
-
-/* bold navbar, block, module links */
-a.uno:link {
-	font-size: 10px;
-	font-weight: bold;
-	text-decoration: none
-}
-
-a.uno:visited {	
-	font-size: 10px; 
-	font-weight: bold;
-	text-decoration: none
-}
-
-
-a.uno:hover {
-	font-size: 10px;
-	font-weight: bold;
-	text-decoration: underline;
-}
-
-/* Onyx - bigger links for titles in Articles and so on*/
-a.cat_big:link {
-	font-size: 12px;
-	text-decoration: none
-}
-
-a.cat_big:visited {	
-	font-size: 12px; 
-	text-decoration: none
-}
-
-
-a.cat_big:hover {
-	font-size: 12px;
-	text-decoration: underline;
-}
-
-/* block text links */
-/* .tablemenu a:link, a:visited {
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	color: #496c9f;	
-	text-decoration: none;	
-}
-
-.tablemenu a:hover {
-	text-decoration: underline;
-}
-
-.tablemenu a:active { 
-	text-decoration: none; 	
-} */
-
-/* global contrasting text and hyperlink color */
-.mktxtcontr,
-a.mktxtcontr:link, 
-a.mktxtcontr:visited {	
-	color: #ffffff;
-	font-weight: bold;
-	text-decoration: none;
-}
-
-a.mktxtcontr:hover {
-	font-weight: bold;
-	text-decoration: underline;
-}
-
-/* contrasting text and hyperlink color 2 (admin) */
-.mktxtcontr2,
-a.mktxtcontr2:link, 
-a.mktxtcontr2:visited {
-	color: #0000ff;
-	font-weight: bold;
-	text-decoration: none;
-}
-
-a.mktxtcontr2:hover {
-	font-weight: bold;
-	text-decoration: underline;
-}
-
-/*=============================
-M
-K  form styles
-P
-=============================*/
-/* remove margin after closing "form" tag in MSIE */
-form {
-	margin: 0;
-	padding: 0
-}
-
-/* IMPORT form styles */
-input,
-textarea,
-select,
-.bgselect, /* input fields */
-.mkbutton, /* global submit buttons */
-.mkblkinput, /* block input */
-.mkradio, 
-input {
-	color: #333333;
-	font-family: "Lucida Grande", Verdana, Helvetica, sans-serif;
-	font-size: 1.1em;
-	font-weight: normal;
-	padding: 1px;
-	border: 1px solid #A9B8C2;
-	background-color: #FAFAFA;
-}
-
-/* set form padding and margin */
-/*.mkbutton,*/ /* global submit buttons */
-/* textarea,*/
-input,
-select,
-.bgselect, /* input fields */
-.mkblkinput /* block input */
-{
-	margin: 0px;
-	padding: 0px;
-	font-size: 9px;
-	font-weight: normal; /* needed for Mozilla */	
-}
-
-.mkbutton { /* Global submit buttons */
-	padding: 3px;
-}
-
-.mkbbbutton { /* MKP BBcode editor buttons */
-	margin: 0;
-	padding: 0;
-}
-
-/* radio/checkbox buttons - remove background color and border in IE */ 
-/* .mkradio {
-	background-color: transparent;
-	border-width: 0px;
-} */
-
-/* configure blog textarea */
-textarea.mkwrap1 {
-	overflow: auto;
-	/* width: 230px; */
-	width: 100%;
-}
-
-/* edit blog textarea */
-textarea.mkwrap2 {
-	overflow: auto;
-	width: 500px ;
-}
-
-/*=============================
-M
-K  navstrip styles
-P
-=============================*/
-/* top navstrip */
-.navigatore {	
-	vertical-align: bottom;
-	text-align: right;
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-weight: 300;
-	font-size: 9px;
-	border: 0;
-}
-
-/*=============================
-M
-K  block styles
-P
-=============================*/
-/* used in functions.php (function main_page) */
-.blocks {
-	padding: 0px;
-}
-
-/* block td cell */
-.tdblock {
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-size: 10px;
-	font-weight: bold;
-	border: 0;
-	margin: 2px;	
-}
-
-/* block title bar */
-.sottotitolo {
-	vertical-align: bottom;	
-	text-align: left;
-	font-size: 11px;
-	font-weight: bold;
-	color:#00ff00; 
-}
-
-/* horizontal spacer between blocks */
-.tdspacer {
-	line-height: 3px;
-}
-
-/*=============================
-M
-K  module global styles
-P
-=============================*/
-/* IMPORT module table headings */
-th.modulex,
-.cattitle {
-
-}
-th.modulex {
-	white-space: nowrap;
-}
-.modulex {
-	border-width: 0 0 0 0;
-}
-/* Reviews description text */
-.modulelite {
-	font-size: 10pt;
-	/* color:#a6bbcd;*/
-}
-
-/* block padding (news, admin) */
-.contents {
-	padding: 10px;
-	font-size: 12px;
-}
-
-/* module pagination links */
-.mkpagelink {
-	padding:1px 3px 1px 3px;
-	font-weight: normal;
-}
-
-.mkpagelinklast {
-	padding:1px 3px 1px 3px;
-	font-weight:normal;
-}
-
-.mkpagecurrent {
-	padding:1px 3px 1px 3px;
-	font-weight:normal;
-}
-
-/* admin cp titles with top border - used in frontend and backend */
-.titadmin {
-	margin: 0px;
-	font-size: 11px;
-	font-weight: bold;
-	border-width: 1px 0 0 0;
-	border-style: dashed;
-}
-/*=============================
-M
-K  shoutbox module styles
-P
-=============================*/
-td.taburlo{	
-	margin:5px;
-	padding:5px;
-	border: 0;	
-}
-	
-/* shouter and date cell */
-.urlo {
-	line-height: 18px;
-	vertical-align: bottom;
-	text-align: left;	
-	font-size: 11px;
-	font-weight: bold;
-	padding: 4px;		 
-}
-
-/* shout cell */
-.urlo2 {
-	padding: 4px;
-	border-width: 0 0 1px 0;
-	border-style: solid;
-	text-align: left;
-	font-size: 11px;
-	font-weight: bold;
-}
-
-/* white shouter text */
-/* .urlocontrast {	
-	color: #ffffff;
-} */
-
-/*=============================
-M
-K  news module styles
-P
-=============================*/
-/* news table with border */
-.tabnews {
-	border-width: 1px;
-	border-style: solid;
-	margin:0px; 
-	padding:10px;
-	font-size: 10px;	
-}
-
-/* news table custom */
-.tabnews1 {
-	border-width: 1px;
-	border-style: solid;
-	border-color: #000;
-	margin:0px; 
-	padding:0px;
-}
-
-/*=============================
-M
-K  font styles
-P
-=============================*/
-/* red error page text */
-.mkerror {	
-	font-size: 12pt;
-	color: #ff0000;
-	font-weight:bold;
-}
-
-/* MKPQuote quotation text */
-/* .mkquote { 		
-	color: #0000ff;	
-} */
-
-/* MKPGallery module ecard, offline page */
-.ecardtitle,
-.offlinetxt {
-	font-size: 10pt; 
-	font-weight: bold;
-	text-align: center;
-}
-/*Onyx - image gallery border - Firefox-compatible*/
-#imgtable1, #imgtable1 td {border: 1px solid #000;}
-
-
-/*=============================
-M
-K  BBcode quote styles
-P
-=============================*/
-.mkquoteball {
-	font-size: 9px; 
-	color: #666666;
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-weight: normal;
-	background-color: #ffffff;	
-	padding: 0;	
-}
-
-.mkquotetext {
-	font-size: 10px; 
-	color: #666666;
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-weight: normal;
-	background-color: #ffffff;
-	margin: 0;
-	padding: 0;	
-}
-
-table .mkquotetable{				
-	width: auto; /* IE */	
-	text-align: left;
-}
-
-/* Added in C1.2 */
-/* Table background highlight */
-.bghighlight1 {
-	background-color: #EAF8EB;
-}
-/* Table background highlight 2 */
-.bghighlight2 {
-	background-color: #EFCBCB;
-}
-/* mkportal footer copyright - Do not remove, modify or obscure the copyright text */
-.mkcopyright {
-	font-size: 10px;
-}
-.mkcopyright a {
-	text-decoration: none;
-}
-/* Calendar block current day highlighting */
-#mkcaltoday {
-	border:2px;
-	border-style:outset;
-	background-color: #0000ff;
-}
-
-/* Table Cell Alignment ltr/rtl */
-
-/* default is "left" */
-.mkalign1 {
-	text-align: left;
-}
-
-/* default is "right" */
-.mkalign2 {
-	text-align: right;
-}
-
-</style>
-
-<link rel="stylesheet" href="mkportal/modules/rss/files/simplepie.css" type="text/css" media="screen, projector" />
-
-  
-  <script type="text/javascript">
-	mkportalurl = 'http://phrozenkeep.hugelaser.com/';
-	var MKAJAX_IMAGES_PATH = "./mkportal/templates/Forum/images/mkajax/";
-    	var MKAJAX_SITEPATH = "./";
-  </script>
-  <script type="text/javascript" src="./mkportal/templates/Forum/mkp.js"></script>
-  <script type="text/javascript" src="./mkportal/templates/Forum/mkp.ext.ajax.js"></script>
-  
-<script type="text/javascript" src=".//mkportal/blocks/imgmenu/js/mootools.js"></script>
-<script type="text/javascript" src=".//mkportal/blocks/imgmenu/imgmenu.js"></script>
-<link href=".//mkportal/blocks/imgmenu/imgmenu.css" rel="stylesheet" type="text/css" />
+	ga('create', 'UA-113863569-1', 'auto');
+	ga('send', 'pageview');
+</script>
 
 </head>
+<body id="phpbb" class="nojs notouch section-app/kb/viewarticle ltr " data-online-text="Online">
 
 
-<body onload="javascript:GetPos()">
-<a name="top"></a>
+<div id="body-wrapper">
+	<a id="top" class="top-anchor" accesskey="t"></a>
 
-<!-- end document head -->
+		<div id="page-header" class="page-width">
+			<div class="headerbar" role="banner">
+							<div class="inner">
 
-<!-- begin open main table -->
+				<div id="site-description" class="site-description">
+					<a id="logo" class="logo" href="https://d2mods.info/home.php" title="News Portal"><span class="site_logo"></span></a>
+					<h1>The Phrozen Keep</h1>
+					<p>Serving D2 Mod Makers Since 2000</p>
+					<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+				</div>
 
-<div id="mkwrapper" style="width: 100%;">
-<table class="tabmain" width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
-
-  <tr>
-    <td width="100%" align="center">
-
-      <table border="0" width="100%" cellpadding="0" cellspacing="0">
-
-<!-- end open main table -->
-
-<!-- begin logostrip -->
-  
-	<tr>
-	  <td id="mklogostrip" width="100%">
-
-     <TABLE border="0" cellpadding="0" cellspacing="0" WIDTH="100%" background="images/pagetop_middle.gif">
-<TR>
-        <TD><img src="images/pagetop_left2.png" height="120" width="500" naturalsizeflag="0" align="bottom"></td>
-	<td align="center" valign="bottom">
-<!-- original header     
-                                <script type="text/javascript">< ! - -
-                                        google_ad_client = "pub-0170085626153842";
-                                        google_ad_width = 468;
-                                        google_ad_height = 60;
-                                        google_ad_format = "468x60_as";
-                                        google_ad_channel ="";
-                                        google_ad_type = "text";
-                                        google_color_border = "2F2F4F";
-                                        google_color_bg = "2F2F4F";
-                                        google_color_link = "2F2F4F";
-                                        google_color_url = "336699";
-                                        google_color_text = "333333";
-                                / / - - ></script>
-                                <script type="text/javascript"
-                                  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-                                </script>//-->
-
-	</td>
-        <TD width="500"><div align="right"><img src="images/pagetop_right2.png" title="... And the heavens shall tremble" width="500" height="120" " naturalsizeflag="0" align="bottom"></div>
-</TR>
-</TABLE>
-
-
-<!-- 10 anniversary header 
-<TABLE border="0" cellpadding="0" cellspacing="0" WIDTH="100%" background="images/pagetop_middle10.gif">
-<TR>
-        <TD><img src="images/pagetop_left10.png" height="120" width="500" naturalsizeflag="0" align="bottom"></td>
-	<td align="center" valign="bottom">
-	</td>
-        <TD width="500"><div align="right"><img src="images/pagetop_right10.png" title="" width="500" height="120" " naturalsizeflag="0" align="bottom"></div>
-</TR>
-</TABLE>
-//-->
-
-          </td>
-	</tr>
-	
-<!-- end logostrip -->
-
-<!-- begin linkbar -->
-
-<!-- end linkbar -->
-
-<!-- begin open portal body -->
-
-	<tr align="center">
-	  <td width="100%">
-	    <table border="0" width="100%" cellspacing="0" cellpadding="0">
-	      <tr>
-
-<!-- end open portal body -->
-
-<script type="text/javascript">
-			
-			window.addEvent('domready', function(){
-				var myMenu = new ImageMenu($$('#imageMenu a'),{openWidth:310, border:2});
-			});
-		</script>  
-
-	      
-<!-- begin left column -->
-
-		<td id="menusx" valign="top">
-		<div id="menucontents" class="mkalign1" style="">
-		<div class="mkalign2"><a href="javascript:ColumnClose('menusx');MemoPos('MKmenusx', '1');"><img src="./mkportal/templates/Forum/images/f2.gif" border="0" alt="" /></a>&nbsp;</div>
-		  <table cellpadding="0" cellspacing="2" border="0" style="width: 140px;">
-		  
-<!-- begin block template -->
-
-		    <tr>
-		      <td class="tablemenu" valign="top">
-			<table border="0" width="100%" cellpadding="0" cellspacing="0">
-   			  <tr>
-         		    <td>
-          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
-          			<tr>
-				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Main Menu</td>
-         			</tr>
-         		      </table>
-         		    </td>
-			  </tr>
-			  <tr>
-         		    <td width="100%">
-		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
-		 	      
-		      		<tr><td width="100%" class="tdblock">
-<!-- begin block link template -->
-		&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php" title="Home">Home</a>
-<!-- end block link template -->
-</td></tr>
-			
-		      		<tr><td width="100%" class="tdblock">
-<!-- begin block link template -->
-		&nbsp;<a class="uno" href="./forum/index.php" title="The Phrozen Forums">The Phrozen Forums</a>
-<!-- end block link template -->
-</td></tr>
-			
-		      		<tr><td width="100%" class="tdblock">
-<!-- begin block link template -->
-		&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?ind=reviews" title="Knowledge Base">Knowledge Base</a>
-<!-- end block link template -->
-</td></tr>
-			
-		      		<tr><td width="100%" class="tdblock">
-<!-- begin block link template -->
-		&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?ind=gallery" title="Image Gallery">Image Gallery</a>
-<!-- end block link template -->
-</td></tr>
-			
-	         	      </table>
-	  		    </td>
-			  </tr>
-			</table>
-		      </td>
-		    </tr>
-		    <tr>
-		      <td class="tdspacer">&nbsp;</td>
-		    </tr>
-
-<!-- end block template -->
-  
-<!-- begin block template -->
-
-		    <tr>
-		      <td class="tablemenu" valign="top">
-			<table border="0" width="100%" cellpadding="0" cellspacing="0">
-   			  <tr>
-         		    <td>
-          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
-          			<tr>
-				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Forum</td>
-         			</tr>
-         		      </table>
-         		    </td>
-			  </tr>
-			  <tr>
-         		    <td width="100%">
-		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
-		 	      <tr><td class="tdblock">
-<!-- begin block link template -->
-		&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?pid=1" title="Terms of Service">Terms of Service</a>
-<!-- end block link template -->
-</td></tr><tr><td class="tdblock">
-<!-- begin block link template -->
-		&nbsp;<a class="uno" href="./forum/search.php?search_id=newposts" title="New posts">New posts</a>
-<!-- end block link template -->
-</td></tr><tr><td class="tdblock">
-<!-- begin block link template -->
-		&nbsp;<a class="uno" href="./forum/memberlist.php" title="Users">Users</a>
-<!-- end block link template -->
-</td></tr><tr><td class="tdblock">
-<!-- begin block link template -->
-		&nbsp;<a class="uno" href="./forum/faq.php" title="Help">Help</a>
-<!-- end block link template -->
-</td></tr>
-	         	      </table>
-	  		    </td>
-			  </tr>
-			</table>
-		      </td>
-		    </tr>
-		    <tr>
-		      <td class="tdspacer">&nbsp;</td>
-		    </tr>
-
-<!-- end block template -->
-  
-<!-- begin block template -->
-
-		    <tr>
-		      <td class="tablemenu" valign="top">
-			<table border="0" width="100%" cellpadding="0" cellspacing="0">
-   			  <tr>
-         		    <td>
-          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
-          			<tr>
-				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Search</td>
-         			</tr>
-         		      </table>
-         		    </td>
-			  </tr>
-			  <tr>
-         		    <td width="100%">
-		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
-		 	      <tr><td class="tdblock">
-<!-- begin block link template -->
-		&nbsp;<a class="uno" href="./forum/search.php" title="Forum">Forum</a>
-<!-- end block link template -->
-</td></tr><tr><td class="tdblock">
-<!-- begin block link template -->
-		&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?ind=gallery&amp;op=search" title="Images">Images</a>
-<!-- end block link template -->
-</td></tr><tr><td class="tdblock">
-<!-- begin block link template -->
-		&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?ind=reviews&amp;op=search" title="Knowledge Base">Knowledge Base</a>
-<!-- end block link template -->
-</td></tr>
-				<tr>
-				  <td class="tdblock" align="center">
-				    <a href="http://www.google.com/"><img src="http://phrozenkeep.hugelaser.com/mkportal/modules/search/google_logo.png" alt="Google" align="top" /></a><br />
-
-				    <form action="http://www.google.com/search" method="get" target="blank">	    
-				    <input size="12" name="q" class="mkblkinput" /><br />
-				    <input type="hidden" name="hl" />
-				    <input type="submit" name="btnG" value="Search" class="mkbutton" />
-				    </form>
-				  </td>
-				</tr>
-
-	         	      </table>
-	  		    </td>
-			  </tr>
-			</table>
-		      </td>
-		    </tr>
-		    <tr>
-		      <td class="tdspacer">&nbsp;</td>
-		    </tr>
-
-<!-- end block template -->
-  
-<!-- begin block template -->
-
-		    <tr>
-		      <td class="tablemenu" valign="top">
-			<table border="0" width="100%" cellpadding="0" cellspacing="0">
-   			  <tr>
-         		    <td>
-          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
-          			<tr>
-				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Features</td>
-         			</tr>
-         		      </table>
-         		    </td>
-			  </tr>
-			  <tr>
-         		    <td width="100%">
-		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
-		 	      <tr><td class="blocks"><table style="width: 100%;" border="0" cellspacing="1" cellpadding="0"><tbody><tr><td class="tdblock"> <a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?ind=reviews&op=entry_view&iden=455">History of the Site</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?ind=reviews&op=section_view&idev=9">Humor</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?ind=reviews&op=section_view&idev=10">Interviews</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?ind=reviews&op=section_view&idev=11">Mod Reviews</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?pid=34">Linking To Us</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?pid=28">Unofficial IRC</a></td></tr> </tbody></table></td></tr>
-	         	      </table>
-	  		    </td>
-			  </tr>
-			</table>
-		      </td>
-		    </tr>
-		    <tr>
-		      <td class="tdspacer">&nbsp;</td>
-		    </tr>
-
-<!-- end block template -->
-  
-<!-- begin block template -->
-
-		    <tr>
-		      <td class="tablemenu" valign="top">
-			<table border="0" width="100%" cellpadding="0" cellspacing="0">
-   			  <tr>
-         		    <td>
-          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
-          			<tr>
-				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">File Center</td>
-         			</tr>
-         		      </table>
-         		    </td>
-			  </tr>
-			  <tr>
-         		    <td width="100%">
-		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
-		 	      <tr><td class="blocks"><table border="0" cellspacing="1" cellpadding="0" width="100%">
-<tbody>
-<tr>
-<td class="tdblock"> <a class="uno" href="/filecenter/dload.php">Main Page</a></td>
-</tr>
-<tr>
-<td class="tdblock"> <a class="uno" href="/filecenter/dload.php?action=search">File Search</a></td>
-</tr>
-<tr>
-<td class="tdblock"> <a class="uno" href="/filecenter/dload.php?action=category&cat_id=113">Hosted Sites</a></td>
-</tr>
-<tr>
-<td class="tdblock"> <a class="uno" href="/filecenter/dload.php?action=category&cat_id=109">Humor</a></td>
-</tr>
-<tr>
-<td class="tdblock"> <a class="uno" href="/filecenter/dload.php?action=category&cat_id=97">Miscellaneous</a></td>
-</tr>
-<tr>
-<td class="tdblock"> <a class="uno" href="/filecenter/dload.php?action=category&cat_id=1">Mod Making Tools</a></td>
-</tr>
-<tr>
-<td class="tdblock"> <a class="uno" href="/filecenter/dload.php?action=category&cat_id=2">Mod Archive</a></td>
-</tr>
-<tr>
-<td class="tdblock"> <a class="uno" href="/filecenter/dload.php?action=category&cat_id=87">Old Forum Dumps</a></td>
-</tr>
-<tr>
-<td class="tdblock"> <a class="uno" href="/filecenter/dload.php?action=category&cat_id=27">Patches</a></td>
-</tr>
-<tr>
-<td class="tdblock"> <a class="uno" href="/filecenter/dload.php?action=category&cat_id=39">Plugins</a></td>
-</tr>
-<tr>
-<td class="tdblock"> <a class="uno" href="/filecenter/dload.php?action=category&cat_id=38">Resources</a></td>
-</tr>
-</tbody>
-</table></td></tr>
-	         	      </table>
-	  		    </td>
-			  </tr>
-			</table>
-		      </td>
-		    </tr>
-		    <tr>
-		      <td class="tdspacer">&nbsp;</td>
-		    </tr>
-
-<!-- end block template -->
-  
-<!-- begin block template -->
-
-		    <tr>
-		      <td class="tablemenu" valign="top">
-			<table border="0" width="100%" cellpadding="0" cellspacing="0">
-   			  <tr>
-         		    <td>
-          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
-          			<tr>
-				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Diablo II Mod Sites</td>
-         			</tr>
-         		      </table>
-         		    </td>
-			  </tr>
-			  <tr>
-         		    <td width="100%">
-		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
-		 	      <tr><td class="blocks"><table style="width: 100%;" border="0" cellspacing="1" cellpadding="0"><tbody><tr><td class="tdblock"> <a class="uno" href="http://bth.d2mods.com/" target="_blank">Back to Hellfire</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://bfed2.diablomods.ru/" target="_blank">Battle for Elements</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://blackened.d2mods.com" target="_blank">Blackened</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://n.ethz.ch/student/henninav/" target="_blank">d2:elements</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://es.d2mods.com" target="_blank">Eastern Sun</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://d2immersion.com/" target="_blank">Immersion</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://modsbylaz.hugelaser.com/" target="_blank">Mods by Laz</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://www.sevenlances.net/" target="_blank">Seven Lances</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://perso.wanadoo.fr/maususatlas/TohXt/Index.html" target="_blank">Time of Heroes</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://www.walhallamod.de/" target="_blank">Walhalla</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://zyel.d2mods.com" target="_blank">Zy-El</a></td></tr></tbody></table></td></tr>
-	         	      </table>
-	  		    </td>
-			  </tr>
-			</table>
-		      </td>
-		    </tr>
-		    <tr>
-		      <td class="tdspacer">&nbsp;</td>
-		    </tr>
-
-<!-- end block template -->
-  
-<!-- begin block template -->
-
-		    <tr>
-		      <td class="tablemenu" valign="top">
-			<table border="0" width="100%" cellpadding="0" cellspacing="0">
-   			  <tr>
-         		    <td>
-          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
-          			<tr>
-				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Modding Resources</td>
-         			</tr>
-         		      </table>
-         		    </td>
-			  </tr>
-			  <tr>
-         		    <td width="100%">
-		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
-		 	      <tr><td class="blocks"><table style="width: 100%;" border="0" cellspacing="1" cellpadding="0"><tbody><tr><td class="tdblock">&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?pid=32">Diabolic Cartography</a></td></tr> <tr><td class="tdblock">&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?pid=22">Incandescence</a></td></tr> <tr><td class="tdblock">&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?pid=33">Infinitum</a></td></tr> <tr><td class="tdblock">&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?pid=21">Inventharia</a></td></tr> <tr><td class="tdblock">&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?pid=23">Warped Tiles</a></td></tr></tbody></table></td></tr>
-	         	      </table>
-	  		    </td>
-			  </tr>
-			</table>
-		      </td>
-		    </tr>
-		    <tr>
-		      <td class="tdspacer">&nbsp;</td>
-		    </tr>
-
-<!-- end block template -->
-  
-<!-- begin block template -->
-
-		    <tr>
-		      <td class="tablemenu" valign="top">
-			<table border="0" width="100%" cellpadding="0" cellspacing="0">
-   			  <tr>
-         		    <td>
-          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
-          			<tr>
-				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Partner Sites</td>
-         			</tr>
-         		      </table>
-         		    </td>
-			  </tr>
-			  <tr>
-         		    <td width="100%">
-		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
-		 	      <tr><td class="blocks"><table style="width: 100%;" border="0" cellspacing="1" cellpadding="0"><tbody><tr><td class="tdblock"> <a class="uno" href="http://18v.biz/portal.html" target="_blank">18v.biz</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://www.blizzplanet.com/" target="_blank">Blizzplanet</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://www.diablo2.com/" target="_blank">Diablo2.com</a></td></tr><tr><td class="tdblock"> <a class="uno" href="http://www.diablo3plaza.com/" target="_blank">Diablo3Plaza</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://www.diablogamer.com/" target="_blank">DiabloGamer.com</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://www.diabloii.net/" target="_blank">Diabloii.net</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://www.diablowiki.com/" target="_blank">DiabloWiki</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://www.hugelaser.com/" target="_blank">Huge Laser</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://www.lurkerlounge.com/" target="_blank">Lurker Lounge</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://modsreloaded.com/" target="_blank">Mods Reloaded</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://www.neoarcadia.com/" target="_blank">Neoarcadia.com</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://www.planetdiablo.com/" target="_blank">PlanetDiablo</a></td></tr> <tr><td class="tdblock"> <a class="uno" href="http://www.theamazonbasin.com/" target="_blank">The Amazon Basin</a></td></tr></tbody></table></td></tr>
-	         	      </table>
-	  		    </td>
-			  </tr>
-			</table>
-		      </td>
-		    </tr>
-		    <tr>
-		      <td class="tdspacer">&nbsp;</td>
-		    </tr>
-
-<!-- end block template -->
-  
-<!-- begin block template -->
-
-		    <tr>
-		      <td class="tablemenu" valign="top">
-			<table border="0" width="100%" cellpadding="0" cellspacing="0">
-   			  <tr>
-         		    <td>
-          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
-          			<tr>
-				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Credits</td>
-         			</tr>
-         		      </table>
-         		    </td>
-			  </tr>
-			  <tr>
-         		    <td width="100%">
-		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
-		 	      <tr><td width="100%" class="tdblock">&nbsp;<a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?pid=11">Copyrights</a></td></tr>
-	         	      </table>
-	  		    </td>
-			  </tr>
-			</table>
-		      </td>
-		    </tr>
-		    <tr>
-		      <td class="tdspacer">&nbsp;</td>
-		    </tr>
-
-<!-- end block template -->
-  
-		  </table>
+												<div id="search-box" class="search-box search-header" role="search">
+					<form action="./../search.php" method="get" id="search">
+					<fieldset>
+						<input name="keywords" id="keywords" type="search" maxlength="128" title="Search for keywords" class="inputbox search tiny" size="20" value="" placeholder="Search…" />
+						<button class="button button-search" type="submit" title="Search">
+							<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+						</button>
+						<a href="./../search.php" class="button button-search-end" title="Advanced search">
+							<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+						</a>
+						
+					</fieldset>
+					</form>
+				</div>
+								
+				</div>
+							</div>
 		</div>
-		<div id="menucloseds" style="display:none">
-		<div class="mkalign2"><a href="javascript:ColumnOpen('menusx');MemoPos('MKmenusx', '0');"><img src="./mkportal/templates/Forum/images/f1.gif" border="0"  alt="" /></a></div>
-		</div>
-		</td>
 
-<!-- end left column -->
+		
+<div id="wrap" class="wrap page-width">
 
-<!-- begin column spacer -->
+		<div class="navbar nav-tabs" role="navigation">
+	<div class="nav-tabs">
 
-		<td class="vspacer" width="0%">&nbsp;</td>
+	<ul id="nav-main" class="nav-main linklist" role="menubar">
 
-<!-- end column spacer -->
+		<li id="quick-links" class="tab quick-links dropdown-container responsive-menu" data-skip-responsive="true">
+			<a href="#" class="dropdown-trigger nav-link" title="Quick links">
+				<i class="icon fa-bars fa-fw icon-white" aria-hidden="true"></i>
+			</a>
+			<div class="dropdown">
+				<div class="pointer"><div class="pointer-inner"></div></div>
+				<ul class="dropdown-contents" role="menu">
+					
+											<li class="separator"></li>
+																			<li>
+								<a href="./../search.php?search_id=newposts" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-red" aria-hidden="true"></i><span>New posts</span>
+								</a>
+							</li>
+																			<li>
+								<a href="./../search.php?search_id=unanswered" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-gray" aria-hidden="true"></i><span>Unanswered topics</span>
+								</a>
+							</li>
+							<li>
+								<a href="./../search.php?search_id=active_topics" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-blue" aria-hidden="true"></i><span>Active topics</span>
+								</a>
+							</li>
+							<li class="separator"></li>
+							<li>
+								<a href="./../search.php" role="menuitem">
+									<i class="icon fa-search fa-fw" aria-hidden="true"></i><span>Search</span>
+								</a>
+							</li>
+					
+											<li class="separator"></li>
+																			<li>
+								<a href="./../memberlist.php?mode=team" role="menuitem">
+									<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+								</a>
+							</li>
+																<li class="separator"></li>
 
-<!-- begin center column -->
+									</ul>
+			</div>
+		</li>
 
-		<td valign="top" class="mkalign1" width="100%">
+				<li class="tab forums selected">
+			<a href="./../index.php" class="nav-link" title="Forums" role="menuitem">
+				<i class="icon fa-comment fa-fw" aria-hidden="true"></i> <span>Forums</span>
+			</a>
+		</li>
+		<li  data-last-responsive="true"><a href="/forum/downloads" title="Downloads" role="menuitem"><i class="icon fa fa-download" aria-hidden="true"></i><span>Downloads</span></a></li>
+<li  data-last-responsive="true">
+	<a href="/forum/video" title="View gallery of Youtube videos" role="menuitem">
+		<i class="icon fa fa-youtube-play" aria-hidden="true"></i>		<span>Videos</span>
+	</a>
+</li>
+	<li data-last-responsive="true">
+		<a href="/forum/kb/index" rel="help" title="View the Knowledge Base" role="menuitem">
+			<i class="icon fa-clone fa-fw" aria-hidden="true"></i><span>Knowledge Base</span>
+		</a>
+	</li>
+	<li class="" data-last-responsive="true">
+		<a href="/forum/contactadmin" role="menuitem">
+			<i class="icon fa-envelope fa-fw" aria-hidden="true"></i><span>Contact us</span>
+		</a>
+	</li>
 
-<div align="center">
-<script type="text/javascript"><!--
-google_ad_client = "pub-3246876018000001";
-/* Phrozen Keep Leaderboard */
-google_ad_slot = "7514462417";
-google_ad_width = 728;
-google_ad_height = 90;
-//-->
-</script>
-<script type="text/javascript"
-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>
+
+			<li class="tab rightside"  data-skip-responsive="true">
+			<a href="./../ucp.php?mode=login" class="nav-link" title="Login" accesskey="x" role="menuitem">
+				<i class="icon fa-sign-in fa-fw icon-white" aria-hidden="true"></i>
+			</a>
+		</li>
+					<li class="tab rightside" data-skip-responsive="true">
+				<a href="./../ucp.php?mode=register" class="nav-link" role="menuitem" title="Register">
+					<i class="icon fa-user-plus fa-fw icon-white" aria-hidden="true"></i>
+				</a>
+			</li>
+					
+		
+	<li data-skip-responsive="true" class="tab rightside">
+		<a href="/forum/help/faq" class="nav-link" rel="help" title="FAQ" role="menuitem">
+			<i class="icon fa-question-circle fa-fw icon-white" aria-hidden="true"></i>
+		</a>
+	</li>
+
+	</ul>
+
+	</div>
 </div>
 
-		  <table cellpadding="0" cellspacing="3" border="0" width="100%"> 
-		  
-<!-- begin block template -->
-
-		    <tr>
-		      <td class="tablemenu" valign="top">
-			<table border="0" width="100%" cellpadding="0" cellspacing="0">
-   			  <tr>
-         		    <td>
-          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
-          			<tr>
-				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Knowledge Base</td>
-         			</tr>
-         		      </table>
-         		    </td>
-			  </tr>
-			  <tr>
-         		    <td width="100%">
-		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
-		 	      <tr align="center">
-  <td>
-
-    <script type="text/javascript">
-	  <!--
-	    function selChd(jumpsection) {
-	    var selIdx = jumpsection.selectedIndex;
-		    var newSel = jumpsection.options[selIdx].value;
-	    location.href='index.php?ind=reviews&op=section_view&idev=' + newSel;
-	}
-	    function selChoc(jumpsection) {
-	    var selIdx = jumpsection.selectedIndex;
-		    var newSel = jumpsection.options[selIdx].value;
-	    location.href='index.php?ind=reviews&order=' + newSel;
-	}
-	    function selChoe(jumpsection, idev) {
-	    var selIdx = jumpsection.selectedIndex;
-		    var newSel = jumpsection.options[selIdx].value;
-	    location.href='index.php?ind=reviews&op=section_view&idev=' + idev + '&order=' + newSel;
-	}
-	  //-->
-    </script>
-    
-    <br />
-    <table width="98%" border="0" cellspacing="0" cellpadding="0">
-      <tr>
-	<td width="60%" class="mkalign1">
-	<img src="./mkportal/templates/Forum/images/locbar.gif" alt="" /><a href="index.php?ind=reviews">Knowledge Base</a>-&gt;<a href="index.php?ind=reviews&amp;op=section_view&amp;idev=4">File Guides (1.1x)</a>-&gt;<a href="#">SkillDesc.txt File Guide (v. 2)</a>
-	</td>
-	<td width="40%" class="modulelite mkalign2">
-	  <a href="index.php?ind=reviews&amp;op=search">[ Search ]</a>
-	</td>
-      </tr>
-    </table>
-    <br />
-    <table width="98%" border="0" cellspacing="1" cellpadding="0" class="moduleborder mkalign1">
-      <tr>
-	<td>
-	  <table width="100%" border="0" cellpadding="0" cellspacing="1" class="modulebg">
-            <tr>
-              <td width="100%" height="25" class="tdblock"> <img class="mkicon" src="./mkportal/templates/Forum/images/arrow.gif" alt="" />SkillDesc.txt File Guide (v. 2)</td>
-            </tr>
-            <tr>
-              <td>
-                <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                  <tr>
-                    <td>
-                      <table width="100%" border="0" cellspacing="1" cellpadding="5">
-		      							
-			<tr>
-                            <td class="modulecell mkalign1" width="20%" valign="middle">Title</td>
-                            <td class="modulecell mkalign1" colspan="2" width="80%" style="font-size: 14px;"><b>SkillDesc.txt File Guide (v. 2)</b></td>
-			</tr>
-			<tr>
-                            <td class="modulecell mkalign1" width="20%" valign="top">Description</td>
-                            <td class="modulecell mkalign1" colspan="2" width="80%">by Ric Faith</td>
-			</tr>
-			
-			
-			
-			
-			
-			
-			
-			<tr>
-                            <td class="modulecell mkalign1" width="20%" valign="top">Sent by</td>
-                            <td class="modulecell mkalign1" colspan="2" width="80%"></td>
-			</tr>
-			<tr>
-				<td colspan="3"><hr /></td>
-			</tr>
-			<tr>
-                            <td colspan="3" class="modulecell mkalign1" style="font-size: 12px;"><div class="body_just"><div class="body_just"><span  large;">SkillDesc.txt File Guide <br /> & descline reference</span> <br /> by RicFaith <br /> <br /> <span  medium;">Overview:</span> <br /> Skilldesc is an important part of the skill making process. It gives the modder the ability to fully customize the skill descriptions of his skills. It is also important for the placement and arrangement of skills on the skilltrees. <br /> <br /> Files used by SkillDesc: <br /> Missiles.txt <br /> Monstats.txt  <br /> Skills.txt <br /> <br /> String.tbl <br /> Expansionstring.tbl <br /> Patchstring.tbl  <br /> <br /> Note: <br /> <strong>Patchstring > Expansionstring > String</strong> <br /> This means that any entry in Patchstring will overwrite the an entry of the same index in Expansionstring or String, and any entry in Expansionstring will overwrite another entry sharing the same name in String. Thus to find the most recent string, you should check in the order stated above. <br /> <br /> <span  medium;">Naming convention:</span> <br /> So as to make certain things clearer, and to simplify this File Guide, here are some naming conventions that I will use while describing: <br /> <br /> <span  #00ffff;">string(s)</span> - refers to an entry in any of the .tbl files <br /> <span  #00ffff;">tree(s)</span> or <span  #00ffff;">page(s)</span> - the skill trees available to the character   <br /> <span  #00ffff;">shortcut(s)</span> - the list of skills that show up when you press 'S' <br /> <span  #00ffff;">charscreen</span> - character screen, shows up when you press 'C' <br /> <span  #00ffff;">selected skill</span> - one of the two active skills that are set to your mouse buttons <br /> <br /> -------------------- <br /> <br /> <span  #00ffff;">skilldesc</span> <br /> name of the skilldesc, referenced by skills.txt (col D). <br /> <br /> -------------------- <br /> <br /> <span  #00ffff;">SkillPage</span> <br /> Allowed values = 0 - 3   <br /> Determines which page the skill will show up. <br /> 0 - not on trees <br /> 1 - bottom page <br /> 2 - middle page <br /> 3 - top page <br /> <br /> -------------------- <br /> <br /> <span  #00ffff;">SkillRow</span> <br /> Allowed values = 0 - 6 <br /> Determines which row the skill will show up. <br /> 0 - not on page <br /> 1 - top row <br /> 6 - bottom row <br /> <br /> --------------------  <br /> <br /> <span  #00ffff;">SkillColumn</span> <br /> Allowed values = 0 - 3 <br /> Determines which column the skill will show up. <br /> 0 - not on page <br /> 1 - left column <br /> 2 - middle column <br /> 3 - right column  <br /> <br /> -------------------- <br /> <br /> <span  #00ffff;">ListRow</span> <br /> Allowed Values = -1 - 4 <br /> Determines which row the skill will show up in the shortcuts <br /> -1 & every other value - skill will not shot up  <br /> 0 - reserved for basic attacks and unsummon  <br /> 1-3 - for skills, from bottom up, usually the same value as SkillPage, but not necessarily <br /> 4 - reserved for Identify and Town Portal <br /> <br /> -------------------- <br /> <br /> <span  #00ffff;">ListPool</span> <br /> Allowed Values = 0 - 2  <br /> Used only by Identify and Town Portal scrolls.  <br /> 0 - Everything else <br /> 1 - scroll of identify <br /> 2 - scroll of town portal <br /> <br /> -------------------- <br /> <br /> <span  #00ffff;">IconCel</span> <br /> Allowed Values = 0 - X (user defined, read below)  <br /> Used to determine the icons (usable and unusable) used by the skill. Value that is put here determines the usable icon, and the next icon will be the unusable icon. Icons always come in pairs, so if you're making your own skill icons, do put them in the right order. <br /> <br /> If skill is a class skill, icons will be taken from : <br /> dataglobaluispellsXXskillicon.dc6 where XX is - <br /> XX	Class <br /> am	Amazon <br /> as	Assassin <br /> ba	Barbarian <br /> dr	Druid <br /> ne	Necromancer <br /> pa	Paladin <br /> so	Sorceress <br /> <br /> If skill is not a class skill, icons will be taken from : <br /> dataglobaluispellsskillicon.dc6 <br /> <br /> --------------------  <br /> <br /> <span  #00ffff;">str name</span> <br /> This is the string that is used as the skill name in the trees, the shortcuts and the selected skill. <br /> <br /> -------------------- <br /> <br /> <span  #00ffff;">str short</span> <br /> This is the string that is used as the skill description in the shortcuts and the selected skill. <br /> <br /> -------------------- <br /> <br /> <span  #00ffff;">str long</span> <br /> This is the string that is used as the skill description in the trees. <br /> <br /> -------------------- <br /> <br /> <span  #00ffff;">str alt</span> <br /> This is the string that is used as the skill name in the charscreen. <br /> <br /> -------------------- <br /> <br /> <span  #00ffff;">str mana</span> <br /> Usual values = StrSkill3 or (blank)  <br /> Even if your skill has no mana cost, putting a string here will not display a 0 mana cost. You can use StrSkill3 ("Mana Cost: ") or your own fancy string for mana cost. Eg. Raven has its own mana cost string ("Mana Cost Per Raven") <br /> <br /> -------------------- <br /> <br /> <span  #00ffff;">descdam</span> <br /> Allowed values = 1 - 24 or (blank)  <br /> If your skill deals damage, then you need to use this to tell skilldesc how to go about calculating the damage. Here is a list of the various values for descdam. <br /> <div>descdam&nbsp; &nbsp;description  <br /> 1&nbsp; &nbsp;attack <br /> 2&nbsp; &nbsp;kick <br /> 3&nbsp; &nbsp;throw <br /> 4&nbsp; &nbsp;left hand throw <br /> 5&nbsp; &nbsp;check dmg cols <br /> 6&nbsp; &nbsp;arrow with explode <br /> 7&nbsp; &nbsp;attacks w dmg increases <br /> 8&nbsp; &nbsp;inferno type dmg <br /> 9&nbsp; &nbsp;blaze,firestorm  <br /> 10&nbsp; &nbsp;smite <br /> 11&nbsp; &nbsp;vengeance  <br /> 12&nbsp; &nbsp;blessed hammer <br /> 13&nbsp; &nbsp;double throw <br /> 14&nbsp; &nbsp;hunger <br /> 15&nbsp; &nbsp;kick combo  <br /> 16&nbsp; &nbsp;kick AoE <br /> 17&nbsp; &nbsp;cstrike <br /> 18&nbsp; &nbsp;royal strike  <br /> 19&nbsp; &nbsp;2h attacks <br /> 20&nbsp; &nbsp;assn chargeups <br /> 21&nbsp; &nbsp;lightbolt <br /> 22&nbsp; &nbsp;javelin with explode <br /> 23&nbsp; &nbsp;rabies <br /> 24&nbsp; &nbsp;blade fury</div></div> <p><br /> Some skills have their own special descdam, so you should check the most relevant skill to yours to see if it requires something different, otherwise it's almost always 5. <br /> <br /> -------------------- <br /> <br /> <span  #00ffff;">ddam calc1 / ddam calc2</span> <br /> If your skill has an increase in damage, you'll need to fill in one or both of these columns. The resulting damage is given by this formula: <br /> Damage = (Original Damage) * (100 + ddam calc1)/100 + ddam calc2 <br /> Thus if your skill has a %age increase in damage, put the increase or calc in ddam calc1. Or if your skill has a flat +X increase in damage, put the increase or calc in ddam calc2. <br /> <br /> -------------------- <br /> <br /> <span  #00ffff;">pXdmelem / pXdmmin / pXdmmax</span> where X = 1 - 3  <br /> These are only used by the Assassin charge-up attacks. These columns describe the necessary details.  <br /> pXdmelem - the element type for that charge <br /> pXdmmin - minimum damage for that charge <br /> pXdmmax - maximum damage for that charge <br /> <br /> -------------------- <br /> <br /> <span  #00ffff;">descatt</span> <br /> Allowed values = 1 - 5 or (blank) <br /> If your skill has an increase in attack rating, you will need to fill this column. I can't see any difference between 1 and 2, so I guess you should look at the skill that is closest to yours.</p> <div>descatt&nbsp; &nbsp;description <br /> 1&nbsp; &nbsp;increase in attack rating <br /> 2&nbsp; &nbsp;increase in attack rating   <br /> 3&nbsp; &nbsp;throw <br /> 4&nbsp; &nbsp;left hand throw <br /> 5&nbsp; &nbsp;kick finishers</div> <p><br /> <br /> --------------------   <br /> <br /> <span  #00ffff;">descmissileX</span> where X = 1 - 3 <br /> In the case where your damage, duration or other values are taken from missiles, you will need to put the primary missile in descmissile1. Currently, it seems that the descmissile2 and descmissile3 are only used by assassin charge-ups, but I think you should be able to put other missiles here for description too. <br /> <br /> -------------------------------------------------------------------------------- <br /> <br /> From here, the real stuff begins. Since it is highly repetive in nature, I will explain it differently. <br /> <br /> There are 3 main sections for descriptions, desc, dsc2 and dsc3. First a breakdown of where these descriptions show up. <br /> <br /> <span  #00ffff;">desc</span> - shows up in trees, shortcuts and selected skill. <br /> <span  #00ffff;">dsc2</span> - shows up in trees, shortcuts and selected skill. <br /> <span  #00ffff;">dsc3</span> - shows up in trees only.   <br /> <br /> Next, I'll describe what the different descriptions show. <br /> <br /> <span  #00ffff;">Shortcuts and Selected skill</span> - desc and dsc2 show current level stats only. <br /> <br /> <span  #00ffff;">Trees</span> - <br /> desc show current and next level stats <br /> dsc2 show current stats <br /> dsc3 show current stats (but is currently used for synergies) <br /> For a more precise layout of the stats, see <span  #ff0000;">Appendix A</span> below. <br /> <br /> -------------------- <br /> <br /> If you leave a set blank, they will simply be ignored. So you can fill any <br /> sets of columns, the blank ones will be skipped. <br /> <br /> Now, we will cover the different parts of a description. I will use just 1 set of columns for simplicity, the effect is the same for all columns. Each set of columns will have: <br /> <span  #00ffff;">descline, desctexta, desctextb, desccalca, desccalcb</span> <br /> with various numbers appended to them. <br /> <br /> -------------------- <br /> <br /> <span  #00ffff;">descline</span> <br /> Allowed values = 1 - 75 or (blank) <br /> This tells skilldesc the format of the description, which values to take and which order to place them. Read further for an example. All desclines and their usage can be found in <span  #ff0000;">Appendix B</span>. <br /> <br /> -------------------- <br /> <br /> <span  #00ffff;">desctexta / desctextb</span> <br /> These are strings that may be filled or left blank. Some desclines are not picky about whether these are filled, but since there are so many desclines, you can find something that matches your needs quite closely. <br /> <br /> -------------------- <br /> <br /> <span  #00ffff;">desccalca / desccalcb</span> <br /> These are numbers or calcs that may be filled or left blank. Similar to desctexts, desccalcs may be treated as empty or 0 if not present, so if you don't need the extra space, choose a suitable descline. <br /> <br /> -------------------- <br /> <br /> In <span  #ff0000;">Appendix B</span>, I used the following notation: <br /> <span  #00ffff;">S1 & S2</span> refer to <span  #ff0000;">desctexta</span> and <span  #ff0000;">desctextb</span> respectively. S for String because that is what these two columns are.   <br /> <span  #00ffff;">C1 & C2</span> refer to <span  #ff0000;">desccalca</span> and <span  #ff0000;">desccalcb</span> respectively. C for Calc <br /> I used S1,S2,C1,C2 because these are immediately identifiable. Most of the desclines come with fixed text. You can change the 'fixed' part in the .tbl files, but you'll be changing them for all skills that use that descline. Anyway there are so many workarounds that you really don't have to change it, just use another descline. <br /> <br /> <span  #ff0000;">Example 1</span>:  <br /> I'll use <span  #00ffff;">descline 3</span> as an example. <br /> <span  #00ffff;">Descline 3</span> gives the following output: <span  #ff0000;">S1C1S2</span> <br /> This means that if my input is <br /> S1 = "Good"  <br /> S2 = "Nothing"  <br /> C1 = 4 <br /> C2 = 365 <br /> The result will be "Good4Nothing". There are no spaces, because the output merely concatenates everything. C2 is ignored because it is not included in the output. <br /> If S1 was blank, the output is "4Nothing" <br /> If S2 was blank, the output is "Good4" <br /> If C1 was blank, the output is "GoodNothing" <br /> <br /> I'm sure that is quite clear, now on to some of the more complex desclines <br /> <br /> <span  #ff0000;">Example 2</span>: <br /> Some desclines don't use string or calcs, so I'll show a nice one for poison skills. <br /> <span  #00ffff;">Descline 14</span> has the following output: <br /> <span  #ff0000;">Poison Damage: X-Y <br /> over Z seconds</span> <br /> <br /> Yes, some desclines produce more than one line, but they're usually a little hardcoded. This descline reads the values of EMin, EMax and ELen from skills.txt and does some math before displaying the values. <br /> <br /> For this example, I'll use Poison Nova Lvl 1 <br /> From skills.txt: <br /> HitShift = 4 <br /> EMin = 14 <br /> EMax = 25 <br /> ELen = 50 <br /> <br /> First, some things you have to know about the values in Len, this value is in frames, and Diablo has 25 frames to a second. Thus Poison Nova does damage for 2 seconds. <br /> <br /> Next, for HitShift, this is because Blizzard uses 8 bits of accuracy for HitPoints, Mana and Stamina. HitShift for Poison Nova is 4, so the damage is "divided" by 2^4 = 16. <br /> <br /> Anyway, back to the descline and the formula. <br /> The output has X,Y and Z, this is because even these values are not raw values. Here's how we calculate them: <br /> X = EMin*ELen/16 = 43  <br /> Y = EMax*ELen/16 = 78  <br /> Z = ELen/25 = 2 <br /> <br /> Last thing to note, Blizzard rounds everything down to the integer. So 3/4 = 0, 41/40 = 79/40 = 1. <br /> <br /> In the end, we get the final output: <br /> Poison Damage: 43-78 <br /> over 2 seconds <br /> <br /> -------------------- <br /> <br /> <span  medium;">Conclusion:</span> <br /> <br /> Skilldesc can get a bit tricky, and sometimes some things just don't work so well. My advice is that even though some of the desclines may look perfect for your skill description, if they don't work, try using some of the more common ones. Some of the desclines are not used in skilldesc, I found them by trying every number. Some are only used by one skill, so I classed it as being specific, though they may still be able to work, don't get too worked up when it doesn't. In my opinion, you can do a lot with just the basic few. You can do your own calcs and display a raw number instead of leaving it to the hardcoded desclines. But it's up to the individual modder <img src="http://phrozenkeep.hugelaser.com/images/smiles/icon_smile.gif" border="0" alt="icon_smile.gif" /> <br /> <br /> ---------------------------------------- <br /> <br /> <span  #00ffff;"><span  medium;">Appendix A: Layout of Skill Description on the Tree.</span></span> <br /> <br /> ----- <br /> <br /> str name <br /> str long <br /> <br /> (all dsc2 lines)  <br /> <br /> Current Level: X <br /> (all desc lines) <br /> <br /> Next Level: X+1 <br /> (all desc lines) <br /> <br /> (all dsc3 lines) <br /> <br /> ----- <br /> <br /> As mentioned earlier, synergies are using dsc3 lines, so they'll be shown right at the bottom. If you want some stats that only show for current level, use dsc2. If you want stats that show for current and next levels, use desc. <br /> <br /> ---------------------------------------- <br /> <br /> <span  #00ffff;"><span  medium;">Appendix B: List of desclines</span></span> <br /> <br /> This list is a bit long (75 entries), so I put it in a code. I'm thinking of making an excel page that allows you to put values in to see the result, but there may or may not be a need for it. I'll see how it goes. If you think that it'd be good, PM me so I know there's a demand. <br /> <br /> Explanations: <br /> descline = descline number <br /> formula used = result from the inputs <br /> calc/desc = in the event that the numbers are not directly related to inputs S1,S2,C1,C2, I explained it here <br /> elem = if this descline refers to a specific elem, because of the calc method or if it can take any elem based on the EType in skills.txt, then I'll state it here <br /> reference = the files it references, such as skills.txt, missiles.txt etc.</p> <div>descline&nbsp; &nbsp;formula&nbsp; &nbsp;used&nbsp; &nbsp;calc/desc&nbsp; &nbsp;elem&nbsp; &nbsp;reference&nbsp; &nbsp;specific   <br /> 1&nbsp; &nbsp;null&nbsp; &nbsp;1&nbsp; &nbsp;almost all damaging skills use this&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; <br /> 2&nbsp; &nbsp;S1+C1S2&nbsp; &nbsp;1&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;  <br /> 3&nbsp; &nbsp;S1C1S2&nbsp; &nbsp;1&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; <br /> 4&nbsp; &nbsp;S1+C1&nbsp; &nbsp;1&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;  <br /> 5&nbsp; &nbsp;S1C1&nbsp; &nbsp;1&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; <br /> 6&nbsp; &nbsp;+C1S1&nbsp; &nbsp;1&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;iron skin   <br /> 7&nbsp; &nbsp;C1S1&nbsp; &nbsp;1&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; <br /> 8&nbsp; &nbsp;^ S1S2&nbsp; &nbsp;1&nbsp; &nbsp;Automatically displays AR Bonus&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;  <br /> 9&nbsp; &nbsp;S1S2Damage: +C2&nbsp; &nbsp;1&nbsp; &nbsp;Automatically displays Dmg Bonus&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; <br /> 10&nbsp; &nbsp;(Elem) Damage: X-Y&nbsp; &nbsp;1&nbsp; &nbsp;X,Y = Dmg&nbsp; &nbsp;any&nbsp; &nbsp;skills&nbsp; &nbsp;  <br /> 11&nbsp; &nbsp;^ S1S2&nbsp; &nbsp;1&nbsp; &nbsp;Describes a skill dmg?&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; <br /> 12&nbsp; &nbsp;S1: C1 seconds&nbsp; &nbsp;1&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;  <br /> 13&nbsp; &nbsp;Life: C1&nbsp; &nbsp;1&nbsp; &nbsp;For displaying summon's life&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; <br /> 14&nbsp; &nbsp;Poison Damage: X-Ynover Z seconds&nbsp; &nbsp;1&nbsp; &nbsp;X,Y=(Dmg)*Len/16, Z=len/25&nbsp; &nbsp;pois&nbsp; &nbsp;skills&nbsp; &nbsp;  <br /> 15&nbsp; &nbsp;S1:S2&nbsp; &nbsp;0&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; <br /> 16&nbsp; &nbsp;Duration: (C1/25)-(C2/25) seconds&nbsp; &nbsp;1&nbsp; &nbsp;C1,C2 in frames&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;mind blast   <br /> 17&nbsp; &nbsp;S2S1C1-C2 per second&nbsp; &nbsp;1&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;fists of fire <br /> 18&nbsp; &nbsp;S1&nbsp; &nbsp;1&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;  <br /> 19&nbsp; &nbsp;S2S1(C1*2/3) yards&nbsp; &nbsp;1&nbsp; &nbsp;C1 in Game length units&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; <br /> 20&nbsp; &nbsp;S1+C1 percentS2&nbsp; &nbsp;0&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;  <br /> 21&nbsp; &nbsp;S1C1 percentS2&nbsp; &nbsp;0&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; <br /> 22&nbsp; &nbsp;Average Fire Damage: X-Y per second&nbsp; &nbsp;1&nbsp; &nbsp;X,Y=(dmg*7/3) (hitshift 4)&nbsp; &nbsp;fire&nbsp; &nbsp;missiles&nbsp; &nbsp;  <br /> 23&nbsp; &nbsp;Duration: X seconds&nbsp; &nbsp;1&nbsp; &nbsp;X = (range/25)&nbsp; &nbsp;&nbsp; &nbsp;missiles&nbsp; &nbsp; <br /> 24&nbsp; &nbsp;S1: X-Y&nbsp; &nbsp;1&nbsp; &nbsp;X,Y=(dmg/2)&nbsp; &nbsp;&nbsp; &nbsp;skills&nbsp; &nbsp;  <br /> 25&nbsp; &nbsp;S1S2&nbsp; &nbsp;1&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;  <br /> 26&nbsp; &nbsp;Average (Elem) Damage: X-Y per second&nbsp; &nbsp;1&nbsp; &nbsp;X-Y=(dmg*25/16) (hitshift 4)&nbsp; &nbsp;any&nbsp; &nbsp;skills&nbsp; &nbsp;  <br /> 27&nbsp; &nbsp;Average Fire Damage: X-Y per second&nbsp; &nbsp;1&nbsp; &nbsp;X,Y=(dmg*14/3) (hitshift 4)&nbsp; &nbsp;fire&nbsp; &nbsp;skills&nbsp; &nbsp;  <br /> 28&nbsp; &nbsp;Radius: 1 Yard&nbsp; &nbsp;1&nbsp; &nbsp;HC, game value can be changed&nbsp; &nbsp;&nbsp; &nbsp;skills&nbsp; &nbsp;fire ball <br /> 29&nbsp; &nbsp;X Yards&nbsp; &nbsp;1&nbsp; &nbsp;X=(range*2/3)&nbsp; &nbsp;&nbsp; &nbsp;missiles&nbsp; &nbsp;fire wall   <br /> 30&nbsp; &nbsp;Fire Duration: X&nbsp; &nbsp;1&nbsp; &nbsp;X=(submissile1.range/25)&nbsp; &nbsp;fire&nbsp; &nbsp;missiles&nbsp; &nbsp;fire wall  <br /> 31&nbsp; &nbsp;S1(C1/25) seconds&nbsp; &nbsp;1&nbsp; &nbsp;C1 in frames&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;  <br /> 32&nbsp; &nbsp;S1S2+C1 percent&nbsp; &nbsp;1&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;  <br /> 33&nbsp; &nbsp;S1S2&nbsp; &nbsp;1&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;skel mastery  <br /> 34&nbsp; &nbsp;Damage: X-Y&nbsp; &nbsp;1&nbsp; &nbsp;X,Y=monster damage /w bonuses&nbsp; &nbsp;&nbsp; &nbsp;monstats,skills&nbsp; &nbsp;raise skel  <br /> 35&nbsp; &nbsp;S1: C1-C2&nbsp; &nbsp;1&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;fire golem  <br /> 36&nbsp; &nbsp;C1(S1 or S2)&nbsp; &nbsp;1&nbsp; &nbsp;To determine plurality&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;  <br /> 37&nbsp; &nbsp;S1(C1*2/3) yards&nbsp; &nbsp;1&nbsp; &nbsp;C1 in Game length units&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;  <br /> 38&nbsp; &nbsp;S1C1-C2S2&nbsp; &nbsp;1&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;  <br /> 39&nbsp; &nbsp;null&nbsp; &nbsp;1&nbsp; &nbsp;Used by Clay, Blood, Iron Golems&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;  <br /> 40&nbsp; &nbsp;(C1:Color)S2S1&nbsp; &nbsp;1&nbsp; &nbsp;Color Codes below&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;  <br /> 41&nbsp; &nbsp;Fire Damage: C1-C2&nbsp; &nbsp;1&nbsp; &nbsp;&nbsp; &nbsp;fire&nbsp; &nbsp;&nbsp; &nbsp;fire golem  <br /> 42&nbsp; &nbsp;S1: +C1.C2 S2&nbsp; &nbsp;1&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;inferno sentry  <br /> 43&nbsp; &nbsp;S1(C1/25)-(C2/25)S2&nbsp; &nbsp;1&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;holy fire  <br /> 44&nbsp; &nbsp;S1(C1/256)-(C2/256)S2&nbsp; &nbsp;0&nbsp; &nbsp;C1,C2 used for true HP/MP/SP display&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;  <br /> 45&nbsp; &nbsp;Thorns Damagen1 percent damage returned&nbsp; &nbsp;0&nbsp; &nbsp;HC&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;  <br /> 46&nbsp; &nbsp;S1&nbsp; &nbsp;0&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;  <br /> 47&nbsp; &nbsp;S1C1-C2&nbsp; &nbsp;1&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;holy bolt  <br /> 48&nbsp; &nbsp;Magic Damage: X-Y&nbsp; &nbsp;1&nbsp; &nbsp;X,Y=Dmg&nbsp; &nbsp;mag&nbsp; &nbsp;skills&nbsp; &nbsp;blessed hammer  <br /> 49&nbsp; &nbsp;S1: X-Y&nbsp; &nbsp;1&nbsp; &nbsp;X,Y=Dmg (used for smite dmg by HShield)&nbsp; &nbsp;&nbsp; &nbsp;skills&nbsp; &nbsp;holy shield  <br /> 50&nbsp; &nbsp;S1: X-Y&nbsp; &nbsp;1&nbsp; &nbsp;X,Y=(hitsubmissile1.dmg)&nbsp; &nbsp;&nbsp; &nbsp;missiles&nbsp; &nbsp;FoH <br /> 51&nbsp; &nbsp;S1&nbsp; &nbsp;1&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;  <br /> 52&nbsp; &nbsp;S1+C1-C2S2&nbsp; &nbsp;1&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; <br /> 53&nbsp; &nbsp;null,HC for isc?&nbsp; &nbsp;1&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;  <br /> 54&nbsp; &nbsp;null,HC for ibk?&nbsp; &nbsp;1&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; <br /> 55&nbsp; &nbsp;null,HC for tsc?&nbsp; &nbsp;1&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;  <br /> 56&nbsp; &nbsp;null,HC for tbk?&nbsp; &nbsp;1&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; <br /> 57&nbsp; &nbsp;S1+(C1/25) seconds&nbsp; &nbsp;1&nbsp; &nbsp;C1 in frames&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;lycanthropy   <br /> 58&nbsp; &nbsp;S1S2+C1-C2&nbsp; &nbsp;0&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; <br /> 59&nbsp; &nbsp;S2S1C1-C2&nbsp; &nbsp;1&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;inferno sentry   <br /> 60&nbsp; &nbsp;S1+(C1/256)S2&nbsp; &nbsp;0&nbsp; &nbsp;C1 used for true HP/MP/SP display&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; <br /> 61&nbsp; &nbsp;S1(C1/256)S2&nbsp; &nbsp;1&nbsp; &nbsp;C1 used for true HP/MP/SP display&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;blade fury   <br /> 62&nbsp; &nbsp;S1S2C1-C2&nbsp; &nbsp;1&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; <br /> 63&nbsp; &nbsp;S1: +C1% S2&nbsp; &nbsp;1&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;  <br /> 64&nbsp; &nbsp;S1: +C1/C2 S2&nbsp; &nbsp;0&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; <br /> 65&nbsp; &nbsp;S1: S2&nbsp; &nbsp;0&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;  <br /> 66&nbsp; &nbsp;S1(C1)S1&nbsp; &nbsp;1&nbsp; &nbsp;S1 has a (%d%%) where C1 will be&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;  <br /> 67&nbsp; &nbsp;S1: +C1 S2&nbsp; &nbsp;1&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;  <br /> 68&nbsp; &nbsp;C1S1S2&nbsp; &nbsp;1&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;sacrifice  <br /> 69&nbsp; &nbsp;S1: S2 C1&nbsp; &nbsp;0&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;  <br /> 70&nbsp; &nbsp;S1S2+C1&nbsp; &nbsp;1&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;  <br /> 71&nbsp; &nbsp;S1: S2&nbsp; &nbsp;1&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;  <br /> 72&nbsp; &nbsp;+C1/C2 S1&nbsp; &nbsp;1&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;  <br /> 73&nbsp; &nbsp;C1/C2 S1&nbsp; &nbsp;1&nbsp; &nbsp;eg 3/4 Weap Dmg for Multishot&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;  <br /> 74&nbsp; &nbsp;S1&nbsp; &nbsp;0&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;  <br /> 75&nbsp; &nbsp;S1&nbsp; &nbsp;0&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;  <br /></div> <p><br /> <br /> ----------------------------------------  <br /> <br /> <span  #00ffff;"><span  medium;">Appendix C: Color Codes</span></span> <br /> <br /> The values that you can put in the C1 column for skilldesc 40 and a couple of others can be found here:</p> <div>0 - Light Gray (normal text)   <br /> 1 - Red  <br /> 2 - Bright Green (Set Items)  <br /> 3 - Blue (Magic Items)  <br /> 4 - Gold (Unique Items)  <br /> 5 - Dark Gray (Socketed/Ethereal Items)   <br /> 6 - Transparent (Text Doesn't Show)  <br /> 7 - Tan  <br /> 8 - Orange (Crafted Items)  <br /> 9 - Yellow (Rare Items)</div><p>&nbsp;</p></div></td>
-			</tr>
-			<tr>
-				<td colspan="3"><hr /></td>
-			</tr>
-			<tr>
-                            <td class="modulecell mkalign1" width="20%" valign="top">Votes</td>
-                            <td class="modulecell mkalign1" colspan="2" width="80%">Votes: 2 - Average: 5 <img src="./mkportal/templates/Forum/images/spacer.gif" width="115" height="5" alt="" /><br /><img src="./mkportal/templates/Forum/images/scale.gif" width="129" alt="" /><br /><img src="./mkportal/templates/Forum/images/bar-start.gif" height="11" alt="" /><img src="./mkportal/templates/Forum/images/bar.gif" width="119" height="11" alt="" /><img src="./mkportal/templates/Forum/images/bar-end.gif" height="11" alt="" />
-			    </td>
-			</tr>
+<br />
 
 
+<div class="navbar nav-breadcrumbs" role="navigation">
+	<div class="inner">
 
-			<tr>
-                          <td class="modulecell" colspan="3">
-                            <table width="50%" align="center">
-                              <tr>
-				<td align="center" class="functions" width="200"><a href="index.php?ind=reviews&amp;op=submit_comment&amp;ide=370"><img src="./mkportal/templates/Forum/images/comment.gif" border="0" alt="" /></a></td>
-				<td align="center" class="functions" width="200"><a href="index.php?ind=reviews&amp;op=submit_rate&amp;ide=370"><img src="./mkportal/templates/Forum/images/rate.gif" border="0" alt="" /></a></td>
-                              </tr>
-                              <tr>
-				<td align="center" class="functions" width="200"><a href="index.php?ind=reviews&amp;op=submit_comment&amp;ide=370">Add a Comment</a></td>
-				<td align="center" class="functions" width="200"><a href="index.php?ind=reviews&amp;op=submit_rate&amp;ide=370">Rate</a></td>
-                              </tr>
-                            </table>
-                          </td>
-			</tr>
+	<ul id="nav-breadcrumbs" class="linklist navlinks" role="menubar">
+						<li class="breadcrumbs">
+							<span class="crumb"  itemtype="http://data-vocabulary.org/Breadcrumb" itemscope=""><a href="https://d2mods.info/home.php" itemprop="url" data-navbar-reference="home"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span itemprop="title">News Portal</span></a></span>
+										<span class="crumb"  itemtype="http://data-vocabulary.org/Breadcrumb" itemscope=""><a href="./../index.php" itemprop="url" accesskey="h" data-navbar-reference="index"><span itemprop="title">Home</span></a></span>
 
-		<tr>
-		  <td class="tdblock" colspan="3">
-		  Comments
-		  </td>
-		  </tr><tr>
-						  <td colspan="3"><hr /></td>
-		</tr>
+											<span class="crumb"  itemtype="http://data-vocabulary.org/Breadcrumb" itemscope=""><a href="/forum/kb/index" itemprop="url"><span itemprop="title">Knowledge Base</span></a></span>
+												</li>
 		
-			<tr>
-                          <td class="modulecell" width="5%" valign="top"><a href="./forum/memberlist.php?mode=viewprofile&amp;u=23070" class="uno">k0r3l1k</a><br />15 Jan 2010<br /></td>
-			  <td class="modulecell" width="5" valign="middle"></td>
-                          <td class="modulecell" width="75%" valign="middle">descdam 8, the one used for inferno uses descdamcalc 1 and 2 in its own way. ddcalc1 multiplies the source damage by its value, and ddcalc2 divides the source damage by its value.</td>
-						  </tr><tr>
-						  <td colspan="3"><hr /></td>
-			</tr>
-			
-			<tr>
-                          <td class="modulecell" width="5%" valign="top"><a href="./forum/memberlist.php?mode=viewprofile&amp;u=23070" class="uno">k0r3l1k</a><br />15 Jan 2010<br /></td>
-			  <td class="modulecell" width="5" valign="middle"></td>
-                          <td class="modulecell" width="75%" valign="middle">descdam 8, the one used for inferno uses descdamcalc 1 and 2 in its own way. ddcalc1 multiplies the source damage by its value, and ddcalc2 divides the source damage by its value.</td>
-						  </tr><tr>
-						  <td colspan="3"><hr /></td>
-			</tr>
-			
-                      </table>
-                    </td>
-                  </tr>
-                </table>
-              </td>
-	    </tr>
-	  </table>
-	</td>
-      </tr>
-    </table>
-    
-    <br />
-    <table width="98%" border="0" cellspacing="1" cellpadding="0" align="center" class="moduleborder">
-      <tr>
-	<td>
-	  <table width="100%" border="0" cellpadding="0" cellspacing="2" class="modulebg">
-	    <tr>
-	      <td>
-		<table width="100%" border="0" cellspacing="0" cellpadding="0">
-		  <tr>
-		    <td>
-		      <table width="100%" border="0" cellspacing="1" cellpadding="5">
-			<tr>
-			  <td class="modulex" colspan="2">
-			    Stat
-			  </td>
-			</tr>
-			<tr>
-			  <td width="40" align="center" class="modulecell"><img src="./mkportal/templates/Forum/images/stats.gif" alt="" /></td>
-			  <td class="modulecell">There are 422 articles in the Database<br />Most Viewed: <a href="index.php?ind=reviews&amp;op=entry_view&amp;iden=298">[LOD v.1.10] Hades Underworld Mod</a><br />Most Rated: <a href="index.php?ind=reviews&amp;op=entry_view&amp;iden=332">Guide: How to get rid of your fellow modmakers</a></td>
-			</tr>
-		      </table>
-		    </td>
-		  </tr>
-		</table>
-	      </td>
-	    </tr>
-	  </table>
-	</td>
-      </tr>
-    </table>
-    <br />
-    <table width="98%" border="0" cellspacing="0" cellpadding="0" align="center">
-      <tr>
-	<td class="modulebg">
-	<div class="mkalign1" style="margin: 4px 0;"></div>
-	</td>
-      </tr>
-    </table>
+					<li class="rightside responsive-search">
+				<a href="./../search.php" title="View the advanced search options" role="menuitem">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</a>
+			</li>
+			</ul>
 
-    <table width="98%" class="moduleborder" border="0" cellspacing="1" cellpadding="1" align="center">
-      <tr>
-	<td class="modulebg">
-	  <table width="100%" border="0" cellspacing="0" cellpadding="4" class="mkalign2">
-	    <tr>
-	      <td class="modulex mkalign1" width="*">
-		Total users browsing the Knowledge Base: 1 (1 Registered Members 0 Guests and 0 Anonymous Members)<br />Visible members are:  <a href="./forum/memberlist.php?mode=viewprofile&amp;u=37948">kambala</a>
-	      </td>
-	    </tr>
-	  </table>
-	</td>
-      </tr>
-    </table>
-
-    <table width="98%" align="center">
-      <tr>
-	<td align="center">
-	<br /><br /><div align="center"><a href="http://www.mkportal.it" target="_blank">MKPReviews</a> &copy;2003-2008 <a href="http://www.mkportal.it" target="_blank">mkportal.it</a></div>
-	</td>
-      </tr>
-    </table>
-  </td>
-</tr>
-	         	      </table>
-	  		    </td>
-			  </tr>
-			</table>
-		      </td>
-		    </tr>
-		    <tr>
-		      <td class="tdspacer">&nbsp;</td>
-		    </tr>
-
-<!-- end block template -->
-  
-		  </table>
-		</td>
-
-<!-- end center column -->
-		
-<!-- begin column spacer -->
-
-		<td class="vspacer" width="0%">&nbsp;</td>
-
-<!-- end column spacer -->
-
-<!-- begin right column -->
-
-		<td id="menudx" valign="top">
-		<div id="menucontentr" class="mkalign1" style="">
-		<div class="mkalign1">&nbsp;<a href="javascript:ColumnClose('menudx');MemoPos('MKmenudx', '1')"><img src="./mkportal/templates/Forum/images/f1.gif" border="0" alt="" /></a></div>
-		  <table cellpadding="0" cellspacing="2" border="0" style="width: 140px;">
-		  
-<!-- begin block template -->
-
-		    <tr>
-		      <td class="tablemenu" valign="top">
-			<table border="0" width="100%" cellpadding="0" cellspacing="0">
-   			  <tr>
-         		    <td>
-          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
-          			<tr>
-				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Personal Menu</td>
-         			</tr>
-         		      </table>
-         		    </td>
-			  </tr>
-			  <tr>
-         		    <td width="100%">
-		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
-		 	      
-				<tr>
-				  <td width="100%" class="tdblock" align="center">
-				  Welcome kambala
-				  </td>
-				</tr>
-				<tr>
-				  <td width="100%" class="tdblock" align="center">
-				  
-				  </td>
-				</tr>
-				<tr>
-				  <td width="100%" class="tdblock" align="center">
-				  <span class="mktxtcontr">Last Visited:</span>
-				  </td>
-				</tr>
-				<tr>
-				  <td width="100%" align="center" class="tdglobal">
-				  Saturday, 11 February 2012 16:42
-				  </td>
-				</tr>
-				
-				<tr>
-				<td width="100%"  class="tdblock">
-<!-- begin block link template -->
-		&nbsp;<a class="uno" href="./forum/ucp.php" title="Personal CP">Personal CP</a>
-<!-- end block link template -->
-
-				  </td>
-				</tr>
-				<tr>
-				  <td width="100%" class="tdblock">
-<!-- begin block link template -->
-		&nbsp;<a class="uno" href="./forum/ucp.php?i=pm&amp;folder=inbox" title="PM (0/0)">PM (0/0)</a>
-<!-- end block link template -->
-
-				  </td>
-				</tr>
-				<tr>
-				  <td width="100%" class="tdblock">
-<!-- begin block link template -->
-		&nbsp;<a class="uno" href="./forum/ucp.php?mode=logout&amp;sid=623fe607b880b3b82259f91e28e9021b" title="Log Out">Log Out</a>
-<!-- end block link template -->
-
-				  </td>
-				</tr>
-     	 	
-	         	      </table>
-	  		    </td>
-			  </tr>
-			</table>
-		      </td>
-		    </tr>
-		    <tr>
-		      <td class="tdspacer">&nbsp;</td>
-		    </tr>
-
-<!-- end block template -->
-  
-<!-- begin block template -->
-
-		    <tr>
-		      <td class="tablemenu" valign="top">
-			<table border="0" width="100%" cellpadding="0" cellspacing="0">
-   			  <tr>
-         		    <td>
-          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
-          			<tr>
-				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Who Is Online?</td>
-         			</tr>
-         		      </table>
-         		    </td>
-			  </tr>
-			  <tr>
-         		    <td width="100%">
-		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
-		 	      
-				<tr>
-				  <td width="100%">
-				    <table border="0" width="100%" cellpadding="1" cellspacing="1">
-				      <tr>
-					<td class="tdblock">
-					<span class="mktxtcontr">52</span> Users online:
-					</td>
-				      </tr>
-				      <tr>
-					<td class="tdglobal">
-					<b>46</b> &nbsp;Guests<br /><b>1</b> &nbsp;Anonymous<br /><b>5</b> &nbsp;Visible:<br /> <span style="color:#9E8DA7"><strong>Google [Bot]</strong></span>, <span style="color:#9E8DA7"><strong>Google Adsense [Bot]</strong></span>, <a href="./forum/memberlist.php?mode=viewprofile&amp;u=37948">kambala</a>, <a href="./forum/memberlist.php?mode=viewprofile&amp;u=39693">KillerTOFU</a>, <a href="./forum/memberlist.php?mode=viewprofile&amp;u=39881">Mnw1995</a>
-					</td>
-				      </tr>
-				    </table>
-				  </td>
-				</tr>
-				<tr>
-				  <td class="tdblock">
-<!-- begin block link template -->
-		&nbsp;<a class="uno" href="./forum/viewonline.php" title="Last click">Last click</a>
-<!-- end block link template -->
-
-				  </td>
-				</tr>	
-     	 	
-	         	      </table>
-	  		    </td>
-			  </tr>
-			</table>
-		      </td>
-		    </tr>
-		    <tr>
-		      <td class="tdspacer">&nbsp;</td>
-		    </tr>
-
-<!-- end block template -->
-  
-<!-- begin block template -->
-
-		    <tr>
-		      <td class="tablemenu" valign="top">
-			<table border="0" width="100%" cellpadding="0" cellspacing="0">
-   			  <tr>
-         		    <td>
-          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
-          			<tr>
-				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Recent Discussions</td>
-         			</tr>
-         		      </table>
-         		    </td>
-			  </tr>
-			  <tr>
-         		    <td width="100%">
-		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
-		 	      
-				<tr>
-				  <td width="100%" class="tdblock">
-				  <a class="uno" href="./forum/viewtopic.php?f=15&amp;t=42495&amp;p=463171#p463171">Re: Ask the Experts</a>
-				  </td>
-				</tr>
-				<tr>
-				  <td class="tdglobal">
-				  by: <a href="./forum/memberlist.php?mode=viewprofile&amp;u=38307">thepsycho2</a><br /> on: Sunday, 12 February 2012 19:56
-				  </td>
-				</tr>
-			
-				<tr>
-				  <td width="100%" class="tdblock">
-				  <a class="uno" href="./forum/viewtopic.php?f=81&amp;t=59116&amp;p=463170#p463170">Re: Strange Error in Act2</a>
-				  </td>
-				</tr>
-				<tr>
-				  <td class="tdglobal">
-				  by: <a href="./forum/memberlist.php?mode=viewprofile&amp;u=5358" style="color:#FFCC66"><strong>Volf</strong></a><br /> on: Sunday, 12 February 2012 19:43
-				  </td>
-				</tr>
-			
-				<tr>
-				  <td width="100%" class="tdblock">
-				  <a class="uno" href="./forum/viewtopic.php?f=81&amp;t=59116&amp;p=463169#p463169">Strange Error in Act2</a>
-				  </td>
-				</tr>
-				<tr>
-				  <td class="tdglobal">
-				  by: <a href="./forum/memberlist.php?mode=viewprofile&amp;u=40061">Black_Eternity</a><br /> on: Sunday, 12 February 2012 19:18
-				  </td>
-				</tr>
-			
-				<tr>
-				  <td width="100%" class="tdblock">
-				  <a class="uno" href="./forum/viewtopic.php?f=53&amp;t=52445&amp;p=463167#p463167">Re: My hardcore Challe...</a>
-				  </td>
-				</tr>
-				<tr>
-				  <td class="tdglobal">
-				  by: <a href="./forum/memberlist.php?mode=viewprofile&amp;u=12403">Al-T</a><br /> on: Sunday, 12 February 2012 18:17
-				  </td>
-				</tr>
-			
-				<tr>
-				  <td width="100%" class="tdblock">
-				  <a class="uno" href="./forum/viewtopic.php?f=15&amp;t=42495&amp;p=463166#p463166">Re: Ask the Experts</a>
-				  </td>
-				</tr>
-				<tr>
-				  <td class="tdglobal">
-				  by: <a href="./forum/memberlist.php?mode=viewprofile&amp;u=40869">Lucifer666</a><br /> on: Sunday, 12 February 2012 17:32
-				  </td>
-				</tr>
-			
-	         	      </table>
-	  		    </td>
-			  </tr>
-			</table>
-		      </td>
-		    </tr>
-		    <tr>
-		      <td class="tdspacer">&nbsp;</td>
-		    </tr>
-
-<!-- end block template -->
-  
-<!-- begin block template -->
-
-		    <tr>
-		      <td class="tablemenu" valign="top">
-			<table border="0" width="100%" cellpadding="0" cellspacing="0">
-   			  <tr>
-         		    <td>
-          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
-          			<tr>
-				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Site Stats</td>
-         			</tr>
-         		      </table>
-         		    </td>
-			  </tr>
-			  <tr>
-         		    <td width="100%">
-		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
-		 	      
-				<tr>
-				  <td class="tdblock">
-				  <span class="mktxtcontr">447457</span> Posts:
-				  </td>
-				</tr>
-				<tr>
-				  <td class="tdglobal">
-				  55014 Topics
-				  </td>
-				</tr>
-				<tr>
-				  <td class="tdglobal">
-				  392443 Replies<br />
-				  </td>
-				</tr>
-				<tr>
-				  <td class="tdblock">
-				  <span class="mktxtcontr">333</span> Images:
-				  </td>
-				</tr>
-				<tr>
-				  <td class="tdglobal">
-				  Inside the Image Gallery<br />
-				  </td>
-				</tr>				
-				<tr>
-				  <td class="tdblock">
-				  <span class="mktxtcontr">422</span> Articles:
-				  </td>
-				</tr>
-				<tr>
-				  <td class="tdglobal">
-				  Inside the Knowledge Base<br />
-				  </td>
-				</tr>				
-				<tr>
-				  <td class="tdblock">
-				  <span class="mktxtcontr">29495</span> Reg. Members:
-				  </td>
-				</tr>
-				<tr>
-				  <td class="tdglobal">
-				  Last: <a class="uno" href="./forum/memberlist.php?mode=viewprofile&amp;u=40913">darknessproz</a>
-				  </td>
-				</tr>
-				<!--<tr>
-				  <td class="tdblock">
-				  Browsed Pages:
-				  </td>
-				</tr>
-				<tr>
-				  <td class="tdglobal">
-				  <center><img src="./mkportal/templates/Forum/images/led/1.gif" style="border: solid 1px #ffffff;" alt="" /><img src="./mkportal/templates/Forum/images/led/4.gif" style="border: solid 1px #ffffff;" alt="" /><img src="./mkportal/templates/Forum/images/led/4.gif" style="border: solid 1px #ffffff;" alt="" /><img src="./mkportal/templates/Forum/images/led/6.gif" style="border: solid 1px #ffffff;" alt="" /><img src="./mkportal/templates/Forum/images/led/1.gif" style="border: solid 1px #ffffff;" alt="" /><img src="./mkportal/templates/Forum/images/led/7.gif" style="border: solid 1px #ffffff;" alt="" /><img src="./mkportal/templates/Forum/images/led/5.gif" style="border: solid 1px #ffffff;" alt="" /><img src="./mkportal/templates/Forum/images/led/2.gif" style="border: solid 1px #ffffff;" alt="" /></center>
-				  </td>
-				</tr> -->
-
-	         	      </table>
-	  		    </td>
-			  </tr>
-			</table>
-		      </td>
-		    </tr>
-		    <tr>
-		      <td class="tdspacer">&nbsp;</td>
-		    </tr>
-
-<!-- end block template -->
-  
-<!-- begin block template -->
-
-		    <tr>
-		      <td class="tablemenu" valign="top">
-			<table border="0" width="100%" cellpadding="0" cellspacing="0">
-   			  <tr>
-         		    <td>
-          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
-          			<tr>
-				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Calendar</td>
-         			</tr>
-         		      </table>
-         		    </td>
-			  </tr>
-			  <tr>
-         		    <td width="100%">
-		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
-		 	      
-				<tr>
-				  <td class="tdblock" >
-
-				    <form action="http://phrozenkeep.hugelaser.com/index.php?ind=reviews&amp;op=entry_view&amp;iden=370#cal" name="CalForm" method="post">
-				    <table width="100%" align="center" border="0" cellspacing="1" cellpadding="0">
-				      <tr>
-					<td class="tdglobal" style="text-align:center;" align="center" colspan="7">
-					  <input type="hidden" name="old_y" value="2012" />
-					  <input type="hidden" name="old_y" value="2" />
-					  <select name="m_m" class="bgselect" onchange="document.CalForm.submit();">
-					  
-					  <option value="1"  >Jan</option>
-
-					  <option value="2" selected="selected" >Feb</option>
-
-					  <option value="3"  >Mar</option>
-
-					  <option value="4"  >Apr</option>
-
-					  <option value="5"  >May</option>
-
-					  <option value="6"  >Jun</option>
-
-					  <option value="7"  >Jul</option>
-
-					  <option value="8"  >Aug</option>
-
-					  <option value="9"  >Sep</option>
-
-					  <option value="10"  >Oct</option>
-
-					  <option value="11"  >Nov</option>
-
-					  <option value="12"  >Dec</option>
-
-					  </select>
-					  <select name="y_y" class="bgselect" onchange="document.CalForm.submit();">
-					  
-					  <option value="2009"  >2009</option>
-
-					  <option value="2010"  >2010</option>
-
-					  <option value="2011"  >2011</option>
-
-					  <option value="2012" selected="selected" >2012</option>
-
-					  <option value="2013"  >2013</option>
-
-					  <option value="2014"  >2014</option>
-
-					  <option value="2015"  >2015</option>
-
-					  </select>
-					</td>
-				      </tr>      
-			      
-				      
-				      <tr>
-					<th class="modulex" style="height: 18px; padding: 0px; margin: 0px; border: 0px; font-size: 10px; width: 14%" align="center" valign="middle">Su</th>
-					   
-					<th class="modulex" style="height: 18px; padding: 0px; margin: 0px; border: 0px; font-size: 10px; width: 14%" align="center" valign="middle">Mo</th>
-					   
-					<th class="modulex" style="height: 18px; padding: 0px; margin: 0px; border: 0px; font-size: 10px; width: 14%" align="center" valign="middle">Tu</th>
-					   
-					<th class="modulex" style="height: 18px; padding: 0px; margin: 0px; border: 0px; font-size: 10px; width: 14%" align="center" valign="middle">We</th>
-					   
-					<th class="modulex" style="height: 18px; padding: 0px; margin: 0px; border: 0px; font-size: 10px; width: 14%" align="center" valign="middle">Th</th>
-					   
-					<th class="modulex" style="height: 18px; padding: 0px; margin: 0px; border: 0px; font-size: 10px; width: 14%" align="center" valign="middle">Fr</th>
-					   
-					<th class="modulex" style="height: 18px; padding: 0px; margin: 0px; border: 0px; font-size: 10px; width: 14%" align="center" valign="middle">Sa</th>
-					   				      
-				      
-				      </tr>
-				      <tr>
-				
-					<td class="tdblock" style="height:10px; width:4px; padding: 0px; margin: 0px; border: 0px;"><br /></td>
-					
-					<td class="tdblock" style="height:10px; width:4px; padding: 0px; margin: 0px; border: 0px;"><br /></td>
-					
-					<td class="tdblock" style="height:10px; width:4px; padding: 0px; margin: 0px; border: 0px;"><br /></td>
-					
-				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">1</td>
-				
-				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">2</td>
-				
-				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">3</td>
-				
-				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">4</td>
-				
-				      </tr>
-				      <tr>
-				
-				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">5</td>
-				
-				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">6</td>
-				
-				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">7</td>
-				
-				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">8</td>
-				
-				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">9</td>
-				
-				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">10</td>
-				
-				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">11</td>
-				
-				      </tr>
-				      <tr>
-				
-				      <td class="tdblock" id="mkcaltoday" style="font-size: 10px; height:10px" valign="middle" align="center"><b>12</b></td>
-				
-				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">13</td>
-				
-				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">14</td>
-				
-				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">15</td>
-				
-				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">16</td>
-				
-				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">17</td>
-				
-				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">18</td>
-				
-				      </tr>
-				      <tr>
-				
-				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">19</td>
-				
-				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">20</td>
-				
-				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">21</td>
-				
-				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">22</td>
-				
-				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">23</td>
-				
-				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">24</td>
-				
-				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">25</td>
-				
-				      </tr>
-				      <tr>
-				
-				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">26</td>
-				
-				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">27</td>
-				
-				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">28</td>
-				
-				      <td class="modulecell" style="font-size: 10px; height:10px" valign="middle" align="center">29</td>
-				
-					<td class="tdblock" style="height:10px; width:4px; padding: 0px; margin: 0px; border: 0px;"><br /></td>
-					
-					<td class="tdblock" style="height:10px; width:4px; padding: 0px; margin: 0px; border: 0px;"><br /></td>
-					
-					<td class="tdblock" style="height:10px; width:4px; padding: 0px; margin: 0px; border: 0px;"><br /></td>
-									      
-				      
-				    </tr>
-				    <tr>
-				      <td class="trattini3" style="font-size: 1px; background: transparent;" colspan="7">&nbsp;</td>
-				    </tr>
-				    
-				    <tr>
-				      <td class="tdglobal" colspan="7">
-				      Today's Birthdays:
-				      </td>
-				    </tr>
-				    <tr>
-				      <td class="modulecell" style="font-size: 10px; font-weight: normal;" colspan="7">
-					<a href="./forum/memberlist.php?mode=viewprofile&amp;u=37120">greymurphy42</a> (34)&nbsp;
-				      </td>
-				    </tr>
-							      
-				      							
-				    </table>
-				    </form>
-
-				  </td>
-				</tr>
-
-	         	      </table>
-	  		    </td>
-			  </tr>
-			</table>
-		      </td>
-		    </tr>
-		    <tr>
-		      <td class="tdspacer">&nbsp;</td>
-		    </tr>
-
-<!-- end block template -->
-  
-<!-- begin block template -->
-
-		    <tr>
-		      <td class="tablemenu" valign="top">
-			<table border="0" width="100%" cellpadding="0" cellspacing="0">
-   			  <tr>
-         		    <td>
-          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
-          			<tr>
-				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Random Image</td>
-         			</tr>
-         		      </table>
-         		    </td>
-			  </tr>
-			  <tr>
-         		    <td width="100%">
-		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
-		 	      
-				<tr>
-				  <td align="center"><img style="cursor: url(./mkportal/templates/Forum/images/mkajax/zoomin.cur), pointer;" src="http://phrozenkeep.hugelaser.com/mkportal/modules/gallery/album/t_a_86.jpg" border="0" alt="Click to enlarge" onclick="ajax_showPop('./index.php?ind=ajax&amp;act=showgal&amp;idp=86', 1);return false" />
-				  </td>
-				</tr>
-				<tr>
-				  <td class="tdblock" align="center"><a class="uno" href="http://phrozenkeep.hugelaser.com/index.php?ind=gallery&amp;op=foto_show&amp;ida=86">D2 Screenshot 058</a><br />
-				  </td>
-				</tr>
-			
-	         	      </table>
-	  		    </td>
-			  </tr>
-			</table>
-		      </td>
-		    </tr>
-		    <tr>
-		      <td class="tdspacer">&nbsp;</td>
-		    </tr>
-
-<!-- end block template -->
-  
-<!-- begin block template -->
-
-		    <tr>
-		      <td class="tablemenu" valign="top">
-			<table border="0" width="100%" cellpadding="0" cellspacing="0">
-   			  <tr>
-         		    <td>
-          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
-          			<tr>
-				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Phrozen Keep Poll</td>
-         			</tr>
-         		      </table>
-         		    </td>
-			  </tr>
-			  <tr>
-         		    <td width="100%">
-		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
-		 	      
-				<tr>
-				  <td class="tdblock">
-				  <a href="./forum/viewtopic.php?t=55546&amp;view=viewpoll">Which type of Diablo 2 mod do you like best?</a><br /><br />
-				  </td>
-				</tr>
-            
-				<tr>
-				  <td class="tdblock3">
-				  Total Conversion
-				  </td>
-				</tr>
-				<tr>
-				  <td align="left">
-					<div align="left" style="width: 130px; ">
-				  		<img src="./mkportal/templates/Forum/images/bar-start.gif" width="4" height="11" alt="" /><img src="./mkportal/templates/Forum/images/bar.gif" width="68" height="11" alt="" /><img src="./mkportal/templates/Forum/images/bar-end.gif" width="4" height="11" alt="" />
-					</div>56.28%<br /><br />
-		  		</td>
-				</tr>
-
-                
-				<tr>
-				  <td class="tdblock3">
-				  Balance Mod
-				  </td>
-				</tr>
-				<tr>
-				  <td align="left">
-					<div align="left" style="width: 130px; ">
-				  		<img src="./mkportal/templates/Forum/images/bar-start.gif" width="4" height="11" alt="" /><img src="./mkportal/templates/Forum/images/bar.gif" width="18" height="11" alt="" /><img src="./mkportal/templates/Forum/images/bar-end.gif" width="4" height="11" alt="" />
-					</div>15.30%<br /><br />
-		  		</td>
-				</tr>
-
-                
-				<tr>
-				  <td class="tdblock3">
-				  New Features Added
-				  </td>
-				</tr>
-				<tr>
-				  <td align="left">
-					<div align="left" style="width: 130px; ">
-				  		<img src="./mkportal/templates/Forum/images/bar-start.gif" width="4" height="11" alt="" /><img src="./mkportal/templates/Forum/images/bar.gif" width="31" height="11" alt="" /><img src="./mkportal/templates/Forum/images/bar-end.gif" width="4" height="11" alt="" />
-					</div>26.23%<br /><br />
-		  		</td>
-				</tr>
-
-                
-				<tr>
-				  <td class="tdblock3">
-				  Drop Mod
-				  </td>
-				</tr>
-				<tr>
-				  <td align="left">
-					<div align="left" style="width: 130px; ">
-				  		<img src="./mkportal/templates/Forum/images/bar-start.gif" width="4" height="11" alt="" /><img src="./mkportal/templates/Forum/images/bar.gif" width="2" height="11" alt="" /><img src="./mkportal/templates/Forum/images/bar-end.gif" width="4" height="11" alt="" />
-					</div>2.19%<br /><br />
-		  		</td>
-				</tr>
-
-                
-				<tr>
-				  <td class="tdblock">
-				  <span class="mktxtcontr">183</span> Total Voters
-				  </td>
-				</tr>
-				<tr>
-				  <td class="tdglobal">
-				  <a href="./forum/viewtopic.php?t=55546&amp;view=viewpoll">View poll...</a>
-				  </td>
-				</tr>
-            
-	         	      </table>
-	  		    </td>
-			  </tr>
-			</table>
-		      </td>
-		    </tr>
-		    <tr>
-		      <td class="tdspacer">&nbsp;</td>
-		    </tr>
-
-<!-- end block template -->
-  
-<!-- begin block template -->
-
-		    <tr>
-		      <td class="tablemenu" valign="top">
-			<table border="0" width="100%" cellpadding="0" cellspacing="0">
-   			  <tr>
-         		    <td>
-          		      <table border="0" cellpadding="4" cellspacing="0" width="100%">
-          			<tr>
-				  <td width="100%" class="sottotitolo" valign="middle" nowrap="nowrap">Random Quote</td>
-         			</tr>
-         		      </table>
-         		    </td>
-			  </tr>
-			  <tr>
-         		    <td width="100%">
-		 	      <table border="0" width="100%" cellpadding="0" cellspacing="1">
-		 	      			
-				<tr>
-				</tr>
-				<tr>
-				  <td class="tdglobal">
-				  <i><b>The only time to buy these is on a day with no 'y' in it.</b></i><br />(<b>Warren Buffett</b>)
-				  </td>
-				</tr>			
-				
-	         	      </table>
-	  		    </td>
-			  </tr>
-			</table>
-		      </td>
-		    </tr>
-		    <tr>
-		      <td class="tdspacer">&nbsp;</td>
-		    </tr>
-
-<!-- end block template -->
-  
-		  </table>
-		</div>
-		<div id="menuclosedr" style="display:none">
-		<div class="mkalign1"><a href="javascript:ColumnOpen('menudx');MemoPos('MKmenudx', '0')"><img src="./mkportal/templates/Forum/images/f2.gif" border="0" alt="" /></a></div>
-		</div>
-		</td>
-		
-<!-- end right column -->
-
-<!-- begin close portal body -->
-
-	      </tr>
-	    </table>
-	  </td>
-	</tr>
-	
-<!-- end close portal body -->
-
-<!-- begin close main table -->
-
-      </table>
-
-    </td>
-  </tr>
-</table>
+	</div>
 </div>
 
-<!-- end close main table -->
+	<a id="start_here" class="anchor"></a>
+	<div id="page-body" class="page-body" role="main">
+		
+			<div class="sm-block-spacing"></div>
 
-<!-- begin footer -->
-<!-- you can add your credits here  -->
+	
+	<div class="sitemaker">
+		
+		<div class="holygrail">
+			<div class=" sm-responsive-full-width middle">
+				
+				<div class="holygrail">
+					<div class=" sm-responsive-full-width middle">
+						
+						<div class="sm-block-spacing">
 
-<!-- end footer -->
-  <p align="center"><span class="mkcopyright" style="font-size: 10px">Powered by <a style="font-size: 10px" href="http://www.mkportal.it/" target="_blank">MKPortal</a> &copy;2003-2008 <a style="font-size: 10px" href="http://www.mkportal.it/" target="_blank">mkportal.it</a></span></p>
+<h2 class="article-title"><a href="/forum/kb/viewarticle?a=370">SkillDesc.txt File Guide (v. 2)</a></h2>
+
+	<div id="p370" class="post bg1">
+		<div class="inner">
+
+		<div class="article-body">
+		<div class="postbody">
+			<div id="post_content370">
+
+									
+		<h2 class="article-title"><a href="/forum/kb/viewarticle?a=370">SkillDesc.txt File Guide (v. 2)</a></h2>
+		<p class="article-meta"><strong>Written by:</strong> <a href="./../memberlist.php?mode=viewprofile&amp;u=575" style="color: #FFCC00;" class="username-coloured">Nefarius</a><br />
+		<strong>Written on:</strong> Fri Nov 18, 2005 2:52 am<br />
+		<strong>Last modified:</strong> Tue Sep 17, 2019 9:47 pm<br />		<strong>Views:</strong> 18428</p>
+		<p class="article-description"><strong>Description:</strong> by Ric Faith, restyled by HarvestWombs</p>
+		<p class="article-categories"><strong>Categories:</strong> <a href="/forum/kb/index?c=4">File Guides (1.10 - 1.14)</a></p>
+
+			<div class="content">
+
+
+			<hr />
+			<strong class="text-strong"><em class="text-italics"><span style="color:#80FFBF"><span style="font-size: 150%; line-height: normal">SkillDesc.txt File Guide </span></span></em></strong><br>
+ &amp; descline reference by RicFaith <br>
+ <br>
+<strong class="text-strong"><em class="text-italics"><span style="color:#80FFBF"> Overview: </span></em></strong><br>
+Skilldesc is an important part of the skill making process. It gives the modder the ability to fully customize the skill descriptions of his skills. It is also important for the placement and arrangement of skills on the skilltrees. <br>
+ <br>
+Files used by SkillDesc: <br>
+<a href="https://d2mods.info/forum/kb/viewarticle?a=364" class="postlink">Missiles.txt</a> <br>
+<a href="https://d2mods.info/forum/kb/viewarticle?a=360" class="postlink">MonStats.txt</a> <br>
+<a href="https://d2mods.info/forum/kb/viewarticle?a=440" class="postlink">Skills.txt</a><br>
+ <br>
+String.tbl <br>
+Expansionstring.tbl <br>
+Patchstring.tbl  <br>
+ <br>
+Note: <br>
+Patchstring &gt; Expansionstring &gt; String <br>
+This means that any entry in Patchstring will overwrite the an entry of the same index in Expansionstring or String, and any entry in Expansionstring will overwrite another entry sharing the same name in String. Thus to find the most recent string, you should check in the order stated above. <br>
+ <br>
+Naming convention: <br>
+So as to make certain things clearer, and to simplify this File Guide, here are some naming conventions that I will use while describing: <br>
+ <br>
+string(s) - refers to an entry in any of the .tbl files <br>
+tree(s) or page(s) - the skill trees available to the character   <br>
+shortcut(s) - the list of skills that show up when you press 'S' <br>
+charscreen - character screen, shows up when you press 'C' <br>
+selected skill - one of the two active skills that are set to your mouse buttons <br>
+ <br>
+-------------------- <br>
+ <br>
+<strong class="text-strong"><span style="color:#FFBF00">skilldesc:</span></strong> Name of the skill description, referenced by skills.txt (col D). <br>
+ <br>
+ -------------------- <br>
+ <br>
+<strong class="text-strong"><span style="color:#FFBF00">SkillPage:</span></strong> (Allowed values = 0 - 3) Determines which page the skill will show up.
+<div class="codebox"><p>CODE: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>0 - not on trees 
+1 - bottom page 
+2 - middle page 
+3 - top page 
+ </code></pre></div>
+ <br>
+<strong class="text-strong"><span style="color:#FFBF00">SkillRow:</span></strong> (Allowed values = 0 - 6) Determines which row the skill will show up.
+<div class="codebox"><p>CODE: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>0 - not on page 
+1 - top row 
+6 - bottom row 
+</code></pre></div>
+ <br>
+<strong class="text-strong"><span style="color:#FFBF00">SkillColumn:</span></strong> (Allowed values = 0 - 3) Determines which column the skill will show up. 
+<div class="codebox"><p>CODE: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>0 - not on page 
+1 - left column 
+2 - middle column 
+3 - right column  
+ </code></pre></div>
+ <br>
+<strong class="text-strong"><span style="color:#FFBF00">ListRow:</span></strong> (Allowed Values = -1 - 4) Determines which row the skill will show up in the shortcuts
+<div class="codebox"><p>CODE: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>-1 &amp; every other value - skill will not shot up  
+0 - reserved for basic attacks and unsummon  
+1-3 - for skills, from bottom up, usually the same value as SkillPage, but not necessarily 
+4 - reserved for Identify and Town Portal 
+</code></pre></div>
+ <br>
+<strong class="text-strong"><span style="color:#FFBF00">ListPool:</span></strong> (Allowed Values = 0 - 2) Used only by Identify and Town Portal scrolls.  
+<div class="codebox"><p>CODE: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>0 - Everything else 
+1 - scroll of identify 
+2 - scroll of town portal 
+</code></pre></div>
+ <br>
+<strong class="text-strong"><span style="color:#FFBF00">IconCel:</span></strong> (Allowed Values = 0 - X) (user defined, read below)<br>
+Used to determine the icons (usable and unusable) used by the skill. Value that is put here determines the usable icon, and the next icon will be the unusable icon.<br>
+Icons always come in pairs, so if you're making your own skill icons, do put them in the right order. <br>
+ <br>
+If skill is a class skill, icons will be taken from : <br>
+<span style="color:#BF4040">dataglobaluispellsXXskillicon.dc6</span> where XX is - 
+<div class="codebox"><p>CODE: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>XX	Class 
+am	Amazon 
+as	Assassin 
+ba	Barbarian 
+dr	Druid 
+ne	Necromancer 
+pa	Paladin 
+so	Sorceress 
+</code></pre></div>
+ <br>
+If skill is not a class skill, icons will be taken from : <br>
+<span style="color:#BF4040">dataglobaluispellsskillicon.dc6 </span><br>
+ <br>
+<strong class="text-strong"><span style="color:#FFBF00">str name:</span></strong> This is the string that is used as the skill name in the trees, the shortcuts and the selected skill. <br>
+<br>
+<strong class="text-strong"><span style="color:#FFBF00">str short:</span></strong> This is the string that is used as the skill description in the shortcuts and the selected skill. <br>
+<br>
+<strong class="text-strong"><span style="color:#FFBF00">str long:</span></strong> This is the string that is used as the skill description in the trees. <br>
+<br>
+<strong class="text-strong"><span style="color:#FFBF00">str alt:</span></strong> This is the string that is used as the skill name in the charscreen. <br>
+<br>
+<strong class="text-strong"><span style="color:#FFBF00">str mana:</span></strong> Usual values = StrSkill3 or (blank)  <br>
+Even if your skill has no mana cost, putting a string here will not display a 0 mana cost. You can use StrSkill3 ('Mana Cost: ') or your own fancy string for mana cost.<br>
+<em class="text-italics"><span style="color:#80FFBF">Eg. Raven has its own mana cost string ('Mana Cost Per Raven') </span></em><br>
+<br>
+<strong class="text-strong"><span style="color:#FFBF00">descdam:</span></strong> Allowed values = 1 - 24 or (blank)  <br>
+If your skill deals damage, then you need to use this to tell skilldesc how to go about calculating the damage. Here is a list of the various values for descdam. 
+<div class="codebox"><p>CODE: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>descdam   description  
+1   attack 
+2   kick 
+3   throw 
+4   left hand throw 
+5   check dmg cols 
+6   arrow with explode 
+7   attacks w dmg increases 
+8   inferno type dmg 
+9   blaze,firestorm  
+10   smite 
+11   vengeance  
+12   blessed hammer 
+13   double throw 
+14   hunger 
+15   kick combo  
+16   kick AoE 
+17   cstrike 
+18   royal strike  
+19   2h attacks 
+20   assn chargeups 
+21   lightbolt 
+22   javelin with explode 
+23   rabies 
+24   blade fury 
+</code></pre></div>
+Some skills have their own special descdam, so you should check the most relevant skill to yours to see if it requires something different, otherwise it's almost always 5. <br>
+<br>
+<strong class="text-strong"><span style="color:#FFBF00">ddam calc1</span></strong> / <strong class="text-strong"><span style="color:#FFBF00">ddam calc2</span></strong> If your skill has an increase in damage, you'll need to fill in one or both of these columns. The resulting damage is given by this formula: <br>
+<em class="text-italics"><span style="color:#80FFBF">Damage = (Original Damage) * (100 + ddam calc1)/100 + ddam calc2</span></em> <br>
+Thus if your skill has a %age increase in damage, put the increase or calc in <strong class="text-strong"><span style="color:#FFBF00">ddam calc1</span></strong>. Or if your skill has a flat +X increase in damage, put the increase or calc in <strong class="text-strong"><span style="color:#FFBF00">ddam calc2</span></strong>. <br>
+<br>
+<strong class="text-strong"><span style="color:#FFBF00">pXdmelem</span></strong> / <strong class="text-strong"><span style="color:#FFBF00">pXdmmin</span></strong> / <strong class="text-strong"><span style="color:#FFBF00">pXdmmax</span></strong> where X = 1 - 3  <br>
+These are only used by the Assassin charge-up attacks. These columns describe the necessary details.  <br>
+<strong class="text-strong"><span style="color:#FFBF00">pXdmelem</span></strong> - The element type for that charge <br>
+<strong class="text-strong"><span style="color:#FFBF00">pXdmmin</span></strong> - Minimum damage for that charge <br>
+<strong class="text-strong"><span style="color:#FFBF00">pXdmmax</span></strong> - Maximum damage for that charge <br>
+<br>
+<strong class="text-strong"><span style="color:#FFBF00">descat:</span></strong> (Allowed values = 1 - 5 or (blank))<br>
+If your skill has an increase in attack rating, you will need to fill this column. I can't see any difference between 1 and 2, so I guess you should look at the skill that is closest to yours.
+<div class="codebox"><p>CODE: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>descatt  description
+1   increase in attack rating 
+2   increase in attack rating   
+3   throw 
+4   left hand throw 
+5   kick finishers 
+</code></pre></div>
+
+<strong class="text-strong"><span style="color:#FFBF00">descmissileX</span></strong> where X = 1 - 3 In the case where your damage, duration or other values are taken from missiles, you will need to put the primary missile in descmissile1.<br>
+Currently, it seems that the <strong class="text-strong"><span style="color:#FFBF00">descmissile2 </span></strong>and <strong class="text-strong"><span style="color:#FFBF00">descmissile3 </span></strong>are only used by assassin charge-ups, but I think you should be able to put other missiles here for description too. <br>
+<br>
+<span style="color:#FF8000">From here, the real stuff begins. Since it is highly repetive in nature, I will explain it differently. </span><br>
+ <br>
+There are 3 main sections for descriptions, <strong class="text-strong"><span style="color:#FFBF00">desc</span></strong>, <strong class="text-strong"><span style="color:#FFBF00">dsc2 </span></strong>and <strong class="text-strong"><span style="color:#FFBF00">dsc3</span></strong>. First a breakdown of where these descriptions show up. <br>
+ <br>
+<strong class="text-strong"><span style="color:#FFBF00">desc:</span></strong> Shows up in trees, shortcuts and selected skill. <br>
+<strong class="text-strong"><span style="color:#FFBF00">dsc2:</span></strong> Shows up in trees, shortcuts and selected skill. <br>
+<strong class="text-strong"><span style="color:#FFBF00">dsc3:</span></strong> Sshows up in trees only.   <br>
+ <br>
+<span style="color:#FF8000">Next, I'll describe what the different descriptions show. </span><br>
+ <br>
+Shortcuts and Selected skill - <strong class="text-strong"><span style="color:#FFBF00">desc</span></strong> and <strong class="text-strong"><span style="color:#FFBF00">dsc2</span></strong> show current level stats only. <br>
+ Trees - <br>
+<strong class="text-strong"><span style="color:#FFBF00">desc:</span></strong> Show current and next level stats <br>
+<strong class="text-strong"><span style="color:#FFBF00">dsc2:</span></strong> Show current stats <br>
+<strong class="text-strong"><span style="color:#FFBF00">dsc3:</span></strong> Show current stats (but is currently used for synergies) <br>
+For a more precise layout of the stats, see <span style="color:#00FF00">Appendix A</span> below. <br>
+<br>
+If you leave a set blank, they will simply be ignored. So you can fill any <br>
+sets of columns, the blank ones will be skipped. <br>
+ <br>
+Now, we will cover the different parts of a description. I will use just 1 set of columns for simplicity, the effect is the same for all columns. Each set of columns will have: <br>
+<strong class="text-strong"><span style="color:#FFBF00">descline</span></strong>, <strong class="text-strong"><span style="color:#FFBF00">desctexta</span></strong>, <strong class="text-strong"><span style="color:#FFBF00">desctextb</span></strong>, <strong class="text-strong"><span style="color:#FFBF00">desccalca</span></strong>, <strong class="text-strong"><span style="color:#FFBF00">desccalcb </span></strong><br>
+with various numbers appended to them. <br>
+<br>
+<strong class="text-strong"><span style="color:#FFBF00">descline:</span></strong> (Allowed values = 1 - 75 or (blank))<br>
+This tells skilldesc the format of the description, which values to take and which order to place them. Read further for an example. All desclines and their usage can be found in Appendix B. <br>
+<br>
+<strong class="text-strong"><span style="color:#FFBF00">desctexta </span></strong>/ <strong class="text-strong"><span style="color:#FFBF00">desctextb:</span></strong> These are strings that may be filled or left blank.<br>
+Some desclines are not picky about whether these are filled, but since there are so many desclines, you can find something that matches your needs quite closely. <br>
+<br>
+<strong class="text-strong"><span style="color:#FFBF00">desccalca</span></strong> / <strong class="text-strong"><span style="color:#FFBF00">desccalcb:</span></strong> These are numbers or calcs that may be filled or left blank.<br>
+Similar to <strong class="text-strong"><span style="color:#FFBF00">desctexts</span></strong>, <strong class="text-strong"><span style="color:#FFBF00">desccalcs</span></strong> may be treated as empty or 0 if not present, so if you don't need the extra space, choose a suitable descline. <br>
+ <br>
+-------------------- <br>
+ <br>
+In Appendix B, I used the following notation: <br>
+S1 &amp; S2 refer to desctexta and desctextb respectively. S for String because that is what these two columns are.   <br>
+C1 &amp; C2 refer to desccalca and desccalcb respectively. C for Calc <br>
+I used S1,S2,C1,C2 because these are immediately identifiable. Most of the desclines come with fixed text. You can change the 'fixed' part in the .tbl files, but you'll be changing them for all skills that use that descline. Anyway there are so many workarounds that you really don't have to change it, just use another descline. <br>
+ <br>
+<em class="text-italics"><span style="color:#80FFBF">Example 1: </span></em> <br>
+I'll use descline 3 as an example. <br>
+Descline 3 gives the following output: S1C1S2 <br>
+This means that if my input is <br>
+S1 = 'Good'  <br>
+S2 = 'Nothing'  <br>
+C1 = 4 <br>
+C2 = 365 <br>
+The result will be 'Good4Nothing'. There are no spaces, because the output merely concatenates everything. C2 is ignored because it is not included in the output. <br>
+If S1 was blank, the output is '4Nothing' <br>
+If S2 was blank, the output is 'Good4' <br>
+If C1 was blank, the output is 'GoodNothing' <br>
+ <br>
+I'm sure that is quite clear, now on to some of the more complex desclines <br>
+ <br>
+<em class="text-italics"><span style="color:#80FFBF">Example 2: </span></em><br>
+Some desclines don't use string or calcs, so I'll show a nice one for poison skills. <br>
+Descline 14 has the following output: <br>
+Poison Damage: X-Y <br>
+over Z seconds <br>
+ <br>
+Yes, some desclines produce more than one line, but they're usually a little hardcoded. This descline reads the values of EMin, EMax and ELen from skills.txt and does some math before displaying the values. <br>
+ <br>
+For this example, I'll use Poison Nova Lvl 1 <br>
+From skills.txt: <br>
+HitShift = 4 <br>
+EMin = 14 <br>
+EMax = 25 <br>
+ELen = 50 <br>
+ <br>
+First, some things you have to know about the values in Len, this value is in frames, and Diablo has 25 frames to a second. Thus Poison Nova does damage for 2 seconds. <br>
+ <br>
+Next, for HitShift, this is because Blizzard uses 8 bits of accuracy for HitPoints, Mana and Stamina. HitShift for Poison Nova is 4, so the damage is 'divided' by 2^4 = 16. <br>
+ <br>
+Anyway, back to the descline and the formula. <br>
+The output has X,Y and Z, this is because even these values are not raw values. Here's how we calculate them: <br>
+X = EMin*ELen/16 = 43  <br>
+Y = EMax*ELen/16 = 78  <br>
+Z = ELen/25 = 2 <br>
+ <br>
+Last thing to note, Blizzard rounds everything down to the integer. So 3/4 = 0, 41/40 = 79/40 = 1. <br>
+ <br>
+In the end, we get the final output: <br>
+Poison Damage: 43-78 <br>
+over 2 seconds <br>
+ <br>
+-------------------- <br>
+ <br>
+<span style="color:#FF8000">Conclusion: </span><br>
+Skilldesc can get a bit tricky, and sometimes some things just don't work so well. My advice is that even though some of the desclines may look perfect for your skill description, if they don't work, try using some of the more common ones. Some of the desclines are not used in skilldesc, I found them by trying every number. Some are only used by one skill, so I classed it as being specific, though they may still be able to work, don't get too worked up when it doesn't. In my opinion, you can do a lot with just the basic few. You can do your own calcs and display a raw number instead of leaving it to the hardcoded desclines. But it's up to the individual modder  <br>
+ <br>
+---------------------------------------- <br>
+ <br>
+<span style="color:#00FF00">Appendix A:</span> Layout of Skill Description on the Tree. <br>
+ <br>
+----- <br>
+str name<br>
+str long <br>
+ <br>
+(all dsc2 lines)  <br>
+ <br>
+Current Level: X <br>
+(all desc lines) <br>
+ <br>
+Next Level: X+1 <br>
+(all desc lines) <br>
+ <br>
+(all dsc3 lines) <br>
+----- <br>
+ <br>
+As mentioned earlier, synergies are using dsc3 lines, so they'll be shown right at the bottom. If you want some stats that only show for current level, use dsc2. If you want stats that show for current and next levels, use desc. <br>
+ <br>
+---------------------------------------- <br>
+ <br>
+<span style="color:#00BF00">Appendix B:</span> List of desclines <br>
+ <br>
+This list is a bit long (75 entries), so I put it in a code. I'm thinking of making an excel page that allows you to put values in to see the result, but there may or may not be a need for it. I'll see how it goes. If you think that it'd be good, PM me so I know there's a demand. <br>
+ <br>
+Explanations: <br>
+descline = descline number <br>
+formula used = result from the inputs <br>
+calc/desc = in the event that the numbers are not directly related to inputs S1,S2,C1,C2, I explained it here<br>
+elem = if this descline refers to a specific elem, because of the calc method or if it can take any elem based on the EType in skills.txt, then I'll state it here <br>
+reference = the files it references, such as skills.txt, missiles.txt etc.<br>
+ <br>
+<iframe data-s9e-mediaembed="googlesheets" allowfullscreen="" scrolling="no" src="https://docs.google.com/spreadsheets/d/1JrMKz_q-DjkPxYmrnn95oKF2HLi8bEMkRHj1SIxy85I/pubhtml?widget=true&amp;headers=false#gid=" style="border:0;height:500px;resize:vertical;width:100%"></iframe><br>
+<br>
+<span style="color:#008000">Appendix C:</span> Color Codes <br>
+ <br>
+The values that you can put in the C1 column for skilldesc 40 and a couple of others can be found here: 
+<div class="codebox"><p>CODE: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>0 - Light Gray (normal text)
+1 - Red  
+2 - Bright Green (Set Items)  
+3 - Blue (Magic Items)  
+4 - Gold (Unique Items)  
+5 - Dark Gray (Socketed/Ethereal Items)   
+6 - Transparent (Text Doesn't Show)  
+7 - Tan  
+8 - Orange (Crafted Items)  
+9 - Yellow (Rare Items)
+</code></pre></div>
+			<div class="codebox">
+				<p>Link to this article: <a href="#" onclick="selectCode(this); return false;">Select all</a></p>
+				<code>[url=https://d2mods.info/forum/kb/viewarticle?a=370]Knowledge Base - SkillDesc.txt File Guide (v. 2)[/url]</code>
+			</div>
+			</div>
+
+			</div>
+
+		</div>
+		</div>
+
+		</div>
+	</div>
+
+			
+							<div class="clear"></div>
+						</div>
+						
+											</div>
+										<div id="pos-subcontent" class="block-position grid__col grid__col--1-of-4 sidebar right">
+												<div id="block-82" class="block">
+							<div class="forabg sm-block-container bg1 sm-block-spacing"8>
+	<div class="inner">
+				<ul class="topiclist">
+			<li class="header">
+				<dl class="row-item">
+					<dt>
+						<span class="block-icon"><i class="" aria-hidden="true"></i></span>
+						<span class="block-title">Login</span>
+					</dt>
+					<dd></dd>
+				</dl>
+			</li>
+		</ul>
+				<ul class="forums sm-block-content inner-spacing">
+			<li><form action="./../ucp.php?mode=login" method="post">
+
+    <div class="align-center">
+	    <p>
+	    	<span class="genmed">Username:</span><br /><input type="text" name="username" class="inputbox" tabindex="1" /><br />
+			<span class="genmed">Password:</span><br /><input type="password" name="password" class="inputbox" tabindex="2" />
+		</p>
+		<p><a href="./../ucp.php?mode=sendpassword">I forgot my password</a></p>
+		<p>
+				    <input type="checkbox" class="radio" name="autologin" tabindex="3" /> <span class="gensmall">Remember me</span><br />
+							<input type="checkbox" class="radio" name="viewonline" tabindex="4" /> <span class="gensmall">Hide Me</span><br />
+				</p>
+
+	    <fieldset class="submit-buttons">
+	        <input type="hidden" name="redirect" value="kb/viewarticle?a=370" />
+	        <input type="submit" name="login" value="Login" class="button1" tabindex="5" />
+	    </fieldset>
+    </div>
+</form>
+
+<a class="right-box" href="./../ucp.php?mode=register">Register</a></li>
+		</ul>
+	</div>
+</div>
+							
+						</div>
+												<div id="block-86" class="block">
+							<div class="forabg sm-block-container bg1 sm-block-spacing"8>
+	<div class="inner">
+				<ul class="topiclist">
+			<li class="header">
+				<dl class="row-item">
+					<dt>
+						<span class="block-icon"><i class="" aria-hidden="true"></i></span>
+						<span class="block-title">Who is online</span>
+					</dt>
+					<dd></dd>
+				</dl>
+			</li>
+		</ul>
+				<ul class="forums sm-block-content inner-spacing">
+			<li><span>In total there are <strong>32</strong> users online :: 6 registered, 0 hidden and 26 guests</span><br /><br />
+<span>Most users ever online was <strong>1797</strong> on Tue Nov 25, 2008 1:27 pm<br /> <br />Registered users: <a href="./../memberlist.php?mode=viewprofile&amp;u=29478" style="color: #00CCCC;" class="username-coloured">alex131</a>, <span style="color: #9E8DA7;" class="username-coloured">AppleWebKi</span>, <span style="color: #9E8DA7;" class="username-coloured">bingbot</span>, <span style="color: #9E8DA7;" class="username-coloured">DotBot</span>, <span style="color: #9E8DA7;" class="username-coloured">Googlebot</span>, <a href="./../memberlist.php?mode=viewprofile&amp;u=39881" style="color: #00CCCC;" class="username-coloured">Mnw1995</a></span>
+</li>
+		</ul>
+	</div>
+</div>
+							
+						</div>
+												<div id="block-87" class="block">
+							<div class="forabg sm-block-container bg1 sm-block-spacing"8>
+	<div class="inner">
+				<ul class="topiclist">
+			<li class="header">
+				<dl class="row-item">
+					<dt>
+						<span class="block-icon"><i class="" aria-hidden="true"></i></span>
+						<span class="block-title">New and updated files</span>
+					</dt>
+					<dd></dd>
+				</dl>
+			</li>
+		</ul>
+				<ul class="forums sm-block-content inner-spacing">
+			<li>	<ul class="sm-list">
+					<li>
+								<a href="./../viewtopic.php?f=187&amp;t=65806&amp;p=496376#p496376" title="Go to last post">
+				<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Go to last post</span>
+			</a>
+								<a href="./../viewtopic.php?f=187&amp;t=65806" title="">D2ColorBeams v1.0</a>
+		</li>
+				<li>
+								<a href="./../viewtopic.php?f=187&amp;t=65161&amp;p=493708#p493708" title="Go to last post">
+				<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Go to last post</span>
+			</a>
+								<a href="./../viewtopic.php?f=187&amp;t=65161" title="">D2SE D2Scrabble Forgot...</a>
+		</li>
+				<li>
+								<a href="./../viewtopic.php?f=187&amp;t=64198&amp;p=493705#p493705" title="Go to last post">
+				<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Go to last post</span>
+			</a>
+								<a href="./../viewtopic.php?f=187&amp;t=64198" title="">[UPD] D2SE Zy-El v4.4c...</a>
+		</li>
+				<li>
+								<a href="./../viewtopic.php?f=187&amp;t=65184&amp;p=493649#p493649" title="Go to last post">
+				<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Go to last post</span>
+			</a>
+								<a href="./../viewtopic.php?f=187&amp;t=65184" title="">d2txtanalyzer updated ...</a>
+		</li>
+				<li>
+								<a href="./../viewtopic.php?f=187&amp;t=65178&amp;p=493648#p493648" title="Go to last post">
+				<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Go to last post</span>
+			</a>
+								<a href="./../viewtopic.php?f=187&amp;t=65178" title="">Skill Icon Pack by cla...</a>
+		</li>
+				</ul>
+</li>
+		</ul>
+	</div>
+</div>
+							
+						</div>
+												<div id="block-185" class="block">
+							<div class="panel post sm-block-container bg1 sm-block-spacing"8>
+	<div class="inner">
+				<h2>
+			<span class="block-icon"><i class="" aria-hidden="true"></i></span>
+			<span class="block-title">Recent Forum Topics</span>
+		</h2>
+				<div class="sm-block-content">
+				<ul class="sm-list">
+					<li>
+			<div class="postbody">
+				<div class="sm-fill-space">
+					<ul class="topiclist"><li class="header"><p class="topic-title"><a href="./../viewtopic.php?f=8&amp;t=67177">[1.13c]Function issue ...</a></p></li></ul>
+					<div class="author">
+																	<a href="./../viewtopic.php?f=8&amp;t=67177&amp;p=501556#p501556" title="Go to last post">
+							<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Go to last post</span>
+						</a>
+																							by <a href="./../memberlist.php?mode=viewprofile&amp;u=46615" style="color: #00CCCC;" class="username-coloured">qwertyue</a> on Sun May 30, 2021 11:46 am in <a href="./../viewforum.php?f=8">Code Editing</a>
+					</div>
+				</div>
+				<br />
+				<p class="gen"></p>
+<p class="topic-title"><a href="./../viewtopic.php?f=8&amp;t=67177">Read more..</a></p>
+<br /><br />
+			</div>
+		</li>
+				<li>
+			<div class="postbody">
+				<div class="sm-fill-space">
+					<ul class="topiclist"><li class="header"><p class="topic-title"><a href="./../viewtopic.php?f=4&amp;t=67176">What is &quot;doactive&quot;?</a></p></li></ul>
+					<div class="author">
+																	<a href="./../viewtopic.php?f=4&amp;t=67176&amp;p=501550#p501550" title="Go to last post">
+							<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Go to last post</span>
+						</a>
+																							by <a href="./../memberlist.php?mode=viewprofile&amp;u=43964" style="color: #00CCCC;" class="username-coloured">Cypress</a> on Fri May 28, 2021 5:17 pm in <a href="./../viewforum.php?f=4">General Mod Making</a>
+					</div>
+				</div>
+				<br />
+				<p class="gen"></p>
+<p class="topic-title"><a href="./../viewtopic.php?f=4&amp;t=67176">Read more..</a></p>
+<br /><br />
+			</div>
+		</li>
+				<li>
+			<div class="postbody">
+				<div class="sm-fill-space">
+					<ul class="topiclist"><li class="header"><p class="topic-title"><a href="./../viewtopic.php?f=8&amp;t=9011">Save file structure</a></p></li></ul>
+					<div class="author">
+																	<a href="./../viewtopic.php?f=8&amp;t=9011&amp;p=501549#p501549" title="Go to last post">
+							<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Go to last post</span>
+						</a>
+																	<i class="icon fa-paperclip fa-fw" aria-hidden="true"></i>						by <a href="./../memberlist.php?mode=viewprofile&amp;u=37948" style="color: #00CCCC;" class="username-coloured">kambala</a> on Fri May 28, 2021 10:24 am in <a href="./../viewforum.php?f=8">Code Editing</a>
+					</div>
+				</div>
+				<br />
+				<p class="gen"></p>
+<p class="topic-title"><a href="./../viewtopic.php?f=8&amp;t=9011">Read more..</a></p>
+<br /><br />
+			</div>
+		</li>
+				<li>
+			<div class="postbody">
+				<div class="sm-fill-space">
+					<ul class="topiclist"><li class="header"><p class="topic-title"><a href="./../viewtopic.php?f=5&amp;t=65492">BaseMod Plugin</a></p></li></ul>
+					<div class="author">
+																	<a href="./../viewtopic.php?f=5&amp;t=65492&amp;p=501548#p501548" title="Go to last post">
+							<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Go to last post</span>
+						</a>
+																	<i class="icon fa-paperclip fa-fw" aria-hidden="true"></i>						by <a href="./../memberlist.php?mode=viewprofile&amp;u=43816" style="color: #00CCCC;" class="username-coloured">Lywzc</a> on Fri May 28, 2021 8:38 am in <a href="./../viewforum.php?f=5">Member Аnnouncements</a>
+					</div>
+				</div>
+				<br />
+				<p class="gen"></p>
+<p class="topic-title"><a href="./../viewtopic.php?f=5&amp;t=65492">Read more..</a></p>
+<br /><br />
+			</div>
+		</li>
+				<li>
+			<div class="postbody">
+				<div class="sm-fill-space">
+					<ul class="topiclist"><li class="header"><p class="topic-title"><a href="./../viewtopic.php?f=4&amp;t=67175">Access Violation 79665...</a></p></li></ul>
+					<div class="author">
+																	<a href="./../viewtopic.php?f=4&amp;t=67175&amp;p=501547#p501547" title="Go to last post">
+							<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Go to last post</span>
+						</a>
+																							by <a href="./../memberlist.php?mode=viewprofile&amp;u=46907" style="color: #00CCCC;" class="username-coloured">MrN0body</a> on Fri May 28, 2021 1:01 am in <a href="./../viewforum.php?f=4">General Mod Making</a>
+					</div>
+				</div>
+				<br />
+				<p class="gen"></p>
+<p class="topic-title"><a href="./../viewtopic.php?f=4&amp;t=67175">Read more..</a></p>
+<br /><br />
+			</div>
+		</li>
+				<li>
+			<div class="postbody">
+				<div class="sm-fill-space">
+					<ul class="topiclist"><li class="header"><p class="topic-title"><a href="./../viewtopic.php?f=8&amp;t=67174">[Question] How to fix ...</a></p></li></ul>
+					<div class="author">
+																	<a href="./../viewtopic.php?f=8&amp;t=67174&amp;p=501542#p501542" title="Go to last post">
+							<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Go to last post</span>
+						</a>
+																	<i class="icon fa-paperclip fa-fw" aria-hidden="true"></i>						by <a href="./../memberlist.php?mode=viewprofile&amp;u=16844" style="color: #FF6600;" class="username-coloured">Necrolis</a> on Wed May 26, 2021 2:54 pm in <a href="./../viewforum.php?f=8">Code Editing</a>
+					</div>
+				</div>
+				<br />
+				<p class="gen"></p>
+<p class="topic-title"><a href="./../viewtopic.php?f=8&amp;t=67174">Read more..</a></p>
+<br /><br />
+			</div>
+		</li>
+				<li>
+			<div class="postbody">
+				<div class="sm-fill-space">
+					<ul class="topiclist"><li class="header"><p class="topic-title"><a href="./../viewtopic.php?f=4&amp;t=67173">Equip two SC Aura in s...</a></p></li></ul>
+					<div class="author">
+																	<a href="./../viewtopic.php?f=4&amp;t=67173&amp;p=501539#p501539" title="Go to last post">
+							<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Go to last post</span>
+						</a>
+																							by <a href="./../memberlist.php?mode=viewprofile&amp;u=43480" style="color: #66FF00;" class="username-coloured">Ogodei</a> on Mon May 24, 2021 2:59 pm in <a href="./../viewforum.php?f=4">General Mod Making</a>
+					</div>
+				</div>
+				<br />
+				<p class="gen"></p>
+<p class="topic-title"><a href="./../viewtopic.php?f=4&amp;t=67173">Read more..</a></p>
+<br /><br />
+			</div>
+		</li>
+				</ul>
+
+		</div>
+	</div>
+</div>
+							
+						</div>
+											</div>
+									</div>
+				<div class="grid">
+								</div>
+			</div>
+						<div id="pos-sidebar" class="block-position grid__col grid__col--1-of-5 sidebar left">
+								<div id="block-83" class="block">
+					<div class="forabg sm-block-container bg1 sm-block-spacing"8>
+	<div class="inner">
+				<ul class="topiclist">
+			<li class="header">
+				<dl class="row-item">
+					<dt>
+						<span class="block-icon"><i class="" aria-hidden="true"></i></span>
+						<span class="block-title">Menu</span>
+					</dt>
+					<dd></dd>
+				</dl>
+			</li>
+		</ul>
+				<ul class="forums sm-block-content inner-spacing">
+			<li><nav>
+	<ul class="sm-list fa-ul">
+											<li>
+			<a href="https://d2mods.info/home.php"><i class="fa-fw" aria-hidden="true"></i>News Portal</a>
+						</li>
+													<li>
+			<a href="https://d2mods.info/forum/index.php"><i class="fa-fw" aria-hidden="true"></i>Forums</a>
+						</li>
+													<li>
+			<a href="https://d2mods.info/forum/kb/index"><i class="fa-fw" aria-hidden="true"></i>Knowledge base</a>
+						</li>
+													<li>
+			<a href="https://d2mods.info/forum/downloads"><i class="fa-fw" aria-hidden="true"></i>File Center</a>
+						</li>
+													<li>
+			<a href="https://d2mods.info/forum/terms-of-service"><i class="fa-fw" aria-hidden="true"></i>Terms of Service</a>
+						</li>
+													<li>
+			<a href="https://d2mods.info/forum/linking-to-us"><i class="fa-fw" aria-hidden="true"></i>Linking To Us</a>
+						</li>
+													<li>
+			<a href="https://d2mods.info/forum/copyrights"><i class="fa-fw" aria-hidden="true"></i>Copyrights</a>
+						</li>
+				    	</ul>
+</nav>
+</li>
+		</ul>
+	</div>
+</div>
+					
+				</div>
+								<div id="block-84" class="block">
+					<div class="forabg sm-block-container bg1 sm-block-spacing"8>
+	<div class="inner">
+				<ul class="topiclist">
+			<li class="header">
+				<dl class="row-item">
+					<dt>
+						<span class="block-icon"><i class="" aria-hidden="true"></i></span>
+						<span class="block-title">Community</span>
+					</dt>
+					<dd></dd>
+				</dl>
+			</li>
+		</ul>
+				<ul class="forums sm-block-content inner-spacing">
+			<li><nav>
+	<ul class="sm-list fa-ul">
+											<li>
+			<a href="https://discord.gg/NvfftHY"><i class="fa-fw" aria-hidden="true"></i>Official Discord</a>
+						</li>
+													<li>
+			<a href="https://d2mods.info/forum/diablo-ii-mod-sites"><i class="fa-fw" aria-hidden="true"></i>Diablo II Mod Sites</a>
+						</li>
+													<li>
+			<a href="https://d2mods.info/forum/partner-sites"><i class="fa-fw" aria-hidden="true"></i>Partner Sites</a>
+						</li>
+													<li>
+			<a href="https://d2mods.info/forum/hall-of-valor"><i class="fa-fw" aria-hidden="true"></i>Hall of Valor</a>
+						</li>
+													<li>
+			<a href="https://d2mods.info/forum/flair"><i class="fa-fw" aria-hidden="true"></i>Badges aka Flairs</a>
+						</li>
+													<li>
+			<a href="https://www.facebook.com/PhrozenKeep/"><i class="fa-fw" aria-hidden="true"></i>Our Facebook page</a>
+						</li>
+													<li>
+			<a href="https://www.youtube.com/channel/UCvwYqiJu_MAxPdw1-21DZzg"><i class="fa-fw" aria-hidden="true"></i>Our YouTube Channel</a>
+						</li>
+				    	</ul>
+</nav>
+</li>
+		</ul>
+	</div>
+</div>
+					
+				</div>
+								<div id="block-85" class="block">
+					<div class="forabg sm-block-container bg1 sm-block-spacing"8>
+	<div class="inner">
+				<ul class="topiclist">
+			<li class="header">
+				<dl class="row-item">
+					<dt>
+						<span class="block-icon"><i class="" aria-hidden="true"></i></span>
+						<span class="block-title">Modding Resources</span>
+					</dt>
+					<dd></dd>
+				</dl>
+			</li>
+		</ul>
+				<ul class="forums sm-block-content inner-spacing">
+			<li><nav>
+	<ul class="sm-list fa-ul">
+											<li>
+			<a href="http://diabolic.d2mods.info/"><i class="fa-fw" aria-hidden="true"></i>Diabolic Cartography</a>
+						</li>
+													<li>
+			<a href="https://d2mods.info/resources/incandescence/"><i class="fa-fw" aria-hidden="true"></i>Incandescence</a>
+						</li>
+													<li>
+			<a href="https://d2mods.info/resources/infinitum/"><i class="fa-fw" aria-hidden="true"></i>Infinitum</a>
+						</li>
+													<li>
+			<a href="https://d2mods.info/resources/inventharia/"><i class="fa-fw" aria-hidden="true"></i>Inventharia</a>
+						</li>
+													<li>
+			<a href="https://d2mods.info/resources/wt/"><i class="fa-fw" aria-hidden="true"></i>Warped Tiles</a>
+						</li>
+				    	</ul>
+</nav>
+</li>
+		</ul>
+	</div>
+</div>
+					
+				</div>
+							</div>
+					</div>
+
+			</div>
+
+	
+		</div>
+	</div>
+
+
+<div id="page-footer" class="page-footer page-width" role="contentinfo">
+	<div class="navbar nav-breadcrumbs" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-footer" class="nav-footer linklist" role="menubar">
+		<li class="breadcrumbs">
+							<span class="crumb"><a href="https://d2mods.info/home.php" data-navbar-reference="home"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span>News Portal</span></a></span>									<span class="crumb"><a href="./../index.php" data-navbar-reference="index"><span>Home</span></a></span>					</li>
+		
+				<li class="rightside"><i class="icon fa-clock-o fa-fw" aria-hidden="true"></i>All times are <span title="UTC+1">UTC+01:00</span></li>
+					<li class="small-icon icon-pages icon-page-terms-of-service rightside">
+			<a href="/forum/terms-of-service" role="menuitem">
+				<span>Terms of Service</span>
+			</a>
+		</li>
+						<li class="rightside">
+				<a href="./../ucp.php?mode=delete_cookies" data-ajax="true" data-refresh="true" role="menuitem">
+					<i class="icon fa-trash fa-fw" aria-hidden="true"></i><span>Delete all board cookies</span>
+				</a>
+			</li>
+												<li class="rightside" data-last-responsive="true">
+				<a href="./../memberlist.php?mode=team" role="menuitem">
+					<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+				</a>
+			</li>
+					<li class="rightside" data-last-responsive="true">
+		<a href="/forum/contactadmin" role="menuitem">
+			<i class="icon fa-envelope fa-fw" aria-hidden="true"></i><span>Contact us</span>
+		</a>
+	</li>
+			</ul>
+
+	</div>
+</div>
+
+	<div class="copyright">
+				Powered by <a href="https://www.phpbb.com/">phpBB</a>&reg; Forum Software &copy; phpBB Limited
+		<br />D2mods Style by volf based on <a href="https://www.phpbb.com/customise/db/style/black/">Black</a> Style by <a href="http://www.artodia.com/">Arty</a> and Black Rock template by onyx 
+									</div>
+
+	<div id="darkenwrapper" class="darkenwrapper" data-ajax-error-title="AJAX error" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply.">
+		<div id="darken" class="darken">&nbsp;</div>
+	</div>
+
+	<div id="phpbb_alert" class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out.">
+		<a href="#" class="alert_close">
+			<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+		</a>
+		<h3 class="alert_title">&nbsp;</h3><p class="alert_text"></p>
+	</div>
+	<div id="phpbb_confirm" class="phpbb_alert">
+		<a href="#" class="alert_close">
+			<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+		</a>
+		<div class="alert_text"></div>
+	</div>
+</div>
+
+</div>
+
+<div>
+	<a id="bottom" class="anchor" accesskey="z"></a>
+	</div>
+
+<script type="text/javascript" src="./../assets/javascript/jquery.min.js?assets_version=342"></script>
+<script type="text/javascript" src="./../assets/javascript/core.js?assets_version=342"></script>
+
+	<script src="./../assets/cookieconsent/cookieconsent.min.js?assets_version=342"></script>
+	<script>
+		window.addEventListener("load", function(){
+			window.cookieconsent.initialise({
+				"palette": {
+					"popup": {
+						"background": "#0F538A"
+					},
+					"button": {
+						"background": "#E5E5E5"
+					}
+				},
+				"theme": "classic",
+				"content": {
+					"message": "This\x20website\x20uses\x20cookies\x20to\x20ensure\x20you\x20get\x20the\x20best\x20experience\x20on\x20our\x20website.",
+					"dismiss": "Got\x20it\x21",
+					"link": "Learn\x20more",
+					"href": "http\x3A\x2F\x2Fcookiesandyou.com"
+				}
+			})});
+	</script>
+
+
+<!--// Let's destroy all gallery stuff -->
+<script>
+	(function($) {  // Avoid conflicts with other libraries
+		$('#pf_gallery_palbum').prop('disabled', true);
+	})(jQuery); // Avoid conflicts with other libraries
+</script>
+<script type="text/javascript" src="./../ext/jeyp/cartography/styles/all/theme/js/jquery.validate.min.js?assets_version=342"></script>
+<script type="text/javascript" src="./../ext/jeyp/cartography/styles/all/theme/js/jquery.validate.additional.js?assets_version=342"></script>
+<script type="text/javascript" src="./../ext/jeyp/cartography/styles/all/theme/js/lightslider.min.js?assets_version=342"></script>
+<script type="text/javascript" src="./../ext/jeyp/cartography/styles/all/theme/js/lightgallery.min.js?assets_version=342"></script>
+<script type="text/javascript" src="./../styles/d2mods/template/forum_fn.js?assets_version=342"></script>
+<script type="text/javascript" src="./../styles/prosilver/template/ajax.js?assets_version=342"></script>
+<script type="text/javascript" src="./../ext/dmzx/formcreator/styles/prosilver/template/forms/form_mod.js?assets_version=342"></script>
+
+
 
 </body>
 </html>
-
-<!-- end footer -->
