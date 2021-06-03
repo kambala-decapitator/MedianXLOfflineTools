@@ -535,7 +535,7 @@ QString PropertiesDisplayManager::propertyDisplay(ItemProperty *propDisplay, int
     case 23: // reanimate
     {
         const QString &monsterName = ItemDataBase::Monsters()->value(propDisplay->param);
-        result = QString("%1% %2 %3").arg(value).arg(description).arg(shouldColor ? htmlStringFromDiabloColorString(monsterName) : monsterName);
+        result = QString("%1% %2 %3").arg(value).arg(description).arg(shouldColor ? htmlStringFromDiabloColorString(monsterName, ColorsManager::DarkGrey) : monsterName);
         break;
     }
     // new in Sigma:
