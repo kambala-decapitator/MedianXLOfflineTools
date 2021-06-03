@@ -477,11 +477,10 @@ PropertiesDisplayManager::SecondaryDamageUsage PropertiesDisplayManager::seconda
 
 QString PropertiesDisplayManager::propertyDisplay(ItemProperty *propDisplay, int propId, bool shouldColor /*= false*/)
 {
-    int value = propDisplay->value;
-    if (!value)
-        return QString();
-
     ItemPropertyTxt *prop = ItemDataBase::Properties()->value(propId);
+    int value = propDisplay->value;
+    if (!value || !prop->descFunc)
+        return QString();
 
     const CharacterInfo::CharacterInfoBasic &basicInfo = CharacterInfo::instance().basicInfo;
     if (prop->stat.endsWith("perlevel")) // based on clvl
