@@ -574,7 +574,7 @@ QString PropertiesDisplayManager::propertyDisplay(ItemProperty *propDisplay, int
                     --value;
                 textColor = static_cast<ColorsManager::ColorIndex>(value);
             }
-            result = htmlStringFromDiabloColorString(s, textColor);
+            result = htmlStringFromDiabloColorString(s.replace(QLatin1String("\\n"), QChar('\n')), textColor);
         }
         else
             result = s;
