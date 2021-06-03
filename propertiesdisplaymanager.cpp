@@ -506,7 +506,7 @@ QString PropertiesDisplayManager::propertyDisplay(ItemProperty *propDisplay, int
         result = QString(prop->descVal == 1 ? "%1 %2" : "%2 %1").arg(valueStringSigned).arg(description); // 1 or 2
         break;
     case 2:
-        result = QString(prop->descVal == 1 ? "%1% %2" : "%2 %1%").arg(value).arg(description); // 1 or 2
+        result = QString(prop->descVal == 1 ? "%1% %2" : "%2 %1%").arg(valueStringSigned).arg(description); // 1 or 2
         break;
     case 3:
         result = prop->descVal ? QString("%1 %2").arg(description).arg(value) : description; // 0 or 2
