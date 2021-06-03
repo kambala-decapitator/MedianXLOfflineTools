@@ -488,13 +488,14 @@ QString PropertiesDisplayManager::propertyDisplay(ItemProperty *propDisplay, int
     else if (prop->stat.endsWith("perblessedlife"))
         value = basicInfo.classCode == Enums::ClassName::Paladin ? (value * basicInfo.skills.at(Enums::Skills::currentCharacterSkillsIndexes().first.indexOf(Enums::Skills::BlessedLife))) / 32 : 0;
 
+    const char *signedFormatStr = "%+d";
     char valueStringSigned[10];
 #ifdef Q_CC_MSVC
     sprintf_s
 #else
     sprintf
 #endif
-    (valueStringSigned, "%+d", prop->descFunc == 32 ? value / 10 : value);
+    (valueStringSigned, signedFormatStr, value);
 
     QString description = value < 0 ? prop->descNegative : prop->descPositive, result;
     switch (prop->descFunc) // it's described in https://d2mods.info/index.php?ind=reviews&op=entry_view&iden=448 - ItemStatCost.txt tutorial
@@ -580,8 +581,16 @@ QString PropertiesDisplayManager::propertyDisplay(ItemProperty *propDisplay, int
         break;
     }
     case 32: // HP regen
-        result = QString("%1 %2").arg(valueStringSigned).arg(description);
+    {
+        value /= 10;
+        value = value > 0 ? qMax(value, 1) : qMin(value, -1);
+        int size = ::snprintf(0, 0, signedFormatStr, value) + 1;
+        char *buf = new char[size];
+        ::snprintf(buf, size, signedFormatStr, value);
+        result = QString("%1 %2").arg(buf, description);
+        delete [] buf;
         break;
+    }
     case 33: // cooldown
         result = description.replace(QLatin1String("%s"), ItemDataBase::Skills()->at(propDisplay->param)->name).replace(QLatin1String("%.1g"), QString::number(value / 25.0, 'g', 1) + ItemDataBase::stringFromTblKey(prop->descStringAdd));
         break;
