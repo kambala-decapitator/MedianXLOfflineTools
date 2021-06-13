@@ -23,6 +23,8 @@ bool FileAssociationManager::isApplicationDefaultForExtension(const QString &ext
 {
     bool isDefault;
     FSRef defaultAppRef = {{0}}; // shut clang up
+    // TODO LSCopyDefaultApplicationURLForContentType or better LSCopyDefaultRoleHandlerForContentType
+    // and retrieve URL from last param of LSGetApplicationForInfo instead of using FSRef
     OSStatus err = LSGetApplicationForInfo(kLSUnknownType, kLSUnknownCreator, (CFStringRef)NSStringFromQString(extensionWithoutDotFromExtension(extension)), kLSRolesAll, &defaultAppRef, NULL);
     if (err == noErr)
     {
