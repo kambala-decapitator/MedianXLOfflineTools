@@ -815,6 +815,11 @@ bool ItemDataBase::isCube(ItemInfo *item)
     return item->itemType == "box";
 }
 
+bool ItemDataBase::isTomeWithScrolls(ItemInfo *item)
+{
+    return ItemParser::itemTypesInheritFromType(Items()->value(item->itemType)->types, "book");
+}
+
 bool ItemDataBase::doesItemGrantBonus(ItemInfo *item)
 {
     // ignore alt. hand
