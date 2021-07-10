@@ -5,7 +5,7 @@ echo
 ./create_translation.sh en
 
 cd generated
-../CompressFiles itemtypes.txt mo.txt exptable.txt basestats.txt sets.txt
+../CompressFiles itemtypes.csv mo.csv exptable.csv basestats.csv sets.csv
 mv *.dat ../data
 
 cd ..

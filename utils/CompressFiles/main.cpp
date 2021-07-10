@@ -43,7 +43,7 @@ int main(int argc, char *argv[])
         QFileInfo fi(argv[i]);
         if (fi.isDir())
         {
-            QDirIterator it(fi.canonicalFilePath(), QStringList("*.txt"), QDir::AllEntries | QDir::NoDotAndDotDot, QDirIterator::Subdirectories | QDirIterator::FollowSymlinks);
+            QDirIterator it(fi.canonicalFilePath(), QStringList("*.csv"), QDir::AllEntries | QDir::NoDotAndDotDot, QDirIterator::Subdirectories | QDirIterator::FollowSymlinks);
             do
             {
                 it.next();
