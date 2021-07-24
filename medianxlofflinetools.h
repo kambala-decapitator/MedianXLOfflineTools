@@ -136,7 +136,7 @@ private:
     QPointer<ItemsViewerDialog> _itemsDialog;
     FindItemsDialog *_findItemsDialog;
     ExperienceIndicatorGroupBox *_mercExpGroupBox, *_expGroupBox;
-#ifndef QT_NO_DEBUG_OUTPUT
+#if !defined(QT_NO_DEBUG_OUTPUT) && !defined(DUPE_CHECK)
     QCheckBox *_makeNonLadderCheckbox;
 #endif
     QGroupBox *_questsGroupBox;

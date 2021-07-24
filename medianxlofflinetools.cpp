@@ -470,7 +470,7 @@ void MedianXLOfflineTools::saveCharacter()
     charInfo.basicInfo.isHardcore = true;
     charInfo.basicInfo.hadDied = false;
 #endif
-#ifndef QT_NO_DEBUG_OUTPUT
+#if !defined(QT_NO_DEBUG_OUTPUT) && !defined(DUPE_CHECK)
     charInfo.basicInfo.isLadder = !_makeNonLadderCheckbox->isChecked();
 #endif
     char statusValue = tempFileContents.at(Enums::Offsets::Status);
@@ -1455,7 +1455,7 @@ void MedianXLOfflineTools::createCharacterGroupBoxLayout()
     vbl->addLayout(gridLayout);
 
     _expGroupBox = new ExperienceIndicatorGroupBox(this);
-#ifndef QT_NO_DEBUG_OUTPUT
+#if !defined(QT_NO_DEBUG_OUTPUT) && !defined(DUPE_CHECK)
     _makeNonLadderCheckbox = new QCheckBox(QLatin1String("Make non-ladder"), this);
     connect(_makeNonLadderCheckbox, SIGNAL(clicked(bool)), SLOT(modify()));
 
@@ -2517,7 +2517,7 @@ void MedianXLOfflineTools::clearUI()
     QList<QCheckBox *> checkBoxes = QList<QCheckBox *>() << ui->convertToSoftcoreCheckBox << ui->respecSkillsCheckBox << ui->activateWaypointsCheckBox << ui->deactivateHallsOfPainCheckBox;
     foreach (QList<QCheckBox *> questCheckBoxes, _checkboxesQuestsHash.values())
         checkBoxes << questCheckBoxes;
-#ifndef QT_NO_DEBUG_OUTPUT
+#if !defined(QT_NO_DEBUG_OUTPUT) && !defined(DUPE_CHECK)
     _makeNonLadderCheckbox->setEnabled(false);
     checkBoxes << _makeNonLadderCheckbox;
 #endif
@@ -2587,7 +2587,7 @@ void MedianXLOfflineTools::updateUI()
 
     updateCharacterExperienceProgressbar(charInfo.valueOfStatistic(Enums::CharacterStats::Experience));
 
-#ifndef QT_NO_DEBUG_OUTPUT
+#if !defined(QT_NO_DEBUG_OUTPUT) && !defined(DUPE_CHECK)
     _makeNonLadderCheckbox->setEnabled(true);
     _makeNonLadderCheckbox->setChecked(true);
 #endif
