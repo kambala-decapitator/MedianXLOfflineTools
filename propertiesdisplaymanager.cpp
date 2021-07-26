@@ -96,7 +96,7 @@ QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item, bool u
                          (allProps.value(Enums::ItemProperties::MaximumDamageBasedOnClvl, foo)->value * clvl) / 32;
         QString damageFormat = tr("%1 to %2", "min-max damage");
 
-        if (itemBase->minThrowDmg && itemBase->maxThrowDmg)
+        if (itemBase->maxThrowDmg)
         {
             int minDmg = itemBase->minThrowDmg, maxDmg = itemBase->maxThrowDmg;
             if (item->isEthereal)
@@ -115,7 +115,7 @@ QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item, bool u
             itemDescription += QString("%1: %2\n").arg(tr("Throw Damage"), damageFormat.arg(minDmg).arg(maxDmg));
         }
 
-        if (itemBase->min1hDmg && itemBase->max1hDmg)
+        if (itemBase->max1hDmg)
         {
             int minDmg = itemBase->min1hDmg, maxDmg = itemBase->max1hDmg;
             if (item->isEthereal)
@@ -134,7 +134,7 @@ QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item, bool u
             itemDescription += QString("%1: %2\n").arg(tr("One-Hand Damage"), damageFormat.arg(minDmg).arg(maxDmg));
         }
 
-        if (itemBase->min2hDmg && itemBase->max2hDmg)
+        if (itemBase->max2hDmg)
         {
             int minDmg = itemBase->min2hDmg, maxDmg = itemBase->max2hDmg;
             if (item->isEthereal)

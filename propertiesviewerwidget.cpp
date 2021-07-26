@@ -188,7 +188,7 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
         QString damageFormat = qApp->translate(kTranslationContext, "%1 to %2", "min-max damage");
 
         // if min == max, then increment max by 1
-        if (itemBase->minThrowDmg && itemBase->maxThrowDmg)
+        if (itemBase->maxThrowDmg)
         {
             int minDmg = itemBase->minThrowDmg, maxDmg = itemBase->maxThrowDmg;
             if (item->isEthereal)
@@ -207,7 +207,7 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
             itemDescription += qApp->translate(kTranslationContext, "Throw Damage") + ": " + htmlStringFromDiabloColorString(damageFormat.arg(minDmg).arg(maxDmg + (minDmg == maxDmg)), damageColor) + kHtmlLineBreak;
         }
 
-        if (itemBase->min1hDmg && itemBase->max1hDmg)
+        if (itemBase->max1hDmg)
         {
             int minDmg = itemBase->min1hDmg, maxDmg = itemBase->max1hDmg;
             if (item->isEthereal)
@@ -226,7 +226,7 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
             itemDescription += qApp->translate(kTranslationContext, "One-Hand Damage") + ": " + htmlStringFromDiabloColorString(damageFormat.arg(minDmg).arg(maxDmg + (minDmg == maxDmg)), damageColor) + kHtmlLineBreak;
         }
 
-        if (itemBase->min2hDmg && itemBase->max2hDmg)
+        if (itemBase->max2hDmg)
         {
             int minDmg = itemBase->min2hDmg, maxDmg = itemBase->max2hDmg;
             if (item->isEthereal)
