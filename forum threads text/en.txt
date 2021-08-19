@@ -34,8 +34,8 @@ I hope I provided enough anti-hack protection for an average user. If you manage
 [*]single instance[/list][*]and many others ;)[/list][/spoil]
 
 [b]Downloads[/b]:
-[list][*][i]Windows[/i] (XP SP3 and later): http://mxl.vn.cz/kambala/MedianXLOfflineTools_0.5.7.7z (if it doesn't launch, install MSVC++ 2015 Redistributable vc_redist.x[c]86[/c].exe from [url=https://www.mediafire.com/?84qc8d5dy3cd9f6]Mediafire[/url] or from [url=https://www.microsoft.com/en-us/download/details.aspx?id=52685]Microsoft's website[/url])
-[*][i]macOS[/i] (10.9 and later, Intel 64bit): http://mxl.vn.cz/kambala/MedianXLOfflineTools_mac_0.5.7.txz[/list]
+[list][*][i]Windows[/i] (XP SP3 and later): https://mxl.vn.cz/kambala/MedianXLOfflineTools_0.5.7.7z (if it doesn't launch, install MSVC++ 2015 Redistributable vc_redist.x[c]86[/c].exe from [url=https://www.mediafire.com/?84qc8d5dy3cd9f6]Mediafire[/url] or from [url=https://www.microsoft.com/en-us/download/details.aspx?id=52685]Microsoft's website[/url])
+[*][i]macOS[/i] (10.9 and later, Intel 64bit): https://mxl.vn.cz/kambala/MedianXLOfflineTools_mac_0.5.7.txz[/list]
 
 [b]Mini-FAQ:[/b]
 [spoil]Q: Where are Sigma saves?
@@ -70,13 +70,13 @@ A: Probably the character you had loaded last time became broken. To make the ap
 
 [b]Downloads[/b]:
 [list][*][b]Application[/b]:
-[list][*][i]Windows[/i] (XP SP3 and later): http://mxl.vn.cz/kambala/MedianXLOfflineTools_0.4.6.7z (if it doesn't launch, install MSVC++ 2015 Redistributable vc_redist.x[c]86[/c].exe from [url=https://www.mediafire.com/?84qc8d5dy3cd9f6]Mediafire[/url] or from [url=https://www.microsoft.com/en-us/download/details.aspx?id=52685]Microsoft's website[/url])
-[*][i]macOS[/i] (10.9 and later, Intel 64bit, recommended version for modern OSs): http://mxl.vn.cz/kambala/MedianXLOfflineTools_mac_0.4.6.tbz
-[*][i]older Mac OS X[/i] (10.5 and later, 32bit universal binary, will not work starting with macOS 10.15): http://mxl.vn.cz/kambala/MedianXLOfflineTools_mac_universal_32bit_0.4.6.tbz[/list]
+[list][*][i]Windows[/i] (XP SP3 and later): https://mxl.vn.cz/kambala/MedianXLOfflineTools_0.4.6.7z (if it doesn't launch, install MSVC++ 2015 Redistributable vc_redist.x[c]86[/c].exe from [url=https://www.mediafire.com/?84qc8d5dy3cd9f6]Mediafire[/url] or from [url=https://www.microsoft.com/en-us/download/details.aspx?id=52685]Microsoft's website[/url])
+[*][i]macOS[/i] (10.9 and later, Intel 64bit, recommended version for modern OSs): https://mxl.vn.cz/kambala/MedianXLOfflineTools_mac_0.4.6.tbz
+[*][i]older Mac OS X[/i] (10.5 and later, 32bit universal binary, will not work starting with macOS 10.15): https://mxl.vn.cz/kambala/MedianXLOfflineTools_mac_universal_32bit_0.4.6.tbz[/list]
 [*][b]Mod data[/b] (find installation instructions in Mini-FAQ below):
-[list][*][i]2017 1.3:[/i] http://mxl.vn.cz/kambala/2017-1.3.zip
-[*][i]Ultimative XVI:[/i] http://mxl.vn.cz/kambala/ultimativeXVI.7z
-[*][i]2012 v005 / Kehjan Labyrinth + Tathamet vs Anu / Hardened:[/i] http://mxl.vn.cz/kambala/2012-005+kehjan+tathamet.7z[/list][/list][/spoil]
+[list][*][i]2017 1.3:[/i] https://mxl.vn.cz/kambala/2017-1.3.zip
+[*][i]Ultimative XVI:[/i] https://mxl.vn.cz/kambala/ultimativeXVI.7z
+[*][i]2012 v005 / Kehjan Labyrinth + Tathamet vs Anu / Hardened:[/i] https://mxl.vn.cz/kambala/2012-005+kehjan+tathamet.7z[/list][/list][/spoil]
 
 [b]Screenshots:[/b]
 [spoil]click to see in full size
