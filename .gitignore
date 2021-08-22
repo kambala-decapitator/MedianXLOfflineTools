@@ -39,5 +39,6 @@ qrc_*
 ui_*
 *.o
 *.VC.*
+.vs
 
 utils/txt_parser/CompressFiles*
