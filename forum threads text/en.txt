@@ -1,4 +1,4 @@
-[size=6]Just in case, here's the Russian thread: http://worldofplayers.ru/threads/34489/[/size]
+[size=6]Just in case, here's the Russian thread: https://worldofplayers.ru/threads/34489/[/size]
 
 [size=18][color=#6666ff]This is [b][u]NOT[/u][/b] a cheating tool and only for [b][u]Single Player[/u][/b] mode! You must be not in game before editing your character, as otherwise your changes won't be applied.[/color][/size]
 
@@ -34,8 +34,8 @@ I hope I provided enough anti-hack protection for an average user. If you manage
 [*]single instance[/list][*]and many others ;)[/list][/spoil]
 
 [b]Downloads[/b]:
-[list][*][i]Windows[/i] (XP SP3 and later): https://mxl.vn.cz/kambala/MedianXLOfflineTools_0.5.7.7z (if it doesn't launch, install MSVC++ 2015 Redistributable vc_redist.x[c]86[/c].exe from [url=https://www.mediafire.com/?84qc8d5dy3cd9f6]Mediafire[/url] or from [url=https://www.microsoft.com/en-us/download/details.aspx?id=52685]Microsoft's website[/url])
-[*][i]macOS[/i] (10.9 and later, Intel 64bit): https://mxl.vn.cz/kambala/MedianXLOfflineTools_mac_0.5.7.txz[/list]
+[list][*][i]Windows[/i] (7 SP1 and later): https://mxl.vn.cz/kambala/MedianXLOfflineTools_0.5.8.7z (if it doesn't launch, install MSVC++ 2019 Redistributable vc_redist.x[c]86[/c].exe from [url=https://aka.ms/vs/16/release/vc_redist.x86.exe]Microsoft's website[/url])
+[*][i]macOS[/i] (10.9 and later, Intel 64bit): https://mxl.vn.cz/kambala/MedianXLOfflineTools_mac_0.5.8.txz[/list]
 
 [b]Mini-FAQ:[/b]
 [spoil]Q: Where are Sigma saves?
@@ -94,12 +94,19 @@ A: Probably the character you had loaded last time became broken. To make the ap
 
 [b]Changelog[/b]:
 
-[i]v0.5.7 (10.01.2021)[/i]
+[i]v0.5.8 (22.08.2021)[/i]
+[list][+] handle "Orb Effects Applied to this Item are Quadrupled"
+[+] handle class restriction item property
+[f] improve full item description to match the game's closer
+[f] fix displaying Innate Elemental Damage
+[f] fix displaying Jitan's Gate Cooldown
+[/list]
+Older versions:
+[spoil][i]v0.5.7 (10.01.2021)[/i]
 [list][f] compatibility with Sigma 1.8
 [f] sorting improvements
 [/list]
-Older versions:
-[spoil][i]v0.5.6 (16.08.2020)[/i]
+[i]v0.5.6 (16.08.2020)[/i]
 [list][f] prevent crash when items have unknown/legacy properties
 [f] fix showing orange text on Relics
 [f] fix showing magic damage
