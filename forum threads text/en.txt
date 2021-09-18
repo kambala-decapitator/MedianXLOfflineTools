@@ -34,8 +34,8 @@ I hope I provided enough anti-hack protection for an average user. If you manage
 [*]single instance[/list][*]and many others ;)[/list][/spoil]
 
 [b]Downloads[/b]:
-[list][*][i]Windows[/i] (7 SP1 and later): https://mxl.vn.cz/kambala/MedianXLOfflineTools_0.5.8.7z (if it doesn't launch, install MSVC++ 2019 Redistributable vc_redist.x[c]86[/c].exe from [url=https://aka.ms/vs/16/release/vc_redist.x86.exe]Microsoft's website[/url])
-[*][i]macOS[/i] (10.9 and later, Intel 64bit): https://mxl.vn.cz/kambala/MedianXLOfflineTools_mac_0.5.8.txz[/list]
+[list][*][i]Windows[/i] (7 SP1 and later): https://mxl.vn.cz/kambala/MedianXLOfflineTools_0.6.7z (if it doesn't launch, install MSVC++ 2019 Redistributable vc_redist.x[c]86[/c].exe from [url=https://aka.ms/vs/16/release/vc_redist.x86.exe]Microsoft's website[/url])
+[*][i]macOS[/i] (10.9 and later, Intel 64bit): https://mxl.vn.cz/kambala/MedianXLOfflineTools_mac_0.6.txz[/list]
 
 [b]Mini-FAQ:[/b]
 [spoil]Q: Where are Sigma saves?
@@ -60,15 +60,20 @@ If you can't see file extension:
 Q: Application doesn't open; in the list of processes it appears just for a second and/or crash report is displayed.
 A: Probably the character you had loaded last time became broken. To make the application work again, simply double-click 'disable_auto_load' file (on Windows you also have to press 'Yes' after this): it disables loading last used character. If you want to enable this option again, open Options menu in the application and select the option.[/spoil]
 
-[b]Old version with pre-Sigma mods support:[/b]
+[b]Old version with pre-Sigma v2 mods support:[/b]
 [spoil]Application should be able to load character from any version of Median XL and successfully perform basic operations with it like respeccing. Items processing relies on the mod source files, so it may not be compatible with any chacarcter from different version. This data is softcoded, so when a new mod version is released, usually there's no need to recompile the application - one just needs to replace the data found in 'resources/data' with the new one, which I will provide. Currently supported mod versions:
-[list][*]Median XL 2017 1.3
+[list][*]Sigma 1.x
+[*]Median XL 2017 1.3
 [*]Ultimative XVI (v5+ characters should be compatible)
 [*]Kehjan Labyrinth + Tathamet vs Anu
 [*]Hardened
 [*]Median XL 2012 v005 (earlier versions should also work)[/list]
 
-[b]Downloads[/b]:
+[b]Sigma 1.x only[/b]:
+[list][*][i]Windows[/i] (7 SP1 and later): https://mxl.vn.cz/kambala/MedianXLOfflineTools_0.5.8.7z (if it doesn't launch, install MSVC++ 2019 Redistributable vc_redist.x[c]86[/c].exe from [url=https://aka.ms/vs/16/release/vc_redist.x86.exe]Microsoft's website[/url])
+[*][i]macOS[/i] (10.9 and later, Intel 64bit): https://mxl.vn.cz/kambala/MedianXLOfflineTools_mac_0.5.8.txz[/list]
+
+[b]Other mods[/b]:
 [list][*][b]Application[/b]:
 [list][*][i]Windows[/i] (XP SP3 and later): https://mxl.vn.cz/kambala/MedianXLOfflineTools_0.4.6.7z (if it doesn't launch, install MSVC++ 2015 Redistributable vc_redist.x[c]86[/c].exe from [url=https://www.mediafire.com/?84qc8d5dy3cd9f6]Mediafire[/url] or from [url=https://www.microsoft.com/en-us/download/details.aspx?id=52685]Microsoft's website[/url])
 [*][i]macOS[/i] (10.9 and later, Intel 64bit, recommended version for modern OSs): https://mxl.vn.cz/kambala/MedianXLOfflineTools_mac_0.4.6.tbz
@@ -94,15 +99,24 @@ A: Probably the character you had loaded last time became broken. To make the ap
 
 [b]Changelog[/b]:
 
-[i]v0.5.8 (22.08.2021)[/i]
+[i]v0.6 (18.09.2021)[/i]
+[list][+] Sigma v2 support including extended stashes
+[-] remove Mystic Orbs support (will be restored later)
+[-] PlugY stash format no longer supported
+[/list]
+Known bugs:
+- skills without names, e.g. "+1 to "
+- Paladin skill tree not displayed
+
+Older versions:
+[spoil][i]v0.5.8 (22.08.2021)[/i]
 [list][+] handle "Orb Effects Applied to this Item are Quadrupled"
 [+] handle class restriction item property
 [f] improve full item description to match the game's closer
 [f] fix displaying Innate Elemental Damage
 [f] fix displaying Jitan's Gate Cooldown
 [/list]
-Older versions:
-[spoil][i]v0.5.7 (10.01.2021)[/i]
+[i]v0.5.7 (10.01.2021)[/i]
 [list][f] compatibility with Sigma 1.8
 [f] sorting improvements
 [/list]
