@@ -107,7 +107,6 @@ private slots:
     void showItems(bool activate = true);
     void itemStorageTabChanged(int tabIndex);
     void giveCube();
-    void fillBeltWithMoonCookies();
 
     // export
     void showAllStats();

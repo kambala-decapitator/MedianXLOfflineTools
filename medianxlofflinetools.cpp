@@ -1123,45 +1123,6 @@ void MedianXLOfflineTools::giveCube()
     INFO_BOX(ItemParser::itemStorageAndCoordinatesString(tr("Cube has been stored in %1 at (%2,%3)"), cube));
 }
 
-void MedianXLOfflineTools::fillBeltWithMoonCookies()
-{
-    const int kMaxBeltItems = 16;
-    Enums::ItemStorage::ItemStorageEnum storage = Enums::ItemStorage::NotInStorage;
-    Enums::ItemLocation::ItemLocationEnum location = Enums::ItemLocation::Belt;
-
-    ItemsList beltItems = ItemDataBase::itemsStoredIn(storage, location);
-    if (int newMoonSymbols = kMaxBeltItems - beltItems.size())
-    {
-        if (_itemsDialog)
-            _itemsDialog->updateBeltItemsCoordinates(true, &beltItems);
-
-        ItemInfo *moonSymbolTemplate = ItemDataBase::loadItemFromFile("moon_symbol");
-        for (int i = 0; i < newMoonSymbols; ++i)
-        {
-            ItemInfo *moonSymbol = new ItemInfo(*moonSymbolTemplate);
-            if (ItemDataBase::storeItemIn(moonSymbol, storage, ItemParser::kBeltMaxRows, ItemParser::kBeltMaxColumns, location, &beltItems, 0, false))
-            {
-                int displayColumn = moonSymbol->column;
-                moonSymbol->column += moonSymbol->row * ItemParser::kBeltMaxRows;
-                ReverseBitWriter::updateItemColumn(moonSymbol);
-                moonSymbol->column = displayColumn;
-
-                CharacterInfo::instance().items.character += moonSymbol;
-                beltItems += moonSymbol;
-            }
-        }
-        delete moonSymbolTemplate;
-
-        if (_itemsDialog)
-        {
-            _itemsDialog->updateGearItems(&beltItems);
-            _itemsDialog->totalItemsIncreasedBy(newMoonSymbols);
-        }
-
-        setModified(true);
-    }
-}
-
 void MedianXLOfflineTools::showAllStats()
 {
     AllStatsDialog dlg(this);
@@ -1707,7 +1668,6 @@ void MedianXLOfflineTools::connectSignals()
     connect(ui->actionShowItems, SIGNAL(triggered()), SLOT(showItems()));
     connect(ui->actionFind, SIGNAL(triggered()), SLOT(findItem()));
     connect(ui->actionGiveCube, SIGNAL(triggered()), SLOT(giveCube()));
-    connect(ui->actionFillBeltWithMoonCookies, SIGNAL(triggered()), SLOT(fillBeltWithMoonCookies()));
 
     // export
 
@@ -2644,7 +2604,6 @@ void MedianXLOfflineTools::updateUI()
     ui->actionShowItems->setEnabled(hasItems);
     ui->actionFind->setEnabled(hasItems);
     ui->actionGiveCube->setDisabled(CharacterInfo::instance().items.hasCube());
-    ui->actionFillBeltWithMoonCookies->setEnabled(charInfo.basicInfo.classCode == Enums::ClassName::Sorceress && charInfo.basicInfo.skills.at(Enums::Skills::currentCharacterSkillsIndexes().first.indexOf(Enums::Skills::MoonSymbol)) > 0);
 
     updateWindowTitle();
 

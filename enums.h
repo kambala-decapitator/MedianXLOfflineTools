@@ -390,7 +390,6 @@ class Skills
 public:
     enum
     {
-        MoonSymbol = 594,
         BlessedLife = 649
     };
 
