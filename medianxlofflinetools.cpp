@@ -420,6 +420,7 @@ void MedianXLOfflineTools::saveCharacter()
     ui->levelSpinBox->setValue(Enums::CharacterStats::MaxLevel);
     ui->signetsOfLearningEatenLineEdit->setText(QString::number(Enums::CharacterStats::SignetsOfLearningMax));
     charInfo.setValueForStatisitc(Enums::CharacterStats::SignetsOfLearningMax, Enums::CharacterStats::SignetsOfLearningEaten);
+    charInfo.setValueForStatisitc(Enums::CharacterStats::SignetsOfSkillMax, Enums::CharacterStats::SignetsOfSkillEaten);
     ui->freeSkillPointsLineEdit->setText(QString::number(totalPossibleSkillPoints(charInfo.basicInfo.level, kDifficultiesNumber, kDifficultiesNumber, kDifficultiesNumber)));
     ui->freeStatPointsLineEdit->setText(QString::number(totalPossibleStatPoints(charInfo.basicInfo.level, kDifficultiesNumber)));
 #endif
@@ -2009,6 +2010,11 @@ bool MedianXLOfflineTools::processSaveFile()
                 shouldShowHackWarning = true;
             statValue = CharacterStats::SignetsOfLearningMax;
         }
+        else if (statCode == CharacterStats::SignetsOfSkillEaten && statValue > CharacterStats::SignetsOfSkillMax)
+        {
+            shouldShowHackWarning = true;
+            statValue = CharacterStats::SignetsOfSkillMax;
+        }
         else if (statCode >= CharacterStats::Strength && statCode <= CharacterStats::Vitality)
         {
             int baseStat = _baseStatsMap[charInfo.basicInfo.classCode].statsAtStart.statFromCode(statCode);
@@ -2310,7 +2316,7 @@ inline int MedianXLOfflineTools::totalPossibleSkillPoints() const
 
 int MedianXLOfflineTools::totalPossibleSkillPoints(int level, quint8 doe, quint8 rad, quint8 iz) const
 {
-    return (level - 1) * kSkillPointsPerLevel + doe + rad + iz * 2;
+    return (level - 1) * kSkillPointsPerLevel + doe + rad + iz * 2 + CharacterInfo::instance().valueOfStatistic(Enums::CharacterStats::SignetsOfSkillEaten);
 }
 
 int MedianXLOfflineTools::investedStatPoints()
@@ -2597,9 +2603,9 @@ void MedianXLOfflineTools::setStats()
             int j = statCode - Enums::CharacterStats::Life, row = j / 2, col = j % 2;
             ui->statsTableWidget->item(row, col)->setText(QString::number(value));
         }
-        else if (statCode != Enums::CharacterStats::End && statCode != Enums::CharacterStats::Level && statCode != Enums::CharacterStats::Experience && statCode != Enums::CharacterStats::Achievements)
+        else if (QLineEdit *lineEdit = _lineEditsStatsMap.value(statCode, 0))
         {
-            _lineEditsStatsMap[statCode]->setText(QString::number(value));
+            lineEdit->setText(QString::number(value));
         }
     }
 

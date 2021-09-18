@@ -435,6 +435,7 @@ void ItemParser::createDisplayStringForPropertyWithId(int id, ItemProperty *prop
         prop->displayString = tr("+%1 to %2 Skill Levels", "+x to class skills").arg(prop->value).arg(prop->param < Enums::ClassName::classes().size() ? Enums::ClassName::classes().at(prop->param) : "WTF");
     else if (id == Enums::ItemProperties::Oskill || id == Enums::ItemProperties::ClassOnlySkill)
     {
+        // TODO: handle invisible skills (skills2.txt)
         SkillInfo *skill;
         bool deleteSkill = prop->param >= ItemDataBase::Skills()->size();
 #ifdef Q_CC_CLANG

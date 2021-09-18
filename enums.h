@@ -181,6 +181,7 @@ public:
         StashGold,
         Achievements = 88,
         SignetsOfLearningEaten = 185,
+        SignetsOfSkillEaten,
         End = 511
     };
 
@@ -191,6 +192,7 @@ public:
         InventoryGoldFactor = 10000,
         StashGoldMax = 2500000,
         SignetsOfLearningMax = 400,
+        SignetsOfSkillMax = 2,
         AchievementsCount = 10
     };
 
