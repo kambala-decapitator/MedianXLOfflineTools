@@ -1,539 +1,194 @@
 #allowedType1	allowedType2	allowedType3	allowedType4	allowedType5	allowedType6	name	rune1	rune2	rune3	rune4	rune5	rune6
-weap						Dawn	r01						
-weap						Shark	r07						
-weap						Enyo	r14						
-weap						Azrael	r21						
-weap						Void	r28						
-weap						Oblivion	r35						
-weap						Berith	r42						
-weap						Gehenna	r47						
-weap						Triune	r53						
-bow						Banshee	r03						
-bow						Shockwave	r12						
-bow						Balance	r22						
-bow						Hive	r30						
-bow						Phantom	r39						
-bow						Curse	r48						
-bow						Typhaon	r52						
-xbow						Thammuz	r04						
-xbow						Python	r16						
-xbow						Cyclops	r29						
-xbow						Tartarus	r44						
-xbow						Araboth	r45						
-knif						King's Blood	r26						
-scyh						Endor	r31						
-swor						Urada	r46						
-axe						Sabertooth	r48						
-scyh						Seed of Conflict	r49						
-spea						Myrmidon	r29						
-mace	scep					Demhe	r33						
-hamm						Calypso	r37						
-staf						Pax Mystica	r04						
-staf						Hadad	r11						
-staf						Summanus	r19						
-staf						Akhenaten	r27						
-staf						Aes Dana	r36						
-staf						Elverfolk	r44						
-staf						Erilaz	r51						
+weap						Shark	r02						
+weap						Gehenna	r32	r27	r28				
+bow						Banshee	r05						
+bow						Shockwave	r06	r13					
+bow						Hive	r30	r30	r24				
+bow						Typhaon	r31	r24					
+xbow						Tartarus	r30	r32	r19				
+axe						Sabertooth	r29	r25					
+staf						Pax Mystica	r01	r03					
+staf						Hadad	r09	r14					
+staf						Aes Dana	r29	r22	r27				
+staf						Elverfolk	r32	r24	r26				
 scep						Prophecy	r06						
-scep						Bane	r17						
-scep						Judas	r22						
-scep						Path	r30						
-scep						Gabriel	r40						
-scep						Durga	r49						
-scep						Galdr	r51						
-aspe						Aegina	r11						
-aspe						Sankara	r34						
-aspe						Rusalka	r46						
-aspe						Evanescence	r51						
-ajav						Scar	r16						
-ajav						Firefly	r26						
-ajav						Trishula	r34						
-ajav						Stalactite	r52						
-abow						Corsair	r15						
-abow						Ice Breaker	r29						
-abow						Colliding Worlds	r43						
-abow						Manta	r51						
+scep						Path	r27	r08	r29				
+scep						Durga	r24	r27	r07				
+aspe						Rusalka	r01	r30	r30	r27			
+aspe						Evanescence	r31	r02	r58				
+ajav						Firefly	r02	r11					
+abow						Edge	r05	r01					
+abow						Colliding Worlds	r02	r31	r25	r21	r21		
+abow						Manta	r51	r58	r30				
 h2h						Shedim	r02						
-h2h						Fiend	r17						
-h2h						Judge	r27						
-h2h						Choronzon	r34						
-h2h						Anarchy	r46						
-h2h						Hail	r48						
-h2h						Nahemah	r52						
-nagi						Khattak	r08						
-nagi						Hieros Gamos	r46						
-nagi						Lataif-as-Sitta	r52						
-bswd	baxe					Ram	r10						
-bswd	baxe					Essus	r22						
-bswd	baxe					Thunderbird	r32						
-bswd	baxe					Savitr	r37						
-bswd	baxe					Khan	r43						
-bswd	baxe					Lahmu	r49						
-bswd	baxe					Kahless	r51						
-dbow						Peacock	r13						
-dbow						Lynx	r27						
-dbow						Sylvanshine	r33						
-dbow						Cernunnos	r39	r34	r49				
-dbow						Raudna	r51						
-dstf						Ocean	r05						
-dstf						Samhain	r12						
-dstf						Augur	r20						
-dstf						Lincos	r29						
-dstf						Laadan	r37						
-dstf						Lojban	r45						
-dstf						Loxian	r52						
-nscy						Black Cat	r02						
-nscy						Mantra	r13						
-nscy						Chthon	r29						
-nscy						Inti	r41						
-nscy						Leviathan	r51						
-nknf						Loa	r05						
-nknf						Jinx	r13						
-nknf						Misery	r23						
-nknf						Seid	r36						
-nknf						Roc	r51						
-nstf						Deep Water	r06						
-nstf						Ladon	r25						
-nstf						Hali	r38						
-nstf						Dagda	r49						
-nstf						Santa Compana	r52						
+h2h						Fiend	r12	r18					
+h2h						Judge	r27	r28					
+h2h						Anarchy	r12	r32					
+h2h						Hail	r23	r30					
+nagi						Khattak	r09	r02					
+dbow						Lynx	r09	r08					
+dbow						Cernunnos	r31	r27	r30				
+dstf						Laadan	r26	r32					
+dstf						Loxian	r52	r26					
+nscy						Black Cat	r01	r03					
+nscy						Chthon	r22	r29	r23				
+nscy						Leviathan	r53	r53	r31				
+nknf						Loa	r02						
+nknf						Roc	r58	r02					
+nstf						Dagda	r32	r16	r24				
 wand						Koan	r09						
 wand						Ghoul	r20						
-wand						Dead Ringer	r39						
-wand						Ngozi	r41						
-wand						Semhazai	r51						
-nxbw						Genie	r08						
-nxbw						Atlantis	r19						
-nxbw						Aether	r31						
-nxbw						Crucible	r46						
-nxbw						Kronos	r51						
-pclb	pmac	pham				Jihad	r05						
-pclb	pmac	pham				Intifada	r15						
-pclb	pmac	pham				Lammasu	r25						
-pclb	pmac	pham				Brahman	r39						
-pclb	pmac	pham				Oriflamme	r51						
-pspe						Ensi	r12						
-pspe						Nehushtan	r27						
-pspe						Taqiyya	r40						
-pspe						Orisha	r48						
-pspe						Rex Deus	r52						
-orb						Circe	r11						
-orb						Ker	r20						
-orb						Kabbalah	r36						
-orb						Hestia	r50						
-orb						Kallisti	r51						
-scrd						Inanna	r12						
-scrd						Grace	r36						
-scrd						Khany	r50						
-scrd						Shaula	r52						
-tors						Rebel	r01						
+nxbw						Atlantis	r19	r18					
+nxbw						Aether	r31	r14	r14				
+nxbw						Kronos	r51	r01					
+pclb	pmac	pham				Intifada	r11	r18					
+pclb	pmac	pham				Brahman	r31	r18					
+pclb	pmac	pham				Oriflamme	r51	r53	r30				
+pspe						Taqiyya	r01	r04	r27				
+orb						Ker	r03						
+orb						Kabbalah	r32						
 tors						Lumen Arcana	r06						
-tors						(Median XL - 6 years)\nVictory	r13						
-tors						Thelema	r19						
-tors						Cathedral	r25						
-tors						Mirage	r33						
-tors						Dragonheart	r41						
-tors						Erawan	r48						
-tors						Unity	r52						
-helm						Summit	r01						
-helm						Cannonball	r08						
-helm						Ra	r17						
-helm						Alchemy	r26						
-helm						Dreadlord	r35						
-helm						Bogspitter	r44						
-helm						Eidolon	r51						
-circ						Sphinx	r11						
-circ						Lily	r31						
-circ						Eulenspiegel	r38						
-circ						Wintermute	r53						
-shld						Geas	r04						
-shld						Pharaoh	r12						
-shld						Nomad	r20						
-shld						Goddess	r30						
-shld						Kodo	r40						
-shld						Wall of Fire	r50						
-shld						Avatar	r53						
-glov						Iblis	r04						
-glov						Mercy	r13						
-glov						Kali	r21						
-glov						Aiwass	r33						
-glov						Skald	r41						
-glov						Icarus	r49						
-glov						Drekavac	r51						
-belt						Радужный	r05						
-belt						Prodigy	r15						
-belt						Fuse	r23						
-belt						Pulsa Dinura	r34						
-belt						Truce	r42						
-belt						Dyaus Pita	r50						
-belt						Ahriman	r52						
+tors						(Median XL - 6 years)\nVictory	r12	r11					
+tors						Dragonheart	r27	r10	r19				
+tors						Erawan	r20	r18	r32				
+helm						Ra	r13	r10					
+helm						Bogspitter	r30	r22					
+helm						Eidolon	r53	r58					
+shld						Wall of Fire	r23	r23	r33				
+shld						Avatar	r57	r61	r62				
+glov						Brawl	r13	r02					
+glov						Prodigy	r11	r17					
+belt						Rainbow	r05						
+belt						Truce	r31						
+belt						Dyaus Pita	r32	r22					
 boot						Epicenter	r06						
-boot						Outlaw	r14						
-boot						Ginfaxi	r22						
-boot						Craton	r32						
-boot						Megalith	r40						
-boot						Nephilim	r48						
-boot						Hibagon	r53						
-azhm						Stata Mater	r16						
-azhm						Amaterasu	r24						
-azhm						Siegfried	r31						
-azhm						Lohengrin	r42						
-azhm						Unicorn	r52						
-azsd						Edda	r15						
-azsd						Lion	r35						
-azsd						Eloi	r42						
-azsd						Nix	r48						
-azsd						Ea	r52						
-ishd						Afrit	r13						
-ishd						Rahab	r19						
-ishd						Ligeia	r28						
-ishd						Dar-Al-Harb	r37						
-ishd						Scorched Earth	r51						
-phlm						Algiz	r09						
-phlm						Nasrudin	r19						
-phlm						Sagarmatha	r36						
-phlm						Morthwyrtha	r43						
-phlm						Wodziwob	r53						
-basd						Enmerkar	r17						
-basd						Warpath	r27						
-basd						Gauntlet	r39						
-basd						Huracan	r44						
-basd						E-Engur-A	r52						
-pelt						Nezha	r18						
-pelt						Natha	r28						
-pelt						Norma	r38						
-pelt						Grove	r45						
-pelt						Slyph	r52						
-head						Cube	r16						
-head						Warlock	r25						
-head						Nahual	r36						
-head						Quimbanda	r47						
-head						Wyrm	r51						
-pzhm						Ilmatar	r10						
-pzhm						Hierodule	r25						
-pzhm						Crusade	r37						
-pzhm						Surya	r46						
-pzhm						Malakbel	r53						
-ashd						Asmodai	r14						
-ashd						Sangreal	r28						
-ashd						Zohar	r33						
-ashd						Asclepion	r46						
-ashd						Amaymon	r51						
-stor						Demeter	r23						
-stor						Curandera	r29						
-stor						Astarte	r34						
-stor						Oracle	r40						
-stor						Vanity	r47						
-stor						Comaetho	r50						
-stor						Venefica	r53						
-nagi						Shamo	r16						
-bow						Amok	r09						
-bswd	baxe					Gharaniq	r33						
-phlm						Fawkes	r33						
-azhm						Bona Dea	r19						
-ishd						Iambe	r23						
-pelt						Aegipan	r09						
-bswd	baxe					Anak	r41						
-tors						Paaliaq	r10						
-stor						Lyrannikin	r11						
-bow						Hornet	r17						
-glov						Brawl	r16						
-head						Lorelei	r38						
-scyh						Atlacamani	r37						
-pclb	pmac	pham				Takfir	r34						
-stor						Cassilda	r54						
-azsd						Eos	r54						
-weap						Adramelech	r54						
-pzhm						Rotundjere	r54						
-phlm						Greisen	r54						
-glov						Snowsquall	r54						
-head						Hecatomb	r55						
-pspe						Jaguar	r55						
-ashd						Myrrhbearer	r55						
-helm						Amanita	r55						
-tors						Linga Sharira	r55						
-belt						Nero	r55						
-ishd						Orchid	r55						
-staf						Zodiac	r55						
-bow						Stardust	r55						
-h2h						Joker	r55						
-bswd	baxe					Gilgamesh	r55						
-pclb	pmac	pham				Skilt en Vriend	r55						
-wand						Krypteia	r55						
-scrd						Sway of the Stars	r55						
-orb						Sauron	r55						
-xbow						Tombstone	r55						
-nknf						Mkodos	r56						
-2hbx						Wolfsangel	r56						
-circ						Indigo	r56						
-shld						Derweze	r56						
-boot						Riptide	r56						
-azhm						Shaheeda	r56						
-dbow						Dirge	r56						
-pelt						FLYING POLAR BUFFALO ERROR	r56						
-dstf						Hermanubis	r56						
-aspe						Freybug	r56						
-abow						Cecaelia	r56						
-ajav						Specter	r56						
-nagi						Oniwaka	r56						
-nscy						Tzeentch	r56						
-scep						Apostasy	r56						
-nxbw						Rhea	r56						
-bow						Nyx	r26						
-staf						Ljosalf	r30						
-scep						Jokulmorder	r36						
-xbow						Tynged	r41						
-bswd	baxe					Skarn	r40						
-abow						Eris	r37						
-aspe						Titanomachia	r24						
-ajav						Herfjotur	r41						
-pclb	pmac	pham				Quaoar	r29						
-nscy						Eventide	r36						
-orb						Vertigo	r22						
-dbow						Tarqeq	r38						
-nstf						Eurynome	r17						
-h2h						Riot	r22						
-pspe						Resheph	r32						
-orb						Gravastar	r29						
-scrd						Brocken	r24						
-stor						Kundalini	r12						
-azhm						Cambion	r36						
-h2h						Carabosse	r15						
-nstf						Styx	r56						
-staf						Kyrie	r51	r51					
-tors						Pygmalion	r52	r52					
-weap						Archangel	r53	r53					
-boot						Knave	r54	r50	r54				
-helm	shld					Checkmate	r55	r55					
-taxe						Leo	r55						
-basd						Tonatiuh	r55						
-tkni						Tau	r55						
-tkni						Patriot	r02						
-taxe						Fennec	r20						
-tkni						Quantum	r30						
-taxe						Raptor	r43	r49	r43	r01			
-nscy						Lemuria	r20						
-abow						Aspect	r13						
-phlm						Ekam	r27						
-knif						Rattus	r37						
-axe						Instinct	r27						
-taxe						Thundercloud	r51						
-taxe						Cheetah	r02						
-tkni						Chrysopelea	r10						
-tkni						Dajjal	r20						
-taxe						Manitou	r30						
-tkni						Myriad	r40						
-tkni						Naiad	r49						
-tkni						Burlesque	r51						
-jave						Raid	r10						
-jave						Hastata	r20						
-jave						Haste	r30						
-jave						Hastilude	r40						
-jave						Hastur	r51						
-jave						Hastin	r55						
-tors						Thanks everyone!\nMedian 2005-2012\nEternal	r51	r52	r53	r54	r55	r56	
-weap						Shattered Stone	r58	r58	r58	r58	r58	r58	
-bow						Dead Man's Breath	r62	r62	r62	r62	r62	r62	
-xbow						Faseroptic	r61	r61	r61	r61	r61	r61	
-swor						Minefield	r57	r57	r57	r57	r57	r57	
-axe						Midas' Touch	r59	r59	r59	r59	r59	r59	
-spea						Asymptomatic	r60	r60	r60	r60	r60	r60	
-scyh						Solarion	r60	r60	r60	r60	r60	r60	
-knif						Malicicle	r62	r62	r62				
-mace						Arachnophilia	r60	r60	r60	r60	r60	r60	
-hamm						Neurogenesis	r61	r61	r61	r61	r61	r61	
-staf						Hand of Frost	r62	r62	r62	r62	r62	r62	
-scep						Oris' Herald	r59	r59	r59	r59	r59	r59	
-jave						Fleshbane	r60	r60	r60	r60			
+boot						Outlaw	r07	r17					
+boot						Craton	r22	r20					
+boot						Megalith	r28	r19					
+boot						Nephilim	r33	r10					
+azhm						Siegfried	r26	r04					
+azhm						Unicorn	r52	r59					
+azsd						Edda	r03	r07					
+azsd						Eloi	r10	r04	r25				
+ishd						Dar-Al-Harb	r19	r22					
+ishd						Scorched Earth	r57	r51	rx22				
+phlm						Algiz	r10	r05					
+phlm						Morthwyrtha	r16	r29					
+pelt						Natha	r25	r01					
+head						Cube	r04						
+ashd						Sangreal	r27	r12					
+stor						Comaetho	r33	r21					
+stor						Venefica	r52	r13					
+nagi						Shamo	r08	r12	r02				
+bow						Blitzen	r09	r19					
+bswd	baxe					Anak	r15	r02	r30				
+azhm						Bona Dea	r07	r21					
+scyh						Atlacamani	r26	r24	r22				
+glov						Snowsquall	r62	rx16					
+pspe						Jaguar	r53	r31	r58	rx19			
+helm						Amanita	r60	r11					
+bow						Stardust	r51	r31	r53				
+circ						Indigo	rx22	r51					
+dbow						Dirge	r53	r31	r58				
+abow						Cecaelia	r51	r57	r61	r62	r60	r58	
+nscy						Tzeentch	r51	r51	r53				
+scep						Apostasy	r52	r52	r59				
+ajav						Herfjotur	r30	r09					
+azhm						Cambion	r08	r29					
+nstf						Styx	r51	rx14					
+boot						Knave	r53	r32	r53				
+basd						Tonatiuh	r57	r53					
+tkni						Patriot	r01						
+taxe						Raptor	r33	r29	r20	r01			
+taxe						Cheetah	r01						
+tkni						Chrysopelea	r13						
+tors						Thanks everyone!\nMedian 2005-2012\nEternal	r51	rx20	r52	rx19	r53	rx18	
+swor						Minefield	r57	rx03	r08	r27			
+staf						Hand of Frost	r62	r32	r62	r24	r22		
+scep						Oris' Herald	r59	r57	r60	r61	r62	r25	
 tkni						Dead Star	r60	r60					
-taxe						Dragon Seed	r58	r58	r58	r58	r58	r58	
-abow						Arnazeus Pinnacle	r57	r57	r57	r57	r57	r57	
-ajav						Askari Device	r57	r57	r57				
-aspe						Flame	r58	r58	r58	r58	r58	r58	
-h2h						Perfection	r59	r59	r59				
-nagi						Blooddancer	r59	r59	r59	r59	r59	r59	
-bswd	baxe					El'druin	r62	r62	r62	r62	r62	r62	
-2hbx						Soldier of Light	r61	r61	r61	r61	r61	r61	
-dbow						Amphibian	r62	r62	r62	r62	r62	r62	
-dstf						Fiacla-Gear's Weathervane	r61	r61	r61	r61			
-nscy						Bartuc's Eye	r58	r58	r58	r58	r58	r58	
-nknf						Cut	r58	r58	r58				
-wand						Doomguard	r59	r59					
-nstf						Xazax	r57	r57	r57	r57	r57	r57	
-nxbw						Force of Mind	r59	r59	r59	r59	r59	r59	
-pspe						Hadriel's Protector	r60	r60	r60	r60	r60	r60	
-pclb	pham	pmac				Judgement	r57	r57	r57	r57	r57	r57	
-orb						Helgrotha	r60	r60	r60				
-scrd						Dark Exile	r62	r62	r62	r62	r62	r62	
-tors						Hellfire Plate	r57	r57	r57	r57	r57	r57	
-helm						Thundercap	r61	r61	r61	r61			
-circ						Rathma's Blessing	r62	r62	r62	r62			
-shld						Khalim's Protector	r60	r60	r60	r60			
-belt						Lysra	r57	r57					
-glov						Retribution	r57	r57	r57	r57			
-boot						Wind Runner	r58	r58	r58	r58			
-azhm						Eaglehorn Mask	r59	r59	r59	r59			
-azsd						Heart of Skovos	r58	r58	r58	r58	r58	r58	
-ishd						Shadowsteps	r59	r59	r59	r59	r59	r59	
-phlm						Force Shock	r61	r61	r61	r61			
-basd						Triune's Blessing	r60	r60	r60	r60			
-pelt						Nature's Grace	r60	r60	r60	r60			
-head						Twisted Mind	r59	r59	r59	r59			
-pzhm						Battle Rage	r58	r58	r58	r58			
-ashd						Lightwell	r57	r57	r57	r57			
-stor						Space Dementia	r61	r61	r61	r61	r61	r61	
-tors						Natasha's Legacy	r98	r98	r98	r98	r98	r98	
-tors						Rebel	rx01						
-tors						Lumen Arcana	rx06						
-tors						(Median XL - 6 years)\nVictory	rx13						
-tors						Thelema	rx19						
-tors						Cathedral	rx25						
-tors						Mirage	rx33						
-helm						Summit	rx01						
-helm						Cannonball	rx08						
-helm						Ra	rx17						
-helm						Alchemy	rx26						
-circ						Sphinx	rx11						
-circ						Lily	rx31						
-shld						Geas	rx04						
-shld						Pharaoh	rx12						
-shld						Nomad	rx20						
-shld						Goddess	rx30						
-glov						Iblis	rx04						
-glov						Mercy	rx13						
-glov						Kali	rx21						
-glov						Aiwass	rx33						
-belt						Радужный	rx05						
-belt						Prodigy	rx15						
-belt						Fuse	rx23						
-boot						Epicenter	rx06						
-boot						Outlaw	rx14						
-boot						Ginfaxi	rx22						
-boot						Craton	rx32						
-azhm						Stata Mater	rx16						
-azhm						Amaterasu	rx24						
-azhm						Siegfried	rx31						
-azsd						Edda	rx15						
-ishd						Afrit	rx13						
-ishd						Rahab	rx19						
+taxe						Dragon Seed	r58	r58	r53				
+ajav						Askari Device	r57	r57	r26				
+aspe						Lethal Huntress	r58	r58	r58	r58	r58	r58	
+dstf						Fiacla-Gear's Weathervane	r61	r51	r52	r61			
+orb						Helgrotha	r60	r60	r06				
+tors						Hellfire Plate	r57	r31	rx25	rx08			
+circ						Rathma's Blessing	r09	r62	r10	r62			
+shld						Khalim's Protector	r60	r28	r60	r11			
+boot						Wind Runner	r58	rx02	r58	r25			
+azsd						Heart of Skovos	rx02	r58	r22	rx14			
+basd						Triune's Blessing	r60	r58	r60	r58			
+pelt						Nature's Grace	r18	r60	r60	r06			
+head						Twisted Mind	r59	rx01	rx21				
+pzhm						Battle Rage	r58	rx29	r08				
+tors						Natasha's Legacy	rx31	r62	r57	r61	r60	rx32	
+tors						Rebel	rx01	r58	r58	r28			
+tors						Thelema	rx20	rx16	r15				
+shld						Geas	rx04	r22					
+glov						Mercy	rx20	rx02					
+glov						Iblis	rx03	r29					
+glov						Aiwass	r33	rx18					
+boot						Lifecrusher	rx23	r32	r22				
+boot						Overseer's Slippers	rx15	r16					
 ishd						Ligeia	rx28						
-phlm						Algiz	rx09						
-phlm						Nasrudin	rx19						
-basd						Enmerkar	rx17						
-basd						Warpath	rx27						
-pelt						Nezha	rx18						
-pelt						Natha	rx28						
-head						Cube	rx16						
-head						Warlock	rx25						
-pzhm						Ilmatar	rx10						
-pzhm						Hierodule	rx25						
-ashd						Asmodai	rx14						
-ashd						Sangreal	rx28						
-ashd						Zohar	rx33						
-stor						Demeter	rx23						
-stor						Curandera	rx29						
-phlm						Fawkes	rx33						
-azhm						Bona Dea	rx19						
-ishd						Iambe	rx23						
-pelt						Aegipan	rx09						
-tors						Paaliaq	rx10						
-stor						Lyrannikin	rx11						
-glov						Brawl	rx16						
-stor						Kundalini	rx12						
-phlm						Ekam	rx27						
+phlm						Nasrudin	r33	r51					
+basd						Warpath	rx27	r20	r20				
+pelt						Nezha	rx19	r24					
+pzhm						Hierodule	rx07	r59					
+ashd						Zohar	rx23	rx02	r58				
+stor						Curandera	rx29	r22	r51				
+stor						Lyrannikin	rx15	r59	r22				
+phlm						Fawkes	r21	rx08					
+azhm						Disturbance	r09	r58	rx24				
 weap						Dawn	rx01						
-weap						Shark	rx07						
-weap						Enyo	rx14						
-weap						Azrael	rx21						
-weap						Void	rx28						
-bow						Banshee	rx03						
-bow						Shockwave	rx12						
-bow						Balance	rx22						
-bow						Hive	rx30						
-xbow						Thammuz	rx04						
-xbow						Python	rx16						
-xbow						Cyclops	rx29						
-knif						King's Blood	rx26						
-scyh						Endor	rx31						
-spea						Myrmidon	rx29						
-mace	scep					Demhe	rx33						
-staf						Pax Mystica	rx04						
-staf						Hadad	rx11						
-staf						Summanus	rx19						
-staf						Akhenaten	rx27						
-scep						Prophecy	rx06						
-scep						Bane	rx17						
-scep						Judas	rx22						
-scep						Path	rx30						
-aspe						Aegina	rx11						
-ajav						Scar	rx16						
-ajav						Firefly	rx26						
-abow						Corsair	rx15						
-abow						Ice Breaker	rx29						
-h2h						Shedim	rx02						
-h2h						Fiend	rx17						
-h2h						Judge	rx27						
-nagi						Khattak	rx08						
-bswd	baxe					Ram	rx10						
-bswd	baxe					Essus	rx22						
-bswd	baxe					Thunderbird	rx32						
-dbow						Peacock	rx13						
-dbow						Lynx	rx27						
-dbow						Sylvanshine	rx33						
-dstf						Ocean	rx05						
-dstf						Samhain	rx12						
-dstf						Augur	rx20						
-dstf						Lincos	rx29						
-nscy						Black Cat	rx02						
-nscy						Mantra	rx13						
-nscy						Chthon	rx29						
-nknf						Loa	rx05						
-nknf						Jinx	rx13						
-nknf						Misery	rx23						
-nstf						Deep Water	rx06						
-nstf						Ladon	rx25						
-wand						Koan	rx09						
-wand						Ghoul	rx20						
-nxbw						Genie	rx08						
-nxbw						Atlantis	rx19						
-nxbw						Aether	rx31						
-pclb	pmac	pham				Jihad	rx05						
-pclb	pmac	pham				Intifada	rx15						
-pclb	pmac	pham				Lammasu	rx25						
-pspe						Nehushtan	rx27						
-orb						Circe	rx11						
-orb						Ker	rx20						
-scrd						Inanna	rx12						
-nagi						Shamo	rx16						
-bow						Amok	rx09						
-bswd	baxe					Gharaniq	rx33						
-bow						Hornet	rx17						
-bow						Nyx	rx26						
-staf						Ljosalf	rx30						
-aspe						Titanomachia	rx24						
-pclb	pmac	pham				Quaoar	rx29						
-orb						Vertigo	rx22						
-nstf						Eurynome	rx17						
-h2h						Riot	rx22						
-pspe						Resheph	rx32						
-orb						Gravastar	rx29						
-scrd						Brocken	rx24						
-h2h						Carabosse	rx15						
-tkni						Patriot	rx02						
-taxe						Fennec	rx20						
-tkni						Quantum	rx30						
-nscy						Lemuria	rx20						
-abow						Aspect	rx13						
+knif						King's Blood	rx26	r28					
+mace	scep					Demhe	r33	rx20					
+abow						Ice Breaker	r57	rx02	r57	r25	r26		
+h2h						Judge	r61	rx08					
+dstf						Lincos	rx08	r51					
+nxbw						Crucible	r57	r31	r25				
+orb						Circe	rx08	r59					
+bow						Amok	rx25	r22	r30				
+bswd	baxe					Gharaniq	r31	r58	rx02				
+bow						Hornet	rx11	r26	r26				
+staf						Ljosalf	r22	r52	r52				
+aspe						Titanomachia	r31	r61	rx02				
+nscy						Lemuria	r57	rx20	r19				
 axe						Instinct	rx27						
-taxe						Cheetah	rx02						
-tkni						Chrysopelea	rx10						
-tkni						Dajjal	rx20						
-taxe						Manitou	rx30						
-jave						Raid	rx10						
-jave						Hastata	rx20						
-jave						Haste	rx30						
-pspe						Ensi	rx12						
-axe						Kodiak	r38						
-glov						Память	r47	r52					
+pspe						Ensi	r57	r57	r15	r10			
+axe						Kodiak	r01	r25	r29				
+glov						Память	r57	r60	r61	r62			
+boot						Vision	r52	rx01	rx32				
+dstf						Acokanthera	r24	r60	rx13				
+pelt						Aconitum	r60	r52	rx09				
+shld						Svalinn	rx08	r28	rx27				
+nknf						Taming Sari	r53	rx23					
+nscy						Timefather	r58	rx18	r58	rx31			
+swor						Crescent Moon	r31	r25	r02				
+nxbw						Bone Dart	r15	r29	r15				
+h2h						Dark Maiden's Talons	r61	rx23					
+h2h						Stonefist	r58	r53					
+staf						Dream	r61	r52	r61	rx04			
+basd						Titan's Blockade	r22	rx12	rx20				
+glov						Savage	rx10	rx19	rx18				
+pelt						Typhoon	rx12	rx02	r60				
+swor						Lunar Fury	r33	rx10	rx01				
+dstf						Glacier	r62	rx05	r52				
+circ						Arcane Protection	r59	r29					
+pspe						Skylord	r59	rx05	r62	r23			
+azhm						Corona Aureola	rx26	r59					
+pspe						Orisha	r07	r29	r10				
+pzhm						Ilmatar	r59	rx04					
+staf						Burning Contagion	r60	r57	r26	rx03			
+belt						Fuse	rx23						
+glov						Kali	r17	r18					
+ashd						Tranquility	rx12	rx20					
+weap						Void	r29						
+belt						Duress	rx07						
+head						Gloom	rx17	rx15					
+head						Splintered Soul	r51	rx06	rx22				
+nstf						Повиновение	rx29	r51	r59	r24			
+glov						Enlightenment	r01						
+shld						Stone	r10						
+helm						Honor	r07						
 weap	armo					Secret Jewel Bonus!	jew						

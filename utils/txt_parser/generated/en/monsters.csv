@@ -5,7 +5,7 @@
 3	Reignited Warrior
 4	Horror Warrior
 5	Zombie
-6	Desecrator
+6	Hungry Dead
 7	Ghoul
 8	Drowned Carcass
 9	Plague Bearer
@@ -29,7 +29,7 @@
 27	Wailing Beast
 28	Gargantuan Beast
 29	Desert Strider
-30	Savage Wolf
+30	Spirit Wolf
 31	Invader
 32	Infidel
 33	Assailant
@@ -86,7 +86,7 @@
 84	Saber Cat
 85	Night Tiger
 86	Hell Cat
-87	Itchies
+87	Stinging Swarm
 88	Black Locusts
 89	Plague Bugs
 90	Hell Swarm
@@ -101,7 +101,7 @@
 99	Preserved Dead
 100	Cadaver
 101	Hollow One
-102	Tormentor
+102	Guardian
 103	Unraveler
 104	Horadrim Ancient
 105	Unraveler
@@ -182,7 +182,7 @@
 180	Sand Maggot Hatchling
 181	Rock Worm Young
 182	Devourer Young
-183	Giant Lamprey Young
+183	Lamprey Young
 184	Blood Maggot Young
 185	FLYING POLAR BUFFALO ERROR
 186	Blunderbore
@@ -192,7 +192,7 @@
 190	Sand Maggot Egg
 191	Rock Worm Egg
 192	Devourer Egg
-193	Giant Lamprey Egg
+193	Lamprey Egg
 194	Blood Maggot Egg
 195	FLYING POLAR BUFFALO ERROR
 196	FLYING POLAR BUFFALO ERROR
@@ -234,7 +234,7 @@
 232	FLYING POLAR BUFFALO ERROR
 233	FLYING POLAR BUFFALO ERROR
 234	Flying Scimitar
-235	Zakarumite
+235	Khanduras Follower
 236	Faithful
 237	Zealot
 238	Sexton
@@ -274,9 +274,9 @@
 272	FLYING POLAR BUFFALO ERROR
 273	Gargoyle Trap
 274	Returned Mage
-275	Bone Mage
+275	Frozen Warlock
 276	Reignited Mage
-277	Horror Mage
+277	Voltaic Sorcerer
 278	Jungle Hunter Shaman
 279	Tree Hunter Shaman
 280	Jungle Devil Shaman
@@ -370,7 +370,7 @@
 368	Dark Wanderer
 369	a Trap
 370	FLYING POLAR BUFFALO ERROR
-371	Glacial Spire
+371	Thunder Spire
 372	Fire Tower
 373	Slinger
 374	Spear Cat
@@ -378,18 +378,18 @@
 376	Hell Slinger
 377	FLYING POLAR BUFFALO ERROR
 378	FLYING POLAR BUFFALO ERROR
-379	Bone Mage
-380	Bone Mage
-381	Bone Mage
-382	Bone Mage
+379	Frozen Warlock
+380	Frozen Warlock
+381	Sir Gorash
+382	Frozen Warlock
 383	Reignited Mage
 384	Reignited Mage
 385	Reignited Mage
 386	Reignited Mage
-387	Horror Mage
-388	Horror Mage
-389	Horror Mage
-390	Horror Mage
+387	Voltaic Sorcerer
+388	Voltaic Sorcerer
+389	Voltaic Sorcerer
+390	Voltaic Sorcerer
 391	Hell Bovine
 392	Stained Glass Window
 393	Stained Glass Window
@@ -479,7 +479,7 @@
 477	Blood Witch
 478	Hell Witch
 479	Overseer
-480	Lasher
+480	
 481	Overlord
 482	Blood Boss
 483	Hell Whip
@@ -622,10 +622,10 @@
 620	Returned Mage
 621	Reignited Mage
 622	Returned Mage
-623	Horror Mage
-624	Bone Mage
-625	Horror Mage
-626	Horror Mage
+623	Voltaic Sorcerer
+624	Frozen Warlock
+625	Voltaic Sorcerer
+626	Voltaic Sorcerer
 627	Huntress
 628	Saber Cat
 629	Cave Leaper
@@ -666,7 +666,7 @@
 664	Soul Killer Shaman
 665	Temple Guard
 666	Temple Guard
-667	Tormentor
+667	Guardian
 668	Unraveler
 669	Horadrim Ancient
 670	Horadrim Ancient
@@ -723,7 +723,7 @@
 721	Intruder
 722	Skull Ape
 723	Duskpelt Beast
-724	Umbra
+724	Marsh Gibbon
 725	Gargoyle Ape
 726	Temple Guard
 727	Skeleton Archer
@@ -732,7 +732,7 @@
 730	Reignited Archer
 731	Horror Archer
 732	Balrog
-733	Tormentor
+733	Guardian
 734	Infernal Defiler
 735	Persecutor
 736	Cobalt Scarab
@@ -740,7 +740,7 @@
 738	Opal Scarab
 739	Emerald Scarab
 740	Diamond Scarab
-741	Prowler Priestess
+741	ProwlerPriestess
 742	Desert Priestess
 743	Feline Worshiper
 744	Lacuni Fighter
@@ -751,7 +751,7 @@
 749	Acid Prince
 750	Ice Prince
 751	Zombie
-752	Desecrator
+752	Hungry Dead
 753	Vault Specter
 754	Ghoul
 755	Castigator
@@ -794,7 +794,7 @@
 792	Summit Aggressor
 793	Stone Warlord
 794	Granite King
-795	Hidden One
+795	Hidden
 796	Fata Morgana
 797	Stalker
 798	Banshee
@@ -821,7 +821,7 @@
 819	Crystal Lord
 820	Sapphire Lord
 821	Ravenous Titan
-822	Ashen Titan
+822	Sasquatch
 823	Burning Titan
 824	Cruel Titan
 825	Frostborn Titan
@@ -852,28 +852,28 @@
 850	Depraved Rogue
 851	Dark Huntress
 852	Assassin
-853	Blood Rogue
+853	Sanguine Rogue
 854	Vampiress
 855	Depraved Rogue
 856	Dark Huntress
 857	Flesh Huntress
-858	Blood Rogue
+858	Sanguine Rogue
 859	Vampiress
 860	Depraved Rogue
 861	Dark Huntress
 862	Flesh Huntress
-863	Blood Rogue
+863	Sanguine Rogue
 864	Vampiress
-865	Bone Mage
+865	Frozen Warlock
 866	Bone Warlock
 867	Bone Sorcerer
 868	Reignited Mage
 869	Reignited Warlock
 870	Reignited Sorcerer
-871	Horror Mage
+871	Voltaic Sorcerer
 872	Horror Warlock
 873	Horror Sorcerer
-874	Tarantula
+874	Giant Tarantula
 875	Sand Devil
 876	Flame Weaver
 877	Soul Spider
@@ -895,7 +895,7 @@
 893	Rust Claw
 894	Corrosive Beast
 895	Rust Creeper
-896	Caustic Bugbear
+896	Caustic Ravager
 897	Bloodclad Vulture
 898	Oasis Guard
 899	Bone Gasher
@@ -915,7 +915,7 @@
 913	Azure Drake
 914	Fiend
 915	Blink
-916	Foulwing
+916	Gloom
 917	Imp
 918	Dancing Light
 919	Ghost Flame
@@ -946,7 +946,7 @@
 944	Harvester
 945	Shenk the Overseer
 946	Tal Rasha
-947	Red Storm
+947	Twisted Sultanah
 948	Blighter
 949	Twilight Archon
 950	Son of Azmodan
@@ -989,9 +989,9 @@
 988	Guardian Spirit
 989	Defender Spirit
 990	Protector Spirit
-992	Bone Mage
+992	Frozen Warlock
 993	Reignited Mage
-994	Horror Mage
+994	Voltaic Sorcerer
 995	The Prophet
 996	High Cleric
 998	Nun of Vanity
@@ -1084,7 +1084,7 @@
 1100	FLYING POLAR BUFFALO ERROR
 1101	Initiate/Acolyte
 1102	Shadow Master
-1103	Scourge
+1103	Servant of Valor
 1104	Ethereal
 1105	Zakarum's Avatar
 1107	Treewarden
@@ -1105,8 +1105,8 @@
 1126	Mind Warrior
 1127	Armageddon Knight
 1128	Ghost Phoenix
-1129	Witherer
-1130	Jagged Toad
+1129	SteelCrusher
+1130	Riftborn
 1131	Dirge
 1132	Void Archon
 1133	Brood Mother
@@ -1146,13 +1146,13 @@
 1167	Ifrit
 1168	Hellion
 1169	Overseer
-1175	Scavenger
+1175	Divebomb
 1176	Nightmare
 1177	Quill Bear
 1178	Frost Raptor
 1179	Bonegrinder
 1180	Corruptor Archer
-1181	Corruptor Warrior
+1181	CorruptorZ
 1182	Lament
 1183	Corpse Nester
 1184	Warforged Shaman
@@ -1163,7 +1163,7 @@
 1189	Corruptor Mage
 1190	Daystar
 1191	Desert Scarab
-1192	Black Cat
+1192	Dreamstealer
 1193	Shredded Soul
 1194	Ice Clan
 1195	Jade Creeper
@@ -1208,7 +1208,7 @@
 1236	Cobra
 1237	Lurker Toad
 1238	Thunderbolt
-1239	Trap Rat
+1239	Wereowl
 1240	Iced Soul
 1241	Glacier Lord
 1242	Horned Leviathan
@@ -1232,8 +1232,8 @@
 1260	Mind Warrior
 1261	Ni Va
 1262	Admonisher
-1263	Witherer
-1264	Jagged Toad
+1263	SteelCrusher
+1264	Riftborn
 1265	Dirge
 1266	Void Archon
 1267	Corruptor Warlock
@@ -1283,7 +1283,7 @@
 1311	Cenobite
 1312	Daystar
 1313	Desert Scarab
-1314	Black Cat
+1314	Dreamstealer
 1315	Shredded Soul
 1316	Gnoll
 1317	Jade Creeper
@@ -1298,7 +1298,7 @@
 1326	Cobra
 1327	Lurker Toad
 1328	Thunderbolt
-1329	Trap Rat
+1329	Wereowl
 1330	Magma Drake
 1331	Annihilator
 1332	Warforged Shaman
@@ -1317,7 +1317,7 @@
 1345	Intruder
 1346	Skull Ape
 1347	Duskpelt Beast
-1348	Umbra
+1348	Marsh Gibbon
 1349	Gargoyle Ape
 1350	Temple Guard
 1351	Skeleton Archer
@@ -1326,7 +1326,7 @@
 1354	Reignited Archer
 1355	Horror Archer
 1356	Balrog
-1357	Tormentor
+1357	Guardian
 1358	Infernal Defiler
 1359	Persecutor
 1360	Cobalt Scarab
@@ -1334,7 +1334,7 @@
 1362	Opal Scarab
 1363	Emerald Scarab
 1364	Diamond Scarab
-1365	Prowler Priestess
+1365	ProwlerPriestess
 1366	Desert Priestess
 1367	Feline Worshiper
 1368	Lacuni Fighter
@@ -1345,7 +1345,7 @@
 1373	Acid Prince
 1374	Ice Prince
 1375	Zombie
-1376	Desecrator
+1376	Hungry Dead
 1377	Vault Specter
 1378	Ghoul
 1379	Castigator
@@ -1388,7 +1388,7 @@
 1416	Summit Aggressor
 1417	Stone Warlord
 1418	Granite King
-1419	Hidden One
+1419	Hidden
 1420	Fata Morgana
 1421	Stalker
 1422	Banshee
@@ -1415,7 +1415,7 @@
 1443	Crystal Lord
 1444	Sapphire Lord
 1445	Ravenous Titan
-1446	Ashen Titan
+1446	Sasquatch
 1447	Burning Titan
 1448	Cruel Titan
 1449	Frostborn Titan
@@ -1446,7 +1446,7 @@
 1474	Depraved Rogue
 1475	Dark Huntress
 1476	Assassin
-1477	Blood Rogue
+1477	Sanguine Rogue
 1478	Vampiress
 1479	Centaur
 1480	Doom Hunter
@@ -1456,22 +1456,22 @@
 1484	Depraved Rogue
 1485	Dark Huntress
 1486	Flesh Huntress
-1487	Blood Rogue
+1487	Sanguine Rogue
 1488	Vampiress
-1489	Bone Mage
+1489	Frozen Warlock
 1490	Bone Warlock
 1491	Bone Sorcerer
 1492	Reignited Mage
 1493	Reignited Warlock
 1494	Reignited Sorcerer
-1495	Horror Mage
+1495	Voltaic Sorcerer
 1496	Horror Warlock
 1497	Horror Sorcerer
-1498	Tarantula
+1498	Giant Tarantula
 1499	Sand Devil
 1500	Flame Weaver
 1501	Soul Spider
-1502	Corpse Worm
+1502	Carrion Worm
 1503	Black Knight
 1504	Cultist
 1505	Succubus
@@ -1489,7 +1489,7 @@
 1517	Rust Claw
 1518	Corrosive Beast
 1519	Rust Creeper
-1520	Caustic Bugbear
+1520	Caustic Ravager
 1521	Bloodclad Vulture
 1522	Oasis Guard
 1523	Bone Gasher
@@ -1497,7 +1497,7 @@
 1525	Molting Torment
 1526	Scoria
 1527	Hellforged
-1528	Foulblooded
+1528	Pit Knight
 1529	Moon Wailer
 1530	Dark Accuser
 1531	Dark Magistrate
@@ -1509,7 +1509,7 @@
 1537	Azure Drake
 1538	Fiend
 1539	Blink
-1540	Foulwing
+1540	Gloom
 1541	Imp
 1542	Dancing Light
 1543	Ghost Flame
@@ -1529,10 +1529,10 @@
 1557	Achondrite Beast
 1558	Fell Pit Fiend
 1559	Mutilator
-1560	Foulblooded
+1560	Pit Knight
 1561	Moon Wailer
 1562	Serafiend
-1563	Glowing Fungus
+1563	GlowingFungus
 1564	Swamp Scion
 1565	Cultist
 1566	Heretic
@@ -1545,7 +1545,7 @@
 1573	The Cow King
 1574	Elder Guardian
 1575	Behemoth
-1576	Raider
+1576	Desert Hulk
 1577	Hellpit Hunter
 1578	Asatruar
 1579	Gothi
@@ -1563,7 +1563,7 @@
 1591	Condemned
 1592	Sinner
 1593	Cenobite
-1594	Fetid Delver
+1594	Siegebreaker
 1595	Admonisher
 1596	Belial, Lord of Lies
 1597	Pit Stone
@@ -1652,7 +1652,7 @@
 1683	Glacier Stormlord
 1684	Serafiend
 1685	Deathfire Bearer
-1686	Trap Rat
+1686	Wereowl
 1687	Treewarden
 1688	Rampagor
 1689	Skeletal Flayer
@@ -1663,7 +1663,7 @@
 1694	Veil King
 1695	Armageddon Knight
 1696	Fear Bomb Totem
-1697	Trap Rat
+1697	Wereowl
 1698	Midnight Fairy
 1699	Clawstorm Terror
 1700	Landmass
@@ -1712,7 +1712,7 @@
 1744	Black Cat Familiar
 1745	Diablo
 1746	Scorcher
-1747	Pig!
+1747	Boar
 1748	Detonator
 1749	Hypnotoad
 1750	Astral Guardian
@@ -1744,7 +1744,7 @@
 1782	Ni Va
 1785	Searing Vermin
 1786	Mahasattva
-1787	Corpse Worm
+1787	Carrion Worm
 1788	Slimer
 1789	Ravager
 1790	Sewer Troll
@@ -1757,7 +1757,7 @@
 1797	Gale Forger
 1798	Fireblood
 1799	Jade Creeper
-1800	Trap Rat
+1800	Wereowl
 1801	Onyx Knight
 1802	Achondrite Beast
 1803	Serafiend
@@ -1774,7 +1774,7 @@
 1815	Mahasattva
 1816	Fallen Sarandesh
 1817	Sleeping Cave Snapper
-1818	Fetish Oppressor
+1818	Fetish Rocketeer
 1819	Silverbolt
 1821	Blur
 1822	Blur
@@ -1822,7 +1822,7 @@
 1879	The Dark Countess
 1880	Radament the Fallen
 1881	Jazreth the Deceived
-1882	Lachdanan
+1882	Sankekur the Revered
 1883	Zhar the Mad
 1884	Deathshade Fleshmaul
 1885	Nihlathak the Treacherous
@@ -1889,17 +1889,17 @@
 1968	Druid Student
 1969	Corrupted Seer
 1970	Druid Student
-1971	Corrupted Trap Rat
+1971	Corrupted Wereowl
 1972	Druid Student
 1973	Corrupted Werebear
 1974	Druid Student
 1975	Corrupted Hunter
-1976	Worldstone Guardian
+1976	Sapling Guard
 1977	Void Corruptor
-1978	Void Minion
-1979	Subjugator
-1980	Depraved Scout
-1981	Soul Gaoler
+1978	Scytheclaw
+1979	ScosBloodlord
+1980	Spriggan
+1981	Dryad Spawn
 1982	Bul Kathos
 1983	Vasily
 1984	Rhino Beetle
@@ -2089,7 +2089,7 @@
 2216	Goliath
 2217	Landmass
 2218	Howling Spirit
-2219	Desecrator
+2219	Hungry Dead
 2220	Bone Archer
 2221	Reignited Archer
 2222	Horror Archer
@@ -2102,7 +2102,7 @@
 2229	Citizen
 2230	Silverbolt
 2231	Ravenous Titan
-2232	Ashen Titan
+2232	Sasquatch
 2233	Burning Titan
 2234	Cruel Titan
 2235	\orange;Abomination
@@ -2130,7 +2130,7 @@
 2257	Sleeping Cave Snapper
 2258	Death's Mechanic
 2259	Returned Warrior
-2260	Prowler Priestess
+2260	ProwlerPriestess
 2261	Edyrem
 2262	Bone Sorcerer
 2263	Reignited Sorcerer
@@ -2164,7 +2164,7 @@
 2291	Onyx Knight
 2292	Blighter
 2293	Wraith
-2294	Foulwing
+2294	Gloom
 2295	Templar
 2296	Deathfire Bearer
 2297	Infernal Defiler
@@ -2172,7 +2172,7 @@
 2299	Living Flame
 2300	Glacier Lord
 2301	Glacier Stormlord
-2302	Trap Rat
+2302	Wereowl
 2303	Magineer
 2304	Demonflesh Surrogate
 2305	Vorpal Elytron
@@ -2212,10 +2212,10 @@
 2339	Achondrite Beast
 2340	Necrobot
 2341	Direwolf Rider
-2342	Fetid Delver
+2342	Siegebreaker
 2343	Ice King
 2344	Banshee
-2345	Black Cat
+2345	Dreamstealer
 2346	Imp
 2347	Night Clan
 2348	The Pack
@@ -2244,8 +2244,8 @@
 2371	Mind Warrior
 2372	Armageddon Knight
 2373	Ghost Phoenix
-2374	Witherer
-2375	Jagged Toad
+2374	SteelCrusher
+2375	Riftborn
 2376	Dirge
 2377	Void Archon
 2378	Brood Mother
@@ -2288,7 +2288,7 @@
 2415	Frost Raptor
 2416	Bonegrinder
 2417	Corruptor Archer
-2418	Corruptor Warrior
+2418	CorruptorZ
 2419	Lament
 2420	Corpse Nester
 2421	Warforged Shaman
@@ -2299,7 +2299,7 @@
 2426	Corruptor Mage
 2427	Daystar
 2428	Desert Scarab
-2429	Black Cat
+2429	Dreamstealer
 2430	Shredded Soul
 2431	Ice Clan
 2432	Jade Creeper
@@ -2353,21 +2353,21 @@
 2480	Erinys
 2481	Erinys
 2482	Erinys
-2483	Colossal Tunneler
-2484	Colossal Tunneler
-2485	Colossal Tunneler
-2486	Colossal Tunneler
-2487	Colossal Tunneler
-2488	Colossal Tunneler
-2489	Colossal Tunneler
-2490	Colossal Tunneler
-2491	Colossal Tunneler
-2492	Colossal Tunneler
-2493	Colossal Tunneler
-2494	Colossal Tunneler
-2495	Colossal Tunneler
-2496	Colossal Tunneler
-2497	Colossal Tunneler
+2483	Colossal Tunneller
+2484	Colossal Tunneller
+2485	Colossal Tunneller
+2486	Colossal Tunneller
+2487	Colossal Tunneller
+2488	Colossal Tunneller
+2489	Colossal Tunneller
+2490	Colossal Tunneller
+2491	Colossal Tunneller
+2492	Colossal Tunneller
+2493	Colossal Tunneller
+2494	Colossal Tunneller
+2495	Colossal Tunneller
+2496	Colossal Tunneller
+2497	Colossal Tunneller
 2498	Sinew Shaper
 2499	Sinew Shaper
 2500	Sinew Shaper
@@ -2668,3 +2668,576 @@
 2802	Trophy Seeker
 2803	Decoy Goblin
 2805	Herder Goblin
+2806	Herder Goblin
+2807	Zombie
+2808	Quill Rat
+2809	Fallen One
+2810	Sasquatch
+2811	Fallen Worshipper
+2812	Enthralled Shaman
+2813	Zombie
+2814	Skeleton Archer
+2815	Skeleton Warrior
+2816	Corrupted Necromancer
+2817	Enslaved Demon
+2818	Corrupted Necromancer
+2819	Rogue Scout
+2820	Starving Wolf
+2821	Fallen
+2822	Brute
+2823	Fallen One
+2824	Vampire Bat
+2825	Fallen Shaman
+2826	Fallen Necromancer
+2827	Skeletal Fallen
+2828	Fallen
+2829	Cog
+2830	Fallen Warleader
+2831	Fallen Alpha
+2832	Carrion Worm
+2833	Rogue Archer
+2834	Hungry Dead
+2835	Plague Bearer
+2836	Plague Bearer
+2837	Arach
+2838	Reignited Mage
+2839	Chillbones
+2840	Assassin
+2841	Rakanishu
+2842	Steelfur Tamer
+2843	Spirit Bear
+2844	Shrieker
+2845	Cave Snapper
+2846	Moon Clan
+2847	Moon Clan
+2848	Spike Fiend
+2849	Apparition
+2850	Dire Wolf
+2851	Spirit Wolf
+2852	Warforged Shaman
+2853	Mire Gorger
+2854	Moon Clan
+2855	Fallen Shaman
+2856	Fallen Necromancer
+2857	Fallen Warleader
+2858	Death Gnat
+2859	Reignited Archer
+2860	Reignited Warrior
+2861	Rust Fang
+2862	Griswold
+2863	Blood Clan
+2864	Blood Clan
+2865	Blood Clan Mystic
+2866	Bloodfire Rogue
+2867	Sanguine Rogue
+2868	Sanguine Rogue Archer
+2869	Thorn Beast
+2870	Cultist
+2871	Black Rogue
+2872	Black Rogue Archer
+2873	Death Clan Sacrificer
+2874	Death Clan
+2875	Black Knight
+2876	Rogue Spellbreaker
+2877	Khanduras Priest
+2878	Khanduras Follower
+2879	Heretic
+2880	Corrupted Blade
+2881	Ent
+2882	Ent
+2883	Black Jailor
+2884	Reignited Mage
+2885	Frozen Warlock
+2886	Voltaic Sorcerer
+2887	Leoric's Centurion
+2888	Leoric's Discens
+2889	Leoric's Munifex
+2890	Leoric the Skeleton King
+2891	Rust Claw
+2892	Misshapen
+2893	Blighter
+2894	Broken Soul
+2895	Dried Corpse
+2896	Twicedamned
+2897	Twicedamned
+2898	Hollow One
+2899	Nomad Scout
+2900	Scorpion
+2901	Sand Maggot Hatchling
+2902	Carrion Bird
+2903	Desert Hulk
+2904	Sand Maggot
+2905	Sand Maggot Egg
+2906	Lacuni Javelinier
+2907	Nomad Warrior
+2908	Soverign of the Sands
+2909	Blunderbore
+2910	Unskinned Magister
+2911	Voltaic Sorcerer
+2912	Arach
+2913	Bone Gnawer
+2914	Vizjerei Elder
+2915	Ancient Wight
+2916	Nomad Seer
+2917	Gestating Lamprey
+2918	Lamprey Egg
+2919	Lamprey Young
+2920	Lacuni Javelinier
+2921	Lacuni Soldier
+2922	Mindleech
+2923	Lamprey Egg
+2924	Desert Scarab
+2925	Dreamstealer
+2926	Stinging Swarm
+2927	Black Locusts
+2928	Claw Viper
+2929	Soverign of the Sands
+2930	Blunderbore
+2931	Hellscorched
+2932	Salamander
+2933	Slithering Hexer
+2934	Vile Hatchling
+2935	Clutch Mother
+2936	Fangskin
+2937	Unclean Shrine
+2938	Unclean Shrine
+2939	Unclean Shrine
+2940	Corrupted Consort
+2941	Invader
+2942	Arcane Ape
+2943	Malevolent Spirit
+2944	Shapeless Hunger
+2945	Arcane Clan
+2946	Arcane Clan
+2947	Condemned Vizjerei
+2948	Pyromancer
+2949	Lava Gorger
+2950	Rockfall
+2951	Fen Stalker
+2952	Arachnid Horror
+2953	Tree Lurker
+2954	Bilespewer
+2955	Spiderling
+2956	Gray Widow
+2957	Broodmother
+2958	Broodling
+2959	Jungle Hunter
+2960	Jungle Hunter
+2961	Treewarden
+2962	Sszark the Burning
+2963	Jungle Vigilant
+2964	Acid Prince
+2965	Flayer
+2966	Flayer
+2967	Flayer Shaman
+2968	Fetish Rocketeer
+2969	Sunken Horror
+2970	Sunken Horror
+2971	Deep Dweller
+2972	Drowned Dead
+2973	Drowned Magus
+2974	Frozen Warlock
+2975	Ember Prince
+2976	Pygmy Plunderer
+2977	Pygmy Plunderer
+2978	Pygmy Ritualist
+2979	Witch Doctor Endugu
+2980	Drowned Magus
+2981	Stormtree
+2982	Cantor
+2983	Faithful
+2984	Faithful
+2985	Pygmy Plunderer
+2986	Heirophant
+2987	Zealot
+2988	Exalted One
+2989	Devoted
+2990	Jungle Vulture
+2991	Twisted Councillor
+2992	Corrupted Zakarumite
+2993	High Priestess
+2994	Disciple of Hatred
+2995	Hellish Invader
+2996	Ismail Vilehand
+2997	Geleb Flamefinger
+2998	Toorc Icefist
+2999	Balrog
+3000	Harvested Soul
+3001	Lament
+3002	Shapeless Hatred
+3003	Corpse Devourer
+3004	Fireblood
+3005	Desecrator Knight
+3006	Sacrifical Lamb
+3007	Pit Lord
+3008	Flamebound
+3009	Moloch
+3010	Toxic Temptress
+3011	Rotspawn
+3012	Doom Knight
+3013	Deathfire Bearer
+3014	Reignited Mage
+3015	Fallen Hero
+3016	Derelict Marksman
+3017	Condemned
+3018	Burning Remnant
+3019	Void Archon
+3020	Electrogeist
+3021	Oblivion Summoner
+3022	Condemned
+3023	Pit Lord
+3024	Oblivion Knight
+3025	Oppressor
+3026	Bloodwitch
+3027	Knight of War
+3028	Caustic Ravager
+3029	Razor Spine
+3030	Cruciator
+3031	Battlefield Scavenger
+3032	Ghost Phoenix
+3033	Fell Pit Fiend
+3034	Mutilator
+3035	Siegebreaker
+3036	Admonisher
+3037	Death Mauler
+3038	Corrupted Barbarian
+3039	Corrupted Barbarian
+3040	Riftborn
+3041	Snow Drifter
+3042	Windwalker
+3043	Animated Ice
+3044	Frost Giant
+3045	Glacial Giant
+3046	Son of Arreat
+3047	Ice Elemental
+3048	Arctic Bat
+3049	Frost Raptor
+3050	Returned Archer
+3051	Returned Warrior
+3052	Corruptor Archer
+3053	Minotaur
+3054	Frostborn Witch
+3055	Thunderbolt
+3056	Silver Tyrant
+3057	Overseer
+3058	Soul Reaper
+3059	Doomed Minion
+3060	Cabalist
+3061	Hellish Burrower
+3062	Horned Guard
+3063	Overlord
+3064	Hell Whip
+3065	Pit Knight
+3066	Magistrate
+3067	Serafiend
+3068	Moon Wailer
+3069	Fallen Clansman
+3070	Souless Husk
+3071	Rotten Knight
+3072	Necromancer Apprentice
+3073	Failed Experiment
+3074	Cog
+3075	Colenzo the Annihilator
+3076	Firestorm
+3077	Poison Spewer
+3078	Sir Gorash
+3079	Navi
+3080	Sir Gorash
+3081	Ventar the Unholy
+3082	Hellish Invader
+3083	Lister the Tormentor
+3084	Weavess
+3085	Nomad Seer
+3086	Pyromancer
+3087	Graywar the Slayer
+3088	Blackash the Burning
+3089	Admonisher
+3090	Craven the Shunned
+3091	Souless Husk
+3092	Snow Drifter
+3093	Disciple of Hatred
+3094	Bremm Sparkfist
+3095	Corruptor Warlock
+3096	Returned Mage
+3097	Ascended
+3098	Quill Bear
+3099	Wereowl
+3100	Carver
+3101	Undead Lancer
+3102	Undead Scout
+3103	Corrupted Sister
+3104	Putrid Chevalier
+3105	Fallen
+3106	Fallen Shaman
+3107	Web Weaver
+3108	Corrupted Sister
+3109	Rockfall
+3110	Rockfall
+3111	Undead Marksman
+3112	Dead Shot
+3113	Arachnid Leaper
+3114	Arachnon
+3115	Hidden
+3116	Web Weaver
+3117	Vermin
+3118	Vermin Butcher
+3119	The Pack
+3120	Living Blood
+3121	Vermin Butcher
+3122	Corrupted Sister
+3123	Undead Lancer
+3124	Undead Scout
+3125	Undead Marksman
+3126	Dead Shot
+3127	Illusionist
+3128	Unseen
+3129	Carver Shaman
+3130	Swamp Scion
+3131	Carver Elder
+3132	Carver Acolyte
+3133	Cave Snapper
+3134	Illusionist
+3135	Unseen
+3136	Scavenger
+3137	Forest Ancient
+3138	Boar
+3139	Bone Gnasher
+3140	Toxic Fungus
+3141	Preying Mantis
+3142	Marsh Gibbon
+3143	Simian Rex
+3144	Bloodbound Warrior
+3145	Bloodbound Archer
+3146	Bloodbound Demon
+3147	Blackened One
+3148	Bloated Host
+3149	Stinging Swarm
+3150	Khazra Blood Caller
+3151	Mangled Flesh
+3152	Mangled Flesh
+3153	Hidden
+3155	Khazra Archer
+3156	Khazra Archer
+3157	Khazra Archer
+3158	Khazra Archer
+3159	Khazra Archer
+3160	Foulblooded
+3161	Remade One
+3162	Khazra Flesh Mender
+3163	Khazra Bruiser
+3164	Khazra Flesh Mender
+3165	Fleshless One
+3166	Bone Gasher
+3167	Wasting One
+3168	Ancient Vampire
+3169	Arachnon
+3170	Skeleton Khan
+3171	Walker
+3172	Phantom
+3173	Eternal Prisoner
+3174	Living Husk
+3175	Hellion Archer
+3176	Hellion Warrior
+3177	Phantasm
+3178	Lion
+3179	Eastern Tribe
+3180	Eastern Tribe
+3181	Eastern Tribe
+3182	Eastern Elder
+3183	Daystar
+3184	Spectral Assassin
+3185	Yataghan
+3186	King of Aranoch
+3187	Twilight Tribe
+3188	Twilight Tribe
+3189	Twilight Tribe
+3190	Twilight Elder
+3191	Fire Drake
+3192	Blade Adder
+3193	Ghoul
+3194	Toxotes
+3195	Phantom
+3196	Phantasm
+3197	Living Husk
+3198	Hellion Archer
+3199	Noxious Viper
+3200	Steel Serpent
+3201	Corpse Crawler
+3202	Undead Balrog
+3203	Skeleton Khan
+3204	Wight
+3205	Frigid Leech
+3206	Hellion Warrior
+3207	Carrion Worm
+3208	Arcane Witch
+3209	Nether Gargoyle
+3210	Hexwing
+3211	Horazon's Opus
+3212	Horazon's Opus
+3213	Forgotten Tribe
+3214	Forgotten Tribe
+3215	Forgotten Tribe
+3216	Forgotten Elder
+3217	Living Flame
+3218	Eternal Ember
+3219	Castigator
+3220	Reanimated Archer
+3221	Reanimated Warrior
+3222	Besieger
+3223	Concubine
+3225	Death Dancer
+3226	Gorged Aphid
+3227	Hive Drone
+3228	Hive Overseer
+3229	Incubating Egg
+3230	Young Maggot
+3231	Hive Mother
+3232	Arthropod
+3233	Jungle Mantis
+3234	Hive Overseer
+3235	Black Widow
+3236	Spiderling
+3237	Hive Overseer
+3238	Black Widow
+3239	Spiderling
+3240	Arthropod
+3241	Jungle Mantis
+3242	Broodmother
+3243	Bloated Host
+3244	Broodling
+3245	Swamp Giant
+3246	Habelia
+3247	Lizardman
+3248	Lizardman Halbedier
+3249	Lizardman Retiarius
+3250	Lizardman Witch Doctor
+3251	Earthshaker
+3252	Ravager
+3253	Lizardman
+3254	Lizardman Halbedier
+3255	Lizardman Retiarius
+3256	Lizardman Witch Doctor
+3257	Ravager
+3258	Gothi
+3260	Flayer
+3261	Flayer Survivor
+3262	Flayer Survivor
+3263	Flayer Survivor
+3264	Skincarver
+3265	Bleeder
+3266	Mundunugu
+3267	Enslaved Giant
+3268	Ruin Scrounger
+3269	Indoctrinated Zealot
+3270	Hatred Incarnate
+3271	Mephisto's Turned
+3272	Mephisto's Vanguard
+3273	Mephisto's Cabalist
+3274	Mephisto's Cabalist
+3275	Twisted Councillor
+3276	Vermin
+3277	Vermin Butcher
+3278	The Pack
+3279	Vermin Butcher
+3280	Vermin
+3281	Vermin Butcher
+3282	The Pack
+3283	Vermin Butcher
+3284	Mephisto's Turned
+3285	Mephisto's Vanguard
+3286	Mephisto's Cabalist
+3287	Hag
+3288	Coven Mistress
+3289	Gloom
+3290	Mud Runner
+3291	Grimspike
+3292	Volcanic Charger
+3293	Rotfiend
+3294	Hellish Familiar
+3295	Enslaved
+3296	Flayed One
+3297	Flesh Harvester
+3298	Soul Reaver
+3299	Damned Archer
+3300	Ichor Maw
+3301	Ichor Maw
+3302	Corpulent
+3303	Corpulent
+3304	Hellish Vixen
+3305	Toxotes
+3306	Pandemoneous
+3307	Obsidian Watcher
+3308	Baron of Hell
+3309	Dark Sovereign
+3310	Foul Crow
+3311	Doom Ape
+3312	Siegebreaker
+3313	Demon Imp
+3314	Demon Rascal
+3315	Demon Gremlin
+3316	Demon Trickster
+3317	Siege Beast
+3318	Crush Beast
+3319	Blood Bringer
+3320	Gore Bearer
+3321	Siege Beast
+3322	Crush Beast
+3323	Blood Bringer
+3324	Gore Bearer
+3325	White Bear
+3326	Arreat Terror
+3327	Thrall of Destruction
+3328	Plaguetusk
+3329	Mesa Infestor
+3330	Weredemon
+3331	Contagion Carrier
+3332	Sky Stalker
+3333	Frozen Terror
+3334	Frozen Scourge
+3335	Frigid Denizen
+3336	Preserved Sentinel
+3337	Demonic Harpy
+3338	Ice Spitter
+3339	Fogmaster
+3340	Risen Warrior
+3341	Risen Warlord
+3342	Rotted Husk
+3343	Iron Servant
+3344	Obsidian Protector
+3345	Beholder
+3346	Dread Watcher
+3347	Unrighteous Hound
+3348	Frigid Denizen
+3349	White Bear
+3350	Arreat Terror
+3351	Frozen Terror
+3352	Frozen Scourge
+3353	Weredemon
+3354	Sky Stalker
+3355	Preserved Sentinel
+3356	Hexwing
+3357	Bloodbound Warrior
+3358	Bloodbound Archer
+3359	Bloodbound Demon
+3360	Blackened One
+3361	Wereowl
+3362	Bloated Host
+3363	Phantasm
+3364	Toxotes
+3365	Steel Serpent
+3366	Earthshaker
+3367	Bleeder
+3368	Coven Mistress
+3369	Ichor Maw
+3370	Corpulent
+3371	Dark Sovereign
+3372	Siegebreaker
+3373	Obsidian Protector
+3374	Reanimated Warrior
+3375	Reanimated Archer
+3376	Walker
+3377	Eternal Prisoner
+3378	Undead Lancer
+3379	Undead Scout
+3380	Dried Corpse
+3381	Undead Marksman

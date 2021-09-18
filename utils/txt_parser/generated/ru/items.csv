@@ -608,7 +608,7 @@ w99	Avenger Guard (3)		2	2	0		23	263	0									invba5				phlm,tier		4
 152	Long Staff (1)		1	4	1		1	0	8		1			4	5			invlst	0	0	6	staf,tier	1	-1
 153	Gnarled Staff (1)		1	4	1		2	0	17		1			5	6			invcst	0	0	6	staf,tier	1	-1
 154	Battle Staff (1)		1	4	1		3	0	25		1			5	8			invbst	0	0	6	staf,tier	1	-1
-155	War Staff (1)		2	4	1		5	0	34		1			7	9			invwst	0	0	6	staf,tier	1	-1
+155	War Staff (1)		2	4	1		5	0	46		1			7	9			invwst	0	0	6	staf,tier	1	-1
 156	Bardiche (1)		2	4	1		0	17	1		1			2	6			invbar	0	16	0	pole,tier	1	-1
 157	Voulge (1)		2	4	1		1	33	5		1			2	7			invvou	0	16	0	pole,tier	1	-1
 158	Scythe (1)		2	4	1		3	49	49		1			2	11			invscy	0	0	15	scyh,tier	1	-1
@@ -632,9 +632,9 @@ w99	Avenger Guard (3)		2	2	0		23	263	0									invba5				phlm,tier		4
 1@4	Viper Bow (Sacred)		2	3	1		30	0	660		1			77	83			invsbbu	0	0	19	sdbw	1	5
 1@7	Ida (4)		2	3	1		27	421	0			34	40					invbsdu	0	14	0	bswd,tier	1	4
 1@8	Kriegsmesser (1)		2	3	1		6	96	0			7	9					inv9lsu	0	14	0	bswd,tier	1	4
-1@9	Bonebreaker (2)		1	3	1		11	61	0			9	12					invspcu	0	11	0	pclb,tier	1	3
+1@9	Bonebreaker (2)		1	3	1		11	61	0			9	12					invspcu	0	14	0	pclb,tier	1	3
 1@@	War Axe (Sacred)		2	3	1		30	581	0			46	56					invwax	0	11	0	qaxe	1	-1
-1@A	Goedendag (3)		1	3	1		21	169	0			24	32					inv7mas	0	11	0	pmac,tier	1	3
+1@A	Goedendag (3)		1	3	1		21	169	0			24	32					inv7mas	0	14	0	pmac,tier	1	3
 1@B	Angel Star (Sacred)		1	3	1		30	602	0			55	58					invmstu	0	11	0	spmc	1	3
 1@E	Dart Thrower (4)		2	3	1		26	280	0		1			58	70			inv8lxu		16	0	nxbw,tier	1	2
 1@F	Trebuchet (1)		2	3	1		6	72	0		1			11	16			inv8mxu		16	0	nxbw,tier	1	2
@@ -702,7 +702,7 @@ w99	Avenger Guard (3)		2	2	0		23	263	0									invba5				phlm,tier		4
 289	Gnarled Staff (2)		1	4	1		11	0	29		1			12	15			invcst	0	0	6	staf,tier	1	-1
 28@	Morning Star (Sacred)		1	3	1		30	464	0			45	53					invmst	0	11	0	qmac	1	-1
 290	Battle Staff (2)		1	4	1		12	0	41		1			14	19			invbst	0	0	6	staf,tier	1	-1
-291	War Staff (2)		2	4	1		14	0	51		1			16	21			invwst	0	0	6	staf,tier	1	-1
+291	War Staff (2)		2	4	1		14	0	68		1			16	21			invwst	0	0	6	staf,tier	1	-1
 292	Bardiche (2)		2	4	1		8	38	19		1			8	10			invbar	0	16	0	pole,tier	1	-1
 293	Voulge (2)		2	4	1		11	59	25		1			8	17			invvou	0	16	0	pole,tier	1	-1
 294	Scythe (2)		2	4	1		12	79	79		1			8	25			invscy	0	0	15	scyh,tier	1	-1
@@ -717,7 +717,7 @@ w99	Avenger Guard (3)		2	2	0		23	263	0									invba5				phlm,tier		4
 2@5	Spatha (2)		1	3	1		11	71	0			11	12					invscmu	0	14	0	bswd,tier	1	4
 2@6	Backsword (3)		1	3	1		21	181	0			25	29					inv9sbu	0	16	0	bswd,tier	1	4
 2@7	Ida (Sacred)		2	3	1		30	552	0			50	53					invbsdu	0	14	0	sbsd	1	4
-2@A	Goedendag (4)		1	3	1		26	339	0			29	39					inv7mas	0	11	0	pmac,tier	1	3
+2@A	Goedendag (4)		1	3	1		26	339	0			29	39					inv7mas	0	14	0	pmac,tier	1	3
 2@C	Hand of God (2)		2	3	1		15	109	0		1			27	32			inv9gmu		16	0	pham,tier	1	3
 2@D	Needle Crossbow (3)		2	3	1		20	100	0		1			40	46			invlxbu		16	0	nxbw,tier	1	2
 2@E	Dart Thrower (Sacred)		2	3	1		30	395	0		1			85	86			inv8lxu		16	0	snxb	1	2
@@ -769,8 +769,8 @@ w99	Avenger Guard (3)		2	2	0		23	263	0									invba5				phlm,tier		4
 3@6	Backsword (4)		1	3	1		26	360	0			30	35					inv9sbu	0	16	0	bswd,tier	1	4
 3@7	Bronze Sword (1)		2	3	1		4	82	0			7	8					invlsdu	0	14	0	bswd,tier	1	4
 3@8	Kriegsmesser (2)		2	3	1		15	141	0			16	20					inv9lsu	0	14	0	bswd,tier	1	4
-3@9	Bonebreaker (3)		1	3	1		20	132	0			21	25					invspcu	0	11	0	pclb,tier	1	3
-3@A	Goedendag (Sacred)		1	3	1		30	574	0			53	54					inv7mas	0	11	0	spmc	1	3
+3@9	Bonebreaker (3)		1	3	1		20	132	0			21	25					invspcu	0	14	0	pclb,tier	1	3
+3@A	Goedendag (Sacred)		1	3	1		30	574	0			53	54					inv7mas	0	14	0	spmc	1	3
 3@D	Needle Crossbow (4)		2	3	1		25	200	0		1			49	56			invlxbu		16	0	nxbw,tier	1	2
 3@E	Stinger Crossbow (1)		2	3	1		4	63	0		1			12	16			invmxbu		16	0	nxbw,tier	1	2
 3@F	Trebuchet (2)		2	3	1		15	104	0		1			31	40			inv8mxu		16	0	nxbw,tier	1	2
@@ -803,7 +803,7 @@ w99	Avenger Guard (3)		2	2	0		23	263	0									invba5				phlm,tier		4
 424	Long Staff (3)		1	4	1		20	0	43		1			22	26			invlst	0	0	6	staf,tier	1	-1
 425	Gnarled Staff (3)		1	4	1		21	0	62		1			26	33			invcst	0	0	6	staf,tier	1	-1
 426	Battle Staff (3)		1	4	1		21	0	83		1			31	39			invbst	0	0	6	staf,tier	1	-1
-427	War Staff (3)		2	4	1		23	0	102		1			34	44			invwst	0	0	6	staf,tier	1	-1
+427	War Staff (3)		2	4	1		23	0	136		1			34	44			invwst	0	0	6	staf,tier	1	-1
 428	Bardiche (3)		2	4	1		18	86	39		1			18	22			invbar	0	16	0	pole,tier	1	-1
 429	Voulge (3)		2	4	1		20	123	45		1			18	37			invvou	0	16	0	pole,tier	1	-1
 42@	Pike (Sacred)		2	4	1		30	475	524		1			53	83			invpik	0	0	15	qspe	1	-1
@@ -878,7 +878,7 @@ w99	Avenger Guard (3)		2	2	0		23	263	0									invba5				phlm,tier		4
 492	Long Staff (4)		1	4	1		24	0	88		1			27	32			invlst	0	0	6	staf,tier	1	-1
 493	Gnarled Staff (4)		1	4	1		25	0	126		1			32	39			invcst	0	0	6	staf,tier	1	-1
 494	Battle Staff (4)		1	4	1		26	0	164		1			36	46			invbst	0	0	6	staf,tier	1	-1
-495	War Staff (4)		2	4	1		27	0	202		1			41	53			invwst	0	0	6	staf,tier	1	-1
+495	War Staff (4)		2	4	1		27	0	269		1			41	53			invwst	0	0	6	staf,tier	1	-1
 496	Bardiche (4)		2	4	1		22	176	71		1			22	26			invbar	0	16	0	pole,tier	1	-1
 497	Voulge (4)		2	4	1		25	248	79		1			21	44			invvou	0	16	0	pole,tier	1	-1
 498	Scythe (4)		2	4	1		26	319	319		1			21	62			invscy	0	0	15	scyh,tier	1	-1
@@ -889,7 +889,7 @@ w99	Avenger Guard (3)		2	2	0		23	263	0									invba5				phlm,tier		4
 4@4	Recurve Bow (2)		2	3	1		15	0	161		1			23	32			invswbu	0	0	19	dbow,tier	1	5
 4@5	Spatha (3)		1	3	1		21	149	0			22	26					invscmu	0	14	0	bswd,tier	1	4
 4@6	Backsword (Sacred)		1	3	1		30	526	0			48	51					inv9sbu	0	16	0	sbsd	1	4
-4@9	Bonebreaker (4)		1	3	1		25	269	0			24	31					invspcu	0	11	0	pclb,tier	1	3
+4@9	Bonebreaker (4)		1	3	1		25	269	0			24	31					invspcu	0	14	0	pclb,tier	1	3
 4@A	Angel Star (1)		1	3	1		4	62	0			5	8					invmstu	0	11	0	pmac,tier	1	3
 4@C	Hand of God (3)		2	3	1		24	211	0		1			56	65			inv9gmu		16	0	pham,tier	1	3
 4@D	Needle Crossbow (Sacred)		2	3	1		30	244	0		1			82	83			invlxbu		16	0	snxb	1	2
@@ -907,7 +907,7 @@ w99	Avenger Guard (3)		2	2	0		23	263	0									invba5				phlm,tier		4
 53@	Long Staff (Sacred)		1	4	1		30	0	203		1			56	58			invlst	0	0	6	qstf	1	-1
 54@	Gnarled Staff (Sacred)		1	4	1		30	0	218		1			59	62			invcst	0	0	6	qstf	1	-1
 55@	Battle Staff (Sacred)		1	4	1		30	0	234		1			61	66			invbst	0	0	6	qstf	1	-1
-56@	War Staff (Sacred)		2	4	1		30	0	250		1			63	69			invwst	0	0	6	qstf	1	-1
+56@	War Staff (Sacred)		2	4	1		30	0	333		1			63	69			invwst	0	0	6	qstf	1	-1
 57@	Bardiche (Sacred)		2	4	1		30	406	71		1			53	56			invbar	0	16	0	qpol	1	-1
 58@	Voulge (Sacred)		2	4	1		30	436	79		1			53	64			invvou	0	16	0	qpol	1	-1
 59@	Scythe (Sacred)		2	4	1		30	466	466		1			53	73			invscy	0	0	15	qscy	1	-1
@@ -917,7 +917,7 @@ w99	Avenger Guard (3)		2	2	0		23	263	0									invba5				phlm,tier		4
 5@6	Ida (1)		2	3	1		3	68	0			6	7					invbsdu	0	14	0	bswd,tier	1	4
 5@7	Bronze Sword (2)		2	3	1		13	124	0			15	18					invlsdu	0	14	0	bswd,tier	1	4
 5@8	Kriegsmesser (3)		2	3	1		25	276	0			34	40					inv9lsu	0	14	0	bswd,tier	1	4
-5@9	Bonebreaker (Sacred)		1	3	1		30	544	0			51	52					invspcu	0	11	0	spcb	1	3
+5@9	Bonebreaker (Sacred)		1	3	1		30	544	0			51	52					invspcu	0	14	0	spcb	1	3
 5@C	Hand of God (4)		2	3	1		28	466	0		1			60	82			inv9gmu		16	0	pham,tier	1	3
 5@D	Dart Thrower (1)		2	3	1		3	46	0		1			7	10			inv8lxu		16	0	nxbw,tier	1	2
 5@E	Stinger Crossbow (2)		2	3	1		14	93	0		1			32	39			invmxbu		16	0	nxbw,tier	1	2
@@ -938,7 +938,7 @@ w99	Avenger Guard (3)		2	2	0		23	263	0									invba5				phlm,tier		4
 6@4	Recurve Bow (3)		2	3	1		24	0	312		1			50	66			invswbu	0	0	19	dbow,tier	1	5
 6@5	Spatha (Sacred)		1	3	1		30	500	0			46	48					invscmu	0	14	0	sbsd	1	4
 6@8	Kriegsmesser (4)		2	3	1		29	543	0			40	48					inv9lsu	0	14	0	bswd,tier	1	4
-6@9	Goedendag (1)		1	3	1		3	46	0			5	7					inv7mas	0	11	0	pmac,tier	1	3
+6@9	Goedendag (1)		1	3	1		3	46	0			5	7					inv7mas	0	14	0	pmac,tier	1	3
 6@A	Angel Star (2)		1	3	1		13	101	0			13	19					invmstu	0	11	0	pmac,tier	1	3
 6@C	Hand of God (Sacred)		2	3	1		30	832	0		1			104	105			inv9gmu		16	0	sphm	1	3
 6@F	Trebuchet (4)		2	3	1		29	399	0		1			81	101			inv8mxu		16	0	nxbw,tier	1	2
@@ -977,8 +977,8 @@ w99	Avenger Guard (3)		2	2	0		23	263	0									invba5				phlm,tier		4
 8@3	Viper Bow (3)		2	3	1		24	0	281		1			46	60			invsbbu	0	0	19	dbow,tier	1	5
 8@4	Recurve Bow (Sacred)		2	3	1		30	0	725		1			78	85			invswbu	0	0	19	sdbw	1	5
 8@7	Bronze Sword (4)		2	3	1		27	482	0			37	45					invlsdu	0	14	0	bswd,tier	1	4
-8@8	Bonebreaker (1)		1	3	1		2	31	0			4	5					invspcu	0	11	0	pclb,tier	1	3
-8@9	Goedendag (2)		1	3	1		12	81	0			11	16					inv7mas	0	11	0	pmac,tier	1	3
+8@8	Bonebreaker (1)		1	3	1		2	31	0			4	5					invspcu	0	14	0	pclb,tier	1	3
+8@9	Goedendag (2)		1	3	1		12	81	0			11	16					inv7mas	0	14	0	pmac,tier	1	3
 8@A	Angel Star (3)		1	3	1		22	205	0			29	39					invmstu	0	11	0	pmac,tier	1	3
 8@E	Stinger Crossbow (4)		2	3	1		27	359	0		1			86	101			invmxbu		16	0	nxbw,tier	1	2
 90@	Katar (Sacred)		1	3	1		30	0	333			36	37					invktr		0	13	qh2h	1	6
@@ -1141,7 +1141,7 @@ wol	Wirt's Other Leg		1	3	1		0	0	0			13	18					invwol		0	0	wrtl	1	-1
 !@3	\dgreen;Evil Eye of the Glowing Blob	\blue;+15% к Получаемому Опыту\n+1 к Навыкам Класса\n\grey;Смешайте все 5 Глаз с Классовым Талисманом для Добавления Бонуса\n\nЗнак Монстра	1	1	2		0	0	0									evileye				thng		-1
 !@4	\dgreen;Evil Eye of the Fairy Witch	\blue;+15% к Получаемому Опыту\n+1 к Навыкам Класса\n\grey;Смешайте все 5 Глаз с Классовым Талисманом для Добавления Бонуса\n\nЗнак Монстра	1	1	2		0	0	0									evileye				thng		-1
 !@5	\dgreen;Evil Eye of the Bane Hunter	\blue;+15% к Получаемому Опыту\n+1 к Навыкам Класса\n\grey;Смешайте все 5 Глаз с Классовым Талисманом для Добавления Бонуса\n\nЗнак Монстра	1	1	2		0	0	0									evileye				thng		-1
-!@B	\dgreen;Signet of Skill	Нажмите ПКМ: Доступных Очков Навыка: %d	1	1	2		0	0	0									sigil4B				poti		-1
+!@B	\grey;Квестовый Предмет\n\gold;Signet of Skill	(можно использовать лишь раз на каждом персонаже)\nНажмите ПКМ: Доступных Очков Навыка: %d	1	1	2		0	0	0									sigil4B				poti		-1
 ##.	\gold;Neutrality Pact		1	1	2		0	0	0									scroll05				grtz		-1
 #X1	Реагент Куба (Секретный)\n\orange;Emblem of Suffering		1	1	2		0	0	0									newsignet1				thng		-1
 #X2	Реагент Куба (Секретный)\n\orange;Emblem of Pain		1	1	2		0	0	0									newsignet2				thng		-1
@@ -1150,53 +1150,52 @@ wol	Wirt's Other Leg		1	3	1		0	0	0			13	18					invwol		0	0	wrtl	1	-1
 #X5	Реагент Куба (Секретный)\n\orange;Emblem of Destruction		1	1	2		0	0	0									newsignet5				thng		-1
 #X6	Реагент Куба (Секретный)\n\orange;Emblem of Lies		1	1	2		0	0	0									newsignet6				thng		-1
 #X9	Реагент Куба\n\orange;Griswold's Treasure	\yellow;Различные вещи для каждого Класса Персонажа\n\grey;Смешайте с Зельем Крафта для Открытия Коробки\n	2	2	2		0	0	0									reagentreward				thng		-1
-&66	\orange;Mystic Orb\nKara's Trinket	\blue;+10 Требуемый Уровень\n+5% к Жизни Призываемых Существ\n+5% к Рейтингу Атаки Призываемых Существ\n+5% к Урону Призываемых Существ\n+3% к Скорости Сотворения Заклинаний\n\grey;Смешайте с Кольцом/Амулетом/Колчаном для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									orb_misc				asaa,asa#		-1
-&67	\orange;Mystic Orb\nMonsterball	\blue;+10 Требуемый Уровень\n+5 к Призыву Shock Beast\n+2% к Сопротивлениям Призываемых Существ\n+10% к Жизни Призываемых Существ\n+3% к Урону Призываемых Существ\n\grey;Смешайте с Кольцом/Амулетом/Колчаном для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									orb_misc				asaa,asa#		-1
-&68	\orange;Mystic Orb\nHeart of Frost	\blue;+10 Требуемый Уровень\n+5% к Урону Заклинаний Холода\n+3% к Урону Призываемых Существ\nОбщий Физический Урон Оружия +9%\n\grey;Смешайте с Кольцом/Амулетом/Колчаном для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									orb_misc				asaa,asa#		-1
-&69	\orange;Mystic Orb\nHand of Yaerius	\blue;+10 Требуемый Уровень\n+10 к Жизни после каждого Убийства\n+5 Восстановление Жизни в Секунду\n+5 к Максимальному Урону\n+12% Урон Нежити\n\grey;Смешайте с Кольцом/Амулетом/Колчаном для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									orb_misc				asaa,asa#		-1
-&70	\orange;Mystic Orb\nThe Endless Light	\blue;+10 Требуемый Уровень\n+100 к Защите\nОбщая Защита Персонажа Плюс 3%\n-2% ко Всем Сопротивлениям у Врага\n\grey;Смешайте с Кольцом/Амулетом/Колчаном для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									orb_misc				asaa,asa#		-1
-&71	\orange;Mystic Orb\nMarksman's Eye	\blue;+10 Требуемый Уровень\n2% к Ловкости\n10% к Рейтингу Атаки\n+3 к Минимальному Урону\n5% к Скорости Атаки\n\grey;Смешайте с Вещью для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									orb_any				asaa,asa#		-1
-&72	\orange;Mystic Orb\nFarnham's Lost Marble	\blue;+10 Требуемый Уровень\n-4% к Скорости Передвижения\n+40 к Мане при Рукопашной Атаке\n+75 к Жизни при Рукопашной Атаке\n\grey;Смешайте с Вещью для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									orb_any				asaa,asa#		-1
-&73	\orange;Mystic Orb\nZayl's Soul Orb	\blue;+10 Требуемый Уровень\nДлительность Заморозки Вдвое Меньше\n+100 к Мане\n2% Возродить Как: Flying Scimitar\n\grey;Смешайте с Вещью для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									orb_any				asaa,asa#		-1
-&74	\orange;Mystic Orb\nEye of Malic	\blue;+10 Требуемый Уровень\n+5-10 Урона Холодом\n+5-10 Урона Огнём\n1% Шанс использовать Frozen Soul уровня 47 при Рукопашной Атаке\n1% Шанс использовать Bloodstar уровня 47 при Рукопашной Атаке\n\grey;Смешайте с Вещью для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									orb_any				asaa,asa#		-1
-&75	\orange;Mystic Orb\nApple of Discord	\blue;+10 Требуемый Уровень\n+30 к Мане\n+60 к Жизни\n\grey;Смешайте с Вещью для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									orb_any				asaa,asa#		-1
-&76	\orange;Mystic Orb\nIdol of Stars	\blue;+10 Требуемый Уровень\n+10 к Энергии\n+12 к Ловкости\n+12 к Силе\n\grey;Смешайте с Любой Броней для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									orb_armo				asaa,asa#		-1
-&77	\orange;Mystic Orb\nNagapearl	\blue;+10 Требуемый Уровень\n10% к Шансу Нахождения Магических Предметов\n10% Больше Золота от Монстров\nОглушение на 0.2 секунды\n\grey;Смешайте с Любой Броней для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									orb_armo				asaa,asa#		-1
-&78	\orange;Mystic Orb\nThe Moon Crystal	\blue;+10 Требуемый Уровень\nВосстановление Маны +10%\nСопротивление Молнии +15%\nСопротивление Холоду +15%\n+10% к Скорости Сотворения Заклинаний\n\grey;Смешайте с Любой Броней для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									orb_armo				asaa,asa#		-1
-&79	\orange;Mystic Orb\nAuriel's Focus	\blue;+10 Требуемый Уровень\nВремя Отравления Уменьшается на 5%\n+15 к Энергии\n+25% Повышенная Pащита\n+2% к Фокусировке Заклинаний\n\grey;Смешайте с Любой Броней для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									orb_armo				asaa,asa#		-1
-&80	\orange;Mystic Orb\nSolitude	\blue;+10 Требуемый Уровень\n+10% к Длит. Навыков (Де-)Баффа/Холода\n+2% ко Всем Атрибутам\n1% Шанс использовать Изгнание уровня 4 после Попадания по вам\n\grey;Смешайте с Любой Броней для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									orb_armo				asaa,asa#		-1
-&81	\orange;Mystic Orb\nLarzuk's Round Shot	\blue;+10 Требуемый Уровень\n2% Шанс Сокрушительного Удара\nОбщий Физический Урон Оружия +30%\n+20 к Силе\n+15% Повышенный Урон\n\grey;Смешайте с Любым Оружием для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									orb_weap				asaa,asa#		-1
-&82	\orange;Mystic Orb\nVizjun's Ball Bearing	\blue;+10 Требуемый Уровень\n+50 к Максимальной Выносливости\n+20 к Ловкости\n2% Смертельный Удар\n10% к Скорости Бега/Ходьбы\n\grey;Смешайте с Любым Оружием для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									orb_weap				asaa,asa#		-1
-&83	\orange;Mystic Orb\nNor Tiraj's Flaming Sphere	\blue;+10 Требуемый Уровень\nСопротивление Огню +25%\n+5% к Урону Заклинаний Огня\nДобавляет 3-6 Урона Огнем\n1% Шанс использовать Flamefront уровня 42 при Рукопашной Атаке\n\grey;Смешайте с Любым Оружием для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									orb_weap				asaa,asa#		-1
-&84	\orange;Mystic Orb\nThe Demon Core	\blue;+10 Требуемый Уровень\n+5% к Урону Заклинаний Яда\n+5% к Урону Заклинаний Огня\n1% Шанс использовать Gamma Field уровня 58 при Убийстве\n1% Шанс использовать Apocalypse уровня 58 при Убийстве\n\grey;Смешайте с Любым Оружием для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									orb_weap				asaa,asa#		-1
-&85	\orange;Mystic Orb\nUldyssian's Spirit	\blue;+10 Требуемый Уровень\n+3% к Урону Заклинаний\n+30% Урон Демонам\n+15 Фокусировка Заклинаний\n\grey;Смешайте с Любым Оружием для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									orb_weap				asaa,asa#		-1
-&86	\orange;Mystic Orb\nOrb of Annihilation	\blue;+10 Требуемый Уровень\n+5% к Энергии\n+5% к Физ./Маг. Урону Заклинаний\n10% Шанс использовать Детонацию уровня 1 при Рукопашной Атаке\n\grey;Смешайте с Любым Оружием для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									orb_weap				asaa,asa#		-1
-&87	\orange;Mystic Orb\nWarbringer	\blue;+10 Требуемый Уровень\n+5 к Максимальному Урону\n2% Шанс использовать Стрелу уровня 5 при Попадании\n\grey;Смешайте с Любым Оружием для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									orb_weap				asaa,asa#		-1
-&88	\orange;Mystic Orb\nTen Pin Striker	\blue;+10 Требуемый Уровень\nЦель Получает Дополнительный Урон 100\n100% к Рейтингу Атаки\n\grey;Смешайте с Любым Оружием для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									orb_weap				asaa,asa#		-1
-&89	\orange;Mystic Orb\nWrathspirit	\blue;+10 Требуемый Уровень\n+15 к Жизни после каждого Убийства\n+3% к Урону Заклинаний\n1% Шанс использовать Punisher уровня 46 после Попадания по вам\n\grey;Смешайте с Любым Оружием для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									orb_weap				asaa,asa#		-1
-&90	\orange;Mystic Orb\nCrystal of Tears	\blue;+10 Требуемый Уровень\n-2% к Максимальной Жизни\nДобавляет 5-10 Урона\n\grey;Смешайте с Любой Броней для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									orb_armo				asaa,asa#		-1
-&91	\orange;Mystic Orb\nEssence of Itherael	\blue;+10 Требуемый Уровень\nОбщая Защита Персонажа +15%\nОбщий Физический Урон Оружия +9%\n\grey;Смешайте с Любой Броней для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									orb_armo				asaa,asa#		-1
-&92	\orange;Mystic Orb\nPeriapt of Life	\blue;+10 Требуемый Уровень\n+10 Восстановление Жизни в Секунду\n+4% к Живучести\n\grey;Смешайте с Любой Броней для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									orb_armo				asaa,asa#		-1
-&93	\orange;Mystic Orb\nLodestone	\blue;+10 Требуемый Уровень\nТребования +10%\n+5% к Урону Заклинаний\n\grey;Смешайте с Любой Броней для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									orb_armo				asaa,asa#		-1
-&94	\orange;Mystic Orb\nExplorer's Globe	\blue;+10 Требуемый Уровень\n+(-1-3)% к Энергии\n+(-1-3)% к Живучести\n+(-1-3)% к Ловкости\n+(-1-3)% к Силе\n\grey;Смешайте с Кольцом/Амулетом/Колчаном для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									orb_misc				asaa,asa#		-1
-&95	\orange;Mystic Orb\nThe Perfect Sphere	\blue;+10 Требуемый Уровень\n+(0-1)% к Максимальному Сопротивлению Молнии\n+(0-1)% к Максимальному Сопротивлению Холоду\n+(0-1)% к Максимальному Сопротивлению Огню\n\grey;Смешайте с Кольцом/Амулетом/Колчаном для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									orb_misc				asaa,asa#		-1
-01+	Реагент Куба\n\orange;Mystic Orb	\blue;+4 Требуемый Уровень\n+5 к Силе\n\grey;Смешайте с Любой Броней для Добавления Бонуса\n	1	1	2		0	0	0									orb_armo				asaa		-1
+&66	\orange;Mystic Orb\nKara's Trinket	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_misc				myst,asa#		-1
+&67	\orange;Mystic Orb\nMonsterball	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_misc				myst,asa#		-1
+&68	\orange;Mystic Orb\nHeart of Frost	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_misc				myst,asa#		-1
+&69	\orange;Mystic Orb\nHand of Yaerius	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_misc				myst,asa#		-1
+&70	\orange;Mystic Orb\nThe Endless Light	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_misc				myst,asa#		-1
+&71	\orange;Mystic Orb\nMarksman's Eye	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_any				myst,asa#		-1
+&72	\orange;Mystic Orb\nFarnham's Lost Marble	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_any				myst,asa#		-1
+&73	\orange;Mystic Orb\nZayl's Soul Orb	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_any				myst,asa#		-1
+&74	\orange;Mystic Orb\nEye of Malic	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_any				myst,asa#		-1
+&75	\orange;Mystic Orb\nApple of Discord	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_any				myst,asa#		-1
+&76	\orange;Mystic Orb\nIdol of Stars	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_armo				myst,asa#		-1
+&77	\orange;Mystic Orb\nNagapearl	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_armo				myst,asa#		-1
+&78	\orange;Mystic Orb\nThe Moon Crystal	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_armo				myst,asa#		-1
+&79	\orange;Mystic Orb\nAuriel's Focus	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_armo				myst,asa#		-1
+&80	\orange;Mystic Orb\nSolitude	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_armo				myst,asa#		-1
+&81	\orange;Mystic Orb\nLarzuk's Round Shot	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_weap				myst,asa#		-1
+&82	\orange;Mystic Orb\nVizjun's Ball Bearing	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_weap				myst,asa#		-1
+&83	\orange;Mystic Orb\nNor Tiraj's Flaming Sphere	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_weap				myst,asa#		-1
+&84	\orange;Mystic Orb\nThe Demon Core	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_weap				myst,asa#		-1
+&85	\orange;Mystic Orb\nUldyssian's Spirit	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_weap				myst,asa#		-1
+&86	\orange;Mystic Orb\nOrb of Annihilation	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_weap				myst,asa#		-1
+&87	\orange;Mystic Orb\nWarbringer	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_weap				myst,asa#		-1
+&88	\orange;Mystic Orb\nTen Pin Striker	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_weap				myst,asa#		-1
+&89	\orange;Mystic Orb\nWrathspirit	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_weap				myst,asa#		-1
+&90	\orange;Mystic Orb\nCrystal of Tears	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_armo				myst,asa#		-1
+&91	\orange;Mystic Orb\nEssence of Itherael	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_armo				myst,asa#		-1
+&92	\orange;Mystic Orb\nPeriapt of Life	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_armo				myst,asa#		-1
+&93	\orange;Mystic Orb\nLodestone	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_armo				myst,asa#		-1
+&94	\orange;Mystic Orb\nExplorer's Globe	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_misc				myst,asa#		-1
+01+	\orange;Mystic Orb	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_armo				myst		-1
 01^	\dgreen;Signet of Learning	Нажмите ПКМ: Доступных Атрибутов: %d	1	1	2		0	0	0									sigil1B				poti		-1
-02+	Реагент Куба\n\orange;Mystic Orb	\blue;+4 Требуемый Уровень\n+5 к Ловкости\n\grey;Смешайте с Любой Броней для Добавления Бонуса\n	1	1	2		0	0	0									orb_armo				asaa		-1
+02+	\orange;Mystic Orb	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_armo				myst		-1
 02^	\dgreen;Custom Signet of Learning	Нажмите ПКМ: Доступных Атрибутов: %d	1	1	2		0	0	0									newlearningFTW				poti		-1
-03+	Реагент Куба\n\orange;Mystic Orb	\blue;+4 Требуемый Уровень\n+5 к Энергии\n\grey;Смешайте с Любой Броней для Добавления Бонуса\n	1	1	2		0	0	0									orb_armo				asaa		-1
+03+	\orange;Mystic Orb	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_armo				myst		-1
 03^	\dgreen;Custom Signet of Learning	Нажмите ПКМ: Доступных Атрибутов: %d	1	1	2		0	0	0									newlearningFTW				poti		-1
-04+	Реагент Куба\n\orange;Mystic Orb	\blue;+4 Требуемый Уровень\n+5 к Живучести\n\grey;Смешайте с Любой Броней для Добавления Бонуса\n	1	1	2		0	0	0									orb_armo				asaa		-1
+04+	\orange;Mystic Orb	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_armo				myst		-1
 04^	\dgreen;Custom Signet of Learning	Нажмите ПКМ: Доступных Атрибутов: %d	1	1	2		0	0	0									newlearningFTW				poti		-1
-05+	Реагент Куба\n\orange;Mystic Orb	\blue;+4 Требуемый Уровень\n+2% к Урону Заклинаний Огня\n\grey;Смешайте с Вещью для Добавления Бонуса\n	1	1	2		0	0	0									orb_any				asaa		-1
+05+	\orange;Mystic Orb	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_any				myst		-1
 05^	\dgreen;Large Signet of Learning	Нажмите ПКМ: Доступных Атрибутов: %d	1	1	2		0	0	0									newlearningsig				poti		-1
-06+	Реагент Куба\n\orange;Mystic Orb	\blue;+4 Требуемый Уровень\n+2% к Урону Заклинаний Холода\n\grey;Смешайте с Вещью для Добавления Бонуса\n	1	1	2		0	0	0									orb_any				asaa		-1
+06+	\orange;Mystic Orb	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_any				myst		-1
 06^	\dgreen;Custom Signet of Learning	Нажмите ПКМ: Доступных Атрибутов: %d	1	1	2		0	0	0									newlearningFTW				poti		-1
-07+	Реагент Куба\n\orange;Mystic Orb	\blue;+4 Требуемый Уровень\n+2% к Урону Заклинаний Молнии\n\grey;Смешайте с Вещью для Добавления Бонуса\n	1	1	2		0	0	0									orb_any				asaa		-1
+07+	\orange;Mystic Orb	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_any				myst		-1
 07^	\dgreen;Custom Signet of Learning	Нажмите ПКМ: Доступных Атрибутов: %d	1	1	2		0	0	0									newlearningFTW				poti		-1
-08+	Реагент Куба\n\orange;Mystic Orb	\blue;+4 Требуемый Уровень\n+2% к Урону Заклинаний Яда\n\grey;Смешайте с Вещью для Добавления Бонуса\n	1	1	2		0	0	0									orb_any				asaa		-1
+08+	\orange;Mystic Orb	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_any				myst		-1
 08^	\dgreen;Custom Signet of Learning	Нажмите ПКМ: Доступных Атрибутов: %d	1	1	2		0	0	0									newlearningFTW				poti		-1
-09+	Реагент Куба\n\orange;Mystic Orb	\blue;+4 Требуемый Уровень\n+2% к Физ./Маг. Урону Заклинаний\n\grey;Смешайте с Вещью для Добавления Бонуса\n	1	1	2		0	0	0									orb_any				asaa		-1
+09+	\orange;Mystic Orb	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_any				myst		-1
 09^	\dgreen;Custom Signet of Learning	Нажмите ПКМ: Доступных Атрибутов: %d	1	1	2		0	0	0									newlearningFTW				poti		-1
 0g0	\red;Elixir of Greater Experience (Disabled)	+150% Опыта на 60 секунд	1	1	2		0	0	0									invpov				hpot		-1
 0g1	\red;Elixir of Greater Greed (Disabled)	+150% Шанс Нахождения Магических Предметов на 60 секунд	1	1	2		0	0	0									invpoo				hpot		-1
@@ -1206,262 +1205,265 @@ wol	Wirt's Other Leg		1	3	1		0	0	0			13	18					invwol		0	0	wrtl	1	-1
 0o[	\gold;Catalyst of Learning	90\nОбучение:\nВы можете создавать Signets of Learning,\nпоглощяя Sacred Уники и Сеты, которые\nвам больше не нужны.\n\nCatalyst + Sacred Уники и Сеты (макс 25)\n--> Signet of Learning\n	1	1	2		0	0	0									catal1				thng		-1
 0sc	Свиток знаний		1	1	2		0	0	0									invrsc				scro		-1
 0u1	Hammer of the Taan Judges		1	2	2		0	0	0									invhmr				grtz		-1
-10+	Реагент Куба\n\orange;Mystic Orb	\blue;+4 Требуемый Уровень\nФизический Урон Снижается на 4\n\grey;Смешайте с Кольцом/Амулетом/Колчаном для Добавления Бонуса\n	1	1	2		0	0	0									orb_misc				asaa		-1
+10+	\orange;Mystic Orb	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_misc				myst		-1
 10^	\dgreen;Custom Signet of Learning	Нажмите ПКМ: Доступных Атрибутов: %d	1	1	2		0	0	0									newlearningFTW				poti		-1
-11+	Реагент Куба\n\orange;Mystic Orb	\blue;+4 Требуемый Уровень\nВосстановление Маны +5%\n\grey;Смешайте с Кольцом/Амулетом/Колчаном для Добавления Бонуса\n	1	1	2		0	0	0									orb_misc				asaa		-1
+11+	\orange;Mystic Orb	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_misc				myst		-1
 11^	\dgreen;Custom Signet of Learning	Нажмите ПКМ: Доступных Атрибутов: %d	1	1	2		0	0	0									newlearningFTW				poti		-1
-12+	Реагент Куба\n\orange;Mystic Orb	\blue;+4 Требуемый Уровень\n+2% к Урону Призываемых Существ\n\grey;Смешайте с Вещью для Добавления Бонуса\n	1	1	2		0	0	0									orb_any				asaa		-1
+12+	\orange;Mystic Orb	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_any				myst		-1
 12^	\dgreen;Custom Signet of Learning	Нажмите ПКМ: Доступных Атрибутов: %d	1	1	2		0	0	0									newlearningFTW				poti		-1
-13+	Реагент Куба\n\orange;Mystic Orb	\blue;+4 Требуемый Уровень\n+4% к Жизни Призываемых Существ\n\grey;Смешайте с Вещью для Добавления Бонуса\n	1	1	2		0	0	0									orb_any				asaa		-1
+13+	\orange;Mystic Orb	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_any				myst		-1
 13^	\dgreen;Custom Signet of Learning	Нажмите ПКМ: Доступных Атрибутов: %d	1	1	2		0	0	0									newlearningFTW				poti		-1
-14+	Реагент Куба\n\orange;Mystic Orb	\blue;+4 Требуемый Уровень\n+2% к Сопротивлениям Призываемых Существ\n\grey;Смешайте с Вещью для Добавления Бонуса\n	1	1	2		0	0	0									orb_any				asaa		-1
+14+	\orange;Mystic Orb	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_any				myst		-1
 14^	\dgreen;Custom Signet of Learning	Нажмите ПКМ: Доступных Атрибутов: %d	1	1	2		0	0	0									newlearningFTW				poti		-1
 15^	\dgreen;Custom Signet of Learning	Нажмите ПКМ: Доступных Атрибутов: %d	1	1	2		0	0	0									newlearningFTW				poti		-1
-16+	Реагент Куба\n\orange;Mystic Orb	\blue;+4 Требуемый Уровень\n3% к Шансу Нахождения Магических Предметов\n\grey;Смешайте с Вещью для Добавления Бонуса\n	1	1	2		0	0	0									orb_any				asaa		-1
+16+	\orange;Mystic Orb	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_any				myst		-1
 16^	\dgreen;Custom Signet of Learning	Нажмите ПКМ: Доступных Атрибутов: %d	1	1	2		0	0	0									newlearningFTW				poti		-1
 17^	\dgreen;Custom Signet of Learning	Нажмите ПКМ: Доступных Атрибутов: %d	1	1	2		0	0	0									newlearningFTW				poti		-1
-18+	Реагент Куба\n\orange;Mystic Orb	\blue;+4 Требуемый Уровень\n+2% к Длит. Навыков (Де-)Баффа/Холода\n\grey;Смешайте с Кольцом/Амулетом/Колчаном для Добавления Бонуса\n	1	1	2		0	0	0									orb_misc				asaa		-1
+18+	\orange;Mystic Orb	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_misc				myst		-1
 18^	\dgreen;Custom Signet of Learning	Нажмите ПКМ: Доступных Атрибутов: %d	1	1	2		0	0	0									newlearningFTW				poti		-1
-19+	Реагент Куба\n\orange;Mystic Orb	\blue;+4 Требуемый Уровень\n+100 к Защите\n\grey;Смешайте с Кольцом/Амулетом/Колчаном для Добавления Бонуса\n	1	1	2		0	0	0									orb_misc				asaa		-1
+19+	\orange;Mystic Orb	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_misc				myst		-1
 19^	\dgreen;Custom Signet of Learning	Нажмите ПКМ: Доступных Атрибутов: %d	1	1	2		0	0	0									newlearningFTW				poti		-1
-20+	Реагент Куба\n\orange;Mystic Orb	\blue;+4 Требуемый Уровень\nВремя Отравления Уменьшается на 4%\n\grey;Смешайте с Кольцом/Амулетом/Колчаном для Добавления Бонуса\n	1	1	2		0	0	0									orb_misc				asaa		-1
+1p[	Реагент Куба\n\orange;Oil of Augmentation	75\nЭто масло улучшает любое магическое\n(синее) оружие, броню или кольцо/амулет\nдо редкого (жёлтого).\n\nНе работает на Неземных (Ethereal) вещах.\n	1	1	2		0	0	0									oil_augmentation				thng		-1
+20+	\orange;Mystic Orb	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_misc				myst		-1
 20^	\dgreen;Custom Signet of Learning	Нажмите ПКМ: Доступных Атрибутов: %d	1	1	2		0	0	0									newlearningFTW				poti		-1
-21+	Реагент Куба\n\orange;Mystic Orb	\blue;+4 Требуемый Уровень\nСопротивление Огню +7%\n\grey;Смешайте с Кольцом/Амулетом/Колчаном для Добавления Бонуса\n	1	1	2		0	0	0									orb_misc				asaa		-1
+21+	\orange;Mystic Orb	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_misc				myst		-1
 21^	\dgreen;Custom Signet of Learning	Нажмите ПКМ: Доступных Атрибутов: %d	1	1	2		0	0	0									newlearningFTW				poti		-1
-22+	Реагент Куба\n\orange;Mystic Orb	\blue;+4 Требуемый Уровень\nСопротивление Холоду +7%\n\grey;Смешайте с Кольцом/Амулетом/Колчаном для Добавления Бонуса\n	1	1	2		0	0	0									orb_misc				asaa		-1
+22+	\orange;Mystic Orb	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_misc				myst		-1
 22^	\dgreen;Custom Signet of Learning	Нажмите ПКМ: Доступных Атрибутов: %d	1	1	2		0	0	0									newlearningFTW				poti		-1
-23+	Реагент Куба\n\orange;Mystic Orb	\blue;+4 Требуемый Уровень\nСопротивление Молнии +7%\n\grey;Смешайте с Кольцом/Амулетом/Колчаном для Добавления Бонуса\n	1	1	2		0	0	0									orb_misc				asaa		-1
+23+	\orange;Mystic Orb	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_misc				myst		-1
 23^	\dgreen;Custom Signet of Learning	Нажмите ПКМ: Доступных Атрибутов: %d	1	1	2		0	0	0									newlearningFTW				poti		-1
-24+	Реагент Куба\n\orange;Mystic Orb	\blue;+4 Требуемый Уровень\nСопротивление Яду +7%\n\grey;Смешайте с Кольцом/Амулетом/Колчаном для Добавления Бонуса\n	1	1	2		0	0	0									orb_misc				asaa		-1
+24+	\orange;Mystic Orb	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_misc				myst		-1
 24^	\dgreen;Custom Signet of Learning	Нажмите ПКМ: Доступных Атрибутов: %d	1	1	2		0	0	0									newlearningFTW				poti		-1
-25+	Реагент Куба\n\orange;Mystic Orb	\blue;+4 Требуемый Уровень\n4% Сокращение Длительности Проклятий\n\grey;Смешайте с Любой Броней для Добавления Бонуса\n	1	1	2		0	0	0									orb_armo				asaa		-1
+25+	\orange;Mystic Orb	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_armo				myst		-1
 25^	\dgreen;Greater Signet of Learning	Нажмите ПКМ: Доступных Атрибутов: %d	1	1	2		0	0	0									sigilXL				poti		-1
-26+	Реагент Куба\n\orange;Mystic Orb	\blue;+4 Требуемый Уровень\n+15% Повышенная Защита\n\grey;Смешайте с Любой Броней для Добавления Бонуса\n	1	1	2		0	0	0									orb_armo				asaa		-1
-27+	Реагент Куба\n\orange;Mystic Orb	\blue;+4 Требуемый Уровень\nОбщая Защита Персонажа Плюс 4%\n\grey;Смешайте с Любой Броней для Добавления Бонуса\n	1	1	2		0	0	0									orb_armo				asaa		-1
-2o[	Реагент Куба\n\orange;Oil of Disjunction	80\nOil of Disjunction извлекает\nсодержимое гнёзд.\nИзвлечение из немагических (серых)\nвещей стоит дороже.\n\nOil + Магическая вещь\n--> Вещь + Содержимое Гнёзд\n\nOil + Немагическая вещь + 3 Сов. Самоцвета\n--> Вещь + Содержимое Гнёзд\n	1	1	2		0	0	0									oil_disjunction				thng		-1
+26+	\orange;Mystic Orb	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_armo				myst		-1
+27+	\orange;Mystic Orb	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_armo				myst		-1
+2o[	Реагент Куба\n\orange;Oil of Disjunction	80\nOil of Disjunction извлекает\nсодержимое гнёзд всех вещей\nкроме немагических (серых).\n\nOil + Магическая вещь\n--> Вещь + Содержимое Гнёзд\n	1	1	2		0	0	0									oil_disjunction				thng		-1
+2p[	Реагент Куба\n\orange;Oil of Intensity	75\nИспользуйте вместе с полным Shrine'ом\nдля крафта или улучшения редкой вещи.\n\nДиапазон значений Shrine'а будет\nуменьшен на 50% за счёт повышения\nминимального значения диапазона.\n\nИспользование поглощает оба ингредиента.\n	1	1	2		0	0	0									oil_intensity				thng		-1
 2x5	\dgreen;Alpha Brain		1	1	2		0	0	0									invbrnz				thng		-1
 2x6	\dgreen;Beta Brain		1	1	2		0	0	0									invbrnz				thng		-1
 2x7	\dgreen;Gamma Brain		1	1	2		0	0	0									invbrnz				thng		-1
 2x8	\dgreen;Delta Brain		1	1	2		0	0	0									invbrnz				thng		-1
 2x9	\dgreen;Epsilon Brain		1	1	2		0	0	0									invbrnz				thng		-1
-30+	Реагент Куба\n\orange;Mystic Orb	\blue;+4 Требуемый Уровень\n+6 к Фокусировке Заклинаний\n\grey;Смешайте с Любой Броней для Добавления Бонуса\n	1	1	2		0	0	0									orb_armo				asaa		-1
-31+	Реагент Куба\n\orange;Mystic Orb	\blue;+4 Требуемый Уровень\n+1% к Получаемому Опыту\n\grey;Смешайте с Любым Оружием для Добавления Бонуса\n	1	1	2		0	0	0									orb_weap				asaa		-1
-32+	Реагент Куба\n\orange;Mystic Orb	\blue;+4 Требуемый Уровень\n4% Кража Жизни при Попадании\n\grey;Смешайте с Любым Оружием для Добавления Бонуса\n	1	1	2		0	0	0									orb_weap				asaa		-1
-33+	Реагент Куба\n\orange;Mystic Orb	\blue;+4 Требуемый Уровень\n5% Кража Маны при Попадании\n\grey;Смешайте с Любым Оружием для Добавления Бонуса\n	1	1	2		0	0	0									orb_weap				asaa		-1
-35+	Реагент Куба\n\orange;Mystic Orb	\blue;+4 Требуемый Уровень\n50% к Рейтингу Атаки\n\grey;Смешайте с Любым Оружием для Добавления Бонуса\n	1	1	2		0	0	0									orb_weap				asaa		-1
-36+	Реагент Куба\n\orange;Mystic Orb	\blue;+4 Требуемый Уровень\n+15% Повышенный Урон\n\grey;Смешайте с Любым Оружием для Добавления Бонуса\n	1	1	2		0	0	0									orb_weap				asaa		-1
-37+	Реагент Куба\n\orange;Mystic Orb	\blue;+4 Требуемый Уровень\n+6 к Максимальному Урону\n\grey;Смешайте с Любым Оружием для Добавления Бонуса\n	1	1	2		0	0	0									orb_weap				asaa		-1
-38+	Реагент Куба\n\orange;Mystic Orb	\blue;+4 Требуемый Уровень\n1% Смертельный Удар\n\grey;Смешайте с Любым Оружием для Добавления Бонуса\n	1	1	2		0	0	0									orb_weap				asaa		-1
-39+	Реагент Куба\n\orange;Mystic Orb	\blue;+4 Требуемый Уровень\n3% Шанс Сокрушительного Удара\n\grey;Смешайте с Любым Оружием для Добавления Бонуса\n	1	1	2		0	0	0									orb_weap				asaa		-1
+30+	\orange;Mystic Orb	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_armo				myst		-1
+31+	\orange;Mystic Orb	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_weap				myst		-1
+32+	\orange;Mystic Orb	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_weap				myst		-1
+33+	\orange;Mystic Orb	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_weap				myst		-1
+35+	\orange;Mystic Orb	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_weap				myst		-1
+36+	\orange;Mystic Orb	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_weap				myst		-1
+37+	\orange;Mystic Orb	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_weap				myst		-1
+38+	\orange;Mystic Orb	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_weap				myst		-1
+39+	\orange;Mystic Orb	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_weap				myst		-1
 3o[	\gold;Catalyst of Disenchantment	90\nРасщепление:\nВы можете создавать Arcane Shards,\nпоглощяя Ранговые Уники (с номером),\nкоторые вам больше не нужны.\n\nCatalyst + Ранговые Уники (макс 10)\n--> Arcane Shards\n	1	1	2		0	0	0									catal2	255			thng		-1
-40+	Реагент Куба\n\orange;Mystic Orb	\blue;+4 Требуемый Уровень\n+10 к Жизни после каждого Убийства\n\grey;Смешайте с Любым Оружием для Добавления Бонуса\n	1	1	2		0	0	0									orb_weap				asaa		-1
-46+	Реагент Куба\n\orange;Mystic Orb	\blue;+4 Требуемый Уровень\n+3% ко Всем Сопротивлениям\n\grey;Смешайте с Любой Броней для Добавления Бонуса\n	1	1	2		0	0	0									orb_armo				asaa		-1
-47+	Реагент Куба\n\orange;Mystic Orb	\blue;+4 Требуемый Уровень\nТребования -4%\n\grey;Смешайте с Любой Броней для Добавления Бонуса\n	1	1	2		0	0	0									orb_armo				asaa		-1
-48+	Реагент Куба\n\orange;Mystic Orb	\blue;+4 Требуемый Уровень\n+2 к Максимальному Урону\n\grey;Смешайте с Любой Броней для Добавления Бонуса\n	1	1	2		0	0	0									orb_armo				asaa		-1
-4o[	Реагент Куба\n\orange;Oil of Enhancement	70\nOil of Enhancement может создавать\nРанговые Уники или магические вещи.\n\nOil + Ранговая Вещь + 2 Arcane Crystals\n--> Ранговый Уник\n\nOil + Вещь\n--> Магическая Вещь\n	1	1	2		0	0	0									oil_enhancement				thng		-1
+40+	\orange;Mystic Orb	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_weap				myst		-1
+46+	\orange;Mystic Orb	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_armo				myst		-1
+47+	\orange;Mystic Orb	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_armo				myst		-1
+48+	\orange;Mystic Orb	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_armo				myst		-1
+4o[	Реагент Куба\n\orange;Oil of Enhancement	70\nOil of Enhancement может создавать\nРанговые Уники.\n\nOil + Ранговая Вещь + 2 Arcane Crystals\n--> Ранговый Уник\n	1	1	2		0	0	0									oil_enhancement				thng		-1
 5$a	\purple;Chipped Amber		1	1	2		1	0	0									invgsaa				geml,gem0		-1
 5$b	\purple;Flawed Amber		1	1	2		5	0	0									invgsab				geml,gem1		-1
 5$c	\purple;Amber		1	1	2		12	0	0									invgsac				geml,gem2		-1
 5$d	\purple;Flawless Amber		1	1	2		15	0	0									invgsad				geml,gem3		-1
 5$e	\purple;Perfect Amber		1	1	2		18	0	0									invgsae				geml,gem4		-1
-50+	Реагент Куба\n\orange;Mystic Orb	\blue;+4 Требуемый Уровень\n+6% к Скорости Блокирования\n\grey;Смешайте с Любой Броней для Добавления Бонуса\n	1	1	2		0	0	0									orb_armo				asaa		-1
-51+	Реагент Куба\n\orange;Mystic Orb	\blue;+4 Требуемый Уровень\n+2% Больше Золота от Монстров\n\grey;Смешайте с Любой Броней для Добавления Бонуса\n	1	1	2		0	0	0									orb_armo				asaa		-1
-52+	Реагент Куба\n\orange;Mystic Orb	\blue;+4 Требуемый Уровень\n+6% к Скорости Восстановления После Удара\n\grey;Смешайте с Любой Броней для Добавления Бонуса\n	1	1	2		0	0	0									orb_armo				asaa		-1
-53+	Реагент Куба\n\orange;Mystic Orb	\blue;+4 Требуемый Уровень\nВосстановление Жизни +4\n\grey;Смешайте с Любой Броней для Добавления Бонуса\n	1	1	2		0	0	0									orb_armo				asaa		-1
-5o[	Реагент Куба\n\orange;Oil of Renewal	80\nOil of Renewal может превращать любую\nвещь в superior (превосходную) для\nподготовки создания в ней рунного слова.\n\nOil + Вещь\n--> Вещь Превосходного качества\n	1	1	2		0	0	0									oil_renewal				thng		-1
-60+	Реагент Куба\n\orange;Mystic Orb	\blue;+4 Требуемый Уровень\n+30 к Жизни при Атаке\n\grey;Смешайте с Любым Оружием для Добавления Бонуса\n	1	1	2		0	0	0									orb_weap				asaa		-1
-61+	Реагент Куба\n\orange;Mystic Orb	\blue;+4 Требуемый Уровень\n+20 к Мане при Атаке\n\grey;Смешайте с Любым Оружием для Добавления Бонуса\n	1	1	2		0	0	0									orb_weap				asaa		-1
-62+	Реагент Куба\n\orange;Mystic Orb	\blue;+4 Требуемый Уровень\n+2% к Врождённому Стихийному Урону\n\grey;Смешайте с Любым Оружием для Добавления Бонуса\n	1	1	2		0	0	0									orb_weap				asaa		-1
-63+	Реагент Куба\n\orange;Mystic Orb	\blue;+4 Требуемый Уровень\nОбщий Физический Урон Оружия +12%\n\grey;Смешайте с Любым Оружием для Добавления Бонуса\n	1	1	2		0	0	0									orb_weap				asaa		-1
-64+	Реагент Куба\n\orange;Mystic Orb	\blue;+4 Требуемый Уровень\n+6% к Скорости Сотворения Заклинаний\n\grey;Смешайте с Любым Оружием для Добавления Бонуса\n	1	1	2		0	0	0									orb_weap				asaa		-1
-65+	Реагент Куба\n\orange;Mystic Orb	\blue;+4 Требуемый Уровень\n+6% к Скорости Атаки\n\grey;Смешайте с Любым Оружием для Добавления Бонуса\n	1	1	2		0	0	0									orb_weap				asaa		-1
-6o[	Реагент Куба\n\orange;Oil of Luck	75\nOil of Luck даёт шанс добавить\nбонус любому предмету.\n\nOil + Предмет\n--> Предмет с бонусом с шансом 1/5\n(максимум 1 раз)\n\nОружие: +20% Повышенный Урон\n                                     или\n+20% к Скорости Атаки, если Основа - Стихии\nОружие: 100% к Рейтингу Атаки\nБроня: +20% Повышенная Защита\nБроня: Сопротивление Физ. Урону +1%\nАмулет: +1 ко Всем Навыкам\nКольцо: +5% к Урону Заклинаний\nКолчан: 5% ко Всем Атрибутам\nJewels: +2 к Любому Атрибуту\n	1	1	2		0	0	0									oil_luck				thng		-1
+50+	\orange;Mystic Orb	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_armo				myst		-1
+51+	\orange;Mystic Orb	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_armo				myst		-1
+52+	\orange;Mystic Orb	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_armo				myst		-1
+53+	\orange;Mystic Orb	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_armo				myst		-1
+5o[	Реагент Куба\n\orange;Oil of Renewal	80\nOil of Renewal может превращать любую\nвещь в superior (превосходную) для\nподготовки создания в ней рунного слова.\n\nOil + Непревосходная Вещь\n--> Вещь Превосходного качества\n	1	1	2		0	0	0									oil_renewal				thng		-1
+60+	\orange;Mystic Orb	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_weap				myst		-1
+61+	\orange;Mystic Orb	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_weap				myst		-1
+62+	\orange;Mystic Orb	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_weap				myst		-1
+63+	\orange;Mystic Orb	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_weap				myst		-1
+64+	\orange;Mystic Orb	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_weap				myst		-1
+65+	\orange;Mystic Orb	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_weap				myst		-1
+6o[	Реагент Куба\n\orange;Oil of Luck	75\nOil of Luck даёт шанс добавить\nбонус большинству вещей.\n\nНе работает с обычными и\nпревосходными вещами.\n\nOil + Вещь\n--> Вещь с бонусом с шансом 20%\n(максимум 1 раз)\n\nОружие: +20% Повышенный Урон\n                           или\n+20% к Скорости Атаки, если Основа - Стихии\nОружие: 100% Бонус к Рейтингу Атаки\nБроня: +20% Повышенная Защита\nБроня: Сопротивление Физ. Урону +1%\nАмулет: +1 ко Всем Навыкам\nКольцо: +5% к Урону Заклинаний\nКолчан: 5% ко Всем Атрибутам\nJewels: +2 к Любому Атрибуту\n	1	1	2		0	0	0									oil_luck				thng		-1
 7$a	\purple;Chipped Turquoise		1	1	2		1	0	0									invgsta				gemo,gem0		-1
 7$b	\purple;Flawed Turquoise		1	1	2		5	0	0									invgstb				gemo,gem1		-1
 7$c	\purple;Turquoise		1	1	2		12	0	0									invgstc				gemo,gem2		-1
 7$d	\purple;Flawless Turquoise		1	1	2		15	0	0									invgstd				gemo,gem3		-1
 7$e	\purple;Perfect Turquoise		1	1	2		18	0	0									invgste				gemo,gem4		-1
-7o[	Реагент Куба\n\orange;Oil of Craft	70\nС помощью Oil of Craft можно создать\nхранилище святынь и кристаллов:\n\nOil + Arcane Crystal\n--> Arcane Cluster (1)\n\nOil + Portable Shrine\n--> Shrine Vessel (1)\n\nТакже можно создать мощные jewels.\n\nOil + Jewel + Руна + Arcane Shards\n--> Крафтовый Jewel\n(Уменьшает Уровень Предмета на 15%)\n\nTir: Нахождение Маг. Предметов\nIth: Стихийные Сопротивления\nOrt: -Требования\nShael: Защита\nLum: Получаемый Опыт\nLem: Все Атрибуты\nIst: Жизнь Призываемых Существ\nOhm: Максимальный Урон\nBer: Кража Жизни/Маны\nZod: Урон Заклинаний\nKur: Урон Призываемых Существ\nNas: Замедление Атакующего\nVith: Сопротивления Призываемых Существ\nThai: Минимальный Урон\nNih: Жизнь/Мана при Атаке\nOn: Жизнь/Мана после каждого Убийства\n	1	1	2		0	0	0									oil_jewelcraft				thng		-1
+7o[	Реагент Куба\n\orange;Oil of Craft	70\nС помощью Oil of Craft можно создать\nхранилища разных предметов:\n\nOil + Arcane Crystal\n--> Arcane Cluster (1)\n\nOil + Rune (up to Zod)\n--> Rune Container (1)\n\nOil + Perfect Gem\n--> Gem Cluster (1)\n\nOil + Portable Shrine\n--> Shrine Vessel (1)\n\nТакже можно создать мощные jewels.\n\nOil + Jewel + Руна + Arcane Shards\n--> Крафтовый Jewel\n(Уменьшает Уровень Предмета на 15%)\n\nEl:: Нахождение Маг. Предметов\nTir: Стихийные Сопротивления\nEth: -Требования\nTal: Защита\nOrt: Получаемый Опыт\nAmn: Все Атрибуты\nSha: Жизнь Призываемых Существ\nHel: Максимальный Урон\nLum: Кража Жизни/Маны\nFal: Урон Заклинаний\nPul: Урон Призываемых Существ\nMal: Замедление Атакующего\nGul: Сопротивления Призываемых Существ\nOhm: Минимальный Урон\nSur: Жизнь/Мана при Атаке\nJah: Жизнь/Мана после каждого Убийства\nZod: Неразрушимо\n	1	1	2		0	0	0									oil_jewelcraft				thng		-1
 8o[	Реагент Куба\n\orange;Oil of Absolution		1	1	2		0	0	0									oil_absolution				thng		-1
 9$a	\purple;Chipped Bloodstone		1	1	2		1	0	0									invgsca				gemp,gem0		-1
 9$b	\purple;Flawed Bloodstone		1	1	2		5	0	0									invgscb				gemp,gem1		-1
 9$c	\purple;Bloodstone		1	1	2		12	0	0									invgscc				gemp,gem2		-1
 9$d	\purple;Flawless Bloodstone		1	1	2		15	0	0									invgscd				gemp,gem3		-1
 9$e	\purple;Perfect Bloodstone		1	1	2		18	0	0									invgsce				gemp,gem4		-1
+9o[	Реагент Куба\n\orange;Oil of Greater Luck	75\nOil of Luck даёт шанс добавить\nбонус большинству вещей.\n\nOil + Вещь\n--> Вещь с бонусом с шансом 40%\n(максимум 1 раз)\n\nОружие: +20% Повышенный Урон\n                           или\n+20% к Скорости Атаки, если Основа - Стихии\nОружие: 100% Бонус к Рейтингу Атаки\nБроня: +20% Повышенная Защита\nБроня: Сопротивление Физ. Урону +1%\nАмулет: +1 ко Всем Навыкам\nКольцо: +5% к Урону Заклинаний\nКолчан: 5% ко Всем Атрибутам\nJewels: +2 к Любому Атрибуту\n	1	1	2		0	0	0									greater_luck				thng		-1
 @##	\grey;Реагент Куба\n\orange;Deity's Bow	\yellow;используются очень редкие Emblems, выпадающие из монстров\nРецепты для этого предмета Неизвестны, но, по слухам, в них\n	2	3	2		0	0	0									newathuluabow				thng		-1
-A0+	\orange;Creepy Shrine (10)	\blue;+x к Силе\nx% к Силе\nx% Шанс Сокрушительного Удара\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Creepy				prsh,flsh		-1
-A0+S	\orange;Creepy Vessel	Нажмите ПКМ чтобы Собрать	1	2	2		0	0	0									#Creepy				shco		-1
-A1+	\orange;Creepy Shrine (9)	\blue;+x к Силе\nx% к Силе\nx% Шанс Сокрушительного Удара\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Creepy				prsh		-1
-A2+	\orange;Creepy Shrine (8)	\blue;+x к Силе\nx% к Силе\nx% Шанс Сокрушительного Удара\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Creepy				prsh		-1
-A3+	\orange;Creepy Shrine (7)	\blue;+x к Силе\nx% к Силе\nx% Шанс Сокрушительного Удара\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Creepy				prsh		-1
-A4+	\orange;Creepy Shrine (6)	\blue;+x к Силе\nx% к Силе\nx% Шанс Сокрушительного Удара\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Creepy				prsh		-1
-A5+	\orange;Creepy Shrine (5)	\blue;+x к Силе\nx% к Силе\nx% Шанс Сокрушительного Удара\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Creepy				prsh		-1
-A6+	\orange;Creepy Shrine (4)	\blue;+x к Силе\nx% к Силе\nx% Шанс Сокрушительного Удара\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Creepy				prsh		-1
-A7+	\orange;Creepy Shrine (3)	\blue;+x к Силе\nx% к Силе\nx% Шанс Сокрушительного Удара\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Creepy				prsh		-1
-A8+	\orange;Creepy Shrine (2)	\blue;+x к Силе\nx% к Силе\nx% Шанс Сокрушительного Удара\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Creepy				prsh		-1
-A9+	\orange;Creepy Shrine (1)	\blue;+x к Силе\nx% к Силе\nx% Шанс Сокрушительного Удара\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Creepy				prsh		-1
-B0+	\orange;Abandoned Shrine (10)	\blue;+x к Ловкости\nx% к Ловкости\nx% к Рейтингу Атаки\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Abandoned				prsh,flsh		-1
-B0+S	\orange;Abandoned Vessel	Нажмите ПКМ чтобы Собрать	1	2	2		0	0	0									#Abandoned				shco		-1
-B1+	\orange;Abandoned Shrine (9)	\blue;+x к Ловкости\nx% к Ловкости\nx% к Рейтингу Атаки\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Abandoned				prsh		-1
-B2+	\orange;Abandoned Shrine (8)	\blue;+x к Ловкости\nx% к Ловкости\nx% к Рейтингу Атаки\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Abandoned				prsh		-1
-B3+	\orange;Abandoned Shrine (7)	\blue;+x к Ловкости\nx% к Ловкости\nx% к Рейтингу Атаки\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Abandoned				prsh		-1
-B4+	\orange;Abandoned Shrine (6)	\blue;+x к Ловкости\nx% к Ловкости\nx% к Рейтингу Атаки\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Abandoned				prsh		-1
-B5+	\orange;Abandoned Shrine (5)	\blue;+x к Ловкости\nx% к Ловкости\nx% к Рейтингу Атаки\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Abandoned				prsh		-1
-B6+	\orange;Abandoned Shrine (4)	\blue;+x к Ловкости\nx% к Ловкости\nx% к Рейтингу Атаки\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Abandoned				prsh		-1
-B7+	\orange;Abandoned Shrine (3)	\blue;+x к Ловкости\nx% к Ловкости\nx% к Рейтингу Атаки\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Abandoned				prsh		-1
-B8+	\orange;Abandoned Shrine (2)	\blue;+x к Ловкости\nx% к Ловкости\nx% к Рейтингу Атаки\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Abandoned				prsh		-1
-B9+	\orange;Abandoned Shrine (1)	\blue;+x к Ловкости\nx% к Ловкости\nx% к Рейтингу Атаки\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Abandoned				prsh		-1
-C0+	\orange;Quiet Shrine (10)	\blue;+x к Живучести\nx% к Живучести\n+х Восстановление Жизни в Секунду\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Quiet				prsh,flsh		-1
-C0+S	\orange;Quiet Vessel	Нажмите ПКМ чтобы Собрать	1	2	2		0	0	0									#Quiet				shco		-1
-C1+	\orange;Quiet Shrine (9)	\blue;+x к Живучести\nx% к Живучести\n+х Восстановление Жизни в Секунду\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Quiet				prsh		-1
-C2+	\orange;Quiet Shrine (8)	\blue;+x к Живучести\nx% к Живучести\n+х Восстановление Жизни в Секунду\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Quiet				prsh		-1
-C3+	\orange;Quiet Shrine (7)	\blue;+x к Живучести\nx% к Живучести\n+х Восстановление Жизни в Секунду\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Quiet				prsh		-1
-C4+	\orange;Quiet Shrine (6)	\blue;+x к Живучести\nx% к Живучести\n+х Восстановление Жизни в Секунду\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Quiet				prsh		-1
-C5+	\orange;Quiet Shrine (5)	\blue;+x к Живучести\nx% к Живучести\n+х Восстановление Жизни в Секунду\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Quiet				prsh		-1
-C6+	\orange;Quiet Shrine (4)	\blue;+x к Живучести\nx% к Живучести\n+х Восстановление Жизни в Секунду\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Quiet				prsh		-1
-C7+	\orange;Quiet Shrine (3)	\blue;+x к Живучести\nx% к Живучести\n+х Восстановление Жизни в Секунду\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Quiet				prsh		-1
-C8+	\orange;Quiet Shrine (2)	\blue;+x к Живучести\nx% к Живучести\n+х Восстановление Жизни в Секунду\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Quiet				prsh		-1
-C9+	\orange;Quiet Shrine (1)	\blue;+x к Живучести\nx% к Живучести\n+х Восстановление Жизни в Секунду\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Quiet				prsh		-1
-D0+	\orange;Eerie Shrine (10)	\blue;+x к Энергии\nx% к Энергии\n+х к Фокусировке Заклинаний\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Eerie				prsh,flsh		-1
-D0+S	\orange;Eerie Vessel	Нажмите ПКМ чтобы Собрать	1	2	2		0	0	0									#Eerie				shco		-1
-D1+	\orange;Eerie Shrine (9)	\blue;+x к Энергии\nx% к Энергии\n+х к Фокусировке Заклинаний\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Eerie				prsh		-1
-D2+	\orange;Eerie Shrine (8)	\blue;+x к Энергии\nx% к Энергии\n+х к Фокусировке Заклинаний\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Eerie				prsh		-1
-D3+	\orange;Eerie Shrine (7)	\blue;+x к Энергии\nx% к Энергии\n+х к Фокусировке Заклинаний\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Eerie				prsh		-1
-D4+	\orange;Eerie Shrine (6)	\blue;+x к Энергии\nx% к Энергии\n+х к Фокусировке Заклинаний\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Eerie				prsh		-1
-D5+	\orange;Eerie Shrine (5)	\blue;+x к Энергии\nx% к Энергии\n+х к Фокусировке Заклинаний\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Eerie				prsh		-1
-D6+	\orange;Eerie Shrine (4)	\blue;+x к Энергии\nx% к Энергии\n+х к Фокусировке Заклинаний\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Eerie				prsh		-1
-D7+	\orange;Eerie Shrine (3)	\blue;+x к Энергии\nx% к Энергии\n+х к Фокусировке Заклинаний\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Eerie				prsh		-1
-D8+	\orange;Eerie Shrine (2)	\blue;+x к Энергии\nx% к Энергии\n+х к Фокусировке Заклинаний\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Eerie				prsh		-1
-D9+	\orange;Eerie Shrine (1)	\blue;+x к Энергии\nx% к Энергии\n+х к Фокусировке Заклинаний\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Eerie				prsh		-1
-E0+	\orange;Weird Shrine (10)	\blue;Добавляет x-y Урона\n+x% Усиленный Урон\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Weird				prsh,flsh		-1
-E0+S	\orange;Weird Vessel	Нажмите ПКМ чтобы Собрать	1	2	2		0	0	0									#Weird				shco		-1
-E1+	\orange;Weird Shrine (9)	\blue;Добавляет x-y Урона\n+x% Усиленный Урон\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Weird				prsh		-1
-E2+	\orange;Weird Shrine (8)	\blue;Добавляет x-y Урона\n+x% Усиленный Урон\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Weird				prsh		-1
-E3+	\orange;Weird Shrine (7)	\blue;Добавляет x-y Урона\n+x% Усиленный Урон\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Weird				prsh		-1
-E4+	\orange;Weird Shrine (6)	\blue;Добавляет x-y Урона\n+x% Усиленный Урон\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Weird				prsh		-1
-E5+	\orange;Weird Shrine (5)	\blue;Добавляет x-y Урона\n+x% Усиленный Урон\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Weird				prsh		-1
-E6+	\orange;Weird Shrine (4)	\blue;Добавляет x-y Урона\n+x% Усиленный Урон\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Weird				prsh		-1
-E7+	\orange;Weird Shrine (3)	\blue;Добавляет x-y Урона\n+x% Усиленный Урон\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Weird				prsh		-1
-E8+	\orange;Weird Shrine (2)	\blue;Добавляет x-y Урона\n+x% Усиленный Урон\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Weird				prsh		-1
-E9+	\orange;Weird Shrine (1)	\blue;Добавляет x-y Урона\n+x% Усиленный Урон\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Weird				prsh		-1
-F0+	\orange;Intimidating Shrine (10)	\dgrey;(Броня)\n\blue;Сопротивление Физическому Урону +x%\n+x% Усиленная Защита\n\n\dgrey;(Оружие)\n\blue;x% Смертельный Удар\nТребования +x%\n+x% Усиленный Урон\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Gloomy				prsh,flsh		-1
-F0+S	\orange;Intimidating Vessel	Нажмите ПКМ чтобы Собрать	1	2	2		0	0	0									#Gloomy				shco		-1
-F1+	\orange;Intimidating Shrine (9)	\dgrey;(Броня)\n\blue;Сопротивление Физическому Урону +x%\n+x% Усиленная Защита\n\n\dgrey;(Оружие)\n\blue;x% Смертельный Удар\nТребования +x%\n+x% Усиленный Урон\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Gloomy				prsh		-1
-F2+	\orange;Intimidating Shrine (8)	\dgrey;(Броня)\n\blue;Сопротивление Физическому Урону +x%\n+x% Усиленная Защита\n\n\dgrey;(Оружие)\n\blue;x% Смертельный Удар\nТребования +x%\n+x% Усиленный Урон\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Gloomy				prsh		-1
-F3+	\orange;Intimidating Shrine (7)	\dgrey;(Броня)\n\blue;Сопротивление Физическому Урону +x%\n+x% Усиленная Защита\n\n\dgrey;(Оружие)\n\blue;x% Смертельный Удар\nТребования +x%\n+x% Усиленный Урон\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Gloomy				prsh		-1
-F4+	\orange;Intimidating Shrine (6)	\dgrey;(Броня)\n\blue;Сопротивление Физическому Урону +x%\n+x% Усиленная Защита\n\n\dgrey;(Оружие)\n\blue;x% Смертельный Удар\nТребования +x%\n+x% Усиленный Урон\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Gloomy				prsh		-1
-F5+	\orange;Intimidating Shrine (5)	\dgrey;(Броня)\n\blue;Сопротивление Физическому Урону +x%\n+x% Усиленная Защита\n\n\dgrey;(Оружие)\n\blue;x% Смертельный Удар\nТребования +x%\n+x% Усиленный Урон\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Gloomy				prsh		-1
-F6+	\orange;Intimidating Shrine (4)	\dgrey;(Броня)\n\blue;Сопротивление Физическому Урону +x%\n+x% Усиленная Защита\n\n\dgrey;(Оружие)\n\blue;x% Смертельный Удар\nТребования +x%\n+x% Усиленный Урон\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Gloomy				prsh		-1
-F7+	\orange;Intimidating Shrine (3)	\dgrey;(Броня)\n\blue;Сопротивление Физическому Урону +x%\n+x% Усиленная Защита\n\n\dgrey;(Оружие)\n\blue;x% Смертельный Удар\nТребования +x%\n+x% Усиленный Урон\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Gloomy				prsh		-1
-F8+	\orange;Intimidating Shrine (2)	\dgrey;(Броня)\n\blue;Сопротивление Физическому Урону +x%\n+x% Усиленная Защита\n\n\dgrey;(Оружие)\n\blue;x% Смертельный Удар\nТребования +x%\n+x% Усиленный Урон\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Gloomy				prsh		-1
-F9+	\orange;Intimidating Shrine (1)	\dgrey;(Броня)\n\blue;Сопротивление Физическому Урону +x%\n+x% Усиленная Защита\n\n\dgrey;(Оружие)\n\blue;x% Смертельный Удар\nТребования +x%\n+x% Усиленный Урон\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Gloomy				prsh		-1
-G0+	\orange;Tainted Shrine (10)	\blue;+x% к Урону Призываемых Существ\n+x% к Рейтингу Атаки Призываемых Существ\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Tainted				prsh,flsh		-1
-G0+S	\orange;Tainted Vessel	Нажмите ПКМ чтобы Собрать	1	2	2		0	0	0									#Tainted				shco		-1
-G1+	\orange;Tainted Shrine (9)	\blue;+x% к Урону Призываемых Существ\n+x% к Рейтингу Атаки Призываемых Существ\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Tainted				prsh		-1
-G2+	\orange;Tainted Shrine (8)	\blue;+x% к Урону Призываемых Существ\n+x% к Рейтингу Атаки Призываемых Существ\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Tainted				prsh		-1
-G3+	\orange;Tainted Shrine (7)	\blue;+x% к Урону Призываемых Существ\n+x% к Рейтингу Атаки Призываемых Существ\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Tainted				prsh		-1
-G4+	\orange;Tainted Shrine (6)	\blue;+x% к Урону Призываемых Существ\n+x% к Рейтингу Атаки Призываемых Существ\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Tainted				prsh		-1
-G5+	\orange;Tainted Shrine (5)	\blue;+x% к Урону Призываемых Существ\n+x% к Рейтингу Атаки Призываемых Существ\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Tainted				prsh		-1
-G6+	\orange;Tainted Shrine (4)	\blue;+x% к Урону Призываемых Существ\n+x% к Рейтингу Атаки Призываемых Существ\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Tainted				prsh		-1
-G7+	\orange;Tainted Shrine (3)	\blue;+x% к Урону Призываемых Существ\n+x% к Рейтингу Атаки Призываемых Существ\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Tainted				prsh		-1
-G8+	\orange;Tainted Shrine (2)	\blue;+x% к Урону Призываемых Существ\n+x% к Рейтингу Атаки Призываемых Существ\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Tainted				prsh		-1
-G9+	\orange;Tainted Shrine (1)	\blue;+x% к Урону Призываемых Существ\n+x% к Рейтингу Атаки Призываемых Существ\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Tainted				prsh		-1
-H0+	\orange;Fascinating Shrine (10)	\blue;+x% к Урону Заклинаний Огня\n-x% к Сопротивлению Огню у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Fascinating				prsh,flsh		-1
-H0+S	\orange;Fascinating Vessel	Нажмите ПКМ чтобы Собрать	1	2	2		0	0	0									#Fascinating				shco		-1
-H1+	\orange;Fascinating Shrine (9)	\blue;+x% к Урону Заклинаний Огня\n-x% к Сопротивлению Огню у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Fascinating				prsh		-1
-H2+	\orange;Fascinating Shrine (8)	\blue;+x% к Урону Заклинаний Огня\n-x% к Сопротивлению Огню у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Fascinating				prsh		-1
-H3+	\orange;Fascinating Shrine (7)	\blue;+x% к Урону Заклинаний Огня\n-x% к Сопротивлению Огню у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Fascinating				prsh		-1
-H4+	\orange;Fascinating Shrine (6)	\blue;+x% к Урону Заклинаний Огня\n-x% к Сопротивлению Огню у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Fascinating				prsh		-1
-H5+	\orange;Fascinating Shrine (5)	\blue;+x% к Урону Заклинаний Огня\n-x% к Сопротивлению Огню у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Fascinating				prsh		-1
-H6+	\orange;Fascinating Shrine (4)	\blue;+x% к Урону Заклинаний Огня\n-x% к Сопротивлению Огню у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Fascinating				prsh		-1
-H7+	\orange;Fascinating Shrine (3)	\blue;+x% к Урону Заклинаний Огня\n-x% к Сопротивлению Огню у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Fascinating				prsh		-1
-H8+	\orange;Fascinating Shrine (2)	\blue;+x% к Урону Заклинаний Огня\n-x% к Сопротивлению Огню у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Fascinating				prsh		-1
-H9+	\orange;Fascinating Shrine (1)	\blue;+x% к Урону Заклинаний Огня\n-x% к Сопротивлению Огню у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Fascinating				prsh		-1
-I0+	\orange;Ornate Shrine (10)	\blue;+x% к Урону Заклинаний Молнии\n-x% к Сопротивлению Молнии у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Ornate				prsh,flsh		-1
-I0+S	\orange;Ornate Vessel	Нажмите ПКМ чтобы Собрать	1	2	2		0	0	0									#Ornate				shco		-1
-I1+	\orange;Ornate Shrine (9)	\blue;+x% к Урону Заклинаний Молнии\n-x% к Сопротивлению Молнии у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Ornate				prsh		-1
-I2+	\orange;Ornate Shrine (8)	\blue;+x% к Урону Заклинаний Молнии\n-x% к Сопротивлению Молнии у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Ornate				prsh		-1
-I3+	\orange;Ornate Shrine (7)	\blue;+x% к Урону Заклинаний Молнии\n-x% к Сопротивлению Молнии у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Ornate				prsh		-1
-I4+	\orange;Ornate Shrine (6)	\blue;+x% к Урону Заклинаний Молнии\n-x% к Сопротивлению Молнии у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Ornate				prsh		-1
-I5+	\orange;Ornate Shrine (5)	\blue;+x% к Урону Заклинаний Молнии\n-x% к Сопротивлению Молнии у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Ornate				prsh		-1
-I6+	\orange;Ornate Shrine (4)	\blue;+x% к Урону Заклинаний Молнии\n-x% к Сопротивлению Молнии у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Ornate				prsh		-1
-I7+	\orange;Ornate Shrine (3)	\blue;+x% к Урону Заклинаний Молнии\n-x% к Сопротивлению Молнии у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Ornate				prsh		-1
-I8+	\orange;Ornate Shrine (2)	\blue;+x% к Урону Заклинаний Молнии\n-x% к Сопротивлению Молнии у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Ornate				prsh		-1
-I9+	\orange;Ornate Shrine (1)	\blue;+x% к Урону Заклинаний Молнии\n-x% к Сопротивлению Молнии у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Ornate				prsh		-1
-J0+	\orange;Sacred Shrine (10)	\blue;+x% к Урону Заклинаний Холода\n-x% к Сопротивлению Холоду у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Sacred				prsh,flsh		-1
-J0+S	\orange;Sacred Vessel	Нажмите ПКМ чтобы Собрать	1	2	2		0	0	0									#Sacred				shco		-1
-J1+	\orange;Sacred Shrine (9)	\blue;+x% к Урону Заклинаний Холода\n-x% к Сопротивлению Холоду у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Sacred				prsh		-1
-J2+	\orange;Sacred Shrine (8)	\blue;+x% к Урону Заклинаний Холода\n-x% к Сопротивлению Холоду у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Sacred				prsh		-1
-J3+	\orange;Sacred Shrine (7)	\blue;+x% к Урону Заклинаний Холода\n-x% к Сопротивлению Холоду у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Sacred				prsh		-1
-J4+	\orange;Sacred Shrine (6)	\blue;+x% к Урону Заклинаний Холода\n-x% к Сопротивлению Холоду у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Sacred				prsh		-1
-J5+	\orange;Sacred Shrine (5)	\blue;+x% к Урону Заклинаний Холода\n-x% к Сопротивлению Холоду у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Sacred				prsh		-1
-J6+	\orange;Sacred Shrine (4)	\blue;+x% к Урону Заклинаний Холода\n-x% к Сопротивлению Холоду у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Sacred				prsh		-1
-J7+	\orange;Sacred Shrine (3)	\blue;+x% к Урону Заклинаний Холода\n-x% к Сопротивлению Холоду у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Sacred				prsh		-1
-J8+	\orange;Sacred Shrine (2)	\blue;+x% к Урону Заклинаний Холода\n-x% к Сопротивлению Холоду у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Sacred				prsh		-1
-J9+	\orange;Sacred Shrine (1)	\blue;+x% к Урону Заклинаний Холода\n-x% к Сопротивлению Холоду у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Sacred				prsh		-1
-K0+	\orange;Shimmering Shrine (10)	\blue;+x% к Урону Заклинаний Яда\n-x% к Сопротивлению Яду у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Shimmering				prsh,flsh		-1
-K0+S	\orange;Shimmering Vessel	Нажмите ПКМ чтобы Собрать	1	2	2		0	0	0									#Shimmering				shco		-1
-K1+	\orange;Shimmering Shrine (9)	\blue;+x% к Урону Заклинаний Яда\n-x% к Сопротивлению Яду у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Shimmering				prsh		-1
-K2+	\orange;Shimmering Shrine (8)	\blue;+x% к Урону Заклинаний Яда\n-x% к Сопротивлению Яду у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Shimmering				prsh		-1
-K3+	\orange;Shimmering Shrine (7)	\blue;+x% к Урону Заклинаний Яда\n-x% к Сопротивлению Яду у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Shimmering				prsh		-1
-K4+	\orange;Shimmering Shrine (6)	\blue;+x% к Урону Заклинаний Яда\n-x% к Сопротивлению Яду у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Shimmering				prsh		-1
-K5+	\orange;Shimmering Shrine (5)	\blue;+x% к Урону Заклинаний Яда\n-x% к Сопротивлению Яду у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Shimmering				prsh		-1
-K6+	\orange;Shimmering Shrine (4)	\blue;+x% к Урону Заклинаний Яда\n-x% к Сопротивлению Яду у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Shimmering				prsh		-1
-K7+	\orange;Shimmering Shrine (3)	\blue;+x% к Урону Заклинаний Яда\n-x% к Сопротивлению Яду у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Shimmering				prsh		-1
-K8+	\orange;Shimmering Shrine (2)	\blue;+x% к Урону Заклинаний Яда\n-x% к Сопротивлению Яду у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Shimmering				prsh		-1
-K9+	\orange;Shimmering Shrine (1)	\blue;+x% к Урону Заклинаний Яда\n-x% к Сопротивлению Яду у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Shimmering				prsh		-1
+A0+	\orange;Creepy Shrine (10)	\blue;+x к Силе\nx% к Силе\nx% Шанс Сокрушительного Удара\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Creepy				prsh,flsh		-1
+A0+S	\orange;Creepy Vessel	(Нажмите ПКМ чтобы Собрать)	1	2	2		0	0	0									#Creepy				shco		-1
+A1+	\orange;Creepy Shrine (9)	\blue;+x к Силе\nx% к Силе\nx% Шанс Сокрушительного Удара\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Creepy				prsh		-1
+A2+	\orange;Creepy Shrine (8)	\blue;+x к Силе\nx% к Силе\nx% Шанс Сокрушительного Удара\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Creepy				prsh		-1
+A3+	\orange;Creepy Shrine (7)	\blue;+x к Силе\nx% к Силе\nx% Шанс Сокрушительного Удара\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Creepy				prsh		-1
+A4+	\orange;Creepy Shrine (6)	\blue;+x к Силе\nx% к Силе\nx% Шанс Сокрушительного Удара\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Creepy				prsh		-1
+A5+	\orange;Creepy Shrine (5)	\blue;+x к Силе\nx% к Силе\nx% Шанс Сокрушительного Удара\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Creepy				prsh		-1
+A6+	\orange;Creepy Shrine (4)	\blue;+x к Силе\nx% к Силе\nx% Шанс Сокрушительного Удара\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Creepy				prsh		-1
+A7+	\orange;Creepy Shrine (3)	\blue;+x к Силе\nx% к Силе\nx% Шанс Сокрушительного Удара\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Creepy				prsh		-1
+A8+	\orange;Creepy Shrine (2)	\blue;+x к Силе\nx% к Силе\nx% Шанс Сокрушительного Удара\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Creepy				prsh		-1
+A9+	\orange;Creepy Shrine (1)	\blue;+x к Силе\nx% к Силе\nx% Шанс Сокрушительного Удара\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Creepy				prsh		-1
+B0+	\orange;Abandoned Shrine (10)	\blue;+x к Ловкости\nx% к Ловкости\nx% к Рейтингу Атаки\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Abandoned				prsh,flsh		-1
+B0+S	\orange;Abandoned Vessel	(Нажмите ПКМ чтобы Собрать)	1	2	2		0	0	0									#Abandoned				shco		-1
+B1+	\orange;Abandoned Shrine (9)	\blue;+x к Ловкости\nx% к Ловкости\nx% к Рейтингу Атаки\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Abandoned				prsh		-1
+B2+	\orange;Abandoned Shrine (8)	\blue;+x к Ловкости\nx% к Ловкости\nx% к Рейтингу Атаки\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Abandoned				prsh		-1
+B3+	\orange;Abandoned Shrine (7)	\blue;+x к Ловкости\nx% к Ловкости\nx% к Рейтингу Атаки\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Abandoned				prsh		-1
+B4+	\orange;Abandoned Shrine (6)	\blue;+x к Ловкости\nx% к Ловкости\nx% к Рейтингу Атаки\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Abandoned				prsh		-1
+B5+	\orange;Abandoned Shrine (5)	\blue;+x к Ловкости\nx% к Ловкости\nx% к Рейтингу Атаки\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Abandoned				prsh		-1
+B6+	\orange;Abandoned Shrine (4)	\blue;+x к Ловкости\nx% к Ловкости\nx% к Рейтингу Атаки\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Abandoned				prsh		-1
+B7+	\orange;Abandoned Shrine (3)	\blue;+x к Ловкости\nx% к Ловкости\nx% к Рейтингу Атаки\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Abandoned				prsh		-1
+B8+	\orange;Abandoned Shrine (2)	\blue;+x к Ловкости\nx% к Ловкости\nx% к Рейтингу Атаки\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Abandoned				prsh		-1
+B9+	\orange;Abandoned Shrine (1)	\blue;+x к Ловкости\nx% к Ловкости\nx% к Рейтингу Атаки\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Abandoned				prsh		-1
+C0+	\orange;Quiet Shrine (10)	\blue;+x к Живучести\nx% к Живучести\n+х Восстановление Жизни в Секунду\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Quiet				prsh,flsh		-1
+C0+S	\orange;Quiet Vessel	(Нажмите ПКМ чтобы Собрать)	1	2	2		0	0	0									#Quiet				shco		-1
+C1+	\orange;Quiet Shrine (9)	\blue;+x к Живучести\nx% к Живучести\n+х Восстановление Жизни в Секунду\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Quiet				prsh		-1
+C2+	\orange;Quiet Shrine (8)	\blue;+x к Живучести\nx% к Живучести\n+х Восстановление Жизни в Секунду\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Quiet				prsh		-1
+C3+	\orange;Quiet Shrine (7)	\blue;+x к Живучести\nx% к Живучести\n+х Восстановление Жизни в Секунду\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Quiet				prsh		-1
+C4+	\orange;Quiet Shrine (6)	\blue;+x к Живучести\nx% к Живучести\n+х Восстановление Жизни в Секунду\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Quiet				prsh		-1
+C5+	\orange;Quiet Shrine (5)	\blue;+x к Живучести\nx% к Живучести\n+х Восстановление Жизни в Секунду\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Quiet				prsh		-1
+C6+	\orange;Quiet Shrine (4)	\blue;+x к Живучести\nx% к Живучести\n+х Восстановление Жизни в Секунду\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Quiet				prsh		-1
+C7+	\orange;Quiet Shrine (3)	\blue;+x к Живучести\nx% к Живучести\n+х Восстановление Жизни в Секунду\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Quiet				prsh		-1
+C8+	\orange;Quiet Shrine (2)	\blue;+x к Живучести\nx% к Живучести\n+х Восстановление Жизни в Секунду\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Quiet				prsh		-1
+C9+	\orange;Quiet Shrine (1)	\blue;+x к Живучести\nx% к Живучести\n+х Восстановление Жизни в Секунду\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Quiet				prsh		-1
+D0+	\orange;Eerie Shrine (10)	\blue;+x к Энергии\nx% к Энергии\n+х к Фокусировке Заклинаний\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Eerie				prsh,flsh		-1
+D0+S	\orange;Eerie Vessel	(Нажмите ПКМ чтобы Собрать)	1	2	2		0	0	0									#Eerie				shco		-1
+D1+	\orange;Eerie Shrine (9)	\blue;+x к Энергии\nx% к Энергии\n+х к Фокусировке Заклинаний\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Eerie				prsh		-1
+D2+	\orange;Eerie Shrine (8)	\blue;+x к Энергии\nx% к Энергии\n+х к Фокусировке Заклинаний\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Eerie				prsh		-1
+D3+	\orange;Eerie Shrine (7)	\blue;+x к Энергии\nx% к Энергии\n+х к Фокусировке Заклинаний\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Eerie				prsh		-1
+D4+	\orange;Eerie Shrine (6)	\blue;+x к Энергии\nx% к Энергии\n+х к Фокусировке Заклинаний\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Eerie				prsh		-1
+D5+	\orange;Eerie Shrine (5)	\blue;+x к Энергии\nx% к Энергии\n+х к Фокусировке Заклинаний\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Eerie				prsh		-1
+D6+	\orange;Eerie Shrine (4)	\blue;+x к Энергии\nx% к Энергии\n+х к Фокусировке Заклинаний\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Eerie				prsh		-1
+D7+	\orange;Eerie Shrine (3)	\blue;+x к Энергии\nx% к Энергии\n+х к Фокусировке Заклинаний\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Eerie				prsh		-1
+D8+	\orange;Eerie Shrine (2)	\blue;+x к Энергии\nx% к Энергии\n+х к Фокусировке Заклинаний\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Eerie				prsh		-1
+D9+	\orange;Eerie Shrine (1)	\blue;+x к Энергии\nx% к Энергии\n+х к Фокусировке Заклинаний\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Eerie				prsh		-1
+E0+	\orange;Weird Shrine (10)	\blue;Добавляет x-y Урона\n+x% Повышенный Урон\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Weird				prsh,flsh		-1
+E0+S	\orange;Weird Vessel	(Нажмите ПКМ чтобы Собрать)	1	2	2		0	0	0									#Weird				shco		-1
+E1+	\orange;Weird Shrine (9)	\blue;Добавляет x-y Урона\n+x% Повышенный Урон\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Weird				prsh		-1
+E2+	\orange;Weird Shrine (8)	\blue;Добавляет x-y Урона\n+x% Повышенный Урон\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Weird				prsh		-1
+E3+	\orange;Weird Shrine (7)	\blue;Добавляет x-y Урона\n+x% Повышенный Урон\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Weird				prsh		-1
+E4+	\orange;Weird Shrine (6)	\blue;Добавляет x-y Урона\n+x% Повышенный Урон\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Weird				prsh		-1
+E5+	\orange;Weird Shrine (5)	\blue;Добавляет x-y Урона\n+x% Повышенный Урон\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Weird				prsh		-1
+E6+	\orange;Weird Shrine (4)	\blue;Добавляет x-y Урона\n+x% Повышенный Урон\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Weird				prsh		-1
+E7+	\orange;Weird Shrine (3)	\blue;Добавляет x-y Урона\n+x% Повышенный Урон\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Weird				prsh		-1
+E8+	\orange;Weird Shrine (2)	\blue;Добавляет x-y Урона\n+x% Повышенный Урон\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Weird				prsh		-1
+E9+	\orange;Weird Shrine (1)	\blue;Добавляет x-y Урона\n+x% Повышенный Урон\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Weird				prsh		-1
+F0+	\orange;Intimidating Shrine (10)	\dgrey;(Броня)\n\blue;Сопротивление Физическому Урону +x%\n+x% Повышенная Защита\n\n\dgrey;(Оружие)\n\blue;x% Смертельный Удар\nТребования +x%\n+x% Усиленный Урон\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Gloomy				prsh,flsh		-1
+F0+S	\orange;Intimidating Vessel	(Нажмите ПКМ чтобы Собрать)	1	2	2		0	0	0									#Gloomy				shco		-1
+F1+	\orange;Intimidating Shrine (9)	\dgrey;(Броня)\n\blue;Сопротивление Физическому Урону +x%\n+x% Повышенная Защита\n\n\dgrey;(Оружие)\n\blue;x% Смертельный Удар\nТребования +x%\n+x% Усиленный Урон\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Gloomy				prsh		-1
+F2+	\orange;Intimidating Shrine (8)	\dgrey;(Броня)\n\blue;Сопротивление Физическому Урону +x%\n+x% Повышенная Защита\n\n\dgrey;(Оружие)\n\blue;x% Смертельный Удар\nТребования +x%\n+x% Усиленный Урон\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Gloomy				prsh		-1
+F3+	\orange;Intimidating Shrine (7)	\dgrey;(Броня)\n\blue;Сопротивление Физическому Урону +x%\n+x% Повышенная Защита\n\n\dgrey;(Оружие)\n\blue;x% Смертельный Удар\nТребования +x%\n+x% Усиленный Урон\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Gloomy				prsh		-1
+F4+	\orange;Intimidating Shrine (6)	\dgrey;(Броня)\n\blue;Сопротивление Физическому Урону +x%\n+x% Повышенная Защита\n\n\dgrey;(Оружие)\n\blue;x% Смертельный Удар\nТребования +x%\n+x% Усиленный Урон\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Gloomy				prsh		-1
+F5+	\orange;Intimidating Shrine (5)	\dgrey;(Броня)\n\blue;Сопротивление Физическому Урону +x%\n+x% Повышенная Защита\n\n\dgrey;(Оружие)\n\blue;x% Смертельный Удар\nТребования +x%\n+x% Усиленный Урон\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Gloomy				prsh		-1
+F6+	\orange;Intimidating Shrine (4)	\dgrey;(Броня)\n\blue;Сопротивление Физическому Урону +x%\n+x% Повышенная Защита\n\n\dgrey;(Оружие)\n\blue;x% Смертельный Удар\nТребования +x%\n+x% Усиленный Урон\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Gloomy				prsh		-1
+F7+	\orange;Intimidating Shrine (3)	\dgrey;(Броня)\n\blue;Сопротивление Физическому Урону +x%\n+x% Повышенная Защита\n\n\dgrey;(Оружие)\n\blue;x% Смертельный Удар\nТребования +x%\n+x% Усиленный Урон\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Gloomy				prsh		-1
+F8+	\orange;Intimidating Shrine (2)	\dgrey;(Броня)\n\blue;Сопротивление Физическому Урону +x%\n+x% Повышенная Защита\n\n\dgrey;(Оружие)\n\blue;x% Смертельный Удар\nТребования +x%\n+x% Усиленный Урон\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Gloomy				prsh		-1
+F9+	\orange;Intimidating Shrine (1)	\dgrey;(Броня)\n\blue;Сопротивление Физическому Урону +x%\n+x% Повышенная Защита\n\n\dgrey;(Оружие)\n\blue;x% Смертельный Удар\nТребования +x%\n+x% Усиленный Урон\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Gloomy				prsh		-1
+G0+	\orange;Tainted Shrine (10)	\blue;+x% к Урону Призываемых Существ\n+x% к Рейтингу Атаки Призываемых Существ\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Tainted				prsh,flsh		-1
+G0+S	\orange;Tainted Vessel	(Нажмите ПКМ чтобы Собрать)	1	2	2		0	0	0									#Tainted				shco		-1
+G1+	\orange;Tainted Shrine (9)	\blue;+x% к Урону Призываемых Существ\n+x% к Рейтингу Атаки Призываемых Существ\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Tainted				prsh		-1
+G2+	\orange;Tainted Shrine (8)	\blue;+x% к Урону Призываемых Существ\n+x% к Рейтингу Атаки Призываемых Существ\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Tainted				prsh		-1
+G3+	\orange;Tainted Shrine (7)	\blue;+x% к Урону Призываемых Существ\n+x% к Рейтингу Атаки Призываемых Существ\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Tainted				prsh		-1
+G4+	\orange;Tainted Shrine (6)	\blue;+x% к Урону Призываемых Существ\n+x% к Рейтингу Атаки Призываемых Существ\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Tainted				prsh		-1
+G5+	\orange;Tainted Shrine (5)	\blue;+x% к Урону Призываемых Существ\n+x% к Рейтингу Атаки Призываемых Существ\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Tainted				prsh		-1
+G6+	\orange;Tainted Shrine (4)	\blue;+x% к Урону Призываемых Существ\n+x% к Рейтингу Атаки Призываемых Существ\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Tainted				prsh		-1
+G7+	\orange;Tainted Shrine (3)	\blue;+x% к Урону Призываемых Существ\n+x% к Рейтингу Атаки Призываемых Существ\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Tainted				prsh		-1
+G8+	\orange;Tainted Shrine (2)	\blue;+x% к Урону Призываемых Существ\n+x% к Рейтингу Атаки Призываемых Существ\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Tainted				prsh		-1
+G9+	\orange;Tainted Shrine (1)	\blue;+x% к Урону Призываемых Существ\n+x% к Рейтингу Атаки Призываемых Существ\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Tainted				prsh		-1
+H0+	\orange;Fascinating Shrine (10)	\blue;+x% к Урону Заклинаний Огня\n-x% к Сопротивлению Огню у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Fascinating				prsh,flsh		-1
+H0+S	\orange;Fascinating Vessel	(Нажмите ПКМ чтобы Собрать)	1	2	2		0	0	0									#Fascinating				shco		-1
+H1+	\orange;Fascinating Shrine (9)	\blue;+x% к Урону Заклинаний Огня\n-x% к Сопротивлению Огню у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Fascinating				prsh		-1
+H2+	\orange;Fascinating Shrine (8)	\blue;+x% к Урону Заклинаний Огня\n-x% к Сопротивлению Огню у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Fascinating				prsh		-1
+H3+	\orange;Fascinating Shrine (7)	\blue;+x% к Урону Заклинаний Огня\n-x% к Сопротивлению Огню у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Fascinating				prsh		-1
+H4+	\orange;Fascinating Shrine (6)	\blue;+x% к Урону Заклинаний Огня\n-x% к Сопротивлению Огню у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Fascinating				prsh		-1
+H5+	\orange;Fascinating Shrine (5)	\blue;+x% к Урону Заклинаний Огня\n-x% к Сопротивлению Огню у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Fascinating				prsh		-1
+H6+	\orange;Fascinating Shrine (4)	\blue;+x% к Урону Заклинаний Огня\n-x% к Сопротивлению Огню у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Fascinating				prsh		-1
+H7+	\orange;Fascinating Shrine (3)	\blue;+x% к Урону Заклинаний Огня\n-x% к Сопротивлению Огню у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Fascinating				prsh		-1
+H8+	\orange;Fascinating Shrine (2)	\blue;+x% к Урону Заклинаний Огня\n-x% к Сопротивлению Огню у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Fascinating				prsh		-1
+H9+	\orange;Fascinating Shrine (1)	\blue;+x% к Урону Заклинаний Огня\n-x% к Сопротивлению Огню у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Fascinating				prsh		-1
+I0+	\orange;Ornate Shrine (10)	\blue;+x% к Урону Заклинаний Молнии\n-x% к Сопротивлению Молнии у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Ornate				prsh,flsh		-1
+I0+S	\orange;Ornate Vessel	(Нажмите ПКМ чтобы Собрать)	1	2	2		0	0	0									#Ornate				shco		-1
+I1+	\orange;Ornate Shrine (9)	\blue;+x% к Урону Заклинаний Молнии\n-x% к Сопротивлению Молнии у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Ornate				prsh		-1
+I2+	\orange;Ornate Shrine (8)	\blue;+x% к Урону Заклинаний Молнии\n-x% к Сопротивлению Молнии у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Ornate				prsh		-1
+I3+	\orange;Ornate Shrine (7)	\blue;+x% к Урону Заклинаний Молнии\n-x% к Сопротивлению Молнии у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Ornate				prsh		-1
+I4+	\orange;Ornate Shrine (6)	\blue;+x% к Урону Заклинаний Молнии\n-x% к Сопротивлению Молнии у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Ornate				prsh		-1
+I5+	\orange;Ornate Shrine (5)	\blue;+x% к Урону Заклинаний Молнии\n-x% к Сопротивлению Молнии у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Ornate				prsh		-1
+I6+	\orange;Ornate Shrine (4)	\blue;+x% к Урону Заклинаний Молнии\n-x% к Сопротивлению Молнии у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Ornate				prsh		-1
+I7+	\orange;Ornate Shrine (3)	\blue;+x% к Урону Заклинаний Молнии\n-x% к Сопротивлению Молнии у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Ornate				prsh		-1
+I8+	\orange;Ornate Shrine (2)	\blue;+x% к Урону Заклинаний Молнии\n-x% к Сопротивлению Молнии у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Ornate				prsh		-1
+I9+	\orange;Ornate Shrine (1)	\blue;+x% к Урону Заклинаний Молнии\n-x% к Сопротивлению Молнии у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Ornate				prsh		-1
+J0+	\orange;Sacred Shrine (10)	\blue;+x% к Урону Заклинаний Холода\n-x% к Сопротивлению Холоду у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Sacred				prsh,flsh		-1
+J0+S	\orange;Sacred Vessel	(Нажмите ПКМ чтобы Собрать)	1	2	2		0	0	0									#Sacred				shco		-1
+J1+	\orange;Sacred Shrine (9)	\blue;+x% к Урону Заклинаний Холода\n-x% к Сопротивлению Холоду у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Sacred				prsh		-1
+J2+	\orange;Sacred Shrine (8)	\blue;+x% к Урону Заклинаний Холода\n-x% к Сопротивлению Холоду у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Sacred				prsh		-1
+J3+	\orange;Sacred Shrine (7)	\blue;+x% к Урону Заклинаний Холода\n-x% к Сопротивлению Холоду у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Sacred				prsh		-1
+J4+	\orange;Sacred Shrine (6)	\blue;+x% к Урону Заклинаний Холода\n-x% к Сопротивлению Холоду у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Sacred				prsh		-1
+J5+	\orange;Sacred Shrine (5)	\blue;+x% к Урону Заклинаний Холода\n-x% к Сопротивлению Холоду у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Sacred				prsh		-1
+J6+	\orange;Sacred Shrine (4)	\blue;+x% к Урону Заклинаний Холода\n-x% к Сопротивлению Холоду у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Sacred				prsh		-1
+J7+	\orange;Sacred Shrine (3)	\blue;+x% к Урону Заклинаний Холода\n-x% к Сопротивлению Холоду у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Sacred				prsh		-1
+J8+	\orange;Sacred Shrine (2)	\blue;+x% к Урону Заклинаний Холода\n-x% к Сопротивлению Холоду у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Sacred				prsh		-1
+J9+	\orange;Sacred Shrine (1)	\blue;+x% к Урону Заклинаний Холода\n-x% к Сопротивлению Холоду у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Sacred				prsh		-1
+K0+	\orange;Shimmering Shrine (10)	\blue;+x% к Урону Заклинаний Яда\n-x% к Сопротивлению Яду у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Shimmering				prsh,flsh		-1
+K0+S	\orange;Shimmering Vessel	(Нажмите ПКМ чтобы Собрать)	1	2	2		0	0	0									#Shimmering				shco		-1
+K1+	\orange;Shimmering Shrine (9)	\blue;+x% к Урону Заклинаний Яда\n-x% к Сопротивлению Яду у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Shimmering				prsh		-1
+K2+	\orange;Shimmering Shrine (8)	\blue;+x% к Урону Заклинаний Яда\n-x% к Сопротивлению Яду у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Shimmering				prsh		-1
+K3+	\orange;Shimmering Shrine (7)	\blue;+x% к Урону Заклинаний Яда\n-x% к Сопротивлению Яду у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Shimmering				prsh		-1
+K4+	\orange;Shimmering Shrine (6)	\blue;+x% к Урону Заклинаний Яда\n-x% к Сопротивлению Яду у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Shimmering				prsh		-1
+K5+	\orange;Shimmering Shrine (5)	\blue;+x% к Урону Заклинаний Яда\n-x% к Сопротивлению Яду у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Shimmering				prsh		-1
+K6+	\orange;Shimmering Shrine (4)	\blue;+x% к Урону Заклинаний Яда\n-x% к Сопротивлению Яду у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Shimmering				prsh		-1
+K7+	\orange;Shimmering Shrine (3)	\blue;+x% к Урону Заклинаний Яда\n-x% к Сопротивлению Яду у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Shimmering				prsh		-1
+K8+	\orange;Shimmering Shrine (2)	\blue;+x% к Урону Заклинаний Яда\n-x% к Сопротивлению Яду у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Shimmering				prsh		-1
+K9+	\orange;Shimmering Shrine (1)	\blue;+x% к Урону Заклинаний Яда\n-x% к Сопротивлению Яду у Врага\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Shimmering				prsh		-1
 Kx1	\purple;Earth Essence	\yellow;Этот Рецепт создает Rune этой же Стихии\n\grey;Смешайте с Primal Rune для Улучшения\n\nРеагент Куба	1	1	2		0	0	0									EarthEssence				thng,esse		-1
 Kx2	\purple;Magic Essence	\yellow;Этот Рецепт создает Rune этой же Стихии\n\grey;Смешайте с Primal Rune для Улучшения\n\nРеагент Куба	1	1	2		0	0	0									MagicEssence				thng,esse		-1
 Kx3	\purple;Venomous Essence	\yellow;Этот Рецепт создает Rune этой же Стихии\n\grey;Смешайте с Primal Rune для Улучшения\n\nРеагент Куба	1	1	2		0	0	0									VenomousEssence				thng,esse		-1
 Kx4	\purple;Lightning Essence	\yellow;Этот Рецепт создает Rune этой же Стихии\n\grey;Смешайте с Primal Rune для Улучшения\n\nРеагент Куба	1	1	2		0	0	0									LightningEssence				thng,esse		-1
 Kx5	\purple;Icy Essence	\yellow;Этот Рецепт создает Rune этой же Стихии\n\grey;Смешайте с Primal Rune для Улучшения\n\nРеагент Куба	1	1	2		0	0	0									IcyEssence				thng,esse		-1
 Kx6	\purple;Fiery Essence	\yellow;Этот Рецепт создает Rune этой же Стихии\n\grey;Смешайте с Primal Rune для Улучшения\n\nРеагент Куба	1	1	2		0	0	0									FieryEssence				thng,esse		-1
-M0+	\orange;Spiritual Shrine (10)	\blue;+x% к Скорости Сотворения Заклинаний\nМаксимум Маны +x%\nВосстановление Маны +x%\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Spiritual				prsh,flsh		-1
-M0+S	\orange;Spiritual Vessel	Нажмите ПКМ чтобы Собрать	1	2	2		0	0	0									#Spiritual				shco		-1
-M1+	\orange;Spiritual Shrine (9)	\blue;+x% к Скорости Сотворения Заклинаний\nМаксимум Маны +x%\nВосстановление Маны +x%\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Spiritual				prsh		-1
-M2+	\orange;Spiritual Shrine (8)	\blue;+x% к Скорости Сотворения Заклинаний\nМаксимум Маны +x%\nВосстановление Маны +x%\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Spiritual				prsh		-1
-M3+	\orange;Spiritual Shrine (7)	\blue;+x% к Скорости Сотворения Заклинаний\nМаксимум Маны +x%\nВосстановление Маны +x%\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Spiritual				prsh		-1
-M4+	\orange;Spiritual Shrine (6)	\blue;+x% к Скорости Сотворения Заклинаний\nМаксимум Маны +x%\nВосстановление Маны +x%\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Spiritual				prsh		-1
-M5+	\orange;Spiritual Shrine (5)	\blue;+x% к Скорости Сотворения Заклинаний\nМаксимум Маны +x%\nВосстановление Маны +x%\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Spiritual				prsh		-1
-M6+	\orange;Spiritual Shrine (4)	\blue;+x% к Скорости Сотворения Заклинаний\nМаксимум Маны +x%\nВосстановление Маны +x%\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Spiritual				prsh		-1
-M7+	\orange;Spiritual Shrine (3)	\blue;+x% к Скорости Сотворения Заклинаний\nМаксимум Маны +x%\nВосстановление Маны +x%\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Spiritual				prsh		-1
-M8+	\orange;Spiritual Shrine (2)	\blue;+x% к Скорости Сотворения Заклинаний\nМаксимум Маны +x%\nВосстановление Маны +x%\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Spiritual				prsh		-1
-M9+	\orange;Spiritual Shrine (1)	\blue;+x% к Скорости Сотворения Заклинаний\nМаксимум Маны +x%\nВосстановление Маны +x%\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Spiritual				prsh		-1
-N0+	\orange;Magical Shrine (10)	\blue;+x% к Жизни Призываемых Существ\n+x% к Сопротивлениям Призываемых Существ\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Magical				prsh,flsh		-1
-N0+S	\orange;Magical Vessel	Нажмите ПКМ чтобы Собрать	1	2	2		0	0	0									#Magical				shco		-1
-N1+	\orange;Magical Shrine (9)	\blue;+x% к Жизни Призываемых Существ\n+x% к Сопротивлениям Призываемых Существ\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Magical				prsh		-1
-N2+	\orange;Magical Shrine (8)	\blue;+x% к Жизни Призываемых Существ\n+x% к Сопротивлениям Призываемых Существ\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Magical				prsh		-1
-N3+	\orange;Magical Shrine (7)	\blue;+x% к Жизни Призываемых Существ\n+x% к Сопротивлениям Призываемых Существ\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Magical				prsh		-1
-N4+	\orange;Magical Shrine (6)	\blue;+x% к Жизни Призываемых Существ\n+x% к Сопротивлениям Призываемых Существ\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Magical				prsh		-1
-N5+	\orange;Magical Shrine (5)	\blue;+x% к Жизни Призываемых Существ\n+x% к Сопротивлениям Призываемых Существ\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Magical				prsh		-1
-N6+	\orange;Magical Shrine (4)	\blue;+x% к Жизни Призываемых Существ\n+x% к Сопротивлениям Призываемых Существ\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Magical				prsh		-1
-N7+	\orange;Magical Shrine (3)	\blue;+x% к Жизни Призываемых Существ\n+x% к Сопротивлениям Призываемых Существ\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Magical				prsh		-1
-N8+	\orange;Magical Shrine (2)	\blue;+x% к Жизни Призываемых Существ\n+x% к Сопротивлениям Призываемых Существ\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Magical				prsh		-1
-N9+	\orange;Magical Shrine (1)	\blue;+x% к Жизни Призываемых Существ\n+x% к Сопротивлениям Призываемых Существ\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Magical				prsh		-1
-O0+	\orange;Enchanted Shrine (10)	\blue;Магическое Сопротивление +x%\n+x% к Физ./Маг. Урону Заклинаний\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Enchanted				prsh,flsh		-1
-O0+S	\orange;Enchanted Vessel	Нажмите ПКМ чтобы Собрать	1	2	2		0	0	0									#Enchanted				shco		-1
-O1+	\orange;Enchanted Shrine (9)	\blue;Магическое Сопротивление +x%\n+x% к Физ./Маг. Урону Заклинаний\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Enchanted				prsh		-1
-O2+	\orange;Enchanted Shrine (8)	\blue;Магическое Сопротивление +x%\n+x% к Физ./Маг. Урону Заклинаний\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Enchanted				prsh		-1
-O3+	\orange;Enchanted Shrine (7)	\blue;Магическое Сопротивление +x%\n+x% к Физ./Маг. Урону Заклинаний\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Enchanted				prsh		-1
-O4+	\orange;Enchanted Shrine (6)	\blue;Магическое Сопротивление +x%\n+x% к Физ./Маг. Урону Заклинаний\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Enchanted				prsh		-1
-O5+	\orange;Enchanted Shrine (5)	\blue;Магическое Сопротивление +x%\n+x% к Физ./Маг. Урону Заклинаний\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Enchanted				prsh		-1
-O6+	\orange;Enchanted Shrine (4)	\blue;Магическое Сопротивление +x%\n+x% к Физ./Маг. Урону Заклинаний\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Enchanted				prsh		-1
-O7+	\orange;Enchanted Shrine (3)	\blue;Магическое Сопротивление +x%\n+x% к Физ./Маг. Урону Заклинаний\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Enchanted				prsh		-1
-O8+	\orange;Enchanted Shrine (2)	\blue;Магическое Сопротивление +x%\n+x% к Физ./Маг. Урону Заклинаний\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Enchanted				prsh		-1
-O9+	\orange;Enchanted Shrine (1)	\blue;Магическое Сопротивление +x%\n+x% к Физ./Маг. Урону Заклинаний\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Enchanted				prsh		-1
-Q0+	\orange;Hidden Shrine (10)	\blue;1% Возродить как: Случайный Монстр\n1% Возродить как: Случайный Монстр\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Hidden				prsh,flsh		-1
-Q0+S	\orange;Hidden Vessel	Нажмите ПКМ чтобы Собрать	1	2	2		0	0	0									#Hidden				shco		-1
-Q1+	\orange;Hidden Shrine (9)	\blue;1% Возродить как: Случайный Монстр\n1% Возродить как: Случайный Монстр\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Hidden				prsh		-1
-Q2+	\orange;Hidden Shrine (8)	\blue;1% Возродить как: Случайный Монстр\n1% Возродить как: Случайный Монстр\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Hidden				prsh		-1
-Q3+	\orange;Hidden Shrine (7)	\blue;1% Возродить как: Случайный Монстр\n1% Возродить как: Случайный Монстр\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Hidden				prsh		-1
-Q4+	\orange;Hidden Shrine (6)	\blue;1% Возродить как: Случайный Монстр\n1% Возродить как: Случайный Монстр\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Hidden				prsh		-1
-Q5+	\orange;Hidden Shrine (5)	\blue;1% Возродить как: Случайный Монстр\n1% Возродить как: Случайный Монстр\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Hidden				prsh		-1
-Q6+	\orange;Hidden Shrine (4)	\blue;1% Возродить как: Случайный Монстр\n1% Возродить как: Случайный Монстр\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Hidden				prsh		-1
-Q7+	\orange;Hidden Shrine (3)	\blue;1% Возродить как: Случайный Монстр\n1% Возродить как: Случайный Монстр\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Hidden				prsh		-1
-Q8+	\orange;Hidden Shrine (2)	\blue;1% Возродить как: Случайный Монстр\n1% Возродить как: Случайный Монстр\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Hidden				prsh		-1
-Q9+	\orange;Hidden Shrine (1)	\blue;1% Возродить как: Случайный Монстр\n1% Возродить как: Случайный Монстр\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Броней для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Hidden				prsh		-1
+M0+	\orange;Spiritual Shrine (10)	\blue;+x% к Скорости Сотворения Заклинаний\nМаксимум Маны +x%\nВосстановление Маны +x%\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Spiritual				prsh,flsh		-1
+M0+S	\orange;Spiritual Vessel	(Нажмите ПКМ чтобы Собрать)	1	2	2		0	0	0									#Spiritual				shco		-1
+M1+	\orange;Spiritual Shrine (9)	\blue;+x% к Скорости Сотворения Заклинаний\nМаксимум Маны +x%\nВосстановление Маны +x%\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Spiritual				prsh		-1
+M2+	\orange;Spiritual Shrine (8)	\blue;+x% к Скорости Сотворения Заклинаний\nМаксимум Маны +x%\nВосстановление Маны +x%\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Spiritual				prsh		-1
+M3+	\orange;Spiritual Shrine (7)	\blue;+x% к Скорости Сотворения Заклинаний\nМаксимум Маны +x%\nВосстановление Маны +x%\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Spiritual				prsh		-1
+M4+	\orange;Spiritual Shrine (6)	\blue;+x% к Скорости Сотворения Заклинаний\nМаксимум Маны +x%\nВосстановление Маны +x%\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Spiritual				prsh		-1
+M5+	\orange;Spiritual Shrine (5)	\blue;+x% к Скорости Сотворения Заклинаний\nМаксимум Маны +x%\nВосстановление Маны +x%\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Spiritual				prsh		-1
+M6+	\orange;Spiritual Shrine (4)	\blue;+x% к Скорости Сотворения Заклинаний\nМаксимум Маны +x%\nВосстановление Маны +x%\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Spiritual				prsh		-1
+M7+	\orange;Spiritual Shrine (3)	\blue;+x% к Скорости Сотворения Заклинаний\nМаксимум Маны +x%\nВосстановление Маны +x%\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Spiritual				prsh		-1
+M8+	\orange;Spiritual Shrine (2)	\blue;+x% к Скорости Сотворения Заклинаний\nМаксимум Маны +x%\nВосстановление Маны +x%\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Spiritual				prsh		-1
+M9+	\orange;Spiritual Shrine (1)	\blue;+x% к Скорости Сотворения Заклинаний\nМаксимум Маны +x%\nВосстановление Маны +x%\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Spiritual				prsh		-1
+N0+	\orange;Magical Shrine (10)	\blue;+x% к Жизни Призываемых Существ\n+x% к Сопротивлениям Призываемых Существ\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Magical				prsh,flsh		-1
+N0+S	\orange;Magical Vessel	(Нажмите ПКМ чтобы Собрать)	1	2	2		0	0	0									#Magical				shco		-1
+N1+	\orange;Magical Shrine (9)	\blue;+x% к Жизни Призываемых Существ\n+x% к Сопротивлениям Призываемых Существ\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Magical				prsh		-1
+N2+	\orange;Magical Shrine (8)	\blue;+x% к Жизни Призываемых Существ\n+x% к Сопротивлениям Призываемых Существ\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Magical				prsh		-1
+N3+	\orange;Magical Shrine (7)	\blue;+x% к Жизни Призываемых Существ\n+x% к Сопротивлениям Призываемых Существ\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Magical				prsh		-1
+N4+	\orange;Magical Shrine (6)	\blue;+x% к Жизни Призываемых Существ\n+x% к Сопротивлениям Призываемых Существ\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Magical				prsh		-1
+N5+	\orange;Magical Shrine (5)	\blue;+x% к Жизни Призываемых Существ\n+x% к Сопротивлениям Призываемых Существ\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Magical				prsh		-1
+N6+	\orange;Magical Shrine (4)	\blue;+x% к Жизни Призываемых Существ\n+x% к Сопротивлениям Призываемых Существ\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Magical				prsh		-1
+N7+	\orange;Magical Shrine (3)	\blue;+x% к Жизни Призываемых Существ\n+x% к Сопротивлениям Призываемых Существ\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Magical				prsh		-1
+N8+	\orange;Magical Shrine (2)	\blue;+x% к Жизни Призываемых Существ\n+x% к Сопротивлениям Призываемых Существ\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Magical				prsh		-1
+N9+	\orange;Magical Shrine (1)	\blue;+x% к Жизни Призываемых Существ\n+x% к Сопротивлениям Призываемых Существ\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Magical				prsh		-1
+O0+	\orange;Enchanted Shrine (10)	\blue;Магическое Сопротивление +x%\n+x% к Физ./Маг. Урону Заклинаний\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Enchanted				prsh,flsh		-1
+O0+S	\orange;Enchanted Vessel	(Нажмите ПКМ чтобы Собрать)	1	2	2		0	0	0									#Enchanted				shco		-1
+O1+	\orange;Enchanted Shrine (9)	\blue;Магическое Сопротивление +x%\n+x% к Физ./Маг. Урону Заклинаний\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Enchanted				prsh		-1
+O2+	\orange;Enchanted Shrine (8)	\blue;Магическое Сопротивление +x%\n+x% к Физ./Маг. Урону Заклинаний\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Enchanted				prsh		-1
+O3+	\orange;Enchanted Shrine (7)	\blue;Магическое Сопротивление +x%\n+x% к Физ./Маг. Урону Заклинаний\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Enchanted				prsh		-1
+O4+	\orange;Enchanted Shrine (6)	\blue;Магическое Сопротивление +x%\n+x% к Физ./Маг. Урону Заклинаний\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Enchanted				prsh		-1
+O5+	\orange;Enchanted Shrine (5)	\blue;Магическое Сопротивление +x%\n+x% к Физ./Маг. Урону Заклинаний\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Enchanted				prsh		-1
+O6+	\orange;Enchanted Shrine (4)	\blue;Магическое Сопротивление +x%\n+x% к Физ./Маг. Урону Заклинаний\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Enchanted				prsh		-1
+O7+	\orange;Enchanted Shrine (3)	\blue;Магическое Сопротивление +x%\n+x% к Физ./Маг. Урону Заклинаний\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Enchanted				prsh		-1
+O8+	\orange;Enchanted Shrine (2)	\blue;Магическое Сопротивление +x%\n+x% к Физ./Маг. Урону Заклинаний\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Enchanted				prsh		-1
+O9+	\orange;Enchanted Shrine (1)	\blue;Магическое Сопротивление +x%\n+x% к Физ./Маг. Урону Заклинаний\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Enchanted				prsh		-1
+Q0+	\orange;Hidden Shrine (10)	\blue;1% Возродить как: Случайный Монстр\n1% Возродить как: Случайный Монстр\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Hidden				prsh,flsh		-1
+Q0+S	\orange;Hidden Vessel	(Нажмите ПКМ чтобы Собрать)	1	2	2		0	0	0									#Hidden				shco		-1
+Q1+	\orange;Hidden Shrine (9)	\blue;1% Возродить как: Случайный Монстр\n1% Возродить как: Случайный Монстр\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Hidden				prsh		-1
+Q2+	\orange;Hidden Shrine (8)	\blue;1% Возродить как: Случайный Монстр\n1% Возродить как: Случайный Монстр\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Hidden				prsh		-1
+Q3+	\orange;Hidden Shrine (7)	\blue;1% Возродить как: Случайный Монстр\n1% Возродить как: Случайный Монстр\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Hidden				prsh		-1
+Q4+	\orange;Hidden Shrine (6)	\blue;1% Возродить как: Случайный Монстр\n1% Возродить как: Случайный Монстр\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Hidden				prsh		-1
+Q5+	\orange;Hidden Shrine (5)	\blue;1% Возродить как: Случайный Монстр\n1% Возродить как: Случайный Монстр\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Hidden				prsh		-1
+Q6+	\orange;Hidden Shrine (4)	\blue;1% Возродить как: Случайный Монстр\n1% Возродить как: Случайный Монстр\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Hidden				prsh		-1
+Q7+	\orange;Hidden Shrine (3)	\blue;1% Возродить как: Случайный Монстр\n1% Возродить как: Случайный Монстр\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Hidden				prsh		-1
+Q8+	\orange;Hidden Shrine (2)	\blue;1% Возродить как: Случайный Монстр\n1% Возродить как: Случайный Монстр\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Hidden				prsh		-1
+Q9+	\orange;Hidden Shrine (1)	\blue;1% Возродить как: Случайный Монстр\n1% Возродить как: Случайный Монстр\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Hidden				prsh		-1
 R0+	\orange;Trinity Shrine (10)	\blue;+х ко Всем Атрибутам\n+х% к Врождённому Стихийному Урону\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Stone				prsh,flsh		-1
-R0+S	\orange;Trinity Vessel	Нажмите ПКМ чтобы Собрать	1	2	2		0	0	0									#Stone				shco		-1
+R0+S	\orange;Trinity Vessel	(Нажмите ПКМ чтобы Собрать)	1	2	2		0	0	0									#Stone				shco		-1
 R1+	\orange;Trinity Shrine (9)	\blue;+х ко Всем Атрибутам\n+х% к Врождённому Стихийному Урону\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Stone				prsh		-1
 R2+	\orange;Trinity Shrine (8)	\blue;+х ко Всем Атрибутам\n+х% к Врождённому Стихийному Урону\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Stone				prsh		-1
 R3+	\orange;Trinity Shrine (7)	\blue;+х ко Всем Атрибутам\n+х% к Врождённому Стихийному Урону\n\grey;Смешайте с Sacred Редким/Крафтовым Оружием/Бронёй для Крафта\n\nРеагент Куба	1	2	2		0	0	0									@Stone				prsh		-1
@@ -1476,7 +1478,7 @@ Ysh2	Necklace		1	1	2		0	0	0									lab_amu				###2		-1
 [01	\gold;Lord of Lies Trophy	\blue;Общий Физический Урон Оружия +20%\n\grey;Смешайте с Book of Lies для Добавления Бонуса\n	1	1	2		0	0	0									trophy12				thng,trph		-1
 [02	\gold;Legacy of Blood Trophy	\blue;Общая Защита Персонажа +20%\n\grey;Смешайте с Legacy of Blood для Добавления Бонуса\n	1	1	2		0	0	0									trophy01				thng,trph		-1
 [03	\gold;Judgement Day Trophy	\blue;5% ко Всем Атрибутам\n\grey;Смешайте с Crystalline Flame Medallion для Добавления Бонуса\n	1	1	2		0	0	0									trophy05				thng,trph		-1
-[04	\gold;Yshari Sanctum Trophy	\blue;+5% к Максимуму Жизни и Маны\n\grey;Смешайте с Ancient Repositories для Добавления Бонуса\n	1	1	2		0	0	0									trophy14				thng,trph		-1
+[04	\gold;Yshari Sanctum Trophy	\blue;Максимум Маны: +5%\nМаксимум Жизни: +2%\n\grey;Смешайте с Ancient Repositories для Добавления Бонуса\n	1	1	2		0	0	0									trophy14				thng,trph		-1
 [05	\gold;Kingdom of Shadow Trophy	\blue;+10% к Скорости Перемещения\n\grey;Смешайте с Eternal Bone Pile для Добавления Бонуса\n	1	1	2		0	0	0									trophy07				thng,trph		-1
 [06	\gold;Duncraig Trophy	\blue;10% к Боевым Скоростям\n\grey;Смешайте с Demonsbane для Добавления Бонуса\n	1	1	2		0	0	0									trophy11				thng,trph		-1
 [07	\gold;Xazax Trophy	\blue;Замедление Цели на 4%\n\grey;Смешайте с Xazax's Illusion для Добавления Бонуса\n	1	1	2		0	0	0									trophy15				thng,trph		-1
@@ -1498,8 +1500,8 @@ Ysh2	Necklace		1	1	2		0	0	0									lab_amu				###2		-1
 \\3	\purple;Great Topaz	Смешайте все камни с The Black Road для получения бонуса	1	1	2		0	0	0									invgsye				thng		-1
 \\4	\purple;Great Sapphire	Смешайте все камни с The Black Road для получения бонуса	1	1	2		0	0	0									invgsbe				thng		-1
 \\5	\purple;Great Ruby	Смешайте все камни с The Black Road для получения бонуса	1	1	2		0	0	0									invgsre				thng		-1
-\\6	\gold;Golden Cycle	\dgrey;(Лимит: 1)\n\blue;Максимум Жизни и Маны +5%\n+10 ко Всем Атрибутам\n+1 ко Всем Навыкам\n\grey;Смешайте с Corrupted Wormhole для Получения Бонуса\n\nРеагент Куба	1	1	2		0	0	0									invch3				cyc3,cycl		-1
-\\7	\grey;Квестовый Предмет\n\gold;Tome of Possession	\n\red;... но что, если это просто необходимо?\nхранить эту книгу в инвентаре выглядит плохой идеей\n\n\orange;книга старая: если заклинание и работает, оно может быть очень ненадёжным\n\nдержатель книги и его ближайшие союзники больше не могут избегать урона\nпосле восстановления книги оказалось, что прихвостни Люциона прокляли её...\n\n\grey;... может, Ульдиссиан написал эту книгу, чтобы победить Люциона?\nпо контролю разума демонов\nчерез несколько недостающих страниц вы находите инструкции\nпохоже, в этой странной книге - старинные записи эдиремов...\n	2	2	2		0	0	0									invbbb				grtz		-1
+\\6	\gold;Golden Cycle	\dgrey;(Лимит: 1)\n\blue;Максимум Маны +5%\nМаксимум Жизни +2%\n+10 ко Всем Атрибутам\n+1 ко Всем Навыкам\n\grey;Смешайте с Corrupted Wormhole для Получения Бонуса\n\nРеагент Куба	1	1	2		0	0	0									invch3				cyc3,cycl		-1
+\\7	\grey;Квестовый Предмет\n\gold;Tome of Possession	\dgrey;похоже, в этой странной книге - старинные записи эдиремов...\n	2	2	2		0	0	0									invbbb				grtz		-1
 \\8	Corrupted Wormhole		1	1	2		0	0	0									invlucion				grtz		-1
 a55	Optical Detector		1	1	2		0	0	0									inveye				grtz		-1
 a56	Azmodan's Heart		1	1	2		0	0	0									invhrt				grtz		-1
@@ -1509,15 +1511,15 @@ a59	Laser Focus Crystal		1	1	2		0	0	0									invdss				grtz		-1
 a60	The Butcher's Tooth		1	1	2		0	0	0									invfang				grtz		-1
 a61	Sacred Worldstone Key		1	2	2		0	0	0									invworldkey				grtz		-1
 a66	Idol of Vanity		1	2	2		0	0	0									invgbi				grtz		-1
-a67	Congratulations. You got it!\n\gold;Spirit of Damnation	\blue;Макс. Уровень Навыков Увеличивается на 1\n\grey;Смешайте с Идолом Тщеславия для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									invsple				thng		-1
+a67	Поздравляю. Вы его получили!\n\gold;Spirit of Damnation	\blue;Макс. Уровень Навыков Увеличивается на 1\n\grey;Смешайте с Идолом Тщеславия для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									invsple				thng		-1
 a68	Horazon's Focus		1	1	2		0	0	0									invhorazon				grtz		-1
 ab!	Astrogha's Venom Stinger		1	1	2		0	0	0									invtail				grtz		-1
-adi	By Richard Knaak\nLegacy of Blood		1	1	2		0	0	0									invlegacy				grtz		-1
+adi	Legacy of Blood		1	1	2		0	0	0									invlegacy				grtz		-1
 amu	Amulet		1	1	2		0	0	0									invamu				amul		-1
 aq!	Silver Seal of Ureh		1	1	2		0	0	0									invrin				grtz		-1
 aqv	Arrow Quiver		1	3	2	1	0	0	0									invqvr				bowq	2	-1
 ass	Нажмите ПКМ чтобы получить 1 очко навыка\nКнига Навыка		2	2	2		0	0	0									invsbk	15			ques		-1
-asx	\orange;Arcane Cluster	Нажмите ПКМ чтобы Собрать	1	1	2		0	0	0									invsr6				thng		-1
+asx	\orange;Arcane Cluster	(Нажмите ПКМ чтобы Собрать)	1	1	2		0	0	0									invsr6				thng		-1
 az!	Fool's Gold		1	1	2		0	0	0									invgldm				grtz		-1
 b@b	\red;Goodberry	Волшебный фрукт Глор-ан-Фхайдха...	1	1	2		666	0	0									cherries				hpot		-1
 bbb	Том Лам Эзена		2	2	2		0	0	0									invbbb	16			ques		-1
@@ -1535,13 +1537,13 @@ brc4	Black Road Challenge\n\orange;Scroll of Knowledge	Смешайте Клас
 brc5	Black Road Challenge\n\orange;Scroll of Blood	У вас всего 30 секунд от убийства одной Жрицы!\nСмешайте Классовый Талисман для Завершения Испытания\n\yellow;Награда\n\n\grey;Убейте Skovos и Lycander за 30 Секунд или менее\n\yellow;Испытание Крови\n\n\grey;Тран Атулуа (Остров Скартары - Залы Мертвых)\n\yellow;Местонахождение\n\n\grey;Ужас\n\yellow;Сложность\n	1	1	2		0	0	0									ChallengeScroll				thng		-1
 brc6	Black Road Challenge\n\orange;Scroll of Completion	\grey;Кристаллами для Добавления Бонуса\nСмешайте Классовый Талисман с 2-мя Тайными\nЕсли вы завершили все 5 испытаний:\n\yellow;Завершение Черной Дороги\n\n\grey;Где угодно\n\yellow;Местонахождение\n\n\grey;Любая\n\yellow;Сложность\n	1	1	2		0	0	0									ChallengeScroll				thng		-1
 brz	Мозг		1	1	2		0	0	0									invbrnz				body		-1
-bt01	Поглощаемо\n\orange;Beta Trinket of Grind	\blue;- Даёт Опыт -	1	1	2		120	0	0									newsignet1				poti		-1
-bt02	Поглощаемо\n\orange;Beta Trinket of Nihlathak	\blue;- Даёт 10 Очков Атрибутов -	1	1	2		100	0	0									newtokenofter				poti		-1
-bt03	Реагент Куба\n\orange;Beta Trinket of Mephisto	\blue;- Даёт 3 Arcane Crystals -	1	1	2		15	0	0									newreroller				poti		-1
-bt04	Реагент Куба\n\orange;Beta Trinket of Kurast	\blue;- Дважды Клонирует Shrines -	1	1	2		80	0	0									newsignet3				poti		-1
-bt05	Реагент Куба\n\orange;Beta Trinket of Chuck	\blue;- Преобразовывает Вещь в Уникальную  -	1	1	2		120	0	0									newsignet5				poti		-1
-bt06	Реагент Куба\n\orange;Beta Trinket of Patience	\blue;- Создаёт Beta Талисман -	1	1	2		5	0	0									newsignet2				poti		-1
-bt07	\orange;Мгновенное Cожаление	\blue;Создаёт 2 Зелья Перераспределения	1	1	2		50	0	0									newsignet6				poti		-1
+bt01	\orange;Juneend's AFK Service	\blue;Съешьте для Опыта	1	1	2		120	0	0									newsignet1				poti		-1
+bt02	\orange;Nihlathak Simulator	\blue;Съешьте для 10 Очков Атрибутов	1	1	2		100	0	0									newtokenofter				poti		-1
+bt03	\orange;Arcane Crystal Voucher	Смешайте для получения Arcane Crystal	1	1	2		15	0	0									newreroller				poti		-1
+bt04	\orange;Chuck's Secret	\blue;Куб = Дважды Клонирует Shrines	1	1	2		80	0	0									newsignet3				poti		-1
+bt05	\orange;команда #unique, но она стоит 1 млн.	\blue;Куб = Преобразовывает Вещь в SU	1	1	2		120	0	0									newsignet5				poti		-1
+bt06	\orange;Thraxis the Martyr	\blue;Куб = Создаёт Beta Талисман	1	1	2		5	0	0									newsignet2				poti		-1
+bt07	\orange;Мгновенное Cожаление	\blue;Куб = Создаёт 2 Зелья Перераспределения	1	1	2		50	0	0									newsignet6				poti		-1
 bt99	''The Worst Beta I've Been In''		1	1	2		5	0	0									invsple				grtz		-1
 bxa	Soul of Kabraxis		1	1	2		100	0	0									braxwhorl				grtz		-1
 c@c	(Sorceress Only)\n\red;Moon Symbol	Освященный символ богини...	1	1	2		0	0	0									moon1				poti		-1
@@ -1555,37 +1557,37 @@ cr02	Квестовый Предмет\n\gold;Charged Riftstone (\green;2\gold;)
 cr03	Квестовый Предмет\n\gold;Charged Riftstone (\green;3\gold;)	\dgrey;- Смешайте для Полных Характеристик Монстров -\n\n\grey;Сложность: \red;Тяжёлая\n\grey;Уровень Локации: 123\n\gold;Dimensional Labyrinth 3\n\n\grey;Нажмите ПКМ для открытия портала\n	1	1	2		117	0	0									ChargedRunestoneG				thng		-1
 cr04	Квестовый Предмет\n\gold;Charged Riftstone (\green;4\gold;)	\dgrey;- Смешайте для Полных Характеристик Монстров -\n\n\grey;Сложность: \red;Тяжёлая\n\grey;Уровень Локации: 124\n\gold;Dimensional Labyrinth 4\n\n\grey;Нажмите ПКМ для открытия портала\n	1	1	2		118	0	0									ChargedRunestoneG				thng		-1
 cr05	Квестовый Предмет\n\gold;Charged Riftstone (\green;5\gold;)	\dgrey;- Смешайте для Полных Характеристик Монстров -\n\n\grey;Сложность: \red;Тяжёлая\n\grey;Уровень Локации: 125\n\gold;Dimensional Labyrinth 5\n\n\grey;Нажмите ПКМ для открытия портала\n	1	1	2		119	0	0									ChargedRunestoneG				thng		-1
-cr06	Квестовый Предмет\n\gold;Charged Riftstone (\orange;6\gold;)	\dgrey;- Смешайте для Полных Характеристик Монстров -\n\n\grey;Сложность: \purple;Очень Тяжёлая\n\grey;Уровень Локации: 126\n\gold;Dimensional Labyrinth 6\n\n\grey;Нажмите ПКМ для открытия портала\n	1	1	2		120	0	0									ChargedRunestoneY				thng		-1
-cr07	Квестовый Предмет\n\gold;Charged Riftstone (\orange;7\gold;)	\dgrey;- Смешайте для Полных Характеристик Монстров -\n\n\grey;Сложность: \purple;Очень Тяжёлая\n\grey;Уровень Локации: 127\n\gold;Dimensional Labyrinth 7\n\n\grey;Нажмите ПКМ для открытия портала\n	1	1	2		121	0	0									ChargedRunestoneY				thng		-1
-cr08	Квестовый Предмет\n\gold;Charged Riftstone (\orange;8\gold;)	\dgrey;- Смешайте для Полных Характеристик Монстров -\n\n\grey;Сложность: \purple;Очень Тяжёлая\n\grey;Уровень Локации: 128\n\gold;Dimensional Labyrinth 8\n\n\grey;Нажмите ПКМ для открытия портала\n	1	1	2		122	0	0									ChargedRunestoneY				thng		-1
-cr09	Квестовый Предмет\n\gold;Charged Riftstone (\orange;9\gold;)	\dgrey;- Смешайте для Полных Характеристик Монстров -\n\n\grey;Сложность: \purple;Очень Тяжёлая\n\grey;Уровень Локации: 129\n\gold;Dimensional Labyrinth 9\n\n\grey;Нажмите ПКМ для открытия портала\n	1	1	2		123	0	0									ChargedRunestoneY				thng		-1
-cr10	Квестовый Предмет\n\gold;Charged Riftstone (\orange;10\gold;)	\dgrey;- Смешайте для Полных Характеристик Монстров -\n\n\grey;Сложность: \purple;Очень Тяжёлая\n\grey;Уровень Локации: 130\n\gold;Dimensional Labyrinth 10\n\n\grey;Нажмите ПКМ для открытия портала\n	1	1	2		124	0	0									ChargedRunestoneY				thng		-1
-cr11	Квестовый Предмет\n\gold;Charged Riftstone (\red;11\gold;)	\dgrey;- Смешайте для Полных Характеристик Монстров -\n\n\grey;Сложность: \dgrey;Экстремальная\n\grey;Уровень Локации: 131\n\gold;Dimensional Labyrinth 11\n\n\grey;Нажмите ПКМ для открытия портала\n	1	1	2		125	0	0									ChargedRunestoneR				thng		-1
-cr12	Квестовый Предмет\n\gold;Charged Riftstone (\red;12\gold;)	\dgrey;- Смешайте для Полных Характеристик Монстров -\n\n\grey;Сложность: \dgrey;Экстремальная\n\grey;Уровень Локации: 132\n\gold;Dimensional Labyrinth 12\n\n\grey;Нажмите ПКМ для открытия портала\n	1	1	2		126	0	0									ChargedRunestoneR				thng		-1
-cr13	Квестовый Предмет\n\gold;Charged Riftstone (\red;13\gold;)	\dgrey;- Смешайте для Полных Характеристик Монстров -\n\n\grey;Сложность: \dgrey;Экстремальная\n\grey;Уровень Локации: 133\n\gold;Dimensional Labyrinth 13\n\n\grey;Нажмите ПКМ для открытия портала\n	1	1	2		127	0	0									ChargedRunestoneR				thng		-1
-cr14	Квестовый Предмет\n\gold;Charged Riftstone (\red;14\gold;)	\dgrey;- Смешайте для Полных Характеристик Монстров -\n\n\grey;Сложность: \dgrey;Экстремальная\n\grey;Уровень Локации: 134\n\gold;Dimensional Labyrinth 14\n\n\grey;Нажмите ПКМ для открытия портала\n	1	1	2		128	0	0									ChargedRunestoneR				thng		-1
-cr15	Квестовый Предмет\n\gold;Charged Riftstone (\red;15\gold;)	\dgrey;- Смешайте для Полных Характеристик Монстров -\n\n\grey;Сложность: \dgrey;Экстремальная\n\grey;Уровень Локации: 135\n\gold;Dimensional Labyrinth 15\n\n\grey;Нажмите ПКМ для открытия портала\n	1	1	2		129	0	0									ChargedRunestoneR				thng		-1
-cy01	\orange;Малый Цикл	\blue;+1 к Требуемому Уровню\n+(2-8) к Силе\n\grey;Смешайте в Кубе с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									invch1				cyc1,cycl		-1
-cy02	\orange;Малый Цикл	\blue;+1 к Требуемому Уровню\n+(2-8) к Ловкости\n\grey;Смешайте в Кубе с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									invch1				cyc1,cycl		-1
-cy03	\orange;Малый Цикл	\blue;+1 к Требуемому Уровню\n+(2-8) к Живучести\n\grey;Смешайте в Кубе с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									invch1				cyc1,cycl		-1
-cy04	\orange;Малый Цикл	\blue;+1 к Требуемому Уровню\n+(2-8) к Энергии\n\grey;Смешайте в Кубе с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									invch1				cyc1,cycl		-1
-cy05	\orange;Средний Цикл	\blue;+3 к Требуемому Уровню\n+(5-15) к Силе\n+(0-2)% к Силе\n\grey;Смешайте в Кубе с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	2	2		0	0	0									invch2				cyc2,cycl		-1
-cy06	\orange;Средний Цикл	\blue;+3 к Требуемому Уровню\n+(5-15) к Ловкости\n+(0-2)% к Ловкости\n\grey;Смешайте в Кубе с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	2	2		0	0	0									invch2				cyc2,cycl		-1
-cy07	\orange;Средний Цикл	\blue;+3 к Требуемому Уровню\n+(5-15) к Живучести\n+(0-2)% к Живучести\n\grey;Смешайте в Кубе с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	2	2		0	0	0									invch2				cyc2,cycl		-1
-cy08	\orange;Средний Цикл	\blue;+3 к Требуемому Уровню\n+(5-15) к Энергии\n+(0-2)% к Энергии\n\grey;Смешайте в Кубе с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	2	2		0	0	0									invch2				cyc2,cycl		-1
-cy09	\orange;Большой Цикл	\blue;+5 к Требуемому Уровню\n+(10-20) к Силе\n+(2-3)% к Силе\n\grey;Смешайте в Кубе с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	3	2		0	0	0									invsst				cyc3,cycl		-1
-cy10	\orange;Большой Цикл	\blue;+5 к Требуемому Уровню\n+(10-20) к Ловкости\n+(2-3)% к Ловкости\n\grey;Смешайте в Кубе с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	3	2		0	0	0									invsst				cyc3,cycl		-1
-cy11	\orange;Большой Цикл	\blue;+5 к Требуемому Уровню\n+(10-20) к Живучести\n+(2-3)% к Живучести\n\grey;Смешайте в Кубе с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	3	2		0	0	0									invsst				cyc3,cycl		-1
-cy12	\orange;Большой Цикл	\blue;+5 к Требуемому Уровню\n+(10-20) к Энергии\n+(2-3)% к Энергии\n\grey;Смешайте в Кубе с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	3	2		0	0	0									invsst				cyc3,cycl		-1
-cy13	\orange;Малый Цикл	\blue;+2 к Требуемому Уровню\n+(1-4)% Больше Золота от Монстров\n\grey;Смешайте в Кубе с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									invch1				cyc1,cycl		-1
-cy14	\orange;Средний Цикл	\blue;+3 к Требуемому Уровню\n+(3-7)% Больше Золота от Монстров\n\grey;Смешайте в Кубе с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	2	2		0	0	0									invch2				cyc2,cycl		-1
-cy15	\orange;Большой Цикл	\blue;+4 к Требуемому Уровню\n+(6-10)% Больше Золота от Монстров\n\grey;Смешайте в Кубе с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	3	2		0	0	0									invsst				cyc3,cycl		-1
-cy16	\orange;Малый Цикл	\blue;+2 к Требуемому Уровню\n+(1-4)% к Поиску Магических Предметов\n\grey;Смешайте в Кубе с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									invch1				cyc1,cycl		-1
-cy17	\orange;Средний Цикл	\blue;+3 к Требуемому Уровню\n+(3-7)% к Поиску Магических Предметов\n\grey;Смешайте в Кубе с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	2	2		0	0	0									invch2				cyc2,cycl		-1
-cy18	\orange;Большой Цикл	\blue;+4 к Требуемому Уровню\n+(6-10)% к Поиску Магических Предметов\n\grey;Смешайте в Кубе с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	3	2		0	0	0									invsst				cyc3,cycl		-1
-cy19	\orange;Малый Цикл	\blue;+2 к Требуемому Уровню\n+(1-3)% к Боевым Скоростям\n\grey;Смешайте в Кубе с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									invch1				cyc1,cycl		-1
-cy20	\orange;Средний Цикл	\blue;+3 к Требуемому Уровню\n+(2-6)% к Боевым Скоростям\n\grey;Смешайте в Кубе с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	2	2		0	0	0									invch2				cyc2,cycl		-1
-cy21	\orange;Большой Цикл	\blue;+4 к Требуемому Уровню\n+(4-8)% к Боевым Скоростям\n\grey;Смешайте в Кубе с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	3	2		0	0	0									invsst				cyc3,cycl		-1
+cr06	Квестовый Предмет\n\gold;Charged Riftstone (\orange;6\gold;)	\dgrey;- Смешайте для Полных Характеристик Монстров -\n\n\grey;Сложность: \red;Очень Тяжёлая\n\grey;Уровень Локации: 131\n\gold;Dimensional Labyrinth 1\n\n\grey;Нажмите ПКМ для открытия портала\n	1	1	2		120	0	0									ChargedRunestoneY				thng		-1
+cr07	Квестовый Предмет\n\gold;Charged Riftstone (\orange;7\gold;)	\dgrey;- Смешайте для Полных Характеристик Монстров -\n\n\grey;Сложность: \red;Очень Тяжёлая\n\grey;Уровень Локации: 132\n\gold;Dimensional Labyrinth 2\n\n\grey;Нажмите ПКМ для открытия портала\n	1	1	2		121	0	0									ChargedRunestoneY				thng		-1
+cr08	Квестовый Предмет\n\gold;Charged Riftstone (\orange;8\gold;)	\dgrey;- Смешайте для Полных Характеристик Монстров -\n\n\grey;Сложность: \red;Очень Тяжёлая\n\grey;Уровень Локации: 133\n\gold;Dimensional Labyrinth 3\n\n\grey;Нажмите ПКМ для открытия портала\n	1	1	2		122	0	0									ChargedRunestoneY				thng		-1
+cr09	Квестовый Предмет\n\gold;Charged Riftstone (\orange;9\gold;)	\dgrey;- Смешайте для Полных Характеристик Монстров -\n\n\grey;Сложность: \red;Очень Тяжёлая\n\grey;Уровень Локации: 134\n\gold;Dimensional Labyrinth 4\n\n\grey;Нажмите ПКМ для открытия портала\n	1	1	2		123	0	0									ChargedRunestoneY				thng		-1
+cr10	Квестовый Предмет\n\gold;Charged Riftstone (\orange;10\gold;)	\dgrey;- Смешайте для Полных Характеристик Монстров -\n\n\grey;Сложность: \red;Очень Тяжёлая\n\grey;Уровень Локации: 135\n\gold;Dimensional Labyrinth 5\n\n\grey;Нажмите ПКМ для открытия портала\n	1	1	2		124	0	0									ChargedRunestoneY				thng		-1
+cr11	Квестовый Предмет\n\gold;Charged Riftstone (\red;11\gold;)	\dgrey;- Смешайте для Полных Характеристик Монстров -\n\n\grey;Сложность: \purple;Экстремальная\n\grey;Уровень Локации: 136\n\gold;Dimensional Labyrinth 6\n\n\grey;Нажмите ПКМ для открытия портала\n	1	1	2		125	0	0									ChargedRunestoneR				thng		-1
+cr12	Квестовый Предмет\n\gold;Charged Riftstone (\red;12\gold;)	\dgrey;- Смешайте для Полных Характеристик Монстров -\n\n\grey;Сложность: \purple;Экстремальная\n\grey;Уровень Локации: 137\n\gold;Dimensional Labyrinth 7\n\n\grey;Нажмите ПКМ для открытия портала\n	1	1	2		126	0	0									ChargedRunestoneR				thng		-1
+cr13	Квестовый Предмет\n\gold;Charged Riftstone (\red;13\gold;)	\dgrey;- Смешайте для Полных Характеристик Монстров -\n\n\grey;Сложность: \purple;Экстремальная\n\grey;Уровень Локации: 138\n\gold;Dimensional Labyrinth 8\n\n\grey;Нажмите ПКМ для открытия портала\n	1	1	2		127	0	0									ChargedRunestoneR				thng		-1
+cr14	Квестовый Предмет\n\gold;Charged Riftstone (\red;14\gold;)	\dgrey;- Смешайте для Полных Характеристик Монстров -\n\n\grey;Сложность: \purple;Экстремальная\n\grey;Уровень Локации: 139\n\gold;Dimensional Labyrinth 9\n\n\grey;Нажмите ПКМ для открытия портала\n	1	1	2		128	0	0									ChargedRunestoneR				thng		-1
+cr15	Квестовый Предмет\n\gold;Charged Riftstone (\red;15\gold;)	\dgrey;- Смешайте для Полных Характеристик Монстров -\n\n\grey;Сложность: \purple;Экстремальная\n\grey;Уровень Локации: 140\n\gold;Dimensional Labyrinth 10\n\n\grey;Нажмите ПКМ для открытия портала\n	1	1	2		129	0	0									ChargedRunestoneR				thng		-1
+cy01	\orange;Малый Цикл	\blue;+1 Требуемый Уровень\n+(2-8) к Силе\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									invch1				cyc1,cycl		-1
+cy02	\orange;Малый Цикл	\blue;+1 Требуемый Уровень\n+(2-8) к Ловкости\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									invch1				cyc1,cycl		-1
+cy03	\orange;Малый Цикл	\blue;+1 Требуемый Уровень\n+(2-8) к Живучести\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									invch1				cyc1,cycl		-1
+cy04	\orange;Малый Цикл	\blue;+1 Требуемый Уровень\n+(2-8) к Энергии\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									invch1				cyc1,cycl		-1
+cy05	\orange;Средний Цикл	\blue;+3 Требуемый Уровень\n+(5-15) к Силе\n+1% к Силе\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	2	2		0	0	0									invch2				cyc2,cycl		-1
+cy06	\orange;Средний Цикл	\blue;+3 Требуемый Уровень\n+(5-15) к Ловкости\n+1% к Ловкости\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	2	2		0	0	0									invch2				cyc2,cycl		-1
+cy07	\orange;Средний Цикл	\blue;+3 Требуемый Уровень\n+(5-15) к Живучести\n+1% к Живучести\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	2	2		0	0	0									invch2				cyc2,cycl		-1
+cy08	\orange;Средний Цикл	\blue;+3 Требуемый Уровень\n+(5-15) к Энергии\n+1% к Энергии\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	2	2		0	0	0									invch2				cyc2,cycl		-1
+cy09	\orange;Большой Цикл	\blue;+5 Требуемый Уровень\n+(10-20) к Силе\n+2% к Силе\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	3	2		0	0	0									invsst				cyc3,cycl		-1
+cy10	\orange;Большой Цикл	\blue;+5 Требуемый Уровень\n+(10-20) к Ловкости\n+2% к Ловкости\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	3	2		0	0	0									invsst				cyc3,cycl		-1
+cy11	\orange;Большой Цикл	\blue;+5 Требуемый Уровень\n+(10-20) к Живучести\n+2% к Живучести\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	3	2		0	0	0									invsst				cyc3,cycl		-1
+cy12	\orange;Большой Цикл	\blue;+5 Требуемый Уровень\n+(10-20) к Энергии\n+2% к Энергии\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	3	2		0	0	0									invsst				cyc3,cycl		-1
+cy13	\orange;Малый Цикл	\blue;+2 Требуемый Уровень\n+(1-4)% Больше Золота от Монстров\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									invch1				cyc1,cycl		-1
+cy14	\orange;Средний Цикл	\blue;+3 Требуемый Уровень\n+(3-7)% Больше Золота от Монстров\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	2	2		0	0	0									invch2				cyc2,cycl		-1
+cy15	\orange;Большой Цикл	\blue;+4 Требуемый Уровень\n+(6-10)% Больше Золота от Монстров\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	3	2		0	0	0									invsst				cyc3,cycl		-1
+cy16	\orange;Малый Цикл	\blue;+2 Требуемый Уровень\n+(1-4)% к Поиску Магических Предметов\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									invch1				cyc1,cycl		-1
+cy17	\orange;Средний Цикл	\blue;+3 Требуемый Уровень\n+(3-7)% к Поиску Магических Предметов\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	2	2		0	0	0									invch2				cyc2,cycl		-1
+cy18	\orange;Большой Цикл	\blue;+4 Требуемый Уровень\n+(6-10)% к Поиску Магических Предметов\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	3	2		0	0	0									invsst				cyc3,cycl		-1
+cy19	\orange;Малый Цикл	\blue;+2 Требуемый Уровень\n+(1-2)% к Боевым Скоростям\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									invch1				cyc1,cycl		-1
+cy20	\orange;Средний Цикл	\blue;+3 Требуемый Уровень\n+(3-4)% к Боевым Скоростям\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	2	2		0	0	0									invch2				cyc2,cycl		-1
+cy21	\orange;Большой Цикл	\blue;+4 Требуемый Уровень\n+(5-6)% к Боевым Скоростям\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	3	2		0	0	0									invsst				cyc3,cycl		-1
 cy22	\orange;Большой Цикл	\blue;+18 Требуемый Уровень\n-5 ко Всем Атрибутам\n+1 к Уровню Навыков Амазонки\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	3	2		0	0	0									invsst				cyc3,cycl		-1
 cy23	\orange;Большой Цикл	\blue;+18 Требуемый Уровень\n-5 ко Всем Атрибутам\n+1 к Уровню Навыков Ассассина\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	3	2		0	0	0									invsst				cyc3,cycl		-1
 cy24	\orange;Большой Цикл	\blue;+18 Требуемый Уровень\n-5 ко Всем Атрибутам\n+1 к Уровню Навыков Варвара\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	3	2		0	0	0									invsst				cyc3,cycl		-1
@@ -1594,8 +1596,8 @@ cy26	\orange;Большой Цикл	\blue;+18 Требуемый Уровень
 cy27	\orange;Большой Цикл	\blue;+18 Требуемый Уровень\n-5 ко Всем Атрибутам\n+1 к Уровню Навыков Колдуньи\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	3	2		0	0	0									invsst				cyc3,cycl		-1
 cy28	\orange;Большой Цикл	\blue;+18 Требуемый Уровень\n-5 ко Всем Атрибутам\n+1 к Уровню Навыков Паладина\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	3	2		0	0	0									invsst				cyc3,cycl		-1
 cy29	\orange;Малый Цикл	\blue;+1 Требуемый Уровень\n+(0-10) к Мане\n+(0-20) к Жизни\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									invch1				cyc1,cycl		-1
-cy30	\orange;Средний Цикл	\blue;+3 Требуемый Уровень\nМаксимум Маны +(0-2)%\n+(2-15) к Мане\nМаксимум Жизни +(0-2)%\n+(5-30) к Жизни\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	2	2		0	0	0									invch2				cyc2,cycl		-1
-cy31	\orange;Большой Цикл	\blue;+5 Требуемый Уровень\nМаксимум Маны +(1-3)%\n+(5-25) к Мане\nМаксимум Жизни +(1-3)%\n+(10-50) к Жизни\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	3	2		0	0	0									invsst				cyc3,cycl		-1
+cy30	\orange;Средний Цикл	\blue;+3 Требуемый Уровень\nМаксимум Маны +(0-2)%\n+(2-15) к Мане\n+(15-30) к Жизни\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	2	2		0	0	0									invch2				cyc2,cycl		-1
+cy31	\orange;Большой Цикл	\blue;+5 Требуемый Уровень\nМаксимум Маны +(1-3)%\n+(5-25) к Мане\nМаксимум Жизни +(0-1)%\n+(30-50) к Жизни\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	3	2		0	0	0									invsst				cyc3,cycl		-1
 dg01	Дизайн Предмета		2	2	2		0	0	0									book01				dsgn		-1
 dg02	Дизайн Предмета		2	2	2		0	0	0									book01				dsgn		-1
 dg03	Дизайн Предмета		2	2	2		0	0	0									book01				dsgn		-1
@@ -1605,16 +1607,16 @@ dr02	Квестовый Предмет\n\gold;Depleted Riftstone (\green;2\gold;
 dr03	Квестовый Предмет\n\gold;Depleted Riftstone (\green;3\gold;)	Смешайте в Кубе чтобы Зарядить\n	1	1	2		0	0	0									DepletedRunestone				thng		-1
 dr04	Квестовый Предмет\n\gold;Depleted Riftstone (\green;4\gold;)	Смешайте в Кубе чтобы Зарядить\n	1	1	2		0	0	0									DepletedRunestone				thng		-1
 dr05	Квестовый Предмет\n\gold;Depleted Riftstone (\green;5\gold;)	Смешайте в Кубе чтобы Зарядить\n	1	1	2		0	0	0									DepletedRunestone				thng		-1
-dr06	Квестовый Предмет\n\gold;Depleted Riftstone (\orange;6\gold;)	Смешайте с Arcane Crystal чтобы Зарядить\n	1	1	2		0	0	0									DepletedRunestone				thng		-1
-dr07	Квестовый Предмет\n\gold;Depleted Riftstone (\orange;7\gold;)	Смешайте с Arcane Crystal чтобы Зарядить\n	1	1	2		0	0	0									DepletedRunestone				thng		-1
-dr08	Квестовый Предмет\n\gold;Depleted Riftstone (\orange;8\gold;)	Смешайте с Arcane Crystal чтобы Зарядить\n	1	1	2		0	0	0									DepletedRunestone				thng		-1
-dr09	Квестовый Предмет\n\gold;Depleted Riftstone (\orange;9\gold;)	Смешайте с Arcane Crystal чтобы Зарядить\n	1	1	2		0	0	0									DepletedRunestone				thng		-1
-dr10	Квестовый Предмет\n\gold;Depleted Riftstone (\orange;10\gold;)	Смешайте с Arcane Crystal чтобы Зарядить\n	1	1	2		0	0	0									DepletedRunestone				thng		-1
-dr11	Квестовый Предмет\n\gold;Depleted Riftstone (\red;11\gold;)	Смешайте с Двумя Arcane Crystal чтобы Зарядить\n	1	1	2		0	0	0									DepletedRunestone				thng		-1
-dr12	Квестовый Предмет\n\gold;Depleted Riftstone (\red;12\gold;)	Смешайте с Двумя Arcane Crystal чтобы Зарядить\n	1	1	2		0	0	0									DepletedRunestone				thng		-1
-dr13	Квестовый Предмет\n\gold;Depleted Riftstone (\red;13\gold;)	Смешайте с Двумя Arcane Crystal чтобы Зарядить\n	1	1	2		0	0	0									DepletedRunestone				thng		-1
-dr14	Квестовый Предмет\n\gold;Depleted Riftstone (\red;14\gold;)	Смешайте с Двумя Arcane Crystal чтобы Зарядить\n	1	1	2		0	0	0									DepletedRunestone				thng		-1
-dr15	Квестовый Предмет\n\gold;Depleted Riftstone (\red;15\gold;)	Смешайте с Двумя Arcane Crystal чтобы Зарядить\n	1	1	2		0	0	0									DepletedRunestone				thng		-1
+dr06	Квестовый Предмет\n\gold;Depleted Riftstone (\orange;1\gold;)	Смешайте с Arcane Crystal чтобы Зарядить\n	1	1	2		0	0	0									DepletedRunestone				thng		-1
+dr07	Квестовый Предмет\n\gold;Depleted Riftstone (\orange;2\gold;)	Смешайте с Arcane Crystal чтобы Зарядить\n	1	1	2		0	0	0									DepletedRunestone				thng		-1
+dr08	Квестовый Предмет\n\gold;Depleted Riftstone (\orange;3\gold;)	Смешайте с Arcane Crystal чтобы Зарядить\n	1	1	2		0	0	0									DepletedRunestone				thng		-1
+dr09	Квестовый Предмет\n\gold;Depleted Riftstone (\orange;4\gold;)	Смешайте с Arcane Crystal чтобы Зарядить\n	1	1	2		0	0	0									DepletedRunestone				thng		-1
+dr10	Квестовый Предмет\n\gold;Depleted Riftstone (\orange;5\gold;)	Смешайте с Arcane Crystal чтобы Зарядить\n	1	1	2		0	0	0									DepletedRunestone				thng		-1
+dr11	Квестовый Предмет\n\gold;Depleted Riftstone (\red;6\gold;)	Смешайте с Двумя Arcane Crystal чтобы Зарядить\n	1	1	2		0	0	0									DepletedRunestone				thng		-1
+dr12	Квестовый Предмет\n\gold;Depleted Riftstone (\red;7\gold;)	Смешайте с Двумя Arcane Crystal чтобы Зарядить\n	1	1	2		0	0	0									DepletedRunestone				thng		-1
+dr13	Квестовый Предмет\n\gold;Depleted Riftstone (\red;8\gold;)	Смешайте с Двумя Arcane Crystal чтобы Зарядить\n	1	1	2		0	0	0									DepletedRunestone				thng		-1
+dr14	Квестовый Предмет\n\gold;Depleted Riftstone (\red;9\gold;)	Смешайте с Двумя Arcane Crystal чтобы Зарядить\n	1	1	2		0	0	0									DepletedRunestone				thng		-1
+dr15	Квестовый Предмет\n\gold;Depleted Riftstone (\red;10\gold;)	Смешайте с Двумя Arcane Crystal чтобы Зарядить\n	1	1	2		0	0	0									DepletedRunestone				thng		-1
 dtm	\grey;Реагент Куба\n\orange;Темный Том 	\blue;+1 к Темному Порталу\n\grey;Смешайте с Классовым Талисманом для Добавления Бонуса\n	1	2	2		0	0	0									invdtm				thng		-1
 dy01	\orange;Mystic Dye	\blue;Цвет: Белый\n\grey;Нажмите ПКМ для изменения цвета вещи	1	1	2		0	0	0									dye-whit-1				thng		-1
 dy02	\orange;Mystic Dye	\blue;Цвет: Светло-серый\n\grey;Нажмите ПКМ для изменения цвета вещи	1	1	2		0	0	0									dye-lgrey-2				thng		-1
@@ -1644,7 +1646,7 @@ eby	Dimensional Key		1	1	2		0	0	0									DimensionalKey				grtz		-1
 ebz	Амулет		1	1	2		0	0	0									invamu				xxx4		-1
 elx	Эликсир		1	1	2		0	0	0									invpot				elix		-1
 en11	\orange;Scroll of Enchantment: Шлем	\orange;50% Урона по Площади\n\grey;Смешайте со Шлемом для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									invbsc				thng		-1
-en12	\orange;Scroll of Enchantment: Шлем	\blue;20% Шанс Использовать Life Spark Уровня 10 при Атаке\n\grey;Смешайте со Шлемом для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									invbsc				thng		-1
+en12	\orange;Scroll of Enchantment: Шлем	\blue;20% Шанс Использовать Life Spark Уровня 10 при Рукопашной Атаке\n\grey;Смешайте со Шлемом для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									invbsc				thng		-1
 en13	\orange;Scroll of Enchantment: Шлем	\orange;Урон Lightning Arena Увеличивается на 1000%\n\blue;+20 к Lightning Arena\n\grey;Смешайте со Шлемом для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									invbsc				thng		-1
 en14	\orange;Scroll of Enchantment: Шлем	\orange;Длительность Churel Увеличивается на 66%\n\blue;+10 к Churel\n\grey;Смешайте со Шлемом для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									invbsc				thng		-1
 en15	\orange;Scroll of Enchantment: Шлем	\orange;Аура Hellfire Уровня 5\n\grey;Смешайте со Шлемом для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									invbsc				thng		-1
@@ -1700,7 +1702,7 @@ en85	\orange;Scroll of Enchantment: Классовый Талисман	\blue;П
 en86	\orange;Scroll of Enchantment: Классовый Талисман	\blue;Длительность: +25%\nФизический Урон Оружия: +25%\n\gold;Улучшает Ваш Врождённый Навык\n\grey;Смешайте с Eye of Divinity для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									invbsc				thng		-1
 en87	\orange;Scroll of Enchantment: Классовый Талисман	\blue;Поглощение Урона Увеличивается на 20%\nПотери Маны на 9% Меньше при Получении Удара\n\gold;Улучшает Ваш Врождённый Навык\n\grey;Смешайте с Nexus Crystal для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									invbsc				thng		-1
 en91	\orange;Scroll of Enchantment: Elder Staff	\blue;+1 к Telekinesis\n+30% к Скорости Передвижения\n\orange;+10% к Поиску Маг. Предметов за Вставленный Rainbow Stone\n\grey;Смешайте с \gold;Staff of Herding \grey;для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									invbsc				thng		-1
-en92	\orange;Scroll of Enchantment: Оружие	\blue;+200% Урон Нечисти\n30% к Скорости Атаки\nДобавляет 25 - 50 Урона\n5% Шанс Использовать Thunder Hammer Nova Уровня 30 при Атаке\n\gold;Undead Slayer\n\grey;Смешайте с Булавой (Mace) для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									invbsc				thng		-1
+en92	\orange;Scroll of Enchantment: Оружие	\blue;+200% Урон Нечисти\n+30% к Скорости Атаки\nДобавляет 25-50 Урона\n5% Шанс Использовать Thunder Hammer Nova Уровня 30 при Рукопашной Атаке\n\gold;Undead Slayer\n\grey;Смешайте с Булавой (Mace) для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									invbsc				thng		-1
 en93	\orange;Scroll of Enchantment: Оружие	\blue;+20% к Урону Заклинаний\n+250 к Фокусировке Заклинаний\n\orange;40% Медленнее Лечение от Зелий\n\gold;Reckless Power\n\grey;Смешайте с Редким/Крафтовым Скипетром для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									invbsc				thng		-1
 en94	\orange;Scroll of Enchantment: Оружие	\blue;Замедление Цели +10%\nМаксимум Жизни -5%\n10% Шанс Использовать Corrupted Vines Уровня 1 когда Враг Умирает\n\gold;Corruptor\n\grey;Смешайте с Молотом (Hammer) для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									invbsc				thng		-1
 en95	\orange;Scroll of Enchantment: Оружие	\dgrey;Не Работает на Неразрушимых Вещах\n\blue;Вещь Становится Неземной\n\gold;Silver Point\n\grey;Смешайте с Редким/Крафтовым Кинжалом (Dagger) для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									invbsc				thng		-1
@@ -1749,12 +1751,12 @@ gsv	\purple;Amethyst		1	1	2		12	0	0									invgsvc				gema,gem2		-1
 gsw	\purple;Diamond		1	1	2		12	0	0									invgswc				gemd,gem2		-1
 gsy	\purple;Topaz		1	1	2		12	0	0									invgsyc				gemt,gem2		-1
 gzv	\purple;Flawless Amethyst		1	1	2		15	0	0									invgsvd				gema,gem3		-1
-hnrx	Реагент Куба\n\orange;Mark of Infusion	\yellow;Mystic Orbs и имеют максимальное количество Гнезд\nПочетные Вещи не имеют Свойств, получают Двойной Бонус от\n\grey;Смешайте с Магическим Оружием/Броней для создания Honorific (Почетной) Вещи\n	1	1	2		0	0	0									cuscross				thng		-1
-hp1	Minor Healing Potion	Нейтрализует Яд\nВосстанавливает 100% Жизни за 10 секунд (макс. 15 000 единиц)	1	1	2		0	0	0									invhp1				hpot		-1
-hp2	Light Healing Potion	Нейтрализует Яд\nВосстанавливает 100% Жизни за 9 секунд (макс. 15 000 единиц)	1	1	2		0	0	0									invhp2				hpot		-1
-hp3	Healing Potion	Нейтрализует Яд\nВосстанавливает 100% Жизни за 8 секунд (макс. 15 000 единиц)	1	1	2		0	0	0									invhp3				hpot		-1
-hp4	Greater Healing Potion	Нейтрализует Яд\nВосстанавливает 100% Жизни за 7 секунд (макс. 15 000 единиц)	1	1	2		0	0	0									invhp4				hpot		-1
-hp5	Super Healing Potion	Нейтрализует Яд\nВосстанавливает 100% Жизни за 6 секунд (макс. 15 000 единиц)	1	1	2		0	0	0									invhp5				hpot		-1
+hnrx	Реагент Куба\n\orange;Mark of Infusion	\yellow;Mystic Orbs и имеют максимальное количество Гнезд\nПочетные Вещи не имеют Свойств, получают Двойной Бонус от\n\grey;Смешайте с Магическим Оружием/Бронёй для создания Honorific (Почетной) Вещи\n	1	1	2		0	0	0									cuscross				thng		-1
+hp1	Minor Healing Potion	Длительность: 7 секунд\nВосстанавливает 10% Жизни (макс. 15 000 единиц) в секунду	1	1	2		0	0	0									invhp1				hpot		-1
+hp2	Light Healing Potion	Длительность: 7 секунд\nВосстанавливает 11% Жизни (макс. 15 000 единиц) в секунду	1	1	2		0	0	0									invhp2				hpot		-1
+hp3	Healing Potion	Длительность: 7 секунд\nВосстанавливает 12% Жизни (макс. 15 000 единиц) в секунду	1	1	2		0	0	0									invhp3				hpot		-1
+hp4	Greater Healing Potion	Длительность: 7 секунд\nВосстанавливает 12.5% Жизни (макс. 15 000 единиц) в секунду	1	1	2		0	0	0									invhp4				hpot		-1
+hp5	Super Healing Potion	Длительность: 7 секунд\nВосстанавливает 13% Жизни (макс. 15 000 единиц) в секунду	1	1	2		0	0	0									invhp5				hpot		-1
 hpf	FLYING POLAR BUFFALO ERROR		1	1	2		0	0	0									invrpl				hpot		-1
 hpo	FLYING POLAR BUFFALO ERROR		1	1	2		0	0	0									invrps				hpot		-1
 hrb	Herb		1	1	2		0	0	0									invhrb				herb		-1
@@ -1779,11 +1781,11 @@ ir13	Квестовый Предмет\n\gold;Charged Riftstone (\red;13\gold;)	
 ir14	Квестовый Предмет\n\gold;Charged Riftstone (\red;14\gold;)	\dgrey;- Смешайте -\n\n\grey;Могут появляться Герои, Чемпионы и Соверены\nИммунитет к Контролю Толпы (Crowd Control), Макс. Замедление: 25%\nИммунитет к Сокрушительному Удару, Действие Яда на 50% Короче\nУменьшают Ваши Шансы Блока и Избегания при Ударе\n200% Физического Урона добавляется как Стихийный\n\green;Пробивание Стихийных Сопротивлений на 100%\n\grey;50% Поглощение Огня, Холода и Молнии\nНельзя Заледенить или Заморозить\nКража Жизни/Маны на 50% хуже\n+70% к Скорости Передвижения\nМонстры не оставляют Трупы\nИммунитет к Проклятиям\nБрешь в Пространстве\nУсиленные Навыки\n\nСтихийные Сопротивления: +40%\nПлотность Монстров: +10%\nРазмер Групп: +20%\nЖизнь: +260%\nУрон: +130%\n	1	1	2		0	0	0									ChargedRunestoneR				thng		-1
 ir15	Квестовый Предмет\n\gold;Charged Riftstone (\red;15\gold;)	\dgrey;- Смешайте -\n\n\grey;Могут появляться Герои, Чемпионы и Соверены\nИммунитет к Контролю Толпы (Crowd Control), Макс. Замедление: 25%\nИммунитет к Сокрушительному Удару, Действие Яда на 50% Короче\nУменьшают Ваши Шансы Блока и Избегания при Ударе\n200% Физического Урона добавляется как Стихийный\nПробивание Стихийных Сопротивлений на 100%\n50% Поглощение Огня, Холода и Молнии\nНельзя Заледенить или Заморозить\nКража Жизни/Маны на 50% хуже\n+70% к Скорости Передвижения\nМонстры не оставляют Трупы\nИммунитет к Проклятиям\nБрешь в Пространстве\nУсиленные Навыки\n\green;Nemesis\n\n\grey;Стихийные Сопротивления: +45%\nПлотность Монстров: +40%\nРазмер Групп: +20%\nЖизнь: +300%\nУрон: +150%\n	1	1	2		0	0	0									ChargedRunestoneR				thng		-1
 ir81	\orange;Occult Effigy\nCelestial Wind	\blue;+10 Требуемый Уровень\nУстанавливает Скорость Передвижения в 40%\n\grey;Смешайте с Ботинками для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									OccultOrb				thng		-1
-ir82	\orange;Occult Effigy\nSigil of Absolution	\blue;(Макс. 2 Использования на одном Предмете)\nТребования +25%\n-5 Требуемый Уровень\n\grey;Смешайте с Любым Оружием/Броней для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									OccultOrb				thng		-1
+ir82	\orange;Occult Effigy\nSigil of Absolution	\blue;(Макс. 2 Использования на одном Предмете)\nТребования +25%\n-5 Требуемый Уровень\n\grey;Смешайте с Любым Оружием/Бронёй для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									OccultOrb				thng		-1
 ir83	\orange;Occult Effigy\nPath of Brutality	\blue;+10 Требуемый Уровень\nВещь становится (Только для Вашего Класса)\nПревращает каждое +1 ко Всем Навыкам в +3% к Смертельному Удару\n\grey;Смешайте с Уникальным Кольцом/Амулетом для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									OccultOrb				thng		-1
-ir84	\orange;Occult Effigy\nEmpyrean Touch	\red;Не Работает с Неразрушимыми (Indestructible) Вещами\n\n\blue;+10 Требуемый Уровень\nВещь Становится Неземной (Ethereal)\n\grey;Смешайте с Любым Оружием/Броней для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									OccultOrb				thng		-1
+ir84	\orange;Occult Effigy\nEmpyrean Touch	\red;Не Работает с Неразрушимыми (Indestructible) Вещами\n\n\blue;+10 Требуемый Уровень\nВещь Становится Неземной (Ethereal)\n\grey;Смешайте с Любым Оружием/Бронёй для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									OccultOrb				thng		-1
 ir85	\orange;Occult Effigy\nElemental Ire	\blue;+10 Требуемый Уровень\nДобавляет 40-60 Урона Молнией\nДобавляет 40-60Урона Огнём\n\grey;Смешайте с Колчаном для Добавления Бонуса\n\nРегаент Куба	1	1	2		0	0	0									OccultOrb				thng		-1
-ir86	\orange;Occult Effigy\nBreath of Thaumaturgy	\blue;+25 Требуемый Уровень\nВещь можно Улучшить снова\n\grey;Смешайте с Улучшенным (Blessed) Крафтовым Оружием/Броней для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									OccultOrb				thng		-1
+ir86	\orange;Occult Effigy\nBreath of Thaumaturgy	\blue;+25 Требуемый Уровень\nВещь можно Улучшить снова\n\grey;Смешайте с Улучшенным (Blessed) Крафтовым Оружием/Бронёй для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									OccultOrb				thng		-1
 ir87	\orange;Occult Effigy\nElemental Dominion	\blue;+10 Требуемый Уровень\nДобавляет 75-125 Урона Холодом\nДобавляет 75-125 Урона Молнией\nДобавляет 75-125 Урона Огнём\n\grey;Смешайте с Оружием Без Гнёзд для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									OccultOrb				thng		-1
 ir88	\orange;Occult Effigy\nArcane Hunger	\blue;+10 Требуемый Уровень\n(Макс. 1 Раз на 1 Предмет)\nНельзя Извлечь Содержимое Гнёзд\nВся Кража Жизни превращается в +20% к Урону Заклинаний\n\grey;минимум 15% Кражи Жизни, для Добавления Бонуса\nСмешайте с Одноручным Оружием, на котором\n\nРеагент Куба	1	1	2		0	0	0									OccultOrb				thng		-1
 ir89	\orange;Occult Effigy\nDark Summoning	\blue;+10 Требуемый Уровень\n1% Возродить как: Случайный Монстр\n\grey;Смешайте с Перчатками для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									OccultOrb				thng		-1
@@ -1817,27 +1819,27 @@ ktgx	\orange;Пульсирующий Кристалл Камня Мира	И П
 ktor	\grey;Квестовый Предмет\n\gold;Edyrem's Time-Travel	\blue;Открывает Портал в Toraja...	1	1	2		125	0	0									invrsc				thng		-1
 ktox	\grey;Квестовый Предмет\n\gold;Dimensional Link	\red;Работает только в 5-ом Акте\n\blue;Открывает портал в Edge of Nothingness...	1	1	2		135	0	0									invrsc				thng		-1
 ktpx	\grey;Квестовый Предмет\n\gold;Otherworldly Link	\red;Работает только в Акте 5\n\blue;Создает Портал в Пространственное Измерение...	1	1	2		130	0	0									invrsc				thng		-1
-ktzx	\dgreen;Riftwalker's Eye	\blue;+15% к Получаемому Опыту\n+1 к Уровню Навыков Класса\n\grey;Смешайте с вашим Классовым Талисманом для Получения Бонуса\n\nЗнак Монстра	1	1	2		0	0	0									evileye				thng		-1
+ktzx	\gold;Riftwalker's Eye	\blue;+1 ко Всем Навыкам\n\grey;Смешайте с вашим Riftwalker's Eye для Получения Бонуса\n	1	1	2		0	0	0									evileye				thng		-1
 kvoi	\grey;Квестовый Предмет\n\gold;Abyss Gate	\blue;Открывает портал в The Void...	1	1	2		130	0	0									invrsc				thng		-1
-l@l	\grey;Квестовый Предмет\n\gold;Skinrender's Sigil	DescDuncraigRules	1	1	2		0	0	0									ring01				thng		-1
+l@l	\grey;Квестовый Предмет\n\gold;Skinrender's Sigil	Смешайте в Кубе все 5 Sigil-ов с Ring of the Five\n	1	1	2		0	0	0									ring01				thng		-1
 lms	'The Last Man Standing'\nНаграда за Событие:		2	2	2		0	0	0									lastman				grtz		-1
 lok	Crystalline Flame Medallion		1	1	2		0	0	0									invvip				grtz		-1
 luv	Ключ от Черной башни		1	2	2		0	0	0									invmph	20			key		-1
-m@m	\grey;Квестовый Предмет\n\gold;Spinecracker's Sigil	DescDuncraigRules	1	1	2		0	0	0									ring03				thng		-1
+m@m	\grey;Квестовый Предмет\n\gold;Spinecracker's Sigil	Смешайте в Кубе все 5 Sigil-ов с Ring of the Five\n	1	1	2		0	0	0									ring03				thng		-1
 mec	Реагент Куба\n\orange;Meditation Candle		1	1	2		0	0	0									invcndl				thng		-1
-mp1	Minor Mana Potion	Восстановление Маны +50% на 10 секунд	1	1	2		0	0	0									invmp1				mpot		-1
-mp2	Light Mana Potion	Восстановление Маны +75% на 9 секунд	1	1	2		0	0	0									invmp2				mpot		-1
-mp3	Mana Potion	Восстановление Маны +100% на 8 секунд	1	1	2		0	0	0									invmp3				mpot		-1
-mp4	Greater Mana Potion	Восстановление Маны +125% на 7 секунд	1	1	2		0	0	0									invmp4				mpot		-1
-mp5	Super Mana Potion	Восстановление Маны +150% на 6 секунд	1	1	2		0	0	0									invmp5				mpot		-1
+mp1	Minor Mana Potion	Длительность: 7 секунд\nВосстановление Маны +100%	1	1	2		0	0	0									invmp1				mpot		-1
+mp2	Light Mana Potion	Длительность: 7 секунд\nВосстановление Маны +125%	1	1	2		0	0	0									invmp2				mpot		-1
+mp3	Mana Potion	Длительность: 7 секунд\nВосстановление Маны +150%	1	1	2		0	0	0									invmp3				mpot		-1
+mp4	Greater Mana Potion	Длительность: 7 секунд\nВосстановление Маны +175%	1	1	2		0	0	0									invmp4				mpot		-1
+mp5	Super Mana Potion	Длительность: 7 секунд\nВосстановление Маны +200%	1	1	2		0	0	0									invmp5				mpot		-1
 mpf	FLYING POLAR BUFFALO ERROR		1	1	2		0	0	0									invbpl				mpot		-1
 mpo	FLYING POLAR BUFFALO ERROR		1	1	2		0	0	0									invbps				mpot		-1
 mss	Камень Души Мефисто		1	1	2		0	0	0									invmss	23			ques		-1
-o@o	\grey;Квестовый Предмет\n\gold;Eyegouger's Sigil	DescDuncraigRules	1	1	2		0	0	0									ring06				thng		-1
-ooc	Реагент Куба\n\orange;Oil of Conjuration	70\nOil of Conjuration даёт шанс добавить\nбонус оружию заклинателей вместо\nиспользования Oil of Luck.\n\nOil + Оружие\n--> Предмет с бонусом с шансом 2/5\n(максимум 1 раз)\n\nОружия: +10% к Урону Заклинаний\n	1	1	2		0	0	0									oil_conjuration				thng		-1
-p@p	\grey;Квестовый Предмет\n\gold;Fleshcutter's Sigil	DescDuncraigRules	1	1	2		0	0	0									ring07				thng		-1
+o@o	\grey;Квестовый Предмет\n\gold;Eyegouger's Sigil	Смешайте в Кубе все 5 Sigil-ов с Ring of the Five\n	1	1	2		0	0	0									ring06				thng		-1
+ooc	Реагент Куба\n\orange;Oil of Conjuration	70\nOil of Conjuration даёт шанс добавить\nбонус оружию заклинателей вместо\nиспользования Oil of Luck.\n\nНе работает на обычных и\nпревосходных вещах.\n\nOil + Оружие\n--> Предмет с бонусом с шансом 2/5\n(максимум 1 раз)\n\nОружие: +10% к Урону Заклинаний\n	1	1	2		0	0	0									oil_conjuration				thng		-1
+p@p	\grey;Квестовый Предмет\n\gold;Fleshcutter's Sigil	Смешайте в Кубе все 5 Sigil-ов с Ring of the Five\n	1	1	2		0	0	0									ring07				thng		-1
 pacb	\orange;Home Cherry	\dgrey;НЕ ГОВОРИТЕ НИКОМУ ЧТО ВЫ ТОЛЬКО ЧТО ВИДЕЛИ\nЭТИ ВИШЕНКИ ВЕРНУТ ВАС ДОМОЙ В БЕЗОПАСНОСТИ	1	1	2		0	0	0									cherries				thng		-1
-q@q	\grey;Квестовый Предмет\n\gold;Bonehexer's Sigil	DescDuncraigRules	1	1	2		0	0	0									ring09				thng		-1
+q@q	\grey;Квестовый Предмет\n\gold;Bonehexer's Sigil	Смешайте в Кубе все 5 Sigil-ов с Ring of the Five\n	1	1	2		0	0	0									ring09				thng		-1
 qbr	Khalim's Brain		1	1	2		0	0	0									invbrnz	17			ques		-1
 qey	Khalim's Eye		1	1	2		0	0	0									inveye	17			ques		-1
 qhr	Khalim's Heart		1	1	2		0	0	0									invhrt	17			ques		-1
@@ -1847,56 +1849,56 @@ qu3	\grey;Реагент Куба\n\orange;Arcane Shards (3)	90\nСоздани�
 qu4	\grey;Реагент Куба\n\orange;Arcane Shards (4)	90\nСоздание Arcane Crystals:\n\n5 Arcane Shards\n--> Arcane Crystal\n	1	1	2		0	0	0									invfary4				thng		-1
 qul	\grey;Реагент Куба\n\orange;Arcane Shards (1)	90\nСоздание Arcane Crystals:\n\n5 Arcane Shards\n--> Arcane Crystal\n	1	1	2		0	0	0									invfary1				thng		-1
 qum	\grey;Реагент Куба\n\orange;Arcane Crystal	80 \nС Arcane Crystals можно создавать и\nулучшать Ранговые Уники:\n\n2 Crystals + Ранговая Вещь + Oil of Ench.\n--> Ранговый Уник\n\n1 Crystal + Ранговый Уник\n--> Уник рангом выше\n\nУлучшение Shrine'ом:\nМожно улучшать Священные (Sacred)\nКрафтовые, Почётные и Редкие вещи\nдля дополнительных бонусов.\n\n2 Crystals + Вещь + Shrine\n--> Вещь с Бонусами\n(максимум 1 раз)\n	1	1	2		0	0	0									gemcontainer				thng		-1
-r01	\purple;El Rune		1	1	2		11	0	0									invrEl				rune		-1
-r02	\purple;Eld Rune		1	1	2		11	0	0									invrEld				rune		-1
-r03	\purple;Tir Rune		1	1	2		13	0	0									invrTir				rune		-1
+r01	\purple;El Rune		1	1	2		6	0	0									invrEl				rune		-1
+r02	\purple;Eld Rune		1	1	2		8	0	0									invrEld				rune		-1
+r03	\purple;Tir Rune		1	1	2		10	0	0									invrTir				rune		-1
 r04	\purple;Nef Rune		1	1	2		13	0	0									invrNef				rune		-1
 r05	\purple;Eth Rune		1	1	2		15	0	0									invrEth				rune		-1
-r06	\purple;Ith Rune		1	1	2		15	0	0									invrIth				rune		-1
-r07	\purple;Tal Rune		1	1	2		17	0	0									invrTal				rune		-1
-r08	\purple;Ral Rune		1	1	2		19	0	0									invrRal				rune		-1
-r09	\purple;Ort Rune		1	1	2		21	0	0									invrOrt				rune		-1
-r10	\purple;Thul Rune		1	1	2		23	0	0									invrThul				rune		-1
-r11	\purple;Amn Rune		1	1	2		25	0	0									invrAmn				rune		-1
-r12	\purple;Sol Rune		1	1	2		27	0	0									invrSol				rune		-1
-r13	\purple;Shael Rune		1	1	2		29	0	0									invrShae				rune		-1
-r14	\purple;Dol Rune		1	1	2		31	0	0									invrDol				rune		-1
-r15	\purple;Hel Rune		1	1	2		33	0	0									invrHel				rune		-1
-r16	\purple;Io Rune		1	1	2		35	0	0									invrIo				rune		-1
-r17	\purple;Lum Rune		1	1	2		37	0	0									invrLum				rune		-1
-r18	\purple;Ko Rune		1	1	2		39	0	0									invrKo				rune		-1
-r19	\purple;Fal Rune		1	1	2		41	0	0									invrFal				rune		-1
-r20	\purple;Lem Rune		1	1	2		43	0	0									invrLem				rune		-1
-r21	\purple;Pul Rune		1	1	2		45	0	0									invrPul				rune		-1
-r22	\purple;Um Rune		1	1	2		47	0	0									invrUm				rune		-1
-r23	\purple;Mal Rune		1	1	2		49	0	0									invrMal				rune		-1
-r24	\purple;Ist Rune		1	1	2		51	0	0									invrIst				rune		-1
-r25	\purple;Gul Rune		1	1	2		53	0	0									invrGul				rune		-1
-r26	\purple;Vex Rune		1	1	2		55	0	0									invrVex				rune		-1
-r27	\purple;Ohm Rune		1	1	2		57	0	0									invrOhm				rune		-1
-r28	\purple;Lo Rune		1	1	2		59	0	0									invrLo				rune		-1
-r29	\purple;Sur Rune		1	1	2		61	0	0									invrSur				rune		-1
-r30	\purple;Ber Rune		1	1	2		63	0	0									invrBer				rune		-1
-r31	\purple;Jah Rune		1	1	2		65	0	0									invrJo				rune		-1
-r32	\purple;Cham Rune		1	1	2		67	0	0									invrCham				rune		-1
-r33	\purple;Zod Rune		1	1	2		69	0	0									invrZod				rune		-1
-r34	\purple;Sha Rune		1	1	2		72	0	0									r-a-05				rune		-1
-r35	\purple;Lah Rune		1	1	2		75	0	0									r-a-06				rune		-1
-r36	\purple;Kur Rune		1	1	2		78	0	0									r-a-07				rune		-1
-r37	\purple;Ix Rune		1	1	2		81	0	0									r-a-08				rune		-1
-r38	\purple;Thur Rune		1	1	2		84	0	0									r-a-09				rune		-1
-r39	\purple;Nas Rune		1	1	2		87	0	0									r-a-10				rune		-1
-r40	\purple;Ath Rune		1	1	2		90	0	0									r-a-11				rune		-1
-r41	\purple;Kra Rune		1	1	2		94	0	0									r-a-12				rune		-1
-r42	\purple;Vith Rune		1	1	2		98	0	0									r-a-13				rune		-1
-r43	\purple;No Rune		1	1	2		100	0	0									r-a-14				rune		-1
-r44	\purple;Yul Rune		1	1	2		100	0	0									r-a-15				rune		-1
-r45	\purple;Thai Rune		1	1	2		100	0	0									r-a-16				rune		-1
-r46	\purple;Rha Rune		1	1	2		100	0	0									r-a-17				rune		-1
-r47	\purple;Xar Rune		1	1	2		100	0	0									r-a-18				rune		-1
-r48	\purple;Nih Rune		1	1	2		100	0	0									r-a-01				rune		-1
-r49	\purple;Lai Rune		1	1	2		100	0	0									r-a-02				rune		-1
-r50	\purple;On Rune		1	1	2		100	0	0									r-a-03				rune		-1
+r06	\purple;Ith Rune		1	1	2		18	0	0									invrIth				rune		-1
+r07	\purple;Tal Rune		1	1	2		20	0	0									invrTal				rune		-1
+r08	\purple;Ral Rune		1	1	2		23	0	0									invrRal				rune		-1
+r09	\purple;Ort Rune		1	1	2		25	0	0									invrOrt				rune		-1
+r10	\purple;Thul Rune		1	1	2		28	0	0									invrThul				rune		-1
+r11	\purple;Amn Rune		1	1	2		30	0	0									invrAmn				rune		-1
+r12	\purple;Sol Rune		1	1	2		33	0	0									invrSol				rune		-1
+r13	\purple;Shael Rune		1	1	2		35	0	0									invrShae				rune		-1
+r14	\purple;Dol Rune		1	1	2		38	0	0									invrDol				rune		-1
+r15	\purple;Hel Rune		1	1	2		40	0	0									invrHel				rune		-1
+r16	\purple;Io Rune		1	1	2		43	0	0									invrIo				rune		-1
+r17	\purple;Lum Rune		1	1	2		45	0	0									invrLum				rune		-1
+r18	\purple;Ko Rune		1	1	2		48	0	0									invrKo				rune		-1
+r19	\purple;Fal Rune		1	1	2		50	0	0									invrFal				rune		-1
+r20	\purple;Lem Rune		1	1	2		53	0	0									invrLem				rune		-1
+r21	\purple;Pul Rune		1	1	2		55	0	0									invrPul				rune		-1
+r22	\purple;Um Rune		1	1	2		58	0	0									invrUm				rune		-1
+r23	\purple;Mal Rune		1	1	2		60	0	0									invrMal				rune		-1
+r24	\purple;Ist Rune		1	1	2		63	0	0									invrIst				rune		-1
+r25	\purple;Gul Rune		1	1	2		65	0	0									invrGul				rune		-1
+r26	\purple;Vex Rune		1	1	2		68	0	0									invrVex				rune		-1
+r27	\purple;Ohm Rune		1	1	2		70	0	0									invrOhm				rune		-1
+r28	\purple;Lo Rune		1	1	2		73	0	0									invrLo				rune		-1
+r29	\purple;Sur Rune		1	1	2		75	0	0									invrSur				rune		-1
+r30	\purple;Ber Rune		1	1	2		78	0	0									invrBer				rune		-1
+r31	\purple;Jah Rune		1	1	2		80	0	0									invrJo				rune		-1
+r32	\purple;Cham Rune		1	1	2		83	0	0									invrCham				rune		-1
+r33	\purple;Zod Rune		1	1	2		85	0	0									invrZod				rune		-1
+r34	\purple;Sha Rune		1	1	2		99	0	0									r-a-05				rune		-1
+r35	\purple;Lah Rune		1	1	2		99	0	0									r-a-06				rune		-1
+r36	\purple;Kur Rune		1	1	2		99	0	0									r-a-07				rune		-1
+r37	\purple;Ix Rune		1	1	2		99	0	0									r-a-08				rune		-1
+r38	\purple;Thur Rune		1	1	2		99	0	0									r-a-09				rune		-1
+r39	\purple;Nas Rune		1	1	2		99	0	0									r-a-10				rune		-1
+r40	\purple;Ath Rune		1	1	2		99	0	0									r-a-11				rune		-1
+r41	\purple;Kra Rune		1	1	2		99	0	0									r-a-12				rune		-1
+r42	\purple;Vith Rune		1	1	2		99	0	0									r-a-13				rune		-1
+r43	\purple;No Rune		1	1	2		99	0	0									r-a-14				rune		-1
+r44	\purple;Yul Rune		1	1	2		99	0	0									r-a-15				rune		-1
+r45	\purple;Thai Rune		1	1	2		99	0	0									r-a-16				rune		-1
+r46	\purple;Rha Rune		1	1	2		99	0	0									r-a-17				rune		-1
+r47	\purple;Xar Rune		1	1	2		99	0	0									r-a-18				rune		-1
+r48	\purple;Nih Rune		1	1	2		99	0	0									r-a-01				rune		-1
+r49	\purple;Lai Rune		1	1	2		99	0	0									r-a-02				rune		-1
+r50	\purple;On Rune		1	1	2		99	0	0									r-a-03				rune		-1
 r51	\grey;Great Rune\n\purple;Taha Rune		1	1	2		100	0	0									r-d-02				rune		-1
 r52	\grey;Great Rune\n\purple;Ghal Rune		1	1	2		100	0	0									r-d-05				rune		-1
 r53	\grey;Great Rune\n\purple;Qor Rune		1	1	2		100	0	0									r-d-11				rune		-1
@@ -1904,53 +1906,86 @@ r54	\grey;Great Rune\n\purple;Krys Rune		1	1	2		100	0	0									r-d-07				rune		
 r55	\grey;Great Rune\n\purple;Auhe Rune		1	1	2		100	0	0									r-d-04				rune		-1
 r56	\grey;Great Rune\n\purple;Sha'ad Rune		1	1	2		100	0	0									r-d-12				rune		-1
 r57	\grey;Elemental Rune\n\purple;Fire Rune		1	1	2		100	0	0									fire-rune				xrun		-1
-r58	\grey;Elemental Rune\n\purple;Earth Rune		1	1	2		100	0	0									phys-rune				xrun		-1
-r59	\grey;Elemental Rune\n\purple;Magic Rune		1	1	2		100	0	0									magic-rune				xrun		-1
+r58	\grey;Elemental Rune\n\purple;Stone Rune		1	1	2		100	0	0									phys-rune				xrun		-1
+r59	\grey;Elemental Rune\n\purple;Arcane Rune		1	1	2		100	0	0									magic-rune				xrun		-1
 r60	\grey;Elemental Rune\n\purple;Poison Rune		1	1	2		100	0	0									pois-rune				xrun		-1
 r61	\grey;Elemental Rune\n\purple;Light Rune		1	1	2		100	0	0									ltng-rune				xrun		-1
 r62	\grey;Elemental Rune\n\purple;Ice Rune		1	1	2		100	0	0									cold-rune				xrun		-1
 r98	\grey;Enchanted Rune\n\purple;Xis Rune	Можно Смешать с Обычной Руной	1	1	2		120	0	0									ultra-rune				xrun		-1
 r99	\grey;Primal Rune\n\purple;Runestone		1	1	2		0	0	0									BlankRune				thng,esse		-1
-r@r	\grey;Квестовый Предмет\n\gold;Ring of the Five	DescDuncraigRules	1	1	2		0	0	0									ring08				kill		-1
+r@r	\grey;Квестовый Предмет\n\gold;Ring of the Five	Смешайте в Кубе все 5 Sigil-ов с Ring of the Five\n	1	1	2		0	0	0									ring08				kill		-1
+rc01	\orange;El Контейнер (01)		1	1	2		0	0	0									invrEl				thng		-1
+rc02	\orange;Eld Контейнер (02)		1	1	2		0	0	0									invrEld				thng		-1
+rc03	\orange;Tir Контейнер (03)		1	1	2		0	0	0									invrTir				thng		-1
+rc04	\orange;Nef Контейнер (04)		1	1	2		0	0	0									invrNef				thng		-1
+rc05	\orange;Eth Контейнер (05)		1	1	2		0	0	0									invrEth				thng		-1
+rc06	\orange;Ith Контейнер (06)		1	1	2		0	0	0									invrIth				thng		-1
+rc07	\orange;Tal Контейнер (07)		1	1	2		0	0	0									invrTal				thng		-1
+rc08	\orange;Ral Контейнер (08)		1	1	2		0	0	0									invrRal				thng		-1
+rc09	\orange;Ort Контейнер (09)		1	1	2		0	0	0									invrOrt				thng		-1
+rc10	\orange;Thul Контейнер (10)		1	1	2		0	0	0									invrThul				thng		-1
+rc11	\orange;Amn Контейнер (11)		1	1	2		0	0	0									invrAmn				thng		-1
+rc12	\orange;Sol Контейнер (12)		1	1	2		0	0	0									invrSol				thng		-1
+rc13	\orange;Shael Контейнер (13)		1	1	2		0	0	0									invrShae				thng		-1
+rc14	\orange;Dol Контейнер (14)		1	1	2		0	0	0									invrDol				thng		-1
+rc15	\orange;Hel Контейнер (15)		1	1	2		0	0	0									invrHel				thng		-1
+rc16	\orange;Io Контейнер (16)		1	1	2		0	0	0									invrIo				thng		-1
+rc17	\orange;Lum Контейнер (17)		1	1	2		0	0	0									invrLum				thng		-1
+rc18	\orange;Ko Контейнер (18)		1	1	2		0	0	0									invrKo				thng		-1
+rc19	\orange;Fal Контейнер (19)		1	1	2		0	0	0									invrFal				thng		-1
+rc20	\orange;Lem Контейнер (20)		1	1	2		0	0	0									invrLem				thng		-1
+rc21	\orange;Pul Контейнер (21)		1	1	2		0	0	0									invrPul				thng		-1
+rc22	\orange;Um Контейнер (22)		1	1	2		0	0	0									invrUm				thng		-1
+rc23	\orange;Mal Контейнер (23)		1	1	2		0	0	0									invrMal				thng		-1
+rc24	\orange;Ist Контейнер (24)		1	1	2		0	0	0									invrIst				thng		-1
+rc25	\orange;Gul Контейнер (25)		1	1	2		0	0	0									invrGul				thng		-1
+rc26	\orange;Vex Контейнер (26)		1	1	2		0	0	0									invrVex				thng		-1
+rc27	\orange;Ohm Контейнер (27)		1	1	2		0	0	0									invrOhm				thng		-1
+rc28	\orange;Lo Контейнер (28)		1	1	2		0	0	0									invrLo				thng		-1
+rc29	\orange;Sur Контейнер (29)		1	1	2		0	0	0									invrSur				thng		-1
+rc30	\orange;Ber Контейнер (30)		1	1	2		0	0	0									invrBer				thng		-1
+rc31	\orange;Jah Контейнер (31)		1	1	2		0	0	0									invrJo				thng		-1
+rc32	\orange;Cham Контейнер (32)		1	1	2		0	0	0									invrCham				thng		-1
+rc33	\orange;Zod Контейнер (33)		1	1	2		0	0	0									invrZod				thng		-1
 rin	Ring		1	1	2		0	0	0									invrin				ring		-1
 ripx	\dgrey;Wings of the Departed	\yellow;Покойся с Миром\n\orange;1951 - 2017\nПамяти Michael Exchange\n\n\grey;Нажмите ПКМ чтобы отдать Дань Уважения	1	1	2		0	0	0									DepartedWing				hpot		-1
 rpl	FLYING POLAR BUFFALO ERROR		1	1	2	1	0	0	0									invrpl				hpot		-1
 rps	FLYING POLAR BUFFALO ERROR		1	1	2	1	0	0	0									invrps				hpot		-1
-rvl	Full Rejuvenation Potion	Большое!	1	1	2		0	0	0									invvpl				rpot		-1
-rvs	Rejuvenation Potion	Восстанавливает Жизнь и Ману за 8 секунд	1	1	2		0	0	0									invvps				rpot		-1
-rx01	\grey;Enchanted Rune\n\purple;El-Xis Rune		1	1	2		120	0	0									xisEl				erun		-1
-rx02	\grey;Enchanted Rune\n\purple;Eld-Xis Rune		1	1	2		120	0	0									xisEld				erun		-1
-rx03	\grey;Enchanted Rune\n\purple;Tir-Xis Rune		1	1	2		120	0	0									xisTir				erun		-1
-rx04	\grey;Enchanted Rune\n\purple;Nef-Xis Rune		1	1	2		120	0	0									xisNef				erun		-1
-rx05	\grey;Enchanted Rune\n\purple;Eth-Xis Rune		1	1	2		120	0	0									xisEth				erun		-1
-rx06	\grey;Enchanted Rune\n\purple;Ith-Xis Rune		1	1	2		120	0	0									xisIth				erun		-1
-rx07	\grey;Enchanted Rune\n\purple;Tal-Xis Rune		1	1	2		120	0	0									xisTal				erun		-1
-rx08	\grey;Enchanted Rune\n\purple;Ral-Xis Rune		1	1	2		120	0	0									xisRal				erun		-1
-rx09	\grey;Enchanted Rune\n\purple;Ort-Xis Rune		1	1	2		120	0	0									xisOrt				erun		-1
-rx10	\grey;Enchanted Rune\n\purple;Thul-Xis Rune		1	1	2		120	0	0									xisThul				erun		-1
-rx11	\grey;Enchanted Rune\n\purple;Amn-Xis Rune		1	1	2		120	0	0									xisAmn				erun		-1
-rx12	\grey;Enchanted Rune\n\purple;Sol-Xis Rune		1	1	2		120	0	0									xisSol				erun		-1
-rx13	\grey;Enchanted Rune\n\purple;Shael-Xis Rune		1	1	2		120	0	0									xisShael				erun		-1
-rx14	\grey;Enchanted Rune\n\purple;Dol-Xis Rune		1	1	2		120	0	0									xisDol				erun		-1
-rx15	\grey;Enchanted Rune\n\purple;Hel-Xis Rune		1	1	2		120	0	0									xisHel				erun		-1
-rx16	\grey;Enchanted Rune\n\purple;Io-Xis Rune		1	1	2		120	0	0									xisIo				erun		-1
-rx17	\grey;Enchanted Rune\n\purple;Lum-Xis Rune		1	1	2		120	0	0									xisLum				erun		-1
-rx18	\grey;Enchanted Rune\n\purple;Ko-Xis Rune		1	1	2		120	0	0									xisKo				erun		-1
-rx19	\grey;Enchanted Rune\n\purple;Fal-Xis Rune		1	1	2		120	0	0									xisFal				erun		-1
-rx20	\grey;Enchanted Rune\n\purple;Lem-Xis Rune		1	1	2		120	0	0									xisLem				erun		-1
-rx21	\grey;Enchanted Rune\n\purple;Pul-Xis Rune		1	1	2		120	0	0									xisPul				erun		-1
-rx22	\grey;Enchanted Rune\n\purple;Um-Xis Rune		1	1	2		120	0	0									xisUm				erun		-1
-rx23	\grey;Enchanted Rune\n\purple;Mal-Xis Rune		1	1	2		120	0	0									xisMal				erun		-1
-rx24	\grey;Enchanted Rune\n\purple;Ist-Xis Rune		1	1	2		120	0	0									xisIst				erun		-1
-rx25	\grey;Enchanted Rune\n\purple;Gul-Xis Rune		1	1	2		120	0	0									xisGul				erun		-1
-rx26	\grey;Enchanted Rune\n\purple;Vex-Xis Rune		1	1	2		120	0	0									xisVex				erun		-1
-rx27	\grey;Enchanted Rune\n\purple;Ohm-Xis Rune		1	1	2		120	0	0									xisOhm				erun		-1
-rx28	\grey;Enchanted Rune\n\purple;Lo-Xis Rune		1	1	2		120	0	0									xisLo				erun		-1
-rx29	\grey;Enchanted Rune\n\purple;Sur-Xis Rune		1	1	2		120	0	0									xisSur				erun		-1
-rx30	\grey;Enchanted Rune\n\purple;Ber-Xis Rune		1	1	2		120	0	0									xisBer				erun		-1
-rx31	\grey;Enchanted Rune\n\purple;Jah-Xis Rune		1	1	2		120	0	0									xisJah				erun		-1
-rx32	\grey;Enchanted Rune\n\purple;Cham-Xis Rune		1	1	2		120	0	0									xisCham				erun		-1
-rx33	\grey;Enchanted Rune\n\purple;Zod-Xis Rune		1	1	2		120	0	0									xisZod				erun		-1
+rvl	Full Rejuvenation Potion	Длительность: 7 секунд\nВосстановление Маны +200%\nВосстанавливает 13% Жизни (макс. 15 000 единиц) в секунду	1	1	2		0	0	0									invvpl				rpot		-1
+rvs	Rejuvenation Potion	Длительность: 7 секунд\nВосстановление Маны +125%\nВосстанавливает 12% Жизни (макс. 15 000 единиц) в секунду	1	1	2		0	0	0									invvps				rpot		-1
+rx01	\grey;Enchanted Rune (01)\n\purple;Ol Rune		1	1	2		90	0	0									xisEl				erun		-1
+rx02	\grey;Enchanted Rune (02)\n\purple;Elq Rune		1	1	2		90	0	0									xisEld				erun		-1
+rx03	\grey;Enchanted Rune (03)\n\purple;Tyr Rune		1	1	2		90	0	0									xisTir				erun		-1
+rx04	\grey;Enchanted Rune (04)\n\purple;Nif Rune		1	1	2		95	0	0									xisNef				erun		-1
+rx05	\grey;Enchanted Rune (05)\n\purple;Xeth Rune		1	1	2		95	0	0									xisEth				erun		-1
+rx06	\grey;Enchanted Rune (06)\n\purple;Xith Rune		1	1	2		95	0	0									xisIth				erun		-1
+rx07	\grey;Enchanted Rune (07)\n\purple;Thal Rune		1	1	2		100	0	0									xisTal				erun		-1
+rx08	\grey;Enchanted Rune (08)\n\purple;Rhal Rune		1	1	2		100	0	0									xisRal				erun		-1
+rx09	\grey;Enchanted Rune (09)\n\purple;Urt Rune		1	1	2		100	0	0									xisOrt				erun		-1
+rx10	\grey;Enchanted Rune (10)\n\purple;Tuul Rune		1	1	2		100	0	0									xisThul				erun		-1
+rx11	\grey;Enchanted Rune (11)\n\purple;Ahmn Rune		1	1	2		100	0	0									xisAmn				erun		-1
+rx12	\grey;Enchanted Rune (12)\n\purple;Zol Rune		1	1	2		100	0	0									xisSol				erun		-1
+rx13	\grey;Enchanted Rune (13)\n\purple;Shaen Rune		1	1	2		105	0	0									xisShael				erun		-1
+rx14	\grey;Enchanted Rune (14)\n\purple;Doj Rune		1	1	2		105	0	0									xisDol				erun		-1
+rx15	\grey;Enchanted Rune (15)\n\purple;Hem Rune		1	1	2		105	0	0									xisHel				erun		-1
+rx16	\grey;Enchanted Rune (16)\n\purple;Iu Rune		1	1	2		105	0	0									xisIo				erun		-1
+rx17	\grey;Enchanted Rune (17)\n\purple;Lux Rune		1	1	2		105	0	0									xisLum				erun		-1
+rx18	\grey;Enchanted Rune (18)\n\purple;Ka Rune		1	1	2		105	0	0									xisKo				erun		-1
+rx19	\grey;Enchanted Rune (19)\n\purple;Fel Rune		1	1	2		110	0	0									xisFal				erun		-1
+rx20	\grey;Enchanted Rune (20)\n\purple;Lew Rune		1	1	2		110	0	0									xisLem				erun		-1
+rx21	\grey;Enchanted Rune (21)\n\purple;Phul Rune		1	1	2		110	0	0									xisPul				erun		-1
+rx22	\grey;Enchanted Rune (22)\n\purple;Un Rune		1	1	2		110	0	0									xisUm				erun		-1
+rx23	\grey;Enchanted Rune (23)\n\purple;Mhal Rune		1	1	2		110	0	0									xisMal				erun		-1
+rx24	\grey;Enchanted Rune (24)\n\purple;Yst Rune		1	1	2		110	0	0									xisIst				erun		-1
+rx25	\grey;Enchanted Rune (25)\n\purple;Gur Rune		1	1	2		115	0	0									xisGul				erun		-1
+rx26	\grey;Enchanted Rune (26)\n\purple;Vez Rune		1	1	2		115	0	0									xisVex				erun		-1
+rx27	\grey;Enchanted Rune (27)\n\purple;Ohn Rune		1	1	2		115	0	0									xisOhm				erun		-1
+rx28	\grey;Enchanted Rune (28)\n\purple;Loz Rune		1	1	2		115	0	0									xisLo				erun		-1
+rx29	\grey;Enchanted Rune (29)\n\purple;Zur Rune		1	1	2		115	0	0									xisSur				erun		-1
+rx30	\grey;Enchanted Rune (30)\n\purple;Bur Rune		1	1	2		115	0	0									xisBer				erun		-1
+rx31	\grey;Enchanted Rune (31)\n\purple;Iah Rune		1	1	2		120	0	0									xisJah				erun		-1
+rx32	\grey;Enchanted Rune (32)\n\purple;Yham Rune		1	1	2		120	0	0									xisCham				erun		-1
+rx33	\grey;Enchanted Rune (33)\n\purple;Xod Rune		1	1	2		120	0	0									xisZod				erun		-1
 s@s	Assur's Bane		1	1	2		0	0	0									ring08				kill		-1
 sath	\grey;Квестовый Предмет\n\gold;Askari Call	\grey;Локация: Island of Skartara (Алтарь)\n\orange;Призывает Athulua, the Amazonian Goddess	1	1	2		120	0	0									invblackscroll				thng		-1
 sbag	\gold;Angel Bag	\grey;Смешайте 6 Angel Bag-ов для создания Six Angel Bag\n\nРеагент Куба	1	2	2		0	0	0									angelbag2				thng		-1
@@ -1987,7 +2022,7 @@ twi	\gold;Sunstone of the Twin Seas		1	1	2		0	0	0									invgmg				grtz		-1
 u@+	\gold;I Am Rich	\yellow;- Я могу себе это позволить потому, что я богат и могуч и гоняю стаи туч. -\n\red;трофеи Yshari Sanctum, Uldyssian, Void, а также Vial of Elder Blood.\nЭтот предмет ничего не делает, а для своего создания поглотил	1	1	2		0	0	0									redgem				grtz		-1
 vic	Реагент Куба\n\orange;Sacrifical Heart		1	1	2		0	0	0									invhrt				thng		-1
 vip	Amulet of the Viper		1	1	2		0	0	0									invvip	10			amul		-1
-voDX	Реагент Куба\n\orange;Enchanting Crystal	\yellow;и может быть использован на вещи лишь раз\nЭтот Рецепт создает случайный Уник того же Типа\n\grey;Смешайте с Sacred Уникальным Оружием/Броней для Смены Свойств\n	1	1	2		0	0	0									newreroller				thng		-1
+voDX	Реагент Куба\n\orange;Enchanting Crystal	\yellow;и может быть использован на вещи лишь раз\nЭтот Рецепт создает случайный Уник того же Типа\n\grey;Смешайте с Sacred Уникальным Оружием/Бронёй для Смены Свойств\n	1	1	2		0	0	0									newreroller				thng		-1
 voXX	Books of Kalan		1	2	2		0	0	0									invkalan				grtz		-1
 voi1	\purple;Scroll of Greed		1	1	2		0	0	0									invrsc				thng		-1
 voi2	\purple;Scroll of Sloth		1	1	2		0	0	0									invrsc				thng		-1
@@ -2026,7 +2061,7 @@ yps	Зелье противоядия		1	1	2		0	0	0									invnps				apot		-1
 yq1	\orange;Sunless Crystal Bird	\blue;(-2 - -5)% ко Всем Сопротивлениям Врага\n3% Шанс Сокрушительного Удара\n(-3 - +5) к Радиусу Света\n\grey;Смешайте с Six Angel Bag для Добавления Бонуса\n\nРеагент Куба	1	2	2		0	0	0									bird4				thng		-1
 yq2	Six Angel Bag		1	2	2		0	0	0									angelbag1				grtz		-1
 yq8	Zakarum's Ear		1	1	2		0	0	0									invear				grtz		-1
-yqe	By Richard Knaak\nMoon of the Spider		1	1	2		0	0	0									invhscr2				grtz		-1
+yqe	Moon of the Spider		1	1	2		0	0	0									invhscr2				grtz		-1
 yqx	Spirit Trance Herb		1	1	2		0	0	0									invhrb				grtz		-1
 zk+	\dgreen;Signet of Gold	Нажмите ПКМ: Положить золота в Инвентарь: %d	1	1	2		0	0	0									sigil3B				poti		-1
 zkg	\dgreen;Великая Печать Опыта	Нажмите ПКМ: Опыт: %d	1	1	2		0	0	0									sigilX				poti		-1
