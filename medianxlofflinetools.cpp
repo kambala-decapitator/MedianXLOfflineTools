@@ -2358,7 +2358,7 @@ void MedianXLOfflineTools::processPlugyStash(QHash<Enums::ItemStorage::ItemStora
 
     QString corruptedItems;
     inputDataStream >> info.lastPage;
-    for (quint32 page = 1; page <= info.lastPage + 1; ++page)
+    for (quint32 page = 1; page < info.lastPage + 1; ++page)
     {
         if (bytes.mid(inputDataStream.device()->pos(), ItemParser::kPlugyPageHeader.size()) != ItemParser::kPlugyPageHeader)
         {
