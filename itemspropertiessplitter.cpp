@@ -29,7 +29,7 @@
 
 static const int kShardsPerCrystal = 5;
 static const QRegExp kRuneRegExp("r(\\d\\d)");
-static const quint8 kOnRuneKey = 50, kPerfectGrade = 4;
+static const quint8 HighestRuneKey = 33, kPerfectGrade = 4;
 
 
 ItemsPropertiesSplitter::ItemsPropertiesSplitter(ItemStorageTableView *itemsView, QWidget *parent /*= 0*/) : QSplitter(Qt::Horizontal, parent), _itemsView(itemsView), _propertiesWidget(new PropertiesViewerWidget(parent))
@@ -271,7 +271,7 @@ void ItemsPropertiesSplitter::showContextMenu(const QPoint &pos)
         if (kRuneRegExp.exactMatch(item->itemType))
         {
             quint8 runeCode = kRuneRegExp.cap(1).toUShort();
-            if (runeCode > 1 && runeCode <= kOnRuneKey)
+            if (runeCode > 1 && runeCode <= HighestRuneKey)
             {
                 QMenu *menuDowngrade = new QMenu(tr("Downgrade to"), _itemsView);
                 while (--runeCode)
@@ -927,7 +927,7 @@ void ItemsPropertiesSplitter::upgradeGems(ItemsList *pItems /*= 0*/)
 void ItemsPropertiesSplitter::upgradeRunes(int reserveRunes, ItemsList *pItems /*= 0*/)
 {
     UpgradableItemsMultiMap runesMap = runesMapFromItems(pItems ? *pItems : _allItems, reserveRunes);
-    if (upgradeItemsInMap(runesMap, kOnRuneKey, "runes/r%1"))
+    if (upgradeItemsInMap(runesMap, HighestRuneKey, "runes/r%1"))
     {
         emit itemsChanged();
         emit itemCountChanged(_allItems.size());
@@ -966,7 +966,7 @@ UpgradableItemsMultiMap ItemsPropertiesSplitter::runesMapFromItems(const ItemsLi
         if (kRuneRegExp.exactMatch(item->itemType))
         {
             quint8 runeKey = kRuneRegExp.cap(1).toUShort();
-            if (runeKey < kOnRuneKey) // don't include 'On' rune, Great runes and Ultimative runes
+            if (runeKey < HighestRuneKey) // don't include 'On' rune, Great runes and Ultimative runes
             {
                 quint8 &reserve = reserveHash[runeKey];
                 if (reserve < reserveRunes)
