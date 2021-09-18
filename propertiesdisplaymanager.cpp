@@ -729,6 +729,18 @@ PropertiesMultiMap PropertiesDisplayManager::collectSetFixedProps(const QList<Se
         const SetFixedProperty &setProp = setProps.at(i);
         foreach (int propId, setProp.ids)
         {
+            bool shouldAdd = true;
+            foreach (ItemProperty *existingProp, setFixedProps.values(propId))
+            {
+                if (setProp.param != existingProp->param)
+                    continue;
+                existingProp->value += setProp.minValue;
+                shouldAdd = false;
+                break;
+            }
+            if (!shouldAdd)
+                continue;
+
             ItemProperty *prop = new ItemProperty(0, setProp.param);
             if (ItemDataBase::isCtcProperty(propId))
             {
