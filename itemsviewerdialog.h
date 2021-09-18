@@ -44,9 +44,10 @@ public:
         Never
     };
 
-    static const int kCellSize, kColumnsDefault;
+    static const int kCellSize;
 
     static const QList<int> &kRows();
+    static const QList<int>& kColumns();
     static int rowsInStorageAtIndex(int storage);
     static int colsInStorageAtIndex(int storage);
     static int tabIndexFromItemStorage(int storage);

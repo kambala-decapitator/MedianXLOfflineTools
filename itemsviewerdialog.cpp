@@ -33,7 +33,7 @@
 #endif
 
 
-const int ItemsViewerDialog::kCellSize = 32, ItemsViewerDialog::kColumnsDefault = 15;
+const int ItemsViewerDialog::kCellSize = 32;
 
 ItemsViewerDialog::ItemsViewerDialog(const QHash<int, bool> &plugyStashesExistenceHash, quint8 showDisenchantPreviewOption, QWidget *parent) : QDialog(parent), _tabWidget(new QTabWidget(this)),
     _showDisenchantPreviewOption(static_cast<ShowDisenchantPreviewOption>(showDisenchantPreviewOption))
@@ -54,7 +54,7 @@ ItemsViewerDialog::ItemsViewerDialog(const QHash<int, bool> &plugyStashesExisten
             splitter = new ItemsPropertiesSplitter(tableView, this);
         else
             splitter = new PlugyItemsSplitter(tableView, this);
-        splitter->setModel(new ItemStorageTableModel(kRows().at(i), i == GearIndex ? 8 : kColumnsDefault, splitter));
+        splitter->setModel(new ItemStorageTableModel(kRows().at(i), kColumns().at(i), splitter));
         _tabWidget->addTab(splitter, tabNameAtIndex(i));
 
         connect(splitter, SIGNAL(itemCountChanged(int)), SLOT(itemCountChangedInCurrentTab(int)));
@@ -407,8 +407,14 @@ void ItemsViewerDialog::updateGearItems(ItemsList *pBeltItems /*= 0*/, ItemsList
 
 const QList<int> &ItemsViewerDialog::kRows()
 {
-    static QList<int> rows = QList<int>() << 11 << 10 << 16 << 16 << 16 << 16 << 16;
+    static QList<int> rows = QList<int>() << 11 << 10 << 10 << 14 << 14 << 14 << 14;
     return rows;
+}
+
+const QList<int>& ItemsViewerDialog::kColumns()
+{
+    static QList<int> cols = QList<int>() << 8 << 15 << 15 << 14 << 14 << 14 << 14;
+    return cols;
 }
 
 int ItemsViewerDialog::rowsInStorageAtIndex(int storage)
@@ -416,9 +422,9 @@ int ItemsViewerDialog::rowsInStorageAtIndex(int storage)
     return kRows().at(tabIndexFromItemStorage(storage));
 }
 
-int ItemsViewerDialog::colsInStorageAtIndex(int /*storage*/)
+int ItemsViewerDialog::colsInStorageAtIndex(int storage)
 {
-    return kColumnsDefault;
+    return kColumns().at(tabIndexFromItemStorage(storage));
 }
 
 int ItemsViewerDialog::tabIndexFromItemStorage(int storage)
