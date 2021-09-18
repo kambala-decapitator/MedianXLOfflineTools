@@ -14,7 +14,7 @@
 
 
 const QByteArray ItemParser::kItemHeader("JM");
-const QByteArray ItemParser::kPlugyPageHeader("ST");
+const QByteArray ItemParser::kPlugyPageHeader("STASH");
 
 const int ItemParser::kBeltMaxRows = 4;
 const int ItemParser::kBeltMaxColumns = 4;

@@ -87,17 +87,13 @@ private:
 };
 
 
+// no longer PlugY format, Sigma v2 instead
 struct PlugyStashInfo
 { //-V802
     QString path;
     bool exists;
-    QByteArray header;
-    quint8 version;
-    quint32 gold, lastPage;
-    QList<QPair<quint32, QByteArray> > pagesMetadata; // PlugY v11: flags + name
-
-    PlugyStashInfo() : gold(0) {}
-    bool sharedStashHasGold() const { return version == '2'; }
+    quint32 version;
+    quint32 lastPage;
 };
 
 

@@ -64,8 +64,6 @@ extern void qt_mac_set_dock_menu(QMenu *);
 static const QString modName(QChar(0x03A3));
 static const QString kLastSavePathKey("lastSavePath"), kBackupExtension("bak"), kReadonlyCss("QLineEdit { background-color: rgb(227, 227, 227) }"), kTimeFormatReadable("yyyyMMdd-hhmmss"), kMedianXlServer("https://mxl.vn.cz/kambala/");
 static const QByteArray kMercHeader("jf"), kSkillsHeader("if"), kIronGolemHeader("kf");
-static const char sharedStashHeader[] = {'S', 'S', 'S', '\0', '0'};
-static const int plugyHeaderSize = 5;
 
 const QString MedianXLOfflineTools::kCompoundFormat("%1, %2");
 const QString MedianXLOfflineTools::kCharacterExtension("d2s");
@@ -678,9 +676,8 @@ void MedianXLOfflineTools::saveCharacter()
             continue;
         else
         {
-            // create shared stash without gold
-            info.header = QByteArray(sharedStashHeader, plugyHeaderSize);
-            info.version = '1';
+            // create
+            info.version = 1;
         }
         if (!inputFile.open(QIODevice::WriteOnly))
         {
@@ -690,34 +687,17 @@ void MedianXLOfflineTools::saveCharacter()
 
         ItemsList::const_iterator maxPageIter = std::max_element(items.constBegin(), items.constEnd(), compareItemsByPlugyPage);
         quint32 lastItemsPage = maxPageIter == items.constEnd() ? 1 : (*maxPageIter)->plugyPage;
-        bool hasMetadata = !info.pagesMetadata.isEmpty();
-        if (hasMetadata)
-        {
-            if (info.lastPage < lastItemsPage)
-                info.lastPage = lastItemsPage;
-        }
-        else
-            info.lastPage = lastItemsPage;
+        info.lastPage = lastItemsPage - 1;
 
         QDataStream plugyFileDataStream(&inputFile);
         plugyFileDataStream.setByteOrder(QDataStream::LittleEndian);
-        writeByteArrayDataWithoutNull(plugyFileDataStream, info.header);
         plugyFileDataStream << info.version;
-        if (iter.key() == Enums::ItemStorage::PersonalStash || info.sharedStashHasGold())
-            plugyFileDataStream << info.gold;
         plugyFileDataStream << info.lastPage;
 
-        for (quint32 page = 1; page <= info.lastPage; ++page)
+        for (quint32 page = 1; page <= lastItemsPage; ++page)
         {
             writeByteArrayDataWithoutNull(plugyFileDataStream, ItemParser::kPlugyPageHeader);
-            if (hasMetadata)
-            {
-                int i = page - 1;
-                QPair<quint32, QByteArray> metadata = i < info.pagesMetadata.length() ? info.pagesMetadata.at(i) : qMakePair(static_cast<quint32>(0), QByteArray());
-                plugyFileDataStream << metadata.first;
-                writeByteArrayDataWithoutNull(plugyFileDataStream, metadata.second);
-            }
-            plugyFileDataStream << static_cast<quint8>(0);
+            plugyFileDataStream << page - 1;
             writeByteArrayDataWithoutNull(plugyFileDataStream, ItemParser::kItemHeader);
 
             ItemsList pageItems = ItemDataBase::extractItemsFromPage(items, page);
@@ -2216,9 +2196,9 @@ bool MedianXLOfflineTools::processSaveFile()
         QString oldSharedStashPath = _plugyStashesHash[ItemStorage::SharedStash].path, oldHCStashPath = _plugyStashesHash[ItemStorage::HCStash].path;
         QFileInfo charPathFileInfo(_charPath);
         QString charFolderPath = charPathFileInfo.absolutePath();
-        _plugyStashesHash[Enums::ItemStorage::PersonalStash].path = ui->actionAutoOpenPersonalStash->isChecked() ? QString("%1/%2.d2x").arg(charFolderPath, charPathFileInfo.baseName()) : QString();
-        _plugyStashesHash[Enums::ItemStorage::SharedStash].path = ui->actionAutoOpenSharedStash->isChecked() ? charFolderPath + "/_LOD_SharedStashSave.sss" : QString();
-        _plugyStashesHash[Enums::ItemStorage::HCStash].path = ui->actionAutoOpenHCShared->isChecked() ? charFolderPath + "/_LOD_HC_SharedStashSave.sss" : QString();
+        _plugyStashesHash[Enums::ItemStorage::PersonalStash].path = ui->actionAutoOpenPersonalStash->isChecked() ? QString("%1/%2.stash").arg(charFolderPath, charPathFileInfo.baseName()) : QString();
+        _plugyStashesHash[Enums::ItemStorage::SharedStash].path = ui->actionAutoOpenSharedStash->isChecked() ? charFolderPath + "/_sharedstash.shared" : QString();
+        _plugyStashesHash[Enums::ItemStorage::HCStash].path = ui->actionAutoOpenHCShared->isChecked() ? charFolderPath + "/_sharedstash.hc.shared" : QString();
         if (!ui->actionReloadSharedStashes->isChecked())
         {
             sharedStashPathChanged = oldSharedStashPath != _plugyStashesHash[ItemStorage::SharedStash].path;
@@ -2364,64 +2344,26 @@ void MedianXLOfflineTools::processPlugyStash(QHash<Enums::ItemStorage::ItemStora
     QByteArray bytes = inputFile.readAll();
     inputFile.close();
 
-    QByteArray header;
     Enums::ItemStorage::ItemStorageEnum plugyStorage = iter.key();
-    if (plugyStorage == Enums::ItemStorage::PersonalStash)
-        header = QByteArray("CSTM0");
-    else
-        header = QByteArray(sharedStashHeader, plugyHeaderSize);
-    if (bytes.left(plugyHeaderSize) != header)
-    {
-        ERROR_BOX(tr("PlugY stash '%1' has wrong header").arg(QFileInfo(info.path).fileName()));
-        return;
-    }
-    info.header = header;
 
     QDataStream inputDataStream(bytes);
     inputDataStream.setByteOrder(QDataStream::LittleEndian);
-    inputDataStream.skipRawData(plugyHeaderSize);
-
     inputDataStream >> info.version;
-    // in personal stash it's not really gold, simply 4 zeros: https://github.com/ChaosMarc/PlugY/blob/master/PlugY/ExtendedSaveFile.cpp#L152
-    if (plugyStorage == Enums::ItemStorage::PersonalStash || info.sharedStashHasGold())
-        inputDataStream >> info.gold;
-    if (plugyStorage == Enums::ItemStorage::SharedStash)
-        _sharedGold = info.gold;
 
-    info.pagesMetadata.clear();
     QString corruptedItems;
     inputDataStream >> info.lastPage;
-    for (quint32 page = 1; page <= info.lastPage; ++page)
+    for (quint32 page = 1; page <= info.lastPage + 1; ++page)
     {
-        if (bytes.mid(inputDataStream.device()->pos(), 2) != ItemParser::kPlugyPageHeader)
+        if (bytes.mid(inputDataStream.device()->pos(), ItemParser::kPlugyPageHeader.size()) != ItemParser::kPlugyPageHeader)
         {
-            ERROR_BOX(tr("Page %1 of '%2' has wrong PlugY header").arg(page).arg(QFileInfo(info.path).fileName()));
+            ERROR_BOX(tr("Page %1 of '%2' has wrong header").arg(page).arg(QFileInfo(info.path).fileName()));
             return;
         }
-        inputDataStream.skipRawData(2);
+        inputDataStream.skipRawData(ItemParser::kPlugyPageHeader.size());
 
-        // PlugY v11 adds flags (DWORD) and optional page name
-        // https://github.com/ChaosMarc/PlugY/blob/master/PlugY/InfinityStash.cpp#L258
-        if (bytes.mid(inputDataStream.device()->pos() + 1, 2) != ItemParser::kItemHeader)
-        {
-            quint32 pageFlags;
-            inputDataStream >> pageFlags;
-
-            QByteArray pageName;
-            int strStart = inputDataStream.device()->pos(), strLength = bytes.indexOf('\0', strStart) - strStart;
-            if (strLength)
-            {
-                char *pageNameStr = new char [strLength + 1];
-                inputDataStream.readRawData(pageNameStr, strLength);
-                pageNameStr[strLength] = '\0';
-                pageName = QByteArray(pageNameStr);
-                qDebug("page %u is named '%s'", page, pageNameStr);
-                delete [] pageNameStr;
-            }
-
-            info.pagesMetadata << qMakePair(pageFlags, pageName);
-        }
-        inputDataStream.skipRawData(1); // \0
+        quint32 pageID;
+        inputDataStream >> pageID;
+        Q_ASSERT(page == pageID + 1);
 
         if (bytes.mid(inputDataStream.device()->pos(), 2) != ItemParser::kItemHeader)
         {
