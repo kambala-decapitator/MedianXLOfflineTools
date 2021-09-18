@@ -24,13 +24,13 @@ public:
         SkillKeys = 0x38,
         CurrentLocation = 0xA8,
         Mercenary = 0xB3,
-        QuestsHeader = 0x165,
-        QuestsData = 0x16F,
-        WaypointsHeader = 0x28F,
-        WaypointsData = 0x297,
-        NPCHeader = 0x2E0,
-        StatsHeader = 0x313,
-        StatsData = 0x315
+        QuestsHeader = 0x14F,
+        QuestsData = 0x159,
+        WaypointsHeader = 0x279,
+        WaypointsData = 0x281,
+        NPCHeader = 0x2CA,
+        StatsHeader = 0x2FD,
+        StatsData = 0x2FF
     };
 };
 
