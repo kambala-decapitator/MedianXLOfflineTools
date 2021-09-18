@@ -639,6 +639,10 @@ QString PropertiesDisplayManager::propertyDisplay(ItemProperty *propDisplay, int
         delete [] buf;
         break;
     }
+    case 36:
+        if (value == 2)
+            result = description;
+        break;
     // 9, 10, 14, 16-19 - absent
     // everything else is constructed in ItemParser (mostly in parseItemProperties()), i.e. has displayString
     default:
