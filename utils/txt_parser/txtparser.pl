@@ -177,7 +177,7 @@ my $sets = parsetxt("sets.csv", "#key" => 0, tbl => 1, '!_lodSet' => {col => 2, 
 
 my %greenPropertiesHash, my @greenPropertiesKeys;
 &getSetFixedPropertiesHash(57, 10, \%greenPropertiesHash, \@greenPropertiesKeys);
-my $setItems = parsetxt("setitems.csv", _autoindex=>0, iIName=>0, setKey=>1, rlvl=>7, image=>86, addfunc=>93,
+my $setItems = parsetxt("setitems.csv", _autoindex=>0, iIName=>0, setKey=>1, rlvl=>8, image=>87, addfunc=>94,
                         %greenPropertiesHash, '!_lodSet' => {col => 6, val => $oldSetCond});
 &tblExpandArray($setItems, "iIName", "IName");
 
@@ -218,7 +218,7 @@ my $miscTypes = parsetxt("misc.csv", $itemName=>0, "#code"=>5, $nameStr=>7, $spe
 &tblExpandHash($_, $itemName) for ($armorTypes, $weaponTypes, $miscTypes);
 
 my $skills = parsetxt("skills.csv", _index=>"1", "dbgname"=>"0", "internalName"=>"3", "class"=>"2",
-                      "srvmissile"=>"8", "srvmissilea"=>"11", "srvmissileb"=>"12", "srvmissilec"=>"13");
+                      "srvmissile"=>"9", "srvmissilea"=>"12", "srvmissileb"=>"13", "srvmissilec"=>"14");
 my $skillsDsc = parsetxt("skilldesc.csv", "#code"=>0, tab => 1, row => 2, col => 3, image => 8, dscname=>9);
 
 my $processedSkills;
