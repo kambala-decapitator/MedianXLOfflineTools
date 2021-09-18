@@ -62,7 +62,7 @@ extern void qt_mac_set_dock_menu(QMenu *);
 // static const
 
 static const QString modName(QChar(0x03A3));
-static const QString kLastSavePathKey("lastSavePath"), kBackupExtension("bak"), kReadonlyCss("QLineEdit { background-color: rgb(227, 227, 227) }"), kTimeFormatReadable("yyyyMMdd-hhmmss"), kMedianXlServer("http://mxl.vn.cz/kambala/");
+static const QString kLastSavePathKey("lastSavePath"), kBackupExtension("bak"), kReadonlyCss("QLineEdit { background-color: rgb(227, 227, 227) }"), kTimeFormatReadable("yyyyMMdd-hhmmss"), kMedianXlServer("https://mxl.vn.cz/kambala/");
 static const QByteArray kMercHeader("jf"), kSkillsHeader("if"), kIronGolemHeader("kf");
 static const char sharedStashHeader[] = {'S', 'S', 'S', '\0', '0'};
 static const int plugyHeaderSize = 5;
