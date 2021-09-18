@@ -77,7 +77,7 @@ QString textWithHtmlColor(const QString &text, const QString &colorString)
 QString htmlStringFromDiabloColorString(const QString &s, ColorsManager::ColorIndex defaultColor /*= ColorsManager::White*/)
 {
     QString text = s;
-    text.replace("\\n", kHtmlLineBreak).replace("\\grey;", ColorsManager::colorStrings().at(ColorsManager::White));
+    text.replace("\\n", "\n").replace("\\grey;", ColorsManager::colorStrings().at(ColorsManager::White));
 
     // text and colors flow top-to-bottom, but D2 renders text bottom-to-top
     // HTML renders top-to-bottom
