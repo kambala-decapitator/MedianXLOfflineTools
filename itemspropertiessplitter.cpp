@@ -526,8 +526,7 @@ void ItemsPropertiesSplitter::extractShrinesFromVessel()
         return;
     }
 
-    if (!(vesselProp->value -= stored))
-        vesselProp->value = -1; // with value 0 no text is displayed
+    vesselProp->value -= stored;
     ItemPropertyTxt *txtProp = ItemDataBase::Properties()->value(Enums::ItemProperties::ShrineVesselCounter);
     ReverseBitWriter::replaceValueInBitString(vesselItem->bitString, vesselProp->bitStringOffset, vesselProp->value + txtProp->add, txtProp->bits);
 
