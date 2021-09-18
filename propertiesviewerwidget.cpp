@@ -128,7 +128,15 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
     // create full item description
     QString itemDescription = ItemDataBase::completeItemName(item, true) + ilvlText + kHtmlLineBreak;
     if (!itemBase->spelldesc.isEmpty())
-        itemDescription += htmlStringFromDiabloColorString(itemBase->spelldesc) + kHtmlLineBreak;
+    {
+        // TODO: proper condition instead of quick hack
+        QString spelldesc = itemBase->spelldesc;
+        if (spelldesc.indexOf(QRegExp("^\\d+\\\\n")) != -1)
+            itemDescription += spelldesc.replace("\\n", kHtmlLineBreak);
+        else
+            itemDescription += htmlStringFromDiabloColorString(spelldesc);
+        itemDescription += kHtmlLineBreak;
+    }
 
     QString runes;
     foreach (ItemInfo *socketable, item->socketablesInfo)
