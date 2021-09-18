@@ -263,42 +263,6 @@ foreach my $elem (@$rw)
 }
 &tblExpandHash($fakeRwHash, $itemName);
 
-# skip lines that don't start with 'xsignet' at col 29 (AD in Excel) and are not for honorific/decoy recipe
-# 'value' field will contain either property value (including oskill level) or chance in ctc
-my $moStat = "xsignet";
-my $cubemain = parsetxt("cubemain.csv", '#_code' => 10, '!_enabled' => {col => 1, val => $zeroRe},
-                        '!_mo' => {col => 30, val => qr/^(?!$moStat)/},
-                        '!_honorific' => {col => 0, val => qr/^Mystic Orbs\:/}, prop => 20,
-                        param => 22, minValue => 23, maxValue => 24, rlvl => 28, moStat => 30);
-
-# MO names and properties
-my $mos; # hashref with keys from ID column of itemstatcost
-for my $miscItemType (keys %$miscTypes)
-{
-    my $hashRef = $miscTypes->{$miscItemType};
-    # no UMO support because there's no simple way to determine if it has been cubed with item
-    # (it doesn't have 'x_signet*' stat)
-    next unless defined $hashRef->{type} and $hashRef->{type} eq 'asaa';
-
-    my $cubeMo = $cubemain->{$miscItemType};
-    for (0..scalar @$itemProperties)
-    {
-        next unless defined $itemProperties->[$_]->{stat} and defined $cubeMo->{moStat};
-        if ($itemProperties->[$_]->{stat} =~ /x_signet(\d+)/ and $cubeMo->{moStat} eq $moStat.$1)
-        {
-            $mos->{$_}->{statId} = &statIdsFromPropertyStat($cubeMo->{prop});
-            $mos->{$_}->{code} = $miscItemType;
-            $mos->{$_}->{value} = $cubeMo->{minValue};
-            $mos->{$_}->{paramAdd} = $cubeMo->{maxValue} if defined $cubeMo->{param};
-            $mos->{$_}->{paramShift} = $cubeMo->{param};
-            $mos->{$_}->{rlvl} = $cubeMo->{rlvl};
-            # not used in the program, just to simplify reading mo.csv
-            $mos->{$_}->{text} = $mos->{$_}->{statId} == 97 ? "oskill" : $itemProperties->[$mos->{$_}->{statId}]->{descPositive};
-            last
-        }
-    }
-}
-
 # gems & runes
 my @subtypes = ('weapon', 'armor', 'shield');
 my @subtypeKeys = ('code', 'param', 'value');
@@ -490,18 +454,6 @@ foreach my $elem (@$rw)
         my $s = $_ eq $itemName ? $fakeRwHash->{$elem->{tbl}}->{$itemName} : $elem->{$_};
         print $out ($s // '')."\t"
     }
-    print $out "\n"
-}
-close $out;
-
-my @moIds = sort keys %$mos;
-my @moKeys = qw/code statId value paramAdd paramShift rlvl text/;
-open $out, ">", "generated/mo.csv";
-print $out "#id\t".join("\t", @moKeys)."\n";
-for my $id (@moIds)
-{
-    print $out $id;
-    print $out "\t".($mos->{$id}->{$_} // '') for (@moKeys);
     print $out "\n"
 }
 close $out;
