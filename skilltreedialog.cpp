@@ -99,8 +99,10 @@ SkillTreeDialog::SkillTreeDialog(QWidget *parent /*= 0*/) : QDialog(parent), _ta
         }
     }
 
+    // TODO: query number of tabs dynamically for each class
+    // TODO: tab names
     const QList<int> skillsVisualOrder = Enums::Skills::currentCharacterSkillsIndexes().second;
-    for (int i = 0, j = 0, skillsNumber = skillsVisualOrder.size(); i < 3; ++i)
+    for (int i = 0, j = 0, skillsNumber = skillsVisualOrder.size(); i < 8; ++i)
     {
         int tabIndex = i + 1;
         QWidget *tab = new QWidget(this);
@@ -109,7 +111,6 @@ SkillTreeDialog::SkillTreeDialog(QWidget *parent /*= 0*/) : QDialog(parent), _ta
         QGridLayout *grid = new QGridLayout(tab);
         grid->setContentsMargins(QMargins());
 
-        QGroupBox *uberSkillsBox = 0;
         while (j < skillsNumber)
         {
             int skillIndex = skillsVisualOrder.at(j);
@@ -128,20 +129,7 @@ SkillTreeDialog::SkillTreeDialog(QWidget *parent /*= 0*/) : QDialog(parent), _ta
             w->setSkillName(skill->name);
             w->setSkillImageForClassWithId(charInfo.classCode, skill->imageId);
             w->setSkillPoints(baseSkillPoints, totalSkillPoints);
-
-            if (skillsNumber == 30 && i == 2 && skill->col == 3) // Ultimative XV has 35 skills and different uberskills tab layout
-            {
-                if (!uberSkillsBox)
-                {
-                    uberSkillsBox = new QGroupBox(tr("%1berskills", "param is letter U with umlaut").arg(QChar(0x00dc)), tab);
-                    uberSkillsBox->setLayout(new QVBoxLayout);
-                    uberSkillsBox->layout()->setContentsMargins(QMargins());
-                    grid->addWidget(uberSkillsBox, 0, 1, 5, 1);
-                }
-                uberSkillsBox->layout()->addWidget(w);
-            }
-            else
-                grid->addWidget(w, skill->row - 1, skill->col - 1);
+            grid->addWidget(w, skill->row - 1, skill->col - 1);
             ++j;
         }
     }
