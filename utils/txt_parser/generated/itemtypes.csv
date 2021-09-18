@@ -92,6 +92,7 @@ dbox	fbox		Druid Gift Box
 drui	clas		Druid Item
 dstf	staf,dbox		Druid Staff
 sdst	dstf,ct2w		Druid Staff (Sacred)
+/dsw	swor,my1w		Druid Sword (Mythical)
 elrx	elex		Elemental Ranged Weapons
 xrun	rune,gem		Elemental Rune
 el1x	elex		Elemental Weapon 1H Melee

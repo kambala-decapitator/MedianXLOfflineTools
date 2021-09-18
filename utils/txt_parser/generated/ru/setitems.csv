@@ -139,20 +139,20 @@
 264	Zann Esu's Charm	(Sorceress Cold Set)\nZann Esu's Secrets	MSZann Esu's Secrets	80																																									
 265	Zann Esu's Robes	(Sorceress Cold Set)\nZann Esu's Secrets	MSZann Esu's Secrets	80																																									
 266	Zann Esu's Rune Loop	(Sorceress Cold Set)\nZann Esu's Secrets	MSZann Esu's Secrets	80																																									
-267	Eye of Wisdom	(Amazon Oskill Set)\nThunderstorm	M_Thunderstorm	100	invamuset																														blac	invamuset					5		2	0	
-268	Charged Cloud	(Amazon Oskill Set)\nThunderstorm	M_Thunderstorm	100																															dgld						5		2	0	
-269	Eye of Wisdom	(Assassin Oskill Set)\nBattle Devices	M_BattleDevices	100	invamuset																														blac	invamuset					5		2	0	
-270	Death Magnet	(Assassin Oskill Set)\nBattle Devices	M_BattleDevices	100																															blac						5		2	0	
-271	Eye of Wisdom	(Barbarian Oskill Set)\nGuardian of the Sightless Eye	M_GuardianRogue	100	invamuset																														blac	invamuset					5		2	0	
-272	Imperial Guard	(Barbarian Oskill Set)\nGuardian of the Sightless Eye	M_GuardianRogue	100																															lyel						5		2	0	
-273	Eye of Wisdom	(Druid Oskill Set)\nOak's Teaching	M_OakTeaching	100	invamuset																														blac	invamuset					5		2	0	
-274	Apprentice	(Druid Oskill Set)\nOak's Teaching	M_OakTeaching	100																															dgrn						5		2	0	
-275	Eye of Wisdom	(Necromancer Oskill Set)\nThe Offering	M_TheOffering	100	invamuset																														blac	invamuset					5		2	0	
-276	Sacrificial Mind	(Necromancer Oskill Set)\nThe Offering	M_TheOffering	100																															blac						5		2	0	
-277	Eye of Wisdom	(Paladin Oskill Set)\nArmageddon	M_Armageddon	100	invamuset																														blac	invamuset					5		2	0	
-278	The Witness	(Paladin Oskill Set)\nArmageddon	M_Armageddon	100																															dred						5		2	0	
-279	Eye of Wisdom	(Sorceress Oskill Set)\nWintertide	M_Wintertide	100	invamuset																														blac	invamuset					5		2	0	
-280	Arctic Shard	(Sorceress Oskill Set)\nWintertide	M_Wintertide	100																															dblu						5		2	0	
+267	Eye of Wisdom	(Amazon Oskill Set)\nThunderstorm	M_Thunderstorm	100	invamuset																																								
+268	Charged Cloud	(Amazon Oskill Set)\nThunderstorm	M_Thunderstorm	100																																									
+269	Eye of Wisdom	(Assassin Oskill Set)\nBattle Devices	M_BattleDevices	100	invamuset																																								
+270	Death Magnet	(Assassin Oskill Set)\nBattle Devices	M_BattleDevices	100																																									
+271	Eye of Wisdom	(Barbarian Oskill Set)\nGuardian of the Sightless Eye	M_GuardianRogue	100	invamuset																																								
+272	Imperial Guard	(Barbarian Oskill Set)\nGuardian of the Sightless Eye	M_GuardianRogue	100																																									
+273	Eye of Wisdom	(Druid Oskill Set)\nOak's Teaching	M_OakTeaching	100	invamuset																																								
+274	Apprentice	(Druid Oskill Set)\nOak's Teaching	M_OakTeaching	100																																									
+275	Eye of Wisdom	(Necromancer Oskill Set)\nThe Offering	M_TheOffering	100	invamuset																																								
+276	Sacrificial Mind	(Necromancer Oskill Set)\nThe Offering	M_TheOffering	100																																									
+277	Eye of Wisdom	(Paladin Oskill Set)\nArmageddon	M_Armageddon	100	invamuset																																								
+278	The Witness	(Paladin Oskill Set)\nArmageddon	M_Armageddon	100																																									
+279	Eye of Wisdom	(Sorceress Oskill Set)\nWintertide	M_Wintertide	100	invamuset																																								
+280	Arctic Shard	(Sorceress Oskill Set)\nWintertide	M_Wintertide	100																																									
 281	Horazon's Guard	(Valthek Quest Set)\nBrotherhood of the Vizjerei	Set_labrynth	120	lab_armor																																								
 282	Valthek's Blade	(Valthek Quest Set)\nBrotherhood of the Vizjerei	Set_labrynth	120																																									
 283	Nor Tiraj's Safeguard	(Valthek Quest Set)\nBrotherhood of the Vizjerei	Set_labrynth	120	lab_shield																																								
@@ -182,15 +182,13 @@
 307	Apeshoot	(Ape Set)\nTestament of the Apes	MSTestament of the Apes	100																																									
 308	Apeskin	(Ape Set)\nTestament of the Apes	MSTestament of the Apes	100																																									
 309	Apeskull	(Ape Set)\nTestament of the Apes	MSTestament of the Apes	100																																									
-310	Bilefroth Skin	(Legendary Set)\nHenchmen Trophies	Set_PewPew	100	set_pewpew1					31		1500	1500																						blac	set_pewpew1					5		2	0	
-311	Blackskull's Horns	(Legendary Set)\nHenchmen Trophies	Set_PewPew	100	set_pewpew2					143		5	5																						blac	set_pewpew2					5		2	0	
-312	Doomcloud Spine	(Legendary Set)\nHenchmen Trophies	Set_PewPew	100	set_pewpew3					145		5	5																						blac	set_pewpew3					5		2	0	
-313	Stareye's Claws	(Legendary Set)\nHenchmen Trophies	Set_PewPew	100	set_pewpew4					149		5	5																						blac	set_pewpew4					5		2	0	
-314	Fangskin Scales	(Legendary Set)\nHenchmen Trophies	Set_PewPew	100	set_pewpew5					147		5	5																						blac	set_pewpew5					5		2	0	
-315	The Catalyst	(Sorceress Arcane Set)\nVizjerei Dominion	M_VizjereiDominion	100																																					5		1	0	
-316	The Darkness	(Sorceress Arcane Set)\nVizjerei Dominion	M_VizjereiDominion	100																																									
+310	Bilefroth Skin	(Legendary Set)\nHenchmen Trophies	Set_PewPew	100	set_pewpew1																																								
+311	Blackskull's Horns	(Legendary Set)\nHenchmen Trophies	Set_PewPew	100	set_pewpew2																																								
+312	Doomcloud Spine	(Legendary Set)\nHenchmen Trophies	Set_PewPew	100	set_pewpew3																																								
+313	Stareye's Claws	(Legendary Set)\nHenchmen Trophies	Set_PewPew	100	set_pewpew4																																								
+314	Fangskin Scales	(Legendary Set)\nHenchmen Trophies	Set_PewPew	100	set_pewpew5																																								
+315	The Catalyst	(Sorceress Arcane Set)\nVizjerei Dominion	M_VizjereiDominion	100																																									
 317	The Hunger	(Sorceress Arcane Set)\nVizjerei Dominion	M_VizjereiDominion	100																																									
-318	The Judgment	(Sorceress Arcane Set)\nVizjerei Dominion	M_VizjereiDominion	100						309	1585	100	100																												5		1	0	
-319	The Presence	(Sorceress Arcane Set)\nVizjerei Dominion	M_VizjereiDominion	100																																									
+318	The Judgment	(Sorceress Arcane Set)\nVizjerei Dominion	M_VizjereiDominion	100																																									
 320	The Conqueror	(Trophy Set)\nTrophy Hunter	M_HeadHunter	120																																									
 321	Idol of Fortune	(Trophy Set)\nTrophy Hunter	M_HeadHunter	120	invamugl																																								

@@ -414,6 +414,7 @@ k21	Circlet (4)		2	2	0		24	0	147									invci0				circ,tier		-1
 k22	Coronet (4)		2	2	0		24	0	183									invci1				circ,tier		-1
 k23	Tiara (4)		2	2	0		25	0	220									invci2				circ,tier		-1
 k24	Diadem (4)		2	2	0		27	0	294									invci3				circ,tier		-1
+nat	Ornate Plate		2	3	0		30	600	0									invnats				qtor		-1
 tow	Tower Shield		2	3	0		0	75	0									invtow				shie	0	-1
 w10	Wolf Head (1)		2	2	0		1	23	0									invdr1				pelt,tier		5
 w11	Hawk Helm (1)		2	2	0		2	37	0									invdr2				pelt,tier		5
@@ -481,22 +482,22 @@ w99	Avenger Guard (3)		2	2	0		23	263	0									invba5				phlm,tier		4
 !19	Bonesplitter (3)		2	4	1		23	176	0		1			19	59			invscyu	0	16	0	nscy,tier	1	2
 !20	Bonesplitter (4)		2	4	1		28	350	0		1			23	70			invscyu	0	16	0	nscy,tier	1	2
 !21	Bonesplitter (Sacred)		2	4	1		30	512	0		1			82	84			invscyu	0	16	0	snsy	1	2
-!22	Mammen Axe (1)		1	3	1		0	0	0			3	4					invhaxu	0	14	0	baxe,tier	1	4
-!24	Mammen Axe (2)		1	3	1		10	21	0			8	9					invhaxu	0	14	0	baxe,tier	1	4
-!26	Mammen Axe (3)		1	3	1		20	59	0			19	20					invhaxu	0	14	0	baxe,tier	1	4
-!27	Mammen Axe (4)		1	3	1		25	124	0			23	23					invhaxu	0	14	0	baxe,tier	1	4
-!28	Mammen Axe (Sacred)		1	3	1		30	452	0			34	47					invhaxu	0	14	0	sbax	1	4
+!22	Mammen Axe (1)		1	3	1		0	0	0									invhaxu	0	0	0	baxe,el1x	1	4
+!24	Mammen Axe (2)		1	3	1		10	21	0									invhaxu	0	0	0	baxe,el1x	1	4
+!26	Mammen Axe (3)		1	3	1		20	59	0									invhaxu	0	0	0	baxe,el1x	1	4
+!27	Mammen Axe (4)		1	3	1		25	124	0									invhaxu	0	0	0	baxe,el1x	1	4
+!28	Mammen Axe (Sacred)		1	3	1		30	452	0									invhaxu	0	0	0	sbax,el1x	1	4
 !3!	Warp Blade (3)		2	3	1		26	0	140			23	44					inv9cru	0	0	13	scrd,tier	1	1
 !30	Hammerhead Axe (2)		2	3	1		15	137	0			17	20					invaxeu	0	14	0	baxe,tier	1	4
 !32	Hammerhead Axe (3)		2	3	1		26	268	0			34	41					invaxeu	0	14	0	baxe,tier	1	4
 !33	Hammerhead Axe (4)		2	3	1		30	529	0			41	49					invaxeu	0	14	0	baxe,tier	1	4
 !34	Hammerhead Axe (Sacred)		2	3	1		30	630	0			51	55					invaxeu	0	14	0	sbax	1	4
-!35	Ono (1)		2	3	1		0	21	0		1			5	7			inv9btu	0	14	0	2hbx,tier	1	4
-!37	Ono (2)		2	3	1		9	47	0		1			12	14			inv9btu	0	14	0	2hbx,tier	1	4
-!39	Ono (3)		2	3	1		20	106	0		1			28	34			inv9btu	0	14	0	2hbx,tier	1	4
+!35	Ono (1)		2	3	1		0	21	0		1							inv9btu	0	0	0	2hbx,el2x	1	4
+!37	Ono (2)		2	3	1		9	47	0		1							inv9btu	0	0	0	2hbx,el2x	1	4
+!39	Ono (3)		2	3	1		20	106	0		1							inv9btu	0	0	0	2hbx,el2x	1	4
 !4!	Warp Blade (4)		2	3	1		31	0	277			29	53					inv9cru	0	0	13	scrd,tier	1	1
-!40	Ono (4)		2	3	1		25	216	0		1			35	40			inv9btu	0	14	0	2hbx,tier	1	4
-!41	Ono (Sacred)		2	3	1		30	489	0		1			80	83			inv9btu	0	14	0	s2hx	1	4
+!40	Ono (4)		2	3	1		25	216	0		1							inv9btu	0	0	0	2hbx,el2x	1	4
+!41	Ono (Sacred)		2	3	1		30	489	0		1							inv9btu	0	0	0	s2hx,el2x	1	4
 !42	Valaska (1)		2	3	1		3	89	0		1			11	16			invbtxu	0	16	0	2hbx,tier	1	4
 !44	Valaska (2)		2	3	1		13	132	0		1			28	37			invbtxu	0	16	0	2hbx,tier	1	4
 !46	Valaska (3)		2	3	1		24	258	0		1			59	77			invbtxu	0	16	0	2hbx,tier	1	4
@@ -539,6 +540,7 @@ w99	Avenger Guard (3)		2	2	0		23	263	0									invba5				phlm,tier		4
 !96	Tepoztopilli (4)		2	4	1		30	641	0		1			34	74			inv9bru	0	16	0	pspe,tier	1	3
 !97	Tepoztopilli (Sacred)		2	4	1		30	733	0		1			68	75			inv9bru	0	16	0	spsp	1	3
 !98	Warp Blade (1)		2	3	1		6	0	47			5	8					inv9cru	0	0	13	scrd,tier	1	1
+/mb	Mana Blade (Mythical)		1	3	1		75	1162	0			51	65					invflcu	0	13	0	/dsw	1	5
 01@	Short Sword (Sacred)		1	3	1		30	376	0			37	38					invssd	0	11	0	qswd	1	-1
 02@	Scimitar (Sacred)		1	3	1		30	421	0			39	40					invscm	0	11	0	qswd	1	-1
 03@	Saber (Sacred)		1	3	1		30	443	0			41	42					invsbr	0	11	0	qswd	1	-1
@@ -635,7 +637,7 @@ w99	Avenger Guard (3)		2	2	0		23	263	0									invba5				phlm,tier		4
 1@9	Bonebreaker (2)		1	3	1		11	61	0			9	12					invspcu	0	14	0	pclb,tier	1	3
 1@@	War Axe (Sacred)		2	3	1		30	581	0			46	56					invwax	0	11	0	qaxe	1	-1
 1@A	Goedendag (3)		1	3	1		21	169	0			24	32					inv7mas	0	14	0	pmac,tier	1	3
-1@B	Angel Star (Sacred)		1	3	1		30	602	0			55	58					invmstu	0	11	0	spmc	1	3
+1@B	Angel Star (Sacred)		1	3	1		30	602	0			55	58					invmstu	0	14	0	spmc	1	3
 1@E	Dart Thrower (4)		2	3	1		26	280	0		1			58	70			inv8lxu		16	0	nxbw,tier	1	2
 1@F	Trebuchet (1)		2	3	1		6	72	0		1			11	16			inv8mxu		16	0	nxbw,tier	1	2
 20@	Large Axe (Sacred)		2	3	1		30	408	0		1			65	67			invlax	0	16	0	s2ha	1	-1
@@ -890,7 +892,7 @@ w99	Avenger Guard (3)		2	2	0		23	263	0									invba5				phlm,tier		4
 4@5	Spatha (3)		1	3	1		21	149	0			22	26					invscmu	0	14	0	bswd,tier	1	4
 4@6	Backsword (Sacred)		1	3	1		30	526	0			48	51					inv9sbu	0	16	0	sbsd	1	4
 4@9	Bonebreaker (4)		1	3	1		25	269	0			24	31					invspcu	0	14	0	pclb,tier	1	3
-4@A	Angel Star (1)		1	3	1		4	62	0			5	8					invmstu	0	11	0	pmac,tier	1	3
+4@A	Angel Star (1)		1	3	1		4	62	0			5	8					invmstu	0	14	0	pmac,tier	1	3
 4@C	Hand of God (3)		2	3	1		24	211	0		1			56	65			inv9gmu		16	0	pham,tier	1	3
 4@D	Needle Crossbow (Sacred)		2	3	1		30	244	0		1			82	83			invlxbu		16	0	snxb	1	2
 500	Short Bow (4)		2	3	1		22	0	167		1			20	22			invsbw	0	0	11	bow,tier	1	-1
@@ -939,7 +941,7 @@ w99	Avenger Guard (3)		2	2	0		23	263	0									invba5				phlm,tier		4
 6@5	Spatha (Sacred)		1	3	1		30	500	0			46	48					invscmu	0	14	0	sbsd	1	4
 6@8	Kriegsmesser (4)		2	3	1		29	543	0			40	48					inv9lsu	0	14	0	bswd,tier	1	4
 6@9	Goedendag (1)		1	3	1		3	46	0			5	7					inv7mas	0	14	0	pmac,tier	1	3
-6@A	Angel Star (2)		1	3	1		13	101	0			13	19					invmstu	0	11	0	pmac,tier	1	3
+6@A	Angel Star (2)		1	3	1		13	101	0			13	19					invmstu	0	14	0	pmac,tier	1	3
 6@C	Hand of God (Sacred)		2	3	1		30	832	0		1			104	105			inv9gmu		16	0	sphm	1	3
 6@F	Trebuchet (4)		2	3	1		29	399	0		1			81	101			inv8mxu		16	0	nxbw,tier	1	2
 70@	Yew Wand (Sacred)		1	2	1		30	0	168			36	38					invywn		0	6	qwnd	1	2
@@ -979,7 +981,7 @@ w99	Avenger Guard (3)		2	2	0		23	263	0									invba5				phlm,tier		4
 8@7	Bronze Sword (4)		2	3	1		27	482	0			37	45					invlsdu	0	14	0	bswd,tier	1	4
 8@8	Bonebreaker (1)		1	3	1		2	31	0			4	5					invspcu	0	14	0	pclb,tier	1	3
 8@9	Goedendag (2)		1	3	1		12	81	0			11	16					inv7mas	0	14	0	pmac,tier	1	3
-8@A	Angel Star (3)		1	3	1		22	205	0			29	39					invmstu	0	11	0	pmac,tier	1	3
+8@A	Angel Star (3)		1	3	1		22	205	0			29	39					invmstu	0	14	0	pmac,tier	1	3
 8@E	Stinger Crossbow (4)		2	3	1		27	359	0		1			86	101			invmxbu		16	0	nxbw,tier	1	2
 90@	Katar (Sacred)		1	3	1		30	0	333			36	37					invktr		0	13	qh2h	1	6
 91@	Wrist Blade (Sacred)		1	3	1		30	0	341			0	0					invktr		0	0	qh2h,el1x	1	6
@@ -993,7 +995,7 @@ w99	Avenger Guard (3)		2	2	0		23	263	0									invba5				phlm,tier		4
 9@5	Backsword (2)		1	3	1		12	89	0			12	14					inv9sbu	0	16	0	bswd,tier	1	4
 9@6	Ida (3)		2	3	1		22	212	0			29	33					invbsdu	0	14	0	bswd,tier	1	4
 9@7	Bronze Sword (Sacred)		2	3	1		30	576	0			52	55					invlsdu	0	14	0	sbsd	1	4
-9@A	Angel Star (4)		1	3	1		27	409	0			33	46					invmstu	0	11	0	pmac,tier	1	3
+9@A	Angel Star (4)		1	3	1		27	409	0			33	46					invmstu	0	14	0	pmac,tier	1	3
 9@B	Hand of God (1)		2	3	1		6	76	0		1			11	14			inv9gmu		16	0	pham,tier	1	3
 9@C	Needle Crossbow (2)		2	3	1		11	48	0		1			16	20			invlxbu		16	0	nxbw,tier	1	2
 9@D	Dart Thrower (3)		2	3	1		21	141	0		1			49	58			inv8lxu		16	0	nxbw,tier	1	2
@@ -1142,7 +1144,7 @@ wol	Wirt's Other Leg		1	3	1		0	0	0			13	18					invwol		0	0	wrtl	1	-1
 !@4	\dgreen;Evil Eye of the Fairy Witch	\blue;+15% to Experience Gained\n+1 to Class Skill Levels\n\grey;Cube All 5 Eyes with Class Charm to Add Bonus\n\nMonster Token	1	1	2		0	0	0									evileye				thng		-1
 !@5	\dgreen;Evil Eye of the Bane Hunter	\blue;+15% to Experience Gained\n+1 to Class Skill Levels\n\grey;Cube All 5 Eyes with Class Charm to Add Bonus\n\nMonster Token	1	1	2		0	0	0									evileye				thng		-1
 !@B	\grey;Quest Item\n\gold;Signet of Skill	(one use per character)\nRight-click: Free Skill Points: %d\n	1	1	2		0	0	0									sigil4B				poti		-1
-##.	\gold;Neutrality Pact		1	1	2		0	0	0									scroll05				grtz		-1
+##.	\gold;Neutrality Pact		1	1	2		0	0	0									scroll05	255			grtz		-1
 #X1	Cube Reagent (Secret)\n\orange;Emblem of Suffering		1	1	2		0	0	0									newsignet1				thng		-1
 #X2	Cube Reagent (Secret)\n\orange;Emblem of Pain		1	1	2		0	0	0									newsignet2				thng		-1
 #X3	Cube Reagent (Secret)\n\orange;Emblem of Hatred		1	1	2		0	0	0									newsignet3				thng		-1
@@ -1204,7 +1206,7 @@ wol	Wirt's Other Leg		1	3	1		0	0	0			13	18					invwol		0	0	wrtl	1	-1
 0g8	\red;Elixir of Love (Disabled)	-50% Vendor Prices for 60 seconds	1	1	2		0	0	0									invpor				hpot		-1
 0o[	\gold;Catalyst of Learning	90\nLearning:\nYou can create Signets of Learning by \nconsuming Sacred Uniques and Sets \nyou no longer need.\n\nCatalyst + Sacred Sets/Uniques (max 25) \n--> Signet of Learning\n	1	1	2		0	0	0									catal1				thng		-1
 0sc	Scroll of Knowledge		1	1	2		0	0	0									invrsc				scro		-1
-0u1	Hammer of the Taan Judges		1	2	2		0	0	0									invhmr				grtz		-1
+0u1	Hammer of the Taan Judges		1	2	2		0	0	0									invhmr	255			grtz		-1
 10+	\orange;Mystic Orb	Right-Click to Apply	1	1	2		0	0	0									orb_misc				myst		-1
 10^	\dgreen;Custom Signet of Learning	Right-click: Free Attribute Points: %d	1	1	2		0	0	0									newlearningFTW				poti		-1
 11+	\orange;Mystic Orb	Right-Click to Apply	1	1	2		0	0	0									orb_misc				myst		-1
@@ -1501,32 +1503,32 @@ Ysh2	Necklace		1	1	2		0	0	0									lab_amu				###2		-1
 \\4	\purple;Great Sapphire	Cube All Gems with The Black Road to Add Bonus	1	1	2		0	0	0									invgsbe				thng		-1
 \\5	\purple;Great Ruby	Cube All Gems with The Black Road to Add Bonus	1	1	2		0	0	0									invgsre				thng		-1
 \\6	\gold;Golden Cycle	\dgrey;(Limit: 1)\n\blue;Maximum Mana:+5%\nMaximum Life:+2%\n+10 to All Attributes\n+1 to All Skills\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invch3				cyc3,cycl		-1
-\\7	\grey;Quest Item\n\gold;Tome of Possession	\dgrey;this strange book appears to have old writings from the edyrem...\n	2	2	2		0	0	0									invbbb				grtz		-1
-\\8	Corrupted Wormhole		1	1	2		0	0	0									invlucion				grtz		-1
-a55	Optical Detector		1	1	2		0	0	0									inveye				grtz		-1
-a56	Azmodan's Heart		1	1	2		0	0	0									invhrt				grtz		-1
-a57	Visions of Akarat		1	1	2		0	0	0									invsbk2				grtz		-1
-a58	Scroll of Kings		1	1	2		0	0	0									invscb2				grtz		-1
-a59	Laser Focus Crystal		1	1	2		0	0	0									invdss				grtz		-1
-a60	The Butcher's Tooth		1	1	2		0	0	0									invfang				grtz		-1
-a61	Sacred Worldstone Key		1	2	2		0	0	0									invworldkey				grtz		-1
-a66	Idol of Vanity		1	2	2		0	0	0									invgbi				grtz		-1
+\\7	\grey;Quest Item\n\gold;Tome of Possession		2	2	2		0	0	0									invbbb	255			grtz		-1
+\\8	Corrupted Wormhole		1	1	2		0	0	0									invlucion	255			grtz		-1
+a55	Optical Detector		1	1	2		0	0	0									inveye	255			grtz		-1
+a56	Azmodan's Heart		1	1	2		0	0	0									invhrt	255			grtz		-1
+a57	Visions of Akarat		1	1	2		0	0	0									invsbk2	255			grtz		-1
+a58	Scroll of Kings		1	1	2		0	0	0									invscb2	255			grtz		-1
+a59	Laser Focus Crystal		1	1	2		0	0	0									invdss	255			grtz		-1
+a60	The Butcher's Tooth		1	1	2		0	0	0									invfang	255			grtz		-1
+a61	Sacred Worldstone Key		1	2	2		0	0	0									invworldkey	255			grtz		-1
+a66	Idol of Vanity		1	2	2		0	0	0									invgbi	255			grtz		-1
 a67	Congratulations. You got it!\n\gold;Spirit of Damnation	\blue;Maximum Skill Level Increased by 1\n\grey;Cube with Idol of Vanity to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invsple				thng		-1
-a68	Horazon's Focus		1	1	2		0	0	0									invhorazon				grtz		-1
-ab!	Astrogha's Venom Stinger		1	1	2		0	0	0									invtail				grtz		-1
-adi	Legacy of Blood		1	1	2		0	0	0									invlegacy				grtz		-1
+a68	Horazon's Focus		1	1	2		0	0	0									invhorazon	255			grtz		-1
+ab!	Astrogha's Venom Stinger		1	1	2		0	0	0									invtail	255			grtz		-1
+adi	Legacy of Blood		1	1	2		0	0	0									invlegacy	255			grtz		-1
 amu	Amulet		1	1	2		0	0	0									invamu				amul		-1
-aq!	Silver Seal of Ureh		1	1	2		0	0	0									invrin				grtz		-1
+aq!	Silver Seal of Ureh		1	1	2		0	0	0									invrin	255			grtz		-1
 aqv	Arrow Quiver		1	3	2	1	0	0	0									invqvr				bowq	2	-1
 ass	Right Click to learn skill of your choice\nBook of Skill		2	2	2		0	0	0									invsbk	15			ques		-1
 asx	\orange;Arcane Cluster	(Right Click to Collect)	1	1	2		0	0	0									invsr6				thng		-1
-az!	Fool's Gold		1	1	2		0	0	0									invgldm				grtz		-1
+az!	Fool's Gold		1	1	2		0	0	0									invgldm	255			grtz		-1
 b@b	\red;Goodberry	A magical fruit of the Glor-An-Fhaidha...	1	1	2		666	0	0									cherries				hpot		-1
 bbb	Lam Esen's Tome		2	2	2		0	0	0									invbbb	16			ques		-1
 bkd	Key to the Cairn Stones		2	2	2		0	0	0									invscb	5			ques		-1
 bks	Scroll of Inifuss		2	2	2		0	0	0									invscb	5			ques		-1
-blol	Spirit of Creation		1	1	2		120	0	0									vine				grtz		-1
-bob	FLYING POLAR BUFFALO ERROR		2	2	2		0	0	0									bobross				grtz		-1
+blol	Spirit of Creation		1	1	2		120	0	0									vine	255			grtz		-1
+bob	FLYING POLAR BUFFALO ERROR		2	2	2		0	0	0									bobross	255			grtz		-1
 box	Horadric Cube		2	2	2		0	0	0									invbox	10			ques		-1
 bpl	FLYING POLAR BUFFALO ERROR		1	1	2	1	0	0	0									invbpl				mpot		-1
 bps	FLYING POLAR BUFFALO ERROR		1	1	2	1	0	0	0									invbps				mpot		-1
@@ -1537,15 +1539,14 @@ brc4	Black Road Challenge\n\orange;Scroll of Knowledge	Cube your Class Charm wit
 brc5	Black Road Challenge\n\orange;Scroll of Blood	You only have 30 seconds after killing the first Boss!\nCube your Class Charm to Complete Trial\n\yellow;Reward\n\n\grey;Kill Skovos and Lycander in less than 30 Seconds\n\yellow;Trial of Blood\n\n\grey;Tran Athulua (Island of Skartara - Halls of the Dead)\n\yellow;Location\n\n\grey;Nightmare\n\yellow;Difficulty\n	1	1	2		0	0	0									ChallengeScroll				thng		-1
 brc6	Black Road Challenge\n\orange;Scroll of Completion	\grey;Cube your Class Charm with 2 Arcane Crystals to Add Bonus\nIf you have completed all five trials:\n\yellow;Black Road Completion\n\n\grey;Anywhere\n\yellow;Location\n\n\grey;Any\n\yellow;Difficulty\n	1	1	2		0	0	0									ChallengeScroll				thng		-1
 brz	Brain		1	1	2		0	0	0									invbrnz				body		-1
-bt01	\orange;Juneend's AFK Service	\blue;Eat For Experience	1	1	2		120	0	0									newsignet1				poti		-1
 bt02	\orange;Nihlathak Simulator	\blue;Eat For 10 Stat Points	1	1	2		100	0	0									newtokenofter				poti		-1
-bt03	\orange;Arcane Crystal Voucher	Cube to create Arcane Crystal	1	1	2		15	0	0									newreroller				poti		-1
+bt03	\orange;Arcane Crystal Voucher	Cube to create Arcane Crystal	1	1	2		1	0	0									gemcontainer				poti		-1
 bt04	\orange;Chuck's Secret	\blue;Cube = Duplicates Shrines Twice	1	1	2		80	0	0									newsignet3				poti		-1
 bt05	\orange;#unique command but it costs 1 mill	\blue;Cube = Converts Item to SU	1	1	2		120	0	0									newsignet5				poti		-1
 bt06	\orange;Thraxis the Martyr	\blue;Cube = Creates Beta Charm	1	1	2		5	0	0									newsignet2				poti		-1
-bt07	\orange;Instant Regret	\blue;Cube = Creates 2 Respec Potions	1	1	2		50	0	0									newsignet6				poti		-1
-bt99	''The Worst Beta I've Been In''		1	1	2		5	0	0									invsple				grtz		-1
-bxa	Soul of Kabraxis		1	1	2		100	0	0									braxwhorl				grtz		-1
+bt07	\orange;Belladonna Extract	Right-click to reset Stat/Skill Points	1	1	2		50	0	0									pot04				poti		-1
+bt99	''The Worst Beta I've Been In''	\blue;Cube = Converts Item to SU	1	1	2		120	0	0									newsignet5				poti		-1
+bxa	Soul of Kabraxis		1	1	2		100	0	0									braxwhorl	255			grtz		-1
 c@c	(Sorceress Only)\n\red;Moon Symbol	A blessed symbol of the goddess...	1	1	2		0	0	0									moon1				poti		-1
 cm1	\orange;Cycle		1	1	2		0	0	0									invch1				scha		-1
 cm2	\orange;Cycle		1	2	2		0	0	0									invch2				mcha		-1
@@ -1557,16 +1558,16 @@ cr02	Quest Item\n\gold;Charged Riftstone (\green;2\gold;)	\dgrey;- Transmute for
 cr03	Quest Item\n\gold;Charged Riftstone (\green;3\gold;)	\dgrey;- Transmute for Full Monster Stats -\n\n\grey;Difficulty: \red;Hard\n\grey;Area Level: 123\n\gold;Dimensional Labyrinth 3\n\n\grey;Right click to open a portal\n	1	1	2		117	0	0									ChargedRunestoneG				thng		-1
 cr04	Quest Item\n\gold;Charged Riftstone (\green;4\gold;)	\dgrey;- Transmute for Full Monster Stats -\n\n\grey;Difficulty: \red;Hard\n\grey;Area Level: 124\n\gold;Dimensional Labyrinth 4\n\n\grey;Right click to open a portal\n	1	1	2		118	0	0									ChargedRunestoneG				thng		-1
 cr05	Quest Item\n\gold;Charged Riftstone (\green;5\gold;)	\dgrey;- Transmute for Full Monster Stats -\n\n\grey;Difficulty: \red;Hard\n\grey;Area Level: 125\n\gold;Dimensional Labyrinth 5\n\n\grey;Right click to open a portal\n	1	1	2		119	0	0									ChargedRunestoneG				thng		-1
-cr06	Quest Item\n\gold;Charged Riftstone (\orange;1\gold;)	\dgrey;- Transmute for Full Monster Stats -\n\n\grey;Difficulty: \red;Very Hard\n\grey;Area Level: 131\n\gold;Dimensional Labyrinth 1\n\n\grey;Right click to open a portal\n	1	1	2		120	0	0									ChargedRunestoneY				thng		-1
-cr07	Quest Item\n\gold;Charged Riftstone (\orange;2\gold;)	\dgrey;- Transmute for Full Monster Stats -\n\n\grey;Difficulty: \red;Very Hard\n\grey;Area Level: 132\n\gold;Dimensional Labyrinth 2\n\n\grey;Right click to open a portal\n	1	1	2		121	0	0									ChargedRunestoneY				thng		-1
-cr08	Quest Item\n\gold;Charged Riftstone (\orange;3\gold;)	\dgrey;- Transmute for Full Monster Stats -\n\n\grey;Difficulty: \red;Very Hard\n\grey;Area Level: 133\n\gold;Dimensional Labyrinth 3\n\n\grey;Right click to open a portal\n	1	1	2		122	0	0									ChargedRunestoneY				thng		-1
-cr09	Quest Item\n\gold;Charged Riftstone (\orange;4\gold;)	\dgrey;- Transmute for Full Monster Stats -\n\n\grey;Difficulty: \red;Very Hard\n\grey;Area Level: 134\n\gold;Dimensional Labyrinth 4\n\n\grey;Right click to open a portal\n	1	1	2		123	0	0									ChargedRunestoneY				thng		-1
-cr10	Quest Item\n\gold;Charged Riftstone (\orange;5\gold;)	\dgrey;- Transmute for Full Monster Stats -\n\n\grey;Difficulty: \red;Very Hard\n\grey;Area Level: 135\n\gold;Dimensional Labyrinth 5\n\n\grey;Right click to open a portal\n	1	1	2		124	0	0									ChargedRunestoneY				thng		-1
-cr11	Quest Item\n\gold;Charged Riftstone (\red;6\gold;)	\dgrey;- Transmute for Full Monster Stats -\n\n\grey;Difficulty: \purple;Extreme\n\grey;Area Level: 136\n\gold;Dimensional Labyrinth 6\n\n\grey;Right click to open a portal\n	1	1	2		125	0	0									ChargedRunestoneR				thng		-1
-cr12	Quest Item\n\gold;Charged Riftstone (\red;7\gold;)	\dgrey;- Transmute for Full Monster Stats -\n\n\grey;Difficulty: \purple;Extreme\n\grey;Area Level: 137\n\gold;Dimensional Labyrinth 7\n\n\grey;Right click to open a portal\n	1	1	2		126	0	0									ChargedRunestoneR				thng		-1
-cr13	Quest Item\n\gold;Charged Riftstone (\red;8\gold;)	\dgrey;- Transmute for Full Monster Stats -\n\n\grey;Difficulty: \purple;Extreme\n\grey;Area Level: 138\n\gold;Dimensional Labyrinth 8\n\n\grey;Right click to open a portal\n	1	1	2		127	0	0									ChargedRunestoneR				thng		-1
-cr14	Quest Item\n\gold;Charged Riftstone (\red;9\gold;)	\dgrey;- Transmute for Full Monster Stats -\n\n\grey;Difficulty: \purple;Extreme\n\grey;Area Level: 139\n\gold;Dimensional Labyrinth 9\n\n\grey;Right click to open a portal\n	1	1	2		128	0	0									ChargedRunestoneR				thng		-1
-cr15	Quest Item\n\gold;Charged Riftstone (\red;10\gold;)	\dgrey;- Transmute for Full Monster Stats -\n\n\grey;Difficulty: \purple;Extreme\n\grey;Area Level: 140\n\gold;Dimensional Labyrinth 10\n\n\grey;Right click to open a portal\n	1	1	2		129	0	0									ChargedRunestoneR				thng		-1
+cr06	Quest Item\n\gold;Charged Riftstone (\orange;1\gold;)	\dgrey;- Transmute for Full Monster Stats -\n\n\grey;Difficulty: \red;Very Hard\n\grey;Area Level: 131\n\gold;Dimensional Labyrinth 1\n\n\grey;Right click to open a portal\n	1	1	2		126	0	0									ChargedRunestoneY				thng		-1
+cr07	Quest Item\n\gold;Charged Riftstone (\orange;2\gold;)	\dgrey;- Transmute for Full Monster Stats -\n\n\grey;Difficulty: \red;Very Hard\n\grey;Area Level: 132\n\gold;Dimensional Labyrinth 2\n\n\grey;Right click to open a portal\n	1	1	2		127	0	0									ChargedRunestoneY				thng		-1
+cr08	Quest Item\n\gold;Charged Riftstone (\orange;3\gold;)	\dgrey;- Transmute for Full Monster Stats -\n\n\grey;Difficulty: \red;Very Hard\n\grey;Area Level: 133\n\gold;Dimensional Labyrinth 3\n\n\grey;Right click to open a portal\n	1	1	2		128	0	0									ChargedRunestoneY				thng		-1
+cr09	Quest Item\n\gold;Charged Riftstone (\orange;4\gold;)	\dgrey;- Transmute for Full Monster Stats -\n\n\grey;Difficulty: \red;Very Hard\n\grey;Area Level: 134\n\gold;Dimensional Labyrinth 4\n\n\grey;Right click to open a portal\n	1	1	2		129	0	0									ChargedRunestoneY				thng		-1
+cr10	Quest Item\n\gold;Charged Riftstone (\orange;5\gold;)	\dgrey;- Transmute for Full Monster Stats -\n\n\grey;Difficulty: \red;Very Hard\n\grey;Area Level: 135\n\gold;Dimensional Labyrinth 5\n\n\grey;Right click to open a portal\n	1	1	2		130	0	0									ChargedRunestoneY				thng		-1
+cr11	Quest Item\n\gold;Charged Riftstone (\red;6\gold;)	\dgrey;- Transmute for Full Monster Stats -\n\n\grey;Difficulty: \purple;Extreme\n\grey;Area Level: 136\n\gold;Dimensional Labyrinth 6\n\n\grey;Right click to open a portal\n	1	1	2		131	0	0									ChargedRunestoneR				thng		-1
+cr12	Quest Item\n\gold;Charged Riftstone (\red;7\gold;)	\dgrey;- Transmute for Full Monster Stats -\n\n\grey;Difficulty: \purple;Extreme\n\grey;Area Level: 137\n\gold;Dimensional Labyrinth 7\n\n\grey;Right click to open a portal\n	1	1	2		132	0	0									ChargedRunestoneR				thng		-1
+cr13	Quest Item\n\gold;Charged Riftstone (\red;8\gold;)	\dgrey;- Transmute for Full Monster Stats -\n\n\grey;Difficulty: \purple;Extreme\n\grey;Area Level: 138\n\gold;Dimensional Labyrinth 8\n\n\grey;Right click to open a portal\n	1	1	2		133	0	0									ChargedRunestoneR				thng		-1
+cr14	Quest Item\n\gold;Charged Riftstone (\red;9\gold;)	\dgrey;- Transmute for Full Monster Stats -\n\n\grey;Difficulty: \purple;Extreme\n\grey;Area Level: 139\n\gold;Dimensional Labyrinth 9\n\n\grey;Right click to open a portal\n	1	1	2		134	0	0									ChargedRunestoneR				thng		-1
+cr15	Quest Item\n\gold;Charged Riftstone (\red;10\gold;)	\dgrey;- Transmute for Full Monster Stats -\n\n\grey;Difficulty: \purple;Extreme\n\grey;Area Level: 140\n\gold;Dimensional Labyrinth 10\n\n\grey;Right click to open a portal\n	1	1	2		135	0	0									ChargedRunestoneR				thng		-1
 cy01	\orange;Small Cycle	\blue;+1 Required Level\n+(2 to 8) to Strength\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invch1				cyc1,cycl		-1
 cy02	\orange;Small Cycle	\blue;+1 Required Level\n+(2 to 8) to Dexterity\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invch1				cyc1,cycl		-1
 cy03	\orange;Small Cycle	\blue;+1 Required Level\n+(2 to 8) to Vitality\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invch1				cyc1,cycl		-1
@@ -1601,6 +1602,7 @@ cy31	\orange;Large Cycle	\blue;+5 Required Level\nMaximum Mana +(1 to 3)%\n+(5 t
 dg01	Item Design		2	2	2		0	0	0									book01				dsgn		-1
 dg02	Item Design		2	2	2		0	0	0									book01				dsgn		-1
 dg03	Item Design		2	2	2		0	0	0									book01				dsgn		-1
+dg04	Item Design		2	2	2		0	0	0									book01				dsgn		-1
 dog	Apple	Regenerates 100 life per second for 10 minutes	1	1	2		0	0	0									newapple				poti		-1
 dr01	Quest Item\n\gold;Depleted Riftstone (\green;1\gold;)	energy source and allow you to investigate further...\nPerhaps transmuting it in the Horadric Cube could unleash the\n\nto resemble the Rift activators you have come to know well\nIt certainly did not originate on Sanctuary, and yet it appears\n\ndread as you sense the latent otherworldly energy seeping from it\nThe stone emits a faint glow. Holding it in your hand fills you with\n	1	1	2		0	0	0									DepletedRunestone				thng		-1
 dr02	Quest Item\n\gold;Depleted Riftstone (\green;2\gold;)	Transmute in the Cube to Charge\n	1	1	2		0	0	0									DepletedRunestone				thng		-1
@@ -1612,11 +1614,11 @@ dr07	Quest Item\n\gold;Depleted Riftstone (\orange;2\gold;)	Transmute With Arcan
 dr08	Quest Item\n\gold;Depleted Riftstone (\orange;3\gold;)	Transmute With Arcane Crystal to Charge\n	1	1	2		0	0	0									DepletedRunestone				thng		-1
 dr09	Quest Item\n\gold;Depleted Riftstone (\orange;4\gold;)	Transmute With Arcane Crystal to Charge\n	1	1	2		0	0	0									DepletedRunestone				thng		-1
 dr10	Quest Item\n\gold;Depleted Riftstone (\orange;5\gold;)	Transmute With Arcane Crystal to Charge\n	1	1	2		0	0	0									DepletedRunestone				thng		-1
-dr11	Quest Item\n\gold;Depleted Riftstone (\red;6\gold;)	Transmute With Two Arcane Crystals to Charge\n	1	1	2		0	0	0									DepletedRunestone				thng		-1
-dr12	Quest Item\n\gold;Depleted Riftstone (\red;7\gold;)	Transmute With Two Arcane Crystals to Charge\n	1	1	2		0	0	0									DepletedRunestone				thng		-1
-dr13	Quest Item\n\gold;Depleted Riftstone (\red;8\gold;)	Transmute With Two Arcane Crystals to Charge\n	1	1	2		0	0	0									DepletedRunestone				thng		-1
-dr14	Quest Item\n\gold;Depleted Riftstone (\red;9\gold;)	Transmute With Two Arcane Crystals to Charge\n	1	1	2		0	0	0									DepletedRunestone				thng		-1
-dr15	Quest Item\n\gold;Depleted Riftstone (\red;10\gold;)	Transmute With Two Arcane Crystals to Charge\n	1	1	2		0	0	0									DepletedRunestone				thng		-1
+dr11	Quest Item\n\gold;Depleted Riftstone (\red;6\gold;)	Transmute With Arcane Crystal to Charge\n	1	1	2		0	0	0									DepletedRunestone				thng		-1
+dr12	Quest Item\n\gold;Depleted Riftstone (\red;7\gold;)	Transmute With Arcane Crystal to Charge\n	1	1	2		0	0	0									DepletedRunestone				thng		-1
+dr13	Quest Item\n\gold;Depleted Riftstone (\red;8\gold;)	Transmute With Arcane Crystal to Charge\n	1	1	2		0	0	0									DepletedRunestone				thng		-1
+dr14	Quest Item\n\gold;Depleted Riftstone (\red;9\gold;)	Transmute With Arcane Crystal to Charge\n	1	1	2		0	0	0									DepletedRunestone				thng		-1
+dr15	Quest Item\n\gold;Depleted Riftstone (\red;10\gold;)	Transmute With Arcane Crystal to Charge\n	1	1	2		0	0	0									DepletedRunestone				thng		-1
 dtm	\grey;Cube Reagent\n\orange;Dark Tome	\blue;+1 to Dark Portal\n\grey;Cube with Class Charm to Add Bonus\n	1	2	2		0	0	0									invdtm				thng		-1
 dy01	\orange;Mystic Dye	\blue;Color: White\n\grey;Right-click to set item color	1	1	2		0	0	0									dye-whit-1				thng		-1
 dy02	\orange;Mystic Dye	\blue;Color: Light Grey\n\grey;Right-click to set item color	1	1	2		0	0	0									dye-lgrey-2				thng		-1
@@ -1641,8 +1643,8 @@ dy20	\orange;Mystic Dye	\blue;Color: Orange\n\grey;Right-click to set item color
 dy21	\orange;Mystic Dye	\blue;Color: Bright White\n\grey;Right-click to set item color	1	1	2		0	0	0									dye-bwht-21				thng		-1
 dy99	\orange;Mystic Dye	dy99-Desc	1	1	2		0	0	0									dye-rainbow				thng		-1
 ear	Ear		1	1	2		0	0	0									invear				play		-1
-ebx	Vial of Elder Blood		1	1	2		0	0	0									ElderVial				grtz		-1
-eby	Dimensional Key		1	1	2		0	0	0									DimensionalKey				grtz		-1
+ebx	Vial of Elder Blood		1	1	2		0	0	0									ElderVial	255			grtz		-1
+eby	Dimensional Key		1	1	2		0	0	0									DimensionalKey	255			grtz		-1
 ebz	Amulet		1	1	2		0	0	0									invamu				xxx4		-1
 elx	Elixir		1	1	2		0	0	0									invpot				elix		-1
 en11	\orange;Scroll of Enchantment: Helmet	\orange;50% Area of Effect Attack\n\grey;Cube with Helm to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invbsc				thng		-1
@@ -1720,6 +1722,18 @@ g$c	\purple;Onyx		1	1	2		12	0	0									invgsoc				gemq,gem2		-1
 g$d	\purple;Flawless Onyx		1	1	2		15	0	0									invgsod				gemq,gem3		-1
 g$e	\purple;Perfect Onyx		1	1	2		18	0	0									invgsoe				gemq,gem4		-1
 g34	The Golden Bird		1	2	2		0	0	0									invgbi	19			ques		-1
+gc01	\orange;Ruby Cluster	(Right Click to Collect)	1	1	2		0	0	0									gemcRuby				thng		-1
+gc02	\orange;Emerald Cluster	(Right Click to Collect)	1	1	2		0	0	0									gemcEmerald				thng		-1
+gc03	\orange;Sapphire Cluster	(Right Click to Collect)	1	1	2		0	0	0									gemcSapphire				thng		-1
+gc04	\orange;Topaz Cluster	(Right Click to Collect)	1	1	2		0	0	0									gemcTopaz				thng		-1
+gc05	\orange;Diamond Cluster	(Right Click to Collect)	1	1	2		0	0	0									gemcDiamond				thng		-1
+gc06	\orange;Amethyst Cluster	(Right Click to Collect)	1	1	2		0	0	0									gemcAmethyst				thng		-1
+gc07	\orange;Skull Cluster	(Right Click to Collect)	1	1	2		0	0	0									gemcSkull				thng		-1
+gc08	\orange;Rainbow Stone Cluster	(Right Click to Collect)	1	1	2		0	0	0									gemcRainbowStone				thng		-1
+gc09	\orange;Bloodstone Cluster	(Right Click to Collect)	1	1	2		0	0	0									gemcBloodstone				thng		-1
+gc10	\orange;Onyx Cluster	(Right Click to Collect)	1	1	2		0	0	0									gemcOnyx				thng		-1
+gc11	\orange;Amber Cluster	(Right Click to Collect)	1	1	2		0	0	0									gemcAmber				thng		-1
+gc12	\orange;Turquoise Cluster	(Right Click to Collect)	1	1	2		0	0	0									gemcTurquoise				thng		-1
 gcb	\purple;Chipped Sapphire		1	1	2		1	0	0									invgsba				gems,gem0		-1
 gcg	\purple;Chipped Emerald		1	1	2		1	0	0									invgsga				geme,gem0		-1
 gcr	\purple;Chipped Ruby		1	1	2		1	0	0									invgsra				gemr,gem0		-1
@@ -1738,6 +1752,7 @@ glg	\purple;Flawless Emerald		1	1	2		15	0	0									invgsgd				geme,gem3		-1
 glr	\purple;Flawless Ruby		1	1	2		15	0	0									invgsrd				gemr,gem3		-1
 glw	\purple;Flawless Diamond		1	1	2		15	0	0									invgswd				gemd,gem3		-1
 gly	\purple;Flawless Topaz		1	1	2		15	0	0									invgsyd				gemt,gem3		-1
+gob	'The Goblin King'\nEvent Award:		2	2	2		0	0	0									gobolino	255			grtz		-1
 gpb	\purple;Perfect Sapphire		1	1	2		18	0	0									invgsbe				gems,gem4		-1
 gpg	\purple;Perfect Emerald		1	1	2		18	0	0									invgsge				geme,gem4		-1
 gpr	\purple;Perfect Ruby		1	1	2		18	0	0									invgsre				gemr,gem4		-1
@@ -1803,12 +1818,13 @@ isc	Scroll of Identify		1	1	2		0	0	0									invrsc				scro		-1
 j34	A Jade Figurine		1	2	2		0	0	0									invjbi	19			ques		-1
 jaw	Jawbone		1	1	2		0	0	0									invjaw				body		-1
 jew	Jewel		1	1	2		0	0	0									invgswe				jewl		-1
-k@k	The Book of Lies		1	1	2		0	0	0									invsbk2				grtz		-1
+k@k	The Book of Lies		1	1	2		0	0	0									invsbk2	255			grtz		-1
 kazm	\grey;Quest Item\n\gold;Key of Sin	\blue;Summon a Portal to The Realm of Sin...	1	2	2		115	0	0									invmph				thng		-1
 kbel	\grey;Quest Item\n\gold;Key of Lies	\blue;Summon a Portal to The Realm of Lies...	1	2	2		125	0	0									invmph				thng		-1
 key	Key		1	1	2	1	0	0	0									invkey				key		-1
 kfau	\grey;Quest Item\n\gold;Mind Warp	\blue;Open a Rift to Fauztinville...	1	1	2		125	0	0									invrsc				thng		-1
 kpac	\orange;Cherry		1	1	2		120	0	0									cherries				thng		-1
+ksco	Gaya Wand		2	2	2		130	0	0									bobross				thng		-1
 ktax	\orange;Pulsating Worldstone Shard	\yellow;- Transmute -\n\grey;will forge a new world and our children will know peace.''\n''...and that is why neither of our brethren will find us here. We\n\n\dgrey;with fractured memories from long ago\nAs you touch the crystal your mind is filled	1	1	2		0	0	0									invss1				thng		-1
 ktbx	\orange;Pulsating Worldstone Shard	\yellow;- Transmute -\n\grey;... nothing more than an attempt to explain the unfathomable.''\n''The Veil? Inarius surely you haven't succumbed to Itherael's prophecies.\n\nConflict and the dangers beyond the Veil.''\n''A Sanctuary, forevermore. Free from the Eternal	1	1	2		0	0	0									invss1				thng		-1
 ktcx	\orange;Pulsating Worldstone Shard	\yellow;- Transmute -\n\grey;worlds, dimensions, are but a grain of sand in the universe.''\n''Lilith... the High Heavens, Burning Hells, Sanctuary. These\n\nour worlds. What came before is irrelevant!''\n''The Stone has been, is, and will be the axis of	1	1	2		0	0	0									invss1				thng		-1
@@ -1816,14 +1832,14 @@ ktdx	\orange;Pulsating Worldstone Shard	\yellow;- Transmute -\n\grey;sure what l
 ktex	\orange;Pulsating Worldstone Shard	\yellow;- Transmute -\n\grey;This shard is the key, its full potential must be unlocked.\n\nIt has exposed us all to an even greater threat.\nSanctuary to the direct influence of Heaven and Hell.\nThe destruction of the Worldstone has not only exposed\n\n\dgrey;...	1	1	2		0	0	0									invss1				thng		-1
 ktfx	\orange;Pulsating Worldstone Shard	It which is a splinter of the spirit in a land Unformed\n\nIt which is of many and may cleanse the soul\n\nIt which is of the brother, savior and sacrifice\n\nIt which can manifest their son and his disciple\n\nIt which bears the writings of genesis	1	1	2		0	0	0									invss1				thng		-1
 ktgx	\orange;Pulsating Worldstone Crystal	The Way will be made clear, stand ready\n\nTaha Great Rune\nGreater Signet of Learning\nIt must now be imbued with Knowledge and Arcana\n\n\dgrey;The Worldstone crystal has been reforged	1	1	2		0	0	0									invss3				thng		-1
-ktor	\grey;Quest Item\n\gold;Edyrem's Time-Travel	\blue;Open a Rift to Toraja...	1	1	2		125	0	0									invrsc				thng		-1
 ktox	\grey;Quest Item\n\gold;Dimensional Link	\red;Only works in Act 5\n\blue;Summon a Portal to the Edge of Nothingness...	1	1	2		135	0	0									invrsc				thng		-1
 ktpx	\grey;Quest Item\n\gold;Otherworldly Link	\red;Only works in Act 5\n\blue;Summon a Portal to the Dimensional Plane...	1	1	2		130	0	0									invrsc				thng		-1
-ktzx	\gold;Riftwalker's Eye	\blue;+1 to All Skill Levels\n\grey;Cube with your Riftwalker's Eye to Add Bonus\n	1	1	2		0	0	0									evileye				thng		-1
-kvoi	\grey;Quest Item\n\gold;Abyss Gate	\blue;Summon a Portal to The Void...	1	1	2		130	0	0									invrsc				thng		-1
+ktxx	\grey;Cube Reagent\n\gold;Ascendant Riftwalker Essence	\blue;Maximum Elemental Resists +1%\n\grey;Cube with your Riftwalker's Eye to Add Bonus\n	1	1	2		0	0	0									Riftwalker3				thng		-1
+ktyx	\grey;Cube Reagent\n\gold;Greater Riftwalker Essence	\blue;+1 to All Skill Levels\n\grey;Cube with your Riftwalker's Eye to Add Bonus\n	1	1	2		0	0	0									Riftwalker2				thng		-1
+ktzx	\gold;Riftwalker's Eye		1	1	2		105	0	0									evileye	255			grtz		-1
 l@l	\grey;Quest Item\n\gold;Skinrender's Sigil	Cube All 5 Sigils with Ring of the Five\n	1	1	2		0	0	0									ring01				thng		-1
-lms	'The Last Man Standing'\nEvent Award:		2	2	2		0	0	0									lastman				grtz		-1
-lok	Crystalline Flame Medallion		1	1	2		0	0	0									invvip				grtz		-1
+lms	'The Last Man Standing'\nEvent Award:		2	2	2		0	0	0									lastman	255			grtz		-1
+lok	Crystalline Flame Medallion		1	1	2		0	0	0									invvip	255			grtz		-1
 luv	The Black Tower Key		1	2	2		0	0	0									invmph	20			key		-1
 m@m	\grey;Quest Item\n\gold;Spinecracker's Sigil	Cube All 5 Sigils with Ring of the Five\n	1	1	2		0	0	0									ring03				thng		-1
 mec	Cube Reagent\n\orange;Meditation Candle		1	1	2		0	0	0									invcndl				thng		-1
@@ -1914,39 +1930,39 @@ r62	\grey;Elemental Rune\n\purple;Ice Rune		1	1	2		100	0	0									cold-rune				
 r98	\grey;Enchanted Rune\n\purple;Xis Rune	Can be Cubed with Low Rune	1	1	2		120	0	0									ultra-rune				xrun		-1
 r99	\grey;Primal Rune\n\purple;Runestone		1	1	2		0	0	0									BlankRune				thng,esse		-1
 r@r	\grey;Quest Item\n\gold;Ring of the Five	Cube All 5 Sigils with Ring of the Five\n	1	1	2		0	0	0									ring08				kill		-1
-rc01	\orange;El Container (01)		1	1	2		0	0	0									invrEl				thng		-1
-rc02	\orange;Eld Container (02)		1	1	2		0	0	0									invrEld				thng		-1
-rc03	\orange;Tir Container (03)		1	1	2		0	0	0									invrTir				thng		-1
-rc04	\orange;Nef Container (04)		1	1	2		0	0	0									invrNef				thng		-1
-rc05	\orange;Eth Container (05)		1	1	2		0	0	0									invrEth				thng		-1
-rc06	\orange;Ith Container (06)		1	1	2		0	0	0									invrIth				thng		-1
-rc07	\orange;Tal Container (07)		1	1	2		0	0	0									invrTal				thng		-1
-rc08	\orange;Ral Container (08)		1	1	2		0	0	0									invrRal				thng		-1
-rc09	\orange;Ort Container (09)		1	1	2		0	0	0									invrOrt				thng		-1
-rc10	\orange;Thul Container (10)		1	1	2		0	0	0									invrThul				thng		-1
-rc11	\orange;Amn Container (11)		1	1	2		0	0	0									invrAmn				thng		-1
-rc12	\orange;Sol Container (12)		1	1	2		0	0	0									invrSol				thng		-1
-rc13	\orange;Shael Container (13)		1	1	2		0	0	0									invrShae				thng		-1
-rc14	\orange;Dol Container (14)		1	1	2		0	0	0									invrDol				thng		-1
-rc15	\orange;Hel Container (15)		1	1	2		0	0	0									invrHel				thng		-1
-rc16	\orange;Io Container (16)		1	1	2		0	0	0									invrIo				thng		-1
-rc17	\orange;Lum Container (17)		1	1	2		0	0	0									invrLum				thng		-1
-rc18	\orange;Ko Container (18)		1	1	2		0	0	0									invrKo				thng		-1
-rc19	\orange;Fal Container (19)		1	1	2		0	0	0									invrFal				thng		-1
-rc20	\orange;Lem Container (20)		1	1	2		0	0	0									invrLem				thng		-1
-rc21	\orange;Pul Container (21)		1	1	2		0	0	0									invrPul				thng		-1
-rc22	\orange;Um Container (22)		1	1	2		0	0	0									invrUm				thng		-1
-rc23	\orange;Mal Container (23)		1	1	2		0	0	0									invrMal				thng		-1
-rc24	\orange;Ist Container (24)		1	1	2		0	0	0									invrIst				thng		-1
-rc25	\orange;Gul Container (25)		1	1	2		0	0	0									invrGul				thng		-1
-rc26	\orange;Vex Container (26)		1	1	2		0	0	0									invrVex				thng		-1
-rc27	\orange;Ohm Container (27)		1	1	2		0	0	0									invrOhm				thng		-1
-rc28	\orange;Lo Container (28)		1	1	2		0	0	0									invrLo				thng		-1
-rc29	\orange;Sur Container (29)		1	1	2		0	0	0									invrSur				thng		-1
-rc30	\orange;Ber Container (30)		1	1	2		0	0	0									invrBer				thng		-1
-rc31	\orange;Jah Container (31)		1	1	2		0	0	0									invrJo				thng		-1
-rc32	\orange;Cham Container (32)		1	1	2		0	0	0									invrCham				thng		-1
-rc33	\orange;Zod Container (33)		1	1	2		0	0	0									invrZod				thng		-1
+rc01	\orange;El Container (01)	(Right Click to Collect)	1	1	2		0	0	0									invrElC				thng		-1
+rc02	\orange;Eld Container (02)	(Right Click to Collect)	1	1	2		0	0	0									invrEldC				thng		-1
+rc03	\orange;Tir Container (03)	(Right Click to Collect)	1	1	2		0	0	0									invrTirC				thng		-1
+rc04	\orange;Nef Container (04)	(Right Click to Collect)	1	1	2		0	0	0									invrNefC				thng		-1
+rc05	\orange;Eth Container (05)	(Right Click to Collect)	1	1	2		0	0	0									invrEthC				thng		-1
+rc06	\orange;Ith Container (06)	(Right Click to Collect)	1	1	2		0	0	0									invrIthC				thng		-1
+rc07	\orange;Tal Container (07)	(Right Click to Collect)	1	1	2		0	0	0									invrTalC				thng		-1
+rc08	\orange;Ral Container (08)	(Right Click to Collect)	1	1	2		0	0	0									invrRalC				thng		-1
+rc09	\orange;Ort Container (09)	(Right Click to Collect)	1	1	2		0	0	0									invrOrtC				thng		-1
+rc10	\orange;Thul Container (10)	(Right Click to Collect)	1	1	2		0	0	0									invrThulC				thng		-1
+rc11	\orange;Amn Container (11)	(Right Click to Collect)	1	1	2		0	0	0									invrAmnC				thng		-1
+rc12	\orange;Sol Container (12)	(Right Click to Collect)	1	1	2		0	0	0									invrSolC				thng		-1
+rc13	\orange;Shael Container (13)	(Right Click to Collect)	1	1	2		0	0	0									invrShaeC				thng		-1
+rc14	\orange;Dol Container (14)	(Right Click to Collect)	1	1	2		0	0	0									invrDolC				thng		-1
+rc15	\orange;Hel Container (15)	(Right Click to Collect)	1	1	2		0	0	0									invrHelC				thng		-1
+rc16	\orange;Io Container (16)	(Right Click to Collect)	1	1	2		0	0	0									invrIoC				thng		-1
+rc17	\orange;Lum Container (17)	(Right Click to Collect)	1	1	2		0	0	0									invrLumC				thng		-1
+rc18	\orange;Ko Container (18)	(Right Click to Collect)	1	1	2		0	0	0									invrKoC				thng		-1
+rc19	\orange;Fal Container (19)	(Right Click to Collect)	1	1	2		0	0	0									invrFalC				thng		-1
+rc20	\orange;Lem Container (20)	(Right Click to Collect)	1	1	2		0	0	0									invrLemC				thng		-1
+rc21	\orange;Pul Container (21)	(Right Click to Collect)	1	1	2		0	0	0									invrPulC				thng		-1
+rc22	\orange;Um Container (22)	(Right Click to Collect)	1	1	2		0	0	0									invrUmC				thng		-1
+rc23	\orange;Mal Container (23)	(Right Click to Collect)	1	1	2		0	0	0									invrMalC				thng		-1
+rc24	\orange;Ist Container (24)	(Right Click to Collect)	1	1	2		0	0	0									invrIstC				thng		-1
+rc25	\orange;Gul Container (25)	(Right Click to Collect)	1	1	2		0	0	0									invrGulC				thng		-1
+rc26	\orange;Vex Container (26)	(Right Click to Collect)	1	1	2		0	0	0									invrVexC				thng		-1
+rc27	\orange;Ohm Container (27)	(Right Click to Collect)	1	1	2		0	0	0									invrOhmC				thng		-1
+rc28	\orange;Lo Container (28)	(Right Click to Collect)	1	1	2		0	0	0									invrLoC				thng		-1
+rc29	\orange;Sur Container (29)	(Right Click to Collect)	1	1	2		0	0	0									invrSurC				thng		-1
+rc30	\orange;Ber Container (30)	(Right Click to Collect)	1	1	2		0	0	0									invrBerC				thng		-1
+rc31	\orange;Jah Container (31)	(Right Click to Collect)	1	1	2		0	0	0									invrJoC				thng		-1
+rc32	\orange;Cham Container (32)	(Right Click to Collect)	1	1	2		0	0	0									invrChamC				thng		-1
+rc33	\orange;Zod Container (33)	(Right Click to Collect)	1	1	2		0	0	0									invrZodC				thng		-1
 rin	Ring		1	1	2		0	0	0									invrin				ring		-1
 ripx	\dgrey;Wings of the Departed	\yellow;Rest in Peace\n\orange;1951 - 2017\nIn Memoriam of Michael Exchange\n\n\grey;Right Click to pay Tribute	1	1	2		0	0	0									DepartedWing				hpot		-1
 rpl	FLYING POLAR BUFFALO ERROR		1	1	2	1	0	0	0									invrpl				hpot		-1
@@ -2007,23 +2023,23 @@ smi2	Minigame\n\orange;Scroll of Mirrors	You only have 30 seconds!\nCube Class C
 sofd	Cube Reagent\n\orange;Seal of Darkness	\blue;+1 to Into The Void\n\grey;Cube with Demonsbane to Add Bonus\n	1	1	2		0	0	0									sealofdark				thng		-1
 sol	Soul		1	1	2		0	0	0									invsple				body		-1
 spe	Spleen		1	1	2		0	0	0									invsple				body		-1
-t@t	Demonsbane		1	1	2		0	0	0									invhscr2				grtz		-1
+t@t	Demonsbane		1	1	2		0	0	0									invhscr2	255			grtz		-1
 tal	Tail		1	1	2		0	0	0									invtail				body		-1
 tbk	Tome of Town Portal		1	2	2	1	0	0	0									invbbk				book		-1
-tbr	By Mel Odom\nThe Black Road		1	1	2		110	0	0									invsbk3				grtz		-1
+tbr	By Mel Odom\nThe Black Road		1	1	2		110	0	0									invsbk3	255			grtz		-1
 tch	Torch		1	2	2		0	0	0									invtrch				torc		-1
-ths	The Sleep	\orange;Cube with Trophy to Awaken\grey;	1	1	2		115	0	0									jewelabc				grtz		-1
+ths	The Sleep	\orange;Cube with Trophy to Awaken\grey;	1	1	2		115	0	0									jewelabc	255			grtz		-1
 toa	\orange;Belladonna Extract	Right-click to reset Stat/Skill Points	1	1	2		0	0	0									pot04				ques		-1
 tr1	Horadric Scroll		2	2	2		0	0	0									invhscr	10			ques		-1
 tr2	Scroll of Resistance	\blue;+10% to Elemental Resistances\n\grey;Cube with the Sunstone of the Twin Seas to Add Bonus\n\nCube Reagent	2	2	2		0	0	0									invscb	32			thng		-1
-trc	Umbaru Treasure		1	1	2		110	0	0									foolsbox				grtz		-1
+trc	Umbaru Treasure		1	1	2		110	0	0									foolsbox	255			grtz		-1
 tsc	Scroll of Town Portal		1	1	2		0	0	0									invbsc				scro		-1
-twi	\gold;Sunstone of the Twin Seas		1	1	2		0	0	0									invgmg				grtz		-1
-u@+	\gold;I Am Rich	\yellow;- I can afford this because I am wealthy and powerful. -\n\red;trophies and the Vial of Elder Blood to create, destroying them. \nThis item does nothing and required the Yshari Sanctum, Uldyssian, Void	1	1	2		0	0	0									redgem				grtz		-1
+twi	\gold;Sunstone of the Twin Seas		1	1	2		0	0	0									invgmg	255			grtz		-1
+u@+	\gold;I Am Rich	\yellow;- I can afford this because I am wealthy and powerful. -\n\red;trophies and the Vial of Elder Blood to create, destroying them. \nThis item does nothing and required the Yshari Sanctum, Uldyssian, Void	1	1	2		0	0	0									redgem	255			grtz		-1
 vic	Cube Reagent\n\orange;Sacrifical Heart		1	1	2		0	0	0									invhrt				thng		-1
 vip	Amulet of the Viper		1	1	2		0	0	0									invvip	10			amul		-1
 voDX	Cube Reagent\n\orange;Enchanting Crystal	\yellow;same Type, and can only be used once per Item\nThis Recipe might return a different Unique Item of the\n\grey;Cube with Sacred Unique Weapon/Armor to Reroll\n	1	1	2		0	0	0									newreroller				thng		-1
-voXX	Books of Kalan		1	2	2		0	0	0									invkalan				grtz		-1
+voXX	Books of Kalan		1	2	2		0	0	0									invkalan	255			grtz		-1
 voi1	\purple;Scroll of Greed		1	1	2		0	0	0									invrsc				thng		-1
 voi2	\purple;Scroll of Sloth		1	1	2		0	0	0									invrsc				thng		-1
 voi3	\purple;Scroll of Envy		1	1	2		0	0	0									invrsc				thng		-1
@@ -2033,24 +2049,24 @@ voi6	\purple;Scroll of Lust		1	1	2		0	0	0									invrsc				thng		-1
 vor1	Ring of Pride		1	1	2		0	0	0									invrinquest				kill		-1
 vor2	Sigil of Deadly Sins		1	1	2		0	0	0									invrinquest				kill		-1
 vps	Stamina Potion		1	1	2		0	0	0									invwps				spot		-1
-w@w	Cold Fusion Schematics		1	1	2		0	0	0									invhscr2				grtz		-1
+w@w	Cold Fusion Schematics		1	1	2		0	0	0									invhscr2	255			grtz		-1
 wms	Thawing Potion		1	1	2		0	0	0									invyps				wpot		-1
-x01	Sacred Sunstone		1	1	2		0	0	0									ccama				araa		0
-x02	Shadow Vortex		1	1	2		0	0	0									ccasn				arab		6
-x03	Worldstone Orb		1	1	2		0	0	0									ccbar				arac		4
-x04	Caoi Dulra Fruit		1	1	2		0	0	0									ccdru				arad		5
-x05	Soulstone Shard		1	1	2		0	0	0									ccnec				arae		2
-x06	Eye of Divinity		1	1	2		0	0	0									ccpal				araf		3
-x07	Nexus Crystal		1	1	2		0	0	0									ccsor				arag		1
-x0x	Eternal Bone Pile		1	1	2		0	0	0									invbonr3				grtz		-1
+x01	Sacred Sunstone		1	1	2		0	0	0									ccama	255			araa		0
+x02	Shadow Vortex		1	1	2		0	0	0									ccasn	255			arab		6
+x03	Worldstone Orb		1	1	2		0	0	0									ccbar	255			arac		4
+x04	Caoi Dulra Fruit		1	1	2		0	0	0									ccdru	255			arad		5
+x05	Soulstone Shard		1	1	2		0	0	0									ccnec	255			arae		2
+x06	Eye of Divinity		1	1	2		0	0	0									ccpal	255			araf		3
+x07	Nexus Crystal		1	1	2		0	0	0									ccsor	255			arag		1
+x0x	Eternal Bone Pile		1	1	2		0	0	0									invbonr3	255			grtz		-1
 x1x	\gold;Shard of Fire	\dgrey;(At Level 60 Requires 2 Arcane Crystals per 10 Levels)\n\grey;Cube All Three Shards to Create Sunstone\n\orange;Level Challenge\n	1	1	2		50	0	0									invlc1				thng		-1
 x2x	\gold;Shard of Ice	\dgrey;(At Level 60 Requires 2 Arcane Crystals per 10 Levels)\n\grey;Cube All Three Shards to Create Sunstone\n\orange;Level Challenge\n	1	1	2		50	0	0									invlc2				thng		-1
 x3x	\gold;Shard of Thunder	\dgrey;(At Level 60 Requires 2 Arcane Crystals per 10 Levels)\n\grey;Cube All Three Shards to Create Sunstone\n\orange;Level Challenge\n	1	1	2		50	0	0									invlc3				thng		-1
-x4x	Sunstone of the Gods		1	1	2		0	0	0									invgmv				grtz		-1
+x4x	Sunstone of the Gods		1	1	2		0	0	0									invgmv	255			grtz		-1
 x5x	\gold;Sunstone of Fire	\grey;Cube All Three Sunstones to Create Sunstone\n	1	1	2		0	0	0									invgmr				thng		-1
 x6x	\gold;Sunstone of Ice	\grey;Cube All Three Sunstones to Create Sunstone\n	1	1	2		0	0	0									invgmb				thng		-1
 x7x	\gold;Sunstone of Thunder	\grey;Cube All Three Sunstones to Create Sunstone\n	1	1	2		0	0	0									invgmw				thng		-1
-x@x	The Glorious Book of Median		1	1	2		0	0	0									invsbk2				grtz		-1
+x@x	The Glorious Book of Median		1	1	2		0	0	0									invsbk2	255			grtz		-1
 xyz	Right Click to permanently add 50 to Life\nPotion of Life		1	1	2		0	0	0									invxyz	19			ques		-1
 yo1	\purple;Chipped Rainbow Stone		1	1	2		1	0	0									og1				gemx,gem0		-1
 yo2	\purple;Flawed Rainbow Stone		1	1	2		5	0	0									og2				gemx,gem1		-1
@@ -2059,10 +2075,10 @@ yo4	\purple;Flawless Rainbow Stone		1	1	2		15	0	0									og4				gemx,gem3		-1
 yo5	\purple;Perfect Rainbow Stone		1	1	2		18	0	0									og5				gemx,gem4		-1
 yps	Antidote Potion		1	1	2		0	0	0									invnps				apot		-1
 yq1	\orange;Sunless Crystal Bird	\blue;(-2 to -5)% to Enemy Elemental Resistances\n3% Chance of Crushing Blow\n(-3 to 5) to Light Radius\n\grey;Cube with Six Angel Bag to Add Bonus\n\nCube Reagent	1	2	2		0	0	0									bird4				thng		-1
-yq2	Six Angel Bag		1	2	2		0	0	0									angelbag1				grtz		-1
-yq8	Zakarum's Ear		1	1	2		0	0	0									invear				grtz		-1
-yqe	Moon of the Spider		1	1	2		0	0	0									invhscr2				grtz		-1
-yqx	Spirit Trance Herb		1	1	2		0	0	0									invhrb				grtz		-1
+yq2	Six Angel Bag		1	2	2		0	0	0									angelbag1	255			grtz		-1
+yq8	Zakarum's Ear		1	1	2		0	0	0									invear	255			grtz		-1
+yqe	Moon of the Spider		1	1	2		0	0	0									invhscr2	255			grtz		-1
+yqx	Spirit Trance Herb		1	1	2		0	0	0									invhrb	255			grtz		-1
 zk+	\dgreen;Signet of Gold	Right-click: Gold in Bank: %d	1	1	2		0	0	0									sigil3B				poti		-1
 zkg	\dgreen;Greater Signet of Experience	Right-click: Experience: %d	1	1	2		0	0	0									sigilX				poti		-1
 zkr	\dgreen;Large Signet of Experience	Right-click: Experience: %d	1	1	2		0	0	0									sigil6B				poti		-1
@@ -2089,11 +2105,13 @@ zkx	\dgreen;Greater Signet of Gold	Right-click: Gold in Bank: %d	1	1	2		0	0	0			
 {18	\orange;Ghosts of Old Bremmtown Fragment	\grey;Cube 3 identical Fragments to Create Trophy	1	1	2		0	0	0									apple				thng,trfr		-1
 {19	\orange;The Void Fragment	\grey;Cube 3 identical Fragments to Create Trophy	1	1	2		0	0	0									apple				thng,trfr		-1
 {20	\orange;Eve of Destruction Fragment	\grey;Cube 3 identical Fragments to Create Trophy	1	1	2		0	0	0									apple				thng,trfr		-1
-|\#	Xazax's Illusion		1	1	2		0	0	0									maggotlairfag				grtz		-1
-|\\	The Ancient Repositories		1	1	2		0	0	0									ancientrepositoriesz				grtz		-1
+|\#	Xazax's Illusion		1	1	2		0	0	0									maggotlairfag	255			grtz		-1
+|\\	The Ancient Repositories		1	1	2		0	0	0									ancientrepositoriesz	255			grtz		-1
 |ab	Cube Reagent\n\orange;Ancient Book	\yellow;very rare Emblems that drop from Monsters\nRecipes for this Item are Unknown, but said to use\n	2	2	2		0	0	0									bookwastex				thng		-1
 |bc	Cube Reagent\n\gold;Book of Cain	\blue;+5% to Experience Gained\n+10 to All Attributes\n+1 to All Skills\n\grey;Cube with Glorious Book of Median to Add Bonus\n	2	2	2		0	0	0									superbooffk				thng		-1
-|dc	Dragon Claw		1	1	2		120	0	0									invhorn				grtz		-1
-|ld	Lylia's Curse		1	1	2		120	0	0									lyliascharm				grtz		-1
+|dc	Dragon Claw		1	1	2		120	0	0									invhorn	255			grtz		-1
+|dul	FLYING POLAR BUFFALO ERROR		1	1	2		0	0	0									invdulra	255			grtz		-1
+|ld	Lylia's Curse		1	1	2		120	0	0									lyliascharm	255			grtz		-1
 |ms	\gold;Ghost Trance	\blue;+1 to All Skills\n(11 to 40) to all Attributes\n\grey;Cube with Umbaru Treasure to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									giyuaGolem				thng		-1
-|wc	Weather Control		1	1	2		120	0	0									invathulua				grtz		-1
+|scc	FLYING POLAR BUFFALO ERROR	80 \nArcane Crystals let you create and\nupgrade Tiered (#) Uniques:\n\n2 Crystals + Tiered Item + Oil of Ench.\n--> Tiered Unique Item\n\n1 Crystal + Tiered Unique\n--> Increased Tier\n\nShrine Blessing:\nYou can bless Sacred Crafted, Honorific \nand Rare Items for extra bonuses.\n\n2 Crystals + Item + Shrine\n--> Item with Added Bonuses\n(Limit: 1)\n	1	1	2		0	0	0									invfrag				thng		-1
+|wc	Weather Control		1	1	2		120	0	0									invathulua	255			grtz		-1

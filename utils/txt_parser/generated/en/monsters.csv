@@ -1,5 +1,5 @@
 #index	name
-0	Rathma Priest
+0	Reanimated Warrior
 1	Rathma Priest
 2	Rathma Priest
 3	Reignited Warrior
@@ -1054,6 +1054,9 @@
 1061	Blood Skeleton
 1062	Night Hawk
 1063	Abyss Knight
+1064	Wolf
+1065	Bear
+1066	Wereowl
 1067	Vile Counselor
 1068	Vile Counselor
 1069	Lord Aldric Jitan
@@ -1861,43 +1864,50 @@
 1918	Archbishop Lazarus
 1919	\orange;Councillor Ormac
 1920	Lesser Riftwalker
-1921	\orange;Councillor Ormac
-1922	\orange;Councillor Ormac
-1923	Crystal Lord
-1924	Crystal Lord
-1925	Water Watcher
+1921	Greater Riftwalker
+1922	Ascendant Riftwalker
+1923	Frozen Shambler
+1924	Frozen Shambler
+1925	Thonos
 1926	Necrobot
-1927	Black Raptor Nest
-1928	Sucker
+1927	Infested Growth
+1928	Diseased Bloodsucker
 1929	Pirate of the Twin Seas
-1930	Thunder Storm
+1930	Rift Storm
 1931	\orange;Abyssal Spire
 1932	\orange;Abyssal Spire
 1933	\orange;Councillor Ormac
 1934	\orange;Councillor Vanig
 1935	\orange;Abyssal Spire
 1936	\orange;Abyssal Spire
+1938	Inquisitor of the Triune
 1939	BossRathma
 1940	BossRathma
 1941	BossRathma
 1942	
+1943	Thonos
+1955	Druid Student
+1956	Druid Student
+1957	Druid Student
+1958	Druid Student
+1959	Druid Student
+1960	Living Egg
+1961	Living Egg
 1962	Imperius
 1963	Juris Khan, King of Ureh
 1965	Azgar
-1966	Druid Student
-1967	Corrupted Werewolf
-1968	Druid Student
-1969	Corrupted Seer
-1970	Druid Student
-1971	Corrupted Wereowl
-1972	Druid Student
-1973	Corrupted Werebear
-1974	Druid Student
-1975	Corrupted Hunter
+1966	Corrupted Werewolf
+1967	Corrupted Seer
+1968	Corrupted Wereowl
+1969	Corrupted Werebear
+1970	Corrupted Hunter
+1971	Corrupted Werewolf
+1972	Corrupted Werewolf
+1973	Spirit Wolf
 1976	Sapling Guard
-1977	Void Corruptor
+1977	Sapling Guard
 1978	Scytheclaw
-1979	ScosBloodlord
+1979	Etherborn
 1980	Spriggan
 1981	Dryad Spawn
 1982	Bul Kathos
@@ -2961,7 +2971,7 @@
 3096	Returned Mage
 3097	Ascended
 3098	Quill Bear
-3099	Wereowl
+3099	Trap Rat
 3100	Carver
 3101	Undead Lancer
 3102	Undead Scout
@@ -3220,7 +3230,7 @@
 3358	Bloodbound Archer
 3359	Bloodbound Demon
 3360	Blackened One
-3361	Wereowl
+3361	Trap Rat
 3362	Bloated Host
 3363	Phantasm
 3364	Toxotes
@@ -3233,11 +3243,63 @@
 3371	Dark Sovereign
 3372	Siegebreaker
 3373	Obsidian Protector
-3374	Reanimated Warrior
-3375	Reanimated Archer
+3374	Returned Warrior
+3375	Returned Archer
 3376	Walker
 3377	Eternal Prisoner
 3378	Undead Lancer
 3379	Undead Scout
 3380	Dried Corpse
 3381	Undead Marksman
+3382	Reanimated Warrior
+3383	Reanimated Archer
+3384	Walker
+3385	Eternal Prisoner
+3386	Undead Lancer
+3387	Undead Scout
+3388	Dried Corpse
+3389	Undead Marksman
+3390	Reanimated Warrior
+3391	Reanimated Archer
+3392	Walker
+3393	Eternal Prisoner
+3394	Undead Lancer
+3395	Undead Scout
+3396	Dried Corpse
+3397	Undead Marksman
+3398	Reanimated Warrior
+3399	Reanimated Archer
+3400	Walker
+3401	Eternal Prisoner
+3402	Undead Lancer
+3403	Undead Scout
+3404	Dried Corpse
+3405	Undead Marksman
+3406	Reanimated Warrior
+3407	Reanimated Archer
+3408	Walker
+3409	Eternal Prisoner
+3410	Undead Lancer
+3411	Undead Scout
+3412	Dried Corpse
+3413	Undead Marksman
+3414	Reanimated Warrior
+3415	Reanimated Archer
+3416	Walker
+3417	Eternal Prisoner
+3418	Undead Lancer
+3419	Undead Scout
+3420	Dried Corpse
+3421	Night Hawk
+3422	Veil Terror
+3423	Blackened One
+3424	Pandemoneous
+3425	Soul Reaver
+3426	Grimspike
+3427	Hellish Familiar
+3428	Toxotes
+3429	Coven Mistress
+3430	Ichor Maw
+3431	Corpulent
+3432	Dark Sovereign
+3433	Askari Warrior

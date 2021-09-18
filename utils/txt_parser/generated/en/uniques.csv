@@ -7,7 +7,7 @@
 5	Khalim's Will	20	
 6	Golden Cycle	0	invch7
 7	\gold;I Am Rich	0	
-8	''The Worst Beta I've Been In''	1	
+8	\gold;Riftwalker's Eye	105	
 9	\gold;Sunstone of the Twin Seas	50	
 10	(Druid Challenge Item)\nCaoi Dulra Fruit	90	
 11	(Sorceress Challenge Item)\nNexus Crystal	90	
@@ -58,7 +58,7 @@
 56	\gold;Neutrality Pact	130	
 57	Vial of Elder Blood	135	
 58	'The Last Man Standing'\nEvent Award:	0	
-59	ghist way	0	
+59	'The Goblin King'\nEvent Award:	0	
 60	ghist way	0	
 61	ghist way	0	
 62	ghist way	0	
@@ -90,8 +90,8 @@
 88	\gold;Ring of Pride	0	invrinquest
 89	Cube Reagent\n\gold;Book of Cain	0	
 90	\grey;Item Design\n\gold;Book of Cain	0	
-91	ghist way	0	
-92	ghist way	0	
+91	\grey;Item Design\n\gold;Natasha's Legacy	0	
+92	Natasha's Legacy	120	invnats
 93	ghist way	0	
 94	ghist way	0	
 95	ghist way	0	
@@ -346,10 +346,10 @@
 344	Snakehair	23	
 345	Snakehair	40	
 346	Snakehair	49	
-347	Hellfeast	5	
-348	Hellfeast	24	
-349	Hellfeast	42	
-350	Hellfeast	52	
+347	Zenith	5	
+348	Zenith	24	
+349	Zenith	42	
+350	Zenith	52	
 351	Lionpaw	4	
 352	Lionpaw	22	
 353	Lionpaw	39	

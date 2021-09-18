@@ -414,6 +414,7 @@ k21	Circlet (4)		2	2	0		24	0	147									invci0				circ,tier		-1
 k22	Coronet (4)		2	2	0		24	0	183									invci1				circ,tier		-1
 k23	Tiara (4)		2	2	0		25	0	220									invci2				circ,tier		-1
 k24	Diadem (4)		2	2	0		27	0	294									invci3				circ,tier		-1
+nat	Ornate Plate		2	3	0		30	600	0									invnats				qtor		-1
 tow	башенный щит		2	3	0		0	75	0									invtow				shie	0	-1
 w10	Wolf Head (1)		2	2	0		1	23	0									invdr1				pelt,tier		5
 w11	Hawk Helm (1)		2	2	0		2	37	0									invdr2				pelt,tier		5
@@ -481,22 +482,22 @@ w99	Avenger Guard (3)		2	2	0		23	263	0									invba5				phlm,tier		4
 !19	Bonesplitter (3)		2	4	1		23	176	0		1			19	59			invscyu	0	16	0	nscy,tier	1	2
 !20	Bonesplitter (4)		2	4	1		28	350	0		1			23	70			invscyu	0	16	0	nscy,tier	1	2
 !21	Bonesplitter (Sacred)		2	4	1		30	512	0		1			82	84			invscyu	0	16	0	snsy	1	2
-!22	Mammen Axe (1)		1	3	1		0	0	0			3	4					invhaxu	0	14	0	baxe,tier	1	4
-!24	Mammen Axe (2)		1	3	1		10	21	0			8	9					invhaxu	0	14	0	baxe,tier	1	4
-!26	Mammen Axe (3)		1	3	1		20	59	0			19	20					invhaxu	0	14	0	baxe,tier	1	4
-!27	Mammen Axe (4)		1	3	1		25	124	0			23	23					invhaxu	0	14	0	baxe,tier	1	4
-!28	Mammen Axe (Sacred)		1	3	1		30	452	0			34	47					invhaxu	0	14	0	sbax	1	4
+!22	Mammen Axe (1)		1	3	1		0	0	0									invhaxu	0	0	0	baxe,el1x	1	4
+!24	Mammen Axe (2)		1	3	1		10	21	0									invhaxu	0	0	0	baxe,el1x	1	4
+!26	Mammen Axe (3)		1	3	1		20	59	0									invhaxu	0	0	0	baxe,el1x	1	4
+!27	Mammen Axe (4)		1	3	1		25	124	0									invhaxu	0	0	0	baxe,el1x	1	4
+!28	Mammen Axe (Sacred)		1	3	1		30	452	0									invhaxu	0	0	0	sbax,el1x	1	4
 !3!	Warp Blade (3)		2	3	1		26	0	140			23	44					inv9cru	0	0	13	scrd,tier	1	1
 !30	Hammerhead Axe (2)		2	3	1		15	137	0			17	20					invaxeu	0	14	0	baxe,tier	1	4
 !32	Hammerhead Axe (3)		2	3	1		26	268	0			34	41					invaxeu	0	14	0	baxe,tier	1	4
 !33	Hammerhead Axe (4)		2	3	1		30	529	0			41	49					invaxeu	0	14	0	baxe,tier	1	4
 !34	Hammerhead Axe (Sacred)		2	3	1		30	630	0			51	55					invaxeu	0	14	0	sbax	1	4
-!35	Ono (1)		2	3	1		0	21	0		1			5	7			inv9btu	0	14	0	2hbx,tier	1	4
-!37	Ono (2)		2	3	1		9	47	0		1			12	14			inv9btu	0	14	0	2hbx,tier	1	4
-!39	Ono (3)		2	3	1		20	106	0		1			28	34			inv9btu	0	14	0	2hbx,tier	1	4
+!35	Ono (1)		2	3	1		0	21	0		1							inv9btu	0	0	0	2hbx,el2x	1	4
+!37	Ono (2)		2	3	1		9	47	0		1							inv9btu	0	0	0	2hbx,el2x	1	4
+!39	Ono (3)		2	3	1		20	106	0		1							inv9btu	0	0	0	2hbx,el2x	1	4
 !4!	Warp Blade (4)		2	3	1		31	0	277			29	53					inv9cru	0	0	13	scrd,tier	1	1
-!40	Ono (4)		2	3	1		25	216	0		1			35	40			inv9btu	0	14	0	2hbx,tier	1	4
-!41	Ono (Sacred)		2	3	1		30	489	0		1			80	83			inv9btu	0	14	0	s2hx	1	4
+!40	Ono (4)		2	3	1		25	216	0		1							inv9btu	0	0	0	2hbx,el2x	1	4
+!41	Ono (Sacred)		2	3	1		30	489	0		1							inv9btu	0	0	0	s2hx,el2x	1	4
 !42	Valaska (1)		2	3	1		3	89	0		1			11	16			invbtxu	0	16	0	2hbx,tier	1	4
 !44	Valaska (2)		2	3	1		13	132	0		1			28	37			invbtxu	0	16	0	2hbx,tier	1	4
 !46	Valaska (3)		2	3	1		24	258	0		1			59	77			invbtxu	0	16	0	2hbx,tier	1	4
@@ -539,6 +540,7 @@ w99	Avenger Guard (3)		2	2	0		23	263	0									invba5				phlm,tier		4
 !96	Tepoztopilli (4)		2	4	1		30	641	0		1			34	74			inv9bru	0	16	0	pspe,tier	1	3
 !97	Tepoztopilli (Sacred)		2	4	1		30	733	0		1			68	75			inv9bru	0	16	0	spsp	1	3
 !98	Warp Blade (1)		2	3	1		6	0	47			5	8					inv9cru	0	0	13	scrd,tier	1	1
+/mb	Mana Blade (Mythical)		1	3	1		75	1162	0			51	65					invflcu	0	13	0	/dsw	1	5
 01@	Short Sword (Sacred)		1	3	1		30	376	0			37	38					invssd	0	11	0	qswd	1	-1
 02@	Scimitar (Sacred)		1	3	1		30	421	0			39	40					invscm	0	11	0	qswd	1	-1
 03@	Saber (Sacred)		1	3	1		30	443	0			41	42					invsbr	0	11	0	qswd	1	-1
@@ -635,7 +637,7 @@ w99	Avenger Guard (3)		2	2	0		23	263	0									invba5				phlm,tier		4
 1@9	Bonebreaker (2)		1	3	1		11	61	0			9	12					invspcu	0	14	0	pclb,tier	1	3
 1@@	War Axe (Sacred)		2	3	1		30	581	0			46	56					invwax	0	11	0	qaxe	1	-1
 1@A	Goedendag (3)		1	3	1		21	169	0			24	32					inv7mas	0	14	0	pmac,tier	1	3
-1@B	Angel Star (Sacred)		1	3	1		30	602	0			55	58					invmstu	0	11	0	spmc	1	3
+1@B	Angel Star (Sacred)		1	3	1		30	602	0			55	58					invmstu	0	14	0	spmc	1	3
 1@E	Dart Thrower (4)		2	3	1		26	280	0		1			58	70			inv8lxu		16	0	nxbw,tier	1	2
 1@F	Trebuchet (1)		2	3	1		6	72	0		1			11	16			inv8mxu		16	0	nxbw,tier	1	2
 20@	Large Axe (Sacred)		2	3	1		30	408	0		1			65	67			invlax	0	16	0	s2ha	1	-1
@@ -890,7 +892,7 @@ w99	Avenger Guard (3)		2	2	0		23	263	0									invba5				phlm,tier		4
 4@5	Spatha (3)		1	3	1		21	149	0			22	26					invscmu	0	14	0	bswd,tier	1	4
 4@6	Backsword (Sacred)		1	3	1		30	526	0			48	51					inv9sbu	0	16	0	sbsd	1	4
 4@9	Bonebreaker (4)		1	3	1		25	269	0			24	31					invspcu	0	14	0	pclb,tier	1	3
-4@A	Angel Star (1)		1	3	1		4	62	0			5	8					invmstu	0	11	0	pmac,tier	1	3
+4@A	Angel Star (1)		1	3	1		4	62	0			5	8					invmstu	0	14	0	pmac,tier	1	3
 4@C	Hand of God (3)		2	3	1		24	211	0		1			56	65			inv9gmu		16	0	pham,tier	1	3
 4@D	Needle Crossbow (Sacred)		2	3	1		30	244	0		1			82	83			invlxbu		16	0	snxb	1	2
 500	Short Bow (4)		2	3	1		22	0	167		1			20	22			invsbw	0	0	11	bow,tier	1	-1
@@ -939,7 +941,7 @@ w99	Avenger Guard (3)		2	2	0		23	263	0									invba5				phlm,tier		4
 6@5	Spatha (Sacred)		1	3	1		30	500	0			46	48					invscmu	0	14	0	sbsd	1	4
 6@8	Kriegsmesser (4)		2	3	1		29	543	0			40	48					inv9lsu	0	14	0	bswd,tier	1	4
 6@9	Goedendag (1)		1	3	1		3	46	0			5	7					inv7mas	0	14	0	pmac,tier	1	3
-6@A	Angel Star (2)		1	3	1		13	101	0			13	19					invmstu	0	11	0	pmac,tier	1	3
+6@A	Angel Star (2)		1	3	1		13	101	0			13	19					invmstu	0	14	0	pmac,tier	1	3
 6@C	Hand of God (Sacred)		2	3	1		30	832	0		1			104	105			inv9gmu		16	0	sphm	1	3
 6@F	Trebuchet (4)		2	3	1		29	399	0		1			81	101			inv8mxu		16	0	nxbw,tier	1	2
 70@	Yew Wand (Sacred)		1	2	1		30	0	168			36	38					invywn		0	6	qwnd	1	2
@@ -979,7 +981,7 @@ w99	Avenger Guard (3)		2	2	0		23	263	0									invba5				phlm,tier		4
 8@7	Bronze Sword (4)		2	3	1		27	482	0			37	45					invlsdu	0	14	0	bswd,tier	1	4
 8@8	Bonebreaker (1)		1	3	1		2	31	0			4	5					invspcu	0	14	0	pclb,tier	1	3
 8@9	Goedendag (2)		1	3	1		12	81	0			11	16					inv7mas	0	14	0	pmac,tier	1	3
-8@A	Angel Star (3)		1	3	1		22	205	0			29	39					invmstu	0	11	0	pmac,tier	1	3
+8@A	Angel Star (3)		1	3	1		22	205	0			29	39					invmstu	0	14	0	pmac,tier	1	3
 8@E	Stinger Crossbow (4)		2	3	1		27	359	0		1			86	101			invmxbu		16	0	nxbw,tier	1	2
 90@	Katar (Sacred)		1	3	1		30	0	333			36	37					invktr		0	13	qh2h	1	6
 91@	Wrist Blade (Sacred)		1	3	1		30	0	341			0	0					invktr		0	0	qh2h,el1x	1	6
@@ -993,7 +995,7 @@ w99	Avenger Guard (3)		2	2	0		23	263	0									invba5				phlm,tier		4
 9@5	Backsword (2)		1	3	1		12	89	0			12	14					inv9sbu	0	16	0	bswd,tier	1	4
 9@6	Ida (3)		2	3	1		22	212	0			29	33					invbsdu	0	14	0	bswd,tier	1	4
 9@7	Bronze Sword (Sacred)		2	3	1		30	576	0			52	55					invlsdu	0	14	0	sbsd	1	4
-9@A	Angel Star (4)		1	3	1		27	409	0			33	46					invmstu	0	11	0	pmac,tier	1	3
+9@A	Angel Star (4)		1	3	1		27	409	0			33	46					invmstu	0	14	0	pmac,tier	1	3
 9@B	Hand of God (1)		2	3	1		6	76	0		1			11	14			inv9gmu		16	0	pham,tier	1	3
 9@C	Needle Crossbow (2)		2	3	1		11	48	0		1			16	20			invlxbu		16	0	nxbw,tier	1	2
 9@D	Dart Thrower (3)		2	3	1		21	141	0		1			49	58			inv8lxu		16	0	nxbw,tier	1	2
@@ -1142,7 +1144,7 @@ wol	Wirt's Other Leg		1	3	1		0	0	0			13	18					invwol		0	0	wrtl	1	-1
 !@4	\dgreen;Evil Eye of the Fairy Witch	\blue;+15% к Получаемому Опыту\n+1 к Навыкам Класса\n\grey;Смешайте все 5 Глаз с Классовым Талисманом для Добавления Бонуса\n\nЗнак Монстра	1	1	2		0	0	0									evileye				thng		-1
 !@5	\dgreen;Evil Eye of the Bane Hunter	\blue;+15% к Получаемому Опыту\n+1 к Навыкам Класса\n\grey;Смешайте все 5 Глаз с Классовым Талисманом для Добавления Бонуса\n\nЗнак Монстра	1	1	2		0	0	0									evileye				thng		-1
 !@B	\grey;Квестовый Предмет\n\gold;Signet of Skill	(можно использовать лишь раз на каждом персонаже)\nНажмите ПКМ: Доступных Очков Навыка: %d	1	1	2		0	0	0									sigil4B				poti		-1
-##.	\gold;Neutrality Pact		1	1	2		0	0	0									scroll05				grtz		-1
+##.	\gold;Neutrality Pact		1	1	2		0	0	0									scroll05	255			grtz		-1
 #X1	Реагент Куба (Секретный)\n\orange;Emblem of Suffering		1	1	2		0	0	0									newsignet1				thng		-1
 #X2	Реагент Куба (Секретный)\n\orange;Emblem of Pain		1	1	2		0	0	0									newsignet2				thng		-1
 #X3	Реагент Куба (Секретный)\n\orange;Emblem of Hatred		1	1	2		0	0	0									newsignet3				thng		-1
@@ -1204,7 +1206,7 @@ wol	Wirt's Other Leg		1	3	1		0	0	0			13	18					invwol		0	0	wrtl	1	-1
 0g8	\red;Elixir of Love (Disabled)	-50% Цены у Торговцев на 60 секунд	1	1	2		0	0	0									invpor				hpot		-1
 0o[	\gold;Catalyst of Learning	90\nОбучение:\nВы можете создавать Signets of Learning,\nпоглощяя Sacred Уники и Сеты, которые\nвам больше не нужны.\n\nCatalyst + Sacred Уники и Сеты (макс 25)\n--> Signet of Learning\n	1	1	2		0	0	0									catal1				thng		-1
 0sc	Свиток знаний		1	1	2		0	0	0									invrsc				scro		-1
-0u1	Hammer of the Taan Judges		1	2	2		0	0	0									invhmr				grtz		-1
+0u1	Hammer of the Taan Judges		1	2	2		0	0	0									invhmr	255			grtz		-1
 10+	\orange;Mystic Orb	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_misc				myst		-1
 10^	\dgreen;Custom Signet of Learning	Нажмите ПКМ: Доступных Атрибутов: %d	1	1	2		0	0	0									newlearningFTW				poti		-1
 11+	\orange;Mystic Orb	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_misc				myst		-1
@@ -1501,32 +1503,32 @@ Ysh2	Necklace		1	1	2		0	0	0									lab_amu				###2		-1
 \\4	\purple;Great Sapphire	Смешайте все камни с The Black Road для получения бонуса	1	1	2		0	0	0									invgsbe				thng		-1
 \\5	\purple;Great Ruby	Смешайте все камни с The Black Road для получения бонуса	1	1	2		0	0	0									invgsre				thng		-1
 \\6	\gold;Golden Cycle	\dgrey;(Лимит: 1)\n\blue;Максимум Маны +5%\nМаксимум Жизни +2%\n+10 ко Всем Атрибутам\n+1 ко Всем Навыкам\n\grey;Смешайте с Corrupted Wormhole для Получения Бонуса\n\nРеагент Куба	1	1	2		0	0	0									invch3				cyc3,cycl		-1
-\\7	\grey;Квестовый Предмет\n\gold;Tome of Possession	\dgrey;похоже, в этой странной книге - старинные записи эдиремов...\n	2	2	2		0	0	0									invbbb				grtz		-1
-\\8	Corrupted Wormhole		1	1	2		0	0	0									invlucion				grtz		-1
-a55	Optical Detector		1	1	2		0	0	0									inveye				grtz		-1
-a56	Azmodan's Heart		1	1	2		0	0	0									invhrt				grtz		-1
-a57	Visions of Akarat		1	1	2		0	0	0									invsbk2				grtz		-1
-a58	Scroll of Kings		1	1	2		0	0	0									invscb2				grtz		-1
-a59	Laser Focus Crystal		1	1	2		0	0	0									invdss				grtz		-1
-a60	The Butcher's Tooth		1	1	2		0	0	0									invfang				grtz		-1
-a61	Sacred Worldstone Key		1	2	2		0	0	0									invworldkey				grtz		-1
-a66	Idol of Vanity		1	2	2		0	0	0									invgbi				grtz		-1
+\\7	\grey;Квестовый Предмет\n\gold;Tome of Possession		2	2	2		0	0	0									invbbb	255			grtz		-1
+\\8	Corrupted Wormhole		1	1	2		0	0	0									invlucion	255			grtz		-1
+a55	Optical Detector		1	1	2		0	0	0									inveye	255			grtz		-1
+a56	Azmodan's Heart		1	1	2		0	0	0									invhrt	255			grtz		-1
+a57	Visions of Akarat		1	1	2		0	0	0									invsbk2	255			grtz		-1
+a58	Scroll of Kings		1	1	2		0	0	0									invscb2	255			grtz		-1
+a59	Laser Focus Crystal		1	1	2		0	0	0									invdss	255			grtz		-1
+a60	The Butcher's Tooth		1	1	2		0	0	0									invfang	255			grtz		-1
+a61	Sacred Worldstone Key		1	2	2		0	0	0									invworldkey	255			grtz		-1
+a66	Idol of Vanity		1	2	2		0	0	0									invgbi	255			grtz		-1
 a67	Поздравляю. Вы его получили!\n\gold;Spirit of Damnation	\blue;Макс. Уровень Навыков Увеличивается на 1\n\grey;Смешайте с Идолом Тщеславия для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									invsple				thng		-1
-a68	Horazon's Focus		1	1	2		0	0	0									invhorazon				grtz		-1
-ab!	Astrogha's Venom Stinger		1	1	2		0	0	0									invtail				grtz		-1
-adi	Legacy of Blood		1	1	2		0	0	0									invlegacy				grtz		-1
+a68	Horazon's Focus		1	1	2		0	0	0									invhorazon	255			grtz		-1
+ab!	Astrogha's Venom Stinger		1	1	2		0	0	0									invtail	255			grtz		-1
+adi	Legacy of Blood		1	1	2		0	0	0									invlegacy	255			grtz		-1
 amu	Amulet		1	1	2		0	0	0									invamu				amul		-1
-aq!	Silver Seal of Ureh		1	1	2		0	0	0									invrin				grtz		-1
+aq!	Silver Seal of Ureh		1	1	2		0	0	0									invrin	255			grtz		-1
 aqv	Arrow Quiver		1	3	2	1	0	0	0									invqvr				bowq	2	-1
 ass	Нажмите ПКМ чтобы получить 1 очко навыка\nКнига Навыка		2	2	2		0	0	0									invsbk	15			ques		-1
 asx	\orange;Arcane Cluster	(Нажмите ПКМ чтобы Собрать)	1	1	2		0	0	0									invsr6				thng		-1
-az!	Fool's Gold		1	1	2		0	0	0									invgldm				grtz		-1
+az!	Fool's Gold		1	1	2		0	0	0									invgldm	255			grtz		-1
 b@b	\red;Goodberry	Волшебный фрукт Глор-ан-Фхайдха...	1	1	2		666	0	0									cherries				hpot		-1
 bbb	Том Лам Эзена		2	2	2		0	0	0									invbbb	16			ques		-1
 bkd	Ключ к Пирамидальным камням		2	2	2		0	0	0									invscb	5			ques		-1
 bks	Свиток Инифусса		2	2	2		0	0	0									invscb	5			ques		-1
-blol	Spirit of Creation		1	1	2		120	0	0									vine				grtz		-1
-bob	FLYING POLAR BUFFALO ERROR		2	2	2		0	0	0									bobross				grtz		-1
+blol	Spirit of Creation		1	1	2		120	0	0									vine	255			grtz		-1
+bob	FLYING POLAR BUFFALO ERROR		2	2	2		0	0	0									bobross	255			grtz		-1
 box	Хорадрический Куб		2	2	2		0	0	0									invbox	10			ques		-1
 bpl	FLYING POLAR BUFFALO ERROR		1	1	2	1	0	0	0									invbpl				mpot		-1
 bps	FLYING POLAR BUFFALO ERROR		1	1	2	1	0	0	0									invbps				mpot		-1
@@ -1537,15 +1539,14 @@ brc4	Black Road Challenge\n\orange;Scroll of Knowledge	Смешайте Клас
 brc5	Black Road Challenge\n\orange;Scroll of Blood	У вас всего 30 секунд от убийства одной Жрицы!\nСмешайте Классовый Талисман для Завершения Испытания\n\yellow;Награда\n\n\grey;Убейте Skovos и Lycander за 30 Секунд или менее\n\yellow;Испытание Крови\n\n\grey;Тран Атулуа (Остров Скартары - Залы Мертвых)\n\yellow;Местонахождение\n\n\grey;Ужас\n\yellow;Сложность\n	1	1	2		0	0	0									ChallengeScroll				thng		-1
 brc6	Black Road Challenge\n\orange;Scroll of Completion	\grey;Кристаллами для Добавления Бонуса\nСмешайте Классовый Талисман с 2-мя Тайными\nЕсли вы завершили все 5 испытаний:\n\yellow;Завершение Черной Дороги\n\n\grey;Где угодно\n\yellow;Местонахождение\n\n\grey;Любая\n\yellow;Сложность\n	1	1	2		0	0	0									ChallengeScroll				thng		-1
 brz	Мозг		1	1	2		0	0	0									invbrnz				body		-1
-bt01	\orange;Juneend's AFK Service	\blue;Съешьте для Опыта	1	1	2		120	0	0									newsignet1				poti		-1
 bt02	\orange;Nihlathak Simulator	\blue;Съешьте для 10 Очков Атрибутов	1	1	2		100	0	0									newtokenofter				poti		-1
-bt03	\orange;Arcane Crystal Voucher	Смешайте для получения Arcane Crystal	1	1	2		15	0	0									newreroller				poti		-1
+bt03	\orange;Arcane Crystal Voucher	Смешайте для получения Arcane Crystal	1	1	2		1	0	0									gemcontainer				poti		-1
 bt04	\orange;Chuck's Secret	\blue;Куб = Дважды Клонирует Shrines	1	1	2		80	0	0									newsignet3				poti		-1
 bt05	\orange;команда #unique, но она стоит 1 млн.	\blue;Куб = Преобразовывает Вещь в SU	1	1	2		120	0	0									newsignet5				poti		-1
 bt06	\orange;Thraxis the Martyr	\blue;Куб = Создаёт Beta Талисман	1	1	2		5	0	0									newsignet2				poti		-1
-bt07	\orange;Мгновенное Cожаление	\blue;Куб = Создаёт 2 Зелья Перераспределения	1	1	2		50	0	0									newsignet6				poti		-1
-bt99	''The Worst Beta I've Been In''		1	1	2		5	0	0									invsple				grtz		-1
-bxa	Soul of Kabraxis		1	1	2		100	0	0									braxwhorl				grtz		-1
+bt07	\orange;Belladonna Extract	Нажмите ПКМ для сброса Атрибутов/Навыков	1	1	2		50	0	0									pot04				poti		-1
+bt99	''The Worst Beta I've Been In''	\blue;Куб = Преобразовывает Вещь в SU	1	1	2		120	0	0									newsignet5				poti		-1
+bxa	Soul of Kabraxis		1	1	2		100	0	0									braxwhorl	255			grtz		-1
 c@c	(Sorceress Only)\n\red;Moon Symbol	Освященный символ богини...	1	1	2		0	0	0									moon1				poti		-1
 cm1	\orange;Цикл		1	1	2		0	0	0									invch1				scha		-1
 cm2	\orange;Цикл		1	2	2		0	0	0									invch2				mcha		-1
@@ -1557,16 +1558,16 @@ cr02	Квестовый Предмет\n\gold;Charged Riftstone (\green;2\gold;)
 cr03	Квестовый Предмет\n\gold;Charged Riftstone (\green;3\gold;)	\dgrey;- Смешайте для Полных Характеристик Монстров -\n\n\grey;Сложность: \red;Тяжёлая\n\grey;Уровень Локации: 123\n\gold;Dimensional Labyrinth 3\n\n\grey;Нажмите ПКМ для открытия портала\n	1	1	2		117	0	0									ChargedRunestoneG				thng		-1
 cr04	Квестовый Предмет\n\gold;Charged Riftstone (\green;4\gold;)	\dgrey;- Смешайте для Полных Характеристик Монстров -\n\n\grey;Сложность: \red;Тяжёлая\n\grey;Уровень Локации: 124\n\gold;Dimensional Labyrinth 4\n\n\grey;Нажмите ПКМ для открытия портала\n	1	1	2		118	0	0									ChargedRunestoneG				thng		-1
 cr05	Квестовый Предмет\n\gold;Charged Riftstone (\green;5\gold;)	\dgrey;- Смешайте для Полных Характеристик Монстров -\n\n\grey;Сложность: \red;Тяжёлая\n\grey;Уровень Локации: 125\n\gold;Dimensional Labyrinth 5\n\n\grey;Нажмите ПКМ для открытия портала\n	1	1	2		119	0	0									ChargedRunestoneG				thng		-1
-cr06	Квестовый Предмет\n\gold;Charged Riftstone (\orange;6\gold;)	\dgrey;- Смешайте для Полных Характеристик Монстров -\n\n\grey;Сложность: \red;Очень Тяжёлая\n\grey;Уровень Локации: 131\n\gold;Dimensional Labyrinth 1\n\n\grey;Нажмите ПКМ для открытия портала\n	1	1	2		120	0	0									ChargedRunestoneY				thng		-1
-cr07	Квестовый Предмет\n\gold;Charged Riftstone (\orange;7\gold;)	\dgrey;- Смешайте для Полных Характеристик Монстров -\n\n\grey;Сложность: \red;Очень Тяжёлая\n\grey;Уровень Локации: 132\n\gold;Dimensional Labyrinth 2\n\n\grey;Нажмите ПКМ для открытия портала\n	1	1	2		121	0	0									ChargedRunestoneY				thng		-1
-cr08	Квестовый Предмет\n\gold;Charged Riftstone (\orange;8\gold;)	\dgrey;- Смешайте для Полных Характеристик Монстров -\n\n\grey;Сложность: \red;Очень Тяжёлая\n\grey;Уровень Локации: 133\n\gold;Dimensional Labyrinth 3\n\n\grey;Нажмите ПКМ для открытия портала\n	1	1	2		122	0	0									ChargedRunestoneY				thng		-1
-cr09	Квестовый Предмет\n\gold;Charged Riftstone (\orange;9\gold;)	\dgrey;- Смешайте для Полных Характеристик Монстров -\n\n\grey;Сложность: \red;Очень Тяжёлая\n\grey;Уровень Локации: 134\n\gold;Dimensional Labyrinth 4\n\n\grey;Нажмите ПКМ для открытия портала\n	1	1	2		123	0	0									ChargedRunestoneY				thng		-1
-cr10	Квестовый Предмет\n\gold;Charged Riftstone (\orange;10\gold;)	\dgrey;- Смешайте для Полных Характеристик Монстров -\n\n\grey;Сложность: \red;Очень Тяжёлая\n\grey;Уровень Локации: 135\n\gold;Dimensional Labyrinth 5\n\n\grey;Нажмите ПКМ для открытия портала\n	1	1	2		124	0	0									ChargedRunestoneY				thng		-1
-cr11	Квестовый Предмет\n\gold;Charged Riftstone (\red;11\gold;)	\dgrey;- Смешайте для Полных Характеристик Монстров -\n\n\grey;Сложность: \purple;Экстремальная\n\grey;Уровень Локации: 136\n\gold;Dimensional Labyrinth 6\n\n\grey;Нажмите ПКМ для открытия портала\n	1	1	2		125	0	0									ChargedRunestoneR				thng		-1
-cr12	Квестовый Предмет\n\gold;Charged Riftstone (\red;12\gold;)	\dgrey;- Смешайте для Полных Характеристик Монстров -\n\n\grey;Сложность: \purple;Экстремальная\n\grey;Уровень Локации: 137\n\gold;Dimensional Labyrinth 7\n\n\grey;Нажмите ПКМ для открытия портала\n	1	1	2		126	0	0									ChargedRunestoneR				thng		-1
-cr13	Квестовый Предмет\n\gold;Charged Riftstone (\red;13\gold;)	\dgrey;- Смешайте для Полных Характеристик Монстров -\n\n\grey;Сложность: \purple;Экстремальная\n\grey;Уровень Локации: 138\n\gold;Dimensional Labyrinth 8\n\n\grey;Нажмите ПКМ для открытия портала\n	1	1	2		127	0	0									ChargedRunestoneR				thng		-1
-cr14	Квестовый Предмет\n\gold;Charged Riftstone (\red;14\gold;)	\dgrey;- Смешайте для Полных Характеристик Монстров -\n\n\grey;Сложность: \purple;Экстремальная\n\grey;Уровень Локации: 139\n\gold;Dimensional Labyrinth 9\n\n\grey;Нажмите ПКМ для открытия портала\n	1	1	2		128	0	0									ChargedRunestoneR				thng		-1
-cr15	Квестовый Предмет\n\gold;Charged Riftstone (\red;15\gold;)	\dgrey;- Смешайте для Полных Характеристик Монстров -\n\n\grey;Сложность: \purple;Экстремальная\n\grey;Уровень Локации: 140\n\gold;Dimensional Labyrinth 10\n\n\grey;Нажмите ПКМ для открытия портала\n	1	1	2		129	0	0									ChargedRunestoneR				thng		-1
+cr06	Квестовый Предмет\n\gold;Charged Riftstone (\orange;6\gold;)	\dgrey;- Смешайте для Полных Характеристик Монстров -\n\n\grey;Сложность: \red;Очень Тяжёлая\n\grey;Уровень Локации: 131\n\gold;Dimensional Labyrinth 1\n\n\grey;Нажмите ПКМ для открытия портала\n	1	1	2		126	0	0									ChargedRunestoneY				thng		-1
+cr07	Квестовый Предмет\n\gold;Charged Riftstone (\orange;7\gold;)	\dgrey;- Смешайте для Полных Характеристик Монстров -\n\n\grey;Сложность: \red;Очень Тяжёлая\n\grey;Уровень Локации: 132\n\gold;Dimensional Labyrinth 2\n\n\grey;Нажмите ПКМ для открытия портала\n	1	1	2		127	0	0									ChargedRunestoneY				thng		-1
+cr08	Квестовый Предмет\n\gold;Charged Riftstone (\orange;8\gold;)	\dgrey;- Смешайте для Полных Характеристик Монстров -\n\n\grey;Сложность: \red;Очень Тяжёлая\n\grey;Уровень Локации: 133\n\gold;Dimensional Labyrinth 3\n\n\grey;Нажмите ПКМ для открытия портала\n	1	1	2		128	0	0									ChargedRunestoneY				thng		-1
+cr09	Квестовый Предмет\n\gold;Charged Riftstone (\orange;9\gold;)	\dgrey;- Смешайте для Полных Характеристик Монстров -\n\n\grey;Сложность: \red;Очень Тяжёлая\n\grey;Уровень Локации: 134\n\gold;Dimensional Labyrinth 4\n\n\grey;Нажмите ПКМ для открытия портала\n	1	1	2		129	0	0									ChargedRunestoneY				thng		-1
+cr10	Квестовый Предмет\n\gold;Charged Riftstone (\orange;10\gold;)	\dgrey;- Смешайте для Полных Характеристик Монстров -\n\n\grey;Сложность: \red;Очень Тяжёлая\n\grey;Уровень Локации: 135\n\gold;Dimensional Labyrinth 5\n\n\grey;Нажмите ПКМ для открытия портала\n	1	1	2		130	0	0									ChargedRunestoneY				thng		-1
+cr11	Квестовый Предмет\n\gold;Charged Riftstone (\red;11\gold;)	\dgrey;- Смешайте для Полных Характеристик Монстров -\n\n\grey;Сложность: \purple;Экстремальная\n\grey;Уровень Локации: 136\n\gold;Dimensional Labyrinth 6\n\n\grey;Нажмите ПКМ для открытия портала\n	1	1	2		131	0	0									ChargedRunestoneR				thng		-1
+cr12	Квестовый Предмет\n\gold;Charged Riftstone (\red;12\gold;)	\dgrey;- Смешайте для Полных Характеристик Монстров -\n\n\grey;Сложность: \purple;Экстремальная\n\grey;Уровень Локации: 137\n\gold;Dimensional Labyrinth 7\n\n\grey;Нажмите ПКМ для открытия портала\n	1	1	2		132	0	0									ChargedRunestoneR				thng		-1
+cr13	Квестовый Предмет\n\gold;Charged Riftstone (\red;13\gold;)	\dgrey;- Смешайте для Полных Характеристик Монстров -\n\n\grey;Сложность: \purple;Экстремальная\n\grey;Уровень Локации: 138\n\gold;Dimensional Labyrinth 8\n\n\grey;Нажмите ПКМ для открытия портала\n	1	1	2		133	0	0									ChargedRunestoneR				thng		-1
+cr14	Квестовый Предмет\n\gold;Charged Riftstone (\red;14\gold;)	\dgrey;- Смешайте для Полных Характеристик Монстров -\n\n\grey;Сложность: \purple;Экстремальная\n\grey;Уровень Локации: 139\n\gold;Dimensional Labyrinth 9\n\n\grey;Нажмите ПКМ для открытия портала\n	1	1	2		134	0	0									ChargedRunestoneR				thng		-1
+cr15	Квестовый Предмет\n\gold;Charged Riftstone (\red;15\gold;)	\dgrey;- Смешайте для Полных Характеристик Монстров -\n\n\grey;Сложность: \purple;Экстремальная\n\grey;Уровень Локации: 140\n\gold;Dimensional Labyrinth 10\n\n\grey;Нажмите ПКМ для открытия портала\n	1	1	2		135	0	0									ChargedRunestoneR				thng		-1
 cy01	\orange;Малый Цикл	\blue;+1 Требуемый Уровень\n+(2-8) к Силе\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									invch1				cyc1,cycl		-1
 cy02	\orange;Малый Цикл	\blue;+1 Требуемый Уровень\n+(2-8) к Ловкости\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									invch1				cyc1,cycl		-1
 cy03	\orange;Малый Цикл	\blue;+1 Требуемый Уровень\n+(2-8) к Живучести\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									invch1				cyc1,cycl		-1
@@ -1601,6 +1602,7 @@ cy31	\orange;Большой Цикл	\blue;+5 Требуемый Уровень\
 dg01	Дизайн Предмета		2	2	2		0	0	0									book01				dsgn		-1
 dg02	Дизайн Предмета		2	2	2		0	0	0									book01				dsgn		-1
 dg03	Дизайн Предмета		2	2	2		0	0	0									book01				dsgn		-1
+dg04	Дизайн Предмета		2	2	2		0	0	0									book01				dsgn		-1
 dog	Apple	Восстанавливает 100 жизни в секунду в течение 10 минут	1	1	2		0	0	0									newapple				poti		-1
 dr01	Квестовый Предмет\n\gold;Depleted Riftstone (\green;1\gold;)	источник энергии, что позволит изучить его глубже...\nВозможно, смешав его в Кубе, удастся выпустить\n\nактиватор Rift'а, с которым вы так хорошо знакомы\nОн точно не из Санктуария, но при этом напоминает\n\nужасом от ощущения скрытой потусторонней энергии, проникающей из него\nКамень излучает лёгкое свечение. Удержание его в руке наполняет вас\n	1	1	2		0	0	0									DepletedRunestone				thng		-1
 dr02	Квестовый Предмет\n\gold;Depleted Riftstone (\green;2\gold;)	Смешайте в Кубе чтобы Зарядить\n	1	1	2		0	0	0									DepletedRunestone				thng		-1
@@ -1612,11 +1614,11 @@ dr07	Квестовый Предмет\n\gold;Depleted Riftstone (\orange;2\gold
 dr08	Квестовый Предмет\n\gold;Depleted Riftstone (\orange;3\gold;)	Смешайте с Arcane Crystal чтобы Зарядить\n	1	1	2		0	0	0									DepletedRunestone				thng		-1
 dr09	Квестовый Предмет\n\gold;Depleted Riftstone (\orange;4\gold;)	Смешайте с Arcane Crystal чтобы Зарядить\n	1	1	2		0	0	0									DepletedRunestone				thng		-1
 dr10	Квестовый Предмет\n\gold;Depleted Riftstone (\orange;5\gold;)	Смешайте с Arcane Crystal чтобы Зарядить\n	1	1	2		0	0	0									DepletedRunestone				thng		-1
-dr11	Квестовый Предмет\n\gold;Depleted Riftstone (\red;6\gold;)	Смешайте с Двумя Arcane Crystal чтобы Зарядить\n	1	1	2		0	0	0									DepletedRunestone				thng		-1
-dr12	Квестовый Предмет\n\gold;Depleted Riftstone (\red;7\gold;)	Смешайте с Двумя Arcane Crystal чтобы Зарядить\n	1	1	2		0	0	0									DepletedRunestone				thng		-1
-dr13	Квестовый Предмет\n\gold;Depleted Riftstone (\red;8\gold;)	Смешайте с Двумя Arcane Crystal чтобы Зарядить\n	1	1	2		0	0	0									DepletedRunestone				thng		-1
-dr14	Квестовый Предмет\n\gold;Depleted Riftstone (\red;9\gold;)	Смешайте с Двумя Arcane Crystal чтобы Зарядить\n	1	1	2		0	0	0									DepletedRunestone				thng		-1
-dr15	Квестовый Предмет\n\gold;Depleted Riftstone (\red;10\gold;)	Смешайте с Двумя Arcane Crystal чтобы Зарядить\n	1	1	2		0	0	0									DepletedRunestone				thng		-1
+dr11	Квестовый Предмет\n\gold;Depleted Riftstone (\red;6\gold;)	Смешайте с Arcane Crystal чтобы Зарядить\n	1	1	2		0	0	0									DepletedRunestone				thng		-1
+dr12	Квестовый Предмет\n\gold;Depleted Riftstone (\red;7\gold;)	Смешайте с Arcane Crystal чтобы Зарядить\n	1	1	2		0	0	0									DepletedRunestone				thng		-1
+dr13	Квестовый Предмет\n\gold;Depleted Riftstone (\red;8\gold;)	Смешайте с Arcane Crystal чтобы Зарядить\n	1	1	2		0	0	0									DepletedRunestone				thng		-1
+dr14	Квестовый Предмет\n\gold;Depleted Riftstone (\red;9\gold;)	Смешайте с Arcane Crystal чтобы Зарядить\n	1	1	2		0	0	0									DepletedRunestone				thng		-1
+dr15	Квестовый Предмет\n\gold;Depleted Riftstone (\red;10\gold;)	Смешайте с Arcane Crystal чтобы Зарядить\n	1	1	2		0	0	0									DepletedRunestone				thng		-1
 dtm	\grey;Реагент Куба\n\orange;Темный Том 	\blue;+1 к Темному Порталу\n\grey;Смешайте с Классовым Талисманом для Добавления Бонуса\n	1	2	2		0	0	0									invdtm				thng		-1
 dy01	\orange;Mystic Dye	\blue;Цвет: Белый\n\grey;Нажмите ПКМ для изменения цвета вещи	1	1	2		0	0	0									dye-whit-1				thng		-1
 dy02	\orange;Mystic Dye	\blue;Цвет: Светло-серый\n\grey;Нажмите ПКМ для изменения цвета вещи	1	1	2		0	0	0									dye-lgrey-2				thng		-1
@@ -1641,8 +1643,8 @@ dy20	\orange;Mystic Dye	\blue;Цвет: Оранжевый\n\grey;Нажмите
 dy21	\orange;Mystic Dye	\blue;Цвет: Ярко-белый\n\grey;Нажмите ПКМ для изменения цвета вещи	1	1	2		0	0	0									dye-bwht-21				thng		-1
 dy99	\orange;Mystic Dye	dy99-Desc	1	1	2		0	0	0									dye-rainbow				thng		-1
 ear	Ухо		1	1	2		0	0	0									invear				play		-1
-ebx	Vial of Elder Blood		1	1	2		0	0	0									ElderVial				grtz		-1
-eby	Dimensional Key		1	1	2		0	0	0									DimensionalKey				grtz		-1
+ebx	Vial of Elder Blood		1	1	2		0	0	0									ElderVial	255			grtz		-1
+eby	Dimensional Key		1	1	2		0	0	0									DimensionalKey	255			grtz		-1
 ebz	Амулет		1	1	2		0	0	0									invamu				xxx4		-1
 elx	Эликсир		1	1	2		0	0	0									invpot				elix		-1
 en11	\orange;Scroll of Enchantment: Шлем	\orange;50% Урона по Площади\n\grey;Смешайте со Шлемом для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									invbsc				thng		-1
@@ -1720,6 +1722,18 @@ g$c	\purple;Onyx		1	1	2		12	0	0									invgsoc				gemq,gem2		-1
 g$d	\purple;Flawless Onyx		1	1	2		15	0	0									invgsod				gemq,gem3		-1
 g$e	\purple;Perfect Onyx		1	1	2		18	0	0									invgsoe				gemq,gem4		-1
 g34	Золотая птица		1	2	2		0	0	0									invgbi	19			ques		-1
+gc01	\orange;Ruby Кластер	(Нажмите ПКМ чтобы Собрать)	1	1	2		0	0	0									gemcRuby				thng		-1
+gc02	\orange;Emerald Кластер	(Нажмите ПКМ чтобы Собрать)	1	1	2		0	0	0									gemcEmerald				thng		-1
+gc03	\orange;Sapphire Кластер	(Нажмите ПКМ чтобы Собрать)	1	1	2		0	0	0									gemcSapphire				thng		-1
+gc04	\orange;Topaz Кластер	(Нажмите ПКМ чтобы Собрать)	1	1	2		0	0	0									gemcTopaz				thng		-1
+gc05	\orange;Diamond Кластер	(Нажмите ПКМ чтобы Собрать)	1	1	2		0	0	0									gemcDiamond				thng		-1
+gc06	\orange;Amethyst Кластер	(Нажмите ПКМ чтобы Собрать)	1	1	2		0	0	0									gemcAmethyst				thng		-1
+gc07	\orange;Skull Кластер	(Нажмите ПКМ чтобы Собрать)	1	1	2		0	0	0									gemcSkull				thng		-1
+gc08	\orange;Rainbow Stone Кластер	(Нажмите ПКМ чтобы Собрать)	1	1	2		0	0	0									gemcRainbowStone				thng		-1
+gc09	\orange;Bloodstone Кластер	(Нажмите ПКМ чтобы Собрать)	1	1	2		0	0	0									gemcBloodstone				thng		-1
+gc10	\orange;Onyx Кластер	(Нажмите ПКМ чтобы Собрать)	1	1	2		0	0	0									gemcOnyx				thng		-1
+gc11	\orange;Amber Кластер	(Нажмите ПКМ чтобы Собрать)	1	1	2		0	0	0									gemcAmber				thng		-1
+gc12	\orange;Turquoise Кластер	(Нажмите ПКМ чтобы Собрать)	1	1	2		0	0	0									gemcTurquoise				thng		-1
 gcb	\purple;Chipped Sapphire		1	1	2		1	0	0									invgsba				gems,gem0		-1
 gcg	\purple;Chipped Emerald		1	1	2		1	0	0									invgsga				geme,gem0		-1
 gcr	\purple;Chipped Ruby		1	1	2		1	0	0									invgsra				gemr,gem0		-1
@@ -1738,6 +1752,7 @@ glg	\purple;Flawless Emerald		1	1	2		15	0	0									invgsgd				geme,gem3		-1
 glr	\purple;Flawless Ruby		1	1	2		15	0	0									invgsrd				gemr,gem3		-1
 glw	\purple;Flawless Diamond		1	1	2		15	0	0									invgswd				gemd,gem3		-1
 gly	\purple;Flawless Topaz		1	1	2		15	0	0									invgsyd				gemt,gem3		-1
+gob	'The Goblin King'\nНаграда за Событие:		2	2	2		0	0	0									gobolino	255			grtz		-1
 gpb	\purple;Perfect Sapphire		1	1	2		18	0	0									invgsbe				gems,gem4		-1
 gpg	\purple;Perfect Emerald		1	1	2		18	0	0									invgsge				geme,gem4		-1
 gpr	\purple;Perfect Ruby		1	1	2		18	0	0									invgsre				gemr,gem4		-1
@@ -1803,12 +1818,13 @@ isc	Свиток Идентификации		1	1	2		0	0	0									invrsc				scro
 j34	Нефритовая статуэтка		1	2	2		0	0	0									invjbi	19			ques		-1
 jaw	Челюсть		1	1	2		0	0	0									invjaw				body		-1
 jew	Jewel		1	1	2		0	0	0									invgswe				jewl		-1
-k@k	The Book of Lies		1	1	2		0	0	0									invsbk2				grtz		-1
+k@k	The Book of Lies		1	1	2		0	0	0									invsbk2	255			grtz		-1
 kazm	\grey;Квестовый Предмет\n\gold;Key of Sin	\blue;Открывает Портал в The Realm of Sin...	1	2	2		115	0	0									invmph				thng		-1
 kbel	\grey;Квестовый Предмет\n\gold;Key of Lies	\blue;Открывает Портал в The Realm of Lies...	1	2	2		125	0	0									invmph				thng		-1
 key	Ключ		1	1	2	1	0	0	0									invkey				key		-1
 kfau	\grey;Квестовый Предмет\n\gold;Mind Warp	\blue;Открывает Портал в Fauztinville...	1	1	2		125	0	0									invrsc				thng		-1
 kpac	\orange;Вишня		1	1	2		120	0	0									cherries				thng		-1
+ksco	Gaya Wand		2	2	2		130	0	0									bobross				thng		-1
 ktax	\orange;Пульсирующий Осколок Камня Мира	\yellow;- Смешать -\n\white;создадим новый мир, и наши дети будут знать лишь мир.''\n''...и поэтому наши братья не найдут нас здесь. Мы\n\n\dgrey;обрывками воспоминаний из древних времен\nКасаясь кристалла, ваш разум наполняется	1	1	2		0	0	0									invss1				thng		-1
 ktbx	\orange;Пульсирующий Осколок Камня Мира	\yellow;- Смешать -\n\white;...не более, чем попытка объяснить непостижимое.''\n''Завесой? Конечно же, Инариус, ты не поддался пророчествам Итераэля.\n\nи опасностей, подстерегающих за Завесой.''\n''Санктуарий. Навсегда избавленный от Вечного Конфликта	1	1	2		0	0	0									invss1				thng		-1
 ktcx	\orange;Пульсирующий Осколок Камня Мира	\yellow;- Смешать -\n\white;Эти миры - лишь песчинка в песках вселенной.''\n''Лилит... Небеса, Преисподняя, Санктуарий.\n\nЧто было прежде, не имеет значения!''\n''Камень был, есть и будет центром наших миров.	1	1	2		0	0	0									invss1				thng		-1
@@ -1816,14 +1832,14 @@ ktdx	\orange;Пульсирующий Осколок Камня Мира	\yellow
 ktex	\orange;Пульсирующий Осколок Камня Мира	\yellow;- Смешать -\n\white;Этот осколок - ключ, его полный потенциал должен быть раскрыт.\n\nоно раскрыло всех нас еще большей угрозе.\nСанктуарий прямому влиянию Небес и Преисподней -\nУничтожение Камня Мира не только подвергло\n\n\dgrey;...	1	1	2		0	0	0									invss1				thng		-1
 ktfx	\orange;Пульсирующий Осколок Камня Мира	То, что есть осколок духа в земле Бесформенной\n\nТо, чего много и что может очистить душу\n\nТо, что есть у брата, спасителя и жертвы\n\nТо, что может олицетворять их сына и его последователя\n\nТо, что содержит писания бытия	1	1	2		0	0	0									invss1				thng		-1
 ktgx	\orange;Пульсирующий Кристалл Камня Мира	И Путь расчистится, будьте готовы\n\nВеликая Руна Taha\nGreater Signet of Learning\nТеперь в него нужно вдохнуть Знания и Силы\n\n\dgrey;Кристалл Камня Мира перевыкован	1	1	2		0	0	0									invss3				thng		-1
-ktor	\grey;Квестовый Предмет\n\gold;Edyrem's Time-Travel	\blue;Открывает Портал в Toraja...	1	1	2		125	0	0									invrsc				thng		-1
 ktox	\grey;Квестовый Предмет\n\gold;Dimensional Link	\red;Работает только в 5-ом Акте\n\blue;Открывает портал в Edge of Nothingness...	1	1	2		135	0	0									invrsc				thng		-1
 ktpx	\grey;Квестовый Предмет\n\gold;Otherworldly Link	\red;Работает только в Акте 5\n\blue;Создает Портал в Пространственное Измерение...	1	1	2		130	0	0									invrsc				thng		-1
-ktzx	\gold;Riftwalker's Eye	\blue;+1 ко Всем Навыкам\n\grey;Смешайте с вашим Riftwalker's Eye для Получения Бонуса\n	1	1	2		0	0	0									evileye				thng		-1
-kvoi	\grey;Квестовый Предмет\n\gold;Abyss Gate	\blue;Открывает портал в The Void...	1	1	2		130	0	0									invrsc				thng		-1
+ktxx	\grey;Реагент Куба\n\gold;Ascendant Riftwalker Essence	\blue;Максимальные Стихийные Сопротивления +1%\n\grey;Смешайте с Riftwalker's Eye для Добавления Бонуса\n	1	1	2		0	0	0									Riftwalker3				thng		-1
+ktyx	\grey;Реагент Куба\n\gold;Greater Riftwalker Essence	\blue;+1 ко Всем Навыкам\n\grey;Смешайте с вашим Riftwalker's Eye для Получения Бонуса\n	1	1	2		0	0	0									Riftwalker2				thng		-1
+ktzx	\gold;Riftwalker's Eye		1	1	2		105	0	0									evileye	255			grtz		-1
 l@l	\grey;Квестовый Предмет\n\gold;Skinrender's Sigil	Смешайте в Кубе все 5 Sigil-ов с Ring of the Five\n	1	1	2		0	0	0									ring01				thng		-1
-lms	'The Last Man Standing'\nНаграда за Событие:		2	2	2		0	0	0									lastman				grtz		-1
-lok	Crystalline Flame Medallion		1	1	2		0	0	0									invvip				grtz		-1
+lms	'The Last Man Standing'\nНаграда за Событие:		2	2	2		0	0	0									lastman	255			grtz		-1
+lok	Crystalline Flame Medallion		1	1	2		0	0	0									invvip	255			grtz		-1
 luv	Ключ от Черной башни		1	2	2		0	0	0									invmph	20			key		-1
 m@m	\grey;Квестовый Предмет\n\gold;Spinecracker's Sigil	Смешайте в Кубе все 5 Sigil-ов с Ring of the Five\n	1	1	2		0	0	0									ring03				thng		-1
 mec	Реагент Куба\n\orange;Meditation Candle		1	1	2		0	0	0									invcndl				thng		-1
@@ -1914,39 +1930,39 @@ r62	\grey;Elemental Rune\n\purple;Ice Rune		1	1	2		100	0	0									cold-rune				
 r98	\grey;Enchanted Rune\n\purple;Xis Rune	Можно Смешать с Обычной Руной	1	1	2		120	0	0									ultra-rune				xrun		-1
 r99	\grey;Primal Rune\n\purple;Runestone		1	1	2		0	0	0									BlankRune				thng,esse		-1
 r@r	\grey;Квестовый Предмет\n\gold;Ring of the Five	Смешайте в Кубе все 5 Sigil-ов с Ring of the Five\n	1	1	2		0	0	0									ring08				kill		-1
-rc01	\orange;El Контейнер (01)		1	1	2		0	0	0									invrEl				thng		-1
-rc02	\orange;Eld Контейнер (02)		1	1	2		0	0	0									invrEld				thng		-1
-rc03	\orange;Tir Контейнер (03)		1	1	2		0	0	0									invrTir				thng		-1
-rc04	\orange;Nef Контейнер (04)		1	1	2		0	0	0									invrNef				thng		-1
-rc05	\orange;Eth Контейнер (05)		1	1	2		0	0	0									invrEth				thng		-1
-rc06	\orange;Ith Контейнер (06)		1	1	2		0	0	0									invrIth				thng		-1
-rc07	\orange;Tal Контейнер (07)		1	1	2		0	0	0									invrTal				thng		-1
-rc08	\orange;Ral Контейнер (08)		1	1	2		0	0	0									invrRal				thng		-1
-rc09	\orange;Ort Контейнер (09)		1	1	2		0	0	0									invrOrt				thng		-1
-rc10	\orange;Thul Контейнер (10)		1	1	2		0	0	0									invrThul				thng		-1
-rc11	\orange;Amn Контейнер (11)		1	1	2		0	0	0									invrAmn				thng		-1
-rc12	\orange;Sol Контейнер (12)		1	1	2		0	0	0									invrSol				thng		-1
-rc13	\orange;Shael Контейнер (13)		1	1	2		0	0	0									invrShae				thng		-1
-rc14	\orange;Dol Контейнер (14)		1	1	2		0	0	0									invrDol				thng		-1
-rc15	\orange;Hel Контейнер (15)		1	1	2		0	0	0									invrHel				thng		-1
-rc16	\orange;Io Контейнер (16)		1	1	2		0	0	0									invrIo				thng		-1
-rc17	\orange;Lum Контейнер (17)		1	1	2		0	0	0									invrLum				thng		-1
-rc18	\orange;Ko Контейнер (18)		1	1	2		0	0	0									invrKo				thng		-1
-rc19	\orange;Fal Контейнер (19)		1	1	2		0	0	0									invrFal				thng		-1
-rc20	\orange;Lem Контейнер (20)		1	1	2		0	0	0									invrLem				thng		-1
-rc21	\orange;Pul Контейнер (21)		1	1	2		0	0	0									invrPul				thng		-1
-rc22	\orange;Um Контейнер (22)		1	1	2		0	0	0									invrUm				thng		-1
-rc23	\orange;Mal Контейнер (23)		1	1	2		0	0	0									invrMal				thng		-1
-rc24	\orange;Ist Контейнер (24)		1	1	2		0	0	0									invrIst				thng		-1
-rc25	\orange;Gul Контейнер (25)		1	1	2		0	0	0									invrGul				thng		-1
-rc26	\orange;Vex Контейнер (26)		1	1	2		0	0	0									invrVex				thng		-1
-rc27	\orange;Ohm Контейнер (27)		1	1	2		0	0	0									invrOhm				thng		-1
-rc28	\orange;Lo Контейнер (28)		1	1	2		0	0	0									invrLo				thng		-1
-rc29	\orange;Sur Контейнер (29)		1	1	2		0	0	0									invrSur				thng		-1
-rc30	\orange;Ber Контейнер (30)		1	1	2		0	0	0									invrBer				thng		-1
-rc31	\orange;Jah Контейнер (31)		1	1	2		0	0	0									invrJo				thng		-1
-rc32	\orange;Cham Контейнер (32)		1	1	2		0	0	0									invrCham				thng		-1
-rc33	\orange;Zod Контейнер (33)		1	1	2		0	0	0									invrZod				thng		-1
+rc01	\orange;El Контейнер (01)	(Нажмите ПКМ чтобы Собрать)	1	1	2		0	0	0									invrElC				thng		-1
+rc02	\orange;Eld Контейнер (02)	(Нажмите ПКМ чтобы Собрать)	1	1	2		0	0	0									invrEldC				thng		-1
+rc03	\orange;Tir Контейнер (03)	(Нажмите ПКМ чтобы Собрать)	1	1	2		0	0	0									invrTirC				thng		-1
+rc04	\orange;Nef Контейнер (04)	(Нажмите ПКМ чтобы Собрать)	1	1	2		0	0	0									invrNefC				thng		-1
+rc05	\orange;Eth Контейнер (05)	(Нажмите ПКМ чтобы Собрать)	1	1	2		0	0	0									invrEthC				thng		-1
+rc06	\orange;Ith Контейнер (06)	(Нажмите ПКМ чтобы Собрать)	1	1	2		0	0	0									invrIthC				thng		-1
+rc07	\orange;Tal Контейнер (07)	(Нажмите ПКМ чтобы Собрать)	1	1	2		0	0	0									invrTalC				thng		-1
+rc08	\orange;Ral Контейнер (08)	(Нажмите ПКМ чтобы Собрать)	1	1	2		0	0	0									invrRalC				thng		-1
+rc09	\orange;Ort Контейнер (09)	(Нажмите ПКМ чтобы Собрать)	1	1	2		0	0	0									invrOrtC				thng		-1
+rc10	\orange;Thul Контейнер (10)	(Нажмите ПКМ чтобы Собрать)	1	1	2		0	0	0									invrThulC				thng		-1
+rc11	\orange;Amn Контейнер (11)	(Нажмите ПКМ чтобы Собрать)	1	1	2		0	0	0									invrAmnC				thng		-1
+rc12	\orange;Sol Контейнер (12)	(Нажмите ПКМ чтобы Собрать)	1	1	2		0	0	0									invrSolC				thng		-1
+rc13	\orange;Shael Контейнер (13)	(Нажмите ПКМ чтобы Собрать)	1	1	2		0	0	0									invrShaeC				thng		-1
+rc14	\orange;Dol Контейнер (14)	(Нажмите ПКМ чтобы Собрать)	1	1	2		0	0	0									invrDolC				thng		-1
+rc15	\orange;Hel Контейнер (15)	(Нажмите ПКМ чтобы Собрать)	1	1	2		0	0	0									invrHelC				thng		-1
+rc16	\orange;Io Контейнер (16)	(Нажмите ПКМ чтобы Собрать)	1	1	2		0	0	0									invrIoC				thng		-1
+rc17	\orange;Lum Контейнер (17)	(Нажмите ПКМ чтобы Собрать)	1	1	2		0	0	0									invrLumC				thng		-1
+rc18	\orange;Ko Контейнер (18)	(Нажмите ПКМ чтобы Собрать)	1	1	2		0	0	0									invrKoC				thng		-1
+rc19	\orange;Fal Контейнер (19)	(Нажмите ПКМ чтобы Собрать)	1	1	2		0	0	0									invrFalC				thng		-1
+rc20	\orange;Lem Контейнер (20)	(Нажмите ПКМ чтобы Собрать)	1	1	2		0	0	0									invrLemC				thng		-1
+rc21	\orange;Pul Контейнер (21)	(Нажмите ПКМ чтобы Собрать)	1	1	2		0	0	0									invrPulC				thng		-1
+rc22	\orange;Um Контейнер (22)	(Нажмите ПКМ чтобы Собрать)	1	1	2		0	0	0									invrUmC				thng		-1
+rc23	\orange;Mal Контейнер (23)	(Нажмите ПКМ чтобы Собрать)	1	1	2		0	0	0									invrMalC				thng		-1
+rc24	\orange;Ist Контейнер (24)	(Нажмите ПКМ чтобы Собрать)	1	1	2		0	0	0									invrIstC				thng		-1
+rc25	\orange;Gul Контейнер (25)	(Нажмите ПКМ чтобы Собрать)	1	1	2		0	0	0									invrGulC				thng		-1
+rc26	\orange;Vex Контейнер (26)	(Нажмите ПКМ чтобы Собрать)	1	1	2		0	0	0									invrVexC				thng		-1
+rc27	\orange;Ohm Контейнер (27)	(Нажмите ПКМ чтобы Собрать)	1	1	2		0	0	0									invrOhmC				thng		-1
+rc28	\orange;Lo Контейнер (28)	(Нажмите ПКМ чтобы Собрать)	1	1	2		0	0	0									invrLoC				thng		-1
+rc29	\orange;Sur Контейнер (29)	(Нажмите ПКМ чтобы Собрать)	1	1	2		0	0	0									invrSurC				thng		-1
+rc30	\orange;Ber Контейнер (30)	(Нажмите ПКМ чтобы Собрать)	1	1	2		0	0	0									invrBerC				thng		-1
+rc31	\orange;Jah Контейнер (31)	(Нажмите ПКМ чтобы Собрать)	1	1	2		0	0	0									invrJoC				thng		-1
+rc32	\orange;Cham Контейнер (32)	(Нажмите ПКМ чтобы Собрать)	1	1	2		0	0	0									invrChamC				thng		-1
+rc33	\orange;Zod Контейнер (33)	(Нажмите ПКМ чтобы Собрать)	1	1	2		0	0	0									invrZodC				thng		-1
 rin	Ring		1	1	2		0	0	0									invrin				ring		-1
 ripx	\dgrey;Wings of the Departed	\yellow;Покойся с Миром\n\orange;1951 - 2017\nПамяти Michael Exchange\n\n\grey;Нажмите ПКМ чтобы отдать Дань Уважения	1	1	2		0	0	0									DepartedWing				hpot		-1
 rpl	FLYING POLAR BUFFALO ERROR		1	1	2	1	0	0	0									invrpl				hpot		-1
@@ -2007,23 +2023,23 @@ smi2	Minigame\n\orange;Scroll of Mirrors	У вас всего 30 секунд!\n
 sofd	Реагент Куба\n\orange;Seal of Darkness	\blue;+1 к Into The Void\n\grey;Смешайте с Demonsbane для Добавления Бонуса\n	1	1	2		0	0	0									sealofdark				thng		-1
 sol	Душа		1	1	2		0	0	0									invsple				body		-1
 spe	Злобный		1	1	2		0	0	0									invsple				body		-1
-t@t	Demonsbane		1	1	2		0	0	0									invhscr2				grtz		-1
+t@t	Demonsbane		1	1	2		0	0	0									invhscr2	255			grtz		-1
 tal	Хвост		1	1	2		0	0	0									invtail				body		-1
 tbk	Том Городского Портала		1	2	2	1	0	0	0									invbbk				book		-1
-tbr	By Mel Odom\nThe Black Road		1	1	2		110	0	0									invsbk3				grtz		-1
+tbr	By Mel Odom\nThe Black Road		1	1	2		110	0	0									invsbk3	255			grtz		-1
 tch	Факел		1	2	2		0	0	0									invtrch				torc		-1
-ths	The Sleep	\orange;Смешайте с Трофеем для Пробуждения\grey;	1	1	2		115	0	0									jewelabc				grtz		-1
+ths	The Sleep	\orange;Смешайте с Трофеем для Пробуждения\grey;	1	1	2		115	0	0									jewelabc	255			grtz		-1
 toa	\orange;Belladonna Extract	Нажмите ПКМ для сброса Атрибутов/Навыков	1	1	2		0	0	0									pot04				ques		-1
 tr1	Хорадрический Свиток		2	2	2		0	0	0									invhscr	10			ques		-1
 tr2	Свиток Сопротивления	\blue;+10% к Стихийным Сопротивлениям\n\grey;Смешайте с Sunstone of the Twin Seas для Добавления Бонуса\n\nРеагент Куба	2	2	2		0	0	0									invscb	32			thng		-1
-trc	Umbaru Treasure		1	1	2		110	0	0									foolsbox				grtz		-1
+trc	Umbaru Treasure		1	1	2		110	0	0									foolsbox	255			grtz		-1
 tsc	Свиток Городского Портала		1	1	2		0	0	0									invbsc				scro		-1
-twi	\gold;Sunstone of the Twin Seas		1	1	2		0	0	0									invgmg				grtz		-1
-u@+	\gold;I Am Rich	\yellow;- Я могу себе это позволить потому, что я богат и могуч и гоняю стаи туч. -\n\red;трофеи Yshari Sanctum, Uldyssian, Void, а также Vial of Elder Blood.\nЭтот предмет ничего не делает, а для своего создания поглотил	1	1	2		0	0	0									redgem				grtz		-1
+twi	\gold;Sunstone of the Twin Seas		1	1	2		0	0	0									invgmg	255			grtz		-1
+u@+	\gold;I Am Rich	\yellow;- Я могу себе это позволить потому, что я богат и могуч и гоняю стаи туч. -\n\red;трофеи Yshari Sanctum, Uldyssian, Void, а также Vial of Elder Blood.\nЭтот предмет ничего не делает, а для своего создания поглотил	1	1	2		0	0	0									redgem	255			grtz		-1
 vic	Реагент Куба\n\orange;Sacrifical Heart		1	1	2		0	0	0									invhrt				thng		-1
 vip	Amulet of the Viper		1	1	2		0	0	0									invvip	10			amul		-1
 voDX	Реагент Куба\n\orange;Enchanting Crystal	\yellow;и может быть использован на вещи лишь раз\nЭтот Рецепт создает случайный Уник того же Типа\n\grey;Смешайте с Sacred Уникальным Оружием/Бронёй для Смены Свойств\n	1	1	2		0	0	0									newreroller				thng		-1
-voXX	Books of Kalan		1	2	2		0	0	0									invkalan				grtz		-1
+voXX	Books of Kalan		1	2	2		0	0	0									invkalan	255			grtz		-1
 voi1	\purple;Scroll of Greed		1	1	2		0	0	0									invrsc				thng		-1
 voi2	\purple;Scroll of Sloth		1	1	2		0	0	0									invrsc				thng		-1
 voi3	\purple;Scroll of Envy		1	1	2		0	0	0									invrsc				thng		-1
@@ -2033,24 +2049,24 @@ voi6	\purple;Scroll of Lust		1	1	2		0	0	0									invrsc				thng		-1
 vor1	Ring of Pride		1	1	2		0	0	0									invrinquest				kill		-1
 vor2	Sigil of Deadly Sins		1	1	2		0	0	0									invrinquest				kill		-1
 vps	Зелье выносливости		1	1	2		0	0	0									invwps				spot		-1
-w@w	Cold Fusion Schematics		1	1	2		0	0	0									invhscr2				grtz		-1
+w@w	Cold Fusion Schematics		1	1	2		0	0	0									invhscr2	255			grtz		-1
 wms	Зелье оттаивания		1	1	2		0	0	0									invyps				wpot		-1
-x01	Sacred Sunstone		1	1	2		0	0	0									ccama				araa		0
-x02	Shadow Vortex		1	1	2		0	0	0									ccasn				arab		6
-x03	Worldstone Orb		1	1	2		0	0	0									ccbar				arac		4
-x04	Caoi Dulra Fruit		1	1	2		0	0	0									ccdru				arad		5
-x05	Soulstone Shard		1	1	2		0	0	0									ccnec				arae		2
-x06	Eye of Divinity		1	1	2		0	0	0									ccpal				araf		3
-x07	Nexus Crystal		1	1	2		0	0	0									ccsor				arag		1
-x0x	Eternal Bone Pile		1	1	2		0	0	0									invbonr3				grtz		-1
+x01	Sacred Sunstone		1	1	2		0	0	0									ccama	255			araa		0
+x02	Shadow Vortex		1	1	2		0	0	0									ccasn	255			arab		6
+x03	Worldstone Orb		1	1	2		0	0	0									ccbar	255			arac		4
+x04	Caoi Dulra Fruit		1	1	2		0	0	0									ccdru	255			arad		5
+x05	Soulstone Shard		1	1	2		0	0	0									ccnec	255			arae		2
+x06	Eye of Divinity		1	1	2		0	0	0									ccpal	255			araf		3
+x07	Nexus Crystal		1	1	2		0	0	0									ccsor	255			arag		1
+x0x	Eternal Bone Pile		1	1	2		0	0	0									invbonr3	255			grtz		-1
 x1x	\gold;Shard of Fire	\dgrey;(На 60 Уровне требует +2 Arcane Crystals каждые 10 уровней)\n\grey;Смешайте Все 3 Shards для Создания Sunstone\n\orange;Испытание Уровня\n	1	1	2		50	0	0									invlc1				thng		-1
 x2x	\gold;Shard of Ice	\dgrey;(На 60 Уровне требует +2 Arcane Crystals каждые 10 уровней)\n\grey;Смешайте Все 3 Shards для Создания Sunstone\n\orange;Испытание Уровня\n	1	1	2		50	0	0									invlc2				thng		-1
 x3x	\gold;Shard of Thunder	\dgrey;(На 60 Уровне требует +2 Arcane Crystals каждые 10 уровней)\n\grey;Смешайте Все 3 Shards для Создания Sunstone\n\orange;Испытание Уровня\n	1	1	2		50	0	0									invlc3				thng		-1
-x4x	Sunstone of the Gods		1	1	2		0	0	0									invgmv				grtz		-1
+x4x	Sunstone of the Gods		1	1	2		0	0	0									invgmv	255			grtz		-1
 x5x	\gold;Sunstone of Fire	\grey;Смешайте в Кубе Все Три Sunstone для Создания Sunstone of Gods	1	1	2		0	0	0									invgmr				thng		-1
 x6x	\gold;Sunstone of Ice	\grey;Смешайте в Кубе Все Три Sunstone для Создания Sunstone of Gods	1	1	2		0	0	0									invgmb				thng		-1
 x7x	\gold;Sunstone of Thunder	\grey;Смешайте в Кубе Все Три Sunstone для Создания Sunstone of Gods	1	1	2		0	0	0									invgmw				thng		-1
-x@x	The Glorious Book of Median		1	1	2		0	0	0									invsbk2				grtz		-1
+x@x	The Glorious Book of Median		1	1	2		0	0	0									invsbk2	255			grtz		-1
 xyz	Нажмите ПКМ чтобы добавить 50 к Жизни\nЗелье Жизни		1	1	2		0	0	0									invxyz	19			ques		-1
 yo1	\purple;Chipped Rainbow Stone		1	1	2		1	0	0									og1				gemx,gem0		-1
 yo2	\purple;Flawed Rainbow Stone		1	1	2		5	0	0									og2				gemx,gem1		-1
@@ -2059,10 +2075,10 @@ yo4	\purple;Flawless Rainbow Stone		1	1	2		15	0	0									og4				gemx,gem3		-1
 yo5	\purple;Perfect Rainbow Stone		1	1	2		18	0	0									og5				gemx,gem4		-1
 yps	Зелье противоядия		1	1	2		0	0	0									invnps				apot		-1
 yq1	\orange;Sunless Crystal Bird	\blue;(-2 - -5)% ко Всем Сопротивлениям Врага\n3% Шанс Сокрушительного Удара\n(-3 - +5) к Радиусу Света\n\grey;Смешайте с Six Angel Bag для Добавления Бонуса\n\nРеагент Куба	1	2	2		0	0	0									bird4				thng		-1
-yq2	Six Angel Bag		1	2	2		0	0	0									angelbag1				grtz		-1
-yq8	Zakarum's Ear		1	1	2		0	0	0									invear				grtz		-1
-yqe	Moon of the Spider		1	1	2		0	0	0									invhscr2				grtz		-1
-yqx	Spirit Trance Herb		1	1	2		0	0	0									invhrb				grtz		-1
+yq2	Six Angel Bag		1	2	2		0	0	0									angelbag1	255			grtz		-1
+yq8	Zakarum's Ear		1	1	2		0	0	0									invear	255			grtz		-1
+yqe	Moon of the Spider		1	1	2		0	0	0									invhscr2	255			grtz		-1
+yqx	Spirit Trance Herb		1	1	2		0	0	0									invhrb	255			grtz		-1
 zk+	\dgreen;Signet of Gold	Нажмите ПКМ: Положить золота в Инвентарь: %d	1	1	2		0	0	0									sigil3B				poti		-1
 zkg	\dgreen;Великая Печать Опыта	Нажмите ПКМ: Опыт: %d	1	1	2		0	0	0									sigilX				poti		-1
 zkr	\dgreen;Large Signet of Experience	Нажмите ПКМ: Опыт: %d	1	1	2		0	0	0									sigil6B				poti		-1
@@ -2089,11 +2105,13 @@ zkx	\dgreen;Greater Signet of Gold	Нажмите ПКМ: Положить зо�
 {18	\orange;Фрагемент Ghosts of Old Bremmtown	\grey;Смешайте 3 одинаковых Фрагемента для Создания Трофея	1	1	2		0	0	0									apple				thng,trfr		-1
 {19	\orange;Фрагемент The Void	\grey;Смешайте 3 одинаковых Фрагемента для Создания Трофея	1	1	2		0	0	0									apple				thng,trfr		-1
 {20	\orange;Фрагемент Eve of Destruction	\grey;Смешайте 3 одинаковых Фрагемента для Создания Трофея	1	1	2		0	0	0									apple				thng,trfr		-1
-|\#	Xazax's Illusion		1	1	2		0	0	0									maggotlairfag				grtz		-1
-|\\	The Ancient Repositories		1	1	2		0	0	0									ancientrepositoriesz				grtz		-1
+|\#	Xazax's Illusion		1	1	2		0	0	0									maggotlairfag	255			grtz		-1
+|\\	The Ancient Repositories		1	1	2		0	0	0									ancientrepositoriesz	255			grtz		-1
 |ab	Реагент Куба\n\orange;Ancient Book	\yellow;используются очень редкие Emblems, выпадающие из монстров\nРецепты для этого предмета Неизвестны, но, по слухам, в них\n	2	2	2		0	0	0									bookwastex				thng		-1
 |bc	Реагент Куба\n\gold;Book of Cain	\blue;+5% к Получаемому Опыту\n+10 ко Всем Атрибутам\n+1 ко Всем Навыкам\n\grey;Смешайте с Glorious Book of Median для Добавления Бонуса\n	2	2	2		0	0	0									superbooffk				thng		-1
-|dc	Dragon Claw		1	1	2		120	0	0									invhorn				grtz		-1
-|ld	Lylia's Curse		1	1	2		120	0	0									lyliascharm				grtz		-1
+|dc	Dragon Claw		1	1	2		120	0	0									invhorn	255			grtz		-1
+|dul	FLYING POLAR BUFFALO ERROR		1	1	2		0	0	0									invdulra	255			grtz		-1
+|ld	Lylia's Curse		1	1	2		120	0	0									lyliascharm	255			grtz		-1
 |ms	\gold;Ghost Trance	\blue;+1 ко Всем Навыкам\n+(11-40) ко Всем Атрибутам\n\grey;Смешайте с Umbaru Treasure для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									giyuaGolem				thng		-1
-|wc	Weather Control		1	1	2		120	0	0									invathulua				grtz		-1
+|scc	FLYING POLAR BUFFALO ERROR	80 \nС Arcane Crystals можно создавать и\nулучшать Ранговые Уники:\n\n2 Crystals + Ранговая Вещь + Oil of Ench.\n--> Ранговый Уник\n\n1 Crystal + Ранговый Уник\n--> Уник рангом выше\n\nУлучшение Shrine'ом:\nМожно улучшать Священные (Sacred)\nКрафтовые, Почётные и Редкие вещи\nдля дополнительных бонусов.\n\n2 Crystals + Вещь + Shrine\n--> Вещь с Бонусами\n(максимум 1 раз)\n	1	1	2		0	0	0									invfrag				thng		-1
+|wc	Weather Control		1	1	2		120	0	0									invathulua	255			grtz		-1
