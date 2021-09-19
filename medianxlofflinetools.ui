@@ -551,19 +551,6 @@
       <string>Activate</string>
      </property>
     </widget>
-    <widget class="QCheckBox" name="deactivateHallsOfPainCheckBox">
-     <property name="geometry">
-      <rect>
-       <x>80</x>
-       <y>20</y>
-       <width>202</width>
-       <height>17</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Deactivate Halls of Pain (Destruction)</string>
-     </property>
-    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
@@ -623,7 +610,6 @@
       <string>Waypoints</string>
      </property>
      <addaction name="actionActivateWaypoints"/>
-     <addaction name="actionDeactivateHallsOfPain"/>
     </widget>
     <widget class="QMenu" name="menuRespec">
      <property name="title">
@@ -1360,20 +1346,6 @@
     <string>Never</string>
    </property>
   </action>
-  <action name="actionDeactivateHallsOfPain">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
-   <property name="enabled">
-    <bool>false</bool>
-   </property>
-   <property name="text">
-    <string>Deactivate Halls of Pain (Destruction)</string>
-   </property>
-   <property name="statusTip">
-    <string>Useful if you want Anya to open the red portal again</string>
-   </property>
-  </action>
   <action name="actionOpenFileAssociationUI">
    <property name="text">
     <string>Open file association UI</string>
@@ -1533,38 +1505,6 @@
     <hint type="sourcelabel">
      <x>99</x>
      <y>211</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>-1</x>
-     <y>-1</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>actionDeactivateHallsOfPain</sender>
-   <signal>triggered(bool)</signal>
-   <receiver>deactivateHallsOfPainCheckBox</receiver>
-   <slot>setChecked(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>-1</x>
-     <y>-1</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>200</x>
-     <y>273</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>deactivateHallsOfPainCheckBox</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>actionDeactivateHallsOfPain</receiver>
-   <slot>setChecked(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>200</x>
-     <y>273</y>
     </hint>
     <hint type="destinationlabel">
      <x>-1</x>

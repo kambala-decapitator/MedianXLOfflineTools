@@ -118,8 +118,6 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, LaunchMode la
     _showDisenchantPreviewGroup->addAction(ui->actionPreviewDisenchantForSinglePage);
     _showDisenchantPreviewGroup->addAction(ui->actionPreviewDisenchantNever);
 
-    ui->deactivateHallsOfPainCheckBox->setStatusTip(ui->actionDeactivateHallsOfPain->statusTip());
-
     ui->statsTableWidget->setFocusPolicy(Qt::NoFocus);
 
 
@@ -452,14 +450,6 @@ void MedianXLOfflineTools::saveCharacter()
         QByteArray activatedWaypointsBytes(5, 0xFF); // 40 x '1'
         for (int startPos = Enums::Offsets::WaypointsData + 2, i = 0; i < kDifficultiesNumber; ++i, startPos += 24)
             tempFileContents.replace(startPos, activatedWaypointsBytes.size(), activatedWaypointsBytes);
-    }
-#ifndef MAKE_FINISHED_CHARACTER
-    if (ui->actionDeactivateHallsOfPain->isChecked())
-#endif
-    {
-        // disable only on Destruction
-        int startPos = Enums::Offsets::WaypointsData + 2 + 24*2;
-        tempFileContents[startPos + 4] = tempFileContents.at(startPos + 4) & ~8;
     }
 
     if (ui->convertToSoftcoreCheckBox->isChecked())
@@ -1415,7 +1405,6 @@ void MedianXLOfflineTools::createWaypointsGroupBoxLayout()
 {
     QHBoxLayout *hbl = new QHBoxLayout(ui->waypointsGroupBox);
     hbl->addWidget(ui->activateWaypointsCheckBox);
-    hbl->addWidget(ui->deactivateHallsOfPainCheckBox);
 }
 
 void MedianXLOfflineTools::createMercGroupBoxLayout()
@@ -1642,7 +1631,6 @@ void MedianXLOfflineTools::connectSignals()
 
     // edit
     connect(ui->actionRename, SIGNAL(triggered()), SLOT(rename()));
-    connect(ui->actionDeactivateHallsOfPain, SIGNAL(triggered()), SLOT(modify()));
 
     // items
     connect(ui->actionShowItems, SIGNAL(triggered()), SLOT(showItems()));
@@ -1682,7 +1670,6 @@ void MedianXLOfflineTools::connectSignals()
     connect(ui->respecSkillsCheckBox, SIGNAL(toggled(bool)), SLOT(respecSkills(bool)));
 
     connect(ui->activateWaypointsCheckBox,     SIGNAL(toggled(bool)), SLOT(modify()));
-    connect(ui->deactivateHallsOfPainCheckBox, SIGNAL(toggled(bool)), SLOT(modify()));
 
     // misc
     connect(_fsWatcher, SIGNAL(fileChanged(const QString &)), SLOT(fileContentsChanged()));
@@ -2421,7 +2408,7 @@ void MedianXLOfflineTools::clearUI()
     }
     ui->levelSpinBox->setValue(1);
 
-    QList<QCheckBox *> checkBoxes = QList<QCheckBox *>() << ui->convertToSoftcoreCheckBox << ui->respecSkillsCheckBox << ui->activateWaypointsCheckBox << ui->deactivateHallsOfPainCheckBox;
+    QList<QCheckBox *> checkBoxes = QList<QCheckBox *>() << ui->convertToSoftcoreCheckBox << ui->respecSkillsCheckBox << ui->activateWaypointsCheckBox;
     foreach (QList<QCheckBox *> questCheckBoxes, _checkboxesQuestsHash.values())
         checkBoxes << questCheckBoxes;
 #if !defined(QT_NO_DEBUG_OUTPUT) && !defined(DUPE_CHECK)
@@ -2439,7 +2426,7 @@ void MedianXLOfflineTools::clearUI()
         groupBox->setDisabled(true);
 
     QList<QAction *> actions = QList<QAction *>() << ui->actionReloadCharacter << ui->actionSaveCharacter << ui->actionRename << ui->actionRespecStats << ui->actionRespecSkills << ui->actionActivateWaypoints
-                                                  << ui->actionDeactivateHallsOfPain << ui->actionConvertToSoftcore << ui->actionResurrect << ui->actionFind << ui->actionFindNext << ui->actionFindPrevious
+                                                  << ui->actionConvertToSoftcore << ui->actionResurrect << ui->actionFind << ui->actionFindNext << ui->actionFindPrevious
                                                   << ui->actionShowItems << ui->actionShowAllStats << ui->actionSkillTree;
     foreach (QAction *action, actions)
         action->setDisabled(true);
@@ -2468,7 +2455,7 @@ void MedianXLOfflineTools::updateUI()
 {
     clearUI();
 
-    QList<QAction *> actions = QList<QAction *>() << ui->actionReloadCharacter << ui->actionRename << ui->actionRespecStats << ui->actionRespecSkills << ui->actionActivateWaypoints << ui->actionDeactivateHallsOfPain
+    QList<QAction *> actions = QList<QAction *>() << ui->actionReloadCharacter << ui->actionRename << ui->actionRespecStats << ui->actionRespecSkills << ui->actionActivateWaypoints
                                                   << ui->actionShowAllStats << ui->actionSkillTree;
     foreach (QAction *action, actions)
         action->setEnabled(true);
