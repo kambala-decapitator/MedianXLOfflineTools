@@ -237,7 +237,7 @@ private:
 
     void processPlugyStash(QHash<Enums::ItemStorage::ItemStorageEnum, PlugyStashInfo>::iterator &iter, ItemsList *items);
     QHash<int, bool> getPlugyStashesExistenceHash() const;
-    void clearItems(bool sharedStashPathChanged = true, bool hcStashPathChanged = true);
+    void clearItems(bool sharedStashPathChanged1 = true, bool hcStashPathChanged1 = true, bool sharedStashPathChanged2 = true, bool hcStashPathChanged2 = true);
 
     QString backupFile(QFile &file);
     void showErrorMessageBoxForFile(const QString &message, const QFile &file);

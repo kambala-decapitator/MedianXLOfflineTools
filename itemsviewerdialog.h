@@ -31,6 +31,8 @@ public:
         InventoryIndex,
         CubeIndex,
         PersonalStashIndex,
+        SigmaSharedStashIndex,
+        SigmaHCStashIndex,
         SharedStashIndex,
         HCStashIndex,
         LastIndex = HCStashIndex
@@ -61,7 +63,7 @@ public:
     void totalItemsIncreasedBy(int n) { _itemsTotal += n; updateWindowTitle(); }
 
     void saveSettings();
-    bool isPlugyStorageIndex(int index) { return index >= PersonalStashIndex && index <= HCStashIndex; }
+    bool isPlugyStorageIndex(int index) { return index >= PersonalStashIndex; }
 
     QTabWidget *tabWidget() { return _tabWidget; }
     ItemsPropertiesSplitter *splitterAtIndex(int tabIndex);

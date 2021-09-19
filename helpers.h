@@ -39,6 +39,7 @@ QMetaEnum metaEnumFromName(const char *enumName)
 class QTreeWidgetItem;
 class ItemInfo;
 class QTreeView;
+extern const QString modName;
 QList<QTreeWidgetItem *> treeItemsForItems(const QList<ItemInfo *> &items);
 void customizeItemsTreeView(QTreeView *treeView);
 

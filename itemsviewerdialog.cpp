@@ -52,6 +52,8 @@ ItemsViewerDialog::ItemsViewerDialog(const QHash<int, bool> &plugyStashesExisten
             splitter = new GearItemsSplitter(tableView, this);
         else if (i < PersonalStashIndex)
             splitter = new ItemsPropertiesSplitter(tableView, this);
+        else if (i >= SharedStashIndex)
+            splitter = new MXLOTItemsSplitter(tableView, this);
         else
             splitter = new PlugyItemsSplitter(tableView, this);
         splitter->setModel(new ItemStorageTableModel(kRows().at(i), kColumns().at(i), splitter));
@@ -68,8 +70,8 @@ ItemsViewerDialog::ItemsViewerDialog(const QHash<int, bool> &plugyStashesExisten
         if (isPlugyStorageIndex(i))
         {
             PlugyItemsSplitter *plugySplitter = static_cast<PlugyItemsSplitter *>(splitter);
-            plugySplitter->isSharedStash = i >= SharedStashIndex && i <= HCStashIndex;
-            plugySplitter->isHcStash = i == HCStashIndex;
+            plugySplitter->isSharedStash = i >= SigmaSharedStashIndex;
+            plugySplitter->isHcStash = i == HCStashIndex || i == SigmaHCStashIndex;
             connect(plugySplitter, SIGNAL(pageChanged()), SLOT(updateItemManagementButtonsState()));
             connect(plugySplitter, SIGNAL(stashSorted()), SIGNAL(stashSorted()));
         }
@@ -189,14 +191,14 @@ void ItemsViewerDialog::createLayout()
     vboxLayout->addWidget(_upgradeBothButton);
 
     _applyActionToAllPagesCheckbox = new QCheckBox(tr("Apply to all pages"), this);
-    _applyActionToAllPagesCheckbox->setToolTip(tr("Either action will be applied to all pages of the current PlugY stash"));
+    _applyActionToAllPagesCheckbox->setToolTip(tr("Either action will be applied to all pages of the current stash"));
     _applyActionToAllPagesCheckbox->setChecked(true);
     _applyActionToAllPagesCheckbox->hide();
 
     _moveCurrentItemsToSharedStashButton = new QPushButton(tr("Move items here\nto shared stash"), this);
 
     // stash box setup
-    _stashBox = new QGroupBox(tr("PlugY Stash"), _itemManagementWidget);
+    _stashBox = new QGroupBox(tr("Extended Stash"), _itemManagementWidget);
     _sortStashButton = new QPushButton(tr("Sort"), _stashBox);
     QGroupBox *blankPagesBox = new QGroupBox(tr("Blank pages:"), _stashBox);
     _insertBlankPagesBeforeButton = new QPushButton(tr("Insert before"),  blankPagesBox);
@@ -415,13 +417,13 @@ void ItemsViewerDialog::updateGearItems(ItemsList *pBeltItems /*= 0*/, ItemsList
 
 const QList<int> &ItemsViewerDialog::kRows()
 {
-    static QList<int> rows = QList<int>() << 11 << 10 << 10 << 14 << 14 << 14;
+    static QList<int> rows = QList<int>() << 11 << 10 << 10 << 14 << 14 << 14 << 14 << 14;
     return rows;
 }
 
 const QList<int>& ItemsViewerDialog::kColumns()
 {
-    static QList<int> cols = QList<int>() << 8 << 15 << 15 << 14 << 14 << 14;
+    static QList<int> cols = QList<int>() << 8 << 15 << 15 << 14 << 14 << 14 << 14 << 14;
     return cols;
 }
 
@@ -453,7 +455,7 @@ int ItemsViewerDialog::tabIndexFromItemStorage(int storage)
 const QString &ItemsViewerDialog::tabNameAtIndex(int i)
 {
     // add elements here when adding new tab
-    static const QStringList tabNames = QStringList() << tr("Gear") << tr("Inventory") << tr("Cube") << tr("Personal Stash") << tr("Shared Stash") << tr("Hardcore Stash");
+    static const QStringList tabNames = QStringList() << tr("Gear") << tr("Inventory") << tr("Cube") << tr("%1 Local Stash", "arg is mod name").arg(modName) << tr("%1 Shared Stash", "arg is mod name").arg(modName) << tr("%1 Hardcore Stash", "arg is mod name").arg(modName) << tr("Shared Stash") << tr("Hardcore Stash");
     static const QString unknownName("WTF");
     return i >= 0 && i < tabNames.size() ? tabNames.at(i) : unknownName;
 }
@@ -609,7 +611,7 @@ void ItemsViewerDialog::removeCurrentPage()
 void ItemsViewerDialog::moveItemBetweenStashes(ItemInfo *item)
 {
     QList<Enums::ItemStorage::ItemStorageEnum> newStoragesToTry;
-    if (qobject_cast<PlugyItemsSplitter *>(sender()))
+    if (qobject_cast<MXLOTItemsSplitter *>(sender()))
         newStoragesToTry << Enums::ItemStorage::Inventory << Enums::ItemStorage::Cube;
     else
         newStoragesToTry << CURRENT_SHARED_STASH;
@@ -678,7 +680,7 @@ void ItemsViewerDialog::updateUpgradeButtonsState()
 
 void ItemsViewerDialog::updateStashButtonsState()
 {
-    _stashBox->setVisible(isPlugyStorageIndex(_tabWidget->currentIndex()));
+    _stashBox->setVisible(_tabWidget->currentIndex() >= SharedStashIndex);
     if (_stashBox->isVisible())
     {
         _sortStashButton->setEnabled(currentPlugySplitter()->itemCount() > 0);

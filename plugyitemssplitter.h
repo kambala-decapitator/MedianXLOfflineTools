@@ -65,7 +65,6 @@ protected:
     virtual void removeItemFromModel(ItemInfo *item);
 
     virtual bool shouldAddMoveItemAction() const;
-    virtual QString moveItemActionText() const;
 
 signals:
     void pageChanged();
@@ -105,6 +104,18 @@ private:
     QHash<QByteArray, ItemsList> itemsSortedByBaseType(const ItemsList &items);
     template<typename K>
     QMap<K, ItemsList> itemsSortedByType(const ItemsList &items);
+};
+
+class MXLOTItemsSplitter : public PlugyItemsSplitter
+{
+    Q_OBJECT
+
+public:
+    explicit MXLOTItemsSplitter(ItemStorageTableView* itemsView, QWidget* parent = 0);
+    virtual ~MXLOTItemsSplitter() {}
+
+protected:
+    virtual QString moveItemActionText() const;
 };
 
 #endif // PLUGYITEMSSPLITTER_H

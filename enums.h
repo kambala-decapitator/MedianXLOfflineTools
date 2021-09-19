@@ -345,6 +345,8 @@ public:
         Cube = 4,
         Stash,
         PersonalStash,
+        SigmaSharedStash,
+        SigmaHCStash,
         SharedStash,
         HCStash
     };

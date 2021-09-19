@@ -1125,4 +1125,4 @@ void ItemsPropertiesSplitter::createActionsForMysticOrbs(QMenu *parentMenu, bool
 }
 
 bool ItemsPropertiesSplitter::shouldAddMoveItemAction() const { return true; }
-QString ItemsPropertiesSplitter::moveItemActionText() const { return tr("Move to shared PlugY stash"); }
+QString ItemsPropertiesSplitter::moveItemActionText() const { return tr("Move to shared infinite stash"); }

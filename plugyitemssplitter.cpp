@@ -210,11 +210,6 @@ bool PlugyItemsSplitter::shouldAddMoveItemAction() const
     return (isHcChar && isHcStash) || (!isHcChar && !isHcStash);
 }
 
-QString PlugyItemsSplitter::moveItemActionText() const
-{
-    return tr("Move to character");
-}
-
 bool PlugyItemsSplitter::storeItemInStorage(ItemInfo *item, int storage, bool emitSignal /*= false*/)
 {
     Enums::ItemStorage::ItemStorageEnum storage_ = static_cast<Enums::ItemStorage::ItemStorageEnum>(storage);
@@ -1106,4 +1101,12 @@ QMap<K, ItemsList> PlugyItemsSplitter::itemsSortedByType(const ItemsList &items)
     foreach (ItemInfo *item, items)
         itemsByType[item->itemType] << item;
     return itemsByType;
+}
+
+
+MXLOTItemsSplitter::MXLOTItemsSplitter(ItemStorageTableView* itemsView, QWidget* parent) : PlugyItemsSplitter(itemsView, parent) {}
+
+QString MXLOTItemsSplitter::moveItemActionText() const
+{
+    return tr("Move to character");
 }

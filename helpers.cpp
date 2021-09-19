@@ -35,6 +35,8 @@ bool colorStringsIndecesLessThan(const QPair<int, int> &a, const QPair<int, int>
 
 // public
 
+const QString modName(QChar(0x03A3));
+
 QString binaryStringFromNumber(quint64 number, bool needsInversion /*= false*/, int fieldWidth /*= 8*/)
 {
     QString binaryString = QString("%1").arg(number, fieldWidth, 2, kZeroChar);

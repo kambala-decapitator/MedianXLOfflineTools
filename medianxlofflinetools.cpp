@@ -61,7 +61,6 @@ extern void qt_mac_set_dock_menu(QMenu *);
 
 // static const
 
-static const QString modName(QChar(0x03A3));
 static const QString kLastSavePathKey("lastSavePath"), kBackupExtension("bak"), kReadonlyCss("QLineEdit { background-color: rgb(227, 227, 227) }"), kTimeFormatReadable("yyyyMMdd-hhmmss"), kMedianXlServer("https://mxl.vn.cz/kambala/");
 static const QByteArray kMercHeader("jf"), kSkillsHeader("if"), kIronGolemHeader("kf");
 
@@ -669,6 +668,7 @@ void MedianXLOfflineTools::saveCharacter()
         {
             // create
             info.version = 1;
+            info.activePage = 0;
         }
         if (!inputFile.open(QIODevice::WriteOnly))
         {
@@ -2171,22 +2171,29 @@ bool MedianXLOfflineTools::processSaveFile()
         itemsBuffer += golemItems;
     }
 
-    bool sharedStashPathChanged = true, hcStashPathChanged = true;
+    bool sharedStashPathChanged1 = true, hcStashPathChanged1 = true;
+    bool sharedStashPathChanged2 = true, hcStashPathChanged2 = true;
 #ifdef DUPE_CHECK
     if (!_dupeScanDialog)
 #endif
     {
         // parse plugy stashes
-        QString oldSharedStashPath = _plugyStashesHash[ItemStorage::SharedStash].path, oldHCStashPath = _plugyStashesHash[ItemStorage::HCStash].path;
+        QString oldSharedStashPath1 = _plugyStashesHash[ItemStorage::SigmaSharedStash].path, oldHCStashPath1 = _plugyStashesHash[ItemStorage::SigmaHCStash].path;
+        QString oldSharedStashPath2 = _plugyStashesHash[ItemStorage::SharedStash].path, oldHCStashPath2 = _plugyStashesHash[ItemStorage::HCStash].path;
         QFileInfo charPathFileInfo(_charPath);
         QString charFolderPath = charPathFileInfo.absolutePath();
         _plugyStashesHash[Enums::ItemStorage::PersonalStash].path = ui->actionAutoOpenPersonalStash->isChecked() ? QString("%1/%2.stash").arg(charFolderPath, charPathFileInfo.baseName()) : QString();
-        _plugyStashesHash[Enums::ItemStorage::SharedStash].path = ui->actionAutoOpenSharedStash->isChecked() ? charFolderPath + "/_sharedstash.shared" : QString();
-        _plugyStashesHash[Enums::ItemStorage::HCStash].path = ui->actionAutoOpenHCShared->isChecked() ? charFolderPath + "/_sharedstash.hc.shared" : QString();
+        _plugyStashesHash[Enums::ItemStorage::SigmaSharedStash].path = ui->actionAutoOpenSharedStash->isChecked() ? charFolderPath + "/_sharedstash.shared" : QString();
+        _plugyStashesHash[Enums::ItemStorage::SigmaHCStash].path = ui->actionAutoOpenHCShared->isChecked() ? charFolderPath + "/_sharedstash.hc.shared" : QString();
+        _plugyStashesHash[Enums::ItemStorage::SharedStash].path = ui->actionAutoOpenSharedStash->isChecked() ? charFolderPath + "/_MXLOT.stash" : QString();
+        _plugyStashesHash[Enums::ItemStorage::HCStash].path = ui->actionAutoOpenHCShared->isChecked() ? charFolderPath + "/_MXLOT_HC.stash" : QString();
         if (!ui->actionReloadSharedStashes->isChecked())
         {
-            sharedStashPathChanged = oldSharedStashPath != _plugyStashesHash[ItemStorage::SharedStash].path;
-                hcStashPathChanged =     oldHCStashPath != _plugyStashesHash[ItemStorage::HCStash].path;
+            sharedStashPathChanged1 = oldSharedStashPath1 != _plugyStashesHash[ItemStorage::SigmaSharedStash].path;
+            sharedStashPathChanged2 = oldSharedStashPath2 != _plugyStashesHash[ItemStorage::SharedStash].path;
+
+            hcStashPathChanged1 = oldHCStashPath1 != _plugyStashesHash[ItemStorage::SigmaHCStash].path;
+            hcStashPathChanged2 = oldHCStashPath2 != _plugyStashesHash[ItemStorage::HCStash].path;
         }
 
         _sharedGold = 0;
@@ -2198,12 +2205,20 @@ bool MedianXLOfflineTools::processSaveFile()
                 if (!(_plugyStashesHash[iter.key()].exists = ui->actionAutoOpenPersonalStash->isChecked()))
                     continue;
                 break;
+            case ItemStorage::SigmaSharedStash:
+                if (!(_plugyStashesHash[iter.key()].exists = ui->actionAutoOpenSharedStash->isChecked()) || !sharedStashPathChanged1)
+                    continue;
+                break;
+            case ItemStorage::SigmaHCStash:
+                if (!(_plugyStashesHash[iter.key()].exists = ui->actionAutoOpenHCShared->isChecked()) || !hcStashPathChanged1)
+                    continue;
+                break;
             case ItemStorage::SharedStash:
-                if (!(_plugyStashesHash[iter.key()].exists = ui->actionAutoOpenSharedStash->isChecked()) || !sharedStashPathChanged)
+                if (!(_plugyStashesHash[iter.key()].exists = ui->actionAutoOpenSharedStash->isChecked()) || !sharedStashPathChanged2)
                     continue;
                 break;
             case ItemStorage::HCStash:
-                if (!(_plugyStashesHash[iter.key()].exists = ui->actionAutoOpenHCShared->isChecked()) || !hcStashPathChanged)
+                if (!(_plugyStashesHash[iter.key()].exists = ui->actionAutoOpenHCShared->isChecked()) || !hcStashPathChanged2)
                     continue;
                 break;
             default:
@@ -2213,7 +2228,7 @@ bool MedianXLOfflineTools::processSaveFile()
         }
     }
 
-    clearItems(sharedStashPathChanged, hcStashPathChanged);
+    clearItems(sharedStashPathChanged1, hcStashPathChanged1, sharedStashPathChanged2, hcStashPathChanged2);
     charInfo.items.character += itemsBuffer;
 
     _fsWatcher->addPath(_charPath);
@@ -2321,7 +2336,7 @@ void MedianXLOfflineTools::processPlugyStash(QHash<Enums::ItemStorage::ItemStora
         return;
     if (!(info.exists = inputFile.open(QIODevice::ReadOnly)))
     {
-        showErrorMessageBoxForFile(tr("Error opening PlugY stash '%1'"), inputFile);
+        showErrorMessageBoxForFile(tr("Error opening extended stash '%1'"), inputFile);
         return;
     }
 
@@ -2805,7 +2820,7 @@ void MedianXLOfflineTools::addStatisticBits(QString &bitsString, quint64 number,
     bitsString.prepend(binaryStringFromNumber(number, false, fieldWidth));
 }
 
-void MedianXLOfflineTools::clearItems(bool sharedStashPathChanged /*= true*/, bool hcStashPathChanged /*= true*/)
+void MedianXLOfflineTools::clearItems(bool sharedStashPathChanged1 /*= true*/, bool hcStashPathChanged1 /*= true*/, bool sharedStashPathChanged2 /*= true*/, bool hcStashPathChanged2 /*= true*/)
 {
     QMutableListIterator<ItemInfo *> itemIterator(CharacterInfo::instance().items.character);
     while (itemIterator.hasNext())
@@ -2813,12 +2828,20 @@ void MedianXLOfflineTools::clearItems(bool sharedStashPathChanged /*= true*/, bo
         ItemInfo *item = itemIterator.next();
         switch (item->storage)
         {
+        case Enums::ItemStorage::SigmaSharedStash:
+            if ((sharedStashPathChanged2 || ui->actionAutoOpenSharedStash->isChecked()) && !sharedStashPathChanged1)
+                continue;
+            break;
+        case Enums::ItemStorage::SigmaHCStash:
+            if ((hcStashPathChanged2 || ui->actionAutoOpenHCShared->isChecked()) && !hcStashPathChanged1)
+                continue;
+            break;
         case Enums::ItemStorage::SharedStash:
-            if ((sharedStashPathChanged || ui->actionAutoOpenSharedStash->isChecked()) && !sharedStashPathChanged)
+            if ((sharedStashPathChanged2 || ui->actionAutoOpenSharedStash->isChecked()) && !sharedStashPathChanged2)
                 continue;
             break;
         case Enums::ItemStorage::HCStash:
-            if ((hcStashPathChanged || ui->actionAutoOpenHCShared->isChecked()) && !hcStashPathChanged)
+            if ((hcStashPathChanged2 || ui->actionAutoOpenHCShared->isChecked()) && !hcStashPathChanged2)
                 continue;
             break;
         default:
@@ -2946,7 +2969,7 @@ void MedianXLOfflineTools::fileChangeTimerFired()
     qApp->alert(this, 3000);
 
     _isFileChangedMessageBoxRunning = true;
-    if (QUESTION_BOX_YESNO(tr("The character and/or PlugY stashes have been modified externally.\nDo you want to reload them?"), QMessageBox::Yes) == QMessageBox::Yes)
+    if (QUESTION_BOX_YESNO(tr("The character and/or extended stashes have been modified externally.\nDo you want to reload them?"), QMessageBox::Yes) == QMessageBox::Yes)
     {
         // shared stashes must be reloaded regardless of the setting
         bool oldStashReloadValue = ui->actionReloadSharedStashes->isChecked();
