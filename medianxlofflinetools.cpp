@@ -688,12 +688,11 @@ void MedianXLOfflineTools::saveCharacter()
 
         ItemsList::const_iterator maxPageIter = std::max_element(items.constBegin(), items.constEnd(), compareItemsByPlugyPage);
         quint32 lastItemsPage = maxPageIter == items.constEnd() ? 1 : (*maxPageIter)->plugyPage;
-        info.lastPage = lastItemsPage - 1;
 
         QDataStream plugyFileDataStream(&inputFile);
         plugyFileDataStream.setByteOrder(QDataStream::LittleEndian);
         plugyFileDataStream << info.version;
-        plugyFileDataStream << info.lastPage;
+        plugyFileDataStream << info.activePage;
 
         for (quint32 page = 1; page <= lastItemsPage; ++page)
         {
@@ -2357,8 +2356,8 @@ void MedianXLOfflineTools::processPlugyStash(QHash<Enums::ItemStorage::ItemStora
     inputDataStream >> info.version;
 
     QString corruptedItems;
-    inputDataStream >> info.lastPage;
-    for (quint32 page = 1; page < info.lastPage + 1; ++page)
+    inputDataStream >> info.activePage;
+    for (quint32 page = 1; !inputDataStream.atEnd(); ++page)
     {
         if (bytes.mid(inputDataStream.device()->pos(), ItemParser::kPlugyPageHeader.size()) != ItemParser::kPlugyPageHeader)
         {

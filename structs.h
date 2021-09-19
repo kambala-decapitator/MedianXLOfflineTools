@@ -93,7 +93,7 @@ struct PlugyStashInfo
     QString path;
     bool exists;
     quint32 version;
-    quint32 lastPage;
+    quint32 activePage;
 };
 
 
