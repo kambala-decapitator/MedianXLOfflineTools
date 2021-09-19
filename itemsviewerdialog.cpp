@@ -325,6 +325,7 @@ void ItemsViewerDialog::updateItems(const QHash<int, bool> &plugyStashesExistenc
     setCubeTabDisabled(!CharacterInfo::instance().items.hasCube());
     for (QHash<int, bool>::const_iterator iter = plugyStashesExistenceHash.constBegin(); iter != plugyStashesExistenceHash.constEnd(); ++iter)
         _tabWidget->setTabEnabled(tabIndexFromItemStorage(iter.key()), iter.value());
+    _tabWidget->setTabEnabled(StashIndex, false);
 
     updateWindowTitle();
 }
