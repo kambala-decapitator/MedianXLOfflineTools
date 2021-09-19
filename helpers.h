@@ -46,6 +46,8 @@ qint32 getValueOfPropertyInItem(ItemInfo *item, quint16 propKey, quint16 param =
 void writeByteArrayDataWithNull(QDataStream &ds, const QByteArray &ba);
 void writeByteArrayDataWithoutNull(QDataStream &ds, const QByteArray &ba);
 
+bool isInExternalStorage(ItemInfo* item);
+
 bool isTiered(ItemInfo *item);
 bool isTiered(const QList<QByteArray> &itemTypes);
 bool isSacred(ItemInfo *item);

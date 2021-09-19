@@ -30,7 +30,6 @@ public:
         GearIndex = 0,
         InventoryIndex,
         CubeIndex,
-        StashIndex,
         PersonalStashIndex,
         SharedStashIndex,
         HCStashIndex,

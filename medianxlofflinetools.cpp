@@ -580,7 +580,7 @@ void MedianXLOfflineTools::saveCharacter()
     QHash<Enums::ItemStorage::ItemStorageEnum, ItemsList> plugyItemsHash;
     foreach (ItemInfo *item, charInfo.items.character)
     {
-        if (item->storage >= Enums::ItemStorage::PersonalStash)
+        if (isInExternalStorage(item))
             plugyItemsHash[static_cast<Enums::ItemStorage::ItemStorageEnum>(item->storage)] += item;
         else
         {
@@ -1067,22 +1067,14 @@ void MedianXLOfflineTools::itemStorageTabChanged(int tabIndex)
 void MedianXLOfflineTools::giveCube()
 {
     ItemInfo *cube = ItemDataBase::loadItemFromFile("cube");
-    if (!ItemDataBase::storeItemIn(cube, Enums::ItemStorage::Inventory, ItemsViewerDialog::rowsInStorageAtIndex(Enums::ItemStorage::Inventory), ItemsViewerDialog::colsInStorageAtIndex(Enums::ItemStorage::Inventory)) &&
-        !ItemDataBase::storeItemIn(cube, Enums::ItemStorage::Stash,     ItemsViewerDialog::rowsInStorageAtIndex(Enums::ItemStorage::Stash),     ItemsViewerDialog::colsInStorageAtIndex(Enums::ItemStorage::Stash)))
+    if (!ItemDataBase::storeItemIn(cube, Enums::ItemStorage::Inventory, ItemsViewerDialog::rowsInStorageAtIndex(Enums::ItemStorage::Inventory), ItemsViewerDialog::colsInStorageAtIndex(Enums::ItemStorage::Inventory)))
     {
-        ERROR_BOX(tr("You have no free space in inventory and stash to store the Cube"));
+        ERROR_BOX(tr("You have no free space in inventory to store the Cube"));
         delete cube;
         return;
     }
 
     QHash<int, bool> plugyStashesExistenceHash = getPlugyStashesExistenceHash();
-    if (cube->storage != Enums::ItemStorage::Inventory && plugyStashesExistenceHash[Enums::ItemStorage::PersonalStash])
-    {
-        ItemInfo *plugyCube = new ItemInfo(*cube);
-        plugyCube->storage = Enums::ItemStorage::PersonalStash;
-        plugyCube->plugyPage = 1;
-        CharacterInfo::instance().items.character += plugyCube;
-    }
     CharacterInfo::instance().items.character += cube;
 
     if (_itemsDialog)
@@ -2355,7 +2347,7 @@ void MedianXLOfflineTools::processPlugyStash(QHash<Enums::ItemStorage::ItemStora
 
         quint32 pageID;
         inputDataStream >> pageID;
-        Q_ASSERT(page == pageID + 1);
+        //Q_ASSERT(page == pageID + 1);
 
         if (bytes.mid(inputDataStream.device()->pos(), 2) != ItemParser::kItemHeader)
         {

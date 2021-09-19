@@ -204,6 +204,12 @@ void writeByteArrayDataWithoutNull(QDataStream &ds, const QByteArray &ba)
 }
 
 
+bool isInExternalStorage(ItemInfo* item)
+{
+    return item->storage > Enums::ItemStorage::Stash;
+}
+
+
 bool isTiered(ItemInfo *item)
 {
     return isTiered(ItemDataBase::Items()->value(item->itemType)->types);
@@ -232,7 +238,7 @@ bool areBothItemsSetOrUnique(ItemInfo *a, ItemInfo *b)
 
 bool isCubeInCharacterItems(ItemInfo *item)
 {
-    return (item->storage == Enums::ItemStorage::Inventory || item->storage == Enums::ItemStorage::Stash) && ItemDataBase::isCube(item);
+    return item->storage == Enums::ItemStorage::Inventory && ItemDataBase::isCube(item);
 }
 
 bool hasChanged(ItemInfo *item)

@@ -842,8 +842,7 @@ ItemInfo *ItemsPropertiesSplitter::disenchantItemIntoItem(ItemInfo *oldItem, Ite
     newItemCopy->whereEquipped = oldItem->whereEquipped;
 
     // update bits
-    bool isPlugyStorage = newItemCopy->storage == Enums::ItemStorage::PersonalStash || newItemCopy->storage == Enums::ItemStorage::SharedStash || newItemCopy->storage == Enums::ItemStorage::HCStash;
-    ReverseBitWriter::replaceValueInBitString(newItemCopy->bitString, Enums::ItemOffsets::Storage, isPlugyStorage ? Enums::ItemStorage::Stash : newItemCopy->storage);
+    ReverseBitWriter::replaceValueInBitString(newItemCopy->bitString, Enums::ItemOffsets::Storage, isInExternalStorage(newItemCopy) ? Enums::ItemStorage::Stash : newItemCopy->storage);
 
     performDeleteItem(oldItem, emitSignal);
     addItemToList(newItemCopy, emitSignal);

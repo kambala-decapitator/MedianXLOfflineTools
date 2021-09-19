@@ -722,7 +722,7 @@ bool ItemDataBase::storeItemIn(ItemInfo *item, Enums::ItemStorage::ItemStorageEn
                 item->storage = storage;
                 item->location = location;
 
-                ReverseBitWriter::replaceValueInBitString(item->bitString, Enums::ItemOffsets::Storage, storage > Enums::ItemStorage::Stash ? Enums::ItemStorage::Stash : storage);
+                ReverseBitWriter::replaceValueInBitString(item->bitString, Enums::ItemOffsets::Storage, isInExternalStorage(item) ? Enums::ItemStorage::Stash : storage);
                 ReverseBitWriter::replaceValueInBitString(item->bitString, Enums::ItemOffsets::Location, location);
 
                 return true;

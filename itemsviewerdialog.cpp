@@ -231,13 +231,21 @@ void ItemsViewerDialog::createLayout()
 }
 
 
+static QString tabStateKey(int tab)
+{
+    // backwards compatibility due to removed Stash tab
+    if (tab > ItemsViewerDialog::CubeIndex)
+        ++tab;
+    return QString("itemsTab%1_state").arg(tab);
+}
+
 void ItemsViewerDialog::loadSettings()
 {
     QSettings settings;
     restoreGeometry(settings.value("itemsViewerGeometry").toByteArray());
 
     for (int i = GearIndex; i <= LastIndex; ++i)
-        splitterAtIndex(i)->restoreState(settings.value(QString("itemsTab%1_state").arg(i)).toByteArray());
+        splitterAtIndex(i)->restoreState(settings.value(tabStateKey(i)).toByteArray());
 
     _reserveRunesSpinBox->setValue(settings.value("reserveRunes").toInt());
 }
@@ -248,7 +256,7 @@ void ItemsViewerDialog::saveSettings()
     settings.setValue("itemsViewerGeometry", saveGeometry());
 
     for (int i = GearIndex; i <= LastIndex; ++i)
-        settings.setValue(QString("itemsTab%1_state").arg(i), splitterAtIndex(i)->saveState());
+        settings.setValue(tabStateKey(i), splitterAtIndex(i)->saveState());
 
     settings.setValue("reserveRunes", _reserveRunesSpinBox->value());
 }
@@ -311,7 +319,7 @@ void ItemsViewerDialog::updateItems(const QHash<int, bool> &plugyStashesExistenc
     for (int i = GearIndex; i <= LastIndex; ++i)
     {
         bool isGearTab = i == GearIndex;
-        ItemsList items = ItemDataBase::itemsStoredIn(Enums::ItemStorage::metaEnum().value(i), isGearTab ? Enums::ItemLocation::Equipped : Enums::ItemLocation::Stored);
+        ItemsList items = ItemDataBase::itemsStoredIn(Enums::ItemStorage::metaEnum().value(i > CubeIndex ? i+1 : i), isGearTab ? Enums::ItemLocation::Equipped : Enums::ItemLocation::Stored);
         if (isGearTab)
             updateGearItems(0, &items, isCreatingTabs);
         else
@@ -325,7 +333,6 @@ void ItemsViewerDialog::updateItems(const QHash<int, bool> &plugyStashesExistenc
     setCubeTabDisabled(!CharacterInfo::instance().items.hasCube());
     for (QHash<int, bool>::const_iterator iter = plugyStashesExistenceHash.constBegin(); iter != plugyStashesExistenceHash.constEnd(); ++iter)
         _tabWidget->setTabEnabled(tabIndexFromItemStorage(iter.key()), iter.value());
-    _tabWidget->setTabEnabled(StashIndex, false);
 
     updateWindowTitle();
 }
@@ -408,13 +415,13 @@ void ItemsViewerDialog::updateGearItems(ItemsList *pBeltItems /*= 0*/, ItemsList
 
 const QList<int> &ItemsViewerDialog::kRows()
 {
-    static QList<int> rows = QList<int>() << 11 << 10 << 10 << 14 << 14 << 14 << 14;
+    static QList<int> rows = QList<int>() << 11 << 10 << 10 << 14 << 14 << 14;
     return rows;
 }
 
 const QList<int>& ItemsViewerDialog::kColumns()
 {
-    static QList<int> cols = QList<int>() << 8 << 15 << 15 << 14 << 14 << 14 << 14;
+    static QList<int> cols = QList<int>() << 8 << 15 << 15 << 14 << 14 << 14;
     return cols;
 }
 
@@ -430,13 +437,23 @@ int ItemsViewerDialog::colsInStorageAtIndex(int storage)
 
 int ItemsViewerDialog::tabIndexFromItemStorage(int storage)
 {
-    return storage > Enums::ItemStorage::Inventory ? storage - 2 : storage;
+    switch (storage)
+    {
+    case Enums::ItemStorage::NotInStorage:
+    case Enums::ItemStorage::Inventory:
+        return storage;
+    // stash is removed because it's always empty
+    case Enums::ItemStorage::Cube:
+        return storage - 2;
+    default:
+        return storage - 3;
+    }
 }
 
 const QString &ItemsViewerDialog::tabNameAtIndex(int i)
 {
     // add elements here when adding new tab
-    static const QStringList tabNames = QStringList() << tr("Gear") << tr("Inventory") << tr("Cube") << tr("Stash") << tr("Personal Stash") << tr("Shared Stash") << tr("Hardcore Stash");
+    static const QStringList tabNames = QStringList() << tr("Gear") << tr("Inventory") << tr("Cube") << tr("Personal Stash") << tr("Shared Stash") << tr("Hardcore Stash");
     static const QString unknownName("WTF");
     return i >= 0 && i < tabNames.size() ? tabNames.at(i) : unknownName;
 }
@@ -593,7 +610,7 @@ void ItemsViewerDialog::moveItemBetweenStashes(ItemInfo *item)
 {
     QList<Enums::ItemStorage::ItemStorageEnum> newStoragesToTry;
     if (qobject_cast<PlugyItemsSplitter *>(sender()))
-        newStoragesToTry << Enums::ItemStorage::Stash << Enums::ItemStorage::Inventory << Enums::ItemStorage::Cube;
+        newStoragesToTry << Enums::ItemStorage::Inventory << Enums::ItemStorage::Cube;
     else
         newStoragesToTry << CURRENT_SHARED_STASH;
 
