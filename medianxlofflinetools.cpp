@@ -2731,6 +2731,10 @@ QByteArray MedianXLOfflineTools::statisticBytes()
         {
             isAchievement = true;
         }
+        else if (statCode == Enums::CharacterStats::SignetsOfSkillEaten)
+        {
+            value = CharacterInfo::instance().valueOfStatistic(statCode);
+        }
         else if (statCode != Enums::CharacterStats::End && statCode != Enums::CharacterStats::Level && statCode != Enums::CharacterStats::Experience)
         {
             value = _lineEditsStatsMap[statCode]->text().toULongLong();
