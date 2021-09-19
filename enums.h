@@ -75,9 +75,9 @@ class Progression
 public:
     enum
     {
-        Hatred = 0x4,
+        Normal = 0x4,
         Nightmare = 0x9,
-        Destruction = 0xE,
+        Hell = 0xE,
         Completed = 0x10
     };
 

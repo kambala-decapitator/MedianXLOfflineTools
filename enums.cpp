@@ -14,11 +14,11 @@ const QStringList &ClassName::classes()
 
 QPair<QString, quint8> Progression::titleNameAndMaxDifficultyFromValue(quint8 value, bool isMale, bool isHC)
 {
-    if (value < Hatred)
+    if (value < Normal)
         return QPair<QString, quint8>(tr("Nobody"), 0);
     else if (value < Nightmare)
         return QPair<QString, quint8>(isHC ? tr("Destroyer") : tr("Slayer"), 1);
-    else if (value < Destruction)
+    else if (value < Hell)
         return QPair<QString, quint8>(isHC ? tr("Conqueror") : tr("Champion"), 2);
     else if (value < Completed)
         return QPair<QString, quint8>(isHC ? tr("Guardian") : (isMale ? tr("Patriarch") : tr("Matriarch")), 2);

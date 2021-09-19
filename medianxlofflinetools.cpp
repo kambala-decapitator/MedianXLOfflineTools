@@ -1459,7 +1459,7 @@ void MedianXLOfflineTools::createQuestsGroupBoxLayout()
     _questsGroupBox = new QGroupBox(tr("Quests"), this);
 
     QList<int> questKeys = QList<int>() << Enums::Quests::DenOfEvil << Enums::Quests::Radament << Enums::Quests::Izual << Enums::Quests::LamEsensTome << Enums::Quests::GoldenBird << Enums::Quests::Anya;
-    QStringList difficulites = QStringList() << tr("Hatred") << tr("Terror") << tr("Destruction");
+    QStringList difficulites = QStringList() << tr("Normal") << tr("Nightmare") << tr("Hell");
     foreach (int quest, questKeys)
     {
         foreach (const QString &difficulty, difficulites)
