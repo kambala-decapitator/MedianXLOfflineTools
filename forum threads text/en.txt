@@ -34,8 +34,8 @@ I hope I provided enough anti-hack protection for an average user. If you manage
 [*]single instance[/list][*]and many others ;)[/list][/spoil]
 
 [b]Downloads[/b]:
-[list][*][i]Windows[/i] (7 SP1 and later): https://mxl.vn.cz/kambala/MedianXLOfflineTools_0.6.7z (if it doesn't launch, install MSVC++ 2019 Redistributable vc_redist.x[c]86[/c].exe from [url=https://aka.ms/vs/16/release/vc_redist.x86.exe]Microsoft's website[/url])
-[*][i]macOS[/i] (10.9 and later, Intel 64bit): https://mxl.vn.cz/kambala/MedianXLOfflineTools_mac_0.6.txz[/list]
+[list][*][i]Windows[/i] (7 SP1 and later): https://mxl.vn.cz/kambala/MedianXLOfflineTools_0.6.1.7z (if it doesn't launch, install MSVC++ 2019 Redistributable vc_redist.x[c]86[/c].exe from [url=https://aka.ms/vs/16/release/vc_redist.x86.exe]Microsoft's website[/url])
+[*][i]macOS[/i] (10.9 and later, Intel 64bit): https://mxl.vn.cz/kambala/MedianXLOfflineTools_mac_0.6.1.txz[/list]
 
 [b]Mini-FAQ:[/b]
 [spoil]Q: Where are Sigma saves?
@@ -99,17 +99,23 @@ A: Probably the character you had loaded last time became broken. To make the ap
 
 [b]Changelog[/b]:
 
-[i]v0.6 (18.09.2021)[/i]
-[list][+] Sigma v2 support including extended stashes
-[-] remove Mystic Orbs support (will be restored later)
-[-] PlugY stash format no longer supported
+[i]v0.6.1 (19.09.2021)[/i]
+[list][+] app-only shared infinite stash
+[f] fix crash on saving characters with consumed Signet of Skill
+[f] fix parsing Sigma stashes
+[-] remove "Deactivate Halls of Pain" - no longer needed
 [/list]
 Known bugs:
 - skills without names, e.g. "+1 to "
 - Paladin skill tree not displayed
 
 Older versions:
-[spoil][i]v0.5.8 (22.08.2021)[/i]
+[spoil][i]v0.6 (18.09.2021)[/i]
+[list][+] Sigma v2 support including extended stashes
+[-] remove Mystic Orbs support (will be restored later)
+[-] PlugY stash format no longer supported
+[/list]
+[i]v0.5.8 (22.08.2021)[/i]
 [list][+] handle "Orb Effects Applied to this Item are Quadrupled"
 [+] handle class restriction item property
 [f] improve full item description to match the game's closer
