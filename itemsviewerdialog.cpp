@@ -637,19 +637,20 @@ void ItemsViewerDialog::moveItemBetweenStashes(ItemInfo *item)
 
 void ItemsViewerDialog::moveCurrentItemsToSharedStash()
 {
-    ItemsList itemsToMove = currentSplitter()->itemsModel()->items();
-    if (itemsToMove.isEmpty())
+    ItemsPropertiesSplitter *curSplitter = currentSplitter();
+    ItemsList *itemsToMove = curSplitter->getItems();
+    if (itemsToMove->isEmpty())
         return;
 
     Enums::ItemStorage::ItemStorageEnum storage = CURRENT_SHARED_STASH;
     int tab = tabIndexFromItemStorage(storage);
     PlugyItemsSplitter *plugySplitter = qobject_cast<PlugyItemsSplitter *>(splitterAtIndex(tab));
-    plugySplitter->addItemsToLastPage(itemsToMove, storage);
+    plugySplitter->addItemsToLastPage(*itemsToMove, storage);
     _tabWidget->setTabEnabled(tab, true);
     itemCountChangedInTab(tab, plugySplitter->itemCount());
 
-    currentSplitter()->setItems(ItemsList());
-    itemCountChangedInCurrentTab(0);
+    curSplitter->clearItemsInCurrentStorage();
+    itemCountChangedInCurrentTab(curSplitter->itemCount());
 }
 
 void ItemsViewerDialog::adjustHeight(bool isBoxExpanded)

@@ -23,6 +23,7 @@ public:
     virtual ItemsList *getItems() { return allOrCurrentPageItems(); }
     virtual bool storeItemInStorage(ItemInfo *item, int storage, bool emitSignal = false);
     void addItemsToLastPage(const ItemsList &items, Enums::ItemStorage::ItemStorageEnum storage);
+    void clearItemsInCurrentStorage();
 
     virtual QPair<bool, bool> updateDisenchantButtonsState(bool includeUniques, bool includeSets, bool toCrystals, ItemsList *items = 0);
     virtual QPair<bool, bool> updateUpgradeButtonsState(int reserveRunes, ItemsList *items = 0);

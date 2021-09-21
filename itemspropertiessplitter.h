@@ -39,6 +39,7 @@ public:
     virtual ItemsList *getItems() { return &_allItems; }
     virtual bool storeItemInStorage(ItemInfo *item, int storage, bool emitSignal = false);
     void setCellSpanForItem(ItemInfo *item);
+    virtual void clearItemsInCurrentStorage() { setItems(ItemsList()); }
 
     virtual QPair<bool, bool> updateDisenchantButtonsState(bool includeUniques, bool includeSets, bool toCrystals, ItemsList *pItems = 0);
     virtual QPair<bool, bool> updateUpgradeButtonsState(int reserveRunes, ItemsList *pItems = 0);

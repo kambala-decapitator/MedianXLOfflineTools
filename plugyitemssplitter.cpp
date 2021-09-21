@@ -204,6 +204,20 @@ void PlugyItemsSplitter::removeItemFromModel(ItemInfo *item)
     _allItems.removeOne(item);
 }
 
+void PlugyItemsSplitter::clearItemsInCurrentStorage()
+{
+    if (_shouldApplyActionToAllPages)
+    {
+        ItemsPropertiesSplitter::clearItemsInCurrentStorage();
+        return;
+    }
+
+    foreach (ItemInfo *item, _pagedItems)
+        _allItems.removeOne(item);
+    _pagedItems.clear();
+    updateItems(_pagedItems);
+}
+
 bool PlugyItemsSplitter::shouldAddMoveItemAction() const
 {
     bool isHcChar = CharacterInfo::instance().basicInfo.isHardcore;
@@ -233,17 +247,25 @@ void PlugyItemsSplitter::addItemsToLastPage(const ItemsList &items, Enums::ItemS
     if (items.isEmpty())
         return;
 
-    bool wasStashEmpty = _lastNotEmptyPage == 0;
-    setNewLastPage(_lastNotEmptyPage + 1);
+    QMap<quint32, ItemsList> pagedItemsMap;
     foreach (ItemInfo *item, items)
-    {
-        item->storage = storage;
-        item->plugyPage = _lastNotEmptyPage;
-        item->hasChanged = true;
-        addItemToList(item, false);
+        pagedItemsMap[item->plugyPage] << item;
 
-        if (wasStashEmpty)
-            setCellSpanForItem(item);
+    bool wasStashEmpty = _lastNotEmptyPage == 0, spanUpdated = false;
+    foreach (ItemsList pagedItems, pagedItemsMap)
+    {
+        setNewLastPage(_lastNotEmptyPage + 1);
+        foreach (ItemInfo *item, pagedItems)
+        {
+            item->storage = storage;
+            item->plugyPage = _lastNotEmptyPage;
+            item->hasChanged = true;
+            addItemToList(item, false);
+
+            if (wasStashEmpty && !spanUpdated)
+                setCellSpanForItem(item);
+        }
+        spanUpdated = true;
     }
     emit itemsChanged();
 }
