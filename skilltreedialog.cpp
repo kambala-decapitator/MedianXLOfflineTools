@@ -125,8 +125,12 @@ SkillTreeDialog::SkillTreeDialog(QWidget *parent /*= 0*/) : QDialog(parent), _ta
                 totalSkillPoints += qMin(3, getValueOfPropertyInItem(item, Enums::ItemProperties::Oskill, skillIndex));
             }
 
+            QString skillName = skill->name;
+            foreach (const QByteArray &color, ColorsManager::colorStrings())
+                skillName.remove(color);
+
             SkillWidget *w = new SkillWidget(tab);
-            w->setSkillName(skill->name);
+            w->setSkillName(skillName);
             w->setSkillImageForClassWithId(charInfo.classCode, skill->imageId);
             w->setSkillPoints(baseSkillPoints, totalSkillPoints);
             grid->addWidget(w, skill->row - 1, skill->col - 1);
