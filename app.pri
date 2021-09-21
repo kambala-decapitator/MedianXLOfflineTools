@@ -31,7 +31,7 @@ CONFIG(release, debug|release): {
 # app version
 NVER1 = 0
 NVER2 = 6
-NVER3 = 1
+NVER3 = 2
 NVER4 = 0
 
       greaterThan(NVER4, 0): NVER_STRING_LAST = $$sprintf("%1.%2", $$NVER3, $$NVER4)
