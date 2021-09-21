@@ -54,7 +54,7 @@ private:
 
 SkillTreeDialog::SkillTreeDialog(QWidget *parent /*= 0*/) : QDialog(parent), _tabWidget(new QTabWidget(this))
 {
-    setWindowFlags(windowFlags() & ~Qt::WindowContextHelpButtonHint | Qt::MSWindowsFixedSizeDialogHint);
+    setWindowFlags(windowFlags() & ~Qt::WindowContextHelpButtonHint);
     setWindowTitle(tr("Skill tree"));
 
     const CharacterInfo::CharacterInfoBasic &charInfo = CharacterInfo::instance().basicInfo;
@@ -138,7 +138,6 @@ SkillTreeDialog::SkillTreeDialog(QWidget *parent /*= 0*/) : QDialog(parent), _ta
     connect(buttonBox, SIGNAL(rejected()), SLOT(reject()));
 
     QVBoxLayout *layout = new QVBoxLayout(this);
-    layout->setSizeConstraint(QLayout::SetFixedSize);
     layout->addWidget(_tabWidget);
     layout->addWidget(buttonBox);
 
