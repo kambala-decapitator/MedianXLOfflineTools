@@ -103,6 +103,7 @@ ItemsViewerDialog::ItemsViewerDialog(const QHash<int, bool> &plugyStashesExisten
     connect(_upgradeGemsButton,  SIGNAL(clicked()), SLOT(upgradeGems()));
     connect(_upgradeRunesButton, SIGNAL(clicked()), SLOT(upgradeRunes()));
     connect(_upgradeBothButton,  SIGNAL(clicked()), SLOT(upgradeGemsAndRunes()));
+    connect(_reserveRunesSpinBox, SIGNAL(valueChanged(int)), SLOT(updateItemManagementButtonsState()));
 
     connect(_sortStashButton, SIGNAL(clicked()), SLOT(sortStash()));
     connect(_insertBlankPagesBeforeButton, SIGNAL(clicked()), SLOT(insertBlankPages()));
