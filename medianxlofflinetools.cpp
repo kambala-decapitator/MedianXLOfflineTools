@@ -61,7 +61,7 @@ extern void qt_mac_set_dock_menu(QMenu *);
 
 // static const
 
-static const QString kLastSavePathKey("lastSavePath"), kBackupExtension("bak"), kReadonlyCss("QLineEdit { background-color: rgb(227, 227, 227) }"), kTimeFormatReadable("yyyyMMdd-hhmmss"), kMedianXlServer("https://mxl.vn.cz/kambala/");
+static const QString kLastSavePathKey("lastSavePath"), kBackupExtension("bak"), kReadonlyCss("QLineEdit { background-color: rgb(227, 227, 227) }"), kTimeFormatReadable("yyyyMMdd-hhmmss"), kMedianXlServer("http://mxl.vn.cz/kambala/");
 static const QByteArray kMercHeader("jf"), kSkillsHeader("if"), kIronGolemHeader("kf");
 
 const QString MedianXLOfflineTools::kCompoundFormat("%1, %2");
