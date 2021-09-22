@@ -50,8 +50,8 @@
 
 [B]Загрузки[/B]:
 [LIST]
-[*][I]Windows[/I] (7 SP1 и позже): [URL]https://mxl.vn.cz/kambala/MedianXLOfflineTools_0.6.1.7z[/URL] (если не запускается, установите MSVC++ 2019 Redistributable [FONT=Courier New]vc_redist.x[B]86[/B].exe[/FONT] с [URL='https://aka.ms/vs/16/release/vc_redist.x86.exe']сайта Microsoft[/URL])
-[*][I]macOS[/I] (10.9 и позже, Intel 64bit): [URL]https://mxl.vn.cz/kambala/MedianXLOfflineTools_mac_0.6.1.txz[/URL]
+[*][I]Windows[/I] (7 SP1 и позже): [URL]https://mxl.vn.cz/kambala/MedianXLOfflineTools_0.6.2.7z[/URL] (если не запускается, установите MSVC++ 2019 Redistributable [FONT=Courier New]vc_redist.x[B]86[/B].exe[/FONT] с [URL='https://aka.ms/vs/16/release/vc_redist.x86.exe']сайта Microsoft[/URL])
+[*][I]macOS[/I] (10.9 и позже, Intel 64bit): [URL]https://mxl.vn.cz/kambala/MedianXLOfflineTools_mac_0.6.2.txz[/URL]
 [/LIST]
 
 [spoiler="Mini-FAQ"]В: Где находятся сохранения Сигмы?
@@ -124,6 +124,18 @@ cp -R resources/data/* "${APP_PATH}/Contents/resources/data"[/code]
 
 [B]История версий:[/B]
 
+[I]v0.6.2 (21.09.2021)[/I]
+[LIST]
+[*][ф] исправлен перенос предметов с помощью кнопки из сундуков Сигмы в бесконечный
+[*][ф] исправлена проверка обновлений
+[*][ф] исправлена сортировка комплектов
+[/LIST]
+
+Известные баги:
+- навыки без названий, например "+1 к "
+- древо навыков Паладина не отображается
+
+[spoiler="предыдущие версии"]
 [I]v0.6.1 (19.09.2021)[/I]
 [LIST]
 [*][+] новый формат бесконечного сундука для использования в программе
@@ -132,11 +144,6 @@ cp -R resources/data/* "${APP_PATH}/Contents/resources/data"[/code]
 [*][-] удалена деактивация телепорта Halls of Pain — в этом больше нет необходимости
 [/LIST]
 
-Известные баги:
-- навыки без названий, например "+1 к "
-- древо навыков Паладина не отображается
-
-[spoiler="предыдущие версии"]
 [I]v0.6 (18.09.2021)[/I]
 [LIST]
 [*][+] поддержка Сигмы версии 2 включая расширенные сундуки
