@@ -651,6 +651,7 @@ void ItemsViewerDialog::moveCurrentItemsToSharedStash()
     itemCountChangedInTab(tab, plugySplitter->itemCount());
 
     curSplitter->clearItemsInCurrentStorage();
+    curSplitter->setCurrentStorageHasChanged();
     itemCountChangedInCurrentTab(curSplitter->itemCount());
 }
 
