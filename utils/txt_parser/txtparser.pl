@@ -115,7 +115,7 @@ sub statIdsFromPropertyStat
     return join(',', @ids)
 }
 
-my $uniques = parsetxt("uniqueitems.csv", _autoindex=>0, iName=>0, rlvl=>5, image=>64);
+my $uniques = parsetxt("uniqueitems.csv", _autoindex=>0, iName=>0, ilvl=>4, rlvl=>5, image=>64);
 &tblExpandArray($uniques, "iName");
 
 # any fixed property in .txt is defined with the following set of columns
@@ -366,12 +366,12 @@ for my $ref ($armorTypes, $weaponTypes, $miscTypes)
 close $out;
 
 open $out, ">", "$prefix/uniques.csv";
-print $out "#index\titem\trlvl\timage\n";
+print $out "#index\titem\trlvl\tilvl\timage\n";
 my $count = -1;
 for my $hashRef (@$uniques)
 {
     my $realName = $hashRef->{$realNameField};
-    printf $out "%d\t%s\t%d\t%s\n", $count, ($realName // ''), ($hashRef->{rlvl} // 0),
+    printf $out "%d\t%s\t%d\t%d\t%s\n", $count, ($realName // ''), ($hashRef->{rlvl} // 0), ($hashRef->{ilvl} // 0),
         ($hashRef->{image} // '') if defined $realName;
     $count++
 }
