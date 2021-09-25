@@ -315,8 +315,9 @@ QHash<uint, UniqueItemInfo *> *ItemDataBase::Uniques()
             UniqueItemInfo *uniqueItem = new UniqueItemInfo;
             uniqueItem->name = QString::fromUtf8(data.at(1));
             uniqueItem->rlvl = data.at(2).toUShort();
-            if (data.size() > 3)
-                uniqueItem->imageName = data.at(3);
+            uniqueItem->ilvl = data.at(3).toUShort();
+            if (data.size() > 4)
+                uniqueItem->imageName = data.at(4);
             allUniques[data.at(0).toUInt()] = uniqueItem;
         }
     }

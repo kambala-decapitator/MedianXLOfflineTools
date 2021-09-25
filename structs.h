@@ -195,7 +195,7 @@ struct ItemPropertyTxt
 
 struct SetOrUniqueItemInfo
 {
-    quint16 rlvl;
+    quint16 rlvl, ilvl;
     QByteArray imageName;
 };
 
