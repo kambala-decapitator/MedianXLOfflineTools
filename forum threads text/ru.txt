@@ -50,8 +50,8 @@
 
 [B]Загрузки[/B]:
 [LIST]
-[*][I]Windows[/I] (7 SP1 и позже): [URL]https://mxl.vn.cz/kambala/MedianXLOfflineTools_0.6.2.7z[/URL] (если не запускается, установите MSVC++ 2019 Redistributable [FONT=Courier New]vc_redist.x[B]86[/B].exe[/FONT] с [URL='https://aka.ms/vs/16/release/vc_redist.x86.exe']сайта Microsoft[/URL])
-[*][I]macOS[/I] (10.9 и позже, Intel 64bit): [URL]https://mxl.vn.cz/kambala/MedianXLOfflineTools_mac_0.6.2.txz[/URL]
+[*][I]Windows[/I] (7 SP1 и позже): [URL]https://mxl.vn.cz/kambala/MedianXLOfflineTools_0.6.3.7z[/URL] (если не запускается, установите MSVC++ 2019 Redistributable [FONT=Courier New]vc_redist.x[B]86[/B].exe[/FONT] с [URL='https://aka.ms/vs/16/release/vc_redist.x86.exe']сайта Microsoft[/URL])
+[*][I]macOS[/I] (10.9 и позже, Intel 64bit): [URL]https://mxl.vn.cz/kambala/MedianXLOfflineTools_mac_0.6.3.txz[/URL]
 [/LIST]
 
 [spoiler="Mini-FAQ"]В: Где находятся сохранения Сигмы?
@@ -68,7 +68,8 @@
 [*]длинный 'терминальный' ответ: откройте Терминал, cd в папку, в которую вы распаковали данные мода (в ней должна находиться папка 'resources') и используйте следующий скрипт:
 [code]APP_PATH="/Applications/MedianXLOfflineTools.app" # поместите в кавычки реальный путь, это лишь пример
 cp -R resources/data/* "${APP_PATH}/Contents/resources/data"[/code]
-[/LIST][/LIST]
+[/LIST]
+[/LIST]
 
 В: Я сломал персонажа и/или сундук PlugY и ни игра, ни данное приложение не могут его загрузить. Как я могу его восстановить из резервной копии?
 О: Пройдите в папку сохранений и поищите файл(ы) <персонаж>.<d2s или d2x>_<дата>.bak и удалите всё справа от d2s или d2x. Если вы хотите восстановить общий сундук, то он называется _LOD<_HC для смертных (хардкорных)>_SharedStashSave.sss_<дата>.bak и удалите всё справа от sss.
@@ -104,12 +105,14 @@ cp -R resources/data/* "${APP_PATH}/Contents/resources/data"[/code]
 [*][I]macOS[/I] (10.9 и позже, Intel 64bit, рекомендуемая версия для современных ОС): [URL]https://mxl.vn.cz/kambala/MedianXLOfflineTools_mac_0.4.6.tbz[/URL]
 [*][I]старые Mac OS X[/I] (10.5 и позже, 32bit универсальное приложение, не будет запускаться начиная с macOS 10.15): [URL]https://mxl.vn.cz/kambala/MedianXLOfflineTools_mac_universal_32bit_0.4.6.tbz[/URL]
 [/LIST]
-[*][B]Данные модов[/B] (инструкции по установке находятся ниже в Mini-FAQ):
+[*][B]Данные модов[/B](инструкции по установке находятся ниже в Mini-FAQ):
 [LIST]
 [*][I]2017 1.3:[/I] [URL]https://mxl.vn.cz/kambala/2017-1.3.zip[/URL]
 [*][I]Ultimative XVI:[/I] [URL]https://mxl.vn.cz/kambala/ultimativeXVI.7z[/URL]
 [*][I]2012 v005 / Лабиринт Кейджан + Тафамет против Ану / Hardened:[/I] [URL]https://mxl.vn.cz/kambala/2012-005+kehjan+tathamet.7z[/URL]
-[/LIST][/LIST][/spoiler]
+[/LIST]
+[/LIST]
+[/spoiler]
 [spoiler="Скриншоты"]кликните для полноразмерного просмотра
 [URL='http://s1125.photobucket.com/user/kambala_decapitator/media/Median%20XL%20Offline%20Tools/main_ru4.png.html'][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_main_ru4.png[/IMG][/URL][URL='http://s1125.photobucket.com/user/kambala_decapitator/media/Median%20XL%20Offline%20Tools/main_ru_mac2.png.html'][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_main_ru_mac2.png[/IMG][/URL]
 [URL='http://s1125.photobucket.com/user/kambala_decapitator/media/items2_ru.png.html'][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/th_items2_ru.png[/IMG][/URL][URL='http://s1125.photobucket.com/user/kambala_decapitator/media/items_plugy2_ru.png.html'][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/th_items_plugy2_ru.png[/IMG][/URL]
@@ -124,11 +127,10 @@ cp -R resources/data/* "${APP_PATH}/Contents/resources/data"[/code]
 
 [B]История версий:[/B]
 
-[I]v0.6.2 (21.09.2021)[/I]
+[I]v0.6.3 (28.09.2021)[/I]
 [LIST]
-[*][ф] исправлен перенос предметов с помощью кнопки из сундуков Сигмы в бесконечный
-[*][ф] исправлена проверка обновлений
-[*][ф] исправлена сортировка комплектов
+[*][ф] опять исправлен перенос предметов с помощью кнопки: теперь сундуки Сигмы сохраняются после модификации
+[*][ф] уники сортируются по уровню предмета (ilvl) чтобы отличать SSSSSSSSSSSSSSU
 [/LIST]
 
 Известные баги:
@@ -136,6 +138,13 @@ cp -R resources/data/* "${APP_PATH}/Contents/resources/data"[/code]
 - древо навыков Паладина не отображается
 
 [spoiler="предыдущие версии"]
+[I]v0.6.2 (21.09.2021)[/I]
+[LIST]
+[*][ф] исправлен перенос предметов с помощью кнопки из сундуков Сигмы в бесконечный
+[*][ф] исправлена проверка обновлений
+[*][ф] исправлена сортировка комплектов
+[/LIST]
+
 [I]v0.6.1 (19.09.2021)[/I]
 [LIST]
 [*][+] новый формат бесконечного сундука для использования в программе
