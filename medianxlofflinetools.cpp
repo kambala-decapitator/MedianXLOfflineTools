@@ -217,18 +217,20 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, LaunchMode la
         QTimer::singleShot(0, launchMode == LaunchModeDumpItems ? dumpItemsAction : dupeCheckAction, SLOT(trigger()));
     else
     {
-        // [-hc2sc] [-toladder | -fromladder] charPath
+        // [-hc2sc | -sc2hc] [-toladder | -fromladder] charPath
         QStringList args = qApp->arguments();
         QString charPath = args.last();
         if (!QFile::exists(charPath))
             return;
 
-        bool hc2sc = false, *pToLadder = 0;
+        bool hc2sc = false, sc2hc = false, *pToLadder = 0;
         for (int i = 1; i < args.size() - 1; ++i)
         {
             QString arg = args.at(i);
             if (arg == QLatin1String("-hc2sc"))
                 hc2sc = true;
+            else if (arg == QLatin1String("-sc2hc"))
+                sc2hc = true;
             else if (arg == QLatin1String("-toladder"))
             {
                 delete pToLadder;
@@ -242,7 +244,7 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, LaunchMode la
             else
                 qDebug("unknown arg %s", qPrintable(arg));
         }
-        if (!hc2sc && !pToLadder)
+        if (!hc2sc && !sc2hc && !pToLadder)
             return;
 
         _charPath = charPath;
@@ -250,6 +252,8 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, LaunchMode la
         {
             if (hc2sc)
                 CharacterInfo::instance().basicInfo.isHardcore = false;
+            if (sc2hc)
+                CharacterInfo::instance().basicInfo.isHardcore = true;
             if (pToLadder)
                 CharacterInfo::instance().basicInfo.isLadder = *pToLadder;
             saveCharacter();
