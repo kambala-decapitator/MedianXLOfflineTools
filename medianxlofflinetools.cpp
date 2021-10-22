@@ -1326,14 +1326,17 @@ void MedianXLOfflineTools::createLayout()
     createWaypointsGroupBoxLayout();
     createMercGroupBoxLayout();
     createStatsGroupBoxLayout();
-    createQuestsGroupBoxLayout();
 
     QGridLayout *grid = new QGridLayout(centralWidget());
     grid->addWidget(ui->characterGroupBox, 0, 0);
     grid->addWidget(ui->waypointsGroupBox, 1, 0);
     grid->addWidget(ui->mercGroupBox, 2, 0);
     grid->addWidget(ui->statsGroupBox, 0, 1);
+
+#ifndef DUPE_CHECK
+    createQuestsGroupBoxLayout();
     grid->addWidget(_questsGroupBox, 1, 1, 2, 1);
+#endif
 
     ui->statsTableWidget->verticalHeader()->setDefaultAlignment(Qt::AlignCenter);
     ui->statsTableWidget->horizontalHeader()->
