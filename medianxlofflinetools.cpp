@@ -450,7 +450,7 @@ void MedianXLOfflineTools::saveCharacter()
     if (ui->activateWaypointsCheckBox->isChecked())
 #endif
     {
-        QByteArray activatedWaypointsBytes(5, 0xFF); // 40 x '1'
+        QByteArray activatedWaypointsBytes(22, 0xFF);
         for (int startPos = Enums::Offsets::WaypointsData + 2, i = 0; i < kDifficultiesNumber; ++i, startPos += 24)
             tempFileContents.replace(startPos, activatedWaypointsBytes.size(), activatedWaypointsBytes);
     }
