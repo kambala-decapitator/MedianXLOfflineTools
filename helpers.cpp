@@ -66,7 +66,7 @@ QString colorHexString(const QColor &c)
 
 QString colorHexFromColorString(const QString &colorString)
 {
-    return colorHexString(ColorsManager::colors().at(ColorsManager::colorStrings().indexOf(colorString.toAscii())));
+    return colorHexString(ColorsManager::colors().at(ColorsManager::colorStrings().indexOf(colorString.toLatin1())));
 }
 
 QString textWithHtmlColor(const QString &text, const QString &colorString)

@@ -8,6 +8,7 @@
 #include "propertiesdisplaymanager.h"
 #include "characterinfo.hpp"
 
+#include <QAction>
 #include <QSettings>
 
 #ifndef QT_NO_DEBUG
