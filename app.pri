@@ -21,6 +21,9 @@ greaterThan(QT_MAJOR_VERSION, 4): {
     QT += widgets concurrent
     *-clang*: cache()
 }
+greaterThan(QT_MAJOR_VERSION, 5) {
+    QT += core5compat
+}
 
 CONFIG(release, debug|release): {
     IS_RELEASE_BUILD = 1
