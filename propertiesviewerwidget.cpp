@@ -282,12 +282,12 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
 
     // TODO: [later] use lambda to calculate requirements
     if (itemBase->rdex)
-        if (quint16 rdex = itemBase->rdex + (itemBase->rdex * allProps.value(ItemProperties::Requirements, foo)->value) / 100)
+		if (quint16 rdex = itemBase->rdex + (itemBase->rdex * qMax(-100, allProps.value(ItemProperties::Requirements, foo)->value)) / 100)
             itemDescription += htmlStringFromDiabloColorString(qApp->translate(kTranslationContext, "Required Dexterity: %1").arg(rdex), charInfo.valueOfStatistic(CharacterStats::Dexterity) < rdex ? ColorsManager::Red : ColorsManager::White)
                                + kHtmlLineBreak;
 
     if (itemBase->rstr)
-        if (quint16 rstr = itemBase->rstr + (itemBase->rstr * allProps.value(ItemProperties::Requirements, foo)->value) / 100)
+		if (quint16 rstr = itemBase->rstr + (itemBase->rstr * qMax(-100, allProps.value(ItemProperties::Requirements, foo)->value)) / 100)
             itemDescription += htmlStringFromDiabloColorString(qApp->translate(kTranslationContext, "Required Strength: %1").arg(rstr),  charInfo.valueOfStatistic(CharacterStats::Strength)  < rstr ? ColorsManager::Red : ColorsManager::White)
                                + kHtmlLineBreak;
 

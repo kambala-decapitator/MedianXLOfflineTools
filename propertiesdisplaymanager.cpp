@@ -173,11 +173,11 @@ QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item, bool u
 
     // TODO: [later] use lambda to calculate requirements
     if (itemBase->rdex)
-        if (int rdex = itemBase->rdex + (itemBase->rdex * allProps.value(Enums::ItemProperties::Requirements, foo)->value) / 100)
+		if (int rdex = itemBase->rdex + (itemBase->rdex * qMax(-100, allProps.value(Enums::ItemProperties::Requirements, foo)->value)) / 100)
             itemDescription += "\n" + tr("Required Dexterity: %1").arg(rdex);
 
     if (itemBase->rstr)
-        if (int rstr = itemBase->rstr + (itemBase->rstr * allProps.value(Enums::ItemProperties::Requirements, foo)->value) / 100)
+		if (int rstr = itemBase->rstr + (itemBase->rstr * qMax(-100, allProps.value(Enums::ItemProperties::Requirements, foo)->value)) / 100)
             itemDescription += "\n" + tr("Required Strength: %1").arg(rstr);
 
     int rlvl;
