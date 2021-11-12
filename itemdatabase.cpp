@@ -329,6 +329,52 @@ QHash<uint, MysticOrb *> *ItemDataBase::MysticOrbs()
     static QHash<uint, MysticOrb *> allMysticOrbs;
     if (allMysticOrbs.isEmpty())
     {
+        struct MysticOrbRecord
+        {
+            QByteArray name;
+            qint8 addLevel;
+            //quint16 typeIndex;
+            //quint16 allowedTypes[2];
+            //quint16 prohibitedTypes[2];
+            //quint16 limit;
+
+            struct Property
+            {
+                qint32 id; // properties.txt
+                quint32 layer;
+                qint32 min, max;
+            };
+            QVector<Property> properties;
+
+            MysticOrbRecord()
+            {
+                name.resize(32);
+                properties.resize(6);
+            }
+        };
+
+        // prop 290, param - MO ID?
+        QFile f(ResourcePathManager::dataPathForFileName("MysticOrbs.bin"));
+        if (!f.open(QIODevice::ReadOnly))
+            return 0;
+        QDataStream ds(&f);
+        ds.setByteOrder(QDataStream::LittleEndian);
+
+        quint32 entries;
+        ds >> entries;
+        for (quint32 j = 0; j < entries; ++j)
+        {
+            MysticOrbRecord mo;
+            ds.readRawData(mo.name.data(), mo.name.size());
+            ds >> mo.addLevel;
+            ds.skipRawData(2 + 2*2 + 2*2 + 2);
+            for (int i = 0; i < mo.properties.size(); ++i)
+            {
+                MysticOrbRecord::Property &property = mo.properties[i];
+                ds >> property.id >> property.layer >> property.min >> property.max;
+            }
+        }
+        Q_ASSERT(f.pos() == f.size());
     }
     return &allMysticOrbs;
 }
