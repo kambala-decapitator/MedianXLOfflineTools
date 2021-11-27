@@ -51,7 +51,7 @@ sub tblExpandHash
 
 my $zeroRe = qr/^0$/;
 my %propertiesStatsHash; $propertiesStatsHash{"stat".($_ + 1)} = 6 + $_ * 4 for (0..6);
-my $properties = parsetxt("properties.csv", "#code"=>"0", param1 => 4, %propertiesStatsHash);
+my $properties = parsetxt("properties.tsv", "#code"=>"0", param1 => 4, %propertiesStatsHash);
 
 my $descArrayRef = [
     {key => "descstrpos", col => 18, expanded => "descPositive"},
@@ -64,7 +64,7 @@ my $descArrayRef = [
 my %propertiesHash = ("stat"=>"0", bitsSave=>32, bitsParamSave=>33, "bits"=>"5", "add"=>"6", "saveParamBits"=>"7",
                       descpriority=>15, descfunc=>16, descval=>17, dgrp=>47, dgrpfunc=>48, dgrpval=>49);
 $propertiesHash{$_->{key}} = $_->{col} for (@$descArrayRef);
-my $itemProperties = parsetxt("itemstatcost.csv", _index=>"1", %propertiesHash);
+my $itemProperties = parsetxt("itemstatcost.tsv", _index=>"1", %propertiesHash);
 &tblExpandArray($itemProperties, $_->{key}, $_->{expanded}) for (@$descArrayRef);
 
 # add new field for group properties
@@ -115,7 +115,7 @@ sub statIdsFromPropertyStat
     return join(',', @ids)
 }
 
-my $uniques = parsetxt("uniqueitems.csv", _autoindex=>0, iName=>0, ilvl=>4, rlvl=>5, image=>64);
+my $uniques = parsetxt("uniqueitems.tsv", _autoindex=>0, iName=>0, ilvl=>4, rlvl=>5, image=>64);
 &tblExpandArray($uniques, "iName");
 
 # any fixed property in .txt is defined with the following set of columns
@@ -172,12 +172,12 @@ my %setsPropertiesHash, my @setsPropertiesKeys;
 &getSetFixedPropertiesHash(40, 8, \%setsPropertiesHash, \@setsPropertiesKeys, 'full_'); # full ones
 
 my $oldSetCond = qr/^old LoD$/;
-my $sets = parsetxt("sets.csv", "#key" => 0, tbl => 1, '!_lodSet' => {col => 2, val => $oldSetCond}, %setsPropertiesHash);
+my $sets = parsetxt("sets.tsv", "#key" => 0, tbl => 1, '!_lodSet' => {col => 2, val => $oldSetCond}, %setsPropertiesHash);
 &expandSetProperties(\@setsPropertiesKeys, $sets->{$_}) for (keys %$sets);
 
 my %greenPropertiesHash, my @greenPropertiesKeys;
 &getSetFixedPropertiesHash(57, 10, \%greenPropertiesHash, \@greenPropertiesKeys);
-my $setItems = parsetxt("setitems.csv", _autoindex=>0, iIName=>0, setKey=>1, rlvl=>8, image=>87, addfunc=>94,
+my $setItems = parsetxt("setitems.tsv", _autoindex=>0, iIName=>0, setKey=>1, rlvl=>8, image=>87, addfunc=>94,
                         %greenPropertiesHash, '!_lodSet' => {col => 6, val => $oldSetCond});
 &tblExpandArray($setItems, "iIName", "IName");
 
@@ -207,19 +207,19 @@ for my $setItem (@$setItems)
 }
 
 my $itemName = 'name';
-my $armorTypes = parsetxt("armor.csv", $itemName=>1, "#code"=>0, $nameStr=>21, w=>31, h=>32, type=>2,
+my $armorTypes = parsetxt("armor.tsv", $itemName=>1, "#code"=>0, $nameStr=>21, w=>31, h=>32, type=>2,
                           type2=>3, rlvl=>18, image=>37, rstr=>12, rdex=>13);
-my $weaponTypes = parsetxt("weapons.csv", $itemName=>1, "#code"=>0, $nameStr=>5, w=>43, h=>44, type=>2,
+my $weaponTypes = parsetxt("weapons.tsv", $itemName=>1, "#code"=>0, $nameStr=>5, w=>43, h=>44, type=>2,
                            type2=>3, stackable=>45, rlvl=>30, rstr=>25, rdex=>26, image=>50, quest=>67,
                            '1hMinDmg'=>12, '1hMaxDmg'=>13, '2hMinDmg'=>16, '2hMaxDmg'=>17, throwMinDmg=>18, throwMaxDmg=>19,
                            '1h2h'=>14, '2h'=>15, strBonus=>23, dexBonus=>24);
-my $miscTypes = parsetxt("misc.csv", $itemName=>0, "#code"=>5, $nameStr=>7, $spellDescStr=>69,
+my $miscTypes = parsetxt("misc.tsv", $itemName=>0, "#code"=>5, $nameStr=>7, $spellDescStr=>69,
                          w=>24, h=>25, type=>8, type2=>9, stackable=>48, rlvl=>13, image=>30, quest=>52);
 &tblExpandHash($_, $itemName) for ($armorTypes, $weaponTypes, $miscTypes);
 
-my $skills = parsetxt("skills.csv", _index=>"1", "dbgname"=>"0", "internalName"=>"3", "class"=>"2",
+my $skills = parsetxt("skills.tsv", _index=>"1", "dbgname"=>"0", "internalName"=>"3", "class"=>"2",
                       "srvmissile"=>"9", "srvmissilea"=>"12", "srvmissileb"=>"13", "srvmissilec"=>"14");
-my $skillsDsc = parsetxt("skilldesc.csv", "#code"=>0, tab => 1, row => 2, col => 3, image => 8, dscname=>9);
+my $skillsDsc = parsetxt("skilldesc.tsv", "#code"=>0, tab => 1, row => 2, col => 3, image => 8, dscname=>9);
 
 my $processedSkills;
 my $index = -1;
@@ -241,7 +241,7 @@ foreach my $elem (@$skills)
 }
 &tblExpandArray($processedSkills, "iname", "name");
 
-my $monstats = parsetxt("monstats.csv", _autoindex=>"0", $nameStr=>6);
+my $monstats = parsetxt("monstats.tsv", _autoindex=>"0", $nameStr=>6);
 &tblExpandArray($monstats, $nameStr);
 
 # RW
@@ -252,7 +252,7 @@ for (1..6) {
     $rwKeysHash{"rune$_"} = $_ + 11
 }
 # $rwKeysHash{"disallowedType$_"} = $_ + 8 for (1..3);
-my $rw = parsetxt("runes.csv", _autoindex => 0, tbl => 0, '!_enabled' => {col => 1, val => $zeroRe},
+my $rw = parsetxt("runes.tsv", _autoindex => 0, tbl => 0, '!_enabled' => {col => 1, val => $zeroRe},
                   '!_rune' => {col => 12, val => qr/^jew$/}, %rwKeysHash);
 push(@$rw, {tbl => '09This', allowedType1 => 'weap', allowedType2 => 'armo', rune1 => 'jew'}); # yeah, it's a hack (jewelword)
 # fake hash to collect names from tbl
@@ -276,7 +276,7 @@ for my $subtype (@subtypes)
         $firstColumn++ # skip 'max'
     }
 }
-my $gems = parsetxt("gems.csv", $itemName => 0, 'letter' => 1, "#code" => 3, %gemStatsHash);
+my $gems = parsetxt("gems.tsv", $itemName => 0, 'letter' => 1, "#code" => 3, %gemStatsHash);
 &tblExpandHash($gems, $itemName);
 if ($locale ne 'en')
 {
@@ -301,8 +301,8 @@ make_path $prefix;
 
 my %invgfx; $invgfx{"invgfx$_"} = 34 + $_ for (1..6);
 my @invgfxKeys = sort keys %invgfx;
-my $itemTypes = parsetxt("itemtypes.csv", "#code"=>0, code0=>1, equiv1=>8, equiv2=>9, bodyLoc=>12, class=>33, %invgfx);
-open my $out, ">", "generated/itemtypes.csv";
+my $itemTypes = parsetxt("itemtypes.tsv", "#code"=>0, code0=>1, equiv1=>8, equiv2=>9, bodyLoc=>12, class=>33, %invgfx);
+open my $out, ">", "generated/itemtypes.tsv";
 print $out "#code\tequiv\tvarImages\tname\n";
 for my $name (sort keys %$itemTypes)
 {
@@ -322,7 +322,7 @@ for my $name (sort keys %$itemTypes)
 }
 close $out;
 
-open $out, ">", "$prefix/items.csv";
+open $out, ">", "$prefix/items.tsv";
 print $out "#code\tname\t$spellDescStr\twidth\theight\tgentype\tstackable\trlvl\trstr\trdex\t1h2h\t2h\t";
 print $out "1hMinDmg\t1hMaxDmg\t2hMinDmg\t2hMaxDmg\tthrowMinDmg\tthrowMaxDmg\timage\tquest\tstrBonus\tdexBonus\t";
 print $out "type\tsockettype\tclass\n"; # these columns are treated specially
@@ -365,7 +365,7 @@ for my $ref ($armorTypes, $weaponTypes, $miscTypes)
 }
 close $out;
 
-open $out, ">", "$prefix/uniques.csv";
+open $out, ">", "$prefix/uniques.tsv";
 print $out "#index\titem\trlvl\tilvl\timage\n";
 my $count = -1;
 for my $hashRef (@$uniques)
@@ -377,7 +377,7 @@ for my $hashRef (@$uniques)
 }
 close $out;
 
-open $out, ">", "generated/sets.csv";
+open $out, ">", "generated/sets.tsv";
 print $out "#index\t".join("\t", @setsPropertiesKeys)."\n";
 for my $setKey (sort keys %$sets)
 {
@@ -387,7 +387,7 @@ for my $setKey (sort keys %$sets)
 }
 close $out;
 
-open $out, ">", "$prefix/setitems.csv";
+open $out, ">", "$prefix/setitems.tsv";
 print $out "#index\titem\tset\tkey\trlvl\timage\t".join("\t", @greenPropertiesKeys)."\n";
 for my $set (@$mxlSets)
 {
@@ -400,7 +400,7 @@ close $out;
 
 $count = -1;
 my @skillKeys = qw/name class tab row col image/;
-open $out, ">", "$prefix/skills.csv";
+open $out, ">", "$prefix/skills.tsv";
 print $out "#code\t".join("\t", @skillKeys)."\n";
 for my $hashRef (@$processedSkills)
 {
@@ -420,7 +420,7 @@ for (@$descArrayRef)
 }
 
 my @propKeys = sort keys %propertiesHash;
-open $out, ">", "$prefix/props.csv";
+open $out, ">", "$prefix/props.tsv";
 print $out "#code\t".join("\t", @propKeys)."\n";
 $count = -1;
 for my $hashRef (@$itemProperties)
@@ -433,7 +433,7 @@ for my $hashRef (@$itemProperties)
 }
 close $out;
 
-open $out, ">", "$prefix/monsters.csv";
+open $out, ">", "$prefix/monsters.tsv";
 print $out "#index\tname\n";
 $count = -2;
 for (@$monstats)
@@ -444,7 +444,7 @@ for (@$monstats)
 close $out;
 
 my @rwKeys = sort keys %rwKeysHash;
-open $out, ">", "$prefix/rw.csv";
+open $out, ">", "$prefix/rw.tsv";
 print $out "#".join("\t", @rwKeys)."\n";
 foreach my $elem (@$rw)
 {
@@ -459,7 +459,7 @@ foreach my $elem (@$rw)
 close $out;
 
 my @gemKeys = sort keys %gemStatsHash;
-open $out, ">", "$prefix/socketables.csv";
+open $out, ">", "$prefix/socketables.tsv";
 print $out "#code\t$itemName\tletter\t".join("\t", @gemKeys)."\n";
 for my $gemCode (sort keys %$gems)
 {
@@ -490,9 +490,9 @@ my @baseStatsKeys = qw/strength dexterity energy vitality stamina lifePerLevel s
 my %baseStatsParams = (_autoindex => 0, stamina => 6, '!_class' => {col => 0, val => 'Expansion'});
 $baseStatsParams{$baseStatsKeys[$_]} = $_ + 1  for (0..3);
 $baseStatsParams{$baseStatsKeys[$_]} = $_ + 13 for (5..10);
-my $baseStats = parsetxt("charstats.csv", %baseStatsParams);
+my $baseStats = parsetxt("charstats.tsv", %baseStatsParams);
 
-open $out, ">", "generated/basestats.csv";
+open $out, ">", "generated/basestats.tsv";
 print $out "#classcode\t".join("\t", @baseStatsKeys)."\n";
 my $classCode = 0;
 for my $i (0..scalar @$baseStats)
