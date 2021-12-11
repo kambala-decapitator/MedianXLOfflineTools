@@ -1,12 +1,12 @@
 #!/usr/bin/env zsh
 
-rm -f *.pcx
-
-for f in $(find . -iname '*.dc6')
-    ~/Diablo\ II\ save\ files/dc6con.zip\ Folder/dc6con "$f"
-
-mogrify -format png -fuzz 2% -transparent black *.pcx
-# mogrify -format png *.pcx
+# call from the directory containing dc6 files
 
 scriptDir=$(cd "$(dirname "$0")" && pwd)
-mv *.png "$scriptDir/../resources/data/images/items"
+imagesPath=../resources/data/images/items
+find . -iname '*.dc6' -exec ~/dev/diablo/build-qdc6-qt4/qdc6 {} +
+mv *.png "$scriptDir"/$imagesPath
+
+cd "$scriptDir"
+git add -A $imagesPath/*
+git commit -m "update item images to Sigma $1"
