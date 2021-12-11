@@ -32,7 +32,7 @@
 32	0	13							к Защите от Дальних Ударов	к Защите от Дальних Ударов		1	92	1					armorclass_vs_missile
 33	0	13							к Защите при Рукопашной	к Защите при Рукопашной		1	92	1					armorclass_vs_hth
 34	100	9							Физический Урон Снижается на	Физический Урон Снижается на		3	52	2					normal_damage_reduction
-35	100	9							Магический Урон Снижается на	Магический Урон Снижается на		3	51	2					magic_damage_reduction
+35	100	9							Стихийный/Магический Урон Снижается на	Стихийный/Магический Урон Снижается на		3	51	2					magic_damage_reduction
 36	100	8							Получаемый Физический Урон Снижен на:	Получаемый Физический Урон Снижен на:		2	53	2					damageresist
 37	100	8							Сопротивление Магии	Сопротивление Магии		4	65	2					magicresist
 38	20	7							к Максимальному Сопротивлению Магии	к Максимальному Сопротивлению Магии		4	70	1					maxmagicresist
@@ -198,7 +198,8 @@
 252	0	6							Восстанавливает %d Единиц Прочности за Секунду	Восстанавливает %d Единиц Прочности за Секунду		11	7	0					item_replenish_durability
 253	0	6							Восстанавливает количество	Восстанавливает количество		3	8	0					item_replenish_quantity
 254	0	8							Повышение емкости	Повышение емкости		3	9	0					item_extra_stack
-257	1	2							\orange;Parasite Получает 12 Дополнительных Целей\blue;	\orange;Нефалем: +25% к Общему Урону Vessel-ов от Пассивок\nНечестивый: Blood Thorns Наносят на 40% Больше Общего Урона\nСвятой: Holy Fire Наносит Доп. Урон в количестве 5% от Силы (макс. 250%)\blue;		3	240	0					vessel_mod
+257	1	2							\orange;Parasite Получает 12 Дополнительных Целей\blue;	\orange;Нефалем: +25% к Общему Урону Vessel-ов от Пассивок\nНечестивый: Blood Thorns Наносят на 40% Больше Общего Урона\nСвятой: Holy Fire Наносит Доп. Урон в количестве 4.5% от Силы (макс. 250%)\blue;		3	240	0					vessel_mod
+259	1	10							Зарядов:	Зарядов:		3	250	2					charge_counter
 260	0	7							\orange;Громовая Ярость\grey;	\orange;Громовая Ярость\grey;		3	247	0				17	item_thunderfury
 261	0	5							Дополнительный Тотем	Дополнительный Тотем		1	196	1					new_totem_syn
 265	0	10							к Жизни после каждого Убийства	к Жизни после каждого Убийства		1	41	1					item_healafterplayerkill
@@ -214,8 +215,8 @@
 282	0	7							%d%% Шанс использовать навык уровня %d %s при Получении Урона	%d%% Шанс использовать навык уровня %d %s при Получении Урона		15	205					17	item_skillondamaged
 283	0	7							%d%% Шанс использовать навык уровня %d %s когда вас Атакуют	%d%% Шанс использовать навык уровня %d %s когда вас Атакуют		15	205					17	item_skillongetmeleed
 284	0	7							%d%% Шанс использовать навык уровня %d %s когда в вас Попадает Снаряд	%d%% Шанс использовать навык уровня %d %s когда в вас Попадает Снаряд		15	205					17	item_skillongetmissilehit
-288	1	2							\orange;Бонус от мистических сфер добавленных к предмету умножен на 4	\orange;Кровавая Ненависть не отнимает у вас жизнь		3	240	0					si_1
-289	0	8							\dgreen;Эффект от Мистических Сфер Удваивается при Применении\blue;	\dgreen;Эффект от Мистических Сфер Удваивается при Применении\blue;		36	234	0					item_multimo
+288	1	2							\orange;Бонус от Mystic Orbs для этой вещи умножается на 4	\orange;Кровавая Ненависть не отнимает у вас жизнь		3	240	0					si_1
+289	0	8							\dgreen;Эффект от Mystic Orbs Удваивается при Применении\blue;	\dgreen;Эффект от Mystic Orbs Удваивается при Применении\blue;		36	234	0					item_multimo
 290	0	8																10	item_mocount
 291	0	8																	skill_justkilledsomeone
 292	0	7							%d%% Шанс использовать навык уровня %d %s когда Враг Умирает	%d%% Шанс использовать навык уровня %d %s когда Враг Умирает		15	204					17	item_skillonanykill
@@ -223,7 +224,7 @@
 295	500	11							к Мане при Рукопашной Атаке	к Мане при Рукопашной Атаке		1	42	1					item_manaonstrikingmelee
 297	1	2																	W_M
 298	0	5																	tp_lock
-299	0	9							\grey;Текущий Бонус Урону от Силы:	\grey;Текущий Бонус Урону от Силы:		2	251	2					strength_bonus_wpn
+299	0	9							\grey;Текущий Бонус Урону от Силы:	\grey;Текущий Бонус Урону от Силы:		2	253	2					strength_bonus_wpn
 300	0	9							Доп. Бонус Урону от Ловкости:	Доп. Бонус Урону от Ловкости:		2	194	2					dexterity_bonus_wpn
 304	24	7																	statX_1
 305	500	10																	item_pierce_cold
@@ -232,6 +233,7 @@
 308	500	10																	item_pierce_pois
 309	2048	12							Перезарядка %s Уменьшена на %.1g	Перезарядка %s Снижена на %.1g		33	174	2				17	skill_cooldown_reduce
 313	0	10																	darkportal
+314	1	2																	carry1_grp1
 315	0	8																	firelength
 316	0	8										3		0					burningmin
 317	0	8										3		0					burningmax
@@ -300,7 +302,7 @@
 407	0	10							к Урону Заклинаний Яда	к Урону Заклинаний Яда	(Основано на Уровне Персонажа)	7	132	1					passive_pois_mastery_perlevel
 409	100	8							к Длительности Навыков	к Длительности Навыков		2	168	1					skill_duration
 414	50	9							Бонус к Жизни Призываемых Edyrem	Бонус к Жизни Призываемых Edyrem		4	173	1					skill_edyrem_hp_percent
-415	0	12							\grey;Врождённый Урон Огнём: \red;%d\grey; (%.1f%% от %s)	\grey;Врождённый Урон Огнём: \red;%d\grey; (%.1f%% от %s)		35	253	0				16	ied_display
+415	0	12							\grey;Врождённый Урон Огнём: \red;%d\grey; (%.1f%% от %s)	\grey;Врождённый Урон Огнём: \red;%d\grey; (%.1f%% от %s)		35	254	0				16	ied_display
 417	0	16																5	ele_divisor
 418	0	2							\orange;Можно Улучшить Испытанием Черной Дороги	\orange;Можно Улучшить Испытанием Черной Дороги		3	225	0					item_needschallenged
 419	0	10																	goblincurse
@@ -324,12 +326,13 @@
 454	1	5																	cube_upgrade_3
 455	1	5																	cube_upgrade_4
 457	0	10																	enabler
-462	0	8							Урон для Vessel of Justice	Урон для Vessel of Justice		4	187	1					skill_voj_mastery
+462	0	8							к Урону Vessel of Justice	к Урону Vessel of Justice		4	187	1					skill_voj_mastery
 463	0	5																	item_class_spec
+464	0	10																	dulra_catalyst
 465	0	8																	skill_totem_damage
 466	0	7							Мест для Эссенций:	Мест для Эссенций:		3	9	2					trader_chest
 467		4																	rp_lock
-468	0	8							Урон для Vessel of Retribution	Урон для Vessel of Retribution		4	187	1					skill_light_mastery
+468	0	8							к Урону Vessel of Retribution	к Урону Vessel of Retribution		4	187	1					skill_light_mastery
 469	0	8							Дополнительные Цели для Сосудов Паладина	Дополнительные Цели для Сосудов Паладина		1	187	1					skill_shadow_mastery
 470	50	9							к Урону Призываемых Существ	к Урону Призываемых Существ		4	104	1					skill_minion_dmg_percent
 471	50	9																	shamanic_dmg
@@ -344,16 +347,22 @@
 483	0	10																	item_rune_runemaster
 484	50	8							Врождённый Стихийный Урон	Врождённый Стихийный Урон		2	149	1					IED
 485	200	10							Фокусировка Заклинаний	Фокусировка Заклинаний		1	194	1					enr_factor
+486	50	8																	gem_counter
 487	50	8							к Сопротивлениям Призываемых Существ	к Сопротивлениям Призываемых Существ		4	103	1					minion_resist_all
 488	100	8							к Фокусировке Заклинаний	к Фокусировке Заклинаний		4	193	1					enr_factor_percent
 489	0	11							Цель Получает Дополнительный Урон	Цель Получает Дополнительный Урон		3	25	2					item_targettakesdamage
 490	1	5																	cube_upgrade_5
 491	1	5																	cube_upgrade_6
+492	1	5																	cube_upgrade_7
 495	24	7																	statX_3
+496	0	5								\red;(Смешайте с Oil of Craft для Раскрытия)		3	251	0					item_corrupted_has_seed
+497	0	5							\red;Искажено	\red;Искажено		3	252	0					item_corrupted
+498	6383	14																	item_corrupted_seed
 499	0	10							к Энергии	к Энергии	(Основано на Уровне Персонажа)	6	87	1					item_energy_perlevel
 500	100	8							к Рейтингу Атаки Призываемых Существ	к Рейтингу Атаки Призываемых Существ		4	102	1					item_minion_attack
 501	23	10							\grey;Arcane Crystals: 	\blue;Количество: 		3	84	2					shrine_counter
-505	0	10							Life Regenerated per Second (Based on Character Level)	Life Regenerated per Second (Based on Character Level)		32	80	1					item_hpregen_perlevel
+504	6383	14																	lootbox_seed
+505	0	10							к Восстановлению Жизни в Секунду (Основано на Уровне Персонажа)	к Восстановлению Жизни в Секунду (Основано на Уровне Персонажа)		32	80	1					item_hpregen_perlevel
 506	1	2																	lethal_incision
 508	100	9																	eq_gr
 509	100	9																	eq_grw

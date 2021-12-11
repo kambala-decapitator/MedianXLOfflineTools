@@ -36,7 +36,7 @@
 34	The Black Road	115	1	
 35	Zakarum's Ear	115	1	
 36	Spirit of Creation	120	1	
-37	\grey;Quest Item\n\gold;Tome of Possession	120	1	
+37	\grey;Квестовый Предмет\n\gold;Tome of Possession	120	1	
 38	Eternal Bone Pile	120	1	
 39	Soul of Kabraxis	120	1	
 40	Silver Seal of Ureh	120	1	
@@ -59,7 +59,7 @@
 57	Vial of Elder Blood	135	1	
 58	'The Last Man Standing'\nНаграда за Событие:	0	1	
 59	'The Goblin King'\nНаграда за Событие:	0	1	
-60	ghist way	0	0	
+60	Tur Dulra's Oak Seed	140	1	
 61	ghist way	0	0	
 62	ghist way	0	0	
 63	ghist way	0	0	
@@ -92,13 +92,13 @@
 90	\grey;Дизайн Предмета\n\gold;Book of Cain	0	1	
 91	\grey;Дизайн Вещи\n\gold;Natasha's Legacy	0	1	
 92	Natasha's Legacy	120	1	invnats
-93	ghist way	0	0	
-94	ghist way	0	0	
-95	ghist way	0	0	
-96	ghist way	0	0	
-97	ghist way	0	0	
-98	ghist way	0	0	
-99	ghist way	0	0	
+93	\grey;Дизайн Предмета\n\gold;Tenet of Harmony	0	1	book09
+94	\grey;Дизайн Предмета\n\gold;Tenet of Restraint	0	1	book09
+95	\grey;Дизайн Предмета\n\gold;Tenet of Vigor	0	1	book09
+96	\grey;Дизайн Предмета\n\gold;Tenet of Wisdom	0	1	book09
+97	\grey;Дизайн Предмета\n\gold;Tenet of Judgement	0	1	book09
+98	\grey;Дизайн Предмета\n\gold;Tenet of Conflict	0	1	book09
+99	\grey;Дизайн Предмета\n\gold;Tur Dulra's Oak Seed	0	1	book03
 100	ghist way	0	0	
 101	ghist way	0	0	
 102	ghist way	0	0	
@@ -1489,8 +1489,8 @@
 1487	Wizardspike	100	120	
 1488	Hwanin's Hwacha	100	105	
 1489	Advent of Hatred	100	120	
-1490	Grim Silhouette	100	105	
-1491	Sinwar	100	120	
+1490	Sinwar	100	105	
+1491	Back To The Abyss	100	120	invbackabyss
 1492	Crown of the Black Rose	110	105	
 1493	Griffon's Eye	100	120	
 1494	Leah's Vision	100	105	
@@ -1502,7 +1502,7 @@
 1500	Phoenix Beak	100	105	
 1501	Sky Spirit	100	120	
 1502	Shadowtwin	100	105	
-1503	Разжигатель Войны	100	120	
+1503	Warmonger	100	120	
 1504	Icetomb	100	105	
 1505	Segnitia	100	120	
 1506	Stormpick	100	120	
@@ -1521,12 +1521,12 @@
 1519	Пробуждение	130	130	invawaken
 1520	The Ritualist	100	105	
 1521	Cloak of the Outcast	100	120	
-1522	Hero's Fang	100	105	
+1522	Grim Silhouette	100	105	
 1523	The Sentinel's Sorrow	100	120	
 1524	Hammerfist	100	105	
 1525	Lamha Na Draoithe	100	120	
 1526	Qarak's Will	100	105	
-1527	Azgar's Crystal	100	125	invbswu
+1527	Azgar's Crystal	100	130	invbswu
 1528	Toraja's Champion	100	105	
 1529	The Ancients' Legacy	100	120	
 1530	Night's Embrace	100	105	
@@ -1617,7 +1617,7 @@
 1615	Windforce	100	120	
 1616	Dreamflange	100	105	
 1617	Hellrain	100	105	
-1618	Titan's Revenge	100	120	
+1618	Titan's Revenge	120	120	
 1619	Serenthia's Scorn	100	105	
 1620	Panthera's Bite	100	120	
 1621	Luminescence	100	105	
@@ -1723,7 +1723,7 @@
 1721	Radiance	100	120	
 1722	Hexward	100	105	
 1723	Eternal Bodyguard	100	120	
-1724	Vaetia's Wall	100	105	
+1724	Vaetia's Wall	100	105	invtowu
 1725	Nymyr's Shadow	100	105	
 1726	Stygian Fury	100	120	
 1727	Steel Pillar	100	105	
@@ -1749,3 +1749,15 @@
 1747	Daydreamer	130	130	
 1748	Dark Guardian	100	105	
 1749	Feardrinker	100	120	
+1750	Bone Chimes	120	1	
+1751	Bone Chimes	120	1	
+1752	Bone Chimes	120	1	
+1753	Bone Chimes	120	1	
+1754	Bone Chimes	120	1	
+1755	Bone Chimes	120	1	
+1756	Bone Chimes	120	1	
+1757	Bone Chimes	120	1	
+1758	Bone Chimes	120	1	
+1759	Bone Chimes	120	1	
+1760	Bone Chimes	120	1	
+1761	Bone Chimes	120	1	

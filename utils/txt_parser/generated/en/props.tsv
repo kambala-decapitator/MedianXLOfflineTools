@@ -198,7 +198,8 @@
 252	0	6							Repairs %d Durability per Second	Repairs %d Durability per Second		11	7	0					item_replenish_durability
 253	0	6							Replenishes Quantity	Replenishes Quantity		3	8	0					item_replenish_quantity
 254	0	8							Increased Stack Size	Increased Stack Size		3	9	0					item_extra_stack
-257	1	2							\orange;Parasite Gains 12 Additional Targets\blue;	\orange;Nephalem: +25% Total Vessel Damage Bonus from Passives\nUnholy: Blood Thorns Deal 40% More Total Damage\nHoly: Holy Fire Deals 5% of  Strength as More Total Damage (max 250%)\blue;		3	240	0					vessel_mod
+257	1	2							\orange;Parasite Gains 12 Additional Targets\blue;	\orange;Nephalem: +25% Total Vessel Damage Bonus from Passives\nUnholy: Blood Thorns Deal 40% More Total Damage\nHoly: Holy Fire Deals 4.5% of  Strength as More Total Damage (max 250%)\blue;		3	240	0					vessel_mod
+259	1	10							Charges:	Charges:		3	250	2					charge_counter
 260	0	7							\orange;Thunderfury\grey;	\orange;Thunderfury\grey;		3	247	0				17	item_thunderfury
 261	0	5							Extra Totems	Extra Totems		1	196	1					new_totem_syn
 265	0	10							Life after each Kill	Life after each Kill		1	41	1					item_healafterplayerkill
@@ -223,7 +224,7 @@
 295	500	11							Mana on Melee Attack	Mana on Melee Attack		1	42	1					item_manaonstrikingmelee
 297	1	2																	W_M
 298	0	5																	tp_lock
-299	0	9							\grey;Current Strength Damage Bonus:	\grey;Current Strength Damage Bonus:		2	251	2					strength_bonus_wpn
+299	0	9							\grey;Current Strength Damage Bonus:	\grey;Current Strength Damage Bonus:		2	253	2					strength_bonus_wpn
 300	0	9							Additional Dexterity Damage Bonus:	Additional Dexterity Damage Bonus:		2	194	2					dexterity_bonus_wpn
 304	24	7																	statX_1
 305	500	10																	item_pierce_cold
@@ -232,6 +233,7 @@
 308	500	10																	item_pierce_pois
 309	2048	12							%s Cooldown Decreased by %.1g	%s Cooldown Reduced by %.1g		33	174	2				17	skill_cooldown_reduce
 313	0	10																	darkportal
+314	1	2																	carry1_grp1
 315	0	8																	firelength
 316	0	8										3		0					burningmin
 317	0	8										3		0					burningmax
@@ -300,7 +302,7 @@
 407	0	10							to Poison Spell Damage	to Poison Spell Damage	(Based on Character Level)	7	132	1					passive_pois_mastery_perlevel
 409	100	8							Skill Duration	Skill Duration		2	168	1					skill_duration
 414	50	9							Bonus to Summoned Edyrem Life	Bonus to Summoned Edyrem Life		4	173	1					skill_edyrem_hp_percent
-415	0	12							\grey;Innate Fire Damage: \red;%d\grey; (%.1f%% of %s)	\grey;Innate Fire Damage: \red;%d\grey; (%.1f%% of %s)		35	253	0				16	ied_display
+415	0	12							\grey;Innate Fire Damage: \red;%d\grey; (%.1f%% of %s)	\grey;Innate Fire Damage: \red;%d\grey; (%.1f%% of %s)		35	254	0				16	ied_display
 417	0	16																5	ele_divisor
 418	0	2							\orange;Can Be Upgraded with Black Road Challenge	\orange;Can Be Upgraded with Black Road Challenge		3	225	0					item_needschallenged
 419	0	10																	goblincurse
@@ -326,6 +328,7 @@
 457	0	10																	enabler
 462	0	8							Damage to Vessel of Justice	Damage to Vessel of Justice		4	187	1					skill_voj_mastery
 463	0	5																	item_class_spec
+464	0	10																	dulra_catalyst
 465	0	8																	skill_totem_damage
 466	0	7							Essence Slots:	Essence Slots:		3	9	2					trader_chest
 467		4																	rp_lock
@@ -344,15 +347,21 @@
 483	0	10																	item_rune_runemaster
 484	50	8							Innate Elemental Damage	Innate Elemental Damage		2	149	1					IED
 485	200	10							Spell Focus	Spell Focus		1	194	1					enr_factor
+486	50	8																	gem_counter
 487	50	8							to Summoned Minion Resistances	to Summoned Minion Resistances		4	103	1					minion_resist_all
 488	100	8							Bonus to Spell Focus	Bonus to Spell Focus		4	193	1					enr_factor_percent
 489	0	11							Target Takes Additional Damage of	Target Takes Additional Damage of		3	25	2					item_targettakesdamage
 490	1	5																	cube_upgrade_5
 491	1	5																	cube_upgrade_6
+492	1	5																	cube_upgrade_7
 495	24	7																	statX_3
+496	0	5								\red;(Cube with Oil of Craft to Reveal)		3	251	0					item_corrupted_has_seed
+497	0	5							\red;Corrupted	\red;Corrupted		3	252	0					item_corrupted
+498	6383	14																	item_corrupted_seed
 499	0	10							to Energy	to Energy	(Based on Character Level)	6	87	1					item_energy_perlevel
 500	100	8							to Summoned Minion Attack Rating	to Summoned Minion Attack Rating		4	102	1					item_minion_attack
 501	23	10							\grey;Arcane Crystals: 	\blue;Quantity:		3	84	2					shrine_counter
+504	6383	14																	lootbox_seed
 505	0	10							Life Regenerated per Second (Based on Character Level)	Life Regenerated per Second (Based on Character Level)		32	80	1					item_hpregen_perlevel
 506	1	2																	lethal_incision
 508	100	9																	eq_gr

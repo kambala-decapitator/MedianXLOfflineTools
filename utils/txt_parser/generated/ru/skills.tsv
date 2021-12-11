@@ -369,7 +369,7 @@
 367		5				
 368		-1				
 369	Sacrifices	2	1	3	2	70
-370	Flametail Shot	2	4	1	1	140
+370	Атака	2	0	0	0	3
 371	Fragmentation Shot	2	4	5	1	132
 372	Widowmaker	2	4	4	2	56
 373		-1				
@@ -508,9 +508,9 @@
 506	Rain of Bombs	-1	0	0	0	45
 507	Deathstrike	-1	0	0	0	61
 508	Bladestorm	-1	0	0	0	95
-509	Shatter the Flesh	-1	8	6	3	100
+509	Shatter the Flesh	-1	0	0	0	100
 510	Singularity	-1	0	0	0	0
-511		-1				
+511	Flametail Shot	-1	0	0	0	92
 512		-1				
 513		-1				
 514		-1				
@@ -650,8 +650,8 @@
 648		-1				
 649	Pyroblast	-1	2	3	3	98
 650	Cherubim	-1	0	0	0	190
-651		-1				
-652		-1				
+651	Slayer	-1	6	4	2	66
+652	Thunderstorm	-1	4	4	1	60
 653		-1				
 654		-1				
 655		-1				
@@ -760,7 +760,7 @@
 758		-1				
 759		-1				
 760		-1				
-761		-1				
+761	Athulua's Wrath	-1	0	0	0	0
 762		-1				
 763		-1				
 764		-1				
@@ -807,7 +807,7 @@
 805		-1				
 806	Veil King Plague Grasp	-1	0	0	0	0
 807		-1				
-808	Funeral Pyre	-1	0	0	0	125
+808		-1				
 809		-1				
 810		-1				
 811		-1				
@@ -822,8 +822,8 @@
 820		-1				
 821		-1				
 822		-1				
-823		-1				
-824		-1				
+823	Doom	-1	8	4	2	38
+824	Doom	-1	8	4	2	38
 825		-1				
 826		-1				
 827		-1				
@@ -1029,11 +1029,11 @@
 1027	Phalanx	0	2	2	3	34
 1028	Dragonlore	0	2	4	1	92
 1029	Wyrmshot	0	2	5	1	96
-1030	Moonbeam	0	3	1	1	40
-1031	Split Spear	0	3	2	2	44
-1032	Enfilade	0	3	3	2	46
-1033	Moon Queen	0	3	4	2	90
-1034	Fairy Ring	0	3	5	2	48
+1030	Scorpion Sting	0	3	1	1	40
+1031	Eviscerate	0	3	3	2	44
+1032	Impale	0	3	1	2	46
+1033	\orange;Second Wind	0	3	5	3	90
+1034	Bulwark	0	3	5	1	48
 1035	Bacchanalia	0	6	4	3	94
 1036	Takedown	0	4	3	2	50
 1037	Hyena Strike	0	4	2	2	104
@@ -1061,19 +1061,19 @@
 1059	\orange;Fire at Will	0	2	3	3	122
 1060	\orange;Fortitude	0	1	6	1	38
 1061	\orange;Keen Sight	0	2	6	2	124
-1062	\orange;Swift Aim	0	3	3	3	126
-1063	Celestial Rage	0	3	5	1	32
-1064	Offering of the Askari	0	3	6	3	36
+1062	Shieldmaiden	0	3	4	2	126
+1063	Indomitable	0	3	5	2	32
+1064	\orange;Elemental Aegis	0	3	6	2	138
 1065	Fend	0	4	6	2	42
 1066	\orange;Hunter's Prowess	0	4	3	1	128
 1067	\orange;Rift Field	0	5	2	1	130
 1068	\orange;Blood Magic	0	6	6	1	132
 1069	Discharge	0	5	5	3	58
-1070	Athena's Gift	0	1	6	3	134
+1070	Athena's Gift	0	0	0	0	134
 1071		0				
-1072		0				
-1073		0				
-1074		0				
+1072	Gemling	0	3	3	3	136
+1073	Noxious Mastery	0	3	3	1	140
+1074	Deadly Dance	0	3	1	3	36
 1075		0				
 1076		0				
 1077		0				
@@ -1113,7 +1113,7 @@
 1111	Batstrike	6	3	3	2	30
 1112	Shadow Dancer	6	3	2	1	134
 1113	Noctule	6	3	1	2	130
-1114	Anathema	6	3	6	1	122
+1114	Anathema	6	3	5	1	122
 1115	Backstab	6	4	4	1	132
 1116	Barrier Strike	6	4	3	2	114
 1117	Laserblade	6	4	2	1	120
@@ -1149,9 +1149,9 @@
 1147	\orange;Domain	6	1	2	3	148
 1148	\orange;Shadowrush	6	1	4	1	164
 1149	\orange;Shred	6	1	6	2	166
-1150	\orange;Ambush	6	3	5	2	146
-1151	\orange;Elemental Fangs	6	3	4	3	150
-1152	\orange;Winged Calamity	6	3	6	3	170
+1150	\orange;Summon Familiars	6	3	4	3	146
+1151	\orange;Vampiric Strike	6	3	6	2	150
+1152	\orange;Winged Calamity	6	3	5	3	170
 1153	\orange;Execution	6	4	6	1	144
 1154	\orange;Momentum	6	4	6	3	142
 1155	\orange;Void Gazer	6	2	6	1	168
@@ -1254,7 +1254,7 @@
 1252	Aftermath	4	2	6	3	98
 1253	Heart of Stone	4	2	4	1	114
 1254	Executioner	4	3	6	1	138
-1255		4				
+1255	Spirit Bond	4	6	6	3	140
 1256		4				
 1257		4				
 1258		4				
@@ -1383,10 +1383,10 @@
 1381	Dream Eater	2	5	3	1	148
 1382	Nightwalker	2	5	2	1	150
 1383		-1				
-1384	Carnage	2	3	2	1	114
+1384	Carnage	2	3	2	2	114
 1385	Parasite	2	3	1	2	128
 1386	Famine	2	1	4	3	102
-1387	Angel of Death	2	3	4	1	50
+1387	Angel of Death	2	3	3	2	50
 1388	Deathlord	2	3	5	2	110
 1389	Embalming	2	1	1	2	134
 1390	Bane	2	1	5	2	142
@@ -1425,14 +1425,14 @@
 1423	\orange;Mold the Flesh	2	1	2	1	30
 1424	\orange;Grim Vision	2	2	1	3	32
 1425	\orange;Violent Immolation	2	2	2	1	34
-1426	\orange;Abyssal Guard	2	2	3	3	36
+1426	\orange;Chaos Nova	2	2	3	3	36
 1427	\orange;Metal Solace	2	2	4	1	38
-1428	\orange;Onslaught	2	3	3	2	42
-1429	\orange;Voracity	2	3	1	3	40
-1430	Ominous Vigor	2	3	6	2	44
-1431	\orange;Demonic Commune	2	3	5	3	46
+1428	\orange;Onslaught	2	3	3	1	42
+1429	\orange;Reaper	2	3	2	3	40
+1430	Ominous Vigor	2	3	6	3	44
+1431	\orange;Demonic Commune	2	3	6	1	46
 1432	\orange;Carrion Drain	2	4	2	3	180
-1433	\orange;Alchemical Provision	2	4	1	3	182
+1433	Buckshot	2	4	1	1	182
 1434	\orange;Ignite	2	4	6	1	184
 1435	Occult Path	2	5	2	2	186
 1436	Exile	2	5	5	2	188
@@ -1440,7 +1440,7 @@
 1438	\orange;Dark Gathering	2	6	3	2	172
 1439	\orange;Dirge	2	6	5	2	194
 1440	Soulchain	2	6	6	3	196
-1441		2				
+1441	\orange;Blight Descent	2	3	4	3	198
 1442		2				
 1443		2				
 1444		2				
@@ -1732,7 +1732,7 @@
 1730	Golden Calf	-1	0	0	0	192
 1731	Call Treewarden	-1	0	0	0	54
 1732	Overpower	-1	0	0	0	40
-1733	Buckshot	-1	0	0	0	92
+1733		-1				
 1734	Exorcism	-1	0	0	0	134
 1735	Silver Dart	-1	0	0	0	121
 1736	Conquest	-1	0	0	0	144
@@ -2634,7 +2634,7 @@
 2632		-1				
 2633		-1				
 2634		-1				
-2635	Shatter the Flesh	-1	8	6	3	100
+2635	Shatter the Flesh	-1	0	0	0	100
 2636	Hive	-1	8	5	3	68
 2637		-1				
 2638	Flurry of Javelins	-1	0	0	0	0
@@ -2662,7 +2662,7 @@
 2660	Clobber	-1	0	0	0	143
 2661	Guard Tower	-1	0	0	0	37
 2662	Frozen Soul	-1	0	0	0	63
-2663		-1				
+2663	Flamefront	-1	2	1	3	92
 2664	Phoenix Wave	-1	0	0	0	169
 2665	Avalanche	-1	0	0	0	140
 2666	Ring of Light	-1	0	0	0	43
@@ -2707,7 +2707,7 @@
 2705		-1				
 2706		-1				
 2707		-1				
-2708	Frozen Breath	-1	0	0	0	0
+2708	Ледяное Дыхание	-1	0	0	0	0
 2709		-1				
 2710		-1				
 2711	Black Lotus Strike	-1	0	0	0	51
@@ -2722,3 +2722,41 @@
 2720		-1				
 2721		-1				
 2722		-1				
+2723		-1				
+2724		-1				
+2725		-1				
+2726		-1				
+2727		-1				
+2728		-1				
+2729		-1				
+2730		-1				
+2731		-1				
+2732		-1				
+2733		-1				
+2734		-1				
+2735		-1				
+2736		-1				
+2737		-1				
+2738		-1				
+2739	Thunderstone	-1	3	2	1	52
+2740		-1				
+2741		-1				
+2742		-1				
+2743	Thunderstone	-1	3	2	1	52
+2744	Flamefront	-1	2	1	3	92
+2745	Ледяное Дыхание	-1	0	0	0	0
+2746		-1				
+2747	Thunderstone	-1	3	2	1	52
+2748		-1				
+2749		-1				
+2750	Thunderstone	-1	3	2	1	52
+2751		-1				
+2752		-1				
+2753		-1				
+2754		-1				
+2755		-1				
+2756		-1				
+2757		-1				
+2758		-1				
+2759	Ледяное Дыхание	-1	0	0	0	0
+2760		-1				

@@ -134,7 +134,7 @@ pelt						Nezha	rx19	r24
 pzhm						Hierodule	rx07	r59					
 ashd						Zohar	rx23	rx02	r58				
 stor						Curandera	rx29	r22	r51				
-stor						Lyrannikin	rx15	r59	r22				
+stor						Lyrannikin	rx15	r59	rx22				
 phlm						Fawkes	r21	rx08					
 azhm						Disturbance	r09	r58	rx24				
 weap						Dawn	rx12						
@@ -154,7 +154,7 @@ nscy						Lemuria	r57	rx20	r19
 axe						Instinct	r57	rx25	rx03	r33			
 pspe						Ensi	r57	r57	r15	r10			
 axe						Kodiak	r01	r25	r29				
-glov						Память	r57	r60	r61	r62			
+glov						Memory	r57	r60	r61	r62			
 boot						Vision	r52	rx01	rx32	r59			
 dstf						Acokanthera	r24	r60	rx13				
 pelt						Aconitum	r60	r52	rx09				
@@ -184,7 +184,7 @@ weap						Void	r29
 belt						Duress	rx07						
 head						Gloom	rx17	rx15					
 head						Splintered Soul	r51	rx06	rx22				
-nstf						Повиновение	rx29	r51	r59	r24			
+nstf						Obedience	rx29	r51	r59	r24			
 glov						Enlightenment	r01						
 shld						Stone	r10						
 helm						Honor	r07						
@@ -194,7 +194,7 @@ baxe						Smoldering Edge	r03
 head						Quimbanda	r26	r01					
 h2h						Choronzon	r29	r07					
 azhm						Obsidian Crown	rx31	rx19	r22	r17			
-shld						Звездный свет	rx12	r23	r30				
+shld						Starlight	rx12	r23	r30				
 glov						Mithridatism	r60	r27					
 scep						Plagued Mallet	r60	rx28	r61	rx01			
 scrd						Shaula	r30	r23	r17				
@@ -206,4 +206,11 @@ azsd						A Perfect Storm	rx10	rx09	r61
 azsd						Cloudburst	r21	r28					
 scep						Artemesia's Authority	rx28	r61	r53				
 baxe						Antediluvian	rx06	rx33					
+tkni						Shadow Bite	rx21						
+tors						Blazing Armament	r57	r52	rx27				
+belt						Treachery	r59	rx21					
+xbow						Sting	r03						
+pclb	pmac	pham				Harmony	rx17	r15					
+ashd						Vortex	rx29	rx30	r61				
+nknf						Malignant Shard	r60	rx06					
 weap	armo					Secret Jewel Bonus!	jew						

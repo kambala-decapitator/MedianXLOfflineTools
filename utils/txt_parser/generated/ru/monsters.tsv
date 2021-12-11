@@ -402,8 +402,8 @@
 400	Slayer
 401	FLYING POLAR BUFFALO ERROR
 402	The Smith
-403	Trapped Soul
-404	Trapped Soul
+403	Запертая Душа
+404	Запертая Душа
 405	Jamella
 406	Izual
 407	Rat Man
@@ -1049,7 +1049,7 @@
 1056	Wracked Soul
 1057	Darkmantle
 1058	Chimaera Trap
-1059	Lord Primus
+1059	Primus
 1060	Gore Crawler
 1061	Blood Skeleton
 1062	Night Hawk
@@ -1071,7 +1071,7 @@
 1084	Philios, Priestess of Hefaetrus
 1085	Lycander, Priestess of Zerae
 1086	Amazon Warrior
-1087	Древо Огня
+1087	Tree of Fire
 1088	Volcanic Shrine
 1089	FLYING POLAR BUFFALO ERROR
 1090	FLYING POLAR BUFFALO ERROR
@@ -1821,6 +1821,7 @@
 1861	The Butcher
 1862	Diablo
 1863	Death Projector
+1877	Mysterious Companion
 1878	Moreina the Corrupted
 1879	The Dark Countess
 1880	Radament the Fallen
@@ -1841,7 +1842,6 @@
 1895	Bala
 1896	Uldyssian the Tainted
 1897	Edyrem
-1898	\orange;Abyssal Spire
 1899	Gestating Growth
 1900	Gestating Growth
 1901	Gestating Growth
@@ -1901,9 +1901,11 @@
 1968	Corrupted Wereowl
 1969	Corrupted Werebear
 1970	Corrupted Hunter
-1971	Corrupted Werewolf
-1972	Corrupted Werewolf
+1971	Corrupted Naturist
+1972	Ominous Guardian
 1973	Spirit Wolf
+1974	Harvester
+1975	Bear Companion
 1976	Sapling Guard
 1977	Sapling Guard
 1978	Scytheclaw
@@ -3303,3 +3305,40 @@
 3431	Corpulent
 3432	Dark Sovereign
 3433	Askari Warrior
+3434	Убейте для увеличения сложности и наград
+3435	Убейте для увеличения сложности и наград
+3436	Убейте для увеличения сложности и наград
+3437	Убейте для увеличения сложности и наград
+3438	Убейте для увеличения сложности и наград
+3439	Убейте для увеличения сложности и наград
+3440	Убейте для увеличения сложности и наград
+3441	Убейте для увеличения сложности и наград
+3442	Tortured Soul
+3443	Tortured Soul
+3444	Tortured Soul
+3445	Tortured Soul
+3446	Corrupted Soul
+3447	Ethereal Soul
+3448	Runewrought Soul
+3449	Damned Soul
+3450	Corruption Bearer
+3451	Corruption Bearer
+3454	Enigmatic Guardian
+3456	Armored Titan
+3463	Manoruk
+3464	Hollow Remnant
+3465	Dread Marksman
+3466	Undead Magister
+3467	Darkfiend
+3468	Dread Warleader
+3469	Atanna Khan
+3470	Malevolent Spirit
+3471	Apparition
+3472	Condemned
+3473	Soulbreaker
+3474	Rotted Husk
+3475	Castigator
+3476	Phantom
+3477	Souless Husk
+3478	Nightstalker
+3489	Manoruk

@@ -71,10 +71,10 @@ cloa	tors,assn		Cloak
 club	blun,dbox		Club
 qclb	club,ct1w		Club (Sacred)
 comb	mele,thro		Combo Weapon
-ct2x	ssgl		Craft Sacred Major
+ct2x	sw&a		Craft Sacred Major
 ct2a	sarm,ct2x		Craft Sacred Major (Armor)
 ct2w	swea,ct2x		Craft Sacred Major (Weapon)
-ct1x	ssgl		Craft Sacred Minor
+ct1x	sw&a		Craft Sacred Minor
 ct1a	sarm,ct1x		Craft Sacred Minor (Armor)
 ct1w	swea,ct1x		Craft Sacred Minor (Weapon)
 xbow	miss		Crossbow
@@ -196,9 +196,11 @@ sarm	ssgl		Sacred Armor
 #bow	bow		Sacred Bow
 ssgl	sign		Sacred Group
 swea	ssgl		Sacred Weapon
+sw&a	ssgl		Sacred Weapons and Armor
 gems	gem		Sapphire
 scep	rod		Scepter
 qscp	scep,ct1w		Scepter (Sacred)
+sdgn	dsgn	book01,book02,book05,book06,book07,book08	Scosglen Design
 scro	misc		Scroll
 summ	char		Scroll of Summoning
 scyh	pole		Scythe
