@@ -365,53 +365,59 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
 
     if (item->quality == ItemQuality::Set)
     {
-        SetItemInfo *setItem = ItemDataBase::Sets()->value(item->setOrUniqueId);
-        const FullSetInfo fullSetInfo = ItemDataBase::fullSetInfoForKey(setItem->key);
-
-        if (item->location == ItemLocation::Equipped || item->location == ItemLocation::Merc)
+        if (SetItemInfo *setItem = ItemDataBase::Sets()->value(item->setOrUniqueId))
         {
-            // set item properties stored in item (seems that they're not needed)
-            //if (!item->setProps.isEmpty())
-            //    itemDescription += propertiesToHtml(item->setProps, ColorsManager::Green);
+            const FullSetInfo fullSetInfo = ItemDataBase::fullSetInfoForKey(setItem->key);
 
-            // count equipped set items
-            quint8 setItemsOnCharacter = 1;
-            foreach (ItemInfo *anItem, ItemDataBase::itemsStoredIn(item->storage, item->location))
-                if (anItem != item && anItem->quality == ItemQuality::Set && fullSetInfo.itemNames.contains(ItemDataBase::Sets()->value(anItem->setOrUniqueId)->itemName))
-                    ++setItemsOnCharacter;
-
-            if (quint8 partialPropsNumber = (setItemsOnCharacter - 1) * 2)
+            if (item->location == ItemLocation::Equipped || item->location == ItemLocation::Merc)
             {
-                // set item properties from txt
-                PropertiesMultiMap setItemFixedProps = PropertiesDisplayManager::collectSetFixedProps(setItem->fixedProperties, partialPropsNumber);
-                if (!setItemFixedProps.isEmpty())
-                    itemDescription += propertiesToHtml(setItemFixedProps, ColorsManager::Green);
-                qDeleteAll(setItemFixedProps);
+                // set item properties stored in item (seems that they're not needed)
+                //if (!item->setProps.isEmpty())
+                //    itemDescription += propertiesToHtml(item->setProps, ColorsManager::Green);
 
-                // set properties from txt
-                PropertiesMultiMap setFixedProps = PropertiesDisplayManager::collectSetFixedProps(fullSetInfo.partialSetProperties, partialPropsNumber);
-                if (setItemsOnCharacter == fullSetInfo.itemNames.size())
-                    PropertiesDisplayManager::addTemporaryPropertiesAndDelete(&setFixedProps, PropertiesDisplayManager::collectSetFixedProps(fullSetInfo.fullSetProperties));
-                itemDescription += kHtmlLineBreak + propertiesToHtml(setFixedProps, ColorsManager::Gold);
-                qDeleteAll(setFixedProps);
-            }
-        }
+                // count equipped set items
+                quint8 setItemsOnCharacter = 1;
+                foreach (ItemInfo *anItem, ItemDataBase::itemsStoredIn(item->storage, item->location))
+                    if (anItem != item && anItem->quality == ItemQuality::Set && fullSetInfo.itemNames.contains(ItemDataBase::Sets()->value(anItem->setOrUniqueId)->itemName))
+                        ++setItemsOnCharacter;
 
-        // set item names from current set with correct color
-        itemDescription += kHtmlLineBreak + htmlStringFromDiabloColorString(setItem->setName, ColorsManager::Gold);
-
-        foreach (const QString &setItemName, fullSetInfo.itemNames)
-        {
-            bool found = false;
-            foreach (ItemInfo *anItem, charInfo.items.character) //-V807
-            {
-                if (anItem->quality == ItemQuality::Set && ItemDataBase::Sets()->value(anItem->setOrUniqueId)->itemName == setItemName)
+                if (quint8 partialPropsNumber = (setItemsOnCharacter - 1) * 2)
                 {
-                    found = true;
-                    break;
+                    // set item properties from txt
+                    PropertiesMultiMap setItemFixedProps = PropertiesDisplayManager::collectSetFixedProps(setItem->fixedProperties, partialPropsNumber);
+                    if (!setItemFixedProps.isEmpty())
+                        itemDescription += propertiesToHtml(setItemFixedProps, ColorsManager::Green);
+                    qDeleteAll(setItemFixedProps);
+
+                    // set properties from txt
+                    PropertiesMultiMap setFixedProps = PropertiesDisplayManager::collectSetFixedProps(fullSetInfo.partialSetProperties, partialPropsNumber);
+                    if (setItemsOnCharacter == fullSetInfo.itemNames.size())
+                        PropertiesDisplayManager::addTemporaryPropertiesAndDelete(&setFixedProps, PropertiesDisplayManager::collectSetFixedProps(fullSetInfo.fullSetProperties));
+                    itemDescription += kHtmlLineBreak + propertiesToHtml(setFixedProps, ColorsManager::Gold);
+                    qDeleteAll(setFixedProps);
                 }
             }
-            itemDescription += kHtmlLineBreak + htmlStringFromDiabloColorString(setItemName, found ? ColorsManager::Green : ColorsManager::Red);
+
+            // set item names from current set with correct color
+            itemDescription += kHtmlLineBreak + htmlStringFromDiabloColorString(setItem->setName, ColorsManager::Gold);
+
+            foreach (const QString &setItemName, fullSetInfo.itemNames)
+            {
+                bool found = false;
+                foreach (ItemInfo *anItem, charInfo.items.character) //-V807
+                {
+                    if (anItem->quality == ItemQuality::Set)
+                    {
+                        SetItemInfo *setItem = ItemDataBase::Sets()->value(anItem->setOrUniqueId);
+                        if (setItem && setItem->itemName == setItemName)
+                        {
+                            found = true;
+                            break;
+                        }
+                    }
+                }
+                itemDescription += kHtmlLineBreak + htmlStringFromDiabloColorString(setItemName, found ? ColorsManager::Green : ColorsManager::Red);
+            }
         }
     }
 

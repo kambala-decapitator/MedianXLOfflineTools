@@ -533,10 +533,14 @@ QString ItemDataBase::completeItemName(ItemInfo *item, bool shouldUseColor, bool
     QString specialName;
     if (item->quality == Enums::ItemQuality::Set)
     {
-        SetItemInfo *setItem = Sets()->value(item->setOrUniqueId);
-        specialName = setItem->itemName;
-        if (!shouldUseColor)
-            specialName += QString(" [%1]").arg(QString(setItem->setName).replace("\\n", " "));
+        if (SetItemInfo *setItem = Sets()->value(item->setOrUniqueId))
+        {
+            specialName = setItem->itemName;
+            if (!shouldUseColor)
+                specialName += QString(" [%1]").arg(QString(setItem->setName).replace("\\n", " "));
+        }
+        else
+            specialName = QLatin1String("FPBE");
     }
     else if (item->quality == Enums::ItemQuality::Unique)
         specialName = Uniques()->contains(item->setOrUniqueId) ? Uniques()->value(item->setOrUniqueId)->name : QString();

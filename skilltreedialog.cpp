@@ -71,7 +71,8 @@ SkillTreeDialog::SkillTreeDialog(QWidget *parent /*= 0*/) : QDialog(parent), _ta
             addSkillPoints += getValueOfPropertyInItem(item, Enums::ItemProperties::ClassSkills, charInfo.classCode);
 
             if (item->quality == Enums::ItemQuality::Set)
-                setItemsHash.insert(ItemDataBase::Sets()->value(item->setOrUniqueId)->key, item->setOrUniqueId);
+                if (SetItemInfo *setItem = ItemDataBase::Sets()->value(item->setOrUniqueId))
+                    setItemsHash.insert(setItem->key, item->setOrUniqueId);
         }
     }
 

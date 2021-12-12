@@ -46,7 +46,8 @@ AllStatsDialog::AllStatsDialog(QWidget *parent /*= 0*/) : QDialog(parent), ui(ne
             }
 
             if (item->quality == Enums::ItemQuality::Set)
-                setItemsHash.insert(ItemDataBase::Sets()->value(item->setOrUniqueId)->key, item->setOrUniqueId);
+                if (SetItemInfo *setItem = ItemDataBase::Sets()->value(item->setOrUniqueId))
+                    setItemsHash.insert(setItem->key, item->setOrUniqueId);
         }
     }
 

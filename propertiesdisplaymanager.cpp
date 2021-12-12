@@ -265,43 +265,45 @@ QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item, bool u
 
     if (item->quality == Enums::ItemQuality::Set)
     {
-        SetItemInfo *setItem = ItemDataBase::Sets()->value(item->setOrUniqueId);
-        const FullSetInfo fullSetInfo = ItemDataBase::fullSetInfoForKey(setItem->key);
-
-        if (item->location == Enums::ItemLocation::Equipped || item->location == Enums::ItemLocation::Merc)
+        if (SetItemInfo *setItem = ItemDataBase::Sets()->value(item->setOrUniqueId))
         {
-            // set item properties stored in item (seems that they're not needed)
-            //if (!item->setProps.isEmpty())
-            //    itemDescription += propertiesToHtml(item->setProps, ColorsManager::Green);
+            const FullSetInfo fullSetInfo = ItemDataBase::fullSetInfoForKey(setItem->key);
 
-            // count equipped set items
-            quint8 setItemsOnCharacter = 1;
-            foreach (ItemInfo *anItem, ItemDataBase::itemsStoredIn(item->storage, item->location))
-                if (anItem != item && anItem->quality == Enums::ItemQuality::Set && fullSetInfo.itemNames.contains(ItemDataBase::Sets()->value(anItem->setOrUniqueId)->itemName))
-                    ++setItemsOnCharacter;
-
-            if (quint8 partialPropsNumber = (setItemsOnCharacter - 1) * 2)
+            if (item->location == Enums::ItemLocation::Equipped || item->location == Enums::ItemLocation::Merc)
             {
-                // set item properties from txt
-                PropertiesMultiMap setItemFixedProps = PropertiesDisplayManager::collectSetFixedProps(setItem->fixedProperties, partialPropsNumber);
-                if (!setItemFixedProps.isEmpty())
+                // set item properties stored in item (seems that they're not needed)
+                //if (!item->setProps.isEmpty())
+                //    itemDescription += propertiesToHtml(item->setProps, ColorsManager::Green);
+
+                // count equipped set items
+                quint8 setItemsOnCharacter = 1;
+                foreach (ItemInfo *anItem, ItemDataBase::itemsStoredIn(item->storage, item->location))
+                    if (anItem != item && anItem->quality == Enums::ItemQuality::Set && fullSetInfo.itemNames.contains(ItemDataBase::Sets()->value(anItem->setOrUniqueId)->itemName))
+                        ++setItemsOnCharacter;
+
+                if (quint8 partialPropsNumber = (setItemsOnCharacter - 1) * 2)
                 {
-                    QString s = propsToString(setItemFixedProps);
+                    // set item properties from txt
+                    PropertiesMultiMap setItemFixedProps = PropertiesDisplayManager::collectSetFixedProps(setItem->fixedProperties, partialPropsNumber);
+                    if (!setItemFixedProps.isEmpty())
+                    {
+                        QString s = propsToString(setItemFixedProps);
+                        if (!s.isEmpty())
+                            itemDescription += "\n-SET_ITEM-" + s;
+                    }
+                    qDeleteAll(setItemFixedProps);
+
+                    // set properties from txt
+                    PropertiesMultiMap setFixedProps = PropertiesDisplayManager::collectSetFixedProps(fullSetInfo.partialSetProperties, partialPropsNumber);
+                    if (setItemsOnCharacter == fullSetInfo.itemNames.size())
+                        PropertiesDisplayManager::addTemporaryPropertiesAndDelete(&setFixedProps, PropertiesDisplayManager::collectSetFixedProps(fullSetInfo.fullSetProperties));
+
+                    QString s = propsToString(setFixedProps);
                     if (!s.isEmpty())
-                        itemDescription += "\n-SET_ITEM-" + s;
+                        itemDescription += "\n-SET-" + s;
+
+                    qDeleteAll(setFixedProps);
                 }
-                qDeleteAll(setItemFixedProps);
-
-                // set properties from txt
-                PropertiesMultiMap setFixedProps = PropertiesDisplayManager::collectSetFixedProps(fullSetInfo.partialSetProperties, partialPropsNumber);
-                if (setItemsOnCharacter == fullSetInfo.itemNames.size())
-                    PropertiesDisplayManager::addTemporaryPropertiesAndDelete(&setFixedProps, PropertiesDisplayManager::collectSetFixedProps(fullSetInfo.fullSetProperties));
-
-                QString s = propsToString(setFixedProps);
-                if (!s.isEmpty())
-                    itemDescription += "\n-SET-" + s;
-
-                qDeleteAll(setFixedProps);
             }
         }
     }
