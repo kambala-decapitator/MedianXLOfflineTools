@@ -21,12 +21,12 @@ mpot  # mana potion
 # types inside the block are indented with tab, don't break the indentation please.
 # not all 'thng' items are present in the list: feel free to add more from thng_list.txt file.
 # string is interpreted as a regular expression, just escape # characters with \# (see UMO for exmaple)
-# you can separate multiple regular expressions for one group of items with |  (see trophy for example)
+# you can separate multiple regular expressions for one group of items with | (see trophy for example)
 thng
 	!@[1-5]         # evil eye
 	\#X[1-6]        # emblem of ...
 	\|[a-z]+|\#X9   # cube reagent
-	Kx\d|r99        # essence / runestone
+	Kx\d|^r99       # essence / runestone
 	\[\d\d          # trophy
 	\{\d\d          # fragment
 	qu[l2-4m]|asx   # arcane shard / crystal / cluster
@@ -43,4 +43,6 @@ thng
 	brc\d           # BRC
 	[cid]r\d+       # charged / depleted riftstone
 	en\d\d          # scroll of enchantment
-	dg0\d           # item design
+	dg\d\d          # item design
+	scf\d           # tenets
+	scu.            # corrupted shards/crystal

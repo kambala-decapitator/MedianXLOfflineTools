@@ -56,7 +56,7 @@
 259-262 # Fire (The Warmage)
 263-266 # Cold (Zann Esu's Secrets)
 279-280 # Sorceress Oskill Set (Wintertide)
-315-318 # Sorceress Arcane Set (Vizjerei Dominion)
+322-325 # Sorceress Arcane Set (Vizjerei Dominion)
 
 # other
 291-294 # Tribute Set (Archbishop Lazarus)
