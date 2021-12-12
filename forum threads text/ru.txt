@@ -2,9 +2,7 @@
 
 [COLOR=#6666ff]Это [B][U]НЕ[/U][/B] читерская программа и только для [B][U]Одиночной Игры[/U][/B]! Необходимо выйти из игры, прежде чем редактировать персонажа, иначе изменения не сохранятся.[/COLOR]
 
-Как можно догадаться из названия, это практически полный оффлайн аналог grig'овских [URL='http://grig.vlexofree.com/']MXL Online Tools[/URL] (они расписаны в [URL='https://worldofplayers.ru/threads/33303/']теме ЧаВо[/URL]), но со многими дополнениями. Приложение написано на C++ с использованием [URL='https://www.qt.io']фреймворка Qt[/URL] (версии 4.8.7 на данный момент), так что можете даже не пытаться дотнетрефлекторнуть исходный код (а он не будет опубликован по очевидным причинам).
-
-Надеюсь я создал достаточную защиту от хаков для среднестатистического юзера. Но если же вам всё-таки удастся хакнуть персонажа и сохранить его через эту программу, пожалуйста сообщите мне об этом, чтоб я мог закрыть эту дыру :)
+Как можно догадаться из названия, это практически полный оффлайн аналог grig'овских [URL='http://grig.vlexofree.com/']MXL Online Tools[/URL] (они расписаны в [URL='https://worldofplayers.ru/threads/33303/']теме ЧаВо[/URL]), но со многими дополнениями. Приложение написано на C++ с использованием [URL='https://www.qt.io']фреймворка Qt[/URL] (версии 4.8.7 на данный момент).
 
 [spoiler="Основные возможности"]
 [LIST]
@@ -39,8 +37,8 @@
 [*]Функции ОС:
 [LIST]
 [*]ассоциация с .d2s файлами
-[*]последние файлы в панели задач Windows 7 / иконке в доке Mac OS X
-[*]drag'n'drop .d2s файлов на окно программы, ярлык и панель задач Windows 7 / иконку в доке Mac OS X
+[*]последние файлы в панели задач Windows 7 / иконке в доке macOS
+[*]drag'n'drop .d2s файлов на окно программы, ярлык и панель задач Windows 7 / иконку в доке macOS
 [*]проверка обновлений
 [*]запуск единственной копии
 [/LIST]
@@ -50,18 +48,21 @@
 
 [B]Загрузки[/B]:
 [LIST]
-[*][I]Windows[/I] (7 SP1 и позже): [URL]https://mxl.vn.cz/kambala/MedianXLOfflineTools_0.6.3.7z[/URL] (если не запускается, установите MSVC++ 2019 Redistributable [FONT=Courier New]vc_redist.x[B]86[/B].exe[/FONT] с [URL='https://aka.ms/vs/16/release/vc_redist.x86.exe']сайта Microsoft[/URL])
-[*][I]macOS[/I] (10.9 и позже, Intel 64bit): [URL]https://mxl.vn.cz/kambala/MedianXLOfflineTools_mac_0.6.3.txz[/URL]
+[*]приложение для Windows и macOS: [URL]https://github.com/kambala-decapitator/MedianXLOfflineTools/releases/latest[/URL]
+[*]исходный код: [URL]https://github.com/kambala-decapitator/MedianXLOfflineTools[/URL]
 [/LIST]
 
-[spoiler="Mini-FAQ"]В: Где находятся сохранения Сигмы?
+[spoiler="Mini-FAQ"]В: Приложение под винду не запускается с ошибкой «не найдена какая-то длл»!
+О: Установите MSVC++ 2019 Redistributable [FONT=Courier New]vc_redist.x[B]86[/B].exe[/FONT] с [URL='https://aka.ms/vs/16/release/vc_redist.x86.exe']сайта Microsoft[/URL].
+
+В: Где находятся сохранения Сигмы?
 О: %APPDATA%\MedianXL\save
 
 В: Как установить данные мода?
 О: Перезапустите приложение после выполнения нижеуказанных шагов если оно запущено.
 [LIST]
 [*]Windows: просто распакуйте архив в папку с экзэшником с заменой
-[*]Mac OS X: распакуйте архив куда-нибудь и...
+[*]macOS: распакуйте архив куда-нибудь и...
 [LIST]
 [*]краткий ответ: переместите [B]содержимое папки 'resources/data', а не саму папку 'data'[/B], в 'MedianXLOfflineTools.app/Contents/Resources/data'
 [*]длинный 'ручной' ответ: откройте в распакованную папку, внутри откройте папку 'resources', Выбрать всё (Cmd+A), Копировать (Cmd+C), найдите MedianXLOfflineTools.app, нажмите на него правой кнопкой (или Контрол и левой), выберите «Показать содержимое пакета», откройте папку Contents/Resources/data, Вставить (Cmd+V) с заменой
@@ -76,7 +77,7 @@ cp -R resources/data/* "${APP_PATH}/Contents/resources/data"[/code]
 Если вы не видите расширение файла:
 [LIST]
 [*]Проводник Windows: Параметры/Свойства Папки - Вид - Прокрутите в самый низ - Снимите галочку со «Скрывать расширения...» - OK
-[*]Mac OS X Finder: Настройки - Последняя вкладка (Дополнения) - Показывать расширения для всех типов файлов
+[*]macOS Finder: Настройки - Последняя вкладка (Дополнения) - Показывать расширения для всех типов файлов
 [/LIST]
 
 В: Программа не запускается; она появляется в списке процессов лишь на секунду и/или появляется окошко с информацией о сбое.
@@ -125,19 +126,15 @@ cp -R resources/data/* "${APP_PATH}/Contents/resources/data"[/code]
 [URL='http://s1125.photobucket.com/user/kambala_decapitator/media/Median%20XL%20Offline%20Tools/skill_tree_ru.png.html'][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_skill_tree_ru.png[/IMG][/URL][URL='http://s1125.photobucket.com/user/kambala_decapitator/media/Median%20XL%20Offline%20Tools/all_stats_ru.png.html'][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_all_stats_ru.png[/IMG][/URL]
 [URL='http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=recent_win.png'][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_recent_win.png[/IMG][/URL][URL='http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=recent_mac.png'][IMG]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_recent_mac.png[/IMG][/URL][/spoiler]
 
-[B]История версий:[/B]
+[B]История версий:[/B] [URL]https://github.com/kambala-decapitator/MedianXLOfflineTools/releases[/URL]
 
+[spoiler="предыдущие версии"]
 [I]v0.6.3 (28.09.2021)[/I]
 [LIST]
 [*][ф] опять исправлен перенос предметов с помощью кнопки: теперь сундуки Сигмы сохраняются после модификации
 [*][ф] уники сортируются по уровню предмета (ilvl) чтобы отличать SSSSSSSSSSSSSSU
 [/LIST]
 
-Известные баги:
-- навыки без названий, например "+1 к "
-- древо навыков Паладина не отображается
-
-[spoiler="предыдущие версии"]
 [I]v0.6.2 (21.09.2021)[/I]
 [LIST]
 [*][ф] исправлен перенос предметов с помощью кнопки из сундуков Сигмы в бесконечный

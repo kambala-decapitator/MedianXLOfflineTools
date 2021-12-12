@@ -2,9 +2,7 @@
 
 [size=18][color=#6666ff]This is [b][u]NOT[/u][/b] a cheating tool and only for [b][u]Single Player[/u][/b] mode! You must be not in game before editing your character, as otherwise your changes won't be applied.[/color][/size]
 
-As you can guess from the title, it's an almost complete offline analogue of grig's [url=http://grig.vlexofree.com/]Median XL Online Tools[/url], but with nice additions. It's written in C++ using the [url=https://www.qt.io]Qt framework[/url] (v4.8.7 as of current release), so don't hope to dotnetreflect the source code (and it won't be released for obvious reasons).
-
-I hope I provided enough anti-hack protection for an average user. If you manage to successfully hack your character and save him using this application, please report it to me so that I could fix the exploit :)
+As you can guess from the title, it's an almost complete offline analogue of grig's [url=http://grig.vlexofree.com/]Median XL Online Tools[/url], but with nice additions. It's written in C++ using the [url=https://www.qt.io]Qt framework[/url] (v4.8.7 as of current release).
 
 [b]Main features:[/b]
 [spoil][list][*]Character:
@@ -28,23 +26,26 @@ I hope I provided enough anti-hack protection for an average user. If you manage
 [*]deleting
 [*]collect/extract Shrines to/from Shrine Vessel[/list][*]OS-specific:
 [list][*].d2s file association
-[*]recent files in Windows 7 taskbar / Mac OS X dock icon
-[*]drag'n'drop .d2s files on the application window, application shortcut and on the Windows 7 taskbar / Mac OS X dock icon
+[*]recent files in Windows 7 taskbar / macOS dock icon
+[*]drag'n'drop .d2s files on the application window, application shortcut and on the Windows 7 taskbar / macOS dock icon
 [*]update check
 [*]single instance[/list][*]and many others ;)[/list][/spoil]
 
 [b]Downloads[/b]:
-[list][*][i]Windows[/i] (7 SP1 and later): https://mxl.vn.cz/kambala/MedianXLOfflineTools_0.6.3.7z (if it doesn't launch, install MSVC++ 2019 Redistributable vc_redist.x[c]86[/c].exe from [url=https://aka.ms/vs/16/release/vc_redist.x86.exe]Microsoft's website[/url])
-[*][i]macOS[/i] (10.9 and later, Intel 64bit): https://mxl.vn.cz/kambala/MedianXLOfflineTools_mac_0.6.3.txz[/list]
+[list][*]Windows and macOS binaries: https://github.com/kambala-decapitator/MedianXLOfflineTools/releases/latest
+[*]source code: https://github.com/kambala-decapitator/MedianXLOfflineTools[/list]
 
 [b]Mini-FAQ:[/b]
-[spoil]Q: Where are Sigma saves?
+[spoil]Q: Windows app doesn't launch saying that some dll not found!
+A: Install MSVC++ 2019 Redistributable vc_redist.x[c]86[/c].exe from [url=https://aka.ms/vs/16/release/vc_redist.x86.exe]Microsoft's website[/url].
+
+Q: Where are Sigma saves?
 A: %APPDATA%\MedianXL\save
 
 Q: How to install mod data?
 A: Restart the application after following actions if it's running.
 [list][*]Windows: unpack the archive in a folder that contains MedianXLOfflineTools.exe replacing everything
-[*]Mac OS X: unpack the archive somewhere and...
+[*]macOS: unpack the archive somewhere and...
 [list][*]short answer: move [b]the contents of 'resources/data', not the 'data' folder itself[/b], to 'MedianXLOfflineTools.app/Contents/Resources/data'
 [*]long 'manual' answer: open unpacked folder, open 'resources' folder inside, Select All (Cmd+A), Copy (Cmd+C), locate MedianXLOfflineTools.app, right-click (or Control-click) it, select 'Show package contents', open Contents/Resources/data folder, Paste (Cmd+V) replacing everything
 [*]long 'terminal' answer: open Terminal, cd to where you unpacked mod data (this folder should contain unpacked 'resources' folder) and use the following shell script:
@@ -55,7 +56,7 @@ Q: I've fcked up my character and/or PlugY stash and neither the game nor this a
 A: Go to the save folder and look for file(s) called <chararcter>.<d2s or d2x>_<date>.bak and delete everything on the right up to d2s or d2x. If it's the shared stash you want to restore, then it's called _LOD<_HC for hardcore>_SharedStashSave.sss_<date>.bak and delete everything on the right up to sss.
 If you can't see file extension:
 [list][*]Windows Explorer: Folder Options - View - Scroll to the bottom - Uncheck 'Hide extensions...' - OK
-[*]Mac OS X Finder: Preferences - Last tab (Advanced or similar name) - Show all file name extensions[/list]
+[*]macOS Finder: Preferences - Last tab (Advanced or similar name) - Show all file name extensions[/list]
 
 Q: Application doesn't open; in the list of processes it appears just for a second and/or crash report is displayed.
 A: Probably the character you had loaded last time became broken. To make the application work again, simply double-click 'disable_auto_load' file (on Windows you also have to press 'Yes' after this): it disables loading last used character. If you want to enable this option again, open Options menu in the application and select the option.[/spoil]
@@ -97,18 +98,14 @@ A: Probably the character you had loaded last time became broken. To make the ap
 [url=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=recent_win.png][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_recent_win.png[/img][/url][url=http://s1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/?action=view&current=recent_mac.png][img]http://i1125.photobucket.com/albums/l592/kambala_decapitator/Median%20XL%20Offline%20Tools/th_recent_mac.png[/img][/url][/spoil]
 
 
-[b]Changelog[/b]:
+[b]Changelog[/b]: https://github.com/kambala-decapitator/MedianXLOfflineTools/releases
 
-[i]v0.6.3 (28.09.2021)[/i]
+Older versions:
+[spoil][i]v0.6.3 (28.09.2021)[/i]
 [list][f] one more fix of "move all items here" to save modified Sigma stashes
 [f] sort uniques by ilvl to differentiate between SSSSSSSSSSSSSSSSU
 [/list]
-Known bugs:
-- skills without names, e.g. "+1 to "
-- Paladin skill tree not displayed
-
-Older versions:
-[spoil][i]v0.6.2 (21.09.2021)[/i]
+[i]v0.6.2 (21.09.2021)[/i]
 [list][f] fix "move all items here" from a Sigma stash to the Infinite one
 [f] fix update check (back to http)
 [f] fix sorting of sets
