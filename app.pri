@@ -43,91 +43,91 @@ else                     : VERSION = $$sprintf("%1.%2.%3", $$NVER1, $$NVER2, $$N
 DEFINES += NVER_STRING=$$sprintf("\"\\\"%1\\\"\"", $$VERSION)
 
 # common files
-SOURCES += main.cpp \
-           medianxlofflinetools.cpp \
-           resurrectpenaltydialog.cpp \
-           qd2charrenamer.cpp \
-           enums.cpp \
-           itemdatabase.cpp \
-           propertiesviewerwidget.cpp \
-           itemsviewerdialog.cpp \
-           itemstoragetablemodel.cpp \
-           itemstoragetableview.cpp \
-           itemspropertiessplitter.cpp \
-           helpers.cpp \
-           finditemsdialog.cpp \
-           reversebitwriter.cpp \
-           reversebitreader.cpp \
-           itemparser.cpp \
-           propertiesdisplaymanager.cpp \
-           findresultswidget.cpp \
-           application.cpp \
+SOURCES += src/main.cpp \
+           src/medianxlofflinetools.cpp \
+           src/resurrectpenaltydialog.cpp \
+           src/qd2charrenamer.cpp \
+           src/enums.cpp \
+           src/itemdatabase.cpp \
+           src/propertiesviewerwidget.cpp \
+           src/itemsviewerdialog.cpp \
+           src/itemstoragetablemodel.cpp \
+           src/itemstoragetableview.cpp \
+           src/itemspropertiessplitter.cpp \
+           src/helpers.cpp \
+           src/finditemsdialog.cpp \
+           src/reversebitwriter.cpp \
+           src/reversebitreader.cpp \
+           src/itemparser.cpp \
+           src/propertiesdisplaymanager.cpp \
+           src/findresultswidget.cpp \
+           src/application.cpp \
            qtsingleapplication/qtsingleapplication.cpp \
            qtsingleapplication/qtlockedfile.cpp \
            qtsingleapplication/qtlocalpeer.cpp \
-           experienceindicatorgroupbox.cpp \
-           plugyitemssplitter.cpp \
-           gearitemssplitter.cpp \
-           kexpandablegroupbox.cpp \
-           showselecteditemdelegate.cpp \
-           disenchantpreviewdialog.cpp \
-           disenchantpreviewmodel.cpp \
-           stashsortingoptionsdialog.cpp \
-           helpwindowdisplaymanager.cpp \
-           skilltreedialog.cpp \
-           allstatsdialog.cpp
+           src/experienceindicatorgroupbox.cpp \
+           src/plugyitemssplitter.cpp \
+           src/gearitemssplitter.cpp \
+           src/kexpandablegroupbox.cpp \
+           src/showselecteditemdelegate.cpp \
+           src/disenchantpreviewdialog.cpp \
+           src/disenchantpreviewmodel.cpp \
+           src/stashsortingoptionsdialog.cpp \
+           src/helpwindowdisplaymanager.cpp \
+           src/skilltreedialog.cpp \
+           src/allstatsdialog.cpp
 
-HEADERS += medianxlofflinetools.h \
-           resurrectpenaltydialog.h \
-           qd2charrenamer.h \
-           enums.h \
-           colorsmanager.hpp \
-           itemdatabase.h \
-           structs.h \
-           propertiesviewerwidget.h \
-           itemsviewerdialog.h \
-           itemstoragetablemodel.h \
-           itemstoragetableview.h \
-           itemspropertiessplitter.h \
-           helpers.h \
-           finditemsdialog.h \
-           languagemanager.hpp \
-           reversebitwriter.h \
-           reversebitreader.h \
-           itemparser.h \
-           resourcepathmanager.hpp \
-           propertiesdisplaymanager.h \
-           findresultswidget.h \
-           characterinfo.hpp \
-           application.h \
+HEADERS += src/medianxlofflinetools.h \
+           src/resurrectpenaltydialog.h \
+           src/qd2charrenamer.h \
+           src/enums.h \
+           src/colorsmanager.hpp \
+           src/itemdatabase.h \
+           src/structs.h \
+           src/propertiesviewerwidget.h \
+           src/itemsviewerdialog.h \
+           src/itemstoragetablemodel.h \
+           src/itemstoragetableview.h \
+           src/itemspropertiessplitter.h \
+           src/helpers.h \
+           src/finditemsdialog.h \
+           src/languagemanager.hpp \
+           src/reversebitwriter.h \
+           src/reversebitreader.h \
+           src/itemparser.h \
+           src/resourcepathmanager.hpp \
+           src/propertiesdisplaymanager.h \
+           src/findresultswidget.h \
+           src/characterinfo.hpp \
+           src/application.h \
            qtsingleapplication/QtSingleApplication \
            qtsingleapplication/qtsingleapplication.h \
            qtsingleapplication/qtlockedfile.h \
            qtsingleapplication/qtlocalpeer.h \
-           fileassociationmanager.h \
-           messagecheckbox.h \
-           experienceindicatorgroupbox.h \
-           plugyitemssplitter.h \
-           gearitemssplitter.h \
-           kexpandablegroupbox.h \
-           showselecteditemdelegate.h \
-           disenchantpreviewdialog.h \
-           progressbarmodal.hpp \
-           itemnamestreewidget.hpp \
-           disenchantpreviewmodel.h \
-           checkboxsortfilterproxymodel.hpp \
-           stashsortingoptionsdialog.h \
-           helpwindowdisplaymanager.h \
-           skilltreedialog.h \
-           allstatsdialog.h
+           src/fileassociationmanager.h \
+           src/messagecheckbox.h \
+           src/experienceindicatorgroupbox.h \
+           src/plugyitemssplitter.h \
+           src/gearitemssplitter.h \
+           src/kexpandablegroupbox.h \
+           src/showselecteditemdelegate.h \
+           src/disenchantpreviewdialog.h \
+           src/progressbarmodal.hpp \
+           src/itemnamestreewidget.hpp \
+           src/disenchantpreviewmodel.h \
+           src/checkboxsortfilterproxymodel.hpp \
+           src/stashsortingoptionsdialog.h \
+           src/helpwindowdisplaymanager.h \
+           src/skilltreedialog.h \
+           src/allstatsdialog.h
 
-FORMS += medianxlofflinetools.ui \
-         resurrectpenaltydialog.ui \
-         qd2charrenamer.ui \
-         propertiesviewerwidget.ui \
-         finditemsdialog.ui \
-         stashsortingoptionsdialog.ui \
-         allstatsdialog.ui
+FORMS += src/medianxlofflinetools.ui \
+         src/resurrectpenaltydialog.ui \
+         src/qd2charrenamer.ui \
+         src/propertiesviewerwidget.ui \
+         src/finditemsdialog.ui \
+         src/stashsortingoptionsdialog.ui \
+         src/allstatsdialog.ui
 
 RESOURCES += resources/medianxlofflinetools.qrc
 
@@ -140,11 +140,11 @@ OTHER_FILES += TODO.txt
 
 # platform-specific
 win32 {
-    SOURCES += medianxlofflinetools_win.cpp \
+    SOURCES += src/medianxlofflinetools_win.cpp \
                qtsingleapplication/qtlockedfile_win.cpp \
-               fileassociationmanager_win.cpp
+               src/fileassociationmanager_win.cpp
 
-    HEADERS += windowsincludes.h
+    HEADERS += src/windowsincludes.h
 
     LIBS += -lshell32 \ # SHChangeNotify()
             -lole32   \ # CoCreateInstance() and other COM shit
@@ -186,11 +186,11 @@ win32 {
 }
 
 macx {
-    OBJECTIVE_SOURCES += application_mac.mm \
-                         messagecheckbox_mac_p.mm \
-                         medianxlofflinetools_mac.mm \
-                         machelpers.mm \
-                         fileassociationmanager_mac.mm
+    OBJECTIVE_SOURCES += src/application_mac.mm \
+                         src/messagecheckbox_mac_p.mm \
+                         src/medianxlofflinetools_mac.mm \
+                         src/machelpers.mm \
+                         src/fileassociationmanager_mac.mm
 
     OBJECTIVE_HEADERS += machelpers.h
 
@@ -254,6 +254,6 @@ macx {
     appresources.path = Contents/Resources
     QMAKE_BUNDLE_DATA += appresources
 }
-else: SOURCES += messagecheckbox_p.cpp
+else: SOURCES += src/messagecheckbox_p.cpp
 
 unix: SOURCES += qtsingleapplication/qtlockedfile_unix.cpp

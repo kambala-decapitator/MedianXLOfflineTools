@@ -43,40 +43,40 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="enums.cpp">
+    <ClCompile include="src\enums.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="helpers.cpp">
+    <ClCompile include="src\helpers.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="itemdatabase.cpp">
+    <ClCompile include="src\itemdatabase.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="itemspropertiessplitter.cpp">
+    <ClCompile include="src\itemspropertiessplitter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="itemstoragetablemodel.cpp">
+    <ClCompile include="src\itemstoragetablemodel.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="itemstoragetableview.cpp">
+    <ClCompile include="src\itemstoragetableview.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="itemsviewerdialog.cpp">
+    <ClCompile include="src\itemsviewerdialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp">
+    <ClCompile include="src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="medianxlofflinetools.cpp">
+    <ClCompile include="src\medianxlofflinetools.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="propertiesviewerwidget.cpp">
+    <ClCompile include="src\propertiesviewerwidget.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="qd2charrenamer.cpp">
+    <ClCompile include="src\qd2charrenamer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="resurrectpenaltydialog.cpp">
+    <ClCompile include="src\resurrectpenaltydialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="GeneratedFiles\Release\moc_enums.cpp">
@@ -139,19 +139,19 @@
     <ClCompile Include="GeneratedFiles\Release\moc_finditemsdialog.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
-    <ClCompile Include="finditemsdialog.cpp">
+    <ClCompile include="src\finditemsdialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="reversebitreader.cpp">
+    <ClCompile include="src\reversebitreader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="reversebitwriter.cpp">
+    <ClCompile include="src\reversebitwriter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="itemparser.cpp">
+    <ClCompile include="src\itemparser.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="propertiesdisplaymanager.cpp">
+    <ClCompile include="src\propertiesdisplaymanager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="GeneratedFiles\qrc_medianxlofflinetools.cpp">
@@ -163,10 +163,10 @@
     <ClCompile Include="GeneratedFiles\Release\moc_findresultswidget.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
-    <ClCompile Include="findresultswidget.cpp">
+    <ClCompile include="src\findresultswidget.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="application.cpp">
+    <ClCompile include="src\application.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="GeneratedFiles\Debug\moc_application.cpp">
@@ -175,7 +175,7 @@
     <ClCompile Include="GeneratedFiles\Release\moc_application.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
-    <ClCompile Include="medianxlofflinetools_win.cpp">
+    <ClCompile include="src\medianxlofflinetools_win.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="GeneratedFiles\Debug\moc_qtlocalpeer.cpp">
@@ -184,7 +184,7 @@
     <ClCompile Include="GeneratedFiles\Release\moc_qtlocalpeer.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
-    <ClCompile Include="qtsingleapplication\qtsingleapplication.cpp">
+    <ClCompile include="qtsingleapplication\qtsingleapplication.cpp">
       <Filter>qtsingleapplication</Filter>
     </ClCompile>
     <ClCompile Include="GeneratedFiles\Debug\moc_qtsingleapplication.cpp">
@@ -193,13 +193,13 @@
     <ClCompile Include="GeneratedFiles\Release\moc_qtsingleapplication.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
-    <ClCompile Include="qtsingleapplication\qtlocalpeer.cpp">
+    <ClCompile include="qtsingleapplication\qtlocalpeer.cpp">
       <Filter>qtsingleapplication</Filter>
     </ClCompile>
-    <ClCompile Include="fileassociationmanager_win.cpp">
+    <ClCompile include="src\fileassociationmanager_win.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="experienceindicatorgroupbox.cpp">
+    <ClCompile include="src\experienceindicatorgroupbox.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="GeneratedFiles\Debug\moc_experienceindicatorgroupbox.cpp">
@@ -208,10 +208,10 @@
     <ClCompile Include="GeneratedFiles\Release\moc_experienceindicatorgroupbox.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
-    <ClCompile Include="messagecheckbox_p.cpp">
+    <ClCompile include="src\messagecheckbox_p.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="plugyitemssplitter.cpp">
+    <ClCompile include="src\plugyitemssplitter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="GeneratedFiles\Debug\moc_plugyitemssplitter.cpp">
@@ -220,7 +220,7 @@
     <ClCompile Include="GeneratedFiles\Release\moc_plugyitemssplitter.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
-    <ClCompile Include="gearitemssplitter.cpp">
+    <ClCompile include="src\gearitemssplitter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="GeneratedFiles\Debug\moc_gearitemssplitter.cpp">
@@ -235,10 +235,10 @@
     <ClCompile Include="GeneratedFiles\Release\moc_kexpandablegroupbox.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
-    <ClCompile Include="kexpandablegroupbox.cpp">
+    <ClCompile include="src\kexpandablegroupbox.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="disenchantpreviewdialog.cpp">
+    <ClCompile include="src\disenchantpreviewdialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="GeneratedFiles\Debug\moc_disenchantpreviewdialog.cpp">
@@ -253,7 +253,7 @@
     <ClCompile Include="GeneratedFiles\Release\moc_showselecteditemdelegate.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
-    <ClCompile Include="showselecteditemdelegate.cpp">
+    <ClCompile include="src\showselecteditemdelegate.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="GeneratedFiles\Debug\moc_itemnamestreewidget.cpp">
@@ -268,10 +268,10 @@
     <ClCompile Include="GeneratedFiles\Release\moc_progressbarmodal.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
-    <ClCompile Include="disenchantpreviewmodel.cpp">
+    <ClCompile include="src\disenchantpreviewmodel.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="stashsortingoptionsdialog.cpp">
+    <ClCompile include="src\stashsortingoptionsdialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="GeneratedFiles\Debug\moc_stashsortingoptionsdialog.cpp">
@@ -280,7 +280,7 @@
     <ClCompile Include="GeneratedFiles\Release\moc_stashsortingoptionsdialog.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
-    <ClCompile Include="helpwindowdisplaymanager.cpp">
+    <ClCompile include="src\helpwindowdisplaymanager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="GeneratedFiles\Debug\moc_helpwindowdisplaymanager.cpp">
@@ -289,7 +289,7 @@
     <ClCompile Include="GeneratedFiles\Release\moc_helpwindowdisplaymanager.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
-    <ClCompile Include="skilltreedialog.cpp">
+    <ClCompile include="src\skilltreedialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="GeneratedFiles\Debug\moc_skilltreedialog.cpp">
@@ -298,7 +298,7 @@
     <ClCompile Include="GeneratedFiles\Release\moc_skilltreedialog.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
-    <ClCompile Include="allstatsdialog.cpp">
+    <ClCompile include="src\allstatsdialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="GeneratedFiles\Debug\moc_allstatsdialog.cpp">
@@ -309,16 +309,16 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="helpers.h">
+    <ClInclude include="src\helpers.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="itemdatabase.h">
+    <ClInclude include="src\itemdatabase.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Resources\win\resource.h">
+    <ClInclude include="Resources\win\resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="structs.h">
+    <ClInclude include="src\structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="GeneratedFiles\ui_medianxlofflinetools.h">
@@ -336,43 +336,43 @@
     <ClInclude Include="GeneratedFiles\ui_finditemsdialog.h">
       <Filter>Generated Files</Filter>
     </ClInclude>
-    <ClInclude Include="reversebitreader.h">
+    <ClInclude include="src\reversebitreader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="reversebitwriter.h">
+    <ClInclude include="src\reversebitwriter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="itemparser.h">
+    <ClInclude include="src\itemparser.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="resourcepathmanager.hpp">
+    <ClInclude include="src\resourcepathmanager.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="languagemanager.hpp">
+    <ClInclude include="src\languagemanager.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="propertiesdisplaymanager.h">
+    <ClInclude include="src\propertiesdisplaymanager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="characterinfo.hpp">
+    <ClInclude include="src\characterinfo.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="qtsingleapplication\qtlockedfile.h">
+    <ClInclude include="qtsingleapplication\qtlockedfile.h">
       <Filter>qtsingleapplication</Filter>
     </ClInclude>
-    <ClInclude Include="colorsmanager.hpp">
+    <ClInclude include="src\colorsmanager.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="fileassociationmanager.h">
+    <ClInclude include="src\fileassociationmanager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="windowsincludes.h">
+    <ClInclude include="src\windowsincludes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="disenchantpreviewmodel.h">
+    <ClInclude include="src\disenchantpreviewmodel.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="checkboxsortfilterproxymodel.hpp">
+    <ClInclude include="src\checkboxsortfilterproxymodel.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="GeneratedFiles\ui_stashsortingoptionsdialog.h">
@@ -392,70 +392,70 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="enums.h">
+    <CustomBuild include="src\enums.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="itemspropertiessplitter.h">
+    <CustomBuild include="src\itemspropertiessplitter.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="itemstoragetablemodel.h">
+    <CustomBuild include="src\itemstoragetablemodel.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="itemstoragetableview.h">
+    <CustomBuild include="src\itemstoragetableview.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="itemsviewerdialog.h">
+    <CustomBuild include="src\itemsviewerdialog.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="medianxlofflinetools.h">
+    <CustomBuild include="src\medianxlofflinetools.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="propertiesviewerwidget.h">
+    <CustomBuild include="src\propertiesviewerwidget.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="qd2charrenamer.h">
+    <CustomBuild include="src\qd2charrenamer.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="resurrectpenaltydialog.h">
+    <CustomBuild include="src\resurrectpenaltydialog.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="medianxlofflinetools.ui">
+    <CustomBuild include="src\medianxlofflinetools.ui">
       <Filter>Form Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="propertiesviewerwidget.ui">
+    <CustomBuild include="src\propertiesviewerwidget.ui">
       <Filter>Form Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="qd2charrenamer.ui">
+    <CustomBuild include="src\qd2charrenamer.ui">
       <Filter>Form Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="resurrectpenaltydialog.ui">
+    <CustomBuild include="src\resurrectpenaltydialog.ui">
       <Filter>Form Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="finditemsdialog.ui">
+    <CustomBuild include="src\finditemsdialog.ui">
       <Filter>Form Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="finditemsdialog.h">
+    <CustomBuild include="src\finditemsdialog.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="Resources\medianxlofflinetools.qrc">
+    <CustomBuild include="Resources\medianxlofflinetools.qrc">
       <Filter>Resource Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="findresultswidget.h">
+    <CustomBuild include="src\findresultswidget.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="application.h">
+    <CustomBuild include="src\application.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="qtsingleapplication\qtlocalpeer.h">
+    <CustomBuild include="qtsingleapplication\qtlocalpeer.h">
       <Filter>qtsingleapplication</Filter>
     </CustomBuild>
-    <CustomBuild Include="qtsingleapplication\qtsingleapplication.h">
+    <CustomBuild include="qtsingleapplication\qtsingleapplication.h">
       <Filter>qtsingleapplication</Filter>
     </CustomBuild>
-    <CustomBuild Include="messagecheckbox.h">
+    <CustomBuild include="src\messagecheckbox.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="experienceindicatorgroupbox.h">
+    <CustomBuild include="src\experienceindicatorgroupbox.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
     <CustomBuild Include="GeneratedFiles\Debug\messagecheckbox_p.moc">
@@ -464,13 +464,13 @@
     <CustomBuild Include="GeneratedFiles\Release\messagecheckbox_p.moc">
       <Filter>Generated Files\Release</Filter>
     </CustomBuild>
-    <CustomBuild Include="plugyitemssplitter.h">
+    <CustomBuild include="src\plugyitemssplitter.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="gearitemssplitter.h">
+    <CustomBuild include="src\gearitemssplitter.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="kexpandablegroupbox.h">
+    <CustomBuild include="src\kexpandablegroupbox.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
     <CustomBuild Include="GeneratedFiles\Debug\kexpandablegroupbox.moc">
@@ -479,25 +479,25 @@
     <CustomBuild Include="GeneratedFiles\Release\kexpandablegroupbox.moc">
       <Filter>Generated Files\Release</Filter>
     </CustomBuild>
-    <CustomBuild Include="disenchantpreviewdialog.h">
+    <CustomBuild include="src\disenchantpreviewdialog.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="showselecteditemdelegate.h">
+    <CustomBuild include="src\showselecteditemdelegate.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="itemnamestreewidget.hpp">
+    <CustomBuild include="src\itemnamestreewidget.hpp">
       <Filter>Header Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="progressbarmodal.hpp">
+    <CustomBuild include="src\progressbarmodal.hpp">
       <Filter>Header Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="stashsortingoptionsdialog.ui">
+    <CustomBuild include="src\stashsortingoptionsdialog.ui">
       <Filter>Form Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="stashsortingoptionsdialog.h">
+    <CustomBuild include="src\stashsortingoptionsdialog.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="helpwindowdisplaymanager.h">
+    <CustomBuild include="src\helpwindowdisplaymanager.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
     <CustomBuild Include="GeneratedFiles\Debug\helpwindowdisplaymanager.moc">
@@ -506,13 +506,13 @@
     <CustomBuild Include="GeneratedFiles\Release\helpwindowdisplaymanager.moc">
       <Filter>Generated Files\Release</Filter>
     </CustomBuild>
-    <CustomBuild Include="skilltreedialog.h">
+    <CustomBuild include="src\skilltreedialog.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="allstatsdialog.h">
+    <CustomBuild include="src\allstatsdialog.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="allstatsdialog.ui">
+    <CustomBuild include="src\allstatsdialog.ui">
       <Filter>Form Files</Filter>
     </CustomBuild>
   </ItemGroup>
