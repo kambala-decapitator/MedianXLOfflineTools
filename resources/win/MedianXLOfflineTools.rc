@@ -63,7 +63,7 @@ BEGIN
             VALUE "FileDescription",  "Median XL character manager"
             VALUE "FileVersion",      APP_VERSION_STR
             VALUE "InternalName",     "MedianXLOfflineTools"
-            VALUE "LegalCopyright",   "Copyright (C) kambala 2011-2021"
+            VALUE "LegalCopyright",   "Copyright (C) kambala 2011-2022"
             VALUE "OriginalFilename", "MedianXLOfflineTools.exe"
             VALUE "ProductName",      "Median XL Offline Tools"
             VALUE "ProductVersion",   APP_VERSION_STR

@@ -1,7 +1,7 @@
 #!/usr/bin/env perl
 
 # original script copyright (C) grig 2011
-# improvements and modifications for Median XL Offline Tools copyright (C) kambala 2011-2021
+# improvements and modifications for Median XL Offline Tools copyright (C) kambala 2011-2022
 
 use strict;
 use warnings;
