@@ -50,8 +50,8 @@ sub tblExpandHash
 }
 
 my $zeroRe = qr/^0$/;
-my %propertiesStatsHash; $propertiesStatsHash{"stat".($_ + 1)} = 6 + $_ * 4 for (0..6);
-my $properties = parsetxt("properties.tsv", "#code"=>"0", param1 => 4, %propertiesStatsHash);
+my %propertiesStatsHash; $propertiesStatsHash{"stat".($_ + 1)} = 8 + $_ * 4 for (0..6);
+my $properties = parsetxt("properties.tsv", "#code"=>"0", param1 => 6, %propertiesStatsHash);
 
 my $descArrayRef = [
     {key => "descstrpos", col => 18, expanded => "descPositive"},
@@ -115,7 +115,7 @@ sub statIdsFromPropertyStat
     return join(',', @ids)
 }
 
-my $uniques = parsetxt("uniqueitems.tsv", _autoindex=>0, iName=>0, ilvl=>4, rlvl=>5, image=>64);
+my $uniques = parsetxt("uniqueitems.tsv", _autoindex=>0, iName=>0, ilvl=>4, rlvl=>5, image=>67);
 &tblExpandArray($uniques, "iName");
 
 # any fixed property in .txt is defined with the following set of columns
@@ -178,7 +178,7 @@ my $sets = parsetxt("sets.tsv", "#key" => 0, tbl => 1, '!_lodSet' => {col => 2, 
 my %greenPropertiesHash, my @greenPropertiesKeys;
 &getSetFixedPropertiesHash(57, 10, \%greenPropertiesHash, \@greenPropertiesKeys);
 my $setItems = parsetxt("setitems.tsv", _autoindex=>0, iIName=>0, setKey=>1, rlvl=>8, image=>87, addfunc=>94,
-                        %greenPropertiesHash, '!_lodSet' => {col => 6, val => $oldSetCond});
+                        %greenPropertiesHash, '!_lodSet' => {col => 7, val => $oldSetCond});
 &tblExpandArray($setItems, "iIName", "IName");
 
 my $setTblKey = 'setTblKey';
@@ -218,7 +218,7 @@ my $miscTypes = parsetxt("misc.tsv", $itemName=>0, "#code"=>5, $nameStr=>7, $spe
 &tblExpandHash($_, $itemName) for ($armorTypes, $weaponTypes, $miscTypes);
 
 my $skills = parsetxt("skills.tsv", _index=>"1", "dbgname"=>"0", "internalName"=>"3", "class"=>"2",
-                      "srvmissile"=>"9", "srvmissilea"=>"12", "srvmissileb"=>"13", "srvmissilec"=>"14");
+                      "srvmissile"=>"8", "srvmissilea"=>"11", "srvmissileb"=>"12", "srvmissilec"=>"13");
 my $skillsDsc = parsetxt("skilldesc.tsv", "#code"=>0, tab => 1, row => 2, col => 3, image => 8, dscname=>9);
 
 my $processedSkills;

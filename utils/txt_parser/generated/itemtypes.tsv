@@ -71,6 +71,7 @@ cloa	tors,assn		Cloak
 club	blun,dbox		Club
 qclb	club,ct1w		Club (Sacred)
 comb	mele,thro		Combo Weapon
+scuu	thng		Corrupted Shard
 ct2x	sw&a		Craft Sacred Major
 ct2a	sarm,ct2x		Craft Sacred Major (Armor)
 ct2w	swea,ct2x		Craft Sacred Major (Weapon)
@@ -128,6 +129,7 @@ knif	mele,dbox		Knife
 qknf	knif,ct1w		Knife (Sacred)
 lcha	char	invch3,invch6,invch9	Large Charm
 cyc3	cycl	invch3,invch6,invch9	Large Cycle
+cyng	cyc3	invch3,invch6,invch9	Large Cycle Not Gold
 mace	blun		Mace
 qmac	mace,ct1w		Mace (Sacred)
 mboq	bowq		Magic Bow Quiv
@@ -181,7 +183,7 @@ phlm	helm,barb		Primal Helm
 qphm	phlm,ct1a		Primal Helm (Sacred)
 gemx	gem		Rainbow Gem
 rpot	hpot,mpot		Rejuv Potion
-reli	sock	relic01,relic02,relic03,relic04,relic05,relic06	Relic
+reli	grtz	relic01,relic02,relic03,relic04,relic05,relic06	Relic
 grtz	char		Reward Charm
 ring	riam,sg&d	invrin1,invrin2,invrin3,invrin4,invrin5	Ring
 qrin	ring	invrin1,invrin2,invrin3,invrin4,invrin5	Ring (Sacred)

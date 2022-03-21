@@ -596,10 +596,10 @@ w99	Avenger Guard (3)		2	2	0		23	219	0									invba5				phlm,tier		4
 13@	Great Sword (Sacred)		2	4	1		30	670	0	1	1	48	52	79	81			invgsd	0	16	0	s2hd	1	-1
 140	Spetum (1)		2	4	1		3	42	63		1			4	11			invspt	0	0	15	spea,tier	1	-1
 141	Pike (1)		2	4	1		5	54	80		1			5	13			invpik	0	0	15	spea,tier	1	-1
-142	Dagger (1)		1	2	1		0	0	0			2	3					invdgr	0	0	11	knif,tier	1	-1
-143	Dirk (1)		1	2	1		2	0	25			2	3					invdir	0	0	11	knif,tier	1	-1
-144	Kriss (1)		1	3	1		3	0	43			3	4					invkrs	0	0	11	knif,tier	1	-1
-145	Blade (1)		1	3	1		5	0	61			3	4					invbld	0	0	11	knif,tier	1	-1
+142	Dagger (1)		1	2	1		0	0	0			3	4					invdgr	0	0	11	knif,tier	1	-1
+143	Dirk (1)		1	2	1		2	0	25			3	4					invdir	0	0	11	knif,tier	1	-1
+144	Kriss (1)		1	3	1		3	0	43			4	5					invkrs	0	0	11	knif,tier	1	-1
+145	Blade (1)		1	3	1		5	0	61			5	6					invbld	0	0	11	knif,tier	1	-1
 146	Throwing Knife (1)		1	2	1	1	0	0	15			2	4			1	4	invtkn	0	0	11	tkni,tier	1	-1
 147	Flying Knife (1)		1	2	1	1	2	0	53			3	4			3	4	invtkn	0	0	11	tkni,tier	1	-1
 148	Balanced Knife (1)		1	2	1	1	3	0	91			4	5			6	7	invbkf	0	0	11	tkni,tier	1	-1
@@ -689,11 +689,11 @@ w99	Avenger Guard (3)		2	2	0		23	219	0									invba5				phlm,tier		4
 275	Brandistock (2)		2	4	1		11	55	75		1			10	20			invbrn	0	0	15	spea,tier	1	-1
 276	Spetum (2)		2	4	1		12	70	97		1			11	26			invspt	0	0	15	spea,tier	1	-1
 277	Pike (2)		2	4	1		14	85	118		1			11	29			invpik	0	0	15	spea,tier	1	-1
-278	Dagger (2)		1	2	1		9	0	18			6	7					invdgr	0	0	11	knif,tier	1	-1
-279	Dirk (2)		1	2	1		11	0	48			7	8					invdir	0	0	11	knif,tier	1	-1
+278	Dagger (2)		1	2	1		9	0	18			7	8					invdgr	0	0	11	knif,tier	1	-1
+279	Dirk (2)		1	2	1		11	0	48			8	9					invdir	0	0	11	knif,tier	1	-1
 27@	Mace (Sacred)		1	3	1		30	442	0			44	50					invmac	0	11	0	qmac	1	-1
-280	Kriss (2)		1	3	1		12	0	71			8	9					invkrs	0	0	11	knif,tier	1	-1
-281	Blade (2)		1	3	1		14	0	95			9	11					invbld	0	0	11	knif,tier	1	-1
+280	Kriss (2)		1	3	1		12	0	71			9	10					invkrs	0	0	11	knif,tier	1	-1
+281	Blade (2)		1	3	1		14	0	95			10	12					invbld	0	0	11	knif,tier	1	-1
 282	Throwing Knife (2)		1	2	1	1	9	0	36			5	6			7	8	invtkn	0	0	11	tkni,tier	1	-1
 283	Flying Knife (2)		1	2	1	1	11	0	84			8	9			12	14	invtkn	0	0	11	tkni,tier	1	-1
 284	Balanced Knife (2)		1	2	1	1	13	0	132			11	12			17	20	invbkf	0	0	11	tkni,tier	1	-1
@@ -1240,7 +1240,7 @@ wol	Wirt's Other Leg		1	3	1		0	0	0			13	18					invwol		0	0	wrtl	1	-1
 25^	\dgreen;Greater Signet of Learning	Right-click: Free Attribute Points: %d	1	1	2		0	0	0									sigilXL				poti		-1
 26+	\orange;Mystic Orb	Right-Click to Apply	1	1	2		0	0	0									orb_armo				myst		-1
 27+	\orange;Mystic Orb	Right-Click to Apply	1	1	2		0	0	0									orb_armo				myst		-1
-2o[	Cube Reagent\n\orange;Oil of Disjunction	80\nThe Oil of Disjunction will unsocket and \nreturn socket fillers from any magical\n(or higher) quality item.\n\nNormal items can not be unsocketed.\n\nOil + Magical Item\n--> Item + Socket Fillers\n	1	1	2		0	0	0									oil_disjunction				thng		-1
+2o[	Cube Reagent\n\orange;Oil of Disjunction	80\nThe Oil of Disjunction will unsocket \nand return socket fillers from any \nnon-runeword item.\n\nOil + Item\n--> Item + Socket Fillers\n	1	1	2		0	0	0									oil_disjunction				thng		-1
 2p[	Cube Reagent\n\orange;Oil of Intensity	75\nUse together with a full shrine to craft\nor bless a rare item.\n\nShrine innate roll minimum value will be\nincreased.\n(Roll range reduced by 50%)\n\nUsage consumes both ingredients\n	1	1	2		0	0	0									oil_intensity				thng		-1
 2x5	\dgreen;Alpha Brain		1	1	2		0	0	0									invbrnz				thng		-1
 2x6	\dgreen;Beta Brain		1	1	2		0	0	0									invbrnz				thng		-1
@@ -1284,7 +1284,7 @@ wol	Wirt's Other Leg		1	3	1		0	0	0			13	18					invwol		0	0	wrtl	1	-1
 7$c	\purple;Turquoise		1	1	2		12	0	0									invgstc				gemo,gem2		-1
 7$d	\purple;Flawless Turquoise		1	1	2		15	0	0									invgstd				gemo,gem3		-1
 7$e	\purple;Perfect Turquoise		1	1	2		18	0	0									invgste				gemo,gem4		-1
-7o[	Cube Reagent\n\orange;Oil of Craft	90\nThe Oil of Craft lets you create\ncontainers of various items:\n\nOil + Arcane Crystal\n--> Arcane Cluster (1)\n\nOil + Rune (up to Zod)\n--> Rune Container (1)\n\nOil + Perfect Gem\n--> Gem Cluster (1)\n\nOil + Portable Shrine\n--> Shrine Vessel (1)\n	1	1	2		0	0	0									oil_jewelcraft				thng		-1
+7o[	Cube Reagent\n\orange;Oil of Craft	90\nThe Oil of Craft lets you create\ncontainers of various items:\n\nOil + Arcane Crystal\n--> Arcane Cluster (1)\n\nOil + Rune (up to Zod)\n--> Rune Container (1)\n\nOil + Perfect Gem\n--> Gem Cluster (1)\n\nOil + Portable Shrine\n--> Shrine Vessel (1)\n\nOil + Corrupted Crystal\n--> Corrupted Cluster (1)\n	1	1	2		0	0	0									oil_jewelcraft				thng		-1
 8o[	Cube Reagent\n\orange;Oil of Absolution		1	1	2		0	0	0									oil_absolution				thng		-1
 9$a	\purple;Chipped Bloodstone		1	1	2		1	0	0									invgsca				gemp,gem0		-1
 9$b	\purple;Flawed Bloodstone		1	1	2		5	0	0									invgscb				gemp,gem1		-1
@@ -1493,7 +1493,7 @@ Ysh2	Necklace		1	1	2		0	0	0									lab_amu				###2		-1
 [14	\gold;Archbishop Lazarus Trophy	\blue;Maximum Elemental Resists +1%\n\grey;Cube with the Glorious Book of Median to Add Bonus\n	1	1	2		0	0	0									trophy20				thng,trph		-1
 [15	\gold;The Triune Trophy	\blue;30% Magic Find\n\grey;Cube with the Corrupted Wormhole to Add Bonus\n	1	1	2		0	0	0									trophy10				thng,trph		-1
 [16	\gold;Nephalem's Sacrifice Trophy	\blue;Adds 100-150 cold damage\nAdds 100-150 lightning damage\nAdds 100-150 fire damage\n\grey;Cube with the Neutrality Pact to Add Bonus\n	1	1	2		0	0	0									trophy19				thng,trph		-1
-[17	\gold;Banisher of Light Trophy	\blue;2% Reanimate as: Random Monster\n\grey;Cube with the Soul of Kabraxis to Add Bonus\n	1	1	2		0	0	0									trophy09				thng,trph		-1
+[17	\gold;Banisher of Light Trophy	\blue;Adds 5-10 Damage\n\grey;Cube with the Soul of Kabraxis to Add Bonus\n	1	1	2		0	0	0									trophy09				thng,trph		-1
 [18	\gold;Ghosts of Old Bremmtown Trophy	\blue;+10% to Experience Gained\n\grey;Cube with Upgraded Dragon Claw to Add Bonus:\n\orange;Kill Dark Star Dragon in Under 30 Seconds to Apply Bonus\n	1	1	2		0	0	0									trophy13				thng,trph		-1
 [19	\gold;The Void Trophy	\blue;+1 to All Skills\n\grey;Cube with Books of Kalan to Add Bonus:\n	1	1	2		0	0	0									trophy18				thng,trph		-1
 [20	\gold;Eve of Destruction Trophy	\blue;Elemental Resists +10%\n\grey;Cube with Spirit of Creation to Add Bonus:\n	1	1	2		0	0	0									trophy08				thng,trph		-1
@@ -1502,7 +1502,7 @@ Ysh2	Necklace		1	1	2		0	0	0									lab_amu				###2		-1
 \\3	\purple;Great Topaz	Cube All Gems with The Black Road to Add Bonus	1	1	2		0	0	0									invgsye				thng		-1
 \\4	\purple;Great Sapphire	Cube All Gems with The Black Road to Add Bonus	1	1	2		0	0	0									invgsbe				thng		-1
 \\5	\purple;Great Ruby	Cube All Gems with The Black Road to Add Bonus	1	1	2		0	0	0									invgsre				thng		-1
-\\6	\gold;Golden Cycle	\dgrey;(Limit: 1)\n\blue;Maximum Mana:+5%\nMaximum Life:+2%\n+10 to All Attributes\n+1 to All Skills\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invch3				cyc3,cycl		-1
+\\6	\gold;Golden Cycle	\dgrey;(Limit: 1)\n\blue;Maximum Mana +5%\nMaximum Life +2%\n+10 to All Attributes\n+1 to All Skills\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	3	2		0	0	0									invch3				cyc3,cycl		-1
 \\7	\grey;Quest Item\n\gold;Tome of Possession		2	2	2		0	0	0									invbbb	255			grtz		-1
 \\8	Corrupted Wormhole		1	1	2		0	0	0									invlucion	255			grtz		-1
 a55	Optical Detector		1	1	2		0	0	0									inveye	255			grtz		-1
@@ -1551,8 +1551,8 @@ c@c	(Sorceress Only)\n\red;Moon Symbol	A blessed symbol of the goddess...	1	1	2	
 cm1	\orange;Cycle		1	1	2		0	0	0									invch1				scha		-1
 cm2	\orange;Cycle		1	2	2		0	0	0									invch2				mcha		-1
 cm3	\orange;Cycle		1	3	2		0	0	0									invsst				lcha		-1
-cosx	\orange;Corrupted Cluster	(Right Click to Collect)	1	1	2		0	0	0									invsr6				thng		-1
-cotw	Relic	Can be Inserted into Socketed Items	1	1	2		100	0	0									invgswe				reli		-1
+cosx	\orange;Corrupted Cluster	(Right Click to Collect)	1	1	2		0	0	0									invscr6				thng		-1
+cotw	Relic		1	1	2		0	0	0									invgswe				reli		-1
 cqv	Bolt Quiver		1	3	2	1	0	0	0									invcqv				xboq	2	-1
 cr01	Quest Item\n\gold;Charged Riftstone (\green;1\gold;)	\grey;Difficulty: \red;Hard\n\grey;Area Level: 121\n\gold;Dimensional Labyrinth 1\n\n\grey;Right click to open a portal\n	1	1	2		115	0	0									ChargedRunestoneG				thng		-1
 cr02	Quest Item\n\gold;Charged Riftstone (\green;2\gold;)	\dgrey;- Transmute for Full Monster Stats -\n\n\grey;Difficulty: \red;Hard\n\grey;Area Level: 122\n\gold;Dimensional Labyrinth 2\n\n\grey;Right click to open a portal\n	1	1	2		116	0	0									ChargedRunestoneG				thng		-1
@@ -1850,9 +1850,10 @@ ktxx	\grey;Cube Reagent\n\gold;Ascendant Riftwalker Essence	\blue;Maximum Elemen
 ktyx	\grey;Cube Reagent\n\gold;Greater Riftwalker Essence	\blue;+1 to All Skill Levels\n\grey;Cube with your Riftwalker's Eye to Add Bonus\n	1	1	2		0	0	0									Riftwalker2				thng		-1
 ktzx	\gold;Riftwalker's Eye		1	1	2		105	0	0									evileye	255			grtz		-1
 l@l	\grey;Quest Item\n\gold;Skinrender's Sigil	Cube All 5 Sigils with Ring of the Five\n	1	1	2		0	0	0									ring01				thng		-1
+leek	:leek:	65\n- Runewords can now be corrupted\n	1	2	2		0	0	0									leek				thng		-1
 lms	'The Last Man Standing'\nEvent Award:		2	2	2		0	0	0									lastman	255			grtz		-1
 lok	Crystalline Flame Medallion		1	1	2		0	0	0									invvip	255			grtz		-1
-ltbx	\orange;Treasure of Fiacla Gear		2	2	2		0	0	0									illbeback				loot		-1
+ltbx	\orange;(Restored)\nTreasure of Fiacla Gear	Transmute in the Cube to Open	2	2	2		0	0	0									illbeback				loot		-1
 luv	The Black Tower Key		1	2	2		0	0	0									invmph	20			key		-1
 m@m	\grey;Quest Item\n\gold;Spinecracker's Sigil	Cube All 5 Sigils with Ring of the Five\n	1	1	2		0	0	0									ring03				thng		-1
 mec	Cube Reagent\n\orange;Meditation Candle		1	1	2		0	0	0									invcndl				thng		-1
@@ -1865,6 +1866,7 @@ mpf	FLYING POLAR BUFFALO ERROR		1	1	2		0	0	0									invbpl				mpot		-1
 mpo	FLYING POLAR BUFFALO ERROR		1	1	2		0	0	0									invbps				mpot		-1
 mss	Mephisto's Soulstone		1	1	2		0	0	0									invmss	23			ques		-1
 o@o	\grey;Quest Item\n\gold;Eyegouger's Sigil	Cube All 5 Sigils with Ring of the Five\n	1	1	2		0	0	0									ring06				thng		-1
+obox	\red;Corrupted Treasure	(Better items and more gold cost the higher the rune)\nRestore Gold Cost: 20,000 - 500,000\nCube with Arcane Crystal and Enchanted Rune to Restore	2	2	2		0	0	0									illbeblack				loot		-1
 ooc	Cube Reagent\n\orange;Oil of Conjuration	70\nThe Oil of Conjuration has a chance to \nadd an extra bonus to caster weapons, \ninstead of using the lucky recipe.\n\nDoes not work on normal/superior items.\n\nOil + Weapon\n--> Item with 2/5 Chance of Added Bonus\n(Limit: 1)\n\nWeapons: +10% Spell Damage\n	1	1	2		0	0	0									oil_conjuration				thng		-1
 p@p	\grey;Quest Item\n\gold;Fleshcutter's Sigil	Cube All 5 Sigils with Ring of the Five\n	1	1	2		0	0	0									ring07				thng		-1
 pacb	\orange;Home Cherry	\dgrey;Do NOT tell anyone what you just saw\nThese cherries will take you back home safely	1	1	2		0	0	0									cherries				thng		-1
@@ -1873,6 +1875,7 @@ qbr	Khalim's Brain		1	1	2		0	0	0									invbrnz	17			ques		-1
 qey	Khalim's Eye		1	1	2		0	0	0									inveye	17			ques		-1
 qhr	Khalim's Heart		1	1	2		0	0	0									invhrt	17			ques		-1
 qll	Quill		1	1	2		0	0	0									invquil				body		-1
+qrel	\gold;Relic Orb	Transmute to Unlock Reward\n\dgrey;Reward for Defeating Hell Baal	2	2	2		0	0	0									invrelicbox				thng		-1
 qu2	\grey;Cube Reagent\n\orange;Arcane Shards (2)	90\nCreating Arcane Crystals:\n\n5 Arcane Shards\n--> Arcane Crystal\n	1	1	2		0	0	0									invfary2				thng		-1
 qu3	\grey;Cube Reagent\n\orange;Arcane Shards (3)	90\nCreating Arcane Crystals:\n\n5 Arcane Shards\n--> Arcane Crystal\n	1	1	2		0	0	0									invfary3				thng		-1
 qu4	\grey;Cube Reagent\n\orange;Arcane Shards (4)	90\nCreating Arcane Crystals:\n\n5 Arcane Shards\n--> Arcane Crystal\n	1	1	2		0	0	0									invfary4				thng		-1
@@ -2018,19 +2021,21 @@ rx33	\grey;Enchanted Rune (33)\n\purple;Xod Rune		1	1	2		120	0	0									xisZod	
 s@s	Assur's Bane		1	1	2		0	0	0									ring08				kill		-1
 sath	\grey;Quest Item\n\gold;Askari Call	\grey;Location: Island of Skartara (Heart)\n\orange;Summon Athulua, the Amazonian Goddess	1	1	2		120	0	0									invblackscroll				thng		-1
 sbag	\gold;Angel Bag	\grey;Cube 6 Angel Bags to Create Six Angel Bag\n\nCube Reagent	1	2	2		0	0	0									angelbag2				thng		-1
-sc01	Scroll	80\nYou've made it here... I've left this note hidden here hoping that a worthy hero would find it. We need to stop the Uileloscadh Mór, the Lord of Destruction is almost finished corrupting all of Scosglen, and soon all of Sanctuary...\nOver centuries, Druids have been mastering the art of the Dubhdroiacht, this allows them to control the forces of nature. This place was the fortress for their greatest creation of all: the Dulra Catalyst. We need to stop Baal before he finishes it.\nPlease look for my diary, it's in the farms... Look for a chest near a hut, and you'll find it.\n	1	1	2		0	0	0									invrsc				thng		-1
-sc02	Scroll	80\nThis device allows him to control any living creature, including yourself... thankfully assembling it is far from easy. But this doesn't mean we have a lot of time. The catalyst was never completed because its threat to mankind, and the instructions were split to multiple Túr Dúlra experts that swore to protect them.\nBaal has corrupted almost all of them by now, after taking the information he needed. He's hidden in the fortress, but you can't see him. He has used the catalyst to shape a different dimension to protect him. Making our own Catalyst is our best attempt at defeating him.\nThe second part of the diary is in a chest in the Praying Temple. It's east of to the Farms.\n	1	1	2		0	0	0									invrsc				thng		-1
-sc03	Scroll	80\nTo build the catalyst, we will need the instructions. These can be read in the Ancient Circle at the Fortress, however only the quantities are there. Obtain the knowledge tomes by defeating the corrupted Druids, but remember only a handful have them. The complete tome will list the necessary ingredients to create the Catalyst.\nOnce you have obtained all tomes, look for the next diary in a hut close to the entrance.\n	1	1	2		0	0	0									invrsc				thng		-1
-sc04	Scroll	80\nThe tomes can be restored by transmuting them together in your horadric cube. But only an expert druid can decypher the instructions. If you aren't one, you'll have to also combine my three diaries, I've imbued power in them which should suffice.\nOnce you have the catalyst, go to the Ancient Circle and use it to enter Baal's dimension. Beware as he has control over nature and climate, it will not be pleasant.\nIt is now time for the worst. Prepare.\n	1	1	2		0	0	0									invrsc				thng		-1
+sc01	Scroll	60\n(1/4)\n\nYou've made it here... I've left this note \nhidden here so that only a worthy hero \ncould find it. Our final confict, the\nUileloscadh Mór, is upon us. Baal's \ncorruption has enveloped Scosglen, and \nsoon will spread in all of Sanctuary...\n\nDruids, over the centuries, have been \nmastering the art of the Dubhdroiacht, \nallowing us control over the forces of \nnature. This forest is the birthplace \nof our greatest creation: the Dúlra \nAegis. We must stop the Lord of \nDestruction before he obtains it.\n\nPlease, muster your resolve and look \nfor the other pages of my diary. Reach \nthe farmfields and look for a chest near \na hut, I believe you'll find it as this \nmessage found you. Watch out, as\nbloody rituals are frequent in that area.\n	2	2	2		0	0	0									invscb				thng		-1
+sc02	Scroll	60\n(2/4)\n\nThis device was born from the desire to \nprotect our home during the foretold \ncalamity; but now, in a twist of fate, it \ncould grant Baal authority over \nunspeakable power... thankfully \nassembling it is far from a simple task. \nThe artifact itself was never completed \nbecause of the threat of its potential \nmisuse, and the instructions were split \ninto multiple designs that Túr Dúlra \nexperts swore to protect.\n\nAfter harvesting the information he \nneeded, Baal has corrupted almost all of \nthe guardians! He has used the artifact \nto reach an unknown location, hiding his \npresence and pressing his advantages.\n\nMaking our own Dúlra Aegis may be \nour best and only step on the path to \nhis defeat.\n\nThe third page of the diary is in a chest \nin the Praying Temple. It's south of the \nfarmfields.\n	2	2	2		0	0	0									invscb				thng		-1
+sc03	Scroll	56\n(3/4)\n\nBefore building the Dúlra Aegis, several \ntenets need to be crafted first. Obtaining \nthe design tomes by defeating the now \ncorrupted guardian Druids could prove \nvery difficult, but it's a necessity. Keep \nalso in mind that not all of them carry \nthe designs, but It's rumored that some \nmay even carry already crafted tenets.\n\nIntrepid warrior, you must press on or \nall of our struggle will have been for \nnaught.\n\nAfter assembling all Tenets, look for the \nfourth page of the diary: it's in a hut \nclose to the forest portal entrance, \nwhere you first stepped here.\n	2	2	2		0	0	0									invscb				thng		-1
+sc04	Scroll	60\n(4/4)\n\nThese four diary pages you've collected \ncan be combined together and \ntransmuted into the final design for the \nDulra Aegis.\n\nOnce you have the Dulra Aegis, you will\nneed a special ingredient to breach into\nBaal's refuge. You need to travel to the\ncemetery at the East and look deep. The \nAegis will require much conjuring power.\n\nWhen you are ready to fight him, head\nto the Ancient Circle at the North East. \nBeware as he has control over the \nnatural elements, you're not fighting \nonly him but also the twisted wrath of \nthese lands.\n\nIt is now time to face our greatest \nenemy. Prepare.\n	2	2	2		0	0	0									invscb				thng		-1
 scf1	\grey;Quest Item\n\gold;Tenet of Harmony		1	1	2		0	0	0									scosfrag				tent		-1
 scf2	\grey;Quest Item\n\gold;Tenet of Restraint		1	1	2		0	0	0									scosfrag				tent		-1
 scf3	\grey;Quest Item\n\gold;Tenet of Vigor		1	1	2		0	0	0									scosfrag				tent		-1
 scf4	\grey;Quest Item\n\gold;Tenet of Wisdom		1	1	2		0	0	0									scosfrag				tent		-1
 scf5	\grey;Quest Item\n\gold;Tenet of Judgement		1	1	2		0	0	0									scosfrag				tent		-1
 scf6	\grey;Quest Item\n\gold;Tenet of Conflict		1	1	2		0	0	0									scosfrag				tent		-1
-scu2	\grey;Cube Reagent\n\orange;Corrupted Shards (2)	90\nCreating Corrupted Crystals:\n\n3 Corrupted Shards\n--> Corrupted Crystal\n	1	1	2		0	0	0									invfary2				thng		-1
-scul	\grey;Cube Reagent\n\orange;Corrupted Shards (1)	90\nCreating Corrupted Crystals:\n\n3 Corrupted Shards\n--> Corrupted Crystal\n	1	1	2		0	0	0									invfary1				thng		-1
-scum	\grey;Cube Reagent\n\orange;Corrupted Crystal	80 \nCorrupted Crystals let you corrupt\nRings, Amulets, Magic, Rare, Set,\nUnique and Crafted items (sacred only):\n\nCorrupted Crystal + Item --> Returns\nItem with a chance of adding bonuses,\na chance of doing nothing, and a\nchance of making the item unusable. \n	1	1	2		0	0	0									invfrag				thng		-1
+scu2	\grey;Cube Reagent\n\orange;Corrupted Shards (2)	90\nCreating Corrupted Crystals:\n\n3 Corrupted Shards\n--> Corrupted Crystal\n	1	1	2		0	0	0									invsfary2				scuu		-1
+scu3	\grey;Cube Reagent\n\orange;Corrupted Shards (3)	90\nCreating Corrupted Crystals:\n\n3 Corrupted Shards\n--> Corrupted Crystal\n	1	1	2		0	0	0									invsfary3				thng		-1
+scu4	\grey;Cube Reagent\n\orange;Corrupted Shards (4)	90\nCreating Corrupted Crystals:\n\n3 Corrupted Shards\n--> Corrupted Crystal\n	1	1	2		0	0	0									invsfary4				thng		-1
+scul	\grey;Cube Reagent\n\orange;Corrupted Shards (1)	90\nCreating Corrupted Crystals:\n\n3 Corrupted Shards\n--> Corrupted Crystal\n	1	1	2		0	0	0									invsfary1				scuu		-1
+scum	\grey;Cube Reagent\n\orange;Corrupted Crystal	30% Chance to add Nothing\n30% Chance to add +100 Required Level\n40% Chance to add Random Bonus Stat\n\nRing / Amulet\nSacred Runeword, or\nSacred (Magical or higher) Item, or\n\red;Cube with Item to Corrupt\n	1	1	2		0	0	0									invfrag				thng		-1
 scz	Scalp		1	1	2		0	0	0									invscp				body		-1
 senn	Ennead Challenge\n\orange;Scroll of Kurast	Cube Class Charm with a Jewel to Add Bonus\n\yellow;Reward\n\n\grey;Find your Class Charm at level 80 or lower\n\yellow;Challenge\n\n\grey;Kurast 3000 BA (Torajan Jungles - Kurast Docks)\n\yellow;Location\n\n\grey;Normal\n\yellow;Difficulty\n	1	1	2		0	0	0									ChallengeScroll				thng		-1
 skc	\purple;Chipped Skull		1	1	2		1	0	0									invskc				gemz,gem0		-1
@@ -2132,7 +2137,10 @@ zkx	\dgreen;Greater Signet of Gold	Right-click: Gold in Bank: %d	1	1	2		0	0	0			
 |ab	Cube Reagent\n\orange;Ancient Book	\yellow;very rare Emblems that drop from Monsters\nRecipes for this Item are Unknown, but said to use\n	2	2	2		0	0	0									bookwastex				thng		-1
 |bc	Cube Reagent\n\gold;Book of Cain	\blue;+5% to Experience Gained\n+10 to All Attributes\n+1 to All Skills\n\grey;Cube with Glorious Book of Median to Add Bonus\n	2	2	2		0	0	0									superbooffk				thng		-1
 |dc	Dragon Claw		1	1	2		120	0	0									invhorn	255			grtz		-1
-|dul	Tur Dulra's Oak Seed	\orange;Cube with Perfect Gem to Add/Rotate Stat\nCube with Apple to Rotate Type	1	1	2		0	0	0									invdulra	255			grtz		-1
+|ds1	\orange;Conjuring Eye	Cube Reagent	1	1	2		0	0	0									invminieye				thng		-1
+|ds2	\orange;Reality Piercer	\red;Requires Standing in the Ancient Circle\n\grey;Cube with Dulra Aegis to enter the Frozen Crest\n\nCube Reagent	1	1	2		0	0	0									invscoseye				thng		-1
+|du1	\orange;Dulra Fruit	\blue;25% Magic Find\nMaximum Life +5%\n+1 to All Skills\n\grey;Cube with Dulra Aegis to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invdulrafruit				thng		-1
+|dul	Dulra Aegis	75\nThis powerful artifact has a multitude of \nuses depending on which reagent it is \ncubed with. \n\nCertain perfect gems allow you to pick \nstats within a certain category.\n\nAegis + Perfect Gem -> Add/Roll Stat\n\nRuby = Class Skills\nEmerald = Speed\nSapphire = Enemy Resist\nTopaz = Attribute\nAmethyst = Resist\nDiamond = Max Resist\nSkull = Minion Stat\n\nAdditionally, this artifact can be used to \nsummon certain bosses, teleport you\nto locations and opening quest portals.\n	1	1	2		0	0	0									invdulra	255			grtz		-1
 |ld	Lylia's Curse		1	1	2		120	0	0									lyliascharm	255			grtz		-1
 |ms	\gold;Ghost Trance	\blue;+1 to All Skills\n(11 to 40) to all Attributes\n\grey;Cube with Umbaru Treasure to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									giyuaGolem				thng		-1
 |wc	Weather Control		1	1	2		120	0	0									invathulua	255			grtz		-1

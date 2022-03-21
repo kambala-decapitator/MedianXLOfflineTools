@@ -358,7 +358,7 @@
 356	Harvest	5	1	1	2	100
 357	Infected Roots	5	1	2	1	74
 358	Pagan Rites	5	6	3	3	54
-359		5				
+359	Egg Trap	5	4	5	2	116
 360		5				
 361		5				
 362		5				
@@ -469,7 +469,7 @@
 467	Lightning Streak	-1	0	0	0	116
 468	Nightmare	-1	0	0	0	103
 469	Vanquish	-1	0	0	0	75
-470	Cataclysm	-1	0	0	0	35
+470	Ignis Fatuus	-1	0	0	0	35
 471	Shadow Blade	-1	0	0	0	73
 472	Dark Power	-1	0	0	0	57
 473	Supernova	-1	0	0	0	38
@@ -1292,7 +1292,7 @@
 1290		-1				
 1291	Mark of the Wild	-1	0	0	0	14
 1292	Wereowl Form	5	4	1	3	60
-1293	Egg Trap	5	4	5	2	116
+1293		5				
 1294	\orange;Ferocity	5	4	2	3	90
 1295	Earth Talons	5	4	1	2	128
 1296	Steady Shot	5	5	1	2	140
@@ -1744,7 +1744,7 @@
 1742	Wyrd	-1	0	0	0	206
 1743	Razor Spines	-1	0	0	0	119
 1744	Summon Fallen	-1	0	0	0	176
-1745	Static Lance	-1	0	0	0	225
+1745	Chaotic Spark	-1	0	0	0	225
 1746	Winter Avatar	-1	0	0	0	42
 1747	Shock Flower	-1	0	0	0	188
 1748	Rune of Mana	-1	0	0	0	71
@@ -1788,12 +1788,12 @@
 1786	Summon Daystar	-1	0	0	0	210
 1787	Summon Shredder	-1	0	0	0	215
 1788	Summon Bane Monster	-1	0	0	0	207
-1789		-1				
+1789	Frozen Heart	-1	0	0	0	280
 1790	Sacrifices	-1	1	3	2	70
 1791	Champions of the Sun	-1	0	0	0	142
 1792		-1				
 1793	Summon Sinner	-1	0	0	0	151
-1794	Summon Avalanche	-1	0	0	0	160
+1794	Summon Frostwalker	-1	0	0	0	160
 1795	Summon Glowing Fungus	-1	0	0	0	166
 1796		-1				
 1797		-1				
@@ -1803,7 +1803,7 @@
 1801		-1				
 1802		-1				
 1803		-1				
-1804		-1				
+1804	\gold;Ranged Egg Trap	-1	0	0	0	279
 1805		-1				
 1806		-1				
 1807		-1				
@@ -1836,8 +1836,8 @@
 1834		-1				
 1835		-1				
 1836		-1				
-1837		-1				
-1838		-1				
+1837	Fire Cannonade	-1	0	0	0	0
+1838	Hellgate	-1	0	0	0	0
 1839		-1				
 1840		-1				
 1841		-1				
@@ -2543,7 +2543,7 @@
 2541		-1				
 2542		-1				
 2543		-1				
-2544	Avalanche	-1	0	0	0	140
+2544		-1				
 2545		-1				
 2546		-1				
 2547		-1				
@@ -2650,12 +2650,12 @@
 2648	Thundergod	-1	8	1	3	90
 2649	Graveyard	-1	8	1	3	98
 2650	Supernova	-1	0	0	0	38
-2651	Cataclysm	-1	0	0	0	35
+2651	Ignis Fatuus	-1	0	0	0	35
 2652	Ice Bolt Nova	-1	0	0	0	195
 2653	Razor Spines	-1	0	0	0	119
 2654	Wyrd	-1	0	0	0	206
 2655	Knife Throw	-1	0	0	0	0
-2656	Static Lance	-1	0	0	0	225
+2656		-1				
 2657	Shock Flower	-1	0	0	0	188
 2658	Spiral Dance	-1	0	0	0	93
 2659	Medusa	-1	0	0	0	117
@@ -2751,12 +2751,24 @@
 2749		-1				
 2750	Thunderstone	-1	3	2	1	52
 2751		-1				
-2752		-1				
+2752	Thunderstone	-1	3	2	1	52
 2753		-1				
 2754		-1				
 2755		-1				
 2756		-1				
 2757		-1				
-2758		-1				
-2759	Ледяное Дыхание	-1	0	0	0	0
+2758	Ледяное Дыхание	-1	0	0	0	0
+2759		-1				
 2760		-1				
+2761		-1				
+2762		-1				
+2763		-1				
+2764		-1				
+2765		-1				
+2766		-1				
+2767		-1				
+2768		-1				
+2769		-1				
+2770		-1				
+2771		-1				
+2772		-1				

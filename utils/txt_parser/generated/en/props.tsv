@@ -187,8 +187,10 @@
 231	0	10							Fire Resist	Fire Resist	(Based on Character Level)	7	64	2					item_resist_fire_perlevel
 232	0	10							Lightning Resist	Lightning Resist	(Based on Character Level)	7	63	2					item_resist_ltng_perlevel
 233	0	10							Poison Resist	Poison Resist	(Based on Character Level)	7	61	2					item_resist_pois_perlevel
+235	0	10	10	10														10	thog_dont_caare
 239	0	10							Gold Find	Gold Find	(Based on Character Level)	7	16	1					item_find_gold_perlevel
 240	0	10							Magic Find	Magic Find	(Based on Character Level)	7	14	1					item_find_magic_perlevel
+241	30	7																	is_corrupted
 245	1	2																	grim_active
 246	1	2																	firedance_mod
 247	0	10							Chance of Crushing Blow	Chance of Crushing Blow	(Based on Character Level)	7	125	1					item_crushingblow_perlevel
@@ -273,7 +275,7 @@
 367	0	11			128,368		Attacker Takes Elemental Damage of		Attacker Takes Cold Damage of	Attacker Takes Cold Damage of		3	26	2	14	3	2		item_attackertakescolddamage
 368	0	11			128,367		Attacker Takes Elemental Damage of		Attacker Takes Fire Damage of	Attacker Takes Fire Damage of		3	28	2	14	3	2		item_attackertakesfiredamage
 371	0	7							\orange;Amazing Grace\grey;	\orange;Amazing Grace\grey;		3	247	0				17	item_amazinggrace
-372	0	1							\dgrey;Cannot be Unsocketed\blue;	\dgrey;Cannot be Unsocketed\blue;		3	4	0					item_nounsock
+372	0	1							\dgrey;Cannot be Unsocketed\blue;	\dgrey;Cannot be Unsocketed\blue;			4	0					item_nounsock
 373	300	9																	passive_phys_pierce
 374	50	10																	trap_chain
 375	0	15										31	241	0				15	desc_top
@@ -340,7 +342,7 @@
 473	0	4							\green;Unlocks your Ennead Skill	\green;Unlocks your Ennead Skill		3	233	0					learn_ennead
 474	0	4							\green;Unlocks your Black Road Skill	\green;Unlocks your Black Road Skill		3	233	0					learn_blackroad
 476	50	9																	blink_delay
-479	0	4							Maximum Skill Level Increased by	Maximum Skill Level Increased by		3	199	2					skill_more
+479	0	4																	summoner_exodia
 480	0	5							to Vitality per Socketed Gem	to Vitality per Socketed Gem		1	85	1					item_skill_paragon
 481	0	5							to Runemaster Defense Bonus	to Runemaster Defense Bonus		4	85	1					item_skill_runemaster
 482	0	10																	item_gem_paragon
@@ -354,6 +356,8 @@
 490	1	5																	cube_upgrade_5
 491	1	5																	cube_upgrade_6
 492	1	5																	cube_upgrade_7
+493	1	5																	cube_upgrade_8
+494	1	5																	cube_upgrade_9
 495	24	7																	statX_3
 496	0	5								\red;(Cube with Oil of Craft to Reveal)		3	251	0					item_corrupted_has_seed
 497	0	5							\red;Corrupted	\red;Corrupted		3	252	0					item_corrupted

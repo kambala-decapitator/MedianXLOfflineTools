@@ -48,7 +48,7 @@
 46	Xazax's Illusion	125	1	
 47	Cold Fusion Schematics	125	1	coldfusion
 48	Dragon Claw	125	1	
-49	Lylia's Curse	125	1	
+49	Lylia's Curse	120	1	
 50	The Book of Lies	125	1	
 51	The Sleep	125	1	
 52	Astrogha's Venom Stinger	125	1	
@@ -59,7 +59,7 @@
 57	Vial of Elder Blood	135	1	
 58	'The Last Man Standing'\nEvent Award:	0	1	
 59	'The Goblin King'\nEvent Award:	0	1	
-60	Tur Dulra's Oak Seed	140	1	
+60	Dulra Aegis	140	1	
 61	ghist way	0	0	
 62	ghist way	0	0	
 63	ghist way	0	0	
@@ -98,7 +98,7 @@
 96	\grey;Item Design\n\gold;Tenet of Wisdom	0	1	book09
 97	\grey;Item Design\n\gold;Tenet of Judgement	0	1	book09
 98	\grey;Item Design\n\gold;Tenet of Conflict	0	1	book09
-99	\grey;Item Design\n\gold;Tur Dulra's Oak Seed	0	1	book03
+99	\grey;Item Design\n\gold;Dulra Aegis	0	1	book03
 100	ghist way	0	0	
 101	ghist way	0	0	
 102	ghist way	0	0	
@@ -426,10 +426,10 @@
 424	Haareis	28	32	
 425	Haareis	46	53	
 426	Haareis	54	90	
-427	Quov Tsin's Fall	4	6	
-428	Quov Tsin's Fall	22	25	
-429	Quov Tsin's Fall	41	45	
-430	Quov Tsin's Fall	50	79	
+427	Sharp Beak	4	6	
+428	Sharp Beak	22	25	
+429	Sharp Beak	41	45	
+430	Sharp Beak	50	79	
 431	Anthem De Frost	5	8	
 432	Anthem De Frost	24	26	
 433	Anthem De Frost	42	47	
@@ -1066,336 +1066,336 @@
 1064	Shadowchild	21	25	
 1065	Shadowchild	39	46	
 1066	Shadowchild	48	80	
-1067	Cornerstone of the World	120	1	
-1068	Cornerstone of the World	120	1	
-1069	Cornerstone of the World	120	1	
-1070	Cornerstone of the World	120	1	
-1071	Cornerstone of the World	120	1	
-1072	Cornerstone of the World	120	1	
-1073	Cornerstone of the World	120	1	
-1074	Cornerstone of the World	120	1	
-1075	Cornerstone of the World	120	1	
-1076	Cornerstone of the World	120	1	
-1077	Cornerstone of the World	120	1	
-1078	Cornerstone of the World	120	1	
-1079	Cornerstone of the World	120	1	
-1080	Cornerstone of the World	120	1	
-1081	Cornerstone of the World	120	1	
-1082	Cornerstone of the World	120	1	
-1083	Cornerstone of the World	120	1	
-1084	Cornerstone of the World	120	1	
-1085	Cornerstone of the World	120	1	
-1086	Cornerstone of the World	120	1	
-1087	Cornerstone of the World	120	1	
-1088	Cornerstone of the World	120	1	
-1089	Cornerstone of the World	120	1	
-1090	Cornerstone of the World	120	1	
-1091	Cornerstone of the World	120	1	
-1092	Cornerstone of the World	120	1	
-1093	Cornerstone of the World	120	1	
-1094	Cornerstone of the World	120	1	
-1095	Cornerstone of the World	120	1	
-1096	Cornerstone of the World	120	1	
-1097	Cornerstone of the World	120	1	
-1098	Cornerstone of the World	120	1	
-1099	Cornerstone of the World	120	1	
-1100	Cornerstone of the World	120	1	
-1101	Cornerstone of the World	120	1	
-1102	Cornerstone of the World	120	1	
-1103	Cornerstone of the World	120	1	
-1104	Cornerstone of the World	120	1	
-1105	Cornerstone of the World	120	1	
-1106	Cornerstone of the World	120	1	
-1107	Cornerstone of the World	120	1	
-1108	Cornerstone of the World	120	1	
-1109	Cornerstone of the World	120	1	
-1110	Cornerstone of the World	120	1	
-1111	Cornerstone of the World	120	1	
-1112	Cornerstone of the World	120	1	
-1113	Cornerstone of the World	120	1	
-1114	Cornerstone of the World	120	1	
-1115	Cornerstone of the World	120	1	
-1116	Cornerstone of the World	120	1	
-1117	Cornerstone of the World	120	1	
-1118	Cornerstone of the World	120	1	
-1119	Cornerstone of the World	120	1	
-1120	Cornerstone of the World	120	1	
-1121	Cornerstone of the World	120	1	
-1122	Cornerstone of the World	120	1	
-1123	Cornerstone of the World	120	1	
-1124	Cornerstone of the World	120	1	
-1125	Cornerstone of the World	120	1	
-1126	Cornerstone of the World	120	1	
-1127	Cornerstone of the World	120	1	
-1128	Cornerstone of the World	120	1	
-1129	Cornerstone of the World	120	1	
-1130	Cornerstone of the World	120	1	
-1131	Cornerstone of the World	120	1	
-1132	Cornerstone of the World	120	1	
-1133	Cornerstone of the World	120	1	
-1134	Cornerstone of the World	120	1	
-1135	Cornerstone of the World	120	1	
-1136	Cornerstone of the World	120	1	
-1137	Cornerstone of the World	120	1	
-1138	Cornerstone of the World	120	1	
-1139	Cornerstone of the World	120	1	
-1140	Cornerstone of the World	120	1	
-1141	Cornerstone of the World	120	1	
-1142	Cornerstone of the World	120	1	
-1143	Cornerstone of the World	120	1	
-1144	Cornerstone of the World	120	1	
-1145	Cornerstone of the World	120	1	
-1146	Cornerstone of the World	120	1	
-1147	Cornerstone of the World	120	1	
-1148	Cornerstone of the World	120	1	
-1149	Cornerstone of the World	120	1	
-1150	Cornerstone of the World	120	1	
-1151	Cornerstone of the World	120	1	
-1152	Cornerstone of the World	120	1	
-1153	Cornerstone of the World	120	1	
-1154	Cornerstone of the World	120	1	
-1155	Cornerstone of the World	120	1	
-1156	Cornerstone of the World	120	1	
-1157	Cornerstone of the World	120	1	
-1158	Cornerstone of the World	120	1	
-1159	Cornerstone of the World	120	1	
-1160	Cornerstone of the World	120	1	
-1161	Cornerstone of the World	120	1	
-1162	Cornerstone of the World	120	1	
-1163	Cornerstone of the World	120	1	
-1164	Cornerstone of the World	120	1	
-1165	Cornerstone of the World	120	1	
-1166	Cornerstone of the World	120	1	
-1167	Cornerstone of the World	120	1	
-1168	Cornerstone of the World	120	1	
-1169	Cornerstone of the World	120	1	
-1170	Cornerstone of the World	120	1	
-1171	Cornerstone of the World	120	1	
-1172	Cornerstone of the World	120	1	
-1173	Cornerstone of the World	120	1	
-1174	Cornerstone of the World	120	1	
-1175	Cornerstone of the World	120	1	
-1176	Cornerstone of the World	120	1	
-1177	Cornerstone of the World	120	1	
-1178	Cornerstone of the World	120	1	
-1179	Cornerstone of the World	120	1	
-1180	Cornerstone of the World	120	1	
-1181	Cornerstone of the World	120	1	
-1182	Cornerstone of the World	120	1	
-1183	Cornerstone of the World	120	1	
-1184	Cornerstone of the World	120	1	
-1185	Cornerstone of the World	120	1	
-1186	Cornerstone of the World	120	1	
-1187	Cornerstone of the World	120	1	
-1188	Cornerstone of the World	120	1	
-1189	Cornerstone of the World	120	1	
-1190	Cornerstone of the World	120	1	
-1191	Cornerstone of the World	120	1	
-1192	Cornerstone of the World	120	1	
-1193	Cornerstone of the World	120	1	
-1194	Cornerstone of the World	120	1	
-1195	Cornerstone of the World	120	1	
-1196	Cornerstone of the World	120	1	
-1197	Cornerstone of the World	120	1	
-1198	Cornerstone of the World	120	1	
-1199	Cornerstone of the World	120	1	
-1200	Cornerstone of the World	120	1	
-1201	Cornerstone of the World	120	1	
-1202	Cornerstone of the World	120	1	
-1203	Cornerstone of the World	120	1	
-1204	Cornerstone of the World	120	1	
-1205	Cornerstone of the World	120	1	
-1206	Cornerstone of the World	120	1	
-1207	Cornerstone of the World	120	1	
-1208	Cornerstone of the World	120	1	
-1209	Cornerstone of the World	120	1	
-1210	Cornerstone of the World	120	1	
-1211	Cornerstone of the World	120	1	
-1212	Cornerstone of the World	120	1	
-1213	Cornerstone of the World	120	1	
-1214	Cornerstone of the World	120	1	
-1215	Cornerstone of the World	120	1	
-1216	Cornerstone of the World	120	1	
-1217	Cornerstone of the World	120	1	
-1218	Cornerstone of the World	120	1	
-1219	Cornerstone of the World	120	1	
-1220	Cornerstone of the World	120	1	
-1221	Cornerstone of the World	120	1	
-1222	Cornerstone of the World	120	1	
-1223	Cornerstone of the World	120	1	
-1224	Cornerstone of the World	120	1	
-1225	Cornerstone of the World	120	1	
-1226	Cornerstone of the World	120	1	
-1227	Cornerstone of the World	120	1	
-1228	Cornerstone of the World	120	1	
-1229	Cornerstone of the World	120	1	
-1230	Cornerstone of the World	120	1	
-1231	Cornerstone of the World	120	1	
-1232	Cornerstone of the World	120	1	
-1233	Cornerstone of the World	120	1	
-1234	Cornerstone of the World	120	1	
-1235	Cornerstone of the World	120	1	
-1236	Cornerstone of the World	120	1	
-1237	Cornerstone of the World	120	1	
-1238	Cornerstone of the World	120	1	
-1239	Cornerstone of the World	120	1	
-1240	Cornerstone of the World	120	1	
-1241	Cornerstone of the World	120	1	
-1242	Cornerstone of the World	120	1	
-1243	Cornerstone of the World	120	1	
-1244	Cornerstone of the World	120	1	
-1245	Cornerstone of the World	120	1	
-1246	Cornerstone of the World	120	1	
-1247	Cornerstone of the World	120	1	
-1248	Cornerstone of the World	120	1	
-1249	Cornerstone of the World	120	1	
-1250	Cornerstone of the World	120	1	
-1251	Cornerstone of the World	120	1	
-1252	Cornerstone of the World	120	1	
-1253	Cornerstone of the World	120	1	
-1254	Cornerstone of the World	120	1	
-1255	Cornerstone of the World	120	1	
-1256	Cornerstone of the World	120	1	
-1257	Cornerstone of the World	120	1	
-1258	Cornerstone of the World	120	1	
-1259	Cornerstone of the World	120	1	
-1260	Cornerstone of the World	120	1	
-1261	Cornerstone of the World	120	1	
-1262	Cornerstone of the World	120	1	
-1263	Cornerstone of the World	120	1	
-1264	Cornerstone of the World	120	1	
-1265	Cornerstone of the World	120	1	
-1266	Cornerstone of the World	120	1	
-1267	Cornerstone of the World	120	1	
-1268	Cornerstone of the World	120	1	
-1269	Cornerstone of the World	120	1	
-1270	Cornerstone of the World	120	1	
-1271	Cornerstone of the World	120	1	
-1272	Cornerstone of the World	120	1	
-1273	Cornerstone of the World	120	1	
-1274	Cornerstone of the World	120	1	
-1275	Cornerstone of the World	120	1	
-1276	Cornerstone of the World	120	1	
-1277	Cornerstone of the World	120	1	
-1278	Cornerstone of the World	120	1	
-1279	Cornerstone of the World	120	1	
-1280	Cornerstone of the World	120	1	
-1281	Cornerstone of the World	120	1	
-1282	Cornerstone of the World	120	1	
-1283	Cornerstone of the World	120	1	
-1284	Cornerstone of the World	120	1	
-1285	Cornerstone of the World	120	1	
-1286	Cornerstone of the World	120	1	
-1287	Cornerstone of the World	120	1	
-1288	Cornerstone of the World	120	1	
-1289	Cornerstone of the World	120	1	
-1290	Cornerstone of the World	120	1	
-1291	Cornerstone of the World	120	1	
-1292	Cornerstone of the World	120	1	
-1293	Cornerstone of the World	120	1	
-1294	Cornerstone of the World	120	1	
-1295	Cornerstone of the World	120	1	
-1296	Cornerstone of the World	120	1	
-1297	Cornerstone of the World	120	1	
-1298	Cornerstone of the World	120	1	
-1299	Cornerstone of the World	120	1	
-1300	Cornerstone of the World	120	1	
-1301	Cornerstone of the World	120	1	
-1302	Cornerstone of the World	120	1	
-1303	Cornerstone of the World	120	1	
-1304	Cornerstone of the World	120	1	
-1305	Cornerstone of the World	120	1	
-1306	Cornerstone of the World	120	1	
-1307	Cornerstone of the World	120	1	
-1308	Cornerstone of the World	120	1	
-1309	Cornerstone of the World	120	1	
-1310	Cornerstone of the World	120	1	
-1311	Cornerstone of the World	120	1	
-1312	Cornerstone of the World	120	1	
-1313	Cornerstone of the World	120	1	
-1314	Cornerstone of the World	120	1	
-1315	Cornerstone of the World	120	1	
-1316	Cornerstone of the World	120	1	
-1317	Cornerstone of the World	120	1	
-1318	Cornerstone of the World	120	1	
-1319	Cornerstone of the World	120	1	
-1320	Cornerstone of the World	120	1	
-1321	Cornerstone of the World	120	1	
-1322	Cornerstone of the World	120	1	
-1323	Cornerstone of the World	120	1	
-1324	Cornerstone of the World	120	1	
-1325	Cornerstone of the World	120	1	
-1326	Cornerstone of the World	120	1	
-1327	Cornerstone of the World	120	1	
-1328	Cornerstone of the World	120	1	
-1329	Cornerstone of the World	120	1	
-1330	Cornerstone of the World	120	1	
-1331	Cornerstone of the World	120	1	
-1332	Cornerstone of the World	120	1	
-1333	Cornerstone of the World	120	1	
-1334	Cornerstone of the World	120	1	
-1335	Cornerstone of the World	120	1	
-1336	Cornerstone of the World	120	1	
-1337	Cornerstone of the World	120	1	
-1338	Cornerstone of the World	120	1	
-1339	Cornerstone of the World	120	1	
-1340	Cornerstone of the World	120	1	
-1341	Cornerstone of the World	120	1	
-1342	Cornerstone of the World	120	1	
-1343	Cornerstone of the World	120	1	
-1344	Cornerstone of the World	120	1	
-1345	Cornerstone of the World	120	1	
-1346	Cornerstone of the World	120	1	
-1347	Cornerstone of the World	120	1	
-1348	Cornerstone of the World	120	1	
-1349	Cornerstone of the World	120	1	
-1350	Cornerstone of the World	120	1	
-1351	Cornerstone of the World	120	1	
-1352	Cornerstone of the World	120	1	
-1353	Cornerstone of the World	120	1	
-1354	Cornerstone of the World	120	1	
-1355	Cornerstone of the World	120	1	
-1356	Cornerstone of the World	120	1	
-1357	Cornerstone of the World	120	1	
-1358	Cornerstone of the World	120	1	
-1359	Cornerstone of the World	120	1	
-1360	Cornerstone of the World	120	1	
-1361	Cornerstone of the World	120	1	
-1362	Cornerstone of the World	120	1	
-1363	Cornerstone of the World	120	1	
-1364	Cornerstone of the World	120	1	
-1365	Cornerstone of the World	120	1	
-1366	Cornerstone of the World	120	1	
-1367	Cornerstone of the World	0	0	
-1368	Cornerstone of the World	0	0	
-1369	Cornerstone of the World	0	0	
-1370	Cornerstone of the World	0	0	
-1371	Cornerstone of the World	0	0	
-1372	Cornerstone of the World	0	0	
-1373	Cornerstone of the World	0	0	
-1374	Cornerstone of the World	0	0	
-1375	Cornerstone of the World	0	0	
-1376	Cornerstone of the World	0	0	
-1377	Cornerstone of the World	0	0	
-1378	Cornerstone of the World	0	0	
-1379	Cornerstone of the World	0	0	
-1380	Cornerstone of the World	0	0	
-1381	Cornerstone of the World	0	0	
-1382	Cornerstone of the World	0	0	
-1383	Cornerstone of the World	0	0	
-1384	Cornerstone of the World	0	0	
-1385	Cornerstone of the World	0	0	
-1386	Cornerstone of the World	0	0	
-1387	Cornerstone of the World	0	0	
-1388	Cornerstone of the World	0	0	
-1389	Cornerstone of the World	0	0	
-1390	Cornerstone of the World	0	0	
-1391	Cornerstone of the World	0	0	
-1392	Cornerstone of the World	0	0	
-1393	Cornerstone of the World	0	0	
-1394	Cornerstone of the World	0	0	
-1395	Cornerstone of the World	0	0	
-1396	Cornerstone of the World	0	0	
+1067	Relic	75	1	
+1068	Relic	75	1	
+1069	Relic	75	1	
+1070	Relic	75	1	
+1071	Relic	75	1	
+1072	Relic	75	1	
+1073	Relic	75	1	
+1074	Relic	75	1	
+1075	Relic	75	1	
+1076	Relic	75	1	
+1077	Relic	75	1	
+1078	Relic	75	1	
+1079	Relic	75	1	
+1080	Relic	75	1	
+1081	Relic	75	1	
+1082	Relic	75	1	
+1083	Relic	75	1	
+1084	Relic	75	1	
+1085	Relic	75	1	
+1086	Relic	75	1	
+1087	Relic	75	1	
+1088	Relic	75	1	
+1089	Relic	75	1	
+1090	Relic	75	1	
+1091	Relic	75	1	
+1092	Relic	75	1	
+1093	Relic	75	1	
+1094	Relic	75	1	
+1095	Relic	75	1	
+1096	Relic	75	1	
+1097	Relic	75	1	
+1098	Relic	75	1	
+1099	Relic	75	1	
+1100	Relic	75	1	
+1101	Relic	75	1	
+1102	Relic	75	1	
+1103	Relic	75	1	
+1104	Relic	75	1	
+1105	Relic	75	1	
+1106	Relic	75	1	
+1107	Relic	75	1	
+1108	Relic	75	1	
+1109	Relic	75	1	
+1110	Relic	75	1	
+1111	Relic	75	1	
+1112	Relic	75	1	
+1113	Relic	75	1	
+1114	Relic	75	1	
+1115	Relic	75	1	
+1116	Relic	75	1	
+1117	Relic	75	1	
+1118	Relic	75	1	
+1119	Relic	75	1	
+1120	Relic	75	1	
+1121	Relic	75	1	
+1122	Relic	75	1	
+1123	Relic	75	1	
+1124	Relic	75	1	
+1125	Relic	75	1	
+1126	Relic	75	1	
+1127	Relic	75	1	
+1128	Relic	75	1	
+1129	Relic	75	1	
+1130	Relic	75	1	
+1131	Relic	75	1	
+1132	Relic	75	1	
+1133	Relic	75	1	
+1134	Relic	75	1	
+1135	Relic	75	1	
+1136	Relic	75	1	
+1137	Relic	75	1	
+1138	Relic	75	1	
+1139	Relic	75	1	
+1140	Relic	75	1	
+1141	Relic	75	1	
+1142	Relic	75	1	
+1143	Relic	75	1	
+1144	Relic	75	1	
+1145	Relic	75	1	
+1146	Relic	75	1	
+1147	Relic	75	1	
+1148	Relic	75	1	
+1149	Relic	75	1	
+1150	Relic	75	1	
+1151	Relic	75	1	
+1152	Relic	75	1	
+1153	Relic	75	1	
+1154	Relic	75	1	
+1155	Relic	75	1	
+1156	Relic	75	1	
+1157	Relic	75	1	
+1158	Relic	75	1	
+1159	Relic	75	1	
+1160	Relic	75	1	
+1161	Relic	75	1	
+1162	Relic	75	1	
+1163	Relic	75	1	
+1164	Relic	75	1	
+1165	Relic	75	1	
+1166	Relic	75	1	
+1167	Relic	75	1	
+1168	Relic	75	1	
+1169	Relic	75	1	
+1170	Relic	75	1	
+1171	Relic	75	1	
+1172	Relic	75	1	
+1173	Relic	75	1	
+1174	Relic	75	1	
+1175	Relic	75	1	
+1176	Relic	75	1	
+1177	Relic	75	1	
+1178	Relic	75	1	
+1179	Relic	75	1	
+1180	Relic	75	1	
+1181	Relic	75	1	
+1182	Relic	75	1	
+1183	Relic	75	1	
+1184	Relic	75	1	
+1185	Relic	75	1	
+1186	Relic	75	1	
+1187	Relic	75	1	
+1188	Relic	75	1	
+1189	Relic	75	1	
+1190	Relic	75	1	
+1191	Relic	75	1	
+1192	Relic	75	1	
+1193	Relic	75	1	
+1194	Relic	75	1	
+1195	Relic	75	1	
+1196	Relic	75	1	
+1197	Relic	75	1	
+1198	Relic	75	1	
+1199	Relic	75	1	
+1200	Relic	75	1	
+1201	Relic	75	1	
+1202	Relic	75	1	
+1203	Relic	75	1	
+1204	Relic	75	1	
+1205	Relic	75	1	
+1206	Relic	75	1	
+1207	Relic	75	1	
+1208	Relic	75	1	
+1209	Relic	75	1	
+1210	Relic	75	1	
+1211	Relic	75	1	
+1212	Relic	75	1	
+1213	Relic	75	1	
+1214	Relic	75	1	
+1215	Relic	75	1	
+1216	Relic	75	1	
+1217	Relic	75	1	
+1218	Relic	75	1	
+1219	Relic	75	1	
+1220	Relic	75	1	
+1221	Relic	75	1	
+1222	Relic	75	1	
+1223	Relic	75	1	
+1224	Relic	75	1	
+1225	Relic	75	1	
+1226	Relic	75	1	
+1227	Relic	75	1	
+1228	Relic	75	1	
+1229	Relic	75	1	
+1230	Relic	75	1	
+1231	Relic	75	1	
+1232	Relic	75	1	
+1233	Relic	75	1	
+1234	Relic	75	1	
+1235	Relic	75	1	
+1236	Relic	75	1	
+1237	Relic	75	1	
+1238	Relic	75	1	
+1239	Relic	75	1	
+1240	Relic	75	1	
+1241	Relic	75	1	
+1242	Relic	75	1	
+1243	Relic	75	1	
+1244	Relic	75	1	
+1245	Relic	75	1	
+1246	Relic	75	1	
+1247	Relic	75	1	
+1248	Relic	75	1	
+1249	Relic	75	1	
+1250	Relic	75	1	
+1251	Relic	75	1	
+1252	Relic	75	1	
+1253	Relic	75	1	
+1254	Relic	75	1	
+1255	Relic	75	1	
+1256	Relic	75	1	
+1257	Relic	75	1	
+1258	Relic	75	1	
+1259	Relic	75	1	
+1260	Relic	75	1	
+1261	Relic	75	1	
+1262	Relic	75	1	
+1263	Relic	75	1	
+1264	Relic	75	1	
+1265	Relic	75	1	
+1266	Relic	0	0	
+1267	Relic	0	0	
+1268	Relic	0	0	
+1269	Relic	0	0	
+1270	Relic	0	0	
+1271	Relic	0	0	
+1272	Relic	0	0	
+1273	Relic	0	0	
+1274	Relic	0	0	
+1275	Relic	0	0	
+1276	Relic	0	0	
+1277	Relic	0	0	
+1278	Relic	0	0	
+1279	Relic	0	0	
+1280	Relic	0	0	
+1281	Relic	0	0	
+1282	Relic	0	0	
+1283	Relic	0	0	
+1284	Relic	0	0	
+1285	Relic	0	0	
+1286	Relic	0	0	
+1287	Relic	0	0	
+1288	Relic	0	0	
+1289	Relic	0	0	
+1290	Relic	0	0	
+1291	Relic	0	0	
+1292	Relic	0	0	
+1293	Relic	0	0	
+1294	Relic	0	0	
+1295	Relic	0	0	
+1296	Relic	0	0	
+1297	Relic	0	0	
+1298	Relic	0	0	
+1299	Relic	0	0	
+1300	Relic	0	0	
+1301	Relic	0	0	
+1302	Relic	0	0	
+1303	Relic	0	0	
+1304	Relic	0	0	
+1305	Relic	0	0	
+1306	Relic	0	0	
+1307	Relic	0	0	
+1308	Relic	0	0	
+1309	Relic	0	0	
+1310	Relic	0	0	
+1311	Relic	0	0	
+1312	Relic	0	0	
+1313	Relic	0	0	
+1314	Relic	0	0	
+1315	Relic	0	0	
+1316	Relic	0	0	
+1317	Relic	0	0	
+1318	Relic	0	0	
+1319	Relic	0	0	
+1320	Relic	0	0	
+1321	Relic	0	0	
+1322	Relic	0	0	
+1323	Relic	0	0	
+1324	Relic	0	0	
+1325	Relic	0	0	
+1326	Relic	0	0	
+1327	Relic	0	0	
+1328	Relic	0	0	
+1329	Relic	0	0	
+1330	Relic	0	0	
+1331	Relic	0	0	
+1332	Relic	0	0	
+1333	Relic	0	0	
+1334	Relic	0	0	
+1335	Relic	0	0	
+1336	Relic	0	0	
+1337	Relic	0	0	
+1338	Relic	0	0	
+1339	Relic	0	0	
+1340	Relic	0	0	
+1341	Relic	0	0	
+1342	Relic	0	0	
+1343	Relic	0	0	
+1344	Relic	0	0	
+1345	Relic	0	0	
+1346	Relic	0	0	
+1347	Relic	0	0	
+1348	Relic	0	0	
+1349	Relic	0	0	
+1350	Relic	0	0	
+1351	Relic	0	0	
+1352	Relic	0	0	
+1353	Relic	0	0	
+1354	Relic	0	0	
+1355	Relic	0	0	
+1356	Relic	0	0	
+1357	Relic	0	0	
+1358	Relic	0	0	
+1359	Relic	0	0	
+1360	Relic	0	0	
+1361	Relic	0	0	
+1362	Relic	0	0	
+1363	Relic	0	0	
+1364	Relic	0	0	
+1365	Relic	0	0	
+1366	Relic	0	0	
+1367	Relic	0	0	
+1368	Relic	0	0	
+1369	Relic	0	0	
+1370	Relic	0	0	
+1371	Relic	0	0	
+1372	Relic	0	0	
+1373	Relic	0	0	
+1374	Relic	0	0	
+1375	Relic	0	0	
+1376	Relic	0	0	
+1377	Relic	0	0	
+1378	Relic	0	0	
+1379	Relic	0	0	
+1380	Relic	0	0	
+1381	Relic	0	0	
+1382	Relic	0	0	
+1383	Relic	0	0	
+1384	Relic	0	0	
+1385	Relic	0	0	
+1386	Relic	0	0	
+1387	Relic	0	0	
+1388	Relic	0	0	
+1389	Relic	0	0	
+1390	Relic	0	0	
+1391	Relic	0	0	
+1392	Relic	0	0	
+1393	Relic	0	0	
+1394	Relic	0	0	
+1395	Relic	0	0	
+1396	Relic	0	0	
 1397	Astreon's Citadel	100	105	
 1398	Herald of Zakarum	100	120	
 1399	Silks of the Victor	100	105	
@@ -1430,7 +1430,7 @@
 1428	Hivemind	100	105	
 1429	Veil of the Tainted Sun	100	120	
 1430	Plunderbird	100	105	
-1431	Drow Valor	100	120	
+1431	Strixclaw	120	125	invstrixclaw
 1432	Banner of Bitter Winds	100	105	
 1433	Zayl's Temptation	100	120	
 1434	Gaze of the Dead	120	105	

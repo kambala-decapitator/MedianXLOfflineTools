@@ -34,7 +34,7 @@
 34	100	9							Физический Урон Снижается на	Физический Урон Снижается на		3	52	2					normal_damage_reduction
 35	100	9							Стихийный/Магический Урон Снижается на	Стихийный/Магический Урон Снижается на		3	51	2					magic_damage_reduction
 36	100	8							Получаемый Физический Урон Снижен на:	Получаемый Физический Урон Снижен на:		2	53	2					damageresist
-37	100	8							Сопротивление Магии	Сопротивление Магии		4	65	2					magicresist
+37	100	8							Сопротивление Магическому Урону	Сопротивление Магическому Урону		4	65	2					magicresist
 38	20	7							к Максимальному Сопротивлению Магии	к Максимальному Сопротивлению Магии		4	70	1					maxmagicresist
 39	100	8			41,43,45	Все Сопротивления	Все Сопротивления		Сопротивление Огню	Сопротивление Огню		4	64	2	2	4	2		fireresist
 40	20	7			42,44,46	ко Всем Максимальным Сопротивлениям	ко Всем Максимальным Сопротивлениям		к Максимальному Сопротивлению Огню	к Максимальному Сопротивлению Огню		4	69	2	7	4	2		maxfireresist
@@ -187,8 +187,10 @@
 231	0	10							Сопротивление Огню	Сопротивление Огню	(Основано на Уровне Персонажа)	7	64	2					item_resist_fire_perlevel
 232	0	10							Сопротивление Молнии	Сопротивление Молнии	(Основано на Уровне Персонажа)	7	63	2					item_resist_ltng_perlevel
 233	0	10							Сопротивление Яду	Сопротивление Яду	(Основано на Уровне Персонажа)	7	61	2					item_resist_pois_perlevel
+235	0	10	10	10														10	thog_dont_caare
 239	0	10							Больше Золота от Монстров	Больше Золота от Монстров	(Основано на Уровне Персонажа)	7	16	1					item_find_gold_perlevel
 240	0	10							к Шансу Нахождения Магических Предметов	к Шансу Нахождения Магических Предметов	(Основано на Уровне Персонажа)	7	14	1					item_find_magic_perlevel
+241	30	7																	is_corrupted
 245	1	2																	grim_active
 246	1	2																	firedance_mod
 247	0	10							Шанс Сокрушительного Удара	Шанс Сокрушительного Удара	(Основано на Уровне Персонажа)	7	125	1					item_crushingblow_perlevel
@@ -273,22 +275,22 @@
 367	0	11			128,368		Атакующий Получает Стихийный Урон		Атакующему Наносится Урон Холодом	Атакующему Наносится Урон Холодом		3	26	2	14	3	2		item_attackertakescolddamage
 368	0	11			128,367		Атакующий Получает Стихийный Урон		Атакующему Наносится Урон Огнем	Атакующему Наносится Урон Огнем		3	28	2	14	3	2		item_attackertakesfiredamage
 371	0	7							\orange;Изумительная Грация\grey;	\orange;Изумительная Грация\grey;		3	247	0				17	item_amazinggrace
-372	0	1							\dgrey;Нельзя Извлечь Содержимое Гнёзд\blue;	\dgrey;Нельзя Извлечь Содержимое Гнёзд\blue;		3	4	0					item_nounsock
+372	0	1							\dgrey;Нельзя Извлечь Содержимое Гнёзд\blue;	\dgrey;Нельзя Извлечь Содержимое Гнёзд\blue;			4	0					item_nounsock
 373	300	9																	passive_phys_pierce
 374	50	10																	trap_chain
 375	0	15										31	241	0				15	desc_top
 377	0	15										31	3	0				15	desc_bottom
 378	0	15										31	232	0				15	desc_less_top
 379	0	5										3		0					deathlord_penalty
-380	100	9							\red;к Бонусному Урону от Bloodlust	\red;к Бонусному Урону от Bloodlust		4	195	1					passive_bloodlust_dmgpct
-381	50	8							\red;к Стихийному Урону от Bloodlust	\red;к Стихийному Урону от Bloodlust		4	195	1					passive_bloodlust_elempct
+380	100	9							Бонусный Урон для Bloodlust	Бонусный Урон для Bloodlust		4	195	1					passive_bloodlust_dmgpct
+381	50	8							Бонусный Стихийный Урон для Bloodlust	Бонусный Стихийный Урон для Bloodlust		4	195	1					passive_bloodlust_elempct
 382	1001	14																12	special_syn_conversion
 383	1001	14																12	special_syn1
 384	0	8																	near_resurrected
 385	0	15										34	241	0				15	desc_orange
 386	0	8																	witchberry_lifeheal
-387	100	9							\red;к Бонусному Урону от Mark of the Wild	\red;к Бонусному Урону от Mark of the Wild		4	195	1					passive_motw_dmgpct
-388	50	8							\red;к Стихийному Урону от Mark of the Wild	\red;к Стихийному Урону от Mark of the Wild		4	195	1					passive_motw_elempct
+387	100	9							Бонусный Урон для Mark of the Wild	Бонусный Урон для Mark of the Wild		4	195	1					passive_motw_dmgpct
+388	50	8							Бонусный Стихийный Урон для Mark of the Wild	Бонусный Стихийный Урон для Mark of the Wild		4	195	1					passive_motw_elempct
 389	0	10							к Длительности Mark of the Wild	к Длительности Mark of the Wild		2	195	1					passive_motw_duration
 390	0	5							\green;Уже Улучшено	\green;Уже Улучшено		3	248	0					is_enchanted
 393	1001	14																12	special_syn2
@@ -340,7 +342,7 @@
 473	0	4							\green;Открывает ваш Навык Эннеады (Ennead)	\green;Открывает ваш Навык Эннеады (Ennead)		3	233	0					learn_ennead
 474	0	4							\green;Открывает ваш Навык Черной Дороги (Black Road)	\green;Открывает ваш Навык Черной Дороги (Black Road)		3	233	0					learn_blackroad
 476	50	9																	blink_delay
-479	0	4							Макс. Уровень Навыков Увеличивается на	Макс. Уровень Навыков Увеличивается на		3	199	2					skill_more
+479	0	4																	summoner_exodia
 480	0	5							 к Живучести за Вставленный Камень	 к Живучести за Вставленный Камень		1	85	1					item_skill_paragon
 481	0	5							к Бонусу Защиты Runemaster	к Бонусу Защиты Runemaster		4	85	1					item_skill_runemaster
 482	0	10																	item_gem_paragon
@@ -354,6 +356,8 @@
 490	1	5																	cube_upgrade_5
 491	1	5																	cube_upgrade_6
 492	1	5																	cube_upgrade_7
+493	1	5																	cube_upgrade_8
+494	1	5																	cube_upgrade_9
 495	24	7																	statX_3
 496	0	5								\red;(Смешайте с Oil of Craft для Раскрытия)		3	251	0					item_corrupted_has_seed
 497	0	5							\red;Искажено	\red;Искажено		3	252	0					item_corrupted

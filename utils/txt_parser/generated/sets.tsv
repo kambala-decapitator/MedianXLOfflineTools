@@ -1,24 +1,4 @@
 #index	part_prop1	part_param1	part_min1	part_max1	part_prop2	part_param2	part_min2	part_max2	part_prop3	part_param3	part_min3	part_max3	part_prop4	part_param4	part_min4	part_max4	part_prop5	part_param5	part_min5	part_max5	part_prop6	part_param6	part_min6	part_max6	part_prop7	part_param7	part_min7	part_max7	part_prop8	part_param8	part_min8	part_max8	full_prop1	full_param1	full_min1	full_max1	full_prop2	full_param2	full_min2	full_max2	full_prop3	full_param3	full_min3	full_max3	full_prop4	full_param4	full_min4	full_max4	full_prop5	full_param5	full_min5	full_max5	full_prop6	full_param6	full_min6	full_max6	full_prop7	full_param7	full_min7	full_max7	full_prop8	full_param8	full_min8	full_max8
-Aldur's Watchtower																																																																
-Angelical Raiment																																																																
-Arcanna's Tricks																																																																
-Arctic Gear																																																																
-Berserker's Garb																																																																
-Bul-Kathos' Children																																																																
-Cathan's Traps																																																																
-Civerb's Vestments																																																																
-Cleglaw's Brace																																																																
-Cow King's Leathers																																																																
-Death's Disguise																																																																
-Griswold's Legacy																																																																
-Heaven's Brethren																																																																
-Hsarus' Defense																																																																
-Hwanin's Majesty																																																																
-Immortal King																																																																
-Infernal Tools																																																																
-Iratha's Finery																																																																
-Isenhart's Armory																																																																
-M'avina's Battle Hymn																																																																
 MREssence	83	5	1	1	76		6	6	359		30	30	36		10	10																	97	508	8	8	0		300	300	60		20	20	93		50	50	40,42,44,46		2	2	98	175	1	1	155	3380	8	8	22		125	125
 MSAchilios' Wake	0		50	50	22		20	20	39,41,43,45		50	50	83	2	2	2																	196	485	20	6	336		30	30	22		125	125	136		10	10	39,41,43,45		45	45	155	3375	2	2	93		50	50	98	175	1	1
 MSAdria's Circle	83	1	2	2	45		50	50	36		10	10	83	1	2	2																	39,41,43,45		30	30	431		25	25	338,339,340		20	20	0,1,2,3		50	50	83	1	5	5	332		50	50	393	1570	33	33	98	175	1	1
@@ -34,7 +14,7 @@ MSImperius' Edict	359		20	20	361		20	20	360		20	20	361		20	20																	36
 MSLastKing	0		75	75	25		45	45	93		50	50	25		90	90																	21,22		100	150	39,41,43,45		50	50	31		5000	5000	136		30	30	338,339,340		5	5	195	589	10	12	98	175	1	1	97	1046	1	1
 MSLone Wolf's Path	485		150	150	97	1563	14	14	332		50	50	45		50	50																	83	5	6	6	383	353	1	1	97	1568	19	19	383	354	1	1	333,335		30	30	375	11305	5	5	7		400	400	98	175	1	1
 MSMalthael's Sanctuary	195	411	10	34	210		150	150	195	505	10	34	362		20	20																	39,41,43,45		50	50	362		20	20	83	3	3	3	77		15	15	97	1567	12	12	98	175	1	1	76		5	5				
-MSMount Arreat	83	4	1	1	25		50	50	25		50	50	196	442	20	8																	196	593	2	20	0,1,2,3		100	100	171		250	250	83	4	4	4	266	595	100	1	60		20	20					98	175	1	1
+MSMount Arreat	83	4	1	1	25		50	50	25		50	50	196	442	10	1																	196	593	2	20	0,1,2,3		100	100	171		250	250	83	4	4	4	266	595	100	1	60		20	20					98	175	1	1
 MSOrchard	357		25	25	83	2	2	2	336		40	40	83	2	2	2																	292	323	3	40	329,330,331,332,357		40	40	98	175	1	1	40,42,44,46		2	2	7		400	400	31		1500	1500								
 MSPantheon	39,41,43,45		50	50	93		50	50	25		60	60	7		150	150																	196	629	3	40	333,334,335,336		45	45	198	604	5	11	2		200	200	21,22		63	125	25		60	60	98	175	1	1				
 MSRainbow Warrior2	136		10	10	83	5	2	2	0,1,2,3		50	50	208		1	1																	155	3421	30	30	0,1,2,3		100	100	136		10	10	39,41,43,45		30	30	98	175	1	1	208		1	1	333,334,335,336		40	40				
@@ -56,8 +36,8 @@ MSWarmage2	0		50	50	97	483	24	24	97	481	16	16	39,41,43,45		75	75																
 MSWitchhunter's Attire	334		20	20	39,41,43,45		20	20	210		150	150	195	607	50	24																	155	3375	2	2	83	6	5	5	98	175	1	1	210		150	150	360		25	25	107	1146	15	15	142,144,148		3	3				
 MSZann Esu's Secrets	20		1	1	171		40	40	444		100	100	97	1721	1	1																	335		30	30	39,41,43,45		75	75	36		35	35	444		100	100	86		100	100	98	175	1	1								
 MSZeraes Divinity	83	0	2	2	334		10	10	171		50	50	62		20	20																	97	1477	18	18	98	175	1	1	198	492	10	53	334		20	20	330		50	50	171		200	200	22		125	125	208		2	2
-M_Armageddon																																	98	409	1	1	375	11447	9	9	383	470	1	1	292	470	4	50	97	470	17	17	333		15	15								
-M_AstroghasMoon	45		75	75	46		2	2																									98	409	1	1	97	1765	23	23	336		25	25	150		5	5	383	1742	1	1	375	11449	9	9								
+M_Armageddon																																	98	409	1	1	375	11447	9	9	97	470	17	17	333		15	15																
+M_AstroghasMoon	45		75	75	46		2	2																									98	409	1	1	97	1765	23	23	336		25	25	150		5	5																
 M_BattleDevices																																	98	409	1	1	375	11440	9	9	383	447	1	1	487		40	40	198	605	4	7	97	447	10	10								
 M_GuardianRogue																																	98	409	1	1	397	1751	1	1	375	11444	9	9	335		15	15	362		15	15	11		20	20								
 M_HeadHunter																																	383	1951	1	1	375	11434	9	9	98	421	1	1																				
@@ -67,20 +47,9 @@ M_TheOffering																																	98	409	1	1	375	11446	9	9	383	1694	
 M_Thunderstorm																																	98	409	1	1	383	1974	1	1	375	11439	9	9	97	1712	1	1	334		33	33												
 M_VizjereiDominion	77		15	15	361		15	15	83	1	4	4																					98	409	1	1	309	1605	125	125	74		1000	1000	171		100	100	338,339,340		10	10	36		10	10	96		25	25				
 M_Wintertide																																	98	409	1	1	375	11448	9	9	396	1579	1	1	365		20	20	97	1705	15	15	335		25	25								
-McAuley's Folly																																																																
-Milabrega's Regalia																																																																
-Naj's Ancient Set																																																																
-Natalya's Odium																																																																
 Orphan's Call																																																																
-Sazabi's Grand Tribute																																																																
 Set_Lazbro	487		25	25	470		25	25	444		100	100	500		50	50																	393	1417	1	1	375	11425	9	9	444,470		100	50	83	2	2	2	500		50	50	98	175	1	1								
 Set_PewPew	127		2	2	359,360,361,362		15	15	39,41,43,45		25	25	333,334,335,336		25	25	36		10	10	141		5	5									98	175	1	1	86		150	150	329,330,331,332,357		35	35	20		1	1	96		50	50	39,41,43,45		30	30	31		1500	1500				
 Set_labrynth																																	97	2385	50	50	97	2386	50	50	182		-100	-100	40,42,44,46		15	15	36		50	50	39,41,43,45		400	400								
 Set_labrynth2																																	99,102,105,93		100	100	151	2388	1	1	108		1	1	7		1000	1000	39,41,43,45		-200	-200	181		1	1								
 Set_xaru	40		4	4	76		3	3	151	1890	12	12	375	11626	5	5																	0,1,2,3		75	75	333		60	60	329		50	50	98	186	1	1	97	1766	3	3	48,49		84	84	98	175	1	1	127		2	2
-Sigon's Complete Steel																																																																
-Tal Rasha's Wrappings																																																																
-Tancred's Battlegear																																																																
-The Disciple																																																																
-Trang-Oul's Avatar																																																																
-Vidala's Rig																																																																

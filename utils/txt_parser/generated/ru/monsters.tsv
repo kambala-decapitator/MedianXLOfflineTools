@@ -1575,7 +1575,7 @@
 1600	Asatruar
 1601	Defiant Fury
 1602	Sinner
-1603	Avalanche
+1603	Frostwalker
 1604	Glowing Fungus
 1605	Ratfink
 1606	Belial, Lord of Lies
@@ -1886,6 +1886,7 @@
 1941	BossRathma
 1942	
 1943	Thonos
+1954	Sescheron's Destroyer
 1955	Druid Student
 1956	Druid Student
 1957	Druid Student
@@ -1917,7 +1918,7 @@
 1984	Rhino Beetle
 1985	Azgar
 1986	Azgar
-1987	Visionary of Destruction
+1987	Sescheron's Destroyer
 1988	Emissary of Destruction I
 1989	Emissary of Destruction II
 1990	Lord of Destruction
@@ -1928,18 +1929,26 @@
 1995	Vasily
 1996	Bul Kathos
 1997	Vasily
-1998	Visionary of Destruction
-1999	Visionary of Destruction
-2000	Visionary of Destruction
-2001	Visionary of Destruction
-2002	Visionary of Destruction
-2003	Visionary of Destruction
-2004	Visionary of Destruction
-2005	Visionary of Destruction
-2006	Visionary of Destruction
-2007	Visionary of Destruction
-2008	Visionary of Destruction
-2009	Visionary of Destruction
+1998	Corrupted Harvester
+1999	Corrupted Harvester
+2000	Sescheron's Destroyer
+2001	Sescheron's Destroyer
+2002	Sescheron's Destroyer
+2003	Sescheron's Destroyer
+2004	Sescheron's Destroyer
+2005	Sescheron's Destroyer
+2006	Sescheron's Destroyer
+2007	\grey;Winter Storm
+2008	Sescheron's Destroyer
+2009	Sescheron's Destroyer
+2010	Защищённый Сундук
+2011	Защищённый Сундук
+2012	Защищённый Сундук
+2013	Защищённый Сундук
+2014	Огонь
+2015	Sescheron's Destroyer
+2016	Eleventh Eye
+2017	Beholder
 2021	vv_SandMaggotYoung
 2022	Sand Maggot Egg
 2023	Sand Maggot Ghost
