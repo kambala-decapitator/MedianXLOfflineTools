@@ -581,10 +581,10 @@ w99	Avenger Guard (3)		2	2	0		23	219	0									invba5				phlm,tier		4
 126	Mace (1)		1	3	1		2	36	0			4	6					invmac	0	11	0	mace,tier	1	-1
 127	Morning Star (1)		1	3	1		3	48	0			5	8					invmst	0	11	0	mace,tier	1	-1
 128	Flail (1)		2	3	1		5	60	0			5	9					invfla	0	11	0	mace,tier	1	-1
-129	Scepter (1)		1	3	1		0	0	16			2	3					invscp	0	0	11	scep,tier	1	-1
+129	Scepter (1)		1	3	1		0	0	16			4	5					invscp	0	0	11	scep,tier	1	-1
 12@	Flamberge (Sacred)		2	4	1		30	600	0	1	1	46	50	75	77			invflb	0	16	0	s2hd	1	-1
-130	Grand Scepter (1)		1	3	1		2	0	40			4	5					invgsc	0	0	11	scep,tier	1	-1
-131	War Scepter (1)		2	3	1		3	0	64			5	8					invwsp	0	0	11	scep,tier	1	-1
+130	Grand Scepter (1)		1	3	1		2	0	40			6	7					invgsc	0	0	11	scep,tier	1	-1
+131	War Scepter (1)		2	3	1		3	0	64			6	10					invwsp	0	0	11	scep,tier	1	-1
 132	Javelin (1)		1	3	1	1	0	0	0			3	4			1	4	invjav	0	0	11	jave,tier	1	-1
 133	Pilum (1)		1	3	1	1	1	0	29			4	5			2	5	invpil	0	0	11	jave,tier	1	-1
 134	Short Spear (1)		1	3	1	1	2	0	47			4	6			4	8	invssp	0	0	11	jave,tier	1	-1
@@ -675,9 +675,9 @@ w99	Avenger Guard (3)		2	2	0		23	219	0									invba5				phlm,tier		4
 262	Mace (2)		1	3	1		11	62	0			10	14					invmac	0	11	0	mace,tier	1	-1
 263	Morning Star (2)		1	3	1		12	78	0			11	17					invmst	0	11	0	mace,tier	1	-1
 264	Flail (2)		2	3	1		14	93	0			13	20					invfla	0	11	0	mace,tier	1	-1
-265	Scepter (2)		1	3	1		9	0	37			6	7					invscp	0	0	11	scep,tier	1	-1
-266	Grand Scepter (2)		1	3	1		11	0	67			9	12					invgsc	0	0	11	scep,tier	1	-1
-267	War Scepter (2)		2	3	1		13	0	98			12	17					invwsp	0	0	11	scep,tier	1	-1
+265	Scepter (2)		1	3	1		9	0	37			10	12					invscp	0	0	11	scep,tier	1	-1
+266	Grand Scepter (2)		1	3	1		11	0	67			13	15					invgsc	0	0	11	scep,tier	1	-1
+267	War Scepter (2)		2	3	1		13	0	98			15	20					invwsp	0	0	11	scep,tier	1	-1
 268	Javelin (2)		1	3	1	1	9	0	18			6	8			7	10	invjav	0	0	11	jave,tier	1	-1
 269	Pilum (2)		1	3	1	1	10	0	53			8	11			10	15	invpil	0	0	11	jave,tier	1	-1
 26@	Spiked Club (Sacred)		1	3	1		30	419	0			42	46					invspc	0	11	0	qmac	1	-1
@@ -727,8 +727,8 @@ w99	Avenger Guard (3)		2	2	0		23	219	0									invba5				phlm,tier		4
 301	Long Battle Bow (2)		2	4	1		12	0	112		1			17	24			invlbb	0	0	11	bow,tier	1	-1
 302	Short War Bow (2)		2	3	1		14	0	127		1			19	27			invswb	0	0	11	bow,tier	1	-1
 303	Long War Bow (2)		2	4	1		15	0	143		1			20	29			invlwb	0	0	11	bow,tier	1	-1
-30@	Scepter (Sacred)		1	3	1		30	0	404			21	28					invscp	0	0	11	qscp	1	-1
-31@	Grand Scepter (Sacred)		1	3	1		30	0	449			30	38					invgsc	0	0	11	qscp	1	-1
+30@	Scepter (Sacred)		1	3	1		30	0	404			29	34					invscp	0	0	11	qscp	1	-1
+31@	Grand Scepter (Sacred)		1	3	1		30	0	449			36	40					invgsc	0	0	11	qscp	1	-1
 32@	War Scepter (Sacred)		2	3	1		30	0	494			38	52					invwsp	0	0	11	qscp	1	-1
 33@	Javelin (Sacred)		1	3	1	1	30	0	376			43	44			63	66	invjav	0	0	11	qjvn	1	-1
 34@	Pilum (Sacred)		1	3	1	1	30	0	428			44	47			66	73	invpil	0	0	11	qjvn	1	-1
@@ -777,8 +777,8 @@ w99	Avenger Guard (3)		2	2	0		23	219	0									invba5				phlm,tier		4
 3@E	Stinger Crossbow (1)		2	3	1		4	63	0		1			12	16			invmxbu		16	0	nxbw,tier	1	2
 3@F	Trebuchet (2)		2	3	1		15	104	0		1			31	40			inv8mxu		16	0	nxbw,tier	1	2
 400	Flail (3)		2	3	1		23	186	0			25	41					invfla	0	11	0	mace,tier	1	-1
-401	Scepter (3)		1	3	1		18	0	83			13	15					invscp	0	0	11	scep,tier	1	-1
-402	Grand Scepter (3)		1	3	1		20	0	139			19	25					invgsc	0	0	11	scep,tier	1	-1
+401	Scepter (3)		1	3	1		18	0	83			20	24					invscp	0	0	11	scep,tier	1	-1
+402	Grand Scepter (3)		1	3	1		20	0	139			20	30					invgsc	0	0	11	scep,tier	1	-1
 403	War Scepter (3)		2	3	1		22	0	195			24	35					invwsp	0	0	11	scep,tier	1	-1
 404	Javelin (3)		1	3	1	1	18	0	49			13	16			19	23	invjav	0	0	11	jave,tier	1	-1
 405	Pilum (3)		1	3	1	1	20	0	114			16	21			24	36	invpil	0	0	11	jave,tier	1	-1
@@ -851,10 +851,10 @@ w99	Avenger Guard (3)		2	2	0		23	219	0									invba5				phlm,tier		4
 466	Mace (4)		1	3	1		25	261	0			24	35					invmac	0	11	0	mace,tier	1	-1
 467	Morning Star (4)		1	3	1		26	315	0			28	42					invmst	0	11	0	mace,tier	1	-1
 468	Flail (4)		2	3	1		27	369	0			31	49					invfla	0	11	0	mace,tier	1	-1
-469	Scepter (4)		1	3	1		23	0	171			16	18					invscp	0	0	11	scep,tier	1	-1
+469	Scepter (4)		1	3	1		23	0	171			21	28					invscp	0	0	11	scep,tier	1	-1
 46@	Blade (Sacred)		1	3	1		30	0	488			40	42					invbld	0	0	11	qknf	1	-1
-470	Grand Scepter (4)		1	3	1		25	0	279			22	29					invgsc	0	0	11	scep,tier	1	-1
-471	War Scepter (4)		2	3	1		27	0	387			29	41					invwsp	0	0	11	scep,tier	1	-1
+470	Grand Scepter (4)		1	3	1		25	0	279			30	35					invgsc	0	0	11	scep,tier	1	-1
+471	War Scepter (4)		2	3	1		27	0	387			32	44					invwsp	0	0	11	scep,tier	1	-1
 472	Javelin (4)		1	3	1	1	23	0	104			16	18			24	29	invjav	0	0	11	jave,tier	1	-1
 473	Pilum (4)		1	3	1	1	24	0	230			18	25			30	44	invpil	0	0	11	jave,tier	1	-1
 474	Short Spear (4)		1	3	1	1	25	0	310			21	32			36	58	invssp	0	0	11	jave,tier	1	-1
@@ -1143,7 +1143,7 @@ wol	Wirt's Other Leg		1	3	1		0	0	0			13	18					invwol		0	0	wrtl	1	-1
 !@3	\dgreen;Evil Eye of the Glowing Blob	\blue;+15% к Получаемому Опыту\n+1 к Навыкам Класса\n\grey;Смешайте все 5 Глаз с Классовым Талисманом для Добавления Бонуса\n\nЗнак Монстра	1	1	2		0	0	0									evileye				thng		-1
 !@4	\dgreen;Evil Eye of the Fairy Witch	\blue;+15% к Получаемому Опыту\n+1 к Навыкам Класса\n\grey;Смешайте все 5 Глаз с Классовым Талисманом для Добавления Бонуса\n\nЗнак Монстра	1	1	2		0	0	0									evileye				thng		-1
 !@5	\dgreen;Evil Eye of the Bane Hunter	\blue;+15% к Получаемому Опыту\n+1 к Навыкам Класса\n\grey;Смешайте все 5 Глаз с Классовым Талисманом для Добавления Бонуса\n\nЗнак Монстра	1	1	2		0	0	0									evileye				thng		-1
-!@B	\grey;Квестовый Предмет\n\gold;Signet of Skill	(можно использовать лишь раз на каждом персонаже)\nНажмите ПКМ: Доступных Очков Навыка: %d	1	1	2		0	0	0									sigil4B				poti		-1
+!@B	\grey;Квестовый Предмет\n\gold;Signet of Skill	(можно использовать лишь раз на каждом персонаже)\nНажмите ПКМ: Доступных Очков Навыка: %d\n	1	1	2		0	0	0									sigil4B				poti		-1
 ##.	\gold;Neutrality Pact		1	1	2		0	0	0									scroll05	255			grtz		-1
 #X1	Реагент Куба (Секретный)\n\orange;Emblem of Suffering		1	1	2		0	0	0									newsignet1				embl		-1
 #X2	Реагент Куба (Секретный)\n\orange;Emblem of Pain		1	1	2		0	0	0									newsignet2				embl		-1
@@ -1537,22 +1537,15 @@ brc2	Black Road Challenge\n\orange;Scroll of Greed	Смешайте Классо
 brc3	Black Road Challenge\n\orange;Scroll of Contrition	У вас всего 30 секунд!\nСмешайте Классовый Талисман для Завершения Испытания\n\yellow;Награда\n\n\grey;Призовите и Убейте Короля Кота\n\yellow;Испытание Сострадания\n\n\grey;Вершина Арреат\n\yellow;Местонахождение\n\n\grey;Ужас\n\yellow;Сложность\n	1	1	2		0	0	0									ChallengeScroll				thng		-1
 brc4	Black Road Challenge\n\orange;Scroll of Knowledge	Смешайте Классовый Талисман с 5-ю Мозгами для Завершения Испытания\n\yellow;Награда\n\n\grey;Соберите 5 Мозгов с Роботов-Боссов\n\yellow;Испытание Знания\n\n\grey;Фаузтинвилль (Каменная Гробница)\n\yellow;Местонахождение\n\n\grey;Ужас\n\yellow;Сложность\n	1	1	2		0	0	0									ChallengeScroll				thng		-1
 brc5	Black Road Challenge\n\orange;Scroll of Blood	У вас всего 30 секунд от убийства одной Жрицы!\nСмешайте Классовый Талисман для Завершения Испытания\n\yellow;Награда\n\n\grey;Убейте Skovos и Lycander за 30 Секунд или менее\n\yellow;Испытание Крови\n\n\grey;Тран Атулуа (Остров Скартары - Залы Мертвых)\n\yellow;Местонахождение\n\n\grey;Ужас\n\yellow;Сложность\n	1	1	2		0	0	0									ChallengeScroll				thng		-1
-brc6	Black Road Challenge\n\orange;Scroll of Completion	\grey;Кристаллами для Добавления Бонуса\nСмешайте Классовый Талисман с 2-мя Тайными\nЕсли вы завершили все 5 испытаний:\n\yellow;Завершение Черной Дороги\n\n\grey;Где угодно\n\yellow;Местонахождение\n\n\grey;Любая\n\yellow;Сложность\n	1	1	2		0	0	0									ChallengeScroll				thng		-1
+brc6	Black Road Challenge\n\orange;Scroll of Completion	\grey;Смешайте Классовый Талисман с 2 Arcane Crystal для Добавления Бонуса\nЕсли вы завершили все 5 испытаний:\n\yellow;Завершение Black Road\n\n\grey;Где угодно\n\yellow;Местонахождение\n\n\grey;Любая\n\yellow;Сложность\n	1	1	2		0	0	0									ChallengeScroll				thng		-1
 brz	Мозг		1	1	2		0	0	0									invbrnz				body		-1
-bt02	\orange;Nihlathak Simulator	\blue;Съешьте для 10 Очков Атрибутов	1	1	2		100	0	0									newtokenofter				poti		-1
-bt03	\orange;Arcane Crystal Voucher	Смешайте для получения Arcane Crystal	1	1	2		1	0	0									gemcontainer				poti		-1
-bt04	\orange;Chuck's Secret	\blue;Куб = Дважды Клонирует Shrines	1	1	2		80	0	0									newsignet3				poti		-1
-bt05	\orange;команда #unique, но она стоит 1 млн.	\blue;Куб = Преобразовывает Вещь в SU	1	1	2		120	0	0									newsignet5				poti		-1
-bt06	\orange;Thraxis the Martyr	\blue;Куб = Создаёт Beta Талисман	1	1	2		5	0	0									newsignet2				poti		-1
-bt07	\orange;Belladonna Extract	Нажмите ПКМ для сброса Атрибутов/Навыков	1	1	2		50	0	0									pot04				poti		-1
-bt99	''The Worst Beta I've Been In''	\blue;Куб = Преобразовывает Вещь в SU	1	1	2		120	0	0									newsignet5				poti		-1
 bxa	Soul of Kabraxis		1	1	2		100	0	0									braxwhorl	255			grtz		-1
 c@c	(Sorceress Only)\n\red;Moon Symbol	Освященный символ богини...	1	1	2		0	0	0									moon1				poti		-1
 cm1	\orange;Cycle		1	1	2		0	0	0									invch1				scha		-1
 cm2	\orange;Cycle		1	2	2		0	0	0									invch2				mcha		-1
 cm3	\orange;Cycle		1	3	2		0	0	0									invsst				lcha		-1
 cosx	\orange;Corrupted Cluster	(Нажмите ПКМ чтобы Собрать)	1	1	2		0	0	0									invscr6				thng		-1
-cotw	Relic		1	1	2		0	0	0									invgswe				reli		-1
+cotw	Relic		1	1	2		0	0	0									invgswe	255			reli		-1
 cqv	Bolt Quiver		1	3	2	1	0	0	0									invcqv				xboq	2	-1
 cr01	Квестовый Предмет\n\gold;Charged Riftstone (\green;1\gold;)	\grey;Сложность: \red;Тяжёлая\n\grey;Уровень Локации: 121\n\gold;Dimensional Labyrinth 1\n\n\grey;Нажмите ПКМ для открытия портала\n	1	1	2		115	0	0									ChargedRunestoneG				thng		-1
 cr02	Квестовый Предмет\n\gold;Charged Riftstone (\green;2\gold;)	\dgrey;- Смешайте для Полных Характеристик Монстров -\n\n\grey;Сложность: \red;Тяжёлая\n\grey;Уровень Локации: 122\n\gold;Dimensional Labyrinth 2\n\n\grey;Нажмите ПКМ для открытия портала\n	1	1	2		116	0	0									ChargedRunestoneG				thng		-1
@@ -1577,29 +1570,29 @@ cy05	\orange;Medium Cycle	\blue;+3 Требуемый Уровень\n+(5-15) к
 cy06	\orange;Medium Cycle	\blue;+3 Требуемый Уровень\n+(5-15) к Ловкости\n+1% к Ловкости\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	2	2		0	0	0									invch2				cyc2,cycl		-1
 cy07	\orange;Medium Cycle	\blue;+3 Требуемый Уровень\n+(5-15) к Живучести\n+1% к Живучести\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	2	2		0	0	0									invch2				cyc2,cycl		-1
 cy08	\orange;Medium Cycle	\blue;+3 Требуемый Уровень\n+(5-15) к Энергии\n+1% к Энергии\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	2	2		0	0	0									invch2				cyc2,cycl		-1
-cy09	\orange;Large Cycle	\blue;+5 Требуемый Уровень\n+(10-20) к Силе\n+2% к Силе\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	3	2		0	0	0									invsst				cyc3,cycl		-1
-cy10	\orange;Large Cycle	\blue;+5 Требуемый Уровень\n+(10-20) к Ловкости\n+2% к Ловкости\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	3	2		0	0	0									invsst				cyc3,cycl		-1
-cy11	\orange;Large Cycle	\blue;+5 Требуемый Уровень\n+(10-20) к Живучести\n+2% к Живучести\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	3	2		0	0	0									invsst				cyc3,cycl		-1
-cy12	\orange;Large Cycle	\blue;+5 Требуемый Уровень\n+(10-20) к Энергии\n+2% к Энергии\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	3	2		0	0	0									invsst				cyc3,cycl		-1
+cy09	\orange;Large Cycle	\blue;+5 Требуемый Уровень\n+(10-20) к Силе\n+2% к Силе\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	3	2		0	0	0									invsst				cyng,cycl		-1
+cy10	\orange;Large Cycle	\blue;+5 Требуемый Уровень\n+(10-20) к Ловкости\n+2% к Ловкости\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	3	2		0	0	0									invsst				cyng,cycl		-1
+cy11	\orange;Large Cycle	\blue;+5 Требуемый Уровень\n+(10-20) к Живучести\n+2% к Живучести\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	3	2		0	0	0									invsst				cyng,cycl		-1
+cy12	\orange;Large Cycle	\blue;+5 Требуемый Уровень\n+(10-20) к Энергии\n+2% к Энергии\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	3	2		0	0	0									invsst				cyng,cycl		-1
 cy13	\orange;Small Cycle	\blue;+2 Требуемый Уровень\n+(1-4)% Больше Золота от Монстров\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									invch1				cyc1,cycl		-1
 cy14	\orange;Medium Cycle	\blue;+3 Требуемый Уровень\n+(3-7)% Больше Золота от Монстров\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	2	2		0	0	0									invch2				cyc2,cycl		-1
-cy15	\orange;Large Cycle	\blue;+4 Требуемый Уровень\n+(6-10)% Больше Золота от Монстров\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	3	2		0	0	0									invsst				cyc3,cycl		-1
+cy15	\orange;Large Cycle	\blue;+4 Требуемый Уровень\n+(6-10)% Больше Золота от Монстров\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	3	2		0	0	0									invsst				cyng,cycl		-1
 cy16	\orange;Small Cycle	\blue;+2 Требуемый Уровень\n+(1-4)% к Поиску Магических Предметов\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									invch1				cyc1,cycl		-1
 cy17	\orange;Medium Cycle	\blue;+3 Требуемый Уровень\n+(3-7)% к Поиску Магических Предметов\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	2	2		0	0	0									invch2				cyc2,cycl		-1
-cy18	\orange;Large Cycle	\blue;+4 Требуемый Уровень\n+(6-10)% к Поиску Магических Предметов\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	3	2		0	0	0									invsst				cyc3,cycl		-1
+cy18	\orange;Large Cycle	\blue;+4 Требуемый Уровень\n+(6-10)% к Поиску Магических Предметов\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	3	2		0	0	0									invsst				cyng,cycl		-1
 cy19	\orange;Small Cycle	\blue;+2 Требуемый Уровень\n+(1-2)% к Боевым Скоростям\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									invch1				cyc1,cycl		-1
 cy20	\orange;Medium Cycle	\blue;+3 Требуемый Уровень\n+(3-4)% к Боевым Скоростям\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	2	2		0	0	0									invch2				cyc2,cycl		-1
-cy21	\orange;Large Cycle	\blue;+4 Требуемый Уровень\n+(5-6)% к Боевым Скоростям\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	3	2		0	0	0									invsst				cyc3,cycl		-1
-cy22	\orange;Large Cycle	\blue;+18 Требуемый Уровень\n-5 ко Всем Атрибутам\n+1 к Уровню Навыков Амазонки\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	3	2		0	0	0									invsst				cyc3,cycl		-1
-cy23	\orange;Large Cycle	\blue;+18 Требуемый Уровень\n-5 ко Всем Атрибутам\n+1 к Уровню Навыков Ассассина\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	3	2		0	0	0									invsst				cyc3,cycl		-1
-cy24	\orange;Large Cycle	\blue;+18 Требуемый Уровень\n-5 ко Всем Атрибутам\n+1 к Уровню Навыков Варвара\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	3	2		0	0	0									invsst				cyc3,cycl		-1
-cy25	\orange;Large Cycle	\blue;+18 Требуемый Уровень\n-5 ко Всем Атрибутам\n+1 к Уровню НавыковДруида\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	3	2		0	0	0									invsst				cyc3,cycl		-1
-cy26	\orange;Large Cycle	\blue;+18 Требуемый Уровень\n-5 ко Всем Атрибутам\n+1 к Уровню Навыков Некроманта\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	3	2		0	0	0									invsst				cyc3,cycl		-1
-cy27	\orange;Large Cycle	\blue;+18 Требуемый Уровень\n-5 ко Всем Атрибутам\n+1 к Уровню Навыков Колдуньи\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	3	2		0	0	0									invsst				cyc3,cycl		-1
-cy28	\orange;Large Cycle	\blue;+18 Требуемый Уровень\n-5 ко Всем Атрибутам\n+1 к Уровню Навыков Паладина\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	3	2		0	0	0									invsst				cyc3,cycl		-1
+cy21	\orange;Large Cycle	\blue;+4 Требуемый Уровень\n+(5-6)% к Боевым Скоростям\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	3	2		0	0	0									invsst				cyng,cycl		-1
+cy22	\orange;Large Cycle	\blue;+18 Требуемый Уровень\n-5 ко Всем Атрибутам\n+1 к Уровню Навыков Амазонки\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	3	2		0	0	0									invsst				cyng,cycl		-1
+cy23	\orange;Large Cycle	\blue;+18 Требуемый Уровень\n-5 ко Всем Атрибутам\n+1 к Уровню Навыков Ассассина\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	3	2		0	0	0									invsst				cyng,cycl		-1
+cy24	\orange;Large Cycle	\blue;+18 Требуемый Уровень\n-5 ко Всем Атрибутам\n+1 к Уровню Навыков Варвара\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	3	2		0	0	0									invsst				cyng,cycl		-1
+cy25	\orange;Large Cycle	\blue;+18 Требуемый Уровень\n-5 ко Всем Атрибутам\n+1 к Уровню НавыковДруида\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	3	2		0	0	0									invsst				cyng,cycl		-1
+cy26	\orange;Large Cycle	\blue;+18 Требуемый Уровень\n-5 ко Всем Атрибутам\n+1 к Уровню Навыков Некроманта\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	3	2		0	0	0									invsst				cyng,cycl		-1
+cy27	\orange;Large Cycle	\blue;+18 Требуемый Уровень\n-5 ко Всем Атрибутам\n+1 к Уровню Навыков Колдуньи\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	3	2		0	0	0									invsst				cyng,cycl		-1
+cy28	\orange;Large Cycle	\blue;+18 Требуемый Уровень\n-5 ко Всем Атрибутам\n+1 к Уровню Навыков Паладина\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	3	2		0	0	0									invsst				cyng,cycl		-1
 cy29	\orange;Small Cycle	\blue;+1 Требуемый Уровень\n+(0-10) к Мане\n+(0-20) к Жизни\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									invch1				cyc1,cycl		-1
 cy30	\orange;Medium Cycle	\blue;+3 Требуемый Уровень\nМаксимум Маны +(0-2)%\n+(2-15) к Мане\n+(15-30) к Жизни\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	2	2		0	0	0									invch2				cyc2,cycl		-1
-cy31	\orange;Large Cycle	\blue;+5 Требуемый Уровень\nМаксимум Маны +(1-3)%\n+(5-25) к Мане\nМаксимум Жизни +(0-1)%\n+(25-50) к Жизни\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	3	2		0	0	0									invsst				cyc3,cycl		-1
+cy31	\orange;Large Cycle	\blue;+5 Требуемый Уровень\nМаксимум Маны +(1-3)%\n+(5-25) к Мане\nМаксимум Жизни +(0-1)%\n+(25-50) к Жизни\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	3	2		0	0	0									invsst				cyng,cycl		-1
 dg01	Дизайн Предмета		2	2	2		0	0	0									book01				dsgn		-1
 dg02	Дизайн Предмета		2	2	2		0	0	0									book01				dsgn		-1
 dg03	Дизайн Предмета		2	2	2		0	0	0									book01				dsgn		-1
@@ -1651,6 +1644,7 @@ dy20	\orange;Mystic Dye	\blue;Цвет: Оранжевый\n\grey;Нажмите
 dy21	\orange;Mystic Dye	\blue;Цвет: Ярко-белый\n\grey;Нажмите ПКМ для изменения цвета вещи	1	1	2		0	0	0									dye-bwht-21				thng		-1
 dy99	\orange;Mystic Dye	dy99-Desc	1	1	2		0	0	0									dye-rainbow				thng		-1
 ear	Ухо		1	1	2		0	0	0									invear				play		-1
+ebw	Dimensional Key		1	1	2		0	0	0									DimensionalKey	255			grtz		-1
 ebx	Vial of Elder Blood		1	1	2		0	0	0									ElderVial	255			grtz		-1
 eby	Dimensional Key		1	1	2		0	0	0									DimensionalKey	255			grtz		-1
 ebz	Амулет		1	1	2		0	0	0									invamu				xxx4		-1
@@ -1796,13 +1790,13 @@ ir05	Квестовый Предмет\n\gold;Charged Riftstone (\green;5\gold;)
 ir06	Квестовый Предмет\n\gold;Charged Riftstone (\orange;6\gold;)	\dgrey;- Смешайте -\n\n\grey;Могут появляться Герои и Чемпионы\nИммунитет к Контролю Толпы (Crowd Control), Макс. Замедление: 25%\nИммунитет к Сокрушительному Удару, Действие Яда на 50% Короче\n\green;50% Поглощение Огня, Холода и Молнии\n\grey;Нельзя Заледенить или Заморозить\n\nСтихийные Сопротивления: +15%\nЖизнь: +100%\nУрон: +50%\n	1	1	2		0	0	0									ChargedRunestoneY				thng		-1
 ir07	Квестовый Предмет\n\gold;Charged Riftstone (\orange;7\gold;)	\dgrey;- Смешайте -\n\n\grey;Могут появляться Герои и Чемпионы\nИммунитет к Контролю Толпы (Crowd Control), Макс. Замедление: 25%\nИммунитет к Сокрушительному Удару, Действие Яда на 50% Короче\n\grey;50% Поглощение Огня, Холода и Молнии\nНельзя Заледенить или Заморозить\n\green;Брешь в Пространстве\n\nСтихийные Сопротивления: +18%\nПлотность Монстров: +10%\n\grey;Жизнь: +120%\nУрон: +60%\n	1	1	2		0	0	0									ChargedRunestoneY				thng		-1
 ir08	Квестовый Предмет\n\gold;Charged Riftstone (\orange;8\gold;)	\dgrey;- Смешайте -\n\n\grey;Могут появляться Герои и Чемпионы\nИммунитет к Контролю Толпы (Crowd Control), Макс. Замедление: 25%\nИммунитет к Сокрушительному Удару, Действие Яда на 50% Короче\n50% Поглощение Огня, Холода и Молнии\nНельзя Заледенить или Заморозить\n\green;Кража Жизни/Маны на 50% хуже\n\grey;Брешь в Пространстве\n\nСтихийные Сопротивления: +21%\nПлотность Монстров: +10%\nЖизнь: +140%\nУрон: +70%\n	1	1	2		0	0	0									ChargedRunestoneY				thng		-1
-ir09	Квестовый Предмет\n\gold;Charged Riftstone (\orange;9\gold;)	\dgrey;- Смешайте -\n\n\grey;Могут появляться Герои и Чемпионы\nИммунитет к Контролю Толпы (Crowd Control), Макс. Замедление: 25%\nИммунитет к Сокрушительному Удару, Действие Яда на 50% Короче\n50% Поглощение Огня, Холода и Молнии\nНельзя Заледенить или Заморозить\nКража Жизни/Маны на 50% хуже\n\green;+70% к Скорости Передвижения\nИммунитет к Проклятиям\n\grey;Брешь в Пространстве\n\nСтихийные Сопротивления: +24%\nПлотность Монстров: +10%\nЖизнь: +160%\nУрон: +80%\n	1	1	2		0	0	0									ChargedRunestoneY				thng		-1
-ir10	Квестовый Предмет\n\gold;Charged Riftstone (\orange;10\gold;)	\dgrey;- Смешайте -\n\n\grey;Могут появляться Герои и Чемпионы\nИммунитет к Контролю Толпы (Crowd Control), Макс. Замедление: 25%\nИммунитет к Сокрушительному Удару, Действие Яда на 50% Короче\n50% Поглощение Огня, Холода и Молнии\nНельзя Заледенить или Заморозить\nКража Жизни/Маны на 50% хуже\n+70% к Скорости Передвижения\n\green;Монстры не оставляют Трупы\n\grey;Иммунитет к Проклятиям\nБрешь в Пространстве\n\nСтихийные Сопротивления: +27%\nПлотность Монстров: +10%\nЖизнь: +180%\nУрон: +90%\n	1	1	2		0	0	0									ChargedRunestoneY				thng		-1
-ir11	Квестовый Предмет\n\gold;Charged Riftstone (\red;11\gold;)	\dgrey;- Смешайте -\n\n\grey;Могут появляться Герои, Чемпионы и Соверены\nИммунитет к Контролю Толпы (Crowd Control), Макс. Замедление: 25%\nИммунитет к Сокрушительному Удару, Действие Яда на 50% Короче\n50% Поглощение Огня, Холода и Молнии\nНельзя Заледенить или Заморозить\nКража Жизни/Маны на 50% хуже\n+70% к Скорости Передвижения\nМонстры не оставляют Трупы\nИммунитет к Проклятиям\nБрешь в Пространстве\n\green;Усиленные Навыки\n\n\grey;Стихийные Сопротивления: +30%\nПлотность Монстров: +10%\n\green;Размер Групп: +20%\n\grey;Жизнь: +200%\nУрон: +100%\n	1	1	2		0	0	0									ChargedRunestoneR				thng		-1
-ir12	Квестовый Предмет\n\gold;Charged Riftstone (\red;12\gold;)	\dgrey;- Смешайте -\n\n\grey;Могут появляться Герои, Чемпионы и Соверены\nИммунитет к Контролю Толпы (Crowd Control), Макс. Замедление: 25%\nИммунитет к Сокрушительному Удару, Действие Яда на 50% Короче\n\green;Уменьшают Ваши Шансы Блока и Избегания при Ударе\n\grey;50% Поглощение Огня, Холода и Молнии\nНельзя Заледенить или Заморозить\nКража Жизни/Маны на 50% хуже\n+70% к Скорости Передвижения\nМонстры не оставляют Трупы\nИммунитет к Проклятиям\nБрешь в Пространстве\nУсиленные Навыки\n\nСтихийные Сопротивления: +33%\nПлотность Монстров: +10%\nРазмер Групп: +20%\nЖизнь: +220%\nУрон: +110%\n	1	1	2		0	0	0									ChargedRunestoneR				thng		-1
-ir13	Квестовый Предмет\n\gold;Charged Riftstone (\red;13\gold;)	\dgrey;- Смешайте -\n\n\grey;Могут появляться Герои, Чемпионы и Соверены\nИммунитет к Контролю Толпы (Crowd Control), Макс. Замедление: 25%\nИммунитет к Сокрушительному Удару, Действие Яда на 50% Короче\nУменьшают Ваши Шансы Блока и Избегания при Ударе\n\green;200% Физического Урона добавляется как Стихийный\n\grey;50% Поглощение Огня, Холода и Молнии\nНельзя Заледенить или Заморозить\nКража Жизни/Маны на 50% хуже\n+70% к Скорости Передвижения\nМонстры не оставляют Трупы\nИммунитет к Проклятиям\nБрешь в Пространстве\nУсиленные Навыки\n\nСтихийные Сопротивления: +36%\nПлотность Монстров: +10%\nРазмер Групп: +20%\nЖизнь: +240%\nУрон: +120%\n	1	1	2		0	0	0									ChargedRunestoneR				thng		-1
-ir14	Квестовый Предмет\n\gold;Charged Riftstone (\red;14\gold;)	\dgrey;- Смешайте -\n\n\grey;Могут появляться Герои, Чемпионы и Соверены\nИммунитет к Контролю Толпы (Crowd Control), Макс. Замедление: 25%\nИммунитет к Сокрушительному Удару, Действие Яда на 50% Короче\nУменьшают Ваши Шансы Блока и Избегания при Ударе\n200% Физического Урона добавляется как Стихийный\n\green;Пробивание Стихийных Сопротивлений на 100%\n\grey;50% Поглощение Огня, Холода и Молнии\nНельзя Заледенить или Заморозить\nКража Жизни/Маны на 50% хуже\n+70% к Скорости Передвижения\nМонстры не оставляют Трупы\nИммунитет к Проклятиям\nБрешь в Пространстве\nУсиленные Навыки\n\nСтихийные Сопротивления: +40%\nПлотность Монстров: +10%\nРазмер Групп: +20%\nЖизнь: +260%\nУрон: +130%\n	1	1	2		0	0	0									ChargedRunestoneR				thng		-1
-ir15	Квестовый Предмет\n\gold;Charged Riftstone (\red;15\gold;)	\dgrey;- Смешайте -\n\n\grey;Могут появляться Герои, Чемпионы и Соверены\nИммунитет к Контролю Толпы (Crowd Control), Макс. Замедление: 25%\nИммунитет к Сокрушительному Удару, Действие Яда на 50% Короче\nУменьшают Ваши Шансы Блока и Избегания при Ударе\n200% Физического Урона добавляется как Стихийный\nПробивание Стихийных Сопротивлений на 100%\n50% Поглощение Огня, Холода и Молнии\nНельзя Заледенить или Заморозить\nКража Жизни/Маны на 50% хуже\n+70% к Скорости Передвижения\nМонстры не оставляют Трупы\nИммунитет к Проклятиям\nБрешь в Пространстве\nУсиленные Навыки\n\green;Nemesis\n\n\grey;Стихийные Сопротивления: +45%\nПлотность Монстров: +40%\nРазмер Групп: +20%\nЖизнь: +300%\nУрон: +150%\n	1	1	2		0	0	0									ChargedRunestoneR				thng		-1
+ir09	Квестовый Предмет\n\gold;Charged Riftstone (\orange;9\gold;)	\dgrey;- Смешайте -\n\n\grey;Могут появляться Герои и Чемпионы\nИммунитет к Контролю Толпы (Crowd Control), Макс. Замедление: 25%\nИммунитет к Сокрушительному Удару, Действие Яда на 50% Короче\n50% Поглощение Огня, Холода и Молнии\n\green;Сокращение Длительности Проклятий\n\grey;Нельзя Заледенить или Заморозить\nКража Жизни/Маны на 50% хуже\n\green;+70% к Скорости Передвижения\n\grey;Брешь в Пространстве\n\nСтихийные Сопротивления: +24%\nПлотность Монстров: +10%\nЖизнь: +160%\nУрон: +80%\n	1	1	2		0	0	0									ChargedRunestoneY				thng		-1
+ir10	Квестовый Предмет\n\gold;Charged Riftstone (\orange;10\gold;)	\dgrey;- Смешайте -\n\n\grey;Могут появляться Герои и Чемпионы\nИммунитет к Контролю Толпы (Crowd Control), Макс. Замедление: 25%\nИммунитет к Сокрушительному Удару, Действие Яда на 50% Короче\n50% Поглощение Огня, Холода и Молнии\nСокращение Длительности Проклятий\nНельзя Заледенить или Заморозить\nКража Жизни/Маны на 50% хуже\n+70% к Скорости Передвижения\n\green;Монстры не оставляют Трупы\n\grey;Брешь в Пространстве\n\nСтихийные Сопротивления: +27%\nПлотность Монстров: +10%\nЖизнь: +180%\nУрон: +90%\n	1	1	2		0	0	0									ChargedRunestoneY				thng		-1
+ir11	Квестовый Предмет\n\gold;Charged Riftstone (\red;11\gold;)	\dgrey;- Смешайте -\n\n\grey;Могут появляться Герои, Чемпионы и Соверены\nИммунитет к Контролю Толпы (Crowd Control), Макс. Замедление: 25%\nИммунитет к Сокрушительному Удару, Действие Яда на 50% Короче\n50% Поглощение Огня, Холода и Молнии\nСокращение Длительности Проклятий\nНельзя Заледенить или Заморозить\nКража Жизни/Маны на 50% хуже\n+70% к Скорости Передвижения\nМонстры не оставляют Трупы\nБрешь в Пространстве\n\green;Усиленные Навыки\n\n\grey;Стихийные Сопротивления: +30%\nПлотность Монстров: +10%\n\green;Размер Групп: +20%\n\grey;Жизнь: +200%\nУрон: +100%\n	1	1	2		0	0	0									ChargedRunestoneR				thng		-1
+ir12	Квестовый Предмет\n\gold;Charged Riftstone (\red;12\gold;)	\dgrey;- Смешайте -\n\n\grey;Могут появляться Герои, Чемпионы и Соверены\nИммунитет к Контролю Толпы (Crowd Control), Макс. Замедление: 25%\nИммунитет к Сокрушительному Удару, Действие Яда на 50% Короче\n\green;Уменьшают Ваши Шансы Блока и Избегания при Ударе\n\grey;50% Поглощение Огня, Холода и Молнии\nСокращение Длительности Проклятий\nНельзя Заледенить или Заморозить\nКража Жизни/Маны на 50% хуже\n+70% к Скорости Передвижения\nМонстры не оставляют Трупы\nБрешь в Пространстве\nУсиленные Навыки\n\nСтихийные Сопротивления: +33%\nПлотность Монстров: +10%\nРазмер Групп: +20%\nЖизнь: +220%\nУрон: +110%\n	1	1	2		0	0	0									ChargedRunestoneR				thng		-1
+ir13	Квестовый Предмет\n\gold;Charged Riftstone (\red;13\gold;)	\dgrey;- Смешайте -\n\n\grey;Могут появляться Герои, Чемпионы и Соверены\nИммунитет к Контролю Толпы (Crowd Control), Макс. Замедление: 25%\nИммунитет к Сокрушительному Удару, Действие Яда на 50% Короче\nУменьшают Ваши Шансы Блока и Избегания при Ударе\n\green;200% Физического Урона добавляется как Стихийный\n\grey;50% Поглощение Огня, Холода и Молнии\nСокращение Длительности Проклятий\nНельзя Заледенить или Заморозить\nКража Жизни/Маны на 50% хуже\n+70% к Скорости Передвижения\nМонстры не оставляют Трупы\nБрешь в Пространстве\nУсиленные Навыки\n\nСтихийные Сопротивления: +36%\nПлотность Монстров: +10%\nРазмер Групп: +20%\nЖизнь: +240%\nУрон: +120%\n	1	1	2		0	0	0									ChargedRunestoneR				thng		-1
+ir14	Квестовый Предмет\n\gold;Charged Riftstone (\red;14\gold;)	\dgrey;- Смешайте -\n\n\grey;Могут появляться Герои, Чемпионы и Соверены\nИммунитет к Контролю Толпы (Crowd Control), Макс. Замедление: 25%\nИммунитет к Сокрушительному Удару, Действие Яда на 50% Короче\nУменьшают Ваши Шансы Блока и Избегания при Ударе\n200% Физического Урона добавляется как Стихийный\n\green;Пробивание Стихийных Сопротивлений на 100%\n\grey;50% Поглощение Огня, Холода и Молнии\nСокращение Длительности Проклятий\nНельзя Заледенить или Заморозить\nКража Жизни/Маны на 50% хуже\n+70% к Скорости Передвижения\nМонстры не оставляют Трупы\nБрешь в Пространстве\nУсиленные Навыки\n\nСтихийные Сопротивления: +40%\nПлотность Монстров: +10%\nРазмер Групп: +20%\nЖизнь: +260%\nУрон: +130%\n	1	1	2		0	0	0									ChargedRunestoneR				thng		-1
+ir15	Квестовый Предмет\n\gold;Charged Riftstone (\red;15\gold;)	\dgrey;- Смешайте -\n\n\grey;Могут появляться Герои, Чемпионы и Соверены\nИммунитет к Контролю Толпы (Crowd Control), Макс. Замедление: 25%\nИммунитет к Сокрушительному Удару, Действие Яда на 50% Короче\nУменьшают Ваши Шансы Блока и Избегания при Ударе\n200% Физического Урона добавляется как Стихийный\nПробивание Стихийных Сопротивлений на 100%\n50% Поглощение Огня, Холода и Молнии\nСокращение Длительности Проклятий\nНельзя Заледенить или Заморозить\nКража Жизни/Маны на 50% хуже\n+70% к Скорости Передвижения\nМонстры не оставляют Трупы\nБрешь в Пространстве\nУсиленные Навыки\n\green;Nemesis\n\n\grey;Стихийные Сопротивления: +45%\nПлотность Монстров: +40%\nРазмер Групп: +20%\nЖизнь: +300%\nУрон: +150%\n	1	1	2		0	0	0									ChargedRunestoneR				thng		-1
 ir70	\grey;Квестовый Предмет\n\gold;Whisper of the Damned	Смешайте три Whispers для получения Call of the Damned	1	1	2		0	0	0									skullstar				thng		-1
 ir75	\grey;Квестовый Предмет\n\gold;Call of the Damned	\red;Работает только на сложности Ад\n\grey;Нажмите ПКМ для ответа на Зов Проклятого	1	1	2		120	0	0									invrsc				thng		-1
 ir76	Bone Chimes		1	2	2		120	0	0									bonechimes	255			grtz		-1
@@ -2031,10 +2025,10 @@ scf3	\grey;Квестовый Предмет\n\gold;Tenet of Vigor		1	1	2		0	0	0
 scf4	\grey;Квестовый Предмет\n\gold;Tenet of Wisdom		1	1	2		0	0	0									scosfrag				tent		-1
 scf5	\grey;Квестовый Предмет\n\gold;Tenet of Judgement		1	1	2		0	0	0									scosfrag				tent		-1
 scf6	\grey;Квестовый Предмет\n\gold;Tenet of Conflict		1	1	2		0	0	0									scosfrag				tent		-1
-scu2	\grey;Реагент Куба\n\orange;Corrupted Shards (2)	90\nСоздание Corrupted Crystals:\n\n3 Corrupted Shards\n--> Corrupted Crystal\n	1	1	2		0	0	0									invsfary2				scuu		-1
-scu3	\grey;Реагент Куба\n\orange;Corrupted Shards (3)	90\nСоздание Corrupted Crystals:\n\n3 Corrupted Shards\n--> Corrupted Crystal\n	1	1	2		0	0	0									invsfary3				thng		-1
-scu4	\grey;Реагент Куба\n\orange;Corrupted Shards (4)	90\nСоздание Corrupted Crystals:\n\n3 Corrupted Shards\n--> Corrupted Crystal\n	1	1	2		0	0	0									invsfary4				thng		-1
-scul	\grey;Реагент Куба\n\orange;Corrupted Shards (1)	90\nСоздание Corrupted Crystals:\n\n3 Corrupted Shards\n--> Corrupted Crystal\n	1	1	2		0	0	0									invsfary1				scuu		-1
+scu2	\grey;Реагент Куба\n\orange;Corrupted Shards (2)	90\nСоздание Corrupted Crystals:\n\n5 Corrupted Shards\n--> Corrupted Crystal\n	1	1	2		0	0	0									invsfary2				scuu		-1
+scu3	\grey;Реагент Куба\n\orange;Corrupted Shards (3)	90\nСоздание Corrupted Crystals:\n\n5 Corrupted Shards\n--> Corrupted Crystal\n	1	1	2		0	0	0									invsfary3				thng		-1
+scu4	\grey;Реагент Куба\n\orange;Corrupted Shards (4)	90\nСоздание Corrupted Crystals:\n\n5 Corrupted Shards\n--> Corrupted Crystal\n	1	1	2		0	0	0									invsfary4				thng		-1
+scul	\grey;Реагент Куба\n\orange;Corrupted Shards (1)	90\nСоздание Corrupted Crystals:\n\n5 Corrupted Shards\n--> Corrupted Crystal\n	1	1	2		0	0	0									invsfary1				scuu		-1
 scum	\grey;Реагент Куба\n\orange;Corrupted Crystal	Шанс 30% Ничего не сделать\nШанс 30% добавить +100 к Требуемому Уровню\nШанс 40% добавить Случайное Бонусное Свойство\n\nКольцо / Амулет\nSacred Рунное Слово, или\nSacred (Магическая или лучше) Вещь, или\n\red;Смешайте с Вещью для Искажения\n	1	1	2		0	0	0									invfrag				thng		-1
 scz	Скальп		1	1	2		0	0	0									invscp				body		-1
 senn	Ennead Challenge\n\orange;Scroll of Kurast	Смешайте Классовый Талисман с Драгоценным Камнем для Добавления Бонуса\n\yellow;Награда\n\n\grey;Добудьте ваш Классовый Талисман на уровне 80 или меньшем\n\yellow;Испытание\n\n\grey;Кураст 3000 Д.А. (Джунгли Тораджи - Доки Кураста)\n\yellow;Местонах.\n\n\grey;Ненависть\n\yellow;Сложность\n	1	1	2		0	0	0									ChallengeScroll				thng		-1
@@ -2090,9 +2084,9 @@ x1x	\gold;Shard of Fire	\dgrey;(На 60 Уровне требует +2 Arcane Cr
 x2x	\gold;Shard of Ice	\dgrey;(На 60 Уровне требует +2 Arcane Crystals каждые 10 уровней)\n\grey;Смешайте Все 3 Shards для Создания Sunstone\n\orange;Испытание Уровня\n	1	1	2		50	0	0									invlc2				thng		-1
 x3x	\gold;Shard of Thunder	\dgrey;(На 60 Уровне требует +2 Arcane Crystals каждые 10 уровней)\n\grey;Смешайте Все 3 Shards для Создания Sunstone\n\orange;Испытание Уровня\n	1	1	2		50	0	0									invlc3				thng		-1
 x4x	Sunstone of the Gods		1	1	2		0	0	0									invgmv	255			grtz		-1
-x5x	\gold;Sunstone of Fire	\grey;Смешайте в Кубе Все Три Sunstone для Создания Sunstone of Gods	1	1	2		0	0	0									invgmr				thng		-1
-x6x	\gold;Sunstone of Ice	\grey;Смешайте в Кубе Все Три Sunstone для Создания Sunstone of Gods	1	1	2		0	0	0									invgmb				thng		-1
-x7x	\gold;Sunstone of Thunder	\grey;Смешайте в Кубе Все Три Sunstone для Создания Sunstone of Gods	1	1	2		0	0	0									invgmw				thng		-1
+x5x	\gold;Sunstone of Fire	\grey;Смешайте в Кубе Все Три Sunstone для Создания Sunstone\n	1	1	2		0	0	0									invgmr				thng		-1
+x6x	\gold;Sunstone of Ice	\grey;Смешайте в Кубе Все Три Sunstone для Создания Sunstone\n	1	1	2		0	0	0									invgmb				thng		-1
+x7x	\gold;Sunstone of Thunder	\grey;Смешайте в Кубе Все Три Sunstone для Создания Sunstone\n	1	1	2		0	0	0									invgmw				thng		-1
 x@x	The Glorious Book of Median		1	1	2		0	0	0									invsbk2	255			grtz		-1
 xyz	Нажмите ПКМ чтобы добавить 50 к Жизни\nЗелье Жизни		1	1	2		0	0	0									invxyz	19			ques		-1
 yo1	\purple;Chipped Rainbow Stone		1	1	2		1	0	0									og1				gemx,gem0		-1

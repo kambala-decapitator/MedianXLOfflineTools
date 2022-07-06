@@ -322,7 +322,7 @@
 320	Hades Gate	6	4	5	2	36
 321	Shuriken Flurry	6	6	1	2	72
 322	Psionic Scream	6	6	2	3	54
-323	Doom	6	8	4	2	38
+323	Doom	6	8	4	1	38
 324	Mind Ripple	6	6	4	1	86
 325		6				
 326		6				
@@ -349,7 +349,7 @@
 347		4				
 348		4				
 349		-1				
-350	Birdstorm	5	4	3	2	122
+350	Raid	5	4	3	2	122
 351	Cascade	5	5	2	1	42
 352	Heartseeker	5	5	2	3	44
 353	Ember Spirit	5	6	1	2	50
@@ -370,8 +370,8 @@
 368		-1				
 369	Sacrifices	2	1	3	2	70
 370	Атака	2	0	0	0	3
-371	Fragmentation Shot	2	4	5	1	132
-372	Widowmaker	2	4	4	2	56
+371	Fragmentation Shot	2	4	2	2	132
+372	Widowmaker	2	4	3	1	56
 373		-1				
 374		-1				
 375		-1				
@@ -801,7 +801,7 @@
 799		-1				
 800		-1				
 801		-1				
-802	Doom	-1	8	4	2	38
+802	Doom	-1	8	4	1	38
 803		-1				
 804		-1				
 805		-1				
@@ -822,8 +822,8 @@
 820		-1				
 821		-1				
 822		-1				
-823	Doom	-1	8	4	2	38
-824	Doom	-1	8	4	2	38
+823	Doom	-1	8	4	1	38
+824	Doom	-1	8	4	1	38
 825		-1				
 826		-1				
 827		-1				
@@ -1051,12 +1051,12 @@
 1049		-1				
 1050		-1				
 1051	War Spirit	0	8	1	3	88
-1052	Thundercrack	0	5	1	2	106
+1052		0				
 1053	Stormcall	0	5	2	3	108
-1054	Hammer of Zerae	0	5	3	2	110
-1055	Asterism	0	5	4	2	112
-1056	Magnetic Field	0	5	6	2	114
-1057	Askari Lightning	0	5	5	1	118
+1054	Hammer of Zerae	0	5	2	1	110
+1055	Thundermaiden	0	5	1	2	112
+1056	Resistance	0	5	6	2	144
+1057	Askari Lightning	0	5	3	3	118
 1058	Elemental Command	0	2	4	2	120
 1059	\orange;Fire at Will	0	2	3	3	122
 1060	\orange;Fortitude	0	1	6	1	38
@@ -1066,15 +1066,15 @@
 1064	\orange;Elemental Aegis	0	3	6	2	138
 1065	Fend	0	4	6	2	42
 1066	\orange;Hunter's Prowess	0	4	3	1	128
-1067	\orange;Rift Field	0	5	2	1	130
+1067	\orange;Reckoning of Zerae	0	5	5	1	143
 1068	\orange;Blood Magic	0	6	6	1	132
-1069	Discharge	0	5	5	3	58
-1070	Athena's Gift	0	0	0	0	134
-1071		0				
+1069	Discharge	0	5	4	2	58
+1070		0	0	0	0	0
+1071	\orange;Conductivity	0	5	5	3	130
 1072	Gemling	0	3	3	3	136
 1073	Noxious Mastery	0	3	3	1	140
 1074	Deadly Dance	0	3	1	3	36
-1075		0				
+1075	Power Shift	0	5	3	1	142
 1076		0				
 1077		0				
 1078		0				
@@ -1141,10 +1141,10 @@
 1139	Pinnacle	6	6	2	1	116
 1140	Vampiric Icon	6	8	1	3	88
 1141	Prismatic Cloak	6	8	1	1	128
-1142	Beacon	6	8	4	1	90
+1142	Beacon	6	8	4	3	90
 1143		-1				
 1144		-1				
-1145	Phase Bomb	6	8	4	3	98
+1145	Way of the Raven	6	8	4	2	98
 1146	Way of the Gryphon	6	3	1	3	84
 1147	\orange;Domain	6	1	2	3	148
 1148	\orange;Shadowrush	6	1	4	1	164
@@ -1155,7 +1155,7 @@
 1153	\orange;Execution	6	4	6	1	144
 1154	\orange;Momentum	6	4	6	3	142
 1155	\orange;Void Gazer	6	2	6	1	168
-1156	Lethal Incision	6	2	6	3	160
+1156	Lethal Incision	6	2	4	3	160
 1157	\orange;Negative Charge	6	5	4	1	162
 1158	\orange;Enhanced Contraption	6	5	4	3	154
 1159	Forger's Hegemony	6	5	6	2	158
@@ -1223,7 +1223,7 @@
 1221		-1				
 1222		-1				
 1223	Ancient Blood	4	1	2	2	40
-1224	Spirit Guide	4	1	5	1	66
+1224	\orange;Wolven Guide	4	1	5	1	66
 1225	Mountain King	4	1	4	2	68
 1226	Snake Bite	4	5	1	2	70
 1227	Stampede	4	5	2	1	72
@@ -1239,26 +1239,26 @@
 1237	Purifying Flame	4	4	4	3	108
 1238	Deep Freeze	4	4	4	2	92
 1239	Gale Force	4	3	6	2	130
-1240	Precision	4	3	2	1	122
-1241	Savagery	4	3	3	3	126
-1242	Stoneskin	4	3	4	1	128
-1243	Lifestealer	4	3	5	3	124
-1244	Hunter's Mark	4	1	3	1	58
-1245	Primordial Hunt	4	1	6	1	78
-1246	Violence	4	5	2	2	136
-1247	Citadel	4	5	5	3	134
+1240	\orange;Precision	4	3	2	1	122
+1241	\orange;Savagery	4	3	3	3	126
+1242	\orange;Stoneskin	4	3	4	1	128
+1243	\orange;Lifestealer	4	3	5	3	124
+1244	\orange;Hunter's Mark	4	1	3	1	58
+1245	\orange;Primordial Hunt	4	1	6	1	78
+1246	\orange;Violence	4	5	2	2	136
+1247	\orange;Citadel	4	5	5	3	134
 1248	Spirit Reave	4	6	4	3	88
 1249	Primordial Strike	4	4	5	2	110
-1250	Upheaval	4	2	2	1	120
+1250	\orange;Upheaval	4	2	2	1	120
 1251	Leap	4	2	3	3	94
-1252	Aftermath	4	2	6	3	98
+1252	\orange;Aftermath	4	2	6	3	98
 1253	Heart of Stone	4	2	4	1	114
-1254	Executioner	4	3	6	1	138
-1255	Spirit Bond	4	6	6	3	140
-1256		4				
-1257		4				
-1258		4				
-1259		4				
+1254	\orange;Executioner	4	3	6	1	138
+1255	\orange;Spirit Bond	4	6	6	3	140
+1256	\orange;Galvanism	4	4	2	3	144
+1257	\orange;Ancestral Endurance	4	6	5	3	148
+1258	\orange;Tectonics	4	2	5	1	142
+1259	\orange;Honing	4	5	2	3	146
 1260		4				
 1261		4				
 1262		4				
@@ -1409,8 +1409,8 @@
 1407		-1				
 1408	Stormeye Totem	2	6	1	2	78
 1409		-1				
-1410	Death Shards	2	4	2	2	100
-1411	Dragonfire Oil	2	4	3	1	136
+1410	Death Shards	2	4	5	1	100
+1411	Dragonfire Oil	2	4	2	3	136
 1412	Talon's Hold	2	8	1	1	54
 1413		-1				
 1414	Thunder Wave	-1	0	0	0	0
@@ -1431,9 +1431,9 @@
 1429	\orange;Reaper	2	3	2	3	40
 1430	Ominous Vigor	2	3	6	3	44
 1431	\orange;Demonic Commune	2	3	6	1	46
-1432	\orange;Carrion Drain	2	4	2	3	180
+1432	\orange;Carrion Drain	2	4	6	2	180
 1433	Buckshot	2	4	1	1	182
-1434	\orange;Ignite	2	4	6	1	184
+1434	\orange;Ignite	2	4	4	2	184
 1435	Occult Path	2	5	2	2	186
 1436	Exile	2	5	5	2	188
 1437	\orange;Terror	2	5	5	1	190
@@ -1486,7 +1486,7 @@
 1484	Flamestrike	-1	2	5	3	34
 1485		-1				
 1486	Vessel of Retribution	3	4	1	1	120
-1487	Solstice and Equinox	3	4	2	1	74
+1487	\orange;Solstice and Equinox	3	4	2	1	74
 1488	Ward of Fate	3	1	4	2	76
 1489		3				
 1490	Grim Presence	3	5	1	1	40
@@ -1494,12 +1494,12 @@
 1492	Lemures	3	5	2	3	44
 1493	Possession	3	5	3	3	90
 1494	Blood Thorns	3	5	4	3	46
-1495	Symphony of Destruction	3	6	5	1	114
+1495	\orange;Symphony of Destruction	3	6	5	1	114
 1496		-1				
 1497	Stormlord	3	6	3	3	68
 1498	Vessel of Judgement	3	4	1	3	70
 1499	Elemental Wisdom	3	1	1	2	124
-1500	Life and Death	3	4	2	3	118
+1500	\orange;Life and Death	3	4	2	3	118
 1501	Veneration of Justice	3	1	2	2	126
 1502	Servants of Valor	3	1	5	2	94
 1503	Absolution	3	4	3	2	132
@@ -1509,20 +1509,20 @@
 1507		-1				
 1508	Superbeast	3	8	4	3	84
 1509	Dragon's Blessing	3	8	4	1	98
-1510	Counterattack	3	2	1	2	146
+1510	\orange;Counterattack	3	2	1	2	146
 1511	Consecration	3	2	2	3	144
-1512	Valiance	3	1	4	3	158
-1513	Conclave	3	1	6	1	140
-1514	Fervor	3	1	6	3	148
-1515	Reverence	3	4	4	2	152
-1516	Transcendence	3	5	5	2	156
-1517	Frostbite	3	5	6	1	150
-1518	Confluence	3	6	2	1	142
+1512	\orange;Valiance	3	1	4	3	158
+1513	\orange;Conclave	3	1	6	1	140
+1514	\orange;Fervor	3	1	6	3	148
+1515	\orange;Reverence	3	4	4	2	152
+1516	\orange;Transcendence	3	5	5	2	156
+1517	\orange;Frostbite	3	5	6	1	150
+1518	\orange;Confluence	3	6	2	1	142
 1519	Acumen	3	6	6	3	134
 1520	Dragonbone Armor	3	3	3	2	160
 1521	Dragon's Breath	3	3	5	3	96
-1522	Combustion	3	3	6	3	138
-1523	Apex Predator	3	3	4	1	136
+1522	\orange;Combustion	3	3	6	3	138
+1523	\orange;Apex Predator	3	3	4	1	136
 1524		3				
 1525		3				
 1526		3				
@@ -1570,7 +1570,7 @@
 1568	Nova Charge	1	8	3	3	102
 1569	Vengeful Power	1	8	5	1	142
 1570	Hive	1	8	5	3	68
-1571	Moonstrike	1	6	1	1	70
+1571	Mooncall	1	6	1	1	70
 1572		1				
 1573	Fusillade	1	6	5	3	148
 1574		1				
@@ -1591,22 +1591,22 @@
 1589	Glacial Torrent	1	4	3	2	46
 1590	Wintertide	1	4	4	2	44
 1591	Frostborn	1	4	6	2	60
-1592	Rime	1	4	5	1	64
-1593	Hoar Frost	1	4	5	3	62
-1594	Eye of the Storm	1	3	3	1	54
-1595	Mind Spark	1	3	5	3	58
-1596	Elucidation	1	5	3	3	78
-1597	Decay	1	5	2	1	72
+1592	\orange;Rime	1	4	5	1	64
+1593	\orange;Hoar Frost	1	4	5	3	62
+1594	\orange;Eye of the Storm	1	3	3	1	54
+1595	\orange;Mind Spark	1	3	5	3	58
+1596	\orange;Elucidation	1	5	3	3	78
+1597	\orange;Decay	1	5	2	1	72
 1598	Blight	1	5	6	2	66
-1599	Incineration	1	2	3	1	30
-1600	Pyre	1	2	5	1	32
+1599	\orange;Incineration	1	2	3	1	30
+1600	\orange;Pyre	1	2	5	1	32
 1601	Paradigm Shift	1	6	1	3	84
-1602	Cold Blooded	1	6	2	3	82
-1603	Premonition	1	6	6	3	86
-1604	Arcane Sustenance	1	6	5	2	80
+1602	\orange;Cold Blooded	1	6	2	3	82
+1603	\orange;Premonition	1	6	6	3	86
+1604	\orange;Arcane Sustenance	1	6	5	2	160
 1605	Arcane Fury	1	1	6	2	116
-1606		1				
-1607		1				
+1606	Determination	1	6	4	1	162
+1607	Fatal Focus	1	6	6	1	80
 1608		1				
 1609		1				
 1610		1				
@@ -2111,7 +2111,7 @@
 2109		-1				
 2110		-1				
 2111		-1				
-2112		-1				
+2112	Doom	-1	8	4	1	38
 2113		-1				
 2114		-1				
 2115		-1				
@@ -2772,3 +2772,21 @@
 2770		-1				
 2771		-1				
 2772		-1				
+2773		-1				
+2774		-1				
+2775		-1				
+2776		-1				
+2777		-1				
+2778		-1				
+2779		-1				
+2780		-1				
+2781		-1				
+2782	Thunderstone	-1	3	2	1	52
+2783		-1				
+2784	Ледяное Дыхание	-1	0	0	0	0
+2785		-1				
+2786		-1				
+2787	Arachnomancy	-1	5	4	2	112
+2788		-1				
+2789	Discharge	-1	5	4	2	58
+2790		-1				

@@ -299,9 +299,9 @@ if ($locale ne 'en')
 my $prefix = "generated/$locale";
 make_path $prefix;
 
-my %invgfx; $invgfx{"invgfx$_"} = 34 + $_ for (1..6);
+my %invgfx; $invgfx{"invgfx$_"} = 35 + $_ for (1..6);
 my @invgfxKeys = sort keys %invgfx;
-my $itemTypes = parsetxt("itemtypes.tsv", "#code"=>0, code0=>1, equiv1=>8, equiv2=>9, bodyLoc=>12, class=>33, %invgfx);
+my $itemTypes = parsetxt("itemtypes.tsv", "#code"=>0, code0=>1, equiv1=>8, equiv2=>9, bodyLoc=>12, class=>34, %invgfx);
 open my $out, ">", "generated/itemtypes.tsv";
 print $out "#code\tequiv\tvarImages\tname\n";
 for my $name (sort keys %$itemTypes)
@@ -352,7 +352,7 @@ for my $ref ($armorTypes, $weaponTypes, $miscTypes)
         for my $itemName (keys %$itemTypes) # find which class it belongs to
         {
             my $hashRef = $itemTypes->{$itemName};
-            if ($hashRef->{code0} eq $type)
+            if (defined $hashRef and $hashRef->{code0} eq $type)
             {
                 # to determine item type when parsing socketables (see @subtypes): 0 - shield, 1 - weapon, nothing - armor
                 print $out $itemType if defined $hashRef->{bodyLoc} and $hashRef->{bodyLoc} eq 'rarm';

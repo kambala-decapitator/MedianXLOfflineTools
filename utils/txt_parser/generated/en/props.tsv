@@ -187,7 +187,6 @@
 231	0	10							Fire Resist	Fire Resist	(Based on Character Level)	7	64	2					item_resist_fire_perlevel
 232	0	10							Lightning Resist	Lightning Resist	(Based on Character Level)	7	63	2					item_resist_ltng_perlevel
 233	0	10							Poison Resist	Poison Resist	(Based on Character Level)	7	61	2					item_resist_pois_perlevel
-235	0	10	10	10														10	thog_dont_caare
 239	0	10							Gold Find	Gold Find	(Based on Character Level)	7	16	1					item_find_gold_perlevel
 240	0	10							Magic Find	Magic Find	(Based on Character Level)	7	14	1					item_find_magic_perlevel
 241	30	7																	is_corrupted
@@ -298,6 +297,8 @@
 396	1001	14																12	special_syn3
 397	1001	14																12	special_syn4
 398	0	5																	yshari_enable
+399	1001	14																12	special_syn5
+400	1001	14																12	special_syn6
 404	0	10							to Fire Spell Damage	to Fire Spell Damage	(Based on Character Level)	7	138	1					passive_fire_mastery_perlevel
 405	0	10							to Lightning Spell Damage	to Lightning Spell Damage	(Based on Character Level)	7	136	1					passive_ltng_mastery_perlevel
 406	0	10							to Cold Spell Damage	to Cold Spell Damage	(Based on Character Level)	7	134	1					passive_cold_mastery_perlevel

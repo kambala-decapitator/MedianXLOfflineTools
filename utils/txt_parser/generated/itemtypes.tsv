@@ -129,7 +129,7 @@ knif	mele,dbox		Knife
 qknf	knif,ct1w		Knife (Sacred)
 lcha	char	invch3,invch6,invch9	Large Charm
 cyc3	cycl	invch3,invch6,invch9	Large Cycle
-cyng	cyc3	invch3,invch6,invch9	Large Cycle Not Gold
+cyng	cyc3	invch3,invch6,invch9	Large Cycle Not Golden
 mace	blun		Mace
 qmac	mace,ct1w		Mace (Sacred)
 mboq	bowq		Magic Bow Quiv
