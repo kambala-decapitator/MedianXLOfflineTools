@@ -25,6 +25,6 @@ It can be built basically for any platform. You will need:
 To build from GUI:
 
 - any OS: open `MedianXLOfflineTools.pro` in Qt Creator
-- Windows only: open `MedianXLOfflineTools.sln` in Microsoft Visual Studio 2019, you will also need to install _Qt VS Tools_ extension
+- Windows + Qt 4 only: open `MedianXLOfflineTools.sln` in Microsoft Visual Studio 2019, you will also need to install _Qt VS Tools_ extension
 
 For command-line builds you will be using `qmake` and `make` / `jom` / `nmake`, please refer to qmake manual for details.
