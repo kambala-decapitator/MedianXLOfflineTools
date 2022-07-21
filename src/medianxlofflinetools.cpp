@@ -46,6 +46,10 @@
 #include <QDebug>
 #endif
 
+#if IS_QT5
+#include <QStandardPaths>
+#endif
+
 #include <cfloat>
 #include <cmath>
 
@@ -192,9 +196,14 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, LaunchMode la
     else
     {
 #ifdef Q_OS_WIN32
+# if IS_QT5
+        const QString homeDir = QStandardPaths::writableLocation(QStandardPaths::HomeLocation);
+# else
+        const QString homeDir = QDesktopServices::storageLocation(QDesktopServices::HomeLocation);
+# endif
         QSettings settings;
         settings.beginGroup("recentItems");
-        settings.setValue(kLastSavePathKey, QDesktopServices::storageLocation(QDesktopServices::HomeLocation) + QLatin1String("/AppData/Roaming/MedianXL/save"));
+        settings.setValue(kLastSavePathKey, homeDir + QLatin1String("/AppData/Roaming/MedianXL/save"));
 #endif
         updateWindowTitle();
     }
