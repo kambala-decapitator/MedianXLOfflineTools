@@ -301,13 +301,13 @@
 299		-1				
 300		-1				
 301	Barrage	0	2	2	1	116
-302	Magic Missiles	0	6	1	1	66
-303	Balefire	0	6	3	3	60
-304	Balefire	-1	6	3	3	60
-305	Bloodstorm	0	6	2	2	64
-306	Lava Pit	0	6	5	2	98
+302	Magic Missiles	0	6	2	1	66
+303		0				
+304	Balefire	-1	0	0	0	281
+305		0				
+306	Lava Pit	0	6	2	3	98
 307	Spellbind	0	8	1	1	80
-308		0				
+308	Eldritch Storm	0	6	2	2	64
 309		0				
 310		0				
 311		0				
@@ -511,8 +511,8 @@
 509	Shatter the Flesh	-1	0	0	0	100
 510	Singularity	-1	0	0	0	0
 511	Flametail Shot	-1	0	0	0	92
-512		-1				
-513		-1				
+512	Bloodstorm	-1	0	0	0	282
+513	Balefire	-1	0	0	0	281
 514		-1				
 515		-1				
 516		-1				
@@ -652,7 +652,7 @@
 650	Cherubim	-1	0	0	0	190
 651	Slayer	-1	6	4	2	66
 652	Thunderstorm	-1	4	4	1	60
-653		-1				
+653	Eldritch Storm	-1	6	2	2	64
 654		-1				
 655		-1				
 656		-1				
@@ -1034,14 +1034,14 @@
 1032	Impale	0	3	1	2	46
 1033	\orange;Second Wind	0	3	5	3	90
 1034	Bulwark	0	3	5	1	48
-1035	Bacchanalia	0	6	4	3	94
+1035	Blood Magic	0	6	1	2	132
 1036	Takedown	0	4	3	2	50
 1037	Hyena Strike	0	4	2	2	104
 1038	Great Hunt	0	4	1	1	102
 1039	Lioness	0	4	4	3	56
 1040	Pounce	0	4	5	3	100
 1041	Wild and Free	0	1	1	2	78
-1042	Fire Elementals	0	6	4	1	72
+1042	Fire Elementals	0	6	6	1	72
 1043	Balance	0	1	3	2	74
 1044	Ecstatic Frenzy	0	1	4	1	68
 1045	Defensive Harmony	0	1	4	3	70
@@ -1058,7 +1058,7 @@
 1056	Resistance	0	5	6	2	144
 1057	Askari Lightning	0	5	3	3	118
 1058	Elemental Command	0	2	4	2	120
-1059	\orange;Fire at Will	0	2	3	3	122
+1059	\orange;Fire at Will	0	2	5	3	122
 1060	\orange;Fortitude	0	1	6	1	38
 1061	\orange;Keen Sight	0	2	6	2	124
 1062	Shieldmaiden	0	3	4	2	126
@@ -1067,21 +1067,21 @@
 1065	Fend	0	4	6	2	42
 1066	\orange;Hunter's Prowess	0	4	3	1	128
 1067	\orange;Reckoning of Zerae	0	5	5	1	143
-1068	\orange;Blood Magic	0	6	6	1	132
+1068	\orange;Unstable Essence	0	6	6	3	156
 1069	Discharge	0	5	4	2	58
-1070		0	0	0	0	0
+1070	\orange;Concentrated Effect	0	6	4	1	160
 1071	\orange;Conductivity	0	5	5	3	130
 1072	Gemling	0	3	3	3	136
 1073	Noxious Mastery	0	3	3	1	140
 1074	Deadly Dance	0	3	1	3	36
 1075	Power Shift	0	5	3	1	142
-1076		0				
-1077		0				
-1078		0				
-1079		0				
-1080		0				
-1081		0				
-1082		0				
+1076	\orange;Blast Radius	0	6	3	1	146
+1077	\orange;Entropy	0	6	3	2	150
+1078	\orange;Hungering Flames	0	6	3	3	154
+1079	\orange;Crimson Rite	0	6	5	1	148
+1080	\orange;Forbidden Knowledge	0	6	5	3	152
+1081	Spiritual Invocation	0	6	5	2	158
+1082	SkillnameDecoy	0	2	3	3	162
 1083		0				
 1084		0				
 1085		0				
@@ -1341,8 +1341,8 @@
 1339	\orange;Reaping Gale	5	6	6	2	76
 1340	Tracking	5	5	6	2	110
 1341	\orange;Ancestral Force	5	2	6	3	108
-1342		5				
-1343		5				
+1342	Primal Bond	5	5	3	3	156
+1343	Devouring Cloud	5	1	4	3	154
 1344		5				
 1345		5				
 1346		5				
@@ -2446,7 +2446,7 @@
 2444		-1				
 2445		-1				
 2446		-1				
-2447	Flamefront	-1	2	1	3	92
+2447		-1				
 2448		-1				
 2449		-1				
 2450		-1				
@@ -2495,7 +2495,7 @@
 2493		-1				
 2494		-1				
 2495		-1				
-2496		-1				
+2496	Flamefront	-1	2	1	3	92
 2497		-1				
 2498		-1				
 2499		-1				
@@ -2781,12 +2781,47 @@
 2779		-1				
 2780		-1				
 2781		-1				
-2782	Thunderstone	-1	3	2	1	52
+2782		-1				
 2783		-1				
-2784	Frozen Breath	-1	0	0	0	0
+2784		-1				
 2785		-1				
 2786		-1				
-2787	Arachnomancy	-1	5	4	2	112
+2787		-1				
 2788		-1				
 2789	Discharge	-1	5	4	2	58
 2790		-1				
+2791		-1				
+2792		-1				
+2793		-1				
+2794		-1				
+2795		-1				
+2796		-1				
+2797		-1				
+2798		-1				
+2799		-1				
+2800		-1				
+2801		-1				
+2802		-1				
+2803		-1				
+2804		-1				
+2805		-1				
+2806		-1				
+2807		-1				
+2808		-1				
+2809		-1				
+2810		-1				
+2811		-1				
+2812		-1				
+2813	Flamefront	-1	2	1	3	92
+2814		-1				
+2815		-1				
+2816		-1				
+2817		-1				
+2818		-1				
+2819		-1				
+2820	Void Armor	-1	0	0	0	108
+2821		-1				
+2822		-1				
+2823	Ice Bolt Nova	-1	0	0	0	195
+2824		-1				
+2825	Time Warp	-1	0	0	0	283

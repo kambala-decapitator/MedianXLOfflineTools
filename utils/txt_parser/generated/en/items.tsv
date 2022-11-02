@@ -482,22 +482,22 @@ w99	Avenger Guard (3)		2	2	0		23	219	0									invba5				phlm,tier		4
 !19	Bonesplitter (3)		2	4	1		23	176	0		1			19	59			invscyu	0	16	0	nscy,tier	1	2
 !20	Bonesplitter (4)		2	4	1		28	350	0		1			23	70			invscyu	0	16	0	nscy,tier	1	2
 !21	Bonesplitter (Sacred)		2	4	1		30	512	0		1			82	84			invscyu	0	16	0	snsy	1	2
-!22	Mammen Axe (1)		1	3	1		0	0	0									invhaxu	0	0	0	baxe,el1x	1	4
-!24	Mammen Axe (2)		1	3	1		10	21	0									invhaxu	0	0	0	baxe,el1x	1	4
-!26	Mammen Axe (3)		1	3	1		20	59	0									invhaxu	0	0	0	baxe,el1x	1	4
-!27	Mammen Axe (4)		1	3	1		25	124	0									invhaxu	0	0	0	baxe,el1x	1	4
-!28	Mammen Axe (Sacred)		1	3	1		30	452	0									invhaxu	0	0	0	sbax,el1x	1	4
+!22	Mammen Axe (1)		1	3	1		0	0	0			0	0			1	1	invhaxu	0	0	0	baxe,el1x	1	4
+!24	Mammen Axe (2)		1	3	1		10	21	0			0	0			1	1	invhaxu	0	0	0	baxe,el1x	1	4
+!26	Mammen Axe (3)		1	3	1		20	59	0			0	0			1	1	invhaxu	0	0	0	baxe,el1x	1	4
+!27	Mammen Axe (4)		1	3	1		25	124	0			0	0			1	1	invhaxu	0	0	0	baxe,el1x	1	4
+!28	Mammen Axe (Sacred)		1	3	1		30	452	0			0	0			1	1	invhaxu	0	0	0	sbax,el1x	1	4
 !3!	Warp Blade (3)		2	3	1		26	0	140			23	44					inv9cru	0	0	13	scrd,tier	1	1
 !30	Hammerhead Axe (2)		2	3	1		15	137	0			17	20					invaxeu	0	14	0	baxe,tier	1	4
 !32	Hammerhead Axe (3)		2	3	1		26	268	0			34	41					invaxeu	0	14	0	baxe,tier	1	4
 !33	Hammerhead Axe (4)		2	3	1		30	529	0			41	49					invaxeu	0	14	0	baxe,tier	1	4
 !34	Hammerhead Axe (Sacred)		2	3	1		30	630	0			51	55					invaxeu	0	14	0	sbax	1	4
-!35	Ono (1)		2	3	1		0	21	0		1							inv9btu	0	0	0	2hbx,el2x	1	4
-!37	Ono (2)		2	3	1		9	47	0		1							inv9btu	0	0	0	2hbx,el2x	1	4
-!39	Ono (3)		2	3	1		20	106	0		1							inv9btu	0	0	0	2hbx,el2x	1	4
+!35	Ono (1)		2	3	1		0	21	0		1			0	0	1	1	inv9btu	0	0	0	2hbx,el2x	1	4
+!37	Ono (2)		2	3	1		9	47	0		1			0	0	1	1	inv9btu	0	0	0	2hbx,el2x	1	4
+!39	Ono (3)		2	3	1		20	106	0		1			0	0	1	1	inv9btu	0	0	0	2hbx,el2x	1	4
 !4!	Warp Blade (4)		2	3	1		31	0	277			29	53					inv9cru	0	0	13	scrd,tier	1	1
-!40	Ono (4)		2	3	1		25	216	0		1							inv9btu	0	0	0	2hbx,el2x	1	4
-!41	Ono (Sacred)		2	3	1		30	489	0		1							inv9btu	0	0	0	s2hx,el2x	1	4
+!40	Ono (4)		2	3	1		25	216	0		1			0	0	1	1	inv9btu	0	0	0	2hbx,el2x	1	4
+!41	Ono (Sacred)		2	3	1		30	489	0		1			0	0	1	1	inv9btu	0	0	0	s2hx,el2x	1	4
 !42	Valaska (1)		2	3	1		3	89	0		1			11	16			invbtxu	0	16	0	2hbx,tier	1	4
 !44	Valaska (2)		2	3	1		13	132	0		1			28	37			invbtxu	0	16	0	2hbx,tier	1	4
 !46	Valaska (3)		2	3	1		24	258	0		1			59	77			invbtxu	0	16	0	2hbx,tier	1	4
@@ -564,7 +564,7 @@ w99	Avenger Guard (3)		2	2	0		23	219	0									invba5				phlm,tier		4
 110	Bastard Sword (1)		1	4	1		3	73	0	1	1	5	7	9	10			invbsw	0	16	0	2hsd,tier	1	-1
 111	Flamberge (1)		2	4	1		3	89	0	1	1	7	8	11	13			invflb	0	16	0	2hsd,tier	1	-1
 112	Great Sword (1)		2	4	1		5	105	0	1	1	7	9	13	14			invgsd	0	16	0	2hsd,tier	1	-1
-113	Crystal Sword (1)		2	3	1		5	0	73									invcrs	0	0	0	crsd,el1x	1	-1
+113	Crystal Sword (1)		2	3	1		5	0	73			0	0			1	1	invcrs	0	0	0	crsd,el1x	1	-1
 114	Hand Axe (1)		1	3	1		0	0	0			2	4					invhax	0	11	0	axe,tier	1	-1
 115	Axe (1)		2	3	1		1	31	0			4	5					invaxe	0	11	0	axe,tier	1	-1
 116	Double Axe (1)		2	3	1		2	49	0			4	7					inv2ax	0	11	0	axe,tier	1	-1
@@ -573,7 +573,7 @@ w99	Avenger Guard (3)		2	2	0		23	219	0									invba5				phlm,tier		4
 119	Large Axe (1)		2	3	1		0	18	0		1			4	5			invlax	0	16	0	2hax,tier	1	-1
 11@	Bastard Sword (Sacred)		1	4	1		30	535	0	1	1	44	47	70	72			invbsw	0	16	0	s2hd	1	-1
 120	Broad Axe (1)		2	3	1		1	39	0		1			6	8			invbrx	0	16	0	2hax,tier	1	-1
-121	Battle Axe (1)		2	3	1		2	60	0		1							invbtx	0	0	0	2hax,el2x	1	-1
+121	Battle Axe (1)		2	3	1		2	60	0		1			0	0	1	1	invbtx	0	0	0	2hax,el2x	1	-1
 122	Great Axe (1)		2	4	1		3	81	0		1			10	14			invgax	0	16	0	2hax,tier	1	-1
 123	Giant Axe (1)		2	3	1		5	102	0		1			12	17			invgix	0	16	0	2hax,tier	1	-1
 124	Club (1)		1	3	1		0	0	0			2	4					invclb	0	11	0	mace,tier	1	-1
@@ -603,14 +603,14 @@ w99	Avenger Guard (3)		2	2	0		23	219	0									invba5				phlm,tier		4
 146	Throwing Knife (1)		1	2	1	1	0	0	15			2	4			1	4	invtkn	0	0	11	tkni,tier	1	-1
 147	Flying Knife (1)		1	2	1	1	2	0	53			3	4			3	4	invtkn	0	0	11	tkni,tier	1	-1
 148	Balanced Knife (1)		1	2	1	1	3	0	91			4	5			6	7	invbkf	0	0	11	tkni,tier	1	-1
-149	Throwing Axe (1)		1	2	1	1	0	15	0									invtax	0	0	0	taxe,elrx	1	-1
-14@	Crystal Sword (Sacred)		2	3	1		30	0	510			0	0					invcrs	0	0	0	qcrs,el1x	1	-1
+149	Throwing Axe (1)		1	2	1	1	0	15	0			0	0	1	1	0	0	invtax	0	0	0	taxe,elrx	1	-1
+14@	Crystal Sword (Sacred)		2	3	1		30	0	510			0	0			1	1	invcrs	0	0	0	qcrs,el1x	1	-1
 150	Balanced Axe (1)		2	3	1	1	3	77	0			3	7			2	11	invbal	0	11	0	taxe,tier	1	-1
-151	Short Staff (1)		1	3	1		0	0	0		1			2	3			invsst	0	0	6	staf,tier	1	-1
-152	Long Staff (1)		1	4	1		1	0	8		1			4	5			invlst	0	0	6	staf,tier	1	-1
-153	Gnarled Staff (1)		1	4	1		2	0	17		1			5	6			invcst	0	0	6	staf,tier	1	-1
-154	Battle Staff (1)		1	4	1		3	0	25		1			5	8			invbst	0	0	6	staf,tier	1	-1
-155	War Staff (1)		2	4	1		5	0	46		1			7	9			invwst	0	0	6	staf,tier	1	-1
+151	Short Staff (1)		1	3	1		0	0	0		1			2	3			invsst	0	0	15	staf,tier	1	-1
+152	Long Staff (1)		1	4	1		1	0	8		1			4	5			invlst	0	0	15	staf,tier	1	-1
+153	Gnarled Staff (1)		1	4	1		2	0	17		1			5	6			invcst	0	0	15	staf,tier	1	-1
+154	Battle Staff (1)		1	4	1		3	0	25		1			5	8			invbst	0	0	15	staf,tier	1	-1
+155	War Staff (1)		2	4	1		5	0	46		1			7	9			invwst	0	0	15	staf,tier	1	-1
 156	Bardiche (1)		2	4	1		0	17	1		1			2	6			invbar	0	16	0	pole,tier	1	-1
 157	Voulge (1)		2	4	1		1	33	5		1			2	7			invvou	0	16	0	pole,tier	1	-1
 158	Scythe (1)		2	4	1		3	49	49		1			2	11			invscy	0	0	15	scyh,tier	1	-1
@@ -620,7 +620,7 @@ w99	Avenger Guard (3)		2	2	0		23	219	0									invba5				phlm,tier		4
 161	Hunter's Bow (1)		2	3	1		0	0	27		1			2	3			invhbw	0	0	11	bow,tier	1	-1
 162	Long Bow (1)		2	4	1		1	0	39		1			3	4			invlbw	0	0	11	bow,tier	1	-1
 163	Composite Bow (1)		2	3	1		2	0	51		1			4	6			invcbw	0	0	11	bow,tier	1	-1
-164	Short Battle Bow (1)		2	3	1		2	0	63		1							invsbb	0	0	0	bow,elrx	1	-1
+164	Short Battle Bow (1)		2	3	1		2	0	63		1			0	0	1	1	invsbb	0	0	0	bow,elrx	1	-1
 165	Long Battle Bow (1)		2	4	1		3	0	75		1			6	9			invlbb	0	0	11	bow,tier	1	-1
 166	Short War Bow (1)		2	3	1		4	0	87		1			7	11			invswb	0	0	11	bow,tier	1	-1
 167	Long War Bow (1)		2	4	1		5	0	99		1			8	12			invlwb	0	0	11	bow,tier	1	-1
@@ -628,10 +628,10 @@ w99	Avenger Guard (3)		2	2	0		23	219	0									invba5				phlm,tier		4
 17@	Double Axe (Sacred)		2	3	1		30	466	0			42	47					inv2ax	0	11	0	qaxe	1	-1
 18@	Military Pick (Sacred)		2	3	1		30	500	0			44	52					invmpi	0	11	0	qaxe	1	-1
 19@	Hammerhead Axe (1)		2	3	1		6	93	0			7	9					invaxeu	0	14	0	baxe,tier	1	4
-1@1	Compound Bow (1)		2	3	1		2	0	57		1			4	7			invcbwu	0	0	19	dbow,tier	1	5
+1@1	Compound Bow (1)		2	3	1		2	0	57		1			4	7			invcbwu	0	0	15	dbow,tier	1	5
 1@2	Serpent Bow (2)		2	4	1		12	0	109		1			17	22			inv8lbu	0	0	19	dbow,tier	1	5
-1@3	Maple Bow (3)		2	3	1		22	0	249		1			0	0			inv8s8u	0	0	0	dbow,elrx	1	5
-1@4	Viper Bow (Sacred)		2	3	1		30	0	660		1			77	83			invsbbu	0	0	19	sdbw	1	5
+1@3	Maple Bow (3)		2	3	1		22	0	249		1			0	0	1	1	inv8s8u	0	0	0	dbow,elrx	1	5
+1@4	Viper Bow (Sacred)		2	3	1		30	0	660		1			77	83			invsbbu	0	0	15	sdbw	1	5
 1@7	Ida (4)		2	3	1		27	421	0			34	40					invbsdu	0	14	0	bswd,tier	1	4
 1@8	Kriegsmesser (1)		2	3	1		6	96	0			7	9					inv9lsu	0	14	0	bswd,tier	1	4
 1@9	Bonebreaker (2)		1	3	1		11	61	0			9	12					invspcu	0	14	0	pclb,tier	1	3
@@ -642,7 +642,7 @@ w99	Avenger Guard (3)		2	2	0		23	219	0									invba5				phlm,tier		4
 1@F	Trebuchet (1)		2	3	1		6	72	0		1			11	16			inv8mxu		16	0	nxbw,tier	1	2
 20@	Large Axe (Sacred)		2	3	1		30	408	0		1			65	67			invlax	0	16	0	s2ha	1	-1
 21@	Broad Axe (Sacred)		2	3	1		30	447	0		1			71	75			invbrx	0	16	0	s2ha	1	-1
-22@	Battle Axe (Sacred)		2	3	1		30	486	0		1			0	0			invbtx	0	0	0	s2ha,el2x	1	-1
+22@	Battle Axe (Sacred)		2	3	1		30	486	0		1			0	0	1	1	invbtx	0	0	0	s2ha,el2x	1	-1
 236	Short Sword (2)		1	3	1		9	18	0			6	7					invssd	0	11	0	swor,tier	1	-1
 237	Scimitar (2)		1	3	1		10	48	0			8	9					invscm	0	11	0	swor,tier	1	-1
 238	Saber (2)		1	3	1		11	64	0			10	11					invsbr	0	11	0	swor,tier	1	-1
@@ -657,7 +657,7 @@ w99	Avenger Guard (3)		2	2	0		23	219	0									invba5				phlm,tier		4
 246	Bastard Sword (2)		1	4	1		12	110	0	1	1	13	15	23	24			invbsw	0	16	0	2hsd,tier	1	-1
 247	Flamberge (2)		2	4	1		13	130	0	1	1	14	17	27	29			invflb	0	16	0	2hsd,tier	1	-1
 248	Great Sword (2)		2	4	1		14	151	0	1	1	16	20	30	32			invgsd	0	16	0	2hsd,tier	1	-1
-249	Crystal Sword (2)		2	3	1		15	0	110			0	0					invcrs	0	0	0	crsd,el1x	1	-1
+249	Crystal Sword (2)		2	3	1		15	0	110			0	0			1	1	invcrs	0	0	0	crsd,el1x	1	-1
 24@	Giant Axe (Sacred)		2	3	1		30	685	0		1			83	101			invgix	0	16	0	s2ha	1	-1
 250	Hand Axe (2)		1	3	1		9	18	0			6	8					invhax	0	11	0	axe,tier	1	-1
 251	Axe (2)		2	3	1		11	56	0			8	11					invaxe	0	11	0	axe,tier	1	-1
@@ -666,7 +666,7 @@ w99	Avenger Guard (3)		2	2	0		23	219	0									invba5				phlm,tier		4
 254	War Axe (2)		2	3	1		14	125	0			14	22					invwax	0	11	0	axe,tier	1	-1
 255	Large Axe (2)		2	3	1		9	39	0		1			11	12			invlax	0	16	0	2hax,tier	1	-1
 256	Broad Axe (2)		2	3	1		11	67	0		1			15	19			invbrx	0	16	0	2hax,tier	1	-1
-257	Battle Axe (2)		2	3	1		12	93	0		1			0	0			invbtx	0	0	0	2hax,el2x	1	-1
+257	Battle Axe (2)		2	3	1		12	93	0		1			0	0	1	1	invbtx	0	0	0	2hax,el2x	1	-1
 258	Great Axe (2)		2	4	1		12	120	0		1			26	33			invgax	0	16	0	2hax,tier	1	-1
 259	Giant Axe (2)		2	3	1		14	146	0		1			29	38			invgix	0	16	0	2hax,tier	1	-1
 25@	Club (Sacred)		1	3	1		30	376	0			41	42					invclb	0	11	0	qmac	1	-1
@@ -697,14 +697,14 @@ w99	Avenger Guard (3)		2	2	0		23	219	0									invba5				phlm,tier		4
 282	Throwing Knife (2)		1	2	1	1	9	0	36			5	6			7	8	invtkn	0	0	11	tkni,tier	1	-1
 283	Flying Knife (2)		1	2	1	1	11	0	84			8	9			12	14	invtkn	0	0	11	tkni,tier	1	-1
 284	Balanced Knife (2)		1	2	1	1	13	0	132			11	12			17	20	invbkf	0	0	11	tkni,tier	1	-1
-285	Throwing Axe (2)		1	2	1	1	12	36	0			0	0			0	0	invtax	0	0	0	taxe,elrx	1	-1
+285	Throwing Axe (2)		1	2	1	1	12	36	0			0	0	1	1	0	0	invtax	0	0	0	taxe,elrx	1	-1
 286	Balanced Axe (2)		2	3	1	1	12	115	0			7	16			9	28	invbal	0	11	0	taxe,tier	1	-1
-287	Short Staff (2)		1	3	1		8	0	8		1			8	9			invsst	0	0	6	staf,tier	1	-1
-288	Long Staff (2)		1	4	1		10	0	19		1			10	12			invlst	0	0	6	staf,tier	1	-1
-289	Gnarled Staff (2)		1	4	1		11	0	29		1			12	15			invcst	0	0	6	staf,tier	1	-1
+287	Short Staff (2)		1	3	1		8	0	8		1			8	9			invsst	0	0	15	staf,tier	1	-1
+288	Long Staff (2)		1	4	1		10	0	19		1			10	12			invlst	0	0	15	staf,tier	1	-1
+289	Gnarled Staff (2)		1	4	1		11	0	29		1			12	15			invcst	0	0	15	staf,tier	1	-1
 28@	Morning Star (Sacred)		1	3	1		30	464	0			45	53					invmst	0	11	0	qmac	1	-1
-290	Battle Staff (2)		1	4	1		12	0	41		1			14	19			invbst	0	0	6	staf,tier	1	-1
-291	War Staff (2)		2	4	1		14	0	68		1			16	21			invwst	0	0	6	staf,tier	1	-1
+290	Battle Staff (2)		1	4	1		12	0	41		1			14	19			invbst	0	0	15	staf,tier	1	-1
+291	War Staff (2)		2	4	1		14	0	68		1			16	21			invwst	0	0	15	staf,tier	1	-1
 292	Bardiche (2)		2	4	1		8	38	19		1			8	10			invbar	0	16	0	pole,tier	1	-1
 293	Voulge (2)		2	4	1		11	59	25		1			8	17			invvou	0	16	0	pole,tier	1	-1
 294	Scythe (2)		2	4	1		12	79	79		1			8	25			invscy	0	0	15	scyh,tier	1	-1
@@ -714,8 +714,8 @@ w99	Avenger Guard (3)		2	2	0		23	219	0									invba5				phlm,tier		4
 298	Long Bow (2)		2	4	1		11	0	67		1			10	14			invlbw	0	0	11	bow,tier	1	-1
 299	Composite Bow (2)		2	3	1		11	0	81		1			12	17			invcbw	0	0	11	bow,tier	1	-1
 29@	Flail (Sacred)		2	3	1		30	486	0			47	56					invfla	0	11	0	qmac	1	-1
-2@3	Maple Bow (4)		2	3	1		26	0	492		1			0	0			inv8s8u	0	0	0	dbow,elrx	1	5
-2@4	Recurve Bow (1)		2	3	1		6	0	111		1			8	13			invswbu	0	0	19	dbow,tier	1	5
+2@3	Maple Bow (4)		2	3	1		26	0	492		1			0	0	1	1	inv8s8u	0	0	0	dbow,elrx	1	5
+2@4	Recurve Bow (1)		2	3	1		6	0	111		1			9	14			invswbu	0	0	19	dbow,tier	1	5
 2@5	Spatha (2)		1	3	1		11	71	0			11	12					invscmu	0	14	0	bswd,tier	1	4
 2@6	Backsword (3)		1	3	1		21	181	0			25	29					inv9sbu	0	16	0	bswd,tier	1	4
 2@7	Ida (Sacred)		2	3	1		30	552	0			50	53					invbsdu	0	14	0	sbsd	1	4
@@ -723,7 +723,7 @@ w99	Avenger Guard (3)		2	2	0		23	219	0									invba5				phlm,tier		4
 2@C	Hand of God (2)		2	3	1		15	109	0		1			27	32			inv9gmu		16	0	pham,tier	1	3
 2@D	Needle Crossbow (3)		2	3	1		20	100	0		1			40	46			invlxbu		16	0	nxbw,tier	1	2
 2@E	Dart Thrower (Sacred)		2	3	1		30	395	0		1			85	86			inv8lxu		16	0	snxb	1	2
-300	Short Battle Bow (2)		2	3	1		12	0	97		1			0	0			invsbb	0	0	0	bow,elrx	1	-1
+300	Short Battle Bow (2)		2	3	1		12	0	97		1			0	0	1	1	invsbb	0	0	0	bow,elrx	1	-1
 301	Long Battle Bow (2)		2	4	1		12	0	112		1			17	24			invlbb	0	0	11	bow,tier	1	-1
 302	Short War Bow (2)		2	3	1		14	0	127		1			19	27			invswb	0	0	11	bow,tier	1	-1
 303	Long War Bow (2)		2	4	1		15	0	143		1			20	29			invlwb	0	0	11	bow,tier	1	-1
@@ -748,7 +748,7 @@ w99	Avenger Guard (3)		2	2	0		23	219	0									invba5				phlm,tier		4
 382	Bastard Sword (3)		1	4	1		21	216	0	1	1	26	31	46	49			invbsw	0	16	0	2hsd,tier	1	-1
 383	Flamberge (3)		2	4	1		22	253	0	1	1	30	36	55	58			invflb	0	16	0	2hsd,tier	1	-1
 384	Great Sword (3)		2	4	1		24	291	0	1	1	32	39	61	65			invgsd	0	16	0	2hsd,tier	1	-1
-385	Crystal Sword (3)		2	3	1		24	0	216			0	0					invcrs	0	0	0	crsd,el1x	1	-1
+385	Crystal Sword (3)		2	3	1		24	0	216			0	0			1	1	invcrs	0	0	0	crsd,el1x	1	-1
 386	Hand Axe (3)		1	3	1		18	49	0			13	16					invhax	0	11	0	axe,tier	1	-1
 387	Axe (3)		2	3	1		20	118	0			17	24					invaxe	0	11	0	axe,tier	1	-1
 388	Double Axe (3)		2	3	1		21	160	0			22	31					inv2ax	0	11	0	axe,tier	1	-1
@@ -757,7 +757,7 @@ w99	Avenger Guard (3)		2	2	0		23	219	0									invba5				phlm,tier		4
 390	War Axe (3)		2	3	1		24	244	0			29	45					invwax	0	11	0	axe,tier	1	-1
 391	Large Axe (3)		2	3	1		18	88	0		1			24	28			invlax	0	16	0	2hax,tier	1	-1
 392	Broad Axe (3)		2	3	1		20	137	0		1			34	41			invbrx	0	16	0	2hax,tier	1	-1
-393	Battle Axe (3)		2	3	1		21	186	0		1			0	0			invbtx	0	0	0	2hax,el2x	1	-1
+393	Battle Axe (3)		2	3	1		21	186	0		1			0	0	1	1	invbtx	0	0	0	2hax,el2x	1	-1
 394	Great Axe (3)		2	4	1		22	235	0		1			53	68			invgax	0	16	0	2hax,tier	1	-1
 395	Giant Axe (3)		2	3	1		24	284	0		1			60	79			invgix	0	16	0	2hax,tier	1	-1
 396	Club (3)		1	3	1		18	49	0			14	17					invclb	0	11	0	mace,tier	1	-1
@@ -765,9 +765,9 @@ w99	Avenger Guard (3)		2	2	0		23	219	0									invba5				phlm,tier		4
 398	Mace (3)		1	3	1		21	130	0			20	30					invmac	0	11	0	mace,tier	1	-1
 399	Morning Star (3)		1	3	1		22	158	0			23	36					invmst	0	11	0	mace,tier	1	-1
 39@	Trident (Sacred)		2	4	1		30	408	428		1			54	62			invtri	0	0	15	qspe	1	-1
-3@1	Compound Bow (2)		2	3	1		12	0	92		1			14	18			invcbwu	0	0	19	dbow,tier	1	5
+3@1	Compound Bow (2)		2	3	1		12	0	92		1			14	18			invcbwu	0	0	15	dbow,tier	1	5
 3@2	Serpent Bow (3)		2	4	1		21	0	218		1			38	48			inv8lbu	0	0	19	dbow,tier	1	5
-3@3	Maple Bow (Sacred)		2	3	1		30	0	600		1			0	0			inv8s8u	0	0	0	sdbw,elrx	1	5
+3@3	Maple Bow (Sacred)		2	3	1		30	0	600		1			0	0	1	1	inv8s8u	0	0	0	sdbw,elrx	1	5
 3@6	Backsword (4)		1	3	1		26	360	0			30	35					inv9sbu	0	16	0	bswd,tier	1	4
 3@7	Bronze Sword (1)		2	3	1		4	82	0			7	8					invlsdu	0	14	0	bswd,tier	1	4
 3@8	Kriegsmesser (2)		2	3	1		15	141	0			16	20					inv9lsu	0	14	0	bswd,tier	1	4
@@ -799,13 +799,13 @@ w99	Avenger Guard (3)		2	2	0		23	219	0									invba5				phlm,tier		4
 419	Flying Knife (3)		1	2	1	1	20	0	169			16	18			27	31	invtkn	0	0	11	tkni,tier	1	-1
 41@	Spetum (Sacred)		2	4	1		30	453	492		1			57	74			invspt	0	0	15	qspe	1	-1
 420	Balanced Knife (3)		1	2	1	1	22	0	258			21	24			37	42	invbkf	0	0	11	tkni,tier	1	-1
-421	Throwing Axe (3)		1	2	1	1	21	81	0			0	0			0	0	invtax	0	0	0	taxe,elrx	1	-1
+421	Throwing Axe (3)		1	2	1	1	21	81	0			0	0	1	1	0	0	invtax	0	0	0	taxe,elrx	1	-1
 422	Balanced Axe (3)		2	3	1	1	21	225	0			14	32			22	59	invbal	0	11	0	taxe,tier	1	-1
-423	Short Staff (3)		1	3	1		18	0	25		1			18	20			invsst	0	0	6	staf,tier	1	-1
-424	Long Staff (3)		1	4	1		20	0	43		1			22	26			invlst	0	0	6	staf,tier	1	-1
-425	Gnarled Staff (3)		1	4	1		21	0	62		1			26	33			invcst	0	0	6	staf,tier	1	-1
-426	Battle Staff (3)		1	4	1		21	0	83		1			31	39			invbst	0	0	6	staf,tier	1	-1
-427	War Staff (3)		2	4	1		23	0	136		1			34	44			invwst	0	0	6	staf,tier	1	-1
+423	Short Staff (3)		1	3	1		18	0	25		1			18	20			invsst	0	0	15	staf,tier	1	-1
+424	Long Staff (3)		1	4	1		20	0	43		1			22	26			invlst	0	0	15	staf,tier	1	-1
+425	Gnarled Staff (3)		1	4	1		21	0	62		1			26	33			invcst	0	0	15	staf,tier	1	-1
+426	Battle Staff (3)		1	4	1		21	0	83		1			31	39			invbst	0	0	15	staf,tier	1	-1
+427	War Staff (3)		2	4	1		23	0	136		1			34	44			invwst	0	0	15	staf,tier	1	-1
 428	Bardiche (3)		2	4	1		18	86	39		1			18	22			invbar	0	16	0	pole,tier	1	-1
 429	Voulge (3)		2	4	1		20	123	45		1			18	37			invvou	0	16	0	pole,tier	1	-1
 42@	Pike (Sacred)		2	4	1		30	475	524		1			53	83			invpik	0	0	15	qspe	1	-1
@@ -815,7 +815,7 @@ w99	Avenger Guard (3)		2	2	0		23	219	0									invba5				phlm,tier		4
 433	Hunter's Bow (3)		2	3	1		19	0	109		1			20	24			invhbw	0	0	11	bow,tier	1	-1
 434	Long Bow (3)		2	4	1		20	0	137		1			24	31			invlbw	0	0	11	bow,tier	1	-1
 435	Composite Bow (3)		2	3	1		20	0	165		1			29	38			invcbw	0	0	11	bow,tier	1	-1
-436	Short Battle Bow (3)		2	3	1		21	0	193		1			0	0			invsbb	0	0	0	bow,elrx	1	-1
+436	Short Battle Bow (3)		2	3	1		21	0	193		1			0	0	1	1	invsbb	0	0	0	bow,elrx	1	-1
 437	Long Battle Bow (3)		2	4	1		21	0	221		1			38	51			invlbb	0	0	11	bow,tier	1	-1
 438	Short War Bow (3)		2	3	1		23	0	249		1			41	56			invswb	0	0	11	bow,tier	1	-1
 439	Long War Bow (3)		2	4	1		24	0	277		1			45	62			invlwb	0	0	11	bow,tier	1	-1
@@ -834,7 +834,7 @@ w99	Avenger Guard (3)		2	2	0		23	219	0									invba5				phlm,tier		4
 450	Bastard Sword (4)		1	4	1		26	427	0	1	1	31	37	56	59			invbsw	0	16	0	2hsd,tier	1	-1
 451	Flamberge (4)		2	4	1		27	499	0	1	1	35	42	65	69			invflb	0	16	0	2hsd,tier	1	-1
 452	Great Sword (4)		2	4	1		28	570	0	1	1	38	47	73	77			invgsd	0	16	0	2hsd,tier	1	-1
-453	Crystal Sword (4)		2	3	1		28	0	427			0	0					invcrs	0	0	0	crsd,el1x	1	-1
+453	Crystal Sword (4)		2	3	1		28	0	427			0	0			1	1	invcrs	0	0	0	crsd,el1x	1	-1
 454	Hand Axe (4)		1	3	1		23	104	0			16	20					invhax	0	11	0	axe,tier	1	-1
 455	Axe (4)		2	3	1		24	239	0			21	28					invaxe	0	11	0	axe,tier	1	-1
 456	Double Axe (4)		2	3	1		25	319	0			26	37					inv2ax	0	11	0	axe,tier	1	-1
@@ -843,7 +843,7 @@ w99	Avenger Guard (3)		2	2	0		23	219	0									invba5				phlm,tier		4
 459	Large Axe (4)		2	3	1		23	180	0		1			29	33			invlax	0	16	0	2hax,tier	1	-1
 45@	Kriss (Sacred)		1	3	1		30	0	454			39	40					invkrs	0	0	11	qknf	1	-1
 460	Broad Axe (4)		2	3	1		24	274	0		1			40	49			invbrx	0	16	0	2hax,tier	1	-1
-461	Battle Axe (4)		2	3	1		25	369	0		1			0	0			invbtx	0	0	0	2hax,el2x	1	-1
+461	Battle Axe (4)		2	3	1		25	369	0		1			0	0	1	1	invbtx	0	0	0	2hax,el2x	1	-1
 462	Great Axe (4)		2	4	1		26	463	0		1			62	80			invgax	0	16	0	2hax,tier	1	-1
 463	Giant Axe (4)		2	3	1		27	557	0		1			65	99			invgix	0	16	0	2hax,tier	1	-1
 464	Club (4)		1	3	1		23	104	0			17	21					invclb	0	11	0	mace,tier	1	-1
@@ -873,22 +873,22 @@ w99	Avenger Guard (3)		2	2	0		23	219	0									invba5				phlm,tier		4
 486	Throwing Knife (4)		1	2	1	1	22	0	167			14	14			22	23	invtkn	0	0	11	tkni,tier	1	-1
 487	Flying Knife (4)		1	2	1	1	25	0	337			19	21			33	37	invtkn	0	0	11	tkni,tier	1	-1
 488	Balanced Knife (4)		1	2	1	1	27	0	508			24	28			44	51	invbkf	0	0	11	tkni,tier	1	-1
-489	Throwing Axe (4)		1	2	1	1	26	167	0			0	0			0	0	invtax	0	0	0	taxe,elrx	1	-1
+489	Throwing Axe (4)		1	2	1	1	26	167	0			0	0	1	1	0	0	invtax	0	0	0	taxe,elrx	1	-1
 48@	Flying Knife (Sacred)		1	2	1	1	30	0	473			38	39			59	61	invtkn	0	0	11	qtkn	1	-1
 490	Balanced Axe (4)		2	3	1	1	26	445	0			16	37			27	71	invbal	0	11	0	taxe,tier	1	-1
-491	Short Staff (4)		1	3	1		22	0	52		1			22	24			invsst	0	0	6	staf,tier	1	-1
-492	Long Staff (4)		1	4	1		24	0	88		1			27	32			invlst	0	0	6	staf,tier	1	-1
-493	Gnarled Staff (4)		1	4	1		25	0	126		1			32	39			invcst	0	0	6	staf,tier	1	-1
-494	Battle Staff (4)		1	4	1		26	0	164		1			36	46			invbst	0	0	6	staf,tier	1	-1
-495	War Staff (4)		2	4	1		27	0	269		1			41	53			invwst	0	0	6	staf,tier	1	-1
+491	Short Staff (4)		1	3	1		22	0	52		1			22	24			invsst	0	0	15	staf,tier	1	-1
+492	Long Staff (4)		1	4	1		24	0	88		1			27	32			invlst	0	0	15	staf,tier	1	-1
+493	Gnarled Staff (4)		1	4	1		25	0	126		1			32	39			invcst	0	0	15	staf,tier	1	-1
+494	Battle Staff (4)		1	4	1		26	0	164		1			36	46			invbst	0	0	15	staf,tier	1	-1
+495	War Staff (4)		2	4	1		27	0	269		1			41	53			invwst	0	0	15	staf,tier	1	-1
 496	Bardiche (4)		2	4	1		22	176	71		1			22	26			invbar	0	16	0	pole,tier	1	-1
 497	Voulge (4)		2	4	1		25	248	79		1			21	44			invvou	0	16	0	pole,tier	1	-1
 498	Scythe (4)		2	4	1		26	319	319		1			21	62			invscy	0	0	15	scyh,tier	1	-1
 499	Halberd (4)		2	4	1		25	0	305		1			66	82			invhal	0	0	15	nagi,tier	1	6
 49@	Balanced Knife (Sacred)		1	2	1	1	30	0	612			41	43			65	68	invbkf	0	0	11	qtkn	1	-1
 4@2	Serpent Bow (4)		2	4	1		26	0	431		1			45	57			inv8lbu	0	0	19	dbow,tier	1	5
-4@3	Viper Bow (1)		2	3	1		4	0	98		1			8	11			invsbbu	0	0	19	dbow,tier	1	5
-4@4	Recurve Bow (2)		2	3	1		15	0	161		1			23	32			invswbu	0	0	19	dbow,tier	1	5
+4@3	Viper Bow (1)		2	3	1		4	0	98		1			8	11			invsbbu	0	0	15	dbow,tier	1	5
+4@4	Recurve Bow (2)		2	3	1		15	0	161		1			24	34			invswbu	0	0	19	dbow,tier	1	5
 4@5	Spatha (3)		1	3	1		21	149	0			22	26					invscmu	0	14	0	bswd,tier	1	4
 4@6	Backsword (Sacred)		1	3	1		30	526	0			48	51					inv9sbu	0	16	0	sbsd	1	4
 4@9	Bonebreaker (4)		1	3	1		25	269	0			24	31					invspcu	0	14	0	pclb,tier	1	3
@@ -899,21 +899,21 @@ w99	Avenger Guard (3)		2	2	0		23	219	0									invba5				phlm,tier		4
 501	Hunter's Bow (4)		2	3	1		24	0	221		1			25	30			invhbw	0	0	11	bow,tier	1	-1
 502	Long Bow (4)		2	4	1		25	0	274		1			30	38			invlbw	0	0	11	bow,tier	1	-1
 503	Composite Bow (4)		2	3	1		25	0	328		1			35	46			invcbw	0	0	11	bow,tier	1	-1
-504	Short Battle Bow (4)		2	3	1		26	0	382		1			0	0			invsbb	0	0	0	bow,elrx	1	-1
+504	Short Battle Bow (4)		2	3	1		26	0	382		1			0	0	1	1	invsbb	0	0	0	bow,elrx	1	-1
 505	Long Battle Bow (4)		2	4	1		26	0	436		1			45	61			invlbb	0	0	11	bow,tier	1	-1
 506	Short War Bow (4)		2	3	1		27	0	490		1			50	68			invswb	0	0	11	bow,tier	1	-1
 507	Long War Bow (4)		2	4	1		28	0	543		1			54	74			invlwb	0	0	11	bow,tier	1	-1
-50@	Throwing Axe (Sacred)		1	2	1	1	30	402	0			0	0			0	0	invtax	0	0	0	qtax,elrx	1	-1
+50@	Throwing Axe (Sacred)		1	2	1	1	30	402	0			0	0	1	1	0	0	invtax	0	0	0	qtax,elrx	1	-1
 51@	Balanced Axe (Sacred)		2	3	1	1	30	586	0			37	47			56	78	invbal	0	11	0	qtax	1	-1
-52@	Short Staff (Sacred)		1	3	1		30	0	188		1			53	55			invsst	0	0	6	qstf	1	-1
-53@	Long Staff (Sacred)		1	4	1		30	0	203		1			56	58			invlst	0	0	6	qstf	1	-1
-54@	Gnarled Staff (Sacred)		1	4	1		30	0	218		1			59	62			invcst	0	0	6	qstf	1	-1
-55@	Battle Staff (Sacred)		1	4	1		30	0	234		1			61	66			invbst	0	0	6	qstf	1	-1
-56@	War Staff (Sacred)		2	4	1		30	0	333		1			63	69			invwst	0	0	6	qstf	1	-1
+52@	Short Staff (Sacred)		1	3	1		30	0	188		1			53	55			invsst	0	0	15	qstf	1	-1
+53@	Long Staff (Sacred)		1	4	1		30	0	203		1			56	58			invlst	0	0	15	qstf	1	-1
+54@	Gnarled Staff (Sacred)		1	4	1		30	0	218		1			59	62			invcst	0	0	15	qstf	1	-1
+55@	Battle Staff (Sacred)		1	4	1		30	0	234		1			61	66			invbst	0	0	15	qstf	1	-1
+56@	War Staff (Sacred)		2	4	1		30	0	333		1			63	69			invwst	0	0	15	qstf	1	-1
 57@	Bardiche (Sacred)		2	4	1		30	406	71		1			53	56			invbar	0	16	0	qpol	1	-1
 58@	Voulge (Sacred)		2	4	1		30	436	79		1			53	64			invvou	0	16	0	qpol	1	-1
 59@	Scythe (Sacred)		2	4	1		30	466	466		1			53	73			invscy	0	0	15	qscy	1	-1
-5@1	Compound Bow (3)		2	3	1		21	0	186		1			33	41			invcbwu	0	0	19	dbow,tier	1	5
+5@1	Compound Bow (3)		2	3	1		21	0	186		1			33	41			invcbwu	0	0	15	dbow,tier	1	5
 5@2	Serpent Bow (Sacred)		2	4	1		30	0	555		1			71	75			inv8lbu	0	0	19	sdbw	1	5
 5@5	Spatha (4)		1	3	1		25	299	0			26	30					invscmu	0	14	0	bswd,tier	1	4
 5@6	Ida (1)		2	3	1		3	68	0			6	7					invbsdu	0	14	0	bswd,tier	1	4
@@ -929,15 +929,15 @@ w99	Avenger Guard (3)		2	2	0		23	219	0									invba5				phlm,tier		4
 62@	Hunter's Bow (Sacred)		2	3	1		30	0	425		1			56	59			invhbw	0	0	11	qbow	1	-1
 63@	Long Bow (Sacred)		2	4	1		30	0	447		1			59	62			invlbw	0	0	11	qbow	1	-1
 64@	Composite Bow (Sacred)		2	3	1		30	0	470		1			61	66			invcbw	0	0	11	qbow	1	-1
-65@	Short Battle Bow (Sacred)		2	3	1		30	0	492		1			0	0			invsbb	0	0	0	qbow,elrx	1	-1
+65@	Short Battle Bow (Sacred)		2	3	1		30	0	492		1			0	0	1	1	invsbb	0	0	0	qbow,elrx	1	-1
 66@	Long Battle Bow (Sacred)		2	4	1		30	0	544		1			66	74			invlbb	0	0	11	qbow	1	-1
 67@	Short War Bow (Sacred)		2	3	1		30	0	590		1			68	77			invswb	0	0	11	qbow	1	-1
 68@	Long War Bow (Sacred)		2	4	1		30	0	650		1			70	79			invlwb	0	0	11	qbow	1	-1
 69@	Wand (Sacred)		1	2	1		30	0	166			35	36					invwnd		0	6	qwnd	1	2
-6@1	Compound Bow (4)		2	3	1		25	0	370		1			40	49			invcbwu	0	0	19	dbow,tier	1	5
-6@2	Maple Bow (1)		2	3	1		3	0	84		1							inv8s8u	0	0	0	dbow,elrx	1	5
-6@3	Viper Bow (2)		2	3	1		14	0	144		1			21	29			invsbbu	0	0	19	dbow,tier	1	5
-6@4	Recurve Bow (3)		2	3	1		24	0	312		1			50	66			invswbu	0	0	19	dbow,tier	1	5
+6@1	Compound Bow (4)		2	3	1		25	0	370		1			40	49			invcbwu	0	0	15	dbow,tier	1	5
+6@2	Maple Bow (1)		2	3	1		3	0	84		1			0	0	1	1	inv8s8u	0	0	0	dbow,elrx	1	5
+6@3	Viper Bow (2)		2	3	1		14	0	144		1			21	29			invsbbu	0	0	15	dbow,tier	1	5
+6@4	Recurve Bow (3)		2	3	1		24	0	312		1			52	70			invswbu	0	0	19	dbow,tier	1	5
 6@5	Spatha (Sacred)		1	3	1		30	500	0			46	48					invscmu	0	14	0	sbsd	1	4
 6@8	Kriegsmesser (4)		2	3	1		29	543	0			40	48					inv9lsu	0	14	0	bswd,tier	1	4
 6@9	Goedendag (1)		1	3	1		3	46	0			5	7					inv7mas	0	14	0	pmac,tier	1	3
@@ -954,8 +954,8 @@ w99	Avenger Guard (3)		2	2	0		23	219	0									invba5				phlm,tier		4
 77@	Crossbow (Sacred)		2	3	1		30	502	0		1			78	86			invmxb		11	0	qxbw	1	-1
 78@	Heavy Crossbow (Sacred)		2	4	1		30	614	0		1			91	101			invhxb		11	0	qxbw	1	-1
 79@	Repeating Crossbow (Sacred)		2	3	1		30	670	0		1			88	105			invrxb		11	0	qxbw	1	-1
-7@1	Compound Bow (Sacred)		2	3	1		30	0	530		1			69	71			invcbwu	0	0	19	sdbw	1	5
-7@4	Recurve Bow (4)		2	3	1		29	0	613		1			60	79			invswbu	0	0	19	dbow,tier	1	5
+7@1	Compound Bow (Sacred)		2	3	1		30	0	530		1			69	71			invcbwu	0	0	15	sdbw	1	5
+7@4	Recurve Bow (4)		2	3	1		29	0	613		1			63	83			invswbu	0	0	19	dbow,tier	1	5
 7@5	Backsword (1)		1	3	1		3	55	0			5	6					inv9sbu	0	16	0	bswd,tier	1	4
 7@6	Ida (2)		2	3	1		13	106	0			14	16					invbsdu	0	14	0	bswd,tier	1	4
 7@7	Bronze Sword (3)		2	3	1		23	244	0			31	37					invlsdu	0	14	0	bswd,tier	1	4
@@ -969,28 +969,28 @@ w99	Avenger Guard (3)		2	2	0		23	219	0									invba5				phlm,tier		4
 82@	Smoked Sphere (Sacred)		1	2	1		30	0	183			37	39					invob3		0	11	qorb	1	1
 83@	Clasped Orb (Sacred)		1	2	1		30	0	188			39	41					invob4		0	11	qorb	1	1
 84@	Jared's Stone (Sacred)		1	3	1		30	0	242			40	43					invob5		0	11	qorb	1	1
-85@	Stag Bow (Sacred)		2	4	1		30	0	557		1			0	0			invam1		0	0	qabw,elrx	1	0
+85@	Stag Bow (Sacred)		2	4	1		30	0	557		1			0	0	1	1	invam1		0	0	qabw,elrx	1	0
 86@	Reflex Bow (Sacred)		2	4	1		30	0	680		1			67	75			invam2		0	15	qabw	1	0
 87@	Maiden Spear (Sacred)		2	4	1		30	346	500		1			60	70			invam3		0	15	qasp	1	0
 88@	Maiden Pike (Sacred)		2	4	1		30	350	590		1			52	93			invam4		0	15	qasp	1	0
 89@	Maiden Javelin (Sacred)		1	3	1	1	30	310	600			46	54			71	88	invam5		0	13	qajv	1	0
 8@1	Serpent Bow (1)		2	4	1		3	0	71		1			6	8			inv8lbu	0	0	19	dbow,tier	1	5
-8@2	Maple Bow (2)		2	3	1		13	0	126		1			0	0			inv8s8u	0	0	0	dbow,elrx	1	5
-8@3	Viper Bow (3)		2	3	1		24	0	281		1			46	60			invsbbu	0	0	19	dbow,tier	1	5
-8@4	Recurve Bow (Sacred)		2	3	1		30	0	725		1			78	85			invswbu	0	0	19	sdbw	1	5
+8@2	Maple Bow (2)		2	3	1		13	0	126		1			0	0	1	1	inv8s8u	0	0	0	dbow,elrx	1	5
+8@3	Viper Bow (3)		2	3	1		24	0	281		1			46	60			invsbbu	0	0	15	dbow,tier	1	5
+8@4	Recurve Bow (Sacred)		2	3	1		30	0	725		1			81	90			invswbu	0	0	19	sdbw	1	5
 8@7	Bronze Sword (4)		2	3	1		27	482	0			37	45					invlsdu	0	14	0	bswd,tier	1	4
 8@8	Bonebreaker (1)		1	3	1		2	31	0			4	5					invspcu	0	14	0	pclb,tier	1	3
 8@9	Goedendag (2)		1	3	1		12	81	0			11	16					inv7mas	0	14	0	pmac,tier	1	3
 8@A	Angel Star (3)		1	3	1		22	205	0			29	39					invmstu	0	14	0	pmac,tier	1	3
 8@E	Stinger Crossbow (4)		2	3	1		27	359	0		1			86	101			invmxbu		16	0	nxbw,tier	1	2
 90@	Katar (Sacred)		1	3	1		30	0	333			36	37					invktr		0	13	qh2h	1	6
-91@	Wrist Blade (Sacred)		1	3	1		30	0	341			0	0					invktr		0	0	qh2h,el1x	1	6
+91@	Wrist Blade (Sacred)		1	3	1		30	0	341			0	0			1	1	invktr		0	0	qh2h,el1x	1	6
 92@	Hatchet Hands (Sacred)		1	3	1		30	0	345			39	41					invaxf		0	13	qh2h	1	6
 93@	Cestus (Sacred)		1	3	1		30	0	349			41	43					invaxf		0	13	qh2h	1	6
 94@	Claws (Sacred)		1	3	1		30	0	400			42	44					invclw		0	13	qh2h	1	6
 95@	Blade Talons (Sacred)		1	3	1		30	0	562			46	49					invclw		0	13	qh2h	1	6
 96@	Scissors Katar (Sacred)		1	3	1		30	0	485			45	47					invskr		0	13	qh2h	1	6
-9@3	Viper Bow (4)		2	3	1		27	0	553		1			57	74			invsbbu	0	0	19	dbow,tier	1	5
+9@3	Viper Bow (4)		2	3	1		27	0	553		1			57	74			invsbbu	0	0	15	dbow,tier	1	5
 9@4	Spatha (1)		1	3	1		2	41	0			4	5					invscmu	0	14	0	bswd,tier	1	4
 9@5	Backsword (2)		1	3	1		12	89	0			12	14					inv9sbu	0	16	0	bswd,tier	1	4
 9@6	Ida (3)		2	3	1		22	212	0			29	33					invbsdu	0	14	0	bswd,tier	1	4
@@ -1018,13 +1018,13 @@ j11	Sacred Globe (1)		1	2	1		1	0	8			2	3					invob2		0	11	orb,tier	1	1
 j12	Smoked Sphere (1)		1	2	1		2	0	15			3	4					invob3		0	11	orb,tier	1	1
 j13	Clasped Orb (1)		1	2	1		3	0	9			4	5					invob4		0	11	orb,tier	1	1
 j14	Jared's Stone (1)		1	3	1		5	0	25			4	5					invob5		0	11	orb,tier	1	1
-j15	Stag Bow (1)		2	4	1		3	0	78		1							invam1		0	0	abow,elrx	1	0
+j15	Stag Bow (1)		2	4	1		3	0	78		1			0	0	1	1	invam1		0	0	abow,elrx	1	0
 j16	Reflex Bow (1)		2	4	1		5	0	103		1			7	10			invam2		0	15	abow,tier	1	0
 j17	Maiden Spear (1)		2	4	1		3	33	67		1			4	10			invam3		0	15	aspe,tier	1	0
 j18	Maiden Pike (1)		2	4	1		5	43	87		1			4	11			invam4		0	13	aspe,tier	1	0
 j19	Maiden Javelin (1)		1	3	1	1	5	43	87			5	8			5	11	invam5		0	13	ajav,tier	1	0
 j20	Katar (1)		1	3	1		0	0	0			2	4					invktr		0	13	h2h,tier	1	6
-j21	Wrist Blade (1)		1	3	1		1	0	20									invktr		0	0	h2h,el1x	1	6
+j21	Wrist Blade (1)		1	3	1		1	0	20			0	0			1	1	invktr		0	0	h2h,el1x	1	6
 j22	Hatchet Hands (1)		1	3	1		2	0	29			3	4					invaxf		0	13	h2h,tier	1	6
 j23	Cestus (1)		1	3	1		2	0	39			4	5					invaxf		0	13	h2h,tier	1	6
 j24	Claws (1)		1	3	1		3	0	48			5	6					invclw		0	13	h2h,tier	1	6
@@ -1035,13 +1035,13 @@ j45	Sacred Globe (2)		1	2	1		10	0	19			6	7					invob2		0	11	orb,tier	1	1
 j46	Smoked Sphere (2)		1	2	1		11	0	36			8	9					invob3		0	11	orb,tier	1	1
 j47	Clasped Orb (2)		1	2	1		12	0	15			8	11					invob4		0	11	orb,tier	1	1
 j48	Jared's Stone (2)		1	3	1		14	0	48			10	12					invob5		0	11	orb,tier	1	1
-j49	Stag Bow (2)		2	4	1		12	0	118		1			0	0			invam1		0	0	abow,elrx	1	0
+j49	Stag Bow (2)		2	4	1		12	0	118		1			0	0	1	1	invam1		0	0	abow,elrx	1	0
 j50	Reflex Bow (2)		2	4	1		15	0	150		1			18	26			invam2		0	15	abow,tier	1	0
 j51	Maiden Spear (2)		2	4	1		12	50	102		1			10	22			invam3		0	15	aspe,tier	1	0
 j52	Maiden Pike (2)		2	4	1		14	63	126		1			11	26			invam4		0	15	aspe,tier	1	0
 j53	Maiden Javelin (2)		1	3	1	1	14	64	128			10	17			14	28	invam5		0	13	ajav,tier	1	0
 j54	Katar (2)		1	3	1		9	0	14			6	7					invktr		0	13	h2h,tier	1	6
-j55	Wrist Blade (2)		1	3	1		10	0	39			0	0					invktr		0	0	h2h,el1x	1	6
+j55	Wrist Blade (2)		1	3	1		10	0	39			0	0			1	1	invktr		0	0	h2h,el1x	1	6
 j56	Hatchet Hands (2)		1	3	1		11	0	50			8	10					invaxf		0	13	h2h,tier	1	6
 j57	Cestus (2)		1	3	1		12	0	63			10	11					invaxf		0	13	h2h,tier	1	6
 j58	Claws (2)		1	3	1		12	0	76			11	13					invclw		0	13	h2h,tier	1	6
@@ -1052,13 +1052,13 @@ j79	Sacred Globe (3)		1	2	1		20	0	43			13	14					invob2		0	11	orb,tier	1	1
 j80	Smoked Sphere (3)		1	2	1		21	0	81			15	18					invob3		0	11	orb,tier	1	1
 j81	Clasped Orb (3)		1	2	1		21	0	32			17	21					invob4		0	11	orb,tier	1	1
 j82	Jared's Stone (3)		1	3	1		23	0	104			19	23					invob5		0	11	orb,tier	1	1
-j83	Stag Bow (3)		2	4	1		21	0	231		1			0	0			invam1		0	0	abow,elrx	1	0
+j83	Stag Bow (3)		2	4	1		21	0	231		1			0	0	1	1	invam1		0	0	abow,elrx	1	0
 j84	Reflex Bow (3)		2	4	1		24	0	290		1			39	54			invam2		0	15	abow,tier	1	0
 j85	Maiden Spear (3)		2	4	1		22	102	203		1			21	45			invam3		0	15	aspe,tier	1	0
 j86	Maiden Pike (3)		2	4	1		23	123	246		1			22	53			invam4		0	15	aspe,tier	1	0
 j87	Maiden Javelin (3)		1	3	1	1	23	125	251			20	33			33	60	invam5		0	13	ajav,tier	1	0
 j88	Katar (3)		1	3	1		18	0	39			13	14					invktr		0	13	h2h,tier	1	6
-j89	Wrist Blade (3)		1	3	1		19	0	83			0	0					invktr		0	0	h2h,el1x	1	6
+j89	Wrist Blade (3)		1	3	1		19	0	83			0	0			1	1	invktr		0	0	h2h,el1x	1	6
 j90	Hatchet Hands (3)		1	3	1		20	0	106			18	20					invaxf		0	13	h2h,tier	1	6
 j91	Cestus (3)		1	3	1		21	0	128			20	23					invaxf		0	13	h2h,tier	1	6
 j92	Claws (3)		1	3	1		22	0	151			22	26					invclw		0	13	h2h,tier	1	6
@@ -1113,15 +1113,15 @@ l72	Light Crossbow (4)		2	3	1		25	287	0		1			44	56			invlxb		11	0	xbow,tier	1	-1
 l73	Crossbow (4)		2	3	1		26	401	0		1			52	70			invmxb		11	0	xbow,tier	1	-1
 l74	Heavy Crossbow (4)		2	4	1		27	514	0		1			78	101			invhxb		11	0	xbow,tier	1	-1
 l75	Repeating Crossbow (4)		2	3	1		28	570	0		1			74	102			invrxb		11	0	xbow,tier	1	-1
-leg	Wirt's Leg		1	3	1		0	0	0			8	12					invleg		0	0	wrtl	1	-1
+leg	Wirt's Leg		1	3	1		110	0	0			8	12					invleg		0	0	wrtl	1	-1
 msf	Staff of Kings		1	3	1		0	12	0		1			13	16			invmsf	10	0	6	staf	1	-1
-o10	Stag Bow (4)		2	4	1		26	0	457		1			0	0			invam1		0	0	abow,elrx	1	0
+o10	Stag Bow (4)		2	4	1		26	0	457		1			0	0	1	1	invam1		0	0	abow,elrx	1	0
 o11	Reflex Bow (4)		2	4	1		28	0	570		1			47	64			invam2		0	15	abow,tier	1	0
 o12	Maiden Spear (4)		2	4	1		26	201	402		1			25	54			invam3		0	15	aspe,tier	1	0
 o13	Maiden Pike (4)		2	4	1		27	241	483		1			19	71			invam4		0	15	aspe,tier	1	0
 o14	Maiden Javelin (4)		1	3	1	1	27	227	495			23	39			41	73	invam5		0	13	ajav,tier	1	0
 o15	Katar (4)		1	3	1		23	0	83			15	16					invktr		0	13	h2h,tier	1	6
-o16	Wrist Blade (4)		1	3	1		24	0	169			0	0					invktr		0	0	h2h,el1x	1	6
+o16	Wrist Blade (4)		1	3	1		24	0	169			0	0			1	1	invktr		0	0	h2h,el1x	1	6
 o17	Hatchet Hands (4)		1	3	1		25	0	212			21	23					invaxf		0	13	h2h,tier	1	6
 o18	Cestus (4)		1	3	1		26	0	255			23	27					invaxf		0	13	h2h,tier	1	6
 o19	Claws (4)		1	3	1		26	0	298			26	30					invclw		0	13	h2h,tier	1	6
@@ -1137,7 +1137,7 @@ v#X	\red;Sacred Bow		2	3	1		120	666	666		1			38	45			newathuluabow	0	15	15	#bow	
 vou	Voulge		2	4	1		0	50	0		1			10	20			invvou		0	0	pole	1	-1
 wd01	Elder Staff		1	3	1		0	0	0		1							invsst	2	0	0	wp01	1	-1
 wd02	Elder Staff		1	3	1		0	0	0		1							invsst	2	0	0	wp02	1	-1
-wol	Wirt's Other Leg		1	3	1		0	0	0			13	18					invwol		0	0	wrtl	1	-1
+wol	Wirt's Other Leg		1	3	1		115	0	0			13	18					invwol		0	0	wrtl	1	-1
 !@1	\dgreen;Evil Eye of the Clawstorm	\blue;+15% to Experience Gained\n+1 to Class Skill Levels\n\grey;Cube All 5 Eyes with Class Charm to Add Bonus\n\nMonster Token	1	1	2		0	0	0									evileye				thng		-1
 !@2	\dgreen;Evil Eye of the Landmass	\blue;+15% to Experience Gained\n+1 to Class Skill Levels\n\grey;Cube All 5 Eyes with Class Charm to Add Bonus\n\nMonster Token	1	1	2		0	0	0									evileye				thng		-1
 !@3	\dgreen;Evil Eye of the Glowing Blob	\blue;+15% to Experience Gained\n+1 to Class Skill Levels\n\grey;Cube All 5 Eyes with Class Charm to Add Bonus\n\nMonster Token	1	1	2		0	0	0									evileye				thng		-1
@@ -1242,6 +1242,7 @@ wol	Wirt's Other Leg		1	3	1		0	0	0			13	18					invwol		0	0	wrtl	1	-1
 27+	\orange;Mystic Orb	Right-Click to Apply	1	1	2		0	0	0									orb_armo				myst		-1
 2o[	Cube Reagent\n\orange;Oil of Disjunction	80\nThe Oil of Disjunction will unsocket \nand return socket fillers from any \nnon-runeword item.\n\nOil + Item\n--> Item + Socket Fillers\n	1	1	2		0	0	0									oil_disjunction				thng		-1
 2p[	Cube Reagent\n\orange;Oil of Intensity	75\nUse together with a full shrine to craft\nor bless a rare item.\n\nShrine innate roll minimum value will be\nincreased.\n(Roll range reduced by 50%)\n\nUsage consumes both ingredients\n	1	1	2		0	0	0									oil_intensity				thng		-1
+2x0	\grey;Cube Reagant\n\orange;Positronic Brain	50\nPositronic Brains are used to create\nand charge the Catalyst of Transference.\n\n5x Positronic Brain\n--> Catalyst of Transference\n\nCatalyst + Positronic Brains (max 10)\n--> Catalyst (+1-10 charges)\n	1	1	2		0	0	0									invbrnz				thng		-1
 2x5	\dgreen;Alpha Brain		1	1	2		0	0	0									invbrnz				thng		-1
 2x6	\dgreen;Beta Brain		1	1	2		0	0	0									invbrnz				thng		-1
 2x7	\dgreen;Gamma Brain		1	1	2		0	0	0									invbrnz				thng		-1
@@ -1480,7 +1481,7 @@ Ysh2	Necklace		1	1	2		0	0	0									lab_amu				###2		-1
 [01	\gold;Lord of Lies Trophy	\blue;Enhanced Weapon Damage +20%\n\grey;Cube with the Book of Lies to Add Bonus\n	1	1	2		0	0	0									trophy12				thng,trph		-1
 [02	\gold;Legacy of Blood Trophy	\blue;Total Character Defense 20%\n\grey;Cube with the Legacy of Blood to Add Bonus\n	1	1	2		0	0	0									trophy01				thng,trph		-1
 [03	\gold;Judgement Day Trophy	\blue;5% to All Attributes\n\grey;Cube with the Crystalline Flame Medallion to Add Bonus\n	1	1	2		0	0	0									trophy05				thng,trph		-1
-[04	\gold;Yshari Sanctum Trophy	\blue;Maximum Mana: +5%\nMaximum Life: +2%\n\grey;Cube with the Ancient Repositories to Add Bonus\n	1	1	2		0	0	0									trophy14				thng,trph		-1
+[04	\gold;Yshari Sanctum Trophy	\blue;Maximum Mana: +5%\nMaximum Life: +5%\n\grey;Cube with the Ancient Repositories to Add Bonus\n	1	1	2		0	0	0									trophy14				thng,trph		-1
 [05	\gold;Kingdom of Shadow Trophy	\blue;10% Movement Speed\n\grey;Cube with the Eternal Bone Pile to Add Bonus\n	1	1	2		0	0	0									trophy07				thng,trph		-1
 [06	\gold;Duncraig Trophy	\blue;10% Combat Speeds\n\grey;Cube with the Demonsbane to Add Bonus\n	1	1	2		0	0	0									trophy11				thng,trph		-1
 [07	\gold;Xazax Trophy	\blue;Slow Target 4%\n\grey;Cube with Xazax's Illusion to Add Bonus\n	1	1	2		0	0	0									trophy15				thng,trph		-1
@@ -1541,6 +1542,7 @@ brc6	Black Road Challenge\n\orange;Scroll of Completion	\grey;Cube your Class Ch
 brz	Brain		1	1	2		0	0	0									invbrnz				body		-1
 bxa	Soul of Kabraxis		1	1	2		100	0	0									braxwhorl	255			grtz		-1
 c@c	(Sorceress Only)\n\red;Moon Symbol	A blessed symbol of the goddess...	1	1	2		0	0	0									moon1				poti		-1
+cats	\gold;Catalyst of Transference	83\nTransference:\nYou must charge your catalyst to use it.\n\nCatalyst + Positronic Brains (max 10)\n--> Catalyst (+1-10 Charges)\n\nCatalyst + Any Full Shrine\n--> Catalyst (-1 Charge) + Selected Shrine\n\nYou can cube your catalyst by itself to\nselect a different shrine to output.\n\nCatalyst\n--> Catalyst (rerolled output Shrine)\n	1	1	2		0	0	0									jewelcataon	255			thng		-1
 cm1	\orange;Cycle		1	1	2		0	0	0									invch1				scha		-1
 cm2	\orange;Cycle		1	2	2		0	0	0									invch2				mcha		-1
 cm3	\orange;Cycle		1	3	2		0	0	0									invsst				lcha		-1
@@ -1562,6 +1564,7 @@ cr12	Quest Item\n\gold;Charged Riftstone (\red;7\gold;)	\dgrey;- Transmute for F
 cr13	Quest Item\n\gold;Charged Riftstone (\red;8\gold;)	\dgrey;- Transmute for Full Monster Stats -\n\n\grey;Difficulty: \purple;Extreme\n\grey;Area Level: 138\n\gold;Dimensional Labyrinth 8\n\n\grey;Right click to open a portal\n	1	1	2		133	0	0									ChargedRunestoneR				thng		-1
 cr14	Quest Item\n\gold;Charged Riftstone (\red;9\gold;)	\dgrey;- Transmute for Full Monster Stats -\n\n\grey;Difficulty: \purple;Extreme\n\grey;Area Level: 139\n\gold;Dimensional Labyrinth 9\n\n\grey;Right click to open a portal\n	1	1	2		134	0	0									ChargedRunestoneR				thng		-1
 cr15	Quest Item\n\gold;Charged Riftstone (\red;10\gold;)	\dgrey;- Transmute for Full Monster Stats -\n\n\grey;Difficulty: \purple;Extreme\n\grey;Area Level: 140\n\gold;Dimensional Labyrinth 10\n\n\grey;Right click to open a portal\n	1	1	2		135	0	0									ChargedRunestoneR				thng		-1
+cr21	FLYING POLAR BUFFALO ERROR	crX21	1	1	2		145	0	0									ChargedRunestoneR				thng		-1
 cy01	\orange;Small Cycle	\blue;+1 Required Level\n+(2 to 8) to Strength\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invch1				cyc1,cycl		-1
 cy02	\orange;Small Cycle	\blue;+1 Required Level\n+(2 to 8) to Dexterity\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invch1				cyc1,cycl		-1
 cy03	\orange;Small Cycle	\blue;+1 Required Level\n+(2 to 8) to Vitality\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invch1				cyc1,cycl		-1
@@ -1583,13 +1586,13 @@ cy18	\orange;Large Cycle	\blue;+4 Required Level\n+(6 to 10)% Magic Find\n\grey;
 cy19	\orange;Small Cycle	\blue;+2 Required Level\n+(1 to 2)% Combat Speeds\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invch1				cyc1,cycl		-1
 cy20	\orange;Medium Cycle	\blue;+3 Required Level\n+(3 to 4)% Combat Speeds\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	2	2		0	0	0									invch2				cyc2,cycl		-1
 cy21	\orange;Large Cycle	\blue;+4 Required Level\n+(5 to 6)% Combat Speeds\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	3	2		0	0	0									invsst				cyng,cycl		-1
-cy22	\orange;Large Cycle	\blue;+18 Required Level\n-5 to All Attributes\n+1 to Amazon Skill Levels\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	3	2		0	0	0									invsst				cyng,cycl		-1
-cy23	\orange;Large Cycle	\blue;+18 Required Level\n-5 to All Attributes\n+1 to Assassin Skill Levels\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	3	2		0	0	0									invsst				cyng,cycl		-1
-cy24	\orange;Large Cycle	\blue;+18 Required Level\n-5 to All Attributes\n+1 to Barbarian Skill Levels\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	3	2		0	0	0									invsst				cyng,cycl		-1
-cy25	\orange;Large Cycle	\blue;+18 Required Level\n-5 to All Attributes\n+1 to Druid Skill Levels\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	3	2		0	0	0									invsst				cyng,cycl		-1
-cy26	\orange;Large Cycle	\blue;+18 Required Level\n-5 to All Attributes\n+1 to Necromancer Skill Levels\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	3	2		0	0	0									invsst				cyng,cycl		-1
-cy27	\orange;Large Cycle	\blue;+18 Required Level\n-5 to All Attributes\n+1 to Sorceress Skill Levels\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	3	2		0	0	0									invsst				cyng,cycl		-1
-cy28	\orange;Large Cycle	\blue;+18 Required Level\n-5 to All Attributes\n+1 to Paladin Skill Levels\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	3	2		0	0	0									invsst				cyng,cycl		-1
+cy22	\orange;Large Cycle	\blue;+16 Required Level\n-5 to All Attributes\n+1 to Amazon Skill Levels\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	3	2		0	0	0									invsst				cyng,cycl		-1
+cy23	\orange;Large Cycle	\blue;+16 Required Level\n-5 to All Attributes\n+1 to Assassin Skill Levels\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	3	2		0	0	0									invsst				cyng,cycl		-1
+cy24	\orange;Large Cycle	\blue;+16 Required Level\n-5 to All Attributes\n+1 to Barbarian Skill Levels\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	3	2		0	0	0									invsst				cyng,cycl		-1
+cy25	\orange;Large Cycle	\blue;+16 Required Level\n-5 to All Attributes\n+1 to Druid Skill Levels\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	3	2		0	0	0									invsst				cyng,cycl		-1
+cy26	\orange;Large Cycle	\blue;+16 Required Level\n-5 to All Attributes\n+1 to Necromancer Skill Levels\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	3	2		0	0	0									invsst				cyng,cycl		-1
+cy27	\orange;Large Cycle	\blue;+16 Required Level\n-5 to All Attributes\n+1 to Sorceress Skill Levels\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	3	2		0	0	0									invsst				cyng,cycl		-1
+cy28	\orange;Large Cycle	\blue;+16 Required Level\n-5 to All Attributes\n+1 to Paladin Skill Levels\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	3	2		0	0	0									invsst				cyng,cycl		-1
 cy29	\orange;Small Cycle	\blue;+1 Required Level\n+(0 to 10) to Mana\n+(0 to 20) to Life\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invch1				cyc1,cycl		-1
 cy30	\orange;Medium Cycle	\blue;+3 Required Level\nMaximum Mana +(0 to 2)%\n+(2 to 15) to Mana\n+(15 to 30) to Life\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	2	2		0	0	0									invch2				cyc2,cycl		-1
 cy31	\orange;Large Cycle	\blue;+5 Required Level\nMaximum Mana +(1 to 3)%\n+(5 to 25) to Mana\nMaximum Life +(0 to 1)%\n+(25 to 50) to Life\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	3	2		0	0	0									invsst				cyng,cycl		-1
@@ -1644,6 +1647,8 @@ dy20	\orange;Mystic Dye	\blue;Color: Orange\n\grey;Right-click to set item color
 dy21	\orange;Mystic Dye	\blue;Color: Bright White\n\grey;Right-click to set item color	1	1	2		0	0	0									dye-bwht-21				thng		-1
 dy99	\orange;Mystic Dye	dy99-Desc	1	1	2		0	0	0									dye-rainbow				thng		-1
 ear	Ear		1	1	2		0	0	0									invear				play		-1
+ebu	FLYING POLAR BUFFALO ERROR		1	1	2		0	0	0									essenceoftime	255			grtz		-1
+ebv	Relic		1	1	2		0	0	0									darkremnant	255			grtz		-1
 ebw	Dimensional Key		1	1	2		0	0	0									DimensionalKey	255			grtz		-1
 ebx	Vial of Elder Blood		1	1	2		0	0	0									ElderVial	255			grtz		-1
 eby	Dimensional Key		1	1	2		0	0	0									DimensionalKey	255			grtz		-1
@@ -1803,7 +1808,7 @@ ir76	Bone Chimes		1	2	2		120	0	0									bonechimes	255			grtz		-1
 ir81	\orange;Occult Effigy\nCelestial Wind	\blue;+10 Required Level\nSet Movement Speed to 40%\n\grey;Cube with Boots to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									OccultOrb				thng		-1
 ir82	\orange;Occult Effigy\nSigil of Absolution	\blue;(Max 2 Uses per Item)\nRequirements +25%\n-5 Required Level\n\grey;Cube with Any Weapon/Armor to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									OccultOrb				thng		-1
 ir83	\orange;Occult Effigy\nPath of Brutality	\blue;+10 Required Level\nItem Becomes (Your Class Only)\nTransforms every +1 to All Skills to +3% Deadly Strike\n\grey;Cube with Unique Ring/Amulet to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									OccultOrb				thng		-1
-ir84	\orange;Occult Effigy\nEmpyrean Touch	\red;Does Not Work on Indestructible Items\n\n\blue;+10 Required Level\nItem Becomes Ethereal\n\grey;Cube with Any Weapon/Armor to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									OccultOrb				thng		-1
+ir84	\orange;Occult Effigy\nEmpyrean Touch	\blue;+10 Required Level\nItem Becomes Ethereal\n\grey;Cube with Any Weapon/Armor to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									OccultOrb				thng		-1
 ir85	\orange;Occult Effigy\nElemental Ire	\blue;+10 Required Level\nAdds 40-60 Lightning Damage\nAdds 40-60 Fire Damage\n\grey;Cube with a Quiver to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									OccultOrb				thng		-1
 ir86	\orange;Occult Effigy\nBreath of Thaumaturgy	\blue;+25 Required Level\nItem can be blessed Again\n\grey;Cube with a Blessed Crafted Weapon/Armor to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									OccultOrb				thng		-1
 ir87	\orange;Occult Effigy\nElemental Dominion	\blue;+10 Required Level\nAdds 75-125 Cold Damage\nAdds 75-125 Lightning Damage\nAdds 75-125 Fire Damage\n\grey;Cube with a Zero Socket Weapon to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									OccultOrb				thng		-1
@@ -2016,7 +2021,7 @@ s@s	Assur's Bane		1	1	2		0	0	0									ring08				kill		-1
 sath	\grey;Quest Item\n\gold;Askari Call	\grey;Location: Island of Skartara (Heart)\n\orange;Summon Athulua, the Amazonian Goddess	1	1	2		120	0	0									invblackscroll				thng		-1
 sbag	\gold;Angel Bag	\grey;Cube 6 Angel Bags to Create Six Angel Bag\n\nCube Reagent	1	2	2		0	0	0									angelbag2				thng		-1
 sc01	Scroll	60\n(1/4)\n\nYou've made it here... I've left this note \nhidden here so that only a worthy hero \ncould find it. Our final confict, the\nUileloscadh Mór, is upon us. Baal's \ncorruption has enveloped Scosglen, and \nsoon will spread in all of Sanctuary...\n\nDruids, over the centuries, have been \nmastering the art of the Dubhdroiacht, \nallowing us control over the forces of \nnature. This forest is the birthplace \nof our greatest creation: the Dúlra \nAegis. We must stop the Lord of \nDestruction before he obtains it.\n\nPlease, muster your resolve and look \nfor the other pages of my diary. Reach \nthe farmfields and look for a chest near \na hut, I believe you'll find it as this \nmessage found you. Watch out, as\nbloody rituals are frequent in that area.\n	2	2	2		0	0	0									invscb				thng		-1
-sc02	Scroll	60\n(2/4)\n\nThis device was born from the desire to \nprotect our home during the foretold \ncalamity; but now, in a twist of fate, it \ncould grant Baal authority over \nunspeakable power... thankfully \nassembling it is far from a simple task. \nThe artifact itself was never completed \nbecause of the threat of its potential \nmisuse, and the instructions were split \ninto multiple designs that Túr Dúlra \nexperts swore to protect.\n\nAfter harvesting the information he \nneeded, Baal has corrupted almost all of \nthe guardians! He has used the artifact \nto reach an unknown location, hiding his \npresence and pressing his advantages.\n\nMaking our own Dúlra Aegis may be \nour best and only step on the path to \nhis defeat.\n\nThe third page of the diary is in a chest \nin the Praying Temple. It's south of the \nfarmfields.\n	2	2	2		0	0	0									invscb				thng		-1
+sc02	Scroll	60\n(2/4)\n\nThis device was born from the desire to \nprotect our home during the foretold \ncalamity; but now, in a twist of fate, it \ncould grant Baal authority over \nunspeakable power... thankfully \nassembling it is far from a simple task. \nThe artifact itself was never completed \nbecause of the threat of its potential \nmisuse, and the instructions were split \ninto multiple designs that Túr Dúlra \nexperts swore to protect.\n\nAfter harvesting the information he \nneeded, Baal has corrupted almost all of \nthe guardians! He has used the artifact \nto reach an unknown location, hiding his \npresence and pressing his advantages.\n\nMaking our own Dúlra Aegis may be \nour best and only step on the path to \nhis defeat.\n\nThe third page of the diary is in a chest \nnearby the Sky Altar, on a stony ground\nperpetually bathed by sunbeams. \nIt's south of the farmfields.\n	2	2	2		0	0	0									invscb				thng		-1
 sc03	Scroll	56\n(3/4)\n\nBefore building the Dúlra Aegis, several \ntenets need to be crafted first. Obtaining \nthe design tomes by defeating the now \ncorrupted guardian Druids could prove \nvery difficult, but it's a necessity. Keep \nalso in mind that not all of them carry \nthe designs, but It's rumored that some \nmay even carry already crafted tenets.\n\nIntrepid warrior, you must press on or \nall of our struggle will have been for \nnaught.\n\nAfter assembling all Tenets, look for the \nfourth page of the diary: it's in a hut \nclose to the forest portal entrance, \nwhere you first stepped here.\n	2	2	2		0	0	0									invscb				thng		-1
 sc04	Scroll	60\n(4/4)\n\nThese four diary pages you've collected \ncan be combined together and \ntransmuted into the final design for the \nDulra Aegis.\n\nOnce you have the Dulra Aegis, you will\nneed a special ingredient to breach into\nBaal's refuge. You need to travel to the\ncemetery at the East and look deep. The \nAegis will require much conjuring power.\n\nWhen you are ready to fight him, head\nto the Ancient Circle at the North East. \nBeware as he has control over the \nnatural elements, you're not fighting \nonly him but also the twisted wrath of \nthese lands.\n\nIt is now time to face our greatest \nenemy. Prepare.\n	2	2	2		0	0	0									invscb				thng		-1
 scf1	\grey;Quest Item\n\gold;Tenet of Harmony		1	1	2		0	0	0									scosfrag				tent		-1

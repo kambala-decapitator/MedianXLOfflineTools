@@ -81,7 +81,7 @@ r29	\purple;Sur Rune	Sur	27		5							27		5							27		15
 r30	\purple;Ber Rune	Ber	363		2							363		2							150		3						
 r31	\purple;Jah Rune	Jah	16		15							16		15							17		15						
 r32	\purple;Cham Rune	Cham	77		2							77		2							77		3						
-r33	\purple;Zod Rune	Zod		1	1								1	1								1	1						
+r33	\purple;Zod Rune	Zod	86		15							86		15							86		15						
 r51	\grey;Great Rune\n\purple;Taha Rune	Taha	333,334,335,336		2							333,334,335,336		2				508		1	333,334,335,336		2				509		1
 r52	\grey;Great Rune\n\purple;Ghal Rune	Ghal	485		15							485		15				508		1	485		25				509		1
 r53	\grey;Great Rune\n\purple;Qor Rune	Qor	141		2							141		2				508		1	141		3				509		1
@@ -123,7 +123,7 @@ rx29	\grey;Enchanted Rune (29)\n\purple;Zur Rune	Zur	27		7							27		7							27	
 rx30	\grey;Enchanted Rune (30)\n\purple;Bur Rune	Bur	363		3							363		3							150		4						
 rx31	\grey;Enchanted Rune (31)\n\purple;Iah Rune	Iah	16		20							16		20							17		20						
 rx32	\grey;Enchanted Rune (32)\n\purple;Yham Rune	Yham	76,77		1							76,77		1							76,77		2						
-rx33	\grey;Enchanted Rune (33)\n\purple;Xod Rune	Xod		1	1								1	1								1	1						
+rx33	\grey;Enchanted Rune (33)\n\purple;Xod Rune	Xod	127		1							127		1							127		1						
 skc	\purple;Chipped Skull		16		4							110		1							17		4						
 skf	\purple;Flawed Skull		16		6							110		2							17		6						
 skl	\purple;Flawless Skull		16		8							110		4							17		8						

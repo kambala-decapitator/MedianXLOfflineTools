@@ -1308,12 +1308,9 @@
 1333	Achondrite Beast
 1334	Tempest Arcanist
 1335	Deathfire Bearer
-1336	Rotfiend
-1337	Blighter
-1338	Pit Beast
-1339	Archfiend
-1340	Ichor Maw
-1341	Desert Strider
+1336	Манекен
+1337	Манекен
+1338	Манекен
 1342	Marauder
 1343	Invader
 1344	Assailant
@@ -2804,7 +2801,7 @@
 2905	Sand Maggot Egg
 2906	Lacuni Javelinier
 2907	Nomad Warrior
-2908	Soverign of the Sands
+2908	Sovereign of the Sands
 2909	Blunderbore
 2910	Unskinned Magister
 2911	Voltaic Sorcerer
@@ -2825,7 +2822,7 @@
 2926	Stinging Swarm
 2927	Black Locusts
 2928	Claw Viper
-2929	Soverign of the Sands
+2929	Sovereign of the Sands
 2930	Blunderbore
 2931	Hellscorched
 2932	Salamander
@@ -3365,3 +3362,17 @@
 3478	Nightstalker
 3489	Manoruk
 3493	Blood Golem
+3494	Samael, Herald of the End
+3495	Deimoss the Fleshweaver
+3496	Samael (Remnant of Lightning)
+3497	Deimoss (Remnant of Fire)
+3501	Nithogur, Heart of Tathamet
+3502	Nithogur (Astral Barrage)
+3503	Nithogur (Armageddon)
+3506	Nithogur (Eradication)
+3507	Moloch
+3508	Moloch
+3509	Nithogur (Desolation)
+3513	Nithogur (Remnant of Failure)
+3514	Nithogur, Heart of Tathamet
+3517	Deimoss (Judgment Day)

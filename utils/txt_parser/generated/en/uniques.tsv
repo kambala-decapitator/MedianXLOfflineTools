@@ -67,7 +67,7 @@
 65	Nephalem Primordia	130	1	
 66	Nephalem Arcana	130	1	
 67	Nephalem Mandate	130	1	
-68	ghist way	0	0	
+68	\gold;Essence of Time	1	1	
 69	Akara's Robe	10	255	invxtuu
 70	Akara's Robe	50	255	invxtuu
 71	Akara's Robe	80	255	invxtuu
@@ -354,10 +354,10 @@
 352	Lionpaw	22	25	
 353	Lionpaw	39	46	
 354	Lionpaw	48	79	
-355	Featherclaw	5	8	
-356	Featherclaw	22	26	
-357	Featherclaw	40	46	
-358	Featherclaw	48	80	
+355	Toorc's Gift	5	8	
+356	Toorc's Gift	22	26	
+357	Toorc's Gift	40	46	
+358	Toorc's Gift	48	80	
 359	Albrecht's Revenge	4	7	
 360	Albrecht's Revenge	22	26	
 361	Albrecht's Revenge	39	46	
@@ -598,10 +598,10 @@
 596	Fallentooth	28	31	
 597	Fallentooth	47	52	
 598	Fallentooth	54	85	
-599	Toorc's Gift	3	5	
-600	Toorc's Gift	20	24	
-601	Toorc's Gift	38	44	
-602	Toorc's Gift	46	77	
+599	Witching Gloves	3	5	
+600	Witching Gloves	20	24	
+601	Witching Gloves	38	44	
+602	Witching Gloves	46	77	
 603	Lavadome	4	7	
 604	Lavadome	22	25	
 605	Lavadome	39	46	
@@ -1506,7 +1506,7 @@
 1504	Icetomb	100	105	
 1505	Segnitia	100	120	
 1506	Stormpick	100	120	
-1507	Fire Hydra	100	130	invqf2
+1507	Witherfang	100	130	invqf2
 1508	Blacktongue	100	105	
 1509	Carsomyr	100	120	
 1510	Hanfod Tan	100	105	
@@ -1674,7 +1674,7 @@
 1672	Legionnaire	100	105	
 1673	Solar Scion	110	120	
 1674	Kraken's Cutlass	100	105	
-1675	Sherazade	100	120	
+1675	Sherazade	100	115	
 1676	Legio Di Manes	100	105	
 1677	Bitter Harvest	100	105	
 1678	Freakshow	100	120	
@@ -1761,3 +1761,25 @@
 1759	Bone Chimes	120	1	
 1760	Bone Chimes	120	1	
 1761	Bone Chimes	120	1	
+1762	Ribcracker	100	120	
+1763	Blood of Creation	90	150	
+1764	Blood of Creation	90	150	
+1765	Blood of Creation	100	150	
+1766	ghist way	0	0	
+1767	ghist way	0	0	
+1768	ghist way	0	0	
+1769	ghist way	0	0	
+1770	ghist way	0	0	
+1771	ghist way	0	0	
+1772	ghist way	0	0	
+1773	ghist way	0	0	
+1774	ghist way	0	0	
+1775	ghist way	0	0	
+1776	ghist way	0	0	
+1777	ghist way	0	0	
+1778	Thunderhead	100	105	
+1779	Augur's Pelt	100	105	
+1780	Cedar Shake	100	120	
+1781	Elemental Trance	100	120	
+1782	Zakarum's Guidance	100	105	
+1783	The Intrepid	100	105	

@@ -66,7 +66,7 @@
 72	150	9																	durability
 73	90	9																	maxdurability
 74	1000	14							Life Regenerated per Second	Life Regenerated per Second		32	80	1					hpregen
-75	100	8							Durability	Durability		2	8	2					item_maxdurability_percent
+75	100	8							Durability	Durability			8	2					item_maxdurability_percent
 76	100	8			77	Maximum Life and Mana	Maximum Life and Mana		Decrease Maximum Life	Maximum Life		4	78	2	10	4	2		item_maxhp_percent
 77	100	8			76	Maximum Life and Mana	Maximum Life and Mana		Maximum Mana	Maximum Mana		4	76	2	10	4	2		item_maxmana_percent
 78	0	10							Attacker Takes Damage of	Attacker Takes Damage of		3	29	2					item_attackertakesdamage
@@ -136,7 +136,7 @@
 149	0	10							Cold Absorb	Cold Absorb		1	56	1					item_absorbcold
 150	50	8							Slow Target	Slow Target		2	115	2					item_slow
 151	1	7																11	item_aura
-152		1							Indestructible	Indestructible		3	205	0					item_indesctructible
+152		1							Indestructible	Indestructible			205	0					item_indesctructible
 153		1							Cannot Be Frozen	Cannot Be Frozen		3	33	0					item_cannotbefrozen
 154	50	8							Slower Stamina Drain	Slower Stamina Drain		2	72	1					item_staminadrainpct
 155	0	7							Reanimate as:	Reanimate as:		23	30	1				12	item_reanimate
@@ -160,6 +160,7 @@
 188	0	3							+%d to Javelin and Spear Skills	+%d to Javelin and Spear Skills		14	201					16	item_addskill_tab
 189	0	16																	damage_divisor
 191	24	7																	frenzy
+192	0	8							%d%% Chance to cast level %d %s on Kill	%d%% Chance to cast level %d %s on Kill		15	205					17	item_skillonpkill
 193	1	2																	Celestial_rage
 194	0	4																	item_numsockets
 195	0	8							%d%% Chance to cast level %d %s on Melee Attack	%d%% Chance to cast level %d %s on Melee Attack		15	205					17	item_skillonattack
@@ -196,7 +197,7 @@
 248	0	10							Chance of Open Wounds	Chance of Open Wounds	(Based on Character Level)	7	122	1					item_openwounds_perlevel
 250	0	10																	item_totembound
 251	1	2																	is_sunstone
-252	0	6							Repairs %d Durability per Second	Repairs %d Durability per Second		11	7	0					item_replenish_durability
+252	0	6							Repairs %d Durability per Second	Repairs %d Durability per Second		0	7	0					item_replenish_durability
 253	0	6							Replenishes Quantity	Replenishes Quantity		3	8	0					item_replenish_quantity
 254	0	8							Increased Stack Size	Increased Stack Size		3	9	0					item_extra_stack
 257	1	2							\orange;Parasite Gains 12 Additional Targets\blue;	\orange;Nephalem: +25% Total Vessel Damage Bonus from Passives\nUnholy: Blood Thorns Deal 40% More Total Damage\nHoly: Holy Fire Deals 4.5% of  Strength as More Total Damage (max 250%)\blue;		3	240	0					vessel_mod
@@ -233,6 +234,7 @@
 307	500	10																	item_pierce_ltng
 308	500	10																	item_pierce_pois
 309	2048	12							%s Cooldown Decreased by %.1g	%s Cooldown Reduced by %.1g		33	174	2				17	skill_cooldown_reduce
+310	24	7																	is_1337
 313	0	10																	darkportal
 314	1	2																	carry1_grp1
 315	0	8																	firelength
