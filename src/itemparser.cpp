@@ -34,7 +34,8 @@ QString ItemParser::parseItemsToBuffer(quint16 itemsTotal, QDataStream &inputDat
     {
         if (ItemInfo *item = ItemParser::parseItem(inputDataStream, bytes, plugyPage != 0 && i == itemsTotal - 1))
         {
-            itemsBuffer->append(item);
+            if (item->itemType != "bt07")
+                itemsBuffer->append(item);
 
             if (item->status != ItemInfo::Ok)
                 corruptedItemsString += itemStorageAndCoordinatesString(corruptedItemFormat, item, plugyPage) + "\n";
