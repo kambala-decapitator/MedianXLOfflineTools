@@ -172,6 +172,7 @@
 201	0	7							%d%% Chance to cast level %d %s when Struck	%d%% Chance to cast level %d %s when Struck		15	205					17	item_skillongethit
 203	0	10							Enhanced Weapon Damage	Enhanced Weapon Damage	(Based on Character Level)	8	83	2					item_totaldamage_perlevel
 204	0	16							(%d/%d Charges)	(%d/%d Charges)		24	8					16	item_charged_skill
+205	20	7							Maximum Avoid Chance	Maximum Avoid Chance		4	49	2					avoidcap
 208	0	7							Life on Striking	Life on Striking		1	45	1					item_healonstriking
 209	0	7							Mana on Striking	Mana on Striking		1	44	1					item_manaonstriking
 210	0	10							Life on Melee Attack	Life on Melee Attack		1	43	1					skill_healonstrikingmelee
@@ -191,6 +192,7 @@
 239	0	10							Gold Find	Gold Find	(Based on Character Level)	7	16	1					item_find_gold_perlevel
 240	0	10							Magic Find	Magic Find	(Based on Character Level)	7	14	1					item_find_magic_perlevel
 241	30	7																	is_corrupted
+242	0	2																	is_crystalsword
 245	1	2																	grim_active
 246	1	2																	firedance_mod
 247	0	10							Chance of Crushing Blow	Chance of Crushing Blow	(Based on Character Level)	7	125	1					item_crushingblow_perlevel

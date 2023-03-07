@@ -514,10 +514,10 @@
 512	Sudis Murale	25	28	
 513	Sudis Murale	44	48	
 514	Sudis Murale	53	84	
-515	Dubhdroiacht	4	7	
-516	Dubhdroiacht	23	25	
-517	Dubhdroiacht	42	46	
-518	Dubhdroiacht	50	79	
+515	Dubhdraiocht	4	7	
+516	Dubhdraiocht	23	25	
+517	Dubhdraiocht	42	46	
+518	Dubhdraiocht	50	79	
 519	Dies Metus	6	9	
 520	Dies Metus	24	27	
 521	Dies Metus	43	47	
@@ -1730,7 +1730,7 @@
 1728	The Retiarius	100	120	
 1729	Ord Rekar's Testament	100	105	
 1730	Azgar's Mark	100	105	
-1731	Eye of the Storm	100	120	
+1731	Storm Arc	100	120	
 1732	Grim Visor	100	105	
 1733	Hand of Rathma	100	125	invmagicwand
 1734	Nimmenjuushin	100	105	
@@ -1765,9 +1765,9 @@
 1763	Blood of Creation	90	150	
 1764	Blood of Creation	90	150	
 1765	Blood of Creation	100	150	
-1766	ghist way	0	0	
-1767	ghist way	0	0	
-1768	ghist way	0	0	
+1766	Blood of Creation	1	150	
+1767	Blood of Creation	90	150	
+1768	\purple;The Butcher's Tooth (Uber)	125	1	
 1769	ghist way	0	0	
 1770	ghist way	0	0	
 1771	ghist way	0	0	
@@ -1777,9 +1777,11 @@
 1775	ghist way	0	0	
 1776	ghist way	0	0	
 1777	ghist way	0	0	
-1778	Thunderhead	100	105	
+1778	Cumulonimbus	100	105	
 1779	Augur's Pelt	100	105	
 1780	Cedar Shake	100	120	
 1781	Elemental Trance	100	120	
 1782	Zakarum's Guidance	100	105	
 1783	The Intrepid	100	105	
+1784	Breath of Fire	100	120	
+1785	Athulua's Blessing	100	130	

@@ -605,7 +605,7 @@ w99	Avenger Guard (3)		2	2	0		23	219	0									invba5				phlm,tier		4
 148	Balanced Knife (1)		1	2	1	1	3	0	91			4	5			6	7	invbkf	0	0	11	tkni,tier	1	-1
 149	Throwing Axe (1)		1	2	1	1	0	15	0			0	0	1	1	0	0	invtax	0	0	0	taxe,elrx	1	-1
 14@	Crystal Sword (Sacred)		2	3	1		30	0	510			0	0			1	1	invcrs	0	0	0	qcrs,el1x	1	-1
-150	Balanced Axe (1)		2	3	1	1	3	77	0			3	7			2	11	invbal	0	11	0	taxe,tier	1	-1
+150	Balanced Axe (1)		2	3	1	1	3	77	0			3	7			12	14	invbal	0	11	0	taxe,tier	1	-1
 151	Short Staff (1)		1	3	1		0	0	0		1			2	3			invsst	0	0	15	staf,tier	1	-1
 152	Long Staff (1)		1	4	1		1	0	8		1			4	5			invlst	0	0	15	staf,tier	1	-1
 153	Gnarled Staff (1)		1	4	1		2	0	17		1			5	6			invcst	0	0	15	staf,tier	1	-1
@@ -616,14 +616,14 @@ w99	Avenger Guard (3)		2	2	0		23	219	0									invba5				phlm,tier		4
 158	Scythe (1)		2	4	1		3	49	49		1			2	11			invscy	0	0	15	scyh,tier	1	-1
 159	Halberd (1)		2	4	1		2	0	46		1			8	10			invhal	0	0	15	nagi,tier	1	6
 15@	Hand Axe (Sacred)		1	3	1		30	376	0			37	39					invhax	0	11	0	qaxe	1	-1
-160	Short Bow (1)		2	3	1		0	0	15		1			2	3			invsbw	0	0	11	bow,tier	1	-1
-161	Hunter's Bow (1)		2	3	1		0	0	27		1			2	3			invhbw	0	0	11	bow,tier	1	-1
-162	Long Bow (1)		2	4	1		1	0	39		1			3	4			invlbw	0	0	11	bow,tier	1	-1
-163	Composite Bow (1)		2	3	1		2	0	51		1			4	6			invcbw	0	0	11	bow,tier	1	-1
+160	Short Bow (1)		2	3	1		0	0	15		1			2	3			invsbw	0	0	13	bow,tier	1	-1
+161	Hunter's Bow (1)		2	3	1		0	0	27		1			2	3			invhbw	0	0	13	bow,tier	1	-1
+162	Long Bow (1)		2	4	1		1	0	39		1			3	4			invlbw	0	0	13	bow,tier	1	-1
+163	Composite Bow (1)		2	3	1		2	0	51		1			4	6			invcbw	0	0	13	bow,tier	1	-1
 164	Short Battle Bow (1)		2	3	1		2	0	63		1			0	0	1	1	invsbb	0	0	0	bow,elrx	1	-1
-165	Long Battle Bow (1)		2	4	1		3	0	75		1			6	9			invlbb	0	0	11	bow,tier	1	-1
-166	Short War Bow (1)		2	3	1		4	0	87		1			7	11			invswb	0	0	11	bow,tier	1	-1
-167	Long War Bow (1)		2	4	1		5	0	99		1			8	12			invlwb	0	0	11	bow,tier	1	-1
+165	Long Battle Bow (1)		2	4	1		3	0	75		1			6	9			invlbb	0	0	13	bow,tier	1	-1
+166	Short War Bow (1)		2	3	1		4	0	87		1			7	11			invswb	0	0	13	bow,tier	1	-1
+167	Long War Bow (1)		2	4	1		5	0	99		1			8	12			invlwb	0	0	13	bow,tier	1	-1
 16@	Axe (Sacred)		2	3	1		30	432	0			39	43					invaxe	0	11	0	qaxe	1	-1
 17@	Double Axe (Sacred)		2	3	1		30	466	0			42	47					inv2ax	0	11	0	qaxe	1	-1
 18@	Military Pick (Sacred)		2	3	1		30	500	0			44	52					invmpi	0	11	0	qaxe	1	-1
@@ -639,7 +639,7 @@ w99	Avenger Guard (3)		2	2	0		23	219	0									invba5				phlm,tier		4
 1@A	Goedendag (3)		1	3	1		21	169	0			24	32					inv7mas	0	14	0	pmac,tier	1	3
 1@B	Angel Star (Sacred)		1	3	1		30	602	0			55	58					invmstu	0	14	0	spmc	1	3
 1@E	Dart Thrower (4)		2	3	1		26	280	0		1			58	70			inv8lxu		16	0	nxbw,tier	1	2
-1@F	Trebuchet (1)		2	3	1		6	72	0		1			11	16			inv8mxu		16	0	nxbw,tier	1	2
+1@F	Trebuchet (1)		2	3	1		6	72	0		1			15	21			inv8mxu		16	0	nxbw,tier	1	2
 20@	Large Axe (Sacred)		2	3	1		30	408	0		1			65	67			invlax	0	16	0	s2ha	1	-1
 21@	Broad Axe (Sacred)		2	3	1		30	447	0		1			71	75			invbrx	0	16	0	s2ha	1	-1
 22@	Battle Axe (Sacred)		2	3	1		30	486	0		1			0	0	1	1	invbtx	0	0	0	s2ha,el2x	1	-1
@@ -698,7 +698,7 @@ w99	Avenger Guard (3)		2	2	0		23	219	0									invba5				phlm,tier		4
 283	Flying Knife (2)		1	2	1	1	11	0	84			8	9			12	14	invtkn	0	0	11	tkni,tier	1	-1
 284	Balanced Knife (2)		1	2	1	1	13	0	132			11	12			17	20	invbkf	0	0	11	tkni,tier	1	-1
 285	Throwing Axe (2)		1	2	1	1	12	36	0			0	0	1	1	0	0	invtax	0	0	0	taxe,elrx	1	-1
-286	Balanced Axe (2)		2	3	1	1	12	115	0			7	16			9	28	invbal	0	11	0	taxe,tier	1	-1
+286	Balanced Axe (2)		2	3	1	1	12	115	0			7	16			21	28	invbal	0	11	0	taxe,tier	1	-1
 287	Short Staff (2)		1	3	1		8	0	8		1			8	9			invsst	0	0	15	staf,tier	1	-1
 288	Long Staff (2)		1	4	1		10	0	19		1			10	12			invlst	0	0	15	staf,tier	1	-1
 289	Gnarled Staff (2)		1	4	1		11	0	29		1			12	15			invcst	0	0	15	staf,tier	1	-1
@@ -709,10 +709,10 @@ w99	Avenger Guard (3)		2	2	0		23	219	0									invba5				phlm,tier		4
 293	Voulge (2)		2	4	1		11	59	25		1			8	17			invvou	0	16	0	pole,tier	1	-1
 294	Scythe (2)		2	4	1		12	79	79		1			8	25			invscy	0	0	15	scyh,tier	1	-1
 295	Halberd (2)		2	4	1		11	0	76		1			24	30			invhal	0	0	15	nagi,tier	1	6
-296	Short Bow (2)		2	3	1		8	0	36		1			5	7			invsbw	0	0	11	bow,tier	1	-1
-297	Hunter's Bow (2)		2	3	1		10	0	51		1			8	10			invhbw	0	0	11	bow,tier	1	-1
-298	Long Bow (2)		2	4	1		11	0	67		1			10	14			invlbw	0	0	11	bow,tier	1	-1
-299	Composite Bow (2)		2	3	1		11	0	81		1			12	17			invcbw	0	0	11	bow,tier	1	-1
+296	Short Bow (2)		2	3	1		8	0	36		1			5	7			invsbw	0	0	13	bow,tier	1	-1
+297	Hunter's Bow (2)		2	3	1		10	0	51		1			8	10			invhbw	0	0	13	bow,tier	1	-1
+298	Long Bow (2)		2	4	1		11	0	67		1			10	14			invlbw	0	0	13	bow,tier	1	-1
+299	Composite Bow (2)		2	3	1		11	0	81		1			12	17			invcbw	0	0	13	bow,tier	1	-1
 29@	Flail (Sacred)		2	3	1		30	486	0			47	56					invfla	0	11	0	qmac	1	-1
 2@3	Maple Bow (4)		2	3	1		26	0	492		1			0	0	1	1	inv8s8u	0	0	0	dbow,elrx	1	5
 2@4	Recurve Bow (1)		2	3	1		6	0	111		1			9	14			invswbu	0	0	19	dbow,tier	1	5
@@ -724,9 +724,9 @@ w99	Avenger Guard (3)		2	2	0		23	219	0									invba5				phlm,tier		4
 2@D	Needle Crossbow (3)		2	3	1		20	100	0		1			40	46			invlxbu		16	0	nxbw,tier	1	2
 2@E	Dart Thrower (Sacred)		2	3	1		30	395	0		1			85	86			inv8lxu		16	0	snxb	1	2
 300	Short Battle Bow (2)		2	3	1		12	0	97		1			0	0	1	1	invsbb	0	0	0	bow,elrx	1	-1
-301	Long Battle Bow (2)		2	4	1		12	0	112		1			17	24			invlbb	0	0	11	bow,tier	1	-1
-302	Short War Bow (2)		2	3	1		14	0	127		1			19	27			invswb	0	0	11	bow,tier	1	-1
-303	Long War Bow (2)		2	4	1		15	0	143		1			20	29			invlwb	0	0	11	bow,tier	1	-1
+301	Long Battle Bow (2)		2	4	1		12	0	112		1			17	24			invlbb	0	0	13	bow,tier	1	-1
+302	Short War Bow (2)		2	3	1		14	0	127		1			19	27			invswb	0	0	13	bow,tier	1	-1
+303	Long War Bow (2)		2	4	1		15	0	143		1			20	29			invlwb	0	0	13	bow,tier	1	-1
 30@	Scepter (Sacred)		1	3	1		30	0	404			29	34					invscp	0	0	11	qscp	1	-1
 31@	Grand Scepter (Sacred)		1	3	1		30	0	449			36	40					invgsc	0	0	11	qscp	1	-1
 32@	War Scepter (Sacred)		2	3	1		30	0	494			38	52					invwsp	0	0	11	qscp	1	-1
@@ -775,7 +775,7 @@ w99	Avenger Guard (3)		2	2	0		23	219	0									invba5				phlm,tier		4
 3@A	Goedendag (Sacred)		1	3	1		30	574	0			53	54					inv7mas	0	14	0	spmc	1	3
 3@D	Needle Crossbow (4)		2	3	1		25	200	0		1			49	56			invlxbu		16	0	nxbw,tier	1	2
 3@E	Stinger Crossbow (1)		2	3	1		4	63	0		1			12	16			invmxbu		16	0	nxbw,tier	1	2
-3@F	Trebuchet (2)		2	3	1		15	104	0		1			31	40			inv8mxu		16	0	nxbw,tier	1	2
+3@F	Trebuchet (2)		2	3	1		15	104	0		1			36	45			inv8mxu		16	0	nxbw,tier	1	2
 400	Flail (3)		2	3	1		23	186	0			25	41					invfla	0	11	0	mace,tier	1	-1
 401	Scepter (3)		1	3	1		18	0	83			20	24					invscp	0	0	11	scep,tier	1	-1
 402	Grand Scepter (3)		1	3	1		20	0	139			20	30					invgsc	0	0	11	scep,tier	1	-1
@@ -800,7 +800,7 @@ w99	Avenger Guard (3)		2	2	0		23	219	0									invba5				phlm,tier		4
 41@	Spetum (Sacred)		2	4	1		30	453	492		1			57	74			invspt	0	0	15	qspe	1	-1
 420	Balanced Knife (3)		1	2	1	1	22	0	258			21	24			37	42	invbkf	0	0	11	tkni,tier	1	-1
 421	Throwing Axe (3)		1	2	1	1	21	81	0			0	0	1	1	0	0	invtax	0	0	0	taxe,elrx	1	-1
-422	Balanced Axe (3)		2	3	1	1	21	225	0			14	32			22	59	invbal	0	11	0	taxe,tier	1	-1
+422	Balanced Axe (3)		2	3	1	1	21	225	0			14	32			48	60	invbal	0	11	0	taxe,tier	1	-1
 423	Short Staff (3)		1	3	1		18	0	25		1			18	20			invsst	0	0	15	staf,tier	1	-1
 424	Long Staff (3)		1	4	1		20	0	43		1			22	26			invlst	0	0	15	staf,tier	1	-1
 425	Gnarled Staff (3)		1	4	1		21	0	62		1			26	33			invcst	0	0	15	staf,tier	1	-1
@@ -811,14 +811,14 @@ w99	Avenger Guard (3)		2	2	0		23	219	0									invba5				phlm,tier		4
 42@	Pike (Sacred)		2	4	1		30	475	524		1			53	83			invpik	0	0	15	qspe	1	-1
 430	Scythe (3)		2	4	1		21	160	160		1			17	52			invscy	0	0	15	scyh,tier	1	-1
 431	Halberd (3)		2	4	1		21	0	153		1			55	67			invhal	0	0	15	nagi,tier	1	6
-432	Short Bow (3)		2	3	1		18	0	81		1			16	18			invsbw	0	0	11	bow,tier	1	-1
-433	Hunter's Bow (3)		2	3	1		19	0	109		1			20	24			invhbw	0	0	11	bow,tier	1	-1
-434	Long Bow (3)		2	4	1		20	0	137		1			24	31			invlbw	0	0	11	bow,tier	1	-1
-435	Composite Bow (3)		2	3	1		20	0	165		1			29	38			invcbw	0	0	11	bow,tier	1	-1
+432	Short Bow (3)		2	3	1		18	0	81		1			16	18			invsbw	0	0	13	bow,tier	1	-1
+433	Hunter's Bow (3)		2	3	1		19	0	109		1			20	24			invhbw	0	0	13	bow,tier	1	-1
+434	Long Bow (3)		2	4	1		20	0	137		1			24	31			invlbw	0	0	13	bow,tier	1	-1
+435	Composite Bow (3)		2	3	1		20	0	165		1			29	38			invcbw	0	0	13	bow,tier	1	-1
 436	Short Battle Bow (3)		2	3	1		21	0	193		1			0	0	1	1	invsbb	0	0	0	bow,elrx	1	-1
-437	Long Battle Bow (3)		2	4	1		21	0	221		1			38	51			invlbb	0	0	11	bow,tier	1	-1
-438	Short War Bow (3)		2	3	1		23	0	249		1			41	56			invswb	0	0	11	bow,tier	1	-1
-439	Long War Bow (3)		2	4	1		24	0	277		1			45	62			invlwb	0	0	11	bow,tier	1	-1
+437	Long Battle Bow (3)		2	4	1		21	0	221		1			38	51			invlbb	0	0	13	bow,tier	1	-1
+438	Short War Bow (3)		2	3	1		23	0	249		1			41	56			invswb	0	0	13	bow,tier	1	-1
+439	Long War Bow (3)		2	4	1		24	0	277		1			45	62			invlwb	0	0	13	bow,tier	1	-1
 43@	Dagger (Sacred)		1	2	1		30	0	376			37	37					invdgr	0	0	11	qknf	1	-1
 440	Short Sword (4)		1	3	1		23	104	0			17	19					invssd	0	11	0	swor,tier	1	-1
 441	Scimitar (4)		1	3	1		24	212	0			20	23					invscm	0	11	0	swor,tier	1	-1
@@ -875,7 +875,7 @@ w99	Avenger Guard (3)		2	2	0		23	219	0									invba5				phlm,tier		4
 488	Balanced Knife (4)		1	2	1	1	27	0	508			24	28			44	51	invbkf	0	0	11	tkni,tier	1	-1
 489	Throwing Axe (4)		1	2	1	1	26	167	0			0	0	1	1	0	0	invtax	0	0	0	taxe,elrx	1	-1
 48@	Flying Knife (Sacred)		1	2	1	1	30	0	473			38	39			59	61	invtkn	0	0	11	qtkn	1	-1
-490	Balanced Axe (4)		2	3	1	1	26	445	0			16	37			27	71	invbal	0	11	0	taxe,tier	1	-1
+490	Balanced Axe (4)		2	3	1	1	26	445	0			16	37			65	72	invbal	0	11	0	taxe,tier	1	-1
 491	Short Staff (4)		1	3	1		22	0	52		1			22	24			invsst	0	0	15	staf,tier	1	-1
 492	Long Staff (4)		1	4	1		24	0	88		1			27	32			invlst	0	0	15	staf,tier	1	-1
 493	Gnarled Staff (4)		1	4	1		25	0	126		1			32	39			invcst	0	0	15	staf,tier	1	-1
@@ -895,16 +895,16 @@ w99	Avenger Guard (3)		2	2	0		23	219	0									invba5				phlm,tier		4
 4@A	Angel Star (1)		1	3	1		4	62	0			5	8					invmstu	0	14	0	pmac,tier	1	3
 4@C	Hand of God (3)		2	3	1		24	211	0		1			56	65			inv9gmu		16	0	pham,tier	1	3
 4@D	Needle Crossbow (Sacred)		2	3	1		30	244	0		1			82	83			invlxbu		16	0	snxb	1	2
-500	Short Bow (4)		2	3	1		22	0	167		1			20	22			invsbw	0	0	11	bow,tier	1	-1
-501	Hunter's Bow (4)		2	3	1		24	0	221		1			25	30			invhbw	0	0	11	bow,tier	1	-1
-502	Long Bow (4)		2	4	1		25	0	274		1			30	38			invlbw	0	0	11	bow,tier	1	-1
-503	Composite Bow (4)		2	3	1		25	0	328		1			35	46			invcbw	0	0	11	bow,tier	1	-1
+500	Short Bow (4)		2	3	1		22	0	167		1			20	22			invsbw	0	0	13	bow,tier	1	-1
+501	Hunter's Bow (4)		2	3	1		24	0	221		1			25	30			invhbw	0	0	13	bow,tier	1	-1
+502	Long Bow (4)		2	4	1		25	0	274		1			30	38			invlbw	0	0	13	bow,tier	1	-1
+503	Composite Bow (4)		2	3	1		25	0	328		1			35	46			invcbw	0	0	13	bow,tier	1	-1
 504	Short Battle Bow (4)		2	3	1		26	0	382		1			0	0	1	1	invsbb	0	0	0	bow,elrx	1	-1
-505	Long Battle Bow (4)		2	4	1		26	0	436		1			45	61			invlbb	0	0	11	bow,tier	1	-1
-506	Short War Bow (4)		2	3	1		27	0	490		1			50	68			invswb	0	0	11	bow,tier	1	-1
-507	Long War Bow (4)		2	4	1		28	0	543		1			54	74			invlwb	0	0	11	bow,tier	1	-1
+505	Long Battle Bow (4)		2	4	1		26	0	436		1			45	61			invlbb	0	0	13	bow,tier	1	-1
+506	Short War Bow (4)		2	3	1		27	0	490		1			50	68			invswb	0	0	13	bow,tier	1	-1
+507	Long War Bow (4)		2	4	1		28	0	543		1			54	74			invlwb	0	0	13	bow,tier	1	-1
 50@	Throwing Axe (Sacred)		1	2	1	1	30	402	0			0	0	1	1	0	0	invtax	0	0	0	qtax,elrx	1	-1
-51@	Balanced Axe (Sacred)		2	3	1	1	30	586	0			37	47			56	78	invbal	0	11	0	qtax	1	-1
+51@	Balanced Axe (Sacred)		2	3	1	1	30	600	0			37	47			78	86	invbal	0	14	0	qtax	1	-1
 52@	Short Staff (Sacred)		1	3	1		30	0	188		1			53	55			invsst	0	0	15	qstf	1	-1
 53@	Long Staff (Sacred)		1	4	1		30	0	203		1			56	58			invlst	0	0	15	qstf	1	-1
 54@	Gnarled Staff (Sacred)		1	4	1		30	0	218		1			59	62			invcst	0	0	15	qstf	1	-1
@@ -923,16 +923,16 @@ w99	Avenger Guard (3)		2	2	0		23	219	0									invba5				phlm,tier		4
 5@C	Hand of God (4)		2	3	1		28	466	0		1			60	82			inv9gmu		16	0	pham,tier	1	3
 5@D	Dart Thrower (1)		2	3	1		3	46	0		1			7	10			inv8lxu		16	0	nxbw,tier	1	2
 5@E	Stinger Crossbow (2)		2	3	1		14	93	0		1			32	39			invmxbu		16	0	nxbw,tier	1	2
-5@F	Trebuchet (3)		2	3	1		24	202	0		1			67	84			inv8mxu		16	0	nxbw,tier	1	2
+5@F	Trebuchet (3)		2	3	1		24	202	0		1			75	90			inv8mxu		16	0	nxbw,tier	1	2
 60@	Halberd (Sacred)		2	4	1		30	0	558		1			71	100			invhal	0	0	15	snag	1	6
-61@	Short Bow (Sacred)		2	3	1		30	0	402		1			53	55			invsbw	0	0	11	qbow	1	-1
-62@	Hunter's Bow (Sacred)		2	3	1		30	0	425		1			56	59			invhbw	0	0	11	qbow	1	-1
-63@	Long Bow (Sacred)		2	4	1		30	0	447		1			59	62			invlbw	0	0	11	qbow	1	-1
-64@	Composite Bow (Sacred)		2	3	1		30	0	470		1			61	66			invcbw	0	0	11	qbow	1	-1
+61@	Short Bow (Sacred)		2	3	1		30	0	402		1			53	55			invsbw	0	0	13	qbow	1	-1
+62@	Hunter's Bow (Sacred)		2	3	1		30	0	425		1			56	59			invhbw	0	0	13	qbow	1	-1
+63@	Long Bow (Sacred)		2	4	1		30	0	447		1			59	62			invlbw	0	0	13	qbow	1	-1
+64@	Composite Bow (Sacred)		2	3	1		30	0	470		1			61	66			invcbw	0	0	13	qbow	1	-1
 65@	Short Battle Bow (Sacred)		2	3	1		30	0	492		1			0	0	1	1	invsbb	0	0	0	qbow,elrx	1	-1
-66@	Long Battle Bow (Sacred)		2	4	1		30	0	544		1			66	74			invlbb	0	0	11	qbow	1	-1
-67@	Short War Bow (Sacred)		2	3	1		30	0	590		1			68	77			invswb	0	0	11	qbow	1	-1
-68@	Long War Bow (Sacred)		2	4	1		30	0	650		1			70	79			invlwb	0	0	11	qbow	1	-1
+66@	Long Battle Bow (Sacred)		2	4	1		30	0	544		1			66	74			invlbb	0	0	13	qbow	1	-1
+67@	Short War Bow (Sacred)		2	3	1		30	0	590		1			68	77			invswb	0	0	13	qbow	1	-1
+68@	Long War Bow (Sacred)		2	4	1		30	0	650		1			70	79			invlwb	0	0	13	qbow	1	-1
 69@	Wand (Sacred)		1	2	1		30	0	166			35	36					invwnd		0	6	qwnd	1	2
 6@1	Compound Bow (4)		2	3	1		25	0	370		1			40	49			invcbwu	0	0	15	dbow,tier	1	5
 6@2	Maple Bow (1)		2	3	1		3	0	84		1			0	0	1	1	inv8s8u	0	0	0	dbow,elrx	1	5
@@ -943,7 +943,7 @@ w99	Avenger Guard (3)		2	2	0		23	219	0									invba5				phlm,tier		4
 6@9	Goedendag (1)		1	3	1		3	46	0			5	7					inv7mas	0	14	0	pmac,tier	1	3
 6@A	Angel Star (2)		1	3	1		13	101	0			13	19					invmstu	0	14	0	pmac,tier	1	3
 6@C	Hand of God (Sacred)		2	3	1		30	832	0		1			104	105			inv9gmu		16	0	sphm	1	3
-6@F	Trebuchet (4)		2	3	1		29	399	0		1			81	101			inv8mxu		16	0	nxbw,tier	1	2
+6@F	Trebuchet (4)		2	3	1		29	399	0		1			85	105			inv8mxu		16	0	nxbw,tier	1	2
 70@	Yew Wand (Sacred)		1	2	1		30	0	168			36	38					invywn		0	6	qwnd	1	2
 71@	Bone Wand (Sacred)		1	2	1		30	0	170			37	40					invbwn		0	6	qwnd	1	2
 72@	Grim Wand (Sacred)		1	2	1		30	0	172			39	44					invgwn		0	6	qwnd	1	2
@@ -952,8 +952,8 @@ w99	Avenger Guard (3)		2	2	0		23	219	0									invba5				phlm,tier		4
 75@	Great Maul (Sacred)		2	3	1		30	736	0		1			76	89			invgma		16	0	qham,ct2w	1	-1
 76@	Light Crossbow (Sacred)		2	3	1		30	400	0		1			74	80			invlxb		11	0	qxbw	1	-1
 77@	Crossbow (Sacred)		2	3	1		30	502	0		1			78	86			invmxb		11	0	qxbw	1	-1
-78@	Heavy Crossbow (Sacred)		2	4	1		30	614	0		1			91	101			invhxb		11	0	qxbw	1	-1
-79@	Repeating Crossbow (Sacred)		2	3	1		30	670	0		1			88	105			invrxb		11	0	qxbw	1	-1
+78@	Heavy Crossbow (Sacred)		2	4	1		30	614	0		1			95	108			invhxb		11	0	qxbw	1	-1
+79@	Repeating Crossbow (Sacred)		2	3	1		30	670	0		1			85	100			invrxb		11	0	qxbw	1	-1
 7@1	Compound Bow (Sacred)		2	3	1		30	0	530		1			69	71			invcbwu	0	0	15	sdbw	1	5
 7@4	Recurve Bow (4)		2	3	1		29	0	613		1			63	83			invswbu	0	0	19	dbow,tier	1	5
 7@5	Backsword (1)		1	3	1		3	55	0			5	6					inv9sbu	0	16	0	bswd,tier	1	4
@@ -963,7 +963,7 @@ w99	Avenger Guard (3)		2	2	0		23	219	0									invba5				phlm,tier		4
 7@C	Needle Crossbow (1)		2	3	1		2	28	0		1			4	6			invlxbu		16	0	nxbw,tier	1	2
 7@D	Dart Thrower (2)		2	3	1		12	70	0		1			21	26			inv8lxu		16	0	nxbw,tier	1	2
 7@E	Stinger Crossbow (3)		2	3	1		24	182	0		1			70	83			invmxbu		16	0	nxbw,tier	1	2
-7@F	Trebuchet (Sacred)		2	3	1		30	500	0		1			96	101			inv8mxu		16	0	snxb	1	2
+7@F	Trebuchet (Sacred)		2	3	1		30	500	0		1			100	110			inv8mxu		16	0	snxb	1	2
 80@	Eagle Orb (Sacred)		1	2	1		30	0	171			35	36					invob1		0	11	qorb	1	1
 81@	Sacred Globe (Sacred)		1	2	1		30	0	177			36	37					invob2		0	11	qorb	1	1
 82@	Smoked Sphere (Sacred)		1	2	1		30	0	183			37	39					invob3		0	11	qorb	1	1
@@ -1099,22 +1099,24 @@ l50	Maul (4)		2	4	1		26	532	0		1			47	61			invmau		16	0	hamm,tier	1	-1
 l51	Great Maul (4)		2	3	1		27	640	0		1			49	75			invgma		16	0	hamm,tier	1	-1
 l52	Light Crossbow (1)		2	3	1		0	14	0		1			4	6			invlxb		11	0	xbow,tier	1	-1
 l53	Crossbow (1)		2	3	1		2	66	0		1			7	10			invmxb		11	0	xbow,tier	1	-1
-l54	Heavy Crossbow (1)		2	4	1		4	91	0		1			11	16			invhxb		11	0	xbow,tier	1	-1
-l55	Repeating Crossbow (1)		2	3	1		5	103	0		1			10	17			invrxb		11	0	xbow,tier	1	-1
+l54	Heavy Crossbow (1)		2	4	1		4	91	0		1			12	17			invhxb		11	0	xbow,tier	1	-1
+l55	Repeating Crossbow (1)		2	3	1		5	103	0		1			10	15			invrxb		11	0	xbow,tier	1	-1
 l60	Light Crossbow (2)		2	3	1		11	69	0		1			14	20			invlxb		11	0	xbow,tier	1	-1
 l61	Crossbow (2)		2	3	1		12	101	0		1			20	26			invmxb		11	0	xbow,tier	1	-1
-l62	Heavy Crossbow (2)		2	4	1		14	134	0		1			29	40			invhxb		11	0	xbow,tier	1	-1
-l63	Repeating Crossbow (2)		2	3	1		15	150	0		1			28	41			invrxb		11	0	xbow,tier	1	-1
+l62	Heavy Crossbow (2)		2	4	1		14	134	0		1			29	42			invhxb		11	0	xbow,tier	1	-1
+l63	Repeating Crossbow (2)		2	3	1		15	150	0		1			25	40			invrxb		11	0	xbow,tier	1	-1
 l68	Light Crossbow (3)		2	3	1		20	144	0		1			36	46			invlxb		11	0	xbow,tier	1	-1
 l69	Crossbow (3)		2	3	1		21	202	0		1			44	59			invmxb		11	0	xbow,tier	1	-1
-l70	Heavy Crossbow (3)		2	4	1		23	260	0		1			64	83			invhxb		11	0	xbow,tier	1	-1
-l71	Repeating Crossbow (3)		2	3	1		24	290	0		1			61	87			invrxb		11	0	xbow,tier	1	-1
+l70	Heavy Crossbow (3)		2	4	1		23	260	0		1			64	90			invhxb		11	0	xbow,tier	1	-1
+l71	Repeating Crossbow (3)		2	3	1		24	290	0		1			64	85			invrxb		11	0	xbow,tier	1	-1
 l72	Light Crossbow (4)		2	3	1		25	287	0		1			44	56			invlxb		11	0	xbow,tier	1	-1
 l73	Crossbow (4)		2	3	1		26	401	0		1			52	70			invmxb		11	0	xbow,tier	1	-1
-l74	Heavy Crossbow (4)		2	4	1		27	514	0		1			78	101			invhxb		11	0	xbow,tier	1	-1
-l75	Repeating Crossbow (4)		2	3	1		28	570	0		1			74	102			invrxb		11	0	xbow,tier	1	-1
+l74	Heavy Crossbow (4)		2	4	1		27	514	0		1			80	105			invhxb		11	0	xbow,tier	1	-1
+l75	Repeating Crossbow (4)		2	3	1		28	570	0		1			75	98			invrxb		11	0	xbow,tier	1	-1
 leg	Wirt's Leg		1	3	1		110	0	0			8	12					invleg		0	0	wrtl	1	-1
 msf	Staff of Kings		1	3	1		0	12	0		1			13	16			invmsf	10	0	6	staf	1	-1
+mz01	Maiden Bow (Mastercrafted)		2	4	1		30	0	750		1			77	85			MastercraftedBow	0	0	13	qbow,mw01	1	-1
+mz02	Kukri (Mastercrafted)		1	3	1		30	0	550			45	50					MastercraftedKnife	0	0	14	qknf,mw02	1	-1
 o10	Stag Bow (4)		2	4	1		26	0	457		1			0	0	1	1	invam1		0	0	abow,elrx	1	0
 o11	Reflex Bow (4)		2	4	1		28	0	570		1			47	64			invam2		0	15	abow,tier	1	0
 o12	Maiden Spear (4)		2	4	1		26	201	402		1			25	54			invam3		0	15	aspe,tier	1	0
@@ -1158,8 +1160,8 @@ wol	Wirt's Other Leg		1	3	1		115	0	0			13	18					invwol		0	0	wrtl	1	-1
 &69	\orange;Mystic Orb\nHand of Yaerius	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_misc				myst,asa#		-1
 &70	\orange;Mystic Orb\nThe Endless Light	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_misc				myst,asa#		-1
 &71	\orange;Mystic Orb\nMarksman's Eye	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_any				myst,asa#		-1
-&72	\orange;Mystic Orb\nFarnham's Lost Marble	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_any				myst,asa#		-1
-&73	\orange;Mystic Orb\nZayl's Soul Orb	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_any				myst,asa#		-1
+&72	\orange;Mystic Orb\nFarnham's Lost Marble	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_misc				myst,asa#		-1
+&73	\orange;Mystic Orb\nZayl's Soul Orb	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_armo				myst,asa#		-1
 &74	\orange;Mystic Orb\nEye of Malic	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_any				myst,asa#		-1
 &75	\orange;Mystic Orb\nApple of Discord	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_any				myst,asa#		-1
 &76	\orange;Mystic Orb\nIdol of Stars	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_armo				myst,asa#		-1
@@ -1181,6 +1183,8 @@ wol	Wirt's Other Leg		1	3	1		115	0	0			13	18					invwol		0	0	wrtl	1	-1
 &92	\orange;Mystic Orb\nPeriapt of Life	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_armo				myst,asa#		-1
 &93	\orange;Mystic Orb\nLodestone	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_armo				myst,asa#		-1
 &94	\orange;Mystic Orb\nExplorer's Globe	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_misc				myst,asa#		-1
+&95	\orange;Mystic Orb\nEye of the Storm	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_weap				myst,asa#		-1
+&96	\orange;Mystic Orb\nInvisible	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_armo				myst,asa#		-1
 01+	\orange;Mystic Orb	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_armo				myst		-1
 01^	\dgreen;Signet of Learning	Нажмите ПКМ: Доступных Атрибутов: %d	1	1	2		0	0	0									sigil1B				poti		-1
 02+	\orange;Mystic Orb	Нажмите ПКМ для Применения	1	1	2		0	0	0									orb_armo				myst		-1
@@ -1479,7 +1483,7 @@ R9+	\orange;Trinity Shrine (1)	\blue;+х ко Всем Атрибутам\n+х% 
 Ysh1	Arcane Seal		1	1	2		0	0	0									lab_rn1				###1		-1
 Ysh2	Necklace		1	1	2		0	0	0									lab_amu				###2		-1
 [01	\gold;Lord of Lies Trophy	\blue;Общий Физический Урон Оружия +20%\n\grey;Смешайте с Book of Lies для Добавления Бонуса\n	1	1	2		0	0	0									trophy12				thng,trph		-1
-[02	\gold;Legacy of Blood Trophy	\blue;Общая Защита Персонажа +20%\n\grey;Смешайте с Legacy of Blood для Добавления Бонуса\n	1	1	2		0	0	0									trophy01				thng,trph		-1
+[02	\gold;Legacy of Blood Trophy	\blue;+20% Бонус к Защите\n\grey;Смешайте с Legacy of Blood для Добавления Бонуса\n	1	1	2		0	0	0									trophy01				thng,trph		-1
 [03	\gold;Judgement Day Trophy	\blue;5% ко Всем Атрибутам\n\grey;Смешайте с Crystalline Flame Medallion для Добавления Бонуса\n	1	1	2		0	0	0									trophy05				thng,trph		-1
 [04	\gold;Yshari Sanctum Trophy	\blue;Максимум Маны: +5%\nМаксимум Жизни: +5%\n\grey;Смешайте с Ancient Repositories для Добавления Бонуса\n	1	1	2		0	0	0									trophy14				thng,trph		-1
 [05	\gold;Kingdom of Shadow Trophy	\blue;+10% к Скорости Перемещения\n\grey;Смешайте с Eternal Bone Pile для Добавления Бонуса\n	1	1	2		0	0	0									trophy07				thng,trph		-1
@@ -1524,6 +1528,8 @@ aqv	Arrow Quiver		1	3	2	1	0	0	0									invqvr				bowq	2	-1
 ass	Нажмите ПКМ чтобы получить 1 очко навыка\nКнига Навыка		2	2	2		0	0	0									invsbk	15			ques		-1
 asx	\orange;Arcane Cluster	(Нажмите ПКМ чтобы Собрать)	1	1	2		0	0	0									invsr6				thng		-1
 az!	Fool's Gold		1	1	2		0	0	0									invgldm	255			grtz		-1
+b60	\purple;The Butcher's Tooth (Uber)		1	1	2		125	0	0									invfang	255			grtz		-1
+b60X	\dgrey;Квестовый Предмет\n\gold;Scroll of Summoning	\gold;Horror Under Tristram (Uber)	1	1	2		125	0	0									invrsc				thng		-1
 b@b	\red;Goodberry	Волшебный фрукт Глор-ан-Фхайдха...	1	1	2		666	0	0									cherries				hpot		-1
 bbb	Том Лам Эзена		2	2	2		0	0	0									invbbb	16			ques		-1
 bkd	Ключ к Пирамидальным камням		2	2	2		0	0	0									invscb	5			ques		-1
@@ -1564,7 +1570,7 @@ cr12	Квестовый Предмет\n\gold;Charged Riftstone (\red;12\gold;)	
 cr13	Квестовый Предмет\n\gold;Charged Riftstone (\red;13\gold;)	\dgrey;- Смешайте для Полных Характеристик Монстров -\n\n\grey;Сложность: \purple;Экстремальная\n\grey;Уровень Локации: 138\n\gold;Dimensional Labyrinth 8\n\n\grey;Нажмите ПКМ для открытия портала\n	1	1	2		133	0	0									ChargedRunestoneR				thng		-1
 cr14	Квестовый Предмет\n\gold;Charged Riftstone (\red;14\gold;)	\dgrey;- Смешайте для Полных Характеристик Монстров -\n\n\grey;Сложность: \purple;Экстремальная\n\grey;Уровень Локации: 139\n\gold;Dimensional Labyrinth 9\n\n\grey;Нажмите ПКМ для открытия портала\n	1	1	2		134	0	0									ChargedRunestoneR				thng		-1
 cr15	Квестовый Предмет\n\gold;Charged Riftstone (\red;15\gold;)	\dgrey;- Смешайте для Полных Характеристик Монстров -\n\n\grey;Сложность: \purple;Экстремальная\n\grey;Уровень Локации: 140\n\gold;Dimensional Labyrinth 10\n\n\grey;Нажмите ПКМ для открытия портала\n	1	1	2		135	0	0									ChargedRunestoneR				thng		-1
-cr21	FLYING POLAR BUFFALO ERROR	crX21	1	1	2		145	0	0									ChargedRunestoneR				thng		-1
+cr21	Квестовый Предмет\n\gold;Charged Riftstone (\purple;16\gold;)	\grey;Сложность: \orange;Невозможная\n\grey;Уровень Локации: 150\n\gold;The Heart of Darkness\n\n\grey;Нажмите правой кнопкой мыши для открытия портала\n	1	1	2		145	0	0									ChargedRunestoneR				thng		-1
 cy01	\orange;Small Cycle	\blue;+1 Требуемый Уровень\n+(2-8) к Силе\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									invch1				cyc1,cycl		-1
 cy02	\orange;Small Cycle	\blue;+1 Требуемый Уровень\n+(2-8) к Ловкости\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									invch1				cyc1,cycl		-1
 cy03	\orange;Small Cycle	\blue;+1 Требуемый Уровень\n+(2-8) к Живучести\n\grey;Смешайте с Corrupted Wormhole для Добавления Бонуса\n\nРеагент Куба	1	1	2		0	0	0									invch1				cyc1,cycl		-1
@@ -1647,7 +1653,7 @@ dy20	\orange;Mystic Dye	\blue;Цвет: Оранжевый\n\grey;Нажмите
 dy21	\orange;Mystic Dye	\blue;Цвет: Ярко-белый\n\grey;Нажмите ПКМ для изменения цвета вещи	1	1	2		0	0	0									dye-bwht-21				thng		-1
 dy99	\orange;Mystic Dye	dy99-Desc	1	1	2		0	0	0									dye-rainbow				thng		-1
 ear	Ухо		1	1	2		0	0	0									invear				play		-1
-ebu	FLYING POLAR BUFFALO ERROR		1	1	2		0	0	0									essenceoftime	255			grtz		-1
+ebu	Essence of Time		1	1	2		0	0	0									essenceoftime	255			grtz		-1
 ebv	Relic		1	1	2		0	0	0									darkremnant	255			grtz		-1
 ebw	Dimensional Key		1	1	2		0	0	0									DimensionalKey	255			grtz		-1
 ebx	Vial of Elder Blood		1	1	2		0	0	0									ElderVial	255			grtz		-1
@@ -1856,6 +1862,13 @@ ltbx	\orange;(Восстановленное)\nСокровище Fiacla Gear	С
 luv	Ключ от Черной башни		1	2	2		0	0	0									invmph	20			key		-1
 m@m	\grey;Квестовый Предмет\n\gold;Spinecracker's Sigil	Смешайте в Кубе все 5 Sigil-ов с Ring of the Five\n	1	1	2		0	0	0									ring03				thng		-1
 mec	Реагент Куба\n\orange;Meditation Candle		1	1	2		0	0	0									invcndl				thng		-1
+mos1	\grey;Реагент Куба\n\orange;Mirror of Shadows	\blue;+1 к Навыкам Амазонки\nПолучаемый Физический Урон Уменьшается на 5\n\grey;Смешайте с Sacred Sunstone для Получения Бонуса\n\n(Только для Амазонки)	2	3	2		0	0	0									mirrorofshadows				thng		-1
+mos2	\grey;Реагент Куба\n\orange;Mirror of Shadows	\blue;+1 к Навыкам Ассассина\nПолучаемый Физический Урон Уменьшается на 5\n\grey;Смешайте с Shadow Vortex для Получения Бонуса\n\n(Только для Ассассина)	2	3	2		0	0	0									mirrorofshadows				thng		-1
+mos3	\grey;Реагент Куба\n\orange;Mirror of Shadows	\blue;+1 к Навыкам Варвара\nПолучаемый Физический Урон Уменьшается на 5\n\grey;Смешайте с Worldstone Orb для Получения Бонуса\n\n(Только для Варвара)	2	3	2		0	0	0									mirrorofshadows				thng		-1
+mos4	\grey;Реагент Куба\n\orange;Mirror of Shadows	\blue;+1 к Навыкам Друида\nПолучаемый Физический Урон Уменьшается на 5\n\grey;Смешайте с Caoi Dulra Fruit для Получения Бонуса\n\n(Только для Друида)	2	3	2		0	0	0									mirrorofshadows				thng		-1
+mos5	\grey;Реагент Куба\n\orange;Mirror of Shadows	\blue;+1 к Навыкам Некроманта\nПолучаемый Физический Урон Уменьшается на 5\n\grey;Смешайте с Soulstone Shard для Получения Бонуса\n\n(Только для Некроманта)	2	3	2		0	0	0									mirrorofshadows				thng		-1
+mos6	\grey;Реагент Куба\n\orange;Mirror of Shadows	\blue;+1 к Навыкам Паладина\nПолучаемый Физический Урон Уменьшается на 5\n\grey;Смешайте с Eye of Divinity для Получения Бонуса\n\n(Только для Паладина)	2	3	2		0	0	0									mirrorofshadows				thng		-1
+mos7	\grey;Реагент Куба\n\orange;Mirror of Shadows	\blue;+1 к Навыкам Колдуньи\nПолучаемый Физический Урон Уменьшается на 5\n\grey;Смешайте с Nexus Crystal для Получения Бонуса\n\n(Только для Колдуньи)	2	3	2		0	0	0									mirrorofshadows				thng		-1
 mp1	Minor Mana Potion	Длительность: 7 секунд\nВосстановление Маны +100%	1	1	2		0	0	0									invmp1				mpot		-1
 mp2	Light Mana Potion	Длительность: 7 секунд\nВосстановление Маны +125%	1	1	2		0	0	0									invmp2				mpot		-1
 mp3	Mana Potion	Длительность: 7 секунд\nВосстановление Маны +150%	1	1	2		0	0	0									invmp3				mpot		-1
@@ -2017,6 +2030,154 @@ rx30	\grey;Enchanted Rune (30)\n\purple;Bur Rune		1	1	2		115	0	0									xisBer	
 rx31	\grey;Enchanted Rune (31)\n\purple;Iah Rune		1	1	2		120	0	0									xisJah				erun		-1
 rx32	\grey;Enchanted Rune (32)\n\purple;Yham Rune		1	1	2		120	0	0									xisCham				erun		-1
 rx33	\grey;Enchanted Rune (33)\n\purple;Xod Rune		1	1	2		120	0	0									xisZod				erun		-1
+s001	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Celestia's Charge	1	1	2		0	0	0									itsababybox				loot		-1
+s002	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Celestia's Passion	1	1	2		0	0	0									itsababybox				loot		-1
+s003	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Celestia's Ribbon	1	1	2		0	0	0									itsababybox				loot		-1
+s004	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Celestia's Wings	1	1	2		0	0	0									itsababybox				loot		-1
+s005	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Earth	1	1	2		0	0	0									itsababybox				loot		-1
+s006	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Fire	1	1	2		0	0	0									itsababybox				loot		-1
+s007	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Frost	1	1	2		0	0	0									itsababybox				loot		-1
+s008	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Water	1	1	2		0	0	0									itsababybox				loot		-1
+s009	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Red Vex' Curse	1	1	2		0	0	0									itsababybox				loot		-1
+s010	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Red Vex' Flayer	1	1	2		0	0	0									itsababybox				loot		-1
+s011	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Red Vex' Idol	1	1	2		0	0	0									itsababybox				loot		-1
+s012	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Red Vex' Sin	1	1	2		0	0	0									itsababybox				loot		-1
+s013	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Vasily's Crescent	1	1	2		0	0	0									itsababybox				loot		-1
+s014	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Vasily's Eclipse	1	1	2		0	0	0									itsababybox				loot		-1
+s015	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Vasily's Falling Star	1	1	2		0	0	0									itsababybox				loot		-1
+s016	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Vasily's Shepherd Moon	1	1	2		0	0	0									itsababybox				loot		-1
+s017	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Zerae's Holy Wrath	1	1	2		0	0	0									itsababybox				loot		-1
+s018	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Zerae's Redemption	1	1	2		0	0	0									itsababybox				loot		-1
+s019	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Zerae's Refinement	1	1	2		0	0	0									itsababybox				loot		-1
+s020	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Zerae's Vindication	1	1	2		0	0	0									itsababybox				loot		-1
+s021	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Tracker's Effigy	1	1	2		0	0	0									itsababybox				loot		-1
+s022	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Tracker's Runeward	1	1	2		0	0	0									itsababybox				loot		-1
+s023	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Tracker's Stealth	1	1	2		0	0	0									itsababybox				loot		-1
+s024	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Tracker's Strike	1	1	2		0	0	0									itsababybox				loot		-1
+s025	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Serpent's Coil	1	1	2		0	0	0									itsababybox				loot		-1
+s026	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Serpent's Fangs	1	1	2		0	0	0									itsababybox				loot		-1
+s027	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Serpent's Tail	1	1	2		0	0	0									itsababybox				loot		-1
+s028	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Serpent's Tongue	1	1	2		0	0	0									itsababybox				loot		-1
+s029	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Dead Lens	1	1	2		0	0	0									itsababybox				loot		-1
+s030	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Hypersurface	1	1	2		0	0	0									itsababybox				loot		-1
+s031	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Killing Vector	1	1	2		0	0	0									itsababybox				loot		-1
+s032	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Quantum Bevel	1	1	2		0	0	0									itsababybox				loot		-1
+s033	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Vizjun's Engine	1	1	2		0	0	0									itsababybox				loot		-1
+s034	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Vizjun's Foresight	1	1	2		0	0	0									itsababybox				loot		-1
+s035	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Vizjun's Monitor	1	1	2		0	0	0									itsababybox				loot		-1
+s036	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Vizjun's Science	1	1	2		0	0	0									itsababybox				loot		-1
+s037	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Witchhunter's Crucifix	1	1	2		0	0	0									itsababybox				loot		-1
+s038	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Witchhunter's Faith	1	1	2		0	0	0									itsababybox				loot		-1
+s039	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Witchhunter's Hood	1	1	2		0	0	0									itsababybox				loot		-1
+s040	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Witchhunter's Ire	1	1	2		0	0	0									itsababybox				loot		-1
+s041	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Hunter's Camouflage	1	1	2		0	0	0									itsababybox				loot		-1
+s042	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Hunter's Claw Fist	1	1	2		0	0	0									itsababybox				loot		-1
+s043	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Hunter's Skin	1	1	2		0	0	0									itsababybox				loot		-1
+s044	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Hunter's Trackless Step	1	1	2		0	0	0									itsababybox				loot		-1
+s045	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Bear's Warding	1	1	2		0	0	0									itsababybox				loot		-1
+s046	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Snake's Battle Chant	1	1	2		0	0	0									itsababybox				loot		-1
+s047	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	The Coming Storm	1	1	2		0	0	0									itsababybox				loot		-1
+s048	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Wolf's Fang	1	1	2		0	0	0									itsababybox				loot		-1
+s049	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Avalanche	1	1	2		0	0	0									itsababybox				loot		-1
+s050	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Eruption	1	1	2		0	0	0									itsababybox				loot		-1
+s051	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Ravine	1	1	2		0	0	0									itsababybox				loot		-1
+s052	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Snowstorm	1	1	2		0	0	0									itsababybox				loot		-1
+s053	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Destiny	1	1	2		0	0	0									itsababybox				loot		-1
+s054	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Sacred Charge	1	1	2		0	0	0									itsababybox				loot		-1
+s055	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	The Guardian	1	1	2		0	0	0									itsababybox				loot		-1
+s056	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	The Protector	1	1	2		0	0	0									itsababybox				loot		-1
+s057	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Ancient Bronze	1	1	2		0	0	0									itsababybox				loot		-1
+s058	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Grey Ranger	1	1	2		0	0	0									itsababybox				loot		-1
+s059	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Steppe Sleeper	1	1	2		0	0	0									itsababybox				loot		-1
+s060	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Vale Hunter	1	1	2		0	0	0									itsababybox				loot		-1
+s061	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Marchosias' Anger	1	1	2		0	0	0									itsababybox				loot		-1
+s062	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Marchosias' Evil Grin	1	1	2		0	0	0									itsababybox				loot		-1
+s063	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Marchosias' Hatred	1	1	2		0	0	0									itsababybox				loot		-1
+s064	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Marchosias' Might	1	1	2		0	0	0									itsababybox				loot		-1
+s065	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Nature's Embrace	1	1	2		0	0	0									itsababybox				loot		-1
+s066	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Nature's Vigil	1	1	2		0	0	0									itsababybox				loot		-1
+s067	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Nature's Will	1	1	2		0	0	0									itsababybox				loot		-1
+s068	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Nature's Wrath	1	1	2		0	0	0									itsababybox				loot		-1
+s069	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Scosglen's History	1	1	2		0	0	0									itsababybox				loot		-1
+s070	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Scosglen's Legends	1	1	2		0	0	0									itsababybox				loot		-1
+s071	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Scosglen's Myths	1	1	2		0	0	0									itsababybox				loot		-1
+s072	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Scosglen's Tales	1	1	2		0	0	0									itsababybox				loot		-1
+s073	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Lone Wolf's Claws	1	1	2		0	0	0									itsababybox				loot		-1
+s074	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Lone Wolf's Fur	1	1	2		0	0	0									itsababybox				loot		-1
+s075	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Lone Wolf's Maul	1	1	2		0	0	0									itsababybox				loot		-1
+s076	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Lone Wolf's Track	1	1	2		0	0	0									itsababybox				loot		-1
+s077	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Emerald Cloud	1	1	2		0	0	0									itsababybox				loot		-1
+s078	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Emerald Earth	1	1	2		0	0	0									itsababybox				loot		-1
+s079	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Emerald Flower	1	1	2		0	0	0									itsababybox				loot		-1
+s080	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Emerald Sky	1	1	2		0	0	0									itsababybox				loot		-1
+s081	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Thorn	1	1	2		0	0	0									itsababybox				loot		-1
+s082	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Shell	1	1	2		0	0	0									itsababybox				loot		-1
+s083	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Breath	1	1	2		0	0	0									itsababybox				loot		-1
+s084	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Branches	1	1	2		0	0	0									itsababybox				loot		-1
+s085	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Achilios' Eagle Eye	1	1	2		0	0	0									itsababybox				loot		-1
+s086	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Achilios' Refuge	1	1	2		0	0	0									itsababybox				loot		-1
+s087	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Achilios' Sledgehammer	1	1	2		0	0	0									itsababybox				loot		-1
+s088	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Achilios' Stealth	1	1	2		0	0	0									itsababybox				loot		-1
+s089	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	The Dragon Grave	1	1	2		0	0	0									itsababybox				loot		-1
+s090	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Giyua's Sacrum	1	1	2		0	0	0									itsababybox				loot		-1
+s091	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Femur of the Prophet	1	1	2		0	0	0									itsababybox				loot		-1
+s092	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	The Trickster	1	1	2		0	0	0									itsababybox				loot		-1
+s093	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Rathma's Chase	1	1	2		0	0	0									itsababybox				loot		-1
+s094	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Rathma's Death Gaze	1	1	2		0	0	0									itsababybox				loot		-1
+s095	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Rathma's Skeleton	1	1	2		0	0	0									itsababybox				loot		-1
+s096	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Rathma's Tyranny	1	1	2		0	0	0									itsababybox				loot		-1
+s097	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Till We Have Heaven In Sight	1	1	2		0	0	0									itsababybox				loot		-1
+s098	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Through Death's Veil	1	1	2		0	0	0									itsababybox				loot		-1
+s099	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Lend Me Thy Light	1	1	2		0	0	0									itsababybox				loot		-1
+s100	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Archangel Dark Angel	1	1	2		0	0	0									itsababybox				loot		-1
+s101	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Tower Defense	1	1	2		0	0	0									itsababybox				loot		-1
+s102	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Tower Denial	1	1	2		0	0	0									itsababybox				loot		-1
+s103	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Tower Rush	1	1	2		0	0	0									itsababybox				loot		-1
+s104	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Tower Wall	1	1	2		0	0	0									itsababybox				loot		-1
+s105	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Cinadide's Anvil	1	1	2		0	0	0									itsababybox				loot		-1
+s106	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Cinadide's Bellows	1	1	2		0	0	0									itsababybox				loot		-1
+s107	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Cinadide's Bender	1	1	2		0	0	0									itsababybox				loot		-1
+s108	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Cinadide's Malus	1	1	2		0	0	0									itsababybox				loot		-1
+s109	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Hadriel's Avenger	1	1	2		0	0	0									itsababybox				loot		-1
+s110	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Hadriel's Presence	1	1	2		0	0	0									itsababybox				loot		-1
+s111	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Hadriel's Pure Heart	1	1	2		0	0	0									itsababybox				loot		-1
+s112	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Hadriel's Wings	1	1	2		0	0	0									itsababybox				loot		-1
+s113	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Imperius' Aura	1	1	2		0	0	0									itsababybox				loot		-1
+s114	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Imperius' Radiance	1	1	2		0	0	0									itsababybox				loot		-1
+s115	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Imperius' Sky Hammer	1	1	2		0	0	0									itsababybox				loot		-1
+s116	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Imperius' Winged Feet	1	1	2		0	0	0									itsababybox				loot		-1
+s117	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Malthael's Crown	1	1	2		0	0	0									itsababybox				loot		-1
+s118	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Malthael's Halo	1	1	2		0	0	0									itsababybox				loot		-1
+s119	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Malthael's Ward	1	1	2		0	0	0									itsababybox				loot		-1
+s120	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Malthael's Wrath	1	1	2		0	0	0									itsababybox				loot		-1
+s121	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Yaerius' Simulacrum	1	1	2		0	0	0									itsababybox				loot		-1
+s122	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Yaerius' Mediation	1	1	2		0	0	0									itsababybox				loot		-1
+s123	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Yaerius' Untruth	1	1	2		0	0	0									itsababybox				loot		-1
+s124	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Yaerius' Alembic	1	1	2		0	0	0									itsababybox				loot		-1
+s125	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Dyad	1	1	2		0	0	0									itsababybox				loot		-1
+s126	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Monad	1	1	2		0	0	0									itsababybox				loot		-1
+s127	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Tetrad	1	1	2		0	0	0									itsababybox				loot		-1
+s128	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Triad	1	1	2		0	0	0									itsababybox				loot		-1
+s129	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Elemental Clash	1	1	2		0	0	0									itsababybox				loot		-1
+s130	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Elemental Fury	1	1	2		0	0	0									itsababybox				loot		-1
+s131	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Elemental Spirit	1	1	2		0	0	0									itsababybox				loot		-1
+s132	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Elemental Storm	1	1	2		0	0	0									itsababybox				loot		-1
+s133	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Cauldron	1	1	2		0	0	0									itsababybox				loot		-1
+s134	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Pentacle	1	1	2		0	0	0									itsababybox				loot		-1
+s135	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Sacred Circle	1	1	2		0	0	0									itsababybox				loot		-1
+s136	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Witchblade	1	1	2		0	0	0									itsababybox				loot		-1
+s137	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Warmage's Breath	1	1	2		0	0	0									itsababybox				loot		-1
+s138	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Warmage's Fireblade	1	1	2		0	0	0									itsababybox				loot		-1
+s139	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Warmage's Flameshroud	1	1	2		0	0	0									itsababybox				loot		-1
+s140	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Warmage's Wake	1	1	2		0	0	0									itsababybox				loot		-1
+s141	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Zann Esu's Binding Circle	1	1	2		0	0	0									itsababybox				loot		-1
+s142	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Zann Esu's Charm	1	1	2		0	0	0									itsababybox				loot		-1
+s143	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Zann Esu's Robes	1	1	2		0	0	0									itsababybox				loot		-1
+s144	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Zann Esu's Rune Loop	1	1	2		0	0	0									itsababybox				loot		-1
+s145	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Vizjerei Judgment	1	1	2		0	0	0									itsababybox				loot		-1
+s146	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Vizjerei Brilliance	1	1	2		0	0	0									itsababybox				loot		-1
+s147	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Vizjerei Grip	1	1	2		0	0	0									itsababybox				loot		-1
+s148	Смешайте с двумя Arcane Crystal для создания \green;Комплектной Вещи\n\orange;Explorer's Cache	Vizjerei Cloak	1	1	2		0	0	0									itsababybox				loot		-1
 s@s	Assur's Bane		1	1	2		0	0	0									ring08				kill		-1
 sath	\grey;Квестовый Предмет\n\gold;Askari Call	\grey;Локация: Island of Skartara (Алтарь)\n\orange;Призывает Athulua, the Amazonian Goddess	1	1	2		120	0	0									invblackscroll				thng		-1
 sbag	\gold;Angel Bag	\grey;Смешайте 6 Angel Bag-ов для создания Six Angel Bag\n\nРеагент Куба	1	2	2		0	0	0									angelbag2				thng		-1
@@ -2075,6 +2236,7 @@ voi6	\purple;Scroll of Lust		1	1	2		0	0	0									invrsc				thng		-1
 vor1	Ring of Pride		1	1	2		0	0	0									invrinquest				kill		-1
 vor2	Sigil of Deadly Sins		1	1	2		0	0	0									invrinquest				kill		-1
 vps	Зелье выносливости		1	1	2		0	0	0									invwps				spot		-1
+vrx1	\purple;Mark of Victory	\gold;Horror Under Tristram (Uber)	1	1	2		0	0	0									MarkVictory				thng		-1
 w@w	Cold Fusion Schematics		1	1	2		0	0	0									invhscr2	255			grtz		-1
 wms	Зелье оттаивания		1	1	2		0	0	0									invyps				wpot		-1
 x01	Sacred Sunstone		1	1	2		0	0	0									ccama	255			araa		0

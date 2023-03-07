@@ -135,6 +135,8 @@ qmac	mace,ct1w		Mace (Sacred)
 mboq	bowq		Magic Bow Quiv
 mxbq	xboq		Magic Xbow Quiv
 mpot	poti		Mana Potion
+mw01	bow		Mastercrafted Bow
+mw02	knif		Mastercrafted Knife
 mcha	char	invch2,invch5,invch8	Medium Charm
 cyc2	cycl	invch2,invch5,invch8	Medium Cycle
 kill	misc	invrin1,invrin2,invrin3,invrin4,invrin5	Mega Ring

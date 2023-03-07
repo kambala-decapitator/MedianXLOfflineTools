@@ -300,7 +300,7 @@
 298		-1				
 299		-1				
 300		-1				
-301	Barrage	0	2	2	1	116
+301	Barrage	0	2	2	3	116
 302	Magic Missiles	0	6	2	1	66
 303		0				
 304	Balefire	-1	0	0	0	281
@@ -513,7 +513,7 @@
 511	Flametail Shot	-1	0	0	0	92
 512	Bloodstorm	-1	0	0	0	282
 513	Balefire	-1	0	0	0	281
-514		-1				
+514	Lava Pit	-1	6	2	3	98
 515		-1				
 516		-1				
 517		-1				
@@ -630,7 +630,7 @@
 628	Meteor Shower	-1	0	0	0	47
 629	Trinity Nova	-1	0	0	0	220
 630	Pentagram	-1	0	0	0	186
-631	Phalanx	-1	2	2	3	34
+631	Phalanx	-1	2	5	1	34
 632	Broadside	-1	2	5	2	68
 633	APF-20 'Maelstrom' MkI	-1	2	3	2	66
 634	Vampiric Icon	-1	8	1	3	88
@@ -647,7 +647,7 @@
 645		-1				
 646		-1				
 647	Stormclash	-1	0	0	0	204
-648		-1				
+648	Stormclash	-1	0	0	0	204
 649	Pyroblast	-1	2	3	3	98
 650	Cherubim	-1	0	0	0	190
 651	Slayer	-1	6	4	2	66
@@ -1026,9 +1026,9 @@
 1024		-1				
 1025	Bloodlust	-1	0	0	0	18
 1026	Trinity Arrow	0	2	1	2	30
-1027	Phalanx	0	2	2	3	34
-1028	Dragonlore	0	2	4	1	92
-1029	Wyrmshot	0	2	5	1	96
+1027	Phalanx	0	2	5	1	34
+1028	Dragonlore	0	2	2	2	92
+1029	Wyrmshot	0	2	4	2	96
 1030	Scorpion Sting	0	3	1	1	40
 1031	Eviscerate	0	3	3	2	44
 1032	Impale	0	3	1	2	46
@@ -1057,10 +1057,10 @@
 1055	Thundermaiden	0	5	1	2	112
 1056	Resistance	0	5	6	2	144
 1057	Askari Lightning	0	5	3	3	118
-1058	Elemental Command	0	2	4	2	120
-1059	\orange;Fire at Will	0	2	5	3	122
+1058	Elemental Command	0	2	4	3	120
+1059	\orange;Fire at Will	0	2	4	1	122
 1060	\orange;Fortitude	0	1	6	1	38
-1061	\orange;Keen Sight	0	2	6	2	124
+1061	\orange;Keen Sight	0	2	5	2	124
 1062	Shieldmaiden	0	3	4	2	126
 1063	Indomitable	0	3	5	2	32
 1064	\orange;Elemental Aegis	0	3	6	2	138
@@ -1081,7 +1081,7 @@
 1079	\orange;Crimson Rite	0	6	5	1	148
 1080	\orange;Forbidden Knowledge	0	6	5	3	152
 1081	Spiritual Invocation	0	6	5	2	158
-1082	SkillnameDecoy	0	2	3	3	162
+1082	Decoy	0	2	3	1	162
 1083		0				
 1084		0				
 1085		0				
@@ -1441,8 +1441,8 @@
 1439	\orange;Dirge	2	6	5	2	194
 1440	Soulchain	2	6	6	3	196
 1441	\orange;Blight Descent	2	3	4	3	198
-1442		2				
-1443		2				
+1442	Dragonfire Oil	2	0	0	0	136
+1443	Dragonfire Oil	2	0	0	0	136
 1444		2				
 1445		2				
 1446		2				
@@ -1570,11 +1570,11 @@
 1568	Nova Charge	1	8	3	3	102
 1569	Vengeful Power	1	8	5	1	142
 1570	Hive	1	8	5	3	68
-1571	Mooncall	1	6	1	1	70
+1571	Mooncall	1	6	1	2	70
 1572		1				
-1573	Fusillade	1	6	5	3	148
+1573	Fusillade	1	6	5	2	148
 1574		1				
-1575	Bladestorm	1	6	3	2	134
+1575	Bladestorm	1	6	2	2	134
 1576	Immersion	1	1	1	2	154
 1577	Raven Familiar	1	1	4	2	128
 1578		-1				
@@ -1600,13 +1600,13 @@
 1598	Blight	1	5	6	2	66
 1599	\orange;Incineration	1	2	3	1	30
 1600	\orange;Pyre	1	2	5	1	32
-1601	Paradigm Shift	1	6	1	3	84
-1602	\orange;Cold Blooded	1	6	2	3	82
+1601	Primordial Might	1	6	3	3	84
+1602	\orange;Cold Blooded	1	6	4	3	82
 1603	\orange;Premonition	1	6	6	3	86
-1604	\orange;Arcane Sustenance	1	6	5	2	160
+1604	\orange;Arcane Sustenance	1	6	6	1	160
 1605	Arcane Fury	1	1	6	2	116
-1606	Determination	1	6	4	1	162
-1607	Fatal Focus	1	6	6	1	80
+1606	Determination	1	6	3	1	162
+1607	Fatal Focus	1	6	4	1	80
 1608		1				
 1609		1				
 1610		1				
@@ -2239,7 +2239,7 @@
 2237		-1				
 2238		-1				
 2239		-1				
-2240		-1				
+2240	Flamefront	-1	2	1	3	92
 2241		-1				
 2242		-1				
 2243		-1				
@@ -2621,9 +2621,9 @@
 2619	Slicer Blade	-1	0	0	0	0
 2620	Lightning Arena	-1	0	0	0	184
 2621	Pestilence	-1	5	5	3	152
-2622	Barrage	-1	2	2	1	116
-2623	Phalanx	-1	2	2	3	34
-2624	Barrage	-1	2	2	1	116
+2622	Barrage	-1	2	2	3	116
+2623	Phalanx	-1	2	5	1	34
+2624	Barrage	-1	2	2	3	116
 2625	Pounce	-1	4	5	3	100
 2626	Flamestrike	-1	2	5	3	34
 2627	Thunder Slam	-1	2	2	2	34
@@ -2804,7 +2804,7 @@
 2802		-1				
 2803		-1				
 2804		-1				
-2805		-1				
+2805	Flamefront	-1	2	1	3	92
 2806		-1				
 2807		-1				
 2808		-1				
@@ -2812,7 +2812,7 @@
 2810		-1				
 2811		-1				
 2812		-1				
-2813	Flamefront	-1	2	1	3	92
+2813		-1				
 2814		-1				
 2815		-1				
 2816		-1				
@@ -2825,3 +2825,10 @@
 2823	Ice Bolt Nova	-1	0	0	0	195
 2824		-1				
 2825	Time Warp	-1	0	0	0	283
+2826		-1				
+2827		-1				
+2828		-1				
+2829		-1				
+2830		-1				
+2831		-1				
+2832		-1				

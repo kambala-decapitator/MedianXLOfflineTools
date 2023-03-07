@@ -989,11 +989,13 @@
 988	Guardian Spirit
 989	Defender Spirit
 990	Protector Spirit
+991	The Butcher
 992	Frozen Warlock
 993	Reignited Mage
 994	Voltaic Sorcerer
 995	The Prophet
 996	High Cleric
+997	The Butcher (Flameblast)
 998	Nun of Vanity
 999	Nun of Vanity
 1000	Nun of Vanity
@@ -1025,6 +1027,7 @@
 1026	Kabraxis
 1027	Thunder Bear
 1028	Wayfinder's Acolyte
+1029	Corpulent
 1031	Malic's Messenger
 1032	Venomcloud Totem
 1033	Sunless Angel
@@ -1149,7 +1152,7 @@
 1167	Ifrit
 1168	Hellion
 1169	Overseer
-1175	Divebomb
+1175	Foul Vermin
 1176	Nightmare
 1177	Quill Bear
 1178	Frost Raptor
@@ -2087,6 +2090,10 @@
 2165	Edyrem
 2166	Temple Spire
 2167	Disguised Edyrem
+2168	Unraveler
+2169	Tomb Terror
+2170	Abyss Lord
+2171	Sire of Darkness
 2172	Veil King
 2173	Hoplite
 2174	\red;Blinky
@@ -2103,6 +2110,13 @@
 2192	The Void (trap)
 2193	Pirate of the Twin Seas
 2194	Athulua, the Amazonian Goddess
+2195	\red;Nemesis
+2196	\red;Nemesis
+2197	\red;Nemesis
+2198	\red;Nemesis
+2199	\red;Nemesis
+2200	\red;Nemesis
+2201	\red;Nemesis
 2202	Blade Spirit
 2203	Disguised Edyrem
 2204	Sewer Rat
@@ -3376,3 +3390,8 @@
 3513	Nithogur (Remnant of Failure)
 3514	Nithogur, Heart of Tathamet
 3517	Deimoss (Judgment Day)
+3519	Commander
+3520	Architect
+3521	Befowler
+3522	Bulwark
+3523	Fetish Spirit

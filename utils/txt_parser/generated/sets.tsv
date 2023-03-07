@@ -1,6 +1,6 @@
 #index	part_prop1	part_param1	part_min1	part_max1	part_prop2	part_param2	part_min2	part_max2	part_prop3	part_param3	part_min3	part_max3	part_prop4	part_param4	part_min4	part_max4	part_prop5	part_param5	part_min5	part_max5	part_prop6	part_param6	part_min6	part_max6	part_prop7	part_param7	part_min7	part_max7	part_prop8	part_param8	part_min8	part_max8	full_prop1	full_param1	full_min1	full_max1	full_prop2	full_param2	full_min2	full_max2	full_prop3	full_param3	full_min3	full_max3	full_prop4	full_param4	full_min4	full_max4	full_prop5	full_param5	full_min5	full_max5	full_prop6	full_param6	full_min6	full_max6	full_prop7	full_param7	full_min7	full_max7	full_prop8	full_param8	full_min8	full_max8
 MREssence	83	5	1	1	76		6	6	359		30	30	36		10	10																	97	508	8	8	0		300	300	60		20	20	93		50	50	40,42,44,46		2	2	98	175	1	1	22		125	125				
-MSAchilios' Wake	0		50	50	22		20	20	39,41,43,45		50	50	83	2	2	2																	196	485	20	6	333		30	30	22		125	125	136		10	10	39,41,43,45		45	45	155	3375	2	2	93		50	50	98	175	1	1
+MSAchilios' Wake	0		50	50	22		20	20	39,41,43,45		50	50	83	2	2	2																	359		50	50	333		30	30	22		125	125	136		10	10	39,41,43,45		45	45	155	3375	2	2	93		50	50	98	175	1	1
 MSAdria's Circle	83	1	2	2	45		50	50	36		10	10	83	1	2	2																	39,41,43,45		30	30	431		25	25	338,339,340		20	20	0,1,2,3		50	50	83	1	5	5	332		50	50	393	1570	33	33	98	175	1	1
 MSBig Game Hunter	383	337	50	50	375	11529	5	5	21,22		25	50	136		10	10																	83	4	4	4	98	175	1	1	196	482	4	13	300	37	38	38	42		3	3	44		3	3	46		3	3	76		7	7
 MSCaoi Dulra	0,1,2,3		50	50	333		20	20	83	5	2	2	36		10	10																	21,22		50	75	0,1,2,3		150	150	155	3381	5	5	39,41,43,45		40	40	198	609	17	6	150		30	30	98	175	1	1	25		100	100
@@ -53,4 +53,4 @@ Set_Lazbro	487		25	25	470		25	25	444		100	100	500		50	50																	393	141
 Set_PewPew	127		2	2	359,360,361,362		15	15	39,41,43,45		25	25	333,334,335,336		25	25	36		10	10	141		5	5									98	175	1	1	86		150	150	329,330,331,332,357		35	35	20		1	1	96		50	50	39,41,43,45		30	30	31		1500	1500				
 Set_labrynth																																	97	2385	50	50	97	2386	50	50	182		-100	-100	40,42,44,46		15	15	36		50	50	39,41,43,45		400	400								
 Set_labrynth2																																	99,102,105,93		100	100	151	2388	1	1	108		1	1	7		1000	1000	39,41,43,45		-200	-200	181		1	1								
-Set_xaru	40		4	4	76		3	3	151	1890	12	12	375	11626	5	5																	0,1,2,3		75	75	333		60	60	329		50	50	98	186	1	1	97	1766	3	3	48,49		84	84	98	175	1	1	127		2	2
+Set_xaru	40		4	4	76		3	3	99,93,96,136	10	70	40	25		20	20																	0,1,2,3		75	75	333		60	60	329		50	50	98	186	1	1	97	1766	3	3	48,49		84	84	98	175	1	1	127		2	2
