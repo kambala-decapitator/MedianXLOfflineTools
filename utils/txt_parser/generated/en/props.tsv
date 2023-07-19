@@ -24,7 +24,7 @@
 22	0	11							to Maximum Damage	to Maximum Damage		1	171	1					maxdamage
 23	0	11							to Minimum Damage	to Minimum Damage		1	124	1					secondary_mindamage
 24	0	11							to Maximum Damage	to Maximum Damage		1	123	1					secondary_maxdamage
-25	500	11							Enhanced Weapon Damage	Enhanced Weapon Damage		4	123	2					damagepercent
+25	500	11							Weapon Physical Damage	Weapon Physical Damage		4	123	2					damagepercent
 26	0	10																	manarecovery
 27	100	9							Regenerate Mana	Regenerate Mana		4	74	2					manarecoverybonus
 28	0	10							Heal Stamina Plus	Heal Stamina Plus		2	72	2					staminarecoverybonus
@@ -170,9 +170,10 @@
 199	0	7							%d%% Chance to cast level %d %s when you Level-Up	%d%% Chance to cast level %d %s when you Level-Up		15	205					17	item_skillonlevelup
 200	0	7							\orange;Mega Impact\grey;	\orange;Mega Impact\grey;		3	247	0				17	item_megaimpact
 201	0	7							%d%% Chance to cast level %d %s when Struck	%d%% Chance to cast level %d %s when Struck		15	205					17	item_skillongethit
-203	0	10							Enhanced Weapon Damage	Enhanced Weapon Damage	(Based on Character Level)	8	83	2					item_totaldamage_perlevel
+203	0	10							Weapon Physical Damage	Weapon Physical Damage	(Based on Character Level)	8	83	2					item_totaldamage_perlevel
 204	0	16							(%d/%d Charges)	(%d/%d Charges)		24	8					16	item_charged_skill
 205	20	7							Maximum Avoid Chance	Maximum Avoid Chance		4	49	2					avoidcap
+206	0	8																17	innate-xbow-proc
 208	0	7							Life on Striking	Life on Striking		1	45	1					item_healonstriking
 209	0	7							Mana on Striking	Mana on Striking		1	44	1					item_manaonstriking
 210	0	10							Life on Melee Attack	Life on Melee Attack		1	43	1					skill_healonstrikingmelee
@@ -314,6 +315,10 @@
 418	0	2							\orange;Can Be Upgraded with Black Road Challenge	\orange;Can Be Upgraded with Black Road Challenge		3	225	0					item_needschallenged
 419	0	10																	goblincurse
 421	0	4																	scosglen_check
+422		8							Current Bonus:	Current Bonus:		2	194	2					BoneChimesDisplay1
+423		8																	BoneChimesValue
+424		8																	BoneChimesDummy
+425		5																	alchemy_oil_counter
 431	100	9							Bonus to Poison Skill Duration	Bonus to Poison Skill Duration		4	195	1					skill_poison_dur
 432	1	10																	minion_effect_bonus
 439	0	9							Life when Struck by an Enemy	Life when Struck by an Enemy		1	20	1					item_healwhenstruck
@@ -332,6 +337,7 @@
 453	1	5																	cube_upgrade_2
 454	1	5																	cube_upgrade_3
 455	1	5																	cube_upgrade_4
+456	1	5																	dummy_potion_stat
 457	0	10																	enabler
 462	0	8							Damage to Vessel of Justice	Damage to Vessel of Justice		4	187	1					skill_voj_mastery
 463	0	5																	item_class_spec

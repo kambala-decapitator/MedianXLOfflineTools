@@ -173,6 +173,7 @@
 203	0	10							Общий Физический Урон Оружия	Общий Физический Урон Оружия	(Основано на Уровне Персонажа)	8	83	2					item_totaldamage_perlevel
 204	0	16							(%d/%d Зарядов)	(%d/%d Зарядов)		24	8					16	item_charged_skill
 205	20	7							Макс. Шанс Избежать Урона	Макс. Шанс Избежать Урона		4	49	2					avoidcap
+206	0	8																17	innate-xbow-proc
 208	0	7							к Жизни при Попадании	к Жизни при Попадании		1	45	1					item_healonstriking
 209	0	7							к Мане при Попадании	к Мане при Попадании		1	44	1					item_manaonstriking
 210	0	10							к Жизни при Рукопашной Атаке	к Жизни при Рукопашной Атаке		1	43	1					skill_healonstrikingmelee
@@ -314,6 +315,10 @@
 418	0	2							\orange;Можно Улучшить Испытанием Черной Дороги	\orange;Можно Улучшить Испытанием Черной Дороги		3	225	0					item_needschallenged
 419	0	10																	goblincurse
 421	0	4																	scosglen_check
+422		8							Текущий Бонус:	Текущий Бонус:		2	194	2					BoneChimesDisplay1
+423		8																	BoneChimesValue
+424		8																	BoneChimesDummy
+425		5																	alchemy_oil_counter
 431	100	9							к Длительности Навыков Яда	к Длительности Навыков Яда		4	195	1					skill_poison_dur
 432	1	10																	minion_effect_bonus
 439	0	9							к Жизни при Получении Удара	к Жизни при Получении Удара		1	20	1					item_healwhenstruck
@@ -332,6 +337,7 @@
 453	1	5																	cube_upgrade_2
 454	1	5																	cube_upgrade_3
 455	1	5																	cube_upgrade_4
+456	1	5																	dummy_potion_stat
 457	0	10																	enabler
 462	0	8							к Урону Vessel of Justice	к Урону Vessel of Justice		4	187	1					skill_voj_mastery
 463	0	5																	item_class_spec

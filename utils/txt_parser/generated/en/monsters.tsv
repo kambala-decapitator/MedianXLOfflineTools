@@ -960,7 +960,7 @@
 958	Cow Ninja
 959	Cow Shaman
 960	Cow Summoner
-961	Death Projector
+961	Infernal Machine
 962	Azmodan, Lord of Sin
 963	Twilight Augur
 964	Akarat
@@ -1065,6 +1065,7 @@
 1069	Lord Aldric Jitan
 1070	Rakkis Guardsman
 1071	Citizen
+1072	DeathlyEffigy
 1076	Juris Khan, King of Ureh
 1079	Amazon Defender
 1080	Fallen Warrior
@@ -2362,8 +2363,8 @@
 2444	Samael, Herald of the End
 2445	Sacrificial Altar
 2446	Sacrificial Altar
-2447	Sacrificial Altar
-2448	Sacrificial Altar
+2447	Death Projector
+2448	Death Projector
 2449	Demonflesh Surrogate
 2450	Vorpal Elytron
 2451	Augmented Inquisitor
@@ -3395,3 +3396,14 @@
 3521	Befowler
 3522	Bulwark
 3523	Fetish Spirit
+3524	Commander
+3525	Architect
+3526	Befowler
+3527	Bulwark
+3528	Fetish Spirit
+3529	Infernal Machine
+3530	Infernal Machine
+3531	Hollow Sentinel
+3532	Infernal Machine
+3533	Infernal Machine
+3534	Rot Walker

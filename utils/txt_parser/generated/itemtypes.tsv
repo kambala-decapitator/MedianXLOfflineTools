@@ -195,7 +195,7 @@ rune	sock		Rune
 xxx4	misc		SAmu
 xxx2	bow		SBow
 xxx3	mele		SStaff
-xxx1	mele		SSword
+xxx1	swor		SSword
 sarm	ssgl		Sacred Armor
 #bow	bow		Sacred Bow
 ssgl	sign		Sacred Group

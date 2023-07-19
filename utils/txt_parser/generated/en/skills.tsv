@@ -335,9 +335,9 @@
 333		6				
 334		6				
 335		-1				
-336	Fortress	4	5	4	3	64
-337	Rebound	4	5	4	2	74
-338	Screaming Eagle	4	5	5	1	76
+336	Fortress	4	5	6	1	64
+337		4				
+338		4				
 339		4				
 340		4				
 341		4				
@@ -370,8 +370,8 @@
 368		-1				
 369	Sacrifices	2	1	3	2	70
 370	Attack	2	0	0	0	3
-371	Fragmentation Shot	2	4	2	2	132
-372	Widowmaker	2	4	3	1	56
+371	Catapult Shot	2	4	1	3	132
+372	Widowmaker	2	4	1	1	56
 373		-1				
 374		-1				
 375		-1				
@@ -484,7 +484,7 @@
 482	Blast Wave	-1	0	0	0	96
 483	Fire Cascade	-1	0	0	0	84
 484	Punishers	-1	0	0	0	69
-485	Spike Nova	-1	0	0	0	0
+485	Spike Nova	-1	0	0	0	285
 486	Rune of Ice	-1	0	0	0	34
 487	Pain Spirit	-1	0	0	0	88
 488	Sun Strike	-1	0	0	0	0
@@ -514,8 +514,8 @@
 512	Bloodstorm	-1	0	0	0	282
 513	Balefire	-1	0	0	0	281
 514	Lava Pit	-1	6	2	3	98
-515		-1				
-516		-1				
+515	Rebound	-1	0	0	0	284
+516	Screaming Eagle	-1	6	5	1	76
 517		-1				
 518		-1				
 519		-1				
@@ -582,13 +582,13 @@
 580	Punisher Bolt	-1	0	0	0	69
 581	Rotting Flesh	-1	0	0	0	0
 582	Goblin Glee	-1	0	0	0	0
-583	Snake Bite	-1	5	1	2	70
+583	Snake Bite	-1	5	2	1	70
 584	Sacrifices	-1	1	3	2	70
 585	Mana Sweep	-1	1	5	1	76
 586	Bolt	-1	0	0	0	0
 587	Lifeblood	-1	0	0	0	115
 588	Javelin	-1	0	0	0	0
-589	Fortress	-1	5	4	3	64
+589	Fortress	-1	5	6	1	64
 590	Cold Fear	-1	0	0	0	56
 591	Knife Throw	-1	0	0	0	0
 592	Vizjerei Rage	-1	0	0	0	0
@@ -653,7 +653,7 @@
 651	Slayer	-1	6	4	2	66
 652	Thunderstorm	-1	4	4	1	60
 653	Eldritch Storm	-1	6	2	2	64
-654		-1				
+654	Slayer	-1	6	4	2	66
 655		-1				
 656		-1				
 657		-1				
@@ -851,7 +851,7 @@
 849		-1				
 850		-1				
 851		-1				
-852		-1				
+852	Ice Bolt Nova	-1	0	0	0	195
 853		-1				
 854		-1				
 855		-1				
@@ -1225,9 +1225,9 @@
 1223	Ancient Blood	4	1	2	2	40
 1224	\orange;Wolven Guide	4	1	5	1	66
 1225	Mountain King	4	1	4	2	68
-1226	Snake Bite	4	5	1	2	70
-1227	Stampede	4	5	2	1	72
-1228	Overkill	4	5	6	2	100
+1226	Snake Bite	4	5	2	1	70
+1227	Stampede	4	5	1	2	72
+1228	Overkill	4	5	2	3	100
 1229	Immortal	4	8	1	1	104
 1230	Thundergod	4	8	1	3	90
 1231	Runemaster	4	8	4	2	84
@@ -1245,8 +1245,8 @@
 1243	\orange;Lifestealer	4	3	5	3	124
 1244	\orange;Hunter's Mark	4	1	3	1	58
 1245	\orange;Primordial Hunt	4	1	6	1	78
-1246	\orange;Violence	4	5	2	2	136
-1247	\orange;Citadel	4	5	5	3	134
+1246	Bloodthirst	4	5	3	2	136
+1247	\orange;Citadel	4	5	6	2	134
 1248	Spirit Reave	4	6	4	3	88
 1249	Primordial Strike	4	4	5	2	110
 1250	\orange;Upheaval	4	2	2	1	120
@@ -1258,12 +1258,12 @@
 1256	\orange;Galvanism	4	4	2	3	144
 1257	\orange;Ancestral Endurance	4	6	5	3	148
 1258	\orange;Tectonics	4	2	5	1	142
-1259	\orange;Honing	4	5	2	3	146
-1260		4				
-1261		4				
-1262		4				
-1263		4				
-1264		4				
+1259		4				
+1260	Mighty Vigor	4	5	4	1	152
+1261	Pillage	4	5	5	2	146
+1262	Unyielding	4	5	4	3	154
+1263	Aptitude	4	5	5	1	156
+1264	Warder	4	5	5	3	150
 1265		4				
 1266		4				
 1267		4				
@@ -1409,8 +1409,8 @@
 1407		-1				
 1408	Stormeye Totem	2	6	1	2	78
 1409		-1				
-1410	Death Shards	2	4	5	1	100
-1411	Dragonfire Oil	2	4	2	3	136
+1410	Debilitating Concoction	2	4	5	3	100
+1411	Alchemical Preparation	2	4	4	3	180
 1412	Talon's Hold	2	8	1	1	54
 1413		-1				
 1414	Thunder Wave	-1	0	0	0	0
@@ -1422,7 +1422,7 @@
 1420		-1				
 1421		-1				
 1422	Graveyard	2	8	1	3	98
-1423	\orange;Mold the Flesh	2	1	2	1	30
+1423	\orange;Mold the Flesh	2				30
 1424	\orange;Grim Vision	2	2	1	3	32
 1425	\orange;Violent Immolation	2	2	2	1	34
 1426	\orange;Chaos Nova	2	2	3	3	36
@@ -1431,9 +1431,9 @@
 1429	\orange;Reaper	2	3	2	3	40
 1430	Ominous Vigor	2	3	6	3	44
 1431	\orange;Demonic Commune	2	3	6	1	46
-1432	\orange;Carrion Drain	2	4	6	2	180
-1433	Buckshot	2	4	1	1	182
-1434	\orange;Ignite	2	4	4	2	184
+1432		2				
+1433	Flameburst Shot	2	4	3	3	182
+1434	\orange;Ignite	2				184
 1435	Occult Path	2	5	2	2	186
 1436	Exile	2	5	5	2	188
 1437	\orange;Terror	2	5	5	1	190
@@ -1441,13 +1441,13 @@
 1439	\orange;Dirge	2	6	5	2	194
 1440	Soulchain	2	6	6	3	196
 1441	\orange;Blight Descent	2	3	4	3	198
-1442	Dragonfire Oil	2	0	0	0	136
-1443	Dragonfire Oil	2	0	0	0	136
-1444		2				
+1442	Voodoo Practice	2	4	5	1	200
+1443	Life From Death	2	4	6	2	184
+1444	Deathly Effigy	2	4	3	1	204
 1445		2				
 1446		2				
 1447		2				
-1448		2				
+1448	\orange;Brutal Effigy	2	4	4	2	202
 1449		2				
 1450		2				
 1451		2				
@@ -2627,7 +2627,7 @@
 2625	Pounce	-1	4	5	3	100
 2626	Flamestrike	-1	2	5	3	34
 2627	Thunder Slam	-1	2	2	2	34
-2628	Snake Bite	-1	5	1	2	70
+2628	Snake Bite	-1	5	2	1	70
 2629	Rend	-1	2	1	2	120
 2630		-1				
 2631	Infected Roots	-1	1	2	1	74
@@ -2804,7 +2804,7 @@
 2802		-1				
 2803		-1				
 2804		-1				
-2805	Flamefront	-1	2	1	3	92
+2805		-1				
 2806		-1				
 2807		-1				
 2808		-1				
@@ -2812,7 +2812,7 @@
 2810		-1				
 2811		-1				
 2812		-1				
-2813		-1				
+2813	Flamefront	-1	2	1	3	92
 2814		-1				
 2815		-1				
 2816		-1				
@@ -2832,3 +2832,9 @@
 2830		-1				
 2831		-1				
 2832		-1				
+2833		-1				
+2834		-1				
+2835		-1				
+2836		-1				
+2837		-1				
+2838		-1				
