@@ -519,11 +519,11 @@ w99	Avenger Guard (3)		2	2	0		23	219	0									invba5				phlm,tier		4
 !67	Marrow Staff (3)		2	4	1		25	112	0		1			25	32			inv8wsu	0	6	0	nstf,tier	1	2
 !68	Marrow Staff (4)		2	4	1		29	222	0		1			29	38			inv8wsu	0	6	0	nstf,tier	1	2
 !69	Marrow Staff (Sacred)		2	4	1		30	275	0		1			45	49			inv8wsu	0	6	0	snst	1	2
-!70	Hexblade (1)		1	3	1		2	0	27			4	6					invkrsu	0	0	13	nknf,tier	1	2
-!72	Hexblade (2)		1	3	1		12	0	53			8	12					invkrsu	0	0	13	nknf,tier	1	2
-!74	Hexblade (3)		1	3	1		22	0	114			11	20					invkrsu	0	0	13	nknf,tier	1	2
-!75	Hexblade (4)		1	3	1		27	0	233			13	24					invkrsu	0	0	13	nknf,tier	1	2
-!76	Hexblade (Sacred)		1	3	1		30	0	463			26	49					invkrsu	0	0	13	snkf	1	2
+!70	Hexblade (1)		1	3	1		2	0	27							1	1	invkrsu	0	0	0	nknf,el1x	1	2
+!72	Hexblade (2)		1	3	1		12	0	53							1	1	invkrsu	0	0	0	nknf,el1x	1	2
+!74	Hexblade (3)		1	3	1		22	0	114							1	1	invkrsu	0	0	0	nknf,el1x	1	2
+!75	Hexblade (4)		1	3	1		27	0	233							1	1	invkrsu	0	0	0	nknf,el1x	1	2
+!76	Hexblade (Sacred)		1	3	1		30	0	463							1	1	invkrsu	0	0	0	snkf,el1x	1	2
 !77	Spirit Edge (1)		1	3	1		5	0	67			5	7					inv9blu	0	0	13	nknf,tier	1	2
 !79	Spirit Edge (2)		1	3	1		15	0	104			11	17					inv9blu	0	0	13	nknf,tier	1	2
 !81	Spirit Edge (3)		1	3	1		25	0	207			15	29					inv9blu	0	0	13	nknf,tier	1	2
@@ -1262,7 +1262,7 @@ wol	Wirt's Other Leg		1	3	1		115	0	0			13	18					invwol		0	0	wrtl	1	-1
 38+	\orange;Mystic Orb	Right-Click to Apply	1	1	2		0	0	0									orb_weap				myst		-1
 39+	\orange;Mystic Orb	Right-Click to Apply	1	1	2		0	0	0									orb_weap				myst		-1
 3o[	\gold;Catalyst of Disenchantment	90\nDisenchanting:\nYou can create Arcane Shards by \nconsuming Tiered (#) Uniques \nyou no longer need.\n\nCatalyst + Tiered Uniques (max 10) \n--> Arcane Shards\n	1	1	2		0	0	0									catal2	255			thng		-1
-3p[	Cube Reagent\n\orange;Oil of Lesser Alchemy	90\nThe Oil of Lesser Alchemy\nallows you to craft amulets:\n\nOil + Set Amulet\n--> Crafted Amulet\nwith +1 to All Skills\n\nAdd one affix at random:\n------------------------------\n10% Movement Speed\n+100 Life regenerated per Second\n+7% Innate Elemental Damage\n+5% Vitality\n+5% Energy\n-5% Enemy Elemental Resistances\n+5% Physical Resist\n+25% Weapon Physical Damage\nPoison Length Reduced by 20%\nCurse Length Reduced by 20%\n	1	1	2		0	0	0									oil_alchemy				thng		-1
+3p[	FLYING POLAR BUFFALO ERROR	90\nThe Oil of Lesser Alchemy\nallows you to craft amulets:\n\nOil + Set Amulet\n--> Crafted Amulet\nwith +1 to All Skills\n\nAdd one affix at random:\n------------------------------\n10% Movement Speed\n+100 Life regenerated per Second\n+7% Innate Elemental Damage\n+5% Vitality\n+5% Energy\n-5% Enemy Elemental Resistances\n+5% Physical Resist\n+25% Weapon Physical Damage\nPoison Length Reduced by 20%\nCurse Length Reduced by 20%\n	1	1	2		0	0	0									oil_alchemy				thng		-1
 40+	\orange;Mystic Orb	Right-Click to Apply	1	1	2		0	0	0									orb_weap				myst		-1
 46+	\orange;Mystic Orb	Right-Click to Apply	1	1	2		0	0	0									orb_armo				myst		-1
 47+	\orange;Mystic Orb	Right-Click to Apply	1	1	2		0	0	0									orb_armo				myst		-1
@@ -1528,10 +1528,12 @@ aqv	Arrow Quiver		1	3	2	1	0	0	0									invqvr				bowq	2	-1
 ass	Right Click to learn skill of your choice\nBook of Skill		2	2	2		0	0	0									invsbk	15			ques		-1
 asx	\orange;Arcane Cluster	(Right Click to Collect)	1	1	2		0	0	0									invsr6				thng		-1
 az!	Fool's Gold		1	1	2		0	0	0									invgldm	255			grtz		-1
-b60	\purple;The Butcher's Tooth (Uber)		1	1	2		120	0	0									invfang	255			grtz		-1
-b60X	\dgrey;Quest Item\n\gold;Scroll of Summoning	\gold;Horror Under Tristram (Uber)	1	1	2		120	0	0									invrsc				thng		-1
-b61	\purple;Laser Focus Crystal (Uber)		1	1	2		121	0	0									invdss	255			grtz		-1
-b61X	\dgrey;Quest Item\n\gold;Scroll of Summoning	\gold;Death Projector (Uber)	1	1	2		121	0	0									invrsc				thng		-1
+b60	\purple;The Butcher's Tooth (Heroic)		1	1	2		120	0	0									invfang	255			grtz		-1
+b60X	\dgrey;Quest Item\n\gold;Scroll of Summoning	\gold;Horror Under Tristram (Heroic)	1	1	2		120	0	0									invrsc				thng		-1
+b61	\purple;Laser Focus Crystal (Heroic)		1	1	2		121	0	0									invdss	255			grtz		-1
+b61X	\dgrey;Quest Item\n\gold;Scroll of Summoning	\gold;Death Projector (Heroic)	1	1	2		121	0	0									invrsc				thng		-1
+b62	\purple;Optical Detector (Heroic)		1	1	2		122	0	0									inveye	255			grtz		-1
+b62X	\dgrey;Quest Item\n\gold;Scroll of Summoning	\gold;Infernal Machine (Heroic)	1	1	2		122	0	0									invrsc				thng		-1
 b@b	\red;Goodberry	A magical fruit of the Glor-An-Fhaidha...	1	1	2		666	0	0									cherries				hpot		-1
 bbb	Lam Esen's Tome		2	2	2		0	0	0									invbbb	16			ques		-1
 bkd	Key to the Cairn Stones		2	2	2		0	0	0									invscb	5			ques		-1
@@ -1655,6 +1657,12 @@ dy20	\orange;Mystic Dye	\blue;Color: Orange\n\grey;Right-click to set item color
 dy21	\orange;Mystic Dye	\blue;Color: Bright White\n\grey;Right-click to set item color	1	1	2		0	0	0									dye-bwht-21				thng		-1
 dy99	\orange;Mystic Dye	dy99-Desc	1	1	2		0	0	0									dye-rainbow				thng		-1
 ear	Ear		1	1	2		0	0	0									invear				play		-1
+ebs1	Cube Reagent\n\orange;Oil of Greater Alchemy (1)	90\nThe Oil of Greater Alchemy\nallows you to craft amulets:\n\nOil + Set Amulet\n--> Crafted Amulet\nwith +1 to All Skills\n\nAdd one affix at random:\n------------------------------\n20% Movement Speed\n+200 Life regenerated per Second\n+15% Innate Elemental Damage\n+10% Vitality\n+10% Energy\n-10% Enemy Elemental Resistances\n+10% Physical Resist\n+50% Weapon Physical Damage\nPoison Length Reduced by 40%\nCurse Length Reduced by 40%\n	1	1	2		0	0	0									oil_alchemy_L				thng		-1
+ebs2	Cube Reagent\n\orange;Oil of Greater Alchemy (2)	90\nThe Oil of Greater Alchemy\nallows you to craft amulets:\n\nOil + Set Amulet\n--> Crafted Amulet\nwith +1 to All Skills\n\nAdd one affix at random:\n------------------------------\n20% Movement Speed\n+200 Life regenerated per Second\n+15% Innate Elemental Damage\n+10% Vitality\n+10% Energy\n-10% Enemy Elemental Resistances\n+10% Physical Resist\n+50% Weapon Physical Damage\nPoison Length Reduced by 40%\nCurse Length Reduced by 40%\n	1	1	2		0	0	0									oil_alchemy_L				thng		-1
+ebs3	Cube Reagent\n\orange;Oil of Greater Alchemy (3)	90\nThe Oil of Greater Alchemy\nallows you to craft amulets:\n\nOil + Set Amulet\n--> Crafted Amulet\nwith +1 to All Skills\n\nAdd one affix at random:\n------------------------------\n20% Movement Speed\n+200 Life regenerated per Second\n+15% Innate Elemental Damage\n+10% Vitality\n+10% Energy\n-10% Enemy Elemental Resistances\n+10% Physical Resist\n+50% Weapon Physical Damage\nPoison Length Reduced by 40%\nCurse Length Reduced by 40%\n	1	1	2		0	0	0									oil_alchemy_L				thng		-1
+ebt1	Cube Reagent\n\orange;Oil of Lesser Alchemy (1)	90\nThe Oil of Lesser Alchemy\nallows you to craft amulets:\n\nOil + Set Amulet\n--> Crafted Amulet\nwith +1 to All Skills\n\nAdd one affix at random:\n------------------------------\n10% Movement Speed\n+100 Life regenerated per Second\n+7% Innate Elemental Damage\n+5% Vitality\n+5% Energy\n-5% Enemy Elemental Resistances\n+5% Physical Resist\n+25% Weapon Physical Damage\nPoison Length Reduced by 20%\nCurse Length Reduced by 20%\n	1	1	2		0	0	0									oil_alchemy				thng		-1
+ebt2	Cube Reagent\n\orange;Oil of Lesser Alchemy (2)	90\nThe Oil of Lesser Alchemy\nallows you to craft amulets:\n\nOil + Set Amulet\n--> Crafted Amulet\nwith +1 to All Skills\n\nAdd one affix at random:\n------------------------------\n10% Movement Speed\n+100 Life regenerated per Second\n+7% Innate Elemental Damage\n+5% Vitality\n+5% Energy\n-5% Enemy Elemental Resistances\n+5% Physical Resist\n+25% Weapon Physical Damage\nPoison Length Reduced by 20%\nCurse Length Reduced by 20%\n	1	1	2		0	0	0									oil_alchemy				thng		-1
+ebt3	Cube Reagent\n\orange;Oil of Lesser Alchemy (3)	90\nThe Oil of Lesser Alchemy\nallows you to craft amulets:\n\nOil + Set Amulet\n--> Crafted Amulet\nwith +1 to All Skills\n\nAdd one affix at random:\n------------------------------\n10% Movement Speed\n+100 Life regenerated per Second\n+7% Innate Elemental Damage\n+5% Vitality\n+5% Energy\n-5% Enemy Elemental Resistances\n+5% Physical Resist\n+25% Weapon Physical Damage\nPoison Length Reduced by 20%\nCurse Length Reduced by 20%\n	1	1	2		0	0	0									oil_alchemy				thng		-1
 ebu	Essence of Time		1	1	2		0	0	0									essenceoftime	255			grtz		-1
 ebv	Relic		1	1	2		0	0	0									darkremnant	255			grtz		-1
 ebw	Dimensional Key		1	1	2		0	0	0									DimensionalKey	255			grtz		-1
@@ -1781,7 +1789,7 @@ gsv	\purple;Amethyst		1	1	2		12	0	0									invgsvc				gema,gem2		-1
 gsw	\purple;Diamond		1	1	2		12	0	0									invgswc				gemd,gem2		-1
 gsy	\purple;Topaz		1	1	2		12	0	0									invgsyc				gemt,gem2		-1
 gzv	\purple;Flawless Amethyst		1	1	2		15	0	0									invgsvd				gema,gem3		-1
-hnrx	Cube Reagent\n\orange;Mark of Infusion	\yellow;which receive Double Bonuses from Mystic Orbs\nHonorifics are Blank Items with Maximum Sockets\n\grey;Cube with Magic Weapon/Armor to create Honorific Item\n	1	1	2		0	0	0									cuscross				thng		-1
+hnrx	Cube Reagent\n\orange;Mark of Infusion	\yellow;which receive Double Bonuses from Mystic Orbs\nHonorifics are Blank Items with Maximum Sockets\n\grey;Cube with Magic or Rare Weapon/Armor to create Honorific Item\n	1	1	2		0	0	0									cuscross				thng		-1
 hp1	Minor Healing Potion	Duration: 7 seconds\nRegenerates 10% of Maximum Life (up to 15 000) per second	1	1	2		0	0	0									invhp1				hpot		-1
 hp2	Light Healing Potion	Duration: 7 seconds\nRegenerates 11% of Maximum Life (up to 15 000) per second	1	1	2		0	0	0									invhp2				hpot		-1
 hp3	Healing Potion	Duration: 7 seconds\nRegenerates 12% of Maximum Life (up to 15 000) per second	1	1	2		0	0	0									invhp3				hpot		-1
@@ -1814,7 +1822,7 @@ ir70	\grey;Quest Item\n\gold;Whisper of the Damned	Transmute three Whispers to r
 ir75	\grey;Quest Item\n\gold;Call of the Damned	\red;Works only on Hell difficulty\n\grey;Right click to answer the call of the Damned	1	1	2		120	0	0									invrsc				thng		-1
 ir76	Bone Chimes		1	2	2		120	0	0									bonechimes	255			grtz		-1
 ir81	\orange;Occult Effigy\nCelestial Wind	\blue;+10 Required Level\nSet Movement Speed to 40%\n\grey;Cube with Boots to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									OccultOrb				thng		-1
-ir82	\orange;Occult Effigy\nSigil of Absolution	\blue;(Max 2 Uses per Item)\nRequirements +25%\n-5 Required Level\n\grey;Cube with Any Weapon/Armor to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									OccultOrb				thng		-1
+ir82	\orange;Occult Effigy\nSigil of Absolution	\blue;Cannot be Used with Runewords\n(Max 2 Uses per Item)\nRequirements +25%\n-5 Required Level\n\grey;Cube with Any Weapon/Armor to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									OccultOrb				thng		-1
 ir83	\orange;Occult Effigy\nPath of Brutality	\blue;+10 Required Level\nItem Becomes (Your Class Only)\nTransforms every +1 to All Skills to +3% Deadly Strike\n\grey;Cube with Unique Ring/Amulet to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									OccultOrb				thng		-1
 ir84	\orange;Occult Effigy\nEmpyrean Touch	\blue;+10 Required Level\nItem Becomes Ethereal\n\grey;Cube with Any Weapon/Armor to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									OccultOrb				thng		-1
 ir85	\orange;Occult Effigy\nElemental Ire	\blue;+10 Required Level\nAdds 40-60 Lightning Damage\nAdds 40-60 Fire Damage\n\grey;Cube with a Quiver to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									OccultOrb				thng		-1
@@ -1881,7 +1889,7 @@ mpo	FLYING POLAR BUFFALO ERROR		1	1	2		0	0	0									invbps				mpot		-1
 mss	Mephisto's Soulstone		1	1	2		0	0	0									invmss	23			ques		-1
 o@o	\grey;Quest Item\n\gold;Eyegouger's Sigil	Cube All 5 Sigils with Ring of the Five\n	1	1	2		0	0	0									ring06				thng		-1
 obox	\red;Corrupted Treasure	(Better items and more gold cost the higher the rune)\nRestore Gold Cost: 20,000 - 500,000\nCube with Arcane Crystal and Enchanted Rune to Restore	2	2	2		0	0	0									illbeblack				loot		-1
-ooc	Cube Reagent\n\orange;Oil of Conjuration	70\nThe Oil of Conjuration has a chance to \nadd an extra bonus to caster weapons, \ninstead of using the lucky recipe.\n\nDoes not work on normal/superior items.\n\nOil + Weapon\n--> Item with 2/5 Chance of Added Bonus\n(Limit: 1)\n\nWeapons: +10% Spell Damage\n	1	1	2		0	0	0									oil_conjuration				thng		-1
+ooc	Cube Reagent\n\orange;Oil of Conjuration	70\nThe Oil of Conjuration has a chance to \nadd an extra bonus to caster weapons, \ninstead of using the lucky recipe.\n\nOil + Weapon\n--> Item with 2/5 Chance of Added Bonus\n(Limit: 1)\n\nWeapons: +10% Spell Damage\n	1	1	2		0	0	0									oil_conjuration				thng		-1
 p@p	\grey;Quest Item\n\gold;Fleshcutter's Sigil	Cube All 5 Sigils with Ring of the Five\n	1	1	2		0	0	0									ring07				thng		-1
 pacb	\orange;Home Cherry	\dgrey;Do NOT tell anyone what you just saw\nThese cherries will take you back home safely	1	1	2		0	0	0									cherries				thng		-1
 q@q	\grey;Quest Item\n\gold;Bonehexer's Sigil	Cube All 5 Sigils with Ring of the Five\n	1	1	2		0	0	0									ring09				thng		-1
@@ -2238,8 +2246,9 @@ voi6	\purple;Scroll of Lust		1	1	2		0	0	0									invrsc				thng		-1
 vor1	Ring of Pride		1	1	2		0	0	0									invrinquest				kill		-1
 vor2	Sigil of Deadly Sins		1	1	2		0	0	0									invrinquest				kill		-1
 vps	Stamina Potion		1	1	2		0	0	0									invwps				spot		-1
-vrx1	\purple;Mark of Victory	\gold;Horror Under Tristram (Uber)	1	1	2		0	0	0									MarkVictory				thng		-1
-vrx2	\purple;Mark of Victory	\gold;Death Projector (Uber)	1	1	2		0	0	0									MarkVictory				thng		-1
+vrx1	\purple;Mark of Victory	\gold;Horror Under Tristram (Heroic)	1	1	2		0	0	0									MarkVictory				thng		-1
+vrx2	\purple;Mark of Victory	\gold;Death Projector (Heroic)	1	1	2		0	0	0									MarkVictory				thng		-1
+vrx3	\purple;Mark of Victory	\gold;Infernal Machine (Heroic)	1	1	2		0	0	0									MarkVictory				thng		-1
 w@w	Cold Fusion Schematics		1	1	2		0	0	0									invhscr2	255			grtz		-1
 wms	Thawing Potion		1	1	2		0	0	0									invyps				wpot		-1
 x01	Sacred Sunstone		1	1	2		0	0	0									ccama	255			araa		0

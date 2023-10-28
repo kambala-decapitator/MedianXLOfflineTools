@@ -20,30 +20,30 @@ g$c	\purple;Onyx		43		12							150		1							470		3
 g$d	\purple;Flawless Onyx		43		16							150		2							470		4						
 g$e	\purple;Perfect Onyx		43		20	44		1				150		2							470		5						
 gcb	\purple;Chipped Sapphire		43		4							43		6							138		2						
-gcg	\purple;Chipped Emerald		74		4							45		6							22		1						
+gcg	\purple;Chipped Emerald		74		20							45		6							22		1						
 gcr	\purple;Chipped Ruby		362		1							39		6							86		2						
 gcv	\purple;Chipped Amethyst		360		1							440		1							119		10						
 gcw	\purple;Chipped Diamond		359		1							39,41,43,45		1							329,330,331,332,357		1						
 gcy	\purple;Chipped Topaz		361		1							41		6							485		6						
 gfb	\purple;Flawed Sapphire		43		8							43		12							138		3						
-gfg	\purple;Flawed Emerald		74		8							45		12							22		2						
+gfg	\purple;Flawed Emerald		74		40							45		12							22		2						
 gfr	\purple;Flawed Ruby		362		1							39		12							86		4						
 gfv	\purple;Flawed Amethyst		360		2							440		2							119		20						
 gfw	\purple;Flawed Diamond		359		2							39,41,43,45		2							329,330,331,332,357		1						
 gfy	\purple;Flawed Topaz		361		2							41		12							485		7						
 glb	\purple;Flawless Sapphire		43		16							43		24							138		6						
-glg	\purple;Flawless Emerald		74		16							45		24							22		4						
+glg	\purple;Flawless Emerald		74		80							45		24							22		4						
 glr	\purple;Flawless Ruby		362		3							39		24							86		8						
 glw	\purple;Flawless Diamond		359		4							39,41,43,45		4							329,330,331,332,357		2						
 gly	\purple;Flawless Topaz		361		4							41		24							485		9						
 gpb	\purple;Perfect Sapphire		43		20							43		30							138		8						
-gpg	\purple;Perfect Emerald		74		20							45		30							22		5						
+gpg	\purple;Perfect Emerald		74		100							45		30							22		5						
 gpr	\purple;Perfect Ruby		362		4							39		30							86		10						
 gpv	\purple;Perfect Amethyst		360		5							440		5							119		50						
 gpw	\purple;Perfect Diamond		359		5							39,41,43,45		5							329,330,331,332,357		3						
 gpy	\purple;Perfect Topaz		361		5							41		30							485		10						
 gsb	\purple;Sapphire		43		12							43		18							138		5						
-gsg	\purple;Emerald		74		12							45		18							22		3						
+gsg	\purple;Emerald		74		60							45		18							22		3						
 gsr	\purple;Ruby		362		2							39		18							86		6						
 gsv	\purple;Amethyst		360		3							440		3							119		30						
 gsw	\purple;Diamond		359		3							39,41,43,45		3							329,330,331,332,357		2						

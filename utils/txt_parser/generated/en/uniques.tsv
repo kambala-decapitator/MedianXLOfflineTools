@@ -1417,7 +1417,7 @@
 1415	Griefbringer	100	105	
 1416	Ophiophagus	120	120	
 1417	Penumbra	100	105	
-1418	Sky Murder	100	130	invtk3
+1418	Sky Murder	100	120	invtk3
 1419	Zann Prodigy	100	105	
 1420	Lachdanan's Visage	100	120	
 1421	Tylwulf's Betrayal	100	105	
@@ -1746,7 +1746,7 @@
 1744	Coldhunger	100	105	
 1745	Dreamweaver	100	105	
 1746	Manastorm	100	105	
-1747	Daydreamer	130	130	
+1747	Daydreamer	130	120	
 1748	Dark Guardian	100	105	
 1749	Feardrinker	100	120	
 1750	Bone Chimes	120	1	
@@ -1762,16 +1762,16 @@
 1760	Bone Chimes	120	1	
 1761	Bone Chimes	120	1	
 1762	Ribcracker	100	120	
-1763	Blood of Creation	90	150	
-1764	Blood of Creation	90	150	
-1765	Blood of Creation	100	150	
+1763	Blood of Creation	50	150	
+1764	Blood of Creation	50	150	
+1765	Blood of Creation	50	150	
 1766	Blood of Creation	1	150	
 1767	Blood of Creation	90	150	
-1768	\purple;The Butcher's Tooth (Uber)	120	1	
+1768	\purple;The Butcher's Tooth (Heroic)	120	1	
 1769	Blood of Creation	10	150	
-1770	Blood of Creation	90	150	
-1771	\purple;Laser Focus Crystal (Uber)	121	1	
-1772	ghist way	0	0	
+1770	Blood of Creation	50	150	
+1771	\purple;Laser Focus Crystal (Heroic)	121	1	
+1772	\purple;Optical Detector (Heroic)	122	1	
 1773	ghist way	0	0	
 1774	ghist way	0	0	
 1775	ghist way	0	0	
@@ -1792,3 +1792,5 @@
 1790	Lylia's Curse	120	1	
 1791	Lylia's Curse	120	1	
 1792	Shock and Awe	100	120	
+1793	Bulwark of the Archon	100	105	
+1794	Scirocco	100	105	

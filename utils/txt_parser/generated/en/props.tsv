@@ -203,7 +203,7 @@
 252	0	6							Repairs %d Durability per Second	Repairs %d Durability per Second		0	7	0					item_replenish_durability
 253	0	6							Replenishes Quantity	Replenishes Quantity		3	8	0					item_replenish_quantity
 254	0	8							Increased Stack Size	Increased Stack Size		3	9	0					item_extra_stack
-257	1	2							\orange;Parasite Gains 12 Additional Targets\blue;	\orange;Nephalem: +25% Total Vessel Damage Bonus from Passives\nUnholy: Blood Thorns Deal 40% More Total Damage\nHoly: Holy Fire Deals 4.5% of  Strength as More Total Damage (max 250%)\blue;		3	240	0					vessel_mod
+257	1	2							\orange;Parasite Gains 12 Additional Targets\blue;	\orange;Nephalem: +25% Total Vessel Damage Bonus from Passives\nUnholy: Blood Thorns: +40% Damage Multiplier\nHoly: Holy Fire Deals 4.5% of  Strength as More Total Damage (max 250%)\blue;		3	240	0					vessel_mod
 259	1	10							Charges:	Charges:		3	250	2					charge_counter
 260	0	7							\orange;Thunderfury\grey;	\orange;Thunderfury\grey;		3	247	0				17	item_thunderfury
 261	0	5							Extra Totems	Extra Totems		1	196	1					new_totem_syn
