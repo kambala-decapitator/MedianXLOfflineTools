@@ -353,6 +353,8 @@
 473	0	4							\green;Unlocks your Ennead Skill	\green;Unlocks your Ennead Skill		3	233	0					learn_ennead
 474	0	4							\green;Unlocks your Black Road Skill	\green;Unlocks your Black Road Skill		3	233	0					learn_blackroad
 476	50	9																	blink_delay
+477	50	9																	warp_delay
+478	30	6																	master_belt
 479	0	4																	summoner_exodia
 480	0	5							to Vitality per Socketed Gem	to Vitality per Socketed Gem		1	85	1					item_skill_paragon
 481	0	5							to Runemaster Defense Bonus	to Runemaster Defense Bonus		4	85	1					item_skill_runemaster

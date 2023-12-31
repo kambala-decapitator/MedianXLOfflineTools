@@ -32,6 +32,7 @@
 199-202 # Seer (Lone Wolf's Path)
 203-206 # Wereowl (Rainbow Warrior)
 273-274 # Druid Oskill Set (Oak's Teaching)
+326-329 # Nature (Kale Monath)
 
 # necro
 207-210 # Crossbow (Achilios' Wake)

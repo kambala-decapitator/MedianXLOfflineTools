@@ -352,12 +352,12 @@
 350	Raid	5	4	3	2	122
 351	Cascade	5	5	2	1	42
 352	Heartseeker	5	5	2	3	44
-353	Ember Spirit	5	6	1	2	50
-354	Hunting Banshee	5	6	2	1	52
-355	Rain of Fire	5	6	4	2	94
+353	Ember Spirit	5	6	1	1	50
+354	Hunting Banshee	5	6	2	3	52
+355	Rain of Fire	5	6	4	1	94
 356	Harvest	5	1	1	2	100
 357	Infected Roots	5	1	2	1	74
-358	Pagan Rites	5	6	3	3	54
+358	Pagan Rites	5	6	3	2	54
 359	Egg Trap	5	4	5	2	116
 360		5				
 361		5				
@@ -393,7 +393,7 @@
 391	Drakemaw	3	0	0	0	0
 392	Annihilation	3	3	5	2	116
 393	Spark of Hope	3	1	3	2	72
-394	Sanguine Covenant	3	5	5	3	78
+394	Sanguine Covenant	3	5	4	3	78
 395	Mind Flay	3	6	1	2	62
 396	Slayer	3	6	4	2	66
 397		-1				
@@ -516,7 +516,7 @@
 514	Lava Pit	-1	6	2	3	98
 515	Rebound	-1	0	0	0	284
 516	Screaming Eagle	-1	6	5	1	76
-517		-1				
+517	Cataclysm	-1	0	0	0	35
 518		-1				
 519		-1				
 520		-1				
@@ -654,7 +654,7 @@
 652	Thunderstorm	-1	4	4	1	60
 653	Eldritch Storm	-1	6	2	2	64
 654	Slayer	-1	6	4	2	66
-655		-1				
+655	Brimstone	-1	0	0	0	41
 656		-1				
 657		-1				
 658		-1				
@@ -766,7 +766,7 @@
 764		-1				
 765		-1				
 766		-1				
-767		-1				
+767	Judgment Day	-1	0	0	0	0
 768		-1				
 769		-1				
 770		-1				
@@ -851,9 +851,9 @@
 849		-1				
 850		-1				
 851		-1				
-852	Ice Bolt Nova	-1	0	0	0	195
+852		-1				
 853		-1				
-854		-1				
+854	Doom	-1	8	4	1	38
 855		-1				
 856		-1				
 857		-1				
@@ -1292,16 +1292,16 @@
 1290		-1				
 1291	Mark of the Wild	-1	0	0	0	14
 1292	Wereowl Form	5	4	1	3	60
-1293		5				
+1293		-1				
 1294	\orange;Ferocity	5	4	2	3	90
 1295	Earth Talons	5	4	1	2	128
 1296	Steady Shot	5	5	1	2	140
 1297	Pathfinder	5	5	5	2	46
 1298	Bear Companion	5	5	3	2	48
-1299		-1				
-1300		5				
+1299	Armageddon	5	6	5	1	76
+1300	Frigid Domain	5	6	5	3	134
 1301		-1				
-1302	Hurricane	5	6	5	3	134
+1302		5				
 1303	Превращение в Медведя	5	2	1	1	88
 1304	Rend	5	2	1	2	120
 1305	\orange;Hunger	5	2	6	1	72
@@ -1313,7 +1313,7 @@
 1311	Feed the Pack	5	3	3	2	58
 1312		-1				
 1313	Twisted Claw	5	3	4	1	148
-1314	Elvensong	5	1	4	3	114
+1314	Elvensong	5	0	0	0	114
 1315		-1				
 1316	Barkskin	5	1	3	2	106
 1317	Harvesters	5	1	5	2	78
@@ -1337,8 +1337,8 @@
 1335	\orange;Progeny's Blessing	5	4	6	2	62
 1336	\orange;Erupting Strike	5	5	2	2	68
 1337	\orange;Heart of the Pack	5	5	4	2	70
-1338	Spiritual Alignment	5	6	4	1	82
-1339	\orange;Reaping Gale	5	6	6	2	76
+1338	Spiritual Alignment	5	6	4	2	82
+1339		5				
 1340	Tracking	5	5	6	2	110
 1341	\orange;Ancestral Force	5	2	6	3	108
 1342	Primal Bond	5	5	3	3	156
@@ -1491,9 +1491,9 @@
 1489		3				
 1490	Grim Presence	3	5	1	1	40
 1491		-1				
-1492	Lemures	3	5	2	3	44
-1493	Possession	3	5	3	3	90
-1494	Blood Thorns	3	5	4	3	46
+1492	Lemures	3	5	2	2	44
+1493	Possession	3	5	4	1	90
+1494	Blood Thorns	3	5	3	2	46
 1495	\orange;Symphony of Destruction	3	6	5	1	114
 1496		-1				
 1497	Stormlord	3	6	3	3	68
@@ -1501,7 +1501,7 @@
 1499	Elemental Wisdom	3	1	1	2	124
 1500	\orange;Life and Death	3	4	2	3	118
 1501	Veneration of Justice	3	1	2	2	126
-1502	Servants of Valor	3	1	5	2	94
+1502	Summon Lawyers	3	1	5	2	94
 1503	Absolution	3	4	3	2	132
 1504	Divine Apparition	3	8	1	1	92
 1505	Blessed Life	3	8	1	3	38
@@ -1514,8 +1514,8 @@
 1512	\orange;Valiance	3	1	4	3	158
 1513	\orange;Conclave	3	1	6	1	140
 1514	\orange;Fervor	3	1	6	3	148
-1515	\orange;Reverence	3	4	4	2	152
-1516	\orange;Transcendence	3	5	5	2	156
+1515	\green;Reverence	3	4	4	2	152
+1516	\orange;Transcendence	3	5	6	3	156
 1517	\orange;Frostbite	3	5	6	1	150
 1518	\orange;Confluence	3	6	2	1	142
 1519	Acumen	3	6	6	3	134
@@ -1523,8 +1523,8 @@
 1521	Dragon's Breath	3	3	5	3	96
 1522	\orange;Combustion	3	3	6	3	138
 1523	\orange;Apex Predator	3	3	4	1	136
-1524		3				
-1525		3				
+1524	\orange;Rite of Thorns	3	5	3	3	162
+1525	\orange;Rite of the Restless	3	5	2	3	164
 1526		3				
 1527		3				
 1528		3				
@@ -1587,7 +1587,7 @@
 1585	Havoc	1	2	6	2	158
 1586		1				
 1587	Crystalline Barrier	1	4	2	2	38
-1588	Superposition	1	3	6	1	36
+1588	Superposition	1	1	5	2	36
 1589	Glacial Torrent	1	4	3	2	46
 1590	Wintertide	1	4	4	2	44
 1591	Frostborn	1	4	6	2	60
@@ -1607,7 +1607,7 @@
 1605	Arcane Fury	1	1	6	2	116
 1606	Determination	1	6	3	1	162
 1607	Fatal Focus	1	6	4	1	80
-1608		1				
+1608	\orange;Entanglement	1	3	6	1	36
 1609		1				
 1610		1				
 1611		1				
@@ -1728,7 +1728,7 @@
 1726	Ice Whirl	-1	0	0	0	196
 1727	Cautious Strike	-1	0	0	0	55
 1728	Bloodspeaker's Mark	-1	0	0	0	141
-1729	Holy Trap	-1	0	0	0	86
+1729		-1				
 1730	Golden Calf	-1	0	0	0	192
 1731	Call Treewarden	-1	0	0	0	54
 1732	Overpower	-1	0	0	0	40
@@ -1799,9 +1799,9 @@
 1797		-1				
 1798	Liche Form	-1	0	0	0	136
 1799	Ricochet	-1	0	0	0	44
-1800		-1				
+1800	Crystalline Arsenal	-1	0	0	0	287
 1801		-1				
-1802		-1				
+1802	Clear Mind	-1	0	0	0	288
 1803		-1				
 1804	\gold;Ranged Egg Trap	-1	0	0	0	279
 1805		-1				
@@ -1812,7 +1812,7 @@
 1810	Iceburst	-1	0	0	0	110
 1811		-1				
 1812	Deathgaze	-1	0	0	0	0
-1813		-1				
+1813	Hurricane	-1	0	0	0	286
 1814		-1				
 1815		-1				
 1816		-1				
@@ -2228,7 +2228,7 @@
 2226		-1				
 2227		-1				
 2228		-1				
-2229		-1				
+2229	Thunderstone	-1	3	2	1	52
 2230		-1				
 2231		-1				
 2232		-1				
@@ -2440,7 +2440,7 @@
 2438		-1				
 2439		-1				
 2440		-1				
-2441		-1				
+2441	Flamefront	-1	2	1	3	92
 2442		-1				
 2443		-1				
 2444		-1				
@@ -2539,12 +2539,12 @@
 2537		-1				
 2538		-1				
 2539		-1				
-2540		-1				
+2540	Thunderstone	-1	3	2	1	52
 2541		-1				
 2542		-1				
 2543		-1				
 2544		-1				
-2545		-1				
+2545	Flamefront	-1	2	1	3	92
 2546		-1				
 2547		-1				
 2548		-1				
@@ -2554,7 +2554,7 @@
 2552		-1				
 2553		-1				
 2554		-1				
-2555	Flamestrike	-1	2	5	3	34
+2555		-1				
 2556		-1				
 2557		-1				
 2558		-1				
@@ -2650,7 +2650,7 @@
 2648	Thundergod	-1	8	1	3	90
 2649	Graveyard	-1	8	1	3	98
 2650	Supernova	-1	0	0	0	38
-2651	Ignis Fatuus	-1	0	0	0	35
+2651	Cataclysm	-1	0	0	0	35
 2652	Ice Bolt Nova	-1	0	0	0	195
 2653	Razor Spines	-1	0	0	0	119
 2654	Wyrd	-1	0	0	0	206
@@ -2812,7 +2812,7 @@
 2810		-1				
 2811		-1				
 2812		-1				
-2813	Flamefront	-1	2	1	3	92
+2813		-1				
 2814		-1				
 2815		-1				
 2816		-1				
@@ -2822,7 +2822,7 @@
 2820	Void Armor	-1	0	0	0	108
 2821		-1				
 2822		-1				
-2823	Ice Bolt Nova	-1	0	0	0	195
+2823		-1				
 2824		-1				
 2825	Time Warp	-1	0	0	0	283
 2826		-1				
@@ -2838,3 +2838,18 @@
 2836		-1				
 2837		-1				
 2838		-1				
+2839		-1				
+2840		-1				
+2841		-1				
+2842		-1				
+2843		-1				
+2844		-1				
+2845		-1				
+2846		-1				
+2847	Void Armor	-1	0	0	0	108
+2848		-1				
+2849	Frigid Domain	-1	6	5	3	134
+2850	Flamefront	-1	2	1	3	92
+2851		-1				
+2852	Unseelie Curse	-1	0	0	0	0
+2853		-1				

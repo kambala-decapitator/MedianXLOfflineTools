@@ -966,7 +966,7 @@
 964	Akarat
 965	Follower of Akarat
 966	Tal Rasha
-967	Horadric Mage
+967	Horadric Spark
 968	Bul-Kathos
 969	Death Projector
 970	Death's Mechanic
@@ -1683,13 +1683,13 @@
 1710	Bane Hunter
 1711	a startled Witch...
 1712	Zoltun Kulle
-1713	Horadric Mage
+1713	Horadric Spark
 1715	Thunderbolt
 1716	Broken Soul
 1717	Sinner
 1718	Dark Vizjerei
 1719	Dimensional Gate
-1720	Horadric Mage
+1720	Horadric Spark
 1721	Magineer
 1722	Warlock
 1723	Centaur
@@ -3407,3 +3407,251 @@
 3532	Infernal Machine
 3533	Infernal Machine
 3534	Rot Walker
+3536	Infernal Machine
+3537	Infernal Machine
+3538	Hollow Sentinel
+3539	Infernal Machine
+3540	Infernal Machine
+3541	Rot Walker
+3542	Доблесть Тал Раши
+3543	Мудрость Тал Раши
+3544	Упорство Тал Раши
+3545	Месть Тал Раши
+3546	Презрение Тал Раши
+3547	Horadric Spark
+3548	Презрение Тал Раши
+3549	Warped Reaver
+3550	Warped Master
+3551	LabRangedPlaceholder
+3552	LabCasterPlaceholder
+3553	Twisted Spriggan
+3554	Twisted Crawler
+3555	Twisted Sire
+3556	Illusionist
+3557	Fogmaster
+3558	Unseen
+3559	Ассасин
+3560	Cow Ninja
+3561	Son of Arreat
+3562	Windwalker
+3563	White Bear
+3564	Arreat Terror
+3565	Frozen Terror
+3566	Frozen Scourge
+3567	Arcane Witch
+3568	Frozen Warlock
+3569	Yataghan
+3570	Sky Stalker
+3571	Mud Runner
+3572	Earthshaker
+3573	Habelia
+3574	Death Dancer
+3575	Forgotten Elder
+3576	Khazra Archer
+3577	Khazra Archer
+3578	Warforged Shaman
+3579	Trap Rat
+3580	Fetish Rocketeer
+3581	Jungle Hunter
+3582	Ember Prince
+3583	Deep Dweller
+3584	Broodmother
+3585	Death Clan Sacrificer
+3586	Khazra Flesh Mender
+3587	Jungle Vigilant
+3588	Foulblooded
+3589	Heirophant
+3590	Bone Sorcerer
+3591	Reignited Sorcerer
+3592	Horror Sorcerer
+3593	Risen Warlord
+3594	Toxotes
+3595	Living Husk
+3596	Phantom
+3597	Skeleton Khan
+3598	Putrid Chevalier
+3599	Dead Shot
+3600	Knight of War
+3601	Oblivion Knight
+3602	Vizjerei Elder
+3603	Unskinned Magister
+3604	Twicedamned
+3605	Plague Bearer
+3606	Necromancer Apprentice
+3607	Undead Scout
+3608	Admonisher
+3609	Twisted Councillor
+3610	Cantor
+3611	Dreamstealer
+3612	Sovereign of the Sands
+3613	Nomad Seer
+3614	Bloodfire Rogue
+3615	Corrupted Sister
+3616	Arachnon
+3617	Forest Ancient
+3618	Simian Rex
+3619	Mephisto's Cabalist
+3620	Bloated Host
+3621	Swamp Scion
+3622	Obsidian Protector
+3623	Hexwing
+3624	Living Flame
+3625	Eternal Ember
+3626	Souless Husk
+3627	Serafiend
+3628	Moon Wailer
+3629	Magistrate
+3630	Cabalist
+3631	Void Archon
+3632	Electrogeist
+3633	High Priestess
+3634	Exalted One
+3635	Cantor
+3636	Invader
+3637	Heretic
+3638	Lightwell
+3639	Black Locusts
+3640	Lizardman Retiarius
+3641	Lizardman Witch Doctor
+3642	Broodmother
+3643	Harvested Soul
+3644	Riftborn
+3645	Living Blood
+3646	Arachnid Leaper
+3647	Carver Elder
+3648	Steel Serpent
+3649	Noxious Viper
+3650	Besieger
+3651	Mindleech
+3652	Shapeless Hunger
+3653	Contagion Carrier
+3654	Demon Gremlin
+3655	Dread Watcher
+3656	Hellish Vixen
+3657	Ichor Maw
+3658	Corpulent
+3659	Hag
+3660	Coven Mistress
+3661	Grimspike
+3662	Khazra Flesh Mender
+3663	Pyromancer
+3664	Slithering Hexer
+3665	Salamander
+3666	Clutch Mother
+3667	Temple Spire
+3668	Baron of Hell
+3669	Dark Sovereign
+3670	Toxotes
+3671	Fleshless One
+3672	Wasting One
+3673	Ancient Vampire
+3674	Blackened One
+3675	Thunderbolt
+3676	Silver Tyrant
+3677	Corruptor Archer
+3678	Desecrator Knight
+3679	Broken Soul
+3680	Heretic
+3681	Erinys
+3682	Slain Soul
+3683	Necrobot
+3684	Impaler Archon
+3685	Sapphire Knight
+3686	Erinys
+3687	Slain Soul
+3688	Cabalist
+3689	Magistrate
+3690	Lament
+3691	Overlord
+3692	Foulblooded
+3693	Phantasm
+3694	Steel Serpent
+3695	Eternal Ember
+3696	Soul Reaver
+3697	Alpha Centaur
+3698	Cow Honcho
+3699	Cow Soldier
+3701	Erinys
+3702	Colossal Tunneller
+3703	Sinew Shaper
+3704	Observer
+3705	Twisted Necrobot
+3706	Sapphire Knight
+3707	Frigid Leech
+3708	Arreat Terror
+3709	Thrall of Destruction
+3710	Obsidian Protector
+3711	Dread Watcher
+3712	Grimspike
+3713	Coven Mistress
+3714	Stormtree
+3715	Shadowgate Totem
+3716	a startled Witch...
+3717	Timewarp Totem
+3718	Warped Reaver
+3719	Warped Reaver
+3720	Warped Reaver
+3721	Warped Reaver
+3722	Warped Reaver
+3723	Warped Reaver
+3724	Warped Reaver
+3725	Warped Reaver
+3726	Warped Reaver
+3727	Warped Reaver
+3728	Warped Master
+3729	Warped Master
+3730	Warped Master
+3731	Warped Master
+3732	Warped Master
+3733	Warped Master
+3734	Warped Master
+3735	Warped Master
+3736	Warped Master
+3737	Warped Master
+3738	Void Maw
+3739	Void Maw
+3740	Void Maw
+3741	Void Maw
+3742	Void Maw
+3743	Void Maw
+3744	Void Maw
+3745	Void Maw
+3746	Void Maw
+3747	Void Maw
+3748	Fractured Being
+3749	Fractured Being
+3750	Fractured Being
+3751	Fractured Being
+3752	Fractured Being
+3753	Fractured Being
+3754	Fractured Being
+3755	Fractured Being
+3756	Fractured Being
+3757	Fractured Being
+3758	Twisted Spriggan
+3759	Twisted Spriggan
+3760	Twisted Spriggan
+3761	Twisted Spriggan
+3762	Twisted Spriggan
+3763	Twisted Spriggan
+3764	Twisted Spriggan
+3765	Twisted Spriggan
+3766	Twisted Spriggan
+3767	Twisted Crawler
+3768	Twisted Crawler
+3769	Twisted Crawler
+3770	Twisted Crawler
+3771	Twisted Crawler
+3772	Twisted Crawler
+3773	Twisted Crawler
+3774	Twisted Crawler
+3775	Twisted Crawler
+3776	Twisted Sire
+3777	Twisted Sire
+3778	Twisted Sire
+3779	Twisted Sire
+3780	Twisted Sire
+3781	Twisted Sire
+3782	Twisted Sire
+3783	Twisted Sire
+3784	Twisted Sire
