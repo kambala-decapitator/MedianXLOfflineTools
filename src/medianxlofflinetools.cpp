@@ -378,7 +378,7 @@ void MedianXLOfflineTools::eatSignetsOfLearning(int signetsEaten)
 {
     int newSignetsEaten = ui->signetsOfLearningEatenLineEdit->text().toInt() + signetsEaten;
     ui->signetsOfLearningEatenLineEdit->setText(QString::number(newSignetsEaten));
-    CharacterInfo::instance().setValueForStatisitc(newSignetsEaten, Enums::CharacterStats::SignetsOfLearningEaten);
+    CharacterInfo::instance().setValueForStatistic(newSignetsEaten, Enums::CharacterStats::SignetsOfLearningEaten);
 
     foreach (QSpinBox *spinBox, _spinBoxesStatsMap)
         spinBox->setMaximum(spinBox->maximum() + signetsEaten);
@@ -429,8 +429,8 @@ void MedianXLOfflineTools::saveCharacter()
     ui->levelSpinBox->setMaximum(Enums::CharacterStats::MaxLevel);
     ui->levelSpinBox->setValue(Enums::CharacterStats::MaxLevel);
     ui->signetsOfLearningEatenLineEdit->setText(QString::number(Enums::CharacterStats::SignetsOfLearningMax));
-    charInfo.setValueForStatisitc(Enums::CharacterStats::SignetsOfLearningMax, Enums::CharacterStats::SignetsOfLearningEaten);
-    charInfo.setValueForStatisitc(Enums::CharacterStats::SignetsOfSkillMax, Enums::CharacterStats::SignetsOfSkillEaten);
+    charInfo.setValueForStatistic(Enums::CharacterStats::SignetsOfLearningMax, Enums::CharacterStats::SignetsOfLearningEaten);
+    charInfo.setValueForStatistic(Enums::CharacterStats::SignetsOfSkillMax, Enums::CharacterStats::SignetsOfSkillEaten);
     ui->freeSkillPointsLineEdit->setText(QString::number(totalPossibleSkillPoints(charInfo.basicInfo.level, kDifficultiesNumber, kDifficultiesNumber, kDifficultiesNumber)));
     ui->freeStatPointsLineEdit->setText(QString::number(totalPossibleStatPoints(charInfo.basicInfo.level, kDifficultiesNumber)));
 #endif
@@ -2034,9 +2034,9 @@ bool MedianXLOfflineTools::processSaveFile()
         {
             CharacterStats::StatisticEnum statCode = static_cast<CharacterStats::StatisticEnum>(i);
             int baseStat = _baseStatsMap[charInfo.basicInfo.classCode].statsAtStart.statFromCode(statCode);
-            charInfo.setValueForStatisitc(baseStat, statCode);
+            charInfo.setValueForStatistic(baseStat, statCode);
         }
-        charInfo.setValueForStatisitc(totalPossibleStats, CharacterStats::FreeStatPoints);
+        charInfo.setValueForStatistic(totalPossibleStats, CharacterStats::FreeStatPoints);
         shouldShowHackWarning = true;
     }
 #endif
@@ -2063,7 +2063,7 @@ bool MedianXLOfflineTools::processSaveFile()
     if (skills > maxPossibleSkills) // check if skills are hacked
     {
         skills = maxPossibleSkills;
-        charInfo.setValueForStatisitc(maxPossibleSkills, CharacterStats::FreeSkillPoints);
+        charInfo.setValueForStatistic(maxPossibleSkills, CharacterStats::FreeSkillPoints);
         _saveFileContents.replace(firstSkillOffset, skillsNumber, QByteArray(skillsNumber, 0));
         shouldShowHackWarning = true;
     }
@@ -2767,7 +2767,7 @@ QByteArray MedianXLOfflineTools::statisticBytes()
             {
                 addStatisticBits(result, Enums::CharacterStats::Level, Enums::CharacterStats::StatCodeLength);
                 addStatisticBits(result, newClvl, ItemDataBase::Properties()->value(Enums::CharacterStats::Level)->bitsSave);
-                charInfo.setValueForStatisitc(newClvl, Enums::CharacterStats::Level);
+                charInfo.setValueForStatistic(newClvl, Enums::CharacterStats::Level);
 
                 quint32 newExp = experienceTable.at(newClvl - 1);
                 if (newExp) // must not be present for level 1 character
@@ -2775,7 +2775,7 @@ QByteArray MedianXLOfflineTools::statisticBytes()
                     addStatisticBits(result, Enums::CharacterStats::Experience, Enums::CharacterStats::StatCodeLength);
                     addStatisticBits(result, newExp, ItemDataBase::Properties()->value(Enums::CharacterStats::Experience)->bitsSave);
                 }
-                charInfo.setValueForStatisitc(newExp, Enums::CharacterStats::Experience);
+                charInfo.setValueForStatistic(newExp, Enums::CharacterStats::Experience);
 
                 isExpAndLevelNotSet = false;
                 continue;
@@ -2811,7 +2811,7 @@ QByteArray MedianXLOfflineTools::statisticBytes()
         }
 
         if (!isAchievement)
-            CharacterInfo::instance().setValueForStatisitc(value, statCode);
+            CharacterInfo::instance().setValueForStatistic(value, statCode);
     }
 
     int bitsCount = result.length();
