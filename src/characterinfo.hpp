@@ -22,7 +22,7 @@ public:
         QList<QVariant> list = basicInfo.statsDynamicData.value(stat).toList();
         return list.empty() ? 0 : list.first().toULongLong();
     }
-    void setValueForStatisitc(quint32 value, Enums::CharacterStats::StatisticEnum stat) { basicInfo.statsDynamicData.replace(stat, QList<QVariant>() << value); }
+    void setValueForStatistic(quint32 value, Enums::CharacterStats::StatisticEnum stat) { basicInfo.statsDynamicData.replace(stat, QList<QVariant>() << value); }
 
     struct CharacterInfoBasic
     {
