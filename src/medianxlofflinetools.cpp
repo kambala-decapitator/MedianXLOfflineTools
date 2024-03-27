@@ -1,4 +1,4 @@
-#include    "medianxlofflinetools.h"
+#include "medianxlofflinetools.h"
 #include "ui_medianxlofflinetools.h"
 #include "colorsmanager.hpp"
 #include "qd2charrenamer.h"
@@ -1677,7 +1677,7 @@ void MedianXLOfflineTools::connectSignals()
     connect(ui->showAllStatsButton, SIGNAL(clicked()), SLOT(showAllStats()));
     connect(ui->respecSkillsCheckBox, SIGNAL(toggled(bool)), SLOT(respecSkills(bool)));
 
-    connect(ui->activateWaypointsCheckBox,     SIGNAL(toggled(bool)), SLOT(modify()));
+    connect(ui->activateWaypointsCheckBox, SIGNAL(toggled(bool)), SLOT(modify()));
 
     // misc
     connect(_fsWatcher, SIGNAL(fileChanged(const QString &)), SLOT(fileContentsChanged()));

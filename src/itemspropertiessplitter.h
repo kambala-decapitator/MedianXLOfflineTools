@@ -76,7 +76,7 @@ protected slots:
     void collectShrinesToVessel();
     void extractShrinesFromVessel();
     void depersonalize();
-    void   personalize();
+    void personalize();
     void deleteItemTriggered();
 #ifdef DUMP_INFO_ACTION
     void dumpInfo(ItemInfo *item = 0, bool shouldShowMsgBox = true);
