@@ -3413,13 +3413,13 @@
 3539	Infernal Machine
 3540	Infernal Machine
 3541	Rot Walker
-3542	Доблесть Тал Раши
-3543	Мудрость Тал Раши
-3544	Упорство Тал Раши
-3545	Месть Тал Раши
-3546	Презрение Тал Раши
+3542	Tal Rasha's Valor
+3543	Tal Rasha's Wisdom
+3544	Tal Rasha's Tenacity
+3545	Tal Rasha's Vengeance
+3546	Tal Rasha's Scorn
 3547	Horadric Spark
-3548	Презрение Тал Раши
+3548	Tal Rasha's Scorn
 3549	Warped Reaver
 3550	Warped Master
 3551	LabRangedPlaceholder
@@ -3427,21 +3427,20 @@
 3553	Twisted Spriggan
 3554	Twisted Crawler
 3555	Twisted Sire
-3556	Illusionist
-3557	Fogmaster
-3558	Unseen
-3559	Ассасин
-3560	Cow Ninja
-3561	Son of Arreat
-3562	Windwalker
-3563	White Bear
-3564	Arreat Terror
-3565	Frozen Terror
-3566	Frozen Scourge
-3567	Arcane Witch
-3568	Frozen Warlock
+3556	Archon of Malthael
+3557	Auriel's Gryphon
+3558	Itherael's Vanguard
+3559	Imperius' Wrath
+3560	Ethereal
+3561	Zakarum's Avatar
+3562	Ethereal
+3563	Archon of Malthael
+3564	Auriel's Gryphon
+3565	Itherael's Vanguard
+3566	Imperius' Wrath
+3567	Zakarum's Avatar
 3569	Yataghan
-3570	Sky Stalker
+3570	Goblin Assassin
 3571	Mud Runner
 3572	Earthshaker
 3573	Habelia

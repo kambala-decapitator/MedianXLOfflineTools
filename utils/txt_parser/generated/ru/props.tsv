@@ -309,6 +309,8 @@
 406	0	10							к Урону Заклинаний Холода	к Урону Заклинаний Холода	(Основано на Уровне Персонажа)	7	134	1					passive_cold_mastery_perlevel
 407	0	10							к Урону Заклинаний Яда	к Урону Заклинаний Яда	(Основано на Уровне Персонажа)	7	132	1					passive_pois_mastery_perlevel
 409	100	8							к Длительности Навыков	к Длительности Навыков		2	168	1					skill_duration
+410		4							\yellow;Префиксы:	\yellow;Префиксы:		3	253	2					is_prefix
+411		4							\yellow;Суффиксы:	\yellow;Суффиксы:		3	252	2					is_suffix
 414	50	9							Бонус к Жизни Призываемых Edyrem	Бонус к Жизни Призываемых Edyrem		4	173	1					skill_edyrem_hp_percent
 415	0	12							\grey;Врождённый Урон Огнём: \red;%d\grey; (%.1f%% от %s)	\grey;Врождённый Урон Огнём: \red;%d\grey; (%.1f%% от %s)		35	254	0				16	ied_display
 417	0	16																5	ele_divisor
@@ -339,6 +341,9 @@
 455	1	5																	cube_upgrade_4
 456	1	5																	dummy_potion_stat
 457	0	10																	enabler
+458	1	5																	cube_upgrade_10
+459	1	5																	cube_upgrade_11
+460	1	5																	cube_upgrade_12
 462	0	8							к Урону Vessel of Justice	к Урону Vessel of Justice		4	187	1					skill_voj_mastery
 463	0	5																	item_class_spec
 464	0	10																	dulra_catalyst
@@ -372,8 +377,8 @@
 493	1	5																	cube_upgrade_8
 494	1	5																	cube_upgrade_9
 495	24	7																	statX_3
-496	0	5								\red;(Смешайте с Oil of Craft для Раскрытия)		3	251	0					item_corrupted_has_seed
-497	0	5							\red;Искажено	\red;Искажено		3	252	0					item_corrupted
+496	0	5								\red;(Смешайте с Oil of Craft для Раскрытия)		3	250	0					item_corrupted_has_seed
+497	0	5							\red;Искажено	\red;Искажено		3	251	0					item_corrupted
 498	6383	14																	item_corrupted_seed
 499	0	10							к Энергии	к Энергии	(Основано на Уровне Персонажа)	6	87	1					item_energy_perlevel
 500	100	8							к Рейтингу Атаки Призываемых Существ	к Рейтингу Атаки Призываемых Существ		4	102	1					item_minion_attack

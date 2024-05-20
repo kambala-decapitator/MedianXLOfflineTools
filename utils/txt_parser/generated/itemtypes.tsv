@@ -1,11 +1,13 @@
 #code	equiv	varImages	name
 2hax	axe		2h axe
+a2ha	ct2w,an2x		2h axe (Angelic)
 s2ha	2hax,ct2w		2h axe (Sacred)
 2hbx	baxe,2hax		2h barb axe
 s2hx	2hbx,ct2w		2h barb axe (Sacred)
 2hbs	bswd,2hsd		2h barb sword
 s2hb	2hbs,ct2w		2h barb sword (Sacred)
 2hsd	swor		2h sword
+a2hd	ct2w,an2x		2h sword (Angelic)
 s2hd	2hsd,ct2w		2h sword (Sacred)
 flsh	prsh		Active Shrine (10 Charges)
 abow	bow,amaz		Amazon Bow
@@ -23,10 +25,21 @@ geml	gem		Amber
 gema	gem		Amethyst
 amul	riam,sg&d	invamu1,invamu2,invamu3	Amulet
 qamu	amul	invamu1,invamu2,invamu3	Amulet (Sacred)
+aarm	armo,aaaa		Angelic Armor
+anxx	awea		Angelic Caster
+anrx	awea,anzz		Angelic Ranged Weapons
+atrs	aarm		Angelic Torso
+anzz	awea		Angelic Warrior
+awea	weap,aaaa		Angelic Weapon
+anx1	awea,anxx		Angelic Weapon 1H Caster
+an1x	awea,anzz		Angelic Weapon 1H Melee
+anx2	awea,anxx		Angelic Weapon 2H Caster
+an2x	awea,anzz		Angelic Weapon 2H Melee
 apot	poti		Antidote Potion
 armo	myor		Any Armor
 shld	armo,seco		Any Shield
 tors	armo		Armor
+ator	ct2a,atrs		Armor (Angelic)
 qtor	tors,ct2a		Armor (Sacred)
 assn	clas,fbox		Assassin Item
 nagi	mele,assn		Assassin Naginata
@@ -36,7 +49,9 @@ sisd	ishd,ct1a		Assassin Shield (Sacred)
 ashd	shie,pala		Auric Shields
 qaur	ashd,ct1a		Auric Shields (Sacred)
 axe	mele,dbox		Axe
+aaxe	ct1w,an1x		Axe (Angelic)
 qaxe	axe,ct1w		Axe (Sacred)
+3xxx	phlm,pclb		Barb Helm and Pal 1H
 baxe	axe,barb		Barbarian Axe
 sbax	baxe,ct1w		Barbarian Axe (Sacred)
 barb	clas,fbox		Barbarian Item
@@ -45,17 +60,20 @@ saba	basd,ct1a		Barbarian Shield (Sacred)
 bswd	swor,barb		Barbarian Sword
 sbsd	bswd,ct1w		Barbarian Sword (Sacred)
 belt	armo,hlm1		Belt
+ablt	ct1a,aarm		Belt (Angelic)
 qblt	belt,ct1a		Belt (Sacred)
 gemp	gem		Bloodstone
 blun	mele		Blunt
 body	misc		Body Part
 book	misc		Book
 boot	armo,hlm1		Boots
+abot	ct1a,aarm		Boots (Angelic)
 qbot	boot,ct1a		Boots (Sacred)
 bow	miss		Bow
 qbow	bow,ct2w		Bow (Sacred)
 bowq	misl,riam		Bow Quiver
 qaqv	qmsl,riam		Bow Quiver (Sacred)
+astf	ct2w,anx2		Caster Staff (Angelic)
 araa	char		Challenge Charm 1
 arab	char		Challenge Charm 2
 arac	char		Challenge Charm 3
@@ -79,6 +97,7 @@ ct1x	sw&a		Craft Sacred Minor
 ct1a	sarm,ct1x		Craft Sacred Minor (Armor)
 ct1w	swea,ct1x		Craft Sacred Minor (Weapon)
 xbow	miss		Crossbow
+axbw	ct2w,anrx		Crossbow (Angelic)
 qxbw	xbow,ct2w		Crossbow (Sacred)
 xboq	misl,riam		Crossbow Quiver
 qcqv	qmsl,riam		Crossbow Quiver (Sacred)
@@ -109,6 +128,7 @@ gep2	gep1		Gem Pile 2
 gep3	gep2		Gem Pile 3
 gep4	gep3		Gem Pile 4
 glov	armo,hlm1		Gloves
+aglv	ct1a,aarm		Gloves (Angelic)
 qglv	glov,ct1a		Gloves (Sacred)
 gold	misc		Gold
 hamm	blun		Hammer
@@ -118,6 +138,7 @@ qh2h	h2h,ct1w		Hand to Hand (Sacred)
 h2h2	h2h		Hand to Hand 2
 hpot	poti		Healing Potion
 hlm1	dcht		Helm
+ahlm	ct1a,aarm		Helm (Angelic)
 qhlm	helm,ct1a		Helm (Sacred)
 herb	misc		Herb
 horm	hamm		Horadric Malus
@@ -126,11 +147,13 @@ qjvn	jave,ct1w		Javelin (Sacred)
 jewl	sock,sg&d	invjw1,invjw2,invjw3,invjw4,invjw5,invjw6	Jewel
 key	misc		Key
 knif	mele,dbox		Knife
+aknf	ct1w,an1x		Knife (Angelic)
 qknf	knif,ct1w		Knife (Sacred)
 lcha	char	invch3,invch6,invch9	Large Charm
 cyc3	cycl	invch3,invch6,invch9	Large Cycle
 cyng	cyc3	invch3,invch6,invch9	Large Cycle Not Golden
 mace	blun		Mace
+amac	ct1w,an1x		Mace (Angelic)
 qmac	mace,ct1w		Mace (Sacred)
 mboq	bowq		Magic Bow Quiv
 mxbq	xboq		Magic Xbow Quiv
@@ -150,6 +173,8 @@ miss	weap		Missile Weapon
 myor	dcht		Mystic Orbable
 ####	mele		Mystic Sword
 nbox	fbox		Necro Gift Box
+2xxx	nxbw,nknf		Necro Xbow and Necro Knife
+1xxx	head,basd		Necro and Barb Class Shields
 necr	clas		Necromancer Item
 nknf	knif,nbox		Necromancer Knife
 snkf	nknf,ct1w		Necromancer Knife (Sacred)
@@ -205,6 +230,7 @@ swea	ssgl		Sacred Weapon
 sw&a	ssgl		Sacred Weapons and Armor
 gems	gem		Sapphire
 scep	rod		Scepter
+ascp	ct1w,anx1		Scepter (Angelic)
 qscp	scep,ct1w		Scepter (Sacred)
 sdgn	dsgn	book01,book02,book05,book06,book07,book08	Scosglen Design
 scro	misc		Scroll
@@ -212,6 +238,7 @@ summ	char		Scroll of Summoning
 scyh	pole		Scythe
 qscy	scyh,ct2w		Scythe (Sacred)
 shie	shld		Shield
+ashi	ct1a,aarm		Shield (Angelic)
 qshi	shie,ct1a		Shield (Sacred)
 shco	thng		Shrine Container
 sg&d	dcht,ssgl		Siggable And Shardable
@@ -226,6 +253,7 @@ sorc	clas,sbox		Sorceress Item
 stor	tors		Sorceress Torso
 sstr	stor,ct2a		Sorceress Torso (Sacred)
 spea	mele		Spear
+aspr	ct2w,an2x		Spear (Angelic)
 qspe	spea,ct2w		Spear (Sacred)
 bhlm	helm		Special Helm
 qbhe	qhlm		Special Helm (Sacred)
@@ -238,6 +266,7 @@ spot	poti		Stamina Potion
 gem2	gem		Standard Gem
 rod	blun		Staves And Rods
 swor	mele		Sword
+aswd	ct1w,an1x		Sword (Angelic)
 qswd	swor,ct1w		Sword (Sacred)
 woot	ques		Thanks For Playing
 wpot	poti		Thawing Potion
@@ -254,6 +283,7 @@ head	shie,necr		Voodoo Heads
 qhed	head,ct1a		Voodoo Heads (Sacred)
 wand	rod		Wand
 qwnd	wand,ct1w		Wand (Sacred)
+astw	ct2w,an2x		Warrior Staff (Angelic)
 weap	myor		Weapon
 wrtl	mace		Wirts Leg
 ###2	amul		Yshari Amulet

@@ -364,6 +364,12 @@ Ysh6	Sorcerer's Mask		2	2	0		30	500	0									lab_helm				###5		-1
 Ysh7	Mana Belt		2	1	0		30	500	0									lab_belt				###6,qblt		-1
 Ysh8	Warkeepers		2	2	0		30	500	0									lab_gloves				###7		-1
 Ysh9	Winged Feet		2	2	0		30	500	0									lab_boots				###8		-1
+an01	Full Helm (Angelic)		2	2	0		30	600	0									angelicfullhelm				qhlm,ahlm		-1
+an02	Light Plate (Angelic)		2	3	0		30	650	0									angelicarmor				qtor,ator		-1
+an03	Kite Shield (Angelic)		2	3	0		30	550	559									angelicshield				qshi,ashi	0	-1
+an04	Light Plated Boots (Angelic)		2	2	0		30	625	0									angelicboots				qbot,abot		-1
+an05	Light Gauntlets (Angelic)		2	2	0		30	600	0									angelicgloves				qglv,aglv		-1
+an06	Belt (Angelic)		2	1	0		30	575	0									MastercraftedBelt				belt,ablt		-1
 crn	Crown		2	2	0		0	55	0									invcrn				helm		-1
 e10	Targe (3)		2	2	0		18	0	41									invpa1				ashd,tier	0	3
 e11	Rondache (3)		2	2	0		19	0	64									invpa2				ashd,tier	0	3
@@ -1005,6 +1011,17 @@ SM1	Tyrannical Blade		2	3	1		121	0	0			133	150					Ssword	0	14	13	xxx1	1	-1
 SM2	Voidsworn Bow		2	4	1		121	0	0		1			70	79			Sbow	0	0	0	xxx2	1	-1
 SM3	Voidforged Staff		1	4	1		121	0	0		1			13	16			Sstaff	0	0	0	xxx3	1	-1
 Ysh3	Mystical Blade		1	4	1		120	500	500			25	38					lab_sword	0	30	0	####	1	-1
+aw01	Military Pick (Angelic)		2	3	1		30	500	0			49	57					invmpi	0	11	0	qaxe,aaxe	1	-1
+aw02	Large Axe (Angelic)		2	3	1		30	408	0		1			84	86			invlax	0	16	0	s2ha,a2ha	1	-1
+aw03	War Sword (Angelic)		1	3	1		30	581	0			52	54					invwsd	0	11	0	qswd,aswd	1	-1
+aw04	Giant Sword (Angelic)		1	4	1		30	480	0	1	1	42	45	78	80			invgis	0	16	0	s2hd,a2hd	1	-1
+aw05	Morning Star (Angelic)		1	3	1		30	464	0			53	55					invmst	0	11	0	qmac,amac	1	-1
+aw06	Scepter (Angelic)		1	3	1		30	0	404			29	34					invscp	0	0	11	qscp,ascp	1	-1
+aw07	Dagger (Angelic)		1	2	1		30	0	376			42	43					invdgr	0	0	11	qknf,aknf	1	-1
+aw08	Battle Staff (Angelic)		1	4	1		30	0	234		1			78	80			invbst	0	0	15	qstf,astw	1	-1
+aw09	Long Staff (Angelic)		1	4	1		30	0	203		1			56	58			invlst	0	0	15	qstf,astf	1	-1
+aw10	Crossbow (Angelic)		2	3	1		30	502	0		1			98	102			invmxb		11	0	qxbw,axbw	1	-1
+aw11	Trident (Angelic)		2	4	1		30	408	428		1			65	69			invtri	0	0	15	qspe,aspr	1	-1
 bsd	Broad Sword		2	3	1		0	48	0			11	16					invbsd		0	0	swor	1	-1
 d33	Decoy Gidbinn		1	2	1		0	15	20			1	2					invd33	18	0	11	knif	1	-1
 g33	The Gidbinn		1	2	1		0	15	25			9	11					invg33	18	0	11	knif	1	-1
@@ -1537,11 +1554,13 @@ b61	\purple;Laser Focus Crystal (Heroic)		1	1	2		121	0	0									invdss	255			gr
 b61X	\dgrey;Quest Item\n\gold;Scroll of Summoning	\gold;Death Projector (Heroic)	1	1	2		121	0	0									invrsc				thng		-1
 b62	\purple;Optical Detector (Heroic)		1	1	2		122	0	0									inveye	255			grtz		-1
 b62X	\dgrey;Quest Item\n\gold;Scroll of Summoning	\gold;Infernal Machine (Heroic)	1	1	2		122	0	0									invrsc				thng		-1
+b63X	\dgrey;Quest Item\n\gold;Scroll of Summoning	\gold;Area Level: 125\nLibrary of Fate (Heroic)	1	1	2		120	0	0									invrsc				thng		-1
+b64X	\dgrey;Quest Item\n\gold;Scroll of Summoning	\dgrey;+50% Leech Resist\n+25% Magic Resist\n+20% Movement Speed\n+10% Density\n\blue;Monster modifiers:\n\n\green;+25% Angelic Item drops\n\n\gold;Area Level: 130\nLibrary of Fate (Heroic)	1	1	2		125	0	0									invrsc				thng		-1
 b@b	\red;Goodberry	A magical fruit of the Glor-An-Fhaidha...	1	1	2		666	0	0									cherries				hpot		-1
 bbb	Lam Esen's Tome		2	2	2		0	0	0									invbbb	16			ques		-1
 bkd	Key to the Cairn Stones		2	2	2		0	0	0									invscb	5			ques		-1
 bks	Scroll of Inifuss		2	2	2		0	0	0									invscb	5			ques		-1
-blol	Spirit of Creation		1	1	2		100	0	0									vine	255			grtz		-1
+blol	Spirit of Creation		1	1	2		120	0	0									vine	255			grtz		-1
 bob	FLYING POLAR BUFFALO ERROR		2	2	2		0	0	0									bobross	255			grtz		-1
 box	Horadric Cube		2	2	2		0	0	0									invbox	10			ques		-1
 bpl	FLYING POLAR BUFFALO ERROR		1	1	2	1	0	0	0									invbpl				mpot		-1
@@ -1741,6 +1760,9 @@ ey3	\red;Elixir of Greed (Disabled)	+150% Magic Find for 30 seconds	1	1	2		0	0	0
 ey4	\red;Elixir of Wealth (Disabled)	+300% Gold Find for 30 seconds	1	1	2		0	0	0									invxyz				hpot		-1
 ey9	\red;Elixir of Adrenaline (Disabled)	Cancels Running Skill Timers	1	1	2		0	0	0									invpotr				hpot		-1
 eyz	Eye		1	1	2		0	0	0									inveye				body		-1
+f666	Soulforge		2	2	2		0	0	0									Soulforge	255			grtz		-1
+f667	\orange;Heavenly Soul	(Cube with an Oil of Craft to create container)\nCube with Soulforge to craft items\n\n\green;Cube with an Oil of Enhancement to create a Soulforge	1	1	2		0	0	0									HeavenlySoul				thng		-1
+f668	Crate O' Souls	(Transmute in Cube to Extract Souls)\n(Right Click to Collect)	1	1	2		0	0	0									smallbox				thng		-1
 flg	Flag		1	2	2		0	0	0									invflag				body		-1
 fng	Fang		1	1	2		0	0	0									invfang				body		-1
 g$a	\purple;Chipped Onyx		1	1	2		1	0	0									invgsoa				gemq,gem0		-1
@@ -1830,7 +1852,7 @@ ir82	\orange;Occult Effigy\nSigil of Absolution	\blue;Cannot be Used with Runewo
 ir83	\orange;Occult Effigy\nPath of Brutality	\blue;+10 Required Level\nItem Becomes (Your Class Only)\nTransforms every +1 to All Skills to +3% Deadly Strike\n\grey;Cube with Unique Ring/Amulet to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									OccultOrb				thng		-1
 ir84	\orange;Occult Effigy\nEmpyrean Touch	\blue;+10 Required Level\nItem Becomes Ethereal\n\grey;Cube with Any Weapon/Armor to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									OccultOrb				thng		-1
 ir85	\orange;Occult Effigy\nElemental Ire	\blue;+10 Required Level\nAdds 40-60 Lightning Damage\nAdds 40-60 Fire Damage\n\grey;Cube with a Quiver to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									OccultOrb				thng		-1
-ir86	\orange;Occult Effigy\nBreath of Thaumaturgy	\blue;+25 Required Level\nItem can be blessed Again\n\grey;Cube with a Blessed Crafted Weapon/Armor to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									OccultOrb				thng		-1
+ir86	\orange;Occult Effigy\nBreath of Thaumaturgy	\blue;+25 Required Level\nItem can be blessed Again\n\grey;Cube with a Blessed Crafted/Rare Weapon/Armor to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									OccultOrb				thng		-1
 ir87	\orange;Occult Effigy\nElemental Dominion	\blue;+10 Required Level\nAdds 75-125 Cold Damage\nAdds 75-125 Lightning Damage\nAdds 75-125 Fire Damage\n\grey;Cube with a Zero Socket Weapon to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									OccultOrb				thng		-1
 ir88	\orange;Occult Effigy\nArcane Hunger	\blue;+10 Required Level\n(Max 1 Use per Item)\nItem Cannot be Unsocketed\nAll Life Leech transformed to +20% Spell Damage\n\grey;with at least 15% Life Leech to Add Bonus\nCube with a One Handed Weapon\n\nCube Reagent	1	1	2		0	0	0									OccultOrb				thng		-1
 ir89	\orange;Occult Effigy\nDark Summoning	\blue;+10 Required Level\n1% Reanimate as: Random Monster\n\grey;Cube with Gloves to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									OccultOrb				thng		-1
@@ -1850,8 +1872,8 @@ jaw	Jawbone		1	1	2		0	0	0									invjaw				body		-1
 jcat	\gold;Catalyst of Jewelcraft	83\nJewelcrafting: \nYou must charge your catalyst to use it.\n\nCatalyst + Arcane Crystals (max 10) \n--> Catalyst (+5-50 Charges)\n\nCatalyst + Any Jewel\n--> Catalyst (-1 Charge) + Crafted Jewel\n\nYou can cube your catalyst by itself to\nselect a different affix.\n\nCatalyst\n--> Catalyst (rerolled Affix)\n	1	1	2		0	0	0									jewelcataoff	255			thng		-1
 jew	Jewel		1	1	2		0	0	0									invgswe				jewl		-1
 k@k	The Book of Lies		1	1	2		0	0	0									invsbk2	255			grtz		-1
-kazm	\grey;Quest Item\n\gold;Key of Sin	\blue;Summon a Portal to The Realm of Sin...	1	2	2		100	0	0									invmph				thng		-1
-kbel	\grey;Quest Item\n\gold;Key of Lies	\blue;Summon a Portal to The Realm of Lies...	1	2	2		100	0	0									invmph				thng		-1
+kazm	\grey;Quest Item\n\gold;Key of Sin	\blue;Summon a Portal to The Realm of Sin...	1	2	2		115	0	0									invmph				thng		-1
+kbel	\grey;Quest Item\n\gold;Key of Lies	\blue;Summon a Portal to The Realm of Lies...	1	2	2		125	0	0									invmph				thng		-1
 key	Key		1	1	2	1	0	0	0									invkey				key		-1
 kfau	\grey;Quest Item\n\gold;Mind Warp	\blue;Open a Rift to Fauztinville...	1	1	2		125	0	0									invrsc				thng		-1
 kpac	\orange;Cherry	Right click to eat...	1	1	2		120	0	0									cherries				thng		-1
@@ -1861,13 +1883,13 @@ ktbx	\orange;Pulsating Worldstone Shard	\yellow;- Transmute -\n\grey;... nothing
 ktcx	\orange;Pulsating Worldstone Shard	\yellow;- Transmute -\n\grey;worlds, dimensions, are but a grain of sand in the universe.''\n''Lilith... the High Heavens, Burning Hells, Sanctuary. These\n\nour worlds. What came before is irrelevant!''\n''The Stone has been, is, and will be the axis of	1	1	2		0	0	0									invss1				thng		-1
 ktdx	\orange;Pulsating Worldstone Shard	\yellow;- Transmute -\n\grey;sure what lurks just beyond our understanding''\nsafe in the sea of possibilities, yet we can't be\nThe Worldstone has existed since the Dawn of Time and kept us\n''There are many more worlds than those upon which we have stood.	1	1	2		0	0	0									invss1				thng		-1
 ktex	\orange;Pulsating Worldstone Shard	\yellow;- Transmute -\n\grey;This shard is the key, its full potential must be unlocked.\n\nIt has exposed us all to an even greater threat.\nSanctuary to the direct influence of Heaven and Hell.\nThe destruction of the Worldstone has not only exposed\n\n\dgrey;...	1	1	2		0	0	0									invss1				thng		-1
-ktfx	\orange;Pulsating Worldstone Shard	It which is a splinter of the spirit in a land Unformed\n\nIt which is of many and may cleanse the soul\n\nIt which is of the brother, savior and sacrifice\n\nIt which can manifest their son and his disciple\n\nIt which bears the writings of genesis	1	1	2		0	0	0									invss1				thng		-1
-ktgx	\orange;Pulsating Worldstone Crystal	The Way will be made clear, stand ready\n\nTaha Great Rune\nGreater Signet of Learning\nIt must now be imbued with Knowledge and Arcana\n\n\dgrey;The Worldstone crystal has been reforged	1	1	2		0	0	0									invss3				thng		-1
-ktox	\grey;Quest Item\n\gold;Dimensional Link	\red;Only works in Act 5\n\blue;Summon a Portal to the Edge of Nothingness...	1	1	2		100	0	0									invrsc				thng		-1
+ktfx	\orange;Pulsating Worldstone Shard	It which is a splinter of the spirit in a land Unformed\n\nIt which is of many and may cleanse the soul\n\nIt which is of the brother, savior and sacrifice\n\nIt which can manifest their son and his disciple\n\nIt which screams haunt the living	1	1	2		0	0	0									invss1				thng		-1
+ktgx	\orange;Pulsating Worldstone Crystal	The Way will be made clear, stand ready\n\nGreater Signet of Learning\nIt must now be imbued with Great Knowledge\n\n\dgrey;The Worldstone crystal has been reforged	1	1	2		0	0	0									invss3				thng		-1
+ktox	\grey;Quest Item\n\gold;Dimensional Link	\red;Only works in Act 5\n\blue;Summon a Portal to the Edge of Nothingness...	1	1	2		135	0	0									invrsc				thng		-1
 ktpx	\grey;Quest Item\n\gold;Otherworldly Link	\red;Only works in Act 5\n\blue;Summon a Portal to the Dimensional Plane...	1	1	2		130	0	0									invrsc				thng		-1
 ktxx	\grey;Cube Reagent\n\gold;Ascendant Riftwalker Essence	\blue;Maximum Elemental Resists +1%\n\grey;Cube with your Riftwalker's Eye to Add Bonus\n	1	1	2		0	0	0									Riftwalker3				thng		-1
 ktyx	\grey;Cube Reagent\n\gold;Greater Riftwalker Essence	\blue;+1 to All Skill Levels\n\grey;Cube with your Riftwalker's Eye to Add Bonus\n	1	1	2		0	0	0									Riftwalker2				thng		-1
-ktzx	\gold;Riftwalker's Eye		1	1	2		100	0	0									evileye	255			grtz		-1
+ktzx	\gold;Riftwalker's Eye		1	1	2		105	0	0									evileye	255			grtz		-1
 l@l	\grey;Quest Item\n\gold;Skinrender's Sigil	Cube All 5 Sigils with Ring of the Five\n	1	1	2		0	0	0									ring01				thng		-1
 leek	:leek:	65\n- Runewords can now be corrupted\n	1	2	2		0	0	0									leek				thng		-1
 lms	'The Last Man Standing'\nEvent Award:		2	2	2		0	0	0									lastman	255			grtz		-1
@@ -2194,7 +2216,7 @@ s146	Cube with Two Arcane Crystals to create \green;Set Item\n\orange;Explorer's
 s147	Cube with Two Arcane Crystals to create \green;Set Item\n\orange;Explorer's Cache	Vizjerei Grip	1	1	2		0	0	0									itsababybox				loot		-1
 s148	Cube with Two Arcane Crystals to create \green;Set Item\n\orange;Explorer's Cache	Vizjerei Cloak	1	1	2		0	0	0									itsababybox				loot		-1
 s@s	Assur's Bane		1	1	2		0	0	0									ring08				kill		-1
-sath	\grey;Quest Item\n\gold;Askari Call	\grey;Location: Island of Skartara (Heart)\n\orange;Summon Athulua, the Amazonian Goddess	1	1	2		100	0	0									invblackscroll				thng		-1
+sath	\grey;Quest Item\n\gold;Askari Call	\grey;Location: Island of Skartara (Heart)\n\orange;Summon Athulua, the Amazonian Goddess	1	1	2		120	0	0									invblackscroll				thng		-1
 sbag	\gold;Angel Bag	\grey;Cube 6 Angel Bags to Create Six Angel Bag\n\nCube Reagent	1	2	2		0	0	0									angelbag2				thng		-1
 sc01	Scroll	60\n(1/4)\n\nYou've made it here... I've left this note \nhidden here so that only a worthy hero \ncould find it. Our final confict, the\nUileloscadh Mór, is upon us. Baal's \ncorruption has enveloped Scosglen, and \nsoon will spread in all of Sanctuary...\n\nDruids, over the centuries, have been \nmastering the art of the Dubhdroiacht, \nallowing us control over the forces of \nnature. This forest is the birthplace \nof our greatest creation: the Dúlra \nAegis. We must stop the Lord of \nDestruction before he obtains it.\n\nPlease, muster your resolve and look \nfor the other pages of my diary. Reach \nthe farmfields and look for a chest near \na hut, I believe you'll find it as this \nmessage found you. Watch out, as\nbloody rituals are frequent in that area.\n	2	2	2		0	0	0									invscb				thng		-1
 sc02	Scroll	60\n(2/4)\n\nThis device was born from the desire to \nprotect our home during the foretold \ncalamity; but now, in a twist of fate, it \ncould grant Baal authority over \nunspeakable power... thankfully \nassembling it is far from a simple task. \nThe artifact itself was never completed \nbecause of the threat of its potential \nmisuse, and the instructions were split \ninto multiple designs that Túr Dúlra \nexperts swore to protect.\n\nAfter harvesting the information he \nneeded, Baal has corrupted almost all of \nthe guardians! He has used the artifact \nto reach an unknown location, hiding his \npresence and pressing his advantages.\n\nMaking our own Dúlra Aegis may be \nour best and only step on the path to \nhis defeat.\n\nThe third page of the diary is in a chest \nnearby the Sky Altar, on a stony ground\nperpetually bathed by sunbeams. \nIt's south of the farmfields.\n	2	2	2		0	0	0									invscb				thng		-1
@@ -2228,9 +2250,9 @@ spe	Spleen		1	1	2		0	0	0									invsple				body		-1
 t@t	Demonsbane		1	1	2		0	0	0									invhscr2	255			grtz		-1
 tal	Tail		1	1	2		0	0	0									invtail				body		-1
 tbk	Tome of Town Portal		1	2	2	1	0	0	0									invbbk				book		-1
-tbr	By Mel Odom\nThe Black Road		1	1	2		100	0	0									invsbk3	255			grtz		-1
+tbr	By Mel Odom\nThe Black Road		1	1	2		110	0	0									invsbk3	255			grtz		-1
 tch	Torch		1	2	2		0	0	0									invtrch				torc		-1
-ths	The Sleep	\orange;Disenchant to open a portal to the World Nexus\n\nCube with Trophy to Awaken\grey;	1	1	2		100	0	0									jewelabc	255			grtz		-1
+ths	The Sleep	\orange;Disenchant to open a portal to the World Nexus\n\nCube with Trophy to Awaken\grey;	1	1	2		115	0	0									jewelabc	255			grtz		-1
 toa	\orange;Belladonna Extract	Right-click to reset Stat/Skill Points	1	1	2		0	0	0									pot04				ques		-1
 tr1	Horadric Scroll		2	2	2		0	0	0									invhscr	10			ques		-1
 tr2	Scroll of Resistance	\blue;+10% to Elemental Resistances\n\grey;Cube with the Sunstone of the Twin Seas to Add Bonus\n\nCube Reagent	2	2	2		0	0	0									invscb	32			thng		-1
@@ -2316,9 +2338,9 @@ zkx	\dgreen;Greater Signet of Gold	Right-click: Gold in Bank: %d	1	1	2		0	0	0			
 |bc	Cube Reagent\n\gold;Book of Cain	\blue;+5% to Experience Gained\n+10 to All Attributes\n+1 to All Skills\n\grey;Cube with Glorious Book of Median to Add Bonus\n	2	2	2		0	0	0									superbooffk				thng		-1
 |dc	Dragon Claw		1	1	2		120	0	0									invhorn	255			grtz		-1
 |ds1	\orange;Conjuring Eye	Cube Reagent	1	1	2		0	0	0									invminieye				thng		-1
-|ds2	\orange;Reality Piercer	\red;Requires Standing in the Ancient Circle\n\grey;Cube with Dulra Aegis to enter the Frozen Crest\n\nCube Reagent	1	1	2		0	0	0									invscoseye				thng		-1
+|ds2	\orange;Reality Piercer	\red;Requires Standing within Tur Durla\n\grey;Cube with Dulra Aegis to enter the Frozen Sea\n\nCube Reagent	1	1	2		0	0	0									invscoseye				thng		-1
 |du1	\orange;Dulra Fruit	\blue;25% Magic Find\nMaximum Life +5%\n+1 to All Skills\n\grey;Cube with Dulra Aegis to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invdulrafruit				thng		-1
 |dul	Dulra Aegis	75\nThis powerful artifact has a multitude of \nuses depending on which reagent it is \ncubed with. \n\nCertain perfect gems allow you to pick \nstats within a certain category.\n\nAegis + Perfect Gem -> Add/Roll Stat\n\nRuby = Class Skills\nEmerald = Speed\nSapphire = Enemy Resist\nTopaz = Attribute\nAmethyst = Resist\nDiamond = Max Resist\nSkull = Minion Stat\n\nAdditionally, this artifact can be used to \nsummon certain bosses, teleport you\nto locations and opening quest portals.\n	1	1	2		0	0	0									invdulra	255			grtz		-1
-|ld	Lylia's Curse		1	1	2		100	0	0									lyliascharm	255			grtz		-1
+|ld	Lylia's Curse		1	1	2		120	0	0									lyliascharm	255			grtz		-1
 |ms	\gold;Ghost Trance	\blue;+1 to All Skills\n(11 to 40) to all Attributes\n\grey;Cube with Umbaru Treasure to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									giyuaGolem				thng		-1
-|wc	Weather Control		1	1	2		100	0	0									invathulua	255			grtz		-1
+|wc	Weather Control		1	1	2		120	0	0									invathulua	255			grtz		-1

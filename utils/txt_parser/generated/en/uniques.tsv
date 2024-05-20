@@ -7,7 +7,7 @@
 5	Khalim's Will	20	0	
 6	Golden Cycle	0	1	invch7
 7	\gold;I Am Rich	0	1	
-8	\gold;Riftwalker's Eye	90	1	
+8	\gold;Riftwalker's Eye	105	1	
 9	\gold;Sunstone of the Twin Seas	50	1	
 10	(Druid Challenge Item)\nCaoi Dulra Fruit	90	1	
 11	(Sorceress Challenge Item)\nNexus Crystal	90	1	
@@ -17,46 +17,46 @@
 15	(Necromancer Challenge Item)\nSoulstone Shard	90	1	
 16	(Barbarian Challenge Item)\nWorldstone Orb	90	1	
 17	Corrupted Wormhole	100	1	
-18	The Butcher's Tooth	90	1	
-19	Laser Focus Crystal	90	1	
-20	\gold;Six Angel Bag	90	1	
-21	Optical Detector	90	1	
-22	Visions of Akarat	90	1	akaratbook
-23	Horazon's Focus	90	1	
-24	Sacred Worldstone Key	90	1	
-25	Scroll of Kings	90	1	
-26	By Richard Knaak\nMoon of the Spider	90	1	
-27	Azmodan's Heart	90	1	
-28	Moo moo moo Moooo! Moo!\nFool's Gold	90	1	
-29	Spirit Trance Herb	90	1	
-30	Hammer of the Taan Judges	90	1	
-31	Idol of Vanity	90	1	
-32	By Richard Knaak\nLegacy of Blood	90	1	
-33	Sunstone of the Gods	90	1	
-34	The Black Road	90	1	
-35	Zakarum's Ear	90	1	
-36	Spirit of Creation	90	1	
-37	\grey;Quest Item\n\gold;Tome of Possession	90	1	
-38	Eternal Bone Pile	90	1	
-39	Soul of Kabraxis	90	1	
-40	Silver Seal of Ureh	90	1	
+18	The Butcher's Tooth	105	1	
+19	Laser Focus Crystal	105	1	
+20	\gold;Six Angel Bag	105	1	
+21	Optical Detector	105	1	
+22	Visions of Akarat	110	1	akaratbook
+23	Horazon's Focus	110	1	
+24	Sacred Worldstone Key	110	1	
+25	Scroll of Kings	110	1	
+26	By Richard Knaak\nMoon of the Spider	110	1	
+27	Azmodan's Heart	115	1	
+28	Moo moo moo Moooo! Moo!\nFool's Gold	115	1	
+29	Spirit Trance Herb	115	1	
+30	Hammer of the Taan Judges	115	1	
+31	Idol of Vanity	115	1	
+32	By Richard Knaak\nLegacy of Blood	115	1	
+33	Sunstone of the Gods	115	1	
+34	The Black Road	115	1	
+35	Zakarum's Ear	115	1	
+36	Spirit of Creation	125	1	
+37	\grey;Quest Item\n\gold;Tome of Possession	120	1	
+38	Eternal Bone Pile	120	1	
+39	Soul of Kabraxis	120	1	
+40	Silver Seal of Ureh	120	1	
 41	Umbaru Treasure	120	1	
 42	By Robert Marks\nDemonsbane	120	1	demonsbaneZ
-43	Weather Control	90	1	
-44	Crystalline Flame Medallion	90	1	
-45	The Ancient Repositories	90	1	
-46	Xazax's Illusion	90	1	
+43	Weather Control	120	1	
+44	Crystalline Flame Medallion	120	1	
+45	The Ancient Repositories	125	1	
+46	Xazax's Illusion	125	1	
 47	Cold Fusion Schematics	125	1	coldfusion
 48	Dragon Claw	125	1	
-49	Lylia's Curse	90	1	
-50	The Book of Lies	90	1	
-51	The Sleep	90	1	
-52	Astrogha's Venom Stinger	90	1	
-53	The Glorious Book of Median	90	1	bookoflaz
+49	Lylia's Curse	120	1	
+50	The Book of Lies	125	1	
+51	The Sleep	125	1	
+52	Astrogha's Venom Stinger	125	1	
+53	The Glorious Book of Median	130	1	bookoflaz
 54	Onslaught	130	1	
-55	Books of Kalan	90	1	
-56	\gold;Neutrality Pact	90	1	
-57	Vial of Elder Blood	90	1	
+55	Books of Kalan	130	1	
+56	\gold;Neutrality Pact	130	1	
+57	Vial of Elder Blood	135	1	
 58	'The Last Man Standing'\nEvent Award:	0	1	
 59	'The Goblin King'\nEvent Award:	0	1	
 60	Dulra Aegis	140	1	
@@ -105,7 +105,7 @@
 103	Paragon Soulstone (4)	143	1	
 104	Paragon Soulstone (5)	148	1	
 105	'Season 36: Pandemonium'\nEvent Award:	0	1	
-106	ghist way	0	0	
+106	The Soulforge	0	1	
 107	ghist way	0	0	
 108	ghist way	0	0	
 109	ghist way	0	0	
@@ -1684,7 +1684,7 @@
 1682	Stormstrike	100	105	
 1683	Screaming Serpent	100	105	
 1684	Vizjerei Fury	100	120	
-1685	Vizjerei's Folly	100	105	
+1685	Vizjerei's Folly	80	105	
 1686	Deckard Cain's Heirloom	100	120	
 1687	The Xiphos	60	105	
 1688	The Eviscerator	100	120	
@@ -1796,3 +1796,5 @@
 1794	Scirocco	100	105	
 1795	Boots of Blinding Bluster	80	150	
 1796	Dark Disciple	100	150	
+1797	Raven Mantle	100	150	
+1798	Faithless	80	150	
