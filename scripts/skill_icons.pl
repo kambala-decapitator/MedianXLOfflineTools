@@ -12,7 +12,7 @@ chdir $skillIconsDir;
 
 my %characterIndexes = (ama => 0, sor => 1, nec => 2, pal => 3, bar => 4, dru => 5, ass => 6);
 while (readdir $dh) {
-    next unless /^([a-z]{3})_icons$/;
+    next unless /^icons-([a-z]{3})$/;
     my $idx = $characterIndexes{$1};
     my $outDir = "$skillIconsDir/$idx";
     mkdir $outDir;
