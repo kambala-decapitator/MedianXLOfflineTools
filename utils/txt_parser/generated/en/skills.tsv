@@ -626,7 +626,7 @@
 624	Death Ripple	-1	5	1	2	146
 625	Javelin Nova	-1	0	0	0	0
 626	Hammertime	-1	0	0	0	224
-627	Superbeast	-1	0	0	0	0
+627	Short Duration Superbeast	-1	0	0	0	0
 628	Meteor Shower	-1	0	0	0	47
 629	Trinity Nova	-1	0	0	0	220
 630	Pentagram	-1	0	0	0	186
@@ -845,7 +845,7 @@
 843		-1				
 844		-1				
 845		-1				
-846		-1				
+846	Doom	-1	8	4	1	38
 847		-1				
 848		-1				
 849		-1				
@@ -1878,7 +1878,7 @@
 1876	Tempest	-1	0	0	0	274
 1877	Force Blast	-1	0	0	0	271
 1878	Firedance	-1	0	0	0	268
-1879	Superbeast	-1	0	0	0	275
+1879	Short Duration Superbeast	-1	0	0	0	275
 1880		-1				
 1881	Wraithsword	-1	0	0	0	276
 1882	Thunder Slam	-1	0	0	0	277
@@ -2858,3 +2858,13 @@
 2856		-1				
 2857	Thunderstone	-1	3	2	1	52
 2858		-1				
+2859		-1				
+2860		-1				
+2861		-1				
+2862		-1				
+2863		-1				
+2864	Thunderstone	-1	3	2	1	52
+2865		-1				
+2866		-1				
+2867	Singularity	-1	0	0	0	0
+2868		-1				

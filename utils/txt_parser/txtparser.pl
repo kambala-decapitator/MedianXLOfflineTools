@@ -207,14 +207,14 @@ for my $setItem (@$setItems)
 }
 
 my $itemName = 'name';
-my $armorTypes = parsetxt("armor.tsv", $itemName=>1, "#code"=>0, $nameStr=>21, w=>31, h=>32, type=>2,
-                          type2=>3, rlvl=>18, image=>37, rstr=>12, rdex=>13);
-my $weaponTypes = parsetxt("weapons.tsv", $itemName=>1, "#code"=>0, $nameStr=>5, w=>43, h=>44, type=>2,
-                           type2=>3, stackable=>45, rlvl=>30, rstr=>25, rdex=>26, image=>50, quest=>67,
-                           '1hMinDmg'=>12, '1hMaxDmg'=>13, '2hMinDmg'=>16, '2hMaxDmg'=>17, throwMinDmg=>18, throwMaxDmg=>19,
-                           '1h2h'=>14, '2h'=>15, strBonus=>23, dexBonus=>24);
-my $miscTypes = parsetxt("misc.tsv", $itemName=>0, "#code"=>5, $nameStr=>7, $spellDescStr=>69,
-                         w=>24, h=>25, type=>8, type2=>9, stackable=>48, rlvl=>13, image=>30, quest=>52);
+my $armorTypes = parsetxt("armor.tsv", $itemName=>1, "#code"=>0, $nameStr=>22, w=>32, h=>33, type=>2,
+                          type2=>3, rlvl=>19, image=>38, rstr=>13, rdex=>14);
+my $weaponTypes = parsetxt("weapons.tsv", $itemName=>1, "#code"=>0, $nameStr=>5, w=>44, h=>45, type=>2,
+                           type2=>3, stackable=>46, rlvl=>31, rstr=>26, rdex=>27, image=>51, quest=>68,
+                           '1hMinDmg'=>13, '1hMaxDmg'=>14, '2hMinDmg'=>17, '2hMaxDmg'=>18, throwMinDmg=>19, throwMaxDmg=>20,
+                           '1h2h'=>15, '2h'=>16, strBonus=>24, dexBonus=>25);
+my $miscTypes = parsetxt("misc.tsv", $itemName=>0, "#code"=>5, $nameStr=>7, $spellDescStr=>70,
+                         w=>25, h=>26, type=>8, type2=>9, stackable=>49, rlvl=>14, image=>31, quest=>53);
 &tblExpandHash($_, $itemName) for ($armorTypes, $weaponTypes, $miscTypes);
 
 my $skills = parsetxt("skills.tsv", _index=>"1", "dbgname"=>"0", "internalName"=>"3", "class"=>"2",

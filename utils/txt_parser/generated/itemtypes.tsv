@@ -160,8 +160,10 @@ mxbq	xboq		Magic Xbow Quiv
 mpot	poti		Mana Potion
 mw04	belt		Mastercrafted Belt
 mw01	bow		Mastercrafted Bow
+mw21	glov		Mastercrafted Gloves
 mw02	knif		Mastercrafted Knife
 mw03	staf		Mastercrafted Staff
+mw05	tkni		Mastercrafted Tknife
 mcha	char	invch2,invch5,invch8	Medium Charm
 cyc2	cycl	invch2,invch5,invch8	Medium Cycle
 kill	misc	invrin1,invrin2,invrin3,invrin4,invrin5	Mega Ring
