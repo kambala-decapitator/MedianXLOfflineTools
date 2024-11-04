@@ -4,10 +4,11 @@ extractDir=~/Documents/MXL/skills
 mxlotDir=~/dev/diablo/medianxlofflinetools
 
 mkdir -p $extractDir
-~/dev/diablo/MpqSimpleIO-binary -r \
-  "/Users/kambala/Library/Application Support/CrossOver/Bottles/D2/drive_c/Program Files/Diablo II/MXL.mpq" \
+for mpq in "/Users/kambala/Library/Application Support/CrossOver/Bottles/D2/drive_c/Program Files/Diablo II"/medianxl-*.mpq ; do
+  ~/dev/diablo/MpqSimpleIO-binary -r "$mpq" \
   'data\global\themes\classic_sigma\game\skills\icons-*.dc6' \
-  $extractDir
+  $extractDir 2>/dev/null
+done
 rm $extractDir/icons-shared.dc6
 # exit 0
 
