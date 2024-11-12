@@ -1153,6 +1153,7 @@
 1167	Ifrit
 1168	Hellion
 1169	Overseer
+1174	Chimaera Trap
 1175	Foul Vermin
 1176	Nightmare
 1177	Quill Bear
@@ -1185,6 +1186,7 @@
 1204	Ice Clan
 1205	Infernal Contraption
 1206	Baal (Vision of Destruction)
+1207	Chimaera Trap
 1208	Tyrael
 1209	Chimaera Trap
 1210	Holy Nephalem
@@ -1780,6 +1782,7 @@
 1817	Sleeping Cave Snapper
 1818	Fetish Rocketeer
 1819	Silverbolt
+1820	Forboding Statue
 1821	Blur
 1822	Blur
 1823	Chimaera Trap
@@ -3441,128 +3444,128 @@
 3567	Zakarum's Avatar
 3569	Yataghan
 3570	Goblin Assassin
-3571	Mud Runner
-3572	Earthshaker
-3573	Habelia
-3574	Death Dancer
-3575	Forgotten Elder
-3576	Khazra Archer
-3577	Khazra Archer
-3578	Warforged Shaman
-3579	Trap Rat
-3580	Fetish Rocketeer
-3581	Jungle Hunter
-3582	Ember Prince
-3583	Deep Dweller
-3584	Broodmother
-3585	Death Clan Sacrificer
-3586	Khazra Flesh Mender
-3587	Jungle Vigilant
-3588	Foulblooded
-3589	Heirophant
-3590	Bone Sorcerer
-3591	Reignited Sorcerer
-3592	Horror Sorcerer
-3593	Risen Warlord
-3594	Toxotes
-3595	Living Husk
-3596	Phantom
-3597	Skeleton Khan
-3598	Putrid Chevalier
-3599	Dead Shot
-3600	Knight of War
-3601	Oblivion Knight
-3602	Vizjerei Elder
-3603	Unskinned Magister
-3604	Twicedamned
-3605	Plague Bearer
-3606	Necromancer Apprentice
-3607	Undead Scout
-3608	Admonisher
-3609	Twisted Councillor
-3610	Cantor
-3611	Dreamstealer
-3612	Sovereign of the Sands
-3613	Nomad Seer
-3614	Bloodfire Rogue
-3615	Corrupted Sister
-3616	Arachnon
-3617	Forest Ancient
-3618	Simian Rex
-3619	Mephisto's Cabalist
-3620	Bloated Host
-3621	Swamp Scion
-3622	Obsidian Protector
-3623	Hexwing
-3624	Living Flame
-3625	Eternal Ember
-3626	Souless Husk
-3627	Serafiend
-3628	Moon Wailer
-3629	Magistrate
-3630	Cabalist
-3631	Void Archon
-3632	Electrogeist
-3633	High Priestess
-3634	Exalted One
-3635	Cantor
-3636	Invader
-3637	Heretic
-3638	Lightwell
-3639	Black Locusts
-3640	Lizardman Retiarius
-3641	Lizardman Witch Doctor
-3642	Broodmother
-3643	Harvested Soul
-3644	Riftborn
-3645	Living Blood
-3646	Arachnid Leaper
-3647	Carver Elder
-3648	Steel Serpent
-3649	Noxious Viper
-3650	Besieger
-3651	Mindleech
-3652	Shapeless Hunger
-3653	Contagion Carrier
-3654	Demon Gremlin
-3655	Dread Watcher
-3656	Hellish Vixen
-3657	Ichor Maw
-3658	Corpulent
-3659	Hag
-3660	Coven Mistress
-3661	Grimspike
-3662	Khazra Flesh Mender
-3663	Pyromancer
-3664	Slithering Hexer
-3665	Salamander
-3666	Clutch Mother
-3667	Temple Spire
-3668	Baron of Hell
-3669	Dark Sovereign
-3670	Toxotes
-3671	Fleshless One
-3672	Wasting One
-3673	Ancient Vampire
-3674	Blackened One
-3675	Thunderbolt
-3676	Silver Tyrant
-3677	Corruptor Archer
-3678	Desecrator Knight
-3679	Broken Soul
-3680	Heretic
-3681	Erinys
-3682	Slain Soul
-3683	Necrobot
-3684	Impaler Archon
-3685	Sapphire Knight
-3686	Erinys
-3687	Slain Soul
-3688	Cabalist
-3689	Magistrate
-3690	Lament
-3691	Overlord
-3692	Foulblooded
+3571	Lord of the Grave
+3572	Zombie
+3573	Hungry Dead
+3574	Cadaver
+3575	Drowned Carcass
+3576	Plague Bearer
+3577	Dried Corpse
+3578	Decayed
+3579	Embalmed
+3580	Rot Walker
+3581	Defiled Warrior
+3582	Living Husk
+3583	Rotted Husk
+3584	Condemned
+3585	Feral Ghoul
+3586	Ravager
+3587	Hellish Vixen
+3588	Arcane Witch
+3589	Hag
+3590	Coven Mistress
+3591	Pandemoneous
+3592	Vile Temptress
+3593	Stygian Harlot
+3594	Hell Temptress
+3595	Blood Temptress
+3596	Siren
+3597	Vile Witch
+3598	Stygian Fury
+3599	Blood Witch
+3600	Daughter of the Hallows
+3601	Forsaken One
+3602	Zombie
+3603	Hungry Dead
+3604	Cadaver
+3605	Drowned Carcass
+3606	Plague Bearer
+3607	Dried Corpse
+3608	Decayed
+3609	Embalmed
+3610	Rot Walker
+3611	Defiled Warrior
+3612	Living Husk
+3613	Rotted Husk
+3614	Condemned
+3615	Feral Ghoul
+3616	Ravager
+3617	Hellish Vixen
+3618	Arcane Witch
+3619	Hag
+3620	Coven Mistress
+3621	Pandemoneous
+3622	Vile Temptress
+3623	Stygian Harlot
+3624	Hell Temptress
+3625	Blood Temptress
+3626	Siren
+3627	Vile Witch
+3628	Stygian Fury
+3629	Blood Witch
+3630	Daughter of the Hallows
+3631	Forsaken One
+3632	Lord of the Grave
+3633	Brutal Ravager
+3634	Lethal Ravager
+3635	Savage Ravager
+3636	Nightmarish Ravager
+3637	Hellish Ravager
+3638	Brutal Ravager
+3639	Lethal Ravager
+3640	Savage Ravager
+3641	Nightmarish Ravager
+3642	Hellish Ravager
+3643	Brutal Forsaken One
+3644	Lethal Forsaken One
+3645	Savage Forsaken One
+3646	Nightmarish Forsaken One
+3647	Hellish Forsaken One
+3648	Brutal Forsaken One
+3649	Lethal Forsaken One
+3650	Savage Forsaken One
+3651	Nightmarish Forsaken One
+3652	Hellish Forsaken One
+3653	BossRathma
+3654	BossRathma
+3655	BossRathma
+3656	BossRathma
+3657	BossRathma
+3658	BossRathma
+3659	BossRathma
+3660	BossRathma
+3661	BossRathma
+3662	BossRathma
+3663	BossRathma
+3664	BossRathma
+3665	BossRathma
+3666	BossRathma
+3667	BossRathma
+3668	BossRathma
+3669	BossRathma
+3670	BossRathma
+3671	BossRathma
+3672	BossRathma
+3673	BossRathma
+3674	BossRathma
+3675	BossRathma
+3676	BossRathma
+3677	BossRathma
+3678	BossRathma
+3679	BossRathma
+3680	BossRathma
+3681	BossRathma
+3682	BossRathma
+3683	BossRathma
+3684	BossRathma
+3685	BossRathma
+3686	BossRathma
+3687	BossRathma
+3688	BossRathma
+3689	BossRathma
+3690	BossRathma
+3691	BossRathma
+3692	BossRathma
 3693	Phantasm
 3694	Steel Serpent
 3695	Eternal Ember

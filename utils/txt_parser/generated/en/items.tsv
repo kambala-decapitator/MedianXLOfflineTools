@@ -1532,7 +1532,7 @@ Ysh2	Necklace		1	1	2		0	0	0									lab_amu				###2		-1
 \\7	\grey;Quest Item\n\gold;Tome of Possession		2	2	2		0	0	0									invbbb	255			grtz		-1
 \\8	Corrupted Wormhole	80\nTriune Trophy Challenge\nRequirements: \nKill Lucion without being struck by Malic's \nBurning Missiles\nDo not die\n\nCube the Corrupted Wormhole within \n10 seconds\nGrants:\n30% Magic Find\nLocked to current character class\n	1	1	2		0	0	0									invlucion	255			grtz		-1
 a55	Optical Detector		1	1	2		0	0	0									inveye	255			grtz		-1
-a56	Azmodan's Heart	80\nHeart of Sin Trophy Challenge\nRequirements: \nKill Azmodan without being struck by \na Molten Boulder\nDo not die\n\nCube Azmodan's Heart within 10 seconds\nGrants: \n+150 to Life\n+75 to mana\nLocked to current character class\n	1	1	2		0	0	0									invhrt	255			grtz		-1
+a56	Azmodan's Heart	80\nHeart of Sin Trophy Challenge\nRequirements: \nKill Azmodan without being struck by \na Flameblood\nDo not die\n\nCube Azmodan's Heart within 10 seconds\nGrants: \n+150 to Life\n+75 to mana\nLocked to current character class\n	1	1	2		0	0	0									invhrt	255			grtz		-1
 a57	Visions of Akarat		1	1	2		0	0	0									invsbk2	255			grtz		-1
 a58	Scroll of Kings		1	1	2		0	0	0									invscb2	255			grtz		-1
 a59	Laser Focus Crystal		1	1	2		0	0	0									invdss	255			grtz		-1
@@ -2340,7 +2340,7 @@ zkx	\dgreen;Greater Signet of Gold	Right-click: Gold in Bank: %d	1	1	2		0	0	0			
 {19	\orange;The Void Fragment	\grey;Cube 3 identical Fragments to Create Trophy	1	1	2		0	0	0									apple				thng,trfr		-1
 {20	\orange;Eve of Destruction Fragment	\grey;Cube 3 identical Fragments to Create Trophy	1	1	2		0	0	0									apple				thng,trfr		-1
 |\#	Xazax's Illusion	80\nXazax Trophy Challenge\nRequirements:\nKill Xazax without being hit by a Penitent\nDo not die\n\nCube Xazax's Illusion within 10 seconds\nGrants\nSlow target 4%\nLocked to current character class\n	1	1	2		0	0	0									maggotlairfag	255			grtz		-1
-|\\	The Ancient Repositories	80\nYshari Sanctum Trophy Challenge\nRequirements:\nKill Valthek the Archmage within \n5 minutes of killing Valthek's Altar\nDo not die\n\nCube The Ancient Repositories within \nthe time limit\nGrants\nMaximum Life and Mana +5%\nLocked to current character class\n	1	1	2		0	0	0									ancientrepositoriesz	255			grtz		-1
+|\\	The Ancient Repositories	80\nYshari Sanctum Trophy Challenge\nRequirements:\nKill Valthek the Archmage within \n5 minutes 30 seconds of killing \nValthek's Altar \nDo not die\n\nCube The Ancient Repositories within \nthe time limit\nGrants\nMaximum Life and Mana +5%\nLocked to current character class\n	1	1	2		0	0	0									ancientrepositoriesz	255			grtz		-1
 |ab	Cube Reagent\n\orange;Ancient Book	\yellow;very rare Emblems that drop from Monsters\nRecipes for this Item are Unknown, but said to use\n	2	2	2		0	0	0									bookwastex				thng		-1
 |bc	Cube Reagent\n\gold;Book of Cain	\blue;+5% to Experience Gained\n+10 to All Attributes\n+1 to All Skills\n\grey;Cube with Glorious Book of Median to Add Bonus\n	2	2	2		0	0	0									superbooffk				thng		-1
 |dc	Dragon Claw	80\nBremmtown Trophy Challenge\nRequirements:\nKill the Dark Star Dragon within 30 \nseconds of entering\nDo not die\n\nCube the Dragon Claw within the time limit\nGrants: \n+10% to Experience Gained\n	1	1	2		120	0	0									invhorn	255			grtz		-1

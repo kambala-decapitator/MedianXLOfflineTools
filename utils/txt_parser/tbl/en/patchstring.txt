@@ -2321,7 +2321,7 @@
 "StrPushNotifGoblinAppear"	" appears!"
 "StrPushNotifHighThreat"	"High threat nearby!"
 "DescBaalTrophy"	"80\nEve of Destruction Trophy Challenge\nRequirements:\nKill Baal without being struck by his Black \nCarpet Bomb\nDo not die\n\nCube the Spirit of Creation within 10 \nseconds \nGrants: \nElemental Resists +10%\nLocked to current character class\n"
-"DescAzmoTrophy"	"80\nHeart of Sin Trophy Challenge\nRequirements: \nKill Azmodan without being struck by \na Molten Boulder\nDo not die\n\nCube Azmodan's Heart within 10 seconds\nGrants: \n+150 to Life\n+75 to mana\nLocked to current character class\n"
+"DescAzmoTrophy"	"80\nHeart of Sin Trophy Challenge\nRequirements: \nKill Azmodan without being struck by \na Flameblood\nDo not die\n\nCube Azmodan's Heart within 10 seconds\nGrants: \n+150 to Life\n+75 to mana\nLocked to current character class\n"
 "DescBremmTrophy"	"80\nBremmtown Trophy Challenge\nRequirements:\nKill the Dark Star Dragon within 30 \nseconds of entering\nDo not die\n\nCube the Dragon Claw within the time limit\nGrants: \n+10% to Experience Gained\n"
 "RevealTrophyChallenge"	"\orange;Right click to reveal trophy challenge"
 "12326"	"\orange;Amatoxin: 2000% of Innate Elemental Damage bonus added as Damage Multiplier\n\blue;+28 to Amatoxin\n\red;Disables Ranged Skills"
