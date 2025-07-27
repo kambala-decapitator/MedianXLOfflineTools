@@ -20,6 +20,7 @@ public:
         Status = 0x24,
         Progression = 0x25,
         Class = 0x28,
+		SkillsCount = 0x2A,
         Level = 0x2B,
         SkillKeys = 0x38,
         CurrentLocation = 0xA8,

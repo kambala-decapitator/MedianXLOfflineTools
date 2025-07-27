@@ -1802,10 +1802,12 @@ bool MedianXLOfflineTools::processSaveFile()
     charInfo.basicInfo.newName = charInfo.basicInfo.originalName.replace(ColorsManager::ansiColorHeader(), ColorsManager::unicodeColorHeader());
 
     inputDataStream.device()->seek(Offsets::Status);
-    quint8 status, progression, classCode, clvl;
+    quint8 status, progression, classCode, clvl, skillsNumber;
     inputDataStream >> status >> progression;
     inputDataStream.device()->seek(Offsets::Class);
     inputDataStream >> classCode;
+    inputDataStream.device()->seek(Offsets::SkillsCount);
+    inputDataStream >> skillsNumber;
     inputDataStream.device()->seek(Offsets::Level);
     inputDataStream >> clvl;
 
@@ -2044,19 +2046,27 @@ bool MedianXLOfflineTools::processSaveFile()
     // skills
     quint16 skills = 0, maxPossibleSkills = totalPossibleSkillPoints();
     charInfo.basicInfo.skills.clear();
-    int skillsNumber = firstItemOffset - charInfo.skillsOffset - kSkillsHeader.length();
     charInfo.basicInfo.skills.reserve(skillsNumber);
 
     inputDataStream.skipRawData(kSkillsHeader.length());
     int firstSkillOffset = charInfo.skillsOffset + kSkillsHeader.length();
     const Enums::Skills::SkillsOrderPair skillsIndexes = Enums::Skills::currentCharacterSkillsIndexes();
-    for (int i = 0; i < skillsNumber; ++i)
+    for (quint8 i = 0; i < skillsNumber; ++i)
     {
         quint8 skillValue;
         inputDataStream >> skillValue;
-        skills += skillValue;
-        charInfo.basicInfo.skills += skillValue;
-        //qDebug() << i << skillValue << ItemDataBase::Skills()->at(skillsIndexes.first.at(i))->name;
+
+        if (i < skillsIndexes.first.size())
+        {
+            skills += skillValue;
+            charInfo.basicInfo.skills += skillValue;
+/*
+            qDebug() << int(i) << skillValue;
+            const int globalSkillsIndex = skillsIndexes.first.at(i);
+            if (globalSkillsIndex < ItemDataBase::Skills()->size())
+                qDebug() << ItemDataBase::Skills()->at(globalSkillsIndex)->name;
+*/
+        }
     }
     skills += charInfo.valueOfStatistic(CharacterStats::FreeSkillPoints);
 #ifndef MAKE_FINISHED_CHARACTER
