@@ -31,8 +31,8 @@
 31	500	16							Defense	Defense		1	93	1					armorclass
 32	0	13							Defense vs. Missile	Defense vs. Missile		1	92	1					armorclass_vs_missile
 33	0	13							Defense vs. Melee	Defense vs. Melee		1	92	1					armorclass_vs_hth
-34	100	9							Physical Damage Reduced by	Physical Damage Reduced by		3	52	2					normal_damage_reduction
-35	100	9							Elemental/Magic Damage Reduced by	Elemental/Magic Damage Reduced by		3	51	2					magic_damage_reduction
+34	100	9							Physical Damage Taken Reduced by	Physical Damage Taken Reduced by		3	52	2					normal_damage_reduction
+35	100	9							Elemental/Magic Damage Taken Reduced by	Elemental/Magic Damage Taken Reduced by		3	51	2					magic_damage_reduction
 36	100	8							Physical Resist	Physical Resist		2	53	2					damageresist
 37	100	8							Magic Resist	Magic Resist		4	65	2					magicresist
 38	20	7							Maximum Magic Resist	Maximum Magic Resist		4	70	1					maxmagicresist
@@ -90,15 +90,15 @@
 98		1																11	state
 99	100	9			93,102,105	Combat Speeds	Combat Speeds		Hit Recovery	Hit Recovery		2	188	1	9	2	1		item_fastergethitrate
 101	0	6																	skill_poison_override_length
-102	100	9			93,99,105	Combat Speeds	Combat Speeds		Slower Block Rate	Block Speed		2	189	1	9	2	1		item_fasterblockrate
+102	100	9			93,99,105	Combat Speeds	Combat Speeds		Block Speed	Block Speed		2	189	1	9	2	1		item_fasterblockrate
 103	0	1							Ignores Resistances of Undead	Ignores Resistances of Undead		3	197	0					skill_bypass_undead
 104	0	1							Ignores Resistances of Demons	Ignores Resistances of Demons		3	197	0					skill_bypass_demons
 105	100	9			93,99,102	Combat Speeds	Combat Speeds		Cast Speed	Cast Speed		2	191	1	9	2	1		item_fastercastrate
 106	0	1							Ignores Resistances of Beasts	Ignores Resistances of Beasts		3	197	0					skill_bypass_beasts
 107	1	5										27	128					11	item_singleskill
 108	0	1							Slain Monsters Rest in Peace	Slain Monsters Rest in Peace		3	23	0					item_restinpeace
-109	100	8							Curse Length Reduction	Curse Length Reduction		2	54	1					curse_resistance
-110	100	8							Poison Length Reduced by	Poison Length Reduced by		2	55	2					item_poisonlengthresist
+109	100	8							Curse Length Reduction	Curse Length Reduction		2	54	2					curse_resistance
+110	100	8							Poison Length Reduction	Poison Length Reduction		2	55	2					item_poisonlengthresist
 111	100	10							Damage	Damage		1	169	2					item_normaldamage
 112	25	7							Hit Causes Monster to Flee	Hit Causes Monster to Flee		5	119	2					item_howl
 113	50	8							Hit Blinds Target	Hit Blinds Target		12	120	2					item_stupidity
@@ -153,7 +153,7 @@
 181		3																	fade
 182	100	8							Total Defense = 0	Total Defense = 0		3	11	0					armor_override_percent
 183	0	5																	item_dyes_color
-184	0	2																	melee_divisor
+184	0	8																	melee_divisor
 185				12								3		2					potion_stat_cap
 186				8								3		2					potion_skill_cap
 187	0	3																	stance_ID
@@ -172,7 +172,7 @@
 201	0	7							%d%% Chance to cast level %d %s when Struck	%d%% Chance to cast level %d %s when Struck		15	205					17	item_skillongethit
 202	0	20																	Trophy_Challenge
 203	0	10							Weapon Physical Damage	Weapon Physical Damage	(Based on Character Level)	8	83	2					item_totaldamage_perlevel
-204	0	16							(%d/%d Charges)	(%d/%d Charges)		24	8					16	item_charged_skill
+204	0	16							(%d/%d Charges)	(%d/%d Charges)		24	204					16	item_charged_skill
 205	20	7							Maximum Avoid Chance	Maximum Avoid Chance		4	49	2					avoidcap
 206	0	8																17	innate-xbow-proc
 208	0	7							Life on Striking	Life on Striking		1	45	1					item_healonstriking
@@ -192,6 +192,7 @@
 231	0	10							Fire Resist	Fire Resist	(Based on Character Level)	7	64	2					item_resist_fire_perlevel
 232	0	10							Lightning Resist	Lightning Resist	(Based on Character Level)	7	63	2					item_resist_ltng_perlevel
 233	0	10							Poison Resist	Poison Resist	(Based on Character Level)	7	61	2					item_resist_pois_perlevel
+234	0	12							to Strength	to Strength		1	90	1					class_counter1
 239	0	10							Gold Find	Gold Find	(Based on Character Level)	7	16	1					item_find_gold_perlevel
 240	0	10							Magic Find	Magic Find	(Based on Character Level)	7	14	1					item_find_magic_perlevel
 241	30	7																	is_corrupted
@@ -299,6 +300,7 @@
 388	50	8							Bonus Elemental Damage to Mark of the Wild	Bonus Elemental Damage to Mark of the Wild		4	195	1					passive_motw_elempct
 389	0	10							Duration Bonus to Mark of the Wild	Duration Bonus to Mark of the Wild		2	195	1					passive_motw_duration
 390	0	5							\green;Already Enchanted	\green;Already Enchanted		3	248	0					is_enchanted
+391	0	5							\green;Mirrored	\green;Mirrored		3	249	0					is_mirrored
 393	1001	14																12	special_syn2
 395	1	3																	weapon_count
 396	1001	14																12	special_syn3
@@ -323,15 +325,18 @@
 423		8																	BoneChimesValue
 424		8																	BoneChimesDummy
 425		5																	alchemy_oil_counter
+427	0	9							Activation Frequency	Activation Frequency		2	126	2					afreq
+428	5	6							to Maximum Exodia Minions	to Maximum Exodia Minions		1	132	1					item_exodia_max
+429	5	6							to Maximum Paladin Minions	to Maximum Paladin Minions		1	197	1					item_paladin_max
 431	100	9							Bonus to Poison Skill Duration	Bonus to Poison Skill Duration		4	195	1					skill_poison_dur
 432	1	10																	minion_effect_bonus
 439	0	9							Life when Struck by an Enemy	Life when Struck by an Enemy		1	20	1					item_healwhenstruck
 440	0	9							Mana when Struck by an Enemy	Mana when Struck by an Enemy		1	19	1					item_manawhenstruck
-441	5	6			445	to All Maximum Minions	to All Maximum Minions		to Maximum Necromancer Minions	to Maximum Necromancer Minions		1	196	1	11	1	1		passive_aura_addmax
+441	5	6							to Maximum Necromancer Minions	to Maximum Necromancer Minions		1	195	1					passive_aura_addmax
 442	0	9							Additional Strength Damage Bonus:	Additional Strength Damage Bonus:		2	194	2					str_bonus_blue
 443	0	5							\green;Already Upgraded	\green;Already Upgraded		3	249	0					item_upgraded
 444	100	9							Penalty to Summoned Minion Life	to Summoned Minion Life		4	105	1					skill_minion_hp_percent
-445	0	6			441	to All Maximum Minions	to All Maximum Minions		to Maximum Barbarian Minions	to Maximum Barbarian Minions		1	196	1	11	1	1		skill_ancientspirits_synergy
+445	0	6							to Maximum Barbarian Minions	to Maximum Barbarian Minions		1	196	1					skill_ancientspirits_synergy
 446	0	8							Damage to Protector Spirit Bloodlust	Damage to Protector Spirit Bloodlust		4	195	1					skill_shamanspath_synergy
 447	0	9							Restored:	Restored:		7	234	2					trophy_fragmentation
 448	100	8																	potion_efficiency
@@ -385,9 +390,10 @@
 499	0	10							to Energy	to Energy	(Based on Character Level)	6	87	1					item_energy_perlevel
 500	100	8							to Summoned Minion Attack Rating	to Summoned Minion Attack Rating		4	102	1					item_minion_attack
 501	23	10							\grey;Arcane Crystals: 	\blue;Quantity:		3	84	2					shrine_counter
+503	1	4																	is_PoF
 504	6383	14																	lootbox_seed
 505	0	10							Life Regenerated per Second (Based on Character Level)	Life Regenerated per Second (Based on Character Level)		32	80	1					item_hpregen_perlevel
 506	1	2																	lethal_incision
 508	100	9																	eq_gr
 509	100	9																	eq_grw
-510	0	7							%d%% Chance to cast level %d %s when Blocking	%d%% Chance to cast level %d %s when Blocking		15	205					17	item_onblock
+510	0	7							%d%% Chance to cast level %d %s on Block	%d%% Chance to cast level %d %s on Block		15	205					17	item_onblock

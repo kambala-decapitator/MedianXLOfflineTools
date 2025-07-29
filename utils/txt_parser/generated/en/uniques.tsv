@@ -29,7 +29,7 @@
 27	Azmodan's Heart	115	1	
 28	Moo moo moo Moooo! Moo!\nFool's Gold	115	1	
 29	Spirit Trance Herb	115	1	
-30	Hammer of the Taan Judges	115	1	
+30	Paragon's Hammer	115	1	
 31	Idol of Vanity	115	1	
 32	By Richard Knaak\nLegacy of Blood	115	1	
 33	Sunstone of the Gods	115	1	
@@ -133,10 +133,10 @@
 131	Vizjerei's Necklace	100	105	
 132	Black Dwarf	110	105	
 133	Klaatu Barada Nikto	110	105	
-134	Death Ward	110	105	
+134	Death Ward	120	120	
 135	Dyers Eve	100	120	
 136	Jerhyn's Tawiz	0	1	
-137	Gallowlaugh	110	110	
+137	Gallowlaugh	110	105	
 138	Quov Tsin's Talisman	110	110	superammy
 139	Beads of the Snake Queen	100	120	
 140	In For The Kill	100	120	
@@ -152,13 +152,13 @@
 150	Lammergeier	100	120	
 151	Infernal Ichor	100	100	
 152	Devil's Dance	100	120	
-153	The Boulder	1	1	
+153	The Boulder	0	1	
 154	Storm Shard	20	20	
 155	Demonstone Blood	40	40	
-156	Farsight Globe	40	80	
-157	Asheara's Cateye	100	100	
-158	Heavenstone	100	105	
-159	Katamari	30	40	
+156	Farsight Globe	80	105	
+157	Asheara's Cateye	0	1	
+158	Heavenstone	80	110	
+159	Katamari	0	1	
 160	Xepera Xeper Xeperu	110	105	
 161	Zakarum Stoning Rock	60	60	
 162	Zann Esu's Stone	100	115	
@@ -170,7 +170,7 @@
 168	Suicide Note	100	115	
 169	Arkenstone	100	120	
 170	Atomus	120	120	
-171	Jewel of Luck	125	130	
+171	Jewel of Luck	0	130	
 172	Ring of Regha	0	1	
 173	Ring of Disengagement	1	1	
 174	Ring of Truth	20	20	
@@ -1293,8 +1293,8 @@
 1291	Relic	75	1	
 1292	Relic	75	1	
 1293	Relic	75	1	
-1294	Relic	0	0	
-1295	Relic	0	0	
+1294	Relic	75	1	
+1295	Relic	75	1	
 1296	Relic	0	0	
 1297	Relic	0	0	
 1298	Relic	0	0	
@@ -1557,7 +1557,7 @@
 1555	Smokeless Fire	100	120	invwndur
 1556	Zular Khan's Tempest	100	105	
 1557	Black Ice	70	120	invvou
-1558	Peace Warder	100	105	
+1558	Peace Warder	100	120	
 1559	Grotesque Bite	100	105	
 1560	Headsman	100	120	
 1561	Chober Chaber	100	105	
@@ -1593,7 +1593,7 @@
 1591	Skeld's Battlesong	100	105	
 1592	Thunder King of Sescheron	100	120	
 1593	Frostneedle	100	105	
-1594	Black Razor	100	120	
+1594	Black Razor	120	120	
 1595	Yaggai's Sagaris	100	105	
 1596	The King of Ents	100	120	
 1597	Bartuc's Curse	100	105	
@@ -1651,7 +1651,7 @@
 1649	Bottled Will-o-Wisp	100	105	
 1650	Homunculus	100	120	
 1651	Screen of Viz-Jaq'Taar	100	105	
-1652	Natalya's Deception	80	120	invqltz
+1652	Natalya's Deception	65	130	invqltz
 1653	Iron Shard	100	105	
 1654	Guardian of Scosglen	100	105	
 1655	Mr. Painless	100	120	
@@ -1713,7 +1713,7 @@
 1711	The Book of Kalen	100	105	invbbb
 1712	Mark of the Que-Hegan	100	120	
 1713	Black Sun Spear	100	105	
-1714	Jaguar's Grasp	100	120	
+1714	Inarius' Testament	100	125	
 1715	Lacerator	100	105	
 1716	Meshif's Iron Parrot	100	105	
 1717	Dark Nemesis	100	120	
@@ -1772,7 +1772,7 @@
 1770	Blood of Creation	50	150	
 1771	\purple;Laser Focus Crystal (Heroic)	121	1	
 1772	\purple;Optical Detector (Heroic)	122	1	
-1773	ghist way	0	0	
+1773	Pearl of Wisdom: Paragon of Fate	1	1	
 1774	ghist way	0	0	
 1775	ghist way	0	0	
 1776	ghist way	0	0	
@@ -1798,3 +1798,18 @@
 1796	Dark Disciple	100	150	
 1797	Raven Mantle	100	150	
 1798	Faithless	80	150	
+1799	Faithless	100	120	
+1800	Liberty	100	120	
+1801	Cain's Marble	0	1	
+1802	Hellrush	0	1	
+1803	Weight Shift	0	1	
+1804	Hunger	0	1	
+1805	The Grubber	0	1	
+1806	Rainbow Prism	0	1	
+1807	Arcane Focus	0	1	
+1808	Glass Shard	0	1	
+1809	Body of the Forbidden One	100	120	
+1810	Mark of the Angiris	50	139	
+1811	Mark of the Angiris	50	139	
+1812	Drought	100	120	
+1813	Ring of Woe	80	120	invrRoW

@@ -82,30 +82,30 @@ r30	\purple;Ber Rune	Ber	363		2							363		2							150		3
 r31	\purple;Jah Rune	Jah	16		15							16		15							17		15						
 r32	\purple;Cham Rune	Cham	77		2							77		2							77		3						
 r33	\purple;Zod Rune	Zod	86		15							86		15							86		15						
-r51	\grey;Great Rune\n\purple;Taha Rune	Taha	333,334,335,336		2							333,334,335,336		2				508		1	333,334,335,336		2				509		1
+r51	\grey;Great Rune\n\purple;Taha Rune	Taha	333,334,335,336		2							333,334,335,336		2				508		1	333,334,335,336		3				509		1
 r52	\grey;Great Rune\n\purple;Ghal Rune	Ghal	485		15							485		15				508		1	485		25				509		1
 r53	\grey;Great Rune\n\purple;Qor Rune	Qor	141		2							141		2				508		1	141		3				509		1
-r57	\grey;Elemental Rune\n\purple;Fire Rune	Ign	333		3							333		3				508		1	333		3				509		1
-r58	\grey;Elemental Rune\n\purple;Stone Rune	Sil	21,22		3							21,22		3				508		1	21,22		5				509		1
-r59	\grey;Elemental Rune\n\purple;Arcane Rune	Arc	488		2							488		2				508		1	488		3				509		1
-r60	\grey;Elemental Rune\n\purple;Poison Rune	Ven	336		3							336		3				508		1	336		3				509		1
-r61	\grey;Elemental Rune\n\purple;Light Rune	Ful	334		3							334		3				508		1	334		3				509		1
-r62	\grey;Elemental Rune\n\purple;Ice Rune	Gla	335		3							335		3				508		1	335		3				509		1
-rx01	\grey;Enchanted Rune (01)\n\purple;Ol Rune	Ol	0,1,2,3		10							0,1,2,3		10							0,1,2,3		10						
+r57	\grey;Elemental Rune\n\purple;Fire Rune	Ign	333		3							142		1				508		1	333		5				509		1
+r58	\grey;Elemental Rune\n\purple;Stone Rune	Sil	21,22		4							36		1				508		1	21,22		8				509		1
+r59	\grey;Elemental Rune\n\purple;Arcane Rune	Arc	488		3							37		1				508		1	488		5				509		1
+r60	\grey;Elemental Rune\n\purple;Poison Rune	Ven	336		3							110		15				508		1	336		5				509		1
+r61	\grey;Elemental Rune\n\purple;Light Rune	Ful	334		3							144		1				508		1	334		5				509		1
+r62	\grey;Elemental Rune\n\purple;Ice Rune	Gla	335		3							148		1				508		1	335		5				509		1
+rx01	\grey;Enchanted Rune (01)\n\purple;Ol Rune	Ol	0,1,2,3		13							0,1,2,3		13							0,1,2,3		13						
 rx02	\grey;Enchanted Rune (02)\n\purple;Elq Rune	Elq	22		10							22		10							22		20						
-rx03	\grey;Enchanted Rune (03)\n\purple;Tyr Rune	Tyr	329		4							329		4							329		4						
-rx04	\grey;Enchanted Rune (04)\n\purple;Nif Rune	Nif	330		4							330		4							330		4						
-rx05	\grey;Enchanted Rune (05)\n\purple;Xeth Rune	Xeth	331		4							331		4							331		4						
-rx06	\grey;Enchanted Rune (06)\n\purple;Xith Rune	Xith	332		4							332		4							332		4						
-rx07	\grey;Enchanted Rune (07)\n\purple;Thal Rune	Thal	357		4							357		4							357		4						
-rx08	\grey;Enchanted Rune (08)\n\purple;Rhal Rune	Rhal	39		30							39		30							39		40						
-rx09	\grey;Enchanted Rune (09)\n\purple;Urt Rune	Urt	41		30							41		30							41		40						
-rx10	\grey;Enchanted Rune (10)\n\purple;Tuul Rune	Tuul	43		30							43		30							43		40						
-rx11	\grey;Enchanted Rune (11)\n\purple;Ahmn Rune	Ahmn	45		30							45		30							45		40						
-rx12	\grey;Enchanted Rune (12)\n\purple;Zol Rune	Zol	9		60							9		60							9		80						
+rx03	\grey;Enchanted Rune (03)\n\purple;Tyr Rune	Tyr	329		5							329		5							329		5						
+rx04	\grey;Enchanted Rune (04)\n\purple;Nif Rune	Nif	330		5							330		5							330		5						
+rx05	\grey;Enchanted Rune (05)\n\purple;Xeth Rune	Xeth	331		5							331		5							331		5						
+rx06	\grey;Enchanted Rune (06)\n\purple;Xith Rune	Xith	332		5							332		5							332		5						
+rx07	\grey;Enchanted Rune (07)\n\purple;Thal Rune	Thal	357		5							357		5							357		5						
+rx08	\grey;Enchanted Rune (08)\n\purple;Rhal Rune	Rhal	39		35							39		45							39		35						
+rx09	\grey;Enchanted Rune (09)\n\purple;Urt Rune	Urt	41		35							41		45							41		35						
+rx10	\grey;Enchanted Rune (10)\n\purple;Tuul Rune	Tuul	43		35							43		45							43		35						
+rx11	\grey;Enchanted Rune (11)\n\purple;Ahmn Rune	Ahmn	45		35							45		45							45		35						
+rx12	\grey;Enchanted Rune (12)\n\purple;Zol Rune	Zol	9		75							9		75							9		100						
 rx13	\grey;Enchanted Rune (13)\n\purple;Shaen Rune	Shaen	431		13							431		13							431		20						
-rx14	\grey;Enchanted Rune (14)\n\purple;Doj Rune	Doj	444		13							444		13							444		13						
-rx15	\grey;Enchanted Rune (15)\n\purple;Hem Rune	Hem	470		7							470		7							470		7						
+rx14	\grey;Enchanted Rune (14)\n\purple;Doj Rune	Doj	444		20							444		20							444		20						
+rx15	\grey;Enchanted Rune (15)\n\purple;Hem Rune	Hem	470		10							470		10							470		10						
 rx16	\grey;Enchanted Rune (16)\n\purple;Iu Rune	Iu	500		70							500		70							500		70						
 rx17	\grey;Enchanted Rune (17)\n\purple;Lux Rune	Lux	487		7							487		7							487		7						
 rx18	\grey;Enchanted Rune (18)\n\purple;Ka Rune	Ka	359		7							359		7							359		7						
@@ -115,14 +115,14 @@ rx21	\grey;Enchanted Rune (21)\n\purple;Phul Rune	Phul	361		7							361		7						
 rx22	\grey;Enchanted Rune (22)\n\purple;Un Rune	Un	39,41,43,45		13							39,41,43,45		13							39,41,43,45		13						
 rx23	\grey;Enchanted Rune (23)\n\purple;Mhal Rune	Mhal	359,360,361,362		4							359,360,361,362		4							359,360,361,362		4						
 rx24	\grey;Enchanted Rune (24)\n\purple;Yst Rune	Yst	80		10							80		10							80		13						
-rx25	\grey;Enchanted Rune (25)\n\purple;Gur Rune	Gur	93		20							93		20							93		20						
-rx26	\grey;Enchanted Rune (26)\n\purple;Vez Rune	Vez	105		20							105		20							105		20						
-rx27	\grey;Enchanted Rune (27)\n\purple;Ohn Rune	Ohn	99		20							99		20							99		20						
-rx28	\grey;Enchanted Rune (28)\n\purple;Loz Rune	Loz	102		20							102		20							102		20						
-rx29	\grey;Enchanted Rune (29)\n\purple;Zur Rune	Zur	27		7							27		7							27		20						
-rx30	\grey;Enchanted Rune (30)\n\purple;Bur Rune	Bur	363		3							363		3							150		4						
-rx31	\grey;Enchanted Rune (31)\n\purple;Iah Rune	Iah	16		20							16		20							17		20						
-rx32	\grey;Enchanted Rune (32)\n\purple;Yham Rune	Yham	76,77		1							76,77		1							76,77		2						
+rx25	\grey;Enchanted Rune (25)\n\purple;Gur Rune	Gur	93		30							93		30							93		40						
+rx26	\grey;Enchanted Rune (26)\n\purple;Vez Rune	Vez	105		30							105		30							105		40						
+rx27	\grey;Enchanted Rune (27)\n\purple;Ohn Rune	Ohn	99		30							99		40							99		30						
+rx28	\grey;Enchanted Rune (28)\n\purple;Loz Rune	Loz	102		30							102		40							102		30						
+rx29	\grey;Enchanted Rune (29)\n\purple;Zur Rune	Zur	27		11							27		11							27		22						
+rx30	\grey;Enchanted Rune (30)\n\purple;Bur Rune	Bur	363		4							363		5							150		5						
+rx31	\grey;Enchanted Rune (31)\n\purple;Iah Rune	Iah	16		25							16		25							17		25						
+rx32	\grey;Enchanted Rune (32)\n\purple;Yham Rune	Yham	76,77		2							76		3							77		5						
 rx33	\grey;Enchanted Rune (33)\n\purple;Xod Rune	Xod	127		1							127		1							127		1						
 skc	\purple;Chipped Skull		16		4							110		1							17		4						
 skf	\purple;Flawed Skull		16		6							110		2							17		6						

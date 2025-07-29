@@ -3423,11 +3423,11 @@
 3546	Tal Rasha's Scorn
 3547	Horadric Spark
 3548	Tal Rasha's Scorn
-3549	Warped Reaver
-3550	Warped Master
-3551	LabRangedPlaceholder
-3552	LabCasterPlaceholder
-3553	Twisted Spriggan
+3549	Tyrael's Desolator
+3550	Archon of Malthael
+3551	Imperius' Wrath
+3552	Itherael's Vanguard
+3553	Archon of Malthael
 3554	Twisted Crawler
 3555	Twisted Sire
 3556	Archon of Malthael
@@ -3441,8 +3441,8 @@
 3564	Auriel's Gryphon
 3565	Itherael's Vanguard
 3566	Imperius' Wrath
-3567	Zakarum's Avatar
-3569	Yataghan
+3567	The Justicar
+3569	The Justicar
 3570	Goblin Assassin
 3571	Lord of the Grave
 3572	Zombie
@@ -3566,30 +3566,31 @@
 3690	BossRathma
 3691	BossRathma
 3692	BossRathma
-3693	Phantasm
-3694	Steel Serpent
-3695	Eternal Ember
-3696	Soul Reaver
-3697	Alpha Centaur
-3698	Cow Honcho
-3699	Cow Soldier
-3701	Erinys
-3702	Colossal Tunneller
-3703	Sinew Shaper
-3704	Observer
-3705	Twisted Necrobot
-3706	Sapphire Knight
-3707	Frigid Leech
-3708	Arreat Terror
-3709	Thrall of Destruction
-3710	Obsidian Protector
-3711	Dread Watcher
-3712	Grimspike
-3713	Coven Mistress
-3714	Stormtree
-3715	Shadowgate Totem
-3716	a startled Witch...
-3717	Timewarp Totem
+3693	Ethereal
+3694	Ethereal
+3695	Ethereal
+3696	Ethereal
+3697	Archon of Malthael
+3698	Archon of Malthael
+3699	Archon of Malthael
+3700	Archon of Malthael
+3701	Auriel's Gryphon
+3702	Auriel's Gryphon
+3703	Auriel's Gryphon
+3704	Auriel's Gryphon
+3705	Itherael's Vanguard
+3706	Itherael's Vanguard
+3707	Itherael's Vanguard
+3708	Itherael's Vanguard
+3709	Imperius' Wrath
+3710	Imperius' Wrath
+3711	Imperius' Wrath
+3712	Imperius' Wrath
+3713	Tyrael's Desolator
+3714	Tyrael's Desolator
+3715	Tyrael's Desolator
+3716	Tyrael's Desolator
+3717	Tyrael's Desolator
 3718	Warped Reaver
 3719	Warped Reaver
 3720	Warped Reaver
@@ -3657,3 +3658,9 @@
 3782	Twisted Sire
 3783	Twisted Sire
 3784	Twisted Sire
+3788	The Justicar
+3789	The Justicar
+3790	The Justicar
+3795	The Justicar
+3800	The Justicar
+3801	The Justicar

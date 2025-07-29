@@ -45,7 +45,7 @@
 43	Telekinesis	-1	0	0	0	182
 44		-1				
 45		-1				
-46		-1				
+46	Flamefront	-1	2	1	3	92
 47		-1				
 48	Nova	-1	2	3	1	24
 49		-1				
@@ -211,7 +211,7 @@
 209		-1				
 210		-1				
 211		-1				
-212		-1				
+212	Flamefront	-1	2	1	3	92
 213		-1				
 214		-1				
 215		-1				
@@ -322,7 +322,7 @@
 320	Hades Gate	6	4	5	2	36
 321	Shuriken Flurry	6	6	1	2	72
 322	Psionic Scream	6	6	2	3	54
-323	Doom	6	8	4	1	38
+323	Doom	6	8	3	1	38
 324	Mind Ripple	6	6	4	1	86
 325		6				
 326		6				
@@ -378,7 +378,7 @@
 376		-1				
 377	Blood Skeleton	2	2	1	2	160
 378	Spike Rush	-1	0	0	0	0
-379	Jinn	2	8	4	3	176
+379	Jinn	2	8	3	3	176
 380		2				
 381		2				
 382		2				
@@ -458,7 +458,7 @@
 456	Death Star	-1	0	0	0	0
 457	Ice Bolt Nova	-1	0	0	0	195
 458		-1				
-459	Apocalypse	-1	0	0	0	33
+459	Apocalypse	-1	0	0	0	35
 460		-1				
 461	Timefield	-1	0	0	0	159
 462	Shatterblade	-1	0	0	0	0
@@ -469,7 +469,7 @@
 467	Lightning Streak	-1	0	0	0	116
 468	Nightmare	-1	0	0	0	103
 469	Vanquish	-1	0	0	0	75
-470	Ignis Fatuus	-1	0	0	0	35
+470	Ignis Fatuus	-1	0	0	0	282
 471	Shadow Blade	-1	0	0	0	73
 472	Dark Power	-1	0	0	0	57
 473	Supernova	-1	0	0	0	38
@@ -575,13 +575,13 @@
 573	Disintegrate	-1	0	0	0	132
 574	Shockwave	-1	0	0	0	0
 575	Blade Spirits	-1	6	4	3	156
-576	Blizzard	-1	0	0	0	0
+576	Blizzard	-1	0	0	0	148
 577	Charged Strike	-1	0	0	0	247
 578	Singularity	-1	0	0	0	0
 579	Life Spark	-1	0	0	0	0
 580	Punisher Bolt	-1	0	0	0	69
 581	Rotting Flesh	-1	0	0	0	0
-582	Goblin Glee	-1	0	0	0	0
+582	Goblin Glee	-1	0	0	0	289
 583	Snake Bite	-1	5	2	1	70
 584	Sacrifices	-1	1	3	2	70
 585	Mana Sweep	-1	1	5	1	76
@@ -602,7 +602,7 @@
 600		-1				
 601	Shower of Rocks	-1	2	5	2	36
 602	Time Wave	-1	0	0	0	138
-603	Azure Orb	-1	0	0	0	228
+603	Azure Orb	-1	0	0	0	178
 604	Time Strike	-1	0	0	0	74
 605	Thunder Hammer	-1	0	0	0	0
 606	Thunder Wave	-1	0	0	0	0
@@ -663,8 +663,8 @@
 661		-1				
 662		-1				
 663		-1				
-664		-1				
-665		-1				
+664	Retaliate	-1	2	1	2	30
+665	Eviscerate	-1	3	3	2	44
 666		-1				
 667		-1				
 668		-1				
@@ -801,7 +801,7 @@
 799		-1				
 800		-1				
 801		-1				
-802	Doom	-1	8	4	1	38
+802	Doom	-1	8	3	1	38
 803		-1				
 804		-1				
 805		-1				
@@ -822,8 +822,8 @@
 820		-1				
 821		-1				
 822		-1				
-823	Doom	-1	8	4	1	38
-824	Doom	-1	8	4	1	38
+823	Doom	-1	8	3	1	38
+824	Doom	-1	8	3	1	38
 825		-1				
 826		-1				
 827		-1				
@@ -845,7 +845,7 @@
 843		-1				
 844		-1				
 845		-1				
-846	Doom	-1	8	4	1	38
+846	Doom	-1	8	3	1	38
 847		-1				
 848		-1				
 849		-1				
@@ -853,7 +853,7 @@
 851		-1				
 852		-1				
 853		-1				
-854	Doom	-1	8	4	1	38
+854	Doom	-1	8	3	1	38
 855		-1				
 856		-1				
 857		-1				
@@ -1045,9 +1045,9 @@
 1043	Balance	0	1	3	2	74
 1044	Ecstatic Frenzy	0	1	4	1	68
 1045	Defensive Harmony	0	1	4	3	70
-1046	Curare	0	8	4	1	82
-1047	Paragon	0	8	4	2	84
-1048	Spirit of Vengeance	0	8	4	3	86
+1046	Curare	0	8	3	1	82
+1047	Paragon	0	8	3	2	84
+1048	Spirit of Vengeance	0	8	3	3	86
 1049		-1				
 1050		-1				
 1051	War Spirit	0	8	1	3	88
@@ -1100,7 +1100,7 @@
 1098	Endurance	0	7	4	2	12
 1099	Tenacity	0	7	4	1	14
 1100	Freedom	0	7	2	2	16
-1101		0				18
+1101	Paragon of Fate	0	8	5	1	18
 1102		0				20
 1103		0				22
 1104		0				24
@@ -1141,10 +1141,10 @@
 1139	Pinnacle	6	6	2	1	116
 1140	Vampiric Icon	6	8	1	3	88
 1141	Prismatic Cloak	6	8	1	1	128
-1142	Beacon	6	8	4	3	90
+1142	Beacon	6	8	3	3	90
 1143		-1				
 1144		-1				
-1145	Way of the Raven	6	8	4	2	98
+1145	Way of the Raven	6	8	3	2	98
 1146	Way of the Gryphon	6	3	1	3	84
 1147	\orange;Domain	6	1	2	3	148
 1148	\orange;Shadowrush	6	1	4	1	164
@@ -1189,7 +1189,7 @@
 1187	Endurance	6	7	4	2	12
 1188	Tenacity	6	7	4	1	14
 1189	Freedom	6	7	2	2	16
-1190		6				18
+1190	Paragon of Fate	6	8	5	1	18
 1191		6				20
 1192		6				22
 1193		6				24
@@ -1218,7 +1218,7 @@
 1216	Protector Spirit	4	6	3	2	54
 1217	Shamanic Trance	4	6	4	1	86
 1218	Spirit Walk	4	6	5	2	102
-1219	Gladiator's Dominance	4	8	4	3	118
+1219	Gladiator's Dominance	4	8	3	3	118
 1220	Wolf Companion	4	1	1	1	96
 1221		-1				
 1222		-1				
@@ -1230,9 +1230,9 @@
 1228	Overkill	4	5	2	3	100
 1229	Immortal	4	8	1	1	104
 1230	Thundergod	4	8	1	3	90
-1231	Runemaster	4	8	4	2	84
-1232	Nephalem Spirit	4	8	4	1	106
-1233	Nephalem Spirit	-1	8	4	1	106
+1231	Runemaster	4	8	3	2	84
+1232	Nephalem Spirit	4	8	3	1	106
+1233	Nephalem Spirit	-1	8	3	1	106
 1234	Whirlwind	4	3	1	2	112
 1235	Elemental Overload	4	4	3	2	132
 1236	Iron Spiral	4	4	2	2	116
@@ -1282,7 +1282,7 @@
 1280	Endurance	4	7	4	2	12
 1281	Tenacity	4	7	4	1	14
 1282	Freedom	4	7	2	2	16
-1283		4				18
+1283	Paragon of Fate	4	8	5	1	18
 1284		4				20
 1285		4				22
 1286		4				24
@@ -1320,10 +1320,10 @@
 1318	Venomous Aura	-1	0	0	0	0
 1319	Mythal	5	8	1	1	138
 1320	Symbiosis	5	8	1	3	104
-1321	Vine Companion	5	8	4	1	152
+1321	Vine Companion	5	8	3	1	152
 1322		-1				
-1323	Survival Instinct	5	8	4	2	92
-1324	Faerie Fire	5	8	4	3	84
+1323	Survival Instinct	5	8	3	2	92
+1324	Faerie Fire	5	8	3	3	84
 1325	Growth	5	1	6	3	30
 1326	\orange;Bloom	5	1	6	1	32
 1327	\orange;Bestial Potency	5	2	2	1	34
@@ -1368,7 +1368,7 @@
 1366	Endurance	5	7	4	2	12
 1367	Tenacity	5	7	4	1	14
 1368	Freedom	5	7	2	2	16
-1369		5				18
+1369	Paragon of Fate	5	8	5	1	18
 1370		5				20
 1371		5				22
 1372		5				24
@@ -1414,9 +1414,9 @@
 1412	Talon's Hold	2	8	1	1	54
 1413		-1				
 1414	Thunder Wave	-1	0	0	0	0
-1415	Rathma's Chosen	2	8	4	1	84
+1415	Rathma's Chosen	2	8	3	1	84
 1416		-1				
-1417	Veil King	2	8	4	2	178
+1417	Veil King	2	8	3	2	178
 1418		-1				
 1419		-1				
 1420		-1				
@@ -1466,7 +1466,7 @@
 1464	Endurance	2	7	4	2	12
 1465	Tenacity	2	7	4	1	14
 1466	Freedom	2	7	2	2	16
-1467		2				18
+1467	Paragon of Fate	2	8	5	1	18
 1468		2				20
 1469		2				22
 1470		2				24
@@ -1475,7 +1475,7 @@
 1473		-1				
 1474		-1				
 1475	Vindicate	-1	0	0	0	17
-1476	Retaliate	3	2	1	1	30
+1476	Retaliate	3	2	1	2	30
 1477	Divine Judgment	3	2	2	2	100
 1478	Holy Fire	3	2	5	2	86
 1479	Lionheart	3	2	4	1	128
@@ -1505,11 +1505,11 @@
 1503	Absolution	3	4	3	2	132
 1504	Divine Apparition	3	8	1	1	92
 1505	Blessed Life	3	8	1	3	38
-1506	Resurrect	3	8	4	2	82
+1506	Resurrect	3	8	3	2	82
 1507		-1				
-1508	Superbeast	3	8	4	3	84
-1509	Dragon's Blessing	3	8	4	1	98
-1510	\orange;Counterattack	3	2	1	2	146
+1508	Superbeast	3	8	3	3	84
+1509	Dragon's Blessing	3	8	3	1	98
+1510	\orange;Counterattack	3	0	0	0	146
 1511	Consecration	3	2	2	3	144
 1512	\orange;Valiance	3	1	4	3	158
 1513	\orange;Conclave	3	1	6	1	140
@@ -1525,7 +1525,7 @@
 1523	\orange;Apex Predator	3	3	4	1	136
 1524	\orange;Rite of Thorns	3	5	3	3	162
 1525	\orange;Rite of the Restless	3	5	2	3	164
-1526		3				
+1526	Sanctity	3	2	2	1	122
 1527		3				
 1528		3				
 1529		3				
@@ -1552,7 +1552,7 @@
 1550	Endurance	3	7	4	2	12
 1551	Tenacity	3	7	4	1	14
 1552	Freedom	3	7	2	2	16
-1553		3				18
+1553	Paragon of Fate	3	8	5	1	18
 1554		3				20
 1555		3				22
 1556		3				24
@@ -1581,9 +1581,9 @@
 1579	Mana Sweep	1	1	5	1	76
 1580	Antimass	1	1	5	3	152
 1581	Symbol of Esu	1	9	1	1	122
-1582	Chronofield	1	9	4	1	42
-1583	Witch Blood	1	9	4	2	56
-1584	Baneblade	1	9	4	3	144
+1582	Chronofield	1	9	3	1	42
+1583	Witch Blood	1	9	3	2	56
+1584	Baneblade	1	9	3	3	144
 1585	Havoc	1	2	6	2	158
 1586		1				
 1587	Crystalline Barrier	1	4	2	2	38
@@ -1600,7 +1600,7 @@
 1598	Blight	1	5	6	2	66
 1599	\orange;Incineration	1	2	3	1	30
 1600	\orange;Pyre	1	2	5	1	32
-1601	Primordial Might	1	6	3	3	84
+1601	\orange;Primordial Might	1	6	3	3	84
 1602	\orange;Cold Blooded	1	6	4	3	82
 1603	\orange;Premonition	1	6	6	3	86
 1604	\orange;Arcane Sustenance	1	6	6	1	160
@@ -1628,7 +1628,7 @@
 1626	Endurance	1	7	4	2	12
 1627	Tenacity	1	7	4	1	14
 1628	Freedom	1	7	2	2	16
-1629		1				18
+1629	Paragon of Fate	1	9	5	1	18
 1630		1				20
 1631		1				22
 1632		1				24
@@ -1704,7 +1704,7 @@
 1702		-1				
 1703	Elemental Totem	-1	0	0	0	49
 1704		-1				
-1705	Frozen Orb	-1	0	0	0	228
+1705	Frozen Orb	-1	0	0	0	178
 1706	Diseased Cattle	-1	0	0	0	46
 1707	Slicer Blade	-1	0	0	0	0
 1708	Lightning Arena	-1	0	0	0	184
@@ -1728,7 +1728,7 @@
 1726	Ice Whirl	-1	0	0	0	196
 1727	Cautious Strike	-1	0	0	0	55
 1728	Bloodspeaker's Mark	-1	0	0	0	141
-1729		-1				
+1729	Blizzard	-1	0	0	0	148
 1730	Golden Calf	-1	0	0	0	192
 1731	Call Treewarden	-1	0	0	0	54
 1732	Overpower	-1	0	0	0	40
@@ -2111,7 +2111,7 @@
 2109		-1				
 2110		-1				
 2111		-1				
-2112	Doom	-1	8	4	1	38
+2112	Doom	-1	8	3	1	38
 2113		-1				
 2114		-1				
 2115		-1				
@@ -2868,3 +2868,34 @@
 2866		-1				
 2867	Singularity	-1	0	0	0	0
 2868		-1				
+2869	Flamefront	-1	2	1	3	92
+2870	Disintegrate	-1	0	0	0	132
+2871		-1				
+2872		-1				
+2873		-1				
+2874		-1				
+2875		-1				
+2876		-1				
+2877		-1				
+2878		-1				
+2879		-1				
+2880		-1				
+2881		-1				
+2882		-1				
+2883		-1				
+2884		-1				
+2885		-1				
+2886		-1				
+2887		-1				
+2888		-1				
+2889		-1				
+2890		-1				
+2891	\red;LET ME SOLO HIM	-1	0	0	0	290
+2892		-1				
+2893		-1				
+2894		-1				
+2895		-1				
+2896		-1				
+2897		-1				
+2898	Flamefront	-1	2	1	3	92
+2899	Thunderstone	-1	3	2	1	52
