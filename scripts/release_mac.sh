@@ -14,7 +14,7 @@ if [[ -z "$buildDir" ]]; then
   exit 1
 fi
 
-touch medianxlofflinetools.cpp # make sure it's rebuilt to generate current time
+touch src/medianxlofflinetools.cpp # make sure it's rebuilt to generate current time
 
 repoDir=$(pwd)
 bundleName=MedianXLOfflineTools.app
