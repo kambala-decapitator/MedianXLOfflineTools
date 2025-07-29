@@ -227,7 +227,7 @@ macx {
         }
     }
 
-    COPYRIGHT = Copyright © kambala 2011-2022
+    COPYRIGHT = Copyright © kambala 2011-2025
     INFO_PLIST_PATH = $$CONTENTS_PATH/$$INFO_PLIST_NAME
     # literal $ is either $$ or \$$
     QMAKE_POST_LINK = sed -e \'s/@APP_VERSION@/$$VERSION/\' -e \'s/@COPYRIGHT@/$$COPYRIGHT/\' -e \'s/\$$(PRODUCT_BUNDLE_IDENTIFIER)/com.kambala.$$TARGET/\' -i \'\' $$INFO_PLIST_PATH;
