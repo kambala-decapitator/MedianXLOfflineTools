@@ -40,5 +40,6 @@ ui_*
 *.o
 *.VC.*
 .vs
+/build/
 
 utils/txt_parser/CompressFiles*
