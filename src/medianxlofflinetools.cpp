@@ -2056,16 +2056,12 @@ bool MedianXLOfflineTools::processSaveFile()
         quint8 skillValue;
         inputDataStream >> skillValue;
 
-        if (i < skillsIndexes.first.size())
+        // Sigma 2.11 characters have "invisible" skills
+        SkillInfo *skill = ItemDataBase::Skills()->at(skillsIndexes.first.at(i));
+        if (skill->tab > 0)
         {
             skills += skillValue;
             charInfo.basicInfo.skills += skillValue;
-/*
-            qDebug() << int(i) << skillValue;
-            const int globalSkillsIndex = skillsIndexes.first.at(i);
-            if (globalSkillsIndex < ItemDataBase::Skills()->size())
-                qDebug() << ItemDataBase::Skills()->at(globalSkillsIndex)->name;
-*/
         }
     }
     skills += charInfo.valueOfStatistic(CharacterStats::FreeSkillPoints);
@@ -2078,7 +2074,7 @@ bool MedianXLOfflineTools::processSaveFile()
         shouldShowHackWarning = true;
     }
 #endif
-    charInfo.basicInfo.totalSkillPoints = skills;
+    charInfo.basicInfo.totalSkillPoints = qMax(skills, maxPossibleSkills); // v0.6.5 could return less skills points then needed when respeccing
 
     charInfo.basicInfo.skillsReadable.clear();
     charInfo.basicInfo.skillsReadable.reserve(skillsNumber);

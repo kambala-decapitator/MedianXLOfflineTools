@@ -153,7 +153,7 @@ const QHash<ClassName::ClassNameEnum, Skills::SkillsOrderPair> &Skills::characte
         {
             QList<int> skillsIndexes;
             for (int i = 0; i < n; ++i)
-                if (skills->at(i)->classCode == classCode && !skills->at(i)->name.isEmpty())
+                if (skills->at(i)->classCode == classCode)
                     skillsIndexes += i;
 
             SkillsOrderPair pair;
