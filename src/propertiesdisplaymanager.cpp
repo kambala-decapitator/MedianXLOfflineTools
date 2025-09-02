@@ -7,6 +7,8 @@
 #include <QDebug>
 #endif
 
+#include <vector>
+
 //#define SHOW_PROPERTY_ID
 
 
@@ -645,6 +647,24 @@ QString PropertiesDisplayManager::propertyDisplay(ItemProperty *propDisplay, int
         if (value == 2)
             result = description;
         break;
+    case 37: // %s Maximum Skill Level Increased by %d
+    {
+        const QByteArray descUtf8 = description.toUtf8();
+        QString skillName = ItemDataBase::Skills()->at(propDisplay->param)->name;
+        if (skillName.isEmpty())
+            skillName = QLatin1String("FPBE");
+        const QByteArray skillNameUtf8 = skillName.toUtf8();
+
+#if QT_VERSION >= QT_VERSION_CHECK(5, 5, 0)
+        result = QString::asprintf(descUtf8.constData(), skillNameUtf8.constData(), value);
+#else
+        const int size = ::snprintf(0, 0, descUtf8.constData(), skillNameUtf8.constData(), value) + 1;
+        std::vector<char> buf(size);
+        ::snprintf(&buf.front(), size, descUtf8.constData(), skillNameUtf8.constData(), value);
+        result = QString::fromUtf8(&buf.front(), size);
+#endif
+        break;
+    }
     // 9, 10, 14, 16-19 - absent
     // everything else is constructed in ItemParser (mostly in parseItemProperties()), i.e. has displayString
     default:

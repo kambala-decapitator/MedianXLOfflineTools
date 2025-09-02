@@ -282,6 +282,7 @@ public:
         DexterityBonus,
         EnergyBonus,
         VitalityBonus,
+        SkillCapIncrease = 449,
         Trophy = 450,
         CubeUpgrade1 = 452,
         CubeUpgrade2,
