@@ -38,6 +38,7 @@ public:
     void showFirstItem();
     virtual ItemsList *getItems() { return &_allItems; }
     virtual bool storeItemInStorage(ItemInfo *item, int storage, bool emitSignal = false);
+    virtual void addItemToList(ItemInfo *item, bool emitSignal = true);
     void setCellSpanForItem(ItemInfo *item);
 
     virtual void clearItemsInCurrentStorage() { setItems(ItemsList()); }
@@ -109,7 +110,6 @@ protected:
     void performDeleteItem(ItemInfo *item, bool emitSignal = true);
     ItemInfo *selectedItem(bool showError = true);
 
-    virtual void addItemToList(ItemInfo *item, bool emitSignal = true);
     virtual void removeItemFromList(ItemInfo *item, bool emitSignal = true);
     virtual void removeItemFromModel(ItemInfo *item);
     ItemInfo *disenchantItemIntoItem(ItemInfo *oldItem, ItemInfo *newItem, bool emitSignal = true);

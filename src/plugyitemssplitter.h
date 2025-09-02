@@ -22,6 +22,7 @@ public:
     virtual void showItem(ItemInfo *item);
     virtual ItemsList *getItems() { return allOrCurrentPageItems(); }
     virtual bool storeItemInStorage(ItemInfo *item, int storage, bool emitSignal = false);
+    virtual void addItemToList(ItemInfo *item, bool emitSignal = true);
     void addItemsToLastPage(const ItemsList &items, Enums::ItemStorage::ItemStorageEnum storage);
     void clearItemsInCurrentStorage();
 
@@ -62,7 +63,6 @@ protected:
     virtual void keyReleaseEvent(QKeyEvent *keyEvent);
 
     virtual bool isItemInCurrentStorage(ItemInfo *item) const;
-    virtual void addItemToList(ItemInfo *item, bool emitSignal = true);
     virtual void removeItemFromModel(ItemInfo *item);
 
     virtual bool shouldAddMoveItemAction() const;

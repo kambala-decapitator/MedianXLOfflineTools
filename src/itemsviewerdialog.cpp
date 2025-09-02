@@ -633,6 +633,8 @@ void ItemsViewerDialog::moveItemBetweenStashes(ItemInfo *item)
     }
 
     item->storage = oldStorage;
+    currentSplitter()->addItemToList(item, false);
+    currentSplitter()->setCellSpanForItem(item);
     ERROR_BOX(tr("Unable to move selected item: not enough free space"));
 }
 
