@@ -50,6 +50,11 @@
 #include <QStandardPaths>
 #endif
 
+#if QT_VERSION >= QT_VERSION_CHECK(5, 6, 0)
+#define HAS_QVERSIONNUMBER 1
+#include <QVersionNumber>
+#endif
+
 #include <cfloat>
 #include <cmath>
 
@@ -61,6 +66,33 @@ extern void qt_mac_set_dock_menu(QMenu *);
 //#define ENABLE_PERSONALIZE
 //#define MAKE_FINISHED_CHARACTER
 //#define DISABLE_CRC_CHECK
+
+
+static bool isVersionLess(const QString &v1, const QString &v2)
+{
+#if HAS_QVERSIONNUMBER
+    return QVersionNumber::fromString(v1).normalized() < QVersionNumber::fromString(v2).normalized();
+#else
+    QList<QString> version1 = v1.split('.');
+    QList<QString> version2 = v2.split('.');
+
+    const int longest = qMax(version1.size(), version2.size());
+    foreach (QList<QString> *version, QList<QList<QString> *>() << &version1 << &version2)
+    {
+        while (version->size() < longest)
+            version->append(QLatin1String("0"));
+    }
+
+    if (version1 == version2)
+        return false;
+    for (int i = 0; i < longest; ++i)
+    {
+        if (version1[i].toUInt() > version2[i].toUInt())
+            return false;
+    }
+    return true;
+#endif
+}
 
 
 // static const
@@ -2960,9 +2992,9 @@ void MedianXLOfflineTools::displayInfoAboutServerVersion(const QByteArray &versi
     QString updateText;
     QByteArray appVersion = versions.at(0), modDataVersion = versions.at(1);
     QLatin1String appVersionStr(appVersion);
-    if (qApp->applicationVersion() < appVersionStr)
+    if (isVersionLess(qApp->applicationVersion(), appVersionStr))
         updateText = tr("New app version <b>%1</b> is available!").arg(appVersionStr);
-    else if (!_modDataVersion.isEmpty() && _modDataVersion < modDataVersion)
+    else if (!_modDataVersion.isEmpty() && isVersionLess(_modDataVersion, modDataVersion))
         updateText = tr("New mod data <b>%1</b> is available!").arg(QLatin1String(modDataVersion));
 
     if (!updateText.isEmpty())
