@@ -144,8 +144,13 @@ QList<QTreeWidgetItem *> treeItemsForItems(const ItemsList &items)
         QString htmlName = ItemDataBase::completeItemName(item, true);
         QStringList list;
         QList<QColor> colors;
+        const QLatin1String fontOpenTag("<font color = \"(.+)\">");
+        const QLatin1String fontCloseTag("</font>");
 
-        QRegExp rx("<font color = \"(.+)\">(.+)</font>");
+        // strip empty text inside tags
+        htmlName.remove(QRegExp(fontOpenTag + fontCloseTag));
+
+        QRegExp rx(QString("%1(.+)%2").arg(fontOpenTag, fontCloseTag));
         rx.setMinimal(true);
         int matchIndex = 0;
         while ((matchIndex = rx.indexIn(htmlName, matchIndex)) != -1)
