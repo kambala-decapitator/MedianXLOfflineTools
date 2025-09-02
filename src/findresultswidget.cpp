@@ -48,7 +48,10 @@ void FindResultsWidget::updateItems(QList<SearchResultItem> *newItems)
         ItemsList items;
         foreach (const SearchResultItem &searchItem, *newItems)
             items += searchItem.first;
-        ItemsList locationItems = ItemDataBase::itemsStoredIn(Enums::ItemStorage::metaEnum().value(i), i == ItemsViewerDialog::GearIndex, 0, &items);
+        ItemsList locationItems = ItemDataBase::itemsStoredIn(
+            Enums::ItemStorage::metaEnum().value(i <= ItemsViewerDialog::CubeIndex ? i : i + 1),
+            i == ItemsViewerDialog::GearIndex ? Enums::ItemLocation::Equipped : Enums::ItemLocation::Stored,
+            0, &items);
         _foundItemsMap[i] = locationItems;
 
         QString topLevelItemText = ItemsViewerDialog::tabNameAtIndex(i);
