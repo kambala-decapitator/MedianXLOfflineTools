@@ -613,7 +613,13 @@ void ItemsViewerDialog::moveItemBetweenStashes(ItemInfo *item)
 {
     QList<Enums::ItemStorage::ItemStorageEnum> newStoragesToTry;
     if (qobject_cast<MXLOTItemsSplitter *>(sender()))
-        newStoragesToTry << Enums::ItemStorage::Inventory << Enums::ItemStorage::Cube;
+    {
+        newStoragesToTry << Enums::ItemStorage::Cube;
+        if (ItemDataBase::isUberCharm(item))
+            newStoragesToTry << Enums::ItemStorage::PersonalStash;
+        else
+            newStoragesToTry << Enums::ItemStorage::Inventory;
+    }
     else
         newStoragesToTry << CURRENT_SHARED_STASH;
 
