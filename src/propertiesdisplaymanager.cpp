@@ -7,9 +7,22 @@
 #include <QDebug>
 #endif
 
+#if QT_VERSION >= QT_VERSION_CHECK(5, 5, 0)
+#define HAS_QSTRING_ASPRINTF 1
+#else
 #include <vector>
+#endif
 
 //#define SHOW_PROPERTY_ID
+
+
+static QByteArray skillNameUtf8At(int index)
+{
+    QString skillName = ItemDataBase::Skills()->at(index)->name;
+    if (skillName.isEmpty())
+        skillName = QLatin1String("FPBE");
+    return skillName.toUtf8();
+}
 
 
 const QList<QByteArray> PropertiesDisplayManager::kDamageToUndeadTypes = QList<QByteArray>() << "mace" << "hamm" << "staf" << "scep" << "club" << "wand";
@@ -492,16 +505,32 @@ QString PropertiesDisplayManager::propertyDisplay(ItemProperty *propDisplay, int
     else if (prop->stat.endsWith("perblessedlife"))
         value = basicInfo.classCode == Enums::ClassName::Paladin ? (value * basicInfo.skills.at(Enums::Skills::currentCharacterSkillsIndexes().first.indexOf(Enums::Skills::BlessedLife))) / 32 : 0;
 
-    const char *signedFormatStr = "%+d";
-    char valueStringSigned[10];
-#ifdef Q_CC_MSVC
-    sprintf_s
+
+#if HAS_QSTRING_ASPRINTF
+#define SPRINTF_SAFE(result, desc, ...) do { \
+    result = QString::asprintf(desc, __VA_ARGS__); \
+} while (false)
 #else
-    sprintf
+#define SPRINTF_SAFE(result, desc, ...) do { \
+    const int size = 1 + ::snprintf(0, 0, desc, __VA_ARGS__); \
+    std::vector<char> buf(size); \
+    ::snprintf(&buf.front(), size, desc, __VA_ARGS__); \
+    result = QString::fromUtf8(&buf.front(), size); \
+} while (false)
 #endif
-    (valueStringSigned, signedFormatStr, value);
+
+    QString valueStringSigned;
+    const char *signedFormatStr = "%+d";
+    SPRINTF_SAFE(valueStringSigned, signedFormatStr, value);
 
     QString description = value < 0 ? prop->descNegative : prop->descPositive, result;
+
+    // description can be modified in descfunc handling
+#define SPRINTF_TO_RESULT(...) do { \
+    const QByteArray descUtf8 = description.toUtf8(); \
+    SPRINTF_SAFE(result, descUtf8.constData(), __VA_ARGS__); \
+} while (false)
+
     switch (prop->descFunc) // it's described in https://d2mods.info/index.php?ind=reviews&op=entry_view&iden=448 - ItemStatCost.txt tutorial
     {
     case 0:
@@ -588,16 +617,18 @@ QString PropertiesDisplayManager::propertyDisplay(ItemProperty *propDisplay, int
     {
         value /= 10;
         value = value > 0 ? qMax(value, 1) : qMin(value, -1);
-        int size = ::snprintf(0, 0, signedFormatStr, value) + 1;
-        char *buf = new char[size];
-        ::snprintf(buf, size, signedFormatStr, value);
-        result = QString("%1 %2").arg(buf, description);
-        delete [] buf;
+        SPRINTF_SAFE(result, signedFormatStr, value);
+        result += " " + description;
         break;
     }
-    case 33: // cooldown
-        result = description.replace(QLatin1String("%s"), ItemDataBase::Skills()->at(propDisplay->param)->name).replace(QLatin1String("%.1g"), QString::number(value / 25.0, 'g', 1) + ItemDataBase::stringFromTblKey(prop->descStringAdd));
+    case 33: // %s Cooldown Reduced by %.1g
+    {
+        const QByteArray skillNameUtf8 = skillNameUtf8At(propDisplay->param);
+        const double valueInSeconds = value / 25.0;
+        SPRINTF_TO_RESULT(skillNameUtf8.constData(), valueInSeconds);
+        result += " " + tr("second(s)");
         break;
+    }
     case 35: // innate elemental damage
     {
         if (int formatStringOffset = propDisplay->param & 0xFF)
@@ -605,7 +636,6 @@ QString PropertiesDisplayManager::propertyDisplay(ItemProperty *propDisplay, int
             quint32 stringIndex = ItemDataBase::StringTable()->key(description) + formatStringOffset;
             description = ItemDataBase::StringTable()->value(stringIndex);
         }
-        const QByteArray descUtf8 = description.toUtf8();
 
         int statStringOffset = propDisplay->param >> 8;
         Enums::CharacterStats::StatisticEnum stat;
@@ -631,16 +661,11 @@ QString PropertiesDisplayManager::propertyDisplay(ItemProperty *propDisplay, int
 
         int innateElementalDamage = 0; // TODO: computation ignores innate elemental damage stat from all items
 
-        const char *formatStr = descUtf8.constData();
         float param2 = propDisplay->value * (1 + innateElementalDamage / 100.0f);
         int param1 = param2 * CharacterInfo::instance().valueOfStatistic(stat) / 100;
         const char *param3 = statStrUtf8.constData();
 
-        int size = ::snprintf(0, 0, formatStr, param1, param2, param3) + 1;
-        char *buf = new char[size];
-        ::snprintf(buf, size, formatStr, param1, param2, param3);
-        result = QString::fromUtf8(buf, size);
-        delete [] buf;
+        SPRINTF_TO_RESULT(param1, param2, param3);
         break;
     }
     case 36:
@@ -649,20 +674,8 @@ QString PropertiesDisplayManager::propertyDisplay(ItemProperty *propDisplay, int
         break;
     case 37: // %s Maximum Skill Level Increased by %d
     {
-        const QByteArray descUtf8 = description.toUtf8();
-        QString skillName = ItemDataBase::Skills()->at(propDisplay->param)->name;
-        if (skillName.isEmpty())
-            skillName = QLatin1String("FPBE");
-        const QByteArray skillNameUtf8 = skillName.toUtf8();
-
-#if QT_VERSION >= QT_VERSION_CHECK(5, 5, 0)
-        result = QString::asprintf(descUtf8.constData(), skillNameUtf8.constData(), value);
-#else
-        const int size = ::snprintf(0, 0, descUtf8.constData(), skillNameUtf8.constData(), value) + 1;
-        std::vector<char> buf(size);
-        ::snprintf(&buf.front(), size, descUtf8.constData(), skillNameUtf8.constData(), value);
-        result = QString::fromUtf8(&buf.front(), size);
-#endif
+        const QByteArray skillNameUtf8 = skillNameUtf8At(propDisplay->param);
+        SPRINTF_TO_RESULT(skillNameUtf8.constData(), value);
         break;
     }
     // 9, 10, 14, 16-19 - absent
