@@ -2085,7 +2085,7 @@
 "12084"	"\dgrey;(these items are rare drops from Labyrinth mini bosses)\nTransmute charm once with each Star Chart piece and Dream Fragment\nDefeat the monster Heroes, Champions and Sovereigns roaming the Labyrinth\n\gold;Trial of Purity"
 "12085"	"\n\dgrey;(must be done in ascending order)\nTransmute charm once with each Riftstone\nExplore every level of the Labyrinth\n\gold;Trial of Discovery"
 "12086"	"\n\dgrey;Transmute charm with an Elemental Dominion effigy\nDefeat Deimoss with exactly 5 optional difficulty modifiers\n\gold;Dimensional Alchemy"
-"12087"	"\dgrey;Returns charm and a random Relic\nTransmute charm with a Depleted Riftstone (6)\n\gold;Dimensional Alchemy Unlocked"
+"12087"	"\n\dgrey;Returns charm and a random Relic\nTransmute charm with a Depleted Riftstone (6)\n\gold;Dimensional Alchemy Unlocked"
 "12088"	"\n\dgrey;Transmute charm with an Elemental Ire effigy\nDefeat Deimoss with exactly 3 optional difficulty modifiers\n\gold;Occult Smithing"
 "12089"	"\n\dgrey;Returns charm and an Occult Effigy of a higher tier\nTransmute charm with two identical Occult Effigies\n\gold;Occult Smithing Unlocked"
 "12090"	"\n\dgrey;Charges: 0"
