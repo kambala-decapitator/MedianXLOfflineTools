@@ -1,3 +1,5 @@
+(Get-Item src\medianxlofflinetools.cpp).LastWriteTime = (Get-Date) # make sure it's rebuilt to generate current time
+
 msbuild /property:Configuration=Release /p:Platform=Win32 /terminalLogger /maxCpuCount MedianXLOfflineTools.sln
 if ($LASTEXITCODE -ne 0) { exit 1 }
 
