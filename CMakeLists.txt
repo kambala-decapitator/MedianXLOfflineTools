@@ -43,6 +43,7 @@ add_executable(MedianXLOfflineTools WIN32 MACOSX_BUNDLE
 add_subdirectory(src)
 target_compile_definitions(MedianXLOfflineTools PRIVATE
 	"NVER_STRING=\"${CMAKE_PROJECT_VERSION}\""
+	"$<$<CONFIG:Debug>:DATA_PATH=\"${CMAKE_SOURCE_DIR}/resources\">"
 )
 foreach(component ${qtComponents})
 	target_link_libraries(MedianXLOfflineTools PRIVATE
