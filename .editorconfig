@@ -1,0 +1,15 @@
+root = true
+
+[*]
+charset = utf-8
+indent_style = space
+indent_size = 4
+insert_final_newline = true
+spelling_language = en-US
+trim_trailing_whitespace = true
+
+[CMakeLists.txt]
+indent_style = tab
+
+[*.ui]
+indent_size = 1
