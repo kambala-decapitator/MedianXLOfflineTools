@@ -49,6 +49,7 @@ endfunction()
 
 # targets
 
+add_compile_definitions(QT_DISABLE_DEPRECATED_BEFORE=0x060000)
 if(WIN32)
 	add_compile_definitions(NOMINMAX)
 	if(QT_VERSION_MAJOR LESS 6)

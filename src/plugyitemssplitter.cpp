@@ -103,7 +103,7 @@ PlugyItemsSplitter::PlugyItemsSplitter(ItemStorageTableView *itemsView, QWidget 
     foreach (QPushButton *button, buttons)
         button->setIconSize(QSize(32, 20));
     // hacky way to set button icons
-    QKeyEvent keyEvent(QEvent::KeyRelease, Qt::Key_Shift, 0);
+    QKeyEvent keyEvent(QEvent::KeyRelease, Qt::Key_Shift, Qt::NoModifier);
     keyReleaseEvent(&keyEvent);
 
     _pageSpinBox = new QDoubleSpinBox(this);

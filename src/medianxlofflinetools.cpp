@@ -55,6 +55,13 @@
 #include <QVersionNumber>
 #endif
 
+#if QT_VERSION >= QT_VERSION_CHECK(5, 9, 0)
+#define HAS_QOPERATINGSYSTEMVERSION 1
+#include <QOperatingSystemVersion>
+#else
+#include <QSysInfo>
+#endif
+
 #include <cfloat>
 #include <cmath>
 
@@ -159,7 +166,12 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, LaunchMode la
 #ifdef Q_OS_WIN32
     setAppUserModelID(); // is actually used only in Windows 7 and later
 
-    if (QSysInfo::windowsVersion() > QSysInfo::WV_WINDOWS7)
+#if HAS_QOPERATINGSYSTEMVERSION
+    const bool atLeastWin8 = QOperatingSystemVersion::current() >= QOperatingSystemVersion::Windows8;
+#else
+    const bool atLeastWin8 = QSysInfo::windowsVersion() >= QSysInfo::WV_WINDOWS8;
+#endif
+    if (atLeastWin8)
     {
         delete ui->actionAssociate; ui->actionAssociate = 0;
         delete ui->actionCheckFileAssociations; ui->actionCheckFileAssociations = 0;
@@ -180,7 +192,7 @@ MedianXLOfflineTools::MedianXLOfflineTools(const QString &cmdPath, LaunchMode la
 #ifndef DUPE_CHECK
 #if defined(Q_OS_WIN32) || defined(Q_OS_MAC)
 #ifdef Q_OS_WIN32
-    if (QSysInfo::windowsVersion() <= QSysInfo::WV_WINDOWS7) // Windows 8 and later mustn't call this code
+    if (!atLeastWin8) // Windows 8 and later mustn't call this code
 #endif
     {
         bool isDefault = FileAssociationManager::isApplicationDefaultForExtension(kCharacterExtensionWithDot);
