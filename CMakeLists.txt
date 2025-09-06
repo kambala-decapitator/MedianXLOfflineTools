@@ -69,6 +69,7 @@ target_compile_definitions(MedianXLOfflineTools PRIVATE
 	"NVER2=${CMAKE_PROJECT_VERSION_MINOR}"
 	"NVER3=${CMAKE_PROJECT_VERSION_PATCH}"
 	"NVER_STRING=\"${CMAKE_PROJECT_VERSION}\""
+	"$<$<CONFIG:Debug>:DATA_PATH=\"${CMAKE_SOURCE_DIR}/resources\">"
 )
 
 if(WIN32)
