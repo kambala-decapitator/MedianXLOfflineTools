@@ -9,7 +9,7 @@
 static const QString kAppName("Median XL Offline Tools");
 
 
-Application::Application(int &argc, char **argv) : QtSingleApplication(kAppName, argc, argv), _mainWindow(0), _launchMode(LaunchModeNormal)
+Application::Application(int &argc, char **argv) : QAPP_CLASS(argc, argv), _mainWindow(0), _launchMode(LaunchModeNormal)
 {
 #ifdef Q_OS_WIN32
     ::AllowSetForegroundWindow(ASFW_ANY);
@@ -33,7 +33,7 @@ Application::Application(int &argc, char **argv) : QtSingleApplication(kAppName,
         _param = argv[1];
 #endif
     }
-#ifndef DUPE_CHECK
+#if HAS_QTSINGLEAPPLICATION
 	if (sendMessage(_param))
 		return;
 #endif
@@ -80,14 +80,16 @@ void Application::createAndShowMainWindow()
 #endif
     _mainWindow->show();
 
-#ifndef DUPE_CHECK
+#if HAS_QTSINGLEAPPLICATION
     setActivationWindow(_mainWindow);
     connect(this, SIGNAL(messageReceived(const QString &)), SLOT(setParam(const QString &)));
 #endif
 }
 
+#if HAS_QTSINGLEAPPLICATION
 void Application::activateWindow()
 {
     QtSingleApplication::activateWindow();
     _mainWindow->loadFile(_param);
 }
+#endif

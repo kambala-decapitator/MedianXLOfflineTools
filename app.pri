@@ -62,9 +62,6 @@ SOURCES += src/main.cpp \
            src/propertiesdisplaymanager.cpp \
            src/findresultswidget.cpp \
            src/application.cpp \
-           qtsingleapplication/qtsingleapplication.cpp \
-           qtsingleapplication/qtlockedfile.cpp \
-           qtsingleapplication/qtlocalpeer.cpp \
            src/experienceindicatorgroupbox.cpp \
            src/plugyitemssplitter.cpp \
            src/gearitemssplitter.cpp \
@@ -100,10 +97,6 @@ HEADERS += src/medianxlofflinetools.h \
            src/findresultswidget.h \
            src/characterinfo.hpp \
            src/application.h \
-           qtsingleapplication/QtSingleApplication \
-           qtsingleapplication/qtsingleapplication.h \
-           qtsingleapplication/qtlockedfile.h \
-           qtsingleapplication/qtlocalpeer.h \
            src/fileassociationmanager.h \
            src/messagecheckbox.h \
            src/experienceindicatorgroupbox.h \
@@ -141,7 +134,6 @@ OTHER_FILES += TODO.txt
 # platform-specific
 win32 {
     SOURCES += src/medianxlofflinetools_win.cpp \
-               qtsingleapplication/qtlockedfile_win.cpp \
                src/fileassociationmanager_win.cpp
 
     HEADERS += src/windowsincludes.h
@@ -192,10 +184,10 @@ macx {
                          src/machelpers.mm \
                          src/fileassociationmanager_mac.mm
 
-    OBJECTIVE_HEADERS += machelpers.h
+    OBJECTIVE_HEADERS += src/machelpers.h
 
     LIBS += -framework ApplicationServices \ # LSGetApplicationForInfo()
-            -framework AppKit                # NSWindow calls to disable Lion window resoration and NSAlert
+            -framework AppKit                # NSWindow calls to disable Lion window restoration and NSAlert
 
     INFO_PLIST_NAME = Info.plist
     QMAKE_INFO_PLIST = resources/mac/$$INFO_PLIST_NAME
@@ -227,10 +219,9 @@ macx {
         }
     }
 
-    COPYRIGHT = Copyright © kambala 2011-2025
     INFO_PLIST_PATH = $$CONTENTS_PATH/$$INFO_PLIST_NAME
     # literal $ is either $$ or \$$
-    QMAKE_POST_LINK = sed -e \'s/@APP_VERSION@/$$VERSION/\' -e \'s/@COPYRIGHT@/$$COPYRIGHT/\' -e \'s/\$$(PRODUCT_BUNDLE_IDENTIFIER)/com.kambala.$$TARGET/\' -i \'\' $$INFO_PLIST_PATH;
+    QMAKE_POST_LINK = sed -e \'s/@CMAKE_PROJECT_VERSION@/$$VERSION/\' -i \'\' $$INFO_PLIST_PATH;
 
     PROJECT_DATA = resources/data
     PROJECT_TR   = resources/translations
@@ -255,5 +246,3 @@ macx {
     QMAKE_BUNDLE_DATA += appresources
 }
 else: SOURCES += src/messagecheckbox_p.cpp
-
-unix: SOURCES += qtsingleapplication/qtlockedfile_unix.cpp
