@@ -7,6 +7,13 @@
 #include <QSettings>
 #include <QCoreApplication>
 
+#if QT_VERSION >= QT_VERSION_CHECK(5, 9, 0)
+#define HAS_QOPERATINGSYSTEMVERSION 1
+#include <QOperatingSystemVersion>
+#else
+#include <QSysInfo>
+#endif
+
 
 // helpers
 
@@ -25,6 +32,15 @@ QString executablePath()
 QString executablePathWithParam()
 {
     return QString("\"%1\" \"%2\"").arg(executablePath(), "%1"); // "path\to\exe" "%1"
+}
+
+static bool atLeastVista()
+{
+#if HAS_QOPERATINGSYSTEMVERSION
+    return QOperatingSystemVersion::current() >= QOperatingSystemVersion(QOperatingSystemVersion::Windows, 6, 0);
+#else
+    return QSysInfo::windowsVersion() >= QSysInfo::WV_VISTA;
+#endif
 }
 
 
@@ -56,7 +72,7 @@ void registerApplication(const QString &extensionWithDot)
     hklmSoftware.setValue(QString("%1/SupportedTypes/%2").arg(registryApplications, extensionWithDot), QString("")); // empty string is intended
     hklmSoftware.endGroup();
 
-    if (QSysInfo::windowsVersion() >= QSysInfo::WV_VISTA)
+    if (atLeastVista())
     {
         QString capabilitiesPath = QString("%1/%2/Capabilities").arg(qApp->organizationName(), qApp->applicationName());
 
@@ -86,7 +102,7 @@ bool FileAssociationManager::isApplicationDefaultForExtension(const QString &ext
 {
     bool isDefault = true; // don't try to register if something goes wrong
     QString extensionWithDot = extensionWithDotFromExtension(extension);
-    if (QSysInfo::windowsVersion() < QSysInfo::WV_VISTA)
+    if (!atLeastVista())
     {
         QSettings hklmSoftwareClasses("HKEY_LOCAL_MACHINE\\Software\\Classes", QSettings::NativeFormat);
         isDefault = hklmSoftwareClasses.value(kOpenWithFormat.arg(FileAssociationManager::progIdForExtension(extensionWithDot))).toString() == executablePathWithParam();
@@ -131,7 +147,7 @@ void FileAssociationManager::makeApplicationDefaultForExtension(const QString &e
     registerApplicationForExtension(extensionWithDot);
 
     bool hasAssociationChanged = true;
-    if (QSysInfo::windowsVersion() < QSysInfo::WV_VISTA)
+    if (!atLeastVista())
         isRegisteredApplicationOverridenInFileExts(extensionWithDot, true);
 #ifdef WIN_VISTA_OR_LATER
     else
