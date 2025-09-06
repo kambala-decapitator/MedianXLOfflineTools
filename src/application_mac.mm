@@ -31,7 +31,7 @@ bool Application::event(QEvent *ev)
             _mainWindow->loadFile(_param);
         return true;
     }
-    return QtSingleApplication::event(ev);
+    return QAPP_CLASS::event(ev);
 }
 
 

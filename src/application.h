@@ -1,8 +1,15 @@
 #ifndef APPLICATION_H
 #define APPLICATION_H
 
-#include "qtsingleapplication/QtSingleApplication"
 #include "medianxlofflinetools.h"
+
+#if HAS_QTSINGLEAPPLICATION
+#include "QtSingleApplication"
+#define QAPP_CLASS QtSingleApplication
+#else
+#include <QApplication>
+#define QAPP_CLASS QApplication
+#endif
 
 #ifdef Q_OS_MAC
 #include <QPointer>
@@ -11,7 +18,7 @@
 
 class QTimer;
 
-class Application : public QtSingleApplication
+class Application : public QAPP_CLASS
 {
     Q_OBJECT
 
@@ -22,7 +29,9 @@ public:
     void init();
 
 public slots:
+#if HAS_QTSINGLEAPPLICATION
     void activateWindow();
+#endif
 
 protected:
 #ifdef Q_OS_MAC

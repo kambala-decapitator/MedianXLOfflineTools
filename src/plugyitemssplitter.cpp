@@ -5,7 +5,6 @@
 #include "progressbarmodal.hpp"
 #include "itemstoragetablemodel.h"
 #include "resourcepathmanager.hpp"
-#include "itemparser.h"
 #include "reversebitwriter.h"
 #include "characterinfo.hpp"
 
