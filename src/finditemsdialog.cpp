@@ -17,6 +17,10 @@
 
 #include <algorithm>
 
+#if IS_QT5
+#include <QScreen>
+#endif
+
 #ifndef QT_NO_DEBUG
 #include <QDebug>
 #endif
@@ -79,7 +83,13 @@ FindItemsDialog::FindItemsDialog(QWidget *parent) : QDialog(parent), ui(new Ui::
 
     loadSettings();
     adjustSize();
-    setMaximumHeight(qApp->desktop()->availableGeometry().height() - 50);
+
+#if IS_QT5
+    const int screenHeight = qApp->primaryScreen()->availableGeometry().height();
+#else
+    const int screenHeight = qApp->desktop()->availableGeometry().height();
+#endif
+    setMaximumHeight(screenHeight - 50);
 
     _helpDislplayManager = new HelpWindowDisplayManager(tr("Search help"),
         tr(

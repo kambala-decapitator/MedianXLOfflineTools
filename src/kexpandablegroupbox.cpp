@@ -143,10 +143,10 @@ void KExpandableGroupBox::init()
     d->gridLayout->addWidget(d->label, 0, 1);
 
 
-    connect(d->label, SIGNAL(clicked()), 
+    connect(d->label, SIGNAL(clicked()),
                     d->colButton, SLOT(click()));
 
-    connect(d->colButton, SIGNAL(toggled(bool)), 
+    connect(d->colButton, SIGNAL(toggled(bool)),
                     SLOT(setExpanded(bool)));
 
     setExpanded(false);
@@ -184,7 +184,7 @@ void KExpandableGroupBox::setWidget(QWidget *w)
             d->gridLayout->addWidget( d->expander, 2, 2 );
             d->gridLayout->setRowStretch( 2, 1 );
             d->expanderLayout = new QVBoxLayout( d->expander );
-            d->expanderLayout->setMargin( 0 );
+            d->expanderLayout->setContentsMargins( 0, 0, 0, 0 );
             d->expanderLayout->setSpacing( 0 );
             d->expander->setFixedHeight( 0 );
         }

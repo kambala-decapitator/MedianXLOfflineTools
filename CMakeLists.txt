@@ -37,6 +37,8 @@ else()
 	set(CMAKE_OSX_DEPLOYMENT_TARGET 10.9)
 endif()
 
+add_compile_definitions(QT_DISABLE_DEPRECATED_BEFORE=0x060000)
+
 add_executable(MedianXLOfflineTools WIN32 MACOSX_BUNDLE
 	resources/medianxlofflinetools.qrc
 )
