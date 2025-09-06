@@ -8,7 +8,7 @@
 int main(int argc, char *argv[])
 {
     Application app(argc, argv);
-#ifndef DUPE_CHECK
+#if HAS_QTSINGLEAPPLICATION
     if (app.isRunning())
         return 0;
 #endif
