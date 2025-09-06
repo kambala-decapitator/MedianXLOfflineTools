@@ -25,6 +25,7 @@
 
 #include <qmath.h>
 
+#include <algorithm>
 #include <limits>
 
 #ifndef QT_NO_DEBUG
@@ -821,7 +822,7 @@ void PlugyItemsSplitter::sortWearableQualityItems(ItemsList &selectedItems, quin
             {
                 ItemsList &items = jter.value();
                 // to sort by tiers, sort by rlvl. SUs are sorted by ID.
-                qSort(items.begin(), items.end(), sortOptions.shouldSeparateEth ? compareItemsByRlvlAndEthereality : compareItemsByRlvl);
+                std::sort(items.begin(), items.end(), sortOptions.shouldSeparateEth ? compareItemsByRlvlAndEthereality : compareItemsByRlvl);
             }
 
             // save new order
@@ -906,7 +907,7 @@ void PlugyItemsSplitter::sortMiscItems(ItemsList &selectedItems, quint32 &page, 
                     for (QMap<QByteArray, ItemsList>::iterator jter = sortedItemsByType.begin(), endJter = sortedItemsByType.end(); jter != endJter; ++jter)
                     {
                         ItemsList &items = jter.value();
-                        qSort(items.begin(), items.end(), compareItemsByRlvl);
+                        std::sort(items.begin(), items.end(), compareItemsByRlvl);
                     }
                 }
                 else if (isMO)
@@ -918,7 +919,7 @@ void PlugyItemsSplitter::sortMiscItems(ItemsList &selectedItems, quint32 &page, 
                     for (QMap<QByteArray, ItemsList>::iterator jter = sortedItemsByType.begin(), endJter = sortedItemsByType.end(); jter != endJter; ++jter)
                     {
                         ItemsList &items = jter.value();
-                        qSort(items.begin(), items.end(), compareItemsByCode);
+                        std::sort(items.begin(), items.end(), compareItemsByCode);
                     }
                 }
                 else // everything else is simply sorted by item code
@@ -988,7 +989,7 @@ void PlugyItemsSplitter::sortMiscItems(ItemsList &selectedItems, quint32 &page, 
                         col = 0;
                     }
 
-                    qSort(typeItems.begin(), typeItems.end(), compareItemsByCode);
+                    std::sort(typeItems.begin(), typeItems.end(), compareItemsByCode);
                     storeItemsOnPage(typeItems, isNewRow, page, &row, &col);
 
                     if (sortOptions.shouldPlaceSimilarMiscItemsOnOnePage)

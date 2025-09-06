@@ -3,6 +3,8 @@
 #include "itemparser.h"
 #include "characterinfo.hpp"
 
+#include <algorithm>
+
 #ifndef QT_NO_DEBUG
 #include <QDebug>
 #endif
@@ -454,7 +456,7 @@ void PropertiesDisplayManager::constructPropertyStrings(const PropertiesMultiMap
                 if (itemPropertyTxt->groupIDs.contains(propId) && properties.value(propId)->value == propValue)
                     availableGroupIDs += propId;
             }
-            qSort(availableGroupIDs);
+            std::sort(availableGroupIDs.begin(), availableGroupIDs.end());
             if (itemPropertyTxt->groupIDs == availableGroupIDs) // all props from the group are present
             {
                 if (properties.value(itemPropDisplay.propertyId)->value > 0)

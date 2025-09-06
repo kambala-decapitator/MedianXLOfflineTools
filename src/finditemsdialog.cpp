@@ -15,6 +15,8 @@
 #include <QRegExp>
 #include <QSettings>
 
+#include <algorithm>
+
 #ifndef QT_NO_DEBUG
 #include <QDebug>
 #endif
@@ -117,7 +119,7 @@ void FindItemsDialog::clearResults()
 
 void FindItemsDialog::sortAndUpdateSearchResult()
 {
-    qSort(_searchResult.begin(), _searchResult.end(), compareSearchResultItemsByPlugyPage);
+    std::sort(_searchResult.begin(), _searchResult.end(), compareSearchResultItemsByPlugyPage);
     _resultsWidget->updateItems(&_searchResult);
 }
 

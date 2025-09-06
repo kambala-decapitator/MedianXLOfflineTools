@@ -2,6 +2,8 @@
 #include "itemdatabase.h"
 #include "characterinfo.hpp"
 
+#include <algorithm>
+
 
 namespace Enums
 {
@@ -158,7 +160,7 @@ const QHash<ClassName::ClassNameEnum, Skills::SkillsOrderPair> &Skills::characte
 
             SkillsOrderPair pair;
             pair.first = skillsIndexes;
-            qSort(skillsIndexes.begin(), skillsIndexes.end(), compareSkillIndexes);
+            std::sort(skillsIndexes.begin(), skillsIndexes.end(), compareSkillIndexes);
             pair.second = skillsIndexes;
             hash[static_cast<ClassName::ClassNameEnum>(classCode)] = pair;
         }
