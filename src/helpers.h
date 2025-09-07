@@ -22,7 +22,7 @@ static const QString kHtmlLineBreak("<br />");
 QString binaryStringFromNumber(quint64 number, bool needsInversion = false, int fieldWidth = 8);
 QString coloredText(const QString &text, int colorIndex);
 
-#include "colorsmanager.hpp"
+#include "colorsmanager.h"
 QString htmlStringFromDiabloColorString(const QString &s, ColorsManager::ColorIndex defaultColor = ColorsManager::White);
 
 // QMetaEnum getter. Moving definition to .cpp causes unresolved external symbols, so don't touch it.

@@ -41,6 +41,7 @@ DEFINES += NVER_STRING=$$sprintf("\"\\\"%1\\\"\"", $$VERSION)
 
 # common files
 SOURCES += src/main.cpp \
+           src/colorsmanager.cpp \
            src/medianxlofflinetools.cpp \
            src/resurrectpenaltydialog.cpp \
            src/qd2charrenamer.cpp \
@@ -75,7 +76,7 @@ HEADERS += src/medianxlofflinetools.h \
            src/resurrectpenaltydialog.h \
            src/qd2charrenamer.h \
            src/enums.h \
-           src/colorsmanager.hpp \
+           src/colorsmanager.h \
            src/itemdatabase.h \
            src/structs.h \
            src/propertiesviewerwidget.h \

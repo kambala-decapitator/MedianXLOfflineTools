@@ -1,6 +1,6 @@
 #include    "qd2charrenamer.h"
 #include "ui_qd2charrenamer.h"
-#include "colorsmanager.hpp"
+#include "colorsmanager.h"
 #include "helpers.h"
 #include "messagecheckbox.h"
 

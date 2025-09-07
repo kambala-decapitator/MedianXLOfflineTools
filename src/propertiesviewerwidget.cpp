@@ -3,7 +3,7 @@
 #include "itemdatabase.h"
 #include "enums.h"
 #include "helpers.h"
-#include "colorsmanager.hpp"
+#include "colorsmanager.h"
 #include "itemparser.h"
 #include "propertiesdisplaymanager.h"
 #include "characterinfo.hpp"

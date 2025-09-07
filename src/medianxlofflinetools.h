@@ -10,6 +10,10 @@
 #include <QMultiHash>
 #include <QPointer>
 
+#ifdef Q_OS_WIN32
+#include <Windows.h>
+#endif
+
 
 class ItemsViewerDialog;
 class FindItemsDialog;
