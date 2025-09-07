@@ -1,6 +1,6 @@
 #include "medianxlofflinetools.h"
 #include "ui_medianxlofflinetools.h"
-#include "colorsmanager.hpp"
+#include "colorsmanager.h"
 #include "qd2charrenamer.h"
 #include "helpers.h"
 #include "itemsviewerdialog.h"
@@ -66,6 +66,8 @@
 #include <cmath>
 
 #ifdef Q_OS_MAC
+#include <QTextCodec>
+
 extern void qt_mac_set_dock_menu(QMenu *);
 #endif
 

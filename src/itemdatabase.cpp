@@ -1,6 +1,6 @@
 #include "itemdatabase.h"
 #include "helpers.h"
-#include "colorsmanager.hpp"
+#include "colorsmanager.h"
 #include "resourcepathmanager.hpp"
 #include "itemparser.h"
 #include "characterinfo.hpp"

@@ -6,7 +6,8 @@ target_sources(MedianXLOfflineTools PRIVATE
 	application.h
 	characterinfo.hpp
 	checkboxsortfilterproxymodel.hpp
-	colorsmanager.hpp
+	colorsmanager.cpp
+	colorsmanager.h
 	disenchantpreviewdialog.cpp
 	disenchantpreviewdialog.h
 	disenchantpreviewmodel.cpp
