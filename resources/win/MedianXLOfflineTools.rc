@@ -34,16 +34,7 @@ END
 // Version
 //
 
-// qmake wraps values in quotes correctly itself
-#if defined(BUILDING_FROM_PRO) && !defined(IS_QT5)
-#define quote(x) x
-#else
-#define quote2(x) #x
-#define quote(x) quote2(x)
-#endif
-
-#define APP_VERSION     NVER1,NVER2,NVER3,NVER4
-#define APP_VERSION_STR quote(NVER_STRING)
+#define APP_VERSION     NVER1,NVER2,NVER3
 
 VS_VERSION_INFO VERSIONINFO
  FILEVERSION APP_VERSION
@@ -61,12 +52,12 @@ BEGIN
         BEGIN
             VALUE "CompanyName",      "kambala"
             VALUE "FileDescription",  "Median XL character manager"
-            VALUE "FileVersion",      APP_VERSION_STR
+            VALUE "FileVersion",      NVER_STRING
             VALUE "InternalName",     "MedianXLOfflineTools"
             VALUE "LegalCopyright",   "Copyright (C) kambala 2011-2025"
             VALUE "OriginalFilename", "MedianXLOfflineTools.exe"
             VALUE "ProductName",      "Median XL Offline Tools"
-            VALUE "ProductVersion",   APP_VERSION_STR
+            VALUE "ProductVersion",   NVER_STRING
         END
     END
     BLOCK "VarFileInfo"

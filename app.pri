@@ -33,13 +33,9 @@ CONFIG(release, debug|release): {
 NVER1 = 0
 NVER2 = 6
 NVER3 = 6
-NVER4 = 0
 
-      greaterThan(NVER4, 0): NVER_STRING_LAST = $$sprintf("%1.%2", $$NVER3, $$NVER4)
-else: greaterThan(NVER3, 0): NVER_STRING_LAST = $$sprintf("%1", $$NVER3)
-
-isEmpty(NVER_STRING_LAST): VERSION = $$sprintf("%1.%2", $$NVER1, $$NVER2)
-else                     : VERSION = $$sprintf("%1.%2.%3", $$NVER1, $$NVER2, $$NVER_STRING_LAST)
+greaterThan(NVER3, 0): VERSION = $$sprintf("%1.%2.%3", $$NVER1, $$NVER2, $$NVER3)
+else                 : VERSION = $$sprintf("%1.%2", $$NVER1, $$NVER2)
 
 DEFINES += NVER_STRING=$$sprintf("\"\\\"%1\\\"\"", $$VERSION)
 
@@ -150,8 +146,6 @@ win32 {
     DEFINES += NVER1=$$NVER1 \
                NVER2=$$NVER2 \
                NVER3=$$NVER3 \
-               NVER4=$$NVER4 \
-               BUILDING_FROM_PRO \ # to set app version in .rc correctly
                NOMINMAX # disables min/max macros which fixes error with QDateTime
 
 
