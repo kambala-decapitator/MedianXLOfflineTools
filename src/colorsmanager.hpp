@@ -4,6 +4,7 @@
 #include <QColor>
 
 #if defined(Q_OS_WIN32)
+#include "windowsincludes.h"
 #include <Windows.h>
 #elif defined(Q_OS_MAC)
 #include <QTextCodec>
@@ -33,7 +34,7 @@ public:
             int ansiHeaderSizeWithTerminator = ansiHeader.length() + 1;
             LPWSTR unicodeWChar = new WCHAR[ansiHeaderSizeWithTerminator];
             MultiByteToWideChar(CP_ACP, 0, ansiHeader.data(), ansiHeaderSizeWithTerminator, unicodeWChar, ansiHeaderSizeWithTerminator);
-            unicodeColorHeader = QString::fromWCharArray(unicodeWChar);
+            unicodeColorHeader = LPWSTR_TO_QSTRING(unicodeWChar);
             delete [] unicodeWChar;
 #elif defined(Q_OS_MAC)
             unicodeColorHeader = macTextCodec()->toUnicode(ansiHeader);
