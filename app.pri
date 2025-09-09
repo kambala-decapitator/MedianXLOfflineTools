@@ -223,7 +223,7 @@ macx {
         appresources.files += $$PROJECT_TR
 
         # remove unused files
-        QMAKE_POST_LINK += rm -rf $$BUNDLE_DATA/items $$BUNDLE_TR/*.ts;
+        QMAKE_POST_LINK += rm -rf $$BUNDLE_TR/*.ts;
     }
 
     appresources.files += resources/mac/locversion.plist
