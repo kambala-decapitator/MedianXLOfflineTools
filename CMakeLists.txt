@@ -134,3 +134,12 @@ if(deployQtToolName)
 		execute_process(COMMAND \"${deployQtTool}\" ${deployQtOptions} -verbose=2)
 	")
 endif()
+
+# CPack
+
+if(WIN32)
+	set(CPACK_GENERATOR "7Z")
+else()
+	set(CPACK_GENERATOR "TXZ")
+endif()
+include(CPack)
