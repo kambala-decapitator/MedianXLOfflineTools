@@ -95,3 +95,62 @@ if(NOT APPLE)
 	target_link_libraries(MedianXLOfflineTools PRIVATE QtSingleApplication)
     target_compile_definitions(MedianXLOfflineTools PRIVATE HAS_QTSINGLEAPPLICATION=1)
 endif()
+
+# install
+
+install(TARGETS MedianXLOfflineTools
+	BUNDLE DESTINATION "."
+	RUNTIME DESTINATION "."
+)
+
+if(APPLE)
+	set(resourcesDir "$<TARGET_BUNDLE_DIR_NAME:MedianXLOfflineTools>/Contents/Resources")
+
+	if(QT_VERSION_MAJOR EQUAL 4)
+		install(FILES "resources/mac/locversion.plist" DESTINATION ${resourcesDir})
+	endif()
+	install(FILES "resources/mac/disable_auto_load.command" DESTINATION ".")
+else()
+	set(resourcesDir ".")
+
+	if(WIN32)
+		install(FILES "resources/win/disable_auto_load.reg" DESTINATION ${resourcesDir})
+	endif()
+endif()
+install(DIRECTORY "resources/data" DESTINATION ${resourcesDir})
+install(DIRECTORY "resources/translations" DESTINATION ${resourcesDir}
+	FILES_MATCHING PATTERN "*.qm"
+)
+
+# TODO: use qt_generate_deploy_app_script() with Qt 6
+set(installedExeWindows "\${CMAKE_INSTALL_PREFIX}/$<TARGET_FILE_NAME:MedianXLOfflineTools>")
+if(APPLE)
+	set(deployQtToolName "macdeployqt")
+	set(deployQtOptions "\"\${CMAKE_INSTALL_PREFIX}/$<TARGET_BUNDLE_DIR_NAME:MedianXLOfflineTools>\"")
+elseif(WIN32 AND QT_VERSION_MAJOR EQUAL 5)
+	set(deployQtToolName "windeployqt")
+	set(deployQtOptions "--no-compiler-runtime \"${installedExeWindows}\"")
+endif()
+if(deployQtToolName)
+	if(NOT QT_QMAKE_EXECUTABLE)
+		get_target_property(QT_QMAKE_EXECUTABLE Qt${QT_VERSION_MAJOR}::qmake LOCATION)
+	endif()
+	cmake_path(GET QT_QMAKE_EXECUTABLE PARENT_PATH qtBinDir)
+
+	find_program(deployQtTool NAMES ${deployQtToolName} PATHS ${qtBinDir})
+	install(CODE "
+		execute_process(COMMAND \"${deployQtTool}\" ${deployQtOptions} -verbose=2)
+	")
+endif()
+
+# Qt 4 doesn't have windeployqt
+if(WIN32 AND QT_VERSION_MAJOR EQUAL 4)
+	install(CODE "
+		include(DeployQt4)
+		set(QT_BINARY_DIR ${QT_BINARY_DIR})
+		set(QT_LIBRARY_DIR ${QT_LIBRARY_DIR})
+		fixup_qt4_executable(${installedExeWindows}
+			$<IF:$<CONFIG:Debug>,${QT_QJPEG_PLUGIN_DEBUG},${QT_QJPEG_PLUGIN_RELEASE}>
+		)
+	")
+endif()
