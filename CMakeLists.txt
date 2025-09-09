@@ -95,3 +95,42 @@ if(NOT APPLE)
 	target_link_libraries(MedianXLOfflineTools PRIVATE QtSingleApplication)
     target_compile_definitions(MedianXLOfflineTools PRIVATE HAS_QTSINGLEAPPLICATION=1)
 endif()
+
+# install
+
+install(TARGETS MedianXLOfflineTools
+	BUNDLE DESTINATION "."
+	RUNTIME DESTINATION "."
+)
+
+if(APPLE)
+	set(resourcesDir "$<TARGET_BUNDLE_DIR_NAME:MedianXLOfflineTools>/Contents/Resources")
+	if(QT_VERSION_MAJOR EQUAL 4)
+		install(FILES "resources/mac/locversion.plist" DESTINATION ${resourcesDir})
+	endif()
+else()
+	set(resourcesDir ".")
+endif()
+install(DIRECTORY "resources/data" DESTINATION ${resourcesDir})
+install(DIRECTORY "resources/translations" DESTINATION ${resourcesDir}
+	FILES_MATCHING PATTERN "*.qm"
+)
+
+# TODO: use qt_generate_deploy_app_script() with Qt 6
+if(APPLE)
+	set(deployQtToolName "macdeployqt")
+	set(deployQtOptions "\"\${CMAKE_INSTALL_PREFIX}/$<TARGET_BUNDLE_DIR_NAME:MedianXLOfflineTools>\"")
+
+	install(FILES "resources/mac/disable_auto_load.command" DESTINATION ".")
+elseif(WIN32)
+	set(deployQtToolName "windeployqt")
+	set(deployQtOptions "--no-compiler-runtime \"\${CMAKE_INSTALL_PREFIX}/$<TARGET_FILE_NAME:MedianXLOfflineTools>\"")
+
+	install(FILES "resources/win/disable_auto_load.reg" DESTINATION ${resourcesDir})
+endif()
+if(deployQtToolName)
+	find_program(deployQtTool NAMES ${deployQtToolName}) # PATHS ${qtBinDir}
+	install(CODE "
+		execute_process(COMMAND \"${deployQtTool}\" ${deployQtOptions} -verbose=2)
+	")
+endif()
