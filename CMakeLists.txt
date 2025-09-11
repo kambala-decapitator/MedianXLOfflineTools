@@ -129,7 +129,12 @@ elseif(WIN32)
 	install(FILES "resources/win/disable_auto_load.reg" DESTINATION ${resourcesDir})
 endif()
 if(deployQtToolName)
-	find_program(deployQtTool NAMES ${deployQtToolName}) # PATHS ${qtBinDir}
+	if(NOT QT_QMAKE_EXECUTABLE)
+		get_target_property(QT_QMAKE_EXECUTABLE Qt${QT_VERSION_MAJOR}::qmake LOCATION)
+	endif()
+	cmake_path(GET QT_QMAKE_EXECUTABLE PARENT_PATH qtBinDir)
+
+	find_program(deployQtTool NAMES ${deployQtToolName} PATHS ${qtBinDir})
 	install(CODE "
 		execute_process(COMMAND \"${deployQtTool}\" ${deployQtOptions} -verbose=2)
 	")
