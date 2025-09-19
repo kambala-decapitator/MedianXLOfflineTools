@@ -154,3 +154,12 @@ if(WIN32 AND QT_VERSION_MAJOR EQUAL 4)
 		)
 	")
 endif()
+
+# CPack
+
+if(WIN32)
+	set(CPACK_GENERATOR "7Z")
+else()
+	set(CPACK_GENERATOR "TXZ")
+endif()
+include(CPack)
