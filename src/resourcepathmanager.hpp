@@ -15,7 +15,7 @@ public:
     static QString pathForItemImageName(const QString &imageName) { return pathForImagePath(QString("items/%1.png").arg(imageName)); }
     static QString pathForSkillImage(int classCode, int imageId)  { return pathForImagePath(QString("skills/%1/%2.jpg").arg(classCode).arg(imageId)); }
 
-    static QString pathForResourceItem(const QString &itemName) { return QString(":/Items/data/items/%1.d2i").arg(itemName); }
+    static QString pathForResourceItem(const QString &itemName) { return QString(":/Items/items/%1.d2i").arg(itemName); }
 };
 
 #endif // RESOURCEPATHMANAGER_HPP

@@ -71,7 +71,7 @@ void PropertiesViewerWidget::showItem(ItemInfo *item)
     PropertiesMultiMap::const_iterator constIter = item->props.constBegin();
     while (constIter != item->props.constEnd())
     {
-        allProps.insertMulti(constIter.key(), new ItemProperty(*constIter.value())); // original values mustn't be modified
+        allProps.insert(constIter.key(), new ItemProperty(*constIter.value())); // original values mustn't be modified
         ++constIter;
     }
 

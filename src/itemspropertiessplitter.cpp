@@ -897,7 +897,7 @@ bool ItemsPropertiesSplitter::upgradeItemsInMap(UpgradableItemsMultiMap &itemsMa
                 qApp->processEvents();
                 ItemInfo *itemCopy = new ItemInfo(*newItem);
                 storeItemInStorage(itemCopy, currentStorage);
-                itemsMap.insertMulti(newKey, itemCopy);
+                itemsMap.insert(newKey, itemCopy);
             }
 
             if (higherItems.isEmpty())
@@ -942,7 +942,7 @@ QHash<QByteArray, UpgradableItemsMultiMap> ItemsPropertiesSplitter::gemsMapsFrom
     {
         QList<QByteArray> types = ItemDataBase::Items()->value(item->itemType)->types;  // first element is gem type, second element is gem grade
         if (types.at(0).startsWith("gem") && !types.at(1).endsWith(kPerfectGradeBytes)) // exclude prefect gems
-            allGems.insertMulti(types.at(0), item);
+            allGems.insert(types.at(0), item);
     }
 
     QHash<QByteArray, UpgradableItemsMultiMap> gemsMapsHash;
@@ -950,7 +950,7 @@ QHash<QByteArray, UpgradableItemsMultiMap> ItemsPropertiesSplitter::gemsMapsFrom
     {
         UpgradableItemsMultiMap gemsMap;
         foreach (ItemInfo *gem, allGems.values(gemType))
-            gemsMap.insertMulti(ItemDataBase::Items()->value(gem->itemType)->types.at(1).right(1).toUShort(), gem);
+            gemsMap.insert(ItemDataBase::Items()->value(gem->itemType)->types.at(1).right(1).toUShort(), gem);
         gemsMapsHash[gemType] = gemsMap;
     }
     return gemsMapsHash;
@@ -971,7 +971,7 @@ UpgradableItemsMultiMap ItemsPropertiesSplitter::runesMapFromItems(const ItemsLi
                 if (reserve < reserveRunes)
                     ++reserve;
                 else
-                    runesMap.insertMulti(runeKey, item);
+                    runesMap.insert(runeKey, item);
             }
         }
     }
@@ -1019,7 +1019,13 @@ QString ItemsPropertiesSplitter::itemNameBBCode(ItemInfo *item)
         return QString();
 
     ItemDataBase::removeColorCodesFromString(name);
-    return name.split(QLatin1String("\\n"), QString::SkipEmptyParts).last();
+    return name.split(QLatin1String("\\n"),
+#if QT_VERSION >= QT_VERSION_CHECK(5, 14, 0)
+        Qt::SkipEmptyParts
+#else
+        QString::SkipEmptyParts
+#endif
+    ).last();
 }
 
 QMenu *ItemsPropertiesSplitter::createCopyBBCodeMenu(bool addShortcut)

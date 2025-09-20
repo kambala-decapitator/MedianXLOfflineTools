@@ -41,5 +41,6 @@ ui_*
 *.VC.*
 .vs
 /build/
+CMakeUserPresets.json
 
 utils/txt_parser/CompressFiles*

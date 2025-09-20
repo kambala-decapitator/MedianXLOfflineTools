@@ -27,7 +27,7 @@ AllStatsDialog::AllStatsDialog(QWidget *parent /*= 0*/) : QDialog(parent), ui(ne
     // fuck consts and enums!
     const QSet<int> kIgnoreProps = QSet<int>() << 16 << 17 << 75 << 91 << 92 << 125 << 152 << 185 << 186 << 219 << 243 << 252 << 253 << 254 << 263 << 276 << 288 << 296 << 299 << 300 << 372 << 418 << 419 << 421 << 422 << 423 << 424 << 425 << 427 << 442 << 443 << 473 << 474 << 491 << 501;
 
-    PropertiesMap allProps;
+    PropertiesMultiMap allProps;
     QMultiHash<QByteArray, int> setItemsHash;
     foreach (ItemInfo *item, CharacterInfo::instance().items.character) //-V807
     {

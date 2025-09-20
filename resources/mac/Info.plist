@@ -24,7 +24,7 @@
 	<key>CFBundleIconFile</key>
 	<string>@ICON@</string>
 	<key>CFBundleIdentifier</key>
-	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<string>com.kambala.@EXECUTABLE@</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -32,7 +32,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>@APP_VERSION@</string>
+	<string>@CMAKE_PROJECT_VERSION@</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
@@ -40,6 +40,6 @@
 	<key>LSHasLocalizedDisplayName</key>
 	<false/>
 	<key>NSHumanReadableCopyright</key>
-	<string>@COPYRIGHT@</string>
+	<string>Copyright © kambala 2011-2025</string>
 </dict>
 </plist>

@@ -4,7 +4,7 @@
 #include <QKeyEvent>
 
 
-ShowSelectedItemDelegate::ShowSelectedItemDelegate(QTreeView *treeWidget, ShowSelectedItemInterface *selectItemInterface) : QObject(dynamic_cast<QObject *>(selectItemInterface)), _treeView(treeWidget),
+ShowSelectedItemDelegate::ShowSelectedItemDelegate(QTreeView *treeWidget, ShowSelectedItemInterface *selectItemInterface) : QObject(treeWidget), _treeView(treeWidget),
     _selectItemInterface(selectItemInterface)
 {
     _treeView->installEventFilter(this);

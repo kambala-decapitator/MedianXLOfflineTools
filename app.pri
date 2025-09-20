@@ -8,6 +8,7 @@
 TEMPLATE = app
 
 QT += network
+DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000
 
 MOC_DIR = moc
 OBJECTS_DIR = obj
@@ -32,13 +33,9 @@ CONFIG(release, debug|release): {
 NVER1 = 0
 NVER2 = 6
 NVER3 = 6
-NVER4 = 0
 
-      greaterThan(NVER4, 0): NVER_STRING_LAST = $$sprintf("%1.%2", $$NVER3, $$NVER4)
-else: greaterThan(NVER3, 0): NVER_STRING_LAST = $$sprintf("%1", $$NVER3)
-
-isEmpty(NVER_STRING_LAST): VERSION = $$sprintf("%1.%2", $$NVER1, $$NVER2)
-else                     : VERSION = $$sprintf("%1.%2.%3", $$NVER1, $$NVER2, $$NVER_STRING_LAST)
+greaterThan(NVER3, 0): VERSION = $$sprintf("%1.%2.%3", $$NVER1, $$NVER2, $$NVER3)
+else                 : VERSION = $$sprintf("%1.%2", $$NVER1, $$NVER2)
 
 DEFINES += NVER_STRING=$$sprintf("\"\\\"%1\\\"\"", $$VERSION)
 
@@ -62,9 +59,6 @@ SOURCES += src/main.cpp \
            src/propertiesdisplaymanager.cpp \
            src/findresultswidget.cpp \
            src/application.cpp \
-           qtsingleapplication/qtsingleapplication.cpp \
-           qtsingleapplication/qtlockedfile.cpp \
-           qtsingleapplication/qtlocalpeer.cpp \
            src/experienceindicatorgroupbox.cpp \
            src/plugyitemssplitter.cpp \
            src/gearitemssplitter.cpp \
@@ -100,10 +94,6 @@ HEADERS += src/medianxlofflinetools.h \
            src/findresultswidget.h \
            src/characterinfo.hpp \
            src/application.h \
-           qtsingleapplication/QtSingleApplication \
-           qtsingleapplication/qtsingleapplication.h \
-           qtsingleapplication/qtlockedfile.h \
-           qtsingleapplication/qtlocalpeer.h \
            src/fileassociationmanager.h \
            src/messagecheckbox.h \
            src/experienceindicatorgroupbox.h \
@@ -141,7 +131,6 @@ OTHER_FILES += TODO.txt
 # platform-specific
 win32 {
     SOURCES += src/medianxlofflinetools_win.cpp \
-               qtsingleapplication/qtlockedfile_win.cpp \
                src/fileassociationmanager_win.cpp
 
     HEADERS += src/windowsincludes.h
@@ -157,8 +146,6 @@ win32 {
     DEFINES += NVER1=$$NVER1 \
                NVER2=$$NVER2 \
                NVER3=$$NVER3 \
-               NVER4=$$NVER4 \
-               BUILDING_FROM_PRO \ # to set app version in .rc correctly
                NOMINMAX # disables min/max macros which fixes error with QDateTime
 
 
@@ -171,13 +158,6 @@ win32 {
     isEmpty(IS_RELEASE_BUILD) {
         DEFINES += _DEBUG
         OUT_FOLDER = debug
-
-        # create symbolic link to 'resources' folder in the folder of .exe
-        LINK_DST = $$OUT_PWD/$$OUT_FOLDER/resources
-        !exists($$LINK_DST) {
-            QMAKE_POST_LINK = mklink /D \"$$toNativeSeparators($$LINK_DST)\" \"$$toNativeSeparators($$_PRO_FILE_PWD_/resources)\"
-            QMAKE_POST_LINK += & if %errorlevel%==9009 echo "mklink doesn't exist"
-        }
     }
     else {
         DEFINES += _USING_V110_SDK71_ # for WinXP support in MSVS2012
@@ -192,10 +172,10 @@ macx {
                          src/machelpers.mm \
                          src/fileassociationmanager_mac.mm
 
-    OBJECTIVE_HEADERS += machelpers.h
+    OBJECTIVE_HEADERS += src/machelpers.h
 
     LIBS += -framework ApplicationServices \ # LSGetApplicationForInfo()
-            -framework AppKit                # NSWindow calls to disable Lion window resoration and NSAlert
+            -framework AppKit                # NSWindow calls to disable Lion window restoration and NSAlert
 
     INFO_PLIST_NAME = Info.plist
     QMAKE_INFO_PLIST = resources/mac/$$INFO_PLIST_NAME
@@ -227,10 +207,9 @@ macx {
         }
     }
 
-    COPYRIGHT = Copyright © kambala 2011-2025
     INFO_PLIST_PATH = $$CONTENTS_PATH/$$INFO_PLIST_NAME
     # literal $ is either $$ or \$$
-    QMAKE_POST_LINK = sed -e \'s/@APP_VERSION@/$$VERSION/\' -e \'s/@COPYRIGHT@/$$COPYRIGHT/\' -e \'s/\$$(PRODUCT_BUNDLE_IDENTIFIER)/com.kambala.$$TARGET/\' -i \'\' $$INFO_PLIST_PATH;
+    QMAKE_POST_LINK = sed -e \'s/@CMAKE_PROJECT_VERSION@/$$VERSION/\' -i \'\' $$INFO_PLIST_PATH;
 
     PROJECT_DATA = resources/data
     PROJECT_TR   = resources/translations
@@ -238,16 +217,13 @@ macx {
     BUNDLE_TR    = $$RESOURCES_PATH/translations
 
     isEmpty(IS_RELEASE_BUILD) {
-        # create symlinks instead of copying in debug mode
-        QMAKE_POST_LINK += [ -L $$BUNDLE_DATA ] || ln -s $$_PRO_FILE_PWD_/$$PROJECT_DATA $$BUNDLE_DATA;
-        QMAKE_POST_LINK += [ -L $$BUNDLE_TR ]   || ln -s $$_PRO_FILE_PWD_/$$PROJECT_TR   $$BUNDLE_TR;
     }
     else {
         appresources.files += $$PROJECT_DATA
         appresources.files += $$PROJECT_TR
 
         # remove unused files
-        QMAKE_POST_LINK += rm -rf $$BUNDLE_DATA/items $$BUNDLE_TR/*.ts;
+        QMAKE_POST_LINK += rm -rf $$BUNDLE_TR/*.ts;
     }
 
     appresources.files += resources/mac/locversion.plist
@@ -256,4 +232,4 @@ macx {
 }
 else: SOURCES += src/messagecheckbox_p.cpp
 
-unix: SOURCES += qtsingleapplication/qtlockedfile_unix.cpp
+isEmpty(IS_RELEASE_BUILD): DEFINES += DATA_PATH=$$sprintf("\"\\\"%1\\\"\"", $$_PRO_FILE_PWD_/resources)

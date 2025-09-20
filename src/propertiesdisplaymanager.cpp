@@ -46,7 +46,7 @@ QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item, bool u
     PropertiesMultiMap::const_iterator constIter = item->props.constBegin();
     while (constIter != item->props.constEnd())
     {
-        allProps.insertMulti(constIter.key(), new ItemProperty(*constIter.value())); // original values mustn't be modified
+        allProps.insert(constIter.key(), new ItemProperty(*constIter.value())); // original values mustn't be modified
         ++constIter;
     }
 
@@ -329,7 +329,7 @@ QString PropertiesDisplayManager::completeItemDescription(ItemInfo *item, bool u
     return itemDescription;
 }
 
-void PropertiesDisplayManager::addProperties(PropertiesMap *mutableProps, const PropertiesMap &propsToAdd, const QSet<int> *pIgnorePropIds /*= 0*/)
+void PropertiesDisplayManager::addProperties(PropertiesMultiMap *mutableProps, const PropertiesMap &propsToAdd, const QSet<int> *pIgnorePropIds /*= 0*/)
 {
     for (PropertiesMap::const_iterator iter = propsToAdd.constBegin(); iter != propsToAdd.constEnd(); ++iter)
     {
@@ -354,11 +354,11 @@ void PropertiesDisplayManager::addProperties(PropertiesMap *mutableProps, const 
             }
         }
         if (shouldAddNewProp)
-            mutableProps->insertMulti(propId, new ItemProperty(*prop)); // we need a copy
+            mutableProps->insert(propId, new ItemProperty(*prop)); // we need a copy
     }
 }
 
-void PropertiesDisplayManager::addTemporaryPropertiesAndDelete(PropertiesMap *mutableProps, const PropertiesMap &tempPropsToAdd, const QSet<int> *pIgnorePropIds /*= 0*/)
+void PropertiesDisplayManager::addTemporaryPropertiesAndDelete(PropertiesMultiMap *mutableProps, const PropertiesMap &tempPropsToAdd, const QSet<int> *pIgnorePropIds /*= 0*/)
 {
     addProperties(mutableProps, tempPropsToAdd, pIgnorePropIds);
     qDeleteAll(tempPropsToAdd);
@@ -400,7 +400,7 @@ void PropertiesDisplayManager::constructPropertyStrings(const PropertiesMultiMap
             displayString += hiddenPropertyText;
 
             quint8 descPriority = ItemDataBase::Properties()->value(propId)->descPriority;
-            propsDisplayMap.insertMulti(descPriority, ItemPropertyDisplay(displayString, descPriority, propId));
+            propsDisplayMap.insert(descPriority, ItemPropertyDisplay(displayString, descPriority, propId));
         }
     }
 
@@ -437,7 +437,7 @@ void PropertiesDisplayManager::constructPropertyStrings(const PropertiesMultiMap
             if (propMin.propertyId == ItemProperties::MinimumDamagePoison)
                 displayString += tr(" over %n second(s)", 0, properties.value(propMin.propertyId)->param / 25);
 
-            propsDisplayMap.insertMulti(propMin.priority, ItemPropertyDisplay(displayString, propMin.priority, propMin.propertyId));
+            propsDisplayMap.insert(propMin.priority, ItemPropertyDisplay(displayString, propMin.priority, propMin.propertyId));
         }
     }
 
@@ -729,7 +729,7 @@ PropertiesMultiMap PropertiesDisplayManager::genericSocketableProperties(ItemInf
             default:
                 break;
             }
-            props.insertMulti(prop.code, itemProperty);
+            props.insert(prop.code, itemProperty);
         }
     }
     return props;
