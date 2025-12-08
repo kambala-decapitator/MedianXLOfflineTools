@@ -1,7 +1,7 @@
 #allowedType1	allowedType2	allowedType3	allowedType4	allowedType5	allowedType6	name	rune1	rune2	rune3	rune4	rune5	rune6
 weap						Shark	r02						
 weap						Gehenna	r32	r27	r28				
-bow						Banshee	r05						
+bow						Tailwind	r10	r19					
 bow						Shockwave	r06	r13					
 bow						Hive	r30	r30	r24				
 xbow						Tartarus	r30	r32	r19				
@@ -100,7 +100,7 @@ tkni						Patriot	r01
 taxe						Raptor	r33	r29	r20	r01			
 taxe						Cheetah	r01						
 tkni						Chrysopelea	r13						
-tors						Thanks everyone!\nMedian 2005-2012\nEternal	r51	rx20	r52	rx19	r53	rx18	
+tors						Thanks everyone!\nMedian 2005-2026\nEternal	r51	rx20	r52	rx19	r53	rx18	
 swor						Minefield	r57	rx03	r08	r27			
 orb						Hand of Frost	r62	r52	rx05				
 scep						Oris' Herald	r59	r57	r60	r61	r62	r25	
@@ -113,7 +113,7 @@ orb						Helgrotha	r60	r60	r06
 tors						Hellfire Plate	r57	r31	rx25	rx08			
 circ						Rathma's Blessing	r09	r62	r10	r62			
 shld						Khalim's Protector	r60	r28	r60	r11			
-boot						Wind Runner	r58	rx02	r58	r25			
+boot						Wind Runner	r58	rx31	rx02	r25			
 azsd						Heart of Skovos	rx02	r58	r22	rx14			
 basd						Triune's Blessing	r60	r58	r60	r58			
 pelt						Nature's Grace	r18	r60	r60	r06			
@@ -225,4 +225,5 @@ pzhm						Eschaton	r57	rx03	r57
 helm						Farseer	r33	r01	r32				
 2hbx						Myth	r31	r18	r25	r31			
 scyh						Stoneharpe	r58	rx19	rx29	r58			
+jave						Voodoo Branch	r60	rx25	r59	r58			
 weap	armo					Secret Jewel Bonus!	jew						

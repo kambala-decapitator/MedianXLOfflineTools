@@ -1138,6 +1138,7 @@ mz01	Maiden Bow (Mastercrafted)		2	4	1		30	0	750		1			77	85			MastercraftedBow	0
 mz02	Kukri (Mastercrafted)		1	3	1		30	0	550			45	50					MastercraftedKnife	0	0	14	qknf,mw02	1	-1
 mz03	Gothic Staff (Mastercrafted)		2	3	1		30	0	333		1			63	69			GothicStaff	0	0	15	qstf,mw03	1	-1
 mz05	Flying Kinzhal (Mastercrafted)		1	2	1	1	30	0	402							1	1	MastercraftedTKnife	0	0	0	qtkn,elrx	1	-1
+mz22	Echo Sabre (Mastercrafted)		1	3	1		30	443	0			44	55					MastercraftedSaber	0	11	0	swor,mw22	1	-1
 o10	Stag Bow (4)		2	4	1		26	0	457		1			0	0	1	1	invam1		0	0	abow,elrx	1	0
 o11	Reflex Bow (4)		2	4	1		28	0	570		1			47	64			invam2		0	15	abow,tier	1	0
 o12	Maiden Spear (4)		2	4	1		26	201	402		1			30	65			invam3		0	15	aspe,tier	1	0
@@ -1533,7 +1534,7 @@ Ysh2	Necklace		1	1	2		0	0	0									lab_amu				###2		-1
 \\3	\purple;Great Topaz	Cube All Gems with The Black Road to Add Bonus	1	1	2		0	0	0									invgsye				thng		-1
 \\4	\purple;Great Sapphire	Cube All Gems with The Black Road to Add Bonus	1	1	2		0	0	0									invgsbe				thng		-1
 \\5	\purple;Great Ruby	Cube All Gems with The Black Road to Add Bonus	1	1	2		0	0	0									invgsre				thng		-1
-\\6	\gold;Golden Cycle	\dgrey;(Limit: 1)\n\blue;Maximum Mana +5%\nMaximum Life +2%\n+10 to All Attributes\n+1 to All Skills\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	3	2		0	0	0									invch3				cyc3,cycl		-1
+\\6	\gold;Golden Cycle	\dgrey;(Limit: 1)\n\blue;Maximum Mana +5%\nMaximum Life +2%\n+10 to All Attributes\n+1 to All Skills\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invch3				cyc3,cycl		-1
 \\7	\grey;Quest Item\n\gold;Tome of Possession		2	2	2		0	0	0									invbbb	255			grtz		-1
 \\8	Corrupted Wormhole	80\nTriune Trophy Challenge\nRequirements: \nKill Lucion without being struck by Malic's \nBurning Missiles\nDo not die\n\nCube the Corrupted Wormhole within \n10 seconds\nGrants:\n30% Magic Find\nLocked to current character class\n	1	1	2		0	0	0									invlucion	255			grtz		-1
 a55	Optical Detector		1	1	2		0	0	0									inveye	255			grtz		-1
@@ -1547,6 +1548,7 @@ a66	Idol of Vanity	80\nThe Veiled Prophet Trophy Challenge\nRequirements:\nKill 
 a67	unused	\blue;Maximum Skill Level Increased by 1\n\grey;Cube with Idol of Vanity to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invsple				thng		-1
 a68	Horazon's Focus		1	1	2		0	0	0									invhorazon	255			grtz		-1
 ab!	Astrogha's Venom Stinger	80\nAstrogha Trophy Challenge\nRequirements: \nKill the real Astrogha while he is \nempowered by a Spider Statue\n\nCube Astrogha's Venom Stinger within \n10 seconds\nGrants: \n-5% to Enemy Elemental Resistances\nLocked to current character class\n	1	1	2		0	0	0									invtail	255			grtz		-1
+abar	\orange;Barrel of Apples	(Right Click to Collect)	1	1	2		0	0	0									invrAppleBar				thng		-1
 adi	Legacy of Blood	80\nLegacy of Blood Trophy Challenge\nRequirements: \nKill Bartuc within 15 seconds of \nentering the Chamber of Blood\nDo not die\n\nCube the Legacy of Blood within the time \nlimit\nGrants: \n20% Bonus to Defense\nLocked to current character class\n	1	1	2		0	0	0									invlegacy	255			grtz		-1
 amu	Amulet		1	1	2		0	0	0									invamu				amul		-1
 aq!	Silver Seal of Ureh	80\nQuov Tsin Trophy Challenge\nRequirements: \nKill Quiv Tsin without being struck by\nhis Bone Spear Nova\nDo not die\n\nCube the Silver Seal of Ureh within \n10 seconds\nGrants: \n+10% to Spell Damage\nLocked to current character class\n	1	1	2		0	0	0									invrin	255			grtz		-1
@@ -1567,10 +1569,25 @@ b64X	\dgrey;Quest Item\n\gold;Scroll of Summoning	\green;+25% Angelic Item drops
 b65X	\dgrey;Quest Item\n\gold;Scroll of Summoning	\green;+50% Angelic Item drops\n\n\gold;Area Level: 133\nLibrary of Fate (Heroic)	1	1	2		133	0	0									invrsc				thng		-1
 b66X	\dgrey;Quest Item\n\gold;Scroll of Summoning	\green;+75% Angelic Item drops\n\n\gold;Area Level: 136\nLibrary of Fate (Heroic)	1	1	2		136	0	0									invrsc				thng		-1
 b67X	\dgrey;Quest Item\n\gold;Scroll of Summoning	\green;+110% Angelic Item drops\n\n\gold;Area Level: 139\nLibrary of Fate (Heroic)	1	1	2		139	0	0									invrsc				thng		-1
-b68X	\dgrey;Quest Item\n\gold;Scroll of Summoning	\dgrey;33% chance to gain the Light of the Angiris aura\nDefeat the Justicar within 7 minutes to upgrade the Paragon's Hammer\nFind the red portal within 4 minutes to enter the Gauntlet\nRange of warps and warp strike skills greatly reduced\n\green;+110% Angelic Item drops\n\n\gold;Area Level: 140\nTrial of the Angiris	1	1	2		147	0	0									invrsc				thng		-1
+b68X	\dgrey;Quest Item\n\gold;Scroll of Summoning	\dgrey;33% chance to gain the Light of the Angiris aura\nDefeat the Justicar within 8 minutes to upgrade the Paragon's Hammer\nFind the red portal within 4 minutes to enter the Gauntlet\nRange of warps and warp strike skills greatly reduced\n\green;+110% Angelic Item drops\n\n\gold;Area Level: 140\nTrial of the Angiris	1	1	2		147	0	0									invrsc				thng		-1
+b70X	\dgrey;Quest Item\n\gold;Scroll of Summoning		1	1	2		127	0	0									invrsc				thng		-1
+b71X	\dgrey;Quest Item\n\gold;Scroll of Summoning		1	1	2		134	0	0									invrsc				thng		-1
+b72X	\dgrey;Quest Item\n\gold;Scroll of Summoning		1	1	2		139	0	0									invrsc				thng		-1
+b73X	\dgrey;Quest Item\n\gold;Scroll of Summoning		1	1	2		145	0	0									invrsc				thng		-1
+b74X	\orange;Heroic Duncraig Boss Trophy	Transmute four different boss trophies to enter Assur's Domain 	1	2	2		0	0	0									Trophy1				thng		-1
+b75X	\orange;Heroic Duncraig Boss Trophy	Transmute four different boss trophies to enter Assur's Domain 	1	2	2		0	0	0									Trophy2				thng		-1
+b76X	\orange;Heroic Duncraig Boss Trophy	Transmute four different boss trophies to enter Assur's Domain 	1	2	2		0	0	0									Trophy3				thng		-1
+b77X	\orange;Heroic Duncraig Boss Trophy	Transmute four different boss trophies to enter Assur's Domain 	1	2	2		0	0	0									Trophy4				thng		-1
+b78X	\orange;Heroic Duncraig Boss Trophy	Transmute four different boss trophies to enter Assur's Domain 	1	2	2		0	0	0									Trophy5				thng		-1
+b79X	\gold;Pearl of Wisdom: Paragon of Sanctity		1	1	2		0	0	0									pearl4				thng		-1
+b80X	\dgrey;Quest Item\n\gold;Scroll of Summoning	\grey;Area Level: 139\n\purple;Mindflayer's Arena	1	1	2		139	0	0									invrsc				thng		-1
+b81X	\dgrey;Quest Item\n\gold;Scroll of Summoning	\grey;Area Level: 139\n\purple;Eyegouger's Arena	1	1	2		139	0	0									invrsc				thng		-1
+b82X	\dgrey;Quest Item\n\gold;Scroll of Summoning	\grey;Area Level: 139\n\purple;Bonehexer's Arena	1	1	2		139	0	0									invrsc				thng		-1
 b@b	\red;Goodberry	A magical fruit of the Glor-An-Fhaidha...	1	1	2		666	0	0									cherries				hpot		-1
 basd	\gold;Insignia of the Based	\dgrey;(Automatically grants all stat points needed to reach the cap)\grey;\nRight-click to consume and set the maximum signet cap for this character to 450\n\n\dgreen;Congratulations! You are Based.	1	1	2		0	0	0									invrBased	255			thng		-1
+bbar	\green;Drown your sorrows\n\orange;Barrel of Belladonna	(Right Click to Collect)	1	1	2		0	0	0									invrBellaBar				thng		-1
 bbb	Lam Esen's Tome		2	2	2		0	0	0									invbbb	16			ques		-1
+bbox	Stash O' Treasures	(Right Click to Collect)	2	2	2		0	0	0									illbeblack				thng		-1
 bkd	Key to the Cairn Stones		2	2	2		0	0	0									invscb	5			ques		-1
 bks	Scroll of Inifuss		2	2	2		0	0	0									invscb	5			ques		-1
 blol	Spirit of Creation	80\nEve of Destruction Trophy Challenge\nRequirements:\nKill Baal without being struck by his Black \nCarpet Bomb\nDo not die\n\nCube the Spirit of Creation within 10 \nseconds \nGrants: \nElemental Resists +10%\nLocked to current character class\n	1	1	2		120	0	0									vine	255			grtz		-1
@@ -1611,18 +1628,18 @@ cr13	Quest Item\n\gold;Charged Riftstone (\red;8\gold;)	\dgrey;- Transmute for F
 cr14	Quest Item\n\gold;Charged Riftstone (\red;9\gold;)	\dgrey;- Transmute for Full Monster Stats -\n\n\grey;Difficulty: \purple;Extreme\n\grey;Area Level: 139\n\gold;Dimensional Labyrinth 9\n\n\grey;Right click to open a portal\n	1	1	2		134	0	0									ChargedRunestoneR				thng		-1
 cr15	Quest Item\n\gold;Charged Riftstone (\red;10\gold;)	\dgrey;- Transmute for Full Monster Stats -\n\n\grey;Difficulty: \purple;Extreme\n\grey;Area Level: 140\n\gold;Dimensional Labyrinth 10\n\n\grey;Right click to open a portal\n	1	1	2		135	0	0									ChargedRunestoneR				thng		-1
 cr21	Quest Item\n\gold;Charged Riftstone (\purple;16\gold;)	\grey;Difficulty: \orange;Impossible\n\grey;Area Level: 150\n\gold;The Heart of Darkness\n\n\grey;Right click to open a portal\n	1	1	2		145	0	0									ChargedRunestoneR				thng		-1
-cy01	\orange;Small Cycle	\blue;+1 Required Level\n+(2 to 8) to Strength\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invch1				cyc1,cycl		-1
-cy02	\orange;Small Cycle	\blue;+1 Required Level\n+(2 to 8) to Dexterity\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invch1				cyc1,cycl		-1
-cy03	\orange;Small Cycle	\blue;+1 Required Level\n+(2 to 8) to Vitality\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invch1				cyc1,cycl		-1
-cy04	\orange;Small Cycle	\blue;+1 Required Level\n+(2 to 8) to Energy\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invch1				cyc1,cycl		-1
-cy05	\orange;Medium Cycle	\blue;+3 Required Level\n+(5 to 15) to Strength\n+1% to Strength\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	2	2		0	0	0									invch2				cyc2,cycl		-1
-cy06	\orange;Medium Cycle	\blue;+3 Required Level\n+(5 to 15) to Dexterity\n+1% to Dexterity\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	2	2		0	0	0									invch2				cyc2,cycl		-1
-cy07	\orange;Medium Cycle	\blue;+3 Required Level\n+(5 to 15) to Vitality\n+1% to Vitality\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	2	2		0	0	0									invch2				cyc2,cycl		-1
-cy08	\orange;Medium Cycle	\blue;+3 Required Level\n+(5 to 15) to Energy\n+1% to Energy\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	2	2		0	0	0									invch2				cyc2,cycl		-1
-cy09	\orange;Large Cycle	\blue;+5 Required Level\n+(10 to 20) to Strength\n+2% to Strength\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	3	2		0	0	0									invsst				cyng,cycl		-1
-cy10	\orange;Large Cycle	\blue;+5 Required Level\n+(10 to 20) to Dexterity\n+2% to Dexterity\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	3	2		0	0	0									invsst				cyng,cycl		-1
-cy11	\orange;Large Cycle	\blue;+5 Required Level\n+(10 to 20) to Vitality\n+2% to Vitality\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	3	2		0	0	0									invsst				cyng,cycl		-1
-cy12	\orange;Large Cycle	\blue;+5 Required Level\n+(10 to 20) to Energy\n+2% to Energy\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	3	2		0	0	0									invsst				cyng,cycl		-1
+cy01	\orange;Small Cycle	\blue;+1 Required Level\n+(3 to 5) to Strength\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invch1				cyc1,cycl		-1
+cy02	\orange;Small Cycle	\blue;+1 Required Level\n+(3 to 5) to Dexterity\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invch1				cyc1,cycl		-1
+cy03	\orange;Small Cycle	\blue;+1 Required Level\n+(3 to 5) to Vitality\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invch1				cyc1,cycl		-1
+cy04	\orange;Small Cycle	\blue;+1 Required Level\n+(3 to 5) to Energy\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invch1				cyc1,cycl		-1
+cy05	\orange;Medium Cycle	\blue;+3 Required Level\n+(2 to 6) to Strength\n+1% to Strength\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	2	2		0	0	0									invch2				cyc2,cycl		-1
+cy06	\orange;Medium Cycle	\blue;+3 Required Level\n+(2 to 6) to Dexterity\n+1% to Dexterity\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	2	2		0	0	0									invch2				cyc2,cycl		-1
+cy07	\orange;Medium Cycle	\blue;+3 Required Level\n+(2 to 6) to Vitality\n+1% to Vitality\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	2	2		0	0	0									invch2				cyc2,cycl		-1
+cy08	\orange;Medium Cycle	\blue;+3 Required Level\n+(2 to 6) to Energy\n+1% to Energy\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	2	2		0	0	0									invch2				cyc2,cycl		-1
+cy09	\orange;Large Cycle	\blue;+5 Required Level\n+(8 to 12) to Strength\n+2% to Strength\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	3	2		0	0	0									invsst				cyng,cycl		-1
+cy10	\orange;Large Cycle	\blue;+5 Required Level\n+(8 to 12) to Dexterity\n+2% to Dexterity\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	3	2		0	0	0									invsst				cyng,cycl		-1
+cy11	\orange;Large Cycle	\blue;+5 Required Level\n+(8 to 12) to Vitality\n+2% to Vitality\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	3	2		0	0	0									invsst				cyng,cycl		-1
+cy12	\orange;Large Cycle	\blue;+5 Required Level\n+(8 to 12) to Energy\n+2% to Energy\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	3	2		0	0	0									invsst				cyng,cycl		-1
 cy13	\orange;Small Cycle	\blue;+2 Required Level\n+(1 to 4)% Gold Find\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invch1				cyc1,cycl		-1
 cy14	\orange;Medium Cycle	\blue;+3 Required Level\n+(3 to 7)% Gold Find\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	2	2		0	0	0									invch2				cyc2,cycl		-1
 cy15	\orange;Large Cycle	\blue;+4 Required Level\n+(6 to 10)% Gold Find\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	3	2		0	0	0									invsst				cyng,cycl		-1
@@ -1642,17 +1659,17 @@ cy28	\orange;Large Cycle	\blue;+15 Required Level\n+1 to Paladin Skill Levels\n\
 cy29	\orange;Small Cycle	\blue;+1 Required Level\n+(0 to 10) to Mana\n+(0 to 20) to Life\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invch1				cyc1,cycl		-1
 cy30	\orange;Medium Cycle	\blue;+3 Required Level\nMaximum Mana +(0 to 2)%\n+(2 to 15) to Mana\n+(15 to 30) to Life\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	2	2		0	0	0									invch2				cyc2,cycl		-1
 cy31	\orange;Large Cycle	\blue;+5 Required Level\nMaximum Mana +(1 to 3)%\n+(5 to 25) to Mana\nMaximum Life +(0 to 1)%\n+(25 to 50) to Life\n\grey;Cube With Corrupted Wormhole to Add Bonus\n\nCube Reagent	1	3	2		0	0	0									invsst				cyng,cycl		-1
-dg01	Item Design		2	2	2		0	0	0									book01				dsgn		-1
-dg02	Item Design		2	2	2		0	0	0									book01				dsgn		-1
-dg03	Item Design		2	2	2		0	0	0									book01				dsgn		-1
-dg04	Item Design		2	2	2		0	0	0									book01				dsgn		-1
-dg05	Item Design		2	2	2		0	0	0									book01				sdgn		-1
-dg06	Item Design		2	2	2		0	0	0									book01				sdgn		-1
-dg07	Item Design		2	2	2		0	0	0									book01				sdgn		-1
-dg08	Item Design		2	2	2		0	0	0									book01				sdgn		-1
-dg09	Item Design		2	2	2		0	0	0									book01				sdgn		-1
-dg10	Item Design		2	2	2		0	0	0									book01				sdgn		-1
-dg11	Item Design		2	2	2		0	0	0									book01				sdgn		-1
+dg01	Item Design		1	1	2		0	0	0									book01				dsgn		-1
+dg02	Item Design		1	1	2		0	0	0									book01				dsgn		-1
+dg03	Item Design		1	1	2		0	0	0									book01				dsgn		-1
+dg04	Item Design		1	1	2		0	0	0									book01				dsgn		-1
+dg05	Item Design		1	1	2		0	0	0									book01				sdgn		-1
+dg06	Item Design		1	1	2		0	0	0									book01				sdgn		-1
+dg07	Item Design		1	1	2		0	0	0									book01				sdgn		-1
+dg08	Item Design		1	1	2		0	0	0									book01				sdgn		-1
+dg09	Item Design		1	1	2		0	0	0									book01				sdgn		-1
+dg10	Item Design		1	1	2		0	0	0									book01				sdgn		-1
+dg11	Item Design		1	1	2		0	0	0									book01				sdgn		-1
 dog	Apple	Regenerates 100 life per second for 10 minutes	1	1	2		0	0	0									newapple				poti		-1
 dr01	Quest Item\n\gold;Depleted Riftstone (\green;1\gold;)	energy source and allow you to investigate further...\nPerhaps transmuting it in the Horadric Cube could unleash the\n\nto resemble the Rift activators you have come to know well\nIt certainly did not originate on Sanctuary, and yet it appears\n\ndread as you sense the latent otherworldly energy seeping from it\nThe stone emits a faint glow. Holding it in your hand fills you with\n	1	1	2		0	0	0									DepletedRunestone				thng		-1
 dr02	Quest Item\n\gold;Depleted Riftstone (\green;2\gold;)	Transmute in the Cube to Charge\n	1	1	2		0	0	0									DepletedRunestone				thng		-1
@@ -1725,7 +1742,7 @@ ec16	\orange;Iu Container (16)	(Right Click to Collect)	1	1	2		0	0	0									inv
 ec17	\orange;Lux Container (17)	(Right Click to Collect)	1	1	2		0	0	0									invrLuxC				thng		-1
 ec18	\orange;Ka Container (18)	(Right Click to Collect)	1	1	2		0	0	0									invrKaC				thng		-1
 ec19	\orange;Fel Container (19)	(Right Click to Collect)	1	1	2		0	0	0									invrFelC				thng		-1
-ec20	\orange;Lucy Lew Container (20)	(Right Click to Collect)	1	1	2		0	0	0									invrLewC				thng		-1
+ec20	\orange;Lew Container (20)	(Right Click to Collect)	1	1	2		0	0	0									invrLewC				thng		-1
 ec21	\orange;Phul Container (21)	(Right Click to Collect)	1	1	2		0	0	0									invrPhulC				thng		-1
 ec22	\orange;Un Container (22)	(Right Click to Collect)	1	1	2		0	0	0									invrUnC				thng		-1
 ec23	\orange;Mhal Container (23)	(Right Click to Collect)	1	1	2		0	0	0									invrMhalC				thng		-1
@@ -1811,9 +1828,12 @@ ey3	unused	+150% Magic Find for 30 seconds	1	1	2		0	0	0									invpoy				hpot		
 ey4	unused	+300% Gold Find for 30 seconds	1	1	2		0	0	0									invxyz				hpot		-1
 ey9	unused	Cancels Running Skill Timers	1	1	2		0	0	0									invpotr				hpot		-1
 eyz	Eye		1	1	2		0	0	0									inveye				body		-1
+f665	Soulforge		2	2	2		0	0	0									Soulforge	255			thng		-1
 f666	Soulforge		2	2	2		0	0	0									Soulforge	255			grtz		-1
 f667	\orange;Heavenly Soul	(Cube with an Oil of Craft to create container)\nCube with Soulforge to craft items\n\n\green;Cube with an Oil of Enhancement to create a Soulforge\n\n\orange;Cube 5 together to create a Mark of Fate	1	1	2		0	0	0									HeavenlySoul				thng		-1
 f668	Crate O' Souls	(Transmute in Cube to Extract Souls)\n(Right Click to Collect)	1	1	2		0	0	0									smallbox				thng		-1
+f700	\orange;Sacred Essence	(Cube with an Oil of Craft to create container)\n\nUsed for Sacred Unique manipulation and Assur's Bane upgrades	1	1	2		0	0	0									SacredEssence				thng		-1
+f701	Crate O' Sacred Essence	(Transmute in Cube to Extract Sacred Essence)\n(Right Click to Collect)	1	1	2		0	0	0									smallboxS				thng		-1
 flg	Flag		1	2	2		0	0	0									invflag				body		-1
 fng	Fang		1	1	2		0	0	0									invfang				body		-1
 g$a	\purple;Chipped Onyx		1	1	2		1	0	0									invgsoa				gemq,gem0		-1
@@ -1898,6 +1918,7 @@ ir15	Quest Item\n\gold;Charged Riftstone (\red;10\gold;)	\dgrey;- Transmute -\n\
 ir70	\grey;Quest Item\n\gold;Whisper of the Damned	Transmute three Whispers to receive the Call of the Damned	1	1	2		0	0	0									skullstar				thng		-1
 ir75	\grey;Quest Item\n\gold;Call of the Damned	\red;Works only on Hell difficulty\n\grey;Right click to answer the call of the Damned	1	1	2		120	0	0									invrsc				thng		-1
 ir76	Bone Chimes		1	2	2		120	0	0									bonechimes	255			grtz		-1
+ir80	\orange;Occult Effigy\nCraftsman's Brand	\blue;+18 Required Level\n\dgreen;Orb Effects Applied to this Item are Doubled\n\grey;Cube with Magic Quiver to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									OccultOrb				thng		-1
 ir81	\orange;Occult Effigy\nCelestial Wind	\blue;+5 Required Level\nSet Movement Speed to 40%\n\grey;Cube with Boots to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									OccultOrb				thng		-1
 ir82	\orange;Occult Effigy\nSigil of Absolution	\blue;Cannot be Used with Runewords\n(Max 2 Uses per Item)\nRequirements +25%\n-5 Required Level\n\grey;Cube with Any Weapon/Armor to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									OccultOrb				thng		-1
 ir83	\orange;Occult Effigy\nPath of Brutality	\blue;+10 Required Level\nItem Becomes (Your Class Only)\nTransforms every +1 to All Skills to +3% Deadly Strike\n\grey;Cube with Unique Ring/Amulet to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									OccultOrb				thng		-1
@@ -1907,6 +1928,7 @@ ir86	\orange;Occult Effigy\nBreath of Thaumaturgy	\blue;+25 Required Level\nItem
 ir87	\orange;Occult Effigy\nElemental Dominion	\blue;(Max 2 Uses per Item)\n+5 Required Level\n4% Chance to cast level 5 Life Spark on Melee Attack\n\grey;Cube with a Elemental Melee Weapon to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									OccultOrb				thng		-1
 ir88	\orange;Occult Effigy\nArcane Hunger	\blue;+10 Required Level\n(Max 1 Use per Item)\nItem Cannot be Unsocketed\nAll Life Leech transformed to +20% Spell Damage\n\grey;with at least 15% Life Leech to Add Bonus\nCube with a One Handed Weapon\n\nCube Reagent	1	1	2		0	0	0									OccultOrb				thng		-1
 ir89	\orange;Occult Effigy\nDark Summoning	\blue;+10 Required Level\n1% Reanimate as: Random Monster\n\grey;Cube with Gloves to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									OccultOrb				thng		-1
+ir90	\orange;Occult Effigy\nNorthern Winds	\blue;+8 Required Level\nMaximum Cold Resist +1%\n\dgrey;If armor already has Cannot be Frozen:\n\blue;Upgrade it to Cannot Be Frozen\n\dgrey;If armor already has Half Freeze Duration:\n\blue;Half Freeze Duration\n\grey;Cube with any Armor without Maximum Cold Resist to add bonus\n\nCube Reagent	1	1	2		0	0	0									OccultOrb				thng		-1
 ir91	Quest Item\n\gold;Dream Fragment (1)	And most importantly: to what purpose?\n\nclosely match our own. I wonder what eldritch sorcery is involved here.\non Sanctuary. They appear to be terraforming these dimensions to\nYet the creatures I have encountered here clearly did not originate\n\nThese worlds are both familliar and different at the same time.\n	1	1	2		0	0	0									DreamFragment				thng		-1
 ir92	Quest Item\n\gold;Dream Fragment (2)	Witness me, Ancestors. I who lived honorable and died like a fool.\n\nThe one so closely aligned to a line from the sky to the Arreat Summit.\nCould not make much of it, but a star marked there caught my eye.\nOne of the mages I slew was carrying the fragment of a scroll.\n\nno council. This lack of preparation will now be my end.\nI entered the Rift like an impetuous whelp, seeking glory and heeding\nThe filth crumbles swiftly before my axe, but there is no end in sight.\n	1	1	2		0	0	0									DreamFragment				thng		-1
 ir93	Quest Item\n\gold;Dream Fragment (3)	have the upper hand, should the worst come to pass.\nI imprint this knowledge into my essence so my fellow priests can\n\nThis has yielded nothing yet for the fiends are not willing to converse.\nand thus gain a rudimentary understanding of their language.\nI managed to assimilate the souls of enough of these creatures\n\nThe strands of time flow crooked here, it is hard to focus.\nyielded something worthwhile today. Or was it yesterday?\nNavigating this twisted maze, through time and space, has finally\n	1	1	2		0	0	0									DreamFragment				thng		-1
@@ -1946,7 +1968,7 @@ leek	:leek:	65\n- Runewords can now be corrupted\n	1	2	2		0	0	0									leek				
 lms	'The Last Man Standing'\nEvent Award:		2	2	2		0	0	0									lastman	255			grtz		-1
 lmz	'Season 36: Pandemonium'\nEvent Award:		2	2	2		0	0	0									lastman	255			grtz		-1
 lok	Crystalline Flame Medallion	80\nJudgement Day Trophy Challenge\nRequirements: \nKill both Imperius and Malthael within \n60 seconds of the hooded figure \ndisappearing\nDo not die\n\nCube the Crystalline Flame Medallion \nwithin the time limit\nGrants: \n5% to All Attributes\nLocked to current character class\n	1	1	2		0	0	0									invvip	255			grtz		-1
-ltbx	\orange;(Restored)\nTreasure of Fiacla Gear	Transmute in the Cube to Open	2	2	2		0	0	0									illbeback				loot		-1
+ltbx	\orange;(Restored)\nTreasure of Fiacla Gear	Transmute in the Cube to Open	1	1	2		0	0	0									itsababybox				loot		-1
 luv	The Black Tower Key		1	2	2		0	0	0									invmph	20			key		-1
 m@m	\grey;Quest Item\n\gold;Spinecracker's Sigil	Cube All 5 Sigils with Ring of the Five\n	1	1	2		0	0	0									ring03				thng		-1
 mec	FLYING POLAR BUFFALO ERROR		1	1	2		0	0	0									invcndl				thng		-1
@@ -1982,9 +2004,9 @@ mpf	FLYING POLAR BUFFALO ERROR		1	1	2		0	0	0									invbpl				mpot		-1
 mpo	FLYING POLAR BUFFALO ERROR		1	1	2		0	0	0									invbps				mpot		-1
 mss	Mephisto's Soulstone		1	1	2		0	0	0									invmss	23			ques		-1
 o@o	\grey;Quest Item\n\gold;Eyegouger's Sigil	Cube All 5 Sigils with Ring of the Five\n	1	1	2		0	0	0									ring06				thng		-1
-obox	\red;Corrupted Treasure	(Better items and more gold cost the higher the rune)\nRestore Gold Cost: 20,000 - 500,000\nCube with Arcane Crystal and Enchanted Rune to Restore	2	2	2		0	0	0									illbeblack				loot		-1
+obox	\red;Corrupted Treasure	(Better items and more gold cost the higher the rune)\nRestore Gold Cost: 20,000 - 500,000\nCube with Arcane Crystal and Enchanted Rune to Restore	1	1	2		0	0	0									itsababyblackbox				loot		-1
 ooc	Cube Reagent\n\orange;Oil of Conjuration	70\nThe Oil of Conjuration has a chance to \nadd an extra bonus to caster weapons, \ninstead of using the lucky recipe.\n\nOil + Weapon\n--> Item with 2/5 Chance of Added Bonus\n(Limit: 1)\n\nWeapons: +10% Spell Damage\n	1	1	2		0	0	0									oil_conjuration				thng		-1
-p@p	\grey;Quest Item\n\gold;Fleshcutter's Sigil	Cube All 5 Sigils with Ring of the Five\n	1	1	2		0	0	0									ring07				thng		-1
+p@p	\grey;Quest Item\n\gold;Mindflayer's Sigil	Cube All 5 Sigils with Ring of the Five\n	1	1	2		0	0	0									ring07				thng		-1
 pacb	\orange;Home Cherry	\dgrey;Do NOT tell anyone what you just saw\nThese cherries will take you back home safely	1	1	2		0	0	0									cherries				thng		-1
 q@q	\grey;Quest Item\n\gold;Bonehexer's Sigil	Cube All 5 Sigils with Ring of the Five\n	1	1	2		0	0	0									ring09				thng		-1
 qbr	Khalim's Brain		1	1	2		0	0	0									invbrnz	17			ques		-1
@@ -2321,7 +2343,7 @@ tbk	Tome of Town Portal		1	2	2	1	0	0	0									invbbk				book		-1
 tbr	By Mel Odom\nThe Black Road		1	1	2		110	0	0									invsbk3	255			grtz		-1
 tch	Torch		1	2	2		0	0	0									invtrch				torc		-1
 ths	The Sleep	\orange;Disenchant to open a portal to the World Nexus\n\nCube After Completing a Trophy Challenge to Awaken\grey;	1	1	2		115	0	0									jewelabc	255			grtz		-1
-toa	\orange;Belladonna Extract	Right-click to reset Stat/Skill Points	1	1	2		0	0	0									pot04				ques		-1
+toa	\orange;Belladonna Extract	Transmute with certain charms to remove visual effects\n\nRight-click to reset Stat/Skill Points	1	1	2		0	0	0									pot04				ques		-1
 tr1	Horadric Scroll		2	2	2		0	0	0									invhscr	10			ques		-1
 tr2	Scroll of Resistance	\blue;+10% to Elemental Resistances\n\grey;Cube with the Sunstone of the Twin Seas to Add Bonus\n\nCube Reagent	2	2	2		0	0	0									invscb	32			thng		-1
 trc	Umbaru Treasure		1	1	2		110	0	0									foolsbox	255			grtz		-1
@@ -2344,8 +2366,10 @@ vps	Stamina Potion		1	1	2		0	0	0									invwps				spot		-1
 vrx1	\purple;Mark of Victory	\green;Cost: 1 charge\n\blue;+2 to All Attributes per Character Level above 130\n+3% Magic Find per Character Level above 130\n\red;Effects cannot be duplicated\n\white;Transmute with Paragon's Hammer to add bonus\n\gold;Horror Under Tristram (Heroic)	1	1	2		0	0	0									MarkVictory				thng		-1
 vrx2	\purple;Mark of Victory	\green;Cost: 1 charge\n\blue;Regenerate Mana +2% per Character Level above 130\n+1% Maximum Mana per Character Level above 130\n\red;Effects cannot be duplicated\n\white;Transmute with Paragon's Hammer to add bonus\n\gold;Death Projector (Heroic)	1	1	2		0	0	0									MarkVictory				thng		-1
 vrx3	\purple;Mark of Victory	\green;Cost: 1 charge\n\blue;+2% Summoned Minion Resistances per Character Level above 130\n+3% to Elemental Resists per Character Level above 130\n\red;Effects cannot be duplicated\n\white;Transmute with Paragon's Hammer to add bonus\n\gold;Infernal Machine (Heroic)	1	1	2		0	0	0									MarkVictory				thng		-1
-vrx4	Mark of Fate	\green;Cost: 3 charges\n\grey;Unlocks Mastery Skill: Paragon of Fate\n\n\dgrey;Transmute with Paragon's Hammer to add bonus\n\gold;Library of Faith (Heroic)	1	1	2		0	0	0									MarkFaith	255			thng		-1
-vry4	Pearl of Wisdom: Paragon of Fate		1	1	2		0	0	0									pearl4	255			grtz		-1
+vrx4	Mark of Fate	\green;Cost: 3 charges\n\grey;Unlocks Mastery Skill: Paragon of Fate\n\n\dgrey;Transmute with Paragon's Hammer to add bonus\n\orange;Library of Faith (Heroic)	1	1	2		0	0	0									MarkFaith				thng		-1
+vrx5	Mark of Sanctity	\green;Cost: 3 charges\n\grey;Unlocks Mastery Skill: Paragon of Sanctity\n\n\dgrey;Transmute with Paragon's Hammer to add bonus\n\orange;Duncraig (Heroic)	1	1	2		0	0	0									MarkSanctity	255			thng		-1
+vry4	\gold;Pearl of Wisdom: Paragon of Fate		1	1	2		0	0	0									pearl4				grtz		-1
+vry5	\gold;Pearl of Wisdom: Paragon of Fate		1	1	2		0	0	0									pearl4				thng		-1
 w@w	Cold Fusion Schematics	80\nVizjun Trophy Challenge\nRequirements: \nKill the Master Control System within 25 \nseconds\nDo not die\n\nCube the Cold Fusion Schematics within\nthe time limit\nGrants: \n+15 to all Attributes\n	1	1	2		0	0	0									invhscr2	255			grtz		-1
 wms	Thawing Potion		1	1	2		0	0	0									invyps				wpot		-1
 x01	Sacred Sunstone		1	1	2		0	0	0									ccama	255			araa		0
@@ -2412,5 +2436,5 @@ zkx	\dgreen;Greater Signet of Gold	Right-click: Gold in Bank: %d	1	1	2		0	0	0			
 |du1	\orange;Dulra Fruit	\blue;25% Magic Find\nMaximum Life +5%\n+1 to All Skills\n\grey;Cube with Dulra Aegis to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									invdulrafruit				thng		-1
 |dul	Dulra Aegis	75\nThis powerful artifact has a multitude of \nuses depending on which reagent it is \ncubed with. \n\nCertain perfect gems allow you to pick \nstats within a certain category.\n\nAegis + Perfect Gem -> Add/Roll Stat\n\nRuby = Class Skills\nEmerald = Speed\nSapphire = Enemy Resist\nTopaz = Attribute\nAmethyst = Resist\nDiamond = Max Resist\nSkull = Minion Stat\n\nAdditionally, this artifact can be used to \nsummon certain bosses, teleport you\nto locations and opening quest portals.\n	1	1	2		0	0	0									invdulra	255			grtz		-1
 |ld	Lylia's Curse		1	1	2		120	0	0									lyliascharm	255			grtz		-1
-|ms	\gold;Ghost Trance	\blue;+1 to All Skills\n(11 to 40) to all Attributes\n\grey;Cube with Umbaru Treasure to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									giyuaGolem				thng		-1
+|ms	\gold;Ghost Trance	\blue;+1 to All Skills\n(8 to 32) to all Attributes\n\grey;Cube with Umbaru Treasure to Add Bonus\n\nCube Reagent	1	1	2		0	0	0									giyuaGolem				thng		-1
 |wc	Weather Control		1	1	2		120	0	0									invathulua	255			grtz		-1

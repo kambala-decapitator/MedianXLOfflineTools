@@ -118,7 +118,7 @@
 116		-1				
 117		-1				
 118		-1				
-119		-1				
+119	Flamefront	-1	2	1	3	92
 120		-1				
 121		-1				
 122		-1				
@@ -126,15 +126,15 @@
 124		-1				
 125		-1				
 126		-1				
-127		-1				
+127	Flamefront	-1	2	1	3	92
 128		-1				
 129		-1				
 130		-1				
 131		-1				
 132		-1				
 133		-1				
-134		-1				
-135		-1				
+134	Lava Pit	-1	6	2	3	98
+135	Pestilence	-1	5	5	2	152
 136		-1				
 137		-1				
 138		-1				
@@ -249,7 +249,7 @@
 247		-1				
 248		-1				
 249		-1				
-250	Pestilence	2	5	5	3	152
+250	Pestilence	2	5	5	2	152
 251		-1				
 252		-1				
 253		-1				
@@ -476,7 +476,7 @@
 474	Searing Glow	-1	0	0	0	170
 475	Brimstone	-1	0	0	0	41
 476	Cherubim	-1	0	0	0	190
-477	Lightning Shield	-1	0	0	0	168
+477	Lightning Shield	-1	5	4	2	164
 478	Scorpion Blade	-1	2	2	3	60
 479	Tremor	-1	0	0	0	29
 480	Shackles of Ice	-1	0	0	0	200
@@ -517,10 +517,10 @@
 515	Rebound	-1	0	0	0	284
 516	Screaming Eagle	-1	6	5	1	76
 517	Cataclysm	-1	0	0	0	35
-518		-1				
-519		-1				
-520		-1				
-521		-1				
+518	Heaven's fury	-1	0	0	0	201
+519	Serafiend Prison	-1	0	0	0	291
+520	Ignis Mortem	-1	0	0	0	292
+521	Lava Pit	-1	6	2	3	98
 522		-1				
 523		-1				
 524		-1				
@@ -607,7 +607,7 @@
 605	Thunder Hammer	-1	0	0	0	0
 606	Thunder Wave	-1	0	0	0	0
 607	Crucify	-1	4	1	2	32
-608	Claw Tornado	-1	0	0	0	83
+608	Tornado	-1	0	0	0	83
 609	Arrow	-1	0	0	0	0
 610	Unseelie Curse	-1	0	0	0	0
 611	Funeral Pyre	-1	0	0	0	125
@@ -667,9 +667,9 @@
 665	Eviscerate	-1	3	3	2	44
 666		-1				
 667		-1				
-668		-1				
+668	Magnetic field	-1	0	0	0	0
 669		-1				
-670		-1				
+670	Visions of the Past	-1	0	0	0	293
 671		-1				
 672		-1				
 673		-1				
@@ -790,7 +790,7 @@
 788		-1				
 789		-1				
 790		-1				
-791		-1				
+791	Doom	-1	8	3	1	38
 792		-1				
 793		-1				
 794		-1				
@@ -845,7 +845,7 @@
 843		-1				
 844		-1				
 845		-1				
-846	Doom	-1	8	3	1	38
+846		-1				
 847		-1				
 848		-1				
 849		-1				
@@ -853,7 +853,7 @@
 851		-1				
 852		-1				
 853		-1				
-854	Doom	-1	8	3	1	38
+854		-1				
 855		-1				
 856		-1				
 857		-1				
@@ -943,8 +943,8 @@
 941		-1				
 942		-1				
 943		-1				
-944		-1				
-945		-1				
+944	Guard Tower	-1	0	0	0	37
+945	Doom	-1	8	3	1	38
 946		-1				
 947		-1				
 948		-1				
@@ -959,7 +959,7 @@
 957		-1				
 958		-1				
 959		-1				
-960		-1				
+960	Trinity Arrow	-1	0	0	0	294
 961		-1				
 962		-1				
 963		-1				
@@ -1068,7 +1068,7 @@
 1066	\orange;Hunter's Prowess	0	4	3	1	128
 1067	\orange;Reckoning of Zerae	0	5	5	1	143
 1068	\orange;Unstable Essence	0	6	6	3	156
-1069	Discharge	0	5	4	2	58
+1069	Discharge	0	5	3	2	58
 1070	\orange;Concentrated Effect	0	6	4	1	160
 1071	\orange;Conductivity	0	5	5	3	130
 1072	Gemling	0	3	3	3	136
@@ -1082,7 +1082,7 @@
 1080	\orange;Forbidden Knowledge	0	6	5	3	152
 1081	Spiritual Invocation	0	6	5	2	158
 1082	Decoy	0	2	3	1	162
-1083		0				
+1083	Lightning Shield	0	5	4	2	164
 1084		0				
 1085		0				
 1086		0				
@@ -1100,8 +1100,8 @@
 1098	Endurance	0	7	4	2	12
 1099	Tenacity	0	7	4	1	14
 1100	Freedom	0	7	2	2	16
-1101	Paragon of Fate	0	8	5	1	18
-1102		0				20
+1101	Paragon of Fate	0	8	6	1	18
+1102	Paragon of Sanctity	0	8	6	2	20
 1103		0				22
 1104		0				24
 1105		0				26
@@ -1189,8 +1189,8 @@
 1187	Endurance	6	7	4	2	12
 1188	Tenacity	6	7	4	1	14
 1189	Freedom	6	7	2	2	16
-1190	Paragon of Fate	6	8	5	1	18
-1191		6				20
+1190	Paragon of Fate	6	8	6	1	18
+1191	Paragon of Sanctity	6	8	6	2	20
 1192		6				22
 1193		6				24
 1194		6				26
@@ -1282,8 +1282,8 @@
 1280	Endurance	4	7	4	2	12
 1281	Tenacity	4	7	4	1	14
 1282	Freedom	4	7	2	2	16
-1283	Paragon of Fate	4	8	5	1	18
-1284		4				20
+1283	Paragon of Fate	4	8	6	1	18
+1284	Paragon of Sanctity	4	8	6	2	20
 1285		4				22
 1286		4				24
 1287		4				26
@@ -1343,7 +1343,7 @@
 1341	\orange;Ancestral Force	5	2	6	3	108
 1342	Primal Bond	5	5	3	3	156
 1343	Devouring Cloud	5	1	4	3	154
-1344		5				
+1344	Ravage	5	2	3	2	158
 1345		5				
 1346		5				
 1347		5				
@@ -1368,8 +1368,8 @@
 1366	Endurance	5	7	4	2	12
 1367	Tenacity	5	7	4	1	14
 1368	Freedom	5	7	2	2	16
-1369	Paragon of Fate	5	8	5	1	18
-1370		5				20
+1369	Paragon of Fate	5	8	6	1	18
+1370	Paragon of Sanctity	5	8	6	2	20
 1371		5				22
 1372		5				24
 1373		5				26
@@ -1379,9 +1379,9 @@
 1377	Bend the Shadows	-1	0	0	0	248
 1378		-1				
 1379	Death Ripple	2	5	1	2	146
-1380	Soul Sever	2	5	6	2	144
-1381	Dream Eater	2	5	3	1	148
-1382	Nightwalker	2	5	2	1	150
+1380	Soul Sever	2	0	0	0	144
+1381	Dream Eater	2	5	2	2	148
+1382	Nightwalker	2	5	3	2	150
 1383		-1				
 1384	Carnage	2	3	2	2	114
 1385	Parasite	2	3	1	2	128
@@ -1421,7 +1421,7 @@
 1419		-1				
 1420		-1				
 1421		-1				
-1422	Graveyard	2	8	1	3	98
+1422		2				
 1423	\orange;Mold the Flesh	2				30
 1424	\orange;Grim Vision	2	2	1	3	32
 1425	\orange;Violent Immolation	2	2	2	1	34
@@ -1434,9 +1434,9 @@
 1432		2				
 1433	Flameburst Shot	2	4	3	3	182
 1434	\orange;Ignite	2				184
-1435	Occult Path	2	5	2	2	186
-1436	Exile	2	5	5	2	188
-1437	\orange;Terror	2	5	5	1	190
+1435	Occult Path	2	5	2	3	186
+1436	Exile	2	0	0	0	188
+1437	\orange;Terror	2	5	2	1	190
 1438	\orange;Dark Gathering	2	6	3	2	172
 1439	\orange;Dirge	2	6	5	2	194
 1440	Soulchain	2	6	6	3	196
@@ -1448,10 +1448,10 @@
 1446		2				
 1447		2				
 1448	\orange;Brutal Effigy	2	4	4	2	202
-1449		2				
-1450		2				
-1451		2				
-1452		2				
+1449	Torment	2	5	6	2	208
+1450	Relentless	2	5	5	1	144
+1451	Gift of Blood	2	5	5	3	154
+1452	Land of the Dead	2	8	1	3	206
 1453		2				
 1454		2				
 1455		2				
@@ -1466,8 +1466,8 @@
 1464	Endurance	2	7	4	2	12
 1465	Tenacity	2	7	4	1	14
 1466	Freedom	2	7	2	2	16
-1467	Paragon of Fate	2	8	5	1	18
-1468		2				20
+1467	Paragon of Fate	2	8	6	1	18
+1468	Paragon of Sanctity	2	8	6	2	20
 1469		2				22
 1470		2				24
 1471		2				26
@@ -1526,7 +1526,7 @@
 1524	\orange;Rite of Thorns	3	5	3	3	162
 1525	\orange;Rite of the Restless	3	5	2	3	164
 1526	Sanctity	3	2	2	1	122
-1527		3				
+1527	Habeas Corpus	3	8	4	2	168
 1528		3				
 1529		3				
 1530		3				
@@ -1552,8 +1552,8 @@
 1550	Endurance	3	7	4	2	12
 1551	Tenacity	3	7	4	1	14
 1552	Freedom	3	7	2	2	16
-1553	Paragon of Fate	3	8	5	1	18
-1554		3				20
+1553	Paragon of Fate	3	8	6	1	18
+1554	Paragon of Sanctity	3	8	6	2	20
 1555		3				22
 1556		3				24
 1557		3				26
@@ -1629,7 +1629,7 @@
 1627	Tenacity	1	7	4	1	14
 1628	Freedom	1	7	2	2	16
 1629	Paragon of Fate	1	9	5	1	18
-1630		1				20
+1630	Paragon of Sanctity	1	9	5	2	20
 1631		1				22
 1632		1				24
 1633		1				26
@@ -1643,7 +1643,7 @@
 1641	Trinity Nova	-1	0	0	0	220
 1642	Meteor Shower	-1	0	0	0	47
 1643	Blindside	-1	0	0	0	0
-1644		-1				
+1644	Sandstorm	-1	0	0	0	83
 1645	Harbinger	-1	0	0	0	97
 1646	Ultimate Chaos	-1	0	0	0	104
 1647	Voidstar	-1	0	0	0	105
@@ -1695,7 +1695,7 @@
 1693	Titan's Fortitude	-1	0	0	0	12
 1694	Soulshatter	-1	0	0	0	89
 1695	Black Lotus Strike	-1	0	0	0	51
-1696		-1				
+1696	Graveyard	-1	0	0	0	98
 1697	OHMAN	-1	0	0	0	197
 1698	Windform	-1	0	0	0	174
 1699	Rock Shock	-1	0	0	0	172
@@ -1804,16 +1804,16 @@
 1802	Clear Mind	-1	0	0	0	288
 1803		-1				
 1804	\gold;Ranged Egg Trap	-1	0	0	0	279
-1805		-1				
-1806		-1				
+1805	Egg Trap	-1	4	5	2	116
+1806	Hurricane	-1	0	0	0	286
 1807		-1				
 1808		-1				
 1809	Stormblast	-1	0	0	0	60
 1810	Iceburst	-1	0	0	0	110
 1811		-1				
 1812	Deathgaze	-1	0	0	0	0
-1813	Hurricane	-1	0	0	0	286
-1814		-1				
+1813		-1				
+1814	Hurricane	-1	0	0	0	286
 1815		-1				
 1816		-1				
 1817		-1				
@@ -2163,10 +2163,10 @@
 2161		-1				
 2162		-1				
 2163		-1				
-2164		-1				
+2164	Flamefront	-1	2	1	3	92
 2165		-1				
 2166		-1				
-2167	Flamefront	-1	2	1	3	92
+2167		-1				
 2168		-1				
 2169		-1				
 2170		-1				
@@ -2331,7 +2331,7 @@
 2329		-1				
 2330		-1				
 2331		-1				
-2332		-1				
+2332	Flamefront	-1	2	1	3	92
 2333		-1				
 2334		-1				
 2335		-1				
@@ -2432,7 +2432,7 @@
 2430		-1				
 2431		-1				
 2432		-1				
-2433		-1				
+2433	Flamefront	-1	2	1	3	92
 2434		-1				
 2435		-1				
 2436		-1				
@@ -2495,7 +2495,7 @@
 2493		-1				
 2494		-1				
 2495		-1				
-2496	Flamefront	-1	2	1	3	92
+2496	Doom	-1	8	3	1	38
 2497		-1				
 2498		-1				
 2499		-1				
@@ -2620,7 +2620,7 @@
 2618	Diseased Cattle	-1	0	0	0	46
 2619	Slicer Blade	-1	0	0	0	0
 2620	Lightning Arena	-1	0	0	0	184
-2621	Pestilence	-1	5	5	3	152
+2621	Pestilence	-1	5	5	2	152
 2622	Barrage	-1	2	2	3	116
 2623	Phalanx	-1	2	5	1	34
 2624	Barrage	-1	2	2	3	116
@@ -2642,13 +2642,13 @@
 2640	Fire Splash	-1	0	0	0	0
 2641		-1				
 2642	Slayer Bolt	-1	0	0	0	0
-2643	Claw Tornado	-1	0	0	0	83
+2643	Tornado	-1	0	0	0	83
 2644	Death Spiral	-1	0	0	0	0
 2645		-1				
 2646	Guided Chain	-1	0	0	0	79
 2647	Exorcism	-1	0	0	0	134
 2648	Thundergod	-1	8	1	3	90
-2649	Graveyard	-1	8	1	3	98
+2649	Graveyard	-1	0	0	0	98
 2650	Supernova	-1	0	0	0	38
 2651	Cataclysm	-1	0	0	0	35
 2652	Ice Bolt Nova	-1	0	0	0	195
@@ -2788,7 +2788,7 @@
 2786		-1				
 2787		-1				
 2788		-1				
-2789	Discharge	-1	5	4	2	58
+2789	Discharge	-1	5	3	2	58
 2790		-1				
 2791		-1				
 2792		-1				
@@ -2899,3 +2899,71 @@
 2897		-1				
 2898	Flamefront	-1	2	1	3	92
 2899	Thunderstone	-1	3	2	1	52
+2900	Queen of Blades	-1	1	5	2	34
+2901	Flamefront	-1	2	1	3	92
+2902		-1				
+2903	Impale	-1	3	1	2	46
+2904		-1				
+2905		-1				
+2906		-1				
+2907		-1				
+2908		-1				
+2909		-1				
+2910		-1				
+2911		-1				
+2912		-1				
+2913		-1				
+2914		-1				
+2915		-1				
+2916		-1				
+2917		-1				
+2918		-1				
+2919		-1				
+2920		-1				
+2921		-1				
+2922		-1				
+2923		-1				
+2924		-1				
+2925		-1				
+2926		-1				
+2927		-1				
+2928		-1				
+2929		-1				
+2930		-1				
+2931		-1				
+2932		-1				
+2933		-1				
+2934		-1				
+2935		-1				
+2936		-1				
+2937		-1				
+2938	Flamefront	-1	2	1	3	92
+2939	Fortress	-1	5	6	1	64
+2940		-1				
+2941		-1				
+2942		-1				
+2943		-1				
+2944		-1				
+2945		-1				
+2946		-1				
+2947		-1				
+2948		-1				
+2949		-1				
+2950		-1				
+2951		-1				
+2952		-1				
+2953		-1				
+2954		-1				
+2955		-1				
+2956		-1				
+2957		-1				
+2958		-1				
+2959		-1				
+2960		-1				
+2961		-1				
+2962		-1				
+2963		-1				
+2964		-1				
+2965		-1				
+2966		-1				
+2967		-1				

@@ -1,4 +1,5 @@
 #code	equiv	varImages	name
+5xxx	2hax,elex		2H Axes and Elemental Weapons
 2hax	axe		2h axe
 a2ha	ct2w,an2x		2h axe (Angelic)
 s2ha	2hax,ct2w		2h axe (Sacred)
@@ -10,6 +11,7 @@ s2hb	2hbs,ct2w		2h barb sword (Sacred)
 a2hd	ct2w,an2x		2h sword (Angelic)
 s2hd	2hsd,ct2w		2h sword (Sacred)
 flsh	prsh		Active Shrine (10 Charges)
+amsh	shie,amaz		Ama Shield Shortcut
 abow	bow,amaz		Amazon Bow
 qabw	abow,ct2w		Amazon Bow (Sacred)
 azhm	helm		Amazon Helm
@@ -17,10 +19,11 @@ szhm	azhm,ct1a		Amazon Helm (Sacred)
 amaz	clas,fbox		Amazon Item
 ajav	jave,amaz		Amazon Javelin
 qajv	ajav,ct1w		Amazon Javelin (Sacred)
-azsd	shie		Amazon Shield
+azsd	amsh,cshd		Amazon Shield
 sasz	azsd,ct1a		Amazon Shield (Sacred)
 aspe	spea,amaz		Amazon Spear
 qasp	aspe,ct2w		Amazon Spear (Sacred)
+7xxx	azhm,pelt		Amazon and Druid Helms
 geml	gem		Amber
 gema	gem		Amethyst
 amul	riam,sg&d	invamu1,invamu2,invamu3	Amulet
@@ -41,24 +44,27 @@ shld	armo,seco		Any Shield
 tors	armo		Armor
 ator	ct2a,atrs		Armor (Angelic)
 qtor	tors,ct2a		Armor (Sacred)
+assh	shie,assn		Assa Shield Shortcut
 assn	clas,fbox		Assassin Item
 nagi	mele,assn		Assassin Naginata
 snag	nagi,ct2w		Assassin Naginata (Sacred)
-ishd	shie		Assassin Shield
+ishd	assh,cshd		Assassin Shield
 sisd	ishd,ct1a		Assassin Shield (Sacred)
-ashd	shie,pala		Auric Shields
+ashd	pash,cshd		Auric Shields
 qaur	ashd,ct1a		Auric Shields (Sacred)
 axe	mele,dbox		Axe
 aaxe	ct1w,an1x		Axe (Angelic)
 qaxe	axe,ct1w		Axe (Sacred)
 3xxx	phlm,pclb		Barb Helm and Pal 1H
+bash	shie,barb		Barb Shield Shortcut
 baxe	axe,barb		Barbarian Axe
 sbax	baxe,ct1w		Barbarian Axe (Sacred)
 barb	clas,fbox		Barbarian Item
-basd	shie,barb		Barbarian Shield
+basd	bash,cshd		Barbarian Shield
 saba	basd,ct1a		Barbarian Shield (Sacred)
 bswd	swor,barb		Barbarian Sword
 sbsd	bswd,ct1w		Barbarian Sword (Sacred)
+8xxx	phlm,pzhm		Barbarian and Pala Helms
 belt	armo,hlm1		Belt
 ablt	ct1a,aarm		Belt (Angelic)
 qblt	belt,ct1a		Belt (Sacred)
@@ -85,6 +91,7 @@ char	misc	invch1,invch4,invch7	Charm
 gem0	gem		Chipped Gem
 circ	helm		Circlet
 qcic	circ,ct1a		Circlet (Sacred)
+chlm	7xxx,8xxx		Class Helm Shortcut
 cloa	tors,assn		Cloak
 club	blun,dbox		Club
 qclb	club,ct1w		Club (Sacred)
@@ -163,6 +170,7 @@ mw04	belt		Mastercrafted Belt
 mw01	bow		Mastercrafted Bow
 mw21	glov		Mastercrafted Gloves
 mw02	knif		Mastercrafted Knife
+mw22	qswd		Mastercrafted Saber
 mw03	staf		Mastercrafted Staff
 mw05	tkni		Mastercrafted Tknife
 mcha	char	invch2,invch5,invch8	Medium Charm
@@ -175,7 +183,10 @@ tpot	thro		Missile Potion
 miss	weap		Missile Weapon
 myor	dcht		Mystic Orbable
 ####	mele		Mystic Sword
+6xxx	nagi,aspe		Naginatas and Ama Spears
+9xxx	nagi,staf		Naginatas and Staves
 nbox	fbox		Necro Gift Box
+nesh	shie,necr		Necro Shield Shortcut
 2xxx	nxbw,nknf		Necro Xbow and Necro Knife
 1xxx	head,basd		Necro and Barb Class Shields
 necr	clas		Necromancer Item
@@ -189,9 +200,11 @@ nxbw	xbow,nbox		Necromancer Xbow
 snxb	nxbw,ct2w		Necromancer Xbow (Sacred)
 helm	armo,hlm1		New Helm
 gemq	gem		Onyx
-orb	mele,sorc		Orb
+orb	sorb,worb		Orb
 qorb	orb,ct1w		Orb (Sacred)
 pbox	fbox		Pala Gift Box
+pash	shie,pala		Pala Shield Shortcut
+4xxx	ashd,basd		Pala and Barb Class Shields
 pclb	club		Paladin Club
 spcb	pclb,ct1w		Paladin Club (Sacred)
 pham	hamm		Paladin Hammer
@@ -253,6 +266,7 @@ sbox	fbox		Sorc Gift Box
 scrd	mele,sbox		Sorceress Crystal Sword
 sscd	scrd,ct1w		Sorceress Crystal Sword (Sacred)
 sorc	clas,sbox		Sorceress Item
+sorb	mele,sorc		Sorceress Orb Shortcut
 stor	tors		Sorceress Torso
 sstr	stor,ct2a		Sorceress Torso (Sacred)
 spea	mele		Spear
@@ -282,9 +296,9 @@ gemt	gem		Topaz
 torc	misc		Torch
 tcur	amul	invamu1,invamu2,invamu3	Trigger Curse Item
 gemo	gem		Turqoise
-head	shie,necr		Voodoo Heads
+head	nesh,cshd		Voodoo Heads
 qhed	head,ct1a		Voodoo Heads (Sacred)
-wand	rod		Wand
+wand	rod,worb		Wand
 qwnd	wand,ct1w		Wand (Sacred)
 astw	ct2w,an2x		Warrior Staff (Angelic)
 weap	myor		Weapon

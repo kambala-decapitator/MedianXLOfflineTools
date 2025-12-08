@@ -74,7 +74,7 @@
 80	100	9							Magic Find	Magic Find		2	14	1					item_magicbonus
 81	0	2							Knockback	Knockback		3	115	0					item_knockback
 82	20	9																	item_timeduration
-83	0	4							to Amazon Skill Levels	to Amazon Skill Levels		13	200	1				3	item_addclassskills
+83	0	4							to Amazon Skill Levels	to Amazon Skill Levels		13	207	1				3	item_addclassskills
 85	25	8							to Experience Gained	to Experience Gained		4	17	1					item_addexperience
 86	0	10							Life after each Kill	Life after each Kill		1	41	1					item_healafterkill
 87	50	8							to All Vendor Prices	to All Vendor Prices		20	13	1					item_reducedprices
@@ -85,7 +85,7 @@
 92		8							Required Level	Required Level		1	6	1					item_levelreq
 93	150	9			99,102,105	Combat Speeds	Combat Speeds		Attack Speed	Attack Speed		2	192	1	9	2	1		item_fasterattackrate
 94	64	10							ModitemLevReq	ModitemLevReq		4	76	2					item_levelreqpct
-96	100	9							Movement Speed	Movement Speed		2	190	1					item_fastermovevelocity
+96	100	9							Movement Speed	Movement Speed		2	206	1					item_fastermovevelocity
 97	1	7										28	127					12	item_nonclassskill
 98		1																11	state
 99	100	9			93,102,105	Combat Speeds	Combat Speeds		Hit Recovery	Hit Recovery		2	188	1	9	2	1		item_fastergethitrate
@@ -115,7 +115,7 @@
 124	100	10							to Attack Rating against Undead	to Attack Rating against Undead		1	161	1					item_undead_tohit
 125	0	1							Throwable	Throwable		3	9	0					item_throwable
 126	0	3							ModitemColdSkills	ModitemColdSkills		1	202	1				3	item_elemskill
-127	0	5							to All Skills	to All Skills		1	203	1					item_allskills
+127	0	5							to All Skills	to All Skills		1	208	1					item_allskills
 128	0	10			367,368		Attacker Takes Elemental Damage of		Attacker Takes Lightning Damage of	Attacker Takes Lightning Damage of		3	27	2	14	3	2		item_attackertakeslightdamage
 131	100	8							Damage Reflected	Damage Reflected		2	26	1					thorns_percent
 134	5	5							Freezes Target	Freezes Target		12	117	2					item_freeze
@@ -184,7 +184,7 @@
 216	0	10							to Life	to Life	(Based on Character Level)	6	77	1					item_hp_perlevel
 217	0	10							to Mana	to Mana	(Based on Character Level)	6	75	1					item_mana_perlevel
 218	0	10							to Maximum Damage	to Maximum Damage	(Based on Character Level)	6	170	1					item_maxdamage_perlevel
-219	0	5							\green;Shrine Blessed	\green;Shrine Blessed		3	250	0					blessings_counter
+219	0	5							\green;Shrine Blessed	\green;Shrine Blessed		3	249	0					blessings_counter
 225	0	10							Bonus to Attack Rating	Bonus to Attack Rating	(Based on Character Level)	7	165	1					item_tohitpercent_perlevel
 226	0	5																	item_absolsigil
 227		5																	item_elesigil
@@ -207,6 +207,7 @@
 253	0	6							Replenishes Quantity	Replenishes Quantity		3	8	0					item_replenish_quantity
 254	0	8							Increased Stack Size	Increased Stack Size		3	9	0					item_extra_stack
 257	1	2							\orange;Parasite Gains 12 Additional Targets\blue;	\orange;Nephalem: +25% Total Vessel Damage Bonus from Passives\nUnholy: Blood Thorns: +40% Damage Multiplier\nHoly: Holy Fire Deals 4.5% of  Strength as More Total Damage (max 250%)\blue;		3	240	0					vessel_mod
+258	100	10																	aura_countdown
 259	1	10							Charges:	Charges:		3	250	2					charge_counter
 260	0	7							\orange;Thunderfury\grey;	\orange;Thunderfury\grey;		3	247	0				17	item_thunderfury
 261	0	5							Extra Totems	Extra Totems		1	196	1					new_totem_syn
@@ -271,10 +272,10 @@
 356	0	2																	questitemdifficulty
 357	200	10			329,330,331,332	to Spell Damage	to Spell Damage		to Physical/Magic Spell Damage	to Physical/Magic Spell Damage		4	140	1	5	4	1		passive_pm_mastery
 358	100	8							to Enemy Magic Resistance	to Enemy Magic Resistance		20	141	1					passive_mag_pierce
-359	100	9			360,361,362		to All Attributes		to Strength	to Strength		2	90	1	3	2	1		item_strength_percent
-360	100	9			359,361,362		to All Attributes		to Dexterity	to Dexterity		2	89	1	3	2	1		item_dexterity_percent
-361	100	9			359,360,362		to All Attributes		to Energy	to Energy		2	87	1	3	2	1		item_energy_percent
-362	100	9			359,360,361		to All Attributes		to Vitality	to Vitality		2	88	1	3	2	1		item_vitality_percent
+359	100	9			360,361,362	to All Attributes	to All Attributes		to Strength	to Strength		2	90	1	3	2	1		item_strength_percent
+360	100	9			359,361,362	to All Attributes	to All Attributes		to Dexterity	to Dexterity		2	89	1	3	2	1		item_dexterity_percent
+361	100	9			359,360,362	to All Attributes	to All Attributes		to Energy	to Energy		2	87	1	3	2	1		item_energy_percent
+362	100	9			359,360,361	to All Attributes	to All Attributes		to Vitality	to Vitality		2	88	1	3	2	1		item_vitality_percent
 363	50	8							Slows Attacker by	Slows Attacker by		2	114	2					item_slowthorns
 364	25	7							Attacker Flees after Striking	Attacker Flees after Striking		2	118	2					item_howlthorns
 365	5	5							Freezes attacker	Freezes attacker		12	116	2					item_freezethorns
@@ -334,7 +335,7 @@
 440	0	9							Mana when Struck by an Enemy	Mana when Struck by an Enemy		1	19	1					item_manawhenstruck
 441	5	6							to Maximum Necromancer Minions	to Maximum Necromancer Minions		1	195	1					passive_aura_addmax
 442	0	9							Additional Strength Damage Bonus:	Additional Strength Damage Bonus:		2	194	2					str_bonus_blue
-443	0	5							\green;Already Upgraded	\green;Already Upgraded		3	249	0					item_upgraded
+443	0	5							\green;Already Upgraded	\green;Already Upgraded		3	248	0					item_upgraded
 444	100	9							Penalty to Summoned Minion Life	to Summoned Minion Life		4	105	1					skill_minion_hp_percent
 445	0	6							to Maximum Barbarian Minions	to Maximum Barbarian Minions		1	196	1					skill_ancientspirits_synergy
 446	0	8							Damage to Protector Spirit Bloodlust	Damage to Protector Spirit Bloodlust		4	195	1					skill_shamanspath_synergy
@@ -366,7 +367,7 @@
 474	0	4							\green;Unlocks your Black Road Skill	\green;Unlocks your Black Road Skill		3	233	0					learn_blackroad
 476	50	11																	blink_delay
 477	50	9																	warp_delay
-478	30	6																	master_belt
+478	10	7																	jewel_counter
 479	0	4																	summoner_exodia
 480	0	5							to Vitality per Socketed Gem	to Vitality per Socketed Gem		1	85	1					item_skill_paragon
 481	0	5							to Runemaster Defense Bonus	to Runemaster Defense Bonus		4	85	1					item_skill_runemaster
@@ -390,6 +391,7 @@
 499	0	10							to Energy	to Energy	(Based on Character Level)	6	87	1					item_energy_perlevel
 500	100	8							to Summoned Minion Attack Rating	to Summoned Minion Attack Rating		4	102	1					item_minion_attack
 501	23	10							\grey;Arcane Crystals: 	\blue;Quantity:		3	84	2					shrine_counter
+502	1	4																	is_PoS
 503	1	4																	is_PoF
 504	6383	14																	lootbox_seed
 505	0	10							Life Regenerated per Second (Based on Character Level)	Life Regenerated per Second (Based on Character Level)		32	80	1					item_hpregen_perlevel

@@ -1067,6 +1067,7 @@
 1071	Citizen
 1072	DeathlyEffigy
 1076	Juris Khan, King of Ureh
+1078	Vision of the Past
 1079	Amazon Defender
 1080	Fallen Warrior
 1081	Ghost Flame
@@ -1587,7 +1588,7 @@
 1609	Slain Soul
 1610	Slain Soul
 1611	Slain Soul
-1612	Assur
+1612	Assur's Avatar
 1614	Putrid Spawn
 1615	Blood Golem
 1616	Necrobot
@@ -1903,6 +1904,7 @@
 1941	BossRathma
 1942	
 1943	Thonos
+1945	Rift Storm
 1954	Sescheron's Destroyer
 1955	Druid Student
 1956	Druid Student
@@ -2676,16 +2678,16 @@
 2754	Gharbad the Weak
 2755	Gharbad the Weak
 2756	Gharbad the Weak
-2757	Assur
-2758	Assur
-2759	Assur
-2760	Assur
-2761	Assur
-2762	Assur
-2763	Assur
-2764	Assur
-2765	Assur
-2766	Assur
+2757	Assur's Avatar
+2758	Assur's Avatar
+2759	Assur's Avatar
+2760	Assur's Avatar
+2761	Assur's Avatar
+2762	Assur's Avatar
+2763	Assur's Avatar
+2764	Assur's Avatar
+2765	Assur's Avatar
+2766	Assur's Avatar
 2767	UNUSED
 2768	UNUSED
 2769	UNUSED
@@ -3428,7 +3430,6 @@
 3551	Imperius' Wrath
 3552	Itherael's Vanguard
 3553	Archon of Malthael
-3554	Twisted Crawler
 3555	Twisted Sire
 3556	Archon of Malthael
 3557	Auriel's Gryphon
@@ -3664,3 +3665,76 @@
 3795	The Justicar
 3800	The Justicar
 3801	The Justicar
+3811	FLYING POLAR BUFFALO ERROR
+3812	Slain Soul
+3813	Slain Soul
+3814	Slain Soul
+3815	Slain Soul
+3816	Slain Soul
+3817	Slain Soul
+3818	Slain Soul
+3819	Slain Soul
+3820	Slain Soul
+3821	Slain Soul
+3822	Slain Soul
+3823	Slain Soul
+3824	Slain Soul
+3825	Slain Soul
+3826	Slain Soul
+3827	Slain Soul
+3828	Slain Soul
+3829	Slain Soul
+3830	Slain Soul
+3831	Slain Soul
+3832	Necromorb
+3833	Necromorb
+3834	Necromorb
+3835	Necromorb
+3846	Desecrated Altar
+3847	Desecrated Altar
+3848	Limit: once per game. Purify to craft\n\n\blue;+4 Required Level\nAdds 3-4 Damage\n\purple;Cost: 1 Sacred Essence\n\gold;Assur's Bane Upgrade
+3849	Limit: once per game. Purify to craft\n\n\blue;+12 Required Level\n+1 to All Skills\n\purple;Cost: 1 Sacred Essence\n\gold;Assur's Bane Upgrade
+3850	Limit: once per game. Purify to craft\n\n\blue;+4 Required Level\n+15%% Damage to Undead\n\purple;Cost: 1 Sacred Essence\n\gold;Assur's Bane Upgrade
+3851	Limit: once per game. Purify to craft\n\n\blue;+4 Required Level\nMaximum Life +1%%\n\purple;Cost: 1 Sacred Essence\n\gold;Assur's Bane Upgrade
+3852	Limit: once per game. Purify to craft\n\n\blue;+5 Required Level\n-3%% to Enemy Fire Resistance\n\purple;Cost: 1 Sacred Essence\n\gold;Assur's Bane Upgrade
+3853	Limit: once per game. Purify to craft\n\n\blue;+5 Required Level\n-3%% to Enemy Cold Resistance\n\purple;Cost: 1 Sacred Essence\n\gold;Assur's Bane Upgrade
+3854	Limit: once per game. Purify to craft\n\n\blue;+5 Required Level\n-3%% to Enemy Lightning Resistance\n\purple;Cost: 1 Sacred Essence\n\gold;Assur's Bane Upgrade
+3855	Limit: once per game. Purify to craft\n\n\blue;+5 Required Level\n-3%% to Enemy Poison Resistance\n\purple;Cost: 1 Sacred Essence\n\gold;Assur's Bane Upgrade
+3856	Limit: once per game. Purify to craft\n\n\blue;Fire Resist -10%%\n-1 to Light Radius\n+40%% Weapon Physical Damage\n\red;Requires at least 1 Light Radius on item\n\purple;Cost: 2 Sacred Essence\n\gold;Assur's Bane Upgrade
+3857	Limit: once per game. Purify to craft\n\n\blue;Fire Resist -10%%\n-1 to Light Radius\n+5%% Innate Elemental Damage\n\red;Requires at least 1 Light Radius on item\n\purple;Cost: 2 Sacred Essence\n\gold;Assur's Bane Upgrade
+3858	Limit: once per game. Purify to craft\n\n\blue;Fire Resist -20%%\n-2 to Light Radius\n+1%% to maximum Fire, Poison, Cold Resistances\n\red;Requires at least 2 Light Radius on item\n\purple;Cost: 2 Sacred Essence\n\gold;Assur's Bane Upgrade
+3859	Limit: once per game. Purify to craft\n\n\blue;Fire Resist -10%%\n-1 to Light Radius\n+10%% Spell Damage\n\red;Requires at least 1 Light Radius on item\n\purple;Cost: 2 Sacred Essence\n\gold;Assur's Bane Upgrade
+3860	Limit: once per game. Purify to craft\n\n\blue;Fire Resist -20%%\n\orange;1%% Fire Spell Damage per 4 Spell Focus above the cap\n\red;Replaces Purify\n\purple;Cost: 4 Sacred Essence\n\gold;Assur's Bane Upgrade
+3861	Limit: once per game. Purify to craft\n\n\blue;Fire Resist -20%%\n\orange;1%% Lightning Spell Damage per 4 Spell Focus above the cap\n\red;Replaces Purify\n\purple;Cost: 4 Sacred Essence\n\gold;Assur's Bane Upgrade
+3862	Limit: once per game. Purify to craft\n\n\blue;Fire Resist -20%%\n\orange;1%% Cold Spell Damage per 4 Spell Focus above the cap\n\red;Replaces Purify\n\purple;Cost: 4 Sacred Essence\n\gold;Assur's Bane Upgrade
+3863	Limit: once per game. Purify to craft\n\n\blue;Fire Resist -20%%\n\orange;1%% Poison Spell Damage per 4 Spell Focus above the cap\n\red;Replaces Purify\n\purple;Cost: 4 Sacred Essence\n\gold;Assur's Bane Upgrade
+3864	Limit: once per game. Purify to craft\n\n\blue;Fire Resist -30%%\n\dgrey;Energy: +12%% Grit\nVitality: 400%% of your Damage to Undead bonus added as Cold Damage to weapon\nDexterity: +300%% Weapon Physical Damage\nStrength: +5000 Attack Rating\n\orange;Bonus based on your highest attribute if wielding a one handed weapon without a shield\n\red;Does not work for Barbarians\nReplaces Purify\n\purple;Cost: 6 Sacred Essence\n\gold;Assur's Bane Upgrade
+3865	Limit: once per game. Purify to craft\n\nSacred Weapon/Armor + 1 Sacred Essence\n\red;Does not work with corrupted items\n\orange;Sacred Unique (105) Creation
+3866	Purify to craft\n\nSacred Unique (120) Weapon/Armor + 2 Sacred Essence\n\red;Does not work with corrupted items\n\orange;Sacred Unique (120) Stat Reroll
+3867	Limit: once per game. Purify to craft\n\nSacred Unique Weapon/Armor + 4 Sacred Essence\n\red;Does not work with corrupted items\n\orange;Sacred Unique (105-130) Item Reroll
+3868	Limit: once per game. Purify to craft\n\n(allows item to be corrupted once more)\nCorrupted Sacred Unique + 8 Sacred Essence\n\red;Recipe cannot be repeated\n\orange;Sacred Unique Double Corruption
+3869	Desecrated Altar
+3870	Mindflayer
+3871	Mindflayer
+3872	Mindflayer
+3873	Mindflayer
+3874	Mindflayer
+3875	Mindflayer
+3876	Mindflayer
+3877	Mindflayer
+3878	Mindflayer's Seal
+3879	Eyegouger's Seal
+3880	Bonehexer's Seal
+3881	Skinrender
+3882	Slain Soul
+3883	Eyegouger
+3884	Bonehexer
+3885	Spinecracker
+3886	Bonehexer
+3887	Bonehexer
+3888	Bonehexer
+3889	Desecrated Altar
+3892	Evil Eye
+3893	Evil Eye
+3894	Evil Eye
+3895	Eyegouger
