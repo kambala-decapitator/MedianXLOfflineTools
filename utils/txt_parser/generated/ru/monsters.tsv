@@ -1067,6 +1067,7 @@
 1071	Citizen
 1072	DeathlyEffigy
 1076	Juris Khan, King of Ureh
+1078	Vision of the Past
 1079	Amazon Defender
 1080	Fallen Warrior
 1081	Ghost Flame
@@ -1587,7 +1588,7 @@
 1609	Slain Soul
 1610	Slain Soul
 1611	Slain Soul
-1612	Assur
+1612	Assur's Avatar
 1614	Putrid Spawn
 1615	Blood Golem
 1616	Necrobot
@@ -1903,6 +1904,7 @@
 1941	BossRathma
 1942	
 1943	Thonos
+1945	Rift Storm
 1954	Sescheron's Destroyer
 1955	Druid Student
 1956	Druid Student
@@ -2676,16 +2678,16 @@
 2754	Gharbad the Weak
 2755	Gharbad the Weak
 2756	Gharbad the Weak
-2757	Assur
-2758	Assur
-2759	Assur
-2760	Assur
-2761	Assur
-2762	Assur
-2763	Assur
-2764	Assur
-2765	Assur
-2766	Assur
+2757	Assur's Avatar
+2758	Assur's Avatar
+2759	Assur's Avatar
+2760	Assur's Avatar
+2761	Assur's Avatar
+2762	Assur's Avatar
+2763	Assur's Avatar
+2764	Assur's Avatar
+2765	Assur's Avatar
+2766	Assur's Avatar
 2767	UNUSED
 2768	UNUSED
 2769	UNUSED
@@ -3423,12 +3425,11 @@
 3546	Tal Rasha's Scorn
 3547	Horadric Spark
 3548	Tal Rasha's Scorn
-3549	Warped Reaver
-3550	Warped Master
-3551	LabRangedPlaceholder
-3552	LabCasterPlaceholder
-3553	Twisted Spriggan
-3554	Twisted Crawler
+3549	Tyrael's Desolator
+3550	Archon of Malthael
+3551	Imperius' Wrath
+3552	Itherael's Vanguard
+3553	Archon of Malthael
 3555	Twisted Sire
 3556	Archon of Malthael
 3557	Auriel's Gryphon
@@ -3441,8 +3442,8 @@
 3564	Auriel's Gryphon
 3565	Itherael's Vanguard
 3566	Imperius' Wrath
-3567	Zakarum's Avatar
-3569	Yataghan
+3567	The Justicar
+3569	The Justicar
 3570	Goblin Assassin
 3571	Lord of the Grave
 3572	Zombie
@@ -3566,30 +3567,31 @@
 3690	BossRathma
 3691	BossRathma
 3692	BossRathma
-3693	Phantasm
-3694	Steel Serpent
-3695	Eternal Ember
-3696	Soul Reaver
-3697	Alpha Centaur
-3698	Cow Honcho
-3699	Cow Soldier
-3701	Erinys
-3702	Colossal Tunneller
-3703	Sinew Shaper
-3704	Observer
-3705	Twisted Necrobot
-3706	Sapphire Knight
-3707	Frigid Leech
-3708	Arreat Terror
-3709	Thrall of Destruction
-3710	Obsidian Protector
-3711	Dread Watcher
-3712	Grimspike
-3713	Coven Mistress
-3714	Stormtree
-3715	Shadowgate Totem
-3716	a startled Witch...
-3717	Timewarp Totem
+3693	Ethereal
+3694	Ethereal
+3695	Ethereal
+3696	Ethereal
+3697	Archon of Malthael
+3698	Archon of Malthael
+3699	Archon of Malthael
+3700	Archon of Malthael
+3701	Auriel's Gryphon
+3702	Auriel's Gryphon
+3703	Auriel's Gryphon
+3704	Auriel's Gryphon
+3705	Itherael's Vanguard
+3706	Itherael's Vanguard
+3707	Itherael's Vanguard
+3708	Itherael's Vanguard
+3709	Imperius' Wrath
+3710	Imperius' Wrath
+3711	Imperius' Wrath
+3712	Imperius' Wrath
+3713	Tyrael's Desolator
+3714	Tyrael's Desolator
+3715	Tyrael's Desolator
+3716	Tyrael's Desolator
+3717	Tyrael's Desolator
 3718	Warped Reaver
 3719	Warped Reaver
 3720	Warped Reaver
@@ -3657,3 +3659,82 @@
 3782	Twisted Sire
 3783	Twisted Sire
 3784	Twisted Sire
+3788	The Justicar
+3789	The Justicar
+3790	The Justicar
+3795	The Justicar
+3800	The Justicar
+3801	The Justicar
+3811	FLYING POLAR BUFFALO ERROR
+3812	Slain Soul
+3813	Slain Soul
+3814	Slain Soul
+3815	Slain Soul
+3816	Slain Soul
+3817	Slain Soul
+3818	Slain Soul
+3819	Slain Soul
+3820	Slain Soul
+3821	Slain Soul
+3822	Slain Soul
+3823	Slain Soul
+3824	Slain Soul
+3825	Slain Soul
+3826	Slain Soul
+3827	Slain Soul
+3828	Slain Soul
+3829	Slain Soul
+3830	Slain Soul
+3831	Slain Soul
+3832	Necromorb
+3833	Necromorb
+3834	Necromorb
+3835	Necromorb
+3846	Desecrated Altar
+3847	Desecrated Altar
+3848	Лимит: один раз за игру. Используйте Purify для крафта\n\n\blue;+4 к Требуемому Уровню\nДобавляет 3-4 Урона\n\purple;Стоимость: 1 Sacred Essence\n\gold;Апгрейд Assur's Bane
+3849	Лимит: один раз за игру. Используйте Purify для крафта\n\n\blue;+12 к Требуемому Уровню\n+1 ко Всем Навыкам\n\purple;Стоимость: 1 Sacred Essence\n\gold;Апгрейд Assur's Bane
+3850	Лимит: один раз за игру. Используйте Purify для крафта\n\n\blue;+4 к Требуемому Уровню\n+15%% к Урону Нежити\n\purple;Стоимость: 1 Sacred Essence\n\gold;Апгрейд Assur's Bane
+3851	Лимит: один раз за игру. Используйте Purify для крафта\n\n\blue;+4 к Требуемому Уровню\n+1%% к Максимуму Жизни\n\purple;Стоимость: 1 Sacred Essence\n\gold;Апгрейд Assur's Bane
+3852	Лимит: один раз за игру. Используйте Purify для крафта\n\n\blue;+5 к Требуемому Уровню\n-3%% к Сопротивлению Огню у Врага\n\purple;Стоимость: 1 Sacred Essence\n\gold;Апгрейд Assur's Bane
+3853	Лимит: один раз за игру. Используйте Purify для крафта\n\n\blue;+5 к Требуемому Уровню\n-3%% к Сопротивлению Холоду у Врага\n\purple;Стоимость: 1 Sacred Essence\n\gold;Апгрейд Assur's Bane
+3854	Лимит: один раз за игру. Используйте Purify для крафта\n\n\blue;+5 к Требуемому Уровню\n-3%% к Сопротивлению Молнии у Врага\n\purple;Стоимость: 1 Sacred Essence\n\gold;Апгрейд Assur's Bane
+3855	Лимит: один раз за игру. Используйте Purify для крафта\n\n\blue;+5 к Требуемому Уровню\n-3%% к Сопротивлению Яду у Врага\n\purple;Стоимость: 1 Sacred Essence\n\gold;Апгрейд Assur's Bane
+3856	Лимит: один раз за игру. Используйте Purify для крафта\n\n\blue;Сопротивление Огню -10%%\n-1 к Радиусу Света\n+40%% к Общему Физическому Урону Оружия\n\red;Вещь должна иметь минимум 1 Радиус Света\n\purple;Стоимость: 2 Sacred Essence\n\gold;Апгрейд Assur's Bane
+3857	Лимит: один раз за игру. Используйте Purify для крафта\n\n\blue;Сопротивление Огню -10%%\n-1 к Радиусу Света\n+5%% к Врождённому Стихийному Урону\n\red;Вещь должна иметь минимум 1 Радиус Света\n\purple;Стоимость: 2 Sacred Essence\n\gold;Апгрейд Assur's Bane
+3858	Лимит: один раз за игру. Используйте Purify для крафта\n\n\blue;Сопротивление Огню -20%%\n-2 к Радиусу Света\n+1%% к Макс. Сопротивлениям Огню, Яду и Холоду\n\red;Вещь должна иметь минимум 2 Радиуса Света\n\purple;Стоимость: 2 Sacred Essence\n\gold;Апгрейд Assur's Bane
+3859	Лимит: один раз за игру. Используйте Purify для крафта\n\n\blue;Сопротивление Огню -10%%\n-1 к Радиусу Света\n+10%% к Урону Заклинаний\n\red;Вещь должна иметь минимум 1 Радиус Света\n\purple;Стоимость: 2 Sacred Essence\n\gold;Апгрейд Assur's Bane
+3860	Лимит: один раз за игру. Используйте Purify для крафта\n\n\blue;Сопротивление Огню -20%%\n\orange;+1%% к Урону Закл. Огня за каждые 4 Фокусировки Закл. сверх лимита\n\red;Заменяет Purify\n\purple;Стоимость: 4 Sacred Essence\n\gold;Апгрейд Assur's Bane
+3861	Лимит: один раз за игру. Используйте Purify для крафта\n\n\blue;Сопротивление Огню -20%%\n\orange;+1%% к Урону Закл. Молнии за каждые 4 Фокусировки Закл. сверх лимита\n\red;Заменяет Purify\n\purple;Стоимость: 4 Sacred Essence\n\gold;Апгрейд Assur's Bane
+3862	Лимит: один раз за игру. Используйте Purify для крафта\n\n\blue;Сопротивление Огню -20%%\n\orange;+1%% к Урону Закл. Холода за каждые 4 Фокусировки Закл. сверх лимита\n\red;Заменяет Purify\n\purple;Стоимость: 4 Sacred Essence\n\gold;Апгрейд Assur's Bane
+3863	Лимит: один раз за игру. Используйте Purify для крафта\n\n\blue;Сопротивление Огню -20%%\n\orange;+1%% к Урону Закл. Яда за каждые 4 Фокусировки Закл. сверх лимита\n\red;Заменяет Purify\n\purple;Стоимость: 4 Sacred Essence\n\gold;Апгрейд Assur's Bane
+3864	Лимит: один раз за игру. Используйте Purify для крафта\n\n\blue;Сопротивление Огню -30%%\n\dgrey;Энергия: +12%% к Стойкости\nЖивучесть: 400%% вашего бонуса Урона Нежити добавляется как Урон Холодом оружию\nЛовкость: +300%% к Общему Физическому Урону Оружия\nСила: +5000 к Рейтингу Атаки\n\orange;Бонус основан на наивысшем атрибуте при использовании одноручного оружия без щита\n\red;Не работает на Варварах\nЗаменяет Purify\n\purple;Стоимость: 6 Sacred Essence\n\gold;Апгрейд Assur's Bane
+3865	Лимит: один раз за игру. Используйте Purify для крафта\n\nSacred Оружие/Броня + 1 Sacred Essence\n\red;Не работает с искажёнными вещами\n\orange;Создание Sacred Уников (105)
+3866	Используйте Purify для крафта\n\nSacred Уникальное (120) Оружие/Броня + 2 Sacred Essence\n\red;Не работает с искажёнными вещами\n\orange;Смена Свойств Sacred Уника (120)
+3867	Лимит: один раз за игру. Используйте Purify для крафта\n\nSacred Уникальное Оружие/Броня + 4 Sacred Essence\n\red;Не работает с искажёнными вещами\n\orange;Смена Sacred Уника (105-130)
+3868	Лимит: один раз за игру. Используйте Purify для крафта\n\n(позволяет исказить вещь более одного раза)\nИскажённый Sacred Уник + 8 Sacred Essence\n\red;Рецепт нельзя повторить\n\orange;Двойное Искажение Sacred Уника
+3869	Desecrated Altar
+3870	Mindflayer
+3871	Mindflayer
+3872	Mindflayer
+3873	Mindflayer
+3874	Mindflayer
+3875	Mindflayer
+3876	Mindflayer
+3877	Mindflayer
+3878	Mindflayer's Seal
+3879	Eyegouger's Seal
+3880	Bonehexer's Seal
+3881	Skinrender
+3882	Slain Soul
+3883	Eyegouger
+3884	Bonehexer
+3885	Spinecracker
+3886	Bonehexer
+3887	Bonehexer
+3888	Bonehexer
+3889	Desecrated Altar
+3892	Evil Eye
+3893	Evil Eye
+3894	Evil Eye
+3895	Eyegouger

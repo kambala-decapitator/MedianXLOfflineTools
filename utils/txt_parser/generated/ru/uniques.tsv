@@ -7,7 +7,7 @@
 5	Khalim's Will	20	0	
 6	Golden Cycle	0	1	invch7
 7	\gold;I Am Rich	0	1	
-8	\gold;Riftwalker's Eye	105	1	
+8	\gold;Riftwalker's Eye	100	1	
 9	\gold;Sunstone of the Twin Seas	50	1	
 10	(Druid Challenge Item)\nCaoi Dulra Fruit	90	1	
 11	(Sorceress Challenge Item)\nNexus Crystal	90	1	
@@ -17,19 +17,19 @@
 15	(Necromancer Challenge Item)\nSoulstone Shard	90	1	
 16	(Barbarian Challenge Item)\nWorldstone Orb	90	1	
 17	Corrupted Wormhole	100	1	
-18	The Butcher's Tooth	105	1	
-19	Laser Focus Crystal	105	1	
+18	The Butcher's Tooth	100	1	
+19	Laser Focus Crystal	100	1	
 20	\gold;Six Angel Bag	105	1	
-21	Optical Detector	105	1	
+21	Optical Detector	100	1	
 22	Visions of Akarat	110	1	akaratbook
-23	Horazon's Focus	110	1	
-24	Sacred Worldstone Key	110	1	
-25	Scroll of Kings	110	1	
+23	Horazon's Focus	100	1	
+24	Sacred Worldstone Key	100	1	
+25	Scroll of Kings	115	1	
 26	By Richard Knaak\nMoon of the Spider	110	1	
 27	Azmodan's Heart	115	1	
 28	Moo moo moo Moooo! Moo!\nFool's Gold	115	1	
 29	Spirit Trance Herb	115	1	
-30	Hammer of the Taan Judges	115	1	
+30	Paragon's Hammer	115	1	
 31	Idol of Vanity	115	1	
 32	By Richard Knaak\nLegacy of Blood	115	1	
 33	Sunstone of the Gods	115	1	
@@ -128,15 +128,15 @@
 126	Teganze Pendant	60	70	
 127	Witchmoon	100	100	
 128	Niradyahk	80	105	
-129	Locket of Dreams	100	105	
+129	Locket of Dreams	100	120	
 130	The Tesseract	100	105	
 131	Vizjerei's Necklace	100	105	
 132	Black Dwarf	110	105	
 133	Klaatu Barada Nikto	110	105	
-134	Death Ward	110	105	
+134	Death Ward	120	120	
 135	Dyers Eve	100	120	
 136	Jerhyn's Tawiz	0	1	
-137	Gallowlaugh	110	110	
+137	Gallowlaugh	110	105	
 138	Quov Tsin's Talisman	110	110	superammy
 139	Beads of the Snake Queen	100	120	
 140	In For The Kill	100	120	
@@ -152,13 +152,13 @@
 150	Lammergeier	100	120	
 151	Infernal Ichor	100	100	
 152	Devil's Dance	100	120	
-153	The Boulder	1	1	
+153	The Boulder	0	1	
 154	Storm Shard	20	20	
 155	Demonstone Blood	40	40	
-156	Farsight Globe	40	80	
-157	Asheara's Cateye	100	100	
-158	Heavenstone	100	105	
-159	Katamari	30	40	
+156	Farsight Globe	80	105	
+157	Asheara's Cateye	0	1	
+158	Heavenstone	80	110	
+159	Katamari	0	1	
 160	Xepera Xeper Xeperu	110	105	
 161	Zakarum Stoning Rock	60	60	
 162	Zann Esu's Stone	100	115	
@@ -168,13 +168,13 @@
 166	Wishmaster	0	1	
 167	Inarius' Rock	100	115	
 168	Suicide Note	100	115	
-169	Arkenstone	100	120	
+169	Arkenstone	100	130	
 170	Atomus	120	120	
-171	Jewel of Luck	125	130	
+171	Jewel of Luck	0	130	
 172	Ring of Regha	0	1	
 173	Ring of Disengagement	1	1	
 174	Ring of Truth	20	20	
-175	Ripstar	60	60	
+175	Ripstar	70	60	
 176	Xorine's Ring	80	80	
 177	Earth Rouser	100	100	
 178	Empyrean Band	40	40	
@@ -658,10 +658,10 @@
 656	Bul Kathos' Teaching	31	40	
 657	Bul Kathos' Teaching	50	67	
 658	Bul Kathos' Teaching	58	85	
-659	Acidburn	6	10	
-660	Acidburn	24	31	
-661	Acidburn	43	51	
-662	Acidburn	52	77	
+659	Athame	6	10	
+660	Athame	24	31	
+661	Athame	43	51	
+662	Athame	52	77	
 663	Wrathchild	12	29	
 664	Wrathchild	31	40	
 665	Wrathchild	52	67	
@@ -1293,12 +1293,12 @@
 1291	Relic	75	1	
 1292	Relic	75	1	
 1293	Relic	75	1	
-1294	Relic	0	0	
-1295	Relic	0	0	
-1296	Relic	0	0	
-1297	Relic	0	0	
-1298	Relic	0	0	
-1299	Relic	0	0	
+1294	Relic	75	1	
+1295	Relic	75	1	
+1296	Relic	75	1	
+1297	Relic	75	1	
+1298	Relic	75	1	
+1299	Relic	75	1	
 1300	Relic	0	0	
 1301	Relic	0	0	
 1302	Relic	0	0	
@@ -1427,7 +1427,7 @@
 1425	Absolute Zero	100	120	
 1426	Ashaera's Armor	100	105	
 1427	Dementia	100	120	
-1428	Hivemind	100	105	
+1428	Blessed Wrath	100	105	
 1429	Veil of the Tainted Sun	100	120	
 1430	Plunderbird	100	105	
 1431	Strixclaw	120	125	invstrixclaw
@@ -1442,7 +1442,7 @@
 1440	The Pyre	100	105	
 1441	Mad King's Spine	100	120	
 1442	Reaper's Hand	100	105	
-1443	Soul Reaver	120	120	
+1443	Soul Reaver	100	120	
 1444	Clockwork Slippers	80	105	
 1445	Aeterna	100	105	
 1446	Sarandeshi Hellcaller	100	120	
@@ -1497,7 +1497,7 @@
 1495	Galeona's Lash	100	120	
 1496	Habacalva's Legacy	100	105	
 1497	Holy Wars	100	120	
-1498	Crown of Arnazeus	100	105	
+1498	Jeweled Crown	100	105	
 1499	Deviant Crown	60	120	
 1500	Phoenix Beak	100	105	
 1501	Sky Spirit	100	120	
@@ -1557,7 +1557,7 @@
 1555	Smokeless Fire	100	120	invwndur
 1556	Zular Khan's Tempest	100	105	
 1557	Black Ice	70	120	invvou
-1558	Peace Warder	100	105	
+1558	Peace Warder	100	120	
 1559	Grotesque Bite	100	105	
 1560	Headsman	100	120	
 1561	Chober Chaber	100	105	
@@ -1581,7 +1581,7 @@
 1579	Bear Grin	100	105	
 1580	Voice of Arreat	100	120	
 1581	Barghest's Howl	100	105	
-1582	Blessed Wrath	100	120	
+1582	Imperius' Might	100	125	
 1583	Chillstring	100	105	
 1584	Etrayu	100	120	
 1585	The Pathless	100	105	
@@ -1593,7 +1593,7 @@
 1591	Skeld's Battlesong	100	105	
 1592	Thunder King of Sescheron	100	120	
 1593	Frostneedle	100	105	
-1594	Black Razor	100	120	
+1594	Black Razor	120	120	
 1595	Yaggai's Sagaris	100	105	
 1596	The King of Ents	100	120	
 1597	Bartuc's Curse	100	105	
@@ -1614,7 +1614,7 @@
 1612	The Defender	100	105	
 1613	Astral Blade	100	120	
 1614	Hellreach	100	105	
-1615	Windforce	100	120	
+1615	Windforce	100	130	
 1616	Dreamflange	100	105	
 1617	Hellrain	100	105	
 1618	Titan's Revenge	120	120	
@@ -1651,7 +1651,7 @@
 1649	Bottled Will-o-Wisp	100	105	
 1650	Homunculus	100	120	
 1651	Screen of Viz-Jaq'Taar	100	105	
-1652	Natalya's Deception	80	120	invqltz
+1652	Natalya's Deception	65	130	invqltz
 1653	Iron Shard	100	105	
 1654	Guardian of Scosglen	100	105	
 1655	Mr. Painless	100	120	
@@ -1713,7 +1713,7 @@
 1711	The Book of Kalen	100	105	invbbb
 1712	Mark of the Que-Hegan	100	120	
 1713	Black Sun Spear	100	105	
-1714	Jaguar's Grasp	100	120	
+1714	Inarius' Testament	100	125	
 1715	Lacerator	100	105	
 1716	Meshif's Iron Parrot	100	105	
 1717	Dark Nemesis	100	120	
@@ -1732,7 +1732,7 @@
 1730	Azgar's Mark	100	105	
 1731	Storm Arc	100	120	
 1732	Grim Visor	100	105	
-1733	Hand of Rathma	100	125	invmagicwand
+1733	Hand of Rathma	80	125	invmagicwand
 1734	Nimmenjuushin	100	105	
 1735	Dux Infernum	100	120	
 1736	Stormhammer	100	105	
@@ -1772,7 +1772,7 @@
 1770	Blood of Creation	50	150	
 1771	\purple;Laser Focus Crystal (Heroic)	121	1	
 1772	\purple;Optical Detector (Heroic)	122	1	
-1773	ghist way	0	0	
+1773	\gold;Pearl of Wisdom: Paragon of Fate	1	1	
 1774	ghist way	0	0	
 1775	ghist way	0	0	
 1776	ghist way	0	0	
@@ -1798,3 +1798,26 @@
 1796	Dark Disciple	100	150	
 1797	Raven Mantle	100	150	
 1798	Faithless	80	150	
+1799	Windforce	100	120	
+1800	Liberty	100	120	
+1801	Cain's Marble	0	1	
+1802	Hellrush	0	1	
+1803	Weight Shift	0	1	
+1804	Hunger	0	1	
+1805	The Grubber	0	1	
+1806	Rainbow Prism	0	1	
+1807	Arcane Focus	0	1	
+1808	Glass Shard	0	1	
+1809	Body of the Forbidden One	100	120	
+1810	Mark of the Angiris	50	139	
+1811	Mark of the Angiris	50	139	
+1812	Drought	100	120	
+1813	Ring of Woe	80	120	invrRoW
+1814	Cagebreaker	100	105	
+1815	Schaefer's Hammer	100	125	
+1816	Elemental Band (Fire)	100	150	
+1817	Elemental Band (Lightning)	100	150	
+1818	Elemental Band (Cold)	100	150	
+1819	Elemental Band (Poison)	100	150	
+1820	Hratli's Craft	100	105	
+1821	Auriel's Satchel	110	120	
