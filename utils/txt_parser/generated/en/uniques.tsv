@@ -1304,8 +1304,8 @@
 1302	Time-Lost Relic	75	1	invTimeRelic
 1303	Relic	75	1	
 1304	Relic	75	1	
-1305	Relic	0	0	
-1306	Relic	0	0	
+1305	Relic\nBonehexer's Puzzlebox	140	139	RelicBone
+1306	Skinrender's Ear	140	139	RelicSkin
 1307	Relic	0	0	
 1308	Relic	0	0	
 1309	Relic	0	0	
@@ -1477,7 +1477,7 @@
 1475	Gjallarhorn	100	105	
 1476	Signal Fire	100	120	
 1477	Gromotvod	100	105	
-1478	Soulsplitter	100	120	
+1478	Soulmender	100	120	
 1479	Aidan's Lament	100	105	
 1480	Undead Crown	110	120	UndeadCrown
 1481	Ignis Demonia	100	105	
@@ -1543,7 +1543,7 @@
 1541	Arrogance	120	130	invarrogance
 1542	Shield of Hakan II	100	105	
 1543	Madawc Val Narian	100	120	
-1544	Dead Lake's Lady	100	105	
+1544	Dead Lake's Lady	90	105	
 1545	The Redeemer	100	120	
 1546	Elder Law	100	105	
 1547	Gotterdammerung	100	120	
@@ -1708,7 +1708,7 @@
 1706	Ranger's Disguise	100	120	
 1707	Candlewake	100	105	
 1708	Arkaine's Valor	100	120	
-1709	Horned Hunter	100	105	
+1709	Vizjerei Hunter	100	105	
 1710	Athulua's Wrath	100	120	
 1711	The Book of Kalen	100	105	invbbb
 1712	Mark of the Que-Hegan	100	120	
@@ -1829,3 +1829,7 @@
 1827	Mjolner	100	105	invMjolner1h
 1828	Waterwalk	100	120	
 1829	The Pathless	100	80	
+1830	Shyan's Focus	100	120	
+1831	Mekanism	100	120	
+1832	Life Shear	100	105	
+1833	Shard of Refraction	100	130	

@@ -27,7 +27,7 @@
 25	Yeti
 26	Fetid Delver
 27	Wailing Beast
-28	Gargantuan Beast
+28	Corrupted Barbarian
 29	Desert Strider
 30	Spirit Wolf
 31	Invader
@@ -203,7 +203,7 @@
 201	Jerhyn
 202	Lysander
 203	FLYING POLAR BUFFALO ERROR
-204	FLYING POLAR BUFFALO ERROR
+204	Djank Mi'em
 205	FLYING POLAR BUFFALO ERROR
 206	Foul Crow Nest
 207	Blood Hawk Nest
@@ -1103,6 +1103,7 @@
 1113	Void Archon
 1114	Exploding Totem
 1117	Familiar
+1118	Blade Sentinel
 1119	Que-Hegan
 1120	Peace Warder
 1121	Peace Warder (Hallucination)
@@ -1905,6 +1906,8 @@
 1942	
 1943	Thonos
 1945	Rift Storm
+1951	Nithogur (Armageddon)
+1952	Nithogur (Eradication)
 1954	Sescheron's Destroyer
 1955	Druid Student
 1956	Druid Student
@@ -2688,13 +2691,13 @@
 2764	Assur's Avatar
 2765	Assur's Avatar
 2766	Assur's Avatar
-2767	UNUSED
-2768	UNUSED
-2769	UNUSED
-2770	UNUSED
-2771	UNUSED
-2772	UNUSED
-2773	UNUSED
+2767	AbyssalShrine2
+2768	AbyssalShrine2
+2769	AbyssalShrine2
+2770	AbyssalShrine2
+2771	AbyssalShrine2
+2772	AbyssalShrine2
+2773	AbyssalShrine2
 2774	Treasure Goblin
 2775	Shiny Hoarder
 2776	Voided Horror
@@ -2703,6 +2706,8 @@
 2779	Arcane Collector
 2780	\yellow;R\orange;a\red;i\purple;n\blue;b\dgreen;o\green;w \yellow;G\orange;o\red;b\purple;l\blue;i\dgreen;n
 2781	Glowing Baron
+2782	Relic Thief
+2783	Relic Thief
 2784	Rift Inspector
 2785	Rift Inspector
 2786	Rift Inspector

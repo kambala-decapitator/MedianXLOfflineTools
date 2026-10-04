@@ -177,6 +177,7 @@ mcha	char	invch2,invch5,invch8	Medium Charm
 cyc2	cycl	invch2,invch5,invch8	Medium Cycle
 kill	misc	invrin1,invrin2,invrin3,invrin4,invrin5	Mega Ring
 mele	weap		Melee Weapon
+xxx6	boot,nomo		Mindflayer Boots
 misl	misc,myor		Missile
 qmsl	misl		Missile (Sacred)
 tpot	thro		Missile Potion

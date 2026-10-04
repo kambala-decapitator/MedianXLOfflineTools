@@ -193,6 +193,8 @@
 225	0	10							Bonus to Attack Rating	Bonus to Attack Rating	(Based on Character Level)	7	165	1					item_tohitpercent_perlevel
 226	0	5																	item_absolsigil
 227		5																	item_elesigil
+228	100	8							Mana Cost of Skills	Mana Cost of Skills		4	43	1					mana_cost
+229	50	7							to Summon Physical Resist	to Summon Physical Resist		4	102	1					minion_resist_phys
 230	0	10							Cold Resist	Cold Resist	(Based on Character Level)	7	62	2					item_resist_cold_perlevel
 231	0	10							Fire Resist	Fire Resist	(Based on Character Level)	7	64	2					item_resist_fire_perlevel
 232	0	10							Lightning Resist	Lightning Resist	(Based on Character Level)	7	63	2					item_resist_ltng_perlevel
@@ -211,9 +213,9 @@
 252	0	6							Repairs %d Durability per Second	Repairs %d Durability per Second		0	7	0					item_replenish_durability
 253	0	6							Replenishes Quantity	Replenishes Quantity		3	8	0					item_replenish_quantity
 254	0	8							Increased Stack Size	Increased Stack Size		3	9	0					item_extra_stack
-257	1	2							\orange;Parasite Gains 12 Additional Targets\blue;	\orange;Nephalem: +25% Total Vessel Damage Bonus from Passives\nUnholy: Blood Thorns: +40% Damage Multiplier\nHoly: Holy Fire Deals 4.5% of  Strength as More Total Damage (max 250%)\blue;		3	240	0					vessel_mod
+257	1	2							\orange;Parasite Gains 12 Additional Targets\blue;	\orange;Nephalem: +25% Total Vessel Damage Bonus from Passives\nUnholy: Blood Thorns: +40% Damage Multiplier\nHoly: Holy Fire Deals 4.5% of  Strength as More Total Damage (max 250%)\blue;		3	239	0					vessel_mod
 258	100	10																	aura_countdown
-259	1	10							Charges:	Charges:		3	250	2					charge_counter
+259	1	10							Charges:	Charges:		3	240	2					charge_counter
 260	0	7							\orange;Thunderfury\grey;	\orange;Thunderfury\grey;		3	247	0				17	item_thunderfury
 261	0	5							Extra Totems	Extra Totems		1	196	1					new_totem_syn
 265	0	10							Life after each Kill	Life after each Kill		1	41	1					item_healafterplayerkill
@@ -341,7 +343,7 @@
 441	5	6							to Maximum Necromancer Minions	to Maximum Necromancer Minions		1	195	1					passive_aura_addmax
 442	0	9							Additional Strength Damage Bonus:	Additional Strength Damage Bonus:		2	194	2					str_bonus_blue
 443	0	5							\green;Already Upgraded	\green;Already Upgraded		3	248	0					item_upgraded
-444	100	9							Penalty to Summoned Minion Life	to Summoned Minion Life		4	105	1					skill_minion_hp_percent
+444	100	9							Penalty to Summon Life	to Summon Life		4	105	1					skill_minion_hp_percent
 445	0	6							to Maximum Barbarian Minions	to Maximum Barbarian Minions		1	196	1					skill_ancientspirits_synergy
 446	0	8							Damage to Protector Spirit Bloodlust	Damage to Protector Spirit Bloodlust		4	195	1					skill_shamanspath_synergy
 447	0	9							Restored:	Restored:		7	234	2					trophy_fragmentation
@@ -365,7 +367,7 @@
 467		4																	rp_lock
 468	0	8							Damage to Vessel of Retribution	Damage to Vessel of Retribution		4	187	1					skill_light_mastery
 469	0	8							Extra Targets to Paladin Vessels	Extra Targets to Paladin Vessels		1	187	1					skill_shadow_mastery
-470	50	9							to Summoned Minion Damage	to Summoned Minion Damage		4	104	1					skill_minion_dmg_percent
+470	50	9							to Summon Damage	to Summon Damage		4	104	1					skill_minion_dmg_percent
 471	50	9																	shamanic_dmg
 472	50	9																	shamanic_life
 473	0	4							\green;Unlocks your Ennead Skill	\green;Unlocks your Ennead Skill		3	233	0					learn_ennead
@@ -381,7 +383,7 @@
 484	50	8							Innate Elemental Damage	Innate Elemental Damage		2	149	1					IED
 485	200	10							Spell Focus	Spell Focus		1	194	1					enr_factor
 486	50	8																	gem_counter
-487	50	8							to Summoned Minion Resistances	to Summoned Minion Resistances		4	103	1					minion_resist_all
+487	50	8							to Summon Elemental Resistances	to Summon Elemental Resistances		4	103	1					minion_resist_all
 488	100	8							Bonus to Spell Focus	Bonus to Spell Focus		4	193	1					enr_factor_percent
 489	0	11							Target Takes Additional Damage of	Target Takes Additional Damage of		3	25	2					item_targettakesdamage
 490	1	5																	cube_upgrade_5
@@ -394,7 +396,7 @@
 497	0	5							\red;Corrupted	\red;Corrupted		3	251	0					item_corrupted
 498	6383	14																	item_corrupted_seed
 499	0	10							to Energy	to Energy	(Based on Character Level)	6	87	1					item_energy_perlevel
-500	100	8							to Summoned Minion Attack Rating	to Summoned Minion Attack Rating		4	102	1					item_minion_attack
+500	100	8							to Summon Attack Rating	to Summon Attack Rating		4	102	1					item_minion_attack
 501	23	10							\grey;Arcane Crystals: 	\blue;Quantity:		3	84	2					shrine_counter
 502	1	4																	is_PoS
 503	1	4																	is_PoF

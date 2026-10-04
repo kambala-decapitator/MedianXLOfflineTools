@@ -213,7 +213,7 @@ my $weaponTypes = parsetxt("weapons.tsv", $itemName=>1, "#code"=>0, $nameStr=>5,
                            type2=>3, stackable=>46, rlvl=>31, rstr=>26, rdex=>27, image=>51, quest=>68,
                            '1hMinDmg'=>13, '1hMaxDmg'=>14, '2hMinDmg'=>17, '2hMaxDmg'=>18, throwMinDmg=>19, throwMaxDmg=>20,
                            '1h2h'=>15, '2h'=>16, strBonus=>24, dexBonus=>25);
-my $miscTypes = parsetxt("misc.tsv", $itemName=>0, "#code"=>5, $nameStr=>7, $spellDescStr=>70,
+my $miscTypes = parsetxt("misc.tsv", $itemName=>0, "#code"=>5, $nameStr=>7, $spellDescStr=>71,
                          w=>25, h=>26, type=>8, type2=>9, stackable=>49, rlvl=>14, image=>31, quest=>53);
 &tblExpandHash($_, $itemName) for ($armorTypes, $weaponTypes, $miscTypes);
 
